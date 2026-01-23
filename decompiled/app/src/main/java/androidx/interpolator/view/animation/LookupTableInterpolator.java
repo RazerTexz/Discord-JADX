@@ -3,7 +3,7 @@ package androidx.interpolator.view.animation;
 import android.view.animation.Interpolator;
 import p007b.p100d.p104b.p105a.outline;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public abstract class LookupTableInterpolator implements Interpolator {
     private final float mStepSize;
     private final float[] mValues;

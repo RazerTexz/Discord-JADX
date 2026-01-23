@@ -11,8 +11,8 @@ import com.discord.widgets.chat.list.entries.ChatListEntry;
 import com.discord.widgets.chat.list.entries.EmptyPinsEntry;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: WidgetChatListAdapterItemEmptyPins.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetChatListAdapterItemEmptyPins.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetChatListAdapterItemEmptyPins extends WidgetChatListItem {
     private final WidgetChatListAdapterItemEmptyPinsBinding binding;
 

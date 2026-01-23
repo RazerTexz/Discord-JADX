@@ -3,9 +3,9 @@ package com.discord.widgets.settings.premium;
 import kotlin.jvm.functions.Function0;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetSettingsPremium.kt */
-/* renamed from: com.discord.widgets.settings.premium.WidgetSettingsPremium$viewModel$2, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.settings.premium.WidgetSettingsPremium$viewModel$2, reason: use source file name */
+/* JADX INFO: compiled from: WidgetSettingsPremium.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetSettingsPremium8 extends Lambda implements Function0<SettingsPremiumViewModel> {
     public static final WidgetSettingsPremium8 INSTANCE = new WidgetSettingsPremium8();
 

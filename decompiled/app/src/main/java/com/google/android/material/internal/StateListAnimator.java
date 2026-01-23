@@ -9,8 +9,8 @@ import androidx.annotation.Nullable;
 import androidx.annotation.RestrictTo;
 import java.util.ArrayList;
 
+/* JADX INFO: loaded from: classes3.dex */
 @RestrictTo({RestrictTo.Scope.LIBRARY_GROUP})
-/* loaded from: classes3.dex */
 public final class StateListAnimator {
     private final ArrayList<C10945b> tuples = new ArrayList<>();
 
@@ -21,7 +21,7 @@ public final class StateListAnimator {
     public ValueAnimator runningAnimator = null;
     private final Animator.AnimatorListener animationListener = new C10944a();
 
-    /* renamed from: com.google.android.material.internal.StateListAnimator$a */
+    /* JADX INFO: renamed from: com.google.android.material.internal.StateListAnimator$a */
     public class C10944a extends AnimatorListenerAdapter {
         public C10944a() {
         }
@@ -35,13 +35,13 @@ public final class StateListAnimator {
         }
     }
 
-    /* renamed from: com.google.android.material.internal.StateListAnimator$b */
+    /* JADX INFO: renamed from: com.google.android.material.internal.StateListAnimator$b */
     public static class C10945b {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final int[] f21043a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final ValueAnimator f21044b;
 
         public C10945b(int[] iArr, ValueAnimator valueAnimator) {

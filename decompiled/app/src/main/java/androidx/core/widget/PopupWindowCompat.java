@@ -8,7 +8,7 @@ import androidx.annotation.NonNull;
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public final class PopupWindowCompat {
     private static final String TAG = "PopupWindowCompatApi21";
     private static Method sGetWindowLayoutTypeMethod;
@@ -70,7 +70,7 @@ public final class PopupWindowCompat {
         return 0;
     }
 
-    public static void setOverlapAnchor(@NonNull PopupWindow popupWindow, boolean z2) throws IllegalArgumentException {
+    public static void setOverlapAnchor(@NonNull PopupWindow popupWindow, boolean z2) {
         if (Build.VERSION.SDK_INT >= 23) {
             popupWindow.setOverlapAnchor(z2);
             return;

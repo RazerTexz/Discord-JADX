@@ -1,9 +1,9 @@
 package com.discord.api.directory;
 
 
-/* compiled from: DirectoryEntryGuild.kt */
-/* renamed from: com.discord.api.directory.DirectoryEntryType, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: com.discord.api.directory.DirectoryEntryType, reason: use source file name */
+/* JADX INFO: compiled from: DirectoryEntryGuild.kt */
+/* JADX INFO: loaded from: classes.dex */
 public enum DirectoryEntryGuild3 {
     Guild(0),
     GuildScheduledEvent(1);

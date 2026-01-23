@@ -84,12 +84,12 @@ import p507d0.p592z.p594d.Reflection2;
 import p658rx.Observable;
 import p658rx.functions.Func0;
 
-/* compiled from: WidgetOauth2Authorize.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetOauth2Authorize.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public class WidgetOauth2Authorize extends AppFragment {
     public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetOauth2Authorize.class, "binding", "getBinding()Lcom/discord/databinding/WidgetOauthAuthorizeBinding;", 0)};
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private static final String INTENT_PARAM_URI = "REQ_URI";
     private static final String QUERY_INTERNAL_REFERRER = "internal_referrer";
@@ -104,17 +104,17 @@ public class WidgetOauth2Authorize extends AppFragment {
     private static final String ROOT_ERROR_KEY = "_root";
     private final SimpleRecyclerAdapter<PermissionModel, OAuthPermissionViewHolder> adapter;
 
-    /* renamed from: binding$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
     private final ActivityResultLauncher<Intent> captchaLauncher;
 
-    /* renamed from: oauth2ViewModel$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: oauth2ViewModel$delegate, reason: from kotlin metadata */
     private final Lazy oauth2ViewModel;
 
-    /* renamed from: validationManager$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: validationManager$delegate, reason: from kotlin metadata */
     private final Lazy validationManager;
 
-    /* compiled from: WidgetOauth2Authorize.kt */
+    /* JADX INFO: compiled from: WidgetOauth2Authorize.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -137,7 +137,7 @@ public class WidgetOauth2Authorize extends AppFragment {
             return intent;
         }
 
-        private final OAuth2Authorize createOauthAuthorize(Uri requestUrl) throws NumberFormatException {
+        private final OAuth2Authorize createOauthAuthorize(Uri requestUrl) {
             WidgetOauth2Authorize2 widgetOauth2Authorize2 = WidgetOauth2Authorize2.INSTANCE;
             long j = Long.parseLong(widgetOauth2Authorize2.invoke2(requestUrl, WidgetOauth2Authorize.QUERY_PARAM_CLIENT_ID));
             String queryParameter = requestUrl.getQueryParameter(WidgetOauth2Authorize.QUERY_PARAM_REDIRECT);
@@ -196,7 +196,7 @@ public class WidgetOauth2Authorize extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetOauth2Authorize.kt */
+    /* JADX INFO: compiled from: WidgetOauth2Authorize.kt */
     public static final /* data */ class OAuth2Authorize {
         private final long clientId;
         private final String codeChallenge;
@@ -251,52 +251,52 @@ public class WidgetOauth2Authorize extends AppFragment {
             return oAuth2Authorize.post(str, str2);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final long getClientId() {
             return this.clientId;
         }
 
-        /* renamed from: component10, reason: from getter */
+        /* JADX INFO: renamed from: component10, reason: from getter */
         public final String getInternalReferrer() {
             return this.internalReferrer;
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final String getState() {
             return this.state;
         }
 
-        /* renamed from: component3, reason: from getter */
+        /* JADX INFO: renamed from: component3, reason: from getter */
         public final String getResponseType() {
             return this.responseType;
         }
 
-        /* renamed from: component4, reason: from getter */
+        /* JADX INFO: renamed from: component4, reason: from getter */
         public final String getRedirectUrl() {
             return this.redirectUrl;
         }
 
-        /* renamed from: component5, reason: from getter */
+        /* JADX INFO: renamed from: component5, reason: from getter */
         public final String getPrompt() {
             return this.prompt;
         }
 
-        /* renamed from: component6, reason: from getter */
+        /* JADX INFO: renamed from: component6, reason: from getter */
         public final String getScope() {
             return this.scope;
         }
 
-        /* renamed from: component7, reason: from getter */
+        /* JADX INFO: renamed from: component7, reason: from getter */
         public final String getPermissions() {
             return this.permissions;
         }
 
-        /* renamed from: component8, reason: from getter */
+        /* JADX INFO: renamed from: component8, reason: from getter */
         public final String getCodeChallenge() {
             return this.codeChallenge;
         }
 
-        /* renamed from: component9, reason: from getter */
+        /* JADX INFO: renamed from: component9, reason: from getter */
         public final String getCodeChallengeMethod() {
             return this.codeChallengeMethod;
         }
@@ -420,7 +420,7 @@ public class WidgetOauth2Authorize extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetOauth2Authorize.kt */
+    /* JADX INFO: compiled from: WidgetOauth2Authorize.kt */
     public static final class OAuth2ViewModel extends AppViewModel<Unit> {
         public OAuth2Authorize oauthAuthorize;
         private RestAPIParams.OAuth2Authorize.ResponseGet oauthGetResponse;
@@ -451,7 +451,7 @@ public class WidgetOauth2Authorize extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetOauth2Authorize.kt */
+    /* JADX INFO: compiled from: WidgetOauth2Authorize.kt */
     public static final class OAuthPermissionViewHolder extends SimpleRecyclerAdapter.ViewHolder<PermissionModel> {
         private final OauthTokenPermissionDetailedListItemBinding binding;
 
@@ -465,12 +465,12 @@ public class WidgetOauth2Authorize extends AppFragment {
         }
 
         @Override // com.discord.utilities.views.SimpleRecyclerAdapter.ViewHolder
-        public /* bridge */ /* synthetic */ void bind(PermissionModel permissionModel) throws OAuthPermissionViews.InvalidScopeException {
+        public /* bridge */ /* synthetic */ void bind(PermissionModel permissionModel) {
             bind2(permissionModel);
         }
 
-        /* renamed from: bind, reason: avoid collision after fix types in other method */
-        public void bind2(PermissionModel data) throws OAuthPermissionViews.InvalidScopeException {
+        /* JADX INFO: renamed from: bind, reason: avoid collision after fix types in other method */
+        public void bind2(PermissionModel data) {
             Intrinsics3.checkNotNullParameter(data, "data");
             if (data.getScope() != null) {
                 this.binding.f15202b.setImageResource(C5419R.drawable.ic_check_circle_green_24dp);
@@ -486,7 +486,7 @@ public class WidgetOauth2Authorize extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetOauth2Authorize.kt */
+    /* JADX INFO: compiled from: WidgetOauth2Authorize.kt */
     public static final class PermissionModel {
         private final Integer fakeText;
         private final OAuthScope scope;
@@ -505,8 +505,8 @@ public class WidgetOauth2Authorize extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetOauth2Authorize.kt */
-    /* renamed from: com.discord.widgets.auth.WidgetOauth2Authorize$authorizeApplication$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.auth.WidgetOauth2Authorize$authorizeApplication$1 */
+    /* JADX INFO: compiled from: WidgetOauth2Authorize.kt */
     public static final class C72411 extends Lambda implements Function1<Error, Unit> {
         public C72411() {
             super(1);
@@ -518,7 +518,7 @@ public class WidgetOauth2Authorize extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Error error) {
             Intrinsics3.checkNotNullParameter(error, "error");
             WidgetAuthCaptcha.Companion companion = WidgetAuthCaptcha.INSTANCE;
@@ -533,8 +533,8 @@ public class WidgetOauth2Authorize extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetOauth2Authorize.kt */
-    /* renamed from: com.discord.widgets.auth.WidgetOauth2Authorize$authorizeApplication$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.auth.WidgetOauth2Authorize$authorizeApplication$2 */
+    /* JADX INFO: compiled from: WidgetOauth2Authorize.kt */
     public static final class C72422 extends Lambda implements Function1<RestAPIParams.OAuth2Authorize.ResponsePost, Unit> {
         public C72422() {
             super(1);
@@ -546,7 +546,7 @@ public class WidgetOauth2Authorize extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(RestAPIParams.OAuth2Authorize.ResponsePost responsePost) throws Exception {
             Intrinsics3.checkNotNullParameter(responsePost, "it");
             Uri uri = Uri.parse(responsePost.getLocation());
@@ -568,8 +568,8 @@ public class WidgetOauth2Authorize extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetOauth2Authorize.kt */
-    /* renamed from: com.discord.widgets.auth.WidgetOauth2Authorize$configureNotSupportedUI$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.auth.WidgetOauth2Authorize$configureNotSupportedUI$1 */
+    /* JADX INFO: compiled from: WidgetOauth2Authorize.kt */
     public static final class ViewOnClickListenerC72431 implements View.OnClickListener {
         public final /* synthetic */ Uri $uri;
 
@@ -587,8 +587,8 @@ public class WidgetOauth2Authorize extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetOauth2Authorize.kt */
-    /* renamed from: com.discord.widgets.auth.WidgetOauth2Authorize$configureSecurityNoticeUI$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.auth.WidgetOauth2Authorize$configureSecurityNoticeUI$1 */
+    /* JADX INFO: compiled from: WidgetOauth2Authorize.kt */
     public static final class C72441 extends Lambda implements Function1<RenderContext, Unit> {
         public C72441() {
             super(1);
@@ -600,15 +600,15 @@ public class WidgetOauth2Authorize extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(RenderContext renderContext) {
             Intrinsics3.checkNotNullParameter(renderContext, "$receiver");
             renderContext.boldColor = Integer.valueOf(ColorCompat.getThemedColor(WidgetOauth2Authorize.this.requireContext(), C5419R.attr.colorHeaderPrimary));
         }
     }
 
-    /* compiled from: WidgetOauth2Authorize.kt */
-    /* renamed from: com.discord.widgets.auth.WidgetOauth2Authorize$configureUI$3 */
+    /* JADX INFO: renamed from: com.discord.widgets.auth.WidgetOauth2Authorize$configureUI$3 */
+    /* JADX INFO: compiled from: WidgetOauth2Authorize.kt */
     public static final class ViewOnClickListenerC72453 implements View.OnClickListener {
         public ViewOnClickListenerC72453() {
         }
@@ -619,8 +619,8 @@ public class WidgetOauth2Authorize extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetOauth2Authorize.kt */
-    /* renamed from: com.discord.widgets.auth.WidgetOauth2Authorize$onViewBound$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.auth.WidgetOauth2Authorize$onViewBound$1 */
+    /* JADX INFO: compiled from: WidgetOauth2Authorize.kt */
     public static final class C72461 extends Lambda implements Function0<Unit> {
         public C72461() {
             super(0);
@@ -632,7 +632,7 @@ public class WidgetOauth2Authorize extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             AppActivity appActivity = WidgetOauth2Authorize.this.getAppActivity();
             if (appActivity != null) {
@@ -645,8 +645,8 @@ public class WidgetOauth2Authorize extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetOauth2Authorize.kt */
-    /* renamed from: com.discord.widgets.auth.WidgetOauth2Authorize$onViewBound$3 */
+    /* JADX INFO: renamed from: com.discord.widgets.auth.WidgetOauth2Authorize$onViewBound$3 */
+    /* JADX INFO: compiled from: WidgetOauth2Authorize.kt */
     public static final class C72473<R> implements Func0<Boolean> {
         public C72473() {
         }
@@ -666,8 +666,8 @@ public class WidgetOauth2Authorize extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetOauth2Authorize.kt */
-    /* renamed from: com.discord.widgets.auth.WidgetOauth2Authorize$onViewBoundOrOnResume$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.auth.WidgetOauth2Authorize$onViewBoundOrOnResume$1 */
+    /* JADX INFO: compiled from: WidgetOauth2Authorize.kt */
     public static final class C72481 extends Lambda implements Function1<Error, Unit> {
         public C72481() {
             super(1);
@@ -679,7 +679,7 @@ public class WidgetOauth2Authorize extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Error error) throws Exception {
             Intrinsics3.checkNotNullParameter(error, "error");
             Error.Response response = error.getResponse();
@@ -702,8 +702,8 @@ public class WidgetOauth2Authorize extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetOauth2Authorize.kt */
-    /* renamed from: com.discord.widgets.auth.WidgetOauth2Authorize$onViewBoundOrOnResume$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.auth.WidgetOauth2Authorize$onViewBoundOrOnResume$2 */
+    /* JADX INFO: compiled from: WidgetOauth2Authorize.kt */
     public static final class C72492 extends Lambda implements Function1<RestAPIParams.OAuth2Authorize.ResponseGet, Unit> {
         public C72492() {
             super(1);
@@ -715,7 +715,7 @@ public class WidgetOauth2Authorize extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(RestAPIParams.OAuth2Authorize.ResponseGet responseGet) {
             Intrinsics3.checkNotNullParameter(responseGet, "response");
             WidgetOauth2Authorize.this.getOauth2ViewModel().setOauthGetResponse(responseGet);

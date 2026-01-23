@@ -8,9 +8,9 @@ import java.io.IOException;
 import java.util.Objects;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: GuildScheduledEventStatus.kt */
-/* renamed from: com.discord.api.guildscheduledevent.GuildScheduledEventStatusTypeAdapter, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: com.discord.api.guildscheduledevent.GuildScheduledEventStatusTypeAdapter, reason: use source file name */
+/* JADX INFO: compiled from: GuildScheduledEventStatus.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class GuildScheduledEventStatus2 extends TypeAdapter<GuildScheduledEventStatus> {
     @Override // com.google.gson.TypeAdapter
     public GuildScheduledEventStatus read(JsonReader jsonReader) throws IOException {

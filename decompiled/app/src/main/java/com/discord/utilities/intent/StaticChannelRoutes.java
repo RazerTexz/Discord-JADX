@@ -14,18 +14,18 @@ import p507d0.p579g0.StringNumberConversions;
 import p507d0.p580t._Collections;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: StaticChannelRoutes.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: StaticChannelRoutes.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public enum StaticChannelRoutes {
     ROLE_SUBSCRIPTIONS("role-subscriptions");
 
     private final String route;
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private static final Lazy routeToName$delegate = LazyJVM.lazy(StaticChannelRoutes2.INSTANCE);
 
-    /* compiled from: StaticChannelRoutes.kt */
+    /* JADX INFO: compiled from: StaticChannelRoutes.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -63,7 +63,7 @@ public enum StaticChannelRoutes {
         }
     }
 
-    /* compiled from: StaticChannelRoutes.kt */
+    /* JADX INFO: compiled from: StaticChannelRoutes.kt */
     public static final /* data */ class WithGuild {
         private final long guildId;
         private final StaticChannelRoutes route;
@@ -84,12 +84,12 @@ public enum StaticChannelRoutes {
             return withGuild.copy(staticChannelRoutes, j);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final StaticChannelRoutes getRoute() {
             return this.route;
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final long getGuildId() {
             return this.guildId;
         }

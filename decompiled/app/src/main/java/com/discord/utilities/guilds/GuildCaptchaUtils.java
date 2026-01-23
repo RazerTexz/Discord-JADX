@@ -21,14 +21,14 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 import retrofit2.HttpException;
 
-/* compiled from: GuildCaptchaUtils.kt */
-/* renamed from: com.discord.utilities.guilds.GuildCaptchaUtilsKt, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.utilities.guilds.GuildCaptchaUtilsKt, reason: use source file name */
+/* JADX INFO: compiled from: GuildCaptchaUtils.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class GuildCaptchaUtils {
     private static final String REQUEST_KEY_GUILD_CAPTCHA = "REQUEST_KEY_GUILD_CAPTCHA";
 
-    /* compiled from: GuildCaptchaUtils.kt */
-    /* renamed from: com.discord.utilities.guilds.GuildCaptchaUtilsKt$handleHttpException$1 */
+    /* JADX INFO: renamed from: com.discord.utilities.guilds.GuildCaptchaUtilsKt$handleHttpException$1 */
+    /* JADX INFO: compiled from: GuildCaptchaUtils.kt */
     public static final class C67651 extends Lambda implements Function2<AppFragment, CaptchaHelper.CaptchaPayload, Unit> {
         public final /* synthetic */ InviteArgs $args;
 
@@ -44,7 +44,7 @@ public final class GuildCaptchaUtils {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(AppFragment appFragment, CaptchaHelper.CaptchaPayload captchaPayload) {
             Intrinsics3.checkNotNullParameter(appFragment, "newFragment");
             Intrinsics3.checkNotNullParameter(captchaPayload, "captchaPayload");
@@ -52,8 +52,8 @@ public final class GuildCaptchaUtils {
         }
     }
 
-    /* compiled from: GuildCaptchaUtils.kt */
-    /* renamed from: com.discord.utilities.guilds.GuildCaptchaUtilsKt$handleHttpException$2 */
+    /* JADX INFO: renamed from: com.discord.utilities.guilds.GuildCaptchaUtilsKt$handleHttpException$2 */
+    /* JADX INFO: compiled from: GuildCaptchaUtils.kt */
     public static final class C67662 extends Lambda implements Function2<AppFragment, CaptchaHelper.CaptchaPayload, Unit> {
         public final /* synthetic */ JoinArgs $args;
         public final /* synthetic */ Context $context;
@@ -71,7 +71,7 @@ public final class GuildCaptchaUtils {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(AppFragment appFragment, CaptchaHelper.CaptchaPayload captchaPayload) {
             Intrinsics3.checkNotNullParameter(appFragment, "<anonymous parameter 0>");
             Intrinsics3.checkNotNullParameter(captchaPayload, "captchaPayload");

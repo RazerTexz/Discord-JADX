@@ -11,9 +11,9 @@ import java.util.Map;
 import kotlin.jvm.functions.Function0;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetGuildScheduledEventLocationSelectViewModel.kt */
-/* renamed from: com.discord.widgets.guildscheduledevent.WidgetGuildScheduledEventLocationSelectViewModel$Companion$observeStores$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.guildscheduledevent.WidgetGuildScheduledEventLocationSelectViewModel$Companion$observeStores$1, reason: use source file name */
+/* JADX INFO: compiled from: WidgetGuildScheduledEventLocationSelectViewModel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetGuildScheduledEventLocationSelectViewModel2 extends Lambda implements Function0<WidgetGuildScheduledEventLocationSelectViewModel.StoreState> {
     public final /* synthetic */ StoreChannels $channelsStore;
     public final /* synthetic */ Long $existingGuildScheduledEventId;

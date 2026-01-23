@@ -5,15 +5,15 @@ import android.view.View;
 import android.widget.AutoCompleteTextView;
 import androidx.annotation.NonNull;
 
-/* compiled from: DropdownMenuEndIconDelegate.java */
-/* renamed from: b.i.a.g.j.j, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.g.j.j, reason: use source file name */
+/* JADX INFO: compiled from: DropdownMenuEndIconDelegate.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class DropdownMenuEndIconDelegate3 implements View.OnTouchListener {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final /* synthetic */ AutoCompleteTextView f11815j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final /* synthetic */ DropdownMenuEndIconDelegate f11816k;
 
     public DropdownMenuEndIconDelegate3(DropdownMenuEndIconDelegate dropdownMenuEndIconDelegate, AutoCompleteTextView autoCompleteTextView) {

@@ -21,23 +21,23 @@ import p507d0.p512d0._Ranges;
 import p507d0.p580t.Collections2;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: UserSummaryView.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: UserSummaryView.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class UserSummaryView extends ConstraintLayout {
 
-    /* renamed from: j, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: j, reason: from kotlin metadata */
     public final CutoutView.InterfaceC7075a.c cutoutStyle;
 
-    /* renamed from: k, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: k, reason: from kotlin metadata */
     public int avatarSizePx;
 
-    /* renamed from: l, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: l, reason: from kotlin metadata */
     public int overlapAmountPx;
 
-    /* renamed from: m, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: m, reason: from kotlin metadata */
     public List<UserGuildMember> members;
 
-    /* renamed from: n, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: n, reason: from kotlin metadata */
     public int maxAvatars;
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -65,7 +65,7 @@ public final class UserSummaryView extends ConstraintLayout {
         typedArrayObtainStyledAttributes.recycle();
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static /* synthetic */ void m8623b(UserSummaryView userSummaryView, List list, boolean z2, int i) {
         if ((i & 2) != 0) {
             z2 = true;
@@ -73,7 +73,7 @@ public final class UserSummaryView extends ConstraintLayout {
         userSummaryView.m8624a(list, z2);
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final void m8624a(List<UserGuildMember> members, boolean withFullAvatarAtEnd) {
         int id2;
         Intrinsics3.checkNotNullParameter(members, "members");

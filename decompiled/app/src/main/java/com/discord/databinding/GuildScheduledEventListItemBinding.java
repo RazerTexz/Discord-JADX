@@ -5,14 +5,14 @@ import androidx.annotation.NonNull;
 import androidx.viewbinding.ViewBinding;
 import com.discord.widgets.guildscheduledevent.GuildScheduledEventItemView;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public final class GuildScheduledEventListItemBinding implements ViewBinding {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     @NonNull
     public final GuildScheduledEventItemView f15150a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     @NonNull
     public final GuildScheduledEventItemView f15151b;
 

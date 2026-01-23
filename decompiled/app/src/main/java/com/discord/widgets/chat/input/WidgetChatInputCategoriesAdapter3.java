@@ -4,9 +4,9 @@ import com.discord.models.commands.Application;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: WidgetChatInputCategoriesAdapter.kt */
-/* renamed from: com.discord.widgets.chat.input.CommandCategoryItem, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.chat.input.CommandCategoryItem, reason: use source file name */
+/* JADX INFO: compiled from: WidgetChatInputCategoriesAdapter.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final /* data */ class WidgetChatInputCategoriesAdapter3 {
     private final Application application;
     private final boolean isSelected;
@@ -27,12 +27,12 @@ public final /* data */ class WidgetChatInputCategoriesAdapter3 {
         return widgetChatInputCategoriesAdapter3.copy(application, z2);
     }
 
-    /* renamed from: component1, reason: from getter */
+    /* JADX INFO: renamed from: component1, reason: from getter */
     public final Application getApplication() {
         return this.application;
     }
 
-    /* renamed from: component2, reason: from getter */
+    /* JADX INFO: renamed from: component2, reason: from getter */
     public final boolean getIsSelected() {
         return this.isSelected;
     }
@@ -58,15 +58,18 @@ public final /* data */ class WidgetChatInputCategoriesAdapter3 {
     }
 
     /* JADX WARN: Multi-variable type inference failed */
+    /* JADX WARN: Type inference failed for: r1v1, types: [int] */
+    /* JADX WARN: Type inference failed for: r1v2 */
+    /* JADX WARN: Type inference failed for: r1v3 */
     public int hashCode() {
         Application application = this.application;
         int iHashCode = (application != null ? application.hashCode() : 0) * 31;
         boolean z2 = this.isSelected;
-        int i = z2;
-        if (z2 != 0) {
-            i = 1;
+        ?? r1 = z2;
+        if (z2) {
+            r1 = 1;
         }
-        return iHashCode + i;
+        return iHashCode + r1;
     }
 
     public final boolean isSelected() {

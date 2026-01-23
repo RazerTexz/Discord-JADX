@@ -7,16 +7,16 @@ import p507d0.p513e0.p514p.p515d.p517m0.p567n.KotlinType;
 import p507d0.p513e0.p514p.p515d.p517m0.p567n.TypeConstructor;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: SupertypeLoopChecker.kt */
-/* renamed from: d0.e0.p.d.m0.c.x0, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.c.x0, reason: use source file name */
+/* JADX INFO: compiled from: SupertypeLoopChecker.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public interface SupertypeLoopChecker {
 
-    /* compiled from: SupertypeLoopChecker.kt */
-    /* renamed from: d0.e0.p.d.m0.c.x0$a */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.c.x0$a */
+    /* JADX INFO: compiled from: SupertypeLoopChecker.kt */
     public static final class a implements SupertypeLoopChecker {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public static final a f23103a = new a();
 
         /* JADX WARN: Multi-variable type inference failed */

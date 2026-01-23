@@ -5,7 +5,7 @@ import java.nio.ByteBuffer;
 import java.util.concurrent.TimeUnit;
 import p007b.p100d.p104b.p105a.outline;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public class EncodedImage implements RefCounted {
     public final ByteBuffer buffer;
     public final long captureTimeMs;
@@ -14,7 +14,7 @@ public class EncodedImage implements RefCounted {
     public final int encodedWidth;
     public final FrameType frameType;
 
-    /* renamed from: qp */
+    /* JADX INFO: renamed from: qp */
     @Nullable
     public final Integer f27612qp;
     private final RefCountDelegate refCountDelegate;
@@ -27,7 +27,7 @@ public class EncodedImage implements RefCounted {
         private int encodedWidth;
         private FrameType frameType;
 
-        /* renamed from: qp */
+        /* JADX INFO: renamed from: qp */
         @Nullable
         private Integer f27613qp;
 

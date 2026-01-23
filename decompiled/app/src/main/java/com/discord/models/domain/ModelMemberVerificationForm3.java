@@ -8,16 +8,16 @@ import kotlin.jvm.internal.Ref$ObjectRef;
 import p507d0.p592z.p594d.Intrinsics3;
 import p658rx.functions.Action1;
 
-/* compiled from: ModelMemberVerificationForm.kt */
-/* renamed from: com.discord.models.domain.ModelMemberVerificationForm$Parser$parse$1, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: com.discord.models.domain.ModelMemberVerificationForm$Parser$parse$1, reason: use source file name */
+/* JADX INFO: compiled from: ModelMemberVerificationForm.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class ModelMemberVerificationForm3<T> implements Action1<String> {
     public final /* synthetic */ Ref$ObjectRef $formFields;
     public final /* synthetic */ Model.JsonReader $reader;
     public final /* synthetic */ Ref$ObjectRef $version;
 
-    /* compiled from: ModelMemberVerificationForm.kt */
-    /* renamed from: com.discord.models.domain.ModelMemberVerificationForm$Parser$parse$1$1 */
+    /* JADX INFO: renamed from: com.discord.models.domain.ModelMemberVerificationForm$Parser$parse$1$1 */
+    /* JADX INFO: compiled from: ModelMemberVerificationForm.kt */
     public static final class C55421<T> implements Model.JsonReader.ItemFactory<ModelMemberVerificationForm.FormField> {
         public C55421() {
         }
@@ -45,7 +45,7 @@ public final class ModelMemberVerificationForm3<T> implements Action1<String> {
         call2(str);
     }
 
-    /* renamed from: call, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
     public final void call2(String str) throws IOException {
         if (str != null) {
             int iHashCode = str.hashCode();

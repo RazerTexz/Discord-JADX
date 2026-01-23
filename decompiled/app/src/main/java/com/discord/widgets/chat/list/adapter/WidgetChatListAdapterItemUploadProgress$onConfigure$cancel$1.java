@@ -7,8 +7,8 @@ import kotlin.Unit;
 import kotlin.jvm.functions.Function0;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetChatListAdapterItemUploadProgress.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetChatListAdapterItemUploadProgress.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetChatListAdapterItemUploadProgress$onConfigure$cancel$1 extends Lambda implements Function0<Unit> {
     public final /* synthetic */ ChatListEntry $data;
 
@@ -24,7 +24,7 @@ public final class WidgetChatListAdapterItemUploadProgress$onConfigure$cancel$1 
         return Unit.f27425a;
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final void invoke2() {
         StoreStream.INSTANCE.getMessages().cancelMessageSend(((UploadProgressEntry) this.$data).getChannelId(), ((UploadProgressEntry) this.$data).getMessageNonce());
     }

@@ -8,9 +8,9 @@ import p507d0.p513e0.KClass;
 import p507d0.p513e0.KProperty2;
 import p507d0.p513e0.KProperty3;
 
-/* compiled from: ReflectionFactory.java */
-/* renamed from: d0.z.d.b0, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.z.d.b0, reason: use source file name */
+/* JADX INFO: compiled from: ReflectionFactory.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class ReflectionFactory {
     public KFunction function(FunctionReference functionReference) {
         return functionReference;

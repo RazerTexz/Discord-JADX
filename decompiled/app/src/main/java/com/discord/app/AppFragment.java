@@ -53,22 +53,22 @@ import p658rx.functions.Func0;
 import p658rx.subjects.PublishSubject;
 import p658rx.subjects.Subject;
 
-/* compiled from: AppFragment.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: AppFragment.kt */
+/* JADX INFO: loaded from: classes.dex */
 public abstract class AppFragment extends Fragment implements AppComponent, AppPermissions2, MediaPicker.Provider, AppLogger.InterfaceC5455a {
 
-    /* renamed from: appLogger$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: appLogger$delegate, reason: from kotlin metadata */
     private final Lazy appLogger;
 
-    /* renamed from: fileManager$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: fileManager$delegate, reason: from kotlin metadata */
     private final Lazy fileManager;
     private boolean isRecreated;
     private final AppLogger2 loggingConfig;
     private boolean onViewBoundOrOnResumeInvoked;
     private final Subject<Void, Void> unsubscribeSignal;
 
-    /* compiled from: AppFragment.kt */
-    /* renamed from: com.discord.app.AppFragment$a */
+    /* JADX INFO: renamed from: com.discord.app.AppFragment$a */
+    /* JADX INFO: compiled from: AppFragment.kt */
     public static final class C5447a extends Lambda implements Function0<AppLogger> {
         public C5447a() {
             super(0);
@@ -80,8 +80,8 @@ public abstract class AppFragment extends Fragment implements AppComponent, AppP
         }
     }
 
-    /* compiled from: AppFragment.kt */
-    /* renamed from: com.discord.app.AppFragment$b */
+    /* JADX INFO: renamed from: com.discord.app.AppFragment$b */
+    /* JADX INFO: compiled from: AppFragment.kt */
     public static final class C5448b extends Lambda implements Function0<SimpleFileManager> {
         public C5448b() {
             super(0);
@@ -93,21 +93,21 @@ public abstract class AppFragment extends Fragment implements AppComponent, AppP
         }
     }
 
-    /* compiled from: AppFragment.kt */
-    /* renamed from: com.discord.app.AppFragment$c */
+    /* JADX INFO: renamed from: com.discord.app.AppFragment$c */
+    /* JADX INFO: compiled from: AppFragment.kt */
     public static final class C5449c implements MediaPicker.InterfaceC5527a {
         public C5449c() {
         }
 
         @Override // com.discord.media_picker.MediaPicker.InterfaceC5527a
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public void mo8354a(Exception exc) {
             Intrinsics3.checkNotNullParameter(exc, "e");
             AppToast.m170h(AppFragment.this.getContext(), FormatUtils.m219k(AppFragment.this, C5419R.string.upload_open_file_failed, new Object[]{exc.getMessage()}, null, 4), 0, null, 12);
         }
 
         @Override // com.discord.media_picker.MediaPicker.InterfaceC5527a
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public void mo8355b(Uri uri, RequestType requestType) {
             Intrinsics3.checkNotNullParameter(uri, NotificationCompat.MessagingStyle.Message.KEY_DATA_URI);
             Intrinsics3.checkNotNullParameter(requestType, "request");
@@ -120,8 +120,8 @@ public abstract class AppFragment extends Fragment implements AppComponent, AppP
         }
     }
 
-    /* compiled from: AppFragment.kt */
-    /* renamed from: com.discord.app.AppFragment$d */
+    /* JADX INFO: renamed from: com.discord.app.AppFragment$d */
+    /* JADX INFO: compiled from: AppFragment.kt */
     public static final class C5450d extends Lambda implements Function0<Unit> {
         public C5450d() {
             super(0);
@@ -155,8 +155,8 @@ public abstract class AppFragment extends Fragment implements AppComponent, AppP
         }
     }
 
-    /* compiled from: AppFragment.kt */
-    /* renamed from: com.discord.app.AppFragment$e */
+    /* JADX INFO: renamed from: com.discord.app.AppFragment$e */
+    /* JADX INFO: compiled from: AppFragment.kt */
     public static final class C5451e extends Lambda implements Function0<Boolean> {
         public final /* synthetic */ Func0 $onBackAction;
 
@@ -302,7 +302,7 @@ public abstract class AppFragment extends Fragment implements AppComponent, AppP
         }
     }
 
-    /* renamed from: isRecreated, reason: from getter */
+    /* JADX INFO: renamed from: isRecreated, reason: from getter */
     public final boolean getIsRecreated() {
         return this.isRecreated;
     }

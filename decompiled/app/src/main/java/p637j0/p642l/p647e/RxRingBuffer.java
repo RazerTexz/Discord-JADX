@@ -10,18 +10,18 @@ import p637j0.p642l.p647e.p649o.SpscArrayQueue;
 import p658rx.Subscription;
 import p658rx.exceptions.MissingBackpressureException;
 
-/* compiled from: RxRingBuffer.java */
-/* renamed from: j0.l.e.i, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: j0.l.e.i, reason: use source file name */
+/* JADX INFO: compiled from: RxRingBuffer.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class RxRingBuffer implements Subscription {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static final int f27283j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public Queue<Object> f27284k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public volatile Object f27285l;
 
     static {
@@ -44,7 +44,7 @@ public class RxRingBuffer implements Subscription {
         this.f27284k = z2 ? new SpmcArrayQueue<>(i) : new SpscArrayQueue<>(i);
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public void m10817a(Object obj) throws MissingBackpressureException {
         boolean z2;
         boolean z3;
@@ -68,7 +68,7 @@ public class RxRingBuffer implements Subscription {
         }
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public Object m10818b() {
         synchronized (this) {
             Queue<Object> queue = this.f27284k;
@@ -84,7 +84,7 @@ public class RxRingBuffer implements Subscription {
         }
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public Object m10819c() {
         synchronized (this) {
             Queue<Object> queue = this.f27284k;

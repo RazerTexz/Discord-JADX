@@ -3,9 +3,9 @@ package com.discord.widgets.user.usersheet;
 import kotlin.jvm.functions.Function4;
 import p658rx.functions.Func4;
 
-/* compiled from: WidgetUserSheetViewModelStoreState.kt */
-/* renamed from: com.discord.widgets.user.usersheet.WidgetUserSheetViewModelStoreState$sam$rx_functions_Func4$0, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: com.discord.widgets.user.usersheet.WidgetUserSheetViewModelStoreState$sam$rx_functions_Func4$0, reason: use source file name */
+/* JADX INFO: compiled from: WidgetUserSheetViewModelStoreState.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class WidgetUserSheetViewModelStoreState2 implements Func4 {
     private final /* synthetic */ Function4 function;
 

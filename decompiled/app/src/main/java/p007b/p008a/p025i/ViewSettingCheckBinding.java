@@ -6,20 +6,20 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.viewbinding.ViewBinding;
 import com.google.android.material.checkbox.MaterialCheckBox;
 
-/* compiled from: ViewSettingCheckBinding.java */
-/* renamed from: b.a.i.p3, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.a.i.p3, reason: use source file name */
+/* JADX INFO: compiled from: ViewSettingCheckBinding.java */
+/* JADX INFO: loaded from: classes.dex */
 public final class ViewSettingCheckBinding implements ViewBinding {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     @NonNull
     public final View f1134a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     @NonNull
     public final MaterialCheckBox f1135b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     @NonNull
     public final ConstraintLayout f1136c;
 

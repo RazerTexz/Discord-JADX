@@ -4,24 +4,19 @@ import java.util.Objects;
 import java.util.concurrent.Callable;
 import p007b.p225i.p226a.p288f.p313h.p327n.C3941a;
 
-/* compiled from: com.android.billingclient:billing@@4.0.0 */
-/* renamed from: b.d.a.a.m */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.d.a.a.m */
+/* JADX INFO: compiled from: com.android.billingclient:billing@@4.0.0 */
+/* JADX INFO: loaded from: classes.dex */
 public final /* synthetic */ class CallableC1628m implements Callable {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final /* synthetic */ ServiceConnectionC1629n f2967j;
 
     public /* synthetic */ CallableC1628m(ServiceConnectionC1629n serviceConnectionC1629n) {
         this.f2967j = serviceConnectionC1629n;
     }
 
-    /* JADX WARN: Removed duplicated region for block: B:65:0x00c6  */
-    /* JADX WARN: Removed duplicated region for block: B:66:0x00cc  */
     @Override // java.util.concurrent.Callable
-    /*
-        Code decompiled incorrectly, please refer to instructions dump.
-    */
     public final Object call() {
         int iMo5420N;
         ServiceConnectionC1629n serviceConnectionC1629n = this.f2967j;
@@ -49,9 +44,6 @@ public final /* synthetic */ class CallableC1628m implements Callable {
                             serviceConnectionC1629n.f2971m.f2931a = 0;
                             serviceConnectionC1629n.f2971m.f2936f = null;
                             iMo5420N = i;
-                            if (iMo5420N != 0) {
-                            }
-                            return null;
                         }
                     }
                     Objects.requireNonNull(serviceConnectionC1629n.f2971m);
@@ -94,7 +86,7 @@ public final /* synthetic */ class CallableC1628m implements Callable {
                     }
                 } catch (Exception unused2) {
                 }
-                if (iMo5420N != 0) {
+                if (iMo5420N == 0) {
                     serviceConnectionC1629n.m811a(C1631p.f2980i);
                 } else {
                     serviceConnectionC1629n.m811a(C1631p.f2972a);

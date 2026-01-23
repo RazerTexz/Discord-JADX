@@ -6,15 +6,15 @@ import java.util.Collection;
 import java.util.Iterator;
 import java.util.Objects;
 
-/* compiled from: CollectionToArray.kt */
-/* renamed from: d0.z.d.g, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.z.d.g, reason: use source file name */
+/* JADX INFO: compiled from: CollectionToArray.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class CollectionToArray {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final Object[] f25290a = new Object[0];
 
-    public static final Object[] toArray(Collection<?> collection, Object[] objArr) throws NegativeArraySizeException {
+    public static final Object[] toArray(Collection<?> collection, Object[] objArr) {
         Object[] objArrCopyOf;
         Intrinsics3.checkNotNullParameter(collection, "collection");
         Objects.requireNonNull(objArr);

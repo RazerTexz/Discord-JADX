@@ -12,29 +12,29 @@ import java.util.concurrent.Executor;
 import java.util.concurrent.Executors;
 import java.util.concurrent.FutureTask;
 
-/* compiled from: LottieTask.java */
-/* renamed from: b.c.a.r, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.c.a.r, reason: use source file name */
+/* JADX INFO: compiled from: LottieTask.java */
+/* JADX INFO: loaded from: classes.dex */
 public class LottieTask2<T> {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static Executor f2452a = Executors.newCachedThreadPool();
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final Set<LottieListener<T>> f2453b = new LinkedHashSet(1);
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final Set<LottieListener<Throwable>> f2454c = new LinkedHashSet(1);
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final Handler f2455d = new Handler(Looper.getMainLooper());
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     @Nullable
     public volatile LottieResult<T> f2456e = null;
 
-    /* compiled from: LottieTask.java */
-    /* renamed from: b.c.a.r$a */
+    /* JADX INFO: renamed from: b.c.a.r$a */
+    /* JADX INFO: compiled from: LottieTask.java */
     public class a extends FutureTask<LottieResult<T>> {
         public a(Callable<LottieResult<T>> callable) {
             super(callable);
@@ -58,7 +58,7 @@ public class LottieTask2<T> {
         f2452a.execute(new a(callable));
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public synchronized LottieTask2<T> m705a(LottieListener<Throwable> lottieListener) {
         if (this.f2456e != null && this.f2456e.f2450b != null) {
             lottieListener.mo680a(this.f2456e.f2450b);
@@ -67,7 +67,7 @@ public class LottieTask2<T> {
         return this;
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public synchronized LottieTask2<T> m706b(LottieListener<T> lottieListener) {
         if (this.f2456e != null && this.f2456e.f2449a != null) {
             lottieListener.mo680a(this.f2456e.f2449a);
@@ -76,7 +76,7 @@ public class LottieTask2<T> {
         return this;
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final void m707c(@Nullable LottieResult<T> lottieResult) {
         if (this.f2456e != null) {
             throw new IllegalStateException("A task may only be set once.");

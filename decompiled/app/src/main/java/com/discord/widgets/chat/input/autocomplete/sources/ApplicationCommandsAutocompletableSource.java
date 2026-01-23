@@ -35,17 +35,17 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p658rx.Observable;
 import p658rx.functions.Func4;
 
-/* compiled from: ApplicationCommandsAutocompletableSource.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: ApplicationCommandsAutocompletableSource.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class ApplicationCommandsAutocompletableSource {
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private final StoreApplicationCommands storeApplicationCommands;
     private final StoreGuilds storeGuilds;
     private final StoreUser storeUsers;
 
-    /* compiled from: ApplicationCommandsAutocompletableSource.kt */
+    /* JADX INFO: compiled from: ApplicationCommandsAutocompletableSource.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -84,8 +84,8 @@ public final class ApplicationCommandsAutocompletableSource {
         }
     }
 
-    /* compiled from: ApplicationCommandsAutocompletableSource.kt */
-    /* renamed from: com.discord.widgets.chat.input.autocomplete.sources.ApplicationCommandsAutocompletableSource$observeApplicationCommandAutocompletables$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.input.autocomplete.sources.ApplicationCommandsAutocompletableSource$observeApplicationCommandAutocompletables$1 */
+    /* JADX INFO: compiled from: ApplicationCommandsAutocompletableSource.kt */
     public static final class C78021<T1, T2, T3, T4, R> implements Func4<Long, Map<Long, ? extends GuildMember>, List<? extends Application>, List<? extends ApplicationCommand>, Map<LeadingIdentifier, ? extends TreeSet<Autocompletable>>> {
         public C78021() {
         }
@@ -95,7 +95,7 @@ public final class ApplicationCommandsAutocompletableSource {
             return call2(l, (Map<Long, GuildMember>) map, (List<Application>) list, list2);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final Map<LeadingIdentifier, TreeSet<Autocompletable>> call2(Long l, Map<Long, GuildMember> map, List<Application> list, List<? extends ApplicationCommand> list2) {
             Intrinsics3.checkNotNullExpressionValue(list2, "queries");
             if (!(!list2.isEmpty())) {

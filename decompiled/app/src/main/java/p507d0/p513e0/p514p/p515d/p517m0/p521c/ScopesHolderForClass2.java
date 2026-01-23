@@ -5,9 +5,9 @@ import p507d0.p513e0.p514p.p515d.p517m0.p552k.p553a0.MemberScope3;
 import p507d0.p592z.p594d.Lambda;
 
 /* JADX INFO: Add missing generic type declarations: [T] */
-/* compiled from: ScopesHolderForClass.kt */
-/* renamed from: d0.e0.p.d.m0.c.s0, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.c.s0, reason: use source file name */
+/* JADX INFO: compiled from: ScopesHolderForClass.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class ScopesHolderForClass2<T> extends Lambda implements Function0<T> {
     public final /* synthetic */ ScopesHolderForClass<T> this$0;
 

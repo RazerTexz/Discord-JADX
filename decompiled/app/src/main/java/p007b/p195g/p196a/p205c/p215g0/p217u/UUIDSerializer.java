@@ -12,12 +12,12 @@ import p007b.p195g.p196a.p205c.SerializerProvider;
 import p007b.p195g.p196a.p205c.p215g0.ContextualSerializer;
 import p007b.p195g.p196a.p205c.p219i0.TokenBuffer;
 
-/* compiled from: UUIDSerializer.java */
-/* renamed from: b.g.a.c.g0.u.w0, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.g.a.c.g0.u.w0, reason: use source file name */
+/* JADX INFO: compiled from: UUIDSerializer.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class UUIDSerializer extends StdScalarSerializer<UUID> implements ContextualSerializer {
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public static final char[] f4870k = "0123456789abcdef".toCharArray();
     public final Boolean _asBinary;
 
@@ -26,7 +26,7 @@ public class UUIDSerializer extends StdScalarSerializer<UUID> implements Context
         this._asBinary = null;
     }
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public static final void m2088p(int i, byte[] bArr, int i2) {
         bArr[i2] = (byte) (i >> 24);
         int i3 = i2 + 1;
@@ -36,7 +36,7 @@ public class UUIDSerializer extends StdScalarSerializer<UUID> implements Context
         bArr[i4 + 1] = (byte) i;
     }
 
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     public static void m2089q(int i, char[] cArr, int i2) {
         char[] cArr2 = f4870k;
         cArr[i2] = cArr2[(i >> 12) & 15];
@@ -49,7 +49,7 @@ public class UUIDSerializer extends StdScalarSerializer<UUID> implements Context
 
     /* JADX WARN: Removed duplicated region for block: B:10:0x001a  */
     @Override // p007b.p195g.p196a.p205c.p215g0.ContextualSerializer
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
@@ -70,7 +70,7 @@ public class UUIDSerializer extends StdScalarSerializer<UUID> implements Context
     }
 
     @Override // p007b.p195g.p196a.p205c.JsonSerializer
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public boolean mo2021d(SerializerProvider serializerProvider, Object obj) {
         UUID uuid = (UUID) obj;
         return uuid.getLeastSignificantBits() == 0 && uuid.getMostSignificantBits() == 0;
@@ -78,7 +78,7 @@ public class UUIDSerializer extends StdScalarSerializer<UUID> implements Context
 
     /* JADX WARN: Removed duplicated region for block: B:10:0x0019  */
     @Override // p007b.p195g.p196a.p205c.JsonSerializer
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */

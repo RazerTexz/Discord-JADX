@@ -18,8 +18,8 @@ import androidx.appcompat.view.menu.MenuPresenter;
 import androidx.core.view.GravityCompat;
 import androidx.core.view.ViewCompat;
 
+/* JADX INFO: loaded from: classes.dex */
 @RestrictTo({RestrictTo.Scope.LIBRARY_GROUP_PREFIX})
-/* loaded from: classes.dex */
 public class MenuPopupHelper implements MenuHelper {
     private static final int TOUCH_EPICENTER_SIZE_DP = 48;
     private View mAnchorView;
@@ -35,7 +35,7 @@ public class MenuPopupHelper implements MenuHelper {
     private final int mPopupStyleRes;
     private MenuPresenter.Callback mPresenterCallback;
 
-    /* renamed from: androidx.appcompat.view.menu.MenuPopupHelper$1 */
+    /* JADX INFO: renamed from: androidx.appcompat.view.menu.MenuPopupHelper$1 */
     public class C00861 implements PopupWindow.OnDismissListener {
         public C00861() {
         }

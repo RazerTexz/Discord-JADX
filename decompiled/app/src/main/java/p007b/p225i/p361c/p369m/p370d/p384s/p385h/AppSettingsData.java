@@ -1,32 +1,32 @@
 package p007b.p225i.p361c.p369m.p370d.p384s.p385h;
 
-/* compiled from: AppSettingsData.java */
-/* renamed from: b.i.c.m.d.s.h.b, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.c.m.d.s.h.b, reason: use source file name */
+/* JADX INFO: compiled from: AppSettingsData.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class AppSettingsData {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final String f12749a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final String f12750b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final String f12751c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final String f12752d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final String f12753e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final boolean f12754f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public final int f12755g;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public final int f12756h;
 
     public AppSettingsData(String str, String str2, String str3, String str4, String str5, String str6, boolean z2, int i, int i2) {

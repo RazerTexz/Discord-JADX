@@ -4,8 +4,8 @@ import com.discord.app.AppLog;
 import com.discord.models.experiments.domain.Experiment;
 import com.discord.stores.StoreStream;
 
-/* compiled from: GrowthTeamFeatures.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: GrowthTeamFeatures.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class GrowthTeamFeatures {
     public static final GrowthTeamFeatures INSTANCE = new GrowthTeamFeatures();
 

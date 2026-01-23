@@ -6,9 +6,9 @@ import java.io.IOException;
 import kotlin.jvm.internal.Ref$ObjectRef;
 import p658rx.functions.Action1;
 
-/* compiled from: ModelCustomStatusSetting.kt */
-/* renamed from: com.discord.models.domain.ModelCustomStatusSetting$Parser$parse$1, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: com.discord.models.domain.ModelCustomStatusSetting$Parser$parse$1, reason: use source file name */
+/* JADX INFO: compiled from: ModelCustomStatusSetting.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class ModelCustomStatusSetting2<T> implements Action1<String> {
     public final /* synthetic */ Ref$ObjectRef $emojiId;
     public final /* synthetic */ Ref$ObjectRef $emojiName;
@@ -29,14 +29,8 @@ public final class ModelCustomStatusSetting2<T> implements Action1<String> {
         call2(str);
     }
 
-    /* JADX WARN: Failed to restore switch over string. Please report as a decompilation issue
-    java.lang.NullPointerException: Cannot invoke "java.util.List.iterator()" because the return value of "jadx.core.dex.visitors.regions.SwitchOverStringVisitor$SwitchData.getNewCases()" is null
-    	at jadx.core.dex.visitors.regions.SwitchOverStringVisitor.restoreSwitchOverString(SwitchOverStringVisitor.java:109)
-    	at jadx.core.dex.visitors.regions.SwitchOverStringVisitor.visitRegion(SwitchOverStringVisitor.java:66)
-    	at jadx.core.dex.visitors.regions.DepthRegionTraversal.traverseIterativeStepInternal(DepthRegionTraversal.java:77)
-    	at jadx.core.dex.visitors.regions.DepthRegionTraversal.traverseIterativeStepInternal(DepthRegionTraversal.java:82)
-     */
-    /* renamed from: call, reason: avoid collision after fix types in other method */
+    /* JADX WARN: Failed to restore switch over string. Please report as a decompilation issue */
+    /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
     public final void call2(String str) throws IOException {
         if (str != null) {
             switch (str.hashCode()) {

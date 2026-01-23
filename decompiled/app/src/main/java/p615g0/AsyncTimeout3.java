@@ -4,15 +4,15 @@ import java.io.IOException;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: AsyncTimeout.kt */
-/* renamed from: g0.d, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: g0.d, reason: use source file name */
+/* JADX INFO: compiled from: AsyncTimeout.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class AsyncTimeout3 implements Source2 {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final /* synthetic */ AsyncTimeout f26077j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final /* synthetic */ Source2 f26078k;
 
     public AsyncTimeout3(AsyncTimeout asyncTimeout, Source2 source2) {
@@ -40,7 +40,7 @@ public final class AsyncTimeout3 implements Source2 {
     }
 
     @Override // p615g0.Source2
-    /* renamed from: i0 */
+    /* JADX INFO: renamed from: i0 */
     public long mo10176i0(Buffer3 buffer3, long j) throws IOException {
         Intrinsics3.checkParameterIsNotNull(buffer3, "sink");
         AsyncTimeout asyncTimeout = this.f26077j;

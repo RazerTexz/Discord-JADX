@@ -42,11 +42,11 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 import p658rx.Observable;
 
-/* compiled from: WidgetChannelSettingsAddMemberFragmentViewModel.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetChannelSettingsAddMemberFragmentViewModel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetChannelSettingsAddMemberFragmentViewModel extends AppViewModel<ViewState> {
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private final long channelId;
     private final StoreChannels channelsStore;
@@ -58,8 +58,8 @@ public final class WidgetChannelSettingsAddMemberFragmentViewModel extends AppVi
     private StoreState storeState;
     private final StoreUser userStore;
 
-    /* compiled from: WidgetChannelSettingsAddMemberFragmentViewModel.kt */
-    /* renamed from: com.discord.widgets.channels.permissions.WidgetChannelSettingsAddMemberFragmentViewModel$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.channels.permissions.WidgetChannelSettingsAddMemberFragmentViewModel$1 */
+    /* JADX INFO: compiled from: WidgetChannelSettingsAddMemberFragmentViewModel.kt */
     public static final class C75291 extends Lambda implements Function1<StoreState, Unit> {
         public C75291() {
             super(1);
@@ -71,14 +71,14 @@ public final class WidgetChannelSettingsAddMemberFragmentViewModel extends AppVi
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(StoreState storeState) {
             Intrinsics3.checkNotNullParameter(storeState, "storeState");
             WidgetChannelSettingsAddMemberFragmentViewModel.access$handleStoreState(WidgetChannelSettingsAddMemberFragmentViewModel.this, storeState);
         }
     }
 
-    /* compiled from: WidgetChannelSettingsAddMemberFragmentViewModel.kt */
+    /* JADX INFO: compiled from: WidgetChannelSettingsAddMemberFragmentViewModel.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -100,7 +100,7 @@ public final class WidgetChannelSettingsAddMemberFragmentViewModel extends AppVi
         }
     }
 
-    /* compiled from: WidgetChannelSettingsAddMemberFragmentViewModel.kt */
+    /* JADX INFO: compiled from: WidgetChannelSettingsAddMemberFragmentViewModel.kt */
     public static final /* data */ class StoreState {
         private final Channel channel;
         private final Map<Long, PermissionOverwrite> channelPermissionOverwritesMap;
@@ -124,6 +124,7 @@ public final class WidgetChannelSettingsAddMemberFragmentViewModel extends AppVi
             this.users = map4;
         }
 
+        /* JADX WARN: Multi-variable type inference failed */
         public static /* synthetic */ StoreState copy$default(StoreState storeState, Guild guild, Channel channel, Map map, Map map2, Map map3, Map map4, int i, Object obj) {
             if ((i & 1) != 0) {
                 guild = storeState.guild;
@@ -150,12 +151,12 @@ public final class WidgetChannelSettingsAddMemberFragmentViewModel extends AppVi
             return storeState.copy(guild, channel2, map5, map6, map7, map4);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final Guild getGuild() {
             return this.guild;
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final Channel getChannel() {
             return this.channel;
         }
@@ -251,7 +252,7 @@ public final class WidgetChannelSettingsAddMemberFragmentViewModel extends AppVi
         }
     }
 
-    /* compiled from: WidgetChannelSettingsAddMemberFragmentViewModel.kt */
+    /* JADX INFO: compiled from: WidgetChannelSettingsAddMemberFragmentViewModel.kt */
     public static final /* data */ class ViewState {
         private final Channel channel;
         private final Guild guild;
@@ -272,6 +273,7 @@ public final class WidgetChannelSettingsAddMemberFragmentViewModel extends AppVi
             this.selected = map;
         }
 
+        /* JADX WARN: Multi-variable type inference failed */
         public static /* synthetic */ ViewState copy$default(ViewState viewState, Guild guild, Channel channel, String str, List list, Map map, int i, Object obj) {
             if ((i & 1) != 0) {
                 guild = viewState.guild;
@@ -294,17 +296,17 @@ public final class WidgetChannelSettingsAddMemberFragmentViewModel extends AppVi
             return viewState.copy(guild, channel2, str2, list2, map);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final Guild getGuild() {
             return this.guild;
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final Channel getChannel() {
             return this.channel;
         }
 
-        /* renamed from: component3, reason: from getter */
+        /* JADX INFO: renamed from: component3, reason: from getter */
         public final String getQuery() {
             return this.query;
         }

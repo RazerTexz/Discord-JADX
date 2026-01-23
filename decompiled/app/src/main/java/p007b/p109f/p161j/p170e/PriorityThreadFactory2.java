@@ -4,28 +4,28 @@ import android.os.Process;
 import java.util.concurrent.ThreadFactory;
 import java.util.concurrent.atomic.AtomicInteger;
 
-/* compiled from: PriorityThreadFactory.java */
-/* renamed from: b.f.j.e.o, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.f.j.e.o, reason: use source file name */
+/* JADX INFO: compiled from: PriorityThreadFactory.java */
+/* JADX INFO: loaded from: classes.dex */
 public class PriorityThreadFactory2 implements ThreadFactory {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final int f3809j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final String f3810k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final boolean f3811l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public final AtomicInteger f3812m = new AtomicInteger(1);
 
-    /* compiled from: PriorityThreadFactory.java */
-    /* renamed from: b.f.j.e.o$a */
+    /* JADX INFO: renamed from: b.f.j.e.o$a */
+    /* JADX INFO: compiled from: PriorityThreadFactory.java */
     public class a implements Runnable {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public final /* synthetic */ Runnable f3813j;
 
         public a(Runnable runnable) {

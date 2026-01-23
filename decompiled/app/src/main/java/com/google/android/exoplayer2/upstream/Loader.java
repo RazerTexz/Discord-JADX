@@ -21,23 +21,23 @@ import p007b.p225i.p226a.p242c.p259f3.ThreadFactoryC2735d;
 import p007b.p225i.p226a.p242c.p259f3.Util2;
 import p007b.p225i.p226a.p242c.p267x2.Extractor;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public final class Loader {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final C10768c f20229a = new C10768c(2, -9223372036854775807L, null);
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static final C10768c f20230b = new C10768c(3, -9223372036854775807L, null);
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final ExecutorService f20231c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     @Nullable
     public HandlerC10769d<? extends InterfaceC10770e> f20232d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     @Nullable
     public IOException f20233e;
 
@@ -50,25 +50,25 @@ public final class Loader {
         }
     }
 
-    /* renamed from: com.google.android.exoplayer2.upstream.Loader$b */
+    /* JADX INFO: renamed from: com.google.android.exoplayer2.upstream.Loader$b */
     public interface InterfaceC10767b<T extends InterfaceC10770e> {
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         void mo2478b(T t, long j, long j2, boolean z2);
 
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         void mo2480d(T t, long j, long j2);
 
-        /* renamed from: o */
+        /* JADX INFO: renamed from: o */
         C10768c mo2491o(T t, long j, long j2, IOException iOException, int i);
     }
 
-    /* renamed from: com.google.android.exoplayer2.upstream.Loader$c */
+    /* JADX INFO: renamed from: com.google.android.exoplayer2.upstream.Loader$c */
     public static final class C10768c {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final int f20234a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final long f20235b;
 
         public C10768c(int i, long j, C10766a c10766a) {
@@ -77,38 +77,38 @@ public final class Loader {
         }
     }
 
+    /* JADX INFO: renamed from: com.google.android.exoplayer2.upstream.Loader$d */
     @SuppressLint({"HandlerLeak"})
-    /* renamed from: com.google.android.exoplayer2.upstream.Loader$d */
     public final class HandlerC10769d<T extends InterfaceC10770e> extends Handler implements Runnable {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public final int f20236j;
 
-        /* renamed from: k */
+        /* JADX INFO: renamed from: k */
         public final T f20237k;
 
-        /* renamed from: l */
+        /* JADX INFO: renamed from: l */
         public final long f20238l;
 
-        /* renamed from: m */
+        /* JADX INFO: renamed from: m */
         @Nullable
         public InterfaceC10767b<T> f20239m;
 
-        /* renamed from: n */
+        /* JADX INFO: renamed from: n */
         @Nullable
         public IOException f20240n;
 
-        /* renamed from: o */
+        /* JADX INFO: renamed from: o */
         public int f20241o;
 
-        /* renamed from: p */
+        /* JADX INFO: renamed from: p */
         @Nullable
         public Thread f20242p;
 
-        /* renamed from: q */
+        /* JADX INFO: renamed from: q */
         public boolean f20243q;
 
-        /* renamed from: r */
+        /* JADX INFO: renamed from: r */
         public volatile boolean f20244r;
 
         public HandlerC10769d(Looper looper, T t, InterfaceC10767b<T> interfaceC10767b, int i, long j) {
@@ -119,7 +119,7 @@ public final class Loader {
             this.f20238l = j;
         }
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public void m8941a(boolean z2) {
             this.f20244r = z2;
             this.f20240n = null;
@@ -150,7 +150,7 @@ public final class Loader {
         }
 
         /* JADX WARN: Multi-variable type inference failed */
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public void m8942b(long j) {
             AnimatableValueParser.m426D(Loader.this.f20232d == null);
             Loader loader = Loader.this;
@@ -278,18 +278,18 @@ public final class Loader {
         }
     }
 
-    /* renamed from: com.google.android.exoplayer2.upstream.Loader$e */
+    /* JADX INFO: renamed from: com.google.android.exoplayer2.upstream.Loader$e */
     public interface InterfaceC10770e {
     }
 
-    /* renamed from: com.google.android.exoplayer2.upstream.Loader$f */
+    /* JADX INFO: renamed from: com.google.android.exoplayer2.upstream.Loader$f */
     public interface InterfaceC10771f {
     }
 
-    /* renamed from: com.google.android.exoplayer2.upstream.Loader$g */
+    /* JADX INFO: renamed from: com.google.android.exoplayer2.upstream.Loader$g */
     public static final class RunnableC10772g implements Runnable {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public final InterfaceC10771f f20246j;
 
         public RunnableC10772g(InterfaceC10771f interfaceC10771f) {
@@ -324,12 +324,12 @@ public final class Loader {
         this.f20231c = Executors.newSingleThreadExecutor(new ThreadFactoryC2735d(strConcat));
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static C10768c m8939a(boolean z2, long j) {
         return new C10768c(z2 ? 1 : 0, j, null);
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public boolean m8940b() {
         return this.f20232d != null;
     }

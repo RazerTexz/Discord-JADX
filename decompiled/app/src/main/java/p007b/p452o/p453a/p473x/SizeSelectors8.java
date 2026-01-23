@@ -5,12 +5,12 @@ import java.util.ArrayList;
 import java.util.List;
 import p007b.p225i.p226a.p288f.p299e.p308o.C3404f;
 
-/* compiled from: SizeSelectors.java */
-/* renamed from: b.o.a.x.k, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.o.a.x.k, reason: use source file name */
+/* JADX INFO: compiled from: SizeSelectors.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class SizeSelectors8 implements SizeSelector {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public SizeSelectors7 f14258a;
 
     public SizeSelectors8(SizeSelectors7 sizeSelectors7, C3404f.a aVar) {
@@ -19,7 +19,7 @@ public class SizeSelectors8 implements SizeSelector {
 
     @Override // p007b.p452o.p453a.p473x.SizeSelector
     @NonNull
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public List<Size3> mo7452a(@NonNull List<Size3> list) {
         ArrayList arrayList = new ArrayList();
         for (Size3 size3 : list) {

@@ -7,9 +7,9 @@ import java.io.IOException;
 import java.util.Locale;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ActivityPlatform.kt */
-/* renamed from: com.discord.api.activity.ActivityPlatformTypeAdapter, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: com.discord.api.activity.ActivityPlatformTypeAdapter, reason: use source file name */
+/* JADX INFO: compiled from: ActivityPlatform.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class ActivityPlatform2 extends TypeAdapter<ActivityPlatform> {
     /* JADX WARN: Failed to restore switch over string. Please report as a decompilation issue */
     @Override // com.google.gson.TypeAdapter

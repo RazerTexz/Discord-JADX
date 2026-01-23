@@ -16,7 +16,7 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.ViewPropertyAnimatorCompat;
 import androidx.core.view.ViewPropertyAnimatorListener;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public abstract class AbsActionBarView extends ViewGroup {
     private static final int FADE_DURATION = 200;
     public ActionMenuPresenter mActionMenuPresenter;
@@ -28,7 +28,7 @@ public abstract class AbsActionBarView extends ViewGroup {
     public final VisibilityAnimListener mVisAnimListener;
     public ViewPropertyAnimatorCompat mVisibilityAnim;
 
-    /* renamed from: androidx.appcompat.widget.AbsActionBarView$1 */
+    /* JADX INFO: renamed from: androidx.appcompat.widget.AbsActionBarView$1 */
     public class RunnableC00891 implements Runnable {
         public RunnableC00891() {
         }

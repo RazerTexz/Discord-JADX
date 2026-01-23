@@ -8,35 +8,35 @@ import p007b.p100d.p104b.p105a.outline;
 import p007b.p225i.p226a.p228b.Priority3;
 import p007b.p225i.p226a.p228b.p231j.TransportContext;
 
-/* compiled from: AutoValue_TransportContext.java */
-/* renamed from: b.i.a.b.j.b, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.b.j.b, reason: use source file name */
+/* JADX INFO: compiled from: AutoValue_TransportContext.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class AutoValue_TransportContext extends TransportContext {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final String f5258a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final byte[] f5259b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final Priority3 f5260c;
 
-    /* compiled from: AutoValue_TransportContext.java */
-    /* renamed from: b.i.a.b.j.b$b */
+    /* JADX INFO: renamed from: b.i.a.b.j.b$b */
+    /* JADX INFO: compiled from: AutoValue_TransportContext.java */
     public static final class b extends TransportContext.a {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public String f5261a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public byte[] f5262b;
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public Priority3 f5263c;
 
         @Override // p007b.p225i.p226a.p228b.p231j.TransportContext.a
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public TransportContext mo2351a() {
             String strM883w = this.f5261a == null ? " backendName" : "";
             if (this.f5263c == null) {
@@ -49,7 +49,7 @@ public final class AutoValue_TransportContext extends TransportContext {
         }
 
         @Override // p007b.p225i.p226a.p228b.p231j.TransportContext.a
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public TransportContext.a mo2352b(String str) {
             Objects.requireNonNull(str, "Null backendName");
             this.f5261a = str;
@@ -57,7 +57,7 @@ public final class AutoValue_TransportContext extends TransportContext {
         }
 
         @Override // p007b.p225i.p226a.p228b.p231j.TransportContext.a
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public TransportContext.a mo2353c(Priority3 priority3) {
             Objects.requireNonNull(priority3, "Null priority");
             this.f5263c = priority3;
@@ -72,21 +72,21 @@ public final class AutoValue_TransportContext extends TransportContext {
     }
 
     @Override // p007b.p225i.p226a.p228b.p231j.TransportContext
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public String mo2348b() {
         return this.f5258a;
     }
 
     @Override // p007b.p225i.p226a.p228b.p231j.TransportContext
     @Nullable
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public byte[] mo2349c() {
         return this.f5259b;
     }
 
     @Override // p007b.p225i.p226a.p228b.p231j.TransportContext
     @RestrictTo({RestrictTo.Scope.LIBRARY_GROUP})
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public Priority3 mo2350d() {
         return this.f5260c;
     }

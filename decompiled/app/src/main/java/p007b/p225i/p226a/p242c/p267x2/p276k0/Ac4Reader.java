@@ -10,49 +10,49 @@ import p007b.p225i.p226a.p242c.p267x2.ExtractorOutput;
 import p007b.p225i.p226a.p242c.p267x2.TrackOutput2;
 import p007b.p225i.p226a.p242c.p267x2.p276k0.TsPayloadReader;
 
-/* compiled from: Ac4Reader.java */
-/* renamed from: b.i.a.c.x2.k0.i, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.x2.k0.i, reason: use source file name */
+/* JADX INFO: compiled from: Ac4Reader.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class Ac4Reader implements ElementaryStreamReader {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final ParsableBitArray f8661a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final ParsableByteArray f8662b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     @Nullable
     public final String f8663c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public String f8664d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public TrackOutput2 f8665e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public int f8666f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public int f8667g;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public boolean f8668h;
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public boolean f8669i;
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public long f8670j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public Format2 f8671k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public int f8672l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public long f8673m;
 
     public Ac4Reader(@Nullable String str) {
@@ -68,7 +68,7 @@ public final class Ac4Reader implements ElementaryStreamReader {
     }
 
     @Override // p007b.p225i.p226a.p242c.p267x2.p276k0.ElementaryStreamReader
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public void mo3758b(ParsableByteArray parsableByteArray) {
         boolean z2;
         int iM3100t;
@@ -122,7 +122,7 @@ public final class Ac4Reader implements ElementaryStreamReader {
                         this.f8665e.mo2526e(format2M3277a);
                     }
                     this.f8672l = bVarM3493b.f7777b;
-                    this.f8670j = (bVarM3493b.f7778c * 1000000) / this.f8671k.f7137K;
+                    this.f8670j = (((long) bVarM3493b.f7778c) * 1000000) / ((long) this.f8671k.f7137K);
                     this.f8662b.m3079E(0);
                     this.f8665e.mo2524c(this.f8662b, 16);
                     this.f8666f = 2;
@@ -146,7 +146,7 @@ public final class Ac4Reader implements ElementaryStreamReader {
     }
 
     @Override // p007b.p225i.p226a.p242c.p267x2.p276k0.ElementaryStreamReader
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public void mo3759c() {
         this.f8666f = 0;
         this.f8667g = 0;
@@ -156,12 +156,12 @@ public final class Ac4Reader implements ElementaryStreamReader {
     }
 
     @Override // p007b.p225i.p226a.p242c.p267x2.p276k0.ElementaryStreamReader
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public void mo3760d() {
     }
 
     @Override // p007b.p225i.p226a.p242c.p267x2.p276k0.ElementaryStreamReader
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public void mo3761e(ExtractorOutput extractorOutput, TsPayloadReader.d dVar) {
         dVar.m3765a();
         this.f8664d = dVar.m3766b();
@@ -169,7 +169,7 @@ public final class Ac4Reader implements ElementaryStreamReader {
     }
 
     @Override // p007b.p225i.p226a.p242c.p267x2.p276k0.ElementaryStreamReader
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public void mo3762f(long j, int i) {
         if (j != -9223372036854775807L) {
             this.f8673m = j;

@@ -11,13 +11,14 @@ import p507d0.p513e0.p514p.p515d.KTypeImpl;
 import p507d0.p513e0.p514p.p515d.KotlinReflectionInternalError;
 import p507d0.p513e0.p514p.p515d.p517m0.p521c.ClassDescriptor;
 import p507d0.p513e0.p514p.p515d.p517m0.p521c.ClassKind;
+import p507d0.p513e0.p514p.p515d.p517m0.p521c.ClassifierDescriptor;
 import p507d0.p580t._Collections;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Reflection2;
 
-/* compiled from: KTypesJvm.kt */
-/* renamed from: d0.e0.p.a, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.a, reason: use source file name */
+/* JADX INFO: compiled from: KTypesJvm.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class KTypesJvm {
     public static final KClass<?> getJvmErasure(KType kType) {
         KClass<?> jvmErasure;
@@ -48,7 +49,7 @@ public final class KTypesJvm {
             Object next = it.next();
             KType kType = (KType) next;
             Objects.requireNonNull(kType, "null cannot be cast to non-null type kotlin.reflect.jvm.internal.KTypeImpl");
-            Object declarationDescriptor = ((KTypeImpl) kType).getType().getConstructor().getDeclarationDescriptor();
+            ClassifierDescriptor declarationDescriptor = ((KTypeImpl) kType).getType().getConstructor().getDeclarationDescriptor();
             ClassDescriptor classDescriptor = (ClassDescriptor) (declarationDescriptor instanceof ClassDescriptor ? declarationDescriptor : null);
             if ((classDescriptor == null || classDescriptor.getKind() == ClassKind.INTERFACE || classDescriptor.getKind() == ClassKind.ANNOTATION_CLASS) ? false : true) {
                 obj = next;

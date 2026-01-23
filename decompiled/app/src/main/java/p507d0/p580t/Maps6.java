@@ -8,9 +8,9 @@ import java.util.Map;
 import kotlin.Tuples2;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: Maps.kt */
-/* renamed from: d0.t.h0, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.t.h0, reason: use source file name */
+/* JADX INFO: compiled from: Maps.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public class Maps6 extends MapsJVM {
     public static final <K, V> Map<K, V> emptyMap() {
         return Maps7.f25222j;

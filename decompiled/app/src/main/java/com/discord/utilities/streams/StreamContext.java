@@ -7,8 +7,8 @@ import com.discord.stores.StoreApplicationStreamPreviews;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: StreamContext.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: StreamContext.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final /* data */ class StreamContext {
     private final Guild guild;
     private final boolean isCurrentUserParticipating;
@@ -19,7 +19,7 @@ public final /* data */ class StreamContext {
     private final User user;
     private final String userNickname;
 
-    /* compiled from: StreamContext.kt */
+    /* JADX INFO: compiled from: StreamContext.kt */
     public enum Joinability {
         CAN_CONNECT,
         VOICE_CHANNEL_FULL,
@@ -44,42 +44,42 @@ public final /* data */ class StreamContext {
         return streamContext.copy((i & 1) != 0 ? streamContext.stream : modelApplicationStream, (i & 2) != 0 ? streamContext.guild : guild, (i & 4) != 0 ? streamContext.preview : streamPreview, (i & 8) != 0 ? streamContext.joinability : joinability, (i & 16) != 0 ? streamContext.user : user, (i & 32) != 0 ? streamContext.userNickname : str, (i & 64) != 0 ? streamContext.isCurrentUserParticipating : z2, (i & 128) != 0 ? streamContext.isSelfStream : z3);
     }
 
-    /* renamed from: component1, reason: from getter */
+    /* JADX INFO: renamed from: component1, reason: from getter */
     public final ModelApplicationStream getStream() {
         return this.stream;
     }
 
-    /* renamed from: component2, reason: from getter */
+    /* JADX INFO: renamed from: component2, reason: from getter */
     public final Guild getGuild() {
         return this.guild;
     }
 
-    /* renamed from: component3, reason: from getter */
+    /* JADX INFO: renamed from: component3, reason: from getter */
     public final StoreApplicationStreamPreviews.StreamPreview getPreview() {
         return this.preview;
     }
 
-    /* renamed from: component4, reason: from getter */
+    /* JADX INFO: renamed from: component4, reason: from getter */
     public final Joinability getJoinability() {
         return this.joinability;
     }
 
-    /* renamed from: component5, reason: from getter */
+    /* JADX INFO: renamed from: component5, reason: from getter */
     public final User getUser() {
         return this.user;
     }
 
-    /* renamed from: component6, reason: from getter */
+    /* JADX INFO: renamed from: component6, reason: from getter */
     public final String getUserNickname() {
         return this.userNickname;
     }
 
-    /* renamed from: component7, reason: from getter */
+    /* JADX INFO: renamed from: component7, reason: from getter */
     public final boolean getIsCurrentUserParticipating() {
         return this.isCurrentUserParticipating;
     }
 
-    /* renamed from: component8, reason: from getter */
+    /* JADX INFO: renamed from: component8, reason: from getter */
     public final boolean getIsSelfStream() {
         return this.isSelfStream;
     }
@@ -127,6 +127,12 @@ public final /* data */ class StreamContext {
     }
 
     /* JADX WARN: Multi-variable type inference failed */
+    /* JADX WARN: Type inference failed for: r1v3, types: [int] */
+    /* JADX WARN: Type inference failed for: r1v5 */
+    /* JADX WARN: Type inference failed for: r1v7 */
+    /* JADX WARN: Type inference failed for: r2v13 */
+    /* JADX WARN: Type inference failed for: r2v14, types: [int] */
+    /* JADX WARN: Type inference failed for: r2v15 */
     public int hashCode() {
         ModelApplicationStream modelApplicationStream = this.stream;
         int iHashCode = (modelApplicationStream != null ? modelApplicationStream.hashCode() : 0) * 31;
@@ -141,13 +147,13 @@ public final /* data */ class StreamContext {
         String str = this.userNickname;
         int iHashCode6 = (iHashCode5 + (str != null ? str.hashCode() : 0)) * 31;
         boolean z2 = this.isCurrentUserParticipating;
-        int i = z2;
-        if (z2 != 0) {
-            i = 1;
+        ?? r1 = z2;
+        if (z2) {
+            r1 = 1;
         }
-        int i2 = (iHashCode6 + i) * 31;
+        int i = (iHashCode6 + r1) * 31;
         boolean z3 = this.isSelfStream;
-        return i2 + (z3 ? 1 : z3 ? 1 : 0);
+        return i + (z3 ? 1 : z3);
     }
 
     public final boolean isCurrentUserParticipating() {

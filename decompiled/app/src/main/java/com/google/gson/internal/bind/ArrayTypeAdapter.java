@@ -14,19 +14,19 @@ import java.util.ArrayList;
 import p007b.p225i.p408d.TypeAdapterFactory2;
 import p007b.p225i.p408d.p410q.C$Gson$Types;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public final class ArrayTypeAdapter<E> extends TypeAdapter<Object> {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final TypeAdapterFactory2 f21510a = new C111061();
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final Class<E> f21511b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final TypeAdapter<E> f21512c;
 
-    /* renamed from: com.google.gson.internal.bind.ArrayTypeAdapter$1 */
+    /* JADX INFO: renamed from: com.google.gson.internal.bind.ArrayTypeAdapter$1 */
     public class C111061 implements TypeAdapterFactory2 {
         @Override // p007b.p225i.p408d.TypeAdapterFactory2
         public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> typeToken) {
@@ -46,7 +46,7 @@ public final class ArrayTypeAdapter<E> extends TypeAdapter<Object> {
     }
 
     @Override // com.google.gson.TypeAdapter
-    public Object read(JsonReader jsonReader) throws IOException, ArrayIndexOutOfBoundsException, IllegalArgumentException, NegativeArraySizeException {
+    public Object read(JsonReader jsonReader) throws IOException {
         if (jsonReader.mo6878N() == JsonToken.NULL) {
             jsonReader.mo6876H();
             return null;
@@ -66,7 +66,7 @@ public final class ArrayTypeAdapter<E> extends TypeAdapter<Object> {
     }
 
     @Override // com.google.gson.TypeAdapter
-    public void write(JsonWriter jsonWriter, Object obj) throws IOException, ArrayIndexOutOfBoundsException, IllegalArgumentException {
+    public void write(JsonWriter jsonWriter, Object obj) throws IOException {
         if (obj == null) {
             jsonWriter.mo6905s();
             return;

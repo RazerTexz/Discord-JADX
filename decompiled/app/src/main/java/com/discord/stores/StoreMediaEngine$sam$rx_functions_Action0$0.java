@@ -4,8 +4,8 @@ import kotlin.jvm.functions.Function0;
 import p507d0.p592z.p594d.Intrinsics3;
 import p658rx.functions.Action0;
 
-/* compiled from: StoreMediaEngine.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: StoreMediaEngine.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class StoreMediaEngine$sam$rx_functions_Action0$0 implements Action0 {
     private final /* synthetic */ Function0 function;
 

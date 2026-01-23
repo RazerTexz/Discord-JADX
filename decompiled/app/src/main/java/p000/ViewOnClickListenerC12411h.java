@@ -4,15 +4,15 @@ import android.view.View;
 import com.lytefast.flexinput.fragment.FlexInputFragment;
 import com.lytefast.flexinput.viewmodel.FlexInputViewModel;
 
-/* compiled from: java-style lambda group */
-/* renamed from: h */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: h */
+/* JADX INFO: compiled from: java-style lambda group */
+/* JADX INFO: loaded from: classes.dex */
 public final class ViewOnClickListenerC12411h implements View.OnClickListener {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final /* synthetic */ int f26139j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final /* synthetic */ Object f26140k;
 
     public ViewOnClickListenerC12411h(int i, Object obj) {

@@ -5,9 +5,9 @@ import android.widget.TextView;
 import com.discord.widgets.debugging.WidgetDebugging;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: WidgetDebugging.kt */
-/* renamed from: com.discord.widgets.debugging.WidgetDebugging$Adapter$Item$onConfigure$3, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.debugging.WidgetDebugging$Adapter$Item$onConfigure$3, reason: use source file name */
+/* JADX INFO: compiled from: WidgetDebugging.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetDebugging3 implements View.OnClickListener {
     public final /* synthetic */ WidgetDebugging.Adapter.Item this$0;
 

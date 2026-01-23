@@ -29,9 +29,9 @@ import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 import p658rx.functions.Func6;
 
-/* compiled from: WidgetServerSettingsAuditLog.kt */
-/* renamed from: com.discord.widgets.servers.auditlog.WidgetServerSettingsAuditLog$Model$Companion$get$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.servers.auditlog.WidgetServerSettingsAuditLog$Model$Companion$get$1, reason: use source file name */
+/* JADX INFO: compiled from: WidgetServerSettingsAuditLog.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetServerSettingsAuditLog2<T1, T2, T3, T4, T5, T6, R> implements Func6<StoreAuditLog.AuditLogState, Guild, Map<Long, ? extends Channel>, Map<Long, ? extends User>, Map<Long, ? extends GuildRole>, Map<Long, ? extends GuildMember>, WidgetServerSettingsAuditLog.Model> {
     public final /* synthetic */ Context $context;
     public final /* synthetic */ long $guildId;
@@ -48,7 +48,7 @@ public final class WidgetServerSettingsAuditLog2<T1, T2, T3, T4, T5, T6, R> impl
 
     /* JADX WARN: Removed duplicated region for block: B:29:0x00a8  */
     /* JADX WARN: Removed duplicated region for block: B:30:0x00aa  */
-    /* renamed from: call, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */

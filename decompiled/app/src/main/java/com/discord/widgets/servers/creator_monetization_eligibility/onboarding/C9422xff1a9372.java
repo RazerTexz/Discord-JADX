@@ -10,9 +10,9 @@ import com.discord.views.LoadingButton;
 import kotlin.jvm.functions.Function0;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetServerSettingsCreatorMonetizationOnboarding.kt */
-/* renamed from: com.discord.widgets.servers.creator_monetization_eligibility.onboarding.WidgetServerSettingsCreatorMonetizationOnboarding$acceptTermsBinding$2 */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.servers.creator_monetization_eligibility.onboarding.WidgetServerSettingsCreatorMonetizationOnboarding$acceptTermsBinding$2 */
+/* JADX INFO: compiled from: WidgetServerSettingsCreatorMonetizationOnboarding.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class C9422xff1a9372 extends Lambda implements Function0<C5473x4f85106c> {
     public final /* synthetic */ WidgetServerSettingsCreatorMonetizationOnboarding this$0;
 

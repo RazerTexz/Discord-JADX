@@ -4,8 +4,8 @@ import java.io.Serializable;
 import kotlin.jvm.functions.Function0;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetGuildRoleSubscriptionTierBenefits.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetGuildRoleSubscriptionTierBenefits.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetGuildRoleSubscriptionTierBenefits$benefitListType$2 extends Lambda implements Function0<GuildRoleSubscriptionTierBenefitListType> {
     public final /* synthetic */ WidgetGuildRoleSubscriptionTierBenefits this$0;
 

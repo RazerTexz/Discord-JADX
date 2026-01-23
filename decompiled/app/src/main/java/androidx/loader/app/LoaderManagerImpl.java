@@ -21,7 +21,7 @@ import java.io.PrintWriter;
 import java.lang.reflect.Modifier;
 import p007b.p100d.p104b.p105a.outline;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class LoaderManagerImpl extends LoaderManager {
     public static boolean DEBUG = false;
     public static final String TAG = "LoaderManager";
@@ -253,7 +253,7 @@ public class LoaderManagerImpl extends LoaderManager {
         private SparseArrayCompat<LoaderInfo> mLoaders = new SparseArrayCompat<>();
         private boolean mCreatingLoader = false;
 
-        /* renamed from: androidx.loader.app.LoaderManagerImpl$LoaderViewModel$1 */
+        /* JADX INFO: renamed from: androidx.loader.app.LoaderManagerImpl$LoaderViewModel$1 */
         public static class C04691 implements ViewModelProvider.Factory {
             @Override // androidx.lifecycle.ViewModelProvider.Factory
             @NonNull

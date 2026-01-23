@@ -4,12 +4,12 @@ import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 
-/* loaded from: discord-126021.apk:lombok/patcher/Symbols.SCL.lombok */
+/* JADX INFO: loaded from: discord-126021.apk:lombok/patcher/Symbols.SCL.lombok */
 public class Symbols {
     private static final ThreadLocal<LinkedList<String>> stack = new C129131();
 
-    /* renamed from: lombok.patcher.Symbols$1 */
-    /* loaded from: discord-126021.apk:lombok/patcher/Symbols$1.SCL.lombok */
+    /* JADX INFO: renamed from: lombok.patcher.Symbols$1 */
+    /* JADX INFO: loaded from: discord-126021.apk:lombok/patcher/Symbols$1.SCL.lombok */
     class C129131 extends ThreadLocal<LinkedList<String>> {
         @Override // java.lang.ThreadLocal
         protected /* bridge */ /* synthetic */ LinkedList<String> initialValue() {

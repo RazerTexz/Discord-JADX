@@ -2,12 +2,12 @@ package com.discord.api.friendsuggestions;
 
 import p007b.p100d.p104b.p105a.outline;
 
-/* compiled from: FriendSuggestionDelete.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: FriendSuggestionDelete.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class FriendSuggestionDelete {
     private final long suggestedUserId;
 
-    /* renamed from: a, reason: from getter */
+    /* JADX INFO: renamed from: a, reason: from getter */
     public final long getSuggestedUserId() {
         return this.suggestedUserId;
     }

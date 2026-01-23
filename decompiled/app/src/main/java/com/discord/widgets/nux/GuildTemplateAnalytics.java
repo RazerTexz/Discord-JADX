@@ -3,8 +3,8 @@ package com.discord.widgets.nux;
 import com.discord.utilities.analytics.AnalyticsTracker;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: GuildTemplateAnalytics.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: GuildTemplateAnalytics.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class GuildTemplateAnalytics {
     private static final String FLOW_TYPE_POST_REG = "Mobile NUX Post Reg";
     public static final GuildTemplateAnalytics INSTANCE = new GuildTemplateAnalytics();

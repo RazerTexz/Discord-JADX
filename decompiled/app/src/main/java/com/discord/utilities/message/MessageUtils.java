@@ -27,8 +27,8 @@ import p007b.p008a.p027k.FormatUtils;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: MessageUtils.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: MessageUtils.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class MessageUtils {
     private static final StickerPartial[] ROLE_SUBSCRIPTION_PURCHASE_STICKERS;
     private static final Comparator<Long> SORT_BY_IDS_COMPARATOR;
@@ -36,8 +36,8 @@ public final class MessageUtils {
     public static final MessageUtils INSTANCE = new MessageUtils();
     private static final int[] WELCOME_MESSAGES = {C5419R.string.system_message_guild_member_join_001, C5419R.string.system_message_guild_member_join_002, C5419R.string.system_message_guild_member_join_003, C5419R.string.system_message_guild_member_join_004, C5419R.string.system_message_guild_member_join_005, C5419R.string.system_message_guild_member_join_006, C5419R.string.system_message_guild_member_join_007, C5419R.string.system_message_guild_member_join_008, C5419R.string.system_message_guild_member_join_009, C5419R.string.system_message_guild_member_join_010, C5419R.string.system_message_guild_member_join_011, C5419R.string.system_message_guild_member_join_012, C5419R.string.system_message_guild_member_join_013};
 
-    /* compiled from: MessageUtils.kt */
-    /* renamed from: com.discord.utilities.message.MessageUtils$getSystemMessageRoleSubscriptionPurchase$1 */
+    /* JADX INFO: renamed from: com.discord.utilities.message.MessageUtils$getSystemMessageRoleSubscriptionPurchase$1 */
+    /* JADX INFO: compiled from: MessageUtils.kt */
     public static final class C67941 extends Lambda implements Function1<RenderContext, Unit> {
         public static final C67941 INSTANCE = new C67941();
 
@@ -51,7 +51,7 @@ public final class MessageUtils {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(RenderContext renderContext) {
             Intrinsics3.checkNotNullParameter(renderContext, "$receiver");
         }
@@ -114,6 +114,7 @@ public final class MessageUtils {
     public static /* synthetic */ void getSORT_BY_IDS_COMPARATOR$annotations() {
     }
 
+    /* JADX WARN: Multi-variable type inference failed */
     public static /* synthetic */ CharSequence getSystemMessageRoleSubscriptionPurchase$default(MessageUtils messageUtils, Context context, String str, String str2, RoleSubscriptionData roleSubscriptionData, Function1 function1, int i, Object obj) {
         if ((i & 8) != 0) {
             function1 = C67941.INSTANCE;
@@ -127,7 +128,8 @@ public final class MessageUtils {
 
     public final StickerPartial getRoleSubscriptionPurchaseSticker(long meUserId, long messageId) {
         long snowflake = TimeUtils.parseSnowflake(Long.valueOf(messageId)) + TimeUtils.parseSnowflake(Long.valueOf(meUserId));
-        return ROLE_SUBSCRIPTION_PURCHASE_STICKERS[(int) (snowflake % r3.length)];
+        StickerPartial[] stickerPartialArr = ROLE_SUBSCRIPTION_PURCHASE_STICKERS;
+        return stickerPartialArr[(int) (snowflake % ((long) stickerPartialArr.length))];
     }
 
     public final CharSequence getSystemMessageRoleSubscriptionPurchase(Context context, String str, String str2, RoleSubscriptionData roleSubscriptionData, Function1<? super RenderContext, Unit> function1) {
@@ -146,11 +148,12 @@ public final class MessageUtils {
     public final int getSystemMessageUserJoin(Context context, long messageId) {
         Intrinsics3.checkNotNullParameter(context, "context");
         Locale localeOrNull = ContextExtensions.getLocaleOrNull(context);
-        return WELCOME_MESSAGES[(int) (Intrinsics3.areEqual(localeOrNull != null ? localeOrNull.getLanguage() : null, new Locale("en").getLanguage()) ^ true ? 0L : TimeUtils.parseSnowflake(Long.valueOf(messageId)) % WELCOME_MESSAGES.length)];
+        return WELCOME_MESSAGES[(int) (Intrinsics3.areEqual(localeOrNull != null ? localeOrNull.getLanguage() : null, new Locale("en").getLanguage()) ^ true ? 0L : TimeUtils.parseSnowflake(Long.valueOf(messageId)) % ((long) WELCOME_MESSAGES.length))];
     }
 
     public final StickerPartial getWelcomeSticker(long meUserId, long messageId) {
         long snowflake = TimeUtils.parseSnowflake(Long.valueOf(messageId)) + TimeUtils.parseSnowflake(Long.valueOf(meUserId));
-        return WELCOME_STICKERS[(int) (snowflake % r3.length)];
+        StickerPartial[] stickerPartialArr = WELCOME_STICKERS;
+        return stickerPartialArr[(int) (snowflake % ((long) stickerPartialArr.length))];
     }
 }

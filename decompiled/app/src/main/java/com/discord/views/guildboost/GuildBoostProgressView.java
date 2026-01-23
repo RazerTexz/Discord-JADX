@@ -15,11 +15,11 @@ import com.discord.utilities.premium.GuildBoostUtils;
 import p007b.p008a.p025i.ViewPremiumGuildProgressBinding;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: GuildBoostProgressView.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: GuildBoostProgressView.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class GuildBoostProgressView extends FrameLayout {
 
-    /* renamed from: j, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: j, reason: from kotlin metadata */
     public final ViewPremiumGuildProgressBinding binding;
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -47,7 +47,7 @@ public final class GuildBoostProgressView extends FrameLayout {
         throw new NullPointerException("Missing required view with ID: ".concat(viewInflate.getResources().getResourceName(i)));
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final void m8596a(long guildId, int premiumTier, int premiumSubscriptionCount) {
         ImageView imageView = this.binding.f1374b;
         int themedDrawableRes$default = 0;

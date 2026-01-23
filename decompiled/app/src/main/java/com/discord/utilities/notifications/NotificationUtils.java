@@ -8,8 +8,8 @@ import com.discord.widgets.settings.WidgetSettingsNotifications;
 import com.discord.widgets.settings.WidgetSettingsNotificationsOs;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: NotificationUtils.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: NotificationUtils.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class NotificationUtils {
     public static final NotificationUtils INSTANCE = new NotificationUtils();
 

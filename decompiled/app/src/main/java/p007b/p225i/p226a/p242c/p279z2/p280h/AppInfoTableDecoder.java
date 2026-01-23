@@ -11,13 +11,13 @@ import p007b.p225i.p226a.p242c.p279z2.MetadataInputBuffer;
 import p007b.p225i.p226a.p242c.p279z2.SimpleMetadataDecoder;
 import p007b.p225i.p355b.p356a.Charsets;
 
-/* compiled from: AppInfoTableDecoder.java */
-/* renamed from: b.i.a.c.z2.h.a, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.z2.h.a, reason: use source file name */
+/* JADX INFO: compiled from: AppInfoTableDecoder.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class AppInfoTableDecoder extends SimpleMetadataDecoder {
     @Override // p007b.p225i.p226a.p242c.p279z2.SimpleMetadataDecoder
     @Nullable
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public Metadata mo3899b(MetadataInputBuffer metadataInputBuffer, ByteBuffer byteBuffer) {
         if (byteBuffer.get() == 116) {
             ParsableBitArray parsableBitArray = new ParsableBitArray(byteBuffer.array(), byteBuffer.limit());

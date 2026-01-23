@@ -14,8 +14,8 @@ import com.discord.utilities.textprocessing.node.SpoilerNode;
 import java.util.Arrays;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: BlockBackgroundNode.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: BlockBackgroundNode.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class BlockBackgroundNode<R extends BasicRenderContext> extends Node.C5655a<R> implements Spoilerable {
     private final boolean inQuote;
     private boolean isRevealed;
@@ -39,7 +39,7 @@ public final class BlockBackgroundNode<R extends BasicRenderContext> extends Nod
     }
 
     @Override // com.discord.utilities.textprocessing.node.Spoilerable
-    /* renamed from: isRevealed, reason: from getter */
+    /* JADX INFO: renamed from: isRevealed, reason: from getter */
     public boolean getIsRevealed() {
         return this.isRevealed;
     }

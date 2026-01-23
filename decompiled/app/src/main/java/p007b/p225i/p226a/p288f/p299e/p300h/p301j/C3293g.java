@@ -6,7 +6,6 @@ import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
-import android.content.res.Resources;
 import android.os.Bundle;
 import android.os.DeadObjectException;
 import android.os.Handler;
@@ -64,102 +63,102 @@ import p007b.p225i.p226a.p288f.p333j.p334b.p335e.C4312v;
 import p007b.p225i.p226a.p288f.p337l.C4335a;
 import p007b.p225i.p226a.p288f.p337l.InterfaceC4349f;
 
-/* compiled from: com.google.android.gms:play-services-base@@17.3.0 */
-/* renamed from: b.i.a.f.e.h.j.g */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.e.h.j.g */
+/* JADX INFO: compiled from: com.google.android.gms:play-services-base@@17.3.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public class C3293g implements Handler.Callback {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static final Status f9376j = new Status(4, "Sign-out occurred while this API call was in progress.");
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public static final Status f9377k = new Status(4, "The user must be signed in to make this API call.");
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public static final Object f9378l = new Object();
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     @Nullable
     public static C3293g f9379m;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public final Context f9381o;
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public final GoogleApiAvailability f9382p;
 
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     public final C3377r f9383q;
 
-    /* renamed from: x */
+    /* JADX INFO: renamed from: x */
     @NotOnlyInitialized
     public final Handler f9390x;
 
-    /* renamed from: y */
+    /* JADX INFO: renamed from: y */
     public volatile boolean f9391y;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public long f9380n = 10000;
 
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     public final AtomicInteger f9384r = new AtomicInteger(1);
 
-    /* renamed from: s */
+    /* JADX INFO: renamed from: s */
     public final AtomicInteger f9385s = new AtomicInteger(0);
 
-    /* renamed from: t */
+    /* JADX INFO: renamed from: t */
     public final Map<C3278b<?>, a<?>> f9386t = new ConcurrentHashMap(5, 0.75f, 1);
 
-    /* renamed from: u */
+    /* JADX INFO: renamed from: u */
     @Nullable
     public C3277a1 f9387u = null;
 
-    /* renamed from: v */
+    /* JADX INFO: renamed from: v */
     public final Set<C3278b<?>> f9388v = new ArraySet();
 
-    /* renamed from: w */
+    /* JADX INFO: renamed from: w */
     public final Set<C3278b<?>> f9389w = new ArraySet();
 
-    /* compiled from: com.google.android.gms:play-services-base@@17.3.0 */
-    /* renamed from: b.i.a.f.e.h.j.g$a */
+    /* JADX INFO: renamed from: b.i.a.f.e.h.j.g$a */
+    /* JADX INFO: compiled from: com.google.android.gms:play-services-base@@17.3.0 */
     public class a<O extends C3266a.d> implements AbstractC3268c.a, AbstractC3268c.b {
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         @NotOnlyInitialized
         public final C3266a.f f9393b;
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public final C3266a.b f9394c;
 
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         public final C3278b<O> f9395d;
 
-        /* renamed from: e */
+        /* JADX INFO: renamed from: e */
         public final C3328x0 f9396e;
 
-        /* renamed from: h */
+        /* JADX INFO: renamed from: h */
         public final int f9399h;
 
-        /* renamed from: i */
+        /* JADX INFO: renamed from: i */
         @Nullable
         public final BinderC3294g0 f9400i;
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public boolean f9401j;
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final Queue<AbstractC3317s> f9392a = new LinkedList();
 
-        /* renamed from: f */
+        /* JADX INFO: renamed from: f */
         public final Set<C3316r0> f9397f = new HashSet();
 
-        /* renamed from: g */
+        /* JADX INFO: renamed from: g */
         public final Map<C3301k.a<?>, C3285d0> f9398g = new HashMap();
 
-        /* renamed from: k */
+        /* JADX INFO: renamed from: k */
         public final List<c> f9402k = new ArrayList();
 
-        /* renamed from: l */
+        /* JADX INFO: renamed from: l */
         @Nullable
         public ConnectionResult f9403l = null;
 
@@ -190,7 +189,7 @@ public class C3293g implements Handler.Callback {
         /* JADX WARN: Multi-variable type inference failed */
         @Nullable
         @WorkerThread
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final Feature m4082a(@Nullable Feature[] featureArr) {
             if (featureArr != null && featureArr.length != 0) {
                 Feature[] featureArrM4040m = this.f9393b.m4040m();
@@ -212,7 +211,7 @@ public class C3293g implements Handler.Callback {
         }
 
         @WorkerThread
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final void m4083b() throws PackageManager.NameNotFoundException {
             AnimatableValueParser.m567s(C3293g.this.f9390x);
             Status status = C3293g.f9376j;
@@ -230,7 +229,7 @@ public class C3293g implements Handler.Callback {
         }
 
         @Override // p007b.p225i.p226a.p288f.p299e.p300h.p301j.InterfaceC3290f
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public final void mo4076c(int i) {
             if (Looper.myLooper() == C3293g.this.f9390x.getLooper()) {
                 m4084d(i);
@@ -240,7 +239,7 @@ public class C3293g implements Handler.Callback {
         }
 
         @WorkerThread
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         public final void m4084d(int i) {
             m4096q();
             this.f9401j = true;
@@ -274,7 +273,7 @@ public class C3293g implements Handler.Callback {
         }
 
         @WorkerThread
-        /* renamed from: e */
+        /* JADX INFO: renamed from: e */
         public final void m4085e(@NonNull ConnectionResult connectionResult, @Nullable Exception exc) {
             InterfaceC4349f interfaceC4349f;
             AnimatableValueParser.m567s(C3293g.this.f9390x);
@@ -324,7 +323,7 @@ public class C3293g implements Handler.Callback {
         }
 
         @WorkerThread
-        /* renamed from: f */
+        /* JADX INFO: renamed from: f */
         public final void m4086f(Status status) {
             AnimatableValueParser.m567s(C3293g.this.f9390x);
             m4088h(status, null, false);
@@ -332,13 +331,13 @@ public class C3293g implements Handler.Callback {
 
         @Override // p007b.p225i.p226a.p288f.p299e.p300h.p301j.InterfaceC3303l
         @WorkerThread
-        /* renamed from: g */
+        /* JADX INFO: renamed from: g */
         public final void mo4087g(@NonNull ConnectionResult connectionResult) {
             m4085e(connectionResult, null);
         }
 
         @WorkerThread
-        /* renamed from: h */
+        /* JADX INFO: renamed from: h */
         public final void m4088h(@Nullable Status status, @Nullable Exception exc, boolean z2) {
             AnimatableValueParser.m567s(C3293g.this.f9390x);
             if ((status == null) == (exc == null)) {
@@ -359,7 +358,7 @@ public class C3293g implements Handler.Callback {
         }
 
         @Override // p007b.p225i.p226a.p288f.p299e.p300h.p301j.InterfaceC3290f
-        /* renamed from: i */
+        /* JADX INFO: renamed from: i */
         public final void mo4077i(@Nullable Bundle bundle) {
             if (Looper.myLooper() == C3293g.this.f9390x.getLooper()) {
                 m4099t();
@@ -369,7 +368,7 @@ public class C3293g implements Handler.Callback {
         }
 
         @WorkerThread
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public final void m4089j(AbstractC3317s abstractC3317s) throws PackageManager.NameNotFoundException {
             AnimatableValueParser.m567s(C3293g.this.f9390x);
             if (this.f9393b.m4038j()) {
@@ -391,7 +390,7 @@ public class C3293g implements Handler.Callback {
         }
 
         @WorkerThread
-        /* renamed from: k */
+        /* JADX INFO: renamed from: k */
         public final boolean m4090k(boolean z2) {
             AnimatableValueParser.m567s(C3293g.this.f9390x);
             if (!this.f9393b.m4038j() || this.f9398g.size() != 0) {
@@ -409,7 +408,7 @@ public class C3293g implements Handler.Callback {
         }
 
         @WorkerThread
-        /* renamed from: l */
+        /* JADX INFO: renamed from: l */
         public final boolean m4091l(@NonNull ConnectionResult connectionResult) {
             synchronized (C3293g.f9378l) {
                 C3293g c3293g = C3293g.this;
@@ -422,8 +421,8 @@ public class C3293g implements Handler.Callback {
         }
 
         @WorkerThread
-        /* renamed from: m */
-        public final boolean m4092m(AbstractC3317s abstractC3317s) throws Resources.NotFoundException {
+        /* JADX INFO: renamed from: m */
+        public final boolean m4092m(AbstractC3317s abstractC3317s) {
             if (!(abstractC3317s instanceof AbstractC3306m0)) {
                 m4094o(abstractC3317s);
                 return true;
@@ -474,7 +473,7 @@ public class C3293g implements Handler.Callback {
         }
 
         @WorkerThread
-        /* renamed from: n */
+        /* JADX INFO: renamed from: n */
         public final void m4093n(ConnectionResult connectionResult) {
             Iterator<C3316r0> it = this.f9397f.iterator();
             if (!it.hasNext()) {
@@ -490,7 +489,7 @@ public class C3293g implements Handler.Callback {
         }
 
         @WorkerThread
-        /* renamed from: o */
+        /* JADX INFO: renamed from: o */
         public final void m4094o(AbstractC3317s abstractC3317s) {
             abstractC3317s.mo4113d(this.f9396e, m4098s());
             try {
@@ -503,7 +502,7 @@ public class C3293g implements Handler.Callback {
             }
         }
 
-        /* renamed from: p */
+        /* JADX INFO: renamed from: p */
         public final Status m4095p(ConnectionResult connectionResult) {
             String str = this.f9395d.f9346b.f9325c;
             String strValueOf = String.valueOf(connectionResult);
@@ -511,14 +510,14 @@ public class C3293g implements Handler.Callback {
         }
 
         @WorkerThread
-        /* renamed from: q */
+        /* JADX INFO: renamed from: q */
         public final void m4096q() {
             AnimatableValueParser.m567s(C3293g.this.f9390x);
             this.f9403l = null;
         }
 
         @WorkerThread
-        /* renamed from: r */
+        /* JADX INFO: renamed from: r */
         public final void m4097r() throws PackageManager.NameNotFoundException {
             AnimatableValueParser.m567s(C3293g.this.f9390x);
             if (this.f9393b.m4038j() || this.f9393b.m4033e()) {
@@ -574,13 +573,13 @@ public class C3293g implements Handler.Callback {
             }
         }
 
-        /* renamed from: s */
+        /* JADX INFO: renamed from: s */
         public final boolean m4098s() {
             return this.f9393b.mo4042o();
         }
 
         @WorkerThread
-        /* renamed from: t */
+        /* JADX INFO: renamed from: t */
         public final void m4099t() {
             m4096q();
             m4093n(ConnectionResult.f20472j);
@@ -612,7 +611,7 @@ public class C3293g implements Handler.Callback {
         }
 
         @WorkerThread
-        /* renamed from: u */
+        /* JADX INFO: renamed from: u */
         public final void m4100u() {
             ArrayList arrayList = new ArrayList(this.f9392a);
             int size = arrayList.size();
@@ -631,7 +630,7 @@ public class C3293g implements Handler.Callback {
         }
 
         @WorkerThread
-        /* renamed from: v */
+        /* JADX INFO: renamed from: v */
         public final void m4101v() {
             if (this.f9401j) {
                 C3293g.this.f9390x.removeMessages(11, this.f9395d);
@@ -640,7 +639,7 @@ public class C3293g implements Handler.Callback {
             }
         }
 
-        /* renamed from: w */
+        /* JADX INFO: renamed from: w */
         public final void m4102w() {
             C3293g.this.f9390x.removeMessages(12, this.f9395d);
             Handler handler = C3293g.this.f9390x;
@@ -648,25 +647,25 @@ public class C3293g implements Handler.Callback {
         }
     }
 
-    /* compiled from: com.google.android.gms:play-services-base@@17.3.0 */
-    /* renamed from: b.i.a.f.e.h.j.g$b */
+    /* JADX INFO: renamed from: b.i.a.f.e.h.j.g$b */
+    /* JADX INFO: compiled from: com.google.android.gms:play-services-base@@17.3.0 */
     public class b implements InterfaceC3296h0, AbstractC3345b.c {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final C3266a.f f9405a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final C3278b<?> f9406b;
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         @Nullable
         public InterfaceC3355g f9407c = null;
 
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         @Nullable
         public Set<Scope> f9408d = null;
 
-        /* renamed from: e */
+        /* JADX INFO: renamed from: e */
         public boolean f9409e = false;
 
         public b(C3266a.f fVar, C3278b<?> c3278b) {
@@ -675,13 +674,13 @@ public class C3293g implements Handler.Callback {
         }
 
         @Override // p007b.p225i.p226a.p288f.p299e.p304k.AbstractC3345b.c
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final void mo4103a(@NonNull ConnectionResult connectionResult) {
             C3293g.this.f9390x.post(new RunnableC3331z(this, connectionResult));
         }
 
         @WorkerThread
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final void m4104b(ConnectionResult connectionResult) {
             a<?> aVar = C3293g.this.f9386t.get(this.f9406b);
             if (aVar != null) {
@@ -695,14 +694,14 @@ public class C3293g implements Handler.Callback {
         }
     }
 
-    /* compiled from: com.google.android.gms:play-services-base@@17.3.0 */
-    /* renamed from: b.i.a.f.e.h.j.g$c */
+    /* JADX INFO: renamed from: b.i.a.f.e.h.j.g$c */
+    /* JADX INFO: compiled from: com.google.android.gms:play-services-base@@17.3.0 */
     public static class c {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final C3278b<?> f9411a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final Feature f9412b;
 
         public c(C3278b c3278b, Feature feature, C3319t c3319t) {
@@ -749,7 +748,7 @@ public class C3293g implements Handler.Callback {
         handlerC3479c.sendMessage(handlerC3479c.obtainMessage(6));
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static C3293g m4078a(Context context) {
         C3293g c3293g;
         synchronized (f9378l) {
@@ -766,7 +765,7 @@ public class C3293g implements Handler.Callback {
         return c3293g;
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final void m4079b(@NonNull C3277a1 c3277a1) {
         synchronized (f9378l) {
             if (this.f9387u != c3277a1) {
@@ -777,8 +776,8 @@ public class C3293g implements Handler.Callback {
         }
     }
 
-    /* renamed from: c */
-    public final boolean m4080c(ConnectionResult connectionResult, int i) throws Resources.NotFoundException {
+    /* JADX INFO: renamed from: c */
+    public final boolean m4080c(ConnectionResult connectionResult, int i) {
         PendingIntent activity;
         GoogleApiAvailability googleApiAvailability = this.f9382p;
         Context context = this.f9381o;
@@ -804,7 +803,7 @@ public class C3293g implements Handler.Callback {
 
     /* JADX WARN: Multi-variable type inference failed */
     @WorkerThread
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final a<?> m4081d(C3267b<?> c3267b) throws PackageManager.NameNotFoundException {
         Object obj = c3267b.f9329d;
         a<?> aVar = this.f9386t.get(obj);

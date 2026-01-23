@@ -19,7 +19,7 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import p007b.p100d.p104b.p105a.outline;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class TransitionSet extends Transition {
     private static final int FLAG_CHANGE_EPICENTER = 8;
     private static final int FLAG_CHANGE_INTERPOLATOR = 1;
@@ -33,7 +33,7 @@ public class TransitionSet extends Transition {
     public boolean mStarted;
     private ArrayList<Transition> mTransitions;
 
-    /* renamed from: androidx.transition.TransitionSet$1 */
+    /* JADX INFO: renamed from: androidx.transition.TransitionSet$1 */
     public class C06691 extends TransitionListenerAdapter {
         public final /* synthetic */ Transition val$nextTransition;
 
@@ -177,7 +177,7 @@ public class TransitionSet extends Transition {
     }
 
     @Override // androidx.transition.Transition
-    /* renamed from: clone */
+    /* JADX INFO: renamed from: clone */
     public /* bridge */ /* synthetic */ Object mo11382clone() throws CloneNotSupportedException {
         return clone();
     }

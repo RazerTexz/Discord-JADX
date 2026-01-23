@@ -9,8 +9,8 @@ import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetGlobalSearchModel.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: WidgetGlobalSearchModel.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class WidgetGlobalSearchModel$Companion$create$3 extends Lambda implements Function2<Guild, String, WidgetGlobalSearchModel.ItemGuild> {
     public final /* synthetic */ WidgetGlobalSearchModel.ChannelContext $channelContext;
     public final /* synthetic */ WidgetGlobalSearchModel.SearchContext $searchContext;
@@ -27,7 +27,7 @@ public final class WidgetGlobalSearchModel$Companion$create$3 extends Lambda imp
         return invoke2(guild, str);
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final WidgetGlobalSearchModel.ItemGuild invoke2(Guild guild, String str) {
         int i;
         boolean z2;

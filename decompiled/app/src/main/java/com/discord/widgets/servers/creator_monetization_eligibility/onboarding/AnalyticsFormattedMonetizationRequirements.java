@@ -3,7 +3,6 @@ package com.discord.widgets.servers.creator_monetization_eligibility.onboarding;
 import com.discord.api.creatormonetization.CreatorMonetizationEligibilityRequirements;
 import com.discord.api.creatormonetization.CreatorMonetizationEnableRequest;
 import com.google.gson.Gson;
-import com.google.gson.JsonIOException;
 import java.util.Map;
 import kotlin.Lazy;
 import kotlin.jvm.internal.DefaultConstructorMarker;
@@ -11,11 +10,11 @@ import p007b.p100d.p104b.p105a.outline;
 import p507d0.LazyJVM;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: AnalyticsFormattedMonetizationRequirements.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: AnalyticsFormattedMonetizationRequirements.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final /* data */ class AnalyticsFormattedMonetizationRequirements {
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private static final Lazy gsonInstance$delegate = LazyJVM.lazy(AnalyticsFormattedMonetizationRequirements2.INSTANCE);
     private final boolean canApply;
@@ -35,7 +34,7 @@ public final /* data */ class AnalyticsFormattedMonetizationRequirements {
     private final Double retentionScore;
     private final boolean weeklyCommunicators;
 
-    /* compiled from: AnalyticsFormattedMonetizationRequirements.kt */
+    /* JADX INFO: compiled from: AnalyticsFormattedMonetizationRequirements.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -107,82 +106,82 @@ public final /* data */ class AnalyticsFormattedMonetizationRequirements {
         return analyticsFormattedMonetizationRequirements.copy((i3 & 1) != 0 ? analyticsFormattedMonetizationRequirements.isEligibleForMonetization : z2, (i3 & 2) != 0 ? analyticsFormattedMonetizationRequirements.hasSufficientMembers : z3, (i3 & 4) != 0 ? analyticsFormattedMonetizationRequirements.meetsServerAgeRequirement : z4, (i3 & 8) != 0 ? analyticsFormattedMonetizationRequirements.noRecentViolations : z5, (i3 & 16) != 0 ? analyticsFormattedMonetizationRequirements.weeklyCommunicators : z6, (i3 & 32) != 0 ? analyticsFormattedMonetizationRequirements.hasMemberRetention : z7, (i3 & 64) != 0 ? analyticsFormattedMonetizationRequirements.notNSFW : z8, (i3 & 128) != 0 ? analyticsFormattedMonetizationRequirements.canApply : z9, (i3 & 256) != 0 ? analyticsFormattedMonetizationRequirements.isApplicationPending : z10, (i3 & 512) != 0 ? analyticsFormattedMonetizationRequirements.minimumAgeInDays : i, (i3 & 1024) != 0 ? analyticsFormattedMonetizationRequirements.minimumSize : i2, (i3 & 2048) != 0 ? analyticsFormattedMonetizationRequirements.latestRequest : creatorMonetizationEnableRequest, (i3 & 4096) != 0 ? analyticsFormattedMonetizationRequirements.rejection : rejection, (i3 & 8192) != 0 ? analyticsFormattedMonetizationRequirements.guildMemberCount : num, (i3 & 16384) != 0 ? analyticsFormattedMonetizationRequirements.communicatorCount : num2, (i3 & 32768) != 0 ? analyticsFormattedMonetizationRequirements.retentionScore : d);
     }
 
-    /* renamed from: component1, reason: from getter */
+    /* JADX INFO: renamed from: component1, reason: from getter */
     public final boolean getIsEligibleForMonetization() {
         return this.isEligibleForMonetization;
     }
 
-    /* renamed from: component10, reason: from getter */
+    /* JADX INFO: renamed from: component10, reason: from getter */
     public final int getMinimumAgeInDays() {
         return this.minimumAgeInDays;
     }
 
-    /* renamed from: component11, reason: from getter */
+    /* JADX INFO: renamed from: component11, reason: from getter */
     public final int getMinimumSize() {
         return this.minimumSize;
     }
 
-    /* renamed from: component12, reason: from getter */
+    /* JADX INFO: renamed from: component12, reason: from getter */
     public final CreatorMonetizationEnableRequest getLatestRequest() {
         return this.latestRequest;
     }
 
-    /* renamed from: component13, reason: from getter */
+    /* JADX INFO: renamed from: component13, reason: from getter */
     public final CreatorMonetizationEligibilityRequirements.Rejection getRejection() {
         return this.rejection;
     }
 
-    /* renamed from: component14, reason: from getter */
+    /* JADX INFO: renamed from: component14, reason: from getter */
     public final Integer getGuildMemberCount() {
         return this.guildMemberCount;
     }
 
-    /* renamed from: component15, reason: from getter */
+    /* JADX INFO: renamed from: component15, reason: from getter */
     public final Integer getCommunicatorCount() {
         return this.communicatorCount;
     }
 
-    /* renamed from: component16, reason: from getter */
+    /* JADX INFO: renamed from: component16, reason: from getter */
     public final Double getRetentionScore() {
         return this.retentionScore;
     }
 
-    /* renamed from: component2, reason: from getter */
+    /* JADX INFO: renamed from: component2, reason: from getter */
     public final boolean getHasSufficientMembers() {
         return this.hasSufficientMembers;
     }
 
-    /* renamed from: component3, reason: from getter */
+    /* JADX INFO: renamed from: component3, reason: from getter */
     public final boolean getMeetsServerAgeRequirement() {
         return this.meetsServerAgeRequirement;
     }
 
-    /* renamed from: component4, reason: from getter */
+    /* JADX INFO: renamed from: component4, reason: from getter */
     public final boolean getNoRecentViolations() {
         return this.noRecentViolations;
     }
 
-    /* renamed from: component5, reason: from getter */
+    /* JADX INFO: renamed from: component5, reason: from getter */
     public final boolean getWeeklyCommunicators() {
         return this.weeklyCommunicators;
     }
 
-    /* renamed from: component6, reason: from getter */
+    /* JADX INFO: renamed from: component6, reason: from getter */
     public final boolean getHasMemberRetention() {
         return this.hasMemberRetention;
     }
 
-    /* renamed from: component7, reason: from getter */
+    /* JADX INFO: renamed from: component7, reason: from getter */
     public final boolean getNotNSFW() {
         return this.notNSFW;
     }
 
-    /* renamed from: component8, reason: from getter */
+    /* JADX INFO: renamed from: component8, reason: from getter */
     public final boolean getCanApply() {
         return this.canApply;
     }
 
-    /* renamed from: component9, reason: from getter */
+    /* JADX INFO: renamed from: component9, reason: from getter */
     public final boolean getIsApplicationPending() {
         return this.isApplicationPending;
     }
@@ -262,13 +261,30 @@ public final /* data */ class AnalyticsFormattedMonetizationRequirements {
     /* JADX WARN: Type inference failed for: r0v1, types: [int] */
     /* JADX WARN: Type inference failed for: r0v32 */
     /* JADX WARN: Type inference failed for: r0v33 */
-    /* JADX WARN: Type inference failed for: r2v0, types: [boolean] */
-    /* JADX WARN: Type inference failed for: r2v10, types: [boolean] */
-    /* JADX WARN: Type inference failed for: r2v12, types: [boolean] */
-    /* JADX WARN: Type inference failed for: r2v2, types: [boolean] */
-    /* JADX WARN: Type inference failed for: r2v4, types: [boolean] */
-    /* JADX WARN: Type inference failed for: r2v6, types: [boolean] */
-    /* JADX WARN: Type inference failed for: r2v8, types: [boolean] */
+    /* JADX WARN: Type inference failed for: r1v0 */
+    /* JADX WARN: Type inference failed for: r1v1, types: [int] */
+    /* JADX WARN: Type inference failed for: r1v21 */
+    /* JADX WARN: Type inference failed for: r2v1, types: [int] */
+    /* JADX WARN: Type inference failed for: r2v11, types: [int] */
+    /* JADX WARN: Type inference failed for: r2v13, types: [int] */
+    /* JADX WARN: Type inference failed for: r2v18 */
+    /* JADX WARN: Type inference failed for: r2v19 */
+    /* JADX WARN: Type inference failed for: r2v20 */
+    /* JADX WARN: Type inference failed for: r2v21 */
+    /* JADX WARN: Type inference failed for: r2v22 */
+    /* JADX WARN: Type inference failed for: r2v23 */
+    /* JADX WARN: Type inference failed for: r2v24 */
+    /* JADX WARN: Type inference failed for: r2v25 */
+    /* JADX WARN: Type inference failed for: r2v26 */
+    /* JADX WARN: Type inference failed for: r2v27 */
+    /* JADX WARN: Type inference failed for: r2v28 */
+    /* JADX WARN: Type inference failed for: r2v29 */
+    /* JADX WARN: Type inference failed for: r2v3, types: [int] */
+    /* JADX WARN: Type inference failed for: r2v30 */
+    /* JADX WARN: Type inference failed for: r2v31 */
+    /* JADX WARN: Type inference failed for: r2v5, types: [int] */
+    /* JADX WARN: Type inference failed for: r2v7, types: [int] */
+    /* JADX WARN: Type inference failed for: r2v9, types: [int] */
     public int hashCode() {
         boolean z2 = this.isEligibleForMonetization;
         ?? r0 = z2;
@@ -276,52 +292,52 @@ public final /* data */ class AnalyticsFormattedMonetizationRequirements {
             r0 = 1;
         }
         int i = r0 * 31;
-        ?? r2 = this.hasSufficientMembers;
-        int i2 = r2;
-        if (r2 != 0) {
-            i2 = 1;
+        boolean z3 = this.hasSufficientMembers;
+        ?? r2 = z3;
+        if (z3) {
+            r2 = 1;
         }
-        int i3 = (i + i2) * 31;
-        ?? r22 = this.meetsServerAgeRequirement;
-        int i4 = r22;
-        if (r22 != 0) {
-            i4 = 1;
+        int i2 = (i + r2) * 31;
+        boolean z4 = this.meetsServerAgeRequirement;
+        ?? r22 = z4;
+        if (z4) {
+            r22 = 1;
         }
-        int i5 = (i3 + i4) * 31;
-        ?? r23 = this.noRecentViolations;
-        int i6 = r23;
-        if (r23 != 0) {
-            i6 = 1;
+        int i3 = (i2 + r22) * 31;
+        boolean z5 = this.noRecentViolations;
+        ?? r23 = z5;
+        if (z5) {
+            r23 = 1;
         }
-        int i7 = (i5 + i6) * 31;
-        ?? r24 = this.weeklyCommunicators;
-        int i8 = r24;
-        if (r24 != 0) {
-            i8 = 1;
+        int i4 = (i3 + r23) * 31;
+        boolean z6 = this.weeklyCommunicators;
+        ?? r24 = z6;
+        if (z6) {
+            r24 = 1;
         }
-        int i9 = (i7 + i8) * 31;
-        ?? r25 = this.hasMemberRetention;
-        int i10 = r25;
-        if (r25 != 0) {
-            i10 = 1;
+        int i5 = (i4 + r24) * 31;
+        boolean z7 = this.hasMemberRetention;
+        ?? r25 = z7;
+        if (z7) {
+            r25 = 1;
         }
-        int i11 = (i9 + i10) * 31;
-        ?? r26 = this.notNSFW;
-        int i12 = r26;
-        if (r26 != 0) {
-            i12 = 1;
+        int i6 = (i5 + r25) * 31;
+        boolean z8 = this.notNSFW;
+        ?? r26 = z8;
+        if (z8) {
+            r26 = 1;
         }
-        int i13 = (i11 + i12) * 31;
-        ?? r27 = this.canApply;
-        int i14 = r27;
-        if (r27 != 0) {
-            i14 = 1;
+        int i7 = (i6 + r26) * 31;
+        boolean z9 = this.canApply;
+        ?? r27 = z9;
+        if (z9) {
+            r27 = 1;
         }
-        int i15 = (i13 + i14) * 31;
-        boolean z3 = this.isApplicationPending;
-        int i16 = (((((i15 + (z3 ? 1 : z3 ? 1 : 0)) * 31) + this.minimumAgeInDays) * 31) + this.minimumSize) * 31;
+        int i8 = (i7 + r27) * 31;
+        boolean z10 = this.isApplicationPending;
+        int i9 = (((((i8 + (z10 ? 1 : z10)) * 31) + this.minimumAgeInDays) * 31) + this.minimumSize) * 31;
         CreatorMonetizationEnableRequest creatorMonetizationEnableRequest = this.latestRequest;
-        int iHashCode = (i16 + (creatorMonetizationEnableRequest != null ? creatorMonetizationEnableRequest.hashCode() : 0)) * 31;
+        int iHashCode = (i9 + (creatorMonetizationEnableRequest != null ? creatorMonetizationEnableRequest.hashCode() : 0)) * 31;
         CreatorMonetizationEligibilityRequirements.Rejection rejection = this.rejection;
         int iHashCode2 = (iHashCode + (rejection != null ? rejection.hashCode() : 0)) * 31;
         Integer num = this.guildMemberCount;
@@ -340,7 +356,7 @@ public final /* data */ class AnalyticsFormattedMonetizationRequirements {
         return this.isEligibleForMonetization;
     }
 
-    public final String toJson() throws JsonIOException {
+    public final String toJson() {
         String strM9209m = Companion.access$getGsonInstance$p(INSTANCE).m9209m(this);
         Intrinsics3.checkNotNullExpressionValue(strM9209m, "gsonInstance.toJson(this)");
         return strM9209m;

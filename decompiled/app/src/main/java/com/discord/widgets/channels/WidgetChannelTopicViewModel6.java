@@ -5,9 +5,9 @@ import com.discord.widgets.channels.WidgetChannelTopicViewModel;
 import p507d0.p592z.p594d.Intrinsics3;
 import p658rx.functions.Func2;
 
-/* compiled from: WidgetChannelTopicViewModel.kt */
-/* renamed from: com.discord.widgets.channels.WidgetChannelTopicViewModel$Companion$observeNavState$3, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.channels.WidgetChannelTopicViewModel$Companion$observeNavState$3, reason: use source file name */
+/* JADX INFO: compiled from: WidgetChannelTopicViewModel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetChannelTopicViewModel6<T1, T2, R> implements Func2<Boolean, Boolean, WidgetChannelTopicViewModel.Companion.NavState> {
     public static final WidgetChannelTopicViewModel6 INSTANCE = new WidgetChannelTopicViewModel6();
 
@@ -16,7 +16,7 @@ public final class WidgetChannelTopicViewModel6<T1, T2, R> implements Func2<Bool
         return call2(bool, bool2);
     }
 
-    /* renamed from: call, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
     public final WidgetChannelTopicViewModel.Companion.NavState call2(Boolean bool, Boolean bool2) {
         Intrinsics3.checkNotNullExpressionValue(bool, "isOpen");
         boolean zBooleanValue = bool.booleanValue();

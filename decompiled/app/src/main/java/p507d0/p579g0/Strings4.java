@@ -21,13 +21,13 @@ import p507d0.p580t._Collections;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: Strings.kt */
-/* renamed from: d0.g0.w, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.g0.w, reason: use source file name */
+/* JADX INFO: compiled from: Strings.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public class Strings4 extends StringsJVM {
 
-    /* compiled from: Strings.kt */
-    /* renamed from: d0.g0.w$a */
+    /* JADX INFO: renamed from: d0.g0.w$a */
+    /* JADX INFO: compiled from: Strings.kt */
     public static final class a extends Lambda implements Function1<Ranges2, String> {
         public final /* synthetic */ CharSequence $this_splitToSequence;
 
@@ -42,7 +42,7 @@ public class Strings4 extends StringsJVM {
             return invoke2(ranges2);
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final String invoke2(Ranges2 ranges2) {
             Intrinsics3.checkNotNullParameter(ranges2, "it");
             return Strings4.substring(this.$this_splitToSequence, ranges2);
@@ -130,7 +130,7 @@ public class Strings4 extends StringsJVM {
         }
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static final int m10069b(CharSequence charSequence, CharSequence charSequence2, int i, int i2, boolean z2, boolean z3) {
         Progressions2 ranges2 = !z3 ? new Ranges2(_Ranges.coerceAtLeast(i, 0), _Ranges.coerceAtMost(i2, charSequence.length())) : _Ranges.downTo(_Ranges.coerceAtMost(i, getLastIndex(charSequence)), _Ranges.coerceAtLeast(i2, 0));
         if ((charSequence instanceof String) && (charSequence2 instanceof String)) {
@@ -171,7 +171,7 @@ public class Strings4 extends StringsJVM {
         return first2;
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public static /* synthetic */ int m10070c(CharSequence charSequence, CharSequence charSequence2, int i, int i2, boolean z2, boolean z3, int i3) {
         return m10069b(charSequence, charSequence2, i, i2, z2, (i3 & 16) != 0 ? false : z3);
     }
@@ -196,7 +196,7 @@ public class Strings4 extends StringsJVM {
         return contains(charSequence, charSequence2, z2);
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public static Sequence m10071d(CharSequence charSequence, String[] strArr, int i, boolean z2, int i2, int i3) {
         if ((i3 & 2) != 0) {
             i = 0;
@@ -211,7 +211,7 @@ public class Strings4 extends StringsJVM {
         return new Strings(charSequence, i, i2, new Strings3(_ArraysJvm.asList(strArr), z2));
     }
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public static final List<String> m10072e(CharSequence charSequence, String str, boolean z2, int i) {
         requireNonNegativeLimit(i);
         int length = 0;

@@ -13,33 +13,33 @@ import p507d0.p580t.Maps6;
 import p507d0.p580t.MapsJVM;
 import p507d0.p580t.Sets5;
 
-/* compiled from: AnnotationQualifiersFqNames.kt */
-/* renamed from: d0.e0.p.d.m0.e.a.b, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.e.a.b, reason: use source file name */
+/* JADX INFO: compiled from: AnnotationQualifiersFqNames.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class AnnotationQualifiersFqNames {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final FqName f23166a = new FqName("javax.annotation.meta.TypeQualifierNickname");
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static final FqName f23167b = new FqName("javax.annotation.meta.TypeQualifier");
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public static final FqName f23168c = new FqName("javax.annotation.meta.TypeQualifierDefault");
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public static final FqName f23169d = new FqName("kotlin.annotations.jvm.UnderMigration");
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public static final List<AnnotationQualifierApplicabilityType> f23170e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public static final Map<FqName, AnnotationQualifiersFqNames2> f23171f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public static final Map<FqName, AnnotationQualifiersFqNames2> f23172g;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public static final Set<FqName> f23173h;
 
     static {

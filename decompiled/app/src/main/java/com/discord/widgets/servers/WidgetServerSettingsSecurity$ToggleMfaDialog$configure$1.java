@@ -13,15 +13,15 @@ import kotlin.jvm.functions.Function1;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetServerSettingsSecurity.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetServerSettingsSecurity.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetServerSettingsSecurity$ToggleMfaDialog$configure$1 implements View.OnClickListener {
     public final /* synthetic */ long $guildId;
     public final /* synthetic */ boolean $mfaEnabled;
     public final /* synthetic */ WidgetServerSettingsSecurity.ToggleMfaDialog this$0;
 
-    /* compiled from: WidgetServerSettingsSecurity.kt */
-    /* renamed from: com.discord.widgets.servers.WidgetServerSettingsSecurity$ToggleMfaDialog$configure$1$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.WidgetServerSettingsSecurity$ToggleMfaDialog$configure$1$1 */
+    /* JADX INFO: compiled from: WidgetServerSettingsSecurity.kt */
     public static final class C93091 extends Lambda implements Function1<Void, Unit> {
         public C93091() {
             super(1);
@@ -33,7 +33,7 @@ public final class WidgetServerSettingsSecurity$ToggleMfaDialog$configure$1 impl
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Void r1) {
             WidgetServerSettingsSecurity$ToggleMfaDialog$configure$1.this.this$0.dismiss();
         }

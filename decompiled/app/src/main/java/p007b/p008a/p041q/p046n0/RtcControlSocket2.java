@@ -5,16 +5,16 @@ import kotlin.Unit;
 import kotlin.jvm.functions.Function0;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: RtcControlSocket.kt */
-/* renamed from: b.a.q.n0.b, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.a.q.n0.b, reason: use source file name */
+/* JADX INFO: compiled from: RtcControlSocket.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class RtcControlSocket2 extends TimerTask {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final /* synthetic */ RtcControlSocket f1802j;
 
-    /* compiled from: RtcControlSocket.kt */
-    /* renamed from: b.a.q.n0.b$a */
+    /* JADX INFO: renamed from: b.a.q.n0.b$a */
+    /* JADX INFO: compiled from: RtcControlSocket.kt */
     public static final class a extends Lambda implements Function0<Unit> {
         public a() {
             super(0);

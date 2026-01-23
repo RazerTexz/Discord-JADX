@@ -8,7 +8,7 @@ import androidx.annotation.Nullable;
 import androidx.transition.TransitionValues;
 import p007b.p225i.p226a.p341g.p353l.MaterialVisibility;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public final class MaterialFade extends MaterialVisibility<FadeProvider> {
     private static final float DEFAULT_FADE_END_THRESHOLD_ENTER = 0.3f;
     private static final float DEFAULT_START_SCALE = 0.8f;

@@ -15,43 +15,43 @@ import p600f0.EventListener;
 import p600f0.HttpUrl;
 import p600f0.Route;
 
-/* compiled from: RouteSelector.kt */
-/* renamed from: f0.e0.g.m, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: f0.e0.g.m, reason: use source file name */
+/* JADX INFO: compiled from: RouteSelector.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class RouteSelector {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public List<? extends Proxy> f25514a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public int f25515b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public List<? extends InetSocketAddress> f25516c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final List<Route> f25517d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final Address f25518e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final RouteDatabase f25519f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public final Call2 f25520g;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public final EventListener f25521h;
 
-    /* compiled from: RouteSelector.kt */
-    /* renamed from: f0.e0.g.m$a */
+    /* JADX INFO: renamed from: f0.e0.g.m$a */
+    /* JADX INFO: compiled from: RouteSelector.kt */
     public static final class a {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public int f25522a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final List<Route> f25523b;
 
         public a(List<Route> list) {
@@ -59,12 +59,12 @@ public final class RouteSelector {
             this.f25523b = list;
         }
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final boolean m10211a() {
             return this.f25522a < this.f25523b.size();
         }
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final Route m10212b() {
             if (!m10211a()) {
                 throw new NoSuchElementException();
@@ -101,12 +101,12 @@ public final class RouteSelector {
         Intrinsics3.checkParameterIsNotNull(listInvoke2, "proxies");
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final boolean m10209a() {
         return m10210b() || (this.f25517d.isEmpty() ^ true);
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final boolean m10210b() {
         return this.f25515b < this.f25514a.size();
     }

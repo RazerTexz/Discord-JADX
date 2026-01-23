@@ -5,11 +5,11 @@ import com.google.android.gms.tasks.Task;
 import com.google.android.gms.tasks.TaskCompletionSource;
 import p007b.p225i.p226a.p288f.p340n.InterfaceC4357c;
 
-/* renamed from: b.i.a.f.j.b.e.u */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.j.b.e.u */
+/* JADX INFO: loaded from: classes3.dex */
 public final class C4310u implements InterfaceC4357c<Boolean> {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final /* synthetic */ TaskCompletionSource f11434a;
 
     public C4310u(TaskCompletionSource taskCompletionSource) {

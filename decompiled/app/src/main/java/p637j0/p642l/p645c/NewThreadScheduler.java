@@ -3,12 +3,12 @@ package p637j0.p642l.p645c;
 import java.util.concurrent.ThreadFactory;
 import p658rx.Scheduler;
 
-/* compiled from: NewThreadScheduler.java */
-/* renamed from: j0.l.c.f, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: j0.l.c.f, reason: use source file name */
+/* JADX INFO: compiled from: NewThreadScheduler.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class NewThreadScheduler extends Scheduler {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final ThreadFactory f27222a;
 
     public NewThreadScheduler(ThreadFactory threadFactory) {
@@ -16,7 +16,7 @@ public final class NewThreadScheduler extends Scheduler {
     }
 
     @Override // p658rx.Scheduler
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public Scheduler.Worker mo10739a() {
         return new NewThreadWorker(this.f27222a);
     }

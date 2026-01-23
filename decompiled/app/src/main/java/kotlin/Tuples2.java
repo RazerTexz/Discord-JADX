@@ -5,9 +5,9 @@ import java.io.Serializable;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: Tuples.kt */
-/* renamed from: kotlin.Pair, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: kotlin.Pair, reason: use source file name */
+/* JADX INFO: compiled from: Tuples.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final /* data */ class Tuples2<A, B> implements Serializable {
     private final A first;
     private final B second;

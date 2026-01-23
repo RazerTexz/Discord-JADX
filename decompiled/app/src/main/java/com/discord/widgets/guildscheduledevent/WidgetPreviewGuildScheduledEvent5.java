@@ -5,9 +5,9 @@ import java.util.Objects;
 import kotlin.jvm.functions.Function0;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetPreviewGuildScheduledEvent.kt */
-/* renamed from: com.discord.widgets.guildscheduledevent.WidgetPreviewGuildScheduledEvent$eventModel$2, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.guildscheduledevent.WidgetPreviewGuildScheduledEvent$eventModel$2, reason: use source file name */
+/* JADX INFO: compiled from: WidgetPreviewGuildScheduledEvent.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetPreviewGuildScheduledEvent5 extends Lambda implements Function0<GuildScheduledEventModel> {
     public final /* synthetic */ WidgetPreviewGuildScheduledEvent this$0;
 

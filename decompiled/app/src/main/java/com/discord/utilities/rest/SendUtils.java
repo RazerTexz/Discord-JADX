@@ -74,14 +74,14 @@ import p659s.p660a.CoroutineScope2;
 import p659s.p660a.Dispatchers;
 import p659s.p660a.p661a.MainDispatchers;
 
-/* compiled from: SendUtils.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: SendUtils.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class SendUtils {
     public static final SendUtils INSTANCE = new SendUtils();
     public static final int MAX_MESSAGE_CHARACTER_COUNT = 2000;
     public static final int MAX_MESSAGE_CHARACTER_COUNT_PREMIUM = 4000;
 
-    /* compiled from: SendUtils.kt */
+    /* JADX INFO: compiled from: SendUtils.kt */
     public static final /* data */ class FileUpload {
         public static final long SIZE_UNKNOWN = -1;
         private final Observable<Long> bytesWrittenObservable;
@@ -102,6 +102,7 @@ public final class SendUtils {
             this.bytesWrittenObservable = observable;
         }
 
+        /* JADX WARN: Multi-variable type inference failed */
         public static /* synthetic */ FileUpload copy$default(FileUpload fileUpload, String str, long j, MultipartBody.Part part, String str2, Observable observable, int i, Object obj) {
             if ((i & 1) != 0) {
                 str = fileUpload.name;
@@ -124,22 +125,22 @@ public final class SendUtils {
             return fileUpload.copy(str, j2, part2, str3, observable);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final String getName() {
             return this.name;
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final long getContentLength() {
             return this.contentLength;
         }
 
-        /* renamed from: component3, reason: from getter */
+        /* JADX INFO: renamed from: component3, reason: from getter */
         public final MultipartBody.Part getPart() {
             return this.part;
         }
 
-        /* renamed from: component4, reason: from getter */
+        /* JADX INFO: renamed from: component4, reason: from getter */
         public final String getMimeType() {
             return this.mimeType;
         }
@@ -214,10 +215,10 @@ public final class SendUtils {
         }
     }
 
-    /* compiled from: SendUtils.kt */
+    /* JADX INFO: compiled from: SendUtils.kt */
     public static abstract class SendPayload {
 
-        /* compiled from: SendUtils.kt */
+        /* JADX INFO: compiled from: SendUtils.kt */
         public static final /* data */ class Preprocessing extends SendPayload {
             private final String mimeType;
             private final String name;
@@ -243,17 +244,17 @@ public final class SendUtils {
                 return preprocessing.copy(i, str, str2);
             }
 
-            /* renamed from: component1, reason: from getter */
+            /* JADX INFO: renamed from: component1, reason: from getter */
             public final int getNumFiles() {
                 return this.numFiles;
             }
 
-            /* renamed from: component2, reason: from getter */
+            /* JADX INFO: renamed from: component2, reason: from getter */
             public final String getName() {
                 return this.name;
             }
 
-            /* renamed from: component3, reason: from getter */
+            /* JADX INFO: renamed from: component3, reason: from getter */
             public final String getMimeType() {
                 return this.mimeType;
             }
@@ -303,7 +304,7 @@ public final class SendUtils {
             }
         }
 
-        /* compiled from: SendUtils.kt */
+        /* JADX INFO: compiled from: SendUtils.kt */
         public static final /* data */ class ReadyToSend extends SendPayload {
             private final RestAPIParams.Message message;
             private final List<FileUpload> uploads;
@@ -328,7 +329,7 @@ public final class SendUtils {
                 return readyToSend.copy(message, list);
             }
 
-            /* renamed from: component1, reason: from getter */
+            /* JADX INFO: renamed from: component1, reason: from getter */
             public final RestAPIParams.Message getMessage() {
                 return this.message;
             }
@@ -377,7 +378,7 @@ public final class SendUtils {
             }
         }
 
-        /* compiled from: SendUtils.kt */
+        /* JADX INFO: compiled from: SendUtils.kt */
         public static final /* data */ class ReadyToSendCommand extends SendPayload {
             private final ApplicationCommandLocalSendData command;
             private final List<FileUpload> uploads;
@@ -402,7 +403,7 @@ public final class SendUtils {
                 return readyToSendCommand.copy(applicationCommandLocalSendData, list);
             }
 
-            /* renamed from: component1, reason: from getter */
+            /* JADX INFO: renamed from: component1, reason: from getter */
             public final ApplicationCommandLocalSendData getCommand() {
                 return this.command;
             }
@@ -459,9 +460,9 @@ public final class SendUtils {
         }
     }
 
-    /* compiled from: SendUtils.kt */
+    /* JADX INFO: renamed from: com.discord.utilities.rest.SendUtils$compressImageAttachments$1 */
+    /* JADX INFO: compiled from: SendUtils.kt */
     @DebugMetadata(m10084c = "com.discord.utilities.rest.SendUtils$compressImageAttachments$1", m10085f = "SendUtils.kt", m10086l = {323}, m10087m = "invokeSuspend")
-    /* renamed from: com.discord.utilities.rest.SendUtils$compressImageAttachments$1 */
     public static final class C68611 extends ContinuationImpl6 implements Function2<CoroutineScope, Continuation<? super Unit>, Object> {
         public final /* synthetic */ List $attachments;
         public final /* synthetic */ Context $context;
@@ -668,15 +669,15 @@ public final class SendUtils {
         }
     }
 
-    /* compiled from: SendUtils.kt */
-    /* renamed from: com.discord.utilities.rest.SendUtils$getPart$1 */
+    /* JADX INFO: renamed from: com.discord.utilities.rest.SendUtils$getPart$1 */
+    /* JADX INFO: compiled from: SendUtils.kt */
     public static final class C68621<T> implements Action1<Emitter<FileUpload>> {
         public final /* synthetic */ ContentResolver $contentResolver;
         public final /* synthetic */ String $name;
         public final /* synthetic */ Attachment $this_getPart;
 
-        /* compiled from: SendUtils.kt */
-        /* renamed from: com.discord.utilities.rest.SendUtils$getPart$1$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.utilities.rest.SendUtils$getPart$1$1, reason: invalid class name */
+        /* JADX INFO: compiled from: SendUtils.kt */
         public static final class AnonymousClass1 extends Lambda implements Function3<RequestBody, String, Bitmap.CompressFormat, FileUpload> {
             public AnonymousClass1() {
                 super(3);
@@ -687,7 +688,7 @@ public final class SendUtils {
                 return invoke2(requestBody, str, compressFormat);
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final FileUpload invoke2(RequestBody requestBody, String str, Bitmap.CompressFormat compressFormat) {
                 Intrinsics3.checkNotNullParameter(requestBody, "requestBody");
                 Intrinsics3.checkNotNullParameter(str, "mimeType");
@@ -708,15 +709,15 @@ public final class SendUtils {
             call2(emitter);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final void call2(Emitter<FileUpload> emitter) {
             emitter.onNext(new AnonymousClass1().invoke2((RequestBody) new AttachmentRequestBody(this.$contentResolver, this.$this_getPart), AttachmentUtils.getMimeType(this.$this_getPart, this.$contentResolver), (Bitmap.CompressFormat) null));
             emitter.onCompleted();
         }
     }
 
-    /* compiled from: SendUtils.kt */
-    /* renamed from: com.discord.utilities.rest.SendUtils$getSendCommandPayload$2 */
+    /* JADX INFO: renamed from: com.discord.utilities.rest.SendUtils$getSendCommandPayload$2 */
+    /* JADX INFO: compiled from: SendUtils.kt */
     public static final class C68632<T, R> implements Func1<List<FileUpload>, SendPayload.ReadyToSendCommand> {
         public final /* synthetic */ ApplicationCommandLocalSendData $attachmentCorrectedMessage;
 
@@ -729,7 +730,7 @@ public final class SendUtils {
             return call2(list);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final SendPayload.ReadyToSendCommand call2(List<FileUpload> list) {
             ApplicationCommandLocalSendData applicationCommandLocalSendData = this.$attachmentCorrectedMessage;
             Intrinsics3.checkNotNullExpressionValue(list, "attachmentParts");
@@ -737,8 +738,8 @@ public final class SendUtils {
         }
     }
 
-    /* compiled from: SendUtils.kt */
-    /* renamed from: com.discord.utilities.rest.SendUtils$getSendPayload$2 */
+    /* JADX INFO: renamed from: com.discord.utilities.rest.SendUtils$getSendPayload$2 */
+    /* JADX INFO: compiled from: SendUtils.kt */
     public static final class C68642<T, R> implements Func1<List<FileUpload>, SendPayload.ReadyToSend> {
         public final /* synthetic */ RestAPIParams.Message $sanitizedApiParamMessage;
 
@@ -751,7 +752,7 @@ public final class SendUtils {
             return call2(list);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final SendPayload.ReadyToSend call2(List<FileUpload> list) {
             RestAPIParams.Message message = this.$sanitizedApiParamMessage;
             Intrinsics3.checkNotNullExpressionValue(list, "attachmentParts");
@@ -759,8 +760,8 @@ public final class SendUtils {
         }
     }
 
-    /* compiled from: SendUtils.kt */
-    /* renamed from: com.discord.utilities.rest.SendUtils$handleCaptchaRequired$1 */
+    /* JADX INFO: renamed from: com.discord.utilities.rest.SendUtils$handleCaptchaRequired$1 */
+    /* JADX INFO: compiled from: SendUtils.kt */
     public static final class C68651 extends Lambda implements Function2<AppFragment, CaptchaHelper.CaptchaPayload, Unit> {
         public final /* synthetic */ MessageQueue4.CaptchaRequired $messageResult;
 
@@ -776,7 +777,7 @@ public final class SendUtils {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(AppFragment appFragment, CaptchaHelper.CaptchaPayload captchaPayload) {
             Intrinsics3.checkNotNullParameter(appFragment, "<anonymous parameter 0>");
             Intrinsics3.checkNotNullParameter(captchaPayload, "captchaPayload");
@@ -784,8 +785,8 @@ public final class SendUtils {
         }
     }
 
-    /* compiled from: SendUtils.kt */
-    /* renamed from: com.discord.utilities.rest.SendUtils$handleCaptchaRequired$2 */
+    /* JADX INFO: renamed from: com.discord.utilities.rest.SendUtils$handleCaptchaRequired$2 */
+    /* JADX INFO: compiled from: SendUtils.kt */
     public static final class C68662 extends Lambda implements Function0<Unit> {
         public final /* synthetic */ MessageQueue4.CaptchaRequired $messageResult;
 
@@ -801,15 +802,15 @@ public final class SendUtils {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             StoreStream.INSTANCE.getMessages().markMessageFailed(this.$messageResult.getChannelId(), this.$messageResult.getNonce());
         }
     }
 
-    /* compiled from: SendUtils.kt */
+    /* JADX INFO: renamed from: com.discord.utilities.rest.SendUtils$uniqueifyNames$1 */
+    /* JADX INFO: compiled from: SendUtils.kt */
     @DebugMetadata(m10084c = "com.discord.utilities.rest.SendUtils$uniqueifyNames$1", m10085f = "SendUtils.kt", m10086l = {204, 206}, m10087m = "invokeSuspend")
-    /* renamed from: com.discord.utilities.rest.SendUtils$uniqueifyNames$1 */
     public static final class C68671 extends ContinuationImpl5 implements Function2<SequenceBuilder2<? super Attachment<? extends Object>>, Continuation<? super Unit>, Object> {
         public final /* synthetic */ List $attachmentParts;
         private /* synthetic */ Object L$0;

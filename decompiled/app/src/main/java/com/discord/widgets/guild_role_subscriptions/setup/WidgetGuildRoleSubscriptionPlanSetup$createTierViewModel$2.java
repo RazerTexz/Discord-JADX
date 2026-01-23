@@ -4,8 +4,8 @@ import com.discord.widgets.guild_role_subscriptions.tier.create.GuildRoleSubscri
 import kotlin.jvm.functions.Function0;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetGuildRoleSubscriptionPlanSetup.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetGuildRoleSubscriptionPlanSetup.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetGuildRoleSubscriptionPlanSetup$createTierViewModel$2 extends Lambda implements Function0<GuildRoleSubscriptionTierViewModel> {
     public static final WidgetGuildRoleSubscriptionPlanSetup$createTierViewModel$2 INSTANCE = new WidgetGuildRoleSubscriptionPlanSetup$createTierViewModel$2();
 

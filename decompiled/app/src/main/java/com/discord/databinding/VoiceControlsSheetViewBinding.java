@@ -16,98 +16,98 @@ import com.discord.views.NumericBadgingView;
 import com.discord.views.calls.VolumeSliderView;
 import com.google.android.material.textview.MaterialTextView;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public final class VoiceControlsSheetViewBinding implements ViewBinding {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     @NonNull
     public final View f15591a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     @NonNull
     public final ImageView f15592b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     @NonNull
     public final FrameLayout f15593c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     @NonNull
     public final ImageView f15594d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     @NonNull
     public final TextView f15595e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     @NonNull
     public final TextView f15596f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     @NonNull
     public final ImageView f15597g;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     @NonNull
     public final ImageView f15598h;
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     @NonNull
     public final TextView f15599i;
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     @NonNull
     public final ImageView f15600j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     @NonNull
     public final ImageView f15601k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     @NonNull
     public final LinearLayout f15602l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     @NonNull
     public final Button f15603m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     @NonNull
     public final NumericBadgingView f15604n;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     @NonNull
     public final ImageView f15605o;
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     @NonNull
     public final ImageView f15606p;
 
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     @NonNull
     public final TextView f15607q;
 
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     @NonNull
     public final CardView f15608r;
 
-    /* renamed from: s */
+    /* JADX INFO: renamed from: s */
     @NonNull
     public final MaterialTextView f15609s;
 
-    /* renamed from: t */
+    /* JADX INFO: renamed from: t */
     @NonNull
     public final ImageView f15610t;
 
-    /* renamed from: u */
+    /* JADX INFO: renamed from: u */
     @NonNull
     public final TextView f15611u;
 
-    /* renamed from: v */
+    /* JADX INFO: renamed from: v */
     @NonNull
     public final VolumeSliderView f15612v;
 
-    /* renamed from: w */
+    /* JADX INFO: renamed from: w */
     @NonNull
     public final ImageView f15613w;
 
@@ -138,7 +138,7 @@ public final class VoiceControlsSheetViewBinding implements ViewBinding {
     }
 
     @NonNull
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static VoiceControlsSheetViewBinding m8402a(@NonNull LayoutInflater layoutInflater, @NonNull ViewGroup viewGroup) {
         layoutInflater.inflate(C5419R.layout.voice_controls_sheet_view, viewGroup);
         int i = C5419R.id.audio_output_button;

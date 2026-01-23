@@ -12,9 +12,9 @@ import p507d0.p584w.p586i.p587a.ContinuationImpl6;
 import p507d0.p584w.p586i.p587a.DebugMetadata;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: WidgetUserMentions.kt */
+/* JADX INFO: compiled from: WidgetUserMentions.kt */
+/* JADX INFO: loaded from: classes.dex */
 @DebugMetadata(m10084c = "com.discord.widgets.user.WidgetUserMentions$WidgetUserMentionFilter$delayedDismiss$1", m10085f = "WidgetUserMentions.kt", m10086l = {386}, m10087m = "invokeSuspend")
-/* loaded from: classes.dex */
 public final class WidgetUserMentions$WidgetUserMentionFilter$delayedDismiss$1 extends ContinuationImpl6 implements Function2<CoroutineScope, Continuation<? super Unit>, Object> {
     public int label;
     public final /* synthetic */ WidgetUserMentions.WidgetUserMentionFilter this$0;

@@ -13,8 +13,8 @@ import p007b.p008a.p050t.p052b.p054b.SimpleMarkdownRules2;
 import p007b.p008a.p050t.p052b.p054b.SimpleMarkdownRules5;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: DiscordParser.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: DiscordParser.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class DiscordParser {
     public static final DiscordParser INSTANCE = new DiscordParser();
     private static final Parser<MessageRenderContext, Node<MessageRenderContext>, MessageParseState> SAFE_LINK_PARSER = createParser$default(false, true, false, false, false, 28, null);
@@ -22,7 +22,7 @@ public final class DiscordParser {
     private static final Parser<MessageRenderContext, Node<MessageRenderContext>, MessageParseState> REPLY_PARSER = createParser$default(false, true, false, false, false, 24, null);
     private static final Parser<MessageRenderContext, Node<MessageRenderContext>, MessageParseState> FORUM_POST_FIRST_MESSAGE = createParser$default(false, true, false, true, true, 4, null);
 
-    /* compiled from: DiscordParser.kt */
+    /* JADX INFO: compiled from: DiscordParser.kt */
     public enum ParserOptions {
         DEFAULT,
         ALLOW_MASKED_LINKS,

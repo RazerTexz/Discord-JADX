@@ -50,8 +50,8 @@ import java.lang.ref.WeakReference;
 import java.util.ArrayList;
 import p007b.p100d.p104b.p105a.outline;
 
+/* JADX INFO: loaded from: classes.dex */
 @RestrictTo({RestrictTo.Scope.LIBRARY_GROUP_PREFIX})
-/* loaded from: classes.dex */
 public class WindowDecorActionBar extends ActionBar implements ActionBarOverlayLayout.ActionBarVisibilityCallback {
     private static final long FADE_IN_DURATION_MS = 200;
     private static final long FADE_OUT_DURATION_MS = 100;
@@ -91,7 +91,7 @@ public class WindowDecorActionBar extends ActionBar implements ActionBarOverlayL
     public final ViewPropertyAnimatorListener mShowListener = new C00762();
     public final ViewPropertyAnimatorUpdateListener mUpdateListener = new C00773();
 
-    /* renamed from: androidx.appcompat.app.WindowDecorActionBar$1 */
+    /* JADX INFO: renamed from: androidx.appcompat.app.WindowDecorActionBar$1 */
     public class C00751 extends ViewPropertyAnimatorListenerAdapter {
         public C00751() {
         }
@@ -116,7 +116,7 @@ public class WindowDecorActionBar extends ActionBar implements ActionBarOverlayL
         }
     }
 
-    /* renamed from: androidx.appcompat.app.WindowDecorActionBar$2 */
+    /* JADX INFO: renamed from: androidx.appcompat.app.WindowDecorActionBar$2 */
     public class C00762 extends ViewPropertyAnimatorListenerAdapter {
         public C00762() {
         }
@@ -129,7 +129,7 @@ public class WindowDecorActionBar extends ActionBar implements ActionBarOverlayL
         }
     }
 
-    /* renamed from: androidx.appcompat.app.WindowDecorActionBar$3 */
+    /* JADX INFO: renamed from: androidx.appcompat.app.WindowDecorActionBar$3 */
     public class C00773 implements ViewPropertyAnimatorUpdateListener {
         public C00773() {
         }

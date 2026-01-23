@@ -2,24 +2,24 @@ package com.discord.api.sticker;
 
 import kotlin.jvm.internal.DefaultConstructorMarker;
 
-/* compiled from: StickerType.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: StickerType.kt */
+/* JADX INFO: loaded from: classes.dex */
 public enum StickerType {
     UNKNOWN(-1),
     STANDARD(1),
     GUILD(2);
 
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private final int apiValue;
 
-    /* compiled from: StickerType.kt */
+    /* JADX INFO: compiled from: StickerType.kt */
     public static final class Companion {
         public Companion() {
         }
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final StickerType m8244a(int i) {
             StickerType stickerType;
             StickerType[] stickerTypeArrValues = StickerType.values();

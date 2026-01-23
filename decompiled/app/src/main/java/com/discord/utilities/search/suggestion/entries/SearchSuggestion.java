@@ -1,11 +1,11 @@
 package com.discord.utilities.search.suggestion.entries;
 
 
-/* compiled from: SearchSuggestion.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: SearchSuggestion.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public interface SearchSuggestion {
 
-    /* compiled from: SearchSuggestion.kt */
+    /* JADX INFO: compiled from: SearchSuggestion.kt */
     public enum Category {
         FILTER,
         MENTIONS_USER,

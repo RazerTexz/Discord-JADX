@@ -9,9 +9,9 @@ import lombok.experimental.SuperBuilder;
 import lombok.javac.JavacAnnotationHandler;
 import lombok.javac.JavacNode;
 
+/* JADX INFO: loaded from: discord-126021.apk:lombok/javac/handlers/HandleSuperBuilderRemove.SCL.lombok */
 @HandlerPriority(65536)
 @AlreadyHandledAnnotations
-/* loaded from: discord-126021.apk:lombok/javac/handlers/HandleSuperBuilderRemove.SCL.lombok */
 public class HandleSuperBuilderRemove extends JavacAnnotationHandler<SuperBuilder> {
     @Override // lombok.javac.JavacAnnotationHandler
     public void handle(AnnotationValues<SuperBuilder> annotation, JCTree.JCAnnotation ast, JavacNode annotationNode) {

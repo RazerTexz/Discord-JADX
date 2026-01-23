@@ -9,36 +9,36 @@ import androidx.annotation.VisibleForTesting;
 import com.facebook.drawee.drawable.ScalingUtils$ScaleType;
 import p007b.p085c.p086a.p087a0.AnimatableValueParser;
 
-/* compiled from: ScaleTypeDrawable.java */
-/* renamed from: b.f.g.e.p, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.f.g.e.p, reason: use source file name */
+/* JADX INFO: compiled from: ScaleTypeDrawable.java */
+/* JADX INFO: loaded from: classes.dex */
 public class ScaleTypeDrawable extends ForwardingDrawable {
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     @VisibleForTesting
     public ScalingUtils$ScaleType f3435n;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     @VisibleForTesting
     public Object f3436o;
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     @VisibleForTesting
     public PointF f3437p;
 
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     @VisibleForTesting
     public int f3438q;
 
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     @VisibleForTesting
     public int f3439r;
 
-    /* renamed from: s */
+    /* JADX INFO: renamed from: s */
     @VisibleForTesting
     public Matrix f3440s;
 
-    /* renamed from: t */
+    /* JADX INFO: renamed from: t */
     public Matrix f3441t;
 
     public ScaleTypeDrawable(Drawable drawable, ScalingUtils$ScaleType scalingUtils$ScaleType) {
@@ -51,7 +51,7 @@ public class ScaleTypeDrawable extends ForwardingDrawable {
     }
 
     @Override // p007b.p109f.p132g.p142e.ForwardingDrawable, p007b.p109f.p132g.p142e.TransformCallback
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public void mo1096d(Matrix matrix) {
         m1103n(matrix);
         m1119q();
@@ -83,7 +83,7 @@ public class ScaleTypeDrawable extends ForwardingDrawable {
     }
 
     @Override // p007b.p109f.p132g.p142e.ForwardingDrawable
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public Drawable mo1104o(Drawable drawable) {
         Drawable drawableMo1104o = super.mo1104o(drawable);
         m1118p();
@@ -96,7 +96,7 @@ public class ScaleTypeDrawable extends ForwardingDrawable {
     }
 
     @VisibleForTesting
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public void m1118p() {
         Drawable drawable = this.f3360k;
         if (drawable == null) {
@@ -137,7 +137,7 @@ public class ScaleTypeDrawable extends ForwardingDrawable {
         this.f3440s = this.f3441t;
     }
 
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     public final void m1119q() {
         boolean z2;
         ScalingUtils$ScaleType scalingUtils$ScaleType = this.f3435n;
@@ -161,7 +161,7 @@ public class ScaleTypeDrawable extends ForwardingDrawable {
         }
     }
 
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     public void m1120r(ScalingUtils$ScaleType scalingUtils$ScaleType) {
         if (AnimatableValueParser.m520g0(this.f3435n, scalingUtils$ScaleType)) {
             return;

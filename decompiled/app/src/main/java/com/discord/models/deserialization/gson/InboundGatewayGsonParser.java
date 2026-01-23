@@ -3,15 +3,14 @@ package com.discord.models.deserialization.gson;
 import androidx.exifinterface.media.ExifInterface;
 import com.discord.models.domain.Model;
 import com.google.gson.Gson;
-import com.google.gson.JsonIOException;
 import com.google.gson.stream.JsonReader;
 import p007b.p008a.p017b.TypeAdapterRegistrar;
 import p007b.p225i.p408d.FieldNamingPolicy;
 import p007b.p225i.p408d.GsonBuilder;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: InboundGatewayGsonParser.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: InboundGatewayGsonParser.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class InboundGatewayGsonParser {
     public static final InboundGatewayGsonParser INSTANCE = new InboundGatewayGsonParser();
     private static final Gson gatewayGsonInstance;
@@ -36,7 +35,7 @@ public final class InboundGatewayGsonParser {
         return (T) fromJson(jsonReader, clazz);
     }
 
-    public static final <T> String toJson(T source) throws JsonIOException {
+    public static final <T> String toJson(T source) {
         String strM9209m = gatewayGsonInstance.m9209m(source);
         Intrinsics3.checkNotNullExpressionValue(strM9209m, "gatewayGsonInstance.toJson(source)");
         return strM9209m;

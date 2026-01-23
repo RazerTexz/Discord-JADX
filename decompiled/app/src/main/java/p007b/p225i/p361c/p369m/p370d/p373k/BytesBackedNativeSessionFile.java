@@ -10,12 +10,12 @@ import java.util.zip.GZIPOutputStream;
 import p007b.p225i.p361c.p369m.p370d.p375m.AutoValue_CrashlyticsReport_FilesPayload_File;
 import p007b.p225i.p361c.p369m.p370d.p375m.CrashlyticsReport;
 
-/* compiled from: BytesBackedNativeSessionFile.java */
-/* renamed from: b.i.c.m.d.k.f, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.c.m.d.k.f, reason: use source file name */
+/* JADX INFO: compiled from: BytesBackedNativeSessionFile.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class BytesBackedNativeSessionFile implements NativeSessionFile {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     @Nullable
     public final byte[] f12285a;
 
@@ -25,14 +25,14 @@ public class BytesBackedNativeSessionFile implements NativeSessionFile {
 
     @Override // p007b.p225i.p361c.p369m.p370d.p373k.NativeSessionFile
     @NonNull
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public String mo6392a() {
         return "logs";
     }
 
     @Override // p007b.p225i.p361c.p369m.p370d.p373k.NativeSessionFile
     @Nullable
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public CrashlyticsReport.c.a mo6393b() {
         byte[] byteArray;
         byte[] bArr = this.f12285a;
@@ -64,6 +64,7 @@ public class BytesBackedNativeSessionFile implements NativeSessionFile {
                     throw th2;
                 }
             } catch (IOException unused3) {
+                byteArray = null;
             }
         }
         if (byteArray == null) {
@@ -74,7 +75,7 @@ public class BytesBackedNativeSessionFile implements NativeSessionFile {
 
     @Override // p007b.p225i.p361c.p369m.p370d.p373k.NativeSessionFile
     @Nullable
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public InputStream mo6394h() {
         byte[] bArr = this.f12285a;
         if (bArr == null || bArr.length == 0) {

@@ -1,17 +1,17 @@
 package p007b.p085c.p086a.p095y;
 
-/* compiled from: Marker.java */
-/* renamed from: b.c.a.y.i, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.c.a.y.i, reason: use source file name */
+/* JADX INFO: compiled from: Marker.java */
+/* JADX INFO: loaded from: classes.dex */
 public class Marker2 {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final String f2717a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final float f2718b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final float f2719c;
 
     public Marker2(String str, float f, float f2) {

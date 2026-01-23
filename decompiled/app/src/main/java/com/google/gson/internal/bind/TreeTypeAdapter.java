@@ -2,7 +2,6 @@ package com.google.gson.internal.bind;
 
 import com.google.gson.Gson;
 import com.google.gson.JsonElement;
-import com.google.gson.JsonParseException;
 import com.google.gson.TypeAdapter;
 import com.google.gson.reflect.TypeToken;
 import com.google.gson.stream.JsonReader;
@@ -17,45 +16,45 @@ import p007b.p225i.p408d.JsonSerializationContext;
 import p007b.p225i.p408d.JsonSerializer2;
 import p007b.p225i.p408d.TypeAdapterFactory2;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public final class TreeTypeAdapter<T> extends TypeAdapter<T> {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final JsonSerializer2<T> f21541a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final JsonDeserializer2<T> f21542b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final Gson f21543c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final TypeToken<T> f21544d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final TypeAdapterFactory2 f21545e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final TreeTypeAdapter<T>.C11113b f21546f = new C11113b(this, null);
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public TypeAdapter<T> f21547g;
 
     public static final class SingleTypeFactory implements TypeAdapterFactory2 {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public final TypeToken<?> f21548j;
 
-        /* renamed from: k */
+        /* JADX INFO: renamed from: k */
         public final boolean f21549k;
 
-        /* renamed from: l */
+        /* JADX INFO: renamed from: l */
         public final Class<?> f21550l;
 
-        /* renamed from: m */
+        /* JADX INFO: renamed from: m */
         public final JsonSerializer2<?> f21551m;
 
-        /* renamed from: n */
+        /* JADX INFO: renamed from: n */
         public final JsonDeserializer2<?> f21552n;
 
         public SingleTypeFactory(Object obj, TypeToken<?> typeToken, boolean z2, Class<?> cls) {
@@ -79,7 +78,7 @@ public final class TreeTypeAdapter<T> extends TypeAdapter<T> {
         }
     }
 
-    /* renamed from: com.google.gson.internal.bind.TreeTypeAdapter$b */
+    /* JADX INFO: renamed from: com.google.gson.internal.bind.TreeTypeAdapter$b */
     public final class C11113b implements JsonSerializationContext, JsonDeserializationContext {
         public C11113b(TreeTypeAdapter treeTypeAdapter, C11112a c11112a) {
         }
@@ -94,7 +93,7 @@ public final class TreeTypeAdapter<T> extends TypeAdapter<T> {
     }
 
     @Override // com.google.gson.TypeAdapter
-    public T read(JsonReader jsonReader) throws JsonParseException, IOException {
+    public T read(JsonReader jsonReader) throws IOException {
         if (this.f21542b == null) {
             TypeAdapter<T> typeAdapterM9206j = this.f21547g;
             if (typeAdapterM9206j == null) {

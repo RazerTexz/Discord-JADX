@@ -2,15 +2,15 @@ package p007b.p109f.p161j.p177l;
 
 import com.facebook.imagepipeline.memory.BasePool;
 
-/* compiled from: NoOpPoolStatsTracker.java */
-/* renamed from: b.f.j.l.v, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.f.j.l.v, reason: use source file name */
+/* JADX INFO: compiled from: NoOpPoolStatsTracker.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class NoOpPoolStatsTracker implements PoolStatsTracker {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static NoOpPoolStatsTracker f3957a;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public static synchronized NoOpPoolStatsTracker m1398h() {
         if (f3957a == null) {
             f3957a = new NoOpPoolStatsTracker();
@@ -19,37 +19,37 @@ public class NoOpPoolStatsTracker implements PoolStatsTracker {
     }
 
     @Override // p007b.p109f.p161j.p177l.PoolStatsTracker
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public void mo1399a(int i) {
     }
 
     @Override // p007b.p109f.p161j.p177l.PoolStatsTracker
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public void mo1400b(int i) {
     }
 
     @Override // p007b.p109f.p161j.p177l.PoolStatsTracker
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public void mo1401c(BasePool basePool) {
     }
 
     @Override // p007b.p109f.p161j.p177l.PoolStatsTracker
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public void mo1402d() {
     }
 
     @Override // p007b.p109f.p161j.p177l.PoolStatsTracker
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public void mo1403e(int i) {
     }
 
     @Override // p007b.p109f.p161j.p177l.PoolStatsTracker
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public void mo1404f() {
     }
 
     @Override // p007b.p109f.p161j.p177l.PoolStatsTracker
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public void mo1405g(int i) {
     }
 }

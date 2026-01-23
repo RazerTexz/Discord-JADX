@@ -56,22 +56,22 @@ import p507d0.p580t.MapsJVM;
 import p507d0.p580t._Collections;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: AnnotationDeserializer.kt */
-/* renamed from: d0.e0.p.d.m0.l.b.e, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.l.b.e, reason: use source file name */
+/* JADX INFO: compiled from: AnnotationDeserializer.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class AnnotationDeserializer {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final ModuleDescriptor2 f24518a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final NotFoundClasses f24519b;
 
-    /* compiled from: AnnotationDeserializer.kt */
-    /* renamed from: d0.e0.p.d.m0.l.b.e$a */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.l.b.e$a */
+    /* JADX INFO: compiled from: AnnotationDeserializer.kt */
     public /* synthetic */ class a {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public static final /* synthetic */ int[] f24520a;
 
         static {
@@ -87,7 +87,7 @@ public final class AnnotationDeserializer {
         this.f24519b = notFoundClasses;
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final boolean m9952a(AbstractC11815g<?> abstractC11815g, KotlinType kotlinType, C11677b.b.c cVar) {
         C11677b.b.c.EnumC13321c type = cVar.getType();
         int i = type == null ? -1 : a.f24520a[type.ordinal()];
@@ -124,8 +124,6 @@ public final class AnnotationDeserializer {
         return false;
     }
 
-    /* JADX WARN: Multi-variable type inference failed */
-    /* JADX WARN: Type inference failed for: r6v0, types: [kotlin.Pair] */
     public final AnnotationDescriptor deserializeAnnotation(C11677b c11677b, NameResolver nameResolver) {
         Intrinsics3.checkNotNullParameter(c11677b, "proto");
         Intrinsics3.checkNotNullParameter(nameResolver, "nameResolver");

@@ -2,15 +2,15 @@ package androidx.constraintlayout.motion.utils;
 
 import java.lang.reflect.Array;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class MonotonicCurveFit extends CurveFit {
     private static final String TAG = "MonotonicCurveFit";
 
-    /* renamed from: mT */
+    /* JADX INFO: renamed from: mT */
     private double[] f102mT;
     private double[][] mTangent;
 
-    /* renamed from: mY */
+    /* JADX INFO: renamed from: mY */
     private double[][] f103mY;
 
     public MonotonicCurveFit(double[] dArr, double[][] dArr2) {

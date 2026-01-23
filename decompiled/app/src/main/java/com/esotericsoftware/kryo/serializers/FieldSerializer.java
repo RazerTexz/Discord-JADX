@@ -30,7 +30,7 @@ import p007b.p100d.p104b.p105a.outline;
 import p007b.p106e.p107a.Log;
 import p007b.p106e.p108b.FieldAccess2;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class FieldSerializer<T> extends Serializer<T> implements Comparator<CachedField> {
     public static CachedFieldFactory asmFieldFactory;
     public static CachedFieldFactory objectFieldFactory;
@@ -70,7 +70,7 @@ public class FieldSerializer<T> extends Serializer<T> implements Comparator<Cach
         public static final CachedFieldNameStrategy DEFAULT = new C106241();
         public static final CachedFieldNameStrategy EXTENDED = new C106252();
 
-        /* renamed from: com.esotericsoftware.kryo.serializers.FieldSerializer$CachedFieldNameStrategy$1 */
+        /* JADX INFO: renamed from: com.esotericsoftware.kryo.serializers.FieldSerializer$CachedFieldNameStrategy$1 */
         public static class C106241 implements CachedFieldNameStrategy {
             @Override // com.esotericsoftware.kryo.serializers.FieldSerializer.CachedFieldNameStrategy
             public String getName(CachedField cachedField) {
@@ -78,7 +78,7 @@ public class FieldSerializer<T> extends Serializer<T> implements Comparator<Cach
             }
         }
 
-        /* renamed from: com.esotericsoftware.kryo.serializers.FieldSerializer$CachedFieldNameStrategy$2 */
+        /* JADX INFO: renamed from: com.esotericsoftware.kryo.serializers.FieldSerializer$CachedFieldNameStrategy$2 */
         public static class C106252 implements CachedFieldNameStrategy {
             @Override // com.esotericsoftware.kryo.serializers.FieldSerializer.CachedFieldNameStrategy
             public String getName(CachedField cachedField) {
@@ -542,14 +542,11 @@ public class FieldSerializer<T> extends Serializer<T> implements Comparator<Cach
         this(kryo, cls, clsArr, kryo.getFieldSerializerConfig().clone());
     }
 
-    /* renamed from: compare, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: compare, reason: avoid collision after fix types in other method */
     public int compare2(CachedField cachedField, CachedField cachedField2) {
         return getCachedFieldName(cachedField).compareTo(getCachedFieldName(cachedField2));
     }
 
-    /* JADX WARN: Multi-variable type inference failed */
-    /* JADX WARN: Type inference failed for: r2v9, types: [java.util.List] */
-    /* JADX WARN: Type inference failed for: r9v0, types: [com.esotericsoftware.kryo.serializers.FieldSerializer, com.esotericsoftware.kryo.serializers.FieldSerializer<T>, java.util.Comparator] */
     public void rebuildCachedFields(boolean z2) {
         List<Field> listBuildValidFieldsFromCachedFields;
         List<Field> listBuildValidFieldsFromCachedFields2;
@@ -583,22 +580,22 @@ public class FieldSerializer<T> extends Serializer<T> implements Comparator<Cach
                 }
             }
             ObjectMap context = this.kryo.getContext();
-            ArrayList arrayListAsList = arrayList;
+            List<Field> listAsList = arrayList;
             if (this.useMemRegions) {
-                arrayListAsList = arrayList;
+                listAsList = arrayList;
                 if (!this.config.isUseAsm()) {
-                    arrayListAsList = arrayList;
+                    listAsList = arrayList;
                     if (unsafeAvailable) {
                         try {
-                            arrayListAsList = Arrays.asList((Field[]) sortFieldsByOffsetMethod.invoke(null, arrayList));
+                            listAsList = Arrays.asList((Field[]) sortFieldsByOffsetMethod.invoke(null, arrayList));
                         } catch (Exception e) {
                             throw new RuntimeException("Cannot invoke UnsafeUtil.sortFieldsByOffset()", e);
                         }
                     }
                 }
             }
-            listBuildValidFieldsFromCachedFields = buildValidFields(false, arrayListAsList, context, intArray);
-            listBuildValidFieldsFromCachedFields2 = buildValidFields(true, arrayListAsList, context, intArray);
+            listBuildValidFieldsFromCachedFields = buildValidFields(false, listAsList, context, intArray);
+            listBuildValidFieldsFromCachedFields2 = buildValidFields(true, listAsList, context, intArray);
             if (this.config.isUseAsm() && !Util.IS_ANDROID && Modifier.isPublic(this.type.getModifiers()) && intArray.indexOf(1) != -1) {
                 try {
                     this.access = FieldAccess2.m895a(this.type);

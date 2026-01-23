@@ -8,24 +8,24 @@ import androidx.viewbinding.ViewBinding;
 import com.discord.utilities.view.text.LinkifiedTextView;
 import com.google.android.material.button.MaterialButton;
 
-/* compiled from: LayoutAgeVerifyUnderageBinding.java */
-/* renamed from: b.a.i.i0, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.a.i.i0, reason: use source file name */
+/* JADX INFO: compiled from: LayoutAgeVerifyUnderageBinding.java */
+/* JADX INFO: loaded from: classes.dex */
 public final class LayoutAgeVerifyUnderageBinding implements ViewBinding {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     @NonNull
     public final ConstraintLayout f937a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     @NonNull
     public final MaterialButton f938b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     @NonNull
     public final LinkifiedTextView f939c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     @NonNull
     public final TextView f940d;
 

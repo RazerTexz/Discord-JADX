@@ -7,8 +7,8 @@ import kotlin.jvm.functions.Function0;
 import kotlin.jvm.functions.Function2;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: VideoCallGridLayoutManager.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: VideoCallGridLayoutManager.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class VideoCallGridLayoutManager extends ResizingGridLayoutManager {
     private final Function2<VideoCallGridLayoutManager, RecyclerView.State, Unit> onLayoutCompletedEvent;
     private final Function0<Integer> recyclerviewSizeProvider;

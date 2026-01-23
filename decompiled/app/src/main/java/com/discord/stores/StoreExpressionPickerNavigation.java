@@ -9,16 +9,16 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 import p658rx.Observable;
 
-/* compiled from: StoreExpressionPickerNavigation.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: StoreExpressionPickerNavigation.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class StoreExpressionPickerNavigation extends StoreV2 {
     private final Dispatcher dispatcher;
     private final ObservationDeck observationDeck;
     private ExpressionTrayTab selectedTab;
     private final Persister<ExpressionTrayTab> selectedTabPersister;
 
-    /* compiled from: StoreExpressionPickerNavigation.kt */
-    /* renamed from: com.discord.stores.StoreExpressionPickerNavigation$observeSelectedTab$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreExpressionPickerNavigation$observeSelectedTab$1 */
+    /* JADX INFO: compiled from: StoreExpressionPickerNavigation.kt */
     public static final class C59271 extends Lambda implements Function0<ExpressionTrayTab> {
         public C59271() {
             super(0);
@@ -36,8 +36,8 @@ public final class StoreExpressionPickerNavigation extends StoreV2 {
         }
     }
 
-    /* compiled from: StoreExpressionPickerNavigation.kt */
-    /* renamed from: com.discord.stores.StoreExpressionPickerNavigation$onSelectTab$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreExpressionPickerNavigation$onSelectTab$1 */
+    /* JADX INFO: compiled from: StoreExpressionPickerNavigation.kt */
     public static final class C59281 extends Lambda implements Function0<Unit> {
         public final /* synthetic */ ExpressionTrayTab $expressionTrayTab;
 
@@ -53,7 +53,7 @@ public final class StoreExpressionPickerNavigation extends StoreV2 {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             StoreExpressionPickerNavigation.access$setSelectedTab$p(StoreExpressionPickerNavigation.this, this.$expressionTrayTab);
             StoreExpressionPickerNavigation.this.markChanged();

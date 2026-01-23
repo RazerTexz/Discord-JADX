@@ -5,16 +5,16 @@ import java.util.Collection;
 import java.util.List;
 import java.util.RandomAccess;
 
-/* compiled from: com.google.android.gms:play-services-measurement-base@@18.0.0 */
-/* renamed from: b.i.a.f.h.l.o3 */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.h.l.o3 */
+/* JADX INFO: compiled from: com.google.android.gms:play-services-measurement-base@@18.0.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public abstract class AbstractC3772o3<E> extends AbstractList<E> implements InterfaceC3597b5<E> {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public boolean f10123j = true;
 
     @Override // p007b.p225i.p226a.p288f.p313h.p325l.InterfaceC3597b5
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public boolean mo4568a() {
         return this.f10123j;
     }
@@ -31,7 +31,7 @@ public abstract class AbstractC3772o3<E> extends AbstractList<E> implements Inte
         return super.addAll(collection);
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final void m5153c() {
         if (!this.f10123j) {
             throw new UnsupportedOperationException();
@@ -69,7 +69,7 @@ public abstract class AbstractC3772o3<E> extends AbstractList<E> implements Inte
     }
 
     @Override // p007b.p225i.p226a.p288f.p313h.p325l.InterfaceC3597b5
-    /* renamed from: g0 */
+    /* JADX INFO: renamed from: g0 */
     public final void mo4570g0() {
         this.f10123j = false;
     }

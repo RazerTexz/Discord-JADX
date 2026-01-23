@@ -4,8 +4,8 @@ import java.util.Set;
 import kotlin.jvm.internal.DefaultConstructorMarker;
 import p507d0.p580t.Sets5;
 
-/* compiled from: GuildScheduledEventStatus.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: GuildScheduledEventStatus.kt */
+/* JADX INFO: loaded from: classes.dex */
 public enum GuildScheduledEventStatus {
     SCHEDULED(1),
     ACTIVE(2),
@@ -14,12 +14,12 @@ public enum GuildScheduledEventStatus {
     UNKNOWN(0);
 
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE;
     private static final Set<GuildScheduledEventStatus> DONE;
     private final int apiValue;
 
-    /* compiled from: GuildScheduledEventStatus.kt */
+    /* JADX INFO: compiled from: GuildScheduledEventStatus.kt */
     public static final class Companion {
         public Companion() {
         }

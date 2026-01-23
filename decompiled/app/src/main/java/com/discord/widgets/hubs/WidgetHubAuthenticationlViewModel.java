@@ -6,14 +6,14 @@ import p001a0.p002a.p003a.C0002b;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: WidgetHubAuthenticationlViewModel.kt */
-/* renamed from: com.discord.widgets.hubs.AuthenticationResult, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.hubs.AuthenticationResult, reason: use source file name */
+/* JADX INFO: compiled from: WidgetHubAuthenticationlViewModel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final /* data */ class WidgetHubAuthenticationlViewModel implements WidgetHubDomains5 {
     public static final Parcelable.Creator<WidgetHubAuthenticationlViewModel> CREATOR = new Creator();
     private final long guildId;
 
-    /* renamed from: com.discord.widgets.hubs.AuthenticationResult$Creator */
+    /* JADX INFO: renamed from: com.discord.widgets.hubs.AuthenticationResult$Creator */
     public static class Creator implements Parcelable.Creator<WidgetHubAuthenticationlViewModel> {
         /* JADX WARN: Can't rename method to resolve collision */
         @Override // android.os.Parcelable.Creator
@@ -50,7 +50,7 @@ public final /* data */ class WidgetHubAuthenticationlViewModel implements Widge
         return widgetHubAuthenticationlViewModel.copy(j);
     }
 
-    /* renamed from: component1, reason: from getter */
+    /* JADX INFO: renamed from: component1, reason: from getter */
     public final long getGuildId() {
         return this.guildId;
     }

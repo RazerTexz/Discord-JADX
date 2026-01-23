@@ -8,40 +8,40 @@ import java.util.Arrays;
 import java.util.Objects;
 import p007b.p100d.p104b.p105a.outline;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public class JsonWriter implements Closeable, Flushable {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static final String[] f21652j = new String[128];
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public static final String[] f21653k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final Writer f21654l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public int[] f21655m = new int[32];
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public int f21656n = 0;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public String f21657o;
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public String f21658p;
 
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     public boolean f21659q;
 
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     public boolean f21660r;
 
-    /* renamed from: s */
+    /* JADX INFO: renamed from: s */
     public String f21661s;
 
-    /* renamed from: t */
+    /* JADX INFO: renamed from: t */
     public boolean f21662t;
 
     static {
@@ -73,7 +73,7 @@ public class JsonWriter implements Closeable, Flushable {
         this.f21654l = writer;
     }
 
-    /* renamed from: A */
+    /* JADX INFO: renamed from: A */
     public JsonWriter mo6892A(long j) throws IOException {
         m9251J();
         m9252a();
@@ -81,7 +81,7 @@ public class JsonWriter implements Closeable, Flushable {
         return this;
     }
 
-    /* renamed from: C */
+    /* JADX INFO: renamed from: C */
     public JsonWriter mo6893C(Boolean bool) throws IOException {
         if (bool == null) {
             return mo6905s();
@@ -92,7 +92,7 @@ public class JsonWriter implements Closeable, Flushable {
         return this;
     }
 
-    /* renamed from: D */
+    /* JADX INFO: renamed from: D */
     public JsonWriter mo6894D(Number number) throws IOException {
         if (number == null) {
             return mo6905s();
@@ -107,7 +107,7 @@ public class JsonWriter implements Closeable, Flushable {
         throw new IllegalArgumentException("Numeric values must be finite, but was " + number);
     }
 
-    /* renamed from: H */
+    /* JADX INFO: renamed from: H */
     public JsonWriter mo6895H(String str) throws IOException {
         if (str == null) {
             return mo6905s();
@@ -118,7 +118,7 @@ public class JsonWriter implements Closeable, Flushable {
         return this;
     }
 
-    /* renamed from: I */
+    /* JADX INFO: renamed from: I */
     public JsonWriter mo6896I(boolean z2) throws IOException {
         m9251J();
         m9252a();
@@ -126,7 +126,7 @@ public class JsonWriter implements Closeable, Flushable {
         return this;
     }
 
-    /* renamed from: J */
+    /* JADX INFO: renamed from: J */
     public final void m9251J() throws IOException {
         if (this.f21661s != null) {
             int iM9255t = m9255t();
@@ -142,7 +142,7 @@ public class JsonWriter implements Closeable, Flushable {
         }
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final void m9252a() throws IOException {
         int iM9255t = m9255t();
         if (iM9255t == 1) {
@@ -171,7 +171,7 @@ public class JsonWriter implements Closeable, Flushable {
         }
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public JsonWriter mo6900b() throws IOException {
         m9251J();
         m9252a();
@@ -180,7 +180,7 @@ public class JsonWriter implements Closeable, Flushable {
         return this;
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public JsonWriter mo6901c() throws IOException {
         m9251J();
         m9252a();
@@ -199,7 +199,7 @@ public class JsonWriter implements Closeable, Flushable {
         this.f21656n = 0;
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final JsonWriter m9253d(int i, int i2, char c) throws IOException {
         int iM9255t = m9255t();
         if (iM9255t != i2 && iM9255t != i) {
@@ -218,13 +218,13 @@ public class JsonWriter implements Closeable, Flushable {
         return this;
     }
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public JsonWriter mo6902e() throws IOException {
         m9253d(1, 2, ']');
         return this;
     }
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public JsonWriter mo6903f() throws IOException {
         m9253d(3, 5, '}');
         return this;
@@ -237,7 +237,7 @@ public class JsonWriter implements Closeable, Flushable {
         this.f21654l.flush();
     }
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public JsonWriter mo6904n(String str) throws IOException {
         Objects.requireNonNull(str, "name == null");
         if (this.f21661s != null) {
@@ -250,7 +250,7 @@ public class JsonWriter implements Closeable, Flushable {
         return this;
     }
 
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     public final void m9254q() throws IOException {
         if (this.f21657o == null) {
             return;
@@ -262,7 +262,7 @@ public class JsonWriter implements Closeable, Flushable {
         }
     }
 
-    /* renamed from: s */
+    /* JADX INFO: renamed from: s */
     public JsonWriter mo6905s() throws IOException {
         if (this.f21661s != null) {
             if (!this.f21662t) {
@@ -276,7 +276,7 @@ public class JsonWriter implements Closeable, Flushable {
         return this;
     }
 
-    /* renamed from: t */
+    /* JADX INFO: renamed from: t */
     public final int m9255t() {
         int i = this.f21656n;
         if (i != 0) {
@@ -285,7 +285,7 @@ public class JsonWriter implements Closeable, Flushable {
         throw new IllegalStateException("JsonWriter is closed.");
     }
 
-    /* renamed from: u */
+    /* JADX INFO: renamed from: u */
     public final void m9256u(int i) {
         int i2 = this.f21656n;
         int[] iArr = this.f21655m;
@@ -298,13 +298,13 @@ public class JsonWriter implements Closeable, Flushable {
         iArr2[i3] = i;
     }
 
-    /* renamed from: x */
+    /* JADX INFO: renamed from: x */
     public final void m9257x(int i) {
         this.f21655m[this.f21656n - 1] = i;
     }
 
     /* JADX WARN: Removed duplicated region for block: B:20:0x0034  */
-    /* renamed from: y */
+    /* JADX INFO: renamed from: y */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */

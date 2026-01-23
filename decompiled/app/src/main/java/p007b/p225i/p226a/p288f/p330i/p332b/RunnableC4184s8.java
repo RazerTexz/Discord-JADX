@@ -2,21 +2,21 @@ package p007b.p225i.p226a.p288f.p330i.p332b;
 
 import android.content.Intent;
 
-/* compiled from: com.google.android.gms:play-services-measurement@@18.0.0 */
-/* renamed from: b.i.a.f.i.b.s8 */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.i.b.s8 */
+/* JADX INFO: compiled from: com.google.android.gms:play-services-measurement@@18.0.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public final /* synthetic */ class RunnableC4184s8 implements Runnable {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final C4151p8 f11211j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final int f11212k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final C4157q3 f11213l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public final Intent f11214m;
 
     public RunnableC4184s8(C4151p8 c4151p8, int i, C4157q3 c4157q3, Intent intent) {

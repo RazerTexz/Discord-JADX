@@ -23,14 +23,14 @@ import p507d0.p580t.Collections2;
 import p507d0.p580t._Collections;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: WidgetGuildProfileSheetEmojisAdapter.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetGuildProfileSheetEmojisAdapter.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetGuildProfileSheetEmojisAdapter extends RecyclerView.Adapter<WidgetGuildProfileSheetEmojisAdapter2> {
     private List<? extends WidgetGuildProfileSheetEmojisAdapter3> data = Collections2.emptyList();
     private Function0<Unit> onClickEmoji = WidgetGuildProfileSheetEmojisAdapter6.INSTANCE;
 
-    /* compiled from: WidgetGuildProfileSheetEmojisAdapter.kt */
-    /* renamed from: com.discord.widgets.guilds.profile.WidgetGuildProfileSheetEmojisAdapter$onBindViewHolder$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.guilds.profile.WidgetGuildProfileSheetEmojisAdapter$onBindViewHolder$1 */
+    /* JADX INFO: compiled from: WidgetGuildProfileSheetEmojisAdapter.kt */
     public static final class ViewOnClickListenerC88021 implements View.OnClickListener {
         public ViewOnClickListenerC88021() {
         }
@@ -60,7 +60,7 @@ public final class WidgetGuildProfileSheetEmojisAdapter extends RecyclerView.Ada
     }
 
     @Override // androidx.recyclerview.widget.RecyclerView.Adapter
-    /* renamed from: getItemCount */
+    /* JADX INFO: renamed from: getItemCount */
     public int getPageSize() {
         return this.data.size();
     }

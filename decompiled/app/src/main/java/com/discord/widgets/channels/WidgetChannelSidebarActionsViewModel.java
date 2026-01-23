@@ -26,15 +26,15 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 import p658rx.Observable;
 
-/* compiled from: WidgetChannelSidebarActionsViewModel.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetChannelSidebarActionsViewModel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetChannelSidebarActionsViewModel extends AppViewModel<ViewState> {
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
 
-    /* compiled from: WidgetChannelSidebarActionsViewModel.kt */
-    /* renamed from: com.discord.widgets.channels.WidgetChannelSidebarActionsViewModel$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.channels.WidgetChannelSidebarActionsViewModel$1 */
+    /* JADX INFO: compiled from: WidgetChannelSidebarActionsViewModel.kt */
     public static final class C73471 extends Lambda implements Function1<StoreState, Unit> {
         public C73471() {
             super(1);
@@ -46,14 +46,14 @@ public final class WidgetChannelSidebarActionsViewModel extends AppViewModel<Vie
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(StoreState storeState) {
             Intrinsics3.checkNotNullParameter(storeState, "storeState");
             WidgetChannelSidebarActionsViewModel.access$handleStoreState(WidgetChannelSidebarActionsViewModel.this, storeState);
         }
     }
 
-    /* compiled from: WidgetChannelSidebarActionsViewModel.kt */
+    /* JADX INFO: compiled from: WidgetChannelSidebarActionsViewModel.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -95,10 +95,10 @@ public final class WidgetChannelSidebarActionsViewModel extends AppViewModel<Vie
         }
     }
 
-    /* compiled from: WidgetChannelSidebarActionsViewModel.kt */
+    /* JADX INFO: compiled from: WidgetChannelSidebarActionsViewModel.kt */
     public static abstract class StoreState {
 
-        /* compiled from: WidgetChannelSidebarActionsViewModel.kt */
+        /* JADX INFO: compiled from: WidgetChannelSidebarActionsViewModel.kt */
         public static final /* data */ class ChannelFound extends StoreState {
             private final Channel channel;
             private final boolean disablePins;
@@ -131,22 +131,22 @@ public final class WidgetChannelSidebarActionsViewModel extends AppViewModel<Vie
                 return channelFound.copy(channel, channel2, modelNotificationSettings, z2);
             }
 
-            /* renamed from: component1, reason: from getter */
+            /* JADX INFO: renamed from: component1, reason: from getter */
             public final Channel getChannel() {
                 return this.channel;
             }
 
-            /* renamed from: component2, reason: from getter */
+            /* JADX INFO: renamed from: component2, reason: from getter */
             public final Channel getParentChannel() {
                 return this.parentChannel;
             }
 
-            /* renamed from: component3, reason: from getter */
+            /* JADX INFO: renamed from: component3, reason: from getter */
             public final ModelNotificationSettings getGuildNotificationSettings() {
                 return this.guildNotificationSettings;
             }
 
-            /* renamed from: component4, reason: from getter */
+            /* JADX INFO: renamed from: component4, reason: from getter */
             public final boolean getDisablePins() {
                 return this.disablePins;
             }
@@ -184,6 +184,9 @@ public final class WidgetChannelSidebarActionsViewModel extends AppViewModel<Vie
             }
 
             /* JADX WARN: Multi-variable type inference failed */
+            /* JADX WARN: Type inference failed for: r1v3, types: [int] */
+            /* JADX WARN: Type inference failed for: r1v4 */
+            /* JADX WARN: Type inference failed for: r1v6 */
             public int hashCode() {
                 Channel channel = this.channel;
                 int iHashCode = (channel != null ? channel.hashCode() : 0) * 31;
@@ -192,11 +195,11 @@ public final class WidgetChannelSidebarActionsViewModel extends AppViewModel<Vie
                 ModelNotificationSettings modelNotificationSettings = this.guildNotificationSettings;
                 int iHashCode3 = (iHashCode2 + (modelNotificationSettings != null ? modelNotificationSettings.hashCode() : 0)) * 31;
                 boolean z2 = this.disablePins;
-                int i = z2;
-                if (z2 != 0) {
-                    i = 1;
+                ?? r1 = z2;
+                if (z2) {
+                    r1 = 1;
                 }
-                return iHashCode3 + i;
+                return iHashCode3 + r1;
             }
 
             public String toString() {
@@ -211,7 +214,7 @@ public final class WidgetChannelSidebarActionsViewModel extends AppViewModel<Vie
             }
         }
 
-        /* compiled from: WidgetChannelSidebarActionsViewModel.kt */
+        /* JADX INFO: compiled from: WidgetChannelSidebarActionsViewModel.kt */
         public static final class ChannelNotFound extends StoreState {
             public static final ChannelNotFound INSTANCE = new ChannelNotFound();
 
@@ -228,10 +231,10 @@ public final class WidgetChannelSidebarActionsViewModel extends AppViewModel<Vie
         }
     }
 
-    /* compiled from: WidgetChannelSidebarActionsViewModel.kt */
+    /* JADX INFO: compiled from: WidgetChannelSidebarActionsViewModel.kt */
     public static abstract class ViewState {
 
-        /* compiled from: WidgetChannelSidebarActionsViewModel.kt */
+        /* JADX INFO: compiled from: WidgetChannelSidebarActionsViewModel.kt */
         public static final /* data */ class Guild extends ViewState {
             private final long channelId;
             private final boolean disablePins;
@@ -260,47 +263,47 @@ public final class WidgetChannelSidebarActionsViewModel extends AppViewModel<Vie
                 return guild.copy((i & 1) != 0 ? guild.channelId : j, (i & 2) != 0 ? guild.guildId : j2, (i & 4) != 0 ? guild.isMuted : z2, (i & 8) != 0 ? guild.hasUnreadPins : z3, (i & 16) != 0 ? guild.disablePins : z4, (i & 32) != 0 ? guild.isThread : z5, (i & 64) != 0 ? guild.isGuildForumPost : z6, (i & 128) != 0 ? guild.isGuildForumChannel : z7, (i & 256) != 0 ? guild.shouldHideChannelSidebar : z8);
             }
 
-            /* renamed from: component1, reason: from getter */
+            /* JADX INFO: renamed from: component1, reason: from getter */
             public final long getChannelId() {
                 return this.channelId;
             }
 
-            /* renamed from: component2, reason: from getter */
+            /* JADX INFO: renamed from: component2, reason: from getter */
             public final long getGuildId() {
                 return this.guildId;
             }
 
-            /* renamed from: component3, reason: from getter */
+            /* JADX INFO: renamed from: component3, reason: from getter */
             public final boolean getIsMuted() {
                 return this.isMuted;
             }
 
-            /* renamed from: component4, reason: from getter */
+            /* JADX INFO: renamed from: component4, reason: from getter */
             public final boolean getHasUnreadPins() {
                 return this.hasUnreadPins;
             }
 
-            /* renamed from: component5, reason: from getter */
+            /* JADX INFO: renamed from: component5, reason: from getter */
             public final boolean getDisablePins() {
                 return this.disablePins;
             }
 
-            /* renamed from: component6, reason: from getter */
+            /* JADX INFO: renamed from: component6, reason: from getter */
             public final boolean getIsThread() {
                 return this.isThread;
             }
 
-            /* renamed from: component7, reason: from getter */
+            /* JADX INFO: renamed from: component7, reason: from getter */
             public final boolean getIsGuildForumPost() {
                 return this.isGuildForumPost;
             }
 
-            /* renamed from: component8, reason: from getter */
+            /* JADX INFO: renamed from: component8, reason: from getter */
             public final boolean getIsGuildForumChannel() {
                 return this.isGuildForumChannel;
             }
 
-            /* renamed from: component9, reason: from getter */
+            /* JADX INFO: renamed from: component9, reason: from getter */
             public final boolean getShouldHideChannelSidebar() {
                 return this.shouldHideChannelSidebar;
             }
@@ -341,46 +344,67 @@ public final class WidgetChannelSidebarActionsViewModel extends AppViewModel<Vie
             }
 
             /* JADX WARN: Multi-variable type inference failed */
+            /* JADX WARN: Type inference failed for: r0v10, types: [int] */
+            /* JADX WARN: Type inference failed for: r0v12, types: [int] */
+            /* JADX WARN: Type inference failed for: r0v14, types: [int] */
+            /* JADX WARN: Type inference failed for: r0v16 */
+            /* JADX WARN: Type inference failed for: r0v17 */
+            /* JADX WARN: Type inference failed for: r0v18 */
+            /* JADX WARN: Type inference failed for: r0v19 */
+            /* JADX WARN: Type inference failed for: r0v20 */
+            /* JADX WARN: Type inference failed for: r0v21 */
+            /* JADX WARN: Type inference failed for: r0v22 */
+            /* JADX WARN: Type inference failed for: r0v23 */
+            /* JADX WARN: Type inference failed for: r0v24 */
+            /* JADX WARN: Type inference failed for: r0v25 */
+            /* JADX WARN: Type inference failed for: r0v26 */
+            /* JADX WARN: Type inference failed for: r0v27 */
+            /* JADX WARN: Type inference failed for: r0v4, types: [int] */
+            /* JADX WARN: Type inference failed for: r0v6, types: [int] */
+            /* JADX WARN: Type inference failed for: r0v8, types: [int] */
+            /* JADX WARN: Type inference failed for: r2v0 */
+            /* JADX WARN: Type inference failed for: r2v1, types: [int] */
+            /* JADX WARN: Type inference failed for: r2v2 */
             public int hashCode() {
                 int iM3a = (C0002b.m3a(this.guildId) + (C0002b.m3a(this.channelId) * 31)) * 31;
                 boolean z2 = this.isMuted;
-                int i = z2;
-                if (z2 != 0) {
-                    i = 1;
+                ?? r0 = z2;
+                if (z2) {
+                    r0 = 1;
                 }
-                int i2 = (iM3a + i) * 31;
+                int i = (iM3a + r0) * 31;
                 boolean z3 = this.hasUnreadPins;
-                int i3 = z3;
-                if (z3 != 0) {
-                    i3 = 1;
+                ?? r02 = z3;
+                if (z3) {
+                    r02 = 1;
                 }
-                int i4 = (i2 + i3) * 31;
+                int i2 = (i + r02) * 31;
                 boolean z4 = this.disablePins;
-                int i5 = z4;
-                if (z4 != 0) {
-                    i5 = 1;
+                ?? r03 = z4;
+                if (z4) {
+                    r03 = 1;
                 }
-                int i6 = (i4 + i5) * 31;
+                int i3 = (i2 + r03) * 31;
                 boolean z5 = this.isThread;
-                int i7 = z5;
-                if (z5 != 0) {
-                    i7 = 1;
+                ?? r04 = z5;
+                if (z5) {
+                    r04 = 1;
                 }
-                int i8 = (i6 + i7) * 31;
+                int i4 = (i3 + r04) * 31;
                 boolean z6 = this.isGuildForumPost;
-                int i9 = z6;
-                if (z6 != 0) {
-                    i9 = 1;
+                ?? r05 = z6;
+                if (z6) {
+                    r05 = 1;
                 }
-                int i10 = (i8 + i9) * 31;
+                int i5 = (i4 + r05) * 31;
                 boolean z7 = this.isGuildForumChannel;
-                int i11 = z7;
-                if (z7 != 0) {
-                    i11 = 1;
+                ?? r06 = z7;
+                if (z7) {
+                    r06 = 1;
                 }
-                int i12 = (i10 + i11) * 31;
+                int i6 = (i5 + r06) * 31;
                 boolean z8 = this.shouldHideChannelSidebar;
-                return i12 + (z8 ? 1 : z8 ? 1 : 0);
+                return i6 + (z8 ? 1 : z8);
             }
 
             public final boolean isGuildForumChannel() {
@@ -421,7 +445,7 @@ public final class WidgetChannelSidebarActionsViewModel extends AppViewModel<Vie
             }
         }
 
-        /* compiled from: WidgetChannelSidebarActionsViewModel.kt */
+        /* JADX INFO: compiled from: WidgetChannelSidebarActionsViewModel.kt */
         public static final /* data */ class Private extends ViewState {
             private final long channelId;
             private final boolean isMuted;
@@ -442,12 +466,12 @@ public final class WidgetChannelSidebarActionsViewModel extends AppViewModel<Vie
                 return r0.copy(j, z2);
             }
 
-            /* renamed from: component1, reason: from getter */
+            /* JADX INFO: renamed from: component1, reason: from getter */
             public final long getChannelId() {
                 return this.channelId;
             }
 
-            /* renamed from: component2, reason: from getter */
+            /* JADX INFO: renamed from: component2, reason: from getter */
             public final boolean getIsMuted() {
                 return this.isMuted;
             }
@@ -472,14 +496,17 @@ public final class WidgetChannelSidebarActionsViewModel extends AppViewModel<Vie
             }
 
             /* JADX WARN: Multi-variable type inference failed */
+            /* JADX WARN: Type inference failed for: r1v1, types: [int] */
+            /* JADX WARN: Type inference failed for: r1v2 */
+            /* JADX WARN: Type inference failed for: r1v3 */
             public int hashCode() {
                 int iM3a = C0002b.m3a(this.channelId) * 31;
                 boolean z2 = this.isMuted;
-                int i = z2;
-                if (z2 != 0) {
-                    i = 1;
+                ?? r1 = z2;
+                if (z2) {
+                    r1 = 1;
                 }
-                return iM3a + i;
+                return iM3a + r1;
             }
 
             public final boolean isMuted() {
@@ -494,7 +521,7 @@ public final class WidgetChannelSidebarActionsViewModel extends AppViewModel<Vie
             }
         }
 
-        /* compiled from: WidgetChannelSidebarActionsViewModel.kt */
+        /* JADX INFO: compiled from: WidgetChannelSidebarActionsViewModel.kt */
         public static final class Uninitialized extends ViewState {
             public static final Uninitialized INSTANCE = new Uninitialized();
 

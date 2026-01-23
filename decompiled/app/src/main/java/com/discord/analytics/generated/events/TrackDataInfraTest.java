@@ -7,8 +7,8 @@ import java.util.List;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: TrackDataInfraTest.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: TrackDataInfraTest.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class TrackDataInfraTest implements AnalyticsSchema, TrackBase2 {
     private final transient String analyticsSchemaTypeName;
     private final CharSequence optionalStr;
@@ -18,7 +18,7 @@ public final /* data */ class TrackDataInfraTest implements AnalyticsSchema, Tra
     private TrackBase trackBase;
 
     @Override // com.discord.api.science.AnalyticsSchema
-    /* renamed from: d, reason: from getter */
+    /* JADX INFO: renamed from: d, reason: from getter */
     public String getAnalyticsSchemaTypeName() {
         return this.analyticsSchemaTypeName;
     }

@@ -10,8 +10,8 @@ import p007b.p100d.p104b.p105a.outline;
 import p507d0.p580t.Collections2;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: UserProfile.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: UserProfile.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class UserProfile {
     private final ProfileApplication application;
     private final List<ConnectedAccount> connectedAccounts;
@@ -21,17 +21,17 @@ public final /* data */ class UserProfile {
     private final String premiumSince;
     private final User user;
 
-    /* compiled from: UserProfile.kt */
+    /* JADX INFO: compiled from: UserProfile.kt */
     public static final /* data */ class GuildReference {
         private final long id;
         private final String nick;
 
-        /* renamed from: a, reason: from getter */
+        /* JADX INFO: renamed from: a, reason: from getter */
         public final long getId() {
             return this.id;
         }
 
-        /* renamed from: b, reason: from getter */
+        /* JADX INFO: renamed from: b, reason: from getter */
         public final String getNick() {
             return this.nick;
         }
@@ -79,27 +79,27 @@ public final /* data */ class UserProfile {
         this.application = profileApplication;
     }
 
-    /* renamed from: a, reason: from getter */
+    /* JADX INFO: renamed from: a, reason: from getter */
     public final ProfileApplication getApplication() {
         return this.application;
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final List<ConnectedAccount> m8306b() {
         return this.connectedAccounts;
     }
 
-    /* renamed from: c, reason: from getter */
+    /* JADX INFO: renamed from: c, reason: from getter */
     public final GuildMember getGuildMember() {
         return this.guildMember;
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final List<GuildReference> m8308d() {
         return this.mutualGuilds;
     }
 
-    /* renamed from: e, reason: from getter */
+    /* JADX INFO: renamed from: e, reason: from getter */
     public final String getPremiumGuildSince() {
         return this.premiumGuildSince;
     }
@@ -115,12 +115,12 @@ public final /* data */ class UserProfile {
         return Intrinsics3.areEqual(this.connectedAccounts, userProfile.connectedAccounts) && Intrinsics3.areEqual(this.mutualGuilds, userProfile.mutualGuilds) && Intrinsics3.areEqual(this.user, userProfile.user) && Intrinsics3.areEqual(this.premiumSince, userProfile.premiumSince) && Intrinsics3.areEqual(this.premiumGuildSince, userProfile.premiumGuildSince) && Intrinsics3.areEqual(this.guildMember, userProfile.guildMember) && Intrinsics3.areEqual(this.application, userProfile.application);
     }
 
-    /* renamed from: f, reason: from getter */
+    /* JADX INFO: renamed from: f, reason: from getter */
     public final String getPremiumSince() {
         return this.premiumSince;
     }
 
-    /* renamed from: g, reason: from getter */
+    /* JADX INFO: renamed from: g, reason: from getter */
     public final User getUser() {
         return this.user;
     }

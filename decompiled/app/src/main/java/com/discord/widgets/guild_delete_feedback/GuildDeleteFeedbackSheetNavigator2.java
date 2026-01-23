@@ -7,9 +7,9 @@ import kotlin.jvm.functions.Function1;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: GuildDeleteFeedbackSheetNavigator.kt */
-/* renamed from: com.discord.widgets.guild_delete_feedback.GuildDeleteFeedbackSheetNavigator$enqueueNotice$showFeedbackNotice$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.guild_delete_feedback.GuildDeleteFeedbackSheetNavigator$enqueueNotice$showFeedbackNotice$1, reason: use source file name */
+/* JADX INFO: compiled from: GuildDeleteFeedbackSheetNavigator.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class GuildDeleteFeedbackSheetNavigator2 extends Lambda implements Function1<FragmentActivity, Boolean> {
     public final /* synthetic */ long $guildId;
     public final /* synthetic */ String $noticeName;
@@ -30,7 +30,7 @@ public final class GuildDeleteFeedbackSheetNavigator2 extends Lambda implements 
         return Boolean.valueOf(invoke2(fragmentActivity));
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final boolean invoke2(FragmentActivity fragmentActivity) {
         Intrinsics3.checkNotNullParameter(fragmentActivity, "fragmentActivity");
         GuildDeleteFeedbackSheetNavigator guildDeleteFeedbackSheetNavigator = GuildDeleteFeedbackSheetNavigator.INSTANCE;

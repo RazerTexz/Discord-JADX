@@ -9,7 +9,7 @@ import androidx.annotation.RequiresApi;
 import java.lang.reflect.Field;
 import java.util.Map;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class ResourcesFlusher {
     private static final String TAG = "ResourcesFlusher";
     private static Field sDrawableCacheField;
@@ -24,7 +24,7 @@ public class ResourcesFlusher {
     private ResourcesFlusher() {
     }
 
-    public static void flush(@NonNull Resources resources) throws IllegalArgumentException {
+    public static void flush(@NonNull Resources resources) {
         int i = Build.VERSION.SDK_INT;
         if (i >= 28) {
             return;
@@ -65,7 +65,7 @@ public class ResourcesFlusher {
     }
 
     @RequiresApi(23)
-    private static void flushMarshmallows(@NonNull Resources resources) throws IllegalArgumentException {
+    private static void flushMarshmallows(@NonNull Resources resources) {
         if (!sDrawableCacheFieldFetched) {
             try {
                 Field declaredField = Resources.class.getDeclaredField("mDrawableCache");
@@ -92,7 +92,7 @@ public class ResourcesFlusher {
     }
 
     @RequiresApi(24)
-    private static void flushNougats(@NonNull Resources resources) throws IllegalArgumentException {
+    private static void flushNougats(@NonNull Resources resources) {
         Object obj;
         if (!sResourcesImplFieldFetched) {
             try {

@@ -7,8 +7,8 @@ import java.io.IOException;
 import kotlin.jvm.internal.Ref$IntRef;
 import p658rx.functions.Action1;
 
-/* compiled from: GuildExperimentDto.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: GuildExperimentDto.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class GuildExperimentBucketDto$Parser$parsePosition$1<T> implements Action1<String> {
     public final /* synthetic */ Ref$IntRef $end;
     public final /* synthetic */ Model.JsonReader $jsonReader;
@@ -25,7 +25,7 @@ public final class GuildExperimentBucketDto$Parser$parsePosition$1<T> implements
         call2(str);
     }
 
-    /* renamed from: call, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
     public final void call2(String str) throws IOException {
         if (str != null) {
             int iHashCode = str.hashCode();

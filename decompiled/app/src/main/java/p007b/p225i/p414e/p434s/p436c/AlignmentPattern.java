@@ -2,12 +2,12 @@ package p007b.p225i.p414e.p434s.p436c;
 
 import p007b.p225i.p414e.ResultPoint;
 
-/* compiled from: AlignmentPattern.java */
-/* renamed from: b.i.e.s.c.a, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.e.s.c.a, reason: use source file name */
+/* JADX INFO: compiled from: AlignmentPattern.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class AlignmentPattern extends ResultPoint {
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final float f13558c;
 
     public AlignmentPattern(float f, float f2, float f3) {

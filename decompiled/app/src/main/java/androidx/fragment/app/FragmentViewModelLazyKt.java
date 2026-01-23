@@ -14,12 +14,12 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 import p507d0.p592z.p594d.Reflection2;
 
-/* compiled from: FragmentViewModelLazy.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: FragmentViewModelLazy.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class FragmentViewModelLazyKt {
 
-    /* compiled from: FragmentViewModelLazy.kt */
-    /* renamed from: androidx.fragment.app.FragmentViewModelLazyKt$activityViewModels$1 */
+    /* JADX INFO: renamed from: androidx.fragment.app.FragmentViewModelLazyKt$activityViewModels$1 */
+    /* JADX INFO: compiled from: FragmentViewModelLazy.kt */
     public static final class C04091 extends Lambda implements Function0<ViewModelStore> {
         public final /* synthetic */ Fragment $this_activityViewModels;
 
@@ -41,8 +41,8 @@ public final class FragmentViewModelLazyKt {
         }
     }
 
-    /* compiled from: FragmentViewModelLazy.kt */
-    /* renamed from: androidx.fragment.app.FragmentViewModelLazyKt$activityViewModels$2 */
+    /* JADX INFO: renamed from: androidx.fragment.app.FragmentViewModelLazyKt$activityViewModels$2 */
+    /* JADX INFO: compiled from: FragmentViewModelLazy.kt */
     public static final class C04102 extends Lambda implements Function0<ViewModelProvider.Factory> {
         public final /* synthetic */ Fragment $this_activityViewModels;
 
@@ -64,8 +64,8 @@ public final class FragmentViewModelLazyKt {
         }
     }
 
-    /* compiled from: FragmentViewModelLazy.kt */
-    /* renamed from: androidx.fragment.app.FragmentViewModelLazyKt$viewModels$1 */
+    /* JADX INFO: renamed from: androidx.fragment.app.FragmentViewModelLazyKt$viewModels$1 */
+    /* JADX INFO: compiled from: FragmentViewModelLazy.kt */
     public static final class C04111 extends Lambda implements Function0<Fragment> {
         public final /* synthetic */ Fragment $this_viewModels;
 
@@ -87,8 +87,8 @@ public final class FragmentViewModelLazyKt {
         }
     }
 
-    /* compiled from: FragmentViewModelLazy.kt */
-    /* renamed from: androidx.fragment.app.FragmentViewModelLazyKt$viewModels$2 */
+    /* JADX INFO: renamed from: androidx.fragment.app.FragmentViewModelLazyKt$viewModels$2 */
+    /* JADX INFO: compiled from: FragmentViewModelLazy.kt */
     public static final class C04122 extends Lambda implements Function0<ViewModelStore> {
         public final /* synthetic */ Function0 $ownerProducer;
 

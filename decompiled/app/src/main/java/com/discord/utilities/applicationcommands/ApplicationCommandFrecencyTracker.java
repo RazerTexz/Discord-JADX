@@ -6,8 +6,8 @@ import java.util.List;
 import kotlin.jvm.internal.DefaultConstructorMarker;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ApplicationCommandFrecencyTracker.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: ApplicationCommandFrecencyTracker.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class ApplicationCommandFrecencyTracker extends FrecencyTracker<String> {
     public ApplicationCommandFrecencyTracker() {
         this(0, 0, 3, null);

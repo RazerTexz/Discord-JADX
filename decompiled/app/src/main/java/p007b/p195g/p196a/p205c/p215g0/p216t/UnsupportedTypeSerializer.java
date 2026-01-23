@@ -6,9 +6,9 @@ import p007b.p195g.p196a.p205c.JavaType;
 import p007b.p195g.p196a.p205c.SerializerProvider;
 import p007b.p195g.p196a.p205c.p215g0.p217u.StdSerializer;
 
-/* compiled from: UnsupportedTypeSerializer.java */
-/* renamed from: b.g.a.c.g0.t.r, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.g.a.c.g0.t.r, reason: use source file name */
+/* JADX INFO: compiled from: UnsupportedTypeSerializer.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class UnsupportedTypeSerializer extends StdSerializer<Object> {
     private static final long serialVersionUID = 1;
     public final String _message;
@@ -21,7 +21,7 @@ public class UnsupportedTypeSerializer extends StdSerializer<Object> {
     }
 
     @Override // p007b.p195g.p196a.p205c.JsonSerializer
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public void mo1807f(Object obj, JsonGenerator jsonGenerator, SerializerProvider serializerProvider) throws IOException {
         serializerProvider.mo1942f(this._type, this._message);
         throw null;

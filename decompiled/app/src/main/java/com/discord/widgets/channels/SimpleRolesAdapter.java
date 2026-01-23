@@ -20,12 +20,12 @@ import kotlin.jvm.functions.Function1;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: SimpleRolesAdapter.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: SimpleRolesAdapter.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class SimpleRolesAdapter extends MGRecyclerAdapterSimple<RoleItem> {
     private Function1<? super GuildRole, Unit> onRoleClickedListener;
 
-    /* compiled from: SimpleRolesAdapter.kt */
+    /* JADX INFO: compiled from: SimpleRolesAdapter.kt */
     public static final class RoleAdapterItem extends MGRecyclerViewHolder<SimpleRolesAdapter, RoleItem> {
         private final SimpleRoleListItemBinding binding;
 
@@ -50,7 +50,7 @@ public final class SimpleRolesAdapter extends MGRecyclerAdapterSimple<RoleItem> 
             onConfigure2(i, roleItem);
         }
 
-        /* renamed from: onConfigure, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: onConfigure, reason: avoid collision after fix types in other method */
         public void onConfigure2(int position, RoleItem data) {
             Intrinsics3.checkNotNullParameter(data, "data");
             super.onConfigure(position, data);
@@ -68,7 +68,7 @@ public final class SimpleRolesAdapter extends MGRecyclerAdapterSimple<RoleItem> 
         }
     }
 
-    /* compiled from: SimpleRolesAdapter.kt */
+    /* JADX INFO: compiled from: SimpleRolesAdapter.kt */
     public static final /* data */ class RoleItem implements MGRecyclerDataPayload, Comparable<RoleItem> {
         public static final int TYPE_ROLE = 0;
         private final String key;
@@ -93,7 +93,7 @@ public final class SimpleRolesAdapter extends MGRecyclerAdapterSimple<RoleItem> 
             return compareTo2(roleItem);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final GuildRole getRole() {
             return this.role;
         }
@@ -139,7 +139,7 @@ public final class SimpleRolesAdapter extends MGRecyclerAdapterSimple<RoleItem> 
             return sbM833U.toString();
         }
 
-        /* renamed from: compareTo, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: compareTo, reason: avoid collision after fix types in other method */
         public int compareTo2(RoleItem other) {
             Intrinsics3.checkNotNullParameter(other, "other");
             return RoleUtils.getROLE_COMPARATOR().compare(this.role, other.role);

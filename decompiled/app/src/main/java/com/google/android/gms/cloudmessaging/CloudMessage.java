@@ -8,14 +8,14 @@ import com.google.android.gms.common.internal.safeparcel.AbstractSafeParcelable;
 import p007b.p085c.p086a.p087a0.AnimatableValueParser;
 import p007b.p225i.p226a.p288f.p298d.C3228c;
 
-/* compiled from: com.google.android.gms:play-services-cloud-messaging@@16.0.0 */
-/* loaded from: classes3.dex */
+/* JADX INFO: compiled from: com.google.android.gms:play-services-cloud-messaging@@16.0.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public final class CloudMessage extends AbstractSafeParcelable {
 
     @NonNull
     public static final Parcelable.Creator<CloudMessage> CREATOR = new C3228c();
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     @NonNull
     public Intent f20470j;
 

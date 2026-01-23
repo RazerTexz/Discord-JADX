@@ -7,14 +7,14 @@ import kotlin.jvm.functions.Function1;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetUserMentions.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: WidgetUserMentions.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class WidgetUserMentions$Model$MessageLoader$handleLoaded$1 extends Lambda implements Function0<Unit> {
     public final /* synthetic */ boolean $isAllLoaded;
     public final /* synthetic */ WidgetUserMentions.Model.MessageLoader this$0;
 
-    /* compiled from: WidgetUserMentions.kt */
-    /* renamed from: com.discord.widgets.user.WidgetUserMentions$Model$MessageLoader$handleLoaded$1$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.user.WidgetUserMentions$Model$MessageLoader$handleLoaded$1$1 */
+    /* JADX INFO: compiled from: WidgetUserMentions.kt */
     public static final class C102091 extends Lambda implements Function1<WidgetUserMentions.Model.MessageLoader.LoadingState, WidgetUserMentions.Model.MessageLoader.LoadingState> {
         public C102091() {
             super(1);
@@ -25,7 +25,7 @@ public final class WidgetUserMentions$Model$MessageLoader$handleLoaded$1 extends
             return invoke2(loadingState);
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final WidgetUserMentions.Model.MessageLoader.LoadingState invoke2(WidgetUserMentions.Model.MessageLoader.LoadingState loadingState) {
             Intrinsics3.checkNotNullParameter(loadingState, "it");
             return WidgetUserMentions.Model.MessageLoader.LoadingState.copy$default(loadingState, false, WidgetUserMentions$Model$MessageLoader$handleLoaded$1.this.$isAllLoaded, null, 4, null);
@@ -45,7 +45,7 @@ public final class WidgetUserMentions$Model$MessageLoader$handleLoaded$1 extends
         return Unit.f27425a;
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final void invoke2() {
         this.this$0.tryLoad(new C102091());
     }

@@ -22,17 +22,17 @@ import p007b.p225i.p226a.p288f.p313h.p326m.C3938o;
 import p007b.p225i.p226a.p288f.p333j.C4263a;
 import p007b.p225i.p226a.p288f.p333j.p334b.C4264a;
 
-/* renamed from: b.i.a.f.j.b.e.f */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.j.b.e.f */
+/* JADX INFO: loaded from: classes3.dex */
 public final class C4280f extends AbstractC3349d<InterfaceC4311u0> {
 
-    /* renamed from: A */
+    /* JADX INFO: renamed from: A */
     public final C3938o<C3301k.a, IBinder> f11408A;
 
-    /* renamed from: B */
+    /* JADX INFO: renamed from: B */
     public final ClientAppContext f11409B;
 
-    /* renamed from: C */
+    /* JADX INFO: renamed from: C */
     public final int f11410C;
 
     @TargetApi(14)
@@ -59,7 +59,7 @@ public final class C4280f extends AbstractC3349d<InterfaceC4311u0> {
         }
     }
 
-    /* renamed from: G */
+    /* JADX INFO: renamed from: G */
     public final void m5982G(int i) throws RemoteException {
         String str;
         if (i == 1) {
@@ -88,7 +88,7 @@ public final class C4280f extends AbstractC3349d<InterfaceC4311u0> {
     }
 
     @Override // p007b.p225i.p226a.p288f.p299e.p304k.AbstractC3345b, p007b.p225i.p226a.p288f.p299e.p300h.C3266a.f
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public final void mo4036h() {
         try {
             m5982G(2);
@@ -102,19 +102,19 @@ public final class C4280f extends AbstractC3349d<InterfaceC4311u0> {
     }
 
     @Override // p007b.p225i.p226a.p288f.p299e.p304k.AbstractC3345b, p007b.p225i.p226a.p288f.p299e.p300h.C3266a.f
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final boolean mo4039k() {
         return C4263a.m5980a(this.f9479d);
     }
 
     @Override // p007b.p225i.p226a.p288f.p299e.p304k.AbstractC3345b, p007b.p225i.p226a.p288f.p299e.p300h.C3266a.f
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final int mo3982l() {
         return 12451000;
     }
 
     @Override // p007b.p225i.p226a.p288f.p299e.p304k.AbstractC3345b
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     public final /* synthetic */ IInterface mo3983r(IBinder iBinder) {
         if (iBinder == null) {
             return null;
@@ -125,7 +125,7 @@ public final class C4280f extends AbstractC3349d<InterfaceC4311u0> {
 
     @Override // p007b.p225i.p226a.p288f.p299e.p304k.AbstractC3345b
     @NonNull
-    /* renamed from: u */
+    /* JADX INFO: renamed from: u */
     public final Bundle mo4140u() {
         Bundle bundle = new Bundle();
         bundle.putInt("NearbyPermissions", this.f11410C);
@@ -135,14 +135,14 @@ public final class C4280f extends AbstractC3349d<InterfaceC4311u0> {
 
     @Override // p007b.p225i.p226a.p288f.p299e.p304k.AbstractC3345b
     @NonNull
-    /* renamed from: x */
+    /* JADX INFO: renamed from: x */
     public final String mo3984x() {
         return "com.google.android.gms.nearby.messages.internal.INearbyMessagesService";
     }
 
     @Override // p007b.p225i.p226a.p288f.p299e.p304k.AbstractC3345b
     @NonNull
-    /* renamed from: y */
+    /* JADX INFO: renamed from: y */
     public final String mo3985y() {
         return "com.google.android.gms.nearby.messages.service.NearbyMessagesService.START";
     }

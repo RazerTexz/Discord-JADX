@@ -9,8 +9,8 @@ import androidx.annotation.RestrictTo;
 import androidx.work.Logger;
 import androidx.work.impl.utils.taskexecutor.TaskExecutor;
 
+/* JADX INFO: loaded from: classes.dex */
 @RestrictTo({RestrictTo.Scope.LIBRARY_GROUP})
-/* loaded from: classes.dex */
 public class BatteryChargingTracker extends BroadcastReceiverConstraintTracker<Boolean> {
     private static final String TAG = Logger.tagWithPrefix("BatteryChrgTracker");
 
@@ -49,7 +49,6 @@ public class BatteryChargingTracker extends BroadcastReceiverConstraintTracker<B
     }
 
     /* JADX WARN: Can't fix incorrect switch cases order, some code will duplicate */
-    /* JADX WARN: Failed to restore switch over string. Please report as a decompilation issue */
     /* JADX WARN: Removed duplicated region for block: B:7:0x0026  */
     @Override // androidx.work.impl.constraints.trackers.BroadcastReceiverConstraintTracker
     /*
@@ -59,40 +58,18 @@ public class BatteryChargingTracker extends BroadcastReceiverConstraintTracker<B
         String action = intent.getAction();
         if (action == null) {
         }
-        char c = 1;
         Logger.get().debug(TAG, String.format("Received %s", action), new Throwable[0]);
-        switch (action.hashCode()) {
-            case -1886648615:
-                c = !action.equals("android.intent.action.ACTION_POWER_DISCONNECTED") ? (char) 65535 : (char) 0;
-                break;
-            case -54942926:
-                if (!action.equals("android.os.action.DISCHARGING")) {
-                }
-                break;
-            case 948344062:
-                if (action.equals("android.os.action.CHARGING")) {
-                    c = 2;
-                    break;
-                }
-                break;
-            case 1019184907:
-                if (action.equals("android.intent.action.ACTION_POWER_CONNECTED")) {
-                    c = 3;
-                    break;
-                }
-                break;
-        }
-        switch (c) {
-            case 0:
+        switch (action) {
+            case "android.intent.action.ACTION_POWER_DISCONNECTED":
                 setState(Boolean.FALSE);
                 break;
-            case 1:
+            case "android.os.action.DISCHARGING":
                 setState(Boolean.FALSE);
                 break;
-            case 2:
+            case "android.os.action.CHARGING":
                 setState(Boolean.TRUE);
                 break;
-            case 3:
+            case "android.intent.action.ACTION_POWER_CONNECTED":
                 setState(Boolean.TRUE);
                 break;
         }

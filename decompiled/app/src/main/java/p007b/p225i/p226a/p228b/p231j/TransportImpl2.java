@@ -13,24 +13,24 @@ import p007b.p225i.p226a.p228b.p231j.AutoValue_TransportContext;
 import p007b.p225i.p226a.p228b.p231j.TransportContext;
 import p007b.p225i.p226a.p228b.p231j.p236t.Scheduler2;
 
-/* compiled from: TransportImpl.java */
-/* renamed from: b.i.a.b.j.l, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.b.j.l, reason: use source file name */
+/* JADX INFO: compiled from: TransportImpl.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class TransportImpl2<T> implements Transport2<T> {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final TransportContext f5285a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final String f5286b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final Encoding2 f5287c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final Transformer<T, byte[]> f5288d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final TransportInternal f5289e;
 
     public TransportImpl2(TransportContext transportContext, String str, Encoding2 encoding2, Transformer<T, byte[]> transformer, TransportInternal transportInternal) {
@@ -42,13 +42,13 @@ public final class TransportImpl2<T> implements Transport2<T> {
     }
 
     @Override // p007b.p225i.p226a.p228b.Transport2
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public void mo2289a(Event2<T> event2) {
         mo2290b(event2, TransportImpl.f5284a);
     }
 
     @Override // p007b.p225i.p226a.p228b.Transport2
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public void mo2290b(Event2<T> event2, TransportScheduleCallback transportScheduleCallback) {
         TransportInternal transportInternal = this.f5289e;
         TransportContext transportContext = this.f5285a;

@@ -10,7 +10,7 @@ import androidx.work.impl.constraints.trackers.Trackers;
 import androidx.work.impl.model.WorkSpec;
 import androidx.work.impl.utils.taskexecutor.TaskExecutor;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class NetworkNotRoamingController extends ConstraintController<NetworkState> {
     private static final String TAG = Logger.tagWithPrefix("NetworkNotRoamingCtrlr");
 
@@ -28,7 +28,7 @@ public class NetworkNotRoamingController extends ConstraintController<NetworkSta
         return isConstrained2(networkState);
     }
 
-    /* renamed from: isConstrained, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: isConstrained, reason: avoid collision after fix types in other method */
     public boolean isConstrained2(@NonNull NetworkState networkState) {
         if (Build.VERSION.SDK_INT >= 24) {
             return (networkState.isConnected() && networkState.isNotRoaming()) ? false : true;

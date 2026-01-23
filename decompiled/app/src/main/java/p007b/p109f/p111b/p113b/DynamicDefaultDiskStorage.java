@@ -14,36 +14,36 @@ import p007b.p109f.p111b.p112a.NoOpCacheErrorLogger;
 import p007b.p109f.p111b.p113b.DiskStorage;
 import p007b.p109f.p115d.p120e.FLog;
 
-/* compiled from: DynamicDefaultDiskStorage.java */
-/* renamed from: b.f.b.b.e, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.f.b.b.e, reason: use source file name */
+/* JADX INFO: compiled from: DynamicDefaultDiskStorage.java */
+/* JADX INFO: loaded from: classes.dex */
 public class DynamicDefaultDiskStorage implements DiskStorage {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final int f3065a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final Supplier<File> f3066b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final String f3067c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final CacheErrorLogger f3068d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     @VisibleForTesting
     public volatile a f3069e = new a(null, null);
 
-    /* compiled from: DynamicDefaultDiskStorage.java */
+    /* JADX INFO: renamed from: b.f.b.b.e$a */
+    /* JADX INFO: compiled from: DynamicDefaultDiskStorage.java */
     @VisibleForTesting
-    /* renamed from: b.f.b.b.e$a */
     public static class a {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final DiskStorage f3070a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final File f3071b;
 
         @VisibleForTesting
@@ -61,7 +61,7 @@ public class DynamicDefaultDiskStorage implements DiskStorage {
     }
 
     @Override // p007b.p109f.p111b.p113b.DiskStorage
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public void mo932a() {
         try {
             m960i().mo932a();
@@ -71,42 +71,42 @@ public class DynamicDefaultDiskStorage implements DiskStorage {
     }
 
     @Override // p007b.p109f.p111b.p113b.DiskStorage
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public DiskStorage.b mo933b(String str, Object obj) throws IOException {
         return m960i().mo933b(str, obj);
     }
 
     @Override // p007b.p109f.p111b.p113b.DiskStorage
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public boolean mo934c(String str, Object obj) throws IOException {
         return m960i().mo934c(str, obj);
     }
 
     @Override // p007b.p109f.p111b.p113b.DiskStorage
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public FileBinaryResource mo935d(String str, Object obj) throws IOException {
         return m960i().mo935d(str, obj);
     }
 
     @Override // p007b.p109f.p111b.p113b.DiskStorage
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public Collection<DiskStorage.a> mo936e() throws IOException {
         return m960i().mo936e();
     }
 
     @Override // p007b.p109f.p111b.p113b.DiskStorage
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public long mo937f(String str) throws IOException {
         return m960i().mo937f(str);
     }
 
     @Override // p007b.p109f.p111b.p113b.DiskStorage
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public long mo938g(DiskStorage.a aVar) throws IOException {
         return m960i().mo938g(aVar);
     }
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public final void m959h() throws IOException {
         File file = new File(this.f3066b.get(), this.f3067c);
         try {
@@ -121,7 +121,7 @@ public class DynamicDefaultDiskStorage implements DiskStorage {
     }
 
     @VisibleForTesting
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public synchronized DiskStorage m960i() throws IOException {
         DiskStorage diskStorage;
         File file;

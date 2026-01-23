@@ -31,23 +31,23 @@ import p637j0.p653p.Schedulers2;
 import p658rx.Observable;
 import p658rx.functions.Action1;
 
-/* compiled from: GuildBoostUtils.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: GuildBoostUtils.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class GuildBoostUtils {
     public static final int DEFAULT_GUILD_BOOST_GUILD_COUNT = 1;
     public static final int DEFAULT_GUILD_BOOST_SLOT_COUNT = 1;
     public static final int GUILD_BOOST_COOLDOWN_DAYS = 7;
     public static final GuildBoostUtils INSTANCE = new GuildBoostUtils();
 
-    /* compiled from: GuildBoostUtils.kt */
+    /* JADX INFO: compiled from: GuildBoostUtils.kt */
     public enum ModifyGuildBoostSlotResult {
         SUCCESS,
         FAILURE_MODIFYING_SLOT,
         FAILURE_UPDATING_SUBSCRIPTION
     }
 
-    /* compiled from: GuildBoostUtils.kt */
-    /* renamed from: com.discord.utilities.premium.GuildBoostUtils$modifyGuildBoostSlot$1 */
+    /* JADX INFO: renamed from: com.discord.utilities.premium.GuildBoostUtils$modifyGuildBoostSlot$1 */
+    /* JADX INFO: compiled from: GuildBoostUtils.kt */
     public static final class C68361<T> implements Action1<ModelGuildBoostSlot> {
         public final /* synthetic */ StoreGuildBoost $storeGuildBoost;
 
@@ -60,7 +60,7 @@ public final class GuildBoostUtils {
             call2(modelGuildBoostSlot);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final void call2(ModelGuildBoostSlot modelGuildBoostSlot) {
             StoreGuildBoost storeGuildBoost = this.$storeGuildBoost;
             Intrinsics3.checkNotNullExpressionValue(modelGuildBoostSlot, "it");
@@ -68,8 +68,8 @@ public final class GuildBoostUtils {
         }
     }
 
-    /* compiled from: GuildBoostUtils.kt */
-    /* renamed from: com.discord.utilities.premium.GuildBoostUtils$modifyGuildBoostSlot$2 */
+    /* JADX INFO: renamed from: com.discord.utilities.premium.GuildBoostUtils$modifyGuildBoostSlot$2 */
+    /* JADX INFO: compiled from: GuildBoostUtils.kt */
     public static final class C68372<T, R> implements Func1<ModelGuildBoostSlot, Boolean> {
         public static final C68372 INSTANCE = new C68372();
 
@@ -78,14 +78,14 @@ public final class GuildBoostUtils {
             return call2(modelGuildBoostSlot);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final Boolean call2(ModelGuildBoostSlot modelGuildBoostSlot) {
             return Boolean.TRUE;
         }
     }
 
-    /* compiled from: GuildBoostUtils.kt */
-    /* renamed from: com.discord.utilities.premium.GuildBoostUtils$modifyGuildBoostSlot$3 */
+    /* JADX INFO: renamed from: com.discord.utilities.premium.GuildBoostUtils$modifyGuildBoostSlot$3 */
+    /* JADX INFO: compiled from: GuildBoostUtils.kt */
     public static final class C68383<T, R> implements Func1<Throwable, Boolean> {
         public static final C68383 INSTANCE = new C68383();
 
@@ -94,21 +94,21 @@ public final class GuildBoostUtils {
             return call2(th);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final Boolean call2(Throwable th) {
             return Boolean.FALSE;
         }
     }
 
-    /* compiled from: GuildBoostUtils.kt */
-    /* renamed from: com.discord.utilities.premium.GuildBoostUtils$modifyGuildBoostSlot$4 */
+    /* JADX INFO: renamed from: com.discord.utilities.premium.GuildBoostUtils$modifyGuildBoostSlot$4 */
+    /* JADX INFO: compiled from: GuildBoostUtils.kt */
     public static final class C68394<T, R> implements Func1<Boolean, Observable<? extends ModifyGuildBoostSlotResult>> {
         public final /* synthetic */ RestAPI $api;
         public final /* synthetic */ boolean $cancel;
         public final /* synthetic */ ModelSubscription $subscription;
 
-        /* compiled from: GuildBoostUtils.kt */
-        /* renamed from: com.discord.utilities.premium.GuildBoostUtils$modifyGuildBoostSlot$4$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.utilities.premium.GuildBoostUtils$modifyGuildBoostSlot$4$1, reason: invalid class name */
+        /* JADX INFO: compiled from: GuildBoostUtils.kt */
         public static final class AnonymousClass1<T, R> implements Func1<Void, ModifyGuildBoostSlotResult> {
             public static final AnonymousClass1 INSTANCE = new AnonymousClass1();
 
@@ -117,14 +117,14 @@ public final class GuildBoostUtils {
                 return call2(r1);
             }
 
-            /* renamed from: call, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
             public final ModifyGuildBoostSlotResult call2(Void r1) {
                 return ModifyGuildBoostSlotResult.SUCCESS;
             }
         }
 
-        /* compiled from: GuildBoostUtils.kt */
-        /* renamed from: com.discord.utilities.premium.GuildBoostUtils$modifyGuildBoostSlot$4$2, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.utilities.premium.GuildBoostUtils$modifyGuildBoostSlot$4$2, reason: invalid class name */
+        /* JADX INFO: compiled from: GuildBoostUtils.kt */
         public static final class AnonymousClass2<T, R> implements Func1<Throwable, ModifyGuildBoostSlotResult> {
             public static final AnonymousClass2 INSTANCE = new AnonymousClass2();
 
@@ -133,7 +133,7 @@ public final class GuildBoostUtils {
                 return call2(th);
             }
 
-            /* renamed from: call, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
             public final ModifyGuildBoostSlotResult call2(Throwable th) {
                 return ModifyGuildBoostSlotResult.FAILURE_UPDATING_SUBSCRIPTION;
             }
@@ -150,7 +150,7 @@ public final class GuildBoostUtils {
             return call2(bool);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final Observable<? extends ModifyGuildBoostSlotResult> call2(Boolean bool) {
             if (bool.booleanValue()) {
                 return this.$api.updateSubscription(this.$subscription.getId(), new RestAPIParams.UpdateSubscription(null, null, null, GuildBoostUtils.INSTANCE.calculateAdditionalPlansWithGuildBoostAdjustment(this.$subscription, this.$cancel ? -1 : 1), 7, null)).m11083G(AnonymousClass1.INSTANCE).m11087M(AnonymousClass2.INSTANCE);

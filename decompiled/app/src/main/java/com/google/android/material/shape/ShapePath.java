@@ -11,7 +11,7 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public class ShapePath {
     public static final float ANGLE_LEFT = 180.0f;
     private static final float ANGLE_UP = 270.0f;
@@ -234,10 +234,10 @@ public class ShapePath {
 
     public static class PathLineOperation extends PathOperation {
 
-        /* renamed from: x */
+        /* JADX INFO: renamed from: x */
         private float f21098x;
 
-        /* renamed from: y */
+        /* JADX INFO: renamed from: y */
         private float f21099y;
 
         public static /* synthetic */ float access$000(PathLineOperation pathLineOperation) {
@@ -346,13 +346,13 @@ public class ShapePath {
         }
     }
 
-    /* renamed from: com.google.android.material.shape.ShapePath$a */
+    /* JADX INFO: renamed from: com.google.android.material.shape.ShapePath$a */
     public class C10971a extends AbstractC10974d {
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final /* synthetic */ List f21100b;
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public final /* synthetic */ Matrix f21101c;
 
         public C10971a(ShapePath shapePath, List list, Matrix matrix) {
@@ -361,7 +361,7 @@ public class ShapePath {
         }
 
         @Override // com.google.android.material.shape.ShapePath.AbstractC10974d
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public void mo9146a(Matrix matrix, ShadowRenderer shadowRenderer, int i, Canvas canvas) {
             Iterator it = this.f21100b.iterator();
             while (it.hasNext()) {
@@ -370,10 +370,10 @@ public class ShapePath {
         }
     }
 
-    /* renamed from: com.google.android.material.shape.ShapePath$b */
+    /* JADX INFO: renamed from: com.google.android.material.shape.ShapePath$b */
     public static class C10972b extends AbstractC10974d {
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final PathArcOperation f21102b;
 
         public C10972b(PathArcOperation pathArcOperation) {
@@ -381,22 +381,22 @@ public class ShapePath {
         }
 
         @Override // com.google.android.material.shape.ShapePath.AbstractC10974d
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public void mo9146a(Matrix matrix, @NonNull ShadowRenderer shadowRenderer, int i, @NonNull Canvas canvas) {
             shadowRenderer.drawCornerShadow(canvas, matrix, new RectF(PathArcOperation.access$1000(this.f21102b), PathArcOperation.access$1100(this.f21102b), PathArcOperation.access$1200(this.f21102b), PathArcOperation.access$1300(this.f21102b)), i, PathArcOperation.access$800(this.f21102b), PathArcOperation.access$900(this.f21102b));
         }
     }
 
-    /* renamed from: com.google.android.material.shape.ShapePath$c */
+    /* JADX INFO: renamed from: com.google.android.material.shape.ShapePath$c */
     public static class C10973c extends AbstractC10974d {
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final PathLineOperation f21103b;
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public final float f21104c;
 
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         public final float f21105d;
 
         public C10973c(PathLineOperation pathLineOperation, float f, float f2) {
@@ -406,7 +406,7 @@ public class ShapePath {
         }
 
         @Override // com.google.android.material.shape.ShapePath.AbstractC10974d
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public void mo9146a(Matrix matrix, @NonNull ShadowRenderer shadowRenderer, int i, @NonNull Canvas canvas) {
             RectF rectF = new RectF(0.0f, 0.0f, (float) Math.hypot(PathLineOperation.access$100(this.f21103b) - this.f21105d, PathLineOperation.access$000(this.f21103b) - this.f21104c), 0.0f);
             Matrix matrix2 = new Matrix(matrix);
@@ -415,19 +415,19 @@ public class ShapePath {
             shadowRenderer.drawEdgeShadow(canvas, matrix2, rectF, i);
         }
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public float m9147b() {
             return (float) Math.toDegrees(Math.atan((PathLineOperation.access$100(this.f21103b) - this.f21105d) / (PathLineOperation.access$000(this.f21103b) - this.f21104c)));
         }
     }
 
-    /* renamed from: com.google.android.material.shape.ShapePath$d */
+    /* JADX INFO: renamed from: com.google.android.material.shape.ShapePath$d */
     public static abstract class AbstractC10974d {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public static final Matrix f21106a = new Matrix();
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public abstract void mo9146a(Matrix matrix, ShadowRenderer shadowRenderer, int i, Canvas canvas);
     }
 

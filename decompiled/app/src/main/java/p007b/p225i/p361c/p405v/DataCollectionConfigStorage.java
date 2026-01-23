@@ -9,21 +9,21 @@ import android.os.Bundle;
 import androidx.core.content.ContextCompat;
 import p007b.p225i.p361c.p396q.Publisher;
 
-/* compiled from: DataCollectionConfigStorage.java */
-/* renamed from: b.i.c.v.a, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.c.v.a, reason: use source file name */
+/* JADX INFO: compiled from: DataCollectionConfigStorage.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class DataCollectionConfigStorage {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final Context f13008a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final SharedPreferences f13009b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final Publisher f13010c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public boolean f13011d;
 
     public DataCollectionConfigStorage(Context context, String str, Publisher publisher) {

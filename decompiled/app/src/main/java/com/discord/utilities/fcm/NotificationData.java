@@ -62,8 +62,8 @@ import p507d0.p580t.MapsJVM;
 import p507d0.p580t._Collections;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: NotificationData.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: NotificationData.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class NotificationData {
     private static final int ACTIVITY_TYPE_PLAYING = 0;
     private static final int ACTIVITY_TYPE_STREAMING = 1;
@@ -79,7 +79,7 @@ public final class NotificationData {
     private static final String ANALYTICS_NOTIF_USER_ID = "notif_user_id";
     private static final String ANALYTICS_REL_TYPE = "rel_type";
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private static final String GROUP_KEY_PREFIX = "GROUP_";
     private static final int MSG_MUTE_MIN_COUNT = 2;
@@ -134,7 +134,7 @@ public final class NotificationData {
     private final long userId;
     private final String userUsername;
 
-    /* compiled from: NotificationData.kt */
+    /* JADX INFO: compiled from: NotificationData.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -360,6 +360,7 @@ public final class NotificationData {
     
         if (r0.equals(com.discord.utilities.fcm.NotificationData.TYPE_MESSAGE_CREATE) != false) goto L19;
      */
+    /* JADX WARN: Failed to restore switch over string. Please report as a decompilation issue */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
@@ -521,6 +522,7 @@ public final class NotificationData {
         return this.channel.getId();
     }
 
+    /* JADX WARN: Failed to restore switch over string. Please report as a decompilation issue */
     public final CharSequence getContent(Context context) {
         CharSequence charSequenceM220l;
         GuildScheduledEventEntityType guildScheduledEventEntityType;
@@ -709,6 +711,7 @@ public final class NotificationData {
         return this.guildId;
     }
 
+    /* JADX WARN: Failed to restore switch over string. Please report as a decompilation issue */
     /* JADX WARN: Removed duplicated region for block: B:29:0x0055  */
     /* JADX WARN: Removed duplicated region for block: B:38:? A[RETURN, SYNTHETIC] */
     /* JADX WARN: Removed duplicated region for block: B:44:? A[RETURN, SYNTHETIC] */
@@ -798,6 +801,7 @@ public final class NotificationData {
         return IconUtils.getForUser$default(Long.valueOf(this.userId), this.userAvatar, this.userDiscriminator, false, null, 24, null);
     }
 
+    /* JADX WARN: Failed to restore switch over string. Please report as a decompilation issue */
     public final String getKey() {
         GuildScheduledEventEntityType guildScheduledEventEntityType;
         String str = this.type;
@@ -883,15 +887,7 @@ public final class NotificationData {
     }
 
     /* JADX WARN: Can't fix incorrect switch cases order, some code will duplicate */
-    /* JADX WARN: Failed to restore switch over string. Please report as a decompilation issue
-    java.lang.NullPointerException: Cannot invoke "java.util.List.iterator()" because the return value of "jadx.core.dex.visitors.regions.SwitchOverStringVisitor$SwitchData.getNewCases()" is null
-    	at jadx.core.dex.visitors.regions.SwitchOverStringVisitor.restoreSwitchOverString(SwitchOverStringVisitor.java:109)
-    	at jadx.core.dex.visitors.regions.SwitchOverStringVisitor.visitRegion(SwitchOverStringVisitor.java:66)
-    	at jadx.core.dex.visitors.regions.DepthRegionTraversal.traverseIterativeStepInternal(DepthRegionTraversal.java:77)
-    	at jadx.core.dex.visitors.regions.DepthRegionTraversal.traverseIterativeStepInternal(DepthRegionTraversal.java:82)
-    	at jadx.core.dex.visitors.regions.DepthRegionTraversal.traverseIterative(DepthRegionTraversal.java:31)
-    	at jadx.core.dex.visitors.regions.SwitchOverStringVisitor.visit(SwitchOverStringVisitor.java:60)
-     */
+    /* JADX WARN: Failed to restore switch over string. Please report as a decompilation issue */
     /* JADX WARN: Removed duplicated region for block: B:25:0x004c A[RETURN, SYNTHETIC] */
     /* JADX WARN: Removed duplicated region for block: B:26:0x0050 A[ORIG_RETURN, RETURN] */
     /*
@@ -932,15 +928,7 @@ public final class NotificationData {
     }
 
     /* JADX WARN: Can't fix incorrect switch cases order, some code will duplicate */
-    /* JADX WARN: Failed to restore switch over string. Please report as a decompilation issue
-    java.lang.NullPointerException: Cannot invoke "java.util.List.iterator()" because the return value of "jadx.core.dex.visitors.regions.SwitchOverStringVisitor$SwitchData.getNewCases()" is null
-    	at jadx.core.dex.visitors.regions.SwitchOverStringVisitor.restoreSwitchOverString(SwitchOverStringVisitor.java:109)
-    	at jadx.core.dex.visitors.regions.SwitchOverStringVisitor.visitRegion(SwitchOverStringVisitor.java:66)
-    	at jadx.core.dex.visitors.regions.DepthRegionTraversal.traverseIterativeStepInternal(DepthRegionTraversal.java:77)
-    	at jadx.core.dex.visitors.regions.DepthRegionTraversal.traverseIterativeStepInternal(DepthRegionTraversal.java:82)
-    	at jadx.core.dex.visitors.regions.DepthRegionTraversal.traverseIterative(DepthRegionTraversal.java:31)
-    	at jadx.core.dex.visitors.regions.SwitchOverStringVisitor.visit(SwitchOverStringVisitor.java:60)
-     */
+    /* JADX WARN: Failed to restore switch over string. Please report as a decompilation issue */
     /* JADX WARN: Removed duplicated region for block: B:31:0x0060 A[ORIG_RETURN, RETURN] */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
@@ -983,15 +971,7 @@ public final class NotificationData {
     }
 
     /* JADX WARN: Can't fix incorrect switch cases order, some code will duplicate */
-    /* JADX WARN: Failed to restore switch over string. Please report as a decompilation issue
-    java.lang.NullPointerException: Cannot invoke "java.util.List.iterator()" because the return value of "jadx.core.dex.visitors.regions.SwitchOverStringVisitor$SwitchData.getNewCases()" is null
-    	at jadx.core.dex.visitors.regions.SwitchOverStringVisitor.restoreSwitchOverString(SwitchOverStringVisitor.java:109)
-    	at jadx.core.dex.visitors.regions.SwitchOverStringVisitor.visitRegion(SwitchOverStringVisitor.java:66)
-    	at jadx.core.dex.visitors.regions.DepthRegionTraversal.traverseIterativeStepInternal(DepthRegionTraversal.java:77)
-    	at jadx.core.dex.visitors.regions.DepthRegionTraversal.traverseIterativeStepInternal(DepthRegionTraversal.java:82)
-    	at jadx.core.dex.visitors.regions.DepthRegionTraversal.traverseIterative(DepthRegionTraversal.java:31)
-    	at jadx.core.dex.visitors.regions.SwitchOverStringVisitor.visit(SwitchOverStringVisitor.java:60)
-     */
+    /* JADX WARN: Failed to restore switch over string. Please report as a decompilation issue */
     public final int getNotificationPriority() {
         String notificationChannelId = getNotificationChannelId();
         switch (notificationChannelId.hashCode()) {
@@ -1108,15 +1088,7 @@ public final class NotificationData {
     }
 
     /* JADX WARN: Can't fix incorrect switch cases order, some code will duplicate */
-    /* JADX WARN: Failed to restore switch over string. Please report as a decompilation issue
-    java.lang.NullPointerException: Cannot invoke "java.util.List.iterator()" because the return value of "jadx.core.dex.visitors.regions.SwitchOverStringVisitor$SwitchData.getNewCases()" is null
-    	at jadx.core.dex.visitors.regions.SwitchOverStringVisitor.restoreSwitchOverString(SwitchOverStringVisitor.java:109)
-    	at jadx.core.dex.visitors.regions.SwitchOverStringVisitor.visitRegion(SwitchOverStringVisitor.java:66)
-    	at jadx.core.dex.visitors.regions.DepthRegionTraversal.traverseIterativeStepInternal(DepthRegionTraversal.java:77)
-    	at jadx.core.dex.visitors.regions.DepthRegionTraversal.traverseIterativeStepInternal(DepthRegionTraversal.java:82)
-    	at jadx.core.dex.visitors.regions.DepthRegionTraversal.traverseIterative(DepthRegionTraversal.java:31)
-    	at jadx.core.dex.visitors.regions.SwitchOverStringVisitor.visit(SwitchOverStringVisitor.java:60)
-     */
+    /* JADX WARN: Failed to restore switch over string. Please report as a decompilation issue */
     /* JADX WARN: Removed duplicated region for block: B:13:0x0024 A[RETURN, SYNTHETIC] */
     /* JADX WARN: Removed duplicated region for block: B:17:0x0031 A[ORIG_RETURN, RETURN] */
     /*
@@ -1174,6 +1146,7 @@ public final class NotificationData {
         return new NotificationCompat.Action.Builder(C5419R.drawable.ic_notifications_off_grey_24dp, FormatUtils.m216h(ctx, C5419R.string.notification_mute_1_hour, new Object[0], null, 4), PendingIntent.getBroadcast(ctx, 0, addTrackingData(NotificationActions.INSTANCE.timedMute(ctx, this.guildId, this.channel.getId(), clock.currentTimeMillis() + 3600000)), PendingIntentExtensions.immutablePendingIntentFlag$default(0, 1, null))).build();
     }
 
+    /* JADX WARN: Failed to restore switch over string. Please report as a decompilation issue */
     public final CharSequence getTitle(Context context) {
         String str;
         GuildScheduledEventEntityType guildScheduledEventEntityType;
@@ -1271,11 +1244,12 @@ public final class NotificationData {
         return this.userId;
     }
 
-    /* renamed from: isGroupConversation, reason: from getter */
+    /* JADX INFO: renamed from: isGroupConversation, reason: from getter */
     public final boolean getIsGroupConversation() {
         return this.isGroupConversation;
     }
 
+    /* JADX WARN: Failed to restore switch over string. Please report as a decompilation issue */
     /* JADX WARN: Removed duplicated region for block: B:42:0x007e A[ORIG_RETURN, RETURN] */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
@@ -1335,7 +1309,7 @@ public final class NotificationData {
         }
     }
 
-    /* compiled from: NotificationData.kt */
+    /* JADX INFO: compiled from: NotificationData.kt */
     public static final class DisplayPayload {
         private NotificationData data;
         private final LinkedHashMap<Long, NotificationData> extras;
@@ -1420,7 +1394,7 @@ public final class NotificationData {
     }
 
     /* JADX WARN: Multi-variable type inference failed */
-    public NotificationData(Map<String, String> map) throws NumberFormatException {
+    public NotificationData(Map<String, String> map) {
         String str;
         Integer num;
         String string;

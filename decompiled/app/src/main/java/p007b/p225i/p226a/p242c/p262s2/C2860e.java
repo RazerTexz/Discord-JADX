@@ -3,15 +3,15 @@ package p007b.p225i.p226a.p242c.p262s2;
 import p007b.p225i.p226a.p242c.p259f3.ListenerSet;
 import p007b.p225i.p226a.p242c.p262s2.AnalyticsListener;
 
-/* compiled from: lambda */
-/* renamed from: b.i.a.c.s2.e */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.s2.e */
+/* JADX INFO: compiled from: lambda */
+/* JADX INFO: loaded from: classes3.dex */
 public final /* synthetic */ class C2860e implements ListenerSet.a {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final /* synthetic */ AnalyticsListener.a f7528a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final /* synthetic */ boolean f7529b;
 
     public /* synthetic */ C2860e(AnalyticsListener.a aVar, boolean z2) {

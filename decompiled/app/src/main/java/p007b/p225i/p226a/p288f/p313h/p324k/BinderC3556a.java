@@ -7,9 +7,9 @@ import android.os.Parcel;
 import android.os.RemoteException;
 import com.google.android.gms.common.api.Status;
 
-/* compiled from: com.google.firebase:firebase-appindexing@@19.1.0 */
-/* renamed from: b.i.a.f.h.k.a */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.h.k.a */
+/* JADX INFO: compiled from: com.google.firebase:firebase-appindexing@@19.1.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public class BinderC3556a extends Binder implements IInterface {
     public BinderC3556a(String str) {
         attachInterface(this, str);

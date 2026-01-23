@@ -28,16 +28,16 @@ import p507d0.p592z.p594d.Lambda;
 import p637j0.p641k.Func1;
 import p658rx.Observable;
 
-/* compiled from: WidgetTosReportViolationViewModel.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: WidgetTosReportViolationViewModel.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class WidgetTosReportViolationViewModel extends AppViewModel<ViewState> {
     private final long channelId;
     private final long messageId;
     private ReportReason reasonSelected;
     private StoreState storeState;
 
-    /* compiled from: WidgetTosReportViolationViewModel.kt */
-    /* renamed from: com.discord.widgets.tos.WidgetTosReportViolationViewModel$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.tos.WidgetTosReportViolationViewModel$1 */
+    /* JADX INFO: compiled from: WidgetTosReportViolationViewModel.kt */
     public static final /* synthetic */ class C101791 extends FunctionReferenceImpl implements Function1<StoreState, Unit> {
         public C101791(WidgetTosReportViolationViewModel widgetTosReportViolationViewModel) {
             super(1, widgetTosReportViolationViewModel, WidgetTosReportViolationViewModel.class, "generateViewState", "generateViewState(Lcom/discord/widgets/tos/WidgetTosReportViolationViewModel$StoreState;)V", 0);
@@ -49,17 +49,17 @@ public final class WidgetTosReportViolationViewModel extends AppViewModel<ViewSt
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(StoreState storeState) {
             Intrinsics3.checkNotNullParameter(storeState, "p1");
             WidgetTosReportViolationViewModel.access$generateViewState((WidgetTosReportViolationViewModel) this.receiver, storeState);
         }
     }
 
-    /* compiled from: WidgetTosReportViolationViewModel.kt */
+    /* JADX INFO: compiled from: WidgetTosReportViolationViewModel.kt */
     public static abstract class StoreState {
 
-        /* compiled from: WidgetTosReportViolationViewModel.kt */
+        /* JADX INFO: compiled from: WidgetTosReportViolationViewModel.kt */
         public static final /* data */ class ReportReasons extends StoreState {
             private final List<ReportReason> reasons;
 
@@ -119,10 +119,10 @@ public final class WidgetTosReportViolationViewModel extends AppViewModel<ViewSt
         }
     }
 
-    /* compiled from: WidgetTosReportViolationViewModel.kt */
+    /* JADX INFO: compiled from: WidgetTosReportViolationViewModel.kt */
     public static abstract class ViewState {
 
-        /* compiled from: WidgetTosReportViolationViewModel.kt */
+        /* JADX INFO: compiled from: WidgetTosReportViolationViewModel.kt */
         public static final /* data */ class Loaded extends ViewState {
             private final List<ReportReason> reasons;
 
@@ -174,7 +174,7 @@ public final class WidgetTosReportViolationViewModel extends AppViewModel<ViewSt
             }
         }
 
-        /* compiled from: WidgetTosReportViolationViewModel.kt */
+        /* JADX INFO: compiled from: WidgetTosReportViolationViewModel.kt */
         public static final class Loading extends ViewState {
             public static final Loading INSTANCE = new Loading();
 
@@ -183,7 +183,7 @@ public final class WidgetTosReportViolationViewModel extends AppViewModel<ViewSt
             }
         }
 
-        /* compiled from: WidgetTosReportViolationViewModel.kt */
+        /* JADX INFO: compiled from: WidgetTosReportViolationViewModel.kt */
         public static final class SubmissionError extends ViewState {
             public static final SubmissionError INSTANCE = new SubmissionError();
 
@@ -192,7 +192,7 @@ public final class WidgetTosReportViolationViewModel extends AppViewModel<ViewSt
             }
         }
 
-        /* compiled from: WidgetTosReportViolationViewModel.kt */
+        /* JADX INFO: compiled from: WidgetTosReportViolationViewModel.kt */
         public static final class Submitted extends ViewState {
             public static final Submitted INSTANCE = new Submitted();
 
@@ -201,7 +201,7 @@ public final class WidgetTosReportViolationViewModel extends AppViewModel<ViewSt
             }
         }
 
-        /* compiled from: WidgetTosReportViolationViewModel.kt */
+        /* JADX INFO: compiled from: WidgetTosReportViolationViewModel.kt */
         public static final /* data */ class Submitting extends ViewState {
             private final int reason;
 
@@ -217,7 +217,7 @@ public final class WidgetTosReportViolationViewModel extends AppViewModel<ViewSt
                 return submitting.copy(i);
             }
 
-            /* renamed from: component1, reason: from getter */
+            /* JADX INFO: renamed from: component1, reason: from getter */
             public final int getReason() {
                 return this.reason;
             }
@@ -254,8 +254,8 @@ public final class WidgetTosReportViolationViewModel extends AppViewModel<ViewSt
         }
     }
 
-    /* compiled from: WidgetTosReportViolationViewModel.kt */
-    /* renamed from: com.discord.widgets.tos.WidgetTosReportViolationViewModel$observeStoreState$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.tos.WidgetTosReportViolationViewModel$observeStoreState$1 */
+    /* JADX INFO: compiled from: WidgetTosReportViolationViewModel.kt */
     public static final class C101801<T, R> implements Func1<List<? extends ReportReason>, StoreState> {
         public static final C101801 INSTANCE = new C101801();
 
@@ -264,15 +264,15 @@ public final class WidgetTosReportViolationViewModel extends AppViewModel<ViewSt
             return call2((List<ReportReason>) list);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final StoreState call2(List<ReportReason> list) {
             Intrinsics3.checkNotNullExpressionValue(list, "reportReasons");
             return new StoreState.ReportReasons(list);
         }
     }
 
-    /* compiled from: WidgetTosReportViolationViewModel.kt */
-    /* renamed from: com.discord.widgets.tos.WidgetTosReportViolationViewModel$sendReportAPICall$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.tos.WidgetTosReportViolationViewModel$sendReportAPICall$1 */
+    /* JADX INFO: compiled from: WidgetTosReportViolationViewModel.kt */
     public static final class C101811 extends Lambda implements Function1<Error, Unit> {
         public C101811() {
             super(1);
@@ -284,15 +284,15 @@ public final class WidgetTosReportViolationViewModel extends AppViewModel<ViewSt
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Error error) {
             Intrinsics3.checkNotNullParameter(error, "it");
             WidgetTosReportViolationViewModel.access$updateViewState(WidgetTosReportViolationViewModel.this, ViewState.SubmissionError.INSTANCE);
         }
     }
 
-    /* compiled from: WidgetTosReportViolationViewModel.kt */
-    /* renamed from: com.discord.widgets.tos.WidgetTosReportViolationViewModel$sendReportAPICall$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.tos.WidgetTosReportViolationViewModel$sendReportAPICall$2 */
+    /* JADX INFO: compiled from: WidgetTosReportViolationViewModel.kt */
     public static final class C101822 extends Lambda implements Function1<Unit, Unit> {
         public C101822() {
             super(1);
@@ -304,7 +304,7 @@ public final class WidgetTosReportViolationViewModel extends AppViewModel<ViewSt
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Unit unit) {
             Intrinsics3.checkNotNullParameter(unit, "it");
             WidgetTosReportViolationViewModel.access$updateViewState(WidgetTosReportViolationViewModel.this, ViewState.Submitted.INSTANCE);

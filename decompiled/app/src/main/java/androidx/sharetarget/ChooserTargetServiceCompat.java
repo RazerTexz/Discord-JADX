@@ -22,9 +22,9 @@ import java.util.Collections;
 import java.util.Iterator;
 import java.util.List;
 
+/* JADX INFO: loaded from: classes.dex */
 @RequiresApi(23)
 @RestrictTo({RestrictTo.Scope.LIBRARY_GROUP_PREFIX})
-/* loaded from: classes.dex */
 public class ChooserTargetServiceCompat extends ChooserTargetService {
     public static final String TAG = "ChooserServiceCompat";
 
@@ -50,7 +50,7 @@ public class ChooserTargetServiceCompat extends ChooserTargetService {
             return this.mTargetClass;
         }
 
-        /* renamed from: compareTo, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: compareTo, reason: avoid collision after fix types in other method */
         public int compareTo2(ShortcutHolder shortcutHolder) {
             return getShortcut().getRank() - shortcutHolder.getShortcut().getRank();
         }

@@ -10,7 +10,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import p007b.p100d.p104b.p105a.outline;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class AtomicFile {
     private static final String LOG_TAG = "AtomicFile";
     private final File mBaseName;

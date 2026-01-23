@@ -5,8 +5,8 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.discord.models.domain.ModelAuditLogEntry;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: IntentUtils.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: IntentUtils.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class IntentUtilsKt {
     public static final Long getLongExtraOrNull(Intent intent, String str) {
         Intrinsics3.checkNotNullParameter(intent, "$this$getLongExtraOrNull");

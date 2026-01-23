@@ -5,7 +5,7 @@ import java.util.HashSet;
 import java.util.Iterator;
 import java.util.Set;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class ViewModelStore {
     private final HashMap<String, ViewModel> mMap = new HashMap<>();
 

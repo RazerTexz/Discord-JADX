@@ -4,8 +4,8 @@ import com.discord.gateway.opcodes.Opcode;
 import kotlin.jvm.internal.DefaultConstructorMarker;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: Outgoing.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: Outgoing.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class Outgoing {
     private final Object d;
     private final int op;

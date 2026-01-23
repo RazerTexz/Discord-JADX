@@ -30,8 +30,8 @@ import p007b.p225i.p226a.p288f.p299e.p308o.C3404f;
 import p007b.p225i.p226a.p341g.p345d.DateFormatTextWatcher;
 import p007b.p225i.p226a.p341g.p345d.UtcDates;
 
+/* JADX INFO: loaded from: classes3.dex */
 @RestrictTo({RestrictTo.Scope.LIBRARY_GROUP})
-/* loaded from: classes3.dex */
 public class RangeDateSelector implements DateSelector<Pair<Long, Long>> {
     public static final Parcelable.Creator<RangeDateSelector> CREATOR = new C10905c();
     private String invalidRangeStartError;
@@ -49,16 +49,16 @@ public class RangeDateSelector implements DateSelector<Pair<Long, Long>> {
     @Nullable
     private Long proposedTextEnd = null;
 
-    /* renamed from: com.google.android.material.datepicker.RangeDateSelector$a */
+    /* JADX INFO: renamed from: com.google.android.material.datepicker.RangeDateSelector$a */
     public class C10903a extends DateFormatTextWatcher {
 
-        /* renamed from: p */
+        /* JADX INFO: renamed from: p */
         public final /* synthetic */ TextInputLayout f20996p;
 
-        /* renamed from: q */
+        /* JADX INFO: renamed from: q */
         public final /* synthetic */ TextInputLayout f20997q;
 
-        /* renamed from: r */
+        /* JADX INFO: renamed from: r */
         public final /* synthetic */ OnSelectionChangedListener f20998r;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -70,30 +70,30 @@ public class RangeDateSelector implements DateSelector<Pair<Long, Long>> {
         }
 
         @Override // p007b.p225i.p226a.p341g.p345d.DateFormatTextWatcher
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public void mo6060a() {
             RangeDateSelector.access$002(RangeDateSelector.this, null);
             RangeDateSelector.access$100(RangeDateSelector.this, this.f20996p, this.f20997q, this.f20998r);
         }
 
         @Override // p007b.p225i.p226a.p341g.p345d.DateFormatTextWatcher
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public void mo6061b(@Nullable Long l) {
             RangeDateSelector.access$002(RangeDateSelector.this, l);
             RangeDateSelector.access$100(RangeDateSelector.this, this.f20996p, this.f20997q, this.f20998r);
         }
     }
 
-    /* renamed from: com.google.android.material.datepicker.RangeDateSelector$b */
+    /* JADX INFO: renamed from: com.google.android.material.datepicker.RangeDateSelector$b */
     public class C10904b extends DateFormatTextWatcher {
 
-        /* renamed from: p */
+        /* JADX INFO: renamed from: p */
         public final /* synthetic */ TextInputLayout f21000p;
 
-        /* renamed from: q */
+        /* JADX INFO: renamed from: q */
         public final /* synthetic */ TextInputLayout f21001q;
 
-        /* renamed from: r */
+        /* JADX INFO: renamed from: r */
         public final /* synthetic */ OnSelectionChangedListener f21002r;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -105,21 +105,21 @@ public class RangeDateSelector implements DateSelector<Pair<Long, Long>> {
         }
 
         @Override // p007b.p225i.p226a.p341g.p345d.DateFormatTextWatcher
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public void mo6060a() {
             RangeDateSelector.access$202(RangeDateSelector.this, null);
             RangeDateSelector.access$100(RangeDateSelector.this, this.f21000p, this.f21001q, this.f21002r);
         }
 
         @Override // p007b.p225i.p226a.p341g.p345d.DateFormatTextWatcher
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public void mo6061b(@Nullable Long l) {
             RangeDateSelector.access$202(RangeDateSelector.this, l);
             RangeDateSelector.access$100(RangeDateSelector.this, this.f21000p, this.f21001q, this.f21002r);
         }
     }
 
-    /* renamed from: com.google.android.material.datepicker.RangeDateSelector$c */
+    /* JADX INFO: renamed from: com.google.android.material.datepicker.RangeDateSelector$c */
     public static class C10905c implements Parcelable.Creator<RangeDateSelector> {
         @Override // android.os.Parcelable.Creator
         @NonNull
@@ -284,7 +284,7 @@ public class RangeDateSelector implements DateSelector<Pair<Long, Long>> {
     }
 
     @Override // com.google.android.material.datepicker.DateSelector
-    public View onCreateTextInputView(@NonNull LayoutInflater layoutInflater, @Nullable ViewGroup viewGroup, @Nullable Bundle bundle, CalendarConstraints calendarConstraints, @NonNull OnSelectionChangedListener<Pair<Long, Long>> onSelectionChangedListener) throws Resources.NotFoundException {
+    public View onCreateTextInputView(@NonNull LayoutInflater layoutInflater, @Nullable ViewGroup viewGroup, @Nullable Bundle bundle, CalendarConstraints calendarConstraints, @NonNull OnSelectionChangedListener<Pair<Long, Long>> onSelectionChangedListener) {
         View viewInflate = layoutInflater.inflate(C10817R.layout.mtrl_picker_text_input_date_range, viewGroup, false);
         TextInputLayout textInputLayout = (TextInputLayout) viewInflate.findViewById(C10817R.id.mtrl_picker_text_input_range_start);
         TextInputLayout textInputLayout2 = (TextInputLayout) viewInflate.findViewById(C10817R.id.mtrl_picker_text_input_range_end);
@@ -346,7 +346,7 @@ public class RangeDateSelector implements DateSelector<Pair<Long, Long>> {
         return new Pair<>(this.selectedStartItem, this.selectedEndItem);
     }
 
-    /* renamed from: setSelection, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: setSelection, reason: avoid collision after fix types in other method */
     public void setSelection2(@NonNull Pair<Long, Long> pair) {
         Long l = pair.first;
         if (l != null && pair.second != null) {

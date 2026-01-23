@@ -3,9 +3,9 @@ package com.discord.widgets.chat.input.gifpicker;
 import kotlin.jvm.functions.Function0;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetGifPicker.kt */
-/* renamed from: com.discord.widgets.chat.input.gifpicker.WidgetGifPicker$viewModel$2, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.chat.input.gifpicker.WidgetGifPicker$viewModel$2, reason: use source file name */
+/* JADX INFO: compiled from: WidgetGifPicker.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetGifPicker3 extends Lambda implements Function0<GifPickerViewModel> {
     public static final WidgetGifPicker3 INSTANCE = new WidgetGifPicker3();
 

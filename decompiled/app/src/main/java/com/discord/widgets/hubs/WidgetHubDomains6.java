@@ -10,14 +10,14 @@ import p507d0.p592z.p594d.FunctionReferenceImpl;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetHubDomains.kt */
-/* renamed from: com.discord.widgets.hubs.WidgetHubDomains$adapter$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.hubs.WidgetHubDomains$adapter$1, reason: use source file name */
+/* JADX INFO: compiled from: WidgetHubDomains.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetHubDomains6 extends Lambda implements Function2<LayoutInflater, ViewGroup, WidgetHubDomains4> {
     public final /* synthetic */ WidgetHubDomains this$0;
 
-    /* compiled from: WidgetHubDomains.kt */
-    /* renamed from: com.discord.widgets.hubs.WidgetHubDomains$adapter$1$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.hubs.WidgetHubDomains$adapter$1$1 */
+    /* JADX INFO: compiled from: WidgetHubDomains.kt */
     public static final /* synthetic */ class C90261 extends FunctionReferenceImpl implements Function1<WidgetHubDomains2, Unit> {
         public C90261(WidgetHubDomains widgetHubDomains) {
             super(1, widgetHubDomains, WidgetHubDomains.class, "onServerClickListener", "onServerClickListener(Lcom/discord/widgets/hubs/DomainGuildInfo;)V", 0);
@@ -29,7 +29,7 @@ public final class WidgetHubDomains6 extends Lambda implements Function2<LayoutI
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(WidgetHubDomains2 widgetHubDomains2) {
             Intrinsics3.checkNotNullParameter(widgetHubDomains2, "p1");
             ((WidgetHubDomains) this.receiver).onServerClickListener(widgetHubDomains2);
@@ -47,7 +47,7 @@ public final class WidgetHubDomains6 extends Lambda implements Function2<LayoutI
         return invoke2(layoutInflater, viewGroup);
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final WidgetHubDomains4 invoke2(LayoutInflater layoutInflater, ViewGroup viewGroup) {
         Intrinsics3.checkNotNullParameter(layoutInflater, "inflater");
         Intrinsics3.checkNotNullParameter(viewGroup, "parent");

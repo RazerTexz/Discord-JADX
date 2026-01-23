@@ -9,15 +9,15 @@ import java.util.Arrays;
 import p007b.p085c.p086a.p087a0.AnimatableValueParser;
 import p007b.p225i.p226a.p288f.p313h.p324k.C3571p;
 
-/* compiled from: com.google.firebase:firebase-appindexing@@19.1.0 */
-/* loaded from: classes3.dex */
+/* JADX INFO: compiled from: com.google.firebase:firebase-appindexing@@19.1.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public final class zzm extends AbstractSafeParcelable {
     public static final Parcelable.Creator<zzm> CREATOR = new C3571p();
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final int f20597j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final Bundle f20598k;
 
     public zzm(int i, Bundle bundle) {

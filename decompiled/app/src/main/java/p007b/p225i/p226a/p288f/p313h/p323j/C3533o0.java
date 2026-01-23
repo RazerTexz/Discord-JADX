@@ -28,17 +28,17 @@ import p007b.p100d.p104b.p105a.outline;
 import p007b.p225i.p226a.p288f.p291b.C3180f;
 import p007b.p225i.p226a.p288f.p299e.p308o.C3401c;
 
-/* renamed from: b.i.a.f.h.j.o0 */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.h.j.o0 */
+/* JADX INFO: loaded from: classes3.dex */
 public final class C3533o0 extends AbstractC3509e {
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public static final byte[] f9773l = "\n".getBytes();
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public final String f9774m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public final C3553y0 f9775n;
 
     /* JADX WARN: Removed duplicated region for block: B:7:0x0018  */
@@ -69,7 +69,7 @@ public final class C3533o0 extends AbstractC3509e {
         this.f9775n = new C3553y0(c3515g.f9724d);
     }
 
-    /* renamed from: S */
+    /* JADX INFO: renamed from: S */
     public static void m4476S(StringBuilder sb, String str, String str2) throws UnsupportedEncodingException {
         if (sb.length() != 0) {
             sb.append('&');
@@ -80,7 +80,7 @@ public final class C3533o0 extends AbstractC3509e {
     }
 
     @Override // p007b.p225i.p226a.p288f.p313h.p323j.AbstractC3509e
-    /* renamed from: L */
+    /* JADX INFO: renamed from: L */
     public final void mo4414L() {
         m4431b("Network initialized. User agent", this.f9774m);
     }
@@ -88,7 +88,7 @@ public final class C3533o0 extends AbstractC3509e {
     /* JADX WARN: Removed duplicated region for block: B:42:0x009f  */
     /* JADX WARN: Removed duplicated region for block: B:44:0x0095 A[EXC_TOP_SPLITTER, SYNTHETIC] */
     /* JADX WARN: Removed duplicated region for block: B:55:? A[SYNTHETIC] */
-    /* renamed from: O */
+    /* JADX INFO: renamed from: O */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
@@ -170,7 +170,7 @@ public final class C3533o0 extends AbstractC3509e {
         }
     }
 
-    /* renamed from: R */
+    /* JADX INFO: renamed from: R */
     public final String m4478R(C3523j0 c3523j0, boolean z2) {
         long j;
         StringBuilder sb = new StringBuilder();
@@ -217,7 +217,7 @@ public final class C3533o0 extends AbstractC3509e {
     
         return;
      */
-    /* renamed from: T */
+    /* JADX INFO: renamed from: T */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
@@ -246,7 +246,7 @@ public final class C3533o0 extends AbstractC3509e {
         }
     }
 
-    /* renamed from: U */
+    /* JADX INFO: renamed from: U */
     public final HttpURLConnection m4480U(URL url) throws IOException {
         URLConnection uRLConnectionOpenConnection = url.openConnection();
         if (!(uRLConnectionOpenConnection instanceof HttpURLConnection)) {
@@ -278,6 +278,7 @@ public final class C3533o0 extends AbstractC3509e {
     /* JADX WARN: Removed duplicated region for block: B:242:? A[SYNTHETIC] */
     /* JADX WARN: Removed duplicated region for block: B:36:0x0099  */
     /* JADX WARN: Removed duplicated region for block: B:63:0x0144 A[LOOP:0: B:37:0x00c6->B:63:0x0144, LOOP_END] */
+    /* JADX WARN: Type inference failed for: r0v55, types: [java.lang.Object, java.net.URL] */
     /* JADX WARN: Type inference failed for: r16v0, types: [b.i.a.f.h.j.d, b.i.a.f.h.j.e, b.i.a.f.h.j.o0] */
     /* JADX WARN: Type inference failed for: r1v15 */
     /* JADX WARN: Type inference failed for: r1v16 */
@@ -287,19 +288,13 @@ public final class C3533o0 extends AbstractC3509e {
     /* JADX WARN: Type inference failed for: r1v21 */
     /* JADX WARN: Type inference failed for: r1v35, types: [java.net.HttpURLConnection] */
     /* JADX WARN: Type inference failed for: r1v9, types: [java.io.ByteArrayOutputStream] */
-    /* JADX WARN: Type inference failed for: r2v12 */
-    /* JADX WARN: Type inference failed for: r2v13 */
-    /* JADX WARN: Type inference failed for: r2v16 */
-    /* JADX WARN: Type inference failed for: r2v19 */
-    /* JADX WARN: Type inference failed for: r2v23 */
-    /* JADX WARN: Type inference failed for: r2v24 */
-    /* JADX WARN: Type inference failed for: r2v29 */
-    /* JADX WARN: Type inference failed for: r2v32, types: [java.lang.String] */
-    /* JADX WARN: Type inference failed for: r2v61 */
-    /* JADX WARN: Type inference failed for: r2v62 */
-    /* JADX WARN: Type inference failed for: r2v63 */
-    /* JADX WARN: Type inference failed for: r2v64 */
-    /* renamed from: V */
+    /* JADX WARN: Type inference failed for: r2v15 */
+    /* JADX WARN: Type inference failed for: r2v17, types: [java.io.OutputStream] */
+    /* JADX WARN: Type inference failed for: r2v65 */
+    /* JADX WARN: Type inference failed for: r3v10, types: [java.net.HttpURLConnection] */
+    /* JADX WARN: Type inference failed for: r3v11 */
+    /* JADX WARN: Type inference failed for: r3v9 */
+    /* JADX INFO: renamed from: V */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
@@ -308,16 +303,16 @@ public final class C3533o0 extends AbstractC3509e {
         String str;
         String strConcat;
         URL url;
+        boolean z3;
         String strM861l;
         URL url2;
         HttpURLConnection httpURLConnection;
         HttpURLConnection httpURLConnectionM4480U;
         int responseCode;
-        boolean z3;
-        ?? url3;
-        HttpURLConnection httpURLConnection2;
+        Object url3;
+        ?? r3;
+        ?? r2;
         OutputStream outputStream;
-        OutputStream outputStream2;
         byte[] byteArray;
         boolean z4;
         EnumC3550x enumC3550x = EnumC3550x.GZIP;
@@ -325,7 +320,7 @@ public final class C3533o0 extends AbstractC3509e {
         C3180f.m3967b();
         m4444N();
         int iM4477O = 0;
-        if (!this.f9684j.f9725e.m4514g().isEmpty() && this.f9775n.m4507b(C3510e0.f9708t.f9716a.intValue() * 1000)) {
+        if (!this.f9684j.f9725e.m4514g().isEmpty() && this.f9775n.m4507b(((long) C3510e0.f9708t.f9716a.intValue()) * 1000)) {
             String str2 = C3510e0.f9702n.f9716a;
             z2 = ("BATCH_BY_SESSION".equalsIgnoreCase(str2) ? EnumC3548w.BATCH_BY_SESSION : "BATCH_BY_TIME".equalsIgnoreCase(str2) ? EnumC3548w.BATCH_BY_TIME : "BATCH_BY_BRUTE_FORCE".equalsIgnoreCase(str2) ? EnumC3548w.BATCH_BY_BRUTE_FORCE : "BATCH_BY_COUNT".equalsIgnoreCase(str2) ? EnumC3548w.BATCH_BY_COUNT : "BATCH_BY_SIZE".equalsIgnoreCase(str2) ? EnumC3548w.BATCH_BY_SIZE : enumC3548w) != enumC3548w;
             boolean z5 = ("GZIP".equalsIgnoreCase(C3510e0.f9703o.f9716a) ? enumC3550x : EnumC3550x.NONE) == enumC3550x;
@@ -382,10 +377,6 @@ public final class C3533o0 extends AbstractC3509e {
                                             httpURLConnectionM4480U.disconnect();
                                         }
                                         responseCode = 0;
-                                        z3 = responseCode == 200;
-                                        if (!z3) {
-                                        }
-                                        return arrayList;
                                     }
                                 } catch (IOException e3) {
                                     e = e3;
@@ -397,6 +388,7 @@ public final class C3533o0 extends AbstractC3509e {
                                 if (responseCode == 200) {
                                 }
                             }
+                            z3 = false;
                         } else {
                             String strM4478R2 = m4478R(c3523j0, false);
                             if (strM4478R2 == null) {
@@ -420,12 +412,14 @@ public final class C3533o0 extends AbstractC3509e {
                                             m4429H("Failed to build collect POST endpoint url");
                                         } else if (m4477O(url, bytes) == 200) {
                                         }
+                                        z3 = false;
                                     } else {
                                         str = new String(strValueOf);
                                         strConcat = str;
                                         url = new URL(strConcat);
                                         if (url != null) {
                                         }
+                                        z3 = false;
                                     }
                                 } else {
                                     String strValueOf3 = String.valueOf(C3554z.m4511e());
@@ -435,17 +429,19 @@ public final class C3533o0 extends AbstractC3509e {
                                         url = new URL(strConcat);
                                         if (url != null) {
                                         }
+                                        z3 = false;
                                     } else {
                                         str = new String(strValueOf3);
                                         strConcat = str;
                                         url = new URL(strConcat);
                                         if (url != null) {
                                         }
+                                        z3 = false;
                                     }
                                 }
                             }
                         }
-                        if (!z3) {
+                        if (z3) {
                             break;
                         }
                         arrayList.add(Long.valueOf(c3523j0.f9748c));
@@ -455,7 +451,8 @@ public final class C3533o0 extends AbstractC3509e {
                     } else {
                         m4434n().m4465O(c3523j0, "Error formatting hit for upload");
                     }
-                    if (!z3) {
+                    z3 = true;
+                    if (z3) {
                     }
                 }
                 return arrayList;
@@ -518,10 +515,10 @@ public final class C3533o0 extends AbstractC3509e {
                 url3 = new URL(strValueOf6.length() != 0 ? strValueOf5.concat(strValueOf6) : new String(strValueOf5));
             } catch (MalformedURLException e6) {
                 m4426A("Error trying to parse the hardcoded host url", e6);
-                url3 = 0;
+                url3 = null;
             }
-            URL url4 = url3;
-            if (url4 == null) {
+            ?? r0 = url3;
+            if (r0 == 0) {
                 m4429H("Failed to build batching endpoint url");
             } else {
                 if (z5) {
@@ -536,7 +533,7 @@ public final class C3533o0 extends AbstractC3509e {
                             gZIPOutputStream.close();
                             byteArrayOutputStream2.close();
                             byteArray = byteArrayOutputStream2.toByteArray();
-                            m4430a(3, "POST compressed size, ratio %, url", Integer.valueOf(byteArray.length), Long.valueOf((byteArray.length * 100) / byteArray2.length), url4);
+                            m4430a(3, "POST compressed size, ratio %, url", Integer.valueOf(byteArray.length), Long.valueOf((((long) byteArray.length) * 100) / ((long) byteArray2.length)), r0);
                             if (byteArray.length > byteArray2.length) {
                                 m4433f("Compressed payload is larger then uncompressed. compressed, uncompressed", Integer.valueOf(byteArray.length), Integer.valueOf(byteArray2.length));
                             }
@@ -544,7 +541,7 @@ public final class C3533o0 extends AbstractC3509e {
                                 String str3 = new String(byteArray2);
                                 m4431b("Post payload", str3.length() != 0 ? "\n".concat(str3) : new String("\n"));
                             }
-                            byteArrayOutputStream = m4480U(url4);
+                            byteArrayOutputStream = m4480U(r0);
                         } catch (Throwable th3) {
                             th = th3;
                         }
@@ -553,20 +550,20 @@ public final class C3533o0 extends AbstractC3509e {
                         byteArrayOutputStream = 0;
                     } catch (Throwable th4) {
                         th = th4;
-                        httpURLConnection2 = null;
-                        outputStream = null;
+                        r3 = 0;
+                        r2 = 0;
                         Throwable th5 = th;
-                        if (outputStream != null) {
+                        if (r2 != 0) {
                             try {
-                                outputStream.close();
+                                r2.close();
                             } catch (IOException e8) {
                                 m4426A("Error closing http compressed post connection output stream", e8);
                             }
                         }
-                        if (httpURLConnection2 != null) {
+                        if (r3 != 0) {
                             throw th5;
                         }
-                        httpURLConnection2.disconnect();
+                        r3.disconnect();
                         throw th5;
                     }
                     try {
@@ -574,10 +571,10 @@ public final class C3533o0 extends AbstractC3509e {
                         byteArrayOutputStream.addRequestProperty("Content-Encoding", "gzip");
                         byteArrayOutputStream.setFixedLengthStreamingMode(byteArray.length);
                         byteArrayOutputStream.connect();
-                        outputStream2 = byteArrayOutputStream.getOutputStream();
+                        outputStream = byteArrayOutputStream.getOutputStream();
                         try {
-                            outputStream2.write(byteArray);
-                            outputStream2.close();
+                            outputStream.write(byteArray);
+                            outputStream.close();
                             m4479T(byteArrayOutputStream);
                             int responseCode2 = byteArrayOutputStream.getResponseCode();
                             if (responseCode2 == 200) {
@@ -590,11 +587,11 @@ public final class C3533o0 extends AbstractC3509e {
                         } catch (IOException e9) {
                             e = e9;
                             m4439x("Network compressed POST connection error", e);
-                            url3 = outputStream2;
-                            if (outputStream2 != null) {
+                            url3 = outputStream;
+                            if (outputStream != null) {
                                 try {
-                                    outputStream2.close();
-                                    url3 = outputStream2;
+                                    outputStream.close();
+                                    url3 = outputStream;
                                 } catch (IOException e10) {
                                     IOException iOException = e10;
                                     m4426A("Error closing http compressed post connection output stream", iOException);
@@ -604,35 +601,33 @@ public final class C3533o0 extends AbstractC3509e {
                             if (byteArrayOutputStream != 0) {
                                 byteArrayOutputStream.disconnect();
                             }
-                            if (200 == iM4477O) {
-                            }
                         }
                     } catch (IOException e11) {
                         e = e11;
-                        outputStream2 = null;
+                        outputStream = null;
                         m4439x("Network compressed POST connection error", e);
-                        url3 = outputStream2;
-                        if (outputStream2 != null) {
+                        url3 = outputStream;
+                        if (outputStream != null) {
                         }
                         if (byteArrayOutputStream != 0) {
                         }
-                        if (200 == iM4477O) {
+                        if (200 != iM4477O) {
                         }
                     } catch (Throwable th6) {
                         th = th6;
-                        url3 = 0;
-                        httpURLConnection2 = byteArrayOutputStream;
-                        outputStream = url3;
+                        url3 = null;
+                        r3 = byteArrayOutputStream;
+                        r2 = url3;
                         Throwable th52 = th;
-                        if (outputStream != null) {
+                        if (r2 != 0) {
                         }
-                        if (httpURLConnection2 != null) {
+                        if (r3 != 0) {
                         }
                     }
                 } else {
-                    iM4477O = m4477O(url4, byteArrayOutputStream.toByteArray());
+                    iM4477O = m4477O(r0, byteArrayOutputStream.toByteArray());
                 }
-                if (200 == iM4477O) {
+                if (200 != iM4477O) {
                     m4431b("Batched upload completed. Hits batched", Integer.valueOf(i3));
                     return arrayList2;
                 }
@@ -649,7 +644,7 @@ public final class C3533o0 extends AbstractC3509e {
         }
     }
 
-    /* renamed from: W */
+    /* JADX INFO: renamed from: W */
     public final boolean m4482W() {
         C3180f.m3967b();
         m4444N();

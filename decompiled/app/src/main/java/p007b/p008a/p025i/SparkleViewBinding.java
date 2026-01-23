@@ -5,16 +5,16 @@ import android.widget.ImageView;
 import androidx.annotation.NonNull;
 import androidx.viewbinding.ViewBinding;
 
-/* compiled from: SparkleViewBinding.java */
-/* renamed from: b.a.i.q1, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.a.i.q1, reason: use source file name */
+/* JADX INFO: compiled from: SparkleViewBinding.java */
+/* JADX INFO: loaded from: classes.dex */
 public final class SparkleViewBinding implements ViewBinding {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     @NonNull
     public final View f1144a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     @NonNull
     public final ImageView f1145b;
 

@@ -65,18 +65,18 @@ import p507d0.p592z.p594d.Lambda;
 import p658rx.Observable;
 import p658rx.Subscription;
 
-/* compiled from: WidgetChatListAdapterItemInvite.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetChatListAdapterItemInvite.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetChatListAdapterItemInvite extends WidgetChatListAdapterItemInviteBase {
     private final WidgetChatListAdapterItemInviteBinding binding;
     private String iconUrl;
     private InviteEntry item;
     private Subscription subscription;
 
-    /* compiled from: WidgetChatListAdapterItemInvite.kt */
+    /* JADX INFO: compiled from: WidgetChatListAdapterItemInvite.kt */
     public static abstract class Model {
 
-        /* compiled from: WidgetChatListAdapterItemInvite.kt */
+        /* JADX INFO: compiled from: WidgetChatListAdapterItemInvite.kt */
         public static final /* data */ class Invalid extends Model {
             private final User authorUser;
             private final Channel channel;
@@ -102,17 +102,17 @@ public final class WidgetChatListAdapterItemInvite extends WidgetChatListAdapter
                 return invalid.copy(user, j, channel);
             }
 
-            /* renamed from: component1, reason: from getter */
+            /* JADX INFO: renamed from: component1, reason: from getter */
             public final User getAuthorUser() {
                 return this.authorUser;
             }
 
-            /* renamed from: component2, reason: from getter */
+            /* JADX INFO: renamed from: component2, reason: from getter */
             public final long getMeId() {
                 return this.meId;
             }
 
-            /* renamed from: component3, reason: from getter */
+            /* JADX INFO: renamed from: component3, reason: from getter */
             public final Channel getChannel() {
                 return this.channel;
             }
@@ -163,7 +163,7 @@ public final class WidgetChatListAdapterItemInvite extends WidgetChatListAdapter
             }
         }
 
-        /* compiled from: WidgetChatListAdapterItemInvite.kt */
+        /* JADX INFO: compiled from: WidgetChatListAdapterItemInvite.kt */
         public static final class Loading extends Model {
             public static final Loading INSTANCE = new Loading();
 
@@ -172,7 +172,7 @@ public final class WidgetChatListAdapterItemInvite extends WidgetChatListAdapter
             }
         }
 
-        /* compiled from: WidgetChatListAdapterItemInvite.kt */
+        /* JADX INFO: compiled from: WidgetChatListAdapterItemInvite.kt */
         public static final /* data */ class Resolved extends Model {
             private final User authorUser;
             private final Channel channel;
@@ -219,32 +219,32 @@ public final class WidgetChatListAdapterItemInvite extends WidgetChatListAdapter
                 return resolved.copy(modelInvite, j2, user2, z4, channel2, z3);
             }
 
-            /* renamed from: component1, reason: from getter */
+            /* JADX INFO: renamed from: component1, reason: from getter */
             public final ModelInvite getInvite() {
                 return this.invite;
             }
 
-            /* renamed from: component2, reason: from getter */
+            /* JADX INFO: renamed from: component2, reason: from getter */
             public final long getMeId() {
                 return this.meId;
             }
 
-            /* renamed from: component3, reason: from getter */
+            /* JADX INFO: renamed from: component3, reason: from getter */
             public final User getAuthorUser() {
                 return this.authorUser;
             }
 
-            /* renamed from: component4, reason: from getter */
+            /* JADX INFO: renamed from: component4, reason: from getter */
             public final boolean getIsMemberOfGuild() {
                 return this.isMemberOfGuild;
             }
 
-            /* renamed from: component5, reason: from getter */
+            /* JADX INFO: renamed from: component5, reason: from getter */
             public final Channel getChannel() {
                 return this.channel;
             }
 
-            /* renamed from: component6, reason: from getter */
+            /* JADX INFO: renamed from: component6, reason: from getter */
             public final boolean getShouldAnimateGuildIcon() {
                 return this.shouldAnimateGuildIcon;
             }
@@ -286,21 +286,27 @@ public final class WidgetChatListAdapterItemInvite extends WidgetChatListAdapter
             }
 
             /* JADX WARN: Multi-variable type inference failed */
+            /* JADX WARN: Type inference failed for: r0v11 */
+            /* JADX WARN: Type inference failed for: r0v14 */
+            /* JADX WARN: Type inference failed for: r0v8, types: [int] */
+            /* JADX WARN: Type inference failed for: r3v0 */
+            /* JADX WARN: Type inference failed for: r3v1, types: [int] */
+            /* JADX WARN: Type inference failed for: r3v2 */
             public int hashCode() {
                 ModelInvite modelInvite = this.invite;
                 int iM3a = (C0002b.m3a(this.meId) + ((modelInvite != null ? modelInvite.hashCode() : 0) * 31)) * 31;
                 User user = this.authorUser;
                 int iHashCode = (iM3a + (user != null ? user.hashCode() : 0)) * 31;
                 boolean z2 = this.isMemberOfGuild;
-                int i = z2;
-                if (z2 != 0) {
-                    i = 1;
+                ?? r0 = z2;
+                if (z2) {
+                    r0 = 1;
                 }
-                int i2 = (iHashCode + i) * 31;
+                int i = (iHashCode + r0) * 31;
                 Channel channel = this.channel;
-                int iHashCode2 = (i2 + (channel != null ? channel.hashCode() : 0)) * 31;
+                int iHashCode2 = (i + (channel != null ? channel.hashCode() : 0)) * 31;
                 boolean z3 = this.shouldAnimateGuildIcon;
-                return iHashCode2 + (z3 ? 1 : z3 ? 1 : 0);
+                return iHashCode2 + (z3 ? 1 : z3);
             }
 
             public final boolean isMemberOfGuild() {
@@ -331,7 +337,7 @@ public final class WidgetChatListAdapterItemInvite extends WidgetChatListAdapter
         }
     }
 
-    /* compiled from: WidgetChatListAdapterItemInvite.kt */
+    /* JADX INFO: compiled from: WidgetChatListAdapterItemInvite.kt */
     public static final class ModelProvider {
         public static final ModelProvider INSTANCE = new ModelProvider();
 
@@ -373,8 +379,8 @@ public final class WidgetChatListAdapterItemInvite extends WidgetChatListAdapter
         }
     }
 
-    /* compiled from: WidgetChatListAdapterItemInvite.kt */
-    /* renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemInvite$configureInvalidUI$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemInvite$configureInvalidUI$1 */
+    /* JADX INFO: compiled from: WidgetChatListAdapterItemInvite.kt */
     public static final class ViewOnClickListenerC80891 implements View.OnClickListener {
         public final /* synthetic */ Context $context;
         public final /* synthetic */ boolean $isInviter;
@@ -407,8 +413,8 @@ public final class WidgetChatListAdapterItemInvite extends WidgetChatListAdapter
         }
     }
 
-    /* compiled from: WidgetChatListAdapterItemInvite.kt */
-    /* renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemInvite$configureResolvedUI$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemInvite$configureResolvedUI$2 */
+    /* JADX INFO: compiled from: WidgetChatListAdapterItemInvite.kt */
     public static final class ViewOnClickListenerC80902 implements View.OnClickListener {
         public final /* synthetic */ ModelInvite $invite;
 
@@ -423,8 +429,8 @@ public final class WidgetChatListAdapterItemInvite extends WidgetChatListAdapter
         }
     }
 
-    /* compiled from: WidgetChatListAdapterItemInvite.kt */
-    /* renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemInvite$configureResolvedUI$3 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemInvite$configureResolvedUI$3 */
+    /* JADX INFO: compiled from: WidgetChatListAdapterItemInvite.kt */
     public static final class ViewOnClickListenerC80913 implements View.OnClickListener {
         public final /* synthetic */ ModelInvite $invite;
 
@@ -439,12 +445,12 @@ public final class WidgetChatListAdapterItemInvite extends WidgetChatListAdapter
         }
     }
 
-    /* compiled from: WidgetChatListAdapterItemInvite.kt */
-    /* renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemInvite$configureResolvedUI$4 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemInvite$configureResolvedUI$4 */
+    /* JADX INFO: compiled from: WidgetChatListAdapterItemInvite.kt */
     public static final class C80924 extends Lambda implements Function1<RenderContext, Unit> {
 
-        /* compiled from: WidgetChatListAdapterItemInvite.kt */
-        /* renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemInvite$configureResolvedUI$4$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemInvite$configureResolvedUI$4$1, reason: invalid class name */
+        /* JADX INFO: compiled from: WidgetChatListAdapterItemInvite.kt */
         public static final class AnonymousClass1 extends Lambda implements Function1<View, Unit> {
             public AnonymousClass1() {
                 super(1);
@@ -456,7 +462,7 @@ public final class WidgetChatListAdapterItemInvite extends WidgetChatListAdapter
                 return Unit.f27425a;
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2(View view) {
                 Intrinsics3.checkNotNullParameter(view, "it");
                 WidgetChatListAdapterItemInvite.access$launchHubsEmail(WidgetChatListAdapterItemInvite.this, new WidgetHubEmailViewModel2(null, 0, null, 7, null));
@@ -473,15 +479,15 @@ public final class WidgetChatListAdapterItemInvite extends WidgetChatListAdapter
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(RenderContext renderContext) {
             Intrinsics3.checkNotNullParameter(renderContext, "$receiver");
             renderContext.m8423b("onClick", new AnonymousClass1());
         }
     }
 
-    /* compiled from: WidgetChatListAdapterItemInvite.kt */
-    /* renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemInvite$onConfigure$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemInvite$onConfigure$1 */
+    /* JADX INFO: compiled from: WidgetChatListAdapterItemInvite.kt */
     public static final /* synthetic */ class C80931 extends FunctionReferenceImpl implements Function1<Model, Unit> {
         public C80931(WidgetChatListAdapterItemInvite widgetChatListAdapterItemInvite) {
             super(1, widgetChatListAdapterItemInvite, WidgetChatListAdapterItemInvite.class, "configureUI", "configureUI(Lcom/discord/widgets/chat/list/adapter/WidgetChatListAdapterItemInvite$Model;)V", 0);
@@ -493,15 +499,15 @@ public final class WidgetChatListAdapterItemInvite extends WidgetChatListAdapter
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Model model) {
             Intrinsics3.checkNotNullParameter(model, "p1");
             WidgetChatListAdapterItemInvite.access$configureUI((WidgetChatListAdapterItemInvite) this.receiver, model);
         }
     }
 
-    /* compiled from: WidgetChatListAdapterItemInvite.kt */
-    /* renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemInvite$onConfigure$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemInvite$onConfigure$2 */
+    /* JADX INFO: compiled from: WidgetChatListAdapterItemInvite.kt */
     public static final class C80942 extends Lambda implements Function1<Error, Unit> {
         public C80942() {
             super(1);
@@ -513,15 +519,15 @@ public final class WidgetChatListAdapterItemInvite extends WidgetChatListAdapter
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Error error) {
             Intrinsics3.checkNotNullParameter(error, "it");
             WidgetChatListAdapterItemInvite.access$configureInvalidUI(WidgetChatListAdapterItemInvite.this, null);
         }
     }
 
-    /* compiled from: WidgetChatListAdapterItemInvite.kt */
-    /* renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemInvite$onConfigure$3 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemInvite$onConfigure$3 */
+    /* JADX INFO: compiled from: WidgetChatListAdapterItemInvite.kt */
     public static final class C80953 extends Lambda implements Function1<Subscription, Unit> {
         public C80953() {
             super(1);
@@ -533,7 +539,7 @@ public final class WidgetChatListAdapterItemInvite extends WidgetChatListAdapter
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Subscription subscription) {
             Intrinsics3.checkNotNullParameter(subscription, "it");
             WidgetChatListAdapterItemInvite.access$setSubscription$p(WidgetChatListAdapterItemInvite.this, subscription);

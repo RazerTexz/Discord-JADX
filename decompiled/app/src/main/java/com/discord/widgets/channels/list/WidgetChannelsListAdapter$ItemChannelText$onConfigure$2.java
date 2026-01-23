@@ -5,8 +5,8 @@ import com.discord.widgets.channels.list.WidgetChannelsListAdapter;
 import com.discord.widgets.channels.list.items.ChannelListItem;
 import com.discord.widgets.channels.list.items.ChannelListItemTextChannel;
 
-/* compiled from: WidgetChannelsListAdapter.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetChannelsListAdapter.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetChannelsListAdapter$ItemChannelText$onConfigure$2 implements View.OnClickListener {
     public final /* synthetic */ ChannelListItem $data;
     public final /* synthetic */ ChannelListItemTextChannel $item;

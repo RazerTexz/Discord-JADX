@@ -9,34 +9,34 @@ import androidx.annotation.NonNull;
 import androidx.viewbinding.ViewBinding;
 import com.google.android.material.chip.Chip;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public final class StickerStoreHeaderItemBinding implements ViewBinding {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     @NonNull
     public final LinearLayout f15281a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     @NonNull
     public final FrameLayout f15282b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     @NonNull
     public final RelativeLayout f15283c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     @NonNull
     public final TextView f15284d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     @NonNull
     public final FrameLayout f15285e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     @NonNull
     public final TextView f15286f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     @NonNull
     public final TextView f15287g;
 

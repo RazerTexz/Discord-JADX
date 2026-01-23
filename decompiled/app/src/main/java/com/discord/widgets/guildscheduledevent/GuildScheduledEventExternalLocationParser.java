@@ -16,16 +16,16 @@ import p007b.p100d.p104b.p105a.outline;
 import p507d0.LazyJVM;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: GuildScheduledEventExternalLocationParser.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: GuildScheduledEventExternalLocationParser.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class GuildScheduledEventExternalLocationParser {
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private static final Lazy PARSER$delegate = LazyJVM.lazy(GuildScheduledEventExternalLocationParser2.INSTANCE);
     private Cache cache = new Cache("", "");
 
-    /* compiled from: GuildScheduledEventExternalLocationParser.kt */
+    /* JADX INFO: compiled from: GuildScheduledEventExternalLocationParser.kt */
     public static final /* data */ class Cache {
         private final String location;
         private final CharSequence output;
@@ -47,12 +47,12 @@ public final class GuildScheduledEventExternalLocationParser {
             return cache.copy(str, charSequence);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final String getLocation() {
             return this.location;
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final CharSequence getOutput() {
             return this.output;
         }
@@ -97,7 +97,7 @@ public final class GuildScheduledEventExternalLocationParser {
         }
     }
 
-    /* compiled from: GuildScheduledEventExternalLocationParser.kt */
+    /* JADX INFO: compiled from: GuildScheduledEventExternalLocationParser.kt */
     public static final class Companion {
         private Companion() {
         }

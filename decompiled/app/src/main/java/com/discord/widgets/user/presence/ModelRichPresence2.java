@@ -9,9 +9,9 @@ import p637j0.p641k.Func1;
 import p637j0.p642l.p647e.ScalarSynchronousObservable;
 import p658rx.Observable;
 
-/* compiled from: ModelRichPresence.kt */
-/* renamed from: com.discord.widgets.user.presence.ModelRichPresence$Companion$get$1, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: com.discord.widgets.user.presence.ModelRichPresence$Companion$get$1, reason: use source file name */
+/* JADX INFO: compiled from: ModelRichPresence.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class ModelRichPresence2<T, R> implements Func1<Presence, Observable<? extends ModelRichPresence>> {
     public static final ModelRichPresence2 INSTANCE = new ModelRichPresence2();
 
@@ -20,7 +20,7 @@ public final class ModelRichPresence2<T, R> implements Func1<Presence, Observabl
         return call2(presence);
     }
 
-    /* renamed from: call, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
     public final Observable<? extends ModelRichPresence> call2(Presence presence) {
         Long applicationId;
         if (presence == null) {

@@ -24,22 +24,22 @@ import p507d0.p580t.Sets5;
 import p507d0.p580t._Arrays;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ChainedMemberScope.kt */
-/* renamed from: d0.e0.p.d.m0.k.a0.b, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.k.a0.b, reason: use source file name */
+/* JADX INFO: compiled from: ChainedMemberScope.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class ChainedMemberScope implements MemberScope3 {
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static final a f24333b = new a(null);
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final String f24334c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final MemberScope3[] f24335d;
 
-    /* compiled from: ChainedMemberScope.kt */
-    /* renamed from: d0.e0.p.d.m0.k.a0.b$a */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.k.a0.b$a */
+    /* JADX INFO: compiled from: ChainedMemberScope.kt */
     public static final class a {
         public a(DefaultConstructorMarker defaultConstructorMarker) {
         }

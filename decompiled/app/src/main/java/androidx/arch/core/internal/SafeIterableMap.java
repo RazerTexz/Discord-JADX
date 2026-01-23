@@ -7,8 +7,8 @@ import java.util.Map;
 import java.util.WeakHashMap;
 import p007b.p100d.p104b.p105a.outline;
 
+/* JADX INFO: loaded from: classes.dex */
 @RestrictTo({RestrictTo.Scope.LIBRARY_GROUP_PREFIX})
-/* loaded from: classes.dex */
 public class SafeIterableMap<K, V> implements Iterable<Map.Entry<K, V>> {
     private Entry<K, V> mEnd;
     private WeakHashMap<SupportRemove<K, V>, Boolean> mIterators = new WeakHashMap<>();

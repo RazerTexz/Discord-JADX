@@ -1,7 +1,6 @@
 package com.discord.utilities.extensions;
 
 import android.content.Context;
-import android.content.res.Resources;
 import androidx.annotation.ColorInt;
 import androidx.annotation.DimenRes;
 import com.discord.C5419R;
@@ -17,9 +16,9 @@ import kotlin.Unit;
 import kotlin.jvm.functions.Function1;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: SimpleDraweeViewExtensions.kt */
-/* renamed from: com.discord.utilities.extensions.SimpleDraweeViewExtensionsKt, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.utilities.extensions.SimpleDraweeViewExtensionsKt, reason: use source file name */
+/* JADX INFO: compiled from: SimpleDraweeViewExtensions.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class SimpleDraweeViewExtensions {
     public static final void configureCreator(SimpleDraweeView simpleDraweeView, UserGuildMember userGuildMember) {
         Intrinsics3.checkNotNullParameter(simpleDraweeView, "$this$configureCreator");
@@ -29,7 +28,7 @@ public final class SimpleDraweeViewExtensions {
         }
     }
 
-    public static final void setAvatar(SimpleDraweeView simpleDraweeView, User user, boolean z2, @DimenRes int i, GuildMember guildMember) throws Resources.NotFoundException {
+    public static final void setAvatar(SimpleDraweeView simpleDraweeView, User user, boolean z2, @DimenRes int i, GuildMember guildMember) {
         Intrinsics3.checkNotNullParameter(simpleDraweeView, "$this$setAvatar");
         int dimensionPixelSize = simpleDraweeView.getResources().getDimensionPixelSize(i);
         String forGuildMemberOrUser = IconUtils.INSTANCE.getForGuildMemberOrUser(user, guildMember, dimensionPixelSize > 0 ? Integer.valueOf(IconUtils.getMediaProxySize(dimensionPixelSize)) : null, z2);
@@ -39,7 +38,7 @@ public final class SimpleDraweeViewExtensions {
         }
     }
 
-    public static /* synthetic */ void setAvatar$default(SimpleDraweeView simpleDraweeView, User user, boolean z2, int i, GuildMember guildMember, int i2, Object obj) throws Resources.NotFoundException {
+    public static /* synthetic */ void setAvatar$default(SimpleDraweeView simpleDraweeView, User user, boolean z2, int i, GuildMember guildMember, int i2, Object obj) {
         if ((i2 & 2) != 0) {
             z2 = false;
         }

@@ -6,19 +6,19 @@ import androidx.annotation.NonNull;
 import com.otaliastudios.cameraview.CameraView;
 import p007b.p452o.p453a.p466q.GestureFinder;
 
-/* compiled from: TapGestureFinder.java */
-/* renamed from: b.o.a.q.g, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.o.a.q.g, reason: use source file name */
+/* JADX INFO: compiled from: TapGestureFinder.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class TapGestureFinder extends GestureFinder {
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public GestureDetector f14097d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public boolean f14098e;
 
-    /* compiled from: TapGestureFinder.java */
-    /* renamed from: b.o.a.q.g$a */
+    /* JADX INFO: renamed from: b.o.a.q.g$a */
+    /* JADX INFO: compiled from: TapGestureFinder.java */
     public class a extends GestureDetector.SimpleOnGestureListener {
         public a() {
         }
@@ -47,12 +47,12 @@ public class TapGestureFinder extends GestureFinder {
     }
 
     @Override // p007b.p452o.p453a.p466q.GestureFinder
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public float mo7393b(float f, float f2, float f3) {
         return 0.0f;
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public boolean m7396c(@NonNull MotionEvent motionEvent) {
         if (motionEvent.getAction() == 0) {
             this.f14098e = false;

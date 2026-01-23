@@ -2,9 +2,9 @@ package p007b.p452o.p453a.p454m;
 
 import androidx.annotation.NonNull;
 
-/* compiled from: AudioCodec.java */
-/* renamed from: b.o.a.m.b, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.o.a.m.b, reason: use source file name */
+/* JADX INFO: compiled from: AudioCodec.java */
+/* JADX INFO: loaded from: classes3.dex */
 public enum AudioCodec implements Control {
     DEVICE_DEFAULT(0),
     AAC(1),
@@ -18,7 +18,7 @@ public enum AudioCodec implements Control {
     }
 
     @NonNull
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public static AudioCodec m7168f(int i) {
         AudioCodec[] audioCodecArrValues = values();
         for (int i2 = 0; i2 < 4; i2++) {
@@ -30,7 +30,7 @@ public enum AudioCodec implements Control {
         return DEVICE_DEFAULT;
     }
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public int m7169g() {
         return this.value;
     }

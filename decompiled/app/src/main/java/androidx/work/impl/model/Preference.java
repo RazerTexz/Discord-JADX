@@ -7,9 +7,9 @@ import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
+/* JADX INFO: loaded from: classes.dex */
 @Entity
 @RestrictTo({RestrictTo.Scope.LIBRARY_GROUP})
-/* loaded from: classes.dex */
 public class Preference {
 
     @NonNull

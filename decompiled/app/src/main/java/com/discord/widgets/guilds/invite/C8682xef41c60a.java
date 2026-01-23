@@ -6,9 +6,9 @@ import com.discord.widgets.guilds.invite.WidgetGuildInviteShareViewModel;
 import java.util.Objects;
 import p637j0.p641k.Func1;
 
-/* compiled from: ObservableExtensions.kt */
-/* renamed from: com.discord.widgets.guilds.invite.WidgetGuildInviteShareCompact$onViewBoundOrOnResume$$inlined$filterIs$2 */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.guilds.invite.WidgetGuildInviteShareCompact$onViewBoundOrOnResume$$inlined$filterIs$2 */
+/* JADX INFO: compiled from: ObservableExtensions.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class C8682xef41c60a<T, R> implements Func1<Object, T> {
     public static final C8682xef41c60a INSTANCE = new C8682xef41c60a();
 

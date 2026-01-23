@@ -4,8 +4,8 @@ import com.discord.widgets.chat.MessageManager;
 import java.util.Locale;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: StickerPickerInlineViewModel.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: StickerPickerInlineViewModel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class StickerPickerInlineViewModel extends StickerPickerViewModel {
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public StickerPickerInlineViewModel(Locale locale, MessageManager messageManager, long j) {

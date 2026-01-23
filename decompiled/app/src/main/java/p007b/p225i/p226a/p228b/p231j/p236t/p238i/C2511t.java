@@ -21,41 +21,41 @@ import p007b.p225i.p226a.p228b.p231j.p239u.SynchronizationGuard;
 import p007b.p225i.p226a.p228b.p231j.p240v.Clock3;
 import p007b.p225i.p226a.p228b.p231j.p241w.PriorityMapping;
 
-/* compiled from: SQLiteEventStore.java */
+/* JADX INFO: renamed from: b.i.a.b.j.t.i.t */
+/* JADX INFO: compiled from: SQLiteEventStore.java */
+/* JADX INFO: loaded from: classes3.dex */
 @WorkerThread
-/* renamed from: b.i.a.b.j.t.i.t */
-/* loaded from: classes3.dex */
 public class C2511t implements EventStore, SynchronizationGuard {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static final Encoding2 f5441j = new Encoding2("proto");
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final SchemaManager5 f5442k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final Clock3 f5443l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public final Clock3 f5444m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public final EventStoreConfig f5445n;
 
-    /* compiled from: SQLiteEventStore.java */
-    /* renamed from: b.i.a.b.j.t.i.t$b */
+    /* JADX INFO: renamed from: b.i.a.b.j.t.i.t$b */
+    /* JADX INFO: compiled from: SQLiteEventStore.java */
     public interface b<T, U> {
         U apply(T t);
     }
 
-    /* compiled from: SQLiteEventStore.java */
-    /* renamed from: b.i.a.b.j.t.i.t$c */
+    /* JADX INFO: renamed from: b.i.a.b.j.t.i.t$c */
+    /* JADX INFO: compiled from: SQLiteEventStore.java */
     public static class c {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final String f5446a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final String f5447b;
 
         public c(String str, String str2, a aVar) {
@@ -64,10 +64,10 @@ public class C2511t implements EventStore, SynchronizationGuard {
         }
     }
 
-    /* compiled from: SQLiteEventStore.java */
-    /* renamed from: b.i.a.b.j.t.i.t$d */
+    /* JADX INFO: renamed from: b.i.a.b.j.t.i.t$d */
+    /* JADX INFO: compiled from: SQLiteEventStore.java */
     public interface d<T> {
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         T mo2403a();
     }
 
@@ -78,7 +78,7 @@ public class C2511t implements EventStore, SynchronizationGuard {
         this.f5445n = eventStoreConfig;
     }
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public static String m2404f(Iterable<PersistedEvent> iterable) {
         StringBuilder sb = new StringBuilder("(");
         Iterator<PersistedEvent> it = iterable.iterator();
@@ -92,7 +92,7 @@ public class C2511t implements EventStore, SynchronizationGuard {
         return sb.toString();
     }
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public static <T> T m2405n(Cursor cursor, b<Cursor, T> bVar) {
         try {
             return bVar.apply(cursor);
@@ -102,7 +102,7 @@ public class C2511t implements EventStore, SynchronizationGuard {
     }
 
     @Override // p007b.p225i.p226a.p228b.p231j.p239u.SynchronizationGuard
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public <T> T mo2406a(SynchronizationGuard.a<T> aVar) {
         SQLiteDatabase sQLiteDatabaseM2407b = m2407b();
         m2410e(new C2504m(sQLiteDatabaseM2407b), C2505n.f5433a);
@@ -117,7 +117,7 @@ public class C2511t implements EventStore, SynchronizationGuard {
 
     @Override // p007b.p225i.p226a.p228b.p231j.p236t.p238i.EventStore
     @Nullable
-    /* renamed from: a0 */
+    /* JADX INFO: renamed from: a0 */
     public PersistedEvent mo2394a0(TransportContext transportContext, EventInternal eventInternal) {
         AnimatableValueParser.m489Y("SQLiteEventStore", "Storing event with priority=%s, name=%s for destination %s", transportContext.mo2350d(), eventInternal.mo2340g(), transportContext.mo2348b());
         long jLongValue = ((Long) m2409d(new C2510s(this, transportContext, eventInternal))).longValue();
@@ -128,7 +128,7 @@ public class C2511t implements EventStore, SynchronizationGuard {
     }
 
     @VisibleForTesting
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public SQLiteDatabase m2407b() {
         SchemaManager5 schemaManager5 = this.f5442k;
         schemaManager5.getClass();
@@ -136,7 +136,7 @@ public class C2511t implements EventStore, SynchronizationGuard {
     }
 
     @Nullable
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final Long m2408c(SQLiteDatabase sQLiteDatabase, TransportContext transportContext) {
         StringBuilder sb = new StringBuilder("backend_name = ? and priority = ?");
         ArrayList arrayList = new ArrayList(Arrays.asList(transportContext.mo2348b(), String.valueOf(PriorityMapping.m2414a(transportContext.mo2350d()))));
@@ -157,7 +157,7 @@ public class C2511t implements EventStore, SynchronizationGuard {
         this.f5442k.close();
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final <T> T m2409d(b<SQLiteDatabase, T> bVar) {
         SQLiteDatabase sQLiteDatabaseM2407b = m2407b();
         sQLiteDatabaseM2407b.beginTransaction();
@@ -170,14 +170,14 @@ public class C2511t implements EventStore, SynchronizationGuard {
         }
     }
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final <T> T m2410e(d<T> dVar, b<Throwable, T> bVar) {
         long jMo2413a = this.f5444m.mo2413a();
         while (true) {
             try {
                 return dVar.mo2403a();
             } catch (SQLiteDatabaseLockedException e) {
-                if (this.f5444m.mo2413a() >= this.f5445n.mo2386a() + jMo2413a) {
+                if (this.f5444m.mo2413a() >= ((long) this.f5445n.mo2386a()) + jMo2413a) {
                     return bVar.apply(e);
                 }
                 SystemClock.sleep(50L);
@@ -186,7 +186,7 @@ public class C2511t implements EventStore, SynchronizationGuard {
     }
 
     @Override // p007b.p225i.p226a.p228b.p231j.p236t.p238i.EventStore
-    /* renamed from: h0 */
+    /* JADX INFO: renamed from: h0 */
     public long mo2395h0(TransportContext transportContext) {
         Cursor cursorRawQuery = m2407b().rawQuery("SELECT next_request_ms FROM transport_contexts WHERE backend_name = ? and priority = ?", new String[]{transportContext.mo2348b(), String.valueOf(PriorityMapping.m2414a(transportContext.mo2350d()))});
         try {
@@ -200,7 +200,7 @@ public class C2511t implements EventStore, SynchronizationGuard {
     }
 
     @Override // p007b.p225i.p226a.p228b.p231j.p236t.p238i.EventStore
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public int mo2396l() {
         long jMo2413a = this.f5443l.mo2413a() - this.f5445n.mo2387b();
         SQLiteDatabase sQLiteDatabaseM2407b = m2407b();
@@ -217,7 +217,7 @@ public class C2511t implements EventStore, SynchronizationGuard {
     }
 
     @Override // p007b.p225i.p226a.p228b.p231j.p236t.p238i.EventStore
-    /* renamed from: l0 */
+    /* JADX INFO: renamed from: l0 */
     public boolean mo2397l0(TransportContext transportContext) {
         SQLiteDatabase sQLiteDatabaseM2407b = m2407b();
         sQLiteDatabaseM2407b.beginTransaction();
@@ -234,7 +234,7 @@ public class C2511t implements EventStore, SynchronizationGuard {
     }
 
     @Override // p007b.p225i.p226a.p228b.p231j.p236t.p238i.EventStore
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public void mo2398m(Iterable<PersistedEvent> iterable) {
         if (iterable.iterator().hasNext()) {
             StringBuilder sbM833U = outline.m833U("DELETE FROM events WHERE _id in ");
@@ -244,7 +244,7 @@ public class C2511t implements EventStore, SynchronizationGuard {
     }
 
     @Override // p007b.p225i.p226a.p228b.p231j.p236t.p238i.EventStore
-    /* renamed from: n0 */
+    /* JADX INFO: renamed from: n0 */
     public void mo2399n0(Iterable<PersistedEvent> iterable) {
         if (iterable.iterator().hasNext()) {
             StringBuilder sbM833U = outline.m833U("UPDATE events SET num_attempts = num_attempts + 1 WHERE _id in ");
@@ -263,19 +263,19 @@ public class C2511t implements EventStore, SynchronizationGuard {
     }
 
     @Override // p007b.p225i.p226a.p228b.p231j.p236t.p238i.EventStore
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     public Iterable<PersistedEvent> mo2400r(TransportContext transportContext) {
         return (Iterable) m2409d(new C2501j(this, transportContext));
     }
 
     @Override // p007b.p225i.p226a.p228b.p231j.p236t.p238i.EventStore
-    /* renamed from: v */
+    /* JADX INFO: renamed from: v */
     public void mo2401v(TransportContext transportContext, long j) {
         m2409d(new C2500i(j, transportContext));
     }
 
     @Override // p007b.p225i.p226a.p228b.p231j.p236t.p238i.EventStore
-    /* renamed from: z */
+    /* JADX INFO: renamed from: z */
     public Iterable<TransportContext> mo2402z() {
         SQLiteDatabase sQLiteDatabaseM2407b = m2407b();
         sQLiteDatabaseM2407b.beginTransaction();

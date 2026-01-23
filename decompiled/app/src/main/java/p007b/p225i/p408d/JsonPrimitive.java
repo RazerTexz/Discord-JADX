@@ -5,12 +5,12 @@ import java.math.BigInteger;
 import java.util.Objects;
 import p007b.p225i.p408d.p410q.LazilyParsedNumber;
 
-/* compiled from: JsonPrimitive.java */
-/* renamed from: b.i.d.k, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.d.k, reason: use source file name */
+/* JADX INFO: compiled from: JsonPrimitive.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class JsonPrimitive extends JsonElement {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final Object f13107a;
 
     public JsonPrimitive(Boolean bool) {
@@ -18,7 +18,7 @@ public final class JsonPrimitive extends JsonElement {
         this.f13107a = bool;
     }
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static boolean m6857j(JsonPrimitive jsonPrimitive) {
         Object obj = jsonPrimitive.f13107a;
         if (obj instanceof Number) {
@@ -31,7 +31,7 @@ public final class JsonPrimitive extends JsonElement {
     }
 
     @Override // com.google.gson.JsonElement
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public int mo6854c() {
         return this.f13107a instanceof Number ? m6859i().intValue() : Integer.parseInt(mo6855g());
     }
@@ -63,13 +63,13 @@ public final class JsonPrimitive extends JsonElement {
     }
 
     @Override // com.google.gson.JsonElement
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public String mo6855g() {
         Object obj = this.f13107a;
         return obj instanceof Number ? m6859i().toString() : obj instanceof Boolean ? ((Boolean) obj).toString() : (String) obj;
     }
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public boolean m6858h() {
         Object obj = this.f13107a;
         return obj instanceof Boolean ? ((Boolean) obj).booleanValue() : Boolean.parseBoolean(mo6855g());
@@ -92,7 +92,7 @@ public final class JsonPrimitive extends JsonElement {
         return (int) ((jDoubleToLongBits >>> 32) ^ jDoubleToLongBits);
     }
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public Number m6859i() {
         Object obj = this.f13107a;
         return obj instanceof String ? new LazilyParsedNumber((String) this.f13107a) : (Number) obj;

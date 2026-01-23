@@ -9,9 +9,9 @@ import androidx.room.Query;
 import androidx.work.Data;
 import java.util.List;
 
+/* JADX INFO: loaded from: classes.dex */
 @Dao
 @RestrictTo({RestrictTo.Scope.LIBRARY_GROUP})
-/* loaded from: classes.dex */
 public interface WorkProgressDao {
     @Query("DELETE from WorkProgress where work_spec_id=:workSpecId")
     void delete(@NonNull String str);

@@ -5,9 +5,9 @@ import kotlin.Unit;
 import kotlin.coroutines.Continuation;
 import p659s.p660a.Job2;
 
-/* compiled from: CoroutineLiveData.kt */
-/* renamed from: androidx.lifecycle.LiveDataScope, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: androidx.lifecycle.LiveDataScope, reason: use source file name */
+/* JADX INFO: compiled from: CoroutineLiveData.kt */
+/* JADX INFO: loaded from: classes.dex */
 public interface CoroutineLiveData7<T> {
     Object emit(T t, Continuation<? super Unit> continuation);
 

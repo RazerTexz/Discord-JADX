@@ -9,12 +9,12 @@ import androidx.view.MediatorLiveData;
 import androidx.view.Observer;
 import androidx.work.impl.utils.taskexecutor.TaskExecutor;
 
+/* JADX INFO: loaded from: classes.dex */
 @RestrictTo({RestrictTo.Scope.LIBRARY_GROUP})
-/* loaded from: classes.dex */
 public class LiveDataUtils {
 
     /* JADX INFO: Add missing generic type declarations: [In] */
-    /* renamed from: androidx.work.impl.utils.LiveDataUtils$1 */
+    /* JADX INFO: renamed from: androidx.work.impl.utils.LiveDataUtils$1 */
     public class C07751<In> implements Observer<In> {
         public Out mCurrentOutput = null;
         public final /* synthetic */ Object val$lock;
@@ -22,7 +22,7 @@ public class LiveDataUtils {
         public final /* synthetic */ MediatorLiveData val$outputLiveData;
         public final /* synthetic */ TaskExecutor val$workTaskExecutor;
 
-        /* renamed from: androidx.work.impl.utils.LiveDataUtils$1$1, reason: invalid class name */
+        /* JADX INFO: renamed from: androidx.work.impl.utils.LiveDataUtils$1$1, reason: invalid class name */
         public class AnonymousClass1 implements Runnable {
             public final /* synthetic */ Object val$input;
 

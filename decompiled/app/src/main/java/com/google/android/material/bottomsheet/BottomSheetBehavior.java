@@ -44,7 +44,7 @@ import java.util.HashMap;
 import java.util.Map;
 import p007b.p100d.p104b.p105a.outline;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public class BottomSheetBehavior<V extends View> extends CoordinatorLayout.Behavior<V> {
     private static final int CORNER_ANIMATION_DURATION = 500;
     private static final int DEF_STYLE_RES = C10817R.style.Widget_Design_BottomSheet_Modal;
@@ -142,7 +142,7 @@ public class BottomSheetBehavior<V extends View> extends CoordinatorLayout.Behav
         public boolean skipCollapsed;
         public final int state;
 
-        /* renamed from: com.google.android.material.bottomsheet.BottomSheetBehavior$SavedState$a */
+        /* JADX INFO: renamed from: com.google.android.material.bottomsheet.BottomSheetBehavior$SavedState$a */
         public static class C10852a implements Parcelable.ClassLoaderCreator<SavedState> {
             @Override // android.os.Parcelable.ClassLoaderCreator
             @NonNull
@@ -207,13 +207,13 @@ public class BottomSheetBehavior<V extends View> extends CoordinatorLayout.Behav
     public @interface State {
     }
 
-    /* renamed from: com.google.android.material.bottomsheet.BottomSheetBehavior$a */
+    /* JADX INFO: renamed from: com.google.android.material.bottomsheet.BottomSheetBehavior$a */
     public class RunnableC10853a implements Runnable {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public final /* synthetic */ View f20924j;
 
-        /* renamed from: k */
+        /* JADX INFO: renamed from: k */
         public final /* synthetic */ int f20925k;
 
         public RunnableC10853a(View view, int i) {
@@ -227,7 +227,7 @@ public class BottomSheetBehavior<V extends View> extends CoordinatorLayout.Behav
         }
     }
 
-    /* renamed from: com.google.android.material.bottomsheet.BottomSheetBehavior$b */
+    /* JADX INFO: renamed from: com.google.android.material.bottomsheet.BottomSheetBehavior$b */
     public class C10854b implements ValueAnimator.AnimatorUpdateListener {
         public C10854b() {
         }
@@ -241,7 +241,7 @@ public class BottomSheetBehavior<V extends View> extends CoordinatorLayout.Behav
         }
     }
 
-    /* renamed from: com.google.android.material.bottomsheet.BottomSheetBehavior$c */
+    /* JADX INFO: renamed from: com.google.android.material.bottomsheet.BottomSheetBehavior$c */
     public class C10855c implements ViewUtils.OnApplyWindowInsetsListener {
         public C10855c() {
         }
@@ -254,7 +254,7 @@ public class BottomSheetBehavior<V extends View> extends CoordinatorLayout.Behav
         }
     }
 
-    /* renamed from: com.google.android.material.bottomsheet.BottomSheetBehavior$d */
+    /* JADX INFO: renamed from: com.google.android.material.bottomsheet.BottomSheetBehavior$d */
     public class C10856d extends ViewDragHelper.Callback {
         public C10856d() {
         }
@@ -386,10 +386,10 @@ public class BottomSheetBehavior<V extends View> extends CoordinatorLayout.Behav
         }
     }
 
-    /* renamed from: com.google.android.material.bottomsheet.BottomSheetBehavior$e */
+    /* JADX INFO: renamed from: com.google.android.material.bottomsheet.BottomSheetBehavior$e */
     public class C10857e implements AccessibilityViewCommand {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final /* synthetic */ int f20930a;
 
         public C10857e(int i) {
@@ -403,16 +403,16 @@ public class BottomSheetBehavior<V extends View> extends CoordinatorLayout.Behav
         }
     }
 
-    /* renamed from: com.google.android.material.bottomsheet.BottomSheetBehavior$f */
+    /* JADX INFO: renamed from: com.google.android.material.bottomsheet.BottomSheetBehavior$f */
     public class RunnableC10858f implements Runnable {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public final View f20932j;
 
-        /* renamed from: k */
+        /* JADX INFO: renamed from: k */
         public boolean f20933k;
 
-        /* renamed from: l */
+        /* JADX INFO: renamed from: l */
         public int f20934l;
 
         public RunnableC10858f(View view, int i) {

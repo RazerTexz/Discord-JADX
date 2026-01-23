@@ -11,22 +11,22 @@ import com.discord.widgets.guildscheduledevent.GuildScheduledEventItemView;
 import com.google.android.material.appbar.AppBarLayout;
 import com.google.android.material.button.MaterialButton;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public final class WidgetGuildInvitePageBinding implements ViewBinding {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     @NonNull
     public final ConstraintLayout f16794a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     @NonNull
     public final MaterialButton f16795b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     @NonNull
     public final GuildScheduledEventItemView f16796c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     @NonNull
     public final WidgetInviteInfo f16797d;
 

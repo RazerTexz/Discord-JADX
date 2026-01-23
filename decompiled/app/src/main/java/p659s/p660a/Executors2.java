@@ -3,12 +3,12 @@ package p659s.p660a;
 import java.util.concurrent.Future;
 import p007b.p100d.p104b.p105a.outline;
 
-/* compiled from: Executors.kt */
-/* renamed from: s.a.l0, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: s.a.l0, reason: use source file name */
+/* JADX INFO: compiled from: Executors.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class Executors2 implements Job2 {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final Future<?> f27873j;
 
     public Executors2(Future<?> future) {

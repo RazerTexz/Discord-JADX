@@ -70,20 +70,20 @@ import p507d0.p592z.p594d.Lambda;
 import p658rx.Observable;
 import p658rx.functions.Action2;
 
-/* compiled from: WidgetVoiceChannelSettings.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: WidgetVoiceChannelSettings.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class WidgetVoiceChannelSettings extends AppFragment {
     public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetVoiceChannelSettings.class, "binding", "getBinding()Lcom/discord/databinding/WidgetVoiceChannelSettingsBinding;", 0)};
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private static final String INTENT_EXTRA_CHANNEL_ID = "INTENT_EXTRA_CHANNEL_ID";
 
-    /* renamed from: binding$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
     private final StatefulViews state;
 
-    /* compiled from: WidgetVoiceChannelSettings.kt */
+    /* JADX INFO: compiled from: WidgetVoiceChannelSettings.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -100,10 +100,10 @@ public final class WidgetVoiceChannelSettings extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetVoiceChannelSettings.kt */
+    /* JADX INFO: compiled from: WidgetVoiceChannelSettings.kt */
     public static final /* data */ class Model {
 
-        /* renamed from: Companion, reason: from kotlin metadata */
+        /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
         public static final Companion INSTANCE = new Companion(null);
         private final boolean canManageChannel;
         private final boolean canManagePermissions;
@@ -112,7 +112,7 @@ public final class WidgetVoiceChannelSettings extends AppFragment {
         private final int maxBitrate;
         private final List<ModelVoiceRegion> regions;
 
-        /* compiled from: WidgetVoiceChannelSettings.kt */
+        /* JADX INFO: compiled from: WidgetVoiceChannelSettings.kt */
         public static final class Companion {
             private Companion() {
             }
@@ -146,6 +146,7 @@ public final class WidgetVoiceChannelSettings extends AppFragment {
             this.guildID = j;
         }
 
+        /* JADX WARN: Multi-variable type inference failed */
         public static /* synthetic */ Model copy$default(Model model, Channel channel, boolean z2, boolean z3, int i, List list, long j, int i2, Object obj) {
             if ((i2 & 1) != 0) {
                 channel = model.channel;
@@ -172,22 +173,22 @@ public final class WidgetVoiceChannelSettings extends AppFragment {
             return model.copy(channel, z4, z5, i3, list2, j);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final Channel getChannel() {
             return this.channel;
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final boolean getCanManageChannel() {
             return this.canManageChannel;
         }
 
-        /* renamed from: component3, reason: from getter */
+        /* JADX INFO: renamed from: component3, reason: from getter */
         public final boolean getCanManagePermissions() {
             return this.canManagePermissions;
         }
 
-        /* renamed from: component4, reason: from getter */
+        /* JADX INFO: renamed from: component4, reason: from getter */
         public final int getMaxBitrate() {
             return this.maxBitrate;
         }
@@ -196,7 +197,7 @@ public final class WidgetVoiceChannelSettings extends AppFragment {
             return this.regions;
         }
 
-        /* renamed from: component6, reason: from getter */
+        /* JADX INFO: renamed from: component6, reason: from getter */
         public final long getGuildID() {
             return this.guildID;
         }
@@ -243,19 +244,25 @@ public final class WidgetVoiceChannelSettings extends AppFragment {
         }
 
         /* JADX WARN: Multi-variable type inference failed */
+        /* JADX WARN: Type inference failed for: r2v1, types: [int] */
+        /* JADX WARN: Type inference failed for: r2v5 */
+        /* JADX WARN: Type inference failed for: r2v6 */
+        /* JADX WARN: Type inference failed for: r3v0 */
+        /* JADX WARN: Type inference failed for: r3v1, types: [int] */
+        /* JADX WARN: Type inference failed for: r3v2 */
         public int hashCode() {
             Channel channel = this.channel;
             int iHashCode = (channel != null ? channel.hashCode() : 0) * 31;
             boolean z2 = this.canManageChannel;
-            int i = z2;
-            if (z2 != 0) {
-                i = 1;
+            ?? r2 = z2;
+            if (z2) {
+                r2 = 1;
             }
-            int i2 = (iHashCode + i) * 31;
+            int i = (iHashCode + r2) * 31;
             boolean z3 = this.canManagePermissions;
-            int i3 = (((i2 + (z3 ? 1 : z3 ? 1 : 0)) * 31) + this.maxBitrate) * 31;
+            int i2 = (((i + (z3 ? 1 : z3)) * 31) + this.maxBitrate) * 31;
             List<ModelVoiceRegion> list = this.regions;
-            return C0002b.m3a(this.guildID) + ((i3 + (list != null ? list.hashCode() : 0)) * 31);
+            return C0002b.m3a(this.guildID) + ((i2 + (list != null ? list.hashCode() : 0)) * 31);
         }
 
         public String toString() {
@@ -274,8 +281,8 @@ public final class WidgetVoiceChannelSettings extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetVoiceChannelSettings.kt */
-    /* renamed from: com.discord.widgets.voice.settings.WidgetVoiceChannelSettings$configureUI$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.voice.settings.WidgetVoiceChannelSettings$configureUI$1 */
+    /* JADX INFO: compiled from: WidgetVoiceChannelSettings.kt */
     public static final class C105611<T1, T2> implements Action2<MenuItem, Context> {
         public final /* synthetic */ Model $this_configureUI;
 
@@ -288,7 +295,7 @@ public final class WidgetVoiceChannelSettings extends AppFragment {
             call2(menuItem, context);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final void call2(MenuItem menuItem, Context context) {
             Intrinsics3.checkNotNullExpressionValue(menuItem, "menuItem");
             if (menuItem.getItemId() != C5419R.id.menu_channel_settings_delete) {
@@ -298,8 +305,8 @@ public final class WidgetVoiceChannelSettings extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetVoiceChannelSettings.kt */
-    /* renamed from: com.discord.widgets.voice.settings.WidgetVoiceChannelSettings$configureUI$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.voice.settings.WidgetVoiceChannelSettings$configureUI$2 */
+    /* JADX INFO: compiled from: WidgetVoiceChannelSettings.kt */
     public static final class C105622 extends OnSeekBarChangeListenerAdapter {
         public C105622() {
         }
@@ -313,8 +320,8 @@ public final class WidgetVoiceChannelSettings extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetVoiceChannelSettings.kt */
-    /* renamed from: com.discord.widgets.voice.settings.WidgetVoiceChannelSettings$configureUI$3 */
+    /* JADX INFO: renamed from: com.discord.widgets.voice.settings.WidgetVoiceChannelSettings$configureUI$3 */
+    /* JADX INFO: compiled from: WidgetVoiceChannelSettings.kt */
     public static final class C105633 extends OnSeekBarChangeListenerAdapter {
         public C105633() {
         }
@@ -328,8 +335,8 @@ public final class WidgetVoiceChannelSettings extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetVoiceChannelSettings.kt */
-    /* renamed from: com.discord.widgets.voice.settings.WidgetVoiceChannelSettings$configureUI$4 */
+    /* JADX INFO: renamed from: com.discord.widgets.voice.settings.WidgetVoiceChannelSettings$configureUI$4 */
+    /* JADX INFO: compiled from: WidgetVoiceChannelSettings.kt */
     public static final class ViewOnClickListenerC105644 implements View.OnClickListener {
         public final /* synthetic */ Model $this_configureUI;
 
@@ -343,8 +350,8 @@ public final class WidgetVoiceChannelSettings extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetVoiceChannelSettings.kt */
-    /* renamed from: com.discord.widgets.voice.settings.WidgetVoiceChannelSettings$configureUI$5 */
+    /* JADX INFO: renamed from: com.discord.widgets.voice.settings.WidgetVoiceChannelSettings$configureUI$5 */
+    /* JADX INFO: compiled from: WidgetVoiceChannelSettings.kt */
     public static final class ViewOnClickListenerC105655 implements View.OnClickListener {
         public final /* synthetic */ Model $this_configureUI;
 
@@ -358,8 +365,8 @@ public final class WidgetVoiceChannelSettings extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetVoiceChannelSettings.kt */
-    /* renamed from: com.discord.widgets.voice.settings.WidgetVoiceChannelSettings$configureUI$6 */
+    /* JADX INFO: renamed from: com.discord.widgets.voice.settings.WidgetVoiceChannelSettings$configureUI$6 */
+    /* JADX INFO: compiled from: WidgetVoiceChannelSettings.kt */
     public static final class ViewOnClickListenerC105666 implements View.OnClickListener {
         public final /* synthetic */ Model $this_configureUI;
 
@@ -401,8 +408,8 @@ public final class WidgetVoiceChannelSettings extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetVoiceChannelSettings.kt */
-    /* renamed from: com.discord.widgets.voice.settings.WidgetVoiceChannelSettings$confirmDelete$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.voice.settings.WidgetVoiceChannelSettings$confirmDelete$1 */
+    /* JADX INFO: compiled from: WidgetVoiceChannelSettings.kt */
     public static final class ViewOnClickListenerC105671 implements View.OnClickListener {
         public final /* synthetic */ AlertDialog $dialog;
 
@@ -416,13 +423,13 @@ public final class WidgetVoiceChannelSettings extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetVoiceChannelSettings.kt */
-    /* renamed from: com.discord.widgets.voice.settings.WidgetVoiceChannelSettings$confirmDelete$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.voice.settings.WidgetVoiceChannelSettings$confirmDelete$2 */
+    /* JADX INFO: compiled from: WidgetVoiceChannelSettings.kt */
     public static final class ViewOnClickListenerC105682 implements View.OnClickListener {
         public final /* synthetic */ Channel $channel;
 
-        /* compiled from: WidgetVoiceChannelSettings.kt */
-        /* renamed from: com.discord.widgets.voice.settings.WidgetVoiceChannelSettings$confirmDelete$2$2, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.widgets.voice.settings.WidgetVoiceChannelSettings$confirmDelete$2$2, reason: invalid class name */
+        /* JADX INFO: compiled from: WidgetVoiceChannelSettings.kt */
         public static final class AnonymousClass2 extends Lambda implements Function1<Channel, Unit> {
             public AnonymousClass2() {
                 super(1);
@@ -434,7 +441,7 @@ public final class WidgetVoiceChannelSettings extends AppFragment {
                 return Unit.f27425a;
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2(Channel channel) {
                 Intrinsics3.checkNotNullParameter(channel, "channel");
                 Integer numM7678b = ChannelUtils.m7678b(channel);
@@ -456,8 +463,8 @@ public final class WidgetVoiceChannelSettings extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetVoiceChannelSettings.kt */
-    /* renamed from: com.discord.widgets.voice.settings.WidgetVoiceChannelSettings$onViewBoundOrOnResume$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.voice.settings.WidgetVoiceChannelSettings$onViewBoundOrOnResume$1 */
+    /* JADX INFO: compiled from: WidgetVoiceChannelSettings.kt */
     public static final class C105691 extends Lambda implements Function1<Model, Unit> {
         public C105691() {
             super(1);
@@ -469,14 +476,14 @@ public final class WidgetVoiceChannelSettings extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Model model) {
             WidgetVoiceChannelSettings.access$configureUI(WidgetVoiceChannelSettings.this, model);
         }
     }
 
-    /* compiled from: WidgetVoiceChannelSettings.kt */
-    /* renamed from: com.discord.widgets.voice.settings.WidgetVoiceChannelSettings$saveChannel$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.voice.settings.WidgetVoiceChannelSettings$saveChannel$1 */
+    /* JADX INFO: compiled from: WidgetVoiceChannelSettings.kt */
     public static final class C105701 extends Lambda implements Function1<Channel, Unit> {
         public C105701() {
             super(1);
@@ -488,14 +495,14 @@ public final class WidgetVoiceChannelSettings extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Channel channel) {
             AppToast.m169g(WidgetVoiceChannelSettings.this.getContext(), C5419R.string.channel_settings_have_been_updated, 0, null, 12);
         }
     }
 
-    /* compiled from: WidgetVoiceChannelSettings.kt */
-    /* renamed from: com.discord.widgets.voice.settings.WidgetVoiceChannelSettings$showRegionDialog$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.voice.settings.WidgetVoiceChannelSettings$showRegionDialog$2 */
+    /* JADX INFO: compiled from: WidgetVoiceChannelSettings.kt */
     public static final class C105712 extends Lambda implements Function1<Integer, Unit> {
         public final /* synthetic */ List $regions;
 

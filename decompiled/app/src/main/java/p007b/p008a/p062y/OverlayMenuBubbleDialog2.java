@@ -12,12 +12,12 @@ import p007b.p008a.p025i.OverlayMenuVoiceMembersItemBinding;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: OverlayMenuBubbleDialog.kt */
-/* renamed from: b.a.y.n, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: b.a.y.n, reason: use source file name */
+/* JADX INFO: compiled from: OverlayMenuBubbleDialog.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class OverlayMenuBubbleDialog2 extends Lambda implements Function2<LayoutInflater, ViewGroup, OverlayMenuBubbleDialog.C7081a> {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static final OverlayMenuBubbleDialog2 f2050j = new OverlayMenuBubbleDialog2();
 
     public OverlayMenuBubbleDialog2() {

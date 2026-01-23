@@ -5,15 +5,15 @@ import java.util.regex.Pattern;
 import p007b.p225i.p226a.p242c.p259f3.ParsableByteArray;
 import p007b.p225i.p226a.p242c.p259f3.Util2;
 
-/* compiled from: WebvttParserUtil.java */
-/* renamed from: b.i.a.c.b3.v.j, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.b3.v.j, reason: use source file name */
+/* JADX INFO: compiled from: WebvttParserUtil.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class WebvttParserUtil {
     static {
         Pattern.compile("^NOTE([ \t].*)?$");
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static float m2719a(String str) throws NumberFormatException {
         if (str.endsWith("%")) {
             return Float.parseFloat(str.substring(0, str.length() - 1)) / 100.0f;
@@ -21,7 +21,7 @@ public final class WebvttParserUtil {
         throw new NumberFormatException("Percentages must end with %");
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static long m2720b(String str) throws NumberFormatException {
         int i = Util2.f6708a;
         String[] strArrSplit = str.split("\\.", 2);
@@ -36,7 +36,7 @@ public final class WebvttParserUtil {
         return j2 * 1000;
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public static void m2721c(ParsableByteArray parsableByteArray) throws ParserException {
         int i = parsableByteArray.f6794b;
         String strM3087g = parsableByteArray.m3087g();

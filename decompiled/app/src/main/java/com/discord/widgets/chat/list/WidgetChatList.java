@@ -32,21 +32,21 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Reflection2;
 import p658rx.functions.Action0;
 
-/* compiled from: WidgetChatList.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetChatList.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetChatList extends AppFragment {
     public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetChatList.class, "binding", "getBinding()Lcom/discord/databinding/WidgetChatListBinding;", 0)};
     private WidgetChatListAdapter adapter;
 
-    /* renamed from: binding$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
     private RecyclerView.ItemAnimator defaultItemAnimator;
 
-    /* renamed from: flexInputViewModel$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: flexInputViewModel$delegate, reason: from kotlin metadata */
     private final Lazy flexInputViewModel;
 
-    /* compiled from: WidgetChatList.kt */
-    /* renamed from: com.discord.widgets.chat.list.WidgetChatList$onViewBoundOrOnResume$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.list.WidgetChatList$onViewBoundOrOnResume$1 */
+    /* JADX INFO: compiled from: WidgetChatList.kt */
     public static final /* synthetic */ class C79551 extends FunctionReferenceImpl implements Function1<WidgetChatListModel, Unit> {
         public C79551(WidgetChatList widgetChatList) {
             super(1, widgetChatList, WidgetChatList.class, "configureUI", "configureUI(Lcom/discord/widgets/chat/list/model/WidgetChatListModel;)V", 0);
@@ -58,14 +58,14 @@ public final class WidgetChatList extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(WidgetChatListModel widgetChatListModel) {
             WidgetChatList.access$configureUI((WidgetChatList) this.receiver, widgetChatListModel);
         }
     }
 
-    /* compiled from: WidgetChatList.kt */
-    /* renamed from: com.discord.widgets.chat.list.WidgetChatList$onViewBoundOrOnResume$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.list.WidgetChatList$onViewBoundOrOnResume$2 */
+    /* JADX INFO: compiled from: WidgetChatList.kt */
     public static final /* synthetic */ class C79562 extends FunctionReferenceImpl implements Function1<Long, Unit> {
         public C79562(WidgetChatList widgetChatList) {
             super(1, widgetChatList, WidgetChatList.class, "scrollTo", "scrollTo(J)V", 0);

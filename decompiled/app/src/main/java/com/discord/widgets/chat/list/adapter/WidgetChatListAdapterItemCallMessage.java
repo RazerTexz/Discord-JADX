@@ -59,8 +59,8 @@ import p637j0.p641k.Func1;
 import p658rx.Observable;
 import p658rx.Subscription;
 
-/* compiled from: WidgetChatListAdapterItemCallMessage.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetChatListAdapterItemCallMessage.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetChatListAdapterItemCallMessage extends WidgetChatListItem implements FragmentLifecycleListener {
     private final WidgetChatListAdapterItemCallBinding binding;
     private ChatListEntry chatListEntry;
@@ -69,8 +69,8 @@ public final class WidgetChatListAdapterItemCallMessage extends WidgetChatListIt
     private Subscription stateSubscription;
     private final WidgetCollapsedUsersListAdapter usersAdapter;
 
-    /* compiled from: WidgetChatListAdapterItemCallMessage.kt */
-    /* renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemCallMessage$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemCallMessage$1 */
+    /* JADX INFO: compiled from: WidgetChatListAdapterItemCallMessage.kt */
     public static final class ViewOnAttachStateChangeListenerC80381 implements View.OnAttachStateChangeListener {
         public ViewOnAttachStateChangeListenerC80381() {
         }
@@ -88,7 +88,7 @@ public final class WidgetChatListAdapterItemCallMessage extends WidgetChatListIt
         }
     }
 
-    /* compiled from: WidgetChatListAdapterItemCallMessage.kt */
+    /* JADX INFO: compiled from: WidgetChatListAdapterItemCallMessage.kt */
     public enum CallStatus {
         ACTIVE_UNJOINED,
         ACTIVE_JOINED,
@@ -96,7 +96,7 @@ public final class WidgetChatListAdapterItemCallMessage extends WidgetChatListIt
         INACTIVE_JOINED
     }
 
-    /* compiled from: WidgetChatListAdapterItemCallMessage.kt */
+    /* JADX INFO: compiled from: WidgetChatListAdapterItemCallMessage.kt */
     public static final /* data */ class State {
         private final MessageEntry messageEntry;
         private final Map<Long, StoreVoiceParticipants.VoiceUser> voiceParticipants;
@@ -123,7 +123,7 @@ public final class WidgetChatListAdapterItemCallMessage extends WidgetChatListIt
             return this.voiceParticipants;
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final MessageEntry getMessageEntry() {
             return this.messageEntry;
         }
@@ -204,8 +204,8 @@ public final class WidgetChatListAdapterItemCallMessage extends WidgetChatListIt
         }
     }
 
-    /* compiled from: WidgetChatListAdapterItemCallMessage.kt */
-    /* renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemCallMessage$configure$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemCallMessage$configure$1 */
+    /* JADX INFO: compiled from: WidgetChatListAdapterItemCallMessage.kt */
     public static final class C80391 extends Lambda implements Function1<Subscription, Unit> {
         public C80391() {
             super(1);
@@ -217,15 +217,15 @@ public final class WidgetChatListAdapterItemCallMessage extends WidgetChatListIt
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Subscription subscription) {
             Intrinsics3.checkNotNullParameter(subscription, Traits.Payment.Type.SUBSCRIPTION);
             WidgetChatListAdapterItemCallMessage.access$setStateSubscription$p(WidgetChatListAdapterItemCallMessage.this, subscription);
         }
     }
 
-    /* compiled from: WidgetChatListAdapterItemCallMessage.kt */
-    /* renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemCallMessage$configure$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemCallMessage$configure$2 */
+    /* JADX INFO: compiled from: WidgetChatListAdapterItemCallMessage.kt */
     public static final class C80402 extends Lambda implements Function1<State, Unit> {
         public C80402() {
             super(1);
@@ -237,15 +237,15 @@ public final class WidgetChatListAdapterItemCallMessage extends WidgetChatListIt
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(State state) {
             Intrinsics3.checkNotNullParameter(state, "state");
             WidgetChatListAdapterItemCallMessage.access$handleState(WidgetChatListAdapterItemCallMessage.this, state);
         }
     }
 
-    /* compiled from: WidgetChatListAdapterItemCallMessage.kt */
-    /* renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemCallMessage$configureSubtitle$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemCallMessage$configureSubtitle$1 */
+    /* JADX INFO: compiled from: WidgetChatListAdapterItemCallMessage.kt */
     public static final class C80411 extends Lambda implements Function1<Long, Unit> {
         public final /* synthetic */ long $callJoinedTimestampMs;
 
@@ -261,7 +261,7 @@ public final class WidgetChatListAdapterItemCallMessage extends WidgetChatListIt
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Long l) {
             String string = TimeUtils.toFriendlyString$default(TimeUtils.INSTANCE, this.$callJoinedTimestampMs, WidgetChatListAdapterItemCallMessage.access$getClock$p(WidgetChatListAdapterItemCallMessage.this).currentTimeMillis(), null, null, 12, null).toString();
             int iAccess$getMinWidthPxForTime = WidgetChatListAdapterItemCallMessage.access$getMinWidthPxForTime(WidgetChatListAdapterItemCallMessage.this, string);
@@ -279,8 +279,8 @@ public final class WidgetChatListAdapterItemCallMessage extends WidgetChatListIt
         }
     }
 
-    /* compiled from: WidgetChatListAdapterItemCallMessage.kt */
-    /* renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemCallMessage$configureSubtitle$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemCallMessage$configureSubtitle$2 */
+    /* JADX INFO: compiled from: WidgetChatListAdapterItemCallMessage.kt */
     public static final class C80422 extends Lambda implements Function1<Subscription, Unit> {
         public C80422() {
             super(1);
@@ -292,15 +292,15 @@ public final class WidgetChatListAdapterItemCallMessage extends WidgetChatListIt
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Subscription subscription) {
             Intrinsics3.checkNotNullParameter(subscription, Traits.Payment.Type.SUBSCRIPTION);
             WidgetChatListAdapterItemCallMessage.access$setOngoingCallDurationSubscription$p(WidgetChatListAdapterItemCallMessage.this, subscription);
         }
     }
 
-    /* compiled from: WidgetChatListAdapterItemCallMessage.kt */
-    /* renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemCallMessage$handleState$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemCallMessage$handleState$1 */
+    /* JADX INFO: compiled from: WidgetChatListAdapterItemCallMessage.kt */
     public static final class ViewOnClickListenerC80431 implements View.OnClickListener {
         public final /* synthetic */ CallStatus $callStatus;
         public final /* synthetic */ Message $message;
@@ -316,8 +316,8 @@ public final class WidgetChatListAdapterItemCallMessage extends WidgetChatListIt
         }
     }
 
-    /* compiled from: WidgetChatListAdapterItemCallMessage.kt */
-    /* renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemCallMessage$observeState$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemCallMessage$observeState$1 */
+    /* JADX INFO: compiled from: WidgetChatListAdapterItemCallMessage.kt */
     public static final class C80441<T, R> implements Func1<Map<Long, ? extends StoreVoiceParticipants.VoiceUser>, State> {
         public final /* synthetic */ MessageEntry $messageEntry;
 
@@ -330,7 +330,7 @@ public final class WidgetChatListAdapterItemCallMessage extends WidgetChatListIt
             return call2((Map<Long, StoreVoiceParticipants.VoiceUser>) map);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final State call2(Map<Long, StoreVoiceParticipants.VoiceUser> map) {
             Intrinsics3.checkNotNullExpressionValue(map, "voiceParticipants");
             return new State(map, this.$messageEntry);

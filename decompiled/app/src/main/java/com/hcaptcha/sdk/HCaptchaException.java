@@ -4,7 +4,7 @@ import androidx.annotation.Nullable;
 import java.util.Objects;
 import p007b.p100d.p104b.p105a.outline;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public class HCaptchaException extends Exception {
     private final HCaptchaError hCaptchaError;
 
@@ -12,7 +12,7 @@ public class HCaptchaException extends Exception {
         this.hCaptchaError = hCaptchaError;
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public HCaptchaError m9265a() {
         return this.hCaptchaError;
     }

@@ -4,8 +4,8 @@ import com.discord.models.domain.ModelAuditLogEntry;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: InAppReportsMenu.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: InAppReportsMenu.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class ReportNodeChild {
     private final String name;
     private final int ref;
@@ -16,12 +16,12 @@ public final /* data */ class ReportNodeChild {
         this.ref = i;
     }
 
-    /* renamed from: a, reason: from getter */
+    /* JADX INFO: renamed from: a, reason: from getter */
     public final String getName() {
         return this.name;
     }
 
-    /* renamed from: b, reason: from getter */
+    /* JADX INFO: renamed from: b, reason: from getter */
     public final int getRef() {
         return this.ref;
     }

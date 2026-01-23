@@ -25,7 +25,7 @@ import java.util.HashSet;
 import java.util.Iterator;
 import p007b.p100d.p104b.p105a.outline;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class MotionController {
     private static final boolean DEBUG = false;
     public static final int DRAW_PATH_AS_CONFIGURED = 4;
@@ -155,7 +155,7 @@ public class MotionController {
             this.mSpline[0].getPos(d3, this.mInterpolateData);
             this.mStartMotionPath.getCenter(this.mInterpolateVariables, this.mInterpolateData, fArr, 0);
             if (i > 0) {
-                fHypot = (float) (Math.hypot(d2 - fArr[1], d - fArr[0]) + fHypot);
+                fHypot = (float) (Math.hypot(d2 - ((double) fArr[1]), d - ((double) fArr[0])) + ((double) fHypot));
             }
             d = fArr[0];
             d2 = fArr[1];
@@ -442,7 +442,7 @@ public class MotionController {
             if (i >= dArr.length) {
                 break;
             }
-            dArr[i] = dArr[i] * f9;
+            dArr[i] = dArr[i] * ((double) f9);
             i++;
         }
         CurveFit curveFit = this.mArcSpline;
@@ -661,7 +661,7 @@ public class MotionController {
                 velocityMatrix.applyTransform(f2, f3, i, i2, fArr);
                 return;
             } else {
-                dArr2[i3] = dArr2[i3] * f9;
+                dArr2[i3] = dArr2[i3] * ((double) f9);
                 i3++;
             }
         }

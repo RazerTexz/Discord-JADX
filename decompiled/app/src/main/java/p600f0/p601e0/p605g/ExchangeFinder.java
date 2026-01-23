@@ -30,39 +30,39 @@ import p600f0.p601e0.p604f.TaskQueue2;
 import p600f0.p601e0.p605g.RouteSelector;
 import p600f0.p601e0.p608j.ErrorCode2;
 
-/* compiled from: ExchangeFinder.kt */
-/* renamed from: f0.e0.g.d, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: f0.e0.g.d, reason: use source file name */
+/* JADX INFO: compiled from: ExchangeFinder.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class ExchangeFinder {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public RouteSelector.a f25454a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public RouteSelector f25455b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public int f25456c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public int f25457d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public int f25458e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public Route f25459f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public final RealConnectionPool f25460g;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public final Address f25461h;
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public final RealCall f25462i;
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final EventListener f25463j;
 
     public ExchangeFinder(RealConnectionPool realConnectionPool, Address address, RealCall realCall, EventListener eventListener) {
@@ -79,7 +79,7 @@ public final class ExchangeFinder {
     /* JADX WARN: Removed duplicated region for block: B:170:0x02b2 A[EXC_TOP_SPLITTER, SYNTHETIC] */
     /* JADX WARN: Removed duplicated region for block: B:32:0x006f  */
     /* JADX WARN: Removed duplicated region for block: B:37:0x0083  */
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
@@ -327,14 +327,14 @@ public final class ExchangeFinder {
         throw new IOException("Canceled");
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final boolean m10178b(HttpUrl httpUrl) {
         Intrinsics3.checkParameterIsNotNull(httpUrl, "url");
         HttpUrl httpUrl2 = this.f25461h.f25353a;
         return httpUrl.f25980h == httpUrl2.f25980h && Intrinsics3.areEqual(httpUrl.f25979g, httpUrl2.f25979g);
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final void m10179c(IOException iOException) {
         Intrinsics3.checkParameterIsNotNull(iOException, "e");
         this.f25459f = null;

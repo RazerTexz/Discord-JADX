@@ -3,9 +3,9 @@ package com.discord.utilities.networking;
 import kotlin.jvm.functions.Function0;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: Backoff.kt */
-/* renamed from: com.discord.utilities.networking.Backoff$sam$java_lang_Runnable$0, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.utilities.networking.Backoff$sam$java_lang_Runnable$0, reason: use source file name */
+/* JADX INFO: compiled from: Backoff.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class Backoff3 implements Runnable {
     private final /* synthetic */ Function0 function;
 

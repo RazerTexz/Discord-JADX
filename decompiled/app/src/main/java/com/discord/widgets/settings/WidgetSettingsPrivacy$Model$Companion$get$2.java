@@ -9,8 +9,8 @@ import kotlin.jvm.functions.Function7;
 import p507d0.p592z.p594d.FunctionReferenceImpl;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: WidgetSettingsPrivacy.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetSettingsPrivacy.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final /* synthetic */ class WidgetSettingsPrivacy$Model$Companion$get$2 extends FunctionReferenceImpl implements Function7<MeUser, Integer, Boolean, ModelUserSettings.FriendSourceFlags, ConnectedAccount, Experiment, Integer, WidgetSettingsPrivacy.LocalState> {
     public static final WidgetSettingsPrivacy$Model$Companion$get$2 INSTANCE = new WidgetSettingsPrivacy$Model$Companion$get$2();
 

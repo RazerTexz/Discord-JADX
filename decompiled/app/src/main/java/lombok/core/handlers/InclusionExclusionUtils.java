@@ -13,7 +13,7 @@ import lombok.core.AST;
 import lombok.core.AnnotationValues;
 import lombok.core.LombokNode;
 
-/* loaded from: discord-126021.apk:lombok/core/handlers/InclusionExclusionUtils.SCL.lombok */
+/* JADX INFO: loaded from: discord-126021.apk:lombok/core/handlers/InclusionExclusionUtils.SCL.lombok */
 public class InclusionExclusionUtils {
     private static List<Integer> createListOfNonExistentFields(List<String> list, LombokNode<?, ?, ?> type, boolean excludeStandard, boolean excludeTransient) {
         boolean[] matched = new boolean[list.size()];
@@ -60,7 +60,7 @@ public class InclusionExclusionUtils {
         }
     }
 
-    /* loaded from: discord-126021.apk:lombok/core/handlers/InclusionExclusionUtils$Included.SCL.lombok */
+    /* JADX INFO: loaded from: discord-126021.apk:lombok/core/handlers/InclusionExclusionUtils$Included.SCL.lombok */
     public static class Included<L, I extends Annotation> {
         private final L node;
         private final I inc;
@@ -200,8 +200,8 @@ public class InclusionExclusionUtils {
     }
 
     /* JADX INFO: Add missing generic type declarations: [L] */
-    /* renamed from: lombok.core.handlers.InclusionExclusionUtils$1 */
-    /* loaded from: discord-126021.apk:lombok/core/handlers/InclusionExclusionUtils$1.SCL.lombok */
+    /* JADX INFO: renamed from: lombok.core.handlers.InclusionExclusionUtils$1 */
+    /* JADX INFO: loaded from: discord-126021.apk:lombok/core/handlers/InclusionExclusionUtils$1.SCL.lombok */
     class C128411<L> implements Comparator<Included<L, ToString.Include>> {
         @Override // java.util.Comparator
         public /* bridge */ /* synthetic */ int compare(Object obj, Object obj2) {
@@ -223,8 +223,8 @@ public class InclusionExclusionUtils {
     }
 
     /* JADX INFO: Add missing generic type declarations: [L] */
-    /* renamed from: lombok.core.handlers.InclusionExclusionUtils$2 */
-    /* loaded from: discord-126021.apk:lombok/core/handlers/InclusionExclusionUtils$2.SCL.lombok */
+    /* JADX INFO: renamed from: lombok.core.handlers.InclusionExclusionUtils$2 */
+    /* JADX INFO: loaded from: discord-126021.apk:lombok/core/handlers/InclusionExclusionUtils$2.SCL.lombok */
     class C128422<L> implements Comparator<Included<L, EqualsAndHashCode.Include>> {
         @Override // java.util.Comparator
         public /* bridge */ /* synthetic */ int compare(Object obj, Object obj2) {

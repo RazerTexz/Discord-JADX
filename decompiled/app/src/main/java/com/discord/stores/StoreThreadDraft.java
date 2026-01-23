@@ -9,13 +9,13 @@ import p507d0.p592z.p594d.Lambda;
 import p658rx.Observable;
 import p658rx.subjects.BehaviorSubject;
 
-/* compiled from: StoreThreadDraft.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: StoreThreadDraft.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class StoreThreadDraft extends StoreV2 {
     private final Dispatcher dispatcher;
     private final BehaviorSubject<ThreadDraftState> draftStateSubject;
 
-    /* compiled from: StoreThreadDraft.kt */
+    /* JADX INFO: compiled from: StoreThreadDraft.kt */
     public static final /* data */ class ThreadDraftState {
         private final Integer autoArchiveDuration;
         private final boolean isPrivate;
@@ -57,27 +57,27 @@ public final class StoreThreadDraft extends StoreV2 {
             return threadDraftState.copy(z2, num2, str2, z5, z4);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final boolean getIsPrivate() {
             return this.isPrivate;
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final Integer getAutoArchiveDuration() {
             return this.autoArchiveDuration;
         }
 
-        /* renamed from: component3, reason: from getter */
+        /* JADX INFO: renamed from: component3, reason: from getter */
         public final String getThreadName() {
             return this.threadName;
         }
 
-        /* renamed from: component4, reason: from getter */
+        /* JADX INFO: renamed from: component4, reason: from getter */
         public final boolean getIsSending() {
             return this.isSending;
         }
 
-        /* renamed from: component5, reason: from getter */
+        /* JADX INFO: renamed from: component5, reason: from getter */
         public final boolean getShouldDisplayNameError() {
             return this.shouldDisplayNameError;
         }
@@ -113,7 +113,12 @@ public final class StoreThreadDraft extends StoreV2 {
         /* JADX WARN: Type inference failed for: r0v1, types: [int] */
         /* JADX WARN: Type inference failed for: r0v10 */
         /* JADX WARN: Type inference failed for: r0v11 */
-        /* JADX WARN: Type inference failed for: r2v4, types: [boolean] */
+        /* JADX WARN: Type inference failed for: r1v0 */
+        /* JADX WARN: Type inference failed for: r1v1, types: [int] */
+        /* JADX WARN: Type inference failed for: r1v2 */
+        /* JADX WARN: Type inference failed for: r2v5, types: [int] */
+        /* JADX WARN: Type inference failed for: r2v7 */
+        /* JADX WARN: Type inference failed for: r2v9 */
         public int hashCode() {
             boolean z2 = this.isPrivate;
             ?? r0 = z2;
@@ -125,14 +130,14 @@ public final class StoreThreadDraft extends StoreV2 {
             int iHashCode = (i + (num != null ? num.hashCode() : 0)) * 31;
             String str = this.threadName;
             int iHashCode2 = (iHashCode + (str != null ? str.hashCode() : 0)) * 31;
-            ?? r2 = this.isSending;
-            int i2 = r2;
-            if (r2 != 0) {
-                i2 = 1;
+            boolean z3 = this.isSending;
+            ?? r2 = z3;
+            if (z3) {
+                r2 = 1;
             }
-            int i3 = (iHashCode2 + i2) * 31;
-            boolean z3 = this.shouldDisplayNameError;
-            return i3 + (z3 ? 1 : z3 ? 1 : 0);
+            int i2 = (iHashCode2 + r2) * 31;
+            boolean z4 = this.shouldDisplayNameError;
+            return i2 + (z4 ? 1 : z4);
         }
 
         public final boolean isPrivate() {
@@ -161,8 +166,8 @@ public final class StoreThreadDraft extends StoreV2 {
         }
     }
 
-    /* compiled from: StoreThreadDraft.kt */
-    /* renamed from: com.discord.stores.StoreThreadDraft$clearDraftState$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreThreadDraft$clearDraftState$1 */
+    /* JADX INFO: compiled from: StoreThreadDraft.kt */
     public static final class C65291 extends Lambda implements Function0<Unit> {
         public C65291() {
             super(0);
@@ -174,14 +179,14 @@ public final class StoreThreadDraft extends StoreV2 {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             StoreThreadDraft.access$getDraftStateSubject$p(StoreThreadDraft.this).onNext(new ThreadDraftState(false, null, null, false, false, 31, null));
         }
     }
 
-    /* compiled from: StoreThreadDraft.kt */
-    /* renamed from: com.discord.stores.StoreThreadDraft$setDraftSending$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreThreadDraft$setDraftSending$1 */
+    /* JADX INFO: compiled from: StoreThreadDraft.kt */
     public static final class C65301 extends Lambda implements Function0<Unit> {
         public C65301() {
             super(0);
@@ -193,7 +198,7 @@ public final class StoreThreadDraft extends StoreV2 {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             BehaviorSubject behaviorSubjectAccess$getDraftStateSubject$p = StoreThreadDraft.access$getDraftStateSubject$p(StoreThreadDraft.this);
             BehaviorSubject behaviorSubjectAccess$getDraftStateSubject$p2 = StoreThreadDraft.access$getDraftStateSubject$p(StoreThreadDraft.this);
@@ -202,8 +207,8 @@ public final class StoreThreadDraft extends StoreV2 {
         }
     }
 
-    /* compiled from: StoreThreadDraft.kt */
-    /* renamed from: com.discord.stores.StoreThreadDraft$setDraftState$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreThreadDraft$setDraftState$1 */
+    /* JADX INFO: compiled from: StoreThreadDraft.kt */
     public static final class C65311 extends Lambda implements Function0<Unit> {
         public final /* synthetic */ ThreadDraftState $draftState;
 
@@ -219,7 +224,7 @@ public final class StoreThreadDraft extends StoreV2 {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             StoreThreadDraft.access$getDraftStateSubject$p(StoreThreadDraft.this).onNext(this.$draftState);
         }

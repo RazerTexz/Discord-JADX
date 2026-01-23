@@ -22,37 +22,37 @@ import p007b.p452o.p453a.p473x.AspectRatio2;
 import p007b.p452o.p453a.p473x.Size3;
 import p007b.p452o.p475b.p481f.GlTexture2;
 
-/* compiled from: SnapshotGlPictureRecorder.java */
-/* renamed from: b.o.a.v.g, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.o.a.v.g, reason: use source file name */
+/* JADX INFO: compiled from: SnapshotGlPictureRecorder.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class SnapshotGlPictureRecorder extends SnapshotPictureRecorder {
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public RendererCameraPreview f14192n;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public AspectRatio2 f14193o;
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public Overlay f14194p;
 
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     public boolean f14195q;
 
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     public OverlayDrawer f14196r;
 
-    /* renamed from: s */
+    /* JADX INFO: renamed from: s */
     public GlTextureDrawer f14197s;
 
-    /* compiled from: SnapshotGlPictureRecorder.java */
-    /* renamed from: b.o.a.v.g$a */
+    /* JADX INFO: renamed from: b.o.a.v.g$a */
+    /* JADX INFO: compiled from: SnapshotGlPictureRecorder.java */
     public class a implements RendererFrameCallback {
         public a() {
         }
 
         @Override // p007b.p452o.p453a.p472w.RendererFrameCallback
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public void mo7422a(@NonNull SurfaceTexture surfaceTexture, int i, float f, float f2) {
             SnapshotGlPictureRecorder.this.f14192n.mo7446d(this);
             SnapshotGlPictureRecorder snapshotGlPictureRecorder = SnapshotGlPictureRecorder.this;
@@ -61,7 +61,7 @@ public class SnapshotGlPictureRecorder extends SnapshotPictureRecorder {
         }
 
         @Override // p007b.p452o.p453a.p472w.RendererFrameCallback
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public void mo7423b(int i) {
             SnapshotGlPictureRecorder snapshotGlPictureRecorder = SnapshotGlPictureRecorder.this;
             Objects.requireNonNull(snapshotGlPictureRecorder);
@@ -74,7 +74,7 @@ public class SnapshotGlPictureRecorder extends SnapshotPictureRecorder {
         }
 
         @Override // p007b.p452o.p453a.p472w.RendererFrameCallback
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public void mo7424c(@NonNull Filter2 filter2) {
             SnapshotGlPictureRecorder.this.f14197s.f14108d = filter2.mo7369a();
         }
@@ -97,7 +97,7 @@ public class SnapshotGlPictureRecorder extends SnapshotPictureRecorder {
     }
 
     @Override // p007b.p452o.p453a.p471v.PictureRecorder
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public void mo7416b() {
         this.f14193o = null;
         super.mo7416b();
@@ -105,7 +105,7 @@ public class SnapshotGlPictureRecorder extends SnapshotPictureRecorder {
 
     @Override // p007b.p452o.p453a.p471v.PictureRecorder
     @TargetApi(19)
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public void mo7417c() {
         this.f14192n.mo7445b(new a());
     }

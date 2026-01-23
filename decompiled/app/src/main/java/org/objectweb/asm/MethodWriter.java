@@ -2,7 +2,7 @@ package org.objectweb.asm;
 
 import org.objectweb.asm.Attribute;
 
-/* loaded from: discord-126021.apk:org/objectweb/asm/MethodWriter.SCL.lombok */
+/* JADX INFO: loaded from: discord-126021.apk:org/objectweb/asm/MethodWriter.SCL.lombok */
 final class MethodWriter extends MethodVisitor {
     static final int COMPUTE_NOTHING = 0;
     static final int COMPUTE_MAX_STACK_AND_LOCAL = 1;
@@ -10,7 +10,7 @@ final class MethodWriter extends MethodVisitor {
     static final int COMPUTE_INSERTED_FRAMES = 3;
     static final int COMPUTE_ALL_FRAMES = 4;
 
-    /* renamed from: NA */
+    /* JADX INFO: renamed from: NA */
     private static final int f27601NA = 0;
     private static final int[] STACK_SIZE_DELTA = {0, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 1, 1, 1, 2, 2, 1, 1, 1, 0, 0, 1, 2, 1, 2, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -1, 0, -1, 0, -1, -1, -1, -1, -1, -2, -1, -2, -1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -3, -4, -3, -4, -3, -3, -3, -3, -1, -2, 1, 1, 1, 2, 2, 2, 0, -1, -2, -1, -2, -1, -2, -1, -2, -1, -2, -1, -2, -1, -2, -1, -2, -1, -2, -1, -2, 0, 0, 0, 0, -1, -1, -1, -1, -1, -1, -1, -2, -1, -2, -1, -2, 0, 1, 0, 1, -1, -1, 0, 0, 1, 1, -1, 0, -1, 0, 0, 0, -3, -1, -1, -3, -3, -1, -1, -1, -1, -1, -1, -2, -2, -2, -2, -2, -2, -2, -2, 0, 1, 0, -1, -1, -1, -2, -1, -2, -1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, -1, -1, 0, 0, -1, -1, 0, 0};
     private final SymbolTable symbolTable;

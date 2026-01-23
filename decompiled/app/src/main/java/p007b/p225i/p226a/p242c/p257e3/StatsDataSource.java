@@ -8,21 +8,21 @@ import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 
-/* compiled from: StatsDataSource.java */
-/* renamed from: b.i.a.c.e3.y, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.e3.y, reason: use source file name */
+/* JADX INFO: compiled from: StatsDataSource.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class StatsDataSource implements DataSource3 {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final DataSource3 f6641a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public long f6642b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public Uri f6643c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public Map<String, List<String>> f6644d;
 
     public StatsDataSource(DataSource3 dataSource3) {
@@ -33,7 +33,7 @@ public final class StatsDataSource implements DataSource3 {
     }
 
     @Override // p007b.p225i.p226a.p242c.p257e3.DataSource3
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public long mo2586a(DataSpec dataSpec) throws IOException {
         this.f6643c = dataSpec.f6542a;
         this.f6644d = Collections.emptyMap();
@@ -51,21 +51,21 @@ public final class StatsDataSource implements DataSource3 {
     }
 
     @Override // p007b.p225i.p226a.p242c.p257e3.DataSource3
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public void mo2587d(TransferListener transferListener) {
         Objects.requireNonNull(transferListener);
         this.f6641a.mo2587d(transferListener);
     }
 
     @Override // p007b.p225i.p226a.p242c.p257e3.DataSource3
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public Map<String, List<String>> mo2588j() {
         return this.f6641a.mo2588j();
     }
 
     @Override // p007b.p225i.p226a.p242c.p257e3.DataSource3
     @Nullable
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public Uri mo2589n() {
         return this.f6641a.mo2589n();
     }
@@ -74,7 +74,7 @@ public final class StatsDataSource implements DataSource3 {
     public int read(byte[] bArr, int i, int i2) throws IOException {
         int i3 = this.f6641a.read(bArr, i, i2);
         if (i3 != -1) {
-            this.f6642b += i3;
+            this.f6642b += (long) i3;
         }
         return i3;
     }

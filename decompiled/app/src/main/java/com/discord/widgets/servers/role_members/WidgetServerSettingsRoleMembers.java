@@ -39,12 +39,12 @@ import p507d0.p592z.p594d.Lambda;
 import p507d0.p592z.p594d.Reflection2;
 import p658rx.Observable;
 
-/* compiled from: WidgetServerSettingsRoleMembers.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetServerSettingsRoleMembers.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetServerSettingsRoleMembers extends AppFragment {
     public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetServerSettingsRoleMembers.class, "binding", "getBinding()Lcom/discord/databinding/WidgetServerSettingsRoleMembersBinding;", 0)};
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private static final String INTENT_EXTRA_GUILD_ID = "INTENT_EXTRA_GUILD_ID";
     private static final String INTENT_EXTRA_GUILD_ROLE_ID = "INTENT_EXTRA_GUILD_ROLE_ID";
@@ -52,19 +52,19 @@ public final class WidgetServerSettingsRoleMembers extends AppFragment {
     private static final int ROLE_MEMBERS_VIEW_FLIPPER_RESULT = 1;
     private WidgetServerSettingsRoleMembers2 adapter;
 
-    /* renamed from: binding$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
 
-    /* renamed from: guildId$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: guildId$delegate, reason: from kotlin metadata */
     private final Lazy guildId;
 
-    /* renamed from: guildRoleId$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: guildRoleId$delegate, reason: from kotlin metadata */
     private final Lazy guildRoleId;
 
-    /* renamed from: viewModel$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: viewModel$delegate, reason: from kotlin metadata */
     private final Lazy viewModel;
 
-    /* compiled from: WidgetServerSettingsRoleMembers.kt */
+    /* JADX INFO: compiled from: WidgetServerSettingsRoleMembers.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -80,13 +80,13 @@ public final class WidgetServerSettingsRoleMembers extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetServerSettingsRoleMembers.kt */
-    /* renamed from: com.discord.widgets.servers.role_members.WidgetServerSettingsRoleMembers$configureUI$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.role_members.WidgetServerSettingsRoleMembers$configureUI$1 */
+    /* JADX INFO: compiled from: WidgetServerSettingsRoleMembers.kt */
     public static final class C95771 extends Lambda implements Function2<GuildMember, User, Unit> {
         public final /* synthetic */ ServerSettingsRoleMembersViewModel.ViewState $viewState;
 
-        /* compiled from: WidgetServerSettingsRoleMembers.kt */
-        /* renamed from: com.discord.widgets.servers.role_members.WidgetServerSettingsRoleMembers$configureUI$1$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.widgets.servers.role_members.WidgetServerSettingsRoleMembers$configureUI$1$1, reason: invalid class name */
+        /* JADX INFO: compiled from: WidgetServerSettingsRoleMembers.kt */
         public static final class AnonymousClass1 implements View.OnClickListener {
             public final /* synthetic */ GuildMember $guildMember;
 
@@ -112,7 +112,7 @@ public final class WidgetServerSettingsRoleMembers extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(GuildMember guildMember, User user) {
             Intrinsics3.checkNotNullParameter(guildMember, "guildMember");
             Intrinsics3.checkNotNullParameter(user, "user");
@@ -132,8 +132,8 @@ public final class WidgetServerSettingsRoleMembers extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetServerSettingsRoleMembers.kt */
-    /* renamed from: com.discord.widgets.servers.role_members.WidgetServerSettingsRoleMembers$onViewBound$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.role_members.WidgetServerSettingsRoleMembers$onViewBound$1 */
+    /* JADX INFO: compiled from: WidgetServerSettingsRoleMembers.kt */
     public static final class C95781 extends Lambda implements Function1<String, Unit> {
         public C95781() {
             super(1);
@@ -145,15 +145,15 @@ public final class WidgetServerSettingsRoleMembers extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(String str) {
             Intrinsics3.checkNotNullParameter(str, "searchQuery");
             WidgetServerSettingsRoleMembers.access$getViewModel$p(WidgetServerSettingsRoleMembers.this).updateSearchQuery(str);
         }
     }
 
-    /* compiled from: WidgetServerSettingsRoleMembers.kt */
-    /* renamed from: com.discord.widgets.servers.role_members.WidgetServerSettingsRoleMembers$onViewBoundOrOnResume$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.role_members.WidgetServerSettingsRoleMembers$onViewBoundOrOnResume$1 */
+    /* JADX INFO: compiled from: WidgetServerSettingsRoleMembers.kt */
     public static final class C95791 extends Lambda implements Function1<ServerSettingsRoleMembersViewModel.ViewState, Unit> {
         public C95791() {
             super(1);
@@ -165,7 +165,7 @@ public final class WidgetServerSettingsRoleMembers extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(ServerSettingsRoleMembersViewModel.ViewState viewState) {
             WidgetServerSettingsRoleMembers widgetServerSettingsRoleMembers = WidgetServerSettingsRoleMembers.this;
             Intrinsics3.checkNotNullExpressionValue(viewState, "it");
@@ -173,8 +173,8 @@ public final class WidgetServerSettingsRoleMembers extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetServerSettingsRoleMembers.kt */
-    /* renamed from: com.discord.widgets.servers.role_members.WidgetServerSettingsRoleMembers$onViewBoundOrOnResume$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.role_members.WidgetServerSettingsRoleMembers$onViewBoundOrOnResume$2 */
+    /* JADX INFO: compiled from: WidgetServerSettingsRoleMembers.kt */
     public static final class C95802 extends Lambda implements Function1<ServerSettingsRoleMembersViewModel.Event, Unit> {
         public C95802() {
             super(1);
@@ -186,7 +186,7 @@ public final class WidgetServerSettingsRoleMembers extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(ServerSettingsRoleMembersViewModel.Event event) {
             Intrinsics3.checkNotNullParameter(event, "it");
             WidgetServerSettingsRoleMembers.access$handleEvents(WidgetServerSettingsRoleMembers.this, event);

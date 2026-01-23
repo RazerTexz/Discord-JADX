@@ -22,19 +22,19 @@ import p007b.p225i.p226a.p228b.p231j.p236t.p237h.SchedulerConfig;
 import p007b.p225i.p226a.p228b.p231j.p236t.p238i.EventStore;
 import p007b.p225i.p226a.p228b.p231j.p241w.PriorityMapping;
 
-/* compiled from: JobInfoScheduler.java */
+/* JADX INFO: renamed from: b.i.a.b.j.t.h.d, reason: use source file name */
+/* JADX INFO: compiled from: JobInfoScheduler.java */
+/* JADX INFO: loaded from: classes3.dex */
 @RequiresApi(api = 21)
-/* renamed from: b.i.a.b.j.t.h.d, reason: use source file name */
-/* loaded from: classes3.dex */
 public class JobInfoScheduler implements WorkScheduler {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final Context f5361a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final EventStore f5362b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final SchedulerConfig f5363c;
 
     public JobInfoScheduler(Context context, EventStore eventStore, SchedulerConfig schedulerConfig) {
@@ -44,7 +44,7 @@ public class JobInfoScheduler implements WorkScheduler {
     }
 
     @Override // p007b.p225i.p226a.p228b.p231j.p236t.p237h.WorkScheduler
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public void mo2382a(TransportContext transportContext, int i) {
         boolean z2;
         boolean z3;

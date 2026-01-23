@@ -35,40 +35,40 @@ import p507d0.p592z.p594d.Lambda;
 import p507d0.p592z.p594d.PropertyReference1Impl;
 import p507d0.p592z.p594d.Reflection2;
 
-/* compiled from: JvmBuiltInClassDescriptorFactory.kt */
-/* renamed from: d0.e0.p.d.m0.b.q.e, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.b.q.e, reason: use source file name */
+/* JADX INFO: compiled from: JvmBuiltInClassDescriptorFactory.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class JvmBuiltInClassDescriptorFactory implements ClassDescriptorFactory {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final b f22631a = new b(null);
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static final /* synthetic */ KProperty<Object>[] f22632b = {Reflection2.property1(new PropertyReference1Impl(Reflection2.getOrCreateKotlinClass(JvmBuiltInClassDescriptorFactory.class), "cloneable", "getCloneable()Lorg/jetbrains/kotlin/descriptors/impl/ClassDescriptorImpl;"))};
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public static final FqName f22633c = StandardNames.f22499l;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public static final Name f22634d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public static final ClassId f22635e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final ModuleDescriptor2 f22636f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public final Function1<ModuleDescriptor2, DeclarationDescriptor> f22637g;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public final storage5 f22638h;
 
-    /* compiled from: JvmBuiltInClassDescriptorFactory.kt */
-    /* renamed from: d0.e0.p.d.m0.b.q.e$a */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.b.q.e$a */
+    /* JADX INFO: compiled from: JvmBuiltInClassDescriptorFactory.kt */
     public static final class a extends Lambda implements Function1<ModuleDescriptor2, BuiltInsPackageFragment> {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public static final a f22639j = new a();
 
         public a() {
@@ -80,7 +80,7 @@ public final class JvmBuiltInClassDescriptorFactory implements ClassDescriptorFa
             return invoke2(moduleDescriptor2);
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final BuiltInsPackageFragment invoke2(ModuleDescriptor2 moduleDescriptor2) {
             Intrinsics3.checkNotNullParameter(moduleDescriptor2, "module");
             List<PackageFragmentDescriptor> fragments = moduleDescriptor2.getPackage(JvmBuiltInClassDescriptorFactory.access$getKOTLIN_FQ_NAME$cp()).getFragments();
@@ -94,8 +94,8 @@ public final class JvmBuiltInClassDescriptorFactory implements ClassDescriptorFa
         }
     }
 
-    /* compiled from: JvmBuiltInClassDescriptorFactory.kt */
-    /* renamed from: d0.e0.p.d.m0.b.q.e$b */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.b.q.e$b */
+    /* JADX INFO: compiled from: JvmBuiltInClassDescriptorFactory.kt */
     public static final class b {
         public b(DefaultConstructorMarker defaultConstructorMarker) {
         }
@@ -105,8 +105,8 @@ public final class JvmBuiltInClassDescriptorFactory implements ClassDescriptorFa
         }
     }
 
-    /* compiled from: JvmBuiltInClassDescriptorFactory.kt */
-    /* renamed from: d0.e0.p.d.m0.b.q.e$c */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.b.q.e$c */
+    /* JADX INFO: compiled from: JvmBuiltInClassDescriptorFactory.kt */
     public static final class c extends Lambda implements Function0<ClassDescriptorImpl> {
         public final /* synthetic */ StorageManager $storageManager;
 

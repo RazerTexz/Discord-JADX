@@ -5,18 +5,18 @@ import com.google.android.gms.measurement.internal.zzaq;
 import com.google.android.gms.measurement.internal.zzn;
 import java.util.Objects;
 
-/* compiled from: com.google.android.gms:play-services-measurement@@18.0.0 */
-/* renamed from: b.i.a.f.i.b.j5 */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.i.b.j5 */
+/* JADX INFO: compiled from: com.google.android.gms:play-services-measurement@@18.0.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public final class RunnableC4082j5 implements Runnable {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final /* synthetic */ zzaq f10849j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final /* synthetic */ zzn f10850k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final /* synthetic */ BinderC4257z4 f10851l;
 
     public RunnableC4082j5(BinderC4257z4 binderC4257z4, zzaq zzaqVar, zzn zznVar) {
@@ -26,7 +26,7 @@ public final class RunnableC4082j5 implements Runnable {
     }
 
     @Override // java.lang.Runnable
-    public final void run() throws IllegalStateException {
+    public final void run() {
         zzap zzapVar;
         BinderC4257z4 binderC4257z4 = this.f10851l;
         zzaq zzaqVar = this.f10849j;

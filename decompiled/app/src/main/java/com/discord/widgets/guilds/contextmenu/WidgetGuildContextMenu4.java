@@ -4,9 +4,9 @@ import android.os.Bundle;
 import kotlin.jvm.functions.Function0;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetGuildContextMenu.kt */
-/* renamed from: com.discord.widgets.guilds.contextmenu.WidgetGuildContextMenu$viewModel$2, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.guilds.contextmenu.WidgetGuildContextMenu$viewModel$2, reason: use source file name */
+/* JADX INFO: compiled from: WidgetGuildContextMenu.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetGuildContextMenu4 extends Lambda implements Function0<GuildContextMenuViewModel> {
     public final /* synthetic */ WidgetGuildContextMenu this$0;
 

@@ -4,12 +4,12 @@ import com.discord.player.AppMediaPlayer;
 import com.discord.utilities.logging.Logger;
 import p658rx.functions.Action1;
 
-/* compiled from: AppMediaPlayer.kt */
-/* renamed from: b.a.p.d, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.a.p.d, reason: use source file name */
+/* JADX INFO: compiled from: AppMediaPlayer.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class AppMediaPlayer5<T> implements Action1<Throwable> {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final /* synthetic */ AppMediaPlayer f1583j;
 
     public AppMediaPlayer5(AppMediaPlayer appMediaPlayer) {

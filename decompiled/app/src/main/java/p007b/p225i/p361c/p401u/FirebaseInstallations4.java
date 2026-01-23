@@ -41,57 +41,57 @@ import p007b.p225i.p361c.p401u.p403p.InstallationResponse;
 import p007b.p225i.p361c.p401u.p403p.TokenResult;
 import p007b.p225i.p361c.p407x.UserAgentPublisher;
 
-/* compiled from: FirebaseInstallations.java */
-/* renamed from: b.i.c.u.f, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.c.u.f, reason: use source file name */
+/* JADX INFO: compiled from: FirebaseInstallations.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class FirebaseInstallations4 implements InterfaceC4843g {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final Object f12928a = new Object();
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static final ThreadFactory f12929b = new a();
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final FirebaseApp2 f12930c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final FirebaseInstallationServiceClient f12931d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final PersistedInstallation f12932e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final Utils6 f12933f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public final IidStore f12934g;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public final RandomFidGenerator f12935h;
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public final Object f12936i;
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final ExecutorService f12937j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final ExecutorService f12938k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     @GuardedBy("this")
     public String f12939l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     @GuardedBy("lock")
     public final List<StateListener> f12940m;
 
-    /* compiled from: FirebaseInstallations.java */
-    /* renamed from: b.i.c.u.f$a */
+    /* JADX INFO: renamed from: b.i.c.u.f$a */
+    /* JADX INFO: compiled from: FirebaseInstallations.java */
     public class a implements ThreadFactory {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public final AtomicInteger f12941j = new AtomicInteger(1);
 
         @Override // java.util.concurrent.ThreadFactory
@@ -124,7 +124,7 @@ public class FirebaseInstallations4 implements InterfaceC4843g {
     }
 
     @NonNull
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public static FirebaseInstallations4 m6755f() {
         FirebaseApp2 firebaseApp2M6327b = FirebaseApp2.m6327b();
         AnimatableValueParser.m551o(true, "Null is not a valid value of FirebaseApp.");
@@ -134,7 +134,7 @@ public class FirebaseInstallations4 implements InterfaceC4843g {
 
     @Override // p007b.p225i.p361c.p401u.InterfaceC4843g
     @NonNull
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public Task<AbstractC4847k> mo6756a(boolean z2) {
         m6762h();
         TaskCompletionSource taskCompletionSource = new TaskCompletionSource();
@@ -147,7 +147,7 @@ public class FirebaseInstallations4 implements InterfaceC4843g {
         return task;
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final void m6757b(boolean z2) {
         PersistedInstallationEntry persistedInstallationEntryM6788b;
         synchronized (f12928a) {
@@ -180,7 +180,7 @@ public class FirebaseInstallations4 implements InterfaceC4843g {
         this.f12938k.execute(new FirebaseInstallations3(this, z2));
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final PersistedInstallationEntry m6758c(@NonNull PersistedInstallationEntry persistedInstallationEntry) throws FirebaseInstallationsException {
         int responseCode;
         TokenResult tokenResultM6808f;
@@ -264,7 +264,7 @@ public class FirebaseInstallations4 implements InterfaceC4843g {
     }
 
     @Nullable
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public String m6759d() {
         FirebaseApp2 firebaseApp2 = this.f12930c;
         firebaseApp2.m6330a();
@@ -272,7 +272,7 @@ public class FirebaseInstallations4 implements InterfaceC4843g {
     }
 
     @VisibleForTesting
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public String m6760e() {
         FirebaseApp2 firebaseApp2 = this.f12930c;
         firebaseApp2.m6330a();
@@ -280,7 +280,7 @@ public class FirebaseInstallations4 implements InterfaceC4843g {
     }
 
     @Nullable
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public String m6761g() {
         FirebaseApp2 firebaseApp2 = this.f12930c;
         firebaseApp2.m6330a();
@@ -308,7 +308,7 @@ public class FirebaseInstallations4 implements InterfaceC4843g {
         return task;
     }
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public final void m6762h() {
         AnimatableValueParser.m579v(m6760e(), "Please set your Application ID. A valid Firebase App ID is required to communicate with Firebase server APIs: It identifies your application with Firebase.Please refer to https://firebase.google.com/support/privacy/init-options.");
         AnimatableValueParser.m579v(m6761g(), "Please set your Project ID. A valid Firebase Project ID is required to communicate with Firebase server APIs: It identifies your application with Firebase.Please refer to https://firebase.google.com/support/privacy/init-options.");
@@ -319,7 +319,7 @@ public class FirebaseInstallations4 implements InterfaceC4843g {
         AnimatableValueParser.m551o(Utils6.f12949b.matcher(m6759d()).matches(), "Please set a valid API key. A Firebase API key is required to communicate with Firebase server APIs: It authenticates your project with Google.Please refer to https://firebase.google.com/support/privacy/init-options.");
     }
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public final String m6763i(PersistedInstallationEntry persistedInstallationEntry) {
         String string;
         FirebaseApp2 firebaseApp2 = this.f12930c;
@@ -341,7 +341,7 @@ public class FirebaseInstallations4 implements InterfaceC4843g {
         return this.f12935h.m6769a();
     }
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final PersistedInstallationEntry m6764j(PersistedInstallationEntry persistedInstallationEntry) throws FirebaseInstallationsException {
         int responseCode;
         InstallationResponse installationResponseM6807e;
@@ -444,7 +444,7 @@ public class FirebaseInstallations4 implements InterfaceC4843g {
         throw new FirebaseInstallationsException("Firebase Installations Service is unavailable. Please try again later.", enumC11081a);
     }
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final void m6765k(Exception exc) {
         synchronized (this.f12936i) {
             Iterator<StateListener> it = this.f12940m.iterator();
@@ -456,7 +456,7 @@ public class FirebaseInstallations4 implements InterfaceC4843g {
         }
     }
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final void m6766l(PersistedInstallationEntry persistedInstallationEntry) {
         synchronized (this.f12936i) {
             Iterator<StateListener> it = this.f12940m.iterator();

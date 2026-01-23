@@ -1,9 +1,9 @@
 package com.discord.stores;
 
 
-/* compiled from: StoreChannelsSelected.kt */
-/* renamed from: com.discord.stores.SelectedChannelAnalyticsLocation, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.stores.SelectedChannelAnalyticsLocation, reason: use source file name */
+/* JADX INFO: compiled from: StoreChannelsSelected.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public enum StoreChannelsSelected3 {
     EMBED("Embed"),
     CHANNEL_LIST("Channel List"),

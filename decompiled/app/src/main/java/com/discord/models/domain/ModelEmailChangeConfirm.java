@@ -3,8 +3,8 @@ package com.discord.models.domain;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ModelEmailChangeConfirm.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: ModelEmailChangeConfirm.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class ModelEmailChangeConfirm {
     private final String token;
 
@@ -20,7 +20,7 @@ public final /* data */ class ModelEmailChangeConfirm {
         return modelEmailChangeConfirm.copy(str);
     }
 
-    /* renamed from: component1, reason: from getter */
+    /* JADX INFO: renamed from: component1, reason: from getter */
     public final String getToken() {
         return this.token;
     }

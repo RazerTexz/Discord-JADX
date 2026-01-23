@@ -18,18 +18,18 @@ import p507d0.p513e0.p514p.p515d.p517m0.p562l.p563b.p565e0.DeserializedContainer
 import p507d0.p579g0.Strings4;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: JvmPackagePartSource.kt */
-/* renamed from: d0.e0.p.d.m0.e.b.j, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.e.b.j, reason: use source file name */
+/* JADX INFO: compiled from: JvmPackagePartSource.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class JvmPackagePartSource implements DeserializedContainerSource2 {
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final JvmClassName f23614b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final JvmClassName f23615c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final KotlinJvmBinaryClass f23616d;
 
     public JvmPackagePartSource(JvmClassName jvmClassName, JvmClassName jvmClassName2, C11687l c11687l, NameResolver nameResolver, IncompatibleVersionErrorData<JvmMetadataVersion> incompatibleVersionErrorData, boolean z2, DeserializedContainerSource deserializedContainerSource, KotlinJvmBinaryClass kotlinJvmBinaryClass) {

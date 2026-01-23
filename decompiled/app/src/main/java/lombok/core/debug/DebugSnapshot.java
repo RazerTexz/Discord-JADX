@@ -6,7 +6,7 @@ import java.util.List;
 import java.util.concurrent.atomic.AtomicLong;
 import org.eclipse.jdt.internal.compiler.ast.CompilationUnitDeclaration;
 
-/* loaded from: discord-126021.apk:lombok/core/debug/DebugSnapshot.SCL.lombok */
+/* JADX INFO: loaded from: discord-126021.apk:lombok/core/debug/DebugSnapshot.SCL.lombok */
 public class DebugSnapshot implements Comparable<DebugSnapshot> {
     private static AtomicLong counter = new AtomicLong();
     private final long bits;
@@ -16,7 +16,7 @@ public class DebugSnapshot implements Comparable<DebugSnapshot> {
     private final Object[] params;
     private final WeakReference<CompilationUnitDeclaration> owner;
 
-    /* renamed from: id */
+    /* JADX INFO: renamed from: id */
     private final long f27466id = counter.getAndIncrement();
     private final long when = System.currentTimeMillis();
 
@@ -82,7 +82,7 @@ public class DebugSnapshot implements Comparable<DebugSnapshot> {
         return out.toString();
     }
 
-    /* renamed from: compareTo, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: compareTo, reason: avoid collision after fix types in other method */
     public int compareTo2(DebugSnapshot o) {
         return Long.valueOf(this.f27466id).compareTo(Long.valueOf(o.f27466id));
     }

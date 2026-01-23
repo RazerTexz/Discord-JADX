@@ -10,21 +10,21 @@ import p637j0.p642l.p647e.RxThreadFactory;
 import p637j0.p652o.RxJavaPlugins;
 import p658rx.Scheduler;
 
-/* compiled from: Schedulers.java */
-/* renamed from: j0.p.a, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: j0.p.a, reason: use source file name */
+/* JADX INFO: compiled from: Schedulers.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class Schedulers2 {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final AtomicReference<Schedulers2> f27393a = new AtomicReference<>();
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final Scheduler f27394b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final Scheduler f27395c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final Scheduler f27396d;
 
     public Schedulers2() {
@@ -34,12 +34,12 @@ public final class Schedulers2 {
         this.f27396d = new NewThreadScheduler(new RxThreadFactory("RxNewThreadScheduler-"));
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static Scheduler m10873a() {
         return m10874b().f27394b;
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static Schedulers2 m10874b() {
         while (true) {
             AtomicReference<Schedulers2> atomicReference = f27393a;
@@ -68,7 +68,7 @@ public final class Schedulers2 {
         }
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public static Scheduler m10875c() {
         return m10874b().f27395c;
     }

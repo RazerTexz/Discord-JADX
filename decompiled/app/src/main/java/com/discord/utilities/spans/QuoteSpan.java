@@ -12,8 +12,8 @@ import androidx.annotation.Px;
 import androidx.core.app.NotificationCompat;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: QuoteSpan.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: QuoteSpan.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class QuoteSpan implements LeadingMarginSpan {
     private final int gapWidth;
     private final float radius;

@@ -5,8 +5,8 @@ import java.io.InputStream;
 import java.io.OutputStream;
 import p007b.p109f.p115d.p119d.DoNotStrip;
 
+/* JADX INFO: loaded from: classes3.dex */
 @DoNotStrip
-/* loaded from: classes3.dex */
 public class WebpTranscoderImpl {
     @DoNotStrip
     private static native void nativeTranscodeWebpToJpeg(InputStream inputStream, OutputStream outputStream, int i) throws IOException;

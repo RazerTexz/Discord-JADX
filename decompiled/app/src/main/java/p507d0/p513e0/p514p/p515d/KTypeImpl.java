@@ -38,36 +38,36 @@ import p507d0.p592z.p594d.Lambda;
 import p507d0.p592z.p594d.PropertyReference1Impl;
 import p507d0.p592z.p594d.Reflection2;
 
-/* compiled from: KTypeImpl.kt */
-/* renamed from: d0.e0.p.d.x, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.x, reason: use source file name */
+/* JADX INFO: compiled from: KTypeImpl.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class KTypeImpl implements KTypeBase {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static final /* synthetic */ KProperty[] f25061j = {Reflection2.property1(new PropertyReference1Impl(Reflection2.getOrCreateKotlinClass(KTypeImpl.class), "classifier", "getClassifier()Lkotlin/reflect/KClassifier;")), Reflection2.property1(new PropertyReference1Impl(Reflection2.getOrCreateKotlinClass(KTypeImpl.class), "arguments", "getArguments()Ljava/util/List;"))};
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final ReflectProperties.a<Type> f25062k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final ReflectProperties.a f25063l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public final ReflectProperties.a f25064m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public final KotlinType f25065n;
 
-    /* compiled from: KTypeImpl.kt */
-    /* renamed from: d0.e0.p.d.x$a */
+    /* JADX INFO: renamed from: d0.e0.p.d.x$a */
+    /* JADX INFO: compiled from: KTypeImpl.kt */
     public static final class a extends Lambda implements Function0<List<? extends KTypeProjection>> {
         public final /* synthetic */ Function0 $computeJavaType;
 
-        /* compiled from: KTypeImpl.kt */
-        /* renamed from: d0.e0.p.d.x$a$a, reason: collision with other inner class name */
+        /* JADX INFO: renamed from: d0.e0.p.d.x$a$a, reason: collision with other inner class name */
+        /* JADX INFO: compiled from: KTypeImpl.kt */
         public static final class C13342a extends Lambda implements Function0<Type> {
 
-            /* renamed from: $i */
+            /* JADX INFO: renamed from: $i */
             public final /* synthetic */ int f25066$i;
             public final /* synthetic */ Lazy $parameterizedTypeArguments$inlined;
             public final /* synthetic */ KProperty $parameterizedTypeArguments$metadata$inlined = null;
@@ -87,7 +87,7 @@ public final class KTypeImpl implements KTypeBase {
             }
 
             @Override // kotlin.jvm.functions.Function0
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final Type invoke2() {
                 Type javaType = KTypeImpl.this.getJavaType();
                 if (javaType instanceof Class) {
@@ -130,8 +130,8 @@ public final class KTypeImpl implements KTypeBase {
             }
         }
 
-        /* compiled from: KTypeImpl.kt */
-        /* renamed from: d0.e0.p.d.x$a$b */
+        /* JADX INFO: renamed from: d0.e0.p.d.x$a$b */
+        /* JADX INFO: compiled from: KTypeImpl.kt */
         public static final class b extends Lambda implements Function0<List<? extends Type>> {
             public b() {
                 super(0);
@@ -143,7 +143,7 @@ public final class KTypeImpl implements KTypeBase {
             }
 
             @Override // kotlin.jvm.functions.Function0
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final List<? extends Type> invoke2() {
                 Type javaType = KTypeImpl.this.getJavaType();
                 Intrinsics3.checkNotNull(javaType);
@@ -163,7 +163,7 @@ public final class KTypeImpl implements KTypeBase {
         }
 
         @Override // kotlin.jvm.functions.Function0
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final List<? extends KTypeProjection> invoke2() {
             KTypeProjection kTypeProjectionInvariant;
             List<TypeProjection> arguments = KTypeImpl.this.getType().getArguments();
@@ -204,8 +204,8 @@ public final class KTypeImpl implements KTypeBase {
         }
     }
 
-    /* compiled from: KTypeImpl.kt */
-    /* renamed from: d0.e0.p.d.x$b */
+    /* JADX INFO: renamed from: d0.e0.p.d.x$b */
+    /* JADX INFO: compiled from: KTypeImpl.kt */
     public static final class b extends Lambda implements Function0<KClassifier> {
         public b() {
             super(0);
@@ -243,7 +243,7 @@ public final class KTypeImpl implements KTypeBase {
         return kTypeImpl.m10057a(kotlinType);
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final KClassifier m10057a(KotlinType kotlinType) {
         KotlinType type;
         ClassifierDescriptor declarationDescriptor = kotlinType.getConstructor().getDeclarationDescriptor();

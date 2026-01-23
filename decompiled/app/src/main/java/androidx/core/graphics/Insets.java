@@ -6,7 +6,7 @@ import androidx.annotation.RequiresApi;
 import androidx.annotation.RestrictTo;
 import p007b.p100d.p104b.p105a.outline;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public final class Insets {
 
     @NonNull
@@ -39,7 +39,7 @@ public final class Insets {
     }
 
     @NonNull
-    /* renamed from: of */
+    /* JADX INFO: renamed from: of */
     public static Insets m82of(int i, int i2, int i3, int i4) {
         return (i == 0 && i2 == 0 && i3 == 0 && i4 == 0) ? NONE : new Insets(i, i2, i3, i4);
     }
@@ -96,7 +96,7 @@ public final class Insets {
     }
 
     @NonNull
-    /* renamed from: of */
+    /* JADX INFO: renamed from: of */
     public static Insets m83of(@NonNull Rect rect) {
         return m82of(rect.left, rect.top, rect.right, rect.bottom);
     }

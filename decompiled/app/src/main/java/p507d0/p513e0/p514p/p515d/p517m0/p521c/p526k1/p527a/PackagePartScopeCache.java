@@ -19,18 +19,18 @@ import p507d0.p580t.CollectionsJVM;
 import p507d0.p580t._Collections;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: PackagePartScopeCache.kt */
-/* renamed from: d0.e0.p.d.m0.c.k1.a.a, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.c.k1.a.a, reason: use source file name */
+/* JADX INFO: compiled from: PackagePartScopeCache.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class PackagePartScopeCache {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final DeserializedDescriptorResolver f23009a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final ReflectKotlinClassFinder f23010b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final ConcurrentHashMap<ClassId, MemberScope3> f23011c;
 
     public PackagePartScopeCache(DeserializedDescriptorResolver deserializedDescriptorResolver, ReflectKotlinClassFinder reflectKotlinClassFinder) {

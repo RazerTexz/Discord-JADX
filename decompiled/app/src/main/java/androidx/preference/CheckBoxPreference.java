@@ -10,7 +10,7 @@ import android.widget.CompoundButton;
 import androidx.annotation.RestrictTo;
 import androidx.core.content.res.TypedArrayUtils;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class CheckBoxPreference extends TwoStatePreference {
     private final Listener mListener;
 

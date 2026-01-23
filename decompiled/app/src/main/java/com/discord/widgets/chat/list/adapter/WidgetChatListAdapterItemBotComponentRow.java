@@ -24,8 +24,8 @@ import p507d0.p580t.Iterables2;
 import p507d0.p580t._Collections;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: WidgetChatListAdapterItemBotComponentRow.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetChatListAdapterItemBotComponentRow.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetChatListAdapterItemBotComponentRow extends WidgetChatListItem implements ComponentView2 {
     private final WidgetChatListAdapterItemBotComponentRowBinding binding;
     public BotUiComponentEntry entry;

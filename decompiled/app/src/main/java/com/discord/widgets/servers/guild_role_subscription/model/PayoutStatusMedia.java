@@ -4,8 +4,8 @@ import androidx.annotation.DrawableRes;
 import androidx.annotation.StringRes;
 import p007b.p100d.p104b.p105a.outline;
 
-/* compiled from: PayoutStatusMedia.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: PayoutStatusMedia.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final /* data */ class PayoutStatusMedia {
     private final int iconDrawableRes;
     private final int statusStringRes;
@@ -25,12 +25,12 @@ public final /* data */ class PayoutStatusMedia {
         return payoutStatusMedia.copy(i, i2);
     }
 
-    /* renamed from: component1, reason: from getter */
+    /* JADX INFO: renamed from: component1, reason: from getter */
     public final int getIconDrawableRes() {
         return this.iconDrawableRes;
     }
 
-    /* renamed from: component2, reason: from getter */
+    /* JADX INFO: renamed from: component2, reason: from getter */
     public final int getStatusStringRes() {
         return this.statusStringRes;
     }

@@ -7,20 +7,20 @@ import java.util.Iterator;
 import java.util.Objects;
 import java.util.Set;
 
-/* compiled from: Collections2.java */
-/* renamed from: b.i.b.b.h, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.b.b.h, reason: use source file name */
+/* JADX INFO: compiled from: Collections2.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class Collections2 {
 
     /* JADX INFO: Add missing generic type declarations: [E] */
-    /* compiled from: Sets.java */
-    /* renamed from: b.i.b.b.h$a */
+    /* JADX INFO: renamed from: b.i.b.b.h$a */
+    /* JADX INFO: compiled from: Sets.java */
     public static class a<E> extends Sets4<E> {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public final /* synthetic */ Set f12010j;
 
-        /* renamed from: k */
+        /* JADX INFO: renamed from: k */
         public final /* synthetic */ Set f12011k;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -63,7 +63,7 @@ public final class Collections2 {
         }
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static int m6238a(Set<?> set) {
         Iterator<?> it = set.iterator();
         int i = 0;
@@ -74,19 +74,19 @@ public final class Collections2 {
         return i;
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static <E> Sets4<E> m6239b(Set<E> set, Set<?> set2) {
         Objects.requireNonNull(set, "set1");
         Objects.requireNonNull(set2, "set2");
         return new a(set, set2);
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public static <E> Set<E> m6240c() {
         return Collections.newSetFromMap(new IdentityHashMap());
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public static boolean m6241d(Set<?> set, Iterator<?> it) {
         boolean zRemove = false;
         while (it.hasNext()) {

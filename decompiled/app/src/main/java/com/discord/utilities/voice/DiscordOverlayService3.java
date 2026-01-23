@@ -8,9 +8,9 @@ import kotlin.jvm.functions.Function1;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: DiscordOverlayService.kt */
-/* renamed from: com.discord.utilities.voice.DiscordOverlayService$Companion$launchForConnect$2, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.utilities.voice.DiscordOverlayService$Companion$launchForConnect$2, reason: use source file name */
+/* JADX INFO: compiled from: DiscordOverlayService.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class DiscordOverlayService3 extends Lambda implements Function1<String, Unit> {
     public final /* synthetic */ WeakReference $weakContext;
 
@@ -26,7 +26,7 @@ public final class DiscordOverlayService3 extends Lambda implements Function1<St
         return Unit.f27425a;
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final void invoke2(String str) {
         Context context = (Context) this.$weakContext.get();
         if (context != null) {

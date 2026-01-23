@@ -6,19 +6,19 @@ import androidx.annotation.DoNotInline;
 import androidx.annotation.Nullable;
 import androidx.annotation.RequiresApi;
 
-/* compiled from: DrmUtil.java */
+/* JADX INFO: renamed from: b.i.a.c.w2.v, reason: use source file name */
+/* JADX INFO: compiled from: DrmUtil.java */
+/* JADX INFO: loaded from: classes3.dex */
 @RequiresApi(18)
-/* renamed from: b.i.a.c.w2.v, reason: use source file name */
-/* loaded from: classes3.dex */
 public final class DrmUtil {
     @DoNotInline
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static boolean m3601a(@Nullable Throwable th) {
         return th instanceof DeniedByServerException;
     }
 
     @DoNotInline
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static boolean m3602b(@Nullable Throwable th) {
         return th instanceof NotProvisionedException;
     }

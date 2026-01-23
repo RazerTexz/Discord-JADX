@@ -9,60 +9,60 @@ import p507d0.p579g0.StringsJVM;
 import p507d0.p592z.p594d.Intrinsics3;
 import p600f0.p601e0.Util7;
 
-/* compiled from: CacheControl.kt */
-/* renamed from: f0.d, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: f0.d, reason: use source file name */
+/* JADX INFO: compiled from: CacheControl.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class CacheControl {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final a f25373a = new a(null);
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final boolean f25374b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final boolean f25375c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final int f25376d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final int f25377e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final boolean f25378f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public final boolean f25379g;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public final boolean f25380h;
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public final int f25381i;
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final int f25382j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final boolean f25383k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final boolean f25384l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public final boolean f25385m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public String f25386n;
 
-    /* compiled from: CacheControl.kt */
-    /* renamed from: f0.d$a */
+    /* JADX INFO: renamed from: f0.d$a */
+    /* JADX INFO: compiled from: CacheControl.kt */
     public static final class a {
         public a(DefaultConstructorMarker defaultConstructorMarker) {
         }
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final int m10107a(String str, String str2, int i) {
             int length = str.length();
             while (i < length) {
@@ -77,7 +77,7 @@ public final class CacheControl {
         /* JADX WARN: Removed duplicated region for block: B:15:0x004a  */
         /* JADX WARN: Removed duplicated region for block: B:47:0x0104  */
         /* JADX WARN: Removed duplicated region for block: B:48:0x0108  */
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         /*
             Code decompiled incorrectly, please refer to instructions dump.
         */

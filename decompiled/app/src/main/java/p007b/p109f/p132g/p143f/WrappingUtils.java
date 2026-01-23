@@ -19,15 +19,15 @@ import p007b.p109f.p132g.p142e.RoundedNinePatchDrawable;
 import p007b.p109f.p132g.p142e.ScaleTypeDrawable;
 import p007b.p109f.p161j.p183r.FrescoSystrace;
 
-/* compiled from: WrappingUtils.java */
-/* renamed from: b.f.g.f.d, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.f.g.f.d, reason: use source file name */
+/* JADX INFO: compiled from: WrappingUtils.java */
+/* JADX INFO: loaded from: classes.dex */
 public class WrappingUtils {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final Drawable f3479a = new ColorDrawable(0);
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static Drawable m1126a(Drawable drawable, RoundingParams roundingParams, Resources resources) {
         if (drawable instanceof BitmapDrawable) {
             BitmapDrawable bitmapDrawable = (BitmapDrawable) drawable;
@@ -49,7 +49,7 @@ public class WrappingUtils {
         return roundedColorDrawable;
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static void m1127b(Rounded rounded, RoundingParams roundingParams) {
         rounded.mo1107c(roundingParams.f3472b);
         rounded.mo1112m(roundingParams.f3473c);
@@ -59,7 +59,7 @@ public class WrappingUtils {
         rounded.mo1108e(roundingParams.f3478h);
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public static Drawable m1128c(Drawable drawable, RoundingParams roundingParams, Resources resources) {
         try {
             FrescoSystrace.m1527b();
@@ -84,7 +84,7 @@ public class WrappingUtils {
         }
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public static Drawable m1129d(Drawable drawable, RoundingParams roundingParams) {
         try {
             FrescoSystrace.m1527b();
@@ -101,7 +101,7 @@ public class WrappingUtils {
         }
     }
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public static Drawable m1130e(Drawable drawable, ScalingUtils$ScaleType scalingUtils$ScaleType, PointF pointF) {
         FrescoSystrace.m1527b();
         if (drawable == null || scalingUtils$ScaleType == null) {

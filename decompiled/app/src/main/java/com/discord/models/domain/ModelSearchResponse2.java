@@ -9,9 +9,9 @@ import p507d0.p580t.Collections2;
 import p507d0.p580t._Collections;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: ModelSearchResponse.kt */
-/* renamed from: com.discord.models.domain.ModelSearchResponse$hits$2, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: com.discord.models.domain.ModelSearchResponse$hits$2, reason: use source file name */
+/* JADX INFO: compiled from: ModelSearchResponse.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class ModelSearchResponse2 extends Lambda implements Function0<List<? extends Message>> {
     public final /* synthetic */ ModelSearchResponse this$0;
 
@@ -27,7 +27,7 @@ public final class ModelSearchResponse2 extends Lambda implements Function0<List
     }
 
     @Override // kotlin.jvm.functions.Function0
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final List<? extends Message> invoke2() {
         Object next;
         List<List<Message>> messages = this.this$0.getMessages();

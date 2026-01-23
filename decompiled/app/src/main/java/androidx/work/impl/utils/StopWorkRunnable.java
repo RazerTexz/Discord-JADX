@@ -9,8 +9,8 @@ import androidx.work.impl.WorkDatabase;
 import androidx.work.impl.WorkManagerImpl;
 import androidx.work.impl.model.WorkSpecDao;
 
+/* JADX INFO: loaded from: classes.dex */
 @RestrictTo({RestrictTo.Scope.LIBRARY_GROUP})
-/* loaded from: classes.dex */
 public class StopWorkRunnable implements Runnable {
     private static final String TAG = Logger.tagWithPrefix("StopWorkRunnable");
     private final boolean mStopInForeground;

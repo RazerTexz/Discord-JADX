@@ -1,6 +1,6 @@
 package androidx.sqlite.p006db;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public interface SupportSQLiteQuery {
     void bindTo(SupportSQLiteProgram supportSQLiteProgram);
 

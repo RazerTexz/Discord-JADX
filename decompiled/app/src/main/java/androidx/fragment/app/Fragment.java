@@ -75,7 +75,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 import java.util.concurrent.atomic.AtomicReference;
 import p007b.p100d.p104b.p105a.outline;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class Fragment implements ComponentCallbacks, View.OnCreateContextMenuListener, LifecycleOwner, ViewModelStoreOwner, HasDefaultViewModelProviderFactory, SavedStateRegistryOwner, ActivityResultCaller {
     public static final int ACTIVITY_CREATED = 4;
     public static final int ATTACHED = 0;
@@ -150,7 +150,7 @@ public class Fragment implements ComponentCallbacks, View.OnCreateContextMenuLis
     @NonNull
     public String mWho;
 
-    /* renamed from: androidx.fragment.app.Fragment$1 */
+    /* JADX INFO: renamed from: androidx.fragment.app.Fragment$1 */
     public class RunnableC03611 implements Runnable {
         public RunnableC03611() {
         }
@@ -161,7 +161,7 @@ public class Fragment implements ComponentCallbacks, View.OnCreateContextMenuLis
         }
     }
 
-    /* renamed from: androidx.fragment.app.Fragment$2 */
+    /* JADX INFO: renamed from: androidx.fragment.app.Fragment$2 */
     public class RunnableC03622 implements Runnable {
         public RunnableC03622() {
         }
@@ -172,7 +172,7 @@ public class Fragment implements ComponentCallbacks, View.OnCreateContextMenuLis
         }
     }
 
-    /* renamed from: androidx.fragment.app.Fragment$3 */
+    /* JADX INFO: renamed from: androidx.fragment.app.Fragment$3 */
     public class RunnableC03633 implements Runnable {
         public final /* synthetic */ SpecialEffectsController val$controller;
 
@@ -186,7 +186,7 @@ public class Fragment implements ComponentCallbacks, View.OnCreateContextMenuLis
         }
     }
 
-    /* renamed from: androidx.fragment.app.Fragment$4 */
+    /* JADX INFO: renamed from: androidx.fragment.app.Fragment$4 */
     public class C03644 extends FragmentContainer {
         public C03644() {
         }
@@ -210,7 +210,7 @@ public class Fragment implements ComponentCallbacks, View.OnCreateContextMenuLis
         }
     }
 
-    /* renamed from: androidx.fragment.app.Fragment$5 */
+    /* JADX INFO: renamed from: androidx.fragment.app.Fragment$5 */
     public class C03655 implements LifecycleEventObserver {
         public C03655() {
         }
@@ -225,7 +225,7 @@ public class Fragment implements ComponentCallbacks, View.OnCreateContextMenuLis
         }
     }
 
-    /* renamed from: androidx.fragment.app.Fragment$6 */
+    /* JADX INFO: renamed from: androidx.fragment.app.Fragment$6 */
     public class C03666 implements Function<Void, ActivityResultRegistry> {
         public C03666() {
         }
@@ -235,7 +235,7 @@ public class Fragment implements ComponentCallbacks, View.OnCreateContextMenuLis
             return apply2(r1);
         }
 
-        /* renamed from: apply, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: apply, reason: avoid collision after fix types in other method */
         public ActivityResultRegistry apply2(Void r3) {
             Fragment fragment = Fragment.this;
             Object obj = fragment.mHost;
@@ -243,7 +243,7 @@ public class Fragment implements ComponentCallbacks, View.OnCreateContextMenuLis
         }
     }
 
-    /* renamed from: androidx.fragment.app.Fragment$7 */
+    /* JADX INFO: renamed from: androidx.fragment.app.Fragment$7 */
     public class C03677 implements Function<Void, ActivityResultRegistry> {
         public final /* synthetic */ ActivityResultRegistry val$registry;
 
@@ -256,13 +256,13 @@ public class Fragment implements ComponentCallbacks, View.OnCreateContextMenuLis
             return apply2(r1);
         }
 
-        /* renamed from: apply, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: apply, reason: avoid collision after fix types in other method */
         public ActivityResultRegistry apply2(Void r1) {
             return this.val$registry;
         }
     }
 
-    /* renamed from: androidx.fragment.app.Fragment$8 */
+    /* JADX INFO: renamed from: androidx.fragment.app.Fragment$8 */
     public class C03688 extends OnPreAttachedListener {
         public final /* synthetic */ ActivityResultCallback val$callback;
         public final /* synthetic */ ActivityResultContract val$contract;
@@ -286,7 +286,7 @@ public class Fragment implements ComponentCallbacks, View.OnCreateContextMenuLis
     }
 
     /* JADX INFO: Add missing generic type declarations: [I] */
-    /* renamed from: androidx.fragment.app.Fragment$9 */
+    /* JADX INFO: renamed from: androidx.fragment.app.Fragment$9 */
     public class C03699<I> extends ActivityResultLauncher<I> {
         public final /* synthetic */ ActivityResultContract val$contract;
         public final /* synthetic */ AtomicReference val$ref;
@@ -578,7 +578,7 @@ public class Fragment implements ComponentCallbacks, View.OnCreateContextMenuLis
         this.mChildFragmentManager.dump(outline.m883w(str, "  "), fileDescriptor, printWriter, strArr);
     }
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public /* bridge */ /* synthetic */ Activity m95e() {
         return getActivity();
     }
@@ -1906,7 +1906,7 @@ public class Fragment implements ComponentCallbacks, View.OnCreateContextMenuLis
         public static final Parcelable.Creator<SavedState> CREATOR = new C03701();
         public final Bundle mState;
 
-        /* renamed from: androidx.fragment.app.Fragment$SavedState$1 */
+        /* JADX INFO: renamed from: androidx.fragment.app.Fragment$SavedState$1 */
         public class C03701 implements Parcelable.ClassLoaderCreator<SavedState> {
             @Override // android.os.Parcelable.Creator
             public /* bridge */ /* synthetic */ Object createFromParcel(Parcel parcel) {
@@ -1966,7 +1966,7 @@ public class Fragment implements ComponentCallbacks, View.OnCreateContextMenuLis
 
     @NonNull
     @Deprecated
-    public static Fragment instantiate(@NonNull Context context, @NonNull String str, @Nullable Bundle bundle) throws IllegalArgumentException {
+    public static Fragment instantiate(@NonNull Context context, @NonNull String str, @Nullable Bundle bundle) {
         try {
             Fragment fragmentNewInstance = FragmentFactory.loadFragmentClass(context.getClassLoader(), str).getConstructor(new Class[0]).newInstance(new Object[0]);
             if (bundle != null) {

@@ -8,9 +8,9 @@ import p507d0.Result2;
 import p507d0.Result3;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: WithLifecycleState.kt */
-/* renamed from: androidx.lifecycle.WithLifecycleStateKt$suspendWithStateAtLeastUnchecked$$inlined$suspendCancellableCoroutine$lambda$1, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: androidx.lifecycle.WithLifecycleStateKt$suspendWithStateAtLeastUnchecked$$inlined$suspendCancellableCoroutine$lambda$1, reason: use source file name */
+/* JADX INFO: compiled from: WithLifecycleState.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class WithLifecycleState3 implements LifecycleEventObserver {
     public final /* synthetic */ Function0 $block$inlined;
     public final /* synthetic */ CancellableContinuation $co;

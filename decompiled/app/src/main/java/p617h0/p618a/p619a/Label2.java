@@ -2,54 +2,54 @@ package p617h0.p618a.p619a;
 
 import p007b.p100d.p104b.p105a.outline;
 
-/* compiled from: Label.java */
-/* renamed from: h0.a.a.p, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: h0.a.a.p, reason: use source file name */
+/* JADX INFO: compiled from: Label.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class Label2 {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final Label2 f26248a = new Label2();
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public short f26249b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public short f26250c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public int[] f26251d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public int f26252e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public int[] f26253f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public short f26254g;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public short f26255h;
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public short f26256i;
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public short f26257j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public Frame3 f26258k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public Label2 f26259l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public Edge2 f26260m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public Label2 f26261n;
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final void m10587a(int i, int i2, int i3) {
         if (this.f26253f == null) {
             this.f26253f = new int[6];
@@ -69,13 +69,13 @@ public class Label2 {
         iArr3[0] = i6;
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final Label2 m10588b() {
         Frame3 frame3 = this.f26258k;
         return frame3 == null ? this : frame3.f26228a;
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final void m10589c(short s2) {
         this.f26261n = f26248a;
         Label2 label2M10590d = this;
@@ -91,7 +91,7 @@ public class Label2 {
         }
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final Label2 m10590d(Label2 label2) {
         Edge2 edge2 = this.f26260m;
         while (edge2 != null) {
@@ -107,7 +107,7 @@ public class Label2 {
         return label2;
     }
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final void m10591e(ByteVector2 byteVector2, int i, boolean z2) {
         if ((this.f26249b & 4) != 0) {
             if (z2) {
@@ -127,7 +127,7 @@ public class Label2 {
         }
     }
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final boolean m10592f(byte[] bArr, int i) {
         this.f26249b = (short) (this.f26249b | 4);
         this.f26252e = i;

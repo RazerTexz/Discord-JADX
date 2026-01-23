@@ -7,28 +7,28 @@ import p007b.p195g.p196a.p205c.JavaType;
 import p007b.p195g.p196a.p205c.JsonSerializer;
 import p007b.p195g.p196a.p205c.SerializerProvider;
 
-/* compiled from: PropertySerializerMap.java */
-/* renamed from: b.g.a.c.g0.t.l, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.g.a.c.g0.t.l, reason: use source file name */
+/* JADX INFO: compiled from: PropertySerializerMap.java */
+/* JADX INFO: loaded from: classes3.dex */
 public abstract class PropertySerializerMap {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final boolean f4823a;
 
-    /* compiled from: PropertySerializerMap.java */
-    /* renamed from: b.g.a.c.g0.t.l$a */
+    /* JADX INFO: renamed from: b.g.a.c.g0.t.l$a */
+    /* JADX INFO: compiled from: PropertySerializerMap.java */
     public static final class a extends PropertySerializerMap {
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final Class<?> f4824b;
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public final Class<?> f4825c;
 
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         public final JsonSerializer<Object> f4826d;
 
-        /* renamed from: e */
+        /* JADX INFO: renamed from: e */
         public final JsonSerializer<Object> f4827e;
 
         public a(PropertySerializerMap propertySerializerMap, Class<?> cls, JsonSerializer<Object> jsonSerializer, Class<?> cls2, JsonSerializer<Object> jsonSerializer2) {
@@ -40,13 +40,13 @@ public abstract class PropertySerializerMap {
         }
 
         @Override // p007b.p195g.p196a.p205c.p215g0.p216t.PropertySerializerMap
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public PropertySerializerMap mo2033b(Class<?> cls, JsonSerializer<Object> jsonSerializer) {
             return new c(this, new f[]{new f(this.f4824b, this.f4826d), new f(this.f4825c, this.f4827e), new f(cls, jsonSerializer)});
         }
 
         @Override // p007b.p195g.p196a.p205c.p215g0.p216t.PropertySerializerMap
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public JsonSerializer<Object> mo2034c(Class<?> cls) {
             if (cls == this.f4824b) {
                 return this.f4826d;
@@ -58,11 +58,11 @@ public abstract class PropertySerializerMap {
         }
     }
 
-    /* compiled from: PropertySerializerMap.java */
-    /* renamed from: b.g.a.c.g0.t.l$b */
+    /* JADX INFO: renamed from: b.g.a.c.g0.t.l$b */
+    /* JADX INFO: compiled from: PropertySerializerMap.java */
     public static final class b extends PropertySerializerMap {
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public static final b f4828b = new b(false);
 
         public b(boolean z2) {
@@ -70,23 +70,23 @@ public abstract class PropertySerializerMap {
         }
 
         @Override // p007b.p195g.p196a.p205c.p215g0.p216t.PropertySerializerMap
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public PropertySerializerMap mo2033b(Class<?> cls, JsonSerializer<Object> jsonSerializer) {
             return new e(this, cls, jsonSerializer);
         }
 
         @Override // p007b.p195g.p196a.p205c.p215g0.p216t.PropertySerializerMap
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public JsonSerializer<Object> mo2034c(Class<?> cls) {
             return null;
         }
     }
 
-    /* compiled from: PropertySerializerMap.java */
-    /* renamed from: b.g.a.c.g0.t.l$c */
+    /* JADX INFO: renamed from: b.g.a.c.g0.t.l$c */
+    /* JADX INFO: compiled from: PropertySerializerMap.java */
     public static final class c extends PropertySerializerMap {
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final f[] f4829b;
 
         public c(PropertySerializerMap propertySerializerMap, f[] fVarArr) {
@@ -95,7 +95,7 @@ public abstract class PropertySerializerMap {
         }
 
         @Override // p007b.p195g.p196a.p205c.p215g0.p216t.PropertySerializerMap
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public PropertySerializerMap mo2033b(Class<?> cls, JsonSerializer<Object> jsonSerializer) {
             f[] fVarArr = this.f4829b;
             int length = fVarArr.length;
@@ -108,7 +108,7 @@ public abstract class PropertySerializerMap {
         }
 
         @Override // p007b.p195g.p196a.p205c.p215g0.p216t.PropertySerializerMap
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public JsonSerializer<Object> mo2034c(Class<?> cls) {
             f[] fVarArr = this.f4829b;
             f fVar = fVarArr[0];
@@ -156,14 +156,14 @@ public abstract class PropertySerializerMap {
         }
     }
 
-    /* compiled from: PropertySerializerMap.java */
-    /* renamed from: b.g.a.c.g0.t.l$d */
+    /* JADX INFO: renamed from: b.g.a.c.g0.t.l$d */
+    /* JADX INFO: compiled from: PropertySerializerMap.java */
     public static final class d {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final JsonSerializer<Object> f4830a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final PropertySerializerMap f4831b;
 
         public d(JsonSerializer<Object> jsonSerializer, PropertySerializerMap propertySerializerMap) {
@@ -172,14 +172,14 @@ public abstract class PropertySerializerMap {
         }
     }
 
-    /* compiled from: PropertySerializerMap.java */
-    /* renamed from: b.g.a.c.g0.t.l$e */
+    /* JADX INFO: renamed from: b.g.a.c.g0.t.l$e */
+    /* JADX INFO: compiled from: PropertySerializerMap.java */
     public static final class e extends PropertySerializerMap {
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final Class<?> f4832b;
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public final JsonSerializer<Object> f4833c;
 
         public e(PropertySerializerMap propertySerializerMap, Class<?> cls, JsonSerializer<Object> jsonSerializer) {
@@ -189,13 +189,13 @@ public abstract class PropertySerializerMap {
         }
 
         @Override // p007b.p195g.p196a.p205c.p215g0.p216t.PropertySerializerMap
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public PropertySerializerMap mo2033b(Class<?> cls, JsonSerializer<Object> jsonSerializer) {
             return new a(this, this.f4832b, this.f4833c, cls, jsonSerializer);
         }
 
         @Override // p007b.p195g.p196a.p205c.p215g0.p216t.PropertySerializerMap
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public JsonSerializer<Object> mo2034c(Class<?> cls) {
             if (cls == this.f4832b) {
                 return this.f4833c;
@@ -204,14 +204,14 @@ public abstract class PropertySerializerMap {
         }
     }
 
-    /* compiled from: PropertySerializerMap.java */
-    /* renamed from: b.g.a.c.g0.t.l$f */
+    /* JADX INFO: renamed from: b.g.a.c.g0.t.l$f */
+    /* JADX INFO: compiled from: PropertySerializerMap.java */
     public static final class f {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final Class<?> f4834a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final JsonSerializer<Object> f4835b;
 
         public f(Class<?> cls, JsonSerializer<Object> jsonSerializer) {
@@ -224,16 +224,16 @@ public abstract class PropertySerializerMap {
         this.f4823a = z2;
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final d m2032a(JavaType javaType, SerializerProvider serializerProvider, BeanProperty beanProperty) throws JsonMappingException {
         JsonSerializer<Object> jsonSerializerM2249m = serializerProvider.m2249m(javaType, beanProperty);
         return new d(jsonSerializerM2249m, mo2033b(javaType._class, jsonSerializerM2249m));
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public abstract PropertySerializerMap mo2033b(Class<?> cls, JsonSerializer<Object> jsonSerializer);
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public abstract JsonSerializer<Object> mo2034c(Class<?> cls);
 
     public PropertySerializerMap(PropertySerializerMap propertySerializerMap) {

@@ -12,19 +12,19 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import p007b.p225i.p226a.p288f.p313h.p322i.C3489c;
 
-/* compiled from: com.google.firebase:firebase-messaging@@21.0.0 */
-/* renamed from: b.i.c.w.o */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.c.w.o */
+/* JADX INFO: compiled from: com.google.firebase:firebase-messaging@@21.0.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public class C4877o implements Closeable {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final URL f13034j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     @Nullable
     public Task<Bitmap> f13035k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     @Nullable
     public volatile InputStream f13036l;
 

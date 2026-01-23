@@ -34,123 +34,123 @@ import p007b.p225i.p226a.p288f.p299e.p300h.p301j.C3293g;
 import p007b.p225i.p226a.p288f.p299e.p300h.p301j.C3327x;
 import p007b.p225i.p226a.p288f.p299e.p300h.p301j.RunnableC3325w;
 
-/* compiled from: com.google.android.gms:play-services-basement@@17.6.0 */
-/* renamed from: b.i.a.f.e.k.b */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.e.k.b */
+/* JADX INFO: compiled from: com.google.android.gms:play-services-basement@@17.6.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public abstract class AbstractC3345b<T extends IInterface> {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final Feature[] f9476a = new Feature[0];
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public C3386v0 f9478c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final Context f9479d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final AbstractC3351e f9480e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final C3256c f9481f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public final Handler f9482g;
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     @Nullable
     public InterfaceC3359i f9485j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     @RecentlyNonNull
     public c f9486k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     @Nullable
     public T f9487l;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     @Nullable
     public ServiceConnectionC3364k0 f9489n;
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     @Nullable
     public final a f9491p;
 
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     @Nullable
     public final b f9492q;
 
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     public final int f9493r;
 
-    /* renamed from: s */
+    /* JADX INFO: renamed from: s */
     @Nullable
     public final String f9494s;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     @Nullable
     public volatile String f9477b = null;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public final Object f9483h = new Object();
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public final Object f9484i = new Object();
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public final ArrayList<AbstractC3360i0<?>> f9488m = new ArrayList<>();
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public int f9490o = 1;
 
-    /* renamed from: t */
+    /* JADX INFO: renamed from: t */
     @Nullable
     public ConnectionResult f9495t = null;
 
-    /* renamed from: u */
+    /* JADX INFO: renamed from: u */
     public boolean f9496u = false;
 
-    /* renamed from: v */
+    /* JADX INFO: renamed from: v */
     @Nullable
     public volatile zzi f9497v = null;
 
-    /* renamed from: w */
+    /* JADX INFO: renamed from: w */
     @RecentlyNonNull
     public AtomicInteger f9498w = new AtomicInteger(0);
 
-    /* compiled from: com.google.android.gms:play-services-basement@@17.6.0 */
-    /* renamed from: b.i.a.f.e.k.b$a */
+    /* JADX INFO: renamed from: b.i.a.f.e.k.b$a */
+    /* JADX INFO: compiled from: com.google.android.gms:play-services-basement@@17.6.0 */
     public interface a {
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         void mo4144c(int i);
 
-        /* renamed from: i */
+        /* JADX INFO: renamed from: i */
         void mo4145i(@Nullable Bundle bundle);
     }
 
-    /* compiled from: com.google.android.gms:play-services-basement@@17.6.0 */
-    /* renamed from: b.i.a.f.e.k.b$b */
+    /* JADX INFO: renamed from: b.i.a.f.e.k.b$b */
+    /* JADX INFO: compiled from: com.google.android.gms:play-services-basement@@17.6.0 */
     public interface b {
-        /* renamed from: g */
+        /* JADX INFO: renamed from: g */
         void mo4146g(@RecentlyNonNull ConnectionResult connectionResult);
     }
 
-    /* compiled from: com.google.android.gms:play-services-basement@@17.6.0 */
-    /* renamed from: b.i.a.f.e.k.b$c */
+    /* JADX INFO: renamed from: b.i.a.f.e.k.b$c */
+    /* JADX INFO: compiled from: com.google.android.gms:play-services-basement@@17.6.0 */
     public interface c {
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         void mo4103a(@RecentlyNonNull ConnectionResult connectionResult);
     }
 
-    /* compiled from: com.google.android.gms:play-services-basement@@17.6.0 */
-    /* renamed from: b.i.a.f.e.k.b$d */
+    /* JADX INFO: renamed from: b.i.a.f.e.k.b$d */
+    /* JADX INFO: compiled from: com.google.android.gms:play-services-basement@@17.6.0 */
     public class d implements c {
         public d() {
         }
 
         @Override // p007b.p225i.p226a.p288f.p299e.p304k.AbstractC3345b.c
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final void mo4103a(@RecentlyNonNull ConnectionResult connectionResult) {
             if (connectionResult.m9020x0()) {
                 AbstractC3345b abstractC3345b = AbstractC3345b.this;
@@ -164,8 +164,8 @@ public abstract class AbstractC3345b<T extends IInterface> {
         }
     }
 
-    /* compiled from: com.google.android.gms:play-services-basement@@17.6.0 */
-    /* renamed from: b.i.a.f.e.k.b$e */
+    /* JADX INFO: renamed from: b.i.a.f.e.k.b$e */
+    /* JADX INFO: compiled from: com.google.android.gms:play-services-basement@@17.6.0 */
     public interface e {
     }
 
@@ -184,7 +184,7 @@ public abstract class AbstractC3345b<T extends IInterface> {
         this.f9494s = str;
     }
 
-    /* renamed from: C */
+    /* JADX INFO: renamed from: C */
     public static /* synthetic */ void m4122C(AbstractC3345b abstractC3345b, int i) {
         int i2;
         int i3;
@@ -201,7 +201,7 @@ public abstract class AbstractC3345b<T extends IInterface> {
         handler.sendMessage(handler.obtainMessage(i3, abstractC3345b.f9498w.get(), 16));
     }
 
-    /* renamed from: D */
+    /* JADX INFO: renamed from: D */
     public static /* synthetic */ boolean m4123D(AbstractC3345b abstractC3345b) {
         if (abstractC3345b.f9496u || TextUtils.isEmpty(abstractC3345b.mo3984x()) || TextUtils.isEmpty(null)) {
             return false;
@@ -214,7 +214,7 @@ public abstract class AbstractC3345b<T extends IInterface> {
         }
     }
 
-    /* renamed from: E */
+    /* JADX INFO: renamed from: E */
     public static /* synthetic */ boolean m4124E(AbstractC3345b abstractC3345b, int i, int i2, IInterface iInterface) {
         synchronized (abstractC3345b.f9483h) {
             if (abstractC3345b.f9490o != i) {
@@ -226,19 +226,19 @@ public abstract class AbstractC3345b<T extends IInterface> {
     }
 
     @CallSuper
-    /* renamed from: A */
+    /* JADX INFO: renamed from: A */
     public void m4125A(int i) {
         System.currentTimeMillis();
     }
 
     @RecentlyNonNull
-    /* renamed from: B */
+    /* JADX INFO: renamed from: B */
     public final String m4126B() {
         String str = this.f9494s;
         return str == null ? this.f9479d.getClass().getName() : str;
     }
 
-    /* renamed from: F */
+    /* JADX INFO: renamed from: F */
     public final void m4127F(int i, @Nullable T t) {
         C3386v0 c3386v0;
         AnimatableValueParser.m539l((i == 4) == (t != null));
@@ -309,7 +309,7 @@ public abstract class AbstractC3345b<T extends IInterface> {
     }
 
     @WorkerThread
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public void m4128b(@Nullable InterfaceC3355g interfaceC3355g, @RecentlyNonNull Set<Scope> set) {
         Bundle bundleMo4140u = mo4140u();
         GetServiceRequest getServiceRequest = new GetServiceRequest(this.f9493r, null);
@@ -360,13 +360,13 @@ public abstract class AbstractC3345b<T extends IInterface> {
         }
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public void m4129c(@RecentlyNonNull String str) {
         this.f9477b = str;
         mo4036h();
     }
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public boolean m4130e() {
         boolean z2;
         synchronized (this.f9483h) {
@@ -380,7 +380,7 @@ public abstract class AbstractC3345b<T extends IInterface> {
     }
 
     @RecentlyNonNull
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public String m4131f() {
         if (!m4134j() || this.f9478c == null) {
             throw new RuntimeException("Failed to connect when checking package");
@@ -388,14 +388,14 @@ public abstract class AbstractC3345b<T extends IInterface> {
         return "com.google.android.gms";
     }
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public void m4132g(@RecentlyNonNull c cVar) {
         AnimatableValueParser.m595z(cVar, "Connection progress callbacks cannot be null.");
         this.f9486k = cVar;
         m4127F(2, null);
     }
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public void mo4036h() {
         this.f9498w.incrementAndGet();
         synchronized (this.f9488m) {
@@ -414,13 +414,13 @@ public abstract class AbstractC3345b<T extends IInterface> {
         m4127F(1, null);
     }
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public void m4133i(@RecentlyNonNull e eVar) {
         C3327x c3327x = (C3327x) eVar;
         C3293g.this.f9390x.post(new RunnableC3325w(c3327x));
     }
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public boolean m4134j() {
         boolean z2;
         synchronized (this.f9483h) {
@@ -429,18 +429,18 @@ public abstract class AbstractC3345b<T extends IInterface> {
         return z2;
     }
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public boolean mo4039k() {
         return true;
     }
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public int mo3982l() {
         return C3256c.f9306a;
     }
 
     @RecentlyNullable
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public final Feature[] m4135m() {
         zzi zziVar = this.f9497v;
         if (zziVar == null) {
@@ -450,17 +450,17 @@ public abstract class AbstractC3345b<T extends IInterface> {
     }
 
     @RecentlyNullable
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public String m4136n() {
         return this.f9477b;
     }
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public boolean mo4042o() {
         return false;
     }
 
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     public void m4137q() throws PackageManager.NameNotFoundException {
         int iMo4018b = this.f9481f.mo4018b(this.f9479d, mo3982l());
         if (iMo4018b == 0) {
@@ -476,35 +476,35 @@ public abstract class AbstractC3345b<T extends IInterface> {
     }
 
     @RecentlyNullable
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     public abstract T mo3983r(@RecentlyNonNull IBinder iBinder);
 
     @RecentlyNullable
-    /* renamed from: s */
+    /* JADX INFO: renamed from: s */
     public Account mo4138s() {
         return null;
     }
 
     @RecentlyNonNull
-    /* renamed from: t */
+    /* JADX INFO: renamed from: t */
     public Feature[] mo4139t() {
         return f9476a;
     }
 
     @RecentlyNonNull
-    /* renamed from: u */
+    /* JADX INFO: renamed from: u */
     public Bundle mo4140u() {
         return new Bundle();
     }
 
     @RecentlyNonNull
-    /* renamed from: v */
+    /* JADX INFO: renamed from: v */
     public Set<Scope> mo4141v() {
         return Collections.emptySet();
     }
 
     @RecentlyNonNull
-    /* renamed from: w */
+    /* JADX INFO: renamed from: w */
     public final T m4142w() throws DeadObjectException {
         T t;
         synchronized (this.f9483h) {
@@ -525,15 +525,15 @@ public abstract class AbstractC3345b<T extends IInterface> {
     }
 
     @NonNull
-    /* renamed from: x */
+    /* JADX INFO: renamed from: x */
     public abstract String mo3984x();
 
     @NonNull
-    /* renamed from: y */
+    /* JADX INFO: renamed from: y */
     public abstract String mo3985y();
 
     @CallSuper
-    /* renamed from: z */
+    /* JADX INFO: renamed from: z */
     public void m4143z(@RecentlyNonNull T t) {
         System.currentTimeMillis();
     }

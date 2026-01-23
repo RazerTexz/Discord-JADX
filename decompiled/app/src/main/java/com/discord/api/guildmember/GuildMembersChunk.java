@@ -5,30 +5,30 @@ import java.util.List;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: GuildMembersChunk.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: GuildMembersChunk.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class GuildMembersChunk {
     private final long guildId;
     private final List<GuildMember> members;
     private final List<Long> notFound;
     private final List<Presence> presences;
 
-    /* renamed from: a, reason: from getter */
+    /* JADX INFO: renamed from: a, reason: from getter */
     public final long getGuildId() {
         return this.guildId;
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final List<GuildMember> m7932b() {
         return this.members;
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final List<Long> m7933c() {
         return this.notFound;
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final List<Presence> m7934d() {
         return this.presences;
     }

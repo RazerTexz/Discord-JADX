@@ -4,8 +4,8 @@ import com.discord.models.domain.ModelAuditLogEntry;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: GifCategoryDto.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: GifCategoryDto.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class GifCategoryDto {
     private final String name;
     private final String src;
@@ -27,12 +27,12 @@ public final /* data */ class GifCategoryDto {
         return gifCategoryDto.copy(str, str2);
     }
 
-    /* renamed from: component1, reason: from getter */
+    /* JADX INFO: renamed from: component1, reason: from getter */
     public final String getName() {
         return this.name;
     }
 
-    /* renamed from: component2, reason: from getter */
+    /* JADX INFO: renamed from: component2, reason: from getter */
     public final String getSrc() {
         return this.src;
     }

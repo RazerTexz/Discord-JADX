@@ -25,9 +25,9 @@ import p507d0.p580t.Maps6;
 import p507d0.p592z.p594d.Intrinsics3;
 import p637j0.p641k.Func1;
 
-/* compiled from: FriendsListViewModel.kt */
-/* renamed from: com.discord.widgets.friends.FriendsListViewModel$Companion$observeStores$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.friends.FriendsListViewModel$Companion$observeStores$1, reason: use source file name */
+/* JADX INFO: compiled from: FriendsListViewModel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class FriendsListViewModel2<T, R> implements Func1<Unit, FriendsListViewModel.StoreState> {
     public final /* synthetic */ StoreApplicationStreaming $storeApplicationStreaming;
     public final /* synthetic */ StoreChannelsSelected $storeChannelsSelected;
@@ -56,7 +56,7 @@ public final class FriendsListViewModel2<T, R> implements Func1<Unit, FriendsLis
         return call2(unit);
     }
 
-    /* renamed from: call, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
     public final FriendsListViewModel.StoreState call2(Unit unit) {
         boolean z2;
         boolean z3;

@@ -12,9 +12,9 @@ import kotlin.jvm.functions.Function1;
 import p507d0.p592z.p594d.FunctionReferenceImpl;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: WidgetGuildInviteSettings.kt */
-/* renamed from: com.discord.widgets.guilds.invite.WidgetGuildInviteSettings$binding$2, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.guilds.invite.WidgetGuildInviteSettings$binding$2, reason: use source file name */
+/* JADX INFO: compiled from: WidgetGuildInviteSettings.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final /* synthetic */ class WidgetGuildInviteSettings4 extends FunctionReferenceImpl implements Function1<View, WidgetGuildInviteSettingsBinding> {
     public static final WidgetGuildInviteSettings4 INSTANCE = new WidgetGuildInviteSettings4();
 
@@ -27,7 +27,7 @@ public final /* synthetic */ class WidgetGuildInviteSettings4 extends FunctionRe
         return invoke2(view);
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final WidgetGuildInviteSettingsBinding invoke2(View view) {
         Intrinsics3.checkNotNullParameter(view, "p1");
         int i = C5419R.id.guild_invite_channel_spinner;

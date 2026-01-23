@@ -10,22 +10,22 @@ import com.google.android.material.C10817R;
 import com.google.android.material.internal.TextWatcherAdapter;
 import com.google.android.material.textfield.TextInputLayout;
 
-/* compiled from: PasswordToggleEndIconDelegate.java */
-/* renamed from: b.i.a.g.j.p, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.g.j.p, reason: use source file name */
+/* JADX INFO: compiled from: PasswordToggleEndIconDelegate.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class PasswordToggleEndIconDelegate extends EndIconDelegate {
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final TextWatcher f11848d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final TextInputLayout.OnEditTextAttachedListener f11849e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final TextInputLayout.OnEndIconChangedListener f11850f;
 
-    /* compiled from: PasswordToggleEndIconDelegate.java */
-    /* renamed from: b.i.a.g.j.p$a */
+    /* JADX INFO: renamed from: b.i.a.g.j.p$a */
+    /* JADX INFO: compiled from: PasswordToggleEndIconDelegate.java */
     public class a extends TextWatcherAdapter {
         public a() {
         }
@@ -36,8 +36,8 @@ public class PasswordToggleEndIconDelegate extends EndIconDelegate {
         }
     }
 
-    /* compiled from: PasswordToggleEndIconDelegate.java */
-    /* renamed from: b.i.a.g.j.p$b */
+    /* JADX INFO: renamed from: b.i.a.g.j.p$b */
+    /* JADX INFO: compiled from: PasswordToggleEndIconDelegate.java */
     public class b implements TextInputLayout.OnEditTextAttachedListener {
         public b() {
         }
@@ -53,15 +53,15 @@ public class PasswordToggleEndIconDelegate extends EndIconDelegate {
         }
     }
 
-    /* compiled from: PasswordToggleEndIconDelegate.java */
-    /* renamed from: b.i.a.g.j.p$c */
+    /* JADX INFO: renamed from: b.i.a.g.j.p$c */
+    /* JADX INFO: compiled from: PasswordToggleEndIconDelegate.java */
     public class c implements TextInputLayout.OnEndIconChangedListener {
 
-        /* compiled from: PasswordToggleEndIconDelegate.java */
-        /* renamed from: b.i.a.g.j.p$c$a */
+        /* JADX INFO: renamed from: b.i.a.g.j.p$c$a */
+        /* JADX INFO: compiled from: PasswordToggleEndIconDelegate.java */
         public class a implements Runnable {
 
-            /* renamed from: j */
+            /* JADX INFO: renamed from: j */
             public final /* synthetic */ EditText f11854j;
 
             public a(EditText editText) {
@@ -88,8 +88,8 @@ public class PasswordToggleEndIconDelegate extends EndIconDelegate {
         }
     }
 
-    /* compiled from: PasswordToggleEndIconDelegate.java */
-    /* renamed from: b.i.a.g.j.p$d */
+    /* JADX INFO: renamed from: b.i.a.g.j.p$d */
+    /* JADX INFO: compiled from: PasswordToggleEndIconDelegate.java */
     public class d implements View.OnClickListener {
         public d() {
         }
@@ -120,14 +120,14 @@ public class PasswordToggleEndIconDelegate extends EndIconDelegate {
         this.f11850f = new c();
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public static boolean m6169d(PasswordToggleEndIconDelegate passwordToggleEndIconDelegate) {
         EditText editText = passwordToggleEndIconDelegate.f11819a.getEditText();
         return editText != null && (editText.getTransformationMethod() instanceof PasswordTransformationMethod);
     }
 
     @Override // p007b.p225i.p226a.p341g.p351j.EndIconDelegate
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public void mo6146a() {
         this.f11819a.setEndIconDrawable(AppCompatResources.getDrawable(this.f11820b, C10817R.drawable.design_password_eye));
         TextInputLayout textInputLayout = this.f11819a;

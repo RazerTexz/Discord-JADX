@@ -8,24 +8,24 @@ import p658rx.Producer;
 import p658rx.Scheduler;
 import p658rx.functions.Action0;
 
-/* compiled from: OnSubscribeRedo.java */
-/* renamed from: j0.l.a.x, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: j0.l.a.x, reason: use source file name */
+/* JADX INFO: compiled from: OnSubscribeRedo.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class OnSubscribeRedo5 implements Producer {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final /* synthetic */ AtomicLong f27076j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final /* synthetic */ ProducerArbiter f27077k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final /* synthetic */ AtomicBoolean f27078l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public final /* synthetic */ Scheduler.Worker f27079m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public final /* synthetic */ Action0 f27080n;
 
     public OnSubscribeRedo5(OnSubscribeRedo6 onSubscribeRedo6, AtomicLong atomicLong, ProducerArbiter producerArbiter, AtomicBoolean atomicBoolean, Scheduler.Worker worker, Action0 action0) {
@@ -37,7 +37,7 @@ public class OnSubscribeRedo5 implements Producer {
     }
 
     @Override // p658rx.Producer
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public void mo10704j(long j) {
         if (j > 0) {
             C3404f.m4276c0(this.f27076j, j);

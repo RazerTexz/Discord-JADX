@@ -5,7 +5,7 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import com.google.android.material.C10817R;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public class ChildrenAlphaProperty extends Property<ViewGroup, Float> {
     public static final Property<ViewGroup, Float> CHILDREN_ALPHA = new ChildrenAlphaProperty("childrenAlpha");
 
@@ -25,13 +25,13 @@ public class ChildrenAlphaProperty extends Property<ViewGroup, Float> {
     }
 
     @NonNull
-    /* renamed from: get, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: get, reason: avoid collision after fix types in other method */
     public Float get2(@NonNull ViewGroup viewGroup) {
         Float f = (Float) viewGroup.getTag(C10817R.id.mtrl_internal_children_alpha_tag);
         return f != null ? f : Float.valueOf(1.0f);
     }
 
-    /* renamed from: set, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: set, reason: avoid collision after fix types in other method */
     public void set2(@NonNull ViewGroup viewGroup, @NonNull Float f) {
         float fFloatValue = f.floatValue();
         viewGroup.setTag(C10817R.id.mtrl_internal_children_alpha_tag, Float.valueOf(fFloatValue));

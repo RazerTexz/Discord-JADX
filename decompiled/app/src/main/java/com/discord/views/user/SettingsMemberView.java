@@ -23,20 +23,20 @@ import p007b.p109f.p132g.p143f.RoundingParams;
 import p507d0.p579g0.StringsJVM;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: SettingsMemberView.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: SettingsMemberView.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class SettingsMemberView extends ConstraintLayout {
 
-    /* renamed from: j, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: j, reason: from kotlin metadata */
     public final SettingsMemberViewBinding binding;
 
-    /* renamed from: k, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: k, reason: from kotlin metadata */
     public int avatarBackgroundColor;
 
-    /* renamed from: l, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: l, reason: from kotlin metadata */
     public User user;
 
-    /* renamed from: m, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: m, reason: from kotlin metadata */
     public GuildMember guildMember;
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -69,7 +69,7 @@ public final class SettingsMemberView extends ConstraintLayout {
         throw new NullPointerException("Missing required view with ID: ".concat(getResources().getResourceName(i)));
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final void m8621a(User user, GuildMember guildMember) {
         Intrinsics3.checkNotNullParameter(user, "user");
         this.user = user;

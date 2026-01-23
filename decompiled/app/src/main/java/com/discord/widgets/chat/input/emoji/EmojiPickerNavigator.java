@@ -5,8 +5,8 @@ import kotlin.Unit;
 import kotlin.jvm.functions.Function0;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: EmojiPickerNavigator.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: EmojiPickerNavigator.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class EmojiPickerNavigator {
     public static final String ARG_EMOJI_PICKER_CONTEXT_TYPE = "EMOJI_PICKER_CONTEXT_TYPE";
     public static final String ARG_MODE = "MODE";

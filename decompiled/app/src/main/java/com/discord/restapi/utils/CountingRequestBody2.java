@@ -4,9 +4,9 @@ import kotlin.Unit;
 import kotlin.jvm.functions.Function1;
 import p507d0.p592z.p594d.FunctionReferenceImpl;
 
-/* compiled from: CountingRequestBody.kt */
-/* renamed from: com.discord.restapi.utils.CountingRequestBody$writeTo$countingSink$1, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: com.discord.restapi.utils.CountingRequestBody$writeTo$countingSink$1, reason: use source file name */
+/* JADX INFO: compiled from: CountingRequestBody.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* synthetic */ class CountingRequestBody2 extends FunctionReferenceImpl implements Function1<Long, Unit> {
     public CountingRequestBody2(CountingRequestBody countingRequestBody) {
         super(1, countingRequestBody, CountingRequestBody.class, "updateProgress", "updateProgress(J)V", 0);

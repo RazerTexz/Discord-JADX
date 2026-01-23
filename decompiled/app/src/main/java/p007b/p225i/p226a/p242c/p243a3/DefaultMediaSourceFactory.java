@@ -6,9 +6,9 @@ import java.util.HashSet;
 import p007b.p225i.p226a.p242c.p257e3.HttpDataSource2;
 import p007b.p225i.p226a.p242c.p267x2.ExtractorsFactory2;
 
-/* compiled from: DefaultMediaSourceFactory.java */
-/* renamed from: b.i.a.c.a3.p, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.a3.p, reason: use source file name */
+/* JADX INFO: compiled from: DefaultMediaSourceFactory.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class DefaultMediaSourceFactory implements MediaSourceFactory {
     public DefaultMediaSourceFactory(Context context, ExtractorsFactory2 extractorsFactory2) {
         new HttpDataSource2();

@@ -1,8 +1,8 @@
 package com.discord.api.guildrolesubscription;
 
 
-/* compiled from: GuildRoleSubscriptionFreeTrialIntervalTypes.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: GuildRoleSubscriptionFreeTrialIntervalTypes.kt */
+/* JADX INFO: loaded from: classes.dex */
 public enum GuildRoleSubscriptionFreeTrialIntervalTypes {
     MONTHLY,
     YEARLY,

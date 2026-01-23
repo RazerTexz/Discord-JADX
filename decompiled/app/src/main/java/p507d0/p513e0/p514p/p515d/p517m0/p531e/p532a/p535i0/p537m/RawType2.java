@@ -27,23 +27,23 @@ import p507d0.p580t._Collections;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: RawType.kt */
-/* renamed from: d0.e0.p.d.m0.e.a.i0.m.g, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.e.a.i0.m.g, reason: use source file name */
+/* JADX INFO: compiled from: RawType.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class RawType2 extends KotlinType6 implements RawType3 {
 
-    /* compiled from: RawType.kt */
-    /* renamed from: d0.e0.p.d.m0.e.a.i0.m.g$a */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.e.a.i0.m.g$a */
+    /* JADX INFO: compiled from: RawType.kt */
     public static final class a extends Lambda implements Function1<String, CharSequence> {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public static final a f23435j = new a();
 
         public a() {
             super(1);
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final CharSequence invoke2(String str) {
             Intrinsics3.checkNotNullParameter(str, "it");
             return Intrinsics3.stringPlus("(raw) ", str);
@@ -63,7 +63,7 @@ public final class RawType2 extends KotlinType6 implements RawType3 {
         KotlinTypeChecker.f24806a.isSubtypeOf(kotlinType4, kotlinType42);
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final List<String> m9503a(DescriptorRenderer2 descriptorRenderer2, KotlinType kotlinType) {
         List<TypeProjection> arguments = kotlinType.getArguments();
         ArrayList arrayList = new ArrayList(Iterables2.collectionSizeOrDefault(arguments, 10));
@@ -74,7 +74,7 @@ public final class RawType2 extends KotlinType6 implements RawType3 {
         return arrayList;
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static final String m9504b(String str, String str2) {
         if (!Strings4.contains$default((CharSequence) str, '<', false, 2, (Object) null)) {
             return str;

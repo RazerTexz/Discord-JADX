@@ -7,16 +7,16 @@ import kotlin.jvm.functions.Function0;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: MediaEngineConnectionLegacy.kt */
-/* renamed from: b.a.q.m0.c.b, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.a.q.m0.c.b, reason: use source file name */
+/* JADX INFO: compiled from: MediaEngineConnectionLegacy.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class MediaEngineConnectionLegacy2 implements Connection.OnVideoCallback {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final /* synthetic */ MediaEngineConnectionLegacy5 f1695a;
 
-    /* compiled from: MediaEngineConnectionLegacy.kt */
-    /* renamed from: b.a.q.m0.c.b$a */
+    /* JADX INFO: renamed from: b.a.q.m0.c.b$a */
+    /* JADX INFO: compiled from: MediaEngineConnectionLegacy.kt */
     public static final class a extends Lambda implements Function0<Unit> {
         public final /* synthetic */ int $ssrc;
         public final /* synthetic */ String $streamIdentifier;

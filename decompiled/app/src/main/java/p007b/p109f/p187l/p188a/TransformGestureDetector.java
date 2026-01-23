@@ -2,24 +2,24 @@ package p007b.p109f.p187l.p188a;
 
 import p007b.p109f.p187l.p188a.MultiPointerGestureDetector;
 
-/* compiled from: TransformGestureDetector.java */
-/* renamed from: b.f.l.a.b, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.f.l.a.b, reason: use source file name */
+/* JADX INFO: compiled from: TransformGestureDetector.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class TransformGestureDetector implements MultiPointerGestureDetector.a {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final MultiPointerGestureDetector f4287a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public a f4288b = null;
 
-    /* compiled from: TransformGestureDetector.java */
-    /* renamed from: b.f.l.a.b$a */
+    /* JADX INFO: renamed from: b.f.l.a.b$a */
+    /* JADX INFO: compiled from: TransformGestureDetector.java */
     public interface a {
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         void mo1549b(TransformGestureDetector transformGestureDetector);
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         void mo1550c(TransformGestureDetector transformGestureDetector);
     }
 
@@ -28,7 +28,7 @@ public class TransformGestureDetector implements MultiPointerGestureDetector.a {
         multiPointerGestureDetector.f4286h = this;
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final float m1545a(float[] fArr, int i) {
         float f = 0.0f;
         for (int i2 = 0; i2 < i; i2++) {
@@ -40,19 +40,19 @@ public class TransformGestureDetector implements MultiPointerGestureDetector.a {
         return 0.0f;
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public float m1546b() {
         MultiPointerGestureDetector multiPointerGestureDetector = this.f4287a;
         return m1545a(multiPointerGestureDetector.f4282d, multiPointerGestureDetector.f4280b);
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public float m1547c() {
         MultiPointerGestureDetector multiPointerGestureDetector = this.f4287a;
         return m1545a(multiPointerGestureDetector.f4283e, multiPointerGestureDetector.f4280b);
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public void m1548d() {
         MultiPointerGestureDetector multiPointerGestureDetector = this.f4287a;
         if (multiPointerGestureDetector.f4279a) {

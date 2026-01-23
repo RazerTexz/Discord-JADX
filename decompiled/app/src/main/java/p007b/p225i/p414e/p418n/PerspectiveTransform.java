@@ -1,35 +1,35 @@
 package p007b.p225i.p414e.p418n;
 
-/* compiled from: PerspectiveTransform.java */
-/* renamed from: b.i.e.n.i, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.e.n.i, reason: use source file name */
+/* JADX INFO: compiled from: PerspectiveTransform.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class PerspectiveTransform {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final float f13281a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final float f13282b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final float f13283c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final float f13284d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final float f13285e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final float f13286f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public final float f13287g;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public final float f13288h;
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public final float f13289i;
 
     public PerspectiveTransform(float f, float f2, float f3, float f4, float f5, float f6, float f7, float f8, float f9) {
@@ -44,7 +44,7 @@ public final class PerspectiveTransform {
         this.f13289i = f9;
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static PerspectiveTransform m6954a(float f, float f2, float f3, float f4, float f5, float f6, float f7, float f8, float f9, float f10, float f11, float f12, float f13, float f14, float f15, float f16) {
         PerspectiveTransform perspectiveTransformM6955b = m6955b(f, f2, f3, f4, f5, f6, f7, f8);
         float f17 = perspectiveTransformM6955b.f13285e;
@@ -86,7 +86,7 @@ public final class PerspectiveTransform {
         return new PerspectiveTransform(f38, f39, f41, f45, f46, f47, (f32 * f51) + f50 + (f21 * f48), (f30 * f49) + (f24 * f48) + (f33 * f51), (f51 * f34) + (f49 * f31) + (f48 * f25));
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static PerspectiveTransform m6955b(float f, float f2, float f3, float f4, float f5, float f6, float f7, float f8) {
         float f9 = ((f - f3) + f5) - f7;
         float f10 = ((f2 - f4) + f6) - f8;

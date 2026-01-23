@@ -9,12 +9,12 @@ import java.lang.reflect.Array;
 import java.util.Arrays;
 import java.util.Comparator;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public final class AnimateLayoutChangeDetector {
     private static final ViewGroup.MarginLayoutParams ZERO_MARGIN_LAYOUT_PARAMS;
     private LinearLayoutManager mLayoutManager;
 
-    /* renamed from: androidx.viewpager2.widget.AnimateLayoutChangeDetector$1 */
+    /* JADX INFO: renamed from: androidx.viewpager2.widget.AnimateLayoutChangeDetector$1 */
     public class C07021 implements Comparator<int[]> {
         public C07021() {
         }
@@ -24,7 +24,7 @@ public final class AnimateLayoutChangeDetector {
             return compare2(iArr, iArr2);
         }
 
-        /* renamed from: compare, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: compare, reason: avoid collision after fix types in other method */
         public int compare2(int[] iArr, int[] iArr2) {
             return iArr[0] - iArr2[0];
         }

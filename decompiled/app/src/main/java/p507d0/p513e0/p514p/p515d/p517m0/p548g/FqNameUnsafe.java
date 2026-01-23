@@ -7,41 +7,41 @@ import java.util.regex.Pattern;
 import kotlin.jvm.functions.Function1;
 import p507d0.p580t._Arrays;
 
-/* compiled from: FqNameUnsafe.java */
-/* renamed from: d0.e0.p.d.m0.g.c, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.g.c, reason: use source file name */
+/* JADX INFO: compiled from: FqNameUnsafe.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class FqNameUnsafe {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final Name f24082a = Name.special("<root>");
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static final Pattern f24083b = Pattern.compile("\\.");
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public static final Function1<String, Name> f24084c = new a();
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final String f24085d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public transient FqName f24086e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public transient FqNameUnsafe f24087f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public transient Name f24088g;
 
-    /* compiled from: FqNameUnsafe.java */
-    /* renamed from: d0.e0.p.d.m0.g.c$a */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.g.c$a */
+    /* JADX INFO: compiled from: FqNameUnsafe.java */
     public static class a implements Function1<String, Name> {
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ Name invoke(String str) {
             return invoke2(str);
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public Name invoke2(String str) {
             return Name.guessByFirstCharacter(str);
         }
@@ -56,7 +56,7 @@ public final class FqNameUnsafe {
         this.f24086e = fqName;
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static /* synthetic */ void m9818a(int i) {
         String str;
         int i2;
@@ -232,7 +232,7 @@ public final class FqNameUnsafe {
         throw null;
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final void m9819b() {
         int iLastIndexOf = this.f24085d.lastIndexOf(46);
         if (iLastIndexOf >= 0) {

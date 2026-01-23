@@ -7,18 +7,18 @@ import androidx.viewbinding.ViewBinding;
 import com.discord.views.sticker.StickerView;
 import com.google.android.material.button.MaterialButton;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public final class WidgetChatListAdapterItemStickerGreetBinding implements ViewBinding {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     @NonNull
     public final LinearLayout f16299a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     @NonNull
     public final StickerView f16300b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     @NonNull
     public final MaterialButton f16301c;
 

@@ -16,13 +16,13 @@ import kotlin.Unit;
 import kotlin.jvm.functions.Function1;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: GifCategoryViewHolder.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: GifCategoryViewHolder.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class GifCategoryViewHolder extends RecyclerView.ViewHolder {
     private final GifCategoryItemViewBinding binding;
 
-    /* compiled from: GifCategoryViewHolder.kt */
-    /* renamed from: com.discord.widgets.chat.input.gifpicker.GifCategoryViewHolder$configure$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.input.gifpicker.GifCategoryViewHolder$configure$1 */
+    /* JADX INFO: compiled from: GifCategoryViewHolder.kt */
     public static final class ViewOnClickListenerC78671 implements View.OnClickListener {
         public final /* synthetic */ GifCategoryItem $gifCategoryItem;
         public final /* synthetic */ Function1 $onSelectGifCategory;

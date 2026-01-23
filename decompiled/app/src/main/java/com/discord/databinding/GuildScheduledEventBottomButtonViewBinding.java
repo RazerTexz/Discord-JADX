@@ -11,34 +11,34 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.viewbinding.ViewBinding;
 import com.discord.C5419R;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public final class GuildScheduledEventBottomButtonViewBinding implements ViewBinding {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     @NonNull
     public final ConstraintLayout f15126a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     @NonNull
     public final ImageView f15127b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     @NonNull
     public final ImageView f15128c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     @NonNull
     public final TextView f15129d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     @NonNull
     public final ImageView f15130e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     @NonNull
     public final TextView f15131f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     @NonNull
     public final ImageView f15132g;
 
@@ -53,7 +53,7 @@ public final class GuildScheduledEventBottomButtonViewBinding implements ViewBin
     }
 
     @NonNull
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static GuildScheduledEventBottomButtonViewBinding m8386a(@NonNull LayoutInflater layoutInflater, @Nullable ViewGroup viewGroup, boolean z2) {
         View viewInflate = layoutInflater.inflate(C5419R.layout.guild_scheduled_event_bottom_button_view, viewGroup, false);
         if (z2) {

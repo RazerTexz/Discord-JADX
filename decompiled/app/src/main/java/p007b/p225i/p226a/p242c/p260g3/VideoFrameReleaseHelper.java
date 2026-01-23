@@ -16,71 +16,71 @@ import java.util.Objects;
 import p007b.p225i.p226a.p242c.p259f3.Log2;
 import p007b.p225i.p226a.p242c.p259f3.Util2;
 
-/* compiled from: VideoFrameReleaseHelper.java */
-/* renamed from: b.i.a.c.g3.v, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.g3.v, reason: use source file name */
+/* JADX INFO: compiled from: VideoFrameReleaseHelper.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class VideoFrameReleaseHelper {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final FixedFrameRateEstimator f6926a = new FixedFrameRateEstimator();
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     @Nullable
     public final b f6927b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     @Nullable
     public final e f6928c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public boolean f6929d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     @Nullable
     public Surface f6930e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public float f6931f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public float f6932g;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public float f6933h;
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public float f6934i;
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public int f6935j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public long f6936k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public long f6937l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public long f6938m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public long f6939n;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public long f6940o;
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public long f6941p;
 
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     public long f6942q;
 
-    /* compiled from: VideoFrameReleaseHelper.java */
+    /* JADX INFO: renamed from: b.i.a.c.g3.v$a */
+    /* JADX INFO: compiled from: VideoFrameReleaseHelper.java */
     @RequiresApi(30)
-    /* renamed from: b.i.a.c.g3.v$a */
     public static final class a {
         @DoNotInline
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public static void m3182a(Surface surface, float f) {
             try {
                 surface.setFrameRate(f, f == 0.0f ? 0 : 1);
@@ -90,26 +90,26 @@ public final class VideoFrameReleaseHelper {
         }
     }
 
-    /* compiled from: VideoFrameReleaseHelper.java */
-    /* renamed from: b.i.a.c.g3.v$b */
+    /* JADX INFO: renamed from: b.i.a.c.g3.v$b */
+    /* JADX INFO: compiled from: VideoFrameReleaseHelper.java */
     public interface b {
 
-        /* compiled from: VideoFrameReleaseHelper.java */
-        /* renamed from: b.i.a.c.g3.v$b$a */
+        /* JADX INFO: renamed from: b.i.a.c.g3.v$b$a */
+        /* JADX INFO: compiled from: VideoFrameReleaseHelper.java */
         public interface a {
         }
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         void mo3183a(a aVar);
 
         void unregister();
     }
 
-    /* compiled from: VideoFrameReleaseHelper.java */
-    /* renamed from: b.i.a.c.g3.v$c */
+    /* JADX INFO: renamed from: b.i.a.c.g3.v$c */
+    /* JADX INFO: compiled from: VideoFrameReleaseHelper.java */
     public static final class c implements b {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final WindowManager f6943a;
 
         public c(WindowManager windowManager) {
@@ -117,7 +117,7 @@ public final class VideoFrameReleaseHelper {
         }
 
         @Override // p007b.p225i.p226a.p242c.p260g3.VideoFrameReleaseHelper.b
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public void mo3183a(b.a aVar) {
             ((C2765b) aVar).m3120a(this.f6943a.getDefaultDisplay());
         }
@@ -127,15 +127,15 @@ public final class VideoFrameReleaseHelper {
         }
     }
 
-    /* compiled from: VideoFrameReleaseHelper.java */
+    /* JADX INFO: renamed from: b.i.a.c.g3.v$d */
+    /* JADX INFO: compiled from: VideoFrameReleaseHelper.java */
     @RequiresApi(17)
-    /* renamed from: b.i.a.c.g3.v$d */
     public static final class d implements b, DisplayManager.DisplayListener {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final DisplayManager f6944a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         @Nullable
         public b.a f6945b;
 
@@ -144,7 +144,7 @@ public final class VideoFrameReleaseHelper {
         }
 
         @Override // p007b.p225i.p226a.p242c.p260g3.VideoFrameReleaseHelper.b
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public void mo3183a(b.a aVar) {
             this.f6945b = aVar;
             this.f6944a.registerDisplayListener(this, Util2.m3002j());
@@ -175,26 +175,26 @@ public final class VideoFrameReleaseHelper {
         }
     }
 
-    /* compiled from: VideoFrameReleaseHelper.java */
-    /* renamed from: b.i.a.c.g3.v$e */
+    /* JADX INFO: renamed from: b.i.a.c.g3.v$e */
+    /* JADX INFO: compiled from: VideoFrameReleaseHelper.java */
     public static final class e implements Choreographer.FrameCallback, Handler.Callback {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public static final e f6946j = new e();
 
-        /* renamed from: k */
+        /* JADX INFO: renamed from: k */
         public volatile long f6947k = -9223372036854775807L;
 
-        /* renamed from: l */
+        /* JADX INFO: renamed from: l */
         public final Handler f6948l;
 
-        /* renamed from: m */
+        /* JADX INFO: renamed from: m */
         public final HandlerThread f6949m;
 
-        /* renamed from: n */
+        /* JADX INFO: renamed from: n */
         public Choreographer f6950n;
 
-        /* renamed from: o */
+        /* JADX INFO: renamed from: o */
         public int f6951o;
 
         public e() {
@@ -272,7 +272,7 @@ public final class VideoFrameReleaseHelper {
         this.f6935j = 0;
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final void m3178a() {
         Surface surface;
         if (Util2.f6708a < 30 || (surface = this.f6930e) == null || this.f6935j == Integer.MIN_VALUE || this.f6933h == 0.0f) {
@@ -282,7 +282,7 @@ public final class VideoFrameReleaseHelper {
         a.m3182a(surface, 0.0f);
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final void m3179b() {
         this.f6938m = 0L;
         this.f6941p = -1L;
@@ -291,7 +291,7 @@ public final class VideoFrameReleaseHelper {
 
     /* JADX WARN: Removed duplicated region for block: B:34:0x0070  */
     /* JADX WARN: Removed duplicated region for block: B:41:0x0086  */
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
@@ -331,7 +331,7 @@ public final class VideoFrameReleaseHelper {
         }
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final void m3181d(boolean z2) {
         Surface surface;
         if (Util2.f6708a < 30 || (surface = this.f6930e) == null || this.f6935j == Integer.MIN_VALUE) {

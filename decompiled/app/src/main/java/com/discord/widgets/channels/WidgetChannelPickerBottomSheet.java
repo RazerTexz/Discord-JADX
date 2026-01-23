@@ -36,8 +36,8 @@ import p507d0.p592z.p594d.Lambda;
 import p507d0.p592z.p594d.Reflection2;
 import p658rx.subscriptions.CompositeSubscription;
 
-/* compiled from: WidgetChannelPickerBottomSheet.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetChannelPickerBottomSheet.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetChannelPickerBottomSheet extends AppBottomSheet {
     private static final String ARG_CHANNEL_PICKER_GUILD_ID = "ARG_CHANNEL_PICKER_GUILD_ID";
     private static final String ARG_HIDE_ANNOUNCEMENT_CHANNELS = "ARG_HIDE_ANNOUNCEMENT_CHANNELS";
@@ -51,28 +51,28 @@ public final class WidgetChannelPickerBottomSheet extends AppBottomSheet {
     private static final String RESULT_EXTRA_SELECTION_TYPE = "RESULT_EXTRA_SELECTION_TYPE";
     private WidgetChannelPickerAdapter3 adapter;
 
-    /* renamed from: binding$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
 
-    /* renamed from: guildId$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: guildId$delegate, reason: from kotlin metadata */
     private final Lazy guildId;
 
-    /* renamed from: hideAnnouncementChannels$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: hideAnnouncementChannels$delegate, reason: from kotlin metadata */
     private final Lazy hideAnnouncementChannels;
     private final WidgetChannelPickerBottomSheet6 itemClickListener;
     private Function0<Unit> onCancel;
 
-    /* renamed from: selectedChannelId$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: selectedChannelId$delegate, reason: from kotlin metadata */
     private final Lazy selectedChannelId;
 
-    /* renamed from: viewModel$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: viewModel$delegate, reason: from kotlin metadata */
     private final Lazy viewModel;
     public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetChannelPickerBottomSheet.class, "binding", "getBinding()Lcom/discord/databinding/WidgetChannelPickerSheetBinding;", 0)};
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
 
-    /* compiled from: WidgetChannelPickerBottomSheet.kt */
+    /* JADX INFO: compiled from: WidgetChannelPickerBottomSheet.kt */
     public static final class Companion {
 
         public final /* synthetic */ class WhenMappings {
@@ -91,6 +91,7 @@ public final class WidgetChannelPickerBottomSheet extends AppBottomSheet {
         private Companion() {
         }
 
+        /* JADX WARN: Multi-variable type inference failed */
         public static /* synthetic */ void launch$default(Companion companion, Fragment fragment, String str, long j, Long l, Function0 function0, boolean z2, int i, Object obj) {
             companion.launch(fragment, str, j, (i & 8) != 0 ? null : l, (i & 16) != 0 ? null : function0, (i & 32) != 0 ? false : z2);
         }
@@ -126,17 +127,17 @@ public final class WidgetChannelPickerBottomSheet extends AppBottomSheet {
         }
     }
 
-    /* compiled from: WidgetChannelPickerBottomSheet.kt */
+    /* JADX INFO: compiled from: WidgetChannelPickerBottomSheet.kt */
     public enum SelectionType {
         UNKNOWN,
         CREATE_CHANNEL,
         CHANNEL;
 
 
-        /* renamed from: Companion, reason: from kotlin metadata */
+        /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
         public static final Companion INSTANCE = new Companion(null);
 
-        /* compiled from: WidgetChannelPickerBottomSheet.kt */
+        /* JADX INFO: compiled from: WidgetChannelPickerBottomSheet.kt */
         public static final class Companion {
             private Companion() {
             }
@@ -152,8 +153,8 @@ public final class WidgetChannelPickerBottomSheet extends AppBottomSheet {
         }
     }
 
-    /* compiled from: WidgetChannelPickerBottomSheet.kt */
-    /* renamed from: com.discord.widgets.channels.WidgetChannelPickerBottomSheet$bindSubscriptions$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.channels.WidgetChannelPickerBottomSheet$bindSubscriptions$1 */
+    /* JADX INFO: compiled from: WidgetChannelPickerBottomSheet.kt */
     public static final class C73321 extends Lambda implements Function1<WidgetChannelPickerBottomSheetViewModel.ViewState, Unit> {
         public C73321() {
             super(1);
@@ -165,15 +166,15 @@ public final class WidgetChannelPickerBottomSheet extends AppBottomSheet {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(WidgetChannelPickerBottomSheetViewModel.ViewState viewState) {
             Intrinsics3.checkNotNullParameter(viewState, "it");
             WidgetChannelPickerBottomSheet.access$configureUI(WidgetChannelPickerBottomSheet.this, viewState);
         }
     }
 
-    /* compiled from: WidgetChannelPickerBottomSheet.kt */
-    /* renamed from: com.discord.widgets.channels.WidgetChannelPickerBottomSheet$onViewCreated$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.channels.WidgetChannelPickerBottomSheet$onViewCreated$1 */
+    /* JADX INFO: compiled from: WidgetChannelPickerBottomSheet.kt */
     public static final class C73331 extends Lambda implements Function1<String, Unit> {
         public C73331() {
             super(1);
@@ -185,7 +186,7 @@ public final class WidgetChannelPickerBottomSheet extends AppBottomSheet {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(String str) {
             Intrinsics3.checkNotNullParameter(str, "searchQuery");
             WidgetChannelPickerBottomSheet.access$getViewModel$p(WidgetChannelPickerBottomSheet.this).updateSearchQuery(str);

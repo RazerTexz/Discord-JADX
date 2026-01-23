@@ -3,19 +3,19 @@ package p007b.p225i.p226a.p288f.p313h.p325l;
 import java.io.PrintStream;
 import org.objectweb.asm.Opcodes;
 
-/* compiled from: com.google.android.gms:play-services-measurement-base@@18.0.0 */
-/* renamed from: b.i.a.f.h.l.g3 */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.h.l.g3 */
+/* JADX INFO: compiled from: com.google.android.gms:play-services-measurement-base@@18.0.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public final class C3665g3 {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final AbstractC3651f3 f9966a;
 
-    /* compiled from: com.google.android.gms:play-services-measurement-base@@18.0.0 */
-    /* renamed from: b.i.a.f.h.l.g3$a */
+    /* JADX INFO: renamed from: b.i.a.f.h.l.g3$a */
+    /* JADX INFO: compiled from: com.google.android.gms:play-services-measurement-base@@18.0.0 */
     public static final class a extends AbstractC3651f3 {
         @Override // p007b.p225i.p226a.p288f.p313h.p325l.AbstractC3651f3
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final void mo4876a(Throwable th, Throwable th2) {
         }
     }

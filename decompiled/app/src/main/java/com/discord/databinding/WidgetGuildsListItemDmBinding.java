@@ -7,18 +7,18 @@ import androidx.viewbinding.ViewBinding;
 import com.discord.C5419R;
 import com.facebook.drawee.view.SimpleDraweeView;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public final class WidgetGuildsListItemDmBinding implements ViewBinding {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     @NonNull
     public final View f17095a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     @NonNull
     public final SimpleDraweeView f17096b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     @NonNull
     public final TextView f17097c;
 
@@ -29,7 +29,7 @@ public final class WidgetGuildsListItemDmBinding implements ViewBinding {
     }
 
     @NonNull
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static WidgetGuildsListItemDmBinding m8418a(@NonNull View view) {
         int i = C5419R.id.guilds_item_dm_avatar;
         SimpleDraweeView simpleDraweeView = (SimpleDraweeView) view.findViewById(C5419R.id.guilds_item_dm_avatar);

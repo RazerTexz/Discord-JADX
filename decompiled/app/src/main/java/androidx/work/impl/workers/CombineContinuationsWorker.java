@@ -7,8 +7,8 @@ import androidx.work.ListenableWorker;
 import androidx.work.Worker;
 import androidx.work.WorkerParameters;
 
+/* JADX INFO: loaded from: classes.dex */
 @RestrictTo({RestrictTo.Scope.LIBRARY_GROUP})
-/* loaded from: classes.dex */
 public class CombineContinuationsWorker extends Worker {
     public CombineContinuationsWorker(@NonNull Context context, @NonNull WorkerParameters workerParameters) {
         super(context, workerParameters);

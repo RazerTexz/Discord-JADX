@@ -5,12 +5,12 @@ import com.facebook.datasource.DataSource;
 import p007b.p085c.p086a.p087a0.AnimatableValueParser;
 
 /* JADX INFO: Add missing generic type declarations: [T] */
-/* compiled from: DataSources.java */
-/* renamed from: b.f.e.e, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.f.e.e, reason: use source file name */
+/* JADX INFO: compiled from: DataSources.java */
+/* JADX INFO: loaded from: classes.dex */
 public final class DataSources<T> implements Supplier<DataSource<T>> {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final /* synthetic */ Throwable f3159a;
 
     public DataSources(Throwable th) {

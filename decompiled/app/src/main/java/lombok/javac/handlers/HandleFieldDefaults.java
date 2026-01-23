@@ -15,8 +15,8 @@ import lombok.experimental.PackagePrivate;
 import lombok.javac.JavacASTAdapter;
 import lombok.javac.JavacNode;
 
+/* JADX INFO: loaded from: discord-126021.apk:lombok/javac/handlers/HandleFieldDefaults.SCL.lombok */
 @HandlerPriority(-2048)
-/* loaded from: discord-126021.apk:lombok/javac/handlers/HandleFieldDefaults.SCL.lombok */
 public class HandleFieldDefaults extends JavacASTAdapter {
     public boolean generateFieldDefaultsForType(JavacNode typeNode, JavacNode errorNode, AccessLevel level, boolean makeFinal, boolean checkForTypeLevelFieldDefaults) {
         if (checkForTypeLevelFieldDefaults && JavacHandlerUtil.hasAnnotation((Class<? extends Annotation>) FieldDefaults.class, typeNode)) {
@@ -43,7 +43,7 @@ public class HandleFieldDefaults extends JavacASTAdapter {
     public void setFieldDefaultsForField(JavacNode fieldNode, AccessLevel level, boolean makeFinal) {
         JCTree.JCVariableDecl field = fieldNode.get();
         if (level != null && level != AccessLevel.NONE && (field.mods.flags & 7) == 0 && !JavacHandlerUtil.hasAnnotationAndDeleteIfNeccessary(PackagePrivate.class, fieldNode) && (field.mods.flags & 8) == 0) {
-            field.mods.flags |= JavacHandlerUtil.toJavacModifier(level);
+            field.mods.flags |= (long) JavacHandlerUtil.toJavacModifier(level);
         }
         if (makeFinal && (field.mods.flags & 16) == 0 && !JavacHandlerUtil.hasAnnotationAndDeleteIfNeccessary(NonFinal.class, fieldNode) && (field.mods.flags & 8) == 0) {
             field.mods.flags |= 16;

@@ -4,12 +4,12 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.nio.ByteBuffer;
 
-/* compiled from: ByteBufferBackedInputStream.java */
-/* renamed from: b.g.a.c.i0.c, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.g.a.c.i0.c, reason: use source file name */
+/* JADX INFO: compiled from: ByteBufferBackedInputStream.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class ByteBufferBackedInputStream extends InputStream {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final ByteBuffer f4943j;
 
     public ByteBufferBackedInputStream(ByteBuffer byteBuffer) {

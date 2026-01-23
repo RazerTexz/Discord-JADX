@@ -13,73 +13,73 @@ import p007b.p225i.p226a.p242c.p267x2.ExtractorOutput;
 import p007b.p225i.p226a.p242c.p267x2.TrackOutput2;
 import p007b.p225i.p226a.p242c.p267x2.p276k0.TsPayloadReader;
 
-/* compiled from: LatmReader.java */
-/* renamed from: b.i.a.c.x2.k0.u, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.x2.k0.u, reason: use source file name */
+/* JADX INFO: compiled from: LatmReader.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class LatmReader implements ElementaryStreamReader {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     @Nullable
     public final String f8870a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final ParsableByteArray f8871b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final ParsableBitArray f8872c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public TrackOutput2 f8873d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public String f8874e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public Format2 f8875f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public int f8876g;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public int f8877h;
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public int f8878i;
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public int f8879j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public long f8880k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public boolean f8881l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public int f8882m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public int f8883n;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public int f8884o;
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public boolean f8885p;
 
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     public long f8886q;
 
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     public int f8887r;
 
-    /* renamed from: s */
+    /* JADX INFO: renamed from: s */
     public long f8888s;
 
-    /* renamed from: t */
+    /* JADX INFO: renamed from: t */
     public int f8889t;
 
-    /* renamed from: u */
+    /* JADX INFO: renamed from: u */
     @Nullable
     public String f8890u;
 
@@ -91,13 +91,13 @@ public final class LatmReader implements ElementaryStreamReader {
         this.f8880k = -9223372036854775807L;
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static long m3786a(ParsableBitArray parsableBitArray) {
         return parsableBitArray.m3067g((parsableBitArray.m3067g(2) + 1) * 8);
     }
 
     @Override // p007b.p225i.p226a.p242c.p267x2.p276k0.ElementaryStreamReader
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public void mo3758b(ParsableByteArray parsableByteArray) throws ParserException {
         int i;
         boolean zM3066f;
@@ -186,7 +186,7 @@ public final class LatmReader implements ElementaryStreamReader {
                                 Format2 format2M3277a = bVar.m3277a();
                                 if (!format2M3277a.equals(this.f8875f)) {
                                     this.f8875f = format2M3277a;
-                                    this.f8888s = 1024000000 / format2M3277a.f7137K;
+                                    this.f8888s = 1024000000 / ((long) format2M3277a.f7137K);
                                     this.f8873d.mo2526e(format2M3277a);
                                 }
                             } else {
@@ -215,7 +215,7 @@ public final class LatmReader implements ElementaryStreamReader {
                                 } else {
                                     do {
                                         zM3066f = parsableBitArray2.m3066f();
-                                        this.f8886q = (this.f8886q << 8) + parsableBitArray2.m3067g(8);
+                                        this.f8886q = (this.f8886q << 8) + ((long) parsableBitArray2.m3067g(8));
                                     } while (zM3066f);
                                 }
                             }
@@ -270,7 +270,7 @@ public final class LatmReader implements ElementaryStreamReader {
     }
 
     @Override // p007b.p225i.p226a.p242c.p267x2.p276k0.ElementaryStreamReader
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public void mo3759c() {
         this.f8876g = 0;
         this.f8880k = -9223372036854775807L;
@@ -278,12 +278,12 @@ public final class LatmReader implements ElementaryStreamReader {
     }
 
     @Override // p007b.p225i.p226a.p242c.p267x2.p276k0.ElementaryStreamReader
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public void mo3760d() {
     }
 
     @Override // p007b.p225i.p226a.p242c.p267x2.p276k0.ElementaryStreamReader
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public void mo3761e(ExtractorOutput extractorOutput, TsPayloadReader.d dVar) {
         dVar.m3765a();
         this.f8873d = extractorOutput.mo2492p(dVar.m3767c(), 1);
@@ -291,14 +291,14 @@ public final class LatmReader implements ElementaryStreamReader {
     }
 
     @Override // p007b.p225i.p226a.p242c.p267x2.p276k0.ElementaryStreamReader
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public void mo3762f(long j, int i) {
         if (j != -9223372036854775807L) {
             this.f8880k = j;
         }
     }
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public final int m3787g(ParsableBitArray parsableBitArray) throws ParserException {
         int iM3062b = parsableBitArray.m3062b();
         AacUtil.b bVarM3489b = AacUtil.m3489b(parsableBitArray, true);

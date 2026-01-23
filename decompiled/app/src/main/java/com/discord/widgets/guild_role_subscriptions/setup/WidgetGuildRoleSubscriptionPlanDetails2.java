@@ -14,9 +14,9 @@ import kotlin.jvm.functions.Function1;
 import p507d0.p592z.p594d.FunctionReferenceImpl;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: WidgetGuildRoleSubscriptionPlanDetails.kt */
-/* renamed from: com.discord.widgets.guild_role_subscriptions.setup.WidgetGuildRoleSubscriptionPlanDetails$binding$2, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.guild_role_subscriptions.setup.WidgetGuildRoleSubscriptionPlanDetails$binding$2, reason: use source file name */
+/* JADX INFO: compiled from: WidgetGuildRoleSubscriptionPlanDetails.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final /* synthetic */ class WidgetGuildRoleSubscriptionPlanDetails2 extends FunctionReferenceImpl implements Function1<View, WidgetGuildRoleSubscriptionPlanDetailsBinding> {
     public static final WidgetGuildRoleSubscriptionPlanDetails2 INSTANCE = new WidgetGuildRoleSubscriptionPlanDetails2();
 
@@ -29,7 +29,7 @@ public final /* synthetic */ class WidgetGuildRoleSubscriptionPlanDetails2 exten
         return invoke2(view);
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final WidgetGuildRoleSubscriptionPlanDetailsBinding invoke2(View view) {
         Intrinsics3.checkNotNullParameter(view, "p1");
         int i = C5419R.id.guild_role_subscription_plan_cover_image;

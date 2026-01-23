@@ -7,30 +7,30 @@ import org.objectweb.asm.Opcodes;
 import p007b.p100d.p104b.p105a.outline;
 import p007b.p225i.p226a.p288f.p299e.p308o.C3404f;
 
-/* compiled from: ClassReader.java */
-/* renamed from: h0.a.a.d, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: h0.a.a.d, reason: use source file name */
+/* JADX INFO: compiled from: ClassReader.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class ClassReader2 {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final byte[] f26155a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final int[] f26156b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final String[] f26157c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final ConstantDynamic2[] f26158d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final int[] f26159e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final int f26160f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public final int f26161g;
 
     /* JADX WARN: Can't fix incorrect switch cases order, some code will duplicate */
@@ -154,7 +154,7 @@ public class ClassReader2 {
         }
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final void m10539a(int i, Label2[] label2Arr) {
         if (label2Arr[i] == null) {
             if (label2Arr[i] == null) {
@@ -165,7 +165,7 @@ public class ClassReader2 {
         }
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final Label2 m10540b(int i, Label2[] label2Arr) {
         if (label2Arr[i] == null) {
             label2Arr[i] = new Label2();
@@ -175,7 +175,7 @@ public class ClassReader2 {
         return label2;
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final int m10541c() {
         int i = this.f26161g;
         int iM10559u = (m10559u(i + 6) * 2) + i + 8;
@@ -217,7 +217,7 @@ public class ClassReader2 {
         }
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final int m10542d(int[] iArr, int i) {
         if (iArr == null || i >= iArr.length || m10544f(iArr[i]) < 67) {
             return -1;
@@ -225,7 +225,7 @@ public class ClassReader2 {
         return m10559u(iArr[i] + 1);
     }
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final Attribute2 m10543e(Attribute2[] attribute2Arr, String str, int i, int i2, char[] cArr, int i3, Label2[] label2Arr) {
         for (Attribute2 attribute2 : attribute2Arr) {
             if (attribute2.f26148a.equals(str)) {
@@ -243,12 +243,12 @@ public class ClassReader2 {
         return attribute23;
     }
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public int m10544f(int i) {
         return this.f26155a[i] & 255;
     }
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public String m10545g(int i, char[] cArr) {
         return m10558t(this.f26156b[m10559u(i)], cArr);
     }
@@ -284,7 +284,7 @@ public class ClassReader2 {
     /* JADX WARN: Removed duplicated region for block: B:383:0x0ab7  */
     /* JADX WARN: Removed duplicated region for block: B:384:0x0ad9  */
     /* JADX WARN: Removed duplicated region for block: B:494:0x068f A[SYNTHETIC] */
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
@@ -2317,7 +2317,7 @@ public class ClassReader2 {
         }
     }
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public Object m10547i(int i, char[] cArr) {
         int[] iArr = this.f26156b;
         int i2 = iArr[i];
@@ -2374,7 +2374,7 @@ public class ClassReader2 {
     }
 
     /* JADX WARN: Removed duplicated region for block: B:99:0x0235  */
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
@@ -2529,7 +2529,7 @@ public class ClassReader2 {
         return i4 + 2;
     }
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final int m10549k(AnnotationWriter2 annotationWriter2, int i, boolean z2, char[] cArr) {
         int iM10559u = m10559u(i);
         int iM10548j = i + 2;
@@ -2558,28 +2558,28 @@ public class ClassReader2 {
         return iM10548j;
     }
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public int m10550l(int i) {
         byte[] bArr = this.f26155a;
         return (bArr[i + 3] & 255) | ((bArr[i] & 255) << 24) | ((bArr[i + 1] & 255) << 16) | ((bArr[i + 2] & 255) << 8);
     }
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public long m10551m(int i) {
-        return (m10550l(i) << 32) | (m10550l(i + 4) & 4294967295L);
+        return (((long) m10550l(i)) << 32) | (((long) m10550l(i + 4)) & 4294967295L);
     }
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public String m10552n(int i, char[] cArr) {
         return m10558t(this.f26156b[m10559u(i)], cArr);
     }
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public String m10553o(int i, char[] cArr) {
         return m10558t(this.f26156b[m10559u(i)], cArr);
     }
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public final void m10554p(MethodVisitor2 methodVisitor2, Context3 context3, int i, boolean z2) {
         AnnotationWriter2 annotationWriter2;
         int iM10549k = i + 1;
@@ -2624,7 +2624,7 @@ public class ClassReader2 {
         }
     }
 
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     public short m10555q(int i) {
         byte[] bArr = this.f26155a;
         return (short) ((bArr[i + 1] & 255) | ((bArr[i] & 255) << 8));
@@ -2633,7 +2633,7 @@ public class ClassReader2 {
     /* JADX WARN: Can't fix incorrect switch cases order, some code will duplicate */
     /* JADX WARN: Removed duplicated region for block: B:13:0x0025  */
     /* JADX WARN: Removed duplicated region for block: B:18:0x0070  */
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
@@ -2712,7 +2712,7 @@ public class ClassReader2 {
     }
 
     /* JADX WARN: Removed duplicated region for block: B:15:0x004e A[FALL_THROUGH] */
-    /* renamed from: s */
+    /* JADX INFO: renamed from: s */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
@@ -2800,7 +2800,7 @@ public class ClassReader2 {
         return iArr;
     }
 
-    /* renamed from: t */
+    /* JADX INFO: renamed from: t */
     public String m10558t(int i, char[] cArr) {
         int iM10559u = m10559u(i);
         if (i == 0 || iM10559u == 0) {
@@ -2809,13 +2809,13 @@ public class ClassReader2 {
         return m10561w(iM10559u, cArr);
     }
 
-    /* renamed from: u */
+    /* JADX INFO: renamed from: u */
     public int m10559u(int i) {
         byte[] bArr = this.f26155a;
         return (bArr[i + 1] & 255) | ((bArr[i] & 255) << 8);
     }
 
-    /* renamed from: v */
+    /* JADX INFO: renamed from: v */
     public final String m10560v(int i, int i2, char[] cArr) {
         int i3;
         int i4 = i2 + i;
@@ -2844,7 +2844,7 @@ public class ClassReader2 {
         return new String(cArr, 0, i5);
     }
 
-    /* renamed from: w */
+    /* JADX INFO: renamed from: w */
     public final String m10561w(int i, char[] cArr) {
         String[] strArr = this.f26157c;
         String str = strArr[i];
@@ -2857,7 +2857,7 @@ public class ClassReader2 {
         return strM10560v;
     }
 
-    /* renamed from: x */
+    /* JADX INFO: renamed from: x */
     public final int m10562x(int i, Object[] objArr, int i2, char[] cArr, Label2[] label2Arr) {
         int i3 = i + 1;
         switch (this.f26155a[i] & 255) {

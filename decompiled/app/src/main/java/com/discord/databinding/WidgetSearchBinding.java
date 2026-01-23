@@ -8,26 +8,26 @@ import androidx.viewbinding.ViewBinding;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.textfield.TextInputLayout;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public final class WidgetSearchBinding implements ViewBinding {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     @NonNull
     public final CoordinatorLayout f17419a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     @NonNull
     public final FloatingActionButton f17420b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     @NonNull
     public final TextInputLayout f17421c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     @NonNull
     public final FragmentContainerView f17422d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     @NonNull
     public final FragmentContainerView f17423e;
 

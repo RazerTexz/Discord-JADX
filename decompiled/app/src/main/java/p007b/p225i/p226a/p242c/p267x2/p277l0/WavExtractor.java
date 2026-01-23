@@ -17,73 +17,73 @@ import p007b.p225i.p226a.p242c.p267x2.ExtractorOutput;
 import p007b.p225i.p226a.p242c.p267x2.PositionHolder;
 import p007b.p225i.p226a.p242c.p267x2.TrackOutput2;
 
-/* compiled from: WavExtractor.java */
-/* renamed from: b.i.a.c.x2.l0.b, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.x2.l0.b, reason: use source file name */
+/* JADX INFO: compiled from: WavExtractor.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class WavExtractor implements Extractor {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public ExtractorOutput f8926a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public TrackOutput2 f8927b;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public b f8929d;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public int f8928c = 0;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public int f8930e = -1;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public long f8931f = -1;
 
-    /* compiled from: WavExtractor.java */
-    /* renamed from: b.i.a.c.x2.l0.b$a */
+    /* JADX INFO: renamed from: b.i.a.c.x2.l0.b$a */
+    /* JADX INFO: compiled from: WavExtractor.java */
     public static final class a implements b {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public static final int[] f8932a = {-1, -1, -1, -1, 2, 4, 6, 8, -1, -1, -1, -1, 2, 4, 6, 8};
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public static final int[] f8933b = {7, 8, 9, 10, 11, 12, 13, 14, 16, 17, 19, 21, 23, 25, 28, 31, 34, 37, 41, 45, 50, 55, 60, 66, 73, 80, 88, 97, 107, 118, 130, Opcodes.D2L, 157, Opcodes.LRETURN, Opcodes.ARRAYLENGTH, 209, 230, 253, 279, 307, 337, 371, 408, 449, 494, 544, 598, 658, 724, 796, 876, 963, 1060, 1166, 1282, 1411, 1552, 1707, 1878, 2066, 2272, 2499, 2749, 3024, 3327, 3660, 4026, 4428, 4871, 5358, 5894, 6484, 7132, 7845, 8630, 9493, 10442, 11487, 12635, 13899, 15289, 16818, 18500, 20350, 22385, 24623, 27086, 29794, 32767};
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public final ExtractorOutput f8934c;
 
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         public final TrackOutput2 f8935d;
 
-        /* renamed from: e */
+        /* JADX INFO: renamed from: e */
         public final WavFormat f8936e;
 
-        /* renamed from: f */
+        /* JADX INFO: renamed from: f */
         public final int f8937f;
 
-        /* renamed from: g */
+        /* JADX INFO: renamed from: g */
         public final byte[] f8938g;
 
-        /* renamed from: h */
+        /* JADX INFO: renamed from: h */
         public final ParsableByteArray f8939h;
 
-        /* renamed from: i */
+        /* JADX INFO: renamed from: i */
         public final int f8940i;
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public final Format2 f8941j;
 
-        /* renamed from: k */
+        /* JADX INFO: renamed from: k */
         public int f8942k;
 
-        /* renamed from: l */
+        /* JADX INFO: renamed from: l */
         public long f8943l;
 
-        /* renamed from: m */
+        /* JADX INFO: renamed from: m */
         public int f8944m;
 
-        /* renamed from: n */
+        /* JADX INFO: renamed from: n */
         public long f8945n;
 
         public a(ExtractorOutput extractorOutput, TrackOutput2 trackOutput2, WavFormat wavFormat) throws ParserException {
@@ -120,7 +120,7 @@ public final class WavExtractor implements Extractor {
         }
 
         @Override // p007b.p225i.p226a.p242c.p267x2.p277l0.WavExtractor.b
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public void mo3795a(long j) {
             this.f8942k = 0;
             this.f8943l = j;
@@ -129,12 +129,13 @@ public final class WavExtractor implements Extractor {
         }
 
         @Override // p007b.p225i.p226a.p242c.p267x2.p277l0.WavExtractor.b
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public void mo3796b(int i, long j) {
             this.f8934c.mo2477a(new WavSeekMap(this.f8936e, this.f8937f, i, j));
             this.f8935d.mo2526e(this.f8941j);
         }
 
+        /* JADX WARN: Unsupported multi-entry loop pattern (BACK_EDGE: B:11:0x003f -> B:12:0x0041). Please report as a decompilation issue!!! */
         /*  JADX ERROR: JadxRuntimeException in pass: RegionMakerVisitor
             jadx.core.utils.exceptions.JadxRuntimeException: Not found exit edge by exit block: B:7:0x0029
             	at jadx.core.dex.visitors.regions.maker.LoopRegionMaker.checkLoopExits(LoopRegionMaker.java:226)
@@ -142,21 +143,20 @@ public final class WavExtractor implements Extractor {
             	at jadx.core.dex.visitors.regions.maker.LoopRegionMaker.process(LoopRegionMaker.java:63)
             	at jadx.core.dex.visitors.regions.maker.RegionMaker.traverse(RegionMaker.java:89)
             	at jadx.core.dex.visitors.regions.maker.RegionMaker.makeRegion(RegionMaker.java:66)
-            	at jadx.core.dex.visitors.regions.maker.IfRegionMaker.process(IfRegionMaker.java:95)
+            	at jadx.core.dex.visitors.regions.maker.IfRegionMaker.process(IfRegionMaker.java:96)
             	at jadx.core.dex.visitors.regions.maker.RegionMaker.traverse(RegionMaker.java:106)
             	at jadx.core.dex.visitors.regions.maker.RegionMaker.makeRegion(RegionMaker.java:66)
             	at jadx.core.dex.visitors.regions.maker.LoopRegionMaker.process(LoopRegionMaker.java:125)
             	at jadx.core.dex.visitors.regions.maker.RegionMaker.traverse(RegionMaker.java:89)
             	at jadx.core.dex.visitors.regions.maker.RegionMaker.makeRegion(RegionMaker.java:66)
-            	at jadx.core.dex.visitors.regions.maker.IfRegionMaker.process(IfRegionMaker.java:95)
+            	at jadx.core.dex.visitors.regions.maker.IfRegionMaker.process(IfRegionMaker.java:96)
             	at jadx.core.dex.visitors.regions.maker.RegionMaker.traverse(RegionMaker.java:106)
             	at jadx.core.dex.visitors.regions.maker.RegionMaker.makeRegion(RegionMaker.java:66)
             	at jadx.core.dex.visitors.regions.maker.RegionMaker.makeMthRegion(RegionMaker.java:48)
             	at jadx.core.dex.visitors.regions.RegionMakerVisitor.visit(RegionMakerVisitor.java:25)
             */
-        /* JADX WARN: Unsupported multi-entry loop pattern (BACK_EDGE: B:11:0x003f -> B:12:0x0041). Please report as a decompilation issue!!! */
         @Override // p007b.p225i.p226a.p242c.p267x2.p277l0.WavExtractor.b
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public boolean mo3797c(p007b.p225i.p226a.p242c.p267x2.ExtractorInput r19, long r20) throws java.io.IOException {
             /*
                 Method dump skipped, instruction units count: 364
@@ -165,60 +165,60 @@ public final class WavExtractor implements Extractor {
             throw new UnsupportedOperationException("Method not decompiled: p007b.p225i.p226a.p242c.p267x2.p277l0.WavExtractor.a.mo3797c(b.i.a.c.x2.i, long):boolean");
         }
 
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         public final int m3798d(int i) {
             return i / (this.f8936e.f8955b * 2);
         }
 
-        /* renamed from: e */
+        /* JADX INFO: renamed from: e */
         public final void m3799e(int i) {
             long jM2985F = this.f8943l + Util2.m2985F(this.f8945n, 1000000L, this.f8936e.f8956c);
             int i2 = i * 2 * this.f8936e.f8955b;
             this.f8935d.mo2525d(jM2985F, 1, i2, this.f8944m - i2, null);
-            this.f8945n += i;
+            this.f8945n += (long) i;
             this.f8944m -= i2;
         }
     }
 
-    /* compiled from: WavExtractor.java */
-    /* renamed from: b.i.a.c.x2.l0.b$b */
+    /* JADX INFO: renamed from: b.i.a.c.x2.l0.b$b */
+    /* JADX INFO: compiled from: WavExtractor.java */
     public interface b {
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         void mo3795a(long j);
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         void mo3796b(int i, long j) throws ParserException;
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         boolean mo3797c(ExtractorInput extractorInput, long j) throws IOException;
     }
 
-    /* compiled from: WavExtractor.java */
-    /* renamed from: b.i.a.c.x2.l0.b$c */
+    /* JADX INFO: renamed from: b.i.a.c.x2.l0.b$c */
+    /* JADX INFO: compiled from: WavExtractor.java */
     public static final class c implements b {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final ExtractorOutput f8946a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final TrackOutput2 f8947b;
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public final WavFormat f8948c;
 
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         public final Format2 f8949d;
 
-        /* renamed from: e */
+        /* JADX INFO: renamed from: e */
         public final int f8950e;
 
-        /* renamed from: f */
+        /* JADX INFO: renamed from: f */
         public long f8951f;
 
-        /* renamed from: g */
+        /* JADX INFO: renamed from: g */
         public int f8952g;
 
-        /* renamed from: h */
+        /* JADX INFO: renamed from: h */
         public long f8953h;
 
         public c(ExtractorOutput extractorOutput, TrackOutput2 trackOutput2, WavFormat wavFormat, String str, int i) throws ParserException {
@@ -246,7 +246,7 @@ public final class WavExtractor implements Extractor {
         }
 
         @Override // p007b.p225i.p226a.p242c.p267x2.p277l0.WavExtractor.b
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public void mo3795a(long j) {
             this.f8951f = j;
             this.f8952g = 0;
@@ -254,14 +254,14 @@ public final class WavExtractor implements Extractor {
         }
 
         @Override // p007b.p225i.p226a.p242c.p267x2.p277l0.WavExtractor.b
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public void mo3796b(int i, long j) {
             this.f8946a.mo2477a(new WavSeekMap(this.f8948c, 1, i, j));
             this.f8947b.mo2526e(this.f8949d);
         }
 
         @Override // p007b.p225i.p226a.p242c.p267x2.p277l0.WavExtractor.b
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public boolean mo3797c(ExtractorInput extractorInput, long j) throws IOException {
             int i;
             int i2;
@@ -272,7 +272,7 @@ public final class WavExtractor implements Extractor {
                     j2 = 0;
                 } else {
                     this.f8952g += iMo2523b;
-                    j2 -= iMo2523b;
+                    j2 -= (long) iMo2523b;
                 }
             }
             int i3 = this.f8948c.f8957d;
@@ -282,7 +282,7 @@ public final class WavExtractor implements Extractor {
                 int i5 = i4 * i3;
                 int i6 = this.f8952g - i5;
                 this.f8947b.mo2525d(jM2985F, 1, i5, i6, null);
-                this.f8953h += i4;
+                this.f8953h += (long) i4;
                 this.f8952g = i6;
             }
             return j2 <= 0;
@@ -294,7 +294,7 @@ public final class WavExtractor implements Extractor {
     }
 
     @Override // p007b.p225i.p226a.p242c.p267x2.Extractor
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public boolean mo3633b(ExtractorInput extractorInput) throws IOException {
         return AnimatableValueParser.m563r(extractorInput);
     }
@@ -302,7 +302,7 @@ public final class WavExtractor implements Extractor {
     /* JADX WARN: Removed duplicated region for block: B:68:0x01c0  */
     /* JADX WARN: Removed duplicated region for block: B:71:0x01d8  */
     @Override // p007b.p225i.p226a.p242c.p267x2.Extractor
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
@@ -438,7 +438,7 @@ public final class WavExtractor implements Extractor {
     }
 
     @Override // p007b.p225i.p226a.p242c.p267x2.Extractor
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public void mo3636f(ExtractorOutput extractorOutput) {
         this.f8926a = extractorOutput;
         this.f8927b = extractorOutput.mo2492p(0, 1);
@@ -446,7 +446,7 @@ public final class WavExtractor implements Extractor {
     }
 
     @Override // p007b.p225i.p226a.p242c.p267x2.Extractor
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public void mo3637g(long j, long j2) {
         this.f8928c = j == 0 ? 0 : 3;
         b bVar = this.f8929d;

@@ -6,7 +6,7 @@ import androidx.annotation.Nullable;
 import java.util.List;
 import java.util.regex.Pattern;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public interface Emoji extends Parcelable {
     String getChatInputText();
 

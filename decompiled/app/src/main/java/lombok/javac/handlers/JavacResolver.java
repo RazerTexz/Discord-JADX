@@ -7,7 +7,7 @@ import lombok.javac.JavacResolution;
 
 /* JADX WARN: Failed to restore enum class, 'enum' modifier and super class removed */
 /* JADX WARN: Unknown enum class pattern. Please report as an issue! */
-/* loaded from: discord-126021.apk:lombok/javac/handlers/JavacResolver.SCL.lombok */
+/* JADX INFO: loaded from: discord-126021.apk:lombok/javac/handlers/JavacResolver.SCL.lombok */
 public abstract class JavacResolver {
     public static final JavacResolver CLASS = new C129051("CLASS", 0);
     public static final JavacResolver METHOD = new C129062("METHOD", 1);
@@ -28,8 +28,8 @@ public abstract class JavacResolver {
         return (JavacResolver) Enum.valueOf(JavacResolver.class, str);
     }
 
-    /* renamed from: lombok.javac.handlers.JavacResolver$1 */
-    /* loaded from: discord-126021.apk:lombok/javac/handlers/JavacResolver$1.SCL.lombok */
+    /* JADX INFO: renamed from: lombok.javac.handlers.JavacResolver$1 */
+    /* JADX INFO: loaded from: discord-126021.apk:lombok/javac/handlers/JavacResolver$1.SCL.lombok */
     enum C129051 extends JavacResolver {
         C129051(String str, int i) {
             super(str, i, null);
@@ -56,8 +56,8 @@ public abstract class JavacResolver {
         this(str, i);
     }
 
-    /* renamed from: lombok.javac.handlers.JavacResolver$2 */
-    /* loaded from: discord-126021.apk:lombok/javac/handlers/JavacResolver$2.SCL.lombok */
+    /* JADX INFO: renamed from: lombok.javac.handlers.JavacResolver$2 */
+    /* JADX INFO: loaded from: discord-126021.apk:lombok/javac/handlers/JavacResolver$2.SCL.lombok */
     enum C129062 extends JavacResolver {
         C129062(String str, int i) {
             super(str, i, null);
@@ -79,8 +79,8 @@ public abstract class JavacResolver {
         }
     }
 
-    /* renamed from: lombok.javac.handlers.JavacResolver$3 */
-    /* loaded from: discord-126021.apk:lombok/javac/handlers/JavacResolver$3.SCL.lombok */
+    /* JADX INFO: renamed from: lombok.javac.handlers.JavacResolver$3 */
+    /* JADX INFO: loaded from: discord-126021.apk:lombok/javac/handlers/JavacResolver$3.SCL.lombok */
     enum C129073 extends JavacResolver {
         C129073(String str, int i) {
             super(str, i, null);

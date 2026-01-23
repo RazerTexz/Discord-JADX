@@ -7,8 +7,8 @@ import com.discord.utilities.time.TimeUtils;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ModelStickerPackStoreListing.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: ModelStickerPackStoreListing.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class ModelStickerPackStoreListing {
     private final String description;
     private final long id;
@@ -48,27 +48,27 @@ public final /* data */ class ModelStickerPackStoreListing {
         return modelStickerPackStoreListing.copy(modelSku, j2, str3, str4, modelStoreAsset);
     }
 
-    /* renamed from: component1, reason: from getter */
+    /* JADX INFO: renamed from: component1, reason: from getter */
     public final ModelSku getSku() {
         return this.sku;
     }
 
-    /* renamed from: component2, reason: from getter */
+    /* JADX INFO: renamed from: component2, reason: from getter */
     public final long getId() {
         return this.id;
     }
 
-    /* renamed from: component3, reason: from getter */
+    /* JADX INFO: renamed from: component3, reason: from getter */
     public final String getDescription() {
         return this.description;
     }
 
-    /* renamed from: component4, reason: from getter */
+    /* JADX INFO: renamed from: component4, reason: from getter */
     public final String getUnpublishedAt() {
         return this.unpublishedAt;
     }
 
-    /* renamed from: component5, reason: from getter */
+    /* JADX INFO: renamed from: component5, reason: from getter */
     public final ModelStoreAsset getThumbnail() {
         return this.thumbnail;
     }

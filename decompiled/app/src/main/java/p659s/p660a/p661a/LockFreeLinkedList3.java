@@ -5,31 +5,31 @@ import java.util.Objects;
 import java.util.concurrent.atomic.AtomicReferenceFieldUpdater;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: LockFreeLinkedList.kt */
-/* renamed from: s.a.a.k, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: s.a.a.k, reason: use source file name */
+/* JADX INFO: compiled from: LockFreeLinkedList.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public class LockFreeLinkedList3 {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static final AtomicReferenceFieldUpdater f27684j = AtomicReferenceFieldUpdater.newUpdater(LockFreeLinkedList3.class, Object.class, "_next");
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public static final AtomicReferenceFieldUpdater f27685k = AtomicReferenceFieldUpdater.newUpdater(LockFreeLinkedList3.class, Object.class, "_prev");
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public static final AtomicReferenceFieldUpdater f27686l = AtomicReferenceFieldUpdater.newUpdater(LockFreeLinkedList3.class, Object.class, "_removedRef");
     public volatile Object _next = this;
     public volatile Object _prev = this;
     public volatile Object _removedRef = null;
 
-    /* compiled from: LockFreeLinkedList.kt */
-    /* renamed from: s.a.a.k$a */
+    /* JADX INFO: renamed from: s.a.a.k$a */
+    /* JADX INFO: compiled from: LockFreeLinkedList.kt */
     public static abstract class a extends Atomic2<LockFreeLinkedList3> {
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public LockFreeLinkedList3 f27687b;
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public final LockFreeLinkedList3 f27688c;
 
         public a(LockFreeLinkedList3 lockFreeLinkedList3) {
@@ -37,7 +37,7 @@ public class LockFreeLinkedList3 {
         }
 
         @Override // p659s.p660a.p661a.Atomic2
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public void mo11143b(LockFreeLinkedList3 lockFreeLinkedList3, Object obj) {
             LockFreeLinkedList3 lockFreeLinkedList32 = lockFreeLinkedList3;
             boolean z2 = obj == null;
@@ -51,12 +51,12 @@ public class LockFreeLinkedList3 {
         }
     }
 
-    /* compiled from: LockFreeLinkedList.kt */
-    /* renamed from: s.a.a.k$b */
+    /* JADX INFO: renamed from: s.a.a.k$b */
+    /* JADX INFO: compiled from: LockFreeLinkedList.kt */
     public static final class b extends Atomic3 {
     }
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final boolean m11152e(LockFreeLinkedList3 lockFreeLinkedList3, LockFreeLinkedList3 lockFreeLinkedList32) {
         f27685k.lazySet(lockFreeLinkedList3, this);
         AtomicReferenceFieldUpdater atomicReferenceFieldUpdater = f27684j;
@@ -72,7 +72,7 @@ public class LockFreeLinkedList3 {
     
         if (p659s.p660a.p661a.LockFreeLinkedList3.f27684j.compareAndSet(r2, r1, ((p659s.p660a.p661a.LockFreeLinkedList4) r3).f27701a) != false) goto L26;
      */
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
@@ -116,7 +116,7 @@ public class LockFreeLinkedList3 {
         }
     }
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public final void m11154g(LockFreeLinkedList3 lockFreeLinkedList3) {
         LockFreeLinkedList3 lockFreeLinkedList32;
         do {
@@ -130,7 +130,7 @@ public class LockFreeLinkedList3 {
         }
     }
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public final Object m11155i() {
         while (true) {
             Object obj = this._next;
@@ -141,7 +141,7 @@ public class LockFreeLinkedList3 {
         }
     }
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final LockFreeLinkedList3 m11156j() {
         LockFreeLinkedList3 lockFreeLinkedList3;
         Object objM11155i = m11155i();
@@ -153,7 +153,7 @@ public class LockFreeLinkedList3 {
         return (LockFreeLinkedList3) objM11155i;
     }
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final LockFreeLinkedList3 m11157k() {
         LockFreeLinkedList3 lockFreeLinkedList3M11153f = m11153f(null);
         if (lockFreeLinkedList3M11153f == null) {
@@ -169,7 +169,7 @@ public class LockFreeLinkedList3 {
         return lockFreeLinkedList3M11153f;
     }
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final void m11158l() {
         LockFreeLinkedList3 lockFreeLinkedList3 = this;
         while (true) {
@@ -182,17 +182,17 @@ public class LockFreeLinkedList3 {
         }
     }
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public boolean mo11150m() {
         return m11155i() instanceof LockFreeLinkedList4;
     }
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public boolean mo11151n() {
         return m11159o() == null;
     }
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public final LockFreeLinkedList3 m11159o() {
         Object objM11155i;
         LockFreeLinkedList3 lockFreeLinkedList3;
@@ -217,7 +217,7 @@ public class LockFreeLinkedList3 {
         return null;
     }
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public final int m11160p(LockFreeLinkedList3 lockFreeLinkedList3, LockFreeLinkedList3 lockFreeLinkedList32, a aVar) {
         f27685k.lazySet(lockFreeLinkedList3, this);
         AtomicReferenceFieldUpdater atomicReferenceFieldUpdater = f27684j;

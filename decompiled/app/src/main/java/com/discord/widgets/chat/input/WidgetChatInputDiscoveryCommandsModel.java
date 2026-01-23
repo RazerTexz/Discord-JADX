@@ -22,11 +22,11 @@ import p007b.p100d.p104b.p105a.outline;
 import p507d0.p580t._Collections;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: WidgetChatInputDiscoveryCommandsModel.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetChatInputDiscoveryCommandsModel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final /* data */ class WidgetChatInputDiscoveryCommandsModel {
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private final List<Tuples2<Application, List<Autocompletable>>> commandsByApplication;
     private final boolean hasMoreAfter;
@@ -35,7 +35,7 @@ public final /* data */ class WidgetChatInputDiscoveryCommandsModel {
     private final int jumpedSequenceId;
     private final LoadState loadState;
 
-    /* compiled from: WidgetChatInputDiscoveryCommandsModel.kt */
+    /* JADX INFO: compiled from: WidgetChatInputDiscoveryCommandsModel.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -133,6 +133,7 @@ public final /* data */ class WidgetChatInputDiscoveryCommandsModel {
         this.loadState = loadState;
     }
 
+    /* JADX WARN: Multi-variable type inference failed */
     public static /* synthetic */ WidgetChatInputDiscoveryCommandsModel copy$default(WidgetChatInputDiscoveryCommandsModel widgetChatInputDiscoveryCommandsModel, List list, boolean z2, boolean z3, int i, Long l, LoadState loadState, int i2, Object obj) {
         if ((i2 & 1) != 0) {
             list = widgetChatInputDiscoveryCommandsModel.commandsByApplication;
@@ -167,27 +168,27 @@ public final /* data */ class WidgetChatInputDiscoveryCommandsModel {
         return this.commandsByApplication;
     }
 
-    /* renamed from: component2, reason: from getter */
+    /* JADX INFO: renamed from: component2, reason: from getter */
     public final boolean getHasMoreBefore() {
         return this.hasMoreBefore;
     }
 
-    /* renamed from: component3, reason: from getter */
+    /* JADX INFO: renamed from: component3, reason: from getter */
     public final boolean getHasMoreAfter() {
         return this.hasMoreAfter;
     }
 
-    /* renamed from: component4, reason: from getter */
+    /* JADX INFO: renamed from: component4, reason: from getter */
     public final int getJumpedSequenceId() {
         return this.jumpedSequenceId;
     }
 
-    /* renamed from: component5, reason: from getter */
+    /* JADX INFO: renamed from: component5, reason: from getter */
     public final Long getJumpedApplicationId() {
         return this.jumpedApplicationId;
     }
 
-    /* renamed from: component6, reason: from getter */
+    /* JADX INFO: renamed from: component6, reason: from getter */
     public final LoadState getLoadState() {
         return this.loadState;
     }
@@ -243,19 +244,25 @@ public final /* data */ class WidgetChatInputDiscoveryCommandsModel {
     }
 
     /* JADX WARN: Multi-variable type inference failed */
+    /* JADX WARN: Type inference failed for: r2v1, types: [int] */
+    /* JADX WARN: Type inference failed for: r2v10 */
+    /* JADX WARN: Type inference failed for: r2v9 */
+    /* JADX WARN: Type inference failed for: r3v0 */
+    /* JADX WARN: Type inference failed for: r3v1, types: [int] */
+    /* JADX WARN: Type inference failed for: r3v2 */
     public int hashCode() {
         List<Tuples2<Application, List<Autocompletable>>> list = this.commandsByApplication;
         int iHashCode = (list != null ? list.hashCode() : 0) * 31;
         boolean z2 = this.hasMoreBefore;
-        int i = z2;
-        if (z2 != 0) {
-            i = 1;
+        ?? r2 = z2;
+        if (z2) {
+            r2 = 1;
         }
-        int i2 = (iHashCode + i) * 31;
+        int i = (iHashCode + r2) * 31;
         boolean z3 = this.hasMoreAfter;
-        int i3 = (((i2 + (z3 ? 1 : z3 ? 1 : 0)) * 31) + this.jumpedSequenceId) * 31;
+        int i2 = (((i + (z3 ? 1 : z3)) * 31) + this.jumpedSequenceId) * 31;
         Long l = this.jumpedApplicationId;
-        int iHashCode2 = (i3 + (l != null ? l.hashCode() : 0)) * 31;
+        int iHashCode2 = (i2 + (l != null ? l.hashCode() : 0)) * 31;
         LoadState loadState = this.loadState;
         return iHashCode2 + (loadState != null ? loadState.hashCode() : 0);
     }

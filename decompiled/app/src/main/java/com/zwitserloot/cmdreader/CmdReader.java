@@ -11,7 +11,7 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 
-/* loaded from: discord-126021.apk:com/zwitserloot/cmdreader/CmdReader.SCL.lombok */
+/* JADX INFO: loaded from: discord-126021.apk:com/zwitserloot/cmdreader/CmdReader.SCL.lombok */
 public class CmdReader<T> {
     private final Class<T> settingsDescriptor;
     private final List<ParseItem> items = Collections.unmodifiableList(init());
@@ -27,7 +27,7 @@ public class CmdReader<T> {
         this.settingsDescriptor = settingsDescriptor;
     }
 
-    /* renamed from: of */
+    /* JADX INFO: renamed from: of */
     public static <T> CmdReader<T> m9327of(Class<T> settingsDescriptor) {
         return new CmdReader<>(settingsDescriptor);
     }
@@ -291,7 +291,7 @@ public class CmdReader<T> {
         return make((String[]) out.toArray(new String[out.size()]));
     }
 
-    public T make(String[] in) throws SecurityException, InvalidCommandLineException, IllegalArgumentException {
+    public T make(String[] in) throws InvalidCommandLineException {
         T obj = construct();
         if (in == null) {
             in = new String[0];
@@ -364,8 +364,8 @@ public class CmdReader<T> {
         return obj;
     }
 
-    /* renamed from: com.zwitserloot.cmdreader.CmdReader$1State, reason: invalid class name */
-    /* loaded from: discord-126021.apk:com/zwitserloot/cmdreader/CmdReader$1State.SCL.lombok */
+    /* JADX INFO: renamed from: com.zwitserloot.cmdreader.CmdReader$1State, reason: invalid class name */
+    /* JADX INFO: loaded from: discord-126021.apk:com/zwitserloot/cmdreader/CmdReader$1State.SCL.lombok */
     class C1State {
         List<ParseItem> used = new ArrayList();
         final /* synthetic */ Object val$obj;
@@ -374,7 +374,7 @@ public class CmdReader<T> {
             this.val$obj = obj;
         }
 
-        void handle(ParseItem item, String value) throws IllegalArgumentException {
+        void handle(ParseItem item, String value) {
             item.set(this.val$obj, value);
             this.used.add(item);
         }
@@ -460,7 +460,7 @@ public class CmdReader<T> {
         }
     }
 
-    private T construct() throws SecurityException {
+    private T construct() {
         try {
             Constructor<T> constructor = this.settingsDescriptor.getDeclaredConstructor(new Class[0]);
             constructor.setAccessible(true);

@@ -15,22 +15,22 @@ import p007b.p225i.p361c.p362j.p363a.p364c.C4552b;
 import p007b.p225i.p361c.p362j.p363a.p364c.C4553c;
 import p007b.p225i.p361c.p362j.p363a.p364c.C4554d;
 
-/* compiled from: com.google.android.gms:play-services-measurement-api@@18.0.0 */
-/* renamed from: b.i.c.j.a.b */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.c.j.a.b */
+/* JADX INFO: compiled from: com.google.android.gms:play-services-measurement-api@@18.0.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public class C4550b implements InterfaceC4549a {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static volatile InterfaceC4549a f12141a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final C3967a f12142b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final Map<String, ?> f12143c;
 
-    /* compiled from: com.google.android.gms:play-services-measurement-api@@18.0.0 */
-    /* renamed from: b.i.c.j.a.b$a */
+    /* JADX INFO: renamed from: b.i.c.j.a.b$a */
+    /* JADX INFO: compiled from: com.google.android.gms:play-services-measurement-api@@18.0.0 */
     public class a implements InterfaceC4549a.a {
         public a(C4550b c4550b, String str) {
         }
@@ -43,7 +43,7 @@ public class C4550b implements InterfaceC4549a {
     }
 
     @Override // p007b.p225i.p361c.p362j.p363a.InterfaceC4549a
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public void mo6338a(@NonNull String str, @NonNull String str2, Bundle bundle) {
         boolean z2;
         if (bundle == null) {
@@ -71,24 +71,24 @@ public class C4550b implements InterfaceC4549a {
                     Iterator<String> it2 = C4553c.f12152d.iterator();
                     while (true) {
                         if (!it2.hasNext()) {
-                            char c = 65535;
+                            byte b2 = -1;
                             int iHashCode = str.hashCode();
                             if (iHashCode != 101200) {
                                 if (iHashCode != 101230) {
                                     if (iHashCode == 3142703 && str.equals("fiam")) {
-                                        c = 2;
+                                        b2 = 2;
                                     }
                                 } else if (str.equals("fdl")) {
-                                    c = 1;
+                                    b2 = 1;
                                 }
                             } else if (str.equals("fcm")) {
-                                c = 0;
+                                b2 = 0;
                             }
-                            if (c == 0) {
+                            if (b2 == 0) {
                                 bundle2.putString("_cis", "fcm_integration");
-                            } else if (c == 1) {
+                            } else if (b2 == 1) {
                                 bundle2.putString("_cis", "fdl_integration");
-                            } else if (c == 2) {
+                            } else if (b2 == 2) {
                                 bundle2.putString("_cis", "fiam_integration");
                             }
                         } else if (bundle2.containsKey(it2.next())) {
@@ -108,7 +108,7 @@ public class C4550b implements InterfaceC4549a {
 
     /* JADX WARN: Removed duplicated region for block: B:31:0x0063  */
     @Override // p007b.p225i.p361c.p362j.p363a.InterfaceC4549a
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
@@ -142,7 +142,7 @@ public class C4550b implements InterfaceC4549a {
 
     @Override // p007b.p225i.p361c.p362j.p363a.InterfaceC4549a
     @WorkerThread
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public InterfaceC4549a.a mo6340c(@NonNull String str, InterfaceC4549a.b bVar) {
         Objects.requireNonNull(bVar, "null reference");
         if (!C4553c.m6342a(str)) {

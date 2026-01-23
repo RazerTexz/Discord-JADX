@@ -1,12 +1,12 @@
 package com.google.zxing;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public abstract class ReaderException extends Exception {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static final boolean f21666j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public static final StackTraceElement[] f21667k;
 
     static {

@@ -4,24 +4,24 @@ import java.util.Objects;
 import java.util.concurrent.atomic.AtomicLong;
 import java.util.concurrent.atomic.AtomicReferenceArray;
 
-/* compiled from: SpscAtomicArrayQueue.java */
-/* renamed from: j0.l.e.n.c, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: j0.l.e.n.c, reason: use source file name */
+/* JADX INFO: compiled from: SpscAtomicArrayQueue.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class SpscAtomicArrayQueue<E> extends AtomicReferenceArrayQueue<E> {
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public static final Integer f27305l = Integer.getInteger("jctools.spsc.max.lookahead.step", 4096);
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public final AtomicLong f27306m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public long f27307n;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public final AtomicLong f27308o;
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public final int f27309p;
 
     public SpscAtomicArrayQueue(int i) {
@@ -31,7 +31,7 @@ public final class SpscAtomicArrayQueue<E> extends AtomicReferenceArrayQueue<E> 
         this.f27309p = Math.min(i / 4, f27305l.intValue());
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final long m10827c() {
         return this.f27308o.get();
     }
@@ -49,7 +49,7 @@ public final class SpscAtomicArrayQueue<E> extends AtomicReferenceArrayQueue<E> 
         long j = this.f27306m.get();
         int i2 = ((int) j) & i;
         if (j >= this.f27307n) {
-            long j2 = this.f27309p + j;
+            long j2 = ((long) this.f27309p) + j;
             if (atomicReferenceArray.get(i & ((int) j2)) == null) {
                 this.f27307n = j2;
             } else if (atomicReferenceArray.get(i2) != null) {

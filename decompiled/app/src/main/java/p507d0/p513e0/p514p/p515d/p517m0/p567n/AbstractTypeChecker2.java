@@ -28,15 +28,15 @@ import p507d0.p580t.MutableCollections;
 import p507d0.p580t._Collections;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: AbstractTypeChecker.kt */
-/* renamed from: d0.e0.p.d.m0.n.e, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.n.e, reason: use source file name */
+/* JADX INFO: compiled from: AbstractTypeChecker.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class AbstractTypeChecker2 {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final AbstractTypeChecker2 f24752a = new AbstractTypeChecker2();
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final boolean m10004a(AbstractTypeChecker3 abstractTypeChecker3, AbstractTypeChecker2 abstractTypeChecker2, InterfaceC11980i interfaceC11980i, InterfaceC11980i interfaceC11980i2, boolean z2) {
         Collection<InterfaceC11979h> collectionPossibleIntegerTypes = abstractTypeChecker3.possibleIntegerTypes(interfaceC11980i);
         if ((collectionPossibleIntegerTypes instanceof Collection) && collectionPossibleIntegerTypes.isEmpty()) {
@@ -57,7 +57,7 @@ public final class AbstractTypeChecker2 {
         return abstractTypeChecker2.isSubtypeOf(abstractTypeChecker3, interfaceC11979h, interfaceC11979h2, z2);
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final List<InterfaceC11980i> m10005b(AbstractTypeChecker3 abstractTypeChecker3, InterfaceC11980i interfaceC11980i, InterfaceC11983l interfaceC11983l) {
         AbstractTypeChecker3.b bVarSubstitutionSupertypePolicy;
         EnumC11973b enumC11973b = EnumC11973b.FOR_SUBTYPING;
@@ -118,7 +118,7 @@ public final class AbstractTypeChecker2 {
         return listFastCorrespondingSupertypes;
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final List<InterfaceC11980i> m10006c(AbstractTypeChecker3 abstractTypeChecker3, InterfaceC11980i interfaceC11980i, InterfaceC11983l interfaceC11983l) {
         List<InterfaceC11980i> listM10005b = m10005b(abstractTypeChecker3, interfaceC11980i, interfaceC11983l);
         if (listM10005b.size() < 2) {
@@ -152,7 +152,7 @@ public final class AbstractTypeChecker2 {
         return arrayList.isEmpty() ^ true ? arrayList : listM10005b;
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final boolean m10007d(AbstractTypeChecker3 abstractTypeChecker3, InterfaceC11979h interfaceC11979h) {
         return abstractTypeChecker3.isDenotable(abstractTypeChecker3.typeConstructor(interfaceC11979h)) && !abstractTypeChecker3.isDynamic(interfaceC11979h) && !abstractTypeChecker3.isDefinitelyNotNullType(interfaceC11979h) && Intrinsics3.areEqual(abstractTypeChecker3.typeConstructor(abstractTypeChecker3.lowerBoundIfFlexible(interfaceC11979h)), abstractTypeChecker3.typeConstructor(abstractTypeChecker3.upperBoundIfFlexible(interfaceC11979h)));
     }

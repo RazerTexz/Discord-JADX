@@ -12,9 +12,9 @@ import java.util.Map;
 import p507d0.p592z.p594d.Intrinsics3;
 import p658rx.functions.Func7;
 
-/* compiled from: GuildInviteShareSheetViewModel.kt */
-/* renamed from: com.discord.widgets.guilds.invite.GuildInviteShareSheetViewModel$Companion$observeStoreState$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.guilds.invite.GuildInviteShareSheetViewModel$Companion$observeStoreState$1, reason: use source file name */
+/* JADX INFO: compiled from: GuildInviteShareSheetViewModel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class GuildInviteShareSheetViewModel2<T1, T2, T3, T4, T5, T6, T7, R> implements Func7<ModelInvite.Settings, Map<Long, ? extends Channel>, MeUser, List<? extends Channel>, Guild, List<? extends InviteSuggestion>, Map<Long, ? extends StageInstance>, GuildInviteShareSheetViewModel.StoreState> {
     public static final GuildInviteShareSheetViewModel2 INSTANCE = new GuildInviteShareSheetViewModel2();
 
@@ -23,7 +23,7 @@ public final class GuildInviteShareSheetViewModel2<T1, T2, T3, T4, T5, T6, T7, R
         return call2(settings, (Map<Long, Channel>) map, meUser, (List<Channel>) list, guild, list2, (Map<Long, StageInstance>) map2);
     }
 
-    /* renamed from: call, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
     public final GuildInviteShareSheetViewModel.StoreState call2(ModelInvite.Settings settings, Map<Long, Channel> map, MeUser meUser, List<Channel> list, Guild guild, List<? extends InviteSuggestion> list2, Map<Long, StageInstance> map2) {
         if (guild == null) {
             return GuildInviteShareSheetViewModel.StoreState.Invalid.INSTANCE;

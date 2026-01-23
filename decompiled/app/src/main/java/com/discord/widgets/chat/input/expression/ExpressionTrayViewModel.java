@@ -28,11 +28,11 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p658rx.Observable;
 import p658rx.subjects.PublishSubject;
 
-/* compiled from: ExpressionTrayViewModel.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: ExpressionTrayViewModel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class ExpressionTrayViewModel extends AppViewModel<ViewState> {
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private final PublishSubject<Event> eventSubject;
     private final StoreAnalytics storeAnalytics;
@@ -43,8 +43,8 @@ public final class ExpressionTrayViewModel extends AppViewModel<ViewState> {
     private final StoreUser storeUser;
     private boolean wasActive;
 
-    /* compiled from: ExpressionTrayViewModel.kt */
-    /* renamed from: com.discord.widgets.chat.input.expression.ExpressionTrayViewModel$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.input.expression.ExpressionTrayViewModel$1 */
+    /* JADX INFO: compiled from: ExpressionTrayViewModel.kt */
     public static final /* synthetic */ class C78411 extends FunctionReferenceImpl implements Function1<StoreState, Unit> {
         public C78411(ExpressionTrayViewModel expressionTrayViewModel) {
             super(1, expressionTrayViewModel, ExpressionTrayViewModel.class, "handleStoreState", "handleStoreState(Lcom/discord/widgets/chat/input/expression/ExpressionTrayViewModel$StoreState;)V", 0);
@@ -56,15 +56,15 @@ public final class ExpressionTrayViewModel extends AppViewModel<ViewState> {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(StoreState storeState) {
             Intrinsics3.checkNotNullParameter(storeState, "p1");
             ExpressionTrayViewModel.access$handleStoreState((ExpressionTrayViewModel) this.receiver, storeState);
         }
     }
 
-    /* compiled from: ExpressionTrayViewModel.kt */
-    /* renamed from: com.discord.widgets.chat.input.expression.ExpressionTrayViewModel$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.input.expression.ExpressionTrayViewModel$2 */
+    /* JADX INFO: compiled from: ExpressionTrayViewModel.kt */
     public static final /* synthetic */ class C78422 extends FunctionReferenceImpl implements Function1<ExpressionPickerEvent, Unit> {
         public C78422(ExpressionTrayViewModel expressionTrayViewModel) {
             super(1, expressionTrayViewModel, ExpressionTrayViewModel.class, "handleExpressionPickerEvents", "handleExpressionPickerEvents(Lcom/discord/widgets/chat/input/expression/ExpressionPickerEvent;)V", 0);
@@ -76,14 +76,14 @@ public final class ExpressionTrayViewModel extends AppViewModel<ViewState> {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(ExpressionPickerEvent expressionPickerEvent) {
             Intrinsics3.checkNotNullParameter(expressionPickerEvent, "p1");
             ExpressionTrayViewModel.access$handleExpressionPickerEvents((ExpressionTrayViewModel) this.receiver, expressionPickerEvent);
         }
     }
 
-    /* compiled from: ExpressionTrayViewModel.kt */
+    /* JADX INFO: compiled from: ExpressionTrayViewModel.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -103,10 +103,10 @@ public final class ExpressionTrayViewModel extends AppViewModel<ViewState> {
         }
     }
 
-    /* compiled from: ExpressionTrayViewModel.kt */
+    /* JADX INFO: compiled from: ExpressionTrayViewModel.kt */
     public static abstract class Event {
 
-        /* compiled from: ExpressionTrayViewModel.kt */
+        /* JADX INFO: compiled from: ExpressionTrayViewModel.kt */
         public static final class HideExpressionTray extends Event {
             public static final HideExpressionTray INSTANCE = new HideExpressionTray();
 
@@ -115,7 +115,7 @@ public final class ExpressionTrayViewModel extends AppViewModel<ViewState> {
             }
         }
 
-        /* compiled from: ExpressionTrayViewModel.kt */
+        /* JADX INFO: compiled from: ExpressionTrayViewModel.kt */
         public static final class ShowEmojiPickerSheet extends Event {
             public static final ShowEmojiPickerSheet INSTANCE = new ShowEmojiPickerSheet();
 
@@ -124,7 +124,7 @@ public final class ExpressionTrayViewModel extends AppViewModel<ViewState> {
             }
         }
 
-        /* compiled from: ExpressionTrayViewModel.kt */
+        /* JADX INFO: compiled from: ExpressionTrayViewModel.kt */
         public static final class ShowGifPickerSheet extends Event {
             public static final ShowGifPickerSheet INSTANCE = new ShowGifPickerSheet();
 
@@ -133,7 +133,7 @@ public final class ExpressionTrayViewModel extends AppViewModel<ViewState> {
             }
         }
 
-        /* compiled from: ExpressionTrayViewModel.kt */
+        /* JADX INFO: compiled from: ExpressionTrayViewModel.kt */
         public static final /* data */ class ShowStickerPicker extends Event {
             private final boolean inline;
             private final String searchText;
@@ -156,17 +156,17 @@ public final class ExpressionTrayViewModel extends AppViewModel<ViewState> {
                 return showStickerPicker.copy(l, str, z2);
             }
 
-            /* renamed from: component1, reason: from getter */
+            /* JADX INFO: renamed from: component1, reason: from getter */
             public final Long getStickerPackId() {
                 return this.stickerPackId;
             }
 
-            /* renamed from: component2, reason: from getter */
+            /* JADX INFO: renamed from: component2, reason: from getter */
             public final String getSearchText() {
                 return this.searchText;
             }
 
-            /* renamed from: component3, reason: from getter */
+            /* JADX INFO: renamed from: component3, reason: from getter */
             public final boolean getInline() {
                 return this.inline;
             }
@@ -199,17 +199,20 @@ public final class ExpressionTrayViewModel extends AppViewModel<ViewState> {
             }
 
             /* JADX WARN: Multi-variable type inference failed */
+            /* JADX WARN: Type inference failed for: r1v3, types: [int] */
+            /* JADX WARN: Type inference failed for: r1v4 */
+            /* JADX WARN: Type inference failed for: r1v6 */
             public int hashCode() {
                 Long l = this.stickerPackId;
                 int iHashCode = (l != null ? l.hashCode() : 0) * 31;
                 String str = this.searchText;
                 int iHashCode2 = (iHashCode + (str != null ? str.hashCode() : 0)) * 31;
                 boolean z2 = this.inline;
-                int i = z2;
-                if (z2 != 0) {
-                    i = 1;
+                ?? r1 = z2;
+                if (z2) {
+                    r1 = 1;
                 }
-                return iHashCode2 + i;
+                return iHashCode2 + r1;
             }
 
             public String toString() {
@@ -237,7 +240,7 @@ public final class ExpressionTrayViewModel extends AppViewModel<ViewState> {
         }
     }
 
-    /* compiled from: ExpressionTrayViewModel.kt */
+    /* JADX INFO: compiled from: ExpressionTrayViewModel.kt */
     public static final /* data */ class StoreState {
         private final Long guildId;
         private final Map<Long, Map<Long, Sticker>> guildStickers;
@@ -259,6 +262,7 @@ public final class ExpressionTrayViewModel extends AppViewModel<ViewState> {
             this.isThreadDraft = z2;
         }
 
+        /* JADX WARN: Multi-variable type inference failed */
         public static /* synthetic */ StoreState copy$default(StoreState storeState, ExpressionTrayTab expressionTrayTab, Long l, MeUser meUser, Map map, Set set, boolean z2, int i, Object obj) {
             if ((i & 1) != 0) {
                 expressionTrayTab = storeState.selectedExpressionTab;
@@ -285,17 +289,17 @@ public final class ExpressionTrayViewModel extends AppViewModel<ViewState> {
             return storeState.copy(expressionTrayTab, l2, meUser2, map2, set2, z2);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final ExpressionTrayTab getSelectedExpressionTab() {
             return this.selectedExpressionTab;
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final Long getGuildId() {
             return this.guildId;
         }
 
-        /* renamed from: component3, reason: from getter */
+        /* JADX INFO: renamed from: component3, reason: from getter */
         public final MeUser getMeUser() {
             return this.meUser;
         }
@@ -308,7 +312,7 @@ public final class ExpressionTrayViewModel extends AppViewModel<ViewState> {
             return this.userGuildIds;
         }
 
-        /* renamed from: component6, reason: from getter */
+        /* JADX INFO: renamed from: component6, reason: from getter */
         public final boolean getIsThreadDraft() {
             return this.isThreadDraft;
         }
@@ -352,6 +356,9 @@ public final class ExpressionTrayViewModel extends AppViewModel<ViewState> {
         }
 
         /* JADX WARN: Multi-variable type inference failed */
+        /* JADX WARN: Type inference failed for: r1v3, types: [int] */
+        /* JADX WARN: Type inference failed for: r1v4 */
+        /* JADX WARN: Type inference failed for: r1v6 */
         public int hashCode() {
             ExpressionTrayTab expressionTrayTab = this.selectedExpressionTab;
             int iHashCode = (expressionTrayTab != null ? expressionTrayTab.hashCode() : 0) * 31;
@@ -364,11 +371,11 @@ public final class ExpressionTrayViewModel extends AppViewModel<ViewState> {
             Set<Long> set = this.userGuildIds;
             int iHashCode5 = (iHashCode4 + (set != null ? set.hashCode() : 0)) * 31;
             boolean z2 = this.isThreadDraft;
-            int i = z2;
-            if (z2 != 0) {
-                i = 1;
+            ?? r1 = z2;
+            if (z2) {
+                r1 = 1;
             }
-            return iHashCode5 + i;
+            return iHashCode5 + r1;
         }
 
         public final boolean isThreadDraft() {
@@ -583,7 +590,7 @@ public final class ExpressionTrayViewModel extends AppViewModel<ViewState> {
         updateViewState2(viewState);
     }
 
-    /* renamed from: updateViewState, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: updateViewState, reason: avoid collision after fix types in other method */
     public void updateViewState2(ViewState viewState) {
         Intrinsics3.checkNotNullParameter(viewState, "viewState");
         ViewState viewState2 = getViewState();
@@ -595,7 +602,7 @@ public final class ExpressionTrayViewModel extends AppViewModel<ViewState> {
         super.updateViewState(viewState);
     }
 
-    /* compiled from: ExpressionTrayViewModel.kt */
+    /* JADX INFO: compiled from: ExpressionTrayViewModel.kt */
     public static final /* data */ class ViewState {
         private final ExpressionDetailPage expressionDetailPage;
         private final ExpressionTrayTab selectedExpressionTab;
@@ -649,22 +656,22 @@ public final class ExpressionTrayViewModel extends AppViewModel<ViewState> {
             return viewState.copy(expressionTrayTab, expressionDetailPage, z2, z3);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final ExpressionTrayTab getSelectedExpressionTab() {
             return this.selectedExpressionTab;
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final ExpressionDetailPage getExpressionDetailPage() {
             return this.expressionDetailPage;
         }
 
-        /* renamed from: component3, reason: from getter */
+        /* JADX INFO: renamed from: component3, reason: from getter */
         public final boolean getShowStickersSearchBar() {
             return this.showStickersSearchBar;
         }
 
-        /* renamed from: component4, reason: from getter */
+        /* JADX INFO: renamed from: component4, reason: from getter */
         public final boolean getShowGifsAndStickers() {
             return this.showGifsAndStickers;
         }
@@ -710,19 +717,25 @@ public final class ExpressionTrayViewModel extends AppViewModel<ViewState> {
         }
 
         /* JADX WARN: Multi-variable type inference failed */
+        /* JADX WARN: Type inference failed for: r1v3, types: [int] */
+        /* JADX WARN: Type inference failed for: r1v5 */
+        /* JADX WARN: Type inference failed for: r1v7 */
+        /* JADX WARN: Type inference failed for: r2v1 */
+        /* JADX WARN: Type inference failed for: r2v2, types: [int] */
+        /* JADX WARN: Type inference failed for: r2v3 */
         public int hashCode() {
             ExpressionTrayTab expressionTrayTab = this.selectedExpressionTab;
             int iHashCode = (expressionTrayTab != null ? expressionTrayTab.hashCode() : 0) * 31;
             ExpressionDetailPage expressionDetailPage = this.expressionDetailPage;
             int iHashCode2 = (iHashCode + (expressionDetailPage != null ? expressionDetailPage.hashCode() : 0)) * 31;
             boolean z2 = this.showStickersSearchBar;
-            int i = z2;
-            if (z2 != 0) {
-                i = 1;
+            ?? r1 = z2;
+            if (z2) {
+                r1 = 1;
             }
-            int i2 = (iHashCode2 + i) * 31;
+            int i = (iHashCode2 + r1) * 31;
             boolean z3 = this.showGifsAndStickers;
-            return i2 + (z3 ? 1 : z3 ? 1 : 0);
+            return i + (z3 ? 1 : z3);
         }
 
         public String toString() {

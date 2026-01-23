@@ -1,17 +1,17 @@
 package p507d0.p513e0.p514p.p515d.p577n0;
 
-/* compiled from: HashPMap.java */
-/* renamed from: d0.e0.p.d.n0.b, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.n0.b, reason: use source file name */
+/* JADX INFO: compiled from: HashPMap.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class HashPMap<K, V> {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final HashPMap<Object, Object> f25023a = new HashPMap<>(IntTreePMap.empty(), 0);
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final IntTreePMap<ConsPStack<MapEntry<K, V>>> f25024b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final int f25025c;
 
     public HashPMap(IntTreePMap<ConsPStack<MapEntry<K, V>>> intTreePMap, int i) {

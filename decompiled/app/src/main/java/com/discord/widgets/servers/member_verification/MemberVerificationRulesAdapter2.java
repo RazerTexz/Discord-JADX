@@ -4,9 +4,9 @@ import android.view.View;
 import com.discord.widgets.servers.member_verification.MemberVerificationRulesAdapter;
 import com.discord.widgets.servers.member_verification.form_fields.MemberVerificationItemApproveTerms;
 
-/* compiled from: MemberVerificationRulesAdapter.kt */
-/* renamed from: com.discord.widgets.servers.member_verification.MemberVerificationRulesAdapter$ApproveTermsItemHolder$onConfigure$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.servers.member_verification.MemberVerificationRulesAdapter$ApproveTermsItemHolder$onConfigure$1, reason: use source file name */
+/* JADX INFO: compiled from: MemberVerificationRulesAdapter.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class MemberVerificationRulesAdapter2 implements View.OnClickListener {
     public final /* synthetic */ MemberVerificationItemApproveTerms $approveTerms;
     public final /* synthetic */ MemberVerificationRulesAdapter.ApproveTermsItemHolder this$0;

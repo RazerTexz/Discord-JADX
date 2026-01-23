@@ -7,12 +7,12 @@ import p007b.p195g.p196a.p205c.p210c0.Annotated;
 import p007b.p195g.p196a.p205c.p210c0.AnnotatedParameter;
 import p007b.p195g.p196a.p205c.p210c0.AnnotatedWithParams;
 
-/* compiled from: Java7SupportImpl.java */
-/* renamed from: b.g.a.c.b0.d, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.g.a.c.b0.d, reason: use source file name */
+/* JADX INFO: compiled from: Java7SupportImpl.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class Java7SupportImpl extends Java7Support {
     @Override // p007b.p195g.p196a.p205c.p209b0.Java7Support
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public PropertyName mo1804a(AnnotatedParameter annotatedParameter) {
         ConstructorProperties constructorPropertiesMo1818b;
         AnnotatedWithParams annotatedWithParams = annotatedParameter._owner;
@@ -28,7 +28,7 @@ public class Java7SupportImpl extends Java7Support {
     }
 
     @Override // p007b.p195g.p196a.p205c.p209b0.Java7Support
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public Boolean mo1805b(Annotated annotated) {
         Transient transientMo1818b = annotated.mo1818b(Transient.class);
         if (transientMo1818b != null) {
@@ -38,7 +38,7 @@ public class Java7SupportImpl extends Java7Support {
     }
 
     @Override // p007b.p195g.p196a.p205c.p209b0.Java7Support
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public Boolean mo1806c(Annotated annotated) {
         if (annotated.mo1818b(ConstructorProperties.class) != null) {
             return Boolean.TRUE;

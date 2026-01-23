@@ -3,9 +3,9 @@ package androidx.core.graphics;
 import android.graphics.PointF;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: Point.kt */
-/* renamed from: androidx.core.graphics.PointKt, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: androidx.core.graphics.PointKt, reason: use source file name */
+/* JADX INFO: compiled from: Point.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class Point {
     public static final int component1(android.graphics.Point point) {
         Intrinsics3.checkNotNullParameter(point, "<this>");

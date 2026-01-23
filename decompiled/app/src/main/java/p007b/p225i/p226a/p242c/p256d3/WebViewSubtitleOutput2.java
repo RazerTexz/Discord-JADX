@@ -36,37 +36,37 @@ import p007b.p225i.p226a.p242c.p259f3.Util2;
 import p007b.p225i.p355b.p356a.Charsets;
 import p007b.p225i.p355b.p357b.RegularImmutableMap;
 
-/* compiled from: WebViewSubtitleOutput.java */
-/* renamed from: b.i.a.c.d3.r, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.d3.r, reason: use source file name */
+/* JADX INFO: compiled from: WebViewSubtitleOutput.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class WebViewSubtitleOutput2 extends FrameLayout implements SubtitleView.InterfaceC10760a {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final CanvasSubtitleOutput f6402j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final WebView f6403k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public List<Cue> f6404l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public CaptionStyleCompat f6405m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public float f6406n;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public int f6407o;
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public float f6408p;
 
-    /* compiled from: WebViewSubtitleOutput.java */
-    /* renamed from: b.i.a.c.d3.r$a */
+    /* JADX INFO: renamed from: b.i.a.c.d3.r$a */
+    /* JADX INFO: compiled from: WebViewSubtitleOutput.java */
     public static /* synthetic */ class a {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public static final /* synthetic */ int[] f6409a;
 
         static {
@@ -103,7 +103,7 @@ public final class WebViewSubtitleOutput2 extends FrameLayout implements Subtitl
         addView(webViewSubtitleOutput);
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static int m2766b(int i) {
         if (i != 1) {
             return i != 2 ? 0 : -100;
@@ -111,7 +111,7 @@ public final class WebViewSubtitleOutput2 extends FrameLayout implements Subtitl
         return -50;
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public static String m2767c(@Nullable Layout.Alignment alignment) {
         if (alignment == null) {
             return "center";
@@ -121,7 +121,7 @@ public final class WebViewSubtitleOutput2 extends FrameLayout implements Subtitl
     }
 
     @Override // com.google.android.exoplayer2.p505ui.SubtitleView.InterfaceC10760a
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public void mo2758a(List<Cue> list, CaptionStyleCompat captionStyleCompat, float f, int i, float f2) {
         this.f6405m = captionStyleCompat;
         this.f6406n = f;
@@ -145,7 +145,7 @@ public final class WebViewSubtitleOutput2 extends FrameLayout implements Subtitl
         invalidate();
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final String m2768d(int i, float f) {
         float fM479U1 = AnimatableValueParser.m479U1(i, f, getHeight(), (getHeight() - getPaddingTop()) - getPaddingBottom());
         return fM479U1 == -3.4028235E38f ? "unset" : Util2.m3003k("%.2fpx", Float.valueOf(fM479U1 / getContext().getResources().getDisplayMetrics().density));
@@ -161,7 +161,7 @@ public final class WebViewSubtitleOutput2 extends FrameLayout implements Subtitl
     /* JADX WARN: Removed duplicated region for block: B:253:0x064b  */
     /* JADX WARN: Removed duplicated region for block: B:254:0x0667  */
     /* JADX WARN: Removed duplicated region for block: B:59:0x01b5  */
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */

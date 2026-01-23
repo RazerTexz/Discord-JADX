@@ -26,12 +26,12 @@ import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: EmbeddedMessageParser.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: EmbeddedMessageParser.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class EmbeddedMessageParser {
     public static final EmbeddedMessageParser INSTANCE = new EmbeddedMessageParser();
 
-    /* compiled from: EmbeddedMessageParser.kt */
+    /* JADX INFO: compiled from: EmbeddedMessageParser.kt */
     public static final /* data */ class ParserData {
         private final WidgetChatListAdapter adapter;
         private final boolean animateEmojis;
@@ -57,11 +57,12 @@ public final class EmbeddedMessageParser {
             this.adapter = widgetChatListAdapter;
         }
 
+        /* JADX WARN: Multi-variable type inference failed */
         public static /* synthetic */ ParserData copy$default(ParserData parserData, Context context, Map map, Map map2, boolean z2, StoreMessageState.State state, Integer num, Message message, WidgetChatListAdapter widgetChatListAdapter, int i, Object obj) {
             return parserData.copy((i & 1) != 0 ? parserData.context : context, (i & 2) != 0 ? parserData.roleMentions : map, (i & 4) != 0 ? parserData.nickOrUsernames : map2, (i & 8) != 0 ? parserData.animateEmojis : z2, (i & 16) != 0 ? parserData.messageState : state, (i & 32) != 0 ? parserData.maxNodes : num, (i & 64) != 0 ? parserData.message : message, (i & 128) != 0 ? parserData.adapter : widgetChatListAdapter);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final Context getContext() {
             return this.context;
         }
@@ -74,27 +75,27 @@ public final class EmbeddedMessageParser {
             return this.nickOrUsernames;
         }
 
-        /* renamed from: component4, reason: from getter */
+        /* JADX INFO: renamed from: component4, reason: from getter */
         public final boolean getAnimateEmojis() {
             return this.animateEmojis;
         }
 
-        /* renamed from: component5, reason: from getter */
+        /* JADX INFO: renamed from: component5, reason: from getter */
         public final StoreMessageState.State getMessageState() {
             return this.messageState;
         }
 
-        /* renamed from: component6, reason: from getter */
+        /* JADX INFO: renamed from: component6, reason: from getter */
         public final Integer getMaxNodes() {
             return this.maxNodes;
         }
 
-        /* renamed from: component7, reason: from getter */
+        /* JADX INFO: renamed from: component7, reason: from getter */
         public final Message getMessage() {
             return this.message;
         }
 
-        /* renamed from: component8, reason: from getter */
+        /* JADX INFO: renamed from: component8, reason: from getter */
         public final WidgetChatListAdapter getAdapter() {
             return this.adapter;
         }
@@ -151,6 +152,9 @@ public final class EmbeddedMessageParser {
         }
 
         /* JADX WARN: Multi-variable type inference failed */
+        /* JADX WARN: Type inference failed for: r2v21 */
+        /* JADX WARN: Type inference failed for: r2v24 */
+        /* JADX WARN: Type inference failed for: r2v7, types: [int] */
         public int hashCode() {
             Context context = this.context;
             int iHashCode = (context != null ? context.hashCode() : 0) * 31;
@@ -159,13 +163,13 @@ public final class EmbeddedMessageParser {
             Map<Long, String> map2 = this.nickOrUsernames;
             int iHashCode3 = (iHashCode2 + (map2 != null ? map2.hashCode() : 0)) * 31;
             boolean z2 = this.animateEmojis;
-            int i = z2;
-            if (z2 != 0) {
-                i = 1;
+            ?? r2 = z2;
+            if (z2) {
+                r2 = 1;
             }
-            int i2 = (iHashCode3 + i) * 31;
+            int i = (iHashCode3 + r2) * 31;
             StoreMessageState.State state = this.messageState;
-            int iHashCode4 = (i2 + (state != null ? state.hashCode() : 0)) * 31;
+            int iHashCode4 = (i + (state != null ? state.hashCode() : 0)) * 31;
             Integer num = this.maxNodes;
             int iHashCode5 = (iHashCode4 + (num != null ? num.hashCode() : 0)) * 31;
             Message message = this.message;
@@ -196,8 +200,8 @@ public final class EmbeddedMessageParser {
         }
     }
 
-    /* compiled from: EmbeddedMessageParser.kt */
-    /* renamed from: com.discord.widgets.chat.list.utils.EmbeddedMessageParser$getMessageRenderContext$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.list.utils.EmbeddedMessageParser$getMessageRenderContext$1 */
+    /* JADX INFO: compiled from: EmbeddedMessageParser.kt */
     public static final class C81731 extends Lambda implements Function3<Context, String, String, Unit> {
         public static final C81731 INSTANCE = new C81731();
 
@@ -211,7 +215,7 @@ public final class EmbeddedMessageParser {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Context context, String str, String str2) {
             Intrinsics3.checkNotNullParameter(context, "clickContext");
             Intrinsics3.checkNotNullParameter(str, "url");
@@ -219,8 +223,8 @@ public final class EmbeddedMessageParser {
         }
     }
 
-    /* compiled from: EmbeddedMessageParser.kt */
-    /* renamed from: com.discord.widgets.chat.list.utils.EmbeddedMessageParser$getMessageRenderContext$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.list.utils.EmbeddedMessageParser$getMessageRenderContext$2 */
+    /* JADX INFO: compiled from: EmbeddedMessageParser.kt */
     public static final class C81742 extends Lambda implements Function1<String, Unit> {
         public final /* synthetic */ ParserData $parserData;
 
@@ -236,15 +240,15 @@ public final class EmbeddedMessageParser {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(String str) {
             Intrinsics3.checkNotNullParameter(str, "url");
             this.$parserData.getAdapter().getEventHandler().onUrlLongClicked(str);
         }
     }
 
-    /* compiled from: EmbeddedMessageParser.kt */
-    /* renamed from: com.discord.widgets.chat.list.utils.EmbeddedMessageParser$getMessageRenderContext$3 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.list.utils.EmbeddedMessageParser$getMessageRenderContext$3 */
+    /* JADX INFO: compiled from: EmbeddedMessageParser.kt */
     public static final class C81753 extends Lambda implements Function1<Long, Unit> {
         public final /* synthetic */ ParserData $parserData;
 
@@ -266,8 +270,8 @@ public final class EmbeddedMessageParser {
         }
     }
 
-    /* compiled from: EmbeddedMessageParser.kt */
-    /* renamed from: com.discord.widgets.chat.list.utils.EmbeddedMessageParser$getMessageRenderContext$4 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.list.utils.EmbeddedMessageParser$getMessageRenderContext$4 */
+    /* JADX INFO: compiled from: EmbeddedMessageParser.kt */
     public static final class C81764 extends Lambda implements Function1<Long, Unit> {
         public final /* synthetic */ ParserData $parserData;
 

@@ -6,15 +6,15 @@ import java.util.Objects;
 import java.util.TreeSet;
 import p007b.p225i.p226a.p288f.p313h.p325l.C3644ea;
 
-/* compiled from: com.google.android.gms:play-services-measurement-impl@@18.0.0 */
-/* renamed from: b.i.a.f.i.b.b6 */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.i.b.b6 */
+/* JADX INFO: compiled from: com.google.android.gms:play-services-measurement-impl@@18.0.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public final /* synthetic */ class RunnableC3987b6 implements Runnable {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final C3999c6 f10567j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final Bundle f10568k;
 
     public RunnableC3987b6(C3999c6 c3999c6, Bundle bundle) {
@@ -23,7 +23,7 @@ public final /* synthetic */ class RunnableC3987b6 implements Runnable {
     }
 
     @Override // java.lang.Runnable
-    public final void run() throws IllegalStateException {
+    public final void run() {
         boolean z2;
         C3999c6 c3999c6 = this.f10567j;
         Bundle bundle = this.f10568k;

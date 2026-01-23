@@ -9,24 +9,24 @@ import p658rx.Producer;
 import p658rx.Subscriber;
 import p658rx.Subscription;
 
-/* compiled from: OperatorOnBackpressureLatest.java */
-/* renamed from: j0.l.a.b1, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: j0.l.a.b1, reason: use source file name */
+/* JADX INFO: compiled from: OperatorOnBackpressureLatest.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class OperatorOnBackpressureLatest<T> implements Observable.InterfaceC13006b<T, T> {
 
-    /* compiled from: OperatorOnBackpressureLatest.java */
-    /* renamed from: j0.l.a.b1$a */
+    /* JADX INFO: renamed from: j0.l.a.b1$a */
+    /* JADX INFO: compiled from: OperatorOnBackpressureLatest.java */
     public static final class a {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public static final OperatorOnBackpressureLatest<Object> f26740a = new OperatorOnBackpressureLatest<>();
     }
 
-    /* compiled from: OperatorOnBackpressureLatest.java */
-    /* renamed from: j0.l.a.b1$b */
+    /* JADX INFO: renamed from: j0.l.a.b1$b */
+    /* JADX INFO: compiled from: OperatorOnBackpressureLatest.java */
     public static final class b<T> extends AtomicLong implements Producer, Subscription, Observer2<T> {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public static final Object f26741j = new Object();
         private static final long serialVersionUID = -1364393685005146274L;
         public final Subscriber<? super T> child;
@@ -42,7 +42,7 @@ public final class OperatorOnBackpressureLatest<T> implements Observable.Interfa
             lazySet(-4611686018427387904L);
         }
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public void m10743a() throws Throwable {
             boolean z2;
             Object obj;
@@ -123,7 +123,7 @@ public final class OperatorOnBackpressureLatest<T> implements Observable.Interfa
         }
 
         @Override // p658rx.Producer
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public void mo10704j(long j) throws Throwable {
             long j2;
             long j3;
@@ -176,11 +176,11 @@ public final class OperatorOnBackpressureLatest<T> implements Observable.Interfa
         }
     }
 
-    /* compiled from: OperatorOnBackpressureLatest.java */
-    /* renamed from: j0.l.a.b1$c */
+    /* JADX INFO: renamed from: j0.l.a.b1$c */
+    /* JADX INFO: compiled from: OperatorOnBackpressureLatest.java */
     public static final class c<T> extends Subscriber<T> {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public final b<T> f26742j;
 
         public c(b<T> bVar) {

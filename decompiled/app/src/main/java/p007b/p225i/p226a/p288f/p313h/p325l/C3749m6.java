@@ -5,18 +5,18 @@ import java.util.Arrays;
 import java.util.RandomAccess;
 import p007b.p100d.p104b.p105a.outline;
 
-/* compiled from: com.google.android.gms:play-services-measurement-base@@18.0.0 */
-/* renamed from: b.i.a.f.h.l.m6 */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.h.l.m6 */
+/* JADX INFO: compiled from: com.google.android.gms:play-services-measurement-base@@18.0.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public final class C3749m6<E> extends AbstractC3772o3<E> implements RandomAccess {
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public static final C3749m6<Object> f10094k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public E[] f10095l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public int f10096m;
 
     static {
@@ -46,20 +46,20 @@ public final class C3749m6<E> extends AbstractC3772o3<E> implements RandomAccess
         return true;
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final void m5072d(int i) {
         if (i < 0 || i >= this.f10096m) {
             throw new IndexOutOfBoundsException(m5073e(i));
         }
     }
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final String m5073e(int i) {
         return outline.m853h(35, "Index:", i, ", Size:", this.f10096m);
     }
 
     @Override // p007b.p225i.p226a.p288f.p313h.p325l.InterfaceC3597b5
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final /* synthetic */ InterfaceC3597b5 mo4569f(int i) {
         if (i >= this.f10096m) {
             return new C3749m6(Arrays.copyOf(this.f10095l, i), this.f10096m);

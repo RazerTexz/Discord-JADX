@@ -6,15 +6,15 @@ import android.widget.RelativeLayout;
 import java.util.Objects;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: Chip.kt */
-/* renamed from: b.a.f.b, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.a.f.b, reason: use source file name */
+/* JADX INFO: compiled from: Chip.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class Chip3 implements Runnable {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final /* synthetic */ RelativeLayout f615j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final /* synthetic */ ViewOnClickListenerC0895a f616k;
 
     public Chip3(RelativeLayout relativeLayout, ViewOnClickListenerC0895a viewOnClickListenerC0895a) {

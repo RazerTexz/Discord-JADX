@@ -8,9 +8,9 @@ import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetGlobalSearchGuildsModel.kt */
-/* renamed from: com.discord.widgets.user.search.WidgetGlobalSearchGuildsModel$Companion$asDirectMessageItems$2, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: com.discord.widgets.user.search.WidgetGlobalSearchGuildsModel$Companion$asDirectMessageItems$2, reason: use source file name */
+/* JADX INFO: compiled from: WidgetGlobalSearchGuildsModel.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class WidgetGlobalSearchGuildsModel3 extends Lambda implements Function1<Channel, WidgetGlobalSearchGuildsModel.Item> {
     public final /* synthetic */ Map $mentionCounts;
 
@@ -25,7 +25,7 @@ public final class WidgetGlobalSearchGuildsModel3 extends Lambda implements Func
         return invoke2(channel);
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final WidgetGlobalSearchGuildsModel.Item invoke2(Channel channel) {
         Intrinsics3.checkNotNullParameter(channel, "it");
         WidgetGlobalSearchGuildsModel.Item.Companion companion = WidgetGlobalSearchGuildsModel.Item.INSTANCE;

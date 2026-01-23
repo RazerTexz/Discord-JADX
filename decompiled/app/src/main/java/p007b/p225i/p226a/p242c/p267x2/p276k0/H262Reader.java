@@ -15,89 +15,89 @@ import p007b.p225i.p226a.p242c.p267x2.ExtractorOutput;
 import p007b.p225i.p226a.p242c.p267x2.TrackOutput2;
 import p007b.p225i.p226a.p242c.p267x2.p276k0.TsPayloadReader;
 
-/* compiled from: H262Reader.java */
-/* renamed from: b.i.a.c.x2.k0.p, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.x2.k0.p, reason: use source file name */
+/* JADX INFO: compiled from: H262Reader.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class H262Reader implements ElementaryStreamReader {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final double[] f8740a = {23.976023976023978d, 24.0d, 25.0d, 29.97002997002997d, 30.0d, 50.0d, 59.94005994005994d, 60.0d};
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public String f8741b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public TrackOutput2 f8742c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     @Nullable
     public final UserDataReader f8743d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     @Nullable
     public final ParsableByteArray f8744e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     @Nullable
     public final NalUnitTargetBuffer f8745f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public final boolean[] f8746g = new boolean[4];
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public final a f8747h = new a(128);
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public long f8748i;
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public boolean f8749j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public boolean f8750k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public long f8751l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public long f8752m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public long f8753n;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public long f8754o;
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public boolean f8755p;
 
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     public boolean f8756q;
 
-    /* compiled from: H262Reader.java */
-    /* renamed from: b.i.a.c.x2.k0.p$a */
+    /* JADX INFO: renamed from: b.i.a.c.x2.k0.p$a */
+    /* JADX INFO: compiled from: H262Reader.java */
     public static final class a {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public static final byte[] f8757a = {0, 0, 1};
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public boolean f8758b;
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public int f8759c;
 
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         public int f8760d;
 
-        /* renamed from: e */
+        /* JADX INFO: renamed from: e */
         public byte[] f8761e;
 
         public a(int i) {
             this.f8761e = new byte[i];
         }
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public void m3779a(byte[] bArr, int i, int i2) {
             if (this.f8758b) {
                 int i3 = i2 - i;
@@ -136,7 +136,7 @@ public final class H262Reader implements ElementaryStreamReader {
     /* JADX WARN: Removed duplicated region for block: B:93:0x01f4  */
     /* JADX WARN: Removed duplicated region for block: B:99:0x020b  */
     @Override // p007b.p225i.p226a.p242c.p267x2.p276k0.ElementaryStreamReader
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
@@ -159,7 +159,7 @@ public final class H262Reader implements ElementaryStreamReader {
         int i8 = parsableByteArray.f6794b;
         int i9 = parsableByteArray.f6795c;
         byte[] bArr2 = parsableByteArray.f6793a;
-        this.f8748i += parsableByteArray.m3081a();
+        this.f8748i += (long) parsableByteArray.m3081a();
         this.f8742c.mo2524c(parsableByteArray, parsableByteArray.m3081a());
         while (true) {
             int iM3055b = NalUnitUtil.m3055b(bArr2, i8, i9, this.f8746g);
@@ -219,10 +219,11 @@ public final class H262Reader implements ElementaryStreamReader {
                                         double d = dArr[i7];
                                         int i20 = aVar2.f8760d + 9;
                                         int i21 = (bArrCopyOf[i20] & 96) >> 5;
-                                        if (i21 != (bArrCopyOf[i20] & 31)) {
+                                        int i22 = bArrCopyOf[i20] & 31;
+                                        if (i21 != i22) {
                                             i = i11;
                                             i2 = i10;
-                                            d *= (i21 + 1.0d) / (r9 + 1);
+                                            d *= (((double) i21) + 1.0d) / ((double) (i22 + 1));
                                         } else {
                                             i = i11;
                                             i2 = i10;
@@ -277,7 +278,7 @@ public final class H262Reader implements ElementaryStreamReader {
                     NalUnitTargetBuffer nalUnitTargetBuffer2 = this.f8745f;
                     int iM3059f = NalUnitUtil.m3059f(nalUnitTargetBuffer2.f8906d, nalUnitTargetBuffer2.f8907e);
                     ParsableByteArray parsableByteArray2 = this.f8744e;
-                    int i22 = Util2.f6708a;
+                    int i23 = Util2.f6708a;
                     parsableByteArray2.m3077C(this.f8745f.f8906d, iM3059f);
                     this.f8743d.m3769a(this.f8754o, this.f8744e);
                 }
@@ -289,17 +290,17 @@ public final class H262Reader implements ElementaryStreamReader {
                 i3 = i;
             }
             if (i3 == 0 || i3 == 179) {
-                int i23 = i9 - iM3055b;
+                int i24 = i9 - iM3055b;
                 if (this.f8756q && this.f8750k) {
                     long j4 = this.f8754o;
                     if (j4 != -9223372036854775807L) {
                         i4 = i9;
                         bArr = bArr2;
                         j = -9223372036854775807L;
-                        this.f8742c.mo2525d(j4, this.f8755p ? 1 : 0, ((int) (this.f8748i - this.f8753n)) - i23, i23, null);
+                        this.f8742c.mo2525d(j4, this.f8755p ? 1 : 0, ((int) (this.f8748i - this.f8753n)) - i24, i24, null);
                     }
                     if (this.f8749j) {
-                        this.f8753n = this.f8748i - i23;
+                        this.f8753n = this.f8748i - ((long) i24);
                         j2 = this.f8752m;
                         if (j2 == j) {
                         }
@@ -314,7 +315,7 @@ public final class H262Reader implements ElementaryStreamReader {
                     bArr = bArr2;
                     j = -9223372036854775807L;
                     if (this.f8749j || this.f8756q) {
-                        this.f8753n = this.f8748i - i23;
+                        this.f8753n = this.f8748i - ((long) i24);
                         j2 = this.f8752m;
                         if (j2 == j) {
                             long j5 = this.f8754o;
@@ -348,7 +349,7 @@ public final class H262Reader implements ElementaryStreamReader {
     }
 
     @Override // p007b.p225i.p226a.p242c.p267x2.p276k0.ElementaryStreamReader
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public void mo3759c() {
         NalUnitUtil.m3054a(this.f8746g);
         a aVar = this.f8747h;
@@ -366,12 +367,12 @@ public final class H262Reader implements ElementaryStreamReader {
     }
 
     @Override // p007b.p225i.p226a.p242c.p267x2.p276k0.ElementaryStreamReader
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public void mo3760d() {
     }
 
     @Override // p007b.p225i.p226a.p242c.p267x2.p276k0.ElementaryStreamReader
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public void mo3761e(ExtractorOutput extractorOutput, TsPayloadReader.d dVar) {
         dVar.m3765a();
         this.f8741b = dVar.m3766b();
@@ -383,7 +384,7 @@ public final class H262Reader implements ElementaryStreamReader {
     }
 
     @Override // p007b.p225i.p226a.p242c.p267x2.p276k0.ElementaryStreamReader
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public void mo3762f(long j, int i) {
         this.f8752m = j;
     }

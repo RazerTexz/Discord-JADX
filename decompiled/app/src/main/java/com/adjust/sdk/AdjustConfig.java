@@ -3,7 +3,7 @@ package com.adjust.sdk;
 import android.content.Context;
 import java.util.List;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class AdjustConfig {
     public static final String AD_REVENUE_ADDAPTR = "addapptr";
     public static final String AD_REVENUE_ADINCUBE = "adincube";

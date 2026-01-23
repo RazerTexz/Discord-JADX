@@ -3,18 +3,18 @@ package p007b.p100d.p101a.p102a;
 import com.android.billingclient.api.SkuDetails;
 import java.util.concurrent.Callable;
 
-/* compiled from: com.android.billingclient:billing@@4.0.0 */
-/* renamed from: b.d.a.a.u */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.d.a.a.u */
+/* JADX INFO: compiled from: com.android.billingclient:billing@@4.0.0 */
+/* JADX INFO: loaded from: classes.dex */
 public final /* synthetic */ class CallableC1636u implements Callable {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final /* synthetic */ C1614a f2994j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final /* synthetic */ SkuDetails f2995k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final /* synthetic */ String f2996l;
 
     public /* synthetic */ CallableC1636u(C1614a c1614a, SkuDetails skuDetails, String str) {

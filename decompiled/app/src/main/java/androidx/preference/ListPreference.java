@@ -12,7 +12,7 @@ import androidx.annotation.NonNull;
 import androidx.core.content.res.TypedArrayUtils;
 import androidx.preference.Preference;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class ListPreference extends DialogPreference {
     private static final String TAG = "ListPreference";
     private CharSequence[] mEntries;
@@ -197,7 +197,7 @@ public class ListPreference extends DialogPreference {
         public static final Parcelable.Creator<SavedState> CREATOR = new C05041();
         public String mValue;
 
-        /* renamed from: androidx.preference.ListPreference$SavedState$1 */
+        /* JADX INFO: renamed from: androidx.preference.ListPreference$SavedState$1 */
         public static class C05041 implements Parcelable.Creator<SavedState> {
             @Override // android.os.Parcelable.Creator
             public /* bridge */ /* synthetic */ SavedState createFromParcel(Parcel parcel) {

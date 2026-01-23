@@ -10,9 +10,9 @@ import kotlin.jvm.functions.Function0;
 import p507d0.p580t.Collections2;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetDirectoriesViewModel.kt */
-/* renamed from: com.discord.widgets.directories.WidgetDirectoriesViewModel$ViewState$directoryEntryData$2, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.directories.WidgetDirectoriesViewModel$ViewState$directoryEntryData$2, reason: use source file name */
+/* JADX INFO: compiled from: WidgetDirectoriesViewModel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetDirectoriesViewModel4 extends Lambda implements Function0<Map<Integer, ? extends List<? extends DirectoryEntryData>>> {
     public final /* synthetic */ WidgetDirectoriesViewModel.ViewState this$0;
 
@@ -28,7 +28,7 @@ public final class WidgetDirectoriesViewModel4 extends Lambda implements Functio
     }
 
     @Override // kotlin.jvm.functions.Function0
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final Map<Integer, ? extends List<? extends DirectoryEntryData>> invoke2() {
         List<DirectoryEntryGuild> listInvoke = this.this$0.getDirectories().invoke();
         if (listInvoke == null) {

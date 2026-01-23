@@ -12,18 +12,18 @@ import com.discord.utilities.display.DisplayUtils;
 import com.google.android.material.appbar.AppBarLayout;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: AppScrollingViewBehavior.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: AppScrollingViewBehavior.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class AppScrollingViewBehavior extends AppBarLayout.ScrollingViewBehavior {
 
-    /* renamed from: a, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: a, reason: from kotlin metadata */
     public final C5456a onApplyWindowInsetsListener;
 
-    /* compiled from: AppScrollingViewBehavior.kt */
-    /* renamed from: com.discord.app.AppScrollingViewBehavior$a */
+    /* JADX INFO: renamed from: com.discord.app.AppScrollingViewBehavior$a */
+    /* JADX INFO: compiled from: AppScrollingViewBehavior.kt */
     public static final class C5456a implements OnApplyWindowInsetsListener {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public Rect f14962a;
 
         @Override // androidx.core.view.OnApplyWindowInsetsListener

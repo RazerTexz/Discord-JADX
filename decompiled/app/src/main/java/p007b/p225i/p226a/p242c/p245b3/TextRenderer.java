@@ -28,60 +28,60 @@ import p007b.p225i.p226a.p242c.p259f3.Log2;
 import p007b.p225i.p226a.p242c.p259f3.MimeTypes;
 import p007b.p225i.p226a.p242c.p259f3.Util2;
 
-/* compiled from: TextRenderer.java */
-/* renamed from: b.i.a.c.b3.m, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.b3.m, reason: use source file name */
+/* JADX INFO: compiled from: TextRenderer.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class TextRenderer extends BaseRenderer implements Handler.Callback {
 
-    /* renamed from: A */
+    /* JADX INFO: renamed from: A */
     public boolean f5803A;
 
-    /* renamed from: B */
+    /* JADX INFO: renamed from: B */
     public int f5804B;
 
-    /* renamed from: C */
+    /* JADX INFO: renamed from: C */
     @Nullable
     public Format2 f5805C;
 
-    /* renamed from: D */
+    /* JADX INFO: renamed from: D */
     @Nullable
     public SubtitleDecoder f5806D;
 
-    /* renamed from: E */
+    /* JADX INFO: renamed from: E */
     @Nullable
     public SubtitleInputBuffer f5807E;
 
-    /* renamed from: F */
+    /* JADX INFO: renamed from: F */
     @Nullable
     public SubtitleOutputBuffer f5808F;
 
-    /* renamed from: G */
+    /* JADX INFO: renamed from: G */
     @Nullable
     public SubtitleOutputBuffer f5809G;
 
-    /* renamed from: H */
+    /* JADX INFO: renamed from: H */
     public int f5810H;
 
-    /* renamed from: I */
+    /* JADX INFO: renamed from: I */
     public long f5811I;
 
-    /* renamed from: u */
+    /* JADX INFO: renamed from: u */
     @Nullable
     public final Handler f5812u;
 
-    /* renamed from: v */
+    /* JADX INFO: renamed from: v */
     public final TextOutput f5813v;
 
-    /* renamed from: w */
+    /* JADX INFO: renamed from: w */
     public final SubtitleDecoderFactory f5814w;
 
-    /* renamed from: x */
+    /* JADX INFO: renamed from: x */
     public final FormatHolder f5815x;
 
-    /* renamed from: y */
+    /* JADX INFO: renamed from: y */
     public boolean f5816y;
 
-    /* renamed from: z */
+    /* JADX INFO: renamed from: z */
     public boolean f5817z;
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -104,7 +104,7 @@ public final class TextRenderer extends BaseRenderer implements Handler.Callback
     }
 
     @Override // p007b.p225i.p226a.p242c.BaseRenderer
-    /* renamed from: B */
+    /* JADX INFO: renamed from: B */
     public void mo2621B() {
         this.f5805C = null;
         this.f5811I = -9223372036854775807L;
@@ -118,7 +118,7 @@ public final class TextRenderer extends BaseRenderer implements Handler.Callback
     }
 
     @Override // p007b.p225i.p226a.p242c.BaseRenderer
-    /* renamed from: D */
+    /* JADX INFO: renamed from: D */
     public void mo2622D(long j, boolean z2) {
         m2624J();
         this.f5816y = false;
@@ -135,7 +135,7 @@ public final class TextRenderer extends BaseRenderer implements Handler.Callback
     }
 
     @Override // p007b.p225i.p226a.p242c.BaseRenderer
-    /* renamed from: H */
+    /* JADX INFO: renamed from: H */
     public void mo2623H(Format2[] format2Arr, long j, long j2) {
         this.f5805C = format2Arr[0];
         if (this.f5806D != null) {
@@ -145,7 +145,7 @@ public final class TextRenderer extends BaseRenderer implements Handler.Callback
         }
     }
 
-    /* renamed from: J */
+    /* JADX INFO: renamed from: J */
     public final void m2624J() {
         List<Cue> listEmptyList = Collections.emptyList();
         Handler handler = this.f5812u;
@@ -156,7 +156,7 @@ public final class TextRenderer extends BaseRenderer implements Handler.Callback
         }
     }
 
-    /* renamed from: K */
+    /* JADX INFO: renamed from: K */
     public final long m2625K() {
         if (this.f5810H == -1) {
             return RecyclerView.FOREVER_NS;
@@ -175,7 +175,7 @@ public final class TextRenderer extends BaseRenderer implements Handler.Callback
         return subtitle2.mo2613g(i2) + subtitleOutputBuffer.f5802m;
     }
 
-    /* renamed from: L */
+    /* JADX INFO: renamed from: L */
     public final void m2626L(SubtitleDecoderException subtitleDecoderException) {
         String strValueOf = String.valueOf(this.f5805C);
         StringBuilder sb = new StringBuilder(strValueOf.length() + 39);
@@ -187,15 +187,13 @@ public final class TextRenderer extends BaseRenderer implements Handler.Callback
     }
 
     /* JADX WARN: Can't fix incorrect switch cases order, some code will duplicate */
-    /* JADX WARN: Failed to restore switch over string. Please report as a decompilation issue */
     /* JADX WARN: Removed duplicated region for block: B:6:0x001b  */
-    /* renamed from: M */
+    /* JADX INFO: renamed from: M */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
     public final void m2627M() {
         SubtitleDecoder dvbDecoder;
-        char c = 1;
         this.f5803A = true;
         SubtitleDecoderFactory subtitleDecoderFactory = this.f5814w;
         Format2 format2 = this.f5805C;
@@ -203,108 +201,39 @@ public final class TextRenderer extends BaseRenderer implements Handler.Callback
         Objects.requireNonNull((SubtitleDecoderFactory.a) subtitleDecoderFactory);
         String str = format2.f7155w;
         if (str != null) {
-            switch (str.hashCode()) {
-                case -1351681404:
-                    c = !str.equals("application/dvbsubs") ? (char) 65535 : (char) 0;
-                    break;
-                case -1248334819:
-                    if (!str.equals("application/pgs")) {
-                    }
-                    break;
-                case -1026075066:
-                    if (str.equals("application/x-mp4-vtt")) {
-                        c = 2;
-                        break;
-                    }
-                    break;
-                case -1004728940:
-                    if (str.equals("text/vtt")) {
-                        c = 3;
-                        break;
-                    }
-                    break;
-                case 691401887:
-                    if (str.equals("application/x-quicktime-tx3g")) {
-                        c = 4;
-                        break;
-                    }
-                    break;
-                case 822864842:
-                    if (str.equals("text/x-ssa")) {
-                        c = 5;
-                        break;
-                    }
-                    break;
-                case 930165504:
-                    if (str.equals("application/x-mp4-cea-608")) {
-                        c = 6;
-                        break;
-                    }
-                    break;
-                case 1201784583:
-                    if (str.equals("text/x-exoplayer-cues")) {
-                        c = 7;
-                        break;
-                    }
-                    break;
-                case 1566015601:
-                    if (str.equals("application/cea-608")) {
-                        c = '\b';
-                        break;
-                    }
-                    break;
-                case 1566016562:
-                    if (str.equals("application/cea-708")) {
-                        c = '\t';
-                        break;
-                    }
-                    break;
-                case 1668750253:
-                    if (str.equals("application/x-subrip")) {
-                        c = '\n';
-                        break;
-                    }
-                    break;
-                case 1693976202:
-                    if (str.equals("application/ttml+xml")) {
-                        c = 11;
-                        break;
-                    }
-                    break;
-            }
-            switch (c) {
-                case 0:
+            switch (str) {
+                case "application/dvbsubs":
                     dvbDecoder = new DvbDecoder(format2.f7157y);
                     break;
-                case 1:
+                case "application/pgs":
                     dvbDecoder = new PgsDecoder();
                     break;
-                case 2:
+                case "application/x-mp4-vtt":
                     dvbDecoder = new Mp4WebvttDecoder();
                     break;
-                case 3:
+                case "text/vtt":
                     dvbDecoder = new WebvttDecoder();
                     break;
-                case 4:
+                case "application/x-quicktime-tx3g":
                     dvbDecoder = new Tx3gDecoder(format2.f7157y);
                     break;
-                case 5:
+                case "text/x-ssa":
                     dvbDecoder = new SsaDecoder(format2.f7157y);
                     break;
-                case 6:
-                case '\b':
+                case "application/x-mp4-cea-608":
+                case "application/cea-608":
                     dvbDecoder = new Cea608Decoder(str, format2.f7141O, 16000L);
                     break;
-                case 7:
+                case "text/x-exoplayer-cues":
                     dvbDecoder = new ExoplayerCuesDecoder();
                     break;
-                case '\t':
+                case "application/cea-708":
                     dvbDecoder = new Cea708Decoder(format2.f7141O, format2.f7157y);
                     break;
-                case '\n':
+                case "application/x-subrip":
                     dvbDecoder = new SubripDecoder();
                     break;
-                case 11:
+                case "application/ttml+xml":
                     dvbDecoder = new TtmlDecoder();
                     break;
             }
@@ -315,7 +244,7 @@ public final class TextRenderer extends BaseRenderer implements Handler.Callback
         throw new IllegalArgumentException(strValueOf.length() != 0 ? "Attempted to create decoder for unsupported MIME type: ".concat(strValueOf) : new String("Attempted to create decoder for unsupported MIME type: "));
     }
 
-    /* renamed from: N */
+    /* JADX INFO: renamed from: N */
     public final void m2628N() {
         this.f5807E = null;
         this.f5810H = -1;
@@ -331,7 +260,7 @@ public final class TextRenderer extends BaseRenderer implements Handler.Callback
         }
     }
 
-    /* renamed from: O */
+    /* JADX INFO: renamed from: O */
     public final void m2629O() {
         m2628N();
         SubtitleDecoder subtitleDecoder = this.f5806D;
@@ -343,7 +272,7 @@ public final class TextRenderer extends BaseRenderer implements Handler.Callback
     }
 
     @Override // p007b.p225i.p226a.p242c.RendererCapabilities
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public int mo2630a(Format2 format2) {
         Objects.requireNonNull((SubtitleDecoderFactory.a) this.f5814w);
         String str = format2.f7155w;
@@ -354,13 +283,13 @@ public final class TextRenderer extends BaseRenderer implements Handler.Callback
     }
 
     @Override // p007b.p225i.p226a.p242c.Renderer2
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public boolean mo2631b() {
         return this.f5817z;
     }
 
     @Override // p007b.p225i.p226a.p242c.Renderer2
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public boolean mo2632d() {
         return true;
     }
@@ -380,7 +309,7 @@ public final class TextRenderer extends BaseRenderer implements Handler.Callback
     }
 
     @Override // p007b.p225i.p226a.p242c.Renderer2
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     public void mo2633q(long j, long j2) throws DecoderException {
         boolean z2;
         if (this.f7898s) {

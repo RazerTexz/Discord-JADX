@@ -5,15 +5,15 @@ import java.util.HashMap;
 import java.util.Map;
 import p007b.p225i.p414e.p430r.PDF417Common;
 
-/* compiled from: BarcodeValue.java */
-/* renamed from: b.i.e.r.d.b, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.e.r.d.b, reason: use source file name */
+/* JADX INFO: compiled from: BarcodeValue.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class BarcodeValue {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final Map<Integer, Integer> f13469a = new HashMap();
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public int[] m7048a() {
         ArrayList arrayList = new ArrayList();
         int iIntValue = -1;
@@ -29,7 +29,7 @@ public final class BarcodeValue {
         return PDF417Common.m7045b(arrayList);
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public void m7049b(int i) {
         Integer num = this.f13469a.get(Integer.valueOf(i));
         if (num == null) {

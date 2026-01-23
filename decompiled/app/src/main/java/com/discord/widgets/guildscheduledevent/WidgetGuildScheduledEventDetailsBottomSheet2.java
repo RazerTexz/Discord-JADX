@@ -7,9 +7,9 @@ import p001a0.p002a.p003a.C0002b;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: WidgetGuildScheduledEventDetailsBottomSheet.kt */
-/* renamed from: com.discord.widgets.guildscheduledevent.GuildScheduledEventDetailsArgs, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.guildscheduledevent.GuildScheduledEventDetailsArgs, reason: use source file name */
+/* JADX INFO: compiled from: WidgetGuildScheduledEventDetailsBottomSheet.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final /* data */ class WidgetGuildScheduledEventDetailsBottomSheet2 implements Parcelable {
     public static final Parcelable.Creator<WidgetGuildScheduledEventDetailsBottomSheet2> CREATOR = new Creator();
     private final Long channelId;
@@ -17,7 +17,7 @@ public final /* data */ class WidgetGuildScheduledEventDetailsBottomSheet2 imple
     private final Long guildId;
     private final WidgetGuildScheduledEventDetailsBottomSheet3 source;
 
-    /* renamed from: com.discord.widgets.guildscheduledevent.GuildScheduledEventDetailsArgs$Creator */
+    /* JADX INFO: renamed from: com.discord.widgets.guildscheduledevent.GuildScheduledEventDetailsArgs$Creator */
     public static class Creator implements Parcelable.Creator<WidgetGuildScheduledEventDetailsBottomSheet2> {
         /* JADX WARN: Can't rename method to resolve collision */
         @Override // android.os.Parcelable.Creator
@@ -70,22 +70,22 @@ public final /* data */ class WidgetGuildScheduledEventDetailsBottomSheet2 imple
         return widgetGuildScheduledEventDetailsBottomSheet2.copy(j2, l3, l4, widgetGuildScheduledEventDetailsBottomSheet3);
     }
 
-    /* renamed from: component1, reason: from getter */
+    /* JADX INFO: renamed from: component1, reason: from getter */
     public final long getEventId() {
         return this.eventId;
     }
 
-    /* renamed from: component2, reason: from getter */
+    /* JADX INFO: renamed from: component2, reason: from getter */
     public final Long getGuildId() {
         return this.guildId;
     }
 
-    /* renamed from: component3, reason: from getter */
+    /* JADX INFO: renamed from: component3, reason: from getter */
     public final Long getChannelId() {
         return this.channelId;
     }
 
-    /* renamed from: component4, reason: from getter */
+    /* JADX INFO: renamed from: component4, reason: from getter */
     public final WidgetGuildScheduledEventDetailsBottomSheet3 getSource() {
         return this.source;
     }

@@ -2,7 +2,7 @@ package com.google.android.material.shape;
 
 import androidx.annotation.NonNull;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public class EdgeTreatment {
     public boolean forceIntersection() {
         return false;

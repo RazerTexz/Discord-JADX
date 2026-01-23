@@ -1,6 +1,6 @@
 package com.adjust.sdk;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public interface Constants {
     public static final String ACTIVITY_STATE_FILENAME = "AdjustIoActivityState";
     public static final String ATTRIBUTION_FILENAME = "AdjustAttribution";

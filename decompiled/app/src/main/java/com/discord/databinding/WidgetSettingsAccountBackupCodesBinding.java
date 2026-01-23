@@ -9,26 +9,26 @@ import androidx.viewbinding.ViewBinding;
 import com.discord.utilities.dimmer.DimmerView;
 import com.google.android.material.button.MaterialButton;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public final class WidgetSettingsAccountBackupCodesBinding implements ViewBinding {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     @NonNull
     public final CoordinatorLayout f17780a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     @NonNull
     public final DimmerView f17781b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     @NonNull
     public final MaterialButton f17782c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     @NonNull
     public final TextView f17783d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     @NonNull
     public final RecyclerView f17784e;
 

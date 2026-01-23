@@ -16,12 +16,12 @@ import p507d0.p580t.Collections2;
 import p507d0.p580t._Collections;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ReflectJavaTypeParameter.kt */
-/* renamed from: d0.e0.p.d.m0.c.k1.b.x, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.c.k1.b.x, reason: use source file name */
+/* JADX INFO: compiled from: ReflectJavaTypeParameter.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class ReflectJavaTypeParameter extends ReflectJavaElement implements ReflectJavaAnnotationOwner, InterfaceC11592y {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final TypeVariable<?> f23066a;
 
     public ReflectJavaTypeParameter(TypeVariable<?> typeVariable) {

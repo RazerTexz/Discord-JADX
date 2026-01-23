@@ -13,24 +13,24 @@ import androidx.core.view.ViewCompat;
 import com.google.android.material.expandable.ExpandableWidget;
 import java.util.List;
 
+/* JADX INFO: loaded from: classes3.dex */
 @Deprecated
-/* loaded from: classes3.dex */
 public abstract class ExpandableBehavior extends CoordinatorLayout.Behavior<View> {
     private static final int STATE_COLLAPSED = 2;
     private static final int STATE_EXPANDED = 1;
     private static final int STATE_UNINITIALIZED = 0;
     private int currentState;
 
-    /* renamed from: com.google.android.material.transformation.ExpandableBehavior$a */
+    /* JADX INFO: renamed from: com.google.android.material.transformation.ExpandableBehavior$a */
     public class ViewTreeObserverOnPreDrawListenerC11033a implements ViewTreeObserver.OnPreDrawListener {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public final /* synthetic */ View f21238j;
 
-        /* renamed from: k */
+        /* JADX INFO: renamed from: k */
         public final /* synthetic */ int f21239k;
 
-        /* renamed from: l */
+        /* JADX INFO: renamed from: l */
         public final /* synthetic */ ExpandableWidget f21240l;
 
         public ViewTreeObserverOnPreDrawListenerC11033a(View view, int i, ExpandableWidget expandableWidget) {

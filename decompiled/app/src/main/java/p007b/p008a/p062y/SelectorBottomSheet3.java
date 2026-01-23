@@ -2,12 +2,12 @@ package p007b.p008a.p062y;
 
 import android.view.View;
 
-/* compiled from: SelectorBottomSheet.kt */
-/* renamed from: b.a.y.d0, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: b.a.y.d0, reason: use source file name */
+/* JADX INFO: compiled from: SelectorBottomSheet.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class SelectorBottomSheet3 implements View.OnClickListener {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final /* synthetic */ SelectorBottomSheet4 f2016j;
 
     public SelectorBottomSheet3(SelectorBottomSheet4 selectorBottomSheet4) {

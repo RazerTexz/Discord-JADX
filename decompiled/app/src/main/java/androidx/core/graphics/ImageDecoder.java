@@ -9,13 +9,13 @@ import kotlin.Unit;
 import kotlin.jvm.functions.Function3;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ImageDecoder.kt */
-/* renamed from: androidx.core.graphics.ImageDecoderKt, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: androidx.core.graphics.ImageDecoderKt, reason: use source file name */
+/* JADX INFO: compiled from: ImageDecoder.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class ImageDecoder {
 
-    /* compiled from: ImageDecoder.kt */
-    /* renamed from: androidx.core.graphics.ImageDecoderKt$decodeBitmap$1 */
+    /* JADX INFO: renamed from: androidx.core.graphics.ImageDecoderKt$decodeBitmap$1 */
+    /* JADX INFO: compiled from: ImageDecoder.kt */
     public static final class C02241 implements ImageDecoder.OnHeaderDecodedListener {
         public final /* synthetic */ Function3<android.graphics.ImageDecoder, ImageDecoder.ImageInfo, ImageDecoder.Source, Unit> $action;
 
@@ -33,8 +33,8 @@ public final class ImageDecoder {
         }
     }
 
-    /* compiled from: ImageDecoder.kt */
-    /* renamed from: androidx.core.graphics.ImageDecoderKt$decodeDrawable$1 */
+    /* JADX INFO: renamed from: androidx.core.graphics.ImageDecoderKt$decodeDrawable$1 */
+    /* JADX INFO: compiled from: ImageDecoder.kt */
     public static final class C02251 implements ImageDecoder.OnHeaderDecodedListener {
         public final /* synthetic */ Function3<android.graphics.ImageDecoder, ImageDecoder.ImageInfo, ImageDecoder.Source, Unit> $action;
 

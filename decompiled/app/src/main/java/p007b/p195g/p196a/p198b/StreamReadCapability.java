@@ -2,9 +2,9 @@ package p007b.p195g.p196a.p198b;
 
 import p007b.p195g.p196a.p198b.p204t.JacksonFeature;
 
-/* compiled from: StreamReadCapability.java */
-/* renamed from: b.g.a.b.l, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.g.a.b.l, reason: use source file name */
+/* JADX INFO: compiled from: StreamReadCapability.java */
+/* JADX INFO: loaded from: classes3.dex */
 public enum StreamReadCapability implements JacksonFeature {
     DUPLICATE_PROPERTIES(false),
     SCALARS_AS_OBJECTS(false),
@@ -18,13 +18,13 @@ public enum StreamReadCapability implements JacksonFeature {
     }
 
     @Override // p007b.p195g.p196a.p198b.p204t.JacksonFeature
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public boolean mo1629f() {
         return this._defaultState;
     }
 
     @Override // p007b.p195g.p196a.p198b.p204t.JacksonFeature
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public int mo1630g() {
         return this._mask;
     }

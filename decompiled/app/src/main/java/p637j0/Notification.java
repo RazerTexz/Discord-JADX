@@ -1,24 +1,24 @@
 package p637j0;
 
-/* compiled from: Notification.java */
-/* renamed from: j0.f, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: j0.f, reason: use source file name */
+/* JADX INFO: compiled from: Notification.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class Notification<T> {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final Notification<Void> f26688a = new Notification<>(a.OnCompleted, null, null);
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final a f26689b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final Throwable f26690c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final T f26691d;
 
-    /* compiled from: Notification.java */
-    /* renamed from: j0.f$a */
+    /* JADX INFO: renamed from: j0.f$a */
+    /* JADX INFO: compiled from: Notification.java */
     public enum a {
         OnNext,
         OnError,
@@ -31,12 +31,12 @@ public final class Notification<T> {
         this.f26689b = aVar;
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public boolean m10733a() {
         return (this.f26689b == a.OnError) && this.f26690c != null;
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public boolean m10734b() {
         return (this.f26689b == a.OnNext) && this.f26691d != null;
     }

@@ -39,18 +39,18 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 import p658rx.Observable;
 
-/* compiled from: WidgetDirectoriesSearchViewModel.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetDirectoriesSearchViewModel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetDirectoriesSearchViewModel extends AppViewModel<ViewState> {
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private final long channelId;
     private final StoreDirectories directoriesStore;
     private final RestAPI restAPI;
 
-    /* compiled from: WidgetDirectoriesSearchViewModel.kt */
-    /* renamed from: com.discord.widgets.directories.WidgetDirectoriesSearchViewModel$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.directories.WidgetDirectoriesSearchViewModel$1 */
+    /* JADX INFO: compiled from: WidgetDirectoriesSearchViewModel.kt */
     public static final /* synthetic */ class C82771 extends FunctionReferenceImpl implements Function1<ViewState, Unit> {
         public C82771(WidgetDirectoriesSearchViewModel widgetDirectoriesSearchViewModel) {
             super(1, widgetDirectoriesSearchViewModel, WidgetDirectoriesSearchViewModel.class, "handleNewState", "handleNewState(Lcom/discord/widgets/directories/WidgetDirectoriesSearchViewModel$ViewState;)V", 0);
@@ -62,14 +62,14 @@ public final class WidgetDirectoriesSearchViewModel extends AppViewModel<ViewSta
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(ViewState viewState) {
             Intrinsics3.checkNotNullParameter(viewState, "p1");
             WidgetDirectoriesSearchViewModel.access$handleNewState((WidgetDirectoriesSearchViewModel) this.receiver, viewState);
         }
     }
 
-    /* compiled from: WidgetDirectoriesSearchViewModel.kt */
+    /* JADX INFO: compiled from: WidgetDirectoriesSearchViewModel.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -87,8 +87,8 @@ public final class WidgetDirectoriesSearchViewModel extends AppViewModel<ViewSta
         }
     }
 
-    /* compiled from: WidgetDirectoriesSearchViewModel.kt */
-    /* renamed from: com.discord.widgets.directories.WidgetDirectoriesSearchViewModel$joinGuild$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.directories.WidgetDirectoriesSearchViewModel$joinGuild$1 */
+    /* JADX INFO: compiled from: WidgetDirectoriesSearchViewModel.kt */
     public static final class C82781 extends Lambda implements Function1<Guild, Unit> {
         public static final C82781 INSTANCE = new C82781();
 
@@ -102,14 +102,14 @@ public final class WidgetDirectoriesSearchViewModel extends AppViewModel<ViewSta
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Guild guild) {
             Intrinsics3.checkNotNullParameter(guild, "it");
         }
     }
 
-    /* compiled from: WidgetDirectoriesSearchViewModel.kt */
-    /* renamed from: com.discord.widgets.directories.WidgetDirectoriesSearchViewModel$searchForDirectories$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.directories.WidgetDirectoriesSearchViewModel$searchForDirectories$1 */
+    /* JADX INFO: compiled from: WidgetDirectoriesSearchViewModel.kt */
     public static final class C82791 extends Lambda implements Function1<RestCallState<? extends List<? extends DirectoryEntryGuild>>, Unit> {
         public final /* synthetic */ CharSequence $query;
         public final /* synthetic */ ViewState $viewState;
@@ -127,7 +127,7 @@ public final class WidgetDirectoriesSearchViewModel extends AppViewModel<ViewSta
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(RestCallState<? extends List<DirectoryEntryGuild>> restCallState) {
             Intrinsics3.checkNotNullParameter(restCallState, "entriesState");
             WidgetDirectoriesSearchViewModel widgetDirectoriesSearchViewModel = WidgetDirectoriesSearchViewModel.this;
@@ -220,14 +220,14 @@ public final class WidgetDirectoriesSearchViewModel extends AppViewModel<ViewSta
         return true;
     }
 
-    /* compiled from: WidgetDirectoriesSearchViewModel.kt */
+    /* JADX INFO: compiled from: WidgetDirectoriesSearchViewModel.kt */
     public static final /* data */ class ViewState {
         private final Set<Long> adminGuildIds;
         private final String currentSearchTerm;
         private final List<DirectoryEntryGuild> directories;
         private final RestCallState<List<DirectoryEntryGuild>> directoriesState;
 
-        /* renamed from: directoryEntryData$delegate, reason: from kotlin metadata */
+        /* JADX INFO: renamed from: directoryEntryData$delegate, reason: from kotlin metadata */
         private final Lazy directoryEntryData;
         private final com.discord.models.guild.Guild guild;
         private final boolean hasAddGuildPermissions;
@@ -254,6 +254,7 @@ public final class WidgetDirectoriesSearchViewModel extends AppViewModel<ViewSta
             this.directoryEntryData = LazyJVM.lazy(new WidgetDirectoriesSearchViewModel3(this));
         }
 
+        /* JADX WARN: Multi-variable type inference failed */
         public static /* synthetic */ ViewState copy$default(ViewState viewState, com.discord.models.guild.Guild guild, String str, List list, Set set, Set set2, boolean z2, RestCallState restCallState, int i, Object obj) {
             if ((i & 1) != 0) {
                 guild = viewState.guild;
@@ -284,12 +285,12 @@ public final class WidgetDirectoriesSearchViewModel extends AppViewModel<ViewSta
             return viewState.copy(guild, str2, list2, set3, set4, z3, restCallState);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final com.discord.models.guild.Guild getGuild() {
             return this.guild;
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final String getCurrentSearchTerm() {
             return this.currentSearchTerm;
         }
@@ -306,7 +307,7 @@ public final class WidgetDirectoriesSearchViewModel extends AppViewModel<ViewSta
             return this.adminGuildIds;
         }
 
-        /* renamed from: component6, reason: from getter */
+        /* JADX INFO: renamed from: component6, reason: from getter */
         public final boolean getHasAddGuildPermissions() {
             return this.hasAddGuildPermissions;
         }
@@ -368,6 +369,9 @@ public final class WidgetDirectoriesSearchViewModel extends AppViewModel<ViewSta
         }
 
         /* JADX WARN: Multi-variable type inference failed */
+        /* JADX WARN: Type inference failed for: r2v13, types: [int] */
+        /* JADX WARN: Type inference failed for: r2v15 */
+        /* JADX WARN: Type inference failed for: r2v20 */
         public int hashCode() {
             com.discord.models.guild.Guild guild = this.guild;
             int iHashCode = (guild != null ? guild.hashCode() : 0) * 31;
@@ -380,13 +384,13 @@ public final class WidgetDirectoriesSearchViewModel extends AppViewModel<ViewSta
             Set<Long> set2 = this.adminGuildIds;
             int iHashCode5 = (iHashCode4 + (set2 != null ? set2.hashCode() : 0)) * 31;
             boolean z2 = this.hasAddGuildPermissions;
-            int i = z2;
-            if (z2 != 0) {
-                i = 1;
+            ?? r2 = z2;
+            if (z2) {
+                r2 = 1;
             }
-            int i2 = (iHashCode5 + i) * 31;
+            int i = (iHashCode5 + r2) * 31;
             RestCallState<List<DirectoryEntryGuild>> restCallState = this.directoriesState;
-            return i2 + (restCallState != null ? restCallState.hashCode() : 0);
+            return i + (restCallState != null ? restCallState.hashCode() : 0);
         }
 
         public String toString() {

@@ -18,39 +18,39 @@ import p007b.p195g.p196a.p205c.p219i0.ClassUtil;
 import p007b.p195g.p196a.p205c.p221z.MapperConfig;
 import p007b.p195g.p196a.p205c.p221z.MapperConfigBase;
 
-/* compiled from: AnnotatedClassResolver.java */
-/* renamed from: b.g.a.c.c0.d, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.g.a.c.c0.d, reason: use source file name */
+/* JADX INFO: compiled from: AnnotatedClassResolver.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class AnnotatedClassResolver {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final Class<?> f4692a = List.class;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static final Class<?> f4693b = Map.class;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final MapperConfig<?> f4694c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final AnnotationIntrospector f4695d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final ClassIntrospector.a f4696e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final TypeBindings f4697f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public final JavaType f4698g;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public final Class<?> f4699h;
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public final Class<?> f4700i;
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final boolean f4701j;
 
     public AnnotatedClassResolver(MapperConfig<?> mapperConfig, JavaType javaType, ClassIntrospector.a aVar) {
@@ -66,7 +66,7 @@ public class AnnotatedClassResolver {
         this.f4701j = (annotationIntrospectorM2267e == null || (ClassUtil.m2186r(cls) && javaType.mo2104v())) ? false : true;
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public static void m1876d(JavaType javaType, List<JavaType> list, boolean z2) {
         Class<?> cls = javaType._class;
         if (z2) {
@@ -84,7 +84,7 @@ public class AnnotatedClassResolver {
         }
     }
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public static void m1877e(JavaType javaType, List<JavaType> list, boolean z2) {
         Class<?> cls = javaType._class;
         if (cls == Object.class || cls == Enum.class) {
@@ -107,7 +107,7 @@ public class AnnotatedClassResolver {
         }
     }
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public static boolean m1878f(List<JavaType> list, Class<?> cls) {
         int size = list.size();
         for (int i = 0; i < size; i++) {
@@ -118,7 +118,7 @@ public class AnnotatedClassResolver {
         return false;
     }
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public static AnnotatedClass m1879h(MapperConfig<?> mapperConfig, Class<?> cls) {
         if (cls.isArray() && m1880i(mapperConfig, cls)) {
             return new AnnotatedClass(cls);
@@ -128,12 +128,12 @@ public class AnnotatedClassResolver {
         return new AnnotatedClass(null, cls, listEmptyList, annotatedClassResolver.f4700i, annotatedClassResolver.m1884g(listEmptyList), annotatedClassResolver.f4697f, annotatedClassResolver.f4695d, mapperConfig, mapperConfig._base._typeFactory, annotatedClassResolver.f4701j);
     }
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public static boolean m1880i(MapperConfig<?> mapperConfig, Class<?> cls) {
         return mapperConfig == null || ((MapperConfigBase) mapperConfig)._mixIns.mo1885a(cls) == null;
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final AnnotationCollector m1881a(AnnotationCollector annotationCollector, Annotation[] annotationArr) {
         if (annotationArr != null) {
             for (Annotation annotation : annotationArr) {
@@ -148,7 +148,7 @@ public class AnnotatedClassResolver {
         return annotationCollector;
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final AnnotationCollector m1882b(AnnotationCollector annotationCollector, Class<?> cls, Class<?> cls2) {
         if (cls2 != null) {
             annotationCollector = m1881a(annotationCollector, ClassUtil.m2177i(cls2));
@@ -160,7 +160,7 @@ public class AnnotatedClassResolver {
         return annotationCollector;
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final AnnotationCollector m1883c(AnnotationCollector annotationCollector, Annotation annotation) {
         for (Annotation annotation2 : ClassUtil.m2177i(annotation.annotationType())) {
             if (!(annotation2 instanceof Target) && !(annotation2 instanceof Retention) && !annotationCollector.mo1914d(annotation2)) {
@@ -173,7 +173,7 @@ public class AnnotatedClassResolver {
         return annotationCollector;
     }
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public final Annotations m1884g(List<JavaType> list) {
         if (this.f4695d == null) {
             return AnnotationCollector.f4725a;

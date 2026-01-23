@@ -4,9 +4,9 @@ import android.animation.ValueAnimator;
 import java.util.Objects;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: WidgetTabsHost.kt */
-/* renamed from: com.discord.widgets.tabs.WidgetTabsHost$updateViews$$inlined$apply$lambda$1, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: com.discord.widgets.tabs.WidgetTabsHost$updateViews$$inlined$apply$lambda$1, reason: use source file name */
+/* JADX INFO: compiled from: WidgetTabsHost.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class WidgetTabsHost3 implements ValueAnimator.AnimatorUpdateListener {
     public final /* synthetic */ WidgetTabsHost this$0;
 

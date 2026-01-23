@@ -4,12 +4,12 @@ import android.view.View;
 import com.discord.views.CodeVerificationView;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: View.kt */
-/* renamed from: b.a.y.a */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: b.a.y.a */
+/* JADX INFO: compiled from: View.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class ViewOnLayoutChangeListenerC1319a implements View.OnLayoutChangeListener {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final /* synthetic */ CodeVerificationView f2006j;
 
     public ViewOnLayoutChangeListenerC1319a(CodeVerificationView codeVerificationView) {

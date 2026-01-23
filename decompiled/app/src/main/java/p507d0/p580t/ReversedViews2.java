@@ -3,12 +3,12 @@ package p507d0.p580t;
 import java.util.List;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ReversedViews.kt */
-/* renamed from: d0.t.k0, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.t.k0, reason: use source file name */
+/* JADX INFO: compiled from: ReversedViews.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public class ReversedViews2<T> extends AbstractList<T> {
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final List<T> f25190k;
 
     /* JADX WARN: Multi-variable type inference failed */

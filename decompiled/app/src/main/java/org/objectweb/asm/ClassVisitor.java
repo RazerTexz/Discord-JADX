@@ -1,10 +1,10 @@
 package org.objectweb.asm;
 
-/* loaded from: discord-126021.apk:org/objectweb/asm/ClassVisitor.SCL.lombok */
+/* JADX INFO: loaded from: discord-126021.apk:org/objectweb/asm/ClassVisitor.SCL.lombok */
 public abstract class ClassVisitor {
     protected final int api;
 
-    /* renamed from: cv */
+    /* JADX INFO: renamed from: cv */
     protected ClassVisitor f27598cv;
 
     public ClassVisitor(int api) {

@@ -10,24 +10,24 @@ import p007b.p452o.p453a.p454m.Flash;
 import p007b.p452o.p453a.p454m.Hdr;
 import p007b.p452o.p453a.p454m.WhiteBalance;
 
-/* compiled from: Camera1Mapper.java */
-/* renamed from: b.o.a.n.q.a, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.o.a.n.q.a, reason: use source file name */
+/* JADX INFO: compiled from: Camera1Mapper.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class Camera1Mapper {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static Camera1Mapper f13956a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static final Map<Flash, String> f13957b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public static final Map<WhiteBalance, String> f13958c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public static final Map<Facing, Integer> f13959d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public static final Map<Hdr, String> f13960e;
 
     static {
@@ -55,7 +55,7 @@ public class Camera1Mapper {
     }
 
     @NonNull
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static Camera1Mapper m7346a() {
         if (f13956a == null) {
             f13956a = new Camera1Mapper();
@@ -64,7 +64,7 @@ public class Camera1Mapper {
     }
 
     @Nullable
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final <C extends Control, T> C m7347b(@NonNull Map<C, T> map, @NonNull T t) {
         for (C c : map.keySet()) {
             if (t.equals(map.get(c))) {

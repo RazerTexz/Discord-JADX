@@ -34,11 +34,11 @@ import p507d0.p592z.p594d.Lambda;
 import p658rx.Observable;
 import p658rx.subjects.PublishSubject;
 
-/* compiled from: CallFeedbackSheetViewModel.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: CallFeedbackSheetViewModel.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class CallFeedbackSheetViewModel extends AppViewModel<FeedbackSheetViewModel.ViewState> implements FeedbackSheetViewModel {
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private static final List<FeedbackIssue> ISSUES_UI_OPTIONS;
     private static final Map<FeedbackIssue, Integer> REASON_CODES;
@@ -51,8 +51,8 @@ public final class CallFeedbackSheetViewModel extends AppViewModel<FeedbackSheet
     private boolean submitOnDismiss;
     private boolean submitted;
 
-    /* compiled from: CallFeedbackSheetViewModel.kt */
-    /* renamed from: com.discord.widgets.voice.feedback.call.CallFeedbackSheetViewModel$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.voice.feedback.call.CallFeedbackSheetViewModel$1 */
+    /* JADX INFO: compiled from: CallFeedbackSheetViewModel.kt */
     public static final class C104541 extends Lambda implements Function1<StoreState, Unit> {
         public C104541() {
             super(1);
@@ -64,14 +64,14 @@ public final class CallFeedbackSheetViewModel extends AppViewModel<FeedbackSheet
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(StoreState storeState) {
             Intrinsics3.checkNotNullParameter(storeState, "storeState");
             CallFeedbackSheetViewModel.access$setMostRecentStoreState$p(CallFeedbackSheetViewModel.this, storeState);
         }
     }
 
-    /* compiled from: CallFeedbackSheetViewModel.kt */
+    /* JADX INFO: compiled from: CallFeedbackSheetViewModel.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -103,18 +103,18 @@ public final class CallFeedbackSheetViewModel extends AppViewModel<FeedbackSheet
         }
     }
 
-    /* compiled from: CallFeedbackSheetViewModel.kt */
+    /* JADX INFO: compiled from: CallFeedbackSheetViewModel.kt */
     public static final /* data */ class Config implements Parcelable {
 
-        /* renamed from: CREATOR, reason: from kotlin metadata */
+        /* JADX INFO: renamed from: CREATOR, reason: from kotlin metadata */
         public static final Companion INSTANCE = new Companion(null);
         private final Long callDurationMs;
         private final long channelId;
         private final String mediaSessionId;
         private final String rtcConnectionId;
 
-        /* compiled from: CallFeedbackSheetViewModel.kt */
-        /* renamed from: com.discord.widgets.voice.feedback.call.CallFeedbackSheetViewModel$Config$CREATOR, reason: from kotlin metadata */
+        /* JADX INFO: renamed from: com.discord.widgets.voice.feedback.call.CallFeedbackSheetViewModel$Config$CREATOR, reason: from kotlin metadata */
+        /* JADX INFO: compiled from: CallFeedbackSheetViewModel.kt */
         public static final class Companion implements Parcelable.Creator<Config> {
             private Companion() {
             }
@@ -173,22 +173,22 @@ public final class CallFeedbackSheetViewModel extends AppViewModel<FeedbackSheet
             return config.copy(j2, str3, str4, l);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final long getChannelId() {
             return this.channelId;
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final String getRtcConnectionId() {
             return this.rtcConnectionId;
         }
 
-        /* renamed from: component3, reason: from getter */
+        /* JADX INFO: renamed from: component3, reason: from getter */
         public final String getMediaSessionId() {
             return this.mediaSessionId;
         }
 
-        /* renamed from: component4, reason: from getter */
+        /* JADX INFO: renamed from: component4, reason: from getter */
         public final Long getCallDurationMs() {
             return this.callDurationMs;
         }
@@ -270,7 +270,7 @@ public final class CallFeedbackSheetViewModel extends AppViewModel<FeedbackSheet
         }
     }
 
-    /* compiled from: CallFeedbackSheetViewModel.kt */
+    /* JADX INFO: compiled from: CallFeedbackSheetViewModel.kt */
     public static final /* data */ class StoreState {
         private final boolean shouldShowCxLinkForIssueDetails;
 
@@ -285,7 +285,7 @@ public final class CallFeedbackSheetViewModel extends AppViewModel<FeedbackSheet
             return storeState.copy(z2);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final boolean getShouldShowCxLinkForIssueDetails() {
             return this.shouldShowCxLinkForIssueDetails;
         }

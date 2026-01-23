@@ -14,41 +14,41 @@ import kotlin.jvm.functions.Function0;
 import p007b.p008a.p050t.p052b.p053a.TextNode;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: SimpleMarkdownRules.kt */
-/* renamed from: b.a.t.b.b.e, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.a.t.b.b.e, reason: use source file name */
+/* JADX INFO: compiled from: SimpleMarkdownRules.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class SimpleMarkdownRules5 {
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public static final SimpleMarkdownRules5 f1988h = new SimpleMarkdownRules5();
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final Pattern f1981a = Pattern.compile("^\\*\\*([\\s\\S]+?)\\*\\*(?!\\*)");
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static final Pattern f1982b = Pattern.compile("^__([\\s\\S]+?)__(?!_)");
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public static final Pattern f1983c = Pattern.compile("^~~(?=\\S)([\\s\\S]*?\\S)~~");
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public static final Pattern f1984d = Pattern.compile("^(?:\\n *)*\\n");
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public static final Pattern f1985e = Pattern.compile("^[\\s\\S]+?(?=[^0-9A-Za-z\\s\\u00c0-\\uffff]|\\n| {2,}\\n|\\w+:\\S|$)");
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public static final Pattern f1986f = Pattern.compile("^\\\\([^0-9A-Za-z\\s])");
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public static final Pattern f1987g = Pattern.compile("^\\b_((?:__|\\\\[\\s\\S]|[^\\\\_])+?)_\\b|^\\*(?=\\S)((?:\\*\\*|\\s+(?:[^*\\s]|\\*\\*)|[^\\s*])+?)\\*(?!\\*)");
 
     /* JADX INFO: Add missing generic type declarations: [R, S] */
-    /* compiled from: SimpleMarkdownRules.kt */
-    /* renamed from: b.a.t.b.b.e$a */
+    /* JADX INFO: renamed from: b.a.t.b.b.e$a */
+    /* JADX INFO: compiled from: SimpleMarkdownRules.kt */
     public static final class a<R, S> extends Rule<R, Node<R>, S> {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final /* synthetic */ Function0 f1989a;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -70,8 +70,8 @@ public final class SimpleMarkdownRules5 {
     }
 
     /* JADX INFO: Add missing generic type declarations: [R, S] */
-    /* compiled from: SimpleMarkdownRules.kt */
-    /* renamed from: b.a.t.b.b.e$b */
+    /* JADX INFO: renamed from: b.a.t.b.b.e$b */
+    /* JADX INFO: compiled from: SimpleMarkdownRules.kt */
     public static final class b<R, S> extends Rule<R, Node<R>, S> {
         public b(SimpleMarkdownRules5 simpleMarkdownRules5, Pattern pattern) {
             super(pattern);
@@ -89,7 +89,7 @@ public final class SimpleMarkdownRules5 {
         }
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final <R, S> List<Rule<R, Node<R>, S>> m371a(boolean z2, boolean z3) {
         ArrayList arrayList = new ArrayList();
         if (z3) {
@@ -120,7 +120,7 @@ public final class SimpleMarkdownRules5 {
         return arrayList;
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static /* synthetic */ List m372b(boolean z2, boolean z3, int i) {
         if ((i & 1) != 0) {
             z2 = true;
@@ -131,14 +131,14 @@ public final class SimpleMarkdownRules5 {
         return m371a(z2, z3);
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public static final <R, S> Rule<R, Node<R>, S> m373c(Pattern pattern, Function0<? extends List<? extends CharacterStyle>> function0) {
         Intrinsics3.checkNotNullParameter(pattern, "pattern");
         Intrinsics3.checkNotNullParameter(function0, "styleFactory");
         return new a(function0, pattern, pattern);
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final <R, S> Rule<R, Node<R>, S> m374d() {
         Pattern pattern = f1985e;
         Intrinsics3.checkNotNullExpressionValue(pattern, "PATTERN_TEXT");

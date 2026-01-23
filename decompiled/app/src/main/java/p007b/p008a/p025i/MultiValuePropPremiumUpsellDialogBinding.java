@@ -9,32 +9,32 @@ import androidx.viewpager2.widget.ViewPager2;
 import com.google.android.material.button.MaterialButton;
 import com.google.android.material.tabs.TabLayout;
 
-/* compiled from: MultiValuePropPremiumUpsellDialogBinding.java */
-/* renamed from: b.a.i.w0, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.a.i.w0, reason: use source file name */
+/* JADX INFO: compiled from: MultiValuePropPremiumUpsellDialogBinding.java */
+/* JADX INFO: loaded from: classes.dex */
 public final class MultiValuePropPremiumUpsellDialogBinding implements ViewBinding {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     @NonNull
     public final RelativeLayout f1332a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     @NonNull
     public final MaterialButton f1333b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     @NonNull
     public final TabLayout f1334c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     @NonNull
     public final MaterialButton f1335d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     @NonNull
     public final MaterialButton f1336e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     @NonNull
     public final ViewPager2 f1337f;
 

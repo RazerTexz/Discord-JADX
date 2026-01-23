@@ -16,8 +16,8 @@ import androidx.core.content.res.FontResourcesParserCompat;
 import androidx.core.content.res.ResourcesCompat;
 import androidx.core.provider.FontsContractCompat;
 
+/* JADX INFO: loaded from: classes.dex */
 @SuppressLint({"NewApi"})
-/* loaded from: classes.dex */
 public class TypefaceCompat {
     private static final LruCache<String, Typeface> sTypefaceCache;
     private static final TypefaceCompatBaseImpl sTypefaceCompatImpl;

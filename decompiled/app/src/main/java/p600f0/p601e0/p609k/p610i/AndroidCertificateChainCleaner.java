@@ -11,15 +11,15 @@ import kotlin.TypeCastException;
 import p507d0.p592z.p594d.Intrinsics3;
 import p600f0.p601e0.p612m.CertificateChainCleaner;
 
-/* compiled from: AndroidCertificateChainCleaner.kt */
-/* renamed from: f0.e0.k.i.b, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: f0.e0.k.i.b, reason: use source file name */
+/* JADX INFO: compiled from: AndroidCertificateChainCleaner.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class AndroidCertificateChainCleaner extends CertificateChainCleaner {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final X509TrustManager f25786a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final X509TrustManagerExtensions f25787b;
 
     public AndroidCertificateChainCleaner(X509TrustManager x509TrustManager, X509TrustManagerExtensions x509TrustManagerExtensions) {
@@ -30,7 +30,7 @@ public final class AndroidCertificateChainCleaner extends CertificateChainCleane
     }
 
     @Override // p600f0.p601e0.p612m.CertificateChainCleaner
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public List<Certificate> mo10338a(List<? extends Certificate> list, String str) throws SSLPeerUnverifiedException {
         Intrinsics3.checkParameterIsNotNull(list, "chain");
         Intrinsics3.checkParameterIsNotNull(str, "hostname");

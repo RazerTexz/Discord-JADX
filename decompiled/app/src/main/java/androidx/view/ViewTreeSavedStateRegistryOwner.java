@@ -4,7 +4,7 @@ import android.view.View;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public final class ViewTreeSavedStateRegistryOwner {
     private ViewTreeSavedStateRegistryOwner() {
     }

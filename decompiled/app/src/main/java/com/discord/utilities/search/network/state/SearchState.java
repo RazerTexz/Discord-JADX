@@ -9,8 +9,8 @@ import kotlin.jvm.internal.DefaultConstructorMarker;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: SearchState.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: SearchState.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final /* data */ class SearchState {
     private final boolean hasMore;
     private final List<Message> hits;
@@ -32,6 +32,7 @@ public final /* data */ class SearchState {
         this.totalResults = i;
     }
 
+    /* JADX WARN: Multi-variable type inference failed */
     public static /* synthetic */ SearchState copy$default(SearchState searchState, QueryFetchState queryFetchState, SearchQuery searchQuery, List list, List list2, List list3, boolean z2, int i, int i2, Object obj) {
         if ((i2 & 1) != 0) {
             queryFetchState = searchState.queryFetchState;
@@ -62,12 +63,12 @@ public final /* data */ class SearchState {
         return searchState.copy(queryFetchState, searchQuery2, list4, list5, list6, z3, i);
     }
 
-    /* renamed from: component1, reason: from getter */
+    /* JADX INFO: renamed from: component1, reason: from getter */
     public final QueryFetchState getQueryFetchState() {
         return this.queryFetchState;
     }
 
-    /* renamed from: component2, reason: from getter */
+    /* JADX INFO: renamed from: component2, reason: from getter */
     public final SearchQuery getSearchQuery() {
         return this.searchQuery;
     }
@@ -84,12 +85,12 @@ public final /* data */ class SearchState {
         return this.hits;
     }
 
-    /* renamed from: component6, reason: from getter */
+    /* JADX INFO: renamed from: component6, reason: from getter */
     public final boolean getHasMore() {
         return this.hasMore;
     }
 
-    /* renamed from: component7, reason: from getter */
+    /* JADX INFO: renamed from: component7, reason: from getter */
     public final int getTotalResults() {
         return this.totalResults;
     }
@@ -139,6 +140,9 @@ public final /* data */ class SearchState {
     }
 
     /* JADX WARN: Multi-variable type inference failed */
+    /* JADX WARN: Type inference failed for: r1v3, types: [int] */
+    /* JADX WARN: Type inference failed for: r1v5 */
+    /* JADX WARN: Type inference failed for: r1v7 */
     public int hashCode() {
         QueryFetchState queryFetchState = this.queryFetchState;
         int iHashCode = (queryFetchState != null ? queryFetchState.hashCode() : 0) * 31;
@@ -151,11 +155,11 @@ public final /* data */ class SearchState {
         List<Message> list3 = this.hits;
         int iHashCode5 = (iHashCode4 + (list3 != null ? list3.hashCode() : 0)) * 31;
         boolean z2 = this.hasMore;
-        int i = z2;
-        if (z2 != 0) {
-            i = 1;
+        ?? r1 = z2;
+        if (z2) {
+            r1 = 1;
         }
-        return ((iHashCode5 + i) * 31) + this.totalResults;
+        return ((iHashCode5 + r1) * 31) + this.totalResults;
     }
 
     public String toString() {

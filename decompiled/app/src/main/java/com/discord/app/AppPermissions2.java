@@ -3,12 +3,12 @@ package com.discord.app;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function0;
 
-/* compiled from: AppPermissions.kt */
-/* renamed from: com.discord.app.AppPermissionsRequests, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: com.discord.app.AppPermissionsRequests, reason: use source file name */
+/* JADX INFO: compiled from: AppPermissions.kt */
+/* JADX INFO: loaded from: classes.dex */
 public interface AppPermissions2 {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final /* synthetic */ int f14960a = 0;
 
     boolean hasMedia();

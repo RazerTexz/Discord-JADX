@@ -7,11 +7,11 @@ import p001a0.p002a.p003a.C0002b;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: Application.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: Application.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class Application {
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private final User bot;
     private final boolean builtIn;
@@ -21,7 +21,7 @@ public final /* data */ class Application {
     private final long id;
     private final String name;
 
-    /* compiled from: Application.kt */
+    /* JADX INFO: compiled from: Application.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -51,37 +51,37 @@ public final /* data */ class Application {
         return application.copy((i2 & 1) != 0 ? application.id : j, (i2 & 2) != 0 ? application.name : str, (i2 & 4) != 0 ? application.icon : str2, (i2 & 8) != 0 ? application.iconRes : num, (i2 & 16) != 0 ? application.commandCount : i, (i2 & 32) != 0 ? application.bot : user, (i2 & 64) != 0 ? application.builtIn : z2);
     }
 
-    /* renamed from: component1, reason: from getter */
+    /* JADX INFO: renamed from: component1, reason: from getter */
     public final long getId() {
         return this.id;
     }
 
-    /* renamed from: component2, reason: from getter */
+    /* JADX INFO: renamed from: component2, reason: from getter */
     public final String getName() {
         return this.name;
     }
 
-    /* renamed from: component3, reason: from getter */
+    /* JADX INFO: renamed from: component3, reason: from getter */
     public final String getIcon() {
         return this.icon;
     }
 
-    /* renamed from: component4, reason: from getter */
+    /* JADX INFO: renamed from: component4, reason: from getter */
     public final Integer getIconRes() {
         return this.iconRes;
     }
 
-    /* renamed from: component5, reason: from getter */
+    /* JADX INFO: renamed from: component5, reason: from getter */
     public final int getCommandCount() {
         return this.commandCount;
     }
 
-    /* renamed from: component6, reason: from getter */
+    /* JADX INFO: renamed from: component6, reason: from getter */
     public final User getBot() {
         return this.bot;
     }
 
-    /* renamed from: component7, reason: from getter */
+    /* JADX INFO: renamed from: component7, reason: from getter */
     public final boolean getBuiltIn() {
         return this.builtIn;
     }
@@ -131,6 +131,9 @@ public final /* data */ class Application {
     }
 
     /* JADX WARN: Multi-variable type inference failed */
+    /* JADX WARN: Type inference failed for: r1v12, types: [int] */
+    /* JADX WARN: Type inference failed for: r1v13 */
+    /* JADX WARN: Type inference failed for: r1v17 */
     public int hashCode() {
         int iM3a = C0002b.m3a(this.id) * 31;
         String str = this.name;
@@ -142,11 +145,11 @@ public final /* data */ class Application {
         User user = this.bot;
         int iHashCode4 = (iHashCode3 + (user != null ? user.hashCode() : 0)) * 31;
         boolean z2 = this.builtIn;
-        int i = z2;
-        if (z2 != 0) {
-            i = 1;
+        ?? r1 = z2;
+        if (z2) {
+            r1 = 1;
         }
-        return iHashCode4 + i;
+        return iHashCode4 + r1;
     }
 
     public String toString() {

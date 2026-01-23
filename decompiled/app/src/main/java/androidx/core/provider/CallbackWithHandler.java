@@ -6,7 +6,7 @@ import androidx.annotation.NonNull;
 import androidx.core.provider.FontRequestWorker;
 import androidx.core.provider.FontsContractCompat;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class CallbackWithHandler {
 
     @NonNull
@@ -15,7 +15,7 @@ public class CallbackWithHandler {
     @NonNull
     private final Handler mCallbackHandler;
 
-    /* renamed from: androidx.core.provider.CallbackWithHandler$1 */
+    /* JADX INFO: renamed from: androidx.core.provider.CallbackWithHandler$1 */
     public class RunnableC02451 implements Runnable {
         public final /* synthetic */ FontsContractCompat.FontRequestCallback val$callback;
         public final /* synthetic */ Typeface val$typeface;
@@ -31,7 +31,7 @@ public class CallbackWithHandler {
         }
     }
 
-    /* renamed from: androidx.core.provider.CallbackWithHandler$2 */
+    /* JADX INFO: renamed from: androidx.core.provider.CallbackWithHandler$2 */
     public class RunnableC02462 implements Runnable {
         public final /* synthetic */ FontsContractCompat.FontRequestCallback val$callback;
         public final /* synthetic */ int val$reason;

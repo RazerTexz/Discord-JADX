@@ -4,8 +4,8 @@ import android.view.View;
 import com.discord.widgets.channels.WidgetCreateChannel;
 import p007b.p100d.p104b.p105a.outline;
 
-/* compiled from: WidgetChannelsListAdapter.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetChannelsListAdapter.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetChannelsListAdapter$ItemHeader$onConfigure$2 implements View.OnClickListener {
     public final /* synthetic */ long $selectedGuildId;
 

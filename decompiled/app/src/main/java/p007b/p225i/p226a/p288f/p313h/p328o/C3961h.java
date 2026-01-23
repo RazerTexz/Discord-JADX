@@ -5,14 +5,14 @@ import android.os.IInterface;
 import android.os.Parcel;
 import android.os.RemoteException;
 
-/* renamed from: b.i.a.f.h.o.h */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.h.o.h */
+/* JADX INFO: loaded from: classes3.dex */
 public final class C3961h implements InterfaceC3960g, IInterface {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final IBinder f10493a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final String f10494b = "com.google.android.gms.safetynet.internal.ISafetyNetService";
 
     public C3961h(IBinder iBinder) {
@@ -26,7 +26,7 @@ public final class C3961h implements InterfaceC3960g, IInterface {
 
     /* JADX WARN: Multi-variable type inference failed */
     @Override // p007b.p225i.p226a.p288f.p313h.p328o.InterfaceC3960g
-    /* renamed from: n0 */
+    /* JADX INFO: renamed from: n0 */
     public final void mo5437n0(InterfaceC3958e interfaceC3958e, String str) throws RemoteException {
         Parcel parcelObtain = Parcel.obtain();
         parcelObtain.writeInterfaceToken(this.f10494b);

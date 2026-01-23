@@ -4,37 +4,37 @@ import p007b.p109f.p115d.p120e.FLog;
 import p007b.p109f.p187l.p188a.TransformGestureDetector;
 import p007b.p109f.p187l.p189b.DefaultZoomableController;
 
-/* compiled from: MultiPointerGestureDetector.java */
-/* renamed from: b.f.l.a.a, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.f.l.a.a, reason: use source file name */
+/* JADX INFO: compiled from: MultiPointerGestureDetector.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class MultiPointerGestureDetector {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public boolean f4279a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public int f4280b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final int[] f4281c = new int[2];
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final float[] f4282d = new float[2];
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final float[] f4283e = new float[2];
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final float[] f4284f = new float[2];
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public final float[] f4285g = new float[2];
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public a f4286h = null;
 
-    /* compiled from: MultiPointerGestureDetector.java */
-    /* renamed from: b.f.l.a.a$a */
+    /* JADX INFO: renamed from: b.f.l.a.a$a */
+    /* JADX INFO: compiled from: MultiPointerGestureDetector.java */
     public interface a {
     }
 
@@ -42,7 +42,7 @@ public class MultiPointerGestureDetector {
         m1542a();
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public void m1542a() {
         this.f4279a = false;
         this.f4280b = 0;
@@ -51,7 +51,7 @@ public class MultiPointerGestureDetector {
         }
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final void m1543b() {
         TransformGestureDetector transformGestureDetector;
         TransformGestureDetector.a aVar;
@@ -65,7 +65,7 @@ public class MultiPointerGestureDetector {
         this.f4279a = true;
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final void m1544c() {
         TransformGestureDetector.a aVar;
         if (this.f4279a) {

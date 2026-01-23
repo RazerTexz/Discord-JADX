@@ -14,13 +14,13 @@ import com.google.android.material.resources.MaterialAttributes;
 import com.google.android.material.resources.MaterialResources;
 import com.google.android.material.theme.overlay.MaterialThemeOverlay;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public class MaterialTextView extends AppCompatTextView {
     public MaterialTextView(@NonNull Context context) {
         this(context, null);
     }
 
-    private void applyLineHeightFromViewAppearance(@NonNull Resources.Theme theme, int i) throws Resources.NotFoundException {
+    private void applyLineHeightFromViewAppearance(@NonNull Resources.Theme theme, int i) {
         TypedArray typedArrayObtainStyledAttributes = theme.obtainStyledAttributes(i, C10817R.styleable.MaterialTextAppearance);
         int firstAvailableDimension = readFirstAvailableDimension(getContext(), typedArrayObtainStyledAttributes, C10817R.styleable.MaterialTextAppearance_android_lineHeight, C10817R.styleable.MaterialTextAppearance_lineHeight);
         typedArrayObtainStyledAttributes.recycle();
@@ -56,7 +56,7 @@ public class MaterialTextView extends AppCompatTextView {
     }
 
     @Override // androidx.appcompat.widget.AppCompatTextView, android.widget.TextView
-    public void setTextAppearance(@NonNull Context context, int i) throws Resources.NotFoundException {
+    public void setTextAppearance(@NonNull Context context, int i) {
         super.setTextAppearance(context, i);
         if (canApplyTextAppearanceLineHeight(context)) {
             applyLineHeightFromViewAppearance(context.getTheme(), i);
@@ -71,7 +71,7 @@ public class MaterialTextView extends AppCompatTextView {
         this(context, attributeSet, i, 0);
     }
 
-    public MaterialTextView(@NonNull Context context, @Nullable AttributeSet attributeSet, int i, int i2) throws Resources.NotFoundException {
+    public MaterialTextView(@NonNull Context context, @Nullable AttributeSet attributeSet, int i, int i2) {
         int iFindViewAppearanceResourceId;
         super(MaterialThemeOverlay.wrap(context, attributeSet, i, i2), attributeSet, i);
         Context context2 = getContext();

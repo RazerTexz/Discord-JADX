@@ -26,7 +26,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import p007b.p100d.p104b.p105a.outline;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public abstract class PreferenceFragmentCompat extends Fragment implements PreferenceManager.OnPreferenceTreeClickListener, PreferenceManager.OnDisplayPreferenceDialogListener, PreferenceManager.OnNavigateToScreenListener, DialogPreference.TargetFragment {
     public static final String ARG_PREFERENCE_ROOT = "androidx.preference.PreferenceFragmentCompat.PREFERENCE_ROOT";
     private static final String DIALOG_FRAGMENT_TAG = "androidx.preference.PreferenceFragment.DIALOG";
@@ -43,7 +43,7 @@ public abstract class PreferenceFragmentCompat extends Fragment implements Prefe
     private Handler mHandler = new HandlerC05151();
     private final Runnable mRequestFocus = new RunnableC05162();
 
-    /* renamed from: androidx.preference.PreferenceFragmentCompat$1 */
+    /* JADX INFO: renamed from: androidx.preference.PreferenceFragmentCompat$1 */
     public class HandlerC05151 extends Handler {
         public HandlerC05151() {
         }
@@ -57,7 +57,7 @@ public abstract class PreferenceFragmentCompat extends Fragment implements Prefe
         }
     }
 
-    /* renamed from: androidx.preference.PreferenceFragmentCompat$2 */
+    /* JADX INFO: renamed from: androidx.preference.PreferenceFragmentCompat$2 */
     public class RunnableC05162 implements Runnable {
         public RunnableC05162() {
         }
@@ -69,7 +69,7 @@ public abstract class PreferenceFragmentCompat extends Fragment implements Prefe
         }
     }
 
-    /* renamed from: androidx.preference.PreferenceFragmentCompat$3 */
+    /* JADX INFO: renamed from: androidx.preference.PreferenceFragmentCompat$3 */
     public class RunnableC05173 implements Runnable {
         public final /* synthetic */ String val$key;
         public final /* synthetic */ Preference val$preference;
@@ -521,16 +521,16 @@ public abstract class PreferenceFragmentCompat extends Fragment implements Prefe
     public void setPreferencesFromResource(@XmlRes int i, @Nullable String str) {
         requirePreferenceManager();
         PreferenceScreen preferenceScreenInflateFromResource = this.mPreferenceManager.inflateFromResource(getContext(), i, null);
-        Object obj = preferenceScreenInflateFromResource;
+        Preference preference = preferenceScreenInflateFromResource;
         if (str != null) {
-            Object objFindPreference = preferenceScreenInflateFromResource.findPreference(str);
-            boolean z2 = objFindPreference instanceof PreferenceScreen;
-            obj = objFindPreference;
+            Preference preferenceFindPreference = preferenceScreenInflateFromResource.findPreference(str);
+            boolean z2 = preferenceFindPreference instanceof PreferenceScreen;
+            preference = preferenceFindPreference;
             if (!z2) {
                 throw new IllegalArgumentException(outline.m886y("Preference object with key ", str, " is not a PreferenceScreen"));
             }
         }
-        setPreferenceScreen((PreferenceScreen) obj);
+        setPreferenceScreen((PreferenceScreen) preference);
     }
 
     public void scrollToPreference(Preference preference) {

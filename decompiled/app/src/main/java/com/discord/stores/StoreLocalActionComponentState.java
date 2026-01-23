@@ -16,8 +16,8 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 import p658rx.Observable;
 
-/* compiled from: StoreLocalActionComponentState.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: StoreLocalActionComponentState.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class StoreLocalActionComponentState extends StoreV2 {
     private final Map<String, StoreApplicationInteractions.ComponentLocation> componentInteractions;
     private final Dispatcher dispatcher;
@@ -25,8 +25,8 @@ public final class StoreLocalActionComponentState extends StoreV2 {
     private final Map<Long, Map<Integer, List<SelectComponent2>>> selectComponentSelections;
     private Map<Long, ? extends Map<Integer, ? extends List<SelectComponent2>>> selectComponentSelectionsSnapshot;
 
-    /* compiled from: StoreLocalActionComponentState.kt */
-    /* renamed from: com.discord.stores.StoreLocalActionComponentState$observeSelectComponentSelections$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreLocalActionComponentState$observeSelectComponentSelections$1 */
+    /* JADX INFO: compiled from: StoreLocalActionComponentState.kt */
     public static final class C61431 extends Lambda implements Function0<Map<Long, ? extends Map<Integer, ? extends List<? extends SelectComponent2>>>> {
         public C61431() {
             super(0);
@@ -38,14 +38,14 @@ public final class StoreLocalActionComponentState extends StoreV2 {
         }
 
         @Override // kotlin.jvm.functions.Function0
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final Map<Long, ? extends Map<Integer, ? extends List<? extends SelectComponent2>>> invoke2() {
             return StoreLocalActionComponentState.this.getSelectComponentSelectionsData();
         }
     }
 
-    /* compiled from: StoreLocalActionComponentState.kt */
-    /* renamed from: com.discord.stores.StoreLocalActionComponentState$setSelectComponentSelection$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreLocalActionComponentState$setSelectComponentSelection$1 */
+    /* JADX INFO: compiled from: StoreLocalActionComponentState.kt */
     public static final class C61441 extends Lambda implements Function0<Unit> {
         public final /* synthetic */ int $componentIndex;
         public final /* synthetic */ long $messageId;
@@ -65,7 +65,7 @@ public final class StoreLocalActionComponentState extends StoreV2 {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             Map<Integer, List<SelectComponent2>> linkedHashMap;
             Map<Integer, List<SelectComponent2>> map = StoreLocalActionComponentState.this.getSelectComponentSelections().get(Long.valueOf(this.$messageId));

@@ -2,9 +2,9 @@ package p007b.p452o.p453a.p455n;
 
 import java.util.Comparator;
 
-/* compiled from: Camera1Engine.java */
-/* renamed from: b.o.a.n.c, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.o.a.n.c, reason: use source file name */
+/* JADX INFO: compiled from: Camera1Engine.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class Camera1Engine3 implements Comparator<int[]> {
     public Camera1Engine3(Camera1Engine2 camera1Engine2) {
     }

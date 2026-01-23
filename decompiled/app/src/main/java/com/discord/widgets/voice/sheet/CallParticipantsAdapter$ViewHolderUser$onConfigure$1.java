@@ -7,8 +7,8 @@ import kotlin.jvm.functions.Function2;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: CallParticipantsAdapter.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: CallParticipantsAdapter.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class CallParticipantsAdapter$ViewHolderUser$onConfigure$1 extends Lambda implements Function2<Bitmap, String, Unit> {
     public final /* synthetic */ String $colorId;
 
@@ -24,7 +24,7 @@ public final class CallParticipantsAdapter$ViewHolderUser$onConfigure$1 extends 
         return Unit.f27425a;
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final void invoke2(Bitmap bitmap, String str) {
         Intrinsics3.checkNotNullParameter(bitmap, "bitmap");
         RepresentativeColors2.getUserRepresentativeColors().handleBitmap(this.$colorId, bitmap, str);

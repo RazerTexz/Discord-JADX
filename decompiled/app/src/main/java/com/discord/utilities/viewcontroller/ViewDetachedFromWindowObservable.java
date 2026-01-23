@@ -6,8 +6,8 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p658rx.Observable;
 import p658rx.subjects.BehaviorSubject;
 
-/* compiled from: ViewDetachedFromWindowObservable.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: ViewDetachedFromWindowObservable.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class ViewDetachedFromWindowObservable implements View.OnAttachStateChangeListener {
     private final BehaviorSubject<Unit> onDetachSubject;
 

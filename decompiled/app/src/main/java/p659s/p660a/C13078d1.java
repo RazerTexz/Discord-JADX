@@ -7,12 +7,12 @@ import kotlinx.coroutines.Job;
 import p007b.p100d.p104b.p105a.outline;
 import p007b.p225i.p226a.p288f.p299e.p308o.C3404f;
 
-/* compiled from: JobSupport.kt */
-/* renamed from: s.a.d1 */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: s.a.d1 */
+/* JADX INFO: compiled from: JobSupport.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class C13078d1 extends AbstractC13113g1<Job> {
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public final Function1<Throwable, Unit> f27780n;
 
     /* JADX WARN: Multi-variable type inference failed */
@@ -28,7 +28,7 @@ public final class C13078d1 extends AbstractC13113g1<Job> {
     }
 
     @Override // p659s.p660a.CompletionHandler2
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     public void mo11198q(Throwable th) {
         this.f27780n.invoke(th);
     }

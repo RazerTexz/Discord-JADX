@@ -11,11 +11,11 @@ import p007b.p225i.p355b.p357b.AbstractIndexedListIterator;
 import p007b.p225i.p355b.p357b.ImmutableCollection;
 import p007b.p225i.p355b.p357b.ImmutableList2;
 
-/* compiled from: BundleableUtil.java */
-/* renamed from: b.i.a.c.f3.f, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.f3.f, reason: use source file name */
+/* JADX INFO: compiled from: BundleableUtil.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class BundleableUtil {
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static <T extends Bundleable> ImmutableList2<T> m3019a(Bundleable.a<T> aVar, List<Bundle> list) {
         AbstractIndexedListIterator<Object> abstractIndexedListIterator = ImmutableList2.f12045k;
         C3404f.m4189A(4, "initialCapacity");
@@ -38,13 +38,13 @@ public final class BundleableUtil {
         return ImmutableList2.m6262l(objArrCopyOf, i2);
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static <T extends Bundleable> List<T> m3020b(Bundleable.a<T> aVar, @Nullable List<Bundle> list, List<T> list2) {
         return list == null ? list2 : m3019a(aVar, list);
     }
 
     @Nullable
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public static <T extends Bundleable> T m3021c(Bundleable.a<T> aVar, @Nullable Bundle bundle) {
         if (bundle == null) {
             return null;

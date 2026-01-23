@@ -13,7 +13,7 @@ import java.io.FileDescriptor;
 import java.io.PrintWriter;
 import java.util.Arrays;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class CursorLoader extends AsyncTaskLoader<Cursor> {
     public CancellationSignal mCancellationSignal;
     public Cursor mCursor;
@@ -205,7 +205,7 @@ public class CursorLoader extends AsyncTaskLoader<Cursor> {
         }
     }
 
-    /* renamed from: onCanceled, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: onCanceled, reason: avoid collision after fix types in other method */
     public void onCanceled2(Cursor cursor) {
         if (cursor == null || cursor.isClosed()) {
             return;

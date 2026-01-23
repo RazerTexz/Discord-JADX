@@ -25,7 +25,7 @@ import androidx.appcompat.widget.ToolbarWidgetWrapper;
 import androidx.core.view.ViewCompat;
 import java.util.ArrayList;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class ToolbarActionBar extends ActionBar {
     public DecorToolbar mDecorToolbar;
     private boolean mLastMenuVisibility;
@@ -36,7 +36,7 @@ public class ToolbarActionBar extends ActionBar {
     private ArrayList<ActionBar.OnMenuVisibilityListener> mMenuVisibilityListeners = new ArrayList<>();
     private final Runnable mMenuInvalidator = new RunnableC00731();
 
-    /* renamed from: androidx.appcompat.app.ToolbarActionBar$1 */
+    /* JADX INFO: renamed from: androidx.appcompat.app.ToolbarActionBar$1 */
     public class RunnableC00731 implements Runnable {
         public RunnableC00731() {
         }
@@ -47,7 +47,7 @@ public class ToolbarActionBar extends ActionBar {
         }
     }
 
-    /* renamed from: androidx.appcompat.app.ToolbarActionBar$2 */
+    /* JADX INFO: renamed from: androidx.appcompat.app.ToolbarActionBar$2 */
     public class C00742 implements Toolbar.OnMenuItemClickListener {
         public C00742() {
         }

@@ -4,9 +4,9 @@ import android.text.Html;
 import android.text.Spanned;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: Html.kt */
-/* renamed from: androidx.core.text.HtmlKt, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: androidx.core.text.HtmlKt, reason: use source file name */
+/* JADX INFO: compiled from: Html.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class Html {
     public static final Spanned parseAsHtml(String str, int i, Html.ImageGetter imageGetter, Html.TagHandler tagHandler) {
         Intrinsics3.checkNotNullParameter(str, "<this>");

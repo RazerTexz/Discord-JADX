@@ -58,8 +58,8 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 import p658rx.functions.Action2;
 
-/* compiled from: WidgetChannelSettingsEditPermissions.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetChannelSettingsEditPermissions.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetChannelSettingsEditPermissions extends AppFragment {
     private static final String INTENT_EXTRA_CHANNEL_ID = "INTENT_EXTRA_CHANNEL_ID";
     private static final String INTENT_EXTRA_GUILD_ID = "INTENT_EXTRA_GUILD_ID";
@@ -68,32 +68,32 @@ public final class WidgetChannelSettingsEditPermissions extends AppFragment {
     public static final int TYPE_ROLE = 1;
     public static final int TYPE_USER = 0;
 
-    /* renamed from: binding$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
 
-    /* renamed from: channelId$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: channelId$delegate, reason: from kotlin metadata */
     private final Lazy channelId;
 
-    /* renamed from: guildId$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: guildId$delegate, reason: from kotlin metadata */
     private final Lazy guildId;
 
-    /* renamed from: permissionCheckboxes$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: permissionCheckboxes$delegate, reason: from kotlin metadata */
     private final Lazy permissionCheckboxes;
     private StatefulViews state;
 
-    /* renamed from: targetId$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: targetId$delegate, reason: from kotlin metadata */
     private final Lazy targetId;
 
-    /* renamed from: type$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: type$delegate, reason: from kotlin metadata */
     private final Lazy type;
     public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetChannelSettingsEditPermissions.class, "binding", "getBinding()Lcom/discord/databinding/WidgetChannelSettingsEditPermissionsBinding;", 0)};
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private static final Set<Long> STAGE_HIDDEN_PERMISSIONS = Sets5.setOf((Object[]) new Long[]{512L, 256L, Long.valueOf(Permission.SPEAK), Long.valueOf(Permission.USE_VAD)});
     private static final Set<Long> STAGE_DISABLED_PERMISSIONS = SetsJVM.setOf(Long.valueOf(Permission.REQUEST_TO_SPEAK));
 
-    /* compiled from: WidgetChannelSettingsEditPermissions.kt */
+    /* JADX INFO: compiled from: WidgetChannelSettingsEditPermissions.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -212,8 +212,8 @@ public final class WidgetChannelSettingsEditPermissions extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetChannelSettingsEditPermissions.kt */
-    /* renamed from: com.discord.widgets.channels.permissions.WidgetChannelSettingsEditPermissions$configureUI$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.channels.permissions.WidgetChannelSettingsEditPermissions$configureUI$1 */
+    /* JADX INFO: compiled from: WidgetChannelSettingsEditPermissions.kt */
     public static final class C75361<T1, T2> implements Action2<MenuItem, Context> {
         public final /* synthetic */ WidgetChannelSettingsEditPermissionsModel $model;
 
@@ -226,7 +226,7 @@ public final class WidgetChannelSettingsEditPermissions extends AppFragment {
             call2(menuItem, context);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final void call2(MenuItem menuItem, Context context) {
             Intrinsics3.checkNotNullExpressionValue(menuItem, "menuItem");
             if (menuItem.getItemId() != C5419R.id.menu_edit_overwrite_delete) {
@@ -236,8 +236,8 @@ public final class WidgetChannelSettingsEditPermissions extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetChannelSettingsEditPermissions.kt */
-    /* renamed from: com.discord.widgets.channels.permissions.WidgetChannelSettingsEditPermissions$configureUI$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.channels.permissions.WidgetChannelSettingsEditPermissions$configureUI$2 */
+    /* JADX INFO: compiled from: WidgetChannelSettingsEditPermissions.kt */
     public static final class ViewOnClickListenerC75372 implements View.OnClickListener {
         public final /* synthetic */ WidgetChannelSettingsEditPermissionsModel $model;
 
@@ -251,8 +251,8 @@ public final class WidgetChannelSettingsEditPermissions extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetChannelSettingsEditPermissions.kt */
-    /* renamed from: com.discord.widgets.channels.permissions.WidgetChannelSettingsEditPermissions$deletePermissionOverwrites$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.channels.permissions.WidgetChannelSettingsEditPermissions$deletePermissionOverwrites$1 */
+    /* JADX INFO: compiled from: WidgetChannelSettingsEditPermissions.kt */
     public static final class C75381 extends Lambda implements Function1<Void, Unit> {
         public C75381() {
             super(1);
@@ -264,7 +264,7 @@ public final class WidgetChannelSettingsEditPermissions extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Void r4) throws Exception {
             StatefulViews statefulViewsAccess$getState$p = WidgetChannelSettingsEditPermissions.access$getState$p(WidgetChannelSettingsEditPermissions.this);
             if (statefulViewsAccess$getState$p != null) {
@@ -277,8 +277,8 @@ public final class WidgetChannelSettingsEditPermissions extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetChannelSettingsEditPermissions.kt */
-    /* renamed from: com.discord.widgets.channels.permissions.WidgetChannelSettingsEditPermissions$onViewBoundOrOnResume$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.channels.permissions.WidgetChannelSettingsEditPermissions$onViewBoundOrOnResume$1 */
+    /* JADX INFO: compiled from: WidgetChannelSettingsEditPermissions.kt */
     public static final /* synthetic */ class C75391 extends FunctionReferenceImpl implements Function1<WidgetChannelSettingsEditPermissionsModel, Unit> {
         public C75391(WidgetChannelSettingsEditPermissions widgetChannelSettingsEditPermissions) {
             super(1, widgetChannelSettingsEditPermissions, WidgetChannelSettingsEditPermissions.class, "configureUI", "configureUI(Lcom/discord/widgets/channels/permissions/WidgetChannelSettingsEditPermissionsModel;)V", 0);
@@ -290,14 +290,14 @@ public final class WidgetChannelSettingsEditPermissions extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(WidgetChannelSettingsEditPermissionsModel widgetChannelSettingsEditPermissionsModel) {
             WidgetChannelSettingsEditPermissions.access$configureUI((WidgetChannelSettingsEditPermissions) this.receiver, widgetChannelSettingsEditPermissionsModel);
         }
     }
 
-    /* compiled from: WidgetChannelSettingsEditPermissions.kt */
-    /* renamed from: com.discord.widgets.channels.permissions.WidgetChannelSettingsEditPermissions$setupPermissionCheckedState$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.channels.permissions.WidgetChannelSettingsEditPermissions$setupPermissionCheckedState$1 */
+    /* JADX INFO: compiled from: WidgetChannelSettingsEditPermissions.kt */
     public static final class C75401 implements TernaryCheckBox.InterfaceC7094b {
         public final /* synthetic */ int $checkboxId;
 
@@ -318,8 +318,8 @@ public final class WidgetChannelSettingsEditPermissions extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetChannelSettingsEditPermissions.kt */
-    /* renamed from: com.discord.widgets.channels.permissions.WidgetChannelSettingsEditPermissions$updatePermissionOverwrites$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.channels.permissions.WidgetChannelSettingsEditPermissions$updatePermissionOverwrites$1 */
+    /* JADX INFO: compiled from: WidgetChannelSettingsEditPermissions.kt */
     public static final class C75411 extends Lambda implements Function0<RestAPIParams.ChannelPermissionOverwrites> {
         public final /* synthetic */ long $targetId;
         public final /* synthetic */ int $type;
@@ -359,8 +359,8 @@ public final class WidgetChannelSettingsEditPermissions extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetChannelSettingsEditPermissions.kt */
-    /* renamed from: com.discord.widgets.channels.permissions.WidgetChannelSettingsEditPermissions$updatePermissionOverwrites$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.channels.permissions.WidgetChannelSettingsEditPermissions$updatePermissionOverwrites$2 */
+    /* JADX INFO: compiled from: WidgetChannelSettingsEditPermissions.kt */
     public static final class C75422 extends Lambda implements Function1<Void, Unit> {
         public static final C75422 INSTANCE = new C75422();
 
@@ -374,7 +374,7 @@ public final class WidgetChannelSettingsEditPermissions extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Void r1) {
         }
     }

@@ -49,19 +49,19 @@ import p658rx.Observable;
 import p658rx.functions.Func4;
 import p658rx.subjects.PublishSubject;
 
-/* compiled from: ChoosePlanViewModel.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: ChoosePlanViewModel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class ChoosePlanViewModel extends AppViewModel<ViewState> {
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private final PublishSubject<Event> eventSubject;
     private Traits.Location locationTrait;
     private final String oldSkuName;
     private final WidgetChoosePlan.ViewType viewType;
 
-    /* compiled from: ChoosePlanViewModel.kt */
-    /* renamed from: com.discord.widgets.settings.premium.ChoosePlanViewModel$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.premium.ChoosePlanViewModel$1 */
+    /* JADX INFO: compiled from: ChoosePlanViewModel.kt */
     public static final /* synthetic */ class C98691 extends FunctionReferenceImpl implements Function1<StoreState, Unit> {
         public C98691(ChoosePlanViewModel choosePlanViewModel) {
             super(1, choosePlanViewModel, ChoosePlanViewModel.class, "handleStoreState", "handleStoreState(Lcom/discord/widgets/settings/premium/ChoosePlanViewModel$StoreState;)V", 0);
@@ -73,15 +73,15 @@ public final class ChoosePlanViewModel extends AppViewModel<ViewState> {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(StoreState storeState) {
             Intrinsics3.checkNotNullParameter(storeState, "p1");
             ChoosePlanViewModel.access$handleStoreState((ChoosePlanViewModel) this.receiver, storeState);
         }
     }
 
-    /* compiled from: ChoosePlanViewModel.kt */
-    /* renamed from: com.discord.widgets.settings.premium.ChoosePlanViewModel$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.premium.ChoosePlanViewModel$2 */
+    /* JADX INFO: compiled from: ChoosePlanViewModel.kt */
     public static final /* synthetic */ class C98702 extends FunctionReferenceImpl implements Function1<StoreGooglePlayPurchases.Event, Unit> {
         public C98702(ChoosePlanViewModel choosePlanViewModel) {
             super(1, choosePlanViewModel, ChoosePlanViewModel.class, "handleEvent", "handleEvent(Lcom/discord/stores/StoreGooglePlayPurchases$Event;)V", 0);
@@ -93,14 +93,14 @@ public final class ChoosePlanViewModel extends AppViewModel<ViewState> {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(StoreGooglePlayPurchases.Event event) {
             Intrinsics3.checkNotNullParameter(event, "p1");
             ChoosePlanViewModel.access$handleEvent((ChoosePlanViewModel) this.receiver, event);
         }
     }
 
-    /* compiled from: ChoosePlanViewModel.kt */
+    /* JADX INFO: compiled from: ChoosePlanViewModel.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -130,10 +130,10 @@ public final class ChoosePlanViewModel extends AppViewModel<ViewState> {
         }
     }
 
-    /* compiled from: ChoosePlanViewModel.kt */
+    /* JADX INFO: compiled from: ChoosePlanViewModel.kt */
     public static abstract class Event {
 
-        /* compiled from: ChoosePlanViewModel.kt */
+        /* JADX INFO: compiled from: ChoosePlanViewModel.kt */
         public static final /* data */ class CompleteSkuPurchase extends Event {
             private final String planName;
             private final String skuName;
@@ -157,12 +157,12 @@ public final class ChoosePlanViewModel extends AppViewModel<ViewState> {
                 return completeSkuPurchase.copy(str, str2);
             }
 
-            /* renamed from: component1, reason: from getter */
+            /* JADX INFO: renamed from: component1, reason: from getter */
             public final String getSkuName() {
                 return this.skuName;
             }
 
-            /* renamed from: component2, reason: from getter */
+            /* JADX INFO: renamed from: component2, reason: from getter */
             public final String getPlanName() {
                 return this.planName;
             }
@@ -207,7 +207,7 @@ public final class ChoosePlanViewModel extends AppViewModel<ViewState> {
             }
         }
 
-        /* compiled from: ChoosePlanViewModel.kt */
+        /* JADX INFO: compiled from: ChoosePlanViewModel.kt */
         public static final /* data */ class ErrorSkuPurchase extends Event {
             private final int message;
 
@@ -223,7 +223,7 @@ public final class ChoosePlanViewModel extends AppViewModel<ViewState> {
                 return errorSkuPurchase.copy(i);
             }
 
-            /* renamed from: component1, reason: from getter */
+            /* JADX INFO: renamed from: component1, reason: from getter */
             public final int getMessage() {
                 return this.message;
             }
@@ -252,7 +252,7 @@ public final class ChoosePlanViewModel extends AppViewModel<ViewState> {
             }
         }
 
-        /* compiled from: ChoosePlanViewModel.kt */
+        /* JADX INFO: compiled from: ChoosePlanViewModel.kt */
         public static final /* data */ class StartSkuPurchase extends Event {
             private final BillingFlowParams billingParams;
 
@@ -270,7 +270,7 @@ public final class ChoosePlanViewModel extends AppViewModel<ViewState> {
                 return startSkuPurchase.copy(billingFlowParams);
             }
 
-            /* renamed from: component1, reason: from getter */
+            /* JADX INFO: renamed from: component1, reason: from getter */
             public final BillingFlowParams getBillingParams() {
                 return this.billingParams;
             }
@@ -315,7 +315,7 @@ public final class ChoosePlanViewModel extends AppViewModel<ViewState> {
         }
     }
 
-    /* compiled from: ChoosePlanViewModel.kt */
+    /* JADX INFO: compiled from: ChoosePlanViewModel.kt */
     public static final /* data */ class StoreState {
         private final StoreGooglePlayPurchases.QueryState purchasesQueryState;
         private final StoreGooglePlayPurchases.State purchasesState;
@@ -349,22 +349,22 @@ public final class ChoosePlanViewModel extends AppViewModel<ViewState> {
             return storeState.copy(state, state2, queryState, subscriptionsState);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final StoreGooglePlaySkuDetails.State getSkuDetailsState() {
             return this.skuDetailsState;
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final StoreGooglePlayPurchases.State getPurchasesState() {
             return this.purchasesState;
         }
 
-        /* renamed from: component3, reason: from getter */
+        /* JADX INFO: renamed from: component3, reason: from getter */
         public final StoreGooglePlayPurchases.QueryState getPurchasesQueryState() {
             return this.purchasesQueryState;
         }
 
-        /* renamed from: component4, reason: from getter */
+        /* JADX INFO: renamed from: component4, reason: from getter */
         public final StoreSubscriptions.SubscriptionsState getSubscriptionsState() {
             return this.subscriptionsState;
         }
@@ -429,10 +429,10 @@ public final class ChoosePlanViewModel extends AppViewModel<ViewState> {
         }
     }
 
-    /* compiled from: ChoosePlanViewModel.kt */
+    /* JADX INFO: compiled from: ChoosePlanViewModel.kt */
     public static abstract class ViewState {
 
-        /* compiled from: ChoosePlanViewModel.kt */
+        /* JADX INFO: compiled from: ChoosePlanViewModel.kt */
         public static final /* data */ class Loaded extends ViewState {
             private final boolean isEmpty;
             private final List<WidgetChoosePlanAdapter.Item> items;
@@ -458,6 +458,7 @@ public final class ChoosePlanViewModel extends AppViewModel<ViewState> {
                 this.isEmpty = z2;
             }
 
+            /* JADX WARN: Multi-variable type inference failed */
             public static /* synthetic */ Loaded copy$default(Loaded loaded, StoreGooglePlayPurchases.QueryState queryState, List list, Map map, List list2, List list3, boolean z2, int i, Object obj) {
                 if ((i & 1) != 0) {
                     queryState = loaded.purchasesQueryState;
@@ -484,7 +485,7 @@ public final class ChoosePlanViewModel extends AppViewModel<ViewState> {
                 return loaded.copy(queryState, list4, map2, list5, list6, z2);
             }
 
-            /* renamed from: component1, reason: from getter */
+            /* JADX INFO: renamed from: component1, reason: from getter */
             public final StoreGooglePlayPurchases.QueryState getPurchasesQueryState() {
                 return this.purchasesQueryState;
             }
@@ -505,7 +506,7 @@ public final class ChoosePlanViewModel extends AppViewModel<ViewState> {
                 return this.subscriptions;
             }
 
-            /* renamed from: component6, reason: from getter */
+            /* JADX INFO: renamed from: component6, reason: from getter */
             public final boolean getIsEmpty() {
                 return this.isEmpty;
             }
@@ -551,6 +552,9 @@ public final class ChoosePlanViewModel extends AppViewModel<ViewState> {
             }
 
             /* JADX WARN: Multi-variable type inference failed */
+            /* JADX WARN: Type inference failed for: r1v3, types: [int] */
+            /* JADX WARN: Type inference failed for: r1v4 */
+            /* JADX WARN: Type inference failed for: r1v6 */
             public int hashCode() {
                 StoreGooglePlayPurchases.QueryState queryState = this.purchasesQueryState;
                 int iHashCode = (queryState != null ? queryState.hashCode() : 0) * 31;
@@ -563,11 +567,11 @@ public final class ChoosePlanViewModel extends AppViewModel<ViewState> {
                 List<ModelSubscription> list3 = this.subscriptions;
                 int iHashCode5 = (iHashCode4 + (list3 != null ? list3.hashCode() : 0)) * 31;
                 boolean z2 = this.isEmpty;
-                int i = z2;
-                if (z2 != 0) {
-                    i = 1;
+                ?? r1 = z2;
+                if (z2) {
+                    r1 = 1;
                 }
-                return iHashCode5 + i;
+                return iHashCode5 + r1;
             }
 
             public final boolean isEmpty() {
@@ -590,7 +594,7 @@ public final class ChoosePlanViewModel extends AppViewModel<ViewState> {
             }
         }
 
-        /* compiled from: ChoosePlanViewModel.kt */
+        /* JADX INFO: compiled from: ChoosePlanViewModel.kt */
         public static final class Loading extends ViewState {
             public static final Loading INSTANCE = new Loading();
 

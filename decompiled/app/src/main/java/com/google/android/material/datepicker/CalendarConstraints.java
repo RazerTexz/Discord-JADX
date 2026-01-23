@@ -9,7 +9,7 @@ import androidx.core.util.ObjectsCompat;
 import java.util.Arrays;
 import p007b.p225i.p226a.p341g.p345d.UtcDates;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public final class CalendarConstraints implements Parcelable {
     public static final Parcelable.Creator<CalendarConstraints> CREATOR = new C10878a();
 
@@ -31,7 +31,7 @@ public final class CalendarConstraints implements Parcelable {
         boolean isValid(long j);
     }
 
-    /* renamed from: com.google.android.material.datepicker.CalendarConstraints$a */
+    /* JADX INFO: renamed from: com.google.android.material.datepicker.CalendarConstraints$a */
     public static class C10878a implements Parcelable.Creator<CalendarConstraints> {
         @Override // android.os.Parcelable.Creator
         @NonNull

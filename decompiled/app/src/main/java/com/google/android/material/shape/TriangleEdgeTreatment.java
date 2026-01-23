@@ -2,7 +2,7 @@ package com.google.android.material.shape;
 
 import androidx.annotation.NonNull;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public class TriangleEdgeTreatment extends EdgeTreatment {
     private final boolean inside;
     private final float size;

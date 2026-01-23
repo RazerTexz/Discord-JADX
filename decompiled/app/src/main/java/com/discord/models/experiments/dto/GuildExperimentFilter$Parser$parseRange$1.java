@@ -6,15 +6,15 @@ import java.io.IOException;
 import kotlin.Unit;
 import kotlin.jvm.internal.Ref$ObjectRef;
 
-/* compiled from: GuildExperimentFilter.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: GuildExperimentFilter.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class GuildExperimentFilter$Parser$parseRange$1<T> implements Model.JsonReader.ItemFactory<Unit> {
     public final /* synthetic */ Ref$ObjectRef $end;
     public final /* synthetic */ Model.JsonReader $reader;
     public final /* synthetic */ Ref$ObjectRef $start;
 
-    /* compiled from: GuildExperimentFilter.kt */
-    /* renamed from: com.discord.models.experiments.dto.GuildExperimentFilter$Parser$parseRange$1$1 */
+    /* JADX INFO: renamed from: com.discord.models.experiments.dto.GuildExperimentFilter$Parser$parseRange$1$1 */
+    /* JADX INFO: compiled from: GuildExperimentFilter.kt */
     public static final class RunnableC55571 implements Runnable {
         public final /* synthetic */ Ref$ObjectRef $fieldHash;
 
@@ -28,8 +28,8 @@ public final class GuildExperimentFilter$Parser$parseRange$1<T> implements Model
         }
     }
 
-    /* compiled from: GuildExperimentFilter.kt */
-    /* renamed from: com.discord.models.experiments.dto.GuildExperimentFilter$Parser$parseRange$1$2 */
+    /* JADX INFO: renamed from: com.discord.models.experiments.dto.GuildExperimentFilter$Parser$parseRange$1$2 */
+    /* JADX INFO: compiled from: GuildExperimentFilter.kt */
     public static final class RunnableC55582 implements Runnable {
         public final /* synthetic */ Ref$ObjectRef $fieldHash;
 
@@ -69,7 +69,7 @@ public final class GuildExperimentFilter$Parser$parseRange$1<T> implements Model
         return Unit.f27425a;
     }
 
-    /* renamed from: get, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: get, reason: avoid collision after fix types in other method */
     public final void get2() throws IOException {
         Ref$ObjectRef ref$ObjectRef = new Ref$ObjectRef();
         ref$ObjectRef.element = null;

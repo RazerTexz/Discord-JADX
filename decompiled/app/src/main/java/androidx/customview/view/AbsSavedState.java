@@ -5,20 +5,20 @@ import android.os.Parcelable;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public abstract class AbsSavedState implements Parcelable {
     private final Parcelable mSuperState;
     public static final AbsSavedState EMPTY_STATE = new C03121();
     public static final Parcelable.Creator<AbsSavedState> CREATOR = new C03132();
 
-    /* renamed from: androidx.customview.view.AbsSavedState$1 */
+    /* JADX INFO: renamed from: androidx.customview.view.AbsSavedState$1 */
     public static class C03121 extends AbsSavedState {
         public C03121() {
             super((C03121) null);
         }
     }
 
-    /* renamed from: androidx.customview.view.AbsSavedState$2 */
+    /* JADX INFO: renamed from: androidx.customview.view.AbsSavedState$2 */
     public static class C03132 implements Parcelable.ClassLoaderCreator<AbsSavedState> {
         @Override // android.os.Parcelable.Creator
         public /* bridge */ /* synthetic */ Object createFromParcel(Parcel parcel) {

@@ -31,25 +31,25 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 import p507d0.p592z.p594d.Reflection2;
 
-/* compiled from: WidgetHubWaitlist.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetHubWaitlist.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetHubWaitlist extends AppFragment {
     public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetHubWaitlist.class, "binding", "getBinding()Lcom/discord/databinding/WidgetHubWaitlistBinding;", 0)};
 
-    /* renamed from: args$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: args$delegate, reason: from kotlin metadata */
     private final Lazy args;
 
-    /* renamed from: binding$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
 
-    /* renamed from: validationManager$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: validationManager$delegate, reason: from kotlin metadata */
     private final Lazy validationManager;
 
-    /* renamed from: viewModel$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: viewModel$delegate, reason: from kotlin metadata */
     private final Lazy viewModel;
 
-    /* compiled from: WidgetHubWaitlist.kt */
-    /* renamed from: com.discord.widgets.hubs.WidgetHubWaitlist$configureUI$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.hubs.WidgetHubWaitlist$configureUI$1 */
+    /* JADX INFO: compiled from: WidgetHubWaitlist.kt */
     public static final class C90441 extends Lambda implements Function1<RestCallState6<? extends WaitlistSignup>, Unit> {
         public C90441() {
             super(1);
@@ -61,7 +61,7 @@ public final class WidgetHubWaitlist extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(RestCallState6<WaitlistSignup> restCallState6) {
             Intrinsics3.checkNotNullParameter(restCallState6, "it");
             FragmentActivity activity = WidgetHubWaitlist.this.getActivity();
@@ -72,8 +72,8 @@ public final class WidgetHubWaitlist extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetHubWaitlist.kt */
-    /* renamed from: com.discord.widgets.hubs.WidgetHubWaitlist$onViewBoundOrOnResume$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.hubs.WidgetHubWaitlist$onViewBoundOrOnResume$1 */
+    /* JADX INFO: compiled from: WidgetHubWaitlist.kt */
     public static final class C90451 extends Lambda implements Function1<WidgetHubWaitlistViewModel3, Unit> {
         public C90451() {
             super(1);
@@ -85,15 +85,15 @@ public final class WidgetHubWaitlist extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(WidgetHubWaitlistViewModel3 widgetHubWaitlistViewModel3) {
             Intrinsics3.checkNotNullParameter(widgetHubWaitlistViewModel3, "it");
             WidgetHubWaitlist.access$configureUI(WidgetHubWaitlist.this, widgetHubWaitlistViewModel3);
         }
     }
 
-    /* compiled from: WidgetHubWaitlist.kt */
-    /* renamed from: com.discord.widgets.hubs.WidgetHubWaitlist$onViewBoundOrOnResume$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.hubs.WidgetHubWaitlist$onViewBoundOrOnResume$2 */
+    /* JADX INFO: compiled from: WidgetHubWaitlist.kt */
     public static final class ViewOnClickListenerC90462 implements View.OnClickListener {
         public ViewOnClickListenerC90462() {
         }

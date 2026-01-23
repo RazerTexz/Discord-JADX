@@ -17,7 +17,7 @@ import p007b.p225i.p226a.p341g.p348g.DrawableWithAnimatedVisibilityChange;
 import p007b.p225i.p226a.p341g.p348g.DrawingDelegate;
 import p007b.p225i.p226a.p341g.p348g.LinearDrawingDelegate;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public final class DeterminateDrawable<S extends BaseProgressIndicatorSpec> extends DrawableWithAnimatedVisibilityChange {
     private static final FloatPropertyCompat<DeterminateDrawable> INDICATOR_LENGTH_IN_LEVEL = new C10959a("indicatorLevel");
     private static final int MAX_DRAWABLE_LEVEL = 10000;
@@ -28,7 +28,7 @@ public final class DeterminateDrawable<S extends BaseProgressIndicatorSpec> exte
     private final SpringAnimation springAnimator;
     private final SpringForce springForce;
 
-    /* renamed from: com.google.android.material.progressindicator.DeterminateDrawable$a */
+    /* JADX INFO: renamed from: com.google.android.material.progressindicator.DeterminateDrawable$a */
     public static class C10959a extends FloatPropertyCompat<DeterminateDrawable> {
         public C10959a(String str) {
             super(str);

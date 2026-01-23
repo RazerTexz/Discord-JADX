@@ -49,12 +49,12 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p658rx.Observable;
 import p658rx.functions.Action1;
 
-/* compiled from: WidgetServerSettingsAuditLog.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetServerSettingsAuditLog.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetServerSettingsAuditLog extends AppFragment {
     public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetServerSettingsAuditLog.class, "binding", "getBinding()Lcom/discord/databinding/WidgetServerSettingsAuditLogBinding;", 0)};
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private static final int DIRECTION_DOWN = 1;
     private static final String INTENT_EXTRA_GUILD_ID = "GUILD_ID";
@@ -65,13 +65,13 @@ public final class WidgetServerSettingsAuditLog extends AppFragment {
     private static final int VIEW_INDEX_LOGS_LOADING = 0;
     private WidgetServerSettingsAuditLogAdapter adapter;
 
-    /* renamed from: binding$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
     private long guildId;
     private boolean loadingAuditLogs;
     private final AppLogger2 loggingConfig;
 
-    /* compiled from: WidgetServerSettingsAuditLog.kt */
+    /* JADX INFO: compiled from: WidgetServerSettingsAuditLog.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -90,13 +90,13 @@ public final class WidgetServerSettingsAuditLog extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetServerSettingsAuditLog.kt */
+    /* JADX INFO: compiled from: WidgetServerSettingsAuditLog.kt */
     public static abstract class Model {
 
-        /* renamed from: Companion, reason: from kotlin metadata */
+        /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
         public static final Companion INSTANCE = new Companion(null);
 
-        /* compiled from: WidgetServerSettingsAuditLog.kt */
+        /* JADX INFO: compiled from: WidgetServerSettingsAuditLog.kt */
         public static final class Companion {
 
             public final /* synthetic */ class WhenMappings {
@@ -224,7 +224,7 @@ public final class WidgetServerSettingsAuditLog extends AppFragment {
             }
         }
 
-        /* compiled from: WidgetServerSettingsAuditLog.kt */
+        /* JADX INFO: compiled from: WidgetServerSettingsAuditLog.kt */
         public static final class Loaded extends Model {
             private final CharSequence actionFilterText;
             private final List<MGRecyclerDataPayload> auditLogEntryItems;
@@ -255,7 +255,7 @@ public final class WidgetServerSettingsAuditLog extends AppFragment {
             }
         }
 
-        /* compiled from: WidgetServerSettingsAuditLog.kt */
+        /* JADX INFO: compiled from: WidgetServerSettingsAuditLog.kt */
         public static final class Loading extends Model {
             public static final Loading INSTANCE = new Loading();
 
@@ -272,16 +272,16 @@ public final class WidgetServerSettingsAuditLog extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetServerSettingsAuditLog.kt */
-    /* renamed from: com.discord.widgets.servers.auditlog.WidgetServerSettingsAuditLog$onViewBound$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.auditlog.WidgetServerSettingsAuditLog$onViewBound$1 */
+    /* JADX INFO: compiled from: WidgetServerSettingsAuditLog.kt */
     public static final class C93231<T> implements Action1<Menu> {
 
-        /* compiled from: WidgetServerSettingsAuditLog.kt */
-        /* renamed from: com.discord.widgets.servers.auditlog.WidgetServerSettingsAuditLog$onViewBound$1$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.widgets.servers.auditlog.WidgetServerSettingsAuditLog$onViewBound$1$1, reason: invalid class name */
+        /* JADX INFO: compiled from: WidgetServerSettingsAuditLog.kt */
         public static final class AnonymousClass1 implements View.OnClickListener {
 
-            /* compiled from: WidgetServerSettingsAuditLog.kt */
-            /* renamed from: com.discord.widgets.servers.auditlog.WidgetServerSettingsAuditLog$onViewBound$1$1$1, reason: invalid class name and collision with other inner class name */
+            /* JADX INFO: renamed from: com.discord.widgets.servers.auditlog.WidgetServerSettingsAuditLog$onViewBound$1$1$1, reason: invalid class name and collision with other inner class name */
+            /* JADX INFO: compiled from: WidgetServerSettingsAuditLog.kt */
             public static final class C132881 implements PopupMenu.OnMenuItemClickListener {
                 public final /* synthetic */ View $view;
 
@@ -326,7 +326,7 @@ public final class WidgetServerSettingsAuditLog extends AppFragment {
             call2(menu);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final void call2(Menu menu) {
             View actionView;
             MenuItem menuItemFindItem = menu.findItem(C5419R.id.menu_filter);
@@ -337,8 +337,8 @@ public final class WidgetServerSettingsAuditLog extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetServerSettingsAuditLog.kt */
-    /* renamed from: com.discord.widgets.servers.auditlog.WidgetServerSettingsAuditLog$onViewBound$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.auditlog.WidgetServerSettingsAuditLog$onViewBound$2 */
+    /* JADX INFO: compiled from: WidgetServerSettingsAuditLog.kt */
     public static final class C93242 extends RecyclerView.OnScrollListener {
         @Override // androidx.recyclerview.widget.RecyclerView.OnScrollListener
         public void onScrollStateChanged(RecyclerView recyclerView, int newState) {
@@ -351,8 +351,8 @@ public final class WidgetServerSettingsAuditLog extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetServerSettingsAuditLog.kt */
-    /* renamed from: com.discord.widgets.servers.auditlog.WidgetServerSettingsAuditLog$onViewBound$4 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.auditlog.WidgetServerSettingsAuditLog$onViewBound$4 */
+    /* JADX INFO: compiled from: WidgetServerSettingsAuditLog.kt */
     public static final class ViewOnClickListenerC93254 implements View.OnClickListener {
         public ViewOnClickListenerC93254() {
         }
@@ -363,8 +363,8 @@ public final class WidgetServerSettingsAuditLog extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetServerSettingsAuditLog.kt */
-    /* renamed from: com.discord.widgets.servers.auditlog.WidgetServerSettingsAuditLog$onViewBound$5 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.auditlog.WidgetServerSettingsAuditLog$onViewBound$5 */
+    /* JADX INFO: compiled from: WidgetServerSettingsAuditLog.kt */
     public static final class ViewOnClickListenerC93265 implements View.OnClickListener {
         public ViewOnClickListenerC93265() {
         }
@@ -375,8 +375,8 @@ public final class WidgetServerSettingsAuditLog extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetServerSettingsAuditLog.kt */
-    /* renamed from: com.discord.widgets.servers.auditlog.WidgetServerSettingsAuditLog$onViewBoundOrOnResume$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.auditlog.WidgetServerSettingsAuditLog$onViewBoundOrOnResume$1 */
+    /* JADX INFO: compiled from: WidgetServerSettingsAuditLog.kt */
     public static final /* synthetic */ class C93271 extends FunctionReferenceImpl implements Function1<Model, Unit> {
         public C93271(WidgetServerSettingsAuditLog widgetServerSettingsAuditLog) {
             super(1, widgetServerSettingsAuditLog, WidgetServerSettingsAuditLog.class, "configureUI", "configureUI(Lcom/discord/widgets/servers/auditlog/WidgetServerSettingsAuditLog$Model;)V", 0);
@@ -388,7 +388,7 @@ public final class WidgetServerSettingsAuditLog extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Model model) {
             Intrinsics3.checkNotNullParameter(model, "p1");
             WidgetServerSettingsAuditLog.access$configureUI((WidgetServerSettingsAuditLog) this.receiver, model);

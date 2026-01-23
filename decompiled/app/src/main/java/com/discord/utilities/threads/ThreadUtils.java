@@ -1,7 +1,6 @@
 package com.discord.utilities.threads;
 
 import android.content.Context;
-import android.content.res.Resources;
 import com.discord.C5419R;
 import com.discord.api.channel.Channel;
 import com.discord.api.channel.ChannelUtils;
@@ -47,15 +46,15 @@ import p507d0.p580t._CollectionsJvm;
 import p507d0.p592z.p594d.Intrinsics3;
 import p658rx.Observable;
 
-/* compiled from: ThreadUtils.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: ThreadUtils.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class ThreadUtils {
     public static final int DEFAULT_AUTO_ARCHIVE_DURATION = 1440;
     public static final int MAX_DISPLAYED_THREAD_BROWSER_ICON_COUNT = 99;
     public static final ThreadUtils INSTANCE = new ThreadUtils();
     private static final LinkedHashMap<Integer, Integer> THREAD_AUTO_ARCHIVE_DURATION_NAMES = Maps6.linkedMapOf(Tuples.m10073to(60, Integer.valueOf(C5419R.string.auto_archive_duration_1_hour)), Tuples.m10073to(1440, Integer.valueOf(C5419R.string.auto_archive_duration_24_hours)), Tuples.m10073to(Integer.valueOf(ThreadArchiveDurations.THREE_DAYS_IN_MINUTES), Integer.valueOf(C5419R.string.auto_archive_duration_3_days)), Tuples.m10073to(Integer.valueOf(ThreadArchiveDurations.SEVEN_DAYS_IN_MINUTES), Integer.valueOf(C5419R.string.auto_archive_duration_1_week)));
 
-    /* compiled from: ThreadUtils.kt */
+    /* JADX INFO: compiled from: ThreadUtils.kt */
     public static final class ThreadArchiveDurations {
         public static final ThreadArchiveDurations INSTANCE = new ThreadArchiveDurations();
         public static final int ONE_DAY_IN_MINUTES = 1440;
@@ -67,8 +66,8 @@ public final class ThreadUtils {
         }
     }
 
-    /* compiled from: ThreadUtils.kt */
-    /* renamed from: com.discord.utilities.threads.ThreadUtils$getThreadTimestampComparator$1 */
+    /* JADX INFO: renamed from: com.discord.utilities.threads.ThreadUtils$getThreadTimestampComparator$1 */
+    /* JADX INFO: compiled from: ThreadUtils.kt */
     public static final class C69771<T> implements Comparator<StoreThreadsActiveJoined.ActiveJoinedThread> {
         public static final C69771 INSTANCE = new C69771();
 
@@ -77,7 +76,7 @@ public final class ThreadUtils {
             return compare2(activeJoinedThread, activeJoinedThread2);
         }
 
-        /* renamed from: compare, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: compare, reason: avoid collision after fix types in other method */
         public final int compare2(StoreThreadsActiveJoined.ActiveJoinedThread activeJoinedThread, StoreThreadsActiveJoined.ActiveJoinedThread activeJoinedThread2) {
             return (activeJoinedThread2.getJoinTimestamp().getDateTimeMillis() > activeJoinedThread.getJoinTimestamp().getDateTimeMillis() ? 1 : (activeJoinedThread2.getJoinTimestamp().getDateTimeMillis() == activeJoinedThread.getJoinTimestamp().getDateTimeMillis() ? 0 : -1));
         }
@@ -155,7 +154,7 @@ public final class ThreadUtils {
         return linkedHashMap;
     }
 
-    public final String autoArchiveDurationName(Context context, int minutes) throws Resources.NotFoundException {
+    public final String autoArchiveDurationName(Context context, int minutes) {
         Intrinsics3.checkNotNullParameter(context, "context");
         Integer num = THREAD_AUTO_ARCHIVE_DURATION_NAMES.get(Integer.valueOf(minutes));
         if (num != null) {
@@ -226,7 +225,7 @@ public final class ThreadUtils {
         ThreadMetadata threadMetadata = channel.getThreadMetadata();
         int autoArchiveDuration = (threadMetadata != null ? threadMetadata.getAutoArchiveDuration() : 0) * 60 * 1000;
         ThreadMetadata threadMetadata2 = channel.getThreadMetadata();
-        return Math.max(lastMessageId, (threadMetadata2 == null || (archiveTimestamp = threadMetadata2.getArchiveTimestamp()) == null) ? 0L : TimeUtils.parseUTCDate(archiveTimestamp)) + autoArchiveDuration;
+        return Math.max(lastMessageId, (threadMetadata2 == null || (archiveTimestamp = threadMetadata2.getArchiveTimestamp()) == null) ? 0L : TimeUtils.parseUTCDate(archiveTimestamp)) + ((long) autoArchiveDuration);
     }
 
     public final int computeThreadNotificationSetting(StoreThreadsJoined.JoinedThread joinedThread, boolean isGuildOrCategoryOrParentMuted, Integer parentNotificationSetting) {
@@ -266,7 +265,7 @@ public final class ThreadUtils {
         Intrinsics3.checkNotNullParameter(channel, "$this$getThreadAckMessageTimestamp");
         Intrinsics3.checkNotNullParameter(clock, "clock");
         long jLongValue = l != null ? l.longValue() : clock.currentTimeMillis();
-        long jLongValue2 = l2 != null ? l2.longValue() - 5000 : 0L;
+        long jLongValue2 = l2 != null ? l2.longValue() - ((long) 5000) : 0L;
         ThreadMetadata threadMetadata = channel.getThreadMetadata();
         long jMax = Math.max(jLongValue2, (threadMetadata == null || (archiveTimestamp = threadMetadata.getArchiveTimestamp()) == null) ? 0L : TimeUtils.parseUTCDate(archiveTimestamp));
         if (jMax == 0) {

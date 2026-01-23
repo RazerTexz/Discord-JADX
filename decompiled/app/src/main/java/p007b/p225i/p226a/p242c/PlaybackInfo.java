@@ -12,70 +12,70 @@ import p007b.p225i.p355b.p357b.AbstractIndexedListIterator;
 import p007b.p225i.p355b.p357b.ImmutableList2;
 import p007b.p225i.p355b.p357b.RegularImmutableList;
 
-/* compiled from: PlaybackInfo.java */
-/* renamed from: b.i.a.c.w1, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.w1, reason: use source file name */
+/* JADX INFO: compiled from: PlaybackInfo.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class PlaybackInfo {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final MediaSource2.a f7946a = new MediaSource2.a(new Object());
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final Timeline f7947b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final MediaSource2.a f7948c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final long f7949d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final long f7950e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final int f7951f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     @Nullable
     public final ExoPlaybackException f7952g;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public final boolean f7953h;
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public final TrackGroupArray f7954i;
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final TrackSelectorResult f7955j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final List<Metadata> f7956k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final MediaSource2.a f7957l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public final boolean f7958m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public final int f7959n;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public final PlaybackParameters f7960o;
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public final boolean f7961p;
 
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     public final boolean f7962q;
 
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     public volatile long f7963r;
 
-    /* renamed from: s */
+    /* JADX INFO: renamed from: s */
     public volatile long f7964s;
 
-    /* renamed from: t */
+    /* JADX INFO: renamed from: t */
     public volatile long f7965t;
 
     public PlaybackInfo(Timeline timeline, MediaSource2.a aVar, long j, long j2, int i, @Nullable ExoPlaybackException exoPlaybackException, boolean z2, TrackGroupArray trackGroupArray, TrackSelectorResult trackSelectorResult, List<Metadata> list, MediaSource2.a aVar2, boolean z3, int i2, PlaybackParameters playbackParameters, long j3, long j4, long j5, boolean z4, boolean z5) {
@@ -100,7 +100,7 @@ public final class PlaybackInfo {
         this.f7962q = z5;
     }
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public static PlaybackInfo m3561h(TrackSelectorResult trackSelectorResult) {
         Timeline timeline = Timeline.f7337j;
         MediaSource2.a aVar = f7946a;
@@ -110,43 +110,43 @@ public final class PlaybackInfo {
     }
 
     @CheckResult
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public PlaybackInfo m3562a(MediaSource2.a aVar) {
         return new PlaybackInfo(this.f7947b, this.f7948c, this.f7949d, this.f7950e, this.f7951f, this.f7952g, this.f7953h, this.f7954i, this.f7955j, this.f7956k, aVar, this.f7958m, this.f7959n, this.f7960o, this.f7963r, this.f7964s, this.f7965t, this.f7961p, this.f7962q);
     }
 
     @CheckResult
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public PlaybackInfo m3563b(MediaSource2.a aVar, long j, long j2, long j3, long j4, TrackGroupArray trackGroupArray, TrackSelectorResult trackSelectorResult, List<Metadata> list) {
         return new PlaybackInfo(this.f7947b, aVar, j2, j3, this.f7951f, this.f7952g, this.f7953h, trackGroupArray, trackSelectorResult, list, this.f7957l, this.f7958m, this.f7959n, this.f7960o, this.f7963r, j4, j, this.f7961p, this.f7962q);
     }
 
     @CheckResult
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public PlaybackInfo m3564c(boolean z2) {
         return new PlaybackInfo(this.f7947b, this.f7948c, this.f7949d, this.f7950e, this.f7951f, this.f7952g, this.f7953h, this.f7954i, this.f7955j, this.f7956k, this.f7957l, this.f7958m, this.f7959n, this.f7960o, this.f7963r, this.f7964s, this.f7965t, z2, this.f7962q);
     }
 
     @CheckResult
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public PlaybackInfo m3565d(boolean z2, int i) {
         return new PlaybackInfo(this.f7947b, this.f7948c, this.f7949d, this.f7950e, this.f7951f, this.f7952g, this.f7953h, this.f7954i, this.f7955j, this.f7956k, this.f7957l, z2, i, this.f7960o, this.f7963r, this.f7964s, this.f7965t, this.f7961p, this.f7962q);
     }
 
     @CheckResult
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public PlaybackInfo m3566e(@Nullable ExoPlaybackException exoPlaybackException) {
         return new PlaybackInfo(this.f7947b, this.f7948c, this.f7949d, this.f7950e, this.f7951f, exoPlaybackException, this.f7953h, this.f7954i, this.f7955j, this.f7956k, this.f7957l, this.f7958m, this.f7959n, this.f7960o, this.f7963r, this.f7964s, this.f7965t, this.f7961p, this.f7962q);
     }
 
     @CheckResult
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public PlaybackInfo m3567f(int i) {
         return new PlaybackInfo(this.f7947b, this.f7948c, this.f7949d, this.f7950e, i, this.f7952g, this.f7953h, this.f7954i, this.f7955j, this.f7956k, this.f7957l, this.f7958m, this.f7959n, this.f7960o, this.f7963r, this.f7964s, this.f7965t, this.f7961p, this.f7962q);
     }
 
     @CheckResult
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public PlaybackInfo m3568g(Timeline timeline) {
         return new PlaybackInfo(timeline, this.f7948c, this.f7949d, this.f7950e, this.f7951f, this.f7952g, this.f7953h, this.f7954i, this.f7955j, this.f7956k, this.f7957l, this.f7958m, this.f7959n, this.f7960o, this.f7963r, this.f7964s, this.f7965t, this.f7961p, this.f7962q);
     }

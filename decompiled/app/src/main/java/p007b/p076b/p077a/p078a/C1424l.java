@@ -15,14 +15,14 @@ import p637j0.p638j.p640b.AndroidSchedulers;
 import p658rx.Observable;
 import p658rx.functions.Action1;
 
-/* compiled from: FlexInputFragment.kt */
-/* renamed from: b.b.a.a.l */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.b.a.a.l */
+/* JADX INFO: compiled from: FlexInputFragment.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class C1424l extends Lambda implements Function0<Unit> {
     public final /* synthetic */ FlexInputFragment this$0;
 
-    /* compiled from: FlexInputFragment.kt */
-    /* renamed from: b.b.a.a.l$a */
+    /* JADX INFO: renamed from: b.b.a.a.l$a */
+    /* JADX INFO: compiled from: FlexInputFragment.kt */
     public static final class a<T> implements Action1<Long> {
         public a() {
         }
@@ -62,7 +62,7 @@ public final class C1424l extends Lambda implements Function0<Unit> {
         return Unit.f27425a;
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final void invoke2() {
         this.this$0.showExpressionKeyboardSubscription = Observable.m11068d0(300L, TimeUnit.MILLISECONDS).m11084J(AndroidSchedulers.m10738a()).m11096V(new a());
     }

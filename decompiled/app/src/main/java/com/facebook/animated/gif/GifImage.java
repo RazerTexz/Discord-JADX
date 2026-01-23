@@ -11,14 +11,14 @@ import p007b.p109f.p161j.p162a.p164b.AnimatedImageDecoder;
 import p007b.p109f.p161j.p169d.ImageDecodeOptions;
 import p007b.p109f.p190m.p191n.NativeLoader;
 
+/* JADX INFO: loaded from: classes.dex */
 @DoNotStrip
-/* loaded from: classes.dex */
 public class GifImage implements AnimatedImage, AnimatedImageDecoder {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static volatile boolean f19418a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public Bitmap.Config f19419b = null;
 
     @DoNotStrip
@@ -28,7 +28,7 @@ public class GifImage implements AnimatedImage, AnimatedImageDecoder {
     public GifImage() {
     }
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public static synchronized void m8629k() {
         if (!f19418a) {
             f19418a = true;
@@ -79,13 +79,13 @@ public class GifImage implements AnimatedImage, AnimatedImageDecoder {
     private native boolean nativeIsAnimated();
 
     @Override // p007b.p109f.p161j.p162a.p163a.AnimatedImage
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public int mo1177a() {
         return nativeGetFrameCount();
     }
 
     @Override // p007b.p109f.p161j.p162a.p163a.AnimatedImage
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public int mo1178b() {
         int iNativeGetLoopCount = nativeGetLoopCount();
         if (iNativeGetLoopCount == -1) {
@@ -98,7 +98,7 @@ public class GifImage implements AnimatedImage, AnimatedImageDecoder {
     }
 
     @Override // p007b.p109f.p161j.p162a.p164b.AnimatedImageDecoder
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public AnimatedImage mo1192c(ByteBuffer byteBuffer, ImageDecodeOptions imageDecodeOptions) {
         m8629k();
         byteBuffer.rewind();
@@ -108,19 +108,19 @@ public class GifImage implements AnimatedImage, AnimatedImageDecoder {
     }
 
     @Override // p007b.p109f.p161j.p162a.p163a.AnimatedImage
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public Bitmap.Config mo1179d() {
         return this.f19419b;
     }
 
     @Override // p007b.p109f.p161j.p162a.p163a.AnimatedImage
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public AnimatedImageFrame mo1180e(int i) {
         return nativeGetFrame(i);
     }
 
     @Override // p007b.p109f.p161j.p162a.p163a.AnimatedImage
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public boolean mo1181f() {
         return false;
     }
@@ -130,7 +130,7 @@ public class GifImage implements AnimatedImage, AnimatedImageDecoder {
     }
 
     @Override // p007b.p109f.p161j.p162a.p163a.AnimatedImage
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public AnimatedDrawableFrameInfo mo1182g(int i) {
         int i2;
         GifFrame gifFrameNativeGetFrame = nativeGetFrame(i);
@@ -166,7 +166,7 @@ public class GifImage implements AnimatedImage, AnimatedImageDecoder {
     }
 
     @Override // p007b.p109f.p161j.p162a.p164b.AnimatedImageDecoder
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public AnimatedImage mo1193h(long j, int i, ImageDecodeOptions imageDecodeOptions) {
         m8629k();
         AnimatableValueParser.m527i(Boolean.valueOf(j != 0));
@@ -176,13 +176,13 @@ public class GifImage implements AnimatedImage, AnimatedImageDecoder {
     }
 
     @Override // p007b.p109f.p161j.p162a.p163a.AnimatedImage
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public int[] mo1183i() {
         return nativeGetFrameDurations();
     }
 
     @Override // p007b.p109f.p161j.p162a.p163a.AnimatedImage
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public int mo1184j() {
         return nativeGetSizeInBytes();
     }

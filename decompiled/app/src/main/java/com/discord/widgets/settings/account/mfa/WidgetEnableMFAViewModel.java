@@ -24,15 +24,15 @@ import p658rx.Observable;
 import p658rx.Subscription;
 import p658rx.subscriptions.CompositeSubscription;
 
-/* compiled from: WidgetEnableMFAViewModel.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetEnableMFAViewModel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetEnableMFAViewModel extends AppViewModel<ViewState> {
     private String encodedTotpSecret;
     private String password;
     private CompositeSubscription subs;
     private String totpSecret;
 
-    /* compiled from: WidgetEnableMFAViewModel.kt */
+    /* JADX INFO: compiled from: WidgetEnableMFAViewModel.kt */
     public static final /* data */ class ViewState {
         private final boolean isLoading;
         private final Integer screenIndex;
@@ -56,12 +56,12 @@ public final class WidgetEnableMFAViewModel extends AppViewModel<ViewState> {
             return viewState.copy(z2, num);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final boolean getIsLoading() {
             return this.isLoading;
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final Integer getScreenIndex() {
             return this.screenIndex;
         }
@@ -116,8 +116,8 @@ public final class WidgetEnableMFAViewModel extends AppViewModel<ViewState> {
         }
     }
 
-    /* compiled from: WidgetEnableMFAViewModel.kt */
-    /* renamed from: com.discord.widgets.settings.account.mfa.WidgetEnableMFAViewModel$enableMFA$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.account.mfa.WidgetEnableMFAViewModel$enableMFA$1 */
+    /* JADX INFO: compiled from: WidgetEnableMFAViewModel.kt */
     public static final class C98011 extends Lambda implements Function1<EnableMfaResponse, Unit> {
         public C98011() {
             super(1);
@@ -129,14 +129,14 @@ public final class WidgetEnableMFAViewModel extends AppViewModel<ViewState> {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(EnableMfaResponse enableMfaResponse) {
             WidgetEnableMFAViewModel.access$handleMFASuccess(WidgetEnableMFAViewModel.this, enableMfaResponse.getToken());
         }
     }
 
-    /* compiled from: WidgetEnableMFAViewModel.kt */
-    /* renamed from: com.discord.widgets.settings.account.mfa.WidgetEnableMFAViewModel$enableMFA$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.account.mfa.WidgetEnableMFAViewModel$enableMFA$2 */
+    /* JADX INFO: compiled from: WidgetEnableMFAViewModel.kt */
     public static final class C98022 extends Lambda implements Function1<Error, Unit> {
         public C98022() {
             super(1);
@@ -148,15 +148,15 @@ public final class WidgetEnableMFAViewModel extends AppViewModel<ViewState> {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Error error) {
             Intrinsics3.checkNotNullParameter(error, "it");
             WidgetEnableMFAViewModel.access$handleMFAFailure(WidgetEnableMFAViewModel.this);
         }
     }
 
-    /* compiled from: WidgetEnableMFAViewModel.kt */
-    /* renamed from: com.discord.widgets.settings.account.mfa.WidgetEnableMFAViewModel$enableMFA$3 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.account.mfa.WidgetEnableMFAViewModel$enableMFA$3 */
+    /* JADX INFO: compiled from: WidgetEnableMFAViewModel.kt */
     public static final class C98033 extends Lambda implements Function1<Subscription, Unit> {
         public C98033() {
             super(1);
@@ -168,7 +168,7 @@ public final class WidgetEnableMFAViewModel extends AppViewModel<ViewState> {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Subscription subscription) {
             Intrinsics3.checkNotNullParameter(subscription, "it");
             WidgetEnableMFAViewModel.access$getSubs$p(WidgetEnableMFAViewModel.this).m11136a(subscription);

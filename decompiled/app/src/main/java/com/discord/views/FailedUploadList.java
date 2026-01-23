@@ -29,24 +29,24 @@ import p507d0.p580t.Iterables2;
 import p507d0.p580t._Collections;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: FailedUploadList.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: FailedUploadList.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class FailedUploadList extends LinearLayout {
 
-    /* renamed from: j, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: j, reason: from kotlin metadata */
     public final ViewChatUploadListBinding binding;
 
-    /* compiled from: FailedUploadList.kt */
-    /* renamed from: com.discord.views.FailedUploadList$a */
+    /* JADX INFO: renamed from: com.discord.views.FailedUploadList$a */
+    /* JADX INFO: compiled from: FailedUploadList.kt */
     public static final class C7076a {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final String f19064a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final long f19065b;
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public final String f19066c;
 
         public C7076a(String str, long j, String str2) {
@@ -85,15 +85,15 @@ public final class FailedUploadList extends LinearLayout {
         }
     }
 
-    /* compiled from: FailedUploadList.kt */
-    /* renamed from: com.discord.views.FailedUploadList$b */
+    /* JADX INFO: renamed from: com.discord.views.FailedUploadList$b */
+    /* JADX INFO: compiled from: FailedUploadList.kt */
     public static abstract class AbstractC7077b {
 
-        /* compiled from: FailedUploadList.kt */
-        /* renamed from: com.discord.views.FailedUploadList$b$a */
+        /* JADX INFO: renamed from: com.discord.views.FailedUploadList$b$a */
+        /* JADX INFO: compiled from: FailedUploadList.kt */
         public static final class a extends AbstractC7077b {
 
-            /* renamed from: a */
+            /* JADX INFO: renamed from: a */
             public final List<C7076a> f19067a;
 
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -123,14 +123,14 @@ public final class FailedUploadList extends LinearLayout {
             }
         }
 
-        /* compiled from: FailedUploadList.kt */
-        /* renamed from: com.discord.views.FailedUploadList$b$b */
+        /* JADX INFO: renamed from: com.discord.views.FailedUploadList$b$b */
+        /* JADX INFO: compiled from: FailedUploadList.kt */
         public static final class b extends AbstractC7077b {
 
-            /* renamed from: a */
+            /* JADX INFO: renamed from: a */
             public final int f19068a;
 
-            /* renamed from: b */
+            /* JADX INFO: renamed from: b */
             public final long f19069b;
 
             public b(int i, long j) {

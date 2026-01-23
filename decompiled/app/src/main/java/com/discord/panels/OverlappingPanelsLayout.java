@@ -30,8 +30,8 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 import p507d0.p592z.p594d.PrimitiveCompanionObjects2;
 
-/* compiled from: OverlappingPanelsLayout.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: OverlappingPanelsLayout.kt */
+/* JADX INFO: loaded from: classes.dex */
 public class OverlappingPanelsLayout extends FrameLayout {
     private static final long SIDE_PANEL_CLOSE_DURATION_MS = 200;
     private static final long SIDE_PANEL_OPEN_DURATION_MS = 250;
@@ -68,39 +68,39 @@ public class OverlappingPanelsLayout extends FrameLayout {
     private float xFromInterceptActionDown;
     private float yFromInterceptActionDown;
 
-    /* compiled from: OverlappingPanelsLayout.kt */
+    /* JADX INFO: compiled from: OverlappingPanelsLayout.kt */
     public enum LockState {
         OPEN,
         CLOSE,
         UNLOCKED
     }
 
-    /* compiled from: OverlappingPanelsLayout.kt */
+    /* JADX INFO: compiled from: OverlappingPanelsLayout.kt */
     public enum Panel {
         START,
         CENTER,
         END
     }
 
-    /* compiled from: OverlappingPanelsLayout.kt */
+    /* JADX INFO: compiled from: OverlappingPanelsLayout.kt */
     public interface PanelStateListener {
         void onPanelStateChange(PanelState panelState);
     }
 
-    /* compiled from: OverlappingPanelsLayout.kt */
+    /* JADX INFO: compiled from: OverlappingPanelsLayout.kt */
     public enum SwipeDirection {
         LEFT,
         RIGHT
     }
 
-    /* compiled from: java-style lambda group */
-    /* renamed from: com.discord.panels.OverlappingPanelsLayout$a */
+    /* JADX INFO: renamed from: com.discord.panels.OverlappingPanelsLayout$a */
+    /* JADX INFO: compiled from: java-style lambda group */
     public static final class C5573a implements ValueAnimator.AnimatorUpdateListener {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final /* synthetic */ int f18636a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final /* synthetic */ Object f18637b;
 
         public C5573a(int i, Object obj) {
@@ -134,14 +134,14 @@ public class OverlappingPanelsLayout extends FrameLayout {
         }
     }
 
-    /* compiled from: java-style lambda group */
-    /* renamed from: com.discord.panels.OverlappingPanelsLayout$b */
+    /* JADX INFO: renamed from: com.discord.panels.OverlappingPanelsLayout$b */
+    /* JADX INFO: compiled from: java-style lambda group */
     public static final class ViewOnLayoutChangeListenerC5574b implements View.OnLayoutChangeListener {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public final /* synthetic */ int f18638j;
 
-        /* renamed from: k */
+        /* JADX INFO: renamed from: k */
         public final /* synthetic */ Object f18639k;
 
         public ViewOnLayoutChangeListenerC5574b(int i, Object obj) {
@@ -150,7 +150,7 @@ public class OverlappingPanelsLayout extends FrameLayout {
         }
 
         @Override // android.view.View.OnLayoutChangeListener
-        public final void onLayoutChange(View view, int i, int i2, int i3, int i4, int i5, int i6, int i7, int i8) throws Resources.NotFoundException {
+        public final void onLayoutChange(View view, int i, int i2, int i3, int i4, int i5, int i6, int i7, int i8) {
             int i9 = this.f18638j;
             if (i9 == 0) {
                 if (OverlappingPanelsLayout.access$isLeftToRight$p((OverlappingPanelsLayout) this.f18639k) && i3 != i7) {
@@ -178,8 +178,8 @@ public class OverlappingPanelsLayout extends FrameLayout {
         }
     }
 
-    /* compiled from: OverlappingPanelsLayout.kt */
-    /* renamed from: com.discord.panels.OverlappingPanelsLayout$c */
+    /* JADX INFO: renamed from: com.discord.panels.OverlappingPanelsLayout$c */
+    /* JADX INFO: compiled from: OverlappingPanelsLayout.kt */
     public static final class C5575c extends Lambda implements Function0<Unit> {
         public final /* synthetic */ boolean $isFling;
 
@@ -196,8 +196,8 @@ public class OverlappingPanelsLayout extends FrameLayout {
         }
     }
 
-    /* compiled from: OverlappingPanelsLayout.kt */
-    /* renamed from: com.discord.panels.OverlappingPanelsLayout$d */
+    /* JADX INFO: renamed from: com.discord.panels.OverlappingPanelsLayout$d */
+    /* JADX INFO: compiled from: OverlappingPanelsLayout.kt */
     public static final class C5576d extends Lambda implements Function0<Unit> {
         public final /* synthetic */ boolean $isFling;
 
@@ -214,8 +214,8 @@ public class OverlappingPanelsLayout extends FrameLayout {
         }
     }
 
-    /* compiled from: OverlappingPanelsLayout.kt */
-    /* renamed from: com.discord.panels.OverlappingPanelsLayout$e */
+    /* JADX INFO: renamed from: com.discord.panels.OverlappingPanelsLayout$e */
+    /* JADX INFO: compiled from: OverlappingPanelsLayout.kt */
     public static final class C5577e extends Lambda implements Function0<Unit> {
         public final /* synthetic */ boolean $isFling;
 
@@ -273,11 +273,11 @@ public class OverlappingPanelsLayout extends FrameLayout {
         return view;
     }
 
-    public static final /* synthetic */ void access$handleEndPanelWidthUpdate(OverlappingPanelsLayout overlappingPanelsLayout) throws Resources.NotFoundException {
+    public static final /* synthetic */ void access$handleEndPanelWidthUpdate(OverlappingPanelsLayout overlappingPanelsLayout) {
         overlappingPanelsLayout.handleEndPanelWidthUpdate();
     }
 
-    public static final /* synthetic */ void access$handleStartPanelWidthUpdate(OverlappingPanelsLayout overlappingPanelsLayout) throws Resources.NotFoundException {
+    public static final /* synthetic */ void access$handleStartPanelWidthUpdate(OverlappingPanelsLayout overlappingPanelsLayout) {
         overlappingPanelsLayout.handleStartPanelWidthUpdate();
     }
 
@@ -466,7 +466,7 @@ public class OverlappingPanelsLayout extends FrameLayout {
         }
     }
 
-    private final void handleEndPanelWidthUpdate() throws Resources.NotFoundException {
+    private final void handleEndPanelWidthUpdate() {
         float f = this.endPanelOpenedCenterPanelX;
         float dimension = getResources().getDimension(C5582R.a.overlapping_panels_margin_between_panels);
         if (this.endPanel == null) {
@@ -487,7 +487,7 @@ public class OverlappingPanelsLayout extends FrameLayout {
         }
     }
 
-    private final void handleStartPanelWidthUpdate() throws Resources.NotFoundException {
+    private final void handleStartPanelWidthUpdate() {
         float f = this.startPanelOpenedCenterPanelX;
         float dimension = getResources().getDimension(C5582R.a.overlapping_panels_margin_between_panels);
         if (this.startPanel == null) {
@@ -508,7 +508,7 @@ public class OverlappingPanelsLayout extends FrameLayout {
         }
     }
 
-    private final void initPanels() throws Resources.NotFoundException {
+    private final void initPanels() {
         View childAt = getChildAt(0);
         Intrinsics3.checkExpressionValueIsNotNull(childAt, "getChildAt(0)");
         this.startPanel = childAt;
@@ -948,7 +948,7 @@ public class OverlappingPanelsLayout extends FrameLayout {
     }
 
     @Override // android.widget.FrameLayout, android.view.ViewGroup, android.view.View
-    public void onLayout(boolean changed, int left, int top, int right, int bottom) throws Resources.NotFoundException {
+    public void onLayout(boolean changed, int left, int top, int right, int bottom) {
         super.onLayout(changed, left, top, right, bottom);
         if (getChildCount() == 3 && this.centerPanel == null) {
             initPanels();

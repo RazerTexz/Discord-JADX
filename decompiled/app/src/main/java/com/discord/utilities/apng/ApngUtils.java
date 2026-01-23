@@ -27,14 +27,14 @@ import p659s.p660a.Dispatchers;
 import p659s.p660a.MainCoroutineDispatcher;
 import p659s.p660a.p661a.MainDispatchers;
 
-/* compiled from: ApngUtils.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: ApngUtils.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class ApngUtils {
     public static final ApngUtils INSTANCE = new ApngUtils();
 
-    /* compiled from: ApngUtils.kt */
+    /* JADX INFO: renamed from: com.discord.utilities.apng.ApngUtils$renderApngFromFile$3 */
+    /* JADX INFO: compiled from: ApngUtils.kt */
     @DebugMetadata(m10084c = "com.discord.utilities.apng.ApngUtils$renderApngFromFile$3", m10085f = "ApngUtils.kt", m10086l = {31}, m10087m = "invokeSuspend")
-    /* renamed from: com.discord.utilities.apng.ApngUtils$renderApngFromFile$3 */
     public static final class C66873 extends ContinuationImpl6 implements Function2<CoroutineScope, Continuation<? super Unit>, Object> {
         public final /* synthetic */ boolean $autoPlay;
         public final /* synthetic */ File $file;
@@ -43,9 +43,9 @@ public final class ApngUtils {
         public final /* synthetic */ Integer $maxWidth;
         public int label;
 
-        /* compiled from: ApngUtils.kt */
+        /* JADX INFO: renamed from: com.discord.utilities.apng.ApngUtils$renderApngFromFile$3$1, reason: invalid class name */
+        /* JADX INFO: compiled from: ApngUtils.kt */
         @DebugMetadata(m10084c = "com.discord.utilities.apng.ApngUtils$renderApngFromFile$3$1", m10085f = "ApngUtils.kt", m10086l = {}, m10087m = "invokeSuspend")
-        /* renamed from: com.discord.utilities.apng.ApngUtils$renderApngFromFile$3$1, reason: invalid class name */
         public static final class AnonymousClass1 extends ContinuationImpl6 implements Function2<CoroutineScope, Continuation<? super Unit>, Object> {
             public final /* synthetic */ Ref$ObjectRef $drawable;
             public int label;

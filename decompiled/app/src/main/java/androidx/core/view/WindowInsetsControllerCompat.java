@@ -15,7 +15,7 @@ import androidx.annotation.Nullable;
 import androidx.annotation.RequiresApi;
 import androidx.collection.SimpleArrayMap;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public final class WindowInsetsControllerCompat {
     public static final int BEHAVIOR_SHOW_BARS_BY_SWIPE = 1;
     public static final int BEHAVIOR_SHOW_BARS_BY_TOUCH = 0;
@@ -69,7 +69,7 @@ public final class WindowInsetsControllerCompat {
         @NonNull
         public final Window mWindow;
 
-        /* renamed from: androidx.core.view.WindowInsetsControllerCompat$Impl20$1 */
+        /* JADX INFO: renamed from: androidx.core.view.WindowInsetsControllerCompat$Impl20$1 */
         public class RunnableC02981 implements Runnable {
             public final /* synthetic */ View val$finalView;
 
@@ -253,7 +253,7 @@ public final class WindowInsetsControllerCompat {
         public final WindowInsetsController mInsetsController;
         private final SimpleArrayMap<OnControllableInsetsChangedListener, WindowInsetsController.OnControllableInsetsChangedListener> mListeners;
 
-        /* renamed from: androidx.core.view.WindowInsetsControllerCompat$Impl30$1 */
+        /* JADX INFO: renamed from: androidx.core.view.WindowInsetsControllerCompat$Impl30$1 */
         public class WindowInsetsAnimationControlListenerC02991 implements WindowInsetsAnimationControlListener {
             private WindowInsetsAnimationControllerCompat mCompatAnimController = null;
             public final /* synthetic */ WindowInsetsAnimationControlListenerCompat val$listener;
@@ -280,7 +280,7 @@ public final class WindowInsetsControllerCompat {
             }
         }
 
-        /* renamed from: androidx.core.view.WindowInsetsControllerCompat$Impl30$2 */
+        /* JADX INFO: renamed from: androidx.core.view.WindowInsetsControllerCompat$Impl30$2 */
         public class WindowInsetsControllerOnControllableInsetsChangedListenerC03002 implements WindowInsetsController.OnControllableInsetsChangedListener {
             public final /* synthetic */ OnControllableInsetsChangedListener val$listener;
 

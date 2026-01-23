@@ -8,16 +8,16 @@ import com.google.firebase.messaging.EnhancedIntentService;
 import java.util.concurrent.Executor;
 import p007b.p225i.p361c.p398s.ServiceConnectionC4812d0;
 
-/* compiled from: com.google.firebase:firebase-iid@@21.0.0 */
-/* renamed from: b.i.c.s.a0 */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.c.s.a0 */
+/* JADX INFO: compiled from: com.google.firebase:firebase-iid@@21.0.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public class BinderC4806a0 extends Binder {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final a f12844a;
 
-    /* compiled from: com.google.firebase:firebase-iid@@21.0.0 */
-    /* renamed from: b.i.c.s.a0$a */
+    /* JADX INFO: renamed from: b.i.c.s.a0$a */
+    /* JADX INFO: compiled from: com.google.firebase:firebase-iid@@21.0.0 */
     public interface a {
     }
 
@@ -25,7 +25,7 @@ public class BinderC4806a0 extends Binder {
         this.f12844a = aVar;
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public void m6719a(ServiceConnectionC4812d0.a aVar) {
         if (Binder.getCallingUid() != Process.myUid()) {
             throw new SecurityException("Binding only allowed within app");

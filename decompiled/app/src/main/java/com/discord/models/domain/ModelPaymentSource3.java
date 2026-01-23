@@ -5,9 +5,9 @@ import com.discord.models.domain.billing.ModelBillingAddress;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ModelPaymentSource.kt */
-/* renamed from: com.discord.models.domain.PaymentSourceRaw, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: com.discord.models.domain.PaymentSourceRaw, reason: use source file name */
+/* JADX INFO: compiled from: ModelPaymentSource.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class ModelPaymentSource3 {
     private final ModelBillingAddress billingAddress;
     private final String brand;
@@ -39,52 +39,52 @@ public final /* data */ class ModelPaymentSource3 {
         return modelPaymentSource3.copy((i4 & 1) != 0 ? modelPaymentSource3.type : i, (i4 & 2) != 0 ? modelPaymentSource3.id : str, (i4 & 4) != 0 ? modelPaymentSource3.invalid : z2, (i4 & 8) != 0 ? modelPaymentSource3.billingAddress : modelBillingAddress, (i4 & 16) != 0 ? modelPaymentSource3.default : z3, (i4 & 32) != 0 ? modelPaymentSource3.email : str2, (i4 & 64) != 0 ? modelPaymentSource3.brand : str3, (i4 & 128) != 0 ? modelPaymentSource3.last_4 : str4, (i4 & 256) != 0 ? modelPaymentSource3.expiresMonth : i2, (i4 & 512) != 0 ? modelPaymentSource3.expiresYear : i3);
     }
 
-    /* renamed from: component1, reason: from getter */
+    /* JADX INFO: renamed from: component1, reason: from getter */
     public final int getType() {
         return this.type;
     }
 
-    /* renamed from: component10, reason: from getter */
+    /* JADX INFO: renamed from: component10, reason: from getter */
     public final int getExpiresYear() {
         return this.expiresYear;
     }
 
-    /* renamed from: component2, reason: from getter */
+    /* JADX INFO: renamed from: component2, reason: from getter */
     public final String getId() {
         return this.id;
     }
 
-    /* renamed from: component3, reason: from getter */
+    /* JADX INFO: renamed from: component3, reason: from getter */
     public final boolean getInvalid() {
         return this.invalid;
     }
 
-    /* renamed from: component4, reason: from getter */
+    /* JADX INFO: renamed from: component4, reason: from getter */
     public final ModelBillingAddress getBillingAddress() {
         return this.billingAddress;
     }
 
-    /* renamed from: component5, reason: from getter */
+    /* JADX INFO: renamed from: component5, reason: from getter */
     public final boolean getDefault() {
         return this.default;
     }
 
-    /* renamed from: component6, reason: from getter */
+    /* JADX INFO: renamed from: component6, reason: from getter */
     public final String getEmail() {
         return this.email;
     }
 
-    /* renamed from: component7, reason: from getter */
+    /* JADX INFO: renamed from: component7, reason: from getter */
     public final String getBrand() {
         return this.brand;
     }
 
-    /* renamed from: component8, reason: from getter */
+    /* JADX INFO: renamed from: component8, reason: from getter */
     public final String getLast_4() {
         return this.last_4;
     }
 
-    /* renamed from: component9, reason: from getter */
+    /* JADX INFO: renamed from: component9, reason: from getter */
     public final int getExpiresMonth() {
         return this.expiresMonth;
     }
@@ -147,22 +147,28 @@ public final /* data */ class ModelPaymentSource3 {
     }
 
     /* JADX WARN: Multi-variable type inference failed */
+    /* JADX WARN: Type inference failed for: r1v21 */
+    /* JADX WARN: Type inference failed for: r1v23 */
+    /* JADX WARN: Type inference failed for: r1v4, types: [int] */
+    /* JADX WARN: Type inference failed for: r3v0 */
+    /* JADX WARN: Type inference failed for: r3v1, types: [int] */
+    /* JADX WARN: Type inference failed for: r3v2 */
     public int hashCode() {
         int i = this.type * 31;
         String str = this.id;
         int iHashCode = (i + (str != null ? str.hashCode() : 0)) * 31;
         boolean z2 = this.invalid;
-        int i2 = z2;
-        if (z2 != 0) {
-            i2 = 1;
+        ?? r1 = z2;
+        if (z2) {
+            r1 = 1;
         }
-        int i3 = (iHashCode + i2) * 31;
+        int i2 = (iHashCode + r1) * 31;
         ModelBillingAddress modelBillingAddress = this.billingAddress;
-        int iHashCode2 = (i3 + (modelBillingAddress != null ? modelBillingAddress.hashCode() : 0)) * 31;
+        int iHashCode2 = (i2 + (modelBillingAddress != null ? modelBillingAddress.hashCode() : 0)) * 31;
         boolean z3 = this.default;
-        int i4 = (iHashCode2 + (z3 ? 1 : z3 ? 1 : 0)) * 31;
+        int i3 = (iHashCode2 + (z3 ? 1 : z3)) * 31;
         String str2 = this.email;
-        int iHashCode3 = (i4 + (str2 != null ? str2.hashCode() : 0)) * 31;
+        int iHashCode3 = (i3 + (str2 != null ? str2.hashCode() : 0)) * 31;
         String str3 = this.brand;
         int iHashCode4 = (iHashCode3 + (str3 != null ? str3.hashCode() : 0)) * 31;
         String str4 = this.last_4;

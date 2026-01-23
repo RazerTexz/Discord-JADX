@@ -21,29 +21,29 @@ import java.util.List;
 import p668x.p669a.p672b.p674b.p675a.IMediaSession;
 import p668x.p669a.p672b.p674b.p675a.MediaControllerCompat;
 
+/* JADX INFO: loaded from: classes.dex */
 @RequiresApi(21)
-/* loaded from: classes.dex */
 public class MediaControllerCompat$MediaControllerImplApi21 {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final MediaController f40a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final Object f41b = new Object();
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     @GuardedBy("mLock")
     public final List<MediaControllerCompat> f42c = new ArrayList();
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public HashMap<MediaControllerCompat, BinderC0020a> f43d = new HashMap<>();
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final MediaSessionCompat.Token f44e;
 
     public static class ExtraBinderRequestResultReceiver extends ResultReceiver {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public WeakReference<MediaControllerCompat$MediaControllerImplApi21> f45j;
 
         public ExtraBinderRequestResultReceiver(MediaControllerCompat$MediaControllerImplApi21 mediaControllerCompat$MediaControllerImplApi21) {
@@ -73,44 +73,44 @@ public class MediaControllerCompat$MediaControllerImplApi21 {
         }
     }
 
-    /* renamed from: android.support.v4.media.session.MediaControllerCompat$MediaControllerImplApi21$a */
+    /* JADX INFO: renamed from: android.support.v4.media.session.MediaControllerCompat$MediaControllerImplApi21$a */
     public static class BinderC0020a extends MediaControllerCompat.b {
         public BinderC0020a(MediaControllerCompat mediaControllerCompat) {
             super(mediaControllerCompat);
         }
 
         @Override // p668x.p669a.p672b.p674b.p675a.MediaControllerCompat.b, p668x.p669a.p672b.p674b.p675a.IMediaControllerCallback
-        /* renamed from: U */
+        /* JADX INFO: renamed from: U */
         public void mo34U(CharSequence charSequence) throws RemoteException {
             throw new AssertionError();
         }
 
         @Override // p668x.p669a.p672b.p674b.p675a.MediaControllerCompat.b, p668x.p669a.p672b.p674b.p675a.IMediaControllerCallback
-        /* renamed from: W */
+        /* JADX INFO: renamed from: W */
         public void mo35W() throws RemoteException {
             throw new AssertionError();
         }
 
         @Override // p668x.p669a.p672b.p674b.p675a.MediaControllerCompat.b, p668x.p669a.p672b.p674b.p675a.IMediaControllerCallback
-        /* renamed from: X */
+        /* JADX INFO: renamed from: X */
         public void mo36X(MediaMetadataCompat mediaMetadataCompat) throws RemoteException {
             throw new AssertionError();
         }
 
         @Override // p668x.p669a.p672b.p674b.p675a.MediaControllerCompat.b, p668x.p669a.p672b.p674b.p675a.IMediaControllerCallback
-        /* renamed from: s0 */
+        /* JADX INFO: renamed from: s0 */
         public void mo37s0(ParcelableVolumeInfo parcelableVolumeInfo) throws RemoteException {
             throw new AssertionError();
         }
 
         @Override // p668x.p669a.p672b.p674b.p675a.MediaControllerCompat.b, p668x.p669a.p672b.p674b.p675a.IMediaControllerCallback
-        /* renamed from: y */
+        /* JADX INFO: renamed from: y */
         public void mo38y(Bundle bundle) throws RemoteException {
             throw new AssertionError();
         }
 
         @Override // p668x.p669a.p672b.p674b.p675a.MediaControllerCompat.b, p668x.p669a.p672b.p674b.p675a.IMediaControllerCallback
-        /* renamed from: z */
+        /* JADX INFO: renamed from: z */
         public void mo39z(List<MediaSessionCompat.QueueItem> list) throws RemoteException {
             throw new AssertionError();
         }
@@ -126,7 +126,7 @@ public class MediaControllerCompat$MediaControllerImplApi21 {
     }
 
     @GuardedBy("mLock")
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public void m33a() {
         if (this.f44e.m46b() == null) {
             return;

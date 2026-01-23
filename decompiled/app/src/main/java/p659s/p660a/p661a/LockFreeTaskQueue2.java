@@ -5,49 +5,49 @@ import java.util.concurrent.atomic.AtomicReferenceArray;
 import java.util.concurrent.atomic.AtomicReferenceFieldUpdater;
 import kotlin.jvm.internal.DefaultConstructorMarker;
 
-/* compiled from: LockFreeTaskQueue.kt */
-/* renamed from: s.a.a.m, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: s.a.a.m, reason: use source file name */
+/* JADX INFO: compiled from: LockFreeTaskQueue.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class LockFreeTaskQueue2<E> {
     public volatile Object _next = null;
     public volatile long _state = 0;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final int f27694e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public AtomicReferenceArray f27695f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public final int f27696g;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public final boolean f27697h;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public static final a f27693d = new a(null);
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public static final Symbol3 f27692c = new Symbol3("REMOVE_FROZEN");
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final AtomicReferenceFieldUpdater f27690a = AtomicReferenceFieldUpdater.newUpdater(LockFreeTaskQueue2.class, Object.class, "_next");
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static final AtomicLongFieldUpdater f27691b = AtomicLongFieldUpdater.newUpdater(LockFreeTaskQueue2.class, "_state");
 
-    /* compiled from: LockFreeTaskQueue.kt */
-    /* renamed from: s.a.a.m$a */
+    /* JADX INFO: renamed from: s.a.a.m$a */
+    /* JADX INFO: compiled from: LockFreeTaskQueue.kt */
     public static final class a {
         public a(DefaultConstructorMarker defaultConstructorMarker) {
         }
     }
 
-    /* compiled from: LockFreeTaskQueue.kt */
-    /* renamed from: s.a.a.m$b */
+    /* JADX INFO: renamed from: s.a.a.m$b */
+    /* JADX INFO: compiled from: LockFreeTaskQueue.kt */
     public static final class b {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final int f27698a;
 
         public b(int i) {
@@ -73,7 +73,7 @@ public final class LockFreeTaskQueue2<E> {
     
         return 1;
      */
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
@@ -94,7 +94,7 @@ public final class LockFreeTaskQueue2<E> {
                 if (i4 < 1024 || ((i2 - i) & 1073741823) > (i4 >> 1)) {
                     break;
                 }
-            } else if (f27691b.compareAndSet(this, j, ((-1152921503533105153L) & j) | (((i2 + 1) & 1073741823) << 30))) {
+            } else if (f27691b.compareAndSet(this, j, ((-1152921503533105153L) & j) | (((long) ((i2 + 1) & 1073741823)) << 30))) {
                 this.f27695f.set(i2 & i3, e);
                 LockFreeTaskQueue2<E> lockFreeTaskQueue2M11168d = this;
                 while ((lockFreeTaskQueue2M11168d._state & 1152921504606846976L) != 0) {
@@ -114,7 +114,7 @@ public final class LockFreeTaskQueue2<E> {
         }
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final boolean m11166b() {
         long j;
         do {
@@ -129,14 +129,14 @@ public final class LockFreeTaskQueue2<E> {
         return true;
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final boolean m11167c() {
         long j = this._state;
         return ((int) ((1073741823 & j) >> 0)) == ((int) ((j & 1152921503533105152L) >> 30));
     }
 
     /* JADX WARN: Multi-variable type inference failed */
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final LockFreeTaskQueue2<E> m11168d() {
         long j;
         while (true) {
@@ -176,7 +176,7 @@ public final class LockFreeTaskQueue2<E> {
         }
     }
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final Object m11169e() {
         while (true) {
             long j = this._state;
@@ -199,7 +199,7 @@ public final class LockFreeTaskQueue2<E> {
                 if (obj instanceof b) {
                     return null;
                 }
-                long j2 = ((i + 1) & 1073741823) << 0;
+                long j2 = ((long) ((i + 1) & 1073741823)) << 0;
                 if (f27691b.compareAndSet(this, j, (j & (-1073741824)) | j2)) {
                     this.f27695f.set(this.f27694e & i, null);
                     return obj;

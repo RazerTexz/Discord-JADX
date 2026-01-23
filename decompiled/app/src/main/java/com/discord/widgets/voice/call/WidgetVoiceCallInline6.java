@@ -3,9 +3,9 @@ package com.discord.widgets.voice.call;
 import kotlin.jvm.functions.Function3;
 import p658rx.functions.Func3;
 
-/* compiled from: WidgetVoiceCallInline.kt */
-/* renamed from: com.discord.widgets.voice.call.WidgetVoiceCallInline$sam$rx_functions_Func3$0, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: com.discord.widgets.voice.call.WidgetVoiceCallInline$sam$rx_functions_Func3$0, reason: use source file name */
+/* JADX INFO: compiled from: WidgetVoiceCallInline.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class WidgetVoiceCallInline6 implements Func3 {
     private final /* synthetic */ Function3 function;
 

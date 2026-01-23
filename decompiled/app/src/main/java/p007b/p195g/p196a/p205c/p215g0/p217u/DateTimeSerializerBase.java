@@ -19,9 +19,9 @@ import p007b.p195g.p196a.p205c.p215g0.ContextualSerializer;
 import p007b.p195g.p196a.p205c.p219i0.StdDateFormat;
 import p007b.p195g.p196a.p205c.p221z.BaseSettings;
 
-/* compiled from: DateTimeSerializerBase.java */
-/* renamed from: b.g.a.c.g0.u.l, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.g.a.c.g0.u.l, reason: use source file name */
+/* JADX INFO: compiled from: DateTimeSerializerBase.java */
+/* JADX INFO: loaded from: classes3.dex */
 public abstract class DateTimeSerializerBase<T> extends StdScalarSerializer<T> implements ContextualSerializer {
     public final DateFormat _customFormat;
     public final AtomicReference<DateFormat> _reusedCustomFormat;
@@ -35,7 +35,7 @@ public abstract class DateTimeSerializerBase<T> extends StdScalarSerializer<T> i
     }
 
     @Override // p007b.p195g.p196a.p205c.p215g0.ContextualSerializer
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public JsonSerializer<?> mo1997a(SerializerProvider serializerProvider, BeanProperty beanProperty) throws JsonMappingException {
         TimeZone timeZoneM1602f;
         JsonFormat.d dVarM2074l = m2074l(serializerProvider, beanProperty, this._handledType);
@@ -89,12 +89,12 @@ public abstract class DateTimeSerializerBase<T> extends StdScalarSerializer<T> i
     }
 
     @Override // p007b.p195g.p196a.p205c.JsonSerializer
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public boolean mo2021d(SerializerProvider serializerProvider, T t) {
         return false;
     }
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public boolean m2066p(SerializerProvider serializerProvider) {
         Boolean bool = this._useTimestamp;
         if (bool != null) {
@@ -111,7 +111,7 @@ public abstract class DateTimeSerializerBase<T> extends StdScalarSerializer<T> i
         throw new IllegalArgumentException(sbM833U.toString());
     }
 
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     public void m2067q(Date date, JsonGenerator jsonGenerator, SerializerProvider serializerProvider) throws IOException {
         if (this._customFormat == null) {
             Objects.requireNonNull(serializerProvider);
@@ -131,6 +131,6 @@ public abstract class DateTimeSerializerBase<T> extends StdScalarSerializer<T> i
         this._reusedCustomFormat.compareAndSet(null, andSet);
     }
 
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     public abstract DateTimeSerializerBase<T> mo2060r(Boolean bool, DateFormat dateFormat);
 }

@@ -45,30 +45,30 @@ import p507d0.p592z.p594d.Reflection2;
 import p600f0.p601e0.Util7;
 import p658rx.functions.Action1;
 
-/* compiled from: WidgetGuildRoleSubscriptionTierDesign.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetGuildRoleSubscriptionTierDesign.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetGuildRoleSubscriptionTierDesign extends AppFragment {
     public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetGuildRoleSubscriptionTierDesign.class, "binding", "getBinding()Lcom/discord/databinding/WidgetGuildRoleSubscriptionTierDesignBinding;", 0)};
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private static final String DIALOG_TAG_COLOR_PICKER = "DIALOG_TAG_COLOR_PICKER";
     private static final String INTENT_EXTRA_HIDE_HEADER = "INTENT_EXTRA_HIDE_HEADER";
 
-    /* renamed from: binding$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
 
-    /* renamed from: defaultColor$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: defaultColor$delegate, reason: from kotlin metadata */
     private final Lazy defaultColor;
 
-    /* renamed from: hideHeader$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: hideHeader$delegate, reason: from kotlin metadata */
     private final Lazy hideHeader;
     private final Action1<String> memberBadgeImageSelectedResult;
 
-    /* renamed from: viewModel$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: viewModel$delegate, reason: from kotlin metadata */
     private final Lazy viewModel;
 
-    /* compiled from: WidgetGuildRoleSubscriptionTierDesign.kt */
+    /* JADX INFO: compiled from: WidgetGuildRoleSubscriptionTierDesign.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -91,8 +91,8 @@ public final class WidgetGuildRoleSubscriptionTierDesign extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetGuildRoleSubscriptionTierDesign.kt */
-    /* renamed from: com.discord.widgets.guild_role_subscriptions.tier.create.WidgetGuildRoleSubscriptionTierDesign$onViewBound$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.guild_role_subscriptions.tier.create.WidgetGuildRoleSubscriptionTierDesign$onViewBound$1 */
+    /* JADX INFO: compiled from: WidgetGuildRoleSubscriptionTierDesign.kt */
     public static final class C85031 extends Lambda implements Function0<Unit> {
         public static final C85031 INSTANCE = new C85031();
 
@@ -106,13 +106,13 @@ public final class WidgetGuildRoleSubscriptionTierDesign extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
         }
     }
 
-    /* compiled from: WidgetGuildRoleSubscriptionTierDesign.kt */
-    /* renamed from: com.discord.widgets.guild_role_subscriptions.tier.create.WidgetGuildRoleSubscriptionTierDesign$onViewBound$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.guild_role_subscriptions.tier.create.WidgetGuildRoleSubscriptionTierDesign$onViewBound$2 */
+    /* JADX INFO: compiled from: WidgetGuildRoleSubscriptionTierDesign.kt */
     public static final class C85042 extends Lambda implements Function0<Unit> {
         public C85042() {
             super(0);
@@ -124,14 +124,14 @@ public final class WidgetGuildRoleSubscriptionTierDesign extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             WidgetGuildRoleSubscriptionTierDesign.this.openMediaChooser();
         }
     }
 
-    /* compiled from: WidgetGuildRoleSubscriptionTierDesign.kt */
-    /* renamed from: com.discord.widgets.guild_role_subscriptions.tier.create.WidgetGuildRoleSubscriptionTierDesign$onViewBoundOrOnResume$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.guild_role_subscriptions.tier.create.WidgetGuildRoleSubscriptionTierDesign$onViewBoundOrOnResume$1 */
+    /* JADX INFO: compiled from: WidgetGuildRoleSubscriptionTierDesign.kt */
     public static final class C85051 extends Lambda implements Function1<GuildRoleSubscriptionTierViewModel.ViewState, Unit> {
         public C85051() {
             super(1);
@@ -143,15 +143,15 @@ public final class WidgetGuildRoleSubscriptionTierDesign extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(GuildRoleSubscriptionTierViewModel.ViewState viewState) {
             Intrinsics3.checkNotNullParameter(viewState, "it");
             WidgetGuildRoleSubscriptionTierDesign.access$configureUI(WidgetGuildRoleSubscriptionTierDesign.this, viewState);
         }
     }
 
-    /* compiled from: WidgetGuildRoleSubscriptionTierDesign.kt */
-    /* renamed from: com.discord.widgets.guild_role_subscriptions.tier.create.WidgetGuildRoleSubscriptionTierDesign$setupMemberColor$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.guild_role_subscriptions.tier.create.WidgetGuildRoleSubscriptionTierDesign$setupMemberColor$2 */
+    /* JADX INFO: compiled from: WidgetGuildRoleSubscriptionTierDesign.kt */
     public static final class ViewOnClickListenerC85062 implements View.OnClickListener {
         public final /* synthetic */ int $currentColor;
 

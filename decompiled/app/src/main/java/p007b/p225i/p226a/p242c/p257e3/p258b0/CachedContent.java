@@ -5,34 +5,34 @@ import java.util.ArrayList;
 import java.util.TreeSet;
 import p007b.p100d.p104b.p105a.outline;
 
-/* compiled from: CachedContent.java */
-/* renamed from: b.i.a.c.e3.b0.i, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.e3.b0.i, reason: use source file name */
+/* JADX INFO: compiled from: CachedContent.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class CachedContent {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final int f6471a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final String f6472b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final TreeSet<SimpleCacheSpan> f6473c = new TreeSet<>();
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final ArrayList<a> f6474d = new ArrayList<>();
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public DefaultContentMetadata f6475e;
 
-    /* compiled from: CachedContent.java */
-    /* renamed from: b.i.a.c.e3.b0.i$a */
+    /* JADX INFO: renamed from: b.i.a.c.e3.b0.i$a */
+    /* JADX INFO: compiled from: CachedContent.java */
     public static final class a {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final long f6476a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final long f6477b;
 
         public a(long j, long j2) {
@@ -48,7 +48,7 @@ public final class CachedContent {
     }
 
     /* JADX WARN: Removed duplicated region for block: B:9:0x0021  */
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */

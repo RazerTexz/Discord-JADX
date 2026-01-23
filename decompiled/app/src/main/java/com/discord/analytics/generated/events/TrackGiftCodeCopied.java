@@ -8,8 +8,8 @@ import com.discord.analytics.generated.traits.TrackStoreSkuMetadata;
 import com.discord.analytics.generated.traits.TrackStoreSkuMetadata2;
 import com.discord.api.science.AnalyticsSchema;
 
-/* compiled from: TrackGiftCodeCopied.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: TrackGiftCodeCopied.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class TrackGiftCodeCopied implements AnalyticsSchema, TrackBase2, TrackStoreSkuMetadata2, TrackGiftCodeMetadata2 {
     private final transient String analyticsSchemaTypeName = "gift_code_copied";
     private TrackBase trackBase;
@@ -17,7 +17,7 @@ public final class TrackGiftCodeCopied implements AnalyticsSchema, TrackBase2, T
     private TrackStoreSkuMetadata trackStoreSkuMetadata;
 
     @Override // com.discord.api.science.AnalyticsSchema
-    /* renamed from: d, reason: from getter */
+    /* JADX INFO: renamed from: d, reason: from getter */
     public String getAnalyticsSchemaTypeName() {
         return this.analyticsSchemaTypeName;
     }

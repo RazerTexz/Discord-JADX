@@ -2,18 +2,18 @@ package p007b.p225i.p226a.p288f.p313h.p323j;
 
 import p007b.p100d.p104b.p105a.outline;
 
-/* renamed from: b.i.a.f.h.j.m0 */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.h.j.m0 */
+/* JADX INFO: loaded from: classes3.dex */
 public class C3529m0 extends AbstractC3509e {
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public static C3529m0 f9761l;
 
     public C3529m0(C3515g c3515g) {
         super(c3515g);
     }
 
-    /* renamed from: R */
+    /* JADX INFO: renamed from: R */
     public static String m4464R(Object obj) {
         if (obj == null) {
             return null;
@@ -39,14 +39,14 @@ public class C3529m0 extends AbstractC3509e {
     }
 
     @Override // p007b.p225i.p226a.p288f.p313h.p323j.AbstractC3509e
-    /* renamed from: L */
+    /* JADX INFO: renamed from: L */
     public final void mo4414L() {
         synchronized (C3529m0.class) {
             f9761l = this;
         }
     }
 
-    /* renamed from: O */
+    /* JADX INFO: renamed from: O */
     public final void m4465O(C3523j0 c3523j0, String str) {
         m4439x(str.length() != 0 ? "Discarding hit. ".concat(str) : new String("Discarding hit. "), c3523j0.toString());
     }

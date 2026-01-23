@@ -4,9 +4,9 @@ import com.discord.utilities.captcha.CaptchaHelper;
 import com.discord.utilities.error.Error;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: WidgetCaptcha.kt */
-/* renamed from: com.discord.widgets.captcha.WidgetCaptchaKt, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.captcha.WidgetCaptchaKt, reason: use source file name */
+/* JADX INFO: compiled from: WidgetCaptcha.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetCaptcha4 {
     public static final boolean isCaptchaError(Error error) {
         Intrinsics3.checkNotNullParameter(error, "$this$isCaptchaError");

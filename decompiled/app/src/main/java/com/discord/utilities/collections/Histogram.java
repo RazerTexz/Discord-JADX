@@ -11,8 +11,8 @@ import p001a0.p002a.p003a.C0002b;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p580t.Collections2;
 
-/* compiled from: Histogram.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: Histogram.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class Histogram {
     private final int bucketLimit;
     private long count;
@@ -23,7 +23,7 @@ public final class Histogram {
     private final int precision;
     private long total;
 
-    /* compiled from: Histogram.kt */
+    /* JADX INFO: compiled from: Histogram.kt */
     public static final /* data */ class Report {
         private final double average;
         private final int bucketCount;
@@ -53,52 +53,52 @@ public final class Histogram {
             return report.copy((i2 & 1) != 0 ? report.min : j, (i2 & 2) != 0 ? report.max : j2, (i2 & 4) != 0 ? report.average : d, (i2 & 8) != 0 ? report.count : j3, (i2 & 16) != 0 ? report.bucketCount : i, (i2 & 32) != 0 ? report.percentile25 : j4, (i2 & 64) != 0 ? report.percentile50 : j5, (i2 & 128) != 0 ? report.percentile75 : j6, (i2 & 256) != 0 ? report.percentile90 : j7, (i2 & 512) != 0 ? report.percentile95 : j8);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final long getMin() {
             return this.min;
         }
 
-        /* renamed from: component10, reason: from getter */
+        /* JADX INFO: renamed from: component10, reason: from getter */
         public final long getPercentile95() {
             return this.percentile95;
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final long getMax() {
             return this.max;
         }
 
-        /* renamed from: component3, reason: from getter */
+        /* JADX INFO: renamed from: component3, reason: from getter */
         public final double getAverage() {
             return this.average;
         }
 
-        /* renamed from: component4, reason: from getter */
+        /* JADX INFO: renamed from: component4, reason: from getter */
         public final long getCount() {
             return this.count;
         }
 
-        /* renamed from: component5, reason: from getter */
+        /* JADX INFO: renamed from: component5, reason: from getter */
         public final int getBucketCount() {
             return this.bucketCount;
         }
 
-        /* renamed from: component6, reason: from getter */
+        /* JADX INFO: renamed from: component6, reason: from getter */
         public final long getPercentile25() {
             return this.percentile25;
         }
 
-        /* renamed from: component7, reason: from getter */
+        /* JADX INFO: renamed from: component7, reason: from getter */
         public final long getPercentile50() {
             return this.percentile50;
         }
 
-        /* renamed from: component8, reason: from getter */
+        /* JADX INFO: renamed from: component8, reason: from getter */
         public final long getPercentile75() {
             return this.percentile75;
         }
 
-        /* renamed from: component9, reason: from getter */
+        /* JADX INFO: renamed from: component9, reason: from getter */
         public final long getPercentile90() {
             return this.percentile90;
         }
@@ -226,7 +226,7 @@ public final class Histogram {
             }
             j += jLongValue3;
             Integer num3 = num2;
-            double d = (j / this.count) * 100;
+            double d = (j / this.count) * ((double) 100);
             while ((!arrayDeque.isEmpty()) && ((Number) arrayDeque.get(0)).doubleValue() <= d) {
                 linkedHashMap.put(Integer.valueOf(((Number) arrayDeque.removeFirst()).intValue()), Long.valueOf(jLongValue2));
             }
@@ -261,9 +261,9 @@ public final class Histogram {
     @VisibleForTesting
     public final long roundValue$utils_release(long value) {
         int i = this.precision;
-        long j = value % i;
+        long j = value % ((long) i);
         long j2 = value - j;
-        return j <= ((long) this.halfPrecision) ? j2 : j2 + i;
+        return j <= ((long) this.halfPrecision) ? j2 : j2 + ((long) i);
     }
 
     public /* synthetic */ Histogram(int i, int i2, int i3, DefaultConstructorMarker defaultConstructorMarker) {

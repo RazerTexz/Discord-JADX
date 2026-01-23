@@ -11,12 +11,12 @@ import p007b.p008a.p027k.Format;
 import p007b.p008a.p027k.p028e.ClickableSpan2;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: HookNode.kt */
-/* renamed from: b.a.k.f.c, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.a.k.f.c, reason: use source file name */
+/* JADX INFO: compiled from: HookNode.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class HookNode2 extends Node.C5655a<RenderContext> {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final String f1500a;
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */

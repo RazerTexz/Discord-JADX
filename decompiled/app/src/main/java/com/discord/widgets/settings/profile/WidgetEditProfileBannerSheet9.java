@@ -5,9 +5,9 @@ import kotlin.jvm.functions.Function0;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetEditProfileBannerSheet.kt */
-/* renamed from: com.discord.widgets.settings.profile.WidgetEditProfileBannerSheet$viewModel$2, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.settings.profile.WidgetEditProfileBannerSheet$viewModel$2, reason: use source file name */
+/* JADX INFO: compiled from: WidgetEditProfileBannerSheet.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetEditProfileBannerSheet9 extends Lambda implements Function0<EditProfileBannerSheetViewModel> {
     public final /* synthetic */ WidgetEditProfileBannerSheet this$0;
 

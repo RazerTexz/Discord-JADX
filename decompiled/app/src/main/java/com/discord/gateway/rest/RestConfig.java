@@ -8,8 +8,8 @@ import p007b.p100d.p104b.p105a.outline;
 import p507d0.p580t.Collections2;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: RestConfig.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: RestConfig.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class RestConfig {
     private final String baseUrl;
     private final RestInterceptors2.HeadersProvider headersProvider;
@@ -39,12 +39,12 @@ public final /* data */ class RestConfig {
         return restConfig.copy(str, headersProvider, list);
     }
 
-    /* renamed from: component1, reason: from getter */
+    /* JADX INFO: renamed from: component1, reason: from getter */
     public final String getBaseUrl() {
         return this.baseUrl;
     }
 
-    /* renamed from: component2, reason: from getter */
+    /* JADX INFO: renamed from: component2, reason: from getter */
     public final RestInterceptors2.HeadersProvider getHeadersProvider() {
         return this.headersProvider;
     }

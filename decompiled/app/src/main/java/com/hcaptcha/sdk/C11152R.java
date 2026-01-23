@@ -1,10 +1,10 @@
 package com.hcaptcha.sdk;
 
-/* renamed from: com.hcaptcha.sdk.R */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: com.hcaptcha.sdk.R */
+/* JADX INFO: loaded from: classes3.dex */
 public final class C11152R {
 
-    /* renamed from: com.hcaptcha.sdk.R$a */
+    /* JADX INFO: renamed from: com.hcaptcha.sdk.R$a */
     public static final class a {
         public static final int accessibility_action_clickable_span = 2131361830;
         public static final int accessibility_custom_action_0 = 2131361831;
@@ -98,7 +98,7 @@ public final class C11152R {
         public static final int notification_main_column_container = 2131364559;
         public static final int off = 2131364616;
 
-        /* renamed from: on */
+        /* JADX INFO: renamed from: on */
         public static final int f21693on = 2131364620;
         public static final int parentPanel = 2131364665;
         public static final int progress_circular = 2131364859;
@@ -150,7 +150,7 @@ public final class C11152R {
         public static final int unchecked = 2131365926;
         public static final int uniform = 2131365931;
 
-        /* renamed from: up */
+        /* JADX INFO: renamed from: up */
         public static final int f21694up = 2131365940;
         public static final int webView = 2131366197;
         public static final int wrap_content = 2131366286;
@@ -159,7 +159,7 @@ public final class C11152R {
         }
     }
 
-    /* renamed from: com.hcaptcha.sdk.R$b */
+    /* JADX INFO: renamed from: com.hcaptcha.sdk.R$b */
     public static final class b {
         public static final int abc_action_bar_title_item = 2131558400;
         public static final int abc_action_bar_up_container = 2131558401;
@@ -206,7 +206,7 @@ public final class C11152R {
         }
     }
 
-    /* renamed from: com.hcaptcha.sdk.R$c */
+    /* JADX INFO: renamed from: com.hcaptcha.sdk.R$c */
     public static final class c {
         public static final int AlertDialog_AppCompat = 2131951617;
         public static final int AlertDialog_AppCompat_Light = 2131951618;

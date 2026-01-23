@@ -4,12 +4,12 @@ import com.facebook.common.internal.Supplier;
 import com.facebook.imagepipeline.cache.MemoryCacheParams;
 import java.util.concurrent.TimeUnit;
 
-/* compiled from: DefaultEncodedMemoryCacheParamsSupplier.java */
-/* renamed from: b.f.j.c.o, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.f.j.c.o, reason: use source file name */
+/* JADX INFO: compiled from: DefaultEncodedMemoryCacheParamsSupplier.java */
+/* JADX INFO: loaded from: classes.dex */
 public class DefaultEncodedMemoryCacheParamsSupplier implements Supplier<MemoryCacheParams> {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final long f3685a = TimeUnit.MINUTES.toMillis(5);
 
     @Override // com.facebook.common.internal.Supplier

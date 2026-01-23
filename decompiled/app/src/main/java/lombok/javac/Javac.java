@@ -29,7 +29,7 @@ import lombok.core.JavaIdentifiers;
 import lombok.javac.JavacTreeMaker;
 import lombok.permit.Permit;
 
-/* loaded from: discord-126021.apk:lombok/javac/Javac.SCL.lombok */
+/* JADX INFO: loaded from: discord-126021.apk:lombok/javac/Javac.SCL.lombok */
 public class Javac {
     private static final Pattern VERSION_PARSER = Pattern.compile("^(\\d{1,6})\\.?(\\d{1,6})?.*$");
     private static final Pattern SOURCE_PARSER = Pattern.compile("^JDK(\\d{1,6})_?(\\d{1,6})?.*$");
@@ -305,7 +305,7 @@ public class Javac {
         }
     }
 
-    /* loaded from: discord-126021.apk:lombok/javac/Javac$JavadocOps_8.SCL.lombok */
+    /* JADX INFO: loaded from: discord-126021.apk:lombok/javac/Javac$JavadocOps_8.SCL.lombok */
     private static class JavadocOps_8 {
         private JavadocOps_8() {
         }
@@ -325,8 +325,8 @@ public class Javac {
             dct.putComment(node, newCmt);
         }
 
-        /* renamed from: lombok.javac.Javac$JavadocOps_8$1 */
-        /* loaded from: discord-126021.apk:lombok/javac/Javac$JavadocOps_8$1.SCL.lombok */
+        /* JADX INFO: renamed from: lombok.javac.Javac$JavadocOps_8$1 */
+        /* JADX INFO: loaded from: discord-126021.apk:lombok/javac/Javac$JavadocOps_8$1.SCL.lombok */
         class C128871 implements Tokens.Comment {
             private final /* synthetic */ String val$text;
             private final /* synthetic */ JCTree val$field;
@@ -387,7 +387,7 @@ public class Javac {
         }
     }
 
-    public static int getEndPosition(JCDiagnostic.DiagnosticPosition pos, JCTree.JCCompilationUnit top) throws IllegalArgumentException {
+    public static int getEndPosition(JCDiagnostic.DiagnosticPosition pos, JCTree.JCCompilationUnit top) {
         try {
             Object endPositions = JCCOMPILATIONUNIT_ENDPOSITIONS.get(top);
             return ((Integer) getEndPosition.invoke(pos, endPositions)).intValue();
@@ -398,7 +398,7 @@ public class Javac {
         }
     }
 
-    public static void storeEnd(JCTree tree, int pos, JCTree.JCCompilationUnit top) throws IllegalArgumentException {
+    public static void storeEnd(JCTree tree, int pos, JCTree.JCCompilationUnit top) {
         try {
             Object endPositions = JCCOMPILATIONUNIT_ENDPOSITIONS.get(top);
             storeEnd.invoke(endPositions, tree, Integer.valueOf(pos));
@@ -443,7 +443,7 @@ public class Javac {
         }
     }
 
-    /* loaded from: discord-126021.apk:lombok/javac/Javac$JCNoType.SCL.lombok */
+    /* JADX INFO: loaded from: discord-126021.apk:lombok/javac/Javac$JCNoType.SCL.lombok */
     private static class JCNoType extends Type implements NoType {
         public JCNoType(int tag) {
             super(tag, (Symbol.TypeSymbol) null);

@@ -6,8 +6,8 @@ import kotlin.jvm.functions.Function1;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetGlobalSearchModel.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: WidgetGlobalSearchModel.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class WidgetGlobalSearchModel$Companion$create$filteredResults$10 extends Lambda implements Function1<Channel, Boolean> {
     public static final WidgetGlobalSearchModel$Companion$create$filteredResults$10 INSTANCE = new WidgetGlobalSearchModel$Companion$create$filteredResults$10();
 
@@ -20,7 +20,7 @@ public final class WidgetGlobalSearchModel$Companion$create$filteredResults$10 e
         return Boolean.valueOf(invoke2(channel));
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final boolean invoke2(Channel channel) {
         Intrinsics3.checkNotNullParameter(channel, "it");
         return ChannelUtils.m7671F(channel);

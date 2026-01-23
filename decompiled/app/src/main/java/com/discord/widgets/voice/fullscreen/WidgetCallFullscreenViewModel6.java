@@ -4,9 +4,9 @@ import kotlin.Unit;
 import kotlin.jvm.functions.Function1;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetCallFullscreenViewModel.kt */
-/* renamed from: com.discord.widgets.voice.fullscreen.WidgetCallFullscreenViewModel$videoPlayerIdleDetectorHeader$1, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: com.discord.widgets.voice.fullscreen.WidgetCallFullscreenViewModel$videoPlayerIdleDetectorHeader$1, reason: use source file name */
+/* JADX INFO: compiled from: WidgetCallFullscreenViewModel.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class WidgetCallFullscreenViewModel6 extends Lambda implements Function1<Boolean, Unit> {
     public final /* synthetic */ WidgetCallFullscreenViewModel this$0;
 

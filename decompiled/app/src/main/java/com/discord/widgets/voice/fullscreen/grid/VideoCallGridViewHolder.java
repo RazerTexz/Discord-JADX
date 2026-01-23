@@ -33,11 +33,11 @@ import p007b.p008a.p062y.PileView2;
 import p507d0.p580t.Iterables2;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: VideoCallGridViewHolder.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: VideoCallGridViewHolder.kt */
+/* JADX INFO: loaded from: classes.dex */
 public abstract class VideoCallGridViewHolder extends RecyclerView.ViewHolder {
 
-    /* compiled from: VideoCallGridViewHolder.kt */
+    /* JADX INFO: compiled from: VideoCallGridViewHolder.kt */
     public static final class EmbeddedActivity extends VideoCallGridViewHolder {
         private final VideoCallGridItemEmbeddedActivityBinding binding;
         private final MGImages.DistinctChangeDetector distinctChangeDetector;
@@ -103,7 +103,7 @@ public abstract class VideoCallGridViewHolder extends RecyclerView.ViewHolder {
         }
     }
 
-    /* compiled from: VideoCallGridViewHolder.kt */
+    /* JADX INFO: compiled from: VideoCallGridViewHolder.kt */
     public static final class UserOrStream extends VideoCallGridViewHolder {
         private final VideoCallParticipantView videoCallParticipantView;
 

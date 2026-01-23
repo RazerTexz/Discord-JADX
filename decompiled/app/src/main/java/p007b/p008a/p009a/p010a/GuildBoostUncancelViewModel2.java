@@ -5,12 +5,12 @@ import p007b.p008a.p009a.p010a.GuildBoostUncancelViewModel3;
 import p507d0.p592z.p594d.Intrinsics3;
 import p637j0.p641k.Func1;
 
-/* compiled from: GuildBoostUncancelViewModel.kt */
-/* renamed from: b.a.a.a.j, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.a.a.a.j, reason: use source file name */
+/* JADX INFO: compiled from: GuildBoostUncancelViewModel.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class GuildBoostUncancelViewModel2<T, R> implements Func1<StoreSubscriptions.SubscriptionsState, GuildBoostUncancelViewModel3.b> {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static final GuildBoostUncancelViewModel2 f211j = new GuildBoostUncancelViewModel2();
 
     @Override // p637j0.p641k.Func1

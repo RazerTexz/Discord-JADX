@@ -51,7 +51,7 @@ import java.util.Comparator;
 import java.util.List;
 import p007b.p100d.p104b.p105a.outline;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class ViewPager extends ViewGroup {
     private static final int CLOSE_ENOUGH = 2;
     private static final boolean DEBUG = false;
@@ -131,20 +131,20 @@ public class ViewPager extends ViewGroup {
     private static final Interpolator sInterpolator = new InterpolatorC06892();
     private static final ViewPositionComparator sPositionComparator = new ViewPositionComparator();
 
-    /* renamed from: androidx.viewpager.widget.ViewPager$1 */
+    /* JADX INFO: renamed from: androidx.viewpager.widget.ViewPager$1 */
     public static class C06881 implements Comparator<ItemInfo> {
         @Override // java.util.Comparator
         public /* bridge */ /* synthetic */ int compare(ItemInfo itemInfo, ItemInfo itemInfo2) {
             return compare2(itemInfo, itemInfo2);
         }
 
-        /* renamed from: compare, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: compare, reason: avoid collision after fix types in other method */
         public int compare2(ItemInfo itemInfo, ItemInfo itemInfo2) {
             return itemInfo.position - itemInfo2.position;
         }
     }
 
-    /* renamed from: androidx.viewpager.widget.ViewPager$2 */
+    /* JADX INFO: renamed from: androidx.viewpager.widget.ViewPager$2 */
     public static class InterpolatorC06892 implements Interpolator {
         @Override // android.animation.TimeInterpolator
         public float getInterpolation(float f) {
@@ -153,7 +153,7 @@ public class ViewPager extends ViewGroup {
         }
     }
 
-    /* renamed from: androidx.viewpager.widget.ViewPager$3 */
+    /* JADX INFO: renamed from: androidx.viewpager.widget.ViewPager$3 */
     public class RunnableC06903 implements Runnable {
         public RunnableC06903() {
         }
@@ -165,7 +165,7 @@ public class ViewPager extends ViewGroup {
         }
     }
 
-    /* renamed from: androidx.viewpager.widget.ViewPager$4 */
+    /* JADX INFO: renamed from: androidx.viewpager.widget.ViewPager$4 */
     public class C06914 implements OnApplyWindowInsetsListener {
         private final Rect mTempRect = new Rect();
 
@@ -304,7 +304,7 @@ public class ViewPager extends ViewGroup {
         public ClassLoader loader;
         public int position;
 
-        /* renamed from: androidx.viewpager.widget.ViewPager$SavedState$1 */
+        /* JADX INFO: renamed from: androidx.viewpager.widget.ViewPager$SavedState$1 */
         public static class C06921 implements Parcelable.ClassLoaderCreator<SavedState> {
             @Override // android.os.Parcelable.Creator
             public /* bridge */ /* synthetic */ Object createFromParcel(Parcel parcel) {
@@ -385,7 +385,7 @@ public class ViewPager extends ViewGroup {
             return compare2(view, view2);
         }
 
-        /* renamed from: compare, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: compare, reason: avoid collision after fix types in other method */
         public int compare2(View view, View view2) {
             LayoutParams layoutParams = (LayoutParams) view.getLayoutParams();
             LayoutParams layoutParams2 = (LayoutParams) view2.getLayoutParams();

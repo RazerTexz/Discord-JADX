@@ -5,12 +5,12 @@ import androidx.annotation.NonNull;
 import androidx.viewbinding.ViewBinding;
 import com.discord.views.calls.VideoCallParticipantView;
 
-/* compiled from: VideoCallGridItemBinding.java */
-/* renamed from: b.a.i.w1, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.a.i.w1, reason: use source file name */
+/* JADX INFO: compiled from: VideoCallGridItemBinding.java */
+/* JADX INFO: loaded from: classes.dex */
 public final class VideoCallGridItemBinding implements ViewBinding {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     @NonNull
     public final VideoCallParticipantView f1338a;
 

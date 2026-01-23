@@ -1,20 +1,20 @@
 package p637j0.p642l.p647e;
 
-/* compiled from: OpenHashSet.java */
-/* renamed from: j0.l.e.g, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: j0.l.e.g, reason: use source file name */
+/* JADX INFO: compiled from: OpenHashSet.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class OpenHashSet<T> {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public int f27277a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public int f27278b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public int f27279c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public T[] f27280d;
 
     public OpenHashSet() {
@@ -24,13 +24,13 @@ public final class OpenHashSet<T> {
         this.f27280d = (T[]) new Object[iM10823b];
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static int m10814b(int i) {
         int i2 = i * (-1640531527);
         return i2 ^ (i2 >>> 16);
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public boolean m10815a(T t) {
         T t2;
         T[] tArr = this.f27280d;
@@ -82,7 +82,7 @@ public final class OpenHashSet<T> {
         return true;
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public boolean m10816c(int i, T[] tArr, int i2) {
         int i3;
         T t;

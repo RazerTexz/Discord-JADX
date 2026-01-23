@@ -4,27 +4,27 @@ import java.io.IOException;
 import java.io.InputStream;
 import p007b.p085c.p086a.p087a0.AnimatableValueParser;
 
-/* compiled from: DataSourceInputStream.java */
-/* renamed from: b.i.a.c.e3.m, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.e3.m, reason: use source file name */
+/* JADX INFO: compiled from: DataSourceInputStream.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class DataSourceInputStream extends InputStream {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final DataSource3 f6536j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final DataSpec f6537k;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public long f6541o;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public boolean f6539m = false;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public boolean f6540n = false;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final byte[] f6538l = new byte[1];
 
     public DataSourceInputStream(DataSource3 dataSource3, DataSpec dataSpec) {
@@ -65,7 +65,7 @@ public final class DataSourceInputStream extends InputStream {
         if (i3 == -1) {
             return -1;
         }
-        this.f6541o += i3;
+        this.f6541o += (long) i3;
         return i3;
     }
 }

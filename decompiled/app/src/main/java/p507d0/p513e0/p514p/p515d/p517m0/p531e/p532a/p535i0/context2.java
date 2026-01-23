@@ -22,75 +22,75 @@ import p507d0.p513e0.p514p.p515d.p517m0.p567n.p568l1.NewKotlinTypeChecker;
 import p507d0.p513e0.p514p.p515d.p517m0.p576p.JavaTypeEnhancementState;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: context.kt */
-/* renamed from: d0.e0.p.d.m0.e.a.i0.b, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.e.a.i0.b, reason: use source file name */
+/* JADX INFO: compiled from: context.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class context2 {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final StorageManager f23281a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final JavaClassFinder f23282b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final KotlinClassFinder f23283c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final DeserializedDescriptorResolver f23284d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final SignaturePropagator f23285e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final ErrorReporter f23286f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public final JavaResolverCache f23287g;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public final JavaPropertyInitializerEvaluator f23288h;
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public final SamConversionResolver f23289i;
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final JavaSourceElementFactory2 f23290j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final ModuleClassResolver f23291k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final PackagePartProvider f23292l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public final SupertypeLoopChecker f23293m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public final LookupTracker f23294n;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public final ModuleDescriptor2 f23295o;
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public final ReflectionTypes f23296p;
 
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     public final AnnotationTypeQualifierResolver f23297q;
 
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     public final signatureEnhancement f23298r;
 
-    /* renamed from: s */
+    /* JADX INFO: renamed from: s */
     public final JavaClassesTracker f23299s;
 
-    /* renamed from: t */
+    /* JADX INFO: renamed from: t */
     public final context3 f23300t;
 
-    /* renamed from: u */
+    /* JADX INFO: renamed from: u */
     public final NewKotlinTypeChecker f23301u;
 
-    /* renamed from: v */
+    /* JADX INFO: renamed from: v */
     public final JavaTypeEnhancementState f23302v;
 
     public context2(StorageManager storageManager, JavaClassFinder javaClassFinder, KotlinClassFinder kotlinClassFinder, DeserializedDescriptorResolver deserializedDescriptorResolver, SignaturePropagator signaturePropagator, ErrorReporter errorReporter, JavaResolverCache javaResolverCache, JavaPropertyInitializerEvaluator javaPropertyInitializerEvaluator, SamConversionResolver samConversionResolver, JavaSourceElementFactory2 javaSourceElementFactory2, ModuleClassResolver moduleClassResolver, PackagePartProvider packagePartProvider, SupertypeLoopChecker supertypeLoopChecker, LookupTracker lookupTracker, ModuleDescriptor2 moduleDescriptor2, ReflectionTypes reflectionTypes, AnnotationTypeQualifierResolver annotationTypeQualifierResolver, signatureEnhancement signatureenhancement, JavaClassesTracker javaClassesTracker, context3 context3Var, NewKotlinTypeChecker newKotlinTypeChecker, JavaTypeEnhancementState javaTypeEnhancementState) {

@@ -31,7 +31,7 @@ import java.util.Collections;
 import java.util.concurrent.ConcurrentHashMap;
 import p007b.p100d.p104b.p105a.outline;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class AppCompatTextViewAutoSizeHelper {
     private static final int DEFAULT_AUTO_SIZE_GRANULARITY_IN_PX = 1;
     private static final int DEFAULT_AUTO_SIZE_MAX_TEXT_SIZE_IN_SP = 112;
@@ -400,7 +400,7 @@ public class AppCompatTextViewAutoSizeHelper {
         return supportsAutoSizeText() && this.mAutoSizeTextType != 0;
     }
 
-    public void loadFromAttributes(@Nullable AttributeSet attributeSet, int i) throws Resources.NotFoundException, IllegalArgumentException {
+    public void loadFromAttributes(@Nullable AttributeSet attributeSet, int i) {
         int resourceId;
         Context context = this.mContext;
         int[] iArr = C0051R.styleable.AppCompatTextView;
@@ -487,7 +487,7 @@ public class AppCompatTextViewAutoSizeHelper {
     }
 
     @RestrictTo({RestrictTo.Scope.LIBRARY_GROUP_PREFIX})
-    public void setAutoSizeTextTypeWithDefaults(int i) throws IllegalArgumentException {
+    public void setAutoSizeTextTypeWithDefaults(int i) {
         if (supportsAutoSizeText()) {
             if (i == 0) {
                 clearAutoSizeConfiguration();

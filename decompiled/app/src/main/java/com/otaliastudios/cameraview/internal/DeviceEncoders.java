@@ -1,6 +1,6 @@
 package com.otaliastudios.cameraview.internal;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public class DeviceEncoders {
 
     public class AudioException extends RuntimeException {

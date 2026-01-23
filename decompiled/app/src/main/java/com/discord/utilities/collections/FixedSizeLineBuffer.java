@@ -5,8 +5,8 @@ import kotlin.collections.ArrayDeque;
 import p507d0.p580t._Collections;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: FixedSizeLineBuffer.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: FixedSizeLineBuffer.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class FixedSizeLineBuffer {
     private final int maxCharacterCount;
     private int outputLength;

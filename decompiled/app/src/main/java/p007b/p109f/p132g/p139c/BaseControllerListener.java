@@ -3,9 +3,9 @@ package p007b.p109f.p132g.p139c;
 import android.graphics.drawable.Animatable;
 import com.facebook.drawee.controller.ControllerListener;
 
-/* compiled from: BaseControllerListener.java */
-/* renamed from: b.f.g.c.c, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.f.g.c.c, reason: use source file name */
+/* JADX INFO: compiled from: BaseControllerListener.java */
+/* JADX INFO: loaded from: classes.dex */
 public class BaseControllerListener<INFO> implements ControllerListener<INFO> {
     private static final ControllerListener<Object> NO_OP_LISTENER = new BaseControllerListener();
 

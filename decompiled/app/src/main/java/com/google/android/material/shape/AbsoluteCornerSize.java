@@ -4,7 +4,7 @@ import android.graphics.RectF;
 import androidx.annotation.NonNull;
 import java.util.Arrays;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public final class AbsoluteCornerSize implements CornerSize {
     private final float size;
 

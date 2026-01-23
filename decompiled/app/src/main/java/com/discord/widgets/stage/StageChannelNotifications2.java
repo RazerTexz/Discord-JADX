@@ -3,9 +3,9 @@ package com.discord.widgets.stage;
 import kotlin.jvm.functions.Function0;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: StageChannelNotifications.kt */
-/* renamed from: com.discord.widgets.stage.StageChannelNotifications$Companion$INSTANCE$2, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.stage.StageChannelNotifications$Companion$INSTANCE$2, reason: use source file name */
+/* JADX INFO: compiled from: StageChannelNotifications.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class StageChannelNotifications2 extends Lambda implements Function0<StageChannelNotifications> {
     public static final StageChannelNotifications2 INSTANCE = new StageChannelNotifications2();
 

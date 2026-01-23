@@ -47,32 +47,32 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p658rx.functions.Action0;
 import p658rx.functions.Action1;
 
-/* compiled from: CheckedSetting.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: CheckedSetting.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class CheckedSetting extends RelativeLayout implements Checkable {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static final /* synthetic */ int f19010j = 0;
 
-    /* renamed from: k, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: k, reason: from kotlin metadata */
     public Action1<Boolean> checkedListener;
 
-    /* renamed from: l, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: l, reason: from kotlin metadata */
     public InterfaceC7067b binding;
 
-    /* compiled from: CheckedSetting.kt */
+    /* JADX INFO: compiled from: CheckedSetting.kt */
     public enum ViewType {
         CHECK,
         RADIO,
         SWITCH;
 
 
-        /* renamed from: Companion, reason: from kotlin metadata */
+        /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
         public static final Companion INSTANCE = new Companion(null);
         private static final ViewType[] VALUES = values();
 
-        /* compiled from: CheckedSetting.kt */
-        /* renamed from: com.discord.views.CheckedSetting$ViewType$a, reason: from kotlin metadata */
+        /* JADX INFO: renamed from: com.discord.views.CheckedSetting$ViewType$a, reason: from kotlin metadata */
+        /* JADX INFO: compiled from: CheckedSetting.kt */
         public static final class Companion {
             public Companion(DefaultConstructorMarker defaultConstructorMarker) {
             }
@@ -83,15 +83,15 @@ public final class CheckedSetting extends RelativeLayout implements Checkable {
         }
     }
 
-    /* compiled from: java-style lambda group */
-    /* renamed from: com.discord.views.CheckedSetting$a */
-    /* loaded from: classes.dex */
+    /* JADX INFO: renamed from: com.discord.views.CheckedSetting$a */
+    /* JADX INFO: compiled from: java-style lambda group */
+    /* JADX INFO: loaded from: classes.dex */
     public static final class ViewOnClickListenerC7066a implements View.OnClickListener {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public final /* synthetic */ int f19013j;
 
-        /* renamed from: k */
+        /* JADX INFO: renamed from: k */
         public final /* synthetic */ Object f19014k;
 
         public ViewOnClickListenerC7066a(int i, Object obj) {
@@ -113,18 +113,18 @@ public final class CheckedSetting extends RelativeLayout implements Checkable {
         }
     }
 
-    /* compiled from: CheckedSetting.kt */
-    /* renamed from: com.discord.views.CheckedSetting$b */
+    /* JADX INFO: renamed from: com.discord.views.CheckedSetting$b */
+    /* JADX INFO: compiled from: CheckedSetting.kt */
     public interface InterfaceC7067b {
 
-        /* compiled from: CheckedSetting.kt */
-        /* renamed from: com.discord.views.CheckedSetting$b$a */
+        /* JADX INFO: renamed from: com.discord.views.CheckedSetting$b$a */
+        /* JADX INFO: compiled from: CheckedSetting.kt */
         public static final class a extends c {
 
-            /* renamed from: e */
+            /* JADX INFO: renamed from: e */
             public final ConstraintLayout f19015e;
 
-            /* renamed from: f */
+            /* JADX INFO: renamed from: f */
             public final MaterialCheckBox f19016f;
 
             /* JADX WARN: Illegal instructions before constructor call */
@@ -142,26 +142,26 @@ public final class CheckedSetting extends RelativeLayout implements Checkable {
             }
 
             @Override // com.discord.views.CheckedSetting.InterfaceC7067b
-            /* renamed from: b */
+            /* JADX INFO: renamed from: b */
             public View mo8532b() {
                 return this.f19015e;
             }
 
             @Override // com.discord.views.CheckedSetting.InterfaceC7067b
-            /* renamed from: c */
+            /* JADX INFO: renamed from: c */
             public CompoundButton mo8533c() {
                 return this.f19016f;
             }
         }
 
-        /* compiled from: CheckedSetting.kt */
-        /* renamed from: com.discord.views.CheckedSetting$b$b */
+        /* JADX INFO: renamed from: com.discord.views.CheckedSetting$b$b */
+        /* JADX INFO: compiled from: CheckedSetting.kt */
         public static final class b extends c {
 
-            /* renamed from: e */
+            /* JADX INFO: renamed from: e */
             public final ConstraintLayout f19017e;
 
-            /* renamed from: f */
+            /* JADX INFO: renamed from: f */
             public final MaterialRadioButton f19018f;
 
             /* JADX WARN: Illegal instructions before constructor call */
@@ -179,32 +179,32 @@ public final class CheckedSetting extends RelativeLayout implements Checkable {
             }
 
             @Override // com.discord.views.CheckedSetting.InterfaceC7067b
-            /* renamed from: b */
+            /* JADX INFO: renamed from: b */
             public View mo8532b() {
                 return this.f19017e;
             }
 
             @Override // com.discord.views.CheckedSetting.InterfaceC7067b
-            /* renamed from: c */
+            /* JADX INFO: renamed from: c */
             public CompoundButton mo8533c() {
                 return this.f19018f;
             }
         }
 
-        /* compiled from: CheckedSetting.kt */
-        /* renamed from: com.discord.views.CheckedSetting$b$c */
+        /* JADX INFO: renamed from: com.discord.views.CheckedSetting$b$c */
+        /* JADX INFO: compiled from: CheckedSetting.kt */
         public static abstract class c implements InterfaceC7067b {
 
-            /* renamed from: a */
+            /* JADX INFO: renamed from: a */
             public final TextView f19019a;
 
-            /* renamed from: b */
+            /* JADX INFO: renamed from: b */
             public final TextView f19020b;
 
-            /* renamed from: c */
+            /* JADX INFO: renamed from: c */
             public final LinkifiedTextView f19021c;
 
-            /* renamed from: d */
+            /* JADX INFO: renamed from: d */
             public final ImageView f19022d;
 
             public c(ViewGroup viewGroup, ViewSettingSharedBinding viewSettingSharedBinding, int i) {
@@ -248,38 +248,38 @@ public final class CheckedSetting extends RelativeLayout implements Checkable {
             }
 
             @Override // com.discord.views.CheckedSetting.InterfaceC7067b
-            /* renamed from: a */
+            /* JADX INFO: renamed from: a */
             public TextView mo8531a() {
                 return this.f19019a;
             }
 
             @Override // com.discord.views.CheckedSetting.InterfaceC7067b
-            /* renamed from: d */
+            /* JADX INFO: renamed from: d */
             public ImageView mo8534d() {
                 return this.f19022d;
             }
 
             @Override // com.discord.views.CheckedSetting.InterfaceC7067b
-            /* renamed from: e */
+            /* JADX INFO: renamed from: e */
             public TextView mo8535e() {
                 return this.f19020b;
             }
 
             @Override // com.discord.views.CheckedSetting.InterfaceC7067b
-            /* renamed from: f */
+            /* JADX INFO: renamed from: f */
             public TextView mo8536f() {
                 return this.f19021c;
             }
         }
 
-        /* compiled from: CheckedSetting.kt */
-        /* renamed from: com.discord.views.CheckedSetting$b$d */
+        /* JADX INFO: renamed from: com.discord.views.CheckedSetting$b$d */
+        /* JADX INFO: compiled from: CheckedSetting.kt */
         public static final class d extends c {
 
-            /* renamed from: e */
+            /* JADX INFO: renamed from: e */
             public final ConstraintLayout f19023e;
 
-            /* renamed from: f */
+            /* JADX INFO: renamed from: f */
             public final SwitchMaterial f19024f;
 
             /* JADX WARN: Illegal instructions before constructor call */
@@ -297,42 +297,42 @@ public final class CheckedSetting extends RelativeLayout implements Checkable {
             }
 
             @Override // com.discord.views.CheckedSetting.InterfaceC7067b
-            /* renamed from: b */
+            /* JADX INFO: renamed from: b */
             public View mo8532b() {
                 return this.f19023e;
             }
 
             @Override // com.discord.views.CheckedSetting.InterfaceC7067b
-            /* renamed from: c */
+            /* JADX INFO: renamed from: c */
             public CompoundButton mo8533c() {
                 return this.f19024f;
             }
         }
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         TextView mo8531a();
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         View mo8532b();
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         CompoundButton mo8533c();
 
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         ImageView mo8534d();
 
-        /* renamed from: e */
+        /* JADX INFO: renamed from: e */
         TextView mo8535e();
 
-        /* renamed from: f */
+        /* JADX INFO: renamed from: f */
         TextView mo8536f();
     }
 
-    /* compiled from: CheckedSetting.kt */
-    /* renamed from: com.discord.views.CheckedSetting$c */
+    /* JADX INFO: renamed from: com.discord.views.CheckedSetting$c */
+    /* JADX INFO: compiled from: CheckedSetting.kt */
     public static final class ViewOnClickListenerC7068c implements View.OnClickListener {
 
-        /* renamed from: k */
+        /* JADX INFO: renamed from: k */
         public final /* synthetic */ CharSequence f19026k;
 
         public ViewOnClickListenerC7068c(CharSequence charSequence) {
@@ -347,11 +347,11 @@ public final class CheckedSetting extends RelativeLayout implements Checkable {
         }
     }
 
-    /* compiled from: CheckedSetting.kt */
-    /* renamed from: com.discord.views.CheckedSetting$d */
+    /* JADX INFO: renamed from: com.discord.views.CheckedSetting$d */
+    /* JADX INFO: compiled from: CheckedSetting.kt */
     public static final class C7069d extends AccessibilityDelegateCompat {
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final /* synthetic */ ViewType f19028b;
 
         public C7069d(ViewType viewType) {
@@ -390,11 +390,11 @@ public final class CheckedSetting extends RelativeLayout implements Checkable {
         }
     }
 
-    /* compiled from: CheckedSetting.kt */
-    /* renamed from: com.discord.views.CheckedSetting$e */
+    /* JADX INFO: renamed from: com.discord.views.CheckedSetting$e */
+    /* JADX INFO: compiled from: CheckedSetting.kt */
     public static final class C7070e implements CompoundButton.OnCheckedChangeListener {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final /* synthetic */ Action1 f19029a;
 
         public C7070e(Action1 action1) {
@@ -410,11 +410,11 @@ public final class CheckedSetting extends RelativeLayout implements Checkable {
         }
     }
 
-    /* compiled from: CheckedSetting.kt */
-    /* renamed from: com.discord.views.CheckedSetting$f */
+    /* JADX INFO: renamed from: com.discord.views.CheckedSetting$f */
+    /* JADX INFO: compiled from: CheckedSetting.kt */
     public static final class ViewOnClickListenerC7071f implements View.OnClickListener {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public final /* synthetic */ Action0 f19030j;
 
         public ViewOnClickListenerC7071f(Action0 action0) {
@@ -561,7 +561,7 @@ public final class CheckedSetting extends RelativeLayout implements Checkable {
         }
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final /* synthetic */ InterfaceC7067b m8522a(CheckedSetting checkedSetting) {
         InterfaceC7067b interfaceC7067b = checkedSetting.binding;
         if (interfaceC7067b == null) {
@@ -570,13 +570,13 @@ public final class CheckedSetting extends RelativeLayout implements Checkable {
         return interfaceC7067b;
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public static /* synthetic */ void m8523d(CheckedSetting checkedSetting, CharSequence charSequence, int i) {
         int i2 = i & 1;
         checkedSetting.m8526c(null);
     }
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public static /* synthetic */ void m8524i(CheckedSetting checkedSetting, CharSequence charSequence, boolean z2, int i) {
         if ((i & 2) != 0) {
             z2 = false;
@@ -584,14 +584,14 @@ public final class CheckedSetting extends RelativeLayout implements Checkable {
         checkedSetting.m8530h(charSequence, z2);
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final void m8525b(@StringRes int disabledToastRes) {
         Context context = getContext();
         Intrinsics3.checkNotNullExpressionValue(context, "context");
         m8526c(FormatUtils.m216h(context, disabledToastRes, new Object[0], null, 4));
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final void m8526c(CharSequence disabledToastText) {
         InterfaceC7067b interfaceC7067b = this.binding;
         if (interfaceC7067b == null) {
@@ -613,7 +613,7 @@ public final class CheckedSetting extends RelativeLayout implements Checkable {
         dispatchFreezeSelfOnly(container);
     }
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final void m8527e(View.OnClickListener listener) {
         Intrinsics3.checkNotNullParameter(listener, "listener");
         InterfaceC7067b interfaceC7067b = this.binding;
@@ -624,7 +624,7 @@ public final class CheckedSetting extends RelativeLayout implements Checkable {
         setAlpha(1.0f);
     }
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final void m8528f(ViewType viewType) {
         InterfaceC7067b aVar;
         LayoutInflater layoutInflaterFrom = LayoutInflater.from(getContext());
@@ -692,7 +692,7 @@ public final class CheckedSetting extends RelativeLayout implements Checkable {
         ViewCompat.setAccessibilityDelegate(interfaceC7067b.mo8532b(), new C7069d(viewType));
     }
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public final void m8529g(boolean checked, boolean reportChange) {
         if (reportChange) {
             InterfaceC7067b interfaceC7067b = this.binding;
@@ -715,7 +715,7 @@ public final class CheckedSetting extends RelativeLayout implements Checkable {
         setOnCheckedListener(this.checkedListener);
     }
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public final void m8530h(CharSequence text, boolean containsClickables) {
         InterfaceC7067b interfaceC7067b = this.binding;
         if (interfaceC7067b == null) {

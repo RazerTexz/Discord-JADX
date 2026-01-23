@@ -9,26 +9,26 @@ import androidx.viewbinding.ViewBinding;
 import com.discord.utilities.dimmer.DimmerView;
 import com.discord.utilities.view.text.LinkifiedTextView;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public final class WidgetChoosePlanBinding implements ViewBinding {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     @NonNull
     public final CoordinatorLayout f16383a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     @NonNull
     public final LinearLayout f16384b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     @NonNull
     public final LinkifiedTextView f16385c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     @NonNull
     public final RecyclerView f16386d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     @NonNull
     public final DimmerView f16387e;
 

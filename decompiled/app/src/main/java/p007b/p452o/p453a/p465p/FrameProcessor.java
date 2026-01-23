@@ -3,11 +3,11 @@ package p007b.p452o.p453a.p465p;
 import androidx.annotation.NonNull;
 import androidx.annotation.WorkerThread;
 
-/* compiled from: FrameProcessor.java */
-/* renamed from: b.o.a.p.d, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.o.a.p.d, reason: use source file name */
+/* JADX INFO: compiled from: FrameProcessor.java */
+/* JADX INFO: loaded from: classes3.dex */
 public interface FrameProcessor {
     @WorkerThread
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     void m7387a(@NonNull Frame2 frame2);
 }

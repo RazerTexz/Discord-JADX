@@ -3,9 +3,9 @@ package com.discord.widgets.nux;
 import java.util.List;
 import p507d0.p580t.Collections2;
 
-/* compiled from: GuildTemplates.kt */
-/* renamed from: com.discord.widgets.nux.GuildTemplateTypes, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.nux.GuildTemplateTypes, reason: use source file name */
+/* JADX INFO: compiled from: GuildTemplates.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class GuildTemplates2 {
     public static final GuildTemplates2 INSTANCE = new GuildTemplates2();
     private static final List<GuildTemplates> NUX = Collections2.listOf((Object[]) new GuildTemplates[]{GuildTemplates.Gaming, GuildTemplates.SchoolClub, GuildTemplates.StudyGroup, GuildTemplates.Friends, GuildTemplates.ArtistsAndCreators, GuildTemplates.LocalCommunity});

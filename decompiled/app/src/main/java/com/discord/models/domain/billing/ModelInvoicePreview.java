@@ -5,8 +5,8 @@ import java.util.List;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ModelInvoicePreview.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: ModelInvoicePreview.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class ModelInvoicePreview {
     private final String currency;
     private final long id;
@@ -34,16 +34,17 @@ public final /* data */ class ModelInvoicePreview {
         this.total = i3;
     }
 
+    /* JADX WARN: Multi-variable type inference failed */
     public static /* synthetic */ ModelInvoicePreview copy$default(ModelInvoicePreview modelInvoicePreview, String str, long j, List list, String str2, String str3, int i, int i2, boolean z2, int i3, int i4, Object obj) {
         return modelInvoicePreview.copy((i4 & 1) != 0 ? modelInvoicePreview.currency : str, (i4 & 2) != 0 ? modelInvoicePreview.id : j, (i4 & 4) != 0 ? modelInvoicePreview.invoiceItems : list, (i4 & 8) != 0 ? modelInvoicePreview.subscriptionPeriodEnd : str2, (i4 & 16) != 0 ? modelInvoicePreview.subscriptionPeriodStart : str3, (i4 & 32) != 0 ? modelInvoicePreview.subtotal : i, (i4 & 64) != 0 ? modelInvoicePreview.tax : i2, (i4 & 128) != 0 ? modelInvoicePreview.taxInclusive : z2, (i4 & 256) != 0 ? modelInvoicePreview.total : i3);
     }
 
-    /* renamed from: component1, reason: from getter */
+    /* JADX INFO: renamed from: component1, reason: from getter */
     public final String getCurrency() {
         return this.currency;
     }
 
-    /* renamed from: component2, reason: from getter */
+    /* JADX INFO: renamed from: component2, reason: from getter */
     public final long getId() {
         return this.id;
     }
@@ -52,32 +53,32 @@ public final /* data */ class ModelInvoicePreview {
         return this.invoiceItems;
     }
 
-    /* renamed from: component4, reason: from getter */
+    /* JADX INFO: renamed from: component4, reason: from getter */
     public final String getSubscriptionPeriodEnd() {
         return this.subscriptionPeriodEnd;
     }
 
-    /* renamed from: component5, reason: from getter */
+    /* JADX INFO: renamed from: component5, reason: from getter */
     public final String getSubscriptionPeriodStart() {
         return this.subscriptionPeriodStart;
     }
 
-    /* renamed from: component6, reason: from getter */
+    /* JADX INFO: renamed from: component6, reason: from getter */
     public final int getSubtotal() {
         return this.subtotal;
     }
 
-    /* renamed from: component7, reason: from getter */
+    /* JADX INFO: renamed from: component7, reason: from getter */
     public final int getTax() {
         return this.tax;
     }
 
-    /* renamed from: component8, reason: from getter */
+    /* JADX INFO: renamed from: component8, reason: from getter */
     public final boolean getTaxInclusive() {
         return this.taxInclusive;
     }
 
-    /* renamed from: component9, reason: from getter */
+    /* JADX INFO: renamed from: component9, reason: from getter */
     public final int getTotal() {
         return this.total;
     }
@@ -138,6 +139,9 @@ public final /* data */ class ModelInvoicePreview {
     }
 
     /* JADX WARN: Multi-variable type inference failed */
+    /* JADX WARN: Type inference failed for: r1v5, types: [int] */
+    /* JADX WARN: Type inference failed for: r1v7 */
+    /* JADX WARN: Type inference failed for: r1v9 */
     public int hashCode() {
         String str = this.currency;
         int iHashCode = str != null ? str.hashCode() : 0;
@@ -150,11 +154,11 @@ public final /* data */ class ModelInvoicePreview {
         String str3 = this.subscriptionPeriodStart;
         int iHashCode4 = (((((iHashCode3 + (str3 != null ? str3.hashCode() : 0)) * 31) + this.subtotal) * 31) + this.tax) * 31;
         boolean z2 = this.taxInclusive;
-        int i2 = z2;
-        if (z2 != 0) {
-            i2 = 1;
+        ?? r1 = z2;
+        if (z2) {
+            r1 = 1;
         }
-        return ((iHashCode4 + i2) * 31) + this.total;
+        return ((iHashCode4 + r1) * 31) + this.total;
     }
 
     public String toString() {

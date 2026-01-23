@@ -9,9 +9,9 @@ import p007b.p008a.p018d.AppScreen2;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetAuthRegisterIdentity.kt */
-/* renamed from: com.discord.widgets.auth.WidgetAuthRegisterIdentity$phoneVerifyLauncher$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.auth.WidgetAuthRegisterIdentity$phoneVerifyLauncher$1, reason: use source file name */
+/* JADX INFO: compiled from: WidgetAuthRegisterIdentity.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetAuthRegisterIdentity7 extends Lambda implements Function1<WidgetAuthPhoneVerify.Result, Unit> {
     public final /* synthetic */ WidgetAuthRegisterIdentity this$0;
 
@@ -27,7 +27,7 @@ public final class WidgetAuthRegisterIdentity7 extends Lambda implements Functio
         return Unit.f27425a;
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final void invoke2(WidgetAuthPhoneVerify.Result result) {
         Intrinsics3.checkNotNullParameter(result, "result");
         if (!(result instanceof WidgetAuthPhoneVerify.Result.Token)) {

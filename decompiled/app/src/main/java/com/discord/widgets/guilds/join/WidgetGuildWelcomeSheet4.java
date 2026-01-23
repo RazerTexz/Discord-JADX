@@ -5,9 +5,9 @@ import kotlin.Unit;
 import kotlin.jvm.functions.Function2;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetGuildWelcomeSheet.kt */
-/* renamed from: com.discord.widgets.guilds.join.WidgetGuildWelcomeSheet$configureWelcomeChannels$goToChannel$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.guilds.join.WidgetGuildWelcomeSheet$configureWelcomeChannels$goToChannel$1, reason: use source file name */
+/* JADX INFO: compiled from: WidgetGuildWelcomeSheet.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetGuildWelcomeSheet4 extends Lambda implements Function2<Long, Integer, Unit> {
     public final /* synthetic */ long $guildId;
     public final /* synthetic */ List $welcomeChannels;

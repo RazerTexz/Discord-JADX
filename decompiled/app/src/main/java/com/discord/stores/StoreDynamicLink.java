@@ -30,8 +30,8 @@ import p658rx.Emitter;
 import p658rx.Observable;
 import p658rx.functions.Action1;
 
-/* compiled from: StoreDynamicLink.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: StoreDynamicLink.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class StoreDynamicLink {
     private static final Companion Companion = new Companion(null);
 
@@ -40,7 +40,7 @@ public final class StoreDynamicLink {
     private final Dispatcher dispatcher;
     private final StoreStream stream;
 
-    /* compiled from: StoreDynamicLink.kt */
+    /* JADX INFO: compiled from: StoreDynamicLink.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -50,7 +50,7 @@ public final class StoreDynamicLink {
         }
     }
 
-    /* compiled from: StoreDynamicLink.kt */
+    /* JADX INFO: compiled from: StoreDynamicLink.kt */
     public static final /* data */ class DynamicLinkData {
         private final String attemptId;
         private final String authToken;
@@ -94,32 +94,32 @@ public final class StoreDynamicLink {
             return dynamicLinkData.copy(uri, str6, str7, str8, str9, str5);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final Uri getUri() {
             return this.uri;
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final String getFingerprint() {
             return this.fingerprint;
         }
 
-        /* renamed from: component3, reason: from getter */
+        /* JADX INFO: renamed from: component3, reason: from getter */
         public final String getAttemptId() {
             return this.attemptId;
         }
 
-        /* renamed from: component4, reason: from getter */
+        /* JADX INFO: renamed from: component4, reason: from getter */
         public final String getInviteCode() {
             return this.inviteCode;
         }
 
-        /* renamed from: component5, reason: from getter */
+        /* JADX INFO: renamed from: component5, reason: from getter */
         public final String getGuildTemplateCode() {
             return this.guildTemplateCode;
         }
 
-        /* renamed from: component6, reason: from getter */
+        /* JADX INFO: renamed from: component6, reason: from getter */
         public final String getAuthToken() {
             return this.authToken;
         }
@@ -194,8 +194,8 @@ public final class StoreDynamicLink {
         }
     }
 
-    /* compiled from: StoreDynamicLink.kt */
-    /* renamed from: com.discord.stores.StoreDynamicLink$getDynamicLinkObservable$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreDynamicLink$getDynamicLinkObservable$1 */
+    /* JADX INFO: compiled from: StoreDynamicLink.kt */
     public static final class C58781<T, R> implements Func1<Throwable, Uri> {
         public static final C58781 INSTANCE = new C58781();
 
@@ -204,14 +204,14 @@ public final class StoreDynamicLink {
             return call2(th);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final Uri call2(Throwable th) {
             return Uri.EMPTY;
         }
     }
 
-    /* compiled from: StoreDynamicLink.kt */
-    /* renamed from: com.discord.stores.StoreDynamicLink$handleDataReceived$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreDynamicLink$handleDataReceived$1 */
+    /* JADX INFO: compiled from: StoreDynamicLink.kt */
     public static final class C58811 extends Lambda implements Function0<Unit> {
         public final /* synthetic */ DynamicLinkData $data;
 
@@ -227,7 +227,7 @@ public final class StoreDynamicLink {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             StoreAuthentication authentication = StoreDynamicLink.access$getStream$p(StoreDynamicLink.this).getAuthentication();
             DynamicLinkData dynamicLinkData = this.$data;
@@ -239,8 +239,8 @@ public final class StoreDynamicLink {
         }
     }
 
-    /* compiled from: StoreDynamicLink.kt */
-    /* renamed from: com.discord.stores.StoreDynamicLink$storeLinkIfExists$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreDynamicLink$storeLinkIfExists$1 */
+    /* JADX INFO: compiled from: StoreDynamicLink.kt */
     public static final class C58831<T, R> implements Func1<Uri, DynamicLinkData> {
         public static final C58831 INSTANCE = new C58831();
 
@@ -251,7 +251,7 @@ public final class StoreDynamicLink {
 
         /* JADX WARN: Removed duplicated region for block: B:40:0x009b  */
         /* JADX WARN: Removed duplicated region for block: B:68:0x0112  */
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         /*
             Code decompiled incorrectly, please refer to instructions dump.
         */
@@ -347,8 +347,8 @@ public final class StoreDynamicLink {
         }
     }
 
-    /* compiled from: StoreDynamicLink.kt */
-    /* renamed from: com.discord.stores.StoreDynamicLink$storeLinkIfExists$2 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreDynamicLink$storeLinkIfExists$2 */
+    /* JADX INFO: compiled from: StoreDynamicLink.kt */
     public static final class C58842<T> implements Action1<DynamicLinkData> {
         public static final C58842 INSTANCE = new C58842();
 
@@ -357,7 +357,7 @@ public final class StoreDynamicLink {
             call2(dynamicLinkData);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final void call2(DynamicLinkData dynamicLinkData) {
             if (dynamicLinkData != null) {
                 AnalyticsTracker analyticsTracker = AnalyticsTracker.INSTANCE;
@@ -372,8 +372,8 @@ public final class StoreDynamicLink {
         }
     }
 
-    /* compiled from: StoreDynamicLink.kt */
-    /* renamed from: com.discord.stores.StoreDynamicLink$storeLinkIfExists$3 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreDynamicLink$storeLinkIfExists$3 */
+    /* JADX INFO: compiled from: StoreDynamicLink.kt */
     public static final class C58853 extends Lambda implements Function1<DynamicLinkData, Unit> {
         public final /* synthetic */ Context $context;
 
@@ -389,7 +389,7 @@ public final class StoreDynamicLink {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(DynamicLinkData dynamicLinkData) {
             StoreDynamicLink.access$handleDataReceived(StoreDynamicLink.this, dynamicLinkData, this.$context);
         }

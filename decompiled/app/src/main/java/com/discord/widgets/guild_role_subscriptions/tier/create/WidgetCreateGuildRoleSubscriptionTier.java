@@ -39,32 +39,32 @@ import p507d0.p592z.p594d.Reflection2;
 import p658rx.Observable;
 import p658rx.functions.Func0;
 
-/* compiled from: WidgetCreateGuildRoleSubscriptionTier.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetCreateGuildRoleSubscriptionTier.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetCreateGuildRoleSubscriptionTier extends AppFragment {
     public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetCreateGuildRoleSubscriptionTier.class, "binding", "getBinding()Lcom/discord/databinding/WidgetCreateGuildRoleSubscriptionTierBinding;", 0)};
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private static final String INTENT_EXTRA_GROUP_LISTING_ID = "INTENT_EXTRA_GROUP_LISTING_ID";
     private static final String INTENT_EXTRA_GUILD_ID = "INTENT_EXTRA_GUILD_ID";
 
-    /* renamed from: binding$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
 
-    /* renamed from: createTierViewModel$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: createTierViewModel$delegate, reason: from kotlin metadata */
     private final Lazy createTierViewModel;
 
-    /* renamed from: groupListingId$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: groupListingId$delegate, reason: from kotlin metadata */
     private final Lazy groupListingId;
 
-    /* renamed from: guildId$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: guildId$delegate, reason: from kotlin metadata */
     private final Lazy guildId;
 
-    /* renamed from: viewModel$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: viewModel$delegate, reason: from kotlin metadata */
     private final Lazy viewModel;
 
-    /* compiled from: WidgetCreateGuildRoleSubscriptionTier.kt */
+    /* JADX INFO: compiled from: WidgetCreateGuildRoleSubscriptionTier.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -82,8 +82,8 @@ public final class WidgetCreateGuildRoleSubscriptionTier extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetCreateGuildRoleSubscriptionTier.kt */
-    /* renamed from: com.discord.widgets.guild_role_subscriptions.tier.create.WidgetCreateGuildRoleSubscriptionTier$onViewBound$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.guild_role_subscriptions.tier.create.WidgetCreateGuildRoleSubscriptionTier$onViewBound$2 */
+    /* JADX INFO: compiled from: WidgetCreateGuildRoleSubscriptionTier.kt */
     public static final class C84872<R> implements Func0<Boolean> {
         public C84872() {
         }
@@ -100,8 +100,8 @@ public final class WidgetCreateGuildRoleSubscriptionTier extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetCreateGuildRoleSubscriptionTier.kt */
-    /* renamed from: com.discord.widgets.guild_role_subscriptions.tier.create.WidgetCreateGuildRoleSubscriptionTier$onViewBoundOrOnResume$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.guild_role_subscriptions.tier.create.WidgetCreateGuildRoleSubscriptionTier$onViewBoundOrOnResume$1 */
+    /* JADX INFO: compiled from: WidgetCreateGuildRoleSubscriptionTier.kt */
     public static final class C84881 extends Lambda implements Function1<GuildRoleSubscriptionTierViewModel.ViewState, Unit> {
         public C84881() {
             super(1);
@@ -113,7 +113,7 @@ public final class WidgetCreateGuildRoleSubscriptionTier extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(GuildRoleSubscriptionTierViewModel.ViewState viewState) {
             WidgetCreateGuildRoleSubscriptionTier widgetCreateGuildRoleSubscriptionTier = WidgetCreateGuildRoleSubscriptionTier.this;
             Intrinsics3.checkNotNullExpressionValue(viewState, "viewState");
@@ -121,8 +121,8 @@ public final class WidgetCreateGuildRoleSubscriptionTier extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetCreateGuildRoleSubscriptionTier.kt */
-    /* renamed from: com.discord.widgets.guild_role_subscriptions.tier.create.WidgetCreateGuildRoleSubscriptionTier$onViewBoundOrOnResume$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.guild_role_subscriptions.tier.create.WidgetCreateGuildRoleSubscriptionTier$onViewBoundOrOnResume$2 */
+    /* JADX INFO: compiled from: WidgetCreateGuildRoleSubscriptionTier.kt */
     public static final class C84892 extends Lambda implements Function1<CreateGuildRoleSubscriptionTierViewModel.ViewState, Unit> {
         public C84892() {
             super(1);
@@ -134,7 +134,7 @@ public final class WidgetCreateGuildRoleSubscriptionTier extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(CreateGuildRoleSubscriptionTierViewModel.ViewState viewState) {
             WidgetCreateGuildRoleSubscriptionTier widgetCreateGuildRoleSubscriptionTier = WidgetCreateGuildRoleSubscriptionTier.this;
             Intrinsics3.checkNotNullExpressionValue(viewState, "it");
@@ -142,8 +142,8 @@ public final class WidgetCreateGuildRoleSubscriptionTier extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetCreateGuildRoleSubscriptionTier.kt */
-    /* renamed from: com.discord.widgets.guild_role_subscriptions.tier.create.WidgetCreateGuildRoleSubscriptionTier$onViewBoundOrOnResume$3 */
+    /* JADX INFO: renamed from: com.discord.widgets.guild_role_subscriptions.tier.create.WidgetCreateGuildRoleSubscriptionTier$onViewBoundOrOnResume$3 */
+    /* JADX INFO: compiled from: WidgetCreateGuildRoleSubscriptionTier.kt */
     public static final class C84903 extends Lambda implements Function1<CreateGuildRoleSubscriptionTierViewModel.Event, Unit> {
         public C84903() {
             super(1);
@@ -155,7 +155,7 @@ public final class WidgetCreateGuildRoleSubscriptionTier extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(CreateGuildRoleSubscriptionTierViewModel.Event event) {
             WidgetCreateGuildRoleSubscriptionTier widgetCreateGuildRoleSubscriptionTier = WidgetCreateGuildRoleSubscriptionTier.this;
             Intrinsics3.checkNotNullExpressionValue(event, "it");

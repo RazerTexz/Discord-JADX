@@ -24,27 +24,27 @@ import p507d0.p513e0.p514p.p515d.p517m0.p567n.KotlinType;
 import p507d0.p513e0.p514p.p515d.p517m0.p567n.TypeConstructor;
 import p507d0.p513e0.p514p.p515d.p517m0.p567n.p568l1.KotlinTypeRefiner;
 
-/* compiled from: ClassDescriptorImpl.java */
-/* renamed from: d0.e0.p.d.m0.c.i1.i, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.c.i1.i, reason: use source file name */
+/* JADX INFO: compiled from: ClassDescriptorImpl.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class ClassDescriptorImpl extends ClassDescriptorBase {
 
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     public final Modality f22880r;
 
-    /* renamed from: s */
+    /* JADX INFO: renamed from: s */
     public final ClassKind f22881s;
 
-    /* renamed from: t */
+    /* JADX INFO: renamed from: t */
     public final TypeConstructor f22882t;
 
-    /* renamed from: u */
+    /* JADX INFO: renamed from: u */
     public MemberScope3 f22883u;
 
-    /* renamed from: v */
+    /* JADX INFO: renamed from: v */
     public Set<ClassConstructorDescriptor> f22884v;
 
-    /* renamed from: w */
+    /* JADX INFO: renamed from: w */
     public ClassConstructorDescriptor f22885w;
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -83,7 +83,7 @@ public class ClassDescriptorImpl extends ClassDescriptorBase {
         this.f22882t = new ClassTypeConstructorImpl(this, Collections.emptyList(), collection, storageManager);
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static /* synthetic */ void m9411a(int i) {
         String str;
         int i2;

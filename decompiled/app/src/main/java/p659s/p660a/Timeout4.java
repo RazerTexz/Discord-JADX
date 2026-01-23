@@ -5,12 +5,12 @@ import kotlinx.coroutines.Timeout3;
 import p507d0.p584w.p586i.p587a.ContinuationImpl3;
 import p659s.p660a.p661a.Scopes2;
 
-/* compiled from: Timeout.kt */
-/* renamed from: s.a.x1, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: s.a.x1, reason: use source file name */
+/* JADX INFO: compiled from: Timeout.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class Timeout4<U, T extends U> extends Scopes2<T> implements Runnable {
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public final long f27920n;
 
     public Timeout4(long j, Continuation<? super U> continuation) {
@@ -19,7 +19,7 @@ public final class Timeout4<U, T extends U> extends Scopes2<T> implements Runnab
     }
 
     @Override // p659s.p660a.AbstractCoroutine, p659s.p660a.C13116h1
-    /* renamed from: T */
+    /* JADX INFO: renamed from: T */
     public String mo11184T() {
         return super.mo11184T() + "(timeMillis=" + this.f27920n + ')';
     }

@@ -7,25 +7,25 @@ import p007b.p085c.p086a.p087a0.AnimatableValueParser;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: BluetoothHeadsetAudioState.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: BluetoothHeadsetAudioState.kt */
+/* JADX INFO: loaded from: classes.dex */
 public enum BluetoothHeadsetAudioState {
     Disconnected(10),
     Connecting(11),
     Connected(12);
 
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private final int value;
 
-    /* compiled from: BluetoothHeadsetAudioState.kt */
-    /* renamed from: com.discord.rtcconnection.enums.BluetoothHeadsetAudioState$a, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: com.discord.rtcconnection.enums.BluetoothHeadsetAudioState$a, reason: from kotlin metadata */
+    /* JADX INFO: compiled from: BluetoothHeadsetAudioState.kt */
     public static final class Companion {
         public Companion(DefaultConstructorMarker defaultConstructorMarker) {
         }
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final BluetoothHeadsetAudioState m8494a(int i) {
             BluetoothHeadsetAudioState[] bluetoothHeadsetAudioStateArrValues = BluetoothHeadsetAudioState.values();
             for (int i2 = 0; i2 < 3; i2++) {
@@ -37,7 +37,7 @@ public enum BluetoothHeadsetAudioState {
             return null;
         }
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final C5633b m8495b(Intent intent) {
             Intrinsics3.checkNotNullParameter(intent, "intent");
             if (!Intrinsics3.areEqual(intent.getAction(), "android.bluetooth.headset.profile.action.AUDIO_STATE_CHANGED")) {
@@ -52,17 +52,17 @@ public enum BluetoothHeadsetAudioState {
         }
     }
 
-    /* compiled from: BluetoothHeadsetAudioState.kt */
-    /* renamed from: com.discord.rtcconnection.enums.BluetoothHeadsetAudioState$b */
+    /* JADX INFO: renamed from: com.discord.rtcconnection.enums.BluetoothHeadsetAudioState$b */
+    /* JADX INFO: compiled from: BluetoothHeadsetAudioState.kt */
     public static final class C5633b {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final BluetoothHeadsetAudioState f18868a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final BluetoothHeadsetAudioState f18869b;
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public final BluetoothDevice f18870c;
 
         public C5633b(BluetoothHeadsetAudioState bluetoothHeadsetAudioState, BluetoothHeadsetAudioState bluetoothHeadsetAudioState2, BluetoothDevice bluetoothDevice) {

@@ -31,42 +31,42 @@ import p007b.p225i.p226a.p242c.p267x2.p274i0.Atom;
 import p007b.p225i.p355b.p356a.Function2;
 import p007b.p225i.p355b.p357b.ImmutableList2;
 
-/* compiled from: AtomParsers.java */
-/* renamed from: b.i.a.c.x2.i0.e, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.x2.i0.e, reason: use source file name */
+/* JADX INFO: compiled from: AtomParsers.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class AtomParsers {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final byte[] f8354a = Util2.m3015w("OpusHead");
 
-    /* compiled from: AtomParsers.java */
-    /* renamed from: b.i.a.c.x2.i0.e$a */
+    /* JADX INFO: renamed from: b.i.a.c.x2.i0.e$a */
+    /* JADX INFO: compiled from: AtomParsers.java */
     public interface a {
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         int mo3707a();
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         int mo3708b();
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         int mo3709c();
     }
 
-    /* compiled from: AtomParsers.java */
-    /* renamed from: b.i.a.c.x2.i0.e$b */
+    /* JADX INFO: renamed from: b.i.a.c.x2.i0.e$b */
+    /* JADX INFO: compiled from: AtomParsers.java */
     public static final class b {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final TrackEncryptionBox[] f8355a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         @Nullable
         public Format2 f8356b;
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public int f8357c;
 
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         public int f8358d = 0;
 
         public b(int i) {
@@ -74,17 +74,17 @@ public final class AtomParsers {
         }
     }
 
-    /* compiled from: AtomParsers.java */
-    /* renamed from: b.i.a.c.x2.i0.e$c */
+    /* JADX INFO: renamed from: b.i.a.c.x2.i0.e$c */
+    /* JADX INFO: compiled from: AtomParsers.java */
     public static final class c implements a {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final int f8359a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final int f8360b;
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public final ParsableByteArray f8361c;
 
         public c(Atom.b bVar, Format2 format2) {
@@ -104,42 +104,42 @@ public final class AtomParsers {
         }
 
         @Override // p007b.p225i.p226a.p242c.p267x2.p274i0.AtomParsers.a
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public int mo3707a() {
             return this.f8359a;
         }
 
         @Override // p007b.p225i.p226a.p242c.p267x2.p274i0.AtomParsers.a
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public int mo3708b() {
             return this.f8360b;
         }
 
         @Override // p007b.p225i.p226a.p242c.p267x2.p274i0.AtomParsers.a
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public int mo3709c() {
             int i = this.f8359a;
             return i == -1 ? this.f8361c.m3103w() : i;
         }
     }
 
-    /* compiled from: AtomParsers.java */
-    /* renamed from: b.i.a.c.x2.i0.e$d */
+    /* JADX INFO: renamed from: b.i.a.c.x2.i0.e$d */
+    /* JADX INFO: compiled from: AtomParsers.java */
     public static final class d implements a {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final ParsableByteArray f8362a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final int f8363b;
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public final int f8364c;
 
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         public int f8365d;
 
-        /* renamed from: e */
+        /* JADX INFO: renamed from: e */
         public int f8366e;
 
         public d(Atom.b bVar) {
@@ -151,19 +151,19 @@ public final class AtomParsers {
         }
 
         @Override // p007b.p225i.p226a.p242c.p267x2.p274i0.AtomParsers.a
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public int mo3707a() {
             return -1;
         }
 
         @Override // p007b.p225i.p226a.p242c.p267x2.p274i0.AtomParsers.a
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public int mo3708b() {
             return this.f8363b;
         }
 
         @Override // p007b.p225i.p226a.p242c.p267x2.p274i0.AtomParsers.a
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public int mo3709c() {
             int i = this.f8364c;
             if (i == 8) {
@@ -183,7 +183,7 @@ public final class AtomParsers {
         }
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static Pair<String, byte[]> m3702a(ParsableByteArray parsableByteArray, int i) {
         parsableByteArray.m3079E(i + 8 + 4);
         parsableByteArray.m3080F(1);
@@ -214,7 +214,7 @@ public final class AtomParsers {
         return Pair.create(strM3046d, bArr);
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static int m3703b(ParsableByteArray parsableByteArray) {
         int iM3100t = parsableByteArray.m3100t();
         int i = iM3100t & Opcodes.LAND;
@@ -226,7 +226,7 @@ public final class AtomParsers {
     }
 
     @Nullable
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public static Pair<Integer, TrackEncryptionBox> m3704c(ParsableByteArray parsableByteArray, int i, int i2) throws ParserException {
         Integer num;
         TrackEncryptionBox trackEncryptionBox;
@@ -323,7 +323,7 @@ public final class AtomParsers {
     }
 
     /* JADX WARN: Removed duplicated region for block: B:232:0x0374  */
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
@@ -1293,7 +1293,7 @@ public final class AtomParsers {
     /* JADX WARN: Removed duplicated region for block: B:87:0x019f  */
     /* JADX WARN: Removed duplicated region for block: B:90:0x01aa  */
     /* JADX WARN: Removed duplicated region for block: B:91:0x01ac  */
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
@@ -1516,7 +1516,7 @@ public final class AtomParsers {
                                             }
                                             ParsableByteArray parsableByteArray7 = parsableByteArray2;
                                             boolean z9 = z4;
-                                            jArrCopyOf[i22] = j3 + i27;
+                                            jArrCopyOf[i22] = j3 + ((long) i27);
                                             iArrCopyOf2[i22] = parsableByteArray5 == null ? 1 : 0;
                                             int iM3103w13 = i4;
                                             if (i22 == iM3103w13) {
@@ -1530,14 +1530,14 @@ public final class AtomParsers {
                                             long[] jArr7 = jArrCopyOf;
                                             int iM3086f3 = i17;
                                             int i28 = iM3103w12;
-                                            j3 += iM3086f3;
+                                            j3 += (long) iM3086f3;
                                             iM3103w10--;
                                             if (iM3103w10 == 0 && i20 > 0) {
                                                 i20--;
                                                 iM3103w10 = parsableByteArray4.m3103w();
                                                 iM3086f3 = parsableByteArray4.m3086f();
                                             }
-                                            j4 += iArrCopyOf[i22];
+                                            j4 += (long) iArrCopyOf[i22];
                                             i15--;
                                             i22++;
                                             iM3086f2 = i27;
@@ -1550,7 +1550,7 @@ public final class AtomParsers {
                                             parsableByteArray2 = parsableByteArray7;
                                         }
                                         int i29 = i15;
-                                        long j5 = j3 + iM3086f2;
+                                        long j5 = j3 + ((long) iM3086f2);
                                         if (parsableByteArray6 != null) {
                                             while (i21 > 0) {
                                                 if (parsableByteArray6.m3103w() != 0) {
@@ -1679,9 +1679,9 @@ public final class AtomParsers {
                                                 jArr[i36] = j8;
                                                 iArr7[i36] = iMo3707a * iMin;
                                                 iMax = Math.max(iMax, iArr7[i36]);
-                                                jArr9[i36] = i35 * j6;
+                                                jArr9[i36] = ((long) i35) * j6;
                                                 iArr8[i36] = 1;
-                                                j8 += iArr7[i36];
+                                                j8 += (long) iArr7[i36];
                                                 i35 += iMin;
                                                 i39 -= iMin;
                                                 i36++;
@@ -1693,7 +1693,7 @@ public final class AtomParsers {
                                             jArr8 = jArr10;
                                             iArr6 = iArr9;
                                         }
-                                        j2 = j6 * i35;
+                                        j2 = j6 * ((long) i35);
                                         iArr2 = iArr8;
                                         iArr = iArr7;
                                         jArrCopyOf = jArr9;

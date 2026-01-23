@@ -10,10 +10,10 @@ import androidx.viewbinding.ViewBinding;
 import com.discord.C5419R;
 import java.util.Objects;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public final class DialogSimpleSelectorItemBinding implements ViewBinding {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     @NonNull
     public final TextView f15039a;
 
@@ -22,7 +22,7 @@ public final class DialogSimpleSelectorItemBinding implements ViewBinding {
     }
 
     @NonNull
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static DialogSimpleSelectorItemBinding m8381a(@NonNull LayoutInflater layoutInflater, @Nullable ViewGroup viewGroup, boolean z2) {
         View viewInflate = layoutInflater.inflate(C5419R.layout.dialog_simple_selector_item, viewGroup, false);
         if (z2) {

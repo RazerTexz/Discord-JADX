@@ -2,7 +2,6 @@ package androidx.media.app;
 
 import android.app.Notification;
 import android.app.PendingIntent;
-import android.content.res.Resources;
 import android.media.session.MediaSession;
 import android.os.Build;
 import android.os.Bundle;
@@ -16,7 +15,7 @@ import androidx.core.app.NotificationBuilderWithBuilderAccessor;
 import androidx.core.app.NotificationCompat;
 import androidx.media.C0499R;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class NotificationCompat {
 
     @RequiresApi(15)
@@ -105,7 +104,7 @@ public class NotificationCompat {
 
         @Override // androidx.media.app.NotificationCompat.MediaStyle, androidx.core.app.NotificationCompat.Style
         @RestrictTo({RestrictTo.Scope.LIBRARY})
-        public RemoteViews makeBigContentView(NotificationBuilderWithBuilderAccessor notificationBuilderWithBuilderAccessor) throws Resources.NotFoundException {
+        public RemoteViews makeBigContentView(NotificationBuilderWithBuilderAccessor notificationBuilderWithBuilderAccessor) {
             if (Build.VERSION.SDK_INT >= 24) {
                 return null;
             }
@@ -121,7 +120,7 @@ public class NotificationCompat {
 
         @Override // androidx.media.app.NotificationCompat.MediaStyle, androidx.core.app.NotificationCompat.Style
         @RestrictTo({RestrictTo.Scope.LIBRARY})
-        public RemoteViews makeContentView(NotificationBuilderWithBuilderAccessor notificationBuilderWithBuilderAccessor) throws Resources.NotFoundException {
+        public RemoteViews makeContentView(NotificationBuilderWithBuilderAccessor notificationBuilderWithBuilderAccessor) {
             RemoteViews remoteViewsGenerateContentView = null;
             if (Build.VERSION.SDK_INT >= 24) {
                 return null;
@@ -143,7 +142,7 @@ public class NotificationCompat {
 
         @Override // androidx.core.app.NotificationCompat.Style
         @RestrictTo({RestrictTo.Scope.LIBRARY})
-        public RemoteViews makeHeadsUpContentView(NotificationBuilderWithBuilderAccessor notificationBuilderWithBuilderAccessor) throws Resources.NotFoundException {
+        public RemoteViews makeHeadsUpContentView(NotificationBuilderWithBuilderAccessor notificationBuilderWithBuilderAccessor) {
             if (Build.VERSION.SDK_INT >= 24) {
                 return null;
             }
@@ -199,7 +198,7 @@ public class NotificationCompat {
             Api21Impl.setMediaStyle(notificationBuilderWithBuilderAccessor.getBuilder(), Api21Impl.fillInMediaStyle(Api21Impl.createMediaStyle(), this.mActionsToShowInCompact, this.mToken));
         }
 
-        public RemoteViews generateBigContentView() throws Resources.NotFoundException {
+        public RemoteViews generateBigContentView() {
             int iMin = Math.min(this.mBuilder.mActions.size(), 5);
             RemoteViews remoteViewsApplyStandardTemplate = applyStandardTemplate(false, getBigContentViewLayoutResource(iMin), false);
             remoteViewsApplyStandardTemplate.removeAllViews(C0499R.id.media_actions);
@@ -219,7 +218,7 @@ public class NotificationCompat {
             return remoteViewsApplyStandardTemplate;
         }
 
-        public RemoteViews generateContentView() throws Resources.NotFoundException {
+        public RemoteViews generateContentView() {
             RemoteViews remoteViewsApplyStandardTemplate = applyStandardTemplate(false, getContentViewLayoutResource(), true);
             int size = this.mBuilder.mActions.size();
             int[] iArr = this.mActionsToShowInCompact;

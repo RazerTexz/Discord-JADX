@@ -14,8 +14,8 @@ import lombok.javac.JavacAnnotationHandler;
 import lombok.javac.JavacNode;
 import lombok.javac.handlers.HandleConstructor;
 
+/* JADX INFO: loaded from: discord-126021.apk:lombok/javac/handlers/HandleValue.SCL.lombok */
 @HandlerPriority(-512)
-/* loaded from: discord-126021.apk:lombok/javac/handlers/HandleValue.SCL.lombok */
 public class HandleValue extends JavacAnnotationHandler<Value> {
     private HandleFieldDefaults handleFieldDefaults = new HandleFieldDefaults();
     private HandleConstructor handleConstructor = new HandleConstructor();

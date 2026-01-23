@@ -6,9 +6,9 @@ import com.discord.stores.StoreSlowMode;
 import com.discord.utilities.permissions.PermissionUtils;
 import p637j0.p641k.Func1;
 
-/* compiled from: StoreSlowMode.kt */
-/* renamed from: com.discord.stores.StoreSlowMode$getChannelCooldownObservable$newObservable$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.stores.StoreSlowMode$getChannelCooldownObservable$newObservable$1, reason: use source file name */
+/* JADX INFO: compiled from: StoreSlowMode.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class StoreSlowMode2<T, R> implements Func1<Long, Boolean> {
     public final /* synthetic */ StoreSlowMode.Type $type;
 
@@ -21,7 +21,7 @@ public final class StoreSlowMode2<T, R> implements Func1<Long, Boolean> {
         return call2(l);
     }
 
-    /* renamed from: call, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
     public final Boolean call2(Long l) {
         return Boolean.valueOf(PermissionUtils.INSTANCE.hasBypassSlowmodePermissions(l, this.$type));
     }

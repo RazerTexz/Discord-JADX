@@ -27,25 +27,25 @@ import p507d0.p580t.Collections2;
 import p507d0.p580t.Iterables2;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: typeEnhancement.kt */
-/* renamed from: d0.e0.p.d.m0.e.a.l0.d, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.e.a.l0.d, reason: use source file name */
+/* JADX INFO: compiled from: typeEnhancement.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class typeEnhancement4 {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final context3 f23445a;
 
-    /* compiled from: typeEnhancement.kt */
-    /* renamed from: d0.e0.p.d.m0.e.a.l0.d$a */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.e.a.l0.d$a */
+    /* JADX INFO: compiled from: typeEnhancement.kt */
     public static class a {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final KotlinType f23446a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final int f23447b;
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public final boolean f23448c;
 
         public a(KotlinType kotlinType, int i, boolean z2) {
@@ -76,11 +76,11 @@ public final class typeEnhancement4 {
         }
     }
 
-    /* compiled from: typeEnhancement.kt */
-    /* renamed from: d0.e0.p.d.m0.e.a.l0.d$b */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.e.a.l0.d$b */
+    /* JADX INFO: compiled from: typeEnhancement.kt */
     public static final class b extends a {
 
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         public final KotlinType4 f23449d;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -106,7 +106,7 @@ public final class typeEnhancement4 {
         this.f23445a = context3Var;
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final b m9506a(KotlinType4 kotlinType4, Function1<? super Integer, typeQualifiers> function1, int i, TypeComponentPosition typeComponentPosition, boolean z2) {
         int subtreeSize;
         TypeProjection typeProjectionCreateProjection;
@@ -183,7 +183,7 @@ public final class typeEnhancement4 {
     }
 
     /* JADX WARN: Removed duplicated region for block: B:20:0x005e  */
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */

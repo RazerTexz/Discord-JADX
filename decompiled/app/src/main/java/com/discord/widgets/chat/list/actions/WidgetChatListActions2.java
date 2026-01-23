@@ -7,9 +7,9 @@ import kotlin.Tuples2;
 import p507d0.Tuples;
 import p658rx.functions.Func2;
 
-/* compiled from: WidgetChatListActions.kt */
-/* renamed from: com.discord.widgets.chat.list.actions.WidgetChatListActions$Model$Companion$get$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.chat.list.actions.WidgetChatListActions$Model$Companion$get$1, reason: use source file name */
+/* JADX INFO: compiled from: WidgetChatListActions.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetChatListActions2<T1, T2, R> implements Func2<Message, Channel, Tuples2<? extends Message, ? extends Channel>> {
     public static final WidgetChatListActions2 INSTANCE = new WidgetChatListActions2();
 
@@ -18,7 +18,7 @@ public final class WidgetChatListActions2<T1, T2, R> implements Func2<Message, C
         return call2(message, channel);
     }
 
-    /* renamed from: call, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
     public final Tuples2<Message, Channel> call2(Message message, Channel channel) {
         return Tuples.m10073to(message, channel);
     }

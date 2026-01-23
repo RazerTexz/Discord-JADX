@@ -5,11 +5,11 @@ import kotlin.jvm.internal.DefaultConstructorMarker;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ExpressionDetailPage.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: ExpressionDetailPage.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public abstract class ExpressionDetailPage {
 
-    /* compiled from: ExpressionDetailPage.kt */
+    /* JADX INFO: compiled from: ExpressionDetailPage.kt */
     public static final /* data */ class GifCategoryPage extends ExpressionDetailPage {
         private final GifCategoryItem gifCategoryItem;
 
@@ -27,7 +27,7 @@ public abstract class ExpressionDetailPage {
             return gifCategoryPage.copy(gifCategoryItem);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final GifCategoryItem getGifCategoryItem() {
             return this.gifCategoryItem;
         }

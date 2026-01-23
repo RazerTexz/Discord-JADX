@@ -16,22 +16,22 @@ import p507d0.p580t._Collections;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: ReflectionObjectRenderer.kt */
-/* renamed from: d0.e0.p.d.e0, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.e0, reason: use source file name */
+/* JADX INFO: compiled from: ReflectionObjectRenderer.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class ReflectionObjectRenderer {
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static final ReflectionObjectRenderer f22349b = new ReflectionObjectRenderer();
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final DescriptorRenderer2 f22348a = DescriptorRenderer2.f24226b;
 
-    /* compiled from: ReflectionObjectRenderer.kt */
-    /* renamed from: d0.e0.p.d.e0$a */
+    /* JADX INFO: renamed from: d0.e0.p.d.e0$a */
+    /* JADX INFO: compiled from: ReflectionObjectRenderer.kt */
     public static final class a extends Lambda implements Function1<ValueParameterDescriptor, CharSequence> {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public static final a f22350j = new a();
 
         public a() {
@@ -43,7 +43,7 @@ public final class ReflectionObjectRenderer {
             return invoke2(valueParameterDescriptor);
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final CharSequence invoke2(ValueParameterDescriptor valueParameterDescriptor) {
             ReflectionObjectRenderer reflectionObjectRenderer = ReflectionObjectRenderer.f22349b;
             Intrinsics3.checkNotNullExpressionValue(valueParameterDescriptor, "it");
@@ -53,11 +53,11 @@ public final class ReflectionObjectRenderer {
         }
     }
 
-    /* compiled from: ReflectionObjectRenderer.kt */
-    /* renamed from: d0.e0.p.d.e0$b */
+    /* JADX INFO: renamed from: d0.e0.p.d.e0$b */
+    /* JADX INFO: compiled from: ReflectionObjectRenderer.kt */
     public static final class b extends Lambda implements Function1<ValueParameterDescriptor, CharSequence> {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public static final b f22351j = new b();
 
         public b() {
@@ -69,7 +69,7 @@ public final class ReflectionObjectRenderer {
             return invoke2(valueParameterDescriptor);
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final CharSequence invoke2(ValueParameterDescriptor valueParameterDescriptor) {
             ReflectionObjectRenderer reflectionObjectRenderer = ReflectionObjectRenderer.f22349b;
             Intrinsics3.checkNotNullExpressionValue(valueParameterDescriptor, "it");
@@ -79,7 +79,7 @@ public final class ReflectionObjectRenderer {
         }
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final void m9334a(StringBuilder sb, ReceiverParameterDescriptor receiverParameterDescriptor) {
         if (receiverParameterDescriptor != null) {
             KotlinType type = receiverParameterDescriptor.getType();
@@ -89,7 +89,7 @@ public final class ReflectionObjectRenderer {
         }
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final void m9335b(StringBuilder sb, CallableDescriptor callableDescriptor) {
         ReceiverParameterDescriptor instanceReceiverParameter = util2.getInstanceReceiverParameter(callableDescriptor);
         ReceiverParameterDescriptor extensionReceiverParameter = callableDescriptor.getExtensionReceiverParameter();

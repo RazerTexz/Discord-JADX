@@ -8,18 +8,18 @@ import androidx.viewbinding.ViewBinding;
 import com.discord.utilities.view.text.LinkifiedTextView;
 import com.discord.views.CodeVerificationView;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public final class WidgetHubAuthenticationBinding implements ViewBinding {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     @NonNull
     public final LinearLayout f17151a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     @NonNull
     public final LinkifiedTextView f17152b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     @NonNull
     public final CodeVerificationView f17153c;
 

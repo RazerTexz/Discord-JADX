@@ -54,8 +54,8 @@ import p637j0.p641k.Func1;
 import p658rx.Observable;
 import p658rx.functions.Action1;
 
-/* compiled from: StoreUser.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: StoreUser.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class StoreUser extends StoreV2 {
     private final Dispatcher dispatcher;
     private MeUser me;
@@ -67,13 +67,13 @@ public final class StoreUser extends StoreV2 {
     private final SnowflakePartitionMap.CopiablePartitionMap<com.discord.models.user.User> users;
     private Map<Long, ? extends com.discord.models.user.User> usersSnapshot;
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private static final ObservationDeck.UpdateSource MeUpdate = new StoreUser2();
     private static final ObservationDeck.UpdateSource UsersUpdate = new StoreUser3();
     private static final MeUser EMPTY_ME_USER = new MeUser(0, "EMPTY_USERNAME", null, null, false, false, 0, PremiumTier.NONE, null, false, false, null, 0, 0, null, NsfwAllowance.UNKNOWN, null, null, 204800, null);
 
-    /* compiled from: StoreUser.kt */
+    /* JADX INFO: compiled from: StoreUser.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -91,8 +91,8 @@ public final class StoreUser extends StoreV2 {
         }
     }
 
-    /* compiled from: StoreUser.kt */
-    /* renamed from: com.discord.stores.StoreUser$fetchUsers$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreUser$fetchUsers$1 */
+    /* JADX INFO: compiled from: StoreUser.kt */
     public static final class C65491 extends Lambda implements Function0<Unit> {
         public final /* synthetic */ List $users;
 
@@ -108,15 +108,15 @@ public final class StoreUser extends StoreV2 {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             StoreUser storeUser = StoreUser.this;
             StoreUser.access$fetchMissing(storeUser, this.$users, storeUser.getUsers().keySet());
         }
     }
 
-    /* compiled from: StoreUser.kt */
-    /* renamed from: com.discord.stores.StoreUser$observeAllUsers$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreUser$observeAllUsers$1 */
+    /* JADX INFO: compiled from: StoreUser.kt */
     public static final class C65501 extends Lambda implements Function0<Map<Long, ? extends com.discord.models.user.User>> {
         public C65501() {
             super(0);
@@ -128,14 +128,14 @@ public final class StoreUser extends StoreV2 {
         }
 
         @Override // kotlin.jvm.functions.Function0
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final Map<Long, ? extends com.discord.models.user.User> invoke2() {
             return StoreUser.this.getUsers();
         }
     }
 
-    /* compiled from: StoreUser.kt */
-    /* renamed from: com.discord.stores.StoreUser$observeMe$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreUser$observeMe$1 */
+    /* JADX INFO: compiled from: StoreUser.kt */
     public static final class C65511 extends Lambda implements Function0<MeUser> {
         public C65511() {
             super(0);
@@ -153,8 +153,8 @@ public final class StoreUser extends StoreV2 {
         }
     }
 
-    /* compiled from: StoreUser.kt */
-    /* renamed from: com.discord.stores.StoreUser$observeMe$2 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreUser$observeMe$2 */
+    /* JADX INFO: compiled from: StoreUser.kt */
     public static final class C65522<T, R> implements Func1<MeUser, Boolean> {
         public final /* synthetic */ boolean $emitEmpty;
 
@@ -167,14 +167,14 @@ public final class StoreUser extends StoreV2 {
             return call2(meUser);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final Boolean call2(MeUser meUser) {
             return Boolean.valueOf(meUser != StoreUser.access$getEMPTY_ME_USER$cp() || this.$emitEmpty);
         }
     }
 
-    /* compiled from: StoreUser.kt */
-    /* renamed from: com.discord.stores.StoreUser$observeMeId$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreUser$observeMeId$1 */
+    /* JADX INFO: compiled from: StoreUser.kt */
     public static final class C65531 extends Lambda implements Function0<Long> {
         public C65531() {
             super(0);
@@ -185,14 +185,14 @@ public final class StoreUser extends StoreV2 {
             return Long.valueOf(invoke2());
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final long invoke2() {
             return StoreUser.access$getMe$p(StoreUser.this).getId();
         }
     }
 
-    /* compiled from: StoreUser.kt */
-    /* renamed from: com.discord.stores.StoreUser$observeUser$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreUser$observeUser$1 */
+    /* JADX INFO: compiled from: StoreUser.kt */
     public static final class C65541<T, R> implements Func1<Map<Long, ? extends com.discord.models.user.User>, com.discord.models.user.User> {
         public final /* synthetic */ long $userId;
 
@@ -205,15 +205,15 @@ public final class StoreUser extends StoreV2 {
             return call2(map);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final com.discord.models.user.User call2(Map<Long, ? extends com.discord.models.user.User> map) {
             Intrinsics3.checkNotNullParameter(map, "user");
             return map.get(Long.valueOf(this.$userId));
         }
     }
 
-    /* compiled from: StoreUser.kt */
-    /* renamed from: com.discord.stores.StoreUser$observeUsernames$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreUser$observeUsernames$1 */
+    /* JADX INFO: compiled from: StoreUser.kt */
     public static final class C65551 extends Lambda implements Function1<com.discord.models.user.User, String> {
         public static final C65551 INSTANCE = new C65551();
 
@@ -226,15 +226,15 @@ public final class StoreUser extends StoreV2 {
             return invoke2(user);
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final String invoke2(com.discord.models.user.User user) {
             Intrinsics3.checkNotNull(user);
             return user.getUsername();
         }
     }
 
-    /* compiled from: StoreUser.kt */
-    /* renamed from: com.discord.stores.StoreUser$observeUsers$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreUser$observeUsers$1 */
+    /* JADX INFO: compiled from: StoreUser.kt */
     public static final class C65561<T> implements Action1<Map<Long, ? extends com.discord.models.user.User>> {
         public final /* synthetic */ boolean $fetchUserIfMissing;
         public final /* synthetic */ Collection $userIds;
@@ -249,7 +249,7 @@ public final class StoreUser extends StoreV2 {
             call2(map);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final void call2(Map<Long, ? extends com.discord.models.user.User> map) {
             if (this.$fetchUserIfMissing) {
                 StoreUser.access$fetchMissing(StoreUser.this, this.$userIds, map.keySet());
@@ -327,13 +327,13 @@ public final class StoreUser extends StoreV2 {
         this.dispatcher.schedule(new C65491(users));
     }
 
-    /* renamed from: getMe, reason: from getter */
+    /* JADX INFO: renamed from: getMe, reason: from getter */
     public final MeUser getMeSnapshot() {
         return this.meSnapshot;
     }
 
     @Store3
-    /* renamed from: getMeInternal$app_productionGoogleRelease, reason: from getter */
+    /* JADX INFO: renamed from: getMeInternal$app_productionGoogleRelease, reason: from getter */
     public final MeUser getMe() {
         return this.me;
     }

@@ -7,9 +7,9 @@ import java.util.Set;
 import kotlin.jvm.functions.Function2;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: StoreUtilities.kt */
-/* renamed from: com.discord.stores.utilities.StoreUtilitiesKt, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.stores.utilities.StoreUtilitiesKt, reason: use source file name */
+/* JADX INFO: compiled from: StoreUtilities.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class StoreUtilities {
     /* JADX WARN: Multi-variable type inference failed */
     public static final <K, V> Map<K, V> snapshotDirtyKeys(Map<K, ? extends V> map, Map<K, ? extends V> map2, Set<K> set, Function2<? super K, ? super V, ? extends V> function2) {

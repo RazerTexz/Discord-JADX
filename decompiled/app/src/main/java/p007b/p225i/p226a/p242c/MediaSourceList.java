@@ -27,56 +27,56 @@ import p007b.p225i.p226a.p242c.p259f3.Util2;
 import p007b.p225i.p226a.p242c.p262s2.AnalyticsCollector;
 import p007b.p225i.p226a.p242c.p266w2.DrmSessionEventListener;
 
-/* compiled from: MediaSourceList.java */
-/* renamed from: b.i.a.c.u1, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.u1, reason: use source file name */
+/* JADX INFO: compiled from: MediaSourceList.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class MediaSourceList {
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final d f7867d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final MediaSourceEventListener.a f7868e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final DrmSessionEventListener.a f7869f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public final HashMap<c, b> f7870g;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public final Set<c> f7871h;
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public boolean f7873j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     @Nullable
     public TransferListener f7874k;
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public ShuffleOrder f7872i = new ShuffleOrder.a(0, new Random());
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final IdentityHashMap<MediaPeriod, c> f7865b = new IdentityHashMap<>();
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final Map<Object, c> f7866c = new HashMap();
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final List<c> f7864a = new ArrayList();
 
-    /* compiled from: MediaSourceList.java */
-    /* renamed from: b.i.a.c.u1$a */
+    /* JADX INFO: renamed from: b.i.a.c.u1$a */
+    /* JADX INFO: compiled from: MediaSourceList.java */
     public final class a implements MediaSourceEventListener, DrmSessionEventListener {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public final c f7875j;
 
-        /* renamed from: k */
+        /* JADX INFO: renamed from: k */
         public MediaSourceEventListener.a f7876k;
 
-        /* renamed from: l */
+        /* JADX INFO: renamed from: l */
         public DrmSessionEventListener.a f7877l;
 
         public a(c cVar) {
@@ -86,7 +86,7 @@ public final class MediaSourceList {
         }
 
         @Override // p007b.p225i.p226a.p242c.p266w2.DrmSessionEventListener
-        /* renamed from: J */
+        /* JADX INFO: renamed from: J */
         public void mo2567J(int i, @Nullable MediaSource2.a aVar) {
             if (m3544a(i, aVar)) {
                 this.f7877l.m3588b();
@@ -94,7 +94,7 @@ public final class MediaSourceList {
         }
 
         @Override // p007b.p225i.p226a.p242c.p266w2.DrmSessionEventListener
-        /* renamed from: S */
+        /* JADX INFO: renamed from: S */
         public void mo2568S(int i, @Nullable MediaSource2.a aVar) {
             if (m3544a(i, aVar)) {
                 this.f7877l.m3587a();
@@ -102,14 +102,14 @@ public final class MediaSourceList {
         }
 
         @Override // p007b.p225i.p226a.p242c.p243a3.MediaSourceEventListener
-        /* renamed from: X */
+        /* JADX INFO: renamed from: X */
         public void mo2461X(int i, @Nullable MediaSource2.a aVar, LoadEventInfo loadEventInfo, MediaLoadData mediaLoadData) {
             if (m3544a(i, aVar)) {
                 this.f7876k.m2469d(loadEventInfo, mediaLoadData);
             }
         }
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final boolean m3544a(int i, @Nullable MediaSource2.a aVar) {
             MediaSource2.a aVarM2460b = null;
             if (aVar != null) {
@@ -143,7 +143,7 @@ public final class MediaSourceList {
         }
 
         @Override // p007b.p225i.p226a.p242c.p266w2.DrmSessionEventListener
-        /* renamed from: c0 */
+        /* JADX INFO: renamed from: c0 */
         public void mo2571c0(int i, @Nullable MediaSource2.a aVar, int i2) {
             if (m3544a(i, aVar)) {
                 this.f7877l.m3590d(i2);
@@ -151,7 +151,7 @@ public final class MediaSourceList {
         }
 
         @Override // p007b.p225i.p226a.p242c.p266w2.DrmSessionEventListener
-        /* renamed from: d0 */
+        /* JADX INFO: renamed from: d0 */
         public void mo2572d0(int i, @Nullable MediaSource2.a aVar) {
             if (m3544a(i, aVar)) {
                 this.f7877l.m3592f();
@@ -159,7 +159,7 @@ public final class MediaSourceList {
         }
 
         @Override // p007b.p225i.p226a.p242c.p243a3.MediaSourceEventListener
-        /* renamed from: g0 */
+        /* JADX INFO: renamed from: g0 */
         public void mo2462g0(int i, @Nullable MediaSource2.a aVar, LoadEventInfo loadEventInfo, MediaLoadData mediaLoadData, IOException iOException, boolean z2) {
             if (m3544a(i, aVar)) {
                 this.f7876k.m2470e(loadEventInfo, mediaLoadData, iOException, z2);
@@ -167,7 +167,7 @@ public final class MediaSourceList {
         }
 
         @Override // p007b.p225i.p226a.p242c.p266w2.DrmSessionEventListener
-        /* renamed from: i0 */
+        /* JADX INFO: renamed from: i0 */
         public void mo2573i0(int i, @Nullable MediaSource2.a aVar) {
             if (m3544a(i, aVar)) {
                 this.f7877l.m3589c();
@@ -175,7 +175,7 @@ public final class MediaSourceList {
         }
 
         @Override // p007b.p225i.p226a.p242c.p243a3.MediaSourceEventListener
-        /* renamed from: o */
+        /* JADX INFO: renamed from: o */
         public void mo2463o(int i, @Nullable MediaSource2.a aVar, MediaLoadData mediaLoadData) {
             if (m3544a(i, aVar)) {
                 this.f7876k.m2467b(mediaLoadData);
@@ -183,7 +183,7 @@ public final class MediaSourceList {
         }
 
         @Override // p007b.p225i.p226a.p242c.p243a3.MediaSourceEventListener
-        /* renamed from: q */
+        /* JADX INFO: renamed from: q */
         public void mo2464q(int i, @Nullable MediaSource2.a aVar, LoadEventInfo loadEventInfo, MediaLoadData mediaLoadData) {
             if (m3544a(i, aVar)) {
                 this.f7876k.m2468c(loadEventInfo, mediaLoadData);
@@ -191,7 +191,7 @@ public final class MediaSourceList {
         }
 
         @Override // p007b.p225i.p226a.p242c.p266w2.DrmSessionEventListener
-        /* renamed from: u */
+        /* JADX INFO: renamed from: u */
         public void mo2574u(int i, @Nullable MediaSource2.a aVar, Exception exc) {
             if (m3544a(i, aVar)) {
                 this.f7877l.m3591e(exc);
@@ -199,7 +199,7 @@ public final class MediaSourceList {
         }
 
         @Override // p007b.p225i.p226a.p242c.p243a3.MediaSourceEventListener
-        /* renamed from: x */
+        /* JADX INFO: renamed from: x */
         public void mo2465x(int i, @Nullable MediaSource2.a aVar, LoadEventInfo loadEventInfo, MediaLoadData mediaLoadData) {
             if (m3544a(i, aVar)) {
                 this.f7876k.m2471f(loadEventInfo, mediaLoadData);
@@ -207,17 +207,17 @@ public final class MediaSourceList {
         }
     }
 
-    /* compiled from: MediaSourceList.java */
-    /* renamed from: b.i.a.c.u1$b */
+    /* JADX INFO: renamed from: b.i.a.c.u1$b */
+    /* JADX INFO: compiled from: MediaSourceList.java */
     public static final class b {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final MediaSource2 f7879a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final MediaSource2.b f7880b;
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public final a f7881c;
 
         public b(MediaSource2 mediaSource2, MediaSource2.b bVar, a aVar) {
@@ -227,23 +227,23 @@ public final class MediaSourceList {
         }
     }
 
-    /* compiled from: MediaSourceList.java */
-    /* renamed from: b.i.a.c.u1$c */
+    /* JADX INFO: renamed from: b.i.a.c.u1$c */
+    /* JADX INFO: compiled from: MediaSourceList.java */
     public static final class c implements MediaSourceInfoHolder {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final MaskingMediaSource f7882a;
 
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         public int f7885d;
 
-        /* renamed from: e */
+        /* JADX INFO: renamed from: e */
         public boolean f7886e;
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public final List<MediaSource2.a> f7884c = new ArrayList();
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final Object f7883b = new Object();
 
         public c(MediaSource2 mediaSource2, boolean z2) {
@@ -251,7 +251,7 @@ public final class MediaSourceList {
         }
 
         @Override // p007b.p225i.p226a.p242c.MediaSourceInfoHolder
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public Timeline mo2931a() {
             return this.f7882a.f5716n;
         }
@@ -262,8 +262,8 @@ public final class MediaSourceList {
         }
     }
 
-    /* compiled from: MediaSourceList.java */
-    /* renamed from: b.i.a.c.u1$d */
+    /* JADX INFO: renamed from: b.i.a.c.u1$d */
+    /* JADX INFO: compiled from: MediaSourceList.java */
     public interface d {
     }
 
@@ -281,7 +281,7 @@ public final class MediaSourceList {
         }
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public Timeline m3535a(int i, List<c> list, ShuffleOrder shuffleOrder) {
         if (!list.isEmpty()) {
             this.f7872i = shuffleOrder;
@@ -316,7 +316,7 @@ public final class MediaSourceList {
         return m3537c();
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final void m3536b(int i, int i2) {
         while (i < this.f7864a.size()) {
             this.f7864a.get(i).f7885d += i2;
@@ -324,7 +324,7 @@ public final class MediaSourceList {
         }
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public Timeline m3537c() {
         if (this.f7864a.isEmpty()) {
             return Timeline.f7337j;
@@ -338,7 +338,7 @@ public final class MediaSourceList {
         return new PlaylistTimeline(this.f7864a, this.f7872i);
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final void m3538d() {
         Iterator<c> it = this.f7871h.iterator();
         while (it.hasNext()) {
@@ -353,12 +353,12 @@ public final class MediaSourceList {
         }
     }
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public int m3539e() {
         return this.f7864a.size();
     }
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final void m3540f(c cVar) {
         if (cVar.f7886e && cVar.f7884c.isEmpty()) {
             b bVarRemove = this.f7870g.remove(cVar);
@@ -370,7 +370,7 @@ public final class MediaSourceList {
         }
     }
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public final void m3541g(c cVar) {
         MaskingMediaSource maskingMediaSource = cVar.f7882a;
         C2826n0 c2826n0 = new C2826n0(this);
@@ -388,7 +388,7 @@ public final class MediaSourceList {
         maskingMediaSource.mo2457l(c2826n0, this.f7874k);
     }
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public void m3542h(MediaPeriod mediaPeriod) {
         c cVarRemove = this.f7865b.remove(mediaPeriod);
         Objects.requireNonNull(cVarRemove);
@@ -400,7 +400,7 @@ public final class MediaSourceList {
         m3540f(cVarRemove);
     }
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public final void m3543i(int i, int i2) {
         for (int i3 = i2 - 1; i3 >= i; i3--) {
             c cVarRemove = this.f7864a.remove(i3);

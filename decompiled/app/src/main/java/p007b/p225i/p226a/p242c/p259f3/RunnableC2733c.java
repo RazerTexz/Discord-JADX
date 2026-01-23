@@ -2,15 +2,15 @@ package p007b.p225i.p226a.p242c.p259f3;
 
 import p007b.p225i.p226a.p242c.p259f3.NetworkTypeObserver;
 
-/* compiled from: lambda */
-/* renamed from: b.i.a.c.f3.c */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.f3.c */
+/* JADX INFO: compiled from: lambda */
+/* JADX INFO: loaded from: classes3.dex */
 public final /* synthetic */ class RunnableC2733c implements Runnable {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final /* synthetic */ NetworkTypeObserver f6693j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final /* synthetic */ NetworkTypeObserver.b f6694k;
 
     public /* synthetic */ RunnableC2733c(NetworkTypeObserver networkTypeObserver, NetworkTypeObserver.b bVar) {

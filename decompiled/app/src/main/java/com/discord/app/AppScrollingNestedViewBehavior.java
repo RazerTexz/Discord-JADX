@@ -10,8 +10,8 @@ import com.discord.utilities.display.DisplayUtils;
 import com.google.android.material.appbar.AppBarLayout;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: AppScrollingNestedViewBehavior.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: AppScrollingNestedViewBehavior.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class AppScrollingNestedViewBehavior extends AppBarLayout.ScrollingViewBehavior {
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public AppScrollingNestedViewBehavior(Context context, AttributeSet attributeSet) {

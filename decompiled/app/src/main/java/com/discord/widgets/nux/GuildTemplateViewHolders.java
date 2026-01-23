@@ -9,15 +9,15 @@ import com.discord.utilities.drawable.DrawableCompat;
 import com.discord.widgets.nux.GuildTemplatesAdapter;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: GuildTemplateViewHolders.kt */
-/* renamed from: com.discord.widgets.nux.GuildTemplateCardViewHolder, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.nux.GuildTemplateCardViewHolder, reason: use source file name */
+/* JADX INFO: compiled from: GuildTemplateViewHolders.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class GuildTemplateViewHolders extends RecyclerView.ViewHolder {
     private final NuxGuildTemplateCardViewHolderBinding binding;
     private final GuildTemplatesAdapter.Callbacks callbacks;
 
-    /* compiled from: GuildTemplateViewHolders.kt */
-    /* renamed from: com.discord.widgets.nux.GuildTemplateCardViewHolder$bind$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.nux.GuildTemplateCardViewHolder$bind$2 */
+    /* JADX INFO: compiled from: GuildTemplateViewHolders.kt */
     public static final class ViewOnClickListenerC91032 implements View.OnClickListener {
         public final /* synthetic */ GuildTemplates $guildTemplate;
 

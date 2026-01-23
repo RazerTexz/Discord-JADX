@@ -18,14 +18,14 @@ import kotlin.jvm.functions.Function1;
 import kotlin.jvm.internal.DefaultConstructorMarker;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: EmojiCategoryViewHolder.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: EmojiCategoryViewHolder.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public abstract class EmojiCategoryViewHolder extends RecyclerView.ViewHolder {
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
 
-    /* compiled from: EmojiCategoryViewHolder.kt */
+    /* JADX INFO: compiled from: EmojiCategoryViewHolder.kt */
     public static final class Companion {
 
         public final /* synthetic */ class WhenMappings {
@@ -87,7 +87,7 @@ public abstract class EmojiCategoryViewHolder extends RecyclerView.ViewHolder {
         }
     }
 
-    /* compiled from: EmojiCategoryViewHolder.kt */
+    /* JADX INFO: compiled from: EmojiCategoryViewHolder.kt */
     public static final class Guild extends EmojiCategoryViewHolder {
         private final EmojiCategoryItemGuildBinding binding;
 
@@ -114,7 +114,7 @@ public abstract class EmojiCategoryViewHolder extends RecyclerView.ViewHolder {
         }
     }
 
-    /* compiled from: EmojiCategoryViewHolder.kt */
+    /* JADX INFO: compiled from: EmojiCategoryViewHolder.kt */
     public static final class Standard extends EmojiCategoryViewHolder {
         private final EmojiCategoryItemStandardBinding binding;
 

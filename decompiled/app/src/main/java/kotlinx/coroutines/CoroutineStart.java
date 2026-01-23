@@ -1,8 +1,8 @@
 package kotlinx.coroutines;
 
 
-/* compiled from: CoroutineStart.kt */
-/* loaded from: classes3.dex */
+/* JADX INFO: compiled from: CoroutineStart.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public enum CoroutineStart {
     DEFAULT,
     LAZY,

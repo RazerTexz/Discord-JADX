@@ -10,8 +10,8 @@ import kotlin.jvm.internal.Ref$ObjectRef;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ModelSku.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: ModelSku.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class ModelSku {
     private final Application application;
     private final long applicationId;
@@ -23,7 +23,7 @@ public final /* data */ class ModelSku {
     private final Price price;
     private final int type;
 
-    /* compiled from: ModelSku.kt */
+    /* JADX INFO: compiled from: ModelSku.kt */
     public static final /* data */ class ExternalSkuStrategy {
         private final int type;
 
@@ -38,7 +38,7 @@ public final /* data */ class ModelSku {
             return externalSkuStrategy.copy(i);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final int getType() {
             return this.type;
         }
@@ -66,13 +66,13 @@ public final /* data */ class ModelSku {
             return outline.m814B(outline.m833U("ExternalSkuStrategy(type="), this.type, ")");
         }
 
-        /* renamed from: getType, reason: collision with other method in class */
+        /* JADX INFO: renamed from: getType, reason: collision with other method in class */
         public final ExternalStrategyTypes m11383getType() {
             return ExternalStrategyTypes.INSTANCE.from(this.type);
         }
     }
 
-    /* compiled from: ModelSku.kt */
+    /* JADX INFO: compiled from: ModelSku.kt */
     public enum ExternalStrategyTypes {
         CONSTANT(1),
         APPLE(2),
@@ -80,11 +80,11 @@ public final /* data */ class ModelSku {
         UNKNOWN(null);
 
 
-        /* renamed from: Companion, reason: from kotlin metadata */
+        /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
         public static final Companion INSTANCE = new Companion(null);
         private final Integer intRepresentation;
 
-        /* compiled from: ModelSku.kt */
+        /* JADX INFO: compiled from: ModelSku.kt */
         public static final class Companion {
             private Companion() {
             }
@@ -122,7 +122,7 @@ public final /* data */ class ModelSku {
         }
     }
 
-    /* compiled from: ModelSku.kt */
+    /* JADX INFO: compiled from: ModelSku.kt */
     public static final /* data */ class ModelPremiumSkuPrice {
         private final int amount;
         private final int percentage;
@@ -142,12 +142,12 @@ public final /* data */ class ModelSku {
             return modelPremiumSkuPrice.copy(i, i2);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final int getAmount() {
             return this.amount;
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final int getPercentage() {
             return this.percentage;
         }
@@ -187,7 +187,7 @@ public final /* data */ class ModelSku {
         }
     }
 
-    /* compiled from: ModelSku.kt */
+    /* JADX INFO: compiled from: ModelSku.kt */
     public static final class Parser implements Model.Parser<ModelSku> {
         public static final Parser INSTANCE = new Parser();
 
@@ -243,13 +243,13 @@ public final /* data */ class ModelSku {
         }
     }
 
-    /* compiled from: ModelSku.kt */
+    /* JADX INFO: compiled from: ModelSku.kt */
     public static final /* data */ class Price {
         private final int amount;
         private final String currency;
         private final Map<PremiumTier, ModelPremiumSkuPrice> premium;
 
-        /* compiled from: ModelSku.kt */
+        /* JADX INFO: compiled from: ModelSku.kt */
         public static final class Parser implements Model.Parser<Price> {
             public static final Parser INSTANCE = new Parser();
 
@@ -301,12 +301,12 @@ public final /* data */ class ModelSku {
             return price.copy(i, str, map);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final int getAmount() {
             return this.amount;
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final String getCurrency() {
             return this.currency;
         }
@@ -365,7 +365,7 @@ public final /* data */ class ModelSku {
         }
     }
 
-    /* compiled from: ModelSku.kt */
+    /* JADX INFO: compiled from: ModelSku.kt */
     public enum SkuCategory {
         GAME,
         NITRO,
@@ -385,46 +385,47 @@ public final /* data */ class ModelSku {
         this.externalSkuStrategies = map;
     }
 
+    /* JADX WARN: Multi-variable type inference failed */
     public static /* synthetic */ ModelSku copy$default(ModelSku modelSku, long j, String str, long j2, Application application, boolean z2, int i, Price price, int i2, Map map, int i3, Object obj) {
         return modelSku.copy((i3 & 1) != 0 ? modelSku.applicationId : j, (i3 & 2) != 0 ? modelSku.name : str, (i3 & 4) != 0 ? modelSku.id : j2, (i3 & 8) != 0 ? modelSku.application : application, (i3 & 16) != 0 ? modelSku.premium : z2, (i3 & 32) != 0 ? modelSku.type : i, (i3 & 64) != 0 ? modelSku.price : price, (i3 & 128) != 0 ? modelSku.flags : i2, (i3 & 256) != 0 ? modelSku.externalSkuStrategies : map);
     }
 
-    /* renamed from: component1, reason: from getter */
+    /* JADX INFO: renamed from: component1, reason: from getter */
     public final long getApplicationId() {
         return this.applicationId;
     }
 
-    /* renamed from: component2, reason: from getter */
+    /* JADX INFO: renamed from: component2, reason: from getter */
     public final String getName() {
         return this.name;
     }
 
-    /* renamed from: component3, reason: from getter */
+    /* JADX INFO: renamed from: component3, reason: from getter */
     public final long getId() {
         return this.id;
     }
 
-    /* renamed from: component4, reason: from getter */
+    /* JADX INFO: renamed from: component4, reason: from getter */
     public final Application getApplication() {
         return this.application;
     }
 
-    /* renamed from: component5, reason: from getter */
+    /* JADX INFO: renamed from: component5, reason: from getter */
     public final boolean getPremium() {
         return this.premium;
     }
 
-    /* renamed from: component6, reason: from getter */
+    /* JADX INFO: renamed from: component6, reason: from getter */
     public final int getType() {
         return this.type;
     }
 
-    /* renamed from: component7, reason: from getter */
+    /* JADX INFO: renamed from: component7, reason: from getter */
     public final Price getPrice() {
         return this.price;
     }
 
-    /* renamed from: component8, reason: from getter */
+    /* JADX INFO: renamed from: component8, reason: from getter */
     public final int getFlags() {
         return this.flags;
     }
@@ -491,6 +492,9 @@ public final /* data */ class ModelSku {
     }
 
     /* JADX WARN: Multi-variable type inference failed */
+    /* JADX WARN: Type inference failed for: r0v10, types: [int] */
+    /* JADX WARN: Type inference failed for: r0v18 */
+    /* JADX WARN: Type inference failed for: r0v21 */
     public int hashCode() {
         long j = this.applicationId;
         int i = ((int) (j ^ (j >>> 32))) * 31;
@@ -501,13 +505,13 @@ public final /* data */ class ModelSku {
         Application application = this.application;
         int iHashCode2 = (i2 + (application != null ? application.hashCode() : 0)) * 31;
         boolean z2 = this.premium;
-        int i3 = z2;
-        if (z2 != 0) {
-            i3 = 1;
+        ?? r0 = z2;
+        if (z2) {
+            r0 = 1;
         }
-        int i4 = (((iHashCode2 + i3) * 31) + this.type) * 31;
+        int i3 = (((iHashCode2 + r0) * 31) + this.type) * 31;
         Price price = this.price;
-        int iHashCode3 = (((i4 + (price != null ? price.hashCode() : 0)) * 31) + this.flags) * 31;
+        int iHashCode3 = (((i3 + (price != null ? price.hashCode() : 0)) * 31) + this.flags) * 31;
         Map<Integer, ExternalSkuStrategy> map = this.externalSkuStrategies;
         return iHashCode3 + (map != null ? map.hashCode() : 0);
     }

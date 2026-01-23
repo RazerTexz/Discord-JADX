@@ -3,15 +3,15 @@ package p507d0.p513e0.p514p.p515d.p517m0.p567n.p572p1;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: CapturedTypeApproximation.kt */
-/* renamed from: d0.e0.p.d.m0.n.p1.a, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.n.p1.a, reason: use source file name */
+/* JADX INFO: compiled from: CapturedTypeApproximation.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class CapturedTypeApproximation<T> {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final T f24856a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final T f24857b;
 
     public CapturedTypeApproximation(T t, T t2) {

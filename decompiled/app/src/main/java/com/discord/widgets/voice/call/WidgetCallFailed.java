@@ -38,19 +38,19 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 import p658rx.functions.Action1;
 
-/* compiled from: WidgetCallFailed.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: WidgetCallFailed.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class WidgetCallFailed extends AppDialog {
     public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetCallFailed.class, "binding", "getBinding()Lcom/discord/databinding/ViewDialogConfirmationBinding;", 0)};
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private static final String INTENT_USER_ID = "INTENT_USER_ID";
 
-    /* renamed from: binding$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
 
-    /* compiled from: WidgetCallFailed.kt */
+    /* JADX INFO: compiled from: WidgetCallFailed.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -69,8 +69,8 @@ public final class WidgetCallFailed extends AppDialog {
         }
     }
 
-    /* compiled from: WidgetCallFailed.kt */
-    /* renamed from: com.discord.widgets.voice.call.WidgetCallFailed$onViewBound$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.voice.call.WidgetCallFailed$onViewBound$1 */
+    /* JADX INFO: compiled from: WidgetCallFailed.kt */
     public static final class ViewOnClickListenerC104111 implements View.OnClickListener {
         public ViewOnClickListenerC104111() {
         }
@@ -81,8 +81,8 @@ public final class WidgetCallFailed extends AppDialog {
         }
     }
 
-    /* compiled from: WidgetCallFailed.kt */
-    /* renamed from: com.discord.widgets.voice.call.WidgetCallFailed$onViewBoundOrOnResume$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.voice.call.WidgetCallFailed$onViewBoundOrOnResume$1 */
+    /* JADX INFO: compiled from: WidgetCallFailed.kt */
     public static final class C104121 extends Lambda implements Function1<User, Unit> {
         public C104121() {
             super(1);
@@ -94,14 +94,14 @@ public final class WidgetCallFailed extends AppDialog {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(User user) {
             WidgetCallFailed.access$configureUI(WidgetCallFailed.this, user);
         }
     }
 
-    /* compiled from: WidgetCallFailed.kt */
-    /* renamed from: com.discord.widgets.voice.call.WidgetCallFailed$sendFriendRequest$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.voice.call.WidgetCallFailed$sendFriendRequest$1 */
+    /* JADX INFO: compiled from: WidgetCallFailed.kt */
     public static final class C104131<T> implements Action1<Void> {
         public C104131() {
         }
@@ -111,26 +111,26 @@ public final class WidgetCallFailed extends AppDialog {
             call2(r1);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final void call2(Void r4) {
             AppToast.m171i(WidgetCallFailed.this, C5419R.string.friend_request_sent, 0, 4);
             WidgetCallFailed.this.dismiss();
         }
     }
 
-    /* compiled from: WidgetCallFailed.kt */
-    /* renamed from: com.discord.widgets.voice.call.WidgetCallFailed$sendFriendRequest$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.voice.call.WidgetCallFailed$sendFriendRequest$2 */
+    /* JADX INFO: compiled from: WidgetCallFailed.kt */
     public static final class C104142<T> implements Action1<Error> {
         public final /* synthetic */ long $userId;
         public final /* synthetic */ String $username;
 
-        /* compiled from: WidgetCallFailed.kt */
-        /* renamed from: com.discord.widgets.voice.call.WidgetCallFailed$sendFriendRequest$2$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.widgets.voice.call.WidgetCallFailed$sendFriendRequest$2$1, reason: invalid class name */
+        /* JADX INFO: compiled from: WidgetCallFailed.kt */
         public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
             public final /* synthetic */ Error $error;
 
-            /* compiled from: WidgetCallFailed.kt */
-            /* renamed from: com.discord.widgets.voice.call.WidgetCallFailed$sendFriendRequest$2$1$1, reason: invalid class name and collision with other inner class name */
+            /* JADX INFO: renamed from: com.discord.widgets.voice.call.WidgetCallFailed$sendFriendRequest$2$1$1, reason: invalid class name and collision with other inner class name */
+            /* JADX INFO: compiled from: WidgetCallFailed.kt */
             public static final class C132971 extends Lambda implements Function2<AppFragment, CaptchaHelper.CaptchaPayload, Unit> {
                 public C132971() {
                     super(2);
@@ -142,7 +142,7 @@ public final class WidgetCallFailed extends AppDialog {
                     return Unit.f27425a;
                 }
 
-                /* renamed from: invoke, reason: avoid collision after fix types in other method */
+                /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
                 public final void invoke2(AppFragment appFragment, CaptchaHelper.CaptchaPayload captchaPayload) {
                     Intrinsics3.checkNotNullParameter(appFragment, "<anonymous parameter 0>");
                     Intrinsics3.checkNotNullParameter(captchaPayload, "captchaPayload");
@@ -163,7 +163,7 @@ public final class WidgetCallFailed extends AppDialog {
                 return Unit.f27425a;
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2() {
                 Error error = this.$error;
                 Intrinsics3.checkNotNullExpressionValue(error, "error");
@@ -196,7 +196,7 @@ public final class WidgetCallFailed extends AppDialog {
             call2(error);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final void call2(Error error) {
             RestAPIAbortMessages restAPIAbortMessages = RestAPIAbortMessages.INSTANCE;
             Intrinsics3.checkNotNullExpressionValue(error, "error");

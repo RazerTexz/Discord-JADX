@@ -5,8 +5,8 @@ import androidx.annotation.RestrictTo;
 import androidx.core.graphics.drawable.IconCompat;
 import androidx.versionedparcelable.VersionedParcel;
 
+/* JADX INFO: loaded from: classes.dex */
 @RestrictTo({RestrictTo.Scope.LIBRARY})
-/* loaded from: classes.dex */
 public class RemoteActionCompatParcelizer {
     public static RemoteActionCompat read(VersionedParcel versionedParcel) {
         RemoteActionCompat remoteActionCompat = new RemoteActionCompat();
@@ -19,7 +19,7 @@ public class RemoteActionCompatParcelizer {
         return remoteActionCompat;
     }
 
-    public static void write(RemoteActionCompat remoteActionCompat, VersionedParcel versionedParcel) throws IllegalArgumentException {
+    public static void write(RemoteActionCompat remoteActionCompat, VersionedParcel versionedParcel) {
         versionedParcel.setSerializationFlags(false, false);
         versionedParcel.writeVersionedParcelable(remoteActionCompat.mIcon, 1);
         versionedParcel.writeCharSequence(remoteActionCompat.mTitle, 2);

@@ -9,8 +9,8 @@ import kotlin.jvm.internal.DefaultConstructorMarker;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: SpeedOnScrollListener.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: SpeedOnScrollListener.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class SpeedOnScrollListener extends RecyclerView.OnScrollListener {
     private static final long INIT_TIMESTAMP = -1;
     private final Clock clock;
@@ -19,8 +19,8 @@ public final class SpeedOnScrollListener extends RecyclerView.OnScrollListener {
     private final Function1<Boolean, Unit> thresholdCallback;
     private long timeStamp;
 
-    /* compiled from: SpeedOnScrollListener.kt */
-    /* renamed from: com.discord.utilities.recycler.SpeedOnScrollListener$1 */
+    /* JADX INFO: renamed from: com.discord.utilities.recycler.SpeedOnScrollListener$1 */
+    /* JADX INFO: compiled from: SpeedOnScrollListener.kt */
     public static final class C68511 extends Lambda implements Function1<Boolean, Unit> {
         public static final C68511 INSTANCE = new C68511();
 

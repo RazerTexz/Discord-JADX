@@ -8,22 +8,22 @@ import androidx.viewbinding.ViewBinding;
 import com.discord.views.GuildView;
 import com.google.android.material.button.MaterialButton;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public final class HubAddServerConfirmationDialogBinding implements ViewBinding {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     @NonNull
     public final LinearLayout f15161a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     @NonNull
     public final TextView f15162b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     @NonNull
     public final GuildView f15163c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     @NonNull
     public final MaterialButton f15164d;
 

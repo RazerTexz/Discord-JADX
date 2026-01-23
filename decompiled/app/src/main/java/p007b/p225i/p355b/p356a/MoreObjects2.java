@@ -4,33 +4,33 @@ import com.google.errorprone.annotations.CanIgnoreReturnValue;
 import java.util.Arrays;
 import org.checkerframework.checker.nullness.compatqual.NullableDecl;
 
-/* compiled from: MoreObjects.java */
-/* renamed from: b.i.b.a.g, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.b.a.g, reason: use source file name */
+/* JADX INFO: compiled from: MoreObjects.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class MoreObjects2 {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final String f11950a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final a f11951b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public a f11952c;
 
-    /* compiled from: MoreObjects.java */
-    /* renamed from: b.i.b.a.g$a */
+    /* JADX INFO: renamed from: b.i.b.a.g$a */
+    /* JADX INFO: compiled from: MoreObjects.java */
     public static final class a {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         @NullableDecl
         public String f11953a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         @NullableDecl
         public Object f11954b;
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         @NullableDecl
         public a f11955c;
 
@@ -46,7 +46,7 @@ public final class MoreObjects2 {
     }
 
     @CanIgnoreReturnValue
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public MoreObjects2 m6214a(String str, int i) {
         String strValueOf = String.valueOf(i);
         a aVar = new a(null);

@@ -4,9 +4,9 @@ import android.view.View;
 import com.discord.widgets.search.suggestions.WidgetSearchSuggestionsAdapter;
 import java.util.List;
 
-/* compiled from: WidgetSearchSuggestionsAdapter.kt */
-/* renamed from: com.discord.widgets.search.suggestions.WidgetSearchSuggestionsAdapter$RecentQueryViewHolder$onConfigure$1 */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.search.suggestions.WidgetSearchSuggestionsAdapter$RecentQueryViewHolder$onConfigure$1 */
+/* JADX INFO: compiled from: WidgetSearchSuggestionsAdapter.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class ViewOnClickListenerC9144x57d59316 implements View.OnClickListener {
     public final /* synthetic */ List $query;
     public final /* synthetic */ WidgetSearchSuggestionsAdapter.RecentQueryViewHolder this$0;

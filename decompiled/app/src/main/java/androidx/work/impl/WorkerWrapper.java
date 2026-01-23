@@ -34,8 +34,8 @@ import java.util.concurrent.CancellationException;
 import java.util.concurrent.ExecutionException;
 import p007b.p225i.p355b.p359d.p360a.ListenableFuture8;
 
+/* JADX INFO: loaded from: classes.dex */
 @RestrictTo({RestrictTo.Scope.LIBRARY_GROUP})
-/* loaded from: classes.dex */
 public class WorkerWrapper implements Runnable {
     public static final String TAG = Logger.tagWithPrefix("WorkerWrapper");
     public Context mAppContext;
@@ -64,7 +64,7 @@ public class WorkerWrapper implements Runnable {
     @Nullable
     public ListenableFuture8<ListenableWorker.Result> mInnerFuture = null;
 
-    /* renamed from: androidx.work.impl.WorkerWrapper$1 */
+    /* JADX INFO: renamed from: androidx.work.impl.WorkerWrapper$1 */
     public class RunnableC07331 implements Runnable {
         public final /* synthetic */ SettableFuture val$future;
 
@@ -85,7 +85,7 @@ public class WorkerWrapper implements Runnable {
         }
     }
 
-    /* renamed from: androidx.work.impl.WorkerWrapper$2 */
+    /* JADX INFO: renamed from: androidx.work.impl.WorkerWrapper$2 */
     public class RunnableC07342 implements Runnable {
         public final /* synthetic */ SettableFuture val$future;
         public final /* synthetic */ String val$workDescription;

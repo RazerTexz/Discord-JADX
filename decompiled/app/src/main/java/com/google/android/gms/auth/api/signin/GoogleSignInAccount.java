@@ -22,56 +22,56 @@ import p007b.p085c.p086a.p087a0.AnimatableValueParser;
 import p007b.p100d.p104b.p105a.outline;
 import p007b.p225i.p226a.p288f.p292c.p293a.p296f.C3219d;
 
-/* compiled from: com.google.android.gms:play-services-base@@17.3.0 */
-/* loaded from: classes3.dex */
+/* JADX INFO: compiled from: com.google.android.gms:play-services-base@@17.3.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public class GoogleSignInAccount extends AbstractSafeParcelable implements ReflectedParcelable {
     public static final Parcelable.Creator<GoogleSignInAccount> CREATOR = new C3219d();
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final int f20416j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     @Nullable
     public String f20417k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     @Nullable
     public String f20418l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     @Nullable
     public String f20419m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     @Nullable
     public String f20420n;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     @Nullable
     public Uri f20421o;
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     @Nullable
     public String f20422p;
 
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     public long f20423q;
 
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     public String f20424r;
 
-    /* renamed from: s */
+    /* JADX INFO: renamed from: s */
     public List<Scope> f20425s;
 
-    /* renamed from: t */
+    /* JADX INFO: renamed from: t */
     @Nullable
     public String f20426t;
 
-    /* renamed from: u */
+    /* JADX INFO: renamed from: u */
     @Nullable
     public String f20427u;
 
-    /* renamed from: v */
+    /* JADX INFO: renamed from: v */
     public Set<Scope> f20428v = new HashSet();
 
     public GoogleSignInAccount(int i, @Nullable String str, @Nullable String str2, @Nullable String str3, @Nullable String str4, @Nullable Uri uri, @Nullable String str5, long j, String str6, List<Scope> list, @Nullable String str7, @Nullable String str8) {
@@ -90,8 +90,8 @@ public class GoogleSignInAccount extends AbstractSafeParcelable implements Refle
     }
 
     @Nullable
-    /* renamed from: x0 */
-    public static GoogleSignInAccount m9010x0(@Nullable String str) throws JSONException, NumberFormatException {
+    /* JADX INFO: renamed from: x0 */
+    public static GoogleSignInAccount m9010x0(@Nullable String str) throws JSONException {
         if (TextUtils.isEmpty(str)) {
             return null;
         }
@@ -142,7 +142,7 @@ public class GoogleSignInAccount extends AbstractSafeParcelable implements Refle
     }
 
     @NonNull
-    /* renamed from: w0 */
+    /* JADX INFO: renamed from: w0 */
     public Set<Scope> m9011w0() {
         HashSet hashSet = new HashSet(this.f20425s);
         hashSet.addAll(this.f20428v);

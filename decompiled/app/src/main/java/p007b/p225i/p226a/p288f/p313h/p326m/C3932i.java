@@ -4,11 +4,11 @@ import com.google.android.gms.nearby.messages.MessageListener;
 import com.google.android.gms.nearby.messages.internal.Update;
 import java.util.List;
 
-/* renamed from: b.i.a.f.h.m.i */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.h.m.i */
+/* JADX INFO: loaded from: classes3.dex */
 public final class C3932i extends AbstractC3935l<MessageListener> {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final /* synthetic */ List f10459a;
 
     public C3932i(List list) {
@@ -16,7 +16,7 @@ public final class C3932i extends AbstractC3935l<MessageListener> {
     }
 
     @Override // p007b.p225i.p226a.p288f.p299e.p300h.p301j.C3301k.b
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final void mo4107a(Object obj) {
         MessageListener messageListener = (MessageListener) obj;
         for (Update update : this.f10459a) {

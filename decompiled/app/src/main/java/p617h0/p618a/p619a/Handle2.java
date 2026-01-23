@@ -2,24 +2,24 @@ package p617h0.p618a.p619a;
 
 import p007b.p100d.p104b.p105a.outline;
 
-/* compiled from: Handle.java */
-/* renamed from: h0.a.a.n, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: h0.a.a.n, reason: use source file name */
+/* JADX INFO: compiled from: Handle.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class Handle2 {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final int f26237a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final String f26238b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final String f26239c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final String f26240d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final boolean f26241e;
 
     public Handle2(int i, String str, String str2, String str3, boolean z2) {

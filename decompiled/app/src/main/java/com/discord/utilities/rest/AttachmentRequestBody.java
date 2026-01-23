@@ -16,8 +16,8 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p615g0.JvmOkio;
 import p615g0.Timeout2;
 
-/* compiled from: AttachmentRequestBody.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: AttachmentRequestBody.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class AttachmentRequestBody extends RequestBody {
     private final Attachment<?> attachment;
     private final ContentResolver contentResolver;
@@ -34,7 +34,7 @@ public final class AttachmentRequestBody extends RequestBody {
     }
 
     @Override // okhttp3.RequestBody
-    /* renamed from: contentLength, reason: from getter */
+    /* JADX INFO: renamed from: contentLength, reason: from getter */
     public long getSize() {
         return this.size;
     }

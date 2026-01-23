@@ -1,8 +1,8 @@
 package com.discord.widgets.chat.list.entries;
 
 
-/* compiled from: MentionFooterEntry.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: MentionFooterEntry.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class MentionFooterEntry extends ChatListEntry {
     private final int type = 18;
     private final String key = String.valueOf(getType());

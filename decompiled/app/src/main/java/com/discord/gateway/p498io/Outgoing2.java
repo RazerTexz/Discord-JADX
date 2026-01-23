@@ -9,13 +9,13 @@ import p007b.p100d.p104b.p105a.outline;
 import p507d0.p580t.Collections2;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: Outgoing.kt */
-/* renamed from: com.discord.gateway.io.OutgoingPayload, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: com.discord.gateway.io.OutgoingPayload, reason: use source file name */
+/* JADX INFO: compiled from: Outgoing.kt */
+/* JADX INFO: loaded from: classes.dex */
 public abstract class Outgoing2 {
 
-    /* compiled from: Outgoing.kt */
-    /* renamed from: com.discord.gateway.io.OutgoingPayload$ApplicationCommandRequest */
+    /* JADX INFO: renamed from: com.discord.gateway.io.OutgoingPayload$ApplicationCommandRequest */
+    /* JADX INFO: compiled from: Outgoing.kt */
     public static final class ApplicationCommandRequest extends Outgoing2 {
         private final boolean applications;
         private final List<String> commandIds;
@@ -71,8 +71,8 @@ public abstract class Outgoing2 {
         }
     }
 
-    /* compiled from: Outgoing.kt */
-    /* renamed from: com.discord.gateway.io.OutgoingPayload$CallConnect */
+    /* JADX INFO: renamed from: com.discord.gateway.io.OutgoingPayload$CallConnect */
+    /* JADX INFO: compiled from: Outgoing.kt */
     public static final class CallConnect extends Outgoing2 {
         private final long channelId;
 
@@ -82,8 +82,8 @@ public abstract class Outgoing2 {
         }
     }
 
-    /* compiled from: Outgoing.kt */
-    /* renamed from: com.discord.gateway.io.OutgoingPayload$CreateStream */
+    /* JADX INFO: renamed from: com.discord.gateway.io.OutgoingPayload$CreateStream */
+    /* JADX INFO: compiled from: Outgoing.kt */
     public static final class CreateStream {
         private final long channelId;
         private final Long guildId;
@@ -115,8 +115,8 @@ public abstract class Outgoing2 {
         }
     }
 
-    /* compiled from: Outgoing.kt */
-    /* renamed from: com.discord.gateway.io.OutgoingPayload$DeleteStream */
+    /* JADX INFO: renamed from: com.discord.gateway.io.OutgoingPayload$DeleteStream */
+    /* JADX INFO: compiled from: Outgoing.kt */
     public static final class DeleteStream extends Outgoing2 {
         private final String streamKey;
 
@@ -132,8 +132,8 @@ public abstract class Outgoing2 {
         }
     }
 
-    /* compiled from: Outgoing.kt */
-    /* renamed from: com.discord.gateway.io.OutgoingPayload$ForumUnreadsRequest */
+    /* JADX INFO: renamed from: com.discord.gateway.io.OutgoingPayload$ForumUnreadsRequest */
+    /* JADX INFO: compiled from: Outgoing.kt */
     public static final class ForumUnreadsRequest extends Outgoing2 {
         private final long channelId;
         private final long guildId;
@@ -161,8 +161,8 @@ public abstract class Outgoing2 {
         }
     }
 
-    /* compiled from: Outgoing.kt */
-    /* renamed from: com.discord.gateway.io.OutgoingPayload$ForumUnreadsRequestThread */
+    /* JADX INFO: renamed from: com.discord.gateway.io.OutgoingPayload$ForumUnreadsRequestThread */
+    /* JADX INFO: compiled from: Outgoing.kt */
     public static final class ForumUnreadsRequestThread {
         private final long ackMessageId;
         private final long threadId;
@@ -181,8 +181,8 @@ public abstract class Outgoing2 {
         }
     }
 
-    /* compiled from: Outgoing.kt */
-    /* renamed from: com.discord.gateway.io.OutgoingPayload$GuildMembersRequest */
+    /* JADX INFO: renamed from: com.discord.gateway.io.OutgoingPayload$GuildMembersRequest */
+    /* JADX INFO: compiled from: Outgoing.kt */
     public static final /* data */ class GuildMembersRequest extends Outgoing2 {
         private final List<Long> guildId;
         private final Integer limit;
@@ -198,7 +198,7 @@ public abstract class Outgoing2 {
             return this.guildId;
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         private final String getQuery() {
             return this.query;
         }
@@ -207,11 +207,12 @@ public abstract class Outgoing2 {
             return this.userIds;
         }
 
-        /* renamed from: component4, reason: from getter */
+        /* JADX INFO: renamed from: component4, reason: from getter */
         private final Integer getLimit() {
             return this.limit;
         }
 
+        /* JADX WARN: Multi-variable type inference failed */
         public static /* synthetic */ GuildMembersRequest copy$default(GuildMembersRequest guildMembersRequest, List list, String str, List list2, Integer num, boolean z2, int i, Object obj) {
             if ((i & 1) != 0) {
                 list = guildMembersRequest.guildId;
@@ -234,7 +235,7 @@ public abstract class Outgoing2 {
             return guildMembersRequest.copy(list, str2, list3, num2, z2);
         }
 
-        /* renamed from: component5, reason: from getter */
+        /* JADX INFO: renamed from: component5, reason: from getter */
         public final boolean getPresences() {
             return this.presences;
         }
@@ -260,6 +261,9 @@ public abstract class Outgoing2 {
         }
 
         /* JADX WARN: Multi-variable type inference failed */
+        /* JADX WARN: Type inference failed for: r1v3, types: [int] */
+        /* JADX WARN: Type inference failed for: r1v4 */
+        /* JADX WARN: Type inference failed for: r1v6 */
         public int hashCode() {
             List<Long> list = this.guildId;
             int iHashCode = (list != null ? list.hashCode() : 0) * 31;
@@ -270,11 +274,11 @@ public abstract class Outgoing2 {
             Integer num = this.limit;
             int iHashCode4 = (iHashCode3 + (num != null ? num.hashCode() : 0)) * 31;
             boolean z2 = this.presences;
-            int i = z2;
-            if (z2 != 0) {
-                i = 1;
+            ?? r1 = z2;
+            if (z2) {
+                r1 = 1;
             }
-            return iHashCode4 + i;
+            return iHashCode4 + r1;
         }
 
         public String toString() {
@@ -302,8 +306,8 @@ public abstract class Outgoing2 {
         }
     }
 
-    /* compiled from: Outgoing.kt */
-    /* renamed from: com.discord.gateway.io.OutgoingPayload$GuildSubscriptions */
+    /* JADX INFO: renamed from: com.discord.gateway.io.OutgoingPayload$GuildSubscriptions */
+    /* JADX INFO: compiled from: Outgoing.kt */
     public static final class GuildSubscriptions extends Outgoing2 {
         private final Boolean activities;
         private final Map<Long, List<List<Integer>>> channels;
@@ -352,8 +356,8 @@ public abstract class Outgoing2 {
         }
     }
 
-    /* compiled from: Outgoing.kt */
-    /* renamed from: com.discord.gateway.io.OutgoingPayload$GuildSubscriptionsUpdate */
+    /* JADX INFO: renamed from: com.discord.gateway.io.OutgoingPayload$GuildSubscriptionsUpdate */
+    /* JADX INFO: compiled from: Outgoing.kt */
     public static final class GuildSubscriptionsUpdate extends Outgoing2 {
         private final Boolean activities;
         private final Map<Long, List<List<Integer>>> channels;
@@ -404,8 +408,8 @@ public abstract class Outgoing2 {
         }
     }
 
-    /* compiled from: Outgoing.kt */
-    /* renamed from: com.discord.gateway.io.OutgoingPayload$Identify */
+    /* JADX INFO: renamed from: com.discord.gateway.io.OutgoingPayload$Identify */
+    /* JADX INFO: compiled from: Outgoing.kt */
     public static final class Identify extends Outgoing2 {
         private final long capabilities;
         private final IdentifyClientState clientState;
@@ -428,8 +432,8 @@ public abstract class Outgoing2 {
         }
     }
 
-    /* compiled from: Outgoing.kt */
-    /* renamed from: com.discord.gateway.io.OutgoingPayload$IdentifyClientState */
+    /* JADX INFO: renamed from: com.discord.gateway.io.OutgoingPayload$IdentifyClientState */
+    /* JADX INFO: compiled from: Outgoing.kt */
     public static final class IdentifyClientState {
         private final Map<Long, String[]> guildHashes;
         private final long highestLastMessageId;
@@ -461,8 +465,8 @@ public abstract class Outgoing2 {
         }
     }
 
-    /* compiled from: Outgoing.kt */
-    /* renamed from: com.discord.gateway.io.OutgoingPayload$Resume */
+    /* JADX INFO: renamed from: com.discord.gateway.io.OutgoingPayload$Resume */
+    /* JADX INFO: compiled from: Outgoing.kt */
     public static final class Resume extends Outgoing2 {
         private final int seq;
         private final String sessionId;
@@ -476,8 +480,8 @@ public abstract class Outgoing2 {
         }
     }
 
-    /* compiled from: Outgoing.kt */
-    /* renamed from: com.discord.gateway.io.OutgoingPayload$StreamPing */
+    /* JADX INFO: renamed from: com.discord.gateway.io.OutgoingPayload$StreamPing */
+    /* JADX INFO: compiled from: Outgoing.kt */
     public static final class StreamPing extends Outgoing2 {
         private final String streamKey;
 
@@ -493,8 +497,8 @@ public abstract class Outgoing2 {
         }
     }
 
-    /* compiled from: Outgoing.kt */
-    /* renamed from: com.discord.gateway.io.OutgoingPayload$VoiceStateUpdate */
+    /* JADX INFO: renamed from: com.discord.gateway.io.OutgoingPayload$VoiceStateUpdate */
+    /* JADX INFO: compiled from: Outgoing.kt */
     public static final /* data */ class VoiceStateUpdate extends Outgoing2 {
         private final Long channelId;
         private final Long guildId;
@@ -533,32 +537,32 @@ public abstract class Outgoing2 {
             return voiceStateUpdate.copy(l, l3, z5, z6, z7, str);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final Long getGuildId() {
             return this.guildId;
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final Long getChannelId() {
             return this.channelId;
         }
 
-        /* renamed from: component3, reason: from getter */
+        /* JADX INFO: renamed from: component3, reason: from getter */
         public final boolean getSelfMute() {
             return this.selfMute;
         }
 
-        /* renamed from: component4, reason: from getter */
+        /* JADX INFO: renamed from: component4, reason: from getter */
         public final boolean getSelfDeaf() {
             return this.selfDeaf;
         }
 
-        /* renamed from: component5, reason: from getter */
+        /* JADX INFO: renamed from: component5, reason: from getter */
         public final boolean getSelfVideo() {
             return this.selfVideo;
         }
 
-        /* renamed from: component6, reason: from getter */
+        /* JADX INFO: renamed from: component6, reason: from getter */
         public final String getPreferredRegion() {
             return this.preferredRegion;
         }
@@ -603,27 +607,36 @@ public abstract class Outgoing2 {
         }
 
         /* JADX WARN: Multi-variable type inference failed */
+        /* JADX WARN: Type inference failed for: r2v10 */
+        /* JADX WARN: Type inference failed for: r2v12 */
+        /* JADX WARN: Type inference failed for: r2v13 */
+        /* JADX WARN: Type inference failed for: r2v4, types: [int] */
+        /* JADX WARN: Type inference failed for: r2v6, types: [int] */
+        /* JADX WARN: Type inference failed for: r2v9 */
+        /* JADX WARN: Type inference failed for: r3v0 */
+        /* JADX WARN: Type inference failed for: r3v1, types: [int] */
+        /* JADX WARN: Type inference failed for: r3v2 */
         public int hashCode() {
             Long l = this.guildId;
             int iHashCode = (l != null ? l.hashCode() : 0) * 31;
             Long l2 = this.channelId;
             int iHashCode2 = (iHashCode + (l2 != null ? l2.hashCode() : 0)) * 31;
             boolean z2 = this.selfMute;
-            int i = z2;
-            if (z2 != 0) {
-                i = 1;
+            ?? r2 = z2;
+            if (z2) {
+                r2 = 1;
             }
-            int i2 = (iHashCode2 + i) * 31;
+            int i = (iHashCode2 + r2) * 31;
             boolean z3 = this.selfDeaf;
-            int i3 = z3;
-            if (z3 != 0) {
-                i3 = 1;
+            ?? r22 = z3;
+            if (z3) {
+                r22 = 1;
             }
-            int i4 = (i2 + i3) * 31;
+            int i2 = (i + r22) * 31;
             boolean z4 = this.selfVideo;
-            int i5 = (i4 + (z4 ? 1 : z4 ? 1 : 0)) * 31;
+            int i3 = (i2 + (z4 ? 1 : z4)) * 31;
             String str = this.preferredRegion;
-            return i5 + (str != null ? str.hashCode() : 0);
+            return i3 + (str != null ? str.hashCode() : 0);
         }
 
         public String toString() {
@@ -652,8 +665,8 @@ public abstract class Outgoing2 {
         }
     }
 
-    /* compiled from: Outgoing.kt */
-    /* renamed from: com.discord.gateway.io.OutgoingPayload$VoiceStateUpdateNoPreferredRegion */
+    /* JADX INFO: renamed from: com.discord.gateway.io.OutgoingPayload$VoiceStateUpdateNoPreferredRegion */
+    /* JADX INFO: compiled from: Outgoing.kt */
     public static final /* data */ class VoiceStateUpdateNoPreferredRegion extends Outgoing2 {
         private final Long channelId;
         private final Long guildId;
@@ -692,27 +705,27 @@ public abstract class Outgoing2 {
             return voiceStateUpdateNoPreferredRegion.copy(l, l3, z5, z6, z4);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final Long getGuildId() {
             return this.guildId;
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final Long getChannelId() {
             return this.channelId;
         }
 
-        /* renamed from: component3, reason: from getter */
+        /* JADX INFO: renamed from: component3, reason: from getter */
         public final boolean getSelfMute() {
             return this.selfMute;
         }
 
-        /* renamed from: component4, reason: from getter */
+        /* JADX INFO: renamed from: component4, reason: from getter */
         public final boolean getSelfDeaf() {
             return this.selfDeaf;
         }
 
-        /* renamed from: component5, reason: from getter */
+        /* JADX INFO: renamed from: component5, reason: from getter */
         public final boolean getSelfVideo() {
             return this.selfVideo;
         }
@@ -753,25 +766,34 @@ public abstract class Outgoing2 {
         }
 
         /* JADX WARN: Multi-variable type inference failed */
+        /* JADX WARN: Type inference failed for: r1v10 */
+        /* JADX WARN: Type inference failed for: r1v11 */
+        /* JADX WARN: Type inference failed for: r1v3, types: [int] */
+        /* JADX WARN: Type inference failed for: r1v5, types: [int] */
+        /* JADX WARN: Type inference failed for: r1v7 */
+        /* JADX WARN: Type inference failed for: r1v8 */
+        /* JADX WARN: Type inference failed for: r2v1 */
+        /* JADX WARN: Type inference failed for: r2v2, types: [int] */
+        /* JADX WARN: Type inference failed for: r2v3 */
         public int hashCode() {
             Long l = this.guildId;
             int iHashCode = (l != null ? l.hashCode() : 0) * 31;
             Long l2 = this.channelId;
             int iHashCode2 = (iHashCode + (l2 != null ? l2.hashCode() : 0)) * 31;
             boolean z2 = this.selfMute;
-            int i = z2;
-            if (z2 != 0) {
-                i = 1;
+            ?? r1 = z2;
+            if (z2) {
+                r1 = 1;
             }
-            int i2 = (iHashCode2 + i) * 31;
+            int i = (iHashCode2 + r1) * 31;
             boolean z3 = this.selfDeaf;
-            int i3 = z3;
-            if (z3 != 0) {
-                i3 = 1;
+            ?? r12 = z3;
+            if (z3) {
+                r12 = 1;
             }
-            int i4 = (i2 + i3) * 31;
+            int i2 = (i + r12) * 31;
             boolean z4 = this.selfVideo;
-            return i4 + (z4 ? 1 : z4 ? 1 : 0);
+            return i2 + (z4 ? 1 : z4);
         }
 
         public String toString() {
@@ -788,8 +810,8 @@ public abstract class Outgoing2 {
         }
     }
 
-    /* compiled from: Outgoing.kt */
-    /* renamed from: com.discord.gateway.io.OutgoingPayload$WatchStream */
+    /* JADX INFO: renamed from: com.discord.gateway.io.OutgoingPayload$WatchStream */
+    /* JADX INFO: compiled from: Outgoing.kt */
     public static final class WatchStream extends Outgoing2 {
         private final String streamKey;
 
@@ -812,8 +834,8 @@ public abstract class Outgoing2 {
         this();
     }
 
-    /* compiled from: Outgoing.kt */
-    /* renamed from: com.discord.gateway.io.OutgoingPayload$PresenceUpdate */
+    /* JADX INFO: renamed from: com.discord.gateway.io.OutgoingPayload$PresenceUpdate */
+    /* JADX INFO: compiled from: Outgoing.kt */
     public static final /* data */ class PresenceUpdate extends Outgoing2 {
         private final List<Activity> activities;
         private final Boolean afk;
@@ -824,12 +846,12 @@ public abstract class Outgoing2 {
             this(str, (i & 2) != 0 ? Long.valueOf(ClockFactory.get().currentTimeMillis()) : l, (i & 4) != 0 ? Collections2.emptyList() : list, (i & 8) != 0 ? Boolean.FALSE : bool);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         private final String getStatus() {
             return this.status;
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         private final Long getSince() {
             return this.since;
         }
@@ -838,7 +860,7 @@ public abstract class Outgoing2 {
             return this.activities;
         }
 
-        /* renamed from: component4, reason: from getter */
+        /* JADX INFO: renamed from: component4, reason: from getter */
         private final Boolean getAfk() {
             return this.afk;
         }

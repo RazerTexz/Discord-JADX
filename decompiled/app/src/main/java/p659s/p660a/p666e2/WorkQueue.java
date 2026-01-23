@@ -5,31 +5,31 @@ import java.util.concurrent.atomic.AtomicReferenceArray;
 import java.util.concurrent.atomic.AtomicReferenceFieldUpdater;
 import org.objectweb.asm.Opcodes;
 
-/* compiled from: WorkQueue.kt */
-/* renamed from: s.a.e2.m, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: s.a.e2.m, reason: use source file name */
+/* JADX INFO: compiled from: WorkQueue.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class WorkQueue {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final AtomicReferenceFieldUpdater f27836a = AtomicReferenceFieldUpdater.newUpdater(WorkQueue.class, Object.class, "lastScheduledTask");
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static final AtomicIntegerFieldUpdater f27837b = AtomicIntegerFieldUpdater.newUpdater(WorkQueue.class, "producerIndex");
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public static final AtomicIntegerFieldUpdater f27838c = AtomicIntegerFieldUpdater.newUpdater(WorkQueue.class, "consumerIndex");
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public static final AtomicIntegerFieldUpdater f27839d = AtomicIntegerFieldUpdater.newUpdater(WorkQueue.class, "blockingTasksInBuffer");
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final AtomicReferenceArray<Tasks4> f27840e = new AtomicReferenceArray<>(128);
     public volatile Object lastScheduledTask = null;
     public volatile int producerIndex = 0;
     public volatile int consumerIndex = 0;
     public volatile int blockingTasksInBuffer = 0;
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final Tasks4 m11271a(Tasks4 tasks4, boolean z2) {
         if (z2) {
             return m11272b(tasks4);
@@ -41,7 +41,7 @@ public final class WorkQueue {
         return null;
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final Tasks4 m11272b(Tasks4 tasks4) {
         if (tasks4.f27829k.mo11269t() == 1) {
             f27839d.incrementAndGet(this);
@@ -58,23 +58,23 @@ public final class WorkQueue {
         return null;
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final int m11273c() {
         return this.producerIndex - this.consumerIndex;
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final int m11274d() {
         return this.lastScheduledTask != null ? m11273c() + 1 : m11273c();
     }
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final Tasks4 m11275e() {
         Tasks4 tasks4 = (Tasks4) f27836a.getAndSet(this, null);
         return tasks4 != null ? tasks4 : m11276f();
     }
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final Tasks4 m11276f() {
         Tasks4 andSet;
         while (true) {
@@ -92,7 +92,7 @@ public final class WorkQueue {
         }
     }
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public final long m11277g(WorkQueue workQueue, boolean z2) {
         Tasks4 tasks4;
         do {

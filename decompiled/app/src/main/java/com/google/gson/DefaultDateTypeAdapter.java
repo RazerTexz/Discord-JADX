@@ -17,13 +17,13 @@ import p007b.p100d.p104b.p105a.outline;
 import p007b.p225i.p226a.p288f.p299e.p308o.C3404f;
 import p007b.p225i.p408d.p410q.JavaVersion;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public final class DefaultDateTypeAdapter extends TypeAdapter<Date> {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final Class<? extends Date> f21462a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final List<DateFormat> f21463b;
 
     public DefaultDateTypeAdapter(Class<? extends Date> cls, int i, int i2) {
@@ -41,7 +41,7 @@ public final class DefaultDateTypeAdapter extends TypeAdapter<Date> {
         }
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static Class<? extends Date> m9196a(Class<? extends Date> cls) {
         if (cls == Date.class || cls == java.sql.Date.class || cls == Timestamp.class) {
             return cls;

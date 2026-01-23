@@ -12,15 +12,15 @@ import androidx.transition.Transition;
 import androidx.transition.TransitionValues;
 import java.util.Map;
 
+/* JADX INFO: loaded from: classes3.dex */
 @RestrictTo({RestrictTo.Scope.LIBRARY_GROUP})
-/* loaded from: classes3.dex */
 public class TextScale extends Transition {
     private static final String PROPNAME_SCALE = "android:textscale:scale";
 
-    /* renamed from: com.google.android.material.internal.TextScale$a */
+    /* JADX INFO: renamed from: com.google.android.material.internal.TextScale$a */
     public class C10947a implements ValueAnimator.AnimatorUpdateListener {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final /* synthetic */ TextView f21046a;
 
         public C10947a(TextScale textScale, TextView textView) {

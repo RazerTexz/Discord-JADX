@@ -10,16 +10,16 @@ import androidx.annotation.Nullable;
 import java.util.Objects;
 import p007b.p225i.p226a.p288f.p298d.C3229d;
 
-/* compiled from: com.google.android.gms:play-services-cloud-messaging@@16.0.0 */
-/* loaded from: classes3.dex */
+/* JADX INFO: compiled from: com.google.android.gms:play-services-cloud-messaging@@16.0.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public class zza implements Parcelable {
     public static final Parcelable.Creator<zza> CREATOR = new C3229d();
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public Messenger f20471j;
 
-    /* compiled from: com.google.android.gms:play-services-cloud-messaging@@16.0.0 */
-    /* renamed from: com.google.android.gms.cloudmessaging.zza$a */
+    /* JADX INFO: renamed from: com.google.android.gms.cloudmessaging.zza$a */
+    /* JADX INFO: compiled from: com.google.android.gms:play-services-cloud-messaging@@16.0.0 */
     public static final class C10798a extends ClassLoader {
         @Override // java.lang.ClassLoader
         public final Class<?> loadClass(String str, boolean z2) throws ClassNotFoundException {
@@ -38,7 +38,7 @@ public class zza implements Parcelable {
         this.f20471j = new Messenger(iBinder);
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final IBinder m9017a() {
         Messenger messenger = this.f20471j;
         Objects.requireNonNull(messenger);

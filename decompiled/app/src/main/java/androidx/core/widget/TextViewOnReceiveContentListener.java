@@ -15,8 +15,8 @@ import androidx.annotation.RestrictTo;
 import androidx.core.view.ContentInfoCompat;
 import androidx.core.view.OnReceiveContentListener;
 
+/* JADX INFO: loaded from: classes.dex */
 @RestrictTo({RestrictTo.Scope.LIBRARY_GROUP_PREFIX})
-/* loaded from: classes.dex */
 public final class TextViewOnReceiveContentListener implements OnReceiveContentListener {
     private static final String LOG_TAG = "ReceiveContent";
 

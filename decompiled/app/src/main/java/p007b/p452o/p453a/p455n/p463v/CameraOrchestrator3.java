@@ -8,23 +8,23 @@ import p007b.p452o.p453a.p455n.CameraEngine;
 import p007b.p452o.p453a.p455n.p463v.CameraOrchestrator;
 import p007b.p452o.p453a.p467r.WorkerHandler;
 
-/* compiled from: CameraOrchestrator.java */
-/* renamed from: b.o.a.n.v.c, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.o.a.n.v.c, reason: use source file name */
+/* JADX INFO: compiled from: CameraOrchestrator.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class CameraOrchestrator3 implements Runnable {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final /* synthetic */ CameraOrchestrator.c f14017j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final /* synthetic */ WorkerHandler f14018k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final /* synthetic */ CameraOrchestrator f14019l;
 
     /* JADX INFO: Add missing generic type declarations: [T] */
-    /* compiled from: CameraOrchestrator.java */
-    /* renamed from: b.o.a.n.v.c$a */
+    /* JADX INFO: renamed from: b.o.a.n.v.c$a */
+    /* JADX INFO: compiled from: CameraOrchestrator.java */
     public class a<T> implements InterfaceC4357c<T> {
         public a() {
         }

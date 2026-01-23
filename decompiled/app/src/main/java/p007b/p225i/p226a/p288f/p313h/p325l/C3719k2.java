@@ -13,12 +13,12 @@ import java.io.InputStreamReader;
 import java.util.HashMap;
 import java.util.Map;
 
-/* compiled from: com.google.android.gms:play-services-measurement-impl@@18.0.0 */
-/* renamed from: b.i.a.f.h.l.k2 */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.h.l.k2 */
+/* JADX INFO: compiled from: com.google.android.gms:play-services-measurement-impl@@18.0.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public final /* synthetic */ class C3719k2 implements InterfaceC3914z2 {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final Context f10051j;
 
     public C3719k2(Context context) {
@@ -26,9 +26,11 @@ public final /* synthetic */ class C3719k2 implements InterfaceC3914z2 {
     }
 
     @Override // p007b.p225i.p226a.p288f.p313h.p325l.InterfaceC3914z2
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final Object mo4555a() {
         AbstractC3888x2 c3901y2;
+        BufferedReader bufferedReader;
+        HashMap map;
         Context contextCreateDeviceProtectedStorageContext = this.f10051j;
         String str = Build.TYPE;
         String str2 = Build.TAGS;
@@ -54,37 +56,38 @@ public final /* synthetic */ class C3719k2 implements InterfaceC3914z2 {
         }
         File file2 = (File) c3901y2.mo5343c();
         try {
-            BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(new FileInputStream(file2)));
+            bufferedReader = new BufferedReader(new InputStreamReader(new FileInputStream(file2)));
             try {
-                HashMap map = new HashMap();
-                while (true) {
-                    String line = bufferedReader.readLine();
-                    if (line == null) {
-                        String strValueOf = String.valueOf(file2);
-                        StringBuilder sb = new StringBuilder(strValueOf.length() + 7);
-                        sb.append("Parsed ");
-                        sb.append(strValueOf);
-                        Log.i("HermeticFileOverrides", sb.toString());
-                        C3678h2 c3678h2 = new C3678h2(map);
-                        bufferedReader.close();
-                        return new C3901y2(c3678h2);
-                    }
-                    String[] strArrSplit = line.split(" ", 3);
-                    if (strArrSplit.length != 3) {
-                        Log.e("HermeticFileOverrides", line.length() != 0 ? "Invalid: ".concat(line) : new String("Invalid: "));
-                    } else {
-                        String str3 = strArrSplit[0];
-                        String strDecode = Uri.decode(strArrSplit[1]);
-                        String strDecode2 = Uri.decode(strArrSplit[2]);
-                        if (!map.containsKey(str3)) {
-                            map.put(str3, new HashMap());
-                        }
-                        ((Map) map.get(str3)).put(strDecode, strDecode2);
-                    }
-                }
+                map = new HashMap();
             } finally {
             }
         } catch (IOException e2) {
+            throw new RuntimeException(e2);
+        }
+        while (true) {
+            String line = bufferedReader.readLine();
+            if (line == null) {
+                String strValueOf = String.valueOf(file2);
+                StringBuilder sb = new StringBuilder(strValueOf.length() + 7);
+                sb.append("Parsed ");
+                sb.append(strValueOf);
+                Log.i("HermeticFileOverrides", sb.toString());
+                C3678h2 c3678h2 = new C3678h2(map);
+                bufferedReader.close();
+                return new C3901y2(c3678h2);
+            }
+            String[] strArrSplit = line.split(" ", 3);
+            if (strArrSplit.length != 3) {
+                Log.e("HermeticFileOverrides", line.length() != 0 ? "Invalid: ".concat(line) : new String("Invalid: "));
+            } else {
+                String str3 = strArrSplit[0];
+                String strDecode = Uri.decode(strArrSplit[1]);
+                String strDecode2 = Uri.decode(strArrSplit[2]);
+                if (!map.containsKey(str3)) {
+                    map.put(str3, new HashMap());
+                }
+                ((Map) map.get(str3)).put(strDecode, strDecode2);
+            }
             throw new RuntimeException(e2);
         }
     }

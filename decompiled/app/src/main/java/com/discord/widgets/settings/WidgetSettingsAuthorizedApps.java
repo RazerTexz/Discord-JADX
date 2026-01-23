@@ -41,19 +41,19 @@ import p507d0.p580t.Collections2;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetSettingsAuthorizedApps.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetSettingsAuthorizedApps.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetSettingsAuthorizedApps extends AppFragment {
     public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetSettingsAuthorizedApps.class, "binding", "getBinding()Lcom/discord/databinding/WidgetSettingsAuthorizedAppsBinding;", 0)};
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private final SimpleRecyclerAdapter<ModelOAuth2Token, AuthorizedAppViewHolder> adapter;
 
-    /* renamed from: binding$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
 
-    /* compiled from: WidgetSettingsAuthorizedApps.kt */
+    /* JADX INFO: compiled from: WidgetSettingsAuthorizedApps.kt */
     public static final class AuthorizedAppViewHolder extends SimpleRecyclerAdapter.ViewHolder<ModelOAuth2Token> {
         private final WidgetSettingsAuthorizedAppsListItemBinding binding;
         private final Function1<ModelOAuth2Token, Unit> onDeauthorizeClick;
@@ -90,7 +90,7 @@ public final class WidgetSettingsAuthorizedApps extends AppFragment {
             bind2(modelOAuth2Token);
         }
 
-        /* renamed from: bind, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: bind, reason: avoid collision after fix types in other method */
         public void bind2(ModelOAuth2Token data) {
             Intrinsics3.checkNotNullParameter(data, "data");
             Application application = data.getApplication();
@@ -117,7 +117,7 @@ public final class WidgetSettingsAuthorizedApps extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetSettingsAuthorizedApps.kt */
+    /* JADX INFO: compiled from: WidgetSettingsAuthorizedApps.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -132,13 +132,13 @@ public final class WidgetSettingsAuthorizedApps extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetSettingsAuthorizedApps.kt */
-    /* renamed from: com.discord.widgets.settings.WidgetSettingsAuthorizedApps$deauthorizeApp$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.WidgetSettingsAuthorizedApps$deauthorizeApp$1 */
+    /* JADX INFO: compiled from: WidgetSettingsAuthorizedApps.kt */
     public static final class C96391 extends Lambda implements Function1<View, Unit> {
         public final /* synthetic */ long $oauthId;
 
-        /* compiled from: WidgetSettingsAuthorizedApps.kt */
-        /* renamed from: com.discord.widgets.settings.WidgetSettingsAuthorizedApps$deauthorizeApp$1$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.widgets.settings.WidgetSettingsAuthorizedApps$deauthorizeApp$1$1, reason: invalid class name */
+        /* JADX INFO: compiled from: WidgetSettingsAuthorizedApps.kt */
         public static final class AnonymousClass1 extends Lambda implements Function1<Void, Unit> {
             public AnonymousClass1() {
                 super(1);
@@ -150,7 +150,7 @@ public final class WidgetSettingsAuthorizedApps extends AppFragment {
                 return Unit.f27425a;
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2(Void r1) {
                 WidgetSettingsAuthorizedApps.access$loadAuthorizedApps(WidgetSettingsAuthorizedApps.this);
             }
@@ -168,15 +168,15 @@ public final class WidgetSettingsAuthorizedApps extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(View view) {
             Intrinsics3.checkNotNullParameter(view, "it");
             ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.restSubscribeOn$default(RestAPI.INSTANCE.getApi().deleteOAuthToken(this.$oauthId), false, 1, null), WidgetSettingsAuthorizedApps.this.getContext(), "REST: deauthorize app", (Function1) null, new AnonymousClass1(), (Function1) null, (Function0) null, (Function0) null, 116, (Object) null);
         }
     }
 
-    /* compiled from: WidgetSettingsAuthorizedApps.kt */
-    /* renamed from: com.discord.widgets.settings.WidgetSettingsAuthorizedApps$loadAuthorizedApps$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.WidgetSettingsAuthorizedApps$loadAuthorizedApps$1 */
+    /* JADX INFO: compiled from: WidgetSettingsAuthorizedApps.kt */
     public static final class C96401 extends Lambda implements Function1<List<? extends ModelOAuth2Token>, Unit> {
         public C96401() {
             super(1);
@@ -188,7 +188,7 @@ public final class WidgetSettingsAuthorizedApps extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(List<ModelOAuth2Token> list) {
             Intrinsics3.checkNotNullParameter(list, "authedTokens");
             WidgetSettingsAuthorizedApps.access$getAdapter$p(WidgetSettingsAuthorizedApps.this).setData(list);

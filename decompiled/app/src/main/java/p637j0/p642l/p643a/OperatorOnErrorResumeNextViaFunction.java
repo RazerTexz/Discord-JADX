@@ -5,12 +5,12 @@ import p637j0.p642l.p647e.ScalarSynchronousObservable;
 import p658rx.Observable;
 
 /* JADX INFO: Add missing generic type declarations: [T] */
-/* compiled from: OperatorOnErrorResumeNextViaFunction.java */
-/* renamed from: j0.l.a.c1, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: j0.l.a.c1, reason: use source file name */
+/* JADX INFO: compiled from: OperatorOnErrorResumeNextViaFunction.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class OperatorOnErrorResumeNextViaFunction<T> implements Func1<Throwable, Observable<? extends T>> {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final /* synthetic */ Func1 f26757j;
 
     public OperatorOnErrorResumeNextViaFunction(Func1 func1) {

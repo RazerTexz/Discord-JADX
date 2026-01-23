@@ -6,18 +6,18 @@ import kotlin.jvm.functions.Function2;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: kotlin-style lambda group */
-/* renamed from: t */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: t */
+/* JADX INFO: compiled from: kotlin-style lambda group */
+/* JADX INFO: loaded from: classes2.dex */
 public final class C13172t extends Lambda implements Function2<VideoCallParticipantView.StreamResolution, VideoCallParticipantView.StreamFps, Unit> {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static final C13172t f27924j = new C13172t(0);
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public static final C13172t f27925k = new C13172t(1);
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final /* synthetic */ int f27926l;
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */

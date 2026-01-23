@@ -29,8 +29,8 @@ import java.util.Map;
 import java.util.Set;
 import java.util.UUID;
 
+/* JADX INFO: loaded from: classes.dex */
 @RestrictTo({RestrictTo.Scope.LIBRARY_GROUP})
-/* loaded from: classes.dex */
 public class SystemForegroundDispatcher implements WorkConstraintsCallback, ExecutionListener {
     private static final String ACTION_CANCEL_WORK = "ACTION_CANCEL_WORK";
     private static final String ACTION_NOTIFY = "ACTION_NOTIFY";
@@ -54,7 +54,7 @@ public class SystemForegroundDispatcher implements WorkConstraintsCallback, Exec
     private WorkManagerImpl mWorkManagerImpl;
     public final Map<String, WorkSpec> mWorkSpecById;
 
-    /* renamed from: androidx.work.impl.foreground.SystemForegroundDispatcher$1 */
+    /* JADX INFO: renamed from: androidx.work.impl.foreground.SystemForegroundDispatcher$1 */
     public class RunnableC07411 implements Runnable {
         public final /* synthetic */ WorkDatabase val$database;
         public final /* synthetic */ String val$workSpecId;

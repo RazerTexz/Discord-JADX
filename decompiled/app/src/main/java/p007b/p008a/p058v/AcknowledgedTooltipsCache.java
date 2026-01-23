@@ -4,12 +4,12 @@ import android.content.SharedPreferences;
 import com.discord.utilities.cache.SharedPreferencesProvider;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: AcknowledgedTooltipsCache.kt */
-/* renamed from: b.a.v.a, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: b.a.v.a, reason: use source file name */
+/* JADX INFO: compiled from: AcknowledgedTooltipsCache.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class AcknowledgedTooltipsCache {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final SharedPreferences f1999a;
 
     public AcknowledgedTooltipsCache() {

@@ -79,54 +79,54 @@ import p507d0.p592z.p594d.Reflection2;
 import p658rx.subjects.PublishSubject;
 import p658rx.subjects.Subject;
 
-/* compiled from: AppActivity.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: AppActivity.kt */
+/* JADX INFO: loaded from: classes.dex */
 public class AppActivity extends AppEventHandlerActivity implements AppComponent {
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public static boolean f14908m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public static final Intent f14909n = new Intent();
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public static boolean f14910o = true;
 
-    /* renamed from: p, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: p, reason: from kotlin metadata */
     public final LinkedHashMap<Integer, Function1<Intent, Unit>> newIntentListeners = new LinkedHashMap<>();
 
-    /* renamed from: q, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: q, reason: from kotlin metadata */
     public int originalFontScale = -1;
 
-    /* renamed from: r, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: r, reason: from kotlin metadata */
     public String originalLocale = "";
 
-    /* renamed from: s, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: s, reason: from kotlin metadata */
     public boolean refreshEnabled = true;
 
-    /* renamed from: t, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: t, reason: from kotlin metadata */
     public final Subject<Void, Void> unsubscribeSignal;
 
-    /* renamed from: u, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: u, reason: from kotlin metadata */
     public Toolbar toolbar;
 
-    /* renamed from: v, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: v, reason: from kotlin metadata */
     public final Lazy screen;
 
-    /* renamed from: w, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: w, reason: from kotlin metadata */
     public Intent mostRecentIntent;
 
-    /* renamed from: x, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: x, reason: from kotlin metadata */
     public final AppPermissions2 appPermissions;
 
-    /* compiled from: AppActivity.kt */
+    /* JADX INFO: compiled from: AppActivity.kt */
     public static final class AppAction extends AppActivity {
 
-        /* renamed from: y, reason: from kotlin metadata */
+        /* JADX INFO: renamed from: y, reason: from kotlin metadata */
         public final Lazy screen = LazyJVM.lazy(new C5431a());
 
-        /* compiled from: AppActivity.kt */
-        /* renamed from: com.discord.app.AppActivity$AppAction$a */
+        /* JADX INFO: renamed from: com.discord.app.AppActivity$AppAction$a */
+        /* JADX INFO: compiled from: AppActivity.kt */
         public static final class C5431a extends Lambda implements Function0<Class<? extends AppFragment>> {
             public C5431a() {
                 super(0);
@@ -141,7 +141,7 @@ public class AppActivity extends AppEventHandlerActivity implements AppComponent
         }
 
         @Override // com.discord.app.AppActivity
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         public Class<? extends AppComponent> mo8344d() {
             return (Class) this.screen.getValue();
         }
@@ -155,41 +155,41 @@ public class AppActivity extends AppEventHandlerActivity implements AppComponent
         }
     }
 
-    /* compiled from: AppActivity.kt */
+    /* JADX INFO: compiled from: AppActivity.kt */
     public static final class Call extends AppActivity {
 
-        /* renamed from: y, reason: from kotlin metadata */
+        /* JADX INFO: renamed from: y, reason: from kotlin metadata */
         public final Class<? extends AppComponent> screen = WidgetCallFullscreen.class;
 
         @Override // com.discord.app.AppActivity
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         public Class<? extends AppComponent> mo8344d() {
             return this.screen;
         }
     }
 
-    /* compiled from: AppActivity.kt */
+    /* JADX INFO: compiled from: AppActivity.kt */
     public static final class IncomingCall extends AppActivity {
 
-        /* renamed from: y, reason: from kotlin metadata */
+        /* JADX INFO: renamed from: y, reason: from kotlin metadata */
         public final Class<? extends AppComponent> screen = WidgetVoiceCallIncoming.SystemCallIncoming.class;
 
         @Override // com.discord.app.AppActivity
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         public Class<? extends AppComponent> mo8344d() {
             return this.screen;
         }
     }
 
-    /* compiled from: AppActivity.kt */
+    /* JADX INFO: compiled from: AppActivity.kt */
     public static final class Main extends AppActivity {
     }
 
-    /* compiled from: AppActivity.kt */
-    /* renamed from: com.discord.app.AppActivity$b */
+    /* JADX INFO: renamed from: com.discord.app.AppActivity$b */
+    /* JADX INFO: compiled from: AppActivity.kt */
     public static final class C5433b extends Lambda implements Function0<Unit> {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public static final C5433b f14925j = new C5433b();
 
         public C5433b() {
@@ -202,7 +202,7 @@ public class AppActivity extends AppEventHandlerActivity implements AppComponent
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             if (AppActivity.f14910o) {
                 AppActivity.f14910o = false;
@@ -225,8 +225,8 @@ public class AppActivity extends AppEventHandlerActivity implements AppComponent
         }
     }
 
-    /* compiled from: AppActivity.kt */
-    /* renamed from: com.discord.app.AppActivity$c */
+    /* JADX INFO: renamed from: com.discord.app.AppActivity$c */
+    /* JADX INFO: compiled from: AppActivity.kt */
     public static final class C5434c extends Lambda implements Function1<StoreUserSettingsSystem.Settings, Unit> {
         public C5434c() {
             super(1);
@@ -272,8 +272,8 @@ public class AppActivity extends AppEventHandlerActivity implements AppComponent
         }
     }
 
-    /* compiled from: AppActivity.kt */
-    /* renamed from: com.discord.app.AppActivity$d */
+    /* JADX INFO: renamed from: com.discord.app.AppActivity$d */
+    /* JADX INFO: compiled from: AppActivity.kt */
     public static final class C5435d extends Lambda implements Function1<ScreenshotDetector.Screenshot, Unit> {
         public C5435d() {
             super(1);
@@ -288,8 +288,8 @@ public class AppActivity extends AppEventHandlerActivity implements AppComponent
         }
     }
 
-    /* compiled from: AppActivity.kt */
-    /* renamed from: com.discord.app.AppActivity$e */
+    /* JADX INFO: renamed from: com.discord.app.AppActivity$e */
+    /* JADX INFO: compiled from: AppActivity.kt */
     public static final class C5436e extends Lambda implements Function0<Class<? extends AppComponent>> {
         public C5436e() {
             super(0);
@@ -303,14 +303,14 @@ public class AppActivity extends AppEventHandlerActivity implements AppComponent
         }
     }
 
-    /* compiled from: AppActivity.kt */
-    /* renamed from: com.discord.app.AppActivity$f */
+    /* JADX INFO: renamed from: com.discord.app.AppActivity$f */
+    /* JADX INFO: compiled from: AppActivity.kt */
     public static final class RunnableC5437f implements Runnable {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public final /* synthetic */ View f14926j;
 
-        /* renamed from: k */
+        /* JADX INFO: renamed from: k */
         public final /* synthetic */ InputMethodManager f14927k;
 
         public RunnableC5437f(View view, InputMethodManager inputMethodManager) {
@@ -333,8 +333,8 @@ public class AppActivity extends AppEventHandlerActivity implements AppComponent
         }
     }
 
-    /* compiled from: AppActivity.kt */
-    /* renamed from: com.discord.app.AppActivity$g */
+    /* JADX INFO: renamed from: com.discord.app.AppActivity$g */
+    /* JADX INFO: compiled from: AppActivity.kt */
     public static final class ViewOnClickListenerC5438g implements View.OnClickListener {
         public ViewOnClickListenerC5438g() {
         }
@@ -359,7 +359,7 @@ public class AppActivity extends AppEventHandlerActivity implements AppComponent
         this.appPermissions = new AppPermissions(this);
     }
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public static void m8341i(AppActivity appActivity, boolean z2, int i, Object obj) {
         if ((i & 1) != 0) {
             z2 = true;
@@ -389,26 +389,38 @@ public class AppActivity extends AppEventHandlerActivity implements AppComponent
         super.applyOverrideConfiguration(overrideConfiguration);
     }
 
+    /* JADX WARN: Multi-variable type inference failed */
+    /* JADX WARN: Type inference failed for: r1v1, types: [com.discord.utilities.font.FontUtils] */
+    /* JADX WARN: Type inference failed for: r3v0, types: [androidx.appcompat.app.AppCompatActivity, com.discord.app.AppActivity] */
+    /* JADX WARN: Type inference failed for: r4v1, types: [android.content.Context] */
+    /* JADX WARN: Type inference failed for: r4v2, types: [android.content.Context] */
+    /* JADX WARN: Type inference failed for: r4v4 */
+    /* JADX WARN: Type inference failed for: r4v5 */
+    /* JADX WARN: Type inference failed for: r4v6 */
+    /* JADX WARN: Type inference failed for: r4v7 */
     @Override // androidx.appcompat.app.AppCompatActivity, android.app.Activity, android.view.ContextThemeWrapper, android.content.ContextWrapper
     public void attachBaseContext(Context newBase) {
         C5433b.f14925j.invoke2();
+        ?? r4 = newBase;
         if (newBase == null) {
-            newBase = this;
+            r4 = this;
         }
+        ?? r42 = r4;
         if (!f14910o) {
-            Resources resources = newBase.getResources();
+            Resources resources = r4.getResources();
             Intrinsics3.checkNotNullExpressionValue(resources, "oldContext.resources");
             Configuration configuration = resources.getConfiguration();
-            float targetFontScaleFloat = FontUtils.INSTANCE.getTargetFontScaleFloat(newBase);
+            float targetFontScaleFloat = FontUtils.INSTANCE.getTargetFontScaleFloat(r4);
             configuration.fontScale = targetFontScaleFloat;
             this.originalFontScale = MathJVM.roundToInt(targetFontScaleFloat * 100.0f);
-            newBase = newBase.createConfigurationContext(configuration);
-            Intrinsics3.checkNotNullExpressionValue(newBase, "oldContext.createConfigurationContext(config)");
+            Context contextCreateConfigurationContext = r4.createConfigurationContext(configuration);
+            Intrinsics3.checkNotNullExpressionValue(contextCreateConfigurationContext, "oldContext.createConfigurationContext(config)");
+            r42 = contextCreateConfigurationContext;
         }
-        super.attachBaseContext(newBase);
+        super.attachBaseContext(r42);
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final void m8342b(String localeString, boolean refreshIfChanged) {
         Locale localeObject = ModelUserSettings.getLocaleObject(localeString);
         Intrinsics3.checkNotNullExpressionValue(localeObject, "locale");
@@ -436,7 +448,7 @@ public class AppActivity extends AppEventHandlerActivity implements AppComponent
         }
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final Intent m8343c() {
         Intent intent = this.mostRecentIntent;
         Intent intent2 = f14909n;
@@ -447,19 +459,19 @@ public class AppActivity extends AppEventHandlerActivity implements AppComponent
         return intent3 != null ? intent3 : new Intent(intent2);
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public Class<? extends AppComponent> mo8344d() {
         return (Class) this.screen.getValue();
     }
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final ToolbarTitleLayout m8345e() {
         Toolbar toolbar = this.toolbar;
         View childAt = toolbar != null ? toolbar.getChildAt(0) : null;
         return (ToolbarTitleLayout) (childAt instanceof ToolbarTitleLayout ? childAt : null);
     }
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final boolean m8346f(Locale locale) {
         if (Build.VERSION.SDK_INT >= 24) {
             Resources resources = getResources();
@@ -489,7 +501,7 @@ public class AppActivity extends AppEventHandlerActivity implements AppComponent
         return true;
     }
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public final boolean m8347g(List<? extends KClass<? extends AppComponent>> screens) {
         Intrinsics3.checkNotNullParameter(screens, "screens");
         if ((screens instanceof Collection) && screens.isEmpty()) {
@@ -509,7 +521,7 @@ public class AppActivity extends AppEventHandlerActivity implements AppComponent
         return this.unsubscribeSignal;
     }
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public final boolean m8348h(KClass<? extends AppComponent> screen) {
         Intrinsics3.checkNotNullParameter(screen, "screen");
         return Intrinsics3.areEqual(JvmClassMapping.getJavaClass(screen), mo8344d());
@@ -519,7 +531,7 @@ public class AppActivity extends AppEventHandlerActivity implements AppComponent
         m8352m(false, view);
     }
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final void m8349j(Context context) {
         Intrinsics3.checkNotNullParameter(context, "context");
         if (m8348h(Reflection2.getOrCreateKotlinClass(WidgetTabsHost.class))) {
@@ -532,7 +544,7 @@ public class AppActivity extends AppEventHandlerActivity implements AppComponent
         AppScreen2.m155c(context, false, intent, 2);
     }
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final Toolbar m8350k(boolean showHomeAsUp, @DrawableRes Integer iconRes, @StringRes Integer iconAccessibilityLabel) {
         Toolbar toolbar = this.toolbar;
         Drawable drawable = null;
@@ -559,7 +571,7 @@ public class AppActivity extends AppEventHandlerActivity implements AppComponent
         return toolbar;
     }
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final Unit m8351l(CharSequence title, @DrawableRes Integer leftDrawable) {
         ToolbarTitleLayout toolbarTitleLayoutM8345e = m8345e();
         if (toolbarTitleLayoutM8345e == null) {
@@ -570,7 +582,7 @@ public class AppActivity extends AppEventHandlerActivity implements AppComponent
         return Unit.f27425a;
     }
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public final void m8352m(boolean keyboardOpen, View view) {
         IBinder applicationWindowToken;
         View childAt;
@@ -594,7 +606,7 @@ public class AppActivity extends AppEventHandlerActivity implements AppComponent
         }
     }
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public final void m8353n(Toolbar toolbar) {
         this.toolbar = toolbar;
         if (m8345e() == null) {
@@ -705,15 +717,15 @@ public class AppActivity extends AppEventHandlerActivity implements AppComponent
         m8352m(true, view);
     }
 
-    /* compiled from: kotlin-style lambda group */
-    /* renamed from: com.discord.app.AppActivity$a */
-    /* loaded from: classes2.dex */
+    /* JADX INFO: renamed from: com.discord.app.AppActivity$a */
+    /* JADX INFO: compiled from: kotlin-style lambda group */
+    /* JADX INFO: loaded from: classes2.dex */
     public static final class C5432a extends Lambda implements Function0<Unit> {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public final /* synthetic */ int f14923j;
 
-        /* renamed from: k */
+        /* JADX INFO: renamed from: k */
         public final /* synthetic */ Object f14924k;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -737,7 +749,7 @@ public class AppActivity extends AppEventHandlerActivity implements AppComponent
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             int i = this.f14923j;
             if (i != 0) {

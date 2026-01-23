@@ -5,8 +5,8 @@ import kotlin.jvm.functions.Function1;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: ShareUtils.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: ShareUtils.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class ShareUtils$updateDirectShareTargets$1$uris$1 extends Lambda implements Function1<Tuples2<? extends ChannelShortcutInfo, ? extends String>, String> {
     public static final ShareUtils$updateDirectShareTargets$1$uris$1 INSTANCE = new ShareUtils$updateDirectShareTargets$1$uris$1();
 
@@ -19,7 +19,7 @@ public final class ShareUtils$updateDirectShareTargets$1$uris$1 extends Lambda i
         return invoke2((Tuples2<ChannelShortcutInfo, String>) tuples2);
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final String invoke2(Tuples2<ChannelShortcutInfo, String> tuples2) {
         Intrinsics3.checkNotNullParameter(tuples2, "<name for destructuring parameter 0>");
         return tuples2.component2();

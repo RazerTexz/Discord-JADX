@@ -7,7 +7,7 @@ import org.webrtc.MediaStreamTrack;
 import org.webrtc.RtpParameters;
 import p007b.p100d.p104b.p105a.outline;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public class RtpTransceiver {
     private RtpReceiver cachedReceiver;
     private RtpSender cachedSender;

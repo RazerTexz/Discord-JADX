@@ -12,8 +12,8 @@ import kotlin.jvm.functions.Function0;
 import p507d0.p580t.Maps6;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetServerSettingsEmojis.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetServerSettingsEmojis.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetServerSettingsEmojis$Model$Companion$getGuildEmojis$1 extends Lambda implements Function0<WidgetServerSettingsEmojis.Model> {
     public final /* synthetic */ Guild $guild;
     public final /* synthetic */ StoreGuilds $storeGuild;

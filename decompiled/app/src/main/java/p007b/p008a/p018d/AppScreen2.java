@@ -87,33 +87,33 @@ import p507d0.p580t.CollectionsJVM;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Reflection2;
 
-/* compiled from: AppScreen.kt */
-/* renamed from: b.a.d.j, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.a.d.j, reason: use source file name */
+/* JADX INFO: compiled from: AppScreen.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class AppScreen2 {
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public static final AppScreen2 f524g = new AppScreen2();
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final List<KClass<? extends AppFragment>> f518a = Collections2.listOf((Object[]) new KClass[]{Reflection2.getOrCreateKotlinClass(WidgetAuthLanding.class), Reflection2.getOrCreateKotlinClass(WidgetAuthLogin.class), Reflection2.getOrCreateKotlinClass(WidgetAuthRegisterIdentity.class), Reflection2.getOrCreateKotlinClass(WidgetAuthRegisterAccountInformation.class), Reflection2.getOrCreateKotlinClass(WidgetAuthUndeleteAccount.class), Reflection2.getOrCreateKotlinClass(WidgetAuthCaptcha.class), Reflection2.getOrCreateKotlinClass(WidgetAuthMfa.class), Reflection2.getOrCreateKotlinClass(WidgetAuthBirthday.class), Reflection2.getOrCreateKotlinClass(WidgetAuthAgeGated.class), Reflection2.getOrCreateKotlinClass(WidgetAuthPhoneVerify.class), Reflection2.getOrCreateKotlinClass(WidgetAuthResetPassword.class)});
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static final List<KClass<WidgetAgeVerify>> f519b = CollectionsJVM.listOf(Reflection2.getOrCreateKotlinClass(WidgetAgeVerify.class));
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public static final List<KClass<? extends WidgetOauth2Authorize>> f520c = Collections2.listOf((Object[]) new KClass[]{Reflection2.getOrCreateKotlinClass(WidgetOauth2Authorize.class), Reflection2.getOrCreateKotlinClass(WidgetOauth2AuthorizeSamsung.class)});
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public static final List<KClass<? extends AppFragment>> f521d = Collections2.listOf((Object[]) new KClass[]{Reflection2.getOrCreateKotlinClass(WidgetSettingsAccount.class), Reflection2.getOrCreateKotlinClass(WidgetSettingsAccountBackupCodes.class), Reflection2.getOrCreateKotlinClass(WidgetSettingsAccountChangePassword.class), Reflection2.getOrCreateKotlinClass(WidgetSettingsAccountUsernameEdit.class), Reflection2.getOrCreateKotlinClass(WidgetSettingsAccountEmailEdit.class), Reflection2.getOrCreateKotlinClass(WidgetSettingsAccountEmailEditConfirm.class), Reflection2.getOrCreateKotlinClass(WidgetUserPasswordVerify.class), Reflection2.getOrCreateKotlinClass(WidgetEnableMFASteps.class), Reflection2.getOrCreateKotlinClass(WidgetSettingsAppearance.class), Reflection2.getOrCreateKotlinClass(WidgetSettingsBehavior.class), Reflection2.getOrCreateKotlinClass(WidgetSettingsLanguage.class), Reflection2.getOrCreateKotlinClass(WidgetSettingsMedia.class), Reflection2.getOrCreateKotlinClass(WidgetSettingsPremium.class), Reflection2.getOrCreateKotlinClass(WidgetSettingsNotifications.class), Reflection2.getOrCreateKotlinClass(WidgetSettingsUserConnections.class), Reflection2.getOrCreateKotlinClass(WidgetSettingsVoice.class), Reflection2.getOrCreateKotlinClass(WidgetSettingsPrivacy.class), Reflection2.getOrCreateKotlinClass(WidgetSettingsAuthorizedApps.class), Reflection2.getOrCreateKotlinClass(WidgetServerNotifications.class), Reflection2.getOrCreateKotlinClass(WidgetServerSettingsOverview.class), Reflection2.getOrCreateKotlinClass(WidgetServerSettingsChannels.class), Reflection2.getOrCreateKotlinClass(WidgetServerSettingsEditMember.class), Reflection2.getOrCreateKotlinClass(WidgetServerSettingsEditRole.class), Reflection2.getOrCreateKotlinClass(WidgetServerSettingsIntegrations.class), Reflection2.getOrCreateKotlinClass(WidgetServerSettingsModeration.class), Reflection2.getOrCreateKotlinClass(WidgetServerSettingsVanityUrl.class), Reflection2.getOrCreateKotlinClass(WidgetServerSettingsSecurity.class), Reflection2.getOrCreateKotlinClass(WidgetServerSettingsMembers.class), Reflection2.getOrCreateKotlinClass(WidgetServerSettingsEmojis.class), Reflection2.getOrCreateKotlinClass(WidgetServerSettingsEmojisEdit.class), Reflection2.getOrCreateKotlinClass(WidgetServerSettingsRoles.class), Reflection2.getOrCreateKotlinClass(WidgetServerSettingsInstantInvites.class), Reflection2.getOrCreateKotlinClass(WidgetServerSettingsBans.class), Reflection2.getOrCreateKotlinClass(WidgetChannelSettingsEditPermissions.class), Reflection2.getOrCreateKotlinClass(WidgetChannelSettingsPermissionsOverview.class), Reflection2.getOrCreateKotlinClass(WidgetAuthRegisterIdentity.class), Reflection2.getOrCreateKotlinClass(WidgetAuthRegisterAccountInformation.class), Reflection2.getOrCreateKotlinClass(WidgetAuthBirthday.class), Reflection2.getOrCreateKotlinClass(WidgetAuthAgeGated.class), Reflection2.getOrCreateKotlinClass(WidgetAuthLogin.class), Reflection2.getOrCreateKotlinClass(WidgetAuthPhoneVerify.class), Reflection2.getOrCreateKotlinClass(WidgetAuthResetPassword.class), Reflection2.getOrCreateKotlinClass(WidgetSettingsDeveloper.class), Reflection2.getOrCreateKotlinClass(WidgetSettingsBlockedUsers.class), Reflection2.getOrCreateKotlinClass(WidgetNuxChannelPrompt.class), Reflection2.getOrCreateKotlinClass(WidgetChoosePlan.class), Reflection2.getOrCreateKotlinClass(WidgetServerSettingsCommunityOverview.class), Reflection2.getOrCreateKotlinClass(WidgetServerSettingsEnableCommunitySteps.class), Reflection2.getOrCreateKotlinClass(WidgetGuildScheduledEventSettings.class)});
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public static final List<KClass<? extends AppFragment>> f522e = Collections2.listOf((Object[]) new KClass[]{Reflection2.getOrCreateKotlinClass(WidgetCaptcha.class), Reflection2.getOrCreateKotlinClass(WidgetUserAccountVerify.class), Reflection2.getOrCreateKotlinClass(WidgetUserEmailVerify.class), Reflection2.getOrCreateKotlinClass(WidgetUserEmailUpdate.class), Reflection2.getOrCreateKotlinClass(WidgetUserPhoneManage.class), Reflection2.getOrCreateKotlinClass(WidgetUserPhoneVerify.class), Reflection2.getOrCreateKotlinClass(WidgetUserPasswordVerify.class)});
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public static final List<KClass<WidgetTabsHost>> f523f = CollectionsJVM.listOf(Reflection2.getOrCreateKotlinClass(WidgetTabsHost.class));
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static final void m154b(Context context, boolean z2, Intent intent) {
         Class cls;
         Intrinsics3.checkNotNullParameter(context, "context");
@@ -126,7 +126,7 @@ public final class AppScreen2 {
         m156d(context, cls, intent);
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public static /* synthetic */ void m155c(Context context, boolean z2, Intent intent, int i) {
         if ((i & 2) != 0) {
             z2 = true;
@@ -137,7 +137,7 @@ public final class AppScreen2 {
         m154b(context, z2, intent);
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public static final void m156d(Context context, Class<? extends AppComponent> cls, Parcelable parcelable) {
         Intrinsics3.checkNotNullParameter(context, "context");
         Intrinsics3.checkNotNullParameter(cls, "screen");
@@ -159,13 +159,13 @@ public final class AppScreen2 {
         context.startActivity(intentPutExtra);
     }
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public static /* synthetic */ void m157e(Context context, Class cls, Parcelable parcelable, int i) {
         int i2 = i & 4;
         m156d(context, cls, null);
     }
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public static void m158g(AppScreen2 appScreen2, FragmentManager fragmentManager, Context context, Class cls, int i, boolean z2, String str, Parcelable parcelable, int i2) {
         if ((i2 & 8) != 0) {
             i = R.id.content;
@@ -201,7 +201,7 @@ public final class AppScreen2 {
         fragmentTransactionBeginTransaction.commit();
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final Intent m159a(Context context, Class<? extends AppComponent> cls, Intent intent) {
         AppLog appLog = AppLog.f14950g;
         String simpleName = context.getClass().getSimpleName();
@@ -214,7 +214,7 @@ public final class AppScreen2 {
         return intentPutExtra;
     }
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final void m160f(Context context, ActivityResultLauncher<Intent> activityResultLauncher, Class<? extends AppComponent> cls, Parcelable parcelable) {
         Intrinsics3.checkNotNullParameter(context, "context");
         Intrinsics3.checkNotNullParameter(activityResultLauncher, "launcher");

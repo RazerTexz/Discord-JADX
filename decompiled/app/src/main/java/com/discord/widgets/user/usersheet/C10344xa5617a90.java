@@ -9,9 +9,9 @@ import p007b.p008a.p009a.ConnectedAccountActionsDialog;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetUserSheet.kt */
-/* renamed from: com.discord.widgets.user.usersheet.WidgetUserSheet$configureConnectionsSection$onConnectedAccountClick$1 */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: com.discord.widgets.user.usersheet.WidgetUserSheet$configureConnectionsSection$onConnectedAccountClick$1 */
+/* JADX INFO: compiled from: WidgetUserSheet.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class C10344xa5617a90 extends Lambda implements Function3<String, Integer, String, Unit> {
     public final /* synthetic */ WidgetUserSheet this$0;
 

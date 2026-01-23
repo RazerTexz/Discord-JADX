@@ -2,15 +2,15 @@ package p007b.p008a.p027k.p030g;
 
 import p007b.p100d.p104b.p105a.outline;
 
-/* compiled from: ParseState.kt */
-/* renamed from: b.a.k.g.c, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.a.k.g.c, reason: use source file name */
+/* JADX INFO: compiled from: ParseState.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class ParseState {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final boolean f1501a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public int f1502b;
 
     public ParseState() {

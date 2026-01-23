@@ -8,8 +8,8 @@ import p007b.p225i.p355b.p357b.ImmutableSet2;
 import p007b.p225i.p355b.p357b.MapMaker;
 import p007b.p225i.p355b.p357b.MapMakerInternalMap;
 
+/* JADX INFO: loaded from: classes3.dex */
 @CanIgnoreReturnValue
-/* loaded from: classes3.dex */
 public class CycleDetectingLockFactory {
 
     public static final class PotentialDeadlockException extends C11066b {
@@ -26,7 +26,7 @@ public class CycleDetectingLockFactory {
         }
     }
 
-    /* renamed from: com.google.common.util.concurrent.CycleDetectingLockFactory$a */
+    /* JADX INFO: renamed from: com.google.common.util.concurrent.CycleDetectingLockFactory$a */
     public static class C11065a extends ThreadLocal<ArrayList<C11067c>> {
         @Override // java.lang.ThreadLocal
         public ArrayList<C11067c> initialValue() {
@@ -35,14 +35,14 @@ public class CycleDetectingLockFactory {
         }
     }
 
-    /* renamed from: com.google.common.util.concurrent.CycleDetectingLockFactory$b */
+    /* JADX INFO: renamed from: com.google.common.util.concurrent.CycleDetectingLockFactory$b */
     public static class C11066b extends IllegalStateException {
         static {
             ImmutableSet2.m6283r(CycleDetectingLockFactory.class.getName(), C11066b.class.getName(), C11067c.class.getName());
         }
     }
 
-    /* renamed from: com.google.common.util.concurrent.CycleDetectingLockFactory$c */
+    /* JADX INFO: renamed from: com.google.common.util.concurrent.CycleDetectingLockFactory$c */
     public static class C11067c {
     }
 

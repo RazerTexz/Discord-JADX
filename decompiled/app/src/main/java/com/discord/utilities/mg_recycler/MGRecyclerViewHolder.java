@@ -11,8 +11,8 @@ import com.discord.utilities.mg_recycler.MGRecyclerAdapter;
 import p507d0.p592z.p594d.Intrinsics3;
 import p658rx.Subscription;
 
-/* compiled from: MGRecyclerViewHolder.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: MGRecyclerViewHolder.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public class MGRecyclerViewHolder<T extends MGRecyclerAdapter<D>, D> extends RecyclerView.ViewHolder {
     public final T adapter;
 

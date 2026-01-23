@@ -2,15 +2,15 @@ package p600f0.p601e0;
 
 import java.util.concurrent.ThreadFactory;
 
-/* compiled from: Util.kt */
-/* renamed from: f0.e0.b, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: f0.e0.b, reason: use source file name */
+/* JADX INFO: compiled from: Util.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class Util6 implements ThreadFactory {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final /* synthetic */ String f25395j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final /* synthetic */ boolean f25396k;
 
     public Util6(String str, boolean z2) {

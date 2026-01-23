@@ -11,11 +11,11 @@ import com.discord.C5419R;
 import p007b.p008a.p025i.ViewChatActionItemBinding;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ChatActionItem.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: ChatActionItem.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class ChatActionItem extends CardView {
 
-    /* renamed from: j, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: j, reason: from kotlin metadata */
     public final ViewChatActionItemBinding binding;
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */

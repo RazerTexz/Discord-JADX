@@ -11,38 +11,38 @@ import com.discord.views.typing.TypingDots;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import p007b.p008a.p025i.WidgetChatInputStickerSuggestionsBinding;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public final class WidgetChatOverlayBinding implements ViewBinding {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     @NonNull
     public final ConstraintLayout f16362a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     @NonNull
     public final FloatingActionButton f16363b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     @NonNull
     public final RelativeLayout f16364c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     @NonNull
     public final TypingDots f16365d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     @NonNull
     public final TextView f16366e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     @NonNull
     public final ImageView f16367f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     @NonNull
     public final TextView f16368g;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     @NonNull
     public final WidgetChatInputStickerSuggestionsBinding f16369h;
 

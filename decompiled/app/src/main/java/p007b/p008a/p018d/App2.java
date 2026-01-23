@@ -4,12 +4,12 @@ import kotlin.jvm.functions.Function3;
 import p507d0.p592z.p594d.Intrinsics3;
 import p658rx.functions.Action3;
 
-/* compiled from: App.kt */
-/* renamed from: b.a.d.a, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.a.d.a, reason: use source file name */
+/* JADX INFO: compiled from: App.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class App2 implements Action3 {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final /* synthetic */ Function3 f498j;
 
     public App2(Function3 function3) {

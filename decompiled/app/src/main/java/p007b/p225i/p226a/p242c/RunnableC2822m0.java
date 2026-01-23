@@ -5,18 +5,18 @@ import p007b.p225i.p226a.p242c.p243a3.MediaSource2;
 import p007b.p225i.p226a.p242c.p262s2.AnalyticsCollector;
 import p007b.p225i.p355b.p357b.ImmutableList2;
 
-/* compiled from: lambda */
-/* renamed from: b.i.a.c.m0 */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.m0 */
+/* JADX INFO: compiled from: lambda */
+/* JADX INFO: loaded from: classes3.dex */
 public final /* synthetic */ class RunnableC2822m0 implements Runnable {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final /* synthetic */ MediaPeriodQueue f7243j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final /* synthetic */ ImmutableList2.a f7244k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final /* synthetic */ MediaSource2.a f7245l;
 
     public /* synthetic */ RunnableC2822m0(MediaPeriodQueue mediaPeriodQueue, ImmutableList2.a aVar, MediaSource2.a aVar2) {

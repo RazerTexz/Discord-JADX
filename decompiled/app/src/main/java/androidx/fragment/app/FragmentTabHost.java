@@ -18,8 +18,8 @@ import androidx.annotation.Nullable;
 import java.util.ArrayList;
 import p007b.p100d.p104b.p105a.outline;
 
+/* JADX INFO: loaded from: classes.dex */
 @Deprecated
-/* loaded from: classes.dex */
 public class FragmentTabHost extends TabHost implements TabHost.OnTabChangeListener {
     private boolean mAttached;
     private int mContainerId;
@@ -50,7 +50,7 @@ public class FragmentTabHost extends TabHost implements TabHost.OnTabChangeListe
         public static final Parcelable.Creator<SavedState> CREATOR = new C03931();
         public String curTab;
 
-        /* renamed from: androidx.fragment.app.FragmentTabHost$SavedState$1 */
+        /* JADX INFO: renamed from: androidx.fragment.app.FragmentTabHost$SavedState$1 */
         public class C03931 implements Parcelable.Creator<SavedState> {
             @Override // android.os.Parcelable.Creator
             public /* bridge */ /* synthetic */ SavedState createFromParcel(Parcel parcel) {

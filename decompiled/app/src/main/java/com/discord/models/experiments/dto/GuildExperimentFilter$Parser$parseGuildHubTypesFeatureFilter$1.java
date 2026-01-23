@@ -9,14 +9,14 @@ import kotlin.jvm.internal.Ref$ObjectRef;
 import p507d0.p580t._Collections;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: GuildExperimentFilter.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: GuildExperimentFilter.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class GuildExperimentFilter$Parser$parseGuildHubTypesFeatureFilter$1 implements Runnable {
     public final /* synthetic */ Ref$ObjectRef $hubTypes;
     public final /* synthetic */ Model.JsonReader $reader;
 
-    /* compiled from: GuildExperimentFilter.kt */
-    /* renamed from: com.discord.models.experiments.dto.GuildExperimentFilter$Parser$parseGuildHubTypesFeatureFilter$1$1 */
+    /* JADX INFO: renamed from: com.discord.models.experiments.dto.GuildExperimentFilter$Parser$parseGuildHubTypesFeatureFilter$1$1 */
+    /* JADX INFO: compiled from: GuildExperimentFilter.kt */
     public static final class RunnableC55531 implements Runnable {
         public RunnableC55531() {
         }
@@ -27,12 +27,12 @@ public final class GuildExperimentFilter$Parser$parseGuildHubTypesFeatureFilter$
         }
     }
 
-    /* compiled from: GuildExperimentFilter.kt */
-    /* renamed from: com.discord.models.experiments.dto.GuildExperimentFilter$Parser$parseGuildHubTypesFeatureFilter$1$2 */
+    /* JADX INFO: renamed from: com.discord.models.experiments.dto.GuildExperimentFilter$Parser$parseGuildHubTypesFeatureFilter$1$2 */
+    /* JADX INFO: compiled from: GuildExperimentFilter.kt */
     public static final class RunnableC55542 implements Runnable {
 
-        /* compiled from: GuildExperimentFilter.kt */
-        /* renamed from: com.discord.models.experiments.dto.GuildExperimentFilter$Parser$parseGuildHubTypesFeatureFilter$1$2$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.models.experiments.dto.GuildExperimentFilter$Parser$parseGuildHubTypesFeatureFilter$1$2$1, reason: invalid class name */
+        /* JADX INFO: compiled from: GuildExperimentFilter.kt */
         public static final class AnonymousClass1<T> implements Model.JsonReader.ItemFactory<GuildHubType> {
             public AnonymousClass1() {
             }

@@ -8,16 +8,16 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import p007b.p085c.p086a.p087a0.AnimatableValueParser;
 
-/* compiled from: com.google.android.gms:play-services-basement@@17.6.0 */
-/* renamed from: b.i.a.f.e.k.j0 */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.e.k.j0 */
+/* JADX INFO: compiled from: com.google.android.gms:play-services-basement@@17.6.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public final class BinderC3362j0 extends AbstractBinderC3344a0 {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     @Nullable
     public AbstractC3345b f9529a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final int f9530b;
 
     public BinderC3362j0(@NonNull AbstractC3345b abstractC3345b, int i) {
@@ -26,7 +26,7 @@ public final class BinderC3362j0 extends AbstractBinderC3344a0 {
     }
 
     @BinderThread
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public final void m4163g(int i, @NonNull IBinder iBinder, @Nullable Bundle bundle) {
         AnimatableValueParser.m595z(this.f9529a, "onPostInitComplete can be called only once per call to getRemoteService");
         AbstractC3345b abstractC3345b = this.f9529a;

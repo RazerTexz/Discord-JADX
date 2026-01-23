@@ -4,9 +4,9 @@ import androidx.view.Lifecycle;
 import kotlin.jvm.functions.Function0;
 import kotlinx.coroutines.CoroutineDispatcher;
 
-/* compiled from: WithLifecycleState.kt */
-/* renamed from: androidx.lifecycle.WithLifecycleStateKt$suspendWithStateAtLeastUnchecked$$inlined$suspendCancellableCoroutine$lambda$2, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: androidx.lifecycle.WithLifecycleStateKt$suspendWithStateAtLeastUnchecked$$inlined$suspendCancellableCoroutine$lambda$2, reason: use source file name */
+/* JADX INFO: compiled from: WithLifecycleState.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class WithLifecycleState4 implements Runnable {
     public final /* synthetic */ Function0 $block$inlined;
     public final /* synthetic */ boolean $dispatchNeeded$inlined;

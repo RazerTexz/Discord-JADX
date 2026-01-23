@@ -14,46 +14,46 @@ import com.google.android.material.progressindicator.BaseProgressIndicatorSpec;
 import com.google.android.material.progressindicator.LinearProgressIndicatorSpec;
 import java.util.Arrays;
 
-/* compiled from: LinearIndeterminateDisjointAnimatorDelegate.java */
-/* renamed from: b.i.a.g.g.l, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.g.g.l, reason: use source file name */
+/* JADX INFO: compiled from: LinearIndeterminateDisjointAnimatorDelegate.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class LinearIndeterminateDisjointAnimatorDelegate2 extends IndeterminateAnimatorDelegate<ObjectAnimator> {
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public static final int[] f11751d = {533, 567, 850, 750};
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public static final int[] f11752e = {1267, 1000, 333, 0};
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public static final Property<LinearIndeterminateDisjointAnimatorDelegate2, Float> f11753f = new a(Float.class, "animationFraction");
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public ObjectAnimator f11754g;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public final Interpolator[] f11755h;
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public final BaseProgressIndicatorSpec f11756i;
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public int f11757j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public boolean f11758k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public float f11759l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public boolean f11760m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public Animatable2Compat.AnimationCallback f11761n;
 
-    /* compiled from: LinearIndeterminateDisjointAnimatorDelegate.java */
-    /* renamed from: b.i.a.g.g.l$a */
+    /* JADX INFO: renamed from: b.i.a.g.g.l$a */
+    /* JADX INFO: compiled from: LinearIndeterminateDisjointAnimatorDelegate.java */
     public static class a extends Property<LinearIndeterminateDisjointAnimatorDelegate2, Float> {
         public a(Class cls, String str) {
             super(cls, str);
@@ -90,7 +90,7 @@ public final class LinearIndeterminateDisjointAnimatorDelegate2 extends Indeterm
     }
 
     @Override // p007b.p225i.p226a.p341g.p348g.IndeterminateAnimatorDelegate
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public void mo6123a() {
         ObjectAnimator objectAnimator = this.f11754g;
         if (objectAnimator != null) {
@@ -99,19 +99,19 @@ public final class LinearIndeterminateDisjointAnimatorDelegate2 extends Indeterm
     }
 
     @Override // p007b.p225i.p226a.p341g.p348g.IndeterminateAnimatorDelegate
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public void mo6124c() {
         m6133h();
     }
 
     @Override // p007b.p225i.p226a.p341g.p348g.IndeterminateAnimatorDelegate
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public void mo6125d(@NonNull Animatable2Compat.AnimationCallback animationCallback) {
         this.f11761n = animationCallback;
     }
 
     @Override // p007b.p225i.p226a.p341g.p348g.IndeterminateAnimatorDelegate
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public void mo6126e() {
         if (this.f11736a.isVisible()) {
             this.f11760m = true;
@@ -125,7 +125,7 @@ public final class LinearIndeterminateDisjointAnimatorDelegate2 extends Indeterm
     }
 
     @Override // p007b.p225i.p226a.p341g.p348g.IndeterminateAnimatorDelegate
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public void mo6127f() {
         if (this.f11754g == null) {
             ObjectAnimator objectAnimatorOfFloat = ObjectAnimator.ofFloat(this, f11753f, 0.0f, 1.0f);
@@ -140,13 +140,13 @@ public final class LinearIndeterminateDisjointAnimatorDelegate2 extends Indeterm
     }
 
     @Override // p007b.p225i.p226a.p341g.p348g.IndeterminateAnimatorDelegate
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public void mo6128g() {
         this.f11761n = null;
     }
 
     @VisibleForTesting
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public void m6133h() {
         this.f11757j = 0;
         int iCompositeARGBWithAlpha = MaterialColors.compositeARGBWithAlpha(this.f11756i.indicatorColors[0], this.f11736a.getAlpha());

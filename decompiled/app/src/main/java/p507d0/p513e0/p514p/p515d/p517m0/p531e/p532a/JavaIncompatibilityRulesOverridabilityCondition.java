@@ -23,21 +23,21 @@ import p507d0.p513e0.p514p.p515d.p517m0.p567n.p571o1.TypeUtils2;
 import p507d0.p580t._Collections;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: JavaIncompatibilityRulesOverridabilityCondition.kt */
-/* renamed from: d0.e0.p.d.m0.e.a.x, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.e.a.x, reason: use source file name */
+/* JADX INFO: compiled from: JavaIncompatibilityRulesOverridabilityCondition.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class JavaIncompatibilityRulesOverridabilityCondition implements ExternalOverridabilityCondition {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final a f23529a = new a(null);
 
-    /* compiled from: JavaIncompatibilityRulesOverridabilityCondition.kt */
-    /* renamed from: d0.e0.p.d.m0.e.a.x$a */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.e.a.x$a */
+    /* JADX INFO: compiled from: JavaIncompatibilityRulesOverridabilityCondition.kt */
     public static final class a {
         public a(DefaultConstructorMarker defaultConstructorMarker) {
         }
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final methodSignatureMapping m9527a(FunctionDescriptor functionDescriptor, ValueParameterDescriptor valueParameterDescriptor) {
             if (!methodSignatureMapping3.forceSingleValueParameterBoxing(functionDescriptor)) {
                 boolean z2 = false;

@@ -8,22 +8,22 @@ import java.io.IOException;
 import p007b.p109f.p190m.ExtractFromZipSoSource;
 import p007b.p109f.p190m.UnpackingSoSource;
 
-/* compiled from: ApkSoSource.java */
-/* renamed from: b.f.m.a, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.f.m.a, reason: use source file name */
+/* JADX INFO: compiled from: ApkSoSource.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class ApkSoSource extends ExtractFromZipSoSource {
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public final int f4312h;
 
-    /* compiled from: ApkSoSource.java */
-    /* renamed from: b.f.m.a$a */
+    /* JADX INFO: renamed from: b.f.m.a$a */
+    /* JADX INFO: compiled from: ApkSoSource.java */
     public class a extends ExtractFromZipSoSource.c {
 
-        /* renamed from: n */
+        /* JADX INFO: renamed from: n */
         public File f4313n;
 
-        /* renamed from: o */
+        /* JADX INFO: renamed from: o */
         public final int f4314o;
 
         public a(ExtractFromZipSoSource extractFromZipSoSource) throws IOException {
@@ -39,7 +39,7 @@ public class ApkSoSource extends ExtractFromZipSoSource {
     }
 
     @Override // p007b.p109f.p190m.UnpackingSoSource
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public byte[] mo1565g() throws IOException {
         int i;
         File canonicalFile = this.f4325f.getCanonicalFile();
@@ -54,6 +54,7 @@ public class ApkSoSource extends ExtractFromZipSoSource {
                 try {
                     i = packageManager.getPackageInfo(context.getPackageName(), 0).versionCode;
                 } catch (PackageManager.NameNotFoundException | RuntimeException unused) {
+                    i = 0;
                 }
             } else {
                 i = 0;
@@ -83,7 +84,7 @@ public class ApkSoSource extends ExtractFromZipSoSource {
     }
 
     @Override // p007b.p109f.p190m.UnpackingSoSource
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public UnpackingSoSource.f mo1566i() throws IOException {
         return new a(this);
     }

@@ -47,7 +47,7 @@ import java.util.HashMap;
 import java.util.Iterator;
 import p007b.p100d.p104b.p105a.outline;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class MotionLayout extends ConstraintLayout implements NestedScrollingParent3 {
     private static final boolean DEBUG = false;
     public static final int DEBUG_SHOW_NONE = 0;
@@ -133,7 +133,7 @@ public class MotionLayout extends ConstraintLayout implements NestedScrollingPar
     public boolean mUndergoingMotion;
     public int mWidthMeasureMode;
 
-    /* renamed from: androidx.constraintlayout.motion.widget.MotionLayout$1 */
+    /* JADX INFO: renamed from: androidx.constraintlayout.motion.widget.MotionLayout$1 */
     public class RunnableC01771 implements Runnable {
         public final /* synthetic */ View val$target;
 
@@ -147,10 +147,10 @@ public class MotionLayout extends ConstraintLayout implements NestedScrollingPar
         }
     }
 
-    /* renamed from: androidx.constraintlayout.motion.widget.MotionLayout$2 */
+    /* JADX INFO: renamed from: androidx.constraintlayout.motion.widget.MotionLayout$2 */
     public static /* synthetic */ class C01782 {
 
-        /* renamed from: $SwitchMap$androidx$constraintlayout$motion$widget$MotionLayout$TransitionState */
+        /* JADX INFO: renamed from: $SwitchMap$androidx$constraintlayout$motion$widget$MotionLayout$TransitionState */
         public static final /* synthetic */ int[] f106xabc7e4ac;
 
         static {
@@ -325,13 +325,13 @@ public class MotionLayout extends ConstraintLayout implements NestedScrollingPar
             float fMin2 = f - Math.min(f3, f5);
             float fMax2 = Math.max(f4, f6) - f2;
             StringBuilder sbM833U = outline.m833U("");
-            sbM833U.append(((int) (((fMin2 * 100.0f) / Math.abs(f5 - f3)) + 0.5d)) / 100.0f);
+            sbM833U.append(((int) (((double) ((fMin2 * 100.0f) / Math.abs(f5 - f3))) + 0.5d)) / 100.0f);
             String string = sbM833U.toString();
             getTextBounds(string, this.mTextPaint);
             canvas.drawText(string, ((fMin2 / 2.0f) - (this.mBounds.width() / 2)) + fMin, f2 - 20.0f, this.mTextPaint);
             canvas.drawLine(f, f2, Math.min(f3, f5), f2, this.mPaintGraph);
             StringBuilder sbM833U2 = outline.m833U("");
-            sbM833U2.append(((int) (((fMax2 * 100.0f) / Math.abs(f6 - f4)) + 0.5d)) / 100.0f);
+            sbM833U2.append(((int) (((double) ((fMax2 * 100.0f) / Math.abs(f6 - f4))) + 0.5d)) / 100.0f);
             String string2 = sbM833U2.toString();
             getTextBounds(string2, this.mTextPaint);
             canvas.drawText(string2, f + 5.0f, fMax - ((fMax2 / 2.0f) - (this.mBounds.height() / 2)), this.mTextPaint);
@@ -369,13 +369,13 @@ public class MotionLayout extends ConstraintLayout implements NestedScrollingPar
 
         private void drawPathScreenTicks(Canvas canvas, float f, float f2, int i, int i2) {
             StringBuilder sbM833U = outline.m833U("");
-            sbM833U.append(((int) ((((f - (i / 2)) * 100.0f) / (MotionLayout.this.getWidth() - i)) + 0.5d)) / 100.0f);
+            sbM833U.append(((int) (((double) (((f - (i / 2)) * 100.0f) / (MotionLayout.this.getWidth() - i))) + 0.5d)) / 100.0f);
             String string = sbM833U.toString();
             getTextBounds(string, this.mTextPaint);
             canvas.drawText(string, ((f / 2.0f) - (this.mBounds.width() / 2)) + 0.0f, f2 - 20.0f, this.mTextPaint);
             canvas.drawLine(f, f2, Math.min(0.0f, 1.0f), f2, this.mPaintGraph);
             StringBuilder sbM833U2 = outline.m833U("");
-            sbM833U2.append(((int) ((((f2 - (i2 / 2)) * 100.0f) / (MotionLayout.this.getHeight() - i2)) + 0.5d)) / 100.0f);
+            sbM833U2.append(((int) (((double) (((f2 - (i2 / 2)) * 100.0f) / (MotionLayout.this.getHeight() - i2))) + 0.5d)) / 100.0f);
             String string2 = sbM833U2.toString();
             getTextBounds(string2, this.mTextPaint);
             canvas.drawText(string2, f + 5.0f, 0.0f - ((f2 / 2.0f) - (this.mBounds.height() / 2)), this.mTextPaint);
@@ -1501,7 +1501,7 @@ public class MotionLayout extends ConstraintLayout implements NestedScrollingPar
     }
 
     @Override // androidx.constraintlayout.widget.ConstraintLayout, android.view.ViewGroup, android.view.View
-    public void dispatchDraw(Canvas canvas) throws NumberFormatException {
+    public void dispatchDraw(Canvas canvas) {
         evaluate(false);
         super.dispatchDraw(canvas);
         if (this.mScene == null) {
@@ -2463,7 +2463,7 @@ public class MotionLayout extends ConstraintLayout implements NestedScrollingPar
 
     public static class MyTracker implements MotionTracker {
 
-        /* renamed from: me */
+        /* JADX INFO: renamed from: me */
         private static MyTracker f107me = new MyTracker();
         public VelocityTracker tracker;
 

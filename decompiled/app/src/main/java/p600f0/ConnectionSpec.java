@@ -14,61 +14,61 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p600f0.CipherSuite;
 import p600f0.p601e0.Util7;
 
-/* compiled from: ConnectionSpec.kt */
-/* renamed from: f0.m, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: f0.m, reason: use source file name */
+/* JADX INFO: compiled from: ConnectionSpec.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class ConnectionSpec {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final CipherSuite[] f25930a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static final CipherSuite[] f25931b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public static final ConnectionSpec f25932c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public static final ConnectionSpec f25933d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final boolean f25934e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final boolean f25935f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public final String[] f25936g;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public final String[] f25937h;
 
-    /* compiled from: ConnectionSpec.kt */
-    /* renamed from: f0.m$a */
+    /* JADX INFO: renamed from: f0.m$a */
+    /* JADX INFO: compiled from: ConnectionSpec.kt */
     public static final class a {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public boolean f25938a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public String[] f25939b;
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public String[] f25940c;
 
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         public boolean f25941d;
 
         public a(boolean z2) {
             this.f25938a = z2;
         }
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final ConnectionSpec m10378a() {
             return new ConnectionSpec(this.f25938a, this.f25941d, this.f25939b, this.f25940c);
         }
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final a m10379b(String... strArr) throws CloneNotSupportedException {
             Intrinsics3.checkParameterIsNotNull(strArr, "cipherSuites");
             if (!this.f25938a) {
@@ -85,7 +85,7 @@ public final class ConnectionSpec {
             return this;
         }
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public final a m10380c(CipherSuite... cipherSuiteArr) throws CloneNotSupportedException {
             Intrinsics3.checkParameterIsNotNull(cipherSuiteArr, "cipherSuites");
             if (!this.f25938a) {
@@ -104,7 +104,7 @@ public final class ConnectionSpec {
             return this;
         }
 
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         public final a m10381d(boolean z2) {
             if (!this.f25938a) {
                 throw new IllegalArgumentException("no TLS extensions for cleartext connections".toString());
@@ -113,7 +113,7 @@ public final class ConnectionSpec {
             return this;
         }
 
-        /* renamed from: e */
+        /* JADX INFO: renamed from: e */
         public final a m10382e(String... strArr) throws CloneNotSupportedException {
             Intrinsics3.checkParameterIsNotNull(strArr, "tlsVersions");
             if (!this.f25938a) {
@@ -130,7 +130,7 @@ public final class ConnectionSpec {
             return this;
         }
 
-        /* renamed from: f */
+        /* JADX INFO: renamed from: f */
         public final a m10383f(TlsVersion... tlsVersionArr) throws CloneNotSupportedException {
             Intrinsics3.checkParameterIsNotNull(tlsVersionArr, "tlsVersions");
             if (!this.f25938a) {
@@ -199,7 +199,7 @@ public final class ConnectionSpec {
         this.f25937h = strArr2;
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final List<CipherSuite> m10375a() {
         String[] strArr = this.f25936g;
         if (strArr == null) {
@@ -212,7 +212,7 @@ public final class ConnectionSpec {
         return _Collections.toList(arrayList);
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final boolean m10376b(SSLSocket sSLSocket) {
         Intrinsics3.checkParameterIsNotNull(sSLSocket, "socket");
         if (!this.f25934e) {
@@ -232,7 +232,7 @@ public final class ConnectionSpec {
         return Util7.m10130k(strArr2, enabledCipherSuites, CipherSuite.f25909a);
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final List<TlsVersion> m10377c() {
         String[] strArr = this.f25937h;
         if (strArr == null) {

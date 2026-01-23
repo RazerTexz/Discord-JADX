@@ -8,16 +8,16 @@ import kotlin.jvm.internal.DefaultConstructorMarker;
 import p007b.p008a.p027k.FormatUtils;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: BasicTextInputValidator.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: BasicTextInputValidator.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class BasicTextInputValidator implements InputValidator<TextInputLayout> {
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private final Function1<String, Boolean> inputPredicate;
     private final int messageResId;
 
-    /* compiled from: BasicTextInputValidator.kt */
+    /* JADX INFO: compiled from: BasicTextInputValidator.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -47,7 +47,7 @@ public final class BasicTextInputValidator implements InputValidator<TextInputLa
         return this.messageResId;
     }
 
-    /* renamed from: getErrorMessage, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: getErrorMessage, reason: avoid collision after fix types in other method */
     public CharSequence getErrorMessage2(TextInputLayout view) {
         Intrinsics3.checkNotNullParameter(view, "view");
         if (this.inputPredicate.invoke(ViewExtensions.getTextOrEmpty(view)).booleanValue()) {

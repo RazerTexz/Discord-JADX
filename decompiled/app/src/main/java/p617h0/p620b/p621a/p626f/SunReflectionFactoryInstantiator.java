@@ -5,15 +5,15 @@ import java.lang.reflect.InvocationTargetException;
 import org.objenesis.ObjenesisException;
 import p617h0.p620b.p621a.ObjectInstantiator;
 
-/* compiled from: SunReflectionFactoryInstantiator.java */
-/* renamed from: h0.b.a.f.a, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: h0.b.a.f.a, reason: use source file name */
+/* JADX INFO: compiled from: SunReflectionFactoryInstantiator.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class SunReflectionFactoryInstantiator<T> implements ObjectInstantiator<T> {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final Constructor<T> f26399a;
 
-    public SunReflectionFactoryInstantiator(Class<T> cls) throws SecurityException {
+    public SunReflectionFactoryInstantiator(Class<T> cls) {
         try {
             Constructor constructor = Object.class.getConstructor(null);
             try {

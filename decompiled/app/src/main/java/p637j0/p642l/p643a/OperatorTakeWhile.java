@@ -5,19 +5,19 @@ import p658rx.Observable;
 import p658rx.Subscriber;
 import p658rx.functions.Func2;
 
-/* compiled from: OperatorTakeWhile.java */
-/* renamed from: j0.l.a.i2, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: j0.l.a.i2, reason: use source file name */
+/* JADX INFO: compiled from: OperatorTakeWhile.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class OperatorTakeWhile<T> implements Observable.InterfaceC13006b<T, T> {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final Func2<? super T, ? super Integer, Boolean> f26851j;
 
-    /* compiled from: OperatorTakeWhile.java */
-    /* renamed from: j0.l.a.i2$a */
+    /* JADX INFO: renamed from: j0.l.a.i2$a */
+    /* JADX INFO: compiled from: OperatorTakeWhile.java */
     public class a implements Func2<T, Integer, Boolean> {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public final /* synthetic */ Func1 f26852j;
 
         public a(Func1 func1) {

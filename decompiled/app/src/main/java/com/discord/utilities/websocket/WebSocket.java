@@ -31,8 +31,8 @@ import p658rx.Scheduler;
 import p658rx.functions.Action1;
 import p658rx.subjects.PublishSubject;
 
-/* compiled from: WebSocket.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WebSocket.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WebSocket {
     private static final int CLOSE_NORMAL = 1000;
     private okhttp3.WebSocket client;
@@ -46,8 +46,8 @@ public final class WebSocket {
     private final SSLSocketFactory socketFactory;
     private State state;
 
-    /* compiled from: WebSocket.kt */
-    /* renamed from: com.discord.utilities.websocket.WebSocket$1 */
+    /* JADX INFO: renamed from: com.discord.utilities.websocket.WebSocket$1 */
+    /* JADX INFO: compiled from: WebSocket.kt */
     public static final class C70561<T> implements Action1<Function0<? extends Unit>> {
         public static final C70561 INSTANCE = new C70561();
 
@@ -56,14 +56,14 @@ public final class WebSocket {
             call2((Function0<Unit>) function0);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final void call2(Function0<Unit> function0) {
             function0.invoke();
         }
     }
 
-    /* compiled from: WebSocket.kt */
-    /* renamed from: com.discord.utilities.websocket.WebSocket$2 */
+    /* JADX INFO: renamed from: com.discord.utilities.websocket.WebSocket$2 */
+    /* JADX INFO: compiled from: WebSocket.kt */
     public static final class C70572<T> implements Action1<Throwable> {
         public C70572() {
         }
@@ -73,7 +73,7 @@ public final class WebSocket {
             call2(th);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final void call2(Throwable th) {
             WebSocket webSocket = WebSocket.this;
             Intrinsics3.checkNotNullExpressionValue(th, "it");
@@ -81,7 +81,7 @@ public final class WebSocket {
         }
     }
 
-    /* compiled from: WebSocket.kt */
+    /* JADX INFO: compiled from: WebSocket.kt */
     public static final class Closed {
         private final int code;
         private final String reason;
@@ -100,7 +100,7 @@ public final class WebSocket {
         }
     }
 
-    /* compiled from: WebSocket.kt */
+    /* JADX INFO: compiled from: WebSocket.kt */
     public static final class Error {
         private final Response response;
         private final Throwable throwable;
@@ -120,7 +120,7 @@ public final class WebSocket {
         }
     }
 
-    /* compiled from: WebSocket.kt */
+    /* JADX INFO: compiled from: WebSocket.kt */
     public static final class Opened {
         private final Response response;
 
@@ -133,7 +133,7 @@ public final class WebSocket {
         }
     }
 
-    /* compiled from: WebSocket.kt */
+    /* JADX INFO: compiled from: WebSocket.kt */
     public enum State {
         NOT_YET_CONNECTED,
         CONNECTING,
@@ -142,8 +142,8 @@ public final class WebSocket {
         CLOSED
     }
 
-    /* compiled from: WebSocket.kt */
-    /* renamed from: com.discord.utilities.websocket.WebSocket$connect$1 */
+    /* JADX INFO: renamed from: com.discord.utilities.websocket.WebSocket$connect$1 */
+    /* JADX INFO: compiled from: WebSocket.kt */
     public static final class C70581 extends ZLibWebSocketListener.Listener {
         private final RawMessageHandler rawMessageHandler;
 
@@ -219,8 +219,8 @@ public final class WebSocket {
         }
     }
 
-    /* compiled from: WebSocket.kt */
-    /* renamed from: com.discord.utilities.websocket.WebSocket$resetListeners$1 */
+    /* JADX INFO: renamed from: com.discord.utilities.websocket.WebSocket$resetListeners$1 */
+    /* JADX INFO: compiled from: WebSocket.kt */
     public static final class C70591 extends Lambda implements Function1<Opened, Unit> {
         public static final C70591 INSTANCE = new C70591();
 
@@ -234,14 +234,14 @@ public final class WebSocket {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Opened opened) {
             Intrinsics3.checkNotNullParameter(opened, "it");
         }
     }
 
-    /* compiled from: WebSocket.kt */
-    /* renamed from: com.discord.utilities.websocket.WebSocket$resetListeners$2 */
+    /* JADX INFO: renamed from: com.discord.utilities.websocket.WebSocket$resetListeners$2 */
+    /* JADX INFO: compiled from: WebSocket.kt */
     public static final class C70602 extends Lambda implements Function1<Closed, Unit> {
         public static final C70602 INSTANCE = new C70602();
 
@@ -255,14 +255,14 @@ public final class WebSocket {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Closed closed) {
             Intrinsics3.checkNotNullParameter(closed, "it");
         }
     }
 
-    /* compiled from: WebSocket.kt */
-    /* renamed from: com.discord.utilities.websocket.WebSocket$resetListeners$3 */
+    /* JADX INFO: renamed from: com.discord.utilities.websocket.WebSocket$resetListeners$3 */
+    /* JADX INFO: compiled from: WebSocket.kt */
     public static final class C70613 extends Lambda implements Function2<InputStreamReader, Integer, Unit> {
         public static final C70613 INSTANCE = new C70613();
 
@@ -281,8 +281,8 @@ public final class WebSocket {
         }
     }
 
-    /* compiled from: WebSocket.kt */
-    /* renamed from: com.discord.utilities.websocket.WebSocket$resetListeners$4 */
+    /* JADX INFO: renamed from: com.discord.utilities.websocket.WebSocket$resetListeners$4 */
+    /* JADX INFO: compiled from: WebSocket.kt */
     public static final class C70624 extends Lambda implements Function1<Error, Unit> {
         public static final C70624 INSTANCE = new C70624();
 
@@ -296,7 +296,7 @@ public final class WebSocket {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Error error) {
             Intrinsics3.checkNotNullParameter(error, "it");
         }

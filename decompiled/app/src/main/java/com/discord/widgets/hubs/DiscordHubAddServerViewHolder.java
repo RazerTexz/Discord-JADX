@@ -12,14 +12,14 @@ import kotlin.Unit;
 import kotlin.jvm.functions.Function1;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: DiscordHubAddServerViewHolder.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: DiscordHubAddServerViewHolder.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class DiscordHubAddServerViewHolder extends SimpleRecyclerAdapter.ViewHolder<Guild> {
     private final DiscordHubAddServerListItemBinding binding;
     private final Function1<Long, Unit> onClickListener;
 
-    /* compiled from: DiscordHubAddServerViewHolder.kt */
-    /* renamed from: com.discord.widgets.hubs.DiscordHubAddServerViewHolder$bind$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.hubs.DiscordHubAddServerViewHolder$bind$2 */
+    /* JADX INFO: compiled from: DiscordHubAddServerViewHolder.kt */
     public static final class ViewOnClickListenerC89842 implements View.OnClickListener {
         public final /* synthetic */ Guild $data;
 
@@ -58,7 +58,7 @@ public final class DiscordHubAddServerViewHolder extends SimpleRecyclerAdapter.V
         return this.onClickListener;
     }
 
-    /* renamed from: bind, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: bind, reason: avoid collision after fix types in other method */
     public void bind2(Guild data) {
         Intrinsics3.checkNotNullParameter(data, "data");
         TextView textView = this.binding.f15049d;

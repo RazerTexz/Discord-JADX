@@ -15,8 +15,8 @@ import p007b.p225i.p361c.p401u.FirebaseInstallationsRegistrar2;
 import p007b.p225i.p361c.p401u.InterfaceC4843g;
 import p007b.p225i.p361c.p407x.UserAgentPublisher;
 
+/* JADX INFO: loaded from: classes3.dex */
 @Keep
-/* loaded from: classes3.dex */
 public class FirebaseInstallationsRegistrar implements ComponentRegistrar {
     public static /* synthetic */ InterfaceC4843g lambda$getComponents$0(ComponentContainer componentContainer) {
         return new FirebaseInstallations4((FirebaseApp2) componentContainer.mo6346a(FirebaseApp2.class), componentContainer.mo6355b(UserAgentPublisher.class), componentContainer.mo6355b(HeartBeatInfo.class));

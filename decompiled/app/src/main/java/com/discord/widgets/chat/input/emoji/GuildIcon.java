@@ -9,8 +9,8 @@ import com.facebook.drawee.view.SimpleDraweeView;
 import kotlin.jvm.internal.DefaultConstructorMarker;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: GuildIcon.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: GuildIcon.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class GuildIcon extends SimpleDraweeView {
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public GuildIcon(Context context) {

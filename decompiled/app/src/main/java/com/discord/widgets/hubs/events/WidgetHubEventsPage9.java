@@ -3,9 +3,9 @@ package com.discord.widgets.hubs.events;
 import kotlin.jvm.functions.Function0;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetHubEventsPage.kt */
-/* renamed from: com.discord.widgets.hubs.events.WidgetHubEventsPage$viewModel$2, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.hubs.events.WidgetHubEventsPage$viewModel$2, reason: use source file name */
+/* JADX INFO: compiled from: WidgetHubEventsPage.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetHubEventsPage9 extends Lambda implements Function0<WidgetHubEventsViewModel> {
     public final /* synthetic */ WidgetHubEventsPage this$0;
 

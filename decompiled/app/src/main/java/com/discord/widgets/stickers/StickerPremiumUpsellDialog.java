@@ -24,18 +24,18 @@ import p007b.p008a.p027k.FormatUtils;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: StickerPremiumUpsellDialog.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: StickerPremiumUpsellDialog.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class StickerPremiumUpsellDialog extends AppDialog {
     public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(StickerPremiumUpsellDialog.class, "binding", "getBinding()Lcom/discord/databinding/PremiumStickerUpsellDialogBinding;", 0)};
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
 
-    /* renamed from: binding$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
 
-    /* compiled from: StickerPremiumUpsellDialog.kt */
+    /* JADX INFO: compiled from: StickerPremiumUpsellDialog.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -52,8 +52,8 @@ public final class StickerPremiumUpsellDialog extends AppDialog {
         }
     }
 
-    /* compiled from: StickerPremiumUpsellDialog.kt */
-    /* renamed from: com.discord.widgets.stickers.StickerPremiumUpsellDialog$onViewBoundOrOnResume$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.stickers.StickerPremiumUpsellDialog$onViewBoundOrOnResume$1 */
+    /* JADX INFO: compiled from: StickerPremiumUpsellDialog.kt */
     public static final class ViewOnClickListenerC101271 implements View.OnClickListener {
         public ViewOnClickListenerC101271() {
         }
@@ -64,8 +64,8 @@ public final class StickerPremiumUpsellDialog extends AppDialog {
         }
     }
 
-    /* compiled from: StickerPremiumUpsellDialog.kt */
-    /* renamed from: com.discord.widgets.stickers.StickerPremiumUpsellDialog$onViewBoundOrOnResume$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.stickers.StickerPremiumUpsellDialog$onViewBoundOrOnResume$2 */
+    /* JADX INFO: compiled from: StickerPremiumUpsellDialog.kt */
     public static final class ViewOnClickListenerC101282 implements View.OnClickListener {
         public ViewOnClickListenerC101282() {
         }
@@ -80,8 +80,8 @@ public final class StickerPremiumUpsellDialog extends AppDialog {
         }
     }
 
-    /* compiled from: StickerPremiumUpsellDialog.kt */
-    /* renamed from: com.discord.widgets.stickers.StickerPremiumUpsellDialog$onViewBoundOrOnResume$3 */
+    /* JADX INFO: renamed from: com.discord.widgets.stickers.StickerPremiumUpsellDialog$onViewBoundOrOnResume$3 */
+    /* JADX INFO: compiled from: StickerPremiumUpsellDialog.kt */
     public static final class ViewOnClickListenerC101293 implements View.OnClickListener {
         public ViewOnClickListenerC101293() {
         }

@@ -22,84 +22,84 @@ import p507d0.p580t._Arrays;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: ApngDrawable.kt */
-/* renamed from: b.l.a.a, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.l.a.a, reason: use source file name */
+/* JADX INFO: compiled from: ApngDrawable.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class ApngDrawable extends Drawable implements Animatable2Compat {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     @IntRange(from = 0, m76to = 2147483647L)
     public final int f13618j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     @IntRange(from = 1, m76to = 2147483647L)
     public final int f13619k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final List<Integer> f13620l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     @IntRange(from = 0, m76to = 2147483647L)
     public final int f13621m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     @IntRange(from = -1, m76to = 2147483647L)
     public int f13622n;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public final Paint f13623o;
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public final List<Animatable2Compat.AnimationCallback> f13624p;
 
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     public final List<RepeatAnimationCallback> f13625q;
 
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     public final int[] f13626r;
 
-    /* renamed from: s */
+    /* JADX INFO: renamed from: s */
     public int f13627s;
 
-    /* renamed from: t */
+    /* JADX INFO: renamed from: t */
     public int f13628t;
 
-    /* renamed from: u */
+    /* JADX INFO: renamed from: u */
     public boolean f13629u;
 
-    /* renamed from: v */
+    /* JADX INFO: renamed from: v */
     public long f13630v;
 
-    /* renamed from: w */
+    /* JADX INFO: renamed from: w */
     public Long f13631w;
 
-    /* renamed from: x */
+    /* JADX INFO: renamed from: x */
     public a f13632x;
 
-    /* compiled from: ApngDrawable.kt */
-    /* renamed from: b.l.a.a$a */
+    /* JADX INFO: renamed from: b.l.a.a$a */
+    /* JADX INFO: compiled from: ApngDrawable.kt */
     public static final class a extends Drawable.ConstantState {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final Apng f13633a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final int f13634b;
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public final int f13635c;
 
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         public final int f13636d;
 
-        /* renamed from: e */
+        /* JADX INFO: renamed from: e */
         public final Function0<Long> f13637e;
 
-        /* compiled from: ApngDrawable.kt */
-        /* renamed from: b.l.a.a$a$a, reason: collision with other inner class name */
+        /* JADX INFO: renamed from: b.l.a.a$a$a, reason: collision with other inner class name */
+        /* JADX INFO: compiled from: ApngDrawable.kt */
         public static final class C13240a extends Lambda implements Function0<Long> {
 
-            /* renamed from: j */
+            /* JADX INFO: renamed from: j */
             public static final C13240a f13638j = new C13240a();
 
             public C13240a() {
@@ -169,7 +169,7 @@ public final class ApngDrawable extends Drawable implements Animatable2Compat {
     }
 
     @WorkerThread
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final ApngDrawable m7121a(InputStream inputStream, @IntRange(from = 1, m76to = 2147483647L) Integer num, @IntRange(from = 1, m76to = 2147483647L) Integer num2) throws ApngException {
         Intrinsics3.checkNotNullParameter(inputStream, "stream");
         boolean z2 = true;
@@ -190,16 +190,16 @@ public final class ApngDrawable extends Drawable implements Animatable2Compat {
         throw new IllegalArgumentException(("Can not specify 0 or negative as height value. height = " + num2).toString());
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final boolean m7122b() {
         return this.f13622n != 0 && m7124d() > this.f13622n - 1;
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final int m7123c() {
         int i;
         int i2 = 0;
-        long j = (this.f13630v % this.f13618j) + (m7122b() ? this.f13618j : 0);
+        long j = (this.f13630v % ((long) this.f13618j)) + ((long) (m7122b() ? this.f13618j : 0));
         int i3 = this.f13619k - 1;
         while (true) {
             i = (i2 + i3) / 2;
@@ -221,9 +221,9 @@ public final class ApngDrawable extends Drawable implements Animatable2Compat {
         this.f13624p.clear();
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final int m7124d() {
-        return (int) (this.f13630v / this.f13618j);
+        return (int) (this.f13630v / ((long) this.f13618j));
     }
 
     /* JADX WARN: Removed duplicated region for block: B:29:0x006f  */

@@ -6,26 +6,26 @@ import p007b.p100d.p104b.p105a.outline;
 import p507d0.p588x.PlatformImplementations2;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: Random.kt */
-/* renamed from: d0.c0.c, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.c0.c, reason: use source file name */
+/* JADX INFO: compiled from: Random.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public abstract class Random {
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public static final a f22272k = new a(null);
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static final Random f22271j = PlatformImplementations2.f25252a.defaultPlatformRandom();
 
-    /* compiled from: Random.kt */
-    /* renamed from: d0.c0.c$a */
+    /* JADX INFO: renamed from: d0.c0.c$a */
+    /* JADX INFO: compiled from: Random.kt */
     public static final class a extends Random implements Serializable {
 
-        /* compiled from: Random.kt */
-        /* renamed from: d0.c0.c$a$a, reason: collision with other inner class name */
+        /* JADX INFO: renamed from: d0.c0.c$a$a, reason: collision with other inner class name */
+        /* JADX INFO: compiled from: Random.kt */
         public static final class C13299a implements Serializable {
 
-            /* renamed from: j */
+            /* JADX INFO: renamed from: j */
             public static final C13299a f22273j = new C13299a();
             private static final long serialVersionUID = 0;
 
@@ -134,7 +134,7 @@ public abstract class Random {
     }
 
     public long nextLong() {
-        return (nextInt() << 32) + nextInt();
+        return (((long) nextInt()) << 32) + ((long) nextInt());
     }
 
     public int nextInt(int i, int i2) {

@@ -15,18 +15,18 @@ import p007b.p109f.p161j.p170e.ImagePipelineFactory;
 import p007b.p109f.p161j.p174i.DrawableFactory;
 import p007b.p109f.p161j.p175j.CloseableImage;
 
-/* compiled from: PipelineDraweeControllerBuilderSupplier.java */
-/* renamed from: b.f.g.a.a.e, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.f.g.a.a.e, reason: use source file name */
+/* JADX INFO: compiled from: PipelineDraweeControllerBuilderSupplier.java */
+/* JADX INFO: loaded from: classes.dex */
 public class PipelineDraweeControllerBuilderSupplier implements Supplier<PipelineDraweeControllerBuilder> {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final Context f3187a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final ImagePipeline2 f3188b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final PipelineDraweeControllerFactory f3189c;
 
     public PipelineDraweeControllerBuilderSupplier(Context context) {
@@ -64,7 +64,7 @@ public class PipelineDraweeControllerBuilderSupplier implements Supplier<Pipelin
         pipelineDraweeControllerFactory.f3196g = null;
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public PipelineDraweeControllerBuilder m1060a() {
         PipelineDraweeControllerBuilder pipelineDraweeControllerBuilder = new PipelineDraweeControllerBuilder(this.f3187a, this.f3189c, this.f3188b, null, null);
         pipelineDraweeControllerBuilder.f3186q = null;

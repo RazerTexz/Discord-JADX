@@ -7,15 +7,15 @@ import kotlin.jvm.internal.DefaultConstructorMarker;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: StoreMessageUploads.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: StoreMessageUploads.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class StoreMessageUploads extends StoreV2 {
     private final HashMap<String, MessageUploadState> uploads = new HashMap<>();
 
-    /* compiled from: StoreMessageUploads.kt */
+    /* JADX INFO: compiled from: StoreMessageUploads.kt */
     public static abstract class MessageUploadState {
 
-        /* compiled from: StoreMessageUploads.kt */
+        /* JADX INFO: compiled from: StoreMessageUploads.kt */
         public static final class None extends MessageUploadState {
             public static final None INSTANCE = new None();
 
@@ -24,7 +24,7 @@ public final class StoreMessageUploads extends StoreV2 {
             }
         }
 
-        /* compiled from: StoreMessageUploads.kt */
+        /* JADX INFO: compiled from: StoreMessageUploads.kt */
         public static final /* data */ class Preprocessing extends MessageUploadState {
             private final String displayName;
             private final String mimeType;
@@ -50,17 +50,17 @@ public final class StoreMessageUploads extends StoreV2 {
                 return preprocessing.copy(i, str, str2);
             }
 
-            /* renamed from: component1, reason: from getter */
+            /* JADX INFO: renamed from: component1, reason: from getter */
             public final int getNumFiles() {
                 return this.numFiles;
             }
 
-            /* renamed from: component2, reason: from getter */
+            /* JADX INFO: renamed from: component2, reason: from getter */
             public final String getDisplayName() {
                 return this.displayName;
             }
 
-            /* renamed from: component3, reason: from getter */
+            /* JADX INFO: renamed from: component3, reason: from getter */
             public final String getMimeType() {
                 return this.mimeType;
             }
@@ -110,7 +110,7 @@ public final class StoreMessageUploads extends StoreV2 {
             }
         }
 
-        /* compiled from: StoreMessageUploads.kt */
+        /* JADX INFO: compiled from: StoreMessageUploads.kt */
         public static final /* data */ class Uploading extends MessageUploadState {
             private final List<SendUtils.FileUpload> uploads;
 

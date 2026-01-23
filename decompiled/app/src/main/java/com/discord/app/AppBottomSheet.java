@@ -40,11 +40,11 @@ import p658rx.subjects.PublishSubject;
 import p658rx.subjects.Subject;
 import p658rx.subscriptions.CompositeSubscription;
 
-/* compiled from: AppBottomSheet.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: AppBottomSheet.kt */
+/* JADX INFO: loaded from: classes.dex */
 public abstract class AppBottomSheet extends BottomSheetDialogFragment implements AppPermissions2, AppComponent, AppLogger.InterfaceC5455a {
 
-    /* renamed from: appLogger$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: appLogger$delegate, reason: from kotlin metadata */
     private final Lazy appLogger;
     private CompositeSubscription compositeSubscription;
     private final AppLogger2 loggingConfig;
@@ -53,17 +53,17 @@ public abstract class AppBottomSheet extends BottomSheetDialogFragment implement
     private final boolean shouldAvoidKeyboard;
     private final Subject<Void, Void> unsubscribeSignal;
 
-    /* compiled from: java-style lambda group */
-    /* renamed from: com.discord.app.AppBottomSheet$a */
+    /* JADX INFO: renamed from: com.discord.app.AppBottomSheet$a */
+    /* JADX INFO: compiled from: java-style lambda group */
     public static final class C5439a implements OnApplyWindowInsetsListener {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public static final C5439a f14929a = new C5439a(0);
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public static final C5439a f14930b = new C5439a(1);
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public final /* synthetic */ int f14931c;
 
         public C5439a(int i) {
@@ -89,8 +89,8 @@ public abstract class AppBottomSheet extends BottomSheetDialogFragment implement
         }
     }
 
-    /* compiled from: AppBottomSheet.kt */
-    /* renamed from: com.discord.app.AppBottomSheet$b */
+    /* JADX INFO: renamed from: com.discord.app.AppBottomSheet$b */
+    /* JADX INFO: compiled from: AppBottomSheet.kt */
     public static final class C5440b extends Lambda implements Function0<AppLogger> {
         public C5440b() {
             super(0);
@@ -102,18 +102,18 @@ public abstract class AppBottomSheet extends BottomSheetDialogFragment implement
         }
     }
 
-    /* compiled from: AppBottomSheet.kt */
-    /* renamed from: com.discord.app.AppBottomSheet$c */
+    /* JADX INFO: renamed from: com.discord.app.AppBottomSheet$c */
+    /* JADX INFO: compiled from: AppBottomSheet.kt */
     public static final class DialogInterfaceOnShowListenerC5441c implements DialogInterface.OnShowListener {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final /* synthetic */ Dialog f14932a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final /* synthetic */ AppBottomSheet f14933b;
 
-        /* compiled from: AppBottomSheet.kt */
-        /* renamed from: com.discord.app.AppBottomSheet$c$a */
+        /* JADX INFO: renamed from: com.discord.app.AppBottomSheet$c$a */
+        /* JADX INFO: compiled from: AppBottomSheet.kt */
         public static final class a extends Lambda implements Function1<Unit, Unit> {
             public a() {
                 super(1);
@@ -147,8 +147,8 @@ public abstract class AppBottomSheet extends BottomSheetDialogFragment implement
         }
     }
 
-    /* compiled from: AppBottomSheet.kt */
-    /* renamed from: com.discord.app.AppBottomSheet$d */
+    /* JADX INFO: renamed from: com.discord.app.AppBottomSheet$d */
+    /* JADX INFO: compiled from: AppBottomSheet.kt */
     public static final class C5442d extends BottomSheetBehavior.BottomSheetCallback {
         public C5442d() {
         }
@@ -168,8 +168,8 @@ public abstract class AppBottomSheet extends BottomSheetDialogFragment implement
         }
     }
 
-    /* compiled from: AppBottomSheet.kt */
-    /* renamed from: com.discord.app.AppBottomSheet$e */
+    /* JADX INFO: renamed from: com.discord.app.AppBottomSheet$e */
+    /* JADX INFO: compiled from: AppBottomSheet.kt */
     public static final class ViewOnLayoutChangeListenerC5443e implements View.OnLayoutChangeListener {
         public ViewOnLayoutChangeListenerC5443e() {
         }
@@ -180,11 +180,11 @@ public abstract class AppBottomSheet extends BottomSheetDialogFragment implement
         }
     }
 
-    /* compiled from: AppBottomSheet.kt */
-    /* renamed from: com.discord.app.AppBottomSheet$f */
+    /* JADX INFO: renamed from: com.discord.app.AppBottomSheet$f */
+    /* JADX INFO: compiled from: AppBottomSheet.kt */
     public static final class DialogInterfaceOnShowListenerC5444f implements DialogInterface.OnShowListener {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final /* synthetic */ Dialog f14936a;
 
         public DialogInterfaceOnShowListenerC5444f(Dialog dialog) {
@@ -200,14 +200,14 @@ public abstract class AppBottomSheet extends BottomSheetDialogFragment implement
         }
     }
 
-    /* compiled from: AppBottomSheet.kt */
-    /* renamed from: com.discord.app.AppBottomSheet$g */
+    /* JADX INFO: renamed from: com.discord.app.AppBottomSheet$g */
+    /* JADX INFO: compiled from: AppBottomSheet.kt */
     public static final class ViewOnClickListenerC5445g implements View.OnClickListener {
 
-        /* renamed from: k */
+        /* JADX INFO: renamed from: k */
         public final /* synthetic */ View f14938k;
 
-        /* renamed from: l */
+        /* JADX INFO: renamed from: l */
         public final /* synthetic */ Function1 f14939l;
 
         public ViewOnClickListenerC5445g(View view, Function1 function1) {

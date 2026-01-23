@@ -24,23 +24,23 @@ import p507d0.p591y.Closeable;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: SpotifyHelper.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: SpotifyHelper.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class SpotifyHelper {
     public static final SpotifyHelper INSTANCE = new SpotifyHelper();
     private static final String SPOTIFY_PACKAGE_NAME = "com.spotify.music";
     private static final String SPOTIFY_UTM_PARAMS = "utm_source=discord&utm_medium=mobile";
 
-    /* compiled from: SpotifyHelper.kt */
-    /* renamed from: com.discord.utilities.integrations.SpotifyHelper$launchAlbum$1 */
+    /* JADX INFO: renamed from: com.discord.utilities.integrations.SpotifyHelper$launchAlbum$1 */
+    /* JADX INFO: compiled from: SpotifyHelper.kt */
     public static final class C67811 extends Lambda implements Function0<Unit> {
         public final /* synthetic */ long $applicationId;
         public final /* synthetic */ Context $context;
         public final /* synthetic */ String $sessionId;
         public final /* synthetic */ long $userId;
 
-        /* compiled from: SpotifyHelper.kt */
-        /* renamed from: com.discord.utilities.integrations.SpotifyHelper$launchAlbum$1$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.utilities.integrations.SpotifyHelper$launchAlbum$1$1, reason: invalid class name */
+        /* JADX INFO: compiled from: SpotifyHelper.kt */
         public static final class AnonymousClass1 extends Lambda implements Function1<ActivityMetadata, Unit> {
             public AnonymousClass1() {
                 super(1);
@@ -52,7 +52,7 @@ public final class SpotifyHelper {
                 return Unit.f27425a;
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2(ActivityMetadata activityMetadata) {
                 String albumId;
                 if (activityMetadata == null || (albumId = activityMetadata.getAlbumId()) == null) {
@@ -77,14 +77,14 @@ public final class SpotifyHelper {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.m8518ui(ObservableExtensionsKt.restSubscribeOn$default(RestAPI.INSTANCE.getApi().getActivityMetadata(this.$userId, this.$sessionId, this.$applicationId), false, 1, null)), this.$context, "REST: Spotify GetActivityMetadata", (Function1) null, new AnonymousClass1(), (Function1) null, (Function0) null, (Function0) null, 116, (Object) null);
         }
     }
 
-    /* compiled from: SpotifyHelper.kt */
-    /* renamed from: com.discord.utilities.integrations.SpotifyHelper$openPlayStoreForSpotify$1 */
+    /* JADX INFO: renamed from: com.discord.utilities.integrations.SpotifyHelper$openPlayStoreForSpotify$1 */
+    /* JADX INFO: compiled from: SpotifyHelper.kt */
     public static final class RunnableC67821 implements Runnable {
         public final /* synthetic */ Context $context;
 

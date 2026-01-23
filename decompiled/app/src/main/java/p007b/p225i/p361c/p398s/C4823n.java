@@ -29,27 +29,27 @@ import p007b.p225i.p361c.p401u.AbstractC4847k;
 import p007b.p225i.p361c.p401u.InterfaceC4843g;
 import p007b.p225i.p361c.p407x.UserAgentPublisher;
 
-/* compiled from: com.google.firebase:firebase-iid@@21.0.0 */
-/* renamed from: b.i.c.s.n */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.c.s.n */
+/* JADX INFO: compiled from: com.google.firebase:firebase-iid@@21.0.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public class C4823n {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final FirebaseApp2 f12877a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final C4826q f12878b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final C3227b f12879c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final Provider2<UserAgentPublisher> f12880d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final Provider2<HeartBeatInfo> f12881e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final InterfaceC4843g f12882f;
 
     public C4823n(FirebaseApp2 firebaseApp2, C4826q c4826q, Provider2<UserAgentPublisher> provider2, Provider2<HeartBeatInfo> provider22, InterfaceC4843g interfaceC4843g) {
@@ -63,13 +63,13 @@ public class C4823n {
         this.f12882f = interfaceC4843g;
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final Task<String> m6727a(Task<Bundle> task) {
         Executor executor = C4817h.f12866a;
         return task.mo6014i(ExecutorC4816g.f12865j, new C4822m(this));
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final Task<Bundle> m6728b(String str, String str2, String str3, Bundle bundle) {
         int i;
         String str4;

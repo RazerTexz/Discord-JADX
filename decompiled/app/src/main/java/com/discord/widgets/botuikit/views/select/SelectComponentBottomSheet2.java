@@ -5,9 +5,9 @@ import p001a0.p002a.p003a.C0002b;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: SelectComponentBottomSheet.kt */
-/* renamed from: com.discord.widgets.botuikit.views.select.ComponentContext, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.botuikit.views.select.ComponentContext, reason: use source file name */
+/* JADX INFO: compiled from: SelectComponentBottomSheet.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final /* data */ class SelectComponentBottomSheet2 implements Serializable {
     private final long applicationId;
     private final long channelId;
@@ -27,27 +27,27 @@ public final /* data */ class SelectComponentBottomSheet2 implements Serializabl
         return selectComponentBottomSheet2.copy((i & 1) != 0 ? selectComponentBottomSheet2.guildId : l, (i & 2) != 0 ? selectComponentBottomSheet2.messageId : j, (i & 4) != 0 ? selectComponentBottomSheet2.channelId : j2, (i & 8) != 0 ? selectComponentBottomSheet2.messageFlags : l2, (i & 16) != 0 ? selectComponentBottomSheet2.applicationId : j3);
     }
 
-    /* renamed from: component1, reason: from getter */
+    /* JADX INFO: renamed from: component1, reason: from getter */
     public final Long getGuildId() {
         return this.guildId;
     }
 
-    /* renamed from: component2, reason: from getter */
+    /* JADX INFO: renamed from: component2, reason: from getter */
     public final long getMessageId() {
         return this.messageId;
     }
 
-    /* renamed from: component3, reason: from getter */
+    /* JADX INFO: renamed from: component3, reason: from getter */
     public final long getChannelId() {
         return this.channelId;
     }
 
-    /* renamed from: component4, reason: from getter */
+    /* JADX INFO: renamed from: component4, reason: from getter */
     public final Long getMessageFlags() {
         return this.messageFlags;
     }
 
-    /* renamed from: component5, reason: from getter */
+    /* JADX INFO: renamed from: component5, reason: from getter */
     public final long getApplicationId() {
         return this.applicationId;
     }

@@ -14,8 +14,8 @@ import lombok.experimental.NonFinal;
 import org.eclipse.jdt.internal.compiler.ast.Annotation;
 import org.eclipse.jdt.internal.compiler.ast.TypeDeclaration;
 
+/* JADX INFO: loaded from: discord-126021.apk:lombok/eclipse/handlers/HandleValue.SCL.lombok */
 @HandlerPriority(-512)
-/* loaded from: discord-126021.apk:lombok/eclipse/handlers/HandleValue.SCL.lombok */
 public class HandleValue extends EclipseAnnotationHandler<Value> {
     private HandleFieldDefaults handleFieldDefaults = new HandleFieldDefaults();
     private HandleGetter handleGetter = new HandleGetter();
@@ -24,7 +24,7 @@ public class HandleValue extends EclipseAnnotationHandler<Value> {
     private HandleConstructor handleConstructor = new HandleConstructor();
 
     @Override // lombok.eclipse.EclipseAnnotationHandler
-    public void handle(AnnotationValues<Value> annotation, Annotation ast, EclipseNode annotationNode) throws SecurityException, IllegalArgumentException {
+    public void handle(AnnotationValues<Value> annotation, Annotation ast, EclipseNode annotationNode) {
         HandlerUtil.handleFlagUsage(annotationNode, ConfigurationKeys.VALUE_FLAG_USAGE, "@Value");
         Value ann = annotation.getInstance();
         EclipseNode typeNode = annotationNode.m10925up();

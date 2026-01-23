@@ -22,11 +22,11 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 import p658rx.Observable;
 
-/* compiled from: WidgetThreadBrowserViewModel.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetThreadBrowserViewModel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetThreadBrowserViewModel extends AppViewModel<ViewState> {
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private final long channelId;
     private final long guildId;
@@ -34,8 +34,8 @@ public final class WidgetThreadBrowserViewModel extends AppViewModel<ViewState> 
     private final StoreGuilds storeGuilds;
     private final StorePermissions storePermissions;
 
-    /* compiled from: WidgetThreadBrowserViewModel.kt */
-    /* renamed from: com.discord.widgets.channels.threads.browser.WidgetThreadBrowserViewModel$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.channels.threads.browser.WidgetThreadBrowserViewModel$1 */
+    /* JADX INFO: compiled from: WidgetThreadBrowserViewModel.kt */
     public static final class C76691 extends Lambda implements Function1<StoreState, Unit> {
         public C76691() {
             super(1);
@@ -47,14 +47,14 @@ public final class WidgetThreadBrowserViewModel extends AppViewModel<ViewState> 
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(StoreState storeState) {
             Intrinsics3.checkNotNullParameter(storeState, "storeState");
             WidgetThreadBrowserViewModel.access$handleStoreState(WidgetThreadBrowserViewModel.this, storeState);
         }
     }
 
-    /* compiled from: WidgetThreadBrowserViewModel.kt */
+    /* JADX INFO: compiled from: WidgetThreadBrowserViewModel.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -74,7 +74,7 @@ public final class WidgetThreadBrowserViewModel extends AppViewModel<ViewState> 
         }
     }
 
-    /* compiled from: WidgetThreadBrowserViewModel.kt */
+    /* JADX INFO: compiled from: WidgetThreadBrowserViewModel.kt */
     public static final /* data */ class StoreState {
         private final Channel channel;
         private final Guild guild;
@@ -99,17 +99,17 @@ public final class WidgetThreadBrowserViewModel extends AppViewModel<ViewState> 
             return storeState.copy(channel, guild, l);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final Channel getChannel() {
             return this.channel;
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final Guild getGuild() {
             return this.guild;
         }
 
-        /* renamed from: component3, reason: from getter */
+        /* JADX INFO: renamed from: component3, reason: from getter */
         public final Long getPermissions() {
             return this.permissions;
         }
@@ -160,10 +160,10 @@ public final class WidgetThreadBrowserViewModel extends AppViewModel<ViewState> 
         }
     }
 
-    /* compiled from: WidgetThreadBrowserViewModel.kt */
+    /* JADX INFO: compiled from: WidgetThreadBrowserViewModel.kt */
     public static abstract class ViewState {
 
-        /* compiled from: WidgetThreadBrowserViewModel.kt */
+        /* JADX INFO: compiled from: WidgetThreadBrowserViewModel.kt */
         public static final /* data */ class Browser extends ViewState {
             private final boolean canCreateThread;
             private final boolean canViewArchivedThreads;
@@ -194,22 +194,22 @@ public final class WidgetThreadBrowserViewModel extends AppViewModel<ViewState> 
                 return browser.copy(str, z2, z3, z4);
             }
 
-            /* renamed from: component1, reason: from getter */
+            /* JADX INFO: renamed from: component1, reason: from getter */
             public final String getChannelName() {
                 return this.channelName;
             }
 
-            /* renamed from: component2, reason: from getter */
+            /* JADX INFO: renamed from: component2, reason: from getter */
             public final boolean getCanCreateThread() {
                 return this.canCreateThread;
             }
 
-            /* renamed from: component3, reason: from getter */
+            /* JADX INFO: renamed from: component3, reason: from getter */
             public final boolean getCanViewArchivedThreads() {
                 return this.canViewArchivedThreads;
             }
 
-            /* renamed from: component4, reason: from getter */
+            /* JADX INFO: renamed from: component4, reason: from getter */
             public final boolean getIsForumChannel() {
                 return this.isForumChannel;
             }
@@ -242,23 +242,32 @@ public final class WidgetThreadBrowserViewModel extends AppViewModel<ViewState> 
             }
 
             /* JADX WARN: Multi-variable type inference failed */
+            /* JADX WARN: Type inference failed for: r1v1, types: [int] */
+            /* JADX WARN: Type inference failed for: r1v3, types: [int] */
+            /* JADX WARN: Type inference failed for: r1v5 */
+            /* JADX WARN: Type inference failed for: r1v6 */
+            /* JADX WARN: Type inference failed for: r1v7 */
+            /* JADX WARN: Type inference failed for: r1v8 */
+            /* JADX WARN: Type inference failed for: r2v0 */
+            /* JADX WARN: Type inference failed for: r2v1, types: [int] */
+            /* JADX WARN: Type inference failed for: r2v2 */
             public int hashCode() {
                 String str = this.channelName;
                 int iHashCode = (str != null ? str.hashCode() : 0) * 31;
                 boolean z2 = this.canCreateThread;
-                int i = z2;
-                if (z2 != 0) {
-                    i = 1;
+                ?? r1 = z2;
+                if (z2) {
+                    r1 = 1;
                 }
-                int i2 = (iHashCode + i) * 31;
+                int i = (iHashCode + r1) * 31;
                 boolean z3 = this.canViewArchivedThreads;
-                int i3 = z3;
-                if (z3 != 0) {
-                    i3 = 1;
+                ?? r12 = z3;
+                if (z3) {
+                    r12 = 1;
                 }
-                int i4 = (i2 + i3) * 31;
+                int i2 = (i + r12) * 31;
                 boolean z4 = this.isForumChannel;
-                return i4 + (z4 ? 1 : z4 ? 1 : 0);
+                return i2 + (z4 ? 1 : z4);
             }
 
             public final boolean isForumChannel() {
@@ -277,7 +286,7 @@ public final class WidgetThreadBrowserViewModel extends AppViewModel<ViewState> 
             }
         }
 
-        /* compiled from: WidgetThreadBrowserViewModel.kt */
+        /* JADX INFO: compiled from: WidgetThreadBrowserViewModel.kt */
         public static final /* data */ class GoToChannel extends ViewState {
             private final Channel channel;
 
@@ -295,7 +304,7 @@ public final class WidgetThreadBrowserViewModel extends AppViewModel<ViewState> 
                 return goToChannel.copy(channel);
             }
 
-            /* renamed from: component1, reason: from getter */
+            /* JADX INFO: renamed from: component1, reason: from getter */
             public final Channel getChannel() {
                 return this.channel;
             }

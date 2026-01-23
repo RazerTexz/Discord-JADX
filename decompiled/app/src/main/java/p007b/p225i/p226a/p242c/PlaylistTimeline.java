@@ -4,30 +4,30 @@ import java.util.Collection;
 import java.util.HashMap;
 import p007b.p225i.p226a.p242c.p243a3.ShuffleOrder;
 
-/* compiled from: PlaylistTimeline.java */
-/* renamed from: b.i.a.c.c2, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.c2, reason: use source file name */
+/* JADX INFO: compiled from: PlaylistTimeline.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class PlaylistTimeline extends AbstractConcatenatedTimeline {
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public final int f6170n;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public final int f6171o;
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public final int[] f6172p;
 
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     public final int[] f6173q;
 
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     public final Timeline[] f6174r;
 
-    /* renamed from: s */
+    /* JADX INFO: renamed from: s */
     public final Object[] f6175s;
 
-    /* renamed from: t */
+    /* JADX INFO: renamed from: t */
     public final HashMap<Object, Integer> f6176t;
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -57,13 +57,13 @@ public final class PlaylistTimeline extends AbstractConcatenatedTimeline {
     }
 
     @Override // p007b.p225i.p226a.p242c.Timeline
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public int mo2555i() {
         return this.f6171o;
     }
 
     @Override // p007b.p225i.p226a.p242c.Timeline
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public int mo2557p() {
         return this.f6170n;
     }

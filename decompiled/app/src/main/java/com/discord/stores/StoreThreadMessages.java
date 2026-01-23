@@ -26,8 +26,8 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 import p658rx.Observable;
 
-/* compiled from: StoreThreadMessages.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: StoreThreadMessages.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class StoreThreadMessages extends StoreV2 {
     public static final int MAX_THREAD_MESSAGE_COUNT = 50;
     private final ObservationDeck observationDeck;
@@ -36,7 +36,7 @@ public final class StoreThreadMessages extends StoreV2 {
     private final Map<Long, ThreadState> threads;
     private Map<Long, ThreadState> threadsSnapshot;
 
-    /* compiled from: StoreThreadMessages.kt */
+    /* JADX INFO: compiled from: StoreThreadMessages.kt */
     public static final /* data */ class ThreadState {
         private int count;
         private final long guildId;
@@ -56,27 +56,27 @@ public final class StoreThreadMessages extends StoreV2 {
             return threadState.copy((i2 & 1) != 0 ? threadState.threadId : j, (i2 & 2) != 0 ? threadState.guildId : j2, (i2 & 4) != 0 ? threadState.parentId : j3, (i2 & 8) != 0 ? threadState.count : i, (i2 & 16) != 0 ? threadState.mostRecentMessage : message);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final long getThreadId() {
             return this.threadId;
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final long getGuildId() {
             return this.guildId;
         }
 
-        /* renamed from: component3, reason: from getter */
+        /* JADX INFO: renamed from: component3, reason: from getter */
         public final long getParentId() {
             return this.parentId;
         }
 
-        /* renamed from: component4, reason: from getter */
+        /* JADX INFO: renamed from: component4, reason: from getter */
         public final int getCount() {
             return this.count;
         }
 
-        /* renamed from: component5, reason: from getter */
+        /* JADX INFO: renamed from: component5, reason: from getter */
         public final Message getMostRecentMessage() {
             return this.mostRecentMessage;
         }
@@ -146,8 +146,8 @@ public final class StoreThreadMessages extends StoreV2 {
         }
     }
 
-    /* compiled from: StoreThreadMessages.kt */
-    /* renamed from: com.discord.stores.StoreThreadMessages$observeThreadCountAndLatestMessage$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreThreadMessages$observeThreadCountAndLatestMessage$1 */
+    /* JADX INFO: compiled from: StoreThreadMessages.kt */
     public static final class C65331 extends Lambda implements Function0<Map<Long, ? extends ThreadState>> {
         public C65331() {
             super(0);
@@ -159,14 +159,14 @@ public final class StoreThreadMessages extends StoreV2 {
         }
 
         @Override // kotlin.jvm.functions.Function0
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final Map<Long, ? extends ThreadState> invoke2() {
             return StoreThreadMessages.access$getThreadsSnapshot$p(StoreThreadMessages.this);
         }
     }
 
-    /* compiled from: StoreThreadMessages.kt */
-    /* renamed from: com.discord.stores.StoreThreadMessages$observeThreadCountAndLatestMessage$2 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreThreadMessages$observeThreadCountAndLatestMessage$2 */
+    /* JADX INFO: compiled from: StoreThreadMessages.kt */
     public static final class C65342 extends Lambda implements Function0<ThreadState> {
         public final /* synthetic */ long $channelId;
 

@@ -4,15 +4,15 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import p007b.p195g.p196a.p198b.p204t.TextBuffer;
 
-/* compiled from: JsonStringEncoder.java */
-/* renamed from: b.g.a.b.p.e, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.g.a.b.p.e, reason: use source file name */
+/* JADX INFO: compiled from: JsonStringEncoder.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class JsonStringEncoder {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final char[] f4550a = (char[]) CharTypes.f4536a.clone();
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static final JsonStringEncoder f4551b;
 
     static {
@@ -20,7 +20,7 @@ public final class JsonStringEncoder {
         f4551b = new JsonStringEncoder();
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public char[] m1696a(String str) {
         int i;
         char[] cArrM1743e = new char[120];

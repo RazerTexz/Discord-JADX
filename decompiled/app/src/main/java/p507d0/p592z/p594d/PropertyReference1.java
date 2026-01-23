@@ -3,9 +3,9 @@ package p507d0.p592z.p594d;
 import kotlin.reflect.KCallable;
 import p507d0.p513e0.KProperty3;
 
-/* compiled from: PropertyReference1.java */
-/* renamed from: d0.z.d.x, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.z.d.x, reason: use source file name */
+/* JADX INFO: compiled from: PropertyReference1.java */
+/* JADX INFO: loaded from: classes3.dex */
 public abstract class PropertyReference1 extends PropertyReference implements KProperty3 {
     public PropertyReference1() {
     }

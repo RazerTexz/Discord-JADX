@@ -3,7 +3,7 @@ package androidx.transition;
 import android.animation.TypeEvaluator;
 import android.graphics.Rect;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class RectEvaluator implements TypeEvaluator<Rect> {
     private Rect mRect;
 
@@ -19,7 +19,7 @@ public class RectEvaluator implements TypeEvaluator<Rect> {
         this.mRect = rect;
     }
 
-    /* renamed from: evaluate, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: evaluate, reason: avoid collision after fix types in other method */
     public Rect evaluate2(float f, Rect rect, Rect rect2) {
         int i = rect.left + ((int) ((rect2.left - r0) * f));
         int i2 = rect.top + ((int) ((rect2.top - r1) * f));

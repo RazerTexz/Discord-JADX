@@ -30,23 +30,23 @@ import p507d0.LazyJVM;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetCreationIntent.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetCreationIntent.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetCreationIntent extends AppFragment {
     public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetCreationIntent.class, "binding", "getBinding()Lcom/discord/databinding/WidgetCreationIntentBinding;", 0)};
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private static final boolean IS_FRIENDS_FIRST;
 
-    /* renamed from: args$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: args$delegate, reason: from kotlin metadata */
     private final Lazy args;
 
-    /* renamed from: binding$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
     private final AppLogger2 loggingConfig;
 
-    /* compiled from: WidgetCreationIntent.kt */
+    /* JADX INFO: compiled from: WidgetCreationIntent.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -63,8 +63,8 @@ public final class WidgetCreationIntent extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetCreationIntent.kt */
-    /* renamed from: com.discord.widgets.guilds.create.WidgetCreationIntent$configureCommunityButton$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.guilds.create.WidgetCreationIntent$configureCommunityButton$1 */
+    /* JADX INFO: compiled from: WidgetCreationIntent.kt */
     public static final class ViewOnClickListenerC86011 implements View.OnClickListener {
         public ViewOnClickListenerC86011() {
         }
@@ -75,8 +75,8 @@ public final class WidgetCreationIntent extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetCreationIntent.kt */
-    /* renamed from: com.discord.widgets.guilds.create.WidgetCreationIntent$configureFriendsButton$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.guilds.create.WidgetCreationIntent$configureFriendsButton$1 */
+    /* JADX INFO: compiled from: WidgetCreationIntent.kt */
     public static final class ViewOnClickListenerC86021 implements View.OnClickListener {
         public ViewOnClickListenerC86021() {
         }
@@ -87,12 +87,12 @@ public final class WidgetCreationIntent extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetCreationIntent.kt */
-    /* renamed from: com.discord.widgets.guilds.create.WidgetCreationIntent$onViewBound$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.guilds.create.WidgetCreationIntent$onViewBound$1 */
+    /* JADX INFO: compiled from: WidgetCreationIntent.kt */
     public static final class C86031 extends Lambda implements Function1<RenderContext, Unit> {
 
-        /* compiled from: WidgetCreationIntent.kt */
-        /* renamed from: com.discord.widgets.guilds.create.WidgetCreationIntent$onViewBound$1$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.widgets.guilds.create.WidgetCreationIntent$onViewBound$1$1, reason: invalid class name */
+        /* JADX INFO: compiled from: WidgetCreationIntent.kt */
         public static final class AnonymousClass1 extends Lambda implements Function1<View, Unit> {
             public AnonymousClass1() {
                 super(1);
@@ -104,7 +104,7 @@ public final class WidgetCreationIntent extends AppFragment {
                 return Unit.f27425a;
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2(View view) {
                 Intrinsics3.checkNotNullParameter(view, "it");
                 WidgetCreationIntent.access$onSelectionPressed(WidgetCreationIntent.this, null);
@@ -121,7 +121,7 @@ public final class WidgetCreationIntent extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(RenderContext renderContext) {
             Intrinsics3.checkNotNullParameter(renderContext, "$receiver");
             renderContext.m8423b("onSkip", new AnonymousClass1());

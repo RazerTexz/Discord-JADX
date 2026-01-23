@@ -10,34 +10,34 @@ import com.discord.utilities.view.text.SimpleDraweeSpanTextView;
 import com.discord.views.StatusView;
 import com.facebook.drawee.view.SimpleDraweeView;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public final class WidgetChatInputAutocompleteItemBinding implements ViewBinding {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     @NonNull
     public final ConstraintLayout f16087a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     @NonNull
     public final SimpleDraweeView f16088b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     @NonNull
     public final TextView f16089c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     @NonNull
     public final SimpleDraweeSpanTextView f16090d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     @NonNull
     public final TextView f16091e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     @NonNull
     public final TextView f16092f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     @NonNull
     public final StatusView f16093g;
 

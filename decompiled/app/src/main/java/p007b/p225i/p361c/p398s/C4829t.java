@@ -4,15 +4,15 @@ import android.util.Pair;
 import com.google.android.gms.tasks.Task;
 import p007b.p225i.p226a.p288f.p340n.InterfaceC4353a;
 
-/* compiled from: com.google.firebase:firebase-iid@@21.0.0 */
-/* renamed from: b.i.c.s.t */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.c.s.t */
+/* JADX INFO: compiled from: com.google.firebase:firebase-iid@@21.0.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public final /* synthetic */ class C4829t implements InterfaceC4353a {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final C4830u f12892a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final Pair f12893b;
 
     public C4829t(C4830u c4830u, Pair pair) {
@@ -21,7 +21,7 @@ public final /* synthetic */ class C4829t implements InterfaceC4353a {
     }
 
     @Override // p007b.p225i.p226a.p288f.p340n.InterfaceC4353a
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final Object mo4012a(Task task) {
         C4830u c4830u = this.f12892a;
         Pair pair = this.f12893b;

@@ -5,11 +5,11 @@ import kotlin.jvm.internal.DefaultConstructorMarker;
 import p001a0.p002a.p003a.C0002b;
 import p007b.p100d.p104b.p105a.outline;
 
-/* compiled from: EmojiPickerContextType.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: EmojiPickerContextType.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public abstract class EmojiPickerContextType implements Serializable {
 
-    /* compiled from: EmojiPickerContextType.kt */
+    /* JADX INFO: compiled from: EmojiPickerContextType.kt */
     public static final class Chat extends EmojiPickerContextType {
         public static final Chat INSTANCE = new Chat();
 
@@ -18,7 +18,7 @@ public abstract class EmojiPickerContextType implements Serializable {
         }
     }
 
-    /* compiled from: EmojiPickerContextType.kt */
+    /* JADX INFO: compiled from: EmojiPickerContextType.kt */
     public static final class Global extends EmojiPickerContextType {
         public static final Global INSTANCE = new Global();
 
@@ -27,7 +27,7 @@ public abstract class EmojiPickerContextType implements Serializable {
         }
     }
 
-    /* compiled from: EmojiPickerContextType.kt */
+    /* JADX INFO: compiled from: EmojiPickerContextType.kt */
     public static final /* data */ class Guild extends EmojiPickerContextType {
         private final long guildId;
 
@@ -43,7 +43,7 @@ public abstract class EmojiPickerContextType implements Serializable {
             return guild.copy(j);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final long getGuildId() {
             return this.guildId;
         }

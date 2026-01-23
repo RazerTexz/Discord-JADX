@@ -27,11 +27,11 @@ import p507d0.p592z.p594d.Lambda;
 import p637j0.p641k.Func1;
 import p658rx.Observable;
 
-/* compiled from: StorePinnedMessages.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: StorePinnedMessages.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class StorePinnedMessages extends StoreV2 {
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private final Dispatcher dispatcher;
     private final ObservationDeck observationDeck;
@@ -39,7 +39,7 @@ public final class StorePinnedMessages extends StoreV2 {
     private Map<Long, ? extends List<Message>> pinnedMessagesSnapshot;
     private final Set<Long> updatedChannelIds;
 
-    /* compiled from: StorePinnedMessages.kt */
+    /* JADX INFO: compiled from: StorePinnedMessages.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -88,8 +88,8 @@ public final class StorePinnedMessages extends StoreV2 {
         }
     }
 
-    /* compiled from: StorePinnedMessages.kt */
-    /* renamed from: com.discord.stores.StorePinnedMessages$loadPinnedMessages$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StorePinnedMessages$loadPinnedMessages$1 */
+    /* JADX INFO: compiled from: StorePinnedMessages.kt */
     public static final class C63361<T, R> implements Func1<List<? extends com.discord.api.message.Message>, List<? extends Message>> {
         public static final C63361 INSTANCE = new C63361();
 
@@ -98,7 +98,7 @@ public final class StorePinnedMessages extends StoreV2 {
             return call2((List<com.discord.api.message.Message>) list);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final List<Message> call2(List<com.discord.api.message.Message> list) {
             Intrinsics3.checkNotNullExpressionValue(list, "messages");
             ArrayList arrayList = new ArrayList(Iterables2.collectionSizeOrDefault(list, 10));
@@ -110,13 +110,13 @@ public final class StorePinnedMessages extends StoreV2 {
         }
     }
 
-    /* compiled from: StorePinnedMessages.kt */
-    /* renamed from: com.discord.stores.StorePinnedMessages$loadPinnedMessages$2 */
+    /* JADX INFO: renamed from: com.discord.stores.StorePinnedMessages$loadPinnedMessages$2 */
+    /* JADX INFO: compiled from: StorePinnedMessages.kt */
     public static final class C63372 extends Lambda implements Function1<List<? extends Message>, Unit> {
         public final /* synthetic */ long $channelId;
 
-        /* compiled from: StorePinnedMessages.kt */
-        /* renamed from: com.discord.stores.StorePinnedMessages$loadPinnedMessages$2$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.stores.StorePinnedMessages$loadPinnedMessages$2$1, reason: invalid class name */
+        /* JADX INFO: compiled from: StorePinnedMessages.kt */
         public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
             public final /* synthetic */ List $it;
 
@@ -132,7 +132,7 @@ public final class StorePinnedMessages extends StoreV2 {
                 return Unit.f27425a;
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2() {
                 C63372 c63372 = C63372.this;
                 StorePinnedMessages storePinnedMessages = StorePinnedMessages.this;
@@ -155,14 +155,14 @@ public final class StorePinnedMessages extends StoreV2 {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(List<Message> list) {
             StorePinnedMessages.this.getDispatcher().schedule(new AnonymousClass1(list));
         }
     }
 
-    /* compiled from: StorePinnedMessages.kt */
-    /* renamed from: com.discord.stores.StorePinnedMessages$observeForChannel$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StorePinnedMessages$observeForChannel$1 */
+    /* JADX INFO: compiled from: StorePinnedMessages.kt */
     public static final class C63381 extends Lambda implements Function0<List<? extends Message>> {
         public final /* synthetic */ long $channelId;
 
@@ -178,15 +178,15 @@ public final class StorePinnedMessages extends StoreV2 {
         }
 
         @Override // kotlin.jvm.functions.Function0
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final List<? extends Message> invoke2() {
             List<? extends Message> list = (List) StorePinnedMessages.access$getPinnedMessages$p(StorePinnedMessages.this).get(Long.valueOf(this.$channelId));
             return list != null ? list : Collections2.emptyList();
         }
     }
 
-    /* compiled from: StorePinnedMessages.kt */
-    /* renamed from: com.discord.stores.StorePinnedMessages$observePinnedMessage$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StorePinnedMessages$observePinnedMessage$1 */
+    /* JADX INFO: compiled from: StorePinnedMessages.kt */
     public static final class C63391 extends Lambda implements Function0<Message> {
         public final /* synthetic */ long $channelId;
         public final /* synthetic */ long $messageId;

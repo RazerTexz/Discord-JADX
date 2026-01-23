@@ -11,9 +11,9 @@ import p507d0.p580t.Iterables2;
 import p507d0.p580t.MapsJVM;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: GooglePlayInAppSku.kt */
-/* renamed from: com.discord.utilities.billing.GooglePlayInAppSkus, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.utilities.billing.GooglePlayInAppSkus, reason: use source file name */
+/* JADX INFO: compiled from: GooglePlayInAppSku.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class GooglePlayInAppSku3 {
     public static final GooglePlayInAppSku3 INSTANCE = new GooglePlayInAppSku3();
     private static final List<GooglePlayInAppSku> skus = GooglePlayInAppSku2.getPremiumGifts();

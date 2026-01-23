@@ -9,36 +9,36 @@ import p007b.p452o.p475b.p477b.Gl2dDrawable;
 import p007b.p452o.p475b.p479d.GlProgramLocation;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: GlTextureProgram.kt */
-/* renamed from: b.o.b.d.d, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.o.b.d.d, reason: use source file name */
+/* JADX INFO: compiled from: GlTextureProgram.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public class GlTextureProgram extends GlProgram {
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public float[] f14318e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final GlProgramLocation f14319f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public FloatBuffer f14320g;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public final GlProgramLocation f14321h;
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public final GlProgramLocation f14322i;
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final GlProgramLocation f14323j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final RectF f14324k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public int f14325l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public Gl2dDrawable f14326m;
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */

@@ -6,14 +6,14 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public final class SpliceScheduleCommand extends SpliceCommand {
     public static final Parcelable.Creator<SpliceScheduleCommand> CREATOR = new C10746a();
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final List<C10748c> f20038j;
 
-    /* renamed from: com.google.android.exoplayer2.metadata.scte35.SpliceScheduleCommand$a */
+    /* JADX INFO: renamed from: com.google.android.exoplayer2.metadata.scte35.SpliceScheduleCommand$a */
     public class C10746a implements Parcelable.Creator<SpliceScheduleCommand> {
         @Override // android.os.Parcelable.Creator
         public SpliceScheduleCommand createFromParcel(Parcel parcel) {
@@ -56,13 +56,13 @@ public final class SpliceScheduleCommand extends SpliceCommand {
         }
     }
 
-    /* renamed from: com.google.android.exoplayer2.metadata.scte35.SpliceScheduleCommand$b */
+    /* JADX INFO: renamed from: com.google.android.exoplayer2.metadata.scte35.SpliceScheduleCommand$b */
     public static final class C10747b {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final int f20039a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final long f20040b;
 
         public C10747b(int i, long j) {
@@ -85,40 +85,40 @@ public final class SpliceScheduleCommand extends SpliceCommand {
         this.f20038j = Collections.unmodifiableList(arrayList);
     }
 
-    /* renamed from: com.google.android.exoplayer2.metadata.scte35.SpliceScheduleCommand$c */
+    /* JADX INFO: renamed from: com.google.android.exoplayer2.metadata.scte35.SpliceScheduleCommand$c */
     public static final class C10748c {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final long f20041a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final boolean f20042b;
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public final boolean f20043c;
 
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         public final boolean f20044d;
 
-        /* renamed from: e */
+        /* JADX INFO: renamed from: e */
         public final long f20045e;
 
-        /* renamed from: f */
+        /* JADX INFO: renamed from: f */
         public final List<C10747b> f20046f;
 
-        /* renamed from: g */
+        /* JADX INFO: renamed from: g */
         public final boolean f20047g;
 
-        /* renamed from: h */
+        /* JADX INFO: renamed from: h */
         public final long f20048h;
 
-        /* renamed from: i */
+        /* JADX INFO: renamed from: i */
         public final int f20049i;
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public final int f20050j;
 
-        /* renamed from: k */
+        /* JADX INFO: renamed from: k */
         public final int f20051k;
 
         public C10748c(long j, boolean z2, boolean z3, boolean z4, List<C10747b> list, long j2, boolean z5, long j3, int i, int i2, int i3) {

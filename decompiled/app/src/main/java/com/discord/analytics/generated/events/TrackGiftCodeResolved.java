@@ -10,8 +10,8 @@ import com.discord.api.science.AnalyticsSchema;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: TrackGiftCodeResolved.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: TrackGiftCodeResolved.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class TrackGiftCodeResolved implements AnalyticsSchema, TrackBase2, TrackStoreSkuMetadata2, TrackGiftCodeMetadata2 {
     private TrackBase trackBase;
     private TrackGiftCodeMetadata trackGiftCodeMetadata;
@@ -20,7 +20,7 @@ public final /* data */ class TrackGiftCodeResolved implements AnalyticsSchema, 
     private final transient String analyticsSchemaTypeName = "gift_code_resolved";
 
     @Override // com.discord.api.science.AnalyticsSchema
-    /* renamed from: d, reason: from getter */
+    /* JADX INFO: renamed from: d, reason: from getter */
     public String getAnalyticsSchemaTypeName() {
         return this.analyticsSchemaTypeName;
     }

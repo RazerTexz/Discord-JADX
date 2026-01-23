@@ -9,28 +9,28 @@ import androidx.viewbinding.ViewBinding;
 import com.discord.views.StatusView;
 import com.facebook.drawee.view.SimpleDraweeView;
 
-/* compiled from: UserAvatarPresenceViewBinding.java */
-/* renamed from: b.a.i.v1, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.a.i.v1, reason: use source file name */
+/* JADX INFO: compiled from: UserAvatarPresenceViewBinding.java */
+/* JADX INFO: loaded from: classes.dex */
 public final class UserAvatarPresenceViewBinding implements ViewBinding {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     @NonNull
     public final RelativeLayout f1309a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     @NonNull
     public final SimpleDraweeView f1310b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     @NonNull
     public final ImageView f1311c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     @NonNull
     public final SimpleDraweeView f1312d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     @NonNull
     public final StatusView f1313e;
 

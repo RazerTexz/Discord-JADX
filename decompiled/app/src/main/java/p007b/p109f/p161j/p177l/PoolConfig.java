@@ -5,43 +5,43 @@ import p007b.p109f.p115d.p122g.MemoryTrimmableRegistry;
 import p007b.p109f.p115d.p122g.NoOpMemoryTrimmableRegistry;
 import p007b.p109f.p161j.p183r.FrescoSystrace;
 
-/* compiled from: PoolConfig.java */
-/* renamed from: b.f.j.l.w, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.f.j.l.w, reason: use source file name */
+/* JADX INFO: compiled from: PoolConfig.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class PoolConfig {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final PoolParams f3958a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final PoolStatsTracker f3959b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final PoolParams f3960c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final MemoryTrimmableRegistry f3961d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final PoolParams f3962e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final PoolStatsTracker f3963f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public final PoolParams f3964g;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public final PoolStatsTracker f3965h;
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public final String f3966i;
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final int f3967j;
 
-    /* compiled from: PoolConfig.java */
-    /* renamed from: b.f.j.l.w$b */
+    /* JADX INFO: renamed from: b.f.j.l.w$b */
+    /* JADX INFO: compiled from: PoolConfig.java */
     public static class b {
         public b(a aVar) {
         }

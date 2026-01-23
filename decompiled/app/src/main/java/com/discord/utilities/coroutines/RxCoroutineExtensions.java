@@ -24,15 +24,15 @@ import p659s.p660a.Dispatchers;
 import p659s.p660a.MainCoroutineDispatcher;
 import p659s.p660a.p661a.MainDispatchers;
 
-/* compiled from: RxCoroutineExtensions.kt */
-/* renamed from: com.discord.utilities.coroutines.RxCoroutineExtensionsKt, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.utilities.coroutines.RxCoroutineExtensionsKt, reason: use source file name */
+/* JADX INFO: compiled from: RxCoroutineExtensions.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class RxCoroutineExtensions {
 
     /* JADX INFO: Add missing generic type declarations: [T] */
-    /* compiled from: RxCoroutineExtensions.kt */
+    /* JADX INFO: renamed from: com.discord.utilities.coroutines.RxCoroutineExtensionsKt$appAwaitSingle$2 */
+    /* JADX INFO: compiled from: RxCoroutineExtensions.kt */
     @DebugMetadata(m10084c = "com.discord.utilities.coroutines.RxCoroutineExtensionsKt$appAwaitSingle$2", m10085f = "RxCoroutineExtensions.kt", m10086l = {35, 40}, m10087m = "invokeSuspend")
-    /* renamed from: com.discord.utilities.coroutines.RxCoroutineExtensionsKt$appAwaitSingle$2 */
     public static final class C67402<T> extends ContinuationImpl6 implements Function2<CoroutineScope, Continuation<? super T>, Object> {
         public final /* synthetic */ Context $context;
         public final /* synthetic */ Boolean $suppressToast;
@@ -41,12 +41,12 @@ public final class RxCoroutineExtensions {
         public Object L$1;
         public int label;
 
-        /* compiled from: RxCoroutineExtensions.kt */
+        /* JADX INFO: renamed from: com.discord.utilities.coroutines.RxCoroutineExtensionsKt$appAwaitSingle$2$1, reason: invalid class name */
+        /* JADX INFO: compiled from: RxCoroutineExtensions.kt */
         @DebugMetadata(m10084c = "com.discord.utilities.coroutines.RxCoroutineExtensionsKt$appAwaitSingle$2$1", m10085f = "RxCoroutineExtensions.kt", m10086l = {}, m10087m = "invokeSuspend")
-        /* renamed from: com.discord.utilities.coroutines.RxCoroutineExtensionsKt$appAwaitSingle$2$1, reason: invalid class name */
         public static final class AnonymousClass1 extends ContinuationImpl6 implements Function2<CoroutineScope, Continuation<? super Unit>, Object> {
 
-            /* renamed from: $e */
+            /* JADX INFO: renamed from: $e */
             public final /* synthetic */ Throwable f18979$e;
             public final /* synthetic */ Ref$ObjectRef $errorTag;
             public final /* synthetic */ Ref$ObjectRef $weakContext;

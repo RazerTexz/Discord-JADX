@@ -5,16 +5,16 @@ import kotlin.coroutines.Continuation;
 import kotlin.coroutines.CoroutineContext;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ContinuationInterceptor.kt */
-/* renamed from: d0.w.d, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.w.d, reason: use source file name */
+/* JADX INFO: compiled from: ContinuationInterceptor.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public interface ContinuationInterceptor extends CoroutineContext.Element {
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public static final /* synthetic */ int f25235e = 0;
 
-    /* compiled from: ContinuationInterceptor.kt */
-    /* renamed from: d0.w.d$a */
+    /* JADX INFO: renamed from: d0.w.d$a */
+    /* JADX INFO: compiled from: ContinuationInterceptor.kt */
     public static final class a {
         public static <E extends CoroutineContext.Element> E get(ContinuationInterceptor continuationInterceptor, CoroutineContext.Key<E> key) {
             Intrinsics3.checkNotNullParameter(key, "key");
@@ -48,11 +48,11 @@ public interface ContinuationInterceptor extends CoroutineContext.Element {
         }
     }
 
-    /* compiled from: ContinuationInterceptor.kt */
-    /* renamed from: d0.w.d$b */
+    /* JADX INFO: renamed from: d0.w.d$b */
+    /* JADX INFO: compiled from: ContinuationInterceptor.kt */
     public static final class b implements CoroutineContext.Key<ContinuationInterceptor> {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public static final /* synthetic */ b f25236a = new b();
     }
 

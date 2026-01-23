@@ -10,11 +10,11 @@ import com.facebook.drawee.view.SimpleDraweeView;
 import p007b.p008a.p025i.MemberVerificationAvatarViewBinding;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: MemberVerificationAvatarView.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: MemberVerificationAvatarView.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class MemberVerificationAvatarView extends FrameLayout {
 
-    /* renamed from: j, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: j, reason: from kotlin metadata */
     public final MemberVerificationAvatarViewBinding binding;
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */

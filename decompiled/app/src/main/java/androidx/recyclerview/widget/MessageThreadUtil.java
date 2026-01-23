@@ -10,10 +10,10 @@ import java.util.concurrent.Executor;
 import java.util.concurrent.atomic.AtomicBoolean;
 import p007b.p100d.p104b.p105a.outline;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class MessageThreadUtil<T> implements ThreadUtil<T> {
 
-    /* renamed from: androidx.recyclerview.widget.MessageThreadUtil$1 */
+    /* JADX INFO: renamed from: androidx.recyclerview.widget.MessageThreadUtil$1 */
     public class C05601 implements ThreadUtil.MainThreadCallback<T> {
         public static final int ADD_TILE = 2;
         public static final int REMOVE_TILE = 3;
@@ -23,7 +23,7 @@ public class MessageThreadUtil<T> implements ThreadUtil<T> {
         private final Handler mMainThreadHandler = new Handler(Looper.getMainLooper());
         private Runnable mMainThreadRunnable = new AnonymousClass1();
 
-        /* renamed from: androidx.recyclerview.widget.MessageThreadUtil$1$1, reason: invalid class name */
+        /* JADX INFO: renamed from: androidx.recyclerview.widget.MessageThreadUtil$1$1, reason: invalid class name */
         public class AnonymousClass1 implements Runnable {
             public AnonymousClass1() {
             }
@@ -74,7 +74,7 @@ public class MessageThreadUtil<T> implements ThreadUtil<T> {
         }
     }
 
-    /* renamed from: androidx.recyclerview.widget.MessageThreadUtil$2 */
+    /* JADX INFO: renamed from: androidx.recyclerview.widget.MessageThreadUtil$2 */
     public class C05612 implements ThreadUtil.BackgroundCallback<T> {
         public static final int LOAD_TILE = 3;
         public static final int RECYCLE_TILE = 4;
@@ -86,7 +86,7 @@ public class MessageThreadUtil<T> implements ThreadUtil<T> {
         public AtomicBoolean mBackgroundRunning = new AtomicBoolean(false);
         private Runnable mBackgroundRunnable = new AnonymousClass1();
 
-        /* renamed from: androidx.recyclerview.widget.MessageThreadUtil$2$1, reason: invalid class name */
+        /* JADX INFO: renamed from: androidx.recyclerview.widget.MessageThreadUtil$2$1, reason: invalid class name */
         public class AnonymousClass1 implements Runnable {
             public AnonymousClass1() {
             }

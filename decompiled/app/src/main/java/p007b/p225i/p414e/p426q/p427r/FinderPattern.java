@@ -2,18 +2,18 @@ package p007b.p225i.p414e.p426q.p427r;
 
 import p007b.p225i.p414e.ResultPoint;
 
-/* compiled from: FinderPattern.java */
-/* renamed from: b.i.e.q.r.c, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.e.q.r.c, reason: use source file name */
+/* JADX INFO: compiled from: FinderPattern.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class FinderPattern {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final int f13407a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final int[] f13408b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final ResultPoint[] f13409c;
 
     public FinderPattern(int i, int[] iArr, int i2, int i3, int i4) {

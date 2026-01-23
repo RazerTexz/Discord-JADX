@@ -9,18 +9,18 @@ import java.util.Locale;
 import java.util.Map;
 import p007b.p100d.p104b.p105a.outline;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public final class MailTo {
     private static final String BCC = "bcc";
     private static final String BODY = "body";
 
-    /* renamed from: CC */
+    /* JADX INFO: renamed from: CC */
     private static final String f132CC = "cc";
     private static final String MAILTO = "mailto";
     public static final String MAILTO_SCHEME = "mailto:";
     private static final String SUBJECT = "subject";
 
-    /* renamed from: TO */
+    /* JADX INFO: renamed from: TO */
     private static final String f133TO = "to";
     private HashMap<String, String> mHeaders = new HashMap<>();
 

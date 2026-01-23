@@ -21,43 +21,43 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p615g0.p616z.Buffer5;
 import p615g0.p616z.ByteString4;
 
-/* compiled from: Buffer.kt */
-/* renamed from: g0.e, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: g0.e, reason: use source file name */
+/* JADX INFO: compiled from: Buffer.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class Buffer3 implements BufferedSource, BufferedSink, Cloneable, ByteChannel {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public Segment2 f26079j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public long f26080k;
 
-    /* compiled from: Buffer.kt */
-    /* renamed from: g0.e$a */
+    /* JADX INFO: renamed from: g0.e$a */
+    /* JADX INFO: compiled from: Buffer.kt */
     public static final class a implements Closeable {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public Buffer3 f26081j;
 
-        /* renamed from: k */
+        /* JADX INFO: renamed from: k */
         public boolean f26082k;
 
-        /* renamed from: l */
+        /* JADX INFO: renamed from: l */
         public Segment2 f26083l;
 
-        /* renamed from: n */
+        /* JADX INFO: renamed from: n */
         public byte[] f26085n;
 
-        /* renamed from: m */
+        /* JADX INFO: renamed from: m */
         public long f26084m = -1;
 
-        /* renamed from: o */
+        /* JADX INFO: renamed from: o */
         public int f26086o = -1;
 
-        /* renamed from: p */
+        /* JADX INFO: renamed from: p */
         public int f26087p = -1;
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final long m10475a(long j) {
             Buffer3 buffer3 = this.f26081j;
             if (buffer3 == null) {
@@ -109,7 +109,7 @@ public final class Buffer3 implements BufferedSource, BufferedSink, Cloneable, B
                     int iMin = (int) Math.min(j5, 8192 - segment2M10438N.f26120c);
                     int i3 = segment2M10438N.f26120c + iMin;
                     segment2M10438N.f26120c = i3;
-                    j5 -= iMin;
+                    j5 -= (long) iMin;
                     if (z2) {
                         this.f26083l = segment2M10438N;
                         this.f26084m = j2;
@@ -125,7 +125,7 @@ public final class Buffer3 implements BufferedSource, BufferedSink, Cloneable, B
             return j2;
         }
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final int m10476b(long j) {
             long j2;
             Segment2 segment2;
@@ -152,7 +152,7 @@ public final class Buffer3 implements BufferedSource, BufferedSink, Cloneable, B
                         if (segment23 == null) {
                             Intrinsics3.throwNpe();
                         }
-                        j2 = j4 - (i - segment23.f26119b);
+                        j2 = j4 - ((long) (i - segment23.f26119b));
                         if (j2 > j) {
                             segment2 = segment22;
                             segment22 = this.f26083l;
@@ -172,10 +172,10 @@ public final class Buffer3 implements BufferedSource, BufferedSink, Cloneable, B
                             }
                             int i2 = segment2.f26120c;
                             int i3 = segment2.f26119b;
-                            if (j < (i2 - i3) + j2) {
+                            if (j < ((long) (i2 - i3)) + j2) {
                                 break;
                             }
-                            j2 += i2 - i3;
+                            j2 += (long) (i2 - i3);
                             segment2 = segment2.f26123f;
                         }
                     } else {
@@ -187,7 +187,7 @@ public final class Buffer3 implements BufferedSource, BufferedSink, Cloneable, B
                             if (segment22 == null) {
                                 Intrinsics3.throwNpe();
                             }
-                            j3 -= segment22.f26120c - segment22.f26119b;
+                            j3 -= (long) (segment22.f26120c - segment22.f26119b);
                         }
                         segment2 = segment22;
                         j2 = j3;
@@ -245,7 +245,7 @@ public final class Buffer3 implements BufferedSource, BufferedSink, Cloneable, B
         }
     }
 
-    /* renamed from: A */
+    /* JADX INFO: renamed from: A */
     public String m10427A(long j, Charset charset) throws EOFException {
         Intrinsics3.checkParameterIsNotNull(charset, "charset");
         if (!(j >= 0 && j <= ((long) Integer.MAX_VALUE))) {
@@ -262,7 +262,7 @@ public final class Buffer3 implements BufferedSource, BufferedSink, Cloneable, B
             Intrinsics3.throwNpe();
         }
         int i = segment2.f26119b;
-        if (i + j > segment2.f26120c) {
+        if (((long) i) + j > segment2.f26120c) {
             return new String(mo10450Z(j), charset);
         }
         int i2 = (int) j;
@@ -278,7 +278,7 @@ public final class Buffer3 implements BufferedSource, BufferedSink, Cloneable, B
     }
 
     @Override // p615g0.BufferedSource
-    /* renamed from: B */
+    /* JADX INFO: renamed from: B */
     public void mo10428B(Buffer3 buffer3, long j) throws EOFException {
         Intrinsics3.checkParameterIsNotNull(buffer3, "sink");
         long j2 = this.f26080k;
@@ -290,26 +290,26 @@ public final class Buffer3 implements BufferedSource, BufferedSink, Cloneable, B
         }
     }
 
-    /* renamed from: D */
+    /* JADX INFO: renamed from: D */
     public String m10429D() {
         return m10427A(this.f26080k, Charsets2.f25136a);
     }
 
     @Override // p615g0.BufferedSource
-    /* renamed from: E */
+    /* JADX INFO: renamed from: E */
     public long mo10430E(ByteString byteString) {
         Intrinsics3.checkParameterIsNotNull(byteString, "targetBytes");
         return m10468t(byteString, 0L);
     }
 
     @Override // okio.BufferedSink
-    /* renamed from: F */
+    /* JADX INFO: renamed from: F */
     public BufferedSink mo10431F() {
         return this;
     }
 
     @Override // p615g0.BufferedSource
-    /* renamed from: G */
+    /* JADX INFO: renamed from: G */
     public String mo10432G(long j) throws EOFException {
         if (!(j >= 0)) {
             throw new IllegalArgumentException(outline.m877t("limit < 0: ", j).toString());
@@ -331,12 +331,12 @@ public final class Buffer3 implements BufferedSource, BufferedSink, Cloneable, B
         throw new EOFException("\\n not found: limit=" + Math.min(this.f26080k, j) + " content=" + buffer3.m10473x().mo10503k() + (char) 8230);
     }
 
-    /* renamed from: H */
+    /* JADX INFO: renamed from: H */
     public String m10433H(long j) throws EOFException {
         return m10427A(j, Charsets2.f25136a);
     }
 
-    /* renamed from: I */
+    /* JADX INFO: renamed from: I */
     public int m10434I() throws EOFException {
         int i;
         int i2;
@@ -394,7 +394,7 @@ public final class Buffer3 implements BufferedSource, BufferedSink, Cloneable, B
         return i;
     }
 
-    /* renamed from: J */
+    /* JADX INFO: renamed from: J */
     public final ByteString m10435J(int i) {
         if (i == 0) {
             return ByteString.f27592j;
@@ -437,20 +437,20 @@ public final class Buffer3 implements BufferedSource, BufferedSink, Cloneable, B
     }
 
     @Override // okio.BufferedSink
-    /* renamed from: K */
+    /* JADX INFO: renamed from: K */
     public /* bridge */ /* synthetic */ BufferedSink mo10436K(String str) {
         m10452b0(str);
         return this;
     }
 
     @Override // p615g0.BufferedSource
-    /* renamed from: M */
+    /* JADX INFO: renamed from: M */
     public String mo10437M(Charset charset) {
         Intrinsics3.checkParameterIsNotNull(charset, "charset");
         return m10427A(this.f26080k, charset);
     }
 
-    /* renamed from: N */
+    /* JADX INFO: renamed from: N */
     public final Segment2 m10438N(int i) {
         if (!(i >= 1 && i <= 8192)) {
             throw new IllegalArgumentException("unexpected capacity".toString());
@@ -478,7 +478,7 @@ public final class Buffer3 implements BufferedSource, BufferedSink, Cloneable, B
         return segment2M10499b2;
     }
 
-    /* renamed from: O */
+    /* JADX INFO: renamed from: O */
     public Buffer3 m10439O(ByteString byteString) {
         Intrinsics3.checkParameterIsNotNull(byteString, "byteString");
         byteString.mo10510s(this, 0, byteString.mo10502j());
@@ -486,7 +486,7 @@ public final class Buffer3 implements BufferedSource, BufferedSink, Cloneable, B
     }
 
     @Override // okio.BufferedSink
-    /* renamed from: P */
+    /* JADX INFO: renamed from: P */
     public long mo10440P(Source2 source2) throws IOException {
         Intrinsics3.checkParameterIsNotNull(source2, "source");
         long j = 0;
@@ -500,19 +500,19 @@ public final class Buffer3 implements BufferedSource, BufferedSink, Cloneable, B
     }
 
     @Override // okio.BufferedSink
-    /* renamed from: Q */
+    /* JADX INFO: renamed from: Q */
     public /* bridge */ /* synthetic */ BufferedSink mo10441Q(long j) {
         return m10446V(j);
     }
 
-    /* renamed from: R */
+    /* JADX INFO: renamed from: R */
     public Buffer3 m10442R(byte[] bArr) {
         Intrinsics3.checkParameterIsNotNull(bArr, "source");
         m10443S(bArr, 0, bArr.length);
         return this;
     }
 
-    /* renamed from: S */
+    /* JADX INFO: renamed from: S */
     public Buffer3 m10443S(byte[] bArr, int i, int i2) {
         Intrinsics3.checkParameterIsNotNull(bArr, "source");
         long j = i2;
@@ -530,7 +530,7 @@ public final class Buffer3 implements BufferedSource, BufferedSink, Cloneable, B
         return this;
     }
 
-    /* renamed from: T */
+    /* JADX INFO: renamed from: T */
     public Buffer3 m10444T(int i) {
         Segment2 segment2M10438N = m10438N(1);
         byte[] bArr = segment2M10438N.f26118a;
@@ -546,7 +546,7 @@ public final class Buffer3 implements BufferedSource, BufferedSink, Cloneable, B
     /* JADX WARN: Removed duplicated region for block: B:67:0x00e6  */
     /* JADX WARN: Removed duplicated region for block: B:71:0x00f5 A[LOOP:0: B:69:0x00f1->B:71:0x00f5, LOOP_END] */
     /* JADX WARN: Removed duplicated region for block: B:73:0x0105  */
-    /* renamed from: U */
+    /* JADX INFO: renamed from: U */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
@@ -587,7 +587,7 @@ public final class Buffer3 implements BufferedSource, BufferedSink, Cloneable, B
                         bArr[i2 - 1] = (byte) 45;
                     }
                     segment2M10438N.f26120c += i;
-                    this.f26080k += i;
+                    this.f26080k += (long) i;
                 }
             } else {
                 if (j < 100000000) {
@@ -602,13 +602,13 @@ public final class Buffer3 implements BufferedSource, BufferedSink, Cloneable, B
                 if (z2) {
                 }
                 segment2M10438N2.f26120c += i;
-                this.f26080k += i;
+                this.f26080k += (long) i;
             }
         }
         return this;
     }
 
-    /* renamed from: V */
+    /* JADX INFO: renamed from: V */
     public Buffer3 m10446V(long j) {
         if (j == 0) {
             m10444T(48);
@@ -624,7 +624,7 @@ public final class Buffer3 implements BufferedSource, BufferedSink, Cloneable, B
             long j10 = ((j9 >>> 4) + j9) & 1085102592571150095L;
             long j11 = j10 + (j10 >>> 8);
             long j12 = j11 + (j11 >>> 16);
-            int i = (int) ((((j12 & 63) + ((j12 >>> 32) & 63)) + 3) / 4);
+            int i = (int) ((((j12 & 63) + ((j12 >>> 32) & 63)) + ((long) 3)) / ((long) 4));
             Segment2 segment2M10438N = m10438N(i);
             byte[] bArr = segment2M10438N.f26118a;
             int i2 = segment2M10438N.f26120c;
@@ -633,12 +633,12 @@ public final class Buffer3 implements BufferedSource, BufferedSink, Cloneable, B
                 j >>>= 4;
             }
             segment2M10438N.f26120c += i;
-            this.f26080k += i;
+            this.f26080k += (long) i;
         }
         return this;
     }
 
-    /* renamed from: W */
+    /* JADX INFO: renamed from: W */
     public Buffer3 m10447W(int i) {
         Segment2 segment2M10438N = m10438N(4);
         byte[] bArr = segment2M10438N.f26118a;
@@ -655,7 +655,7 @@ public final class Buffer3 implements BufferedSource, BufferedSink, Cloneable, B
         return this;
     }
 
-    /* renamed from: X */
+    /* JADX INFO: renamed from: X */
     public Buffer3 m10448X(int i) {
         Segment2 segment2M10438N = m10438N(2);
         byte[] bArr = segment2M10438N.f26118a;
@@ -669,13 +669,13 @@ public final class Buffer3 implements BufferedSource, BufferedSink, Cloneable, B
     }
 
     @Override // p615g0.BufferedSource
-    /* renamed from: Y */
+    /* JADX INFO: renamed from: Y */
     public String mo10449Y() throws EOFException {
         return mo10432G(RecyclerView.FOREVER_NS);
     }
 
     @Override // p615g0.BufferedSource
-    /* renamed from: Z */
+    /* JADX INFO: renamed from: Z */
     public byte[] mo10450Z(long j) throws EOFException {
         if (!(j >= 0 && j <= ((long) Integer.MAX_VALUE))) {
             throw new IllegalArgumentException(outline.m877t("byteCount: ", j).toString());
@@ -688,7 +688,7 @@ public final class Buffer3 implements BufferedSource, BufferedSink, Cloneable, B
         return bArr;
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public Buffer3 m10451b() {
         Buffer3 buffer3 = new Buffer3();
         if (this.f26080k != 0) {
@@ -715,14 +715,14 @@ public final class Buffer3 implements BufferedSource, BufferedSink, Cloneable, B
         return buffer3;
     }
 
-    /* renamed from: b0 */
+    /* JADX INFO: renamed from: b0 */
     public Buffer3 m10452b0(String str) {
         Intrinsics3.checkParameterIsNotNull(str, "string");
         m10453c0(str, 0, str.length());
         return this;
     }
 
-    /* renamed from: c0 */
+    /* JADX INFO: renamed from: c0 */
     public Buffer3 m10453c0(String str, int i, int i2) {
         char cCharAt;
         Intrinsics3.checkParameterIsNotNull(str, "string");
@@ -757,7 +757,7 @@ public final class Buffer3 implements BufferedSource, BufferedSink, Cloneable, B
                 int i5 = segment2M10438N.f26120c;
                 int i6 = (i3 + i) - i5;
                 segment2M10438N.f26120c = i5 + i6;
-                this.f26080k += i6;
+                this.f26080k += (long) i6;
             } else {
                 if (cCharAt2 < 2048) {
                     Segment2 segment2M10438N2 = m10438N(2);
@@ -810,7 +810,7 @@ public final class Buffer3 implements BufferedSource, BufferedSink, Cloneable, B
     public void close() {
     }
 
-    /* renamed from: d0 */
+    /* JADX INFO: renamed from: d0 */
     public Buffer3 m10454d0(int i) {
         String str;
         if (i < 128) {
@@ -865,7 +865,7 @@ public final class Buffer3 implements BufferedSource, BufferedSink, Cloneable, B
     }
 
     @Override // okio.BufferedSink
-    /* renamed from: e0 */
+    /* JADX INFO: renamed from: e0 */
     public /* bridge */ /* synthetic */ BufferedSink mo10455e0(ByteString byteString) {
         m10439O(byteString);
         return this;
@@ -927,7 +927,7 @@ public final class Buffer3 implements BufferedSource, BufferedSink, Cloneable, B
         return true;
     }
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final long m10456f() {
         long j = this.f26080k;
         if (j == 0) {
@@ -941,8 +941,9 @@ public final class Buffer3 implements BufferedSource, BufferedSink, Cloneable, B
         if (segment22 == null) {
             Intrinsics3.throwNpe();
         }
-        if (segment22.f26120c < 8192 && segment22.f26122e) {
-            j -= r3 - segment22.f26119b;
+        int i = segment22.f26120c;
+        if (i < 8192 && segment22.f26122e) {
+            j -= (long) (i - segment22.f26119b);
         }
         return j;
     }
@@ -952,7 +953,7 @@ public final class Buffer3 implements BufferedSource, BufferedSink, Cloneable, B
     }
 
     @Override // p615g0.BufferedSource, okio.BufferedSink
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public Buffer3 mo10457g() {
         return this;
     }
@@ -977,7 +978,7 @@ public final class Buffer3 implements BufferedSource, BufferedSink, Cloneable, B
     }
 
     @Override // p615g0.Source2
-    /* renamed from: i0 */
+    /* JADX INFO: renamed from: i0 */
     public long mo10176i0(Buffer3 buffer3, long j) {
         Intrinsics3.checkParameterIsNotNull(buffer3, "sink");
         if (!(j >= 0)) {
@@ -1000,13 +1001,13 @@ public final class Buffer3 implements BufferedSource, BufferedSink, Cloneable, B
     }
 
     @Override // p615g0.BufferedSource
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public boolean mo10458j(long j) {
         return this.f26080k >= j;
     }
 
     @Override // p615g0.BufferedSource
-    /* renamed from: k0 */
+    /* JADX INFO: renamed from: k0 */
     public long mo10459k0(Sink sink) throws IOException {
         Intrinsics3.checkParameterIsNotNull(sink, "sink");
         long j = this.f26080k;
@@ -1016,7 +1017,7 @@ public final class Buffer3 implements BufferedSource, BufferedSink, Cloneable, B
         return j;
     }
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public final Buffer3 m10460n(Buffer3 buffer3, long j, long j2) {
         Intrinsics3.checkParameterIsNotNull(buffer3, "out");
         C3404f.m4192B(this.f26080k, j, j2);
@@ -1032,7 +1033,7 @@ public final class Buffer3 implements BufferedSource, BufferedSink, Cloneable, B
                 if (j < i - i2) {
                     break;
                 }
-                j -= i - i2;
+                j -= (long) (i - i2);
                 segment2 = segment2.f26123f;
             }
             while (j2 > 0) {
@@ -1058,7 +1059,7 @@ public final class Buffer3 implements BufferedSource, BufferedSink, Cloneable, B
                     }
                     segment23.m10495b(segment2M10496c);
                 }
-                j2 -= segment2M10496c.f26120c - segment2M10496c.f26119b;
+                j2 -= (long) (segment2M10496c.f26120c - segment2M10496c.f26119b);
                 segment2 = segment2.f26123f;
                 j = 0;
             }
@@ -1067,7 +1068,7 @@ public final class Buffer3 implements BufferedSource, BufferedSink, Cloneable, B
     }
 
     @Override // p615g0.BufferedSource
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public ByteString mo10461o(long j) throws EOFException {
         if (!(j >= 0 && j <= ((long) Integer.MAX_VALUE))) {
             throw new IllegalArgumentException(outline.m877t("byteCount: ", j).toString());
@@ -1084,20 +1085,20 @@ public final class Buffer3 implements BufferedSource, BufferedSink, Cloneable, B
     }
 
     @Override // okio.BufferedSink
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public BufferedSink mo10462p() {
         return this;
     }
 
     @Override // p615g0.BufferedSource
-    /* renamed from: p0 */
+    /* JADX INFO: renamed from: p0 */
     public void mo10463p0(long j) throws EOFException {
         if (this.f26080k < j) {
             throw new EOFException();
         }
     }
 
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     public final byte m10464q(long j) {
         C3404f.m4192B(this.f26080k, j, 1L);
         Segment2 segment2 = this.f26079j;
@@ -1112,17 +1113,17 @@ public final class Buffer3 implements BufferedSource, BufferedSink, Cloneable, B
                 if (segment2 == null) {
                     Intrinsics3.throwNpe();
                 }
-                j2 -= segment2.f26120c - segment2.f26119b;
+                j2 -= (long) (segment2.f26120c - segment2.f26119b);
             }
-            return segment2.f26118a[(int) ((segment2.f26119b + j) - j2)];
+            return segment2.f26118a[(int) ((((long) segment2.f26119b) + j) - j2)];
         }
         long j3 = 0;
         while (true) {
             int i = segment2.f26120c;
             int i2 = segment2.f26119b;
-            long j4 = (i - i2) + j3;
+            long j4 = ((long) (i - i2)) + j3;
             if (j4 > j) {
-                return segment2.f26118a[(int) ((i2 + j) - j3)];
+                return segment2.f26118a[(int) ((((long) i2) + j) - j3)];
             }
             segment2 = segment2.f26123f;
             if (segment2 == null) {
@@ -1133,7 +1134,7 @@ public final class Buffer3 implements BufferedSource, BufferedSink, Cloneable, B
     }
 
     @Override // okio.BufferedSink
-    /* renamed from: q0 */
+    /* JADX INFO: renamed from: q0 */
     public /* bridge */ /* synthetic */ BufferedSink mo10465q0(long j) {
         return m10445U(j);
     }
@@ -1149,7 +1150,7 @@ public final class Buffer3 implements BufferedSource, BufferedSink, Cloneable, B
         byteBuffer.put(segment2.f26118a, segment2.f26119b, iMin);
         int i = segment2.f26119b + iMin;
         segment2.f26119b = i;
-        this.f26080k -= iMin;
+        this.f26080k -= (long) iMin;
         if (i == segment2.f26120c) {
             this.f26079j = segment2.m10494a();
             SegmentPool.m10498a(segment2);
@@ -1237,25 +1238,31 @@ public final class Buffer3 implements BufferedSource, BufferedSink, Cloneable, B
         int i = segment2.f26119b;
         int i2 = segment2.f26120c;
         if (i2 - i < 8) {
-            return ((readInt() & 4294967295L) << 32) | (4294967295L & readInt());
+            return ((((long) readInt()) & 4294967295L) << 32) | (4294967295L & ((long) readInt()));
         }
         byte[] bArr = segment2.f26118a;
-        long j = (bArr[i] & 255) << 56;
-        long j2 = j | ((bArr[r6] & 255) << 48);
-        long j3 = j2 | ((bArr[r1] & 255) << 40);
-        int i3 = i + 1 + 1 + 1 + 1;
-        long j4 = ((bArr[r6] & 255) << 32) | j3;
-        long j5 = j4 | ((bArr[i3] & 255) << 24);
-        long j6 = j5 | ((bArr[r8] & 255) << 16);
-        long j7 = j6 | ((bArr[r1] & 255) << 8);
-        int i4 = i3 + 1 + 1 + 1 + 1;
-        long j8 = j7 | (bArr[r8] & 255);
+        int i3 = i + 1;
+        long j = (((long) bArr[i]) & 255) << 56;
+        int i4 = i3 + 1;
+        long j2 = j | ((((long) bArr[i3]) & 255) << 48);
+        int i5 = i4 + 1;
+        long j3 = j2 | ((((long) bArr[i4]) & 255) << 40);
+        int i6 = i5 + 1;
+        long j4 = ((((long) bArr[i5]) & 255) << 32) | j3;
+        int i7 = i6 + 1;
+        long j5 = j4 | ((((long) bArr[i6]) & 255) << 24);
+        int i8 = i7 + 1;
+        long j6 = j5 | ((((long) bArr[i7]) & 255) << 16);
+        int i9 = i8 + 1;
+        long j7 = j6 | ((((long) bArr[i8]) & 255) << 8);
+        int i10 = i9 + 1;
+        long j8 = j7 | (((long) bArr[i9]) & 255);
         this.f26080k -= 8;
-        if (i4 == i2) {
+        if (i10 == i2) {
             this.f26079j = segment2.m10494a();
             SegmentPool.m10498a(segment2);
         } else {
-            segment2.f26119b = i4;
+            segment2.f26119b = i10;
         }
         return j8;
     }
@@ -1288,7 +1295,7 @@ public final class Buffer3 implements BufferedSource, BufferedSink, Cloneable, B
         return (short) i5;
     }
 
-    /* renamed from: s */
+    /* JADX INFO: renamed from: s */
     public long m10466s(byte b2, long j, long j2) {
         Segment2 segment2;
         long j3 = 0;
@@ -1312,17 +1319,17 @@ public final class Buffer3 implements BufferedSource, BufferedSink, Cloneable, B
                     if (segment2 == null) {
                         Intrinsics3.throwNpe();
                     }
-                    j4 -= segment2.f26120c - segment2.f26119b;
+                    j4 -= (long) (segment2.f26120c - segment2.f26119b);
                 }
                 while (j4 < j2) {
                     byte[] bArr = segment2.f26118a;
-                    int iMin = (int) Math.min(segment2.f26120c, (segment2.f26119b + j2) - j4);
-                    for (int i = (int) ((segment2.f26119b + j) - j4); i < iMin; i++) {
+                    int iMin = (int) Math.min(segment2.f26120c, (((long) segment2.f26119b) + j2) - j4);
+                    for (int i = (int) ((((long) segment2.f26119b) + j) - j4); i < iMin; i++) {
                         if (bArr[i] == b2) {
-                            return (i - segment2.f26119b) + j4;
+                            return ((long) (i - segment2.f26119b)) + j4;
                         }
                     }
-                    j4 += segment2.f26120c - segment2.f26119b;
+                    j4 += (long) (segment2.f26120c - segment2.f26119b);
                     segment2 = segment2.f26123f;
                     if (segment2 == null) {
                         Intrinsics3.throwNpe();
@@ -1331,7 +1338,7 @@ public final class Buffer3 implements BufferedSource, BufferedSink, Cloneable, B
                 }
             } else {
                 while (true) {
-                    long j5 = (segment2.f26120c - segment2.f26119b) + j3;
+                    long j5 = ((long) (segment2.f26120c - segment2.f26119b)) + j3;
                     if (j5 > j) {
                         break;
                     }
@@ -1343,13 +1350,13 @@ public final class Buffer3 implements BufferedSource, BufferedSink, Cloneable, B
                 }
                 while (j3 < j2) {
                     byte[] bArr2 = segment2.f26118a;
-                    int iMin2 = (int) Math.min(segment2.f26120c, (segment2.f26119b + j2) - j3);
-                    for (int i2 = (int) ((segment2.f26119b + j) - j3); i2 < iMin2; i2++) {
+                    int iMin2 = (int) Math.min(segment2.f26120c, (((long) segment2.f26119b) + j2) - j3);
+                    for (int i2 = (int) ((((long) segment2.f26119b) + j) - j3); i2 < iMin2; i2++) {
                         if (bArr2[i2] == b2) {
-                            return (i2 - segment2.f26119b) + j3;
+                            return ((long) (i2 - segment2.f26119b)) + j3;
                         }
                     }
-                    j3 += segment2.f26120c - segment2.f26119b;
+                    j3 += (long) (segment2.f26120c - segment2.f26119b);
                     segment2 = segment2.f26123f;
                     if (segment2 == null) {
                         Intrinsics3.throwNpe();
@@ -1366,7 +1373,7 @@ public final class Buffer3 implements BufferedSource, BufferedSink, Cloneable, B
     /* JADX WARN: Removed duplicated region for block: B:38:0x009f  */
     /* JADX WARN: Removed duplicated region for block: B:46:0x00a3 A[EDGE_INSN: B:46:0x00a3->B:40:0x00a3 BREAK  A[LOOP:0: B:5:0x000b->B:48:?], SYNTHETIC] */
     @Override // p615g0.BufferedSource
-    /* renamed from: s0 */
+    /* JADX INFO: renamed from: s0 */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
@@ -1421,7 +1428,7 @@ public final class Buffer3 implements BufferedSource, BufferedSink, Cloneable, B
                     sbM833U2.append(buffer3.m10429D());
                     throw new NumberFormatException(sbM833U2.toString());
                 }
-                j = (j << 4) | i;
+                j = (j << 4) | ((long) i);
                 i3++;
                 i2++;
             }
@@ -1430,7 +1437,7 @@ public final class Buffer3 implements BufferedSource, BufferedSink, Cloneable, B
             if (!z2) {
             }
         } while (this.f26079j != null);
-        this.f26080k -= i2;
+        this.f26080k -= (long) i2;
         return j;
     }
 
@@ -1454,7 +1461,7 @@ public final class Buffer3 implements BufferedSource, BufferedSink, Cloneable, B
         }
     }
 
-    /* renamed from: t */
+    /* JADX INFO: renamed from: t */
     public long m10468t(ByteString byteString, long j) {
         int i;
         int i2;
@@ -1477,14 +1484,14 @@ public final class Buffer3 implements BufferedSource, BufferedSink, Cloneable, B
                 if (segment2 == null) {
                     Intrinsics3.throwNpe();
                 }
-                j4 -= segment2.f26120c - segment2.f26119b;
+                j4 -= (long) (segment2.f26120c - segment2.f26119b);
             }
             if (byteString.mo10502j() == 2) {
                 byte bMo10505m = byteString.mo10505m(0);
                 byte bMo10505m2 = byteString.mo10505m(1);
                 while (j4 < this.f26080k) {
                     byte[] bArr = segment2.f26118a;
-                    i3 = (int) ((segment2.f26119b + j2) - j4);
+                    i3 = (int) ((((long) segment2.f26119b) + j2) - j4);
                     int i5 = segment2.f26120c;
                     while (i3 < i5) {
                         byte b2 = bArr[i3];
@@ -1494,7 +1501,7 @@ public final class Buffer3 implements BufferedSource, BufferedSink, Cloneable, B
                             i3++;
                         }
                     }
-                    j4 += segment2.f26120c - segment2.f26119b;
+                    j4 += (long) (segment2.f26120c - segment2.f26119b);
                     segment2 = segment2.f26123f;
                     if (segment2 == null) {
                         Intrinsics3.throwNpe();
@@ -1506,7 +1513,7 @@ public final class Buffer3 implements BufferedSource, BufferedSink, Cloneable, B
             byte[] bArrMo10504l = byteString.mo10504l();
             while (j4 < this.f26080k) {
                 byte[] bArr2 = segment2.f26118a;
-                i3 = (int) ((segment2.f26119b + j2) - j4);
+                i3 = (int) ((((long) segment2.f26119b) + j2) - j4);
                 int i6 = segment2.f26120c;
                 while (i3 < i6) {
                     byte b3 = bArr2[i3];
@@ -1517,7 +1524,7 @@ public final class Buffer3 implements BufferedSource, BufferedSink, Cloneable, B
                     }
                     i3++;
                 }
-                j4 += segment2.f26120c - segment2.f26119b;
+                j4 += (long) (segment2.f26120c - segment2.f26119b);
                 segment2 = segment2.f26123f;
                 if (segment2 == null) {
                     Intrinsics3.throwNpe();
@@ -1525,10 +1532,10 @@ public final class Buffer3 implements BufferedSource, BufferedSink, Cloneable, B
                 j2 = j4;
             }
             return -1L;
-            return (i3 - i4) + j4;
+            return ((long) (i3 - i4)) + j4;
         }
         while (true) {
-            long j5 = (segment2.f26120c - segment2.f26119b) + j3;
+            long j5 = ((long) (segment2.f26120c - segment2.f26119b)) + j3;
             if (j5 > j2) {
                 break;
             }
@@ -1543,7 +1550,7 @@ public final class Buffer3 implements BufferedSource, BufferedSink, Cloneable, B
             byte bMo10505m4 = byteString.mo10505m(1);
             while (j3 < this.f26080k) {
                 byte[] bArr3 = segment2.f26118a;
-                i = (int) ((segment2.f26119b + j2) - j3);
+                i = (int) ((((long) segment2.f26119b) + j2) - j3);
                 int i7 = segment2.f26120c;
                 while (i < i7) {
                     byte b5 = bArr3[i];
@@ -1553,7 +1560,7 @@ public final class Buffer3 implements BufferedSource, BufferedSink, Cloneable, B
                         i++;
                     }
                 }
-                j3 += segment2.f26120c - segment2.f26119b;
+                j3 += (long) (segment2.f26120c - segment2.f26119b);
                 segment2 = segment2.f26123f;
                 if (segment2 == null) {
                     Intrinsics3.throwNpe();
@@ -1565,7 +1572,7 @@ public final class Buffer3 implements BufferedSource, BufferedSink, Cloneable, B
         byte[] bArrMo10504l2 = byteString.mo10504l();
         while (j3 < this.f26080k) {
             byte[] bArr4 = segment2.f26118a;
-            i = (int) ((segment2.f26119b + j2) - j3);
+            i = (int) ((((long) segment2.f26119b) + j2) - j3);
             int i8 = segment2.f26120c;
             while (i < i8) {
                 byte b6 = bArr4[i];
@@ -1576,7 +1583,7 @@ public final class Buffer3 implements BufferedSource, BufferedSink, Cloneable, B
                 }
                 i++;
             }
-            j3 += segment2.f26120c - segment2.f26119b;
+            j3 += (long) (segment2.f26120c - segment2.f26119b);
             segment2 = segment2.f26123f;
             if (segment2 == null) {
                 Intrinsics3.throwNpe();
@@ -1584,7 +1591,7 @@ public final class Buffer3 implements BufferedSource, BufferedSink, Cloneable, B
             j2 = j3;
         }
         return -1L;
-        return (i - i2) + j3;
+        return ((long) (i - i2)) + j3;
     }
 
     @Override // p615g0.Source2
@@ -1602,7 +1609,7 @@ public final class Buffer3 implements BufferedSource, BufferedSink, Cloneable, B
         throw new IllegalStateException(sbM833U.toString().toString());
     }
 
-    /* renamed from: u */
+    /* JADX INFO: renamed from: u */
     public final a m10469u(a aVar) {
         Intrinsics3.checkParameterIsNotNull(aVar, "unsafeCursor");
         if (!(aVar.f26081j == null)) {
@@ -1614,13 +1621,13 @@ public final class Buffer3 implements BufferedSource, BufferedSink, Cloneable, B
     }
 
     @Override // p615g0.BufferedSource
-    /* renamed from: u0 */
+    /* JADX INFO: renamed from: u0 */
     public InputStream mo10470u0() {
         return new b();
     }
 
     @Override // p615g0.BufferedSource
-    /* renamed from: v0 */
+    /* JADX INFO: renamed from: v0 */
     public int mo10471v0(Options2 options2) throws EOFException {
         Intrinsics3.checkParameterIsNotNull(options2, "options");
         int iM10514b = Buffer5.m10514b(this, options2, false);
@@ -1632,7 +1639,7 @@ public final class Buffer3 implements BufferedSource, BufferedSink, Cloneable, B
     }
 
     @Override // p615g0.BufferedSource
-    /* renamed from: w */
+    /* JADX INFO: renamed from: w */
     public boolean mo10472w() {
         return this.f26080k == 0;
     }
@@ -1661,12 +1668,12 @@ public final class Buffer3 implements BufferedSource, BufferedSink, Cloneable, B
         return this;
     }
 
-    /* renamed from: x */
+    /* JADX INFO: renamed from: x */
     public ByteString m10473x() {
         return mo10461o(this.f26080k);
     }
 
-    /* renamed from: y */
+    /* JADX INFO: renamed from: y */
     public short m10474y() throws EOFException {
         int i = readShort() & 65535;
         return (short) (((i & 255) << 8) | ((65280 & i) >>> 8));
@@ -1678,8 +1685,8 @@ public final class Buffer3 implements BufferedSource, BufferedSink, Cloneable, B
         return this;
     }
 
-    /* compiled from: Buffer.kt */
-    /* renamed from: g0.e$b */
+    /* JADX INFO: renamed from: g0.e$b */
+    /* JADX INFO: compiled from: Buffer.kt */
     public static final class b extends InputStream {
         public b() {
         }
@@ -1742,7 +1749,7 @@ public final class Buffer3 implements BufferedSource, BufferedSink, Cloneable, B
                         segment2 = null;
                     }
                     if (segment2 != null && segment2.f26122e) {
-                        if ((segment2.f26120c + j2) - (segment2.f26121d ? 0 : segment2.f26119b) <= 8192) {
+                        if ((((long) segment2.f26120c) + j2) - ((long) (segment2.f26121d ? 0 : segment2.f26119b)) <= 8192) {
                             Segment2 segment24 = buffer3.f26079j;
                             if (segment24 == null) {
                                 Intrinsics3.throwNpe();
@@ -1861,7 +1868,7 @@ public final class Buffer3 implements BufferedSource, BufferedSink, Cloneable, B
         _ArraysJvm.copyInto(bArr2, bArr, i, i3, i3 + iMin);
         int i4 = segment2.f26119b + iMin;
         segment2.f26119b = i4;
-        this.f26080k -= iMin;
+        this.f26080k -= (long) iMin;
         if (i4 != segment2.f26120c) {
             return iMin;
         }
@@ -1882,7 +1889,7 @@ public final class Buffer3 implements BufferedSource, BufferedSink, Cloneable, B
             i -= iMin;
             segment2M10438N.f26120c += iMin;
         }
-        this.f26080k += iRemaining;
+        this.f26080k += (long) iRemaining;
         return iRemaining;
     }
 }

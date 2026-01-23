@@ -3,18 +3,18 @@ package p007b.p008a.p041q;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: MediaSinkWantsLadder.kt */
-/* renamed from: b.a.q.a, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.a.q.a, reason: use source file name */
+/* JADX INFO: compiled from: MediaSinkWantsLadder.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class MediaSinkWantsLadder {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final int f1599a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final int f1600b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final Integer f1601c;
 
     public MediaSinkWantsLadder(int i, int i2, Integer num) {

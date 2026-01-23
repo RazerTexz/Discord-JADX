@@ -8,15 +8,15 @@ import java.util.Iterator;
 import java.util.Set;
 import java.util.concurrent.CopyOnWriteArraySet;
 
-/* compiled from: BaseLottieAnimator.java */
-/* renamed from: b.c.a.b0.a, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.c.a.b0.a, reason: use source file name */
+/* JADX INFO: compiled from: BaseLottieAnimator.java */
+/* JADX INFO: loaded from: classes.dex */
 public abstract class BaseLottieAnimator extends ValueAnimator {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final Set<ValueAnimator.AnimatorUpdateListener> f2293j = new CopyOnWriteArraySet();
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final Set<Animator.AnimatorListener> f2294k = new CopyOnWriteArraySet();
 
     @Override // android.animation.Animator
@@ -29,7 +29,7 @@ public abstract class BaseLottieAnimator extends ValueAnimator {
         this.f2293j.add(animatorUpdateListener);
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public void m637b(boolean z2) {
         for (Animator.AnimatorListener animatorListener : this.f2294k) {
             if (Build.VERSION.SDK_INT >= 26) {
@@ -40,7 +40,7 @@ public abstract class BaseLottieAnimator extends ValueAnimator {
         }
     }
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public void m638f() {
         Iterator<ValueAnimator.AnimatorUpdateListener> it = this.f2293j.iterator();
         while (it.hasNext()) {

@@ -7,7 +7,7 @@ import org.objectweb.asm.Opcodes;
 import org.objectweb.asm.tree.MethodNode;
 import org.objectweb.asm.tree.TryCatchBlockNode;
 
-/* loaded from: discord-126021.apk:org/objectweb/asm/commons/TryCatchBlockSorter.SCL.lombok */
+/* JADX INFO: loaded from: discord-126021.apk:org/objectweb/asm/commons/TryCatchBlockSorter.SCL.lombok */
 public class TryCatchBlockSorter extends MethodNode {
     public TryCatchBlockSorter(MethodVisitor methodVisitor, int access, String name, String descriptor, String signature, String[] exceptions) {
         this(Opcodes.ASM9, methodVisitor, access, name, descriptor, signature, exceptions);
@@ -32,8 +32,8 @@ public class TryCatchBlockSorter extends MethodNode {
         }
     }
 
-    /* renamed from: org.objectweb.asm.commons.TryCatchBlockSorter$1 */
-    /* loaded from: discord-126021.apk:org/objectweb/asm/commons/TryCatchBlockSorter$1.SCL.lombok */
+    /* JADX INFO: renamed from: org.objectweb.asm.commons.TryCatchBlockSorter$1 */
+    /* JADX INFO: loaded from: discord-126021.apk:org/objectweb/asm/commons/TryCatchBlockSorter$1.SCL.lombok */
     class C129421 implements Comparator<TryCatchBlockNode> {
         C129421() {
         }
@@ -43,7 +43,7 @@ public class TryCatchBlockSorter extends MethodNode {
             return compare2(tryCatchBlockNode, tryCatchBlockNode2);
         }
 
-        /* renamed from: compare, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: compare, reason: avoid collision after fix types in other method */
         public int compare2(TryCatchBlockNode tryCatchBlockNode1, TryCatchBlockNode tryCatchBlockNode2) {
             return blockLength(tryCatchBlockNode1) - blockLength(tryCatchBlockNode2);
         }

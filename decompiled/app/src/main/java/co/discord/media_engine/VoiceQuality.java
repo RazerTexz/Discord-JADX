@@ -5,8 +5,8 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: VoiceQuality.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: VoiceQuality.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class VoiceQuality {
     private Map<String, VoiceQuality3> _inboundStats = new LinkedHashMap();
     private VoiceQuality6 _outboundStats = new VoiceQuality6(0, 0);
@@ -127,7 +127,7 @@ public final class VoiceQuality {
                 numArr[i] = Integer.valueOf(value.getMosBuckets()[i].intValue() + numArr[i].intValue());
             }
         }
-        result.put("mos_mean", mosCount > 0 ? Double.valueOf(mosSum / mosCount) : 0);
+        result.put("mos_mean", mosCount > 0 ? Double.valueOf(mosSum / ((double) mosCount)) : 0);
         result.put("mos_1", numArr[1]);
         result.put("mos_2", numArr[2]);
         result.put("mos_3", numArr[3]);

@@ -8,7 +8,7 @@ import androidx.view.SavedStateRegistry;
 import androidx.view.SavedStateRegistryOwner;
 import androidx.view.ViewModelProvider;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public abstract class AbstractSavedStateViewModelFactory extends ViewModelProvider.KeyedFactory {
     public static final String TAG_SAVED_STATE_HANDLE_CONTROLLER = "androidx.lifecycle.savedstate.vm.tag";
     private final Bundle mDefaultArgs;
@@ -24,7 +24,7 @@ public abstract class AbstractSavedStateViewModelFactory extends ViewModelProvid
     @Override // androidx.lifecycle.ViewModelProvider.KeyedFactory
     @NonNull
     @RestrictTo({RestrictTo.Scope.LIBRARY_GROUP})
-    public final <T extends ViewModel> T create(@NonNull String str, @NonNull Class<T> cls) throws SecurityException {
+    public final <T extends ViewModel> T create(@NonNull String str, @NonNull Class<T> cls) {
         SavedStateHandleController savedStateHandleControllerCreate = SavedStateHandleController.create(this.mSavedStateRegistry, this.mLifecycle, str, this.mDefaultArgs);
         T t = (T) create(str, cls, savedStateHandleControllerCreate.getHandle());
         t.setTagIfAbsent("androidx.lifecycle.savedstate.vm.tag", savedStateHandleControllerCreate);
@@ -35,7 +35,7 @@ public abstract class AbstractSavedStateViewModelFactory extends ViewModelProvid
     public abstract <T extends ViewModel> T create(@NonNull String str, @NonNull Class<T> cls, @NonNull SavedStateHandle savedStateHandle);
 
     @Override // androidx.lifecycle.ViewModelProvider.OnRequeryFactory
-    public void onRequery(@NonNull ViewModel viewModel) throws SecurityException {
+    public void onRequery(@NonNull ViewModel viewModel) {
         SavedStateHandleController.attachHandleIfNeeded(viewModel, this.mSavedStateRegistry, this.mLifecycle);
     }
 

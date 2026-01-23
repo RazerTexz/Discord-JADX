@@ -6,16 +6,16 @@ import kotlin.jvm.internal.DefaultConstructorMarker;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: AuthState.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: AuthState.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class AuthState {
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private final Set<RequiredAction> requiredActions;
     private final String token;
 
-    /* compiled from: AuthState.kt */
+    /* JADX INFO: compiled from: AuthState.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -60,7 +60,7 @@ public final /* data */ class AuthState {
         return authState.copy(str, set);
     }
 
-    /* renamed from: component1, reason: from getter */
+    /* JADX INFO: renamed from: component1, reason: from getter */
     public final String getToken() {
         return this.token;
     }

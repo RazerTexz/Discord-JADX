@@ -2,11 +2,11 @@ package p007b.p225i.p226a.p288f.p313h.p323j;
 
 import android.os.Looper;
 
-/* renamed from: b.i.a.f.h.j.b0 */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.h.j.b0 */
+/* JADX INFO: loaded from: classes3.dex */
 public final class RunnableC3501b0 implements Runnable {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final /* synthetic */ AbstractC3498a0 f9673j;
 
     public RunnableC3501b0(AbstractC3498a0 abstractC3498a0) {

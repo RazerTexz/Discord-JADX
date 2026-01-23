@@ -7,8 +7,8 @@ import com.discord.utilities.search.query.node.QueryNode;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ContentNode.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: ContentNode.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final /* data */ class ContentNode extends QueryNode {
     private final CharSequence content;
 
@@ -24,7 +24,7 @@ public final /* data */ class ContentNode extends QueryNode {
         return contentNode.copy(charSequence);
     }
 
-    /* renamed from: component1, reason: from getter */
+    /* JADX INFO: renamed from: component1, reason: from getter */
     public final CharSequence getContent() {
         return this.content;
     }
@@ -82,7 +82,7 @@ public final /* data */ class ContentNode extends QueryNode {
         return this.content.toString();
     }
 
-    /* renamed from: render, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: render, reason: avoid collision after fix types in other method */
     public void render2(SpannableStringBuilder builder, Context renderContext) {
         Intrinsics3.checkNotNullParameter(builder, "builder");
         Intrinsics3.checkNotNullParameter(renderContext, "renderContext");

@@ -10,9 +10,9 @@ import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: Persister.kt */
-/* renamed from: com.discord.utilities.persister.Persister$Companion$persistAll$1$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.utilities.persister.Persister$Companion$persistAll$1$1, reason: use source file name */
+/* JADX INFO: compiled from: Persister.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class Persister7 extends Lambda implements Function1<Persister<?>, Unit> {
     public static final Persister7 INSTANCE = new Persister7();
 
@@ -26,7 +26,7 @@ public final class Persister7 extends Lambda implements Function1<Persister<?>, 
         return Unit.f27425a;
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final void invoke2(Persister<?> persister) {
         if (persister != null) {
             Clock clockAccess$getClock$cp = Persister.access$getClock$cp();

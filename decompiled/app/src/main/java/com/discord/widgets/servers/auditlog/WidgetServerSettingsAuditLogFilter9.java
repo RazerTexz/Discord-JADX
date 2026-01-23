@@ -7,9 +7,9 @@ import kotlin.jvm.functions.Function2;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetServerSettingsAuditLogFilter.kt */
-/* renamed from: com.discord.widgets.servers.auditlog.WidgetServerSettingsAuditLogFilter$onViewCreated$$inlined$apply$lambda$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.servers.auditlog.WidgetServerSettingsAuditLogFilter$onViewCreated$$inlined$apply$lambda$1, reason: use source file name */
+/* JADX INFO: compiled from: WidgetServerSettingsAuditLogFilter.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetServerSettingsAuditLogFilter9 extends Lambda implements Function2<Long, Long, Unit> {
     public final /* synthetic */ WidgetServerSettingsAuditLogFilter this$0;
 

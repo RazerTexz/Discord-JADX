@@ -3,8 +3,8 @@ package com.discord.widgets.guilds.profile;
 import kotlin.jvm.functions.Function0;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetGuildProfileSheet.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetGuildProfileSheet.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetGuildProfileSheet$fromGuildEventUpsell$2 extends Lambda implements Function0<Boolean> {
     public final /* synthetic */ WidgetGuildProfileSheet this$0;
 
@@ -19,7 +19,7 @@ public final class WidgetGuildProfileSheet$fromGuildEventUpsell$2 extends Lambda
         return Boolean.valueOf(invoke2());
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final boolean invoke2() {
         return WidgetGuildProfileSheet.access$getArgumentsOrDefault$p(this.this$0).getBoolean("EXTRA_FROM_UPSELL", false);
     }

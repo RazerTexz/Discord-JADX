@@ -2,18 +2,18 @@ package p507d0.p513e0.p514p.p515d.p517m0.p548g;
 
 import com.discord.models.domain.ModelAuditLogEntry;
 
-/* compiled from: SpecialNames.java */
-/* renamed from: d0.e0.p.d.m0.g.g, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.g.g, reason: use source file name */
+/* JADX INFO: compiled from: SpecialNames.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class SpecialNames {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final Name f24092a = Name.special("<no name provided>");
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static final Name f24093b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public static final Name f24094c;
 
     static {
@@ -23,7 +23,7 @@ public class SpecialNames {
         Name.special("<anonymous>");
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static /* synthetic */ void m9821a(int i) {
         String str = i != 1 ? "@NotNull method %s.%s must not return null" : "Argument for @NotNull parameter '%s' of %s.%s must not be null";
         Object[] objArr = new Object[i != 1 ? 2 : 3];

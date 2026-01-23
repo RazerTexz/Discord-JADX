@@ -7,9 +7,9 @@ import java.util.List;
 import p507d0.p580t._Collections;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: DirectoryUtils.kt */
-/* renamed from: com.discord.utilities.directories.DirectoryUtilsKt, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.utilities.directories.DirectoryUtilsKt, reason: use source file name */
+/* JADX INFO: compiled from: DirectoryUtils.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class DirectoryUtils2 {
     private static final int MAXIMUM_SIZE = 200;
     public static final int MAX_HOME_CATEGORY_COUNT = 5;

@@ -48,18 +48,18 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 import p658rx.Subscription;
 
-/* compiled from: WidgetChatListAdapterItemAttachment.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetChatListAdapterItemAttachment.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetChatListAdapterItemAttachment extends WidgetChatListItem implements FragmentLifecycleListener {
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private final WidgetChatListAdapterItemAttachmentBinding binding;
     private final int maxAttachmentImageWidth;
     private Subscription subscription;
     private final StoreUserSettings userSettings;
 
-    /* compiled from: WidgetChatListAdapterItemAttachment.kt */
+    /* JADX INFO: compiled from: WidgetChatListAdapterItemAttachment.kt */
     public static final class Companion {
 
         public final /* synthetic */ class WhenMappings {
@@ -103,8 +103,8 @@ public final class WidgetChatListAdapterItemAttachment extends WidgetChatListIte
         }
     }
 
-    /* compiled from: WidgetChatListAdapterItemAttachment.kt */
-    /* renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemAttachment$configureFileData$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemAttachment$configureFileData$1 */
+    /* JADX INFO: compiled from: WidgetChatListAdapterItemAttachment.kt */
     public static final class C80111 extends Lambda implements Function1<View, Unit> {
         public static final C80111 INSTANCE = new C80111();
 
@@ -118,7 +118,7 @@ public final class WidgetChatListAdapterItemAttachment extends WidgetChatListIte
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(View view) {
             Intrinsics3.checkNotNullParameter(view, "it");
             TextView textView = (TextView) view;
@@ -130,8 +130,8 @@ public final class WidgetChatListAdapterItemAttachment extends WidgetChatListIte
         }
     }
 
-    /* compiled from: WidgetChatListAdapterItemAttachment.kt */
-    /* renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemAttachment$configureFileData$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemAttachment$configureFileData$2 */
+    /* JADX INFO: compiled from: WidgetChatListAdapterItemAttachment.kt */
     public static final class ViewOnClickListenerC80122 implements View.OnClickListener {
         public final /* synthetic */ MessageAttachment $data;
 
@@ -154,8 +154,8 @@ public final class WidgetChatListAdapterItemAttachment extends WidgetChatListIte
         }
     }
 
-    /* compiled from: WidgetChatListAdapterItemAttachment.kt */
-    /* renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemAttachment$configureUI$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemAttachment$configureUI$1 */
+    /* JADX INFO: compiled from: WidgetChatListAdapterItemAttachment.kt */
     public static final class C80131 extends Lambda implements Function1<ViewPropertyAnimator, Unit> {
         public static final C80131 INSTANCE = new C80131();
 
@@ -169,7 +169,7 @@ public final class WidgetChatListAdapterItemAttachment extends WidgetChatListIte
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(ViewPropertyAnimator viewPropertyAnimator) {
             Intrinsics3.checkNotNullParameter(viewPropertyAnimator, "$receiver");
             viewPropertyAnimator.scaleX(1.0f);
@@ -177,8 +177,8 @@ public final class WidgetChatListAdapterItemAttachment extends WidgetChatListIte
         }
     }
 
-    /* compiled from: WidgetChatListAdapterItemAttachment.kt */
-    /* renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemAttachment$configureUI$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemAttachment$configureUI$2 */
+    /* JADX INFO: compiled from: WidgetChatListAdapterItemAttachment.kt */
     public static final class C80142 extends Lambda implements Function1<ViewPropertyAnimator, Unit> {
         public static final C80142 INSTANCE = new C80142();
 
@@ -192,7 +192,7 @@ public final class WidgetChatListAdapterItemAttachment extends WidgetChatListIte
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(ViewPropertyAnimator viewPropertyAnimator) {
             Intrinsics3.checkNotNullParameter(viewPropertyAnimator, "$receiver");
             viewPropertyAnimator.scaleX(0.9f);
@@ -200,8 +200,8 @@ public final class WidgetChatListAdapterItemAttachment extends WidgetChatListIte
         }
     }
 
-    /* compiled from: WidgetChatListAdapterItemAttachment.kt */
-    /* renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemAttachment$configureUI$3 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemAttachment$configureUI$3 */
+    /* JADX INFO: compiled from: WidgetChatListAdapterItemAttachment.kt */
     public static final class C80153 extends Lambda implements Function1<View, Unit> {
         public final /* synthetic */ AttachmentEntry $data;
 
@@ -217,7 +217,7 @@ public final class WidgetChatListAdapterItemAttachment extends WidgetChatListIte
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(View view) {
             Intrinsics3.checkNotNullParameter(view, "it");
             WidgetChatListAdapter.EventHandler eventHandler = WidgetChatListAdapterItemAttachment.access$getAdapter$p(WidgetChatListAdapterItemAttachment.this).getEventHandler();
@@ -230,8 +230,8 @@ public final class WidgetChatListAdapterItemAttachment extends WidgetChatListIte
         }
     }
 
-    /* compiled from: WidgetChatListAdapterItemAttachment.kt */
-    /* renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemAttachment$configureUI$4 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemAttachment$configureUI$4 */
+    /* JADX INFO: compiled from: WidgetChatListAdapterItemAttachment.kt */
     public static final class ViewOnClickListenerC80164 implements View.OnClickListener {
         public final /* synthetic */ AttachmentEntry $data;
 
@@ -245,8 +245,8 @@ public final class WidgetChatListAdapterItemAttachment extends WidgetChatListIte
         }
     }
 
-    /* compiled from: WidgetChatListAdapterItemAttachment.kt */
-    /* renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemAttachment$configureUI$5 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemAttachment$configureUI$5 */
+    /* JADX INFO: compiled from: WidgetChatListAdapterItemAttachment.kt */
     public static final class ViewOnClickListenerC80175 implements View.OnClickListener {
         public final /* synthetic */ AttachmentEntry $data;
         public final /* synthetic */ Model $model;
@@ -266,8 +266,8 @@ public final class WidgetChatListAdapterItemAttachment extends WidgetChatListIte
         }
     }
 
-    /* compiled from: WidgetChatListAdapterItemAttachment.kt */
-    /* renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemAttachment$configureUI$6 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemAttachment$configureUI$6 */
+    /* JADX INFO: compiled from: WidgetChatListAdapterItemAttachment.kt */
     public static final class ViewOnClickListenerC80186 implements View.OnClickListener {
         public final /* synthetic */ MessageAttachment $attachment;
 
@@ -281,8 +281,8 @@ public final class WidgetChatListAdapterItemAttachment extends WidgetChatListIte
         }
     }
 
-    /* compiled from: WidgetChatListAdapterItemAttachment.kt */
-    /* renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemAttachment$configureUI$7 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemAttachment$configureUI$7 */
+    /* JADX INFO: compiled from: WidgetChatListAdapterItemAttachment.kt */
     public static final class ViewOnClickListenerC80197 implements View.OnClickListener {
         public final /* synthetic */ MessageAttachment $attachment;
 
@@ -478,7 +478,7 @@ public final class WidgetChatListAdapterItemAttachment extends WidgetChatListIte
         this.binding.f16151h.onResume();
     }
 
-    /* compiled from: WidgetChatListAdapterItemAttachment.kt */
+    /* JADX INFO: compiled from: WidgetChatListAdapterItemAttachment.kt */
     public static final /* data */ class Model {
         private final AttachmentEntry attachmentEntry;
         private final Map<Long, String> channelNames;
@@ -497,6 +497,7 @@ public final class WidgetChatListAdapterItemAttachment extends WidgetChatListIte
             this.isSpoilerHidden = attachmentEntry.getAttachment().m8071h() && !isSpoilerEmbedRevealed(attachmentEntry);
         }
 
+        /* JADX WARN: Multi-variable type inference failed */
         public static /* synthetic */ Model copy$default(Model model, AttachmentEntry attachmentEntry, Map map, Map map2, Map map3, long j, int i, Object obj) {
             if ((i & 1) != 0) {
                 attachmentEntry = model.attachmentEntry;
@@ -525,7 +526,7 @@ public final class WidgetChatListAdapterItemAttachment extends WidgetChatListIte
             return (messageState == null || (visibleSpoilerEmbedMap = messageState.getVisibleSpoilerEmbedMap()) == null || !visibleSpoilerEmbedMap.containsKey(Integer.valueOf(attachmentEntry.getEmbedIndex()))) ? false : true;
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final AttachmentEntry getAttachmentEntry() {
             return this.attachmentEntry;
         }
@@ -542,7 +543,7 @@ public final class WidgetChatListAdapterItemAttachment extends WidgetChatListIte
             return this.roles;
         }
 
-        /* renamed from: component5, reason: from getter */
+        /* JADX INFO: renamed from: component5, reason: from getter */
         public final long getMyId() {
             return this.myId;
         }
@@ -600,7 +601,7 @@ public final class WidgetChatListAdapterItemAttachment extends WidgetChatListIte
             return C0002b.m3a(this.myId) + ((iHashCode3 + (map3 != null ? map3.hashCode() : 0)) * 31);
         }
 
-        /* renamed from: isSpoilerHidden, reason: from getter */
+        /* JADX INFO: renamed from: isSpoilerHidden, reason: from getter */
         public final boolean getIsSpoilerHidden() {
             return this.isSpoilerHidden;
         }

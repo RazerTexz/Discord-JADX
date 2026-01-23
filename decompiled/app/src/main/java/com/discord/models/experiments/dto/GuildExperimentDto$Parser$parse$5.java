@@ -6,14 +6,14 @@ import java.io.IOException;
 import kotlin.jvm.internal.Ref$ObjectRef;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: GuildExperimentDto.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: GuildExperimentDto.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class GuildExperimentDto$Parser$parse$5 implements Runnable {
     public final /* synthetic */ Model.JsonReader $jsonReader;
     public final /* synthetic */ Ref$ObjectRef $overrides;
 
-    /* compiled from: GuildExperimentDto.kt */
-    /* renamed from: com.discord.models.experiments.dto.GuildExperimentDto$Parser$parse$5$1 */
+    /* JADX INFO: renamed from: com.discord.models.experiments.dto.GuildExperimentDto$Parser$parse$5$1 */
+    /* JADX INFO: compiled from: GuildExperimentDto.kt */
     public static final class C55481<T> implements Model.JsonReader.ItemFactory<GuildExperimentOverridesDto> {
         public C55481() {
         }

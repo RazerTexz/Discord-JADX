@@ -4,18 +4,18 @@ import java.io.Serializable;
 import p007b.p195g.p196a.p197a.Nulls;
 import p007b.p195g.p196a.p205c.p210c0.AnnotatedMember;
 
-/* compiled from: PropertyMetadata.java */
-/* renamed from: b.g.a.c.s, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.g.a.c.s, reason: use source file name */
+/* JADX INFO: compiled from: PropertyMetadata.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class PropertyMetadata implements Serializable {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static final PropertyMetadata f5025j = new PropertyMetadata(Boolean.TRUE, null, null, null, null, null, null);
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public static final PropertyMetadata f5026k = new PropertyMetadata(Boolean.FALSE, null, null, null, null, null, null);
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public static final PropertyMetadata f5027l = new PropertyMetadata(null, null, null, null, null, null, null);
     private static final long serialVersionUID = -1;
     public Nulls _contentNulls;
@@ -25,11 +25,11 @@ public class PropertyMetadata implements Serializable {
     public final Boolean _required;
     public Nulls _valueNulls;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public final transient a f5028m;
 
-    /* compiled from: PropertyMetadata.java */
-    /* renamed from: b.g.a.c.s$a */
+    /* JADX INFO: renamed from: b.g.a.c.s$a */
+    /* JADX INFO: compiled from: PropertyMetadata.java */
     public static final class a {
         public a(AnnotatedMember annotatedMember, boolean z2) {
         }
@@ -45,7 +45,7 @@ public class PropertyMetadata implements Serializable {
         this._contentNulls = nulls2;
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public PropertyMetadata m2226a(a aVar) {
         return new PropertyMetadata(this._required, this._description, this._index, this._defaultValue, aVar, this._valueNulls, this._contentNulls);
     }

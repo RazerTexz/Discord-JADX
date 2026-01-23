@@ -8,9 +8,9 @@ import kotlin.jvm.functions.Function4;
 import p507d0.p592z.p594d.FunctionReferenceImpl;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ChoosePlanViewModel.kt */
-/* renamed from: com.discord.widgets.settings.premium.ChoosePlanViewModel$Companion$observeStores$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.settings.premium.ChoosePlanViewModel$Companion$observeStores$1, reason: use source file name */
+/* JADX INFO: compiled from: ChoosePlanViewModel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final /* synthetic */ class ChoosePlanViewModel2 extends FunctionReferenceImpl implements Function4<StoreGooglePlaySkuDetails.State, StoreGooglePlayPurchases.State, StoreGooglePlayPurchases.QueryState, StoreSubscriptions.SubscriptionsState, ChoosePlanViewModel.StoreState> {
     public static final ChoosePlanViewModel2 INSTANCE = new ChoosePlanViewModel2();
 
@@ -23,7 +23,7 @@ public final /* synthetic */ class ChoosePlanViewModel2 extends FunctionReferenc
         return invoke2(state, state2, queryState, subscriptionsState);
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final ChoosePlanViewModel.StoreState invoke2(StoreGooglePlaySkuDetails.State state, StoreGooglePlayPurchases.State state2, StoreGooglePlayPurchases.QueryState queryState, StoreSubscriptions.SubscriptionsState subscriptionsState) {
         Intrinsics3.checkNotNullParameter(state, "p1");
         Intrinsics3.checkNotNullParameter(state2, "p2");

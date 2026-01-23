@@ -1,6 +1,6 @@
 package org.webrtc;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public class DynamicBitrateAdjuster extends BaseBitrateAdjuster {
     private static final double BITRATE_ADJUSTMENT_MAX_SCALE = 4.0d;
     private static final double BITRATE_ADJUSTMENT_SEC = 3.0d;
@@ -11,12 +11,12 @@ public class DynamicBitrateAdjuster extends BaseBitrateAdjuster {
     private double timeSinceLastAdjustmentMs;
 
     private double getBitrateAdjustmentScale() {
-        return Math.pow(BITRATE_ADJUSTMENT_MAX_SCALE, this.bitrateAdjustmentScaleExp / 20.0d);
+        return Math.pow(BITRATE_ADJUSTMENT_MAX_SCALE, ((double) this.bitrateAdjustmentScaleExp) / 20.0d);
     }
 
     @Override // org.webrtc.BaseBitrateAdjuster, org.webrtc.BitrateAdjuster
     public int getAdjustedBitrateBps() {
-        return (int) (this.targetBitrateBps * getBitrateAdjustmentScale());
+        return (int) (((double) this.targetBitrateBps) * getBitrateAdjustmentScale());
     }
 
     @Override // org.webrtc.BaseBitrateAdjuster, org.webrtc.BitrateAdjuster
@@ -26,10 +26,10 @@ public class DynamicBitrateAdjuster extends BaseBitrateAdjuster {
             return;
         }
         int i3 = this.targetBitrateBps;
-        double d = (i - ((i3 / BITS_PER_BYTE) / i2)) + this.deviationBytes;
+        double d = (((double) i) - ((((double) i3) / BITS_PER_BYTE) / ((double) i2))) + this.deviationBytes;
         this.deviationBytes = d;
-        this.timeSinceLastAdjustmentMs = (1000.0d / i2) + this.timeSinceLastAdjustmentMs;
-        double d2 = i3 / BITS_PER_BYTE;
+        this.timeSinceLastAdjustmentMs = (1000.0d / ((double) i2)) + this.timeSinceLastAdjustmentMs;
+        double d2 = ((double) i3) / BITS_PER_BYTE;
         double d3 = BITRATE_ADJUSTMENT_SEC * d2;
         double dMin = Math.min(d, d3);
         this.deviationBytes = dMin;
@@ -59,7 +59,7 @@ public class DynamicBitrateAdjuster extends BaseBitrateAdjuster {
     public void setTargets(int i, int i2) {
         int i3 = this.targetBitrateBps;
         if (i3 > 0 && i < i3) {
-            this.deviationBytes = (this.deviationBytes * i) / i3;
+            this.deviationBytes = (this.deviationBytes * ((double) i)) / ((double) i3);
         }
         super.setTargets(i, i2);
     }

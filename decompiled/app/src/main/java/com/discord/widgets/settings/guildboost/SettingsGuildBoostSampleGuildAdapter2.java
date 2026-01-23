@@ -4,9 +4,9 @@ import android.view.View;
 import com.discord.widgets.settings.guildboost.SettingsGuildBoostSampleGuildAdapter;
 import kotlin.jvm.functions.Function1;
 
-/* compiled from: SettingsGuildBoostSampleGuildAdapter.kt */
-/* renamed from: com.discord.widgets.settings.guildboost.SettingsGuildBoostSampleGuildAdapter$GuildListItem$onConfigure$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.settings.guildboost.SettingsGuildBoostSampleGuildAdapter$GuildListItem$onConfigure$1, reason: use source file name */
+/* JADX INFO: compiled from: SettingsGuildBoostSampleGuildAdapter.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class SettingsGuildBoostSampleGuildAdapter2 implements View.OnClickListener {
     public final /* synthetic */ SettingsGuildBoostSampleGuildAdapter.Item $data;
     public final /* synthetic */ SettingsGuildBoostSampleGuildAdapter.GuildListItem this$0;

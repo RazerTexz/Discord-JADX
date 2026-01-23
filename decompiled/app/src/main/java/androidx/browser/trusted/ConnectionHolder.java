@@ -15,7 +15,7 @@ import p007b.p225i.p355b.p359d.p360a.ListenableFuture8;
 import p668x.p669a.p670a.p671d.ITrustedWebActivityService;
 import p677y.p678a.p680b.C13187a;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class ConnectionHolder implements ServiceConnection {
     private static final int STATE_AWAITING_CONNECTION = 0;
     private static final int STATE_CANCELLED = 3;
@@ -50,7 +50,7 @@ public class ConnectionHolder implements ServiceConnection {
         this(runnable, new WrapperFactory());
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public /* synthetic */ Object m77a(CallbackToFutureAdapter.Completer completer) throws Exception {
         int i = this.mState;
         if (i == 0) {

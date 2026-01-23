@@ -27,15 +27,15 @@ import kotlin.jvm.functions.Function0;
 import kotlin.jvm.functions.Function2;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: WidgetServerSettingsAuditLogFilterAdapter.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetServerSettingsAuditLogFilterAdapter.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetServerSettingsAuditLogFilterAdapter extends MGRecyclerAdapterSimple<MGRecyclerDataPayload> {
     public static final int FILTER_TYPE_ACTION = 1;
     public static final int FILTER_TYPE_USER = 0;
     private Function2<? super Long, ? super Long, Unit> onAuditLogAvatarClicked;
     private Function0<Unit> onFilterSelectedCallback;
 
-    /* compiled from: WidgetServerSettingsAuditLogFilterAdapter.kt */
+    /* JADX INFO: compiled from: WidgetServerSettingsAuditLogFilterAdapter.kt */
     public static final class AuditLogActionFilterItem implements MGRecyclerDataPayload {
         private final int actionId;
         private final boolean isChecked;
@@ -70,13 +70,13 @@ public final class WidgetServerSettingsAuditLogFilterAdapter extends MGRecyclerA
             return this.type;
         }
 
-        /* renamed from: isChecked, reason: from getter */
+        /* JADX INFO: renamed from: isChecked, reason: from getter */
         public final boolean getIsChecked() {
             return this.isChecked;
         }
     }
 
-    /* compiled from: WidgetServerSettingsAuditLogFilterAdapter.kt */
+    /* JADX INFO: compiled from: WidgetServerSettingsAuditLogFilterAdapter.kt */
     public static final class AuditLogFilterActionViewHolder extends MGRecyclerViewHolder<WidgetServerSettingsAuditLogFilterAdapter, MGRecyclerDataPayload> {
         private final WidgetServerSettingsAuditLogFilterActionListitemBinding binding;
 
@@ -117,7 +117,7 @@ public final class WidgetServerSettingsAuditLogFilterAdapter extends MGRecyclerA
             onConfigure2(i, mGRecyclerDataPayload);
         }
 
-        /* renamed from: onConfigure, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: onConfigure, reason: avoid collision after fix types in other method */
         public void onConfigure2(int position, MGRecyclerDataPayload data) {
             Intrinsics3.checkNotNullParameter(data, "data");
             super.onConfigure(position, data);
@@ -136,7 +136,7 @@ public final class WidgetServerSettingsAuditLogFilterAdapter extends MGRecyclerA
         }
     }
 
-    /* compiled from: WidgetServerSettingsAuditLogFilterAdapter.kt */
+    /* JADX INFO: compiled from: WidgetServerSettingsAuditLogFilterAdapter.kt */
     public static final class AuditLogFilterUserViewHolder extends MGRecyclerViewHolder<WidgetServerSettingsAuditLogFilterAdapter, MGRecyclerDataPayload> {
         private final WidgetServerSettingsAuditLogFilterUserListitemBinding binding;
 
@@ -181,7 +181,7 @@ public final class WidgetServerSettingsAuditLogFilterAdapter extends MGRecyclerA
             onConfigure2(i, mGRecyclerDataPayload);
         }
 
-        /* renamed from: onConfigure, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: onConfigure, reason: avoid collision after fix types in other method */
         public void onConfigure2(int position, MGRecyclerDataPayload data) {
             Intrinsics3.checkNotNullParameter(data, "data");
             super.onConfigure(position, data);
@@ -218,7 +218,7 @@ public final class WidgetServerSettingsAuditLogFilterAdapter extends MGRecyclerA
         }
     }
 
-    /* compiled from: WidgetServerSettingsAuditLogFilterAdapter.kt */
+    /* JADX INFO: compiled from: WidgetServerSettingsAuditLogFilterAdapter.kt */
     public static final class AuditLogUserFilterItem implements MGRecyclerDataPayload {
         private final Integer discriminator;
         private final GuildMember guildMember;
@@ -269,7 +269,7 @@ public final class WidgetServerSettingsAuditLogFilterAdapter extends MGRecyclerA
             return this.user;
         }
 
-        /* renamed from: isChecked, reason: from getter */
+        /* JADX INFO: renamed from: isChecked, reason: from getter */
         public final boolean getIsChecked() {
             return this.isChecked;
         }

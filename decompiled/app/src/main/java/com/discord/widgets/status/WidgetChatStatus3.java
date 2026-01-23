@@ -9,9 +9,9 @@ import p637j0.p641k.Func1;
 import p637j0.p642l.p647e.ScalarSynchronousObservable;
 import p658rx.Observable;
 
-/* compiled from: WidgetChatStatus.kt */
-/* renamed from: com.discord.widgets.status.WidgetChatStatus$Model$Companion$get$isUnreadValidObs$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.status.WidgetChatStatus$Model$Companion$get$isUnreadValidObs$1, reason: use source file name */
+/* JADX INFO: compiled from: WidgetChatStatus.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetChatStatus3<T, R> implements Func1<Long, Observable<? extends Boolean>> {
     public static final WidgetChatStatus3 INSTANCE = new WidgetChatStatus3();
 
@@ -20,7 +20,7 @@ public final class WidgetChatStatus3<T, R> implements Func1<Long, Observable<? e
         return call2(l);
     }
 
-    /* renamed from: call, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
     public final Observable<? extends Boolean> call2(Long l) {
         StoreStream.Companion companion = StoreStream.INSTANCE;
         StoreMessageAck messageAck = companion.getMessageAck();

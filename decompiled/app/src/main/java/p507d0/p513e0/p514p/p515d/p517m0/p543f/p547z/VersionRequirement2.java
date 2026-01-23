@@ -8,22 +8,22 @@ import p507d0.p580t.Collections2;
 import p507d0.p580t._Collections;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: VersionRequirement.kt */
-/* renamed from: d0.e0.p.d.m0.f.z.i, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.f.z.i, reason: use source file name */
+/* JADX INFO: compiled from: VersionRequirement.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class VersionRequirement2 {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final a f24073a = new a(null);
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static final VersionRequirement2 f24074b = new VersionRequirement2(Collections2.emptyList());
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final List<C11697v> f24075c;
 
-    /* compiled from: VersionRequirement.kt */
-    /* renamed from: d0.e0.p.d.m0.f.z.i$a */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.f.z.i$a */
+    /* JADX INFO: compiled from: VersionRequirement.kt */
     public static final class a {
         public a(DefaultConstructorMarker defaultConstructorMarker) {
         }

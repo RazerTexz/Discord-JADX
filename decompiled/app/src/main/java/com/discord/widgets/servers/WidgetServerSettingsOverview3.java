@@ -7,9 +7,9 @@ import com.discord.utilities.stateful.StatefulViews;
 import com.discord.widgets.servers.WidgetServerSettingsOverview;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: WidgetServerSettingsOverview.kt */
-/* renamed from: com.discord.widgets.servers.WidgetServerSettingsOverview$AfkBottomSheet$onViewCreated$$inlined$forEach$lambda$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.servers.WidgetServerSettingsOverview$AfkBottomSheet$onViewCreated$$inlined$forEach$lambda$1, reason: use source file name */
+/* JADX INFO: compiled from: WidgetServerSettingsOverview.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetServerSettingsOverview3 implements View.OnClickListener {
     public final /* synthetic */ CharSequence $afkTimeoutString;
     public final /* synthetic */ int $afkTimeoutValue;

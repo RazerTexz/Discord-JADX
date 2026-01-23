@@ -9,15 +9,15 @@ import java.nio.channels.FileChannel;
 import java.nio.channels.FileLock;
 import java.nio.channels.OverlappingFileLockException;
 
-/* compiled from: CrossProcessLock.java */
-/* renamed from: b.i.c.u.b, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.c.u.b, reason: use source file name */
+/* JADX INFO: compiled from: CrossProcessLock.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class CrossProcessLock {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final FileChannel f12921a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final FileLock f12922b;
 
     public CrossProcessLock(FileChannel fileChannel, FileLock fileLock) {
@@ -27,7 +27,7 @@ public class CrossProcessLock {
 
     /* JADX WARN: Removed duplicated region for block: B:34:0x0045 A[EXC_TOP_SPLITTER, SYNTHETIC] */
     /* JADX WARN: Removed duplicated region for block: B:36:0x003e A[EXC_TOP_SPLITTER, SYNTHETIC] */
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
@@ -85,7 +85,7 @@ public class CrossProcessLock {
         }
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public void m6754b() {
         try {
             this.f12922b.release();

@@ -12,7 +12,7 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.LinkedHashMap;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class MotionConstrainedPoint implements Comparable<MotionConstrainedPoint> {
     public static final int CARTESIAN = 2;
     public static final boolean DEBUG = false;
@@ -25,10 +25,10 @@ public class MotionConstrainedPoint implements Comparable<MotionConstrainedPoint
     public int visibility;
     private float width;
 
-    /* renamed from: x */
+    /* JADX INFO: renamed from: x */
     private float f104x;
 
-    /* renamed from: y */
+    /* JADX INFO: renamed from: y */
     private float f105y;
     private float alpha = 1.0f;
     public int mVisibilityMode = 0;
@@ -61,80 +61,80 @@ public class MotionConstrainedPoint implements Comparable<MotionConstrainedPoint
         for (String str : map.keySet()) {
             SplineSet splineSet = map.get(str);
             str.hashCode();
-            char c = 65535;
+            byte b2 = -1;
             switch (str.hashCode()) {
                 case -1249320806:
                     if (str.equals(Key.ROTATION_X)) {
-                        c = 0;
+                        b2 = 0;
                     }
                     break;
                 case -1249320805:
                     if (str.equals(Key.ROTATION_Y)) {
-                        c = 1;
+                        b2 = 1;
                     }
                     break;
                 case -1225497657:
                     if (str.equals(Key.TRANSLATION_X)) {
-                        c = 2;
+                        b2 = 2;
                     }
                     break;
                 case -1225497656:
                     if (str.equals(Key.TRANSLATION_Y)) {
-                        c = 3;
+                        b2 = 3;
                     }
                     break;
                 case -1225497655:
                     if (str.equals(Key.TRANSLATION_Z)) {
-                        c = 4;
+                        b2 = 4;
                     }
                     break;
                 case -1001078227:
                     if (str.equals("progress")) {
-                        c = 5;
+                        b2 = 5;
                     }
                     break;
                 case -908189618:
                     if (str.equals(Key.SCALE_X)) {
-                        c = 6;
+                        b2 = 6;
                     }
                     break;
                 case -908189617:
                     if (str.equals(Key.SCALE_Y)) {
-                        c = 7;
+                        b2 = 7;
                     }
                     break;
                 case -760884510:
                     if (str.equals(Key.PIVOT_X)) {
-                        c = '\b';
+                        b2 = 8;
                     }
                     break;
                 case -760884509:
                     if (str.equals(Key.PIVOT_Y)) {
-                        c = '\t';
+                        b2 = 9;
                     }
                     break;
                 case -40300674:
                     if (str.equals(Key.ROTATION)) {
-                        c = '\n';
+                        b2 = 10;
                     }
                     break;
                 case -4379043:
                     if (str.equals(Key.ELEVATION)) {
-                        c = 11;
+                        b2 = 11;
                     }
                     break;
                 case 37232917:
                     if (str.equals(Key.TRANSITION_PATH_ROTATE)) {
-                        c = '\f';
+                        b2 = 12;
                     }
                     break;
                 case 92909918:
                     if (str.equals(Key.ALPHA)) {
-                        c = '\r';
+                        b2 = 13;
                     }
                     break;
             }
-            switch (c) {
+            switch (b2) {
                 case 0:
                     splineSet.setPoint(i, Float.isNaN(this.rotationX) ? 0.0f : this.rotationX);
                     break;
@@ -159,22 +159,22 @@ public class MotionConstrainedPoint implements Comparable<MotionConstrainedPoint
                 case 7:
                     splineSet.setPoint(i, Float.isNaN(this.scaleY) ? 1.0f : this.scaleY);
                     break;
-                case '\b':
+                case 8:
                     splineSet.setPoint(i, Float.isNaN(this.mPivotX) ? 0.0f : this.mPivotX);
                     break;
-                case '\t':
+                case 9:
                     splineSet.setPoint(i, Float.isNaN(this.mPivotY) ? 0.0f : this.mPivotY);
                     break;
-                case '\n':
+                case 10:
                     splineSet.setPoint(i, Float.isNaN(this.rotation) ? 0.0f : this.rotation);
                     break;
                 case 11:
                     splineSet.setPoint(i, Float.isNaN(this.elevation) ? 0.0f : this.elevation);
                     break;
-                case '\f':
+                case 12:
                     splineSet.setPoint(i, Float.isNaN(this.mPathRotate) ? 0.0f : this.mPathRotate);
                     break;
-                case '\r':
+                case 13:
                     splineSet.setPoint(i, Float.isNaN(this.alpha) ? 1.0f : this.alpha);
                     break;
                 default:
@@ -318,7 +318,7 @@ public class MotionConstrainedPoint implements Comparable<MotionConstrainedPoint
         applyParameters(view);
     }
 
-    /* renamed from: compareTo, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: compareTo, reason: avoid collision after fix types in other method */
     public int compareTo2(MotionConstrainedPoint motionConstrainedPoint) {
         return Float.compare(this.position, motionConstrainedPoint.position);
     }

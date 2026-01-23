@@ -4,8 +4,8 @@ import com.discord.api.user.User;
 import com.discord.models.domain.ModelAuditLogEntry;
 import java.io.Serializable;
 
-/* compiled from: Application.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: Application.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class Application implements Serializable {
     private final User bot;
     private final boolean builtIn;
@@ -14,22 +14,22 @@ public final class Application implements Serializable {
     private final long id;
     private final String name;
 
-    /* renamed from: a, reason: from getter */
+    /* JADX INFO: renamed from: a, reason: from getter */
     public final User getBot() {
         return this.bot;
     }
 
-    /* renamed from: b, reason: from getter */
+    /* JADX INFO: renamed from: b, reason: from getter */
     public final int getCommandCount() {
         return this.commandCount;
     }
 
-    /* renamed from: c, reason: from getter */
+    /* JADX INFO: renamed from: c, reason: from getter */
     public final String getIcon() {
         return this.icon;
     }
 
-    /* renamed from: d, reason: from getter */
+    /* JADX INFO: renamed from: d, reason: from getter */
     public final String getName() {
         return this.name;
     }

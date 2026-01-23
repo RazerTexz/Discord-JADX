@@ -14,8 +14,8 @@ import kotlin.jvm.functions.Function1;
 import p507d0.p579g0.Strings4;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: SmsAuthCodeBroadcastReceiver.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: SmsAuthCodeBroadcastReceiver.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class SmsAuthCodeBroadcastReceiver extends BroadcastReceiver {
     private final Function1<String, Unit> onReceiveCallback;
 

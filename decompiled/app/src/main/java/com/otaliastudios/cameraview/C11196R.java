@@ -2,11 +2,11 @@ package com.otaliastudios.cameraview;
 
 import com.discord.C5419R;
 
-/* renamed from: com.otaliastudios.cameraview.R */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: com.otaliastudios.cameraview.R */
+/* JADX INFO: loaded from: classes3.dex */
 public final class C11196R {
 
-    /* renamed from: com.otaliastudios.cameraview.R$a */
+    /* JADX INFO: renamed from: com.otaliastudios.cameraview.R$a */
     public static final class a {
         public static final int aac = 2131361806;
         public static final int aacEld = 2131361807;
@@ -96,7 +96,7 @@ public final class C11196R {
         public static final int notification_main_column_container = 2131364559;
         public static final int off = 2131364616;
 
-        /* renamed from: on */
+        /* JADX INFO: renamed from: on */
         public static final int f22162on = 2131364620;
         public static final int picture = 2131364748;
         public static final int right = 2131364955;
@@ -132,7 +132,7 @@ public final class C11196R {
         }
     }
 
-    /* renamed from: com.otaliastudios.cameraview.R$b */
+    /* JADX INFO: renamed from: com.otaliastudios.cameraview.R$b */
     public static final class b {
         public static final int cameraview_gl_view = 2131558440;
         public static final int cameraview_layout_focus_marker = 2131558441;
@@ -150,7 +150,7 @@ public final class C11196R {
         }
     }
 
-    /* renamed from: com.otaliastudios.cameraview.R$c */
+    /* JADX INFO: renamed from: com.otaliastudios.cameraview.R$c */
     public static final class c {
         public static final int CameraView_Layout_layout_drawOnPictureSnapshot = 0;
         public static final int CameraView_Layout_layout_drawOnPreview = 1;

@@ -7,55 +7,55 @@ import java.nio.ByteOrder;
 import java.nio.ShortBuffer;
 import java.util.Objects;
 
-/* compiled from: SonicAudioProcessor.java */
-/* renamed from: b.i.a.c.t2.e0, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.t2.e0, reason: use source file name */
+/* JADX INFO: compiled from: SonicAudioProcessor.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class SonicAudioProcessor implements AudioProcessor {
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public int f7727b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public float f7728c = 1.0f;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public float f7729d = 1.0f;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public AudioProcessor.C10685a f7730e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public AudioProcessor.C10685a f7731f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public AudioProcessor.C10685a f7732g;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public AudioProcessor.C10685a f7733h;
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public boolean f7734i;
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     @Nullable
     public Sonic f7735j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public ByteBuffer f7736k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public ShortBuffer f7737l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public ByteBuffer f7738m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public long f7739n;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public long f7740o;
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public boolean f7741p;
 
     public SonicAudioProcessor() {
@@ -72,27 +72,27 @@ public final class SonicAudioProcessor implements AudioProcessor {
     }
 
     @Override // com.google.android.exoplayer2.audio.AudioProcessor
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public boolean mo3472a() {
         return this.f7731f.f19696b != -1 && (Math.abs(this.f7728c - 1.0f) >= 1.0E-4f || Math.abs(this.f7729d - 1.0f) >= 1.0E-4f || this.f7731f.f19696b != this.f7730e.f19696b);
     }
 
     @Override // com.google.android.exoplayer2.audio.AudioProcessor
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public boolean mo3485b() {
         Sonic sonic;
         return this.f7741p && ((sonic = this.f7735j) == null || (sonic.f7714m * sonic.f7703b) * 2 == 0);
     }
 
     @Override // com.google.android.exoplayer2.audio.AudioProcessor
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public void mo3470c(ByteBuffer byteBuffer) {
         if (byteBuffer.hasRemaining()) {
             Sonic sonic = this.f7735j;
             Objects.requireNonNull(sonic);
             ShortBuffer shortBufferAsShortBuffer = byteBuffer.asShortBuffer();
             int iRemaining = byteBuffer.remaining();
-            this.f7739n += iRemaining;
+            this.f7739n += (long) iRemaining;
             int iRemaining2 = shortBufferAsShortBuffer.remaining();
             int i = sonic.f7703b;
             int i2 = iRemaining2 / i;
@@ -106,7 +106,7 @@ public final class SonicAudioProcessor implements AudioProcessor {
     }
 
     @Override // com.google.android.exoplayer2.audio.AudioProcessor
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public AudioProcessor.C10685a mo3486d(AudioProcessor.C10685a c10685a) throws AudioProcessor.UnhandledAudioFormatException {
         if (c10685a.f19698d != 2) {
             throw new AudioProcessor.UnhandledAudioFormatException(c10685a);
@@ -123,7 +123,7 @@ public final class SonicAudioProcessor implements AudioProcessor {
     }
 
     @Override // com.google.android.exoplayer2.audio.AudioProcessor
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public void mo3487e() {
         int i;
         Sonic sonic = this.f7735j;
@@ -207,7 +207,7 @@ public final class SonicAudioProcessor implements AudioProcessor {
             short[] sArr = sonic.f7713l;
             int i3 = sonic.f7703b;
             System.arraycopy(sArr, iMin * i3, sArr, 0, i2 * i3);
-            this.f7740o += i;
+            this.f7740o += (long) i;
             this.f7736k.limit(i);
             this.f7738m = this.f7736k;
         }

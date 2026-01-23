@@ -7,14 +7,14 @@ import androidx.annotation.RestrictTo;
 import androidx.work.impl.utils.SerialExecutor;
 import java.util.concurrent.Executor;
 
+/* JADX INFO: loaded from: classes.dex */
 @RestrictTo({RestrictTo.Scope.LIBRARY_GROUP})
-/* loaded from: classes.dex */
 public class WorkManagerTaskExecutor implements TaskExecutor {
     private final SerialExecutor mBackgroundExecutor;
     private final Handler mMainThreadHandler = new Handler(Looper.getMainLooper());
     private final Executor mMainThreadExecutor = new ExecutorC07871();
 
-    /* renamed from: androidx.work.impl.utils.taskexecutor.WorkManagerTaskExecutor$1 */
+    /* JADX INFO: renamed from: androidx.work.impl.utils.taskexecutor.WorkManagerTaskExecutor$1 */
     public class ExecutorC07871 implements Executor {
         public ExecutorC07871() {
         }

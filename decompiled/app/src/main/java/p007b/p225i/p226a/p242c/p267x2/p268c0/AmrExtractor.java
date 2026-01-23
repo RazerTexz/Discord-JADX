@@ -16,69 +16,69 @@ import p007b.p225i.p226a.p242c.p267x2.PositionHolder;
 import p007b.p225i.p226a.p242c.p267x2.SeekMap;
 import p007b.p225i.p226a.p242c.p267x2.TrackOutput2;
 
-/* compiled from: AmrExtractor.java */
-/* renamed from: b.i.a.c.x2.c0.b, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.x2.c0.b, reason: use source file name */
+/* JADX INFO: compiled from: AmrExtractor.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class AmrExtractor implements Extractor {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final int[] f8068a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static final int[] f8069b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public static final byte[] f8070c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public static final byte[] f8071d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public static final int f8072e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final byte[] f8073f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public final int f8074g;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public boolean f8075h;
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public long f8076i;
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public int f8077j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public int f8078k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public boolean f8079l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public long f8080m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public int f8081n;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public int f8082o;
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public long f8083p;
 
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     public ExtractorOutput f8084q;
 
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     public TrackOutput2 f8085r;
 
-    /* renamed from: s */
+    /* JADX INFO: renamed from: s */
     public SeekMap f8086s;
 
-    /* renamed from: t */
+    /* JADX INFO: renamed from: t */
     public boolean f8087t;
 
     static {
@@ -98,7 +98,7 @@ public final class AmrExtractor implements Extractor {
     }
 
     /* JADX WARN: Removed duplicated region for block: B:24:0x003c  */
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
@@ -133,12 +133,12 @@ public final class AmrExtractor implements Extractor {
     }
 
     @Override // p007b.p225i.p226a.p242c.p267x2.Extractor
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public boolean mo3633b(ExtractorInput extractorInput) throws IOException {
         return m3634c(extractorInput);
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final boolean m3634c(ExtractorInput extractorInput) throws IOException {
         byte[] bArr = f8070c;
         extractorInput.mo3649k();
@@ -164,7 +164,7 @@ public final class AmrExtractor implements Extractor {
     /* JADX WARN: Removed duplicated region for block: B:31:0x0088  */
     /* JADX WARN: Removed duplicated region for block: B:32:0x008a  */
     @Override // p007b.p225i.p226a.p242c.p267x2.Extractor
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
@@ -229,7 +229,7 @@ public final class AmrExtractor implements Extractor {
                 this.f8084q.mo2477a(bVar2);
                 this.f8079l = true;
             } else if (this.f8082o >= 20 || i == -1) {
-                ConstantBitrateSeekMap constantBitrateSeekMap = new ConstantBitrateSeekMap(jMo3642b, this.f8080m, (int) (((i2 * 8) * 1000000) / 20000), i2, (i5 & 2) != 0);
+                ConstantBitrateSeekMap constantBitrateSeekMap = new ConstantBitrateSeekMap(jMo3642b, this.f8080m, (int) ((((long) (i2 * 8)) * 1000000) / 20000), i2, (i5 & 2) != 0);
                 this.f8086s = constantBitrateSeekMap;
                 this.f8084q.mo2477a(constantBitrateSeekMap);
                 this.f8079l = true;
@@ -239,7 +239,7 @@ public final class AmrExtractor implements Extractor {
     }
 
     @Override // p007b.p225i.p226a.p242c.p267x2.Extractor
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public void mo3636f(ExtractorOutput extractorOutput) {
         this.f8084q = extractorOutput;
         this.f8085r = extractorOutput.mo2492p(0, 1);
@@ -247,7 +247,7 @@ public final class AmrExtractor implements Extractor {
     }
 
     @Override // p007b.p225i.p226a.p242c.p267x2.Extractor
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public void mo3637g(long j, long j2) {
         this.f8076i = 0L;
         this.f8077j = 0;

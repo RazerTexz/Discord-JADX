@@ -15,39 +15,39 @@ import p007b.p085c.p086a.p095y.KeyPath;
 import p007b.p085c.p086a.p095y.p097l.RectangleShape;
 import p007b.p085c.p086a.p095y.p098m.BaseLayer2;
 
-/* compiled from: RectangleContent.java */
-/* renamed from: b.c.a.w.b.o, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.c.a.w.b.o, reason: use source file name */
+/* JADX INFO: compiled from: RectangleContent.java */
+/* JADX INFO: loaded from: classes.dex */
 public class RectangleContent implements BaseKeyframeAnimation.b, KeyPathElementContent, PathContent {
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final String f2561c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final boolean f2562d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final LottieDrawable f2563e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final BaseKeyframeAnimation<?, PointF> f2564f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public final BaseKeyframeAnimation<?, PointF> f2565g;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public final BaseKeyframeAnimation<?, Float> f2566h;
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public boolean f2568j;
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final Path f2559a = new Path();
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final RectF f2560b = new RectF();
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public CompoundTrimPathContent f2567i = new CompoundTrimPathContent();
 
     public RectangleContent(LottieDrawable lottieDrawable, BaseLayer2 baseLayer2, RectangleShape rectangleShape) {
@@ -69,14 +69,14 @@ public class RectangleContent implements BaseKeyframeAnimation.b, KeyPathElement
     }
 
     @Override // p007b.p085c.p086a.p091w.p093c.BaseKeyframeAnimation.b
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public void mo709a() {
         this.f2568j = false;
         this.f2563e.invalidateSelf();
     }
 
     @Override // p007b.p085c.p086a.p091w.p092b.Content2
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public void mo710b(List<Content2> list, List<Content2> list2) {
         for (int i = 0; i < list.size(); i++) {
             Content2 content2 = list.get(i);
@@ -91,14 +91,14 @@ public class RectangleContent implements BaseKeyframeAnimation.b, KeyPathElement
     }
 
     @Override // p007b.p085c.p086a.p095y.KeyPathElement
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public void mo711c(KeyPath keyPath, int i, List<KeyPath> list, KeyPath keyPath2) {
         MiscUtils.m656f(keyPath, i, list, keyPath2, this);
     }
 
     /* JADX WARN: Multi-variable type inference failed */
     @Override // p007b.p085c.p086a.p095y.KeyPathElement
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public <T> void mo714g(T t, @Nullable LottieValueCallback<T> lottieValueCallback) {
         if (t == LottieProperty.f2430h) {
             BaseKeyframeAnimation<?, PointF> baseKeyframeAnimation = this.f2565g;

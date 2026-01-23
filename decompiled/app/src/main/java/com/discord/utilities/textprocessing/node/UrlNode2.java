@@ -8,9 +8,9 @@ import kotlin.jvm.functions.Function1;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: UrlNode.kt */
-/* renamed from: com.discord.utilities.textprocessing.node.UrlNode$render$style$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.utilities.textprocessing.node.UrlNode$render$style$1, reason: use source file name */
+/* JADX INFO: compiled from: UrlNode.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class UrlNode2 extends Lambda implements Function1<View, Unit> {
     public final /* synthetic */ UrlNode.RenderContext $renderContext;
     public final /* synthetic */ String $safeUrl;
@@ -28,7 +28,7 @@ public final class UrlNode2 extends Lambda implements Function1<View, Unit> {
         return Unit.f27425a;
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final void invoke2(View view) {
         Intrinsics3.checkNotNullParameter(view, "it");
         this.$renderContext.getOnLongPressUrl().invoke(this.$safeUrl);

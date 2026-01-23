@@ -5,12 +5,12 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.viewbinding.ViewBinding;
 
-/* compiled from: ViewSimpleSpinnerDropdownItemBinding.java */
-/* renamed from: b.a.i.u3, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.a.i.u3, reason: use source file name */
+/* JADX INFO: compiled from: ViewSimpleSpinnerDropdownItemBinding.java */
+/* JADX INFO: loaded from: classes.dex */
 public final class ViewSimpleSpinnerDropdownItemBinding implements ViewBinding {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     @NonNull
     public final TextView f1290a;
 

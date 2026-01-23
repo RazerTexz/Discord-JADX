@@ -23,14 +23,14 @@ import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: TimeUtils.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: TimeUtils.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class TimeUtils {
     private static final String DATE_FORMAT_DISCORD_API = "yyyy-MM-dd'T'HH:mm:ss";
     public static final TimeUtils INSTANCE = new TimeUtils();
     private static final LocaleManager localeManager = new LocaleManager();
 
-    /* compiled from: TimeUtils.kt */
+    /* JADX INFO: compiled from: TimeUtils.kt */
     public static final class UTCFormat {
         public static final UTCFormat INSTANCE = new UTCFormat();
         public static final String LONG = "yyyy-MM-dd'T'HH:mm:ss";
@@ -327,8 +327,8 @@ public final class TimeUtils {
         return str2;
     }
 
-    /* compiled from: TimeUtils.kt */
-    /* renamed from: com.discord.utilities.time.TimeUtils$toFriendlyStringSimple$1 */
+    /* JADX INFO: renamed from: com.discord.utilities.time.TimeUtils$toFriendlyStringSimple$1 */
+    /* JADX INFO: compiled from: TimeUtils.kt */
     public static final class C69781 extends Lambda implements Function1<RenderContext, Unit> {
         public final /* synthetic */ String $argName;
         public final /* synthetic */ String $elapsedTime;
@@ -340,7 +340,7 @@ public final class TimeUtils {
             this.$argName = str2;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(RenderContext renderContext) {
             Intrinsics3.checkNotNullParameter(renderContext, "$receiver");
             Map<String, String> map = renderContext.args;

@@ -12,7 +12,7 @@ import java.lang.annotation.Target;
 import p007b.p100d.p104b.p105a.outline;
 import p007b.p106e.p107a.Log;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class VersionFieldSerializer<T> extends FieldSerializer<T> {
     private boolean compatible;
     private int[] fieldVersion;
@@ -50,7 +50,7 @@ public class VersionFieldSerializer<T> extends FieldSerializer<T> {
     }
 
     @Override // com.esotericsoftware.kryo.serializers.FieldSerializer, com.esotericsoftware.kryo.Serializer
-    public T read(Kryo kryo, Input input, Class<T> cls) throws KryoException {
+    public T read(Kryo kryo, Input input, Class<T> cls) {
         T tCreate = create(kryo, input, cls);
         kryo.reference(tCreate);
         int varInt = input.readVarInt(true);
@@ -78,7 +78,7 @@ public class VersionFieldSerializer<T> extends FieldSerializer<T> {
     }
 
     @Override // com.esotericsoftware.kryo.serializers.FieldSerializer, com.esotericsoftware.kryo.Serializer
-    public void write(Kryo kryo, Output output, T t) throws KryoException {
+    public void write(Kryo kryo, Output output, T t) {
         FieldSerializer.CachedField[] fields = getFields();
         output.writeVarInt(this.typeVersion, true);
         for (FieldSerializer.CachedField cachedField : fields) {

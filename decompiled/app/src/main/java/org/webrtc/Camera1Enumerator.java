@@ -9,7 +9,7 @@ import org.webrtc.CameraEnumerationAndroid;
 import org.webrtc.CameraVideoCapturer;
 import p007b.p100d.p104b.p105a.outline;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public class Camera1Enumerator implements CameraEnumerator {
     private static final String TAG = "Camera1Enumerator";
     private static List<List<CameraEnumerationAndroid.CaptureFormat>> cachedSupportedFormats;

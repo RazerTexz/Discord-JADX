@@ -19,13 +19,13 @@ import p507d0.p580t.Collections2;
 import p507d0.p580t._Collections;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: GuildTemplatesAdapter.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: GuildTemplatesAdapter.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class GuildTemplatesAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
     private final Callbacks callbacks;
     private List<? extends GuildTemplatesAdapter2> items;
 
-    /* compiled from: GuildTemplatesAdapter.kt */
+    /* JADX INFO: compiled from: GuildTemplatesAdapter.kt */
     public interface Callbacks {
         void onTemplateClick(GuildTemplates guildTemplate);
     }

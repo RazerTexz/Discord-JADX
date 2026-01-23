@@ -37,23 +37,23 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 import p507d0.p592z.p594d.Reflection2;
 
-/* compiled from: WidgetIssueDetailsForm.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: WidgetIssueDetailsForm.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class WidgetIssueDetailsForm extends AppFragment {
     public static final String ARG_PENDING_VOICE_FEEDBACK = "ARG_PENDING_VOICE_FEEDBACK";
     public static final String ARG_SHOW_CX_PROMPT = "ARG_SHOW_CX_PROMPT";
 
-    /* renamed from: binding$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
 
-    /* renamed from: viewModel$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: viewModel$delegate, reason: from kotlin metadata */
     private final Lazy viewModel;
     public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetIssueDetailsForm.class, "binding", "getBinding()Lcom/discord/databinding/WidgetIssueDetailsFormBinding;", 0)};
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
 
-    /* compiled from: WidgetIssueDetailsForm.kt */
+    /* JADX INFO: compiled from: WidgetIssueDetailsForm.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -72,8 +72,8 @@ public final class WidgetIssueDetailsForm extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetIssueDetailsForm.kt */
-    /* renamed from: com.discord.widgets.voice.feedback.WidgetIssueDetailsForm$onViewBound$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.voice.feedback.WidgetIssueDetailsForm$onViewBound$1 */
+    /* JADX INFO: compiled from: WidgetIssueDetailsForm.kt */
     public static final class ViewOnClickListenerC104501 implements View.OnClickListener {
         public ViewOnClickListenerC104501() {
         }
@@ -86,8 +86,8 @@ public final class WidgetIssueDetailsForm extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetIssueDetailsForm.kt */
-    /* renamed from: com.discord.widgets.voice.feedback.WidgetIssueDetailsForm$onViewBound$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.voice.feedback.WidgetIssueDetailsForm$onViewBound$2 */
+    /* JADX INFO: compiled from: WidgetIssueDetailsForm.kt */
     public static final class C104512 extends Lambda implements Function1<Editable, Unit> {
         public C104512() {
             super(1);
@@ -99,7 +99,7 @@ public final class WidgetIssueDetailsForm extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Editable editable) {
             Intrinsics3.checkNotNullParameter(editable, "editable");
             MaterialButton materialButton = WidgetIssueDetailsForm.access$getBinding$p(WidgetIssueDetailsForm.this).f17208d;
@@ -108,8 +108,8 @@ public final class WidgetIssueDetailsForm extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetIssueDetailsForm.kt */
-    /* renamed from: com.discord.widgets.voice.feedback.WidgetIssueDetailsForm$onViewBoundOrOnResume$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.voice.feedback.WidgetIssueDetailsForm$onViewBoundOrOnResume$1 */
+    /* JADX INFO: compiled from: WidgetIssueDetailsForm.kt */
     public static final class C104521 extends Lambda implements Function1<IssueDetailsFormViewModel.Event, Unit> {
         public C104521() {
             super(1);
@@ -121,7 +121,7 @@ public final class WidgetIssueDetailsForm extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(IssueDetailsFormViewModel.Event event) {
             Intrinsics3.checkNotNullParameter(event, "event");
             WidgetIssueDetailsForm.access$handleEvent(WidgetIssueDetailsForm.this, event);

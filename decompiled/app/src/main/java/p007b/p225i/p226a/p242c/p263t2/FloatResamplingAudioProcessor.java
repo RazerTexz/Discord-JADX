@@ -4,17 +4,17 @@ import com.google.android.exoplayer2.audio.AudioProcessor;
 import java.nio.ByteBuffer;
 import p007b.p225i.p226a.p242c.p259f3.Util2;
 
-/* compiled from: FloatResamplingAudioProcessor.java */
-/* renamed from: b.i.a.c.t2.y, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.t2.y, reason: use source file name */
+/* JADX INFO: compiled from: FloatResamplingAudioProcessor.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class FloatResamplingAudioProcessor extends BaseAudioProcessor {
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public static final int f7849i = Float.floatToIntBits(Float.NaN);
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public static void m3512k(int i, ByteBuffer byteBuffer) {
-        int iFloatToIntBits = Float.floatToIntBits((float) (i * 4.656612875245797E-10d));
+        int iFloatToIntBits = Float.floatToIntBits((float) (((double) i) * 4.656612875245797E-10d));
         if (iFloatToIntBits == f7849i) {
             iFloatToIntBits = Float.floatToIntBits(0.0f);
         }
@@ -22,7 +22,7 @@ public final class FloatResamplingAudioProcessor extends BaseAudioProcessor {
     }
 
     @Override // com.google.android.exoplayer2.audio.AudioProcessor
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public void mo3470c(ByteBuffer byteBuffer) {
         ByteBuffer byteBufferM3511j;
         int iPosition = byteBuffer.position();
@@ -50,7 +50,7 @@ public final class FloatResamplingAudioProcessor extends BaseAudioProcessor {
     }
 
     @Override // p007b.p225i.p226a.p242c.p263t2.BaseAudioProcessor
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public AudioProcessor.C10685a mo3471f(AudioProcessor.C10685a c10685a) throws AudioProcessor.UnhandledAudioFormatException {
         int i = c10685a.f19698d;
         if (Util2.m3017y(i)) {

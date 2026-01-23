@@ -5,9 +5,9 @@ import p007b.p100d.p104b.p105a.outline;
 import p007b.p195g.p196a.p205c.JavaType;
 import p007b.p195g.p196a.p205c.p219i0.ClassUtil;
 
-/* compiled from: AnnotatedParameter.java */
-/* renamed from: b.g.a.c.c0.m, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.g.a.c.c0.m, reason: use source file name */
+/* JADX INFO: compiled from: AnnotatedParameter.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class AnnotatedParameter extends AnnotatedMember {
     private static final long serialVersionUID = 1;
     public final int _index;
@@ -22,19 +22,19 @@ public final class AnnotatedParameter extends AnnotatedMember {
     }
 
     @Override // p007b.p195g.p196a.p205c.p210c0.Annotated
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public String mo1819c() {
         return "";
     }
 
     @Override // p007b.p195g.p196a.p205c.p210c0.Annotated
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public Class<?> mo1820d() {
         return this._type._class;
     }
 
     @Override // p007b.p195g.p196a.p205c.p210c0.Annotated
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public JavaType mo1821e() {
         return this._type;
     }
@@ -52,7 +52,7 @@ public final class AnnotatedParameter extends AnnotatedMember {
     }
 
     @Override // p007b.p195g.p196a.p205c.p210c0.AnnotatedMember
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public Class<?> mo1887g() {
         return this._owner.mo1887g();
     }
@@ -63,13 +63,13 @@ public final class AnnotatedParameter extends AnnotatedMember {
     }
 
     @Override // p007b.p195g.p196a.p205c.p210c0.AnnotatedMember
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public Member mo1888i() {
         return this._owner.mo1888i();
     }
 
     @Override // p007b.p195g.p196a.p205c.p210c0.AnnotatedMember
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public Object mo1889j(Object obj) throws UnsupportedOperationException {
         StringBuilder sbM833U = outline.m833U("Cannot call getValue() on constructor parameter of ");
         sbM833U.append(mo1887g().getName());
@@ -77,7 +77,7 @@ public final class AnnotatedParameter extends AnnotatedMember {
     }
 
     @Override // p007b.p195g.p196a.p205c.p210c0.AnnotatedMember
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public Annotated mo1890l(AnnotationMap annotationMap) {
         if (annotationMap == this.f4717k) {
             return this;

@@ -2,7 +2,7 @@ package com.facebook.imagepipeline.decoder;
 
 import p007b.p109f.p161j.p175j.EncodedImage2;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class DecodeException extends RuntimeException {
     private final EncodedImage2 mEncodedImage;
 
@@ -11,7 +11,7 @@ public class DecodeException extends RuntimeException {
         this.mEncodedImage = encodedImage2;
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public EncodedImage2 m8696a() {
         return this.mEncodedImage;
     }

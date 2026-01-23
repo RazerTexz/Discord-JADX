@@ -6,8 +6,8 @@ import kotlin.jvm.functions.Function1;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetSettingsGiftingAdapter.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetSettingsGiftingAdapter.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetSettingsGiftingAdapter$onRevokeClickListener$1 extends Lambda implements Function1<ModelGift, Unit> {
     public static final WidgetSettingsGiftingAdapter$onRevokeClickListener$1 INSTANCE = new WidgetSettingsGiftingAdapter$onRevokeClickListener$1();
 
@@ -21,7 +21,7 @@ public final class WidgetSettingsGiftingAdapter$onRevokeClickListener$1 extends 
         return Unit.f27425a;
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final void invoke2(ModelGift modelGift) {
         Intrinsics3.checkNotNullParameter(modelGift, "<anonymous parameter 0>");
     }

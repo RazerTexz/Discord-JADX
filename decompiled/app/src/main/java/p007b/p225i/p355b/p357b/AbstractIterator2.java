@@ -5,15 +5,15 @@ import java.util.NoSuchElementException;
 import org.checkerframework.checker.nullness.compatqual.NullableDecl;
 import p007b.p085c.p086a.p095y.C1563b;
 
-/* compiled from: AbstractIterator.java */
-/* renamed from: b.i.b.b.b, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.b.b.b, reason: use source file name */
+/* JADX INFO: compiled from: AbstractIterator.java */
+/* JADX INFO: loaded from: classes3.dex */
 public abstract class AbstractIterator2<T> extends UnmodifiableIterator<T> {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public int f11970j = 2;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     @NullableDecl
     public T f11971k;
 

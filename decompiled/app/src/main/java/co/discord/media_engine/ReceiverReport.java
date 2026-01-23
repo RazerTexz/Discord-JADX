@@ -5,8 +5,8 @@ import p001a0.p002a.p003a.C0002b;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: Statistics.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: Statistics.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class ReceiverReport {
     private final long bitrate;
     private final int fractionLost;
@@ -32,17 +32,17 @@ public final /* data */ class ReceiverReport {
         return receiverReport.copy(str, j, i);
     }
 
-    /* renamed from: component1, reason: from getter */
+    /* JADX INFO: renamed from: component1, reason: from getter */
     public final String getId() {
         return this.id;
     }
 
-    /* renamed from: component2, reason: from getter */
+    /* JADX INFO: renamed from: component2, reason: from getter */
     public final long getBitrate() {
         return this.bitrate;
     }
 
-    /* renamed from: component3, reason: from getter */
+    /* JADX INFO: renamed from: component3, reason: from getter */
     public final int getFractionLost() {
         return this.fractionLost;
     }

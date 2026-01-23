@@ -19,38 +19,38 @@ import p007b.p008a.p036n.p038h.OverlayTrashWrap;
 import p507d0.p580t.MutableCollections;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: OverlayManager.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: OverlayManager.kt */
+/* JADX INFO: loaded from: classes.dex */
 public class OverlayManager implements Closeable {
 
-    /* renamed from: j, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: j, reason: from kotlin metadata */
     public final ArrayList<OverlayBubbleWrap> overlaysOnDisplay;
 
-    /* renamed from: k, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: k, reason: from kotlin metadata */
     public final List<OverlayBubbleWrap> activeBubbles;
 
-    /* renamed from: l, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: l, reason: from kotlin metadata */
     public Function1<? super View, Unit> onOverlayBubbleAdded;
 
-    /* renamed from: m, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: m, reason: from kotlin metadata */
     public Function1<? super View, Unit> onOverlayBubbleRemoved;
 
-    /* renamed from: n, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: n, reason: from kotlin metadata */
     public OverlayTrashWrap trashWrap;
 
-    /* renamed from: o, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: o, reason: from kotlin metadata */
     public TrashEventListener trashEventListener;
 
-    /* renamed from: p, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: p, reason: from kotlin metadata */
     public View.OnTouchListener bubbleOnTouchListener;
 
-    /* renamed from: q, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: q, reason: from kotlin metadata */
     public OverlayBubbleWrap bubbleInTrashZone;
 
-    /* renamed from: r, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: r, reason: from kotlin metadata */
     public final Context context;
 
-    /* renamed from: s, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: s, reason: from kotlin metadata */
     public final WindowManager windowManager;
 
     public OverlayManager(Context context, WindowManager windowManager, int i) {
@@ -74,7 +74,7 @@ public class OverlayManager implements Closeable {
         this.bubbleOnTouchListener = new OverlayManager2(this);
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final void m8430a(OverlayBubbleWrap bubble) {
         Intrinsics3.checkNotNullParameter(bubble, "bubble");
         this.windowManager.addView(bubble, bubble.getWindowLayoutParams());
@@ -82,7 +82,7 @@ public class OverlayManager implements Closeable {
         this.onOverlayBubbleAdded.invoke(bubble);
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final void m8431b(OverlayBubbleWrap bubble) {
         Intrinsics3.checkNotNullParameter(bubble, "bubble");
         if (bubble.getCenterX() > DisplayUtils.getScreenSize(this.context).centerX()) {
@@ -92,7 +92,7 @@ public class OverlayManager implements Closeable {
         }
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final void m8432c(OverlayBubbleWrap bubble) {
         if (Intrinsics3.areEqual(this.bubbleInTrashZone, bubble)) {
             return;
@@ -118,7 +118,7 @@ public class OverlayManager implements Closeable {
         this.trashWrap = null;
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final void m8433d(OverlayBubbleWrap bubble) {
         Intrinsics3.checkNotNullParameter(bubble, "bubble");
         if (this.overlaysOnDisplay.remove(bubble)) {

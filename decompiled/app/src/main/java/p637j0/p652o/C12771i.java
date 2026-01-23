@@ -4,9 +4,9 @@ import java.util.Objects;
 import p637j0.p641k.Func1;
 import p658rx.functions.Action0;
 
-/* compiled from: RxJavaHooks.java */
-/* renamed from: j0.o.i */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: j0.o.i */
+/* JADX INFO: compiled from: RxJavaHooks.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class C12771i implements Func1<Action0, Action0> {
     @Override // p637j0.p641k.Func1
     public Action0 call(Action0 action0) {

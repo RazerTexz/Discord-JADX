@@ -14,9 +14,9 @@ import java.util.Set;
 import kotlin.jvm.functions.Function0;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetChannelListModel.kt */
-/* renamed from: com.discord.widgets.channels.list.WidgetChannelListModel$Companion$guildListBuilder$$inlined$forEach$lambda$3 */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.channels.list.WidgetChannelListModel$Companion$guildListBuilder$$inlined$forEach$lambda$3 */
+/* JADX INFO: compiled from: WidgetChannelListModel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class C7415x4d8eedc3 extends Lambda implements Function0<ChannelListItemTextChannel> {
     public final /* synthetic */ WidgetChannelListModel$Companion$guildListBuilder$4 $areAllChildThreadsRead$4$inlined;
     public final /* synthetic */ WidgetChannelListModel$Companion$guildListBuilder$5 $areAnyChildThreadsSelected$5$inlined;

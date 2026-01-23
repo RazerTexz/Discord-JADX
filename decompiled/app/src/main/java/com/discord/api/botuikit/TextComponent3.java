@@ -8,12 +8,12 @@ import kotlin.NoWhenBranchMatchedException;
 import p007b.p085c.p086a.p087a0.AnimatableValueParser;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: TextComponent.kt */
-/* renamed from: com.discord.api.botuikit.TextStyleTypeAdapter, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: com.discord.api.botuikit.TextStyleTypeAdapter, reason: use source file name */
+/* JADX INFO: compiled from: TextComponent.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class TextComponent3 extends TypeAdapter<TextComponent2> {
 
-    /* renamed from: com.discord.api.botuikit.TextStyleTypeAdapter$WhenMappings */
+    /* JADX INFO: renamed from: com.discord.api.botuikit.TextStyleTypeAdapter$WhenMappings */
     public final /* synthetic */ class WhenMappings {
         public static final /* synthetic */ int[] $EnumSwitchMapping$0;
 

@@ -14,42 +14,42 @@ import p007b.p109f.p132g.p145h.SettableDraweeHierarchy;
 import p007b.p109f.p148h.p158b.p159a.ForwardingControllerListener2;
 import p007b.p109f.p161j.p176k.ForwardingRequestListener;
 
-/* compiled from: ImagePerfMonitor.java */
-/* renamed from: b.f.g.a.a.h.f, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.f.g.a.a.h.f, reason: use source file name */
+/* JADX INFO: compiled from: ImagePerfMonitor.java */
+/* JADX INFO: loaded from: classes.dex */
 public class ImagePerfMonitor implements ImagePerfNotifier {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final PipelineDraweeController f3204a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final MonotonicClock f3205b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final ImagePerfState f3206c = new ImagePerfState();
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final Supplier<Boolean> f3207d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public ImageOriginRequestListener f3208e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public ImageOriginListener f3209f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public ImagePerfRequestListener f3210g;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public ImagePerfControllerListener2 f3211h;
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public ForwardingRequestListener f3212i;
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public List<ImagePerfDataListener> f3213j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public boolean f3214k;
 
     public ImagePerfMonitor(MonotonicClock monotonicClock, PipelineDraweeController pipelineDraweeController, Supplier<Boolean> supplier) {
@@ -58,7 +58,7 @@ public class ImagePerfMonitor implements ImagePerfNotifier {
         this.f3207d = supplier;
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public void m1065a(ImagePerfState imagePerfState, int i) {
         List<ImagePerfDataListener> list;
         if (!this.f3214k || (list = this.f3213j) == null || list.isEmpty()) {
@@ -71,7 +71,7 @@ public class ImagePerfMonitor implements ImagePerfNotifier {
         }
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public void m1066b(ImagePerfState imagePerfState, int i) {
         List<ImagePerfDataListener> list;
         SettableDraweeHierarchy settableDraweeHierarchy;
@@ -92,7 +92,7 @@ public class ImagePerfMonitor implements ImagePerfNotifier {
     }
 
     /* JADX WARN: Multi-variable type inference failed */
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public void m1067c(boolean z2) {
         this.f3214k = z2;
         if (!z2) {

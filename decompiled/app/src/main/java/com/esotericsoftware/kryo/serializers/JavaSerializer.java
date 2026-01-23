@@ -13,7 +13,7 @@ import java.io.ObjectOutputStream;
 import java.io.ObjectStreamClass;
 import p007b.p100d.p104b.p105a.outline;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class JavaSerializer extends Serializer {
 
     public static class ObjectInputStreamWithKryoClassLoader extends ObjectInputStream {

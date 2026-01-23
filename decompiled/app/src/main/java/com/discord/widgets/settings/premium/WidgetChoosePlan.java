@@ -57,30 +57,31 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 import p507d0.p592z.p594d.Reflection2;
 
-/* compiled from: WidgetChoosePlan.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetChoosePlan.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetChoosePlan extends AppFragment {
     public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetChoosePlan.class, "binding", "getBinding()Lcom/discord/databinding/WidgetChoosePlanBinding;", 0)};
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     public static final String RESULT_EXTRA_LOCATION_TRAIT = "result_extra_location_trait";
     public static final String RESULT_EXTRA_OLD_SKU_NAME = "result_extra_current_sku_name";
     public static final String RESULT_VIEW_TYPE = "result_view_type";
     private WidgetChoosePlanAdapter adapter;
 
-    /* renamed from: binding$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
     private LinearLayoutManager planLayoutManager;
 
-    /* renamed from: viewModel$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: viewModel$delegate, reason: from kotlin metadata */
     private final Lazy viewModel;
 
-    /* compiled from: WidgetChoosePlan.kt */
+    /* JADX INFO: compiled from: WidgetChoosePlan.kt */
     public static final class Companion {
         private Companion() {
         }
 
+        /* JADX WARN: Multi-variable type inference failed */
         public static /* synthetic */ void launch$default(Companion companion, Context context, ActivityResultLauncher activityResultLauncher, ViewType viewType, String str, Traits.Location location, Traits.Subscription subscription, int i, Object obj) {
             companion.launch(context, (i & 2) != 0 ? null : activityResultLauncher, viewType, (i & 8) != 0 ? null : str, location, (i & 32) != 0 ? null : subscription);
         }
@@ -117,7 +118,7 @@ public final class WidgetChoosePlan extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetChoosePlan.kt */
+    /* JADX INFO: compiled from: WidgetChoosePlan.kt */
     public enum ViewType {
         BUY_PREMIUM_TIER_2,
         BUY_PREMIUM_TIER_1,
@@ -140,8 +141,8 @@ public final class WidgetChoosePlan extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetChoosePlan.kt */
-    /* renamed from: com.discord.widgets.settings.premium.WidgetChoosePlan$onViewBoundOrOnResume$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.premium.WidgetChoosePlan$onViewBoundOrOnResume$1 */
+    /* JADX INFO: compiled from: WidgetChoosePlan.kt */
     public static final /* synthetic */ class C98911 extends FunctionReferenceImpl implements Function1<ChoosePlanViewModel.Event, Unit> {
         public C98911(WidgetChoosePlan widgetChoosePlan) {
             super(1, widgetChoosePlan, WidgetChoosePlan.class, "handleEvent", "handleEvent(Lcom/discord/widgets/settings/premium/ChoosePlanViewModel$Event;)V", 0);
@@ -153,15 +154,15 @@ public final class WidgetChoosePlan extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(ChoosePlanViewModel.Event event) {
             Intrinsics3.checkNotNullParameter(event, "p1");
             WidgetChoosePlan.access$handleEvent((WidgetChoosePlan) this.receiver, event);
         }
     }
 
-    /* compiled from: WidgetChoosePlan.kt */
-    /* renamed from: com.discord.widgets.settings.premium.WidgetChoosePlan$onViewBoundOrOnResume$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.premium.WidgetChoosePlan$onViewBoundOrOnResume$2 */
+    /* JADX INFO: compiled from: WidgetChoosePlan.kt */
     public static final /* synthetic */ class C98922 extends AdaptedFunctionReference implements Function1<ChoosePlanViewModel.ViewState, Unit> {
         public C98922(WidgetChoosePlan widgetChoosePlan) {
             super(1, widgetChoosePlan, WidgetChoosePlan.class, "configureUI", "configureUI(Lcom/discord/widgets/settings/premium/ChoosePlanViewModel$ViewState;)Lkotlin/Unit;", 8);
@@ -173,20 +174,20 @@ public final class WidgetChoosePlan extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(ChoosePlanViewModel.ViewState viewState) {
             Intrinsics3.checkNotNullParameter(viewState, "p1");
             WidgetChoosePlan.access$configureUI((WidgetChoosePlan) this.receiver, viewState);
         }
     }
 
-    /* compiled from: WidgetChoosePlan.kt */
-    /* renamed from: com.discord.widgets.settings.premium.WidgetChoosePlan$setUpRecycler$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.premium.WidgetChoosePlan$setUpRecycler$2 */
+    /* JADX INFO: compiled from: WidgetChoosePlan.kt */
     public static final class C98932 extends Lambda implements Function3<GooglePlaySku, String, SkuDetails, Unit> {
         public final /* synthetic */ Traits.Location $locationTrait;
 
-        /* compiled from: WidgetChoosePlan.kt */
-        /* renamed from: com.discord.widgets.settings.premium.WidgetChoosePlan$setUpRecycler$2$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.widgets.settings.premium.WidgetChoosePlan$setUpRecycler$2$1, reason: invalid class name */
+        /* JADX INFO: compiled from: WidgetChoosePlan.kt */
         public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
             public final /* synthetic */ String $oldSkuName;
             public final /* synthetic */ GooglePlaySku $sku;
@@ -204,14 +205,14 @@ public final class WidgetChoosePlan extends AppFragment {
                 return Unit.f27425a;
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2() {
                 WidgetChoosePlan.access$getViewModel$p(WidgetChoosePlan.this).buy(this.$sku, this.$oldSkuName, C98932.this.$locationTrait, "premium_upsell");
             }
         }
 
-        /* compiled from: WidgetChoosePlan.kt */
-        /* renamed from: com.discord.widgets.settings.premium.WidgetChoosePlan$setUpRecycler$2$2, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.widgets.settings.premium.WidgetChoosePlan$setUpRecycler$2$2, reason: invalid class name */
+        /* JADX INFO: compiled from: WidgetChoosePlan.kt */
         public static final class AnonymousClass2 extends Lambda implements Function0<Unit> {
             public final /* synthetic */ String $oldSkuName;
             public final /* synthetic */ GooglePlaySku $sku;
@@ -229,7 +230,7 @@ public final class WidgetChoosePlan extends AppFragment {
                 return Unit.f27425a;
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2() {
                 Traits.Location location = new Traits.Location("Premium Upsell Modal", "Premium Upsell Modal", null, null, null, 28, null);
                 AnalyticsTracker.paymentFlowStarted$default(AnalyticsTracker.INSTANCE, location, Traits.Subscription.INSTANCE.withGatewayPlanId(this.$sku.getUpgrade().getSkuName()), null, null, 12, null);
@@ -237,8 +238,8 @@ public final class WidgetChoosePlan extends AppFragment {
             }
         }
 
-        /* compiled from: WidgetChoosePlan.kt */
-        /* renamed from: com.discord.widgets.settings.premium.WidgetChoosePlan$setUpRecycler$2$3, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.widgets.settings.premium.WidgetChoosePlan$setUpRecycler$2$3, reason: invalid class name */
+        /* JADX INFO: compiled from: WidgetChoosePlan.kt */
         public static final class AnonymousClass3 extends Lambda implements Function0<Unit> {
             public final /* synthetic */ String $oldSkuName;
             public final /* synthetic */ GooglePlaySku $sku;
@@ -256,14 +257,14 @@ public final class WidgetChoosePlan extends AppFragment {
                 return Unit.f27425a;
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2() {
                 WidgetChoosePlan.access$getViewModel$p(WidgetChoosePlan.this).buy(this.$sku, this.$oldSkuName, C98932.this.$locationTrait, "yearly_upsell");
             }
         }
 
-        /* compiled from: WidgetChoosePlan.kt */
-        /* renamed from: com.discord.widgets.settings.premium.WidgetChoosePlan$setUpRecycler$2$4, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.widgets.settings.premium.WidgetChoosePlan$setUpRecycler$2$4, reason: invalid class name */
+        /* JADX INFO: compiled from: WidgetChoosePlan.kt */
         public static final class AnonymousClass4 extends Lambda implements Function0<Unit> {
             public final /* synthetic */ String $oldSkuName;
             public final /* synthetic */ GooglePlaySku $sku;
@@ -281,7 +282,7 @@ public final class WidgetChoosePlan extends AppFragment {
                 return Unit.f27425a;
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2() {
                 Traits.Location location = new Traits.Location("Yearly Upsell Modal", "Yearly Upsell Modal", null, null, null, 28, null);
                 AnalyticsTracker.paymentFlowStarted$default(AnalyticsTracker.INSTANCE, location, Traits.Subscription.INSTANCE.withGatewayPlanId(this.$sku.getUpgrade().getSkuName()), null, null, 12, null);
@@ -289,8 +290,8 @@ public final class WidgetChoosePlan extends AppFragment {
             }
         }
 
-        /* compiled from: WidgetChoosePlan.kt */
-        /* renamed from: com.discord.widgets.settings.premium.WidgetChoosePlan$setUpRecycler$2$5, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.widgets.settings.premium.WidgetChoosePlan$setUpRecycler$2$5, reason: invalid class name */
+        /* JADX INFO: compiled from: WidgetChoosePlan.kt */
         public static final class AnonymousClass5 extends Lambda implements Function0<Unit> {
             public AnonymousClass5() {
                 super(0);
@@ -302,7 +303,7 @@ public final class WidgetChoosePlan extends AppFragment {
                 return Unit.f27425a;
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2() {
                 AnalyticsTracker.INSTANCE.upgradePremiumYearlyClosed(C98932.this.$locationTrait);
             }
@@ -320,7 +321,7 @@ public final class WidgetChoosePlan extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(GooglePlaySku googlePlaySku, String str, SkuDetails skuDetails) {
             Intrinsics3.checkNotNullParameter(googlePlaySku, "sku");
             if (googlePlaySku.getUpgrade() != null && skuDetails != null && googlePlaySku.getType() == GooglePlaySku.Type.PREMIUM_GUILD) {

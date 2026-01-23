@@ -9,7 +9,7 @@ import androidx.annotation.NonNull;
 import java.lang.reflect.Field;
 import p007b.p100d.p104b.p105a.outline;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public final class LayoutInflaterCompat {
     private static final String TAG = "LayoutInflaterCompatHC";
     private static boolean sCheckedField;
@@ -41,7 +41,7 @@ public final class LayoutInflaterCompat {
     private LayoutInflaterCompat() {
     }
 
-    private static void forceSetFactory2(LayoutInflater layoutInflater, LayoutInflater.Factory2 factory2) throws IllegalArgumentException {
+    private static void forceSetFactory2(LayoutInflater layoutInflater, LayoutInflater.Factory2 factory2) {
         if (!sCheckedField) {
             try {
                 Field declaredField = LayoutInflater.class.getDeclaredField("mFactory2");

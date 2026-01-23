@@ -5,15 +5,15 @@ import kotlin.jvm.internal.Ref$ObjectRef;
 import p600f0.p601e0.p604f.Task2;
 import p600f0.p601e0.p608j.Http2Connection;
 
-/* compiled from: TaskQueue.kt */
-/* renamed from: f0.e0.j.f, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: f0.e0.j.f, reason: use source file name */
+/* JADX INFO: compiled from: TaskQueue.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class TaskQueue3 extends Task2 {
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final /* synthetic */ Http2Connection.d f25674e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final /* synthetic */ Ref$ObjectRef f25675f;
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -25,7 +25,7 @@ public final class TaskQueue3 extends Task2 {
 
     /* JADX WARN: Multi-variable type inference failed */
     @Override // p600f0.p601e0.p604f.Task2
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public long mo10150a() {
         Http2Connection http2Connection = this.f25674e.f25658k;
         http2Connection.f25631m.mo10192a(http2Connection, (Settings3) this.f25675f.element);

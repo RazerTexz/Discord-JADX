@@ -12,8 +12,8 @@ import p659s.p660a.Dispatchers;
 import p659s.p660a.MainCoroutineDispatcher;
 import p659s.p660a.p661a.MainDispatchers;
 
-/* compiled from: DispatchQueue.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: DispatchQueue.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class DispatchQueue {
     private boolean finished;
     private boolean isDraining;

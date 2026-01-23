@@ -1,20 +1,20 @@
 package p007b.p109f.p161j.p175j;
 
-/* compiled from: ImmutableQualityInfo.java */
-/* renamed from: b.f.j.j.h, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.f.j.j.h, reason: use source file name */
+/* JADX INFO: compiled from: ImmutableQualityInfo.java */
+/* JADX INFO: loaded from: classes.dex */
 public class ImmutableQualityInfo implements QualityInfo {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final QualityInfo f3908a = new ImmutableQualityInfo(Integer.MAX_VALUE, true, true);
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public int f3909b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public boolean f3910c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public boolean f3911d;
 
     public ImmutableQualityInfo(int i, boolean z2, boolean z3) {

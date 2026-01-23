@@ -9,15 +9,15 @@ import p507d0.p513e0.p514p.p515d.p517m0.p548g.ClassId;
 import p507d0.p513e0.p514p.p515d.p517m0.p548g.FqName;
 import p507d0.p580t.Collections2;
 
-/* compiled from: SpecialJvmAnnotations.kt */
-/* renamed from: d0.e0.p.d.m0.a, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.a, reason: use source file name */
+/* JADX INFO: compiled from: SpecialJvmAnnotations.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class SpecialJvmAnnotations {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final SpecialJvmAnnotations f22449a = new SpecialJvmAnnotations();
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static final Set<ClassId> f22450b;
 
     static {

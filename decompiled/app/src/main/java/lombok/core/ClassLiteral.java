@@ -1,6 +1,6 @@
 package lombok.core;
 
-/* loaded from: discord-126021.apk:lombok/core/ClassLiteral.SCL.lombok */
+/* JADX INFO: loaded from: discord-126021.apk:lombok/core/ClassLiteral.SCL.lombok */
 public class ClassLiteral {
     private final String className;
 

@@ -2,9 +2,9 @@ package p007b.p452o.p453a.p454m;
 
 import androidx.annotation.NonNull;
 
-/* compiled from: Grid.java */
-/* renamed from: b.o.a.m.g, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.o.a.m.g, reason: use source file name */
+/* JADX INFO: compiled from: Grid.java */
+/* JADX INFO: loaded from: classes3.dex */
 public enum Grid implements Control {
     OFF(0),
     DRAW_3X3(1),
@@ -18,7 +18,7 @@ public enum Grid implements Control {
     }
 
     @NonNull
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public static Grid m7176f(int i) {
         Grid[] gridArrValues = values();
         for (int i2 = 0; i2 < 4; i2++) {
@@ -30,7 +30,7 @@ public enum Grid implements Control {
         return OFF;
     }
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public int m7177g() {
         return this.value;
     }

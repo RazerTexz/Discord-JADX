@@ -3,8 +3,8 @@ package com.discord.utilities;
 import p507d0.p579g0.StringNumberConversions;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: SnowflakeUtils.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: SnowflakeUtils.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class SnowflakeUtils {
     public static final long DISCORD_EPOCH = 1420070400000L;
     public static final SnowflakeUtils INSTANCE = new SnowflakeUtils();

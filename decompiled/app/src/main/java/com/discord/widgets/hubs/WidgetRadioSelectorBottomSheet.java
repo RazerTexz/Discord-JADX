@@ -23,25 +23,25 @@ import p507d0.LazyJVM;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Reflection2;
 
-/* compiled from: WidgetRadioSelectorBottomSheet.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetRadioSelectorBottomSheet.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetRadioSelectorBottomSheet extends AppBottomSheet {
     public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetRadioSelectorBottomSheet.class, "binding", "getBinding()Lcom/discord/databinding/WidgetRadioSelectorBottomSheetBinding;", 0)};
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
 
-    /* renamed from: adapter$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: adapter$delegate, reason: from kotlin metadata */
     private final Lazy adapter;
 
-    /* renamed from: args$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: args$delegate, reason: from kotlin metadata */
     private final Lazy args;
 
-    /* renamed from: binding$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
     private Function1<? super Integer, Unit> onSelected;
 
-    /* compiled from: WidgetRadioSelectorBottomSheet.kt */
+    /* JADX INFO: compiled from: WidgetRadioSelectorBottomSheet.kt */
     public static final class Companion {
         private Companion() {
         }

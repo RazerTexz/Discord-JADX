@@ -8,7 +8,7 @@ import androidx.annotation.RequiresApi;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class ViewGroupUtils {
     private static Method sGetChildDrawingOrderMethod = null;
     private static boolean sGetChildDrawingOrderMethodFetched = false;
@@ -17,7 +17,7 @@ public class ViewGroupUtils {
     private ViewGroupUtils() {
     }
 
-    public static int getChildDrawingOrder(@NonNull ViewGroup viewGroup, int i) throws SecurityException {
+    public static int getChildDrawingOrder(@NonNull ViewGroup viewGroup, int i) {
         if (Build.VERSION.SDK_INT >= 29) {
             return viewGroup.getChildDrawingOrder(i);
         }

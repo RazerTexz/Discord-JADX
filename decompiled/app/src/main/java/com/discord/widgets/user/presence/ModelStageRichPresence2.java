@@ -17,14 +17,14 @@ import p507d0.p580t._Collections;
 import p507d0.p592z.p594d.Lambda;
 import p637j0.p641k.Func1;
 
-/* compiled from: ModelStageRichPresence.kt */
-/* renamed from: com.discord.widgets.user.presence.ModelStageRichPresence$Companion$observeStageRichPresence$1, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: com.discord.widgets.user.presence.ModelStageRichPresence$Companion$observeStageRichPresence$1, reason: use source file name */
+/* JADX INFO: compiled from: ModelStageRichPresence.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class ModelStageRichPresence2<T, R> implements Func1<Map<Long, ? extends Presence>, List<? extends ModelStageRichPresence>> {
     public static final ModelStageRichPresence2 INSTANCE = new ModelStageRichPresence2();
 
-    /* compiled from: ModelStageRichPresence.kt */
-    /* renamed from: com.discord.widgets.user.presence.ModelStageRichPresence$Companion$observeStageRichPresence$1$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.user.presence.ModelStageRichPresence$Companion$observeStageRichPresence$1$1 */
+    /* JADX INFO: compiled from: ModelStageRichPresence.kt */
     public static final class C102731 extends Lambda implements Function1<Long, ModelStageRichPresence> {
         public final /* synthetic */ Map $userPresences;
 
@@ -83,7 +83,7 @@ public final class ModelStageRichPresence2<T, R> implements Func1<Map<Long, ? ex
         return call2((Map<Long, Presence>) map);
     }
 
-    /* renamed from: call, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
     public final List<ModelStageRichPresence> call2(Map<Long, Presence> map) {
         return _Sequences2.toList(_Sequences2.mapNotNull(_Collections.asSequence(map.keySet()), new C102731(map)));
     }

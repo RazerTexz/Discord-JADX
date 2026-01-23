@@ -24,182 +24,182 @@ import com.google.android.material.button.MaterialButton;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public final class WidgetUserSheetBinding implements ViewBinding {
 
-    /* renamed from: A */
+    /* JADX INFO: renamed from: A */
     @NonNull
     public final TextInputEditText f18387A;
 
-    /* renamed from: B */
+    /* JADX INFO: renamed from: B */
     @NonNull
     public final TextInputLayout f18388B;
 
-    /* renamed from: C */
+    /* JADX INFO: renamed from: C */
     @NonNull
     public final Button f18389C;
 
-    /* renamed from: D */
+    /* JADX INFO: renamed from: D */
     @NonNull
     public final LinearLayout f18390D;
 
-    /* renamed from: E */
+    /* JADX INFO: renamed from: E */
     @NonNull
     public final View f18391E;
 
-    /* renamed from: F */
+    /* JADX INFO: renamed from: F */
     @NonNull
     public final MaterialButton f18392F;
 
-    /* renamed from: G */
+    /* JADX INFO: renamed from: G */
     @NonNull
     public final FrameLayout f18393G;
 
-    /* renamed from: H */
+    /* JADX INFO: renamed from: H */
     @NonNull
     public final MaterialButton f18394H;
 
-    /* renamed from: I */
+    /* JADX INFO: renamed from: I */
     @NonNull
     public final FlexboxLayout f18395I;
 
-    /* renamed from: J */
+    /* JADX INFO: renamed from: J */
     @NonNull
     public final UserProfileHeaderView f18396J;
 
-    /* renamed from: K */
+    /* JADX INFO: renamed from: K */
     @NonNull
     public final MaterialButton f18397K;
 
-    /* renamed from: L */
+    /* JADX INFO: renamed from: L */
     @NonNull
     public final CardView f18398L;
 
-    /* renamed from: M */
+    /* JADX INFO: renamed from: M */
     @NonNull
     public final UserProfileStageActionsView f18399M;
 
-    /* renamed from: N */
+    /* JADX INFO: renamed from: N */
     @NonNull
     public final TextView f18400N;
 
-    /* renamed from: O */
+    /* JADX INFO: renamed from: O */
     @NonNull
     public final UserProfileVoiceSettingsView f18401O;
 
-    /* renamed from: P */
+    /* JADX INFO: renamed from: P */
     @NonNull
     public final RolesListView f18402P;
 
-    /* renamed from: Q */
+    /* JADX INFO: renamed from: Q */
     @NonNull
     public final Button f18403Q;
 
-    /* renamed from: R */
+    /* JADX INFO: renamed from: R */
     @NonNull
     public final CardView f18404R;
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     @NonNull
     public final NestedScrollView f18405a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     @NonNull
     public final CardView f18406b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     @NonNull
     public final SimpleDraweeView f18407c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     @NonNull
     public final TextView f18408d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     @NonNull
     public final TextView f18409e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     @NonNull
     public final FlexboxLayout f18410f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     @NonNull
     public final LinkifiedTextView f18411g;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     @NonNull
     public final FrameLayout f18412h;
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     @NonNull
     public final Button f18413i;
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     @NonNull
     public final CardView f18414j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     @NonNull
     public final UserProfileAdminView f18415k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     @NonNull
     public final Button f18416l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     @NonNull
     public final TextView f18417m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     @NonNull
     public final UserProfileConnectionsView f18418n;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     @NonNull
     public final TextView f18419o;
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     @NonNull
     public final TextView f18420p;
 
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     @NonNull
     public final MaterialButton f18421q;
 
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     @NonNull
     public final MaterialButton f18422r;
 
-    /* renamed from: s */
+    /* JADX INFO: renamed from: s */
     @NonNull
     public final LinearLayout f18423s;
 
-    /* renamed from: t */
+    /* JADX INFO: renamed from: t */
     @NonNull
     public final LinearLayout f18424t;
 
-    /* renamed from: u */
+    /* JADX INFO: renamed from: u */
     @NonNull
     public final TextView f18425u;
 
-    /* renamed from: v */
+    /* JADX INFO: renamed from: v */
     @NonNull
     public final TextView f18426v;
 
-    /* renamed from: w */
+    /* JADX INFO: renamed from: w */
     @NonNull
     public final FrameLayout f18427w;
 
-    /* renamed from: x */
+    /* JADX INFO: renamed from: x */
     @NonNull
     public final Button f18428x;
 
-    /* renamed from: y */
+    /* JADX INFO: renamed from: y */
     @NonNull
     public final ImageView f18429y;
 
-    /* renamed from: z */
+    /* JADX INFO: renamed from: z */
     @NonNull
     public final TextView f18430z;
 

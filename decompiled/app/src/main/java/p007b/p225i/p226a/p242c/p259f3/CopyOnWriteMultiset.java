@@ -8,27 +8,27 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
-/* compiled from: CopyOnWriteMultiset.java */
-/* renamed from: b.i.a.c.f3.l, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.f3.l, reason: use source file name */
+/* JADX INFO: compiled from: CopyOnWriteMultiset.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class CopyOnWriteMultiset<E> implements Iterable<E> {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final Object f6729j = new Object();
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     @GuardedBy("lock")
     public final Map<E, Integer> f6730k = new HashMap();
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     @GuardedBy("lock")
     public Set<E> f6731l = Collections.emptySet();
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     @GuardedBy("lock")
     public List<E> f6732m = Collections.emptyList();
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public int m3027c(E e) {
         int iIntValue;
         synchronized (this.f6729j) {

@@ -7,21 +7,21 @@ import java.util.List;
 import p007b.p085c.p086a.p090c0.Keyframe;
 import p007b.p085c.p086a.p090c0.LottieValueCallback;
 
-/* compiled from: PathKeyframeAnimation.java */
-/* renamed from: b.c.a.w.c.i, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.c.a.w.c.i, reason: use source file name */
+/* JADX INFO: compiled from: PathKeyframeAnimation.java */
+/* JADX INFO: loaded from: classes.dex */
 public class PathKeyframeAnimation extends KeyframeAnimation<PointF> {
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public final PointF f2616i;
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final float[] f2617j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public PathKeyframe f2618k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public PathMeasure f2619l;
 
     public PathKeyframeAnimation(List<? extends Keyframe<PointF>> list) {
@@ -33,7 +33,7 @@ public class PathKeyframeAnimation extends KeyframeAnimation<PointF> {
 
     /* JADX WARN: Multi-variable type inference failed */
     @Override // p007b.p085c.p086a.p091w.p093c.BaseKeyframeAnimation
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public Object mo728f(Keyframe keyframe, float f) {
         PointF pointF;
         PathKeyframe pathKeyframe = (PathKeyframe) keyframe;

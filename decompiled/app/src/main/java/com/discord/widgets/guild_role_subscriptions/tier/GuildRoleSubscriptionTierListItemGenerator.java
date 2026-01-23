@@ -9,9 +9,9 @@ import java.util.List;
 import p507d0.p579g0.StringsJVM;
 import p507d0.p580t.Collections2;
 
-/* compiled from: GuildRoleSubscriptionTierListItemGenerator.kt */
-/* renamed from: com.discord.widgets.guild_role_subscriptions.tier.GuildRoleSubscriptionTierListItemGeneratorKt, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.guild_role_subscriptions.tier.GuildRoleSubscriptionTierListItemGeneratorKt, reason: use source file name */
+/* JADX INFO: compiled from: GuildRoleSubscriptionTierListItemGenerator.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class GuildRoleSubscriptionTierListItemGenerator {
     public static final List<GuildRoleSubscriptionTierAdapterItem> generateGuildRoleSubscriptionReviewListItems(GuildRoleSubscriptionTier guildRoleSubscriptionTier, Boolean bool, Integer num, String str, String str2) {
         ArrayList arrayList = new ArrayList();

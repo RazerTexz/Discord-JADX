@@ -18,7 +18,7 @@ import java.util.HashSet;
 import java.util.Iterator;
 import p007b.p100d.p104b.p105a.outline;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class ConstraintWidget {
     public static final int ANCHOR_BASELINE = 4;
     public static final int ANCHOR_BOTTOM = 3;
@@ -130,10 +130,10 @@ public class ConstraintWidget {
     public float[] mWeight;
     public int mWidth;
 
-    /* renamed from: mX */
+    /* JADX INFO: renamed from: mX */
     public int f114mX;
 
-    /* renamed from: mY */
+    /* JADX INFO: renamed from: mY */
     public int f115mY;
     public boolean measured;
     private boolean resolvedHorizontal;
@@ -143,13 +143,13 @@ public class ConstraintWidget {
     public int verticalGroup;
     public VerticalWidgetRun verticalRun;
 
-    /* renamed from: androidx.constraintlayout.solver.widgets.ConstraintWidget$1 */
+    /* JADX INFO: renamed from: androidx.constraintlayout.solver.widgets.ConstraintWidget$1 */
     public static /* synthetic */ class C01901 {
 
-        /* renamed from: $SwitchMap$androidx$constraintlayout$solver$widgets$ConstraintAnchor$Type */
+        /* JADX INFO: renamed from: $SwitchMap$androidx$constraintlayout$solver$widgets$ConstraintAnchor$Type */
         public static final /* synthetic */ int[] f116x4c44d048;
 
-        /* renamed from: $SwitchMap$androidx$constraintlayout$solver$widgets$ConstraintWidget$DimensionBehaviour */
+        /* JADX INFO: renamed from: $SwitchMap$androidx$constraintlayout$solver$widgets$ConstraintWidget$DimensionBehaviour */
         public static final /* synthetic */ int[] f117xdde91696;
 
         static {

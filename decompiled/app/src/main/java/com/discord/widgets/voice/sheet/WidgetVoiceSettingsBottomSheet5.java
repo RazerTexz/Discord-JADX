@@ -3,9 +3,9 @@ package com.discord.widgets.voice.sheet;
 import kotlin.jvm.functions.Function0;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetVoiceSettingsBottomSheet.kt */
-/* renamed from: com.discord.widgets.voice.sheet.WidgetVoiceSettingsBottomSheet$viewModel$2, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: com.discord.widgets.voice.sheet.WidgetVoiceSettingsBottomSheet$viewModel$2, reason: use source file name */
+/* JADX INFO: compiled from: WidgetVoiceSettingsBottomSheet.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class WidgetVoiceSettingsBottomSheet5 extends Lambda implements Function0<WidgetVoiceSettingsBottomSheetViewModel> {
     public final /* synthetic */ WidgetVoiceSettingsBottomSheet this$0;
 

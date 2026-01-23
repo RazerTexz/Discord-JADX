@@ -5,12 +5,12 @@ import java.util.concurrent.locks.ReentrantLock;
 import kotlin.jvm.internal.DefaultConstructorMarker;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: locks.kt */
-/* renamed from: d0.e0.p.d.m0.m.d, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.m.d, reason: use source file name */
+/* JADX INFO: compiled from: locks.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public class locks2 implements locks4 {
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final Lock f24707b;
 
     public locks2(Lock lock) {

@@ -11,12 +11,12 @@ import p637j0.p642l.p647e.ScalarSynchronousObservable;
 import p658rx.Observable;
 import p658rx.functions.Func4;
 
-/* compiled from: OverlayMenuView.kt */
-/* renamed from: b.a.y.r, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: b.a.y.r, reason: use source file name */
+/* JADX INFO: compiled from: OverlayMenuView.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class OverlayMenuView3<T, R> implements Func1<Channel, Observable<? extends OverlayMenuView.C7085a>> {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static final OverlayMenuView3 f2068j = new OverlayMenuView3();
 
     @Override // p637j0.p641k.Func1

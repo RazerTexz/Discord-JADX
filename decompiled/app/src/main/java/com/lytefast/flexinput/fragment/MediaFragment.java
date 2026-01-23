@@ -26,8 +26,8 @@ import p007b.p076b.p077a.p079d.MediaCursorAdapter;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: MediaFragment.kt */
-/* loaded from: classes3.dex */
+/* JADX INFO: compiled from: MediaFragment.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public class MediaFragment extends Fragment {
     private static final int GRID_LAYOUT_SPAN_COUNT = 3;
     private static final String REQUIRED_PERMISSION = "android.permission.READ_EXTERNAL_STORAGE";
@@ -35,24 +35,24 @@ public class MediaFragment extends Fragment {
     private SelectionCoordinator<Attachment<Object>, Media> selectionCoordinator;
     private SwipeRefreshLayout swipeRefreshLayout;
 
-    /* compiled from: MediaFragment.kt */
-    /* renamed from: com.lytefast.flexinput.fragment.MediaFragment$a */
+    /* JADX INFO: renamed from: com.lytefast.flexinput.fragment.MediaFragment$a */
+    /* JADX INFO: compiled from: MediaFragment.kt */
     public static final class ViewOnClickListenerC11187a implements View.OnClickListener {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public final /* synthetic */ View f22073j;
 
-        /* renamed from: k */
+        /* JADX INFO: renamed from: k */
         public final /* synthetic */ MediaCursorAdapter f22074k;
 
-        /* renamed from: l */
+        /* JADX INFO: renamed from: l */
         public final /* synthetic */ MediaFragment f22075l;
 
-        /* renamed from: m */
+        /* JADX INFO: renamed from: m */
         public final /* synthetic */ FlexInputCoordinator f22076m;
 
-        /* compiled from: MediaFragment.kt */
-        /* renamed from: com.lytefast.flexinput.fragment.MediaFragment$a$a */
+        /* JADX INFO: renamed from: com.lytefast.flexinput.fragment.MediaFragment$a$a */
+        /* JADX INFO: compiled from: MediaFragment.kt */
         public static final class a extends Lambda implements Function0<Unit> {
             public a() {
                 super(0);
@@ -89,20 +89,20 @@ public class MediaFragment extends Fragment {
         }
     }
 
-    /* compiled from: MediaFragment.kt */
-    /* renamed from: com.lytefast.flexinput.fragment.MediaFragment$b */
+    /* JADX INFO: renamed from: com.lytefast.flexinput.fragment.MediaFragment$b */
+    /* JADX INFO: compiled from: MediaFragment.kt */
     public static final class C11188b implements SwipeRefreshLayout.OnRefreshListener {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final /* synthetic */ View f22077a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final /* synthetic */ MediaCursorAdapter f22078b;
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public final /* synthetic */ MediaFragment f22079c;
 
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         public final /* synthetic */ FlexInputCoordinator f22080d;
 
         public C11188b(View view, MediaCursorAdapter mediaCursorAdapter, MediaFragment mediaFragment, FlexInputCoordinator flexInputCoordinator) {
@@ -155,7 +155,7 @@ public class MediaFragment extends Fragment {
         }
     }
 
-    /* renamed from: getRecyclerView$flexinput_release, reason: from getter */
+    /* JADX INFO: renamed from: getRecyclerView$flexinput_release, reason: from getter */
     public final RecyclerView getRecyclerView() {
         return this.recyclerView;
     }

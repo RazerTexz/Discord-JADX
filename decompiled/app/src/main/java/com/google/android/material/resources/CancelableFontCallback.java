@@ -3,8 +3,8 @@ package com.google.android.material.resources;
 import android.graphics.Typeface;
 import androidx.annotation.RestrictTo;
 
+/* JADX INFO: loaded from: classes3.dex */
 @RestrictTo({RestrictTo.Scope.LIBRARY_GROUP})
-/* loaded from: classes3.dex */
 public final class CancelableFontCallback extends TextAppearanceFontCallback {
     private final ApplyFont applyFont;
     private boolean cancelled;

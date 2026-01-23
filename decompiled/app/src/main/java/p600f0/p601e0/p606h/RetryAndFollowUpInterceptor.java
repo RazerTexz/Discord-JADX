@@ -43,12 +43,12 @@ import p600f0.p601e0.p605g.RealConnection4;
 import p600f0.p601e0.p605g.RealConnectionPool;
 import p600f0.p601e0.p605g.RouteSelector;
 
-/* compiled from: RetryAndFollowUpInterceptor.kt */
-/* renamed from: f0.e0.h.i, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: f0.e0.h.i, reason: use source file name */
+/* JADX INFO: compiled from: RetryAndFollowUpInterceptor.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class RetryAndFollowUpInterceptor implements Interceptor {
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final OkHttpClient f25543b;
 
     public RetryAndFollowUpInterceptor(OkHttpClient okHttpClient) {
@@ -56,7 +56,7 @@ public final class RetryAndFollowUpInterceptor implements Interceptor {
         this.f25543b = okHttpClient;
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final Request m10231a(Response response, Exchange exchange) throws IOException {
         String strM10989a;
         RealConnection4 realConnection4;
@@ -157,7 +157,7 @@ public final class RetryAndFollowUpInterceptor implements Interceptor {
         return c12935a.m10978a();
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final boolean m10232b(IOException iOException, RealCall realCall, Request request, boolean z2) {
         boolean zM10209a;
         RouteSelector routeSelector;
@@ -205,8 +205,8 @@ public final class RetryAndFollowUpInterceptor implements Interceptor {
         return zM10209a;
     }
 
-    /* renamed from: c */
-    public final int m10233c(Response response, int i) throws NumberFormatException {
+    /* JADX INFO: renamed from: c */
+    public final int m10233c(Response response, int i) {
         String strM10989a = Response.m10989a(response, "Retry-After", null, 2);
         if (strM10989a == null) {
             return i;
@@ -220,45 +220,89 @@ public final class RetryAndFollowUpInterceptor implements Interceptor {
     }
 
     /* JADX WARN: Multi-variable type inference failed */
+    /* JADX WARN: Type inference failed for: r1v0 */
+    /* JADX WARN: Type inference failed for: r1v1 */
+    /* JADX WARN: Type inference failed for: r1v10 */
+    /* JADX WARN: Type inference failed for: r1v11, types: [f0.e0.g.e] */
+    /* JADX WARN: Type inference failed for: r1v12 */
+    /* JADX WARN: Type inference failed for: r1v13, types: [f0.e0.g.e] */
+    /* JADX WARN: Type inference failed for: r1v14, types: [f0.e0.g.e] */
+    /* JADX WARN: Type inference failed for: r1v15 */
+    /* JADX WARN: Type inference failed for: r1v16 */
+    /* JADX WARN: Type inference failed for: r1v17 */
+    /* JADX WARN: Type inference failed for: r1v3 */
+    /* JADX WARN: Type inference failed for: r1v4 */
+    /* JADX WARN: Type inference failed for: r1v41, types: [f0.e0.g.e] */
+    /* JADX WARN: Type inference failed for: r1v44 */
+    /* JADX WARN: Type inference failed for: r1v45 */
+    /* JADX WARN: Type inference failed for: r1v46 */
+    /* JADX WARN: Type inference failed for: r1v47 */
+    /* JADX WARN: Type inference failed for: r1v5 */
+    /* JADX WARN: Type inference failed for: r1v6 */
+    /* JADX WARN: Type inference failed for: r1v7 */
+    /* JADX WARN: Type inference failed for: r1v8 */
+    /* JADX WARN: Type inference failed for: r1v9, types: [f0.e0.g.e] */
+    /* JADX WARN: Type inference failed for: r21v0 */
+    /* JADX WARN: Type inference failed for: r21v1 */
+    /* JADX WARN: Type inference failed for: r21v2 */
+    /* JADX WARN: Type inference failed for: r21v3 */
+    /* JADX WARN: Type inference failed for: r21v4 */
+    /* JADX WARN: Type inference failed for: r21v5 */
+    /* JADX WARN: Type inference failed for: r2v10, types: [f0.e0.h.i] */
+    /* JADX WARN: Type inference failed for: r2v11 */
+    /* JADX WARN: Type inference failed for: r2v12, types: [f0.e0.h.i] */
+    /* JADX WARN: Type inference failed for: r2v13 */
+    /* JADX WARN: Type inference failed for: r2v19, types: [f0.e0.h.i] */
+    /* JADX WARN: Type inference failed for: r2v20 */
+    /* JADX WARN: Type inference failed for: r2v21 */
+    /* JADX WARN: Type inference failed for: r2v4 */
+    /* JADX WARN: Type inference failed for: r2v5 */
+    /* JADX WARN: Type inference failed for: r2v6 */
+    /* JADX WARN: Type inference failed for: r2v7 */
+    /* JADX WARN: Type inference failed for: r3v1, types: [f0.e0.g.e, java.lang.Object] */
+    /* JADX WARN: Type inference failed for: r3v11 */
+    /* JADX WARN: Type inference failed for: r3v18 */
     @Override // okhttp3.Interceptor
     public Response intercept(Interceptor.Chain chain) throws Throwable {
         List list;
         Response response;
         int i;
-        RealCall realCall;
+        ?? r1;
         RealInterceptorChain realInterceptorChain;
         Response response2;
         List listPlus;
         boolean z2;
-        RetryAndFollowUpInterceptor retryAndFollowUpInterceptor;
-        RealCall realCall2;
+        ?? r2;
+        ?? r21;
+        ?? r212;
         SSLSocketFactory sSLSocketFactory;
         HostnameVerifier hostnameVerifier;
         CertificatePinner certificatePinner;
-        RetryAndFollowUpInterceptor retryAndFollowUpInterceptor2 = this;
+        ?? r12 = this;
         Intrinsics3.checkParameterIsNotNull(chain, "chain");
         RealInterceptorChain realInterceptorChain2 = (RealInterceptorChain) chain;
         Request request = realInterceptorChain2.f25536f;
-        RealCall realCall3 = realInterceptorChain2.f25532b;
+        RealCall realCall = realInterceptorChain2.f25532b;
         boolean z3 = true;
         List listEmptyList = Collections2.emptyList();
         Response response3 = null;
         int i2 = 0;
         Request request2 = request;
         boolean z4 = true;
+        ?? r3 = realCall;
         while (true) {
-            Objects.requireNonNull(realCall3);
+            Objects.requireNonNull(r3);
             Intrinsics3.checkParameterIsNotNull(request2, "request");
-            if (!(realCall3.f25473r == null)) {
+            if (!(r3.f25473r == null)) {
                 throw new IllegalStateException("Check failed.".toString());
             }
-            synchronized (realCall3) {
+            synchronized (r3) {
                 try {
                     try {
-                        if (!(realCall3.f25475t ^ z3)) {
+                        if (!(r3.f25475t ^ z3)) {
                             throw new IllegalStateException("cannot make a new request because the previous response is still open: please call response.close()".toString());
                         }
-                        if (!(realCall3.f25474s ^ z3)) {
+                        if (!(r3.f25474s ^ z3)) {
                             throw new IllegalStateException("Check failed.".toString());
                         }
                     } catch (Throwable th) {
@@ -267,14 +311,14 @@ public final class RetryAndFollowUpInterceptor implements Interceptor {
                     }
                 } catch (Throwable th2) {
                     th = th2;
-                    retryAndFollowUpInterceptor2 = realCall3;
+                    r12 = r3;
                 }
             }
             if (z4) {
-                RealConnectionPool realConnectionPool = realCall3.f25465j;
+                RealConnectionPool realConnectionPool = r3.f25465j;
                 HttpUrl httpUrl = request2.url;
                 if (httpUrl.f25975c) {
-                    OkHttpClient okHttpClient = realCall3.f25480y;
+                    OkHttpClient okHttpClient = r3.f25480y;
                     SSLSocketFactory sSLSocketFactory2 = okHttpClient.f25998B;
                     if (sSLSocketFactory2 == null) {
                         throw new IllegalStateException("CLEARTEXT-only client");
@@ -290,22 +334,22 @@ public final class RetryAndFollowUpInterceptor implements Interceptor {
                 }
                 String str = httpUrl.f25979g;
                 int i3 = httpUrl.f25980h;
-                OkHttpClient okHttpClient2 = realCall3.f25480y;
+                OkHttpClient okHttpClient2 = r3.f25480y;
                 list = listEmptyList;
                 i = i2;
                 response = response3;
                 Address address = new Address(str, i3, okHttpClient2.f26022w, okHttpClient2.f25997A, sSLSocketFactory, hostnameVerifier, certificatePinner, okHttpClient2.f26025z, okHttpClient2.f26023x, okHttpClient2.f26001E, okHttpClient2.f26000D, okHttpClient2.f26024y);
-                EventListener eventListener = realCall3.f25466k;
-                realCall3.f25470o = new ExchangeFinder(realConnectionPool, address, realCall3, eventListener);
-                realCall = eventListener;
+                EventListener eventListener = r3.f25466k;
+                r3.f25470o = new ExchangeFinder(realConnectionPool, address, r3, eventListener);
+                r1 = eventListener;
             } else {
                 list = listEmptyList;
                 response = response3;
                 i = i2;
-                realCall = retryAndFollowUpInterceptor2;
+                r1 = r12;
             }
             try {
-                if (realCall3.f25477v) {
+                if (r3.f25477v) {
                     throw new IOException("Canceled");
                 }
                 try {
@@ -325,7 +369,7 @@ public final class RetryAndFollowUpInterceptor implements Interceptor {
                                 Response response5 = responseMo10228a.cacheResponse;
                                 long j = responseMo10228a.sentRequestAtMillis;
                                 realInterceptorChain = realInterceptorChain2;
-                                realCall2 = realCall3;
+                                r21 = r3;
                                 try {
                                     long j2 = responseMo10228a.receivedResponseAtMillis;
                                     Exchange exchange = responseMo10228a.exchange;
@@ -372,85 +416,86 @@ public final class RetryAndFollowUpInterceptor implements Interceptor {
                                         throw new IllegalStateException("message == null".toString());
                                     }
                                     responseMo10228a = new Response(request3, protocol2, str2, i4, handshake, c12930aM10956e.m10960c(), responseBody, response4, response5, response10, j, j2, exchange);
+                                    r212 = r21;
                                 } catch (Throwable th3) {
                                     th = th3;
-                                    realCall = realCall2;
-                                    realCall.m10184i(true);
+                                    r1 = r21;
+                                    r1.m10184i(true);
                                     throw th;
                                 }
                             } catch (Throwable th4) {
                                 th = th4;
-                                realCall2 = realCall3;
+                                r21 = r3;
                             }
                         } else {
                             realInterceptorChain = realInterceptorChain2;
-                            realCall2 = realCall3;
+                            r212 = r3;
                         }
                         response3 = responseMo10228a;
-                        realCall = realCall2;
+                        r1 = r212;
                     } catch (IOException e) {
                         realInterceptorChain = realInterceptorChain2;
-                        RealCall realCall4 = realCall3;
+                        ?? r13 = r3;
                         response2 = response;
-                        RetryAndFollowUpInterceptor retryAndFollowUpInterceptor3 = this;
-                        if (!retryAndFollowUpInterceptor3.m10232b(e, realCall4, request2, !(e instanceof ConnectionShutdownException))) {
+                        ?? r22 = this;
+                        if (!r22.m10232b(e, r13, request2, !(e instanceof ConnectionShutdownException))) {
                             Util7.m10119D(e, list);
                             throw e;
                         }
                         listPlus = _Collections.plus((Collection<? extends IOException>) list, e);
                         z2 = true;
-                        realCall = realCall4;
-                        retryAndFollowUpInterceptor = retryAndFollowUpInterceptor3;
-                        realCall.m10184i(z2);
+                        r1 = r13;
+                        r2 = r22;
+                        r1.m10184i(z2);
                         listEmptyList = listPlus;
                         response3 = response2;
                         i2 = i;
                         z4 = false;
-                        realCall3 = realCall;
-                        retryAndFollowUpInterceptor2 = retryAndFollowUpInterceptor;
+                        r3 = r1;
+                        r12 = r2;
                         realInterceptorChain2 = realInterceptorChain;
                         z3 = true;
                     }
                 } catch (RouteException e2) {
                     realInterceptorChain = realInterceptorChain2;
-                    RealCall realCall5 = realCall3;
+                    ?? r14 = r3;
                     List list2 = list;
                     response2 = response;
-                    RetryAndFollowUpInterceptor retryAndFollowUpInterceptor4 = this;
-                    if (!retryAndFollowUpInterceptor4.m10232b(e2.getLastConnectException(), realCall5, request2, false)) {
+                    ?? r23 = this;
+                    if (!r23.m10232b(e2.getLastConnectException(), r14, request2, false)) {
                         IOException firstConnectException = e2.getFirstConnectException();
                         Util7.m10119D(firstConnectException, list2);
                         throw firstConnectException;
                     }
                     listPlus = _Collections.plus((Collection<? extends IOException>) list2, e2.getFirstConnectException());
                     z2 = true;
-                    realCall = realCall5;
-                    retryAndFollowUpInterceptor = retryAndFollowUpInterceptor4;
-                    realCall.m10184i(z2);
+                    r1 = r14;
+                    r2 = r23;
+                    r1.m10184i(z2);
                     listEmptyList = listPlus;
                     response3 = response2;
                     i2 = i;
                     z4 = false;
-                    realCall3 = realCall;
-                    retryAndFollowUpInterceptor2 = retryAndFollowUpInterceptor;
+                    r3 = r1;
+                    r12 = r2;
                     realInterceptorChain2 = realInterceptorChain;
                     z3 = true;
                 }
                 try {
-                    Exchange exchange3 = realCall.f25473r;
-                    retryAndFollowUpInterceptor = this;
+                    Exchange exchange3 = r1.f25473r;
+                    r2 = this;
                     try {
-                        Request requestM10231a = retryAndFollowUpInterceptor.m10231a(response3, exchange3);
+                        Request requestM10231a = r2.m10231a(response3, exchange3);
                         if (requestM10231a == null) {
                             if (exchange3 != null && exchange3.f25437a) {
-                                realCall.m10189n();
+                                r1.m10189n();
                             }
-                            realCall.m10184i(false);
+                            r1.m10184i(false);
                             return response3;
                         }
                         RequestBody requestBody = requestM10231a.body;
                         if (requestBody != null && requestBody.isOneShot()) {
-                            realCall.m10184i(false);
+                            r1.m10184i(false);
                             return response3;
                         }
                         ResponseBody responseBody2 = response3.body;
@@ -468,27 +513,27 @@ public final class RetryAndFollowUpInterceptor implements Interceptor {
                         if (i2 > 20) {
                             throw new ProtocolException("Too many follow-up requests: " + i2);
                         }
-                        realCall.m10184i(true);
+                        r1.m10184i(true);
                         request2 = requestM10231a;
                         listEmptyList = list;
                         z4 = true;
-                        realCall3 = realCall;
-                        retryAndFollowUpInterceptor2 = retryAndFollowUpInterceptor;
+                        r3 = r1;
+                        r12 = r2;
                         realInterceptorChain2 = realInterceptorChain;
                         z3 = true;
                     } catch (Throwable th5) {
                         th = th5;
-                        realCall.m10184i(true);
+                        r1.m10184i(true);
                         throw th;
                     }
                 } catch (Throwable th6) {
                     th = th6;
-                    realCall.m10184i(true);
+                    r1.m10184i(true);
                     throw th;
                 }
             } catch (Throwable th7) {
                 th = th7;
-                realCall = realCall3;
+                r1 = r3;
             }
         }
     }

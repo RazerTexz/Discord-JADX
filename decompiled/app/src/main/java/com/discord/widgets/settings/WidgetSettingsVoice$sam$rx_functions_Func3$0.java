@@ -3,8 +3,8 @@ package com.discord.widgets.settings;
 import kotlin.jvm.functions.Function3;
 import p658rx.functions.Func3;
 
-/* compiled from: WidgetSettingsVoice.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetSettingsVoice.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetSettingsVoice$sam$rx_functions_Func3$0 implements Func3 {
     private final /* synthetic */ Function3 function;
 

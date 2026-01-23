@@ -1,7 +1,6 @@
 package com.discord.widgets.chat.list.adapter;
 
 import android.content.Context;
-import android.content.res.Resources;
 import android.text.method.LinkMovementMethod;
 import android.view.View;
 import android.widget.ImageView;
@@ -27,13 +26,13 @@ import p007b.p008a.p027k.FormatUtils;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetChatListAdapterItemEphemeralMessage.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetChatListAdapterItemEphemeralMessage.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetChatListAdapterItemEphemeralMessage extends WidgetChatListItem {
     private final WidgetChatListAdapterItemEphemeralMessageBinding binding;
 
-    /* compiled from: WidgetChatListAdapterItemEphemeralMessage.kt */
-    /* renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemEphemeralMessage$onConfigure$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemEphemeralMessage$onConfigure$1 */
+    /* JADX INFO: compiled from: WidgetChatListAdapterItemEphemeralMessage.kt */
     public static final class ViewOnClickListenerC80601 implements View.OnClickListener {
         public ViewOnClickListenerC80601() {
         }
@@ -49,17 +48,17 @@ public final class WidgetChatListAdapterItemEphemeralMessage extends WidgetChatL
         }
     }
 
-    /* compiled from: WidgetChatListAdapterItemEphemeralMessage.kt */
-    /* renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemEphemeralMessage$onConfigure$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemEphemeralMessage$onConfigure$2 */
+    /* JADX INFO: compiled from: WidgetChatListAdapterItemEphemeralMessage.kt */
     public static final class C80612 extends Lambda implements Function1<RenderContext, Unit> {
         public final /* synthetic */ Message $message;
 
-        /* compiled from: WidgetChatListAdapterItemEphemeralMessage.kt */
-        /* renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemEphemeralMessage$onConfigure$2$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemEphemeralMessage$onConfigure$2$1, reason: invalid class name */
+        /* JADX INFO: compiled from: WidgetChatListAdapterItemEphemeralMessage.kt */
         public static final class AnonymousClass1 extends Lambda implements Function1<Hook, Unit> {
 
-            /* compiled from: WidgetChatListAdapterItemEphemeralMessage.kt */
-            /* renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemEphemeralMessage$onConfigure$2$1$1, reason: invalid class name and collision with other inner class name */
+            /* JADX INFO: renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemEphemeralMessage$onConfigure$2$1$1, reason: invalid class name and collision with other inner class name */
+            /* JADX INFO: compiled from: WidgetChatListAdapterItemEphemeralMessage.kt */
             public static final class C132781 extends Lambda implements Function2<String, View, Unit> {
                 public C132781() {
                     super(2);
@@ -71,7 +70,7 @@ public final class WidgetChatListAdapterItemEphemeralMessage extends WidgetChatL
                     return Unit.f27425a;
                 }
 
-                /* renamed from: invoke, reason: avoid collision after fix types in other method */
+                /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
                 public final void invoke2(String str, View view) {
                     Intrinsics3.checkNotNullParameter(str, "<anonymous parameter 0>");
                     Intrinsics3.checkNotNullParameter(view, "<anonymous parameter 1>");
@@ -89,7 +88,7 @@ public final class WidgetChatListAdapterItemEphemeralMessage extends WidgetChatL
                 return Unit.f27425a;
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2(Hook hook) {
                 Intrinsics3.checkNotNullParameter(hook, "$receiver");
                 View view = WidgetChatListAdapterItemEphemeralMessage.this.itemView;
@@ -114,7 +113,7 @@ public final class WidgetChatListAdapterItemEphemeralMessage extends WidgetChatL
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(RenderContext renderContext) {
             Intrinsics3.checkNotNullParameter(renderContext, "$receiver");
             renderContext.m8422a("handleDelete", new AnonymousClass1());
@@ -166,13 +165,13 @@ public final class WidgetChatListAdapterItemEphemeralMessage extends WidgetChatL
     }
 
     @Override // com.discord.widgets.chat.list.adapter.WidgetChatListItem, com.discord.utilities.mg_recycler.MGRecyclerViewHolder
-    public /* bridge */ /* synthetic */ void onConfigure(int i, ChatListEntry chatListEntry) throws Resources.NotFoundException {
+    public /* bridge */ /* synthetic */ void onConfigure(int i, ChatListEntry chatListEntry) {
         onConfigure(i, chatListEntry);
     }
 
     /* JADX WARN: Can't rename method to resolve collision */
     @Override // com.discord.widgets.chat.list.adapter.WidgetChatListItem
-    public void onConfigure(int position, ChatListEntry data) throws Resources.NotFoundException {
+    public void onConfigure(int position, ChatListEntry data) {
         Intrinsics3.checkNotNullParameter(data, "data");
         super.onConfigure(position, data);
         Message message = ((EphemeralMessageEntry) data).getMessage();

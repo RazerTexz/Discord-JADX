@@ -4,12 +4,12 @@ import com.discord.player.AppMediaPlayer;
 import p007b.p008a.p040p.RxPlayerEventListener;
 import p658rx.functions.Action1;
 
-/* compiled from: AppMediaPlayer.kt */
-/* renamed from: b.a.p.a, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.a.p.a, reason: use source file name */
+/* JADX INFO: compiled from: AppMediaPlayer.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class AppMediaPlayer2<T> implements Action1<RxPlayerEventListener.a> {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final /* synthetic */ AppMediaPlayer f1579j;
 
     public AppMediaPlayer2(AppMediaPlayer appMediaPlayer) {

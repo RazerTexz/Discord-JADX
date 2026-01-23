@@ -3,9 +3,9 @@ package com.discord.utilities.time;
 import kotlin.jvm.functions.Function0;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: TimeElapsed.kt */
-/* renamed from: com.discord.utilities.time.TimeElapsed$milliseconds$2, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.utilities.time.TimeElapsed$milliseconds$2, reason: use source file name */
+/* JADX INFO: compiled from: TimeElapsed.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class TimeElapsed2 extends Lambda implements Function0<Long> {
     public final /* synthetic */ Clock $clock;
     public final /* synthetic */ TimeElapsed this$0;
@@ -22,7 +22,7 @@ public final class TimeElapsed2 extends Lambda implements Function0<Long> {
         return Long.valueOf(invoke2());
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final long invoke2() {
         return this.$clock.currentTimeMillis() - TimeElapsed.access$getStartTime$p(this.this$0);
     }

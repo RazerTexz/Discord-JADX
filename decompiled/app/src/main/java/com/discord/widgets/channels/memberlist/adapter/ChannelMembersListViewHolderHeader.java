@@ -8,8 +8,8 @@ import com.discord.widgets.channels.memberlist.adapter.ChannelMembersListAdapter
 import kotlin.NoWhenBranchMatchedException;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ChannelMembersListViewHolderHeader.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: ChannelMembersListViewHolderHeader.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class ChannelMembersListViewHolderHeader extends RecyclerView.ViewHolder {
     private final WidgetChannelMembersListItemHeaderBinding binding;
 

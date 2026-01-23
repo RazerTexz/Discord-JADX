@@ -6,9 +6,9 @@ import android.os.Parcelable;
 import com.google.android.gms.common.ConnectionResult;
 import p007b.p085c.p086a.p087a0.AnimatableValueParser;
 
-/* compiled from: com.google.android.gms:play-services-basement@@17.6.0 */
-/* renamed from: b.i.a.f.e.q */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.e.q */
+/* JADX INFO: compiled from: com.google.android.gms:play-services-basement@@17.6.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public final class C3412q implements Parcelable.Creator<ConnectionResult> {
     @Override // android.os.Parcelable.Creator
     public final ConnectionResult createFromParcel(Parcel parcel) {

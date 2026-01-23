@@ -25,20 +25,20 @@ import p007b.p225i.p226a.p288f.p299e.p300h.p301j.C3308n0;
 import p007b.p225i.p226a.p288f.p299e.p304k.C3347c;
 import p007b.p225i.p226a.p288f.p333j.p334b.C4264a;
 
-/* renamed from: b.i.a.f.j.b.e.i */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.j.b.e.i */
+/* JADX INFO: loaded from: classes3.dex */
 public final class C4286i extends MessagesClient {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static final C3266a.g<C4280f> f11413j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public static final C3266a.a<C4280f, C4264a> f11414k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public static final C3266a<C4264a> f11415l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public final int f11416m;
 
     static {
@@ -55,7 +55,7 @@ public final class C4286i extends MessagesClient {
         activity.getApplication().registerActivityLifecycleCallbacks(new C4320z(activity, this, null));
     }
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static C3301k m5983j(C4286i c4286i, TaskCompletionSource taskCompletionSource) {
         Objects.requireNonNull(c4286i);
         C4308t c4308t = new C4308t(taskCompletionSource);
@@ -68,20 +68,20 @@ public final class C4286i extends MessagesClient {
     }
 
     @Override // p007b.p225i.p226a.p288f.p299e.p300h.C3267b
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final C3347c.a mo4044a() {
         return super.mo4044a();
     }
 
     @Override // com.google.android.gms.nearby.messages.MessagesClient
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final Task<Void> mo5984f(Message message, PublishOptions publishOptions) {
         C3301k c3301kM5990m = m5990m(message);
         return m5988k(c3301kM5990m, new C4288j(this, message, new BinderC4304r(this, m5990m(publishOptions.f20726b), c3301kM5990m), publishOptions), new C4290k(message));
     }
 
     @Override // com.google.android.gms.nearby.messages.MessagesClient
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public final Task<Void> mo5985g(MessageListener messageListener, SubscribeOptions subscribeOptions) {
         AnimatableValueParser.m551o(subscribeOptions.f20737a.f20736s == 0, "Strategy.setBackgroundScanMode() is only supported by background subscribe (the version which takes a PendingIntent).");
         C3301k c3301kM5990m = m5990m(messageListener);
@@ -89,18 +89,18 @@ public final class C4286i extends MessagesClient {
     }
 
     @Override // com.google.android.gms.nearby.messages.MessagesClient
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public final Task<Void> mo5986h(Message message) {
         return m5989l(message);
     }
 
     @Override // com.google.android.gms.nearby.messages.MessagesClient
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public final Task<Void> mo5987i(MessageListener messageListener) {
         return m5989l(messageListener);
     }
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final <T> Task<Void> m5988k(C3301k<T> c3301k, InterfaceC4269a0 interfaceC4269a0, InterfaceC4269a0 interfaceC4269a02) {
         C4312v c4312v = new C4312v(this, c3301k, interfaceC4269a0);
         C3301k.a<T> aVar = c3301k.f9430c;
@@ -118,7 +118,7 @@ public final class C4286i extends MessagesClient {
         return taskCompletionSource.f20845a;
     }
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final <T> Task<Void> m5989l(T t) {
         TaskCompletionSource taskCompletionSource = new TaskCompletionSource();
         String name = t.getClass().getName();
@@ -129,7 +129,7 @@ public final class C4286i extends MessagesClient {
         return taskCompletionSource.f20845a;
     }
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public final <T> C3301k<T> m5990m(T t) {
         if (t == null) {
             return null;

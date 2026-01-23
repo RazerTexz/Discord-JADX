@@ -11,27 +11,27 @@ import androidx.annotation.Nullable;
 import androidx.annotation.RequiresApi;
 import p007b.p225i.p226a.p341g.p353l.p354l.TransitionUtils5;
 
+/* JADX INFO: loaded from: classes3.dex */
 @RequiresApi(21)
-/* loaded from: classes3.dex */
 public final class FadeProvider implements VisibilityAnimatorProvider {
     private float incomingEndThreshold = 1.0f;
 
-    /* renamed from: com.google.android.material.transition.platform.FadeProvider$a */
+    /* JADX INFO: renamed from: com.google.android.material.transition.platform.FadeProvider$a */
     public static class C11051a implements ValueAnimator.AnimatorUpdateListener {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final /* synthetic */ View f21326a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final /* synthetic */ float f21327b;
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public final /* synthetic */ float f21328c;
 
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         public final /* synthetic */ float f21329d;
 
-        /* renamed from: e */
+        /* JADX INFO: renamed from: e */
         public final /* synthetic */ float f21330e;
 
         public C11051a(View view, float f, float f2, float f3, float f4) {
@@ -48,13 +48,13 @@ public final class FadeProvider implements VisibilityAnimatorProvider {
         }
     }
 
-    /* renamed from: com.google.android.material.transition.platform.FadeProvider$b */
+    /* JADX INFO: renamed from: com.google.android.material.transition.platform.FadeProvider$b */
     public static class C11052b extends AnimatorListenerAdapter {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final /* synthetic */ View f21331a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final /* synthetic */ float f21332b;
 
         public C11052b(View view, float f) {

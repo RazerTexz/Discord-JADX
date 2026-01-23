@@ -7,18 +7,18 @@ import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.TimeUnit;
 import p007b.p225i.p361c.p369m.p370d.Logger3;
 
-/* compiled from: BlockingAnalyticsEventLogger.java */
-/* renamed from: b.i.c.m.d.i.c, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.c.m.d.i.c, reason: use source file name */
+/* JADX INFO: compiled from: BlockingAnalyticsEventLogger.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class BlockingAnalyticsEventLogger implements AnalyticsEventReceiver, AnalyticsEventLogger {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final CrashlyticsOriginAnalyticsEventLogger f12247a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final Object f12248b = new Object();
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public CountDownLatch f12249c;
 
     public BlockingAnalyticsEventLogger(@NonNull CrashlyticsOriginAnalyticsEventLogger crashlyticsOriginAnalyticsEventLogger, int i, TimeUnit timeUnit) {
@@ -26,7 +26,7 @@ public class BlockingAnalyticsEventLogger implements AnalyticsEventReceiver, Ana
     }
 
     @Override // p007b.p225i.p361c.p369m.p370d.p371i.AnalyticsEventLogger
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public void mo6386a(@NonNull String str, @Nullable Bundle bundle) {
         synchronized (this.f12248b) {
             Logger3 logger3 = Logger3.f12227a;
@@ -48,7 +48,7 @@ public class BlockingAnalyticsEventLogger implements AnalyticsEventReceiver, Ana
     }
 
     @Override // p007b.p225i.p361c.p369m.p370d.p371i.AnalyticsEventReceiver
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public void mo6387b(@NonNull String str, @NonNull Bundle bundle) {
         CountDownLatch countDownLatch = this.f12249c;
         if (countDownLatch != null && "_ae".equals(str)) {

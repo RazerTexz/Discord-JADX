@@ -7,16 +7,16 @@ import kotlin.Lazy;
 import kotlin.jvm.internal.DefaultConstructorMarker;
 import p507d0.LazyJVM;
 
-/* compiled from: MessageDraftsRepo.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: MessageDraftsRepo.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class MessageDraftsRepo {
     private final HashMap<Long, CharSequence> textChannelInput;
 
-    /* compiled from: MessageDraftsRepo.kt */
+    /* JADX INFO: compiled from: MessageDraftsRepo.kt */
     public static final class Provider {
         public static final Provider INSTANCE = new Provider();
 
-        /* renamed from: MESSAGE_DRAFTS_REPO_INSTANCE$delegate, reason: from kotlin metadata */
+        /* JADX INFO: renamed from: MESSAGE_DRAFTS_REPO_INSTANCE$delegate, reason: from kotlin metadata */
         private static final Lazy MESSAGE_DRAFTS_REPO_INSTANCE = LazyJVM.lazy(MessageDraftsRepo2.INSTANCE);
 
         private Provider() {

@@ -8,8 +8,8 @@ import java.io.IOException;
 import p007b.p085c.p086a.p087a0.AnimatableValueParser;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ComponentTypeTypeAdapter.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: ComponentTypeTypeAdapter.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class ComponentTypeTypeAdapter extends TypeAdapter<Component6> {
     @Override // com.google.gson.TypeAdapter
     public Component6 read(JsonReader jsonReader) throws IOException {

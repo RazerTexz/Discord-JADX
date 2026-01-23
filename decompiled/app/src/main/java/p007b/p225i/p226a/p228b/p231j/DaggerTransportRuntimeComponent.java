@@ -28,49 +28,49 @@ import p007b.p225i.p226a.p228b.p231j.p240v.TimeModule_EventClockFactory;
 import p007b.p225i.p226a.p228b.p231j.p240v.TimeModule_UptimeClockFactory;
 import p496c0.p497a.Provider3;
 
-/* compiled from: DaggerTransportRuntimeComponent.java */
-/* renamed from: b.i.a.b.j.c, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.b.j.c, reason: use source file name */
+/* JADX INFO: compiled from: DaggerTransportRuntimeComponent.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class DaggerTransportRuntimeComponent extends TransportRuntimeComponent {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public Provider3<Executor> f5264j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public Provider3<Context> f5265k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public Provider3 f5266l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public Provider3 f5267m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public Provider3 f5268n;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public Provider3<C2511t> f5269o;
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public Provider3<SchedulerConfig> f5270p;
 
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     public Provider3<WorkScheduler> f5271q;
 
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     public Provider3<DefaultScheduler3> f5272r;
 
-    /* renamed from: s */
+    /* JADX INFO: renamed from: s */
     public Provider3<Uploader6> f5273s;
 
-    /* renamed from: t */
+    /* JADX INFO: renamed from: t */
     public Provider3<WorkInitializer3> f5274t;
 
-    /* renamed from: u */
+    /* JADX INFO: renamed from: u */
     public Provider3<TransportRuntime> f5275u;
 
     public DaggerTransportRuntimeComponent(Context context, a aVar) {
-        Provider3 provider3 = ExecutionModule_ExecutorFactory.a.f5278a;
+        Provider3<Executor> provider3 = ExecutionModule_ExecutorFactory.a.f5278a;
         Object obj = DoubleCheck.f5325a;
         this.f5264j = provider3 instanceof DoubleCheck ? provider3 : new DoubleCheck(provider3);
         Objects.requireNonNull(context, "instance cannot be null");
@@ -100,7 +100,7 @@ public final class DaggerTransportRuntimeComponent extends TransportRuntimeCompo
         this.f5273s = uploader_Factory;
         WorkInitializer_Factory workInitializer_Factory = new WorkInitializer_Factory(provider33, doubleCheck, schedulingModule_WorkSchedulerFactory, doubleCheck);
         this.f5274t = workInitializer_Factory;
-        Provider3 transportRuntime_Factory = new TransportRuntime_Factory(timeModule_EventClockFactory, timeModule_UptimeClockFactory, defaultScheduler_Factory, uploader_Factory, workInitializer_Factory);
+        Provider3<TransportRuntime> transportRuntime_Factory = new TransportRuntime_Factory(timeModule_EventClockFactory, timeModule_UptimeClockFactory, defaultScheduler_Factory, uploader_Factory, workInitializer_Factory);
         this.f5275u = transportRuntime_Factory instanceof DoubleCheck ? transportRuntime_Factory : new DoubleCheck(transportRuntime_Factory);
     }
 }

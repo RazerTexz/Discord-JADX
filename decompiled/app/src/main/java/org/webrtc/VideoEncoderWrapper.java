@@ -4,7 +4,7 @@ import androidx.annotation.Nullable;
 import org.webrtc.VideoEncoder;
 import p617h0.p628c.C12455c0;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public class VideoEncoderWrapper {
     @CalledByNative
     public static VideoEncoder.Callback createEncoderCallback(long j) {

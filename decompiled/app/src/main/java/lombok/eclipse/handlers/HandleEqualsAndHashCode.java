@@ -58,7 +58,7 @@ import org.eclipse.jdt.internal.compiler.ast.UnaryExpression;
 import org.eclipse.jdt.internal.compiler.ast.Wildcard;
 import org.eclipse.jdt.internal.compiler.lookup.TypeConstants;
 
-/* loaded from: discord-126021.apk:lombok/eclipse/handlers/HandleEqualsAndHashCode.SCL.lombok */
+/* JADX INFO: loaded from: discord-126021.apk:lombok/eclipse/handlers/HandleEqualsAndHashCode.SCL.lombok */
 public class HandleEqualsAndHashCode extends EclipseAnnotationHandler<EqualsAndHashCode> {
     private static final String HASH_CODE_CACHE_NAME = "$hashCodeCache";
     private final char[] HASH_CODE_CACHE_NAME_ARR = HASH_CODE_CACHE_NAME.toCharArray();
@@ -69,7 +69,7 @@ public class HandleEqualsAndHashCode extends EclipseAnnotationHandler<EqualsAndH
     private static final char[][] ORG_ECLIPSE_JDT_ANNOTATION_NULLABLE = Eclipse.fromQualifiedName("org.eclipse.jdt.annotation.Nullable");
     private static /* synthetic */ int[] $SWITCH_TABLE$lombok$core$configuration$CallSuperType;
 
-    /* renamed from: $SWITCH_TABLE$lombok$eclipse$handlers$EclipseHandlerUtil$MemberExistsResult */
+    /* JADX INFO: renamed from: $SWITCH_TABLE$lombok$eclipse$handlers$EclipseHandlerUtil$MemberExistsResult */
     private static /* synthetic */ int[] f27469xb87c1847;
 
     static /* synthetic */ int[] $SWITCH_TABLE$lombok$core$configuration$CallSuperType() {
@@ -94,7 +94,7 @@ public class HandleEqualsAndHashCode extends EclipseAnnotationHandler<EqualsAndH
         return iArr2;
     }
 
-    /* renamed from: $SWITCH_TABLE$lombok$eclipse$handlers$EclipseHandlerUtil$MemberExistsResult */
+    /* JADX INFO: renamed from: $SWITCH_TABLE$lombok$eclipse$handlers$EclipseHandlerUtil$MemberExistsResult */
     static /* synthetic */ int[] m10930xb87c1847() {
         int[] iArr = f27469xb87c1847;
         if (iArr != null) {
@@ -118,7 +118,7 @@ public class HandleEqualsAndHashCode extends EclipseAnnotationHandler<EqualsAndH
     }
 
     @Override // lombok.eclipse.EclipseAnnotationHandler
-    public void handle(AnnotationValues<EqualsAndHashCode> annotation, Annotation ast, EclipseNode annotationNode) throws SecurityException, IllegalArgumentException {
+    public void handle(AnnotationValues<EqualsAndHashCode> annotation, Annotation ast, EclipseNode annotationNode) {
         HandlerUtil.handleFlagUsage(annotationNode, ConfigurationKeys.EQUALS_AND_HASH_CODE_FLAG_USAGE, "@EqualsAndHashCode");
         EqualsAndHashCode ann = annotation.getInstance();
         List<InclusionExclusionUtils.Included<EclipseNode, EqualsAndHashCode.Include>> members = InclusionExclusionUtils.handleEqualsAndHashCodeMarking(annotationNode.m10925up(), annotation, annotationNode);
@@ -137,7 +137,7 @@ public class HandleEqualsAndHashCode extends EclipseAnnotationHandler<EqualsAndH
         generateMethods(annotationNode.m10925up(), annotationNode, members, callSuper, true, cacheHashCode, fieldAccess, onParam);
     }
 
-    public void generateEqualsAndHashCodeForType(EclipseNode typeNode, EclipseNode errorNode) throws SecurityException, IllegalArgumentException {
+    public void generateEqualsAndHashCodeForType(EclipseNode typeNode, EclipseNode errorNode) {
         if (EclipseHandlerUtil.hasAnnotation((Class<? extends java.lang.annotation.Annotation>) EqualsAndHashCode.class, typeNode)) {
             return;
         }
@@ -147,7 +147,7 @@ public class HandleEqualsAndHashCode extends EclipseAnnotationHandler<EqualsAndH
         generateMethods(typeNode, errorNode, members, null, false, false, access, new ArrayList());
     }
 
-    public void generateMethods(EclipseNode typeNode, EclipseNode errorNode, List<InclusionExclusionUtils.Included<EclipseNode, EqualsAndHashCode.Include>> members, Boolean callSuper, boolean whineIfExists, boolean cacheHashCode, HandlerUtil.FieldAccess fieldAccess, List<Annotation> onParam) throws SecurityException, IllegalArgumentException {
+    public void generateMethods(EclipseNode typeNode, EclipseNode errorNode, List<InclusionExclusionUtils.Included<EclipseNode, EqualsAndHashCode.Include>> members, Boolean callSuper, boolean whineIfExists, boolean cacheHashCode, HandlerUtil.FieldAccess fieldAccess, List<Annotation> onParam) {
         TypeDeclaration typeDecl = null;
         if (typeNode.get() instanceof TypeDeclaration) {
             typeDecl = (TypeDeclaration) typeNode.get();
@@ -249,11 +249,11 @@ public class HandleEqualsAndHashCode extends EclipseAnnotationHandler<EqualsAndH
     }
 
     /* JADX WARN: Type inference failed for: r2v51, types: [char[], char[][]] */
-    public MethodDeclaration createHashCode(EclipseNode type, Collection<InclusionExclusionUtils.Included<EclipseNode, EqualsAndHashCode.Include>> members, boolean callSuper, boolean cacheHashCode, ASTNode source, HandlerUtil.FieldAccess fieldAccess) throws SecurityException {
+    public MethodDeclaration createHashCode(EclipseNode type, Collection<InclusionExclusionUtils.Included<EclipseNode, EqualsAndHashCode.Include>> members, boolean callSuper, boolean cacheHashCode, ASTNode source, HandlerUtil.FieldAccess fieldAccess) {
         MessageSend messageSendMakeIntLiteral;
         int pS = source.sourceStart;
         int pE = source.sourceEnd;
-        long p = (pS << 32) | pE;
+        long p = (((long) pS) << 32) | ((long) pE);
         MethodDeclaration method = new MethodDeclaration(type.top().get().compilationResult);
         EclipseHandlerUtil.setGeneratedBy(method, source);
         method.modifiers = EclipseHandlerUtil.toEclipseModifier(AccessLevel.PUBLIC);
@@ -482,7 +482,7 @@ public class HandleEqualsAndHashCode extends EclipseAnnotationHandler<EqualsAndH
     public Expression createResultCalculation(ASTNode source, Expression ex) {
         int pS = source.sourceStart;
         int pE = source.sourceEnd;
-        long p = (pS << 32) | pE;
+        long p = (((long) pS) << 32) | ((long) pE);
         SingleNameReference resultRef = new SingleNameReference(this.RESULT, p);
         EclipseHandlerUtil.setGeneratedBy(resultRef, source);
         SingleNameReference primeRef = new SingleNameReference(this.PRIME, p);
@@ -593,10 +593,10 @@ public class HandleEqualsAndHashCode extends EclipseAnnotationHandler<EqualsAndH
 
     /* JADX WARN: Type inference failed for: r1v252, types: [org.eclipse.jdt.internal.compiler.ast.Annotation[], org.eclipse.jdt.internal.compiler.ast.Annotation[][]] */
     /* JADX WARN: Type inference failed for: r2v50, types: [char[], char[][]] */
-    public MethodDeclaration createEquals(EclipseNode type, Collection<InclusionExclusionUtils.Included<EclipseNode, EqualsAndHashCode.Include>> members, boolean callSuper, ASTNode source, HandlerUtil.FieldAccess fieldAccess, boolean needsCanEqual, List<Annotation> onParam) throws SecurityException, IllegalArgumentException {
+    public MethodDeclaration createEquals(EclipseNode type, Collection<InclusionExclusionUtils.Included<EclipseNode, EqualsAndHashCode.Include>> members, boolean callSuper, ASTNode source, HandlerUtil.FieldAccess fieldAccess, boolean needsCanEqual, List<Annotation> onParam) {
         int pS = source.sourceStart;
         int pE = source.sourceEnd;
-        long p = (pS << 32) | pE;
+        long p = (((long) pS) << 32) | ((long) pE);
         Annotation[] onParamType = null;
         String nearest = EclipseHandlerUtil.scanForNearestAnnotation(type, "javax.annotation.ParametersAreNullableByDefault", "javax.annotation.ParametersAreNonnullByDefault");
         if ("javax.annotation.ParametersAreNonnullByDefault".equals(nearest)) {
@@ -838,7 +838,7 @@ public class HandleEqualsAndHashCode extends EclipseAnnotationHandler<EqualsAndH
     public MethodDeclaration createCanEqual(EclipseNode type, ASTNode source, List<Annotation> onParam) {
         int pS = source.sourceStart;
         int pE = source.sourceEnd;
-        long p = (pS << 32) | pE;
+        long p = (((long) pS) << 32) | ((long) pE);
         char[] otherName = "other".toCharArray();
         MethodDeclaration method = new MethodDeclaration(type.top().get().compilationResult);
         EclipseHandlerUtil.setGeneratedBy(method, source);
@@ -911,7 +911,7 @@ public class HandleEqualsAndHashCode extends EclipseAnnotationHandler<EqualsAndH
         return ifStatement;
     }
 
-    public Expression longToIntForHashCode(Expression ref1, Expression ref2, ASTNode source) throws IllegalArgumentException {
+    public Expression longToIntForHashCode(Expression ref1, Expression ref2, ASTNode source) {
         int pS = source.sourceStart;
         int pE = source.sourceEnd;
         IntLiteral int32 = EclipseHandlerUtil.makeIntLiteral("32".toCharArray(), source);

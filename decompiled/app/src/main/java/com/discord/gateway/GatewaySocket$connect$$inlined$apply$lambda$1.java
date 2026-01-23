@@ -6,8 +6,8 @@ import kotlin.jvm.functions.Function1;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: GatewaySocket.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: GatewaySocket.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class GatewaySocket$connect$$inlined$apply$lambda$1 extends Lambda implements Function1<WebSocket.Opened, Unit> {
     public final /* synthetic */ String $gatewayUrl$inlined;
     public final /* synthetic */ GatewaySocket this$0;
@@ -25,7 +25,7 @@ public final class GatewaySocket$connect$$inlined$apply$lambda$1 extends Lambda 
         return Unit.f27425a;
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final void invoke2(WebSocket.Opened opened) {
         Intrinsics3.checkNotNullParameter(opened, "it");
         GatewaySocket.access$handleWebSocketOpened(this.this$0, this.$gatewayUrl$inlined);

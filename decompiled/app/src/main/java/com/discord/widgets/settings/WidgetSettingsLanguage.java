@@ -35,29 +35,23 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 import p658rx.functions.Action1;
 
-/* compiled from: WidgetSettingsLanguage.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetSettingsLanguage.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetSettingsLanguage extends AppFragment {
     public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetSettingsLanguage.class, "binding", "getBinding()Lcom/discord/databinding/WidgetSettingsLanguageBinding;", 0)};
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
 
-    /* renamed from: binding$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
 
-    /* compiled from: WidgetSettingsLanguage.kt */
+    /* JADX INFO: compiled from: WidgetSettingsLanguage.kt */
     public static final class Companion {
         private Companion() {
         }
 
-        /* JADX WARN: Failed to restore switch over string. Please report as a decompilation issue
-        java.lang.NullPointerException: Cannot invoke "java.util.List.iterator()" because the return value of "jadx.core.dex.visitors.regions.SwitchOverStringVisitor$SwitchData.getNewCases()" is null
-        	at jadx.core.dex.visitors.regions.SwitchOverStringVisitor.restoreSwitchOverString(SwitchOverStringVisitor.java:109)
-        	at jadx.core.dex.visitors.regions.SwitchOverStringVisitor.visitRegion(SwitchOverStringVisitor.java:66)
-        	at jadx.core.dex.visitors.regions.DepthRegionTraversal.traverseIterativeStepInternal(DepthRegionTraversal.java:77)
-        	at jadx.core.dex.visitors.regions.DepthRegionTraversal.traverseIterativeStepInternal(DepthRegionTraversal.java:82)
-         */
+        /* JADX WARN: Failed to restore switch over string. Please report as a decompilation issue */
         public final String getAsStringInLocale(String locale) {
             if (locale == null) {
                 return "English, USA";
@@ -186,13 +180,7 @@ public final class WidgetSettingsLanguage extends AppFragment {
             return "English, USA";
         }
 
-        /* JADX WARN: Failed to restore switch over string. Please report as a decompilation issue
-        java.lang.NullPointerException: Cannot invoke "java.util.List.iterator()" because the return value of "jadx.core.dex.visitors.regions.SwitchOverStringVisitor$SwitchData.getNewCases()" is null
-        	at jadx.core.dex.visitors.regions.SwitchOverStringVisitor.restoreSwitchOverString(SwitchOverStringVisitor.java:109)
-        	at jadx.core.dex.visitors.regions.SwitchOverStringVisitor.visitRegion(SwitchOverStringVisitor.java:66)
-        	at jadx.core.dex.visitors.regions.DepthRegionTraversal.traverseIterativeStepInternal(DepthRegionTraversal.java:77)
-        	at jadx.core.dex.visitors.regions.DepthRegionTraversal.traverseIterativeStepInternal(DepthRegionTraversal.java:82)
-         */
+        /* JADX WARN: Failed to restore switch over string. Please report as a decompilation issue */
         @DrawableRes
         public final int getLocaleFlagResId(String locale) {
             if (locale == null) {
@@ -322,13 +310,7 @@ public final class WidgetSettingsLanguage extends AppFragment {
             return C5419R.drawable.icon_flag_en_us;
         }
 
-        /* JADX WARN: Failed to restore switch over string. Please report as a decompilation issue
-        java.lang.NullPointerException: Cannot invoke "java.util.List.iterator()" because the return value of "jadx.core.dex.visitors.regions.SwitchOverStringVisitor$SwitchData.getNewCases()" is null
-        	at jadx.core.dex.visitors.regions.SwitchOverStringVisitor.restoreSwitchOverString(SwitchOverStringVisitor.java:109)
-        	at jadx.core.dex.visitors.regions.SwitchOverStringVisitor.visitRegion(SwitchOverStringVisitor.java:66)
-        	at jadx.core.dex.visitors.regions.DepthRegionTraversal.traverseIterativeStepInternal(DepthRegionTraversal.java:77)
-        	at jadx.core.dex.visitors.regions.DepthRegionTraversal.traverseIterativeStepInternal(DepthRegionTraversal.java:82)
-         */
+        /* JADX WARN: Failed to restore switch over string. Please report as a decompilation issue */
         @StringRes
         public final int getLocaleResId(String locale) {
             if (locale == null) {
@@ -468,17 +450,17 @@ public final class WidgetSettingsLanguage extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetSettingsLanguage.kt */
-    /* renamed from: com.discord.widgets.settings.WidgetSettingsLanguage$onViewBound$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.WidgetSettingsLanguage$onViewBound$1 */
+    /* JADX INFO: compiled from: WidgetSettingsLanguage.kt */
     public static final class C96411 extends Lambda implements Function1<String, Unit> {
 
-        /* compiled from: WidgetSettingsLanguage.kt */
-        /* renamed from: com.discord.widgets.settings.WidgetSettingsLanguage$onViewBound$1$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.widgets.settings.WidgetSettingsLanguage$onViewBound$1$1, reason: invalid class name */
+        /* JADX INFO: compiled from: WidgetSettingsLanguage.kt */
         public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
             public final /* synthetic */ String $locale;
 
-            /* compiled from: WidgetSettingsLanguage.kt */
-            /* renamed from: com.discord.widgets.settings.WidgetSettingsLanguage$onViewBound$1$1$1, reason: invalid class name and collision with other inner class name */
+            /* JADX INFO: renamed from: com.discord.widgets.settings.WidgetSettingsLanguage$onViewBound$1$1$1, reason: invalid class name and collision with other inner class name */
+            /* JADX INFO: compiled from: WidgetSettingsLanguage.kt */
             public static final class C132891 extends Lambda implements Function1<ModelUserSettings, Unit> {
                 public C132891() {
                     super(1);
@@ -490,7 +472,7 @@ public final class WidgetSettingsLanguage extends AppFragment {
                     return Unit.f27425a;
                 }
 
-                /* renamed from: invoke, reason: avoid collision after fix types in other method */
+                /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
                 public final void invoke2(ModelUserSettings modelUserSettings) {
                     Intrinsics3.checkNotNullParameter(modelUserSettings, "it");
                     AppToast.m169g(WidgetSettingsLanguage.this.requireContext(), C5419R.string.language_updated, 0, null, 12);
@@ -509,7 +491,7 @@ public final class WidgetSettingsLanguage extends AppFragment {
                 return Unit.f27425a;
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2() {
                 ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.ui$default(ObservableExtensionsKt.restSubscribeOn$default(RestAPI.INSTANCE.getApi().updateUserSettings(RestAPIParams.UserSettings.INSTANCE.createWithLocale(this.$locale)), false, 1, null), WidgetSettingsLanguage.this, null, 2, null), StoreUserSettings.class, WidgetSettingsLanguage.this.requireContext(), (Function1) null, (Function1) null, (Function0) null, (Function0) null, new C132891(), 60, (Object) null);
             }
@@ -525,7 +507,7 @@ public final class WidgetSettingsLanguage extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(String str) {
             Intrinsics3.checkNotNullParameter(str, "locale");
             StoreStream.INSTANCE.getUserSettingsSystem().setLocale(str, true, new AnonymousClass1(str));
@@ -536,8 +518,8 @@ public final class WidgetSettingsLanguage extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetSettingsLanguage.kt */
-    /* renamed from: com.discord.widgets.settings.WidgetSettingsLanguage$onViewBoundOrOnResume$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.WidgetSettingsLanguage$onViewBoundOrOnResume$1 */
+    /* JADX INFO: compiled from: WidgetSettingsLanguage.kt */
     public static final class C96421 extends Lambda implements Function1<StoreUserSettingsSystem.Settings, Unit> {
         public C96421() {
             super(1);
@@ -549,15 +531,15 @@ public final class WidgetSettingsLanguage extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(StoreUserSettingsSystem.Settings settings) {
             Intrinsics3.checkNotNullParameter(settings, "settings");
             WidgetSettingsLanguage.access$configureUI(WidgetSettingsLanguage.this, settings.getLocale());
         }
     }
 
-    /* compiled from: WidgetSettingsLanguage.kt */
-    /* renamed from: com.discord.widgets.settings.WidgetSettingsLanguage$onViewBoundOrOnResume$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.WidgetSettingsLanguage$onViewBoundOrOnResume$2 */
+    /* JADX INFO: compiled from: WidgetSettingsLanguage.kt */
     public static final class C96432<T> implements Action1<Boolean> {
         public static final C96432 INSTANCE = new C96432();
 
@@ -566,7 +548,7 @@ public final class WidgetSettingsLanguage extends AppFragment {
             call2(bool);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final void call2(Boolean bool) {
             StoreUserSettingsSystem userSettingsSystem = StoreStream.INSTANCE.getUserSettingsSystem();
             Intrinsics3.checkNotNullExpressionValue(bool, "checked");
@@ -574,8 +556,8 @@ public final class WidgetSettingsLanguage extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetSettingsLanguage.kt */
-    /* renamed from: com.discord.widgets.settings.WidgetSettingsLanguage$onViewBoundOrOnResume$3 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.WidgetSettingsLanguage$onViewBoundOrOnResume$3 */
+    /* JADX INFO: compiled from: WidgetSettingsLanguage.kt */
     public static final class ViewOnClickListenerC96443 implements View.OnClickListener {
         public ViewOnClickListenerC96443() {
         }

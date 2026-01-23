@@ -31,8 +31,8 @@ import com.google.android.material.shape.MarkerEdgeTreatment;
 import com.google.android.material.shape.MaterialShapeDrawable;
 import com.google.android.material.shape.OffsetEdgeTreatment;
 
+/* JADX INFO: loaded from: classes3.dex */
 @RestrictTo({RestrictTo.Scope.LIBRARY_GROUP})
-/* loaded from: classes3.dex */
 public class TooltipDrawable extends MaterialShapeDrawable implements TextDrawableHelper.TextDrawableDelegate {
 
     @StyleRes
@@ -70,7 +70,7 @@ public class TooltipDrawable extends MaterialShapeDrawable implements TextDrawab
     private float tooltipScaleX;
     private float tooltipScaleY;
 
-    /* renamed from: com.google.android.material.tooltip.TooltipDrawable$a */
+    /* JADX INFO: renamed from: com.google.android.material.tooltip.TooltipDrawable$a */
     public class ViewOnLayoutChangeListenerC11032a implements View.OnLayoutChangeListener {
         public ViewOnLayoutChangeListenerC11032a() {
         }
@@ -139,7 +139,7 @@ public class TooltipDrawable extends MaterialShapeDrawable implements TextDrawab
 
     private EdgeTreatment createMarkerEdge() {
         float f = -calculatePointerOffset();
-        float fWidth = ((float) (getBounds().width() - (Math.sqrt(2.0d) * this.arrowSize))) / 2.0f;
+        float fWidth = ((float) (((double) getBounds().width()) - (Math.sqrt(2.0d) * ((double) this.arrowSize)))) / 2.0f;
         return new OffsetEdgeTreatment(new MarkerEdgeTreatment(this.arrowSize), Math.min(Math.max(f, -fWidth), fWidth));
     }
 
@@ -198,7 +198,7 @@ public class TooltipDrawable extends MaterialShapeDrawable implements TextDrawab
     public void draw(@NonNull Canvas canvas) {
         canvas.save();
         float fCalculatePointerOffset = calculatePointerOffset();
-        float f = (float) (-((Math.sqrt(2.0d) * this.arrowSize) - this.arrowSize));
+        float f = (float) (-((Math.sqrt(2.0d) * ((double) this.arrowSize)) - ((double) this.arrowSize)));
         canvas.scale(this.tooltipScaleX, this.tooltipScaleY, (getBounds().width() * 0.5f) + getBounds().left, (getBounds().height() * this.tooltipPivotY) + getBounds().top);
         canvas.translate(fCalculatePointerOffset, f);
         super.draw(canvas);

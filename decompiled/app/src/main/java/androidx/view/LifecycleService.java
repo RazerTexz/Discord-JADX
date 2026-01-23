@@ -7,7 +7,7 @@ import androidx.annotation.CallSuper;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class LifecycleService extends Service implements LifecycleOwner {
     private final ServiceLifecycleDispatcher mDispatcher = new ServiceLifecycleDispatcher(this);
 

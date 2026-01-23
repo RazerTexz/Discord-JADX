@@ -13,8 +13,8 @@ import com.discord.databinding.ViewCommunityGetStartedHeaderBinding;
 import kotlin.jvm.internal.DefaultConstructorMarker;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: CommunityGetStartedHeaderIconView.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: CommunityGetStartedHeaderIconView.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class CommunityGetStartedHeaderIconView extends CardView {
     private final ViewCommunityGetStartedHeaderBinding binding;
 

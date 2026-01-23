@@ -5,9 +5,9 @@ import com.discord.api.science.AnalyticsSchema;
 import kotlin.jvm.functions.Function0;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetServerSettingsModeration.kt */
-/* renamed from: com.discord.widgets.servers.WidgetServerSettingsModeration$loggingConfig$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.servers.WidgetServerSettingsModeration$loggingConfig$1, reason: use source file name */
+/* JADX INFO: compiled from: WidgetServerSettingsModeration.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetServerSettingsModeration5 extends Lambda implements Function0<AnalyticsSchema> {
     public static final WidgetServerSettingsModeration5 INSTANCE = new WidgetServerSettingsModeration5();
 

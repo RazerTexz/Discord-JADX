@@ -10,12 +10,12 @@ import p007b.p008a.p050t.p051a.JavaScript2;
 import p507d0.p592z.p594d.Intrinsics3;
 
 /* JADX INFO: Add missing generic type declarations: [RC, S] */
-/* compiled from: JavaScript.kt */
-/* renamed from: b.a.t.a.l, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.a.t.a.l, reason: use source file name */
+/* JADX INFO: compiled from: JavaScript.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class JavaScript3<RC, S> extends Rule<RC, Node<RC>, S> {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final /* synthetic */ CodeStyleProviders f1940a;
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */

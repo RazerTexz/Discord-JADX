@@ -8,36 +8,36 @@ import androidx.constraintlayout.widget.Barrier;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.viewbinding.ViewBinding;
 
-/* compiled from: LayoutVoiceBottomSheetHeaderBinding.java */
-/* renamed from: b.a.i.u0, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.a.i.u0, reason: use source file name */
+/* JADX INFO: compiled from: LayoutVoiceBottomSheetHeaderBinding.java */
+/* JADX INFO: loaded from: classes.dex */
 public final class LayoutVoiceBottomSheetHeaderBinding implements ViewBinding {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     @NonNull
     public final ConstraintLayout f1273a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     @NonNull
     public final ImageView f1274b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     @NonNull
     public final ImageView f1275c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     @NonNull
     public final ImageView f1276d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     @NonNull
     public final ImageView f1277e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     @NonNull
     public final TextView f1278f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     @NonNull
     public final TextView f1279g;
 

@@ -7,9 +7,9 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 import p658rx.Subscription;
 
-/* compiled from: StickerView.kt */
-/* renamed from: b.a.y.q0.b, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: b.a.y.q0.b, reason: use source file name */
+/* JADX INFO: compiled from: StickerView.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class StickerView3 extends Lambda implements Function1<Subscription, Unit> {
     public final /* synthetic */ StickerView this$0;
 

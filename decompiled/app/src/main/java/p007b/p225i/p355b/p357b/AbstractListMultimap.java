@@ -7,9 +7,9 @@ import java.util.SortedMap;
 import org.checkerframework.checker.nullness.compatqual.NullableDecl;
 import p007b.p225i.p355b.p357b.AbstractMapBasedMultimap2;
 
-/* compiled from: AbstractListMultimap.java */
-/* renamed from: b.i.b.b.c, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.b.b.c, reason: use source file name */
+/* JADX INFO: compiled from: AbstractListMultimap.java */
+/* JADX INFO: loaded from: classes3.dex */
 public abstract class AbstractListMultimap<K, V> extends AbstractMapBasedMultimap2<K, V> implements Multimap {
     private static final long serialVersionUID = 6588350623831699109L;
 
@@ -18,7 +18,7 @@ public abstract class AbstractListMultimap<K, V> extends AbstractMapBasedMultima
     }
 
     @Override // p007b.p225i.p355b.p357b.AbstractMultimap, p007b.p225i.p355b.p357b.Multimap
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public Map<K, Collection<V>> mo6216a() {
         Map<K, Collection<V>> dVar = this.f12008l;
         if (dVar == null) {

@@ -5,8 +5,8 @@ import android.util.AttributeSet;
 import android.widget.LinearLayout;
 import androidx.annotation.RestrictTo;
 
+/* JADX INFO: loaded from: classes.dex */
 @RestrictTo({RestrictTo.Scope.LIBRARY_GROUP_PREFIX})
-/* loaded from: classes.dex */
 public class UnPressableLinearLayout extends LinearLayout {
     public UnPressableLinearLayout(Context context) {
         this(context, null);

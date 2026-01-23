@@ -6,9 +6,9 @@ import kotlin.jvm.functions.Function1;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: StageChannelJoinHelper.kt */
-/* renamed from: com.discord.widgets.stage.StageChannelJoinHelper$connectToStage$2$channelVoiceStateUserIds$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.stage.StageChannelJoinHelper$connectToStage$2$channelVoiceStateUserIds$1, reason: use source file name */
+/* JADX INFO: compiled from: StageChannelJoinHelper.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class StageChannelJoinHelper2 extends Lambda implements Function1<VoiceState, Boolean> {
     public final /* synthetic */ Channel $channel;
 
@@ -23,7 +23,7 @@ public final class StageChannelJoinHelper2 extends Lambda implements Function1<V
         return Boolean.valueOf(invoke2(voiceState));
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final boolean invoke2(VoiceState voiceState) {
         Intrinsics3.checkNotNullParameter(voiceState, "it");
         Long channelId = voiceState.getChannelId();

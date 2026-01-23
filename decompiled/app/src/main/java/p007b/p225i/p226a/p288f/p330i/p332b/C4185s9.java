@@ -5,9 +5,9 @@ import android.os.Parcelable;
 import com.google.android.gms.measurement.internal.zzku;
 import p007b.p085c.p086a.p087a0.AnimatableValueParser;
 
-/* compiled from: com.google.android.gms:play-services-measurement-impl@@18.0.0 */
-/* renamed from: b.i.a.f.i.b.s9 */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.i.b.s9 */
+/* JADX INFO: compiled from: com.google.android.gms:play-services-measurement-impl@@18.0.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public final class C4185s9 implements Parcelable.Creator<zzku> {
     @Override // android.os.Parcelable.Creator
     public final zzku createFromParcel(Parcel parcel) {

@@ -23,14 +23,14 @@ import p507d0.p592z.p594d.Lambda;
 import p658rx.Observable;
 import p658rx.functions.Func2;
 
-/* compiled from: SettingsBillingViewModel.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: SettingsBillingViewModel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class SettingsBillingViewModel extends AppViewModel<ViewState> {
     private final StorePaymentSources storePaymentSources;
     private final StoreSubscriptions storeSubscriptions;
 
-    /* compiled from: SettingsBillingViewModel.kt */
-    /* renamed from: com.discord.widgets.settings.billing.SettingsBillingViewModel$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.billing.SettingsBillingViewModel$1 */
+    /* JADX INFO: compiled from: SettingsBillingViewModel.kt */
     public static final class C98041<T1, T2, R> implements Func2<StorePaymentSources.PaymentSourcesState, StoreSubscriptions.SubscriptionsState, StoreState> {
         public static final C98041 INSTANCE = new C98041();
 
@@ -39,7 +39,7 @@ public final class SettingsBillingViewModel extends AppViewModel<ViewState> {
             return call2(paymentSourcesState, subscriptionsState);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final StoreState call2(StorePaymentSources.PaymentSourcesState paymentSourcesState, StoreSubscriptions.SubscriptionsState subscriptionsState) {
             Intrinsics3.checkNotNullExpressionValue(paymentSourcesState, "paymentSourcesState");
             Intrinsics3.checkNotNullExpressionValue(subscriptionsState, "subscriptionsState");
@@ -47,8 +47,8 @@ public final class SettingsBillingViewModel extends AppViewModel<ViewState> {
         }
     }
 
-    /* compiled from: SettingsBillingViewModel.kt */
-    /* renamed from: com.discord.widgets.settings.billing.SettingsBillingViewModel$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.billing.SettingsBillingViewModel$2 */
+    /* JADX INFO: compiled from: SettingsBillingViewModel.kt */
     public static final class C98052 extends Lambda implements Function1<StoreState, Unit> {
         public C98052() {
             super(1);
@@ -60,14 +60,14 @@ public final class SettingsBillingViewModel extends AppViewModel<ViewState> {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(StoreState storeState) {
             Intrinsics3.checkNotNullParameter(storeState, "storeState");
             SettingsBillingViewModel.access$handleStoreState(SettingsBillingViewModel.this, storeState);
         }
     }
 
-    /* compiled from: SettingsBillingViewModel.kt */
+    /* JADX INFO: compiled from: SettingsBillingViewModel.kt */
     public static final /* data */ class StoreState {
         private final StorePaymentSources.PaymentSourcesState paymentSourceState;
         private final StoreSubscriptions.SubscriptionsState subscriptionsState;
@@ -89,12 +89,12 @@ public final class SettingsBillingViewModel extends AppViewModel<ViewState> {
             return storeState.copy(paymentSourcesState, subscriptionsState);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final StorePaymentSources.PaymentSourcesState getPaymentSourceState() {
             return this.paymentSourceState;
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final StoreSubscriptions.SubscriptionsState getSubscriptionsState() {
             return this.subscriptionsState;
         }
@@ -141,10 +141,10 @@ public final class SettingsBillingViewModel extends AppViewModel<ViewState> {
         }
     }
 
-    /* compiled from: SettingsBillingViewModel.kt */
+    /* JADX INFO: compiled from: SettingsBillingViewModel.kt */
     public static abstract class ViewState {
 
-        /* compiled from: SettingsBillingViewModel.kt */
+        /* JADX INFO: compiled from: SettingsBillingViewModel.kt */
         public static final class Failure extends ViewState {
             public static final Failure INSTANCE = new Failure();
 
@@ -153,7 +153,7 @@ public final class SettingsBillingViewModel extends AppViewModel<ViewState> {
             }
         }
 
-        /* compiled from: SettingsBillingViewModel.kt */
+        /* JADX INFO: compiled from: SettingsBillingViewModel.kt */
         public static final /* data */ class Loaded extends ViewState {
             private final List<PaymentSourceAdapter.Item> paymentSourceItems;
 
@@ -206,7 +206,7 @@ public final class SettingsBillingViewModel extends AppViewModel<ViewState> {
             }
         }
 
-        /* compiled from: SettingsBillingViewModel.kt */
+        /* JADX INFO: compiled from: SettingsBillingViewModel.kt */
         public static final class Loading extends ViewState {
             public static final Loading INSTANCE = new Loading();
 

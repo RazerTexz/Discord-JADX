@@ -33,26 +33,26 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p658rx.functions.Action1;
 import p658rx.functions.Action2;
 
-/* compiled from: WidgetServerSettingsEmojisEdit.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetServerSettingsEmojisEdit.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetServerSettingsEmojisEdit extends AppFragment {
     public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetServerSettingsEmojisEdit.class, "binding", "getBinding()Lcom/discord/databinding/WidgetServerSettingsEmojisEditBinding;", 0)};
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private static final Regex EMOJI_RE = new Regex("[^A-Za-z0-9_]");
     private static final String EXTRA_EMOJI_ALIAS = "EXTRA_EMOJI_ALIAS";
     private static final String EXTRA_EMOJI_ID = "EXTRA_EMOJI_ID";
     private static final String EXTRA_GUILD_ID = "EXTRA_GUILD_ID";
 
-    /* renamed from: binding$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
     private long emojiId;
     private String emojiName;
     private long guildId;
     private final StatefulViews state;
 
-    /* compiled from: WidgetServerSettingsEmojisEdit.kt */
+    /* JADX INFO: compiled from: WidgetServerSettingsEmojisEdit.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -70,8 +70,8 @@ public final class WidgetServerSettingsEmojisEdit extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetServerSettingsEmojisEdit.kt */
-    /* renamed from: com.discord.widgets.servers.WidgetServerSettingsEmojisEdit$configureMenu$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.WidgetServerSettingsEmojisEdit$configureMenu$1 */
+    /* JADX INFO: compiled from: WidgetServerSettingsEmojisEdit.kt */
     public static final class C92551<T1, T2> implements Action2<MenuItem, Context> {
         public C92551() {
         }
@@ -81,7 +81,7 @@ public final class WidgetServerSettingsEmojisEdit extends AppFragment {
             call2(menuItem, context);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final void call2(MenuItem menuItem, Context context) {
             Intrinsics3.checkNotNullExpressionValue(menuItem, "menuItem");
             if (menuItem.getItemId() != C5419R.id.menu_server_settings_emoji_delete) {
@@ -91,8 +91,8 @@ public final class WidgetServerSettingsEmojisEdit extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetServerSettingsEmojisEdit.kt */
-    /* renamed from: com.discord.widgets.servers.WidgetServerSettingsEmojisEdit$deleteEmoji$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.WidgetServerSettingsEmojisEdit$deleteEmoji$1 */
+    /* JADX INFO: compiled from: WidgetServerSettingsEmojisEdit.kt */
     public static final class C92561<T> implements Action1<Void> {
         public C92561() {
         }
@@ -102,7 +102,7 @@ public final class WidgetServerSettingsEmojisEdit extends AppFragment {
             call2(r1);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final void call2(Void r5) throws Exception {
             StoreStream.INSTANCE.getGuildEmojis().deleteEmoji(WidgetServerSettingsEmojisEdit.access$getGuildId$p(WidgetServerSettingsEmojisEdit.this), WidgetServerSettingsEmojisEdit.access$getEmojiId$p(WidgetServerSettingsEmojisEdit.this));
             AppActivity appActivity = WidgetServerSettingsEmojisEdit.this.getAppActivity();
@@ -112,8 +112,8 @@ public final class WidgetServerSettingsEmojisEdit extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetServerSettingsEmojisEdit.kt */
-    /* renamed from: com.discord.widgets.servers.WidgetServerSettingsEmojisEdit$handleSaveAlias$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.WidgetServerSettingsEmojisEdit$handleSaveAlias$1 */
+    /* JADX INFO: compiled from: WidgetServerSettingsEmojisEdit.kt */
     public static final class C92571<T> implements Action1<ModelEmojiGuild> {
         public final /* synthetic */ String $sanitizedName;
 
@@ -126,14 +126,14 @@ public final class WidgetServerSettingsEmojisEdit extends AppFragment {
             call2(modelEmojiGuild);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final void call2(ModelEmojiGuild modelEmojiGuild) {
             WidgetServerSettingsEmojisEdit.access$onSaveSuccess(WidgetServerSettingsEmojisEdit.this, this.$sanitizedName);
         }
     }
 
-    /* compiled from: WidgetServerSettingsEmojisEdit.kt */
-    /* renamed from: com.discord.widgets.servers.WidgetServerSettingsEmojisEdit$onViewBound$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.WidgetServerSettingsEmojisEdit$onViewBound$1 */
+    /* JADX INFO: compiled from: WidgetServerSettingsEmojisEdit.kt */
     public static final class ViewOnClickListenerC92581 implements View.OnClickListener {
         public ViewOnClickListenerC92581() {
         }

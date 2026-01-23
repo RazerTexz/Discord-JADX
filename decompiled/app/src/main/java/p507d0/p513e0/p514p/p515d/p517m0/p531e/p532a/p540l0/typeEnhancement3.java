@@ -4,15 +4,15 @@ import p007b.p100d.p104b.p105a.outline;
 import p507d0.p513e0.p514p.p515d.p517m0.p521c.p522g1.Annotations4;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: typeEnhancement.kt */
-/* renamed from: d0.e0.p.d.m0.e.a.l0.c, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.e.a.l0.c, reason: use source file name */
+/* JADX INFO: compiled from: typeEnhancement.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class typeEnhancement3<T> {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final T f23443a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final Annotations4 f23444b;
 
     public typeEnhancement3(T t, Annotations4 annotations4) {

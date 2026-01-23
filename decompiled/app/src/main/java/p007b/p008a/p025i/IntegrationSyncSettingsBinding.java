@@ -7,32 +7,32 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.viewbinding.ViewBinding;
 
-/* compiled from: IntegrationSyncSettingsBinding.java */
-/* renamed from: b.a.i.d0, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.a.i.d0, reason: use source file name */
+/* JADX INFO: compiled from: IntegrationSyncSettingsBinding.java */
+/* JADX INFO: loaded from: classes.dex */
 public final class IntegrationSyncSettingsBinding implements ViewBinding {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     @NonNull
     public final LinearLayout f765a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     @NonNull
     public final TextView f766b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     @NonNull
     public final TextView f767c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     @NonNull
     public final RelativeLayout f768d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     @NonNull
     public final TextView f769e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     @NonNull
     public final RelativeLayout f770f;
 

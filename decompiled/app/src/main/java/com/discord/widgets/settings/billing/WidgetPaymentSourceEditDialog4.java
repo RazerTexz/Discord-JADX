@@ -5,9 +5,9 @@ import kotlin.jvm.functions.Function0;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetPaymentSourceEditDialog.kt */
-/* renamed from: com.discord.widgets.settings.billing.WidgetPaymentSourceEditDialog$paymentSourceId$2, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.settings.billing.WidgetPaymentSourceEditDialog$paymentSourceId$2, reason: use source file name */
+/* JADX INFO: compiled from: WidgetPaymentSourceEditDialog.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetPaymentSourceEditDialog4 extends Lambda implements Function0<String> {
     public final /* synthetic */ WidgetPaymentSourceEditDialog this$0;
 
@@ -23,7 +23,7 @@ public final class WidgetPaymentSourceEditDialog4 extends Lambda implements Func
     }
 
     @Override // kotlin.jvm.functions.Function0
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final String invoke2() {
         String string;
         Bundle arguments = this.this$0.getArguments();

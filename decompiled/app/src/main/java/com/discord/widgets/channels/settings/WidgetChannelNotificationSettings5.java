@@ -8,9 +8,9 @@ import kotlin.jvm.functions.Function0;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetChannelNotificationSettings.kt */
-/* renamed from: com.discord.widgets.channels.settings.WidgetChannelNotificationSettings$configureUI$onMute$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.channels.settings.WidgetChannelNotificationSettings$configureUI$onMute$1, reason: use source file name */
+/* JADX INFO: compiled from: WidgetChannelNotificationSettings.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetChannelNotificationSettings5 extends Lambda implements Function0<Unit> {
     public final /* synthetic */ WidgetChannelNotificationSettings.Model $this_configureUI;
     public final /* synthetic */ WidgetChannelNotificationSettings this$0;
@@ -28,7 +28,7 @@ public final class WidgetChannelNotificationSettings5 extends Lambda implements 
         return Unit.f27425a;
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final void invoke2() {
         WidgetMuteSettingsSheet.Companion companion = WidgetMuteSettingsSheet.INSTANCE;
         long id2 = this.$this_configureUI.getChannel().getId();

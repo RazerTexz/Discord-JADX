@@ -16,7 +16,7 @@ import java.util.Set;
 import java.util.UUID;
 import java.util.concurrent.Executor;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public final class WorkerParameters {
 
     @NonNull

@@ -14,26 +14,26 @@ import p007b.p225i.p226a.p242c.MediaMetadata;
 import p007b.p225i.p226a.p242c.p259f3.Util2;
 import p007b.p225i.p226a.p242c.p279z2.Metadata2;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public final class SlowMotionData implements Metadata.Entry {
     public static final Parcelable.Creator<SlowMotionData> CREATOR = new C10740a();
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final List<Segment> f20013j;
 
     public static final class Segment implements Parcelable {
         public static final Parcelable.Creator<Segment> CREATOR = new C10739a();
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public final long f20014j;
 
-        /* renamed from: k */
+        /* JADX INFO: renamed from: k */
         public final long f20015k;
 
-        /* renamed from: l */
+        /* JADX INFO: renamed from: l */
         public final int f20016l;
 
-        /* renamed from: com.google.android.exoplayer2.metadata.mp4.SlowMotionData$Segment$a */
+        /* JADX INFO: renamed from: com.google.android.exoplayer2.metadata.mp4.SlowMotionData$Segment$a */
         public class C10739a implements Parcelable.Creator<Segment> {
             @Override // android.os.Parcelable.Creator
             public Segment createFromParcel(Parcel parcel) {
@@ -85,7 +85,7 @@ public final class SlowMotionData implements Metadata.Entry {
         }
     }
 
-    /* renamed from: com.google.android.exoplayer2.metadata.mp4.SlowMotionData$a */
+    /* JADX INFO: renamed from: com.google.android.exoplayer2.metadata.mp4.SlowMotionData$a */
     public class C10740a implements Parcelable.Creator<SlowMotionData> {
         @Override // android.os.Parcelable.Creator
         public SlowMotionData createFromParcel(Parcel parcel) {
@@ -142,13 +142,13 @@ public final class SlowMotionData implements Metadata.Entry {
     }
 
     @Override // com.google.android.exoplayer2.metadata.Metadata.Entry
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public /* synthetic */ void mo8878n(MediaMetadata.b bVar) {
         Metadata2.m3894c(this, bVar);
     }
 
     @Override // com.google.android.exoplayer2.metadata.Metadata.Entry
-    /* renamed from: o0 */
+    /* JADX INFO: renamed from: o0 */
     public /* synthetic */ byte[] mo8879o0() {
         return Metadata2.m3892a(this);
     }
@@ -164,7 +164,7 @@ public final class SlowMotionData implements Metadata.Entry {
     }
 
     @Override // com.google.android.exoplayer2.metadata.Metadata.Entry
-    /* renamed from: y */
+    /* JADX INFO: renamed from: y */
     public /* synthetic */ Format2 mo8880y() {
         return Metadata2.m3893b(this);
     }

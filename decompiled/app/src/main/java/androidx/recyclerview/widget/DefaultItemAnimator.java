@@ -14,7 +14,7 @@ import java.util.Iterator;
 import java.util.List;
 import p007b.p100d.p104b.p105a.outline;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class DefaultItemAnimator extends SimpleItemAnimator {
     private static final boolean DEBUG = false;
     private static TimeInterpolator sDefaultInterpolator;
@@ -30,7 +30,7 @@ public class DefaultItemAnimator extends SimpleItemAnimator {
     public ArrayList<RecyclerView.ViewHolder> mRemoveAnimations = new ArrayList<>();
     public ArrayList<RecyclerView.ViewHolder> mChangeAnimations = new ArrayList<>();
 
-    /* renamed from: androidx.recyclerview.widget.DefaultItemAnimator$1 */
+    /* JADX INFO: renamed from: androidx.recyclerview.widget.DefaultItemAnimator$1 */
     public class RunnableC05381 implements Runnable {
         public final /* synthetic */ ArrayList val$moves;
 
@@ -48,7 +48,7 @@ public class DefaultItemAnimator extends SimpleItemAnimator {
         }
     }
 
-    /* renamed from: androidx.recyclerview.widget.DefaultItemAnimator$2 */
+    /* JADX INFO: renamed from: androidx.recyclerview.widget.DefaultItemAnimator$2 */
     public class RunnableC05392 implements Runnable {
         public final /* synthetic */ ArrayList val$changes;
 
@@ -67,7 +67,7 @@ public class DefaultItemAnimator extends SimpleItemAnimator {
         }
     }
 
-    /* renamed from: androidx.recyclerview.widget.DefaultItemAnimator$3 */
+    /* JADX INFO: renamed from: androidx.recyclerview.widget.DefaultItemAnimator$3 */
     public class RunnableC05403 implements Runnable {
         public final /* synthetic */ ArrayList val$additions;
 
@@ -86,7 +86,7 @@ public class DefaultItemAnimator extends SimpleItemAnimator {
         }
     }
 
-    /* renamed from: androidx.recyclerview.widget.DefaultItemAnimator$4 */
+    /* JADX INFO: renamed from: androidx.recyclerview.widget.DefaultItemAnimator$4 */
     public class C05414 extends AnimatorListenerAdapter {
         public final /* synthetic */ ViewPropertyAnimator val$animation;
         public final /* synthetic */ RecyclerView.ViewHolder val$holder;
@@ -113,7 +113,7 @@ public class DefaultItemAnimator extends SimpleItemAnimator {
         }
     }
 
-    /* renamed from: androidx.recyclerview.widget.DefaultItemAnimator$5 */
+    /* JADX INFO: renamed from: androidx.recyclerview.widget.DefaultItemAnimator$5 */
     public class C05425 extends AnimatorListenerAdapter {
         public final /* synthetic */ ViewPropertyAnimator val$animation;
         public final /* synthetic */ RecyclerView.ViewHolder val$holder;
@@ -144,7 +144,7 @@ public class DefaultItemAnimator extends SimpleItemAnimator {
         }
     }
 
-    /* renamed from: androidx.recyclerview.widget.DefaultItemAnimator$6 */
+    /* JADX INFO: renamed from: androidx.recyclerview.widget.DefaultItemAnimator$6 */
     public class C05436 extends AnimatorListenerAdapter {
         public final /* synthetic */ ViewPropertyAnimator val$animation;
         public final /* synthetic */ int val$deltaX;
@@ -184,7 +184,7 @@ public class DefaultItemAnimator extends SimpleItemAnimator {
         }
     }
 
-    /* renamed from: androidx.recyclerview.widget.DefaultItemAnimator$7 */
+    /* JADX INFO: renamed from: androidx.recyclerview.widget.DefaultItemAnimator$7 */
     public class C05447 extends AnimatorListenerAdapter {
         public final /* synthetic */ ChangeInfo val$changeInfo;
         public final /* synthetic */ ViewPropertyAnimator val$oldViewAnim;
@@ -213,7 +213,7 @@ public class DefaultItemAnimator extends SimpleItemAnimator {
         }
     }
 
-    /* renamed from: androidx.recyclerview.widget.DefaultItemAnimator$8 */
+    /* JADX INFO: renamed from: androidx.recyclerview.widget.DefaultItemAnimator$8 */
     public class C05458 extends AnimatorListenerAdapter {
         public final /* synthetic */ ChangeInfo val$changeInfo;
         public final /* synthetic */ View val$newView;

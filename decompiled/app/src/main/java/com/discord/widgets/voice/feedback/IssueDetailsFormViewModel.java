@@ -7,18 +7,18 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p658rx.Observable;
 import p658rx.subjects.PublishSubject;
 
-/* compiled from: IssueDetailsFormViewModel.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: IssueDetailsFormViewModel.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class IssueDetailsFormViewModel extends AppViewModel<Unit> {
     private final PublishSubject<Event> eventSubject;
     private final FeedbackSubmitter feedbackSubmitter;
     private final PendingFeedback pendingFeedback;
     private boolean submitted;
 
-    /* compiled from: IssueDetailsFormViewModel.kt */
+    /* JADX INFO: compiled from: IssueDetailsFormViewModel.kt */
     public static abstract class Event {
 
-        /* compiled from: IssueDetailsFormViewModel.kt */
+        /* JADX INFO: compiled from: IssueDetailsFormViewModel.kt */
         public static final class Close extends Event {
             public static final Close INSTANCE = new Close();
 

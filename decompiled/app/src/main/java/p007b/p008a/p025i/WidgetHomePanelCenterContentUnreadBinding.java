@@ -5,12 +5,12 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.viewbinding.ViewBinding;
 
-/* compiled from: WidgetHomePanelCenterContentUnreadBinding.java */
-/* renamed from: b.a.i.k5, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.a.i.k5, reason: use source file name */
+/* JADX INFO: compiled from: WidgetHomePanelCenterContentUnreadBinding.java */
+/* JADX INFO: loaded from: classes.dex */
 public final class WidgetHomePanelCenterContentUnreadBinding implements ViewBinding {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     @NonNull
     public final TextView f1007a;
 

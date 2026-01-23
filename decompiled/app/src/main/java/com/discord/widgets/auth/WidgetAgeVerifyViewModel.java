@@ -33,18 +33,18 @@ import p507d0.p592z.p594d.Lambda;
 import p658rx.Observable;
 import p658rx.subjects.PublishSubject;
 
-/* compiled from: WidgetAgeVerifyViewModel.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetAgeVerifyViewModel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetAgeVerifyViewModel extends AppViewModel<ViewState> {
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private final PublishSubject<Event> eventsSubject;
     private final RestAPI restAPI;
     private final StoreAuthentication storeAuth;
 
-    /* compiled from: WidgetAgeVerifyViewModel.kt */
-    /* renamed from: com.discord.widgets.auth.WidgetAgeVerifyViewModel$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.auth.WidgetAgeVerifyViewModel$1 */
+    /* JADX INFO: compiled from: WidgetAgeVerifyViewModel.kt */
     public static final class C71621 extends Lambda implements Function1<StoreState, Unit> {
         public C71621() {
             super(1);
@@ -56,14 +56,14 @@ public final class WidgetAgeVerifyViewModel extends AppViewModel<ViewState> {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(StoreState storeState) {
             Intrinsics3.checkNotNullParameter(storeState, "storeState");
             WidgetAgeVerifyViewModel.access$handleStoreState(WidgetAgeVerifyViewModel.this, storeState);
         }
     }
 
-    /* compiled from: WidgetAgeVerifyViewModel.kt */
+    /* JADX INFO: compiled from: WidgetAgeVerifyViewModel.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -80,10 +80,10 @@ public final class WidgetAgeVerifyViewModel extends AppViewModel<ViewState> {
         }
     }
 
-    /* compiled from: WidgetAgeVerifyViewModel.kt */
+    /* JADX INFO: compiled from: WidgetAgeVerifyViewModel.kt */
     public static abstract class Event {
 
-        /* compiled from: WidgetAgeVerifyViewModel.kt */
+        /* JADX INFO: compiled from: WidgetAgeVerifyViewModel.kt */
         public static final class Verified extends Event {
             public static final Verified INSTANCE = new Verified();
 
@@ -100,7 +100,7 @@ public final class WidgetAgeVerifyViewModel extends AppViewModel<ViewState> {
         }
     }
 
-    /* compiled from: WidgetAgeVerifyViewModel.kt */
+    /* JADX INFO: compiled from: WidgetAgeVerifyViewModel.kt */
     public static final /* data */ class StoreState {
         private final boolean authed;
         private final NsfwAllowance nsfwAllowed;
@@ -126,17 +126,17 @@ public final class WidgetAgeVerifyViewModel extends AppViewModel<ViewState> {
             return storeState.copy(channel, nsfwAllowance, z2);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final Channel getSafeChannel() {
             return this.safeChannel;
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final NsfwAllowance getNsfwAllowed() {
             return this.nsfwAllowed;
         }
 
-        /* renamed from: component3, reason: from getter */
+        /* JADX INFO: renamed from: component3, reason: from getter */
         public final boolean getAuthed() {
             return this.authed;
         }
@@ -170,17 +170,20 @@ public final class WidgetAgeVerifyViewModel extends AppViewModel<ViewState> {
         }
 
         /* JADX WARN: Multi-variable type inference failed */
+        /* JADX WARN: Type inference failed for: r1v3, types: [int] */
+        /* JADX WARN: Type inference failed for: r1v4 */
+        /* JADX WARN: Type inference failed for: r1v6 */
         public int hashCode() {
             Channel channel = this.safeChannel;
             int iHashCode = (channel != null ? channel.hashCode() : 0) * 31;
             NsfwAllowance nsfwAllowance = this.nsfwAllowed;
             int iHashCode2 = (iHashCode + (nsfwAllowance != null ? nsfwAllowance.hashCode() : 0)) * 31;
             boolean z2 = this.authed;
-            int i = z2;
-            if (z2 != 0) {
-                i = 1;
+            ?? r1 = z2;
+            if (z2) {
+                r1 = 1;
             }
-            return iHashCode2 + i;
+            return iHashCode2 + r1;
         }
 
         public String toString() {
@@ -193,7 +196,7 @@ public final class WidgetAgeVerifyViewModel extends AppViewModel<ViewState> {
         }
     }
 
-    /* compiled from: WidgetAgeVerifyViewModel.kt */
+    /* JADX INFO: compiled from: WidgetAgeVerifyViewModel.kt */
     public static final /* data */ class ViewState {
         private Long dateOfBirth;
         private final int displayedChild;
@@ -243,37 +246,37 @@ public final class WidgetAgeVerifyViewModel extends AppViewModel<ViewState> {
             return viewState.copy(z2, num2, i3, l2, str2, channel2, z3);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final boolean getIsSubmitting() {
             return this.isSubmitting;
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final Integer getErrorStringId() {
             return this.errorStringId;
         }
 
-        /* renamed from: component3, reason: from getter */
+        /* JADX INFO: renamed from: component3, reason: from getter */
         public final int getDisplayedChild() {
             return this.displayedChild;
         }
 
-        /* renamed from: component4, reason: from getter */
+        /* JADX INFO: renamed from: component4, reason: from getter */
         public final Long getDateOfBirth() {
             return this.dateOfBirth;
         }
 
-        /* renamed from: component5, reason: from getter */
+        /* JADX INFO: renamed from: component5, reason: from getter */
         public final String getUnderageMessage() {
             return this.underageMessage;
         }
 
-        /* renamed from: component6, reason: from getter */
+        /* JADX INFO: renamed from: component6, reason: from getter */
         public final Channel getSafeChannel() {
             return this.safeChannel;
         }
 
-        /* renamed from: component7, reason: from getter */
+        /* JADX INFO: renamed from: component7, reason: from getter */
         public final boolean getShouldClose() {
             return this.shouldClose;
         }
@@ -321,6 +324,9 @@ public final class WidgetAgeVerifyViewModel extends AppViewModel<ViewState> {
         /* JADX WARN: Type inference failed for: r0v1, types: [int] */
         /* JADX WARN: Type inference failed for: r0v14 */
         /* JADX WARN: Type inference failed for: r0v15 */
+        /* JADX WARN: Type inference failed for: r1v0 */
+        /* JADX WARN: Type inference failed for: r1v1, types: [int] */
+        /* JADX WARN: Type inference failed for: r1v2 */
         public int hashCode() {
             boolean z2 = this.isSubmitting;
             ?? r0 = z2;
@@ -337,7 +343,7 @@ public final class WidgetAgeVerifyViewModel extends AppViewModel<ViewState> {
             Channel channel = this.safeChannel;
             int iHashCode4 = (iHashCode3 + (channel != null ? channel.hashCode() : 0)) * 31;
             boolean z3 = this.shouldClose;
-            return iHashCode4 + (z3 ? 1 : z3 ? 1 : 0);
+            return iHashCode4 + (z3 ? 1 : z3);
         }
 
         public final boolean isSubmitting() {
@@ -370,7 +376,7 @@ public final class WidgetAgeVerifyViewModel extends AppViewModel<ViewState> {
         }
     }
 
-    /* compiled from: WidgetAgeVerifyViewModel.kt */
+    /* JADX INFO: compiled from: WidgetAgeVerifyViewModel.kt */
     public static final class Views {
         public static final Views INSTANCE = new Views();
         public static final int VIEW_AGE_CONFIRM = 1;
@@ -381,8 +387,8 @@ public final class WidgetAgeVerifyViewModel extends AppViewModel<ViewState> {
         }
     }
 
-    /* compiled from: WidgetAgeVerifyViewModel.kt */
-    /* renamed from: com.discord.widgets.auth.WidgetAgeVerifyViewModel$submit$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.auth.WidgetAgeVerifyViewModel$submit$1 */
+    /* JADX INFO: compiled from: WidgetAgeVerifyViewModel.kt */
     public static final class C71641 extends Lambda implements Function1<User, Unit> {
         public C71641() {
             super(1);
@@ -394,15 +400,15 @@ public final class WidgetAgeVerifyViewModel extends AppViewModel<ViewState> {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(User user) {
             Intrinsics3.checkNotNullParameter(user, "it");
             WidgetAgeVerifyViewModel.access$handleUserUpdateSuccess(WidgetAgeVerifyViewModel.this);
         }
     }
 
-    /* compiled from: WidgetAgeVerifyViewModel.kt */
-    /* renamed from: com.discord.widgets.auth.WidgetAgeVerifyViewModel$submit$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.auth.WidgetAgeVerifyViewModel$submit$2 */
+    /* JADX INFO: compiled from: WidgetAgeVerifyViewModel.kt */
     public static final class C71652 extends Lambda implements Function1<Error, Unit> {
         public C71652() {
             super(1);
@@ -414,7 +420,7 @@ public final class WidgetAgeVerifyViewModel extends AppViewModel<ViewState> {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Error error) {
             Intrinsics3.checkNotNullParameter(error, "it");
             WidgetAgeVerifyViewModel.access$handleUserUpdateFailure(WidgetAgeVerifyViewModel.this, error);

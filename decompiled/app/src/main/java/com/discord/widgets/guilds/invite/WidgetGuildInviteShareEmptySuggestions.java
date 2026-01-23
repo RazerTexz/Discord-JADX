@@ -37,23 +37,23 @@ import p507d0.p592z.p594d.Reflection2;
 import p658rx.Observable;
 import p658rx.functions.Func0;
 
-/* compiled from: WidgetGuildInviteShareEmptySuggestions.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetGuildInviteShareEmptySuggestions.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetGuildInviteShareEmptySuggestions extends AppFragment {
     public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetGuildInviteShareEmptySuggestions.class, "binding", "getBinding()Lcom/discord/databinding/WidgetGuildInviteShareEmptySuggestionsBinding;", 0)};
 
-    /* renamed from: binding$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
     private BottomSheetBehavior<ViewInviteSettingsSheet> bottomSheetBehavior;
 
-    /* renamed from: guildId$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: guildId$delegate, reason: from kotlin metadata */
     private final Lazy guildId;
 
-    /* renamed from: viewModel$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: viewModel$delegate, reason: from kotlin metadata */
     private final Lazy viewModel;
 
-    /* compiled from: WidgetGuildInviteShareEmptySuggestions.kt */
-    /* renamed from: com.discord.widgets.guilds.invite.WidgetGuildInviteShareEmptySuggestions$initBottomSheet$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.guilds.invite.WidgetGuildInviteShareEmptySuggestions$initBottomSheet$1 */
+    /* JADX INFO: compiled from: WidgetGuildInviteShareEmptySuggestions.kt */
     public static final class C86851 extends Lambda implements Function0<Unit> {
         public C86851() {
             super(0);
@@ -65,14 +65,14 @@ public final class WidgetGuildInviteShareEmptySuggestions extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             WidgetGuildInviteShareEmptySuggestions.access$getBottomSheetBehavior$p(WidgetGuildInviteShareEmptySuggestions.this).setState(5);
         }
     }
 
-    /* compiled from: WidgetGuildInviteShareEmptySuggestions.kt */
-    /* renamed from: com.discord.widgets.guilds.invite.WidgetGuildInviteShareEmptySuggestions$initBottomSheetBehavior$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.guilds.invite.WidgetGuildInviteShareEmptySuggestions$initBottomSheetBehavior$1 */
+    /* JADX INFO: compiled from: WidgetGuildInviteShareEmptySuggestions.kt */
     public static final class C86861 extends BottomSheetBehavior.BottomSheetCallback {
         public C86861() {
         }
@@ -92,8 +92,8 @@ public final class WidgetGuildInviteShareEmptySuggestions extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetGuildInviteShareEmptySuggestions.kt */
-    /* renamed from: com.discord.widgets.guilds.invite.WidgetGuildInviteShareEmptySuggestions$onViewBound$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.guilds.invite.WidgetGuildInviteShareEmptySuggestions$onViewBound$1 */
+    /* JADX INFO: compiled from: WidgetGuildInviteShareEmptySuggestions.kt */
     public static final class C86871<R> implements Func0<Boolean> {
         public final /* synthetic */ boolean $isNuxFlow;
 
@@ -120,8 +120,8 @@ public final class WidgetGuildInviteShareEmptySuggestions extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetGuildInviteShareEmptySuggestions.kt */
-    /* renamed from: com.discord.widgets.guilds.invite.WidgetGuildInviteShareEmptySuggestions$onViewBound$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.guilds.invite.WidgetGuildInviteShareEmptySuggestions$onViewBound$2 */
+    /* JADX INFO: compiled from: WidgetGuildInviteShareEmptySuggestions.kt */
     public static final class ViewOnClickListenerC86882 implements View.OnClickListener {
         public ViewOnClickListenerC86882() {
         }
@@ -132,28 +132,28 @@ public final class WidgetGuildInviteShareEmptySuggestions extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetGuildInviteShareEmptySuggestions.kt */
-    /* renamed from: com.discord.widgets.guilds.invite.WidgetGuildInviteShareEmptySuggestions$onViewBoundOrOnResume$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.guilds.invite.WidgetGuildInviteShareEmptySuggestions$onViewBoundOrOnResume$1 */
+    /* JADX INFO: compiled from: WidgetGuildInviteShareEmptySuggestions.kt */
     public static final class C86911 extends Lambda implements Function1<WidgetGuildInviteShareViewModel.ViewState.Loaded, Unit> {
         public C86911() {
             super(1);
         }
 
         @Override // kotlin.jvm.functions.Function1
-        public /* bridge */ /* synthetic */ Unit invoke(WidgetGuildInviteShareViewModel.ViewState.Loaded loaded) throws Resources.NotFoundException {
+        public /* bridge */ /* synthetic */ Unit invoke(WidgetGuildInviteShareViewModel.ViewState.Loaded loaded) {
             invoke2(loaded);
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
-        public final void invoke2(WidgetGuildInviteShareViewModel.ViewState.Loaded loaded) throws Resources.NotFoundException {
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
+        public final void invoke2(WidgetGuildInviteShareViewModel.ViewState.Loaded loaded) {
             Intrinsics3.checkNotNullParameter(loaded, "viewState");
             WidgetGuildInviteShareEmptySuggestions.access$updateUi(WidgetGuildInviteShareEmptySuggestions.this, loaded);
         }
     }
 
-    /* compiled from: WidgetGuildInviteShareEmptySuggestions.kt */
-    /* renamed from: com.discord.widgets.guilds.invite.WidgetGuildInviteShareEmptySuggestions$updateUi$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.guilds.invite.WidgetGuildInviteShareEmptySuggestions$updateUi$1 */
+    /* JADX INFO: compiled from: WidgetGuildInviteShareEmptySuggestions.kt */
     public static final class ViewOnClickListenerC86921 implements View.OnClickListener {
         public final /* synthetic */ ModelInvite $invite;
 
@@ -167,8 +167,8 @@ public final class WidgetGuildInviteShareEmptySuggestions extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetGuildInviteShareEmptySuggestions.kt */
-    /* renamed from: com.discord.widgets.guilds.invite.WidgetGuildInviteShareEmptySuggestions$updateUi$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.guilds.invite.WidgetGuildInviteShareEmptySuggestions$updateUi$2 */
+    /* JADX INFO: compiled from: WidgetGuildInviteShareEmptySuggestions.kt */
     public static final class ViewOnClickListenerC86932 implements View.OnClickListener {
         public final /* synthetic */ ModelInvite $invite;
 
@@ -185,8 +185,8 @@ public final class WidgetGuildInviteShareEmptySuggestions extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetGuildInviteShareEmptySuggestions.kt */
-    /* renamed from: com.discord.widgets.guilds.invite.WidgetGuildInviteShareEmptySuggestions$updateUi$3 */
+    /* JADX INFO: renamed from: com.discord.widgets.guilds.invite.WidgetGuildInviteShareEmptySuggestions$updateUi$3 */
+    /* JADX INFO: compiled from: WidgetGuildInviteShareEmptySuggestions.kt */
     public static final class ViewOnClickListenerC86943 implements View.OnClickListener {
         public ViewOnClickListenerC86943() {
         }
@@ -226,7 +226,7 @@ public final class WidgetGuildInviteShareEmptySuggestions extends AppFragment {
         widgetGuildInviteShareEmptySuggestions.bottomSheetBehavior = bottomSheetBehavior;
     }
 
-    public static final /* synthetic */ void access$updateUi(WidgetGuildInviteShareEmptySuggestions widgetGuildInviteShareEmptySuggestions, WidgetGuildInviteShareViewModel.ViewState.Loaded loaded) throws Resources.NotFoundException {
+    public static final /* synthetic */ void access$updateUi(WidgetGuildInviteShareEmptySuggestions widgetGuildInviteShareEmptySuggestions, WidgetGuildInviteShareViewModel.ViewState.Loaded loaded) {
         widgetGuildInviteShareEmptySuggestions.updateUi(loaded);
     }
 
@@ -234,7 +234,7 @@ public final class WidgetGuildInviteShareEmptySuggestions extends AppFragment {
         return (WidgetGuildInviteShareEmptySuggestionsBinding) this.binding.getValue((Fragment) this, $$delegatedProperties[0]);
     }
 
-    private final CharSequence getHoursExpirationString(int hours, CharSequence maxUses) throws Resources.NotFoundException {
+    private final CharSequence getHoursExpirationString(int hours, CharSequence maxUses) {
         Resources resources = getResources();
         Intrinsics3.checkNotNullExpressionValue(resources, "resources");
         CharSequence quantityString = StringResourceUtils.getQuantityString(resources, requireContext(), C5419R.plurals.duration_hours_hours, hours, Integer.valueOf(hours));
@@ -261,7 +261,7 @@ public final class WidgetGuildInviteShareEmptySuggestions extends AppFragment {
         bottomSheetBehavior.addBottomSheetCallback(new C86861());
     }
 
-    private final void updateUi(WidgetGuildInviteShareViewModel.ViewState.Loaded viewState) throws Resources.NotFoundException {
+    private final void updateUi(WidgetGuildInviteShareViewModel.ViewState.Loaded viewState) {
         CharSequence quantityString;
         WidgetInviteModel widgetInviteModel = viewState.getWidgetInviteModel();
         getBinding().f16831g.configureUi(widgetInviteModel);

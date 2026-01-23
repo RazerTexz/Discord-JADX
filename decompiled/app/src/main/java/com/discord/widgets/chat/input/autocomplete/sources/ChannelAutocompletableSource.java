@@ -23,15 +23,15 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p658rx.Observable;
 import p658rx.functions.Func3;
 
-/* compiled from: ChannelAutocompletableSource.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: ChannelAutocompletableSource.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class ChannelAutocompletableSource {
     private final StoreChannels storeChannels;
     private final StorePermissions storePermissions;
     private final StoreThreadsActiveJoined storeThreadsActiveJoined;
 
-    /* compiled from: ChannelAutocompletableSource.kt */
-    /* renamed from: com.discord.widgets.chat.input.autocomplete.sources.ChannelAutocompletableSource$observeChannelAutocompletables$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.input.autocomplete.sources.ChannelAutocompletableSource$observeChannelAutocompletables$1 */
+    /* JADX INFO: compiled from: ChannelAutocompletableSource.kt */
     public static final class C78031<T1, T2, T3, R> implements Func3<Map<Long, ? extends Channel>, Map<Long, ? extends Channel>, Map<Long, ? extends Long>, Map<LeadingIdentifier, ? extends TreeSet<Autocompletable>>> {
         public static final C78031 INSTANCE = new C78031();
 
@@ -40,7 +40,7 @@ public final class ChannelAutocompletableSource {
             return call2((Map<Long, Channel>) map, (Map<Long, Channel>) map2, (Map<Long, Long>) map3);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final Map<LeadingIdentifier, TreeSet<Autocompletable>> call2(Map<Long, Channel> map, Map<Long, Channel> map2, Map<Long, Long> map3) {
             TreeSet treeSet = new TreeSet(new AutocompletableComparator());
             Intrinsics3.checkNotNullExpressionValue(map2, "activeJoinedThreads");

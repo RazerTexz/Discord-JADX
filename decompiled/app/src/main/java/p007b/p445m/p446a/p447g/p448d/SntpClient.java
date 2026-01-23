@@ -10,42 +10,42 @@ import org.objectweb.asm.Opcodes;
 import p007b.p100d.p104b.p105a.outline;
 import p007b.p445m.p446a.Clock5;
 
-/* compiled from: SntpClient.java */
-/* renamed from: b.m.a.g.d.e, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.m.a.g.d.e, reason: use source file name */
+/* JADX INFO: compiled from: SntpClient.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class SntpClient {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final Clock5 f13649a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final DnsResolver f13650b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final DatagramFactory f13651c;
 
-    /* compiled from: SntpClient.java */
-    /* renamed from: b.m.a.g.d.e$a */
+    /* JADX INFO: renamed from: b.m.a.g.d.e$a */
+    /* JADX INFO: compiled from: SntpClient.java */
     public static class a extends IOException {
         public a(String str) {
             super(str);
         }
     }
 
-    /* compiled from: SntpClient.java */
-    /* renamed from: b.m.a.g.d.e$b */
+    /* JADX INFO: renamed from: b.m.a.g.d.e$b */
+    /* JADX INFO: compiled from: SntpClient.java */
     public static final class b {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final long f13652a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final long f13653b;
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public final long f13654c;
 
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         public final Clock5 f13655d;
 
         public b(long j, long j2, long j3, Clock5 clock5) {
@@ -55,7 +55,7 @@ public class SntpClient {
             this.f13655d = clock5;
         }
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public long m7148a() {
             return this.f13652a + this.f13654c + (this.f13655d.mo7129b() - this.f13653b);
         }
@@ -67,7 +67,7 @@ public class SntpClient {
         this.f13651c = datagramFactory;
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static void m7144a(byte b2, byte b3, int i, long j) throws a {
         if (b2 == 3) {
             throw new a("unsynchronized server");
@@ -83,7 +83,7 @@ public class SntpClient {
         }
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static long m7145b(byte[] bArr, int i) {
         int i2 = bArr[i];
         int i3 = bArr[i + 1];
@@ -101,16 +101,16 @@ public class SntpClient {
         if ((i5 & 128) == 128) {
             i5 = (i5 & Opcodes.LAND) + 128;
         }
-        return (i2 << 24) + (i3 << 16) + (i4 << 8) + i5;
+        return (((long) i2) << 24) + (((long) i3) << 16) + (((long) i4) << 8) + ((long) i5);
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public static long m7146c(byte[] bArr, int i) {
         long jM7145b = m7145b(bArr, i);
         return ((m7145b(bArr, i + 4) * 1000) / Permission.REQUEST_TO_SPEAK) + ((jM7145b - 2208988800L) * 1000);
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public b m7147d(String str, Long l) throws IOException {
         DatagramSocket datagramSocketMo7142c = null;
         try {

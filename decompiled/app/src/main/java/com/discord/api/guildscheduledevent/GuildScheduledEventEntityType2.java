@@ -6,9 +6,9 @@ import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: GuildScheduledEventEntityType.kt */
-/* renamed from: com.discord.api.guildscheduledevent.GuildScheduledEventEntityTypeTypeAdapter, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: com.discord.api.guildscheduledevent.GuildScheduledEventEntityTypeTypeAdapter, reason: use source file name */
+/* JADX INFO: compiled from: GuildScheduledEventEntityType.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class GuildScheduledEventEntityType2 extends TypeAdapter<GuildScheduledEventEntityType> {
     @Override // com.google.gson.TypeAdapter
     public GuildScheduledEventEntityType read(JsonReader jsonReader) {

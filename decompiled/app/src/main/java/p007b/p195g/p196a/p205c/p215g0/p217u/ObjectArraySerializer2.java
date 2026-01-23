@@ -17,10 +17,10 @@ import p007b.p195g.p196a.p205c.p215g0.ContextualSerializer;
 import p007b.p195g.p196a.p205c.p215g0.p216t.PropertySerializerMap;
 import p007b.p195g.p196a.p205c.p220y.JacksonStdImpl;
 
-/* compiled from: ObjectArraySerializer.java */
+/* JADX INFO: renamed from: b.g.a.c.g0.u.d0, reason: use source file name */
+/* JADX INFO: compiled from: ObjectArraySerializer.java */
+/* JADX INFO: loaded from: classes3.dex */
 @JacksonStdImpl
-/* renamed from: b.g.a.c.g0.u.d0, reason: use source file name */
-/* loaded from: classes3.dex */
 public class ObjectArraySerializer2 extends ArraySerializerBase<Object[]> implements ContextualSerializer {
     public PropertySerializerMap _dynamicSerializers;
     public JsonSerializer<Object> _elementSerializer;
@@ -39,7 +39,7 @@ public class ObjectArraySerializer2 extends ArraySerializerBase<Object[]> implem
 
     /* JADX WARN: Removed duplicated region for block: B:12:0x0021  */
     @Override // p007b.p195g.p196a.p205c.p215g0.p217u.ArraySerializerBase, p007b.p195g.p196a.p205c.p215g0.ContextualSerializer
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
@@ -67,13 +67,13 @@ public class ObjectArraySerializer2 extends ArraySerializerBase<Object[]> implem
     }
 
     @Override // p007b.p195g.p196a.p205c.JsonSerializer
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public boolean mo2021d(SerializerProvider serializerProvider, Object obj) {
         return ((Object[]) obj).length == 0;
     }
 
     @Override // p007b.p195g.p196a.p205c.p215g0.p217u.ArraySerializerBase, p007b.p195g.p196a.p205c.JsonSerializer
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public void mo1807f(Object obj, JsonGenerator jsonGenerator, SerializerProvider serializerProvider) throws IOException {
         Object[] objArr = (Object[]) obj;
         int length = objArr.length;
@@ -87,30 +87,30 @@ public class ObjectArraySerializer2 extends ArraySerializerBase<Object[]> implem
     }
 
     @Override // p007b.p195g.p196a.p205c.p215g0.ContainerSerializer
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public ContainerSerializer<?> mo1995p(TypeSerializer typeSerializer) {
         return new ObjectArraySerializer2(this._elementType, this._staticTyping, typeSerializer, this._elementSerializer);
     }
 
     @Override // p007b.p195g.p196a.p205c.p215g0.ContainerSerializer
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     public boolean mo1996q(Object obj) {
         return ((Object[]) obj).length == 1;
     }
 
     @Override // p007b.p195g.p196a.p205c.p215g0.p217u.ArraySerializerBase
-    /* renamed from: s */
+    /* JADX INFO: renamed from: s */
     public JsonSerializer<?> mo2037s(BeanProperty beanProperty, Boolean bool) {
         return new ObjectArraySerializer2(this, beanProperty, this._valueTypeSerializer, this._elementSerializer, bool);
     }
 
     @Override // p007b.p195g.p196a.p205c.p215g0.p217u.ArraySerializerBase
-    /* renamed from: t */
+    /* JADX INFO: renamed from: t */
     public /* bridge */ /* synthetic */ void mo2038t(Object[] objArr, JsonGenerator jsonGenerator, SerializerProvider serializerProvider) throws IOException {
         m2057u(objArr, jsonGenerator, serializerProvider);
     }
 
-    /* renamed from: u */
+    /* JADX INFO: renamed from: u */
     public void m2057u(Object[] objArr, JsonGenerator jsonGenerator, SerializerProvider serializerProvider) throws IOException {
         Object obj;
         Object obj2;

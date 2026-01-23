@@ -1,7 +1,6 @@
 package com.discord.widgets.chat.input.expression;
 
 import android.content.Context;
-import android.content.res.Resources;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.FrameLayout;
@@ -69,26 +68,26 @@ import p637j0.p642l.p647e.ScalarSynchronousObservable;
 import p658rx.Observable;
 import p658rx.subjects.BehaviorSubject;
 
-/* compiled from: WidgetExpressionTray.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetExpressionTray.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetExpressionTray extends AppFragment implements FlexInputExpressionTrayStateChangeListener {
     public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetExpressionTray.class, "binding", "getBinding()Lcom/discord/databinding/WidgetExpressionTrayBinding;", 0)};
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private static final BehaviorSubject<Boolean> isExpressionTrayActiveSubject;
 
-    /* renamed from: binding$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
     private WidgetEmojiPicker emojiPickerFragment;
     private boolean emojiPickerInitialized;
     private EmojiPickerListener emojiPickerListener;
     private Map<ExpressionTrayTab, ? extends View> expressionTabToContentViewsMap;
 
-    /* renamed from: expressionTrayViewModel$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: expressionTrayViewModel$delegate, reason: from kotlin metadata */
     private final Lazy expressionTrayViewModel;
 
-    /* renamed from: flexInputViewModel$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: flexInputViewModel$delegate, reason: from kotlin metadata */
     private final Lazy flexInputViewModel;
     private WidgetGifPicker gifPickerFragment;
     private boolean gifPickerInitialized;
@@ -100,7 +99,7 @@ public final class WidgetExpressionTray extends AppFragment implements FlexInput
     private StickerPickerListener stickerPickerListener;
     private boolean wasActive;
 
-    /* compiled from: WidgetExpressionTray.kt */
+    /* JADX INFO: compiled from: WidgetExpressionTray.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -151,8 +150,8 @@ public final class WidgetExpressionTray extends AppFragment implements FlexInput
         }
     }
 
-    /* compiled from: WidgetExpressionTray.kt */
-    /* renamed from: com.discord.widgets.chat.input.expression.WidgetExpressionTray$handleEvent$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.input.expression.WidgetExpressionTray$handleEvent$1 */
+    /* JADX INFO: compiled from: WidgetExpressionTray.kt */
     public static final /* synthetic */ class C78501 extends FunctionReferenceImpl implements Function0<Unit> {
         public C78501(WidgetExpressionTray widgetExpressionTray) {
             super(0, widgetExpressionTray, WidgetExpressionTray.class, "onGifSelected", "onGifSelected()V", 0);
@@ -164,14 +163,14 @@ public final class WidgetExpressionTray extends AppFragment implements FlexInput
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             WidgetExpressionTray.access$onGifSelected((WidgetExpressionTray) this.receiver);
         }
     }
 
-    /* compiled from: WidgetExpressionTray.kt */
-    /* renamed from: com.discord.widgets.chat.input.expression.WidgetExpressionTray$handleEvent$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.input.expression.WidgetExpressionTray$handleEvent$2 */
+    /* JADX INFO: compiled from: WidgetExpressionTray.kt */
     public static final /* synthetic */ class C78512 extends FunctionReferenceImpl implements Function0<Unit> {
         public C78512(WidgetExpressionTray widgetExpressionTray) {
             super(0, widgetExpressionTray, WidgetExpressionTray.class, "onGifSearchSheetCanceled", "onGifSearchSheetCanceled()V", 0);
@@ -183,14 +182,14 @@ public final class WidgetExpressionTray extends AppFragment implements FlexInput
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             WidgetExpressionTray.access$onGifSearchSheetCanceled((WidgetExpressionTray) this.receiver);
         }
     }
 
-    /* compiled from: WidgetExpressionTray.kt */
-    /* renamed from: com.discord.widgets.chat.input.expression.WidgetExpressionTray$handleEvent$3 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.input.expression.WidgetExpressionTray$handleEvent$3 */
+    /* JADX INFO: compiled from: WidgetExpressionTray.kt */
     public static final class C78523 extends Lambda implements Function1<Unit, Unit> {
         public final /* synthetic */ ExpressionTrayViewModel.Event $event;
         public final /* synthetic */ WidgetStickerPickerSheet $pickerSheet;
@@ -208,14 +207,14 @@ public final class WidgetExpressionTray extends AppFragment implements FlexInput
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Unit unit) {
             this.$pickerSheet.scrollToPack(((ExpressionTrayViewModel.Event.ShowStickerPicker) this.$event).getStickerPackId());
         }
     }
 
-    /* compiled from: WidgetExpressionTray.kt */
-    /* renamed from: com.discord.widgets.chat.input.expression.WidgetExpressionTray$onViewBound$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.input.expression.WidgetExpressionTray$onViewBound$1 */
+    /* JADX INFO: compiled from: WidgetExpressionTray.kt */
     public static final class ViewOnClickListenerC78531 implements View.OnClickListener {
         public ViewOnClickListenerC78531() {
         }
@@ -229,8 +228,8 @@ public final class WidgetExpressionTray extends AppFragment implements FlexInput
         }
     }
 
-    /* compiled from: WidgetExpressionTray.kt */
-    /* renamed from: com.discord.widgets.chat.input.expression.WidgetExpressionTray$onViewBound$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.input.expression.WidgetExpressionTray$onViewBound$2 */
+    /* JADX INFO: compiled from: WidgetExpressionTray.kt */
     public static final class C78542 implements AppBarLayout.OnOffsetChangedListener {
         public C78542() {
         }
@@ -241,28 +240,28 @@ public final class WidgetExpressionTray extends AppFragment implements FlexInput
         }
     }
 
-    /* compiled from: WidgetExpressionTray.kt */
-    /* renamed from: com.discord.widgets.chat.input.expression.WidgetExpressionTray$onViewBoundOrOnResume$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.input.expression.WidgetExpressionTray$onViewBoundOrOnResume$1 */
+    /* JADX INFO: compiled from: WidgetExpressionTray.kt */
     public static final class C78551 extends Lambda implements Function1<ExpressionTrayViewModel.ViewState, Unit> {
         public C78551() {
             super(1);
         }
 
         @Override // kotlin.jvm.functions.Function1
-        public /* bridge */ /* synthetic */ Unit invoke(ExpressionTrayViewModel.ViewState viewState) throws Resources.NotFoundException {
+        public /* bridge */ /* synthetic */ Unit invoke(ExpressionTrayViewModel.ViewState viewState) {
             invoke2(viewState);
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
-        public final void invoke2(ExpressionTrayViewModel.ViewState viewState) throws Resources.NotFoundException {
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
+        public final void invoke2(ExpressionTrayViewModel.ViewState viewState) {
             Intrinsics3.checkNotNullParameter(viewState, "viewState");
             WidgetExpressionTray.access$handleViewState(WidgetExpressionTray.this, viewState);
         }
     }
 
-    /* compiled from: WidgetExpressionTray.kt */
-    /* renamed from: com.discord.widgets.chat.input.expression.WidgetExpressionTray$onViewBoundOrOnResume$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.input.expression.WidgetExpressionTray$onViewBoundOrOnResume$2 */
+    /* JADX INFO: compiled from: WidgetExpressionTray.kt */
     public static final class C78562 extends Lambda implements Function1<ExpressionTrayViewModel.Event, Unit> {
         public C78562() {
             super(1);
@@ -274,15 +273,15 @@ public final class WidgetExpressionTray extends AppFragment implements FlexInput
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(ExpressionTrayViewModel.Event event) {
             Intrinsics3.checkNotNullParameter(event, "event");
             WidgetExpressionTray.access$handleEvent(WidgetExpressionTray.this, event);
         }
     }
 
-    /* compiled from: WidgetExpressionTray.kt */
-    /* renamed from: com.discord.widgets.chat.input.expression.WidgetExpressionTray$setUpGifPicker$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.input.expression.WidgetExpressionTray$setUpGifPicker$1 */
+    /* JADX INFO: compiled from: WidgetExpressionTray.kt */
     public static final /* synthetic */ class C78571 extends FunctionReferenceImpl implements Function1<GifCategoryItem, Unit> {
         public C78571(ExpressionTrayViewModel expressionTrayViewModel) {
             super(1, expressionTrayViewModel, ExpressionTrayViewModel.class, "selectGifCategory", "selectGifCategory(Lcom/discord/widgets/chat/input/gifpicker/GifCategoryItem;)V", 0);
@@ -294,15 +293,15 @@ public final class WidgetExpressionTray extends AppFragment implements FlexInput
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(GifCategoryItem gifCategoryItem) {
             Intrinsics3.checkNotNullParameter(gifCategoryItem, "p1");
             ((ExpressionTrayViewModel) this.receiver).selectGifCategory(gifCategoryItem);
         }
     }
 
-    /* compiled from: WidgetExpressionTray.kt */
-    /* renamed from: com.discord.widgets.chat.input.expression.WidgetExpressionTray$setUpStickerPicker$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.input.expression.WidgetExpressionTray$setUpStickerPicker$1 */
+    /* JADX INFO: compiled from: WidgetExpressionTray.kt */
     public static final /* synthetic */ class C78581 extends FunctionReferenceImpl implements Function1<Boolean, Unit> {
         public C78581(WidgetExpressionTray widgetExpressionTray) {
             super(1, widgetExpressionTray, WidgetExpressionTray.class, "showStickersSearchBar", "showStickersSearchBar(Z)V", 0);
@@ -319,8 +318,8 @@ public final class WidgetExpressionTray extends AppFragment implements FlexInput
         }
     }
 
-    /* compiled from: WidgetExpressionTray.kt */
-    /* renamed from: com.discord.widgets.chat.input.expression.WidgetExpressionTray$setUpStickerPicker$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.input.expression.WidgetExpressionTray$setUpStickerPicker$2 */
+    /* JADX INFO: compiled from: WidgetExpressionTray.kt */
     public static final class C78592 extends Lambda implements Function0<Unit> {
         public C78592() {
             super(0);
@@ -332,15 +331,15 @@ public final class WidgetExpressionTray extends AppFragment implements FlexInput
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             WidgetExpressionTray.access$getBinding$p(WidgetExpressionTray.this).f16615n.scrollTo(0, 0);
             WidgetExpressionTray.access$getBinding$p(WidgetExpressionTray.this).f16615n.setExpanded(true, false);
         }
     }
 
-    /* compiled from: WidgetExpressionTray.kt */
-    /* renamed from: com.discord.widgets.chat.input.expression.WidgetExpressionTray$setUpTabs$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.input.expression.WidgetExpressionTray$setUpTabs$1 */
+    /* JADX INFO: compiled from: WidgetExpressionTray.kt */
     public static final class C78601 extends Lambda implements Function1<Integer, Unit> {
         public C78601() {
             super(1);
@@ -365,8 +364,8 @@ public final class WidgetExpressionTray extends AppFragment implements FlexInput
         }
     }
 
-    /* compiled from: WidgetExpressionTray.kt */
-    /* renamed from: com.discord.widgets.chat.input.expression.WidgetExpressionTray$setWindowInsetsListeners$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.input.expression.WidgetExpressionTray$setWindowInsetsListeners$1 */
+    /* JADX INFO: compiled from: WidgetExpressionTray.kt */
     public static final class C78611 implements OnApplyWindowInsetsListener {
         public C78611() {
         }
@@ -379,8 +378,8 @@ public final class WidgetExpressionTray extends AppFragment implements FlexInput
         }
     }
 
-    /* compiled from: WidgetExpressionTray.kt */
-    /* renamed from: com.discord.widgets.chat.input.expression.WidgetExpressionTray$setWindowInsetsListeners$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.input.expression.WidgetExpressionTray$setWindowInsetsListeners$2 */
+    /* JADX INFO: compiled from: WidgetExpressionTray.kt */
     public static final class C78622 implements OnApplyWindowInsetsListener {
         public C78622() {
         }
@@ -391,8 +390,8 @@ public final class WidgetExpressionTray extends AppFragment implements FlexInput
         }
     }
 
-    /* compiled from: WidgetExpressionTray.kt */
-    /* renamed from: com.discord.widgets.chat.input.expression.WidgetExpressionTray$trackExpressionPickerOpened$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.input.expression.WidgetExpressionTray$trackExpressionPickerOpened$1 */
+    /* JADX INFO: compiled from: WidgetExpressionTray.kt */
     public static final class C78631 extends Lambda implements Function1<ExpressionTrayViewModel.ViewState, Unit> {
         public static final C78631 INSTANCE = new C78631();
 
@@ -406,7 +405,7 @@ public final class WidgetExpressionTray extends AppFragment implements FlexInput
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(ExpressionTrayViewModel.ViewState viewState) {
             String str;
             int iOrdinal = viewState.getSelectedExpressionTab().ordinal();
@@ -424,8 +423,8 @@ public final class WidgetExpressionTray extends AppFragment implements FlexInput
         }
     }
 
-    /* compiled from: WidgetExpressionTray.kt */
-    /* renamed from: com.discord.widgets.chat.input.expression.WidgetExpressionTray$trackExpressionPickerTabClicked$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.input.expression.WidgetExpressionTray$trackExpressionPickerTabClicked$1 */
+    /* JADX INFO: compiled from: WidgetExpressionTray.kt */
     public static final class C78641 extends Lambda implements Function1<ExpressionTrayViewModel.ViewState, Unit> {
         public final /* synthetic */ ExpressionTrayTab $clickedTab;
 
@@ -441,7 +440,7 @@ public final class WidgetExpressionTray extends AppFragment implements FlexInput
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(ExpressionTrayViewModel.ViewState viewState) {
             String str;
             int iOrdinal = this.$clickedTab.ordinal();
@@ -501,7 +500,7 @@ public final class WidgetExpressionTray extends AppFragment implements FlexInput
         widgetExpressionTray.handleEvent(event);
     }
 
-    public static final /* synthetic */ void access$handleViewState(WidgetExpressionTray widgetExpressionTray, ExpressionTrayViewModel.ViewState viewState) throws Resources.NotFoundException {
+    public static final /* synthetic */ void access$handleViewState(WidgetExpressionTray widgetExpressionTray, ExpressionTrayViewModel.ViewState viewState) {
         widgetExpressionTray.handleViewState(viewState);
     }
 
@@ -557,7 +556,7 @@ public final class WidgetExpressionTray extends AppFragment implements FlexInput
         setupTabFragment(C5419R.id.expression_tray_detail_page, widgetGifCategory, simpleName);
     }
 
-    private final void configureLandingPage(ExpressionTrayViewModel.ViewState viewState) throws Resources.NotFoundException {
+    private final void configureLandingPage(ExpressionTrayViewModel.ViewState viewState) {
         int i;
         ExpressionTrayTab selectedExpressionTab = viewState.getSelectedExpressionTab();
         int iOrdinal = selectedExpressionTab.ordinal();
@@ -684,7 +683,7 @@ public final class WidgetExpressionTray extends AppFragment implements FlexInput
         }
     }
 
-    private final void handleViewState(ExpressionTrayViewModel.ViewState viewState) throws Resources.NotFoundException {
+    private final void handleViewState(ExpressionTrayViewModel.ViewState viewState) {
         configureLandingPage(viewState);
         configureDetailPage(viewState);
         ContentResizingCoordinatorLayout contentResizingCoordinatorLayout = getBinding().f16609h;

@@ -17,11 +17,11 @@ import java.util.List;
 import java.util.Set;
 import java.util.concurrent.Callable;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public final class RawWorkInfoDao_Impl implements RawWorkInfoDao {
     private final RoomDatabase __db;
 
-    /* renamed from: androidx.work.impl.model.RawWorkInfoDao_Impl$1 */
+    /* JADX INFO: renamed from: androidx.work.impl.model.RawWorkInfoDao_Impl$1 */
     public class CallableC07491 implements Callable<List<WorkSpec.WorkInfoPojo>> {
         public final /* synthetic */ SupportSQLiteQuery val$_internalQuery;
 
@@ -36,7 +36,7 @@ public final class RawWorkInfoDao_Impl implements RawWorkInfoDao {
 
         /* JADX WARN: Multi-variable type inference failed */
         @Override // java.util.concurrent.Callable
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public List<WorkSpec.WorkInfoPojo> call2() throws Exception {
             Cursor cursorQuery = DBUtil.query(RawWorkInfoDao_Impl.access$000(RawWorkInfoDao_Impl.this), this.val$_internalQuery, true, null);
             try {

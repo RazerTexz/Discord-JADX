@@ -16,7 +16,7 @@ import lombok.core.AnnotationValues;
 import lombok.core.LombokNode;
 import lombok.javac.handlers.JavacHandlerUtil;
 
-/* loaded from: discord-126021.apk:lombok/javac/JavacNode.SCL.lombok */
+/* JADX INFO: loaded from: discord-126021.apk:lombok/javac/JavacNode.SCL.lombok */
 public class JavacNode extends LombokNode<JavacAST, JavacNode, JCTree> {
     private JavacAST ast;
     private static /* synthetic */ int[] $SWITCH_TABLE$lombok$core$AST$Kind;
@@ -215,7 +215,7 @@ public class JavacNode extends LombokNode<JavacAST, JavacNode, JCTree> {
         return n.toString();
     }
 
-    /* renamed from: calculateIsStructurallySignificant, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: calculateIsStructurallySignificant, reason: avoid collision after fix types in other method */
     protected boolean calculateIsStructurallySignificant2(JCTree parent) {
         if ((this.node instanceof JCTree.JCClassDecl) || (this.node instanceof JCTree.JCMethodDecl) || (this.node instanceof JCTree.JCVariableDecl) || (this.node instanceof JCTree.JCCompilationUnit)) {
             return true;
@@ -226,7 +226,7 @@ public class JavacNode extends LombokNode<JavacAST, JavacNode, JCTree> {
         return false;
     }
 
-    /* renamed from: fieldContainsAnnotation, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: fieldContainsAnnotation, reason: avoid collision after fix types in other method */
     protected boolean fieldContainsAnnotation2(JCTree field, JCTree annotation) {
         if (!(field instanceof JCTree.JCVariableDecl)) {
             return false;

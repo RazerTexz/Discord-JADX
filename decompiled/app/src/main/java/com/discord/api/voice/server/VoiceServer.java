@@ -3,30 +3,30 @@ package com.discord.api.voice.server;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: VoiceServer.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: VoiceServer.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class VoiceServer {
     private final Long channelId;
     private final String endpoint;
     private final Long guildId;
     private final String token;
 
-    /* renamed from: a, reason: from getter */
+    /* JADX INFO: renamed from: a, reason: from getter */
     public final Long getChannelId() {
         return this.channelId;
     }
 
-    /* renamed from: b, reason: from getter */
+    /* JADX INFO: renamed from: b, reason: from getter */
     public final String getEndpoint() {
         return this.endpoint;
     }
 
-    /* renamed from: c, reason: from getter */
+    /* JADX INFO: renamed from: c, reason: from getter */
     public final Long getGuildId() {
         return this.guildId;
     }
 
-    /* renamed from: d, reason: from getter */
+    /* JADX INFO: renamed from: d, reason: from getter */
     public final String getToken() {
         return this.token;
     }

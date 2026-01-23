@@ -5,9 +5,9 @@ import android.widget.TimePicker;
 import com.discord.widgets.guildscheduledevent.GuildScheduledEventSettingsViewModel;
 import com.discord.widgets.guildscheduledevent.WidgetGuildScheduledEventSettings;
 
-/* compiled from: WidgetGuildScheduledEventSettings.kt */
-/* renamed from: com.discord.widgets.guildscheduledevent.WidgetGuildScheduledEventSettings$onViewBound$5$$special$$inlined$let$lambda$1 */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.guildscheduledevent.WidgetGuildScheduledEventSettings$onViewBound$5$$special$$inlined$let$lambda$1 */
+/* JADX INFO: compiled from: WidgetGuildScheduledEventSettings.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class C8921x2849a869 implements TimePickerDialog.OnTimeSetListener {
     public final /* synthetic */ WidgetGuildScheduledEventSettings.ViewOnClickListenerC89205 this$0;
 

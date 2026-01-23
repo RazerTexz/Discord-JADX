@@ -6,9 +6,9 @@ import java.util.Objects;
 import kotlin.jvm.functions.Function0;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetChannelSettingsAddMemberFragment.kt */
-/* renamed from: com.discord.widgets.channels.permissions.WidgetChannelSettingsAddMemberFragment$viewModel$2, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.channels.permissions.WidgetChannelSettingsAddMemberFragment$viewModel$2, reason: use source file name */
+/* JADX INFO: compiled from: WidgetChannelSettingsAddMemberFragment.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetChannelSettingsAddMemberFragment6 extends Lambda implements Function0<ViewModelStoreOwner> {
     public final /* synthetic */ WidgetChannelSettingsAddMemberFragment this$0;
 

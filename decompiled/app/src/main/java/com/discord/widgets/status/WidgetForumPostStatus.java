@@ -38,25 +38,25 @@ import p507d0.p592z.p594d.Lambda;
 import p507d0.p592z.p594d.Reflection2;
 import p658rx.Observable;
 
-/* compiled from: WidgetForumPostStatus.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetForumPostStatus.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetForumPostStatus extends AppFragment {
     public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetForumPostStatus.class, "binding", "getBinding()Lcom/discord/databinding/WidgetForumPostStatusBinding;", 0)};
 
-    /* renamed from: binding$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
 
-    /* renamed from: defaultReactionMeTextColor$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: defaultReactionMeTextColor$delegate, reason: from kotlin metadata */
     private final Lazy defaultReactionMeTextColor;
 
-    /* renamed from: reactionMeTextColor$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: reactionMeTextColor$delegate, reason: from kotlin metadata */
     private final Lazy reactionMeTextColor;
 
-    /* renamed from: viewModel$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: viewModel$delegate, reason: from kotlin metadata */
     private final Lazy viewModel;
 
-    /* compiled from: WidgetForumPostStatus.kt */
-    /* renamed from: com.discord.widgets.status.WidgetForumPostStatus$configureFollow$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.status.WidgetForumPostStatus$configureFollow$1 */
+    /* JADX INFO: compiled from: WidgetForumPostStatus.kt */
     public static final class ViewOnClickListenerC100861 implements View.OnClickListener {
         public final /* synthetic */ WidgetForumPostStatusViewModel.ViewState.Valid $viewState;
 
@@ -77,8 +77,8 @@ public final class WidgetForumPostStatus extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetForumPostStatus.kt */
-    /* renamed from: com.discord.widgets.status.WidgetForumPostStatus$configureReactions$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.status.WidgetForumPostStatus$configureReactions$2 */
+    /* JADX INFO: compiled from: WidgetForumPostStatus.kt */
     public static final class ViewOnClickListenerC100872 implements View.OnClickListener {
         public final /* synthetic */ WidgetForumPostStatusViewModel.ViewState.Valid $viewState;
 
@@ -96,8 +96,8 @@ public final class WidgetForumPostStatus extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetForumPostStatus.kt */
-    /* renamed from: com.discord.widgets.status.WidgetForumPostStatus$configureReactions$3 */
+    /* JADX INFO: renamed from: com.discord.widgets.status.WidgetForumPostStatus$configureReactions$3 */
+    /* JADX INFO: compiled from: WidgetForumPostStatus.kt */
     public static final class C100883 extends Lambda implements Function1<View, Unit> {
         public final /* synthetic */ WidgetForumPostStatusViewModel.ViewState.Valid $viewState;
 
@@ -113,7 +113,7 @@ public final class WidgetForumPostStatus extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(View view) {
             Intrinsics3.checkNotNullParameter(view, "it");
             WidgetForumPostStatusViewModel widgetForumPostStatusViewModelAccess$getViewModel$p = WidgetForumPostStatus.access$getViewModel$p(WidgetForumPostStatus.this);
@@ -124,8 +124,8 @@ public final class WidgetForumPostStatus extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetForumPostStatus.kt */
-    /* renamed from: com.discord.widgets.status.WidgetForumPostStatus$onResume$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.status.WidgetForumPostStatus$onResume$1 */
+    /* JADX INFO: compiled from: WidgetForumPostStatus.kt */
     public static final class C100891 extends Lambda implements Function1<WidgetForumPostStatusViewModel.ViewState, Unit> {
         public C100891() {
             super(1);
@@ -137,7 +137,7 @@ public final class WidgetForumPostStatus extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(WidgetForumPostStatusViewModel.ViewState viewState) {
             WidgetForumPostStatus widgetForumPostStatus = WidgetForumPostStatus.this;
             Intrinsics3.checkNotNullExpressionValue(viewState, "viewState");

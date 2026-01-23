@@ -18,11 +18,11 @@ import com.discord.utilities.color.ColorCompat2;
 import p007b.p008a.p025i.ShinyButtonBinding;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ShinyButton.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: ShinyButton.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class ShinyButton extends RelativeLayout {
 
-    /* renamed from: j, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: j, reason: from kotlin metadata */
     public final ShinyButtonBinding binding;
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */

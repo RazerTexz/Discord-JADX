@@ -25,86 +25,86 @@ import p007b.p225i.p226a.p242c.p267x2.PositionHolder;
 import p007b.p225i.p226a.p242c.p267x2.SeekMap;
 import p007b.p225i.p226a.p242c.p267x2.p276k0.TsPayloadReader;
 
-/* compiled from: TsExtractor.java */
-/* renamed from: b.i.a.c.x2.k0.h0, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.x2.k0.h0, reason: use source file name */
+/* JADX INFO: compiled from: TsExtractor.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class TsExtractor implements Extractor {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final int f8635a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final int f8636b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final List<TimestampAdjuster> f8637c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final ParsableByteArray f8638d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final SparseIntArray f8639e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final TsPayloadReader.c f8640f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public final SparseArray<TsPayloadReader> f8641g;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public final SparseBooleanArray f8642h;
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public final SparseBooleanArray f8643i;
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final TsDurationReader f8644j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public TsBinarySearchSeeker f8645k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public ExtractorOutput f8646l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public int f8647m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public boolean f8648n;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public boolean f8649o;
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public boolean f8650p;
 
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     @Nullable
     public TsPayloadReader f8651q;
 
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     public int f8652r;
 
-    /* renamed from: s */
+    /* JADX INFO: renamed from: s */
     public int f8653s;
 
-    /* compiled from: TsExtractor.java */
-    /* renamed from: b.i.a.c.x2.k0.h0$a */
+    /* JADX INFO: renamed from: b.i.a.c.x2.k0.h0$a */
+    /* JADX INFO: compiled from: TsExtractor.java */
     public class a implements SectionPayloadReader {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final ParsableBitArray f8654a = new ParsableBitArray(new byte[4]);
 
         public a() {
         }
 
         @Override // p007b.p225i.p226a.p242c.p267x2.p276k0.SectionPayloadReader
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public void mo3752a(TimestampAdjuster timestampAdjuster, ExtractorOutput extractorOutput, TsPayloadReader.d dVar) {
         }
 
         @Override // p007b.p225i.p226a.p242c.p267x2.p276k0.SectionPayloadReader
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public void mo3753b(ParsableByteArray parsableByteArray) {
             if (parsableByteArray.m3100t() == 0 && (parsableByteArray.m3100t() & 128) != 0) {
                 parsableByteArray.m3080F(6);
@@ -132,20 +132,20 @@ public final class TsExtractor implements Extractor {
         }
     }
 
-    /* compiled from: TsExtractor.java */
-    /* renamed from: b.i.a.c.x2.k0.h0$b */
+    /* JADX INFO: renamed from: b.i.a.c.x2.k0.h0$b */
+    /* JADX INFO: compiled from: TsExtractor.java */
     public class b implements SectionPayloadReader {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final ParsableBitArray f8656a = new ParsableBitArray(new byte[5]);
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final SparseArray<TsPayloadReader> f8657b = new SparseArray<>();
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public final SparseIntArray f8658c = new SparseIntArray();
 
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         public final int f8659d;
 
         public b(int i) {
@@ -153,7 +153,7 @@ public final class TsExtractor implements Extractor {
         }
 
         @Override // p007b.p225i.p226a.p242c.p267x2.p276k0.SectionPayloadReader
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public void mo3752a(TimestampAdjuster timestampAdjuster, ExtractorOutput extractorOutput, TsPayloadReader.d dVar) {
         }
 
@@ -161,7 +161,7 @@ public final class TsExtractor implements Extractor {
         /* JADX WARN: Removed duplicated region for block: B:51:0x0134  */
         /* JADX WARN: Removed duplicated region for block: B:56:0x0141  */
         @Override // p007b.p225i.p226a.p242c.p267x2.p276k0.SectionPayloadReader
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         /*
             Code decompiled incorrectly, please refer to instructions dump.
         */
@@ -428,7 +428,7 @@ public final class TsExtractor implements Extractor {
     }
 
     @Override // p007b.p225i.p226a.p242c.p267x2.Extractor
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public boolean mo3633b(ExtractorInput extractorInput) throws IOException {
         boolean z2;
         byte[] bArr = this.f8638d.f6793a;
@@ -464,7 +464,7 @@ public final class TsExtractor implements Extractor {
     /* JADX WARN: Type inference failed for: r1v3 */
     /* JADX WARN: Type inference failed for: r1v9 */
     @Override // p007b.p225i.p226a.p242c.p267x2.Extractor
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public int mo3635e(ExtractorInput extractorInput, PositionHolder positionHolder) throws IOException {
         ?? r0;
         ?? r1;
@@ -487,7 +487,7 @@ public final class TsExtractor implements Extractor {
                     if (!tsDurationReader.f8628f) {
                         long jMo3642b2 = extractorInput.mo3642b();
                         int iMin = (int) Math.min(tsDurationReader.f8623a, jMo3642b2);
-                        long j2 = jMo3642b2 - iMin;
+                        long j2 = jMo3642b2 - ((long) iMin);
                         if (extractorInput.getPosition() != j2) {
                             positionHolder.f8992a = j2;
                         } else {
@@ -719,13 +719,13 @@ public final class TsExtractor implements Extractor {
     }
 
     @Override // p007b.p225i.p226a.p242c.p267x2.Extractor
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public void mo3636f(ExtractorOutput extractorOutput) {
         this.f8646l = extractorOutput;
     }
 
     @Override // p007b.p225i.p226a.p242c.p267x2.Extractor
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public void mo3637g(long j, long j2) {
         TsBinarySearchSeeker tsBinarySearchSeeker;
         AnimatableValueParser.m426D(this.f8635a != 2);

@@ -6,8 +6,8 @@ import com.discord.models.domain.ModelInvite;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: InviteUtils.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: InviteUtils.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class InviteUtils {
     public static final InviteUtils INSTANCE = new InviteUtils();
 

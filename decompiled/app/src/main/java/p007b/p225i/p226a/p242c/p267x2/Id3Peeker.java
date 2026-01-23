@@ -7,16 +7,16 @@ import java.io.IOException;
 import p007b.p225i.p226a.p242c.p259f3.ParsableByteArray;
 import p007b.p225i.p226a.p242c.p279z2.p283k.Id3Decoder;
 
-/* compiled from: Id3Peeker.java */
-/* renamed from: b.i.a.c.x2.q, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.x2.q, reason: use source file name */
+/* JADX INFO: compiled from: Id3Peeker.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class Id3Peeker {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final ParsableByteArray f8987a = new ParsableByteArray(10);
 
     @Nullable
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public Metadata m3816a(ExtractorInput extractorInput, @Nullable Id3Decoder.a aVar) throws IOException {
         Metadata metadataM3922d = null;
         int i = 0;

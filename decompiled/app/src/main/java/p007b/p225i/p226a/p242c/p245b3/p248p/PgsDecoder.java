@@ -15,56 +15,56 @@ import p007b.p225i.p226a.p242c.p245b3.Subtitle;
 import p007b.p225i.p226a.p242c.p259f3.ParsableByteArray;
 import p007b.p225i.p226a.p242c.p259f3.Util2;
 
-/* compiled from: PgsDecoder.java */
-/* renamed from: b.i.a.c.b3.p.a, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.b3.p.a, reason: use source file name */
+/* JADX INFO: compiled from: PgsDecoder.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class PgsDecoder extends SimpleSubtitleDecoder2 {
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public final ParsableByteArray f5967n;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public final ParsableByteArray f5968o;
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public final a f5969p;
 
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     @Nullable
     public Inflater f5970q;
 
-    /* compiled from: PgsDecoder.java */
-    /* renamed from: b.i.a.c.b3.p.a$a */
+    /* JADX INFO: renamed from: b.i.a.c.b3.p.a$a */
+    /* JADX INFO: compiled from: PgsDecoder.java */
     public static final class a {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final ParsableByteArray f5971a = new ParsableByteArray();
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final int[] f5972b = new int[256];
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public boolean f5973c;
 
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         public int f5974d;
 
-        /* renamed from: e */
+        /* JADX INFO: renamed from: e */
         public int f5975e;
 
-        /* renamed from: f */
+        /* JADX INFO: renamed from: f */
         public int f5976f;
 
-        /* renamed from: g */
+        /* JADX INFO: renamed from: g */
         public int f5977g;
 
-        /* renamed from: h */
+        /* JADX INFO: renamed from: h */
         public int f5978h;
 
-        /* renamed from: i */
+        /* JADX INFO: renamed from: i */
         public int f5979i;
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public void m2667a() {
             this.f5974d = 0;
             this.f5975e = 0;
@@ -87,7 +87,7 @@ public final class PgsDecoder extends SimpleSubtitleDecoder2 {
     /* JADX WARN: Can't fix incorrect switch cases order, some code will duplicate */
     /* JADX WARN: Removed duplicated region for block: B:21:0x006f  */
     @Override // p007b.p225i.p226a.p242c.p245b3.SimpleSubtitleDecoder2
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */

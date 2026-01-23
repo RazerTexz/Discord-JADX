@@ -4,8 +4,8 @@ import android.content.Context;
 import android.view.View;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: WidgetSettings.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetSettings.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetSettings$onViewBound$$inlined$with$lambda$4 implements View.OnClickListener {
     public final /* synthetic */ WidgetSettings this$0;
 

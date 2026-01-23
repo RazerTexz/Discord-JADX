@@ -17,11 +17,11 @@ import com.facebook.drawee.span.SimpleDraweeSpanTextView;
 import p007b.p008a.p025i.ViewUsernameBinding;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: UsernameView.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: UsernameView.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class UsernameView extends ConstraintLayout {
 
-    /* renamed from: j, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: j, reason: from kotlin metadata */
     public final ViewUsernameBinding binding;
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -69,7 +69,7 @@ public final class UsernameView extends ConstraintLayout {
         throw new NullPointerException("Missing required view with ID: ".concat(getResources().getResourceName(i)));
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public static /* synthetic */ void m8566c(UsernameView usernameView, CharSequence charSequence, String str, boolean z2, Integer num, Integer num2, int i) {
         int i2 = i & 2;
         int i3 = i & 8;
@@ -81,7 +81,7 @@ public final class UsernameView extends ConstraintLayout {
         this.binding.f875b.setCompoundDrawablesWithIntrinsicBounds(isVerified ? C5419R.drawable.ic_verified_10dp : 0, 0, 0, 0);
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final void m8567a(boolean visible, @StringRes int tagText, boolean isVerified) {
         if (!visible) {
             TextView textView = this.binding.f875b;
@@ -96,7 +96,7 @@ public final class UsernameView extends ConstraintLayout {
         }
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final void m8568b(CharSequence usernameText, String avatarUrl, boolean animateAvatar, Integer avatarSizePx, @ColorInt Integer roundingOverlayColor) {
         Intrinsics3.checkNotNullParameter(usernameText, "usernameText");
         DraweeSpanStringBuilder draweeSpanStringBuilder = new DraweeSpanStringBuilder();

@@ -3,9 +3,9 @@ package p007b.p195g.p196a.p205c.p218h0;
 import p007b.p100d.p104b.p105a.outline;
 import p007b.p195g.p196a.p205c.JavaType;
 
-/* compiled from: CollectionLikeType.java */
-/* renamed from: b.g.a.c.h0.d, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.g.a.c.h0.d, reason: use source file name */
+/* JADX INFO: compiled from: CollectionLikeType.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class CollectionLikeType extends TypeBase {
     private static final long serialVersionUID = 1;
     public final JavaType _elementType;
@@ -16,25 +16,25 @@ public class CollectionLikeType extends TypeBase {
     }
 
     @Override // p007b.p195g.p196a.p205c.JavaType
-    /* renamed from: C */
+    /* JADX INFO: renamed from: C */
     public JavaType mo2093C(Class<?> cls, TypeBindings typeBindings, JavaType javaType, JavaType[] javaTypeArr) {
         return new CollectionLikeType(cls, typeBindings, javaType, javaTypeArr, this._elementType, this._valueHandler, this._typeHandler, this._asStatic);
     }
 
     @Override // p007b.p195g.p196a.p205c.JavaType
-    /* renamed from: D */
+    /* JADX INFO: renamed from: D */
     public JavaType mo2094D(JavaType javaType) {
         return this._elementType == javaType ? this : new CollectionLikeType(this._class, this._bindings, this._superClass, this._superInterfaces, javaType, this._valueHandler, this._typeHandler, this._asStatic);
     }
 
     @Override // p007b.p195g.p196a.p205c.JavaType
-    /* renamed from: E */
+    /* JADX INFO: renamed from: E */
     public /* bridge */ /* synthetic */ JavaType mo2095E(Object obj) {
         return mo2107L(obj);
     }
 
     @Override // p007b.p195g.p196a.p205c.JavaType
-    /* renamed from: F */
+    /* JADX INFO: renamed from: F */
     public JavaType mo2105F(JavaType javaType) {
         JavaType javaTypeMo2105F;
         JavaType javaTypeMo2105F2 = super.mo2105F(javaType);
@@ -43,25 +43,25 @@ public class CollectionLikeType extends TypeBase {
     }
 
     @Override // p007b.p195g.p196a.p205c.JavaType
-    /* renamed from: G */
+    /* JADX INFO: renamed from: G */
     public /* bridge */ /* synthetic */ JavaType mo2096G() {
         return mo2108M();
     }
 
     @Override // p007b.p195g.p196a.p205c.JavaType
-    /* renamed from: H */
+    /* JADX INFO: renamed from: H */
     public /* bridge */ /* synthetic */ JavaType mo2097H(Object obj) {
         return mo2109N(obj);
     }
 
     @Override // p007b.p195g.p196a.p205c.JavaType
-    /* renamed from: I */
+    /* JADX INFO: renamed from: I */
     public /* bridge */ /* synthetic */ JavaType mo2098I(Object obj) {
         return mo2110O(obj);
     }
 
     @Override // p007b.p195g.p196a.p205c.p218h0.TypeBase
-    /* renamed from: K */
+    /* JADX INFO: renamed from: K */
     public String mo2106K() {
         StringBuilder sb = new StringBuilder();
         sb.append(this._class.getName());
@@ -73,22 +73,22 @@ public class CollectionLikeType extends TypeBase {
         return sb.toString();
     }
 
-    /* renamed from: L */
+    /* JADX INFO: renamed from: L */
     public CollectionLikeType mo2107L(Object obj) {
         return new CollectionLikeType(this._class, this._bindings, this._superClass, this._superInterfaces, this._elementType.mo2097H(obj), this._valueHandler, this._typeHandler, this._asStatic);
     }
 
-    /* renamed from: M */
+    /* JADX INFO: renamed from: M */
     public CollectionLikeType mo2108M() {
         return this._asStatic ? this : new CollectionLikeType(this._class, this._bindings, this._superClass, this._superInterfaces, this._elementType.mo2096G(), this._valueHandler, this._typeHandler, true);
     }
 
-    /* renamed from: N */
+    /* JADX INFO: renamed from: N */
     public CollectionLikeType mo2109N(Object obj) {
         return new CollectionLikeType(this._class, this._bindings, this._superClass, this._superInterfaces, this._elementType, this._valueHandler, obj, this._asStatic);
     }
 
-    /* renamed from: O */
+    /* JADX INFO: renamed from: O */
     public CollectionLikeType mo2110O(Object obj) {
         return new CollectionLikeType(this._class, this._bindings, this._superClass, this._superInterfaces, this._elementType, obj, this._typeHandler, this._asStatic);
     }
@@ -106,20 +106,20 @@ public class CollectionLikeType extends TypeBase {
     }
 
     @Override // p007b.p195g.p196a.p205c.JavaType
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public JavaType mo2099k() {
         return this._elementType;
     }
 
     @Override // p007b.p195g.p196a.p205c.JavaType
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public StringBuilder mo2100l(StringBuilder sb) {
         TypeBase.m2139J(this._class, sb, true);
         return sb;
     }
 
     @Override // p007b.p195g.p196a.p205c.JavaType
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public StringBuilder mo2101m(StringBuilder sb) {
         TypeBase.m2139J(this._class, sb, false);
         sb.append('<');
@@ -129,7 +129,7 @@ public class CollectionLikeType extends TypeBase {
     }
 
     @Override // p007b.p195g.p196a.p205c.JavaType
-    /* renamed from: s */
+    /* JADX INFO: renamed from: s */
     public boolean mo2103s() {
         return super.mo2103s() || this._elementType.mo2103s();
     }
@@ -143,13 +143,13 @@ public class CollectionLikeType extends TypeBase {
     }
 
     @Override // p007b.p195g.p196a.p205c.JavaType
-    /* renamed from: u */
+    /* JADX INFO: renamed from: u */
     public boolean mo2111u() {
         return true;
     }
 
     @Override // p007b.p195g.p196a.p205c.JavaType
-    /* renamed from: v */
+    /* JADX INFO: renamed from: v */
     public boolean mo2104v() {
         return true;
     }

@@ -5,15 +5,15 @@ import java.util.Arrays;
 import p007b.p100d.p104b.p105a.outline;
 import p007b.p225i.p361c.p369m.p370d.p375m.CrashlyticsReport;
 
-/* compiled from: AutoValue_CrashlyticsReport_FilesPayload_File.java */
-/* renamed from: b.i.c.m.d.m.e, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.c.m.d.m.e, reason: use source file name */
+/* JADX INFO: compiled from: AutoValue_CrashlyticsReport_FilesPayload_File.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class AutoValue_CrashlyticsReport_FilesPayload_File extends CrashlyticsReport.c.a {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final String f12538a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final byte[] f12539b;
 
     public AutoValue_CrashlyticsReport_FilesPayload_File(String str, byte[] bArr, a aVar) {
@@ -23,14 +23,14 @@ public final class AutoValue_CrashlyticsReport_FilesPayload_File extends Crashly
 
     @Override // p007b.p225i.p361c.p369m.p370d.p375m.CrashlyticsReport.c.a
     @NonNull
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public byte[] mo6529a() {
         return this.f12539b;
     }
 
     @Override // p007b.p225i.p361c.p369m.p370d.p375m.CrashlyticsReport.c.a
     @NonNull
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public String mo6530b() {
         return this.f12538a;
     }

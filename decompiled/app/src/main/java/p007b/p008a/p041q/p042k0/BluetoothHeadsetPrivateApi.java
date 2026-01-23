@@ -8,26 +8,26 @@ import kotlin.jvm.functions.Function0;
 import p507d0.LazyJVM;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: BluetoothHeadsetPrivateApi.kt */
+/* JADX INFO: renamed from: b.a.q.k0.d, reason: use source file name */
+/* JADX INFO: compiled from: BluetoothHeadsetPrivateApi.kt */
+/* JADX INFO: loaded from: classes.dex */
 @SuppressLint({"DiscouragedPrivateApi"})
-/* renamed from: b.a.q.k0.d, reason: use source file name */
-/* loaded from: classes.dex */
 public final class BluetoothHeadsetPrivateApi {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final Lazy f1653a = LazyJVM.lazy(a.f1656j);
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static final Lazy f1654b = LazyJVM.lazy(b.f1657j);
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public static final BluetoothHeadsetPrivateApi f1655c = null;
 
-    /* compiled from: BluetoothHeadsetPrivateApi.kt */
-    /* renamed from: b.a.q.k0.d$a */
+    /* JADX INFO: renamed from: b.a.q.k0.d$a */
+    /* JADX INFO: compiled from: BluetoothHeadsetPrivateApi.kt */
     public static final class a extends Lambda implements Function0<String> {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public static final a f1656j = new a();
 
         public a() {
@@ -48,11 +48,11 @@ public final class BluetoothHeadsetPrivateApi {
         }
     }
 
-    /* compiled from: BluetoothHeadsetPrivateApi.kt */
-    /* renamed from: b.a.q.k0.d$b */
+    /* JADX INFO: renamed from: b.a.q.k0.d$b */
+    /* JADX INFO: compiled from: BluetoothHeadsetPrivateApi.kt */
     public static final class b extends Lambda implements Function0<Method> {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public static final b f1657j = new b();
 
         public b() {

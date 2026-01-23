@@ -22,40 +22,40 @@ import p007b.p085c.p086a.p095y.KeyPath;
 import p007b.p085c.p086a.p095y.p097l.ShapeFill;
 import p007b.p085c.p086a.p095y.p098m.BaseLayer2;
 
-/* compiled from: FillContent.java */
-/* renamed from: b.c.a.w.b.g, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.c.a.w.b.g, reason: use source file name */
+/* JADX INFO: compiled from: FillContent.java */
+/* JADX INFO: loaded from: classes.dex */
 public class FillContent implements DrawingContent, BaseKeyframeAnimation.b, KeyPathElementContent {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final Path f2501a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final Paint f2502b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final BaseLayer2 f2503c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final String f2504d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final boolean f2505e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final List<PathContent> f2506f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public final BaseKeyframeAnimation<Integer, Integer> f2507g;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public final BaseKeyframeAnimation<Integer, Integer> f2508h;
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     @Nullable
     public BaseKeyframeAnimation<ColorFilter, ColorFilter> f2509i;
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final LottieDrawable f2510j;
 
     public FillContent(LottieDrawable lottieDrawable, BaseLayer2 baseLayer2, ShapeFill shapeFill) {
@@ -84,13 +84,13 @@ public class FillContent implements DrawingContent, BaseKeyframeAnimation.b, Key
     }
 
     @Override // p007b.p085c.p086a.p091w.p093c.BaseKeyframeAnimation.b
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public void mo709a() {
         this.f2510j.invalidateSelf();
     }
 
     @Override // p007b.p085c.p086a.p091w.p092b.Content2
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public void mo710b(List<Content2> list, List<Content2> list2) {
         for (int i = 0; i < list2.size(); i++) {
             Content2 content2 = list2.get(i);
@@ -101,13 +101,13 @@ public class FillContent implements DrawingContent, BaseKeyframeAnimation.b, Key
     }
 
     @Override // p007b.p085c.p086a.p095y.KeyPathElement
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public void mo711c(KeyPath keyPath, int i, List<KeyPath> list, KeyPath keyPath2) {
         MiscUtils.m656f(keyPath, i, list, keyPath2, this);
     }
 
     @Override // p007b.p085c.p086a.p091w.p092b.DrawingContent
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public void mo712d(RectF rectF, Matrix matrix, boolean z2) {
         this.f2501a.reset();
         for (int i = 0; i < this.f2506f.size(); i++) {
@@ -118,7 +118,7 @@ public class FillContent implements DrawingContent, BaseKeyframeAnimation.b, Key
     }
 
     @Override // p007b.p085c.p086a.p091w.p092b.DrawingContent
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public void mo713f(Canvas canvas, Matrix matrix, int i) {
         if (this.f2505e) {
             return;
@@ -141,7 +141,7 @@ public class FillContent implements DrawingContent, BaseKeyframeAnimation.b, Key
 
     /* JADX WARN: Multi-variable type inference failed */
     @Override // p007b.p085c.p086a.p095y.KeyPathElement
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public <T> void mo714g(T t, @Nullable LottieValueCallback<T> lottieValueCallback) {
         if (t == LottieProperty.f2423a) {
             BaseKeyframeAnimation<Integer, Integer> baseKeyframeAnimation = this.f2507g;

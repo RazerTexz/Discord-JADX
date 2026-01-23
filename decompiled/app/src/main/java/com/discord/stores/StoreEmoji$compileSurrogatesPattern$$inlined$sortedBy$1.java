@@ -4,8 +4,8 @@ import androidx.exifinterface.media.ExifInterface;
 import java.util.Comparator;
 import p507d0.p582u.C12169a;
 
-/* compiled from: Comparisons.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: Comparisons.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class StoreEmoji$compileSurrogatesPattern$$inlined$sortedBy$1<T> implements Comparator {
     /* JADX WARN: Multi-variable type inference failed */
     @Override // java.util.Comparator

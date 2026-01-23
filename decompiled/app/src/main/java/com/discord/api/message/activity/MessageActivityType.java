@@ -2,8 +2,8 @@ package com.discord.api.message.activity;
 
 import kotlin.jvm.internal.DefaultConstructorMarker;
 
-/* compiled from: MessageActivityType.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: MessageActivityType.kt */
+/* JADX INFO: loaded from: classes.dex */
 public enum MessageActivityType {
     JOIN(1),
     SPECTATE(2),
@@ -12,16 +12,16 @@ public enum MessageActivityType {
     REQUEST(5);
 
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private final int apiInt;
 
-    /* compiled from: MessageActivityType.kt */
+    /* JADX INFO: compiled from: MessageActivityType.kt */
     public static final class Companion {
         public Companion() {
         }
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final MessageActivityType m8059a(Integer num) {
             MessageActivityType messageActivityType = MessageActivityType.JOIN;
             int apiInt = messageActivityType.getApiInt();

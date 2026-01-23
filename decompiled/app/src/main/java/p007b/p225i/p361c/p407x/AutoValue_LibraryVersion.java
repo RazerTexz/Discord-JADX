@@ -3,15 +3,15 @@ package p007b.p225i.p361c.p407x;
 import java.util.Objects;
 import p007b.p100d.p104b.p105a.outline;
 
-/* compiled from: AutoValue_LibraryVersion.java */
-/* renamed from: b.i.c.x.a, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.c.x.a, reason: use source file name */
+/* JADX INFO: compiled from: AutoValue_LibraryVersion.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class AutoValue_LibraryVersion extends LibraryVersion {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final String f13079a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final String f13080b;
 
     public AutoValue_LibraryVersion(String str, String str2) {
@@ -22,13 +22,13 @@ public final class AutoValue_LibraryVersion extends LibraryVersion {
     }
 
     @Override // p007b.p225i.p361c.p407x.LibraryVersion
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public String mo6843a() {
         return this.f13079a;
     }
 
     @Override // p007b.p225i.p361c.p407x.LibraryVersion
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public String mo6844b() {
         return this.f13080b;
     }

@@ -9,9 +9,9 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 import p658rx.subjects.PublishSubject;
 
-/* compiled from: UserActionsDialogViewModel.kt */
-/* renamed from: b.a.a.d.h, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.a.a.d.h, reason: use source file name */
+/* JADX INFO: compiled from: UserActionsDialogViewModel.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class UserActionsDialogViewModel7 extends Lambda implements Function1<Error, Unit> {
     public final /* synthetic */ UserActionsDialogViewModel5 this$0;
 

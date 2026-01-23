@@ -9,12 +9,12 @@ import android.os.Process;
 import androidx.annotation.RecentlyNonNull;
 import p007b.p225i.p226a.p288f.p299e.p308o.C3404f;
 
-/* compiled from: com.google.android.gms:play-services-basement@@17.6.0 */
-/* renamed from: b.i.a.f.e.p.a */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.e.p.a */
+/* JADX INFO: compiled from: com.google.android.gms:play-services-basement@@17.6.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public class C3410a {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     @RecentlyNonNull
     public final Context f9605a;
 
@@ -23,18 +23,18 @@ public class C3410a {
     }
 
     @RecentlyNonNull
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public ApplicationInfo m4373a(@RecentlyNonNull String str, int i) throws PackageManager.NameNotFoundException {
         return this.f9605a.getPackageManager().getApplicationInfo(str, i);
     }
 
     @RecentlyNonNull
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public PackageInfo m4374b(@RecentlyNonNull String str, int i) throws PackageManager.NameNotFoundException {
         return this.f9605a.getPackageManager().getPackageInfo(str, i);
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public boolean m4375c() {
         String nameForUid;
         if (Binder.getCallingUid() == Process.myUid()) {

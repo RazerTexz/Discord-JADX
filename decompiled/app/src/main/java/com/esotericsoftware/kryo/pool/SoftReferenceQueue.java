@@ -6,7 +6,7 @@ import java.util.Collection;
 import java.util.Iterator;
 import java.util.Queue;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class SoftReferenceQueue implements Queue<Kryo> {
     private Queue<SoftReference<Kryo>> delegate;
 
@@ -119,7 +119,7 @@ public class SoftReferenceQueue implements Queue<Kryo> {
         throw new UnsupportedOperationException();
     }
 
-    /* renamed from: offer, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: offer, reason: avoid collision after fix types in other method */
     public boolean offer2(Kryo kryo) {
         return this.delegate.offer(new SoftReference<>(kryo));
     }

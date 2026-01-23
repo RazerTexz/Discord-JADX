@@ -3,18 +3,18 @@ package p007b.p225i.p226a.p288f.p313h.p327n;
 import java.util.NoSuchElementException;
 import p007b.p225i.p226a.p288f.p299e.p308o.C3404f;
 
-/* compiled from: com.android.billingclient:billing@@4.0.0 */
-/* renamed from: b.i.a.f.h.n.i */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.h.n.i */
+/* JADX INFO: compiled from: com.android.billingclient:billing@@4.0.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public final class C3949i<E> {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final int f10484j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public int f10485k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final AbstractC3951k<E> f10486l;
 
     public C3949i(AbstractC3951k<E> abstractC3951k, int i) {

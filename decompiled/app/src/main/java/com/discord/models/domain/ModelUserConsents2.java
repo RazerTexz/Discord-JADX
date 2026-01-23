@@ -5,19 +5,19 @@ import kotlin.jvm.internal.DefaultConstructorMarker;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ModelUserConsents.kt */
-/* renamed from: com.discord.models.domain.Consents, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: com.discord.models.domain.Consents, reason: use source file name */
+/* JADX INFO: compiled from: ModelUserConsents.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class ModelUserConsents2 {
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private static final ModelUserConsents2 DEFAULT = new ModelUserConsents2(new ModelUserConsents(false, null, 3, null), new ModelUserConsents(false, null, 3, null));
     private final ModelUserConsents personalization;
     private final ModelUserConsents usageStatistics;
 
-    /* compiled from: ModelUserConsents.kt */
-    /* renamed from: com.discord.models.domain.Consents$Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: com.discord.models.domain.Consents$Companion, reason: from kotlin metadata */
+    /* JADX INFO: compiled from: ModelUserConsents.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -52,12 +52,12 @@ public final /* data */ class ModelUserConsents2 {
         return modelUserConsents2.copy(modelUserConsents, modelUserConsents3);
     }
 
-    /* renamed from: component1, reason: from getter */
+    /* JADX INFO: renamed from: component1, reason: from getter */
     public final ModelUserConsents getUsageStatistics() {
         return this.usageStatistics;
     }
 
-    /* renamed from: component2, reason: from getter */
+    /* JADX INFO: renamed from: component2, reason: from getter */
     public final ModelUserConsents getPersonalization() {
         return this.personalization;
     }

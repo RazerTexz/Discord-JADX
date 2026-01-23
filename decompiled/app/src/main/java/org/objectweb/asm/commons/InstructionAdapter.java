@@ -7,7 +7,7 @@ import org.objectweb.asm.MethodVisitor;
 import org.objectweb.asm.Opcodes;
 import org.objectweb.asm.Type;
 
-/* loaded from: discord-126021.apk:org/objectweb/asm/commons/InstructionAdapter.SCL.lombok */
+/* JADX INFO: loaded from: discord-126021.apk:org/objectweb/asm/commons/InstructionAdapter.SCL.lombok */
 public class InstructionAdapter extends MethodVisitor {
     public static final Type OBJECT_TYPE = Type.getType("Ljava/lang/Object;");
 
@@ -907,7 +907,7 @@ public class InstructionAdapter extends MethodVisitor {
         this.f27600mv.visitInsn(type.getOpcode(126));
     }
 
-    /* renamed from: or */
+    /* JADX INFO: renamed from: or */
     public void m11013or(Type type) {
         this.f27600mv.visitInsn(type.getOpcode(128));
     }

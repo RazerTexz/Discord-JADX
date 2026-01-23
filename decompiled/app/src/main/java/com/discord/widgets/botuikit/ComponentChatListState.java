@@ -21,12 +21,12 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p658rx.Observable;
 import p658rx.functions.Func3;
 
-/* compiled from: ComponentChatListState.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: ComponentChatListState.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class ComponentChatListState {
     public static final ComponentChatListState INSTANCE = new ComponentChatListState();
 
-    /* compiled from: ComponentChatListState.kt */
+    /* JADX INFO: compiled from: ComponentChatListState.kt */
     public static final /* data */ class ComponentStoreState {
         private final boolean animateEmojis;
         private final Map<Integer, StoreApplicationInteractions.InteractionSendState> interactionState;
@@ -65,7 +65,7 @@ public final class ComponentChatListState {
             return this.selections;
         }
 
-        /* renamed from: component3, reason: from getter */
+        /* JADX INFO: renamed from: component3, reason: from getter */
         public final boolean getAnimateEmojis() {
             return this.animateEmojis;
         }
@@ -98,17 +98,20 @@ public final class ComponentChatListState {
         }
 
         /* JADX WARN: Multi-variable type inference failed */
+        /* JADX WARN: Type inference failed for: r1v3, types: [int] */
+        /* JADX WARN: Type inference failed for: r1v4 */
+        /* JADX WARN: Type inference failed for: r1v6 */
         public int hashCode() {
             Map<Integer, StoreApplicationInteractions.InteractionSendState> map = this.interactionState;
             int iHashCode = (map != null ? map.hashCode() : 0) * 31;
             Map<Integer, List<SelectComponent2>> map2 = this.selections;
             int iHashCode2 = (iHashCode + (map2 != null ? map2.hashCode() : 0)) * 31;
             boolean z2 = this.animateEmojis;
-            int i = z2;
-            if (z2 != 0) {
-                i = 1;
+            ?? r1 = z2;
+            if (z2) {
+                r1 = 1;
             }
-            return iHashCode2 + i;
+            return iHashCode2 + r1;
         }
 
         public String toString() {
@@ -125,8 +128,8 @@ public final class ComponentChatListState {
         }
     }
 
-    /* compiled from: ComponentChatListState.kt */
-    /* renamed from: com.discord.widgets.botuikit.ComponentChatListState$observeChatListComponentState$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.botuikit.ComponentChatListState$observeChatListComponentState$1 */
+    /* JADX INFO: compiled from: ComponentChatListState.kt */
     public static final class C72701<T1, T2, T3, R> implements Func3<Map<Long, ? extends Map<Integer, ? extends StoreApplicationInteractions.InteractionSendState>>, Map<Long, ? extends Map<Integer, ? extends List<? extends SelectComponent2>>>, Boolean, Map<Long, ? extends ComponentStoreState>> {
         public static final C72701 INSTANCE = new C72701();
 
@@ -135,7 +138,7 @@ public final class ComponentChatListState {
             return call2(map, (Map<Long, ? extends Map<Integer, ? extends List<SelectComponent2>>>) map2, bool);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final Map<Long, ComponentStoreState> call2(Map<Long, ? extends Map<Integer, ? extends StoreApplicationInteractions.InteractionSendState>> map, Map<Long, ? extends Map<Integer, ? extends List<SelectComponent2>>> map2, Boolean bool) {
             List listDistinct = _Collections.distinct(_Sets.plus((Set) map.keySet(), (Iterable) map2.keySet()));
             LinkedHashMap linkedHashMap = new LinkedHashMap(_Ranges.coerceAtLeast(MapsJVM.mapCapacity(Iterables2.collectionSizeOrDefault(listDistinct, 10)), 16));

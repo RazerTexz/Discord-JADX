@@ -7,24 +7,24 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.viewbinding.ViewBinding;
 import com.facebook.drawee.view.SimpleDraweeView;
 
-/* compiled from: ViewStreamPreviewBinding.java */
-/* renamed from: b.a.i.z3, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.a.i.z3, reason: use source file name */
+/* JADX INFO: compiled from: ViewStreamPreviewBinding.java */
+/* JADX INFO: loaded from: classes.dex */
 public final class ViewStreamPreviewBinding implements ViewBinding {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     @NonNull
     public final ConstraintLayout f1440a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     @NonNull
     public final SimpleDraweeView f1441b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     @NonNull
     public final TextView f1442c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     @NonNull
     public final TextView f1443d;
 

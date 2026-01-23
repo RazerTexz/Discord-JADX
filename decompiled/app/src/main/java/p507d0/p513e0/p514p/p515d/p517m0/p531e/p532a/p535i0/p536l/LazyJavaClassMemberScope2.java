@@ -30,6 +30,7 @@ import p507d0.p513e0.p514p.p515d.p517m0.p521c.FunctionDescriptor;
 import p507d0.p513e0.p514p.p515d.p517m0.p521c.Modality;
 import p507d0.p513e0.p514p.p515d.p517m0.p521c.PropertyDescriptor;
 import p507d0.p513e0.p514p.p515d.p517m0.p521c.PropertyGetterDescriptor;
+import p507d0.p513e0.p514p.p515d.p517m0.p521c.PropertySetterDescriptor;
 import p507d0.p513e0.p514p.p515d.p517m0.p521c.ReceiverParameterDescriptor;
 import p507d0.p513e0.p514p.p515d.p517m0.p521c.SimpleFunctionDescriptor;
 import p507d0.p513e0.p514p.p515d.p517m0.p521c.TypeParameterDescriptor;
@@ -110,34 +111,34 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 import p507d0.p592z.p594d.Reflection2;
 
-/* compiled from: LazyJavaClassMemberScope.kt */
-/* renamed from: d0.e0.p.d.m0.e.a.i0.l.h, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.e.a.i0.l.h, reason: use source file name */
+/* JADX INFO: compiled from: LazyJavaClassMemberScope.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class LazyJavaClassMemberScope2 extends LazyJavaScope {
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public final ClassDescriptor f23361n;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public final InterfaceC11574g f23362o;
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public final boolean f23363p;
 
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     public final storage5<List<ClassConstructorDescriptor>> f23364q;
 
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     public final storage5<Set<Name>> f23365r;
 
-    /* renamed from: s */
+    /* JADX INFO: renamed from: s */
     public final storage5<Map<Name, InterfaceC11581n>> f23366s;
 
-    /* renamed from: t */
+    /* JADX INFO: renamed from: t */
     public final storage4<Name, ClassDescriptorBase> f23367t;
 
-    /* compiled from: LazyJavaClassMemberScope.kt */
-    /* renamed from: d0.e0.p.d.m0.e.a.i0.l.h$a */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.e.a.i0.l.h$a */
+    /* JADX INFO: compiled from: LazyJavaClassMemberScope.kt */
     public /* synthetic */ class a extends FunctionReference implements Function1<Name, Collection<? extends SimpleFunctionDescriptor>> {
         public a(LazyJavaClassMemberScope2 lazyJavaClassMemberScope2) {
             super(1, lazyJavaClassMemberScope2);
@@ -163,15 +164,15 @@ public final class LazyJavaClassMemberScope2 extends LazyJavaScope {
             return invoke2(name);
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final Collection<SimpleFunctionDescriptor> invoke2(Name name) {
             Intrinsics3.checkNotNullParameter(name, "p0");
             return LazyJavaClassMemberScope2.access$searchMethodsByNameWithoutBuiltinMagic((LazyJavaClassMemberScope2) this.receiver, name);
         }
     }
 
-    /* compiled from: LazyJavaClassMemberScope.kt */
-    /* renamed from: d0.e0.p.d.m0.e.a.i0.l.h$b */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.e.a.i0.l.h$b */
+    /* JADX INFO: compiled from: LazyJavaClassMemberScope.kt */
     public /* synthetic */ class b extends FunctionReference implements Function1<Name, Collection<? extends SimpleFunctionDescriptor>> {
         public b(LazyJavaClassMemberScope2 lazyJavaClassMemberScope2) {
             super(1, lazyJavaClassMemberScope2);
@@ -197,15 +198,15 @@ public final class LazyJavaClassMemberScope2 extends LazyJavaScope {
             return invoke2(name);
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final Collection<SimpleFunctionDescriptor> invoke2(Name name) {
             Intrinsics3.checkNotNullParameter(name, "p0");
             return LazyJavaClassMemberScope2.access$searchMethodsInSupertypesWithoutBuiltinMagic((LazyJavaClassMemberScope2) this.receiver, name);
         }
     }
 
-    /* compiled from: LazyJavaClassMemberScope.kt */
-    /* renamed from: d0.e0.p.d.m0.e.a.i0.l.h$c */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.e.a.i0.l.h$c */
+    /* JADX INFO: compiled from: LazyJavaClassMemberScope.kt */
     public static final class c extends Lambda implements Function1<Name, Collection<? extends SimpleFunctionDescriptor>> {
         public c() {
             super(1);
@@ -216,15 +217,15 @@ public final class LazyJavaClassMemberScope2 extends LazyJavaScope {
             return invoke2(name);
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final Collection<SimpleFunctionDescriptor> invoke2(Name name) {
             Intrinsics3.checkNotNullParameter(name, "it");
             return LazyJavaClassMemberScope2.access$searchMethodsByNameWithoutBuiltinMagic(LazyJavaClassMemberScope2.this, name);
         }
     }
 
-    /* compiled from: LazyJavaClassMemberScope.kt */
-    /* renamed from: d0.e0.p.d.m0.e.a.i0.l.h$d */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.e.a.i0.l.h$d */
+    /* JADX INFO: compiled from: LazyJavaClassMemberScope.kt */
     public static final class d extends Lambda implements Function1<Name, Collection<? extends SimpleFunctionDescriptor>> {
         public d() {
             super(1);
@@ -235,18 +236,18 @@ public final class LazyJavaClassMemberScope2 extends LazyJavaScope {
             return invoke2(name);
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final Collection<SimpleFunctionDescriptor> invoke2(Name name) {
             Intrinsics3.checkNotNullParameter(name, "it");
             return LazyJavaClassMemberScope2.access$searchMethodsInSupertypesWithoutBuiltinMagic(LazyJavaClassMemberScope2.this, name);
         }
     }
 
-    /* compiled from: LazyJavaClassMemberScope.kt */
-    /* renamed from: d0.e0.p.d.m0.e.a.i0.l.h$e */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.e.a.i0.l.h$e */
+    /* JADX INFO: compiled from: LazyJavaClassMemberScope.kt */
     public static final class e extends Lambda implements Function0<List<? extends ClassConstructorDescriptor>> {
 
-        /* renamed from: $c */
+        /* JADX INFO: renamed from: $c */
         public final /* synthetic */ context4 f23368$c;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -260,11 +261,9 @@ public final class LazyJavaClassMemberScope2 extends LazyJavaScope {
             return invoke2();
         }
 
-        /* JADX WARN: Multi-variable type inference failed */
         /* JADX WARN: Removed duplicated region for block: B:17:0x006b  */
-        /* JADX WARN: Type inference failed for: r1v3, types: [java.util.List] */
         @Override // kotlin.jvm.functions.Function0
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         /*
             Code decompiled incorrectly, please refer to instructions dump.
         */
@@ -301,16 +300,16 @@ public final class LazyJavaClassMemberScope2 extends LazyJavaScope {
             context4 context4Var = this.f23368$c;
             LazyJavaClassMemberScope2 lazyJavaClassMemberScope2 = LazyJavaClassMemberScope2.this;
             boolean zIsEmpty = arrayList.isEmpty();
-            ArrayList arrayListListOfNotNull = arrayList;
+            List listListOfNotNull = arrayList;
             if (zIsEmpty) {
-                arrayListListOfNotNull = Collections2.listOfNotNull(LazyJavaClassMemberScope2.access$createDefaultConstructor(lazyJavaClassMemberScope2));
+                listListOfNotNull = Collections2.listOfNotNull(LazyJavaClassMemberScope2.access$createDefaultConstructor(lazyJavaClassMemberScope2));
             }
-            return _Collections.toList(signatureEnhancement.enhanceSignatures(context4Var, arrayListListOfNotNull));
+            return _Collections.toList(signatureEnhancement.enhanceSignatures(context4Var, listListOfNotNull));
         }
     }
 
-    /* compiled from: LazyJavaClassMemberScope.kt */
-    /* renamed from: d0.e0.p.d.m0.e.a.i0.l.h$f */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.e.a.i0.l.h$f */
+    /* JADX INFO: compiled from: LazyJavaClassMemberScope.kt */
     public static final class f extends Lambda implements Function0<Map<Name, ? extends InterfaceC11581n>> {
         public f() {
             super(0);
@@ -322,7 +321,7 @@ public final class LazyJavaClassMemberScope2 extends LazyJavaScope {
         }
 
         @Override // kotlin.jvm.functions.Function0
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final Map<Name, ? extends InterfaceC11581n> invoke2() {
             Collection<InterfaceC11581n> fields = LazyJavaClassMemberScope2.access$getJClass$p(LazyJavaClassMemberScope2.this).getFields();
             ArrayList arrayList = new ArrayList();
@@ -339,8 +338,8 @@ public final class LazyJavaClassMemberScope2 extends LazyJavaScope {
         }
     }
 
-    /* compiled from: LazyJavaClassMemberScope.kt */
-    /* renamed from: d0.e0.p.d.m0.e.a.i0.l.h$g */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.e.a.i0.l.h$g */
+    /* JADX INFO: compiled from: LazyJavaClassMemberScope.kt */
     public static final class g extends Lambda implements Function1<Name, Collection<? extends SimpleFunctionDescriptor>> {
         public final /* synthetic */ SimpleFunctionDescriptor $function;
         public final /* synthetic */ LazyJavaClassMemberScope2 this$0;
@@ -357,15 +356,15 @@ public final class LazyJavaClassMemberScope2 extends LazyJavaScope {
             return invoke2(name);
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final Collection<SimpleFunctionDescriptor> invoke2(Name name) {
             Intrinsics3.checkNotNullParameter(name, "accessorName");
             return Intrinsics3.areEqual(this.$function.getName(), name) ? CollectionsJVM.listOf(this.$function) : _Collections.plus(LazyJavaClassMemberScope2.access$searchMethodsByNameWithoutBuiltinMagic(this.this$0, name), (Iterable) LazyJavaClassMemberScope2.access$searchMethodsInSupertypesWithoutBuiltinMagic(this.this$0, name));
         }
     }
 
-    /* compiled from: LazyJavaClassMemberScope.kt */
-    /* renamed from: d0.e0.p.d.m0.e.a.i0.l.h$h */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.e.a.i0.l.h$h */
+    /* JADX INFO: compiled from: LazyJavaClassMemberScope.kt */
     public static final class h extends Lambda implements Function0<Set<? extends Name>> {
         public h() {
             super(0);
@@ -377,21 +376,21 @@ public final class LazyJavaClassMemberScope2 extends LazyJavaScope {
         }
 
         @Override // kotlin.jvm.functions.Function0
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final Set<? extends Name> invoke2() {
             return _Collections.toSet(LazyJavaClassMemberScope2.access$getJClass$p(LazyJavaClassMemberScope2.this).getInnerClassNames());
         }
     }
 
-    /* compiled from: LazyJavaClassMemberScope.kt */
-    /* renamed from: d0.e0.p.d.m0.e.a.i0.l.h$i */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.e.a.i0.l.h$i */
+    /* JADX INFO: compiled from: LazyJavaClassMemberScope.kt */
     public static final class i extends Lambda implements Function1<Name, ClassDescriptorBase> {
 
-        /* renamed from: $c */
+        /* JADX INFO: renamed from: $c */
         public final /* synthetic */ context4 f23369$c;
 
-        /* compiled from: LazyJavaClassMemberScope.kt */
-        /* renamed from: d0.e0.p.d.m0.e.a.i0.l.h$i$a */
+        /* JADX INFO: renamed from: d0.e0.p.d.m0.e.a.i0.l.h$i$a */
+        /* JADX INFO: compiled from: LazyJavaClassMemberScope.kt */
         public static final class a extends Lambda implements Function0<Set<? extends Name>> {
             public final /* synthetic */ LazyJavaClassMemberScope2 this$0;
 
@@ -407,7 +406,7 @@ public final class LazyJavaClassMemberScope2 extends LazyJavaScope {
             }
 
             @Override // kotlin.jvm.functions.Function0
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final Set<? extends Name> invoke2() {
                 return _Sets.plus((Set) this.this$0.getFunctionNames(), (Iterable) this.this$0.getVariableNames());
             }
@@ -424,7 +423,7 @@ public final class LazyJavaClassMemberScope2 extends LazyJavaScope {
             return invoke2(name);
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final ClassDescriptorBase invoke2(Name name) {
             Intrinsics3.checkNotNullParameter(name, ModelAuditLogEntry.CHANGE_KEY_NAME);
             if (!((Set) LazyJavaClassMemberScope2.access$getNestedClassIndex$p(LazyJavaClassMemberScope2.this).invoke()).contains(name)) {
@@ -600,7 +599,7 @@ public final class LazyJavaClassMemberScope2 extends LazyJavaScope {
         return arrayList;
     }
 
-    /* renamed from: A */
+    /* JADX INFO: renamed from: A */
     public final SimpleFunctionDescriptor m9464A(PropertyDescriptor propertyDescriptor, Function1<? super Name, ? extends Collection<? extends SimpleFunctionDescriptor>> function1) {
         SimpleFunctionDescriptor simpleFunctionDescriptor;
         KotlinType returnType;
@@ -628,7 +627,7 @@ public final class LazyJavaClassMemberScope2 extends LazyJavaScope {
         return simpleFunctionDescriptor;
     }
 
-    /* renamed from: B */
+    /* JADX INFO: renamed from: B */
     public final DescriptorVisibility2 m9465B(ClassDescriptor classDescriptor) {
         DescriptorVisibility2 visibility = classDescriptor.getVisibility();
         Intrinsics3.checkNotNullExpressionValue(visibility, "classDescriptor.visibility");
@@ -640,7 +639,7 @@ public final class LazyJavaClassMemberScope2 extends LazyJavaScope {
         return descriptorVisibility2;
     }
 
-    /* renamed from: C */
+    /* JADX INFO: renamed from: C */
     public final Set<SimpleFunctionDescriptor> m9466C(Name name) {
         Collection<KotlinType> collectionM9485s = m9485s();
         LinkedHashSet linkedHashSet = new LinkedHashSet();
@@ -651,7 +650,7 @@ public final class LazyJavaClassMemberScope2 extends LazyJavaScope {
         return linkedHashSet;
     }
 
-    /* renamed from: D */
+    /* JADX INFO: renamed from: D */
     public final Set<PropertyDescriptor> m9467D(Name name) {
         Collection<KotlinType> collectionM9485s = m9485s();
         ArrayList arrayList = new ArrayList();
@@ -668,7 +667,7 @@ public final class LazyJavaClassMemberScope2 extends LazyJavaScope {
         return _Collections.toSet(arrayList);
     }
 
-    /* renamed from: E */
+    /* JADX INFO: renamed from: E */
     public final boolean m9468E(SimpleFunctionDescriptor simpleFunctionDescriptor, FunctionDescriptor functionDescriptor) {
         String strComputeJvmDescriptor$default = methodSignatureMapping3.computeJvmDescriptor$default(simpleFunctionDescriptor, false, false, 2, null);
         FunctionDescriptor original = functionDescriptor.getOriginal();
@@ -688,7 +687,7 @@ public final class LazyJavaClassMemberScope2 extends LazyJavaScope {
     /* JADX WARN: Removed duplicated region for block: B:60:0x010a  */
     /* JADX WARN: Removed duplicated region for block: B:83:0x016d  */
     /* JADX WARN: Removed duplicated region for block: B:85:0x0170  */
-    /* renamed from: F */
+    /* JADX INFO: renamed from: F */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
@@ -852,14 +851,14 @@ public final class LazyJavaClassMemberScope2 extends LazyJavaScope {
     }
 
     @Override // p507d0.p513e0.p514p.p515d.p517m0.p531e.p532a.p535i0.p536l.LazyJavaScope
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public Set<Name> mo9470a(MemberScope2 memberScope2, Function1<? super Name, Boolean> function1) {
         Intrinsics3.checkNotNullParameter(memberScope2, "kindFilter");
         return _Sets.plus((Set) this.f23365r.invoke(), (Iterable) this.f23366s.invoke().keySet());
     }
 
     @Override // p507d0.p513e0.p514p.p515d.p517m0.p531e.p532a.p535i0.p536l.LazyJavaScope
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public Set mo9471b(MemberScope2 memberScope2, Function1 function1) {
         Intrinsics3.checkNotNullParameter(memberScope2, "kindFilter");
         Collection<KotlinType> supertypes = this.f23361n.getTypeConstructor().getSupertypes();
@@ -876,7 +875,7 @@ public final class LazyJavaClassMemberScope2 extends LazyJavaScope {
     }
 
     @Override // p507d0.p513e0.p514p.p515d.p517m0.p531e.p532a.p535i0.p536l.LazyJavaScope
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public void mo9472c(Collection<SimpleFunctionDescriptor> collection, Name name) {
         boolean z2;
         Intrinsics3.checkNotNullParameter(collection, "result");
@@ -909,14 +908,14 @@ public final class LazyJavaClassMemberScope2 extends LazyJavaScope {
     }
 
     @Override // p507d0.p513e0.p514p.p515d.p517m0.p531e.p532a.p535i0.p536l.LazyJavaScope
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public DeclaredMemberIndex2 mo9473d() {
         return new DeclaredMemberIndex(this.f23362o, LazyJavaClassMemberScope.f23360j);
     }
 
     /* JADX WARN: Removed duplicated region for block: B:17:0x0042  */
     @Override // p507d0.p513e0.p514p.p515d.p517m0.p531e.p532a.p535i0.p536l.LazyJavaScope
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
@@ -966,7 +965,7 @@ public final class LazyJavaClassMemberScope2 extends LazyJavaScope {
     }
 
     @Override // p507d0.p513e0.p514p.p515d.p517m0.p531e.p532a.p535i0.p536l.LazyJavaScope
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public void mo9475g(Name name, Collection<PropertyDescriptor> collection) {
         InterfaceC11585r interfaceC11585r;
         Intrinsics3.checkNotNullParameter(name, ModelAuditLogEntry.CHANGE_KEY_NAME);
@@ -1031,7 +1030,7 @@ public final class LazyJavaClassMemberScope2 extends LazyJavaScope {
     }
 
     @Override // p507d0.p513e0.p514p.p515d.p517m0.p531e.p532a.p535i0.p536l.LazyJavaScope
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public Set<Name> mo9476h(MemberScope2 memberScope2, Function1<? super Name, Boolean> function1) {
         Intrinsics3.checkNotNullParameter(memberScope2, "kindFilter");
         if (this.f23362o.isAnnotationType()) {
@@ -1048,19 +1047,19 @@ public final class LazyJavaClassMemberScope2 extends LazyJavaScope {
     }
 
     @Override // p507d0.p513e0.p514p.p515d.p517m0.p531e.p532a.p535i0.p536l.LazyJavaScope
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public ReceiverParameterDescriptor mo9477i() {
         return DescriptorUtils.getDispatchReceiverParameterIfNeeded(this.f23361n);
     }
 
     @Override // p507d0.p513e0.p514p.p515d.p517m0.p531e.p532a.p535i0.p536l.LazyJavaScope
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public DeclarationDescriptor mo9478j() {
         return this.f23361n;
     }
 
     @Override // p507d0.p513e0.p514p.p515d.p517m0.p531e.p532a.p535i0.p536l.LazyJavaScope
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public boolean mo9479k(JavaMethodDescriptor javaMethodDescriptor) {
         Intrinsics3.checkNotNullParameter(javaMethodDescriptor, "<this>");
         if (this.f23362o.isAnnotationType()) {
@@ -1070,7 +1069,7 @@ public final class LazyJavaClassMemberScope2 extends LazyJavaScope {
     }
 
     @Override // p507d0.p513e0.p514p.p515d.p517m0.p531e.p532a.p535i0.p536l.LazyJavaScope
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public LazyJavaScope.a mo9480l(InterfaceC11585r interfaceC11585r, List<? extends TypeParameterDescriptor> list, KotlinType kotlinType, List<? extends ValueParameterDescriptor> list2) {
         Intrinsics3.checkNotNullParameter(interfaceC11585r, "method");
         Intrinsics3.checkNotNullParameter(list, "methodTypeParameters");
@@ -1091,7 +1090,7 @@ public final class LazyJavaClassMemberScope2 extends LazyJavaScope {
         return new LazyJavaScope.a(returnType, receiverType, valueParameters, typeParameters, zHasStableParameterNames, errors);
     }
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public final void m9481o(List<ValueParameterDescriptor> list, ConstructorDescriptor constructorDescriptor, int i2, InterfaceC11585r interfaceC11585r, KotlinType kotlinType, KotlinType kotlinType2) {
         Annotations4 empty = Annotations4.f22735f.getEMPTY();
         Name name = interfaceC11585r.getName();
@@ -1100,7 +1099,7 @@ public final class LazyJavaClassMemberScope2 extends LazyJavaScope {
         list.add(new ValueParameterDescriptorImpl(constructorDescriptor, null, i2, empty, name, kotlinTypeMakeNotNullable, interfaceC11585r.getHasAnnotationParameterDefaultValue(), false, false, kotlinType2 == null ? null : TypeUtils.makeNotNullable(kotlinType2), this.f23389c.getComponents().getSourceElementFactory().source(interfaceC11585r)));
     }
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public final void m9482p(Collection<SimpleFunctionDescriptor> collection, Name name, Collection<? extends SimpleFunctionDescriptor> collection2, boolean z2) {
         Collection<? extends SimpleFunctionDescriptor> collectionResolveOverridesForNonStaticMembers = DescriptorResolverUtils.resolveOverridesForNonStaticMembers(name, collection2, collection, this.f23361n, this.f23389c.getComponents().getErrorReporter(), this.f23389c.getComponents().getKotlinTypeChecker().getOverridingUtil());
         Intrinsics3.checkNotNullExpressionValue(collectionResolveOverridesForNonStaticMembers, "resolveOverridesForNonStaticMembers(\n            name, functionsFromSupertypes, result, ownerDescriptor, c.components.errorReporter,\n            c.components.kotlinTypeChecker.overridingUtil\n        )");
@@ -1124,7 +1123,7 @@ public final class LazyJavaClassMemberScope2 extends LazyJavaScope {
     }
 
     /* JADX WARN: Removed duplicated region for block: B:40:0x010f  */
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
@@ -1230,14 +1229,13 @@ public final class LazyJavaClassMemberScope2 extends LazyJavaScope {
     }
 
     /* JADX WARN: Multi-variable type inference failed */
-    /* JADX WARN: Type inference failed for: r15v0, types: [d0.e0.p.d.m0.c.i1.c0, d0.e0.p.d.m0.c.i1.m0, d0.e0.p.d.m0.c.n0, d0.e0.p.d.m0.e.a.h0.e] */
-    /* JADX WARN: Type inference failed for: r19v0, types: [java.util.Collection, java.util.Collection<d0.e0.p.d.m0.c.n0>] */
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     public final void m9484r(Set<? extends PropertyDescriptor> set, Collection<PropertyDescriptor> collection, Set<PropertyDescriptor> set2, Function1<? super Name, ? extends Collection<? extends SimpleFunctionDescriptor>> function1) {
         SimpleFunctionDescriptor simpleFunctionDescriptorM9464A;
         PropertyGetterDescriptorImpl propertyGetterDescriptorImpl;
         for (PropertyDescriptor propertyDescriptor : set) {
-            PropertySetterDescriptorImpl propertySetterDescriptorImpl = null;
+            JavaForKotlinOverridePropertyDescriptor javaForKotlinOverridePropertyDescriptor = null;
+            PropertySetterDescriptor propertySetterDescriptor = null;
             if (m9488v(propertyDescriptor, function1)) {
                 SimpleFunctionDescriptor simpleFunctionDescriptorM9492z = m9492z(propertyDescriptor, function1);
                 Intrinsics3.checkNotNull(simpleFunctionDescriptorM9492z);
@@ -1251,13 +1249,13 @@ public final class LazyJavaClassMemberScope2 extends LazyJavaScope {
                     simpleFunctionDescriptorM9464A.getModality();
                     simpleFunctionDescriptorM9492z.getModality();
                 }
-                ?? javaForKotlinOverridePropertyDescriptor = new JavaForKotlinOverridePropertyDescriptor(this.f23361n, simpleFunctionDescriptorM9492z, simpleFunctionDescriptorM9464A, propertyDescriptor);
+                JavaForKotlinOverridePropertyDescriptor javaForKotlinOverridePropertyDescriptor2 = new JavaForKotlinOverridePropertyDescriptor(this.f23361n, simpleFunctionDescriptorM9492z, simpleFunctionDescriptorM9464A, propertyDescriptor);
                 KotlinType returnType = simpleFunctionDescriptorM9492z.getReturnType();
                 Intrinsics3.checkNotNull(returnType);
-                javaForKotlinOverridePropertyDescriptor.setType(returnType, Collections2.emptyList(), mo9477i(), null);
-                PropertyGetterDescriptorImpl propertyGetterDescriptorImplCreateGetter = DescriptorFactory.createGetter(javaForKotlinOverridePropertyDescriptor, simpleFunctionDescriptorM9492z.getAnnotations(), false, false, false, simpleFunctionDescriptorM9492z.getSource());
+                javaForKotlinOverridePropertyDescriptor2.setType(returnType, Collections2.emptyList(), mo9477i(), null);
+                PropertyGetterDescriptorImpl propertyGetterDescriptorImplCreateGetter = DescriptorFactory.createGetter(javaForKotlinOverridePropertyDescriptor2, simpleFunctionDescriptorM9492z.getAnnotations(), false, false, false, simpleFunctionDescriptorM9492z.getSource());
                 propertyGetterDescriptorImplCreateGetter.setInitialSignatureDescriptor(simpleFunctionDescriptorM9492z);
-                propertyGetterDescriptorImplCreateGetter.initialize(javaForKotlinOverridePropertyDescriptor.getType());
+                propertyGetterDescriptorImplCreateGetter.initialize(javaForKotlinOverridePropertyDescriptor2.getType());
                 Intrinsics3.checkNotNullExpressionValue(propertyGetterDescriptorImplCreateGetter, "createGetter(\n            propertyDescriptor, getterMethod.annotations, /* isDefault = */false,\n            /* isExternal = */ false, /* isInline = */ false, getterMethod.source\n        ).apply {\n            initialSignatureDescriptor = getterMethod\n            initialize(propertyDescriptor.type)\n        }");
                 if (simpleFunctionDescriptorM9464A != null) {
                     List<ValueParameterDescriptor> valueParameters = simpleFunctionDescriptorM9464A.getValueParameters();
@@ -1266,18 +1264,18 @@ public final class LazyJavaClassMemberScope2 extends LazyJavaScope {
                     if (valueParameterDescriptor == null) {
                         throw new AssertionError(Intrinsics3.stringPlus("No parameter found for ", simpleFunctionDescriptorM9464A));
                     }
-                    PropertySetterDescriptorImpl propertySetterDescriptorImplCreateSetter = DescriptorFactory.createSetter(javaForKotlinOverridePropertyDescriptor, simpleFunctionDescriptorM9464A.getAnnotations(), valueParameterDescriptor.getAnnotations(), false, false, false, simpleFunctionDescriptorM9464A.getVisibility(), simpleFunctionDescriptorM9464A.getSource());
+                    PropertySetterDescriptorImpl propertySetterDescriptorImplCreateSetter = DescriptorFactory.createSetter(javaForKotlinOverridePropertyDescriptor2, simpleFunctionDescriptorM9464A.getAnnotations(), valueParameterDescriptor.getAnnotations(), false, false, false, simpleFunctionDescriptorM9464A.getVisibility(), simpleFunctionDescriptorM9464A.getSource());
                     propertySetterDescriptorImplCreateSetter.setInitialSignatureDescriptor(simpleFunctionDescriptorM9464A);
-                    propertySetterDescriptorImpl = propertySetterDescriptorImplCreateSetter;
+                    propertySetterDescriptor = propertySetterDescriptorImplCreateSetter;
                     propertyGetterDescriptorImpl = propertyGetterDescriptorImplCreateGetter;
                 } else {
                     propertyGetterDescriptorImpl = propertyGetterDescriptorImplCreateGetter;
                 }
-                javaForKotlinOverridePropertyDescriptor.initialize(propertyGetterDescriptorImpl, propertySetterDescriptorImpl);
-                propertySetterDescriptorImpl = javaForKotlinOverridePropertyDescriptor;
+                javaForKotlinOverridePropertyDescriptor2.initialize(propertyGetterDescriptorImpl, propertySetterDescriptor);
+                javaForKotlinOverridePropertyDescriptor = javaForKotlinOverridePropertyDescriptor2;
             }
-            if (propertySetterDescriptorImpl != null) {
-                collection.add(propertySetterDescriptorImpl);
+            if (javaForKotlinOverridePropertyDescriptor != null) {
+                collection.add(javaForKotlinOverridePropertyDescriptor);
                 if (set2 == null) {
                     return;
                 }
@@ -1293,7 +1291,7 @@ public final class LazyJavaClassMemberScope2 extends LazyJavaScope {
         utils.record(this.f23389c.getComponents().getLookupTracker(), lookupLocation2, this.f23361n, name);
     }
 
-    /* renamed from: s */
+    /* JADX INFO: renamed from: s */
     public final Collection<KotlinType> m9485s() {
         if (!this.f23363p) {
             return this.f23389c.getComponents().getKotlinTypeChecker().getKotlinTypeRefiner().refineSupertypes(this.f23361n);
@@ -1303,7 +1301,7 @@ public final class LazyJavaClassMemberScope2 extends LazyJavaScope {
         return supertypes;
     }
 
-    /* renamed from: t */
+    /* JADX INFO: renamed from: t */
     public final SimpleFunctionDescriptor m9486t(SimpleFunctionDescriptor simpleFunctionDescriptor, CallableDescriptor callableDescriptor, Collection<? extends SimpleFunctionDescriptor> collection) {
         boolean z2 = true;
         if (!(collection instanceof Collection) || !collection.isEmpty()) {
@@ -1334,7 +1332,7 @@ public final class LazyJavaClassMemberScope2 extends LazyJavaScope {
 
     /* JADX WARN: Removed duplicated region for block: B:10:0x002a  */
     /* JADX WARN: Removed duplicated region for block: B:4:0x0012  */
-    /* renamed from: u */
+    /* JADX INFO: renamed from: u */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
@@ -1369,7 +1367,7 @@ public final class LazyJavaClassMemberScope2 extends LazyJavaScope {
         return simpleFunctionDescriptor2;
     }
 
-    /* renamed from: v */
+    /* JADX INFO: renamed from: v */
     public final boolean m9488v(PropertyDescriptor propertyDescriptor, Function1<? super Name, ? extends Collection<? extends SimpleFunctionDescriptor>> function1) {
         if (JavaDescriptorUtil.isJavaField(propertyDescriptor)) {
             return false;
@@ -1385,14 +1383,14 @@ public final class LazyJavaClassMemberScope2 extends LazyJavaScope {
         return true;
     }
 
-    /* renamed from: w */
+    /* JADX INFO: renamed from: w */
     public final boolean m9489w(CallableDescriptor callableDescriptor, CallableDescriptor callableDescriptor2) {
         OverridingUtil.d.a result = OverridingUtil.f24411b.isOverridableByWithoutExternalConditions(callableDescriptor2, callableDescriptor, true).getResult();
         Intrinsics3.checkNotNullExpressionValue(result, "DEFAULT.isOverridableByWithoutExternalConditions(superDescriptor, this, true).result");
         return result == OverridingUtil.d.a.OVERRIDABLE && !JavaIncompatibilityRulesOverridabilityCondition.f23529a.doesJavaOverrideHaveIncompatibleValueParameterKinds(callableDescriptor2, callableDescriptor);
     }
 
-    /* renamed from: x */
+    /* JADX INFO: renamed from: x */
     public final boolean m9490x(SimpleFunctionDescriptor simpleFunctionDescriptor, FunctionDescriptor functionDescriptor) {
         if (specialBuiltinMembers2.f23218m.isRemoveAtByIndex(simpleFunctionDescriptor)) {
             functionDescriptor = functionDescriptor.getOriginal();
@@ -1401,7 +1399,7 @@ public final class LazyJavaClassMemberScope2 extends LazyJavaScope {
         return m9489w(functionDescriptor, simpleFunctionDescriptor);
     }
 
-    /* renamed from: y */
+    /* JADX INFO: renamed from: y */
     public final SimpleFunctionDescriptor m9491y(PropertyDescriptor propertyDescriptor, String str, Function1<? super Name, ? extends Collection<? extends SimpleFunctionDescriptor>> function1) {
         SimpleFunctionDescriptor simpleFunctionDescriptor;
         Name nameIdentifier = Name.identifier(str);
@@ -1424,7 +1422,7 @@ public final class LazyJavaClassMemberScope2 extends LazyJavaScope {
         return simpleFunctionDescriptor;
     }
 
-    /* renamed from: z */
+    /* JADX INFO: renamed from: z */
     public final SimpleFunctionDescriptor m9492z(PropertyDescriptor propertyDescriptor, Function1<? super Name, ? extends Collection<? extends SimpleFunctionDescriptor>> function1) {
         PropertyGetterDescriptor getter = propertyDescriptor.getGetter();
         PropertyGetterDescriptor propertyGetterDescriptor = getter == null ? null : (PropertyGetterDescriptor) specialBuiltinMembers.getOverriddenBuiltinWithDifferentJvmName(getter);

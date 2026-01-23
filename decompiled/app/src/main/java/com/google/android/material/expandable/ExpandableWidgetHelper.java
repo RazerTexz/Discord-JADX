@@ -7,7 +7,7 @@ import androidx.annotation.IdRes;
 import androidx.annotation.NonNull;
 import androidx.coordinatorlayout.widget.CoordinatorLayout;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public final class ExpandableWidgetHelper {
     private boolean expanded = false;
 

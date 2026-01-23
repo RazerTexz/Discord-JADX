@@ -4,9 +4,9 @@ import android.view.View;
 import com.discord.widgets.stage.StageRoles;
 import kotlin.jvm.functions.Function0;
 
-/* compiled from: VoiceControlsSheetView.kt */
-/* renamed from: com.discord.widgets.voice.controls.VoiceControlsSheetView$configureMoveToAudienceButton$$inlined$apply$lambda$1, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: com.discord.widgets.voice.controls.VoiceControlsSheetView$configureMoveToAudienceButton$$inlined$apply$lambda$1, reason: use source file name */
+/* JADX INFO: compiled from: VoiceControlsSheetView.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class VoiceControlsSheetView2 implements View.OnClickListener {
     public final /* synthetic */ Function0 $onMoveToAudienceClick$inlined;
     public final /* synthetic */ StageRoles $stageRoles$inlined;

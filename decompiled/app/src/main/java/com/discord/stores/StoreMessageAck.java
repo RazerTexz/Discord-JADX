@@ -58,11 +58,11 @@ import p658rx.functions.Func2;
 import p658rx.functions.Func3;
 import p658rx.functions.Func4;
 
-/* compiled from: StoreMessageAck.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: StoreMessageAck.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class StoreMessageAck extends StoreV2 {
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private final Map<Long, Ack> acks;
     private final Persister<Map<Long, Ack>> acksPersister;
@@ -73,7 +73,7 @@ public final class StoreMessageAck extends StoreV2 {
     private final StoreStream stream;
     private Subscription threadSyncSubscription;
 
-    /* compiled from: StoreMessageAck.kt */
+    /* JADX INFO: compiled from: StoreMessageAck.kt */
     public static final /* data */ class Ack {
         private final boolean isLockedAck;
         private final long messageId;
@@ -98,17 +98,17 @@ public final class StoreMessageAck extends StoreV2 {
             return ack.copy(j, z2, z3);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final long getMessageId() {
             return this.messageId;
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final boolean getViewed() {
             return this.viewed;
         }
 
-        /* renamed from: component3, reason: from getter */
+        /* JADX INFO: renamed from: component3, reason: from getter */
         public final boolean getIsLockedAck() {
             return this.isLockedAck;
         }
@@ -137,16 +137,22 @@ public final class StoreMessageAck extends StoreV2 {
         }
 
         /* JADX WARN: Multi-variable type inference failed */
+        /* JADX WARN: Type inference failed for: r1v1, types: [int] */
+        /* JADX WARN: Type inference failed for: r1v3 */
+        /* JADX WARN: Type inference failed for: r1v4 */
+        /* JADX WARN: Type inference failed for: r2v0 */
+        /* JADX WARN: Type inference failed for: r2v1, types: [int] */
+        /* JADX WARN: Type inference failed for: r2v2 */
         public int hashCode() {
             int iM3a = C0002b.m3a(this.messageId) * 31;
             boolean z2 = this.viewed;
-            int i = z2;
-            if (z2 != 0) {
-                i = 1;
+            ?? r1 = z2;
+            if (z2) {
+                r1 = 1;
             }
-            int i2 = (iM3a + i) * 31;
+            int i = (iM3a + r1) * 31;
             boolean z3 = this.isLockedAck;
-            return i2 + (z3 ? 1 : z3 ? 1 : 0);
+            return i + (z3 ? 1 : z3);
         }
 
         public final boolean isLockedAck() {
@@ -167,13 +173,13 @@ public final class StoreMessageAck extends StoreV2 {
         }
     }
 
-    /* compiled from: StoreMessageAck.kt */
+    /* JADX INFO: compiled from: StoreMessageAck.kt */
     public static final class Companion {
 
-        /* compiled from: StoreMessageAck.kt */
+        /* JADX INFO: compiled from: StoreMessageAck.kt */
         public static abstract class ThreadAckState {
 
-            /* compiled from: StoreMessageAck.kt */
+            /* JADX INFO: compiled from: StoreMessageAck.kt */
             public static final class NotThread extends ThreadAckState {
                 public static final NotThread INSTANCE = new NotThread();
 
@@ -182,7 +188,7 @@ public final class StoreMessageAck extends StoreV2 {
                 }
             }
 
-            /* compiled from: StoreMessageAck.kt */
+            /* JADX INFO: compiled from: StoreMessageAck.kt */
             public static final /* data */ class Thread extends ThreadAckState {
                 private final boolean canAckThread;
 
@@ -198,7 +204,7 @@ public final class StoreMessageAck extends StoreV2 {
                     return thread.copy(z2);
                 }
 
-                /* renamed from: component1, reason: from getter */
+                /* JADX INFO: renamed from: component1, reason: from getter */
                 public final boolean getCanAckThread() {
                     return this.canAckThread;
                 }
@@ -259,16 +265,16 @@ public final class StoreMessageAck extends StoreV2 {
         }
     }
 
-    /* compiled from: StoreMessageAck.kt */
+    /* JADX INFO: compiled from: StoreMessageAck.kt */
     public static final /* data */ class PendingAck {
 
-        /* renamed from: Companion, reason: from kotlin metadata */
+        /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
         public static final Companion INSTANCE = new Companion(null);
         private static final PendingAck EMPTY = new PendingAck(0, new Ack(0L, false, false));
         private final Ack ack;
         private final long channelId;
 
-        /* compiled from: StoreMessageAck.kt */
+        /* JADX INFO: compiled from: StoreMessageAck.kt */
         public static final class Companion {
             private Companion() {
             }
@@ -302,12 +308,12 @@ public final class StoreMessageAck extends StoreV2 {
             return pendingAck.copy(j, ack);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final long getChannelId() {
             return this.channelId;
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final Ack getAck() {
             return this.ack;
         }
@@ -352,8 +358,8 @@ public final class StoreMessageAck extends StoreV2 {
         }
     }
 
-    /* compiled from: StoreMessageAck.kt */
-    /* renamed from: com.discord.stores.StoreMessageAck$ack$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreMessageAck$ack$1 */
+    /* JADX INFO: compiled from: StoreMessageAck.kt */
     public static final class C61971 extends Lambda implements Function0<Unit> {
         public final /* synthetic */ long $channelId;
         public final /* synthetic */ boolean $clearLock;
@@ -373,7 +379,7 @@ public final class StoreMessageAck extends StoreV2 {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             Channel channelFindChannelByIdInternal$app_productionGoogleRelease = StoreMessageAck.access$getStream$p(StoreMessageAck.this).getChannels().findChannelByIdInternal$app_productionGoogleRelease(this.$channelId);
             if (channelFindChannelByIdInternal$app_productionGoogleRelease != null) {
@@ -389,8 +395,8 @@ public final class StoreMessageAck extends StoreV2 {
         }
     }
 
-    /* compiled from: StoreMessageAck.kt */
-    /* renamed from: com.discord.stores.StoreMessageAck$getPendingAck$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreMessageAck$getPendingAck$1 */
+    /* JADX INFO: compiled from: StoreMessageAck.kt */
     public static final class C61981 extends Lambda implements Function2<Ack, Long, Boolean> {
         public final /* synthetic */ boolean $clearLock;
 
@@ -415,14 +421,14 @@ public final class StoreMessageAck extends StoreV2 {
         }
     }
 
-    /* compiled from: StoreMessageAck.kt */
-    /* renamed from: com.discord.stores.StoreMessageAck$getPendingAck$2 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreMessageAck$getPendingAck$2 */
+    /* JADX INFO: compiled from: StoreMessageAck.kt */
     public static final class C61992<T, R> implements Func1<Long, Observable<? extends PendingAck>> {
         public final /* synthetic */ boolean $isLockedAck;
         public final /* synthetic */ C61981 $isUpdateRequired$1;
 
-        /* compiled from: StoreMessageAck.kt */
-        /* renamed from: com.discord.stores.StoreMessageAck$getPendingAck$2$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.stores.StoreMessageAck$getPendingAck$2$1, reason: invalid class name */
+        /* JADX INFO: compiled from: StoreMessageAck.kt */
         public static final class AnonymousClass1<T1, T2, T3, R> implements Func3<Ack, Long, Companion.ThreadAckState, PendingAck> {
             public final /* synthetic */ Long $channelId;
 
@@ -439,7 +445,7 @@ public final class StoreMessageAck extends StoreV2 {
             
                 if (r8.invoke(r6, r7.longValue()) != false) goto L14;
              */
-            /* renamed from: call, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
             /*
                 Code decompiled incorrectly, please refer to instructions dump.
             */
@@ -471,7 +477,7 @@ public final class StoreMessageAck extends StoreV2 {
             return call2(l);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final Observable<? extends PendingAck> call2(Long l) {
             if (l.longValue() <= 0) {
                 return new ScalarSynchronousObservable(PendingAck.INSTANCE.getEMPTY());
@@ -482,8 +488,8 @@ public final class StoreMessageAck extends StoreV2 {
         }
     }
 
-    /* compiled from: StoreMessageAck.kt */
-    /* renamed from: com.discord.stores.StoreMessageAck$handleConnectionOpen$3 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreMessageAck$handleConnectionOpen$3 */
+    /* JADX INFO: compiled from: StoreMessageAck.kt */
     public static final class C62003 extends Lambda implements Function1<Subscription, Unit> {
         public C62003() {
             super(1);
@@ -495,19 +501,19 @@ public final class StoreMessageAck extends StoreV2 {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Subscription subscription) {
             Intrinsics3.checkNotNullParameter(subscription, "it");
             StoreMessageAck.access$setThreadSyncSubscription$p(StoreMessageAck.this, subscription);
         }
     }
 
-    /* compiled from: StoreMessageAck.kt */
-    /* renamed from: com.discord.stores.StoreMessageAck$handleConnectionOpen$4 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreMessageAck$handleConnectionOpen$4 */
+    /* JADX INFO: compiled from: StoreMessageAck.kt */
     public static final class C62014 extends Lambda implements Function1<Tuples2<? extends Set<? extends Long>, ? extends Set<? extends Long>>, Unit> {
 
-        /* compiled from: StoreMessageAck.kt */
-        /* renamed from: com.discord.stores.StoreMessageAck$handleConnectionOpen$4$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.stores.StoreMessageAck$handleConnectionOpen$4$1, reason: invalid class name */
+        /* JADX INFO: compiled from: StoreMessageAck.kt */
         public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
             public final /* synthetic */ Set $newThreadIds;
             public final /* synthetic */ Set $oldThreadIds;
@@ -525,7 +531,7 @@ public final class StoreMessageAck extends StoreV2 {
                 return Unit.f27425a;
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2() {
                 StoreMessageAck.access$updateThreadAcks(StoreMessageAck.this, this.$oldThreadIds, this.$newThreadIds);
             }
@@ -541,19 +547,19 @@ public final class StoreMessageAck extends StoreV2 {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Tuples2<? extends Set<Long>, ? extends Set<Long>> tuples2) {
             Intrinsics3.checkNotNullParameter(tuples2, "<name for destructuring parameter 0>");
             StoreMessageAck.access$getDispatcher$p(StoreMessageAck.this).schedule(new AnonymousClass1(tuples2.component1(), tuples2.component2()));
         }
     }
 
-    /* compiled from: StoreMessageAck.kt */
-    /* renamed from: com.discord.stores.StoreMessageAck$init$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreMessageAck$init$1 */
+    /* JADX INFO: compiled from: StoreMessageAck.kt */
     public static final class C62021<T, R> implements Func1<StoreChannelsSelected.ResolvedSelectedChannel, Observable<? extends Long>> {
 
-        /* compiled from: StoreMessageAck.kt */
-        /* renamed from: com.discord.stores.StoreMessageAck$init$1$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.stores.StoreMessageAck$init$1$1, reason: invalid class name */
+        /* JADX INFO: compiled from: StoreMessageAck.kt */
         public static final class AnonymousClass1<T, R> implements Func1<StoreMessagesLoader.ChannelLoadedState, Boolean> {
             public static final AnonymousClass1 INSTANCE = new AnonymousClass1();
 
@@ -562,14 +568,14 @@ public final class StoreMessageAck extends StoreV2 {
                 return call2(channelLoadedState);
             }
 
-            /* renamed from: call, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
             public final Boolean call2(StoreMessagesLoader.ChannelLoadedState channelLoadedState) {
                 return Boolean.valueOf(channelLoadedState.isInitialMessagesLoaded() && !channelLoadedState.isLoadingMessages());
             }
         }
 
-        /* compiled from: StoreMessageAck.kt */
-        /* renamed from: com.discord.stores.StoreMessageAck$init$1$2, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.stores.StoreMessageAck$init$1$2, reason: invalid class name */
+        /* JADX INFO: compiled from: StoreMessageAck.kt */
         public static final class AnonymousClass2<T, R> implements Func1<StoreChat.InteractionState, Boolean> {
             public final /* synthetic */ StoreChannelsSelected.ResolvedSelectedChannel $selectedChannel;
 
@@ -582,14 +588,14 @@ public final class StoreMessageAck extends StoreV2 {
                 return call2(interactionState);
             }
 
-            /* renamed from: call, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
             public final Boolean call2(StoreChat.InteractionState interactionState) {
                 return Boolean.valueOf(interactionState.getChannelId() == this.$selectedChannel.getId());
             }
         }
 
-        /* compiled from: StoreMessageAck.kt */
-        /* renamed from: com.discord.stores.StoreMessageAck$init$1$3, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.stores.StoreMessageAck$init$1$3, reason: invalid class name */
+        /* JADX INFO: compiled from: StoreMessageAck.kt */
         public static final class AnonymousClass3<T1, T2, T3, T4, R> implements Func4<Set<? extends Long>, Boolean, StoreChat.InteractionState, Ack, Long> {
             public final /* synthetic */ StoreChannelsSelected.ResolvedSelectedChannel $selectedChannel;
 
@@ -603,7 +609,7 @@ public final class StoreMessageAck extends StoreV2 {
             }
 
             /* JADX WARN: Removed duplicated region for block: B:19:0x003f  */
-            /* renamed from: call, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
             /*
                 Code decompiled incorrectly, please refer to instructions dump.
             */
@@ -627,14 +633,14 @@ public final class StoreMessageAck extends StoreV2 {
             return call2(resolvedSelectedChannel);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final Observable<? extends Long> call2(StoreChannelsSelected.ResolvedSelectedChannel resolvedSelectedChannel) {
             return Observable.m11073h(StoreMessageAck.access$getStream$p(StoreMessageAck.this).getMessages().getAllDetached().m11110p(50L, TimeUnit.MILLISECONDS), StoreMessageAck.access$getStream$p(StoreMessageAck.this).getMessagesLoader().getMessagesLoadedState(resolvedSelectedChannel.getId()).m11083G(AnonymousClass1.INSTANCE).m11112r(), StoreMessageAck.access$getStream$p(StoreMessageAck.this).getChat().observeInteractionState().m11118y(new AnonymousClass2(resolvedSelectedChannel)), StoreMessageAck.access$getStream$p(StoreMessageAck.this).getMessageAck().observeForChannel(resolvedSelectedChannel.getId()), new AnonymousClass3(resolvedSelectedChannel));
         }
     }
 
-    /* compiled from: StoreMessageAck.kt */
-    /* renamed from: com.discord.stores.StoreMessageAck$markUnread$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreMessageAck$markUnread$1 */
+    /* JADX INFO: compiled from: StoreMessageAck.kt */
     public static final class C62031<T, R> implements Func1<List<? extends Message>, Boolean> {
         public static final C62031 INSTANCE = new C62031();
 
@@ -643,15 +649,15 @@ public final class StoreMessageAck extends StoreV2 {
             return call2((List<Message>) list);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final Boolean call2(List<Message> list) {
             Intrinsics3.checkNotNullExpressionValue(list, "it");
             return Boolean.valueOf(!list.isEmpty());
         }
     }
 
-    /* compiled from: StoreMessageAck.kt */
-    /* renamed from: com.discord.stores.StoreMessageAck$markUnread$2 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreMessageAck$markUnread$2 */
+    /* JADX INFO: compiled from: StoreMessageAck.kt */
     public static final class C62042<T1, T2, R> implements Func2<List<? extends Message>, Companion.ThreadAckState, Tuples2<? extends List<? extends Message>, ? extends Companion.ThreadAckState>> {
         public static final C62042 INSTANCE = new C62042();
 
@@ -660,20 +666,20 @@ public final class StoreMessageAck extends StoreV2 {
             return call2((List<Message>) list, threadAckState);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final Tuples2<List<Message>, Companion.ThreadAckState> call2(List<Message> list, Companion.ThreadAckState threadAckState) {
             return new Tuples2<>(list, threadAckState);
         }
     }
 
-    /* compiled from: StoreMessageAck.kt */
-    /* renamed from: com.discord.stores.StoreMessageAck$markUnread$3 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreMessageAck$markUnread$3 */
+    /* JADX INFO: compiled from: StoreMessageAck.kt */
     public static final class C62053 extends Lambda implements Function1<Tuples2<? extends List<? extends Message>, ? extends Companion.ThreadAckState>, Unit> {
         public final /* synthetic */ long $channelId;
         public final /* synthetic */ long $messageId;
 
-        /* compiled from: StoreMessageAck.kt */
-        /* renamed from: com.discord.stores.StoreMessageAck$markUnread$3$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.stores.StoreMessageAck$markUnread$3$1, reason: invalid class name */
+        /* JADX INFO: compiled from: StoreMessageAck.kt */
         public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
             public final /* synthetic */ List $channelMessages;
 
@@ -689,7 +695,7 @@ public final class StoreMessageAck extends StoreV2 {
                 return Unit.f27425a;
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2() {
                 Object obj;
                 List list = this.$channelMessages;
@@ -754,7 +760,7 @@ public final class StoreMessageAck extends StoreV2 {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Tuples2<? extends List<Message>, ? extends Companion.ThreadAckState> tuples2) {
             List<Message> listComponent1 = tuples2.component1();
             if (StoreMessageAck.INSTANCE.isThreadAndUnableToAck(tuples2.component2())) {
@@ -764,8 +770,8 @@ public final class StoreMessageAck extends StoreV2 {
         }
     }
 
-    /* compiled from: StoreMessageAck.kt */
-    /* renamed from: com.discord.stores.StoreMessageAck$observeActiveThreadIdsWithPrevious$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreMessageAck$observeActiveThreadIdsWithPrevious$1 */
+    /* JADX INFO: compiled from: StoreMessageAck.kt */
     public static final class C62061<T1, T2, R> implements Func2<Map<Long, ? extends StoreThreadsActiveJoined.ActiveJoinedThread>, Map<Long, ? extends Channel>, Set<? extends Long>> {
         public static final C62061 INSTANCE = new C62061();
 
@@ -774,14 +780,14 @@ public final class StoreMessageAck extends StoreV2 {
             return call2((Map<Long, StoreThreadsActiveJoined.ActiveJoinedThread>) map, (Map<Long, Channel>) map2);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final Set<Long> call2(Map<Long, StoreThreadsActiveJoined.ActiveJoinedThread> map, Map<Long, Channel> map2) {
             return _Sets.plus((Set) map.keySet(), (Iterable) map2.keySet());
         }
     }
 
-    /* compiled from: StoreMessageAck.kt */
-    /* renamed from: com.discord.stores.StoreMessageAck$observeActiveThreadIdsWithPrevious$2 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreMessageAck$observeActiveThreadIdsWithPrevious$2 */
+    /* JADX INFO: compiled from: StoreMessageAck.kt */
     public static final class C62072<T1, T2, R> implements Func2<Tuples2<? extends Set<? extends Long>, ? extends Set<? extends Long>>, Set<? extends Long>, Tuples2<? extends Set<? extends Long>, ? extends Set<? extends Long>>> {
         public static final C62072 INSTANCE = new C62072();
 
@@ -790,14 +796,14 @@ public final class StoreMessageAck extends StoreV2 {
             return call2((Tuples2<? extends Set<Long>, ? extends Set<Long>>) tuples2, (Set<Long>) set);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final Tuples2<Set<Long>, Set<Long>> call2(Tuples2<? extends Set<Long>, ? extends Set<Long>> tuples2, Set<Long> set) {
             return new Tuples2<>(tuples2.getSecond(), set);
         }
     }
 
-    /* compiled from: StoreMessageAck.kt */
-    /* renamed from: com.discord.stores.StoreMessageAck$observeAll$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreMessageAck$observeAll$1 */
+    /* JADX INFO: compiled from: StoreMessageAck.kt */
     public static final class C62081 extends Lambda implements Function0<Map<Long, ? extends Ack>> {
         public C62081() {
             super(0);
@@ -809,14 +815,14 @@ public final class StoreMessageAck extends StoreV2 {
         }
 
         @Override // kotlin.jvm.functions.Function0
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final Map<Long, ? extends Ack> invoke2() {
             return StoreMessageAck.this.getAll();
         }
     }
 
-    /* compiled from: StoreMessageAck.kt */
-    /* renamed from: com.discord.stores.StoreMessageAck$observeForChannel$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreMessageAck$observeForChannel$1 */
+    /* JADX INFO: compiled from: StoreMessageAck.kt */
     public static final class C62091 extends Lambda implements Function0<Ack> {
         public final /* synthetic */ long $channelId;
 
@@ -838,8 +844,8 @@ public final class StoreMessageAck extends StoreV2 {
         }
     }
 
-    /* compiled from: StoreMessageAck.kt */
-    /* renamed from: com.discord.stores.StoreMessageAck$observeThreadAckState$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreMessageAck$observeThreadAckState$1 */
+    /* JADX INFO: compiled from: StoreMessageAck.kt */
     public static final class C62101 extends Lambda implements Function0<Companion.ThreadAckState> {
         public final /* synthetic */ long $channelId;
 
@@ -862,13 +868,13 @@ public final class StoreMessageAck extends StoreV2 {
         }
     }
 
-    /* compiled from: StoreMessageAck.kt */
-    /* renamed from: com.discord.stores.StoreMessageAck$postPendingAck$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreMessageAck$postPendingAck$1 */
+    /* JADX INFO: compiled from: StoreMessageAck.kt */
     public static final class C62111 extends Lambda implements Function1<PendingAck, Unit> {
         public final /* synthetic */ int $mentionCount;
 
-        /* compiled from: StoreMessageAck.kt */
-        /* renamed from: com.discord.stores.StoreMessageAck$postPendingAck$1$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.stores.StoreMessageAck$postPendingAck$1$1, reason: invalid class name */
+        /* JADX INFO: compiled from: StoreMessageAck.kt */
         public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
             public final /* synthetic */ Ack $ack;
             public final /* synthetic */ long $channelId;
@@ -886,14 +892,14 @@ public final class StoreMessageAck extends StoreV2 {
                 return Unit.f27425a;
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2() {
                 StoreMessageAck.access$updateAcks(StoreMessageAck.this, this.$channelId, this.$ack);
             }
         }
 
-        /* compiled from: StoreMessageAck.kt */
-        /* renamed from: com.discord.stores.StoreMessageAck$postPendingAck$1$2, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.stores.StoreMessageAck$postPendingAck$1$2, reason: invalid class name */
+        /* JADX INFO: compiled from: StoreMessageAck.kt */
         public static final class AnonymousClass2<T> implements Action1<Void> {
             public final /* synthetic */ long $channelId;
 
@@ -906,14 +912,14 @@ public final class StoreMessageAck extends StoreV2 {
                 call2(r1);
             }
 
-            /* renamed from: call, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
             public final void call2(Void r3) {
                 StoreStream.INSTANCE.getAnalytics().ackMessage(this.$channelId);
             }
         }
 
-        /* compiled from: StoreMessageAck.kt */
-        /* renamed from: com.discord.stores.StoreMessageAck$postPendingAck$1$3, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.stores.StoreMessageAck$postPendingAck$1$3, reason: invalid class name */
+        /* JADX INFO: compiled from: StoreMessageAck.kt */
         public static final class AnonymousClass3 extends Lambda implements Function1<Void, Unit> {
             public static final AnonymousClass3 INSTANCE = new AnonymousClass3();
 
@@ -927,7 +933,7 @@ public final class StoreMessageAck extends StoreV2 {
                 return Unit.f27425a;
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2(Void r1) {
             }
         }
@@ -944,7 +950,7 @@ public final class StoreMessageAck extends StoreV2 {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(PendingAck pendingAck) {
             Intrinsics3.checkNotNullParameter(pendingAck, "pendingAck");
             long channelId = pendingAck.getChannelId();
@@ -956,8 +962,8 @@ public final class StoreMessageAck extends StoreV2 {
         }
     }
 
-    /* compiled from: StoreMessageAck.kt */
-    /* renamed from: com.discord.stores.StoreMessageAck$postPendingAck$2 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreMessageAck$postPendingAck$2 */
+    /* JADX INFO: compiled from: StoreMessageAck.kt */
     public static final class C62122<T, R> implements Func1<PendingAck, Boolean> {
         public static final C62122 INSTANCE = new C62122();
 
@@ -966,14 +972,14 @@ public final class StoreMessageAck extends StoreV2 {
             return call2(pendingAck);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final Boolean call2(PendingAck pendingAck) {
             return Boolean.valueOf(!Intrinsics3.areEqual(pendingAck, PendingAck.INSTANCE.getEMPTY()));
         }
     }
 
-    /* compiled from: StoreMessageAck.kt */
-    /* renamed from: com.discord.stores.StoreMessageAck$postPendingAck$3 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreMessageAck$postPendingAck$3 */
+    /* JADX INFO: compiled from: StoreMessageAck.kt */
     public static final /* synthetic */ class C62133 extends FunctionReferenceImpl implements Function1<PendingAck, Unit> {
         public final /* synthetic */ C62111 $postChannelMessagesAck$1;
 
@@ -989,7 +995,7 @@ public final class StoreMessageAck extends StoreV2 {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(PendingAck pendingAck) {
             Intrinsics3.checkNotNullParameter(pendingAck, "p1");
             this.$postChannelMessagesAck$1.invoke2(pendingAck);

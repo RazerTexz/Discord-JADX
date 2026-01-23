@@ -2,15 +2,15 @@ package p007b.p225i.p226a.p288f.p330i.p332b;
 
 import androidx.annotation.WorkerThread;
 
-/* compiled from: com.google.android.gms:play-services-measurement-impl@@18.0.0 */
-/* renamed from: b.i.a.f.i.b.x8 */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.i.b.x8 */
+/* JADX INFO: compiled from: com.google.android.gms:play-services-measurement-impl@@18.0.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public final class C4239x8 {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public RunnableC3990b9 f11351a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final /* synthetic */ C4228w8 f11352b;
 
     public C4239x8(C4228w8 c4228w8) {
@@ -18,7 +18,7 @@ public final class C4239x8 {
     }
 
     @WorkerThread
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final void m5964a() {
         this.f11352b.mo5848b();
         RunnableC3990b9 runnableC3990b9 = this.f11351a;

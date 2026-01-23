@@ -16,9 +16,9 @@ import p007b.p008a.p027k.p031h.StrikethroughRule;
 import p007b.p008a.p050t.p052b.p054b.SimpleMarkdownRules5;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: FormattingParser.kt */
-/* renamed from: b.a.k.g.a, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.a.k.g.a, reason: use source file name */
+/* JADX INFO: compiled from: FormattingParser.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class FormattingParser extends Parser<RenderContext, Node<RenderContext>, ParseState> {
     public FormattingParser() {
         super(false, 1, null);

@@ -2,15 +2,15 @@ package p007b.p225i.p414e.p418n;
 
 import java.util.Arrays;
 
-/* compiled from: BitArray.java */
-/* renamed from: b.i.e.n.a, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.e.n.a, reason: use source file name */
+/* JADX INFO: compiled from: BitArray.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class BitArray implements Cloneable {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public int[] f13227j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public int f13228k;
 
     public BitArray() {
@@ -18,7 +18,7 @@ public final class BitArray implements Cloneable {
         this.f13227j = new int[1];
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public boolean m6935b(int i) {
         return ((1 << (i & 31)) & this.f13227j[i / 32]) != 0;
     }
@@ -35,7 +35,7 @@ public final class BitArray implements Cloneable {
         return this.f13228k == bitArray.f13228k && Arrays.equals(this.f13227j, bitArray.f13227j);
     }
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public int m6936f(int i) {
         int i2 = this.f13228k;
         if (i >= i2) {
@@ -56,7 +56,7 @@ public final class BitArray implements Cloneable {
         return iNumberOfTrailingZeros > i5 ? i5 : iNumberOfTrailingZeros;
     }
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public int m6937g(int i) {
         int i2 = this.f13228k;
         if (i >= i2) {
@@ -77,7 +77,7 @@ public final class BitArray implements Cloneable {
         return iNumberOfTrailingZeros > i5 ? i5 : iNumberOfTrailingZeros;
     }
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public boolean m6938h(int i, int i2, boolean z2) {
         if (i2 < i || i < 0 || i2 > this.f13228k) {
             throw new IllegalArgumentException();
@@ -107,7 +107,7 @@ public final class BitArray implements Cloneable {
         return Arrays.hashCode(this.f13227j) + (this.f13228k * 31);
     }
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public void m6939i() {
         int[] iArr = new int[this.f13227j.length];
         int i = (this.f13228k - 1) / 32;
@@ -135,7 +135,7 @@ public final class BitArray implements Cloneable {
         this.f13227j = iArr;
     }
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public void m6940j(int i) {
         int[] iArr = this.f13227j;
         int i2 = i / 32;

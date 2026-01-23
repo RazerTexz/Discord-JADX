@@ -8,11 +8,11 @@ import p001a0.p002a.p003a.C0002b;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: CollapsedUser.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: CollapsedUser.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final /* data */ class CollapsedUser implements MGRecyclerDataPayload {
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private final boolean emptySlot;
     private final long extraCount;
@@ -20,7 +20,7 @@ public final /* data */ class CollapsedUser implements MGRecyclerDataPayload {
     private final int type;
     private final User user;
 
-    /* compiled from: CollapsedUser.kt */
+    /* JADX INFO: compiled from: CollapsedUser.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -62,17 +62,17 @@ public final /* data */ class CollapsedUser implements MGRecyclerDataPayload {
         return collapsedUser.copy(user, z2, j);
     }
 
-    /* renamed from: component1, reason: from getter */
+    /* JADX INFO: renamed from: component1, reason: from getter */
     public final User getUser() {
         return this.user;
     }
 
-    /* renamed from: component2, reason: from getter */
+    /* JADX INFO: renamed from: component2, reason: from getter */
     public final boolean getEmptySlot() {
         return this.emptySlot;
     }
 
-    /* renamed from: component3, reason: from getter */
+    /* JADX INFO: renamed from: component3, reason: from getter */
     public final long getExtraCount() {
         return this.extraCount;
     }
@@ -116,15 +116,18 @@ public final /* data */ class CollapsedUser implements MGRecyclerDataPayload {
     }
 
     /* JADX WARN: Multi-variable type inference failed */
+    /* JADX WARN: Type inference failed for: r1v1, types: [int] */
+    /* JADX WARN: Type inference failed for: r1v5 */
+    /* JADX WARN: Type inference failed for: r1v6 */
     public int hashCode() {
         User user = this.user;
         int iHashCode = (user != null ? user.hashCode() : 0) * 31;
         boolean z2 = this.emptySlot;
-        int i = z2;
-        if (z2 != 0) {
-            i = 1;
+        ?? r1 = z2;
+        if (z2) {
+            r1 = 1;
         }
-        return C0002b.m3a(this.extraCount) + ((iHashCode + i) * 31);
+        return C0002b.m3a(this.extraCount) + ((iHashCode + r1) * 31);
     }
 
     public String toString() {

@@ -8,9 +8,9 @@ import kotlin.jvm.functions.Function0;
 import p507d0.p580t.Iterables2;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetDirectoriesSearchViewModel.kt */
-/* renamed from: com.discord.widgets.directories.WidgetDirectoriesSearchViewModel$ViewState$directoryEntryData$2, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.directories.WidgetDirectoriesSearchViewModel$ViewState$directoryEntryData$2, reason: use source file name */
+/* JADX INFO: compiled from: WidgetDirectoriesSearchViewModel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetDirectoriesSearchViewModel3 extends Lambda implements Function0<List<? extends DirectoryEntryData>> {
     public final /* synthetic */ WidgetDirectoriesSearchViewModel.ViewState this$0;
 
@@ -26,7 +26,7 @@ public final class WidgetDirectoriesSearchViewModel3 extends Lambda implements F
     }
 
     @Override // kotlin.jvm.functions.Function0
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final List<? extends DirectoryEntryData> invoke2() {
         List<DirectoryEntryGuild> directories = this.this$0.getDirectories();
         ArrayList arrayList = new ArrayList(Iterables2.collectionSizeOrDefault(directories, 10));

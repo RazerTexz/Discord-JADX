@@ -8,16 +8,16 @@ import p007b.p195g.p196a.p198b.JsonGenerator;
 import p007b.p195g.p196a.p205c.SerializerProvider;
 import p007b.p195g.p196a.p205c.p219i0.ByteBufferBackedInputStream;
 
-/* compiled from: ByteBufferSerializer.java */
-/* renamed from: b.g.a.c.g0.u.g, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.g.a.c.g0.u.g, reason: use source file name */
+/* JADX INFO: compiled from: ByteBufferSerializer.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class ByteBufferSerializer extends StdScalarSerializer<ByteBuffer> {
     public ByteBufferSerializer() {
         super(ByteBuffer.class);
     }
 
     @Override // p007b.p195g.p196a.p205c.JsonSerializer
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public void mo1807f(Object obj, JsonGenerator jsonGenerator, SerializerProvider serializerProvider) throws IOException {
         ByteBuffer byteBuffer = (ByteBuffer) obj;
         if (byteBuffer.hasArray()) {

@@ -9,8 +9,8 @@ import android.media.projection.MediaProjectionManager;
 import android.view.Surface;
 import androidx.annotation.Nullable;
 
+/* JADX INFO: loaded from: classes3.dex */
 @TargetApi(21)
-/* loaded from: classes3.dex */
 public class ScreenCapturerAndroid implements VideoCapturer, VideoSink {
     private static final int DISPLAY_FLAGS = 3;
     private static final int VIRTUAL_DISPLAY_DPI = 400;
@@ -36,7 +36,7 @@ public class ScreenCapturerAndroid implements VideoCapturer, VideoSink {
     private VirtualDisplay virtualDisplay;
     private int width;
 
-    /* renamed from: org.webrtc.ScreenCapturerAndroid$1 */
+    /* JADX INFO: renamed from: org.webrtc.ScreenCapturerAndroid$1 */
     public class RunnableC129841 implements Runnable {
         public RunnableC129841() {
         }
@@ -59,7 +59,7 @@ public class ScreenCapturerAndroid implements VideoCapturer, VideoSink {
         }
     }
 
-    /* renamed from: org.webrtc.ScreenCapturerAndroid$2 */
+    /* JADX INFO: renamed from: org.webrtc.ScreenCapturerAndroid$2 */
     public class RunnableC129852 implements Runnable {
         public RunnableC129852() {
         }

@@ -16,8 +16,8 @@ import p507d0.Result3;
 import p507d0.p583v.Thread2;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: DeviceResourceUsageMonitor.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: DeviceResourceUsageMonitor.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class DeviceResourceUsageMonitor {
     private static final long SC_CLK_TCK;
     private static final long SC_PAGE_SIZE;
@@ -29,7 +29,7 @@ public final class DeviceResourceUsageMonitor {
     private final Object threadSync;
     private final TimeSpan timeSpan;
 
-    /* compiled from: DeviceResourceUsageMonitor.kt */
+    /* JADX INFO: compiled from: DeviceResourceUsageMonitor.kt */
     public static final /* data */ class ResourceUsage {
         private final int cpuCoreCount;
         private final int cpuUsagePercent;
@@ -54,17 +54,17 @@ public final class DeviceResourceUsageMonitor {
             return resourceUsage.copy(i, j, i2);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final int getCpuUsagePercent() {
             return this.cpuUsagePercent;
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final long getMemoryRssBytes() {
             return this.memoryRssBytes;
         }
 
-        /* renamed from: component3, reason: from getter */
+        /* JADX INFO: renamed from: component3, reason: from getter */
         public final int getCpuCoreCount() {
             return this.cpuCoreCount;
         }
@@ -190,12 +190,12 @@ public final class DeviceResourceUsageMonitor {
                 ProcfsReader.Stat statFile = ProcfsReader.INSTANCE.readStatFile();
                 long jCurrentTimeMillis = this.clock.currentTimeMillis();
                 if (stat != null && lValueOf != null) {
-                    double totalTime = ((statFile.getTotalTime() - stat.getTotalTime()) * 100) / (SC_CLK_TCK * ((jCurrentTimeMillis - lValueOf.longValue()) / 1000.0d));
+                    double totalTime = ((statFile.getTotalTime() - stat.getTotalTime()) * ((long) 100)) / (SC_CLK_TCK * ((jCurrentTimeMillis - lValueOf.longValue()) / 1000.0d));
                     int i = cpuCoreCount;
                     if (i == 0) {
                         i = 1;
                     }
-                    this.callback.invoke(new ResourceUsage((int) (totalTime / i), statFile.getRssPages() * SC_PAGE_SIZE, i));
+                    this.callback.invoke(new ResourceUsage((int) (totalTime / ((double) i)), statFile.getRssPages() * SC_PAGE_SIZE, i));
                 }
                 lValueOf = Long.valueOf(jCurrentTimeMillis);
                 Thread.sleep(this.timeSpan.toMillis());

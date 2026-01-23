@@ -4,12 +4,12 @@ import android.graphics.Point;
 import p007b.p008a.p062y.p063j0.RxRendererEvents;
 import p637j0.p641k.Func1;
 
-/* compiled from: RxRendererEvents.kt */
-/* renamed from: b.a.y.j0.f, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: b.a.y.j0.f, reason: use source file name */
+/* JADX INFO: compiled from: RxRendererEvents.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class RxRendererEvents2<T, R> implements Func1<RxRendererEvents.a, Point> {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static final RxRendererEvents2 f2034j = new RxRendererEvents2();
 
     @Override // p637j0.p641k.Func1

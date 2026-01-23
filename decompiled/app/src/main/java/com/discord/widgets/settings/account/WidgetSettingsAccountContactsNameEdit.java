@@ -40,18 +40,18 @@ import p507d0.p579g0.StringsJVM;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetSettingsAccountContactsNameEdit.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetSettingsAccountContactsNameEdit.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetSettingsAccountContactsNameEdit extends AppFragment {
     public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetSettingsAccountContactsNameEdit.class, "binding", "getBinding()Lcom/discord/databinding/WidgetSettingsAccountContactsNameEditBinding;", 0)};
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
 
-    /* renamed from: binding$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
 
-    /* compiled from: WidgetSettingsAccountContactsNameEdit.kt */
+    /* JADX INFO: compiled from: WidgetSettingsAccountContactsNameEdit.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -66,8 +66,8 @@ public final class WidgetSettingsAccountContactsNameEdit extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetSettingsAccountContactsNameEdit.kt */
-    /* renamed from: com.discord.widgets.settings.account.WidgetSettingsAccountContactsNameEdit$configureUI$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.account.WidgetSettingsAccountContactsNameEdit$configureUI$1 */
+    /* JADX INFO: compiled from: WidgetSettingsAccountContactsNameEdit.kt */
     public static final class ViewOnClickListenerC97491 implements View.OnClickListener {
         public ViewOnClickListenerC97491() {
         }
@@ -78,8 +78,8 @@ public final class WidgetSettingsAccountContactsNameEdit extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetSettingsAccountContactsNameEdit.kt */
-    /* renamed from: com.discord.widgets.settings.account.WidgetSettingsAccountContactsNameEdit$onViewBound$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.account.WidgetSettingsAccountContactsNameEdit$onViewBound$1 */
+    /* JADX INFO: compiled from: WidgetSettingsAccountContactsNameEdit.kt */
     public static final class C97501 extends Lambda implements Function1<TextView, Unit> {
         public C97501() {
             super(1);
@@ -91,7 +91,7 @@ public final class WidgetSettingsAccountContactsNameEdit extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(TextView textView) {
             Intrinsics3.checkNotNullParameter(textView, "it");
             WidgetSettingsAccountContactsNameEdit widgetSettingsAccountContactsNameEdit = WidgetSettingsAccountContactsNameEdit.this;
@@ -103,8 +103,8 @@ public final class WidgetSettingsAccountContactsNameEdit extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetSettingsAccountContactsNameEdit.kt */
-    /* renamed from: com.discord.widgets.settings.account.WidgetSettingsAccountContactsNameEdit$onViewBound$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.account.WidgetSettingsAccountContactsNameEdit$onViewBound$2 */
+    /* JADX INFO: compiled from: WidgetSettingsAccountContactsNameEdit.kt */
     public static final class ViewOnClickListenerC97512 implements View.OnClickListener {
         public ViewOnClickListenerC97512() {
         }
@@ -120,8 +120,8 @@ public final class WidgetSettingsAccountContactsNameEdit extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetSettingsAccountContactsNameEdit.kt */
-    /* renamed from: com.discord.widgets.settings.account.WidgetSettingsAccountContactsNameEdit$onViewBoundOrOnResume$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.account.WidgetSettingsAccountContactsNameEdit$onViewBoundOrOnResume$1 */
+    /* JADX INFO: compiled from: WidgetSettingsAccountContactsNameEdit.kt */
     public static final class C97521 extends Lambda implements Function1<StoreUserConnections.State, Unit> {
         public C97521() {
             super(1);
@@ -133,15 +133,15 @@ public final class WidgetSettingsAccountContactsNameEdit extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(StoreUserConnections.State state) {
             Intrinsics3.checkNotNullParameter(state, "it");
             WidgetSettingsAccountContactsNameEdit.access$configureUI(WidgetSettingsAccountContactsNameEdit.this, state);
         }
     }
 
-    /* compiled from: WidgetSettingsAccountContactsNameEdit.kt */
-    /* renamed from: com.discord.widgets.settings.account.WidgetSettingsAccountContactsNameEdit$submitName$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.account.WidgetSettingsAccountContactsNameEdit$submitName$1 */
+    /* JADX INFO: compiled from: WidgetSettingsAccountContactsNameEdit.kt */
     public static final class C97531 extends Lambda implements Function1<ConnectedAccount, TrackNetworkMetadata2> {
         public final /* synthetic */ String $name;
 
@@ -156,14 +156,14 @@ public final class WidgetSettingsAccountContactsNameEdit extends AppFragment {
             return invoke2(connectedAccount);
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final TrackNetworkMetadata2 invoke2(ConnectedAccount connectedAccount) {
             return new TrackNetworkActionUserConnectionsUpdate(this.$name, null, null, null, 14);
         }
     }
 
-    /* compiled from: WidgetSettingsAccountContactsNameEdit.kt */
-    /* renamed from: com.discord.widgets.settings.account.WidgetSettingsAccountContactsNameEdit$submitName$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.account.WidgetSettingsAccountContactsNameEdit$submitName$2 */
+    /* JADX INFO: compiled from: WidgetSettingsAccountContactsNameEdit.kt */
     public static final class C97542 extends Lambda implements Function1<ConnectedAccount, Unit> {
         public C97542() {
             super(1);
@@ -175,7 +175,7 @@ public final class WidgetSettingsAccountContactsNameEdit extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(ConnectedAccount connectedAccount) {
             Intrinsics3.checkNotNullParameter(connectedAccount, "it");
             FragmentActivity activity = WidgetSettingsAccountContactsNameEdit.this.getActivity();
@@ -185,8 +185,8 @@ public final class WidgetSettingsAccountContactsNameEdit extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetSettingsAccountContactsNameEdit.kt */
-    /* renamed from: com.discord.widgets.settings.account.WidgetSettingsAccountContactsNameEdit$submitName$3 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.account.WidgetSettingsAccountContactsNameEdit$submitName$3 */
+    /* JADX INFO: compiled from: WidgetSettingsAccountContactsNameEdit.kt */
     public static final class C97553 extends Lambda implements Function1<Error, Unit> {
         public static final C97553 INSTANCE = new C97553();
 
@@ -200,7 +200,7 @@ public final class WidgetSettingsAccountContactsNameEdit extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Error error) {
             Intrinsics3.checkNotNullParameter(error, "it");
         }

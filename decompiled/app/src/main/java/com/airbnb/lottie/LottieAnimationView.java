@@ -63,99 +63,99 @@ import p007b.p085c.p086a.p094x.ImageAssetManager;
 import p007b.p085c.p086a.p095y.KeyPath;
 import p007b.p100d.p104b.p105a.outline;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class LottieAnimationView extends AppCompatImageView {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static final String f14517j = LottieAnimationView.class.getSimpleName();
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public static final LottieListener<Throwable> f14518k = new C5407a();
 
-    /* renamed from: A */
+    /* JADX INFO: renamed from: A */
     public int f14519A;
 
-    /* renamed from: B */
+    /* JADX INFO: renamed from: B */
     @Nullable
     public LottieTask2<LottieComposition> f14520B;
 
-    /* renamed from: C */
+    /* JADX INFO: renamed from: C */
     @Nullable
     public LottieComposition f14521C;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final LottieListener<LottieComposition> f14522l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public final LottieListener<Throwable> f14523m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     @Nullable
     public LottieListener<Throwable> f14524n;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     @DrawableRes
     public int f14525o;
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public final LottieDrawable f14526p;
 
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     public boolean f14527q;
 
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     public String f14528r;
 
-    /* renamed from: s */
+    /* JADX INFO: renamed from: s */
     @RawRes
     public int f14529s;
 
-    /* renamed from: t */
+    /* JADX INFO: renamed from: t */
     public boolean f14530t;
 
-    /* renamed from: u */
+    /* JADX INFO: renamed from: u */
     public boolean f14531u;
 
-    /* renamed from: v */
+    /* JADX INFO: renamed from: v */
     public boolean f14532v;
 
-    /* renamed from: w */
+    /* JADX INFO: renamed from: w */
     public boolean f14533w;
 
-    /* renamed from: x */
+    /* JADX INFO: renamed from: x */
     public boolean f14534x;
 
-    /* renamed from: y */
+    /* JADX INFO: renamed from: y */
     public RenderMode f14535y;
 
-    /* renamed from: z */
+    /* JADX INFO: renamed from: z */
     public Set<LottieOnCompositionLoadedListener> f14536z;
 
     public static class SavedState extends View.BaseSavedState {
         public static final Parcelable.Creator<SavedState> CREATOR = new C5406a();
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public String f14537j;
 
-        /* renamed from: k */
+        /* JADX INFO: renamed from: k */
         public int f14538k;
 
-        /* renamed from: l */
+        /* JADX INFO: renamed from: l */
         public float f14539l;
 
-        /* renamed from: m */
+        /* JADX INFO: renamed from: m */
         public boolean f14540m;
 
-        /* renamed from: n */
+        /* JADX INFO: renamed from: n */
         public String f14541n;
 
-        /* renamed from: o */
+        /* JADX INFO: renamed from: o */
         public int f14542o;
 
-        /* renamed from: p */
+        /* JADX INFO: renamed from: p */
         public int f14543p;
 
-        /* renamed from: com.airbnb.lottie.LottieAnimationView$SavedState$a */
+        /* JADX INFO: renamed from: com.airbnb.lottie.LottieAnimationView$SavedState$a */
         public class C5406a implements Parcelable.Creator<SavedState> {
             @Override // android.os.Parcelable.Creator
             public SavedState createFromParcel(Parcel parcel) {
@@ -194,10 +194,10 @@ public class LottieAnimationView extends AppCompatImageView {
         }
     }
 
-    /* renamed from: com.airbnb.lottie.LottieAnimationView$a */
+    /* JADX INFO: renamed from: com.airbnb.lottie.LottieAnimationView$a */
     public class C5407a implements LottieListener<Throwable> {
         @Override // p007b.p085c.p086a.LottieListener
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public void mo680a(Throwable th) {
             Throwable th2 = th;
             PathMeasure pathMeasure = Utils.f2309a;
@@ -208,25 +208,25 @@ public class LottieAnimationView extends AppCompatImageView {
         }
     }
 
-    /* renamed from: com.airbnb.lottie.LottieAnimationView$b */
+    /* JADX INFO: renamed from: com.airbnb.lottie.LottieAnimationView$b */
     public class C5408b implements LottieListener<LottieComposition> {
         public C5408b() {
         }
 
         @Override // p007b.p085c.p086a.LottieListener
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public void mo680a(LottieComposition lottieComposition) {
             LottieAnimationView.this.setComposition(lottieComposition);
         }
     }
 
-    /* renamed from: com.airbnb.lottie.LottieAnimationView$c */
+    /* JADX INFO: renamed from: com.airbnb.lottie.LottieAnimationView$c */
     public class C5409c implements LottieListener<Throwable> {
         public C5409c() {
         }
 
         @Override // p007b.p085c.p086a.LottieListener
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public void mo680a(Throwable th) {
             Throwable th2 = th;
             LottieAnimationView lottieAnimationView = LottieAnimationView.this;
@@ -351,7 +351,7 @@ public class LottieAnimationView extends AppCompatImageView {
         this.f14520B = lottieTask2;
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final void m7491a() {
         LottieTask2<LottieComposition> lottieTask2 = this.f14520B;
         if (lottieTask2 != null) {
@@ -368,7 +368,7 @@ public class LottieAnimationView extends AppCompatImageView {
     }
 
     /* JADX WARN: Removed duplicated region for block: B:5:0x000c  */
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
@@ -403,7 +403,7 @@ public class LottieAnimationView extends AppCompatImageView {
     }
 
     @MainThread
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public void m7493c() {
         this.f14533w = false;
         this.f14532v = false;
@@ -416,7 +416,7 @@ public class LottieAnimationView extends AppCompatImageView {
     }
 
     @MainThread
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public void m7494d() {
         if (!isShown()) {
             this.f14530t = true;

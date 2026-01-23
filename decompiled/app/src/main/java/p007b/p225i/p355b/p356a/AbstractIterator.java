@@ -6,15 +6,15 @@ import org.checkerframework.checker.nullness.compatqual.NullableDecl;
 import p007b.p085c.p086a.p095y.C1563b;
 import p007b.p225i.p355b.p356a.Splitter3;
 
-/* compiled from: AbstractIterator.java */
-/* renamed from: b.i.b.a.a, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.b.a.a, reason: use source file name */
+/* JADX INFO: compiled from: AbstractIterator.java */
+/* JADX INFO: loaded from: classes3.dex */
 public abstract class AbstractIterator<T> implements Iterator<T> {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public int f11938j = 2;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     @NullableDecl
     public T f11939k;
 

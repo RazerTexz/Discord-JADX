@@ -4,15 +4,15 @@ import androidx.annotation.Nullable;
 import p007b.p100d.p104b.p105a.outline;
 import p007b.p225i.p226a.p228b.p229i.p230e.NetworkConnectionInfo;
 
-/* compiled from: AutoValue_NetworkConnectionInfo.java */
-/* renamed from: b.i.a.b.i.e.i, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.b.i.e.i, reason: use source file name */
+/* JADX INFO: compiled from: AutoValue_NetworkConnectionInfo.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class AutoValue_NetworkConnectionInfo extends NetworkConnectionInfo {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final NetworkConnectionInfo.b f5189a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final NetworkConnectionInfo.a f5190b;
 
     public AutoValue_NetworkConnectionInfo(NetworkConnectionInfo.b bVar, NetworkConnectionInfo.a aVar, a aVar2) {
@@ -22,14 +22,14 @@ public final class AutoValue_NetworkConnectionInfo extends NetworkConnectionInfo
 
     @Override // p007b.p225i.p226a.p228b.p229i.p230e.NetworkConnectionInfo
     @Nullable
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public NetworkConnectionInfo.a mo2331a() {
         return this.f5190b;
     }
 
     @Override // p007b.p225i.p226a.p228b.p229i.p230e.NetworkConnectionInfo
     @Nullable
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public NetworkConnectionInfo.b mo2332b() {
         return this.f5189a;
     }

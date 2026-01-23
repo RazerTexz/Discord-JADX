@@ -3,8 +3,8 @@ package com.discord.widgets.channels;
 import kotlin.jvm.functions.Function0;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetCreateChannel.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetCreateChannel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetCreateChannel$disableAnnouncementChannelType$2 extends Lambda implements Function0<Boolean> {
     public final /* synthetic */ WidgetCreateChannel this$0;
 
@@ -19,7 +19,7 @@ public final class WidgetCreateChannel$disableAnnouncementChannelType$2 extends 
         return Boolean.valueOf(invoke2());
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final boolean invoke2() {
         return this.this$0.getMostRecentIntent().getBooleanExtra("INTENT_DISABLE_ANNOUNCEMENT_CHANNEL_TYPE", false);
     }

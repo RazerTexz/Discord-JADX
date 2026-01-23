@@ -11,8 +11,8 @@ import java.util.HashSet;
 import java.util.Set;
 import p007b.p100d.p104b.p105a.outline;
 
+/* JADX INFO: loaded from: classes.dex */
 @RestrictTo({RestrictTo.Scope.LIBRARY_GROUP_PREFIX})
-/* loaded from: classes.dex */
 public class FtsTableInfo {
     private static final String[] FTS_OPTIONS = {"tokenize=", "compress=", "content=", "languageid=", "matchinfo=", "notindexed=", "order=", "prefix=", "uncompress="};
     public final Set<String> columns;

@@ -2,12 +2,12 @@ package p007b.p008a.p041q;
 
 import p658rx.functions.Action1;
 
-/* compiled from: RtcConnection.kt */
-/* renamed from: b.a.q.v */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.a.q.v */
+/* JADX INFO: compiled from: RtcConnection.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class C1264v<T> implements Action1<Throwable> {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final /* synthetic */ C1265w f1872j;
 
     public C1264v(C1265w c1265w) {

@@ -4,19 +4,19 @@ import com.google.zxing.NotFoundException;
 import p007b.p225i.p414e.BarcodeFormat;
 import p007b.p225i.p414e.p418n.BitArray;
 
-/* compiled from: EAN13Reader.java */
-/* renamed from: b.i.e.q.e, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.e.q.e, reason: use source file name */
+/* JADX INFO: compiled from: EAN13Reader.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class EAN13Reader extends UPCEANReader {
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public static final int[] f13368h = {0, 11, 13, 14, 19, 25, 28, 21, 22, 26};
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public final int[] f13369i = new int[4];
 
     @Override // p007b.p225i.p414e.p426q.UPCEANReader
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public int mo6989j(BitArray bitArray, int[] iArr, StringBuilder sb) throws NotFoundException {
         int[] iArr2 = this.f13369i;
         iArr2[0] = 0;
@@ -54,7 +54,7 @@ public final class EAN13Reader extends UPCEANReader {
     }
 
     @Override // p007b.p225i.p414e.p426q.UPCEANReader
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public BarcodeFormat mo6990n() {
         return BarcodeFormat.EAN_13;
     }

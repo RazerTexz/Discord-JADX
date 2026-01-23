@@ -4,16 +4,16 @@ import com.discord.api.role.GuildRole;
 import com.discord.utilities.time.TimeUtils;
 import java.util.Comparator;
 
-/* compiled from: RoleUtils.kt */
-/* renamed from: com.discord.utilities.guilds.RoleUtils$ROLE_COMPARATOR$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.utilities.guilds.RoleUtils$ROLE_COMPARATOR$1, reason: use source file name */
+/* JADX INFO: compiled from: RoleUtils.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class RoleUtils2 implements Comparator<GuildRole> {
     @Override // java.util.Comparator
     public /* bridge */ /* synthetic */ int compare(GuildRole guildRole, GuildRole guildRole2) {
         return compare2(guildRole, guildRole2);
     }
 
-    /* renamed from: compare, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: compare, reason: avoid collision after fix types in other method */
     public int compare2(GuildRole role1, GuildRole role2) {
         if (role1 != null && role2 != null) {
             int position = role1.getPosition();

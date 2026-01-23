@@ -6,12 +6,12 @@ import p007b.p085c.p086a.p090c0.Keyframe;
 import p007b.p085c.p086a.p090c0.LottieValueCallback;
 import p007b.p100d.p104b.p105a.outline;
 
-/* compiled from: PointKeyframeAnimation.java */
-/* renamed from: b.c.a.w.c.j, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.c.a.w.c.j, reason: use source file name */
+/* JADX INFO: compiled from: PointKeyframeAnimation.java */
+/* JADX INFO: loaded from: classes.dex */
 public class PointKeyframeAnimation extends KeyframeAnimation<PointF> {
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public final PointF f2620i;
 
     public PointKeyframeAnimation(List<Keyframe<PointF>> list) {
@@ -21,7 +21,7 @@ public class PointKeyframeAnimation extends KeyframeAnimation<PointF> {
 
     /* JADX WARN: Multi-variable type inference failed */
     @Override // p007b.p085c.p086a.p091w.p093c.BaseKeyframeAnimation
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public Object mo728f(Keyframe keyframe, float f) {
         T t;
         PointF pointF;

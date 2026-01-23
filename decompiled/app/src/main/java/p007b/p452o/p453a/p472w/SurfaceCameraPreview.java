@@ -2,12 +2,12 @@ package p007b.p452o.p453a.p472w;
 
 import android.view.SurfaceHolder;
 
-/* compiled from: SurfaceCameraPreview.java */
-/* renamed from: b.o.a.w.g, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.o.a.w.g, reason: use source file name */
+/* JADX INFO: compiled from: SurfaceCameraPreview.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class SurfaceCameraPreview implements SurfaceHolder.Callback {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final /* synthetic */ SurfaceCameraPreview2 f14237j;
 
     public SurfaceCameraPreview(SurfaceCameraPreview2 surfaceCameraPreview2) {

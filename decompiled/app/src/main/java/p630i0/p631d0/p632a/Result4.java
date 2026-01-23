@@ -3,15 +3,15 @@ package p630i0.p631d0.p632a;
 import p007b.p100d.p104b.p105a.outline;
 import retrofit2.Response;
 
-/* compiled from: Result.java */
-/* renamed from: i0.d0.a.d, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: i0.d0.a.d, reason: use source file name */
+/* JADX INFO: compiled from: Result.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class Result4<T> {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final Response<T> f26501a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final Throwable f26502b;
 
     public Result4(Response<T> response, Throwable th) {

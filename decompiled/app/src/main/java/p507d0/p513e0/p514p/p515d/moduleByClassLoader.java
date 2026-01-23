@@ -7,12 +7,12 @@ import p507d0.p513e0.p514p.p515d.p517m0.p521c.p526k1.p527a.RuntimeModuleData;
 import p507d0.p513e0.p514p.p515d.p517m0.p521c.p526k1.p528b.reflectClassUtil;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: moduleByClassLoader.kt */
-/* renamed from: d0.e0.p.d.b0, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.b0, reason: use source file name */
+/* JADX INFO: compiled from: moduleByClassLoader.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class moduleByClassLoader {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final ConcurrentMap<moduleByClassLoader2, WeakReference<RuntimeModuleData>> f22321a = new ConcurrentHashMap();
 
     public static final RuntimeModuleData getOrCreateModule(Class<?> cls) {

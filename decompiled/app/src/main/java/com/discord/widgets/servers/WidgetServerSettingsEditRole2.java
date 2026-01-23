@@ -19,15 +19,15 @@ import p637j0.p641k.Func1;
 import p658rx.Observable;
 import p658rx.functions.Func6;
 
-/* compiled from: WidgetServerSettingsEditRole.kt */
-/* renamed from: com.discord.widgets.servers.WidgetServerSettingsEditRole$Model$Companion$get$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.servers.WidgetServerSettingsEditRole$Model$Companion$get$1, reason: use source file name */
+/* JADX INFO: compiled from: WidgetServerSettingsEditRole.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetServerSettingsEditRole2<T, R> implements Func1<MeUser, Observable<? extends WidgetServerSettingsEditRole.Model>> {
     public final /* synthetic */ long $guildId;
     public final /* synthetic */ long $roleId;
 
-    /* compiled from: WidgetServerSettingsEditRole.kt */
-    /* renamed from: com.discord.widgets.servers.WidgetServerSettingsEditRole$Model$Companion$get$1$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.WidgetServerSettingsEditRole$Model$Companion$get$1$1 */
+    /* JADX INFO: compiled from: WidgetServerSettingsEditRole.kt */
     public static final class C92341<T1, T2, T3, T4, T5, T6, R> implements Func6<Guild, Map<Long, ? extends GuildMember>, Map<Long, ? extends GuildRole>, Long, Boolean, Boolean, WidgetServerSettingsEditRole.Model> {
         public final /* synthetic */ MeUser $meUser;
 
@@ -40,7 +40,7 @@ public final class WidgetServerSettingsEditRole2<T, R> implements Func1<MeUser, 
             return call2(guild, (Map<Long, GuildMember>) map, (Map<Long, GuildRole>) map2, l, bool, bool2);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final WidgetServerSettingsEditRole.Model call2(Guild guild, Map<Long, GuildMember> map, Map<Long, GuildRole> map2, Long l, Boolean bool, Boolean bool2) {
             GuildMember guildMember = map.get(Long.valueOf(this.$meUser.getId()));
             GuildRole guildRole = map2 != null ? map2.get(Long.valueOf(WidgetServerSettingsEditRole2.this.$roleId)) : null;
@@ -72,7 +72,7 @@ public final class WidgetServerSettingsEditRole2<T, R> implements Func1<MeUser, 
         return call2(meUser);
     }
 
-    /* renamed from: call, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
     public final Observable<? extends WidgetServerSettingsEditRole.Model> call2(MeUser meUser) {
         Intrinsics3.checkNotNullParameter(meUser, "meUser");
         StoreStream.Companion companion = StoreStream.INSTANCE;

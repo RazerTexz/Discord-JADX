@@ -5,71 +5,71 @@ import com.google.android.flexbox.FlexItem;
 import java.util.ArrayList;
 import java.util.List;
 
-/* compiled from: FlexLine.java */
-/* renamed from: b.i.a.e.b, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.e.b, reason: use source file name */
+/* JADX INFO: compiled from: FlexLine.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class FlexLine {
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public int f9167e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public int f9168f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public int f9169g;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public int f9170h;
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public int f9171i;
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public float f9172j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public float f9173k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public int f9174l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public int f9175m;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public int f9177o;
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public int f9178p;
 
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     public boolean f9179q;
 
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     public boolean f9180r;
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public int f9163a = Integer.MAX_VALUE;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public int f9164b = Integer.MAX_VALUE;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public int f9165c = Integer.MIN_VALUE;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public int f9166d = Integer.MIN_VALUE;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public List<Integer> f9176n = new ArrayList();
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public int m3934a() {
         return this.f9170h - this.f9171i;
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public void m3935b(View view, int i, int i2, int i3, int i4) {
         FlexItem flexItem = (FlexItem) view.getLayoutParams();
         this.f9163a = Math.min(this.f9163a, (view.getLeft() - flexItem.mo8958J()) - i);

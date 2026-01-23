@@ -7,9 +7,9 @@ import kotlin.jvm.functions.Function2;
 import p507d0.p592z.p594d.FunctionReferenceImpl;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: WidgetServerDeleteDialog.kt */
-/* renamed from: com.discord.widgets.servers.WidgetServerDeleteDialog$Model$Companion$get$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.servers.WidgetServerDeleteDialog$Model$Companion$get$1, reason: use source file name */
+/* JADX INFO: compiled from: WidgetServerDeleteDialog.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final /* synthetic */ class WidgetServerDeleteDialog2 extends FunctionReferenceImpl implements Function2<MeUser, Guild, WidgetServerDeleteDialog.Model> {
     public static final WidgetServerDeleteDialog2 INSTANCE = new WidgetServerDeleteDialog2();
 
@@ -22,7 +22,7 @@ public final /* synthetic */ class WidgetServerDeleteDialog2 extends FunctionRef
         return invoke2(meUser, guild);
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final WidgetServerDeleteDialog.Model invoke2(MeUser meUser, Guild guild) {
         Intrinsics3.checkNotNullParameter(meUser, "p1");
         return new WidgetServerDeleteDialog.Model(meUser, guild);

@@ -11,9 +11,9 @@ import p507d0.p580t.Iterables2;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetTosReportViolationViewModel.kt */
-/* renamed from: com.discord.widgets.tos.WidgetTosReportViolationViewModel$sendReportAPICall$onFetchSuccess$1, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: com.discord.widgets.tos.WidgetTosReportViolationViewModel$sendReportAPICall$onFetchSuccess$1, reason: use source file name */
+/* JADX INFO: compiled from: WidgetTosReportViolationViewModel.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class WidgetTosReportViolationViewModel2 extends Lambda implements Function1<UserProfile, Unit> {
     public final /* synthetic */ long $channelId;
     public final /* synthetic */ long $messageId;
@@ -35,7 +35,7 @@ public final class WidgetTosReportViolationViewModel2 extends Lambda implements 
         return Unit.f27425a;
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final void invoke2(UserProfile userProfile) {
         Intrinsics3.checkNotNullParameter(userProfile, "userProfile");
         List<UserProfile.GuildReference> listM8308d = userProfile.m8308d();

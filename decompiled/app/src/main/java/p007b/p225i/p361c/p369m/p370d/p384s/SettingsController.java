@@ -36,47 +36,47 @@ import p007b.p225i.p361c.p369m.p370d.p384s.p385h.SettingsRequest;
 import p007b.p225i.p361c.p369m.p370d.p384s.p386i.DefaultSettingsSpiCall;
 import p007b.p225i.p361c.p369m.p370d.p384s.p386i.SettingsSpiCall;
 
-/* compiled from: SettingsController.java */
-/* renamed from: b.i.c.m.d.s.c, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.c.m.d.s.c, reason: use source file name */
+/* JADX INFO: compiled from: SettingsController.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class SettingsController implements SettingsDataProvider {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final Context f12729a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final SettingsRequest f12730b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final SettingsJsonParser f12731c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final SystemCurrentTimeProvider f12732d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final CachedSettingsIo f12733e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final SettingsSpiCall f12734f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public final DataCollectionArbiter f12735g;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public final AtomicReference<Settings2> f12736h;
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public final AtomicReference<TaskCompletionSource<AppSettingsData>> f12737i;
 
-    /* compiled from: SettingsController.java */
-    /* renamed from: b.i.c.m.d.s.c$a */
+    /* JADX INFO: renamed from: b.i.c.m.d.s.c$a */
+    /* JADX INFO: compiled from: SettingsController.java */
     public class a implements InterfaceC4362f<Void, Void> {
         public a() {
         }
 
         @Override // p007b.p225i.p226a.p288f.p340n.InterfaceC4362f
         @NonNull
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public Task<Void> mo4013a(@Nullable Void r11) throws Exception {
             JSONObject jSONObjectM6695g;
             FileWriter fileWriter;
@@ -119,19 +119,6 @@ public class SettingsController implements SettingsDataProvider {
                             if (Logger3.f12227a.m6370a(6)) {
                                 Log.e("FirebaseCrashlytics", "Failed to cache settings", e);
                             }
-                            CommonUtils.m6409c(fileWriter, "Failed to close settings writer.");
-                            SettingsController.this.m6687e(jSONObjectM6695g, "Loaded settings: ");
-                            SettingsController settingsController2 = SettingsController.this;
-                            String str = settingsController2.f12730b.f12768f;
-                            SharedPreferences.Editor editorEdit = CommonUtils.m6421o(settingsController2.f12729a).edit();
-                            editorEdit.putString("existing_instance_identifier", str);
-                            editorEdit.apply();
-                            SettingsController.this.f12736h.set(settingsDataM6688a);
-                            SettingsController.this.f12737i.get().m9126b(settingsDataM6688a.f12759a);
-                            TaskCompletionSource<AppSettingsData> taskCompletionSource = new TaskCompletionSource<>();
-                            taskCompletionSource.m9126b(settingsDataM6688a.f12759a);
-                            SettingsController.this.f12737i.set(taskCompletionSource);
-                            return C3404f.m4264Z(null);
                         } catch (Throwable th) {
                             th = th;
                             fileWriter2 = fileWriter;
@@ -155,16 +142,16 @@ public class SettingsController implements SettingsDataProvider {
                 }
                 CommonUtils.m6409c(fileWriter, "Failed to close settings writer.");
                 SettingsController.this.m6687e(jSONObjectM6695g, "Loaded settings: ");
-                SettingsController settingsController22 = SettingsController.this;
-                String str2 = settingsController22.f12730b.f12768f;
-                SharedPreferences.Editor editorEdit2 = CommonUtils.m6421o(settingsController22.f12729a).edit();
-                editorEdit2.putString("existing_instance_identifier", str2);
-                editorEdit2.apply();
+                SettingsController settingsController2 = SettingsController.this;
+                String str = settingsController2.f12730b.f12768f;
+                SharedPreferences.Editor editorEdit = CommonUtils.m6421o(settingsController2.f12729a).edit();
+                editorEdit.putString("existing_instance_identifier", str);
+                editorEdit.apply();
                 SettingsController.this.f12736h.set(settingsDataM6688a);
                 SettingsController.this.f12737i.get().m9126b(settingsDataM6688a.f12759a);
-                TaskCompletionSource<AppSettingsData> taskCompletionSource2 = new TaskCompletionSource<>();
-                taskCompletionSource2.m9126b(settingsDataM6688a.f12759a);
-                SettingsController.this.f12737i.set(taskCompletionSource2);
+                TaskCompletionSource<AppSettingsData> taskCompletionSource = new TaskCompletionSource<>();
+                taskCompletionSource.m9126b(settingsDataM6688a.f12759a);
+                SettingsController.this.f12737i.set(taskCompletionSource);
             }
             return C3404f.m4264Z(null);
         }
@@ -185,12 +172,12 @@ public class SettingsController implements SettingsDataProvider {
         atomicReference.set(new SettingsData(DefaultSettingsJsonTransform.m6681b(systemCurrentTimeProvider, 3600L, jSONObject), null, new SessionSettingsData(jSONObject.optInt("max_custom_exception_events", 8), 4), new FeaturesSettingsData(jSONObject.optBoolean("collect_reports", true)), 0, 3600));
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public Task<AppSettingsData> m6683a() {
         return this.f12737i.get().f20845a;
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final SettingsData m6684b(int i) throws Throwable {
         SettingsData settingsData = null;
         try {
@@ -215,7 +202,6 @@ public class SettingsController implements SettingsDataProvider {
                             if (Logger3.f12227a.m6370a(6)) {
                                 Log.e("FirebaseCrashlytics", "Failed to get cached settings", e);
                             }
-                            return settingsData;
                         }
                     } else {
                         if (settingsDataM6688a.f12762d < jCurrentTimeMillis) {
@@ -237,13 +223,13 @@ public class SettingsController implements SettingsDataProvider {
         return settingsData;
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public Settings2 m6685c() {
         return this.f12736h.get();
     }
 
     /* JADX WARN: Incorrect types in method signature: (Ljava/lang/Object;Ljava/util/concurrent/Executor;)Lcom/google/android/gms/tasks/Task<Ljava/lang/Void;>; */
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public Task m6686d(int i, Executor executor) throws Throwable {
         SettingsData settingsDataM6684b;
         if (!(!CommonUtils.m6421o(this.f12729a).getString("existing_instance_identifier", "").equals(this.f12730b.f12768f)) && (settingsDataM6684b = m6684b(i)) != null) {
@@ -259,7 +245,7 @@ public class SettingsController implements SettingsDataProvider {
         return this.f12735g.m6451c().mo6023r(executor, new a());
     }
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final void m6687e(JSONObject jSONObject, String str) throws JSONException {
         Logger3 logger3 = Logger3.f12227a;
         StringBuilder sbM833U = outline.m833U(str);

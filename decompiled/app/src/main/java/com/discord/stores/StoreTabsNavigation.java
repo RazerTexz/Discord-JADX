@@ -12,8 +12,8 @@ import p507d0.p592z.p594d.Lambda;
 import p658rx.Observable;
 import p658rx.subjects.PublishSubject;
 
-/* compiled from: StoreTabsNavigation.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: StoreTabsNavigation.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class StoreTabsNavigation extends StoreV2 {
     private final PublishSubject<Unit> dismissTabsDialogEventSubject;
     private final Dispatcher dispatcher;
@@ -21,8 +21,8 @@ public final class StoreTabsNavigation extends StoreV2 {
     private NavigationTab selectedTab;
     private final StoreStream storeStream;
 
-    /* compiled from: StoreTabsNavigation.kt */
-    /* renamed from: com.discord.stores.StoreTabsNavigation$observeSelectedTab$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreTabsNavigation$observeSelectedTab$1 */
+    /* JADX INFO: compiled from: StoreTabsNavigation.kt */
     public static final class C65261 extends Lambda implements Function0<NavigationTab> {
         public C65261() {
             super(0);
@@ -40,8 +40,8 @@ public final class StoreTabsNavigation extends StoreV2 {
         }
     }
 
-    /* compiled from: StoreTabsNavigation.kt */
-    /* renamed from: com.discord.stores.StoreTabsNavigation$selectHomeTab$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreTabsNavigation$selectHomeTab$1 */
+    /* JADX INFO: compiled from: StoreTabsNavigation.kt */
     public static final class C65271 extends Lambda implements Function0<Unit> {
         public final /* synthetic */ boolean $dismissTabsDialogs;
         public final /* synthetic */ StoreNavigation.PanelAction $panelAction;
@@ -59,7 +59,7 @@ public final class StoreTabsNavigation extends StoreV2 {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             StoreTabsNavigation.access$handleTabSelection(StoreTabsNavigation.this, NavigationTab.HOME);
             StoreTabsNavigation.access$notifyHomeTabSelected(StoreTabsNavigation.this, this.$panelAction);
@@ -69,8 +69,8 @@ public final class StoreTabsNavigation extends StoreV2 {
         }
     }
 
-    /* compiled from: StoreTabsNavigation.kt */
-    /* renamed from: com.discord.stores.StoreTabsNavigation$selectTab$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreTabsNavigation$selectTab$1 */
+    /* JADX INFO: compiled from: StoreTabsNavigation.kt */
     public static final class C65281 extends Lambda implements Function0<Unit> {
         public final /* synthetic */ boolean $dismissTabsDialogs;
         public final /* synthetic */ NavigationTab $navigationTab;
@@ -88,7 +88,7 @@ public final class StoreTabsNavigation extends StoreV2 {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             StoreTabsNavigation.this.selectTabInternal$app_productionGoogleRelease(this.$navigationTab, this.$dismissTabsDialogs);
         }

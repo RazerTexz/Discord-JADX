@@ -6,7 +6,7 @@ import com.adjust.sdk.Constants;
 import com.discord.widgets.chat.input.MentionUtils;
 import p007b.p100d.p104b.p105a.outline;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public final class UriCompat {
     private UriCompat() {
     }

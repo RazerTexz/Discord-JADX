@@ -56,37 +56,37 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 import p507d0.p592z.p594d.Reflection2;
 
-/* compiled from: TypeDeserializer.kt */
-/* renamed from: d0.e0.p.d.m0.l.b.c0, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.l.b.c0, reason: use source file name */
+/* JADX INFO: compiled from: TypeDeserializer.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class TypeDeserializer {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final context6 f24503a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final TypeDeserializer f24504b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final String f24505c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final String f24506d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public boolean f24507e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final Function1<Integer, ClassifierDescriptor> f24508f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public final Function1<Integer, ClassifierDescriptor> f24509g;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public final Map<Integer, TypeParameterDescriptor> f24510h;
 
-    /* compiled from: TypeDeserializer.kt */
-    /* renamed from: d0.e0.p.d.m0.l.b.c0$a */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.l.b.c0$a */
+    /* JADX INFO: compiled from: TypeDeserializer.kt */
     public static final class a extends Lambda implements Function1<Integer, ClassifierDescriptor> {
         public a() {
             super(1);
@@ -102,8 +102,8 @@ public final class TypeDeserializer {
         }
     }
 
-    /* compiled from: TypeDeserializer.kt */
-    /* renamed from: d0.e0.p.d.m0.l.b.c0$b */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.l.b.c0$b */
+    /* JADX INFO: compiled from: TypeDeserializer.kt */
     public static final class b extends Lambda implements Function0<List<? extends AnnotationDescriptor>> {
         public final /* synthetic */ C11692q $proto;
 
@@ -119,14 +119,14 @@ public final class TypeDeserializer {
         }
 
         @Override // kotlin.jvm.functions.Function0
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final List<? extends AnnotationDescriptor> invoke2() {
             return TypeDeserializer.access$getC$p(TypeDeserializer.this).getComponents().getAnnotationAndConstantLoader().loadTypeAnnotations(this.$proto, TypeDeserializer.access$getC$p(TypeDeserializer.this).getNameResolver());
         }
     }
 
-    /* compiled from: TypeDeserializer.kt */
-    /* renamed from: d0.e0.p.d.m0.l.b.c0$c */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.l.b.c0$c */
+    /* JADX INFO: compiled from: TypeDeserializer.kt */
     public static final class c extends Lambda implements Function1<Integer, ClassifierDescriptor> {
         public c() {
             super(1);
@@ -142,11 +142,11 @@ public final class TypeDeserializer {
         }
     }
 
-    /* compiled from: TypeDeserializer.kt */
-    /* renamed from: d0.e0.p.d.m0.l.b.c0$d */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.l.b.c0$d */
+    /* JADX INFO: compiled from: TypeDeserializer.kt */
     public /* synthetic */ class d extends FunctionReference implements Function1<ClassId, ClassId> {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public static final d f24511j = new d();
 
         public d() {
@@ -173,15 +173,15 @@ public final class TypeDeserializer {
             return invoke2(classId);
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final ClassId invoke2(ClassId classId) {
             Intrinsics3.checkNotNullParameter(classId, "p0");
             return classId.getOuterClassId();
         }
     }
 
-    /* compiled from: TypeDeserializer.kt */
-    /* renamed from: d0.e0.p.d.m0.l.b.c0$e */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.l.b.c0$e */
+    /* JADX INFO: compiled from: TypeDeserializer.kt */
     public static final class e extends Lambda implements Function1<C11692q, C11692q> {
         public e() {
             super(1);
@@ -192,25 +192,25 @@ public final class TypeDeserializer {
             return invoke2(c11692q);
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final C11692q invoke2(C11692q c11692q) {
             Intrinsics3.checkNotNullParameter(c11692q, "it");
             return protoTypeTableUtil.outerType(c11692q, TypeDeserializer.access$getC$p(TypeDeserializer.this).getTypeTable());
         }
     }
 
-    /* compiled from: TypeDeserializer.kt */
-    /* renamed from: d0.e0.p.d.m0.l.b.c0$f */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.l.b.c0$f */
+    /* JADX INFO: compiled from: TypeDeserializer.kt */
     public static final class f extends Lambda implements Function1<C11692q, Integer> {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public static final f f24512j = new f();
 
         public f() {
             super(1);
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final int invoke2(C11692q c11692q) {
             Intrinsics3.checkNotNullParameter(c11692q, "it");
             return c11692q.getArgumentCount();
@@ -265,7 +265,7 @@ public final class TypeDeserializer {
         return typeDeserializer.f24503a;
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public static final List<C11692q.b> m9947c(C11692q c11692q, TypeDeserializer typeDeserializer) {
         List<C11692q.b> argumentList = c11692q.getArgumentList();
         Intrinsics3.checkNotNullExpressionValue(argumentList, "argumentList");
@@ -277,7 +277,7 @@ public final class TypeDeserializer {
         return _Collections.plus((Collection) argumentList, (Iterable) listM9947c);
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public static final ClassDescriptor m9948d(TypeDeserializer typeDeserializer, C11692q c11692q, int i) {
         ClassId classId = NameResolverUtil.getClassId(typeDeserializer.f24503a.getNameResolver(), i);
         List<Integer> mutableList = _Sequences2.toMutableList(_Sequences2.map(C12075n.generateSequence(c11692q, typeDeserializer.new e()), f.f24512j));
@@ -295,7 +295,7 @@ public final class TypeDeserializer {
         return typeDeserializer.simpleType(c11692q, z2);
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final KotlinType4 m9949a(int i) {
         if (NameResolverUtil.getClassId(this.f24503a.getNameResolver(), i).isLocal()) {
             return this.f24503a.getComponents().getLocalClassifierTypeSettings().getReplacementTypeForLocalClassifiers();
@@ -303,7 +303,7 @@ public final class TypeDeserializer {
         return null;
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final KotlinType4 m9950b(KotlinType kotlinType, KotlinType kotlinType2) {
         KotlinBuiltIns builtIns = TypeUtils2.getBuiltIns(kotlinType);
         Annotations4 annotations = kotlinType.getAnnotations();
@@ -317,7 +317,7 @@ public final class TypeDeserializer {
         return functionTypes.createFunctionType(builtIns, annotations, receiverTypeFromFunctionType, arrayList, null, kotlinType2, true).makeNullableAsSpecified(kotlinType.isMarkedNullable());
     }
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final TypeConstructor m9951e(int i) {
         TypeParameterDescriptor typeParameterDescriptor = this.f24510h.get(Integer.valueOf(i));
         TypeConstructor typeConstructor = typeParameterDescriptor == null ? null : typeParameterDescriptor.getTypeConstructor();
@@ -339,18 +339,24 @@ public final class TypeDeserializer {
         return _Collections.toList(this.f24510h.values());
     }
 
+    /* JADX WARN: Multi-variable type inference failed */
+    /* JADX WARN: Type inference failed for: r0v42, types: [d0.e0.p.d.m0.c.h1.e] */
+    /* JADX WARN: Type inference failed for: r15v11 */
+    /* JADX WARN: Type inference failed for: r15v15, types: [d0.e0.p.d.m0.n.j0] */
+    /* JADX WARN: Type inference failed for: r15v16, types: [d0.e0.p.d.m0.n.j0] */
+    /* JADX WARN: Type inference failed for: r15v17 */
+    /* JADX WARN: Type inference failed for: r15v25 */
+    /* JADX WARN: Type inference failed for: r15v26 */
+    /* JADX WARN: Type inference failed for: r15v27 */
+    /* JADX WARN: Type inference failed for: r15v28 */
+    /* JADX WARN: Type inference failed for: r15v29 */
     public final KotlinType4 simpleType(C11692q c11692q, boolean z2) {
         TypeConstructor typeConstructorCreateErrorTypeConstructor;
         Object next;
-        KotlinType4 kotlinType4SimpleType$default;
+        ?? SimpleType$default;
         int size;
-        KotlinType4 kotlinType4WithAbbreviation;
-        Object typeProjectionImpl;
+        TypeProjection typeProjectionImpl;
         Intrinsics3.checkNotNullParameter(c11692q, "proto");
-        KotlinType4 kotlinType4SimpleType$default2 = null;
-        kotlinType4SimpleType$default2 = null;
-        kotlinType4SimpleType$default2 = null;
-        kotlinType4SimpleType$default2 = null;
         KotlinType4 kotlinType4M9949a = c11692q.hasClassName() ? m9949a(c11692q.getClassName()) : c11692q.hasTypeAliasName() ? m9949a(c11692q.getTypeAliasName()) : null;
         if (kotlinType4M9949a != null) {
             return kotlinType4M9949a;
@@ -376,7 +382,7 @@ public final class TypeDeserializer {
         } else if (c11692q.hasTypeParameterName()) {
             DeclarationDescriptor containingDeclaration = this.f24503a.getContainingDeclaration();
             String string = this.f24503a.getNameResolver().getString(c11692q.getTypeParameterName());
-            Iterator<T> it = getOwnTypeParameters().iterator();
+            Iterator it = getOwnTypeParameters().iterator();
             while (true) {
                 if (!it.hasNext()) {
                     next = null;
@@ -442,7 +448,7 @@ public final class TypeDeserializer {
             if (!KotlinType2.isNullable(kotlinType4ComputeExpandedType) && !c11692q.getNullable()) {
                 z3 = false;
             }
-            kotlinType4SimpleType$default = kotlinType4ComputeExpandedType.makeNullableAsSpecified(z3).replaceAnnotations(Annotations4.f22735f.create(_Collections.plus((Iterable) deserializedAnnotations, (Iterable) kotlinType4ComputeExpandedType.getAnnotations())));
+            SimpleType$default = kotlinType4ComputeExpandedType.makeNullableAsSpecified(z3).replaceAnnotations(Annotations4.f22735f.create(_Collections.plus((Iterable) deserializedAnnotations, (Iterable) kotlinType4ComputeExpandedType.getAnnotations())));
         } else {
             Boolean bool = Flags2.f24030a.get(c11692q.getFlags());
             Intrinsics3.checkNotNullExpressionValue(bool, "SUSPEND_TYPE.get(proto.flags)");
@@ -451,10 +457,10 @@ public final class TypeDeserializer {
                 int size2 = typeConstructorCreateErrorTypeConstructor.getParameters().size() - list.size();
                 if (size2 == 0) {
                     KotlinTypeFactory kotlinTypeFactory2 = KotlinTypeFactory.f24748a;
-                    KotlinType4 kotlinType4SimpleType$default3 = KotlinTypeFactory.simpleType$default(deserializedAnnotations, typeConstructorCreateErrorTypeConstructor, list, nullable, null, 16, null);
-                    if (functionTypes.isFunctionType(kotlinType4SimpleType$default3)) {
+                    KotlinType4 kotlinType4SimpleType$default = KotlinTypeFactory.simpleType$default(deserializedAnnotations, typeConstructorCreateErrorTypeConstructor, list, nullable, null, 16, null);
+                    if (functionTypes.isFunctionType(kotlinType4SimpleType$default)) {
                         boolean releaseCoroutines = this.f24503a.getComponents().getConfiguration().getReleaseCoroutines();
-                        TypeProjection typeProjection = (TypeProjection) _Collections.lastOrNull((List) functionTypes.getValueParameterTypesFromFunctionType(kotlinType4SimpleType$default3));
+                        TypeProjection typeProjection = (TypeProjection) _Collections.lastOrNull((List) functionTypes.getValueParameterTypesFromFunctionType(kotlinType4SimpleType$default));
                         KotlinType type = typeProjection == null ? null : typeProjection.getType();
                         if (type != null) {
                             ClassifierDescriptor declarationDescriptor2 = type.getConstructor().getDeclarationDescriptor();
@@ -468,40 +474,46 @@ public final class TypeDeserializer {
                                 }
                                 CallableDescriptor callableDescriptor = (CallableDescriptor) containingDeclaration2;
                                 if (Intrinsics3.areEqual(callableDescriptor != null ? DescriptorUtils2.fqNameOrNull(callableDescriptor) : null, suspendFunctionTypeUtil.f24502a)) {
-                                    kotlinType4SimpleType$default3 = m9950b(kotlinType4SimpleType$default3, type2);
+                                    kotlinType4SimpleType$default = m9950b(kotlinType4SimpleType$default, type2);
                                 } else {
                                     if (!this.f24507e && (!releaseCoroutines || !suspendFunctionTypes.isContinuation(fqNameSafe, !releaseCoroutines))) {
                                         z3 = false;
                                     }
                                     this.f24507e = z3;
-                                    kotlinType4SimpleType$default3 = m9950b(kotlinType4SimpleType$default3, type2);
+                                    kotlinType4SimpleType$default = m9950b(kotlinType4SimpleType$default, type2);
                                 }
                             }
-                            kotlinType4SimpleType$default2 = kotlinType4SimpleType$default3;
+                            objSimpleType$default = kotlinType4SimpleType$default;
                         }
                     }
                 } else if (size2 == 1 && (size = list.size() - 1) >= 0) {
                     KotlinTypeFactory kotlinTypeFactory3 = KotlinTypeFactory.f24748a;
                     TypeConstructor typeConstructor2 = typeConstructorCreateErrorTypeConstructor.getBuiltIns().getSuspendFunction(size).getTypeConstructor();
                     Intrinsics3.checkNotNullExpressionValue(typeConstructor2, "functionTypeConstructor.builtIns.getSuspendFunction(arity).typeConstructor");
-                    kotlinType4SimpleType$default2 = KotlinTypeFactory.simpleType$default(deserializedAnnotations, typeConstructor2, list, nullable, null, 16, null);
+                    objSimpleType$default = KotlinTypeFactory.simpleType$default(deserializedAnnotations, typeConstructor2, list, nullable, null, 16, null);
                 }
-                if (kotlinType4SimpleType$default2 == null) {
-                    kotlinType4SimpleType$default = ErrorUtils.createErrorTypeWithArguments(Intrinsics3.stringPlus("Bad suspend function in metadata with constructor: ", typeConstructorCreateErrorTypeConstructor), list);
-                    Intrinsics3.checkNotNullExpressionValue(kotlinType4SimpleType$default, "createErrorTypeWithArguments(\n            \"Bad suspend function in metadata with constructor: $functionTypeConstructor\",\n            arguments\n        )");
+                if (objSimpleType$default == null) {
+                    KotlinType4 kotlinType4CreateErrorTypeWithArguments = ErrorUtils.createErrorTypeWithArguments(Intrinsics3.stringPlus("Bad suspend function in metadata with constructor: ", typeConstructorCreateErrorTypeConstructor), list);
+                    Intrinsics3.checkNotNullExpressionValue(kotlinType4CreateErrorTypeWithArguments, "createErrorTypeWithArguments(\n            \"Bad suspend function in metadata with constructor: $functionTypeConstructor\",\n            arguments\n        )");
+                    SimpleType$default = kotlinType4CreateErrorTypeWithArguments;
                 } else {
-                    kotlinType4SimpleType$default = kotlinType4SimpleType$default2;
+                    SimpleType$default = objSimpleType$default;
                 }
             } else {
                 KotlinTypeFactory kotlinTypeFactory4 = KotlinTypeFactory.f24748a;
-                kotlinType4SimpleType$default = KotlinTypeFactory.simpleType$default(deserializedAnnotations, typeConstructorCreateErrorTypeConstructor, list, c11692q.getNullable(), null, 16, null);
+                SimpleType$default = KotlinTypeFactory.simpleType$default(deserializedAnnotations, typeConstructorCreateErrorTypeConstructor, list, c11692q.getNullable(), null, 16, null);
             }
         }
         C11692q c11692qAbbreviatedType = protoTypeTableUtil.abbreviatedType(c11692q, this.f24503a.getTypeTable());
-        if (c11692qAbbreviatedType != null && (kotlinType4WithAbbreviation = SpecialTypes5.withAbbreviation(kotlinType4SimpleType$default, simpleType(c11692qAbbreviatedType, false))) != null) {
-            kotlinType4SimpleType$default = kotlinType4WithAbbreviation;
+        ?? r15 = SimpleType$default;
+        if (c11692qAbbreviatedType != null) {
+            KotlinType4 kotlinType4WithAbbreviation = SpecialTypes5.withAbbreviation(SimpleType$default, simpleType(c11692qAbbreviatedType, false));
+            r15 = SimpleType$default;
+            if (kotlinType4WithAbbreviation != null) {
+                r15 = kotlinType4WithAbbreviation;
+            }
         }
-        return c11692q.hasClassName() ? this.f24503a.getComponents().getPlatformDependentTypeTransformer().transformPlatformType(NameResolverUtil.getClassId(this.f24503a.getNameResolver(), c11692q.getClassName()), kotlinType4SimpleType$default) : kotlinType4SimpleType$default;
+        return c11692q.hasClassName() ? this.f24503a.getComponents().getPlatformDependentTypeTransformer().transformPlatformType(NameResolverUtil.getClassId(this.f24503a.getNameResolver(), c11692q.getClassName()), r15) : r15;
     }
 
     public String toString() {

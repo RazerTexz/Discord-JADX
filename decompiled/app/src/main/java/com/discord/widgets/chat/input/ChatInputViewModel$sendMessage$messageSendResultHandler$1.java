@@ -15,8 +15,8 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 import p658rx.subjects.PublishSubject;
 
-/* compiled from: ChatInputViewModel.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: ChatInputViewModel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class ChatInputViewModel$sendMessage$messageSendResultHandler$1 extends Lambda implements Function2<MessageQueue4, Guild, Unit> {
     public final /* synthetic */ ChatInputViewModel.AttachmentContext $attachmentsContext;
     public final /* synthetic */ Context $context;
@@ -25,8 +25,8 @@ public final class ChatInputViewModel$sendMessage$messageSendResultHandler$1 ext
     public final /* synthetic */ Function0 $messageResendCompressedHandler;
     public final /* synthetic */ ChatInputViewModel this$0;
 
-    /* compiled from: ChatInputViewModel.kt */
-    /* renamed from: com.discord.widgets.chat.input.ChatInputViewModel$sendMessage$messageSendResultHandler$1$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.input.ChatInputViewModel$sendMessage$messageSendResultHandler$1$1 */
+    /* JADX INFO: compiled from: ChatInputViewModel.kt */
     public static final class C76971 extends Lambda implements Function0<Unit> {
         public final /* synthetic */ Guild $guild;
 
@@ -42,7 +42,7 @@ public final class ChatInputViewModel$sendMessage$messageSendResultHandler$1 ext
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             PremiumUtils premiumUtils = PremiumUtils.INSTANCE;
             Guild guild = this.$guild;
@@ -53,8 +53,8 @@ public final class ChatInputViewModel$sendMessage$messageSendResultHandler$1 ext
         }
     }
 
-    /* compiled from: ChatInputViewModel.kt */
-    /* renamed from: com.discord.widgets.chat.input.ChatInputViewModel$sendMessage$messageSendResultHandler$1$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.input.ChatInputViewModel$sendMessage$messageSendResultHandler$1$2 */
+    /* JADX INFO: compiled from: ChatInputViewModel.kt */
     public static final class C76982 extends Lambda implements Function0<Unit> {
         public C76982() {
             super(0);
@@ -66,7 +66,7 @@ public final class ChatInputViewModel$sendMessage$messageSendResultHandler$1 ext
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             PublishSubject publishSubjectAccess$getEventSubject$p = ChatInputViewModel.access$getEventSubject$p(ChatInputViewModel$sendMessage$messageSendResultHandler$1.this.this$0);
             publishSubjectAccess$getEventSubject$p.f27650k.onNext(ChatInputViewModel.Event.FailedDeliveryToRecipient.INSTANCE);
@@ -90,7 +90,7 @@ public final class ChatInputViewModel$sendMessage$messageSendResultHandler$1 ext
         return Unit.f27425a;
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final void invoke2(MessageQueue4 messageQueue4, Guild guild) {
         Intrinsics3.checkNotNullParameter(messageQueue4, "messageResult");
         if (messageQueue4 instanceof MessageQueue4.CaptchaRequired) {

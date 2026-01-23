@@ -10,9 +10,9 @@ import p507d0.p580t.MapsJVM;
 import p507d0.p592z.p594d.Intrinsics3;
 import p637j0.p641k.Func1;
 
-/* compiled from: WidgetThreadBrowserActiveViewModel.kt */
-/* renamed from: com.discord.widgets.channels.threads.browser.WidgetThreadBrowserActiveViewModel$Companion$observeStoreState$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.channels.threads.browser.WidgetThreadBrowserActiveViewModel$Companion$observeStoreState$1, reason: use source file name */
+/* JADX INFO: compiled from: WidgetThreadBrowserActiveViewModel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetThreadBrowserActiveViewModel2<T, R> implements Func1<Map<Long, ? extends StoreThreadsActiveJoined.ActiveJoinedThread>, Map<Long, ? extends Channel>> {
     public static final WidgetThreadBrowserActiveViewModel2 INSTANCE = new WidgetThreadBrowserActiveViewModel2();
 
@@ -21,7 +21,7 @@ public final class WidgetThreadBrowserActiveViewModel2<T, R> implements Func1<Ma
         return call2((Map<Long, StoreThreadsActiveJoined.ActiveJoinedThread>) map);
     }
 
-    /* renamed from: call, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
     public final Map<Long, Channel> call2(Map<Long, StoreThreadsActiveJoined.ActiveJoinedThread> map) {
         Intrinsics3.checkNotNullExpressionValue(map, "threadMap");
         LinkedHashMap linkedHashMap = new LinkedHashMap(MapsJVM.mapCapacity(map.size()));

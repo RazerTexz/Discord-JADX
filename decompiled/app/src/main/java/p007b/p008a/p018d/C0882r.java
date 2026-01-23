@@ -4,15 +4,15 @@ import java.util.Map;
 import p637j0.p641k.Func1;
 
 /* JADX INFO: Add missing generic type declarations: [K, V1] */
-/* compiled from: AppTransformers.kt */
-/* renamed from: b.a.d.r */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.a.d.r */
+/* JADX INFO: compiled from: AppTransformers.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class C0882r<T, R, K, V1> implements Func1<K, V1> {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final /* synthetic */ C0883s f577j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final /* synthetic */ Map f578k;
 
     public C0882r(C0883s c0883s, Map map) {

@@ -2,7 +2,7 @@ package androidx.constraintlayout.motion.utils;
 
 import java.util.Arrays;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class ArcCurveFit extends CurveFit {
     public static final int ARC_START_FLIP = 3;
     public static final int ARC_START_HORIZONTAL = 2;
@@ -51,8 +51,8 @@ public class ArcCurveFit extends CurveFit {
             if (!this.linear && Math.abs(d7) >= EPSILON && Math.abs(d8) >= EPSILON) {
                 this.mLut = new double[101];
                 boolean z2 = this.mVertical;
-                this.mEllipseA = d7 * (z2 ? -1 : 1);
-                this.mEllipseB = d8 * (z2 ? 1 : -1);
+                this.mEllipseA = d7 * ((double) (z2 ? -1 : 1));
+                this.mEllipseB = d8 * ((double) (z2 ? 1 : -1));
                 this.mEllipseCenterX = z2 ? d5 : d3;
                 this.mEllipseCenterY = z2 ? d4 : d6;
                 buildTable(d3, d4, d5, d6);
@@ -86,7 +86,7 @@ public class ArcCurveFit extends CurveFit {
                     break;
                 }
                 double d10 = d7;
-                double radians = Math.toRadians((i * 90.0d) / (r15.length - 1));
+                double radians = Math.toRadians((((double) i) * 90.0d) / ((double) (r15.length - 1)));
                 double dSin = Math.sin(radians) * d5;
                 double dCos = Math.cos(radians) * d6;
                 if (i > 0) {
@@ -116,7 +116,7 @@ public class ArcCurveFit extends CurveFit {
                 if (i3 >= this.mLut.length) {
                     return;
                 }
-                double length = i3 / (r1.length - 1);
+                double length = ((double) i3) / ((double) (r1.length - 1));
                 int iBinarySearch = Arrays.binarySearch(ourPercent, length);
                 if (iBinarySearch >= 0) {
                     this.mLut[i3] = iBinarySearch / (ourPercent.length - 1);
@@ -126,7 +126,7 @@ public class ArcCurveFit extends CurveFit {
                     int i4 = -iBinarySearch;
                     int i5 = i4 - 2;
                     double[] dArr2 = ourPercent;
-                    this.mLut[i3] = (((length - dArr2[i5]) / (dArr2[i4 - 1] - dArr2[i5])) + i5) / (dArr2.length - 1);
+                    this.mLut[i3] = (((length - dArr2[i5]) / (dArr2[i4 - 1] - dArr2[i5])) + ((double) i5)) / ((double) (dArr2.length - 1));
                 }
                 i3++;
             }
@@ -184,9 +184,9 @@ public class ArcCurveFit extends CurveFit {
                 return 1.0d;
             }
             double[] dArr = this.mLut;
-            double length = d * (dArr.length - 1);
+            double length = d * ((double) (dArr.length - 1));
             int i = (int) length;
-            return ((dArr[i + 1] - dArr[i]) * (length - i)) + dArr[i];
+            return ((dArr[i + 1] - dArr[i]) * (length - ((double) i))) + dArr[i];
         }
 
         public void setPoint(double d) {

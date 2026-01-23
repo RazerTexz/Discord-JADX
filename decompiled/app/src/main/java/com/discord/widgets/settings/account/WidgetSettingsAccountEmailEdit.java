@@ -43,24 +43,24 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 import p658rx.functions.Action1;
 
-/* compiled from: WidgetSettingsAccountEmailEdit.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetSettingsAccountEmailEdit.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetSettingsAccountEmailEdit extends AppFragment {
     public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetSettingsAccountEmailEdit.class, "binding", "getBinding()Lcom/discord/databinding/WidgetSettingsAccountEmailEditBinding;", 0)};
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private static final String EXTRA_SHOULD_CONFIRM_EMAIL = "extra_should_confirm_email";
 
-    /* renamed from: binding$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
     private final ActivityResultLauncher<Intent> nextScreenLauncher;
     private final StatefulViews state;
 
-    /* renamed from: validationManager$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: validationManager$delegate, reason: from kotlin metadata */
     private final Lazy validationManager;
 
-    /* compiled from: WidgetSettingsAccountEmailEdit.kt */
+    /* JADX INFO: compiled from: WidgetSettingsAccountEmailEdit.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -77,8 +77,8 @@ public final class WidgetSettingsAccountEmailEdit extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetSettingsAccountEmailEdit.kt */
-    /* renamed from: com.discord.widgets.settings.account.WidgetSettingsAccountEmailEdit$onViewBound$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.account.WidgetSettingsAccountEmailEdit$onViewBound$1 */
+    /* JADX INFO: compiled from: WidgetSettingsAccountEmailEdit.kt */
     public static final class C97561 extends Lambda implements Function1<TextView, Unit> {
         public C97561() {
             super(1);
@@ -90,15 +90,15 @@ public final class WidgetSettingsAccountEmailEdit extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(TextView textView) {
             Intrinsics3.checkNotNullParameter(textView, "it");
             WidgetSettingsAccountEmailEdit.access$showCodeVerification(WidgetSettingsAccountEmailEdit.this);
         }
     }
 
-    /* compiled from: WidgetSettingsAccountEmailEdit.kt */
-    /* renamed from: com.discord.widgets.settings.account.WidgetSettingsAccountEmailEdit$onViewBound$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.account.WidgetSettingsAccountEmailEdit$onViewBound$2 */
+    /* JADX INFO: compiled from: WidgetSettingsAccountEmailEdit.kt */
     public static final class ViewOnClickListenerC97572 implements View.OnClickListener {
         public ViewOnClickListenerC97572() {
         }
@@ -109,8 +109,8 @@ public final class WidgetSettingsAccountEmailEdit extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetSettingsAccountEmailEdit.kt */
-    /* renamed from: com.discord.widgets.settings.account.WidgetSettingsAccountEmailEdit$onViewBound$3 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.account.WidgetSettingsAccountEmailEdit$onViewBound$3 */
+    /* JADX INFO: compiled from: WidgetSettingsAccountEmailEdit.kt */
     public static final class C97583 extends Lambda implements Function1<TextView, Unit> {
         public C97583() {
             super(1);
@@ -122,15 +122,15 @@ public final class WidgetSettingsAccountEmailEdit extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(TextView textView) {
             Intrinsics3.checkNotNullParameter(textView, "it");
             WidgetSettingsAccountEmailEdit.access$showPasswordVerification(WidgetSettingsAccountEmailEdit.this);
         }
     }
 
-    /* compiled from: WidgetSettingsAccountEmailEdit.kt */
-    /* renamed from: com.discord.widgets.settings.account.WidgetSettingsAccountEmailEdit$onViewBound$4 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.account.WidgetSettingsAccountEmailEdit$onViewBound$4 */
+    /* JADX INFO: compiled from: WidgetSettingsAccountEmailEdit.kt */
     public static final class ViewOnClickListenerC97594 implements View.OnClickListener {
         public ViewOnClickListenerC97594() {
         }
@@ -141,8 +141,8 @@ public final class WidgetSettingsAccountEmailEdit extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetSettingsAccountEmailEdit.kt */
-    /* renamed from: com.discord.widgets.settings.account.WidgetSettingsAccountEmailEdit$onViewBoundOrOnResume$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.account.WidgetSettingsAccountEmailEdit$onViewBoundOrOnResume$1 */
+    /* JADX INFO: compiled from: WidgetSettingsAccountEmailEdit.kt */
     public static final class C97601 extends Lambda implements Function1<MeUser, Unit> {
         public C97601() {
             super(1);
@@ -154,7 +154,7 @@ public final class WidgetSettingsAccountEmailEdit extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(MeUser meUser) {
             Intrinsics3.checkNotNullParameter(meUser, "it");
             WidgetSettingsAccountEmailEdit.access$configureUI(WidgetSettingsAccountEmailEdit.this, meUser);
@@ -162,8 +162,8 @@ public final class WidgetSettingsAccountEmailEdit extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetSettingsAccountEmailEdit.kt */
-    /* renamed from: com.discord.widgets.settings.account.WidgetSettingsAccountEmailEdit$showCodeVerification$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.account.WidgetSettingsAccountEmailEdit$showCodeVerification$1 */
+    /* JADX INFO: compiled from: WidgetSettingsAccountEmailEdit.kt */
     public static final class C97611<T> implements Action1<Void> {
         public C97611() {
         }
@@ -173,7 +173,7 @@ public final class WidgetSettingsAccountEmailEdit extends AppFragment {
             call2(r1);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final void call2(Void r5) {
             WidgetSettingsAccountEmailEditConfirm.Companion companion = WidgetSettingsAccountEmailEditConfirm.INSTANCE;
             Context contextRequireContext = WidgetSettingsAccountEmailEdit.this.requireContext();

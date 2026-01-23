@@ -3,7 +3,7 @@ package com.discord.models.domain.emoji;
 import androidx.annotation.Nullable;
 import androidx.appcompat.widget.ActivityChooserModel;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public enum EmojiCategory {
     FAVORITE("favorite", false),
     RECENT("recent", false),

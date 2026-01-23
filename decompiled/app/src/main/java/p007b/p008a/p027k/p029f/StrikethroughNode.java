@@ -7,9 +7,9 @@ import com.discord.i18n.RenderContext;
 import com.discord.simpleast.core.node.Node;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: StrikethroughNode.kt */
-/* renamed from: b.a.k.f.d, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.a.k.f.d, reason: use source file name */
+/* JADX INFO: compiled from: StrikethroughNode.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class StrikethroughNode extends Node.C5655a<RenderContext> {
     public StrikethroughNode() {
         super(new Node[0]);

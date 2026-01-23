@@ -28,66 +28,66 @@ import p007b.p085c.p086a.p095y.p097l.GradientColor;
 import p007b.p085c.p086a.p095y.p097l.GradientFill;
 import p007b.p085c.p086a.p095y.p098m.BaseLayer2;
 
-/* compiled from: GradientFillContent.java */
-/* renamed from: b.c.a.w.b.h, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.c.a.w.b.h, reason: use source file name */
+/* JADX INFO: compiled from: GradientFillContent.java */
+/* JADX INFO: loaded from: classes.dex */
 public class GradientFillContent implements DrawingContent, BaseKeyframeAnimation.b, KeyPathElementContent {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     @NonNull
     public final String f2511a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final boolean f2512b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final BaseLayer2 f2513c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final LongSparseArray<LinearGradient> f2514d = new LongSparseArray<>();
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final LongSparseArray<RadialGradient> f2515e = new LongSparseArray<>();
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final Path f2516f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public final Paint f2517g;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public final RectF f2518h;
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public final List<PathContent> f2519i;
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final int f2520j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final BaseKeyframeAnimation<GradientColor, GradientColor> f2521k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final BaseKeyframeAnimation<Integer, Integer> f2522l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public final BaseKeyframeAnimation<PointF, PointF> f2523m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public final BaseKeyframeAnimation<PointF, PointF> f2524n;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     @Nullable
     public BaseKeyframeAnimation<ColorFilter, ColorFilter> f2525o;
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     @Nullable
     public ValueCallbackKeyframeAnimation f2526p;
 
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     public final LottieDrawable f2527q;
 
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     public final int f2528r;
 
     public GradientFillContent(LottieDrawable lottieDrawable, BaseLayer2 baseLayer2, GradientFill gradientFill) {
@@ -122,13 +122,13 @@ public class GradientFillContent implements DrawingContent, BaseKeyframeAnimatio
     }
 
     @Override // p007b.p085c.p086a.p091w.p093c.BaseKeyframeAnimation.b
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public void mo709a() {
         this.f2527q.invalidateSelf();
     }
 
     @Override // p007b.p085c.p086a.p091w.p092b.Content2
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public void mo710b(List<Content2> list, List<Content2> list2) {
         for (int i = 0; i < list2.size(); i++) {
             Content2 content2 = list2.get(i);
@@ -139,13 +139,13 @@ public class GradientFillContent implements DrawingContent, BaseKeyframeAnimatio
     }
 
     @Override // p007b.p085c.p086a.p095y.KeyPathElement
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public void mo711c(KeyPath keyPath, int i, List<KeyPath> list, KeyPath keyPath2) {
         MiscUtils.m656f(keyPath, i, list, keyPath2, this);
     }
 
     @Override // p007b.p085c.p086a.p091w.p092b.DrawingContent
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public void mo712d(RectF rectF, Matrix matrix, boolean z2) {
         this.f2516f.reset();
         for (int i = 0; i < this.f2519i.size(); i++) {
@@ -155,7 +155,7 @@ public class GradientFillContent implements DrawingContent, BaseKeyframeAnimatio
         rectF.set(rectF.left - 1.0f, rectF.top - 1.0f, rectF.right + 1.0f, rectF.bottom + 1.0f);
     }
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final int[] m717e(int[] iArr) {
         ValueCallbackKeyframeAnimation valueCallbackKeyframeAnimation = this.f2526p;
         if (valueCallbackKeyframeAnimation != null) {
@@ -179,7 +179,7 @@ public class GradientFillContent implements DrawingContent, BaseKeyframeAnimatio
 
     /* JADX WARN: Multi-variable type inference failed */
     @Override // p007b.p085c.p086a.p091w.p092b.DrawingContent
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public void mo713f(Canvas canvas, Matrix matrix, int i) {
         RadialGradient radialGradient;
         if (this.f2512b) {
@@ -230,7 +230,7 @@ public class GradientFillContent implements DrawingContent, BaseKeyframeAnimatio
 
     /* JADX WARN: Multi-variable type inference failed */
     @Override // p007b.p085c.p086a.p095y.KeyPathElement
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public <T> void mo714g(T t, @Nullable LottieValueCallback<T> lottieValueCallback) {
         if (t == LottieProperty.f2426d) {
             BaseKeyframeAnimation<Integer, Integer> baseKeyframeAnimation = this.f2522l;
@@ -274,7 +274,7 @@ public class GradientFillContent implements DrawingContent, BaseKeyframeAnimatio
         return this.f2511a;
     }
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public final int m718h() {
         int iRound = Math.round(this.f2523m.f2599d * this.f2528r);
         int iRound2 = Math.round(this.f2524n.f2599d * this.f2528r);

@@ -2,12 +2,12 @@ package p007b.p225i.p226a.p228b.p229i.p230e;
 
 import p007b.p100d.p104b.p105a.outline;
 
-/* compiled from: AutoValue_LogResponse.java */
-/* renamed from: b.i.a.b.i.e.h, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.b.i.e.h, reason: use source file name */
+/* JADX INFO: compiled from: AutoValue_LogResponse.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class AutoValue_LogResponse extends LogResponse {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final long f5188a;
 
     public AutoValue_LogResponse(long j) {
@@ -15,7 +15,7 @@ public final class AutoValue_LogResponse extends LogResponse {
     }
 
     @Override // p007b.p225i.p226a.p228b.p229i.p230e.LogResponse
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public long mo2330b() {
         return this.f5188a;
     }

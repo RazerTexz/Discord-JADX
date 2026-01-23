@@ -3,12 +3,12 @@ package p007b.p225i.p226a.p242c;
 import p007b.p225i.p226a.p242c.Player2;
 import p007b.p225i.p226a.p242c.p259f3.ListenerSet;
 
-/* compiled from: lambda */
-/* renamed from: b.i.a.c.o */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.o */
+/* JADX INFO: compiled from: lambda */
+/* JADX INFO: loaded from: classes3.dex */
 public final /* synthetic */ class C2829o implements ListenerSet.a {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final /* synthetic */ PlaybackInfo f7259a;
 
     public /* synthetic */ C2829o(PlaybackInfo playbackInfo) {

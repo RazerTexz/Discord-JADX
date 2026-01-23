@@ -15,16 +15,16 @@ import p507d0.p580t.CollectionsJVM;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: StoreApplicationCommands.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: StoreApplicationCommands.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class BuiltInCommands implements BuiltInCommandsProvider {
     public static final long BUILT_IN_APP_ID = -1;
     public static final long FRECENCY_APP_ID = -2;
     private final Application builtInApplication;
     private final List<ApplicationCommand> builtInCommands;
 
-    /* compiled from: StoreApplicationCommands.kt */
-    /* renamed from: com.discord.stores.BuiltInCommands$createAppendToEndSlashCommand$1 */
+    /* JADX INFO: renamed from: com.discord.stores.BuiltInCommands$createAppendToEndSlashCommand$1 */
+    /* JADX INFO: compiled from: StoreApplicationCommands.kt */
     public static final class C56621 extends Lambda implements Function1<Map<String, ? extends Object>, String> {
         public final /* synthetic */ String $replacement;
 
@@ -39,7 +39,7 @@ public final class BuiltInCommands implements BuiltInCommandsProvider {
             return invoke2(map);
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final String invoke2(Map<String, ? extends Object> map) {
             Intrinsics3.checkNotNullParameter(map, "commandOptions");
             StringBuilder sb = new StringBuilder();
@@ -54,8 +54,8 @@ public final class BuiltInCommands implements BuiltInCommandsProvider {
         }
     }
 
-    /* compiled from: StoreApplicationCommands.kt */
-    /* renamed from: com.discord.stores.BuiltInCommands$createWrappedSlashCommand$1 */
+    /* JADX INFO: renamed from: com.discord.stores.BuiltInCommands$createWrappedSlashCommand$1 */
+    /* JADX INFO: compiled from: StoreApplicationCommands.kt */
     public static final class C56631 extends Lambda implements Function1<Map<String, ? extends Object>, String> {
         public final /* synthetic */ String $wrapper;
 
@@ -70,7 +70,7 @@ public final class BuiltInCommands implements BuiltInCommandsProvider {
             return invoke2(map);
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final String invoke2(Map<String, ? extends Object> map) {
             Intrinsics3.checkNotNullParameter(map, "commandOptions");
             StringBuilder sb = new StringBuilder();

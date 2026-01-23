@@ -7,8 +7,8 @@ import java.util.List;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: GuildRoleSubscriptionTierListing.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: GuildRoleSubscriptionTierListing.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class GuildRoleSubscriptionTierListing {
     private final long applicationId;
     private final String description;
@@ -20,27 +20,27 @@ public final /* data */ class GuildRoleSubscriptionTierListing {
     private final long roleId;
     private final List<SubscriptionPlan> subscriptionPlans;
 
-    /* renamed from: a, reason: from getter */
+    /* JADX INFO: renamed from: a, reason: from getter */
     public final long getApplicationId() {
         return this.applicationId;
     }
 
-    /* renamed from: b, reason: from getter */
+    /* JADX INFO: renamed from: b, reason: from getter */
     public final String getDescription() {
         return this.description;
     }
 
-    /* renamed from: c, reason: from getter */
+    /* JADX INFO: renamed from: c, reason: from getter */
     public final long getId() {
         return this.id;
     }
 
-    /* renamed from: d, reason: from getter */
+    /* JADX INFO: renamed from: d, reason: from getter */
     public final ImageAsset getImageAsset() {
         return this.imageAsset;
     }
 
-    /* renamed from: e, reason: from getter */
+    /* JADX INFO: renamed from: e, reason: from getter */
     public final String getName() {
         return this.name;
     }
@@ -56,22 +56,25 @@ public final /* data */ class GuildRoleSubscriptionTierListing {
         return this.id == guildRoleSubscriptionTierListing.id && this.applicationId == guildRoleSubscriptionTierListing.applicationId && Intrinsics3.areEqual(this.name, guildRoleSubscriptionTierListing.name) && this.published == guildRoleSubscriptionTierListing.published && Intrinsics3.areEqual(this.description, guildRoleSubscriptionTierListing.description) && Intrinsics3.areEqual(this.imageAsset, guildRoleSubscriptionTierListing.imageAsset) && Intrinsics3.areEqual(this.subscriptionPlans, guildRoleSubscriptionTierListing.subscriptionPlans) && Intrinsics3.areEqual(this.roleBenefits, guildRoleSubscriptionTierListing.roleBenefits) && this.roleId == guildRoleSubscriptionTierListing.roleId;
     }
 
-    /* renamed from: f, reason: from getter */
+    /* JADX INFO: renamed from: f, reason: from getter */
     public final boolean getPublished() {
         return this.published;
     }
 
-    /* renamed from: g, reason: from getter */
+    /* JADX INFO: renamed from: g, reason: from getter */
     public final GuildRoleSubscriptionRoleBenefits getRoleBenefits() {
         return this.roleBenefits;
     }
 
-    /* renamed from: h, reason: from getter */
+    /* JADX INFO: renamed from: h, reason: from getter */
     public final long getRoleId() {
         return this.roleId;
     }
 
     /* JADX WARN: Multi-variable type inference failed */
+    /* JADX WARN: Type inference failed for: r0v22 */
+    /* JADX WARN: Type inference failed for: r0v24 */
+    /* JADX WARN: Type inference failed for: r0v7, types: [int] */
     public int hashCode() {
         long j = this.id;
         long j2 = this.applicationId;
@@ -79,13 +82,13 @@ public final /* data */ class GuildRoleSubscriptionTierListing {
         String str = this.name;
         int iHashCode = (i + (str != null ? str.hashCode() : 0)) * 31;
         boolean z2 = this.published;
-        int i2 = z2;
-        if (z2 != 0) {
-            i2 = 1;
+        ?? r0 = z2;
+        if (z2) {
+            r0 = 1;
         }
-        int i3 = (iHashCode + i2) * 31;
+        int i2 = (iHashCode + r0) * 31;
         String str2 = this.description;
-        int iHashCode2 = (i3 + (str2 != null ? str2.hashCode() : 0)) * 31;
+        int iHashCode2 = (i2 + (str2 != null ? str2.hashCode() : 0)) * 31;
         ImageAsset imageAsset = this.imageAsset;
         int iHashCode3 = (iHashCode2 + (imageAsset != null ? imageAsset.hashCode() : 0)) * 31;
         List<SubscriptionPlan> list = this.subscriptionPlans;
@@ -96,7 +99,7 @@ public final /* data */ class GuildRoleSubscriptionTierListing {
         return iHashCode5 + ((int) (j3 ^ (j3 >>> 32)));
     }
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public final List<SubscriptionPlan> m7961i() {
         return this.subscriptionPlans;
     }

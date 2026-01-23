@@ -13,9 +13,9 @@ import p507d0.p584w.p586i.p587a.ContinuationImpl6;
 import p507d0.p584w.p586i.p587a.DebugMetadata;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: WidgetSettingsVoice.kt */
+/* JADX INFO: compiled from: WidgetSettingsVoice.kt */
+/* JADX INFO: loaded from: classes2.dex */
 @DebugMetadata(m10084c = "com.discord.widgets.settings.WidgetSettingsVoice$onViewBound$3$1", m10085f = "WidgetSettingsVoice.kt", m10086l = {112}, m10087m = "invokeSuspend")
-/* loaded from: classes2.dex */
 public final class WidgetSettingsVoice$onViewBound$3$1 extends ContinuationImpl6 implements Function2<CoroutineScope, Continuation<? super Unit>, Object> {
     public final /* synthetic */ View $target;
     public int label;

@@ -16,20 +16,20 @@ import kotlin.reflect.KProperty;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: WidgetStartCallSheet.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: WidgetStartCallSheet.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class WidgetStartCallSheet extends AppBottomSheet {
     private static final String ARG_VOICE_CHANNEL_ID = "ARG_VOICE_CHANNEL_ID";
 
-    /* renamed from: binding$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
     private PrivateCallLauncher privateCallLauncher;
     public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetStartCallSheet.class, "binding", "getBinding()Lcom/discord/databinding/WidgetStartCallSheetBinding;", 0)};
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
 
-    /* compiled from: WidgetStartCallSheet.kt */
+    /* JADX INFO: compiled from: WidgetStartCallSheet.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -48,8 +48,8 @@ public final class WidgetStartCallSheet extends AppBottomSheet {
         }
     }
 
-    /* compiled from: WidgetStartCallSheet.kt */
-    /* renamed from: com.discord.widgets.voice.fullscreen.WidgetStartCallSheet$onViewCreated$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.voice.fullscreen.WidgetStartCallSheet$onViewCreated$1 */
+    /* JADX INFO: compiled from: WidgetStartCallSheet.kt */
     public static final class ViewOnClickListenerC105531 implements View.OnClickListener {
         public final /* synthetic */ long $voiceChannelId;
 
@@ -64,8 +64,8 @@ public final class WidgetStartCallSheet extends AppBottomSheet {
         }
     }
 
-    /* compiled from: WidgetStartCallSheet.kt */
-    /* renamed from: com.discord.widgets.voice.fullscreen.WidgetStartCallSheet$onViewCreated$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.voice.fullscreen.WidgetStartCallSheet$onViewCreated$2 */
+    /* JADX INFO: compiled from: WidgetStartCallSheet.kt */
     public static final class ViewOnClickListenerC105542 implements View.OnClickListener {
         public final /* synthetic */ long $voiceChannelId;
 

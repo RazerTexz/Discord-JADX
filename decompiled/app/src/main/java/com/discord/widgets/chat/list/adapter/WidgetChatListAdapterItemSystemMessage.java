@@ -48,14 +48,14 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 import p658rx.Subscription;
 
-/* compiled from: WidgetChatListAdapterItemSystemMessage.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetChatListAdapterItemSystemMessage.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetChatListAdapterItemSystemMessage extends WidgetChatListItem {
     private final WidgetChatListAdapterItemSystemBinding binding;
     private Subscription subscription;
 
-    /* compiled from: WidgetChatListAdapterItemSystemMessage.kt */
-    /* renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemSystemMessage$getSystemMessage$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemSystemMessage$getSystemMessage$1 */
+    /* JADX INFO: compiled from: WidgetChatListAdapterItemSystemMessage.kt */
     public static final class C81301 extends Lambda implements Function1<Context, CharSequence> {
         public final /* synthetic */ Function1 $actorRenderContext;
         public final /* synthetic */ String $authorName;
@@ -90,7 +90,7 @@ public final class WidgetChatListAdapterItemSystemMessage extends WidgetChatList
             return invoke2(context);
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final CharSequence invoke2(Context context) {
             Intrinsics3.checkNotNullParameter(context, "$this$getString");
             Integer type = this.$this_getSystemMessage.getType();
@@ -123,8 +123,8 @@ public final class WidgetChatListAdapterItemSystemMessage extends WidgetChatList
         }
     }
 
-    /* compiled from: WidgetChatListAdapterItemSystemMessage.kt */
-    /* renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemSystemMessage$onConfigure$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemSystemMessage$onConfigure$1 */
+    /* JADX INFO: compiled from: WidgetChatListAdapterItemSystemMessage.kt */
     public static final class ViewOnClickListenerC81351 implements View.OnClickListener {
         public final /* synthetic */ Message $message;
 
@@ -167,8 +167,8 @@ public final class WidgetChatListAdapterItemSystemMessage extends WidgetChatList
         }
     }
 
-    /* compiled from: WidgetChatListAdapterItemSystemMessage.kt */
-    /* renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemSystemMessage$onConfigure$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemSystemMessage$onConfigure$2 */
+    /* JADX INFO: compiled from: WidgetChatListAdapterItemSystemMessage.kt */
     public static final class C81362 extends Lambda implements Function1<View, Unit> {
         public final /* synthetic */ Message $message;
 
@@ -184,7 +184,7 @@ public final class WidgetChatListAdapterItemSystemMessage extends WidgetChatList
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(View view) {
             Intrinsics3.checkNotNullParameter(view, "it");
             WidgetChatListAdapter.EventHandler eventHandler = WidgetChatListAdapterItemSystemMessage.access$getAdapter$p(WidgetChatListAdapterItemSystemMessage.this).getEventHandler();
@@ -197,8 +197,8 @@ public final class WidgetChatListAdapterItemSystemMessage extends WidgetChatList
         }
     }
 
-    /* compiled from: WidgetChatListAdapterItemSystemMessage.kt */
-    /* renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemSystemMessage$onConfigure$3 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemSystemMessage$onConfigure$3 */
+    /* JADX INFO: compiled from: WidgetChatListAdapterItemSystemMessage.kt */
     public static final class ViewOnClickListenerC81373 implements View.OnClickListener {
         public final /* synthetic */ ChatListEntry $data;
         public final /* synthetic */ Message $message;
@@ -214,8 +214,8 @@ public final class WidgetChatListAdapterItemSystemMessage extends WidgetChatList
         }
     }
 
-    /* compiled from: WidgetChatListAdapterItemSystemMessage.kt */
-    /* renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemSystemMessage$onConfigure$4 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemSystemMessage$onConfigure$4 */
+    /* JADX INFO: compiled from: WidgetChatListAdapterItemSystemMessage.kt */
     public static final class ViewOnClickListenerC81384 implements View.OnClickListener {
         public final /* synthetic */ Long $guildId;
         public final /* synthetic */ Message $message;

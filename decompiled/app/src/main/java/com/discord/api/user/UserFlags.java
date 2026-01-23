@@ -1,8 +1,8 @@
 package com.discord.api.user;
 
 
-/* compiled from: UserFlags.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: UserFlags.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class UserFlags {
     public static final int BOT_HTTP_INTERACTIONS = 524288;
     public static final int BUG_HUNTER_LEVEL_1 = 8;

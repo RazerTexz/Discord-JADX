@@ -9,14 +9,14 @@ import kotlin.jvm.internal.Ref$ObjectRef;
 import p507d0.p580t._Collections;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: GuildExperimentFilter.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: GuildExperimentFilter.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class GuildExperimentFilter$Parser$parseGuildHasFeatureFilter$1 implements Runnable {
     public final /* synthetic */ Ref$ObjectRef $features;
     public final /* synthetic */ Model.JsonReader $reader;
 
-    /* compiled from: GuildExperimentFilter.kt */
-    /* renamed from: com.discord.models.experiments.dto.GuildExperimentFilter$Parser$parseGuildHasFeatureFilter$1$1 */
+    /* JADX INFO: renamed from: com.discord.models.experiments.dto.GuildExperimentFilter$Parser$parseGuildHasFeatureFilter$1$1 */
+    /* JADX INFO: compiled from: GuildExperimentFilter.kt */
     public static final class RunnableC55511 implements Runnable {
         public RunnableC55511() {
         }
@@ -27,12 +27,12 @@ public final class GuildExperimentFilter$Parser$parseGuildHasFeatureFilter$1 imp
         }
     }
 
-    /* compiled from: GuildExperimentFilter.kt */
-    /* renamed from: com.discord.models.experiments.dto.GuildExperimentFilter$Parser$parseGuildHasFeatureFilter$1$2 */
+    /* JADX INFO: renamed from: com.discord.models.experiments.dto.GuildExperimentFilter$Parser$parseGuildHasFeatureFilter$1$2 */
+    /* JADX INFO: compiled from: GuildExperimentFilter.kt */
     public static final class RunnableC55522 implements Runnable {
 
-        /* compiled from: GuildExperimentFilter.kt */
-        /* renamed from: com.discord.models.experiments.dto.GuildExperimentFilter$Parser$parseGuildHasFeatureFilter$1$2$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.models.experiments.dto.GuildExperimentFilter$Parser$parseGuildHasFeatureFilter$1$2$1, reason: invalid class name */
+        /* JADX INFO: compiled from: GuildExperimentFilter.kt */
         public static final class AnonymousClass1<T> implements Model.JsonReader.ItemFactory<GuildFeature> {
             public AnonymousClass1() {
             }

@@ -4,8 +4,8 @@ import com.discord.api.channel.Channel;
 import kotlin.jvm.functions.Function1;
 import p507d0.p592z.p594d.FunctionReferenceImpl;
 
-/* compiled from: StoreStream.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: StoreStream.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final /* synthetic */ class StoreStream$lazyChannelMembersStore$1 extends FunctionReferenceImpl implements Function1<Long, Channel> {
     public StoreStream$lazyChannelMembersStore$1(StoreChannels storeChannels) {
         super(1, storeChannels, StoreChannels.class, "getChannel", "getChannel(J)Lcom/discord/api/channel/Channel;", 0);

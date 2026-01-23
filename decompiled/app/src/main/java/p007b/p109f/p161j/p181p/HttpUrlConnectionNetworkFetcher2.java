@@ -8,18 +8,18 @@ import p007b.p109f.p161j.p181p.HttpUrlConnectionNetworkFetcher;
 import p007b.p109f.p161j.p181p.NetworkFetchProducer;
 import p007b.p109f.p161j.p181p.NetworkFetcher2;
 
-/* compiled from: HttpUrlConnectionNetworkFetcher.java */
-/* renamed from: b.f.j.p.y, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.f.j.p.y, reason: use source file name */
+/* JADX INFO: compiled from: HttpUrlConnectionNetworkFetcher.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class HttpUrlConnectionNetworkFetcher2 implements Runnable {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final /* synthetic */ HttpUrlConnectionNetworkFetcher.a f4261j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final /* synthetic */ NetworkFetcher2.a f4262k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final /* synthetic */ HttpUrlConnectionNetworkFetcher f4263l;
 
     public HttpUrlConnectionNetworkFetcher2(HttpUrlConnectionNetworkFetcher httpUrlConnectionNetworkFetcher, HttpUrlConnectionNetworkFetcher.a aVar, NetworkFetcher2.a aVar2) {
@@ -72,7 +72,6 @@ public class HttpUrlConnectionNetworkFetcher2 implements Runnable {
                     if (httpURLConnectionM1418a == null) {
                         return;
                     }
-                    httpURLConnectionM1418a.disconnect();
                 }
             } catch (Throwable th) {
                 th = th;

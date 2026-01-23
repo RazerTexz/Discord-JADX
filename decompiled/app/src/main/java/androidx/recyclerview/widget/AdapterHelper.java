@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public final class AdapterHelper implements OpReorderer.Callback {
     private static final boolean DEBUG = false;
     public static final int POSITION_TYPE_INVISIBLE = 0;
@@ -115,29 +115,29 @@ public final class AdapterHelper implements OpReorderer.Callback {
 
     private void applyRemove(UpdateOp updateOp) {
         boolean z2;
-        char c;
+        byte b2;
         int i = updateOp.positionStart;
         int i2 = updateOp.itemCount + i;
-        char c2 = 65535;
+        byte b3 = -1;
         int i3 = i;
         int i4 = 0;
         while (i3 < i2) {
             if (this.mCallback.findViewHolder(i3) != null || canFindInPreLayout(i3)) {
-                if (c2 == 0) {
+                if (b3 == 0) {
                     dispatchAndUpdateViewHolders(obtainUpdateOp(2, i, i4, null));
                     z2 = true;
                 } else {
                     z2 = false;
                 }
-                c = 1;
+                b2 = 1;
             } else {
-                if (c2 == 1) {
+                if (b3 == 1) {
                     postponeAndUpdateViewHolders(obtainUpdateOp(2, i, i4, null));
                     z2 = true;
                 } else {
                     z2 = false;
                 }
-                c = 0;
+                b2 = 0;
             }
             if (z2) {
                 i3 -= i4;
@@ -147,13 +147,13 @@ public final class AdapterHelper implements OpReorderer.Callback {
                 i4++;
             }
             i3++;
-            c2 = c;
+            b3 = b2;
         }
         if (i4 != updateOp.itemCount) {
             recycleUpdateOp(updateOp);
             updateOp = obtainUpdateOp(2, i, i4, null);
         }
-        if (c2 == 0) {
+        if (b3 == 0) {
             dispatchAndUpdateViewHolders(updateOp);
         } else {
             postponeAndUpdateViewHolders(updateOp);
@@ -164,23 +164,23 @@ public final class AdapterHelper implements OpReorderer.Callback {
         int i = updateOp.positionStart;
         int i2 = updateOp.itemCount + i;
         int i3 = i;
-        char c = 65535;
+        byte b2 = -1;
         int i4 = 0;
         while (i < i2) {
             if (this.mCallback.findViewHolder(i) != null || canFindInPreLayout(i)) {
-                if (c == 0) {
+                if (b2 == 0) {
                     dispatchAndUpdateViewHolders(obtainUpdateOp(4, i3, i4, updateOp.payload));
                     i3 = i;
                     i4 = 0;
                 }
-                c = 1;
+                b2 = 1;
             } else {
-                if (c == 1) {
+                if (b2 == 1) {
                     postponeAndUpdateViewHolders(obtainUpdateOp(4, i3, i4, updateOp.payload));
                     i3 = i;
                     i4 = 0;
                 }
-                c = 0;
+                b2 = 0;
             }
             i4++;
             i++;
@@ -190,7 +190,7 @@ public final class AdapterHelper implements OpReorderer.Callback {
             recycleUpdateOp(updateOp);
             updateOp = obtainUpdateOp(4, i3, i4, obj);
         }
-        if (c == 0) {
+        if (b2 == 0) {
             dispatchAndUpdateViewHolders(updateOp);
         } else {
             postponeAndUpdateViewHolders(updateOp);

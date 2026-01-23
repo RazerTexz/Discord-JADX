@@ -14,14 +14,14 @@ import p507d0.p580t._Collections;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: GuildMemberRequestManager.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: GuildMemberRequestManager.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class GuildMemberRequestManager {
     private final Function2<Long, Long, Boolean> guildMemberExists;
     private final HashMap<Long, GuildMemberRequestState> guildRequestStates;
     private final Function2<Long, List<Long>, Unit> onFlush;
 
-    /* compiled from: GuildMemberRequestManager.kt */
+    /* JADX INFO: compiled from: GuildMemberRequestManager.kt */
     public final class GuildMemberRequestState {
         private final long guildId;
         private final Function1<Long, Boolean> guildMemberExists;
@@ -103,8 +103,8 @@ public final class GuildMemberRequestManager {
         }
     }
 
-    /* compiled from: GuildMemberRequestManager.kt */
-    /* renamed from: com.discord.utilities.lazy.requester.GuildMemberRequestManager$getGuildRequestState$1 */
+    /* JADX INFO: renamed from: com.discord.utilities.lazy.requester.GuildMemberRequestManager$getGuildRequestState$1 */
+    /* JADX INFO: compiled from: GuildMemberRequestManager.kt */
     public static final class C67901 extends Lambda implements Function1<Long, Boolean> {
         public final /* synthetic */ long $guildId;
 

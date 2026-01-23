@@ -27,19 +27,19 @@ import p615g0.JvmOkio;
 import p615g0.RealBufferedSource;
 import p615g0.Timeout2;
 
-/* compiled from: LottieCompositionFactory.java */
-/* renamed from: b.c.a.e, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.c.a.e, reason: use source file name */
+/* JADX INFO: compiled from: LottieCompositionFactory.java */
+/* JADX INFO: loaded from: classes.dex */
 public class LottieCompositionFactory {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final Map<String, LottieTask2<LottieComposition>> f2351a = new HashMap();
 
-    /* compiled from: LottieCompositionFactory.java */
-    /* renamed from: b.c.a.e$a */
+    /* JADX INFO: renamed from: b.c.a.e$a */
+    /* JADX INFO: compiled from: LottieCompositionFactory.java */
     public class a implements LottieListener<LottieComposition> {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final /* synthetic */ String f2352a;
 
         public a(String str) {
@@ -47,17 +47,17 @@ public class LottieCompositionFactory {
         }
 
         @Override // p007b.p085c.p086a.LottieListener
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public void mo680a(LottieComposition lottieComposition) {
             LottieCompositionFactory.f2351a.remove(this.f2352a);
         }
     }
 
-    /* compiled from: LottieCompositionFactory.java */
-    /* renamed from: b.c.a.e$b */
+    /* JADX INFO: renamed from: b.c.a.e$b */
+    /* JADX INFO: compiled from: LottieCompositionFactory.java */
     public class b implements LottieListener<Throwable> {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final /* synthetic */ String f2353a;
 
         public b(String str) {
@@ -65,17 +65,17 @@ public class LottieCompositionFactory {
         }
 
         @Override // p007b.p085c.p086a.LottieListener
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public void mo680a(Throwable th) {
             LottieCompositionFactory.f2351a.remove(this.f2353a);
         }
     }
 
-    /* compiled from: LottieCompositionFactory.java */
-    /* renamed from: b.c.a.e$c */
+    /* JADX INFO: renamed from: b.c.a.e$c */
+    /* JADX INFO: compiled from: LottieCompositionFactory.java */
     public class c implements Callable<LottieResult<LottieComposition>> {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public final /* synthetic */ LottieComposition f2354j;
 
         public c(LottieComposition lottieComposition) {
@@ -88,7 +88,7 @@ public class LottieCompositionFactory {
         }
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static LottieTask2<LottieComposition> m674a(@Nullable String str, Callable<LottieResult<LottieComposition>> callable) {
         LottieComposition lottieComposition;
         if (str == null) {
@@ -117,7 +117,7 @@ public class LottieCompositionFactory {
     }
 
     @WorkerThread
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static LottieResult<LottieComposition> m675b(InputStream inputStream, @Nullable String str) {
         try {
             Intrinsics3.checkParameterIsNotNull(inputStream, "$this$source");
@@ -131,7 +131,7 @@ public class LottieCompositionFactory {
         }
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public static LottieResult<LottieComposition> m676c(JsonReader2 jsonReader2, @Nullable String str, boolean z2) {
         try {
             try {
@@ -162,7 +162,7 @@ public class LottieCompositionFactory {
     }
 
     @WorkerThread
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public static LottieResult<LottieComposition> m677d(ZipInputStream zipInputStream, @Nullable String str) {
         try {
             return m678e(zipInputStream, str);
@@ -172,7 +172,7 @@ public class LottieCompositionFactory {
     }
 
     @WorkerThread
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public static LottieResult<LottieComposition> m678e(ZipInputStream zipInputStream, @Nullable String str) {
         LottieImageAsset next;
         HashMap map = new HashMap();
@@ -235,7 +235,7 @@ public class LottieCompositionFactory {
         }
     }
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public static String m679f(Context context, @RawRes int i) {
         StringBuilder sbM833U = outline.m833U("rawRes");
         sbM833U.append((context.getResources().getConfiguration().uiMode & 48) == 32 ? "_night_" : "_day_");

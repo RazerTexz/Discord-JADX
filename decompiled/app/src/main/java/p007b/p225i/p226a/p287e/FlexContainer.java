@@ -3,29 +3,29 @@ package p007b.p225i.p226a.p287e;
 import android.view.View;
 import java.util.List;
 
-/* compiled from: FlexContainer.java */
-/* renamed from: b.i.a.e.a, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.e.a, reason: use source file name */
+/* JADX INFO: compiled from: FlexContainer.java */
+/* JADX INFO: loaded from: classes3.dex */
 public interface FlexContainer {
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     void mo3924a(View view, int i, int i2, FlexLine flexLine);
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     void mo3925b(FlexLine flexLine);
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     View mo3926c(int i);
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     int mo3927d(int i, int i2, int i3);
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     void mo3928e(int i, View view);
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     View mo3929f(int i);
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     int mo3930g(View view, int i, int i2);
 
     int getAlignContent();
@@ -58,13 +58,13 @@ public interface FlexContainer {
 
     int getSumOfCrossSize();
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     int mo3931h(int i, int i2, int i3);
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     boolean mo3932i();
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     int mo3933j(View view);
 
     void setFlexLines(List<FlexLine> list);

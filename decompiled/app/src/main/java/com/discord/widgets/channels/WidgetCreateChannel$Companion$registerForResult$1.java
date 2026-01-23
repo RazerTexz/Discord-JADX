@@ -7,8 +7,8 @@ import kotlin.jvm.functions.Function3;
 import p507d0.p579g0.StringsJVM;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: WidgetCreateChannel.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetCreateChannel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetCreateChannel$Companion$registerForResult$1<O> implements ActivityResultCallback<ActivityResult> {
     public final /* synthetic */ Function3 $callback;
 
@@ -21,7 +21,7 @@ public final class WidgetCreateChannel$Companion$registerForResult$1<O> implemen
         onActivityResult2(activityResult);
     }
 
-    /* renamed from: onActivityResult, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: onActivityResult, reason: avoid collision after fix types in other method */
     public final void onActivityResult2(ActivityResult activityResult) {
         Intent data;
         Intrinsics3.checkNotNullExpressionValue(activityResult, "activityResult");

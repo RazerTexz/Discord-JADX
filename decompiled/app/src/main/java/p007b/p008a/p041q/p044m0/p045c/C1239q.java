@@ -6,12 +6,12 @@ import p007b.p008a.p041q.p044m0.Codec2;
 import p658rx.Emitter;
 import p658rx.functions.Action1;
 
-/* compiled from: MediaEngineLegacy.kt */
-/* renamed from: b.a.q.m0.c.q */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.a.q.m0.c.q */
+/* JADX INFO: compiled from: MediaEngineLegacy.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class C1239q<T> implements Action1<Emitter<List<? extends Codec2>>> {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final /* synthetic */ C1233k f1753j;
 
     public C1239q(C1233k c1233k) {

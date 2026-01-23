@@ -13,9 +13,9 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 import p507d0.p592z.p594d.Reflection2;
 
-/* compiled from: GoogleSmartLockManager.kt */
-/* renamed from: com.discord.utilities.auth.GoogleSmartLockManager$resolveResult$notice$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.utilities.auth.GoogleSmartLockManager$resolveResult$notice$1, reason: use source file name */
+/* JADX INFO: compiled from: GoogleSmartLockManager.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class GoogleSmartLockManager2 extends Lambda implements Function1<FragmentActivity, Boolean> {
     public final /* synthetic */ ResolvableApiException $rae;
     public final /* synthetic */ GoogleSmartLockManager this$0;
@@ -32,7 +32,7 @@ public final class GoogleSmartLockManager2 extends Lambda implements Function1<F
         return Boolean.valueOf(invoke2(fragmentActivity));
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final boolean invoke2(FragmentActivity fragmentActivity) {
         Object next;
         Intrinsics3.checkNotNullParameter(fragmentActivity, ActivityChooserModel.ATTRIBUTE_ACTIVITY);

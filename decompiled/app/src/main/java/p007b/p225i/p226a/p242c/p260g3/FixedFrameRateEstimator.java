@@ -2,60 +2,60 @@ package p007b.p225i.p226a.p242c.p260g3;
 
 import java.util.Arrays;
 
-/* compiled from: FixedFrameRateEstimator.java */
-/* renamed from: b.i.a.c.g3.p, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.g3.p, reason: use source file name */
+/* JADX INFO: compiled from: FixedFrameRateEstimator.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class FixedFrameRateEstimator {
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public boolean f6852c;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public int f6854e;
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public a f6850a = new a();
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public a f6851b = new a();
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public long f6853d = -9223372036854775807L;
 
-    /* compiled from: FixedFrameRateEstimator.java */
-    /* renamed from: b.i.a.c.g3.p$a */
+    /* JADX INFO: renamed from: b.i.a.c.g3.p$a */
+    /* JADX INFO: compiled from: FixedFrameRateEstimator.java */
     public static final class a {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public long f6855a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public long f6856b;
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public long f6857c;
 
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         public long f6858d;
 
-        /* renamed from: e */
+        /* JADX INFO: renamed from: e */
         public long f6859e;
 
-        /* renamed from: f */
+        /* JADX INFO: renamed from: f */
         public long f6860f;
 
-        /* renamed from: g */
+        /* JADX INFO: renamed from: g */
         public final boolean[] f6861g = new boolean[15];
 
-        /* renamed from: h */
+        /* JADX INFO: renamed from: h */
         public int f6862h;
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public boolean m3128a() {
             return this.f6858d > 15 && this.f6862h == 0;
         }
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public void m3129b(long j) {
             long j2 = this.f6858d;
             if (j2 == 0) {
@@ -88,7 +88,7 @@ public final class FixedFrameRateEstimator {
             this.f6857c = j;
         }
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public void m3130c() {
             this.f6858d = 0L;
             this.f6859e = 0L;
@@ -98,7 +98,7 @@ public final class FixedFrameRateEstimator {
         }
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public boolean m3127a() {
         return this.f6850a.m3128a();
     }

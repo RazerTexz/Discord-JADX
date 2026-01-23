@@ -7,7 +7,7 @@ import org.objectweb.asm.MethodVisitor;
 import org.objectweb.asm.Opcodes;
 import org.objectweb.asm.commons.JSRInlinerAdapter;
 
-/* loaded from: discord-126021.apk:lombok/bytecode/AsmUtil.SCL.lombok */
+/* JADX INFO: loaded from: discord-126021.apk:lombok/bytecode/AsmUtil.SCL.lombok */
 class AsmUtil {
     private AsmUtil() {
         throw new UnsupportedOperationException();
@@ -21,8 +21,8 @@ class AsmUtil {
         return writer.toByteArray();
     }
 
-    /* renamed from: lombok.bytecode.AsmUtil$1 */
-    /* loaded from: discord-126021.apk:lombok/bytecode/AsmUtil$1.SCL.lombok */
+    /* JADX INFO: renamed from: lombok.bytecode.AsmUtil$1 */
+    /* JADX INFO: loaded from: discord-126021.apk:lombok/bytecode/AsmUtil$1.SCL.lombok */
     class C128081 extends ClassVisitor {
         C128081(int $anonymous0, ClassVisitor $anonymous1) {
             super($anonymous0, $anonymous1);

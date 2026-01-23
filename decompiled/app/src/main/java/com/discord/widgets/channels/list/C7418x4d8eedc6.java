@@ -15,9 +15,9 @@ import kotlin.jvm.functions.Function0;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetChannelListModel.kt */
-/* renamed from: com.discord.widgets.channels.list.WidgetChannelListModel$Companion$guildListBuilder$$inlined$forEach$lambda$6 */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.channels.list.WidgetChannelListModel$Companion$guildListBuilder$$inlined$forEach$lambda$6 */
+/* JADX INFO: compiled from: WidgetChannelListModel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class C7418x4d8eedc6 extends Lambda implements Function0<ChannelListItemStageVoiceChannel> {
     public final /* synthetic */ WidgetChannelListModel$Companion$guildListBuilder$4 $areAllChildThreadsRead$4$inlined;
     public final /* synthetic */ WidgetChannelListModel$Companion$guildListBuilder$5 $areAnyChildThreadsSelected$5$inlined;

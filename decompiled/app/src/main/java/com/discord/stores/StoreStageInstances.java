@@ -20,8 +20,8 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 import p658rx.Observable;
 
-/* compiled from: StoreStageInstances.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: StoreStageInstances.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class StoreStageInstances extends StoreV2 {
     private final ObservationDeck observationDeck;
     private final Map<Long, StageInstance> stageInstancesByChannel;
@@ -29,8 +29,8 @@ public final class StoreStageInstances extends StoreV2 {
     private final Map<Long, Map<Long, StageInstance>> stageInstancesByGuild;
     private Map<Long, ? extends Map<Long, StageInstance>> stageInstancesByGuildSnapshot;
 
-    /* compiled from: StoreStageInstances.kt */
-    /* renamed from: com.discord.stores.StoreStageInstances$observeStageInstanceForChannel$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreStageInstances$observeStageInstanceForChannel$1 */
+    /* JADX INFO: compiled from: StoreStageInstances.kt */
     public static final class C64201 extends Lambda implements Function0<StageInstance> {
         public final /* synthetic */ long $channelId;
 
@@ -52,8 +52,8 @@ public final class StoreStageInstances extends StoreV2 {
         }
     }
 
-    /* compiled from: StoreStageInstances.kt */
-    /* renamed from: com.discord.stores.StoreStageInstances$observeStageInstances$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreStageInstances$observeStageInstances$1 */
+    /* JADX INFO: compiled from: StoreStageInstances.kt */
     public static final class C64211 extends Lambda implements Function0<Map<Long, ? extends StageInstance>> {
         public C64211() {
             super(0);
@@ -65,14 +65,14 @@ public final class StoreStageInstances extends StoreV2 {
         }
 
         @Override // kotlin.jvm.functions.Function0
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final Map<Long, ? extends StageInstance> invoke2() {
             return StoreStageInstances.this.getStageInstances();
         }
     }
 
-    /* compiled from: StoreStageInstances.kt */
-    /* renamed from: com.discord.stores.StoreStageInstances$observeStageInstancesForGuild$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreStageInstances$observeStageInstancesForGuild$1 */
+    /* JADX INFO: compiled from: StoreStageInstances.kt */
     public static final class C64221 extends Lambda implements Function0<Map<Long, ? extends StageInstance>> {
         public final /* synthetic */ long $guildId;
 
@@ -88,7 +88,7 @@ public final class StoreStageInstances extends StoreV2 {
         }
 
         @Override // kotlin.jvm.functions.Function0
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final Map<Long, ? extends StageInstance> invoke2() {
             return StoreStageInstances.this.getStageInstancesForGuild(this.$guildId);
         }

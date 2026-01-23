@@ -17,14 +17,14 @@ import p007b.p008a.p018d.AppToast;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetAuthRegisterAccountInformation.kt */
-/* renamed from: com.discord.widgets.auth.WidgetAuthRegisterAccountInformation$validationManager$2, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.auth.WidgetAuthRegisterAccountInformation$validationManager$2, reason: use source file name */
+/* JADX INFO: compiled from: WidgetAuthRegisterAccountInformation.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetAuthRegisterAccountInformation6 extends Lambda implements Function0<ValidationManager> {
     public final /* synthetic */ WidgetAuthRegisterAccountInformation this$0;
 
-    /* compiled from: WidgetAuthRegisterAccountInformation.kt */
-    /* renamed from: com.discord.widgets.auth.WidgetAuthRegisterAccountInformation$validationManager$2$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.auth.WidgetAuthRegisterAccountInformation$validationManager$2$1 */
+    /* JADX INFO: compiled from: WidgetAuthRegisterAccountInformation.kt */
     public static final class C72261 implements InputValidator<CheckBox> {
         public C72261() {
         }
@@ -34,7 +34,7 @@ public final class WidgetAuthRegisterAccountInformation6 extends Lambda implemen
             return getErrorMessage2(checkBox);
         }
 
-        /* renamed from: getErrorMessage, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: getErrorMessage, reason: avoid collision after fix types in other method */
         public CharSequence getErrorMessage2(CheckBox view) {
             Intrinsics3.checkNotNullParameter(view, "view");
             if ((WidgetAuthRegisterAccountInformation.access$isConsentRequired$p(WidgetAuthRegisterAccountInformation6.this.this$0) && view.isChecked()) || !WidgetAuthRegisterAccountInformation.access$isConsentRequired$p(WidgetAuthRegisterAccountInformation6.this.this$0)) {
@@ -44,8 +44,8 @@ public final class WidgetAuthRegisterAccountInformation6 extends Lambda implemen
         }
     }
 
-    /* compiled from: WidgetAuthRegisterAccountInformation.kt */
-    /* renamed from: com.discord.widgets.auth.WidgetAuthRegisterAccountInformation$validationManager$2$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.auth.WidgetAuthRegisterAccountInformation$validationManager$2$2 */
+    /* JADX INFO: compiled from: WidgetAuthRegisterAccountInformation.kt */
     public static final class C72272 extends Lambda implements Function2<MaterialCheckBox, CharSequence, Boolean> {
         public static final C72272 INSTANCE = new C72272();
 
@@ -58,7 +58,7 @@ public final class WidgetAuthRegisterAccountInformation6 extends Lambda implemen
             return Boolean.valueOf(invoke2(materialCheckBox, charSequence));
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final boolean invoke2(MaterialCheckBox materialCheckBox, CharSequence charSequence) {
             Intrinsics3.checkNotNullParameter(materialCheckBox, "checkBox");
             Intrinsics3.checkNotNullParameter(charSequence, "errorMessage");

@@ -9,46 +9,46 @@ import p007b.p225i.p226a.p242c.p267x2.ExtractorOutput;
 import p007b.p225i.p226a.p242c.p267x2.TrackOutput2;
 import p007b.p225i.p226a.p242c.p267x2.p276k0.TsPayloadReader;
 
-/* compiled from: MpegAudioReader.java */
-/* renamed from: b.i.a.c.x2.k0.v, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.x2.k0.v, reason: use source file name */
+/* JADX INFO: compiled from: MpegAudioReader.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class MpegAudioReader implements ElementaryStreamReader {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final ParsableByteArray f8891a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final MpegAudioUtil.a f8892b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     @Nullable
     public final String f8893c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public TrackOutput2 f8894d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public String f8895e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public int f8896f = 0;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public int f8897g;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public boolean f8898h;
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public boolean f8899i;
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public long f8900j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public int f8901k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public long f8902l;
 
     public MpegAudioReader(@Nullable String str) {
@@ -61,7 +61,7 @@ public final class MpegAudioReader implements ElementaryStreamReader {
     }
 
     @Override // p007b.p225i.p226a.p242c.p267x2.p276k0.ElementaryStreamReader
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public void mo3758b(ParsableByteArray parsableByteArray) {
         AnimatableValueParser.m438H(this.f8894d);
         while (parsableByteArray.m3081a() > 0) {
@@ -99,8 +99,9 @@ public final class MpegAudioReader implements ElementaryStreamReader {
                         MpegAudioUtil.a aVar = this.f8892b;
                         this.f8901k = aVar.f7679c;
                         if (!this.f8898h) {
+                            long j = ((long) aVar.f7683g) * 1000000;
                             int i5 = aVar.f7680d;
-                            this.f8900j = (aVar.f7683g * 1000000) / i5;
+                            this.f8900j = j / ((long) i5);
                             Format2.b bVar = new Format2.b();
                             bVar.f7163a = this.f8895e;
                             bVar.f7173k = aVar.f7678b;
@@ -129,9 +130,9 @@ public final class MpegAudioReader implements ElementaryStreamReader {
                 this.f8897g = i6;
                 int i7 = this.f8901k;
                 if (i6 >= i7) {
-                    long j = this.f8902l;
-                    if (j != -9223372036854775807L) {
-                        this.f8894d.mo2525d(j, 1, i7, 0, null);
+                    long j2 = this.f8902l;
+                    if (j2 != -9223372036854775807L) {
+                        this.f8894d.mo2525d(j2, 1, i7, 0, null);
                         this.f8902l += this.f8900j;
                     }
                     this.f8897g = 0;
@@ -142,7 +143,7 @@ public final class MpegAudioReader implements ElementaryStreamReader {
     }
 
     @Override // p007b.p225i.p226a.p242c.p267x2.p276k0.ElementaryStreamReader
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public void mo3759c() {
         this.f8896f = 0;
         this.f8897g = 0;
@@ -151,12 +152,12 @@ public final class MpegAudioReader implements ElementaryStreamReader {
     }
 
     @Override // p007b.p225i.p226a.p242c.p267x2.p276k0.ElementaryStreamReader
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public void mo3760d() {
     }
 
     @Override // p007b.p225i.p226a.p242c.p267x2.p276k0.ElementaryStreamReader
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public void mo3761e(ExtractorOutput extractorOutput, TsPayloadReader.d dVar) {
         dVar.m3765a();
         this.f8895e = dVar.m3766b();
@@ -164,7 +165,7 @@ public final class MpegAudioReader implements ElementaryStreamReader {
     }
 
     @Override // p007b.p225i.p226a.p242c.p267x2.p276k0.ElementaryStreamReader
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public void mo3762f(long j, int i) {
         if (j != -9223372036854775807L) {
             this.f8902l = j;

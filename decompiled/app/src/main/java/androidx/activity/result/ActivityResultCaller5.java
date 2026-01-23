@@ -7,15 +7,15 @@ import kotlin.Unit;
 import p507d0.LazyJVM;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ActivityResultCaller.kt */
-/* renamed from: androidx.activity.result.ActivityResultCallerLauncher, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: androidx.activity.result.ActivityResultCallerLauncher, reason: use source file name */
+/* JADX INFO: compiled from: ActivityResultCaller.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class ActivityResultCaller5<I, O> extends ActivityResultLauncher<Unit> {
     private final ActivityResultContract<I, O> callerContract;
     private final I input;
     private final ActivityResultLauncher<I> launcher;
 
-    /* renamed from: resultContract$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: resultContract$delegate, reason: from kotlin metadata */
     private final Lazy resultContract;
 
     public ActivityResultCaller5(ActivityResultLauncher<I> activityResultLauncher, ActivityResultContract<I, O> activityResultContract, I i) {
@@ -58,7 +58,7 @@ public final class ActivityResultCaller5<I, O> extends ActivityResultLauncher<Un
         this.launcher.unregister();
     }
 
-    /* renamed from: launch, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: launch, reason: avoid collision after fix types in other method */
     public void launch2(Unit unit, ActivityOptionsCompat options) {
         this.launcher.launch(this.input, options);
     }

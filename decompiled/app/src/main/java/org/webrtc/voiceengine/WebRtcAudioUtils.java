@@ -10,7 +10,7 @@ import org.webrtc.Logging;
 import org.webrtc.MediaStreamTrack;
 import p007b.p100d.p104b.p105a.outline;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public final class WebRtcAudioUtils {
     private static final int DEFAULT_SAMPLE_RATE_HZ = 16000;
     private static final String TAG = "WebRtcAudioUtils";

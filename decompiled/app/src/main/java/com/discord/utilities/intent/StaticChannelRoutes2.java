@@ -7,9 +7,9 @@ import p507d0.p512d0._Ranges;
 import p507d0.p580t.MapsJVM;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: StaticChannelRoutes.kt */
-/* renamed from: com.discord.utilities.intent.StaticChannelRoutes$Companion$routeToName$2, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.utilities.intent.StaticChannelRoutes$Companion$routeToName$2, reason: use source file name */
+/* JADX INFO: compiled from: StaticChannelRoutes.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class StaticChannelRoutes2 extends Lambda implements Function0<Map<String, ? extends StaticChannelRoutes>> {
     public static final StaticChannelRoutes2 INSTANCE = new StaticChannelRoutes2();
 
@@ -23,7 +23,7 @@ public final class StaticChannelRoutes2 extends Lambda implements Function0<Map<
     }
 
     @Override // kotlin.jvm.functions.Function0
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final Map<String, ? extends StaticChannelRoutes> invoke2() {
         StaticChannelRoutes[] staticChannelRoutesArrValues = StaticChannelRoutes.values();
         LinkedHashMap linkedHashMap = new LinkedHashMap(_Ranges.coerceAtLeast(MapsJVM.mapCapacity(1), 16));

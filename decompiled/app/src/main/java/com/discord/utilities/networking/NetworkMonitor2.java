@@ -7,9 +7,9 @@ import android.net.NetworkCapabilities;
 import com.discord.utilities.logging.Logger;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: NetworkMonitor.kt */
-/* renamed from: com.discord.utilities.networking.NetworkMonitor$registerConnectivityNetworkMonitor$networkCallback$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.utilities.networking.NetworkMonitor$registerConnectivityNetworkMonitor$networkCallback$1, reason: use source file name */
+/* JADX INFO: compiled from: NetworkMonitor.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class NetworkMonitor2 extends ConnectivityManager.NetworkCallback {
     public final /* synthetic */ Context $context;
     public final /* synthetic */ NetworkMonitor this$0;

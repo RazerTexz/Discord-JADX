@@ -15,8 +15,8 @@ import androidx.work.impl.model.WorkSpec;
 import java.util.HashMap;
 import java.util.Map;
 
+/* JADX INFO: loaded from: classes.dex */
 @RestrictTo({RestrictTo.Scope.LIBRARY_GROUP})
-/* loaded from: classes.dex */
 public class CommandHandler implements ExecutionListener {
     public static final String ACTION_CONSTRAINTS_CHANGED = "ACTION_CONSTRAINTS_CHANGED";
     public static final String ACTION_DELAY_MET = "ACTION_DELAY_MET";

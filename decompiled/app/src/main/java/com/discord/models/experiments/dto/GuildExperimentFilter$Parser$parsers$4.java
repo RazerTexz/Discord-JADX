@@ -6,8 +6,8 @@ import kotlin.jvm.functions.Function1;
 import p507d0.p592z.p594d.FunctionReferenceImpl;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: GuildExperimentFilter.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: GuildExperimentFilter.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* synthetic */ class GuildExperimentFilter$Parser$parsers$4 extends FunctionReferenceImpl implements Function1<Model.JsonReader, GuildExperimentFilter.GuildHasFeatureFilter> {
     public GuildExperimentFilter$Parser$parsers$4(GuildExperimentFilter.Parser parser) {
         super(1, parser, GuildExperimentFilter.Parser.class, "parseGuildHasFeatureFilter", "parseGuildHasFeatureFilter(Lcom/discord/models/domain/Model$JsonReader;)Lcom/discord/models/experiments/dto/GuildExperimentFilter$GuildHasFeatureFilter;", 0);
@@ -18,7 +18,7 @@ public final /* synthetic */ class GuildExperimentFilter$Parser$parsers$4 extend
         return invoke2(jsonReader);
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final GuildExperimentFilter.GuildHasFeatureFilter invoke2(Model.JsonReader jsonReader) {
         Intrinsics3.checkNotNullParameter(jsonReader, "p1");
         return GuildExperimentFilter.Parser.access$parseGuildHasFeatureFilter((GuildExperimentFilter.Parser) this.receiver, jsonReader);

@@ -4,9 +4,9 @@ import androidx.annotation.RestrictTo;
 import java.util.concurrent.Executor;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: DirectExecutor.kt */
+/* JADX INFO: compiled from: DirectExecutor.kt */
+/* JADX INFO: loaded from: classes.dex */
 @RestrictTo({RestrictTo.Scope.LIBRARY_GROUP})
-/* loaded from: classes.dex */
 public enum DirectExecutor implements Executor {
     INSTANCE;
 

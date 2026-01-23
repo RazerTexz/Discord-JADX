@@ -5,8 +5,8 @@ import kotlin.Unit;
 import kotlin.jvm.functions.Function2;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetGuildRoleSubscriptionTierBenefits.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetGuildRoleSubscriptionTierBenefits.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetGuildRoleSubscriptionTierBenefits$benefitLauncher$1 extends Lambda implements Function2<Benefit, Benefit, Unit> {
     public final /* synthetic */ WidgetGuildRoleSubscriptionTierBenefits this$0;
 
@@ -22,7 +22,7 @@ public final class WidgetGuildRoleSubscriptionTierBenefits$benefitLauncher$1 ext
         return Unit.f27425a;
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final void invoke2(Benefit benefit, Benefit benefit2) {
         WidgetGuildRoleSubscriptionTierBenefits.access$getViewModel$p(this.this$0).updateBenefit(benefit, benefit2);
     }

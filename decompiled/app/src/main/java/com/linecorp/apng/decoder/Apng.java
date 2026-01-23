@@ -13,42 +13,42 @@ import kotlin.jvm.internal.DefaultConstructorMarker;
 import p507d0.p580t._Arrays;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: Apng.kt */
-/* loaded from: classes3.dex */
+/* JADX INFO: compiled from: Apng.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class Apng {
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
 
-    /* renamed from: a, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: a, reason: from kotlin metadata */
     public final Bitmap bitmap;
 
-    /* renamed from: b, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: b, reason: from kotlin metadata */
     @IntRange(from = 0, m76to = 2147483647L)
     public final int duration;
 
-    /* renamed from: c, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: c, reason: from kotlin metadata */
     public final int id;
 
-    /* renamed from: d, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: d, reason: from kotlin metadata */
     public final int width;
 
-    /* renamed from: e, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: e, reason: from kotlin metadata */
     public final int height;
 
-    /* renamed from: f, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: f, reason: from kotlin metadata */
     public final int frameCount;
 
-    /* renamed from: g, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: g, reason: from kotlin metadata */
     public final int[] frameDurations;
 
-    /* renamed from: h, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: h, reason: from kotlin metadata */
     public final int loopCount;
 
-    /* renamed from: i, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: i, reason: from kotlin metadata */
     public final long allFrameByteCount;
 
-    /* compiled from: Apng.kt */
+    /* JADX INFO: compiled from: Apng.kt */
     public static final class Companion {
         public Companion() {
         }
@@ -102,7 +102,7 @@ public final class Apng {
         }
     }
 
-    /* compiled from: Apng.kt */
+    /* JADX INFO: compiled from: Apng.kt */
     public static final class DecodeResult {
         private long allFrameByteCount;
         private int frameCount;

@@ -16,39 +16,39 @@ import p007b.p225i.p414e.ResultPointCallback;
 import p007b.p225i.p414e.p418n.BitArray;
 import p007b.p225i.p414e.p426q.OneDReader;
 
-/* compiled from: RSS14Reader.java */
-/* renamed from: b.i.e.q.r.e, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.e.q.r.e, reason: use source file name */
+/* JADX INFO: compiled from: RSS14Reader.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class RSS14Reader extends AbstractRSSReader {
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public static final int[] f13412g = {1, 10, 34, 70, 126};
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public static final int[] f13413h = {4, 20, 48, 81};
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public static final int[] f13414i = {0, Opcodes.IF_ICMPLT, 961, 2015, 2715};
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static final int[] f13415j = {0, 336, 1036, 1516};
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public static final int[] f13416k = {8, 6, 4, 3, 1};
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public static final int[] f13417l = {2, 4, 6, 8};
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public static final int[][] f13418m = {new int[]{3, 8, 2, 1}, new int[]{3, 5, 5, 1}, new int[]{3, 3, 7, 1}, new int[]{3, 1, 9, 1}, new int[]{2, 7, 4, 1}, new int[]{2, 5, 6, 1}, new int[]{2, 3, 8, 1}, new int[]{1, 5, 7, 1}, new int[]{1, 3, 9, 1}};
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public final List<Pair3> f13419n = new ArrayList();
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public final List<Pair3> f13420o = new ArrayList();
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public static void m7013k(Collection<Pair3> collection, Pair3 pair3) {
         if (pair3 == null) {
             return;
@@ -73,7 +73,7 @@ public final class RSS14Reader extends AbstractRSSReader {
     }
 
     @Override // p007b.p225i.p414e.p426q.OneDReader
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public Result mo6983b(int i, BitArray bitArray, Map<DecodeHintType, ?> map) throws NotFoundException {
         m7013k(this.f13419n, m7015m(bitArray, false, i, map));
         bitArray.m6939i();
@@ -92,7 +92,7 @@ public final class RSS14Reader extends AbstractRSSReader {
                             i3--;
                         }
                         if (i2 == i3) {
-                            String strValueOf = String.valueOf((pair3.f13405a * 4537077) + pair32.f13405a);
+                            String strValueOf = String.valueOf((((long) pair3.f13405a) * 4537077) + ((long) pair32.f13405a));
                             StringBuilder sb = new StringBuilder(14);
                             for (int length = 13 - strValueOf.length(); length > 0; length--) {
                                 sb.append('0');
@@ -128,7 +128,7 @@ public final class RSS14Reader extends AbstractRSSReader {
     /* JADX WARN: Removed duplicated region for block: B:52:0x00b6 A[PHI: r12 r13
       0x00b6: PHI (r12v16 boolean) = (r12v6 boolean), (r12v20 boolean) binds: [B:50:0x00b2, B:38:0x009c] A[DONT_GENERATE, DONT_INLINE]
       0x00b6: PHI (r13v9 boolean) = (r13v1 boolean), (r13v11 boolean) binds: [B:50:0x00b2, B:38:0x009c] A[DONT_GENERATE, DONT_INLINE]] */
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
@@ -299,7 +299,7 @@ public final class RSS14Reader extends AbstractRSSReader {
         return new DataCharacter((C3404f.m4328p0(iArr2, i17, false) * f13412g[i16]) + C3404f.m4328p0(iArr3, 9 - i17, true) + f13414i[i16], i13);
     }
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public final Pair3 m7015m(BitArray bitArray, boolean z2, int i, Map<DecodeHintType, ?> map) {
         try {
             FinderPattern finderPatternM7017o = m7017o(bitArray, i, z2, m7016n(bitArray, z2));
@@ -319,7 +319,7 @@ public final class RSS14Reader extends AbstractRSSReader {
         }
     }
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public final int[] m7016n(BitArray bitArray, boolean z2) throws NotFoundException {
         int[] iArr = this.f13399a;
         iArr[0] = 0;
@@ -363,7 +363,7 @@ public final class RSS14Reader extends AbstractRSSReader {
         throw NotFoundException.f21665l;
     }
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public final FinderPattern m7017o(BitArray bitArray, int i, boolean z2, int[] iArr) throws NotFoundException {
         int i2;
         int i3;

@@ -6,9 +6,9 @@ import kotlin.jvm.internal.Ref$ObjectRef;
 import kotlinx.coroutines.CoroutineScope;
 import p007b.p225i.p226a.p288f.p299e.p308o.C3404f;
 
-/* compiled from: ViewCoroutineScope.kt */
-/* renamed from: com.discord.utilities.views.ViewCoroutineScopeKt$coroutineScope$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.utilities.views.ViewCoroutineScopeKt$coroutineScope$1, reason: use source file name */
+/* JADX INFO: compiled from: ViewCoroutineScope.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class ViewCoroutineScope2 implements ViewTreeObserver.OnWindowAttachListener {
     public final /* synthetic */ Ref$ObjectRef $scope;
 

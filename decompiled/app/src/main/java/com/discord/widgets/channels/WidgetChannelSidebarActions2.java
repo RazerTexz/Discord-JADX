@@ -10,9 +10,9 @@ import kotlin.jvm.functions.Function1;
 import p507d0.p592z.p594d.FunctionReferenceImpl;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: WidgetChannelSidebarActions.kt */
-/* renamed from: com.discord.widgets.channels.WidgetChannelSidebarActions$binding$2, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.channels.WidgetChannelSidebarActions$binding$2, reason: use source file name */
+/* JADX INFO: compiled from: WidgetChannelSidebarActions.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final /* synthetic */ class WidgetChannelSidebarActions2 extends FunctionReferenceImpl implements Function1<View, WidgetChannelSidebarActionsBinding> {
     public static final WidgetChannelSidebarActions2 INSTANCE = new WidgetChannelSidebarActions2();
 
@@ -25,7 +25,7 @@ public final /* synthetic */ class WidgetChannelSidebarActions2 extends Function
         return invoke2(view);
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final WidgetChannelSidebarActionsBinding invoke2(View view) {
         Intrinsics3.checkNotNullParameter(view, "p1");
         int i = C5419R.id.widget_channel_sidebar_actions_guild_view;

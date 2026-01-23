@@ -9,28 +9,28 @@ import p007b.p085c.p086a.p087a0.AnimatableValueParser;
 import p007b.p109f.p115d.p119d.Throwables;
 import p007b.p109f.p160i.ImageFormat;
 
-/* compiled from: ImageFormatChecker.java */
-/* renamed from: b.f.i.d, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.f.i.d, reason: use source file name */
+/* JADX INFO: compiled from: ImageFormatChecker.java */
+/* JADX INFO: loaded from: classes.dex */
 public class ImageFormatChecker {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static ImageFormatChecker f3599a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public int f3600b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public List<ImageFormat.a> f3601c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final DefaultImageFormatChecker f3602d = new DefaultImageFormatChecker();
 
     public ImageFormatChecker() {
         m1176d();
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static ImageFormat m1173a(InputStream inputStream) throws IOException {
         int iM421B1;
         ImageFormatChecker imageFormatCheckerM1175c = m1175c();
@@ -66,7 +66,7 @@ public class ImageFormatChecker {
         return ImageFormat.f3597a;
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static ImageFormat m1174b(InputStream inputStream) {
         try {
             return m1173a(inputStream);
@@ -76,7 +76,7 @@ public class ImageFormatChecker {
         }
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public static synchronized ImageFormatChecker m1175c() {
         if (f3599a == null) {
             f3599a = new ImageFormatChecker();
@@ -84,7 +84,7 @@ public class ImageFormatChecker {
         return f3599a;
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final void m1176d() {
         this.f3600b = this.f3602d.f3584p;
         List<ImageFormat.a> list = this.f3601c;

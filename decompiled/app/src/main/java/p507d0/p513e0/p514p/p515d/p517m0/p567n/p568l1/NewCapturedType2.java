@@ -25,28 +25,28 @@ import p507d0.p580t.Iterables2;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: NewCapturedType.kt */
-/* renamed from: d0.e0.p.d.m0.n.l1.j, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.n.l1.j, reason: use source file name */
+/* JADX INFO: compiled from: NewCapturedType.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class NewCapturedType2 implements CapturedTypeConstructor2 {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final TypeProjection f24815a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public Function0<? extends List<? extends KotlinType3>> f24816b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final NewCapturedType2 f24817c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final TypeParameterDescriptor f24818d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final Lazy f24819e;
 
-    /* compiled from: NewCapturedType.kt */
-    /* renamed from: d0.e0.p.d.m0.n.l1.j$a */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.n.l1.j$a */
+    /* JADX INFO: compiled from: NewCapturedType.kt */
     public static final class a extends Lambda implements Function0<List<? extends KotlinType3>> {
         public final /* synthetic */ List<KotlinType3> $supertypes;
 
@@ -63,14 +63,14 @@ public final class NewCapturedType2 implements CapturedTypeConstructor2 {
         }
 
         @Override // kotlin.jvm.functions.Function0
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final List<? extends KotlinType3> invoke2() {
             return this.$supertypes;
         }
     }
 
-    /* compiled from: NewCapturedType.kt */
-    /* renamed from: d0.e0.p.d.m0.n.l1.j$b */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.n.l1.j$b */
+    /* JADX INFO: compiled from: NewCapturedType.kt */
     public static final class b extends Lambda implements Function0<List<? extends KotlinType3>> {
         public b() {
             super(0);
@@ -82,7 +82,7 @@ public final class NewCapturedType2 implements CapturedTypeConstructor2 {
         }
 
         @Override // kotlin.jvm.functions.Function0
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final List<? extends KotlinType3> invoke2() {
             Function0 function0Access$getSupertypesComputation$p = NewCapturedType2.access$getSupertypesComputation$p(NewCapturedType2.this);
             if (function0Access$getSupertypesComputation$p == null) {
@@ -92,8 +92,8 @@ public final class NewCapturedType2 implements CapturedTypeConstructor2 {
         }
     }
 
-    /* compiled from: NewCapturedType.kt */
-    /* renamed from: d0.e0.p.d.m0.n.l1.j$c */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.n.l1.j$c */
+    /* JADX INFO: compiled from: NewCapturedType.kt */
     public static final class c extends Lambda implements Function0<List<? extends KotlinType3>> {
         public final /* synthetic */ List<KotlinType3> $supertypes;
 
@@ -110,14 +110,14 @@ public final class NewCapturedType2 implements CapturedTypeConstructor2 {
         }
 
         @Override // kotlin.jvm.functions.Function0
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final List<? extends KotlinType3> invoke2() {
             return this.$supertypes;
         }
     }
 
-    /* compiled from: NewCapturedType.kt */
-    /* renamed from: d0.e0.p.d.m0.n.l1.j$d */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.n.l1.j$d */
+    /* JADX INFO: compiled from: NewCapturedType.kt */
     public static final class d extends Lambda implements Function0<List<? extends KotlinType3>> {
         public final /* synthetic */ KotlinTypeRefiner $kotlinTypeRefiner;
 
@@ -133,7 +133,7 @@ public final class NewCapturedType2 implements CapturedTypeConstructor2 {
         }
 
         @Override // kotlin.jvm.functions.Function0
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final List<? extends KotlinType3> invoke2() {
             List<KotlinType3> supertypes = NewCapturedType2.this.getSupertypes();
             KotlinTypeRefiner kotlinTypeRefiner = this.$kotlinTypeRefiner;

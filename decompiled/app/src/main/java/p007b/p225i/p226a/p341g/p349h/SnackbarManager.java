@@ -7,32 +7,32 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import java.lang.ref.WeakReference;
 
-/* compiled from: SnackbarManager.java */
-/* renamed from: b.i.a.g.h.a, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.g.h.a, reason: use source file name */
+/* JADX INFO: compiled from: SnackbarManager.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class SnackbarManager {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static SnackbarManager f11762a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     @NonNull
     public final Object f11763b = new Object();
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     @NonNull
     public final Handler f11764c = new Handler(Looper.getMainLooper(), new a());
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     @Nullable
     public c f11765d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     @Nullable
     public c f11766e;
 
-    /* compiled from: SnackbarManager.java */
-    /* renamed from: b.i.a.g.h.a$a */
+    /* JADX INFO: renamed from: b.i.a.g.h.a$a */
+    /* JADX INFO: compiled from: SnackbarManager.java */
     public class a implements Handler.Callback {
         public a() {
         }
@@ -53,27 +53,27 @@ public class SnackbarManager {
         }
     }
 
-    /* compiled from: SnackbarManager.java */
-    /* renamed from: b.i.a.g.h.a$b */
+    /* JADX INFO: renamed from: b.i.a.g.h.a$b */
+    /* JADX INFO: compiled from: SnackbarManager.java */
     public interface b {
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         void mo6142a(int i);
 
         void show();
     }
 
-    /* compiled from: SnackbarManager.java */
-    /* renamed from: b.i.a.g.h.a$c */
+    /* JADX INFO: renamed from: b.i.a.g.h.a$c */
+    /* JADX INFO: compiled from: SnackbarManager.java */
     public static class c {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         @NonNull
         public final WeakReference<b> f11768a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public int f11769b;
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public boolean f11770c;
 
         public c(int i, b bVar) {
@@ -82,7 +82,7 @@ public class SnackbarManager {
         }
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static SnackbarManager m6134b() {
         if (f11762a == null) {
             f11762a = new SnackbarManager();
@@ -90,7 +90,7 @@ public class SnackbarManager {
         return f11762a;
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final boolean m6135a(@NonNull c cVar, int i) {
         b bVar = cVar.f11768a.get();
         if (bVar == null) {
@@ -101,7 +101,7 @@ public class SnackbarManager {
         return true;
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final boolean m6136c(b bVar) {
         c cVar = this.f11765d;
         if (cVar != null) {
@@ -110,7 +110,7 @@ public class SnackbarManager {
         return false;
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final boolean m6137d(b bVar) {
         c cVar = this.f11766e;
         if (cVar != null) {
@@ -119,7 +119,7 @@ public class SnackbarManager {
         return false;
     }
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public void m6138e(b bVar) {
         synchronized (this.f11763b) {
             if (m6136c(bVar)) {
@@ -132,7 +132,7 @@ public class SnackbarManager {
         }
     }
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public void m6139f(b bVar) {
         synchronized (this.f11763b) {
             if (m6136c(bVar)) {
@@ -145,7 +145,7 @@ public class SnackbarManager {
         }
     }
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public final void m6140g(@NonNull c cVar) {
         int i = cVar.f11769b;
         if (i == -2) {
@@ -159,7 +159,7 @@ public class SnackbarManager {
         handler.sendMessageDelayed(Message.obtain(handler, 0, cVar), i);
     }
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public final void m6141h() {
         c cVar = this.f11766e;
         if (cVar != null) {

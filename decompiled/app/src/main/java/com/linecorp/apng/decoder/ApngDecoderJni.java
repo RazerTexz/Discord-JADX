@@ -5,8 +5,8 @@ import com.discord.models.domain.ModelAuditLogEntry;
 import com.linecorp.apng.decoder.Apng;
 import java.io.InputStream;
 
-/* compiled from: ApngDecoderJni.kt */
-/* loaded from: classes3.dex */
+/* JADX INFO: compiled from: ApngDecoderJni.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class ApngDecoderJni {
     public static final ApngDecoderJni INSTANCE = new ApngDecoderJni();
 

@@ -16,8 +16,8 @@ import com.discord.widgets.botuikit.views.select.SelectComponentView;
 import java.util.Objects;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ComponentProvider.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: ComponentProvider.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class ComponentProvider {
     private final Context context;
 

@@ -5,9 +5,9 @@ import com.discord.models.domain.ModelAuditLogEntry;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: StickerPackStoreSheetViewModel.kt */
-/* renamed from: com.discord.widgets.chat.input.sticker.StickerPackStoreSheetAnalytics, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.chat.input.sticker.StickerPackStoreSheetAnalytics, reason: use source file name */
+/* JADX INFO: compiled from: StickerPackStoreSheetViewModel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final /* data */ class StickerPackStoreSheetViewModel2 {
     private final String location;
     private final String section;
@@ -40,22 +40,22 @@ public final /* data */ class StickerPackStoreSheetViewModel2 {
         return stickerPackStoreSheetViewModel2.copy(sticker, widgetStickerPackStoreSheet2, str, str2);
     }
 
-    /* renamed from: component1, reason: from getter */
+    /* JADX INFO: renamed from: component1, reason: from getter */
     public final Sticker getSticker() {
         return this.sticker;
     }
 
-    /* renamed from: component2, reason: from getter */
+    /* JADX INFO: renamed from: component2, reason: from getter */
     public final WidgetStickerPackStoreSheet2 getType() {
         return this.type;
     }
 
-    /* renamed from: component3, reason: from getter */
+    /* JADX INFO: renamed from: component3, reason: from getter */
     public final String getLocation() {
         return this.location;
     }
 
-    /* renamed from: component4, reason: from getter */
+    /* JADX INFO: renamed from: component4, reason: from getter */
     public final String getSection() {
         return this.section;
     }

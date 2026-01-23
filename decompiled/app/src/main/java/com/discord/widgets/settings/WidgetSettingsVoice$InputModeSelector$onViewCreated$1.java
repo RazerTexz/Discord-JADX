@@ -5,8 +5,8 @@ import com.discord.rtcconnection.mediaengine.MediaEngineConnection;
 import com.discord.stores.StoreStream;
 import com.discord.widgets.settings.WidgetSettingsVoice;
 
-/* compiled from: WidgetSettingsVoice.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetSettingsVoice.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetSettingsVoice$InputModeSelector$onViewCreated$1 implements View.OnClickListener {
     public final /* synthetic */ WidgetSettingsVoice.InputModeSelector this$0;
 

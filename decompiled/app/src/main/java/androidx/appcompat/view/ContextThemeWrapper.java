@@ -9,7 +9,7 @@ import android.view.LayoutInflater;
 import androidx.annotation.StyleRes;
 import androidx.appcompat.C0051R;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class ContextThemeWrapper extends ContextWrapper {
     private LayoutInflater mInflater;
     private Configuration mOverrideConfiguration;

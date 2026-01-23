@@ -13,9 +13,9 @@ import kotlin.jvm.functions.Function4;
 import kotlin.jvm.internal.DefaultConstructorMarker;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: TextWatcher.kt */
-/* renamed from: com.discord.utilities.view.text.FragmentLifecycleTextWatcher, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.utilities.view.text.FragmentLifecycleTextWatcher, reason: use source file name */
+/* JADX INFO: compiled from: TextWatcher.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class TextWatcher2 implements android.text.TextWatcher, LifecycleObserver {
     private final Function1<Editable, Unit> afterTextChanged;
     private final Function4<CharSequence, Integer, Integer, Integer, Unit> beforeTextChanged;

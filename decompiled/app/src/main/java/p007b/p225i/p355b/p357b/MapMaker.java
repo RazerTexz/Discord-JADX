@@ -9,43 +9,43 @@ import p007b.p225i.p355b.p356a.Equivalence;
 import p007b.p225i.p355b.p356a.MoreObjects2;
 import p007b.p225i.p355b.p357b.MapMakerInternalMap;
 
-/* compiled from: MapMaker.java */
-/* renamed from: b.i.b.b.u, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.b.b.u, reason: use source file name */
+/* JADX INFO: compiled from: MapMaker.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class MapMaker {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public boolean f12064a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public int f12065b = -1;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public int f12066c = -1;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     @MonotonicNonNullDecl
     public MapMakerInternalMap.p f12067d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     @MonotonicNonNullDecl
     public MapMakerInternalMap.p f12068e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     @MonotonicNonNullDecl
     public Equivalence<Object> f12069f;
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public MapMakerInternalMap.p m6284a() {
         return (MapMakerInternalMap.p) C3404f.m4255W(this.f12067d, MapMakerInternalMap.p.f12099j);
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public MapMakerInternalMap.p m6285b() {
         return (MapMakerInternalMap.p) C3404f.m4255W(this.f12068e, MapMakerInternalMap.p.f12099j);
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public <K, V> ConcurrentMap<K, V> m6286c() {
         if (!this.f12064a) {
             int i = this.f12065b;
@@ -77,7 +77,7 @@ public final class MapMaker {
         throw new AssertionError();
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public MapMaker m6287d(MapMakerInternalMap.p pVar) {
         MapMakerInternalMap.p pVar2 = this.f12067d;
         C3404f.m4207G(pVar2 == null, "Key strength was already set to %s", pVar2);

@@ -7,12 +7,12 @@ import p507d0.p513e0.p514p.p515d.p517m0.p567n.KotlinType;
 import p507d0.p580t._Collections;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: methodSignatureMapping.kt */
-/* renamed from: d0.e0.p.d.m0.e.b.y, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.e.b.y, reason: use source file name */
+/* JADX INFO: compiled from: methodSignatureMapping.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class methodSignatureMapping4 implements descriptorBasedTypeSignatureMapping2<methodSignatureMapping> {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final methodSignatureMapping4 f23637a = new methodSignatureMapping4();
 
     @Override // p507d0.p513e0.p514p.p515d.p517m0.p531e.p541b.descriptorBasedTypeSignatureMapping2

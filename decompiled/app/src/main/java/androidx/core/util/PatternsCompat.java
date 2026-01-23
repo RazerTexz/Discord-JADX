@@ -3,7 +3,7 @@ package androidx.core.util;
 import androidx.annotation.RestrictTo;
 import java.util.regex.Pattern;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public final class PatternsCompat {
 
     @RestrictTo({RestrictTo.Scope.LIBRARY_GROUP_PREFIX})

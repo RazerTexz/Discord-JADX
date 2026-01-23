@@ -8,9 +8,9 @@ import com.discord.utilities.textprocessing.MessageRenderContext;
 import kotlin.jvm.functions.Function0;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: GuildScheduledEventDescriptionParser.kt */
-/* renamed from: com.discord.widgets.guildscheduledevent.GuildScheduledEventDescriptionParser$Companion$INSTANCE$2, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.guildscheduledevent.GuildScheduledEventDescriptionParser$Companion$INSTANCE$2, reason: use source file name */
+/* JADX INFO: compiled from: GuildScheduledEventDescriptionParser.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class GuildScheduledEventDescriptionParser2 extends Lambda implements Function0<Parser<MessageRenderContext, Node<MessageRenderContext>, MessageParseState>> {
     public static final GuildScheduledEventDescriptionParser2 INSTANCE = new GuildScheduledEventDescriptionParser2();
 

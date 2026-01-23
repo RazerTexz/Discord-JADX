@@ -12,8 +12,8 @@ import com.discord.utilities.color.ColorCompat2;
 import com.google.android.material.textview.MaterialTextView;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: GuildEventPromptView.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: GuildEventPromptView.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class GuildEventPromptView extends ConstraintLayout {
     private final GuildEventPromptViewBinding binding;
 

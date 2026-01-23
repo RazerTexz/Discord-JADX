@@ -6,11 +6,11 @@ import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
-/* compiled from: Store.kt */
+/* JADX INFO: renamed from: com.discord.stores.StoreThread, reason: use source file name */
+/* JADX INFO: compiled from: Store.kt */
+/* JADX INFO: loaded from: classes2.dex */
 @Target({ElementType.METHOD})
 @Documented
 @Retention(RetentionPolicy.RUNTIME)
-/* renamed from: com.discord.stores.StoreThread, reason: use source file name */
-/* loaded from: classes2.dex */
 public @interface Store3 {
 }

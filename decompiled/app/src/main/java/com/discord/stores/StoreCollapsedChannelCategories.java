@@ -21,19 +21,19 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 import p658rx.Observable;
 
-/* compiled from: StoreCollapsedChannelCategories.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: StoreCollapsedChannelCategories.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class StoreCollapsedChannelCategories extends StoreV2 {
     private static final String CACHE_KEY_COLLAPSED_CATEGORIES = "STORE_COLLAPSED_CATEGORIES_V2";
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private Map<Long, Set<Long>> collapsedCategories;
     private Map<Long, Set<Long>> collapsedCategoriesSnapshot;
     private final Dispatcher dispatcher;
     private final ObservationDeck observationDeck;
 
-    /* compiled from: StoreCollapsedChannelCategories.kt */
+    /* JADX INFO: compiled from: StoreCollapsedChannelCategories.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -62,8 +62,8 @@ public final class StoreCollapsedChannelCategories extends StoreV2 {
         }
     }
 
-    /* compiled from: StoreCollapsedChannelCategories.kt */
-    /* renamed from: com.discord.stores.StoreCollapsedChannelCategories$observeCollapsedCategories$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreCollapsedChannelCategories$observeCollapsedCategories$1 */
+    /* JADX INFO: compiled from: StoreCollapsedChannelCategories.kt */
     public static final class C58501 extends Lambda implements Function0<Set<? extends Long>> {
         public final /* synthetic */ long $guildId;
 
@@ -79,7 +79,7 @@ public final class StoreCollapsedChannelCategories extends StoreV2 {
         }
 
         @Override // kotlin.jvm.functions.Function0
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final Set<? extends Long> invoke2() {
             Set<Long> setEmptySet = StoreCollapsedChannelCategories.this.getCollapsedCategories().get(Long.valueOf(this.$guildId));
             if (setEmptySet == null) {
@@ -89,8 +89,8 @@ public final class StoreCollapsedChannelCategories extends StoreV2 {
         }
     }
 
-    /* compiled from: StoreCollapsedChannelCategories.kt */
-    /* renamed from: com.discord.stores.StoreCollapsedChannelCategories$setCollapsedCategory$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreCollapsedChannelCategories$setCollapsedCategory$1 */
+    /* JADX INFO: compiled from: StoreCollapsedChannelCategories.kt */
     public static final class C58511 extends Lambda implements Function0<Unit> {
         public final /* synthetic */ long $categoryId;
         public final /* synthetic */ boolean $collapsed;
@@ -110,7 +110,7 @@ public final class StoreCollapsedChannelCategories extends StoreV2 {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             StoreCollapsedChannelCategories.access$setCollapsedState(StoreCollapsedChannelCategories.this, this.$guildId, this.$categoryId, this.$collapsed);
         }

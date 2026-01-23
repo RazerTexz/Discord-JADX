@@ -4,12 +4,12 @@ import kotlin.Unit;
 import kotlin.jvm.functions.Function0;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: AppTransformers.kt */
-/* renamed from: b.a.d.x */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.a.d.x */
+/* JADX INFO: compiled from: AppTransformers.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class C0888x extends Lambda implements Function0<Unit> {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static final C0888x f587j = new C0888x();
 
     public C0888x() {

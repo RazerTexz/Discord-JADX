@@ -15,31 +15,31 @@ import p507d0.p513e0.p514p.p515d.p517m0.p521c.p525j1.JavaVisibilities3;
 import p507d0.p513e0.p514p.p515d.p517m0.p552k.DescriptorUtils;
 import p507d0.p513e0.p514p.p515d.p517m0.p552k.p553a0.p554p.ReceiverValue;
 
-/* compiled from: JavaDescriptorVisibilities.java */
-/* renamed from: d0.e0.p.d.m0.e.a.w, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.e.a.w, reason: use source file name */
+/* JADX INFO: compiled from: JavaDescriptorVisibilities.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class JavaDescriptorVisibilities {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final DescriptorVisibility2 f23525a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static final DescriptorVisibility2 f23526b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public static final DescriptorVisibility2 f23527c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public static final Map<Visibility2, DescriptorVisibility2> f23528d;
 
-    /* compiled from: JavaDescriptorVisibilities.java */
-    /* renamed from: d0.e0.p.d.m0.e.a.w$a */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.e.a.w$a */
+    /* JADX INFO: compiled from: JavaDescriptorVisibilities.java */
     public static class a extends DescriptorVisibility {
         public a(Visibility2 visibility2) {
             super(visibility2);
         }
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public static /* synthetic */ void m9524a(int i) {
             Object[] objArr = new Object[3];
             if (i != 1) {
@@ -66,14 +66,14 @@ public class JavaDescriptorVisibilities {
         }
     }
 
-    /* compiled from: JavaDescriptorVisibilities.java */
-    /* renamed from: d0.e0.p.d.m0.e.a.w$b */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.e.a.w$b */
+    /* JADX INFO: compiled from: JavaDescriptorVisibilities.java */
     public static class b extends DescriptorVisibility {
         public b(Visibility2 visibility2) {
             super(visibility2);
         }
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public static /* synthetic */ void m9525a(int i) {
             Object[] objArr = new Object[3];
             if (i != 1) {
@@ -100,14 +100,14 @@ public class JavaDescriptorVisibilities {
         }
     }
 
-    /* compiled from: JavaDescriptorVisibilities.java */
-    /* renamed from: d0.e0.p.d.m0.e.a.w$c */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.e.a.w$c */
+    /* JADX INFO: compiled from: JavaDescriptorVisibilities.java */
     public static class c extends DescriptorVisibility {
         public c(Visibility2 visibility2) {
             super(visibility2);
         }
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public static /* synthetic */ void m9526a(int i) {
             Object[] objArr = new Object[3];
             if (i != 1) {
@@ -147,7 +147,7 @@ public class JavaDescriptorVisibilities {
         m9523d(cVar);
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static /* synthetic */ void m9520a(int i) {
         String str = (i == 5 || i == 6) ? "@NotNull method %s.%s must not return null" : "Argument for @NotNull parameter '%s' of %s.%s must not be null";
         Object[] objArr = new Object[(i == 5 || i == 6) ? 2 : 3];
@@ -191,7 +191,7 @@ public class JavaDescriptorVisibilities {
         throw new IllegalStateException(str2);
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static boolean m9521b(ReceiverValue receiverValue, DeclarationDescriptorWithVisibility declarationDescriptorWithVisibility, DeclarationDescriptor declarationDescriptor) {
         if (declarationDescriptorWithVisibility == null) {
             m9520a(0);
@@ -207,7 +207,7 @@ public class JavaDescriptorVisibilities {
         return DescriptorVisibilities.f23085c.isVisible(receiverValue, declarationDescriptorWithVisibility, declarationDescriptor);
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public static boolean m9522c(DeclarationDescriptor declarationDescriptor, DeclarationDescriptor declarationDescriptor2) {
         if (declarationDescriptor == null) {
             m9520a(2);
@@ -222,7 +222,7 @@ public class JavaDescriptorVisibilities {
         return (packageFragmentDescriptor2 == null || packageFragmentDescriptor == null || !packageFragmentDescriptor.getFqName().equals(packageFragmentDescriptor2.getFqName())) ? false : true;
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public static void m9523d(DescriptorVisibility2 descriptorVisibility2) {
         f23528d.put(descriptorVisibility2.getDelegate(), descriptorVisibility2);
     }

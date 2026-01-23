@@ -9,18 +9,18 @@ import com.android.billingclient.api.Purchase;
 import java.util.ArrayList;
 import p007b.p225i.p226a.p288f.p313h.p327n.C3941a;
 
-/* compiled from: com.android.billingclient:billing@@4.0.0 */
-/* renamed from: b.d.a.a.r */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.d.a.a.r */
+/* JADX INFO: compiled from: com.android.billingclient:billing@@4.0.0 */
+/* JADX INFO: loaded from: classes.dex */
 public final class C1633r extends BroadcastReceiver {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final InterfaceC1622g f2986a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public boolean f2987b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final /* synthetic */ C1634s f2988c;
 
     public /* synthetic */ C1633r(C1634s c1634s, InterfaceC1622g interfaceC1622g) {

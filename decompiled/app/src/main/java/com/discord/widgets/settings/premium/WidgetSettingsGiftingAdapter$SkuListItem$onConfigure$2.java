@@ -3,8 +3,8 @@ package com.discord.widgets.settings.premium;
 import android.view.View;
 import com.discord.widgets.settings.premium.WidgetSettingsGiftingAdapter;
 
-/* compiled from: WidgetSettingsGiftingAdapter.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetSettingsGiftingAdapter.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetSettingsGiftingAdapter$SkuListItem$onConfigure$2 implements View.OnClickListener {
     public final /* synthetic */ WidgetSettingsGiftingAdapter.GiftItem $data;
     public final /* synthetic */ WidgetSettingsGiftingAdapter.SkuListItem this$0;

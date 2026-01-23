@@ -18,8 +18,8 @@ import kotlin.NoWhenBranchMatchedException;
 import p507d0.p580t.Collections2;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: WidgetDirectoryChannelAdapter.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetDirectoryChannelAdapter.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetDirectoryChannelAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
     private final DirectoryChannelItemClickInterface clickListener;
     private List<? extends DirectoryChannelItem> directoryChannelItems;
@@ -52,7 +52,7 @@ public final class WidgetDirectoryChannelAdapter extends RecyclerView.Adapter<Re
     }
 
     @Override // androidx.recyclerview.widget.RecyclerView.Adapter
-    /* renamed from: getItemCount */
+    /* JADX INFO: renamed from: getItemCount */
     public int getPageSize() {
         return this.directoryChannelItems.size();
     }

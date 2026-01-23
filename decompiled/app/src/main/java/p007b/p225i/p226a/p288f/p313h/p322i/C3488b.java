@@ -2,19 +2,19 @@ package p007b.p225i.p226a.p288f.p313h.p322i;
 
 import java.util.Queue;
 
-/* compiled from: com.google.firebase:firebase-messaging@@21.0.0 */
-/* renamed from: b.i.a.f.h.i.b */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.h.i.b */
+/* JADX INFO: compiled from: com.google.firebase:firebase-messaging@@21.0.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public final class C3488b {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final /* synthetic */ int f9652a = 0;
 
     static {
         new C3487a();
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static byte[] m4412a(Queue<byte[]> queue, int i) {
         byte[] bArr = new byte[i];
         int i2 = i;

@@ -30,23 +30,23 @@ import p507d0.p580t._Collections;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: CapturedTypeApproximation.kt */
-/* renamed from: d0.e0.p.d.m0.n.p1.b, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.n.p1.b, reason: use source file name */
+/* JADX INFO: compiled from: CapturedTypeApproximation.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class CapturedTypeApproximation2 {
 
-    /* compiled from: CapturedTypeApproximation.kt */
-    /* renamed from: d0.e0.p.d.m0.n.p1.b$a */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.n.p1.b$a */
+    /* JADX INFO: compiled from: CapturedTypeApproximation.kt */
     public static final class a extends Lambda implements Function1<KotlinType3, Boolean> {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public static final a f24858j = new a();
 
         public a() {
             super(1);
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final Boolean invoke2(KotlinType3 kotlinType3) {
             Intrinsics3.checkNotNullExpressionValue(kotlinType3, "it");
             return Boolean.valueOf(CapturedTypeConstructor4.isCaptured(kotlinType3));
@@ -59,7 +59,7 @@ public final class CapturedTypeApproximation2 {
     }
 
     /* JADX WARN: Removed duplicated region for block: B:29:0x00a5  */
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */

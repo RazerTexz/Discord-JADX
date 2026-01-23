@@ -2,19 +2,19 @@ package com.discord.api.guildjoinrequest;
 
 import p007b.p100d.p104b.p105a.outline;
 
-/* compiled from: GuildJoinRequest.kt */
-/* renamed from: com.discord.api.guildjoinrequest.GuildJoinRequestDelete, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: com.discord.api.guildjoinrequest.GuildJoinRequestDelete, reason: use source file name */
+/* JADX INFO: compiled from: GuildJoinRequest.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class GuildJoinRequest3 {
     private final long guildId;
     private final long userId;
 
-    /* renamed from: a, reason: from getter */
+    /* JADX INFO: renamed from: a, reason: from getter */
     public final long getGuildId() {
         return this.guildId;
     }
 
-    /* renamed from: b, reason: from getter */
+    /* JADX INFO: renamed from: b, reason: from getter */
     public final long getUserId() {
         return this.userId;
     }

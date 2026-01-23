@@ -12,120 +12,120 @@ import p007b.p225i.p226a.p242c.Bundleable;
 import p007b.p225i.p226a.p242c.p259f3.Util2;
 import p007b.p225i.p226a.p242c.p260g3.ColorInfo;
 
-/* compiled from: Format.java */
-/* renamed from: b.i.a.c.j1, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.j1, reason: use source file name */
+/* JADX INFO: compiled from: Format.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class Format2 implements Bundleable {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static final Format2 f7125j = new b().m3277a();
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public static final Bundleable.a<Format2> f7126k = C2802h0.f7051a;
 
-    /* renamed from: A */
+    /* JADX INFO: renamed from: A */
     public final long f7127A;
 
-    /* renamed from: B */
+    /* JADX INFO: renamed from: B */
     public final int f7128B;
 
-    /* renamed from: C */
+    /* JADX INFO: renamed from: C */
     public final int f7129C;
 
-    /* renamed from: D */
+    /* JADX INFO: renamed from: D */
     public final float f7130D;
 
-    /* renamed from: E */
+    /* JADX INFO: renamed from: E */
     public final int f7131E;
 
-    /* renamed from: F */
+    /* JADX INFO: renamed from: F */
     public final float f7132F;
 
-    /* renamed from: G */
+    /* JADX INFO: renamed from: G */
     @Nullable
     public final byte[] f7133G;
 
-    /* renamed from: H */
+    /* JADX INFO: renamed from: H */
     public final int f7134H;
 
-    /* renamed from: I */
+    /* JADX INFO: renamed from: I */
     @Nullable
     public final ColorInfo f7135I;
 
-    /* renamed from: J */
+    /* JADX INFO: renamed from: J */
     public final int f7136J;
 
-    /* renamed from: K */
+    /* JADX INFO: renamed from: K */
     public final int f7137K;
 
-    /* renamed from: L */
+    /* JADX INFO: renamed from: L */
     public final int f7138L;
 
-    /* renamed from: M */
+    /* JADX INFO: renamed from: M */
     public final int f7139M;
 
-    /* renamed from: N */
+    /* JADX INFO: renamed from: N */
     public final int f7140N;
 
-    /* renamed from: O */
+    /* JADX INFO: renamed from: O */
     public final int f7141O;
 
-    /* renamed from: P */
+    /* JADX INFO: renamed from: P */
     public final int f7142P;
 
-    /* renamed from: Q */
+    /* JADX INFO: renamed from: Q */
     public int f7143Q;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     @Nullable
     public final String f7144l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     @Nullable
     public final String f7145m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     @Nullable
     public final String f7146n;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public final int f7147o;
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public final int f7148p;
 
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     public final int f7149q;
 
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     public final int f7150r;
 
-    /* renamed from: s */
+    /* JADX INFO: renamed from: s */
     public final int f7151s;
 
-    /* renamed from: t */
+    /* JADX INFO: renamed from: t */
     @Nullable
     public final String f7152t;
 
-    /* renamed from: u */
+    /* JADX INFO: renamed from: u */
     @Nullable
     public final Metadata f7153u;
 
-    /* renamed from: v */
+    /* JADX INFO: renamed from: v */
     @Nullable
     public final String f7154v;
 
-    /* renamed from: w */
+    /* JADX INFO: renamed from: w */
     @Nullable
     public final String f7155w;
 
-    /* renamed from: x */
+    /* JADX INFO: renamed from: x */
     public final int f7156x;
 
-    /* renamed from: y */
+    /* JADX INFO: renamed from: y */
     public final List<byte[]> f7157y;
 
-    /* renamed from: z */
+    /* JADX INFO: renamed from: z */
     @Nullable
     public final DrmInitData f7158z;
 
@@ -177,22 +177,22 @@ public final class Format2 implements Bundleable {
     }
 
     @Nullable
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static <T> T m3273b(@Nullable T t, @Nullable T t2) {
         return t != null ? t : t2;
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public static String m3274d(int i) {
         return Integer.toString(i, 36);
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public b m3275a() {
         return new b(this, null);
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public boolean m3276c(Format2 format2) {
         if (this.f7157y.size() != format2.f7157y.size()) {
             return false;
@@ -273,109 +273,109 @@ public final class Format2 implements Bundleable {
         return sbM831S.toString();
     }
 
-    /* compiled from: Format.java */
-    /* renamed from: b.i.a.c.j1$b */
+    /* JADX INFO: renamed from: b.i.a.c.j1$b */
+    /* JADX INFO: compiled from: Format.java */
     public static final class b {
 
-        /* renamed from: A */
+        /* JADX INFO: renamed from: A */
         public int f7159A;
 
-        /* renamed from: B */
+        /* JADX INFO: renamed from: B */
         public int f7160B;
 
-        /* renamed from: C */
+        /* JADX INFO: renamed from: C */
         public int f7161C;
 
-        /* renamed from: D */
+        /* JADX INFO: renamed from: D */
         public int f7162D;
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         @Nullable
         public String f7163a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         @Nullable
         public String f7164b;
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         @Nullable
         public String f7165c;
 
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         public int f7166d;
 
-        /* renamed from: e */
+        /* JADX INFO: renamed from: e */
         public int f7167e;
 
-        /* renamed from: f */
+        /* JADX INFO: renamed from: f */
         public int f7168f;
 
-        /* renamed from: g */
+        /* JADX INFO: renamed from: g */
         public int f7169g;
 
-        /* renamed from: h */
+        /* JADX INFO: renamed from: h */
         @Nullable
         public String f7170h;
 
-        /* renamed from: i */
+        /* JADX INFO: renamed from: i */
         @Nullable
         public Metadata f7171i;
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         @Nullable
         public String f7172j;
 
-        /* renamed from: k */
+        /* JADX INFO: renamed from: k */
         @Nullable
         public String f7173k;
 
-        /* renamed from: l */
+        /* JADX INFO: renamed from: l */
         public int f7174l;
 
-        /* renamed from: m */
+        /* JADX INFO: renamed from: m */
         @Nullable
         public List<byte[]> f7175m;
 
-        /* renamed from: n */
+        /* JADX INFO: renamed from: n */
         @Nullable
         public DrmInitData f7176n;
 
-        /* renamed from: o */
+        /* JADX INFO: renamed from: o */
         public long f7177o;
 
-        /* renamed from: p */
+        /* JADX INFO: renamed from: p */
         public int f7178p;
 
-        /* renamed from: q */
+        /* JADX INFO: renamed from: q */
         public int f7179q;
 
-        /* renamed from: r */
+        /* JADX INFO: renamed from: r */
         public float f7180r;
 
-        /* renamed from: s */
+        /* JADX INFO: renamed from: s */
         public int f7181s;
 
-        /* renamed from: t */
+        /* JADX INFO: renamed from: t */
         public float f7182t;
 
-        /* renamed from: u */
+        /* JADX INFO: renamed from: u */
         @Nullable
         public byte[] f7183u;
 
-        /* renamed from: v */
+        /* JADX INFO: renamed from: v */
         public int f7184v;
 
-        /* renamed from: w */
+        /* JADX INFO: renamed from: w */
         @Nullable
         public ColorInfo f7185w;
 
-        /* renamed from: x */
+        /* JADX INFO: renamed from: x */
         public int f7186x;
 
-        /* renamed from: y */
+        /* JADX INFO: renamed from: y */
         public int f7187y;
 
-        /* renamed from: z */
+        /* JADX INFO: renamed from: z */
         public int f7188z;
 
         public b() {
@@ -395,12 +395,12 @@ public final class Format2 implements Bundleable {
             this.f7162D = 0;
         }
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public Format2 m3277a() {
             return new Format2(this, null);
         }
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public b m3278b(int i) {
             this.f7163a = Integer.toString(i);
             return this;

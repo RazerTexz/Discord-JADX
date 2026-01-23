@@ -6,9 +6,9 @@ import kotlin.jvm.functions.Function2;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetSettingsAccountBackupCodes.kt */
-/* renamed from: com.discord.widgets.settings.account.WidgetSettingsAccountBackupCodes$showPasswordModal$$inlined$let$lambda$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.settings.account.WidgetSettingsAccountBackupCodes$showPasswordModal$$inlined$let$lambda$1, reason: use source file name */
+/* JADX INFO: compiled from: WidgetSettingsAccountBackupCodes.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetSettingsAccountBackupCodes4 extends Lambda implements Function2<Context, String, Unit> {
     public final /* synthetic */ WidgetSettingsAccountBackupCodes this$0;
 
@@ -24,7 +24,7 @@ public final class WidgetSettingsAccountBackupCodes4 extends Lambda implements F
         return Unit.f27425a;
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final void invoke2(Context context, String str) {
         Intrinsics3.checkNotNullParameter(context, "<anonymous parameter 0>");
         Intrinsics3.checkNotNullParameter(str, "newPassword");

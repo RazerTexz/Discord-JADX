@@ -4,9 +4,9 @@ import java.io.Serializable;
 import java.util.Arrays;
 import p007b.p100d.p104b.p105a.outline;
 
-/* compiled from: Base64Variant.java */
-/* renamed from: b.g.a.b.a, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.g.a.b.a, reason: use source file name */
+/* JADX INFO: compiled from: Base64Variant.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class Base64Variant implements Serializable {
     private static final long serialVersionUID = 1;
     private final int _maxLineLength;
@@ -15,17 +15,17 @@ public final class Base64Variant implements Serializable {
     private final a _paddingReadBehaviour;
     private final boolean _writePadding;
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final transient int[] f4444j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final transient char[] f4445k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final transient byte[] f4446l;
 
-    /* compiled from: Base64Variant.java */
-    /* renamed from: b.g.a.b.a$a */
+    /* JADX INFO: renamed from: b.g.a.b.a$a */
+    /* JADX INFO: compiled from: Base64Variant.java */
     public enum a {
         PADDING_FORBIDDEN,
         PADDING_REQUIRED,
@@ -59,7 +59,7 @@ public final class Base64Variant implements Serializable {
         this._paddingReadBehaviour = z2 ? a.PADDING_REQUIRED : a.PADDING_FORBIDDEN;
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public String m1622a(byte[] bArr) {
         int length = bArr.length;
         StringBuilder sb = new StringBuilder((length >> 2) + length + (length >> 3));
@@ -103,7 +103,7 @@ public final class Base64Variant implements Serializable {
         return sb.toString();
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public int m1623b(int i, char[] cArr, int i2) {
         int i3 = i2 + 1;
         char[] cArr2 = this.f4445k;
@@ -117,7 +117,7 @@ public final class Base64Variant implements Serializable {
         return i6;
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public int m1624c(int i, int i2, char[] cArr, int i3) {
         int i4 = i3 + 1;
         char[] cArr2 = this.f4445k;
@@ -139,7 +139,7 @@ public final class Base64Variant implements Serializable {
         return i8;
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public int m1625d() {
         return this._maxLineLength;
     }

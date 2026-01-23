@@ -33,16 +33,16 @@ import p507d0.p579g0.StringsJVM;
 import p507d0.p580t.Maps6;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: NotificationActions.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: NotificationActions.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class NotificationActions extends BroadcastReceiver {
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private static final String NOTIFICATION_CHANNEL_ID = "com.discord.NOTIFICATION_DELETED_CHANNEL_ID";
     private static final String NOTIFICATION_ID = "com.discord.NOTIFICATION_ID";
 
-    /* compiled from: NotificationActions.kt */
+    /* JADX INFO: compiled from: NotificationActions.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -219,13 +219,7 @@ public final class NotificationActions extends BroadcastReceiver {
         }
     }
 
-    /* JADX WARN: Failed to restore switch over string. Please report as a decompilation issue
-    java.lang.NullPointerException: Cannot invoke "java.util.List.iterator()" because the return value of "jadx.core.dex.visitors.regions.SwitchOverStringVisitor$SwitchData.getNewCases()" is null
-    	at jadx.core.dex.visitors.regions.SwitchOverStringVisitor.restoreSwitchOverString(SwitchOverStringVisitor.java:109)
-    	at jadx.core.dex.visitors.regions.SwitchOverStringVisitor.visitRegion(SwitchOverStringVisitor.java:66)
-    	at jadx.core.dex.visitors.regions.DepthRegionTraversal.traverseIterativeStepInternal(DepthRegionTraversal.java:77)
-    	at jadx.core.dex.visitors.regions.DepthRegionTraversal.traverseIterativeStepInternal(DepthRegionTraversal.java:82)
-     */
+    /* JADX WARN: Failed to restore switch over string. Please report as a decompilation issue */
     @RequiresApi(24)
     public final void enqueue(Context context, Intent intent) throws Throwable {
         Intrinsics3.checkNotNullParameter(context, "context");

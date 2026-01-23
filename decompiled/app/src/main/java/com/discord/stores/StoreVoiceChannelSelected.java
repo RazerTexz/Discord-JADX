@@ -35,8 +35,8 @@ import p507d0.p592z.p594d.Lambda;
 import p658rx.Observable;
 import p658rx.subjects.PublishSubject;
 
-/* compiled from: StoreVoiceChannelSelected.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: StoreVoiceChannelSelected.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class StoreVoiceChannelSelected extends StoreV2 implements Store2 {
     public static final long VOICE_CHANNEL_ID_NONE = 0;
     private final Clock clock;
@@ -49,7 +49,7 @@ public final class StoreVoiceChannelSelected extends StoreV2 implements Store2 {
     private final StoreStream stream;
     private long timeSelectedMs;
 
-    /* compiled from: StoreVoiceChannelSelected.kt */
+    /* JADX INFO: compiled from: StoreVoiceChannelSelected.kt */
     public enum JoinVoiceChannelResult {
         SUCCESS,
         DEFERRED_UNTIL_SESSION_START,
@@ -98,8 +98,8 @@ public final class StoreVoiceChannelSelected extends StoreV2 implements Store2 {
         }
     }
 
-    /* compiled from: StoreVoiceChannelSelected.kt */
-    /* renamed from: com.discord.stores.StoreVoiceChannelSelected$clear$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreVoiceChannelSelected$clear$1 */
+    /* JADX INFO: compiled from: StoreVoiceChannelSelected.kt */
     public static final /* synthetic */ class C66181 extends FunctionReferenceImpl implements Function0<Unit> {
         public C66181(StoreVoiceChannelSelected storeVoiceChannelSelected) {
             super(0, storeVoiceChannelSelected, StoreVoiceChannelSelected.class, "clearInternal", "clearInternal()V", 0);
@@ -111,14 +111,14 @@ public final class StoreVoiceChannelSelected extends StoreV2 implements Store2 {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             StoreVoiceChannelSelected.access$clearInternal((StoreVoiceChannelSelected) this.receiver);
         }
     }
 
-    /* compiled from: StoreVoiceChannelSelected.kt */
-    /* renamed from: com.discord.stores.StoreVoiceChannelSelected$observeSelectedChannel$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreVoiceChannelSelected$observeSelectedChannel$1 */
+    /* JADX INFO: compiled from: StoreVoiceChannelSelected.kt */
     public static final class C66191 extends Lambda implements Function0<Channel> {
         public C66191() {
             super(0);
@@ -136,8 +136,8 @@ public final class StoreVoiceChannelSelected extends StoreV2 implements Store2 {
         }
     }
 
-    /* compiled from: StoreVoiceChannelSelected.kt */
-    /* renamed from: com.discord.stores.StoreVoiceChannelSelected$observeSelectedVoiceChannelId$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreVoiceChannelSelected$observeSelectedVoiceChannelId$1 */
+    /* JADX INFO: compiled from: StoreVoiceChannelSelected.kt */
     public static final class C66201 extends Lambda implements Function0<Long> {
         public C66201() {
             super(0);
@@ -148,14 +148,14 @@ public final class StoreVoiceChannelSelected extends StoreV2 implements Store2 {
             return Long.valueOf(invoke2());
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final long invoke2() {
             return StoreVoiceChannelSelected.access$getSelectedVoiceChannelId$p(StoreVoiceChannelSelected.this);
         }
     }
 
-    /* compiled from: StoreVoiceChannelSelected.kt */
-    /* renamed from: com.discord.stores.StoreVoiceChannelSelected$observeTimeSelectedMs$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreVoiceChannelSelected$observeTimeSelectedMs$1 */
+    /* JADX INFO: compiled from: StoreVoiceChannelSelected.kt */
     public static final class C66211 extends Lambda implements Function0<Long> {
         public C66211() {
             super(0);
@@ -166,14 +166,14 @@ public final class StoreVoiceChannelSelected extends StoreV2 implements Store2 {
             return Long.valueOf(invoke2());
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final long invoke2() {
             return StoreVoiceChannelSelected.access$getTimeSelectedMs$p(StoreVoiceChannelSelected.this);
         }
     }
 
-    /* compiled from: StoreVoiceChannelSelected.kt */
-    /* renamed from: com.discord.stores.StoreVoiceChannelSelected$selectVoiceChannel$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreVoiceChannelSelected$selectVoiceChannel$1 */
+    /* JADX INFO: compiled from: StoreVoiceChannelSelected.kt */
     public static final class C66221 extends Lambda implements Function0<Unit> {
         public final /* synthetic */ long $channelId;
         public final /* synthetic */ PublishSubject $resultSubject;
@@ -191,7 +191,7 @@ public final class StoreVoiceChannelSelected extends StoreV2 implements Store2 {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             this.$resultSubject.f27650k.onNext(StoreVoiceChannelSelected.access$selectVoiceChannelInternal(StoreVoiceChannelSelected.this, this.$channelId, false));
             this.$resultSubject.f27650k.onCompleted();

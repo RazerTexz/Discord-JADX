@@ -6,14 +6,14 @@ import com.google.android.gms.common.internal.safeparcel.AbstractSafeParcelable;
 import p007b.p085c.p086a.p087a0.AnimatableValueParser;
 import p007b.p225i.p226a.p288f.p336k.C4332f;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public final class zzh extends AbstractSafeParcelable {
     public static final Parcelable.Creator<zzh> CREATOR = new C4332f();
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final int f20832j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final boolean f20833k;
 
     public zzh(int i, boolean z2) {

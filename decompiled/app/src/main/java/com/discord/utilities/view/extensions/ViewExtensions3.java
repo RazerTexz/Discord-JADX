@@ -3,15 +3,15 @@ package com.discord.utilities.view.extensions;
 import android.view.ViewPropertyAnimator;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ViewExtensions.kt */
-/* renamed from: com.discord.utilities.view.extensions.FadeAnimation, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.utilities.view.extensions.FadeAnimation, reason: use source file name */
+/* JADX INFO: compiled from: ViewExtensions.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class ViewExtensions3 {
     private final Type type;
     private final ViewPropertyAnimator viewPropertyAnimator;
 
-    /* compiled from: ViewExtensions.kt */
-    /* renamed from: com.discord.utilities.view.extensions.FadeAnimation$Type */
+    /* JADX INFO: renamed from: com.discord.utilities.view.extensions.FadeAnimation$Type */
+    /* JADX INFO: compiled from: ViewExtensions.kt */
     public enum Type {
         FADE_IN,
         FADE_OUT

@@ -4,18 +4,18 @@ import android.os.Bundle;
 import android.os.RemoteException;
 import com.google.android.gms.measurement.internal.zzn;
 
-/* compiled from: com.google.android.gms:play-services-measurement-impl@@18.0.0 */
-/* renamed from: b.i.a.f.i.b.a8 */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.i.b.a8 */
+/* JADX INFO: compiled from: com.google.android.gms:play-services-measurement-impl@@18.0.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public final class RunnableC3977a8 implements Runnable {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final /* synthetic */ Bundle f10550j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final /* synthetic */ zzn f10551k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final /* synthetic */ C4161q7 f10552l;
 
     public RunnableC3977a8(C4161q7 c4161q7, Bundle bundle, zzn zznVar) {

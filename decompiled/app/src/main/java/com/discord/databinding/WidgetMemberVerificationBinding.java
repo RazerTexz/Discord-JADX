@@ -13,34 +13,34 @@ import com.discord.views.MemberVerificationAvatarView;
 import com.discord.widgets.servers.member_verification.MemberVerificationView;
 import com.google.android.material.appbar.CollapsingToolbarLayout;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public final class WidgetMemberVerificationBinding implements ViewBinding {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     @NonNull
     public final CoordinatorLayout f17237a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     @NonNull
     public final DimmerView f17238b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     @NonNull
     public final MemberVerificationView f17239c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     @NonNull
     public final MemberVerificationAvatarView f17240d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     @NonNull
     public final LoadingButton f17241e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     @NonNull
     public final RecyclerView f17242f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     @NonNull
     public final NestedScrollView f17243g;
 

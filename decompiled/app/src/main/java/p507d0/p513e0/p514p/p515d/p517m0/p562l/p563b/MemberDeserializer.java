@@ -75,22 +75,22 @@ import p507d0.p592z.p594d.Lambda;
 import p507d0.p592z.p594d.PropertyReference1;
 import p507d0.p592z.p594d.Reflection2;
 
-/* compiled from: MemberDeserializer.kt */
-/* renamed from: d0.e0.p.d.m0.l.b.u, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.l.b.u, reason: use source file name */
+/* JADX INFO: compiled from: MemberDeserializer.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class MemberDeserializer {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final context6 f24683a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final AnnotationDeserializer f24684b;
 
-    /* compiled from: MemberDeserializer.kt */
-    /* renamed from: d0.e0.p.d.m0.l.b.u$a */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.l.b.u$a */
+    /* JADX INFO: compiled from: MemberDeserializer.kt */
     public /* synthetic */ class a extends PropertyReference1 {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public static final a f24685j = new a();
 
         @Override // p507d0.p513e0.KProperty3
@@ -114,8 +114,8 @@ public final class MemberDeserializer {
         }
     }
 
-    /* compiled from: MemberDeserializer.kt */
-    /* renamed from: d0.e0.p.d.m0.l.b.u$b */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.l.b.u$b */
+    /* JADX INFO: compiled from: MemberDeserializer.kt */
     public static final class b extends Lambda implements Function0<List<? extends AnnotationDescriptor>> {
         public final /* synthetic */ AnnotatedCallableKind $kind;
         public final /* synthetic */ MessageLite $proto;
@@ -133,7 +133,7 @@ public final class MemberDeserializer {
         }
 
         @Override // kotlin.jvm.functions.Function0
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final List<? extends AnnotationDescriptor> invoke2() {
             List<? extends AnnotationDescriptor> list;
             MemberDeserializer memberDeserializer = MemberDeserializer.this;
@@ -147,8 +147,8 @@ public final class MemberDeserializer {
         }
     }
 
-    /* compiled from: MemberDeserializer.kt */
-    /* renamed from: d0.e0.p.d.m0.l.b.u$c */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.l.b.u$c */
+    /* JADX INFO: compiled from: MemberDeserializer.kt */
     public static final class c extends Lambda implements Function0<List<? extends AnnotationDescriptor>> {
         public final /* synthetic */ boolean $isDelegate;
         public final /* synthetic */ C11689n $proto;
@@ -166,7 +166,7 @@ public final class MemberDeserializer {
         }
 
         @Override // kotlin.jvm.functions.Function0
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final List<? extends AnnotationDescriptor> invoke2() {
             List<? extends AnnotationDescriptor> list;
             MemberDeserializer memberDeserializer = MemberDeserializer.this;
@@ -183,8 +183,8 @@ public final class MemberDeserializer {
         }
     }
 
-    /* compiled from: MemberDeserializer.kt */
-    /* renamed from: d0.e0.p.d.m0.l.b.u$d */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.l.b.u$d */
+    /* JADX INFO: compiled from: MemberDeserializer.kt */
     public static final class d extends Lambda implements Function0<AbstractC11815g<?>> {
         public final /* synthetic */ DeserializedMemberDescriptor4 $property;
         public final /* synthetic */ C11689n $proto;
@@ -215,13 +215,13 @@ public final class MemberDeserializer {
         }
     }
 
-    /* compiled from: MemberDeserializer.kt */
-    /* renamed from: d0.e0.p.d.m0.l.b.u$e */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.l.b.u$e */
+    /* JADX INFO: compiled from: MemberDeserializer.kt */
     public static final class e extends Lambda implements Function0<List<? extends AnnotationDescriptor>> {
         public final /* synthetic */ MessageLite $callable;
         public final /* synthetic */ ProtoContainer $containerOfCallable;
 
-        /* renamed from: $i */
+        /* JADX INFO: renamed from: $i */
         public final /* synthetic */ int f24686$i;
         public final /* synthetic */ AnnotatedCallableKind $kind;
         public final /* synthetic */ C11696u $proto;
@@ -242,7 +242,7 @@ public final class MemberDeserializer {
         }
 
         @Override // kotlin.jvm.functions.Function0
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final List<? extends AnnotationDescriptor> invoke2() {
             return _Collections.toList(MemberDeserializer.access$getC$p(MemberDeserializer.this).getComponents().getAnnotationAndConstantLoader().loadValueParameterAnnotations(this.$containerOfCallable, this.$callable, this.$kind, this.f24686$i, this.$proto));
         }
@@ -262,7 +262,7 @@ public final class MemberDeserializer {
         return memberDeserializer.f24683a;
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final ProtoContainer m9968a(DeclarationDescriptor declarationDescriptor) {
         if (declarationDescriptor instanceof PackageFragmentDescriptor) {
             return new ProtoContainer.b(((PackageFragmentDescriptor) declarationDescriptor).getFqName(), this.f24683a.getNameResolver(), this.f24683a.getTypeTable(), this.f24683a.getContainerSource());
@@ -273,7 +273,7 @@ public final class MemberDeserializer {
         return null;
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final DeserializedMemberDescriptor3.a m9969b(DeserializedMemberDescriptor3 deserializedMemberDescriptor3, TypeDeserializer typeDeserializer) {
         DeserializedMemberDescriptor3.a aVar = DeserializedMemberDescriptor3.a.COMPATIBLE;
         if (!m9976i(deserializedMemberDescriptor3)) {
@@ -290,7 +290,7 @@ public final class MemberDeserializer {
     /* JADX WARN: Removed duplicated region for block: B:72:0x0124  */
     /* JADX WARN: Removed duplicated region for block: B:91:0x00b3 A[SYNTHETIC] */
     /* JADX WARN: Removed duplicated region for block: B:95:? A[LOOP:3: B:29:0x0073->B:95:?, LOOP_END, SYNTHETIC] */
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
@@ -384,17 +384,17 @@ public final class MemberDeserializer {
         return (DeserializedMemberDescriptor3.a) _ComparisonsJvm.maxOf(aVar2, aVar5);
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final boolean m9971d(KotlinType kotlinType) {
         return TypeUtils2.contains(kotlinType, a.f24685j);
     }
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final Annotations4 m9972e(MessageLite messageLite, int i, AnnotatedCallableKind annotatedCallableKind) {
         return !Flags2.f24031b.get(i).booleanValue() ? Annotations4.f22735f.getEMPTY() : new DeserializedAnnotations2(this.f24683a.getStorageManager(), new b(messageLite, annotatedCallableKind));
     }
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final ReceiverParameterDescriptor m9973f() {
         DeclarationDescriptor containingDeclaration = this.f24683a.getContainingDeclaration();
         ClassDescriptor classDescriptor = containingDeclaration instanceof ClassDescriptor ? (ClassDescriptor) containingDeclaration : null;
@@ -404,12 +404,12 @@ public final class MemberDeserializer {
         return classDescriptor.getThisAsReceiverParameter();
     }
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public final Annotations4 m9974g(C11689n c11689n, boolean z2) {
         return !Flags2.f24031b.get(c11689n.getFlags()).booleanValue() ? Annotations4.f22735f.getEMPTY() : new DeserializedAnnotations2(this.f24683a.getStorageManager(), new c(z2, c11689n));
     }
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public final List<ValueParameterDescriptor> m9975h(List<C11696u> list, MessageLite messageLite, AnnotatedCallableKind annotatedCallableKind) {
         CallableDescriptor callableDescriptor = (CallableDescriptor) this.f24683a.getContainingDeclaration();
         DeclarationDescriptor containingDeclaration = callableDescriptor.getContainingDeclaration();
@@ -442,7 +442,7 @@ public final class MemberDeserializer {
         return _Collections.toList(arrayList);
     }
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public final boolean m9976i(DeserializedMemberDescriptor3 deserializedMemberDescriptor3) {
         boolean z2;
         if (!this.f24683a.getComponents().getConfiguration().getReleaseCoroutines()) {

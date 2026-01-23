@@ -31,7 +31,7 @@ import java.util.concurrent.RejectedExecutionException;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.TimeoutException;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public final class LocationManagerCompat {
     private static final long GET_CURRENT_LOCATION_TIMEOUT_MS = 30000;
     private static final long MAX_CURRENT_LOCATION_AGE_MS = 10000;
@@ -41,7 +41,7 @@ public final class LocationManagerCompat {
     @GuardedBy("sGnssStatusListeners")
     private static final SimpleArrayMap<Object, Object> sGnssStatusListeners = new SimpleArrayMap<>();
 
-    /* renamed from: androidx.core.location.LocationManagerCompat$1 */
+    /* JADX INFO: renamed from: androidx.core.location.LocationManagerCompat$1 */
     public class RunnableC02311 implements Runnable {
         public final /* synthetic */ Consumer val$consumer;
         public final /* synthetic */ Location val$location;
@@ -57,7 +57,7 @@ public final class LocationManagerCompat {
         }
     }
 
-    /* renamed from: androidx.core.location.LocationManagerCompat$2 */
+    /* JADX INFO: renamed from: androidx.core.location.LocationManagerCompat$2 */
     public class C02322 implements CancellationSignal.OnCancelListener {
         public final /* synthetic */ CancellableLocationListener val$listener;
 
@@ -72,7 +72,7 @@ public final class LocationManagerCompat {
         }
     }
 
-    /* renamed from: androidx.core.location.LocationManagerCompat$3 */
+    /* JADX INFO: renamed from: androidx.core.location.LocationManagerCompat$3 */
     public class CallableC02333 implements Callable<Boolean> {
         public final /* synthetic */ LocationManager val$locationManager;
         public final /* synthetic */ GpsStatusTransport val$myTransport;
@@ -120,7 +120,7 @@ public final class LocationManagerCompat {
     @RequiresApi(30)
     public static class Api30Impl {
 
-        /* renamed from: androidx.core.location.LocationManagerCompat$Api30Impl$1 */
+        /* JADX INFO: renamed from: androidx.core.location.LocationManagerCompat$Api30Impl$1 */
         public class C02341 implements java.util.function.Consumer<Location> {
             public final /* synthetic */ Consumer val$consumer;
 
@@ -133,7 +133,7 @@ public final class LocationManagerCompat {
                 accept2(location);
             }
 
-            /* renamed from: accept, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: accept, reason: avoid collision after fix types in other method */
             public void accept2(Location location) {
                 this.val$consumer.accept(location);
             }
@@ -161,7 +161,7 @@ public final class LocationManagerCompat {
         @GuardedBy("this")
         private boolean mTriggered;
 
-        /* renamed from: androidx.core.location.LocationManagerCompat$CancellableLocationListener$1 */
+        /* JADX INFO: renamed from: androidx.core.location.LocationManagerCompat$CancellableLocationListener$1 */
         public class RunnableC02351 implements Runnable {
             public RunnableC02351() {
             }
@@ -175,7 +175,7 @@ public final class LocationManagerCompat {
             }
         }
 
-        /* renamed from: androidx.core.location.LocationManagerCompat$CancellableLocationListener$2 */
+        /* JADX INFO: renamed from: androidx.core.location.LocationManagerCompat$CancellableLocationListener$2 */
         public class RunnableC02362 implements Runnable {
             public final /* synthetic */ Consumer val$consumer;
             public final /* synthetic */ Location val$location;
@@ -295,7 +295,7 @@ public final class LocationManagerCompat {
         public volatile Executor mExecutor;
         private final LocationManager mLocationManager;
 
-        /* renamed from: androidx.core.location.LocationManagerCompat$GpsStatusTransport$1 */
+        /* JADX INFO: renamed from: androidx.core.location.LocationManagerCompat$GpsStatusTransport$1 */
         public class RunnableC02371 implements Runnable {
             public final /* synthetic */ Executor val$executor;
 
@@ -312,7 +312,7 @@ public final class LocationManagerCompat {
             }
         }
 
-        /* renamed from: androidx.core.location.LocationManagerCompat$GpsStatusTransport$2 */
+        /* JADX INFO: renamed from: androidx.core.location.LocationManagerCompat$GpsStatusTransport$2 */
         public class RunnableC02382 implements Runnable {
             public final /* synthetic */ Executor val$executor;
 
@@ -329,7 +329,7 @@ public final class LocationManagerCompat {
             }
         }
 
-        /* renamed from: androidx.core.location.LocationManagerCompat$GpsStatusTransport$3 */
+        /* JADX INFO: renamed from: androidx.core.location.LocationManagerCompat$GpsStatusTransport$3 */
         public class RunnableC02393 implements Runnable {
             public final /* synthetic */ Executor val$executor;
             public final /* synthetic */ int val$ttff;
@@ -348,7 +348,7 @@ public final class LocationManagerCompat {
             }
         }
 
-        /* renamed from: androidx.core.location.LocationManagerCompat$GpsStatusTransport$4 */
+        /* JADX INFO: renamed from: androidx.core.location.LocationManagerCompat$GpsStatusTransport$4 */
         public class RunnableC02404 implements Runnable {
             public final /* synthetic */ Executor val$executor;
             public final /* synthetic */ GnssStatusCompat val$gnssStatus;
@@ -439,7 +439,7 @@ public final class LocationManagerCompat {
         @Nullable
         public volatile Executor mExecutor;
 
-        /* renamed from: androidx.core.location.LocationManagerCompat$PreRGnssStatusTransport$1 */
+        /* JADX INFO: renamed from: androidx.core.location.LocationManagerCompat$PreRGnssStatusTransport$1 */
         public class RunnableC02411 implements Runnable {
             public final /* synthetic */ Executor val$executor;
 
@@ -456,7 +456,7 @@ public final class LocationManagerCompat {
             }
         }
 
-        /* renamed from: androidx.core.location.LocationManagerCompat$PreRGnssStatusTransport$2 */
+        /* JADX INFO: renamed from: androidx.core.location.LocationManagerCompat$PreRGnssStatusTransport$2 */
         public class RunnableC02422 implements Runnable {
             public final /* synthetic */ Executor val$executor;
 
@@ -473,7 +473,7 @@ public final class LocationManagerCompat {
             }
         }
 
-        /* renamed from: androidx.core.location.LocationManagerCompat$PreRGnssStatusTransport$3 */
+        /* JADX INFO: renamed from: androidx.core.location.LocationManagerCompat$PreRGnssStatusTransport$3 */
         public class RunnableC02433 implements Runnable {
             public final /* synthetic */ Executor val$executor;
             public final /* synthetic */ int val$ttffMillis;
@@ -492,7 +492,7 @@ public final class LocationManagerCompat {
             }
         }
 
-        /* renamed from: androidx.core.location.LocationManagerCompat$PreRGnssStatusTransport$4 */
+        /* JADX INFO: renamed from: androidx.core.location.LocationManagerCompat$PreRGnssStatusTransport$4 */
         public class RunnableC02444 implements Runnable {
             public final /* synthetic */ Executor val$executor;
             public final /* synthetic */ GnssStatus val$status;

@@ -13,17 +13,17 @@ import kotlin.Unit;
 import kotlin.jvm.functions.Function1;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: GiftSelectView.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: GiftSelectView.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class GiftSelectView extends FrameLayout {
 
-    /* renamed from: j, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: j, reason: from kotlin metadata */
     public final WidgetChoosePlanAdapterPlanItemBinding binding;
 
-    /* renamed from: k, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: k, reason: from kotlin metadata */
     public Function1<? super GooglePlayInAppSku, Unit> onClickPlan;
 
-    /* renamed from: l, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: l, reason: from kotlin metadata */
     public GooglePlayInAppSku inAppSku;
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */

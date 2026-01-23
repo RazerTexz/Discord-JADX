@@ -8,9 +8,9 @@ import com.discord.utilities.drawable.DrawableCompat;
 import kotlin.jvm.functions.Function0;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: ForumBrowserPostView.kt */
-/* renamed from: com.discord.widgets.forums.ForumBrowserPostView$cardPressHighlight$2, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.forums.ForumBrowserPostView$cardPressHighlight$2, reason: use source file name */
+/* JADX INFO: compiled from: ForumBrowserPostView.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class ForumBrowserPostView2 extends Lambda implements Function0<Drawable> {
     public final /* synthetic */ Context $context;
 

@@ -40,20 +40,20 @@ import p507d0.p592z.p594d.Lambda;
 import p658rx.Observable;
 import p658rx.functions.Action1;
 
-/* compiled from: WidgetChannelNotificationSettings.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetChannelNotificationSettings.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetChannelNotificationSettings extends AppFragment {
     public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetChannelNotificationSettings.class, "binding", "getBinding()Lcom/discord/databinding/WidgetChannelNotificationSettingsBinding;", 0)};
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private static final String INTENT_SHOW_SYSTEM_SETTINGS = "SHOW_SYSTEM_SETTING";
 
-    /* renamed from: binding$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
     private RadioManager notificationSettingsRadioManager;
 
-    /* compiled from: WidgetChannelNotificationSettings.kt */
+    /* JADX INFO: compiled from: WidgetChannelNotificationSettings.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -77,10 +77,10 @@ public final class WidgetChannelNotificationSettings extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetChannelNotificationSettings.kt */
+    /* JADX INFO: compiled from: WidgetChannelNotificationSettings.kt */
     public static final /* data */ class Model {
 
-        /* renamed from: Companion, reason: from kotlin metadata */
+        /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
         public static final Companion INSTANCE = new Companion(null);
         public static final float RADIO_DIMMED_ALPHA = 0.3f;
         public static final float RADIO_OPAQUE_ALPHA = 1.0f;
@@ -96,7 +96,7 @@ public final class WidgetChannelNotificationSettings extends AppFragment {
         private final boolean notificationSettingIsInherited;
         private final Integer parentNotificationSetting;
 
-        /* compiled from: WidgetChannelNotificationSettings.kt */
+        /* JADX INFO: compiled from: WidgetChannelNotificationSettings.kt */
         public static final class Companion {
             private Companion() {
             }
@@ -133,57 +133,57 @@ public final class WidgetChannelNotificationSettings extends AppFragment {
             return model.copy((i2 & 1) != 0 ? model.channel : channel, (i2 & 2) != 0 ? model.channelIsMuted : z2, (i2 & 4) != 0 ? model.channelMuteEndTime : str, (i2 & 8) != 0 ? model.isGuildMuted : z3, (i2 & 16) != 0 ? model.notificationSetting : i, (i2 & 32) != 0 ? model.channelOverrideFlags : num, (i2 & 64) != 0 ? model.forumPostNotificationSetting : num2, (i2 & 128) != 0 ? model.parentNotificationSetting : num3, (i2 & 256) != 0 ? model.notificationSettingIsInherited : z4, (i2 & 512) != 0 ? model.isAboveNotifyAllSize : z5, (i2 & 1024) != 0 ? model.canAccessRedesignedForumChannels : z6);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final Channel getChannel() {
             return this.channel;
         }
 
-        /* renamed from: component10, reason: from getter */
+        /* JADX INFO: renamed from: component10, reason: from getter */
         public final boolean getIsAboveNotifyAllSize() {
             return this.isAboveNotifyAllSize;
         }
 
-        /* renamed from: component11, reason: from getter */
+        /* JADX INFO: renamed from: component11, reason: from getter */
         public final boolean getCanAccessRedesignedForumChannels() {
             return this.canAccessRedesignedForumChannels;
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final boolean getChannelIsMuted() {
             return this.channelIsMuted;
         }
 
-        /* renamed from: component3, reason: from getter */
+        /* JADX INFO: renamed from: component3, reason: from getter */
         public final String getChannelMuteEndTime() {
             return this.channelMuteEndTime;
         }
 
-        /* renamed from: component4, reason: from getter */
+        /* JADX INFO: renamed from: component4, reason: from getter */
         public final boolean getIsGuildMuted() {
             return this.isGuildMuted;
         }
 
-        /* renamed from: component5, reason: from getter */
+        /* JADX INFO: renamed from: component5, reason: from getter */
         public final int getNotificationSetting() {
             return this.notificationSetting;
         }
 
-        /* renamed from: component6, reason: from getter */
+        /* JADX INFO: renamed from: component6, reason: from getter */
         public final Integer getChannelOverrideFlags() {
             return this.channelOverrideFlags;
         }
 
-        /* renamed from: component7, reason: from getter */
+        /* JADX INFO: renamed from: component7, reason: from getter */
         public final Integer getForumPostNotificationSetting() {
             return this.forumPostNotificationSetting;
         }
 
-        /* renamed from: component8, reason: from getter */
+        /* JADX INFO: renamed from: component8, reason: from getter */
         public final Integer getParentNotificationSetting() {
             return this.parentNotificationSetting;
         }
 
-        /* renamed from: component9, reason: from getter */
+        /* JADX INFO: renamed from: component9, reason: from getter */
         public final boolean getNotificationSettingIsInherited() {
             return this.notificationSettingIsInherited;
         }
@@ -241,43 +241,58 @@ public final class WidgetChannelNotificationSettings extends AppFragment {
         }
 
         /* JADX WARN: Multi-variable type inference failed */
+        /* JADX WARN: Type inference failed for: r1v10 */
+        /* JADX WARN: Type inference failed for: r1v11 */
+        /* JADX WARN: Type inference failed for: r1v3, types: [int] */
+        /* JADX WARN: Type inference failed for: r1v5, types: [int] */
+        /* JADX WARN: Type inference failed for: r1v7 */
+        /* JADX WARN: Type inference failed for: r1v8 */
+        /* JADX WARN: Type inference failed for: r2v1, types: [int] */
+        /* JADX WARN: Type inference failed for: r2v17 */
+        /* JADX WARN: Type inference failed for: r2v19 */
+        /* JADX WARN: Type inference failed for: r2v20 */
+        /* JADX WARN: Type inference failed for: r2v21 */
+        /* JADX WARN: Type inference failed for: r2v6, types: [int] */
+        /* JADX WARN: Type inference failed for: r3v0 */
+        /* JADX WARN: Type inference failed for: r3v1, types: [int] */
+        /* JADX WARN: Type inference failed for: r3v2 */
         public int hashCode() {
             Channel channel = this.channel;
             int iHashCode = (channel != null ? channel.hashCode() : 0) * 31;
             boolean z2 = this.channelIsMuted;
-            int i = z2;
-            if (z2 != 0) {
-                i = 1;
+            ?? r2 = z2;
+            if (z2) {
+                r2 = 1;
             }
-            int i2 = (iHashCode + i) * 31;
+            int i = (iHashCode + r2) * 31;
             String str = this.channelMuteEndTime;
-            int iHashCode2 = (i2 + (str != null ? str.hashCode() : 0)) * 31;
+            int iHashCode2 = (i + (str != null ? str.hashCode() : 0)) * 31;
             boolean z3 = this.isGuildMuted;
-            int i3 = z3;
-            if (z3 != 0) {
-                i3 = 1;
+            ?? r22 = z3;
+            if (z3) {
+                r22 = 1;
             }
-            int i4 = (((iHashCode2 + i3) * 31) + this.notificationSetting) * 31;
+            int i2 = (((iHashCode2 + r22) * 31) + this.notificationSetting) * 31;
             Integer num = this.channelOverrideFlags;
-            int iHashCode3 = (i4 + (num != null ? num.hashCode() : 0)) * 31;
+            int iHashCode3 = (i2 + (num != null ? num.hashCode() : 0)) * 31;
             Integer num2 = this.forumPostNotificationSetting;
             int iHashCode4 = (iHashCode3 + (num2 != null ? num2.hashCode() : 0)) * 31;
             Integer num3 = this.parentNotificationSetting;
             int iHashCode5 = (iHashCode4 + (num3 != null ? num3.hashCode() : 0)) * 31;
             boolean z4 = this.notificationSettingIsInherited;
-            int i5 = z4;
-            if (z4 != 0) {
-                i5 = 1;
+            ?? r1 = z4;
+            if (z4) {
+                r1 = 1;
             }
-            int i6 = (iHashCode5 + i5) * 31;
+            int i3 = (iHashCode5 + r1) * 31;
             boolean z5 = this.isAboveNotifyAllSize;
-            int i7 = z5;
-            if (z5 != 0) {
-                i7 = 1;
+            ?? r12 = z5;
+            if (z5) {
+                r12 = 1;
             }
-            int i8 = (i6 + i7) * 31;
+            int i4 = (i3 + r12) * 31;
             boolean z6 = this.canAccessRedesignedForumChannels;
-            return i8 + (z6 ? 1 : z6 ? 1 : 0);
+            return i4 + (z6 ? 1 : z6);
         }
 
         public final boolean isAboveNotifyAllSize() {
@@ -314,8 +329,8 @@ public final class WidgetChannelNotificationSettings extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetChannelNotificationSettings.kt */
-    /* renamed from: com.discord.widgets.channels.settings.WidgetChannelNotificationSettings$configureGuildForumChannel$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.channels.settings.WidgetChannelNotificationSettings$configureGuildForumChannel$1 */
+    /* JADX INFO: compiled from: WidgetChannelNotificationSettings.kt */
     public static final class C75861<T> implements Action1<Boolean> {
         public final /* synthetic */ Model $this_configureGuildForumChannel;
 
@@ -328,7 +343,7 @@ public final class WidgetChannelNotificationSettings extends AppFragment {
             call2(bool);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final void call2(Boolean bool) {
             Intrinsics3.checkNotNullExpressionValue(bool, "isChecked");
             int i = bool.booleanValue() ? ModelNotificationSettings.FORUM_THREAD_CREATED_ON : ModelNotificationSettings.FORUM_THREAD_CREATED_OFF;
@@ -343,13 +358,13 @@ public final class WidgetChannelNotificationSettings extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetChannelNotificationSettings.kt */
-    /* renamed from: com.discord.widgets.channels.settings.WidgetChannelNotificationSettings$configureNotificationRadios$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.channels.settings.WidgetChannelNotificationSettings$configureNotificationRadios$1 */
+    /* JADX INFO: compiled from: WidgetChannelNotificationSettings.kt */
     public static final class C75871 extends Lambda implements Function3<Model, CheckedSetting, Integer, Unit> {
         public final /* synthetic */ Ref$IntRef $notificationSetting;
 
-        /* compiled from: WidgetChannelNotificationSettings.kt */
-        /* renamed from: com.discord.widgets.channels.settings.WidgetChannelNotificationSettings$configureNotificationRadios$1$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.widgets.channels.settings.WidgetChannelNotificationSettings$configureNotificationRadios$1$1, reason: invalid class name */
+        /* JADX INFO: compiled from: WidgetChannelNotificationSettings.kt */
         public static final class AnonymousClass1 implements View.OnClickListener {
             public final /* synthetic */ Model $this_configureNotificationRadio;
             public final /* synthetic */ int $type;
@@ -401,8 +416,8 @@ public final class WidgetChannelNotificationSettings extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetChannelNotificationSettings.kt */
-    /* renamed from: com.discord.widgets.channels.settings.WidgetChannelNotificationSettings$onViewBoundOrOnResume$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.channels.settings.WidgetChannelNotificationSettings$onViewBoundOrOnResume$1 */
+    /* JADX INFO: compiled from: WidgetChannelNotificationSettings.kt */
     public static final class ViewOnClickListenerC75881 implements View.OnClickListener {
         public ViewOnClickListenerC75881() {
         }
@@ -413,8 +428,8 @@ public final class WidgetChannelNotificationSettings extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetChannelNotificationSettings.kt */
-    /* renamed from: com.discord.widgets.channels.settings.WidgetChannelNotificationSettings$onViewBoundOrOnResume$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.channels.settings.WidgetChannelNotificationSettings$onViewBoundOrOnResume$2 */
+    /* JADX INFO: compiled from: WidgetChannelNotificationSettings.kt */
     public static final class C75892 extends Lambda implements Function1<Model, Unit> {
         public C75892() {
             super(1);
@@ -426,7 +441,7 @@ public final class WidgetChannelNotificationSettings extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Model model) {
             if (model != null) {
                 WidgetChannelNotificationSettings.access$configureUI(WidgetChannelNotificationSettings.this, model);

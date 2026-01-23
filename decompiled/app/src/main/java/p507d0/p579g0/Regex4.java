@@ -5,9 +5,9 @@ import kotlin.ranges.Ranges2;
 import kotlin.text.MatchResult;
 import p507d0.p512d0._Ranges;
 
-/* compiled from: Regex.kt */
-/* renamed from: d0.g0.h, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.g0.h, reason: use source file name */
+/* JADX INFO: compiled from: Regex.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class Regex4 {
     public static final MatchResult access$findNext(Matcher matcher, int i, CharSequence charSequence) {
         if (matcher.find(i)) {

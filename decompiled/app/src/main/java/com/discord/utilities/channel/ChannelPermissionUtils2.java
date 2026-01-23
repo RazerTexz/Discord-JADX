@@ -4,9 +4,9 @@ import kotlin.jvm.internal.DefaultConstructorMarker;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ChannelPermissionUtils.kt */
-/* renamed from: com.discord.utilities.channel.PermissionLabelOverrides, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.utilities.channel.PermissionLabelOverrides, reason: use source file name */
+/* JADX INFO: compiled from: ChannelPermissionUtils.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final /* data */ class ChannelPermissionUtils2 {
     private final CharSequence announcementChannelSubtext;
     private final CharSequence categoryEveryoneSubtext;
@@ -35,47 +35,47 @@ public final /* data */ class ChannelPermissionUtils2 {
         return channelPermissionUtils2.copy((i & 1) != 0 ? channelPermissionUtils2.categorySubtext : charSequence, (i & 2) != 0 ? channelPermissionUtils2.categoryLabel : str, (i & 4) != 0 ? channelPermissionUtils2.voiceChannelSubtext : str2, (i & 8) != 0 ? channelPermissionUtils2.stageChannelSubtext : charSequence2, (i & 16) != 0 ? channelPermissionUtils2.textChannelEveryoneSubtext : str3, (i & 32) != 0 ? channelPermissionUtils2.voiceChannelEveryoneSubtext : str4, (i & 64) != 0 ? channelPermissionUtils2.stageChannelEveryoneSubtext : str5, (i & 128) != 0 ? channelPermissionUtils2.categoryEveryoneSubtext : charSequence3, (i & 256) != 0 ? channelPermissionUtils2.announcementChannelSubtext : charSequence4);
     }
 
-    /* renamed from: component1, reason: from getter */
+    /* JADX INFO: renamed from: component1, reason: from getter */
     public final CharSequence getCategorySubtext() {
         return this.categorySubtext;
     }
 
-    /* renamed from: component2, reason: from getter */
+    /* JADX INFO: renamed from: component2, reason: from getter */
     public final String getCategoryLabel() {
         return this.categoryLabel;
     }
 
-    /* renamed from: component3, reason: from getter */
+    /* JADX INFO: renamed from: component3, reason: from getter */
     public final String getVoiceChannelSubtext() {
         return this.voiceChannelSubtext;
     }
 
-    /* renamed from: component4, reason: from getter */
+    /* JADX INFO: renamed from: component4, reason: from getter */
     public final CharSequence getStageChannelSubtext() {
         return this.stageChannelSubtext;
     }
 
-    /* renamed from: component5, reason: from getter */
+    /* JADX INFO: renamed from: component5, reason: from getter */
     public final String getTextChannelEveryoneSubtext() {
         return this.textChannelEveryoneSubtext;
     }
 
-    /* renamed from: component6, reason: from getter */
+    /* JADX INFO: renamed from: component6, reason: from getter */
     public final String getVoiceChannelEveryoneSubtext() {
         return this.voiceChannelEveryoneSubtext;
     }
 
-    /* renamed from: component7, reason: from getter */
+    /* JADX INFO: renamed from: component7, reason: from getter */
     public final String getStageChannelEveryoneSubtext() {
         return this.stageChannelEveryoneSubtext;
     }
 
-    /* renamed from: component8, reason: from getter */
+    /* JADX INFO: renamed from: component8, reason: from getter */
     public final CharSequence getCategoryEveryoneSubtext() {
         return this.categoryEveryoneSubtext;
     }
 
-    /* renamed from: component9, reason: from getter */
+    /* JADX INFO: renamed from: component9, reason: from getter */
     public final CharSequence getAnnouncementChannelSubtext() {
         return this.announcementChannelSubtext;
     }

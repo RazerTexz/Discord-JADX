@@ -24,18 +24,18 @@ import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.PropertyReference0Impl;
 
-/* compiled from: WidgetUserAccountVerify.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: WidgetUserAccountVerify.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class WidgetUserAccountVerify extends WidgetUserAccountVerifyBase {
     public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetUserAccountVerify.class, "binding", "getBinding()Lcom/discord/databinding/WidgetUserAccountVerifyBinding;", 0)};
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
 
-    /* renamed from: binding$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
 
-    /* compiled from: WidgetUserAccountVerify.kt */
+    /* JADX INFO: compiled from: WidgetUserAccountVerify.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -53,8 +53,8 @@ public final class WidgetUserAccountVerify extends WidgetUserAccountVerifyBase {
         }
     }
 
-    /* compiled from: WidgetUserAccountVerify.kt */
-    /* renamed from: com.discord.widgets.user.account.WidgetUserAccountVerify$onViewBound$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.user.account.WidgetUserAccountVerify$onViewBound$1 */
+    /* JADX INFO: compiled from: WidgetUserAccountVerify.kt */
     public final /* synthetic */ class C102491 extends PropertyReference0Impl {
         public C102491(WidgetUserAccountVerify widgetUserAccountVerify) {
             super(widgetUserAccountVerify, WidgetUserAccountVerify.class, "isForced", "isForced()Z", 0);

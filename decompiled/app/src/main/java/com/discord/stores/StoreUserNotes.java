@@ -21,8 +21,8 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 import p658rx.Observable;
 
-/* compiled from: StoreUserNotes.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: StoreUserNotes.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class StoreUserNotes extends StoreV2 {
     private final Dispatcher dispatcher;
     private final Map<Long, UserNoteState> notesByUserId;
@@ -30,10 +30,10 @@ public final class StoreUserNotes extends StoreV2 {
     private final ObservationDeck observationDeck;
     private final RestAPI restAPI;
 
-    /* compiled from: StoreUserNotes.kt */
+    /* JADX INFO: compiled from: StoreUserNotes.kt */
     public static abstract class UserNoteState {
 
-        /* compiled from: StoreUserNotes.kt */
+        /* JADX INFO: compiled from: StoreUserNotes.kt */
         public static final class Empty extends UserNoteState {
             public static final Empty INSTANCE = new Empty();
 
@@ -42,7 +42,7 @@ public final class StoreUserNotes extends StoreV2 {
             }
         }
 
-        /* compiled from: StoreUserNotes.kt */
+        /* JADX INFO: compiled from: StoreUserNotes.kt */
         public static final /* data */ class Loaded extends UserNoteState {
             private final ModelUserNote note;
 
@@ -60,7 +60,7 @@ public final class StoreUserNotes extends StoreV2 {
                 return loaded.copy(modelUserNote);
             }
 
-            /* renamed from: component1, reason: from getter */
+            /* JADX INFO: renamed from: component1, reason: from getter */
             public final ModelUserNote getNote() {
                 return this.note;
             }
@@ -97,7 +97,7 @@ public final class StoreUserNotes extends StoreV2 {
             }
         }
 
-        /* compiled from: StoreUserNotes.kt */
+        /* JADX INFO: compiled from: StoreUserNotes.kt */
         public static final class Loading extends UserNoteState {
             public static final Loading INSTANCE = new Loading();
 
@@ -114,17 +114,17 @@ public final class StoreUserNotes extends StoreV2 {
         }
     }
 
-    /* compiled from: StoreUserNotes.kt */
-    /* renamed from: com.discord.stores.StoreUserNotes$loadNote$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreUserNotes$loadNote$1 */
+    /* JADX INFO: compiled from: StoreUserNotes.kt */
     public static final class C65801 extends Lambda implements Function0<Unit> {
         public final /* synthetic */ long $userId;
 
-        /* compiled from: StoreUserNotes.kt */
-        /* renamed from: com.discord.stores.StoreUserNotes$loadNote$1$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.stores.StoreUserNotes$loadNote$1$1, reason: invalid class name */
+        /* JADX INFO: compiled from: StoreUserNotes.kt */
         public static final class AnonymousClass1 extends Lambda implements Function1<ModelUserNote, Unit> {
 
-            /* compiled from: StoreUserNotes.kt */
-            /* renamed from: com.discord.stores.StoreUserNotes$loadNote$1$1$1, reason: invalid class name and collision with other inner class name */
+            /* JADX INFO: renamed from: com.discord.stores.StoreUserNotes$loadNote$1$1$1, reason: invalid class name and collision with other inner class name */
+            /* JADX INFO: compiled from: StoreUserNotes.kt */
             public static final class C132651 extends Lambda implements Function0<Unit> {
                 public final /* synthetic */ ModelUserNote $note;
 
@@ -140,7 +140,7 @@ public final class StoreUserNotes extends StoreV2 {
                     return Unit.f27425a;
                 }
 
-                /* renamed from: invoke, reason: avoid collision after fix types in other method */
+                /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
                 public final void invoke2() {
                     StoreUserNotes.access$handleRequestUserNoteSuccess(StoreUserNotes.this, this.$note);
                 }
@@ -156,19 +156,19 @@ public final class StoreUserNotes extends StoreV2 {
                 return Unit.f27425a;
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2(ModelUserNote modelUserNote) {
                 Intrinsics3.checkNotNullParameter(modelUserNote, "note");
                 StoreUserNotes.access$getDispatcher$p(StoreUserNotes.this).schedule(new C132651(modelUserNote));
             }
         }
 
-        /* compiled from: StoreUserNotes.kt */
-        /* renamed from: com.discord.stores.StoreUserNotes$loadNote$1$2, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.stores.StoreUserNotes$loadNote$1$2, reason: invalid class name */
+        /* JADX INFO: compiled from: StoreUserNotes.kt */
         public static final class AnonymousClass2 extends Lambda implements Function1<Error, Unit> {
 
-            /* compiled from: StoreUserNotes.kt */
-            /* renamed from: com.discord.stores.StoreUserNotes$loadNote$1$2$1, reason: invalid class name */
+            /* JADX INFO: renamed from: com.discord.stores.StoreUserNotes$loadNote$1$2$1, reason: invalid class name */
+            /* JADX INFO: compiled from: StoreUserNotes.kt */
             public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
                 public AnonymousClass1() {
                     super(0);
@@ -180,7 +180,7 @@ public final class StoreUserNotes extends StoreV2 {
                     return Unit.f27425a;
                 }
 
-                /* renamed from: invoke, reason: avoid collision after fix types in other method */
+                /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
                 public final void invoke2() {
                     C65801 c65801 = C65801.this;
                     StoreUserNotes.access$handleRequestUserNoteError(StoreUserNotes.this, c65801.$userId);
@@ -197,7 +197,7 @@ public final class StoreUserNotes extends StoreV2 {
                 return Unit.f27425a;
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2(Error error) {
                 Intrinsics3.checkNotNullParameter(error, "it");
                 StoreUserNotes.access$getDispatcher$p(StoreUserNotes.this).schedule(new AnonymousClass1());
@@ -216,7 +216,7 @@ public final class StoreUserNotes extends StoreV2 {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             if (StoreUserNotes.access$getNotesByUserId$p(StoreUserNotes.this).containsKey(Long.valueOf(this.$userId))) {
                 return;
@@ -226,8 +226,8 @@ public final class StoreUserNotes extends StoreV2 {
         }
     }
 
-    /* compiled from: StoreUserNotes.kt */
-    /* renamed from: com.discord.stores.StoreUserNotes$observeUserNote$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreUserNotes$observeUserNote$1 */
+    /* JADX INFO: compiled from: StoreUserNotes.kt */
     public static final class C65811 extends Lambda implements Function0<UserNoteState> {
         public final /* synthetic */ long $userId;
 
@@ -250,14 +250,14 @@ public final class StoreUserNotes extends StoreV2 {
         }
     }
 
-    /* compiled from: StoreUserNotes.kt */
-    /* renamed from: com.discord.stores.StoreUserNotes$saveNote$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreUserNotes$saveNote$1 */
+    /* JADX INFO: compiled from: StoreUserNotes.kt */
     public static final class C65821 extends Lambda implements Function1<Void, Unit> {
         public final /* synthetic */ String $note;
         public final /* synthetic */ long $userId;
 
-        /* compiled from: StoreUserNotes.kt */
-        /* renamed from: com.discord.stores.StoreUserNotes$saveNote$1$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.stores.StoreUserNotes$saveNote$1$1, reason: invalid class name */
+        /* JADX INFO: compiled from: StoreUserNotes.kt */
         public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
             public AnonymousClass1() {
                 super(0);
@@ -269,7 +269,7 @@ public final class StoreUserNotes extends StoreV2 {
                 return Unit.f27425a;
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2() {
                 C65821 c65821 = C65821.this;
                 StoreUserNotes.access$updateNoteInternal(StoreUserNotes.this, c65821.$userId, c65821.$note);
@@ -289,7 +289,7 @@ public final class StoreUserNotes extends StoreV2 {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Void r2) {
             StoreUserNotes.access$getDispatcher$p(StoreUserNotes.this).schedule(new AnonymousClass1());
         }

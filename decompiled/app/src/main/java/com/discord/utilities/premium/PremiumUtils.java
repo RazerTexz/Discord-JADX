@@ -42,8 +42,8 @@ import p507d0.p580t._Sets;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: PremiumUtils.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: PremiumUtils.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class PremiumUtils {
     public static final float GUILD_BOOST_FOR_PREMIUM_USER_DISCOUNT_PERCENT = 0.3f;
     public static final PremiumUtils INSTANCE = new PremiumUtils();
@@ -58,7 +58,7 @@ public final class PremiumUtils {
     private static final Set<GuildFeature> tier2BoostFeatures;
     private static final Set<GuildFeature> tier3BoostFeatures;
 
-    /* compiled from: PremiumUtils.kt */
+    /* JADX INFO: compiled from: PremiumUtils.kt */
     public static final /* data */ class BoostFeatureBadgeData {
         private final int iconColor;
         private final Function1<View, Unit> onClickListener;
@@ -95,17 +95,17 @@ public final class PremiumUtils {
             return this.onClickListener;
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final int getIconColor() {
             return this.iconColor;
         }
 
-        /* renamed from: component3, reason: from getter */
+        /* JADX INFO: renamed from: component3, reason: from getter */
         public final CharSequence getText() {
             return this.text;
         }
 
-        /* renamed from: component4, reason: from getter */
+        /* JADX INFO: renamed from: component4, reason: from getter */
         public final int getTextColor() {
             return this.textColor;
         }
@@ -173,8 +173,8 @@ public final class PremiumUtils {
         }
     }
 
-    /* compiled from: PremiumUtils.kt */
-    /* renamed from: com.discord.utilities.premium.PremiumUtils$getBoostFeatureBadgeDataForGuildFeature$1 */
+    /* JADX INFO: renamed from: com.discord.utilities.premium.PremiumUtils$getBoostFeatureBadgeDataForGuildFeature$1 */
+    /* JADX INFO: compiled from: PremiumUtils.kt */
     public static final class C68401 extends Lambda implements Function1<View, Unit> {
         public final /* synthetic */ Long $channelId;
         public final /* synthetic */ FragmentManager $fragmentManager;
@@ -198,7 +198,7 @@ public final class PremiumUtils {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(View view) {
             Intrinsics3.checkNotNullParameter(view, "it");
             Guild guild = this.$guild;
@@ -219,6 +219,7 @@ public final class PremiumUtils {
     private PremiumUtils() {
     }
 
+    /* JADX WARN: Multi-variable type inference failed */
     public static /* synthetic */ BoostFeatureBadgeData getBoostFeatureBadgeDataForGuildFeature$default(PremiumUtils premiumUtils, Guild guild, Long l, GuildFeature guildFeature, Context context, FragmentManager fragmentManager, Function1 function1, Traits.Location location, int i, Object obj) {
         return premiumUtils.getBoostFeatureBadgeDataForGuildFeature(guild, l, guildFeature, context, fragmentManager, (i & 32) != 0 ? null : function1, (i & 64) != 0 ? null : location);
     }
@@ -426,7 +427,7 @@ public final class PremiumUtils {
     }
 
     public final int microAmountToMinor(long amount) {
-        return (int) (amount / 10000);
+        return (int) (amount / ((long) 10000));
     }
 
     public final void openAppleBilling(Context context) {

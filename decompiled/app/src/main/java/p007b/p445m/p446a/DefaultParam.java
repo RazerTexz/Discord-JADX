@@ -4,24 +4,24 @@ import java.util.List;
 import java.util.concurrent.TimeUnit;
 import p507d0.p580t.Collections2;
 
-/* compiled from: DefaultParam.kt */
-/* renamed from: b.m.a.c, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.m.a.c, reason: use source file name */
+/* JADX INFO: compiled from: DefaultParam.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class DefaultParam {
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static final long f13640b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public static final long f13641c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public static final long f13642d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public static final DefaultParam f13643e = new DefaultParam();
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final List<String> f13639a = Collections2.listOf((Object[]) new String[]{"2.us.pool.ntp.org", "1.us.pool.ntp.org", "0.us.pool.ntp.org"});
 
     static {

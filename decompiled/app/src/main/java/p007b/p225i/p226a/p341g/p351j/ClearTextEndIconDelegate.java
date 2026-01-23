@@ -14,31 +14,31 @@ import com.google.android.material.C10817R;
 import com.google.android.material.animation.AnimationUtils;
 import com.google.android.material.textfield.TextInputLayout;
 
-/* compiled from: ClearTextEndIconDelegate.java */
-/* renamed from: b.i.a.g.j.a, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.g.j.a, reason: use source file name */
+/* JADX INFO: compiled from: ClearTextEndIconDelegate.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class ClearTextEndIconDelegate extends EndIconDelegate {
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final TextWatcher f11771d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final View.OnFocusChangeListener f11772e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final TextInputLayout.OnEditTextAttachedListener f11773f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public final TextInputLayout.OnEndIconChangedListener f11774g;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public AnimatorSet f11775h;
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public ValueAnimator f11776i;
 
-    /* compiled from: ClearTextEndIconDelegate.java */
-    /* renamed from: b.i.a.g.j.a$a */
+    /* JADX INFO: renamed from: b.i.a.g.j.a$a */
+    /* JADX INFO: compiled from: ClearTextEndIconDelegate.java */
     public class a implements TextWatcher {
         public a() {
         }
@@ -60,8 +60,8 @@ public class ClearTextEndIconDelegate extends EndIconDelegate {
         }
     }
 
-    /* compiled from: ClearTextEndIconDelegate.java */
-    /* renamed from: b.i.a.g.j.a$b */
+    /* JADX INFO: renamed from: b.i.a.g.j.a$b */
+    /* JADX INFO: compiled from: ClearTextEndIconDelegate.java */
     public class b implements View.OnFocusChangeListener {
         public b() {
         }
@@ -72,8 +72,8 @@ public class ClearTextEndIconDelegate extends EndIconDelegate {
         }
     }
 
-    /* compiled from: ClearTextEndIconDelegate.java */
-    /* renamed from: b.i.a.g.j.a$c */
+    /* JADX INFO: renamed from: b.i.a.g.j.a$c */
+    /* JADX INFO: compiled from: ClearTextEndIconDelegate.java */
     public class c implements TextInputLayout.OnEditTextAttachedListener {
         public c() {
         }
@@ -100,15 +100,15 @@ public class ClearTextEndIconDelegate extends EndIconDelegate {
         }
     }
 
-    /* compiled from: ClearTextEndIconDelegate.java */
-    /* renamed from: b.i.a.g.j.a$d */
+    /* JADX INFO: renamed from: b.i.a.g.j.a$d */
+    /* JADX INFO: compiled from: ClearTextEndIconDelegate.java */
     public class d implements TextInputLayout.OnEndIconChangedListener {
 
-        /* compiled from: ClearTextEndIconDelegate.java */
-        /* renamed from: b.i.a.g.j.a$d$a */
+        /* JADX INFO: renamed from: b.i.a.g.j.a$d$a */
+        /* JADX INFO: compiled from: ClearTextEndIconDelegate.java */
         public class a implements Runnable {
 
-            /* renamed from: j */
+            /* JADX INFO: renamed from: j */
             public final /* synthetic */ EditText f11781j;
 
             public a(EditText editText) {
@@ -137,8 +137,8 @@ public class ClearTextEndIconDelegate extends EndIconDelegate {
         }
     }
 
-    /* compiled from: ClearTextEndIconDelegate.java */
-    /* renamed from: b.i.a.g.j.a$e */
+    /* JADX INFO: renamed from: b.i.a.g.j.a$e */
+    /* JADX INFO: compiled from: ClearTextEndIconDelegate.java */
     public class e implements View.OnClickListener {
         public e() {
         }
@@ -162,7 +162,7 @@ public class ClearTextEndIconDelegate extends EndIconDelegate {
     }
 
     @Override // p007b.p225i.p226a.p341g.p351j.EndIconDelegate
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public void mo6146a() {
         this.f11819a.setEndIconDrawable(AppCompatResources.getDrawable(this.f11820b, C10817R.drawable.mtrl_ic_cancel));
         TextInputLayout textInputLayout = this.f11819a;
@@ -192,7 +192,7 @@ public class ClearTextEndIconDelegate extends EndIconDelegate {
     }
 
     @Override // p007b.p225i.p226a.p341g.p351j.EndIconDelegate
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public void mo6147c(boolean z2) {
         if (this.f11819a.getSuffixText() == null) {
             return;
@@ -200,7 +200,7 @@ public class ClearTextEndIconDelegate extends EndIconDelegate {
         m6148d(z2);
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final void m6148d(boolean z2) {
         boolean z3 = this.f11819a.isEndIconVisible() == z2;
         if (z2 && !this.f11775h.isRunning()) {

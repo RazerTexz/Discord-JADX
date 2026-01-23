@@ -8,9 +8,9 @@ import kotlin.Tuples2;
 import p507d0.Tuples;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: PermissionOverwriteUtils.kt */
-/* renamed from: com.discord.utilities.PermissionOverwriteUtilsKt, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.utilities.PermissionOverwriteUtilsKt, reason: use source file name */
+/* JADX INFO: compiled from: PermissionOverwriteUtils.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class PermissionOverwriteUtils {
     public static final boolean allows(PermissionOverwrite permissionOverwrite, long j) {
         Intrinsics3.checkNotNullParameter(permissionOverwrite, "$this$allows");

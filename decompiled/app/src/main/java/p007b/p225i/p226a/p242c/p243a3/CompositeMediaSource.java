@@ -14,33 +14,33 @@ import p007b.p225i.p226a.p242c.p257e3.TransferListener;
 import p007b.p225i.p226a.p242c.p259f3.Util2;
 import p007b.p225i.p226a.p242c.p266w2.DrmSessionEventListener;
 
-/* compiled from: CompositeMediaSource.java */
-/* renamed from: b.i.a.c.a3.o, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.a3.o, reason: use source file name */
+/* JADX INFO: compiled from: CompositeMediaSource.java */
+/* JADX INFO: loaded from: classes3.dex */
 public abstract class CompositeMediaSource<T> extends BaseMediaSource {
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public final HashMap<T, b<T>> f5664g = new HashMap<>();
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     @Nullable
     public Handler f5665h;
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     @Nullable
     public TransferListener f5666i;
 
-    /* compiled from: CompositeMediaSource.java */
-    /* renamed from: b.i.a.c.a3.o$a */
+    /* JADX INFO: renamed from: b.i.a.c.a3.o$a */
+    /* JADX INFO: compiled from: CompositeMediaSource.java */
     public final class a implements MediaSourceEventListener, DrmSessionEventListener {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public final T f5667j;
 
-        /* renamed from: k */
+        /* JADX INFO: renamed from: k */
         public MediaSourceEventListener.a f5668k;
 
-        /* renamed from: l */
+        /* JADX INFO: renamed from: l */
         public DrmSessionEventListener.a f5669l;
 
         public a(T t) {
@@ -50,27 +50,27 @@ public abstract class CompositeMediaSource<T> extends BaseMediaSource {
         }
 
         @Override // p007b.p225i.p226a.p242c.p266w2.DrmSessionEventListener
-        /* renamed from: J */
+        /* JADX INFO: renamed from: J */
         public void mo2567J(int i, @Nullable MediaSource2.a aVar) {
             m2569a(i, aVar);
             this.f5669l.m3588b();
         }
 
         @Override // p007b.p225i.p226a.p242c.p266w2.DrmSessionEventListener
-        /* renamed from: S */
+        /* JADX INFO: renamed from: S */
         public void mo2568S(int i, @Nullable MediaSource2.a aVar) {
             m2569a(i, aVar);
             this.f5669l.m3587a();
         }
 
         @Override // p007b.p225i.p226a.p242c.p243a3.MediaSourceEventListener
-        /* renamed from: X */
+        /* JADX INFO: renamed from: X */
         public void mo2461X(int i, @Nullable MediaSource2.a aVar, LoadEventInfo loadEventInfo, MediaLoadData mediaLoadData) {
             m2569a(i, aVar);
             this.f5668k.m2469d(loadEventInfo, m2570b(mediaLoadData));
         }
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final boolean m2569a(int i, @Nullable MediaSource2.a aVar) {
             MediaSource2.a aVarM2460b;
             if (aVar != null) {
@@ -100,7 +100,7 @@ public abstract class CompositeMediaSource<T> extends BaseMediaSource {
             return true;
         }
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final MediaLoadData m2570b(MediaLoadData mediaLoadData) {
             CompositeMediaSource compositeMediaSource = CompositeMediaSource.this;
             long j = mediaLoadData.f5730f;
@@ -112,73 +112,73 @@ public abstract class CompositeMediaSource<T> extends BaseMediaSource {
         }
 
         @Override // p007b.p225i.p226a.p242c.p266w2.DrmSessionEventListener
-        /* renamed from: c0 */
+        /* JADX INFO: renamed from: c0 */
         public void mo2571c0(int i, @Nullable MediaSource2.a aVar, int i2) {
             m2569a(i, aVar);
             this.f5669l.m3590d(i2);
         }
 
         @Override // p007b.p225i.p226a.p242c.p266w2.DrmSessionEventListener
-        /* renamed from: d0 */
+        /* JADX INFO: renamed from: d0 */
         public void mo2572d0(int i, @Nullable MediaSource2.a aVar) {
             m2569a(i, aVar);
             this.f5669l.m3592f();
         }
 
         @Override // p007b.p225i.p226a.p242c.p243a3.MediaSourceEventListener
-        /* renamed from: g0 */
+        /* JADX INFO: renamed from: g0 */
         public void mo2462g0(int i, @Nullable MediaSource2.a aVar, LoadEventInfo loadEventInfo, MediaLoadData mediaLoadData, IOException iOException, boolean z2) {
             m2569a(i, aVar);
             this.f5668k.m2470e(loadEventInfo, m2570b(mediaLoadData), iOException, z2);
         }
 
         @Override // p007b.p225i.p226a.p242c.p266w2.DrmSessionEventListener
-        /* renamed from: i0 */
+        /* JADX INFO: renamed from: i0 */
         public void mo2573i0(int i, @Nullable MediaSource2.a aVar) {
             m2569a(i, aVar);
             this.f5669l.m3589c();
         }
 
         @Override // p007b.p225i.p226a.p242c.p243a3.MediaSourceEventListener
-        /* renamed from: o */
+        /* JADX INFO: renamed from: o */
         public void mo2463o(int i, @Nullable MediaSource2.a aVar, MediaLoadData mediaLoadData) {
             m2569a(i, aVar);
             this.f5668k.m2467b(m2570b(mediaLoadData));
         }
 
         @Override // p007b.p225i.p226a.p242c.p243a3.MediaSourceEventListener
-        /* renamed from: q */
+        /* JADX INFO: renamed from: q */
         public void mo2464q(int i, @Nullable MediaSource2.a aVar, LoadEventInfo loadEventInfo, MediaLoadData mediaLoadData) {
             m2569a(i, aVar);
             this.f5668k.m2468c(loadEventInfo, m2570b(mediaLoadData));
         }
 
         @Override // p007b.p225i.p226a.p242c.p266w2.DrmSessionEventListener
-        /* renamed from: u */
+        /* JADX INFO: renamed from: u */
         public void mo2574u(int i, @Nullable MediaSource2.a aVar, Exception exc) {
             m2569a(i, aVar);
             this.f5669l.m3591e(exc);
         }
 
         @Override // p007b.p225i.p226a.p242c.p243a3.MediaSourceEventListener
-        /* renamed from: x */
+        /* JADX INFO: renamed from: x */
         public void mo2465x(int i, @Nullable MediaSource2.a aVar, LoadEventInfo loadEventInfo, MediaLoadData mediaLoadData) {
             m2569a(i, aVar);
             this.f5668k.m2471f(loadEventInfo, m2570b(mediaLoadData));
         }
     }
 
-    /* compiled from: CompositeMediaSource.java */
-    /* renamed from: b.i.a.c.a3.o$b */
+    /* JADX INFO: renamed from: b.i.a.c.a3.o$b */
+    /* JADX INFO: compiled from: CompositeMediaSource.java */
     public static final class b<T> {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final MediaSource2 f5671a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final MediaSource2.b f5672b;
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public final CompositeMediaSource<T>.a f5673c;
 
         public b(MediaSource2 mediaSource2, MediaSource2.b bVar, CompositeMediaSource<T>.a aVar) {
@@ -190,7 +190,7 @@ public abstract class CompositeMediaSource<T> extends BaseMediaSource {
 
     @Override // p007b.p225i.p226a.p242c.p243a3.BaseMediaSource
     @CallSuper
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public void mo2551o() {
         for (b<T> bVar : this.f5664g.values()) {
             bVar.f5671a.mo2449d(bVar.f5672b);
@@ -199,14 +199,14 @@ public abstract class CompositeMediaSource<T> extends BaseMediaSource {
 
     @Override // p007b.p225i.p226a.p242c.p243a3.BaseMediaSource
     @CallSuper
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public void mo2552p() {
         for (b<T> bVar : this.f5664g.values()) {
             bVar.f5671a.mo2458m(bVar.f5672b);
         }
     }
 
-    /* renamed from: t */
+    /* JADX INFO: renamed from: t */
     public final void m2566t(T t, MediaSource2 mediaSource2) {
         AnimatableValueParser.m531j(!this.f5664g.containsKey(null));
         MediaSource2.b c2529a = new C2529a(this, null);

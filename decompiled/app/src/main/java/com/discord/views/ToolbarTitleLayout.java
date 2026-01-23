@@ -15,14 +15,14 @@ import com.discord.utilities.view.extensions.ViewExtensions;
 import p007b.p008a.p025i.ViewToolbarTitleBinding;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ToolbarTitleLayout.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: ToolbarTitleLayout.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class ToolbarTitleLayout extends ConstraintLayout {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static final /* synthetic */ int f19165j = 0;
 
-    /* renamed from: k, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: k, reason: from kotlin metadata */
     public final ViewToolbarTitleBinding binding;
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -57,7 +57,7 @@ public final class ToolbarTitleLayout extends ConstraintLayout {
         throw new NullPointerException("Missing required view with ID: ".concat(getResources().getResourceName(i)));
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final void m8564a(CharSequence title, @DrawableRes Integer leftDrawableRes, @DrawableRes Integer trailingDrawableRes) {
         TextView textView = this.binding.f710d;
         Intrinsics3.checkNotNullExpressionValue(textView, "binding.toolbarTitle");

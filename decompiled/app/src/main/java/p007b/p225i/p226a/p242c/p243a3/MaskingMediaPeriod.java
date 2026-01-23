@@ -10,31 +10,31 @@ import p007b.p225i.p226a.p242c.p255c3.ExoTrackSelection2;
 import p007b.p225i.p226a.p242c.p257e3.DefaultAllocator;
 import p007b.p225i.p226a.p242c.p259f3.Util2;
 
-/* compiled from: MaskingMediaPeriod.java */
-/* renamed from: b.i.a.c.a3.u, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.a3.u, reason: use source file name */
+/* JADX INFO: compiled from: MaskingMediaPeriod.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class MaskingMediaPeriod implements MediaPeriod, MediaPeriod.a {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final MediaSource2.a f5705j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final long f5706k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final DefaultAllocator f5707l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public MediaSource2 f5708m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public MediaPeriod f5709n;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     @Nullable
     public MediaPeriod.a f5710o;
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public long f5711p = -9223372036854775807L;
 
     public MaskingMediaPeriod(MediaSource2.a aVar, DefaultAllocator defaultAllocator, long j) {
@@ -44,7 +44,7 @@ public final class MaskingMediaPeriod implements MediaPeriod, MediaPeriod.a {
     }
 
     @Override // p007b.p225i.p226a.p242c.p243a3.SequenceableLoader.a
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public void mo2542a(SequenceableLoader sequenceableLoader) {
         MediaPeriod.a aVar = this.f5710o;
         int i = Util2.f6708a;
@@ -52,7 +52,7 @@ public final class MaskingMediaPeriod implements MediaPeriod, MediaPeriod.a {
     }
 
     @Override // p007b.p225i.p226a.p242c.p243a3.MediaPeriod.a
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public void mo2563b(MediaPeriod mediaPeriod) {
         MediaPeriod.a aVar = this.f5710o;
         int i = Util2.f6708a;
@@ -60,14 +60,14 @@ public final class MaskingMediaPeriod implements MediaPeriod, MediaPeriod.a {
     }
 
     @Override // p007b.p225i.p226a.p242c.p243a3.MediaPeriod
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public long mo2479c() {
         MediaPeriod mediaPeriod = this.f5709n;
         int i = Util2.f6708a;
         return mediaPeriod.mo2479c();
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public void m2590d(MediaSource2.a aVar) {
         long j = this.f5706k;
         long j2 = this.f5711p;
@@ -84,7 +84,7 @@ public final class MaskingMediaPeriod implements MediaPeriod, MediaPeriod.a {
     }
 
     @Override // p007b.p225i.p226a.p242c.p243a3.MediaPeriod
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public void mo2481e() throws IOException {
         try {
             MediaPeriod mediaPeriod = this.f5709n;
@@ -102,7 +102,7 @@ public final class MaskingMediaPeriod implements MediaPeriod, MediaPeriod.a {
     }
 
     @Override // p007b.p225i.p226a.p242c.p243a3.MediaPeriod
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public long mo2482f(long j) {
         MediaPeriod mediaPeriod = this.f5709n;
         int i = Util2.f6708a;
@@ -110,21 +110,21 @@ public final class MaskingMediaPeriod implements MediaPeriod, MediaPeriod.a {
     }
 
     @Override // p007b.p225i.p226a.p242c.p243a3.MediaPeriod
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public boolean mo2483g(long j) {
         MediaPeriod mediaPeriod = this.f5709n;
         return mediaPeriod != null && mediaPeriod.mo2483g(j);
     }
 
     @Override // p007b.p225i.p226a.p242c.p243a3.MediaPeriod
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public boolean mo2484h() {
         MediaPeriod mediaPeriod = this.f5709n;
         return mediaPeriod != null && mediaPeriod.mo2484h();
     }
 
     @Override // p007b.p225i.p226a.p242c.p243a3.MediaPeriod
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public long mo2485i(long j, SeekParameters seekParameters) {
         MediaPeriod mediaPeriod = this.f5709n;
         int i = Util2.f6708a;
@@ -132,7 +132,7 @@ public final class MaskingMediaPeriod implements MediaPeriod, MediaPeriod.a {
     }
 
     @Override // p007b.p225i.p226a.p242c.p243a3.MediaPeriod
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public long mo2487k() {
         MediaPeriod mediaPeriod = this.f5709n;
         int i = Util2.f6708a;
@@ -140,7 +140,7 @@ public final class MaskingMediaPeriod implements MediaPeriod, MediaPeriod.a {
     }
 
     @Override // p007b.p225i.p226a.p242c.p243a3.MediaPeriod
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public void mo2488l(MediaPeriod.a aVar, long j) {
         this.f5710o = aVar;
         MediaPeriod mediaPeriod = this.f5709n;
@@ -155,7 +155,7 @@ public final class MaskingMediaPeriod implements MediaPeriod, MediaPeriod.a {
     }
 
     @Override // p007b.p225i.p226a.p242c.p243a3.MediaPeriod
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public long mo2489m(ExoTrackSelection2[] exoTrackSelection2Arr, boolean[] zArr, SampleStream[] sampleStreamArr, boolean[] zArr2, long j) {
         long j2;
         long j3 = this.f5711p;
@@ -171,7 +171,7 @@ public final class MaskingMediaPeriod implements MediaPeriod, MediaPeriod.a {
     }
 
     @Override // p007b.p225i.p226a.p242c.p243a3.MediaPeriod
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public TrackGroupArray mo2490n() {
         MediaPeriod mediaPeriod = this.f5709n;
         int i = Util2.f6708a;
@@ -179,7 +179,7 @@ public final class MaskingMediaPeriod implements MediaPeriod, MediaPeriod.a {
     }
 
     @Override // p007b.p225i.p226a.p242c.p243a3.MediaPeriod
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     public long mo2493q() {
         MediaPeriod mediaPeriod = this.f5709n;
         int i = Util2.f6708a;
@@ -187,7 +187,7 @@ public final class MaskingMediaPeriod implements MediaPeriod, MediaPeriod.a {
     }
 
     @Override // p007b.p225i.p226a.p242c.p243a3.MediaPeriod
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     public void mo2494r(long j, boolean z2) {
         MediaPeriod mediaPeriod = this.f5709n;
         int i = Util2.f6708a;
@@ -195,7 +195,7 @@ public final class MaskingMediaPeriod implements MediaPeriod, MediaPeriod.a {
     }
 
     @Override // p007b.p225i.p226a.p242c.p243a3.MediaPeriod
-    /* renamed from: s */
+    /* JADX INFO: renamed from: s */
     public void mo2495s(long j) {
         MediaPeriod mediaPeriod = this.f5709n;
         int i = Util2.f6708a;

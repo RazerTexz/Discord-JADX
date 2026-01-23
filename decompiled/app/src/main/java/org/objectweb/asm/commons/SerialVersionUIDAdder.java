@@ -15,7 +15,7 @@ import org.objectweb.asm.FieldVisitor;
 import org.objectweb.asm.MethodVisitor;
 import org.objectweb.asm.Opcodes;
 
-/* loaded from: discord-126021.apk:org/objectweb/asm/commons/SerialVersionUIDAdder.SCL.lombok */
+/* JADX INFO: loaded from: discord-126021.apk:org/objectweb/asm/commons/SerialVersionUIDAdder.SCL.lombok */
 public class SerialVersionUIDAdder extends ClassVisitor {
     private static final String CLINIT = "<clinit>";
     private boolean computeSvuid;
@@ -146,7 +146,7 @@ public class SerialVersionUIDAdder extends ClassVisitor {
                     dataOutputStream.flush();
                     byte[] hashBytes = computeSHAdigest(byteArrayOutputStream.toByteArray());
                     for (int i = Math.min(hashBytes.length, 8) - 1; i >= 0; i--) {
-                        svuid = (svuid << 8) | (hashBytes[i] & 255);
+                        svuid = (svuid << 8) | ((long) (hashBytes[i] & 255));
                     }
                     if (dataOutputStream != null) {
                         if (0 != 0) {
@@ -206,7 +206,7 @@ public class SerialVersionUIDAdder extends ClassVisitor {
         }
     }
 
-    /* loaded from: discord-126021.apk:org/objectweb/asm/commons/SerialVersionUIDAdder$Item.SCL.lombok */
+    /* JADX INFO: loaded from: discord-126021.apk:org/objectweb/asm/commons/SerialVersionUIDAdder$Item.SCL.lombok */
     private static final class Item implements Comparable<Item> {
         final String name;
         final int access;
@@ -223,7 +223,7 @@ public class SerialVersionUIDAdder extends ClassVisitor {
             this.descriptor = descriptor;
         }
 
-        /* renamed from: compareTo, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: compareTo, reason: avoid collision after fix types in other method */
         public int compareTo2(Item item) {
             int result = this.name.compareTo(item.name);
             if (result == 0) {

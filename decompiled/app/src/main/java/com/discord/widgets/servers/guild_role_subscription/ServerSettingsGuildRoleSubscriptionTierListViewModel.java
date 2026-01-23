@@ -19,18 +19,18 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 import p658rx.Observable;
 
-/* compiled from: ServerSettingsGuildRoleSubscriptionTierListViewModel.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: ServerSettingsGuildRoleSubscriptionTierListViewModel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class ServerSettingsGuildRoleSubscriptionTierListViewModel extends AppViewModel<ViewState> {
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private static final int MAX_TIER_ITEMS = 3;
     private final long guildId;
     private final StoreGuildRoleSubscriptions storeGuildRoleSubscriptions;
 
-    /* compiled from: ServerSettingsGuildRoleSubscriptionTierListViewModel.kt */
-    /* renamed from: com.discord.widgets.servers.guild_role_subscription.ServerSettingsGuildRoleSubscriptionTierListViewModel$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.guild_role_subscription.ServerSettingsGuildRoleSubscriptionTierListViewModel$1 */
+    /* JADX INFO: compiled from: ServerSettingsGuildRoleSubscriptionTierListViewModel.kt */
     public static final class C94421 extends Lambda implements Function1<StoreState, Unit> {
         public C94421() {
             super(1);
@@ -42,14 +42,14 @@ public final class ServerSettingsGuildRoleSubscriptionTierListViewModel extends 
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(StoreState storeState) {
             Intrinsics3.checkNotNullParameter(storeState, "storeState");
             ServerSettingsGuildRoleSubscriptionTierListViewModel.access$handleStoreState(ServerSettingsGuildRoleSubscriptionTierListViewModel.this, storeState);
         }
     }
 
-    /* compiled from: ServerSettingsGuildRoleSubscriptionTierListViewModel.kt */
+    /* JADX INFO: compiled from: ServerSettingsGuildRoleSubscriptionTierListViewModel.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -67,7 +67,7 @@ public final class ServerSettingsGuildRoleSubscriptionTierListViewModel extends 
         }
     }
 
-    /* compiled from: ServerSettingsGuildRoleSubscriptionTierListViewModel.kt */
+    /* JADX INFO: compiled from: ServerSettingsGuildRoleSubscriptionTierListViewModel.kt */
     public static final /* data */ class StoreState {
         private final StoreGuildRoleSubscriptions.GuildRoleSubscriptionGroupState guildRoleSubscriptionGroupState;
 
@@ -82,7 +82,7 @@ public final class ServerSettingsGuildRoleSubscriptionTierListViewModel extends 
             return storeState.copy(guildRoleSubscriptionGroupState);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final StoreGuildRoleSubscriptions.GuildRoleSubscriptionGroupState getGuildRoleSubscriptionGroupState() {
             return this.guildRoleSubscriptionGroupState;
         }
@@ -118,10 +118,10 @@ public final class ServerSettingsGuildRoleSubscriptionTierListViewModel extends 
         }
     }
 
-    /* compiled from: ServerSettingsGuildRoleSubscriptionTierListViewModel.kt */
+    /* JADX INFO: compiled from: ServerSettingsGuildRoleSubscriptionTierListViewModel.kt */
     public static abstract class ViewState {
 
-        /* compiled from: ServerSettingsGuildRoleSubscriptionTierListViewModel.kt */
+        /* JADX INFO: compiled from: ServerSettingsGuildRoleSubscriptionTierListViewModel.kt */
         public static final class Failed extends ViewState {
             public static final Failed INSTANCE = new Failed();
 
@@ -130,7 +130,7 @@ public final class ServerSettingsGuildRoleSubscriptionTierListViewModel extends 
             }
         }
 
-        /* compiled from: ServerSettingsGuildRoleSubscriptionTierListViewModel.kt */
+        /* JADX INFO: compiled from: ServerSettingsGuildRoleSubscriptionTierListViewModel.kt */
         public static final /* data */ class Loaded extends ViewState {
             private final List<ServerSettingsGuildRoleSubscriptionTierAdapter2> adapterItems;
             private final long groupListingId;
@@ -159,7 +159,7 @@ public final class ServerSettingsGuildRoleSubscriptionTierListViewModel extends 
                 return this.adapterItems;
             }
 
-            /* renamed from: component2, reason: from getter */
+            /* JADX INFO: renamed from: component2, reason: from getter */
             public final long getGroupListingId() {
                 return this.groupListingId;
             }
@@ -201,7 +201,7 @@ public final class ServerSettingsGuildRoleSubscriptionTierListViewModel extends 
             }
         }
 
-        /* compiled from: ServerSettingsGuildRoleSubscriptionTierListViewModel.kt */
+        /* JADX INFO: compiled from: ServerSettingsGuildRoleSubscriptionTierListViewModel.kt */
         public static final class Loading extends ViewState {
             public static final Loading INSTANCE = new Loading();
 

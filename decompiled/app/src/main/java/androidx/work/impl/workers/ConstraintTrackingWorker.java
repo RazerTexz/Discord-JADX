@@ -20,8 +20,8 @@ import java.util.Collections;
 import java.util.List;
 import p007b.p225i.p355b.p359d.p360a.ListenableFuture8;
 
+/* JADX INFO: loaded from: classes.dex */
 @RestrictTo({RestrictTo.Scope.LIBRARY_GROUP})
-/* loaded from: classes.dex */
 public class ConstraintTrackingWorker extends ListenableWorker implements WorkConstraintsCallback {
     public static final String ARGUMENT_CLASS_NAME = "androidx.work.impl.workers.ConstraintTrackingWorker.ARGUMENT_CLASS_NAME";
     private static final String TAG = Logger.tagWithPrefix("ConstraintTrkngWrkr");
@@ -33,7 +33,7 @@ public class ConstraintTrackingWorker extends ListenableWorker implements WorkCo
     public final Object mLock;
     private WorkerParameters mWorkerParameters;
 
-    /* renamed from: androidx.work.impl.workers.ConstraintTrackingWorker$1 */
+    /* JADX INFO: renamed from: androidx.work.impl.workers.ConstraintTrackingWorker$1 */
     public class RunnableC07881 implements Runnable {
         public RunnableC07881() {
         }
@@ -44,7 +44,7 @@ public class ConstraintTrackingWorker extends ListenableWorker implements WorkCo
         }
     }
 
-    /* renamed from: androidx.work.impl.workers.ConstraintTrackingWorker$2 */
+    /* JADX INFO: renamed from: androidx.work.impl.workers.ConstraintTrackingWorker$2 */
     public class RunnableC07892 implements Runnable {
         public final /* synthetic */ ListenableFuture8 val$innerFuture;
 

@@ -17,25 +17,25 @@ import p507d0.p580t._Collections;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: LazyJavaAnnotations.kt */
-/* renamed from: d0.e0.p.d.m0.e.a.i0.d, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.e.a.i0.d, reason: use source file name */
+/* JADX INFO: compiled from: LazyJavaAnnotations.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class LazyJavaAnnotations implements Annotations4 {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final context4 f23304j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final InterfaceC11570d f23305k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final boolean f23306l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public final storage4<InterfaceC11564a, AnnotationDescriptor> f23307m;
 
-    /* compiled from: LazyJavaAnnotations.kt */
-    /* renamed from: d0.e0.p.d.m0.e.a.i0.d$a */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.e.a.i0.d$a */
+    /* JADX INFO: compiled from: LazyJavaAnnotations.kt */
     public static final class a extends Lambda implements Function1<InterfaceC11564a, AnnotationDescriptor> {
         public a() {
             super(1);
@@ -46,7 +46,7 @@ public final class LazyJavaAnnotations implements Annotations4 {
             return invoke2(interfaceC11564a);
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final AnnotationDescriptor invoke2(InterfaceC11564a interfaceC11564a) {
             Intrinsics3.checkNotNullParameter(interfaceC11564a, "annotation");
             return JavaAnnotationMapper2.f23230a.mapOrResolveJavaAnnotation(interfaceC11564a, LazyJavaAnnotations.access$getC$p(LazyJavaAnnotations.this), LazyJavaAnnotations.access$getAreAnnotationsFreshlySupported$p(LazyJavaAnnotations.this));

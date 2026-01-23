@@ -16,9 +16,9 @@ import kotlin.jvm.functions.Function1;
 import p507d0.p592z.p594d.FunctionReferenceImpl;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: WidgetChangeLogSpecial.kt */
-/* renamed from: com.discord.widgets.changelog.WidgetChangeLogSpecial$binding$2, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.changelog.WidgetChangeLogSpecial$binding$2, reason: use source file name */
+/* JADX INFO: compiled from: WidgetChangeLogSpecial.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final /* synthetic */ class WidgetChangeLogSpecial2 extends FunctionReferenceImpl implements Function1<View, WidgetChangeLogSpecialBinding> {
     public static final WidgetChangeLogSpecial2 INSTANCE = new WidgetChangeLogSpecial2();
 
@@ -31,7 +31,7 @@ public final /* synthetic */ class WidgetChangeLogSpecial2 extends FunctionRefer
         return invoke2(view);
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final WidgetChangeLogSpecialBinding invoke2(View view) {
         Intrinsics3.checkNotNullParameter(view, "p1");
         int i = C5419R.id.change_log_body;

@@ -11,9 +11,9 @@ import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetDebugging.kt */
-/* renamed from: com.discord.widgets.debugging.WidgetDebugging$Adapter$Item$onConfigure$2, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.debugging.WidgetDebugging$Adapter$Item$onConfigure$2, reason: use source file name */
+/* JADX INFO: compiled from: WidgetDebugging.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetDebugging2 extends Lambda implements Function1<View, Unit> {
     public final /* synthetic */ WidgetDebugging.Adapter.Item this$0;
 
@@ -29,7 +29,7 @@ public final class WidgetDebugging2 extends Lambda implements Function1<View, Un
         return Unit.f27425a;
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final void invoke2(View view) {
         Intrinsics3.checkNotNullParameter(view, "it");
         Context contextM885x = outline.m885x(this.this$0.itemView, "itemView", "itemView.context");

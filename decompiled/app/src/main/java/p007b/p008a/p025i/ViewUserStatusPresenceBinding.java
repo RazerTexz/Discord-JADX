@@ -8,24 +8,24 @@ import androidx.annotation.NonNull;
 import androidx.viewbinding.ViewBinding;
 import com.discord.C5419R;
 
-/* compiled from: ViewUserStatusPresenceBinding.java */
-/* renamed from: b.a.i.e4, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.a.i.e4, reason: use source file name */
+/* JADX INFO: compiled from: ViewUserStatusPresenceBinding.java */
+/* JADX INFO: loaded from: classes.dex */
 public final class ViewUserStatusPresenceBinding implements ViewBinding {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     @NonNull
     public final LinearLayout f813a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     @NonNull
     public final ImageView f814b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     @NonNull
     public final TextView f815c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     @NonNull
     public final TextView f816d;
 
@@ -37,7 +37,7 @@ public final class ViewUserStatusPresenceBinding implements ViewBinding {
     }
 
     @NonNull
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static ViewUserStatusPresenceBinding m198a(@NonNull View view) {
         int i = C5419R.id.user_status_presence_dot;
         ImageView imageView = (ImageView) view.findViewById(C5419R.id.user_status_presence_dot);

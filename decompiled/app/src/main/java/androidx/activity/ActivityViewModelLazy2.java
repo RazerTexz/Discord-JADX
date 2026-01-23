@@ -4,9 +4,9 @@ import androidx.view.ViewModelProvider;
 import kotlin.jvm.functions.Function0;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: ActivityViewModelLazy.kt */
-/* renamed from: androidx.activity.ActivityViewModelLazyKt$viewModels$factoryPromise$1, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: androidx.activity.ActivityViewModelLazyKt$viewModels$factoryPromise$1, reason: use source file name */
+/* JADX INFO: compiled from: ActivityViewModelLazy.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class ActivityViewModelLazy2 extends Lambda implements Function0<ViewModelProvider.Factory> {
     public final /* synthetic */ ComponentActivity $this_viewModels;
 

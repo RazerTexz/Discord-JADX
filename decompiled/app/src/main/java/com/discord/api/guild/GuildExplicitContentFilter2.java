@@ -6,9 +6,9 @@ import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: GuildExplicitContentFilter.kt */
-/* renamed from: com.discord.api.guild.GuildExplicitContentFilterTypeAdapter, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: com.discord.api.guild.GuildExplicitContentFilterTypeAdapter, reason: use source file name */
+/* JADX INFO: compiled from: GuildExplicitContentFilter.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class GuildExplicitContentFilter2 extends TypeAdapter<GuildExplicitContentFilter> {
     @Override // com.google.gson.TypeAdapter
     public GuildExplicitContentFilter read(JsonReader jsonReader) throws IOException {

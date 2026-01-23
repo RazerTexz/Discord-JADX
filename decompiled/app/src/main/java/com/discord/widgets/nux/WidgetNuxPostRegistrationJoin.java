@@ -18,16 +18,16 @@ import p507d0.p579g0.StringsJVM;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetNuxPostRegistrationJoin.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetNuxPostRegistrationJoin.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetNuxPostRegistrationJoin extends WidgetGuildJoin {
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private static final String NUX_FLOW_TYPE = "Mobile NUX Post Reg";
     private static final String NUX_STEP = "Ask to join";
 
-    /* compiled from: WidgetNuxPostRegistrationJoin.kt */
+    /* JADX INFO: compiled from: WidgetNuxPostRegistrationJoin.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -42,8 +42,8 @@ public final class WidgetNuxPostRegistrationJoin extends WidgetGuildJoin {
         }
     }
 
-    /* compiled from: WidgetNuxPostRegistrationJoin.kt */
-    /* renamed from: com.discord.widgets.nux.WidgetNuxPostRegistrationJoin$onViewBound$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.nux.WidgetNuxPostRegistrationJoin$onViewBound$1 */
+    /* JADX INFO: compiled from: WidgetNuxPostRegistrationJoin.kt */
     public static final class ViewOnClickListenerC91131 implements View.OnClickListener {
         public final /* synthetic */ long $startTimeMs;
 
@@ -73,8 +73,8 @@ public final class WidgetNuxPostRegistrationJoin extends WidgetGuildJoin {
         }
     }
 
-    /* compiled from: WidgetNuxPostRegistrationJoin.kt */
-    /* renamed from: com.discord.widgets.nux.WidgetNuxPostRegistrationJoin$onViewBound$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.nux.WidgetNuxPostRegistrationJoin$onViewBound$2 */
+    /* JADX INFO: compiled from: WidgetNuxPostRegistrationJoin.kt */
     public static final class C91142 extends Lambda implements Function1<Editable, Unit> {
         public C91142() {
             super(1);
@@ -86,7 +86,7 @@ public final class WidgetNuxPostRegistrationJoin extends WidgetGuildJoin {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Editable editable) {
             Intrinsics3.checkNotNullParameter(editable, "editable");
             WidgetNuxPostRegistrationJoin.this.getBinding().f16852b.setText(StringsJVM.isBlank(editable) ? C5419R.string.nux_post_reg_join_server_skip : C5419R.string.join);

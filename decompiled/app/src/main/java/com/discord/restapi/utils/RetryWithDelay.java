@@ -18,13 +18,13 @@ import p637j0.p641k.Func1;
 import p658rx.Observable;
 import retrofit2.HttpException;
 
-/* compiled from: RetryWithDelay.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: RetryWithDelay.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class RetryWithDelay {
     public static final RetryWithDelay INSTANCE = new RetryWithDelay();
 
-    /* compiled from: RetryWithDelay.kt */
-    /* renamed from: com.discord.restapi.utils.RetryWithDelay$restRetry$1 */
+    /* JADX INFO: renamed from: com.discord.restapi.utils.RetryWithDelay$restRetry$1 */
+    /* JADX INFO: compiled from: RetryWithDelay.kt */
     public static final class C55931 extends Lambda implements Function1<Throwable, Boolean> {
         public static final C55931 INSTANCE = new C55931();
 
@@ -37,7 +37,7 @@ public final class RetryWithDelay {
             return Boolean.valueOf(invoke2(th));
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final boolean invoke2(Throwable th) {
             Response response;
             Request request;
@@ -57,15 +57,15 @@ public final class RetryWithDelay {
         }
     }
 
-    /* compiled from: RetryWithDelay.kt */
-    /* renamed from: com.discord.restapi.utils.RetryWithDelay$restRetry$2 */
+    /* JADX INFO: renamed from: com.discord.restapi.utils.RetryWithDelay$restRetry$2 */
+    /* JADX INFO: compiled from: RetryWithDelay.kt */
     public static final class C55942<T, R> implements Func1<Observable<? extends Throwable>, Observable<?>> {
         public final /* synthetic */ long $delayMillis;
         public final /* synthetic */ Integer $maxHalfLives;
         public final /* synthetic */ Integer $maxRetries;
 
-        /* compiled from: RetryWithDelay.kt */
-        /* renamed from: com.discord.restapi.utils.RetryWithDelay$restRetry$2$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.restapi.utils.RetryWithDelay$restRetry$2$1, reason: invalid class name */
+        /* JADX INFO: compiled from: RetryWithDelay.kt */
         public static final /* synthetic */ class AnonymousClass1 extends FunctionReferenceImpl implements Function1<Throwable, Boolean> {
             public static final AnonymousClass1 INSTANCE = new AnonymousClass1();
 
@@ -78,7 +78,7 @@ public final class RetryWithDelay {
                 return Boolean.valueOf(invoke2(th));
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final boolean invoke2(Throwable th) {
                 Intrinsics3.checkNotNullParameter(th, "p1");
                 return C55931.INSTANCE.invoke2(th);
@@ -96,7 +96,7 @@ public final class RetryWithDelay {
             return call2(observable);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final Observable<?> call2(Observable<? extends Throwable> observable) {
             RetryWithDelay retryWithDelay = RetryWithDelay.INSTANCE;
             Intrinsics3.checkNotNullExpressionValue(observable, "it");
@@ -104,8 +104,8 @@ public final class RetryWithDelay {
         }
     }
 
-    /* compiled from: RetryWithDelay.kt */
-    /* renamed from: com.discord.restapi.utils.RetryWithDelay$restRetry$3 */
+    /* JADX INFO: renamed from: com.discord.restapi.utils.RetryWithDelay$restRetry$3 */
+    /* JADX INFO: compiled from: RetryWithDelay.kt */
     public static final class C55953<T, R> implements Func1<Observable<? extends Throwable>, Observable<?>> {
         public final /* synthetic */ long $delayMillis;
         public final /* synthetic */ Integer $maxHalfLives;
@@ -124,7 +124,7 @@ public final class RetryWithDelay {
             return call2(observable);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final Observable<?> call2(Observable<? extends Throwable> observable) {
             RetryWithDelay retryWithDelay = RetryWithDelay.INSTANCE;
             Intrinsics3.checkNotNullExpressionValue(observable, "it");
@@ -132,8 +132,8 @@ public final class RetryWithDelay {
         }
     }
 
-    /* compiled from: RetryWithDelay.kt */
-    /* renamed from: com.discord.restapi.utils.RetryWithDelay$retryWithDelay$1 */
+    /* JADX INFO: renamed from: com.discord.restapi.utils.RetryWithDelay$retryWithDelay$1 */
+    /* JADX INFO: compiled from: RetryWithDelay.kt */
     public static final class C55961<T, R> implements Func1<Throwable, Observable<? extends Object>> {
         public final /* synthetic */ Ref$LongRef $currentDelayMillis;
         public final /* synthetic */ Ref$IntRef $currentHalfLife;
@@ -156,7 +156,7 @@ public final class RetryWithDelay {
             return call2(th);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final Observable<? extends Object> call2(Throwable th) {
             Ref$IntRef ref$IntRef = this.$currentRetry;
             int i = ref$IntRef.element;
@@ -170,7 +170,7 @@ public final class RetryWithDelay {
                     int i3 = i2 + 1;
                     ref$IntRef2.element = i3;
                     if (i2 < this.$maxHalfLives && i3 > 1) {
-                        this.$currentDelayMillis.element *= 2;
+                        this.$currentDelayMillis.element *= (long) 2;
                     }
                     return Observable.m11068d0(this.$currentDelayMillis.element, TimeUnit.MILLISECONDS);
                 }

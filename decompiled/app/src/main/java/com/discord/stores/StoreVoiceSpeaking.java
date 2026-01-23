@@ -10,15 +10,15 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 import p658rx.Observable;
 
-/* compiled from: StoreVoiceSpeaking.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: StoreVoiceSpeaking.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class StoreVoiceSpeaking extends StoreV2 {
     private final ObservationDeck observationDeck;
     private final HashSet<Long> speakingUsers;
     private Set<Long> speakingUsersSnapshot;
 
-    /* compiled from: StoreVoiceSpeaking.kt */
-    /* renamed from: com.discord.stores.StoreVoiceSpeaking$observeSpeakingUsers$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreVoiceSpeaking$observeSpeakingUsers$1 */
+    /* JADX INFO: compiled from: StoreVoiceSpeaking.kt */
     public static final class C66271 extends Lambda implements Function0<Set<? extends Long>> {
         public C66271() {
             super(0);
@@ -30,7 +30,7 @@ public final class StoreVoiceSpeaking extends StoreV2 {
         }
 
         @Override // kotlin.jvm.functions.Function0
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final Set<? extends Long> invoke2() {
             return StoreVoiceSpeaking.this.getSpeakingUsers();
         }

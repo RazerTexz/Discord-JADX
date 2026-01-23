@@ -1,6 +1,6 @@
 package com.google.firebase.crashlytics.ndk;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public class CrashpadMain {
     public static native void crashpadMain(String[] strArr);
 

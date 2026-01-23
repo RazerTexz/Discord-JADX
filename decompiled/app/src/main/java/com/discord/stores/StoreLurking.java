@@ -35,11 +35,11 @@ import p658rx.Observable;
 import p658rx.functions.Func2;
 import p658rx.subjects.BehaviorSubject;
 
-/* compiled from: StoreLurking.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: StoreLurking.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class StoreLurking {
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private final Dispatcher dispatcher;
     private final StoreGuilds guildsStore;
@@ -49,7 +49,7 @@ public final class StoreLurking {
     private String sessionId;
     private final StoreStream stream;
 
-    /* compiled from: StoreLurking.kt */
+    /* JADX INFO: compiled from: StoreLurking.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -67,7 +67,7 @@ public final class StoreLurking {
         }
     }
 
-    /* compiled from: StoreLurking.kt */
+    /* JADX INFO: compiled from: StoreLurking.kt */
     public static final /* data */ class LurkContext {
         private final long guildId;
         private final boolean shouldNavigate;
@@ -87,12 +87,12 @@ public final class StoreLurking {
             return lurkContext.copy(j, z2);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final long getGuildId() {
             return this.guildId;
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final boolean getShouldNavigate() {
             return this.shouldNavigate;
         }
@@ -121,14 +121,17 @@ public final class StoreLurking {
         }
 
         /* JADX WARN: Multi-variable type inference failed */
+        /* JADX WARN: Type inference failed for: r1v1, types: [int] */
+        /* JADX WARN: Type inference failed for: r1v2 */
+        /* JADX WARN: Type inference failed for: r1v3 */
         public int hashCode() {
             int iM3a = C0002b.m3a(this.guildId) * 31;
             boolean z2 = this.shouldNavigate;
-            int i = z2;
-            if (z2 != 0) {
-                i = 1;
+            ?? r1 = z2;
+            if (z2) {
+                r1 = 1;
             }
-            return iM3a + i;
+            return iM3a + r1;
         }
 
         public String toString() {
@@ -139,7 +142,7 @@ public final class StoreLurking {
         }
     }
 
-    /* compiled from: StoreLurking.kt */
+    /* JADX INFO: compiled from: StoreLurking.kt */
     public static final /* data */ class LurkRequest {
         private final Long channelId;
         private final long guildId;
@@ -159,12 +162,12 @@ public final class StoreLurking {
             return lurkRequest.copy(j, l);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final long getGuildId() {
             return this.guildId;
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final Long getChannelId() {
             return this.channelId;
         }
@@ -210,8 +213,8 @@ public final class StoreLurking {
         }
     }
 
-    /* compiled from: StoreLurking.kt */
-    /* renamed from: com.discord.stores.StoreLurking$getLurkingGuildIds$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreLurking$getLurkingGuildIds$1 */
+    /* JADX INFO: compiled from: StoreLurking.kt */
     public static final class C61451<T, R> implements Func1<Map<Long, LurkContext>, Set<? extends Long>> {
         public static final C61451 INSTANCE = new C61451();
 
@@ -220,14 +223,14 @@ public final class StoreLurking {
             return call2(map);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final Set<Long> call2(Map<Long, LurkContext> map) {
             return map.keySet();
         }
     }
 
-    /* compiled from: StoreLurking.kt */
-    /* renamed from: com.discord.stores.StoreLurking$isLurkingObs$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreLurking$isLurkingObs$1 */
+    /* JADX INFO: compiled from: StoreLurking.kt */
     public static final class C61461<T1, T2, R> implements Func2<Set<? extends Long>, Guild, Boolean> {
         public static final C61461 INSTANCE = new C61461();
 
@@ -236,7 +239,7 @@ public final class StoreLurking {
             return call2((Set<Long>) set, guild);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final Boolean call2(Set<Long> set, Guild guild) {
             if (guild != null) {
                 Companion companion = StoreLurking.INSTANCE;
@@ -249,8 +252,8 @@ public final class StoreLurking {
         }
     }
 
-    /* compiled from: StoreLurking.kt */
-    /* renamed from: com.discord.stores.StoreLurking$postJoinGuildAsMember$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreLurking$postJoinGuildAsMember$1 */
+    /* JADX INFO: compiled from: StoreLurking.kt */
     public static final class C61471 extends Lambda implements Function1<com.discord.api.guild.Guild, Unit> {
         public static final C61471 INSTANCE = new C61471();
 
@@ -264,14 +267,14 @@ public final class StoreLurking {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(com.discord.api.guild.Guild guild) {
             Intrinsics3.checkNotNullParameter(guild, "it");
         }
     }
 
-    /* compiled from: StoreLurking.kt */
-    /* renamed from: com.discord.stores.StoreLurking$postLeaveGuild$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreLurking$postLeaveGuild$1 */
+    /* JADX INFO: compiled from: StoreLurking.kt */
     public static final class C61481 extends Lambda implements Function0<Unit> {
         public static final C61481 INSTANCE = new C61481();
 
@@ -285,13 +288,13 @@ public final class StoreLurking {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
         }
     }
 
-    /* compiled from: StoreLurking.kt */
-    /* renamed from: com.discord.stores.StoreLurking$postLeaveGuild$2 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreLurking$postLeaveGuild$2 */
+    /* JADX INFO: compiled from: StoreLurking.kt */
     public static final class C61492 extends Lambda implements Function0<Unit> {
         public static final C61492 INSTANCE = new C61492();
 
@@ -305,13 +308,13 @@ public final class StoreLurking {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
         }
     }
 
-    /* compiled from: StoreLurking.kt */
-    /* renamed from: com.discord.stores.StoreLurking$postLeaveGuild$3 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreLurking$postLeaveGuild$3 */
+    /* JADX INFO: compiled from: StoreLurking.kt */
     public static final class C61503 extends Lambda implements Function1<Error, Unit> {
         public final /* synthetic */ Function0 $onFailure;
 
@@ -327,15 +330,15 @@ public final class StoreLurking {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Error error) {
             Intrinsics3.checkNotNullParameter(error, "it");
             this.$onFailure.invoke();
         }
     }
 
-    /* compiled from: StoreLurking.kt */
-    /* renamed from: com.discord.stores.StoreLurking$postLeaveGuild$4 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreLurking$postLeaveGuild$4 */
+    /* JADX INFO: compiled from: StoreLurking.kt */
     public static final class C61514 extends Lambda implements Function1<Void, Unit> {
         public final /* synthetic */ Function0 $onSuccess;
 
@@ -351,14 +354,14 @@ public final class StoreLurking {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Void r1) {
             this.$onSuccess.invoke();
         }
     }
 
-    /* compiled from: StoreLurking.kt */
-    /* renamed from: com.discord.stores.StoreLurking$startLurking$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreLurking$startLurking$1 */
+    /* JADX INFO: compiled from: StoreLurking.kt */
     public static final class C61521 extends Lambda implements Function3<Guild, Long, Boolean, Unit> {
         public static final C61521 INSTANCE = new C61521();
 
@@ -377,8 +380,8 @@ public final class StoreLurking {
         }
     }
 
-    /* compiled from: StoreLurking.kt */
-    /* renamed from: com.discord.stores.StoreLurking$startLurking$2 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreLurking$startLurking$2 */
+    /* JADX INFO: compiled from: StoreLurking.kt */
     public static final class C61532 extends Lambda implements Function0<Unit> {
         public static final C61532 INSTANCE = new C61532();
 
@@ -392,13 +395,13 @@ public final class StoreLurking {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
         }
     }
 
-    /* compiled from: StoreLurking.kt */
-    /* renamed from: com.discord.stores.StoreLurking$startLurking$3 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreLurking$startLurking$3 */
+    /* JADX INFO: compiled from: StoreLurking.kt */
     public static final class C61543 extends Lambda implements Function0<Unit> {
         public final /* synthetic */ Long $channelId;
         public final /* synthetic */ long $guildId;
@@ -422,25 +425,25 @@ public final class StoreLurking {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             StoreLurking.startLurkingInternal$default(StoreLurking.this, this.$guildId, this.$channelId, this.$navigateToGuild, this.$onGuildLurked, this.$onErrorLurking, null, 32, null);
         }
     }
 
-    /* compiled from: StoreLurking.kt */
-    /* renamed from: com.discord.stores.StoreLurking$startLurkingAndNavigate$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreLurking$startLurkingAndNavigate$1 */
+    /* JADX INFO: compiled from: StoreLurking.kt */
     public static final class C61551 extends Lambda implements Function0<Unit> {
         public final /* synthetic */ Long $channelId;
         public final /* synthetic */ Context $context;
         public final /* synthetic */ long $guildId;
 
-        /* compiled from: StoreLurking.kt */
-        /* renamed from: com.discord.stores.StoreLurking$startLurkingAndNavigate$1$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.stores.StoreLurking$startLurkingAndNavigate$1$1, reason: invalid class name */
+        /* JADX INFO: compiled from: StoreLurking.kt */
         public static final class AnonymousClass1 extends Lambda implements Function3<Guild, Long, Boolean, Unit> {
 
-            /* compiled from: StoreLurking.kt */
-            /* renamed from: com.discord.stores.StoreLurking$startLurkingAndNavigate$1$1$1, reason: invalid class name and collision with other inner class name */
+            /* JADX INFO: renamed from: com.discord.stores.StoreLurking$startLurkingAndNavigate$1$1$1, reason: invalid class name and collision with other inner class name */
+            /* JADX INFO: compiled from: StoreLurking.kt */
             public static final class C132601 extends Lambda implements Function1<FragmentActivity, Boolean> {
                 public static final C132601 INSTANCE = new C132601();
 
@@ -453,7 +456,7 @@ public final class StoreLurking {
                     return Boolean.valueOf(invoke2(fragmentActivity));
                 }
 
-                /* renamed from: invoke, reason: avoid collision after fix types in other method */
+                /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
                 public final boolean invoke2(FragmentActivity fragmentActivity) {
                     Intrinsics3.checkNotNullParameter(fragmentActivity, "it");
                     StoreNavigation.setNavigationPanelAction$default(StoreStream.INSTANCE.getNavigation(), StoreNavigation.PanelAction.OPEN, null, 2, null);
@@ -504,7 +507,7 @@ public final class StoreLurking {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             if (StoreLurking.access$getSessionId$p(StoreLurking.this) != null) {
                 StoreLurking.startLurkingInternal$default(StoreLurking.this, this.$guildId, this.$channelId, false, new AnonymousClass1(), null, this.$context, 20, null);
@@ -519,8 +522,8 @@ public final class StoreLurking {
         }
     }
 
-    /* compiled from: StoreLurking.kt */
-    /* renamed from: com.discord.stores.StoreLurking$startLurkingInternal$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreLurking$startLurkingInternal$1 */
+    /* JADX INFO: compiled from: StoreLurking.kt */
     public static final class C61561 extends Lambda implements Function3<Guild, Long, Boolean, Unit> {
         public static final C61561 INSTANCE = new C61561();
 
@@ -539,8 +542,8 @@ public final class StoreLurking {
         }
     }
 
-    /* compiled from: StoreLurking.kt */
-    /* renamed from: com.discord.stores.StoreLurking$startLurkingInternal$2 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreLurking$startLurkingInternal$2 */
+    /* JADX INFO: compiled from: StoreLurking.kt */
     public static final class C61572 extends Lambda implements Function0<Unit> {
         public static final C61572 INSTANCE = new C61572();
 
@@ -554,18 +557,18 @@ public final class StoreLurking {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
         }
     }
 
-    /* compiled from: StoreLurking.kt */
-    /* renamed from: com.discord.stores.StoreLurking$startLurkingInternal$3 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreLurking$startLurkingInternal$3 */
+    /* JADX INFO: compiled from: StoreLurking.kt */
     public static final class C61583 extends Lambda implements Function1<Error, Unit> {
         public final /* synthetic */ long $guildId;
 
-        /* compiled from: StoreLurking.kt */
-        /* renamed from: com.discord.stores.StoreLurking$startLurkingInternal$3$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.stores.StoreLurking$startLurkingInternal$3$1, reason: invalid class name */
+        /* JADX INFO: compiled from: StoreLurking.kt */
         public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
             public AnonymousClass1() {
                 super(0);
@@ -577,7 +580,7 @@ public final class StoreLurking {
                 return Unit.f27425a;
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2() {
                 StoreLurking.access$getLurkedGuilds$p(StoreLurking.this).remove(Long.valueOf(C61583.this.$guildId));
                 StoreLurking.access$getLurkedGuildsSubject$p(StoreLurking.this).onNext(StoreLurking.access$getLurkedGuilds$p(StoreLurking.this));
@@ -596,7 +599,7 @@ public final class StoreLurking {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Error error) {
             Intrinsics3.checkNotNullParameter(error, "it");
             error.setShowErrorToasts(StoreLurking.this.isLurking$app_productionGoogleRelease(this.$guildId));
@@ -604,15 +607,15 @@ public final class StoreLurking {
         }
     }
 
-    /* compiled from: StoreLurking.kt */
-    /* renamed from: com.discord.stores.StoreLurking$startLurkingInternal$4 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreLurking$startLurkingInternal$4 */
+    /* JADX INFO: compiled from: StoreLurking.kt */
     public static final class C61594 extends Lambda implements Function1<com.discord.api.guild.Guild, Unit> {
         public final /* synthetic */ Long $channelId;
         public final /* synthetic */ long $guildId;
         public final /* synthetic */ Function3 $onGuildLurked;
 
-        /* compiled from: StoreLurking.kt */
-        /* renamed from: com.discord.stores.StoreLurking$startLurkingInternal$4$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.stores.StoreLurking$startLurkingInternal$4$1, reason: invalid class name */
+        /* JADX INFO: compiled from: StoreLurking.kt */
         public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
             public final /* synthetic */ com.discord.api.guild.Guild $it;
 
@@ -628,7 +631,7 @@ public final class StoreLurking {
                 return Unit.f27425a;
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2() {
                 if (!StoreLurking.this.isLurking$app_productionGoogleRelease(this.$it)) {
                     StoreLurking.access$getLurkedGuilds$p(StoreLurking.this).remove(Long.valueOf(C61594.this.$guildId));
@@ -652,7 +655,7 @@ public final class StoreLurking {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(com.discord.api.guild.Guild guild) {
             Intrinsics3.checkNotNullParameter(guild, "it");
             StoreLurking.access$getDispatcher$p(StoreLurking.this).schedule(new AnonymousClass1(guild));
@@ -717,6 +720,7 @@ public final class StoreLurking {
         storeLurking.postLeaveGuild(j, function0, function02);
     }
 
+    /* JADX WARN: Multi-variable type inference failed */
     public static /* synthetic */ void startLurking$default(StoreLurking storeLurking, long j, Long l, boolean z2, Function3 function3, Function0 function0, int i, Object obj) {
         boolean z3 = (i & 4) != 0 ? true : z2;
         if ((i & 8) != 0) {
@@ -758,6 +762,7 @@ public final class StoreLurking {
         onErrorLurking.invoke();
     }
 
+    /* JADX WARN: Multi-variable type inference failed */
     public static /* synthetic */ void startLurkingInternal$default(StoreLurking storeLurking, long j, Long l, boolean z2, Function3 function3, Function0 function0, Context context, int i, Object obj) {
         storeLurking.startLurkingInternal(j, l, (i & 4) != 0 ? false : z2, (i & 8) != 0 ? C61561.INSTANCE : function3, (i & 16) != 0 ? C61572.INSTANCE : function0, (i & 32) != 0 ? null : context);
     }

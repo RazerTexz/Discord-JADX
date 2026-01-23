@@ -10,8 +10,8 @@ import p507d0.p579g0.Strings4;
 import p507d0.p580t.Collections2;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: Application.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: Application.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class Application {
     private final String coverImage;
     private final String deeplinkUri;
@@ -25,7 +25,7 @@ public final /* data */ class Application {
     private final List<ThirdPartySku> thirdPartySkus;
     private final ApplicationType type;
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final String m7563a() {
         String strRemoveSuffix;
         String strM883w;
@@ -33,17 +33,17 @@ public final /* data */ class Application {
         return (str == null || (strRemoveSuffix = Strings4.removeSuffix(str, AutocompleteViewModel.COMMAND_DISCOVER_TOKEN)) == null || (strM883w = outline.m883w(strRemoveSuffix, "/_discord")) == null) ? outline.m815C(outline.m833U("dscd"), this.id, "://connect/_discord") : strM883w;
     }
 
-    /* renamed from: b, reason: from getter */
+    /* JADX INFO: renamed from: b, reason: from getter */
     public final String getCoverImage() {
         return this.coverImage;
     }
 
-    /* renamed from: c, reason: from getter */
+    /* JADX INFO: renamed from: c, reason: from getter */
     public final String getDescription() {
         return this.description;
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final List<String> m7566d() {
         List<ThirdPartySku> list = this.thirdPartySkus;
         if (list == null) {
@@ -66,7 +66,7 @@ public final /* data */ class Application {
         return arrayList2;
     }
 
-    /* renamed from: e, reason: from getter */
+    /* JADX INFO: renamed from: e, reason: from getter */
     public final Long getGuildId() {
         return this.guildId;
     }
@@ -82,17 +82,17 @@ public final /* data */ class Application {
         return this.id == application.id && Intrinsics3.areEqual(this.name, application.name) && Intrinsics3.areEqual(this.description, application.description) && Intrinsics3.areEqual(this.splash, application.splash) && Intrinsics3.areEqual(this.coverImage, application.coverImage) && Intrinsics3.areEqual(this.icon, application.icon) && Intrinsics3.areEqual(this.thirdPartySkus, application.thirdPartySkus) && Intrinsics3.areEqual(this.deeplinkUri, application.deeplinkUri) && Intrinsics3.areEqual(this.type, application.type) && Intrinsics3.areEqual(this.guildId, application.guildId) && Intrinsics3.areEqual(this.team, application.team);
     }
 
-    /* renamed from: f, reason: from getter */
+    /* JADX INFO: renamed from: f, reason: from getter */
     public final String getIcon() {
         return this.icon;
     }
 
-    /* renamed from: g, reason: from getter */
+    /* JADX INFO: renamed from: g, reason: from getter */
     public final long getId() {
         return this.id;
     }
 
-    /* renamed from: h, reason: from getter */
+    /* JADX INFO: renamed from: h, reason: from getter */
     public final String getName() {
         return this.name;
     }
@@ -122,12 +122,12 @@ public final /* data */ class Application {
         return iHashCode9 + (team != null ? team.hashCode() : 0);
     }
 
-    /* renamed from: i, reason: from getter */
+    /* JADX INFO: renamed from: i, reason: from getter */
     public final String getSplash() {
         return this.splash;
     }
 
-    /* renamed from: j, reason: from getter */
+    /* JADX INFO: renamed from: j, reason: from getter */
     public final ApplicationType getType() {
         return this.type;
     }

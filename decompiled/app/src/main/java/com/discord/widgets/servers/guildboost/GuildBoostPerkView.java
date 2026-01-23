@@ -33,14 +33,14 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 import p600f0.p601e0.Util7;
 
-/* compiled from: GuildBoostPerkView.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: GuildBoostPerkView.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class GuildBoostPerkView extends RelativeLayout {
     private GuildBoostPerkViewAdapter adapter;
     private final ViewNitroBoostPerksBinding binding;
 
-    /* compiled from: GuildBoostPerkView.kt */
-    /* renamed from: com.discord.widgets.servers.guildboost.GuildBoostPerkView$configure$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.guildboost.GuildBoostPerkView$configure$1 */
+    /* JADX INFO: compiled from: GuildBoostPerkView.kt */
     public static final class C94981 extends Lambda implements Function2<Integer, Boolean, Integer> {
         public static final C94981 INSTANCE = new C94981();
 
@@ -58,8 +58,8 @@ public final class GuildBoostPerkView extends RelativeLayout {
         }
     }
 
-    /* compiled from: GuildBoostPerkView.kt */
-    /* renamed from: com.discord.widgets.servers.guildboost.GuildBoostPerkView$initialize$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.guildboost.GuildBoostPerkView$initialize$1 */
+    /* JADX INFO: compiled from: GuildBoostPerkView.kt */
     public static final class C94991 implements RecyclerView.OnItemTouchListener {
         @Override // androidx.recyclerview.widget.RecyclerView.OnItemTouchListener
         public boolean onInterceptTouchEvent(RecyclerView rv, MotionEvent e) {

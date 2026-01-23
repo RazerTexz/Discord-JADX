@@ -37,23 +37,23 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 import p507d0.p592z.p594d.Reflection2;
 
-/* compiled from: PublishActionDialog.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: PublishActionDialog.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class PublishActionDialog extends AppDialog {
     private static final String ARG_THEME_ID = "theme_id";
 
-    /* renamed from: binding$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
     private Function0<Unit> onSuccess;
 
-    /* renamed from: viewModel$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: viewModel$delegate, reason: from kotlin metadata */
     private final Lazy viewModel;
     public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(PublishActionDialog.class, "binding", "getBinding()Lcom/discord/databinding/PublishMessageDialogBinding;", 0)};
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
 
-    /* compiled from: PublishActionDialog.kt */
+    /* JADX INFO: compiled from: PublishActionDialog.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -82,8 +82,8 @@ public final class PublishActionDialog extends AppDialog {
         }
     }
 
-    /* compiled from: PublishActionDialog.kt */
-    /* renamed from: com.discord.widgets.chat.list.PublishActionDialog$onViewBound$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.list.PublishActionDialog$onViewBound$1 */
+    /* JADX INFO: compiled from: PublishActionDialog.kt */
     public static final class C79411 extends Lambda implements Function0<Unit> {
         public C79411() {
             super(0);
@@ -95,14 +95,14 @@ public final class PublishActionDialog extends AppDialog {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             PublishActionDialog.this.dismiss();
         }
     }
 
-    /* compiled from: PublishActionDialog.kt */
-    /* renamed from: com.discord.widgets.chat.list.PublishActionDialog$onViewBound$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.list.PublishActionDialog$onViewBound$2 */
+    /* JADX INFO: compiled from: PublishActionDialog.kt */
     public static final class ViewOnClickListenerC79422 implements View.OnClickListener {
         public ViewOnClickListenerC79422() {
         }
@@ -117,8 +117,8 @@ public final class PublishActionDialog extends AppDialog {
         }
     }
 
-    /* compiled from: PublishActionDialog.kt */
-    /* renamed from: com.discord.widgets.chat.list.PublishActionDialog$onViewBound$3 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.list.PublishActionDialog$onViewBound$3 */
+    /* JADX INFO: compiled from: PublishActionDialog.kt */
     public static final class ViewOnClickListenerC79433 implements View.OnClickListener {
         public ViewOnClickListenerC79433() {
         }
@@ -129,8 +129,8 @@ public final class PublishActionDialog extends AppDialog {
         }
     }
 
-    /* compiled from: PublishActionDialog.kt */
-    /* renamed from: com.discord.widgets.chat.list.PublishActionDialog$onViewBoundOrOnResume$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.list.PublishActionDialog$onViewBoundOrOnResume$1 */
+    /* JADX INFO: compiled from: PublishActionDialog.kt */
     public static final /* synthetic */ class C79441 extends FunctionReferenceImpl implements Function1<PublishActionDialogViewModel.ViewState, Unit> {
         public C79441(PublishActionDialog publishActionDialog) {
             super(1, publishActionDialog, PublishActionDialog.class, "updateView", "updateView(Lcom/discord/widgets/chat/list/PublishActionDialogViewModel$ViewState;)V", 0);
@@ -142,15 +142,15 @@ public final class PublishActionDialog extends AppDialog {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(PublishActionDialogViewModel.ViewState viewState) {
             Intrinsics3.checkNotNullParameter(viewState, "p1");
             PublishActionDialog.access$updateView((PublishActionDialog) this.receiver, viewState);
         }
     }
 
-    /* compiled from: PublishActionDialog.kt */
-    /* renamed from: com.discord.widgets.chat.list.PublishActionDialog$onViewBoundOrOnResume$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.list.PublishActionDialog$onViewBoundOrOnResume$2 */
+    /* JADX INFO: compiled from: PublishActionDialog.kt */
     public static final /* synthetic */ class C79452 extends FunctionReferenceImpl implements Function1<PublishActionDialogViewModel.Event, Unit> {
         public C79452(PublishActionDialog publishActionDialog) {
             super(1, publishActionDialog, PublishActionDialog.class, "handleEvent", "handleEvent(Lcom/discord/widgets/chat/list/PublishActionDialogViewModel$Event;)V", 0);
@@ -162,7 +162,7 @@ public final class PublishActionDialog extends AppDialog {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(PublishActionDialogViewModel.Event event) {
             Intrinsics3.checkNotNullParameter(event, "p1");
             PublishActionDialog.access$handleEvent((PublishActionDialog) this.receiver, event);

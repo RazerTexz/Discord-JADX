@@ -11,9 +11,9 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: QueryParser.kt */
-/* renamed from: com.discord.utilities.search.query.parsing.QueryParser$Companion$getFromFilterRule$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.utilities.search.query.parsing.QueryParser$Companion$getFromFilterRule$1, reason: use source file name */
+/* JADX INFO: compiled from: QueryParser.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class QueryParser3 extends Rule<Context, QueryNode, Object> {
     public final /* synthetic */ Pattern $fromFilterPattern;
     public final /* synthetic */ CharSequence $localizedFrom;

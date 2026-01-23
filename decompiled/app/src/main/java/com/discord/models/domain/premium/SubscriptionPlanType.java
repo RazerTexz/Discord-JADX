@@ -27,12 +27,12 @@ jadx.core.utils.exceptions.JadxRuntimeException: Init of enum field 'NONE_MONTH'
 	at jadx.core.dex.visitors.EnumVisitor.visit(EnumVisitor.java:100)
  */
 /* JADX WARN: Failed to restore enum class, 'enum' modifier and super class removed */
-/* compiled from: SubscriptionPlanType.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: SubscriptionPlanType.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class SubscriptionPlanType {
     private static final /* synthetic */ SubscriptionPlanType[] $VALUES;
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE;
     private static final Set<SubscriptionPlanType> LEGACY_PLANS;
     public static final SubscriptionPlanType NONE_3_MONTH;
@@ -64,7 +64,7 @@ public final class SubscriptionPlanType {
     private final PremiumTier premiumTier;
     private final int price;
 
-    /* compiled from: SubscriptionPlanType.kt */
+    /* JADX INFO: compiled from: SubscriptionPlanType.kt */
     public static final class Companion {
 
         public final /* synthetic */ class WhenMappings {

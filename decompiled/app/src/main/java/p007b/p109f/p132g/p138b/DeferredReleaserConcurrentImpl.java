@@ -7,28 +7,28 @@ import androidx.annotation.MainThread;
 import java.util.ArrayList;
 import p007b.p109f.p132g.p138b.DeferredReleaser;
 
-/* compiled from: DeferredReleaserConcurrentImpl.java */
-/* renamed from: b.f.g.b.b, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.f.g.b.b, reason: use source file name */
+/* JADX INFO: compiled from: DeferredReleaserConcurrentImpl.java */
+/* JADX INFO: loaded from: classes.dex */
 public class DeferredReleaserConcurrentImpl extends DeferredReleaser {
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final Object f3254b = new Object();
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final Runnable f3258f = new a();
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public ArrayList<DeferredReleaser.a> f3256d = new ArrayList<>();
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public ArrayList<DeferredReleaser.a> f3257e = new ArrayList<>();
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final Handler f3255c = new Handler(Looper.getMainLooper());
 
-    /* compiled from: DeferredReleaserConcurrentImpl.java */
-    /* renamed from: b.f.g.b.b$a */
+    /* JADX INFO: renamed from: b.f.g.b.b$a */
+    /* JADX INFO: compiled from: DeferredReleaserConcurrentImpl.java */
     public class a implements Runnable {
         public a() {
         }
@@ -54,7 +54,7 @@ public class DeferredReleaserConcurrentImpl extends DeferredReleaser {
 
     @Override // p007b.p109f.p132g.p138b.DeferredReleaser
     @AnyThread
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public void mo1083a(DeferredReleaser.a aVar) {
         synchronized (this.f3254b) {
             this.f3256d.remove(aVar);

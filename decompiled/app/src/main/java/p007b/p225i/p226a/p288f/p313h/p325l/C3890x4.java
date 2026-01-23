@@ -8,18 +8,18 @@ import java.util.Objects;
 import java.util.RandomAccess;
 import p007b.p100d.p104b.p105a.outline;
 
-/* compiled from: com.google.android.gms:play-services-measurement-base@@18.0.0 */
-/* renamed from: b.i.a.f.h.l.x4 */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.h.l.x4 */
+/* JADX INFO: compiled from: com.google.android.gms:play-services-measurement-base@@18.0.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public final class C3890x4 extends AbstractC3772o3<Integer> implements InterfaceC3916z4, InterfaceC3736l6, RandomAccess {
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public static final C3890x4 f10400k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public int[] f10401l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public int f10402m;
 
     static {
@@ -88,7 +88,7 @@ public final class C3890x4 extends AbstractC3772o3<Integer> implements Interface
         return indexOf(obj) != -1;
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final InterfaceC3916z4 m5356d(int i) {
         if (i >= this.f10402m) {
             return new C3890x4(Arrays.copyOf(this.f10401l, i), this.f10402m);
@@ -96,7 +96,7 @@ public final class C3890x4 extends AbstractC3772o3<Integer> implements Interface
         throw new IllegalArgumentException();
     }
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final int m5357e(int i) {
         m5359h(i);
         return this.f10401l[i];
@@ -124,12 +124,12 @@ public final class C3890x4 extends AbstractC3772o3<Integer> implements Interface
     }
 
     @Override // p007b.p225i.p226a.p288f.p313h.p325l.InterfaceC3597b5
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final /* synthetic */ InterfaceC3597b5<Integer> mo4569f(int i) {
         return m5356d(i);
     }
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public final void m5358g(int i) {
         m5153c();
         int i2 = this.f10402m;
@@ -151,7 +151,7 @@ public final class C3890x4 extends AbstractC3772o3<Integer> implements Interface
         return Integer.valueOf(this.f10401l[i]);
     }
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public final void m5359h(int i) {
         if (i < 0 || i >= this.f10402m) {
             throw new IndexOutOfBoundsException(m5360i(i));
@@ -167,7 +167,7 @@ public final class C3890x4 extends AbstractC3772o3<Integer> implements Interface
         return i;
     }
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public final String m5360i(int i) {
         return outline.m853h(35, "Index:", i, ", Size:", this.f10402m);
     }

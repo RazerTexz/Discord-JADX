@@ -6,25 +6,25 @@ import p507d0.LazyJVM;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: FormattingParserProvider.kt */
-/* renamed from: b.a.k.g.d, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.a.k.g.d, reason: use source file name */
+/* JADX INFO: compiled from: FormattingParserProvider.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class FormattingParserProvider2 extends FormattingParserProvider {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final Lazy f1503a = LazyJVM.lazy(a.f1506j);
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static final FormattingParserProvider2 f1504b = null;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final ThreadLocal<FormattingParser> f1505c = new b();
 
-    /* compiled from: FormattingParserProvider.kt */
-    /* renamed from: b.a.k.g.d$a */
+    /* JADX INFO: renamed from: b.a.k.g.d$a */
+    /* JADX INFO: compiled from: FormattingParserProvider.kt */
     public static final class a extends Lambda implements Function0<FormattingParserProvider2> {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public static final a f1506j = new a();
 
         public a() {
@@ -37,8 +37,8 @@ public final class FormattingParserProvider2 extends FormattingParserProvider {
         }
     }
 
-    /* compiled from: FormattingParserProvider.kt */
-    /* renamed from: b.a.k.g.d$b */
+    /* JADX INFO: renamed from: b.a.k.g.d$b */
+    /* JADX INFO: compiled from: FormattingParserProvider.kt */
     public static final class b extends ThreadLocal<FormattingParser> {
         @Override // java.lang.ThreadLocal
         public FormattingParser initialValue() {
@@ -47,7 +47,7 @@ public final class FormattingParserProvider2 extends FormattingParserProvider {
     }
 
     @Override // p007b.p008a.p027k.p030g.FormattingParserProvider
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public FormattingParser mo224a() {
         FormattingParser formattingParser = this.f1505c.get();
         Intrinsics3.checkNotNull(formattingParser);

@@ -4,9 +4,9 @@ import kotlin.Unit;
 import kotlin.jvm.functions.Function1;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: KotlinExtensions.kt */
-/* renamed from: i0.l, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: i0.l, reason: use source file name */
+/* JADX INFO: compiled from: KotlinExtensions.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class KotlinExtensions2 extends Lambda implements Function1<Throwable, Unit> {
     public final /* synthetic */ Call3 $this_await$inlined;
 

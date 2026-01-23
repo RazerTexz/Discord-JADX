@@ -5,34 +5,34 @@ import p007b.p195g.p196a.p205c.JavaType;
 import p007b.p195g.p196a.p205c.JsonSerializer;
 import p007b.p195g.p196a.p205c.p219i0.TypeKey;
 
-/* compiled from: ReadOnlyClassToSerializerMap.java */
-/* renamed from: b.g.a.c.g0.t.m, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.g.a.c.g0.t.m, reason: use source file name */
+/* JADX INFO: compiled from: ReadOnlyClassToSerializerMap.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class ReadOnlyClassToSerializerMap {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final a[] f4836a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final int f4837b;
 
-    /* compiled from: ReadOnlyClassToSerializerMap.java */
-    /* renamed from: b.g.a.c.g0.t.m$a */
+    /* JADX INFO: renamed from: b.g.a.c.g0.t.m$a */
+    /* JADX INFO: compiled from: ReadOnlyClassToSerializerMap.java */
     public static final class a {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final JsonSerializer<Object> f4838a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final a f4839b;
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public final Class<?> f4840c;
 
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         public final JavaType f4841d;
 
-        /* renamed from: e */
+        /* JADX INFO: renamed from: e */
         public final boolean f4842e;
 
         public a(a aVar, TypeKey typeKey, JsonSerializer<Object> jsonSerializer) {
@@ -60,7 +60,7 @@ public final class ReadOnlyClassToSerializerMap {
         this.f4836a = aVarArr;
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public JsonSerializer<Object> m2035a(JavaType javaType) {
         a aVar = this.f4836a[(javaType._hash - 1) & this.f4837b];
         if (aVar == null) {
@@ -78,7 +78,7 @@ public final class ReadOnlyClassToSerializerMap {
         return aVar.f4838a;
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public JsonSerializer<Object> m2036b(Class<?> cls) {
         a aVar = this.f4836a[cls.getName().hashCode() & this.f4837b];
         if (aVar == null) {

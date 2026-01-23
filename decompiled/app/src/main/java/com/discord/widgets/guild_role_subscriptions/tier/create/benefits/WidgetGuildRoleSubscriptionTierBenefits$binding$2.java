@@ -12,8 +12,8 @@ import kotlin.jvm.functions.Function1;
 import p507d0.p592z.p594d.FunctionReferenceImpl;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: WidgetGuildRoleSubscriptionTierBenefits.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetGuildRoleSubscriptionTierBenefits.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final /* synthetic */ class WidgetGuildRoleSubscriptionTierBenefits$binding$2 extends FunctionReferenceImpl implements Function1<View, WidgetGuildRoleSubscriptionTierBenefitsBinding> {
     public static final WidgetGuildRoleSubscriptionTierBenefits$binding$2 INSTANCE = new WidgetGuildRoleSubscriptionTierBenefits$binding$2();
 
@@ -26,7 +26,7 @@ public final /* synthetic */ class WidgetGuildRoleSubscriptionTierBenefits$bindi
         return invoke2(view);
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final WidgetGuildRoleSubscriptionTierBenefitsBinding invoke2(View view) {
         Intrinsics3.checkNotNullParameter(view, "p1");
         int i = C5419R.id.guild_role_subscription_tier_all_channels;

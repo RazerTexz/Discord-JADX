@@ -21,10 +21,10 @@ import p007b.p195g.p196a.p205c.p215g0.p216t.PropertySerializerMap;
 import p007b.p195g.p196a.p205c.p219i0.ClassUtil;
 import p007b.p195g.p196a.p205c.p220y.JacksonStdImpl;
 
-/* compiled from: JsonValueSerializer.java */
+/* JADX INFO: renamed from: b.g.a.c.g0.u.s, reason: use source file name */
+/* JADX INFO: compiled from: JsonValueSerializer.java */
+/* JADX INFO: loaded from: classes3.dex */
 @JacksonStdImpl
-/* renamed from: b.g.a.c.g0.u.s, reason: use source file name */
-/* loaded from: classes3.dex */
 public class JsonValueSerializer extends StdSerializer<Object> implements ContextualSerializer {
     public final AnnotatedMember _accessor;
     public final boolean _forceTypeInformation;
@@ -33,17 +33,17 @@ public class JsonValueSerializer extends StdSerializer<Object> implements Contex
     public final JavaType _valueType;
     public final TypeSerializer _valueTypeSerializer;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public transient PropertySerializerMap f4861k;
 
-    /* compiled from: JsonValueSerializer.java */
-    /* renamed from: b.g.a.c.g0.u.s$a */
+    /* JADX INFO: renamed from: b.g.a.c.g0.u.s$a */
+    /* JADX INFO: compiled from: JsonValueSerializer.java */
     public static class a extends TypeSerializer {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final TypeSerializer f4862a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final Object f4863b;
 
         public a(TypeSerializer typeSerializer, Object obj) {
@@ -52,32 +52,32 @@ public class JsonValueSerializer extends StdSerializer<Object> implements Contex
         }
 
         @Override // p007b.p195g.p196a.p205c.p212e0.TypeSerializer
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public TypeSerializer mo1955a(BeanProperty beanProperty) {
             throw new UnsupportedOperationException();
         }
 
         @Override // p007b.p195g.p196a.p205c.p212e0.TypeSerializer
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public String mo1956b() {
             return this.f4862a.mo1956b();
         }
 
         @Override // p007b.p195g.p196a.p205c.p212e0.TypeSerializer
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public JsonTypeInfo.a mo1957c() {
             return this.f4862a.mo1957c();
         }
 
         @Override // p007b.p195g.p196a.p205c.p212e0.TypeSerializer
-        /* renamed from: e */
+        /* JADX INFO: renamed from: e */
         public WritableTypeId mo1959e(JsonGenerator jsonGenerator, WritableTypeId writableTypeId) throws IOException {
             writableTypeId.f4584a = this.f4863b;
             return this.f4862a.mo1959e(jsonGenerator, writableTypeId);
         }
 
         @Override // p007b.p195g.p196a.p205c.p212e0.TypeSerializer
-        /* renamed from: f */
+        /* JADX INFO: renamed from: f */
         public WritableTypeId mo1960f(JsonGenerator jsonGenerator, WritableTypeId writableTypeId) throws IOException {
             return this.f4862a.mo1960f(jsonGenerator, writableTypeId);
         }
@@ -97,7 +97,7 @@ public class JsonValueSerializer extends StdSerializer<Object> implements Contex
     }
 
     @Override // p007b.p195g.p196a.p205c.p215g0.ContextualSerializer
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public JsonSerializer<?> mo1997a(SerializerProvider serializerProvider, BeanProperty beanProperty) throws JsonMappingException {
         TypeSerializer typeSerializerMo1955a = this._valueTypeSerializer;
         if (typeSerializerMo1955a != null) {
@@ -120,8 +120,8 @@ public class JsonValueSerializer extends StdSerializer<Object> implements Contex
     }
 
     @Override // p007b.p195g.p196a.p205c.JsonSerializer
-    /* renamed from: d */
-    public boolean mo2021d(SerializerProvider serializerProvider, Object obj) throws UnsupportedOperationException, IllegalArgumentException {
+    /* JADX INFO: renamed from: d */
+    public boolean mo2021d(SerializerProvider serializerProvider, Object obj) {
         Object objMo1889j = this._accessor.mo1889j(obj);
         if (objMo1889j == null) {
             return true;
@@ -138,8 +138,8 @@ public class JsonValueSerializer extends StdSerializer<Object> implements Contex
     }
 
     @Override // p007b.p195g.p196a.p205c.JsonSerializer
-    /* renamed from: f */
-    public void mo1807f(Object obj, JsonGenerator jsonGenerator, SerializerProvider serializerProvider) throws IOException, IllegalArgumentException {
+    /* JADX INFO: renamed from: f */
+    public void mo1807f(Object obj, JsonGenerator jsonGenerator, SerializerProvider serializerProvider) throws IOException {
         try {
             Object objMo1889j = this._accessor.mo1889j(obj);
             if (objMo1889j == null) {
@@ -163,8 +163,8 @@ public class JsonValueSerializer extends StdSerializer<Object> implements Contex
     }
 
     @Override // p007b.p195g.p196a.p205c.JsonSerializer
-    /* renamed from: g */
-    public void mo1808g(Object obj, JsonGenerator jsonGenerator, SerializerProvider serializerProvider, TypeSerializer typeSerializer) throws IOException, IllegalArgumentException {
+    /* JADX INFO: renamed from: g */
+    public void mo1808g(Object obj, JsonGenerator jsonGenerator, SerializerProvider serializerProvider, TypeSerializer typeSerializer) throws IOException {
         try {
             Object objMo1889j = this._accessor.mo1889j(obj);
             if (objMo1889j == null) {
@@ -187,8 +187,8 @@ public class JsonValueSerializer extends StdSerializer<Object> implements Contex
         }
     }
 
-    /* renamed from: p */
-    public JsonSerializer<Object> m2080p(SerializerProvider serializerProvider, Class<?> cls) throws JsonMappingException, IllegalArgumentException {
+    /* JADX INFO: renamed from: p */
+    public JsonSerializer<Object> m2080p(SerializerProvider serializerProvider, Class<?> cls) throws JsonMappingException {
         JsonSerializer<Object> jsonSerializerMo2034c = this.f4861k.mo2034c(cls);
         if (jsonSerializerMo2034c != null) {
             return jsonSerializerMo2034c;
@@ -206,7 +206,7 @@ public class JsonValueSerializer extends StdSerializer<Object> implements Contex
         return jsonSerializerM2252q;
     }
 
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     public JsonValueSerializer m2081q(BeanProperty beanProperty, TypeSerializer typeSerializer, JsonSerializer<?> jsonSerializer, boolean z2) {
         return (this._property == beanProperty && this._valueTypeSerializer == typeSerializer && this._valueSerializer == jsonSerializer && z2 == this._forceTypeInformation) ? this : new JsonValueSerializer(this, beanProperty, typeSerializer, jsonSerializer, z2);
     }

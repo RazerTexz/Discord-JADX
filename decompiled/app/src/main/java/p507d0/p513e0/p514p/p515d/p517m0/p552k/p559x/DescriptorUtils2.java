@@ -45,16 +45,16 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 import p507d0.p592z.p594d.Reflection2;
 
-/* compiled from: DescriptorUtils.kt */
-/* renamed from: d0.e0.p.d.m0.k.x.a, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.k.x.a, reason: use source file name */
+/* JADX INFO: compiled from: DescriptorUtils.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class DescriptorUtils2 {
 
-    /* compiled from: DescriptorUtils.kt */
-    /* renamed from: d0.e0.p.d.m0.k.x.a$a */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.k.x.a$a */
+    /* JADX INFO: compiled from: DescriptorUtils.kt */
     public static final class a implements DFS.c<ValueParameterDescriptor> {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public static final a f24455a = new a();
 
         @Override // p507d0.p513e0.p514p.p515d.p517m0.p576p.DFS.c
@@ -62,7 +62,7 @@ public final class DescriptorUtils2 {
             return getNeighbors2(valueParameterDescriptor);
         }
 
-        /* renamed from: getNeighbors, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: getNeighbors, reason: avoid collision after fix types in other method */
         public final Iterable<ValueParameterDescriptor> getNeighbors2(ValueParameterDescriptor valueParameterDescriptor) {
             Collection<ValueParameterDescriptor> overriddenDescriptors = valueParameterDescriptor.getOverriddenDescriptors();
             ArrayList arrayList = new ArrayList(Iterables2.collectionSizeOrDefault(overriddenDescriptors, 10));
@@ -74,11 +74,11 @@ public final class DescriptorUtils2 {
         }
     }
 
-    /* compiled from: DescriptorUtils.kt */
-    /* renamed from: d0.e0.p.d.m0.k.x.a$b */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.k.x.a$b */
+    /* JADX INFO: compiled from: DescriptorUtils.kt */
     public /* synthetic */ class b extends FunctionReference implements Function1<ValueParameterDescriptor, Boolean> {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public static final b f24456j = new b();
 
         public b() {
@@ -105,18 +105,18 @@ public final class DescriptorUtils2 {
             return Boolean.valueOf(invoke2(valueParameterDescriptor));
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final boolean invoke2(ValueParameterDescriptor valueParameterDescriptor) {
             Intrinsics3.checkNotNullParameter(valueParameterDescriptor, "p0");
             return valueParameterDescriptor.declaresDefaultValue();
         }
     }
 
-    /* compiled from: DescriptorUtils.kt */
-    /* renamed from: d0.e0.p.d.m0.k.x.a$c */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.k.x.a$c */
+    /* JADX INFO: compiled from: DescriptorUtils.kt */
     public static final class c implements DFS.c<CallableMemberDescriptor> {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final /* synthetic */ boolean f24457a;
 
         public c(boolean z2) {
@@ -128,7 +128,7 @@ public final class DescriptorUtils2 {
             return getNeighbors2(callableMemberDescriptor);
         }
 
-        /* renamed from: getNeighbors, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: getNeighbors, reason: avoid collision after fix types in other method */
         public final Iterable<CallableMemberDescriptor> getNeighbors2(CallableMemberDescriptor callableMemberDescriptor) {
             if (this.f24457a) {
                 callableMemberDescriptor = callableMemberDescriptor == null ? null : callableMemberDescriptor.getOriginal();
@@ -138,14 +138,14 @@ public final class DescriptorUtils2 {
         }
     }
 
-    /* compiled from: DescriptorUtils.kt */
-    /* renamed from: d0.e0.p.d.m0.k.x.a$d */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.k.x.a$d */
+    /* JADX INFO: compiled from: DescriptorUtils.kt */
     public static final class d extends DFS.b<CallableMemberDescriptor, CallableMemberDescriptor> {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final /* synthetic */ Ref$ObjectRef<CallableMemberDescriptor> f24458a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final /* synthetic */ Function1<CallableMemberDescriptor, Boolean> f24459b;
 
         /* JADX WARN: Multi-variable type inference failed */
@@ -188,11 +188,11 @@ public final class DescriptorUtils2 {
         }
     }
 
-    /* compiled from: DescriptorUtils.kt */
-    /* renamed from: d0.e0.p.d.m0.k.x.a$e */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.k.x.a$e */
+    /* JADX INFO: compiled from: DescriptorUtils.kt */
     public static final class e extends Lambda implements Function1<DeclarationDescriptor, DeclarationDescriptor> {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public static final e f24460j = new e();
 
         public e() {
@@ -204,7 +204,7 @@ public final class DescriptorUtils2 {
             return invoke2(declarationDescriptor);
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final DeclarationDescriptor invoke2(DeclarationDescriptor declarationDescriptor) {
             Intrinsics3.checkNotNullParameter(declarationDescriptor, "it");
             return declarationDescriptor.getContainingDeclaration();

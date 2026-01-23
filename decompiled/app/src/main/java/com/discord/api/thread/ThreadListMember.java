@@ -5,24 +5,24 @@ import com.discord.api.presence.Presence;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ThreadListMember.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: ThreadListMember.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class ThreadListMember {
     private final GuildMember member;
     private final Presence presence;
     private final long userId;
 
-    /* renamed from: a, reason: from getter */
+    /* JADX INFO: renamed from: a, reason: from getter */
     public final GuildMember getMember() {
         return this.member;
     }
 
-    /* renamed from: b, reason: from getter */
+    /* JADX INFO: renamed from: b, reason: from getter */
     public final Presence getPresence() {
         return this.presence;
     }
 
-    /* renamed from: c, reason: from getter */
+    /* JADX INFO: renamed from: c, reason: from getter */
     public final long getUserId() {
         return this.userId;
     }

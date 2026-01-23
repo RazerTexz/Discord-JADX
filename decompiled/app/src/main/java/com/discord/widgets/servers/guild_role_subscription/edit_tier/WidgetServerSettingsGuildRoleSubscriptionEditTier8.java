@@ -3,9 +3,9 @@ package com.discord.widgets.servers.guild_role_subscription.edit_tier;
 import kotlin.jvm.functions.Function0;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetServerSettingsGuildRoleSubscriptionEditTier.kt */
-/* renamed from: com.discord.widgets.servers.guild_role_subscription.edit_tier.WidgetServerSettingsGuildRoleSubscriptionEditTier$viewModel$2, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.servers.guild_role_subscription.edit_tier.WidgetServerSettingsGuildRoleSubscriptionEditTier$viewModel$2, reason: use source file name */
+/* JADX INFO: compiled from: WidgetServerSettingsGuildRoleSubscriptionEditTier.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetServerSettingsGuildRoleSubscriptionEditTier8 extends Lambda implements Function0<ServerSettingsGuildRoleSubscriptionEditTierViewModel> {
     public final /* synthetic */ WidgetServerSettingsGuildRoleSubscriptionEditTier this$0;
 

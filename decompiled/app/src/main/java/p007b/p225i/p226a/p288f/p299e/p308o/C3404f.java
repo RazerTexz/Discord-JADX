@@ -7,7 +7,6 @@ import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.content.res.Resources;
 import android.database.Cursor;
-import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteException;
 import android.graphics.Rect;
@@ -257,26 +256,26 @@ import p659s.p660a.p663c2.LinkedListChannel;
 import p659s.p660a.p663c2.RendezvousChannel;
 import p659s.p660a.p664d2.FlowCollector;
 
-/* compiled from: com.google.android.gms:play-services-basement@@17.6.0 */
-/* renamed from: b.i.a.f.e.o.f */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.e.o.f */
+/* JADX INFO: compiled from: com.google.android.gms:play-services-basement@@17.6.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public final class C3404f {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static Context f9587a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     @Nullable
     public static Boolean f9588b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public static C4051ga f9589c;
 
-    /* compiled from: SizeSelectors.java */
-    /* renamed from: b.i.a.f.e.o.f$a */
+    /* JADX INFO: renamed from: b.i.a.f.e.o.f$a */
+    /* JADX INFO: compiled from: SizeSelectors.java */
     public class a implements SizeSelectors7 {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final /* synthetic */ int f9590a;
 
         public a(int i) {
@@ -284,17 +283,17 @@ public final class C3404f {
         }
 
         @Override // p007b.p452o.p453a.p473x.SizeSelectors7
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public boolean mo4369a(@NonNull Size3 size3) {
             return size3.f14251j <= this.f9590a;
         }
     }
 
-    /* compiled from: SizeSelectors.java */
-    /* renamed from: b.i.a.f.e.o.f$b */
+    /* JADX INFO: renamed from: b.i.a.f.e.o.f$b */
+    /* JADX INFO: compiled from: SizeSelectors.java */
     public class b implements SizeSelectors7 {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final /* synthetic */ int f9591a;
 
         public b(int i) {
@@ -302,17 +301,17 @@ public final class C3404f {
         }
 
         @Override // p007b.p452o.p453a.p473x.SizeSelectors7
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public boolean mo4369a(@NonNull Size3 size3) {
             return size3.f14251j >= this.f9591a;
         }
     }
 
-    /* compiled from: SizeSelectors.java */
-    /* renamed from: b.i.a.f.e.o.f$c */
+    /* JADX INFO: renamed from: b.i.a.f.e.o.f$c */
+    /* JADX INFO: compiled from: SizeSelectors.java */
     public class c implements SizeSelectors7 {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final /* synthetic */ int f9592a;
 
         public c(int i) {
@@ -320,17 +319,17 @@ public final class C3404f {
         }
 
         @Override // p007b.p452o.p453a.p473x.SizeSelectors7
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public boolean mo4369a(@NonNull Size3 size3) {
             return size3.f14252k <= this.f9592a;
         }
     }
 
-    /* compiled from: SizeSelectors.java */
-    /* renamed from: b.i.a.f.e.o.f$d */
+    /* JADX INFO: renamed from: b.i.a.f.e.o.f$d */
+    /* JADX INFO: compiled from: SizeSelectors.java */
     public class d implements SizeSelectors7 {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final /* synthetic */ int f9593a;
 
         public d(int i) {
@@ -338,15 +337,15 @@ public final class C3404f {
         }
 
         @Override // p007b.p452o.p453a.p473x.SizeSelectors7
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public boolean mo4369a(@NonNull Size3 size3) {
             return size3.f14252k >= this.f9593a;
         }
     }
 
-    /* compiled from: Await.kt */
+    /* JADX INFO: renamed from: b.i.a.f.e.o.f$e */
+    /* JADX INFO: compiled from: Await.kt */
     @DebugMetadata(m10084c = "kotlinx.coroutines.AwaitKt", m10085f = "Await.kt", m10086l = {26}, m10087m = "awaitAll")
-    /* renamed from: b.i.a.f.e.o.f$e */
     public static final class e extends ContinuationImpl3 {
         public Object L$0;
         public int label;
@@ -364,9 +363,9 @@ public final class C3404f {
         }
     }
 
-    /* compiled from: Channels.kt */
+    /* JADX INFO: renamed from: b.i.a.f.e.o.f$f */
+    /* JADX INFO: compiled from: Channels.kt */
     @DebugMetadata(m10084c = "kotlinx.coroutines.flow.FlowKt__ChannelsKt", m10085f = "Channels.kt", m10086l = {50, 61}, m10087m = "emitAllImpl$FlowKt__ChannelsKt")
-    /* renamed from: b.i.a.f.e.o.f$f */
     public static final class f extends ContinuationImpl3 {
         public Object L$0;
         public Object L$1;
@@ -388,14 +387,14 @@ public final class C3404f {
         }
     }
 
-    /* compiled from: KotlinExtensions.kt */
-    /* renamed from: b.i.a.f.e.o.f$g */
+    /* JADX INFO: renamed from: b.i.a.f.e.o.f$g */
+    /* JADX INFO: compiled from: KotlinExtensions.kt */
     public static final class g implements Runnable {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public final /* synthetic */ Continuation f9594j;
 
-        /* renamed from: k */
+        /* JADX INFO: renamed from: k */
         public final /* synthetic */ Exception f9595k;
 
         public g(Continuation continuation, Exception exc) {
@@ -412,9 +411,9 @@ public final class C3404f {
         }
     }
 
-    /* compiled from: KotlinExtensions.kt */
+    /* JADX INFO: renamed from: b.i.a.f.e.o.f$h */
+    /* JADX INFO: compiled from: KotlinExtensions.kt */
     @DebugMetadata(m10084c = "retrofit2.KotlinExtensions", m10085f = "KotlinExtensions.kt", m10086l = {113}, m10087m = "suspendAndThrow")
-    /* renamed from: b.i.a.f.e.o.f$h */
     public static final class h extends ContinuationImpl3 {
         public Object L$0;
         public int label;
@@ -433,7 +432,7 @@ public final class C3404f {
     }
 
     @CanIgnoreReturnValue
-    /* renamed from: A */
+    /* JADX INFO: renamed from: A */
     public static int m4189A(int i, String str) {
         if (i >= 0) {
             return i;
@@ -441,12 +440,12 @@ public final class C3404f {
         throw new IllegalArgumentException(str + " cannot be negative but was: " + i);
     }
 
-    /* renamed from: A0 */
+    /* JADX INFO: renamed from: A0 */
     public static boolean m4190A0() {
         return Build.VERSION.SDK_INT >= 26;
     }
 
-    /* renamed from: A1 */
+    /* JADX INFO: renamed from: A1 */
     public static boolean m4191A1(long j) {
         if (j >= 0) {
             return j != 0;
@@ -454,20 +453,20 @@ public final class C3404f {
         throw new IllegalArgumentException(outline.m877t("n >= 0 required but it was ", j));
     }
 
-    /* renamed from: B */
+    /* JADX INFO: renamed from: B */
     public static final void m4192B(long j, long j2, long j3) {
         if ((j2 | j3) < 0 || j2 > j || j - j2 < j3) {
             throw new ArrayIndexOutOfBoundsException("size=" + j + " offset=" + j2 + " byteCount=" + j3);
         }
     }
 
-    /* renamed from: B0 */
+    /* JADX INFO: renamed from: B0 */
     public static final boolean m4193B0(int i) {
         return i == 1 || i == 2;
     }
 
     @NonNull
-    /* renamed from: B1 */
+    /* JADX INFO: renamed from: B1 */
     public static Task<Void> m4194B1(@Nullable Collection<? extends Task<?>> collection) {
         if (collection == null || collection.isEmpty()) {
             return m4264Z(null);
@@ -486,7 +485,7 @@ public final class C3404f {
     }
 
     @CanIgnoreReturnValue
-    /* renamed from: C */
+    /* JADX INFO: renamed from: C */
     public static int m4195C(int i, int i2) {
         if (i < 0 || i > i2) {
             throw new IndexOutOfBoundsException(m4315m(i, i2, "index"));
@@ -494,7 +493,7 @@ public final class C3404f {
         return i;
     }
 
-    /* renamed from: C0 */
+    /* JADX INFO: renamed from: C0 */
     public static boolean m4196C0(Camera camera) {
         List<String> supportedFlashModes;
         if (camera != null) {
@@ -506,7 +505,7 @@ public final class C3404f {
         return false;
     }
 
-    /* renamed from: C1 */
+    /* JADX INFO: renamed from: C1 */
     public static final <T> Object m4197C1(CoroutineContext coroutineContext, Function2<? super CoroutineScope, ? super Continuation<? super T>, ? extends Object> function2, Continuation<? super T> continuation) throws Throwable {
         boolean z2;
         Object objM11314a;
@@ -565,14 +564,14 @@ public final class C3404f {
         return objM11314a;
     }
 
-    /* renamed from: D */
+    /* JADX INFO: renamed from: D */
     public static void m4198D(int i, int i2, int i3) {
         if (i < 0 || i2 < i || i2 > i3) {
             throw new IndexOutOfBoundsException((i < 0 || i > i3) ? m4315m(i, i3, "start index") : (i2 < 0 || i2 > i3) ? m4315m(i2, i3, "end index") : m4214I0("end index (%s) must not be less than start index (%s)", Integer.valueOf(i2), Integer.valueOf(i)));
         }
     }
 
-    /* renamed from: D0 */
+    /* JADX INFO: renamed from: D0 */
     public static boolean m4199D0(@RecentlyNonNull Context context, int i) {
         if (!m4368z1(context, i, "com.google.android.gms")) {
             return false;
@@ -603,19 +602,19 @@ public final class C3404f {
     }
 
     @NonNull
-    /* renamed from: D1 */
+    /* JADX INFO: renamed from: D1 */
     public static SizeSelector m4200D1(@NonNull SizeSelectors7 sizeSelectors7) {
         return new SizeSelectors8(sizeSelectors7, null);
     }
 
-    /* renamed from: E */
+    /* JADX INFO: renamed from: E */
     public static void m4201E(boolean z2) {
         if (!z2) {
             throw new IllegalStateException("no calls to next() since the last call to remove()");
         }
     }
 
-    /* renamed from: E0 */
+    /* JADX INFO: renamed from: E0 */
     public static synchronized boolean m4202E0(@RecentlyNonNull Context context) {
         Boolean bool;
         Context applicationContext = context.getApplicationContext();
@@ -638,19 +637,19 @@ public final class C3404f {
         return f9588b.booleanValue();
     }
 
-    /* renamed from: E1 */
+    /* JADX INFO: renamed from: E1 */
     public static <T> Class<T> m4203E1(Class<T> cls) {
         return cls == Integer.TYPE ? Integer.class : cls == Float.TYPE ? Float.class : cls == Byte.TYPE ? Byte.class : cls == Double.TYPE ? Double.class : cls == Long.TYPE ? Long.class : cls == Character.TYPE ? Character.class : cls == Boolean.TYPE ? Boolean.class : cls == Short.TYPE ? Short.class : cls == Void.TYPE ? Void.class : cls;
     }
 
-    /* renamed from: F */
+    /* JADX INFO: renamed from: F */
     public static void m4204F(boolean z2, @NullableDecl String str, int i) {
         if (!z2) {
             throw new IllegalStateException(m4214I0(str, Integer.valueOf(i)));
         }
     }
 
-    /* renamed from: F0 */
+    /* JADX INFO: renamed from: F0 */
     public static final boolean m4205F0(Buffer3 buffer3) {
         Intrinsics3.checkParameterIsNotNull(buffer3, "$this$isProbablyUtf8");
         try {
@@ -671,7 +670,7 @@ public final class C3404f {
         }
     }
 
-    /* renamed from: F1 */
+    /* JADX INFO: renamed from: F1 */
     public static int m4206F1(int i, int i2, @NullableDecl String str) {
         String strM4314l2;
         if (i >= 0 && i < i2) {
@@ -688,14 +687,14 @@ public final class C3404f {
         throw new IndexOutOfBoundsException(strM4314l2);
     }
 
-    /* renamed from: G */
+    /* JADX INFO: renamed from: G */
     public static void m4207G(boolean z2, @NullableDecl String str, @NullableDecl Object obj) {
         if (!z2) {
             throw new IllegalStateException(m4214I0(str, obj));
         }
     }
 
-    /* renamed from: G0 */
+    /* JADX INFO: renamed from: G0 */
     public static final Job m4208G0(CoroutineScope coroutineScope, CoroutineContext coroutineContext, CoroutineStart coroutineStart, Function2<? super CoroutineScope, ? super Continuation<? super Unit>, ? extends Object> function2) {
         CoroutineContext coroutineContextM11354a = CoroutineContext2.m11354a(coroutineScope, coroutineContext);
         Objects.requireNonNull(coroutineStart);
@@ -704,7 +703,7 @@ public final class C3404f {
         return c13125k1;
     }
 
-    /* renamed from: G1 */
+    /* JADX INFO: renamed from: G1 */
     public static int m4209G1(int i, byte[] bArr, int i2, int i3, C3824s3 c3824s3) throws zzij {
         if ((i >>> 3) == 0) {
             throw zzij.m9105c();
@@ -741,7 +740,7 @@ public final class C3404f {
         return i2;
     }
 
-    /* renamed from: H */
+    /* JADX INFO: renamed from: H */
     public static int m4210H(long j) {
         int i = (int) j;
         if (((long) i) == j) {
@@ -750,7 +749,7 @@ public final class C3404f {
         throw new IllegalArgumentException(m4214I0("Out of range: %s", Long.valueOf(j)));
     }
 
-    /* renamed from: H0 */
+    /* JADX INFO: renamed from: H0 */
     public static /* synthetic */ Job m4211H0(CoroutineScope coroutineScope, CoroutineContext coroutineContext, CoroutineStart coroutineStart, Function2 function2, int i, Object obj) {
         if ((i & 1) != 0) {
             coroutineContext = CoroutineContextImpl4.f25237j;
@@ -758,7 +757,7 @@ public final class C3404f {
         return m4208G0(coroutineScope, coroutineContext, (i & 2) != 0 ? CoroutineStart.DEFAULT : null, function2);
     }
 
-    /* renamed from: H1 */
+    /* JADX INFO: renamed from: H1 */
     public static int m4212H1(int i, byte[] bArr, int i2, int i3, InterfaceC3597b5<?> interfaceC3597b5, C3824s3 c3824s3) {
         C3890x4 c3890x4 = (C3890x4) interfaceC3597b5;
         int iM4233O1 = m4233O1(bArr, i2, c3824s3);
@@ -774,13 +773,13 @@ public final class C3404f {
         return iM4233O1;
     }
 
-    /* renamed from: I */
+    /* JADX INFO: renamed from: I */
     public static /* synthetic */ boolean m4213I(Channel7 channel7, Throwable th, int i, Object obj) {
         int i2 = i & 1;
         return channel7.mo11221j(null);
     }
 
-    /* renamed from: I0 */
+    /* JADX INFO: renamed from: I0 */
     public static String m4214I0(@NullableDecl String str, @NullableDecl Object... objArr) {
         int iIndexOf;
         String strValueOf;
@@ -818,7 +817,7 @@ public final class C3404f {
         return sb.toString();
     }
 
-    /* renamed from: I1 */
+    /* JADX INFO: renamed from: I1 */
     public static int m4215I1(int i, byte[] bArr, int i2, int i3, C3613c7 c3613c7, C3824s3 c3824s3) throws zzij {
         if ((i >>> 3) == 0) {
             throw zzij.m9105c();
@@ -880,7 +879,7 @@ public final class C3404f {
         return i2;
     }
 
-    /* renamed from: J */
+    /* JADX INFO: renamed from: J */
     public static int m4216J(int i, int i2) {
         int i3 = i - i2;
         if (i3 > i2) {
@@ -904,13 +903,13 @@ public final class C3404f {
         return i4;
     }
 
-    /* renamed from: J0 */
+    /* JADX INFO: renamed from: J0 */
     public static final float[] m4217J0(float[] fArr) {
         Intrinsics3.checkNotNullParameter(fArr, "matrix");
         return (float[]) fArr.clone();
     }
 
-    /* renamed from: J1 */
+    /* JADX INFO: renamed from: J1 */
     public static int m4218J1(int i, byte[] bArr, int i2, C3824s3 c3824s3) {
         int i3 = i & Opcodes.LAND;
         int i4 = i2 + 1;
@@ -951,7 +950,7 @@ public final class C3404f {
         }
     }
 
-    /* renamed from: K */
+    /* JADX INFO: renamed from: K */
     public static final byte[] m4219K(String str) {
         int i;
         int i2;
@@ -1025,12 +1024,12 @@ public final class C3404f {
     }
 
     @NonNull
-    /* renamed from: K0 */
+    /* JADX INFO: renamed from: K0 */
     public static SizeSelector m4220K0(int i) {
         return m4200D1(new c(i));
     }
 
-    /* renamed from: K1 */
+    /* JADX INFO: renamed from: K1 */
     public static int m4221K1(InterfaceC3801q6<?> interfaceC3801q6, int i, byte[] bArr, int i2, int i3, InterfaceC3597b5<?> interfaceC3597b5, C3824s3 c3824s3) throws IOException {
         int iM4227M1 = m4227M1(interfaceC3801q6, bArr, i2, i3, c3824s3);
         interfaceC3597b5.add(c3824s3.f10309c);
@@ -1046,7 +1045,7 @@ public final class C3404f {
     }
 
     @NonNull
-    /* renamed from: L */
+    /* JADX INFO: renamed from: L */
     public static Rect m4222L(@NonNull Size3 size3, @NonNull AspectRatio2 aspectRatio2) {
         int iRound;
         int i = size3.f14251j;
@@ -1070,12 +1069,12 @@ public final class C3404f {
     }
 
     @NonNull
-    /* renamed from: L0 */
+    /* JADX INFO: renamed from: L0 */
     public static SizeSelector m4223L0(int i) {
         return m4200D1(new a(i));
     }
 
-    /* renamed from: L1 */
+    /* JADX INFO: renamed from: L1 */
     public static int m4224L1(InterfaceC3801q6 interfaceC3801q6, byte[] bArr, int i, int i2, int i3, C3824s3 c3824s3) throws IOException {
         C3640e6 c3640e6 = (C3640e6) interfaceC3801q6;
         Object objMo4937b = c3640e6.f9925m.mo4937b(c3640e6.f9919g);
@@ -1085,7 +1084,7 @@ public final class C3404f {
         return iM4855m;
     }
 
-    /* renamed from: M */
+    /* JADX INFO: renamed from: M */
     public static final <R> Object m4225M(Function2<? super CoroutineScope, ? super Continuation<? super R>, ? extends Object> function2, Continuation<? super R> continuation) throws Throwable {
         Scopes2 scopes2 = new Scopes2(continuation.getContext(), continuation);
         Object objM4293g1 = m4293g1(scopes2, scopes2, function2);
@@ -1096,12 +1095,12 @@ public final class C3404f {
     }
 
     @NonNull
-    /* renamed from: M0 */
+    /* JADX INFO: renamed from: M0 */
     public static SizeSelector m4226M0(int i) {
         return m4200D1(new d(i));
     }
 
-    /* renamed from: M1 */
+    /* JADX INFO: renamed from: M1 */
     public static int m4227M1(InterfaceC3801q6 interfaceC3801q6, byte[] bArr, int i, int i2, C3824s3 c3824s3) throws IOException {
         int iM4218J1 = i + 1;
         int i3 = bArr[i];
@@ -1121,7 +1120,7 @@ public final class C3404f {
         return i5;
     }
 
-    /* renamed from: N */
+    /* JADX INFO: renamed from: N */
     public static Component4<?> m4228N(String str, String str2) {
         AutoValue_LibraryVersion autoValue_LibraryVersion = new AutoValue_LibraryVersion(str, str2);
         Component4.b bVarM6348a = Component4.m6348a(LibraryVersion.class);
@@ -1131,12 +1130,12 @@ public final class C3404f {
     }
 
     @NonNull
-    /* renamed from: N0 */
+    /* JADX INFO: renamed from: N0 */
     public static SizeSelector m4229N0(int i) {
         return m4200D1(new b(i));
     }
 
-    /* renamed from: N1 */
+    /* JADX INFO: renamed from: N1 */
     public static int m4230N1(byte[] bArr, int i) {
         return ((bArr[i + 3] & 255) << 24) | (bArr[i] & 255) | ((bArr[i + 1] & 255) << 8) | ((bArr[i + 2] & 255) << 16);
     }
@@ -1149,7 +1148,7 @@ public final class C3404f {
     /* JADX WARN: Removed duplicated region for block: B:49:0x00a3 A[LOOP:2: B:24:0x006a->B:49:0x00a3, LOOP_END] */
     /* JADX WARN: Removed duplicated region for block: B:61:0x00be  */
     /* JADX WARN: Removed duplicated region for block: B:89:0x00b1 A[EDGE_INSN: B:89:0x00b1->B:53:0x00b1 BREAK  A[LOOP:2: B:24:0x006a->B:49:0x00a3], SYNTHETIC] */
-    /* renamed from: O */
+    /* JADX INFO: renamed from: O */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
@@ -1281,7 +1280,7 @@ public final class C3404f {
         return InetAddress.getByAddress(bArr);
     }
 
-    /* renamed from: O0 */
+    /* JADX INFO: renamed from: O0 */
     public static /* synthetic */ void m4232O0(FlexInputViewModel flexInputViewModel, boolean z2, int i, Object obj) {
         if ((i & 1) != 0) {
             z2 = true;
@@ -1289,7 +1288,7 @@ public final class C3404f {
         flexInputViewModel.onContentDialogDismissed(z2);
     }
 
-    /* renamed from: O1 */
+    /* JADX INFO: renamed from: O1 */
     public static int m4233O1(byte[] bArr, int i, C3824s3 c3824s3) {
         int i2 = i + 1;
         byte b2 = bArr[i];
@@ -1300,7 +1299,7 @@ public final class C3404f {
         return i2;
     }
 
-    /* renamed from: P */
+    /* JADX INFO: renamed from: P */
     public static final Object m4234P(long j, Continuation<? super Unit> continuation) {
         if (j <= 0) {
             return Unit.f27425a;
@@ -1317,13 +1316,13 @@ public final class C3404f {
         return objM11326u;
     }
 
-    /* renamed from: P0 */
+    /* JADX INFO: renamed from: P0 */
     public static /* synthetic */ void m4235P0(FlexInputViewModel flexInputViewModel, String str, Boolean bool, int i, Object obj) {
         int i2 = i & 2;
         flexInputViewModel.onInputTextChanged(str, null);
     }
 
-    /* renamed from: P1 */
+    /* JADX INFO: renamed from: P1 */
     public static int m4236P1(byte[] bArr, int i, InterfaceC3597b5<?> interfaceC3597b5, C3824s3 c3824s3) throws IOException {
         C3890x4 c3890x4 = (C3890x4) interfaceC3597b5;
         int iM4233O1 = m4233O1(bArr, i, c3824s3);
@@ -1338,7 +1337,7 @@ public final class C3404f {
         throw zzij.m9103a();
     }
 
-    /* renamed from: Q */
+    /* JADX INFO: renamed from: Q */
     public static float m4237Q(float f2, float f3, float f4, float f5) {
         float f6 = f2 - f4;
         float f7 = f3 - f5;
@@ -1346,24 +1345,24 @@ public final class C3404f {
     }
 
     @NonNull
-    /* renamed from: Q0 */
+    /* JADX INFO: renamed from: Q0 */
     public static SizeSelector m4238Q0(SizeSelector... sizeSelectorArr) {
         return new SizeSelectors9(sizeSelectorArr, null);
     }
 
-    /* renamed from: Q1 */
+    /* JADX INFO: renamed from: Q1 */
     public static <T> InterfaceC3914z2<T> m4239Q1(InterfaceC3914z2<T> interfaceC3914z2) {
         return ((interfaceC3914z2 instanceof C3609c3) || (interfaceC3914z2 instanceof C3581a3)) ? interfaceC3914z2 : interfaceC3914z2 instanceof Serializable ? new C3581a3(interfaceC3914z2) : new C3609c3(interfaceC3914z2);
     }
 
-    /* renamed from: R */
+    /* JADX INFO: renamed from: R */
     public static float m4240R(int i, int i2, int i3, int i4) {
         int i5 = i - i3;
         int i6 = i2 - i4;
         return (float) Math.sqrt((i6 * i6) + (i5 * i5));
     }
 
-    /* renamed from: R0 */
+    /* JADX INFO: renamed from: R0 */
     public static int m4241R0(int i) {
         if (i >= 200 && i <= 299) {
             return 0;
@@ -1379,7 +1378,7 @@ public final class C3404f {
         return 1;
     }
 
-    /* renamed from: R1 */
+    /* JADX INFO: renamed from: R1 */
     public static FirebaseAppIndexingException m4242R1(@NonNull Status status, String str) {
         String str2 = status.f20496q;
         if (str2 != null && !str2.isEmpty()) {
@@ -1415,17 +1414,17 @@ public final class C3404f {
         }
     }
 
-    /* renamed from: S */
+    /* JADX INFO: renamed from: S */
     public static int m4243S(Context context, float f2) {
         float fApplyDimension = TypedValue.applyDimension(1, f2, context.getResources().getDisplayMetrics());
-        int i = (int) (fApplyDimension + 0.5d);
+        int i = (int) (((double) fApplyDimension) + 0.5d);
         if (i != 0 || fApplyDimension <= 0.0f) {
             return i;
         }
         return 1;
     }
 
-    /* renamed from: S0 */
+    /* JADX INFO: renamed from: S0 */
     public static JsonElement m4244S0(JsonReader jsonReader) throws JsonParseException {
         boolean z2;
         try {
@@ -1454,7 +1453,7 @@ public final class C3404f {
         }
     }
 
-    /* renamed from: S1 */
+    /* JADX INFO: renamed from: S1 */
     public static <T> T m4245S1(@NonNull Bundle bundle, String str, Class<T> cls, T t) {
         T t2 = (T) bundle.get(str);
         if (t2 == null) {
@@ -1466,7 +1465,7 @@ public final class C3404f {
         throw new IllegalStateException(String.format("Invalid conditional user property field type. '%s' expected [%s] but was [%s]", str, cls.getCanonicalName(), t2.getClass().getCanonicalName()));
     }
 
-    /* renamed from: T */
+    /* JADX INFO: renamed from: T */
     public static float m4246T(float f2, float f3, float f4, float f5) {
         float f6 = f2 / (f5 / 2.0f);
         float f7 = f4 / 2.0f;
@@ -1477,7 +1476,7 @@ public final class C3404f {
         return (((f8 * f8 * f8) + 2.0f) * f7) + f3;
     }
 
-    /* renamed from: T0 */
+    /* JADX INFO: renamed from: T0 */
     public static final Object m4247T0(Object obj, E e2) {
         if (obj == null) {
             return e2;
@@ -1492,7 +1491,7 @@ public final class C3404f {
         return arrayList;
     }
 
-    /* renamed from: T1 */
+    /* JADX INFO: renamed from: T1 */
     public static <V> V m4248T1(InterfaceC3622d2<V> interfaceC3622d2) {
         try {
             return interfaceC3622d2.mo4628a();
@@ -1514,14 +1513,14 @@ public final class C3404f {
     /* JADX WARN: Removed duplicated region for block: B:7:0x0013  */
     /* JADX WARN: Type inference failed for: r10v0, types: [boolean] */
     /* JADX WARN: Type inference failed for: r10v1, types: [s.a.c2.o] */
+    /* JADX WARN: Type inference failed for: r10v12 */
+    /* JADX WARN: Type inference failed for: r10v3, types: [boolean] */
     /* JADX WARN: Type inference failed for: r10v4 */
-    /* JADX WARN: Type inference failed for: r2v1, types: [java.lang.Object, s.a.d2.e] */
-    /* JADX WARN: Type inference failed for: r2v11 */
-    /* JADX WARN: Type inference failed for: r2v3 */
-    /* JADX WARN: Type inference failed for: r9v1 */
-    /* JADX WARN: Type inference failed for: r9v4 */
+    /* JADX WARN: Type inference failed for: r10v7 */
+    /* JADX WARN: Type inference failed for: r6v0 */
+    /* JADX WARN: Type inference failed for: r7v0 */
     /* JADX WARN: Unsupported multi-entry loop pattern (BACK_EDGE: B:43:0x00b5 -> B:14:0x0039). Please report as a decompilation issue!!! */
-    /* renamed from: U */
+    /* JADX INFO: renamed from: U */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
@@ -1531,8 +1530,8 @@ public final class C3404f {
         Channel6<? extends T> channel62;
         boolean z3;
         Throwable th2;
-        ?? r2;
-        boolean z4;
+        FlowCollector<? super T> flowCollector2;
+        ?? r10;
         Object objMo11200m;
         if (continuation instanceof f) {
             fVar = (f) continuation;
@@ -1550,10 +1549,10 @@ public final class C3404f {
             if (i2 == 0) {
                 Result3.throwOnFailure(obj);
                 th = null;
-                z4 = z2;
+                r10 = z2;
                 fVar.L$0 = flowCollector;
                 fVar.L$1 = channel6;
-                fVar.Z$0 = z4;
+                fVar.Z$0 = r10;
                 fVar.L$2 = th;
                 fVar.L$3 = flowCollector;
                 fVar.label = 1;
@@ -1564,9 +1563,8 @@ public final class C3404f {
                 th2 = (Throwable) fVar.L$2;
                 z3 = fVar.Z$0;
                 channel62 = (Channel6) fVar.L$1;
-                FlowCollector flowCollector2 = (FlowCollector) fVar.L$0;
+                flowCollector2 = (FlowCollector) fVar.L$0;
                 Result3.throwOnFailure(obj);
-                r2 = flowCollector2;
                 if (obj instanceof Channel8.a) {
                 }
             } else {
@@ -1576,18 +1574,17 @@ public final class C3404f {
                 th2 = (Throwable) fVar.L$2;
                 z3 = fVar.Z$0;
                 channel62 = (Channel6) fVar.L$1;
-                FlowCollector<? super T> flowCollector3 = (FlowCollector) fVar.L$0;
+                flowCollector2 = (FlowCollector) fVar.L$0;
                 Result3.throwOnFailure(obj);
-                FlowCollector<? super T> flowCollector4 = flowCollector3;
                 th = th2;
-                flowCollector = flowCollector4;
+                flowCollector = flowCollector2;
                 Channel6<? extends T> channel63 = channel62;
-                z4 = z3;
+                r10 = z3;
                 channel6 = channel63;
                 try {
                     fVar.L$0 = flowCollector;
                     fVar.L$1 = channel6;
-                    fVar.Z$0 = z4;
+                    fVar.Z$0 = r10;
                     fVar.L$2 = th;
                     fVar.L$3 = flowCollector;
                     fVar.label = 1;
@@ -1595,12 +1592,12 @@ public final class C3404f {
                     if (objMo11200m == coroutine_suspended) {
                         return coroutine_suspended;
                     }
-                    r2 = flowCollector;
+                    flowCollector2 = flowCollector;
                     th2 = th;
                     obj = objMo11200m;
-                    boolean z5 = z4;
+                    ?? r7 = r10;
                     channel62 = channel6;
-                    z3 = z5;
+                    z3 = r7 == true ? 1 : 0;
                     if (obj instanceof Channel8.a) {
                         if (!(obj instanceof Channel8.a)) {
                             throw new IllegalStateException("Channel was not closed".toString());
@@ -1614,25 +1611,23 @@ public final class C3404f {
                     if (obj instanceof Channel8.a) {
                         throw new IllegalStateException("Channel was closed".toString());
                     }
-                    fVar.L$0 = r2;
+                    fVar.L$0 = flowCollector2;
                     fVar.L$1 = channel62;
                     fVar.Z$0 = z3;
                     fVar.L$2 = th2;
                     fVar.L$3 = obj;
                     fVar.label = 2;
-                    Object objEmit = r2.emit(obj, fVar);
-                    flowCollector4 = r2;
-                    if (objEmit == coroutine_suspended) {
+                    if (flowCollector2.emit(obj, fVar) == coroutine_suspended) {
                         return coroutine_suspended;
                     }
                     th = th2;
-                    flowCollector = flowCollector4;
+                    flowCollector = flowCollector2;
                     Channel6<? extends T> channel632 = channel62;
-                    z4 = z3;
+                    r10 = z3;
                     channel6 = channel632;
                     fVar.L$0 = flowCollector;
                     fVar.L$1 = channel6;
-                    fVar.Z$0 = z4;
+                    fVar.Z$0 = r10;
                     fVar.L$2 = th;
                     fVar.L$3 = flowCollector;
                     fVar.label = 1;
@@ -1641,9 +1636,9 @@ public final class C3404f {
                     }
                 } catch (Throwable th4) {
                     th = th4;
-                    boolean z6 = z4;
+                    ?? r6 = r10;
                     z2 = channel6;
-                    channel6 = z6;
+                    channel6 = r6 == true ? 1 : 0 ? 1 : 0;
                     try {
                         throw th;
                     } finally {
@@ -1658,7 +1653,7 @@ public final class C3404f {
         }
     }
 
-    /* renamed from: U0 */
+    /* JADX INFO: renamed from: U0 */
     public static long m4250U0(AtomicLong atomicLong, long j) {
         long j2;
         long j3;
@@ -1675,7 +1670,7 @@ public final class C3404f {
         return j3;
     }
 
-    /* renamed from: U1 */
+    /* JADX INFO: renamed from: U1 */
     public static <TResult> TResult m4251U1(@NonNull Task<TResult> task) throws ExecutionException {
         if (task.mo6021p()) {
             return task.mo6017l();
@@ -1686,12 +1681,12 @@ public final class C3404f {
         throw new ExecutionException(task.mo6016k());
     }
 
-    /* renamed from: V */
+    /* JADX INFO: renamed from: V */
     public static boolean m4252V(@NullableDecl Object obj, @NullableDecl Object obj2) {
         return obj == obj2 || (obj != null && obj.equals(obj2));
     }
 
-    /* renamed from: V0 */
+    /* JADX INFO: renamed from: V0 */
     public static RuntimeException m4253V0(Throwable th) {
         if (th instanceof RuntimeException) {
             throw ((RuntimeException) th);
@@ -1702,23 +1697,21 @@ public final class C3404f {
         throw new RuntimeException(th);
     }
 
-    /* renamed from: V1 */
+    /* JADX INFO: renamed from: V1 */
     public static String m4254V1(Context context, String str) {
-        Resources resources;
-        int identifier;
         try {
             Objects.requireNonNull(context, "null reference");
-            resources = context.getResources();
-            identifier = resources.getIdentifier(str, "string", resources.getResourcePackageName(C10800R.a.common_google_play_services_unknown_issue));
+            Resources resources = context.getResources();
+            int identifier = resources.getIdentifier(str, "string", resources.getResourcePackageName(C10800R.a.common_google_play_services_unknown_issue));
+            if (identifier != 0) {
+                return resources.getString(identifier);
+            }
         } catch (Resources.NotFoundException unused) {
         }
-        if (identifier == 0) {
-            return null;
-        }
-        return resources.getString(identifier);
+        return null;
     }
 
-    /* renamed from: W */
+    /* JADX INFO: renamed from: W */
     public static <T> T m4255W(@NullableDecl T t, @NullableDecl T t2) {
         if (t != null) {
             return t;
@@ -1727,7 +1720,7 @@ public final class C3404f {
         return t2;
     }
 
-    /* renamed from: W0 */
+    /* JADX INFO: renamed from: W0 */
     public static void m4256W0(int i, ByteVector2 byteVector2) {
         int i2 = i >>> 24;
         if (i2 != 0 && i2 != 1) {
@@ -1770,7 +1763,7 @@ public final class C3404f {
         byteVector2.m10538j(i >>> 16);
     }
 
-    /* renamed from: W1 */
+    /* JADX INFO: renamed from: W1 */
     public static String m4257W1(AbstractC3837t3 abstractC3837t3) {
         C3599b7 c3599b7 = new C3599b7(abstractC3837t3);
         StringBuilder sb = new StringBuilder(abstractC3837t3.mo5282d());
@@ -1821,7 +1814,7 @@ public final class C3404f {
         return sb.toString();
     }
 
-    /* renamed from: X */
+    /* JADX INFO: renamed from: X */
     public static final FloatBuffer m4258X(int i) {
         ByteBuffer byteBufferOrder = ByteBuffer.allocateDirect(i * 4 * 1).order(ByteOrder.nativeOrder());
         byteBufferOrder.limit(byteBufferOrder.capacity());
@@ -1831,7 +1824,7 @@ public final class C3404f {
         return floatBufferAsFloatBuffer;
     }
 
-    /* renamed from: X0 */
+    /* JADX INFO: renamed from: X0 */
     public static final <T> Object m4259X0(Object obj, Continuation<? super T> continuation) {
         if (obj instanceof CompletionState2) {
             Result2.a aVar = Result2.f25169j;
@@ -1841,7 +1834,7 @@ public final class C3404f {
         return Result2.m11474constructorimpl(obj);
     }
 
-    /* renamed from: X1 */
+    /* JADX INFO: renamed from: X1 */
     public static final String m4260X1(String str) {
         StringBuilder sb = new StringBuilder();
         for (int i = 0; i < str.length(); i++) {
@@ -1855,14 +1848,14 @@ public final class C3404f {
     }
 
     @NonNull
-    /* renamed from: Y */
+    /* JADX INFO: renamed from: Y */
     public static <TResult> Task<TResult> m4261Y(@RecentlyNonNull Exception exc) {
         C4358c0 c4358c0 = new C4358c0();
         c4358c0.m6025t(exc);
         return c4358c0;
     }
 
-    /* renamed from: Y0 */
+    /* JADX INFO: renamed from: Y0 */
     public static final <T> void m4262Y0(DispatchedTask<? super T> dispatchedTask, Continuation<? super T> continuation, boolean z2) {
         Object objMo11316j;
         Object objMo11147m = dispatchedTask.mo11147m();
@@ -1891,7 +1884,7 @@ public final class C3404f {
     }
 
     @Nullable
-    /* renamed from: Y1 */
+    /* JADX INFO: renamed from: Y1 */
     public static String m4263Y1(String str, String[] strArr, String[] strArr2) {
         int iMin = Math.min(strArr.length, strArr2.length);
         for (int i = 0; i < iMin; i++) {
@@ -1904,20 +1897,20 @@ public final class C3404f {
     }
 
     @NonNull
-    /* renamed from: Z */
+    /* JADX INFO: renamed from: Z */
     public static <TResult> Task<TResult> m4264Z(@RecentlyNonNull TResult tresult) {
         C4358c0 c4358c0 = new C4358c0();
         c4358c0.m6024s(tresult);
         return c4358c0;
     }
 
-    /* renamed from: Z0 */
+    /* JADX INFO: renamed from: Z0 */
     public static int m4265Z0(float f2) {
         return (int) (f2 + (f2 < 0.0f ? -0.5f : 0.5f));
     }
 
     @WorkerThread
-    /* renamed from: Z1 */
+    /* JADX INFO: renamed from: Z1 */
     public static Set<String> m4266Z1(SQLiteDatabase sQLiteDatabase, String str) {
         HashSet hashSet = new HashSet();
         Cursor cursorRawQuery = sQLiteDatabase.rawQuery(outline.m859k(outline.m841b(str, 22), "SELECT * FROM ", str, " LIMIT 0"), null);
@@ -1929,35 +1922,35 @@ public final class C3404f {
         }
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final CancellationException m4267a(String str, Throwable th) {
         CancellationException cancellationException = new CancellationException(str);
         cancellationException.initCause(th);
         return cancellationException;
     }
 
-    /* renamed from: a0 */
+    /* JADX INFO: renamed from: a0 */
     public static final String m4268a0(long j) {
         String str;
         if (j <= -999500000) {
-            str = ((j - 500000000) / 1000000000) + " s ";
+            str = ((j - ((long) 500000000)) / ((long) 1000000000)) + " s ";
         } else if (j <= -999500) {
-            str = ((j - 500000) / 1000000) + " ms";
+            str = ((j - ((long) 500000)) / ((long) 1000000)) + " ms";
         } else if (j <= 0) {
-            str = ((j - 500) / 1000) + " µs";
+            str = ((j - ((long) 500)) / ((long) 1000)) + " µs";
         } else if (j < 999500) {
-            str = ((j + 500) / 1000) + " µs";
+            str = ((j + ((long) 500)) / ((long) 1000)) + " µs";
         } else if (j < 999500000) {
-            str = ((j + 500000) / 1000000) + " ms";
+            str = ((j + ((long) 500000)) / ((long) 1000000)) + " ms";
         } else {
-            str = ((j + 500000000) / 1000000000) + " s ";
+            str = ((j + ((long) 500000000)) / ((long) 1000000000)) + " s ";
         }
         String str2 = String.format("%6s", Arrays.copyOf(new Object[]{str}, 1));
         Intrinsics3.checkExpressionValueIsNotNull(str2, "java.lang.String.format(format, *args)");
         return str2;
     }
 
-    /* renamed from: a1 */
+    /* JADX INFO: renamed from: a1 */
     public static final int m4269a1(SegmentedByteString segmentedByteString, int i) {
         int i2;
         Intrinsics3.checkParameterIsNotNull(segmentedByteString, "$this$segment");
@@ -1987,7 +1980,7 @@ public final class C3404f {
         return i2 >= 0 ? i2 : ~i2;
     }
 
-    /* renamed from: a2 */
+    /* JADX INFO: renamed from: a2 */
     public static void m4270a2(byte b2, byte b3, byte b4, byte b5, char[] cArr, int i) throws zzij {
         if (!m4358w2(b3)) {
             if ((((b3 + 112) + (b2 << 28)) >> 30) == 0 && !m4358w2(b4) && !m4358w2(b5)) {
@@ -2000,7 +1993,7 @@ public final class C3404f {
         throw zzij.m9107e();
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static Channel4 m4271b(int i, BufferOverflow bufferOverflow, Function1 function1, int i2) {
         BufferOverflow bufferOverflow2 = BufferOverflow.SUSPEND;
         if ((i2 & 1) != 0) {
@@ -2027,7 +2020,7 @@ public final class C3404f {
         throw new IllegalArgumentException("CONFLATED capacity cannot be used with non-default onBufferOverflow".toString());
     }
 
-    /* renamed from: b0 */
+    /* JADX INFO: renamed from: b0 */
     public static Component4<?> m4272b0(String str, LibraryVersionComponent2<Context> libraryVersionComponent2) {
         Component4.b bVarM6348a = Component4.m6348a(LibraryVersion.class);
         bVarM6348a.f12184d = 1;
@@ -2036,7 +2029,7 @@ public final class C3404f {
         return bVarM6348a.m6352b();
     }
 
-    /* renamed from: b1 */
+    /* JADX INFO: renamed from: b1 */
     public static final Sink m4273b1(Socket socket) throws IOException {
         Intrinsics3.checkParameterIsNotNull(socket, "$this$sink");
         JvmOkio3 jvmOkio3 = new JvmOkio3(socket);
@@ -2047,7 +2040,7 @@ public final class C3404f {
         return new AsyncTimeout2(jvmOkio3, jvmOkio2);
     }
 
-    /* renamed from: b2 */
+    /* JADX INFO: renamed from: b2 */
     public static void m4274b2(byte b2, byte b3, byte b4, char[] cArr, int i) throws zzij {
         if (m4358w2(b3) || ((b2 == -32 && b3 < -96) || ((b2 == -19 && b3 >= -96) || m4358w2(b4)))) {
             throw zzij.m9107e();
@@ -2055,7 +2048,7 @@ public final class C3404f {
         cArr[i] = (char) (((b2 & 15) << 12) | ((b3 & 63) << 6) | (b4 & 63));
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public static final CoroutineScope m4275c(CoroutineContext coroutineContext) {
         if (coroutineContext.get(Job.INSTANCE) == null) {
             coroutineContext = coroutineContext.plus(new C13110f1(null));
@@ -2063,7 +2056,7 @@ public final class C3404f {
         return new Scopes(coroutineContext);
     }
 
-    /* renamed from: c0 */
+    /* JADX INFO: renamed from: c0 */
     public static long m4276c0(AtomicLong atomicLong, long j) {
         long j2;
         do {
@@ -2072,12 +2065,12 @@ public final class C3404f {
         return j2;
     }
 
-    /* renamed from: c1 */
+    /* JADX INFO: renamed from: c1 */
     public static int m4277c1(int i) {
-        return (int) (Integer.rotateLeft((int) (i * (-862048943)), 15) * 461845907);
+        return (int) (((long) Integer.rotateLeft((int) (((long) i) * (-862048943)), 15)) * 461845907);
     }
 
-    /* renamed from: c2 */
+    /* JADX INFO: renamed from: c2 */
     public static void m4278c2(byte b2, byte b3, char[] cArr, int i) throws zzij {
         if (b2 < -62 || m4358w2(b3)) {
             throw zzij.m9107e();
@@ -2085,18 +2078,18 @@ public final class C3404f {
         cArr[i] = (char) (((b2 & 31) << 6) | (b3 & 63));
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public static CompletableJob m4279d(Job job, int i) {
         int i2 = i & 1;
         return new Supervisor(null);
     }
 
-    /* renamed from: d0 */
+    /* JADX INFO: renamed from: d0 */
     public static float[] m4280d0(RectF rectF) {
         return new float[]{rectF.centerX(), rectF.centerY()};
     }
 
-    /* renamed from: d1 */
+    /* JADX INFO: renamed from: d1 */
     public static final Source2 m4281d1(Socket socket) throws IOException {
         Intrinsics3.checkParameterIsNotNull(socket, "$this$source");
         JvmOkio3 jvmOkio3 = new JvmOkio3(socket);
@@ -2107,7 +2100,7 @@ public final class C3404f {
         return new AsyncTimeout3(jvmOkio3, jvmOkio);
     }
 
-    /* renamed from: d2 */
+    /* JADX INFO: renamed from: d2 */
     public static void m4282d2(@NonNull Bundle bundle, @NonNull Object obj) {
         if (obj instanceof Double) {
             bundle.putDouble("value", ((Double) obj).doubleValue());
@@ -2118,7 +2111,7 @@ public final class C3404f {
         }
     }
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public static final void m4283e(Task2 task2, TaskQueue2 taskQueue2, String str) {
         TaskRunner.b bVar = TaskRunner.f25422c;
         Logger logger = TaskRunner.f25421b;
@@ -2133,12 +2126,12 @@ public final class C3404f {
         logger.fine(sb.toString());
     }
 
-    /* renamed from: e0 */
+    /* JADX INFO: renamed from: e0 */
     public static final String m4284e0(Object obj) {
         return obj.getClass().getSimpleName();
     }
 
-    /* renamed from: e1 */
+    /* JADX INFO: renamed from: e1 */
     public static final void m4285e1(Continuation<? super Unit> continuation, Continuation<?> continuation2) {
         try {
             Continuation continuationIntercepted = IntrinsicsJvm.intercepted(continuation);
@@ -2152,7 +2145,7 @@ public final class C3404f {
 
     /* JADX WARN: Removed duplicated region for block: B:115:0x024a  */
     /* JADX WARN: Removed duplicated region for block: B:116:0x024c  */
-    /* renamed from: e2 */
+    /* JADX INFO: renamed from: e2 */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
@@ -2248,13 +2241,13 @@ public final class C3404f {
         }
     }
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public static long m4287f(long j, long j2) {
         long j3 = j + j2;
         return j3 < 0 ? RecyclerView.FOREVER_NS : j3;
     }
 
-    /* renamed from: f0 */
+    /* JADX INFO: renamed from: f0 */
     public static float[] m4288f0(RectF rectF) {
         float f2 = rectF.left;
         float f3 = rectF.top;
@@ -2263,7 +2256,7 @@ public final class C3404f {
         return new float[]{f2, f3, f4, f3, f4, f5, f2, f5};
     }
 
-    /* renamed from: f1 */
+    /* JADX INFO: renamed from: f1 */
     public static void m4289f1(Function2 function2, Object obj, Continuation continuation, Function1 function1, int i) {
         int i2 = i & 4;
         try {
@@ -2276,7 +2269,7 @@ public final class C3404f {
         }
     }
 
-    /* renamed from: f2 */
+    /* JADX INFO: renamed from: f2 */
     public static void m4290f2(C4157q3 c4157q3, SQLiteDatabase sQLiteDatabase) {
         if (c4157q3 == null) {
             throw new IllegalArgumentException("Monitor must not be null");
@@ -2298,17 +2291,17 @@ public final class C3404f {
     }
 
     @NonNull
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public static SizeSelector m4291g(SizeSelector... sizeSelectorArr) {
         return new SizeSelectors6(sizeSelectorArr, null);
     }
 
-    /* renamed from: g0 */
+    /* JADX INFO: renamed from: g0 */
     public static String m4292g0(long j) {
         return m4296h0(j, null);
     }
 
-    /* renamed from: g1 */
+    /* JADX INFO: renamed from: g1 */
     public static final <T, R> Object m4293g1(Scopes2<? super T> scopes2, R r, Function2<? super R, ? super Continuation<? super T>, ? extends Object> function2) throws Throwable {
         Object completionState2;
         Object objM11295R;
@@ -2331,8 +2324,8 @@ public final class C3404f {
     }
 
     @WorkerThread
-    /* renamed from: g2 */
-    public static void m4294g2(C4157q3 c4157q3, SQLiteDatabase sQLiteDatabase, String str, String str2, String str3, String[] strArr) throws SQLException {
+    /* JADX INFO: renamed from: g2 */
+    public static void m4294g2(C4157q3 c4157q3, SQLiteDatabase sQLiteDatabase, String str, String str2, String str3, String[] strArr) throws SQLiteException {
         boolean zMoveToFirst;
         if (c4157q3 == null) {
             throw new IllegalArgumentException("Monitor must not be null");
@@ -2388,7 +2381,7 @@ public final class C3404f {
         }
     }
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public static final boolean m4295h(byte[] bArr, int i, byte[] bArr2, int i2, int i3) {
         Intrinsics3.checkParameterIsNotNull(bArr, "a");
         Intrinsics3.checkParameterIsNotNull(bArr2, "b");
@@ -2400,7 +2393,7 @@ public final class C3404f {
         return true;
     }
 
-    /* renamed from: h0 */
+    /* JADX INFO: renamed from: h0 */
     public static String m4296h0(long j, @Nullable SimpleDateFormat simpleDateFormat) {
         Calendar calendarM6075h = UtcDates.m6075h();
         Calendar calendarM6076i = UtcDates.m6076i();
@@ -2408,7 +2401,7 @@ public final class C3404f {
         return simpleDateFormat != null ? simpleDateFormat.format(new Date(j)) : calendarM6075h.get(1) == calendarM6076i.get(1) ? m4320n0(j, Locale.getDefault()) : m4340s0(j, Locale.getDefault());
     }
 
-    /* renamed from: h1 */
+    /* JADX INFO: renamed from: h1 */
     public static int m4297h1(int[] iArr) {
         int i = 0;
         for (int i2 : iArr) {
@@ -2417,7 +2410,7 @@ public final class C3404f {
         return i;
     }
 
-    /* renamed from: h2 */
+    /* JADX INFO: renamed from: h2 */
     public static final void m4298h2(StringBuilder sb, int i, String str, Object obj) {
         if (obj instanceof List) {
             Iterator it = ((List) obj).iterator();
@@ -2481,7 +2474,7 @@ public final class C3404f {
         sb.append("}");
     }
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public static Deferred m4299i(CoroutineScope coroutineScope, CoroutineContext coroutineContext, CoroutineStart coroutineStart, Function2 function2, int i, Object obj) {
         CoroutineContextImpl4 coroutineContextImpl4 = (i & 1) != 0 ? CoroutineContextImpl4.f25237j : null;
         CoroutineStart coroutineStart2 = (i & 2) != 0 ? CoroutineStart.DEFAULT : null;
@@ -2492,7 +2485,7 @@ public final class C3404f {
         return c13122j1;
     }
 
-    /* renamed from: i0 */
+    /* JADX INFO: renamed from: i0 */
     public static final Delay m4300i0(CoroutineContext coroutineContext) {
         int i = ContinuationInterceptor.f25235e;
         CoroutineContext.Element element = coroutineContext.get(ContinuationInterceptor.b.f25236a);
@@ -2504,7 +2497,7 @@ public final class C3404f {
     }
 
     /* JADX WARN: Removed duplicated region for block: B:7:0x0013  */
-    /* renamed from: i1 */
+    /* JADX INFO: renamed from: i1 */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
@@ -2543,13 +2536,13 @@ public final class C3404f {
         return Unit.f27425a;
     }
 
-    /* renamed from: i2 */
+    /* JADX INFO: renamed from: i2 */
     public static boolean m4302i2(byte b2) {
         return b2 >= 0;
     }
 
     @RecentlyNonNull
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static <TResult> TResult m4303j(@RecentlyNonNull Task<TResult> task) throws ExecutionException, InterruptedException {
         AnimatableValueParser.m587x("Must not be called on the main application thread");
         AnimatableValueParser.m595z(task, "Task must not be null");
@@ -2562,13 +2555,13 @@ public final class C3404f {
         return (TResult) m4251U1(task);
     }
 
-    /* renamed from: j0 */
+    /* JADX INFO: renamed from: j0 */
     public static final int m4304j0(ViewOnClickListenerC5272b viewOnClickListenerC5272b, @DimenRes int i) {
         Intrinsics3.checkNotNullParameter(viewOnClickListenerC5272b, "$this$getDimenPixelSize");
         return viewOnClickListenerC5272b.getResources().getDimensionPixelSize(i);
     }
 
-    /* renamed from: j1 */
+    /* JADX INFO: renamed from: j1 */
     public static final long m4305j1(String str, long j, long j2, long j3) {
         String strM4309k1 = m4309k1(str);
         if (strM4309k1 == null) {
@@ -2585,7 +2578,7 @@ public final class C3404f {
         throw new IllegalStateException(("System property '" + str + "' should be in range " + j2 + ".." + j3 + ", but is '" + jLongValue + '\'').toString());
     }
 
-    /* renamed from: j2 */
+    /* JADX INFO: renamed from: j2 */
     public static boolean m4306j2(@NullableDecl Object obj, @NullableDecl Object obj2) {
         if (obj != obj2) {
             return obj != null && obj.equals(obj2);
@@ -2594,7 +2587,7 @@ public final class C3404f {
     }
 
     @RecentlyNonNull
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public static <TResult> TResult m4307k(@RecentlyNonNull Task<TResult> task, long j, @RecentlyNonNull TimeUnit timeUnit) throws ExecutionException, InterruptedException, TimeoutException {
         AnimatableValueParser.m587x("Must not be called on the main application thread");
         AnimatableValueParser.m595z(task, "Task must not be null");
@@ -2611,13 +2604,13 @@ public final class C3404f {
     }
 
     @NullableDecl
-    /* renamed from: k0 */
+    /* JADX INFO: renamed from: k0 */
     public static <T> T m4308k0(Iterable<? extends T> iterable, @NullableDecl T t) {
         Sets2 sets2 = new Sets2((Collections2.a) iterable);
         return sets2.hasNext() ? (T) sets2.next() : t;
     }
 
-    /* renamed from: k1 */
+    /* JADX INFO: renamed from: k1 */
     public static final String m4309k1(String str) {
         int i = SystemProps.f27706a;
         try {
@@ -2627,7 +2620,7 @@ public final class C3404f {
         }
     }
 
-    /* renamed from: k2 */
+    /* JADX INFO: renamed from: k2 */
     public static int m4310k2(int i) {
         int[] iArr = {1, 2, 3, 4, 5};
         for (int i2 = 0; i2 < 5; i2++) {
@@ -2644,7 +2637,7 @@ public final class C3404f {
     }
 
     /* JADX WARN: Removed duplicated region for block: B:7:0x0013  */
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
@@ -2706,12 +2699,12 @@ public final class C3404f {
         return (List) objM11326u;
     }
 
-    /* renamed from: l0 */
+    /* JADX INFO: renamed from: l0 */
     public static final String m4312l0(Object obj) {
         return Integer.toHexString(System.identityHashCode(obj));
     }
 
-    /* renamed from: l1 */
+    /* JADX INFO: renamed from: l1 */
     public static int m4313l1(String str, int i, int i2, int i3, int i4, Object obj) {
         if ((i4 & 4) != 0) {
             i2 = 1;
@@ -2722,7 +2715,7 @@ public final class C3404f {
         return (int) m4305j1(str, i, i2, i3);
     }
 
-    /* renamed from: l2 */
+    /* JADX INFO: renamed from: l2 */
     public static String m4314l2(String str, Object... objArr) {
         int length;
         int length2;
@@ -2788,7 +2781,7 @@ public final class C3404f {
         return sb3.toString();
     }
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public static String m4315m(int i, int i2, @NullableDecl String str) {
         if (i < 0) {
             return m4214I0("%s (%s) must not be negative", str, Integer.valueOf(i));
@@ -2800,7 +2793,7 @@ public final class C3404f {
     }
 
     @TargetApi(17)
-    /* renamed from: m0 */
+    /* JADX INFO: renamed from: m0 */
     public static int m4316m0() {
         EGLDisplay eGLDisplayEglGetDisplay = EGL14.eglGetDisplay(0);
         int[] iArr = new int[2];
@@ -2825,7 +2818,7 @@ public final class C3404f {
         return iArr3[0];
     }
 
-    /* renamed from: m1 */
+    /* JADX INFO: renamed from: m1 */
     public static /* synthetic */ long m4317m1(String str, long j, long j2, long j3, int i, Object obj) {
         if ((i & 4) != 0) {
             j2 = 1;
@@ -2837,19 +2830,19 @@ public final class C3404f {
         return m4305j1(str, j, j4, j3);
     }
 
-    /* renamed from: m2 */
+    /* JADX INFO: renamed from: m2 */
     public static boolean m4318m2(Object obj, Object obj2) {
         return obj == obj2 || (obj != null && obj.equals(obj2));
     }
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public static ExecutorService m4319n(String str) {
         ExecutorService executorServiceUnconfigurableExecutorService = Executors.unconfigurableExecutorService(new ThreadPoolExecutor(1, 1, 0L, TimeUnit.MILLISECONDS, new LinkedBlockingQueue(), new ExecutorUtils(str, new AtomicLong(1L)), new ThreadPoolExecutor.DiscardPolicy()));
         Runtime.getRuntime().addShutdownHook(new Thread(new ExecutorUtils2(str, executorServiceUnconfigurableExecutorService, 2L, TimeUnit.SECONDS), outline.m883w("Crashlytics Shutdown Hook for ", str)));
         return executorServiceUnconfigurableExecutorService;
     }
 
-    /* renamed from: n0 */
+    /* JADX INFO: renamed from: n0 */
     public static String m4320n0(long j, Locale locale) {
         if (Build.VERSION.SDK_INT >= 24) {
             return UtcDates.m6070c("MMMd", locale).format(new Date(j));
@@ -2868,7 +2861,7 @@ public final class C3404f {
         return simpleDateFormat.format(new Date(j));
     }
 
-    /* renamed from: n1 */
+    /* JADX INFO: renamed from: n1 */
     public static void m4321n1(List<? extends Throwable> list) {
         if (list == null || list.isEmpty()) {
             return;
@@ -2886,7 +2879,7 @@ public final class C3404f {
         throw ((Error) th);
     }
 
-    /* renamed from: n2 */
+    /* JADX INFO: renamed from: n2 */
     public static int m4322n2(byte[] bArr, int i, C3824s3 c3824s3) {
         int i2 = i + 1;
         long j = bArr[i];
@@ -2896,13 +2889,14 @@ public final class C3404f {
         }
         int i3 = i2 + 1;
         byte b2 = bArr[i2];
-        long j2 = (j & 127) | ((b2 & 127) << 7);
+        long j2 = (j & 127) | (((long) (b2 & 127)) << 7);
         int i4 = 7;
         while (b2 < 0) {
             int i5 = i3 + 1;
+            byte b3 = bArr[i3];
             i4 += 7;
-            j2 |= (r10 & 127) << i4;
-            b2 = bArr[i3];
+            j2 |= ((long) (b3 & 127)) << i4;
+            b2 = b3;
             i3 = i5;
         }
         c3824s3.f10308b = j2;
@@ -2911,7 +2905,7 @@ public final class C3404f {
 
     @NonNull
     @Deprecated
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public static <TResult> Task<TResult> m4323o(@RecentlyNonNull Executor executor, @RecentlyNonNull Callable<TResult> callable) {
         AnimatableValueParser.m595z(executor, "Executor must not be null");
         AnimatableValueParser.m595z(callable, "Callback must not be null");
@@ -2920,7 +2914,7 @@ public final class C3404f {
         return c4358c0;
     }
 
-    /* renamed from: o0 */
+    /* JADX INFO: renamed from: o0 */
     public static final <T> CancellableContinuationImpl5<T> m4324o0(Continuation<? super T> continuation) {
         CancellableContinuationImpl5<T> cancellableContinuationImpl5;
         if (!(continuation instanceof DispatchedContinuation)) {
@@ -2960,7 +2954,7 @@ public final class C3404f {
         return new CancellableContinuationImpl5<>(continuation, 2);
     }
 
-    /* renamed from: o1 */
+    /* JADX INFO: renamed from: o1 */
     public static void m4325o1(Throwable th) {
         if (th instanceof OnErrorNotImplementedException) {
             throw ((OnErrorNotImplementedException) th);
@@ -2982,13 +2976,13 @@ public final class C3404f {
         }
     }
 
-    /* renamed from: o2 */
+    /* JADX INFO: renamed from: o2 */
     public static long m4326o2(byte[] bArr, int i) {
-        return ((bArr[i + 7] & 255) << 56) | (bArr[i] & 255) | ((bArr[i + 1] & 255) << 8) | ((bArr[i + 2] & 255) << 16) | ((bArr[i + 3] & 255) << 24) | ((bArr[i + 4] & 255) << 32) | ((bArr[i + 5] & 255) << 40) | ((bArr[i + 6] & 255) << 48);
+        return ((((long) bArr[i + 7]) & 255) << 56) | (((long) bArr[i]) & 255) | ((((long) bArr[i + 1]) & 255) << 8) | ((((long) bArr[i + 2]) & 255) << 16) | ((((long) bArr[i + 3]) & 255) << 24) | ((((long) bArr[i + 4]) & 255) << 32) | ((((long) bArr[i + 5]) & 255) << 40) | ((((long) bArr[i + 6]) & 255) << 48);
     }
 
     /* JADX WARN: Multi-variable type inference failed */
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public static final <E> OnUndeliveredElement m4327p(Function1<? super E, Unit> function1, E e2, OnUndeliveredElement onUndeliveredElement) {
         try {
             function1.invoke(e2);
@@ -3001,7 +2995,7 @@ public final class C3404f {
         return onUndeliveredElement;
     }
 
-    /* renamed from: p0 */
+    /* JADX INFO: renamed from: p0 */
     public static int m4328p0(int[] iArr, int i, boolean z2) {
         int[] iArr2 = iArr;
         int i2 = 0;
@@ -3051,13 +3045,13 @@ public final class C3404f {
         }
     }
 
-    /* renamed from: p1 */
+    /* JADX INFO: renamed from: p1 */
     public static void m4329p1(Throwable th, Observer2<?> observer2, Object obj) {
         m4325o1(th);
         observer2.onError(OnErrorThrowable.m11126a(th, obj));
     }
 
-    /* renamed from: p2 */
+    /* JADX INFO: renamed from: p2 */
     public static <T> void m4330p2(Task<T> task, InterfaceC4365i<? super T> interfaceC4365i) {
         Executor executor = C4363g.f11480b;
         task.mo6012g(executor, interfaceC4365i);
@@ -3065,13 +3059,13 @@ public final class C3404f {
         task.mo6006a(executor, interfaceC4365i);
     }
 
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     public static /* synthetic */ OnUndeliveredElement m4331q(Function1 function1, Object obj, OnUndeliveredElement onUndeliveredElement, int i) {
         int i2 = i & 2;
         return m4327p(function1, obj, null);
     }
 
-    /* renamed from: q0 */
+    /* JADX INFO: renamed from: q0 */
     public static int m4332q0(Context context) {
         Display defaultDisplay = ((WindowManager) context.getSystemService("window")).getDefaultDisplay();
         if (defaultDisplay.getWidth() == defaultDisplay.getHeight()) {
@@ -3080,7 +3074,7 @@ public final class C3404f {
         return defaultDisplay.getWidth() < defaultDisplay.getHeight() ? 1 : 2;
     }
 
-    /* renamed from: q1 */
+    /* JADX INFO: renamed from: q1 */
     public static int[] m4333q1(Collection<? extends Number> collection) {
         if (collection instanceof Ints) {
             Ints ints = (Ints) collection;
@@ -3097,14 +3091,14 @@ public final class C3404f {
         return iArr;
     }
 
-    /* renamed from: q2 */
+    /* JADX INFO: renamed from: q2 */
     public static void m4334q2(boolean z2, @NullableDecl Object obj) {
         if (!z2) {
             throw new IllegalStateException(String.valueOf(obj));
         }
     }
 
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     public static final void m4335r(CoroutineScope coroutineScope, CancellationException cancellationException) {
         Job job = (Job) coroutineScope.getCoroutineContext().get(Job.INSTANCE);
         if (job != null) {
@@ -3114,7 +3108,7 @@ public final class C3404f {
         throw new IllegalStateException(("Scope cannot be cancelled because it does not have a job: " + coroutineScope).toString());
     }
 
-    /* renamed from: r0 */
+    /* JADX INFO: renamed from: r0 */
     public static DateFormat m4336r0(int i, int i2) {
         String str;
         String str2;
@@ -3147,7 +3141,7 @@ public final class C3404f {
         return new SimpleDateFormat(sb.toString(), Locale.US);
     }
 
-    /* renamed from: r1 */
+    /* JADX INFO: renamed from: r1 */
     public static final String m4337r1(String str) {
         Intrinsics3.checkParameterIsNotNull(str, "$this$toCanonicalHost");
         int i = 0;
@@ -3229,7 +3223,7 @@ public final class C3404f {
         return buffer3.m10429D();
     }
 
-    /* renamed from: r2 */
+    /* JADX INFO: renamed from: r2 */
     public static int m4338r2(byte[] bArr, int i, C3824s3 c3824s3) throws zzij {
         int iM4233O1 = m4233O1(bArr, i, c3824s3);
         int i2 = c3824s3.f10307a;
@@ -3244,7 +3238,7 @@ public final class C3404f {
         return iM4233O1 + i2;
     }
 
-    /* renamed from: s */
+    /* JADX INFO: renamed from: s */
     public static void m4339s(CoroutineContext coroutineContext, CancellationException cancellationException, int i, Object obj) {
         int i2 = i & 1;
         Job job = (Job) coroutineContext.get(Job.INSTANCE);
@@ -3253,7 +3247,7 @@ public final class C3404f {
         }
     }
 
-    /* renamed from: s0 */
+    /* JADX INFO: renamed from: s0 */
     public static String m4340s0(long j, Locale locale) {
         if (Build.VERSION.SDK_INT >= 24) {
             return UtcDates.m6070c("yMMMd", locale).format(new Date(j));
@@ -3264,7 +3258,7 @@ public final class C3404f {
         return dateInstance.format(new Date(j));
     }
 
-    /* renamed from: s1 */
+    /* JADX INFO: renamed from: s1 */
     public static final String m4341s1(Continuation<?> continuation) {
         Object objM11474constructorimpl;
         if (continuation instanceof DispatchedContinuation) {
@@ -3283,20 +3277,20 @@ public final class C3404f {
         return (String) objM11474constructorimpl;
     }
 
-    /* renamed from: s2 */
+    /* JADX INFO: renamed from: s2 */
     public static void m4342s2(int i, int i2, int i3) {
         if (i < 0 || i2 < i || i2 > i3) {
             throw new IndexOutOfBoundsException((i < 0 || i > i3) ? m4350u2(i, i3, "start index") : (i2 < 0 || i2 > i3) ? m4350u2(i2, i3, "end index") : m4314l2("end index (%s) must not be less than start index (%s)", Integer.valueOf(i2), Integer.valueOf(i)));
         }
     }
 
-    /* renamed from: t */
+    /* JADX INFO: renamed from: t */
     public static /* synthetic */ void m4343t(Job job, CancellationException cancellationException, int i, Object obj) {
         int i2 = i & 1;
         job.mo10911b(null);
     }
 
-    /* renamed from: t0 */
+    /* JADX INFO: renamed from: t0 */
     public static void m4344t0(@Nullable InputStream inputStream, @NonNull File file) throws Throwable {
         byte[] bArr = new byte[8192];
         GZIPOutputStream gZIPOutputStream = null;
@@ -3323,13 +3317,13 @@ public final class C3404f {
         }
     }
 
-    /* renamed from: t1 */
+    /* JADX INFO: renamed from: t1 */
     public static final String m4345t1(byte b2) {
         char[] cArr = ByteString4.f26138a;
         return new String(new char[]{cArr[(b2 >> 4) & 15], cArr[b2 & 15]});
     }
 
-    /* renamed from: t2 */
+    /* JADX INFO: renamed from: t2 */
     public static int m4346t2(byte[] bArr, int i, C3824s3 c3824s3) throws zzij {
         int iM4233O1 = m4233O1(bArr, i, c3824s3);
         int i2 = c3824s3.f10307a;
@@ -3344,7 +3338,7 @@ public final class C3404f {
         return iM4233O1 + i2;
     }
 
-    /* renamed from: u */
+    /* JADX INFO: renamed from: u */
     public static final void m4347u(Channel6<?> channel6, Throwable th) {
         CancellationException cancellationExceptionM4267a = null;
         if (th != null) {
@@ -3356,7 +3350,7 @@ public final class C3404f {
         channel6.mo11199b(cancellationExceptionM4267a);
     }
 
-    /* renamed from: u0 */
+    /* JADX INFO: renamed from: u0 */
     public static final void m4348u0(CoroutineContext coroutineContext, Throwable th) {
         try {
             int i = CoroutineExceptionHandler.f27455g;
@@ -3376,7 +3370,7 @@ public final class C3404f {
         }
     }
 
-    /* renamed from: u1 */
+    /* JADX INFO: renamed from: u1 */
     public static String m4349u1(String str) {
         int length = str.length();
         int i = 0;
@@ -3398,7 +3392,7 @@ public final class C3404f {
         return str;
     }
 
-    /* renamed from: u2 */
+    /* JADX INFO: renamed from: u2 */
     public static String m4350u2(int i, int i2, @NullableDecl String str) {
         if (i < 0) {
             return m4314l2("%s (%s) must not be negative", str, Integer.valueOf(i));
@@ -3409,25 +3403,25 @@ public final class C3404f {
         throw new IllegalArgumentException(outline.m851g(26, "negative size: ", i2));
     }
 
-    /* renamed from: v */
+    /* JADX INFO: renamed from: v */
     public static void m4351v(boolean z2) {
         if (!z2) {
             throw new IllegalArgumentException();
         }
     }
 
-    /* renamed from: v0 */
+    /* JADX INFO: renamed from: v0 */
     public static int m4352v0(long j) {
         return (int) (j ^ (j >>> 32));
     }
 
-    /* renamed from: v1 */
+    /* JADX INFO: renamed from: v1 */
     public static final <T> Object m4353v1(Object obj, Function1<? super Throwable, Unit> function1) {
         Throwable thM11476exceptionOrNullimpl = Result2.m11476exceptionOrNullimpl(obj);
         return thM11476exceptionOrNullimpl == null ? function1 != null ? new CompletionState3(obj, function1) : obj : new CompletionState2(thM11476exceptionOrNullimpl, false, 2);
     }
 
-    /* renamed from: v2 */
+    /* JADX INFO: renamed from: v2 */
     public static int m4354v2(byte[] bArr, int i, C3824s3 c3824s3) throws zzij {
         int iM4233O1 = m4233O1(bArr, i, c3824s3);
         int i2 = c3824s3.f10307a;
@@ -3445,14 +3439,14 @@ public final class C3404f {
         return iM4233O1 + i2;
     }
 
-    /* renamed from: w */
+    /* JADX INFO: renamed from: w */
     public static void m4355w(boolean z2) {
         if (!z2) {
             throw new IllegalArgumentException();
         }
     }
 
-    /* renamed from: w0 */
+    /* JADX INFO: renamed from: w0 */
     public static /* synthetic */ Job2 m4356w0(Job job, boolean z2, boolean z3, Function1 function1, int i, Object obj) {
         if ((i & 1) != 0) {
             z2 = false;
@@ -3463,7 +3457,7 @@ public final class C3404f {
         return job.mo10913n(z2, z3, function1);
     }
 
-    /* renamed from: w1 */
+    /* JADX INFO: renamed from: w1 */
     public static String m4357w1(String str) {
         int length = str.length();
         int i = 0;
@@ -3485,13 +3479,13 @@ public final class C3404f {
         return str;
     }
 
-    /* renamed from: w2 */
+    /* JADX INFO: renamed from: w2 */
     public static boolean m4358w2(byte b2) {
         return b2 > -65;
     }
 
     @CanIgnoreReturnValue
-    /* renamed from: x */
+    /* JADX INFO: renamed from: x */
     public static int m4359x(int i, int i2) {
         String strM4214I0;
         if (i >= 0 && i < i2) {
@@ -3508,18 +3502,18 @@ public final class C3404f {
         throw new IndexOutOfBoundsException(strM4214I0);
     }
 
-    /* renamed from: x0 */
+    /* JADX INFO: renamed from: x0 */
     public static Job2 m4360x0(long j, Runnable runnable, CoroutineContext coroutineContext) {
         return DefaultExecutor2.f27793a.mo11196x(j, runnable, coroutineContext);
     }
 
     @NonNull
-    /* renamed from: x1 */
+    /* JADX INFO: renamed from: x1 */
     public static BaseAction m4361x1(@NonNull BaseAction... baseActionArr) {
         return new TogetherAction(Arrays.asList(baseActionArr));
     }
 
-    /* renamed from: x2 */
+    /* JADX INFO: renamed from: x2 */
     public static int m4362x2(String str) {
         if (Log.isLoggable("FirebaseAppIndex", 3) ? true : Log.isLoggable("FirebaseAppIndex", 3)) {
             return Log.d("FirebaseAppIndex", str);
@@ -3528,7 +3522,7 @@ public final class C3404f {
     }
 
     @CanIgnoreReturnValue
-    /* renamed from: y */
+    /* JADX INFO: renamed from: y */
     public static Object m4363y(Object obj, int i) {
         if (obj != null) {
             return obj;
@@ -3536,7 +3530,7 @@ public final class C3404f {
         throw new NullPointerException(outline.m871q("at index ", i));
     }
 
-    /* renamed from: y0 */
+    /* JADX INFO: renamed from: y0 */
     public static final boolean m4364y0(CoroutineScope coroutineScope) {
         Job job = (Job) coroutineScope.getCoroutineContext().get(Job.INSTANCE);
         if (job != null) {
@@ -3545,7 +3539,7 @@ public final class C3404f {
         return true;
     }
 
-    /* renamed from: y1 */
+    /* JADX INFO: renamed from: y1 */
     public static RectF m4365y1(float[] fArr) {
         RectF rectF = new RectF(Float.POSITIVE_INFINITY, Float.POSITIVE_INFINITY, Float.NEGATIVE_INFINITY, Float.NEGATIVE_INFINITY);
         for (int i = 1; i < fArr.length; i += 2) {
@@ -3576,7 +3570,7 @@ public final class C3404f {
         return rectF;
     }
 
-    /* renamed from: z */
+    /* JADX INFO: renamed from: z */
     public static void m4366z(Object obj, Object obj2) {
         if (obj == null) {
             throw new NullPointerException(outline.m881v("null key in entry: null=", obj2));
@@ -3587,7 +3581,7 @@ public final class C3404f {
         throw new NullPointerException("null value in entry: " + obj + "=null");
     }
 
-    /* renamed from: z0 */
+    /* JADX INFO: renamed from: z0 */
     public static final boolean m4367z0(AssertionError assertionError) {
         Intrinsics3.checkParameterIsNotNull(assertionError, "$this$isAndroidGetsocknameError");
         if (assertionError.getCause() == null) {
@@ -3598,7 +3592,7 @@ public final class C3404f {
     }
 
     @TargetApi(19)
-    /* renamed from: z1 */
+    /* JADX INFO: renamed from: z1 */
     public static boolean m4368z1(@RecentlyNonNull Context context, int i, @RecentlyNonNull String str) {
         C3410a c3410aM4376a = C3411b.m4376a(context);
         Objects.requireNonNull(c3410aM4376a);

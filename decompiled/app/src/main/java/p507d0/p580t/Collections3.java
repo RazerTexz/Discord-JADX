@@ -4,12 +4,12 @@ import java.util.ListIterator;
 import java.util.NoSuchElementException;
 import p507d0.p592z.p594d.p595g0.KMarkers;
 
-/* compiled from: Collections.kt */
-/* renamed from: d0.t.v, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.t.v, reason: use source file name */
+/* JADX INFO: compiled from: Collections.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class Collections3 implements ListIterator, KMarkers {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static final Collections3 f25220j = new Collections3();
 
     @Override // java.util.ListIterator

@@ -3,8 +3,8 @@ package androidx.tracing;
 import androidx.annotation.NonNull;
 import androidx.annotation.RequiresApi;
 
+/* JADX INFO: loaded from: classes.dex */
 @RequiresApi(18)
-/* loaded from: classes.dex */
 public final class TraceApi18Impl {
     private TraceApi18Impl() {
     }

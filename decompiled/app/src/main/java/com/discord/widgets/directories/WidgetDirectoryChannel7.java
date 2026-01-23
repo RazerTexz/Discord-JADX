@@ -20,15 +20,15 @@ import p507d0.p580t._Collections;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetDirectoryChannel.kt */
-/* renamed from: com.discord.widgets.directories.WidgetDirectoryChannel$initializeUI$$inlined$apply$lambda$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.directories.WidgetDirectoryChannel$initializeUI$$inlined$apply$lambda$1, reason: use source file name */
+/* JADX INFO: compiled from: WidgetDirectoryChannel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetDirectoryChannel7 extends Lambda implements Function2<TabLayout.Tab, Integer, Unit> {
     public final /* synthetic */ TabLayout $this_apply;
     public final /* synthetic */ WidgetDirectoryChannel this$0;
 
-    /* compiled from: WidgetDirectoryChannel.kt */
-    /* renamed from: com.discord.widgets.directories.WidgetDirectoryChannel$initializeUI$$inlined$apply$lambda$1$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.directories.WidgetDirectoryChannel$initializeUI$$inlined$apply$lambda$1$1 */
+    /* JADX INFO: compiled from: WidgetDirectoryChannel.kt */
     public static final class C82931 extends Lambda implements Function1<WidgetDirectoriesViewModel.ViewState, Unit> {
         public final /* synthetic */ int $position;
         public final /* synthetic */ TabLayout.Tab $tab;
@@ -46,7 +46,7 @@ public final class WidgetDirectoryChannel7 extends Lambda implements Function2<T
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(WidgetDirectoriesViewModel.ViewState viewState) {
             String string;
             Intrinsics3.checkNotNullParameter(viewState, "state");

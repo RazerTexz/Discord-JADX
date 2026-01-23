@@ -1,44 +1,44 @@
 package p007b.p485q.p486a.p490k;
 
-/* compiled from: RotationGestureDetector.java */
-/* renamed from: b.q.a.k.c, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.q.a.k.c, reason: use source file name */
+/* JADX INFO: compiled from: RotationGestureDetector.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class RotationGestureDetector {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public float f14444a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public float f14445b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public float f14446c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public float f14447d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public int f14448e = -1;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public int f14449f = -1;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public float f14450g;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public boolean f14451h;
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public a f14452i;
 
-    /* compiled from: RotationGestureDetector.java */
-    /* renamed from: b.q.a.k.c$a */
+    /* JADX INFO: renamed from: b.q.a.k.c$a */
+    /* JADX INFO: compiled from: RotationGestureDetector.java */
     public interface a {
     }
 
-    /* compiled from: RotationGestureDetector.java */
-    /* renamed from: b.q.a.k.c$b */
+    /* JADX INFO: renamed from: b.q.a.k.c$b */
+    /* JADX INFO: compiled from: RotationGestureDetector.java */
     public static class b implements a {
     }
 

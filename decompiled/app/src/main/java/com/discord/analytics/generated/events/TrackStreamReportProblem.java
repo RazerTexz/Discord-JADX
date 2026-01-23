@@ -7,8 +7,8 @@ import com.discord.models.domain.ModelAuditLogEntry;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: TrackStreamReportProblem.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: TrackStreamReportProblem.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class TrackStreamReportProblem implements AnalyticsSchema, TrackBase2 {
     private TrackBase trackBase;
     private final CharSequence reason = null;
@@ -24,7 +24,7 @@ public final /* data */ class TrackStreamReportProblem implements AnalyticsSchem
     private final transient String analyticsSchemaTypeName = "stream_report_problem";
 
     @Override // com.discord.api.science.AnalyticsSchema
-    /* renamed from: d, reason: from getter */
+    /* JADX INFO: renamed from: d, reason: from getter */
     public String getAnalyticsSchemaTypeName() {
         return this.analyticsSchemaTypeName;
     }

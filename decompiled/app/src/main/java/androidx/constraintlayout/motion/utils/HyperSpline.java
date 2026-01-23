@@ -2,7 +2,7 @@ package androidx.constraintlayout.motion.utils;
 
 import java.lang.reflect.Array;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class HyperSpline {
     public double[][] mCtl;
     public Cubic[][] mCurve;
@@ -15,16 +15,16 @@ public class HyperSpline {
         public static final double HALF = 0.5d;
         public static final double THIRD = 0.3333333333333333d;
 
-        /* renamed from: mA */
+        /* JADX INFO: renamed from: mA */
         public double f96mA;
 
-        /* renamed from: mB */
+        /* JADX INFO: renamed from: mB */
         public double f97mB;
 
-        /* renamed from: mC */
+        /* JADX INFO: renamed from: mC */
         public double f98mC;
 
-        /* renamed from: mD */
+        /* JADX INFO: renamed from: mD */
         public double f99mD;
 
         public Cubic(double d, double d2, double d3, double d4) {

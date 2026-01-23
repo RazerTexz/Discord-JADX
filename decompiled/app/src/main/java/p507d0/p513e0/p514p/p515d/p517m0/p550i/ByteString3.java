@@ -11,21 +11,21 @@ import java.util.Iterator;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p513e0.p514p.p515d.p517m0.p550i.RopeByteString;
 
-/* compiled from: ByteString.java */
-/* renamed from: d0.e0.p.d.m0.i.c, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.i.c, reason: use source file name */
+/* JADX INFO: compiled from: ByteString.java */
+/* JADX INFO: loaded from: classes3.dex */
 public abstract class ByteString3 implements Iterable<Byte> {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static final ByteString3 f24100j = new LiteralByteString(new byte[0]);
 
-    /* compiled from: ByteString.java */
-    /* renamed from: d0.e0.p.d.m0.i.c$a */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.i.c$a */
+    /* JADX INFO: compiled from: ByteString.java */
     public interface a extends Iterator<Byte> {
         byte nextByte();
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public static ByteString3 m9823c(Iterator<ByteString3> it, int i) {
         if (i == 1) {
             return it.next();
@@ -55,7 +55,7 @@ public abstract class ByteString3 implements Iterable<Byte> {
     public ByteString3 concat(ByteString3 byteString3) {
         int size = size();
         int size2 = byteString3.size();
-        if (size + size2 >= 2147483647L) {
+        if (((long) size) + ((long) size2) >= 2147483647L) {
             throw new IllegalArgumentException(outline.m853h(53, "ByteString would be too long: ", size, BadgeDrawable.DEFAULT_EXCEED_MAX_BADGE_NUMBER_SUFFIX, size2));
         }
         int[] iArr = RopeByteString.f24154k;
@@ -114,19 +114,19 @@ public abstract class ByteString3 implements Iterable<Byte> {
         }
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public abstract void mo9824d(byte[] bArr, int i, int i2, int i3);
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public abstract int mo9825e();
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public abstract boolean mo9826g();
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public abstract int mo9827h(int i, int i2, int i3);
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public abstract int mo9828i(int i, int i2, int i3);
 
     public boolean isEmpty() {
@@ -139,15 +139,15 @@ public abstract class ByteString3 implements Iterable<Byte> {
     public abstract Iterator<Byte> iterator();
 
     @Override // java.lang.Iterable
-    /* renamed from: iterator, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: iterator, reason: avoid collision after fix types in other method */
     public /* bridge */ /* synthetic */ Iterator<Byte> iterator2() {
         return iterator();
     }
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public abstract int mo9829j();
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public abstract void mo9830k(OutputStream outputStream, int i, int i2) throws IOException;
 
     public abstract int size();
@@ -176,26 +176,26 @@ public abstract class ByteString3 implements Iterable<Byte> {
         }
     }
 
-    /* compiled from: ByteString.java */
-    /* renamed from: d0.e0.p.d.m0.i.c$b */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.i.c$b */
+    /* JADX INFO: compiled from: ByteString.java */
     public static final class b extends OutputStream {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public static final byte[] f24101j = new byte[0];
 
-        /* renamed from: k */
+        /* JADX INFO: renamed from: k */
         public final int f24102k;
 
-        /* renamed from: l */
+        /* JADX INFO: renamed from: l */
         public final ArrayList<ByteString3> f24103l;
 
-        /* renamed from: m */
+        /* JADX INFO: renamed from: m */
         public int f24104m;
 
-        /* renamed from: n */
+        /* JADX INFO: renamed from: n */
         public byte[] f24105n;
 
-        /* renamed from: o */
+        /* JADX INFO: renamed from: o */
         public int f24106o;
 
         public b(int i) {
@@ -207,7 +207,7 @@ public abstract class ByteString3 implements Iterable<Byte> {
             this.f24105n = new byte[i];
         }
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final void m9831a(int i) {
             this.f24103l.add(new LiteralByteString(this.f24105n));
             int length = this.f24104m + this.f24105n.length;
@@ -216,7 +216,7 @@ public abstract class ByteString3 implements Iterable<Byte> {
             this.f24106o = 0;
         }
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final void m9832b() {
             int i = this.f24106o;
             byte[] bArr = this.f24105n;

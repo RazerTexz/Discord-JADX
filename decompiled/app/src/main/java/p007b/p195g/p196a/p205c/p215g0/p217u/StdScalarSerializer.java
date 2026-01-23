@@ -7,16 +7,16 @@ import p007b.p195g.p196a.p198b.p203s.WritableTypeId;
 import p007b.p195g.p196a.p205c.SerializerProvider;
 import p007b.p195g.p196a.p205c.p212e0.TypeSerializer;
 
-/* compiled from: StdScalarSerializer.java */
-/* renamed from: b.g.a.c.g0.u.p0, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.g.a.c.g0.u.p0, reason: use source file name */
+/* JADX INFO: compiled from: StdScalarSerializer.java */
+/* JADX INFO: loaded from: classes3.dex */
 public abstract class StdScalarSerializer<T> extends StdSerializer<T> {
     public StdScalarSerializer(Class<T> cls) {
         super(cls);
     }
 
     @Override // p007b.p195g.p196a.p205c.JsonSerializer
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public void mo1808g(T t, JsonGenerator jsonGenerator, SerializerProvider serializerProvider, TypeSerializer typeSerializer) throws IOException {
         WritableTypeId writableTypeIdMo1959e = typeSerializer.mo1959e(jsonGenerator, typeSerializer.m1958d(t, JsonToken2.VALUE_STRING));
         mo1807f(t, jsonGenerator, serializerProvider);

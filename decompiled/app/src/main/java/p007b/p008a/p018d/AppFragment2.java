@@ -8,9 +8,9 @@ import p007b.p008a.p027k.FormatUtils;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: AppFragment.kt */
-/* renamed from: b.a.d.e, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.a.d.e, reason: use source file name */
+/* JADX INFO: compiled from: AppFragment.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class AppFragment2 extends Lambda implements Function1<Exception, Unit> {
     public final /* synthetic */ AppFragment.C5450d this$0;
 

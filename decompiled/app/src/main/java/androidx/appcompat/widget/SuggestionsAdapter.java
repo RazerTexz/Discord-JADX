@@ -33,8 +33,8 @@ import java.util.List;
 import java.util.WeakHashMap;
 import p007b.p100d.p104b.p105a.outline;
 
+/* JADX INFO: loaded from: classes.dex */
 @SuppressLint({"RestrictedAPI"})
-/* loaded from: classes.dex */
 public class SuggestionsAdapter extends ResourceCursorAdapter implements View.OnClickListener {
     private static final boolean DBG = false;
     public static final int INVALID_INDEX = -1;

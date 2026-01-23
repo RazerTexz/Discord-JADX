@@ -9,9 +9,9 @@ import com.discord.widgets.guilds.profile.WidgetGuildProfileSheetEmojisAdapter3;
 import com.facebook.drawee.view.SimpleDraweeView;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: WidgetGuildProfileSheetEmojisAdapter.kt */
-/* renamed from: com.discord.widgets.guilds.profile.EmojiViewHolder, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.guilds.profile.EmojiViewHolder, reason: use source file name */
+/* JADX INFO: compiled from: WidgetGuildProfileSheetEmojisAdapter.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetGuildProfileSheetEmojisAdapter4 extends WidgetGuildProfileSheetEmojisAdapter2 {
     private final WidgetGuildProfileEmojiItemBinding binding;
 

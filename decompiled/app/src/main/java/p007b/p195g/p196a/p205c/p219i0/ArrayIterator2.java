@@ -3,15 +3,15 @@ package p007b.p195g.p196a.p205c.p219i0;
 import java.util.Iterator;
 import java.util.NoSuchElementException;
 
-/* compiled from: ArrayIterator.java */
-/* renamed from: b.g.a.c.i0.b, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.g.a.c.i0.b, reason: use source file name */
+/* JADX INFO: compiled from: ArrayIterator.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class ArrayIterator2<T> implements Iterator<T>, Iterable<T> {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final T[] f4941j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public int f4942k = 0;
 
     public ArrayIterator2(T[] tArr) {

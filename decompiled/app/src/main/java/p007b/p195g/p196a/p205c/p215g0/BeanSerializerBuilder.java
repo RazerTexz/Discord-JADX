@@ -9,43 +9,43 @@ import p007b.p195g.p196a.p205c.SerializationConfig;
 import p007b.p195g.p196a.p205c.p210c0.AnnotatedMember;
 import p007b.p195g.p196a.p205c.p215g0.p216t.ObjectIdWriter;
 
-/* compiled from: BeanSerializerBuilder.java */
-/* renamed from: b.g.a.c.g0.e, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.g.a.c.g0.e, reason: use source file name */
+/* JADX INFO: compiled from: BeanSerializerBuilder.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class BeanSerializerBuilder {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final BeanPropertyWriter[] f4796a = new BeanPropertyWriter[0];
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final BeanDescription f4797b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public SerializationConfig f4798c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public List<BeanPropertyWriter> f4799d = Collections.emptyList();
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public BeanPropertyWriter[] f4800e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public AnyGetterWriter f4801f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public Object f4802g;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public AnnotatedMember f4803h;
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public ObjectIdWriter f4804i;
 
     public BeanSerializerBuilder(BeanDescription beanDescription) {
         this.f4797b = beanDescription;
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public JsonSerializer<?> m1990a() {
         BeanPropertyWriter[] beanPropertyWriterArr;
         if (this.f4803h != null && this.f4798c.m2279q(MapperFeature.CAN_OVERRIDE_ACCESS_MODIFIERS)) {

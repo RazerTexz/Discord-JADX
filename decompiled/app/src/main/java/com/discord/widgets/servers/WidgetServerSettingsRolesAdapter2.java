@@ -12,14 +12,14 @@ import kotlin.jvm.functions.Function1;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetServerSettingsRolesAdapter.kt */
-/* renamed from: com.discord.widgets.servers.WidgetServerSettingsRolesAdapter$RoleListHelpItem$onConfigure$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.servers.WidgetServerSettingsRolesAdapter$RoleListHelpItem$onConfigure$1, reason: use source file name */
+/* JADX INFO: compiled from: WidgetServerSettingsRolesAdapter.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetServerSettingsRolesAdapter2 extends Lambda implements Function1<RenderContext, Unit> {
     public final /* synthetic */ DragAndDropAdapter.Payload $data;
 
-    /* compiled from: WidgetServerSettingsRolesAdapter.kt */
-    /* renamed from: com.discord.widgets.servers.WidgetServerSettingsRolesAdapter$RoleListHelpItem$onConfigure$1$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.WidgetServerSettingsRolesAdapter$RoleListHelpItem$onConfigure$1$1 */
+    /* JADX INFO: compiled from: WidgetServerSettingsRolesAdapter.kt */
     public static final class C93081 extends Lambda implements Function1<View, Unit> {
         public C93081() {
             super(1);
@@ -31,7 +31,7 @@ public final class WidgetServerSettingsRolesAdapter2 extends Lambda implements F
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(View view) {
             Intrinsics3.checkNotNullParameter(view, "view");
             WidgetServerSettingsMembers.Companion companion = WidgetServerSettingsMembers.INSTANCE;
@@ -55,7 +55,7 @@ public final class WidgetServerSettingsRolesAdapter2 extends Lambda implements F
         return Unit.f27425a;
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final void invoke2(RenderContext renderContext) {
         Intrinsics3.checkNotNullParameter(renderContext, "$receiver");
         renderContext.m8423b("onMembersClick", new C93081());

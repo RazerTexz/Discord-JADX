@@ -16,15 +16,15 @@ import p507d0.p580t.Maps6;
 import p507d0.p580t._Collections;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: HistoricalProcessExitReason.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: HistoricalProcessExitReason.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class HistoricalProcessExitReason {
     public static final HistoricalProcessExitReason INSTANCE = new HistoricalProcessExitReason();
 
-    /* renamed from: lastReason$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: lastReason$delegate, reason: from kotlin metadata */
     private static final Lazy lastReason = LazyJVM.lazy(HistoricalProcessExitReason2.INSTANCE);
 
-    /* compiled from: HistoricalProcessExitReason.kt */
+    /* JADX INFO: compiled from: HistoricalProcessExitReason.kt */
     public static final /* data */ class Reason {
         private final String description;
         private final String reason;
@@ -45,12 +45,12 @@ public final class HistoricalProcessExitReason {
             return reason.copy(str, str2);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final String getReason() {
             return this.reason;
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final String getDescription() {
             return this.description;
         }

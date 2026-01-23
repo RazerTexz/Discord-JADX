@@ -5,15 +5,15 @@ import com.google.android.exoplayer2.drm.DefaultDrmSessionManager;
 import java.util.Objects;
 import p007b.p225i.p226a.p242c.p266w2.ExoMediaDrm;
 
-/* compiled from: lambda */
-/* renamed from: b.i.a.c.w2.o */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.w2.o */
+/* JADX INFO: compiled from: lambda */
+/* JADX INFO: loaded from: classes3.dex */
 public final /* synthetic */ class C2984o implements MediaDrm.OnEventListener {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final /* synthetic */ FrameworkMediaDrm f8005a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final /* synthetic */ ExoMediaDrm.b f8006b;
 
     public /* synthetic */ C2984o(FrameworkMediaDrm frameworkMediaDrm, ExoMediaDrm.b bVar) {

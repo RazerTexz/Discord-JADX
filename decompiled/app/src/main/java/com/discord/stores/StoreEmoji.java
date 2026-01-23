@@ -53,11 +53,11 @@ import p637j0.p642l.p647e.ScalarSynchronousObservable;
 import p658rx.Observable;
 import p658rx.functions.Func4;
 
-/* compiled from: StoreEmoji.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: StoreEmoji.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class StoreEmoji implements Rules.EmojiDataProvider {
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private static final String[] DEFAULT_FREQUENT_EMOJIS = {"bread", "fork_and_knife", "yum", "weary", "tired_face", "poop", "thumbsup", "100"};
     private static final int MAX_FREQUENTLY_USED_EMOJIS = 40;
@@ -73,7 +73,7 @@ public final class StoreEmoji implements Rules.EmojiDataProvider {
     private Pattern unicodeEmojisPattern;
     private final StoreUser userStore;
 
-    /* compiled from: StoreEmoji.kt */
+    /* JADX INFO: compiled from: StoreEmoji.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -87,10 +87,10 @@ public final class StoreEmoji implements Rules.EmojiDataProvider {
         }
     }
 
-    /* compiled from: StoreEmoji.kt */
+    /* JADX INFO: compiled from: StoreEmoji.kt */
     public static abstract class EmojiContext {
 
-        /* compiled from: StoreEmoji.kt */
+        /* JADX INFO: compiled from: StoreEmoji.kt */
         public static final /* data */ class Chat extends EmojiContext {
             private final long channelId;
             private final long guildId;
@@ -111,12 +111,12 @@ public final class StoreEmoji implements Rules.EmojiDataProvider {
                 return chat.copy(j, j2);
             }
 
-            /* renamed from: component1, reason: from getter */
+            /* JADX INFO: renamed from: component1, reason: from getter */
             public final long getGuildId() {
                 return this.guildId;
             }
 
-            /* renamed from: component2, reason: from getter */
+            /* JADX INFO: renamed from: component2, reason: from getter */
             public final long getChannelId() {
                 return this.channelId;
             }
@@ -156,7 +156,7 @@ public final class StoreEmoji implements Rules.EmojiDataProvider {
             }
         }
 
-        /* compiled from: StoreEmoji.kt */
+        /* JADX INFO: compiled from: StoreEmoji.kt */
         public static final class Global extends EmojiContext {
             public static final Global INSTANCE = new Global();
 
@@ -165,7 +165,7 @@ public final class StoreEmoji implements Rules.EmojiDataProvider {
             }
         }
 
-        /* compiled from: StoreEmoji.kt */
+        /* JADX INFO: compiled from: StoreEmoji.kt */
         public static final /* data */ class Guild extends EmojiContext {
             private final long guildId;
 
@@ -181,7 +181,7 @@ public final class StoreEmoji implements Rules.EmojiDataProvider {
                 return guild.copy(j);
             }
 
-            /* renamed from: component1, reason: from getter */
+            /* JADX INFO: renamed from: component1, reason: from getter */
             public final long getGuildId() {
                 return this.guildId;
             }
@@ -210,7 +210,7 @@ public final class StoreEmoji implements Rules.EmojiDataProvider {
             }
         }
 
-        /* compiled from: StoreEmoji.kt */
+        /* JADX INFO: compiled from: StoreEmoji.kt */
         public static final /* data */ class GuildProfile extends EmojiContext {
             private final long guildId;
 
@@ -226,7 +226,7 @@ public final class StoreEmoji implements Rules.EmojiDataProvider {
                 return guildProfile.copy(j);
             }
 
-            /* renamed from: component1, reason: from getter */
+            /* JADX INFO: renamed from: component1, reason: from getter */
             public final long getGuildId() {
                 return this.guildId;
             }
@@ -263,8 +263,8 @@ public final class StoreEmoji implements Rules.EmojiDataProvider {
         }
     }
 
-    /* compiled from: StoreEmoji.kt */
-    /* renamed from: com.discord.stores.StoreEmoji$buildUsableEmojiSet$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreEmoji$buildUsableEmojiSet$1 */
+    /* JADX INFO: compiled from: StoreEmoji.kt */
     public static final class C58881 extends Lambda implements Function1<Long, Boolean> {
         public final /* synthetic */ EmojiContext $emojiContext;
 
@@ -303,8 +303,8 @@ public final class StoreEmoji implements Rules.EmojiDataProvider {
         }
     }
 
-    /* compiled from: StoreEmoji.kt */
-    /* renamed from: com.discord.stores.StoreEmoji$buildUsableEmojiSet$2 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreEmoji$buildUsableEmojiSet$2 */
+    /* JADX INFO: compiled from: StoreEmoji.kt */
     public static final class C58892 extends Lambda implements Function1<Boolean, Boolean> {
         public final /* synthetic */ EmojiContext $emojiContext;
         public final /* synthetic */ boolean $hasExternalEmojiPermission;
@@ -328,8 +328,8 @@ public final class StoreEmoji implements Rules.EmojiDataProvider {
     }
 
     /* JADX INFO: Add missing generic type declarations: [T] */
-    /* compiled from: StoreEmoji.kt */
-    /* renamed from: com.discord.stores.StoreEmoji$buildUsableEmojiSet$4 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreEmoji$buildUsableEmojiSet$4 */
+    /* JADX INFO: compiled from: StoreEmoji.kt */
     public static final class C58904<T> extends Lambda implements Function2<Map<T, Integer>, T, Unit> {
         public static final C58904 INSTANCE = new C58904();
 
@@ -351,8 +351,8 @@ public final class StoreEmoji implements Rules.EmojiDataProvider {
         }
     }
 
-    /* compiled from: StoreEmoji.kt */
-    /* renamed from: com.discord.stores.StoreEmoji$buildUsableEmojiSet$5 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreEmoji$buildUsableEmojiSet$5 */
+    /* JADX INFO: compiled from: StoreEmoji.kt */
     public static final class C58915 extends Lambda implements Function1<Long, Unit> {
         public final /* synthetic */ Map $allCustomEmojis;
         public final /* synthetic */ EmojiContext $emojiContext;
@@ -435,8 +435,8 @@ public final class StoreEmoji implements Rules.EmojiDataProvider {
         }
     }
 
-    /* compiled from: StoreEmoji.kt */
-    /* renamed from: com.discord.stores.StoreEmoji$getEmojiSet$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreEmoji$getEmojiSet$1 */
+    /* JADX INFO: compiled from: StoreEmoji.kt */
     public static final class C58931<T, R> implements Func1<MeUser, Boolean> {
         public static final C58931 INSTANCE = new C58931();
 
@@ -445,7 +445,7 @@ public final class StoreEmoji implements Rules.EmojiDataProvider {
             return call2(meUser);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final Boolean call2(MeUser meUser) {
             UserUtils userUtils = UserUtils.INSTANCE;
             Intrinsics3.checkNotNullExpressionValue(meUser, "it");
@@ -453,8 +453,8 @@ public final class StoreEmoji implements Rules.EmojiDataProvider {
         }
     }
 
-    /* compiled from: StoreEmoji.kt */
-    /* renamed from: com.discord.stores.StoreEmoji$getEmojiSet$2 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreEmoji$getEmojiSet$2 */
+    /* JADX INFO: compiled from: StoreEmoji.kt */
     public static final class C58942<T, R> implements Func1<LinkedHashMap<Long, Guild>, List<? extends Long>> {
         public static final C58942 INSTANCE = new C58942();
 
@@ -463,7 +463,7 @@ public final class StoreEmoji implements Rules.EmojiDataProvider {
             return call2(linkedHashMap);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final List<Long> call2(LinkedHashMap<Long, Guild> linkedHashMap) {
             Set<Long> setKeySet = linkedHashMap.keySet();
             Intrinsics3.checkNotNullExpressionValue(setKeySet, "it.keys");
@@ -471,8 +471,8 @@ public final class StoreEmoji implements Rules.EmojiDataProvider {
         }
     }
 
-    /* compiled from: StoreEmoji.kt */
-    /* renamed from: com.discord.stores.StoreEmoji$getEmojiSet$3 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreEmoji$getEmojiSet$3 */
+    /* JADX INFO: compiled from: StoreEmoji.kt */
     public static final class C58953<T1, T2, T3, T4, R> implements Func4<Boolean, Boolean, List<? extends Long>, Set<? extends StoreMediaFavorites.Favorite>, Quad<? extends Boolean, ? extends Boolean, ? extends List<? extends Long>, ? extends Set<? extends StoreMediaFavorites.Favorite>>> {
         public static final C58953 INSTANCE = new C58953();
 
@@ -481,21 +481,21 @@ public final class StoreEmoji implements Rules.EmojiDataProvider {
             return call2(bool, bool2, (List<Long>) list, set);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final Quad<Boolean, Boolean, List<Long>, Set<StoreMediaFavorites.Favorite>> call2(Boolean bool, Boolean bool2, List<Long> list, Set<? extends StoreMediaFavorites.Favorite> set) {
             return new Quad<>(bool, bool2, list, set);
         }
     }
 
-    /* compiled from: StoreEmoji.kt */
-    /* renamed from: com.discord.stores.StoreEmoji$getEmojiSet$4 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreEmoji$getEmojiSet$4 */
+    /* JADX INFO: compiled from: StoreEmoji.kt */
     public static final class C58964<T, R> implements Func1<Quad<? extends Boolean, ? extends Boolean, ? extends List<? extends Long>, ? extends Set<? extends StoreMediaFavorites.Favorite>>, Observable<? extends EmojiSet>> {
         public final /* synthetic */ EmojiContext $emojiContext;
         public final /* synthetic */ boolean $includeUnavailableEmojis;
         public final /* synthetic */ boolean $includeUnusableEmojis;
 
-        /* compiled from: StoreEmoji.kt */
-        /* renamed from: com.discord.stores.StoreEmoji$getEmojiSet$4$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.stores.StoreEmoji$getEmojiSet$4$1, reason: invalid class name */
+        /* JADX INFO: compiled from: StoreEmoji.kt */
         public static final class AnonymousClass1<T, R> implements Func1<Map<Long, ? extends Map<Long, ? extends ModelEmojiCustom>>, EmojiSet> {
             public final /* synthetic */ Set $favorites;
             public final /* synthetic */ Boolean $hasExternalEmojiPermission;
@@ -514,7 +514,7 @@ public final class StoreEmoji implements Rules.EmojiDataProvider {
                 return call2(map);
             }
 
-            /* renamed from: call, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
             public final EmojiSet call2(Map<Long, ? extends Map<Long, ? extends ModelEmojiCustom>> map) {
                 StoreEmoji storeEmoji = StoreEmoji.this;
                 Intrinsics3.checkNotNullExpressionValue(map, "allowedCustomEmoji");
@@ -547,7 +547,7 @@ public final class StoreEmoji implements Rules.EmojiDataProvider {
             return call2((Quad<Boolean, Boolean, ? extends List<Long>, ? extends Set<? extends StoreMediaFavorites.Favorite>>) quad);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final Observable<? extends EmojiSet> call2(Quad<Boolean, Boolean, ? extends List<Long>, ? extends Set<? extends StoreMediaFavorites.Favorite>> quad) {
             Boolean boolComponent1 = quad.component1();
             Boolean boolComponent2 = quad.component2();
@@ -555,8 +555,8 @@ public final class StoreEmoji implements Rules.EmojiDataProvider {
         }
     }
 
-    /* compiled from: StoreEmoji.kt */
-    /* renamed from: com.discord.stores.StoreEmoji$handleLoadedUnicodeEmojis$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreEmoji$handleLoadedUnicodeEmojis$1 */
+    /* JADX INFO: compiled from: StoreEmoji.kt */
     public static final class C58971 extends Lambda implements Function1<ModelEmojiUnicode, Unit> {
         public final /* synthetic */ HashMap $unicodeEmojiSurrogateMap;
         public final /* synthetic */ HashMap $unicodeEmojisNamesMap;
@@ -574,7 +574,7 @@ public final class StoreEmoji implements Rules.EmojiDataProvider {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(ModelEmojiUnicode modelEmojiUnicode) {
             Intrinsics3.checkNotNullParameter(modelEmojiUnicode, "emoji");
             HashMap map = this.$unicodeEmojiSurrogateMap;
@@ -727,13 +727,13 @@ public final class StoreEmoji implements Rules.EmojiDataProvider {
             }
             shallowPartitionMap = shallowPartitionMap2;
         }
-        ShallowPartitionMap shallowPartitionMap3 = shallowPartitionMap;
+        Map<String, ? extends Emoji> map7 = shallowPartitionMap;
         Set set = _Collections.toSet(arrayList4);
-        Map<EmojiCategory, ? extends List<? extends Emoji>> map7 = this.unicodeEmojis;
-        if (map7 == null) {
+        Map<EmojiCategory, ? extends List<? extends Emoji>> map8 = this.unicodeEmojis;
+        if (map8 == null) {
             Intrinsics3.throwUninitializedPropertyAccessException("unicodeEmojis");
         }
-        return new EmojiSet(map7, map4, shallowPartitionMap3, getFrequentlyUsedEmojis(shallowPartitionMap3), set);
+        return new EmojiSet(map8, map4, map7, getFrequentlyUsedEmojis(map7), set);
     }
 
     private final Pattern compileSurrogatesPattern() {

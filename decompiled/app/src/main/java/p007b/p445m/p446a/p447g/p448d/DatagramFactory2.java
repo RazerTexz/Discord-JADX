@@ -6,19 +6,19 @@ import java.net.InetAddress;
 import java.net.SocketException;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: DatagramFactory.kt */
-/* renamed from: b.m.a.g.d.b, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.m.a.g.d.b, reason: use source file name */
+/* JADX INFO: compiled from: DatagramFactory.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class DatagramFactory2 implements DatagramFactory {
     @Override // p007b.p445m.p446a.p447g.p448d.DatagramFactory
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public DatagramPacket mo7140a(byte[] bArr) {
         Intrinsics3.checkParameterIsNotNull(bArr, "buffer");
         return new DatagramPacket(bArr, bArr.length);
     }
 
     @Override // p007b.p445m.p446a.p447g.p448d.DatagramFactory
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public DatagramPacket mo7141b(byte[] bArr, InetAddress inetAddress, int i) {
         Intrinsics3.checkParameterIsNotNull(bArr, "buffer");
         Intrinsics3.checkParameterIsNotNull(inetAddress, "address");
@@ -26,7 +26,7 @@ public final class DatagramFactory2 implements DatagramFactory {
     }
 
     @Override // p007b.p445m.p446a.p447g.p448d.DatagramFactory
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public DatagramSocket mo7142c() throws SocketException {
         return new DatagramSocket();
     }

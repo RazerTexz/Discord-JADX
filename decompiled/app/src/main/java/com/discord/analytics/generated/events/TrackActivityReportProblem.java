@@ -7,8 +7,8 @@ import com.discord.models.domain.ModelAuditLogEntry;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: TrackActivityReportProblem.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: TrackActivityReportProblem.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class TrackActivityReportProblem implements AnalyticsSchema, TrackBase2 {
     private TrackBase trackBase;
     private final Long channelId = null;
@@ -23,7 +23,7 @@ public final /* data */ class TrackActivityReportProblem implements AnalyticsSch
     private final transient String analyticsSchemaTypeName = "activity_report_problem";
 
     @Override // com.discord.api.science.AnalyticsSchema
-    /* renamed from: d, reason: from getter */
+    /* JADX INFO: renamed from: d, reason: from getter */
     public String getAnalyticsSchemaTypeName() {
         return this.analyticsSchemaTypeName;
     }

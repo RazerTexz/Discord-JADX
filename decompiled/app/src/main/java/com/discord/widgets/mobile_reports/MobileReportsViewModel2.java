@@ -16,9 +16,9 @@ import java.util.Map;
 import p507d0.p592z.p594d.Intrinsics3;
 import p658rx.functions.Func8;
 
-/* compiled from: MobileReportsViewModel.kt */
-/* renamed from: com.discord.widgets.mobile_reports.MobileReportsViewModel$Companion$getStoreState$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.mobile_reports.MobileReportsViewModel$Companion$getStoreState$1, reason: use source file name */
+/* JADX INFO: compiled from: MobileReportsViewModel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class MobileReportsViewModel2<T1, T2, T3, T4, T5, T6, T7, T8, R> implements Func8<Message, Channel, Guild, StageInstance, Map<Long, ? extends Integer>, RestCallState<? extends List<? extends DirectoryEntryGuild>>, GuildScheduledEvent, Guild, MobileReportsViewModel.StoreState> {
     public final /* synthetic */ WidgetMobileReports2 $args;
 
@@ -32,11 +32,11 @@ public final class MobileReportsViewModel2<T1, T2, T3, T4, T5, T6, T7, T8, R> im
     }
 
     /* JADX WARN: Multi-variable type inference failed */
-    /* renamed from: call, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
     public final MobileReportsViewModel.StoreState call2(Message message, Channel channel, Guild guild, StageInstance stageInstance, Map<Long, Integer> map, RestCallState<? extends List<DirectoryEntryGuild>> restCallState, GuildScheduledEvent guildScheduledEvent, Guild guild2) {
         List<DirectoryEntryGuild> listInvoke;
         WidgetMobileReports2 widgetMobileReports2 = this.$args;
-        DirectoryEntryGuild directoryEntryGuild = null;
+        Object obj = null;
         if (!(widgetMobileReports2 instanceof WidgetMobileReports2.DirectoryServer)) {
             widgetMobileReports2 = null;
         }
@@ -52,12 +52,12 @@ public final class MobileReportsViewModel2<T1, T2, T3, T4, T5, T6, T7, T8, R> im
                 }
                 Object next = it.next();
                 if (lValueOf != null && ((DirectoryEntryGuild) next).getGuild().getId() == lValueOf.longValue()) {
-                    directoryEntryGuild = next;
+                    obj = next;
                     break;
                 }
             }
-            directoryEntryGuild = directoryEntryGuild;
+            obj = (DirectoryEntryGuild) obj;
         }
-        return new MobileReportsViewModel.StoreState(message, channel, guild3, directoryEntryGuild, stageInstance, map, guildScheduledEvent);
+        return new MobileReportsViewModel.StoreState(message, channel, guild3, obj, stageInstance, map, guildScheduledEvent);
     }
 }

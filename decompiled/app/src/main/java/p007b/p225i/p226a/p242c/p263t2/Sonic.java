@@ -4,75 +4,75 @@ import com.discord.utilities.rest.SendUtils;
 import java.util.Arrays;
 import p007b.p085c.p086a.p087a0.AnimatableValueParser;
 
-/* compiled from: Sonic.java */
-/* renamed from: b.i.a.c.t2.d0, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.t2.d0, reason: use source file name */
+/* JADX INFO: compiled from: Sonic.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class Sonic {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final int f7702a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final int f7703b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final float f7704c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final float f7705d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final float f7706e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final int f7707f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public final int f7708g;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public final int f7709h;
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public final short[] f7710i;
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public short[] f7711j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public int f7712k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public short[] f7713l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public int f7714m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public short[] f7715n;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public int f7716o;
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public int f7717p;
 
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     public int f7718q;
 
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     public int f7719r;
 
-    /* renamed from: s */
+    /* JADX INFO: renamed from: s */
     public int f7720s;
 
-    /* renamed from: t */
+    /* JADX INFO: renamed from: t */
     public int f7721t;
 
-    /* renamed from: u */
+    /* JADX INFO: renamed from: u */
     public int f7722u;
 
-    /* renamed from: v */
+    /* JADX INFO: renamed from: v */
     public int f7723v;
 
     public Sonic(int i, int i2, float f, float f2, int i3) {
@@ -92,7 +92,7 @@ public final class Sonic {
         this.f7715n = new short[i5 * i2];
     }
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public static void m3479e(int i, int i2, short[] sArr, int i3, short[] sArr2, int i4, short[] sArr3, int i5) {
         for (int i6 = 0; i6 < i2; i6++) {
             int i7 = (i3 * i2) + i6;
@@ -107,7 +107,7 @@ public final class Sonic {
         }
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final void m3480a(short[] sArr, int i, int i2) {
         short[] sArrM3482c = m3482c(this.f7713l, this.f7714m, i2);
         this.f7713l = sArrM3482c;
@@ -116,7 +116,7 @@ public final class Sonic {
         this.f7714m += i2;
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final void m3481b(short[] sArr, int i, int i2) {
         int i3 = this.f7709h / i2;
         int i4 = this.f7703b;
@@ -131,7 +131,7 @@ public final class Sonic {
         }
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final short[] m3482c(short[] sArr, int i, int i2) {
         int length = sArr.length;
         int i3 = this.f7703b;
@@ -139,7 +139,7 @@ public final class Sonic {
         return i + i2 <= i4 ? sArr : Arrays.copyOf(sArr, (((i4 * 3) / 2) + i2) * i3);
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final int m3483d(short[] sArr, int i, int i2, int i3) {
         int i4 = i * this.f7703b;
         int i5 = 1;
@@ -166,7 +166,7 @@ public final class Sonic {
         return i7;
     }
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final void m3484f() {
         int iM3483d;
         int i;

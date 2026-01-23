@@ -9,16 +9,16 @@ import p007b.p100d.p104b.p105a.outline;
 import p507d0.p580t.ReversedViews3;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: Unread.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: Unread.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class Unread {
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private final int count;
     private final Marker marker;
 
-    /* compiled from: Unread.kt */
+    /* JADX INFO: compiled from: Unread.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -48,7 +48,7 @@ public final /* data */ class Unread {
         }
     }
 
-    /* compiled from: Unread.kt */
+    /* JADX INFO: compiled from: Unread.kt */
     public static final /* data */ class Marker {
         private final long channelId;
         private final Long messageId;
@@ -68,12 +68,12 @@ public final /* data */ class Unread {
             return marker.copy(j, l);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final long getChannelId() {
             return this.channelId;
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final Long getMessageId() {
             return this.messageId;
         }
@@ -147,12 +147,12 @@ public final /* data */ class Unread {
         return unread.copy(marker, i);
     }
 
-    /* renamed from: component1, reason: from getter */
+    /* JADX INFO: renamed from: component1, reason: from getter */
     public final Marker getMarker() {
         return this.marker;
     }
 
-    /* renamed from: component2, reason: from getter */
+    /* JADX INFO: renamed from: component2, reason: from getter */
     public final int getCount() {
         return this.count;
     }

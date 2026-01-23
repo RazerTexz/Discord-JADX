@@ -5,9 +5,9 @@ import com.discord.widgets.tos.WidgetTosReportViolation;
 import kotlin.jvm.functions.Function0;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetTosReportViolation.kt */
-/* renamed from: com.discord.widgets.tos.WidgetTosReportViolation$args$2, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: com.discord.widgets.tos.WidgetTosReportViolation$args$2, reason: use source file name */
+/* JADX INFO: compiled from: WidgetTosReportViolation.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class WidgetTosReportViolation2 extends Lambda implements Function0<WidgetTosReportViolation.Companion.Arguments> {
     public final /* synthetic */ WidgetTosReportViolation this$0;
 

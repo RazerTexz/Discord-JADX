@@ -2,9 +2,9 @@ package p507d0.p513e0.p514p.p515d.p517m0.p543f.p544a0.p545b;
 
 import org.objectweb.asm.Opcodes;
 
-/* compiled from: BitEncoding.java */
-/* renamed from: d0.e0.p.d.m0.f.a0.b.a, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.f.a0.b.a, reason: use source file name */
+/* JADX INFO: compiled from: BitEncoding.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class BitEncoding {
     static {
         String property;
@@ -16,7 +16,7 @@ public class BitEncoding {
         "true".equals(property);
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static /* synthetic */ void m9583a(int i) {
         String str = (i == 1 || i == 3 || i == 6 || i == 8 || i == 10 || i == 12 || i == 14) ? "@NotNull method %s.%s must not return null" : "Argument for @NotNull parameter '%s' of %s.%s must not be null";
         Object[] objArr = new Object[(i == 1 || i == 3 || i == 6 || i == 8 || i == 10 || i == 12 || i == 14) ? 2 : 3];
@@ -83,7 +83,7 @@ public class BitEncoding {
         throw new IllegalStateException(str2);
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static String[] m9584b(String[] strArr) {
         String[] strArr2 = (String[]) strArr.clone();
         strArr2[0] = strArr2[0].substring(1);

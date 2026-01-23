@@ -3,7 +3,7 @@ package androidx.core.util;
 import androidx.annotation.NonNull;
 import p007b.p100d.p104b.p105a.outline;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class Pair<F, S> {
     public final F first;
     public final S second;

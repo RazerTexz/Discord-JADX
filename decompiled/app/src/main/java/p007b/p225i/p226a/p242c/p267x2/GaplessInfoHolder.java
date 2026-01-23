@@ -7,21 +7,21 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import p007b.p225i.p226a.p242c.p259f3.Util2;
 
-/* compiled from: GaplessInfoHolder.java */
-/* renamed from: b.i.a.c.x2.p, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.x2.p, reason: use source file name */
+/* JADX INFO: compiled from: GaplessInfoHolder.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class GaplessInfoHolder {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final Pattern f8984a = Pattern.compile("^ [0-9a-fA-F]{8} ([0-9a-fA-F]{8}) ([0-9a-fA-F]{8})");
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public int f8985b = -1;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public int f8986c = -1;
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final boolean m3814a(String str) {
         Matcher matcher = f8984a.matcher(str);
         if (!matcher.find()) {
@@ -43,7 +43,7 @@ public final class GaplessInfoHolder {
         }
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public boolean m3815b(Metadata metadata) {
         int i = 0;
         while (true) {

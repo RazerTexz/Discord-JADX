@@ -28,80 +28,80 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p600f0.p601e0.Util7;
 import p615g0.Buffer3;
 
-/* compiled from: HttpUrl.kt */
-/* renamed from: f0.w, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: f0.w, reason: use source file name */
+/* JADX INFO: compiled from: HttpUrl.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class HttpUrl {
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final boolean f25975c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final String f25976d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final String f25977e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final String f25978f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public final String f25979g;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public final int f25980h;
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public final List<String> f25981i;
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final List<String> f25982j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final String f25983k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final String f25984l;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static final b f25974b = new b(null);
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final char[] f25973a = {'0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D', 'E', 'F'};
 
-    /* compiled from: HttpUrl.kt */
-    /* renamed from: f0.w$a */
+    /* JADX INFO: renamed from: f0.w$a */
+    /* JADX INFO: compiled from: HttpUrl.kt */
     public static final class a {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public static final C13345a f25985a = new C13345a(null);
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public String f25986b;
 
-        /* renamed from: e */
+        /* JADX INFO: renamed from: e */
         public String f25989e;
 
-        /* renamed from: g */
+        /* JADX INFO: renamed from: g */
         public final List<String> f25991g;
 
-        /* renamed from: h */
+        /* JADX INFO: renamed from: h */
         public List<String> f25992h;
 
-        /* renamed from: i */
+        /* JADX INFO: renamed from: i */
         public String f25993i;
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public String f25987c = "";
 
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         public String f25988d = "";
 
-        /* renamed from: f */
+        /* JADX INFO: renamed from: f */
         public int f25990f = -1;
 
-        /* compiled from: HttpUrl.kt */
-        /* renamed from: f0.w$a$a, reason: collision with other inner class name */
+        /* JADX INFO: renamed from: f0.w$a$a, reason: collision with other inner class name */
+        /* JADX INFO: compiled from: HttpUrl.kt */
         public static final class C13345a {
             public C13345a(DefaultConstructorMarker defaultConstructorMarker) {
             }
@@ -113,7 +113,7 @@ public final class HttpUrl {
             arrayList.add("");
         }
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final a m10408a(String str, String str2) {
             Intrinsics3.checkParameterIsNotNull(str, "encodedName");
             if (this.f25992h == null) {
@@ -133,7 +133,7 @@ public final class HttpUrl {
             return this;
         }
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final HttpUrl m10409b() {
             ArrayList arrayList;
             String str = this.f25986b;
@@ -167,7 +167,7 @@ public final class HttpUrl {
             return new HttpUrl(str, strM10414d, strM10414d2, str2, iM10410c, arrayList2, arrayList, str4 != null ? b.m10414d(HttpUrl.f25974b, str4, 0, 0, false, 7) : null, toString());
         }
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public final int m10410c() {
             int i = this.f25990f;
             if (i != -1) {
@@ -190,7 +190,7 @@ public final class HttpUrl {
         }
 
         /* JADX WARN: Removed duplicated region for block: B:6:0x001c  */
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         /*
             Code decompiled incorrectly, please refer to instructions dump.
         */
@@ -210,6 +210,7 @@ public final class HttpUrl {
         /* JADX WARN: Removed duplicated region for block: B:39:0x0071  */
         /* JADX WARN: Type inference failed for: r14v1 */
         /* JADX WARN: Type inference failed for: r14v13 */
+        /* JADX WARN: Type inference failed for: r14v15 */
         /* JADX WARN: Type inference failed for: r14v2 */
         /* JADX WARN: Type inference failed for: r14v3, types: [boolean] */
         /* JADX WARN: Type inference failed for: r14v5 */
@@ -217,8 +218,10 @@ public final class HttpUrl {
         /* JADX WARN: Type inference failed for: r14v7 */
         /* JADX WARN: Type inference failed for: r2v50 */
         /* JADX WARN: Type inference failed for: r2v64 */
+        /* JADX WARN: Type inference failed for: r3v47 */
+        /* JADX WARN: Type inference failed for: r3v65 */
         /* JADX WARN: Unreachable blocks removed: 1, instructions: 2 */
-        /* renamed from: e */
+        /* JADX INFO: renamed from: e */
         /*
             Code decompiled incorrectly, please refer to instructions dump.
         */
@@ -538,15 +541,18 @@ public final class HttpUrl {
                     if (z7) {
                         String str11 = str6;
                         String str12 = str5;
-                        int i24 = r14 == true ? 1 : 0;
-                        i10 = iM10126g3 + i24;
-                        r14 = i24;
-                        i11 = i11;
+                        ?? r3 = r14 == true ? 1 : 0;
+                        int i24 = i11;
+                        a aVar6 = aVar;
+                        int i25 = i12;
+                        i10 = iM10126g3 + (r3 == true ? 1 : 0);
+                        r14 = r3 == true ? 1 : 0;
+                        i11 = i24;
                         str3 = str11;
-                        aVar = aVar;
+                        aVar = aVar6;
                         aVar2 = aVar4;
                         str4 = str9;
-                        i12 = i12;
+                        i12 = i25;
                         str5 = str12;
                         i13 = i23;
                     } else {
@@ -683,14 +689,14 @@ public final class HttpUrl {
         }
     }
 
-    /* compiled from: HttpUrl.kt */
-    /* renamed from: f0.w$b */
+    /* JADX INFO: renamed from: f0.w$b */
+    /* JADX INFO: compiled from: HttpUrl.kt */
     public static final class b {
         public b(DefaultConstructorMarker defaultConstructorMarker) {
         }
 
         /* JADX WARN: Removed duplicated region for block: B:55:0x0098  */
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         /*
             Code decompiled incorrectly, please refer to instructions dump.
         */
@@ -802,7 +808,7 @@ public final class HttpUrl {
             return strSubstring2;
         }
 
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         public static String m10414d(b bVar, String str, int i, int i2, boolean z2, int i3) {
             int i4;
             if ((i3 & 1) != 0) {
@@ -850,7 +856,7 @@ public final class HttpUrl {
             return strSubstring;
         }
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final int m10415b(String str) {
             Intrinsics3.checkParameterIsNotNull(str, "scheme");
             int iHashCode = str.hashCode();
@@ -864,13 +870,13 @@ public final class HttpUrl {
             return -1;
         }
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public final boolean m10416c(String str, int i, int i2) {
             int i3 = i + 2;
             return i3 < i2 && str.charAt(i) == '%' && Util7.m10137r(str.charAt(i + 1)) != -1 && Util7.m10137r(str.charAt(i3)) != -1;
         }
 
-        /* renamed from: e */
+        /* JADX INFO: renamed from: e */
         public final List<String> m10417e(String str) {
             Intrinsics3.checkParameterIsNotNull(str, "$this$toQueryNamesAndValues");
             ArrayList arrayList = new ArrayList();
@@ -920,7 +926,7 @@ public final class HttpUrl {
         this.f25975c = Intrinsics3.areEqual(str, Constants.SCHEME);
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final String m10399a() {
         if (this.f25978f.length() == 0) {
             return "";
@@ -936,7 +942,7 @@ public final class HttpUrl {
         return strSubstring;
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final String m10400b() {
         int iIndexOf$default = Strings4.indexOf$default((CharSequence) this.f25984l, MentionUtils.SLASH_CHAR, this.f25976d.length() + 3, false, 4, (Object) null);
         String str = this.f25984l;
@@ -950,7 +956,7 @@ public final class HttpUrl {
         return strSubstring;
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final List<String> m10401c() {
         int iIndexOf$default = Strings4.indexOf$default((CharSequence) this.f25984l, MentionUtils.SLASH_CHAR, this.f25976d.length() + 3, false, 4, (Object) null);
         String str = this.f25984l;
@@ -971,7 +977,7 @@ public final class HttpUrl {
         return arrayList;
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final String m10402d() {
         if (this.f25982j == null) {
             return null;
@@ -988,7 +994,7 @@ public final class HttpUrl {
         return strSubstring;
     }
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final String m10403e() {
         if (this.f25977e.length() == 0) {
             return "";
@@ -1010,7 +1016,7 @@ public final class HttpUrl {
     }
 
     /* JADX WARN: Removed duplicated region for block: B:13:0x0050  */
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
@@ -1054,7 +1060,7 @@ public final class HttpUrl {
         return aVar;
     }
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public final a m10405g(String str) {
         Intrinsics3.checkParameterIsNotNull(str, "link");
         try {
@@ -1066,7 +1072,7 @@ public final class HttpUrl {
         }
     }
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public final String m10406h() {
         a aVarM10405g = m10405g("/...");
         if (aVarM10405g == null) {
@@ -1085,7 +1091,7 @@ public final class HttpUrl {
         return this.f25984l.hashCode();
     }
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public final URI m10407i() {
         a aVarM10404f = m10404f();
         String str = aVarM10404f.f25989e;

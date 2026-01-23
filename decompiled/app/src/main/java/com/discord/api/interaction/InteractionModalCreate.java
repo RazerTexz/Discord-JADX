@@ -8,8 +8,8 @@ import java.util.List;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: InteractionModalCreate.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: InteractionModalCreate.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class InteractionModalCreate implements Serializable {
     private final Application application;
     private final List<Component> components;
@@ -18,27 +18,27 @@ public final /* data */ class InteractionModalCreate implements Serializable {
     private final String nonce;
     private final String title;
 
-    /* renamed from: a, reason: from getter */
+    /* JADX INFO: renamed from: a, reason: from getter */
     public final Application getApplication() {
         return this.application;
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final List<Component> m8010b() {
         return this.components;
     }
 
-    /* renamed from: c, reason: from getter */
+    /* JADX INFO: renamed from: c, reason: from getter */
     public final String getCustomId() {
         return this.customId;
     }
 
-    /* renamed from: d, reason: from getter */
+    /* JADX INFO: renamed from: d, reason: from getter */
     public final String getNonce() {
         return this.nonce;
     }
 
-    /* renamed from: e, reason: from getter */
+    /* JADX INFO: renamed from: e, reason: from getter */
     public final String getTitle() {
         return this.title;
     }

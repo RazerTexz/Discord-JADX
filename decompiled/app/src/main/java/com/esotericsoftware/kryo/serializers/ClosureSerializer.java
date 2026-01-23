@@ -7,7 +7,7 @@ import com.esotericsoftware.kryo.p502io.Output;
 import java.lang.invoke.SerializedLambda;
 import java.lang.reflect.Method;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class ClosureSerializer extends Serializer {
     private static Method readResolve;
     private static Class serializedLambda = SerializedLambda.class;

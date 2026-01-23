@@ -7,7 +7,7 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.NoSuchElementException;
 
-/* loaded from: discord-126021.apk:lombok/core/LombokImmutableList.SCL.lombok */
+/* JADX INFO: loaded from: discord-126021.apk:lombok/core/LombokImmutableList.SCL.lombok */
 public final class LombokImmutableList<T> implements Iterable<T> {
     private Object[] content;
     private static final LombokImmutableList<?> EMPTY = new LombokImmutableList<>(new Object[0]);
@@ -16,37 +16,37 @@ public final class LombokImmutableList<T> implements Iterable<T> {
         return lombokImmutableList.content;
     }
 
-    /* renamed from: of */
+    /* JADX INFO: renamed from: of */
     public static <T> LombokImmutableList<T> m10918of() {
         return (LombokImmutableList<T>) EMPTY;
     }
 
-    /* renamed from: of */
+    /* JADX INFO: renamed from: of */
     public static <T> LombokImmutableList<T> m10919of(T a) {
         return new LombokImmutableList<>(new Object[]{a});
     }
 
-    /* renamed from: of */
+    /* JADX INFO: renamed from: of */
     public static <T> LombokImmutableList<T> m10920of(T a, T b2) {
         return new LombokImmutableList<>(new Object[]{a, b2});
     }
 
-    /* renamed from: of */
+    /* JADX INFO: renamed from: of */
     public static <T> LombokImmutableList<T> m10921of(T a, T b2, T c) {
         return new LombokImmutableList<>(new Object[]{a, b2, c});
     }
 
-    /* renamed from: of */
+    /* JADX INFO: renamed from: of */
     public static <T> LombokImmutableList<T> m10922of(T a, T b2, T c, T d) {
         return new LombokImmutableList<>(new Object[]{a, b2, c, d});
     }
 
-    /* renamed from: of */
+    /* JADX INFO: renamed from: of */
     public static <T> LombokImmutableList<T> m10923of(T a, T b2, T c, T d, T e) {
         return new LombokImmutableList<>(new Object[]{a, b2, c, d, e});
     }
 
-    /* renamed from: of */
+    /* JADX INFO: renamed from: of */
     public static <T> LombokImmutableList<T> m10924of(T a, T b2, T c, T d, T e, T f, T... tArr) {
         Object[] rest = tArr == null ? new Object[1] : tArr;
         Object[] val = new Object[rest.length + 6];
@@ -168,8 +168,8 @@ public final class LombokImmutableList<T> implements Iterable<T> {
         return false;
     }
 
-    /* renamed from: lombok.core.LombokImmutableList$1 */
-    /* loaded from: discord-126021.apk:lombok/core/LombokImmutableList$1.SCL.lombok */
+    /* JADX INFO: renamed from: lombok.core.LombokImmutableList$1 */
+    /* JADX INFO: loaded from: discord-126021.apk:lombok/core/LombokImmutableList$1.SCL.lombok */
     class C128161 implements Iterator<T> {
         private int idx = 0;
 

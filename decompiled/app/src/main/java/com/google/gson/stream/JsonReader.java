@@ -9,58 +9,58 @@ import java.util.Objects;
 import p007b.p100d.p104b.p105a.outline;
 import p007b.p225i.p408d.p410q.JsonReaderInternalAccess;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public class JsonReader implements Closeable {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static final char[] f21625j = ")]}'\n".toCharArray();
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final Reader f21626k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public boolean f21627l = false;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public final char[] f21628m = new char[1024];
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public int f21629n = 0;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public int f21630o = 0;
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public int f21631p = 0;
 
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     public int f21632q = 0;
 
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     public int f21633r = 0;
 
-    /* renamed from: s */
+    /* JADX INFO: renamed from: s */
     public long f21634s;
 
-    /* renamed from: t */
+    /* JADX INFO: renamed from: t */
     public int f21635t;
 
-    /* renamed from: u */
+    /* JADX INFO: renamed from: u */
     public String f21636u;
 
-    /* renamed from: v */
+    /* JADX INFO: renamed from: v */
     public int[] f21637v;
 
-    /* renamed from: w */
+    /* JADX INFO: renamed from: w */
     public int f21638w;
 
-    /* renamed from: x */
+    /* JADX INFO: renamed from: x */
     public String[] f21639x;
 
-    /* renamed from: y */
+    /* JADX INFO: renamed from: y */
     public int[] f21640y;
 
-    /* renamed from: com.google.gson.stream.JsonReader$a */
+    /* JADX INFO: renamed from: com.google.gson.stream.JsonReader$a */
     public class C11149a extends JsonReaderInternalAccess {
     }
 
@@ -80,8 +80,8 @@ public class JsonReader implements Closeable {
         this.f21626k = reader;
     }
 
-    /* renamed from: A */
-    public long mo6874A() throws IOException, NumberFormatException {
+    /* JADX INFO: renamed from: A */
+    public long mo6874A() throws IOException {
         int iM9247d = this.f21633r;
         if (iM9247d == 0) {
             iM9247d = m9247d();
@@ -135,7 +135,7 @@ public class JsonReader implements Closeable {
         return j2;
     }
 
-    /* renamed from: C */
+    /* JADX INFO: renamed from: C */
     public String mo6875C() throws IOException {
         String strM9239I;
         int iM9247d = this.f21633r;
@@ -160,7 +160,7 @@ public class JsonReader implements Closeable {
         return strM9239I;
     }
 
-    /* renamed from: D */
+    /* JADX INFO: renamed from: D */
     public final int m9238D(boolean z2) throws IOException {
         char[] cArr = this.f21628m;
         int i = this.f21629n;
@@ -251,7 +251,7 @@ public class JsonReader implements Closeable {
         }
     }
 
-    /* renamed from: H */
+    /* JADX INFO: renamed from: H */
     public void mo6876H() throws IOException {
         int iM9247d = this.f21633r;
         if (iM9247d == 0) {
@@ -282,7 +282,7 @@ public class JsonReader implements Closeable {
         r2.append(r0, r4, r3 - r4);
         r10.f21629n = r3;
      */
-    /* renamed from: I */
+    /* JADX INFO: renamed from: I */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
@@ -332,7 +332,7 @@ public class JsonReader implements Closeable {
         throw null;
     }
 
-    /* renamed from: J */
+    /* JADX INFO: renamed from: J */
     public String mo6877J() throws IOException {
         String str;
         int iM9247d = this.f21633r;
@@ -374,7 +374,7 @@ public class JsonReader implements Closeable {
     /* JADX WARN: Failed to find 'out' block for switch in B:32:0x0044. Please report as an issue. */
     /* JADX WARN: Removed duplicated region for block: B:46:0x0080  */
     /* JADX WARN: Removed duplicated region for block: B:47:0x008a  */
-    /* renamed from: L */
+    /* JADX INFO: renamed from: L */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
@@ -435,7 +435,7 @@ public class JsonReader implements Closeable {
         return string;
     }
 
-    /* renamed from: N */
+    /* JADX INFO: renamed from: N */
     public JsonToken mo6878N() throws IOException {
         int iM9247d = this.f21633r;
         if (iM9247d == 0) {
@@ -474,7 +474,7 @@ public class JsonReader implements Closeable {
         }
     }
 
-    /* renamed from: O */
+    /* JADX INFO: renamed from: O */
     public final void m9241O(int i) {
         int i2 = this.f21638w;
         int[] iArr = this.f21637v;
@@ -490,7 +490,7 @@ public class JsonReader implements Closeable {
         iArr2[i4] = i;
     }
 
-    /* renamed from: R */
+    /* JADX INFO: renamed from: R */
     public final char m9242R() throws IOException {
         int i;
         int i2;
@@ -560,7 +560,7 @@ public class JsonReader implements Closeable {
         return c;
     }
 
-    /* renamed from: S */
+    /* JADX INFO: renamed from: S */
     public final void m9243S(char c) throws IOException {
         char[] cArr = this.f21628m;
         do {
@@ -592,7 +592,7 @@ public class JsonReader implements Closeable {
         throw null;
     }
 
-    /* renamed from: T */
+    /* JADX INFO: renamed from: T */
     public final void m9244T() throws IOException {
         char c;
         do {
@@ -617,7 +617,7 @@ public class JsonReader implements Closeable {
         m9246c();
      */
     /* JADX WARN: Failed to find 'out' block for switch in B:61:0x009b. Please report as an issue. */
-    /* renamed from: U */
+    /* JADX INFO: renamed from: U */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
@@ -691,14 +691,14 @@ public class JsonReader implements Closeable {
         this.f21639x[i4 - 1] = "null";
     }
 
-    /* renamed from: V */
+    /* JADX INFO: renamed from: V */
     public final IOException m9245V(String str) throws IOException {
         StringBuilder sbM833U = outline.m833U(str);
         sbM833U.append(m9250t());
         throw new MalformedJsonException(sbM833U.toString());
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public void mo6882a() throws IOException {
         int iM9247d = this.f21633r;
         if (iM9247d == 0) {
@@ -716,7 +716,7 @@ public class JsonReader implements Closeable {
         }
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public void mo6883b() throws IOException {
         int iM9247d = this.f21633r;
         if (iM9247d == 0) {
@@ -733,7 +733,7 @@ public class JsonReader implements Closeable {
         }
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final void m9246c() throws IOException {
         if (this.f21627l) {
             return;
@@ -760,7 +760,7 @@ public class JsonReader implements Closeable {
     /* JADX WARN: Removed duplicated region for block: B:190:0x0255  */
     /* JADX WARN: Removed duplicated region for block: B:195:0x0264 A[RETURN] */
     /* JADX WARN: Removed duplicated region for block: B:196:0x0265  */
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
@@ -997,7 +997,7 @@ public class JsonReader implements Closeable {
                                     if (j3 == j2) {
                                         break;
                                     }
-                                    long j4 = (10 * j3) - (c2 - '0');
+                                    long j4 = (10 * j3) - ((long) (c2 - '0'));
                                     z2 &= j3 > -922337203685477580L || (j3 == -922337203685477580L && j4 < j3);
                                     j3 = j4;
                                 } else if (c4 == 3) {
@@ -1073,7 +1073,7 @@ public class JsonReader implements Closeable {
         return 7;
     }
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public void mo6886e() throws IOException {
         int iM9247d = this.f21633r;
         if (iM9247d == 0) {
@@ -1093,7 +1093,7 @@ public class JsonReader implements Closeable {
         this.f21633r = 0;
     }
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public void mo6887f() throws IOException {
         int iM9247d = this.f21633r;
         if (iM9247d == 0) {
@@ -1134,7 +1134,7 @@ public class JsonReader implements Closeable {
         return sbM829Q.toString();
     }
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public final boolean m9248n(int i) throws IOException {
         int i2;
         int i3;
@@ -1169,7 +1169,7 @@ public class JsonReader implements Closeable {
         return true;
     }
 
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     public boolean mo6888q() throws IOException {
         int iM9247d = this.f21633r;
         if (iM9247d == 0) {
@@ -1178,7 +1178,7 @@ public class JsonReader implements Closeable {
         return (iM9247d == 2 || iM9247d == 4) ? false : true;
     }
 
-    /* renamed from: s */
+    /* JADX INFO: renamed from: s */
     public final boolean m9249s(char c) throws IOException {
         if (c == '\t' || c == '\n' || c == '\f' || c == '\r' || c == ' ') {
             return false;
@@ -1208,7 +1208,7 @@ public class JsonReader implements Closeable {
         return false;
     }
 
-    /* renamed from: t */
+    /* JADX INFO: renamed from: t */
     public String m9250t() {
         StringBuilder sbM835W = outline.m835W(" at line ", this.f21631p + 1, " column ", (this.f21629n - this.f21632q) + 1, " path ");
         sbM835W.append(getPath());
@@ -1219,7 +1219,7 @@ public class JsonReader implements Closeable {
         return getClass().getSimpleName() + m9250t();
     }
 
-    /* renamed from: u */
+    /* JADX INFO: renamed from: u */
     public boolean mo6889u() throws IOException {
         int iM9247d = this.f21633r;
         if (iM9247d == 0) {
@@ -1245,8 +1245,8 @@ public class JsonReader implements Closeable {
         return false;
     }
 
-    /* renamed from: x */
-    public double mo6890x() throws IOException, NumberFormatException {
+    /* JADX INFO: renamed from: x */
+    public double mo6890x() throws IOException {
         int iM9247d = this.f21633r;
         if (iM9247d == 0) {
             iM9247d = m9247d();
@@ -1284,7 +1284,7 @@ public class JsonReader implements Closeable {
         return d;
     }
 
-    /* renamed from: y */
+    /* JADX INFO: renamed from: y */
     public int mo6891y() throws IOException {
         int iM9247d = this.f21633r;
         if (iM9247d == 0) {

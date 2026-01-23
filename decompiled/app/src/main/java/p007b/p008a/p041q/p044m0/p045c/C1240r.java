@@ -5,12 +5,12 @@ import com.hammerandchisel.libdiscord.Discord;
 import kotlin.jvm.functions.Function1;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: MediaEngineLegacy.kt */
-/* renamed from: b.a.q.m0.c.r */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.a.q.m0.c.r */
+/* JADX INFO: compiled from: MediaEngineLegacy.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class C1240r implements Discord.GetRankedRtcRegionsCallback {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final /* synthetic */ Function1 f1754a;
 
     public C1240r(Function1 function1) {

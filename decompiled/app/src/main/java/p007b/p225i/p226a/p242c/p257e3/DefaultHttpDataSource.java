@@ -33,86 +33,86 @@ import p007b.p225i.p226a.p242c.p259f3.Log2;
 import p007b.p225i.p226a.p242c.p259f3.Util2;
 import p007b.p225i.p355b.p356a.Predicate3;
 
-/* compiled from: DefaultHttpDataSource.java */
-/* renamed from: b.i.a.c.e3.r, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.e3.r, reason: use source file name */
+/* JADX INFO: compiled from: DefaultHttpDataSource.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class DefaultHttpDataSource extends BaseDataSource implements DataSource3 {
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final boolean f6607e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final int f6608f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public final int f6609g;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     @Nullable
     public final String f6610h;
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     @Nullable
     public final HttpDataSource2 f6611i;
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final HttpDataSource2 f6612j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final boolean f6613k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     @Nullable
     public Predicate3<String> f6614l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     @Nullable
     public DataSpec f6615m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     @Nullable
     public HttpURLConnection f6616n;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     @Nullable
     public InputStream f6617o;
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public boolean f6618p;
 
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     public int f6619q;
 
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     public long f6620r;
 
-    /* renamed from: s */
+    /* JADX INFO: renamed from: s */
     public long f6621s;
 
-    /* compiled from: DefaultHttpDataSource.java */
-    /* renamed from: b.i.a.c.e3.r$b */
+    /* JADX INFO: renamed from: b.i.a.c.e3.r$b */
+    /* JADX INFO: compiled from: DefaultHttpDataSource.java */
     public static final class b implements HttpDataSource {
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         @Nullable
         public String f6623b;
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final HttpDataSource2 f6622a = new HttpDataSource2();
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public int f6624c = 8000;
 
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         public int f6625d = 8000;
 
         @Override // p007b.p225i.p226a.p242c.p257e3.DataSource3.a
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public /* bridge */ /* synthetic */ DataSource3 mo234a() {
             return m2872b();
         }
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public DefaultHttpDataSource m2872b() {
             return new DefaultHttpDataSource(this.f6623b, this.f6624c, this.f6625d, false, this.f6622a, null, false, null);
         }
@@ -130,7 +130,7 @@ public class DefaultHttpDataSource extends BaseDataSource implements DataSource3
         this.f6613k = z3;
     }
 
-    /* renamed from: x */
+    /* JADX INFO: renamed from: x */
     public static void m2866x(@Nullable HttpURLConnection httpURLConnection, long j) {
         int i;
         if (httpURLConnection == null || (i = Util2.f6708a) < 19 || i > 20) {
@@ -164,11 +164,11 @@ public class DefaultHttpDataSource extends BaseDataSource implements DataSource3
     /* JADX WARN: Removed duplicated region for block: B:78:0x01c1  */
     /* JADX WARN: Removed duplicated region for block: B:81:0x01ca  */
     @Override // p007b.p225i.p226a.p242c.p257e3.DataSource3
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
-    public long mo2586a(DataSpec dataSpec) throws HttpDataSource$HttpDataSourceException, NumberFormatException {
+    public long mo2586a(DataSpec dataSpec) throws HttpDataSource$HttpDataSourceException {
         byte[] bArrM2990K;
         boolean z2;
         long j;
@@ -260,6 +260,7 @@ public class DefaultHttpDataSource extends BaseDataSource implements DataSource3
                             sb.append(headerField2);
                             sb.append("]");
                             Log.e("HttpUtil", sb.toString());
+                            jMax = -1;
                         }
                         if (!TextUtils.isEmpty(headerField3)) {
                             Matcher matcher2 = HttpUtil.f6628a.matcher(headerField3);
@@ -353,7 +354,7 @@ public class DefaultHttpDataSource extends BaseDataSource implements DataSource3
     }
 
     @Override // p007b.p225i.p226a.p242c.p257e3.BaseDataSource, p007b.p225i.p226a.p242c.p257e3.DataSource3
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public Map<String, List<String>> mo2588j() {
         HttpURLConnection httpURLConnection = this.f6616n;
         return httpURLConnection == null ? Collections.emptyMap() : httpURLConnection.getHeaderFields();
@@ -361,7 +362,7 @@ public class DefaultHttpDataSource extends BaseDataSource implements DataSource3
 
     @Override // p007b.p225i.p226a.p242c.p257e3.DataSource3
     @Nullable
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public Uri mo2589n() {
         HttpURLConnection httpURLConnection = this.f6616n;
         if (httpURLConnection == null) {
@@ -390,7 +391,7 @@ public class DefaultHttpDataSource extends BaseDataSource implements DataSource3
                     int i4 = Util2.f6708a;
                     i3 = inputStream.read(bArr, i, i2);
                     if (i3 != -1) {
-                        this.f6621s += i3;
+                        this.f6621s += (long) i3;
                         m2848p(i3);
                         return i3;
                     }
@@ -410,7 +411,7 @@ public class DefaultHttpDataSource extends BaseDataSource implements DataSource3
         }
     }
 
-    /* renamed from: t */
+    /* JADX INFO: renamed from: t */
     public final void m2867t() {
         HttpURLConnection httpURLConnection = this.f6616n;
         if (httpURLConnection != null) {
@@ -423,7 +424,7 @@ public class DefaultHttpDataSource extends BaseDataSource implements DataSource3
         }
     }
 
-    /* renamed from: u */
+    /* JADX INFO: renamed from: u */
     public final URL m2868u(URL url, @Nullable String str, DataSpec dataSpec) throws HttpDataSource$HttpDataSourceException {
         if (str == null) {
             throw new HttpDataSource$HttpDataSourceException("Null location redirect", dataSpec, 2001, 1);
@@ -447,7 +448,7 @@ public class DefaultHttpDataSource extends BaseDataSource implements DataSource3
         }
     }
 
-    /* renamed from: v */
+    /* JADX INFO: renamed from: v */
     public final HttpURLConnection m2869v(DataSpec dataSpec) throws IOException {
         HttpURLConnection httpURLConnectionM2870w;
         URL url = new URL(dataSpec.f6542a.toString());
@@ -500,7 +501,7 @@ public class DefaultHttpDataSource extends BaseDataSource implements DataSource3
         return httpURLConnectionM2870w;
     }
 
-    /* renamed from: w */
+    /* JADX INFO: renamed from: w */
     public final HttpURLConnection m2870w(URL url, int i, @Nullable byte[] bArr, long j, long j2, boolean z2, boolean z3, Map<String, String> map) throws IOException {
         String string;
         HttpURLConnection httpURLConnection = (HttpURLConnection) url.openConnection();
@@ -552,7 +553,7 @@ public class DefaultHttpDataSource extends BaseDataSource implements DataSource3
         return httpURLConnection;
     }
 
-    /* renamed from: y */
+    /* JADX INFO: renamed from: y */
     public final void m2871y(long j, DataSpec dataSpec) throws IOException {
         if (j == 0) {
             return;
@@ -569,7 +570,7 @@ public class DefaultHttpDataSource extends BaseDataSource implements DataSource3
             if (i2 == -1) {
                 throw new HttpDataSource$HttpDataSourceException(dataSpec, 2008, 1);
             }
-            j -= i2;
+            j -= (long) i2;
             m2848p(i2);
         }
     }

@@ -22,9 +22,9 @@ import p507d0.p580t.Sets5;
 import p507d0.p592z.p594d.Intrinsics3;
 import p658rx.functions.Func7;
 
-/* compiled from: WidgetChatListModel.kt */
-/* renamed from: com.discord.widgets.chat.list.model.WidgetChatListModel$Companion$getThreadDraft$3, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.chat.list.model.WidgetChatListModel$Companion$getThreadDraft$3, reason: use source file name */
+/* JADX INFO: compiled from: WidgetChatListModel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetChatListModel7<T1, T2, T3, T4, T5, T6, T7, R> implements Func7<Map<Long, ? extends String>, Long, Map<Long, ? extends GuildMember>, Guild, StoreThreadDraft.ThreadDraftState, Long, Tuples2<? extends Message, ? extends List<? extends ChatListEntry>>, WidgetChatListModel> {
     public final /* synthetic */ long $guildId;
     public final /* synthetic */ Channel $parentChannel;
@@ -41,7 +41,7 @@ public final class WidgetChatListModel7<T1, T2, T3, T4, T5, T6, T7, R> implement
         return call2((Map<Long, String>) map, l, (Map<Long, GuildMember>) map2, guild, threadDraftState, l2, (Tuples2<Message, ? extends List<? extends ChatListEntry>>) tuples2);
     }
 
-    /* renamed from: call, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
     public final WidgetChatListModel call2(Map<Long, String> map, Long l, Map<Long, GuildMember> map2, Guild guild, StoreThreadDraft.ThreadDraftState threadDraftState, Long l2, Tuples2<Message, ? extends List<? extends ChatListEntry>> tuples2) {
         List<Long> roles;
         ArrayList arrayList = new ArrayList();

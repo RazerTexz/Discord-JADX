@@ -8,9 +8,9 @@ import kotlin.jvm.functions.Function1;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetGuildRoleSubscriptionTierBenefits.kt */
-/* renamed from: com.discord.widgets.guild_role_subscriptions.tier.create.benefits.WidgetGuildRoleSubscriptionTierBenefits$itemClickListener$1$onTrialIntervalClick$1$$special$$inlined$mapIndexed$lambda$1 */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.guild_role_subscriptions.tier.create.benefits.WidgetGuildRoleSubscriptionTierBenefits$itemClickListener$1$onTrialIntervalClick$1$$special$$inlined$mapIndexed$lambda$1 */
+/* JADX INFO: compiled from: WidgetGuildRoleSubscriptionTierBenefits.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class C8548xe92b097c extends Lambda implements Function1<GuildRoleSubscriptionTierViewModel.ViewState, WidgetRadioSelectorBottomSheet2> {
     public final /* synthetic */ int $index;
     public final /* synthetic */ SubscriptionTrialInterval $subscriptionTrialInterval;
@@ -29,7 +29,7 @@ public final class C8548xe92b097c extends Lambda implements Function1<GuildRoleS
         return invoke2(viewState);
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final WidgetRadioSelectorBottomSheet2 invoke2(GuildRoleSubscriptionTierViewModel.ViewState viewState) {
         Intrinsics3.checkNotNullParameter(viewState, "guildRoleSubscriptionTierViewModelState");
         return new WidgetRadioSelectorBottomSheet2(this.$index, String.valueOf(GuildRoleSubscriptionUtils2.getFormattedLabel(this.$subscriptionTrialInterval, this.this$0.this$0.this$0.requireContext())), Intrinsics3.areEqual(viewState.getGuildRoleSubscriptionTier().getTrialInterval(), this.$subscriptionTrialInterval));

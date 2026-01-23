@@ -6,21 +6,21 @@ import java.util.ArrayList;
 import p507d0.p592z.p594d.Intrinsics3;
 import p658rx.subjects.BehaviorSubject;
 
-/* compiled from: AppState.kt */
-/* renamed from: b.a.d.l, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.a.d.l, reason: use source file name */
+/* JADX INFO: compiled from: AppState.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class AppState2 {
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public static final AppState2 f530c = new AppState2();
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final ArrayList<Object> f528a = new ArrayList<>(4);
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static final BehaviorSubject<Integer> f529b = BehaviorSubject.m11130l0(0);
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final synchronized void m161a(Object obj) {
         Intrinsics3.checkNotNullParameter(obj, "consumer");
         ArrayList<Object> arrayList = f528a;
@@ -29,7 +29,7 @@ public final class AppState2 {
         f529b.onNext(Integer.valueOf(arrayList.size()));
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final synchronized void m162b(Object obj) {
         Intrinsics3.checkNotNullParameter(obj, "consumer");
         ArrayList<Object> arrayList = f528a;

@@ -18,7 +18,7 @@ import java.lang.reflect.Method;
 import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserException;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public final class DrawableCompat {
     private static final String TAG = "DrawableCompat";
     private static Method sGetLayoutDirectionMethod;
@@ -73,7 +73,7 @@ public final class DrawableCompat {
         return drawable.getColorFilter();
     }
 
-    public static int getLayoutDirection(@NonNull Drawable drawable) throws SecurityException {
+    public static int getLayoutDirection(@NonNull Drawable drawable) {
         if (Build.VERSION.SDK_INT >= 23) {
             return drawable.getLayoutDirection();
         }
@@ -124,7 +124,7 @@ public final class DrawableCompat {
         drawable.setHotspotBounds(i, i2, i3, i4);
     }
 
-    public static boolean setLayoutDirection(@NonNull Drawable drawable, int i) throws SecurityException {
+    public static boolean setLayoutDirection(@NonNull Drawable drawable, int i) {
         if (Build.VERSION.SDK_INT >= 23) {
             return drawable.setLayoutDirection(i);
         }

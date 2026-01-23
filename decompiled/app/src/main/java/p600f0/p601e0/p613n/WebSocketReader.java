@@ -12,75 +12,75 @@ import p600f0.p601e0.Util7;
 import p615g0.Buffer3;
 import p615g0.BufferedSource;
 
-/* compiled from: WebSocketReader.kt */
-/* renamed from: f0.e0.n.h, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: f0.e0.n.h, reason: use source file name */
+/* JADX INFO: compiled from: WebSocketReader.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class WebSocketReader implements Closeable {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public boolean f25867j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public int f25868k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public long f25869l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public boolean f25870m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public boolean f25871n;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public boolean f25872o;
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public final Buffer3 f25873p;
 
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     public final Buffer3 f25874q;
 
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     public MessageInflater f25875r;
 
-    /* renamed from: s */
+    /* JADX INFO: renamed from: s */
     public final byte[] f25876s;
 
-    /* renamed from: t */
+    /* JADX INFO: renamed from: t */
     public final Buffer3.a f25877t;
 
-    /* renamed from: u */
+    /* JADX INFO: renamed from: u */
     public final boolean f25878u;
 
-    /* renamed from: v */
+    /* JADX INFO: renamed from: v */
     public final BufferedSource f25879v;
 
-    /* renamed from: w */
+    /* JADX INFO: renamed from: w */
     public final a f25880w;
 
-    /* renamed from: x */
+    /* JADX INFO: renamed from: x */
     public final boolean f25881x;
 
-    /* renamed from: y */
+    /* JADX INFO: renamed from: y */
     public final boolean f25882y;
 
-    /* compiled from: WebSocketReader.kt */
-    /* renamed from: f0.e0.n.h$a */
+    /* JADX INFO: renamed from: f0.e0.n.h$a */
+    /* JADX INFO: compiled from: WebSocketReader.kt */
     public interface a {
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         void mo10346b(ByteString byteString) throws IOException;
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         void mo10347c(String str) throws IOException;
 
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         void mo10348d(ByteString byteString);
 
-        /* renamed from: f */
+        /* JADX INFO: renamed from: f */
         void mo10350f(ByteString byteString);
 
-        /* renamed from: g */
+        /* JADX INFO: renamed from: g */
         void mo10351g(int i, String str);
     }
 
@@ -98,7 +98,7 @@ public final class WebSocketReader implements Closeable {
         this.f25877t = z2 ? null : new Buffer3.a();
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final void m10361a() throws IOException {
         String strM10429D;
         long j = this.f25869l;
@@ -156,7 +156,7 @@ public final class WebSocketReader implements Closeable {
     }
 
     /* JADX WARN: Finally extract failed */
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final void m10362b() throws IOException {
         if (this.f25867j) {
             throw new IOException("closed");

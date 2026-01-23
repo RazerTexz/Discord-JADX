@@ -23,7 +23,6 @@ import com.discord.utilities.resources.DurationUtils3;
 import com.discord.utilities.time.TimeUtils;
 import com.discord.utilities.user.UserUtils;
 import com.discord.widgets.notice.WidgetNoticeDialog;
-import com.google.gson.JsonIOException;
 import java.util.ArrayList;
 import java.util.Locale;
 import java.util.Objects;
@@ -35,13 +34,13 @@ import p507d0.p580t.Maps6;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: GiftingUtils.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: GiftingUtils.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class GiftingUtils {
     public static final GiftingUtils INSTANCE = new GiftingUtils();
     public static final long PREMIUM_SUBSCRIPTION_APPLICATION_ID = 521842831262875670L;
 
-    /* compiled from: GiftingUtils.kt */
+    /* JADX INFO: compiled from: GiftingUtils.kt */
     public enum SkuTypes {
         DURABLE_PRIMARY(1),
         DURABLE(2),
@@ -60,8 +59,8 @@ public final class GiftingUtils {
         }
     }
 
-    /* compiled from: GiftingUtils.kt */
-    /* renamed from: com.discord.utilities.gifting.GiftingUtils$buyGift$1 */
+    /* JADX INFO: renamed from: com.discord.utilities.gifting.GiftingUtils$buyGift$1 */
+    /* JADX INFO: compiled from: GiftingUtils.kt */
     public static final class C67611 extends Lambda implements Function0<Unit> {
         public final /* synthetic */ FragmentActivity $activity;
         public final /* synthetic */ BillingFlowParams $billingParams;
@@ -79,7 +78,7 @@ public final class GiftingUtils {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             GooglePlayBillingManager googlePlayBillingManager = GooglePlayBillingManager.INSTANCE;
             if (googlePlayBillingManager.launchBillingFlow(this.$activity, this.$billingParams) == 7) {
@@ -88,8 +87,8 @@ public final class GiftingUtils {
         }
     }
 
-    /* compiled from: GiftingUtils.kt */
-    /* renamed from: com.discord.utilities.gifting.GiftingUtils$buyGift$2 */
+    /* JADX INFO: renamed from: com.discord.utilities.gifting.GiftingUtils$buyGift$2 */
+    /* JADX INFO: compiled from: GiftingUtils.kt */
     public static final class C67622 extends Lambda implements Function1<View, Unit> {
         public final /* synthetic */ GooglePlayInAppSku $inAppSku;
         public final /* synthetic */ C67611 $launchBillingFlow$1;
@@ -102,21 +101,21 @@ public final class GiftingUtils {
         }
 
         @Override // kotlin.jvm.functions.Function1
-        public /* bridge */ /* synthetic */ Unit invoke(View view) throws JsonIOException {
+        public /* bridge */ /* synthetic */ Unit invoke(View view) {
             invoke2(view);
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
-        public final void invoke2(View view) throws JsonIOException {
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
+        public final void invoke2(View view) {
             Intrinsics3.checkNotNullParameter(view, "it");
             StoreStream.INSTANCE.getGooglePlayPurchases().trackPaymentFlowStep(this.$inAppSku.getPaymentGatewaySkuId(), "warning_dialog", "");
             this.$launchBillingFlow$1.invoke2();
         }
     }
 
-    /* compiled from: GiftingUtils.kt */
-    /* renamed from: com.discord.utilities.gifting.GiftingUtils$buyGift$3 */
+    /* JADX INFO: renamed from: com.discord.utilities.gifting.GiftingUtils$buyGift$3 */
+    /* JADX INFO: compiled from: GiftingUtils.kt */
     public static final class C67633 extends Lambda implements Function1<View, Unit> {
         public final /* synthetic */ Function0 $dismissWarningCallback;
 
@@ -132,7 +131,7 @@ public final class GiftingUtils {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(View view) {
             Intrinsics3.checkNotNullParameter(view, "it");
             Function0 function0 = this.$dismissWarningCallback;
@@ -141,8 +140,8 @@ public final class GiftingUtils {
         }
     }
 
-    /* compiled from: GiftingUtils.kt */
-    /* renamed from: com.discord.utilities.gifting.GiftingUtils$buyGift$4 */
+    /* JADX INFO: renamed from: com.discord.utilities.gifting.GiftingUtils$buyGift$4 */
+    /* JADX INFO: compiled from: GiftingUtils.kt */
     public static final class C67644 extends Lambda implements Function0<Unit> {
         public final /* synthetic */ Function0 $dismissWarningCallback;
 
@@ -158,7 +157,7 @@ public final class GiftingUtils {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             Function0 function0 = this.$dismissWarningCallback;
             if (function0 != null) {

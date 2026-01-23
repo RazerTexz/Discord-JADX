@@ -3,9 +3,9 @@ package com.discord.widgets.channels.threads.browser;
 import android.view.View;
 import com.discord.widgets.channels.threads.browser.WidgetThreadBrowserAdapter;
 
-/* compiled from: WidgetThreadBrowserAdapter.kt */
-/* renamed from: com.discord.widgets.channels.threads.browser.WidgetThreadBrowserAdapter$ThreadItem$onConfigure$2, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.channels.threads.browser.WidgetThreadBrowserAdapter$ThreadItem$onConfigure$2, reason: use source file name */
+/* JADX INFO: compiled from: WidgetThreadBrowserAdapter.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetThreadBrowserAdapter3 implements View.OnLongClickListener {
     public final /* synthetic */ WidgetThreadBrowserAdapter.Item.Thread $item;
     public final /* synthetic */ WidgetThreadBrowserAdapter.ThreadItem this$0;

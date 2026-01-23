@@ -4,9 +4,9 @@ import java.util.Set;
 import kotlin.jvm.functions.Function1;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: ShareUtils.kt */
-/* renamed from: com.discord.utilities.ShareUtils$observeChannelAndIconPairs$3$pinnedOnlyShortcutChannels$3 */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.utilities.ShareUtils$observeChannelAndIconPairs$3$pinnedOnlyShortcutChannels$3 */
+/* JADX INFO: compiled from: ShareUtils.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class C6655x626dc25c extends Lambda implements Function1<Long, Boolean> {
     public final /* synthetic */ Set $directShareChannelIds;
 

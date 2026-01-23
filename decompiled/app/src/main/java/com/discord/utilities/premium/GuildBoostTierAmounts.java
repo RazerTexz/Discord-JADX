@@ -2,8 +2,8 @@ package com.discord.utilities.premium;
 
 import p007b.p100d.p104b.p105a.outline;
 
-/* compiled from: GuildBoostTierAmounts.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: GuildBoostTierAmounts.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final /* data */ class GuildBoostTierAmounts {
     private final int tier1Boosts;
     private final int tier2Boosts;
@@ -28,17 +28,17 @@ public final /* data */ class GuildBoostTierAmounts {
         return guildBoostTierAmounts.copy(i, i2, i3);
     }
 
-    /* renamed from: component1, reason: from getter */
+    /* JADX INFO: renamed from: component1, reason: from getter */
     public final int getTier1Boosts() {
         return this.tier1Boosts;
     }
 
-    /* renamed from: component2, reason: from getter */
+    /* JADX INFO: renamed from: component2, reason: from getter */
     public final int getTier2Boosts() {
         return this.tier2Boosts;
     }
 
-    /* renamed from: component3, reason: from getter */
+    /* JADX INFO: renamed from: component3, reason: from getter */
     public final int getTier3Boosts() {
         return this.tier3Boosts;
     }

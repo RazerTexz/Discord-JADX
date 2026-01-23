@@ -17,28 +17,28 @@ import p507d0.p592z.p594d.Lambda;
 import p507d0.p592z.p594d.PropertyReference1Impl;
 import p507d0.p592z.p594d.Reflection2;
 
-/* compiled from: JvmBuiltIns.kt */
-/* renamed from: d0.e0.p.d.m0.b.q.f, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.b.q.f, reason: use source file name */
+/* JADX INFO: compiled from: JvmBuiltIns.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class JvmBuiltIns extends KotlinBuiltIns {
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public static final /* synthetic */ KProperty<Object>[] f22640f = {Reflection2.property1(new PropertyReference1Impl(Reflection2.getOrCreateKotlinClass(JvmBuiltIns.class), "customizer", "getCustomizer()Lorg/jetbrains/kotlin/builtins/jvm/JvmBuiltInsCustomizer;"))};
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public Function0<b> f22641g;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public final storage5 f22642h;
 
-    /* compiled from: JvmBuiltIns.kt */
-    /* renamed from: d0.e0.p.d.m0.b.q.f$a */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.b.q.f$a */
+    /* JADX INFO: compiled from: JvmBuiltIns.kt */
     public enum a {
         FROM_DEPENDENCIES,
         FROM_CLASS_LOADER,
         FALLBACK;
 
-        /* renamed from: values, reason: to resolve conflict with enum method */
+        /* JADX INFO: renamed from: values, reason: to resolve conflict with enum method */
         public static a[] valuesCustom() {
             a[] aVarArrValuesCustom = values();
             a[] aVarArr = new a[aVarArrValuesCustom.length];
@@ -47,14 +47,14 @@ public final class JvmBuiltIns extends KotlinBuiltIns {
         }
     }
 
-    /* compiled from: JvmBuiltIns.kt */
-    /* renamed from: d0.e0.p.d.m0.b.q.f$b */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.b.q.f$b */
+    /* JADX INFO: compiled from: JvmBuiltIns.kt */
     public static final class b {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final ModuleDescriptor2 f22647a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final boolean f22648b;
 
         public b(ModuleDescriptor2 moduleDescriptor2, boolean z2) {
@@ -72,13 +72,13 @@ public final class JvmBuiltIns extends KotlinBuiltIns {
         }
     }
 
-    /* compiled from: JvmBuiltIns.kt */
-    /* renamed from: d0.e0.p.d.m0.b.q.f$c */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.b.q.f$c */
+    /* JADX INFO: compiled from: JvmBuiltIns.kt */
     public static final class c extends Lambda implements Function0<JvmBuiltInsCustomizer2> {
         public final /* synthetic */ StorageManager $storageManager;
 
-        /* compiled from: JvmBuiltIns.kt */
-        /* renamed from: d0.e0.p.d.m0.b.q.f$c$a */
+        /* JADX INFO: renamed from: d0.e0.p.d.m0.b.q.f$c$a */
+        /* JADX INFO: compiled from: JvmBuiltIns.kt */
         public static final class a extends Lambda implements Function0<b> {
             public final /* synthetic */ JvmBuiltIns this$0;
 
@@ -126,8 +126,8 @@ public final class JvmBuiltIns extends KotlinBuiltIns {
         }
     }
 
-    /* compiled from: JvmBuiltIns.kt */
-    /* renamed from: d0.e0.p.d.m0.b.q.f$d */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.b.q.f$d */
+    /* JADX INFO: compiled from: JvmBuiltIns.kt */
     public static final class d extends Lambda implements Function0<b> {
         public final /* synthetic */ boolean $isAdditionalBuiltInsFeatureSupported;
         public final /* synthetic */ ModuleDescriptor2 $moduleDescriptor;
@@ -177,13 +177,13 @@ public final class JvmBuiltIns extends KotlinBuiltIns {
     }
 
     @Override // p507d0.p513e0.p514p.p515d.p517m0.p518b.KotlinBuiltIns
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public AdditionalClassPartsProvider mo9362e() {
         return getCustomizer();
     }
 
     @Override // p507d0.p513e0.p514p.p515d.p517m0.p518b.KotlinBuiltIns
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public Iterable mo9364g() {
         Iterable<ClassDescriptorFactory> iterableMo9364g = super.mo9364g();
         Intrinsics3.checkNotNullExpressionValue(iterableMo9364g, "super.getClassDescriptorFactories()");
@@ -203,7 +203,7 @@ public final class JvmBuiltIns extends KotlinBuiltIns {
     }
 
     @Override // p507d0.p513e0.p514p.p515d.p517m0.p518b.KotlinBuiltIns
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public PlatformDependentDeclarationFilter mo9365h() {
         return getCustomizer();
     }

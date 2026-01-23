@@ -3,9 +3,9 @@ package com.discord.widgets.chat.list.adapter;
 import android.view.View;
 import com.discord.stores.StoreThreadDraft;
 
-/* compiled from: WidgetChatListAdapterItemThreadDraftForm.kt */
-/* renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemThreadDraftForm$configureThreadNameInput$$inlined$apply$lambda$2, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemThreadDraftForm$configureThreadNameInput$$inlined$apply$lambda$2, reason: use source file name */
+/* JADX INFO: compiled from: WidgetChatListAdapterItemThreadDraftForm.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetChatListAdapterItemThreadDraftForm2 implements View.OnFocusChangeListener {
     public final /* synthetic */ StoreThreadDraft.ThreadDraftState $draftState$inlined;
     public final /* synthetic */ StoreThreadDraft $storeThreadDraft$inlined;

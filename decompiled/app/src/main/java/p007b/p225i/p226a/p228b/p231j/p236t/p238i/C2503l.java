@@ -5,12 +5,12 @@ import java.util.ArrayList;
 import p007b.p225i.p226a.p228b.Encoding2;
 import p007b.p225i.p226a.p228b.p231j.p236t.p238i.C2511t;
 
-/* compiled from: SQLiteEventStore.java */
-/* renamed from: b.i.a.b.j.t.i.l */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.b.j.t.i.l */
+/* JADX INFO: compiled from: SQLiteEventStore.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final /* synthetic */ class C2503l implements C2511t.b {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final C2503l f5431a = new C2503l();
 
     @Override // p007b.p225i.p226a.p228b.p231j.p236t.p238i.C2511t.b

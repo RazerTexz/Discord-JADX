@@ -4,9 +4,9 @@ import com.discord.widgets.guild_delete_feedback.GuildDeleteFeedbackSheetViewMod
 import kotlin.jvm.functions.Function0;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetFeedbackSheet.kt */
-/* renamed from: com.discord.widgets.feedback.WidgetFeedbackSheet$viewModelGuildDeleteFeedbackSheet$2, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.feedback.WidgetFeedbackSheet$viewModelGuildDeleteFeedbackSheet$2, reason: use source file name */
+/* JADX INFO: compiled from: WidgetFeedbackSheet.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetFeedbackSheet5 extends Lambda implements Function0<GuildDeleteFeedbackSheetViewModel> {
     public final /* synthetic */ WidgetFeedbackSheet this$0;
 

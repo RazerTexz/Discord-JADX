@@ -21,7 +21,7 @@ import p007b.p008a.p033m.p034a.p035h0.C1146b;
 import p007b.p008a.p033m.p034a.p035h0.C1147c;
 import p007b.p100d.p104b.p105a.outline;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class ModelEmojiUnicode implements Model, Emoji {
     private static final String FILENAME_FORMAT = "emoji_%s";
     private static final String SKIN_TONE_SUFFIX = "::skin-tone-";
@@ -37,7 +37,7 @@ public class ModelEmojiUnicode implements Model, Emoji {
     private static final String[] DIVERSITY_MODIFIERS = {"🏻", "🏼", "🏽", "🏾", "🏿"};
     public static final Parcelable.Creator<ModelEmojiUnicode> CREATOR = new C55451();
 
-    /* renamed from: com.discord.models.domain.emoji.ModelEmojiUnicode$1 */
+    /* JADX INFO: renamed from: com.discord.models.domain.emoji.ModelEmojiUnicode$1 */
     public static class C55451 implements Parcelable.Creator<ModelEmojiUnicode> {
         @Override // android.os.Parcelable.Creator
         public /* bridge */ /* synthetic */ ModelEmojiUnicode createFromParcel(Parcel parcel) {

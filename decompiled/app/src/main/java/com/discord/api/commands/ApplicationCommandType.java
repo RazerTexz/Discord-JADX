@@ -3,8 +3,8 @@ package com.discord.api.commands;
 import com.discord.widgets.chat.AutocompleteUtils;
 import kotlin.jvm.internal.DefaultConstructorMarker;
 
-/* compiled from: ApplicationCommandType.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: ApplicationCommandType.kt */
+/* JADX INFO: loaded from: classes.dex */
 public enum ApplicationCommandType {
     SUBCOMMAND(1),
     SUBCOMMAND_GROUP(2),
@@ -20,11 +20,11 @@ public enum ApplicationCommandType {
     UNKNOWN(0);
 
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private final int type;
 
-    /* compiled from: ApplicationCommandType.kt */
+    /* JADX INFO: compiled from: ApplicationCommandType.kt */
     public static final class Companion {
         public Companion() {
         }

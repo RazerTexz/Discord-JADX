@@ -75,25 +75,25 @@ import p658rx.functions.Action1;
 import p658rx.functions.Action2;
 import p658rx.functions.Func0;
 
-/* compiled from: WidgetCallPreviewFullscreen.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: WidgetCallPreviewFullscreen.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class WidgetCallPreviewFullscreen extends AppFragment {
     private static final String ANALYTICS_SOURCE = "Fullscreen Voice Channel Preview";
 
-    /* renamed from: binding$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
     private WidgetHomePanelNsfw panelNsfw;
     private CallParticipantsAdapter participantsAdapter;
 
-    /* renamed from: viewModel$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: viewModel$delegate, reason: from kotlin metadata */
     private final Lazy viewModel;
     private Subscription viewModelEventSubscription;
     public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetCallPreviewFullscreen.class, "binding", "getBinding()Lcom/discord/databinding/WidgetCallPreviewFullscreenBinding;", 0)};
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
 
-    /* compiled from: WidgetCallPreviewFullscreen.kt */
+    /* JADX INFO: compiled from: WidgetCallPreviewFullscreen.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -118,8 +118,8 @@ public final class WidgetCallPreviewFullscreen extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetCallPreviewFullscreen.kt */
-    /* renamed from: com.discord.widgets.voice.fullscreen.WidgetCallPreviewFullscreen$configureActionBar$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.voice.fullscreen.WidgetCallPreviewFullscreen$configureActionBar$1 */
+    /* JADX INFO: compiled from: WidgetCallPreviewFullscreen.kt */
     public static final class ViewOnClickListenerC105221 implements View.OnClickListener {
         public ViewOnClickListenerC105221() {
         }
@@ -130,8 +130,8 @@ public final class WidgetCallPreviewFullscreen extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetCallPreviewFullscreen.kt */
-    /* renamed from: com.discord.widgets.voice.fullscreen.WidgetCallPreviewFullscreen$configureActionBar$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.voice.fullscreen.WidgetCallPreviewFullscreen$configureActionBar$2 */
+    /* JADX INFO: compiled from: WidgetCallPreviewFullscreen.kt */
     public static final class C105232<T1, T2> implements Action2<MenuItem, Context> {
         public final /* synthetic */ WidgetCallPreviewFullscreenViewModel.ViewState $viewState;
 
@@ -144,7 +144,7 @@ public final class WidgetCallPreviewFullscreen extends AppFragment {
             call2(menuItem, context);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final void call2(MenuItem menuItem, Context context) {
             Intrinsics3.checkNotNullExpressionValue(menuItem, "menuItem");
             if (menuItem.getItemId() != C5419R.id.menu_invite) {
@@ -154,13 +154,13 @@ public final class WidgetCallPreviewFullscreen extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetCallPreviewFullscreen.kt */
-    /* renamed from: com.discord.widgets.voice.fullscreen.WidgetCallPreviewFullscreen$configureActionBar$3 */
+    /* JADX INFO: renamed from: com.discord.widgets.voice.fullscreen.WidgetCallPreviewFullscreen$configureActionBar$3 */
+    /* JADX INFO: compiled from: WidgetCallPreviewFullscreen.kt */
     public static final class C105243<T> implements Action1<Menu> {
         public final /* synthetic */ WidgetCallPreviewFullscreenViewModel.ViewState $viewState;
 
-        /* compiled from: WidgetCallPreviewFullscreen.kt */
-        /* renamed from: com.discord.widgets.voice.fullscreen.WidgetCallPreviewFullscreen$configureActionBar$3$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.widgets.voice.fullscreen.WidgetCallPreviewFullscreen$configureActionBar$3$1, reason: invalid class name */
+        /* JADX INFO: compiled from: WidgetCallPreviewFullscreen.kt */
         public static final class AnonymousClass1 implements View.OnClickListener {
             public AnonymousClass1() {
             }
@@ -181,7 +181,7 @@ public final class WidgetCallPreviewFullscreen extends AppFragment {
             call2(menu);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final void call2(Menu menu) {
             boolean z2 = this.$viewState.isChannelNsfw() && (this.$viewState.isNsfwUnconsented() || this.$viewState.getNsfwAllowed() == NsfwAllowance.DISALLOWED);
             MenuItem menuItemFindItem = menu.findItem(C5419R.id.menu_text_in_voice);
@@ -226,8 +226,8 @@ public final class WidgetCallPreviewFullscreen extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetCallPreviewFullscreen.kt */
-    /* renamed from: com.discord.widgets.voice.fullscreen.WidgetCallPreviewFullscreen$configureParticipants$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.voice.fullscreen.WidgetCallPreviewFullscreen$configureParticipants$1 */
+    /* JADX INFO: compiled from: WidgetCallPreviewFullscreen.kt */
     public static final /* synthetic */ class C105251 extends FunctionReferenceImpl implements Function1<StreamContext, Unit> {
         public C105251(WidgetCallPreviewFullscreen widgetCallPreviewFullscreen) {
             super(1, widgetCallPreviewFullscreen, WidgetCallPreviewFullscreen.class, "onStreamPreviewClicked", "onStreamPreviewClicked(Lcom/discord/utilities/streams/StreamContext;)V", 0);
@@ -239,15 +239,15 @@ public final class WidgetCallPreviewFullscreen extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(StreamContext streamContext) {
             Intrinsics3.checkNotNullParameter(streamContext, "p1");
             WidgetCallPreviewFullscreen.access$onStreamPreviewClicked((WidgetCallPreviewFullscreen) this.receiver, streamContext);
         }
     }
 
-    /* compiled from: WidgetCallPreviewFullscreen.kt */
-    /* renamed from: com.discord.widgets.voice.fullscreen.WidgetCallPreviewFullscreen$configureParticipants$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.voice.fullscreen.WidgetCallPreviewFullscreen$configureParticipants$2 */
+    /* JADX INFO: compiled from: WidgetCallPreviewFullscreen.kt */
     public static final class C105262 extends Lambda implements Function1<StoreVoiceParticipants.VoiceUser, Unit> {
         public final /* synthetic */ Channel $channel;
 
@@ -263,7 +263,7 @@ public final class WidgetCallPreviewFullscreen extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(StoreVoiceParticipants.VoiceUser voiceUser) {
             Intrinsics3.checkNotNullParameter(voiceUser, "clickedUser");
             WidgetUserSheet.Companion companion = WidgetUserSheet.INSTANCE;
@@ -275,8 +275,8 @@ public final class WidgetCallPreviewFullscreen extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetCallPreviewFullscreen.kt */
-    /* renamed from: com.discord.widgets.voice.fullscreen.WidgetCallPreviewFullscreen$configureParticipants$3 */
+    /* JADX INFO: renamed from: com.discord.widgets.voice.fullscreen.WidgetCallPreviewFullscreen$configureParticipants$3 */
+    /* JADX INFO: compiled from: WidgetCallPreviewFullscreen.kt */
     public static final class C105273 extends Lambda implements Function1<View, Unit> {
         public final /* synthetic */ Channel $channel;
 
@@ -292,15 +292,15 @@ public final class WidgetCallPreviewFullscreen extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(View view) {
             Intrinsics3.checkNotNullParameter(view, "it");
             ChannelInviteLaunchUtils.inviteToChannel$default(ChannelInviteLaunchUtils.INSTANCE, WidgetCallPreviewFullscreen.this, this.$channel, WidgetCallPreviewFullscreen.ANALYTICS_SOURCE, null, null, 24, null);
         }
     }
 
-    /* compiled from: WidgetCallPreviewFullscreen.kt */
-    /* renamed from: com.discord.widgets.voice.fullscreen.WidgetCallPreviewFullscreen$configureParticipants$4 */
+    /* JADX INFO: renamed from: com.discord.widgets.voice.fullscreen.WidgetCallPreviewFullscreen$configureParticipants$4 */
+    /* JADX INFO: compiled from: WidgetCallPreviewFullscreen.kt */
     public static final class C105284 extends Lambda implements Function0<Unit> {
         public C105284() {
             super(0);
@@ -312,7 +312,7 @@ public final class WidgetCallPreviewFullscreen extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             FragmentManager parentFragmentManager = WidgetCallPreviewFullscreen.this.getParentFragmentManager();
             Intrinsics3.checkNotNullExpressionValue(parentFragmentManager, "parentFragmentManager");
@@ -327,12 +327,12 @@ public final class WidgetCallPreviewFullscreen extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetCallPreviewFullscreen.kt */
-    /* renamed from: com.discord.widgets.voice.fullscreen.WidgetCallPreviewFullscreen$configureUI$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.voice.fullscreen.WidgetCallPreviewFullscreen$configureUI$1 */
+    /* JADX INFO: compiled from: WidgetCallPreviewFullscreen.kt */
     public static final class ViewOnClickListenerC105291 implements View.OnClickListener {
 
-        /* compiled from: WidgetCallPreviewFullscreen.kt */
-        /* renamed from: com.discord.widgets.voice.fullscreen.WidgetCallPreviewFullscreen$configureUI$1$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.widgets.voice.fullscreen.WidgetCallPreviewFullscreen$configureUI$1$1, reason: invalid class name */
+        /* JADX INFO: compiled from: WidgetCallPreviewFullscreen.kt */
         public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
             public AnonymousClass1() {
                 super(0);
@@ -344,7 +344,7 @@ public final class WidgetCallPreviewFullscreen extends AppFragment {
                 return Unit.f27425a;
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2() {
                 WidgetCallPreviewFullscreenViewModel.tryConnectToVoice$default(WidgetCallPreviewFullscreen.access$getViewModel$p(WidgetCallPreviewFullscreen.this), false, 1, null);
             }
@@ -359,12 +359,12 @@ public final class WidgetCallPreviewFullscreen extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetCallPreviewFullscreen.kt */
-    /* renamed from: com.discord.widgets.voice.fullscreen.WidgetCallPreviewFullscreen$configureUI$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.voice.fullscreen.WidgetCallPreviewFullscreen$configureUI$2 */
+    /* JADX INFO: compiled from: WidgetCallPreviewFullscreen.kt */
     public static final class ViewOnClickListenerC105302 implements View.OnClickListener {
 
-        /* compiled from: WidgetCallPreviewFullscreen.kt */
-        /* renamed from: com.discord.widgets.voice.fullscreen.WidgetCallPreviewFullscreen$configureUI$2$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.widgets.voice.fullscreen.WidgetCallPreviewFullscreen$configureUI$2$1, reason: invalid class name */
+        /* JADX INFO: compiled from: WidgetCallPreviewFullscreen.kt */
         public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
             public AnonymousClass1() {
                 super(0);
@@ -376,7 +376,7 @@ public final class WidgetCallPreviewFullscreen extends AppFragment {
                 return Unit.f27425a;
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2() {
                 WidgetCallPreviewFullscreen.access$getViewModel$p(WidgetCallPreviewFullscreen.this).tryConnectToVoice(true);
             }
@@ -391,8 +391,8 @@ public final class WidgetCallPreviewFullscreen extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetCallPreviewFullscreen.kt */
-    /* renamed from: com.discord.widgets.voice.fullscreen.WidgetCallPreviewFullscreen$configureUI$3 */
+    /* JADX INFO: renamed from: com.discord.widgets.voice.fullscreen.WidgetCallPreviewFullscreen$configureUI$3 */
+    /* JADX INFO: compiled from: WidgetCallPreviewFullscreen.kt */
     public static final /* synthetic */ class C105313 extends FunctionReferenceImpl implements Function1<Boolean, Unit> {
         public C105313(WidgetCallPreviewFullscreen widgetCallPreviewFullscreen) {
             super(1, widgetCallPreviewFullscreen, WidgetCallPreviewFullscreen.class, "onNsfwToggle", "onNsfwToggle(Z)V", 0);
@@ -409,8 +409,8 @@ public final class WidgetCallPreviewFullscreen extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetCallPreviewFullscreen.kt */
-    /* renamed from: com.discord.widgets.voice.fullscreen.WidgetCallPreviewFullscreen$configureUI$4 */
+    /* JADX INFO: renamed from: com.discord.widgets.voice.fullscreen.WidgetCallPreviewFullscreen$configureUI$4 */
+    /* JADX INFO: compiled from: WidgetCallPreviewFullscreen.kt */
     public static final /* synthetic */ class C105324 extends FunctionReferenceImpl implements Function0<Unit> {
         public C105324(WidgetCallPreviewFullscreen widgetCallPreviewFullscreen) {
             super(0, widgetCallPreviewFullscreen, WidgetCallPreviewFullscreen.class, "onDenyNsfw", "onDenyNsfw()V", 0);
@@ -422,14 +422,14 @@ public final class WidgetCallPreviewFullscreen extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             WidgetCallPreviewFullscreen.access$onDenyNsfw((WidgetCallPreviewFullscreen) this.receiver);
         }
     }
 
-    /* compiled from: WidgetCallPreviewFullscreen.kt */
-    /* renamed from: com.discord.widgets.voice.fullscreen.WidgetCallPreviewFullscreen$onStreamPreviewClicked$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.voice.fullscreen.WidgetCallPreviewFullscreen$onStreamPreviewClicked$1 */
+    /* JADX INFO: compiled from: WidgetCallPreviewFullscreen.kt */
     public static final class C105331 extends Lambda implements Function0<Unit> {
         public final /* synthetic */ StreamContext $streamContext;
 
@@ -445,14 +445,14 @@ public final class WidgetCallPreviewFullscreen extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             WidgetCallPreviewFullscreen.access$getViewModel$p(WidgetCallPreviewFullscreen.this).onStreamPreviewClicked(this.$streamContext.getStream().getEncodedStreamKey());
         }
     }
 
-    /* compiled from: WidgetCallPreviewFullscreen.kt */
-    /* renamed from: com.discord.widgets.voice.fullscreen.WidgetCallPreviewFullscreen$onViewBound$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.voice.fullscreen.WidgetCallPreviewFullscreen$onViewBound$1 */
+    /* JADX INFO: compiled from: WidgetCallPreviewFullscreen.kt */
     public static final class C105341 implements OnApplyWindowInsetsListener {
         public static final C105341 INSTANCE = new C105341();
 
@@ -472,8 +472,8 @@ public final class WidgetCallPreviewFullscreen extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetCallPreviewFullscreen.kt */
-    /* renamed from: com.discord.widgets.voice.fullscreen.WidgetCallPreviewFullscreen$onViewBound$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.voice.fullscreen.WidgetCallPreviewFullscreen$onViewBound$2 */
+    /* JADX INFO: compiled from: WidgetCallPreviewFullscreen.kt */
     public static final class C105352 implements OnApplyWindowInsetsListener {
         public static final C105352 INSTANCE = new C105352();
 
@@ -492,8 +492,8 @@ public final class WidgetCallPreviewFullscreen extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetCallPreviewFullscreen.kt */
-    /* renamed from: com.discord.widgets.voice.fullscreen.WidgetCallPreviewFullscreen$onViewBound$3 */
+    /* JADX INFO: renamed from: com.discord.widgets.voice.fullscreen.WidgetCallPreviewFullscreen$onViewBound$3 */
+    /* JADX INFO: compiled from: WidgetCallPreviewFullscreen.kt */
     public static final class C105363 implements OnApplyWindowInsetsListener {
         public static final C105363 INSTANCE = new C105363();
 
@@ -512,8 +512,8 @@ public final class WidgetCallPreviewFullscreen extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetCallPreviewFullscreen.kt */
-    /* renamed from: com.discord.widgets.voice.fullscreen.WidgetCallPreviewFullscreen$onViewBound$4 */
+    /* JADX INFO: renamed from: com.discord.widgets.voice.fullscreen.WidgetCallPreviewFullscreen$onViewBound$4 */
+    /* JADX INFO: compiled from: WidgetCallPreviewFullscreen.kt */
     public static final class C105374 implements OnApplyWindowInsetsListener {
         public static final C105374 INSTANCE = new C105374();
 
@@ -526,8 +526,8 @@ public final class WidgetCallPreviewFullscreen extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetCallPreviewFullscreen.kt */
-    /* renamed from: com.discord.widgets.voice.fullscreen.WidgetCallPreviewFullscreen$onViewBound$5 */
+    /* JADX INFO: renamed from: com.discord.widgets.voice.fullscreen.WidgetCallPreviewFullscreen$onViewBound$5 */
+    /* JADX INFO: compiled from: WidgetCallPreviewFullscreen.kt */
     public static final class C105385 implements OnApplyWindowInsetsListener {
         public C105385() {
         }
@@ -553,8 +553,8 @@ public final class WidgetCallPreviewFullscreen extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetCallPreviewFullscreen.kt */
-    /* renamed from: com.discord.widgets.voice.fullscreen.WidgetCallPreviewFullscreen$onViewBound$6 */
+    /* JADX INFO: renamed from: com.discord.widgets.voice.fullscreen.WidgetCallPreviewFullscreen$onViewBound$6 */
+    /* JADX INFO: compiled from: WidgetCallPreviewFullscreen.kt */
     public static final class C105396 extends Lambda implements Function1<GuildScheduledEvent, Unit> {
         public C105396() {
             super(1);
@@ -566,7 +566,7 @@ public final class WidgetCallPreviewFullscreen extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(GuildScheduledEvent guildScheduledEvent) {
             Intrinsics3.checkNotNullParameter(guildScheduledEvent, "event");
             WidgetGuildScheduledEventDetailsBottomSheet.Companion companion = WidgetGuildScheduledEventDetailsBottomSheet.INSTANCE;
@@ -576,8 +576,8 @@ public final class WidgetCallPreviewFullscreen extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetCallPreviewFullscreen.kt */
-    /* renamed from: com.discord.widgets.voice.fullscreen.WidgetCallPreviewFullscreen$onViewBound$7 */
+    /* JADX INFO: renamed from: com.discord.widgets.voice.fullscreen.WidgetCallPreviewFullscreen$onViewBound$7 */
+    /* JADX INFO: compiled from: WidgetCallPreviewFullscreen.kt */
     public static final class C105407 extends Lambda implements Function1<GuildScheduledEvent, Unit> {
         public C105407() {
             super(1);
@@ -589,7 +589,7 @@ public final class WidgetCallPreviewFullscreen extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(GuildScheduledEvent guildScheduledEvent) {
             Intrinsics3.checkNotNullParameter(guildScheduledEvent, "event");
             WidgetPreviewGuildScheduledEvent.Companion companion = WidgetPreviewGuildScheduledEvent.INSTANCE;
@@ -603,8 +603,8 @@ public final class WidgetCallPreviewFullscreen extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetCallPreviewFullscreen.kt */
-    /* renamed from: com.discord.widgets.voice.fullscreen.WidgetCallPreviewFullscreen$onViewBoundOrOnResume$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.voice.fullscreen.WidgetCallPreviewFullscreen$onViewBoundOrOnResume$1 */
+    /* JADX INFO: compiled from: WidgetCallPreviewFullscreen.kt */
     public static final class C105411 extends Lambda implements Function1<WidgetCallPreviewFullscreenViewModel.ViewState, Unit> {
         public C105411() {
             super(1);
@@ -616,15 +616,15 @@ public final class WidgetCallPreviewFullscreen extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(WidgetCallPreviewFullscreenViewModel.ViewState viewState) {
             Intrinsics3.checkNotNullParameter(viewState, "it");
             WidgetCallPreviewFullscreen.access$configureUI(WidgetCallPreviewFullscreen.this, viewState);
         }
     }
 
-    /* compiled from: WidgetCallPreviewFullscreen.kt */
-    /* renamed from: com.discord.widgets.voice.fullscreen.WidgetCallPreviewFullscreen$onViewBoundOrOnResume$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.voice.fullscreen.WidgetCallPreviewFullscreen$onViewBoundOrOnResume$2 */
+    /* JADX INFO: compiled from: WidgetCallPreviewFullscreen.kt */
     public static final /* synthetic */ class C105422 extends FunctionReferenceImpl implements Function1<WidgetCallPreviewFullscreenViewModel.Event, Unit> {
         public C105422(WidgetCallPreviewFullscreen widgetCallPreviewFullscreen) {
             super(1, widgetCallPreviewFullscreen, WidgetCallPreviewFullscreen.class, "handleEvent", "handleEvent(Lcom/discord/widgets/voice/fullscreen/WidgetCallPreviewFullscreenViewModel$Event;)V", 0);
@@ -636,15 +636,15 @@ public final class WidgetCallPreviewFullscreen extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(WidgetCallPreviewFullscreenViewModel.Event event) {
             Intrinsics3.checkNotNullParameter(event, "p1");
             WidgetCallPreviewFullscreen.access$handleEvent((WidgetCallPreviewFullscreen) this.receiver, event);
         }
     }
 
-    /* compiled from: WidgetCallPreviewFullscreen.kt */
-    /* renamed from: com.discord.widgets.voice.fullscreen.WidgetCallPreviewFullscreen$onViewBoundOrOnResume$3 */
+    /* JADX INFO: renamed from: com.discord.widgets.voice.fullscreen.WidgetCallPreviewFullscreen$onViewBoundOrOnResume$3 */
+    /* JADX INFO: compiled from: WidgetCallPreviewFullscreen.kt */
     public static final class C105433 extends Lambda implements Function1<Subscription, Unit> {
         public C105433() {
             super(1);
@@ -656,15 +656,15 @@ public final class WidgetCallPreviewFullscreen extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Subscription subscription) {
             Intrinsics3.checkNotNullParameter(subscription, Traits.Payment.Type.SUBSCRIPTION);
             WidgetCallPreviewFullscreen.access$setViewModelEventSubscription$p(WidgetCallPreviewFullscreen.this, subscription);
         }
     }
 
-    /* compiled from: WidgetCallPreviewFullscreen.kt */
-    /* renamed from: com.discord.widgets.voice.fullscreen.WidgetCallPreviewFullscreen$onViewBoundOrOnResume$4 */
+    /* JADX INFO: renamed from: com.discord.widgets.voice.fullscreen.WidgetCallPreviewFullscreen$onViewBoundOrOnResume$4 */
+    /* JADX INFO: compiled from: WidgetCallPreviewFullscreen.kt */
     public static final class C105444<R> implements Func0<Boolean> {
         public C105444() {
         }

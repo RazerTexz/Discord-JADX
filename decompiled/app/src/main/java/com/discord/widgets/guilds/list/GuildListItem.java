@@ -11,8 +11,8 @@ import p001a0.p002a.p003a.C0002b;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: GuildListItem.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: GuildListItem.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public abstract class GuildListItem {
     private static final long ID_BOTTOM_NAV_SPACE = -6;
     private static final long ID_CREATE = -3;
@@ -34,7 +34,7 @@ public abstract class GuildListItem {
     public static final int TYPE_UNAVAILABLE = 4;
     private final long itemId;
 
-    /* compiled from: GuildListItem.kt */
+    /* JADX INFO: compiled from: GuildListItem.kt */
     public static final class CreateItem extends GuildListItem {
         public static final CreateItem INSTANCE = new CreateItem();
 
@@ -43,7 +43,7 @@ public abstract class GuildListItem {
         }
     }
 
-    /* compiled from: GuildListItem.kt */
+    /* JADX INFO: compiled from: GuildListItem.kt */
     public static final class DividerItem extends GuildListItem {
         public static final DividerItem INSTANCE = new DividerItem();
 
@@ -52,7 +52,7 @@ public abstract class GuildListItem {
         }
     }
 
-    /* compiled from: GuildListItem.kt */
+    /* JADX INFO: compiled from: GuildListItem.kt */
     public static final /* data */ class FolderItem extends GuildListItem implements WidgetChannelListUnreads.UnreadItem {
         private final Integer color;
         private final long folderId;
@@ -71,11 +71,12 @@ public abstract class GuildListItem {
             this(j, num, str, z2, list, z3, z4, z5, i, z6, (i2 & 1024) != 0 ? false : z7);
         }
 
+        /* JADX WARN: Multi-variable type inference failed */
         public static /* synthetic */ FolderItem copy$default(FolderItem folderItem, long j, Integer num, String str, boolean z2, List list, boolean z3, boolean z4, boolean z5, int i, boolean z6, boolean z7, int i2, Object obj) {
             return folderItem.copy((i2 & 1) != 0 ? folderItem.folderId : j, (i2 & 2) != 0 ? folderItem.color : num, (i2 & 4) != 0 ? folderItem.name : str, (i2 & 8) != 0 ? folderItem.isOpen : z2, (i2 & 16) != 0 ? folderItem.guilds : list, (i2 & 32) != 0 ? folderItem.isAnyGuildSelected : z3, (i2 & 64) != 0 ? folderItem.isAnyGuildConnectedToVoice : z4, (i2 & 128) != 0 ? folderItem.isAnyGuildConnectedToStageChannel : z5, (i2 & 256) != 0 ? folderItem.getMentionCount() : i, (i2 & 512) != 0 ? folderItem.getIsUnread() : z6, (i2 & 1024) != 0 ? folderItem.isTargetedForFolderAddition : z7);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final long getFolderId() {
             return this.folderId;
         }
@@ -84,22 +85,22 @@ public abstract class GuildListItem {
             return getIsUnread();
         }
 
-        /* renamed from: component11, reason: from getter */
+        /* JADX INFO: renamed from: component11, reason: from getter */
         public final boolean getIsTargetedForFolderAddition() {
             return this.isTargetedForFolderAddition;
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final Integer getColor() {
             return this.color;
         }
 
-        /* renamed from: component3, reason: from getter */
+        /* JADX INFO: renamed from: component3, reason: from getter */
         public final String getName() {
             return this.name;
         }
 
-        /* renamed from: component4, reason: from getter */
+        /* JADX INFO: renamed from: component4, reason: from getter */
         public final boolean getIsOpen() {
             return this.isOpen;
         }
@@ -108,17 +109,17 @@ public abstract class GuildListItem {
             return this.guilds;
         }
 
-        /* renamed from: component6, reason: from getter */
+        /* JADX INFO: renamed from: component6, reason: from getter */
         public final boolean getIsAnyGuildSelected() {
             return this.isAnyGuildSelected;
         }
 
-        /* renamed from: component7, reason: from getter */
+        /* JADX INFO: renamed from: component7, reason: from getter */
         public final boolean getIsAnyGuildConnectedToVoice() {
             return this.isAnyGuildConnectedToVoice;
         }
 
-        /* renamed from: component8, reason: from getter */
+        /* JADX INFO: renamed from: component8, reason: from getter */
         public final boolean getIsAnyGuildConnectedToStageChannel() {
             return this.isAnyGuildConnectedToStageChannel;
         }
@@ -165,6 +166,24 @@ public abstract class GuildListItem {
         }
 
         /* JADX WARN: Multi-variable type inference failed */
+        /* JADX WARN: Type inference failed for: r0v18, types: [int] */
+        /* JADX WARN: Type inference failed for: r0v20 */
+        /* JADX WARN: Type inference failed for: r0v21 */
+        /* JADX WARN: Type inference failed for: r1v10, types: [int] */
+        /* JADX WARN: Type inference failed for: r1v12, types: [int] */
+        /* JADX WARN: Type inference failed for: r1v14, types: [int] */
+        /* JADX WARN: Type inference failed for: r1v21 */
+        /* JADX WARN: Type inference failed for: r1v22 */
+        /* JADX WARN: Type inference failed for: r1v23 */
+        /* JADX WARN: Type inference failed for: r1v24 */
+        /* JADX WARN: Type inference failed for: r1v27 */
+        /* JADX WARN: Type inference failed for: r1v28 */
+        /* JADX WARN: Type inference failed for: r1v29 */
+        /* JADX WARN: Type inference failed for: r1v30 */
+        /* JADX WARN: Type inference failed for: r1v7, types: [int] */
+        /* JADX WARN: Type inference failed for: r3v0 */
+        /* JADX WARN: Type inference failed for: r3v1, types: [int] */
+        /* JADX WARN: Type inference failed for: r3v2 */
         public int hashCode() {
             int iM3a = C0002b.m3a(this.folderId) * 31;
             Integer num = this.color;
@@ -172,39 +191,39 @@ public abstract class GuildListItem {
             String str = this.name;
             int iHashCode2 = (iHashCode + (str != null ? str.hashCode() : 0)) * 31;
             boolean z2 = this.isOpen;
-            int i = z2;
-            if (z2 != 0) {
-                i = 1;
+            ?? r1 = z2;
+            if (z2) {
+                r1 = 1;
             }
-            int i2 = (iHashCode2 + i) * 31;
+            int i = (iHashCode2 + r1) * 31;
             List<Guild> list = this.guilds;
-            int iHashCode3 = (i2 + (list != null ? list.hashCode() : 0)) * 31;
+            int iHashCode3 = (i + (list != null ? list.hashCode() : 0)) * 31;
             boolean z3 = this.isAnyGuildSelected;
-            int i3 = z3;
-            if (z3 != 0) {
-                i3 = 1;
+            ?? r12 = z3;
+            if (z3) {
+                r12 = 1;
             }
-            int i4 = (iHashCode3 + i3) * 31;
+            int i2 = (iHashCode3 + r12) * 31;
             boolean z4 = this.isAnyGuildConnectedToVoice;
-            int i5 = z4;
-            if (z4 != 0) {
-                i5 = 1;
+            ?? r13 = z4;
+            if (z4) {
+                r13 = 1;
             }
-            int i6 = (i4 + i5) * 31;
+            int i3 = (i2 + r13) * 31;
             boolean z5 = this.isAnyGuildConnectedToStageChannel;
-            int i7 = z5;
-            if (z5 != 0) {
-                i7 = 1;
+            ?? r14 = z5;
+            if (z5) {
+                r14 = 1;
             }
-            int mentionCount = (getMentionCount() + ((i6 + i7) * 31)) * 31;
+            int mentionCount = (getMentionCount() + ((i3 + r14) * 31)) * 31;
             boolean isUnread = getIsUnread();
-            int i8 = isUnread;
+            ?? r0 = isUnread;
             if (isUnread) {
-                i8 = 1;
+                r0 = 1;
             }
-            int i9 = (mentionCount + i8) * 31;
+            int i4 = (mentionCount + r0) * 31;
             boolean z6 = this.isTargetedForFolderAddition;
-            return i9 + (z6 ? 1 : z6 ? 1 : 0);
+            return i4 + (z6 ? 1 : z6);
         }
 
         public final boolean isAnyGuildConnectedToStageChannel() {
@@ -223,7 +242,7 @@ public abstract class GuildListItem {
             return this.isOpen;
         }
 
-        /* renamed from: isPendingGuildsFolder, reason: from getter */
+        /* JADX INFO: renamed from: isPendingGuildsFolder, reason: from getter */
         public final boolean getIsPendingGuildsFolder() {
             return this.isPendingGuildsFolder;
         }
@@ -233,7 +252,7 @@ public abstract class GuildListItem {
         }
 
         @Override // com.discord.widgets.channels.list.WidgetChannelListUnreads.UnreadItem
-        /* renamed from: isUnread, reason: from getter */
+        /* JADX INFO: renamed from: isUnread, reason: from getter */
         public boolean getIsUnread() {
             return this.isUnread;
         }
@@ -282,7 +301,7 @@ public abstract class GuildListItem {
         }
     }
 
-    /* compiled from: GuildListItem.kt */
+    /* JADX INFO: compiled from: GuildListItem.kt */
     public static final /* data */ class FriendsItem extends GuildListItem {
         private final boolean isSelected;
 
@@ -298,7 +317,7 @@ public abstract class GuildListItem {
             return friendsItem.copy(z2);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final boolean getIsSelected() {
             return this.isSelected;
         }
@@ -331,7 +350,7 @@ public abstract class GuildListItem {
         }
     }
 
-    /* compiled from: GuildListItem.kt */
+    /* JADX INFO: compiled from: GuildListItem.kt */
     public static final /* data */ class GuildItem extends GuildListItem implements WidgetChannelListUnreads.UnreadItem {
         private final ApplicationStatus applicationStatus;
         private final Long folderId;
@@ -357,37 +376,37 @@ public abstract class GuildListItem {
             return guildItem.copy((i2 & 1) != 0 ? guildItem.guild : guild, (i2 & 2) != 0 ? guildItem.getMentionCount() : i, (i2 & 4) != 0 ? guildItem.isLurkingGuild : z2, (i2 & 8) != 0 ? guildItem.getIsUnread() : z3, (i2 & 16) != 0 ? guildItem.isSelected : z4, (i2 & 32) != 0 ? guildItem.folderId : l, (i2 & 64) != 0 ? guildItem.isConnectedToVoice : z5, (i2 & 128) != 0 ? guildItem.hasOngoingApplicationStream : z6, (i2 & 256) != 0 ? guildItem.isTargetedForFolderCreation : z7, (i2 & 512) != 0 ? guildItem.isLastGuildInFolder : bool, (i2 & 1024) != 0 ? guildItem.applicationStatus : applicationStatus, (i2 & 2048) != 0 ? guildItem.isPendingGuild : z8, (i2 & 4096) != 0 ? guildItem.hasActiveStageChannel : z9, (i2 & 8192) != 0 ? guildItem.isConnectedToStageChannel : z10, (i2 & 16384) != 0 ? guildItem.hasActiveScheduledEvent : z11);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final Guild getGuild() {
             return this.guild;
         }
 
-        /* renamed from: component10, reason: from getter */
+        /* JADX INFO: renamed from: component10, reason: from getter */
         public final Boolean getIsLastGuildInFolder() {
             return this.isLastGuildInFolder;
         }
 
-        /* renamed from: component11, reason: from getter */
+        /* JADX INFO: renamed from: component11, reason: from getter */
         public final ApplicationStatus getApplicationStatus() {
             return this.applicationStatus;
         }
 
-        /* renamed from: component12, reason: from getter */
+        /* JADX INFO: renamed from: component12, reason: from getter */
         public final boolean getIsPendingGuild() {
             return this.isPendingGuild;
         }
 
-        /* renamed from: component13, reason: from getter */
+        /* JADX INFO: renamed from: component13, reason: from getter */
         public final boolean getHasActiveStageChannel() {
             return this.hasActiveStageChannel;
         }
 
-        /* renamed from: component14, reason: from getter */
+        /* JADX INFO: renamed from: component14, reason: from getter */
         public final boolean getIsConnectedToStageChannel() {
             return this.isConnectedToStageChannel;
         }
 
-        /* renamed from: component15, reason: from getter */
+        /* JADX INFO: renamed from: component15, reason: from getter */
         public final boolean getHasActiveScheduledEvent() {
             return this.hasActiveScheduledEvent;
         }
@@ -396,7 +415,7 @@ public abstract class GuildListItem {
             return getMentionCount();
         }
 
-        /* renamed from: component3, reason: from getter */
+        /* JADX INFO: renamed from: component3, reason: from getter */
         public final boolean getIsLurkingGuild() {
             return this.isLurkingGuild;
         }
@@ -405,27 +424,27 @@ public abstract class GuildListItem {
             return getIsUnread();
         }
 
-        /* renamed from: component5, reason: from getter */
+        /* JADX INFO: renamed from: component5, reason: from getter */
         public final boolean getIsSelected() {
             return this.isSelected;
         }
 
-        /* renamed from: component6, reason: from getter */
+        /* JADX INFO: renamed from: component6, reason: from getter */
         public final Long getFolderId() {
             return this.folderId;
         }
 
-        /* renamed from: component7, reason: from getter */
+        /* JADX INFO: renamed from: component7, reason: from getter */
         public final boolean getIsConnectedToVoice() {
             return this.isConnectedToVoice;
         }
 
-        /* renamed from: component8, reason: from getter */
+        /* JADX INFO: renamed from: component8, reason: from getter */
         public final boolean getHasOngoingApplicationStream() {
             return this.hasOngoingApplicationStream;
         }
 
-        /* renamed from: component9, reason: from getter */
+        /* JADX INFO: renamed from: component9, reason: from getter */
         public final boolean getIsTargetedForFolderCreation() {
             return this.isTargetedForFolderCreation;
         }
@@ -476,71 +495,101 @@ public abstract class GuildListItem {
         }
 
         /* JADX WARN: Multi-variable type inference failed */
+        /* JADX WARN: Type inference failed for: r0v14, types: [int] */
+        /* JADX WARN: Type inference failed for: r0v16, types: [int] */
+        /* JADX WARN: Type inference failed for: r0v18, types: [int] */
+        /* JADX WARN: Type inference failed for: r0v24, types: [int] */
+        /* JADX WARN: Type inference failed for: r0v26, types: [int] */
+        /* JADX WARN: Type inference failed for: r0v28, types: [int] */
+        /* JADX WARN: Type inference failed for: r0v30 */
+        /* JADX WARN: Type inference failed for: r0v31 */
+        /* JADX WARN: Type inference failed for: r0v32 */
+        /* JADX WARN: Type inference failed for: r0v34 */
+        /* JADX WARN: Type inference failed for: r0v35 */
+        /* JADX WARN: Type inference failed for: r0v36 */
+        /* JADX WARN: Type inference failed for: r0v38 */
+        /* JADX WARN: Type inference failed for: r0v39 */
+        /* JADX WARN: Type inference failed for: r0v40 */
+        /* JADX WARN: Type inference failed for: r0v42 */
+        /* JADX WARN: Type inference failed for: r0v43 */
+        /* JADX WARN: Type inference failed for: r0v44 */
+        /* JADX WARN: Type inference failed for: r0v45 */
+        /* JADX WARN: Type inference failed for: r0v46 */
+        /* JADX WARN: Type inference failed for: r0v47 */
+        /* JADX WARN: Type inference failed for: r0v48 */
+        /* JADX WARN: Type inference failed for: r0v49 */
+        /* JADX WARN: Type inference failed for: r0v5, types: [int] */
+        /* JADX WARN: Type inference failed for: r0v50 */
+        /* JADX WARN: Type inference failed for: r0v7, types: [int] */
+        /* JADX WARN: Type inference failed for: r0v9, types: [int] */
+        /* JADX WARN: Type inference failed for: r3v0 */
+        /* JADX WARN: Type inference failed for: r3v1, types: [int] */
+        /* JADX WARN: Type inference failed for: r3v2 */
         public int hashCode() {
             Guild guild = this.guild;
             int mentionCount = (getMentionCount() + ((guild != null ? guild.hashCode() : 0) * 31)) * 31;
             boolean z2 = this.isLurkingGuild;
-            int i = z2;
-            if (z2 != 0) {
-                i = 1;
+            ?? r0 = z2;
+            if (z2) {
+                r0 = 1;
             }
-            int i2 = (mentionCount + i) * 31;
+            int i = (mentionCount + r0) * 31;
             boolean isUnread = getIsUnread();
-            int i3 = isUnread;
+            ?? r02 = isUnread;
             if (isUnread) {
-                i3 = 1;
+                r02 = 1;
             }
-            int i4 = (i2 + i3) * 31;
+            int i2 = (i + r02) * 31;
             boolean z3 = this.isSelected;
-            int i5 = z3;
-            if (z3 != 0) {
-                i5 = 1;
+            ?? r03 = z3;
+            if (z3) {
+                r03 = 1;
             }
-            int i6 = (i4 + i5) * 31;
+            int i3 = (i2 + r03) * 31;
             Long l = this.folderId;
-            int iHashCode = (i6 + (l != null ? l.hashCode() : 0)) * 31;
+            int iHashCode = (i3 + (l != null ? l.hashCode() : 0)) * 31;
             boolean z4 = this.isConnectedToVoice;
-            int i7 = z4;
-            if (z4 != 0) {
-                i7 = 1;
+            ?? r04 = z4;
+            if (z4) {
+                r04 = 1;
             }
-            int i8 = (iHashCode + i7) * 31;
+            int i4 = (iHashCode + r04) * 31;
             boolean z5 = this.hasOngoingApplicationStream;
-            int i9 = z5;
-            if (z5 != 0) {
-                i9 = 1;
+            ?? r05 = z5;
+            if (z5) {
+                r05 = 1;
             }
-            int i10 = (i8 + i9) * 31;
+            int i5 = (i4 + r05) * 31;
             boolean z6 = this.isTargetedForFolderCreation;
-            int i11 = z6;
-            if (z6 != 0) {
-                i11 = 1;
+            ?? r06 = z6;
+            if (z6) {
+                r06 = 1;
             }
-            int i12 = (i10 + i11) * 31;
+            int i6 = (i5 + r06) * 31;
             Boolean bool = this.isLastGuildInFolder;
-            int iHashCode2 = (i12 + (bool != null ? bool.hashCode() : 0)) * 31;
+            int iHashCode2 = (i6 + (bool != null ? bool.hashCode() : 0)) * 31;
             ApplicationStatus applicationStatus = this.applicationStatus;
             int iHashCode3 = (iHashCode2 + (applicationStatus != null ? applicationStatus.hashCode() : 0)) * 31;
             boolean z7 = this.isPendingGuild;
-            int i13 = z7;
-            if (z7 != 0) {
-                i13 = 1;
+            ?? r07 = z7;
+            if (z7) {
+                r07 = 1;
             }
-            int i14 = (iHashCode3 + i13) * 31;
+            int i7 = (iHashCode3 + r07) * 31;
             boolean z8 = this.hasActiveStageChannel;
-            int i15 = z8;
-            if (z8 != 0) {
-                i15 = 1;
+            ?? r08 = z8;
+            if (z8) {
+                r08 = 1;
             }
-            int i16 = (i14 + i15) * 31;
+            int i8 = (i7 + r08) * 31;
             boolean z9 = this.isConnectedToStageChannel;
-            int i17 = z9;
-            if (z9 != 0) {
-                i17 = 1;
+            ?? r09 = z9;
+            if (z9) {
+                r09 = 1;
             }
-            int i18 = (i16 + i17) * 31;
+            int i9 = (i8 + r09) * 31;
             boolean z10 = this.hasActiveScheduledEvent;
-            return i18 + (z10 ? 1 : z10 ? 1 : 0);
+            return i9 + (z10 ? 1 : z10);
         }
 
         public final boolean isConnectedToStageChannel() {
@@ -572,7 +621,7 @@ public abstract class GuildListItem {
         }
 
         @Override // com.discord.widgets.channels.list.WidgetChannelListUnreads.UnreadItem
-        /* renamed from: isUnread, reason: from getter */
+        /* JADX INFO: renamed from: isUnread, reason: from getter */
         public boolean getIsUnread() {
             return this.isUnread;
         }
@@ -632,7 +681,7 @@ public abstract class GuildListItem {
         }
     }
 
-    /* compiled from: GuildListItem.kt */
+    /* JADX INFO: compiled from: GuildListItem.kt */
     public static final class HelpItem extends GuildListItem {
         public static final HelpItem INSTANCE = new HelpItem();
 
@@ -641,7 +690,7 @@ public abstract class GuildListItem {
         }
     }
 
-    /* compiled from: GuildListItem.kt */
+    /* JADX INFO: compiled from: GuildListItem.kt */
     public static final /* data */ class HubItem extends GuildListItem {
         private final boolean showSparkle;
 
@@ -657,7 +706,7 @@ public abstract class GuildListItem {
             return hubItem.copy(z2);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final boolean getShowSparkle() {
             return this.showSparkle;
         }
@@ -690,7 +739,7 @@ public abstract class GuildListItem {
         }
     }
 
-    /* compiled from: GuildListItem.kt */
+    /* JADX INFO: compiled from: GuildListItem.kt */
     public static final /* data */ class PrivateChannelItem extends GuildListItem implements WidgetChannelListUnreads.UnreadItem {
         private final Channel channel;
         private final boolean isUnread;
@@ -714,7 +763,7 @@ public abstract class GuildListItem {
             return privateChannelItem.copy(channel, i);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final Channel getChannel() {
             return this.channel;
         }
@@ -754,7 +803,7 @@ public abstract class GuildListItem {
         }
 
         @Override // com.discord.widgets.channels.list.WidgetChannelListUnreads.UnreadItem
-        /* renamed from: isUnread, reason: from getter */
+        /* JADX INFO: renamed from: isUnread, reason: from getter */
         public boolean getIsUnread() {
             return this.isUnread;
         }
@@ -769,7 +818,7 @@ public abstract class GuildListItem {
         }
     }
 
-    /* compiled from: GuildListItem.kt */
+    /* JADX INFO: compiled from: GuildListItem.kt */
     public static final class SpaceItem extends GuildListItem {
         public static final SpaceItem INSTANCE = new SpaceItem();
 
@@ -778,7 +827,7 @@ public abstract class GuildListItem {
         }
     }
 
-    /* compiled from: GuildListItem.kt */
+    /* JADX INFO: compiled from: GuildListItem.kt */
     public static final /* data */ class UnavailableItem extends GuildListItem {
         private final int unavailableGuildCount;
 
@@ -794,7 +843,7 @@ public abstract class GuildListItem {
             return unavailableItem.copy(i);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final int getUnavailableGuildCount() {
             return this.unavailableGuildCount;
         }

@@ -1,7 +1,6 @@
 package com.discord.widgets.guild_role_subscriptions.tier.create;
 
 import android.content.Context;
-import android.content.res.Resources;
 import android.os.Bundle;
 import android.view.View;
 import androidx.fragment.app.Fragment;
@@ -35,30 +34,30 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 import p507d0.p592z.p594d.Reflection2;
 
-/* compiled from: WidgetGuildRoleSubscriptionReview.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetGuildRoleSubscriptionReview.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetGuildRoleSubscriptionReview extends AppFragment {
     public static final String ARG_IS_SUBSCRIPTION_GROUP_PLAN_REVIEW_MODE = "ARG_IS_SUBSCRIPTION_GROUP_PLAN_REVIEW_MODE";
     private GuildRoleSubscriptionTierAdapter adapter;
 
-    /* renamed from: binding$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
 
-    /* renamed from: guildId$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: guildId$delegate, reason: from kotlin metadata */
     private final Lazy guildId;
 
-    /* renamed from: planSetupViewModel$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: planSetupViewModel$delegate, reason: from kotlin metadata */
     private final Lazy planSetupViewModel;
 
-    /* renamed from: reviewViewModel$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: reviewViewModel$delegate, reason: from kotlin metadata */
     private final Lazy reviewViewModel;
 
-    /* renamed from: viewModel$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: viewModel$delegate, reason: from kotlin metadata */
     private final Lazy viewModel;
     public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetGuildRoleSubscriptionReview.class, "binding", "getBinding()Lcom/discord/databinding/WidgetGuildRoleSubscriptionTierReviewBinding;", 0)};
 
-    /* compiled from: WidgetGuildRoleSubscriptionReview.kt */
-    /* renamed from: com.discord.widgets.guild_role_subscriptions.tier.create.WidgetGuildRoleSubscriptionReview$onViewBoundOrOnResume$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.guild_role_subscriptions.tier.create.WidgetGuildRoleSubscriptionReview$onViewBoundOrOnResume$1 */
+    /* JADX INFO: compiled from: WidgetGuildRoleSubscriptionReview.kt */
     public static final class C84961 extends Lambda implements Function1<GuildRoleSubscriptionTierViewModel.ViewState, Unit> {
         public C84961() {
             super(1);
@@ -70,15 +69,15 @@ public final class WidgetGuildRoleSubscriptionReview extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(GuildRoleSubscriptionTierViewModel.ViewState viewState) {
             Intrinsics3.checkNotNullParameter(viewState, "it");
             WidgetGuildRoleSubscriptionReview.access$updateTier(WidgetGuildRoleSubscriptionReview.this, viewState);
         }
     }
 
-    /* compiled from: WidgetGuildRoleSubscriptionReview.kt */
-    /* renamed from: com.discord.widgets.guild_role_subscriptions.tier.create.WidgetGuildRoleSubscriptionReview$onViewBoundOrOnResume$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.guild_role_subscriptions.tier.create.WidgetGuildRoleSubscriptionReview$onViewBoundOrOnResume$2 */
+    /* JADX INFO: compiled from: WidgetGuildRoleSubscriptionReview.kt */
     public static final class C84972 extends Lambda implements Function1<GuildRoleSubscriptionReviewViewModel.ViewState, Unit> {
         public C84972() {
             super(1);
@@ -90,15 +89,15 @@ public final class WidgetGuildRoleSubscriptionReview extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(GuildRoleSubscriptionReviewViewModel.ViewState viewState) {
             Intrinsics3.checkNotNullParameter(viewState, "it");
             WidgetGuildRoleSubscriptionReview.access$configureUI(WidgetGuildRoleSubscriptionReview.this, viewState);
         }
     }
 
-    /* compiled from: WidgetGuildRoleSubscriptionReview.kt */
-    /* renamed from: com.discord.widgets.guild_role_subscriptions.tier.create.WidgetGuildRoleSubscriptionReview$onViewBoundOrOnResume$3 */
+    /* JADX INFO: renamed from: com.discord.widgets.guild_role_subscriptions.tier.create.WidgetGuildRoleSubscriptionReview$onViewBoundOrOnResume$3 */
+    /* JADX INFO: compiled from: WidgetGuildRoleSubscriptionReview.kt */
     public static final class C84983 extends Lambda implements Function1<GuildRoleSubscriptionPlanSetupViewModel.ViewState, Unit> {
         public C84983() {
             super(1);
@@ -110,7 +109,7 @@ public final class WidgetGuildRoleSubscriptionReview extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(GuildRoleSubscriptionPlanSetupViewModel.ViewState viewState) {
             Intrinsics3.checkNotNullParameter(viewState, "it");
             WidgetGuildRoleSubscriptionReview.access$updatePlanDetails(WidgetGuildRoleSubscriptionReview.this, viewState);
@@ -180,7 +179,7 @@ public final class WidgetGuildRoleSubscriptionReview extends AppFragment {
         return false;
     }
 
-    private final void setupRecyclerView() throws Resources.NotFoundException {
+    private final void setupRecyclerView() {
         this.adapter = new GuildRoleSubscriptionTierAdapter(this, null, 2, null);
         GuildRoleSubscriptionTierItemDecoration guildRoleSubscriptionTierItemDecoration = new GuildRoleSubscriptionTierItemDecoration(DimenUtils.dpToPixels(8), getResources().getDimensionPixelSize(C5419R.dimen.guild_role_subscription_setup_default_padding));
         RecyclerView recyclerView = getBinding().f16973b;
@@ -219,7 +218,7 @@ public final class WidgetGuildRoleSubscriptionReview extends AppFragment {
     }
 
     @Override // com.discord.app.AppFragment
-    public void onViewBound(View view) throws Resources.NotFoundException {
+    public void onViewBound(View view) {
         Intrinsics3.checkNotNullParameter(view, "view");
         super.onViewBound(view);
         setupRecyclerView();

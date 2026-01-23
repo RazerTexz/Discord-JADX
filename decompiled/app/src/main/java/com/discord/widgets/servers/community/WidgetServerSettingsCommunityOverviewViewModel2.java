@@ -15,17 +15,17 @@ import p637j0.p642l.p647e.ScalarSynchronousObservable;
 import p658rx.Observable;
 import p658rx.functions.Func4;
 
-/* compiled from: WidgetServerSettingsCommunityOverviewViewModel.kt */
-/* renamed from: com.discord.widgets.servers.community.WidgetServerSettingsCommunityOverviewViewModel$Companion$observeStoreState$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.servers.community.WidgetServerSettingsCommunityOverviewViewModel$Companion$observeStoreState$1, reason: use source file name */
+/* JADX INFO: compiled from: WidgetServerSettingsCommunityOverviewViewModel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetServerSettingsCommunityOverviewViewModel2<T, R> implements Func1<Guild, Observable<? extends WidgetServerSettingsCommunityOverviewViewModel.StoreState>> {
     public final /* synthetic */ long $guildId;
     public final /* synthetic */ StoreChannels $storeChannels;
     public final /* synthetic */ StorePermissions $storePermissions;
     public final /* synthetic */ StoreUser $storeUsers;
 
-    /* compiled from: WidgetServerSettingsCommunityOverviewViewModel.kt */
-    /* renamed from: com.discord.widgets.servers.community.WidgetServerSettingsCommunityOverviewViewModel$Companion$observeStoreState$1$1, reason: invalid class name */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.community.WidgetServerSettingsCommunityOverviewViewModel$Companion$observeStoreState$1$1, reason: invalid class name */
+    /* JADX INFO: compiled from: WidgetServerSettingsCommunityOverviewViewModel.kt */
     public static final class AnonymousClass1<T1, T2, T3, T4, R> implements Func4<MeUser, Long, Channel, Channel, WidgetServerSettingsCommunityOverviewViewModel.StoreState.Valid> {
         public final /* synthetic */ Guild $guild;
 
@@ -38,7 +38,7 @@ public final class WidgetServerSettingsCommunityOverviewViewModel2<T, R> impleme
             return call2(meUser, l, channel, channel2);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final WidgetServerSettingsCommunityOverviewViewModel.StoreState.Valid call2(MeUser meUser, Long l, Channel channel, Channel channel2) {
             Guild guild = this.$guild;
             Intrinsics3.checkNotNullExpressionValue(meUser, "me");
@@ -58,7 +58,7 @@ public final class WidgetServerSettingsCommunityOverviewViewModel2<T, R> impleme
         return call2(guild);
     }
 
-    /* renamed from: call, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
     public final Observable<? extends WidgetServerSettingsCommunityOverviewViewModel.StoreState> call2(Guild guild) {
         if (guild == null) {
             return new ScalarSynchronousObservable(WidgetServerSettingsCommunityOverviewViewModel.StoreState.Invalid.INSTANCE);

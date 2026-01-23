@@ -9,15 +9,15 @@ import p507d0.p513e0.p514p.p515d.p517m0.p552k.p560y.JvmPrimitiveType;
 import p507d0.p580t.Collections2;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ReflectJavaPrimitiveType.kt */
-/* renamed from: d0.e0.p.d.m0.c.k1.b.v, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.c.k1.b.v, reason: use source file name */
+/* JADX INFO: compiled from: ReflectJavaPrimitiveType.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class ReflectJavaPrimitiveType extends ReflectJavaType implements javaTypes4 {
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final Class<?> f23063b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final Collection<InterfaceC11564a> f23064c;
 
     public ReflectJavaPrimitiveType(Class<?> cls) {

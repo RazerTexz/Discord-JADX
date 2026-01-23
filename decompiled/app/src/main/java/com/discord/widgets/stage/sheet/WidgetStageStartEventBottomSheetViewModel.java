@@ -27,11 +27,11 @@ import p507d0.p592z.p594d.Lambda;
 import p658rx.Observable;
 import p658rx.subjects.PublishSubject;
 
-/* compiled from: WidgetStageStartEventBottomSheetViewModel.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetStageStartEventBottomSheetViewModel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetStageStartEventBottomSheetViewModel extends AppViewModel<ViewState> {
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private final long channelId;
     private final StoreChannels channelsStore;
@@ -39,8 +39,8 @@ public final class WidgetStageStartEventBottomSheetViewModel extends AppViewMode
     private final StoreStageInstances stageInstanceStore;
     private StoreState storeState;
 
-    /* compiled from: WidgetStageStartEventBottomSheetViewModel.kt */
-    /* renamed from: com.discord.widgets.stage.sheet.WidgetStageStartEventBottomSheetViewModel$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.stage.sheet.WidgetStageStartEventBottomSheetViewModel$1 */
+    /* JADX INFO: compiled from: WidgetStageStartEventBottomSheetViewModel.kt */
     public static final class C100591 extends Lambda implements Function1<StoreState, Unit> {
         public C100591() {
             super(1);
@@ -52,14 +52,14 @@ public final class WidgetStageStartEventBottomSheetViewModel extends AppViewMode
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(StoreState storeState) {
             Intrinsics3.checkNotNullParameter(storeState, "storeState");
             WidgetStageStartEventBottomSheetViewModel.access$handleStoreState(WidgetStageStartEventBottomSheetViewModel.this, storeState);
         }
     }
 
-    /* compiled from: WidgetStageStartEventBottomSheetViewModel.kt */
+    /* JADX INFO: compiled from: WidgetStageStartEventBottomSheetViewModel.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -81,10 +81,10 @@ public final class WidgetStageStartEventBottomSheetViewModel extends AppViewMode
         }
     }
 
-    /* compiled from: WidgetStageStartEventBottomSheetViewModel.kt */
+    /* JADX INFO: compiled from: WidgetStageStartEventBottomSheetViewModel.kt */
     public static abstract class Event {
 
-        /* compiled from: WidgetStageStartEventBottomSheetViewModel.kt */
+        /* JADX INFO: compiled from: WidgetStageStartEventBottomSheetViewModel.kt */
         public static final /* data */ class InvalidTopic extends Event {
             private final int failureMessageStringRes;
 
@@ -100,7 +100,7 @@ public final class WidgetStageStartEventBottomSheetViewModel extends AppViewMode
                 return invalidTopic.copy(i);
             }
 
-            /* renamed from: component1, reason: from getter */
+            /* JADX INFO: renamed from: component1, reason: from getter */
             public final int getFailureMessageStringRes() {
                 return this.failureMessageStringRes;
             }
@@ -129,7 +129,7 @@ public final class WidgetStageStartEventBottomSheetViewModel extends AppViewMode
             }
         }
 
-        /* compiled from: WidgetStageStartEventBottomSheetViewModel.kt */
+        /* JADX INFO: compiled from: WidgetStageStartEventBottomSheetViewModel.kt */
         public static final /* data */ class SetTopicFailure extends Event {
             private final int failureMessageStringRes;
 
@@ -145,7 +145,7 @@ public final class WidgetStageStartEventBottomSheetViewModel extends AppViewMode
                 return setTopicFailure.copy(i);
             }
 
-            /* renamed from: component1, reason: from getter */
+            /* JADX INFO: renamed from: component1, reason: from getter */
             public final int getFailureMessageStringRes() {
                 return this.failureMessageStringRes;
             }
@@ -174,7 +174,7 @@ public final class WidgetStageStartEventBottomSheetViewModel extends AppViewMode
             }
         }
 
-        /* compiled from: WidgetStageStartEventBottomSheetViewModel.kt */
+        /* JADX INFO: compiled from: WidgetStageStartEventBottomSheetViewModel.kt */
         public static final /* data */ class SetTopicSuccess extends Event {
             private final Channel channel;
 
@@ -192,7 +192,7 @@ public final class WidgetStageStartEventBottomSheetViewModel extends AppViewMode
                 return setTopicSuccess.copy(channel);
             }
 
-            /* renamed from: component1, reason: from getter */
+            /* JADX INFO: renamed from: component1, reason: from getter */
             public final Channel getChannel() {
                 return this.channel;
             }
@@ -237,7 +237,7 @@ public final class WidgetStageStartEventBottomSheetViewModel extends AppViewMode
         }
     }
 
-    /* compiled from: WidgetStageStartEventBottomSheetViewModel.kt */
+    /* JADX INFO: compiled from: WidgetStageStartEventBottomSheetViewModel.kt */
     public static final /* data */ class StoreState {
         private final Channel channel;
         private final StageInstance stageInstance;
@@ -258,12 +258,12 @@ public final class WidgetStageStartEventBottomSheetViewModel extends AppViewMode
             return storeState.copy(channel, stageInstance);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final Channel getChannel() {
             return this.channel;
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final StageInstance getStageInstance() {
             return this.stageInstance;
         }
@@ -309,10 +309,10 @@ public final class WidgetStageStartEventBottomSheetViewModel extends AppViewMode
         }
     }
 
-    /* compiled from: WidgetStageStartEventBottomSheetViewModel.kt */
+    /* JADX INFO: compiled from: WidgetStageStartEventBottomSheetViewModel.kt */
     public static abstract class ViewState {
 
-        /* compiled from: WidgetStageStartEventBottomSheetViewModel.kt */
+        /* JADX INFO: compiled from: WidgetStageStartEventBottomSheetViewModel.kt */
         public static final class Invalid extends ViewState {
             public static final Invalid INSTANCE = new Invalid();
 
@@ -321,7 +321,7 @@ public final class WidgetStageStartEventBottomSheetViewModel extends AppViewMode
             }
         }
 
-        /* compiled from: WidgetStageStartEventBottomSheetViewModel.kt */
+        /* JADX INFO: compiled from: WidgetStageStartEventBottomSheetViewModel.kt */
         public static final /* data */ class Loaded extends ViewState {
             private final Channel channel;
             private final StageInstance stageInstance;
@@ -350,17 +350,17 @@ public final class WidgetStageStartEventBottomSheetViewModel extends AppViewMode
                 return loaded.copy(channel, str, stageInstance);
             }
 
-            /* renamed from: component1, reason: from getter */
+            /* JADX INFO: renamed from: component1, reason: from getter */
             public final Channel getChannel() {
                 return this.channel;
             }
 
-            /* renamed from: component2, reason: from getter */
+            /* JADX INFO: renamed from: component2, reason: from getter */
             public final String getTopic() {
                 return this.topic;
             }
 
-            /* renamed from: component3, reason: from getter */
+            /* JADX INFO: renamed from: component3, reason: from getter */
             public final StageInstance getStageInstance() {
                 return this.stageInstance;
             }
@@ -423,8 +423,8 @@ public final class WidgetStageStartEventBottomSheetViewModel extends AppViewMode
         }
     }
 
-    /* compiled from: WidgetStageStartEventBottomSheetViewModel.kt */
-    /* renamed from: com.discord.widgets.stage.sheet.WidgetStageStartEventBottomSheetViewModel$openStage$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.stage.sheet.WidgetStageStartEventBottomSheetViewModel$openStage$1 */
+    /* JADX INFO: compiled from: WidgetStageStartEventBottomSheetViewModel.kt */
     public static final class C100611 extends Lambda implements Function1<Error, Unit> {
         public C100611() {
             super(1);
@@ -436,15 +436,15 @@ public final class WidgetStageStartEventBottomSheetViewModel extends AppViewMode
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Error error) {
             Intrinsics3.checkNotNullParameter(error, "it");
             WidgetStageStartEventBottomSheetViewModel.access$emitSetStatusFailureEvent(WidgetStageStartEventBottomSheetViewModel.this);
         }
     }
 
-    /* compiled from: WidgetStageStartEventBottomSheetViewModel.kt */
-    /* renamed from: com.discord.widgets.stage.sheet.WidgetStageStartEventBottomSheetViewModel$openStage$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.stage.sheet.WidgetStageStartEventBottomSheetViewModel$openStage$2 */
+    /* JADX INFO: compiled from: WidgetStageStartEventBottomSheetViewModel.kt */
     public static final class C100622 extends Lambda implements Function1<StageInstance, Unit> {
         public final /* synthetic */ boolean $microphonePermissionGranted;
         public final /* synthetic */ ViewState.Loaded $viewState;
@@ -462,7 +462,7 @@ public final class WidgetStageStartEventBottomSheetViewModel extends AppViewMode
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(StageInstance stageInstance) {
             Intrinsics3.checkNotNullParameter(stageInstance, "it");
             if (this.$microphonePermissionGranted) {
@@ -472,8 +472,8 @@ public final class WidgetStageStartEventBottomSheetViewModel extends AppViewMode
         }
     }
 
-    /* compiled from: WidgetStageStartEventBottomSheetViewModel.kt */
-    /* renamed from: com.discord.widgets.stage.sheet.WidgetStageStartEventBottomSheetViewModel$openStage$3 */
+    /* JADX INFO: renamed from: com.discord.widgets.stage.sheet.WidgetStageStartEventBottomSheetViewModel$openStage$3 */
+    /* JADX INFO: compiled from: WidgetStageStartEventBottomSheetViewModel.kt */
     public static final class C100633 extends Lambda implements Function1<Error, Unit> {
         public C100633() {
             super(1);
@@ -485,15 +485,15 @@ public final class WidgetStageStartEventBottomSheetViewModel extends AppViewMode
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Error error) {
             Intrinsics3.checkNotNullParameter(error, "it");
             WidgetStageStartEventBottomSheetViewModel.access$emitSetStatusFailureEvent(WidgetStageStartEventBottomSheetViewModel.this);
         }
     }
 
-    /* compiled from: WidgetStageStartEventBottomSheetViewModel.kt */
-    /* renamed from: com.discord.widgets.stage.sheet.WidgetStageStartEventBottomSheetViewModel$openStage$4 */
+    /* JADX INFO: renamed from: com.discord.widgets.stage.sheet.WidgetStageStartEventBottomSheetViewModel$openStage$4 */
+    /* JADX INFO: compiled from: WidgetStageStartEventBottomSheetViewModel.kt */
     public static final class C100644 extends Lambda implements Function1<StageInstance, Unit> {
         public final /* synthetic */ ViewState.Loaded $viewState;
 
@@ -509,15 +509,15 @@ public final class WidgetStageStartEventBottomSheetViewModel extends AppViewMode
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(StageInstance stageInstance) {
             Intrinsics3.checkNotNullParameter(stageInstance, "it");
             WidgetStageStartEventBottomSheetViewModel.access$emitSetStatusSuccessEvent(WidgetStageStartEventBottomSheetViewModel.this, this.$viewState.getChannel());
         }
     }
 
-    /* compiled from: WidgetStageStartEventBottomSheetViewModel.kt */
-    /* renamed from: com.discord.widgets.stage.sheet.WidgetStageStartEventBottomSheetViewModel$setSelfSpeaker$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.stage.sheet.WidgetStageStartEventBottomSheetViewModel$setSelfSpeaker$1 */
+    /* JADX INFO: compiled from: WidgetStageStartEventBottomSheetViewModel.kt */
     public static final class C100651 extends Lambda implements Function1<Void, Unit> {
         public static final C100651 INSTANCE = new C100651();
 
@@ -531,13 +531,13 @@ public final class WidgetStageStartEventBottomSheetViewModel extends AppViewMode
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Void r1) {
         }
     }
 
-    /* compiled from: WidgetStageStartEventBottomSheetViewModel.kt */
-    /* renamed from: com.discord.widgets.stage.sheet.WidgetStageStartEventBottomSheetViewModel$setSelfSpeaker$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.stage.sheet.WidgetStageStartEventBottomSheetViewModel$setSelfSpeaker$2 */
+    /* JADX INFO: compiled from: WidgetStageStartEventBottomSheetViewModel.kt */
     public static final class C100662 extends Lambda implements Function1<Error, Unit> {
         public static final C100662 INSTANCE = new C100662();
 
@@ -551,7 +551,7 @@ public final class WidgetStageStartEventBottomSheetViewModel extends AppViewMode
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Error error) {
             Intrinsics3.checkNotNullParameter(error, "it");
         }

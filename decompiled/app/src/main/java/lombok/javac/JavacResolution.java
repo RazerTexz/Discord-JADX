@@ -31,7 +31,7 @@ import lombok.core.debug.AssertionLogger;
 import lombok.javac.JavacTreeMaker;
 import lombok.permit.Permit;
 
-/* loaded from: discord-126021.apk:lombok/javac/JavacResolution.SCL.lombok */
+/* JADX INFO: loaded from: discord-126021.apk:lombok/javac/JavacResolution.SCL.lombok */
 public class JavacResolution {
     private final Attr attr;
     private final CompilerMessageSuppressor messageSuppressor;
@@ -129,7 +129,7 @@ public class JavacResolution {
         this.messageSuppressor = new CompilerMessageSuppressor(context);
     }
 
-    /* loaded from: discord-126021.apk:lombok/javac/JavacResolution$EnvFinder.SCL.lombok */
+    /* JADX INFO: loaded from: discord-126021.apk:lombok/javac/JavacResolution$EnvFinder.SCL.lombok */
     private static final class EnvFinder extends JCTree.Visitor {
         private Enter enter;
         private MemberEnter memberEnter;
@@ -309,14 +309,14 @@ public class JavacResolution {
         this.attr.attribStat(tree, env);
     }
 
-    /* loaded from: discord-126021.apk:lombok/javac/JavacResolution$TypeNotConvertibleException.SCL.lombok */
+    /* JADX INFO: loaded from: discord-126021.apk:lombok/javac/JavacResolution$TypeNotConvertibleException.SCL.lombok */
     public static class TypeNotConvertibleException extends Exception {
         public TypeNotConvertibleException(String msg) {
             super(msg);
         }
     }
 
-    /* loaded from: discord-126021.apk:lombok/javac/JavacResolution$ReflectiveAccess.SCL.lombok */
+    /* JADX INFO: loaded from: discord-126021.apk:lombok/javac/JavacResolution$ReflectiveAccess.SCL.lombok */
     private static class ReflectiveAccess {
         private static Method UPPER_BOUND;
 
@@ -401,8 +401,8 @@ public class JavacResolution {
         return t == null ? ts : new C128881(ts, t);
     }
 
-    /* renamed from: lombok.javac.JavacResolution$1 */
-    /* loaded from: discord-126021.apk:lombok/javac/JavacResolution$1.SCL.lombok */
+    /* JADX INFO: renamed from: lombok.javac.JavacResolution$1 */
+    /* JADX INFO: loaded from: discord-126021.apk:lombok/javac/JavacResolution$1.SCL.lombok */
     class C128881 implements Iterable<Type> {
         private final /* synthetic */ Collection val$ts;
         private final /* synthetic */ Type val$t;
@@ -412,8 +412,8 @@ public class JavacResolution {
             this.val$t = type;
         }
 
-        /* renamed from: lombok.javac.JavacResolution$1$1, reason: invalid class name */
-        /* loaded from: discord-126021.apk:lombok/javac/JavacResolution$1$1.SCL.lombok */
+        /* JADX INFO: renamed from: lombok.javac.JavacResolution$1$1, reason: invalid class name */
+        /* JADX INFO: loaded from: discord-126021.apk:lombok/javac/JavacResolution$1$1.SCL.lombok */
         class AnonymousClass1 implements Iterator<Type> {
             private boolean first = true;
             private Iterator<? extends Type> wrap;

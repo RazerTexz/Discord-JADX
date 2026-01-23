@@ -6,9 +6,9 @@ import kotlin.jvm.functions.Function0;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: AnalyticsTracker.kt */
-/* renamed from: com.discord.utilities.analytics.AnalyticsTracker$firebaseAnalytics$2, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.utilities.analytics.AnalyticsTracker$firebaseAnalytics$2, reason: use source file name */
+/* JADX INFO: compiled from: AnalyticsTracker.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class AnalyticsTracker2 extends Lambda implements Function0<FirebaseAnalytics> {
     public static final AnalyticsTracker2 INSTANCE = new AnalyticsTracker2();
 

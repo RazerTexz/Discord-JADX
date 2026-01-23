@@ -5,9 +5,9 @@ import android.net.Uri;
 import androidx.annotation.RequiresApi;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: Icon.kt */
-/* renamed from: androidx.core.graphics.drawable.IconKt, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: androidx.core.graphics.drawable.IconKt, reason: use source file name */
+/* JADX INFO: compiled from: Icon.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class Icon {
     @RequiresApi(26)
     public static final android.graphics.drawable.Icon toAdaptiveIcon(Bitmap bitmap) {

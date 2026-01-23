@@ -25,94 +25,94 @@ import com.google.android.material.shape.MaterialShapeDrawable;
 import com.google.android.material.shape.RoundedCornerTreatment;
 import com.google.android.material.shape.ShapeAppearanceModel;
 
-/* compiled from: MaterialCardViewHelper.java */
+/* JADX INFO: renamed from: b.i.a.g.c.a, reason: use source file name */
+/* JADX INFO: compiled from: MaterialCardViewHelper.java */
+/* JADX INFO: loaded from: classes3.dex */
 @RestrictTo({RestrictTo.Scope.LIBRARY_GROUP})
-/* renamed from: b.i.a.g.c.a, reason: use source file name */
-/* loaded from: classes3.dex */
 public class MaterialCardViewHelper {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final int[] f11557a = {R.attr.state_checked};
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static final double f11558b = Math.cos(Math.toRadians(45.0d));
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     @NonNull
     public final MaterialCardView f11559c;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     @NonNull
     public final MaterialShapeDrawable f11561e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     @NonNull
     public final MaterialShapeDrawable f11562f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     @Dimension
     public int f11563g;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     @Dimension
     public int f11564h;
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     @Dimension
     public int f11565i;
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     @Nullable
     public Drawable f11566j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     @Nullable
     public Drawable f11567k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     @Nullable
     public ColorStateList f11568l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     @Nullable
     public ColorStateList f11569m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     @Nullable
     public ShapeAppearanceModel f11570n;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     @Nullable
     public ColorStateList f11571o;
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     @Nullable
     public Drawable f11572p;
 
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     @Nullable
     public LayerDrawable f11573q;
 
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     @Nullable
     public MaterialShapeDrawable f11574r;
 
-    /* renamed from: s */
+    /* JADX INFO: renamed from: s */
     @Nullable
     public MaterialShapeDrawable f11575s;
 
-    /* renamed from: u */
+    /* JADX INFO: renamed from: u */
     public boolean f11577u;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     @NonNull
     public final Rect f11560d = new Rect();
 
-    /* renamed from: t */
+    /* JADX INFO: renamed from: t */
     public boolean f11576t = false;
 
-    /* compiled from: MaterialCardViewHelper.java */
-    /* renamed from: b.i.a.g.c.a$a */
+    /* JADX INFO: renamed from: b.i.a.g.c.a$a */
+    /* JADX INFO: compiled from: MaterialCardViewHelper.java */
     public class a extends InsetDrawable {
         public a(MaterialCardViewHelper materialCardViewHelper, Drawable drawable, int i, int i2, int i3, int i4) {
             super(drawable, i, i2, i3, i4);
@@ -151,15 +151,15 @@ public class MaterialCardViewHelper {
         typedArrayObtainStyledAttributes.recycle();
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final float m6044a() {
         return Math.max(Math.max(m6045b(this.f11570n.getTopLeftCorner(), this.f11561e.getTopLeftCornerResolvedSize()), m6045b(this.f11570n.getTopRightCorner(), this.f11561e.getTopRightCornerResolvedSize())), Math.max(m6045b(this.f11570n.getBottomRightCorner(), this.f11561e.getBottomRightCornerResolvedSize()), m6045b(this.f11570n.getBottomLeftCorner(), this.f11561e.getBottomLeftCornerResolvedSize())));
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final float m6045b(CornerTreatment cornerTreatment, float f) {
         if (cornerTreatment instanceof RoundedCornerTreatment) {
-            return (float) ((1.0d - f11558b) * f);
+            return (float) ((1.0d - f11558b) * ((double) f));
         }
         if (cornerTreatment instanceof CutCornerTreatment) {
             return f / 2.0f;
@@ -167,18 +167,18 @@ public class MaterialCardViewHelper {
         return 0.0f;
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final float m6046c() {
         return this.f11559c.getMaxCardElevation() + (m6053j() ? m6044a() : 0.0f);
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final float m6047d() {
         return (this.f11559c.getMaxCardElevation() * 1.5f) + (m6053j() ? m6044a() : 0.0f);
     }
 
     @NonNull
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final Drawable m6048e() {
         Drawable rippleDrawable;
         if (this.f11572p == null) {
@@ -209,7 +209,7 @@ public class MaterialCardViewHelper {
     }
 
     @NonNull
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final Drawable m6049f(Drawable drawable) {
         int iCeil;
         int i;
@@ -224,7 +224,7 @@ public class MaterialCardViewHelper {
         return new a(this, drawable, iCeil, i, iCeil, i);
     }
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public void m6050g(@Nullable Drawable drawable) {
         this.f11567k = drawable;
         if (drawable != null) {
@@ -242,7 +242,7 @@ public class MaterialCardViewHelper {
         }
     }
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public void m6051h(@NonNull ShapeAppearanceModel shapeAppearanceModel) {
         this.f11570n = shapeAppearanceModel;
         this.f11561e.setShapeAppearanceModel(shapeAppearanceModel);
@@ -261,22 +261,22 @@ public class MaterialCardViewHelper {
         }
     }
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public final boolean m6052i() {
         return this.f11559c.getPreventCornerOverlap() && !this.f11561e.isRoundRect();
     }
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final boolean m6053j() {
         return this.f11559c.getPreventCornerOverlap() && this.f11561e.isRoundRect() && this.f11559c.getUseCompatPadding();
     }
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public void m6054k() {
         float cardViewRadius = 0.0f;
         float fM6044a = m6052i() || m6053j() ? m6044a() : 0.0f;
         if (this.f11559c.getPreventCornerOverlap() && this.f11559c.getUseCompatPadding()) {
-            cardViewRadius = (float) ((1.0d - f11558b) * this.f11559c.getCardViewRadius());
+            cardViewRadius = (float) ((1.0d - f11558b) * ((double) this.f11559c.getCardViewRadius()));
         }
         int i = (int) (fM6044a - cardViewRadius);
         MaterialCardView materialCardView = this.f11559c;
@@ -284,7 +284,7 @@ public class MaterialCardViewHelper {
         materialCardView.setAncestorContentPadding(rect.left + i, rect.top + i, rect.right + i, rect.bottom + i);
     }
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public void m6055l() {
         if (!this.f11576t) {
             this.f11559c.setBackgroundInternal(m6049f(this.f11561e));
@@ -292,7 +292,7 @@ public class MaterialCardViewHelper {
         this.f11559c.setForeground(m6049f(this.f11566j));
     }
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public final void m6056m() {
         Drawable drawable;
         if (RippleUtils.USE_FRAMEWORK_RIPPLE && (drawable = this.f11572p) != null) {
@@ -305,7 +305,7 @@ public class MaterialCardViewHelper {
         }
     }
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public void m6057n() {
         this.f11562f.setStroke(this.f11565i, this.f11571o);
     }

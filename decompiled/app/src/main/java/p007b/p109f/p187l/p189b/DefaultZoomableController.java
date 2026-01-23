@@ -11,45 +11,45 @@ import p007b.p109f.p187l.p188a.MultiPointerGestureDetector;
 import p007b.p109f.p187l.p188a.TransformGestureDetector;
 import p007b.p109f.p187l.p189b.ZoomableController;
 
-/* compiled from: DefaultZoomableController.java */
-/* renamed from: b.f.l.b.c, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.f.l.b.c, reason: use source file name */
+/* JADX INFO: compiled from: DefaultZoomableController.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class DefaultZoomableController implements ZoomableController, TransformGestureDetector.a {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public TransformGestureDetector f4299a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public ZoomableController.a f4300b = null;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public boolean f4301c = false;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final RectF f4302d = new RectF();
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final RectF f4303e = new RectF();
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final RectF f4304f = new RectF();
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public final Matrix f4305g = new Matrix();
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public final Matrix f4306h = new Matrix();
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public final Matrix f4307i = new Matrix();
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final float[] f4308j = new float[9];
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final RectF f4309k = new RectF();
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public boolean f4310l;
 
     static {
@@ -61,13 +61,13 @@ public class DefaultZoomableController implements ZoomableController, TransformG
         transformGestureDetector.f4288b = this;
     }
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public static boolean m1557l(int i, int i2) {
         return (i & i2) != 0;
     }
 
     @Override // p007b.p109f.p187l.p189b.ZoomableController
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public boolean mo1551a() {
         this.f4306h.getValues(this.f4308j);
         float[] fArr = this.f4308j;
@@ -82,7 +82,7 @@ public class DefaultZoomableController implements ZoomableController, TransformG
         return true;
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public void mo1549b(TransformGestureDetector transformGestureDetector) {
         float fHypot;
         FLog.m981i(DefaultZoomableController.class, "onGestureUpdate");
@@ -120,7 +120,7 @@ public class DefaultZoomableController implements ZoomableController, TransformG
         this.f4310l = zM1561g;
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public void mo1550c(TransformGestureDetector transformGestureDetector) {
         FLog.m981i(DefaultZoomableController.class, "onGestureBegin");
         this.f4305g.set(this.f4306h);
@@ -130,7 +130,7 @@ public class DefaultZoomableController implements ZoomableController, TransformG
         this.f4310l = !(f < rectF2.left - 0.001f && rectF.top < rectF2.top - 0.001f && rectF.right > rectF2.right + 0.001f && rectF.bottom > rectF2.bottom + 0.001f);
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final float m1558d(float f, float f2, float f3, float f4, float f5) {
         float f6 = f2 - f;
         float f7 = f4 - f3;
@@ -149,13 +149,13 @@ public class DefaultZoomableController implements ZoomableController, TransformG
         return 0.0f;
     }
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public float m1559e() {
         this.f4306h.getValues(this.f4308j);
         return this.f4308j[0];
     }
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final boolean m1560f(Matrix matrix, float f, float f2, int i) {
         if (!m1557l(i, 4)) {
             return false;
@@ -171,7 +171,7 @@ public class DefaultZoomableController implements ZoomableController, TransformG
         return true;
     }
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public final boolean m1561g(Matrix matrix, int i) {
         float fM1558d;
         float fM1558d2;
@@ -205,7 +205,7 @@ public class DefaultZoomableController implements ZoomableController, TransformG
     }
 
     /* JADX WARN: Removed duplicated region for block: B:32:0x006d  */
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
@@ -278,7 +278,7 @@ public class DefaultZoomableController implements ZoomableController, TransformG
         return true;
     }
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public final void m1563i() {
         this.f4306h.mapRect(this.f4304f, this.f4303e);
         ZoomableController.a aVar = this.f4300b;
@@ -295,7 +295,7 @@ public class DefaultZoomableController implements ZoomableController, TransformG
         zoomableDraweeView.invalidate();
     }
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public void mo1552j() {
         FLog.m981i(DefaultZoomableController.class, ModelAuditLogEntry.CHANGE_KEY_PERMISSIONS_RESET);
         this.f4299a.f4287a.m1542a();
@@ -304,7 +304,7 @@ public class DefaultZoomableController implements ZoomableController, TransformG
         m1563i();
     }
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public void m1564k(boolean z2) {
         this.f4301c = z2;
         if (z2) {

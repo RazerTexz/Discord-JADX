@@ -20,38 +20,38 @@ import com.discord.views.typing.TypingDots;
 import com.discord.widgets.roles.RoleIconView;
 import com.facebook.drawee.view.SimpleDraweeView;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public final class WidgetChatListAdapterItemTextBinding implements ViewBinding {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     @NonNull
     public final ConstraintLayout f16317a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     @NonNull
     public final LinkifiedTextView f16318b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     @NonNull
     public final SimpleDraweeView f16319c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     @NonNull
     public final TextView f16320d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     @NonNull
     public final RoleIconView f16321e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     @NonNull
     public final TextView f16322f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     @NonNull
     public final TextView f16323g;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     @NonNull
     public final ConstraintLayout f16324h;
 
@@ -67,7 +67,7 @@ public final class WidgetChatListAdapterItemTextBinding implements ViewBinding {
     }
 
     @NonNull
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static WidgetChatListAdapterItemTextBinding m8408a(@NonNull View view) {
         int i = C5419R.id.chat_list_adapter_item_communication_disabled_icon;
         ImageView imageView = (ImageView) view.findViewById(C5419R.id.chat_list_adapter_item_communication_disabled_icon);
@@ -179,7 +179,7 @@ public final class WidgetChatListAdapterItemTextBinding implements ViewBinding {
     }
 
     @NonNull
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static WidgetChatListAdapterItemTextBinding m8409b(@NonNull LayoutInflater layoutInflater, @Nullable ViewGroup viewGroup, boolean z2) {
         View viewInflate = layoutInflater.inflate(C5419R.layout.widget_chat_list_adapter_item_text, viewGroup, false);
         if (z2) {

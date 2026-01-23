@@ -68,11 +68,11 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 import p658rx.functions.Action0;
 
-/* compiled from: WidgetChatListAdapter.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetChatListAdapter.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetChatListAdapter extends MGRecyclerAdapterSimple<ChatListEntry> {
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private static final int NEW_MESSAGES_MAX_SCROLLBACK_COUNT = 30;
     private static final int NEW_MESSAGES_MIN_SCROLLBACK_COUNT = 10;
@@ -91,7 +91,7 @@ public final class WidgetChatListAdapter extends MGRecyclerAdapterSimple<ChatLis
     private boolean mentionMeMessageLevelHighlighting;
     private ScrollToWithHighlight scrollToWithHighlight;
 
-    /* compiled from: WidgetChatListAdapter.kt */
+    /* JADX INFO: compiled from: WidgetChatListAdapter.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -115,7 +115,7 @@ public final class WidgetChatListAdapter extends MGRecyclerAdapterSimple<ChatLis
         }
     }
 
-    /* compiled from: WidgetChatListAdapter.kt */
+    /* JADX INFO: compiled from: WidgetChatListAdapter.kt */
     public interface Data {
         long getChannelId();
 
@@ -135,11 +135,11 @@ public final class WidgetChatListAdapter extends MGRecyclerAdapterSimple<ChatLis
 
         long getUserId();
 
-        /* renamed from: isSpoilerClickAllowed */
+        /* JADX INFO: renamed from: isSpoilerClickAllowed */
         boolean getIsSpoilerClickAllowed();
     }
 
-    /* compiled from: WidgetChatListAdapter.kt */
+    /* JADX INFO: compiled from: WidgetChatListAdapter.kt */
     public static final class EmptyData implements Data {
         private final long channelId;
         private final Guild guild;
@@ -198,16 +198,16 @@ public final class WidgetChatListAdapter extends MGRecyclerAdapterSimple<ChatLis
         }
 
         @Override // com.discord.widgets.chat.list.adapter.WidgetChatListAdapter.Data
-        /* renamed from: isSpoilerClickAllowed, reason: from getter */
+        /* JADX INFO: renamed from: isSpoilerClickAllowed, reason: from getter */
         public boolean getIsSpoilerClickAllowed() {
             return this.isSpoilerClickAllowed;
         }
     }
 
-    /* compiled from: WidgetChatListAdapter.kt */
+    /* JADX INFO: compiled from: WidgetChatListAdapter.kt */
     public interface EventHandler {
 
-        /* compiled from: WidgetChatListAdapter.kt */
+        /* JADX INFO: compiled from: WidgetChatListAdapter.kt */
         public static final class DefaultImpls {
             public static void onBotUiComponentClicked(EventHandler eventHandler, long j, Long l, long j2, long j3, Long l2, int i, RestAPIParams.ComponentInteractionData componentInteractionData) {
                 Intrinsics3.checkNotNullParameter(componentInteractionData, "componentSendData");
@@ -397,7 +397,7 @@ public final class WidgetChatListAdapter extends MGRecyclerAdapterSimple<ChatLis
         void onUserMentionClicked(long userId, long channelId, long guildId);
     }
 
-    /* compiled from: WidgetChatListAdapter.kt */
+    /* JADX INFO: compiled from: WidgetChatListAdapter.kt */
     public final class HandlerOfScrolls extends RecyclerView.OnScrollListener {
         private long channelId;
         private int scrollState;
@@ -418,7 +418,7 @@ public final class WidgetChatListAdapter extends MGRecyclerAdapterSimple<ChatLis
         }
     }
 
-    /* compiled from: WidgetChatListAdapter.kt */
+    /* JADX INFO: compiled from: WidgetChatListAdapter.kt */
     public final class HandlerOfTouches implements View.OnTouchListener {
         private final GestureDetector tapGestureDetector;
 
@@ -437,7 +437,7 @@ public final class WidgetChatListAdapter extends MGRecyclerAdapterSimple<ChatLis
         }
     }
 
-    /* compiled from: WidgetChatListAdapter.kt */
+    /* JADX INFO: compiled from: WidgetChatListAdapter.kt */
     public final class HandlerOfUpdates implements Runnable {
         private long channelId;
         private long oldestMessageId;
@@ -463,7 +463,7 @@ public final class WidgetChatListAdapter extends MGRecyclerAdapterSimple<ChatLis
         }
     }
 
-    /* compiled from: WidgetChatListAdapter.kt */
+    /* JADX INFO: compiled from: WidgetChatListAdapter.kt */
     public static final class ScrollToWithHighlight implements Runnable {
         private final WidgetChatListAdapter adapter;
         private int attempts;
@@ -607,8 +607,8 @@ public final class WidgetChatListAdapter extends MGRecyclerAdapterSimple<ChatLis
         }
     }
 
-    /* compiled from: WidgetChatListAdapter.kt */
-    /* renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapter$disposeHandlers$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapter$disposeHandlers$1 */
+    /* JADX INFO: compiled from: WidgetChatListAdapter.kt */
     public static final class C79881 extends Lambda implements Function2<List<? extends ChatListEntry>, List<? extends ChatListEntry>, Unit> {
         public static final C79881 INSTANCE = new C79881();
 
@@ -622,15 +622,15 @@ public final class WidgetChatListAdapter extends MGRecyclerAdapterSimple<ChatLis
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(List<? extends ChatListEntry> list, List<? extends ChatListEntry> list2) {
             Intrinsics3.checkNotNullParameter(list, "<anonymous parameter 0>");
             Intrinsics3.checkNotNullParameter(list2, "<anonymous parameter 1>");
         }
     }
 
-    /* compiled from: WidgetChatListAdapter.kt */
-    /* renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapter$scrollToMessageId$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapter$scrollToMessageId$1 */
+    /* JADX INFO: compiled from: WidgetChatListAdapter.kt */
     public static final class C79891 extends Lambda implements Function0<Unit> {
         public final /* synthetic */ Action0 $onCompleted;
 
@@ -646,7 +646,7 @@ public final class WidgetChatListAdapter extends MGRecyclerAdapterSimple<ChatLis
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             WidgetChatListAdapter.access$setScrollToWithHighlight$p(WidgetChatListAdapter.this, null);
             WidgetChatListAdapter.access$publishInteractionState(WidgetChatListAdapter.this);
@@ -654,13 +654,13 @@ public final class WidgetChatListAdapter extends MGRecyclerAdapterSimple<ChatLis
         }
     }
 
-    /* compiled from: WidgetChatListAdapter.kt */
-    /* renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapter$setHandlers$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapter$setHandlers$1 */
+    /* JADX INFO: compiled from: WidgetChatListAdapter.kt */
     public static final class C79901 extends Lambda implements Function2<List<? extends ChatListEntry>, List<? extends ChatListEntry>, Unit> {
 
-        /* compiled from: WidgetChatListAdapter.kt */
+        /* JADX INFO: renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapter$setHandlers$1$1, reason: invalid class name */
+        /* JADX INFO: compiled from: WidgetChatListAdapter.kt */
         @DebugMetadata(m10084c = "com.discord.widgets.chat.list.adapter.WidgetChatListAdapter$setHandlers$1$1", m10085f = "WidgetChatListAdapter.kt", m10086l = {118}, m10087m = "invokeSuspend")
-        /* renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapter$setHandlers$1$1, reason: invalid class name */
         public static final class AnonymousClass1 extends ContinuationImpl6 implements Function2<CoroutineScope, Continuation<? super Unit>, Object> {
             public int label;
 
@@ -710,7 +710,7 @@ public final class WidgetChatListAdapter extends MGRecyclerAdapterSimple<ChatLis
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(List<? extends ChatListEntry> list, List<? extends ChatListEntry> list2) {
             Intrinsics3.checkNotNullParameter(list, "<anonymous parameter 0>");
             Intrinsics3.checkNotNullParameter(list2, "<anonymous parameter 1>");

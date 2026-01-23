@@ -7,15 +7,15 @@ import p007b.p225i.p226a.p228b.p231j.TransportContext;
 import p007b.p225i.p226a.p228b.p231j.p236t.p238i.C2511t;
 import p007b.p225i.p226a.p228b.p231j.p241w.PriorityMapping;
 
-/* compiled from: SQLiteEventStore.java */
-/* renamed from: b.i.a.b.j.t.i.i */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.b.j.t.i.i */
+/* JADX INFO: compiled from: SQLiteEventStore.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final /* synthetic */ class C2500i implements C2511t.b {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final long f5424a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final TransportContext f5425b;
 
     public C2500i(long j, TransportContext transportContext) {

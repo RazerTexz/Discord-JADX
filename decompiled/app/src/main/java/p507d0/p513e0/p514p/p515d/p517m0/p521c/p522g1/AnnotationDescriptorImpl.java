@@ -9,18 +9,18 @@ import p507d0.p513e0.p514p.p515d.p517m0.p551j.DescriptorRenderer2;
 import p507d0.p513e0.p514p.p515d.p517m0.p552k.p557v.AbstractC11815g;
 import p507d0.p513e0.p514p.p515d.p517m0.p567n.KotlinType;
 
-/* compiled from: AnnotationDescriptorImpl.java */
-/* renamed from: d0.e0.p.d.m0.c.g1.d, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.c.g1.d, reason: use source file name */
+/* JADX INFO: compiled from: AnnotationDescriptorImpl.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class AnnotationDescriptorImpl implements AnnotationDescriptor {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final KotlinType f22717a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final Map<Name, AbstractC11815g<?>> f22718b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final SourceElement f22719c;
 
     public AnnotationDescriptorImpl(KotlinType kotlinType, Map<Name, AbstractC11815g<?>> map, SourceElement sourceElement) {
@@ -41,7 +41,7 @@ public class AnnotationDescriptorImpl implements AnnotationDescriptor {
         this.f22719c = sourceElement;
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static /* synthetic */ void m9385a(int i) {
         String str = (i == 3 || i == 4 || i == 5) ? "@NotNull method %s.%s must not return null" : "Argument for @NotNull parameter '%s' of %s.%s must not be null";
         Object[] objArr = new Object[(i == 3 || i == 4 || i == 5) ? 2 : 3];

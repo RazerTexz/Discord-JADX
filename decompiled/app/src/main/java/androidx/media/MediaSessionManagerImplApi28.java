@@ -6,8 +6,8 @@ import androidx.annotation.RequiresApi;
 import androidx.media.MediaSessionManager;
 import androidx.media.MediaSessionManagerImplBase;
 
+/* JADX INFO: loaded from: classes.dex */
 @RequiresApi(28)
-/* loaded from: classes.dex */
 public class MediaSessionManagerImplApi28 extends MediaSessionManagerImplApi21 {
     public android.media.session.MediaSessionManager mObject;
 

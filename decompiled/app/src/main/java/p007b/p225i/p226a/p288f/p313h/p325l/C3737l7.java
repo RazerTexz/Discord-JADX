@@ -3,12 +3,12 @@ package p007b.p225i.p226a.p288f.p313h.p325l;
 import com.google.android.gms.internal.measurement.zzij;
 import p007b.p225i.p226a.p288f.p299e.p308o.C3404f;
 
-/* compiled from: com.google.android.gms:play-services-measurement-base@@18.0.0 */
-/* renamed from: b.i.a.f.h.l.l7 */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.h.l.l7 */
+/* JADX INFO: compiled from: com.google.android.gms:play-services-measurement-base@@18.0.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public final class C3737l7 extends AbstractC3750m7 {
     @Override // p007b.p225i.p226a.p288f.p313h.p325l.AbstractC3750m7
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final int mo5055a(int i, byte[] bArr, int i2, int i3) {
         while (i2 < i3 && bArr[i2] >= 0) {
             i2++;
@@ -67,7 +67,7 @@ public final class C3737l7 extends AbstractC3750m7 {
     }
 
     @Override // p007b.p225i.p226a.p288f.p313h.p325l.AbstractC3750m7
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final int mo5056b(CharSequence charSequence, byte[] bArr, int i, int i2) {
         int i3;
         int i4;
@@ -144,7 +144,7 @@ public final class C3737l7 extends AbstractC3750m7 {
     }
 
     @Override // p007b.p225i.p226a.p288f.p313h.p325l.AbstractC3750m7
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final String mo5057c(byte[] bArr, int i, int i2) throws zzij {
         if ((i | i2 | ((bArr.length - i) - i2)) < 0) {
             throw new ArrayIndexOutOfBoundsException(String.format("buffer length=%d, index=%d, size=%d", Integer.valueOf(bArr.length), Integer.valueOf(i), Integer.valueOf(i2)));

@@ -5,24 +5,24 @@ import android.view.Display;
 import java.util.Objects;
 import p007b.p225i.p226a.p242c.p260g3.VideoFrameReleaseHelper;
 
-/* compiled from: lambda */
-/* renamed from: b.i.a.c.g3.b */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.g3.b */
+/* JADX INFO: compiled from: lambda */
+/* JADX INFO: loaded from: classes3.dex */
 public final /* synthetic */ class C2765b implements VideoFrameReleaseHelper.b.a {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final /* synthetic */ VideoFrameReleaseHelper f6810a;
 
     public /* synthetic */ C2765b(VideoFrameReleaseHelper videoFrameReleaseHelper) {
         this.f6810a = videoFrameReleaseHelper;
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final void m3120a(Display display) {
         VideoFrameReleaseHelper videoFrameReleaseHelper = this.f6810a;
         Objects.requireNonNull(videoFrameReleaseHelper);
         if (display != null) {
-            long refreshRate = (long) (1.0E9d / display.getRefreshRate());
+            long refreshRate = (long) (1.0E9d / ((double) display.getRefreshRate()));
             videoFrameReleaseHelper.f6936k = refreshRate;
             videoFrameReleaseHelper.f6937l = (refreshRate * 80) / 100;
         } else {

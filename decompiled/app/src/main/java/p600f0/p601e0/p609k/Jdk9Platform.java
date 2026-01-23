@@ -12,19 +12,19 @@ import p507d0.p580t.Iterables2;
 import p507d0.p592z.p594d.Intrinsics3;
 import p600f0.Protocol2;
 
-/* compiled from: Jdk9Platform.kt */
-/* renamed from: f0.e0.k.f, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: f0.e0.k.f, reason: use source file name */
+/* JADX INFO: compiled from: Jdk9Platform.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public class Jdk9Platform extends Platform2 {
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public static final boolean f25778d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public static final a f25779e = new a(null);
 
-    /* compiled from: Jdk9Platform.kt */
-    /* renamed from: f0.e0.k.f$a */
+    /* JADX INFO: renamed from: f0.e0.k.f$a */
+    /* JADX INFO: compiled from: Jdk9Platform.kt */
     public static final class a {
         public a(DefaultConstructorMarker defaultConstructorMarker) {
         }
@@ -38,6 +38,7 @@ public class Jdk9Platform extends Platform2 {
             try {
                 SSLSocket.class.getMethod("getApplicationProtocol", new Class[0]);
             } catch (NoSuchMethodException unused) {
+                z2 = false;
             }
         } else if (intOrNull.intValue() < 9) {
             z2 = false;
@@ -46,7 +47,7 @@ public class Jdk9Platform extends Platform2 {
     }
 
     @Override // p600f0.p601e0.p609k.Platform2
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public void mo10316d(SSLSocket sSLSocket, String str, List<Protocol2> list) {
         Intrinsics3.checkParameterIsNotNull(sSLSocket, "sslSocket");
         Intrinsics3.checkParameterIsNotNull(list, "protocols");
@@ -78,7 +79,7 @@ public class Jdk9Platform extends Platform2 {
     }
 
     @Override // p600f0.p601e0.p609k.Platform2
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public String mo10317f(SSLSocket sSLSocket) {
         Intrinsics3.checkParameterIsNotNull(sSLSocket, "sslSocket");
         try {

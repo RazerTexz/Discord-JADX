@@ -17,18 +17,18 @@ import java.util.List;
 import java.util.Map;
 import p600f0.Cookie;
 
+/* JADX INFO: loaded from: classes3.dex */
 @SuppressLint({"CommitPrefEdits"})
-/* loaded from: classes3.dex */
 public class SharedPrefsCookiePersistor implements CookiePersistor {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final SharedPreferences f19672a;
 
     public SharedPrefsCookiePersistor(Context context) {
         this.f19672a = context.getSharedPreferences("CookiePersistence", 0);
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static String m8748b(Cookie cookie) {
         StringBuilder sb = new StringBuilder();
         sb.append(cookie.f25952k ? Constants.SCHEME : "http");
@@ -41,7 +41,7 @@ public class SharedPrefsCookiePersistor implements CookiePersistor {
     }
 
     @Override // com.franmontiel.persistentcookiejar.persistence.CookiePersistor
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public void mo8747a(Collection<Cookie> collection) throws Throwable {
         ObjectOutputStream objectOutputStream;
         SharedPreferences.Editor editorEdit = this.f19672a.edit();
@@ -84,7 +84,6 @@ public class SharedPrefsCookiePersistor implements CookiePersistor {
                                 Log.d(SerializableCookie.f19670j, "Stream not closed in encodeCookie", e3);
                             }
                         }
-                        editorEdit.putString(strM8748b, string);
                     }
                 } catch (Throwable th) {
                     th = th;
@@ -111,7 +110,7 @@ public class SharedPrefsCookiePersistor implements CookiePersistor {
 
     /* JADX WARN: Removed duplicated region for block: B:52:0x00a1 A[SYNTHETIC] */
     /* JADX WARN: Removed duplicated region for block: B:54:0x001d A[SYNTHETIC] */
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
@@ -153,7 +152,6 @@ public class SharedPrefsCookiePersistor implements CookiePersistor {
                     e = e2;
                     Log.d(SerializableCookie.f19670j, "IOException in decodeCookie", e);
                     if (objectInputStream != null) {
-                        objectInputStream.close();
                     }
                     if (cookie != null) {
                     }
@@ -161,7 +159,6 @@ public class SharedPrefsCookiePersistor implements CookiePersistor {
                     e = e3;
                     Log.d(SerializableCookie.f19670j, "ClassNotFoundException in decodeCookie", e);
                     if (objectInputStream != null) {
-                        objectInputStream.close();
                     }
                     if (cookie != null) {
                     }

@@ -1,7 +1,6 @@
 package com.discord.dialogs;
 
 import android.content.Context;
-import android.content.res.Resources;
 import android.net.Uri;
 import android.view.View;
 import android.view.ViewGroup;
@@ -29,35 +28,35 @@ import p507d0.p592z.p594d.FunctionReferenceImpl;
 import p507d0.p592z.p594d.Intrinsics3;
 import p658rx.functions.Action1;
 
-/* compiled from: ImageUploadDialog.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: ImageUploadDialog.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class ImageUploadDialog extends AppDialog {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static final /* synthetic */ KProperty[] f18491j = {outline.m846d0(ImageUploadDialog.class, "binding", "getBinding()Lcom/discord/databinding/ImageUploadDialogBinding;", 0)};
 
-    /* renamed from: k, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: k, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
 
-    /* renamed from: l, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: l, reason: from kotlin metadata */
     public final FragmentViewBindingDelegate binding;
 
-    /* renamed from: m, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: m, reason: from kotlin metadata */
     public Uri uri;
 
-    /* renamed from: n, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: n, reason: from kotlin metadata */
     public MediaPicker.Provider provider;
 
-    /* renamed from: o, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: o, reason: from kotlin metadata */
     public String mimeType;
 
-    /* renamed from: p, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: p, reason: from kotlin metadata */
     public Action1<String> cropResultCallBack;
 
-    /* renamed from: q, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: q, reason: from kotlin metadata */
     public PreviewType previewType;
 
-    /* compiled from: ImageUploadDialog.kt */
+    /* JADX INFO: compiled from: ImageUploadDialog.kt */
     public enum PreviewType {
         EMOJI(C5419R.dimen.emoji_size),
         USER_AVATAR(C5419R.dimen.avatar_size_extra_large_account),
@@ -75,14 +74,14 @@ public final class ImageUploadDialog extends AppDialog {
         }
     }
 
-    /* compiled from: java-style lambda group */
-    /* renamed from: com.discord.dialogs.ImageUploadDialog$a */
+    /* JADX INFO: renamed from: com.discord.dialogs.ImageUploadDialog$a */
+    /* JADX INFO: compiled from: java-style lambda group */
     public static final class ViewOnClickListenerC5475a implements View.OnClickListener {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public final /* synthetic */ int f18499j;
 
-        /* renamed from: k */
+        /* JADX INFO: renamed from: k */
         public final /* synthetic */ Object f18500k;
 
         public ViewOnClickListenerC5475a(int i, Object obj) {
@@ -114,18 +113,18 @@ public final class ImageUploadDialog extends AppDialog {
         }
     }
 
-    /* compiled from: ImageUploadDialog.kt */
-    /* renamed from: com.discord.dialogs.ImageUploadDialog$b, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: com.discord.dialogs.ImageUploadDialog$b, reason: from kotlin metadata */
+    /* JADX INFO: compiled from: ImageUploadDialog.kt */
     public static final class Companion {
         public Companion(DefaultConstructorMarker defaultConstructorMarker) {
         }
     }
 
-    /* compiled from: ImageUploadDialog.kt */
-    /* renamed from: com.discord.dialogs.ImageUploadDialog$c */
+    /* JADX INFO: renamed from: com.discord.dialogs.ImageUploadDialog$c */
+    /* JADX INFO: compiled from: ImageUploadDialog.kt */
     public static final /* synthetic */ class C5477c extends FunctionReferenceImpl implements Function1<View, ImageUploadDialogBinding> {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public static final C5477c f18501j = new C5477c();
 
         public C5477c() {
@@ -157,11 +156,11 @@ public final class ImageUploadDialog extends AppDialog {
         }
     }
 
-    /* compiled from: ImageUploadDialog.kt */
-    /* renamed from: com.discord.dialogs.ImageUploadDialog$d */
+    /* JADX INFO: renamed from: com.discord.dialogs.ImageUploadDialog$d */
+    /* JADX INFO: compiled from: ImageUploadDialog.kt */
     public static final class ViewOnClickListenerC5478d implements View.OnClickListener {
 
-        /* renamed from: k */
+        /* JADX INFO: renamed from: k */
         public final /* synthetic */ String f18503k;
 
         public ViewOnClickListenerC5478d(String str) {
@@ -185,13 +184,13 @@ public final class ImageUploadDialog extends AppDialog {
         this.binding = FragmentViewBindingDelegate3.viewBinding$default(this, C5477c.f18501j, null, 2, null);
     }
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public final ImageUploadDialogBinding m8421g() {
         return (ImageUploadDialogBinding) this.binding.getValue((Fragment) this, f18491j[0]);
     }
 
     @Override // com.discord.app.AppDialog
-    public void onViewBound(View view) throws Resources.NotFoundException {
+    public void onViewBound(View view) {
         Intrinsics3.checkNotNullParameter(view, "view");
         super.onViewBound(view);
         PreviewType previewType = this.previewType;

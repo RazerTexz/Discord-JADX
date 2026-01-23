@@ -7,8 +7,8 @@ import kotlin.jvm.functions.Function2;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetCallFullscreen.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: WidgetCallFullscreen.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class WidgetCallFullscreen$setUpGridRecycler$layoutManager$2 extends Lambda implements Function2<VideoCallGridLayoutManager, RecyclerView.State, Unit> {
     public final /* synthetic */ WidgetCallFullscreen this$0;
 
@@ -24,7 +24,7 @@ public final class WidgetCallFullscreen$setUpGridRecycler$layoutManager$2 extend
         return Unit.f27425a;
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final void invoke2(VideoCallGridLayoutManager videoCallGridLayoutManager, RecyclerView.State state) {
         Intrinsics3.checkNotNullParameter(videoCallGridLayoutManager, "layoutManager");
         if (WidgetCallFullscreen.access$getHasVideoCallGridChildrenChanged$p(this.this$0)) {

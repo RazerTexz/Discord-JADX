@@ -3,24 +3,24 @@ package p007b.p225i.p226a.p242c.p267x2.p276k0;
 import java.util.Arrays;
 import p007b.p085c.p086a.p087a0.AnimatableValueParser;
 
-/* compiled from: NalUnitTargetBuffer.java */
-/* renamed from: b.i.a.c.x2.k0.w, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.x2.k0.w, reason: use source file name */
+/* JADX INFO: compiled from: NalUnitTargetBuffer.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class NalUnitTargetBuffer {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final int f8903a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public boolean f8904b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public boolean f8905c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public byte[] f8906d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public int f8907e;
 
     public NalUnitTargetBuffer(int i, int i2) {
@@ -30,7 +30,7 @@ public final class NalUnitTargetBuffer {
         bArr[2] = 1;
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public void m3788a(byte[] bArr, int i, int i2) {
         if (this.f8904b) {
             int i3 = i2 - i;
@@ -45,7 +45,7 @@ public final class NalUnitTargetBuffer {
         }
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public boolean m3789b(int i) {
         if (!this.f8904b) {
             return false;
@@ -56,13 +56,13 @@ public final class NalUnitTargetBuffer {
         return true;
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public void m3790c() {
         this.f8904b = false;
         this.f8905c = false;
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public void m3791d(int i) {
         AnimatableValueParser.m426D(!this.f8904b);
         boolean z2 = i == this.f8903a;

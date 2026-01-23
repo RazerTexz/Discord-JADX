@@ -5,19 +5,19 @@ import java.io.OutputStream;
 import p007b.p085c.p086a.p087a0.AnimatableValueParser;
 import p007b.p225i.p226a.p242c.p259f3.Util2;
 
-/* compiled from: ReusableBufferedOutputStream.java */
-/* renamed from: b.i.a.c.e3.b0.p, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.e3.b0.p, reason: use source file name */
+/* JADX INFO: compiled from: ReusableBufferedOutputStream.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class ReusableBufferedOutputStream extends BufferedOutputStream {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public boolean f6503j;
 
     public ReusableBufferedOutputStream(OutputStream outputStream) {
         super(outputStream);
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public void m2822a(OutputStream outputStream) {
         AnimatableValueParser.m426D(this.f6503j);
         ((BufferedOutputStream) this).out = outputStream;

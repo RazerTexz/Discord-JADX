@@ -14,15 +14,15 @@ import p507d0.p579g0.Charsets2;
 import p615g0.BufferedSource;
 import p630i0.Converter2;
 
-/* compiled from: GsonResponseBodyConverter.java */
-/* renamed from: i0.e0.a.c, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: i0.e0.a.c, reason: use source file name */
+/* JADX INFO: compiled from: GsonResponseBodyConverter.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class GsonResponseBodyConverter<T> implements Converter2<ResponseBody, T> {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final Gson f26515a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final TypeAdapter<T> f26516b;
 
     public GsonResponseBodyConverter(Gson gson, TypeAdapter<T> typeAdapter) {

@@ -7,7 +7,7 @@ import com.google.android.material.shape.EdgeTreatment;
 import com.google.android.material.shape.ShapePath;
 import p007b.p100d.p104b.p105a.outline;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public class BottomAppBarTopEdgeTreatment extends EdgeTreatment implements Cloneable {
     private static final int ANGLE_LEFT = 180;
     private static final int ANGLE_UP = 270;

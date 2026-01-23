@@ -20,13 +20,13 @@ import kotlin.Unit;
 import kotlin.jvm.functions.Function1;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: WidgetSettingsBlockedUsersAdapter.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetSettingsBlockedUsersAdapter.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetSettingsBlockedUsersAdapter extends MGRecyclerAdapterSimple<WidgetSettingsBlockedUsersViewModel.Item> {
     private Function1<? super User, Unit> onClickUnblock;
     private Function1<? super User, Unit> onClickUserProfile;
 
-    /* compiled from: WidgetSettingsBlockedUsersAdapter.kt */
+    /* JADX INFO: compiled from: WidgetSettingsBlockedUsersAdapter.kt */
     public static final class BlockedUserViewHolder extends MGRecyclerViewHolder<WidgetSettingsBlockedUsersAdapter, WidgetSettingsBlockedUsersViewModel.Item> {
         private final WidgetSettingsItemBlockedUserBinding binding;
 
@@ -64,7 +64,7 @@ public final class WidgetSettingsBlockedUsersAdapter extends MGRecyclerAdapterSi
             onConfigure2(i, item);
         }
 
-        /* renamed from: onConfigure, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: onConfigure, reason: avoid collision after fix types in other method */
         public void onConfigure2(int position, WidgetSettingsBlockedUsersViewModel.Item data) {
             Intrinsics3.checkNotNullParameter(data, "data");
             super.onConfigure(position, data);

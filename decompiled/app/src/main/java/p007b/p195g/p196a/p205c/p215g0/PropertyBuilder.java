@@ -10,27 +10,27 @@ import p007b.p195g.p196a.p205c.SerializationConfig;
 import p007b.p195g.p196a.p205c.p210c0.Annotated;
 import p007b.p195g.p196a.p205c.p220y.JsonSerialize;
 
-/* compiled from: PropertyBuilder.java */
-/* renamed from: b.g.a.c.g0.l, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.g.a.c.g0.l, reason: use source file name */
+/* JADX INFO: compiled from: PropertyBuilder.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class PropertyBuilder {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final SerializationConfig f4809a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final BeanDescription f4810b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final AnnotationIntrospector f4811c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public Object f4812d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final JsonInclude.b f4813e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final boolean f4814f;
 
     public PropertyBuilder(SerializationConfig serializationConfig, BeanDescription beanDescription) {
@@ -47,7 +47,7 @@ public class PropertyBuilder {
         this.f4811c = serializationConfig.m2267e();
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public JavaType m2006a(Annotated annotated, boolean z2, JavaType javaType) throws JsonMappingException {
         JavaType javaTypeMo1780e0 = this.f4811c.mo1780e0(this.f4809a, annotated, javaType);
         if (javaTypeMo1780e0 != javaType) {

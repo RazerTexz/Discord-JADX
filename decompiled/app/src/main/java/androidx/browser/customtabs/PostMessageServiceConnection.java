@@ -14,7 +14,7 @@ import androidx.annotation.RestrictTo;
 import p668x.p669a.p670a.ICustomTabsCallback;
 import p668x.p669a.p670a.IPostMessageService;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public abstract class PostMessageServiceConnection implements PostMessageBackend, ServiceConnection {
     private static final String TAG = "PostMessageServConn";
     private final Object mLock = new Object();

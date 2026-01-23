@@ -13,31 +13,31 @@ import p007b.p085c.p086a.p087a0.AnimatableValueParser;
 import p007b.p225i.p226a.p228b.Encoding2;
 import p007b.p225i.p226a.p228b.p231j.EncodedDestination;
 
-/* compiled from: CCTDestination.java */
-/* renamed from: b.i.a.b.i.a, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.b.i.a, reason: use source file name */
+/* JADX INFO: compiled from: CCTDestination.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class CCTDestination implements EncodedDestination {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final String f5123a = AnimatableValueParser.m537k1("hts/frbslgiggolai.o/0clgbthfra=snpoo", "tp:/ieaeogn.ogepscmvc/o/ac?omtjo_rt3");
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static final String f5124b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public static final String f5125c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public static final Set<Encoding2> f5126d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public static final CCTDestination f5127e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     @NonNull
     public final String f5128f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     @Nullable
     public final String f5129g;
 
@@ -56,7 +56,7 @@ public final class CCTDestination implements EncodedDestination {
     }
 
     @NonNull
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static CCTDestination m2293a(@NonNull byte[] bArr) {
         String str = new String(bArr, Charset.forName(Constants.ENCODING));
         if (!str.startsWith("1$")) {
@@ -78,7 +78,7 @@ public final class CCTDestination implements EncodedDestination {
     }
 
     @Nullable
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public byte[] m2294b() {
         String str = this.f5129g;
         if (str == null && this.f5128f == null) {

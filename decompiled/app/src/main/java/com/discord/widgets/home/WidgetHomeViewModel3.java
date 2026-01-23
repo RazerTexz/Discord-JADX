@@ -15,9 +15,9 @@ import p637j0.p641k.Func1;
 import p658rx.Observable;
 import p658rx.functions.Func5;
 
-/* compiled from: WidgetHomeViewModel.kt */
-/* renamed from: com.discord.widgets.home.WidgetHomeViewModel$Companion$observeStoreState$guildInfoObservable$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.home.WidgetHomeViewModel$Companion$observeStoreState$guildInfoObservable$1, reason: use source file name */
+/* JADX INFO: compiled from: WidgetHomeViewModel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetHomeViewModel3<T, R> implements Func1<Long, Observable<? extends WidgetHomeViewModel.GuildInfo>> {
     public final /* synthetic */ StoreGuildWelcomeScreens $storeGuildWelcomeScreens;
     public final /* synthetic */ StoreGuilds $storeGuilds;
@@ -25,8 +25,8 @@ public final class WidgetHomeViewModel3<T, R> implements Func1<Long, Observable<
     public final /* synthetic */ StoreLurking $storeLurking;
     public final /* synthetic */ StorePermissions $storePermissions;
 
-    /* compiled from: WidgetHomeViewModel.kt */
-    /* renamed from: com.discord.widgets.home.WidgetHomeViewModel$Companion$observeStoreState$guildInfoObservable$1$1, reason: invalid class name */
+    /* JADX INFO: renamed from: com.discord.widgets.home.WidgetHomeViewModel$Companion$observeStoreState$guildInfoObservable$1$1, reason: invalid class name */
+    /* JADX INFO: compiled from: WidgetHomeViewModel.kt */
     public static final class AnonymousClass1<T1, T2, T3, T4, T5, R> implements Func5<Guild, Boolean, StoreGuildWelcomeScreens.State, Long, Boolean, WidgetHomeViewModel.GuildInfo> {
         public final /* synthetic */ Long $selectedGuildId;
 
@@ -39,7 +39,7 @@ public final class WidgetHomeViewModel3<T, R> implements Func1<Long, Observable<
             return call2(guild, bool, state, l, bool2);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final WidgetHomeViewModel.GuildInfo call2(Guild guild, Boolean bool, StoreGuildWelcomeScreens.State state, Long l, Boolean bool2) {
             Long l2 = this.$selectedGuildId;
             Intrinsics3.checkNotNullExpressionValue(l2, "selectedGuildId");
@@ -62,7 +62,7 @@ public final class WidgetHomeViewModel3<T, R> implements Func1<Long, Observable<
         return call2(l);
     }
 
-    /* renamed from: call, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
     public final Observable<? extends WidgetHomeViewModel.GuildInfo> call2(Long l) {
         StoreGuilds storeGuilds = this.$storeGuilds;
         Intrinsics3.checkNotNullExpressionValue(l, "selectedGuildId");

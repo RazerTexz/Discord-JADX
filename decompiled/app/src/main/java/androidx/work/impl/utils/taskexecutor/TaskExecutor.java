@@ -4,8 +4,8 @@ import androidx.annotation.RestrictTo;
 import androidx.work.impl.utils.SerialExecutor;
 import java.util.concurrent.Executor;
 
+/* JADX INFO: loaded from: classes.dex */
 @RestrictTo({RestrictTo.Scope.LIBRARY_GROUP})
-/* loaded from: classes.dex */
 public interface TaskExecutor {
     void executeOnBackgroundThread(Runnable runnable);
 

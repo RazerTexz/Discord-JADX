@@ -20,7 +20,7 @@ import java.util.BitSet;
 import java.util.List;
 import p007b.p100d.p104b.p105a.outline;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class StaggeredGridLayoutManager extends RecyclerView.LayoutManager implements RecyclerView.SmoothScroller.ScrollVectorProvider {
     public static final boolean DEBUG = false;
 
@@ -64,7 +64,7 @@ public class StaggeredGridLayoutManager extends RecyclerView.LayoutManager imple
     private boolean mSmoothScrollbarEnabled = true;
     private final Runnable mCheckForGapsRunnable = new RunnableC05801();
 
-    /* renamed from: androidx.recyclerview.widget.StaggeredGridLayoutManager$1 */
+    /* JADX INFO: renamed from: androidx.recyclerview.widget.StaggeredGridLayoutManager$1 */
     public class RunnableC05801 implements Runnable {
         public RunnableC05801() {
         }
@@ -132,7 +132,7 @@ public class StaggeredGridLayoutManager extends RecyclerView.LayoutManager imple
         public int mSpanOffsetsSize;
         public int mVisibleAnchorPosition;
 
-        /* renamed from: androidx.recyclerview.widget.StaggeredGridLayoutManager$SavedState$1 */
+        /* JADX INFO: renamed from: androidx.recyclerview.widget.StaggeredGridLayoutManager$SavedState$1 */
         public class C05821 implements Parcelable.Creator<SavedState> {
             @Override // android.os.Parcelable.Creator
             public /* bridge */ /* synthetic */ SavedState createFromParcel(Parcel parcel) {
@@ -1244,7 +1244,7 @@ public class StaggeredGridLayoutManager extends RecyclerView.LayoutManager imple
         int childCount = getChildCount() - 1;
         BitSet bitSet = new BitSet(this.mSpanCount);
         bitSet.set(0, this.mSpanCount, true);
-        char c = (this.mOrientation == 1 && isLayoutRTL()) ? (char) 1 : (char) 65535;
+        byte b2 = (this.mOrientation == 1 && isLayoutRTL()) ? (byte) 1 : (byte) -1;
         if (this.mShouldReverseLayout) {
             i = -1;
         } else {
@@ -1280,7 +1280,7 @@ public class StaggeredGridLayoutManager extends RecyclerView.LayoutManager imple
                     }
                 }
                 if (z2) {
-                    if ((layoutParams.mSpan.mIndex - ((LayoutParams) childAt2.getLayoutParams()).mSpan.mIndex < 0) != (c < 0)) {
+                    if ((layoutParams.mSpan.mIndex - ((LayoutParams) childAt2.getLayoutParams()).mSpan.mIndex < 0) != (b2 < 0)) {
                         return childAt;
                     }
                 } else {
@@ -2415,7 +2415,7 @@ public class StaggeredGridLayoutManager extends RecyclerView.LayoutManager imple
             public boolean mHasUnwantedGapAfter;
             public int mPosition;
 
-            /* renamed from: androidx.recyclerview.widget.StaggeredGridLayoutManager$LazySpanLookup$FullSpanItem$1 */
+            /* JADX INFO: renamed from: androidx.recyclerview.widget.StaggeredGridLayoutManager$LazySpanLookup$FullSpanItem$1 */
             public class C05811 implements Parcelable.Creator<FullSpanItem> {
                 @Override // android.os.Parcelable.Creator
                 public /* bridge */ /* synthetic */ FullSpanItem createFromParcel(Parcel parcel) {

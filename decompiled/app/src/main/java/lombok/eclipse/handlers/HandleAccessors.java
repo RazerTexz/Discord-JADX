@@ -9,8 +9,8 @@ import lombok.eclipse.EclipseNode;
 import lombok.experimental.Accessors;
 import org.eclipse.jdt.internal.compiler.ast.Annotation;
 
+/* JADX INFO: loaded from: discord-126021.apk:lombok/eclipse/handlers/HandleAccessors.SCL.lombok */
 @HandlerPriority(65536)
-/* loaded from: discord-126021.apk:lombok/eclipse/handlers/HandleAccessors.SCL.lombok */
 public class HandleAccessors extends EclipseAnnotationHandler<Accessors> {
     @Override // lombok.eclipse.EclipseAnnotationHandler
     public void handle(AnnotationValues<Accessors> annotation, Annotation ast, EclipseNode annotationNode) {

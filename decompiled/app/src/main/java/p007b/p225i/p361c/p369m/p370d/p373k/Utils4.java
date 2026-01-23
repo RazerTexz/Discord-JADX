@@ -6,12 +6,12 @@ import com.google.android.gms.tasks.TaskCompletionSource;
 import p007b.p225i.p226a.p288f.p340n.InterfaceC4353a;
 
 /* JADX INFO: Add missing generic type declarations: [T] */
-/* compiled from: Utils.java */
-/* renamed from: b.i.c.m.d.k.i1, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.c.m.d.k.i1, reason: use source file name */
+/* JADX INFO: compiled from: Utils.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class Utils4<T> implements InterfaceC4353a<T, Void> {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final /* synthetic */ TaskCompletionSource f12321a;
 
     public Utils4(TaskCompletionSource taskCompletionSource) {
@@ -19,7 +19,7 @@ public class Utils4<T> implements InterfaceC4353a<T, Void> {
     }
 
     @Override // p007b.p225i.p226a.p288f.p340n.InterfaceC4353a
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public Void mo4012a(@NonNull Task task) throws Exception {
         if (task.mo6021p()) {
             this.f12321a.m9126b(task.mo6017l());

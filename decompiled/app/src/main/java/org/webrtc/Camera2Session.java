@@ -22,8 +22,8 @@ import p007b.p100d.p104b.p105a.outline;
 import p617h0.p628c.C12456d;
 import p617h0.p628c.CameraSession2;
 
+/* JADX INFO: loaded from: classes3.dex */
 @TargetApi(21)
-/* loaded from: classes3.dex */
 public class Camera2Session implements CameraSession {
     private static final String TAG = "Camera2Session";
     private final Context applicationContext;
@@ -177,7 +177,7 @@ public class Camera2Session implements CameraSession {
             videoFrame2.release();
         }
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public /* synthetic */ void m11015a(VideoFrame videoFrame) {
             lambda$onConfigured$0(videoFrame);
         }

@@ -4,12 +4,12 @@ import androidx.annotation.NonNull;
 import p007b.p100d.p104b.p105a.outline;
 import p007b.p225i.p361c.p369m.p370d.p375m.CrashlyticsReport;
 
-/* compiled from: AutoValue_CrashlyticsReport_Session_User.java */
-/* renamed from: b.i.c.m.d.m.u, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.c.m.d.m.u, reason: use source file name */
+/* JADX INFO: compiled from: AutoValue_CrashlyticsReport_Session_User.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class AutoValue_CrashlyticsReport_Session_User extends CrashlyticsReport.d.f {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final String f12646a;
 
     public AutoValue_CrashlyticsReport_Session_User(String str, a aVar) {
@@ -18,7 +18,7 @@ public final class AutoValue_CrashlyticsReport_Session_User extends CrashlyticsR
 
     @Override // p007b.p225i.p361c.p369m.p370d.p375m.CrashlyticsReport.d.f
     @NonNull
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public String mo6611a() {
         return this.f12646a;
     }

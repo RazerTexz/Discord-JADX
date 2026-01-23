@@ -4,15 +4,15 @@ import com.otaliastudios.cameraview.CameraException;
 import com.otaliastudios.cameraview.CameraView;
 import p007b.p452o.p453a.CameraLogger;
 
-/* compiled from: CameraEngine.java */
-/* renamed from: b.o.a.n.j, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.o.a.n.j, reason: use source file name */
+/* JADX INFO: compiled from: CameraEngine.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class CameraEngine2 implements Runnable {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final /* synthetic */ Throwable f13930j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final /* synthetic */ CameraEngine f13931k;
 
     public CameraEngine2(CameraEngine cameraEngine, Throwable th) {

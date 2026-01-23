@@ -2,7 +2,6 @@ package p007b.p225i.p226a.p288f.p313h.p323j;
 
 import android.content.Context;
 import android.database.Cursor;
-import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteException;
 import android.database.sqlite.SQLiteOpenHelper;
@@ -14,11 +13,11 @@ import java.util.HashSet;
 import java.util.Set;
 import p007b.p100d.p104b.p105a.outline;
 
-/* renamed from: b.i.a.f.h.j.p */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.h.j.p */
+/* JADX INFO: loaded from: classes3.dex */
 public final class C3534p extends SQLiteOpenHelper {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final /* synthetic */ C3532o f9776j;
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -27,7 +26,7 @@ public final class C3534p extends SQLiteOpenHelper {
         this.f9776j = c3532o;
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static Set<String> m4483b(SQLiteDatabase sQLiteDatabase, String str) {
         HashSet hashSet = new HashSet();
         Cursor cursorRawQuery = sQLiteDatabase.rawQuery(outline.m859k(str.length() + 22, "SELECT * FROM ", str, " LIMIT 0"), null);
@@ -41,7 +40,7 @@ public final class C3534p extends SQLiteOpenHelper {
         }
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final boolean m4484a(SQLiteDatabase sQLiteDatabase, String str) {
         Cursor cursorQuery = null;
         try {
@@ -115,7 +114,7 @@ public final class C3534p extends SQLiteOpenHelper {
     }
 
     @Override // android.database.sqlite.SQLiteOpenHelper
-    public final void onOpen(SQLiteDatabase sQLiteDatabase) throws SQLException {
+    public final void onOpen(SQLiteDatabase sQLiteDatabase) {
         if (m4484a(sQLiteDatabase, "hits2")) {
             Set<String> setM4483b = m4483b(sQLiteDatabase, "hits2");
             String[] strArr = {"hit_id", "hit_string", "hit_time", "hit_url"};

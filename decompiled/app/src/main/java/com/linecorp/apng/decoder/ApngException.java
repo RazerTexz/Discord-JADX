@@ -6,12 +6,12 @@ import kotlin.jvm.internal.DefaultConstructorMarker;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ApngException.kt */
-/* loaded from: classes3.dex */
+/* JADX INFO: compiled from: ApngException.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class ApngException extends Exception {
     private final ErrorCode errorCode;
 
-    /* compiled from: ApngException.kt */
+    /* JADX INFO: compiled from: ApngException.kt */
     public enum ErrorCode {
         ERR_STREAM_READ_FAIL(-100),
         ERR_UNEXPECTED_EOF(-101),
@@ -24,11 +24,11 @@ public final class ApngException extends Exception {
         ERR_WITH_CHILD_EXCEPTION(-200);
 
 
-        /* renamed from: Companion, reason: from kotlin metadata */
+        /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
         public static final Companion INSTANCE = new Companion(null);
         private final int errorCode;
 
-        /* compiled from: ApngException.kt */
+        /* JADX INFO: compiled from: ApngException.kt */
         public static final class Companion {
             public Companion() {
             }

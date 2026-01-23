@@ -5,15 +5,15 @@ import p007b.p225i.p226a.p242c.p259f3.Util2;
 import p007b.p225i.p226a.p242c.p267x2.FlacStreamMetadata;
 import p007b.p225i.p226a.p242c.p267x2.SeekMap;
 
-/* compiled from: FlacSeekTableSeekMap.java */
-/* renamed from: b.i.a.c.x2.n, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.x2.n, reason: use source file name */
+/* JADX INFO: compiled from: FlacSeekTableSeekMap.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class FlacSeekTableSeekMap implements SeekMap {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final FlacStreamMetadata f8968a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final long f8969b;
 
     public FlacSeekTableSeekMap(FlacStreamMetadata flacStreamMetadata, long j) {
@@ -21,19 +21,19 @@ public final class FlacSeekTableSeekMap implements SeekMap {
         this.f8969b = j;
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final SeekPoint m3805b(long j, long j2) {
-        return new SeekPoint((j * 1000000) / this.f8968a.f8974e, this.f8969b + j2);
+        return new SeekPoint((j * 1000000) / ((long) this.f8968a.f8974e), this.f8969b + j2);
     }
 
     @Override // p007b.p225i.p226a.p242c.p267x2.SeekMap
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public boolean mo3619c() {
         return true;
     }
 
     @Override // p007b.p225i.p226a.p242c.p267x2.SeekMap
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public SeekMap.a mo3620h(long j) {
         AnimatableValueParser.m438H(this.f8968a.f8980k);
         FlacStreamMetadata flacStreamMetadata = this.f8968a;
@@ -50,7 +50,7 @@ public final class FlacSeekTableSeekMap implements SeekMap {
     }
 
     @Override // p007b.p225i.p226a.p242c.p267x2.SeekMap
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public long mo3621i() {
         return this.f8968a.m3810d();
     }

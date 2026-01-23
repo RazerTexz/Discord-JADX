@@ -8,12 +8,12 @@ import java.net.URI;
 import java.util.List;
 import p507d0.p580t.CollectionsJVM;
 
-/* compiled from: NullProxySelector.kt */
-/* renamed from: f0.e0.l.a, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: f0.e0.l.a, reason: use source file name */
+/* JADX INFO: compiled from: NullProxySelector.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class NullProxySelector extends ProxySelector {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final NullProxySelector f25808a = new NullProxySelector();
 
     @Override // java.net.ProxySelector

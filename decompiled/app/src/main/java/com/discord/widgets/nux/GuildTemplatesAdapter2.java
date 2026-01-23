@@ -4,19 +4,19 @@ import kotlin.jvm.internal.DefaultConstructorMarker;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: GuildTemplatesAdapter.kt */
-/* renamed from: com.discord.widgets.nux.GuildTemplateViewType, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.nux.GuildTemplateViewType, reason: use source file name */
+/* JADX INFO: compiled from: GuildTemplatesAdapter.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public abstract class GuildTemplatesAdapter2 {
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private static final int TEMPLATE = 1;
     private static final int TEXT = 0;
     private final int viewType;
 
-    /* compiled from: GuildTemplatesAdapter.kt */
-    /* renamed from: com.discord.widgets.nux.GuildTemplateViewType$Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: com.discord.widgets.nux.GuildTemplateViewType$Companion, reason: from kotlin metadata */
+    /* JADX INFO: compiled from: GuildTemplatesAdapter.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -34,8 +34,8 @@ public abstract class GuildTemplatesAdapter2 {
         }
     }
 
-    /* compiled from: GuildTemplatesAdapter.kt */
-    /* renamed from: com.discord.widgets.nux.GuildTemplateViewType$Template */
+    /* JADX INFO: renamed from: com.discord.widgets.nux.GuildTemplateViewType$Template */
+    /* JADX INFO: compiled from: GuildTemplatesAdapter.kt */
     public static final /* data */ class Template extends GuildTemplatesAdapter2 {
         private final GuildTemplates guildTemplate;
 
@@ -53,7 +53,7 @@ public abstract class GuildTemplatesAdapter2 {
             return template.copy(guildTemplates);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final GuildTemplates getGuildTemplate() {
             return this.guildTemplate;
         }
@@ -90,8 +90,8 @@ public abstract class GuildTemplatesAdapter2 {
         }
     }
 
-    /* compiled from: GuildTemplatesAdapter.kt */
-    /* renamed from: com.discord.widgets.nux.GuildTemplateViewType$Text */
+    /* JADX INFO: renamed from: com.discord.widgets.nux.GuildTemplateViewType$Text */
+    /* JADX INFO: compiled from: GuildTemplatesAdapter.kt */
     public static final class Text extends GuildTemplatesAdapter2 {
         public static final Text INSTANCE = new Text();
 

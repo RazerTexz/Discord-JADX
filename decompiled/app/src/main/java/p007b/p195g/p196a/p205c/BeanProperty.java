@@ -6,16 +6,16 @@ import p007b.p195g.p196a.p197a.JsonInclude;
 import p007b.p195g.p196a.p205c.p210c0.AnnotatedMember;
 import p007b.p195g.p196a.p205c.p221z.MapperConfig;
 
-/* compiled from: BeanProperty.java */
-/* renamed from: b.g.a.c.d, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.g.a.c.d, reason: use source file name */
+/* JADX INFO: compiled from: BeanProperty.java */
+/* JADX INFO: loaded from: classes3.dex */
 public interface BeanProperty {
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public static final JsonFormat.d f4765c = new JsonFormat.d("", JsonFormat.c.ANY, "", "", JsonFormat.b.f4406a, null);
 
-    /* compiled from: BeanProperty.java */
-    /* renamed from: b.g.a.c.d$a */
+    /* JADX INFO: renamed from: b.g.a.c.d$a */
+    /* JADX INFO: compiled from: BeanProperty.java */
     public static class a implements BeanProperty, Serializable {
         private static final long serialVersionUID = 1;
         public final AnnotatedMember _member;
@@ -33,7 +33,7 @@ public interface BeanProperty {
         }
 
         @Override // p007b.p195g.p196a.p205c.BeanProperty
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public JsonFormat.d mo1928a(MapperConfig<?> mapperConfig, Class<?> cls) {
             AnnotatedMember annotatedMember;
             JsonFormat.d dVarMo1784h;
@@ -43,7 +43,7 @@ public interface BeanProperty {
         }
 
         @Override // p007b.p195g.p196a.p205c.BeanProperty
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public JsonInclude.b mo1929b(MapperConfig<?> mapperConfig, Class<?> cls) {
             AnnotatedMember annotatedMember;
             JsonInclude.b bVarMo1802z;
@@ -68,10 +68,10 @@ public interface BeanProperty {
         JsonInclude.b bVar2 = JsonInclude.b.f4436j;
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     JsonFormat.d mo1928a(MapperConfig<?> mapperConfig, Class<?> cls);
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     JsonInclude.b mo1929b(MapperConfig<?> mapperConfig, Class<?> cls);
 
     AnnotatedMember getMember();

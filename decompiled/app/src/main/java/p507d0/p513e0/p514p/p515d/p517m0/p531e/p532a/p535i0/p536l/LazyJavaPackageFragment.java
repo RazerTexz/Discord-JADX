@@ -38,34 +38,34 @@ import p507d0.p592z.p594d.Lambda;
 import p507d0.p592z.p594d.PropertyReference1Impl;
 import p507d0.p592z.p594d.Reflection2;
 
-/* compiled from: LazyJavaPackageFragment.kt */
-/* renamed from: d0.e0.p.d.m0.e.a.i0.l.i, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.e.a.i0.l.i, reason: use source file name */
+/* JADX INFO: compiled from: LazyJavaPackageFragment.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class LazyJavaPackageFragment extends PackageFragmentDescriptorImpl {
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public static final /* synthetic */ KProperty<Object>[] f23370o = {Reflection2.property1(new PropertyReference1Impl(Reflection2.getOrCreateKotlinClass(LazyJavaPackageFragment.class), "binaryClasses", "getBinaryClasses$descriptors_jvm()Ljava/util/Map;")), Reflection2.property1(new PropertyReference1Impl(Reflection2.getOrCreateKotlinClass(LazyJavaPackageFragment.class), "partToFacade", "getPartToFacade()Ljava/util/HashMap;"))};
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public final InterfaceC11588u f23371p;
 
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     public final context4 f23372q;
 
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     public final storage5 f23373r;
 
-    /* renamed from: s */
+    /* JADX INFO: renamed from: s */
     public final JvmPackageScope f23374s;
 
-    /* renamed from: t */
+    /* JADX INFO: renamed from: t */
     public final storage5<List<FqName>> f23375t;
 
-    /* renamed from: u */
+    /* JADX INFO: renamed from: u */
     public final Annotations4 f23376u;
 
-    /* compiled from: LazyJavaPackageFragment.kt */
-    /* renamed from: d0.e0.p.d.m0.e.a.i0.l.i$a */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.e.a.i0.l.i$a */
+    /* JADX INFO: compiled from: LazyJavaPackageFragment.kt */
     public static final class a extends Lambda implements Function0<Map<String, ? extends KotlinJvmBinaryClass>> {
         public a() {
             super(0);
@@ -77,7 +77,7 @@ public final class LazyJavaPackageFragment extends PackageFragmentDescriptorImpl
         }
 
         @Override // kotlin.jvm.functions.Function0
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final Map<String, ? extends KotlinJvmBinaryClass> invoke2() {
             PackagePartProvider packagePartProvider = LazyJavaPackageFragment.access$getC$p(LazyJavaPackageFragment.this).getComponents().getPackagePartProvider();
             String strAsString = LazyJavaPackageFragment.this.getFqName().asString();
@@ -98,8 +98,8 @@ public final class LazyJavaPackageFragment extends PackageFragmentDescriptorImpl
         }
     }
 
-    /* compiled from: LazyJavaPackageFragment.kt */
-    /* renamed from: d0.e0.p.d.m0.e.a.i0.l.i$b */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.e.a.i0.l.i$b */
+    /* JADX INFO: compiled from: LazyJavaPackageFragment.kt */
     public static final class b extends Lambda implements Function0<HashMap<JvmClassName, JvmClassName>> {
         public b() {
             super(0);
@@ -111,7 +111,7 @@ public final class LazyJavaPackageFragment extends PackageFragmentDescriptorImpl
         }
 
         @Override // kotlin.jvm.functions.Function0
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final HashMap<JvmClassName, JvmClassName> invoke2() {
             String multifileClassName;
             HashMap<JvmClassName, JvmClassName> map = new HashMap<>();
@@ -134,8 +134,8 @@ public final class LazyJavaPackageFragment extends PackageFragmentDescriptorImpl
         }
     }
 
-    /* compiled from: LazyJavaPackageFragment.kt */
-    /* renamed from: d0.e0.p.d.m0.e.a.i0.l.i$c */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.e.a.i0.l.i$c */
+    /* JADX INFO: compiled from: LazyJavaPackageFragment.kt */
     public static final class c extends Lambda implements Function0<List<? extends FqName>> {
         public c() {
             super(0);
@@ -147,7 +147,7 @@ public final class LazyJavaPackageFragment extends PackageFragmentDescriptorImpl
         }
 
         @Override // kotlin.jvm.functions.Function0
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final List<? extends FqName> invoke2() {
             Collection<InterfaceC11588u> subPackages = LazyJavaPackageFragment.access$getJPackage$p(LazyJavaPackageFragment.this).getSubPackages();
             ArrayList arrayList = new ArrayList(Iterables2.collectionSizeOrDefault(subPackages, 10));

@@ -4,7 +4,6 @@ import android.app.Notification;
 import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
-import android.content.res.Resources;
 import androidx.core.app.NotificationCompat;
 import com.discord.C5419R;
 import com.discord.app.AppActivity;
@@ -13,14 +12,15 @@ import com.discord.utilities.extensions.PendingIntentExtensions;
 import com.discord.utilities.intent.IntentUtils;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: VoiceEngineNotificationBuilder.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: VoiceEngineNotificationBuilder.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class VoiceEngineNotificationBuilder {
     public static final VoiceEngineNotificationBuilder INSTANCE = new VoiceEngineNotificationBuilder();
 
     private VoiceEngineNotificationBuilder() {
     }
 
+    /* JADX WARN: Multi-variable type inference failed */
     public static /* synthetic */ PendingIntent getCallScreenNavigationIntent$default(VoiceEngineNotificationBuilder voiceEngineNotificationBuilder, Context context, long j, String str, Class cls, int i, Object obj) {
         if ((i & 2) != 0) {
             str = "com.discord.utilities.voice.action.main";
@@ -36,7 +36,7 @@ public final class VoiceEngineNotificationBuilder {
         return PendingIntent.getService(context, 0, new Intent(context, cls).setAction(str), PendingIntentExtensions.immutablePendingIntentFlag$default(0, 1, null));
     }
 
-    public final Notification buildNotification(Context context, String actionMain, String actionDisconnect, String actionStopStream, String actionToggleMuted, String actionToggleDeafened, Class<?> notificationServiceClass, String notificationChannel, long notificationChannelId, CharSequence notificationTitle, CharSequence notificationSubtitle, Class<?> notificationClass, boolean isStreaming, boolean isMuted, boolean isDeafened) throws Resources.NotFoundException {
+    public final Notification buildNotification(Context context, String actionMain, String actionDisconnect, String actionStopStream, String actionToggleMuted, String actionToggleDeafened, Class<?> notificationServiceClass, String notificationChannel, long notificationChannelId, CharSequence notificationTitle, CharSequence notificationSubtitle, Class<?> notificationClass, boolean isStreaming, boolean isMuted, boolean isDeafened) {
         Intrinsics3.checkNotNullParameter(context, "context");
         Intrinsics3.checkNotNullParameter(actionMain, "actionMain");
         Intrinsics3.checkNotNullParameter(actionDisconnect, "actionDisconnect");

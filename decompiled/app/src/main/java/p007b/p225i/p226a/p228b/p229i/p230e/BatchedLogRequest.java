@@ -4,12 +4,12 @@ import androidx.annotation.NonNull;
 import com.google.auto.value.AutoValue;
 import java.util.List;
 
-/* compiled from: BatchedLogRequest.java */
+/* JADX INFO: renamed from: b.i.a.b.i.e.j, reason: use source file name */
+/* JADX INFO: compiled from: BatchedLogRequest.java */
+/* JADX INFO: loaded from: classes3.dex */
 @AutoValue
-/* renamed from: b.i.a.b.i.e.j, reason: use source file name */
-/* loaded from: classes3.dex */
 public abstract class BatchedLogRequest {
     @NonNull
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public abstract List<LogRequest> mo2313a();
 }

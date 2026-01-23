@@ -18,13 +18,13 @@ import p007b.p100d.p104b.p105a.outline;
 import p507d0.LazyJVM;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: InstallReferrer.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: InstallReferrer.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class InstallReferrer {
     private static final String CACHE_KEY_HAS_EXECUTED = "CACHE_KEY_HAS_EXECUTED";
     private static final String CACHE_KEY_HAS_EXECUTED_ATTEMPTS = "CACHE_KEY_HAS_EXECUTED_ATTEMPTS";
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private static final Lazy INSTANCE$delegate = LazyJVM.lazy(InstallReferrer2.INSTANCE);
     private static final int MAX_ATTEMPTS = 10;
@@ -32,10 +32,10 @@ public final class InstallReferrer {
     private final Logger logger;
     private InstallReferrerClient referrerClient;
 
-    /* renamed from: sharedPreferences$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: sharedPreferences$delegate, reason: from kotlin metadata */
     private final Lazy sharedPreferences;
 
-    /* compiled from: InstallReferrer.kt */
+    /* JADX INFO: compiled from: InstallReferrer.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -56,8 +56,8 @@ public final class InstallReferrer {
         }
     }
 
-    /* compiled from: InstallReferrer.kt */
-    /* renamed from: com.discord.utilities.analytics.InstallReferrer$createReferrerStateListener$1 */
+    /* JADX INFO: renamed from: com.discord.utilities.analytics.InstallReferrer$createReferrerStateListener$1 */
+    /* JADX INFO: compiled from: InstallReferrer.kt */
     public static final class C66841 implements InstallReferrerStateListener {
         public final /* synthetic */ Function1 $onReceivedInstallReferrer;
 

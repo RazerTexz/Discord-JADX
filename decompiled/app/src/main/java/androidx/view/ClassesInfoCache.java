@@ -10,7 +10,7 @@ import java.util.List;
 import java.util.Map;
 import p007b.p100d.p104b.p105a.outline;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public final class ClassesInfoCache {
     private static final int CALL_TYPE_NO_ARG = 0;
     private static final int CALL_TYPE_PROVIDER = 1;
@@ -36,7 +36,7 @@ public final class ClassesInfoCache {
             }
         }
 
-        private static void invokeMethodsForEvent(List<MethodReference> list, LifecycleOwner lifecycleOwner, Lifecycle.Event event, Object obj) throws IllegalArgumentException {
+        private static void invokeMethodsForEvent(List<MethodReference> list, LifecycleOwner lifecycleOwner, Lifecycle.Event event, Object obj) {
             if (list != null) {
                 for (int size = list.size() - 1; size >= 0; size--) {
                     list.get(size).invokeCallback(lifecycleOwner, event, obj);
@@ -44,7 +44,7 @@ public final class ClassesInfoCache {
             }
         }
 
-        public void invokeCallbacks(LifecycleOwner lifecycleOwner, Lifecycle.Event event, Object obj) throws IllegalArgumentException {
+        public void invokeCallbacks(LifecycleOwner lifecycleOwner, Lifecycle.Event event, Object obj) {
             invokeMethodsForEvent(this.mEventToHandlers.get(event), lifecycleOwner, event, obj);
             invokeMethodsForEvent(this.mEventToHandlers.get(Lifecycle.Event.ON_ANY), lifecycleOwner, event, obj);
         }
@@ -75,7 +75,7 @@ public final class ClassesInfoCache {
             return this.mMethod.getName().hashCode() + (this.mCallType * 31);
         }
 
-        public void invokeCallback(LifecycleOwner lifecycleOwner, Lifecycle.Event event, Object obj) throws IllegalArgumentException {
+        public void invokeCallback(LifecycleOwner lifecycleOwner, Lifecycle.Event event, Object obj) {
             try {
                 int i = this.mCallType;
                 if (i == 0) {

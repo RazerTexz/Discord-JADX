@@ -38,26 +38,26 @@ import p507d0.LazyJVM;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetAuthBirthday.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetAuthBirthday.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetAuthBirthday extends AppFragment {
     public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetAuthBirthday.class, "binding", "getBinding()Lcom/discord/databinding/WidgetAuthBirthdayBinding;", 0)};
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private static final String RESULT_EXTRA_BIRTHDAY = "RESULT_EXTRA_BIRTHDAY";
     private static final String VALIDATOR_DATE_OF_BIRTH = "dateOfBirth";
     private static final String VALIDATOR_TOS = "tos";
 
-    /* renamed from: binding$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
     private final DateFormat formatter;
     private boolean isConsentRequired;
 
-    /* renamed from: validationManager$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: validationManager$delegate, reason: from kotlin metadata */
     private final Lazy validationManager;
 
-    /* compiled from: WidgetAuthBirthday.kt */
+    /* JADX INFO: compiled from: WidgetAuthBirthday.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -81,8 +81,8 @@ public final class WidgetAuthBirthday extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetAuthBirthday.kt */
-    /* renamed from: com.discord.widgets.auth.WidgetAuthBirthday$onViewBoundOrOnResume$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.auth.WidgetAuthBirthday$onViewBoundOrOnResume$1 */
+    /* JADX INFO: compiled from: WidgetAuthBirthday.kt */
     public static final class C71671 extends Lambda implements Function1<View, Unit> {
         public C71671() {
             super(1);
@@ -94,7 +94,7 @@ public final class WidgetAuthBirthday extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(View view) {
             Intrinsics3.checkNotNullParameter(view, "it");
             DatePickerDialog.Companion companion = DatePickerDialog.INSTANCE;
@@ -107,8 +107,8 @@ public final class WidgetAuthBirthday extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetAuthBirthday.kt */
-    /* renamed from: com.discord.widgets.auth.WidgetAuthBirthday$onViewBoundOrOnResume$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.auth.WidgetAuthBirthday$onViewBoundOrOnResume$2 */
+    /* JADX INFO: compiled from: WidgetAuthBirthday.kt */
     public static final class ViewOnClickListenerC71692 implements View.OnClickListener {
         public ViewOnClickListenerC71692() {
         }

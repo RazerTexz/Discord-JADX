@@ -3,12 +3,12 @@ package p637j0.p642l.p643a;
 import p637j0.p652o.C12774l;
 import p658rx.Subscriber;
 
-/* compiled from: DeferredScalarSubscriberSafe.java */
-/* renamed from: j0.l.a.b, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: j0.l.a.b, reason: use source file name */
+/* JADX INFO: compiled from: DeferredScalarSubscriberSafe.java */
+/* JADX INFO: loaded from: classes3.dex */
 public abstract class DeferredScalarSubscriberSafe<T, R> extends DeferredScalarSubscriber<T, R> {
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public boolean f26737n;
 
     public DeferredScalarSubscriberSafe(Subscriber<? super R> subscriber) {

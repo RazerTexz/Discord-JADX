@@ -39,49 +39,49 @@ import p007b.p225i.p361c.p406w.CallableC4886x;
 import p007b.p225i.p361c.p406w.RunnableC4869g;
 import p007b.p225i.p361c.p407x.UserAgentPublisher;
 
-/* compiled from: com.google.firebase:firebase-messaging@@21.0.0 */
-/* loaded from: classes3.dex */
+/* JADX INFO: compiled from: com.google.firebase:firebase-messaging@@21.0.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public class FirebaseMessaging {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     @Nullable
     @SuppressLint({"FirebaseUnknownNullness"})
     @VisibleForTesting
     public static TransportFactory f21448a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final Context f21449b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final FirebaseApp2 f21450c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final FirebaseInstanceId f21451d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final C11088a f21452e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final Executor f21453f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public final Task<C4887y> f21454g;
 
-    /* compiled from: com.google.firebase:firebase-messaging@@21.0.0 */
-    /* renamed from: com.google.firebase.messaging.FirebaseMessaging$a */
+    /* JADX INFO: renamed from: com.google.firebase.messaging.FirebaseMessaging$a */
+    /* JADX INFO: compiled from: com.google.firebase:firebase-messaging@@21.0.0 */
     public class C11088a {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final Subscriber2 f21455a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public boolean f21456b;
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         @Nullable
         public EventHandler2<DataCollectionDefaultChange> f21457c;
 
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         @Nullable
         public Boolean f21458d;
 
@@ -89,7 +89,7 @@ public class FirebaseMessaging {
             this.f21455a = subscriber2;
         }
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public synchronized void m9193a() {
             if (this.f21456b) {
                 return;
@@ -104,7 +104,7 @@ public class FirebaseMessaging {
             this.f21456b = true;
         }
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public synchronized boolean m9194b() {
             m9193a();
             Boolean bool = this.f21458d;
@@ -115,7 +115,7 @@ public class FirebaseMessaging {
         }
 
         @Nullable
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public final Boolean m9195c() {
             ApplicationInfo applicationInfo;
             Bundle bundle;

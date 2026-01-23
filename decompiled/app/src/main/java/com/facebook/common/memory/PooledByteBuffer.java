@@ -3,7 +3,7 @@ package com.facebook.common.memory;
 import java.io.Closeable;
 import java.nio.ByteBuffer;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public interface PooledByteBuffer extends Closeable {
 
     public static class ClosedException extends RuntimeException {
@@ -14,15 +14,15 @@ public interface PooledByteBuffer extends Closeable {
 
     ByteBuffer getByteBuffer();
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     byte mo1395h(int i);
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     int mo1396i(int i, byte[] bArr, int i2, int i3);
 
     boolean isClosed();
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     long mo1397k();
 
     int size();

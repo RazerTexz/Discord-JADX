@@ -1,14 +1,14 @@
 package androidx.constraintlayout.motion.utils;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class LinearCurveFit extends CurveFit {
     private static final String TAG = "LinearCurveFit";
 
-    /* renamed from: mT */
+    /* JADX INFO: renamed from: mT */
     private double[] f100mT;
     private double mTotalLength;
 
-    /* renamed from: mY */
+    /* JADX INFO: renamed from: mY */
     private double[][] f101mY;
 
     public LinearCurveFit(double[] dArr, double[][] dArr2) {

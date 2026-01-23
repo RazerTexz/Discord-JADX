@@ -2,18 +2,18 @@ package p007b.p109f.p161j.p177l;
 
 import com.discord.api.permission.Permission;
 
-/* compiled from: BitmapCounterProvider.java */
-/* renamed from: b.f.j.l.c, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.f.j.l.c, reason: use source file name */
+/* JADX INFO: compiled from: BitmapCounterProvider.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class BitmapCounterProvider {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final int f3923a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static int f3924b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public static volatile BitmapCounter f3925c;
 
     static {

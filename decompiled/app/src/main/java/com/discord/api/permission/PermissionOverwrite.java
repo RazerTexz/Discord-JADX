@@ -4,15 +4,15 @@ import com.discord.models.domain.ModelAuditLogEntry;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: PermissionOverwrite.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: PermissionOverwrite.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class PermissionOverwrite {
     private final long allow;
     private final long deny;
     private final long id;
     private final Type type;
 
-    /* compiled from: PermissionOverwrite.kt */
+    /* JADX INFO: compiled from: PermissionOverwrite.kt */
     public enum Type {
         ROLE,
         MEMBER
@@ -26,7 +26,7 @@ public final /* data */ class PermissionOverwrite {
         this.deny = j3;
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static PermissionOverwrite m8127b(PermissionOverwrite permissionOverwrite, long j, Type type, long j2, long j3, int i) {
         long j4 = (i & 1) != 0 ? permissionOverwrite.id : j;
         Type type2 = (i & 2) != 0 ? permissionOverwrite.type : null;
@@ -36,22 +36,22 @@ public final /* data */ class PermissionOverwrite {
         return new PermissionOverwrite(j4, type2, j5, j6);
     }
 
-    /* renamed from: a, reason: from getter */
+    /* JADX INFO: renamed from: a, reason: from getter */
     public final long getId() {
         return this.id;
     }
 
-    /* renamed from: c, reason: from getter */
+    /* JADX INFO: renamed from: c, reason: from getter */
     public final long getAllow() {
         return this.allow;
     }
 
-    /* renamed from: d, reason: from getter */
+    /* JADX INFO: renamed from: d, reason: from getter */
     public final long getDeny() {
         return this.deny;
     }
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final long m8131e() {
         return this.id;
     }
@@ -67,7 +67,7 @@ public final /* data */ class PermissionOverwrite {
         return this.id == permissionOverwrite.id && Intrinsics3.areEqual(this.type, permissionOverwrite.type) && this.allow == permissionOverwrite.allow && this.deny == permissionOverwrite.deny;
     }
 
-    /* renamed from: f, reason: from getter */
+    /* JADX INFO: renamed from: f, reason: from getter */
     public final Type getType() {
         return this.type;
     }

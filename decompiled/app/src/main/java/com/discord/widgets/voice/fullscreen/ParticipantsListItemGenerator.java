@@ -27,14 +27,14 @@ import p507d0.p580t.Iterables2;
 import p507d0.p580t._Collections;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ParticipantsListItemGenerator.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: ParticipantsListItemGenerator.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class ParticipantsListItemGenerator {
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
 
-    /* compiled from: ParticipantsListItemGenerator.kt */
+    /* JADX INFO: compiled from: ParticipantsListItemGenerator.kt */
     public static final class Companion {
         private Companion() {
         }

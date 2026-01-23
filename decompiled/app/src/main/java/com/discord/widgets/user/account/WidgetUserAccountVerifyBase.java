@@ -29,11 +29,11 @@ import p658rx.Observable;
 import p658rx.functions.Action2;
 import p658rx.functions.Func2;
 
-/* compiled from: WidgetUserAccountVerifyBase.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: WidgetUserAccountVerifyBase.kt */
+/* JADX INFO: loaded from: classes.dex */
 public abstract class WidgetUserAccountVerifyBase extends AppFragment {
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private static final String INTENT_EMAIL_ALLOWED = "INTENT_EMAIL_ALLOWED";
     private static final String INTENT_MODE = "INTENT_MODE";
@@ -42,7 +42,7 @@ public abstract class WidgetUserAccountVerifyBase extends AppFragment {
     private boolean isPhoneAllowed;
     public Mode mode;
 
-    /* compiled from: WidgetUserAccountVerifyBase.kt */
+    /* JADX INFO: compiled from: WidgetUserAccountVerifyBase.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -61,15 +61,15 @@ public abstract class WidgetUserAccountVerifyBase extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetUserAccountVerifyBase.kt */
+    /* JADX INFO: compiled from: WidgetUserAccountVerifyBase.kt */
     public enum Mode {
         UNFORCED,
         FORCED,
         NO_HISTORY_FROM_USER_SETTINGS
     }
 
-    /* compiled from: WidgetUserAccountVerifyBase.kt */
-    /* renamed from: com.discord.widgets.user.account.WidgetUserAccountVerifyBase$getShouldDismissObservable$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.user.account.WidgetUserAccountVerifyBase$getShouldDismissObservable$1 */
+    /* JADX INFO: compiled from: WidgetUserAccountVerifyBase.kt */
     public static final class C102501<T1, T2, R> implements Func2<RequiredAction, MeUser, Boolean> {
         public C102501() {
         }
@@ -80,7 +80,7 @@ public abstract class WidgetUserAccountVerifyBase extends AppFragment {
         }
 
         /* JADX WARN: Removed duplicated region for block: B:7:0x001a  */
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         /*
             Code decompiled incorrectly, please refer to instructions dump.
         */
@@ -98,8 +98,8 @@ public abstract class WidgetUserAccountVerifyBase extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetUserAccountVerifyBase.kt */
-    /* renamed from: com.discord.widgets.user.account.WidgetUserAccountVerifyBase$onViewBoundOrOnResume$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.user.account.WidgetUserAccountVerifyBase$onViewBoundOrOnResume$1 */
+    /* JADX INFO: compiled from: WidgetUserAccountVerifyBase.kt */
     public static final /* synthetic */ class C102511 extends FunctionReferenceImpl implements Function1<Boolean, Unit> {
         public C102511(WidgetUserAccountVerifyBase widgetUserAccountVerifyBase) {
             super(1, widgetUserAccountVerifyBase, WidgetUserAccountVerifyBase.class, "handleIsAuthorized", "handleIsAuthorized(Z)V", 0);
@@ -116,8 +116,8 @@ public abstract class WidgetUserAccountVerifyBase extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetUserAccountVerifyBase.kt */
-    /* renamed from: com.discord.widgets.user.account.WidgetUserAccountVerifyBase$setOptionsMenu$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.user.account.WidgetUserAccountVerifyBase$setOptionsMenu$1 */
+    /* JADX INFO: compiled from: WidgetUserAccountVerifyBase.kt */
     public static final class C102521<T1, T2> implements Action2<MenuItem, Context> {
         public static final C102521 INSTANCE = new C102521();
 
@@ -126,7 +126,7 @@ public abstract class WidgetUserAccountVerifyBase extends AppFragment {
             call2(menuItem, context);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final void call2(MenuItem menuItem, Context context) {
             Intrinsics3.checkNotNullExpressionValue(menuItem, "menuItem");
             if (menuItem.getItemId() != C5419R.id.menu_settings_log_out) {
@@ -211,7 +211,7 @@ public abstract class WidgetUserAccountVerifyBase extends AppFragment {
         return mode;
     }
 
-    /* renamed from: isEmailAllowed, reason: from getter */
+    /* JADX INFO: renamed from: isEmailAllowed, reason: from getter */
     public final boolean getIsEmailAllowed() {
         return this.isEmailAllowed;
     }
@@ -224,7 +224,7 @@ public abstract class WidgetUserAccountVerifyBase extends AppFragment {
         return mode == Mode.FORCED;
     }
 
-    /* renamed from: isPhoneAllowed, reason: from getter */
+    /* JADX INFO: renamed from: isPhoneAllowed, reason: from getter */
     public final boolean getIsPhoneAllowed() {
         return this.isPhoneAllowed;
     }

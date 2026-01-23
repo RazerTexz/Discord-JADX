@@ -3,12 +3,12 @@ package p007b.p008a.p009a.p010a;
 import kotlin.jvm.functions.Function2;
 import p658rx.functions.Func2;
 
-/* compiled from: GuildBoostCancelViewModel.kt */
-/* renamed from: b.a.a.a.h, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.a.a.a.h, reason: use source file name */
+/* JADX INFO: compiled from: GuildBoostCancelViewModel.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class GuildBoostCancelViewModel5 implements Func2 {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final /* synthetic */ Function2 f210j;
 
     public GuildBoostCancelViewModel5(Function2 function2) {

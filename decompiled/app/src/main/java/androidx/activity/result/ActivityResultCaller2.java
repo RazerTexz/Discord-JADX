@@ -5,9 +5,9 @@ import kotlin.Unit;
 import kotlin.jvm.functions.Function1;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ActivityResultCaller.kt */
-/* renamed from: androidx.activity.result.ActivityResultCallerKt, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: androidx.activity.result.ActivityResultCallerKt, reason: use source file name */
+/* JADX INFO: compiled from: ActivityResultCaller.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class ActivityResultCaller2 {
     public static final <I, O> ActivityResultLauncher<Unit> registerForActivityResult(ActivityResultCaller activityResultCaller, ActivityResultContract<I, O> activityResultContract, I i, ActivityResultRegistry activityResultRegistry, Function1<? super O, Unit> function1) {
         Intrinsics3.checkNotNullParameter(activityResultCaller, "$this$registerForActivityResult");

@@ -7,8 +7,8 @@ import kotlin.jvm.functions.Function3;
 import p507d0.p592z.p594d.FunctionReferenceImpl;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: WidgetSettingsVoice.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetSettingsVoice.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final /* synthetic */ class WidgetSettingsVoice$Model$Companion$get$2 extends FunctionReferenceImpl implements Function3<StoreMediaSettings.VoiceConfiguration, MediaEngine.OpenSLESConfig, MediaEngine.LocalVoiceStatus, WidgetSettingsVoice.Model> {
     public static final WidgetSettingsVoice$Model$Companion$get$2 INSTANCE = new WidgetSettingsVoice$Model$Companion$get$2();
 
@@ -21,7 +21,7 @@ public final /* synthetic */ class WidgetSettingsVoice$Model$Companion$get$2 ext
         return invoke2(voiceConfiguration, openSLESConfig, localVoiceStatus);
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final WidgetSettingsVoice.Model invoke2(StoreMediaSettings.VoiceConfiguration voiceConfiguration, MediaEngine.OpenSLESConfig openSLESConfig, MediaEngine.LocalVoiceStatus localVoiceStatus) {
         Intrinsics3.checkNotNullParameter(voiceConfiguration, "p1");
         Intrinsics3.checkNotNullParameter(openSLESConfig, "p2");

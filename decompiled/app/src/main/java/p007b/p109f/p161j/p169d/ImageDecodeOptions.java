@@ -5,24 +5,24 @@ import p007b.p085c.p086a.p087a0.AnimatableValueParser;
 import p007b.p100d.p104b.p105a.outline;
 import p007b.p109f.p115d.p119d.Objects2;
 
-/* compiled from: ImageDecodeOptions.java */
-/* renamed from: b.f.j.d.b, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.f.j.d.b, reason: use source file name */
+/* JADX INFO: compiled from: ImageDecodeOptions.java */
+/* JADX INFO: loaded from: classes.dex */
 public class ImageDecodeOptions {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final ImageDecodeOptions f3706a = new ImageDecodeOptions(new ImageDecodeOptionsBuilder());
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final int f3707b = 100;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final int f3708c = Integer.MAX_VALUE;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final Bitmap.Config f3709d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final Bitmap.Config f3710e;
 
     public ImageDecodeOptions(ImageDecodeOptionsBuilder imageDecodeOptionsBuilder) {

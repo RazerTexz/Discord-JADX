@@ -3,7 +3,7 @@ package org.webrtc;
 import androidx.annotation.Nullable;
 import org.webrtc.PeerConnection;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public final class PeerConnectionDependencies {
     private final PeerConnection.Observer observer;
     private final SSLCertificateVerifier sslCertificateVerifier;

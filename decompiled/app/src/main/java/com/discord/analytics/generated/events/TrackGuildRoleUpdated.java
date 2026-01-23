@@ -6,8 +6,8 @@ import com.discord.api.science.AnalyticsSchema;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: TrackGuildRoleUpdated.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: TrackGuildRoleUpdated.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class TrackGuildRoleUpdated implements AnalyticsSchema, TrackBase2 {
     private TrackBase trackBase;
     private final CharSequence action = null;
@@ -21,7 +21,7 @@ public final /* data */ class TrackGuildRoleUpdated implements AnalyticsSchema, 
     private final transient String analyticsSchemaTypeName = "guild_role_updated";
 
     @Override // com.discord.api.science.AnalyticsSchema
-    /* renamed from: d, reason: from getter */
+    /* JADX INFO: renamed from: d, reason: from getter */
     public String getAnalyticsSchemaTypeName() {
         return this.analyticsSchemaTypeName;
     }

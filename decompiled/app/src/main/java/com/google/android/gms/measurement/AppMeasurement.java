@@ -33,24 +33,24 @@ import p007b.p225i.p226a.p288f.p330i.p332b.InterfaceC3988b7;
 import p007b.p225i.p226a.p288f.p330i.p332b.RunnableC4138o6;
 import p007b.p225i.p226a.p288f.p330i.p332b.RunnableC4171r6;
 
-/* compiled from: com.google.android.gms:play-services-measurement-impl@@18.0.0 */
+/* JADX INFO: compiled from: com.google.android.gms:play-services-measurement-impl@@18.0.0 */
+/* JADX INFO: loaded from: classes3.dex */
 @Deprecated
-/* loaded from: classes3.dex */
 public class AppMeasurement {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static volatile AppMeasurement f20652a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final C4202u4 f20653b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final InterfaceC3988b7 f20654c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final boolean f20655d;
 
-    /* compiled from: com.google.android.gms:play-services-measurement-impl@@18.0.0 */
+    /* JADX INFO: compiled from: com.google.android.gms:play-services-measurement-impl@@18.0.0 */
     public static class ConditionalUserProperty {
 
         @Keep
@@ -104,7 +104,7 @@ public class AppMeasurement {
         public ConditionalUserProperty() {
         }
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final Bundle m9108a() {
             Bundle bundle = new Bundle();
             String str = this.mAppId;
@@ -212,7 +212,7 @@ public class AppMeasurement {
     }
 
     @Keep
-    public void beginAdUnitExposure(@NonNull @Size(min = 1) String str) throws IllegalStateException {
+    public void beginAdUnitExposure(@NonNull @Size(min = 1) String str) {
         if (this.f20655d) {
             this.f20654c.mo5508g(str);
             return;
@@ -223,7 +223,7 @@ public class AppMeasurement {
     }
 
     @Keep
-    public void clearConditionalUserProperty(@NonNull @Size(max = 24, min = 1) String str, @Nullable String str2, @Nullable Bundle bundle) throws IllegalStateException {
+    public void clearConditionalUserProperty(@NonNull @Size(max = 24, min = 1) String str, @Nullable String str2, @Nullable Bundle bundle) {
         if (this.f20655d) {
             this.f20654c.mo5513l(str, str2, bundle);
         } else {
@@ -232,7 +232,7 @@ public class AppMeasurement {
     }
 
     @Keep
-    public void endAdUnitExposure(@NonNull @Size(min = 1) String str) throws IllegalStateException {
+    public void endAdUnitExposure(@NonNull @Size(min = 1) String str) {
         if (this.f20655d) {
             this.f20654c.mo5511j(str);
             return;
@@ -360,7 +360,7 @@ public class AppMeasurement {
     }
 
     @Keep
-    public void logEventInternal(String str, String str2, Bundle bundle) throws IllegalStateException {
+    public void logEventInternal(String str, String str2, Bundle bundle) {
         if (this.f20655d) {
             this.f20654c.mo5514m(str, str2, bundle);
         } else {
@@ -369,7 +369,7 @@ public class AppMeasurement {
     }
 
     @Keep
-    public void setConditionalUserProperty(@NonNull ConditionalUserProperty conditionalUserProperty) throws IllegalStateException {
+    public void setConditionalUserProperty(@NonNull ConditionalUserProperty conditionalUserProperty) {
         Objects.requireNonNull(conditionalUserProperty, "null reference");
         if (this.f20655d) {
             this.f20654c.mo5507f(conditionalUserProperty.m9108a());

@@ -6,9 +6,9 @@ import kotlin.jvm.functions.Function0;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: ChannelGroupDMSettingsViewModel.kt */
-/* renamed from: com.discord.widgets.channels.settings.ChannelGroupDMSettingsViewModel$ViewState$Valid$isDefaultPhoto$2, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.channels.settings.ChannelGroupDMSettingsViewModel$ViewState$Valid$isDefaultPhoto$2, reason: use source file name */
+/* JADX INFO: compiled from: ChannelGroupDMSettingsViewModel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class ChannelGroupDMSettingsViewModel3 extends Lambda implements Function0<Boolean> {
     public final /* synthetic */ ChannelGroupDMSettingsViewModel.ViewState.Valid this$0;
 
@@ -23,7 +23,7 @@ public final class ChannelGroupDMSettingsViewModel3 extends Lambda implements Fu
         return Boolean.valueOf(invoke2());
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final boolean invoke2() {
         return this.this$0.getEditedIconUrl() == null || Intrinsics3.areEqual(this.this$0.getEditedIconUrl(), IconUtils.INSTANCE.getDefaultForGroupDM(this.this$0.getChannelSettings().getChannel().getId()));
     }

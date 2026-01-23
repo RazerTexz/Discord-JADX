@@ -3,8 +3,8 @@ package com.discord.models.gifpicker.dto;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: GifDto.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: GifDto.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class GifDto {
     private final int height;
     private final String src;
@@ -36,22 +36,22 @@ public final /* data */ class GifDto {
         return gifDto.copy(str, str2, i, i2);
     }
 
-    /* renamed from: component1, reason: from getter */
+    /* JADX INFO: renamed from: component1, reason: from getter */
     public final String getSrc() {
         return this.src;
     }
 
-    /* renamed from: component2, reason: from getter */
+    /* JADX INFO: renamed from: component2, reason: from getter */
     public final String getUrl() {
         return this.url;
     }
 
-    /* renamed from: component3, reason: from getter */
+    /* JADX INFO: renamed from: component3, reason: from getter */
     public final int getWidth() {
         return this.width;
     }
 
-    /* renamed from: component4, reason: from getter */
+    /* JADX INFO: renamed from: component4, reason: from getter */
     public final int getHeight() {
         return this.height;
     }

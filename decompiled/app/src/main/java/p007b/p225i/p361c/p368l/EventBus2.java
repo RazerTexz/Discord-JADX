@@ -13,20 +13,20 @@ import p007b.p225i.p361c.p396q.EventHandler2;
 import p007b.p225i.p361c.p396q.Publisher;
 import p007b.p225i.p361c.p396q.Subscriber2;
 
-/* compiled from: EventBus.java */
-/* renamed from: b.i.c.l.q, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.c.l.q, reason: use source file name */
+/* JADX INFO: compiled from: EventBus.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class EventBus2 implements Subscriber2, Publisher {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     @GuardedBy("this")
     public final Map<Class<?>, ConcurrentHashMap<EventHandler2<Object>, Executor>> f12206a = new HashMap();
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     @GuardedBy("this")
     public Queue<Event3<?>> f12207b = new ArrayDeque();
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final Executor f12208c;
 
     public EventBus2(Executor executor) {
@@ -34,13 +34,13 @@ public class EventBus2 implements Subscriber2, Publisher {
     }
 
     @Override // p007b.p225i.p361c.p396q.Subscriber2
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public <T> void mo6359a(Class<T> cls, EventHandler2<? super T> eventHandler2) {
         mo6360b(cls, this.f12208c, eventHandler2);
     }
 
     @Override // p007b.p225i.p361c.p396q.Subscriber2
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public synchronized <T> void mo6360b(Class<T> cls, Executor executor, EventHandler2<? super T> eventHandler2) {
         Objects.requireNonNull(cls);
         Objects.requireNonNull(eventHandler2);

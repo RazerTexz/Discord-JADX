@@ -4,9 +4,9 @@ import android.graphics.Bitmap;
 import p007b.p109f.p161j.p180o.RoundAsCirclePostprocessor2;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: RoundAsCirclePostProcessor.kt */
-/* renamed from: com.discord.utilities.images.RoundAsCirclePostprocessor, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.utilities.images.RoundAsCirclePostprocessor, reason: use source file name */
+/* JADX INFO: compiled from: RoundAsCirclePostProcessor.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class RoundAsCirclePostProcessor2 extends RoundAsCirclePostprocessor2 {
     private final String imageUri;
 

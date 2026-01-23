@@ -2,9 +2,9 @@ package p007b.p452o.p453a.p455n.p463v;
 
 import androidx.annotation.NonNull;
 
-/* compiled from: CameraState.java */
-/* renamed from: b.o.a.n.v.e, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.o.a.n.v.e, reason: use source file name */
+/* JADX INFO: compiled from: CameraState.java */
+/* JADX INFO: loaded from: classes3.dex */
 public enum CameraState2 {
     OFF(0),
     ENGINE(1),
@@ -17,7 +17,7 @@ public enum CameraState2 {
         this.mState = i;
     }
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public boolean m7367f(@NonNull CameraState2 cameraState2) {
         return this.mState >= cameraState2.mState;
     }

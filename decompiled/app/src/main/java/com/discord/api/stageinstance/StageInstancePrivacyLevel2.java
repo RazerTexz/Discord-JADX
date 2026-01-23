@@ -6,9 +6,9 @@ import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: StageInstancePrivacyLevel.kt */
-/* renamed from: com.discord.api.stageinstance.StageInstancePrivacyLevelTypeAdapter, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: com.discord.api.stageinstance.StageInstancePrivacyLevelTypeAdapter, reason: use source file name */
+/* JADX INFO: compiled from: StageInstancePrivacyLevel.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class StageInstancePrivacyLevel2 extends TypeAdapter<StageInstancePrivacyLevel> {
     @Override // com.google.gson.TypeAdapter
     public StageInstancePrivacyLevel read(JsonReader jsonReader) throws IOException {

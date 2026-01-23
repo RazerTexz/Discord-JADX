@@ -12,14 +12,14 @@ import p007b.p008a.p050t.p052b.p053a.TextNode;
 import p507d0.p580t.Collections2;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: EditedMessageNode.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: EditedMessageNode.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class EditedMessageNode<RC> extends StyleNode<RC, CharacterStyle> {
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
 
-    /* compiled from: EditedMessageNode.kt */
+    /* JADX INFO: compiled from: EditedMessageNode.kt */
     public static final class Companion {
         private Companion() {
         }

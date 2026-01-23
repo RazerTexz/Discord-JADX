@@ -4,12 +4,12 @@ import androidx.view.ViewModel;
 import androidx.view.ViewModelProvider;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: AppViewModelDelegates.kt */
-/* renamed from: b.a.d.e0, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.a.d.e0, reason: use source file name */
+/* JADX INFO: compiled from: AppViewModelDelegates.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class AppViewModelDelegates implements ViewModelProvider.Factory {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final /* synthetic */ AppViewModelDelegates2 f506a;
 
     public AppViewModelDelegates(AppViewModelDelegates2 appViewModelDelegates2) {

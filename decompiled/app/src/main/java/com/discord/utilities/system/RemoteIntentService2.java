@@ -12,9 +12,9 @@ import java.util.Objects;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: RemoteIntentService.kt */
-/* renamed from: com.discord.utilities.system.RemoteIntentService$IpcCallback$handler$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.utilities.system.RemoteIntentService$IpcCallback$handler$1, reason: use source file name */
+/* JADX INFO: compiled from: RemoteIntentService.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class RemoteIntentService2 implements Handler.Callback {
     public final /* synthetic */ RemoteIntentService.IpcCallback this$0;
 

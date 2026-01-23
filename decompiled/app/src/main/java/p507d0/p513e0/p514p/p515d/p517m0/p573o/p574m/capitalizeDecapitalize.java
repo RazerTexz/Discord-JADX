@@ -6,17 +6,17 @@ import p507d0.p579g0.Strings4;
 import p507d0.p579g0.StringsJVM;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: capitalizeDecapitalize.kt */
-/* renamed from: d0.e0.p.d.m0.o.m.a, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.o.m.a, reason: use source file name */
+/* JADX INFO: compiled from: capitalizeDecapitalize.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class capitalizeDecapitalize {
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final boolean m10040a(String str, int i, boolean z2) {
         char cCharAt = str.charAt(i);
         return z2 ? 'A' <= cCharAt && cCharAt <= 'Z' : Character.isUpperCase(cCharAt);
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static final String m10041b(String str, boolean z2) {
         if (z2) {
             return toLowerCaseAsciiOnly(str);

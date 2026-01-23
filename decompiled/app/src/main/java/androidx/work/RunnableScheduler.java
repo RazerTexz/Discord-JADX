@@ -3,7 +3,7 @@ package androidx.work;
 import androidx.annotation.IntRange;
 import androidx.annotation.NonNull;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public interface RunnableScheduler {
     void cancel(@NonNull Runnable runnable);
 

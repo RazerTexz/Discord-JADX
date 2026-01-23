@@ -3,15 +3,15 @@ package p007b.p225i.p226a.p288f.p313h.p325l;
 import android.content.Context;
 import p007b.p100d.p104b.p105a.outline;
 
-/* compiled from: com.google.android.gms:play-services-measurement-impl@@18.0.0 */
-/* renamed from: b.i.a.f.h.l.v1 */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.h.l.v1 */
+/* JADX INFO: compiled from: com.google.android.gms:play-services-measurement-impl@@18.0.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public final class C3861v1 extends AbstractC3836t2 {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final Context f10358a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final InterfaceC3914z2<AbstractC3888x2<C3678h2>> f10359b;
 
     public C3861v1(Context context, InterfaceC3914z2<AbstractC3888x2<C3678h2>> interfaceC3914z2) {
@@ -20,13 +20,13 @@ public final class C3861v1 extends AbstractC3836t2 {
     }
 
     @Override // p007b.p225i.p226a.p288f.p313h.p325l.AbstractC3836t2
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final Context mo5277a() {
         return this.f10358a;
     }
 
     @Override // p007b.p225i.p226a.p288f.p313h.p325l.AbstractC3836t2
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final InterfaceC3914z2<AbstractC3888x2<C3678h2>> mo5278b() {
         return this.f10359b;
     }

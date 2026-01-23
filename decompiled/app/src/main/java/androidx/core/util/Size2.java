@@ -5,9 +5,9 @@ import android.util.SizeF;
 import androidx.annotation.RequiresApi;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: Size.kt */
-/* renamed from: androidx.core.util.SizeKt, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: androidx.core.util.SizeKt, reason: use source file name */
+/* JADX INFO: compiled from: Size.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class Size2 {
     @RequiresApi(21)
     public static final int component1(Size size) {

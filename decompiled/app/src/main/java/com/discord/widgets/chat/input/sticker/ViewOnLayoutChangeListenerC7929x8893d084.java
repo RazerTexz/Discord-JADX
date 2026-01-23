@@ -3,9 +3,9 @@ package com.discord.widgets.chat.input.sticker;
 import android.view.View;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: View.kt */
-/* renamed from: com.discord.widgets.chat.input.sticker.WidgetStickerPicker$setupForInlineSearchAndScroll$$inlined$doOnLayout$1$lambda$1 */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.chat.input.sticker.WidgetStickerPicker$setupForInlineSearchAndScroll$$inlined$doOnLayout$1$lambda$1 */
+/* JADX INFO: compiled from: View.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class ViewOnLayoutChangeListenerC7929x8893d084 implements View.OnLayoutChangeListener {
     public final /* synthetic */ ViewOnLayoutChangeListenerC7928xcd11d8b4 this$0;
 

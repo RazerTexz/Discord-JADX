@@ -13,9 +13,9 @@ import p507d0.p580t.Maps6;
 import p507d0.p580t._Collections;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: mappingUtil.kt */
-/* renamed from: d0.e0.p.d.m0.b.q.q, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.b.q.q, reason: use source file name */
+/* JADX INFO: compiled from: mappingUtil.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class mappingUtil {
     public static final TypeSubstitution3 createMappedTypeParametersSubstitution(ClassDescriptor classDescriptor, ClassDescriptor classDescriptor2) {
         Intrinsics3.checkNotNullParameter(classDescriptor, "from");

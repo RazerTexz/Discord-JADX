@@ -6,11 +6,11 @@ import java.util.ServiceConfigurationError;
 import kotlinx.coroutines.android.AndroidExceptionPreHandler;
 import kotlinx.coroutines.android.HandlerDispatcher;
 
-/* compiled from: ServiceLoader */
-/* renamed from: a, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: a, reason: use source file name */
+/* JADX INFO: compiled from: ServiceLoader */
+/* JADX INFO: loaded from: classes.dex */
 public final /* synthetic */ class ServiceLoader {
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static Iterator m0a() {
         try {
             return Arrays.asList(new AndroidExceptionPreHandler()).iterator();
@@ -19,7 +19,7 @@ public final /* synthetic */ class ServiceLoader {
         }
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static Iterator m1b() {
         try {
             return Arrays.asList(new HandlerDispatcher()).iterator();

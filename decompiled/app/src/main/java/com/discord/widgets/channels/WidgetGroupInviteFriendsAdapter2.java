@@ -5,9 +5,9 @@ import com.discord.widgets.channels.WidgetGroupInviteFriends;
 import com.discord.widgets.channels.WidgetGroupInviteFriendsAdapter;
 import kotlin.jvm.functions.Function2;
 
-/* compiled from: WidgetGroupInviteFriendsAdapter.kt */
-/* renamed from: com.discord.widgets.channels.WidgetGroupInviteFriendsAdapter$WidgetGroupInviteFriendsListItem$onConfigure$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.channels.WidgetGroupInviteFriendsAdapter$WidgetGroupInviteFriendsListItem$onConfigure$1, reason: use source file name */
+/* JADX INFO: compiled from: WidgetGroupInviteFriendsAdapter.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetGroupInviteFriendsAdapter2 implements View.OnClickListener {
     public final /* synthetic */ WidgetGroupInviteFriends.Model.FriendItem $data;
     public final /* synthetic */ WidgetGroupInviteFriendsAdapter.WidgetGroupInviteFriendsListItem this$0;

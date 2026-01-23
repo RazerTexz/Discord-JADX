@@ -9,7 +9,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import p007b.p100d.p104b.p105a.outline;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class RawDocumentFile extends DocumentFile {
     private File mFile;
 

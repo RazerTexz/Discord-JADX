@@ -19,14 +19,14 @@ import p637j0.p641k.Func1;
 import p637j0.p653p.Schedulers2;
 import p658rx.Observable;
 
-/* compiled from: RestClient.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: RestClient.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class RestClient {
     public static final RestClient INSTANCE = new RestClient();
     private static RestApi restApi;
 
-    /* compiled from: RestClient.kt */
-    /* renamed from: com.discord.gateway.rest.RestClient$getGateway$1 */
+    /* JADX INFO: renamed from: com.discord.gateway.rest.RestClient$getGateway$1 */
+    /* JADX INFO: compiled from: RestClient.kt */
     public static final class C55221<T, R> implements Func1<ModelGateway, String> {
         public static final C55221 INSTANCE = new C55221();
 
@@ -35,7 +35,7 @@ public final class RestClient {
             return call2(modelGateway);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final String call2(ModelGateway modelGateway) {
             Intrinsics3.checkNotNullExpressionValue(modelGateway, "it");
             return modelGateway.getUrl();

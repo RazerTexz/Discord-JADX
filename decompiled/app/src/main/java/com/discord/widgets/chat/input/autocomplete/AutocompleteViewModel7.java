@@ -3,9 +3,9 @@ package com.discord.widgets.chat.input.autocomplete;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: AutocompleteViewModel.kt */
-/* renamed from: com.discord.widgets.chat.input.autocomplete.ViewState, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.chat.input.autocomplete.ViewState, reason: use source file name */
+/* JADX INFO: compiled from: AutocompleteViewModel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final /* data */ class AutocompleteViewModel7 {
     private final AutocompleteViewModel4 autocompleteViewState;
     private final AutocompleteViewModel6 selectedCommandViewState;
@@ -27,12 +27,12 @@ public final /* data */ class AutocompleteViewModel7 {
         return autocompleteViewModel7.copy(autocompleteViewModel4, autocompleteViewModel6);
     }
 
-    /* renamed from: component1, reason: from getter */
+    /* JADX INFO: renamed from: component1, reason: from getter */
     public final AutocompleteViewModel4 getAutocompleteViewState() {
         return this.autocompleteViewState;
     }
 
-    /* renamed from: component2, reason: from getter */
+    /* JADX INFO: renamed from: component2, reason: from getter */
     public final AutocompleteViewModel6 getSelectedCommandViewState() {
         return this.selectedCommandViewState;
     }

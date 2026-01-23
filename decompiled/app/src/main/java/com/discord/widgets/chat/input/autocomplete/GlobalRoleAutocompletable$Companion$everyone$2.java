@@ -4,8 +4,8 @@ import com.discord.models.domain.ModelGuildMemberListUpdate;
 import kotlin.jvm.functions.Function0;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: Autocompletable.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: Autocompletable.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class GlobalRoleAutocompletable$Companion$everyone$2 extends Lambda implements Function0<GlobalRoleAutocompletable> {
     public static final GlobalRoleAutocompletable$Companion$everyone$2 INSTANCE = new GlobalRoleAutocompletable$Companion$everyone$2();
 

@@ -6,7 +6,7 @@ import p007b.p100d.p104b.p105a.outline;
   classes3.dex
   discord-126021.apk:org/objectweb/asm/ClassTooLargeException.SCL.lombok
  */
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public final class ClassTooLargeException extends IndexOutOfBoundsException {
     private static final long serialVersionUID = 160715609518896765L;
     private final String className;

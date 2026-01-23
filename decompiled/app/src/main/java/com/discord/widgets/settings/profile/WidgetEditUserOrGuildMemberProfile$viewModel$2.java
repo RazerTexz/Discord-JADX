@@ -3,8 +3,8 @@ package com.discord.widgets.settings.profile;
 import kotlin.jvm.functions.Function0;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetEditUserOrGuildMemberProfile.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetEditUserOrGuildMemberProfile.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetEditUserOrGuildMemberProfile$viewModel$2 extends Lambda implements Function0<EditUserOrGuildMemberProfileViewModel2> {
     public final /* synthetic */ WidgetEditUserOrGuildMemberProfile this$0;
 

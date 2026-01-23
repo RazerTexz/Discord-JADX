@@ -5,13 +5,13 @@ import androidx.annotation.RequiresApi;
 import p007b.p452o.p453a.p455n.p456o.ActionHolder;
 import p007b.p452o.p453a.p455n.p456o.BaseAction;
 
-/* compiled from: BaseLock.java */
+/* JADX INFO: renamed from: b.o.a.n.p.a, reason: use source file name */
+/* JADX INFO: compiled from: BaseLock.java */
+/* JADX INFO: loaded from: classes3.dex */
 @RequiresApi(21)
-/* renamed from: b.o.a.n.p.a, reason: use source file name */
-/* loaded from: classes3.dex */
 public abstract class BaseLock extends BaseAction {
     @Override // p007b.p452o.p453a.p455n.p456o.BaseAction
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final void mo7249j(@NonNull ActionHolder actionHolder) {
         this.f13939c = actionHolder;
         boolean zMo7344n = mo7344n(actionHolder);
@@ -22,12 +22,12 @@ public abstract class BaseLock extends BaseAction {
         }
     }
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public abstract boolean mo7343m(@NonNull ActionHolder actionHolder);
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public abstract boolean mo7344n(@NonNull ActionHolder actionHolder);
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public abstract void mo7345o(@NonNull ActionHolder actionHolder);
 }

@@ -21,32 +21,32 @@ import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.FunctionReferenceImpl;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: WidgetBlockRussianPurchasesDialog.kt */
-/* renamed from: b.a.a.r, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.a.a.r, reason: use source file name */
+/* JADX INFO: compiled from: WidgetBlockRussianPurchasesDialog.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class WidgetBlockRussianPurchasesDialog extends AppDialog {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static final /* synthetic */ KProperty[] f423j = {outline.m846d0(WidgetBlockRussianPurchasesDialog.class, "binding", "getBinding()Lcom/discord/databinding/WidgetBlockRussianPurchasesDialogBinding;", 0)};
 
-    /* renamed from: k, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: k, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
 
-    /* renamed from: l, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: l, reason: from kotlin metadata */
     public final FragmentViewBindingDelegate binding;
 
-    /* compiled from: WidgetBlockRussianPurchasesDialog.kt */
-    /* renamed from: b.a.a.r$a, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: b.a.a.r$a, reason: from kotlin metadata */
+    /* JADX INFO: compiled from: WidgetBlockRussianPurchasesDialog.kt */
     public static final class Companion {
         public Companion(DefaultConstructorMarker defaultConstructorMarker) {
         }
     }
 
-    /* compiled from: WidgetBlockRussianPurchasesDialog.kt */
-    /* renamed from: b.a.a.r$b */
+    /* JADX INFO: renamed from: b.a.a.r$b */
+    /* JADX INFO: compiled from: WidgetBlockRussianPurchasesDialog.kt */
     public static final /* synthetic */ class b extends FunctionReferenceImpl implements Function1<View, WidgetBlockRussianPurchasesDialogBinding> {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public static final b f426j = new b();
 
         public b() {
@@ -82,8 +82,8 @@ public final class WidgetBlockRussianPurchasesDialog extends AppDialog {
         }
     }
 
-    /* compiled from: WidgetBlockRussianPurchasesDialog.kt */
-    /* renamed from: b.a.a.r$c */
+    /* JADX INFO: renamed from: b.a.a.r$c */
+    /* JADX INFO: compiled from: WidgetBlockRussianPurchasesDialog.kt */
     public static final class c implements View.OnClickListener {
         public c() {
         }
@@ -99,7 +99,7 @@ public final class WidgetBlockRussianPurchasesDialog extends AppDialog {
         this.binding = FragmentViewBindingDelegate3.viewBinding$default(this, b.f426j, null, 2, null);
     }
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public final WidgetBlockRussianPurchasesDialogBinding m143g() {
         return (WidgetBlockRussianPurchasesDialogBinding) this.binding.getValue((Fragment) this, f423j[0]);
     }

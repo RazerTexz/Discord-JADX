@@ -7,9 +7,9 @@ import kotlin.jvm.functions.Function1;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetGlobalSearchGuildsModel.kt */
-/* renamed from: com.discord.widgets.user.search.WidgetGlobalSearchGuildsModel$Companion$asDirectMessageItems$1, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: com.discord.widgets.user.search.WidgetGlobalSearchGuildsModel$Companion$asDirectMessageItems$1, reason: use source file name */
+/* JADX INFO: compiled from: WidgetGlobalSearchGuildsModel.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class WidgetGlobalSearchGuildsModel2 extends Lambda implements Function1<Channel, Boolean> {
     public final /* synthetic */ ModelNotificationSettings $dmSettings;
     public final /* synthetic */ Map $mentionCounts;
@@ -26,7 +26,7 @@ public final class WidgetGlobalSearchGuildsModel2 extends Lambda implements Func
         return Boolean.valueOf(invoke2(channel));
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final boolean invoke2(Channel channel) {
         ModelNotificationSettings modelNotificationSettings;
         ModelNotificationSettings.ChannelOverride channelOverride;

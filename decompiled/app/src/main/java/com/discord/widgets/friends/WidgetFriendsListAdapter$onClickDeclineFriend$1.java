@@ -6,8 +6,8 @@ import kotlin.jvm.functions.Function2;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetFriendsListAdapter.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetFriendsListAdapter.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetFriendsListAdapter$onClickDeclineFriend$1 extends Lambda implements Function2<User, Integer, Unit> {
     public static final WidgetFriendsListAdapter$onClickDeclineFriend$1 INSTANCE = new WidgetFriendsListAdapter$onClickDeclineFriend$1();
 

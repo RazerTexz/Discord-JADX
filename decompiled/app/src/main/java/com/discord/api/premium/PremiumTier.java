@@ -1,8 +1,8 @@
 package com.discord.api.premium;
 
 
-/* compiled from: PremiumTier.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: PremiumTier.kt */
+/* JADX INFO: loaded from: classes.dex */
 public enum PremiumTier {
     NONE,
     PREMIUM_GUILD_SUBSCRIPTION_ONLY,

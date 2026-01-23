@@ -25,8 +25,8 @@ import p507d0.p579g0.StringsJVM;
 import p507d0.p580t.Iterables2;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: WidgetChatListAdapterItemPrivateChannelStart.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetChatListAdapterItemPrivateChannelStart.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetChatListAdapterItemPrivateChannelStart extends WidgetChatListItem {
     private final WidgetChatListAdapterItemPrivateChannelStartBinding binding;
 

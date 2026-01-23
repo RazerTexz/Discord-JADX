@@ -23,10 +23,12 @@ import p007b.p225i.p361c.p369m.p370d.Logger3;
 import p007b.p225i.p361c.p369m.p370d.MissingNativeComponent;
 import p007b.p225i.p361c.p369m.p370d.Onboarding3;
 import p007b.p225i.p361c.p369m.p370d.Onboarding4;
+import p007b.p225i.p361c.p369m.p370d.p371i.AnalyticsEventLogger;
 import p007b.p225i.p361c.p369m.p370d.p371i.BlockingAnalyticsEventLogger;
 import p007b.p225i.p361c.p369m.p370d.p371i.BreadcrumbAnalyticsEventReceiver;
 import p007b.p225i.p361c.p369m.p370d.p371i.CrashlyticsOriginAnalyticsEventLogger;
 import p007b.p225i.p361c.p369m.p370d.p371i.UnavailableAnalyticsEventLogger;
+import p007b.p225i.p361c.p369m.p370d.p372j.BreadcrumbSource;
 import p007b.p225i.p361c.p369m.p370d.p372j.DisabledBreadcrumbSource;
 import p007b.p225i.p361c.p369m.p370d.p373k.AppData;
 import p007b.p225i.p361c.p369m.p370d.p373k.C4611b0;
@@ -52,32 +54,28 @@ import p007b.p225i.p361c.p369m.p370d.p384s.p386i.DefaultSettingsSpiCall;
 import p007b.p225i.p361c.p369m.p370d.p388u.ResourceUnityVersionProvider;
 import p007b.p225i.p361c.p401u.InterfaceC4843g;
 
-/* compiled from: CrashlyticsRegistrar.java */
-/* renamed from: b.i.c.m.b, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.c.m.b, reason: use source file name */
+/* JADX INFO: compiled from: CrashlyticsRegistrar.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final /* synthetic */ class CrashlyticsRegistrar2 implements ComponentFactory {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final CrashlyticsRegistrar f12221a;
 
     public CrashlyticsRegistrar2(CrashlyticsRegistrar crashlyticsRegistrar) {
         this.f12221a = crashlyticsRegistrar;
     }
 
-    /* JADX WARN: Multi-variable type inference failed */
     /* JADX WARN: Removed duplicated region for block: B:39:0x026b  */
     /* JADX WARN: Removed duplicated region for block: B:67:0x03a0  */
-    /* JADX WARN: Type inference failed for: r3v21, types: [b.i.c.m.d.i.b, b.i.c.m.d.i.d] */
-    /* JADX WARN: Type inference failed for: r4v31, types: [b.i.c.m.d.i.b, b.i.c.m.d.i.c] */
-    /* JADX WARN: Type inference failed for: r5v7, types: [b.i.c.m.d.i.e] */
     @Override // p007b.p225i.p361c.p368l.ComponentFactory
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
     public Object mo6341a(ComponentContainer componentContainer) {
-        DisabledBreadcrumbSource disabledBreadcrumbSource;
-        UnavailableAnalyticsEventLogger unavailableAnalyticsEventLogger;
+        BreadcrumbSource disabledBreadcrumbSource;
+        AnalyticsEventLogger unavailableAnalyticsEventLogger;
         boolean z2;
         String str;
         boolean z3;
@@ -91,8 +89,8 @@ public final /* synthetic */ class CrashlyticsRegistrar2 implements ComponentFac
         String string;
         String str2;
         boolean zExists;
-        UnavailableAnalyticsEventLogger unavailableAnalyticsEventLogger2;
-        DisabledBreadcrumbSource disabledBreadcrumbSource2;
+        AnalyticsEventLogger analyticsEventLogger;
+        BreadcrumbSource disabledBreadcrumbSource2;
         Objects.requireNonNull(this.f12221a);
         FirebaseApp2 firebaseApp2 = (FirebaseApp2) componentContainer.mo6346a(FirebaseApp2.class);
         CrashlyticsNativeComponent crashlyticsNativeComponent = (CrashlyticsNativeComponent) componentContainer.mo6346a(CrashlyticsNativeComponent.class);
@@ -107,7 +105,7 @@ public final /* synthetic */ class CrashlyticsRegistrar2 implements ComponentFac
         if (interfaceC4549a != null) {
             Logger3 logger3 = Logger3.f12227a;
             logger3.m6371b("Firebase Analytics is available.");
-            ?? crashlyticsOriginAnalyticsEventLogger = new CrashlyticsOriginAnalyticsEventLogger(interfaceC4549a);
+            CrashlyticsOriginAnalyticsEventLogger crashlyticsOriginAnalyticsEventLogger = new CrashlyticsOriginAnalyticsEventLogger(interfaceC4549a);
             CrashlyticsAnalyticsListener crashlyticsAnalyticsListener = new CrashlyticsAnalyticsListener();
             InterfaceC4549a.a aVarMo6340c = interfaceC4549a.mo6340c("clx", crashlyticsAnalyticsListener);
             if (aVarMo6340c == null) {
@@ -119,19 +117,19 @@ public final /* synthetic */ class CrashlyticsRegistrar2 implements ComponentFac
             }
             if (aVarMo6340c != null) {
                 logger3.m6371b("Firebase Analytics listener registered successfully.");
-                ?? breadcrumbAnalyticsEventReceiver = new BreadcrumbAnalyticsEventReceiver();
-                ?? blockingAnalyticsEventLogger = new BlockingAnalyticsEventLogger(crashlyticsOriginAnalyticsEventLogger, 500, TimeUnit.MILLISECONDS);
+                BreadcrumbAnalyticsEventReceiver breadcrumbAnalyticsEventReceiver = new BreadcrumbAnalyticsEventReceiver();
+                BlockingAnalyticsEventLogger blockingAnalyticsEventLogger = new BlockingAnalyticsEventLogger(crashlyticsOriginAnalyticsEventLogger, 500, TimeUnit.MILLISECONDS);
                 crashlyticsAnalyticsListener.f12220b = breadcrumbAnalyticsEventReceiver;
                 crashlyticsAnalyticsListener.f12219a = blockingAnalyticsEventLogger;
-                unavailableAnalyticsEventLogger2 = blockingAnalyticsEventLogger;
+                analyticsEventLogger = blockingAnalyticsEventLogger;
                 disabledBreadcrumbSource2 = breadcrumbAnalyticsEventReceiver;
             } else {
                 logger3.m6371b("Firebase Analytics listener registration failed.");
                 disabledBreadcrumbSource2 = new DisabledBreadcrumbSource();
-                unavailableAnalyticsEventLogger2 = crashlyticsOriginAnalyticsEventLogger;
+                analyticsEventLogger = crashlyticsOriginAnalyticsEventLogger;
             }
             disabledBreadcrumbSource = disabledBreadcrumbSource2;
-            unavailableAnalyticsEventLogger = unavailableAnalyticsEventLogger2;
+            unavailableAnalyticsEventLogger = analyticsEventLogger;
         } else {
             Logger3.f12227a.m6371b("Firebase Analytics is unavailable.");
             disabledBreadcrumbSource = new DisabledBreadcrumbSource();
@@ -257,9 +255,6 @@ public final /* synthetic */ class CrashlyticsRegistrar2 implements ComponentFac
                     Log.e(str, "Crashlytics was not started due to an exception during initialization", e);
                 }
                 crashlyticsCore3.f12336h = null;
-                z4 = false;
-                C3404f.m4323o(executorService, new FirebaseCrashlytics2(onboarding4, executorService, settingsController, z4, crashlyticsCore3));
-                return new FirebaseCrashlytics(crashlyticsCore3);
             }
             if (!zExists || !CommonUtils.m6408b(crashlyticsCore3.f12329a)) {
                 Logger3.f12227a.m6371b("Exception handling initialization successful");

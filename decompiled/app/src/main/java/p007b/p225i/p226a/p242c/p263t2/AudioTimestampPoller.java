@@ -6,48 +6,48 @@ import androidx.annotation.Nullable;
 import androidx.annotation.RequiresApi;
 import p007b.p225i.p226a.p242c.p259f3.Util2;
 
-/* compiled from: AudioTimestampPoller.java */
-/* renamed from: b.i.a.c.t2.s, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.t2.s, reason: use source file name */
+/* JADX INFO: compiled from: AudioTimestampPoller.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class AudioTimestampPoller {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     @Nullable
     public final a f7792a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public int f7793b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public long f7794c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public long f7795d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public long f7796e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public long f7797f;
 
-    /* compiled from: AudioTimestampPoller.java */
+    /* JADX INFO: renamed from: b.i.a.c.t2.s$a */
+    /* JADX INFO: compiled from: AudioTimestampPoller.java */
     @RequiresApi(19)
-    /* renamed from: b.i.a.c.t2.s$a */
     public static final class a {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final AudioTrack f7798a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final AudioTimestamp f7799b = new AudioTimestamp();
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public long f7800c;
 
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         public long f7801d;
 
-        /* renamed from: e */
+        /* JADX INFO: renamed from: e */
         public long f7802e;
 
         public a(AudioTrack audioTrack) {
@@ -65,14 +65,14 @@ public final class AudioTimestampPoller {
         }
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public void m3499a() {
         if (this.f7792a != null) {
             m3500b(0);
         }
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final void m3500b(int i) {
         this.f7793b = i;
         if (i == 0) {

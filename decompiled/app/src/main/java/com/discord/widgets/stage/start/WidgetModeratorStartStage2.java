@@ -13,9 +13,9 @@ import kotlin.jvm.functions.Function1;
 import p507d0.p592z.p594d.FunctionReferenceImpl;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: WidgetModeratorStartStage.kt */
-/* renamed from: com.discord.widgets.stage.start.WidgetModeratorStartStage$binding$2, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.stage.start.WidgetModeratorStartStage$binding$2, reason: use source file name */
+/* JADX INFO: compiled from: WidgetModeratorStartStage.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final /* synthetic */ class WidgetModeratorStartStage2 extends FunctionReferenceImpl implements Function1<View, WidgetModeratorStartStageBinding> {
     public static final WidgetModeratorStartStage2 INSTANCE = new WidgetModeratorStartStage2();
 
@@ -28,7 +28,7 @@ public final /* synthetic */ class WidgetModeratorStartStage2 extends FunctionRe
         return invoke2(view);
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final WidgetModeratorStartStageBinding invoke2(View view) {
         Intrinsics3.checkNotNullParameter(view, "p1");
         int i = C5419R.id.action_bar_toolbar;

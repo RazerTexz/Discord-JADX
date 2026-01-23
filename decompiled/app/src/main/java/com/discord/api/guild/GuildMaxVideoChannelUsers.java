@@ -3,11 +3,11 @@ package com.discord.api.guild;
 import kotlin.jvm.internal.DefaultConstructorMarker;
 import p007b.p100d.p104b.p105a.outline;
 
-/* compiled from: GuildMaxVideoChannelUsers.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: GuildMaxVideoChannelUsers.kt */
+/* JADX INFO: loaded from: classes.dex */
 public abstract class GuildMaxVideoChannelUsers {
 
-    /* compiled from: GuildMaxVideoChannelUsers.kt */
+    /* JADX INFO: compiled from: GuildMaxVideoChannelUsers.kt */
     public static final /* data */ class Limited extends GuildMaxVideoChannelUsers {
         private final int limit;
 
@@ -16,7 +16,7 @@ public abstract class GuildMaxVideoChannelUsers {
             this.limit = i;
         }
 
-        /* renamed from: a, reason: from getter */
+        /* JADX INFO: renamed from: a, reason: from getter */
         public final int getLimit() {
             return this.limit;
         }
@@ -37,7 +37,7 @@ public abstract class GuildMaxVideoChannelUsers {
         }
     }
 
-    /* compiled from: GuildMaxVideoChannelUsers.kt */
+    /* JADX INFO: compiled from: GuildMaxVideoChannelUsers.kt */
     public static final class Unlimited extends GuildMaxVideoChannelUsers {
         public static final Unlimited INSTANCE = new Unlimited();
 

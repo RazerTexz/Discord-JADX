@@ -3,12 +3,12 @@ package p630i0;
 import java.lang.annotation.Annotation;
 import p007b.p100d.p104b.p105a.outline;
 
-/* compiled from: SkipCallbackExecutorImpl.java */
-/* renamed from: i0.b0, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: i0.b0, reason: use source file name */
+/* JADX INFO: compiled from: SkipCallbackExecutorImpl.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class SkipCallbackExecutorImpl implements SkipCallbackExecutor {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final SkipCallbackExecutor f26482a = new SkipCallbackExecutorImpl();
 
     @Override // java.lang.annotation.Annotation

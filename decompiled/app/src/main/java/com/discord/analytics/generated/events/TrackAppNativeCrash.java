@@ -8,8 +8,8 @@ import com.discord.api.science.AnalyticsSchema;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: TrackAppNativeCrash.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: TrackAppNativeCrash.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class TrackAppNativeCrash implements AnalyticsSchema, TrackBase2, TrackOverlayClientMetadata2 {
     private TrackBase trackBase;
     private TrackOverlayClientMetadata trackOverlayClientMetadata;
@@ -29,7 +29,7 @@ public final /* data */ class TrackAppNativeCrash implements AnalyticsSchema, Tr
     private final transient String analyticsSchemaTypeName = "app_native_crash";
 
     @Override // com.discord.api.science.AnalyticsSchema
-    /* renamed from: d, reason: from getter */
+    /* JADX INFO: renamed from: d, reason: from getter */
     public String getAnalyticsSchemaTypeName() {
         return this.analyticsSchemaTypeName;
     }

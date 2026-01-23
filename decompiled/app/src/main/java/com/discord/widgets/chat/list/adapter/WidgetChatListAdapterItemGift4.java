@@ -11,9 +11,9 @@ import java.util.Map;
 import p507d0.p592z.p594d.Intrinsics3;
 import p658rx.functions.Func2;
 
-/* compiled from: WidgetChatListAdapterItemGift.kt */
-/* renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemGift$ModelProvider$getResolvedGiftModel$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemGift$ModelProvider$getResolvedGiftModel$1, reason: use source file name */
+/* JADX INFO: compiled from: WidgetChatListAdapterItemGift.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetChatListAdapterItemGift4<T1, T2, R> implements Func2<MeUser, Map<Long, ? extends ModelLibraryApplication>, WidgetChatListAdapterItemGift.Model> {
     public final /* synthetic */ ModelGift $gift;
     public final /* synthetic */ boolean $redeeming;
@@ -28,7 +28,7 @@ public final class WidgetChatListAdapterItemGift4<T1, T2, R> implements Func2<Me
         return call2(meUser, (Map<Long, ModelLibraryApplication>) map);
     }
 
-    /* renamed from: call, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
     public final WidgetChatListAdapterItemGift.Model call2(MeUser meUser, Map<Long, ModelLibraryApplication> map) {
         WidgetChatListAdapterItemGift.Model invalid;
         if (this.$gift.isExpired(ClockFactory.get().currentTimeMillis())) {

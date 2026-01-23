@@ -8,12 +8,12 @@ import p507d0.p513e0.p514p.p515d.p517m0.p531e.p532a.p539k0.InterfaceC11581n;
 import p507d0.p513e0.p514p.p515d.p517m0.p531e.p532a.p539k0.javaTypes5;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ReflectJavaField.kt */
-/* renamed from: d0.e0.p.d.m0.c.k1.b.p, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.c.k1.b.p, reason: use source file name */
+/* JADX INFO: compiled from: ReflectJavaField.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class ReflectJavaField extends ReflectJavaMember2 implements InterfaceC11581n {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final Field f23059a;
 
     public ReflectJavaField(Field field) {

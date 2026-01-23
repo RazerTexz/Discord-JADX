@@ -5,12 +5,12 @@ import kotlin.jvm.functions.Function2;
 import p507d0.p592z.p594d.FunctionReferenceImpl;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: WidgetFriendsAddUserRequestsModel.kt */
-/* renamed from: v, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: v, reason: use source file name */
+/* JADX INFO: compiled from: WidgetFriendsAddUserRequestsModel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final /* synthetic */ class WidgetFriendsAddUserRequestsModel2 extends FunctionReferenceImpl implements Function2<Set<? extends Long>, Set<? extends Long>, WidgetFriendsAddUserRequestsModel> {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static final WidgetFriendsAddUserRequestsModel2 f27929j = new WidgetFriendsAddUserRequestsModel2();
 
     public WidgetFriendsAddUserRequestsModel2() {

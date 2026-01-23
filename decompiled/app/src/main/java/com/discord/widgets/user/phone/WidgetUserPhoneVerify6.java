@@ -5,9 +5,9 @@ import com.discord.api.science.AnalyticsSchema;
 import kotlin.jvm.functions.Function0;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetUserPhoneVerify.kt */
-/* renamed from: com.discord.widgets.user.phone.WidgetUserPhoneVerify$loggingConfig$1, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: com.discord.widgets.user.phone.WidgetUserPhoneVerify$loggingConfig$1, reason: use source file name */
+/* JADX INFO: compiled from: WidgetUserPhoneVerify.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class WidgetUserPhoneVerify6 extends Lambda implements Function0<AnalyticsSchema> {
     public static final WidgetUserPhoneVerify6 INSTANCE = new WidgetUserPhoneVerify6();
 

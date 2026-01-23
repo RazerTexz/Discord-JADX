@@ -10,8 +10,8 @@ import java.util.Locale;
 import java.util.Objects;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: WidgetChatListAdapterItemNewMessages.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetChatListAdapterItemNewMessages.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetChatListAdapterItemNewMessages extends WidgetChatListItem {
     private final WidgetChatListAdapterItemTextDividerBinding binding;
     private final LocaleManager localeManager;

@@ -7,13 +7,13 @@ import android.os.IInterface;
 import android.os.Parcel;
 import android.os.RemoteException;
 
-/* compiled from: ITrustedWebActivityService.java */
-/* renamed from: x.a.a.d.b, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: x.a.a.d.b, reason: use source file name */
+/* JADX INFO: compiled from: ITrustedWebActivityService.java */
+/* JADX INFO: loaded from: classes.dex */
 public interface ITrustedWebActivityService extends IInterface {
 
-    /* compiled from: ITrustedWebActivityService.java */
-    /* renamed from: x.a.a.d.b$a */
+    /* JADX INFO: renamed from: x.a.a.d.b$a */
+    /* JADX INFO: compiled from: ITrustedWebActivityService.java */
     public static abstract class a extends Binder implements ITrustedWebActivityService {
         private static final String DESCRIPTOR = "android.support.customtabs.trusted.ITrustedWebActivityService";
         public static final int TRANSACTION_areNotificationsEnabled = 6;
@@ -24,14 +24,14 @@ public interface ITrustedWebActivityService extends IInterface {
         public static final int TRANSACTION_getSmallIconId = 4;
         public static final int TRANSACTION_notifyNotificationWithChannel = 2;
 
-        /* compiled from: ITrustedWebActivityService.java */
-        /* renamed from: x.a.a.d.b$a$a, reason: collision with other inner class name */
+        /* JADX INFO: renamed from: x.a.a.d.b$a$a, reason: collision with other inner class name */
+        /* JADX INFO: compiled from: ITrustedWebActivityService.java */
         public static class C13359a implements ITrustedWebActivityService {
 
-            /* renamed from: a */
+            /* JADX INFO: renamed from: a */
             public static ITrustedWebActivityService f27939a;
 
-            /* renamed from: b */
+            /* JADX INFO: renamed from: b */
             public IBinder f27940b;
 
             public C13359a(IBinder iBinder) {

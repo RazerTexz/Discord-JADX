@@ -8,22 +8,22 @@ import androidx.viewbinding.ViewBinding;
 import com.facebook.drawee.view.SimpleDraweeView;
 import com.google.android.material.checkbox.MaterialCheckBox;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public final class GroupInviteFriendsSheetItemBinding implements ViewBinding {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     @NonNull
     public final ConstraintLayout f15113a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     @NonNull
     public final SimpleDraweeView f15114b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     @NonNull
     public final TextView f15115c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     @NonNull
     public final MaterialCheckBox f15116d;
 

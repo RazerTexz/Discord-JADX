@@ -4,41 +4,41 @@ import android.content.Context;
 import android.view.ViewConfiguration;
 import androidx.annotation.VisibleForTesting;
 
-/* compiled from: GestureDetector.java */
-/* renamed from: b.f.g.g.a, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.f.g.g.a, reason: use source file name */
+/* JADX INFO: compiled from: GestureDetector.java */
+/* JADX INFO: loaded from: classes.dex */
 public class GestureDetector {
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     @VisibleForTesting
     public final float f3481b;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     @VisibleForTesting
     public long f3484e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     @VisibleForTesting
     public float f3485f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     @VisibleForTesting
     public float f3486g;
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     @VisibleForTesting
     public a f3480a = null;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     @VisibleForTesting
     public boolean f3482c = false;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     @VisibleForTesting
     public boolean f3483d = false;
 
-    /* compiled from: GestureDetector.java */
-    /* renamed from: b.f.g.g.a$a */
+    /* JADX INFO: renamed from: b.f.g.g.a$a */
+    /* JADX INFO: compiled from: GestureDetector.java */
     public interface a {
     }
 

@@ -2,8 +2,8 @@ package com.google.android.gms.cloudmessaging;
 
 import androidx.annotation.Nullable;
 
-/* compiled from: com.google.android.gms:play-services-cloud-messaging@@16.0.0 */
-/* loaded from: classes3.dex */
+/* JADX INFO: compiled from: com.google.android.gms:play-services-cloud-messaging@@16.0.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public final class zzp extends Exception {
     private final int zza;
 

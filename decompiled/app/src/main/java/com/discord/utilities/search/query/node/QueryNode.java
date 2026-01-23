@@ -13,15 +13,15 @@ import p507d0.p579g0.Strings4;
 import p507d0.p580t.Iterables2;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: QueryNode.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: QueryNode.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public abstract class QueryNode extends Node<Context> {
 
-    /* renamed from: Preprocessor, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Preprocessor, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
 
-    /* compiled from: QueryNode.kt */
-    /* renamed from: com.discord.utilities.search.query.node.QueryNode$Preprocessor, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: com.discord.utilities.search.query.node.QueryNode$Preprocessor, reason: from kotlin metadata */
+    /* JADX INFO: compiled from: QueryNode.kt */
     public static final class Companion {
         private Companion() {
         }

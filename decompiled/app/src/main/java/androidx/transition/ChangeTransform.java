@@ -18,7 +18,7 @@ import androidx.core.content.res.TypedArrayUtils;
 import androidx.core.view.ViewCompat;
 import org.xmlpull.v1.XmlPullParser;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class ChangeTransform extends Transition {
     private static final String PROPNAME_INTERMEDIATE_MATRIX = "android:changeTransform:intermediateMatrix";
     private static final String PROPNAME_INTERMEDIATE_PARENT_MATRIX = "android:changeTransform:intermediateParentMatrix";
@@ -34,7 +34,7 @@ public class ChangeTransform extends Transition {
     private static final Property<PathAnimatorMatrix, PointF> TRANSLATIONS_PROPERTY = new C06492(PointF.class, "translations");
     private static final boolean SUPPORTS_VIEW_REMOVAL_SUPPRESSION = true;
 
-    /* renamed from: androidx.transition.ChangeTransform$1 */
+    /* JADX INFO: renamed from: androidx.transition.ChangeTransform$1 */
     public static class C06481 extends Property<PathAnimatorMatrix, float[]> {
         public C06481(Class cls, String str) {
             super(cls, str);
@@ -45,7 +45,7 @@ public class ChangeTransform extends Transition {
             return get2(pathAnimatorMatrix);
         }
 
-        /* renamed from: get, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: get, reason: avoid collision after fix types in other method */
         public float[] get2(PathAnimatorMatrix pathAnimatorMatrix) {
             return null;
         }
@@ -55,19 +55,19 @@ public class ChangeTransform extends Transition {
             set2(pathAnimatorMatrix, fArr);
         }
 
-        /* renamed from: set, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: set, reason: avoid collision after fix types in other method */
         public void set2(PathAnimatorMatrix pathAnimatorMatrix, float[] fArr) {
             pathAnimatorMatrix.setValues(fArr);
         }
     }
 
-    /* renamed from: androidx.transition.ChangeTransform$2 */
+    /* JADX INFO: renamed from: androidx.transition.ChangeTransform$2 */
     public static class C06492 extends Property<PathAnimatorMatrix, PointF> {
         public C06492(Class cls, String str) {
             super(cls, str);
         }
 
-        /* renamed from: get, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: get, reason: avoid collision after fix types in other method */
         public PointF get2(PathAnimatorMatrix pathAnimatorMatrix) {
             return null;
         }
@@ -82,13 +82,13 @@ public class ChangeTransform extends Transition {
             set2(pathAnimatorMatrix, pointF);
         }
 
-        /* renamed from: set, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: set, reason: avoid collision after fix types in other method */
         public void set2(PathAnimatorMatrix pathAnimatorMatrix, PointF pointF) {
             pathAnimatorMatrix.setTranslation(pointF);
         }
     }
 
-    /* renamed from: androidx.transition.ChangeTransform$3 */
+    /* JADX INFO: renamed from: androidx.transition.ChangeTransform$3 */
     public class C06503 extends AnimatorListenerAdapter {
         private boolean mIsCanceled;
         private Matrix mTempMatrix = new Matrix();
@@ -152,7 +152,7 @@ public class ChangeTransform extends Transition {
         }
 
         @Override // androidx.transition.TransitionListenerAdapter, androidx.transition.Transition.TransitionListener
-        public void onTransitionEnd(@NonNull Transition transition) throws SecurityException, IllegalArgumentException {
+        public void onTransitionEnd(@NonNull Transition transition) {
             transition.removeListener(this);
             GhostViewUtils.removeGhost(this.mView);
             this.mView.setTag(C0658R.id.transition_transform, null);
@@ -299,11 +299,11 @@ public class ChangeTransform extends Transition {
         ghostViewAddGhost.reserveEndViewTransition((ViewGroup) transitionValues.values.get(PROPNAME_PARENT), transitionValues.view);
         Transition transition = this;
         while (true) {
-            Transition transition2 = transition.mParent;
-            if (transition2 == null) {
+            TransitionSet transitionSet = transition.mParent;
+            if (transitionSet == null) {
                 break;
             } else {
-                transition = transition2;
+                transition = transitionSet;
             }
         }
         transition.addListener(new GhostListener(view, ghostViewAddGhost));

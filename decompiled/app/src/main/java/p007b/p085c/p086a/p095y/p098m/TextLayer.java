@@ -35,79 +35,79 @@ import p007b.p085c.p086a.p095y.p096k.AnimatableTextProperties;
 import p007b.p085c.p086a.p095y.p097l.ShapeGroup;
 import p007b.p100d.p104b.p105a.outline;
 
-/* compiled from: TextLayer.java */
-/* renamed from: b.c.a.y.m.i, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.c.a.y.m.i, reason: use source file name */
+/* JADX INFO: compiled from: TextLayer.java */
+/* JADX INFO: loaded from: classes.dex */
 public class TextLayer extends BaseLayer2 {
 
-    /* renamed from: A */
+    /* JADX INFO: renamed from: A */
     public final Paint f2905A;
 
-    /* renamed from: B */
+    /* JADX INFO: renamed from: B */
     public final Paint f2906B;
 
-    /* renamed from: C */
+    /* JADX INFO: renamed from: C */
     public final Map<FontCharacter, List<ContentGroup>> f2907C;
 
-    /* renamed from: D */
+    /* JADX INFO: renamed from: D */
     public final LongSparseArray<String> f2908D;
 
-    /* renamed from: E */
+    /* JADX INFO: renamed from: E */
     public final TextKeyframeAnimation f2909E;
 
-    /* renamed from: F */
+    /* JADX INFO: renamed from: F */
     public final LottieDrawable f2910F;
 
-    /* renamed from: G */
+    /* JADX INFO: renamed from: G */
     public final LottieComposition f2911G;
 
-    /* renamed from: H */
+    /* JADX INFO: renamed from: H */
     @Nullable
     public BaseKeyframeAnimation<Integer, Integer> f2912H;
 
-    /* renamed from: I */
+    /* JADX INFO: renamed from: I */
     @Nullable
     public BaseKeyframeAnimation<Integer, Integer> f2913I;
 
-    /* renamed from: J */
+    /* JADX INFO: renamed from: J */
     @Nullable
     public BaseKeyframeAnimation<Integer, Integer> f2914J;
 
-    /* renamed from: K */
+    /* JADX INFO: renamed from: K */
     @Nullable
     public BaseKeyframeAnimation<Integer, Integer> f2915K;
 
-    /* renamed from: L */
+    /* JADX INFO: renamed from: L */
     @Nullable
     public BaseKeyframeAnimation<Float, Float> f2916L;
 
-    /* renamed from: M */
+    /* JADX INFO: renamed from: M */
     @Nullable
     public BaseKeyframeAnimation<Float, Float> f2917M;
 
-    /* renamed from: N */
+    /* JADX INFO: renamed from: N */
     @Nullable
     public BaseKeyframeAnimation<Float, Float> f2918N;
 
-    /* renamed from: O */
+    /* JADX INFO: renamed from: O */
     @Nullable
     public BaseKeyframeAnimation<Float, Float> f2919O;
 
-    /* renamed from: P */
+    /* JADX INFO: renamed from: P */
     @Nullable
     public BaseKeyframeAnimation<Float, Float> f2920P;
 
-    /* renamed from: x */
+    /* JADX INFO: renamed from: x */
     public final StringBuilder f2921x;
 
-    /* renamed from: y */
+    /* JADX INFO: renamed from: y */
     public final RectF f2922y;
 
-    /* renamed from: z */
+    /* JADX INFO: renamed from: z */
     public final Matrix f2923z;
 
-    /* compiled from: TextLayer.java */
-    /* renamed from: b.c.a.y.m.i$a */
+    /* JADX INFO: renamed from: b.c.a.y.m.i$a */
+    /* JADX INFO: compiled from: TextLayer.java */
     public class a extends Paint {
         public a(TextLayer textLayer, int i) {
             super(i);
@@ -115,8 +115,8 @@ public class TextLayer extends BaseLayer2 {
         }
     }
 
-    /* compiled from: TextLayer.java */
-    /* renamed from: b.c.a.y.m.i$b */
+    /* JADX INFO: renamed from: b.c.a.y.m.i$b */
+    /* JADX INFO: compiled from: TextLayer.java */
     public class b extends Paint {
         public b(TextLayer textLayer, int i) {
             super(i);
@@ -172,14 +172,14 @@ public class TextLayer extends BaseLayer2 {
     }
 
     @Override // p007b.p085c.p086a.p095y.p098m.BaseLayer2, p007b.p085c.p086a.p091w.p092b.DrawingContent
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public void mo712d(RectF rectF, Matrix matrix, boolean z2) {
         super.mo712d(rectF, matrix, z2);
         rectF.set(0.0f, 0.0f, this.f2911G.f2345j.width(), this.f2911G.f2345j.height());
     }
 
     @Override // p007b.p085c.p086a.p095y.p098m.BaseLayer2, p007b.p085c.p086a.p095y.KeyPathElement
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public <T> void mo714g(T t, @Nullable LottieValueCallback<T> lottieValueCallback) {
         this.f2857v.m745c(t, lottieValueCallback);
         if (t == LottieProperty.f2423a) {
@@ -262,7 +262,7 @@ public class TextLayer extends BaseLayer2 {
     /* JADX WARN: Type inference failed for: r3v4, types: [T, java.lang.String] */
     /* JADX WARN: Type inference failed for: r6v1, types: [T, java.lang.Object, java.lang.String] */
     @Override // p007b.p085c.p086a.p095y.p098m.BaseLayer2
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public void mo780j(Canvas canvas, Matrix matrix, int i) {
         FontAssetManager fontAssetManager;
         String str;
@@ -346,7 +346,7 @@ public class TextLayer extends BaseLayer2 {
                         double d = fontCharacter.f2709c;
                         f = fM659c;
                         i3 = i4;
-                        fM659c2 = (float) ((d * fFloatValue3 * Utils.m659c() * fM660d) + fM659c2);
+                        fM659c2 = (float) ((d * ((double) fFloatValue3) * ((double) Utils.m659c()) * ((double) fM660d)) + ((double) fM659c2));
                     }
                     i5++;
                     str5 = str3;
@@ -547,7 +547,7 @@ public class TextLayer extends BaseLayer2 {
         canvas.restore();
     }
 
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     public final void m789q(int i, Canvas canvas, float f) {
         int iM758h = C1563b.m758h(i);
         if (iM758h == 1) {
@@ -560,7 +560,7 @@ public class TextLayer extends BaseLayer2 {
         }
     }
 
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     public final void m790r(String str, Paint paint, Canvas canvas) {
         if (paint.getColor() == 0) {
             return;
@@ -571,7 +571,7 @@ public class TextLayer extends BaseLayer2 {
         canvas.drawText(str, 0, str.length(), 0.0f, 0.0f, paint);
     }
 
-    /* renamed from: s */
+    /* JADX INFO: renamed from: s */
     public final void m791s(Path path, Paint paint, Canvas canvas) {
         if (paint.getColor() == 0) {
             return;
@@ -582,7 +582,7 @@ public class TextLayer extends BaseLayer2 {
         canvas.drawPath(path, paint);
     }
 
-    /* renamed from: t */
+    /* JADX INFO: renamed from: t */
     public final List<String> m792t(String str) {
         return Arrays.asList(str.replaceAll("\r\n", "\r").replaceAll("\n", "\r").split("\r"));
     }

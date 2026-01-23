@@ -6,9 +6,9 @@ import com.discord.C5419R;
 import com.discord.utilities.fcm.NotificationClient;
 import com.discord.widgets.guilds.create.StockGuildTemplate;
 
-/* compiled from: GuildTemplates.kt */
-/* renamed from: com.discord.widgets.nux.GuildTemplate, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.nux.GuildTemplate, reason: use source file name */
+/* JADX INFO: compiled from: GuildTemplates.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public enum GuildTemplates {
     CreateMyOwn(C5419R.string.guild_template_header_create, C5419R.drawable.drawable_guild_template_create, StockGuildTemplate.CREATE),
     Gaming(C5419R.string.guild_template_header_gaming, C5419R.drawable.drawable_guild_template_gaming, StockGuildTemplate.GAMING_GROUP),

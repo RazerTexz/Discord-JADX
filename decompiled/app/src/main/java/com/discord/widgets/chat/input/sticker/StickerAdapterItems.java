@@ -4,9 +4,9 @@ import com.discord.utilities.mg_recycler.MGRecyclerDataPayload;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: StickerAdapterItems.kt */
-/* renamed from: com.discord.widgets.chat.input.sticker.HeaderItem, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.chat.input.sticker.HeaderItem, reason: use source file name */
+/* JADX INFO: compiled from: StickerAdapterItems.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final /* data */ class StickerAdapterItems implements MGRecyclerDataPayload {
     private final StickerAdapterItems2 headerType;
     private final String key;
@@ -25,7 +25,7 @@ public final /* data */ class StickerAdapterItems implements MGRecyclerDataPaylo
         return stickerAdapterItems.copy(stickerAdapterItems2);
     }
 
-    /* renamed from: component1, reason: from getter */
+    /* JADX INFO: renamed from: component1, reason: from getter */
     public final StickerAdapterItems2 getHeaderType() {
         return this.headerType;
     }

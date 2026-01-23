@@ -5,8 +5,8 @@ import kotlin.jvm.internal.DefaultConstructorMarker;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ScoAudioState.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: ScoAudioState.kt */
+/* JADX INFO: loaded from: classes.dex */
 public enum ScoAudioState {
     Disconnected(0),
     Connected(1),
@@ -14,17 +14,17 @@ public enum ScoAudioState {
     Error(-1);
 
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private final int value;
 
-    /* compiled from: ScoAudioState.kt */
-    /* renamed from: com.discord.rtcconnection.enums.ScoAudioState$a, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: com.discord.rtcconnection.enums.ScoAudioState$a, reason: from kotlin metadata */
+    /* JADX INFO: compiled from: ScoAudioState.kt */
     public static final class Companion {
         public Companion(DefaultConstructorMarker defaultConstructorMarker) {
         }
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final ScoAudioState m8498a(int i) {
             ScoAudioState[] scoAudioStateArrValues = ScoAudioState.values();
             for (int i2 = 0; i2 < 4; i2++) {
@@ -36,7 +36,7 @@ public enum ScoAudioState {
             return null;
         }
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final C5637b m8499b(Intent intent) {
             Intrinsics3.checkNotNullParameter(intent, "intent");
             if (!Intrinsics3.areEqual(intent.getAction(), "android.media.ACTION_SCO_AUDIO_STATE_UPDATED")) {
@@ -50,14 +50,14 @@ public enum ScoAudioState {
         }
     }
 
-    /* compiled from: ScoAudioState.kt */
-    /* renamed from: com.discord.rtcconnection.enums.ScoAudioState$b */
+    /* JADX INFO: renamed from: com.discord.rtcconnection.enums.ScoAudioState$b */
+    /* JADX INFO: compiled from: ScoAudioState.kt */
     public static final class C5637b {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final ScoAudioState f18874a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final ScoAudioState f18875b;
 
         public C5637b(ScoAudioState scoAudioState, ScoAudioState scoAudioState2) {

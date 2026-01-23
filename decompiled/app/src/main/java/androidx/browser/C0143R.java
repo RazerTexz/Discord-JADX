@@ -2,11 +2,11 @@ package androidx.browser;
 
 import com.discord.C5419R;
 
-/* renamed from: androidx.browser.R */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: androidx.browser.R */
+/* JADX INFO: loaded from: classes.dex */
 public final class C0143R {
 
-    /* renamed from: androidx.browser.R$attr */
+    /* JADX INFO: renamed from: androidx.browser.R$attr */
     public static final class attr {
         public static final int alpha = 2130968635;
         public static final int font = 2130969378;
@@ -25,7 +25,7 @@ public final class C0143R {
         }
     }
 
-    /* renamed from: androidx.browser.R$color */
+    /* JADX INFO: renamed from: androidx.browser.R$color */
     public static final class color {
         public static final int browser_actions_bg_grey = 2131099786;
         public static final int browser_actions_divider_color = 2131099787;
@@ -40,7 +40,7 @@ public final class C0143R {
         }
     }
 
-    /* renamed from: androidx.browser.R$dimen */
+    /* JADX INFO: renamed from: androidx.browser.R$dimen */
     public static final class dimen {
         public static final int browser_actions_context_menu_max_width = 2131165304;
         public static final int browser_actions_context_menu_min_padding = 2131165305;
@@ -71,7 +71,7 @@ public final class C0143R {
         }
     }
 
-    /* renamed from: androidx.browser.R$drawable */
+    /* JADX INFO: renamed from: androidx.browser.R$drawable */
     public static final class drawable {
         public static final int notification_action_background = 2131232491;
         public static final int notification_bg = 2131232492;
@@ -90,7 +90,7 @@ public final class C0143R {
         }
     }
 
-    /* renamed from: androidx.browser.R$id */
+    /* JADX INFO: renamed from: androidx.browser.R$id */
     public static final class id {
         public static final int accessibility_action_clickable_span = 2131361830;
         public static final int accessibility_custom_action_0 = 2131361831;
@@ -169,7 +169,7 @@ public final class C0143R {
         }
     }
 
-    /* renamed from: androidx.browser.R$integer */
+    /* JADX INFO: renamed from: androidx.browser.R$integer */
     public static final class integer {
         public static final int status_bar_notification_info_maxnum = 2131427355;
 
@@ -177,7 +177,7 @@ public final class C0143R {
         }
     }
 
-    /* renamed from: androidx.browser.R$layout */
+    /* JADX INFO: renamed from: androidx.browser.R$layout */
     public static final class layout {
         public static final int browser_actions_context_menu_page = 2131558437;
         public static final int browser_actions_context_menu_row = 2131558438;
@@ -193,7 +193,7 @@ public final class C0143R {
         }
     }
 
-    /* renamed from: androidx.browser.R$string */
+    /* JADX INFO: renamed from: androidx.browser.R$string */
     public static final class string {
         public static final int copy_toast_msg = 2131887937;
         public static final int fallback_menu_item_copy_link = 2131888998;
@@ -205,7 +205,7 @@ public final class C0143R {
         }
     }
 
-    /* renamed from: androidx.browser.R$style */
+    /* JADX INFO: renamed from: androidx.browser.R$style */
     public static final class style {
         public static final int TextAppearance_Compat_Notification = 2131952217;
         public static final int TextAppearance_Compat_Notification_Info = 2131952218;
@@ -219,7 +219,7 @@ public final class C0143R {
         }
     }
 
-    /* renamed from: androidx.browser.R$styleable */
+    /* JADX INFO: renamed from: androidx.browser.R$styleable */
     public static final class styleable {
         public static final int ColorStateListItem_alpha = 2;
         public static final int ColorStateListItem_android_alpha = 1;
@@ -265,7 +265,7 @@ public final class C0143R {
         }
     }
 
-    /* renamed from: androidx.browser.R$xml */
+    /* JADX INFO: renamed from: androidx.browser.R$xml */
     public static final class xml {
         public static final int image_share_filepaths = 2132082690;
 

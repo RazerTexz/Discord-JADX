@@ -5,24 +5,24 @@ import java.util.List;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: GuildStickersUpdate.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: GuildStickersUpdate.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class GuildStickersUpdate {
     private final GuildHashes guildHashes;
     private final long guildId;
     private final List<Sticker> stickers;
 
-    /* renamed from: a, reason: from getter */
+    /* JADX INFO: renamed from: a, reason: from getter */
     public final GuildHashes getGuildHashes() {
         return this.guildHashes;
     }
 
-    /* renamed from: b, reason: from getter */
+    /* JADX INFO: renamed from: b, reason: from getter */
     public final long getGuildId() {
         return this.guildId;
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final List<Sticker> m8233c() {
         return this.stickers;
     }

@@ -28,54 +28,54 @@ import p007b.p225i.p226a.p242c.p245b3.p249q.RubySpan;
 import p007b.p225i.p226a.p242c.p245b3.p249q.TextEmphasisSpan;
 import p007b.p225i.p226a.p242c.p259f3.Util2;
 
-/* compiled from: TtmlNode.java */
-/* renamed from: b.i.a.c.b3.t.d, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.b3.t.d, reason: use source file name */
+/* JADX INFO: compiled from: TtmlNode.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class TtmlNode {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     @Nullable
     public final String f6050a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     @Nullable
     public final String f6051b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final boolean f6052c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final long f6053d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final long f6054e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     @Nullable
     public final TtmlStyle f6055f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     @Nullable
     public final String[] f6056g;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public final String f6057h;
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     @Nullable
     public final String f6058i;
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     @Nullable
     public final TtmlNode f6059j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final HashMap<String, Integer> f6060k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final HashMap<String, Integer> f6061l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public List<TtmlNode> f6062m;
 
     public TtmlNode(@Nullable String str, @Nullable String str2, long j, long j2, @Nullable TtmlStyle ttmlStyle, @Nullable String[] strArr, String str3, @Nullable String str4, @Nullable TtmlNode ttmlNode) {
@@ -94,12 +94,12 @@ public final class TtmlNode {
         this.f6061l = new HashMap<>();
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static TtmlNode m2691b(String str) {
         return new TtmlNode(null, str.replaceAll("\r\n", "\n").replaceAll(" *\n *", "\n").replaceAll("\n", " ").replaceAll("[ \t\\x0B\f\r]+", " "), -9223372036854775807L, -9223372036854775807L, null, null, "", null, null);
     }
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public static SpannableStringBuilder m2692f(String str, Map<String, Cue.b> map) {
         if (!map.containsKey(str)) {
             Cue.b bVar = new Cue.b();
@@ -111,7 +111,7 @@ public final class TtmlNode {
         return (SpannableStringBuilder) charSequence;
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public void m2693a(TtmlNode ttmlNode) {
         if (this.f6062m == null) {
             this.f6062m = new ArrayList();
@@ -119,7 +119,7 @@ public final class TtmlNode {
         this.f6062m.add(ttmlNode);
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public TtmlNode m2694c(int i) {
         List<TtmlNode> list = this.f6062m;
         if (list != null) {
@@ -128,7 +128,7 @@ public final class TtmlNode {
         throw new IndexOutOfBoundsException();
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public int m2695d() {
         List<TtmlNode> list = this.f6062m;
         if (list == null) {
@@ -137,7 +137,7 @@ public final class TtmlNode {
         return list.size();
     }
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final void m2696e(TreeSet<Long> treeSet, boolean z2) {
         boolean zEquals = "p".equals(this.f6050a);
         boolean zEquals2 = "div".equals(this.f6050a);
@@ -159,13 +159,13 @@ public final class TtmlNode {
         }
     }
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public boolean m2697g(long j) {
         long j2 = this.f6053d;
         return (j2 == -9223372036854775807L && this.f6054e == -9223372036854775807L) || (j2 <= j && this.f6054e == -9223372036854775807L) || ((j2 == -9223372036854775807L && j < this.f6054e) || (j2 <= j && j < this.f6054e));
     }
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public final void m2698h(long j, String str, List<Pair<String, String>> list) {
         if (!"".equals(this.f6057h)) {
             str = this.f6057h;
@@ -185,7 +185,7 @@ public final class TtmlNode {
     /* JADX WARN: Removed duplicated region for block: B:132:0x021f  */
     /* JADX WARN: Removed duplicated region for block: B:135:0x0237  */
     /* JADX WARN: Removed duplicated region for block: B:156:0x025a A[SYNTHETIC] */
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
@@ -364,7 +364,7 @@ public final class TtmlNode {
         }
     }
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final void m2700j(long j, boolean z2, String str, Map<String, Cue.b> map) {
         this.f6060k.clear();
         this.f6061l.clear();

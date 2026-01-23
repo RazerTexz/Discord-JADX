@@ -20,13 +20,13 @@ import p007b.p225i.p226a.p341g.p345d.MaterialCalendarGridView2;
 import p007b.p225i.p226a.p341g.p345d.MonthAdapter;
 import p007b.p225i.p226a.p341g.p345d.UtcDates;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public final class MaterialCalendarGridView extends GridView {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final Calendar f20977j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final boolean f20978k;
 
     public MaterialCalendarGridView(Context context, AttributeSet attributeSet) {
@@ -41,7 +41,7 @@ public final class MaterialCalendarGridView extends GridView {
     }
 
     @NonNull
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public MonthAdapter m9130a() {
         return (MonthAdapter) super.getAdapter();
     }

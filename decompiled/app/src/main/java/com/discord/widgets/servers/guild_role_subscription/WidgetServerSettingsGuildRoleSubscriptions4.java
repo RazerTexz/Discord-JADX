@@ -4,9 +4,9 @@ import com.discord.widgets.guild_role_subscriptions.setup.GuildRoleSubscriptionP
 import kotlin.jvm.functions.Function0;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetServerSettingsGuildRoleSubscriptions.kt */
-/* renamed from: com.discord.widgets.servers.guild_role_subscription.WidgetServerSettingsGuildRoleSubscriptions$planDetailsViewModel$2, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.servers.guild_role_subscription.WidgetServerSettingsGuildRoleSubscriptions$planDetailsViewModel$2, reason: use source file name */
+/* JADX INFO: compiled from: WidgetServerSettingsGuildRoleSubscriptions.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetServerSettingsGuildRoleSubscriptions4 extends Lambda implements Function0<GuildRoleSubscriptionPlanDetailsViewModel> {
     public static final WidgetServerSettingsGuildRoleSubscriptions4 INSTANCE = new WidgetServerSettingsGuildRoleSubscriptions4();
 

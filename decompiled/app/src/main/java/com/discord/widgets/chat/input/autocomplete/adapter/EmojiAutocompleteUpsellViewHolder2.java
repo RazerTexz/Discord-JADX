@@ -8,9 +8,9 @@ import kotlin.jvm.functions.Function1;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: EmojiAutocompleteUpsellViewHolder.kt */
-/* renamed from: com.discord.widgets.chat.input.autocomplete.adapter.EmojiAutocompleteUpsellViewHolder$bind$$inlined$map$lambda$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.chat.input.autocomplete.adapter.EmojiAutocompleteUpsellViewHolder$bind$$inlined$map$lambda$1, reason: use source file name */
+/* JADX INFO: compiled from: EmojiAutocompleteUpsellViewHolder.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class EmojiAutocompleteUpsellViewHolder2 extends Lambda implements Function1<Integer, String> {
     public final /* synthetic */ EmojiUpsellPlaceholder $emojiUpsellPlaceholder$inlined;
     public final /* synthetic */ Emoji $it;

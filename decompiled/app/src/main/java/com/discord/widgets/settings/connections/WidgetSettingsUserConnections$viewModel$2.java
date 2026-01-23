@@ -3,8 +3,8 @@ package com.discord.widgets.settings.connections;
 import kotlin.jvm.functions.Function0;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetSettingsUserConnections.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetSettingsUserConnections.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetSettingsUserConnections$viewModel$2 extends Lambda implements Function0<WidgetSettingsUserConnectionsViewModel> {
     public static final WidgetSettingsUserConnections$viewModel$2 INSTANCE = new WidgetSettingsUserConnections$viewModel$2();
 

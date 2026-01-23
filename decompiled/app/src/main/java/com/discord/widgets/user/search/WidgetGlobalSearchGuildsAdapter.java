@@ -29,14 +29,14 @@ import kotlin.jvm.functions.Function3;
 import p007b.p008a.p027k.FormatUtils;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: WidgetGlobalSearchGuildsAdapter.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: WidgetGlobalSearchGuildsAdapter.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class WidgetGlobalSearchGuildsAdapter extends MGRecyclerAdapterSimple<WidgetGlobalSearchGuildsModel.Item> {
     private Function3<? super Integer, ? super Integer, ? super WidgetGlobalSearchGuildsModel.Item, Unit> onClickListener;
     private Function3<? super Integer, ? super Integer, ? super WidgetGlobalSearchGuildsModel.Item, Unit> onLongClickListener;
     private final int overlayColor;
 
-    /* compiled from: WidgetGlobalSearchGuildsAdapter.kt */
+    /* JADX INFO: compiled from: WidgetGlobalSearchGuildsAdapter.kt */
     public static abstract class Item extends MGRecyclerViewHolder<WidgetGlobalSearchGuildsAdapter, WidgetGlobalSearchGuildsModel.Item> {
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
         public Item(@LayoutRes int i, WidgetGlobalSearchGuildsAdapter widgetGlobalSearchGuildsAdapter) {
@@ -68,7 +68,7 @@ public final class WidgetGlobalSearchGuildsAdapter extends MGRecyclerAdapterSimp
             onConfigure2(i, item);
         }
 
-        /* renamed from: onConfigure, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: onConfigure, reason: avoid collision after fix types in other method */
         public void onConfigure2(int position, WidgetGlobalSearchGuildsModel.Item data) {
             Intrinsics3.checkNotNullParameter(data, "data");
             super.onConfigure(position, data);
@@ -79,7 +79,7 @@ public final class WidgetGlobalSearchGuildsAdapter extends MGRecyclerAdapterSimp
         }
     }
 
-    /* compiled from: WidgetGlobalSearchGuildsAdapter.kt */
+    /* JADX INFO: compiled from: WidgetGlobalSearchGuildsAdapter.kt */
     public static final class ItemDirectMessage extends Item {
         private final WidgetGuildsListItemDmBinding binding;
 
@@ -111,7 +111,7 @@ public final class WidgetGlobalSearchGuildsAdapter extends MGRecyclerAdapterSimp
         }
     }
 
-    /* compiled from: WidgetGlobalSearchGuildsAdapter.kt */
+    /* JADX INFO: compiled from: WidgetGlobalSearchGuildsAdapter.kt */
     public static final class ItemDivider extends Item {
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
         public ItemDivider(WidgetGlobalSearchGuildsAdapter widgetGlobalSearchGuildsAdapter, int i) {
@@ -120,7 +120,7 @@ public final class WidgetGlobalSearchGuildsAdapter extends MGRecyclerAdapterSimp
         }
     }
 
-    /* compiled from: WidgetGlobalSearchGuildsAdapter.kt */
+    /* JADX INFO: compiled from: WidgetGlobalSearchGuildsAdapter.kt */
     public static final class ItemGuild extends Item {
         private final WidgetGlobalSearchItemGuildBinding binding;
         private final WidgetGuildsListItemGuildBinding bindingGuild;

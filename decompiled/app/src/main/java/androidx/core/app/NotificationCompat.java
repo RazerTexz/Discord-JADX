@@ -48,7 +48,7 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Objects;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class NotificationCompat {
     public static final int BADGE_ICON_LARGE = 2;
     public static final int BADGE_ICON_NONE = 0;
@@ -434,7 +434,7 @@ public class NotificationCompat {
             }
 
             @NonNull
-            /* renamed from: clone, reason: collision with other method in class */
+            /* JADX INFO: renamed from: clone, reason: collision with other method in class */
             public /* bridge */ /* synthetic */ Object m11380clone() throws CloneNotSupportedException {
                 return clone();
             }
@@ -1279,7 +1279,7 @@ public class NotificationCompat {
         }
 
         @Nullable
-        private Bitmap reduceLargeIconSize(@Nullable Bitmap bitmap) throws Resources.NotFoundException {
+        private Bitmap reduceLargeIconSize(@Nullable Bitmap bitmap) {
             if (bitmap == null || Build.VERSION.SDK_INT >= 27) {
                 return bitmap;
             }
@@ -1289,8 +1289,8 @@ public class NotificationCompat {
             if (bitmap.getWidth() <= dimensionPixelSize && bitmap.getHeight() <= dimensionPixelSize2) {
                 return bitmap;
             }
-            double dMin = Math.min(dimensionPixelSize / Math.max(1, bitmap.getWidth()), dimensionPixelSize2 / Math.max(1, bitmap.getHeight()));
-            return Bitmap.createScaledBitmap(bitmap, (int) Math.ceil(bitmap.getWidth() * dMin), (int) Math.ceil(bitmap.getHeight() * dMin), true);
+            double dMin = Math.min(((double) dimensionPixelSize) / ((double) Math.max(1, bitmap.getWidth())), ((double) dimensionPixelSize2) / ((double) Math.max(1, bitmap.getHeight())));
+            return Bitmap.createScaledBitmap(bitmap, (int) Math.ceil(((double) bitmap.getWidth()) * dMin), (int) Math.ceil(((double) bitmap.getHeight()) * dMin), true);
         }
 
         private void setFlag(int i, boolean z2) {
@@ -1919,7 +1919,7 @@ public class NotificationCompat {
         private static final int MAX_ACTION_BUTTONS = 3;
         private static final String TEMPLATE_CLASS_NAME = "androidx.core.app.NotificationCompat$DecoratedCustomViewStyle";
 
-        private RemoteViews createRemoteViews(RemoteViews remoteViews, boolean z2) throws Resources.NotFoundException {
+        private RemoteViews createRemoteViews(RemoteViews remoteViews, boolean z2) {
             int iMin;
             boolean z3 = true;
             RemoteViews remoteViewsApplyStandardTemplate = applyStandardTemplate(true, C0205R.layout.notification_template_custom_big, false);
@@ -2056,7 +2056,7 @@ public class NotificationCompat {
         public CharSequence mSummaryText;
         public boolean mSummaryTextSet = false;
 
-        private int calculateTopPadding() throws Resources.NotFoundException {
+        private int calculateTopPadding() {
             Resources resources = this.mBuilder.mContext.getResources();
             int dimensionPixelSize = resources.getDimensionPixelSize(C0205R.dimen.notification_top_pad);
             int dimensionPixelSize2 = resources.getDimensionPixelSize(C0205R.dimen.notification_top_pad_large_text);
@@ -2200,7 +2200,7 @@ public class NotificationCompat {
         /*
             Code decompiled incorrectly, please refer to instructions dump.
         */
-        public RemoteViews applyStandardTemplate(boolean z2, int i, boolean z3) throws Resources.NotFoundException {
+        public RemoteViews applyStandardTemplate(boolean z2, int i, boolean z3) {
             boolean z4;
             boolean z5;
             CharSequence charSequence;
@@ -2565,7 +2565,7 @@ public class NotificationCompat {
         }
 
         @NonNull
-        /* renamed from: clone, reason: collision with other method in class */
+        /* JADX INFO: renamed from: clone, reason: collision with other method in class */
         public /* bridge */ /* synthetic */ Object m11381clone() throws CloneNotSupportedException {
             return clone();
         }

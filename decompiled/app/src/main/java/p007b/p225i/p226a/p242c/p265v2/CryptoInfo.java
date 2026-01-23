@@ -5,55 +5,55 @@ import androidx.annotation.Nullable;
 import androidx.annotation.RequiresApi;
 import p007b.p225i.p226a.p242c.p259f3.Util2;
 
-/* compiled from: CryptoInfo.java */
-/* renamed from: b.i.a.c.v2.c, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.v2.c, reason: use source file name */
+/* JADX INFO: compiled from: CryptoInfo.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class CryptoInfo {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     @Nullable
     public byte[] f7902a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     @Nullable
     public byte[] f7903b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public int f7904c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     @Nullable
     public int[] f7905d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     @Nullable
     public int[] f7906e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public int f7907f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public int f7908g;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public int f7909h;
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public final MediaCodec.CryptoInfo f7910i;
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     @Nullable
     public final b f7911j;
 
-    /* compiled from: CryptoInfo.java */
+    /* JADX INFO: renamed from: b.i.a.c.v2.c$b */
+    /* JADX INFO: compiled from: CryptoInfo.java */
     @RequiresApi(24)
-    /* renamed from: b.i.a.c.v2.c$b */
     public static final class b {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final MediaCodec.CryptoInfo f7912a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final MediaCodec.CryptoInfo.Pattern f7913b = new MediaCodec.CryptoInfo.Pattern(0, 0);
 
         public b(MediaCodec.CryptoInfo cryptoInfo, a aVar) {

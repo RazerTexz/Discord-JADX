@@ -11,38 +11,38 @@ import com.discord.C5419R;
 import com.facebook.drawee.view.SimpleDraweeView;
 import com.google.android.exoplayer2.p505ui.PlayerView;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public final class InlineMediaViewBinding implements ViewBinding {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     @NonNull
     public final View f15166a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     @NonNull
     public final ImageView f15167b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     @NonNull
     public final SimpleDraweeView f15168c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     @NonNull
     public final ProgressBar f15169d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     @NonNull
     public final ImageView f15170e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     @NonNull
     public final PlayerView f15171f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     @NonNull
     public final ImageView f15172g;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     @NonNull
     public final View f15173h;
 
@@ -58,7 +58,7 @@ public final class InlineMediaViewBinding implements ViewBinding {
     }
 
     @NonNull
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static InlineMediaViewBinding m8388a(@NonNull LayoutInflater layoutInflater, @NonNull ViewGroup viewGroup) {
         layoutInflater.inflate(C5419R.layout.inline_media_view, viewGroup);
         int i = C5419R.id.inline_media_gif_indicator;

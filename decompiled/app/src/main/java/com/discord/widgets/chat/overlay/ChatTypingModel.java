@@ -12,14 +12,14 @@ import p637j0.p642l.p643a.OperatorDistinctUntilChanged2;
 import p637j0.p642l.p647e.ScalarSynchronousObservable;
 import p658rx.Observable;
 
-/* compiled from: ChatTypingModel.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: ChatTypingModel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public abstract class ChatTypingModel {
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
 
-    /* compiled from: ChatTypingModel.kt */
+    /* JADX INFO: compiled from: ChatTypingModel.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -66,7 +66,7 @@ public abstract class ChatTypingModel {
         }
     }
 
-    /* compiled from: ChatTypingModel.kt */
+    /* JADX INFO: compiled from: ChatTypingModel.kt */
     public static final class Hide extends ChatTypingModel {
         public static final Hide INSTANCE = new Hide();
 
@@ -75,7 +75,7 @@ public abstract class ChatTypingModel {
         }
     }
 
-    /* compiled from: ChatTypingModel.kt */
+    /* JADX INFO: compiled from: ChatTypingModel.kt */
     public static final /* data */ class Typing extends ChatTypingModel {
         private final int channelRateLimit;
         private final int cooldownSecs;
@@ -109,12 +109,12 @@ public abstract class ChatTypingModel {
             return this.typingUsers;
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final int getChannelRateLimit() {
             return this.channelRateLimit;
         }
 
-        /* renamed from: component3, reason: from getter */
+        /* JADX INFO: renamed from: component3, reason: from getter */
         public final int getCooldownSecs() {
             return this.cooldownSecs;
         }

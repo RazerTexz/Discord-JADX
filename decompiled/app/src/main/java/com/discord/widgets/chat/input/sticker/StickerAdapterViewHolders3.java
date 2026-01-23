@@ -19,14 +19,14 @@ import kotlin.jvm.functions.Function1;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: StickerAdapterViewHolders.kt */
-/* renamed from: com.discord.widgets.chat.input.sticker.StoreHeaderViewHolder, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.chat.input.sticker.StoreHeaderViewHolder, reason: use source file name */
+/* JADX INFO: compiled from: StickerAdapterViewHolders.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class StickerAdapterViewHolders3 extends MGRecyclerViewHolder<WidgetStickerAdapter, MGRecyclerDataPayload> implements WidgetExpressionPickerAdapter.StickyHeaderViewHolder {
     private final StickerStoreHeaderItemBinding binding;
 
-    /* compiled from: StickerAdapterViewHolders.kt */
-    /* renamed from: com.discord.widgets.chat.input.sticker.StoreHeaderViewHolder$onConfigure$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.input.sticker.StoreHeaderViewHolder$onConfigure$1 */
+    /* JADX INFO: compiled from: StickerAdapterViewHolders.kt */
     public static final class ViewOnClickListenerC79001 implements View.OnClickListener {
         public final /* synthetic */ MGRecyclerDataPayload $data;
 
@@ -105,7 +105,7 @@ public final class StickerAdapterViewHolders3 extends MGRecyclerViewHolder<Widge
         onConfigure2(i, mGRecyclerDataPayload);
     }
 
-    /* renamed from: onConfigure, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: onConfigure, reason: avoid collision after fix types in other method */
     public void onConfigure2(int position, MGRecyclerDataPayload data) {
         Intrinsics3.checkNotNullParameter(data, "data");
         super.onConfigure(position, data);

@@ -6,16 +6,16 @@ import java.util.ArrayList;
 import p007b.p225i.p226a.p242c.Bundleable;
 import p007b.p225i.p226a.p242c.p243a3.p244p0.AdPlaybackState;
 
-/* compiled from: lambda */
-/* renamed from: b.i.a.c.a3.p0.a */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.a3.p0.a */
+/* JADX INFO: compiled from: lambda */
+/* JADX INFO: loaded from: classes3.dex */
 public final /* synthetic */ class C2560a implements Bundleable.a {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final /* synthetic */ C2560a f5678a = new C2560a();
 
     @Override // p007b.p225i.p226a.p242c.Bundleable.a
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final Bundleable mo2576a(Bundle bundle) {
         long j = bundle.getLong(AdPlaybackState.a.m2579c(0));
         int i = bundle.getInt(AdPlaybackState.a.m2579c(1), -1);

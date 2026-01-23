@@ -4,9 +4,9 @@ import androidx.core.app.NotificationCompat;
 import p507d0.p592z.p594d.Intrinsics3;
 import p637j0.p641k.Func1;
 
-/* compiled from: WidgetChatStatus.kt */
-/* renamed from: com.discord.widgets.status.WidgetChatStatus$Model$Companion$get$isUnreadValidObs$1$isLastAckOlderThanMostRecent$2, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.status.WidgetChatStatus$Model$Companion$get$isUnreadValidObs$1$isLastAckOlderThanMostRecent$2, reason: use source file name */
+/* JADX INFO: compiled from: WidgetChatStatus.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetChatStatus5<T, R> implements Func1<Boolean, Boolean> {
     public static final WidgetChatStatus5 INSTANCE = new WidgetChatStatus5();
 
@@ -15,7 +15,7 @@ public final class WidgetChatStatus5<T, R> implements Func1<Boolean, Boolean> {
         return call2(bool);
     }
 
-    /* renamed from: call, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
     public final Boolean call2(Boolean bool) {
         return Boolean.valueOf(Intrinsics3.areEqual(bool, Boolean.FALSE));
     }

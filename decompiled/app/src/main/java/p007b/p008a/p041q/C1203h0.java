@@ -31,12 +31,12 @@ import p507d0.p580t.MutableCollections;
 import p507d0.p580t._Collections;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: RtcConnection.kt */
-/* renamed from: b.a.q.h0 */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.a.q.h0 */
+/* JADX INFO: compiled from: RtcConnection.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class C1203h0 implements RtcControlSocket.d {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final /* synthetic */ RtcConnection f1628a;
 
     public C1203h0(RtcConnection rtcConnection) {
@@ -44,7 +44,7 @@ public final class C1203h0 implements RtcControlSocket.d {
     }
 
     @Override // p007b.p008a.p041q.p046n0.RtcControlSocket.d
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public void mo267a(String str, String str2) {
         Intrinsics3.checkNotNullParameter(str, "audioCodec");
         Intrinsics3.checkNotNullParameter(str2, "videoCodec");
@@ -55,7 +55,7 @@ public final class C1203h0 implements RtcControlSocket.d {
     }
 
     @Override // p007b.p008a.p041q.p046n0.RtcControlSocket.d
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public void mo268b(boolean z2, Integer num, String str) {
         RtcConnection rtcConnection = this.f1628a;
         Objects.requireNonNull(rtcConnection);
@@ -87,12 +87,12 @@ public final class C1203h0 implements RtcControlSocket.d {
         }
         rtcConnection.m8478u(new RtcConnection.State.C5610d(z3));
         if (z3) {
-            Logger.w$default(rtcConnection.logger, rtcConnection.loggingTag, "Disconnect was not clean! Reason: " + str + ", code: " + num + ". Reconnecting in " + (rtcConnection.reconnectBackoff.fail(new C1195d0(rtcConnection)) / 1000) + " seconds.", null, 4, null);
+            Logger.w$default(rtcConnection.logger, rtcConnection.loggingTag, "Disconnect was not clean! Reason: " + str + ", code: " + num + ". Reconnecting in " + (rtcConnection.reconnectBackoff.fail(new C1195d0(rtcConnection)) / ((long) 1000)) + " seconds.", null, 4, null);
         }
     }
 
     @Override // p007b.p008a.p041q.p046n0.RtcControlSocket.d
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public void mo269c(String str, List<Integer> list) {
         Intrinsics3.checkNotNullParameter(str, "mode");
         Intrinsics3.checkNotNullParameter(list, "secretKey");
@@ -103,7 +103,7 @@ public final class C1203h0 implements RtcControlSocket.d {
     }
 
     @Override // p007b.p008a.p041q.p046n0.RtcControlSocket.d
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public void mo270d(String str) {
         Intrinsics3.checkNotNullParameter(str, "mediaSessionId");
         RtcConnection rtcConnection = this.f1628a;
@@ -117,11 +117,14 @@ public final class C1203h0 implements RtcControlSocket.d {
 
     /* JADX WARN: Multi-variable type inference failed */
     /* JADX WARN: Removed duplicated region for block: B:52:0x014e  */
+    /* JADX WARN: Type inference failed for: r3v10, types: [java.lang.Object, java.util.List] */
     /* JADX WARN: Type inference failed for: r3v13, types: [java.util.ArrayList] */
+    /* JADX WARN: Type inference failed for: r3v14 */
+    /* JADX WARN: Type inference failed for: r3v15 */
     /* JADX WARN: Type inference failed for: r3v8, types: [java.util.List] */
     /* JADX WARN: Type inference failed for: r3v9, types: [java.util.List] */
     @Override // p007b.p008a.p041q.p046n0.RtcControlSocket.d
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
@@ -150,15 +153,15 @@ public final class C1203h0 implements RtcControlSocket.d {
                     EmptyList = Collections2.emptyList();
                 }
                 boolean zIsEmpty = EmptyList.isEmpty();
-                List listListOf = EmptyList;
+                ?? ListOf = EmptyList;
                 if (zIsEmpty) {
-                    listListOf = CollectionsJVM.listOf(new Payloads.Stream(MediaStreamTrack.VIDEO_TRACK_KIND, "100", null, 100, Integer.valueOf(i2), Integer.valueOf(i2 + 1), null, Boolean.valueOf(i2 > 0), null));
+                    ListOf = CollectionsJVM.listOf(new Payloads.Stream(MediaStreamTrack.VIDEO_TRACK_KIND, "100", null, 100, Integer.valueOf(i2), Integer.valueOf(i2 + 1), null, Boolean.valueOf(i2 > 0), null));
                 }
                 rtcConnection.localMediaSinkWantsManager.m8455c(j, Long.valueOf(i));
                 MediaSinkWantsManager mediaSinkWantsManager = rtcConnection.localMediaSinkWantsManager;
                 Objects.requireNonNull(mediaSinkWantsManager);
-                Intrinsics3.checkNotNullParameter(listListOf, "ssrcs");
-                mediaSinkWantsManager.m8454b(new MediaSinkWantsManager7(mediaSinkWantsManager, listListOf, j));
+                Intrinsics3.checkNotNullParameter(ListOf, "ssrcs");
+                mediaSinkWantsManager.m8454b(new MediaSinkWantsManager7(mediaSinkWantsManager, ListOf, j));
                 return;
             }
             if (list != null) {
@@ -189,7 +192,7 @@ public final class C1203h0 implements RtcControlSocket.d {
     }
 
     @Override // p007b.p008a.p041q.p046n0.RtcControlSocket.d
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public void mo272f(Map<String, Integer> map) {
         Integer num;
         Intrinsics3.checkNotNullParameter(map, "wants");
@@ -228,8 +231,8 @@ public final class C1203h0 implements RtcControlSocket.d {
                         cVar2 = (MediaSinkWantsLadder3.c) _Collections.first((List) mediaSinkWantsLadder3.f1616d);
                     }
                     MediaSinkWantsLadder6 mediaSinkWantsLadder6 = cVar2.f1622a;
-                    int iMax = Math.max((int) (mediaSinkWantsLadder5.f1637c.f1599a * mediaSinkWantsLadder6.f1760c), mediaSinkWantsLadder5.f1638d);
-                    int iMax2 = Math.max((int) (mediaSinkWantsLadder5.f1637c.f1600b * mediaSinkWantsLadder6.f1760c), mediaSinkWantsLadder5.f1638d);
+                    int iMax = Math.max((int) (((double) mediaSinkWantsLadder5.f1637c.f1599a) * mediaSinkWantsLadder6.f1760c), mediaSinkWantsLadder5.f1638d);
+                    int iMax2 = Math.max((int) (((double) mediaSinkWantsLadder5.f1637c.f1600b) * mediaSinkWantsLadder6.f1760c), mediaSinkWantsLadder5.f1638d);
                     MediaEngineConnection mediaEngineConnection = rtcConnection.mediaEngineConnection;
                     if (mediaEngineConnection != null) {
                         mediaEngineConnection.mo307m(new MediaEngineConnection.C5646b(iMax, iMax2, mediaSinkWantsLadder6.f1758a, mediaSinkWantsLadder6.f1759b, mediaSinkWantsLadder6.f1761d, mediaSinkWantsLadder6.f1762e));
@@ -243,7 +246,7 @@ public final class C1203h0 implements RtcControlSocket.d {
     }
 
     @Override // p007b.p008a.p041q.p046n0.RtcControlSocket.d
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public void mo273g(long j) {
         RtcConnection rtcConnection = this.f1628a;
         rtcConnection.pings.add(Long.valueOf(j));
@@ -263,12 +266,12 @@ public final class C1203h0 implements RtcControlSocket.d {
     }
 
     @Override // p007b.p008a.p041q.p046n0.RtcControlSocket.d
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public void mo274h() {
     }
 
     @Override // p007b.p008a.p041q.p046n0.RtcControlSocket.d
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public void mo275i() {
         RtcConnection rtcConnection = this.f1628a;
         rtcConnection.reconnectBackoff.cancel();
@@ -295,7 +298,7 @@ public final class C1203h0 implements RtcControlSocket.d {
     }
 
     @Override // p007b.p008a.p041q.p046n0.RtcControlSocket.d
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public void mo276j(long j) {
         Map<String, Object> mapM354c;
         RtcConnection rtcConnection = this.f1628a;
@@ -314,10 +317,8 @@ public final class C1203h0 implements RtcControlSocket.d {
         }
     }
 
-    /* JADX WARN: Multi-variable type inference failed */
-    /* JADX WARN: Type inference failed for: r6v5, types: [java.util.List] */
     @Override // p007b.p008a.p041q.p046n0.RtcControlSocket.d
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public void mo277k(int i, int i2, String str, List<Payloads.Stream> list) {
         MediaEngineConnection.Type type;
         Intrinsics3.checkNotNullParameter(str, "ip");
@@ -347,13 +348,13 @@ public final class C1203h0 implements RtcControlSocket.d {
             arrayList.add(new StreamParameters(streamParameters2, str2, iIntValue, iIntValue2, zBooleanValue, iIntValue3, quality != null ? quality.intValue() : 100, 0));
         }
         boolean zIsEmpty = arrayList.isEmpty();
-        ArrayList arrayListListOf = arrayList;
+        List listListOf = arrayList;
         if (zIsEmpty) {
-            arrayListListOf = CollectionsJVM.listOf(new StreamParameters(StreamParameters2.Video, "100", i2 + 1, i2 + 2, false, 0, 100, 0));
+            listListOf = CollectionsJVM.listOf(new StreamParameters(StreamParameters2.Video, "100", i2 + 1, i2 + 2, false, 0, 100, 0));
         }
         MediaEngine mediaEngine = rtcConnection.mediaEngine;
         long j = rtcConnection.userId;
-        MediaEngine.C5640a c5640a = new MediaEngine.C5640a(i2, str, i, arrayListListOf);
+        MediaEngine.C5640a c5640a = new MediaEngine.C5640a(i2, str, i, listListOf);
         RtcConnection.AbstractC5618d abstractC5618d = rtcConnection.rtcConnectionType;
         if (Intrinsics3.areEqual(abstractC5618d, RtcConnection.AbstractC5618d.a.f18819a)) {
             type = MediaEngineConnection.Type.DEFAULT;

@@ -6,50 +6,50 @@ import java.util.HashMap;
 import java.util.concurrent.atomic.AtomicBoolean;
 import java.util.regex.Pattern;
 
-/* renamed from: b.i.a.f.h.m.p */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.h.m.p */
+/* JADX INFO: loaded from: classes3.dex */
 public class C3939p {
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public static HashMap<String, String> f10471f;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public static Object f10476k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public static boolean f10477l;
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final Uri f10466a = Uri.parse("content://com.google.android.gsf.gservices");
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static final Uri f10467b = Uri.parse("content://com.google.android.gsf.gservices/prefix");
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public static final Pattern f10468c = Pattern.compile("^(1|true|t|on|yes|y)$", 2);
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public static final Pattern f10469d = Pattern.compile("^(0|false|f|off|no|n)$", 2);
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public static final AtomicBoolean f10470e = new AtomicBoolean();
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public static final HashMap<String, Boolean> f10472g = new HashMap<>();
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public static final HashMap<String, Integer> f10473h = new HashMap<>();
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public static final HashMap<String, Long> f10474i = new HashMap<>();
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static final HashMap<String, Float> f10475j = new HashMap<>();
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public static String[] f10478m = new String[0];
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static void m5409a(ContentResolver contentResolver) {
         if (f10471f == null) {
             f10470e.set(false);
@@ -70,7 +70,7 @@ public class C3939p {
         }
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static void m5410b(Object obj, String str, String str2) {
         synchronized (C3939p.class) {
             if (obj == f10476k) {

@@ -71,22 +71,22 @@ import p637j0.p642l.p647e.ScalarSynchronousObservable;
 import p658rx.Observable;
 import p658rx.subjects.BehaviorSubject;
 
-/* compiled from: WidgetGlobalSearch.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: WidgetGlobalSearch.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class WidgetGlobalSearch extends AppFragment {
     public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetGlobalSearch.class, "binding", "getBinding()Lcom/discord/databinding/WidgetGlobalSearchBinding;", 0)};
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     public static final String EXTRA_SEARCH_TEXT = "EXTRA_SEARCH_TEXT";
     private static final int INDEX_EMPTY = 1;
     private static final int INDEX_RESULTS = 0;
     private static final int INDEX_RESULTS_NOT_FOUND = 2;
 
-    /* renamed from: binding$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
 
-    /* renamed from: dismissViewModel$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: dismissViewModel$delegate, reason: from kotlin metadata */
     private final Lazy dismissViewModel;
     private final BehaviorSubject<String> filterPublisher;
     private String filterString;
@@ -94,7 +94,7 @@ public final class WidgetGlobalSearch extends AppFragment {
     private WidgetGlobalSearchAdapter resultsAdapter;
     private final StoreTabsNavigation storeTabsNavigation;
 
-    /* compiled from: WidgetGlobalSearch.kt */
+    /* JADX INFO: compiled from: WidgetGlobalSearch.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -144,8 +144,8 @@ public final class WidgetGlobalSearch extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetGlobalSearch.kt */
-    /* renamed from: com.discord.widgets.user.search.WidgetGlobalSearch$configureUI$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.user.search.WidgetGlobalSearch$configureUI$1 */
+    /* JADX INFO: compiled from: WidgetGlobalSearch.kt */
     public static final class C103151 extends Lambda implements Function3<Integer, Integer, WidgetGlobalSearchGuildsModel.Item, Unit> {
         public C103151() {
             super(3);
@@ -177,8 +177,8 @@ public final class WidgetGlobalSearch extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetGlobalSearch.kt */
-    /* renamed from: com.discord.widgets.user.search.WidgetGlobalSearch$configureUI$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.user.search.WidgetGlobalSearch$configureUI$2 */
+    /* JADX INFO: compiled from: WidgetGlobalSearch.kt */
     public static final class C103162 extends Lambda implements Function3<Integer, Integer, WidgetGlobalSearchGuildsModel.Item, Unit> {
         public final /* synthetic */ WidgetGlobalSearchModel $model;
 
@@ -209,8 +209,8 @@ public final class WidgetGlobalSearch extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetGlobalSearch.kt */
-    /* renamed from: com.discord.widgets.user.search.WidgetGlobalSearch$onViewBound$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.user.search.WidgetGlobalSearch$onViewBound$1 */
+    /* JADX INFO: compiled from: WidgetGlobalSearch.kt */
     public static final class C103171 extends Lambda implements Function1<Editable, Unit> {
         public C103171() {
             super(1);
@@ -222,15 +222,15 @@ public final class WidgetGlobalSearch extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Editable editable) {
             Intrinsics3.checkNotNullParameter(editable, "editable");
             WidgetGlobalSearch.access$getFilterPublisher$p(WidgetGlobalSearch.this).onNext(editable.toString());
         }
     }
 
-    /* compiled from: WidgetGlobalSearch.kt */
-    /* renamed from: com.discord.widgets.user.search.WidgetGlobalSearch$onViewBound$3 */
+    /* JADX INFO: renamed from: com.discord.widgets.user.search.WidgetGlobalSearch$onViewBound$3 */
+    /* JADX INFO: compiled from: WidgetGlobalSearch.kt */
     public static final class ViewOnClickListenerC103183 implements View.OnClickListener {
         public ViewOnClickListenerC103183() {
         }
@@ -241,8 +241,8 @@ public final class WidgetGlobalSearch extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetGlobalSearch.kt */
-    /* renamed from: com.discord.widgets.user.search.WidgetGlobalSearch$onViewBound$4 */
+    /* JADX INFO: renamed from: com.discord.widgets.user.search.WidgetGlobalSearch$onViewBound$4 */
+    /* JADX INFO: compiled from: WidgetGlobalSearch.kt */
     public static final class ViewOnClickListenerC103194 implements View.OnClickListener {
         public ViewOnClickListenerC103194() {
         }
@@ -255,8 +255,8 @@ public final class WidgetGlobalSearch extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetGlobalSearch.kt */
-    /* renamed from: com.discord.widgets.user.search.WidgetGlobalSearch$onViewBound$5 */
+    /* JADX INFO: renamed from: com.discord.widgets.user.search.WidgetGlobalSearch$onViewBound$5 */
+    /* JADX INFO: compiled from: WidgetGlobalSearch.kt */
     public static final class C103205 extends Lambda implements Function1<Unit, Unit> {
         public C103205() {
             super(1);
@@ -268,14 +268,14 @@ public final class WidgetGlobalSearch extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Unit unit) {
             WidgetGlobalSearch.access$focusSearchBar(WidgetGlobalSearch.this);
         }
     }
 
-    /* compiled from: WidgetGlobalSearch.kt */
-    /* renamed from: com.discord.widgets.user.search.WidgetGlobalSearch$onViewBound$6 */
+    /* JADX INFO: renamed from: com.discord.widgets.user.search.WidgetGlobalSearch$onViewBound$6 */
+    /* JADX INFO: compiled from: WidgetGlobalSearch.kt */
     public static final class ViewOnClickListenerC103216 implements View.OnClickListener {
         public ViewOnClickListenerC103216() {
         }
@@ -291,8 +291,8 @@ public final class WidgetGlobalSearch extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetGlobalSearch.kt */
-    /* renamed from: com.discord.widgets.user.search.WidgetGlobalSearch$onViewBound$7 */
+    /* JADX INFO: renamed from: com.discord.widgets.user.search.WidgetGlobalSearch$onViewBound$7 */
+    /* JADX INFO: compiled from: WidgetGlobalSearch.kt */
     public static final class ViewOnClickListenerC103227 implements View.OnClickListener {
         public ViewOnClickListenerC103227() {
         }
@@ -308,8 +308,8 @@ public final class WidgetGlobalSearch extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetGlobalSearch.kt */
-    /* renamed from: com.discord.widgets.user.search.WidgetGlobalSearch$onViewBoundOrOnResume$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.user.search.WidgetGlobalSearch$onViewBoundOrOnResume$1 */
+    /* JADX INFO: compiled from: WidgetGlobalSearch.kt */
     public static final /* synthetic */ class C103231 extends FunctionReferenceImpl implements Function1<WidgetGlobalSearchModel, Unit> {
         public C103231(WidgetGlobalSearch widgetGlobalSearch) {
             super(1, widgetGlobalSearch, WidgetGlobalSearch.class, "configureUI", "configureUI(Lcom/discord/widgets/user/search/WidgetGlobalSearchModel;)V", 0);
@@ -321,15 +321,15 @@ public final class WidgetGlobalSearch extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(WidgetGlobalSearchModel widgetGlobalSearchModel) {
             Intrinsics3.checkNotNullParameter(widgetGlobalSearchModel, "p1");
             WidgetGlobalSearch.access$configureUI((WidgetGlobalSearch) this.receiver, widgetGlobalSearchModel);
         }
     }
 
-    /* compiled from: WidgetGlobalSearch.kt */
-    /* renamed from: com.discord.widgets.user.search.WidgetGlobalSearch$showFilterPickerDialog$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.user.search.WidgetGlobalSearch$showFilterPickerDialog$1 */
+    /* JADX INFO: compiled from: WidgetGlobalSearch.kt */
     public static final class C103241 extends Lambda implements Function1<Integer, Unit> {
         public C103241() {
             super(1);

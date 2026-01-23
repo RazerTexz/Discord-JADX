@@ -5,9 +5,9 @@ import com.discord.C5419R;
 import com.google.android.material.textfield.TextInputLayout;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: WidgetDisableGuildCommunication.kt */
-/* renamed from: com.discord.widgets.guildcommunicationdisabled.start.WidgetDisableGuildCommunication$configureUI$$inlined$apply$lambda$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.guildcommunicationdisabled.start.WidgetDisableGuildCommunication$configureUI$$inlined$apply$lambda$1, reason: use source file name */
+/* JADX INFO: compiled from: WidgetDisableGuildCommunication.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetDisableGuildCommunication3 implements View.OnFocusChangeListener {
     public final /* synthetic */ WidgetDisableGuildCommunication this$0;
 

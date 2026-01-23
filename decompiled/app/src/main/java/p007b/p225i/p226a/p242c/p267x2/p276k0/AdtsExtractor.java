@@ -14,45 +14,45 @@ import p007b.p225i.p226a.p242c.p267x2.PositionHolder;
 import p007b.p225i.p226a.p242c.p267x2.SeekMap;
 import p007b.p225i.p226a.p242c.p267x2.p276k0.TsPayloadReader;
 
-/* compiled from: AdtsExtractor.java */
-/* renamed from: b.i.a.c.x2.k0.j, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.x2.k0.j, reason: use source file name */
+/* JADX INFO: compiled from: AdtsExtractor.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class AdtsExtractor implements Extractor {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final int f8685a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final AdtsReader f8686b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final ParsableByteArray f8687c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final ParsableByteArray f8688d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final ParsableBitArray f8689e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public ExtractorOutput f8690f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public long f8691g;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public long f8692h;
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public int f8693i;
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public boolean f8694j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public boolean f8695k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public boolean f8696l;
 
     static {
@@ -70,7 +70,7 @@ public final class AdtsExtractor implements Extractor {
         this.f8689e = new ParsableBitArray(parsableByteArray.f6793a);
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final int m3768a(ExtractorInput extractorInput) throws IOException {
         int i = 0;
         while (true) {
@@ -93,7 +93,7 @@ public final class AdtsExtractor implements Extractor {
     }
 
     @Override // p007b.p225i.p226a.p242c.p267x2.Extractor
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public boolean mo3633b(ExtractorInput extractorInput) throws IOException {
         int iM3768a = m3768a(extractorInput);
         int i = iM3768a;
@@ -131,7 +131,7 @@ public final class AdtsExtractor implements Extractor {
 
     /* JADX WARN: Removed duplicated region for block: B:72:0x0108  */
     @Override // p007b.p225i.p226a.p242c.p267x2.Extractor
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
@@ -166,7 +166,7 @@ public final class AdtsExtractor implements Extractor {
                         this.f8694j = true;
                         throw ParserException.m8755a("Malformed ADTS stream", null);
                     }
-                    j += iM3067g;
+                    j += (long) iM3067g;
                     i2++;
                     if (i2 != 1000 && extractorInput.mo3651m(iM3067g - 6, true)) {
                     }
@@ -175,7 +175,7 @@ public final class AdtsExtractor implements Extractor {
             }
             extractorInput.mo3649k();
             if (i2 > 0) {
-                this.f8693i = (int) (j / i2);
+                this.f8693i = (int) (j / ((long) i2));
             } else {
                 this.f8693i = -1;
             }
@@ -192,7 +192,8 @@ public final class AdtsExtractor implements Extractor {
                     if (j2 != -9223372036854775807L) {
                         ExtractorOutput extractorOutput = this.f8690f;
                         boolean z4 = (2 & i4) != 0;
-                        extractorOutput.mo2477a(new ConstantBitrateSeekMap(jMo3642b, this.f8692h, (int) (((r9 * 8) * 1000000) / j2), this.f8693i, z4));
+                        int i5 = this.f8693i;
+                        extractorOutput.mo2477a(new ConstantBitrateSeekMap(jMo3642b, this.f8692h, (int) ((((long) (i5 * 8)) * 1000000) / j2), i5, z4));
                     } else {
                         this.f8690f.mo2477a(new SeekMap.b(-9223372036854775807L, 0L));
                     }
@@ -214,7 +215,7 @@ public final class AdtsExtractor implements Extractor {
     }
 
     @Override // p007b.p225i.p226a.p242c.p267x2.Extractor
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public void mo3636f(ExtractorOutput extractorOutput) {
         this.f8690f = extractorOutput;
         this.f8686b.mo3761e(extractorOutput, new TsPayloadReader.d(Integer.MIN_VALUE, 0, 1));
@@ -222,7 +223,7 @@ public final class AdtsExtractor implements Extractor {
     }
 
     @Override // p007b.p225i.p226a.p242c.p267x2.Extractor
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public void mo3637g(long j, long j2) {
         this.f8695k = false;
         this.f8686b.mo3759c();

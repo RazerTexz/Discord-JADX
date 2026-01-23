@@ -12,7 +12,7 @@ import p007b.p225i.p361c.p369m.CrashlyticsRegistrar2;
 import p007b.p225i.p361c.p369m.p370d.CrashlyticsNativeComponent;
 import p007b.p225i.p361c.p401u.InterfaceC4843g;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public class CrashlyticsRegistrar implements ComponentRegistrar {
     @Override // p007b.p225i.p361c.p368l.ComponentRegistrar
     public List<Component4<?>> getComponents() {

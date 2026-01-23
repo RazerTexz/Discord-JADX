@@ -64,7 +64,7 @@ import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.concurrent.atomic.AtomicInteger;
 import p007b.p100d.p104b.p105a.outline;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public abstract class FragmentManager implements FragmentResultOwner {
     private static boolean DEBUG = false;
     private static final String EXTRA_CREATED_FILLIN_INTENT = "androidx.fragment.extra.ACTIVITY_OPTIONS_BUNDLE";
@@ -114,7 +114,7 @@ public abstract class FragmentManager implements FragmentResultOwner {
     public ArrayDeque<LaunchedFragmentInfo> mLaunchedFragments = new ArrayDeque<>();
     private Runnable mExecCommit = new RunnableC03825();
 
-    /* renamed from: androidx.fragment.app.FragmentManager$1 */
+    /* JADX INFO: renamed from: androidx.fragment.app.FragmentManager$1 */
     public class C03761 extends OnBackPressedCallback {
         public C03761(boolean z2) {
             super(z2);
@@ -126,7 +126,7 @@ public abstract class FragmentManager implements FragmentResultOwner {
         }
     }
 
-    /* renamed from: androidx.fragment.app.FragmentManager$10 */
+    /* JADX INFO: renamed from: androidx.fragment.app.FragmentManager$10 */
     public class C037710 implements ActivityResultCallback<ActivityResult> {
         public C037710() {
         }
@@ -136,7 +136,7 @@ public abstract class FragmentManager implements FragmentResultOwner {
             onActivityResult2(activityResult);
         }
 
-        /* renamed from: onActivityResult, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: onActivityResult, reason: avoid collision after fix types in other method */
         public void onActivityResult2(ActivityResult activityResult) {
             LaunchedFragmentInfo launchedFragmentInfoPollFirst = FragmentManager.this.mLaunchedFragments.pollFirst();
             if (launchedFragmentInfoPollFirst == null) {
@@ -154,7 +154,7 @@ public abstract class FragmentManager implements FragmentResultOwner {
         }
     }
 
-    /* renamed from: androidx.fragment.app.FragmentManager$11 */
+    /* JADX INFO: renamed from: androidx.fragment.app.FragmentManager$11 */
     public class C037811 implements ActivityResultCallback<Map<String, Boolean>> {
         public C037811() {
         }
@@ -166,7 +166,7 @@ public abstract class FragmentManager implements FragmentResultOwner {
         }
 
         @SuppressLint({"SyntheticAccessor"})
-        /* renamed from: onActivityResult, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: onActivityResult, reason: avoid collision after fix types in other method */
         public void onActivityResult2(Map<String, Boolean> map) {
             String[] strArr = (String[]) map.keySet().toArray(new String[0]);
             ArrayList arrayList = new ArrayList(map.values());
@@ -190,7 +190,7 @@ public abstract class FragmentManager implements FragmentResultOwner {
         }
     }
 
-    /* renamed from: androidx.fragment.app.FragmentManager$2 */
+    /* JADX INFO: renamed from: androidx.fragment.app.FragmentManager$2 */
     public class C03792 implements FragmentTransition.Callback {
         public C03792() {
         }
@@ -209,7 +209,7 @@ public abstract class FragmentManager implements FragmentResultOwner {
         }
     }
 
-    /* renamed from: androidx.fragment.app.FragmentManager$3 */
+    /* JADX INFO: renamed from: androidx.fragment.app.FragmentManager$3 */
     public class C03803 extends FragmentFactory {
         public C03803() {
         }
@@ -221,7 +221,7 @@ public abstract class FragmentManager implements FragmentResultOwner {
         }
     }
 
-    /* renamed from: androidx.fragment.app.FragmentManager$4 */
+    /* JADX INFO: renamed from: androidx.fragment.app.FragmentManager$4 */
     public class C03814 implements SpecialEffectsControllerFactory {
         public C03814() {
         }
@@ -233,7 +233,7 @@ public abstract class FragmentManager implements FragmentResultOwner {
         }
     }
 
-    /* renamed from: androidx.fragment.app.FragmentManager$5 */
+    /* JADX INFO: renamed from: androidx.fragment.app.FragmentManager$5 */
     public class RunnableC03825 implements Runnable {
         public RunnableC03825() {
         }
@@ -244,7 +244,7 @@ public abstract class FragmentManager implements FragmentResultOwner {
         }
     }
 
-    /* renamed from: androidx.fragment.app.FragmentManager$6 */
+    /* JADX INFO: renamed from: androidx.fragment.app.FragmentManager$6 */
     public class C03836 implements LifecycleEventObserver {
         public final /* synthetic */ Lifecycle val$lifecycle;
         public final /* synthetic */ FragmentResultListener val$listener;
@@ -270,7 +270,7 @@ public abstract class FragmentManager implements FragmentResultOwner {
         }
     }
 
-    /* renamed from: androidx.fragment.app.FragmentManager$7 */
+    /* JADX INFO: renamed from: androidx.fragment.app.FragmentManager$7 */
     public class C03847 extends AnimatorListenerAdapter {
         public final /* synthetic */ View val$animatingView;
         public final /* synthetic */ ViewGroup val$container;
@@ -295,7 +295,7 @@ public abstract class FragmentManager implements FragmentResultOwner {
         }
     }
 
-    /* renamed from: androidx.fragment.app.FragmentManager$8 */
+    /* JADX INFO: renamed from: androidx.fragment.app.FragmentManager$8 */
     public class C03858 implements FragmentOnAttachListener {
         public final /* synthetic */ Fragment val$parent;
 
@@ -309,7 +309,7 @@ public abstract class FragmentManager implements FragmentResultOwner {
         }
     }
 
-    /* renamed from: androidx.fragment.app.FragmentManager$9 */
+    /* JADX INFO: renamed from: androidx.fragment.app.FragmentManager$9 */
     public class C03869 implements ActivityResultCallback<ActivityResult> {
         public C03869() {
         }
@@ -319,7 +319,7 @@ public abstract class FragmentManager implements FragmentResultOwner {
             onActivityResult2(activityResult);
         }
 
-        /* renamed from: onActivityResult, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: onActivityResult, reason: avoid collision after fix types in other method */
         public void onActivityResult2(ActivityResult activityResult) {
             LaunchedFragmentInfo launchedFragmentInfoPollFirst = FragmentManager.this.mLaunchedFragments.pollFirst();
             if (launchedFragmentInfoPollFirst == null) {
@@ -374,7 +374,7 @@ public abstract class FragmentManager implements FragmentResultOwner {
         }
 
         @NonNull
-        /* renamed from: createIntent, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: createIntent, reason: avoid collision after fix types in other method */
         public Intent createIntent2(@NonNull Context context, IntentSenderRequest intentSenderRequest) {
             Bundle bundleExtra;
             Intent intent = new Intent(ActivityResultContracts.StartIntentSenderForResult.ACTION_INTENT_SENDER_REQUEST);
@@ -2588,7 +2588,7 @@ public abstract class FragmentManager implements FragmentResultOwner {
         public int mRequestCode;
         public String mWho;
 
-        /* renamed from: androidx.fragment.app.FragmentManager$LaunchedFragmentInfo$1 */
+        /* JADX INFO: renamed from: androidx.fragment.app.FragmentManager$LaunchedFragmentInfo$1 */
         public class C03871 implements Parcelable.Creator<LaunchedFragmentInfo> {
             @Override // android.os.Parcelable.Creator
             public /* bridge */ /* synthetic */ LaunchedFragmentInfo createFromParcel(Parcel parcel) {

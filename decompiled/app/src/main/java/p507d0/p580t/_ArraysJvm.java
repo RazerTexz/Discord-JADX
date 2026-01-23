@@ -8,16 +8,16 @@ import java.util.List;
 import java.util.RandomAccess;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: _ArraysJvm.kt */
-/* renamed from: d0.t.j, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.t.j, reason: use source file name */
+/* JADX INFO: compiled from: _ArraysJvm.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public class _ArraysJvm extends Arrays {
 
-    /* compiled from: _ArraysJvm.kt */
-    /* renamed from: d0.t.j$a */
+    /* JADX INFO: renamed from: d0.t.j$a */
+    /* JADX INFO: compiled from: _ArraysJvm.kt */
     public static final class a extends AbstractList<Integer> implements RandomAccess {
 
-        /* renamed from: k */
+        /* JADX INFO: renamed from: k */
         public final /* synthetic */ int[] f25186k;
 
         public a(int[] iArr) {

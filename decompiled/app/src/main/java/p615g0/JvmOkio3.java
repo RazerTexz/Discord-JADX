@@ -9,15 +9,15 @@ import p007b.p100d.p104b.p105a.outline;
 import p007b.p225i.p226a.p288f.p299e.p308o.C3404f;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: JvmOkio.kt */
-/* renamed from: g0.w, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: g0.w, reason: use source file name */
+/* JADX INFO: compiled from: JvmOkio.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class JvmOkio3 extends AsyncTimeout {
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final Logger f26131l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public final Socket f26132m;
 
     public JvmOkio3(Socket socket) {
@@ -27,7 +27,7 @@ public final class JvmOkio3 extends AsyncTimeout {
     }
 
     @Override // p615g0.AsyncTimeout
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public IOException mo10296k(IOException iOException) {
         SocketTimeoutException socketTimeoutException = new SocketTimeoutException("timeout");
         if (iOException != null) {
@@ -37,7 +37,7 @@ public final class JvmOkio3 extends AsyncTimeout {
     }
 
     @Override // p615g0.AsyncTimeout
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public void mo10191l() {
         try {
             this.f26132m.close();

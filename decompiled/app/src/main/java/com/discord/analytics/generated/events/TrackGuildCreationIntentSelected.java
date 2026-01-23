@@ -6,8 +6,8 @@ import com.discord.api.science.AnalyticsSchema;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: TrackGuildCreationIntentSelected.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: TrackGuildCreationIntentSelected.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class TrackGuildCreationIntentSelected implements AnalyticsSchema, TrackBase2 {
     private TrackBase trackBase;
     private final Boolean isCommunity = null;
@@ -15,7 +15,7 @@ public final /* data */ class TrackGuildCreationIntentSelected implements Analyt
     private final transient String analyticsSchemaTypeName = "guild_creation_intent_selected";
 
     @Override // com.discord.api.science.AnalyticsSchema
-    /* renamed from: d, reason: from getter */
+    /* JADX INFO: renamed from: d, reason: from getter */
     public String getAnalyticsSchemaTypeName() {
         return this.analyticsSchemaTypeName;
     }

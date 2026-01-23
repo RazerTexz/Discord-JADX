@@ -34,35 +34,35 @@ import p507d0.p592z.p594d.Lambda;
 import p507d0.p592z.p594d.Reflection2;
 import p658rx.subjects.PublishSubject;
 
-/* compiled from: WidgetUrgentMessageDialog.kt */
-/* renamed from: b.a.a.t, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.a.a.t, reason: use source file name */
+/* JADX INFO: compiled from: WidgetUrgentMessageDialog.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class WidgetUrgentMessageDialog extends AppDialog {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static final /* synthetic */ KProperty[] f438j = {outline.m846d0(WidgetUrgentMessageDialog.class, "binding", "getBinding()Lcom/discord/databinding/WidgetUrgentMessageDialogBinding;", 0)};
 
-    /* renamed from: k, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: k, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
 
-    /* renamed from: l, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: l, reason: from kotlin metadata */
     public final FragmentViewBindingDelegate binding;
 
-    /* renamed from: m, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: m, reason: from kotlin metadata */
     public final Lazy viewModel;
 
-    /* compiled from: WidgetUrgentMessageDialog.kt */
-    /* renamed from: b.a.a.t$a, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: b.a.a.t$a, reason: from kotlin metadata */
+    /* JADX INFO: compiled from: WidgetUrgentMessageDialog.kt */
     public static final class Companion {
         public Companion(DefaultConstructorMarker defaultConstructorMarker) {
         }
     }
 
-    /* compiled from: WidgetUrgentMessageDialog.kt */
-    /* renamed from: b.a.a.t$b */
+    /* JADX INFO: renamed from: b.a.a.t$b */
+    /* JADX INFO: compiled from: WidgetUrgentMessageDialog.kt */
     public static final /* synthetic */ class b extends FunctionReferenceImpl implements Function1<View, WidgetUrgentMessageDialogBinding> {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public static final b f442j = new b();
 
         public b() {
@@ -90,8 +90,8 @@ public final class WidgetUrgentMessageDialog extends AppDialog {
         }
     }
 
-    /* compiled from: WidgetUrgentMessageDialog.kt */
-    /* renamed from: b.a.a.t$c */
+    /* JADX INFO: renamed from: b.a.a.t$c */
+    /* JADX INFO: compiled from: WidgetUrgentMessageDialog.kt */
     public static final class c extends Lambda implements Function1<WidgetUrgentMessageDialogViewModel3.d, Unit> {
         public c() {
             super(1);
@@ -116,8 +116,8 @@ public final class WidgetUrgentMessageDialog extends AppDialog {
         }
     }
 
-    /* compiled from: WidgetUrgentMessageDialog.kt */
-    /* renamed from: b.a.a.t$d */
+    /* JADX INFO: renamed from: b.a.a.t$d */
+    /* JADX INFO: compiled from: WidgetUrgentMessageDialog.kt */
     public static final class d extends Lambda implements Function1<WidgetUrgentMessageDialogViewModel3.b, Unit> {
         public d() {
             super(1);
@@ -142,11 +142,11 @@ public final class WidgetUrgentMessageDialog extends AppDialog {
         }
     }
 
-    /* compiled from: WidgetUrgentMessageDialog.kt */
-    /* renamed from: b.a.a.t$e */
+    /* JADX INFO: renamed from: b.a.a.t$e */
+    /* JADX INFO: compiled from: WidgetUrgentMessageDialog.kt */
     public static final class e extends Lambda implements Function0<WidgetUrgentMessageDialogViewModel3> {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public static final e f443j = new e();
 
         public e() {
@@ -167,12 +167,12 @@ public final class WidgetUrgentMessageDialog extends AppDialog {
         this.viewModel = FragmentViewModelLazyKt.createViewModelLazy(this, Reflection2.getOrCreateKotlinClass(WidgetUrgentMessageDialogViewModel3.class), new C12788k(1, appViewModelDelegates3), new AppViewModelDelegates5(eVar));
     }
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public final WidgetUrgentMessageDialogBinding m145g() {
         return (WidgetUrgentMessageDialogBinding) this.binding.getValue((Fragment) this, f438j[0]);
     }
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public final WidgetUrgentMessageDialogViewModel3 m146h() {
         return (WidgetUrgentMessageDialogViewModel3) this.viewModel.getValue();
     }

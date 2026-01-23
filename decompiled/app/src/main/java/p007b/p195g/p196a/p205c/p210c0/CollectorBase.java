@@ -7,25 +7,25 @@ import p007b.p195g.p196a.p205c.AnnotationIntrospector;
 import p007b.p195g.p196a.p205c.p210c0.AnnotationCollector;
 import p007b.p195g.p196a.p205c.p219i0.ClassUtil;
 
-/* compiled from: CollectorBase.java */
-/* renamed from: b.g.a.c.c0.u, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.g.a.c.c0.u, reason: use source file name */
+/* JADX INFO: compiled from: CollectorBase.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class CollectorBase {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final AnnotationMap[] f4748a = new AnnotationMap[0];
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static final Annotation[] f4749b = new Annotation[0];
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final AnnotationIntrospector f4750c;
 
     public CollectorBase(AnnotationIntrospector annotationIntrospector) {
         this.f4750c = annotationIntrospector;
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static AnnotationMap[] m1923a(int i) {
         if (i == 0) {
             return f4748a;
@@ -37,7 +37,7 @@ public class CollectorBase {
         return annotationMapArr;
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final AnnotationCollector m1924b(AnnotationCollector annotationCollector, Annotation[] annotationArr) {
         for (Annotation annotation : annotationArr) {
             annotationCollector = annotationCollector.mo1911a(annotation);
@@ -48,7 +48,7 @@ public class CollectorBase {
         return annotationCollector;
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final AnnotationCollector m1925c(Annotation[] annotationArr) {
         AnnotationCollector annotationCollectorMo1911a = AnnotationCollector.a.f4727c;
         for (Annotation annotation : annotationArr) {
@@ -60,7 +60,7 @@ public class CollectorBase {
         return annotationCollectorMo1911a;
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final AnnotationCollector m1926d(AnnotationCollector annotationCollector, Annotation[] annotationArr) {
         for (Annotation annotation : annotationArr) {
             if (!annotationCollector.mo1914d(annotation)) {
@@ -80,7 +80,7 @@ public class CollectorBase {
         return annotationCollector;
     }
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final AnnotationCollector m1927e(AnnotationCollector annotationCollector, Annotation annotation) {
         for (Annotation annotation2 : ClassUtil.m2177i(annotation.annotationType())) {
             if (!((annotation2 instanceof Target) || (annotation2 instanceof Retention))) {

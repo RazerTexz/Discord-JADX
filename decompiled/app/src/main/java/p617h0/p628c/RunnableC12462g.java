@@ -3,18 +3,18 @@ package p617h0.p628c;
 import java.util.concurrent.CountDownLatch;
 import org.webrtc.EglRenderer;
 
-/* compiled from: lambda */
-/* renamed from: h0.c.g */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: h0.c.g */
+/* JADX INFO: compiled from: lambda */
+/* JADX INFO: loaded from: classes3.dex */
 public final /* synthetic */ class RunnableC12462g implements Runnable {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final /* synthetic */ EglRenderer f26427j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final /* synthetic */ CountDownLatch f26428k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final /* synthetic */ EglRenderer.FrameListener f26429l;
 
     public /* synthetic */ RunnableC12462g(EglRenderer eglRenderer, CountDownLatch countDownLatch, EglRenderer.FrameListener frameListener) {

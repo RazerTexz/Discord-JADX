@@ -11,12 +11,12 @@ import p007b.p225i.p226a.p288f.p299e.p304k.InterfaceC3394z0;
 import p007b.p225i.p226a.p288f.p311f.BinderC3423b;
 import p007b.p225i.p226a.p288f.p311f.InterfaceC3422a;
 
-/* compiled from: com.google.android.gms:play-services-basement@@17.6.0 */
-/* renamed from: b.i.a.f.e.x */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.e.x */
+/* JADX INFO: compiled from: com.google.android.gms:play-services-basement@@17.6.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public abstract class AbstractBinderC3419x extends AbstractBinderC3392y0 {
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final int f9611b;
 
     public AbstractBinderC3419x(byte[] bArr) {
@@ -24,7 +24,7 @@ public abstract class AbstractBinderC3419x extends AbstractBinderC3392y0 {
         this.f9611b = Arrays.hashCode(bArr);
     }
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public static byte[] m4378i(String str) {
         try {
             return str.getBytes("ISO-8859-1");
@@ -34,13 +34,13 @@ public abstract class AbstractBinderC3419x extends AbstractBinderC3392y0 {
     }
 
     @Override // p007b.p225i.p226a.p288f.p299e.p304k.InterfaceC3394z0
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final InterfaceC3422a mo4177d() {
         return new BinderC3423b(mo4379g());
     }
 
     @Override // p007b.p225i.p226a.p288f.p299e.p304k.InterfaceC3394z0
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final int mo4178e() {
         return this.f9611b;
     }
@@ -61,7 +61,7 @@ public abstract class AbstractBinderC3419x extends AbstractBinderC3392y0 {
         return false;
     }
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public abstract byte[] mo4379g();
 
     public final int hashCode() {

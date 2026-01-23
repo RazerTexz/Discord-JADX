@@ -23,15 +23,15 @@ import p007b.p008a.p027k.FormatUtils;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: GuildBoostSubscriptionUpsellView.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: GuildBoostSubscriptionUpsellView.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class GuildBoostSubscriptionUpsellView extends FrameLayout {
 
-    /* renamed from: j, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: j, reason: from kotlin metadata */
     public final ViewPremiumUpsellInfoBinding binding;
 
-    /* compiled from: GuildBoostSubscriptionUpsellView.kt */
-    /* renamed from: com.discord.views.guildboost.GuildBoostSubscriptionUpsellView$a */
+    /* JADX INFO: renamed from: com.discord.views.guildboost.GuildBoostSubscriptionUpsellView$a */
+    /* JADX INFO: compiled from: GuildBoostSubscriptionUpsellView.kt */
     public static final class C7115a extends Lambda implements Function1<RenderContext, Unit> {
         public C7115a() {
             super(1);
@@ -71,7 +71,7 @@ public final class GuildBoostSubscriptionUpsellView extends FrameLayout {
         throw new NullPointerException("Missing required view with ID: ".concat(viewInflate.getResources().getResourceName(i)));
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final void m8597a(PremiumTier userPremiumTier, boolean showBlurb) {
         Intrinsics3.checkNotNullParameter(userPremiumTier, "userPremiumTier");
         TextView textView = this.binding.f744c;

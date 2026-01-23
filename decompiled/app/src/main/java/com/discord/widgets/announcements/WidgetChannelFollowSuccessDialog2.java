@@ -11,9 +11,9 @@ import kotlin.jvm.functions.Function1;
 import p507d0.p592z.p594d.FunctionReferenceImpl;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: WidgetChannelFollowSuccessDialog.kt */
-/* renamed from: com.discord.widgets.announcements.WidgetChannelFollowSuccessDialog$binding$2, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.announcements.WidgetChannelFollowSuccessDialog$binding$2, reason: use source file name */
+/* JADX INFO: compiled from: WidgetChannelFollowSuccessDialog.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final /* synthetic */ class WidgetChannelFollowSuccessDialog2 extends FunctionReferenceImpl implements Function1<View, WidgetChannelFollowSuccessDialogBinding> {
     public static final WidgetChannelFollowSuccessDialog2 INSTANCE = new WidgetChannelFollowSuccessDialog2();
 
@@ -26,7 +26,7 @@ public final /* synthetic */ class WidgetChannelFollowSuccessDialog2 extends Fun
         return invoke2(view);
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final WidgetChannelFollowSuccessDialogBinding invoke2(View view) {
         Intrinsics3.checkNotNullParameter(view, "p1");
         int i = C5419R.id.channel_follow_success_confirm;

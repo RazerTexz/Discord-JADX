@@ -4,12 +4,12 @@ import com.google.android.gms.tasks.Task;
 import java.util.concurrent.ScheduledFuture;
 import p007b.p225i.p226a.p288f.p340n.InterfaceC4357c;
 
-/* compiled from: com.google.firebase:firebase-iid@@21.0.0 */
-/* renamed from: b.i.c.s.c0 */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.c.s.c0 */
+/* JADX INFO: compiled from: com.google.firebase:firebase-iid@@21.0.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public final /* synthetic */ class C4810c0 implements InterfaceC4357c {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final ScheduledFuture f12850a;
 
     public C4810c0(ScheduledFuture scheduledFuture) {

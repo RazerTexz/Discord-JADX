@@ -22,13 +22,13 @@ import p507d0.p580t._Arrays;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: CapturedTypeConstructor.kt */
-/* renamed from: d0.e0.p.d.m0.k.u.a.d, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.k.u.a.d, reason: use source file name */
+/* JADX INFO: compiled from: CapturedTypeConstructor.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class CapturedTypeConstructor4 {
 
-    /* compiled from: CapturedTypeConstructor.kt */
-    /* renamed from: d0.e0.p.d.m0.k.u.a.d$a */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.k.u.a.d$a */
+    /* JADX INFO: compiled from: CapturedTypeConstructor.kt */
     public static final class a extends Lambda implements Function0<KotlinType> {
         public final /* synthetic */ TypeProjection $this_createCapturedIfNeeded;
 
@@ -52,11 +52,11 @@ public final class CapturedTypeConstructor4 {
         }
     }
 
-    /* compiled from: CapturedTypeConstructor.kt */
-    /* renamed from: d0.e0.p.d.m0.k.u.a.d$b */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.k.u.a.d$b */
+    /* JADX INFO: compiled from: CapturedTypeConstructor.kt */
     public static final class b extends TypeSubstitution2 {
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public final /* synthetic */ boolean f24434c;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -82,7 +82,7 @@ public final class CapturedTypeConstructor4 {
         }
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final TypeProjection m9941a(TypeProjection typeProjection, TypeParameterDescriptor typeParameterDescriptor) {
         if (typeParameterDescriptor == null || typeProjection.getProjectionKind() == Variance.INVARIANT) {
             return typeProjection;

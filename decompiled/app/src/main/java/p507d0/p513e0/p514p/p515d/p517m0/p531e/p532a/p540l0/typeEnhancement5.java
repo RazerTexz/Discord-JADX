@@ -13,12 +13,12 @@ import p507d0.p513e0.p514p.p515d.p517m0.p567n.TypeWithEnhancement2;
 import p507d0.p513e0.p514p.p515d.p517m0.p567n.p571o1.TypeUtils2;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: typeEnhancement.kt */
-/* renamed from: d0.e0.p.d.m0.e.a.l0.g, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.e.a.l0.g, reason: use source file name */
+/* JADX INFO: compiled from: typeEnhancement.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class typeEnhancement5 extends SpecialTypes4 implements TypeCapabilities {
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final KotlinType4 f23459k;
 
     public typeEnhancement5(KotlinType4 kotlinType4) {
@@ -26,7 +26,7 @@ public final class typeEnhancement5 extends SpecialTypes4 implements TypeCapabil
         this.f23459k = kotlinType4;
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final KotlinType4 m9508a(KotlinType4 kotlinType4) {
         KotlinType4 kotlinType4MakeNullableAsSpecified = kotlinType4.makeNullableAsSpecified(false);
         return !TypeUtils2.isTypeParameter(kotlinType4) ? kotlinType4MakeNullableAsSpecified : new typeEnhancement5(kotlinType4MakeNullableAsSpecified);

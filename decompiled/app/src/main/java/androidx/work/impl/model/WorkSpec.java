@@ -23,9 +23,9 @@ import java.util.List;
 import java.util.UUID;
 import p007b.p100d.p104b.p105a.outline;
 
+/* JADX INFO: loaded from: classes.dex */
 @Entity(indices = {@Index({"schedule_requested_at"}), @Index({"period_start_time"})})
 @RestrictTo({RestrictTo.Scope.LIBRARY_GROUP})
-/* loaded from: classes.dex */
 public final class WorkSpec {
     public static final long SCHEDULE_NOT_REQUESTED_YET = -1;
     private static final String TAG = Logger.tagWithPrefix("WorkSpec");
@@ -45,7 +45,7 @@ public final class WorkSpec {
     @ColumnInfo(name = "flex_duration")
     public long flexDuration;
 
-    /* renamed from: id */
+    /* JADX INFO: renamed from: id */
     @NonNull
     @PrimaryKey
     @ColumnInfo(name = ModelAuditLogEntry.CHANGE_KEY_ID)
@@ -92,14 +92,14 @@ public final class WorkSpec {
     @ColumnInfo(name = "worker_class_name")
     public String workerClassName;
 
-    /* renamed from: androidx.work.impl.model.WorkSpec$1 */
+    /* JADX INFO: renamed from: androidx.work.impl.model.WorkSpec$1 */
     public class C07561 implements Function<List<WorkInfoPojo>, List<WorkInfo>> {
         @Override // androidx.arch.core.util.Function
         public /* bridge */ /* synthetic */ List<WorkInfo> apply(List<WorkInfoPojo> list) {
             return apply2(list);
         }
 
-        /* renamed from: apply, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: apply, reason: avoid collision after fix types in other method */
         public List<WorkInfo> apply2(List<WorkInfoPojo> list) {
             if (list == null) {
                 return null;
@@ -115,7 +115,7 @@ public final class WorkSpec {
 
     public static class IdAndState {
 
-        /* renamed from: id */
+        /* JADX INFO: renamed from: id */
         @ColumnInfo(name = ModelAuditLogEntry.CHANGE_KEY_ID)
         public String f164id;
 
@@ -143,7 +143,7 @@ public final class WorkSpec {
 
     public static class WorkInfoPojo {
 
-        /* renamed from: id */
+        /* JADX INFO: renamed from: id */
         @ColumnInfo(name = ModelAuditLogEntry.CHANGE_KEY_ID)
         public String f165id;
 
@@ -230,7 +230,7 @@ public final class WorkSpec {
         long jCurrentTimeMillis;
         long j;
         if (isBackedOff()) {
-            long jScalb = this.backoffPolicy == BackoffPolicy.LINEAR ? this.backoffDelayDuration * this.runAttemptCount : (long) Math.scalb(this.backoffDelayDuration, this.runAttemptCount - 1);
+            long jScalb = this.backoffPolicy == BackoffPolicy.LINEAR ? this.backoffDelayDuration * ((long) this.runAttemptCount) : (long) Math.scalb(this.backoffDelayDuration, this.runAttemptCount - 1);
             j = this.periodStartTime;
             jCurrentTimeMillis = Math.min(WorkRequest.MAX_BACKOFF_MILLIS, jScalb);
         } else {

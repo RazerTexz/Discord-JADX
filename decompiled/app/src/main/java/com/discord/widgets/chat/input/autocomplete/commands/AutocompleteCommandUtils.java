@@ -61,8 +61,8 @@ import p507d0.p580t._Collections;
 import p507d0.p580t._CollectionsJvm;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: AutocompleteCommandUtils.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: AutocompleteCommandUtils.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class AutocompleteCommandUtils {
     public static final AutocompleteCommandUtils INSTANCE = new AutocompleteCommandUtils();
 
@@ -345,24 +345,17 @@ public final class AutocompleteCommandUtils {
         return linkedHashSet;
     }
 
-    /* JADX WARN: Multi-variable type inference failed */
     /* JADX WARN: Removed duplicated region for block: B:101:0x01c9 A[EDGE_INSN: B:101:0x01c9->B:97:0x01c9 BREAK  A[LOOP:0: B:87:0x01a8->B:105:?], SYNTHETIC] */
     /* JADX WARN: Removed duplicated region for block: B:17:0x005d  */
     /* JADX WARN: Removed duplicated region for block: B:89:0x01ae  */
-    /* JADX WARN: Type inference failed for: r2v1, types: [java.lang.Object] */
-    /* JADX WARN: Type inference failed for: r2v2 */
-    /* JADX WARN: Type inference failed for: r2v22 */
-    /* JADX WARN: Type inference failed for: r2v3 */
-    /* JADX WARN: Type inference failed for: r2v4 */
-    /* JADX WARN: Type inference failed for: r2v5 */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
     public final InputCommandContext getInputCommandContext(CharSequence input, long userId, List<Long> userRoles, AutocompleteApplicationCommands applicationCommands, ApplicationCommand selectedCommand) {
         ApplicationCommand applicationCommand;
+        Object obj;
         ApplicationCommand applicationCommand2;
-        ApplicationCommand applicationCommand3;
-        Iterator it;
+        Iterator<T> it;
         long j = userId;
         List<Long> list = userRoles;
         Intrinsics3.checkNotNullParameter(input, "input");
@@ -370,7 +363,7 @@ public final class AutocompleteCommandUtils {
         Intrinsics3.checkNotNullParameter(applicationCommands, "applicationCommands");
         String commandPrefix = getCommandPrefix(input);
         Application application = null;
-        Object obj = null;
+        Object obj2 = null;
         if (commandPrefix == null) {
             applicationCommand = null;
         } else if (selectedCommand != null) {
@@ -389,65 +382,64 @@ public final class AutocompleteCommandUtils {
                         String strSubstring2 = commandPrefix.substring(1);
                         Intrinsics3.checkNotNullExpressionValue(strSubstring2, "(this as java.lang.String).substring(startIndex)");
                         ArrayList arrayList = new ArrayList();
-                        for (Object obj2 : listFlattenSubCommands) {
-                            ApplicationCommand applicationCommand4 = (ApplicationCommand) obj2;
-                            if (ApplicationCommand2.hasPermission(applicationCommand4, j, list) && (StringsJVM.startsWith$default(applicationCommand4.getName(), strSubstring2, false, 2, null) && (Intrinsics3.areEqual(strSubstring2, applicationCommand4.getName()) ^ true))) {
-                                arrayList.add(obj2);
+                        for (Object obj3 : listFlattenSubCommands) {
+                            ApplicationCommand applicationCommand3 = (ApplicationCommand) obj3;
+                            if (ApplicationCommand2.hasPermission(applicationCommand3, j, list) && (StringsJVM.startsWith$default(applicationCommand3.getName(), strSubstring2, false, 2, null) && (Intrinsics3.areEqual(strSubstring2, applicationCommand3.getName()) ^ true))) {
+                                arrayList.add(obj3);
                             }
                         }
                         ArrayList arrayList2 = new ArrayList();
                         int length = 0;
                         boolean z2 = false;
-                        for (Object obj3 : listFlattenSubCommands) {
-                            ApplicationCommand applicationCommand5 = (ApplicationCommand) obj3;
-                            boolean zHasPermission = ApplicationCommand2.hasPermission(applicationCommand5, j, list);
-                            boolean zAreEqual = Intrinsics3.areEqual(strSubstring2, applicationCommand5.getName());
+                        for (Object obj4 : listFlattenSubCommands) {
+                            ApplicationCommand applicationCommand4 = (ApplicationCommand) obj4;
+                            boolean zHasPermission = ApplicationCommand2.hasPermission(applicationCommand4, j, list);
+                            boolean zAreEqual = Intrinsics3.areEqual(strSubstring2, applicationCommand4.getName());
                             StringBuilder sb2 = new StringBuilder();
-                            sb2.append(applicationCommand5.getName());
+                            sb2.append(applicationCommand4.getName());
                             sb2.append(" ");
                             boolean z3 = zHasPermission && (StringsJVM.startsWith$default(strSubstring2, sb2.toString(), false, 2, null) || zAreEqual);
-                            if (z3 && applicationCommand5.getName().length() == length) {
+                            if (z3 && applicationCommand4.getName().length() == length) {
                                 z2 = true;
-                            } else if (z3 && applicationCommand5.getName().length() > length) {
-                                length = applicationCommand5.getName().length();
+                            } else if (z3 && applicationCommand4.getName().length() > length) {
+                                length = applicationCommand4.getName().length();
                                 z2 = false;
                             }
                             if (z3) {
-                                arrayList2.add(obj3);
+                                arrayList2.add(obj4);
                             }
                             j = userId;
                             list = userRoles;
                         }
                         Iterator it2 = arrayList2.iterator();
                         if (it2.hasNext()) {
-                            ?? next = it2.next();
+                            Object next = it2.next();
                             if (it2.hasNext()) {
                                 String name2 = ((ApplicationCommand) next).getName();
                                 do {
                                     Object next2 = it2.next();
                                     String name3 = ((ApplicationCommand) next2).getName();
-                                    next = next;
                                     if (name2.compareTo(name3) < 0) {
                                         next = next2;
                                         name2 = name3;
                                     }
                                 } while (it2.hasNext());
                             }
-                            applicationCommand2 = next;
+                            obj = next;
                         } else {
-                            applicationCommand2 = null;
+                            obj = null;
                         }
-                        applicationCommand = applicationCommand2;
+                        applicationCommand = (ApplicationCommand) obj;
                         if (arrayList.isEmpty()) {
                             if (z2) {
-                                obj = null;
-                                applicationCommand3 = StringsJVM.startsWith$default(input.subSequence(1, input.length()).toString(), Intrinsics3.stringPlus(applicationCommand != null ? applicationCommand.getName() : null, " "), false, 2, null) ? null : null;
+                                obj2 = null;
+                                applicationCommand2 = StringsJVM.startsWith$default(input.subSequence(1, input.length()).toString(), Intrinsics3.stringPlus(applicationCommand != null ? applicationCommand.getName() : null, " "), false, 2, null) ? null : null;
                             } else {
-                                obj = null;
+                                obj2 = null;
                             }
                         }
-                        applicationCommand = applicationCommand3;
-                        obj = applicationCommand;
+                        applicationCommand = applicationCommand2;
+                        obj2 = applicationCommand;
                     }
                     it = applicationCommands.getApplications().iterator();
                     while (true) {
@@ -456,11 +448,11 @@ public final class AutocompleteCommandUtils {
                         }
                         Object next3 = it.next();
                         if (applicationCommand != null && ((Application) next3).getId() == applicationCommand.getApplicationId()) {
-                            obj = next3;
+                            obj2 = next3;
                             break;
                         }
                     }
-                    application = (Application) obj;
+                    application = (Application) obj2;
                 }
             }
             applicationCommand = selectedCommand;
@@ -469,7 +461,7 @@ public final class AutocompleteCommandUtils {
                 if (it.hasNext()) {
                 }
             }
-            application = (Application) obj;
+            application = (Application) obj2;
         }
         return new InputCommandContext(application, applicationCommand);
     }

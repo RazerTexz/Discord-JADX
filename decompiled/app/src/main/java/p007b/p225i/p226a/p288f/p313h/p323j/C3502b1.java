@@ -9,20 +9,20 @@ import android.util.Log;
 import androidx.annotation.Nullable;
 import java.lang.reflect.Method;
 
+/* JADX INFO: renamed from: b.i.a.f.h.j.b1 */
+/* JADX INFO: loaded from: classes3.dex */
 @TargetApi(24)
-/* renamed from: b.i.a.f.h.j.b1 */
-/* loaded from: classes3.dex */
 public final class C3502b1 {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     @Nullable
     public static final Method f9674a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     @Nullable
     public static final Method f9675b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public static volatile InterfaceC3508d1 f9676c;
 
     static {
@@ -35,6 +35,7 @@ public final class C3502b1 {
                 if (Log.isLoggable("JobSchedulerCompat", 6)) {
                     Log.e("JobSchedulerCompat", "No scheduleAsPackage method available, falling back to schedule");
                 }
+                declaredMethod = null;
             }
         } else {
             declaredMethod = null;

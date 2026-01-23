@@ -16,12 +16,12 @@ import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.UUID;
 
+/* JADX INFO: loaded from: classes.dex */
 @RestrictTo({RestrictTo.Scope.LIBRARY_GROUP})
-/* loaded from: classes.dex */
 public abstract class CancelWorkRunnable implements Runnable {
     private final OperationImpl mOperation = new OperationImpl();
 
-    /* renamed from: androidx.work.impl.utils.CancelWorkRunnable$1 */
+    /* JADX INFO: renamed from: androidx.work.impl.utils.CancelWorkRunnable$1 */
     public class C07711 extends CancelWorkRunnable {
         public final /* synthetic */ UUID val$id;
         public final /* synthetic */ WorkManagerImpl val$workManagerImpl;
@@ -48,7 +48,7 @@ public abstract class CancelWorkRunnable implements Runnable {
         }
     }
 
-    /* renamed from: androidx.work.impl.utils.CancelWorkRunnable$2 */
+    /* JADX INFO: renamed from: androidx.work.impl.utils.CancelWorkRunnable$2 */
     public class C07722 extends CancelWorkRunnable {
         public final /* synthetic */ String val$tag;
         public final /* synthetic */ WorkManagerImpl val$workManagerImpl;
@@ -78,7 +78,7 @@ public abstract class CancelWorkRunnable implements Runnable {
         }
     }
 
-    /* renamed from: androidx.work.impl.utils.CancelWorkRunnable$3 */
+    /* JADX INFO: renamed from: androidx.work.impl.utils.CancelWorkRunnable$3 */
     public class C07733 extends CancelWorkRunnable {
         public final /* synthetic */ boolean val$allowReschedule;
         public final /* synthetic */ String val$name;
@@ -112,7 +112,7 @@ public abstract class CancelWorkRunnable implements Runnable {
         }
     }
 
-    /* renamed from: androidx.work.impl.utils.CancelWorkRunnable$4 */
+    /* JADX INFO: renamed from: androidx.work.impl.utils.CancelWorkRunnable$4 */
     public class C07744 extends CancelWorkRunnable {
         public final /* synthetic */ WorkManagerImpl val$workManagerImpl;
 

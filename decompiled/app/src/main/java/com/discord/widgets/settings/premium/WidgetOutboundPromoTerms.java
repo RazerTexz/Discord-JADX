@@ -21,20 +21,20 @@ import p007b.p008a.p050t.p052b.p054b.SimpleMarkdownRules5;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: WidgetOutboundPromoTerms.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetOutboundPromoTerms.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetOutboundPromoTerms extends AppBottomSheet {
     private static final String ARG_CONTENT = "ARG_CONTENT";
 
-    /* renamed from: binding$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
     private final Parser<UrlNode.RenderContext, Node<UrlNode.RenderContext>, MessageParseState> parser;
     public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetOutboundPromoTerms.class, "binding", "getBinding()Lcom/discord/databinding/WidgetOutboundPromoTermsBinding;", 0)};
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
 
-    /* compiled from: WidgetOutboundPromoTerms.kt */
+    /* JADX INFO: compiled from: WidgetOutboundPromoTerms.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -54,8 +54,8 @@ public final class WidgetOutboundPromoTerms extends AppBottomSheet {
         }
     }
 
-    /* compiled from: WidgetOutboundPromoTerms.kt */
-    /* renamed from: com.discord.widgets.settings.premium.WidgetOutboundPromoTerms$onViewCreated$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.premium.WidgetOutboundPromoTerms$onViewCreated$1 */
+    /* JADX INFO: compiled from: WidgetOutboundPromoTerms.kt */
     public static final class ViewOnClickListenerC99011 implements View.OnClickListener {
         public ViewOnClickListenerC99011() {
         }

@@ -2,12 +2,12 @@ package p007b.p225i.p226a.p341g.p346e;
 
 import android.view.ViewTreeObserver;
 
-/* compiled from: FloatingActionButtonImpl.java */
-/* renamed from: b.i.a.g.e.h, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.g.e.h, reason: use source file name */
+/* JADX INFO: compiled from: FloatingActionButtonImpl.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class FloatingActionButtonImpl5 implements ViewTreeObserver.OnPreDrawListener {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final /* synthetic */ FloatingActionButtonImpl3 f11699j;
 
     public FloatingActionButtonImpl5(FloatingActionButtonImpl3 floatingActionButtonImpl3) {

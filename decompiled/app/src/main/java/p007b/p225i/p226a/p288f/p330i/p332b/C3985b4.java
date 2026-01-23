@@ -6,18 +6,18 @@ import android.content.Intent;
 import androidx.annotation.MainThread;
 import androidx.annotation.WorkerThread;
 
-/* compiled from: com.google.android.gms:play-services-measurement@@18.0.0 */
-/* renamed from: b.i.a.f.i.b.b4 */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.i.b.b4 */
+/* JADX INFO: compiled from: com.google.android.gms:play-services-measurement@@18.0.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public class C3985b4 extends BroadcastReceiver {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final C4097k9 f10561a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public boolean f10562b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public boolean f10563c;
 
     public C3985b4(C4097k9 c4097k9) {
@@ -25,7 +25,7 @@ public class C3985b4 extends BroadcastReceiver {
     }
 
     @WorkerThread
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final void m5501a() {
         this.f10561a.m5715P();
         this.f10561a.mo5725f().mo5848b();
@@ -44,7 +44,7 @@ public class C3985b4 extends BroadcastReceiver {
 
     @Override // android.content.BroadcastReceiver
     @MainThread
-    public void onReceive(Context context, Intent intent) throws IllegalStateException {
+    public void onReceive(Context context, Intent intent) {
         this.f10561a.m5715P();
         String action = intent.getAction();
         this.f10561a.mo5726g().f11149n.m5861b("NetworkBroadcastReceiver received action", action);

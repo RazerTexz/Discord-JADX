@@ -8,9 +8,9 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 import p507d0.p592z.p594d.Reflection2;
 
-/* compiled from: BlockRussianPurchasesUtils.kt */
-/* renamed from: com.discord.utilities.premium.BlockRussianPurchasesUtils$showDialog$blockRussianPurchasesNotice$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.utilities.premium.BlockRussianPurchasesUtils$showDialog$blockRussianPurchasesNotice$1, reason: use source file name */
+/* JADX INFO: compiled from: BlockRussianPurchasesUtils.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class BlockRussianPurchasesUtils3 extends Lambda implements Function1<FragmentActivity, Boolean> {
     public static final BlockRussianPurchasesUtils3 INSTANCE = new BlockRussianPurchasesUtils3();
 
@@ -23,7 +23,7 @@ public final class BlockRussianPurchasesUtils3 extends Lambda implements Functio
         return Boolean.valueOf(invoke2(fragmentActivity));
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final boolean invoke2(FragmentActivity fragmentActivity) {
         Intrinsics3.checkNotNullParameter(fragmentActivity, "appActivity");
         WidgetBlockRussianPurchasesDialog widgetBlockRussianPurchasesDialog = new WidgetBlockRussianPurchasesDialog();

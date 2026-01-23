@@ -2,15 +2,15 @@ package p507d0.p513e0.p514p.p515d.p517m0.p550i;
 
 import java.io.IOException;
 
-/* compiled from: LazyFieldLite.java */
-/* renamed from: d0.e0.p.d.m0.i.j, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.i.j, reason: use source file name */
+/* JADX INFO: compiled from: LazyFieldLite.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class LazyFieldLite {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public volatile boolean f24145a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public volatile MessageLite f24146b;
 
     public int getSerializedSize() {

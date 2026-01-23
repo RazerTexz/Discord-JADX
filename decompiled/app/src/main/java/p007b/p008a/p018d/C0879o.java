@@ -18,20 +18,20 @@ import p637j0.p642l.p647e.ScalarSynchronousObservable;
 import p658rx.Observable;
 import p658rx.functions.Action1;
 
-/* compiled from: AppTransformers.kt */
-/* renamed from: b.a.d.o */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.a.d.o */
+/* JADX INFO: compiled from: AppTransformers.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class C0879o {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final C0879o f566a = new C0879o();
 
     /* JADX INFO: Add missing generic type declarations: [T] */
-    /* compiled from: AppTransformers.kt */
-    /* renamed from: b.a.d.o$a */
+    /* JADX INFO: renamed from: b.a.d.o$a */
+    /* JADX INFO: compiled from: AppTransformers.kt */
     public static final class a<T> extends Lambda implements Function1<T, T> {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public static final a f567j = new a();
 
         public a() {
@@ -46,11 +46,11 @@ public final class C0879o {
     }
 
     /* JADX INFO: Add missing generic type declarations: [V, K, V1] */
-    /* compiled from: AppTransformers.kt */
-    /* renamed from: b.a.d.o$b */
+    /* JADX INFO: renamed from: b.a.d.o$b */
+    /* JADX INFO: compiled from: AppTransformers.kt */
     public static final class b<T, R, K, V, V1> implements Observable.InterfaceC13007c<Map<K, ? extends V>, Map<K, ? extends V1>> {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public static final b f568j = new b();
 
         @Override // p637j0.p641k.Func1
@@ -60,14 +60,14 @@ public final class C0879o {
     }
 
     /* JADX INFO: Add missing generic type declarations: [V, K, V1] */
-    /* compiled from: AppTransformers.kt */
-    /* renamed from: b.a.d.o$c */
+    /* JADX INFO: renamed from: b.a.d.o$c */
+    /* JADX INFO: compiled from: AppTransformers.kt */
     public static final class c<T, R, K, V, V1> implements Observable.InterfaceC13007c<Map<K, ? extends V>, Map<K, ? extends V1>> {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public final /* synthetic */ Collection f569j;
 
-        /* renamed from: k */
+        /* JADX INFO: renamed from: k */
         public final /* synthetic */ Function1 f570k;
 
         public c(Collection collection, Function1 function1) {
@@ -81,20 +81,20 @@ public final class C0879o {
         }
     }
 
-    /* compiled from: AppTransformers.kt */
-    /* renamed from: b.a.d.o$d */
+    /* JADX INFO: renamed from: b.a.d.o$d */
+    /* JADX INFO: compiled from: AppTransformers.kt */
     public static final class d<T, R> implements Observable.InterfaceC13007c<T, T> {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public final /* synthetic */ Function1 f571j;
 
-        /* renamed from: k */
+        /* JADX INFO: renamed from: k */
         public final /* synthetic */ Object f572k;
 
-        /* renamed from: l */
+        /* JADX INFO: renamed from: l */
         public final /* synthetic */ long f573l;
 
-        /* renamed from: m */
+        /* JADX INFO: renamed from: m */
         public final /* synthetic */ TimeUnit f574m;
 
         public d(Function1 function1, Object obj, long j, TimeUnit timeUnit) {
@@ -111,8 +111,8 @@ public final class C0879o {
     }
 
     /* JADX INFO: Add missing generic type declarations: [T] */
-    /* compiled from: AppTransformers.kt */
-    /* renamed from: b.a.d.o$e */
+    /* JADX INFO: renamed from: b.a.d.o$e */
+    /* JADX INFO: compiled from: AppTransformers.kt */
     public static final /* synthetic */ class e<T> extends FunctionReferenceImpl implements Function1<T, Unit> {
         public e(Action1 action1) {
             super(1, action1, Action1.class, NotificationCompat.CATEGORY_CALL, "call(Ljava/lang/Object;)V", 0);
@@ -126,8 +126,8 @@ public final class C0879o {
     }
 
     /* JADX INFO: Add missing generic type declarations: [T] */
-    /* compiled from: AppTransformers.kt */
-    /* renamed from: b.a.d.o$f */
+    /* JADX INFO: renamed from: b.a.d.o$f */
+    /* JADX INFO: compiled from: AppTransformers.kt */
     public static final /* synthetic */ class f<T> extends FunctionReferenceImpl implements Function1<T, Unit> {
         public f(Action1 action1) {
             super(1, action1, Action1.class, NotificationCompat.CATEGORY_CALL, "call(Ljava/lang/Object;)V", 0);
@@ -140,26 +140,26 @@ public final class C0879o {
         }
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final <K, T> Observable.InterfaceC13007c<Map<K, T>, Map<K, T>> m175a(Collection<? extends K> collection) {
         Intrinsics3.checkNotNullParameter(collection, "filterKeys");
         return m176b(collection, a.f567j);
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static final <K, V, V1> Observable.InterfaceC13007c<Map<K, V>, Map<K, V1>> m176b(Collection<? extends K> collection, Function1<? super V, ? extends V1> function1) {
         Intrinsics3.checkNotNullParameter(function1, "valueMapper");
         return (collection == null || collection.isEmpty()) ? b.f568j : new c(collection, function1);
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public static final <T> Observable.InterfaceC13007c<T, T> m177c(Function1<? super T, Boolean> function1, T t, long j, TimeUnit timeUnit) {
         Intrinsics3.checkNotNullParameter(function1, "predicate");
         Intrinsics3.checkNotNullParameter(timeUnit, "timeUnit");
         return new d(function1, t, j, timeUnit);
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public static /* synthetic */ Observable.InterfaceC13007c m178d(Function1 function1, Object obj, long j, TimeUnit timeUnit, int i) {
         if ((i & 4) != 0) {
             j = 5000;
@@ -167,14 +167,14 @@ public final class C0879o {
         return m177c(function1, obj, j, (i & 8) != 0 ? TimeUnit.MILLISECONDS : null);
     }
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public static final <T> Observable.InterfaceC13007c<T, T> m179e(Action1<? super T> action1, Class<?> cls) {
         Intrinsics3.checkNotNullParameter(action1, "onNext");
         Intrinsics3.checkNotNullParameter(cls, "errorClass");
         return new C0887w(null, cls, null, action1, null);
     }
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public static Observable.InterfaceC13007c m180f(C0879o c0879o, Function1 function1, String str, Function1 function12, Function1 function13, Context context, Function0 function0, int i) {
         Function1 function14 = (i & 4) != 0 ? null : function12;
         int i2 = i & 8;
@@ -185,7 +185,7 @@ public final class C0879o {
         return new C0889y(context2, str, null, function1, function14, null);
     }
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public static final <T> Observable.InterfaceC13007c<T, T> m181h(Action1<? super T> action1, Context context, Action1<Error> action12) {
         Intrinsics3.checkNotNullParameter(action1, "onNext");
         e eVar = new e(action1);
@@ -198,20 +198,20 @@ public final class C0879o {
         return new C0889y(context2, "restClient", null, eVar, c0857c0, null);
     }
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public static final <T> Observable.InterfaceC13007c<T, T> m182i(Action1<? super T> action1, AppFragment appFragment) {
         Intrinsics3.checkNotNullParameter(action1, "onNext");
         Intrinsics3.checkNotNullParameter(appFragment, "fragment");
         return f566a.m184g(appFragment.getContext(), new f(action1), null);
     }
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static /* synthetic */ Observable.InterfaceC13007c m183j(Action1 action1, Context context, Action1 action12, int i) {
         int i2 = i & 4;
         return m181h(action1, context, null);
     }
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public final <T> Observable.InterfaceC13007c<T, T> m184g(Context context, Function1<? super T, Unit> function1, Action1<Error> action1) {
         Intrinsics3.checkNotNullParameter(function1, "onNext");
         return m180f(this, function1, "restClient", action1 != null ? new C0857c0(action1) : null, null, context, null, 40);

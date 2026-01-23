@@ -7,20 +7,20 @@ import p007b.p225i.p226a.p242c.Format2;
 import p007b.p225i.p226a.p242c.p265v2.DecoderCounters;
 import p007b.p225i.p226a.p242c.p265v2.DecoderReuseEvaluation;
 
-/* compiled from: AudioRendererEventListener.java */
-/* renamed from: b.i.a.c.t2.r, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.t2.r, reason: use source file name */
+/* JADX INFO: compiled from: AudioRendererEventListener.java */
+/* JADX INFO: loaded from: classes3.dex */
 public interface AudioRendererEventListener2 {
 
-    /* compiled from: AudioRendererEventListener.java */
-    /* renamed from: b.i.a.c.t2.r$a */
+    /* JADX INFO: renamed from: b.i.a.c.t2.r$a */
+    /* JADX INFO: compiled from: AudioRendererEventListener.java */
     public static final class a {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         @Nullable
         public final Handler f7790a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         @Nullable
         public final AudioRendererEventListener2 f7791b;
 
@@ -34,7 +34,7 @@ public interface AudioRendererEventListener2 {
             this.f7791b = audioRendererEventListener2;
         }
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public void m3498a(DecoderCounters decoderCounters) {
             synchronized (decoderCounters) {
             }
@@ -45,37 +45,37 @@ public interface AudioRendererEventListener2 {
         }
     }
 
-    /* renamed from: B */
+    /* JADX INFO: renamed from: B */
     void mo3291B(String str);
 
-    /* renamed from: C */
+    /* JADX INFO: renamed from: C */
     void mo3292C(String str, long j, long j2);
 
-    /* renamed from: I */
+    /* JADX INFO: renamed from: I */
     void mo3293I(Format2 format2, @Nullable DecoderReuseEvaluation decoderReuseEvaluation);
 
-    /* renamed from: N */
+    /* JADX INFO: renamed from: N */
     void mo3294N(Exception exc);
 
-    /* renamed from: R */
+    /* JADX INFO: renamed from: R */
     void mo3295R(long j);
 
-    /* renamed from: T */
+    /* JADX INFO: renamed from: T */
     void mo3296T(Exception exc);
 
     @Deprecated
-    /* renamed from: U */
+    /* JADX INFO: renamed from: U */
     void mo3297U(Format2 format2);
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     void mo3299d(boolean z2);
 
-    /* renamed from: e0 */
+    /* JADX INFO: renamed from: e0 */
     void mo3300e0(int i, long j, long j2);
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     void mo3301k(DecoderCounters decoderCounters);
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     void mo3302m(DecoderCounters decoderCounters);
 }

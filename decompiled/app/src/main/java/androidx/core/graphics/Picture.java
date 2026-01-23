@@ -6,9 +6,9 @@ import kotlin.jvm.functions.Function1;
 import p507d0.p592z.p594d.InlineMarker;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: Picture.kt */
-/* renamed from: androidx.core.graphics.PictureKt, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: androidx.core.graphics.PictureKt, reason: use source file name */
+/* JADX INFO: compiled from: Picture.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class Picture {
     public static final android.graphics.Picture record(android.graphics.Picture picture, int i, int i2, Function1<? super Canvas, Unit> function1) {
         Intrinsics3.checkNotNullParameter(picture, "<this>");

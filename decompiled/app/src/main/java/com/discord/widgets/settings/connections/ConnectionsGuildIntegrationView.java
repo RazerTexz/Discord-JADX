@@ -21,8 +21,8 @@ import com.google.android.material.button.MaterialButton;
 import kotlin.jvm.functions.Function1;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ConnectionsGuildIntegrationView.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: ConnectionsGuildIntegrationView.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class ConnectionsGuildIntegrationView extends FrameLayout {
     private final ViewConnectionGuildIntegrationBinding binding;
 

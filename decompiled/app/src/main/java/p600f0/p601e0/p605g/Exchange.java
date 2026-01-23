@@ -25,46 +25,46 @@ import p615g0.ForwardingSource;
 import p615g0.Sink;
 import p615g0.Source2;
 
-/* compiled from: Exchange.kt */
-/* renamed from: f0.e0.g.c, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: f0.e0.g.c, reason: use source file name */
+/* JADX INFO: compiled from: Exchange.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class Exchange {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public boolean f25437a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final RealConnection4 f25438b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final RealCall f25439c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final EventListener f25440d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final ExchangeFinder f25441e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final ExchangeCodec f25442f;
 
-    /* compiled from: Exchange.kt */
-    /* renamed from: f0.e0.g.c$a */
+    /* JADX INFO: renamed from: f0.e0.g.c$a */
+    /* JADX INFO: compiled from: Exchange.kt */
     public final class a extends ForwardingSink {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public boolean f25443j;
 
-        /* renamed from: k */
+        /* JADX INFO: renamed from: k */
         public long f25444k;
 
-        /* renamed from: l */
+        /* JADX INFO: renamed from: l */
         public boolean f25445l;
 
-        /* renamed from: m */
+        /* JADX INFO: renamed from: m */
         public final long f25446m;
 
-        /* renamed from: n */
+        /* JADX INFO: renamed from: n */
         public final /* synthetic */ Exchange f25447n;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -75,7 +75,7 @@ public final class Exchange {
             this.f25446m = j;
         }
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final <E extends IOException> E m10174a(E e) {
             if (this.f25443j) {
                 return e;
@@ -135,26 +135,26 @@ public final class Exchange {
         }
     }
 
-    /* compiled from: Exchange.kt */
-    /* renamed from: f0.e0.g.c$b */
+    /* JADX INFO: renamed from: f0.e0.g.c$b */
+    /* JADX INFO: compiled from: Exchange.kt */
     public final class b extends ForwardingSource {
 
-        /* renamed from: k */
+        /* JADX INFO: renamed from: k */
         public long f25448k;
 
-        /* renamed from: l */
+        /* JADX INFO: renamed from: l */
         public boolean f25449l;
 
-        /* renamed from: m */
+        /* JADX INFO: renamed from: m */
         public boolean f25450m;
 
-        /* renamed from: n */
+        /* JADX INFO: renamed from: n */
         public boolean f25451n;
 
-        /* renamed from: o */
+        /* JADX INFO: renamed from: o */
         public final long f25452o;
 
-        /* renamed from: p */
+        /* JADX INFO: renamed from: p */
         public final /* synthetic */ Exchange f25453p;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -169,7 +169,7 @@ public final class Exchange {
             }
         }
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final <E extends IOException> E m10175a(E e) {
             if (this.f25450m) {
                 return e;
@@ -201,7 +201,7 @@ public final class Exchange {
         }
 
         @Override // p615g0.Source2
-        /* renamed from: i0 */
+        /* JADX INFO: renamed from: i0 */
         public long mo10176i0(Buffer3 buffer3, long j) throws IOException {
             Intrinsics3.checkParameterIsNotNull(buffer3, "sink");
             if (!(!this.f25451n)) {
@@ -249,7 +249,7 @@ public final class Exchange {
         this.f25438b = exchangeCodec.mo10217e();
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final <E extends IOException> E m10167a(long j, boolean z2, boolean z3, E e) {
         if (e != null) {
             m10173g(e);
@@ -285,7 +285,7 @@ public final class Exchange {
         return (E) this.f25439c.m10186k(this, z3, z2, e);
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final Sink m10168b(Request request, boolean z2) throws IOException {
         Intrinsics3.checkParameterIsNotNull(request, "request");
         this.f25437a = z2;
@@ -301,7 +301,7 @@ public final class Exchange {
         return new a(this, this.f25442f.mo10220h(request, jContentLength), jContentLength);
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final void m10169c() throws IOException {
         try {
             this.f25442f.mo10218f();
@@ -316,7 +316,7 @@ public final class Exchange {
         }
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final RealWebSocket.c m10170d() throws SocketException {
         this.f25439c.m10189n();
         RealConnection4 realConnection4Mo10217e = this.f25442f.mo10217e();
@@ -339,7 +339,7 @@ public final class Exchange {
         return new RealConnection3(this, bufferedSource, bufferedSink, true, bufferedSource, bufferedSink);
     }
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final Response.C12937a m10171e(boolean z2) throws IOException {
         try {
             Response.C12937a c12937aMo10216d = this.f25442f.mo10216d(z2);
@@ -359,7 +359,7 @@ public final class Exchange {
         }
     }
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final void m10172f() {
         EventListener eventListener = this.f25440d;
         RealCall realCall = this.f25439c;
@@ -367,7 +367,7 @@ public final class Exchange {
         Intrinsics3.checkParameterIsNotNull(realCall, NotificationCompat.CATEGORY_CALL);
     }
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public final void m10173g(IOException iOException) {
         this.f25441e.m10179c(iOException);
         RealConnection4 realConnection4Mo10217e = this.f25442f.mo10217e();

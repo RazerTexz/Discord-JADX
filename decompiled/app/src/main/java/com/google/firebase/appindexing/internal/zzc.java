@@ -7,27 +7,27 @@ import p007b.p085c.p086a.p087a0.AnimatableValueParser;
 import p007b.p100d.p104b.p105a.outline;
 import p007b.p225i.p361c.p365k.p367d.C4568f;
 
-/* compiled from: com.google.firebase:firebase-appindexing@@19.1.0 */
-/* loaded from: classes3.dex */
+/* JADX INFO: compiled from: com.google.firebase:firebase-appindexing@@19.1.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public final class zzc extends AbstractSafeParcelable {
     public static final Parcelable.Creator<zzc> CREATOR = new C4568f();
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public int f21412j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final boolean f21413k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final String f21414l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public final String f21415m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public final byte[] f21416n;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public final boolean f21417o;
 
     public zzc(int i, boolean z2, String str, String str2, byte[] bArr, boolean z3) {

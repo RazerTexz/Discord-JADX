@@ -41,7 +41,7 @@ import com.google.android.material.shape.MaterialShapeDrawable;
 import com.google.android.material.shape.MaterialShapeUtils;
 import com.google.android.material.theme.overlay.MaterialThemeOverlay;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public class BottomNavigationView extends FrameLayout {
     private static final int DEF_STYLE_RES = C10817R.style.Widget_Design_BottomNavigationView;
     private static final int MENU_PRESENTER_ID = 1;
@@ -71,11 +71,11 @@ public class BottomNavigationView extends FrameLayout {
     public static class SavedState extends AbsSavedState {
         public static final Parcelable.Creator<SavedState> CREATOR = new C10849a();
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         @Nullable
         public Bundle f20922j;
 
-        /* renamed from: com.google.android.material.bottomnavigation.BottomNavigationView$SavedState$a */
+        /* JADX INFO: renamed from: com.google.android.material.bottomnavigation.BottomNavigationView$SavedState$a */
         public static class C10849a implements Parcelable.ClassLoaderCreator<SavedState> {
             @Override // android.os.Parcelable.ClassLoaderCreator
             @NonNull
@@ -112,7 +112,7 @@ public class BottomNavigationView extends FrameLayout {
         }
     }
 
-    /* renamed from: com.google.android.material.bottomnavigation.BottomNavigationView$a */
+    /* JADX INFO: renamed from: com.google.android.material.bottomnavigation.BottomNavigationView$a */
     public class C10850a implements MenuBuilder.Callback {
         public C10850a() {
         }
@@ -131,7 +131,7 @@ public class BottomNavigationView extends FrameLayout {
         }
     }
 
-    /* renamed from: com.google.android.material.bottomnavigation.BottomNavigationView$b */
+    /* JADX INFO: renamed from: com.google.android.material.bottomnavigation.BottomNavigationView$b */
     public class C10851b implements ViewUtils.OnApplyWindowInsetsListener {
         public C10851b(BottomNavigationView bottomNavigationView) {
         }

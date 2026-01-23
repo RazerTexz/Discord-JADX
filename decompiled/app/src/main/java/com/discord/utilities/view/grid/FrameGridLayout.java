@@ -30,8 +30,8 @@ import p507d0.p580t._Collections;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: FrameGridLayout.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: FrameGridLayout.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class FrameGridLayout extends FrameLayout {
     private static final Companion Companion = new Companion(null);
 
@@ -42,7 +42,7 @@ public final class FrameGridLayout extends FrameLayout {
     private Function2<? super View, ? super Data, Unit> onBindView;
     private final SizeCalculator sizeCalculator;
 
-    /* compiled from: FrameGridLayout.kt */
+    /* JADX INFO: compiled from: FrameGridLayout.kt */
     public static final /* data */ class Children {
         private final Map<String, View> boundChildren;
         private final List<View> unboundChildren;
@@ -114,7 +114,7 @@ public final class FrameGridLayout extends FrameLayout {
         }
     }
 
-    /* compiled from: FrameGridLayout.kt */
+    /* JADX INFO: compiled from: FrameGridLayout.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -124,18 +124,18 @@ public final class FrameGridLayout extends FrameLayout {
         }
     }
 
-    /* compiled from: FrameGridLayout.kt */
+    /* JADX INFO: compiled from: FrameGridLayout.kt */
     public interface Data {
         View createView(Context context);
 
-        /* renamed from: getId */
+        /* JADX INFO: renamed from: getId */
         String getCom.discord.models.domain.ModelAuditLogEntry.CHANGE_KEY_ID java.lang.String();
     }
 
-    /* compiled from: FrameGridLayout.kt */
+    /* JADX INFO: compiled from: FrameGridLayout.kt */
     public interface DataView {
 
-        /* compiled from: FrameGridLayout.kt */
+        /* JADX INFO: compiled from: FrameGridLayout.kt */
         public static final class DefaultImpls {
             public static void onRemove(DataView dataView) {
             }
@@ -148,7 +148,7 @@ public final class FrameGridLayout extends FrameLayout {
         void onRemove();
     }
 
-    /* compiled from: FrameGridLayout.kt */
+    /* JADX INFO: compiled from: FrameGridLayout.kt */
     public static final /* data */ class PositionSpec {
         private final int bottom;
         private final int height;
@@ -182,22 +182,22 @@ public final class FrameGridLayout extends FrameLayout {
             return positionSpec.copy(i, i2, i3, i4);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final int getLeft() {
             return this.left;
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final int getTop() {
             return this.top;
         }
 
-        /* renamed from: component3, reason: from getter */
+        /* JADX INFO: renamed from: component3, reason: from getter */
         public final int getRight() {
             return this.right;
         }
 
-        /* renamed from: component4, reason: from getter */
+        /* JADX INFO: renamed from: component4, reason: from getter */
         public final int getBottom() {
             return this.bottom;
         }
@@ -257,7 +257,7 @@ public final class FrameGridLayout extends FrameLayout {
         }
     }
 
-    /* compiled from: FrameGridLayout.kt */
+    /* JADX INFO: compiled from: FrameGridLayout.kt */
     public static final class SizeCalculator {
         private final int maxLinearViews;
 
@@ -307,8 +307,8 @@ public final class FrameGridLayout extends FrameLayout {
         }
     }
 
-    /* compiled from: FrameGridLayout.kt */
-    /* renamed from: com.discord.utilities.view.grid.FrameGridLayout$bindViews$1 */
+    /* JADX INFO: renamed from: com.discord.utilities.view.grid.FrameGridLayout$bindViews$1 */
+    /* JADX INFO: compiled from: FrameGridLayout.kt */
     public static final class C70041 extends Lambda implements Function2<Data, View, Unit> {
         public C70041() {
             super(2);
@@ -321,7 +321,7 @@ public final class FrameGridLayout extends FrameLayout {
         }
 
         /* JADX WARN: Multi-variable type inference failed */
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Data data, View view) {
             Intrinsics3.checkNotNullParameter(data, "$this$bindView");
             boolean z2 = view instanceof DataView;
@@ -339,8 +339,8 @@ public final class FrameGridLayout extends FrameLayout {
         }
     }
 
-    /* compiled from: FrameGridLayout.kt */
-    /* renamed from: com.discord.utilities.view.grid.FrameGridLayout$onLayout$1 */
+    /* JADX INFO: renamed from: com.discord.utilities.view.grid.FrameGridLayout$onLayout$1 */
+    /* JADX INFO: compiled from: FrameGridLayout.kt */
     public static final class C70051 extends Lambda implements Function2<View, PositionSpec, Unit> {
         public C70051() {
             super(2);
@@ -352,7 +352,7 @@ public final class FrameGridLayout extends FrameLayout {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(View view, PositionSpec positionSpec) {
             Intrinsics3.checkNotNullParameter(view, "view");
             Intrinsics3.checkNotNullParameter(positionSpec, "childBounds");
@@ -360,8 +360,8 @@ public final class FrameGridLayout extends FrameLayout {
         }
     }
 
-    /* compiled from: FrameGridLayout.kt */
-    /* renamed from: com.discord.utilities.view.grid.FrameGridLayout$onMeasure$1 */
+    /* JADX INFO: renamed from: com.discord.utilities.view.grid.FrameGridLayout$onMeasure$1 */
+    /* JADX INFO: compiled from: FrameGridLayout.kt */
     public static final class C70061 extends Lambda implements Function2<View, PositionSpec, Unit> {
         public C70061() {
             super(2);
@@ -373,7 +373,7 @@ public final class FrameGridLayout extends FrameLayout {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(View view, PositionSpec positionSpec) {
             Intrinsics3.checkNotNullParameter(view, "view");
             Intrinsics3.checkNotNullParameter(positionSpec, "childBounds");

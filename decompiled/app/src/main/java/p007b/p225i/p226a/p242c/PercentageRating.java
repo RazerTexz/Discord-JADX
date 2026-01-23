@@ -5,12 +5,12 @@ import androidx.annotation.Nullable;
 import java.util.Arrays;
 import p007b.p085c.p086a.p087a0.AnimatableValueParser;
 
-/* compiled from: PercentageRating.java */
-/* renamed from: b.i.a.c.v1, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.v1, reason: use source file name */
+/* JADX INFO: compiled from: PercentageRating.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class PercentageRating extends Rating {
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final float f7900k;
 
     public PercentageRating() {

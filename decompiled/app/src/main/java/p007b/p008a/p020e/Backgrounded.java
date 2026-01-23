@@ -6,9 +6,9 @@ import kotlin.jvm.functions.Function1;
 import p507d0.p592z.p594d.FunctionReferenceImpl;
 import p658rx.Subscription;
 
-/* compiled from: Backgrounded.kt */
-/* renamed from: b.a.e.a, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.a.e.a, reason: use source file name */
+/* JADX INFO: compiled from: Backgrounded.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* synthetic */ class Backgrounded extends FunctionReferenceImpl implements Function1<Boolean, Unit> {
     public Backgrounded(Backgrounded4 backgrounded4) {
         super(1, backgrounded4, Backgrounded4.class, "emit", "emit(Z)V", 0);

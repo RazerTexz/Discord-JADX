@@ -15,9 +15,9 @@ import p007b.p008a.p018d.AppToast;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetChannelsList.kt */
-/* renamed from: com.discord.widgets.channels.list.WidgetChannelsList$onViewBound$6$$special$$inlined$let$lambda$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.channels.list.WidgetChannelsList$onViewBound$6$$special$$inlined$let$lambda$1, reason: use source file name */
+/* JADX INFO: compiled from: WidgetChannelsList.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetChannelsList3 extends Lambda implements Function1<ModelInvite, Unit> {
     public final /* synthetic */ View $it$inlined;
     public final /* synthetic */ long $selectedGuildId;
@@ -37,7 +37,7 @@ public final class WidgetChannelsList3 extends Lambda implements Function1<Model
         return Unit.f27425a;
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final void invoke2(ModelInvite modelInvite) {
         String vanityUrlCode;
         if (modelInvite != null) {

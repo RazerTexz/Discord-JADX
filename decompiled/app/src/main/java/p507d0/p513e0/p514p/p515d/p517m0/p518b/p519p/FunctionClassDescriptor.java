@@ -44,50 +44,50 @@ import p507d0.p580t.Iterators4;
 import p507d0.p580t._Collections;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: FunctionClassDescriptor.kt */
-/* renamed from: d0.e0.p.d.m0.b.p.b, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.b.p.b, reason: use source file name */
+/* JADX INFO: compiled from: FunctionClassDescriptor.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class FunctionClassDescriptor extends AbstractClassDescriptor {
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public static final ClassId f22591o;
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public static final ClassId f22592p;
 
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     public final StorageManager f22593q;
 
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     public final PackageFragmentDescriptor f22594r;
 
-    /* renamed from: s */
+    /* JADX INFO: renamed from: s */
     public final FunctionClassKind f22595s;
 
-    /* renamed from: t */
+    /* JADX INFO: renamed from: t */
     public final int f22596t;
 
-    /* renamed from: u */
+    /* JADX INFO: renamed from: u */
     public final b f22597u;
 
-    /* renamed from: v */
+    /* JADX INFO: renamed from: v */
     public final FunctionClassScope f22598v;
 
-    /* renamed from: w */
+    /* JADX INFO: renamed from: w */
     public final List<TypeParameterDescriptor> f22599w;
 
-    /* compiled from: FunctionClassDescriptor.kt */
-    /* renamed from: d0.e0.p.d.m0.b.p.b$a */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.b.p.b$a */
+    /* JADX INFO: compiled from: FunctionClassDescriptor.kt */
     public static final class a {
         public a(DefaultConstructorMarker defaultConstructorMarker) {
         }
     }
 
-    /* compiled from: FunctionClassDescriptor.kt */
-    /* renamed from: d0.e0.p.d.m0.b.p.b$b */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.b.p.b$b */
+    /* JADX INFO: compiled from: FunctionClassDescriptor.kt */
     public final class b extends AbstractClassTypeConstructor {
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public final /* synthetic */ FunctionClassDescriptor f22600c;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -98,7 +98,7 @@ public final class FunctionClassDescriptor extends AbstractClassDescriptor {
         }
 
         @Override // p507d0.p513e0.p514p.p515d.p517m0.p567n.AbstractTypeConstructor
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public Collection<KotlinType> mo9370a() {
             List<ClassId> listListOf;
             int iOrdinal = this.f22600c.getFunctionKind().ordinal();
@@ -132,7 +132,7 @@ public final class FunctionClassDescriptor extends AbstractClassDescriptor {
         }
 
         @Override // p507d0.p513e0.p514p.p515d.p517m0.p567n.AbstractTypeConstructor
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         public SupertypeLoopChecker mo9371d() {
             return SupertypeLoopChecker.a.f23103a;
         }
@@ -217,7 +217,7 @@ public final class FunctionClassDescriptor extends AbstractClassDescriptor {
         return functionClassDescriptor.f22593q;
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static final void m9369b(ArrayList<TypeParameterDescriptor> arrayList, FunctionClassDescriptor functionClassDescriptor, Variance variance, String str) {
         arrayList.add(TypeParameterDescriptorImpl.createWithDefaultBound(functionClassDescriptor, Annotations4.f22735f.getEMPTY(), false, variance, Name.identifier(str), arrayList.size(), functionClassDescriptor.f22593q));
     }
@@ -236,7 +236,7 @@ public final class FunctionClassDescriptor extends AbstractClassDescriptor {
         return (ClassDescriptor) m11459getCompanionObjectDescriptor();
     }
 
-    /* renamed from: getCompanionObjectDescriptor, reason: collision with other method in class */
+    /* JADX INFO: renamed from: getCompanionObjectDescriptor, reason: collision with other method in class */
     public Void m11459getCompanionObjectDescriptor() {
         return null;
     }
@@ -303,7 +303,7 @@ public final class FunctionClassDescriptor extends AbstractClassDescriptor {
         return (ClassConstructorDescriptor) m11460getUnsubstitutedPrimaryConstructor();
     }
 
-    /* renamed from: getUnsubstitutedPrimaryConstructor, reason: collision with other method in class */
+    /* JADX INFO: renamed from: getUnsubstitutedPrimaryConstructor, reason: collision with other method in class */
     public Void m11460getUnsubstitutedPrimaryConstructor() {
         return null;
     }

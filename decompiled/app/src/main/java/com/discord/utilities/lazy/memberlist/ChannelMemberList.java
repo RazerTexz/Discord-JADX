@@ -22,8 +22,8 @@ import p507d0.p580t.Maps6;
 import p507d0.p580t.MapsJVM;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ChannelMemberList.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: ChannelMemberList.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class ChannelMemberList implements MemberList {
     private SortedMap<Integer, String> groupIndices;
     private Map<String, ? extends MemberListRow> groups;

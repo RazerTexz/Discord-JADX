@@ -6,19 +6,19 @@ import com.google.android.gms.auth.api.credentials.CredentialRequest;
 import com.google.android.gms.internal.p688authapi.zzt;
 import com.google.android.gms.internal.p688authapi.zzz;
 
-/* compiled from: com.google.android.gms:play-services-auth@@19.0.0 */
-/* renamed from: b.i.a.f.h.c.t */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.h.c.t */
+/* JADX INFO: compiled from: com.google.android.gms:play-services-auth@@19.0.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public interface InterfaceC3471t extends IInterface {
-    /* renamed from: L */
+    /* JADX INFO: renamed from: L */
     void mo4402L(InterfaceC3469r interfaceC3469r, zzt zztVar) throws RemoteException;
 
-    /* renamed from: M */
+    /* JADX INFO: renamed from: M */
     void mo4403M(InterfaceC3469r interfaceC3469r) throws RemoteException;
 
-    /* renamed from: t */
+    /* JADX INFO: renamed from: t */
     void mo4404t(InterfaceC3469r interfaceC3469r, CredentialRequest credentialRequest) throws RemoteException;
 
-    /* renamed from: x */
+    /* JADX INFO: renamed from: x */
     void mo4405x(InterfaceC3469r interfaceC3469r, zzz zzzVar) throws RemoteException;
 }

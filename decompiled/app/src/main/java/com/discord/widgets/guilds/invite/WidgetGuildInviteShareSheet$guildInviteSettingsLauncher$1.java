@@ -5,8 +5,8 @@ import kotlin.jvm.functions.Function1;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetGuildInviteShareSheet.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetGuildInviteShareSheet.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetGuildInviteShareSheet$guildInviteSettingsLauncher$1 extends Lambda implements Function1<GuildInvite, Unit> {
     public final /* synthetic */ WidgetGuildInviteShareSheet this$0;
 
@@ -22,7 +22,7 @@ public final class WidgetGuildInviteShareSheet$guildInviteSettingsLauncher$1 ext
         return Unit.f27425a;
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final void invoke2(GuildInvite guildInvite) {
         Intrinsics3.checkNotNullParameter(guildInvite, "guildInvite");
         WidgetGuildInviteShareSheet.access$getViewModel$p(this.this$0).updateInvite(guildInvite);

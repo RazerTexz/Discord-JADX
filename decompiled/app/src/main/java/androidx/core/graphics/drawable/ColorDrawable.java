@@ -5,9 +5,9 @@ import androidx.annotation.ColorInt;
 import androidx.annotation.RequiresApi;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ColorDrawable.kt */
-/* renamed from: androidx.core.graphics.drawable.ColorDrawableKt, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: androidx.core.graphics.drawable.ColorDrawableKt, reason: use source file name */
+/* JADX INFO: compiled from: ColorDrawable.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class ColorDrawable {
     public static final android.graphics.drawable.ColorDrawable toDrawable(@ColorInt int i) {
         return new android.graphics.drawable.ColorDrawable(i);

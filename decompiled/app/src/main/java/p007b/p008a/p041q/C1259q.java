@@ -4,12 +4,12 @@ import com.discord.rtcconnection.RtcConnection;
 import p007b.p100d.p104b.p105a.outline;
 import p658rx.functions.Action1;
 
-/* compiled from: RtcConnection.kt */
-/* renamed from: b.a.q.q */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.a.q.q */
+/* JADX INFO: compiled from: RtcConnection.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class C1259q<T> implements Action1<Throwable> {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final /* synthetic */ RtcConnection f1869j;
 
     public C1259q(RtcConnection rtcConnection) {

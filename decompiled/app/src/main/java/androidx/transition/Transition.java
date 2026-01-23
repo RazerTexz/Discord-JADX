@@ -34,7 +34,7 @@ import java.util.List;
 import java.util.StringTokenizer;
 import p007b.p100d.p104b.p105a.outline;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public abstract class Transition implements Cloneable {
     public static final boolean DBG = false;
     private static final String LOG_TAG = "Transition";
@@ -85,7 +85,7 @@ public abstract class Transition implements Cloneable {
     private ArrayList<Animator> mAnimators = new ArrayList<>();
     private PathMotion mPathMotion = STRAIGHT_PATH_MOTION;
 
-    /* renamed from: androidx.transition.Transition$1 */
+    /* JADX INFO: renamed from: androidx.transition.Transition$1 */
     public static class C06651 extends PathMotion {
         @Override // androidx.transition.PathMotion
         public Path getPath(float f, float f2, float f3, float f4) {
@@ -96,7 +96,7 @@ public abstract class Transition implements Cloneable {
         }
     }
 
-    /* renamed from: androidx.transition.Transition$2 */
+    /* JADX INFO: renamed from: androidx.transition.Transition$2 */
     public class C06662 extends AnimatorListenerAdapter {
         public final /* synthetic */ ArrayMap val$runningAnimators;
 
@@ -116,7 +116,7 @@ public abstract class Transition implements Cloneable {
         }
     }
 
-    /* renamed from: androidx.transition.Transition$3 */
+    /* JADX INFO: renamed from: androidx.transition.Transition$3 */
     public class C06673 extends AnimatorListenerAdapter {
         public C06673() {
         }
@@ -629,7 +629,7 @@ public abstract class Transition implements Cloneable {
         }
     }
 
-    /* renamed from: clone, reason: collision with other method in class */
+    /* JADX INFO: renamed from: clone, reason: collision with other method in class */
     public /* bridge */ /* synthetic */ Object mo11382clone() throws CloneNotSupportedException {
         return clone();
     }
@@ -737,7 +737,7 @@ public abstract class Transition implements Cloneable {
         if (sparseIntArray.size() != 0) {
             for (int i6 = 0; i6 < sparseIntArray.size(); i6++) {
                 Animator animator3 = this.mAnimators.get(sparseIntArray.keyAt(i6));
-                animator3.setStartDelay(animator3.getStartDelay() + (sparseIntArray.valueAt(i6) - jMin));
+                animator3.setStartDelay(animator3.getStartDelay() + (((long) sparseIntArray.valueAt(i6)) - jMin));
             }
         }
     }

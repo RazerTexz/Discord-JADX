@@ -10,9 +10,9 @@ import kotlin.jvm.functions.Function0;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetChannelListUnreads.kt */
-/* renamed from: com.discord.widgets.channels.list.WidgetChannelListUnreads$binding$2, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.channels.list.WidgetChannelListUnreads$binding$2, reason: use source file name */
+/* JADX INFO: compiled from: WidgetChannelListUnreads.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetChannelListUnreads2 extends Lambda implements Function0<WidgetChannelsListUnreadsBinding> {
     public final /* synthetic */ WidgetChannelListUnreads this$0;
 

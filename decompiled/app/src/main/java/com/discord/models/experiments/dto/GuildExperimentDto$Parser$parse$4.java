@@ -4,14 +4,14 @@ import com.discord.models.domain.Model;
 import com.discord.models.experiments.dto.GuildExperimentPopulationDto;
 import kotlin.jvm.internal.Ref$ObjectRef;
 
-/* compiled from: GuildExperimentDto.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: GuildExperimentDto.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class GuildExperimentDto$Parser$parse$4 implements Runnable {
     public final /* synthetic */ Model.JsonReader $jsonReader;
     public final /* synthetic */ Ref$ObjectRef $populations;
 
-    /* compiled from: GuildExperimentDto.kt */
-    /* renamed from: com.discord.models.experiments.dto.GuildExperimentDto$Parser$parse$4$1 */
+    /* JADX INFO: renamed from: com.discord.models.experiments.dto.GuildExperimentDto$Parser$parse$4$1 */
+    /* JADX INFO: compiled from: GuildExperimentDto.kt */
     public static final class C55471<T> implements Model.JsonReader.ItemFactory<GuildExperimentPopulationDto> {
         public C55471() {
         }

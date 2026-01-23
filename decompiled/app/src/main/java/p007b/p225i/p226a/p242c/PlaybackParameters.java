@@ -5,21 +5,21 @@ import androidx.annotation.Nullable;
 import p007b.p085c.p086a.p087a0.AnimatableValueParser;
 import p007b.p225i.p226a.p242c.p259f3.Util2;
 
-/* compiled from: PlaybackParameters.java */
-/* renamed from: b.i.a.c.x1, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.x1, reason: use source file name */
+/* JADX INFO: compiled from: PlaybackParameters.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class PlaybackParameters implements Bundleable {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static final PlaybackParameters f8026j = new PlaybackParameters(1.0f, 1.0f);
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final float f8027k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final float f8028l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public final int f8029m;
 
     public PlaybackParameters(@FloatRange(from = 0.0d, fromInclusive = false) float f, @FloatRange(from = 0.0d, fromInclusive = false) float f2) {

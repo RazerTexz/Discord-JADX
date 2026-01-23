@@ -9,12 +9,12 @@ import java.util.Objects;
 import p007b.p225i.p226a.p288f.p299e.p308o.C3401c;
 import p007b.p225i.p226a.p288f.p313h.p325l.C3587a9;
 
-/* compiled from: com.google.android.gms:play-services-measurement-impl@@18.0.0 */
-/* renamed from: b.i.a.f.i.b.f9 */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.i.b.f9 */
+/* JADX INFO: compiled from: com.google.android.gms:play-services-measurement-impl@@18.0.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public final class C4038f9 {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final /* synthetic */ C4228w8 f10732a;
 
     public C4038f9(C4228w8 c4228w8) {
@@ -22,7 +22,7 @@ public final class C4038f9 {
     }
 
     @WorkerThread
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final void m5599a() {
         this.f10732a.mo5848b();
         C4009d4 c4009d4M5867l = this.f10732a.m5867l();
@@ -40,7 +40,7 @@ public final class C4038f9 {
     }
 
     @WorkerThread
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final void m5600b(long j, boolean z2) {
         this.f10732a.mo5848b();
         this.f10732a.m5960x();
@@ -54,8 +54,8 @@ public final class C4038f9 {
     }
 
     @WorkerThread
-    /* renamed from: c */
-    public final void m5601c(long j, boolean z2) throws IllegalStateException {
+    /* JADX INFO: renamed from: c */
+    public final void m5601c(long j, boolean z2) {
         this.f10732a.mo5848b();
         if (this.f10732a.f11202a.m5940d()) {
             this.f10732a.m5867l().f10652v.m5649b(j);

@@ -1,26 +1,26 @@
 package p007b.p109f.p161j.p162a.p163a;
 
-/* compiled from: AnimatedDrawableFrameInfo.java */
-/* renamed from: b.f.j.a.a.b, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: b.f.j.a.a.b, reason: use source file name */
+/* JADX INFO: compiled from: AnimatedDrawableFrameInfo.java */
+/* JADX INFO: loaded from: classes2.dex */
 public class AnimatedDrawableFrameInfo {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final int f3603a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final int f3604b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final int f3605c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final int f3606d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final int f3607e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final int f3608f;
 
     public AnimatedDrawableFrameInfo(int i, int i2, int i3, int i4, int i5, int i6, int i7) {

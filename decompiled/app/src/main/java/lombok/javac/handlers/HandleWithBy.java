@@ -26,7 +26,7 @@ import lombok.javac.JavacNode;
 import lombok.javac.JavacTreeMaker;
 import lombok.javac.handlers.JavacHandlerUtil;
 
-/* loaded from: discord-126021.apk:lombok/javac/handlers/HandleWithBy.SCL.lombok */
+/* JADX INFO: loaded from: discord-126021.apk:lombok/javac/handlers/HandleWithBy.SCL.lombok */
 public class HandleWithBy extends JavacAnnotationHandler<WithBy> {
     private static final LombokImmutableList<String> NAME_JUF_FUNCTION = LombokImmutableList.m10922of("java", "util", "function", "Function");
     private static final LombokImmutableList<String> NAME_JUF_OP = LombokImmutableList.m10922of("java", "util", "function", "UnaryOperator");
@@ -35,7 +35,7 @@ public class HandleWithBy extends JavacAnnotationHandler<WithBy> {
     private static final LombokImmutableList<String> NAME_JUF_LONGOP = LombokImmutableList.m10922of("java", "util", "function", "LongUnaryOperator");
     private static /* synthetic */ int[] $SWITCH_TABLE$lombok$core$AST$Kind;
 
-    /* renamed from: $SWITCH_TABLE$lombok$javac$handlers$JavacHandlerUtil$MemberExistsResult */
+    /* JADX INFO: renamed from: $SWITCH_TABLE$lombok$javac$handlers$JavacHandlerUtil$MemberExistsResult */
     private static /* synthetic */ int[] f27491x2486df07;
 
     static /* synthetic */ int[] $SWITCH_TABLE$lombok$core$AST$Kind() {
@@ -88,7 +88,7 @@ public class HandleWithBy extends JavacAnnotationHandler<WithBy> {
         return iArr2;
     }
 
-    /* renamed from: $SWITCH_TABLE$lombok$javac$handlers$JavacHandlerUtil$MemberExistsResult */
+    /* JADX INFO: renamed from: $SWITCH_TABLE$lombok$javac$handlers$JavacHandlerUtil$MemberExistsResult */
     static /* synthetic */ int[] m10950x2486df07() {
         int[] iArr = f27491x2486df07;
         if (iArr != null) {
@@ -140,7 +140,7 @@ public class HandleWithBy extends JavacAnnotationHandler<WithBy> {
     }
 
     @Override // lombok.javac.JavacAnnotationHandler
-    public void handle(AnnotationValues<WithBy> annotation, JCTree.JCAnnotation ast, JavacNode annotationNode) throws IllegalArgumentException {
+    public void handle(AnnotationValues<WithBy> annotation, JCTree.JCAnnotation ast, JavacNode annotationNode) {
         HandlerUtil.handleExperimentalFlagUsage(annotationNode, ConfigurationKeys.WITHBY_FLAG_USAGE, "@WithBy");
         Collection<JavacNode> fields = annotationNode.upFromAnnotationToFields();
         JavacHandlerUtil.deleteAnnotationIfNeccessary(annotationNode, (Class<? extends Annotation>) WithBy.class);

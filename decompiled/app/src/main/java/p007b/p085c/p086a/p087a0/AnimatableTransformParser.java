@@ -14,15 +14,15 @@ import p007b.p085c.p086a.p095y.p096k.AnimatableSplitDimensionPathValue;
 import p007b.p085c.p086a.p095y.p096k.AnimatableTransform;
 import p007b.p085c.p086a.p095y.p096k.AnimatableValue;
 
-/* compiled from: AnimatableTransformParser.java */
-/* renamed from: b.c.a.a0.c, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.c.a.a0.c, reason: use source file name */
+/* JADX INFO: compiled from: AnimatableTransformParser.java */
+/* JADX INFO: loaded from: classes.dex */
 public class AnimatableTransformParser {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static JsonReader2.a f2213a = JsonReader2.a.m616a("a", "p", "s", "rz", "r", "o", "so", "eo", "sk", "sa");
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static JsonReader2.a f2214b = JsonReader2.a.m616a("k");
 
     /* JADX WARN: Multi-variable type inference failed */
@@ -31,7 +31,7 @@ public class AnimatableTransformParser {
     /* JADX WARN: Removed duplicated region for block: B:22:0x0068  */
     /* JADX WARN: Removed duplicated region for block: B:23:0x009b  */
     /* JADX WARN: Removed duplicated region for block: B:88:0x01c5  */
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */

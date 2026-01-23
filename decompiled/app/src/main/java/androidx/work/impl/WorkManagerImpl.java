@@ -45,8 +45,8 @@ import java.util.List;
 import java.util.UUID;
 import p007b.p225i.p355b.p359d.p360a.ListenableFuture8;
 
+/* JADX INFO: loaded from: classes.dex */
 @RestrictTo({RestrictTo.Scope.LIBRARY_GROUP})
-/* loaded from: classes.dex */
 public class WorkManagerImpl extends WorkManager {
     public static final int MAX_PRE_JOB_SCHEDULER_API_LEVEL = 22;
     public static final int MIN_JOB_SCHEDULER_API_LEVEL = 23;
@@ -63,7 +63,7 @@ public class WorkManagerImpl extends WorkManager {
     private WorkDatabase mWorkDatabase;
     private TaskExecutor mWorkTaskExecutor;
 
-    /* renamed from: androidx.work.impl.WorkManagerImpl$1 */
+    /* JADX INFO: renamed from: androidx.work.impl.WorkManagerImpl$1 */
     public class RunnableC07311 implements Runnable {
         public final /* synthetic */ SettableFuture val$future;
         public final /* synthetic */ PreferenceUtils val$preferenceUtils;
@@ -83,7 +83,7 @@ public class WorkManagerImpl extends WorkManager {
         }
     }
 
-    /* renamed from: androidx.work.impl.WorkManagerImpl$2 */
+    /* JADX INFO: renamed from: androidx.work.impl.WorkManagerImpl$2 */
     public class C07322 implements Function<List<WorkSpec.WorkInfoPojo>, WorkInfo> {
         public C07322() {
         }
@@ -93,7 +93,7 @@ public class WorkManagerImpl extends WorkManager {
             return apply2(list);
         }
 
-        /* renamed from: apply, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: apply, reason: avoid collision after fix types in other method */
         public WorkInfo apply2(List<WorkSpec.WorkInfoPojo> list) {
             if (list == null || list.size() <= 0) {
                 return null;

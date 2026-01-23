@@ -3,9 +3,9 @@ package com.discord.models.domain;
 import kotlin.jvm.functions.Function0;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: ModelApplicationStream.kt */
-/* renamed from: com.discord.models.domain.ModelApplicationStream$encodedStreamKey$2, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: com.discord.models.domain.ModelApplicationStream$encodedStreamKey$2, reason: use source file name */
+/* JADX INFO: compiled from: ModelApplicationStream.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class ModelApplicationStream2 extends Lambda implements Function0<String> {
     public final /* synthetic */ ModelApplicationStream this$0;
 
@@ -21,7 +21,7 @@ public final class ModelApplicationStream2 extends Lambda implements Function0<S
     }
 
     @Override // kotlin.jvm.functions.Function0
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final String invoke2() {
         return this.this$0.encodeStreamKey();
     }

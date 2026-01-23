@@ -29,8 +29,8 @@ import p658rx.Observable;
 import p658rx.functions.Action0;
 import p658rx.functions.Action1;
 
-/* compiled from: ObservationDeck.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: ObservationDeck.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class ObservationDeck {
     private static final String LOG_CATEGORY = "ObservationDeck";
     private final LogLevel logLevel;
@@ -38,14 +38,14 @@ public final class ObservationDeck {
     private List<Observer> observers;
     private static final Function0<Unit> ON_UPDATE_EMPTY = ObservationDeck2.INSTANCE;
 
-    /* compiled from: ObservationDeck.kt */
+    /* JADX INFO: compiled from: ObservationDeck.kt */
     public enum LogLevel {
         NONE,
         ERROR,
         VERBOSE
     }
 
-    /* compiled from: ObservationDeck.kt */
+    /* JADX INFO: compiled from: ObservationDeck.kt */
     public static abstract class Observer {
         private boolean isStale;
 
@@ -55,7 +55,7 @@ public final class ObservationDeck {
 
         public abstract Function0<Unit> getOnUpdate();
 
-        /* renamed from: isStale, reason: from getter */
+        /* JADX INFO: renamed from: isStale, reason: from getter */
         public final boolean getIsStale() {
             return this.isStale;
         }
@@ -84,20 +84,20 @@ public final class ObservationDeck {
         }
     }
 
-    /* compiled from: ObservationDeck.kt */
+    /* JADX INFO: compiled from: ObservationDeck.kt */
     public interface UpdateSource {
     }
 
-    /* compiled from: ObservationDeck.kt */
-    /* renamed from: com.discord.stores.updates.ObservationDeck$connectRx$1 */
+    /* JADX INFO: renamed from: com.discord.stores.updates.ObservationDeck$connectRx$1 */
+    /* JADX INFO: compiled from: ObservationDeck.kt */
     public static final class C66321<T> implements Action1<Emitter<Unit>> {
         public final /* synthetic */ Ref$ObjectRef $observer;
         public final /* synthetic */ String $observerName;
         public final /* synthetic */ boolean $updateOnConnect;
         public final /* synthetic */ UpdateSource[] $updateSources;
 
-        /* compiled from: ObservationDeck.kt */
-        /* renamed from: com.discord.stores.updates.ObservationDeck$connectRx$1$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.stores.updates.ObservationDeck$connectRx$1$1, reason: invalid class name */
+        /* JADX INFO: compiled from: ObservationDeck.kt */
         public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
             public final /* synthetic */ Emitter $emitter;
 
@@ -113,7 +113,7 @@ public final class ObservationDeck {
                 return Unit.f27425a;
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2() {
                 this.$emitter.onNext(Unit.f27425a);
             }
@@ -131,7 +131,7 @@ public final class ObservationDeck {
             call2(emitter);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final void call2(Emitter<Unit> emitter) {
             Ref$ObjectRef ref$ObjectRef = this.$observer;
             ObservationDeck observationDeck = ObservationDeck.this;
@@ -143,8 +143,8 @@ public final class ObservationDeck {
         }
     }
 
-    /* compiled from: ObservationDeck.kt */
-    /* renamed from: com.discord.stores.updates.ObservationDeck$connectRx$2 */
+    /* JADX INFO: renamed from: com.discord.stores.updates.ObservationDeck$connectRx$2 */
+    /* JADX INFO: compiled from: ObservationDeck.kt */
     public static final class C66332 implements Action0 {
         public final /* synthetic */ Ref$ObjectRef $observer;
 
@@ -162,8 +162,8 @@ public final class ObservationDeck {
         }
     }
 
-    /* compiled from: ObservationDeck.kt */
-    /* renamed from: com.discord.stores.updates.ObservationDeck$connectRx$3 */
+    /* JADX INFO: renamed from: com.discord.stores.updates.ObservationDeck$connectRx$3 */
+    /* JADX INFO: compiled from: ObservationDeck.kt */
     public static final class C66343<T, R> implements Func1<Unit, T> {
         public final /* synthetic */ Function0 $generator;
 
@@ -176,14 +176,14 @@ public final class ObservationDeck {
             return call2(unit);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final T call2(Unit unit) {
             return (T) this.$generator.invoke();
         }
     }
 
-    /* compiled from: ObservationDeck.kt */
-    /* renamed from: com.discord.stores.updates.ObservationDeck$logNotifyError$2 */
+    /* JADX INFO: renamed from: com.discord.stores.updates.ObservationDeck$logNotifyError$2 */
+    /* JADX INFO: compiled from: ObservationDeck.kt */
     public static final class C66352 extends Lambda implements Function1<Observer, CharSequence> {
         public static final C66352 INSTANCE = new C66352();
 
@@ -196,7 +196,7 @@ public final class ObservationDeck {
             return invoke2(observer);
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final CharSequence invoke2(Observer observer) {
             Intrinsics3.checkNotNullParameter(observer, "observer");
             return observer.toDebugLogString();

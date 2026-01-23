@@ -12,8 +12,8 @@ import kotlin.jvm.internal.DefaultConstructorMarker;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: MessageEntry.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: MessageEntry.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final /* data */ class MessageEntry extends ChatListEntry {
     private final boolean animateEmojis;
     private final GuildMember author;
@@ -34,7 +34,7 @@ public final /* data */ class MessageEntry extends ChatListEntry {
     private final Map<Long, GuildRole> roles;
     private final int type;
 
-    /* compiled from: MessageEntry.kt */
+    /* JADX INFO: compiled from: MessageEntry.kt */
     public static final /* data */ class CtaData {
         private final Channel channel;
         private final BaseSticker sticker;
@@ -56,12 +56,12 @@ public final /* data */ class MessageEntry extends ChatListEntry {
             return ctaData.copy(baseSticker, channel);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final BaseSticker getSticker() {
             return this.sticker;
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final Channel getChannel() {
             return this.channel;
         }
@@ -108,7 +108,7 @@ public final /* data */ class MessageEntry extends ChatListEntry {
         }
     }
 
-    /* compiled from: MessageEntry.kt */
+    /* JADX INFO: compiled from: MessageEntry.kt */
     public static final /* data */ class ReplyData {
         private final boolean isRepliedUserBlocked;
         private final MessageEntry messageEntry;
@@ -134,17 +134,17 @@ public final /* data */ class MessageEntry extends ChatListEntry {
             return replyData.copy(messageState, messageEntry, z2);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final StoreMessageReplies.MessageState getMessageState() {
             return this.messageState;
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final MessageEntry getMessageEntry() {
             return this.messageEntry;
         }
 
-        /* renamed from: component3, reason: from getter */
+        /* JADX INFO: renamed from: component3, reason: from getter */
         public final boolean getIsRepliedUserBlocked() {
             return this.isRepliedUserBlocked;
         }
@@ -174,17 +174,20 @@ public final /* data */ class MessageEntry extends ChatListEntry {
         }
 
         /* JADX WARN: Multi-variable type inference failed */
+        /* JADX WARN: Type inference failed for: r1v3, types: [int] */
+        /* JADX WARN: Type inference failed for: r1v4 */
+        /* JADX WARN: Type inference failed for: r1v6 */
         public int hashCode() {
             StoreMessageReplies.MessageState messageState = this.messageState;
             int iHashCode = (messageState != null ? messageState.hashCode() : 0) * 31;
             MessageEntry messageEntry = this.messageEntry;
             int iHashCode2 = (iHashCode + (messageEntry != null ? messageEntry.hashCode() : 0)) * 31;
             boolean z2 = this.isRepliedUserBlocked;
-            int i = z2;
-            if (z2 != 0) {
-                i = 1;
+            ?? r1 = z2;
+            if (z2) {
+                r1 = 1;
             }
-            return iHashCode2 + i;
+            return iHashCode2 + r1;
         }
 
         public final boolean isRepliedUserBlocked() {
@@ -209,71 +212,72 @@ public final /* data */ class MessageEntry extends ChatListEntry {
         this(message, state, guildMember, (i & 8) != 0 ? null : guildMember2, map, map2, (i & 64) != 0 ? false : z2, z3, (i & 256) != 0 ? true : z4, (i & 512) != 0 ? null : replyData, (i & 1024) != 0 ? null : guildMember3, (i & 2048) != 0 ? false : z5, (i & 4096) != 0 ? false : z6, (i & 8192) != 0 ? false : z7, (i & 16384) != 0 ? null : ctaData, l);
     }
 
-    /* renamed from: component7, reason: from getter */
+    /* JADX INFO: renamed from: component7, reason: from getter */
     private final boolean getIsMinimal() {
         return this.isMinimal;
     }
 
-    /* renamed from: component8, reason: from getter */
+    /* JADX INFO: renamed from: component8, reason: from getter */
     private final boolean getIsExpandedBlocked() {
         return this.isExpandedBlocked;
     }
 
+    /* JADX WARN: Multi-variable type inference failed */
     public static /* synthetic */ MessageEntry copy$default(MessageEntry messageEntry, Message message, StoreMessageState.State state, GuildMember guildMember, GuildMember guildMember2, Map map, Map map2, boolean z2, boolean z3, boolean z4, ReplyData replyData, GuildMember guildMember3, boolean z5, boolean z6, boolean z7, CtaData ctaData, Long l, int i, Object obj) {
         return messageEntry.copy((i & 1) != 0 ? messageEntry.message : message, (i & 2) != 0 ? messageEntry.messageState : state, (i & 4) != 0 ? messageEntry.author : guildMember, (i & 8) != 0 ? messageEntry.firstMentionedUser : guildMember2, (i & 16) != 0 ? messageEntry.roles : map, (i & 32) != 0 ? messageEntry.nickOrUsernames : map2, (i & 64) != 0 ? messageEntry.isMinimal : z2, (i & 128) != 0 ? messageEntry.isExpandedBlocked : z3, (i & 256) != 0 ? messageEntry.animateEmojis : z4, (i & 512) != 0 ? messageEntry.replyData : replyData, (i & 1024) != 0 ? messageEntry.interactionAuthor : guildMember3, (i & 2048) != 0 ? messageEntry.isThreadStarterMessage : z5, (i & 4096) != 0 ? messageEntry.isGuildForumPostFirstMessage : z6, (i & 8192) != 0 ? messageEntry.isGuildForumPostAuthor : z7, (i & 16384) != 0 ? messageEntry.ctaData : ctaData, (i & 32768) != 0 ? messageEntry.permissionsForChannel : l);
     }
 
-    /* renamed from: component1, reason: from getter */
+    /* JADX INFO: renamed from: component1, reason: from getter */
     public final Message getMessage() {
         return this.message;
     }
 
-    /* renamed from: component10, reason: from getter */
+    /* JADX INFO: renamed from: component10, reason: from getter */
     public final ReplyData getReplyData() {
         return this.replyData;
     }
 
-    /* renamed from: component11, reason: from getter */
+    /* JADX INFO: renamed from: component11, reason: from getter */
     public final GuildMember getInteractionAuthor() {
         return this.interactionAuthor;
     }
 
-    /* renamed from: component12, reason: from getter */
+    /* JADX INFO: renamed from: component12, reason: from getter */
     public final boolean getIsThreadStarterMessage() {
         return this.isThreadStarterMessage;
     }
 
-    /* renamed from: component13, reason: from getter */
+    /* JADX INFO: renamed from: component13, reason: from getter */
     public final boolean getIsGuildForumPostFirstMessage() {
         return this.isGuildForumPostFirstMessage;
     }
 
-    /* renamed from: component14, reason: from getter */
+    /* JADX INFO: renamed from: component14, reason: from getter */
     public final boolean getIsGuildForumPostAuthor() {
         return this.isGuildForumPostAuthor;
     }
 
-    /* renamed from: component15, reason: from getter */
+    /* JADX INFO: renamed from: component15, reason: from getter */
     public final CtaData getCtaData() {
         return this.ctaData;
     }
 
-    /* renamed from: component16, reason: from getter */
+    /* JADX INFO: renamed from: component16, reason: from getter */
     public final Long getPermissionsForChannel() {
         return this.permissionsForChannel;
     }
 
-    /* renamed from: component2, reason: from getter */
+    /* JADX INFO: renamed from: component2, reason: from getter */
     public final StoreMessageState.State getMessageState() {
         return this.messageState;
     }
 
-    /* renamed from: component3, reason: from getter */
+    /* JADX INFO: renamed from: component3, reason: from getter */
     public final GuildMember getAuthor() {
         return this.author;
     }
 
-    /* renamed from: component4, reason: from getter */
+    /* JADX INFO: renamed from: component4, reason: from getter */
     public final GuildMember getFirstMentionedUser() {
         return this.firstMentionedUser;
     }
@@ -286,7 +290,7 @@ public final /* data */ class MessageEntry extends ChatListEntry {
         return this.nickOrUsernames;
     }
 
-    /* renamed from: component9, reason: from getter */
+    /* JADX INFO: renamed from: component9, reason: from getter */
     public final boolean getAnimateEmojis() {
         return this.animateEmojis;
     }
@@ -363,6 +367,24 @@ public final /* data */ class MessageEntry extends ChatListEntry {
     }
 
     /* JADX WARN: Multi-variable type inference failed */
+    /* JADX WARN: Type inference failed for: r2v16, types: [int] */
+    /* JADX WARN: Type inference failed for: r2v18, types: [int] */
+    /* JADX WARN: Type inference failed for: r2v20, types: [int] */
+    /* JADX WARN: Type inference failed for: r2v28, types: [int] */
+    /* JADX WARN: Type inference failed for: r2v30, types: [int] */
+    /* JADX WARN: Type inference failed for: r2v37 */
+    /* JADX WARN: Type inference failed for: r2v38 */
+    /* JADX WARN: Type inference failed for: r2v41 */
+    /* JADX WARN: Type inference failed for: r2v42 */
+    /* JADX WARN: Type inference failed for: r2v43 */
+    /* JADX WARN: Type inference failed for: r2v49 */
+    /* JADX WARN: Type inference failed for: r2v50 */
+    /* JADX WARN: Type inference failed for: r2v51 */
+    /* JADX WARN: Type inference failed for: r2v52 */
+    /* JADX WARN: Type inference failed for: r2v53 */
+    /* JADX WARN: Type inference failed for: r3v0 */
+    /* JADX WARN: Type inference failed for: r3v1, types: [int] */
+    /* JADX WARN: Type inference failed for: r3v2 */
     public int hashCode() {
         Message message = this.message;
         int iHashCode = (message != null ? message.hashCode() : 0) * 31;
@@ -377,43 +399,43 @@ public final /* data */ class MessageEntry extends ChatListEntry {
         Map<Long, String> map2 = this.nickOrUsernames;
         int iHashCode6 = (iHashCode5 + (map2 != null ? map2.hashCode() : 0)) * 31;
         boolean z2 = this.isMinimal;
-        int i = z2;
-        if (z2 != 0) {
-            i = 1;
+        ?? r2 = z2;
+        if (z2) {
+            r2 = 1;
         }
-        int i2 = (iHashCode6 + i) * 31;
+        int i = (iHashCode6 + r2) * 31;
         boolean z3 = this.isExpandedBlocked;
-        int i3 = z3;
-        if (z3 != 0) {
-            i3 = 1;
+        ?? r22 = z3;
+        if (z3) {
+            r22 = 1;
         }
-        int i4 = (i2 + i3) * 31;
+        int i2 = (i + r22) * 31;
         boolean z4 = this.animateEmojis;
-        int i5 = z4;
-        if (z4 != 0) {
-            i5 = 1;
+        ?? r23 = z4;
+        if (z4) {
+            r23 = 1;
         }
-        int i6 = (i4 + i5) * 31;
+        int i3 = (i2 + r23) * 31;
         ReplyData replyData = this.replyData;
-        int iHashCode7 = (i6 + (replyData != null ? replyData.hashCode() : 0)) * 31;
+        int iHashCode7 = (i3 + (replyData != null ? replyData.hashCode() : 0)) * 31;
         GuildMember guildMember3 = this.interactionAuthor;
         int iHashCode8 = (iHashCode7 + (guildMember3 != null ? guildMember3.hashCode() : 0)) * 31;
         boolean z5 = this.isThreadStarterMessage;
-        int i7 = z5;
-        if (z5 != 0) {
-            i7 = 1;
+        ?? r24 = z5;
+        if (z5) {
+            r24 = 1;
         }
-        int i8 = (iHashCode8 + i7) * 31;
+        int i4 = (iHashCode8 + r24) * 31;
         boolean z6 = this.isGuildForumPostFirstMessage;
-        int i9 = z6;
-        if (z6 != 0) {
-            i9 = 1;
+        ?? r25 = z6;
+        if (z6) {
+            r25 = 1;
         }
-        int i10 = (i8 + i9) * 31;
+        int i5 = (i4 + r25) * 31;
         boolean z7 = this.isGuildForumPostAuthor;
-        int i11 = (i10 + (z7 ? 1 : z7 ? 1 : 0)) * 31;
+        int i6 = (i5 + (z7 ? 1 : z7)) * 31;
         CtaData ctaData = this.ctaData;
-        int iHashCode9 = (i11 + (ctaData != null ? ctaData.hashCode() : 0)) * 31;
+        int iHashCode9 = (i6 + (ctaData != null ? ctaData.hashCode() : 0)) * 31;
         Long l = this.permissionsForChannel;
         return iHashCode9 + (l != null ? l.hashCode() : 0);
     }

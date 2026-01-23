@@ -6,25 +6,25 @@ import p507d0.p512d0.ProgressionIterators;
 import p507d0.p588x.progressionUtil;
 import p507d0.p592z.p594d.p595g0.KMarkers;
 
-/* compiled from: Progressions.kt */
-/* renamed from: kotlin.ranges.IntProgression, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: kotlin.ranges.IntProgression, reason: use source file name */
+/* JADX INFO: compiled from: Progressions.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public class Progressions2 implements Iterable<Integer>, KMarkers {
 
-    /* renamed from: j, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: j, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
 
-    /* renamed from: k, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: k, reason: from kotlin metadata */
     public final int first;
 
-    /* renamed from: l, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: l, reason: from kotlin metadata */
     public final int last;
 
-    /* renamed from: m, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: m, reason: from kotlin metadata */
     public final int step;
 
-    /* compiled from: Progressions.kt */
-    /* renamed from: kotlin.ranges.IntProgression$a, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: kotlin.ranges.IntProgression$a, reason: from kotlin metadata */
+    /* JADX INFO: compiled from: Progressions.kt */
     public static final class Companion {
         public Companion(DefaultConstructorMarker defaultConstructorMarker) {
         }
@@ -89,7 +89,7 @@ public class Progressions2 implements Iterable<Integer>, KMarkers {
     }
 
     @Override // java.lang.Iterable
-    /* renamed from: iterator, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: iterator, reason: avoid collision after fix types in other method */
     public /* bridge */ /* synthetic */ Iterator<Integer> iterator2() {
         return iterator();
     }

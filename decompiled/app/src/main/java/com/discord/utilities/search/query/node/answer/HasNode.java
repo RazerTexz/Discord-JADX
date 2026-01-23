@@ -11,8 +11,8 @@ import p507d0.p580t.SetsJVM;
 import p507d0.p580t._Collections;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: HasNode.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: HasNode.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final /* data */ class HasNode extends AnswerNode {
     private final HasNode2 hasAnswerOption;
     private final CharSequence text;
@@ -24,7 +24,7 @@ public final /* data */ class HasNode extends AnswerNode {
         this.text = charSequence;
     }
 
-    /* renamed from: component1, reason: from getter */
+    /* JADX INFO: renamed from: component1, reason: from getter */
     private final HasNode2 getHasAnswerOption() {
         return this.hasAnswerOption;
     }

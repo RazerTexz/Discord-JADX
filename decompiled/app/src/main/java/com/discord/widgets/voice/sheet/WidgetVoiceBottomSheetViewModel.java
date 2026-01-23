@@ -73,11 +73,11 @@ import p507d0.p592z.p594d.Lambda;
 import p658rx.Observable;
 import p658rx.subjects.PublishSubject;
 
-/* compiled from: WidgetVoiceBottomSheetViewModel.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: WidgetVoiceBottomSheetViewModel.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class WidgetVoiceBottomSheetViewModel extends AppViewModel<ViewState> {
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private final StoreApplication applicationStore;
     private final StoreCalls callsStore;
@@ -103,8 +103,8 @@ public final class WidgetVoiceBottomSheetViewModel extends AppViewModel<ViewStat
     private boolean wasEverConnected;
     private boolean wasEverMultiParticipant;
 
-    /* compiled from: WidgetVoiceBottomSheetViewModel.kt */
-    /* renamed from: com.discord.widgets.voice.sheet.WidgetVoiceBottomSheetViewModel$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.voice.sheet.WidgetVoiceBottomSheetViewModel$1 */
+    /* JADX INFO: compiled from: WidgetVoiceBottomSheetViewModel.kt */
     public static final class C106021 extends Lambda implements Function1<StoreState, Unit> {
         public C106021() {
             super(1);
@@ -116,14 +116,14 @@ public final class WidgetVoiceBottomSheetViewModel extends AppViewModel<ViewStat
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(StoreState storeState) {
             Intrinsics3.checkNotNullParameter(storeState, "storeState");
             WidgetVoiceBottomSheetViewModel.access$handleStoreState(WidgetVoiceBottomSheetViewModel.this, storeState);
         }
     }
 
-    /* compiled from: WidgetVoiceBottomSheetViewModel.kt */
+    /* JADX INFO: compiled from: WidgetVoiceBottomSheetViewModel.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -143,10 +143,10 @@ public final class WidgetVoiceBottomSheetViewModel extends AppViewModel<ViewStat
         }
     }
 
-    /* compiled from: WidgetVoiceBottomSheetViewModel.kt */
+    /* JADX INFO: compiled from: WidgetVoiceBottomSheetViewModel.kt */
     public static abstract class Event {
 
-        /* compiled from: WidgetVoiceBottomSheetViewModel.kt */
+        /* JADX INFO: compiled from: WidgetVoiceBottomSheetViewModel.kt */
         public static final /* data */ class AccessibilityAnnouncement extends Event {
             private final int messageResId;
 
@@ -162,7 +162,7 @@ public final class WidgetVoiceBottomSheetViewModel extends AppViewModel<ViewStat
                 return accessibilityAnnouncement.copy(i);
             }
 
-            /* renamed from: component1, reason: from getter */
+            /* JADX INFO: renamed from: component1, reason: from getter */
             public final int getMessageResId() {
                 return this.messageResId;
             }
@@ -191,7 +191,7 @@ public final class WidgetVoiceBottomSheetViewModel extends AppViewModel<ViewStat
             }
         }
 
-        /* compiled from: WidgetVoiceBottomSheetViewModel.kt */
+        /* JADX INFO: compiled from: WidgetVoiceBottomSheetViewModel.kt */
         public static final class Dismiss extends Event {
             public static final Dismiss INSTANCE = new Dismiss();
 
@@ -200,7 +200,7 @@ public final class WidgetVoiceBottomSheetViewModel extends AppViewModel<ViewStat
             }
         }
 
-        /* compiled from: WidgetVoiceBottomSheetViewModel.kt */
+        /* JADX INFO: compiled from: WidgetVoiceBottomSheetViewModel.kt */
         public static final /* data */ class EnqueueCallFeedbackSheet extends Event {
             private final long callDuration;
             private final long channelId;
@@ -221,27 +221,27 @@ public final class WidgetVoiceBottomSheetViewModel extends AppViewModel<ViewStat
                 return enqueueCallFeedbackSheet.copy((i2 & 1) != 0 ? enqueueCallFeedbackSheet.channelId : j, (i2 & 2) != 0 ? enqueueCallFeedbackSheet.rtcConnectionId : str, (i2 & 4) != 0 ? enqueueCallFeedbackSheet.mediaSessionId : str2, (i2 & 8) != 0 ? enqueueCallFeedbackSheet.callDuration : j2, (i2 & 16) != 0 ? enqueueCallFeedbackSheet.triggerRateDenominator : i);
             }
 
-            /* renamed from: component1, reason: from getter */
+            /* JADX INFO: renamed from: component1, reason: from getter */
             public final long getChannelId() {
                 return this.channelId;
             }
 
-            /* renamed from: component2, reason: from getter */
+            /* JADX INFO: renamed from: component2, reason: from getter */
             public final String getRtcConnectionId() {
                 return this.rtcConnectionId;
             }
 
-            /* renamed from: component3, reason: from getter */
+            /* JADX INFO: renamed from: component3, reason: from getter */
             public final String getMediaSessionId() {
                 return this.mediaSessionId;
             }
 
-            /* renamed from: component4, reason: from getter */
+            /* JADX INFO: renamed from: component4, reason: from getter */
             public final long getCallDuration() {
                 return this.callDuration;
             }
 
-            /* renamed from: component5, reason: from getter */
+            /* JADX INFO: renamed from: component5, reason: from getter */
             public final int getTriggerRateDenominator() {
                 return this.triggerRateDenominator;
             }
@@ -303,7 +303,7 @@ public final class WidgetVoiceBottomSheetViewModel extends AppViewModel<ViewStat
             }
         }
 
-        /* compiled from: WidgetVoiceBottomSheetViewModel.kt */
+        /* JADX INFO: compiled from: WidgetVoiceBottomSheetViewModel.kt */
         public static final class ExpandSheet extends Event {
             public static final ExpandSheet INSTANCE = new ExpandSheet();
 
@@ -312,7 +312,7 @@ public final class WidgetVoiceBottomSheetViewModel extends AppViewModel<ViewStat
             }
         }
 
-        /* compiled from: WidgetVoiceBottomSheetViewModel.kt */
+        /* JADX INFO: compiled from: WidgetVoiceBottomSheetViewModel.kt */
         public static final /* data */ class LaunchStageChannel extends Event {
             private final long channelId;
 
@@ -328,7 +328,7 @@ public final class WidgetVoiceBottomSheetViewModel extends AppViewModel<ViewStat
                 return launchStageChannel.copy(j);
             }
 
-            /* renamed from: component1, reason: from getter */
+            /* JADX INFO: renamed from: component1, reason: from getter */
             public final long getChannelId() {
                 return this.channelId;
             }
@@ -357,7 +357,7 @@ public final class WidgetVoiceBottomSheetViewModel extends AppViewModel<ViewStat
             }
         }
 
-        /* compiled from: WidgetVoiceBottomSheetViewModel.kt */
+        /* JADX INFO: compiled from: WidgetVoiceBottomSheetViewModel.kt */
         public static final /* data */ class LaunchVideoCall extends Event {
             private final String autoTargetStreamKey;
             private final long channelId;
@@ -378,12 +378,12 @@ public final class WidgetVoiceBottomSheetViewModel extends AppViewModel<ViewStat
                 return launchVideoCall.copy(j, str);
             }
 
-            /* renamed from: component1, reason: from getter */
+            /* JADX INFO: renamed from: component1, reason: from getter */
             public final long getChannelId() {
                 return this.channelId;
             }
 
-            /* renamed from: component2, reason: from getter */
+            /* JADX INFO: renamed from: component2, reason: from getter */
             public final String getAutoTargetStreamKey() {
                 return this.autoTargetStreamKey;
             }
@@ -425,7 +425,7 @@ public final class WidgetVoiceBottomSheetViewModel extends AppViewModel<ViewStat
             }
         }
 
-        /* compiled from: WidgetVoiceBottomSheetViewModel.kt */
+        /* JADX INFO: compiled from: WidgetVoiceBottomSheetViewModel.kt */
         public static final class RequestStartStream extends Event {
             public static final RequestStartStream INSTANCE = new RequestStartStream();
 
@@ -434,7 +434,7 @@ public final class WidgetVoiceBottomSheetViewModel extends AppViewModel<ViewStat
             }
         }
 
-        /* compiled from: WidgetVoiceBottomSheetViewModel.kt */
+        /* JADX INFO: compiled from: WidgetVoiceBottomSheetViewModel.kt */
         public static final /* data */ class ShowCameraCapacityDialog extends Event {
             private final int guildMaxVideoChannelUsers;
 
@@ -450,7 +450,7 @@ public final class WidgetVoiceBottomSheetViewModel extends AppViewModel<ViewStat
                 return showCameraCapacityDialog.copy(i);
             }
 
-            /* renamed from: component1, reason: from getter */
+            /* JADX INFO: renamed from: component1, reason: from getter */
             public final int getGuildMaxVideoChannelUsers() {
                 return this.guildMaxVideoChannelUsers;
             }
@@ -479,7 +479,7 @@ public final class WidgetVoiceBottomSheetViewModel extends AppViewModel<ViewStat
             }
         }
 
-        /* compiled from: WidgetVoiceBottomSheetViewModel.kt */
+        /* JADX INFO: compiled from: WidgetVoiceBottomSheetViewModel.kt */
         public static final /* data */ class ShowEventEnd extends Event {
             private final GuildScheduledEvent guildScheduledEvent;
 
@@ -497,7 +497,7 @@ public final class WidgetVoiceBottomSheetViewModel extends AppViewModel<ViewStat
                 return showEventEnd.copy(guildScheduledEvent);
             }
 
-            /* renamed from: component1, reason: from getter */
+            /* JADX INFO: renamed from: component1, reason: from getter */
             public final GuildScheduledEvent getGuildScheduledEvent() {
                 return this.guildScheduledEvent;
             }
@@ -534,7 +534,7 @@ public final class WidgetVoiceBottomSheetViewModel extends AppViewModel<ViewStat
             }
         }
 
-        /* compiled from: WidgetVoiceBottomSheetViewModel.kt */
+        /* JADX INFO: compiled from: WidgetVoiceBottomSheetViewModel.kt */
         public static final class ShowGuildVideoAtCapacityDialog extends Event {
             public static final ShowGuildVideoAtCapacityDialog INSTANCE = new ShowGuildVideoAtCapacityDialog();
 
@@ -543,7 +543,7 @@ public final class WidgetVoiceBottomSheetViewModel extends AppViewModel<ViewStat
             }
         }
 
-        /* compiled from: WidgetVoiceBottomSheetViewModel.kt */
+        /* JADX INFO: compiled from: WidgetVoiceBottomSheetViewModel.kt */
         public static final class ShowNoScreenSharePermissionDialog extends Event {
             public static final ShowNoScreenSharePermissionDialog INSTANCE = new ShowNoScreenSharePermissionDialog();
 
@@ -552,7 +552,7 @@ public final class WidgetVoiceBottomSheetViewModel extends AppViewModel<ViewStat
             }
         }
 
-        /* compiled from: WidgetVoiceBottomSheetViewModel.kt */
+        /* JADX INFO: compiled from: WidgetVoiceBottomSheetViewModel.kt */
         public static final class ShowNoVideoDevicesAvailableToast extends Event {
             public static final ShowNoVideoDevicesAvailableToast INSTANCE = new ShowNoVideoDevicesAvailableToast();
 
@@ -561,7 +561,7 @@ public final class WidgetVoiceBottomSheetViewModel extends AppViewModel<ViewStat
             }
         }
 
-        /* compiled from: WidgetVoiceBottomSheetViewModel.kt */
+        /* JADX INFO: compiled from: WidgetVoiceBottomSheetViewModel.kt */
         public static final class ShowNoVideoPermissionDialog extends Event {
             public static final ShowNoVideoPermissionDialog INSTANCE = new ShowNoVideoPermissionDialog();
 
@@ -570,7 +570,7 @@ public final class WidgetVoiceBottomSheetViewModel extends AppViewModel<ViewStat
             }
         }
 
-        /* compiled from: WidgetVoiceBottomSheetViewModel.kt */
+        /* JADX INFO: compiled from: WidgetVoiceBottomSheetViewModel.kt */
         public static final class ShowNoiseCancellationBottomSheet extends Event {
             public static final ShowNoiseCancellationBottomSheet INSTANCE = new ShowNoiseCancellationBottomSheet();
 
@@ -579,7 +579,7 @@ public final class WidgetVoiceBottomSheetViewModel extends AppViewModel<ViewStat
             }
         }
 
-        /* compiled from: WidgetVoiceBottomSheetViewModel.kt */
+        /* JADX INFO: compiled from: WidgetVoiceBottomSheetViewModel.kt */
         public static final class ShowOverlayNux extends Event {
             public static final ShowOverlayNux INSTANCE = new ShowOverlayNux();
 
@@ -588,7 +588,7 @@ public final class WidgetVoiceBottomSheetViewModel extends AppViewModel<ViewStat
             }
         }
 
-        /* compiled from: WidgetVoiceBottomSheetViewModel.kt */
+        /* JADX INFO: compiled from: WidgetVoiceBottomSheetViewModel.kt */
         public static final class ShowRequestCameraPermissionsDialog extends Event {
             public static final ShowRequestCameraPermissionsDialog INSTANCE = new ShowRequestCameraPermissionsDialog();
 
@@ -597,7 +597,7 @@ public final class WidgetVoiceBottomSheetViewModel extends AppViewModel<ViewStat
             }
         }
 
-        /* compiled from: WidgetVoiceBottomSheetViewModel.kt */
+        /* JADX INFO: compiled from: WidgetVoiceBottomSheetViewModel.kt */
         public static final class ShowServerDeafenedDialog extends Event {
             public static final ShowServerDeafenedDialog INSTANCE = new ShowServerDeafenedDialog();
 
@@ -606,7 +606,7 @@ public final class WidgetVoiceBottomSheetViewModel extends AppViewModel<ViewStat
             }
         }
 
-        /* compiled from: WidgetVoiceBottomSheetViewModel.kt */
+        /* JADX INFO: compiled from: WidgetVoiceBottomSheetViewModel.kt */
         public static final class ShowServerMutedDialog extends Event {
             public static final ShowServerMutedDialog INSTANCE = new ShowServerMutedDialog();
 
@@ -615,7 +615,7 @@ public final class WidgetVoiceBottomSheetViewModel extends AppViewModel<ViewStat
             }
         }
 
-        /* compiled from: WidgetVoiceBottomSheetViewModel.kt */
+        /* JADX INFO: compiled from: WidgetVoiceBottomSheetViewModel.kt */
         public static final class ShowSuppressedDialog extends Event {
             public static final ShowSuppressedDialog INSTANCE = new ShowSuppressedDialog();
 
@@ -624,7 +624,7 @@ public final class WidgetVoiceBottomSheetViewModel extends AppViewModel<ViewStat
             }
         }
 
-        /* compiled from: WidgetVoiceBottomSheetViewModel.kt */
+        /* JADX INFO: compiled from: WidgetVoiceBottomSheetViewModel.kt */
         public static final /* data */ class ShowToast extends Event {
             private final int toastResId;
 
@@ -640,7 +640,7 @@ public final class WidgetVoiceBottomSheetViewModel extends AppViewModel<ViewStat
                 return showToast.copy(i);
             }
 
-            /* renamed from: component1, reason: from getter */
+            /* JADX INFO: renamed from: component1, reason: from getter */
             public final int getToastResId() {
                 return this.toastResId;
             }
@@ -677,10 +677,10 @@ public final class WidgetVoiceBottomSheetViewModel extends AppViewModel<ViewStat
         }
     }
 
-    /* compiled from: WidgetVoiceBottomSheetViewModel.kt */
+    /* JADX INFO: compiled from: WidgetVoiceBottomSheetViewModel.kt */
     public static abstract class StoreState {
 
-        /* compiled from: WidgetVoiceBottomSheetViewModel.kt */
+        /* JADX INFO: compiled from: WidgetVoiceBottomSheetViewModel.kt */
         public static final class Invalid extends StoreState {
             public static final Invalid INSTANCE = new Invalid();
 
@@ -689,7 +689,7 @@ public final class WidgetVoiceBottomSheetViewModel extends AppViewModel<ViewStat
             }
         }
 
-        /* compiled from: WidgetVoiceBottomSheetViewModel.kt */
+        /* JADX INFO: compiled from: WidgetVoiceBottomSheetViewModel.kt */
         public static final /* data */ class Valid extends StoreState {
             private final CallModel callModel;
             private final Long myPermissions;
@@ -722,22 +722,22 @@ public final class WidgetVoiceBottomSheetViewModel extends AppViewModel<ViewStat
                 return valid.copy(callModel, bool, l, z2);
             }
 
-            /* renamed from: component1, reason: from getter */
+            /* JADX INFO: renamed from: component1, reason: from getter */
             public final CallModel getCallModel() {
                 return this.callModel;
             }
 
-            /* renamed from: component2, reason: from getter */
+            /* JADX INFO: renamed from: component2, reason: from getter */
             public final Boolean getNoiseCancellation() {
                 return this.noiseCancellation;
             }
 
-            /* renamed from: component3, reason: from getter */
+            /* JADX INFO: renamed from: component3, reason: from getter */
             public final Long getMyPermissions() {
                 return this.myPermissions;
             }
 
-            /* renamed from: component4, reason: from getter */
+            /* JADX INFO: renamed from: component4, reason: from getter */
             public final boolean getTextInVoiceEnabled() {
                 return this.textInVoiceEnabled;
             }
@@ -775,6 +775,9 @@ public final class WidgetVoiceBottomSheetViewModel extends AppViewModel<ViewStat
             }
 
             /* JADX WARN: Multi-variable type inference failed */
+            /* JADX WARN: Type inference failed for: r1v3, types: [int] */
+            /* JADX WARN: Type inference failed for: r1v4 */
+            /* JADX WARN: Type inference failed for: r1v6 */
             public int hashCode() {
                 CallModel callModel = this.callModel;
                 int iHashCode = (callModel != null ? callModel.hashCode() : 0) * 31;
@@ -783,11 +786,11 @@ public final class WidgetVoiceBottomSheetViewModel extends AppViewModel<ViewStat
                 Long l = this.myPermissions;
                 int iHashCode3 = (iHashCode2 + (l != null ? l.hashCode() : 0)) * 31;
                 boolean z2 = this.textInVoiceEnabled;
-                int i = z2;
-                if (z2 != 0) {
-                    i = 1;
+                ?? r1 = z2;
+                if (z2) {
+                    r1 = 1;
                 }
-                return iHashCode3 + i;
+                return iHashCode3 + r1;
             }
 
             public String toString() {
@@ -810,7 +813,7 @@ public final class WidgetVoiceBottomSheetViewModel extends AppViewModel<ViewStat
         }
     }
 
-    /* compiled from: WidgetVoiceBottomSheetViewModel.kt */
+    /* JADX INFO: compiled from: WidgetVoiceBottomSheetViewModel.kt */
     public static final /* data */ class ViewState implements WidgetVoiceBottomSheet.ViewState {
         private final WidgetVoiceBottomSheet.BottomContent bottomContent;
         private final WidgetVoiceBottomSheet.CenterContent centerContent;
@@ -919,6 +922,13 @@ public final class WidgetVoiceBottomSheetViewModel extends AppViewModel<ViewStat
             return this.title;
         }
 
+        /* JADX WARN: Multi-variable type inference failed */
+        /* JADX WARN: Type inference failed for: r2v18 */
+        /* JADX WARN: Type inference failed for: r2v21 */
+        /* JADX WARN: Type inference failed for: r2v7, types: [int] */
+        /* JADX WARN: Type inference failed for: r3v0 */
+        /* JADX WARN: Type inference failed for: r3v1, types: [int] */
+        /* JADX WARN: Type inference failed for: r3v2 */
         public int hashCode() {
             String title = getTitle();
             int iHashCode = (title != null ? title.hashCode() : 0) * 31;
@@ -927,29 +937,29 @@ public final class WidgetVoiceBottomSheetViewModel extends AppViewModel<ViewStat
             Channel channel = getChannel();
             int iHashCode3 = (iHashCode2 + (channel != null ? channel.hashCode() : 0)) * 31;
             boolean showInviteOption = getShowInviteOption();
-            int i = showInviteOption;
+            ?? r2 = showInviteOption;
             if (showInviteOption) {
-                i = 1;
+                r2 = 1;
             }
-            int i2 = (iHashCode3 + i) * 31;
+            int i = (iHashCode3 + r2) * 31;
             Boolean isNoiseCancellationActive = getIsNoiseCancellationActive();
-            int iHashCode4 = (i2 + (isNoiseCancellationActive != null ? isNoiseCancellationActive.hashCode() : 0)) * 31;
+            int iHashCode4 = (i + (isNoiseCancellationActive != null ? isNoiseCancellationActive.hashCode() : 0)) * 31;
             boolean isDeafened = getIsDeafened();
-            int i3 = (iHashCode4 + (isDeafened ? 1 : isDeafened)) * 31;
+            int i2 = (iHashCode4 + (isDeafened ? 1 : isDeafened)) * 31;
             WidgetVoiceBottomSheet.CenterContent centerContent = getCenterContent();
-            int iHashCode5 = (i3 + (centerContent != null ? centerContent.hashCode() : 0)) * 31;
+            int iHashCode5 = (i2 + (centerContent != null ? centerContent.hashCode() : 0)) * 31;
             WidgetVoiceBottomSheet.BottomContent bottomContent = getBottomContent();
             return iHashCode5 + (bottomContent != null ? bottomContent.hashCode() : 0);
         }
 
         @Override // com.discord.widgets.voice.sheet.WidgetVoiceBottomSheet.ViewState
-        /* renamed from: isDeafened, reason: from getter */
+        /* JADX INFO: renamed from: isDeafened, reason: from getter */
         public boolean getIsDeafened() {
             return this.isDeafened;
         }
 
         @Override // com.discord.widgets.voice.sheet.WidgetVoiceBottomSheet.ViewState
-        /* renamed from: isNoiseCancellationActive, reason: from getter */
+        /* JADX INFO: renamed from: isNoiseCancellationActive, reason: from getter */
         public Boolean getIsNoiseCancellationActive() {
             return this.isNoiseCancellationActive;
         }
@@ -987,9 +997,9 @@ public final class WidgetVoiceBottomSheetViewModel extends AppViewModel<ViewStat
         }
     }
 
-    /* compiled from: WidgetVoiceBottomSheetViewModel.kt */
+    /* JADX INFO: renamed from: com.discord.widgets.voice.sheet.WidgetVoiceBottomSheetViewModel$tryConnectToVoice$1 */
+    /* JADX INFO: compiled from: WidgetVoiceBottomSheetViewModel.kt */
     @DebugMetadata(m10084c = "com.discord.widgets.voice.sheet.WidgetVoiceBottomSheetViewModel$tryConnectToVoice$1", m10085f = "WidgetVoiceBottomSheetViewModel.kt", m10086l = {Opcodes.IRETURN, 180}, m10087m = "invokeSuspend")
-    /* renamed from: com.discord.widgets.voice.sheet.WidgetVoiceBottomSheetViewModel$tryConnectToVoice$1 */
     public static final class C106041 extends ContinuationImpl6 implements Function2<CoroutineScope, Continuation<? super Unit>, Object> {
         public final /* synthetic */ StoreMediaEngine $mediaEngine;
         public int label;

@@ -7,12 +7,12 @@ import kotlin.jvm.functions.Function2;
 import p007b.p109f.p161j.p182q.BasePostprocessor;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: VoiceUserView.kt */
-/* renamed from: b.a.y.i0, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: b.a.y.i0, reason: use source file name */
+/* JADX INFO: compiled from: VoiceUserView.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class VoiceUserView4 extends BasePostprocessor {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final /* synthetic */ VoiceUserView.C7099c f2027a;
 
     public VoiceUserView4(VoiceUserView.C7099c c7099c) {

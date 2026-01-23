@@ -7,8 +7,8 @@ import p507d0.p580t.Sets5;
 import p507d0.p580t._Collections;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: SearchUtils.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: SearchUtils.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class SearchUtils {
     public static final SearchUtils INSTANCE = new SearchUtils();
 

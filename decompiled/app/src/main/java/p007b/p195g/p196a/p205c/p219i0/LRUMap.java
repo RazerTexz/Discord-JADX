@@ -6,19 +6,19 @@ import java.io.ObjectOutputStream;
 import java.io.Serializable;
 import java.util.concurrent.ConcurrentHashMap;
 
-/* compiled from: LRUMap.java */
-/* renamed from: b.g.a.c.i0.h, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.g.a.c.i0.h, reason: use source file name */
+/* JADX INFO: compiled from: LRUMap.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class LRUMap<K, V> implements LookupCache<K, V>, Serializable {
     private static final long serialVersionUID = 1;
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final transient int f4954j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final transient ConcurrentHashMap<K, V> f4955k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public transient int f4956l;
 
     public LRUMap(int i, int i2) {

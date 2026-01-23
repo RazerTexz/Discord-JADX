@@ -7,93 +7,93 @@ import p007b.p100d.p104b.p105a.outline;
 import p007b.p225i.p226a.p288f.p299e.p308o.C3404f;
 import p617h0.p618a.p619a.Attribute2;
 
-/* compiled from: ClassWriter.java */
-/* renamed from: h0.a.a.f, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: h0.a.a.f, reason: use source file name */
+/* JADX INFO: compiled from: ClassWriter.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class ClassWriter2 extends ClassVisitor2 {
 
-    /* renamed from: A */
+    /* JADX INFO: renamed from: A */
     public Attribute2 f26162A;
 
-    /* renamed from: B */
+    /* JADX INFO: renamed from: B */
     public int f26163B;
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public int f26164a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final SymbolTable2 f26165b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public int f26166c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public int f26167d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public int f26168e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public int f26169f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public int[] f26170g;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public FieldWriter2 f26171h;
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public FieldWriter2 f26172i;
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public MethodWriter2 f26173j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public MethodWriter2 f26174k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public int f26175l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public ByteVector2 f26176m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public int f26177n;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public int f26178o;
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public int f26179p;
 
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     public int f26180q;
 
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     public ByteVector2 f26181r;
 
-    /* renamed from: s */
+    /* JADX INFO: renamed from: s */
     public AnnotationWriter2 f26182s;
 
-    /* renamed from: t */
+    /* JADX INFO: renamed from: t */
     public AnnotationWriter2 f26183t;
 
-    /* renamed from: u */
+    /* JADX INFO: renamed from: u */
     public AnnotationWriter2 f26184u;
 
-    /* renamed from: v */
+    /* JADX INFO: renamed from: v */
     public AnnotationWriter2 f26185v;
 
-    /* renamed from: w */
+    /* JADX INFO: renamed from: w */
     public ModuleWriter2 f26186w;
 
-    /* renamed from: x */
+    /* JADX INFO: renamed from: x */
     public int f26187x;
 
-    /* renamed from: y */
+    /* JADX INFO: renamed from: y */
     public int f26188y;
 
-    /* renamed from: z */
+    /* JADX INFO: renamed from: z */
     public ByteVector2 f26189z;
 
     public ClassWriter2(int i) {
@@ -110,7 +110,7 @@ public class ClassWriter2 extends ClassVisitor2 {
 
     /* JADX WARN: Removed duplicated region for block: B:412:0x0acf  */
     /* JADX WARN: Removed duplicated region for block: B:412:0x0acf A[EDGE_INSN: B:412:0x0acf->B:413:0x0ad0 BREAK  A[LOOP:39: B:405:0x0ab3->B:410:0x0ac2]] */
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
@@ -1382,7 +1382,7 @@ public class ClassWriter2 extends ClassVisitor2 {
     }
 
     /* JADX WARN: Removed duplicated region for block: B:337:0x06b3  */
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
@@ -1928,7 +1928,7 @@ public class ClassWriter2 extends ClassVisitor2 {
         }
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final void m10565c(int i, int i2, String str, String str2, String str3, String[] strArr) {
         this.f26164a = i;
         this.f26166c = i2;
@@ -1955,7 +1955,7 @@ public class ClassWriter2 extends ClassVisitor2 {
         this.f26163B = 2;
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final AnnotationWriter2 m10566d(String str, boolean z2) {
         ByteVector2 byteVector2 = new ByteVector2();
         byteVector2.m10538j(this.f26165b.m10637l(str));
@@ -1970,7 +1970,7 @@ public class ClassWriter2 extends ClassVisitor2 {
         return annotationWriter22;
     }
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final MethodVisitor2 m10567e(int i, String str, String str2, String str3, String[] strArr) {
         MethodWriter2 methodWriter2 = new MethodWriter2(this.f26165b, i, str, str2, str3, strArr, this.f26163B);
         if (this.f26173j == null) {
@@ -1982,7 +1982,7 @@ public class ClassWriter2 extends ClassVisitor2 {
         return methodWriter2;
     }
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final AnnotationWriter2 m10568f(int i, TypePath2 typePath2, String str, boolean z2) {
         ByteVector2 byteVector2 = new ByteVector2();
         C3404f.m4256W0(i, byteVector2);

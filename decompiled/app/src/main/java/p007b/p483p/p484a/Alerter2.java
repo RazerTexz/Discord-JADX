@@ -2,15 +2,15 @@ package p007b.p483p.p484a;
 
 import android.view.ViewGroup;
 
-/* compiled from: Alerter.kt */
-/* renamed from: b.p.a.h, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.p.a.h, reason: use source file name */
+/* JADX INFO: compiled from: Alerter.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class Alerter2 implements Runnable {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final /* synthetic */ ViewGroup f14365j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final /* synthetic */ Alerter3 f14366k;
 
     public Alerter2(ViewGroup viewGroup, Alerter3 alerter3) {

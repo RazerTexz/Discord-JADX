@@ -7,36 +7,36 @@ import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
 import androidx.viewbinding.ViewBinding;
 
-/* compiled from: ViewOverlayMenuContentBinding.java */
-/* renamed from: b.a.i.t2, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.a.i.t2, reason: use source file name */
+/* JADX INFO: compiled from: ViewOverlayMenuContentBinding.java */
+/* JADX INFO: loaded from: classes.dex */
 public final class ViewOverlayMenuContentBinding implements ViewBinding {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     @NonNull
     public final CardView f1243a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     @NonNull
     public final TextView f1244b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     @NonNull
     public final TextView f1245c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     @NonNull
     public final TextView f1246d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     @NonNull
     public final ImageView f1247e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     @NonNull
     public final TextView f1248f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     @NonNull
     public final TextView f1249g;
 

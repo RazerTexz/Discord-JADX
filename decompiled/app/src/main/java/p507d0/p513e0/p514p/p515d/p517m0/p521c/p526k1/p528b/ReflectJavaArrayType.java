@@ -11,18 +11,18 @@ import p507d0.p513e0.p514p.p515d.p517m0.p531e.p532a.p539k0.javaTypes5;
 import p507d0.p580t.Collections2;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ReflectJavaArrayType.kt */
-/* renamed from: d0.e0.p.d.m0.c.k1.b.i, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.c.k1.b.i, reason: use source file name */
+/* JADX INFO: compiled from: ReflectJavaArrayType.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class ReflectJavaArrayType extends ReflectJavaType implements javaTypes2 {
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final Type f23043b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final ReflectJavaType f23044c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final Collection<InterfaceC11564a> f23045d;
 
     public ReflectJavaArrayType(Type type) {

@@ -6,8 +6,8 @@ import kotlin.jvm.functions.Function1;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetSettingsUserConnections.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetSettingsUserConnections.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetSettingsUserConnections$onViewBound$$inlined$let$lambda$1 extends Lambda implements Function1<String, Unit> {
     public final /* synthetic */ WidgetSettingsUserConnections this$0;
 
@@ -23,7 +23,7 @@ public final class WidgetSettingsUserConnections$onViewBound$$inlined$let$lambda
         return Unit.f27425a;
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final void invoke2(String str) {
         Intrinsics3.checkNotNullParameter(str, ModelAuditLogEntry.CHANGE_KEY_ID);
         WidgetSettingsUserConnections.access$getViewModel$p(this.this$0).joinConnectionIntegrationGuild(str);

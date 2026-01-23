@@ -5,12 +5,12 @@ import androidx.annotation.LayoutRes;
 import com.discord.utilities.mg_recycler.MGRecyclerViewHolder;
 import kotlin.jvm.internal.DefaultConstructorMarker;
 
-/* compiled from: StageCallViewHolder.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: StageCallViewHolder.kt */
+/* JADX INFO: loaded from: classes.dex */
 public abstract class StageCallViewHolder extends MGRecyclerViewHolder<StageCallAdapter, StageCallItem> {
 
-    /* compiled from: StageCallViewHolder.kt */
-    /* renamed from: com.discord.widgets.voice.fullscreen.stage.StageCallViewHolder$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.voice.fullscreen.stage.StageCallViewHolder$1 */
+    /* JADX INFO: compiled from: StageCallViewHolder.kt */
     public static final class ViewOnClickListenerC105581 implements View.OnClickListener {
         public final /* synthetic */ StageCallAdapter $adapter;
 

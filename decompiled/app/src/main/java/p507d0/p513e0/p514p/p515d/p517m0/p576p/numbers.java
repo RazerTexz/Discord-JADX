@@ -3,15 +3,15 @@ package p507d0.p513e0.p514p.p515d.p517m0.p576p;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: numbers.kt */
-/* renamed from: d0.e0.p.d.m0.p.f, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.p.f, reason: use source file name */
+/* JADX INFO: compiled from: numbers.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class numbers {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final String f24991a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final int f24992b;
 
     public numbers(String str, int i) {

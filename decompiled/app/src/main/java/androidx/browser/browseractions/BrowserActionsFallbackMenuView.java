@@ -9,9 +9,9 @@ import androidx.annotation.RestrictTo;
 import androidx.browser.C0143R;
 import androidx.constraintlayout.solver.widgets.analyzer.BasicMeasure;
 
+/* JADX INFO: loaded from: classes.dex */
 @RestrictTo({RestrictTo.Scope.LIBRARY_GROUP_PREFIX})
 @Deprecated
-/* loaded from: classes.dex */
 public class BrowserActionsFallbackMenuView extends LinearLayout {
     private final int mBrowserActionsMenuMaxWidthPx;
     private final int mBrowserActionsMenuMinPaddingPx;

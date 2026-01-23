@@ -8,8 +8,8 @@ import androidx.recyclerview.widget.RecyclerView;
 import p507d0.p512d0._Ranges;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ResizingGridLayoutManager.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: ResizingGridLayoutManager.kt */
+/* JADX INFO: loaded from: classes.dex */
 public class ResizingGridLayoutManager extends GridLayoutManager {
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public ResizingGridLayoutManager(Context context, int i, int i2) {

@@ -16,35 +16,35 @@ import p007b.p100d.p104b.p105a.outline;
 import p507d0.p580t._Collections;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: PanelsChildGestureRegionObserver.kt */
-/* renamed from: b.a.o.b, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.a.o.b, reason: use source file name */
+/* JADX INFO: compiled from: PanelsChildGestureRegionObserver.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class PanelsChildGestureRegionObserver implements View.OnLayoutChangeListener {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final Map<Integer, Rect> f1573j = new LinkedHashMap();
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final Map<Integer, ViewTreeObserver.OnScrollChangedListener> f1574k = new LinkedHashMap();
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final Set<a> f1575l = new LinkedHashSet();
 
-    /* compiled from: PanelsChildGestureRegionObserver.kt */
-    /* renamed from: b.a.o.b$a */
+    /* JADX INFO: renamed from: b.a.o.b$a */
+    /* JADX INFO: compiled from: PanelsChildGestureRegionObserver.kt */
     public interface a {
         void onGestureRegionsUpdate(List<Rect> list);
     }
 
-    /* compiled from: PanelsChildGestureRegionObserver.kt */
-    /* renamed from: b.a.o.b$b */
+    /* JADX INFO: renamed from: b.a.o.b$b */
+    /* JADX INFO: compiled from: PanelsChildGestureRegionObserver.kt */
     public static final class b {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public static WeakReference<PanelsChildGestureRegionObserver> f1576a = new WeakReference<>(null);
 
         @UiThread
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public static final PanelsChildGestureRegionObserver m232a() {
             PanelsChildGestureRegionObserver panelsChildGestureRegionObserver = f1576a.get();
             if (panelsChildGestureRegionObserver != null) {
@@ -56,11 +56,11 @@ public final class PanelsChildGestureRegionObserver implements View.OnLayoutChan
         }
     }
 
-    /* compiled from: PanelsChildGestureRegionObserver.kt */
-    /* renamed from: b.a.o.b$c */
+    /* JADX INFO: renamed from: b.a.o.b$c */
+    /* JADX INFO: compiled from: PanelsChildGestureRegionObserver.kt */
     public static final class c implements ViewTreeObserver.OnScrollChangedListener {
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final /* synthetic */ View f1578b;
 
         public c(View view) {
@@ -75,7 +75,7 @@ public final class PanelsChildGestureRegionObserver implements View.OnLayoutChan
         }
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final void m229a() {
         List<Rect> list = _Collections.toList(this.f1573j.values());
         Iterator<T> it = this.f1575l.iterator();
@@ -85,7 +85,7 @@ public final class PanelsChildGestureRegionObserver implements View.OnLayoutChan
     }
 
     @UiThread
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final void m230b(View view) {
         Intrinsics3.checkParameterIsNotNull(view, "view");
         if (!this.f1574k.containsKey(Integer.valueOf(view.getId()))) {
@@ -103,7 +103,7 @@ public final class PanelsChildGestureRegionObserver implements View.OnLayoutChan
     }
 
     @UiThread
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final void m231c(View view) {
         Intrinsics3.checkParameterIsNotNull(view, "view");
         ViewTreeObserver.OnScrollChangedListener onScrollChangedListenerRemove = this.f1574k.remove(Integer.valueOf(view.getId()));

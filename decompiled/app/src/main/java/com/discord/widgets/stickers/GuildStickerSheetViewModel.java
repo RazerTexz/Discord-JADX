@@ -25,18 +25,18 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 import p658rx.Observable;
 
-/* compiled from: GuildStickerSheetViewModel.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: GuildStickerSheetViewModel.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class GuildStickerSheetViewModel extends AppViewModel<ViewState> {
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private final RestAPI restAPI;
     private final Sticker sticker;
     private final StoreUser storeUser;
 
-    /* compiled from: GuildStickerSheetViewModel.kt */
-    /* renamed from: com.discord.widgets.stickers.GuildStickerSheetViewModel$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.stickers.GuildStickerSheetViewModel$1 */
+    /* JADX INFO: compiled from: GuildStickerSheetViewModel.kt */
     public static final class C101191 extends Lambda implements Function1<StoreState, Unit> {
         public C101191() {
             super(1);
@@ -48,20 +48,20 @@ public final class GuildStickerSheetViewModel extends AppViewModel<ViewState> {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(StoreState storeState) {
             Intrinsics3.checkNotNullParameter(storeState, "storeState");
             GuildStickerSheetViewModel.access$handleStoreState(GuildStickerSheetViewModel.this, storeState);
         }
     }
 
-    /* compiled from: GuildStickerSheetViewModel.kt */
+    /* JADX INFO: compiled from: GuildStickerSheetViewModel.kt */
     public static final class Companion {
 
-        /* compiled from: GuildStickerSheetViewModel.kt */
+        /* JADX INFO: compiled from: GuildStickerSheetViewModel.kt */
         public static abstract class GuildStickerGuildInfo {
 
-            /* compiled from: GuildStickerSheetViewModel.kt */
+            /* JADX INFO: compiled from: GuildStickerSheetViewModel.kt */
             public static final /* data */ class Known extends GuildStickerGuildInfo {
                 private final Integer approximateOnline;
                 private final Guild guild;
@@ -94,7 +94,7 @@ public final class GuildStickerSheetViewModel extends AppViewModel<ViewState> {
                     return known.copy(guild, z2, z3, num);
                 }
 
-                /* renamed from: component1, reason: from getter */
+                /* JADX INFO: renamed from: component1, reason: from getter */
                 public final Guild getGuild() {
                     return this.guild;
                 }
@@ -107,7 +107,7 @@ public final class GuildStickerSheetViewModel extends AppViewModel<ViewState> {
                     return getIsUserInGuild();
                 }
 
-                /* renamed from: component4, reason: from getter */
+                /* JADX INFO: renamed from: component4, reason: from getter */
                 public final Integer getApproximateOnline() {
                     return this.approximateOnline;
                 }
@@ -159,13 +159,13 @@ public final class GuildStickerSheetViewModel extends AppViewModel<ViewState> {
                 }
 
                 @Override // com.discord.widgets.stickers.GuildStickerSheetViewModel.Companion.GuildStickerGuildInfo
-                /* renamed from: isPublic, reason: from getter */
+                /* JADX INFO: renamed from: isPublic, reason: from getter */
                 public boolean getIsPublic() {
                     return this.isPublic;
                 }
 
                 @Override // com.discord.widgets.stickers.GuildStickerSheetViewModel.Companion.GuildStickerGuildInfo
-                /* renamed from: isUserInGuild, reason: from getter */
+                /* JADX INFO: renamed from: isUserInGuild, reason: from getter */
                 public boolean getIsUserInGuild() {
                     return this.isUserInGuild;
                 }
@@ -182,7 +182,7 @@ public final class GuildStickerSheetViewModel extends AppViewModel<ViewState> {
                 }
             }
 
-            /* compiled from: GuildStickerSheetViewModel.kt */
+            /* JADX INFO: compiled from: GuildStickerSheetViewModel.kt */
             public static final class Unknown extends GuildStickerGuildInfo {
                 public static final Unknown INSTANCE = new Unknown();
                 private static final boolean isPublic = false;
@@ -193,13 +193,13 @@ public final class GuildStickerSheetViewModel extends AppViewModel<ViewState> {
                 }
 
                 @Override // com.discord.widgets.stickers.GuildStickerSheetViewModel.Companion.GuildStickerGuildInfo
-                /* renamed from: isPublic */
+                /* JADX INFO: renamed from: isPublic */
                 public boolean getIsPublic() {
                     return isPublic;
                 }
 
                 @Override // com.discord.widgets.stickers.GuildStickerSheetViewModel.Companion.GuildStickerGuildInfo
-                /* renamed from: isUserInGuild */
+                /* JADX INFO: renamed from: isUserInGuild */
                 public boolean getIsUserInGuild() {
                     return isUserInGuild;
                 }
@@ -208,10 +208,10 @@ public final class GuildStickerSheetViewModel extends AppViewModel<ViewState> {
             private GuildStickerGuildInfo() {
             }
 
-            /* renamed from: isPublic */
+            /* JADX INFO: renamed from: isPublic */
             public abstract boolean getIsPublic();
 
-            /* renamed from: isUserInGuild */
+            /* JADX INFO: renamed from: isUserInGuild */
             public abstract boolean getIsUserInGuild();
 
             public /* synthetic */ GuildStickerGuildInfo(DefaultConstructorMarker defaultConstructorMarker) {
@@ -243,7 +243,7 @@ public final class GuildStickerSheetViewModel extends AppViewModel<ViewState> {
         }
     }
 
-    /* compiled from: GuildStickerSheetViewModel.kt */
+    /* JADX INFO: compiled from: GuildStickerSheetViewModel.kt */
     public static final /* data */ class StoreState {
         private final Long currentGuildId;
         private final Companion.GuildStickerGuildInfo guildStickerGuildInfo;
@@ -277,12 +277,12 @@ public final class GuildStickerSheetViewModel extends AppViewModel<ViewState> {
             return storeState.copy(meUser, l, map, guildStickerGuildInfo);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final MeUser getMeUser() {
             return this.meUser;
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final Long getCurrentGuildId() {
             return this.currentGuildId;
         }
@@ -291,7 +291,7 @@ public final class GuildStickerSheetViewModel extends AppViewModel<ViewState> {
             return this.userGuilds;
         }
 
-        /* renamed from: component4, reason: from getter */
+        /* JADX INFO: renamed from: component4, reason: from getter */
         public final Companion.GuildStickerGuildInfo getGuildStickerGuildInfo() {
             return this.guildStickerGuildInfo;
         }
@@ -355,10 +355,10 @@ public final class GuildStickerSheetViewModel extends AppViewModel<ViewState> {
         }
     }
 
-    /* compiled from: GuildStickerSheetViewModel.kt */
+    /* JADX INFO: compiled from: GuildStickerSheetViewModel.kt */
     public static abstract class ViewState {
 
-        /* compiled from: GuildStickerSheetViewModel.kt */
+        /* JADX INFO: compiled from: GuildStickerSheetViewModel.kt */
         public static final class Dismiss extends ViewState {
             public static final Dismiss INSTANCE = new Dismiss();
 
@@ -367,7 +367,7 @@ public final class GuildStickerSheetViewModel extends AppViewModel<ViewState> {
             }
         }
 
-        /* compiled from: GuildStickerSheetViewModel.kt */
+        /* JADX INFO: compiled from: GuildStickerSheetViewModel.kt */
         public static final /* data */ class Loaded extends ViewState {
             private final Companion.GuildStickerGuildInfo guildStickerGuildInfo;
             private final boolean isCurrentGuild;
@@ -401,22 +401,22 @@ public final class GuildStickerSheetViewModel extends AppViewModel<ViewState> {
                 return loaded.copy(sticker, z2, z3, guildStickerGuildInfo);
             }
 
-            /* renamed from: component1, reason: from getter */
+            /* JADX INFO: renamed from: component1, reason: from getter */
             public final Sticker getSticker() {
                 return this.sticker;
             }
 
-            /* renamed from: component2, reason: from getter */
+            /* JADX INFO: renamed from: component2, reason: from getter */
             public final boolean getIsUserPremium() {
                 return this.isUserPremium;
             }
 
-            /* renamed from: component3, reason: from getter */
+            /* JADX INFO: renamed from: component3, reason: from getter */
             public final boolean getIsCurrentGuild() {
                 return this.isCurrentGuild;
             }
 
-            /* renamed from: component4, reason: from getter */
+            /* JADX INFO: renamed from: component4, reason: from getter */
             public final Companion.GuildStickerGuildInfo getGuildStickerGuildInfo() {
                 return this.guildStickerGuildInfo;
             }
@@ -447,19 +447,25 @@ public final class GuildStickerSheetViewModel extends AppViewModel<ViewState> {
             }
 
             /* JADX WARN: Multi-variable type inference failed */
+            /* JADX WARN: Type inference failed for: r2v1, types: [int] */
+            /* JADX WARN: Type inference failed for: r2v4 */
+            /* JADX WARN: Type inference failed for: r2v5 */
+            /* JADX WARN: Type inference failed for: r3v0 */
+            /* JADX WARN: Type inference failed for: r3v1, types: [int] */
+            /* JADX WARN: Type inference failed for: r3v2 */
             public int hashCode() {
                 Sticker sticker = this.sticker;
                 int iHashCode = (sticker != null ? sticker.hashCode() : 0) * 31;
                 boolean z2 = this.isUserPremium;
-                int i = z2;
-                if (z2 != 0) {
-                    i = 1;
+                ?? r2 = z2;
+                if (z2) {
+                    r2 = 1;
                 }
-                int i2 = (iHashCode + i) * 31;
+                int i = (iHashCode + r2) * 31;
                 boolean z3 = this.isCurrentGuild;
-                int i3 = (i2 + (z3 ? 1 : z3 ? 1 : 0)) * 31;
+                int i2 = (i + (z3 ? 1 : z3)) * 31;
                 Companion.GuildStickerGuildInfo guildStickerGuildInfo = this.guildStickerGuildInfo;
-                return i3 + (guildStickerGuildInfo != null ? guildStickerGuildInfo.hashCode() : 0);
+                return i2 + (guildStickerGuildInfo != null ? guildStickerGuildInfo.hashCode() : 0);
             }
 
             public final boolean isCurrentGuild() {
@@ -484,7 +490,7 @@ public final class GuildStickerSheetViewModel extends AppViewModel<ViewState> {
             }
         }
 
-        /* compiled from: GuildStickerSheetViewModel.kt */
+        /* JADX INFO: compiled from: GuildStickerSheetViewModel.kt */
         public static final class Loading extends ViewState {
             public static final Loading INSTANCE = new Loading();
 
@@ -501,8 +507,8 @@ public final class GuildStickerSheetViewModel extends AppViewModel<ViewState> {
         }
     }
 
-    /* compiled from: GuildStickerSheetViewModel.kt */
-    /* renamed from: com.discord.widgets.stickers.GuildStickerSheetViewModel$joinGuild$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.stickers.GuildStickerSheetViewModel$joinGuild$1 */
+    /* JADX INFO: compiled from: GuildStickerSheetViewModel.kt */
     public static final class C101261 extends Lambda implements Function1<com.discord.api.guild.Guild, Unit> {
         public C101261() {
             super(1);
@@ -514,7 +520,7 @@ public final class GuildStickerSheetViewModel extends AppViewModel<ViewState> {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(com.discord.api.guild.Guild guild) {
             Intrinsics3.checkNotNullParameter(guild, "it");
             GuildStickerSheetViewModel.access$updateViewState(GuildStickerSheetViewModel.this, ViewState.Dismiss.INSTANCE);

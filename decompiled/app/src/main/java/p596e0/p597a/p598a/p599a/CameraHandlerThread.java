@@ -4,22 +4,22 @@ import android.hardware.Camera;
 import android.os.Handler;
 import android.os.Looper;
 
-/* compiled from: CameraHandlerThread.java */
-/* renamed from: e0.a.a.a.b, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: e0.a.a.a.b, reason: use source file name */
+/* JADX INFO: compiled from: CameraHandlerThread.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class CameraHandlerThread implements Runnable {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final /* synthetic */ int f25316j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final /* synthetic */ CameraHandlerThread2 f25317k;
 
-    /* compiled from: CameraHandlerThread.java */
-    /* renamed from: e0.a.a.a.b$a */
+    /* JADX INFO: renamed from: e0.a.a.a.b$a */
+    /* JADX INFO: compiled from: CameraHandlerThread.java */
     public class a implements Runnable {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public final /* synthetic */ Camera f25318j;
 
         public a(Camera camera) {

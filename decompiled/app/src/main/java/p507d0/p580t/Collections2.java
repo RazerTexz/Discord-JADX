@@ -8,9 +8,9 @@ import p007b.p100d.p104b.p105a.outline;
 import p507d0.p582u.C12169a;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: Collections.kt */
-/* renamed from: d0.t.n, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.t.n, reason: use source file name */
+/* JADX INFO: compiled from: Collections.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public class Collections2 extends CollectionsJVM {
     public static final <T> ArrayList<T> arrayListOf(T... tArr) {
         Intrinsics3.checkNotNullParameter(tArr, "elements");

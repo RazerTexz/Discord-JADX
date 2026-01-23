@@ -10,7 +10,7 @@ import androidx.annotation.Nullable;
 import androidx.annotation.RestrictTo;
 import androidx.core.content.ContextCompat;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class PreferenceManager {
     public static final String KEY_HAS_SET_DEFAULT_VALUES = "_has_set_default_values";
     private static final int STORAGE_DEFAULT = 0;

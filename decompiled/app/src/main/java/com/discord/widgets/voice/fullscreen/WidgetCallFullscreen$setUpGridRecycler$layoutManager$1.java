@@ -5,8 +5,8 @@ import kotlin.jvm.functions.Function0;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetCallFullscreen.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: WidgetCallFullscreen.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class WidgetCallFullscreen$setUpGridRecycler$layoutManager$1 extends Lambda implements Function0<Integer> {
     public final /* synthetic */ int $layoutManagerOrientation;
     public final /* synthetic */ WidgetCallFullscreen this$0;
@@ -23,7 +23,7 @@ public final class WidgetCallFullscreen$setUpGridRecycler$layoutManager$1 extend
         return Integer.valueOf(invoke2());
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final int invoke2() {
         int i = this.$layoutManagerOrientation;
         if (i == 0) {

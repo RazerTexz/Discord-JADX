@@ -16,77 +16,77 @@ import p007b.p225i.p226a.p242c.p267x2.ExtractorOutput;
 import p007b.p225i.p226a.p242c.p267x2.TrackOutput2;
 import p007b.p225i.p226a.p242c.p267x2.p276k0.TsPayloadReader;
 
-/* compiled from: H263Reader.java */
-/* renamed from: b.i.a.c.x2.k0.q, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.x2.k0.q, reason: use source file name */
+/* JADX INFO: compiled from: H263Reader.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class H263Reader implements ElementaryStreamReader {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final float[] f8762a = {1.0f, 1.0f, 1.0909091f, 0.90909094f, 1.4545455f, 1.2121212f, 1.0f};
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     @Nullable
     public final UserDataReader f8763b;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public b f8768g;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public long f8769h;
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public String f8770i;
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public TrackOutput2 f8771j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public boolean f8772k;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final boolean[] f8765d = new boolean[4];
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final a f8766e = new a(128);
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public long f8773l = -9223372036854775807L;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     @Nullable
     public final NalUnitTargetBuffer f8767f = new NalUnitTargetBuffer(Opcodes.GETSTATIC, 128);
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     @Nullable
     public final ParsableByteArray f8764c = new ParsableByteArray();
 
-    /* compiled from: H263Reader.java */
-    /* renamed from: b.i.a.c.x2.k0.q$a */
+    /* JADX INFO: renamed from: b.i.a.c.x2.k0.q$a */
+    /* JADX INFO: compiled from: H263Reader.java */
     public static final class a {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public static final byte[] f8774a = {0, 0, 1};
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public boolean f8775b;
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public int f8776c;
 
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         public int f8777d;
 
-        /* renamed from: e */
+        /* JADX INFO: renamed from: e */
         public int f8778e;
 
-        /* renamed from: f */
+        /* JADX INFO: renamed from: f */
         public byte[] f8779f;
 
         public a(int i) {
             this.f8779f = new byte[i];
         }
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public void m3780a(byte[] bArr, int i, int i2) {
             if (this.f8775b) {
                 int i3 = i2 - i;
@@ -101,7 +101,7 @@ public final class H263Reader implements ElementaryStreamReader {
             }
         }
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public void m3781b() {
             this.f8775b = false;
             this.f8777d = 0;
@@ -109,39 +109,39 @@ public final class H263Reader implements ElementaryStreamReader {
         }
     }
 
-    /* compiled from: H263Reader.java */
-    /* renamed from: b.i.a.c.x2.k0.q$b */
+    /* JADX INFO: renamed from: b.i.a.c.x2.k0.q$b */
+    /* JADX INFO: compiled from: H263Reader.java */
     public static final class b {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final TrackOutput2 f8780a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public boolean f8781b;
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public boolean f8782c;
 
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         public boolean f8783d;
 
-        /* renamed from: e */
+        /* JADX INFO: renamed from: e */
         public int f8784e;
 
-        /* renamed from: f */
+        /* JADX INFO: renamed from: f */
         public int f8785f;
 
-        /* renamed from: g */
+        /* JADX INFO: renamed from: g */
         public long f8786g;
 
-        /* renamed from: h */
+        /* JADX INFO: renamed from: h */
         public long f8787h;
 
         public b(TrackOutput2 trackOutput2) {
             this.f8780a = trackOutput2;
         }
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public void m3782a(byte[] bArr, int i, int i2) {
             if (this.f8782c) {
                 int i3 = this.f8785f;
@@ -167,7 +167,7 @@ public final class H263Reader implements ElementaryStreamReader {
     /* JADX WARN: Removed duplicated region for block: B:83:0x01df  */
     /* JADX WARN: Removed duplicated region for block: B:97:0x022d  */
     @Override // p007b.p225i.p226a.p242c.p267x2.p276k0.ElementaryStreamReader
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
@@ -182,7 +182,7 @@ public final class H263Reader implements ElementaryStreamReader {
         int i4 = parsableByteArray.f6794b;
         int i5 = parsableByteArray.f6795c;
         byte[] bArr = parsableByteArray.f6793a;
-        this.f8769h += parsableByteArray.m3081a();
+        this.f8769h += (long) parsableByteArray.m3081a();
         this.f8771j.mo2524c(parsableByteArray, parsableByteArray.m3081a());
         while (true) {
             int iM3055b = NalUnitUtil.m3055b(bArr, i4, i5, this.f8765d);
@@ -437,7 +437,7 @@ public final class H263Reader implements ElementaryStreamReader {
                 }
             }
             int i15 = i - iM3055b;
-            long j = this.f8769h - i15;
+            long j = this.f8769h - ((long) i15);
             b bVar3 = this.f8768g;
             boolean z3 = this.f8772k;
             if (bVar3.f8784e == 182 && z3 && bVar3.f8781b) {
@@ -463,7 +463,7 @@ public final class H263Reader implements ElementaryStreamReader {
     }
 
     @Override // p007b.p225i.p226a.p242c.p267x2.p276k0.ElementaryStreamReader
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public void mo3759c() {
         NalUnitUtil.m3054a(this.f8765d);
         this.f8766e.m3781b();
@@ -483,12 +483,12 @@ public final class H263Reader implements ElementaryStreamReader {
     }
 
     @Override // p007b.p225i.p226a.p242c.p267x2.p276k0.ElementaryStreamReader
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public void mo3760d() {
     }
 
     @Override // p007b.p225i.p226a.p242c.p267x2.p276k0.ElementaryStreamReader
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public void mo3761e(ExtractorOutput extractorOutput, TsPayloadReader.d dVar) {
         dVar.m3765a();
         this.f8770i = dVar.m3766b();
@@ -502,7 +502,7 @@ public final class H263Reader implements ElementaryStreamReader {
     }
 
     @Override // p007b.p225i.p226a.p242c.p267x2.p276k0.ElementaryStreamReader
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public void mo3762f(long j, int i) {
         if (j != -9223372036854775807L) {
             this.f8773l = j;

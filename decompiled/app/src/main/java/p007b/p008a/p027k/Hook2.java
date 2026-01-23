@@ -6,12 +6,12 @@ import kotlin.jvm.functions.Function2;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: Hook.kt */
-/* renamed from: b.a.k.c, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.a.k.c, reason: use source file name */
+/* JADX INFO: compiled from: Hook.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class Hook2 extends Lambda implements Function2<String, View, Unit> {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static final Hook2 f1497j = new Hook2();
 
     public Hook2() {

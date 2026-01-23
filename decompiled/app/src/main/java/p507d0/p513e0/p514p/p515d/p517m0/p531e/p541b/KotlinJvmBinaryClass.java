@@ -6,13 +6,13 @@ import p507d0.p513e0.p514p.p515d.p517m0.p548g.ClassId;
 import p507d0.p513e0.p514p.p515d.p517m0.p548g.Name;
 import p507d0.p513e0.p514p.p515d.p517m0.p552k.p557v.ClassLiteralValue;
 
-/* compiled from: KotlinJvmBinaryClass.kt */
-/* renamed from: d0.e0.p.d.m0.e.b.p, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.e.b.p, reason: use source file name */
+/* JADX INFO: compiled from: KotlinJvmBinaryClass.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public interface KotlinJvmBinaryClass {
 
-    /* compiled from: KotlinJvmBinaryClass.kt */
-    /* renamed from: d0.e0.p.d.m0.e.b.p$a */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.e.b.p$a */
+    /* JADX INFO: compiled from: KotlinJvmBinaryClass.kt */
     public interface a {
         void visit(Name name, Object obj);
 
@@ -27,8 +27,8 @@ public interface KotlinJvmBinaryClass {
         void visitEnum(Name name, ClassId classId, Name name2);
     }
 
-    /* compiled from: KotlinJvmBinaryClass.kt */
-    /* renamed from: d0.e0.p.d.m0.e.b.p$b */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.e.b.p$b */
+    /* JADX INFO: compiled from: KotlinJvmBinaryClass.kt */
     public interface b {
         void visit(Object obj);
 
@@ -39,24 +39,24 @@ public interface KotlinJvmBinaryClass {
         void visitEnum(ClassId classId, Name name);
     }
 
-    /* compiled from: KotlinJvmBinaryClass.kt */
-    /* renamed from: d0.e0.p.d.m0.e.b.p$c */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.e.b.p$c */
+    /* JADX INFO: compiled from: KotlinJvmBinaryClass.kt */
     public interface c {
         a visitAnnotation(ClassId classId, SourceElement sourceElement);
 
         void visitEnd();
     }
 
-    /* compiled from: KotlinJvmBinaryClass.kt */
-    /* renamed from: d0.e0.p.d.m0.e.b.p$d */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.e.b.p$d */
+    /* JADX INFO: compiled from: KotlinJvmBinaryClass.kt */
     public interface d {
         c visitField(Name name, String str, Object obj);
 
         e visitMethod(Name name, String str);
     }
 
-    /* compiled from: KotlinJvmBinaryClass.kt */
-    /* renamed from: d0.e0.p.d.m0.e.b.p$e */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.e.b.p$e */
+    /* JADX INFO: compiled from: KotlinJvmBinaryClass.kt */
     public interface e extends c {
         a visitParameterAnnotation(int i, ClassId classId, SourceElement sourceElement);
     }

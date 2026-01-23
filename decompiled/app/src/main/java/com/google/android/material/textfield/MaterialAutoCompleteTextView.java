@@ -21,7 +21,7 @@ import com.google.android.material.internal.ManufacturerUtils;
 import com.google.android.material.internal.ThemeEnforcement;
 import com.google.android.material.theme.overlay.MaterialThemeOverlay;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public class MaterialAutoCompleteTextView extends AppCompatAutoCompleteTextView {
     private static final int MAX_ITEMS_MEASURED = 15;
 
@@ -34,7 +34,7 @@ public class MaterialAutoCompleteTextView extends AppCompatAutoCompleteTextView 
     @NonNull
     private final Rect tempRect;
 
-    /* renamed from: com.google.android.material.textfield.MaterialAutoCompleteTextView$a */
+    /* JADX INFO: renamed from: com.google.android.material.textfield.MaterialAutoCompleteTextView$a */
     public class C11013a implements AdapterView.OnItemClickListener {
         public C11013a() {
         }
@@ -146,7 +146,7 @@ public class MaterialAutoCompleteTextView extends AppCompatAutoCompleteTextView 
     }
 
     @Override // android.widget.AutoCompleteTextView
-    public void showDropDown() throws IllegalArgumentException {
+    public void showDropDown() {
         AccessibilityManager accessibilityManager = this.accessibilityManager;
         if (accessibilityManager == null || !accessibilityManager.isTouchExplorationEnabled()) {
             super.showDropDown();

@@ -5,7 +5,7 @@ import java.util.Arrays;
 import java.util.HashSet;
 import p007b.p100d.p104b.p105a.outline;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class SolverVariable {
     private static final boolean INTERNAL_DEBUG = false;
     public static final int MAX_STRENGTH = 9;
@@ -28,7 +28,7 @@ public class SolverVariable {
     public int definitionId;
     public float[] goalStrengthVector;
 
-    /* renamed from: id */
+    /* JADX INFO: renamed from: id */
     public int f110id;
     public boolean inGoal;
     public HashSet<ArrayRow> inRows;
@@ -44,7 +44,7 @@ public class SolverVariable {
     public float synonymDelta;
     public int usageInRowCount;
 
-    /* renamed from: androidx.constraintlayout.solver.SolverVariable$1 */
+    /* JADX INFO: renamed from: androidx.constraintlayout.solver.SolverVariable$1 */
     public static /* synthetic */ class C01831 {
         public static final /* synthetic */ int[] $SwitchMap$androidx$constraintlayout$solver$SolverVariable$Type;
 

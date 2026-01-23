@@ -4,8 +4,8 @@ import android.view.View;
 import com.discord.utilities.search.suggestion.entries.HasSuggestion;
 import com.discord.widgets.search.suggestions.WidgetSearchSuggestionsAdapter;
 
-/* compiled from: WidgetSearchSuggestionsAdapter.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetSearchSuggestionsAdapter.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetSearchSuggestionsAdapter$HasViewHolder$onConfigure$1 implements View.OnClickListener {
     public final /* synthetic */ HasSuggestion $hasSuggestion;
     public final /* synthetic */ WidgetSearchSuggestionsAdapter.HasViewHolder this$0;

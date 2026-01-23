@@ -2,9 +2,9 @@ package androidx.activity.result;
 
 import kotlin.jvm.functions.Function1;
 
-/* compiled from: ActivityResultCaller.kt */
-/* renamed from: androidx.activity.result.ActivityResultCallerKt$registerForActivityResult$resultLauncher$1, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: androidx.activity.result.ActivityResultCallerKt$registerForActivityResult$resultLauncher$1, reason: use source file name */
+/* JADX INFO: compiled from: ActivityResultCaller.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class ActivityResultCaller3<O> implements ActivityResultCallback<O> {
     public final /* synthetic */ Function1 $callback;
 

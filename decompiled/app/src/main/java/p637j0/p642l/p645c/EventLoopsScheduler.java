@@ -13,47 +13,47 @@ import p658rx.functions.Action0;
 import p658rx.internal.util.SubscriptionList;
 import p658rx.subscriptions.CompositeSubscription;
 
-/* compiled from: EventLoopsScheduler.java */
-/* renamed from: j0.l.c.b, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: j0.l.c.b, reason: use source file name */
+/* JADX INFO: compiled from: EventLoopsScheduler.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class EventLoopsScheduler extends Scheduler implements SchedulerLifecycle {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final int f27187a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static final c f27188b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public static final b f27189c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final ThreadFactory f27190d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final AtomicReference<b> f27191e;
 
-    /* compiled from: EventLoopsScheduler.java */
-    /* renamed from: j0.l.c.b$a */
+    /* JADX INFO: renamed from: j0.l.c.b$a */
+    /* JADX INFO: compiled from: EventLoopsScheduler.java */
     public static final class a extends Scheduler.Worker {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public final SubscriptionList f27192j;
 
-        /* renamed from: k */
+        /* JADX INFO: renamed from: k */
         public final CompositeSubscription f27193k;
 
-        /* renamed from: l */
+        /* JADX INFO: renamed from: l */
         public final SubscriptionList f27194l;
 
-        /* renamed from: m */
+        /* JADX INFO: renamed from: m */
         public final c f27195m;
 
-        /* compiled from: EventLoopsScheduler.java */
-        /* renamed from: j0.l.c.b$a$a, reason: collision with other inner class name */
+        /* JADX INFO: renamed from: j0.l.c.b$a$a, reason: collision with other inner class name */
+        /* JADX INFO: compiled from: EventLoopsScheduler.java */
         public class C13352a implements Action0 {
 
-            /* renamed from: j */
+            /* JADX INFO: renamed from: j */
             public final /* synthetic */ Action0 f27196j;
 
             public C13352a(Action0 action0) {
@@ -69,11 +69,11 @@ public final class EventLoopsScheduler extends Scheduler implements SchedulerLif
             }
         }
 
-        /* compiled from: EventLoopsScheduler.java */
-        /* renamed from: j0.l.c.b$a$b */
+        /* JADX INFO: renamed from: j0.l.c.b$a$b */
+        /* JADX INFO: compiled from: EventLoopsScheduler.java */
         public class b implements Action0 {
 
-            /* renamed from: j */
+            /* JADX INFO: renamed from: j */
             public final /* synthetic */ Action0 f27198j;
 
             public b(Action0 action0) {
@@ -99,7 +99,7 @@ public final class EventLoopsScheduler extends Scheduler implements SchedulerLif
         }
 
         @Override // rx.Scheduler.Worker
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public Subscription mo10740a(Action0 action0) {
             if (this.f27194l.f27645k) {
                 return Subscriptions.f27422a;
@@ -115,7 +115,7 @@ public final class EventLoopsScheduler extends Scheduler implements SchedulerLif
         }
 
         @Override // rx.Scheduler.Worker
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public Subscription mo10741b(Action0 action0, long j, TimeUnit timeUnit) {
             if (this.f27194l.f27645k) {
                 return Subscriptions.f27422a;
@@ -141,17 +141,17 @@ public final class EventLoopsScheduler extends Scheduler implements SchedulerLif
         }
     }
 
-    /* compiled from: EventLoopsScheduler.java */
-    /* renamed from: j0.l.c.b$b */
+    /* JADX INFO: renamed from: j0.l.c.b$b */
+    /* JADX INFO: compiled from: EventLoopsScheduler.java */
     public static final class b {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final int f27200a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final c[] f27201b;
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public long f27202c;
 
         public b(ThreadFactory threadFactory, int i) {
@@ -162,7 +162,7 @@ public final class EventLoopsScheduler extends Scheduler implements SchedulerLif
             }
         }
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public c m10801a() {
             int i = this.f27200a;
             if (i == 0) {
@@ -171,12 +171,12 @@ public final class EventLoopsScheduler extends Scheduler implements SchedulerLif
             c[] cVarArr = this.f27201b;
             long j = this.f27202c;
             this.f27202c = 1 + j;
-            return cVarArr[(int) (j % i)];
+            return cVarArr[(int) (j % ((long) i))];
         }
     }
 
-    /* compiled from: EventLoopsScheduler.java */
-    /* renamed from: j0.l.c.b$c */
+    /* JADX INFO: renamed from: j0.l.c.b$c */
+    /* JADX INFO: compiled from: EventLoopsScheduler.java */
     public static final class c extends NewThreadWorker {
         public c(ThreadFactory threadFactory) {
             super(threadFactory);
@@ -211,7 +211,7 @@ public final class EventLoopsScheduler extends Scheduler implements SchedulerLif
     }
 
     @Override // p658rx.Scheduler
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public Scheduler.Worker mo10739a() {
         return new a(this.f27191e.get().m10801a());
     }

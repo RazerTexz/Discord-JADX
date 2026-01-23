@@ -15,7 +15,7 @@ import p617h0.p628c.RunnableC12459e0;
 import p617h0.p628c.RunnableC12461f0;
 import p617h0.p628c.RunnableC12463g0;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public class VideoFileRenderer implements VideoSink {
     private static final String TAG = "VideoFileRenderer";
     private EglBase eglBase;
@@ -32,7 +32,7 @@ public class VideoFileRenderer implements VideoSink {
     private final FileOutputStream videoOutFile;
     private YuvConverter yuvConverter;
 
-    /* renamed from: org.webrtc.VideoFileRenderer$1 */
+    /* JADX INFO: renamed from: org.webrtc.VideoFileRenderer$1 */
     public class RunnableC129951 implements Runnable {
         public final /* synthetic */ EglBase.Context val$sharedContext;
 
@@ -108,12 +108,12 @@ public class VideoFileRenderer implements VideoSink {
         this.fileThreadHandler.post(new RunnableC12463g0(this, i420, videoFrame));
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public /* synthetic */ void m11049a(VideoFrame videoFrame) {
         renderFrameOnRenderThread(videoFrame);
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public /* synthetic */ void m11050b(CountDownLatch countDownLatch) {
         this.yuvConverter.release();
         this.eglBase.release();
@@ -121,7 +121,7 @@ public class VideoFileRenderer implements VideoSink {
         countDownLatch.countDown();
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public /* synthetic */ void m11051c() {
         try {
             this.videoOutFile.close();
@@ -132,7 +132,7 @@ public class VideoFileRenderer implements VideoSink {
         }
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public /* synthetic */ void m11052d(VideoFrame.I420Buffer i420Buffer, VideoFrame videoFrame) {
         YuvHelper.I420Rotate(i420Buffer.getDataY(), i420Buffer.getStrideY(), i420Buffer.getDataU(), i420Buffer.getStrideU(), i420Buffer.getDataV(), i420Buffer.getStrideV(), this.outputFrameBuffer, i420Buffer.getWidth(), i420Buffer.getHeight(), videoFrame.getRotation());
         i420Buffer.release();

@@ -36,19 +36,19 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 import p658rx.Observable;
 
-/* compiled from: WidgetNoticeNuxSamsungLink.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetNoticeNuxSamsungLink.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetNoticeNuxSamsungLink extends AppDialog {
     public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetNoticeNuxSamsungLink.class, "binding", "getBinding()Lcom/discord/databinding/WidgetNoticeNuxSamsungLinkBinding;", 0)};
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private static final String NOTICE_NAME = "NUX/SamsungLink";
 
-    /* renamed from: binding$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
 
-    /* compiled from: WidgetNoticeNuxSamsungLink.kt */
+    /* JADX INFO: compiled from: WidgetNoticeNuxSamsungLink.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -61,6 +61,10 @@ public final class WidgetNoticeNuxSamsungLink extends AppDialog {
             StoreStream.INSTANCE.getNotices().requestToShow(new StoreNotices.Notice(WidgetNoticeNuxSamsungLink.NOTICE_NAME, null, 0L, 0, true, null, 0L, false, RecyclerView.FOREVER_NS, WidgetNoticeNuxSamsungLink4.INSTANCE, 230, null));
         }
 
+        /* JADX WARN: Removed duplicated region for block: B:13:0x0032  */
+        /*
+            Code decompiled incorrectly, please refer to instructions dump.
+        */
         public final void enqueue(Context context, Clock clock) {
             Intrinsics3.checkNotNullParameter(context, "context");
             Intrinsics3.checkNotNullParameter(clock, "clock");
@@ -89,8 +93,8 @@ public final class WidgetNoticeNuxSamsungLink extends AppDialog {
         }
     }
 
-    /* compiled from: WidgetNoticeNuxSamsungLink.kt */
-    /* renamed from: com.discord.widgets.notice.WidgetNoticeNuxSamsungLink$onViewBound$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.notice.WidgetNoticeNuxSamsungLink$onViewBound$1 */
+    /* JADX INFO: compiled from: WidgetNoticeNuxSamsungLink.kt */
     public static final class C91001 extends Lambda implements Function1<List<? extends ModelOAuth2Token>, Unit> {
         public C91001() {
             super(1);
@@ -105,7 +109,7 @@ public final class WidgetNoticeNuxSamsungLink extends AppDialog {
         /* JADX WARN: Removed duplicated region for block: B:20:0x004e  */
         /* JADX WARN: Removed duplicated region for block: B:26:0x0051 A[EDGE_INSN: B:26:0x0051->B:22:0x0051 BREAK  A[LOOP:0: B:8:0x0017->B:29:?], SYNTHETIC] */
         /* JADX WARN: Removed duplicated region for block: B:29:? A[LOOP:0: B:8:0x0017->B:29:?, LOOP_END, SYNTHETIC] */
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         /*
             Code decompiled incorrectly, please refer to instructions dump.
         */
@@ -139,8 +143,8 @@ public final class WidgetNoticeNuxSamsungLink extends AppDialog {
         }
     }
 
-    /* compiled from: WidgetNoticeNuxSamsungLink.kt */
-    /* renamed from: com.discord.widgets.notice.WidgetNoticeNuxSamsungLink$onViewBound$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.notice.WidgetNoticeNuxSamsungLink$onViewBound$2 */
+    /* JADX INFO: compiled from: WidgetNoticeNuxSamsungLink.kt */
     public static final class ViewOnClickListenerC91012 implements View.OnClickListener {
         public ViewOnClickListenerC91012() {
         }
@@ -155,8 +159,8 @@ public final class WidgetNoticeNuxSamsungLink extends AppDialog {
         }
     }
 
-    /* compiled from: WidgetNoticeNuxSamsungLink.kt */
-    /* renamed from: com.discord.widgets.notice.WidgetNoticeNuxSamsungLink$onViewBound$3 */
+    /* JADX INFO: renamed from: com.discord.widgets.notice.WidgetNoticeNuxSamsungLink$onViewBound$3 */
+    /* JADX INFO: compiled from: WidgetNoticeNuxSamsungLink.kt */
     public static final class ViewOnClickListenerC91023 implements View.OnClickListener {
         public ViewOnClickListenerC91023() {
         }

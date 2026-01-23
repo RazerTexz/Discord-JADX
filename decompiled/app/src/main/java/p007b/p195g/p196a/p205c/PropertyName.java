@@ -7,15 +7,15 @@ import p007b.p195g.p196a.p198b.SerializableString;
 import p007b.p195g.p196a.p198b.p204t.InternCache;
 import p007b.p195g.p196a.p205c.p219i0.ClassUtil;
 
-/* compiled from: PropertyName.java */
-/* renamed from: b.g.a.c.t, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.g.a.c.t, reason: use source file name */
+/* JADX INFO: compiled from: PropertyName.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class PropertyName implements Serializable {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static final PropertyName f5029j = new PropertyName("", null);
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public static final PropertyName f5030k = new PropertyName(new String(""), null);
     private static final long serialVersionUID = 1;
     public SerializableString _encodedSimple;
@@ -28,12 +28,12 @@ public class PropertyName implements Serializable {
         this._namespace = null;
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static PropertyName m2227a(String str) {
         return (str == null || str.isEmpty()) ? f5029j : new PropertyName(InternCache.f4602j.m1733a(str), null);
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static PropertyName m2228b(String str, String str2) {
         if (str == null) {
             str = "";
@@ -41,12 +41,12 @@ public class PropertyName implements Serializable {
         return (str2 == null && str.isEmpty()) ? f5029j : new PropertyName(InternCache.f4602j.m1733a(str), str2);
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public boolean m2229c() {
         return !this._simpleName.isEmpty();
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public boolean m2230d() {
         return this._namespace == null && this._simpleName.isEmpty();
     }

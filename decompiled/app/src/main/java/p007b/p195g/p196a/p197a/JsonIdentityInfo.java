@@ -5,11 +5,11 @@ import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
-/* compiled from: JsonIdentityInfo.java */
+/* JADX INFO: renamed from: b.g.a.a.k, reason: use source file name */
+/* JADX INFO: compiled from: JsonIdentityInfo.java */
+/* JADX INFO: loaded from: classes3.dex */
 @Target({ElementType.ANNOTATION_TYPE, ElementType.TYPE, ElementType.FIELD, ElementType.METHOD, ElementType.PARAMETER})
 @Retention(RetentionPolicy.RUNTIME)
-/* renamed from: b.g.a.a.k, reason: use source file name */
-/* loaded from: classes3.dex */
 public @interface JsonIdentityInfo {
     Class<? extends ObjectIdGenerator<?>> generator();
 

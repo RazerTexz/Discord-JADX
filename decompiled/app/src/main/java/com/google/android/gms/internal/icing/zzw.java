@@ -7,36 +7,36 @@ import java.util.Locale;
 import p007b.p085c.p086a.p087a0.AnimatableValueParser;
 import p007b.p225i.p226a.p288f.p313h.p324k.C3576u;
 
-/* compiled from: com.google.firebase:firebase-appindexing@@19.1.0 */
-/* loaded from: classes3.dex */
+/* JADX INFO: compiled from: com.google.firebase:firebase-appindexing@@19.1.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public final class zzw extends AbstractSafeParcelable {
     public static final Parcelable.Creator<zzw> CREATOR = new C3576u();
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final zzi f20612j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final long f20613k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public int f20614l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public final String f20615m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public final zzh f20616n;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public final boolean f20617o;
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public int f20618p;
 
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     public int f20619q;
 
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     public final String f20620r;
 
     public zzw(zzi zziVar, long j, int i, String str, zzh zzhVar, boolean z2, int i2, int i3, String str2) {

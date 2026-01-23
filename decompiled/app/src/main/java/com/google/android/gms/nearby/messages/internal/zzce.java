@@ -11,34 +11,34 @@ import p007b.p225i.p226a.p288f.p333j.p334b.p335e.C4287i0;
 import p007b.p225i.p226a.p288f.p333j.p334b.p335e.C4309t0;
 import p007b.p225i.p226a.p288f.p333j.p334b.p335e.InterfaceC4305r0;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public final class zzce extends AbstractSafeParcelable {
     public static final Parcelable.Creator<zzce> CREATOR = new C4287i0();
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final int f20796j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final zzaf f20797k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final InterfaceC4305r0 f20798l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     @Nullable
     @Deprecated
     public final String f20799m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     @Nullable
     @Deprecated
     public final String f20800n;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     @Deprecated
     public final boolean f20801o;
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     @Nullable
     @Deprecated
     public final ClientAppContext f20802p;

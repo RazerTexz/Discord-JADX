@@ -8,12 +8,12 @@ import kotlin.NoWhenBranchMatchedException;
 import p007b.p085c.p086a.p087a0.AnimatableValueParser;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: PremiumTier.kt */
-/* renamed from: com.discord.api.premium.PremiumTierTypeAdapter, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: com.discord.api.premium.PremiumTierTypeAdapter, reason: use source file name */
+/* JADX INFO: compiled from: PremiumTier.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class PremiumTier2 extends TypeAdapter<PremiumTier> {
 
-    /* renamed from: com.discord.api.premium.PremiumTierTypeAdapter$WhenMappings */
+    /* JADX INFO: renamed from: com.discord.api.premium.PremiumTierTypeAdapter$WhenMappings */
     public final /* synthetic */ class WhenMappings {
         public static final /* synthetic */ int[] $EnumSwitchMapping$0;
 

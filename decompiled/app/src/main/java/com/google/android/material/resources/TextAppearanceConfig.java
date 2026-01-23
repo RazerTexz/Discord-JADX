@@ -1,6 +1,6 @@
 package com.google.android.material.resources;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public class TextAppearanceConfig {
     private static boolean shouldLoadFontSynchronously;
 

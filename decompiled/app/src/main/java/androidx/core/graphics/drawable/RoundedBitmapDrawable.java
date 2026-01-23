@@ -16,7 +16,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import org.objectweb.asm.Opcodes;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public abstract class RoundedBitmapDrawable extends Drawable {
     private static final int DEFAULT_PAINT_FLAGS = 3;
     public final Bitmap mBitmap;

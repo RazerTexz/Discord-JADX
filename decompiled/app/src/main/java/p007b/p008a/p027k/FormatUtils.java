@@ -28,19 +28,19 @@ import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: FormatUtils.kt */
-/* renamed from: b.a.k.b, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.a.k.b, reason: use source file name */
+/* JADX INFO: compiled from: FormatUtils.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class FormatUtils {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final Regex f1489a = new Regex("\\{(\\S+?)\\}");
 
-    /* compiled from: FormatUtils.kt */
-    /* renamed from: b.a.k.b$a */
+    /* JADX INFO: renamed from: b.a.k.b$a */
+    /* JADX INFO: compiled from: FormatUtils.kt */
     public static final class a extends Lambda implements Function1<RenderContext, Unit> {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public static final a f1490j = new a();
 
         public a() {
@@ -54,11 +54,11 @@ public final class FormatUtils {
         }
     }
 
-    /* compiled from: FormatUtils.kt */
-    /* renamed from: b.a.k.b$b */
+    /* JADX INFO: renamed from: b.a.k.b$b */
+    /* JADX INFO: compiled from: FormatUtils.kt */
     public static final class b extends Lambda implements Function1<RenderContext, Unit> {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public static final b f1491j = new b();
 
         public b() {
@@ -72,11 +72,11 @@ public final class FormatUtils {
         }
     }
 
-    /* compiled from: FormatUtils.kt */
-    /* renamed from: b.a.k.b$c */
+    /* JADX INFO: renamed from: b.a.k.b$c */
+    /* JADX INFO: compiled from: FormatUtils.kt */
     public static final class c extends Lambda implements Function1<RenderContext, Unit> {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public static final c f1492j = new c();
 
         public c() {
@@ -90,11 +90,11 @@ public final class FormatUtils {
         }
     }
 
-    /* compiled from: FormatUtils.kt */
-    /* renamed from: b.a.k.b$d */
+    /* JADX INFO: renamed from: b.a.k.b$d */
+    /* JADX INFO: compiled from: FormatUtils.kt */
     public static final class d extends Lambda implements Function1<RenderContext, Unit> {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public static final d f1493j = new d();
 
         public d() {
@@ -108,11 +108,11 @@ public final class FormatUtils {
         }
     }
 
-    /* compiled from: FormatUtils.kt */
-    /* renamed from: b.a.k.b$e */
+    /* JADX INFO: renamed from: b.a.k.b$e */
+    /* JADX INFO: compiled from: FormatUtils.kt */
     public static final class e extends Lambda implements Function1<RenderContext, Unit> {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public static final e f1494j = new e();
 
         public e() {
@@ -126,8 +126,8 @@ public final class FormatUtils {
         }
     }
 
-    /* compiled from: FormatUtils.kt */
-    /* renamed from: b.a.k.b$f */
+    /* JADX INFO: renamed from: b.a.k.b$f */
+    /* JADX INFO: compiled from: FormatUtils.kt */
     public static final class f extends Lambda implements Function1<MatchResult, CharSequence> {
         public final /* synthetic */ Map $namedArgs;
 
@@ -146,11 +146,11 @@ public final class FormatUtils {
         }
     }
 
-    /* compiled from: FormatUtils.kt */
-    /* renamed from: b.a.k.b$g */
+    /* JADX INFO: renamed from: b.a.k.b$g */
+    /* JADX INFO: compiled from: FormatUtils.kt */
     public static final class g extends Lambda implements Function1<RenderContext, Unit> {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public static final g f1495j = new g();
 
         public g() {
@@ -164,11 +164,11 @@ public final class FormatUtils {
         }
     }
 
-    /* compiled from: FormatUtils.kt */
-    /* renamed from: b.a.k.b$h */
+    /* JADX INFO: renamed from: b.a.k.b$h */
+    /* JADX INFO: compiled from: FormatUtils.kt */
     public static final class h extends Lambda implements Function1<RenderContext, Unit> {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public static final h f1496j = new h();
 
         public h() {
@@ -182,14 +182,14 @@ public final class FormatUtils {
         }
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final void m209a(TextView textView, CharSequence charSequence) {
         Intrinsics3.checkNotNullParameter(textView, "$this$bindText");
         textView.setText(charSequence);
         textView.setVisibility((charSequence == null || charSequence.length() == 0) ^ true ? 0 : 8);
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static final CharSequence m210b(Context context, @StringRes int i, Object[] objArr, Function1<? super RenderContext, Unit> function1) {
         Intrinsics3.checkNotNullParameter(context, "$this$i18nFormat");
         Intrinsics3.checkNotNullParameter(objArr, "formatArgs");
@@ -199,8 +199,8 @@ public final class FormatUtils {
         return m211c(resources, i, Arrays.copyOf(objArr, objArr.length), function1);
     }
 
-    /* renamed from: c */
-    public static final CharSequence m211c(Resources resources, @StringRes int i, Object[] objArr, Function1<? super RenderContext, Unit> function1) throws Resources.NotFoundException {
+    /* JADX INFO: renamed from: c */
+    public static final CharSequence m211c(Resources resources, @StringRes int i, Object[] objArr, Function1<? super RenderContext, Unit> function1) {
         Intrinsics3.checkNotNullParameter(resources, "$this$i18nFormat");
         Intrinsics3.checkNotNullParameter(objArr, "formatArgs");
         Intrinsics3.checkNotNullParameter(function1, "initializer");
@@ -209,7 +209,7 @@ public final class FormatUtils {
         return m215g(string, Arrays.copyOf(objArr, objArr.length), function1);
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public static final CharSequence m212d(View view, @StringRes int i, Object[] objArr, Function1<? super RenderContext, Unit> function1) {
         Intrinsics3.checkNotNullParameter(view, "$this$i18nFormat");
         Intrinsics3.checkNotNullParameter(objArr, "formatArgs");
@@ -219,7 +219,7 @@ public final class FormatUtils {
         return m210b(context, i, Arrays.copyOf(objArr, objArr.length), function1);
     }
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public static final CharSequence m213e(Fragment fragment, @StringRes int i, Object[] objArr, Function1<? super RenderContext, Unit> function1) {
         Intrinsics3.checkNotNullParameter(fragment, "$this$i18nFormat");
         Intrinsics3.checkNotNullParameter(objArr, "formatArgs");
@@ -229,7 +229,7 @@ public final class FormatUtils {
         return m210b(contextRequireContext, i, Arrays.copyOf(objArr, objArr.length), function1);
     }
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public static final CharSequence m214f(CharSequence charSequence, Object[] objArr, RenderContext renderContext) {
         Intrinsics3.checkNotNullParameter(charSequence, "$this$i18nFormat");
         Intrinsics3.checkNotNullParameter(objArr, "formatArgs");
@@ -273,7 +273,7 @@ public final class FormatUtils {
         return spannableStringBuilder;
     }
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public static final CharSequence m215g(CharSequence charSequence, Object[] objArr, Function1<? super RenderContext, Unit> function1) {
         Intrinsics3.checkNotNullParameter(charSequence, "$this$i18nFormat");
         Intrinsics3.checkNotNullParameter(objArr, "formatArgs");
@@ -281,32 +281,32 @@ public final class FormatUtils {
         return m214f(charSequence, objArr, AnimatableValueParser.m470R1(function1, Arrays.copyOf(objArr, objArr.length)));
     }
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public static /* synthetic */ CharSequence m216h(Context context, int i, Object[] objArr, Function1 function1, int i2) {
         return m210b(context, i, objArr, (i2 & 4) != 0 ? b.f1491j : null);
     }
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public static /* synthetic */ CharSequence m217i(Resources resources, int i, Object[] objArr, Function1 function1, int i2) {
         return m211c(resources, i, objArr, (i2 & 4) != 0 ? d.f1493j : null);
     }
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static /* synthetic */ CharSequence m218j(View view, int i, Object[] objArr, Function1 function1, int i2) {
         return m212d(view, i, objArr, (i2 & 4) != 0 ? c.f1492j : null);
     }
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public static /* synthetic */ CharSequence m219k(Fragment fragment, int i, Object[] objArr, Function1 function1, int i2) {
         return m213e(fragment, i, objArr, (i2 & 4) != 0 ? a.f1490j : null);
     }
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public static /* synthetic */ CharSequence m220l(CharSequence charSequence, Object[] objArr, Function1 function1, int i) {
         return m215g(charSequence, objArr, (i & 2) != 0 ? e.f1494j : null);
     }
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public static final void m221m(TextView textView, @StringRes int i, Object[] objArr, Function1<? super RenderContext, Unit> function1) {
         Intrinsics3.checkNotNullParameter(textView, "$this$i18nSetText");
         Intrinsics3.checkNotNullParameter(objArr, "formatArgs");
@@ -318,12 +318,12 @@ public final class FormatUtils {
         textView.setText(m214f(string, objArr, renderContextM470R1));
     }
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public static /* synthetic */ void m222n(TextView textView, int i, Object[] objArr, Function1 function1, int i2) {
         m221m(textView, i, objArr, (i2 & 4) != 0 ? g.f1495j : null);
     }
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public static void m223o(TextView textView, CharSequence charSequence, Object[] objArr, Function1 function1, int i) {
         h hVar = (i & 4) != 0 ? h.f1496j : null;
         Intrinsics3.checkNotNullParameter(textView, "$this$i18nSetText");

@@ -7,15 +7,15 @@ import java.util.Map;
 import java.util.Objects;
 import p007b.p225i.p226a.p288f.p299e.p308o.C3401c;
 
-/* compiled from: com.google.android.gms:play-services-measurement@@18.0.0 */
-/* renamed from: b.i.a.f.i.b.m9 */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.i.b.m9 */
+/* JADX INFO: compiled from: com.google.android.gms:play-services-measurement@@18.0.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public final class C4119m9 implements InterfaceC4256z3 {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final /* synthetic */ String f10972a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final /* synthetic */ C4097k9 f10973b;
 
     public C4119m9(C4097k9 c4097k9, String str) {
@@ -24,10 +24,8 @@ public final class C4119m9 implements InterfaceC4256z3 {
     }
 
     @Override // p007b.p225i.p226a.p288f.p330i.p332b.InterfaceC4256z3
-    /* renamed from: a */
-    public final void mo5751a(String str, int i, Throwable th, byte[] bArr, Map<String, List<String>> map) throws IllegalStateException {
-        C4040g c4040gM5710K;
-        long jLongValue;
+    /* JADX INFO: renamed from: a */
+    public final void mo5751a(String str, int i, Throwable th, byte[] bArr, Map<String, List<String>> map) {
         C4097k9 c4097k9 = this.f10973b;
         c4097k9.m5720U();
         c4097k9.m5715P();
@@ -54,11 +52,14 @@ public final class C4119m9 implements InterfaceC4256z3 {
                 try {
                     for (Long l : list) {
                         try {
-                            c4040gM5710K = c4097k9.m5710K();
-                            jLongValue = l.longValue();
+                            C4040g c4040gM5710K = c4097k9.m5710K();
+                            long jLongValue = l.longValue();
                             c4040gM5710K.mo5848b();
                             c4040gM5710K.m5684n();
                             try {
+                                if (c4040gM5710K.m5640t().delete("queue", "rowid=?", new String[]{String.valueOf(jLongValue)}) != 1) {
+                                    throw new SQLiteException("Deleted fewer rows from queue than expected");
+                                }
                             } catch (SQLiteException e) {
                                 c4040gM5710K.mo5726g().f11141f.m5861b("Failed to delete a bundle in a queue table", e);
                                 throw e;
@@ -68,9 +69,6 @@ public final class C4119m9 implements InterfaceC4256z3 {
                             if (list2 == null || !list2.contains(l)) {
                                 throw e2;
                             }
-                        }
-                        if (c4040gM5710K.m5640t().delete("queue", "rowid=?", new String[]{String.valueOf(jLongValue)}) != 1) {
-                            throw new SQLiteException("Deleted fewer rows from queue than expected");
                         }
                     }
                     c4097k9.m5710K().m5639s();

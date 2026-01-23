@@ -6,9 +6,9 @@ import java.util.Iterator;
 import kotlin.jvm.functions.Function0;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: EmojiPickerViewModel.kt */
-/* renamed from: com.discord.widgets.chat.input.emoji.EmojiPickerViewModel$ViewState$Results$firstUnicodeEmojiCategoryItem$2 */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.chat.input.emoji.EmojiPickerViewModel$ViewState$Results$firstUnicodeEmojiCategoryItem$2 */
+/* JADX INFO: compiled from: EmojiPickerViewModel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class C7815xf92f8d5e extends Lambda implements Function0<EmojiCategoryItem.StandardItem> {
     public final /* synthetic */ EmojiPickerViewModel.ViewState.Results this$0;
 

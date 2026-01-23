@@ -10,19 +10,19 @@ import java.util.Objects;
 import p007b.p085c.p086a.p087a0.AnimatableValueParser;
 import p007b.p100d.p104b.p105a.outline;
 
-/* compiled from: AshmemMemoryChunk.java */
+/* JADX INFO: renamed from: b.f.j.l.a, reason: use source file name */
+/* JADX INFO: compiled from: AshmemMemoryChunk.java */
+/* JADX INFO: loaded from: classes3.dex */
 @TargetApi(27)
-/* renamed from: b.f.j.l.a, reason: use source file name */
-/* loaded from: classes3.dex */
 public class AshmemMemoryChunk implements MemoryChunk, Closeable {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public SharedMemory f3914j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public ByteBuffer f3915k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final long f3916l;
 
     public AshmemMemoryChunk(int i) {
@@ -38,7 +38,7 @@ public class AshmemMemoryChunk implements MemoryChunk, Closeable {
     }
 
     @Override // p007b.p109f.p161j.p177l.MemoryChunk
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public void mo1365a(int i, MemoryChunk memoryChunk, int i2, int i3) {
         Objects.requireNonNull(memoryChunk);
         if (memoryChunk.getUniqueId() == this.f3916l) {
@@ -66,7 +66,7 @@ public class AshmemMemoryChunk implements MemoryChunk, Closeable {
     }
 
     @Override // p007b.p109f.p161j.p177l.MemoryChunk
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public synchronized int mo1366b(int i, byte[] bArr, int i2, int i3) {
         int iM507d;
         Objects.requireNonNull(this.f3915k);
@@ -77,7 +77,7 @@ public class AshmemMemoryChunk implements MemoryChunk, Closeable {
         return iM507d;
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final void m1367c(int i, MemoryChunk memoryChunk, int i2, int i3) {
         if (!(memoryChunk instanceof AshmemMemoryChunk)) {
             throw new IllegalArgumentException("Cannot copy two incompatible MemoryChunks");
@@ -127,7 +127,7 @@ public class AshmemMemoryChunk implements MemoryChunk, Closeable {
     }
 
     @Override // p007b.p109f.p161j.p177l.MemoryChunk
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public synchronized byte mo1368h(int i) {
         boolean z2 = true;
         AnimatableValueParser.m419B(!isClosed());
@@ -141,7 +141,7 @@ public class AshmemMemoryChunk implements MemoryChunk, Closeable {
     }
 
     @Override // p007b.p109f.p161j.p177l.MemoryChunk
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public synchronized int mo1369i(int i, byte[] bArr, int i2, int i3) {
         int iM507d;
         Objects.requireNonNull(bArr);
@@ -167,7 +167,7 @@ public class AshmemMemoryChunk implements MemoryChunk, Closeable {
     }
 
     @Override // p007b.p109f.p161j.p177l.MemoryChunk
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public long mo1370k() {
         throw new UnsupportedOperationException("Cannot get the pointer of an  AshmemMemoryChunk");
     }

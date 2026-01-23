@@ -4,7 +4,7 @@ import android.os.Handler;
 import android.os.Looper;
 import androidx.annotation.NonNull;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class CalleeHandler {
     private CalleeHandler() {
     }

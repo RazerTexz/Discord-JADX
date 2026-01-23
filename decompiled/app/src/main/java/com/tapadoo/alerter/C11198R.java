@@ -1,10 +1,10 @@
 package com.tapadoo.alerter;
 
-/* renamed from: com.tapadoo.alerter.R */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: com.tapadoo.alerter.R */
+/* JADX INFO: loaded from: classes3.dex */
 public final class C11198R {
 
-    /* renamed from: com.tapadoo.alerter.R$a */
+    /* JADX INFO: renamed from: com.tapadoo.alerter.R$a */
     public static final class a {
         public static final int abc_fade_in = 2130771968;
         public static final int abc_fade_out = 2130771969;
@@ -44,7 +44,7 @@ public final class C11198R {
         }
     }
 
-    /* renamed from: com.tapadoo.alerter.R$b */
+    /* JADX INFO: renamed from: com.tapadoo.alerter.R$b */
     public static final class b {
         public static final int actionBarDivider = 2130968576;
         public static final int actionBarItemBackground = 2130968577;
@@ -334,7 +334,7 @@ public final class C11198R {
         }
     }
 
-    /* renamed from: com.tapadoo.alerter.R$c */
+    /* JADX INFO: renamed from: com.tapadoo.alerter.R$c */
     public static final class c {
         public static final int abc_action_bar_content_inset_material = 2131165184;
         public static final int abc_action_bar_content_inset_with_nav = 2131165185;
@@ -473,7 +473,7 @@ public final class C11198R {
         }
     }
 
-    /* renamed from: com.tapadoo.alerter.R$d */
+    /* JADX INFO: renamed from: com.tapadoo.alerter.R$d */
     public static final class d {
         public static final int accessibility_action_clickable_span = 2131361830;
         public static final int accessibility_custom_action_0 = 2131361831;
@@ -574,7 +574,7 @@ public final class C11198R {
         public static final int notification_main_column_container = 2131364559;
         public static final int off = 2131364616;
 
-        /* renamed from: on */
+        /* JADX INFO: renamed from: on */
         public static final int f22163on = 2131364620;
         public static final int parentPanel = 2131364665;
         public static final int pbProgress = 2131364715;
@@ -629,7 +629,7 @@ public final class C11198R {
         public static final int unchecked = 2131365926;
         public static final int uniform = 2131365931;
 
-        /* renamed from: up */
+        /* JADX INFO: renamed from: up */
         public static final int f22164up = 2131365940;
         public static final int vAlertContentContainer = 2131366093;
         public static final int wrap_content = 2131366286;
@@ -638,7 +638,7 @@ public final class C11198R {
         }
     }
 
-    /* renamed from: com.tapadoo.alerter.R$e */
+    /* JADX INFO: renamed from: com.tapadoo.alerter.R$e */
     public static final class e {
         public static final int abc_action_bar_title_item = 2131558400;
         public static final int abc_action_bar_up_container = 2131558401;

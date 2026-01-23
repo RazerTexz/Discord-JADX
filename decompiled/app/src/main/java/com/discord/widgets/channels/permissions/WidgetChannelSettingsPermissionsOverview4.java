@@ -5,9 +5,9 @@ import com.discord.stores.StoreStream;
 import kotlin.jvm.functions.Function0;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetChannelSettingsPermissionsOverview.kt */
-/* renamed from: com.discord.widgets.channels.permissions.WidgetChannelSettingsPermissionsOverview$viewModel$2, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.channels.permissions.WidgetChannelSettingsPermissionsOverview$viewModel$2, reason: use source file name */
+/* JADX INFO: compiled from: WidgetChannelSettingsPermissionsOverview.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetChannelSettingsPermissionsOverview4 extends Lambda implements Function0<WidgetChannelSettingsPermissionsOverviewViewModel> {
     public final /* synthetic */ WidgetChannelSettingsPermissionsOverview this$0;
 

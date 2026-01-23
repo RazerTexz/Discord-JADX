@@ -9,8 +9,8 @@ import p007b.p008a.p062y.SelectorBottomSheet2;
 import p507d0.p580t.Iterables2;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetBugReport.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetBugReport.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetBugReport$items$2 extends Lambda implements Function0<List<? extends SelectorBottomSheet2>> {
     public final /* synthetic */ WidgetBugReport this$0;
 
@@ -26,7 +26,7 @@ public final class WidgetBugReport$items$2 extends Lambda implements Function0<L
     }
 
     @Override // kotlin.jvm.functions.Function0
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final List<? extends SelectorBottomSheet2> invoke2() {
         List<Priority> priorityLevels = WidgetBugReport.INSTANCE.getPriorityLevels();
         ArrayList arrayList = new ArrayList(Iterables2.collectionSizeOrDefault(priorityLevels, 10));

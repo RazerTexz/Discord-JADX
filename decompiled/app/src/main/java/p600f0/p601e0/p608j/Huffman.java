@@ -4,21 +4,21 @@ import androidx.core.view.PointerIconCompat;
 import p507d0.p580t._ArraysJvm;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: Huffman.kt */
-/* renamed from: f0.e0.j.p, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: f0.e0.j.p, reason: use source file name */
+/* JADX INFO: compiled from: Huffman.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class Huffman {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final int[] f25744a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static final byte[] f25745b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public static final a f25746c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public static final Huffman f25747d;
 
     static {
@@ -32,7 +32,7 @@ public final class Huffman {
         }
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final void m10307a(int i, int i2, int i3) {
         a aVar = new a(i, i3);
         a aVar2 = f25746c;
@@ -60,17 +60,17 @@ public final class Huffman {
         _ArraysJvm.fill(aVarArr2, aVar, i6, i7 + i6);
     }
 
-    /* compiled from: Huffman.kt */
-    /* renamed from: f0.e0.j.p$a */
+    /* JADX INFO: renamed from: f0.e0.j.p$a */
+    /* JADX INFO: compiled from: Huffman.kt */
     public static final class a {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final a[] f25748a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final int f25749b;
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public final int f25750c;
 
         public a() {

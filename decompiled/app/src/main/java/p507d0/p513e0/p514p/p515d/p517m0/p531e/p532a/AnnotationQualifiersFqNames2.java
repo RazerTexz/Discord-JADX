@@ -7,18 +7,18 @@ import p507d0.p513e0.p514p.p515d.p517m0.p531e.p532a.p540l0.NullabilityQualifierW
 import p507d0.p513e0.p514p.p515d.p517m0.p531e.p532a.p540l0.typeQualifiers3;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: AnnotationQualifiersFqNames.kt */
-/* renamed from: d0.e0.p.d.m0.e.a.u, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.e.a.u, reason: use source file name */
+/* JADX INFO: compiled from: AnnotationQualifiersFqNames.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class AnnotationQualifiersFqNames2 {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final NullabilityQualifierWithMigrationStatus f23522a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final Collection<AnnotationQualifierApplicabilityType> f23523b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final boolean f23524c;
 
     /* JADX WARN: Multi-variable type inference failed */
@@ -78,14 +78,17 @@ public final class AnnotationQualifiersFqNames2 {
     }
 
     /* JADX WARN: Multi-variable type inference failed */
+    /* JADX WARN: Type inference failed for: r0v4, types: [int] */
+    /* JADX WARN: Type inference failed for: r0v5 */
+    /* JADX WARN: Type inference failed for: r0v6 */
     public int hashCode() {
         int iHashCode = (this.f23523b.hashCode() + (this.f23522a.hashCode() * 31)) * 31;
         boolean z2 = this.f23524c;
-        int i = z2;
-        if (z2 != 0) {
-            i = 1;
+        ?? r0 = z2;
+        if (z2) {
+            r0 = 1;
         }
-        return iHashCode + i;
+        return iHashCode + r0;
     }
 
     public String toString() {

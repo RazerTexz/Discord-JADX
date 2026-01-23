@@ -1,7 +1,6 @@
 package com.discord.views;
 
 import android.content.Context;
-import android.content.res.Resources;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.view.animation.Animation;
@@ -15,24 +14,24 @@ import com.discord.utilities.accessibility.AccessibilityUtils;
 import p007b.p008a.p025i.ViewServerFolderBinding;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ServerFolderView.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: ServerFolderView.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class ServerFolderView extends LinearLayout {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static final /* synthetic */ int f19145j = 0;
 
-    /* renamed from: k, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: k, reason: from kotlin metadata */
     public final ViewServerFolderBinding binding;
 
-    /* renamed from: l, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: l, reason: from kotlin metadata */
     public Long folderId;
 
-    /* renamed from: m, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: m, reason: from kotlin metadata */
     public boolean isOpen;
 
-    /* compiled from: ServerFolderView.kt */
-    /* renamed from: com.discord.views.ServerFolderView$a */
+    /* JADX INFO: renamed from: com.discord.views.ServerFolderView$a */
+    /* JADX INFO: compiled from: ServerFolderView.kt */
     public static final class AnimationAnimationListenerC7092a implements Animation.AnimationListener {
         public AnimationAnimationListenerC7092a() {
         }
@@ -90,7 +89,7 @@ public final class ServerFolderView extends LinearLayout {
         throw new NullPointerException("Missing required view with ID: ".concat(getResources().getResourceName(i)));
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final void m8555a() {
         if (this.isOpen) {
             ImageView imageView = this.binding.f906b;
@@ -109,8 +108,8 @@ public final class ServerFolderView extends LinearLayout {
         gridLayout2.setVisibility(0);
     }
 
-    /* renamed from: b */
-    public final void m8556b(@AnimRes int animationId) throws Resources.NotFoundException {
+    /* JADX INFO: renamed from: b */
+    public final void m8556b(@AnimRes int animationId) {
         Animation animationLoadAnimation = AnimationUtils.loadAnimation(getContext(), animationId);
         animationLoadAnimation.setAnimationListener(new AnimationAnimationListenerC7092a());
         if (AccessibilityUtils.INSTANCE.isReducedMotionEnabled()) {

@@ -1,10 +1,10 @@
 package com.discord.overlay;
 
-/* renamed from: com.discord.overlay.R */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: com.discord.overlay.R */
+/* JADX INFO: loaded from: classes.dex */
 public final class C5570R {
 
-    /* renamed from: com.discord.overlay.R$a */
+    /* JADX INFO: renamed from: com.discord.overlay.R$a */
     public static final class a {
         public static final int design_appbar_state_list_animator = 2130837504;
         public static final int design_fab_hide_motion_spec = 2130837505;
@@ -41,7 +41,7 @@ public final class C5570R {
         }
     }
 
-    /* renamed from: com.discord.overlay.R$b */
+    /* JADX INFO: renamed from: com.discord.overlay.R$b */
     public static final class b {
         public static final int abc_action_bar_content_inset_material = 2131165184;
         public static final int abc_action_bar_content_inset_with_nav = 2131165185;
@@ -447,7 +447,7 @@ public final class C5570R {
         }
     }
 
-    /* renamed from: com.discord.overlay.R$c */
+    /* JADX INFO: renamed from: com.discord.overlay.R$c */
     public static final class c {
         public static final int abc_ab_share_pack_mtrl_alpha = 2131230859;
         public static final int abc_action_bar_item_background_material = 2131230860;
@@ -624,7 +624,7 @@ public final class C5570R {
         }
     }
 
-    /* renamed from: com.discord.overlay.R$d */
+    /* JADX INFO: renamed from: com.discord.overlay.R$d */
     public static final class d {
         public static final int BOTTOM_END = 2131361793;
         public static final int BOTTOM_START = 2131361794;
@@ -878,7 +878,7 @@ public final class C5570R {
         public static final int nowrap = 2131364571;
         public static final int off = 2131364616;
 
-        /* renamed from: on */
+        /* JADX INFO: renamed from: on */
         public static final int f18618on = 2131364620;
         public static final int outline = 2131364641;
         public static final int outward = 2131364642;
@@ -1016,7 +1016,7 @@ public final class C5570R {
         public static final int uniform = 2131365931;
         public static final int unlabeled = 2131365934;
 
-        /* renamed from: up */
+        /* JADX INFO: renamed from: up */
         public static final int f18619up = 2131365940;
         public static final int view_offset_helper = 2131366113;
         public static final int view_tree_lifecycle_owner = 2131366128;
@@ -1035,7 +1035,7 @@ public final class C5570R {
         }
     }
 
-    /* renamed from: com.discord.overlay.R$e */
+    /* JADX INFO: renamed from: com.discord.overlay.R$e */
     public static final class e {
         public static final int abc_action_bar_title_item = 2131558400;
         public static final int abc_action_bar_up_container = 2131558401;

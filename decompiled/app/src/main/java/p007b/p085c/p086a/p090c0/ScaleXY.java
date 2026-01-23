@@ -1,14 +1,14 @@
 package p007b.p085c.p086a.p090c0;
 
-/* compiled from: ScaleXY.java */
-/* renamed from: b.c.a.c0.d, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.c.a.c0.d, reason: use source file name */
+/* JADX INFO: compiled from: ScaleXY.java */
+/* JADX INFO: loaded from: classes.dex */
 public class ScaleXY {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public float f2334a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public float f2335b;
 
     public ScaleXY() {

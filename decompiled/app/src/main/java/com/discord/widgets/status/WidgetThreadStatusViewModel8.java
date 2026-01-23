@@ -6,9 +6,9 @@ import kotlin.jvm.functions.Function1;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetThreadStatusViewModel.kt */
-/* renamed from: com.discord.widgets.status.WidgetThreadStatusViewModel$onUnarchiveTapped$1$2, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.status.WidgetThreadStatusViewModel$onUnarchiveTapped$1$2, reason: use source file name */
+/* JADX INFO: compiled from: WidgetThreadStatusViewModel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetThreadStatusViewModel8 extends Lambda implements Function1<Channel, Unit> {
     public static final WidgetThreadStatusViewModel8 INSTANCE = new WidgetThreadStatusViewModel8();
 
@@ -22,7 +22,7 @@ public final class WidgetThreadStatusViewModel8 extends Lambda implements Functi
         return Unit.f27425a;
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final void invoke2(Channel channel) {
         Intrinsics3.checkNotNullParameter(channel, "it");
     }

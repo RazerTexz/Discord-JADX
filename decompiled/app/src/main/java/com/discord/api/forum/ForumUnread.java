@@ -3,19 +3,19 @@ package com.discord.api.forum;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ForumUnread.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: ForumUnread.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class ForumUnread {
     private final Integer count;
     private final boolean missing;
     private final long threadId;
 
-    /* renamed from: a, reason: from getter */
+    /* JADX INFO: renamed from: a, reason: from getter */
     public final Integer getCount() {
         return this.count;
     }
 
-    /* renamed from: b, reason: from getter */
+    /* JADX INFO: renamed from: b, reason: from getter */
     public final long getThreadId() {
         return this.threadId;
     }
@@ -32,17 +32,20 @@ public final /* data */ class ForumUnread {
     }
 
     /* JADX WARN: Multi-variable type inference failed */
+    /* JADX WARN: Type inference failed for: r0v3, types: [int] */
+    /* JADX WARN: Type inference failed for: r0v8 */
+    /* JADX WARN: Type inference failed for: r0v9 */
     public int hashCode() {
         long j = this.threadId;
         int i = ((int) (j ^ (j >>> 32))) * 31;
         boolean z2 = this.missing;
-        int i2 = z2;
-        if (z2 != 0) {
-            i2 = 1;
+        ?? r0 = z2;
+        if (z2) {
+            r0 = 1;
         }
-        int i3 = (i + i2) * 31;
+        int i2 = (i + r0) * 31;
         Integer num = this.count;
-        return i3 + (num != null ? num.hashCode() : 0);
+        return i2 + (num != null ? num.hashCode() : 0);
     }
 
     public String toString() {

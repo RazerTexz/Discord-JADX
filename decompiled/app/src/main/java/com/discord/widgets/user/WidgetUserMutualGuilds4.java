@@ -9,9 +9,9 @@ import kotlin.jvm.functions.Function1;
 import p507d0.p592z.p594d.FunctionReferenceImpl;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: WidgetUserMutualGuilds.kt */
-/* renamed from: com.discord.widgets.user.WidgetUserMutualGuilds$binding$2, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: com.discord.widgets.user.WidgetUserMutualGuilds$binding$2, reason: use source file name */
+/* JADX INFO: compiled from: WidgetUserMutualGuilds.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* synthetic */ class WidgetUserMutualGuilds4 extends FunctionReferenceImpl implements Function1<View, WidgetUserMutualGuildsBinding> {
     public static final WidgetUserMutualGuilds4 INSTANCE = new WidgetUserMutualGuilds4();
 
@@ -24,7 +24,7 @@ public final /* synthetic */ class WidgetUserMutualGuilds4 extends FunctionRefer
         return invoke2(view);
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final WidgetUserMutualGuildsBinding invoke2(View view) {
         Intrinsics3.checkNotNullParameter(view, "p1");
         RecyclerView recyclerView = (RecyclerView) view.findViewById(C5419R.id.user_mutual_guilds_recycler_view);

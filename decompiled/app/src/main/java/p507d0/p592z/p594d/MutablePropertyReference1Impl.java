@@ -3,9 +3,9 @@ package p507d0.p592z.p594d;
 import kotlin.reflect.KDeclarationContainer;
 import p507d0.p513e0.KClass;
 
-/* compiled from: MutablePropertyReference1Impl.java */
-/* renamed from: d0.z.d.s, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.z.d.s, reason: use source file name */
+/* JADX INFO: compiled from: MutablePropertyReference1Impl.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class MutablePropertyReference1Impl extends MutablePropertyReference1 {
     public MutablePropertyReference1Impl(KDeclarationContainer kDeclarationContainer, String str, String str2) {
         super(CallableReference.NO_RECEIVER, ((ClassBasedDeclarationContainer) kDeclarationContainer).getJClass(), str, str2, !(kDeclarationContainer instanceof KClass) ? 1 : 0);

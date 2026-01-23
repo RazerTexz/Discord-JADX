@@ -19,14 +19,14 @@ import p637j0.p641k.Func1;
 import p658rx.Observable;
 import p658rx.functions.Func3;
 
-/* compiled from: PrivateChannelMemberListService.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: PrivateChannelMemberListService.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class PrivateChannelMemberListService {
     private final StoreApplicationStreaming storeApplicationStreaming;
     private final StoreUserPresence storePresences;
     private final StoreUser storeUser;
 
-    /* compiled from: PrivateChannelMemberListService.kt */
+    /* JADX INFO: compiled from: PrivateChannelMemberListService.kt */
     public static final /* data */ class State {
         private final Map<Long, ModelApplicationStream> applicationStreams;
         private final Channel channel;
@@ -62,7 +62,7 @@ public final class PrivateChannelMemberListService {
             return state.copy(channel, map, map2, map3);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final Channel getChannel() {
             return this.channel;
         }
@@ -137,8 +137,8 @@ public final class PrivateChannelMemberListService {
         }
     }
 
-    /* compiled from: PrivateChannelMemberListService.kt */
-    /* renamed from: com.discord.widgets.channels.memberlist.PrivateChannelMemberListService$observeStateForGroupDm$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.channels.memberlist.PrivateChannelMemberListService$observeStateForGroupDm$1 */
+    /* JADX INFO: compiled from: PrivateChannelMemberListService.kt */
     public static final class C74861<T, R> implements Func1<com.discord.api.user.User, Long> {
         public static final C74861 INSTANCE = new C74861();
 
@@ -147,19 +147,19 @@ public final class PrivateChannelMemberListService {
             return call2(user);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final Long call2(com.discord.api.user.User user) {
             return Long.valueOf(user.getId());
         }
     }
 
-    /* compiled from: PrivateChannelMemberListService.kt */
-    /* renamed from: com.discord.widgets.channels.memberlist.PrivateChannelMemberListService$observeStateForGroupDm$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.channels.memberlist.PrivateChannelMemberListService$observeStateForGroupDm$2 */
+    /* JADX INFO: compiled from: PrivateChannelMemberListService.kt */
     public static final class C74872<T, R> implements Func1<List<Long>, Observable<? extends State>> {
         public final /* synthetic */ Channel $channel;
 
-        /* compiled from: PrivateChannelMemberListService.kt */
-        /* renamed from: com.discord.widgets.channels.memberlist.PrivateChannelMemberListService$observeStateForGroupDm$2$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.widgets.channels.memberlist.PrivateChannelMemberListService$observeStateForGroupDm$2$1, reason: invalid class name */
+        /* JADX INFO: compiled from: PrivateChannelMemberListService.kt */
         public static final class AnonymousClass1<T1, T2, T3, R> implements Func3<Map<Long, ? extends User>, Map<Long, ? extends Presence>, Map<Long, ? extends ModelApplicationStream>, State> {
             public AnonymousClass1() {
             }
@@ -169,7 +169,7 @@ public final class PrivateChannelMemberListService {
                 return call2(map, (Map<Long, Presence>) map2, map3);
             }
 
-            /* renamed from: call, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
             public final State call2(Map<Long, ? extends User> map, Map<Long, Presence> map2, Map<Long, ? extends ModelApplicationStream> map3) {
                 Channel channel = C74872.this.$channel;
                 Intrinsics3.checkNotNullExpressionValue(map, "users");
@@ -188,7 +188,7 @@ public final class PrivateChannelMemberListService {
             return call2(list);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final Observable<? extends State> call2(List<Long> list) {
             StoreUser storeUserAccess$getStoreUser$p = PrivateChannelMemberListService.access$getStoreUser$p(PrivateChannelMemberListService.this);
             Intrinsics3.checkNotNullExpressionValue(list, "ids");

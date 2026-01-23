@@ -12,30 +12,30 @@ import android.os.Build;
 import java.io.Closeable;
 import p007b.p085c.p086a.L;
 
-/* compiled from: Utils.java */
-/* renamed from: b.c.a.b0.g, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.c.a.b0.g, reason: use source file name */
+/* JADX INFO: compiled from: Utils.java */
+/* JADX INFO: loaded from: classes.dex */
 public final class Utils {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final PathMeasure f2309a = new PathMeasure();
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static final Path f2310b = new Path();
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public static final Path f2311c = new Path();
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public static final float[] f2312d = new float[4];
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public static final float f2313e = (float) (Math.sqrt(2.0d) / 2.0d);
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public static float f2314f = -1.0f;
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static void m657a(Path path, float f, float f2, float f3) {
         PathMeasure pathMeasure = f2309a;
         pathMeasure.setPath(path, false);
@@ -89,7 +89,7 @@ public final class Utils {
         L.m663a("applyTrimPathIfNeeded");
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static void m658b(Closeable closeable) {
         if (closeable != null) {
             try {
@@ -101,7 +101,7 @@ public final class Utils {
         }
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public static float m659c() {
         if (f2314f == -1.0f) {
             f2314f = Resources.getSystem().getDisplayMetrics().density;
@@ -109,7 +109,7 @@ public final class Utils {
         return f2314f;
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public static float m660d(Matrix matrix) {
         float[] fArr = f2312d;
         fArr[0] = 0.0f;
@@ -121,7 +121,7 @@ public final class Utils {
         return (float) Math.hypot(fArr[2] - fArr[0], fArr[3] - fArr[1]);
     }
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public static Bitmap m661e(Bitmap bitmap, int i, int i2) {
         if (bitmap.getWidth() == i && bitmap.getHeight() == i2) {
             return bitmap;
@@ -131,7 +131,7 @@ public final class Utils {
         return bitmapCreateScaledBitmap;
     }
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public static void m662f(Canvas canvas, RectF rectF, Paint paint, int i) {
         if (Build.VERSION.SDK_INT < 23) {
             canvas.saveLayer(rectF, paint, i);

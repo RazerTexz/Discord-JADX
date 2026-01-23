@@ -8,30 +8,30 @@ import p007b.p225i.p226a.p242c.ExoPlayerLibraryInfo;
 import p007b.p225i.p226a.p242c.p257e3.DataReader;
 import p007b.p225i.p226a.p242c.p259f3.Util2;
 
-/* compiled from: DefaultExtractorInput.java */
-/* renamed from: b.i.a.c.x2.e, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.x2.e, reason: use source file name */
+/* JADX INFO: compiled from: DefaultExtractorInput.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class DefaultExtractorInput implements ExtractorInput {
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final DataReader f8115b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final long f8116c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public long f8117d;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public int f8119f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public int f8120g;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public byte[] f8118e = new byte[65536];
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final byte[] f8114a = new byte[4096];
 
     static {
@@ -45,13 +45,13 @@ public final class DefaultExtractorInput implements ExtractorInput {
     }
 
     @Override // p007b.p225i.p226a.p242c.p267x2.ExtractorInput
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public long mo3642b() {
         return this.f8116c;
     }
 
     @Override // p007b.p225i.p226a.p242c.p267x2.ExtractorInput
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public boolean mo3643c(byte[] bArr, int i, int i2, boolean z2) throws IOException {
         int iMin;
         int i3 = this.f8120g;
@@ -71,7 +71,7 @@ public final class DefaultExtractorInput implements ExtractorInput {
     }
 
     @Override // p007b.p225i.p226a.p242c.p267x2.ExtractorInput
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public boolean mo3644e(byte[] bArr, int i, int i2, boolean z2) throws IOException {
         if (!mo3651m(i2, z2)) {
             return false;
@@ -81,13 +81,13 @@ public final class DefaultExtractorInput implements ExtractorInput {
     }
 
     @Override // p007b.p225i.p226a.p242c.p267x2.ExtractorInput
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public long mo3645f() {
-        return this.f8117d + this.f8119f;
+        return this.f8117d + ((long) this.f8119f);
     }
 
     @Override // p007b.p225i.p226a.p242c.p267x2.ExtractorInput
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public void mo3646g(int i) throws IOException {
         mo3651m(i, false);
     }
@@ -98,7 +98,7 @@ public final class DefaultExtractorInput implements ExtractorInput {
     }
 
     @Override // p007b.p225i.p226a.p242c.p267x2.ExtractorInput
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public int mo3647h(int i) throws IOException {
         int iMin = Math.min(this.f8120g, i);
         m3656s(iMin);
@@ -111,7 +111,7 @@ public final class DefaultExtractorInput implements ExtractorInput {
     }
 
     @Override // p007b.p225i.p226a.p242c.p267x2.ExtractorInput
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public int mo3648i(byte[] bArr, int i, int i2) throws IOException {
         int iMin;
         m3654q(i2);
@@ -133,13 +133,13 @@ public final class DefaultExtractorInput implements ExtractorInput {
     }
 
     @Override // p007b.p225i.p226a.p242c.p267x2.ExtractorInput
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public void mo3649k() {
         this.f8119f = 0;
     }
 
     @Override // p007b.p225i.p226a.p242c.p267x2.ExtractorInput
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public void mo3650l(int i) throws IOException {
         int iMin = Math.min(this.f8120g, i);
         m3656s(iMin);
@@ -151,7 +151,7 @@ public final class DefaultExtractorInput implements ExtractorInput {
     }
 
     @Override // p007b.p225i.p226a.p242c.p267x2.ExtractorInput
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public boolean mo3651m(int i, boolean z2) throws IOException {
         m3654q(i);
         int iM3655r = this.f8120g - this.f8119f;
@@ -167,19 +167,19 @@ public final class DefaultExtractorInput implements ExtractorInput {
     }
 
     @Override // p007b.p225i.p226a.p242c.p267x2.ExtractorInput
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public void mo3652o(byte[] bArr, int i, int i2) throws IOException {
         mo3644e(bArr, i, i2, false);
     }
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public final void m3653p(int i) {
         if (i != -1) {
-            this.f8117d += i;
+            this.f8117d += (long) i;
         }
     }
 
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     public final void m3654q(int i) {
         int i2 = this.f8119f + i;
         byte[] bArr = this.f8118e;
@@ -188,7 +188,7 @@ public final class DefaultExtractorInput implements ExtractorInput {
         }
     }
 
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     public final int m3655r(byte[] bArr, int i, int i2, int i3, boolean z2) throws IOException {
         if (Thread.interrupted()) {
             throw new InterruptedIOException();
@@ -225,7 +225,7 @@ public final class DefaultExtractorInput implements ExtractorInput {
         mo3643c(bArr, i, i2, false);
     }
 
-    /* renamed from: s */
+    /* JADX INFO: renamed from: s */
     public final void m3656s(int i) {
         int i2 = this.f8120g - i;
         this.f8120g = i2;

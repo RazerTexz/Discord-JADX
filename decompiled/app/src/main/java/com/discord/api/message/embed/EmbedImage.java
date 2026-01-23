@@ -3,30 +3,30 @@ package com.discord.api.message.embed;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: EmbedImage.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: EmbedImage.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class EmbedImage {
     private final Integer height;
     private final String proxyUrl;
     private final String url;
     private final Integer width;
 
-    /* renamed from: a, reason: from getter */
+    /* JADX INFO: renamed from: a, reason: from getter */
     public final Integer getHeight() {
         return this.height;
     }
 
-    /* renamed from: b, reason: from getter */
+    /* JADX INFO: renamed from: b, reason: from getter */
     public final String getProxyUrl() {
         return this.proxyUrl;
     }
 
-    /* renamed from: c, reason: from getter */
+    /* JADX INFO: renamed from: c, reason: from getter */
     public final String getUrl() {
         return this.url;
     }
 
-    /* renamed from: d, reason: from getter */
+    /* JADX INFO: renamed from: d, reason: from getter */
     public final Integer getWidth() {
         return this.width;
     }

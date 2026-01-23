@@ -13,9 +13,9 @@ import p507d0.p580t._Collections;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetGlobalSearchGuildsModel.kt */
-/* renamed from: com.discord.widgets.user.search.WidgetGlobalSearchGuildsModel$Companion$asGuildItems$1, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: com.discord.widgets.user.search.WidgetGlobalSearchGuildsModel$Companion$asGuildItems$1, reason: use source file name */
+/* JADX INFO: compiled from: WidgetGlobalSearchGuildsModel.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class WidgetGlobalSearchGuildsModel4 extends Lambda implements Function1<Guild, WidgetGlobalSearchGuildsModel.Item> {
     public final /* synthetic */ Map $channelIds;
     public final /* synthetic */ Map $guildSettings;
@@ -40,7 +40,7 @@ public final class WidgetGlobalSearchGuildsModel4 extends Lambda implements Func
         return invoke2(guild);
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final WidgetGlobalSearchGuildsModel.Item invoke2(Guild guild) {
         int iSumOfInt;
         boolean z2;

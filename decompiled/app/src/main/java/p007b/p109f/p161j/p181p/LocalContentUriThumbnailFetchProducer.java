@@ -19,24 +19,24 @@ import p007b.p109f.p115d.p127l.UriUtil;
 import p007b.p109f.p161j.p169d.ResizeOptions;
 import p007b.p109f.p161j.p175j.EncodedImage2;
 
-/* compiled from: LocalContentUriThumbnailFetchProducer.java */
-/* renamed from: b.f.j.p.f0, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.f.j.p.f0, reason: use source file name */
+/* JADX INFO: compiled from: LocalContentUriThumbnailFetchProducer.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class LocalContentUriThumbnailFetchProducer extends LocalFetchProducer implements ThumbnailProducer<EncodedImage2> {
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public static final String[] f4046c = {"_id", "_data"};
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public static final String[] f4047d = {"_data"};
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public static final Rect f4048e = new Rect(0, 0, 512, 384);
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public static final Rect f4049f = new Rect(0, 0, 96, 96);
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public final ContentResolver f4050g;
 
     public LocalContentUriThumbnailFetchProducer(Executor executor, PooledByteBufferFactory pooledByteBufferFactory, ContentResolver contentResolver) {
@@ -45,14 +45,14 @@ public class LocalContentUriThumbnailFetchProducer extends LocalFetchProducer im
     }
 
     @Override // p007b.p109f.p161j.p181p.ThumbnailProducer
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public boolean mo1474a(ResizeOptions resizeOptions) {
         Rect rect = f4048e;
         return AnimatableValueParser.m472S0(rect.width(), rect.height(), resizeOptions);
     }
 
     @Override // p007b.p109f.p161j.p181p.LocalFetchProducer
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public EncodedImage2 mo1428d(ImageRequest imageRequest) throws IOException {
         ResizeOptions resizeOptions;
         Cursor cursorQuery;
@@ -82,12 +82,12 @@ public class LocalContentUriThumbnailFetchProducer extends LocalFetchProducer im
     }
 
     @Override // p007b.p109f.p161j.p181p.LocalFetchProducer
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public String mo1429e() {
         return "LocalContentUriThumbnailFetchProducer";
     }
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final EncodedImage2 m1475f(ResizeOptions resizeOptions, long j) throws IOException {
         int i;
         Cursor cursorQueryMiniThumbnail;

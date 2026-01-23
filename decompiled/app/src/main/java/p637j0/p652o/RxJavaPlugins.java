@@ -6,39 +6,39 @@ import java.util.Properties;
 import java.util.concurrent.atomic.AtomicReference;
 import p007b.p100d.p104b.p105a.outline;
 
-/* compiled from: RxJavaPlugins.java */
-/* renamed from: j0.o.o, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: j0.o.o, reason: use source file name */
+/* JADX INFO: compiled from: RxJavaPlugins.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class RxJavaPlugins {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final RxJavaPlugins f27384a = new RxJavaPlugins();
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static final RxJavaErrorHandler f27385b = new a();
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final AtomicReference<RxJavaErrorHandler> f27386c = new AtomicReference<>();
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final AtomicReference<RxJavaObservableExecutionHook> f27387d = new AtomicReference<>();
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final AtomicReference<RxJavaSingleExecutionHook> f27388e = new AtomicReference<>();
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final AtomicReference<RxJavaCompletableExecutionHook> f27389f = new AtomicReference<>();
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public final AtomicReference<RxJavaSchedulersHook> f27390g = new AtomicReference<>();
 
-    /* compiled from: RxJavaPlugins.java */
-    /* renamed from: j0.o.o$a */
+    /* JADX INFO: renamed from: j0.o.o$a */
+    /* JADX INFO: compiled from: RxJavaPlugins.java */
     public static class a extends RxJavaErrorHandler {
     }
 
-    /* compiled from: RxJavaPlugins.java */
-    /* renamed from: j0.o.o$b */
+    /* JADX INFO: renamed from: j0.o.o$b */
+    /* JADX INFO: compiled from: RxJavaPlugins.java */
     public class b extends RxJavaCompletableExecutionHook {
         public b(RxJavaPlugins rxJavaPlugins) {
         }
@@ -57,7 +57,7 @@ public class RxJavaPlugins {
     
         throw new java.lang.IllegalStateException("Implementing class declaration for " + r0 + " missing: " + r2);
      */
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
@@ -98,7 +98,7 @@ public class RxJavaPlugins {
         }
     }
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public static Properties m10867g() {
         try {
             return System.getProperties();
@@ -107,7 +107,7 @@ public class RxJavaPlugins {
         }
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public RxJavaCompletableExecutionHook m10868a() {
         if (this.f27389f.get() == null) {
             Object objM10866d = m10866d(RxJavaCompletableExecutionHook.class, m10867g());
@@ -120,7 +120,7 @@ public class RxJavaPlugins {
         return this.f27389f.get();
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public RxJavaErrorHandler m10869b() {
         if (this.f27386c.get() == null) {
             Object objM10866d = m10866d(RxJavaErrorHandler.class, m10867g());
@@ -133,7 +133,7 @@ public class RxJavaPlugins {
         return this.f27386c.get();
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public RxJavaObservableExecutionHook m10870c() {
         if (this.f27387d.get() == null) {
             Object objM10866d = m10866d(RxJavaObservableExecutionHook.class, m10867g());
@@ -146,7 +146,7 @@ public class RxJavaPlugins {
         return this.f27387d.get();
     }
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public RxJavaSchedulersHook m10871e() {
         if (this.f27390g.get() == null) {
             Object objM10866d = m10866d(RxJavaSchedulersHook.class, m10867g());
@@ -159,7 +159,7 @@ public class RxJavaPlugins {
         return this.f27390g.get();
     }
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public RxJavaSingleExecutionHook m10872f() {
         if (this.f27388e.get() == null) {
             Object objM10866d = m10866d(RxJavaSingleExecutionHook.class, m10867g());

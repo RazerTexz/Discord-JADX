@@ -1,11 +1,11 @@
 package p007b.p225i.p226a.p228b.p231j.p236t.p237h;
 
-/* compiled from: WorkInitializer.java */
-/* renamed from: b.i.a.b.j.t.h.n, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.b.j.t.h.n, reason: use source file name */
+/* JADX INFO: compiled from: WorkInitializer.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final /* synthetic */ class WorkInitializer implements Runnable {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final WorkInitializer3 f5399j;
 
     public WorkInitializer(WorkInitializer3 workInitializer3) {

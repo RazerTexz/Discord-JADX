@@ -4,8 +4,8 @@ import kotlin.Unit;
 import kotlin.jvm.functions.Function3;
 import p507d0.p592z.p594d.FunctionReferenceImpl;
 
-/* compiled from: StoreStream.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: StoreStream.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final /* synthetic */ class StoreStream$voiceStates$1 extends FunctionReferenceImpl implements Function3<Long, Long, Long, Unit> {
     public StoreStream$voiceStates$1(StoreStream storeStream) {
         super(3, storeStream, StoreStream.class, "handleVoiceStatesUpdated", "handleVoiceStatesUpdated(JJJ)V", 0);

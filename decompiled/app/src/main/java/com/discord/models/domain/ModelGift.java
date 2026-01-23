@@ -7,8 +7,8 @@ import com.discord.utilities.time.TimeUtils;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ModelGift.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: ModelGift.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class ModelGift {
     private final String code;
     private final String expiresAt;
@@ -41,57 +41,57 @@ public final /* data */ class ModelGift {
         return modelGift.copy((i3 & 1) != 0 ? modelGift.skuId : j, (i3 & 2) != 0 ? modelGift.redeemed : z2, (i3 & 4) != 0 ? modelGift.expiresAt : str, (i3 & 8) != 0 ? modelGift.code : str2, (i3 & 16) != 0 ? modelGift.uses : i, (i3 & 32) != 0 ? modelGift.storeListing : modelStoreListing, (i3 & 64) != 0 ? modelGift.maxUses : i2, (i3 & 128) != 0 ? modelGift.user : user, (i3 & 256) != 0 ? modelGift.subscriptionPlanId : l, (i3 & 512) != 0 ? modelGift.subscriptionPlan : subscriptionPlan, (i3 & 1024) != 0 ? modelGift.giftStyle : num);
     }
 
-    /* renamed from: component1, reason: from getter */
+    /* JADX INFO: renamed from: component1, reason: from getter */
     public final long getSkuId() {
         return this.skuId;
     }
 
-    /* renamed from: component10, reason: from getter */
+    /* JADX INFO: renamed from: component10, reason: from getter */
     public final SubscriptionPlan getSubscriptionPlan() {
         return this.subscriptionPlan;
     }
 
-    /* renamed from: component11, reason: from getter */
+    /* JADX INFO: renamed from: component11, reason: from getter */
     public final Integer getGiftStyle() {
         return this.giftStyle;
     }
 
-    /* renamed from: component2, reason: from getter */
+    /* JADX INFO: renamed from: component2, reason: from getter */
     public final boolean getRedeemed() {
         return this.redeemed;
     }
 
-    /* renamed from: component3, reason: from getter */
+    /* JADX INFO: renamed from: component3, reason: from getter */
     public final String getExpiresAt() {
         return this.expiresAt;
     }
 
-    /* renamed from: component4, reason: from getter */
+    /* JADX INFO: renamed from: component4, reason: from getter */
     public final String getCode() {
         return this.code;
     }
 
-    /* renamed from: component5, reason: from getter */
+    /* JADX INFO: renamed from: component5, reason: from getter */
     public final int getUses() {
         return this.uses;
     }
 
-    /* renamed from: component6, reason: from getter */
+    /* JADX INFO: renamed from: component6, reason: from getter */
     public final ModelStoreListing getStoreListing() {
         return this.storeListing;
     }
 
-    /* renamed from: component7, reason: from getter */
+    /* JADX INFO: renamed from: component7, reason: from getter */
     public final int getMaxUses() {
         return this.maxUses;
     }
 
-    /* renamed from: component8, reason: from getter */
+    /* JADX INFO: renamed from: component8, reason: from getter */
     public final User getUser() {
         return this.user;
     }
 
-    /* renamed from: component9, reason: from getter */
+    /* JADX INFO: renamed from: component9, reason: from getter */
     public final Long getSubscriptionPlanId() {
         return this.subscriptionPlanId;
     }
@@ -165,17 +165,20 @@ public final /* data */ class ModelGift {
     }
 
     /* JADX WARN: Multi-variable type inference failed */
+    /* JADX WARN: Type inference failed for: r0v3, types: [int] */
+    /* JADX WARN: Type inference failed for: r0v31 */
+    /* JADX WARN: Type inference failed for: r0v32 */
     public int hashCode() {
         long j = this.skuId;
         int i = ((int) (j ^ (j >>> 32))) * 31;
         boolean z2 = this.redeemed;
-        int i2 = z2;
-        if (z2 != 0) {
-            i2 = 1;
+        ?? r0 = z2;
+        if (z2) {
+            r0 = 1;
         }
-        int i3 = (i + i2) * 31;
+        int i2 = (i + r0) * 31;
         String str = this.expiresAt;
-        int iHashCode = (i3 + (str != null ? str.hashCode() : 0)) * 31;
+        int iHashCode = (i2 + (str != null ? str.hashCode() : 0)) * 31;
         String str2 = this.code;
         int iHashCode2 = (((iHashCode + (str2 != null ? str2.hashCode() : 0)) * 31) + this.uses) * 31;
         ModelStoreListing modelStoreListing = this.storeListing;

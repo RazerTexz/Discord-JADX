@@ -10,16 +10,16 @@ import java.io.IOException;
 import java.lang.reflect.Type;
 import java.lang.reflect.TypeVariable;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public final class TypeAdapterRuntimeTypeWrapper<T> extends TypeAdapter<T> {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final Gson f21553a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final TypeAdapter<T> f21554b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final Type f21555c;
 
     public TypeAdapterRuntimeTypeWrapper(Gson gson, TypeAdapter<T> typeAdapter, Type type) {

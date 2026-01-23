@@ -10,9 +10,9 @@ import p007b.p008a.p009a.p014f.p015a.AudioOutputSelectionDialogViewModel2;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: AudioOutputSelectionDialogViewModel.kt */
-/* renamed from: b.a.a.f.a.c, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.a.a.f.a.c, reason: use source file name */
+/* JADX INFO: compiled from: AudioOutputSelectionDialogViewModel.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class AudioOutputSelectionDialogViewModel extends Lambda implements Function1<StoreAudioManagerV2.State, Unit> {
     public final /* synthetic */ AudioOutputSelectionDialogViewModel2 this$0;
 

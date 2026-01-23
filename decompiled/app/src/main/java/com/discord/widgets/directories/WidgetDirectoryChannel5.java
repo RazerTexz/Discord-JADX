@@ -8,9 +8,9 @@ import com.discord.widgets.directories.WidgetDirectoriesViewModel;
 import p007b.p008a.p018d.AppScreen2;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: WidgetDirectoryChannel.kt */
-/* renamed from: com.discord.widgets.directories.WidgetDirectoryChannel$configureUi$$inlined$apply$lambda$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.directories.WidgetDirectoryChannel$configureUi$$inlined$apply$lambda$1, reason: use source file name */
+/* JADX INFO: compiled from: WidgetDirectoryChannel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetDirectoryChannel5 implements View.OnClickListener {
     public final /* synthetic */ WidgetDirectoriesViewModel.ViewState $state$inlined;
     public final /* synthetic */ ServerDiscoveryHeader $this_apply;

@@ -2,8 +2,8 @@ package kotlin;
 
 import androidx.exifinterface.media.ExifInterface;
 
-/* compiled from: Lazy.kt */
-/* loaded from: classes3.dex */
+/* JADX INFO: compiled from: Lazy.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public interface Lazy<T> {
     T getValue();
 

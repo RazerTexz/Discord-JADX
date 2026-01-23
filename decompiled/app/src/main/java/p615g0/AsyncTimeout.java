@@ -6,39 +6,39 @@ import java.util.concurrent.TimeUnit;
 import kotlin.jvm.internal.DefaultConstructorMarker;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: AsyncTimeout.kt */
-/* renamed from: g0.b, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: g0.b, reason: use source file name */
+/* JADX INFO: compiled from: AsyncTimeout.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public class AsyncTimeout extends Timeout2 {
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public static final long f26068e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public static final long f26069f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public static AsyncTimeout f26070g;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public static final a f26071h = new a(null);
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public boolean f26072i;
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public AsyncTimeout f26073j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public long f26074k;
 
-    /* compiled from: AsyncTimeout.kt */
-    /* renamed from: g0.b$a */
+    /* JADX INFO: renamed from: g0.b$a */
+    /* JADX INFO: compiled from: AsyncTimeout.kt */
     public static final class a {
         public a(DefaultConstructorMarker defaultConstructorMarker) {
         }
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final AsyncTimeout m10426a() throws InterruptedException {
             AsyncTimeout asyncTimeout = AsyncTimeout.f26070g;
             if (asyncTimeout == null) {
@@ -73,8 +73,8 @@ public class AsyncTimeout extends Timeout2 {
         }
     }
 
-    /* compiled from: AsyncTimeout.kt */
-    /* renamed from: g0.b$b */
+    /* JADX INFO: renamed from: g0.b$b */
+    /* JADX INFO: compiled from: AsyncTimeout.kt */
     public static final class b extends Thread {
         public b() {
             super("Okio Watchdog");
@@ -108,7 +108,7 @@ public class AsyncTimeout extends Timeout2 {
         f26069f = TimeUnit.MILLISECONDS.toNanos(millis);
     }
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public final void m10424i() {
         AsyncTimeout asyncTimeout;
         if (!(!this.f26072i)) {
@@ -161,7 +161,7 @@ public class AsyncTimeout extends Timeout2 {
         r2.f26073j = r4.f26073j;
         r4.f26073j = null;
      */
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
@@ -188,7 +188,7 @@ public class AsyncTimeout extends Timeout2 {
         return z2;
     }
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public IOException mo10296k(IOException iOException) {
         InterruptedIOException interruptedIOException = new InterruptedIOException("timeout");
         if (iOException != null) {
@@ -197,7 +197,7 @@ public class AsyncTimeout extends Timeout2 {
         return interruptedIOException;
     }
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public void mo10191l() {
     }
 }

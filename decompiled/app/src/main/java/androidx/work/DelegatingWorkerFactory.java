@@ -8,7 +8,7 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.concurrent.CopyOnWriteArrayList;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class DelegatingWorkerFactory extends WorkerFactory {
     private static final String TAG = Logger.tagWithPrefix("DelegatingWkrFctry");
     private final List<WorkerFactory> mFactories = new CopyOnWriteArrayList();

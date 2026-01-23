@@ -18,16 +18,16 @@ import p507d0.p580t.Collections2;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetServerSettingsRoleMembers.kt */
-/* renamed from: com.discord.widgets.servers.role_members.ServerSettingsRoleMembersAdapter, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.servers.role_members.ServerSettingsRoleMembersAdapter, reason: use source file name */
+/* JADX INFO: compiled from: WidgetServerSettingsRoleMembers.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetServerSettingsRoleMembers2 extends RecyclerView.Adapter<WidgetServerSettingsRoleMembers3> {
     private final DiffCreator<List<ServerSettingsRoleMemberAdapterItem>, WidgetServerSettingsRoleMembers3> diffCreator;
     private List<ServerSettingsRoleMemberAdapterItem> items;
     private Function2<? super GuildMember, ? super User, Unit> removeMemberClickListener;
 
-    /* compiled from: WidgetServerSettingsRoleMembers.kt */
-    /* renamed from: com.discord.widgets.servers.role_members.ServerSettingsRoleMembersAdapter$setItems$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.role_members.ServerSettingsRoleMembersAdapter$setItems$1 */
+    /* JADX INFO: compiled from: WidgetServerSettingsRoleMembers.kt */
     public static final class C95681 extends Lambda implements Function1<List<? extends ServerSettingsRoleMemberAdapterItem>, Unit> {
         public C95681() {
             super(1);
@@ -39,7 +39,7 @@ public final class WidgetServerSettingsRoleMembers2 extends RecyclerView.Adapter
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(List<ServerSettingsRoleMemberAdapterItem> list) {
             Intrinsics3.checkNotNullParameter(list, "items");
             WidgetServerSettingsRoleMembers2.access$setItems$p(WidgetServerSettingsRoleMembers2.this, list);
@@ -59,7 +59,7 @@ public final class WidgetServerSettingsRoleMembers2 extends RecyclerView.Adapter
     }
 
     @Override // androidx.recyclerview.widget.RecyclerView.Adapter
-    /* renamed from: getItemCount */
+    /* JADX INFO: renamed from: getItemCount */
     public int getPageSize() {
         return this.items.size();
     }

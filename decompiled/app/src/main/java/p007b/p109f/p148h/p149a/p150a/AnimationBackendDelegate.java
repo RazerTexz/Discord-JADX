@@ -7,12 +7,12 @@ import android.graphics.drawable.Drawable;
 import androidx.annotation.IntRange;
 import p007b.p109f.p148h.p149a.p150a.AnimationBackend;
 
-/* compiled from: AnimationBackendDelegate.java */
-/* renamed from: b.f.h.a.a.b, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.f.h.a.a.b, reason: use source file name */
+/* JADX INFO: compiled from: AnimationBackendDelegate.java */
+/* JADX INFO: loaded from: classes.dex */
 public class AnimationBackendDelegate<T extends AnimationBackend> implements AnimationBackend {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public T f3488a;
 
     public AnimationBackendDelegate(T t) {
@@ -20,7 +20,7 @@ public class AnimationBackendDelegate<T extends AnimationBackend> implements Ani
     }
 
     @Override // p007b.p109f.p148h.p149a.p150a.AnimationInformation
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public int mo1142a() {
         T t = this.f3488a;
         if (t == null) {
@@ -30,7 +30,7 @@ public class AnimationBackendDelegate<T extends AnimationBackend> implements Ani
     }
 
     @Override // p007b.p109f.p148h.p149a.p150a.AnimationInformation
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public int mo1143b() {
         T t = this.f3488a;
         if (t == null) {
@@ -48,7 +48,7 @@ public class AnimationBackendDelegate<T extends AnimationBackend> implements Ani
     }
 
     @Override // p007b.p109f.p148h.p149a.p150a.AnimationBackend
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public void mo1136d(ColorFilter colorFilter) {
         T t = this.f3488a;
         if (t != null) {
@@ -57,7 +57,7 @@ public class AnimationBackendDelegate<T extends AnimationBackend> implements Ani
     }
 
     @Override // p007b.p109f.p148h.p149a.p150a.AnimationInformation
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public int mo1144e(int i) {
         T t = this.f3488a;
         if (t == null) {
@@ -67,7 +67,7 @@ public class AnimationBackendDelegate<T extends AnimationBackend> implements Ani
     }
 
     @Override // p007b.p109f.p148h.p149a.p150a.AnimationBackend
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public void mo1137f(@IntRange(from = 0, m76to = 255) int i) {
         T t = this.f3488a;
         if (t != null) {
@@ -76,7 +76,7 @@ public class AnimationBackendDelegate<T extends AnimationBackend> implements Ani
     }
 
     @Override // p007b.p109f.p148h.p149a.p150a.AnimationBackend
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public int mo1138g() {
         T t = this.f3488a;
         if (t == null) {
@@ -86,7 +86,7 @@ public class AnimationBackendDelegate<T extends AnimationBackend> implements Ani
     }
 
     @Override // p007b.p109f.p148h.p149a.p150a.AnimationBackend
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public void mo1139h(Rect rect) {
         T t = this.f3488a;
         if (t != null) {
@@ -95,7 +95,7 @@ public class AnimationBackendDelegate<T extends AnimationBackend> implements Ani
     }
 
     @Override // p007b.p109f.p148h.p149a.p150a.AnimationBackend
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public int mo1140i() {
         T t = this.f3488a;
         if (t == null) {
@@ -105,7 +105,7 @@ public class AnimationBackendDelegate<T extends AnimationBackend> implements Ani
     }
 
     @Override // p007b.p109f.p148h.p149a.p150a.AnimationBackend
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public boolean mo1141j(Drawable drawable, Canvas canvas, int i) {
         T t = this.f3488a;
         return t != null && t.mo1141j(drawable, canvas, i);

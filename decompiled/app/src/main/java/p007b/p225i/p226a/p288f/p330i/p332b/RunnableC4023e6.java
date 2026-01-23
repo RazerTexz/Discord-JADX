@@ -12,12 +12,12 @@ import java.util.Objects;
 import p007b.p085c.p086a.p087a0.AnimatableValueParser;
 import p007b.p225i.p226a.p288f.p299e.p308o.C3401c;
 
-/* compiled from: com.google.android.gms:play-services-measurement-impl@@18.0.0 */
-/* renamed from: b.i.a.f.i.b.e6 */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.i.b.e6 */
+/* JADX INFO: compiled from: com.google.android.gms:play-services-measurement-impl@@18.0.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public final /* synthetic */ class RunnableC4023e6 implements Runnable {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final C3999c6 f10688j;
 
     public RunnableC4023e6(C3999c6 c3999c6) {
@@ -25,7 +25,7 @@ public final /* synthetic */ class RunnableC4023e6 implements Runnable {
     }
 
     @Override // java.lang.Runnable
-    public final void run() throws IllegalStateException {
+    public final void run() {
         Pair pair;
         NetworkInfo activeNetworkInfo;
         URL url;

@@ -4,9 +4,9 @@ import android.view.View;
 import com.discord.views.CheckedSetting;
 import com.discord.views.RadioManager;
 
-/* compiled from: WidgetServerSettingsEditIntegration.kt */
-/* renamed from: com.discord.widgets.servers.WidgetServerSettingsEditIntegration$setupRadioManager$$inlined$forEachIndexed$lambda$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.servers.WidgetServerSettingsEditIntegration$setupRadioManager$$inlined$forEachIndexed$lambda$1, reason: use source file name */
+/* JADX INFO: compiled from: WidgetServerSettingsEditIntegration.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetServerSettingsEditIntegration6 implements View.OnClickListener {
     public final /* synthetic */ CheckedSetting $checkedSetting;
     public final /* synthetic */ int $index;

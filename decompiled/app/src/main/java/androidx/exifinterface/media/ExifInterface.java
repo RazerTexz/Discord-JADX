@@ -61,7 +61,7 @@ import java.util.regex.Pattern;
 import java.util.zip.CRC32;
 import p007b.p100d.p104b.p105a.outline;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class ExifInterface {
     public static final short ALTITUDE_ABOVE_SEA_LEVEL = 0;
     public static final short ALTITUDE_BELOW_SEA_LEVEL = 1;
@@ -541,7 +541,7 @@ public class ExifInterface {
     public static final int[] IFD_FORMAT_BYTES_PER_FORMAT = {0, 1, 1, 2, 4, 8, 1, 1, 2, 4, 8, 4, 8, 1};
     public static final byte[] EXIF_ASCII_PREFIX = {65, 83, 67, 73, 73, 0, 0, 0};
 
-    /* renamed from: androidx.exifinterface.media.ExifInterface$1 */
+    /* JADX INFO: renamed from: androidx.exifinterface.media.ExifInterface$1 */
     public class C03431 extends MediaDataSource {
         public long mPosition;
         public final /* synthetic */ SeekableByteOrderedDataInputStream val$in;
@@ -570,7 +570,7 @@ public class ExifInterface {
             try {
                 long j2 = this.mPosition;
                 if (j2 != j) {
-                    if (j2 >= 0 && j >= j2 + this.val$in.available()) {
+                    if (j2 >= 0 && j >= j2 + ((long) this.val$in.available())) {
                         return -1;
                     }
                     this.val$in.seek(j);
@@ -581,7 +581,7 @@ public class ExifInterface {
                 }
                 int i3 = this.val$in.read(bArr, i, i2);
                 if (i3 >= 0) {
-                    this.mPosition += i3;
+                    this.mPosition += (long) i3;
                     return i3;
                 }
             } catch (IOException unused) {
@@ -705,10 +705,10 @@ public class ExifInterface {
             }
             ByteOrder byteOrder = this.mByteOrder;
             if (byteOrder == LITTLE_ENDIAN) {
-                return (i8 << 56) + (i7 << 48) + (i6 << 40) + (i5 << 32) + (i4 << 24) + (i3 << 16) + (i2 << 8) + i;
+                return (((long) i8) << 56) + (((long) i7) << 48) + (((long) i6) << 40) + (((long) i5) << 32) + (((long) i4) << 24) + (((long) i3) << 16) + (((long) i2) << 8) + ((long) i);
             }
             if (byteOrder == BIG_ENDIAN) {
-                return (i << 56) + (i2 << 48) + (i3 << 40) + (i4 << 32) + (i5 << 24) + (i6 << 16) + (i7 << 8) + i8;
+                return (((long) i) << 56) + (((long) i2) << 48) + (((long) i3) << 40) + (((long) i4) << 32) + (((long) i5) << 24) + (((long) i6) << 16) + (((long) i7) << 8) + ((long) i8);
             }
             StringBuilder sbM833U = outline.m833U("Invalid byte order: ");
             sbM833U.append(this.mByteOrder);
@@ -748,7 +748,7 @@ public class ExifInterface {
         }
 
         public long readUnsignedInt() throws IOException {
-            return readInt() & 4294967295L;
+            return ((long) readInt()) & 4294967295L;
         }
 
         @Override // java.io.DataInput
@@ -1657,6 +1657,9 @@ public class ExifInterface {
         }
     }
 
+    /* JADX WARN: Removed duplicated region for block: B:34:0x00b0 A[FALL_THROUGH] */
+    /* JADX WARN: Removed duplicated region for block: B:61:0x016c A[LOOP:0: B:10:0x0038->B:61:0x016c, LOOP_END] */
+    /* JADX WARN: Removed duplicated region for block: B:79:0x0174 A[SYNTHETIC] */
     /*  JADX ERROR: UnsupportedOperationException in pass: RegionMakerVisitor
         java.lang.UnsupportedOperationException
         	at java.base/java.util.Collections$UnmodifiableCollection.add(Collections.java:1092)
@@ -1746,9 +1749,6 @@ public class ExifInterface {
         	at jadx.core.dex.visitors.regions.PostProcessRegions.process(PostProcessRegions.java:23)
         	at jadx.core.dex.visitors.regions.RegionMakerVisitor.visit(RegionMakerVisitor.java:31)
         */
-    /* JADX WARN: Removed duplicated region for block: B:34:0x00b0 A[FALL_THROUGH] */
-    /* JADX WARN: Removed duplicated region for block: B:61:0x016c A[LOOP:0: B:10:0x0038->B:61:0x016c, LOOP_END] */
-    /* JADX WARN: Removed duplicated region for block: B:79:0x0174 A[SYNTHETIC] */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
@@ -2221,8 +2221,6 @@ public class ExifInterface {
 
     private boolean isHeifFormat(byte[] bArr) throws Throwable {
         ByteOrderedDataInputStream byteOrderedDataInputStream;
-        long length;
-        byte[] bArr2;
         ByteOrderedDataInputStream byteOrderedDataInputStream2 = null;
         try {
             try {
@@ -2234,9 +2232,52 @@ public class ExifInterface {
             th = th;
         }
         try {
-            length = byteOrderedDataInputStream.readInt();
-            bArr2 = new byte[4];
+            long length = byteOrderedDataInputStream.readInt();
+            byte[] bArr2 = new byte[4];
             byteOrderedDataInputStream.read(bArr2);
+            if (!Arrays.equals(bArr2, HEIF_TYPE_FTYP)) {
+                byteOrderedDataInputStream.close();
+                return false;
+            }
+            long j = 16;
+            if (length == 1) {
+                length = byteOrderedDataInputStream.readLong();
+                if (length < 16) {
+                    byteOrderedDataInputStream.close();
+                    return false;
+                }
+            } else {
+                j = 8;
+            }
+            if (length > bArr.length) {
+                length = bArr.length;
+            }
+            long j2 = length - j;
+            if (j2 < 8) {
+                byteOrderedDataInputStream.close();
+                return false;
+            }
+            byte[] bArr3 = new byte[4];
+            boolean z2 = false;
+            boolean z3 = false;
+            for (long j3 = 0; j3 < j2 / 4; j3++) {
+                if (byteOrderedDataInputStream.read(bArr3) != 4) {
+                    byteOrderedDataInputStream.close();
+                    return false;
+                }
+                if (j3 != 1) {
+                    if (Arrays.equals(bArr3, HEIF_BRAND_MIF1)) {
+                        z2 = true;
+                    } else if (Arrays.equals(bArr3, HEIF_BRAND_HEIC)) {
+                        z3 = true;
+                    }
+                    if (z2 && z3) {
+                        byteOrderedDataInputStream.close();
+                        return true;
+                    }
+                }
+            }
+            byteOrderedDataInputStream.close();
         } catch (Exception e2) {
             e = e2;
             byteOrderedDataInputStream2 = byteOrderedDataInputStream;
@@ -2246,7 +2287,6 @@ public class ExifInterface {
             if (byteOrderedDataInputStream2 != null) {
                 byteOrderedDataInputStream2.close();
             }
-            return false;
         } catch (Throwable th2) {
             th = th2;
             byteOrderedDataInputStream2 = byteOrderedDataInputStream;
@@ -2255,49 +2295,6 @@ public class ExifInterface {
             }
             throw th;
         }
-        if (!Arrays.equals(bArr2, HEIF_TYPE_FTYP)) {
-            byteOrderedDataInputStream.close();
-            return false;
-        }
-        long j = 16;
-        if (length == 1) {
-            length = byteOrderedDataInputStream.readLong();
-            if (length < 16) {
-                byteOrderedDataInputStream.close();
-                return false;
-            }
-        } else {
-            j = 8;
-        }
-        if (length > bArr.length) {
-            length = bArr.length;
-        }
-        long j2 = length - j;
-        if (j2 < 8) {
-            byteOrderedDataInputStream.close();
-            return false;
-        }
-        byte[] bArr3 = new byte[4];
-        boolean z2 = false;
-        boolean z3 = false;
-        for (long j3 = 0; j3 < j2 / 4; j3++) {
-            if (byteOrderedDataInputStream.read(bArr3) != 4) {
-                byteOrderedDataInputStream.close();
-                return false;
-            }
-            if (j3 != 1) {
-                if (Arrays.equals(bArr3, HEIF_BRAND_MIF1)) {
-                    z2 = true;
-                } else if (Arrays.equals(bArr3, HEIF_BRAND_HEIC)) {
-                    z3 = true;
-                }
-                if (z2 && z3) {
-                    byteOrderedDataInputStream.close();
-                    return true;
-                }
-            }
-        }
-        byteOrderedDataInputStream.close();
         return false;
     }
 
@@ -2580,7 +2577,7 @@ public class ExifInterface {
                         if (!"-".equals(strSubstring)) {
                             i = -1;
                         }
-                        time += i4 * i;
+                        time += (long) (i4 * i);
                     }
                 }
                 if (str2 != null) {
@@ -2689,7 +2686,7 @@ public class ExifInterface {
             int unsignedShort2 = seekableByteOrderedDataInputStream.readUnsignedShort();
             int unsignedShort3 = seekableByteOrderedDataInputStream.readUnsignedShort();
             int i4 = seekableByteOrderedDataInputStream.readInt();
-            long jPosition = seekableByteOrderedDataInputStream.position() + 4;
+            long jPosition = ((long) seekableByteOrderedDataInputStream.position()) + 4;
             ExifTag exifTag = sExifTagMapsForReading[i3].get(Integer.valueOf(unsignedShort2));
             boolean z3 = DEBUG;
             if (z3) {
@@ -2703,14 +2700,15 @@ public class ExifInterface {
             }
             if (exifTag != null) {
                 if (unsignedShort3 > 0) {
-                    if (unsignedShort3 < IFD_FORMAT_BYTES_PER_FORMAT.length) {
+                    int[] iArr = IFD_FORMAT_BYTES_PER_FORMAT;
+                    if (unsignedShort3 < iArr.length) {
                         if (exifTag.isFormatCompatible(unsignedShort3)) {
                             if (unsignedShort3 == 7) {
                                 unsignedShort3 = exifTag.primaryFormat;
                             }
                             s2 = s4;
                             s3 = s5;
-                            j = i4 * r7[unsignedShort3];
+                            j = ((long) i4) * ((long) iArr[unsignedShort3]);
                             if (j < 0 || j > 2147483647L) {
                                 if (z3) {
                                     outline.m866n0("Skip the tag entry since the number of components is invalid: ", i4, TAG);
@@ -3579,7 +3577,7 @@ public class ExifInterface {
         if (attributeDouble < 0.0d || attributeInt < 0) {
             return d;
         }
-        return attributeDouble * (attributeInt != 1 ? 1 : -1);
+        return attributeDouble * ((double) (attributeInt != 1 ? 1 : -1));
     }
 
     @Nullable
@@ -3774,82 +3772,98 @@ public class ExifInterface {
     /* JADX WARN: Removed duplicated region for block: B:58:0x00ab  */
     /* JADX WARN: Removed duplicated region for block: B:64:0x00b6  */
     /* JADX WARN: Type inference failed for: r1v1, types: [byte[]] */
+    /* JADX WARN: Type inference failed for: r1v11 */
+    /* JADX WARN: Type inference failed for: r1v12 */
+    /* JADX WARN: Type inference failed for: r1v14 */
+    /* JADX WARN: Type inference failed for: r1v15 */
+    /* JADX WARN: Type inference failed for: r1v16 */
+    /* JADX WARN: Type inference failed for: r1v17 */
+    /* JADX WARN: Type inference failed for: r1v18 */
     /* JADX WARN: Type inference failed for: r1v2 */
+    /* JADX WARN: Type inference failed for: r1v3 */
+    /* JADX WARN: Type inference failed for: r1v4, types: [java.io.Closeable] */
     /* JADX WARN: Type inference failed for: r1v5, types: [android.content.res.AssetManager$AssetInputStream, java.io.Closeable, java.io.InputStream] */
+    /* JADX WARN: Type inference failed for: r1v6, types: [java.io.Closeable, java.io.InputStream] */
+    /* JADX WARN: Type inference failed for: r1v7 */
+    /* JADX WARN: Type inference failed for: r2v0 */
+    /* JADX WARN: Type inference failed for: r2v1 */
+    /* JADX WARN: Type inference failed for: r2v2, types: [java.io.Closeable] */
+    /* JADX WARN: Type inference failed for: r2v3 */
     @Nullable
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
     public byte[] getThumbnailBytes() throws Throwable {
         FileDescriptor fileDescriptor;
-        FileInputStream fileInputStream;
+        ?? r1;
         Exception e;
         FileDescriptor fileDescriptor2;
-        FileInputStream fileInputStream2;
-        FileInputStream fileInputStream3;
-        Closeable closeable = null;
+        ?? fileInputStream;
+        ?? fileInputStream2;
+        ?? r2 = 0;
+        r2 = 0;
         if (!this.mHasThumbnail) {
             return null;
         }
-        ?? r1 = this.mThumbnailBytes;
+        ?? r12 = this.mThumbnailBytes;
         try {
-            if (r1 != 0) {
-                return r1;
+            if (r12 != 0) {
+                return r12;
             }
             try {
-                r1 = this.mAssetInputStream;
-                if (r1 != 0) {
+                r12 = this.mAssetInputStream;
+                if (r12 != 0) {
                     try {
-                        if (!r1.markSupported()) {
+                        if (!r12.markSupported()) {
                             Log.d(TAG, "Cannot read thumbnail from inputstream without mark/reset support");
-                            ExifInterfaceUtils.closeQuietly(r1);
+                            ExifInterfaceUtils.closeQuietly(r12);
                             return null;
                         }
-                        r1.reset();
-                        fileInputStream3 = r1;
+                        r12.reset();
+                        fileInputStream2 = r12;
                         fileDescriptor2 = null;
-                        fileInputStream2 = fileInputStream3;
+                        fileInputStream = fileInputStream2;
                     } catch (Exception e2) {
                         e = e2;
                         fileDescriptor2 = null;
-                        fileInputStream = r1;
+                        r1 = r12;
                         Log.d(TAG, "Encountered exception while getting thumbnail", e);
-                        ExifInterfaceUtils.closeQuietly(fileInputStream);
+                        ExifInterfaceUtils.closeQuietly(r1);
                         if (fileDescriptor2 != null) {
                         }
                         return null;
                     } catch (Throwable th) {
                         th = th;
                         fileDescriptor = null;
-                        closeable = r1;
-                        ExifInterfaceUtils.closeQuietly(closeable);
+                        r2 = r12;
+                        ExifInterfaceUtils.closeQuietly(r2);
                         if (fileDescriptor != null) {
                         }
                         throw th;
                     }
                 } else if (this.mFilename != null) {
-                    fileInputStream3 = new FileInputStream(this.mFilename);
+                    fileInputStream2 = new FileInputStream(this.mFilename);
                     fileDescriptor2 = null;
-                    fileInputStream2 = fileInputStream3;
+                    fileInputStream = fileInputStream2;
                 } else {
                     FileDescriptor fileDescriptorDup = ExifInterfaceUtils.Api21Impl.dup(this.mSeekableFileDescriptor);
                     try {
                         ExifInterfaceUtils.Api21Impl.lseek(fileDescriptorDup, 0L, OsConstants.SEEK_SET);
                         fileDescriptor2 = fileDescriptorDup;
-                        fileInputStream2 = new FileInputStream(fileDescriptorDup);
+                        fileInputStream = new FileInputStream(fileDescriptorDup);
                     } catch (Exception e3) {
                         e = e3;
                         fileDescriptor2 = fileDescriptorDup;
-                        fileInputStream = null;
+                        r1 = 0;
                         Log.d(TAG, "Encountered exception while getting thumbnail", e);
-                        ExifInterfaceUtils.closeQuietly(fileInputStream);
+                        ExifInterfaceUtils.closeQuietly(r1);
                         if (fileDescriptor2 != null) {
                         }
                         return null;
                     } catch (Throwable th2) {
                         th = th2;
                         fileDescriptor = fileDescriptorDup;
-                        ExifInterfaceUtils.closeQuietly(closeable);
+                        ExifInterfaceUtils.closeQuietly(r2);
                         if (fileDescriptor != null) {
                             ExifInterfaceUtils.closeFileDescriptor(fileDescriptor);
                         }
@@ -3857,34 +3871,34 @@ public class ExifInterface {
                     }
                 }
                 try {
-                    if (fileInputStream2 == null) {
+                    if (fileInputStream == 0) {
                         throw new FileNotFoundException();
                     }
-                    if (fileInputStream2.skip(this.mThumbnailOffset + this.mOffsetToExifData) != this.mThumbnailOffset + this.mOffsetToExifData) {
+                    if (fileInputStream.skip(this.mThumbnailOffset + this.mOffsetToExifData) != this.mThumbnailOffset + this.mOffsetToExifData) {
                         throw new IOException("Corrupted image");
                     }
                     byte[] bArr = new byte[this.mThumbnailLength];
-                    if (fileInputStream2.read(bArr) != this.mThumbnailLength) {
+                    if (fileInputStream.read(bArr) != this.mThumbnailLength) {
                         throw new IOException("Corrupted image");
                     }
                     this.mThumbnailBytes = bArr;
-                    ExifInterfaceUtils.closeQuietly(fileInputStream2);
+                    ExifInterfaceUtils.closeQuietly(fileInputStream);
                     if (fileDescriptor2 != null) {
                         ExifInterfaceUtils.closeFileDescriptor(fileDescriptor2);
                     }
                     return bArr;
                 } catch (Exception e4) {
                     e = e4;
-                    fileInputStream = fileInputStream2;
+                    r1 = fileInputStream;
                     Log.d(TAG, "Encountered exception while getting thumbnail", e);
-                    ExifInterfaceUtils.closeQuietly(fileInputStream);
+                    ExifInterfaceUtils.closeQuietly(r1);
                     if (fileDescriptor2 != null) {
                         ExifInterfaceUtils.closeFileDescriptor(fileDescriptor2);
                     }
                     return null;
                 }
             } catch (Exception e5) {
-                fileInputStream = null;
+                r1 = 0;
                 e = e5;
                 fileDescriptor2 = null;
             } catch (Throwable th3) {
@@ -4384,7 +4398,7 @@ public class ExifInterface {
                 this.mPosition = 0;
                 this.mDataInputStream.reset();
             } else {
-                j -= i;
+                j -= (long) i;
             }
             skipFully((int) j);
         }

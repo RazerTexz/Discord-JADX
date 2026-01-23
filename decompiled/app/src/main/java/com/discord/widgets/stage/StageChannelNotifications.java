@@ -35,18 +35,18 @@ import p659s.p660a.Builders5;
 import p659s.p660a.CoroutineScope2;
 import p659s.p660a.Dispatchers;
 
-/* compiled from: StageChannelNotifications.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: StageChannelNotifications.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class StageChannelNotifications {
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private static final Lazy INSTANCE$delegate = LazyJVM.lazy(StageChannelNotifications2.INSTANCE);
     private static final long NOTIFICATION_ICON_FETCH_DELAY_MS = 250;
     public static final String NOTIFICATION_TAG = "stage-channels";
     private final StoreChannels channelsStore;
 
-    /* compiled from: StageChannelNotifications.kt */
+    /* JADX INFO: compiled from: StageChannelNotifications.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -62,11 +62,11 @@ public final class StageChannelNotifications {
         }
     }
 
-    /* compiled from: StageChannelNotifications.kt */
+    /* JADX INFO: compiled from: StageChannelNotifications.kt */
     public static final class Notifications {
         public static final Notifications INSTANCE = new Notifications();
 
-        /* compiled from: StageChannelNotifications.kt */
+        /* JADX INFO: compiled from: StageChannelNotifications.kt */
         public static final class InvitedToSpeak {
             public static final InvitedToSpeak INSTANCE = new InvitedToSpeak();
             private static final int NOTIFICATION_ID = 102;
@@ -90,9 +90,9 @@ public final class StageChannelNotifications {
         }
     }
 
-    /* compiled from: StageChannelNotifications.kt */
+    /* JADX INFO: renamed from: com.discord.widgets.stage.StageChannelNotifications$onInvitedToSpeak$1 */
+    /* JADX INFO: compiled from: StageChannelNotifications.kt */
     @DebugMetadata(m10084c = "com.discord.widgets.stage.StageChannelNotifications$onInvitedToSpeak$1", m10085f = "StageChannelNotifications.kt", m10086l = {49}, m10087m = "invokeSuspend")
-    /* renamed from: com.discord.widgets.stage.StageChannelNotifications$onInvitedToSpeak$1 */
     public static final class C100131 extends ContinuationImpl6 implements Function2<CoroutineScope, Continuation<? super Unit>, Object> {
         public final /* synthetic */ NotificationCompat.Builder $builder;
         public final /* synthetic */ Channel $channel;

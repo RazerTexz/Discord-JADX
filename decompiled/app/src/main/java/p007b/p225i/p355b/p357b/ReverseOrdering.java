@@ -3,9 +3,9 @@ package p007b.p225i.p355b.p357b;
 import java.io.Serializable;
 import org.checkerframework.checker.nullness.compatqual.NullableDecl;
 
-/* compiled from: ReverseOrdering.java */
-/* renamed from: b.i.b.b.l0, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.b.b.l0, reason: use source file name */
+/* JADX INFO: compiled from: ReverseOrdering.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class ReverseOrdering<T> extends Ordering<T> implements Serializable {
     private static final long serialVersionUID = 0;
     public final Ordering<? super T> forwardOrder;
@@ -15,7 +15,7 @@ public final class ReverseOrdering<T> extends Ordering<T> implements Serializabl
     }
 
     @Override // p007b.p225i.p355b.p357b.Ordering
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public <S extends T> Ordering<S> mo6236b() {
         return this.forwardOrder;
     }

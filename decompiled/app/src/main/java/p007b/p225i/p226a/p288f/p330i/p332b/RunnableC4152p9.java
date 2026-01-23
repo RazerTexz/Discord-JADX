@@ -4,18 +4,18 @@ import android.os.Bundle;
 import java.util.Objects;
 import p007b.p225i.p226a.p288f.p299e.p308o.C3401c;
 
-/* compiled from: com.google.android.gms:play-services-measurement@@18.0.0 */
-/* renamed from: b.i.a.f.i.b.p9 */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.i.b.p9 */
+/* JADX INFO: compiled from: com.google.android.gms:play-services-measurement@@18.0.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public final class RunnableC4152p9 implements Runnable {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final /* synthetic */ String f11132j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final /* synthetic */ Bundle f11133k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final /* synthetic */ C4130n9 f11134l;
 
     public RunnableC4152p9(C4130n9 c4130n9, String str, Bundle bundle) {
@@ -25,7 +25,7 @@ public final class RunnableC4152p9 implements Runnable {
     }
 
     @Override // java.lang.Runnable
-    public final void run() throws IllegalStateException {
+    public final void run() {
         C4196t9 c4196t9M5949t = this.f11134l.f10997a.f10906k.m5949t();
         String str = this.f11132j;
         Bundle bundle = this.f11133k;

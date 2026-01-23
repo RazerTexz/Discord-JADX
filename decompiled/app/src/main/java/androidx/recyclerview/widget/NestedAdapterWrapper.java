@@ -8,7 +8,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import androidx.recyclerview.widget.StableIdStorage;
 import androidx.recyclerview.widget.ViewTypeStorage;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class NestedAdapterWrapper {
     public final RecyclerView.Adapter<RecyclerView.ViewHolder> adapter;
     private RecyclerView.AdapterDataObserver mAdapterObserver = new C05621();
@@ -21,7 +21,7 @@ public class NestedAdapterWrapper {
     @NonNull
     private final ViewTypeStorage.ViewTypeLookup mViewTypeLookup;
 
-    /* renamed from: androidx.recyclerview.widget.NestedAdapterWrapper$1 */
+    /* JADX INFO: renamed from: androidx.recyclerview.widget.NestedAdapterWrapper$1 */
     public class C05621 extends RecyclerView.AdapterDataObserver {
         public C05621() {
         }

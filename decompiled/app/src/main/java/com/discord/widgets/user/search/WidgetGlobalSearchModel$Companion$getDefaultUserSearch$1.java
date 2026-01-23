@@ -5,8 +5,8 @@ import com.discord.widgets.user.search.WidgetGlobalSearchModel;
 import kotlin.jvm.functions.Function1;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetGlobalSearchModel.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: WidgetGlobalSearchModel.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class WidgetGlobalSearchModel$Companion$getDefaultUserSearch$1 extends Lambda implements Function1<Long, User> {
     public final /* synthetic */ WidgetGlobalSearchModel.UsersContext $usersContext;
 

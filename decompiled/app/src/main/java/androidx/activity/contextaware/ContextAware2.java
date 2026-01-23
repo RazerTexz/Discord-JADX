@@ -9,9 +9,9 @@ import p507d0.p584w.p586i.p587a.DebugProbes;
 import p507d0.p592z.p594d.InlineMarker;
 import p659s.p660a.CancellableContinuationImpl5;
 
-/* compiled from: ContextAware.kt */
-/* renamed from: androidx.activity.contextaware.ContextAwareKt, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: androidx.activity.contextaware.ContextAwareKt, reason: use source file name */
+/* JADX INFO: compiled from: ContextAware.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class ContextAware2 {
     public static final <R> Object withContextAvailable(ContextAware contextAware, Function1<? super Context, ? extends R> function1, Continuation<? super R> continuation) {
         Context contextPeekAvailableContext = contextAware.peekAvailableContext();

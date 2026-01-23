@@ -3,18 +3,18 @@ package p007b.p225i.p361c.p368l;
 import java.util.Objects;
 import p007b.p100d.p104b.p105a.outline;
 
-/* compiled from: Dependency.java */
-/* renamed from: b.i.c.l.o, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.c.l.o, reason: use source file name */
+/* JADX INFO: compiled from: Dependency.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class Dependency2 {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final Class<?> f12201a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final int f12202b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final int f12203c;
 
     public Dependency2(Class<?> cls, int i, int i2) {
@@ -24,7 +24,7 @@ public final class Dependency2 {
         this.f12203c = i2;
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public boolean m6358a() {
         return this.f12202b == 2;
     }

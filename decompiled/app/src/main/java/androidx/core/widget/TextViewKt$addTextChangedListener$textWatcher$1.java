@@ -7,8 +7,8 @@ import kotlin.Unit;
 import kotlin.jvm.functions.Function1;
 import kotlin.jvm.functions.Function4;
 
-/* compiled from: TextView.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: TextView.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class TextViewKt$addTextChangedListener$textWatcher$1 implements TextWatcher {
     public final /* synthetic */ Function1<Editable, Unit> $afterTextChanged;
     public final /* synthetic */ Function4<CharSequence, Integer, Integer, Integer, Unit> $beforeTextChanged;

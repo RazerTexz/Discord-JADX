@@ -2,8 +2,8 @@ package com.discord.widgets.channels.list.items;
 
 import com.discord.widgets.channels.list.items.ChannelListItem;
 
-/* compiled from: ChannelListItemMfaNotice.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: ChannelListItemMfaNotice.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class ChannelListItemMfaNotice implements ChannelListItem {
     private final int type = 7;
 

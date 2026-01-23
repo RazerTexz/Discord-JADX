@@ -4,9 +4,9 @@ import com.discord.models.domain.ModelSku4;
 import java.util.List;
 import p507d0.p580t.Collections2;
 
-/* compiled from: GooglePlayInAppSku.kt */
-/* renamed from: com.discord.utilities.billing.GooglePlayInAppSkuKt, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.utilities.billing.GooglePlayInAppSkuKt, reason: use source file name */
+/* JADX INFO: compiled from: GooglePlayInAppSku.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class GooglePlayInAppSku2 {
     private static final List<GooglePlayInAppSku> premiumGifts;
     private static final GooglePlayInAppSku premiumTier1Month;

@@ -12,16 +12,16 @@ import p507d0.p580t._Collections;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: specialBuiltinMembers.kt */
-/* renamed from: d0.e0.p.d.m0.e.a.h, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.e.a.h, reason: use source file name */
+/* JADX INFO: compiled from: specialBuiltinMembers.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class specialBuiltinMembers3 extends SpecialGenericSignatures {
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public static final specialBuiltinMembers3 f23259m = new specialBuiltinMembers3();
 
-    /* compiled from: specialBuiltinMembers.kt */
-    /* renamed from: d0.e0.p.d.m0.e.a.h$a */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.e.a.h$a */
+    /* JADX INFO: compiled from: specialBuiltinMembers.kt */
     public static final class a extends Lambda implements Function1<CallableMemberDescriptor, Boolean> {
         public a() {
             super(1);
@@ -32,15 +32,15 @@ public final class specialBuiltinMembers3 extends SpecialGenericSignatures {
             return Boolean.valueOf(invoke2(callableMemberDescriptor));
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final boolean invoke2(CallableMemberDescriptor callableMemberDescriptor) {
             Intrinsics3.checkNotNullParameter(callableMemberDescriptor, "it");
             return specialBuiltinMembers3.access$getHasErasedValueParametersInJava(specialBuiltinMembers3.this, callableMemberDescriptor);
         }
     }
 
-    /* compiled from: specialBuiltinMembers.kt */
-    /* renamed from: d0.e0.p.d.m0.e.a.h$b */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.e.a.h$b */
+    /* JADX INFO: compiled from: specialBuiltinMembers.kt */
     public static final class b extends Lambda implements Function1<CallableMemberDescriptor, Boolean> {
         public b() {
             super(1);
@@ -51,7 +51,7 @@ public final class specialBuiltinMembers3 extends SpecialGenericSignatures {
             return Boolean.valueOf(invoke2(callableMemberDescriptor));
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final boolean invoke2(CallableMemberDescriptor callableMemberDescriptor) {
             Intrinsics3.checkNotNullParameter(callableMemberDescriptor, "it");
             return (callableMemberDescriptor instanceof FunctionDescriptor) && specialBuiltinMembers3.access$getHasErasedValueParametersInJava(specialBuiltinMembers3.this, callableMemberDescriptor);

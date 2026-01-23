@@ -5,24 +5,24 @@ import androidx.annotation.Nullable;
 import p007b.p100d.p104b.p105a.outline;
 import p007b.p225i.p361c.p369m.p370d.p375m.CrashlyticsReport;
 
-/* compiled from: AutoValue_CrashlyticsReport_Session_Event_Application_Execution_Exception.java */
-/* renamed from: b.i.c.m.d.m.n, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.c.m.d.m.n, reason: use source file name */
+/* JADX INFO: compiled from: AutoValue_CrashlyticsReport_Session_Event_Application_Execution_Exception.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class AutoValue_CrashlyticsReport_Session_Event_Application_Execution_Exception extends CrashlyticsReport.d.AbstractC13233d.a.b.AbstractC13236b {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final String f12608a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final String f12609b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final ImmutableList3<CrashlyticsReport.d.AbstractC13233d.a.b.AbstractC13237d.AbstractC13238a> f12610c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final CrashlyticsReport.d.AbstractC13233d.a.b.AbstractC13236b f12611d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final int f12612e;
 
     public AutoValue_CrashlyticsReport_Session_Event_Application_Execution_Exception(String str, String str2, ImmutableList3 immutableList3, CrashlyticsReport.d.AbstractC13233d.a.b.AbstractC13236b abstractC13236b, int i, a aVar) {
@@ -35,34 +35,34 @@ public final class AutoValue_CrashlyticsReport_Session_Event_Application_Executi
 
     @Override // p007b.p225i.p361c.p369m.p370d.p375m.CrashlyticsReport.d.AbstractC13233d.a.b.AbstractC13236b
     @Nullable
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public CrashlyticsReport.d.AbstractC13233d.a.b.AbstractC13236b mo6582a() {
         return this.f12611d;
     }
 
     @Override // p007b.p225i.p361c.p369m.p370d.p375m.CrashlyticsReport.d.AbstractC13233d.a.b.AbstractC13236b
     @NonNull
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public ImmutableList3<CrashlyticsReport.d.AbstractC13233d.a.b.AbstractC13237d.AbstractC13238a> mo6583b() {
         return this.f12610c;
     }
 
     @Override // p007b.p225i.p361c.p369m.p370d.p375m.CrashlyticsReport.d.AbstractC13233d.a.b.AbstractC13236b
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public int mo6584c() {
         return this.f12612e;
     }
 
     @Override // p007b.p225i.p361c.p369m.p370d.p375m.CrashlyticsReport.d.AbstractC13233d.a.b.AbstractC13236b
     @Nullable
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public String mo6585d() {
         return this.f12609b;
     }
 
     @Override // p007b.p225i.p361c.p369m.p370d.p375m.CrashlyticsReport.d.AbstractC13233d.a.b.AbstractC13236b
     @NonNull
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public String mo6586e() {
         return this.f12608a;
     }

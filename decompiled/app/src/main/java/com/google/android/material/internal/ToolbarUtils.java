@@ -10,8 +10,8 @@ import androidx.appcompat.view.menu.ActionMenuItemView;
 import androidx.appcompat.widget.ActionMenuView;
 import androidx.appcompat.widget.Toolbar;
 
+/* JADX INFO: loaded from: classes3.dex */
 @RestrictTo({RestrictTo.Scope.LIBRARY})
-/* loaded from: classes3.dex */
 public class ToolbarUtils {
     private ToolbarUtils() {
     }

@@ -5,9 +5,9 @@ import kotlin.jvm.functions.Function1;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: CustomTabs.kt */
-/* renamed from: b.a.h.a, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.a.h.a, reason: use source file name */
+/* JADX INFO: compiled from: CustomTabs.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class CustomTabs extends Lambda implements Function1<String, Boolean> {
     public final /* synthetic */ Context $context;
 

@@ -39,11 +39,11 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 import p658rx.Observable;
 
-/* compiled from: GuildScheduledEventListViewModel.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: GuildScheduledEventListViewModel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class GuildScheduledEventListViewModel extends AppViewModel<ViewState> {
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private final Long channelId;
     private final StoreChannels channelsStore;
@@ -54,8 +54,8 @@ public final class GuildScheduledEventListViewModel extends AppViewModel<ViewSta
     private final StoreUser userStore;
     private final StoreVoiceChannelSelected voiceChannelSelectedStore;
 
-    /* compiled from: GuildScheduledEventListViewModel.kt */
-    /* renamed from: com.discord.widgets.guildscheduledevent.GuildScheduledEventListViewModel$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.guildscheduledevent.GuildScheduledEventListViewModel$1 */
+    /* JADX INFO: compiled from: GuildScheduledEventListViewModel.kt */
     public static final /* synthetic */ class C88221 extends FunctionReferenceImpl implements Function1<StoreState, Unit> {
         public C88221(GuildScheduledEventListViewModel guildScheduledEventListViewModel) {
             super(1, guildScheduledEventListViewModel, GuildScheduledEventListViewModel.class, "handleStoreState", "handleStoreState(Lcom/discord/widgets/guildscheduledevent/GuildScheduledEventListViewModel$StoreState;)V", 0);
@@ -67,14 +67,14 @@ public final class GuildScheduledEventListViewModel extends AppViewModel<ViewSta
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(StoreState storeState) {
             Intrinsics3.checkNotNullParameter(storeState, "p1");
             GuildScheduledEventListViewModel.access$handleStoreState((GuildScheduledEventListViewModel) this.receiver, storeState);
         }
     }
 
-    /* compiled from: GuildScheduledEventListViewModel.kt */
+    /* JADX INFO: compiled from: GuildScheduledEventListViewModel.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -92,7 +92,7 @@ public final class GuildScheduledEventListViewModel extends AppViewModel<ViewSta
         }
     }
 
-    /* compiled from: GuildScheduledEventListViewModel.kt */
+    /* JADX INFO: compiled from: GuildScheduledEventListViewModel.kt */
     public static final /* data */ class StoreState {
         private final boolean canCreateEvents;
         private final Map<Long, Long> channelPermissions;
@@ -117,6 +117,7 @@ public final class GuildScheduledEventListViewModel extends AppViewModel<ViewSta
             this.channelPermissions = map3;
         }
 
+        /* JADX WARN: Multi-variable type inference failed */
         public static /* synthetic */ StoreState copy$default(StoreState storeState, List list, Set set, Map map, Map map2, boolean z2, Long l, Map map3, int i, Object obj) {
             if ((i & 1) != 0) {
                 list = storeState.guildScheduledEvents;
@@ -163,12 +164,12 @@ public final class GuildScheduledEventListViewModel extends AppViewModel<ViewSta
             return this.creators;
         }
 
-        /* renamed from: component5, reason: from getter */
+        /* JADX INFO: renamed from: component5, reason: from getter */
         public final boolean getCanCreateEvents() {
             return this.canCreateEvents;
         }
 
-        /* renamed from: component6, reason: from getter */
+        /* JADX INFO: renamed from: component6, reason: from getter */
         public final Long getSelectedVoiceChannelId() {
             return this.selectedVoiceChannelId;
         }
@@ -226,6 +227,9 @@ public final class GuildScheduledEventListViewModel extends AppViewModel<ViewSta
         }
 
         /* JADX WARN: Multi-variable type inference failed */
+        /* JADX WARN: Type inference failed for: r2v10, types: [int] */
+        /* JADX WARN: Type inference failed for: r2v16 */
+        /* JADX WARN: Type inference failed for: r2v20 */
         public int hashCode() {
             List<GuildScheduledEvent> list = this.guildScheduledEvents;
             int iHashCode = (list != null ? list.hashCode() : 0) * 31;
@@ -236,13 +240,13 @@ public final class GuildScheduledEventListViewModel extends AppViewModel<ViewSta
             Map<Long, UserGuildMember> map2 = this.creators;
             int iHashCode4 = (iHashCode3 + (map2 != null ? map2.hashCode() : 0)) * 31;
             boolean z2 = this.canCreateEvents;
-            int i = z2;
-            if (z2 != 0) {
-                i = 1;
+            ?? r2 = z2;
+            if (z2) {
+                r2 = 1;
             }
-            int i2 = (iHashCode4 + i) * 31;
+            int i = (iHashCode4 + r2) * 31;
             Long l = this.selectedVoiceChannelId;
-            int iHashCode5 = (i2 + (l != null ? l.hashCode() : 0)) * 31;
+            int iHashCode5 = (i + (l != null ? l.hashCode() : 0)) * 31;
             Map<Long, Long> map3 = this.channelPermissions;
             return iHashCode5 + (map3 != null ? map3.hashCode() : 0);
         }
@@ -265,10 +269,10 @@ public final class GuildScheduledEventListViewModel extends AppViewModel<ViewSta
         }
     }
 
-    /* compiled from: GuildScheduledEventListViewModel.kt */
+    /* JADX INFO: compiled from: GuildScheduledEventListViewModel.kt */
     public static abstract class ViewState {
 
-        /* compiled from: GuildScheduledEventListViewModel.kt */
+        /* JADX INFO: compiled from: GuildScheduledEventListViewModel.kt */
         public static final class Initial extends ViewState {
             public static final Initial INSTANCE = new Initial();
 
@@ -277,7 +281,7 @@ public final class GuildScheduledEventListViewModel extends AppViewModel<ViewSta
             }
         }
 
-        /* compiled from: GuildScheduledEventListViewModel.kt */
+        /* JADX INFO: compiled from: GuildScheduledEventListViewModel.kt */
         public static final /* data */ class Loaded extends ViewState {
             private final boolean canCreateEvents;
             private final List<GuildScheduledEventListItem.Event> guildScheduledEvents;
@@ -305,7 +309,7 @@ public final class GuildScheduledEventListViewModel extends AppViewModel<ViewSta
                 return this.guildScheduledEvents;
             }
 
-            /* renamed from: component2, reason: from getter */
+            /* JADX INFO: renamed from: component2, reason: from getter */
             public final boolean getCanCreateEvents() {
                 return this.canCreateEvents;
             }
@@ -335,15 +339,18 @@ public final class GuildScheduledEventListViewModel extends AppViewModel<ViewSta
             }
 
             /* JADX WARN: Multi-variable type inference failed */
+            /* JADX WARN: Type inference failed for: r1v1, types: [int] */
+            /* JADX WARN: Type inference failed for: r1v2 */
+            /* JADX WARN: Type inference failed for: r1v3 */
             public int hashCode() {
                 List<GuildScheduledEventListItem.Event> list = this.guildScheduledEvents;
                 int iHashCode = (list != null ? list.hashCode() : 0) * 31;
                 boolean z2 = this.canCreateEvents;
-                int i = z2;
-                if (z2 != 0) {
-                    i = 1;
+                ?? r1 = z2;
+                if (z2) {
+                    r1 = 1;
                 }
-                return iHashCode + i;
+                return iHashCode + r1;
             }
 
             public String toString() {
@@ -362,8 +369,8 @@ public final class GuildScheduledEventListViewModel extends AppViewModel<ViewSta
         }
     }
 
-    /* compiled from: GuildScheduledEventListViewModel.kt */
-    /* renamed from: com.discord.widgets.guildscheduledevent.GuildScheduledEventListViewModel$onShareClicked$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.guildscheduledevent.GuildScheduledEventListViewModel$onShareClicked$1 */
+    /* JADX INFO: compiled from: GuildScheduledEventListViewModel.kt */
     public static final class C88231 extends Lambda implements Function1<Channel, Unit> {
         public final /* synthetic */ Channel $channel;
         public final /* synthetic */ long $guildEventId;
@@ -383,7 +390,7 @@ public final class GuildScheduledEventListViewModel extends AppViewModel<ViewSta
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Channel channel) {
             Fragment fragment = (Fragment) this.$weakFragment.get();
             if (fragment != null) {

@@ -124,14 +124,14 @@ import p658rx.Observable;
 import p658rx.functions.Func0;
 import p658rx.functions.Func2;
 
-/* compiled from: WidgetHome.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetHome.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetHome extends AppFragment implements OnTabSelectedListener, PanelsChildGestureRegionObserver.a {
     public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetHome.class, "binding", "getBinding()Lcom/discord/databinding/WidgetHomeBinding;", 0)};
     private static final long DELAY_DRAWER_OPEN_FINISH = 2000;
     private static final long DELAY_DRAWER_OPEN_START = 1000;
 
-    /* renamed from: binding$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
     private final Set<Integer> fixedPositionViewIds;
     private final WidgetGlobalStatusIndicatorState globalStatusIndicatorStateObserver;
@@ -142,7 +142,7 @@ public final class WidgetHome extends AppFragment implements OnTabSelectedListen
     private WidgetHomePanelNsfw panelNsfw;
     private final StoreTabsNavigation storeTabsNavigation;
 
-    /* renamed from: viewModel$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: viewModel$delegate, reason: from kotlin metadata */
     private final Lazy viewModel;
 
     public final /* synthetic */ class WhenMappings {
@@ -158,8 +158,8 @@ public final class WidgetHome extends AppFragment implements OnTabSelectedListen
         }
     }
 
-    /* compiled from: WidgetHome.kt */
-    /* renamed from: com.discord.widgets.home.WidgetHome$animatePeek$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.home.WidgetHome$animatePeek$1 */
+    /* JADX INFO: compiled from: WidgetHome.kt */
     public static final class RunnableC89391 implements Runnable {
         public final /* synthetic */ WidgetChatList $fragmentChatList;
 
@@ -176,8 +176,8 @@ public final class WidgetHome extends AppFragment implements OnTabSelectedListen
         }
     }
 
-    /* compiled from: WidgetHome.kt */
-    /* renamed from: com.discord.widgets.home.WidgetHome$configureFirstOpen$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.home.WidgetHome$configureFirstOpen$1 */
+    /* JADX INFO: compiled from: WidgetHome.kt */
     public static final class C89401<T1, T2, R> implements Func2<Boolean, Map<Long, ? extends Channel>, Boolean> {
         public static final C89401 INSTANCE = new C89401();
 
@@ -186,7 +186,7 @@ public final class WidgetHome extends AppFragment implements OnTabSelectedListen
             return call2(bool, (Map<Long, Channel>) map);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final Boolean call2(Boolean bool, Map<Long, Channel> map) {
             Intrinsics3.checkNotNullExpressionValue(bool, "connectionOpen");
             if (bool.booleanValue()) {
@@ -196,12 +196,12 @@ public final class WidgetHome extends AppFragment implements OnTabSelectedListen
         }
     }
 
-    /* compiled from: WidgetHome.kt */
-    /* renamed from: com.discord.widgets.home.WidgetHome$configureFirstOpen$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.home.WidgetHome$configureFirstOpen$2 */
+    /* JADX INFO: compiled from: WidgetHome.kt */
     public static final class C89412 extends Lambda implements Function1<Boolean, Unit> {
 
-        /* compiled from: WidgetHome.kt */
-        /* renamed from: com.discord.widgets.home.WidgetHome$configureFirstOpen$2$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.widgets.home.WidgetHome$configureFirstOpen$2$1, reason: invalid class name */
+        /* JADX INFO: compiled from: WidgetHome.kt */
         public static final class AnonymousClass1 extends Lambda implements Function1<StoreNux.NuxState, StoreNux.NuxState> {
             public static final AnonymousClass1 INSTANCE = new AnonymousClass1();
 
@@ -214,15 +214,15 @@ public final class WidgetHome extends AppFragment implements OnTabSelectedListen
                 return invoke2(nuxState);
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final StoreNux.NuxState invoke2(StoreNux.NuxState nuxState) {
                 Intrinsics3.checkNotNullParameter(nuxState, "it");
                 return StoreNux.NuxState.copy$default(nuxState, false, false, false, false, false, null, 55, null);
             }
         }
 
-        /* compiled from: WidgetHome.kt */
-        /* renamed from: com.discord.widgets.home.WidgetHome$configureFirstOpen$2$2, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.widgets.home.WidgetHome$configureFirstOpen$2$2, reason: invalid class name */
+        /* JADX INFO: compiled from: WidgetHome.kt */
         public static final class AnonymousClass2 extends Lambda implements Function0<Unit> {
             public AnonymousClass2() {
                 super(0);
@@ -234,19 +234,19 @@ public final class WidgetHome extends AppFragment implements OnTabSelectedListen
                 return Unit.f27425a;
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2() {
                 WidgetHome.access$getBinding$p(WidgetHome.this).f17126c.openStartPanel();
             }
         }
 
-        /* compiled from: WidgetHome.kt */
-        /* renamed from: com.discord.widgets.home.WidgetHome$configureFirstOpen$2$3, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.widgets.home.WidgetHome$configureFirstOpen$2$3, reason: invalid class name */
+        /* JADX INFO: compiled from: WidgetHome.kt */
         public static final class AnonymousClass3 extends Lambda implements Function0<Unit> {
             public static final AnonymousClass3 INSTANCE = new AnonymousClass3();
 
-            /* compiled from: WidgetHome.kt */
-            /* renamed from: com.discord.widgets.home.WidgetHome$configureFirstOpen$2$3$1, reason: invalid class name */
+            /* JADX INFO: renamed from: com.discord.widgets.home.WidgetHome$configureFirstOpen$2$3$1, reason: invalid class name */
+            /* JADX INFO: compiled from: WidgetHome.kt */
             public static final class AnonymousClass1 extends Lambda implements Function1<StoreNux.NuxState, StoreNux.NuxState> {
                 public static final AnonymousClass1 INSTANCE = new AnonymousClass1();
 
@@ -259,7 +259,7 @@ public final class WidgetHome extends AppFragment implements OnTabSelectedListen
                     return invoke2(nuxState);
                 }
 
-                /* renamed from: invoke, reason: avoid collision after fix types in other method */
+                /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
                 public final StoreNux.NuxState invoke2(StoreNux.NuxState nuxState) {
                     Intrinsics3.checkNotNullParameter(nuxState, "it");
                     return StoreNux.NuxState.copy$default(nuxState, false, false, false, false, true, null, 39, null);
@@ -276,14 +276,14 @@ public final class WidgetHome extends AppFragment implements OnTabSelectedListen
                 return Unit.f27425a;
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2() {
                 StoreStream.INSTANCE.getNux().updateNux(AnonymousClass1.INSTANCE);
             }
         }
 
-        /* compiled from: WidgetHome.kt */
-        /* renamed from: com.discord.widgets.home.WidgetHome$configureFirstOpen$2$4, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.widgets.home.WidgetHome$configureFirstOpen$2$4, reason: invalid class name */
+        /* JADX INFO: compiled from: WidgetHome.kt */
         public static final class AnonymousClass4 extends Lambda implements Function1<Function0<? extends Unit>, Unit> {
             public static final AnonymousClass4 INSTANCE = new AnonymousClass4();
 
@@ -297,7 +297,7 @@ public final class WidgetHome extends AppFragment implements OnTabSelectedListen
                 return Unit.f27425a;
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2(Function0<Unit> function0) {
                 function0.invoke();
             }
@@ -313,7 +313,7 @@ public final class WidgetHome extends AppFragment implements OnTabSelectedListen
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Boolean bool) {
             if (bool == null) {
                 return;
@@ -330,8 +330,8 @@ public final class WidgetHome extends AppFragment implements OnTabSelectedListen
         }
     }
 
-    /* compiled from: WidgetHome.kt */
-    /* renamed from: com.discord.widgets.home.WidgetHome$configureLeftPanel$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.home.WidgetHome$configureLeftPanel$1 */
+    /* JADX INFO: compiled from: WidgetHome.kt */
     public static final class C89421 extends Lambda implements Function1<OverlappingPanelsLayout.LockState, Unit> {
         public C89421() {
             super(1);
@@ -343,7 +343,7 @@ public final class WidgetHome extends AppFragment implements OnTabSelectedListen
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(OverlappingPanelsLayout.LockState lockState) {
             Intrinsics3.checkNotNullParameter(lockState, "lockState");
             WidgetHome.access$getBinding$p(WidgetHome.this).f17126c.setStartPanelUseFullPortraitWidth(lockState == OverlappingPanelsLayout.LockState.OPEN);
@@ -351,8 +351,8 @@ public final class WidgetHome extends AppFragment implements OnTabSelectedListen
         }
     }
 
-    /* compiled from: WidgetHome.kt */
-    /* renamed from: com.discord.widgets.home.WidgetHome$configureNavigationDrawerAction$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.home.WidgetHome$configureNavigationDrawerAction$1 */
+    /* JADX INFO: compiled from: WidgetHome.kt */
     public static final class C89431 extends Lambda implements Function1<StoreNavigation.PanelAction, Unit> {
         public final /* synthetic */ StoreNavigation $this_configureNavigationDrawerAction;
 
@@ -368,15 +368,15 @@ public final class WidgetHome extends AppFragment implements OnTabSelectedListen
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(StoreNavigation.PanelAction panelAction) {
             Intrinsics3.checkNotNullParameter(panelAction, "it");
             this.$this_configureNavigationDrawerAction.setNavigationPanelAction(panelAction, WidgetHome.access$getBinding$p(WidgetHome.this).f17126c);
         }
     }
 
-    /* compiled from: WidgetHome.kt */
-    /* renamed from: com.discord.widgets.home.WidgetHome$configureOverlappingPanels$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.home.WidgetHome$configureOverlappingPanels$1 */
+    /* JADX INFO: compiled from: WidgetHome.kt */
     public static final class C89441 implements OverlappingPanelsLayout.PanelStateListener {
         public C89441() {
         }
@@ -388,8 +388,8 @@ public final class WidgetHome extends AppFragment implements OnTabSelectedListen
         }
     }
 
-    /* compiled from: WidgetHome.kt */
-    /* renamed from: com.discord.widgets.home.WidgetHome$configureOverlappingPanels$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.home.WidgetHome$configureOverlappingPanels$2 */
+    /* JADX INFO: compiled from: WidgetHome.kt */
     public static final class C89452 implements OverlappingPanelsLayout.PanelStateListener {
         public C89452() {
         }
@@ -401,8 +401,8 @@ public final class WidgetHome extends AppFragment implements OnTabSelectedListen
         }
     }
 
-    /* compiled from: WidgetHome.kt */
-    /* renamed from: com.discord.widgets.home.WidgetHome$handleViewState$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.home.WidgetHome$handleViewState$1 */
+    /* JADX INFO: compiled from: WidgetHome.kt */
     public static final /* synthetic */ class C89461 extends FunctionReferenceImpl implements Function1<Boolean, Unit> {
         public C89461(WidgetHome widgetHome) {
             super(1, widgetHome, WidgetHome.class, "onNsfwToggle", "onNsfwToggle(Z)V", 0);
@@ -419,8 +419,8 @@ public final class WidgetHome extends AppFragment implements OnTabSelectedListen
         }
     }
 
-    /* compiled from: WidgetHome.kt */
-    /* renamed from: com.discord.widgets.home.WidgetHome$maybeShowHubEmailUpsell$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.home.WidgetHome$maybeShowHubEmailUpsell$1 */
+    /* JADX INFO: compiled from: WidgetHome.kt */
     public static final class C89471 extends Lambda implements Function1<FragmentActivity, Boolean> {
         public static final C89471 INSTANCE = new C89471();
 
@@ -433,7 +433,7 @@ public final class WidgetHome extends AppFragment implements OnTabSelectedListen
             return Boolean.valueOf(invoke2(fragmentActivity));
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final boolean invoke2(FragmentActivity fragmentActivity) {
             Intrinsics3.checkNotNullParameter(fragmentActivity, ActivityChooserModel.ATTRIBUTE_ACTIVITY);
             AppScreen2.m156d(fragmentActivity, WidgetHubEmailFlow.class, new WidgetHubEmailViewModel2(null, 0, null, 7, null));
@@ -441,8 +441,8 @@ public final class WidgetHome extends AppFragment implements OnTabSelectedListen
         }
     }
 
-    /* compiled from: WidgetHome.kt */
-    /* renamed from: com.discord.widgets.home.WidgetHome$onCreate$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.home.WidgetHome$onCreate$1 */
+    /* JADX INFO: compiled from: WidgetHome.kt */
     public static final class C89481 extends Lambda implements Function1<Context, Locale> {
         public C89481() {
             super(1);
@@ -453,15 +453,15 @@ public final class WidgetHome extends AppFragment implements OnTabSelectedListen
             return invoke2(context);
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final Locale invoke2(Context context) {
             Intrinsics3.checkNotNullParameter(context, "context");
             return WidgetHome.access$getLocaleManager$p(WidgetHome.this).getPrimaryLocale(context);
         }
     }
 
-    /* compiled from: WidgetHome.kt */
-    /* renamed from: com.discord.widgets.home.WidgetHome$onViewBound$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.home.WidgetHome$onViewBound$1 */
+    /* JADX INFO: compiled from: WidgetHome.kt */
     public static final class C89491<R> implements Func0<Boolean> {
         public C89491() {
         }
@@ -477,8 +477,8 @@ public final class WidgetHome extends AppFragment implements OnTabSelectedListen
         }
     }
 
-    /* compiled from: WidgetHome.kt */
-    /* renamed from: com.discord.widgets.home.WidgetHome$onViewBound$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.home.WidgetHome$onViewBound$2 */
+    /* JADX INFO: compiled from: WidgetHome.kt */
     public static final class C89502<T, R> implements Func1<StoreNux.NuxState, Boolean> {
         public C89502() {
         }
@@ -488,7 +488,7 @@ public final class WidgetHome extends AppFragment implements OnTabSelectedListen
             return call2(nuxState);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final Boolean call2(StoreNux.NuxState nuxState) {
             FragmentActivity activity = WidgetHome.this.getActivity();
             if (!(activity instanceof AppActivity)) {
@@ -499,8 +499,8 @@ public final class WidgetHome extends AppFragment implements OnTabSelectedListen
         }
     }
 
-    /* compiled from: WidgetHome.kt */
-    /* renamed from: com.discord.widgets.home.WidgetHome$onViewBound$3 */
+    /* JADX INFO: renamed from: com.discord.widgets.home.WidgetHome$onViewBound$3 */
+    /* JADX INFO: compiled from: WidgetHome.kt */
     public static final class C89513 extends Lambda implements Function1<StoreNux.NuxState, Unit> {
         public C89513() {
             super(1);
@@ -512,7 +512,7 @@ public final class WidgetHome extends AppFragment implements OnTabSelectedListen
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(StoreNux.NuxState nuxState) {
             boolean z2;
             boolean z3 = false;
@@ -543,8 +543,8 @@ public final class WidgetHome extends AppFragment implements OnTabSelectedListen
         }
     }
 
-    /* compiled from: WidgetHome.kt */
-    /* renamed from: com.discord.widgets.home.WidgetHome$onViewBoundOrOnResume$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.home.WidgetHome$onViewBoundOrOnResume$1 */
+    /* JADX INFO: compiled from: WidgetHome.kt */
     public static final class C89521 extends Lambda implements Function1<WidgetHomeViewModel.ViewState, Unit> {
         public C89521() {
             super(1);
@@ -556,15 +556,15 @@ public final class WidgetHome extends AppFragment implements OnTabSelectedListen
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(WidgetHomeViewModel.ViewState viewState) {
             Intrinsics3.checkNotNullParameter(viewState, "viewState");
             WidgetHome.access$handleViewState(WidgetHome.this, viewState);
         }
     }
 
-    /* compiled from: WidgetHome.kt */
-    /* renamed from: com.discord.widgets.home.WidgetHome$onViewBoundOrOnResume$10 */
+    /* JADX INFO: renamed from: com.discord.widgets.home.WidgetHome$onViewBoundOrOnResume$10 */
+    /* JADX INFO: compiled from: WidgetHome.kt */
     public static final class C895310<T, R> implements Func1<MeUser, Boolean> {
         public static final C895310 INSTANCE = new C895310();
 
@@ -573,7 +573,7 @@ public final class WidgetHome extends AppFragment implements OnTabSelectedListen
             return call2(meUser);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final Boolean call2(MeUser meUser) {
             UserUtils userUtils = UserUtils.INSTANCE;
             Intrinsics3.checkNotNullExpressionValue(meUser, "it");
@@ -581,8 +581,8 @@ public final class WidgetHome extends AppFragment implements OnTabSelectedListen
         }
     }
 
-    /* compiled from: WidgetHome.kt */
-    /* renamed from: com.discord.widgets.home.WidgetHome$onViewBoundOrOnResume$11 */
+    /* JADX INFO: renamed from: com.discord.widgets.home.WidgetHome$onViewBoundOrOnResume$11 */
+    /* JADX INFO: compiled from: WidgetHome.kt */
     public static final class C895411 extends Lambda implements Function1<MeUser, Unit> {
         public C895411() {
             super(1);
@@ -594,14 +594,14 @@ public final class WidgetHome extends AppFragment implements OnTabSelectedListen
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(MeUser meUser) {
             WidgetHome.access$showUrgentMessageDialog(WidgetHome.this);
         }
     }
 
-    /* compiled from: WidgetHome.kt */
-    /* renamed from: com.discord.widgets.home.WidgetHome$onViewBoundOrOnResume$12 */
+    /* JADX INFO: renamed from: com.discord.widgets.home.WidgetHome$onViewBoundOrOnResume$12 */
+    /* JADX INFO: compiled from: WidgetHome.kt */
     public static final class C895512 extends Lambda implements Function1<InteractionModalCreate, Unit> {
         public C895512() {
             super(1);
@@ -613,15 +613,15 @@ public final class WidgetHome extends AppFragment implements OnTabSelectedListen
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(InteractionModalCreate interactionModalCreate) {
             Intrinsics3.checkNotNullParameter(interactionModalCreate, "it");
             WidgetHome.access$showInteractionModal(WidgetHome.this, interactionModalCreate);
         }
     }
 
-    /* compiled from: WidgetHome.kt */
-    /* renamed from: com.discord.widgets.home.WidgetHome$onViewBoundOrOnResume$13 */
+    /* JADX INFO: renamed from: com.discord.widgets.home.WidgetHome$onViewBoundOrOnResume$13 */
+    /* JADX INFO: compiled from: WidgetHome.kt */
     public static final /* synthetic */ class C895613 extends FunctionReferenceImpl implements Function1<WidgetGlobalStatusIndicatorState.State, Unit> {
         public C895613(WidgetHome widgetHome) {
             super(1, widgetHome, WidgetHome.class, "handleGlobalStatusIndicatorState", "handleGlobalStatusIndicatorState(Lcom/discord/widgets/status/WidgetGlobalStatusIndicatorState$State;)V", 0);
@@ -633,15 +633,15 @@ public final class WidgetHome extends AppFragment implements OnTabSelectedListen
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(WidgetGlobalStatusIndicatorState.State state) {
             Intrinsics3.checkNotNullParameter(state, "p1");
             WidgetHome.access$handleGlobalStatusIndicatorState((WidgetHome) this.receiver, state);
         }
     }
 
-    /* compiled from: WidgetHome.kt */
-    /* renamed from: com.discord.widgets.home.WidgetHome$onViewBoundOrOnResume$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.home.WidgetHome$onViewBoundOrOnResume$2 */
+    /* JADX INFO: compiled from: WidgetHome.kt */
     public static final class C89572 extends Lambda implements Function1<WidgetHomeViewModel.Event, Unit> {
         public C89572() {
             super(1);
@@ -653,15 +653,15 @@ public final class WidgetHome extends AppFragment implements OnTabSelectedListen
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(WidgetHomeViewModel.Event event) {
             Intrinsics3.checkNotNullParameter(event, "event");
             WidgetHome.access$handleEvent(WidgetHome.this, event);
         }
     }
 
-    /* compiled from: WidgetHome.kt */
-    /* renamed from: com.discord.widgets.home.WidgetHome$onViewBoundOrOnResume$3 */
+    /* JADX INFO: renamed from: com.discord.widgets.home.WidgetHome$onViewBoundOrOnResume$3 */
+    /* JADX INFO: compiled from: WidgetHome.kt */
     public static final class C89583 extends Lambda implements Function1<WidgetHomeModel, Unit> {
         public C89583() {
             super(1);
@@ -673,15 +673,15 @@ public final class WidgetHome extends AppFragment implements OnTabSelectedListen
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(WidgetHomeModel widgetHomeModel) {
             Intrinsics3.checkNotNullParameter(widgetHomeModel, "it");
             WidgetHome.access$configureUI(WidgetHome.this, widgetHomeModel);
         }
     }
 
-    /* compiled from: WidgetHome.kt */
-    /* renamed from: com.discord.widgets.home.WidgetHome$onViewBoundOrOnResume$4 */
+    /* JADX INFO: renamed from: com.discord.widgets.home.WidgetHome$onViewBoundOrOnResume$4 */
+    /* JADX INFO: compiled from: WidgetHome.kt */
     public static final class C89594<T1, T2, R> implements Func2<WidgetHomeModel, WidgetHomeModel, Boolean> {
         public static final C89594 INSTANCE = new C89594();
 
@@ -690,14 +690,14 @@ public final class WidgetHome extends AppFragment implements OnTabSelectedListen
             return call2(widgetHomeModel, widgetHomeModel2);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final Boolean call2(WidgetHomeModel widgetHomeModel, WidgetHomeModel widgetHomeModel2) {
             return Boolean.valueOf(widgetHomeModel.getChannelId() == widgetHomeModel2.getChannelId());
         }
     }
 
-    /* compiled from: WidgetHome.kt */
-    /* renamed from: com.discord.widgets.home.WidgetHome$onViewBoundOrOnResume$5 */
+    /* JADX INFO: renamed from: com.discord.widgets.home.WidgetHome$onViewBoundOrOnResume$5 */
+    /* JADX INFO: compiled from: WidgetHome.kt */
     public static final class C89605 extends Lambda implements Function1<WidgetHomeModel, Unit> {
         public C89605() {
             super(1);
@@ -709,7 +709,7 @@ public final class WidgetHome extends AppFragment implements OnTabSelectedListen
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(WidgetHomeModel widgetHomeModel) {
             WidgetHome widgetHome = WidgetHome.this;
             Intrinsics3.checkNotNullExpressionValue(widgetHomeModel, "it");
@@ -717,8 +717,8 @@ public final class WidgetHome extends AppFragment implements OnTabSelectedListen
         }
     }
 
-    /* compiled from: WidgetHome.kt */
-    /* renamed from: com.discord.widgets.home.WidgetHome$onViewBoundOrOnResume$6 */
+    /* JADX INFO: renamed from: com.discord.widgets.home.WidgetHome$onViewBoundOrOnResume$6 */
+    /* JADX INFO: compiled from: WidgetHome.kt */
     public static final class C89616<T, R> implements Func1<SurveyUtils.Survey, Boolean> {
         public static final C89616 INSTANCE = new C89616();
 
@@ -727,14 +727,14 @@ public final class WidgetHome extends AppFragment implements OnTabSelectedListen
             return call2(survey);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final Boolean call2(SurveyUtils.Survey survey) {
             return Boolean.valueOf(!Intrinsics3.areEqual(survey, SurveyUtils.Survey.None.INSTANCE));
         }
     }
 
-    /* compiled from: WidgetHome.kt */
-    /* renamed from: com.discord.widgets.home.WidgetHome$onViewBoundOrOnResume$7 */
+    /* JADX INFO: renamed from: com.discord.widgets.home.WidgetHome$onViewBoundOrOnResume$7 */
+    /* JADX INFO: compiled from: WidgetHome.kt */
     public static final /* synthetic */ class C89627 extends FunctionReferenceImpl implements Function1<SurveyUtils.Survey, Unit> {
         public C89627(WidgetHome widgetHome) {
             super(1, widgetHome, WidgetHome.class, "showSurvey", "showSurvey(Lcom/discord/utilities/surveys/SurveyUtils$Survey;)V", 0);
@@ -746,15 +746,15 @@ public final class WidgetHome extends AppFragment implements OnTabSelectedListen
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(SurveyUtils.Survey survey) {
             Intrinsics3.checkNotNullParameter(survey, "p1");
             WidgetHome.access$showSurvey((WidgetHome) this.receiver, survey);
         }
     }
 
-    /* compiled from: WidgetHome.kt */
-    /* renamed from: com.discord.widgets.home.WidgetHome$onViewBoundOrOnResume$8 */
+    /* JADX INFO: renamed from: com.discord.widgets.home.WidgetHome$onViewBoundOrOnResume$8 */
+    /* JADX INFO: compiled from: WidgetHome.kt */
     public static final class C89638<T, R> implements Func1<StoreNux.NuxState, Boolean> {
         public static final C89638 INSTANCE = new C89638();
 
@@ -763,14 +763,14 @@ public final class WidgetHome extends AppFragment implements OnTabSelectedListen
             return call2(nuxState);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final Boolean call2(StoreNux.NuxState nuxState) {
             return Boolean.valueOf(nuxState.getFirstOpen());
         }
     }
 
-    /* compiled from: WidgetHome.kt */
-    /* renamed from: com.discord.widgets.home.WidgetHome$onViewBoundOrOnResume$9 */
+    /* JADX INFO: renamed from: com.discord.widgets.home.WidgetHome$onViewBoundOrOnResume$9 */
+    /* JADX INFO: compiled from: WidgetHome.kt */
     public static final class C89649 extends Lambda implements Function1<StoreNux.NuxState, Unit> {
         public C89649() {
             super(1);
@@ -782,14 +782,14 @@ public final class WidgetHome extends AppFragment implements OnTabSelectedListen
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(StoreNux.NuxState nuxState) {
             WidgetHome.access$configureFirstOpen(WidgetHome.this);
         }
     }
 
-    /* compiled from: WidgetHome.kt */
-    /* renamed from: com.discord.widgets.home.WidgetHome$setPanelWindowInsetsListeners$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.home.WidgetHome$setPanelWindowInsetsListeners$1 */
+    /* JADX INFO: compiled from: WidgetHome.kt */
     public static final class C89651 implements OnApplyWindowInsetsListener {
         public C89651() {
         }
@@ -805,8 +805,8 @@ public final class WidgetHome extends AppFragment implements OnTabSelectedListen
         }
     }
 
-    /* compiled from: WidgetHome.kt */
-    /* renamed from: com.discord.widgets.home.WidgetHome$setPanelWindowInsetsListeners$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.home.WidgetHome$setPanelWindowInsetsListeners$2 */
+    /* JADX INFO: compiled from: WidgetHome.kt */
     public static final class C89662 implements OnApplyWindowInsetsListener {
         public C89662() {
         }
@@ -828,8 +828,8 @@ public final class WidgetHome extends AppFragment implements OnTabSelectedListen
         }
     }
 
-    /* compiled from: WidgetHome.kt */
-    /* renamed from: com.discord.widgets.home.WidgetHome$setPanelWindowInsetsListeners$3 */
+    /* JADX INFO: renamed from: com.discord.widgets.home.WidgetHome$setPanelWindowInsetsListeners$3 */
+    /* JADX INFO: compiled from: WidgetHome.kt */
     public static final class C89673 implements OnApplyWindowInsetsListener {
         public C89673() {
         }
@@ -845,8 +845,8 @@ public final class WidgetHome extends AppFragment implements OnTabSelectedListen
         }
     }
 
-    /* compiled from: WidgetHome.kt */
-    /* renamed from: com.discord.widgets.home.WidgetHome$showSurvey$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.home.WidgetHome$showSurvey$1 */
+    /* JADX INFO: compiled from: WidgetHome.kt */
     public static final class C89681 extends Lambda implements Function1<FragmentActivity, Boolean> {
         public final /* synthetic */ SurveyUtils.Survey $survey;
 
@@ -861,7 +861,7 @@ public final class WidgetHome extends AppFragment implements OnTabSelectedListen
             return Boolean.valueOf(invoke2(fragmentActivity));
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final boolean invoke2(FragmentActivity fragmentActivity) {
             Intrinsics3.checkNotNullParameter(fragmentActivity, ActivityChooserModel.ATTRIBUTE_ACTIVITY);
             WidgetMainSurveyDialog.Companion companion = WidgetMainSurveyDialog.INSTANCE;
@@ -873,8 +873,8 @@ public final class WidgetHome extends AppFragment implements OnTabSelectedListen
         }
     }
 
-    /* compiled from: WidgetHome.kt */
-    /* renamed from: com.discord.widgets.home.WidgetHome$showUrgentMessageDialog$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.home.WidgetHome$showUrgentMessageDialog$1 */
+    /* JADX INFO: compiled from: WidgetHome.kt */
     public static final class C89691 extends Lambda implements Function1<FragmentActivity, Boolean> {
         public static final C89691 INSTANCE = new C89691();
 
@@ -887,7 +887,7 @@ public final class WidgetHome extends AppFragment implements OnTabSelectedListen
             return Boolean.valueOf(invoke2(fragmentActivity));
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final boolean invoke2(FragmentActivity fragmentActivity) {
             Intrinsics3.checkNotNullParameter(fragmentActivity, ActivityChooserModel.ATTRIBUTE_ACTIVITY);
             WidgetUrgentMessageDialog.Companion aVar = WidgetUrgentMessageDialog.INSTANCE;
@@ -1005,10 +1005,10 @@ public final class WidgetHome extends AppFragment implements OnTabSelectedListen
             roundedRelativeLayout.draw(new Canvas(bitmapCreateBitmap));
             getBinding().f17130g.setImageBitmap(bitmapCreateBitmap);
             if (event instanceof WidgetHomeViewModel.Event.AnimatePeekIn) {
-                View view3 = getBinding().f17130g;
-                Intrinsics3.checkNotNullExpressionValue(view3, "binding.peekTransitionBitmap");
+                ImageView imageView = getBinding().f17130g;
+                Intrinsics3.checkNotNullExpressionValue(imageView, "binding.peekTransitionBitmap");
                 right2 = roundedRelativeLayout.getRight();
-                view2 = view3;
+                view2 = imageView;
                 view = roundedRelativeLayout;
                 j = 250;
                 right = 0.0f;
@@ -1025,9 +1025,9 @@ public final class WidgetHome extends AppFragment implements OnTabSelectedListen
             view2.setTranslationX(right2 - roundedRelativeLayout.getMeasuredWidth());
             view2.animate().setDuration(j).translationX(right - roundedRelativeLayout.getMeasuredWidth()).start();
             widgetChatList.disableItemAnimations();
-            ImageView imageView = getBinding().f17130g;
-            Intrinsics3.checkNotNullExpressionValue(imageView, "binding.peekTransitionBitmap");
-            imageView.setVisibility(0);
+            ImageView imageView2 = getBinding().f17130g;
+            Intrinsics3.checkNotNullExpressionValue(imageView2, "binding.peekTransitionBitmap");
+            imageView2.setVisibility(0);
         }
     }
 

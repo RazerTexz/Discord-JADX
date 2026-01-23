@@ -27,41 +27,41 @@ import p007b.p225i.p226a.p288f.p299e.p308o.C3406h;
 import p007b.p225i.p226a.p288f.p299e.p308o.C3407i;
 import p007b.p225i.p226a.p288f.p299e.p310p.C3411b;
 
-/* renamed from: b.i.a.f.m.a */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.m.a */
+/* JADX INFO: loaded from: classes3.dex */
 public class C4351a {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static ScheduledExecutorService f11458a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final Object f11459b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final PowerManager.WakeLock f11460c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public WorkSource f11461d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final int f11462e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final String f11463f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public final Context f11464g;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public boolean f11465h;
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public final Map<String, Integer[]> f11466i;
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public int f11467j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public AtomicInteger f11468k;
 
     public C4351a(@NonNull Context context, int i, @NonNull String str) {
@@ -144,7 +144,7 @@ public class C4351a {
 
     /* JADX WARN: Removed duplicated region for block: B:21:0x0059 A[Catch: all -> 0x0087, TryCatch #0 {, blocks: (B:7:0x0010, B:9:0x0019, B:14:0x002c, B:16:0x0031, B:18:0x003b, B:25:0x0061, B:26:0x006e, B:19:0x004a, B:21:0x0059, B:23:0x005d, B:11:0x001d, B:13:0x0025), top: B:34:0x0010 }] */
     /* JADX WARN: Removed duplicated region for block: B:25:0x0061 A[Catch: all -> 0x0087, TryCatch #0 {, blocks: (B:7:0x0010, B:9:0x0019, B:14:0x002c, B:16:0x0031, B:18:0x003b, B:25:0x0061, B:26:0x006e, B:19:0x004a, B:21:0x0059, B:23:0x005d, B:11:0x001d, B:13:0x0025), top: B:34:0x0010 }] */
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
@@ -183,7 +183,7 @@ public class C4351a {
 
     /* JADX WARN: Removed duplicated region for block: B:20:0x0053 A[Catch: all -> 0x006d, TryCatch #0 {, blocks: (B:10:0x0024, B:12:0x0029, B:24:0x005b, B:25:0x0068, B:15:0x0035, B:17:0x003d, B:18:0x0044, B:20:0x0053, B:22:0x0057), top: B:31:0x0024 }] */
     /* JADX WARN: Removed duplicated region for block: B:24:0x005b A[Catch: all -> 0x006d, TryCatch #0 {, blocks: (B:10:0x0024, B:12:0x0029, B:24:0x005b, B:25:0x0068, B:15:0x0035, B:17:0x003d, B:18:0x0044, B:20:0x0053, B:22:0x0057), top: B:31:0x0024 }] */
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
@@ -218,7 +218,7 @@ public class C4351a {
         m6004d();
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final List<String> m6003c() {
         int iIntValue;
         Method method;
@@ -234,6 +234,7 @@ public class C4351a {
                 iIntValue = ((Integer) objInvoke).intValue();
             } catch (Exception e) {
                 Log.wtf("WorkSourceUtil", "Unable to assign blame through WorkSource", e);
+                iIntValue = 0;
             }
         }
         if (iIntValue != 0) {
@@ -256,7 +257,7 @@ public class C4351a {
         return arrayList;
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final void m6004d() {
         if (this.f11460c.isHeld()) {
             try {

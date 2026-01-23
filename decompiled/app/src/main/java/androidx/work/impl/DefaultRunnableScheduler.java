@@ -8,8 +8,8 @@ import androidx.annotation.VisibleForTesting;
 import androidx.core.os.HandlerCompat;
 import androidx.work.RunnableScheduler;
 
+/* JADX INFO: loaded from: classes.dex */
 @RestrictTo({RestrictTo.Scope.LIBRARY_GROUP})
-/* loaded from: classes.dex */
 public class DefaultRunnableScheduler implements RunnableScheduler {
     private final Handler mHandler;
 

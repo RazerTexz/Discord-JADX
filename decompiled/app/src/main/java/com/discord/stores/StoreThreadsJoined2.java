@@ -5,9 +5,9 @@ import kotlin.jvm.functions.Function1;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: StoreThreadsJoined.kt */
-/* renamed from: com.discord.stores.StoreThreadsJoined$deleteThreads$removed$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.stores.StoreThreadsJoined$deleteThreads$removed$1, reason: use source file name */
+/* JADX INFO: compiled from: StoreThreadsJoined.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class StoreThreadsJoined2 extends Lambda implements Function1<StoreThreadsJoined.JoinedThread, Boolean> {
     public final /* synthetic */ long $guildId;
 
@@ -22,7 +22,7 @@ public final class StoreThreadsJoined2 extends Lambda implements Function1<Store
         return Boolean.valueOf(invoke2(joinedThread));
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final boolean invoke2(StoreThreadsJoined.JoinedThread joinedThread) {
         Intrinsics3.checkNotNullParameter(joinedThread, "joinedThread");
         return joinedThread.getGuildId() == this.$guildId;

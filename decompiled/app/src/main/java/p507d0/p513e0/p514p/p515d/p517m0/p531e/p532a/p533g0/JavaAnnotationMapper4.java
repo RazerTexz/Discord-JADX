@@ -18,22 +18,22 @@ import p507d0.p592z.p594d.Lambda;
 import p507d0.p592z.p594d.PropertyReference1Impl;
 import p507d0.p592z.p594d.Reflection2;
 
-/* compiled from: JavaAnnotationMapper.kt */
-/* renamed from: d0.e0.p.d.m0.e.a.g0.e, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.e.a.g0.e, reason: use source file name */
+/* JADX INFO: compiled from: JavaAnnotationMapper.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class JavaAnnotationMapper4 extends JavaAnnotationMapper {
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public static final /* synthetic */ KProperty<Object>[] f23240g = {Reflection2.property1(new PropertyReference1Impl(Reflection2.getOrCreateKotlinClass(JavaAnnotationMapper4.class), "allValueArguments", "getAllValueArguments()Ljava/util/Map;"))};
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public final storage5 f23241h;
 
-    /* compiled from: JavaAnnotationMapper.kt */
-    /* renamed from: d0.e0.p.d.m0.e.a.g0.e$a */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.e.a.g0.e$a */
+    /* JADX INFO: compiled from: JavaAnnotationMapper.kt */
     public static final class a extends Lambda implements Function0<Map<Name, ? extends C11831w>> {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public static final a f23242j = new a();
 
         public a() {
@@ -46,7 +46,7 @@ public final class JavaAnnotationMapper4 extends JavaAnnotationMapper {
         }
 
         @Override // kotlin.jvm.functions.Function0
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final Map<Name, ? extends C11831w> invoke2() {
             return MapsJVM.mapOf(Tuples.m10073to(JavaAnnotationMapper2.f23230a.getDEPRECATED_ANNOTATION_MESSAGE$descriptors_jvm(), new C11831w("Deprecated in Java")));
         }

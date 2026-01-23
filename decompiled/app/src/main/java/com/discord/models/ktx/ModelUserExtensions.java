@@ -4,9 +4,9 @@ import androidx.core.app.Person;
 import com.discord.models.user.User;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ModelUserExtensions.kt */
-/* renamed from: com.discord.models.ktx.ModelUserExtensionsKt, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: com.discord.models.ktx.ModelUserExtensionsKt, reason: use source file name */
+/* JADX INFO: compiled from: ModelUserExtensions.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class ModelUserExtensions {
     public static final Person toPerson(User user) {
         Intrinsics3.checkNotNullParameter(user, "$this$toPerson");

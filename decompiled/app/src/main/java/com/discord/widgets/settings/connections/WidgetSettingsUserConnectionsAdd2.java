@@ -9,9 +9,9 @@ import com.discord.widgets.settings.connections.WidgetSettingsUserConnectionsAdd
 import com.discord.widgets.settings.connections.WidgetSettingsUserConnectionsAddXbox;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: WidgetSettingsUserConnectionsAdd.kt */
-/* renamed from: com.discord.widgets.settings.connections.WidgetSettingsUserConnectionsAdd$Adapter$ViewHolder$onConfigure$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.settings.connections.WidgetSettingsUserConnectionsAdd$Adapter$ViewHolder$onConfigure$1, reason: use source file name */
+/* JADX INFO: compiled from: WidgetSettingsUserConnectionsAdd.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetSettingsUserConnectionsAdd2 implements View.OnClickListener {
     public final /* synthetic */ WidgetSettingsUserConnectionsAdd.PlatformItem $data;
     public final /* synthetic */ WidgetSettingsUserConnectionsAdd.Adapter.ViewHolder this$0;

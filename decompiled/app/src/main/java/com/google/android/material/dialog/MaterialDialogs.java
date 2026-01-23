@@ -12,8 +12,8 @@ import androidx.annotation.RestrictTo;
 import com.google.android.material.C10817R;
 import com.google.android.material.internal.ThemeEnforcement;
 
+/* JADX INFO: loaded from: classes3.dex */
 @RestrictTo({RestrictTo.Scope.LIBRARY_GROUP})
-/* loaded from: classes3.dex */
 public class MaterialDialogs {
     private MaterialDialogs() {
     }

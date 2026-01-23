@@ -5,7 +5,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.view.viewmodel.C0465R;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class ViewTreeViewModelStoreOwner {
     private ViewTreeViewModelStoreOwner() {
     }

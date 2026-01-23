@@ -10,12 +10,12 @@ import kotlin.jvm.internal.DefaultConstructorMarker;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: PermissionsContexts.kt */
-/* renamed from: com.discord.utilities.permissions.ManageGuildContext, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.utilities.permissions.ManageGuildContext, reason: use source file name */
+/* JADX INFO: compiled from: PermissionsContexts.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final /* data */ class PermissionsContexts {
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private final boolean canManageBans;
     private final boolean canManageChannels;
@@ -27,8 +27,8 @@ public final /* data */ class PermissionsContexts {
     private final boolean canViewAuditLogs;
     private final boolean isOwnerWithRequiredMFALevel;
 
-    /* compiled from: PermissionsContexts.kt */
-    /* renamed from: com.discord.utilities.permissions.ManageGuildContext$Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: com.discord.utilities.permissions.ManageGuildContext$Companion, reason: from kotlin metadata */
+    /* JADX INFO: compiled from: PermissionsContexts.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -81,47 +81,47 @@ public final /* data */ class PermissionsContexts {
         return this.canManageServer || this.canManageChannels || this.canManageRoles || this.canManageBans || this.canViewAuditLogs || this.canManageEmojisAndStickers || this.isOwnerWithRequiredMFALevel;
     }
 
-    /* renamed from: component1, reason: from getter */
+    /* JADX INFO: renamed from: component1, reason: from getter */
     public final boolean getCanManageServer() {
         return this.canManageServer;
     }
 
-    /* renamed from: component2, reason: from getter */
+    /* JADX INFO: renamed from: component2, reason: from getter */
     public final boolean getCanManageChannels() {
         return this.canManageChannels;
     }
 
-    /* renamed from: component3, reason: from getter */
+    /* JADX INFO: renamed from: component3, reason: from getter */
     public final boolean getCanManageRoles() {
         return this.canManageRoles;
     }
 
-    /* renamed from: component4, reason: from getter */
+    /* JADX INFO: renamed from: component4, reason: from getter */
     public final boolean getCanManageBans() {
         return this.canManageBans;
     }
 
-    /* renamed from: component5, reason: from getter */
+    /* JADX INFO: renamed from: component5, reason: from getter */
     public final boolean getCanManageNicknames() {
         return this.canManageNicknames;
     }
 
-    /* renamed from: component6, reason: from getter */
+    /* JADX INFO: renamed from: component6, reason: from getter */
     public final boolean getCanManageEmojisAndStickers() {
         return this.canManageEmojisAndStickers;
     }
 
-    /* renamed from: component7, reason: from getter */
+    /* JADX INFO: renamed from: component7, reason: from getter */
     public final boolean getCanViewAuditLogs() {
         return this.canViewAuditLogs;
     }
 
-    /* renamed from: component8, reason: from getter */
+    /* JADX INFO: renamed from: component8, reason: from getter */
     public final boolean getCanManageEvents() {
         return this.canManageEvents;
     }
 
-    /* renamed from: component9, reason: from getter */
+    /* JADX INFO: renamed from: component9, reason: from getter */
     public final boolean getIsOwnerWithRequiredMFALevel() {
         return this.isOwnerWithRequiredMFALevel;
     }
@@ -177,13 +177,30 @@ public final /* data */ class PermissionsContexts {
     /* JADX WARN: Type inference failed for: r0v1, types: [int] */
     /* JADX WARN: Type inference failed for: r0v18 */
     /* JADX WARN: Type inference failed for: r0v19 */
-    /* JADX WARN: Type inference failed for: r2v0, types: [boolean] */
-    /* JADX WARN: Type inference failed for: r2v10, types: [boolean] */
-    /* JADX WARN: Type inference failed for: r2v12, types: [boolean] */
-    /* JADX WARN: Type inference failed for: r2v2, types: [boolean] */
-    /* JADX WARN: Type inference failed for: r2v4, types: [boolean] */
-    /* JADX WARN: Type inference failed for: r2v6, types: [boolean] */
-    /* JADX WARN: Type inference failed for: r2v8, types: [boolean] */
+    /* JADX WARN: Type inference failed for: r1v0 */
+    /* JADX WARN: Type inference failed for: r1v1, types: [int] */
+    /* JADX WARN: Type inference failed for: r1v2 */
+    /* JADX WARN: Type inference failed for: r2v1, types: [int] */
+    /* JADX WARN: Type inference failed for: r2v11, types: [int] */
+    /* JADX WARN: Type inference failed for: r2v13, types: [int] */
+    /* JADX WARN: Type inference failed for: r2v15 */
+    /* JADX WARN: Type inference failed for: r2v16 */
+    /* JADX WARN: Type inference failed for: r2v17 */
+    /* JADX WARN: Type inference failed for: r2v18 */
+    /* JADX WARN: Type inference failed for: r2v19 */
+    /* JADX WARN: Type inference failed for: r2v20 */
+    /* JADX WARN: Type inference failed for: r2v21 */
+    /* JADX WARN: Type inference failed for: r2v22 */
+    /* JADX WARN: Type inference failed for: r2v23 */
+    /* JADX WARN: Type inference failed for: r2v24 */
+    /* JADX WARN: Type inference failed for: r2v25 */
+    /* JADX WARN: Type inference failed for: r2v26 */
+    /* JADX WARN: Type inference failed for: r2v27 */
+    /* JADX WARN: Type inference failed for: r2v28 */
+    /* JADX WARN: Type inference failed for: r2v3, types: [int] */
+    /* JADX WARN: Type inference failed for: r2v5, types: [int] */
+    /* JADX WARN: Type inference failed for: r2v7, types: [int] */
+    /* JADX WARN: Type inference failed for: r2v9, types: [int] */
     public int hashCode() {
         boolean z2 = this.canManageServer;
         ?? r0 = z2;
@@ -191,50 +208,50 @@ public final /* data */ class PermissionsContexts {
             r0 = 1;
         }
         int i = r0 * 31;
-        ?? r2 = this.canManageChannels;
-        int i2 = r2;
-        if (r2 != 0) {
-            i2 = 1;
+        boolean z3 = this.canManageChannels;
+        ?? r2 = z3;
+        if (z3) {
+            r2 = 1;
         }
-        int i3 = (i + i2) * 31;
-        ?? r22 = this.canManageRoles;
-        int i4 = r22;
-        if (r22 != 0) {
-            i4 = 1;
+        int i2 = (i + r2) * 31;
+        boolean z4 = this.canManageRoles;
+        ?? r22 = z4;
+        if (z4) {
+            r22 = 1;
         }
-        int i5 = (i3 + i4) * 31;
-        ?? r23 = this.canManageBans;
-        int i6 = r23;
-        if (r23 != 0) {
-            i6 = 1;
+        int i3 = (i2 + r22) * 31;
+        boolean z5 = this.canManageBans;
+        ?? r23 = z5;
+        if (z5) {
+            r23 = 1;
         }
-        int i7 = (i5 + i6) * 31;
-        ?? r24 = this.canManageNicknames;
-        int i8 = r24;
-        if (r24 != 0) {
-            i8 = 1;
+        int i4 = (i3 + r23) * 31;
+        boolean z6 = this.canManageNicknames;
+        ?? r24 = z6;
+        if (z6) {
+            r24 = 1;
         }
-        int i9 = (i7 + i8) * 31;
-        ?? r25 = this.canManageEmojisAndStickers;
-        int i10 = r25;
-        if (r25 != 0) {
-            i10 = 1;
+        int i5 = (i4 + r24) * 31;
+        boolean z7 = this.canManageEmojisAndStickers;
+        ?? r25 = z7;
+        if (z7) {
+            r25 = 1;
         }
-        int i11 = (i9 + i10) * 31;
-        ?? r26 = this.canViewAuditLogs;
-        int i12 = r26;
-        if (r26 != 0) {
-            i12 = 1;
+        int i6 = (i5 + r25) * 31;
+        boolean z8 = this.canViewAuditLogs;
+        ?? r26 = z8;
+        if (z8) {
+            r26 = 1;
         }
-        int i13 = (i11 + i12) * 31;
-        ?? r27 = this.canManageEvents;
-        int i14 = r27;
-        if (r27 != 0) {
-            i14 = 1;
+        int i7 = (i6 + r26) * 31;
+        boolean z9 = this.canManageEvents;
+        ?? r27 = z9;
+        if (z9) {
+            r27 = 1;
         }
-        int i15 = (i13 + i14) * 31;
-        boolean z3 = this.isOwnerWithRequiredMFALevel;
-        return i15 + (z3 ? 1 : z3 ? 1 : 0);
+        int i8 = (i7 + r27) * 31;
+        boolean z10 = this.isOwnerWithRequiredMFALevel;
+        return i8 + (z10 ? 1 : z10);
     }
 
     public final boolean isOwnerWithRequiredMFALevel() {

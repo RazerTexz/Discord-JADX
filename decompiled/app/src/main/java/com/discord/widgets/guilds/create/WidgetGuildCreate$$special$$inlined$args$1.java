@@ -7,8 +7,8 @@ import kotlin.jvm.functions.Function0;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: ArgUtils.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: ArgUtils.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetGuildCreate$$special$$inlined$args$1 extends Lambda implements Function0<WidgetGuildCreate.Options> {
     public final /* synthetic */ String $argsKey;
     public final /* synthetic */ AppFragment $this_args;
@@ -22,7 +22,6 @@ public final class WidgetGuildCreate$$special$$inlined$args$1 extends Lambda imp
 
     /* JADX WARN: Can't rename method to resolve collision */
     /* JADX WARN: Multi-variable type inference failed */
-    /* JADX WARN: Type inference failed for: r1v8, types: [android.os.Parcelable] */
     @Override // kotlin.jvm.functions.Function0
     public final WidgetGuildCreate.Options invoke() {
         Bundle arguments = this.$this_args.getArguments();
@@ -32,7 +31,7 @@ public final class WidgetGuildCreate$$special$$inlined$args$1 extends Lambda imp
         if (options == null) {
             parcelableExtra = this.$this_args.getMostRecentIntent().getParcelableExtra(this.$argsKey);
         }
-        if (parcelableExtra != null) {
+        if (parcelableExtra != 0) {
             return parcelableExtra;
         }
         StringBuilder sbM833U = outline.m833U("Missing args for class type ");

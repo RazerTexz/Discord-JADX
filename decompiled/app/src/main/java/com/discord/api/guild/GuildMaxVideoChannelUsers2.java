@@ -7,9 +7,9 @@ import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: GuildMaxVideoChannelUsers.kt */
-/* renamed from: com.discord.api.guild.GuildMaxVideoChannelUsersTypeAdapter, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: com.discord.api.guild.GuildMaxVideoChannelUsersTypeAdapter, reason: use source file name */
+/* JADX INFO: compiled from: GuildMaxVideoChannelUsers.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class GuildMaxVideoChannelUsers2 extends TypeAdapter<GuildMaxVideoChannelUsers> {
     @Override // com.google.gson.TypeAdapter
     public GuildMaxVideoChannelUsers read(JsonReader jsonReader) throws IOException {

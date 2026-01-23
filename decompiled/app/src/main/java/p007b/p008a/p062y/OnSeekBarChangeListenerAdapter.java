@@ -3,9 +3,9 @@ package p007b.p008a.p062y;
 import android.widget.SeekBar;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: OnSeekBarChangeListenerAdapter.kt */
-/* renamed from: b.a.y.j, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: b.a.y.j, reason: use source file name */
+/* JADX INFO: compiled from: OnSeekBarChangeListenerAdapter.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public class OnSeekBarChangeListenerAdapter implements SeekBar.OnSeekBarChangeListener {
     @Override // android.widget.SeekBar.OnSeekBarChangeListener
     public void onProgressChanged(SeekBar seekBar, int i, boolean z2) {

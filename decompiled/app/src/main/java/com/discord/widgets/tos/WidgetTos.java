@@ -35,21 +35,21 @@ import p507d0.p592z.p594d.Lambda;
 import p658rx.functions.Action2;
 import p658rx.functions.Func0;
 
-/* compiled from: WidgetTos.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: WidgetTos.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class WidgetTos extends AppFragment {
     public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetTos.class, "binding", "getBinding()Lcom/discord/databinding/WidgetTosBinding;", 0)};
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
 
-    /* renamed from: binding$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
 
-    /* renamed from: isAcknowledgement$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: isAcknowledgement$delegate, reason: from kotlin metadata */
     private final Lazy isAcknowledgement;
 
-    /* compiled from: WidgetTos.kt */
+    /* JADX INFO: compiled from: WidgetTos.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -66,13 +66,13 @@ public final class WidgetTos extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetTos.kt */
-    /* renamed from: com.discord.widgets.tos.WidgetTos$configureCommonTosModalUI$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.tos.WidgetTos$configureCommonTosModalUI$1 */
+    /* JADX INFO: compiled from: WidgetTos.kt */
     public static final class ViewOnClickListenerC101691 implements View.OnClickListener {
         public final /* synthetic */ RestAPIParams.UserAgreements $userAgreementsParam;
 
-        /* compiled from: WidgetTos.kt */
-        /* renamed from: com.discord.widgets.tos.WidgetTos$configureCommonTosModalUI$1$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.widgets.tos.WidgetTos$configureCommonTosModalUI$1$1, reason: invalid class name */
+        /* JADX INFO: compiled from: WidgetTos.kt */
         public static final class AnonymousClass1 extends Lambda implements Function1<Void, Unit> {
             public static final AnonymousClass1 INSTANCE = new AnonymousClass1();
 
@@ -86,7 +86,7 @@ public final class WidgetTos extends AppFragment {
                 return Unit.f27425a;
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2(Void r1) {
             }
         }
@@ -102,8 +102,8 @@ public final class WidgetTos extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetTos.kt */
-    /* renamed from: com.discord.widgets.tos.WidgetTos$isAcknowledgement$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.tos.WidgetTos$isAcknowledgement$2 */
+    /* JADX INFO: compiled from: WidgetTos.kt */
     public static final class C101702 extends Lambda implements Function0<Boolean> {
         public C101702() {
             super(0);
@@ -114,14 +114,14 @@ public final class WidgetTos extends AppFragment {
             return Boolean.valueOf(invoke2());
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final boolean invoke2() {
             return WidgetTos.this.getMostRecentIntent().getBooleanExtra("intent_args_key", false);
         }
     }
 
-    /* compiled from: WidgetTos.kt */
-    /* renamed from: com.discord.widgets.tos.WidgetTos$onViewBound$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.tos.WidgetTos$onViewBound$1 */
+    /* JADX INFO: compiled from: WidgetTos.kt */
     public static final class C101711<R> implements Func0<Boolean> {
         public static final C101711 INSTANCE = new C101711();
 
@@ -136,8 +136,8 @@ public final class WidgetTos extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetTos.kt */
-    /* renamed from: com.discord.widgets.tos.WidgetTos$onViewBound$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.tos.WidgetTos$onViewBound$2 */
+    /* JADX INFO: compiled from: WidgetTos.kt */
     public static final class C101722<T1, T2> implements Action2<MenuItem, Context> {
         public static final C101722 INSTANCE = new C101722();
 
@@ -146,7 +146,7 @@ public final class WidgetTos extends AppFragment {
             call2(menuItem, context);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final void call2(MenuItem menuItem, Context context) {
             Intrinsics3.checkNotNullExpressionValue(menuItem, "menuItem");
             if (menuItem.getItemId() != C5419R.id.menu_settings_log_out) {

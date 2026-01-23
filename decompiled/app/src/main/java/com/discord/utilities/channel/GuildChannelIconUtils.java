@@ -2,13 +2,13 @@ package com.discord.utilities.channel;
 
 import kotlin.jvm.internal.DefaultConstructorMarker;
 
-/* compiled from: GuildChannelIconUtils.kt */
-/* renamed from: com.discord.utilities.channel.GuildChannelIconType, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.utilities.channel.GuildChannelIconType, reason: use source file name */
+/* JADX INFO: compiled from: GuildChannelIconUtils.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public abstract class GuildChannelIconUtils {
 
-    /* compiled from: GuildChannelIconUtils.kt */
-    /* renamed from: com.discord.utilities.channel.GuildChannelIconType$Announcements */
+    /* JADX INFO: renamed from: com.discord.utilities.channel.GuildChannelIconType$Announcements */
+    /* JADX INFO: compiled from: GuildChannelIconUtils.kt */
     public static final class Announcements extends GuildChannelIconUtils {
         public static final Announcements INSTANCE = new Announcements();
 
@@ -17,8 +17,8 @@ public abstract class GuildChannelIconUtils {
         }
     }
 
-    /* compiled from: GuildChannelIconUtils.kt */
-    /* renamed from: com.discord.utilities.channel.GuildChannelIconType$Directory */
+    /* JADX INFO: renamed from: com.discord.utilities.channel.GuildChannelIconType$Directory */
+    /* JADX INFO: compiled from: GuildChannelIconUtils.kt */
     public static final class Directory extends GuildChannelIconUtils {
         public static final Directory INSTANCE = new Directory();
 
@@ -27,8 +27,8 @@ public abstract class GuildChannelIconUtils {
         }
     }
 
-    /* compiled from: GuildChannelIconUtils.kt */
-    /* renamed from: com.discord.utilities.channel.GuildChannelIconType$Forum */
+    /* JADX INFO: renamed from: com.discord.utilities.channel.GuildChannelIconType$Forum */
+    /* JADX INFO: compiled from: GuildChannelIconUtils.kt */
     public static final class Forum extends GuildChannelIconUtils {
         public static final Forum INSTANCE = new Forum();
 
@@ -37,8 +37,8 @@ public abstract class GuildChannelIconUtils {
         }
     }
 
-    /* compiled from: GuildChannelIconUtils.kt */
-    /* renamed from: com.discord.utilities.channel.GuildChannelIconType$ForumPost */
+    /* JADX INFO: renamed from: com.discord.utilities.channel.GuildChannelIconType$ForumPost */
+    /* JADX INFO: compiled from: GuildChannelIconUtils.kt */
     public static final class ForumPost extends GuildChannelIconUtils {
         public static final ForumPost INSTANCE = new ForumPost();
 
@@ -47,12 +47,12 @@ public abstract class GuildChannelIconUtils {
         }
     }
 
-    /* compiled from: GuildChannelIconUtils.kt */
-    /* renamed from: com.discord.utilities.channel.GuildChannelIconType$Locked */
+    /* JADX INFO: renamed from: com.discord.utilities.channel.GuildChannelIconType$Locked */
+    /* JADX INFO: compiled from: GuildChannelIconUtils.kt */
     public static abstract class Locked {
 
-        /* compiled from: GuildChannelIconUtils.kt */
-        /* renamed from: com.discord.utilities.channel.GuildChannelIconType$Locked$Announcements */
+        /* JADX INFO: renamed from: com.discord.utilities.channel.GuildChannelIconType$Locked$Announcements */
+        /* JADX INFO: compiled from: GuildChannelIconUtils.kt */
         public static final class Announcements extends GuildChannelIconUtils {
             public static final Announcements INSTANCE = new Announcements();
 
@@ -61,8 +61,8 @@ public abstract class GuildChannelIconUtils {
             }
         }
 
-        /* compiled from: GuildChannelIconUtils.kt */
-        /* renamed from: com.discord.utilities.channel.GuildChannelIconType$Locked$Forum */
+        /* JADX INFO: renamed from: com.discord.utilities.channel.GuildChannelIconType$Locked$Forum */
+        /* JADX INFO: compiled from: GuildChannelIconUtils.kt */
         public static final class Forum extends GuildChannelIconUtils {
             public static final Forum INSTANCE = new Forum();
 
@@ -71,8 +71,8 @@ public abstract class GuildChannelIconUtils {
             }
         }
 
-        /* compiled from: GuildChannelIconUtils.kt */
-        /* renamed from: com.discord.utilities.channel.GuildChannelIconType$Locked$ForumPost */
+        /* JADX INFO: renamed from: com.discord.utilities.channel.GuildChannelIconType$Locked$ForumPost */
+        /* JADX INFO: compiled from: GuildChannelIconUtils.kt */
         public static final class ForumPost extends GuildChannelIconUtils {
             public static final ForumPost INSTANCE = new ForumPost();
 
@@ -81,8 +81,8 @@ public abstract class GuildChannelIconUtils {
             }
         }
 
-        /* compiled from: GuildChannelIconUtils.kt */
-        /* renamed from: com.discord.utilities.channel.GuildChannelIconType$Locked$Text */
+        /* JADX INFO: renamed from: com.discord.utilities.channel.GuildChannelIconType$Locked$Text */
+        /* JADX INFO: compiled from: GuildChannelIconUtils.kt */
         public static final class Text extends GuildChannelIconUtils {
             public static final Text INSTANCE = new Text();
 
@@ -91,8 +91,8 @@ public abstract class GuildChannelIconUtils {
             }
         }
 
-        /* compiled from: GuildChannelIconUtils.kt */
-        /* renamed from: com.discord.utilities.channel.GuildChannelIconType$Locked$Thread */
+        /* JADX INFO: renamed from: com.discord.utilities.channel.GuildChannelIconType$Locked$Thread */
+        /* JADX INFO: compiled from: GuildChannelIconUtils.kt */
         public static final class Thread extends GuildChannelIconUtils {
             public static final Thread INSTANCE = new Thread();
 
@@ -105,12 +105,12 @@ public abstract class GuildChannelIconUtils {
         }
     }
 
-    /* compiled from: GuildChannelIconUtils.kt */
-    /* renamed from: com.discord.utilities.channel.GuildChannelIconType$NSFW */
+    /* JADX INFO: renamed from: com.discord.utilities.channel.GuildChannelIconType$NSFW */
+    /* JADX INFO: compiled from: GuildChannelIconUtils.kt */
     public static abstract class NSFW {
 
-        /* compiled from: GuildChannelIconUtils.kt */
-        /* renamed from: com.discord.utilities.channel.GuildChannelIconType$NSFW$Announcements */
+        /* JADX INFO: renamed from: com.discord.utilities.channel.GuildChannelIconType$NSFW$Announcements */
+        /* JADX INFO: compiled from: GuildChannelIconUtils.kt */
         public static final class Announcements extends GuildChannelIconUtils {
             public static final Announcements INSTANCE = new Announcements();
 
@@ -119,8 +119,8 @@ public abstract class GuildChannelIconUtils {
             }
         }
 
-        /* compiled from: GuildChannelIconUtils.kt */
-        /* renamed from: com.discord.utilities.channel.GuildChannelIconType$NSFW$Forum */
+        /* JADX INFO: renamed from: com.discord.utilities.channel.GuildChannelIconType$NSFW$Forum */
+        /* JADX INFO: compiled from: GuildChannelIconUtils.kt */
         public static final class Forum extends GuildChannelIconUtils {
             public static final Forum INSTANCE = new Forum();
 
@@ -129,8 +129,8 @@ public abstract class GuildChannelIconUtils {
             }
         }
 
-        /* compiled from: GuildChannelIconUtils.kt */
-        /* renamed from: com.discord.utilities.channel.GuildChannelIconType$NSFW$ForumPost */
+        /* JADX INFO: renamed from: com.discord.utilities.channel.GuildChannelIconType$NSFW$ForumPost */
+        /* JADX INFO: compiled from: GuildChannelIconUtils.kt */
         public static final class ForumPost extends GuildChannelIconUtils {
             public static final ForumPost INSTANCE = new ForumPost();
 
@@ -139,8 +139,8 @@ public abstract class GuildChannelIconUtils {
             }
         }
 
-        /* compiled from: GuildChannelIconUtils.kt */
-        /* renamed from: com.discord.utilities.channel.GuildChannelIconType$NSFW$Text */
+        /* JADX INFO: renamed from: com.discord.utilities.channel.GuildChannelIconType$NSFW$Text */
+        /* JADX INFO: compiled from: GuildChannelIconUtils.kt */
         public static final class Text extends GuildChannelIconUtils {
             public static final Text INSTANCE = new Text();
 
@@ -149,8 +149,8 @@ public abstract class GuildChannelIconUtils {
             }
         }
 
-        /* compiled from: GuildChannelIconUtils.kt */
-        /* renamed from: com.discord.utilities.channel.GuildChannelIconType$NSFW$Thread */
+        /* JADX INFO: renamed from: com.discord.utilities.channel.GuildChannelIconType$NSFW$Thread */
+        /* JADX INFO: compiled from: GuildChannelIconUtils.kt */
         public static final class Thread extends GuildChannelIconUtils {
             public static final Thread INSTANCE = new Thread();
 
@@ -159,8 +159,8 @@ public abstract class GuildChannelIconUtils {
             }
         }
 
-        /* compiled from: GuildChannelIconUtils.kt */
-        /* renamed from: com.discord.utilities.channel.GuildChannelIconType$NSFW$Voice */
+        /* JADX INFO: renamed from: com.discord.utilities.channel.GuildChannelIconType$NSFW$Voice */
+        /* JADX INFO: compiled from: GuildChannelIconUtils.kt */
         public static final class Voice extends GuildChannelIconUtils {
             public static final Voice INSTANCE = new Voice();
 
@@ -173,8 +173,8 @@ public abstract class GuildChannelIconUtils {
         }
     }
 
-    /* compiled from: GuildChannelIconUtils.kt */
-    /* renamed from: com.discord.utilities.channel.GuildChannelIconType$Text */
+    /* JADX INFO: renamed from: com.discord.utilities.channel.GuildChannelIconType$Text */
+    /* JADX INFO: compiled from: GuildChannelIconUtils.kt */
     public static final class Text extends GuildChannelIconUtils {
         public static final Text INSTANCE = new Text();
 
@@ -183,8 +183,8 @@ public abstract class GuildChannelIconUtils {
         }
     }
 
-    /* compiled from: GuildChannelIconUtils.kt */
-    /* renamed from: com.discord.utilities.channel.GuildChannelIconType$Thread */
+    /* JADX INFO: renamed from: com.discord.utilities.channel.GuildChannelIconType$Thread */
+    /* JADX INFO: compiled from: GuildChannelIconUtils.kt */
     public static final class Thread extends GuildChannelIconUtils {
         public static final Thread INSTANCE = new Thread();
 
@@ -193,8 +193,8 @@ public abstract class GuildChannelIconUtils {
         }
     }
 
-    /* compiled from: GuildChannelIconUtils.kt */
-    /* renamed from: com.discord.utilities.channel.GuildChannelIconType$Voice */
+    /* JADX INFO: renamed from: com.discord.utilities.channel.GuildChannelIconType$Voice */
+    /* JADX INFO: compiled from: GuildChannelIconUtils.kt */
     public static final class Voice extends GuildChannelIconUtils {
         public static final Voice INSTANCE = new Voice();
 

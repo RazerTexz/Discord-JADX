@@ -10,9 +10,9 @@ import kotlin.jvm.functions.Function1;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetGuildProfileSheet.kt */
-/* renamed from: com.discord.widgets.guilds.profile.WidgetGuildProfileSheet$configureTabItems$$inlined$apply$lambda$1 */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.guilds.profile.WidgetGuildProfileSheet$configureTabItems$$inlined$apply$lambda$1 */
+/* JADX INFO: compiled from: WidgetGuildProfileSheet.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class C8793x71cb1475 extends Lambda implements Function1<View, Unit> {
     public final /* synthetic */ long $guildId$inlined;
     public final /* synthetic */ int $iconColor$inlined;
@@ -34,7 +34,7 @@ public final class C8793x71cb1475 extends Lambda implements Function1<View, Unit
         return Unit.f27425a;
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final void invoke2(View view) {
         Intrinsics3.checkNotNullParameter(view, "view");
         AnalyticsTracker.guildBoostPromotionOpened$default(AnalyticsTracker.INSTANCE, this.$guildId$inlined, new Traits.Location(null, Traits.Location.Section.GUILD_POPOUT, Traits.Location.Obj.BOOST_GEM_ICON, null, null, 25, null), null, 4, null);

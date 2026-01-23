@@ -51,22 +51,22 @@ import p507d0.p592z.p594d.Reflection2;
 import p658rx.Observable;
 import p658rx.subscriptions.CompositeSubscription;
 
-/* compiled from: WidgetStickerSheet.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: WidgetStickerSheet.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class WidgetStickerSheet extends AppBottomSheet {
     private static final String ANALYTICS_LOCATION = "widget_sticker_sheet_analytics_location";
 
-    /* renamed from: binding$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
 
-    /* renamed from: viewModel$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: viewModel$delegate, reason: from kotlin metadata */
     private final Lazy viewModel;
     public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetStickerSheet.class, "binding", "getBinding()Lcom/discord/databinding/WidgetStickerSheetBinding;", 0)};
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
 
-    /* compiled from: WidgetStickerSheet.kt */
+    /* JADX INFO: compiled from: WidgetStickerSheet.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -91,8 +91,8 @@ public final class WidgetStickerSheet extends AppBottomSheet {
         }
     }
 
-    /* compiled from: WidgetStickerSheet.kt */
-    /* renamed from: com.discord.widgets.stickers.WidgetStickerSheet$bindSubscriptions$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.stickers.WidgetStickerSheet$bindSubscriptions$1 */
+    /* JADX INFO: compiled from: WidgetStickerSheet.kt */
     public static final /* synthetic */ class C101361 extends FunctionReferenceImpl implements Function1<StickerSheetViewModel.ViewState, Unit> {
         public C101361(WidgetStickerSheet widgetStickerSheet) {
             super(1, widgetStickerSheet, WidgetStickerSheet.class, "configureUI", "configureUI(Lcom/discord/widgets/stickers/StickerSheetViewModel$ViewState;)V", 0);
@@ -104,15 +104,15 @@ public final class WidgetStickerSheet extends AppBottomSheet {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(StickerSheetViewModel.ViewState viewState) {
             Intrinsics3.checkNotNullParameter(viewState, "p1");
             WidgetStickerSheet.access$configureUI((WidgetStickerSheet) this.receiver, viewState);
         }
     }
 
-    /* compiled from: WidgetStickerSheet.kt */
-    /* renamed from: com.discord.widgets.stickers.WidgetStickerSheet$configureUI$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.stickers.WidgetStickerSheet$configureUI$1 */
+    /* JADX INFO: compiled from: WidgetStickerSheet.kt */
     public static final class ViewOnClickListenerC101371 implements View.OnClickListener {
         public ViewOnClickListenerC101371() {
         }
@@ -126,13 +126,13 @@ public final class WidgetStickerSheet extends AppBottomSheet {
         }
     }
 
-    /* compiled from: WidgetStickerSheet.kt */
-    /* renamed from: com.discord.widgets.stickers.WidgetStickerSheet$configureUI$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.stickers.WidgetStickerSheet$configureUI$2 */
+    /* JADX INFO: compiled from: WidgetStickerSheet.kt */
     public static final class C101382 extends Lambda implements Function1<RenderContext, Unit> {
         public static final C101382 INSTANCE = new C101382();
 
-        /* compiled from: WidgetStickerSheet.kt */
-        /* renamed from: com.discord.widgets.stickers.WidgetStickerSheet$configureUI$2$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.widgets.stickers.WidgetStickerSheet$configureUI$2$1, reason: invalid class name */
+        /* JADX INFO: compiled from: WidgetStickerSheet.kt */
         public static final class AnonymousClass1 extends Lambda implements Function1<View, Unit> {
             public static final AnonymousClass1 INSTANCE = new AnonymousClass1();
 
@@ -146,7 +146,7 @@ public final class WidgetStickerSheet extends AppBottomSheet {
                 return Unit.f27425a;
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2(View view) {
                 Intrinsics3.checkNotNullParameter(view, "view");
                 WidgetSettingsPremium.Companion companion = WidgetSettingsPremium.INSTANCE;
@@ -166,15 +166,15 @@ public final class WidgetStickerSheet extends AppBottomSheet {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(RenderContext renderContext) {
             Intrinsics3.checkNotNullParameter(renderContext, "$receiver");
             renderContext.m8423b("onClick", AnonymousClass1.INSTANCE);
         }
     }
 
-    /* compiled from: WidgetStickerSheet.kt */
-    /* renamed from: com.discord.widgets.stickers.WidgetStickerSheet$configureUI$3 */
+    /* JADX INFO: renamed from: com.discord.widgets.stickers.WidgetStickerSheet$configureUI$3 */
+    /* JADX INFO: compiled from: WidgetStickerSheet.kt */
     public static final class ViewOnClickListenerC101393 implements View.OnClickListener {
         public final /* synthetic */ boolean $isPackEnabled;
         public final /* synthetic */ StickerSheetViewModel.ViewState $viewState;
@@ -197,8 +197,8 @@ public final class WidgetStickerSheet extends AppBottomSheet {
         }
     }
 
-    /* compiled from: WidgetStickerSheet.kt */
-    /* renamed from: com.discord.widgets.stickers.WidgetStickerSheet$configureUI$4 */
+    /* JADX INFO: renamed from: com.discord.widgets.stickers.WidgetStickerSheet$configureUI$4 */
+    /* JADX INFO: compiled from: WidgetStickerSheet.kt */
     public static final class ViewOnClickListenerC101404 implements View.OnClickListener {
         public final /* synthetic */ boolean $isPackEnabled;
         public final /* synthetic */ String $location;

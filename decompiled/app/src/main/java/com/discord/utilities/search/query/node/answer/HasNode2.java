@@ -8,9 +8,9 @@ import org.webrtc.MediaStreamTrack;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: HasNode.kt */
-/* renamed from: com.discord.utilities.search.query.node.answer.HasAnswerOption, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.utilities.search.query.node.answer.HasAnswerOption, reason: use source file name */
+/* JADX INFO: compiled from: HasNode.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public enum HasNode2 {
     LINK("link"),
     EMBED("embed"),
@@ -21,12 +21,12 @@ public enum HasNode2 {
     STICKER("sticker");
 
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private final String restParamValue;
 
-    /* compiled from: HasNode.kt */
-    /* renamed from: com.discord.utilities.search.query.node.answer.HasAnswerOption$Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: com.discord.utilities.search.query.node.answer.HasAnswerOption$Companion, reason: from kotlin metadata */
+    /* JADX INFO: compiled from: HasNode.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -63,7 +63,7 @@ public enum HasNode2 {
         }
     }
 
-    /* renamed from: com.discord.utilities.search.query.node.answer.HasAnswerOption$WhenMappings */
+    /* JADX INFO: renamed from: com.discord.utilities.search.query.node.answer.HasAnswerOption$WhenMappings */
     public final /* synthetic */ class WhenMappings {
         public static final /* synthetic */ int[] $EnumSwitchMapping$0;
 

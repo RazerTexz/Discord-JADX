@@ -3,8 +3,8 @@ package co.discord.media_engine.internal;
 import p001a0.p002a.p003a.C0002b;
 import p007b.p100d.p104b.p105a.outline;
 
-/* compiled from: NativeStatistics.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: NativeStatistics.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class PacketStats {
     private final long headerBytes;
     private final long packets;
@@ -22,22 +22,22 @@ public final /* data */ class PacketStats {
         return packetStats.copy((i & 1) != 0 ? packetStats.headerBytes : j, (i & 2) != 0 ? packetStats.packets : j2, (i & 4) != 0 ? packetStats.paddingBytes : j3, (i & 8) != 0 ? packetStats.payloadBytes : j4);
     }
 
-    /* renamed from: component1, reason: from getter */
+    /* JADX INFO: renamed from: component1, reason: from getter */
     public final long getHeaderBytes() {
         return this.headerBytes;
     }
 
-    /* renamed from: component2, reason: from getter */
+    /* JADX INFO: renamed from: component2, reason: from getter */
     public final long getPackets() {
         return this.packets;
     }
 
-    /* renamed from: component3, reason: from getter */
+    /* JADX INFO: renamed from: component3, reason: from getter */
     public final long getPaddingBytes() {
         return this.paddingBytes;
     }
 
-    /* renamed from: component4, reason: from getter */
+    /* JADX INFO: renamed from: component4, reason: from getter */
     public final long getPayloadBytes() {
         return this.payloadBytes;
     }

@@ -3,9 +3,9 @@ package p007b.p225i.p226a.p288f.p313h.p325l;
 import com.discord.widgets.chat.input.MentionUtils;
 import p007b.p225i.p226a.p288f.p313h.p325l.AbstractC3851u4;
 
-/* compiled from: com.google.android.gms:play-services-measurement@@18.0.0 */
-/* renamed from: b.i.a.f.h.l.q1 */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.h.l.q1 */
+/* JADX INFO: compiled from: com.google.android.gms:play-services-measurement@@18.0.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public final class C3796q1 extends AbstractC3851u4<C3796q1, b> implements InterfaceC3626d6 {
     private static final C3796q1 zzk;
     private static volatile InterfaceC3710j6<C3796q1> zzl;
@@ -18,8 +18,8 @@ public final class C3796q1 extends AbstractC3851u4<C3796q1, b> implements Interf
     private InterfaceC3597b5<C3796q1> zzi = C3749m6.f10094k;
     private String zzj = "";
 
-    /* compiled from: com.google.android.gms:play-services-measurement@@18.0.0 */
-    /* renamed from: b.i.a.f.h.l.q1$a */
+    /* JADX INFO: renamed from: b.i.a.f.h.l.q1$a */
+    /* JADX INFO: compiled from: com.google.android.gms:play-services-measurement@@18.0.0 */
     public enum a implements InterfaceC3903y4 {
         UNKNOWN(0),
         STRING(1),
@@ -34,7 +34,7 @@ public final class C3796q1 extends AbstractC3851u4<C3796q1, b> implements Interf
         }
 
         @Override // p007b.p225i.p226a.p288f.p313h.p325l.InterfaceC3903y4
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final int mo4875a() {
             return this.zzg;
         }
@@ -45,8 +45,8 @@ public final class C3796q1 extends AbstractC3851u4<C3796q1, b> implements Interf
         }
     }
 
-    /* compiled from: com.google.android.gms:play-services-measurement@@18.0.0 */
-    /* renamed from: b.i.a.f.h.l.q1$b */
+    /* JADX INFO: renamed from: b.i.a.f.h.l.q1$b */
+    /* JADX INFO: compiled from: com.google.android.gms:play-services-measurement@@18.0.0 */
     public static final class b extends AbstractC3851u4.b<C3796q1, b> implements InterfaceC3626d6 {
         public b(C3809r1 c3809r1) {
             super(C3796q1.m5181u());
@@ -59,13 +59,13 @@ public final class C3796q1 extends AbstractC3851u4<C3796q1, b> implements Interf
         AbstractC3851u4.m5313r(C3796q1.class, c3796q1);
     }
 
-    /* renamed from: u */
+    /* JADX INFO: renamed from: u */
     public static /* synthetic */ C3796q1 m5181u() {
         return zzk;
     }
 
     @Override // p007b.p225i.p226a.p288f.p313h.p325l.AbstractC3851u4
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public final Object mo4541p(int i, Object obj, Object obj2) {
         switch (C3809r1.f10282a[i - 1]) {
             case 1:

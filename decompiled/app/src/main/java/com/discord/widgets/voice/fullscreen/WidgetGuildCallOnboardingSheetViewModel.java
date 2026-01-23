@@ -26,8 +26,8 @@ import p658rx.Observable;
 import p658rx.functions.Func2;
 import p658rx.subjects.PublishSubject;
 
-/* compiled from: WidgetGuildCallOnboardingSheetViewModel.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: WidgetGuildCallOnboardingSheetViewModel.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class WidgetGuildCallOnboardingSheetViewModel extends AppViewModel<ViewState> {
     private final long channelId;
     private final StoreChannels channelsStore;
@@ -37,8 +37,8 @@ public final class WidgetGuildCallOnboardingSheetViewModel extends AppViewModel<
     private final StoreVoiceChannelSelected selectedVoiceChannelStore;
     private final StoreVoiceStates voiceStatesStore;
 
-    /* compiled from: WidgetGuildCallOnboardingSheetViewModel.kt */
-    /* renamed from: com.discord.widgets.voice.fullscreen.WidgetGuildCallOnboardingSheetViewModel$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.voice.fullscreen.WidgetGuildCallOnboardingSheetViewModel$1 */
+    /* JADX INFO: compiled from: WidgetGuildCallOnboardingSheetViewModel.kt */
     public static final /* synthetic */ class C105511 extends FunctionReferenceImpl implements Function1<StoreState, Unit> {
         public C105511(WidgetGuildCallOnboardingSheetViewModel widgetGuildCallOnboardingSheetViewModel) {
             super(1, widgetGuildCallOnboardingSheetViewModel, WidgetGuildCallOnboardingSheetViewModel.class, "handleStoreState", "handleStoreState(Lcom/discord/widgets/voice/fullscreen/WidgetGuildCallOnboardingSheetViewModel$StoreState;)V", 0);
@@ -50,17 +50,17 @@ public final class WidgetGuildCallOnboardingSheetViewModel extends AppViewModel<
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(StoreState storeState) {
             Intrinsics3.checkNotNullParameter(storeState, "p1");
             WidgetGuildCallOnboardingSheetViewModel.access$handleStoreState((WidgetGuildCallOnboardingSheetViewModel) this.receiver, storeState);
         }
     }
 
-    /* compiled from: WidgetGuildCallOnboardingSheetViewModel.kt */
+    /* JADX INFO: compiled from: WidgetGuildCallOnboardingSheetViewModel.kt */
     public static abstract class Event {
 
-        /* compiled from: WidgetGuildCallOnboardingSheetViewModel.kt */
+        /* JADX INFO: compiled from: WidgetGuildCallOnboardingSheetViewModel.kt */
         public static final /* data */ class LaunchGuildCallScreen extends Event {
             private final long channelId;
             private final Long guildId;
@@ -81,12 +81,12 @@ public final class WidgetGuildCallOnboardingSheetViewModel extends AppViewModel<
                 return launchGuildCallScreen.copy(j, l);
             }
 
-            /* renamed from: component1, reason: from getter */
+            /* JADX INFO: renamed from: component1, reason: from getter */
             public final long getChannelId() {
                 return this.channelId;
             }
 
-            /* renamed from: component2, reason: from getter */
+            /* JADX INFO: renamed from: component2, reason: from getter */
             public final Long getGuildId() {
                 return this.guildId;
             }
@@ -128,7 +128,7 @@ public final class WidgetGuildCallOnboardingSheetViewModel extends AppViewModel<
             }
         }
 
-        /* compiled from: WidgetGuildCallOnboardingSheetViewModel.kt */
+        /* JADX INFO: compiled from: WidgetGuildCallOnboardingSheetViewModel.kt */
         public static final class ShowGuildVideoCapacityDialog extends Event {
             public static final ShowGuildVideoCapacityDialog INSTANCE = new ShowGuildVideoCapacityDialog();
 
@@ -145,7 +145,7 @@ public final class WidgetGuildCallOnboardingSheetViewModel extends AppViewModel<
         }
     }
 
-    /* compiled from: WidgetGuildCallOnboardingSheetViewModel.kt */
+    /* JADX INFO: compiled from: WidgetGuildCallOnboardingSheetViewModel.kt */
     public static final /* data */ class StoreState {
         private final Long guildId;
         private final VoiceChannelJoinabilityUtils2 voiceChannelJoinability;
@@ -166,12 +166,12 @@ public final class WidgetGuildCallOnboardingSheetViewModel extends AppViewModel<
             return storeState.copy(l, voiceChannelJoinabilityUtils2);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final Long getGuildId() {
             return this.guildId;
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final VoiceChannelJoinabilityUtils2 getVoiceChannelJoinability() {
             return this.voiceChannelJoinability;
         }
@@ -217,10 +217,10 @@ public final class WidgetGuildCallOnboardingSheetViewModel extends AppViewModel<
         }
     }
 
-    /* compiled from: WidgetGuildCallOnboardingSheetViewModel.kt */
+    /* JADX INFO: compiled from: WidgetGuildCallOnboardingSheetViewModel.kt */
     public static abstract class ViewState {
 
-        /* compiled from: WidgetGuildCallOnboardingSheetViewModel.kt */
+        /* JADX INFO: compiled from: WidgetGuildCallOnboardingSheetViewModel.kt */
         public static final /* data */ class Loaded extends ViewState {
             private final Long guildId;
             private final VoiceChannelJoinabilityUtils2 joinability;
@@ -243,12 +243,12 @@ public final class WidgetGuildCallOnboardingSheetViewModel extends AppViewModel<
                 return loaded.copy(l, voiceChannelJoinabilityUtils2);
             }
 
-            /* renamed from: component1, reason: from getter */
+            /* JADX INFO: renamed from: component1, reason: from getter */
             public final Long getGuildId() {
                 return this.guildId;
             }
 
-            /* renamed from: component2, reason: from getter */
+            /* JADX INFO: renamed from: component2, reason: from getter */
             public final VoiceChannelJoinabilityUtils2 getJoinability() {
                 return this.joinability;
             }
@@ -294,7 +294,7 @@ public final class WidgetGuildCallOnboardingSheetViewModel extends AppViewModel<
             }
         }
 
-        /* compiled from: WidgetGuildCallOnboardingSheetViewModel.kt */
+        /* JADX INFO: compiled from: WidgetGuildCallOnboardingSheetViewModel.kt */
         public static final class Uninitialized extends ViewState {
             public static final Uninitialized INSTANCE = new Uninitialized();
 
@@ -326,8 +326,8 @@ public final class WidgetGuildCallOnboardingSheetViewModel extends AppViewModel<
         }
     }
 
-    /* compiled from: WidgetGuildCallOnboardingSheetViewModel.kt */
-    /* renamed from: com.discord.widgets.voice.fullscreen.WidgetGuildCallOnboardingSheetViewModel$observeStoreState$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.voice.fullscreen.WidgetGuildCallOnboardingSheetViewModel$observeStoreState$1 */
+    /* JADX INFO: compiled from: WidgetGuildCallOnboardingSheetViewModel.kt */
     public static final class C105521<T1, T2, R> implements Func2<Channel, VoiceChannelJoinabilityUtils2, StoreState> {
         public static final C105521 INSTANCE = new C105521();
 
@@ -336,7 +336,7 @@ public final class WidgetGuildCallOnboardingSheetViewModel extends AppViewModel<
             return call2(channel, voiceChannelJoinabilityUtils2);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final StoreState call2(Channel channel, VoiceChannelJoinabilityUtils2 voiceChannelJoinabilityUtils2) {
             Long lValueOf = channel != null ? Long.valueOf(channel.getGuildId()) : null;
             Intrinsics3.checkNotNullExpressionValue(voiceChannelJoinabilityUtils2, "joinability");

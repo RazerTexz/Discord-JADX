@@ -66,22 +66,22 @@ import p658rx.Observable;
 import p658rx.functions.Action1;
 import p658rx.functions.Action2;
 
-/* compiled from: WidgetServerSettingsEditRole.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetServerSettingsEditRole.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetServerSettingsEditRole extends AppFragment {
     public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetServerSettingsEditRole.class, "binding", "getBinding()Lcom/discord/databinding/WidgetEditRoleBinding;", 0)};
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private static final String DIALOG_TAG_COLOR_PICKER = "DIALOG_TAG_COLOR_PICKER";
     private static final String INTENT_EXTRA_GUILD_ID = "INTENT_EXTRA_GUILD_ID";
     private static final String INTENT_EXTRA_ROLE_ID = "INTENT_EXTRA_ROLE_ID";
 
-    /* renamed from: binding$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
     private final StatefulViews state;
 
-    /* compiled from: WidgetServerSettingsEditRole.kt */
+    /* JADX INFO: compiled from: WidgetServerSettingsEditRole.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -99,10 +99,10 @@ public final class WidgetServerSettingsEditRole extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetServerSettingsEditRole.kt */
+    /* JADX INFO: compiled from: WidgetServerSettingsEditRole.kt */
     public static final /* data */ class Model {
 
-        /* renamed from: Companion, reason: from kotlin metadata */
+        /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
         public static final Companion INSTANCE = new Companion(null);
         private final long guildId;
         private final boolean hasGuildCommunicationDisabledFeature;
@@ -114,7 +114,7 @@ public final class WidgetServerSettingsEditRole extends AppFragment {
         private final GuildRole role;
         private final boolean useNewThreadPermissions;
 
-        /* compiled from: WidgetServerSettingsEditRole.kt */
+        /* JADX INFO: compiled from: WidgetServerSettingsEditRole.kt */
         public static final class Companion {
             private Companion() {
             }
@@ -159,7 +159,7 @@ public final class WidgetServerSettingsEditRole extends AppFragment {
             }
         }
 
-        /* compiled from: WidgetServerSettingsEditRole.kt */
+        /* JADX INFO: compiled from: WidgetServerSettingsEditRole.kt */
         public enum ManageStatus {
             NO_MANAGE_ROLES_PERMISSION,
             LOCKED_HIGHER,
@@ -191,47 +191,47 @@ public final class WidgetServerSettingsEditRole extends AppFragment {
             return manageStatus == ManageStatus.CAN_MANAGE_CONDITIONAL || manageStatus == ManageStatus.CAN_MANAGE_ADMIN;
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final boolean getOwner() {
             return this.owner;
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final long getGuildId() {
             return this.guildId;
         }
 
-        /* renamed from: component3, reason: from getter */
+        /* JADX INFO: renamed from: component3, reason: from getter */
         public final GuildRole getRole() {
             return this.role;
         }
 
-        /* renamed from: component4, reason: from getter */
+        /* JADX INFO: renamed from: component4, reason: from getter */
         public final ManageStatus getManageStatus() {
             return this.manageStatus;
         }
 
-        /* renamed from: component5, reason: from getter */
+        /* JADX INFO: renamed from: component5, reason: from getter */
         public final Long getMyPermissions() {
             return this.myPermissions;
         }
 
-        /* renamed from: component6, reason: from getter */
+        /* JADX INFO: renamed from: component6, reason: from getter */
         public final long getMyPermissionsFromOtherRoles() {
             return this.myPermissionsFromOtherRoles;
         }
 
-        /* renamed from: component7, reason: from getter */
+        /* JADX INFO: renamed from: component7, reason: from getter */
         public final boolean getIsCommunityServer() {
             return this.isCommunityServer;
         }
 
-        /* renamed from: component8, reason: from getter */
+        /* JADX INFO: renamed from: component8, reason: from getter */
         public final boolean getUseNewThreadPermissions() {
             return this.useNewThreadPermissions;
         }
 
-        /* renamed from: component9, reason: from getter */
+        /* JADX INFO: renamed from: component9, reason: from getter */
         public final boolean getHasGuildCommunicationDisabledFeature() {
             return this.hasGuildCommunicationDisabledFeature;
         }
@@ -288,8 +288,15 @@ public final class WidgetServerSettingsEditRole extends AppFragment {
         /* JADX WARN: Type inference failed for: r0v1, types: [int] */
         /* JADX WARN: Type inference failed for: r0v20 */
         /* JADX WARN: Type inference failed for: r0v21 */
-        /* JADX WARN: Type inference failed for: r2v10, types: [boolean] */
-        /* JADX WARN: Type inference failed for: r2v12, types: [boolean] */
+        /* JADX WARN: Type inference failed for: r1v0 */
+        /* JADX WARN: Type inference failed for: r1v1, types: [int] */
+        /* JADX WARN: Type inference failed for: r1v2 */
+        /* JADX WARN: Type inference failed for: r2v11, types: [int] */
+        /* JADX WARN: Type inference failed for: r2v13, types: [int] */
+        /* JADX WARN: Type inference failed for: r2v15 */
+        /* JADX WARN: Type inference failed for: r2v16 */
+        /* JADX WARN: Type inference failed for: r2v17 */
+        /* JADX WARN: Type inference failed for: r2v18 */
         public int hashCode() {
             boolean z2 = this.owner;
             ?? r0 = z2;
@@ -303,20 +310,20 @@ public final class WidgetServerSettingsEditRole extends AppFragment {
             int iHashCode2 = (iHashCode + (manageStatus != null ? manageStatus.hashCode() : 0)) * 31;
             Long l = this.myPermissions;
             int iM3a2 = (C0002b.m3a(this.myPermissionsFromOtherRoles) + ((iHashCode2 + (l != null ? l.hashCode() : 0)) * 31)) * 31;
-            ?? r2 = this.isCommunityServer;
-            int i = r2;
-            if (r2 != 0) {
-                i = 1;
+            boolean z3 = this.isCommunityServer;
+            ?? r2 = z3;
+            if (z3) {
+                r2 = 1;
             }
-            int i2 = (iM3a2 + i) * 31;
-            ?? r22 = this.useNewThreadPermissions;
-            int i3 = r22;
-            if (r22 != 0) {
-                i3 = 1;
+            int i = (iM3a2 + r2) * 31;
+            boolean z4 = this.useNewThreadPermissions;
+            ?? r22 = z4;
+            if (z4) {
+                r22 = 1;
             }
-            int i4 = (i2 + i3) * 31;
-            boolean z3 = this.hasGuildCommunicationDisabledFeature;
-            return i4 + (z3 ? 1 : z3 ? 1 : 0);
+            int i2 = (i + r22) * 31;
+            boolean z5 = this.hasGuildCommunicationDisabledFeature;
+            return i2 + (z5 ? 1 : z5);
         }
 
         public final boolean isCommunityServer() {
@@ -373,8 +380,8 @@ public final class WidgetServerSettingsEditRole extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetServerSettingsEditRole.kt */
-    /* renamed from: com.discord.widgets.servers.WidgetServerSettingsEditRole$configureUI$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.WidgetServerSettingsEditRole$configureUI$1 */
+    /* JADX INFO: compiled from: WidgetServerSettingsEditRole.kt */
     public static final class ViewOnClickListenerC92351 implements View.OnClickListener {
         public final /* synthetic */ Model $data;
 
@@ -419,8 +426,8 @@ public final class WidgetServerSettingsEditRole extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetServerSettingsEditRole.kt */
-    /* renamed from: com.discord.widgets.servers.WidgetServerSettingsEditRole$enableSetting$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.WidgetServerSettingsEditRole$enableSetting$1 */
+    /* JADX INFO: compiled from: WidgetServerSettingsEditRole.kt */
     public static final class ViewOnClickListenerC92361 implements View.OnClickListener {
         public final /* synthetic */ Model $data;
         public final /* synthetic */ long $permission;
@@ -439,8 +446,8 @@ public final class WidgetServerSettingsEditRole extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetServerSettingsEditRole.kt */
-    /* renamed from: com.discord.widgets.servers.WidgetServerSettingsEditRole$launchColorPicker$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.WidgetServerSettingsEditRole$launchColorPicker$1 */
+    /* JADX INFO: compiled from: WidgetServerSettingsEditRole.kt */
     public static final class C92371 implements ColorPickerDialogListener {
         public final /* synthetic */ Model $data;
 
@@ -467,8 +474,8 @@ public final class WidgetServerSettingsEditRole extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetServerSettingsEditRole.kt */
-    /* renamed from: com.discord.widgets.servers.WidgetServerSettingsEditRole$onViewBoundOrOnResume$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.WidgetServerSettingsEditRole$onViewBoundOrOnResume$1 */
+    /* JADX INFO: compiled from: WidgetServerSettingsEditRole.kt */
     public static final /* synthetic */ class C92381 extends FunctionReferenceImpl implements Function1<Model, Unit> {
         public C92381(WidgetServerSettingsEditRole widgetServerSettingsEditRole) {
             super(1, widgetServerSettingsEditRole, WidgetServerSettingsEditRole.class, "configureUI", "configureUI(Lcom/discord/widgets/servers/WidgetServerSettingsEditRole$Model;)V", 0);
@@ -480,14 +487,14 @@ public final class WidgetServerSettingsEditRole extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Model model) {
             WidgetServerSettingsEditRole.access$configureUI((WidgetServerSettingsEditRole) this.receiver, model);
         }
     }
 
-    /* compiled from: WidgetServerSettingsEditRole.kt */
-    /* renamed from: com.discord.widgets.servers.WidgetServerSettingsEditRole$patchRole$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.WidgetServerSettingsEditRole$patchRole$1 */
+    /* JADX INFO: compiled from: WidgetServerSettingsEditRole.kt */
     public static final class C92391<T> implements Action1<Void> {
         public static final C92391 INSTANCE = new C92391();
 
@@ -496,13 +503,13 @@ public final class WidgetServerSettingsEditRole extends AppFragment {
             call2(r1);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final void call2(Void r1) {
         }
     }
 
-    /* compiled from: WidgetServerSettingsEditRole.kt */
-    /* renamed from: com.discord.widgets.servers.WidgetServerSettingsEditRole$setupActionBar$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.WidgetServerSettingsEditRole$setupActionBar$1 */
+    /* JADX INFO: compiled from: WidgetServerSettingsEditRole.kt */
     public static final class C92401 extends Lambda implements Function2<String, Integer, SpannableStringBuilder> {
         public static final C92401 INSTANCE = new C92401();
 
@@ -523,8 +530,8 @@ public final class WidgetServerSettingsEditRole extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetServerSettingsEditRole.kt */
-    /* renamed from: com.discord.widgets.servers.WidgetServerSettingsEditRole$setupColorSetting$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.WidgetServerSettingsEditRole$setupColorSetting$1 */
+    /* JADX INFO: compiled from: WidgetServerSettingsEditRole.kt */
     public static final class ViewOnClickListenerC92411 implements View.OnClickListener {
         public final /* synthetic */ Model $data;
 
@@ -538,8 +545,8 @@ public final class WidgetServerSettingsEditRole extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetServerSettingsEditRole.kt */
-    /* renamed from: com.discord.widgets.servers.WidgetServerSettingsEditRole$setupColorSetting$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.WidgetServerSettingsEditRole$setupColorSetting$2 */
+    /* JADX INFO: compiled from: WidgetServerSettingsEditRole.kt */
     public static final class ViewOnClickListenerC92422 implements View.OnClickListener {
         public final /* synthetic */ Model $data;
 
@@ -554,8 +561,8 @@ public final class WidgetServerSettingsEditRole extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetServerSettingsEditRole.kt */
-    /* renamed from: com.discord.widgets.servers.WidgetServerSettingsEditRole$setupHoistAndMentionSettings$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.WidgetServerSettingsEditRole$setupHoistAndMentionSettings$1 */
+    /* JADX INFO: compiled from: WidgetServerSettingsEditRole.kt */
     public static final class ViewOnClickListenerC92431 implements View.OnClickListener {
         public final /* synthetic */ Model $data;
 
@@ -573,8 +580,8 @@ public final class WidgetServerSettingsEditRole extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetServerSettingsEditRole.kt */
-    /* renamed from: com.discord.widgets.servers.WidgetServerSettingsEditRole$setupHoistAndMentionSettings$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.WidgetServerSettingsEditRole$setupHoistAndMentionSettings$2 */
+    /* JADX INFO: compiled from: WidgetServerSettingsEditRole.kt */
     public static final class ViewOnClickListenerC92442 implements View.OnClickListener {
         public final /* synthetic */ Model $data;
 
@@ -592,13 +599,13 @@ public final class WidgetServerSettingsEditRole extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetServerSettingsEditRole.kt */
-    /* renamed from: com.discord.widgets.servers.WidgetServerSettingsEditRole$setupMenu$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.WidgetServerSettingsEditRole$setupMenu$1 */
+    /* JADX INFO: compiled from: WidgetServerSettingsEditRole.kt */
     public static final class C92451<T1, T2> implements Action2<MenuItem, Context> {
         public final /* synthetic */ Model $data;
 
-        /* compiled from: WidgetServerSettingsEditRole.kt */
-        /* renamed from: com.discord.widgets.servers.WidgetServerSettingsEditRole$setupMenu$1$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.widgets.servers.WidgetServerSettingsEditRole$setupMenu$1$1, reason: invalid class name */
+        /* JADX INFO: compiled from: WidgetServerSettingsEditRole.kt */
         public static final class AnonymousClass1<T> implements Action1<Void> {
             public AnonymousClass1() {
             }
@@ -608,7 +615,7 @@ public final class WidgetServerSettingsEditRole extends AppFragment {
                 call2(r1);
             }
 
-            /* renamed from: call, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
             public final void call2(Void r1) throws Exception {
                 AppActivity appActivity = WidgetServerSettingsEditRole.this.getAppActivity();
                 if (appActivity != null) {
@@ -626,7 +633,7 @@ public final class WidgetServerSettingsEditRole extends AppFragment {
             call2(menuItem, context);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final void call2(MenuItem menuItem, Context context) {
             Intrinsics3.checkNotNullParameter(menuItem, "menuItem");
             if (menuItem.getItemId() == C5419R.id.menu_edit_role_delete) {
@@ -635,8 +642,8 @@ public final class WidgetServerSettingsEditRole extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetServerSettingsEditRole.kt */
-    /* renamed from: com.discord.widgets.servers.WidgetServerSettingsEditRole$setupRoleName$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.WidgetServerSettingsEditRole$setupRoleName$1 */
+    /* JADX INFO: compiled from: WidgetServerSettingsEditRole.kt */
     public static final class ViewOnClickListenerC92461 implements View.OnClickListener {
         public final /* synthetic */ Model $data;
 

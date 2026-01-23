@@ -36,31 +36,31 @@ import p507d0.p592z.p594d.Lambda;
 import p507d0.p592z.p594d.Reflection2;
 import p658rx.Observable;
 
-/* compiled from: AudioOutputSelectionDialog.kt */
-/* renamed from: b.a.a.f.a.a, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.a.a.f.a.a, reason: use source file name */
+/* JADX INFO: compiled from: AudioOutputSelectionDialog.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class AudioOutputSelectionDialog extends AppDialog {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static final /* synthetic */ KProperty[] f352j = {outline.m846d0(AudioOutputSelectionDialog.class, "binding", "getBinding()Lcom/discord/databinding/AudioOutputSelectionDialogBinding;", 0)};
 
-    /* renamed from: k, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: k, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
 
-    /* renamed from: l, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: l, reason: from kotlin metadata */
     public final FragmentViewBindingDelegate binding;
 
-    /* renamed from: m, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: m, reason: from kotlin metadata */
     public final Lazy viewModel;
 
-    /* compiled from: java-style lambda group */
-    /* renamed from: b.a.a.f.a.a$a */
+    /* JADX INFO: renamed from: b.a.a.f.a.a$a */
+    /* JADX INFO: compiled from: java-style lambda group */
     public static final class a implements View.OnClickListener {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public final /* synthetic */ int f356j;
 
-        /* renamed from: k */
+        /* JADX INFO: renamed from: k */
         public final /* synthetic */ Object f357k;
 
         public a(int i, Object obj) {
@@ -92,18 +92,18 @@ public final class AudioOutputSelectionDialog extends AppDialog {
         }
     }
 
-    /* compiled from: AudioOutputSelectionDialog.kt */
-    /* renamed from: b.a.a.f.a.a$b, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: b.a.a.f.a.a$b, reason: from kotlin metadata */
+    /* JADX INFO: compiled from: AudioOutputSelectionDialog.kt */
     public static final class Companion {
         public Companion(DefaultConstructorMarker defaultConstructorMarker) {
         }
     }
 
-    /* compiled from: AudioOutputSelectionDialog.kt */
-    /* renamed from: b.a.a.f.a.a$c */
+    /* JADX INFO: renamed from: b.a.a.f.a.a$c */
+    /* JADX INFO: compiled from: AudioOutputSelectionDialog.kt */
     public static final /* synthetic */ class c extends FunctionReferenceImpl implements Function1<View, AudioOutputSelectionDialogBinding> {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public static final c f358j = new c();
 
         public c() {
@@ -143,8 +143,8 @@ public final class AudioOutputSelectionDialog extends AppDialog {
         }
     }
 
-    /* compiled from: AudioOutputSelectionDialog.kt */
-    /* renamed from: b.a.a.f.a.a$d */
+    /* JADX INFO: renamed from: b.a.a.f.a.a$d */
+    /* JADX INFO: compiled from: AudioOutputSelectionDialog.kt */
     public static final class d extends Lambda implements Function1<AudioOutputSelectionDialogViewModel2.a, Unit> {
         public d() {
             super(1);
@@ -203,11 +203,11 @@ public final class AudioOutputSelectionDialog extends AppDialog {
         }
     }
 
-    /* compiled from: AudioOutputSelectionDialog.kt */
-    /* renamed from: b.a.a.f.a.a$e */
+    /* JADX INFO: renamed from: b.a.a.f.a.a$e */
+    /* JADX INFO: compiled from: AudioOutputSelectionDialog.kt */
     public static final class e extends Lambda implements Function0<AudioOutputSelectionDialogViewModel2> {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public static final e f359j = new e();
 
         public e() {
@@ -228,7 +228,7 @@ public final class AudioOutputSelectionDialog extends AppDialog {
         this.viewModel = FragmentViewModelLazyKt.createViewModelLazy(this, Reflection2.getOrCreateKotlinClass(AudioOutputSelectionDialogViewModel2.class), new C12788k(5, appViewModelDelegates3), new AppViewModelDelegates5(eVar));
     }
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public static final void m129g(AudioOutputSelectionDialog audioOutputSelectionDialog) {
         Objects.requireNonNull(audioOutputSelectionDialog);
         Observable<Long> observableM11068d0 = Observable.m11068d0(300L, TimeUnit.MILLISECONDS);
@@ -236,12 +236,12 @@ public final class AudioOutputSelectionDialog extends AppDialog {
         ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.ui$default(observableM11068d0, audioOutputSelectionDialog, null, 2, null), AudioOutputSelectionDialog.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new AudioOutputSelectionDialog2(audioOutputSelectionDialog), 62, (Object) null);
     }
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public static final AudioOutputSelectionDialogViewModel2 m130h(AudioOutputSelectionDialog audioOutputSelectionDialog) {
         return (AudioOutputSelectionDialogViewModel2) audioOutputSelectionDialog.viewModel.getValue();
     }
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public final AudioOutputSelectionDialogBinding m131i() {
         return (AudioOutputSelectionDialogBinding) this.binding.getValue((Fragment) this, f352j[0]);
     }

@@ -6,11 +6,11 @@ import android.view.WindowManager;
 import org.webrtc.TextureBufferImpl;
 import org.webrtc.VideoFrame;
 
-/* compiled from: CameraSession.java */
-/* renamed from: h0.c.l0, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: h0.c.l0, reason: use source file name */
+/* JADX INFO: compiled from: CameraSession.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final /* synthetic */ class CameraSession2 {
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static VideoFrame.TextureBuffer m10658a(TextureBufferImpl textureBufferImpl, boolean z2, int i) {
         Matrix matrix = new Matrix();
         matrix.preTranslate(0.5f, 0.5f);
@@ -22,7 +22,7 @@ public final /* synthetic */ class CameraSession2 {
         return textureBufferImpl.applyTransformMatrix(matrix, textureBufferImpl.getWidth(), textureBufferImpl.getHeight());
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static int m10659b(Context context) {
         int rotation = ((WindowManager) context.getSystemService("window")).getDefaultDisplay().getRotation();
         if (rotation == 1) {

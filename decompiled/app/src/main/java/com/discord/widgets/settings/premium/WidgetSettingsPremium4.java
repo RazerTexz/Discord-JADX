@@ -9,9 +9,9 @@ import com.discord.widgets.settings.premium.WidgetChoosePlan;
 import com.google.android.material.button.MaterialButton;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: WidgetSettingsPremium.kt */
-/* renamed from: com.discord.widgets.settings.premium.WidgetSettingsPremium$configureButtons$$inlined$forEach$lambda$2, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.settings.premium.WidgetSettingsPremium$configureButtons$$inlined$forEach$lambda$2, reason: use source file name */
+/* JADX INFO: compiled from: WidgetSettingsPremium.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetSettingsPremium4 implements View.OnClickListener {
     public final /* synthetic */ MaterialButton $button;
     public final /* synthetic */ ModelSubscription $premiumSubscription$inlined;

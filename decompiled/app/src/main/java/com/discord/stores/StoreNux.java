@@ -10,14 +10,14 @@ import p507d0.p592z.p594d.Lambda;
 import p658rx.Observable;
 import p658rx.subjects.BehaviorSubject;
 
-/* compiled from: StoreNux.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: StoreNux.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class StoreNux extends Store {
     private final Dispatcher dispatcher;
     private NuxState nuxState;
     private final BehaviorSubject<NuxState> nuxStateSubject;
 
-    /* compiled from: StoreNux.kt */
+    /* JADX INFO: compiled from: StoreNux.kt */
     public static final /* data */ class NuxState {
         private final boolean addGuildHint;
         private final boolean contactSyncCompleted;
@@ -65,32 +65,32 @@ public final class StoreNux extends Store {
             return nuxState.copy(z2, z7, z8, z9, z10, l);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final boolean getPostRegister() {
             return this.postRegister;
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final boolean getPostRegisterWithInvite() {
             return this.postRegisterWithInvite;
         }
 
-        /* renamed from: component3, reason: from getter */
+        /* JADX INFO: renamed from: component3, reason: from getter */
         public final boolean getContactSyncCompleted() {
             return this.contactSyncCompleted;
         }
 
-        /* renamed from: component4, reason: from getter */
+        /* JADX INFO: renamed from: component4, reason: from getter */
         public final boolean getFirstOpen() {
             return this.firstOpen;
         }
 
-        /* renamed from: component5, reason: from getter */
+        /* JADX INFO: renamed from: component5, reason: from getter */
         public final boolean getAddGuildHint() {
             return this.addGuildHint;
         }
 
-        /* renamed from: component6, reason: from getter */
+        /* JADX INFO: renamed from: component6, reason: from getter */
         public final Long getGuildBoostHintGuildId() {
             return this.guildBoostHintGuildId;
         }
@@ -138,9 +138,18 @@ public final class StoreNux extends Store {
         /* JADX WARN: Type inference failed for: r0v1, types: [int] */
         /* JADX WARN: Type inference failed for: r0v12 */
         /* JADX WARN: Type inference failed for: r0v13 */
-        /* JADX WARN: Type inference failed for: r2v0, types: [boolean] */
-        /* JADX WARN: Type inference failed for: r2v2, types: [boolean] */
-        /* JADX WARN: Type inference failed for: r2v4, types: [boolean] */
+        /* JADX WARN: Type inference failed for: r1v0 */
+        /* JADX WARN: Type inference failed for: r1v1, types: [int] */
+        /* JADX WARN: Type inference failed for: r1v6 */
+        /* JADX WARN: Type inference failed for: r2v1, types: [int] */
+        /* JADX WARN: Type inference failed for: r2v10 */
+        /* JADX WARN: Type inference failed for: r2v11 */
+        /* JADX WARN: Type inference failed for: r2v12 */
+        /* JADX WARN: Type inference failed for: r2v3, types: [int] */
+        /* JADX WARN: Type inference failed for: r2v5, types: [int] */
+        /* JADX WARN: Type inference failed for: r2v7 */
+        /* JADX WARN: Type inference failed for: r2v8 */
+        /* JADX WARN: Type inference failed for: r2v9 */
         public int hashCode() {
             boolean z2 = this.postRegister;
             ?? r0 = z2;
@@ -148,28 +157,28 @@ public final class StoreNux extends Store {
                 r0 = 1;
             }
             int i = r0 * 31;
-            ?? r2 = this.postRegisterWithInvite;
-            int i2 = r2;
-            if (r2 != 0) {
-                i2 = 1;
+            boolean z3 = this.postRegisterWithInvite;
+            ?? r2 = z3;
+            if (z3) {
+                r2 = 1;
             }
-            int i3 = (i + i2) * 31;
-            ?? r22 = this.contactSyncCompleted;
-            int i4 = r22;
-            if (r22 != 0) {
-                i4 = 1;
+            int i2 = (i + r2) * 31;
+            boolean z4 = this.contactSyncCompleted;
+            ?? r22 = z4;
+            if (z4) {
+                r22 = 1;
             }
-            int i5 = (i3 + i4) * 31;
-            ?? r23 = this.firstOpen;
-            int i6 = r23;
-            if (r23 != 0) {
-                i6 = 1;
+            int i3 = (i2 + r22) * 31;
+            boolean z5 = this.firstOpen;
+            ?? r23 = z5;
+            if (z5) {
+                r23 = 1;
             }
-            int i7 = (i5 + i6) * 31;
-            boolean z3 = this.addGuildHint;
-            int i8 = (i7 + (z3 ? 1 : z3 ? 1 : 0)) * 31;
+            int i4 = (i3 + r23) * 31;
+            boolean z6 = this.addGuildHint;
+            int i5 = (i4 + (z6 ? 1 : z6)) * 31;
             Long l = this.guildBoostHintGuildId;
-            return i8 + (l != null ? l.hashCode() : 0);
+            return i5 + (l != null ? l.hashCode() : 0);
         }
 
         public String toString() {
@@ -192,8 +201,8 @@ public final class StoreNux extends Store {
         }
     }
 
-    /* compiled from: StoreNux.kt */
-    /* renamed from: com.discord.stores.StoreNux$clearNux$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreNux$clearNux$1 */
+    /* JADX INFO: compiled from: StoreNux.kt */
     public static final class C63061 extends Lambda implements Function0<Unit> {
         public C63061() {
             super(0);
@@ -205,7 +214,7 @@ public final class StoreNux extends Store {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             StoreNux.access$setNuxState$p(StoreNux.this, new NuxState(false, false, false, false, false, null, 63, null));
             StoreNux storeNux = StoreNux.this;
@@ -213,8 +222,8 @@ public final class StoreNux extends Store {
         }
     }
 
-    /* compiled from: StoreNux.kt */
-    /* renamed from: com.discord.stores.StoreNux$setContactSyncCompleted$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreNux$setContactSyncCompleted$1 */
+    /* JADX INFO: compiled from: StoreNux.kt */
     public static final class C63071 extends Lambda implements Function1<NuxState, NuxState> {
         public final /* synthetic */ boolean $value;
 
@@ -229,15 +238,15 @@ public final class StoreNux extends Store {
             return invoke2(nuxState);
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final NuxState invoke2(NuxState nuxState) {
             Intrinsics3.checkNotNullParameter(nuxState, "it");
             return NuxState.copy$default(nuxState, false, false, this.$value, false, false, null, 59, null);
         }
     }
 
-    /* compiled from: StoreNux.kt */
-    /* renamed from: com.discord.stores.StoreNux$setFirstOpen$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreNux$setFirstOpen$1 */
+    /* JADX INFO: compiled from: StoreNux.kt */
     public static final class C63081 extends Lambda implements Function1<NuxState, NuxState> {
         public final /* synthetic */ boolean $value;
 
@@ -252,15 +261,15 @@ public final class StoreNux extends Store {
             return invoke2(nuxState);
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final NuxState invoke2(NuxState nuxState) {
             Intrinsics3.checkNotNullParameter(nuxState, "it");
             return NuxState.copy$default(nuxState, false, false, false, this.$value, false, null, 55, null);
         }
     }
 
-    /* compiled from: StoreNux.kt */
-    /* renamed from: com.discord.stores.StoreNux$setPostRegister$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreNux$setPostRegister$1 */
+    /* JADX INFO: compiled from: StoreNux.kt */
     public static final class C63091 extends Lambda implements Function1<NuxState, NuxState> {
         public final /* synthetic */ boolean $value;
 
@@ -275,15 +284,15 @@ public final class StoreNux extends Store {
             return invoke2(nuxState);
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final NuxState invoke2(NuxState nuxState) {
             Intrinsics3.checkNotNullParameter(nuxState, "it");
             return NuxState.copy$default(nuxState, this.$value, false, false, false, false, null, 62, null);
         }
     }
 
-    /* compiled from: StoreNux.kt */
-    /* renamed from: com.discord.stores.StoreNux$setPostRegisterWithInvite$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreNux$setPostRegisterWithInvite$1 */
+    /* JADX INFO: compiled from: StoreNux.kt */
     public static final class C63101 extends Lambda implements Function1<NuxState, NuxState> {
         public final /* synthetic */ boolean $value;
 
@@ -298,15 +307,15 @@ public final class StoreNux extends Store {
             return invoke2(nuxState);
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final NuxState invoke2(NuxState nuxState) {
             Intrinsics3.checkNotNullParameter(nuxState, "it");
             return NuxState.copy$default(nuxState, false, this.$value, false, false, false, null, 61, null);
         }
     }
 
-    /* compiled from: StoreNux.kt */
-    /* renamed from: com.discord.stores.StoreNux$setPremiumGuildHintGuildId$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreNux$setPremiumGuildHintGuildId$1 */
+    /* JADX INFO: compiled from: StoreNux.kt */
     public static final class C63111 extends Lambda implements Function1<NuxState, NuxState> {
         public final /* synthetic */ Long $value;
 
@@ -321,15 +330,15 @@ public final class StoreNux extends Store {
             return invoke2(nuxState);
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final NuxState invoke2(NuxState nuxState) {
             Intrinsics3.checkNotNullParameter(nuxState, "it");
             return NuxState.copy$default(nuxState, false, false, false, false, false, this.$value, 31, null);
         }
     }
 
-    /* compiled from: StoreNux.kt */
-    /* renamed from: com.discord.stores.StoreNux$updateNux$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreNux$updateNux$1 */
+    /* JADX INFO: compiled from: StoreNux.kt */
     public static final class C63121 extends Lambda implements Function0<Unit> {
         public final /* synthetic */ Function1 $updateFunction;
 
@@ -345,7 +354,7 @@ public final class StoreNux extends Store {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             StoreNux storeNux = StoreNux.this;
             StoreNux.access$setNuxState$p(storeNux, (NuxState) this.$updateFunction.invoke(StoreNux.access$getNuxState$p(storeNux)));

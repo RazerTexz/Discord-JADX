@@ -9,7 +9,7 @@ import androidx.annotation.Nullable;
 import androidx.transition.TransitionValues;
 import androidx.transition.Visibility;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public final class Hold extends Visibility {
     @Override // androidx.transition.Visibility
     @NonNull

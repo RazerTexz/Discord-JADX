@@ -4,8 +4,8 @@ import kotlin.Unit;
 import kotlin.jvm.functions.Function0;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetChannelsListAdapter.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetChannelsListAdapter.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetChannelsListAdapter$onAddServer$1 extends Lambda implements Function0<Unit> {
     public static final WidgetChannelsListAdapter$onAddServer$1 INSTANCE = new WidgetChannelsListAdapter$onAddServer$1();
 
@@ -19,7 +19,7 @@ public final class WidgetChannelsListAdapter$onAddServer$1 extends Lambda implem
         return Unit.f27425a;
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final void invoke2() {
     }
 }

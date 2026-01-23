@@ -7,8 +7,8 @@ import kotlin.jvm.internal.DefaultConstructorMarker;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ModelLoginResult.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: ModelLoginResult.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class ModelLoginResult {
     private final boolean mfa;
     private final List<RequiredAction> requiredActions;
@@ -25,6 +25,7 @@ public final /* data */ class ModelLoginResult {
         this.requiredActions = list;
     }
 
+    /* JADX WARN: Multi-variable type inference failed */
     public static /* synthetic */ ModelLoginResult copy$default(ModelLoginResult modelLoginResult, boolean z2, String str, String str2, ModelLoginResult2 modelLoginResult2, List list, int i, Object obj) {
         if ((i & 1) != 0) {
             z2 = modelLoginResult.mfa;
@@ -47,22 +48,22 @@ public final /* data */ class ModelLoginResult {
         return modelLoginResult.copy(z2, str3, str4, modelLoginResult22, list);
     }
 
-    /* renamed from: component1, reason: from getter */
+    /* JADX INFO: renamed from: component1, reason: from getter */
     public final boolean getMfa() {
         return this.mfa;
     }
 
-    /* renamed from: component2, reason: from getter */
+    /* JADX INFO: renamed from: component2, reason: from getter */
     public final String getTicket() {
         return this.ticket;
     }
 
-    /* renamed from: component3, reason: from getter */
+    /* JADX INFO: renamed from: component3, reason: from getter */
     public final String getToken() {
         return this.token;
     }
 
-    /* renamed from: component4, reason: from getter */
+    /* JADX INFO: renamed from: component4, reason: from getter */
     public final ModelLoginResult2 getUserSettings() {
         return this.userSettings;
     }

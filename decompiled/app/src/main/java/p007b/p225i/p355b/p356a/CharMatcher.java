@@ -3,13 +3,13 @@ package p007b.p225i.p355b.p356a;
 import p007b.p100d.p104b.p105a.outline;
 import p007b.p225i.p226a.p288f.p299e.p308o.C3404f;
 
-/* compiled from: CharMatcher.java */
-/* renamed from: b.i.b.a.b, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.b.a.b, reason: use source file name */
+/* JADX INFO: compiled from: CharMatcher.java */
+/* JADX INFO: loaded from: classes3.dex */
 public abstract class CharMatcher implements Predicate3<Character> {
 
-    /* compiled from: CharMatcher.java */
-    /* renamed from: b.i.b.a.b$a */
+    /* JADX INFO: renamed from: b.i.b.a.b$a */
+    /* JADX INFO: compiled from: CharMatcher.java */
     public static abstract class a extends CharMatcher {
         @Override // p007b.p225i.p355b.p356a.Predicate3
         @Deprecated
@@ -18,11 +18,11 @@ public abstract class CharMatcher implements Predicate3<Character> {
         }
     }
 
-    /* compiled from: CharMatcher.java */
-    /* renamed from: b.i.b.a.b$b */
+    /* JADX INFO: renamed from: b.i.b.a.b$b */
+    /* JADX INFO: compiled from: CharMatcher.java */
     public static final class b extends a {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final char f11940a;
 
         public b(char c) {
@@ -30,7 +30,7 @@ public abstract class CharMatcher implements Predicate3<Character> {
         }
 
         @Override // p007b.p225i.p355b.p356a.CharMatcher
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public boolean mo6210b(char c) {
             return c == this.f11940a;
         }
@@ -49,11 +49,11 @@ public abstract class CharMatcher implements Predicate3<Character> {
         }
     }
 
-    /* compiled from: CharMatcher.java */
-    /* renamed from: b.i.b.a.b$c */
+    /* JADX INFO: renamed from: b.i.b.a.b$c */
+    /* JADX INFO: compiled from: CharMatcher.java */
     public static abstract class c extends a {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final String f11941a;
 
         public c(String str) {
@@ -65,11 +65,11 @@ public abstract class CharMatcher implements Predicate3<Character> {
         }
     }
 
-    /* compiled from: CharMatcher.java */
-    /* renamed from: b.i.b.a.b$d */
+    /* JADX INFO: renamed from: b.i.b.a.b$d */
+    /* JADX INFO: compiled from: CharMatcher.java */
     public static final class d extends c {
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public static final d f11942b = new d();
 
         public d() {
@@ -77,20 +77,20 @@ public abstract class CharMatcher implements Predicate3<Character> {
         }
 
         @Override // p007b.p225i.p355b.p356a.CharMatcher
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public int mo6209a(CharSequence charSequence, int i) {
             C3404f.m4195C(i, charSequence.length());
             return -1;
         }
 
         @Override // p007b.p225i.p355b.p356a.CharMatcher
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public boolean mo6210b(char c) {
             return false;
         }
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public int mo6209a(CharSequence charSequence, int i) {
         int length = charSequence.length();
         C3404f.m4195C(i, length);
@@ -103,6 +103,6 @@ public abstract class CharMatcher implements Predicate3<Character> {
         return -1;
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public abstract boolean mo6210b(char c2);
 }

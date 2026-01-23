@@ -9,14 +9,14 @@ import androidx.annotation.NonNull;
 import androidx.viewbinding.ViewBinding;
 import com.discord.C5419R;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public final class ViewAddPermissionOwnerBinding implements ViewBinding {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     @NonNull
     public final View f15365a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     @NonNull
     public final TextView f15366b;
 
@@ -26,7 +26,7 @@ public final class ViewAddPermissionOwnerBinding implements ViewBinding {
     }
 
     @NonNull
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static ViewAddPermissionOwnerBinding m8391a(@NonNull LayoutInflater layoutInflater, @NonNull ViewGroup viewGroup) {
         layoutInflater.inflate(C5419R.layout.view_add_permission_owner, viewGroup);
         int i = C5419R.id.add_icon;

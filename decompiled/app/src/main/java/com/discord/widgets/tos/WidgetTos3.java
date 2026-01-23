@@ -6,9 +6,9 @@ import com.discord.utilities.p501rx.ObservableExtensionsKt;
 import com.discord.utilities.rest.RestAPI;
 import p007b.p008a.p018d.C0879o;
 
-/* compiled from: WidgetTos.kt */
-/* renamed from: com.discord.widgets.tos.WidgetTos$configureAgreementUI$$inlined$with$lambda$1, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: com.discord.widgets.tos.WidgetTos$configureAgreementUI$$inlined$with$lambda$1, reason: use source file name */
+/* JADX INFO: compiled from: WidgetTos.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class WidgetTos3 implements View.OnClickListener {
     public final /* synthetic */ WidgetTos this$0;
 

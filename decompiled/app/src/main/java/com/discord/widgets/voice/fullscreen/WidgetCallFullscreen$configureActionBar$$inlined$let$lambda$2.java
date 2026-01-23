@@ -5,8 +5,8 @@ import androidx.activity.OnBackPressedDispatcher;
 import com.discord.app.AppActivity;
 import com.discord.models.guild.Guild;
 
-/* compiled from: WidgetCallFullscreen.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: WidgetCallFullscreen.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class WidgetCallFullscreen$configureActionBar$$inlined$let$lambda$2 implements View.OnClickListener {
     public final /* synthetic */ Guild $guild$inlined;
     public final /* synthetic */ WidgetCallFullscreen this$0;

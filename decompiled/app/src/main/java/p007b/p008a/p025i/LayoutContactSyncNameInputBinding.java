@@ -9,28 +9,28 @@ import com.discord.views.LoadingButton;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
 
-/* compiled from: LayoutContactSyncNameInputBinding.java */
-/* renamed from: b.a.i.l0, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.a.i.l0, reason: use source file name */
+/* JADX INFO: compiled from: LayoutContactSyncNameInputBinding.java */
+/* JADX INFO: loaded from: classes.dex */
 public final class LayoutContactSyncNameInputBinding implements ViewBinding {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     @NonNull
     public final ConstraintLayout f1012a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     @NonNull
     public final TextInputEditText f1013b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     @NonNull
     public final TextInputLayout f1014c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     @NonNull
     public final LoadingButton f1015d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     @NonNull
     public final TextView f1016e;
 

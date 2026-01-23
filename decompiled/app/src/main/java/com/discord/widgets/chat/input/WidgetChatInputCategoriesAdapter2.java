@@ -18,9 +18,9 @@ import p007b.p008a.p025i.ExpressionPickerCategorySelectionOverlineViewBinding;
 import p507d0.p580t.Collections2;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: WidgetChatInputCategoriesAdapter.kt */
-/* renamed from: com.discord.widgets.chat.input.ChatInputApplicationsAdapter, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.chat.input.ChatInputApplicationsAdapter, reason: use source file name */
+/* JADX INFO: compiled from: WidgetChatInputCategoriesAdapter.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetChatInputCategoriesAdapter2 extends RecyclerView.Adapter<WidgetChatInputCategoriesAdapter> {
     private List<Application> data = Collections2.emptyList();
     public Function1<? super Application, Unit> onClickApplication;

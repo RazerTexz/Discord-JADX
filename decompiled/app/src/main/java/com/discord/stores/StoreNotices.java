@@ -45,8 +45,8 @@ import p637j0.p641k.Func1;
 import p658rx.Observable;
 import p658rx.subjects.BehaviorSubject;
 
-/* compiled from: StoreNotices.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: StoreNotices.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class StoreNotices extends Store {
     public static final String IN_APP_NOTICE_TAG = "InAppNotif";
     public static final String NOTICE_POPUP_TAG = "Popup";
@@ -58,7 +58,7 @@ public final class StoreNotices extends Store {
     public static final long PROCESS_THROTTLE_MS = 50;
     private final Clock clock;
 
-    /* renamed from: firstUseTimestamp$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: firstUseTimestamp$delegate, reason: from kotlin metadata */
     private final Lazy firstUseTimestamp;
     private HashMap<Integer, Long> lastShownTimes;
     private final BehaviorSubject<Notice> noticePublisher;
@@ -68,12 +68,12 @@ public final class StoreNotices extends Store {
     private final BehaviorSubject<Unit> processTrigger;
     private final StoreStream stream;
 
-    /* compiled from: StoreNotices.kt */
+    /* JADX INFO: compiled from: StoreNotices.kt */
     public static final /* data */ class Dialog {
         private final Map<String, Object> metadata;
         private final Type type;
 
-        /* compiled from: StoreNotices.kt */
+        /* JADX INFO: compiled from: StoreNotices.kt */
         public enum Type {
             REQUEST_RATING_MODAL,
             DELETE_CONNECTION_MODAL;
@@ -114,7 +114,7 @@ public final class StoreNotices extends Store {
             return dialog.copy(type, map);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final Type getType() {
             return this.type;
         }
@@ -166,11 +166,11 @@ public final class StoreNotices extends Store {
         }
     }
 
-    /* compiled from: StoreNotices.kt */
+    /* JADX INFO: compiled from: StoreNotices.kt */
     public static final /* data */ class InputDialog {
         private final Type type;
 
-        /* compiled from: StoreNotices.kt */
+        /* JADX INFO: compiled from: StoreNotices.kt */
         public enum Type {
             PASSWORD,
             TEXT_NO_SUGGESTIONS
@@ -188,7 +188,7 @@ public final class StoreNotices extends Store {
             return inputDialog.copy(type);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final Type getType() {
             return this.type;
         }
@@ -225,7 +225,7 @@ public final class StoreNotices extends Store {
         }
     }
 
-    /* compiled from: StoreNotices.kt */
+    /* JADX INFO: compiled from: StoreNotices.kt */
     public static class Notice {
         private final boolean autoMarkSeen;
         private final Clock clock;
@@ -354,7 +354,7 @@ public final class StoreNotices extends Store {
         }
     }
 
-    /* compiled from: StoreNotices.kt */
+    /* JADX INFO: compiled from: StoreNotices.kt */
     public static class PassiveNotice extends Notice {
         public /* synthetic */ PassiveNotice(String str, int i, boolean z2, long j, long j2, Function1 function1, int i2, DefaultConstructorMarker defaultConstructorMarker) {
             this(str, i, (i2 & 4) != 0 ? false : z2, (i2 & 8) != 0 ? 31536000000L : j, (i2 & 16) != 0 ? 21600000L : j2, function1);
@@ -386,8 +386,8 @@ public final class StoreNotices extends Store {
         }
     }
 
-    /* compiled from: StoreNotices.kt */
-    /* renamed from: com.discord.stores.StoreNotices$clearSeen$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreNotices$clearSeen$1 */
+    /* JADX INFO: compiled from: StoreNotices.kt */
     public static final class C62871 extends Lambda implements Function1<HashMap<String, Long>, HashMap<String, Long>> {
         public final /* synthetic */ String $noticeName;
 
@@ -402,7 +402,7 @@ public final class StoreNotices extends Store {
             return invoke2(map);
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final HashMap<String, Long> invoke2(HashMap<String, Long> map) {
             Intrinsics3.checkNotNullParameter(map, "cache");
             map.remove(this.$noticeName);
@@ -410,8 +410,8 @@ public final class StoreNotices extends Store {
         }
     }
 
-    /* compiled from: StoreNotices.kt */
-    /* renamed from: com.discord.stores.StoreNotices$init$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreNotices$init$1 */
+    /* JADX INFO: compiled from: StoreNotices.kt */
     public static final class C62881<T, R> implements Func1<Unit, Observable<? extends Long>> {
         public C62881() {
         }
@@ -421,14 +421,14 @@ public final class StoreNotices extends Store {
             return call2(unit);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final Observable<? extends Long> call2(Unit unit) {
             return Observable.m11061E(0L, StoreNotices.access$getPollRateMs$p(StoreNotices.this), TimeUnit.MILLISECONDS);
         }
     }
 
-    /* compiled from: StoreNotices.kt */
-    /* renamed from: com.discord.stores.StoreNotices$init$2 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreNotices$init$2 */
+    /* JADX INFO: compiled from: StoreNotices.kt */
     public static final class C62892 extends Lambda implements Function1<Long, Unit> {
         public C62892() {
             super(1);
@@ -440,14 +440,14 @@ public final class StoreNotices extends Store {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Long l) {
             StoreNotices.access$processNextNotice(StoreNotices.this);
         }
     }
 
-    /* compiled from: StoreNotices.kt */
-    /* renamed from: com.discord.stores.StoreNotices$init$3 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreNotices$init$3 */
+    /* JADX INFO: compiled from: StoreNotices.kt */
     public static final class C62903 extends Lambda implements Function1<Error, Unit> {
         public C62903() {
             super(1);
@@ -459,7 +459,7 @@ public final class StoreNotices extends Store {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Error error) {
             Intrinsics3.checkNotNullParameter(error, "it");
             AppLog appLog = AppLog.f14950g;

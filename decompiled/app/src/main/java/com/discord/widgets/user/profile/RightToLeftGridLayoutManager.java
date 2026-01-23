@@ -5,8 +5,8 @@ import android.util.AttributeSet;
 import androidx.recyclerview.widget.GridLayoutManager;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: RightToLeftGridLayoutManager.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: RightToLeftGridLayoutManager.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class RightToLeftGridLayoutManager extends GridLayoutManager {
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public RightToLeftGridLayoutManager(Context context, AttributeSet attributeSet, int i, int i2) {

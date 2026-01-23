@@ -7,7 +7,7 @@ import org.webrtc.EglBase;
 import org.webrtc.VideoEncoderFactory;
 import p617h0.p628c.VideoEncoderFactory2;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public class DefaultVideoEncoderFactory implements VideoEncoderFactory {
     private final VideoEncoderFactory hardwareVideoEncoderFactory;
     private final VideoEncoderFactory softwareVideoEncoderFactory = new SoftwareVideoEncoderFactory();

@@ -15,12 +15,12 @@ import p507d0.p580t.Sets5;
 import p507d0.p580t.SetsJVM;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: JavaToKotlinClassMapper.kt */
-/* renamed from: d0.e0.p.d.m0.b.q.d, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.b.q.d, reason: use source file name */
+/* JADX INFO: compiled from: JavaToKotlinClassMapper.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class JavaToKotlinClassMapper {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final JavaToKotlinClassMapper f22630a = new JavaToKotlinClassMapper();
 
     public static /* synthetic */ ClassDescriptor mapJavaToKotlin$default(JavaToKotlinClassMapper javaToKotlinClassMapper, FqName fqName, KotlinBuiltIns kotlinBuiltIns, Integer num, int i, Object obj) {

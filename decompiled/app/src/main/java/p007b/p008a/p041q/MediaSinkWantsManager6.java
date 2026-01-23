@@ -6,9 +6,9 @@ import kotlin.Unit;
 import kotlin.jvm.functions.Function0;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: MediaSinkWantsManager.kt */
-/* renamed from: b.a.q.k, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.a.q.k, reason: use source file name */
+/* JADX INFO: compiled from: MediaSinkWantsManager.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class MediaSinkWantsManager6 extends Lambda implements Function0<Unit> {
     public final /* synthetic */ boolean $sendVideo;
     public final /* synthetic */ MediaSinkWantsManager this$0;

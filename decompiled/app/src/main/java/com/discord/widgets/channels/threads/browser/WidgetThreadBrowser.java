@@ -44,34 +44,34 @@ import p507d0.p592z.p594d.Reflection2;
 import p658rx.functions.Action1;
 import p658rx.functions.Action2;
 
-/* compiled from: WidgetThreadBrowser.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetThreadBrowser.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetThreadBrowser extends AppFragment {
     public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetThreadBrowser.class, "binding", "getBinding()Lcom/discord/databinding/WidgetThreadBrowserBinding;", 0)};
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private final int ACTIVE_PAGE;
     private final int ARCHIVED_PAGE;
 
-    /* renamed from: archivedViewModel$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: archivedViewModel$delegate, reason: from kotlin metadata */
     private final Lazy archivedViewModel;
 
-    /* renamed from: binding$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
 
-    /* renamed from: channelId$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: channelId$delegate, reason: from kotlin metadata */
     private final Lazy channelId;
     private final ChannelSelector channelSelector;
 
-    /* renamed from: guildId$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: guildId$delegate, reason: from kotlin metadata */
     private final Lazy guildId;
     private WidgetThreadBrowserViewModel.ViewState previousViewState;
 
-    /* renamed from: viewModel$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: viewModel$delegate, reason: from kotlin metadata */
     private final Lazy viewModel;
 
-    /* compiled from: WidgetThreadBrowser.kt */
+    /* JADX INFO: compiled from: WidgetThreadBrowser.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -92,8 +92,8 @@ public final class WidgetThreadBrowser extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetThreadBrowser.kt */
-    /* renamed from: com.discord.widgets.channels.threads.browser.WidgetThreadBrowser$initializeAdapter$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.channels.threads.browser.WidgetThreadBrowser$initializeAdapter$1 */
+    /* JADX INFO: compiled from: WidgetThreadBrowser.kt */
     public static final class C76361 extends Lambda implements Function0<Fragment> {
         public C76361() {
             super(0);
@@ -111,8 +111,8 @@ public final class WidgetThreadBrowser extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetThreadBrowser.kt */
-    /* renamed from: com.discord.widgets.channels.threads.browser.WidgetThreadBrowser$initializeAdapter$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.channels.threads.browser.WidgetThreadBrowser$initializeAdapter$2 */
+    /* JADX INFO: compiled from: WidgetThreadBrowser.kt */
     public static final class C76372 extends Lambda implements Function0<Fragment> {
         public C76372() {
             super(0);
@@ -130,8 +130,8 @@ public final class WidgetThreadBrowser extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetThreadBrowser.kt */
-    /* renamed from: com.discord.widgets.channels.threads.browser.WidgetThreadBrowser$initializeAdapter$3 */
+    /* JADX INFO: renamed from: com.discord.widgets.channels.threads.browser.WidgetThreadBrowser$initializeAdapter$3 */
+    /* JADX INFO: compiled from: WidgetThreadBrowser.kt */
     public static final class C76383 implements ViewPager.OnPageChangeListener {
         public C76383() {
         }
@@ -161,8 +161,8 @@ public final class WidgetThreadBrowser extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetThreadBrowser.kt */
-    /* renamed from: com.discord.widgets.channels.threads.browser.WidgetThreadBrowser$onResume$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.channels.threads.browser.WidgetThreadBrowser$onResume$1 */
+    /* JADX INFO: compiled from: WidgetThreadBrowser.kt */
     public static final class C76391 extends Lambda implements Function1<WidgetThreadBrowserViewModel.ViewState, Unit> {
         public C76391() {
             super(1);
@@ -174,15 +174,15 @@ public final class WidgetThreadBrowser extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(WidgetThreadBrowserViewModel.ViewState viewState) {
             Intrinsics3.checkNotNullParameter(viewState, "viewState");
             WidgetThreadBrowser.access$updateView(WidgetThreadBrowser.this, viewState);
         }
     }
 
-    /* compiled from: WidgetThreadBrowser.kt */
-    /* renamed from: com.discord.widgets.channels.threads.browser.WidgetThreadBrowser$updateMenu$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.channels.threads.browser.WidgetThreadBrowser$updateMenu$1 */
+    /* JADX INFO: compiled from: WidgetThreadBrowser.kt */
     public static final class C76401<T1, T2> implements Action2<MenuItem, Context> {
         public C76401() {
         }
@@ -192,7 +192,7 @@ public final class WidgetThreadBrowser extends AppFragment {
             call2(menuItem, context);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final void call2(MenuItem menuItem, Context context) {
             Intrinsics3.checkNotNullExpressionValue(menuItem, "menuItem");
             switch (menuItem.getItemId()) {
@@ -210,8 +210,8 @@ public final class WidgetThreadBrowser extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetThreadBrowser.kt */
-    /* renamed from: com.discord.widgets.channels.threads.browser.WidgetThreadBrowser$updateMenu$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.channels.threads.browser.WidgetThreadBrowser$updateMenu$2 */
+    /* JADX INFO: compiled from: WidgetThreadBrowser.kt */
     public static final class C76412<T> implements Action1<Menu> {
         public final /* synthetic */ Boolean $canCreateThread;
         public final /* synthetic */ int $selectedPage;
@@ -226,7 +226,7 @@ public final class WidgetThreadBrowser extends AppFragment {
             call2(menu);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final void call2(Menu menu) {
             MenuItem menuItemFindItem = menu.findItem(C5419R.id.menu_thread_browser_filters);
             if (menuItemFindItem != null) {

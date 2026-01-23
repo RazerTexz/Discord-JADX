@@ -21,8 +21,8 @@ import kotlin.jvm.functions.Function1;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: PaymentSourceAdapter.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: PaymentSourceAdapter.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class PaymentSourceAdapter extends MGRecyclerAdapterSimple<Item> {
     private static final int VIEW_TYPE_HEADER = 2;
     private static final int VIEW_TYPE_PAYMENT_ADD = 1;
@@ -30,11 +30,11 @@ public final class PaymentSourceAdapter extends MGRecyclerAdapterSimple<Item> {
     private final Function0<Unit> onAddClick;
     private final Function1<ModelPaymentSource, Unit> onEditPaymentSource;
 
-    /* compiled from: PaymentSourceAdapter.kt */
+    /* JADX INFO: compiled from: PaymentSourceAdapter.kt */
     public interface Item extends MGRecyclerDataPayload {
     }
 
-    /* compiled from: PaymentSourceAdapter.kt */
+    /* JADX INFO: compiled from: PaymentSourceAdapter.kt */
     public static final class PaymentSourceAddItem implements Item {
         private final int type = 1;
         private final String key = "AddPaymentSource";
@@ -50,7 +50,7 @@ public final class PaymentSourceAdapter extends MGRecyclerAdapterSimple<Item> {
         }
     }
 
-    /* compiled from: PaymentSourceAdapter.kt */
+    /* JADX INFO: compiled from: PaymentSourceAdapter.kt */
     public static final class PaymentSourceAddViewHolder extends MGRecyclerViewHolder<PaymentSourceAdapter, Item> {
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
         public PaymentSourceAddViewHolder(PaymentSourceAdapter paymentSourceAdapter) {
@@ -67,20 +67,20 @@ public final class PaymentSourceAdapter extends MGRecyclerAdapterSimple<Item> {
             onConfigure2(i, item);
         }
 
-        /* renamed from: onConfigure, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: onConfigure, reason: avoid collision after fix types in other method */
         public void onConfigure2(int position, Item data) {
             Intrinsics3.checkNotNullParameter(data, "data");
             this.itemView.setOnClickListener(new PaymentSourceAdapter2(this));
         }
     }
 
-    /* compiled from: PaymentSourceAdapter.kt */
+    /* JADX INFO: compiled from: PaymentSourceAdapter.kt */
     public static final /* data */ class PaymentSourceHeader implements Item {
         private final Type headerType;
         private final String key;
         private final int type;
 
-        /* compiled from: PaymentSourceAdapter.kt */
+        /* JADX INFO: compiled from: PaymentSourceAdapter.kt */
         public enum Type {
             DEFAULT,
             OTHER
@@ -100,7 +100,7 @@ public final class PaymentSourceAdapter extends MGRecyclerAdapterSimple<Item> {
             return paymentSourceHeader.copy(type);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final Type getHeaderType() {
             return this.headerType;
         }
@@ -147,7 +147,7 @@ public final class PaymentSourceAdapter extends MGRecyclerAdapterSimple<Item> {
         }
     }
 
-    /* compiled from: PaymentSourceAdapter.kt */
+    /* JADX INFO: compiled from: PaymentSourceAdapter.kt */
     public static final class PaymentSourceHeaderViewHolder extends MGRecyclerViewHolder<PaymentSourceAdapter, Item> {
 
         public final /* synthetic */ class WhenMappings {
@@ -173,7 +173,7 @@ public final class PaymentSourceAdapter extends MGRecyclerAdapterSimple<Item> {
             onConfigure2(i, item);
         }
 
-        /* renamed from: onConfigure, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: onConfigure, reason: avoid collision after fix types in other method */
         public void onConfigure2(int position, Item data) {
             int i;
             Intrinsics3.checkNotNullParameter(data, "data");
@@ -193,7 +193,7 @@ public final class PaymentSourceAdapter extends MGRecyclerAdapterSimple<Item> {
         }
     }
 
-    /* compiled from: PaymentSourceAdapter.kt */
+    /* JADX INFO: compiled from: PaymentSourceAdapter.kt */
     public static final /* data */ class PaymentSourceItem implements Item {
         private final boolean isPremium;
         private final String key;
@@ -217,12 +217,12 @@ public final class PaymentSourceAdapter extends MGRecyclerAdapterSimple<Item> {
             return paymentSourceItem.copy(modelPaymentSource, z2);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final ModelPaymentSource getPaymentSource() {
             return this.paymentSource;
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final boolean getIsPremium() {
             return this.isPremium;
         }
@@ -258,15 +258,18 @@ public final class PaymentSourceAdapter extends MGRecyclerAdapterSimple<Item> {
         }
 
         /* JADX WARN: Multi-variable type inference failed */
+        /* JADX WARN: Type inference failed for: r1v1, types: [int] */
+        /* JADX WARN: Type inference failed for: r1v2 */
+        /* JADX WARN: Type inference failed for: r1v3 */
         public int hashCode() {
             ModelPaymentSource modelPaymentSource = this.paymentSource;
             int iHashCode = (modelPaymentSource != null ? modelPaymentSource.hashCode() : 0) * 31;
             boolean z2 = this.isPremium;
-            int i = z2;
-            if (z2 != 0) {
-                i = 1;
+            ?? r1 = z2;
+            if (z2) {
+                r1 = 1;
             }
-            return iHashCode + i;
+            return iHashCode + r1;
         }
 
         public final boolean isPremium() {
@@ -281,7 +284,7 @@ public final class PaymentSourceAdapter extends MGRecyclerAdapterSimple<Item> {
         }
     }
 
-    /* compiled from: PaymentSourceAdapter.kt */
+    /* JADX INFO: compiled from: PaymentSourceAdapter.kt */
     public static final class PaymentSourceItemViewHolder extends MGRecyclerViewHolder<PaymentSourceAdapter, Item> {
         private final PaymentMethodListItemBinding binding;
 
@@ -314,7 +317,7 @@ public final class PaymentSourceAdapter extends MGRecyclerAdapterSimple<Item> {
             onConfigure2(i, item);
         }
 
-        /* renamed from: onConfigure, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: onConfigure, reason: avoid collision after fix types in other method */
         public void onConfigure2(int position, Item data) {
             Intrinsics3.checkNotNullParameter(data, "data");
             PaymentSourceItem paymentSourceItem = (PaymentSourceItem) data;

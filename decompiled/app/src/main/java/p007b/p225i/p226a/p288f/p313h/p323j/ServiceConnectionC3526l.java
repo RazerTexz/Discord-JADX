@@ -8,17 +8,17 @@ import android.os.RemoteException;
 import p007b.p085c.p086a.p087a0.AnimatableValueParser;
 import p007b.p225i.p226a.p288f.p299e.p307n.C3398a;
 
-/* renamed from: b.i.a.f.h.j.l */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.h.j.l */
+/* JADX INFO: loaded from: classes3.dex */
 public final class ServiceConnectionC3526l implements ServiceConnection {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public volatile InterfaceC3525k0 f9754j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public volatile boolean f9755k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final /* synthetic */ C3522j f9756l;
 
     public ServiceConnectionC3526l(C3522j c3522j) {

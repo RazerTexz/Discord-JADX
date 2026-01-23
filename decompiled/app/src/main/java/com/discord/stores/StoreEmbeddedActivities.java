@@ -22,15 +22,15 @@ import p507d0.p592z.p594d.Lambda;
 import p637j0.p641k.Func1;
 import p658rx.Observable;
 
-/* compiled from: StoreEmbeddedActivities.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: StoreEmbeddedActivities.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class StoreEmbeddedActivities extends StoreV2 {
     private final Map<Long, Map<Long, EmbeddedActivity>> embeddedActivitiesByChannel;
     private Map<Long, ? extends Map<Long, EmbeddedActivity>> embeddedActivitiesByChannelSnapshot;
     private final ObservationDeck observationDeck;
 
-    /* compiled from: StoreEmbeddedActivities.kt */
-    /* renamed from: com.discord.stores.StoreEmbeddedActivities$observeEmbeddedActivities$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreEmbeddedActivities$observeEmbeddedActivities$1 */
+    /* JADX INFO: compiled from: StoreEmbeddedActivities.kt */
     public static final class C58861 extends Lambda implements Function0<Map<Long, ? extends Map<Long, ? extends EmbeddedActivity>>> {
         public C58861() {
             super(0);
@@ -42,14 +42,14 @@ public final class StoreEmbeddedActivities extends StoreV2 {
         }
 
         @Override // kotlin.jvm.functions.Function0
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final Map<Long, ? extends Map<Long, ? extends EmbeddedActivity>> invoke2() {
             return StoreEmbeddedActivities.this.getEmbeddedActivities();
         }
     }
 
-    /* compiled from: StoreEmbeddedActivities.kt */
-    /* renamed from: com.discord.stores.StoreEmbeddedActivities$observeEmbeddedActivitiesForChannel$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreEmbeddedActivities$observeEmbeddedActivitiesForChannel$1 */
+    /* JADX INFO: compiled from: StoreEmbeddedActivities.kt */
     public static final class C58871<T, R> implements Func1<Map<Long, ? extends Map<Long, ? extends EmbeddedActivity>>, Map<Long, ? extends EmbeddedActivity>> {
         public final /* synthetic */ long $channelId;
 
@@ -62,7 +62,7 @@ public final class StoreEmbeddedActivities extends StoreV2 {
             return call2((Map<Long, ? extends Map<Long, EmbeddedActivity>>) map);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final Map<Long, EmbeddedActivity> call2(Map<Long, ? extends Map<Long, EmbeddedActivity>> map) {
             Map<Long, EmbeddedActivity> map2 = map.get(Long.valueOf(this.$channelId));
             return map2 != null ? map2 : Maps6.emptyMap();

@@ -9,17 +9,17 @@ import kotlin.jvm.internal.Ref$ObjectRef;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ModelMuteConfig.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: ModelMuteConfig.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class ModelMuteConfig {
 
-    /* renamed from: Parser, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Parser, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private final String endTime;
     private final Long endTimeMs;
 
-    /* compiled from: ModelMuteConfig.kt */
-    /* renamed from: com.discord.models.domain.ModelMuteConfig$Parser, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: com.discord.models.domain.ModelMuteConfig$Parser, reason: from kotlin metadata */
+    /* JADX INFO: compiled from: ModelMuteConfig.kt */
     public static final class Companion implements Model.Parser<ModelMuteConfig> {
         private Companion() {
         }
@@ -63,12 +63,12 @@ public final /* data */ class ModelMuteConfig {
         return INSTANCE.parse(jsonReader);
     }
 
-    /* renamed from: component1, reason: from getter */
+    /* JADX INFO: renamed from: component1, reason: from getter */
     public final Long getEndTimeMs() {
         return this.endTimeMs;
     }
 
-    /* renamed from: component2, reason: from getter */
+    /* JADX INFO: renamed from: component2, reason: from getter */
     public final String getEndTime() {
         return this.endTime;
     }

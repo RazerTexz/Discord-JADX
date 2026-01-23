@@ -21,19 +21,19 @@ import kotlin.jvm.functions.Function1;
 import kotlin.jvm.internal.DefaultConstructorMarker;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: WidgetChannelPickerAdapter.kt */
-/* renamed from: com.discord.widgets.channels.ChannelPickerViewHolder, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.channels.ChannelPickerViewHolder, reason: use source file name */
+/* JADX INFO: compiled from: WidgetChannelPickerAdapter.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public abstract class WidgetChannelPickerAdapter2 extends RecyclerView.ViewHolder {
 
-    /* compiled from: WidgetChannelPickerAdapter.kt */
-    /* renamed from: com.discord.widgets.channels.ChannelPickerViewHolder$ChannelItemViewHolder */
+    /* JADX INFO: renamed from: com.discord.widgets.channels.ChannelPickerViewHolder$ChannelItemViewHolder */
+    /* JADX INFO: compiled from: WidgetChannelPickerAdapter.kt */
     public static final class ChannelItemViewHolder extends WidgetChannelPickerAdapter2 {
         private final ViewGuildRoleSubscriptionChannelItemBinding binding;
         private WidgetChannelPickerAdapter.ChannelItem item;
 
-        /* compiled from: WidgetChannelPickerAdapter.kt */
-        /* renamed from: com.discord.widgets.channels.ChannelPickerViewHolder$ChannelItemViewHolder$1 */
+        /* JADX INFO: renamed from: com.discord.widgets.channels.ChannelPickerViewHolder$ChannelItemViewHolder$1 */
+        /* JADX INFO: compiled from: WidgetChannelPickerAdapter.kt */
         public static final class ViewOnClickListenerC73281 implements View.OnClickListener {
             public final /* synthetic */ Function1 $onItemClickListener;
 
@@ -85,13 +85,13 @@ public abstract class WidgetChannelPickerAdapter2 extends RecyclerView.ViewHolde
         }
     }
 
-    /* compiled from: WidgetChannelPickerAdapter.kt */
+    /* JADX INFO: renamed from: com.discord.widgets.channels.ChannelPickerViewHolder$CreateChannelViewHolder */
+    /* JADX INFO: compiled from: WidgetChannelPickerAdapter.kt */
     @SuppressLint({"SetTextI18n"})
-    /* renamed from: com.discord.widgets.channels.ChannelPickerViewHolder$CreateChannelViewHolder */
     public static final class CreateChannelViewHolder extends WidgetChannelPickerAdapter2 {
 
-        /* compiled from: WidgetChannelPickerAdapter.kt */
-        /* renamed from: com.discord.widgets.channels.ChannelPickerViewHolder$CreateChannelViewHolder$1 */
+        /* JADX INFO: renamed from: com.discord.widgets.channels.ChannelPickerViewHolder$CreateChannelViewHolder$1 */
+        /* JADX INFO: compiled from: WidgetChannelPickerAdapter.kt */
         public static final class ViewOnClickListenerC73291 implements View.OnClickListener {
             public final /* synthetic */ Function0 $onItemClickListener;
 

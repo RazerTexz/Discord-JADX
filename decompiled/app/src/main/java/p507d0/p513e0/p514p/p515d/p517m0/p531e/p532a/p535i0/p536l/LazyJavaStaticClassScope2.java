@@ -35,19 +35,19 @@ import p507d0.p580t._Collections;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: LazyJavaStaticClassScope.kt */
-/* renamed from: d0.e0.p.d.m0.e.a.i0.l.o, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.e.a.i0.l.o, reason: use source file name */
+/* JADX INFO: compiled from: LazyJavaStaticClassScope.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class LazyJavaStaticClassScope2 extends LazyJavaStaticScope {
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public final InterfaceC11574g f23410n;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public final LazyJavaClassDescriptor f23411o;
 
-    /* compiled from: LazyJavaStaticClassScope.kt */
-    /* renamed from: d0.e0.p.d.m0.e.a.i0.l.o$a */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.e.a.i0.l.o$a */
+    /* JADX INFO: compiled from: LazyJavaStaticClassScope.kt */
     public static final class a extends Lambda implements Function1<MemberScope3, Collection<? extends PropertyDescriptor>> {
         public final /* synthetic */ Name $name;
 
@@ -62,18 +62,18 @@ public final class LazyJavaStaticClassScope2 extends LazyJavaStaticScope {
             return invoke2(memberScope3);
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final Collection<? extends PropertyDescriptor> invoke2(MemberScope3 memberScope3) {
             Intrinsics3.checkNotNullParameter(memberScope3, "it");
             return memberScope3.getContributedVariables(this.$name, LookupLocation3.WHEN_GET_SUPER_MEMBERS);
         }
     }
 
-    /* compiled from: LazyJavaStaticClassScope.kt */
-    /* renamed from: d0.e0.p.d.m0.e.a.i0.l.o$b */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.e.a.i0.l.o$b */
+    /* JADX INFO: compiled from: LazyJavaStaticClassScope.kt */
     public static final class b extends Lambda implements Function1<MemberScope3, Collection<? extends Name>> {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public static final b f23412j = new b();
 
         public b() {
@@ -85,7 +85,7 @@ public final class LazyJavaStaticClassScope2 extends LazyJavaStaticScope {
             return invoke2(memberScope3);
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final Collection<Name> invoke2(MemberScope3 memberScope3) {
             Intrinsics3.checkNotNullParameter(memberScope3, "it");
             return memberScope3.getVariableNames();
@@ -103,14 +103,14 @@ public final class LazyJavaStaticClassScope2 extends LazyJavaStaticScope {
     }
 
     @Override // p507d0.p513e0.p514p.p515d.p517m0.p531e.p532a.p535i0.p536l.LazyJavaScope
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public Set<Name> mo9470a(MemberScope2 memberScope2, Function1<? super Name, Boolean> function1) {
         Intrinsics3.checkNotNullParameter(memberScope2, "kindFilter");
         return Sets5.emptySet();
     }
 
     @Override // p507d0.p513e0.p514p.p515d.p517m0.p531e.p532a.p535i0.p536l.LazyJavaScope
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public Set<Name> mo9471b(MemberScope2 memberScope2, Function1<? super Name, Boolean> function1) {
         Intrinsics3.checkNotNullParameter(memberScope2, "kindFilter");
         Set<Name> mutableSet = _Collections.toMutableSet(this.f23392f.invoke().getMethodNames());
@@ -127,13 +127,13 @@ public final class LazyJavaStaticClassScope2 extends LazyJavaStaticScope {
     }
 
     @Override // p507d0.p513e0.p514p.p515d.p517m0.p531e.p532a.p535i0.p536l.LazyJavaScope
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public DeclaredMemberIndex2 mo9473d() {
         return new DeclaredMemberIndex(this.f23410n, LazyJavaStaticClassScope.f23409j);
     }
 
     @Override // p507d0.p513e0.p514p.p515d.p517m0.p531e.p532a.p535i0.p536l.LazyJavaScope
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public void mo9474f(Collection<SimpleFunctionDescriptor> collection, Name name) {
         Intrinsics3.checkNotNullParameter(collection, "result");
         Intrinsics3.checkNotNullParameter(name, ModelAuditLogEntry.CHANGE_KEY_NAME);
@@ -155,7 +155,7 @@ public final class LazyJavaStaticClassScope2 extends LazyJavaStaticScope {
     }
 
     @Override // p507d0.p513e0.p514p.p515d.p517m0.p531e.p532a.p535i0.p536l.LazyJavaStaticScope, p507d0.p513e0.p514p.p515d.p517m0.p531e.p532a.p535i0.p536l.LazyJavaScope
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public void mo9475g(Name name, Collection<PropertyDescriptor> collection) {
         Intrinsics3.checkNotNullParameter(name, ModelAuditLogEntry.CHANGE_KEY_NAME);
         Intrinsics3.checkNotNullParameter(collection, "result");
@@ -196,7 +196,7 @@ public final class LazyJavaStaticClassScope2 extends LazyJavaStaticScope {
     }
 
     @Override // p507d0.p513e0.p514p.p515d.p517m0.p531e.p532a.p535i0.p536l.LazyJavaScope
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public Set<Name> mo9476h(MemberScope2 memberScope2, Function1<? super Name, Boolean> function1) {
         Intrinsics3.checkNotNullParameter(memberScope2, "kindFilter");
         Set<Name> mutableSet = _Collections.toMutableSet(this.f23392f.invoke().getFieldNames());
@@ -206,12 +206,12 @@ public final class LazyJavaStaticClassScope2 extends LazyJavaStaticScope {
     }
 
     @Override // p507d0.p513e0.p514p.p515d.p517m0.p531e.p532a.p535i0.p536l.LazyJavaScope
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public DeclarationDescriptor mo9478j() {
         return this.f23411o;
     }
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public final PropertyDescriptor m9497o(PropertyDescriptor propertyDescriptor) {
         if (propertyDescriptor.getKind().isReal()) {
             return propertyDescriptor;

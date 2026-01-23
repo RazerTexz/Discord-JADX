@@ -19,7 +19,7 @@ import java.util.Map;
 import java.util.Queue;
 import java.util.Set;
 
-/* loaded from: discord-126021.apk:com/zwitserloot/cmdreader/ParseItem.SCL.lombok */
+/* JADX INFO: loaded from: discord-126021.apk:com/zwitserloot/cmdreader/ParseItem.SCL.lombok */
 class ParseItem {
     private final Field field;
     private final boolean isCollection;
@@ -198,7 +198,7 @@ class ParseItem {
         return this.description;
     }
 
-    void set(Object o, String value) throws IllegalArgumentException {
+    void set(Object o, String value) {
         Object v = stringToObject(value);
         try {
             if (this.isCollection) {

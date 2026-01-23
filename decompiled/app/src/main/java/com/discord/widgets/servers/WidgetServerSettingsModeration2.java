@@ -9,9 +9,9 @@ import com.discord.widgets.servers.WidgetServerSettingsModeration;
 import p507d0.p592z.p594d.Intrinsics3;
 import p658rx.functions.Func3;
 
-/* compiled from: WidgetServerSettingsModeration.kt */
-/* renamed from: com.discord.widgets.servers.WidgetServerSettingsModeration$Model$Companion$get$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.servers.WidgetServerSettingsModeration$Model$Companion$get$1, reason: use source file name */
+/* JADX INFO: compiled from: WidgetServerSettingsModeration.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetServerSettingsModeration2<T1, T2, T3, R> implements Func3<Guild, MeUser, Long, WidgetServerSettingsModeration.Model> {
     public static final WidgetServerSettingsModeration2 INSTANCE = new WidgetServerSettingsModeration2();
 
@@ -20,7 +20,7 @@ public final class WidgetServerSettingsModeration2<T1, T2, T3, R> implements Fun
         return call2(guild, meUser, l);
     }
 
-    /* renamed from: call, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
     public final WidgetServerSettingsModeration.Model call2(Guild guild, MeUser meUser, Long l) {
         Intrinsics3.checkNotNullParameter(meUser, "me");
         if (guild == null) {

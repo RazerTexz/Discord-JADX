@@ -34,23 +34,23 @@ import p007b.p195g.p196a.p205c.p219i0.LRUMap;
 import p007b.p195g.p196a.p205c.p219i0.RootNameLookup;
 import p007b.p195g.p196a.p205c.p219i0.TypeKey;
 
-/* compiled from: DefaultSerializerProvider.java */
-/* renamed from: b.g.a.c.g0.j, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.g.a.c.g0.j, reason: use source file name */
+/* JADX INFO: compiled from: DefaultSerializerProvider.java */
+/* JADX INFO: loaded from: classes3.dex */
 public abstract class DefaultSerializerProvider extends SerializerProvider implements Serializable {
     private static final long serialVersionUID = 1;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public transient Map<Object, WritableObjectId> f4806m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public transient ArrayList<ObjectIdGenerator<?>> f4807n;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public transient JsonGenerator f4808o;
 
-    /* compiled from: DefaultSerializerProvider.java */
-    /* renamed from: b.g.a.c.g0.j$a */
+    /* JADX INFO: renamed from: b.g.a.c.g0.j$a */
+    /* JADX INFO: compiled from: DefaultSerializerProvider.java */
     public static final class a extends DefaultSerializerProvider {
         private static final long serialVersionUID = 1;
 
@@ -58,7 +58,7 @@ public abstract class DefaultSerializerProvider extends SerializerProvider imple
         }
 
         @Override // p007b.p195g.p196a.p205c.p215g0.DefaultSerializerProvider
-        /* renamed from: K */
+        /* JADX INFO: renamed from: K */
         public DefaultSerializerProvider mo2003K(SerializationConfig serializationConfig, SerializerFactory2 serializerFactory2) {
             return new a(this, serializationConfig, serializerFactory2);
         }
@@ -72,7 +72,7 @@ public abstract class DefaultSerializerProvider extends SerializerProvider imple
     }
 
     @Override // p007b.p195g.p196a.p205c.SerializerProvider
-    /* renamed from: A */
+    /* JADX INFO: renamed from: A */
     public Object mo1998A(BeanPropertyDefinition beanPropertyDefinition, Class<?> cls) {
         if (cls == null) {
             return null;
@@ -82,7 +82,7 @@ public abstract class DefaultSerializerProvider extends SerializerProvider imple
     }
 
     @Override // p007b.p195g.p196a.p205c.SerializerProvider
-    /* renamed from: B */
+    /* JADX INFO: renamed from: B */
     public boolean mo1999B(Object obj) throws JsonMappingException {
         try {
             return obj.equals(null);
@@ -94,7 +94,7 @@ public abstract class DefaultSerializerProvider extends SerializerProvider imple
     }
 
     @Override // p007b.p195g.p196a.p205c.SerializerProvider
-    /* renamed from: H */
+    /* JADX INFO: renamed from: H */
     public JsonSerializer<Object> mo2000H(Annotated annotated, Object obj) throws JsonMappingException {
         JsonSerializer<Object> jsonSerializer;
         if (obj instanceof JsonSerializer) {
@@ -129,7 +129,7 @@ public abstract class DefaultSerializerProvider extends SerializerProvider imple
         return jsonSerializer;
     }
 
-    /* renamed from: I */
+    /* JADX INFO: renamed from: I */
     public final void m2001I(JsonGenerator jsonGenerator, Object obj, JsonSerializer<Object> jsonSerializer, PropertyName propertyName) throws IOException {
         try {
             jsonGenerator.mo1651c0();
@@ -147,7 +147,7 @@ public abstract class DefaultSerializerProvider extends SerializerProvider imple
         }
     }
 
-    /* renamed from: J */
+    /* JADX INFO: renamed from: J */
     public final IOException m2002J(JsonGenerator jsonGenerator, Exception exc) {
         if (exc instanceof IOException) {
             return (IOException) exc;
@@ -162,10 +162,10 @@ public abstract class DefaultSerializerProvider extends SerializerProvider imple
         return new JsonMappingException(jsonGenerator, strM2176h, exc);
     }
 
-    /* renamed from: K */
+    /* JADX INFO: renamed from: K */
     public abstract DefaultSerializerProvider mo2003K(SerializationConfig serializationConfig, SerializerFactory2 serializerFactory2);
 
-    /* renamed from: L */
+    /* JADX INFO: renamed from: L */
     public void m2004L(JsonGenerator jsonGenerator, Object obj) throws IOException {
         JsonSerializer<Object> jsonSerializerM2256u;
         JsonSerializer<Object> jsonSerializer;
@@ -265,7 +265,7 @@ public abstract class DefaultSerializerProvider extends SerializerProvider imple
     }
 
     @Override // p007b.p195g.p196a.p205c.SerializerProvider
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public WritableObjectId mo2005p(Object obj, ObjectIdGenerator<?> objectIdGenerator) {
         Map<Object, WritableObjectId> map = this.f4806m;
         if (map == null) {

@@ -49,22 +49,22 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 import p507d0.p592z.p594d.Reflection2;
 
-/* compiled from: WidgetApplicationCommandBottomSheet.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetApplicationCommandBottomSheet.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetApplicationCommandBottomSheet extends AppBottomSheet {
     public static final String ARG_MESSAGE_NONCE = "arg_message_nonce";
 
-    /* renamed from: binding$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
 
-    /* renamed from: viewModel$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: viewModel$delegate, reason: from kotlin metadata */
     private final Lazy viewModel;
     public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetApplicationCommandBottomSheet.class, "binding", "getBinding()Lcom/discord/databinding/WidgetApplicationCommandBottomSheetBinding;", 0)};
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
 
-    /* compiled from: WidgetApplicationCommandBottomSheet.kt */
+    /* JADX INFO: compiled from: WidgetApplicationCommandBottomSheet.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -98,8 +98,8 @@ public final class WidgetApplicationCommandBottomSheet extends AppBottomSheet {
         }
     }
 
-    /* compiled from: WidgetApplicationCommandBottomSheet.kt */
-    /* renamed from: com.discord.widgets.chat.list.sheet.WidgetApplicationCommandBottomSheet$configureLoaded$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.list.sheet.WidgetApplicationCommandBottomSheet$configureLoaded$1 */
+    /* JADX INFO: compiled from: WidgetApplicationCommandBottomSheet.kt */
     public static final class ViewOnClickListenerC81651 implements View.OnClickListener {
         public final /* synthetic */ WidgetApplicationCommandBottomSheetViewModel.ViewState.Loaded $viewState;
 
@@ -116,8 +116,8 @@ public final class WidgetApplicationCommandBottomSheet extends AppBottomSheet {
         }
     }
 
-    /* compiled from: WidgetApplicationCommandBottomSheet.kt */
-    /* renamed from: com.discord.widgets.chat.list.sheet.WidgetApplicationCommandBottomSheet$onResume$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.list.sheet.WidgetApplicationCommandBottomSheet$onResume$1 */
+    /* JADX INFO: compiled from: WidgetApplicationCommandBottomSheet.kt */
     public static final class C81661 extends Lambda implements Function1<WidgetApplicationCommandBottomSheetViewModel.ViewState, Unit> {
         public C81661() {
             super(1);
@@ -129,7 +129,7 @@ public final class WidgetApplicationCommandBottomSheet extends AppBottomSheet {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(WidgetApplicationCommandBottomSheetViewModel.ViewState viewState) {
             Intrinsics3.checkNotNullParameter(viewState, "viewState");
             WidgetApplicationCommandBottomSheet.access$configureUI(WidgetApplicationCommandBottomSheet.this, viewState);

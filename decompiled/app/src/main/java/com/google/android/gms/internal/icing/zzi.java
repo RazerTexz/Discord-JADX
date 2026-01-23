@@ -6,18 +6,18 @@ import com.google.android.gms.common.internal.safeparcel.AbstractSafeParcelable;
 import p007b.p085c.p086a.p087a0.AnimatableValueParser;
 import p007b.p225i.p226a.p288f.p313h.p324k.C3569n;
 
-/* compiled from: com.google.firebase:firebase-appindexing@@19.1.0 */
-/* loaded from: classes3.dex */
+/* JADX INFO: compiled from: com.google.firebase:firebase-appindexing@@19.1.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public final class zzi extends AbstractSafeParcelable {
     public static final Parcelable.Creator<zzi> CREATOR = new C3569n();
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final String f20589j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final String f20590k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final String f20591l;
 
     public zzi(String str, String str2, String str3) {

@@ -14,15 +14,15 @@ import p507d0.p580t._Collections;
 import p507d0.p592z.p594d.Intrinsics3;
 import p658rx.Emitter;
 
-/* compiled from: MediaEngineLegacy.kt */
-/* renamed from: b.a.q.m0.c.p */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.a.q.m0.c.p */
+/* JADX INFO: compiled from: MediaEngineLegacy.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class C1238p implements Discord.GetSupportedVideoCodecsCallback {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final /* synthetic */ C1239q f1751a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final /* synthetic */ Emitter f1752b;
 
     public C1238p(C1239q c1239q, Emitter emitter) {

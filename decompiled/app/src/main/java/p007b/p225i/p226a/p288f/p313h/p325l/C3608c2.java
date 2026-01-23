@@ -7,19 +7,19 @@ import androidx.annotation.GuardedBy;
 import androidx.core.content.PermissionChecker;
 import p007b.p225i.p226a.p288f.p299e.p308o.C3404f;
 
-/* compiled from: com.google.android.gms:play-services-measurement-impl@@18.0.0 */
-/* renamed from: b.i.a.f.h.l.c2 */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.h.l.c2 */
+/* JADX INFO: compiled from: com.google.android.gms:play-services-measurement-impl@@18.0.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public final class C3608c2 implements InterfaceC3594b2 {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     @GuardedBy("GservicesLoader.class")
     public static C3608c2 f9871a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final Context f9872b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final ContentObserver f9873c;
 
     public C3608c2(Context context) {
@@ -29,7 +29,7 @@ public final class C3608c2 implements InterfaceC3594b2 {
         context.getContentResolver().registerContentObserver(C3848u1.f10333a, true, c3650f2);
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static C3608c2 m4602a(Context context) {
         C3608c2 c3608c2;
         synchronized (C3608c2.class) {
@@ -42,7 +42,7 @@ public final class C3608c2 implements InterfaceC3594b2 {
     }
 
     @Override // p007b.p225i.p226a.p288f.p313h.p325l.InterfaceC3594b2
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public final Object mo4567g(String str) {
         if (this.f9872b == null) {
             return null;

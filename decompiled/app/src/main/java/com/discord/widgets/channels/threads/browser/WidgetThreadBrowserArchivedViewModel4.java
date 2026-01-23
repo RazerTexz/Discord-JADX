@@ -6,9 +6,9 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p637j0.p641k.Func1;
 import p658rx.Observable;
 
-/* compiled from: WidgetThreadBrowserArchivedViewModel.kt */
-/* renamed from: com.discord.widgets.channels.threads.browser.WidgetThreadBrowserArchivedViewModel$storeStateObservable$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.channels.threads.browser.WidgetThreadBrowserArchivedViewModel$storeStateObservable$1, reason: use source file name */
+/* JADX INFO: compiled from: WidgetThreadBrowserArchivedViewModel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetThreadBrowserArchivedViewModel4<T, R> implements Func1<WidgetThreadBrowserArchivedViewModel.ViewMode, Observable<? extends WidgetThreadBrowserArchivedViewModel.StoreState>> {
     public final /* synthetic */ WidgetThreadBrowserArchivedViewModel this$0;
 
@@ -21,7 +21,7 @@ public final class WidgetThreadBrowserArchivedViewModel4<T, R> implements Func1<
         return call2(viewMode);
     }
 
-    /* renamed from: call, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
     public final Observable<? extends WidgetThreadBrowserArchivedViewModel.StoreState> call2(WidgetThreadBrowserArchivedViewModel.ViewMode viewMode) {
         WidgetThreadBrowserArchivedViewModel.Companion companion = WidgetThreadBrowserArchivedViewModel.INSTANCE;
         Intrinsics3.checkNotNullExpressionValue(viewMode, "viewMode");

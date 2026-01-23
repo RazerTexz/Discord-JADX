@@ -4,8 +4,8 @@ import android.view.View;
 import java.util.Map;
 import kotlin.jvm.functions.Function1;
 
-/* compiled from: WidgetNoticeDialog.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetNoticeDialog.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetNoticeDialog$onViewBound$$inlined$forEach$lambda$1 implements View.OnClickListener {
     public final /* synthetic */ Map.Entry $entry;
     public final /* synthetic */ View $view$inlined;

@@ -11,45 +11,45 @@ import p007b.p225i.p226a.p242c.p259f3.TimestampAdjuster;
 import p007b.p225i.p226a.p242c.p267x2.ExtractorOutput;
 import p007b.p225i.p226a.p242c.p267x2.p276k0.TsPayloadReader;
 
-/* compiled from: PesReader.java */
-/* renamed from: b.i.a.c.x2.k0.y, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.x2.k0.y, reason: use source file name */
+/* JADX INFO: compiled from: PesReader.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class PesReader implements TsPayloadReader {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final ElementaryStreamReader f8911a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final ParsableBitArray f8912b = new ParsableBitArray(new byte[10]);
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public int f8913c = 0;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public int f8914d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public TimestampAdjuster f8915e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public boolean f8916f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public boolean f8917g;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public boolean f8918h;
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public int f8919i;
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public int f8920j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public boolean f8921k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public long f8922l;
 
     public PesReader(ElementaryStreamReader elementaryStreamReader) {
@@ -57,14 +57,14 @@ public final class PesReader implements TsPayloadReader {
     }
 
     @Override // p007b.p225i.p226a.p242c.p267x2.p276k0.TsPayloadReader
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public void mo3754a(TimestampAdjuster timestampAdjuster, ExtractorOutput extractorOutput, TsPayloadReader.d dVar) {
         this.f8915e = timestampAdjuster;
         this.f8911a.mo3761e(extractorOutput, dVar);
     }
 
     @Override // p007b.p225i.p226a.p242c.p267x2.p276k0.TsPayloadReader
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final void mo3755b(ParsableByteArray parsableByteArray, int i) throws ParserException {
         boolean z2;
         AnimatableValueParser.m438H(this.f8915e);
@@ -102,19 +102,24 @@ public final class PesReader implements TsPayloadReader {
                             this.f8922l = -9223372036854775807L;
                             if (this.f8916f) {
                                 this.f8912b.m3073m(4);
+                                long jM3067g = ((long) this.f8912b.m3067g(i3)) << 30;
                                 this.f8912b.m3073m(1);
+                                long jM3067g2 = jM3067g | ((long) (this.f8912b.m3067g(15) << 15));
                                 this.f8912b.m3073m(1);
-                                long jM3067g = (this.f8912b.m3067g(i3) << 30) | (this.f8912b.m3067g(15) << 15) | this.f8912b.m3067g(15);
+                                long jM3067g3 = jM3067g2 | ((long) this.f8912b.m3067g(15));
                                 this.f8912b.m3073m(1);
                                 if (!this.f8918h && this.f8917g) {
                                     this.f8912b.m3073m(4);
+                                    long jM3067g4 = ((long) this.f8912b.m3067g(i3)) << 30;
                                     this.f8912b.m3073m(1);
+                                    long jM3067g5 = jM3067g4 | ((long) (this.f8912b.m3067g(15) << 15));
                                     this.f8912b.m3073m(1);
+                                    long jM3067g6 = jM3067g5 | ((long) this.f8912b.m3067g(15));
                                     this.f8912b.m3073m(1);
-                                    this.f8915e.m2973b((this.f8912b.m3067g(i3) << 30) | (this.f8912b.m3067g(15) << 15) | this.f8912b.m3067g(15));
+                                    this.f8915e.m2973b(jM3067g6);
                                     this.f8918h = true;
                                 }
-                                this.f8922l = this.f8915e.m2973b(jM3067g);
+                                this.f8922l = this.f8915e.m2973b(jM3067g3);
                             }
                             i |= this.f8921k ? 4 : 0;
                             this.f8911a.mo3762f(this.f8922l, i);
@@ -183,7 +188,7 @@ public final class PesReader implements TsPayloadReader {
     }
 
     @Override // p007b.p225i.p226a.p242c.p267x2.p276k0.TsPayloadReader
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final void mo3756c() {
         this.f8913c = 0;
         this.f8914d = 0;
@@ -191,7 +196,7 @@ public final class PesReader implements TsPayloadReader {
         this.f8911a.mo3759c();
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final boolean m3792d(ParsableByteArray parsableByteArray, @Nullable byte[] bArr, int i) {
         int iMin = Math.min(parsableByteArray.m3081a(), i - this.f8914d);
         if (iMin <= 0) {
@@ -208,7 +213,7 @@ public final class PesReader implements TsPayloadReader {
         return i2 == i;
     }
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final void m3793e(int i) {
         this.f8913c = i;
         this.f8914d = 0;

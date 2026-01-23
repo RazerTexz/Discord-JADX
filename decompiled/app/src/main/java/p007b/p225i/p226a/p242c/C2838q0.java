@@ -5,16 +5,16 @@ import p007b.p225i.p226a.p242c.Bundleable;
 import p007b.p225i.p226a.p242c.MediaItem2;
 import p007b.p225i.p226a.p242c.Timeline;
 
-/* compiled from: lambda */
-/* renamed from: b.i.a.c.q0 */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.q0 */
+/* JADX INFO: compiled from: lambda */
+/* JADX INFO: loaded from: classes3.dex */
 public final /* synthetic */ class C2838q0 implements Bundleable.a {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final /* synthetic */ C2838q0 f7441a = new C2838q0();
 
     @Override // p007b.p225i.p226a.p242c.Bundleable.a
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final Bundleable mo2576a(Bundle bundle) {
         Bundle bundle2 = bundle.getBundle(Timeline.c.m3338d(1));
         MediaItem2 mediaItem2 = bundle2 != null ? (MediaItem2) MediaItem2.f7261j.mo2576a(bundle2) : null;

@@ -5,35 +5,35 @@ import androidx.annotation.Nullable;
 import p007b.p100d.p104b.p105a.outline;
 import p007b.p225i.p361c.p401u.p403p.TokenResult;
 
-/* compiled from: AutoValue_TokenResult.java */
-/* renamed from: b.i.c.u.p.b, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.c.u.p.b, reason: use source file name */
+/* JADX INFO: compiled from: AutoValue_TokenResult.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class AutoValue_TokenResult extends TokenResult {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final String f12983a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final long f12984b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final TokenResult.b f12985c;
 
-    /* compiled from: AutoValue_TokenResult.java */
-    /* renamed from: b.i.c.u.p.b$b */
+    /* JADX INFO: renamed from: b.i.c.u.p.b$b */
+    /* JADX INFO: compiled from: AutoValue_TokenResult.java */
     public static final class b extends TokenResult.a {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public String f12986a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public Long f12987b;
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public TokenResult.b f12988c;
 
         @Override // p007b.p225i.p361c.p401u.p403p.TokenResult.a
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public TokenResult mo6800a() {
             String str = this.f12987b == null ? " tokenExpirationTimestamp" : "";
             if (str.isEmpty()) {
@@ -43,7 +43,7 @@ public final class AutoValue_TokenResult extends TokenResult {
         }
 
         @Override // p007b.p225i.p361c.p401u.p403p.TokenResult.a
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public TokenResult.a mo6801b(long j) {
             this.f12987b = Long.valueOf(j);
             return this;
@@ -58,21 +58,21 @@ public final class AutoValue_TokenResult extends TokenResult {
 
     @Override // p007b.p225i.p361c.p401u.p403p.TokenResult
     @Nullable
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public TokenResult.b mo6797b() {
         return this.f12985c;
     }
 
     @Override // p007b.p225i.p361c.p401u.p403p.TokenResult
     @Nullable
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public String mo6798c() {
         return this.f12983a;
     }
 
     @Override // p007b.p225i.p361c.p401u.p403p.TokenResult
     @NonNull
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public long mo6799d() {
         return this.f12984b;
     }

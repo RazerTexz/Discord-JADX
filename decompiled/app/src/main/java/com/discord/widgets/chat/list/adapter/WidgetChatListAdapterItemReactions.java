@@ -27,8 +27,8 @@ import p007b.p008a.p025i.ReactionQuickAddBinding;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetChatListAdapterItemReactions.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetChatListAdapterItemReactions.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetChatListAdapterItemReactions extends WidgetChatListItem {
     private static final int REACTION_LIMIT = 20;
     private final WidgetChatListAdapterItemReactionsBinding binding;
@@ -36,8 +36,8 @@ public final class WidgetChatListAdapterItemReactions extends WidgetChatListItem
     private static final int REACTION_HORIZONTAL_PADDING = DimenUtils.dpToPixels(6);
     private static final int REACTION_VIEW_HEIGHT = DimenUtils.dpToPixels(26);
 
-    /* compiled from: WidgetChatListAdapterItemReactions.kt */
-    /* renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemReactions$displayReactions$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemReactions$displayReactions$1 */
+    /* JADX INFO: compiled from: WidgetChatListAdapterItemReactions.kt */
     public static final class ViewOnClickListenerC81121 implements View.OnClickListener {
         public final /* synthetic */ boolean $canAddReactions;
         public final /* synthetic */ long $messageId;
@@ -55,8 +55,8 @@ public final class WidgetChatListAdapterItemReactions extends WidgetChatListItem
         }
     }
 
-    /* compiled from: WidgetChatListAdapterItemReactions.kt */
-    /* renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemReactions$displayReactions$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemReactions$displayReactions$2 */
+    /* JADX INFO: compiled from: WidgetChatListAdapterItemReactions.kt */
     public static final class C81132 extends Lambda implements Function1<View, Unit> {
         public final /* synthetic */ long $messageId;
         public final /* synthetic */ MessageReaction $reaction;
@@ -74,15 +74,15 @@ public final class WidgetChatListAdapterItemReactions extends WidgetChatListItem
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(View view) {
             Intrinsics3.checkNotNullParameter(view, "it");
             WidgetChatListAdapterItemReactions.access$getAdapter$p(WidgetChatListAdapterItemReactions.this).onReactionLongClicked(this.$messageId, this.$reaction);
         }
     }
 
-    /* compiled from: WidgetChatListAdapterItemReactions.kt */
-    /* renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemReactions$displayReactions$3 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemReactions$displayReactions$3 */
+    /* JADX INFO: compiled from: WidgetChatListAdapterItemReactions.kt */
     public static final class ViewOnClickListenerC81143 implements View.OnClickListener {
         public final /* synthetic */ long $messageId;
 

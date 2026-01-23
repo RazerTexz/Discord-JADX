@@ -21,12 +21,12 @@ import p007b.p100d.p104b.p105a.outline;
 import p507d0.p580t.Collections2;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: RoleMentionNode.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: RoleMentionNode.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class RoleMentionNode<T extends RenderContext> extends Node<T> {
     private final long roleId;
 
-    /* compiled from: RoleMentionNode.kt */
+    /* JADX INFO: compiled from: RoleMentionNode.kt */
     public interface RenderContext {
         Context getContext();
 

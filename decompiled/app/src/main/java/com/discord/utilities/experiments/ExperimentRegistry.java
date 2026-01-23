@@ -4,8 +4,8 @@ import com.discord.utilities.experiments.ExperimentRegistry2;
 import java.util.LinkedHashMap;
 import p507d0.p580t.Collections2;
 
-/* compiled from: ExperimentRegistry.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: ExperimentRegistry.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class ExperimentRegistry {
     public static final ExperimentRegistry INSTANCE = new ExperimentRegistry();
     private static final LinkedHashMap<String, ExperimentRegistry2> registeredExperiments;

@@ -6,20 +6,20 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.viewbinding.ViewBinding;
 import com.google.android.material.switchmaterial.SwitchMaterial;
 
-/* compiled from: ViewSettingSwitchBinding.java */
-/* renamed from: b.a.i.s3, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.a.i.s3, reason: use source file name */
+/* JADX INFO: compiled from: ViewSettingSwitchBinding.java */
+/* JADX INFO: loaded from: classes.dex */
 public final class ViewSettingSwitchBinding implements ViewBinding {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     @NonNull
     public final View f1211a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     @NonNull
     public final SwitchMaterial f1212b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     @NonNull
     public final ConstraintLayout f1213c;
 

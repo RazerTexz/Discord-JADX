@@ -9,12 +9,12 @@ import p007b.p100d.p104b.p105a.outline;
 import p659s.p660a.p663c2.BufferOverflow;
 import p659s.p660a.p664d2.p665g.ChannelFlow;
 
-/* compiled from: Builders.kt */
-/* renamed from: s.a.d2.c, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: s.a.d2.c, reason: use source file name */
+/* JADX INFO: compiled from: Builders.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public class Builders2<T> extends ChannelFlow<T> {
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final Function2<Produce<? super T>, Continuation<? super Unit>, Object> f27782d;
 
     /* JADX WARN: Multi-variable type inference failed */

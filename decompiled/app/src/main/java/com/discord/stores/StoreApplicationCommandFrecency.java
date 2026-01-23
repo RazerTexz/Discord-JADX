@@ -27,8 +27,8 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 import p658rx.Observable;
 
-/* compiled from: StoreApplicationCommandFrecency.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: StoreApplicationCommandFrecency.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class StoreApplicationCommandFrecency extends StoreV2 {
     private final Dispatcher dispatcher;
     private final ApplicationCommandFrecencyTracker frecency;
@@ -37,8 +37,8 @@ public final class StoreApplicationCommandFrecency extends StoreV2 {
     private Map<Long, List<String>> topCommandIds;
     private Map<Long, ? extends List<String>> topCommandIdsSnapshot;
 
-    /* compiled from: StoreApplicationCommandFrecency.kt */
-    /* renamed from: com.discord.stores.StoreApplicationCommandFrecency$observeTopCommandIds$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreApplicationCommandFrecency$observeTopCommandIds$1 */
+    /* JADX INFO: compiled from: StoreApplicationCommandFrecency.kt */
     public static final class C56991 extends Lambda implements Function0<List<? extends String>> {
         public final /* synthetic */ Long $guildId;
 
@@ -54,14 +54,14 @@ public final class StoreApplicationCommandFrecency extends StoreV2 {
         }
 
         @Override // kotlin.jvm.functions.Function0
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final List<? extends String> invoke2() {
             return StoreApplicationCommandFrecency.this.getTopCommandIds(this.$guildId);
         }
     }
 
-    /* compiled from: StoreApplicationCommandFrecency.kt */
-    /* renamed from: com.discord.stores.StoreApplicationCommandFrecency$onCommandUsed$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreApplicationCommandFrecency$onCommandUsed$1 */
+    /* JADX INFO: compiled from: StoreApplicationCommandFrecency.kt */
     public static final class C57001 extends Lambda implements Function0<Unit> {
         public final /* synthetic */ String $commandId;
         public final /* synthetic */ Long $guildId;
@@ -79,7 +79,7 @@ public final class StoreApplicationCommandFrecency extends StoreV2 {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             FrecencyTracker.track$default(StoreApplicationCommandFrecency.access$getFrecency$p(StoreApplicationCommandFrecency.this), StoreApplicationCommandFrecency.access$getKey(StoreApplicationCommandFrecency.this, this.$guildId, this.$commandId), 0L, 2, null);
             StoreApplicationCommandFrecency.access$getFrecencyCache$p(StoreApplicationCommandFrecency.this).set(StoreApplicationCommandFrecency.access$getFrecency$p(StoreApplicationCommandFrecency.this), true);

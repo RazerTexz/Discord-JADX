@@ -20,19 +20,19 @@ import p007b.p225i.p414e.p418n.DecoderResult;
 import p007b.p225i.p414e.p421o.p422b.Decoder3;
 import p007b.p225i.p414e.p421o.p423c.Detector2;
 
-/* compiled from: DataMatrixReader.java */
-/* renamed from: b.i.e.o.a, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.e.o.a, reason: use source file name */
+/* JADX INFO: compiled from: DataMatrixReader.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class DataMatrixReader implements Reader {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final ResultPoint[] f13317a = new ResultPoint[0];
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final Decoder3 f13318b = new Decoder3();
 
     @Override // p007b.p225i.p414e.Reader
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public Result mo6919a(BinaryBitmap binaryBitmap, Map<DecodeHintType, ?> map) throws NotFoundException, ChecksumException, FormatException {
         BitMatrix bitMatrixM6976d;
         ResultPoint[] resultPointArr;

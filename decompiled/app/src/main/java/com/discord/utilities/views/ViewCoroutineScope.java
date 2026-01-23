@@ -12,9 +12,9 @@ import p659s.p660a.C13116h1;
 import p659s.p660a.Dispatchers;
 import p659s.p660a.p661a.MainDispatchers;
 
-/* compiled from: ViewCoroutineScope.kt */
-/* renamed from: com.discord.utilities.views.ViewCoroutineScopeKt, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.utilities.views.ViewCoroutineScopeKt, reason: use source file name */
+/* JADX INFO: compiled from: ViewCoroutineScope.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class ViewCoroutineScope {
     private static final int SCOPE_TAG_KEY = -53661613;
 

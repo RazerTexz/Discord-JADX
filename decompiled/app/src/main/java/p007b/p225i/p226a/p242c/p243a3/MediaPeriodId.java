@@ -2,24 +2,24 @@ package p007b.p225i.p226a.p242c.p243a3;
 
 import androidx.annotation.Nullable;
 
-/* compiled from: MediaPeriodId.java */
-/* renamed from: b.i.a.c.a3.y, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.a3.y, reason: use source file name */
+/* JADX INFO: compiled from: MediaPeriodId.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class MediaPeriodId {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final Object f5732a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final int f5733b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final int f5734c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final long f5735d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final int f5736e;
 
     public MediaPeriodId(MediaPeriodId mediaPeriodId) {
@@ -30,7 +30,7 @@ public class MediaPeriodId {
         this.f5736e = mediaPeriodId.f5736e;
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public boolean m2593a() {
         return this.f5733b != -1;
     }

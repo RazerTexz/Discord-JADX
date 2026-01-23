@@ -6,16 +6,16 @@ import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
+/* JADX INFO: loaded from: classes.dex */
 @Target({ElementType.METHOD, ElementType.PARAMETER, ElementType.FIELD, ElementType.LOCAL_VARIABLE, ElementType.ANNOTATION_TYPE})
 @Documented
 @Retention(RetentionPolicy.CLASS)
-/* loaded from: classes.dex */
 public @interface FloatRange {
     double from() default Double.NEGATIVE_INFINITY;
 
     boolean fromInclusive() default true;
 
-    /* renamed from: to */
+    /* JADX INFO: renamed from: to */
     double m75to() default Double.POSITIVE_INFINITY;
 
     boolean toInclusive() default true;

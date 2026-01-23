@@ -32,47 +32,47 @@ import p615g0.Sink;
 import p615g0.Source2;
 import p615g0.Timeout2;
 
-/* compiled from: Http1ExchangeCodec.kt */
-/* renamed from: f0.e0.i.b, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: f0.e0.i.b, reason: use source file name */
+/* JADX INFO: compiled from: Http1ExchangeCodec.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class Http1ExchangeCodec implements ExchangeCodec {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public int f25549a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final HeadersReader f25550b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public Headers f25551c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final OkHttpClient f25552d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final RealConnection4 f25553e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final BufferedSource f25554f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public final BufferedSink f25555g;
 
-    /* compiled from: Http1ExchangeCodec.kt */
-    /* renamed from: f0.e0.i.b$a */
+    /* JADX INFO: renamed from: f0.e0.i.b$a */
+    /* JADX INFO: compiled from: Http1ExchangeCodec.kt */
     public abstract class a implements Source2 {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public final ForwardingTimeout f25556j;
 
-        /* renamed from: k */
+        /* JADX INFO: renamed from: k */
         public boolean f25557k;
 
         public a() {
             this.f25556j = new ForwardingTimeout(Http1ExchangeCodec.this.f25554f.timeout());
         }
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final void m10240a() {
             Http1ExchangeCodec http1ExchangeCodec = Http1ExchangeCodec.this;
             int i = http1ExchangeCodec.f25549a;
@@ -90,7 +90,7 @@ public final class Http1ExchangeCodec implements ExchangeCodec {
         }
 
         @Override // p615g0.Source2
-        /* renamed from: i0 */
+        /* JADX INFO: renamed from: i0 */
         public long mo10176i0(Buffer3 buffer3, long j) throws IOException {
             Intrinsics3.checkParameterIsNotNull(buffer3, "sink");
             try {
@@ -108,14 +108,14 @@ public final class Http1ExchangeCodec implements ExchangeCodec {
         }
     }
 
-    /* compiled from: Http1ExchangeCodec.kt */
-    /* renamed from: f0.e0.i.b$b */
+    /* JADX INFO: renamed from: f0.e0.i.b$b */
+    /* JADX INFO: compiled from: Http1ExchangeCodec.kt */
     public final class b implements Sink {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public final ForwardingTimeout f25559j;
 
-        /* renamed from: k */
+        /* JADX INFO: renamed from: k */
         public boolean f25560k;
 
         public b() {
@@ -162,20 +162,20 @@ public final class Http1ExchangeCodec implements ExchangeCodec {
         }
     }
 
-    /* compiled from: Http1ExchangeCodec.kt */
-    /* renamed from: f0.e0.i.b$c */
+    /* JADX INFO: renamed from: f0.e0.i.b$c */
+    /* JADX INFO: compiled from: Http1ExchangeCodec.kt */
     public final class c extends a {
 
-        /* renamed from: m */
+        /* JADX INFO: renamed from: m */
         public long f25562m;
 
-        /* renamed from: n */
+        /* JADX INFO: renamed from: n */
         public boolean f25563n;
 
-        /* renamed from: o */
+        /* JADX INFO: renamed from: o */
         public final HttpUrl f25564o;
 
-        /* renamed from: p */
+        /* JADX INFO: renamed from: p */
         public final /* synthetic */ Http1ExchangeCodec f25565p;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -201,7 +201,7 @@ public final class Http1ExchangeCodec implements ExchangeCodec {
         }
 
         @Override // p600f0.p601e0.p607i.Http1ExchangeCodec.a, p615g0.Source2
-        /* renamed from: i0 */
+        /* JADX INFO: renamed from: i0 */
         public long mo10176i0(Buffer3 buffer3, long j) throws IOException {
             Intrinsics3.checkParameterIsNotNull(buffer3, "sink");
             boolean z2 = true;
@@ -270,11 +270,11 @@ public final class Http1ExchangeCodec implements ExchangeCodec {
         }
     }
 
-    /* compiled from: Http1ExchangeCodec.kt */
-    /* renamed from: f0.e0.i.b$d */
+    /* JADX INFO: renamed from: f0.e0.i.b$d */
+    /* JADX INFO: compiled from: Http1ExchangeCodec.kt */
     public final class d extends a {
 
-        /* renamed from: m */
+        /* JADX INFO: renamed from: m */
         public long f25566m;
 
         public d(long j) {
@@ -298,7 +298,7 @@ public final class Http1ExchangeCodec implements ExchangeCodec {
         }
 
         @Override // p600f0.p601e0.p607i.Http1ExchangeCodec.a, p615g0.Source2
-        /* renamed from: i0 */
+        /* JADX INFO: renamed from: i0 */
         public long mo10176i0(Buffer3 buffer3, long j) throws IOException {
             Intrinsics3.checkParameterIsNotNull(buffer3, "sink");
             if (!(j >= 0)) {
@@ -327,14 +327,14 @@ public final class Http1ExchangeCodec implements ExchangeCodec {
         }
     }
 
-    /* compiled from: Http1ExchangeCodec.kt */
-    /* renamed from: f0.e0.i.b$e */
+    /* JADX INFO: renamed from: f0.e0.i.b$e */
+    /* JADX INFO: compiled from: Http1ExchangeCodec.kt */
     public final class e implements Sink {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public final ForwardingTimeout f25568j;
 
-        /* renamed from: k */
+        /* JADX INFO: renamed from: k */
         public boolean f25569k;
 
         public e() {
@@ -375,11 +375,11 @@ public final class Http1ExchangeCodec implements ExchangeCodec {
         }
     }
 
-    /* compiled from: Http1ExchangeCodec.kt */
-    /* renamed from: f0.e0.i.b$f */
+    /* JADX INFO: renamed from: f0.e0.i.b$f */
+    /* JADX INFO: compiled from: Http1ExchangeCodec.kt */
     public final class f extends a {
 
-        /* renamed from: m */
+        /* JADX INFO: renamed from: m */
         public boolean f25571m;
 
         public f(Http1ExchangeCodec http1ExchangeCodec) {
@@ -398,7 +398,7 @@ public final class Http1ExchangeCodec implements ExchangeCodec {
         }
 
         @Override // p600f0.p601e0.p607i.Http1ExchangeCodec.a, p615g0.Source2
-        /* renamed from: i0 */
+        /* JADX INFO: renamed from: i0 */
         public long mo10176i0(Buffer3 buffer3, long j) throws IOException {
             Intrinsics3.checkParameterIsNotNull(buffer3, "sink");
             if (!(j >= 0)) {
@@ -431,7 +431,7 @@ public final class Http1ExchangeCodec implements ExchangeCodec {
         this.f25550b = new HeadersReader(bufferedSource);
     }
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public static final void m10237i(Http1ExchangeCodec http1ExchangeCodec, ForwardingTimeout forwardingTimeout) {
         Objects.requireNonNull(http1ExchangeCodec);
         Timeout2 timeout2 = forwardingTimeout.f26094e;
@@ -443,13 +443,13 @@ public final class Http1ExchangeCodec implements ExchangeCodec {
     }
 
     @Override // p600f0.p601e0.p606h.ExchangeCodec
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public void mo10213a() throws IOException {
         this.f25555g.flush();
     }
 
     @Override // p600f0.p601e0.p606h.ExchangeCodec
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public void mo10214b(Request request) {
         Intrinsics3.checkParameterIsNotNull(request, "request");
         Proxy.Type type = this.f25553e.f25506q.f25371b.type();
@@ -478,7 +478,7 @@ public final class Http1ExchangeCodec implements ExchangeCodec {
     }
 
     @Override // p600f0.p601e0.p606h.ExchangeCodec
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public Source2 mo10215c(Response response) {
         Intrinsics3.checkParameterIsNotNull(response, "response");
         if (!HttpHeaders.m10221a(response)) {
@@ -517,7 +517,7 @@ public final class Http1ExchangeCodec implements ExchangeCodec {
     }
 
     @Override // p600f0.p601e0.p606h.ExchangeCodec
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public Response.C12937a mo10216d(boolean z2) {
         int i = this.f25549a;
         boolean z3 = true;
@@ -551,19 +551,19 @@ public final class Http1ExchangeCodec implements ExchangeCodec {
     }
 
     @Override // p600f0.p601e0.p606h.ExchangeCodec
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public RealConnection4 mo10217e() {
         return this.f25553e;
     }
 
     @Override // p600f0.p601e0.p606h.ExchangeCodec
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public void mo10218f() throws IOException {
         this.f25555g.flush();
     }
 
     @Override // p600f0.p601e0.p606h.ExchangeCodec
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public long mo10219g(Response response) {
         Intrinsics3.checkParameterIsNotNull(response, "response");
         if (!HttpHeaders.m10221a(response)) {
@@ -576,7 +576,7 @@ public final class Http1ExchangeCodec implements ExchangeCodec {
     }
 
     @Override // p600f0.p601e0.p606h.ExchangeCodec
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public Sink mo10220h(Request request, long j) throws ProtocolException {
         Intrinsics3.checkParameterIsNotNull(request, "request");
         RequestBody requestBody = request.body;
@@ -604,7 +604,7 @@ public final class Http1ExchangeCodec implements ExchangeCodec {
         throw new IllegalStateException(sbM833U2.toString().toString());
     }
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final Source2 m10238j(long j) {
         if (this.f25549a == 4) {
             this.f25549a = 5;
@@ -615,7 +615,7 @@ public final class Http1ExchangeCodec implements ExchangeCodec {
         throw new IllegalStateException(sbM833U.toString().toString());
     }
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final void m10239k(Headers headers, String str) {
         Intrinsics3.checkParameterIsNotNull(headers, "headers");
         Intrinsics3.checkParameterIsNotNull(str, "requestLine");

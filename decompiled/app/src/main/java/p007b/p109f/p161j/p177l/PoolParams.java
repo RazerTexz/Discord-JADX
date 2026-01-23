@@ -3,21 +3,21 @@ package p007b.p109f.p161j.p177l;
 import android.util.SparseIntArray;
 import p007b.p085c.p086a.p087a0.AnimatableValueParser;
 
-/* compiled from: PoolParams.java */
-/* renamed from: b.f.j.l.y, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.f.j.l.y, reason: use source file name */
+/* JADX INFO: compiled from: PoolParams.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class PoolParams {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final int f3976a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final int f3977b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final SparseIntArray f3978c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final int f3979d;
 
     public PoolParams(int i, int i2, SparseIntArray sparseIntArray) {

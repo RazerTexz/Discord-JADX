@@ -3,8 +3,8 @@ package com.discord.models.experiments.dto;
 import com.discord.models.domain.Model;
 import kotlin.jvm.internal.Ref$IntRef;
 
-/* compiled from: GuildExperimentDto.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: GuildExperimentDto.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class GuildExperimentBucketDto$Parser$parse$1 implements Runnable {
     public final /* synthetic */ Ref$IntRef $bucketInt;
     public final /* synthetic */ Model.JsonReader $reader;

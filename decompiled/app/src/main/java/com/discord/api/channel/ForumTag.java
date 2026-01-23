@@ -4,8 +4,8 @@ import com.discord.models.domain.ModelAuditLogEntry;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ForumTag.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: ForumTag.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class ForumTag {
     private final String customEmojiId;
     private final Long emojiId;
@@ -13,22 +13,22 @@ public final /* data */ class ForumTag {
     private final long id;
     private final String name;
 
-    /* renamed from: a, reason: from getter */
+    /* JADX INFO: renamed from: a, reason: from getter */
     public final String getCustomEmojiId() {
         return this.customEmojiId;
     }
 
-    /* renamed from: b, reason: from getter */
+    /* JADX INFO: renamed from: b, reason: from getter */
     public final String getEmojiName() {
         return this.emojiName;
     }
 
-    /* renamed from: c, reason: from getter */
+    /* JADX INFO: renamed from: c, reason: from getter */
     public final long getId() {
         return this.id;
     }
 
-    /* renamed from: d, reason: from getter */
+    /* JADX INFO: renamed from: d, reason: from getter */
     public final String getName() {
         return this.name;
     }

@@ -7,8 +7,8 @@ import java.util.Collections;
 import java.util.Map;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: TargetChannelSelector.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: TargetChannelSelector.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class TargetChannelSelector {
     public final Channel getTargetChannel(Map<Long, Channel> invitableChannels, Long channelId) {
         Intrinsics3.checkNotNullParameter(invitableChannels, "invitableChannels");

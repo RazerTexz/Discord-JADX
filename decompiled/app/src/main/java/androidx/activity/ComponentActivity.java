@@ -53,7 +53,7 @@ import java.util.ArrayList;
 import java.util.concurrent.atomic.AtomicInteger;
 import p007b.p100d.p104b.p105a.outline;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class ComponentActivity extends androidx.core.app.ComponentActivity implements ContextAware, LifecycleOwner, ViewModelStoreOwner, HasDefaultViewModelProviderFactory, SavedStateRegistryOwner, OnBackPressedDispatcherOwner, ActivityResultRegistryOwner, ActivityResultCaller {
     private ActivityResultRegistry mActivityResultRegistry;
 
@@ -67,7 +67,7 @@ public class ComponentActivity extends androidx.core.app.ComponentActivity imple
     public final SavedStateRegistryController mSavedStateRegistryController;
     private ViewModelStore mViewModelStore;
 
-    /* renamed from: androidx.activity.ComponentActivity$1 */
+    /* JADX INFO: renamed from: androidx.activity.ComponentActivity$1 */
     public class RunnableC00331 implements Runnable {
         public RunnableC00331() {
         }
@@ -84,10 +84,10 @@ public class ComponentActivity extends androidx.core.app.ComponentActivity imple
         }
     }
 
-    /* renamed from: androidx.activity.ComponentActivity$2 */
+    /* JADX INFO: renamed from: androidx.activity.ComponentActivity$2 */
     public class C00342 extends ActivityResultRegistry {
 
-        /* renamed from: androidx.activity.ComponentActivity$2$1, reason: invalid class name */
+        /* JADX INFO: renamed from: androidx.activity.ComponentActivity$2$1, reason: invalid class name */
         public class AnonymousClass1 implements Runnable {
             public final /* synthetic */ int val$requestCode;
             public final /* synthetic */ ActivityResultContract.SynchronousResult val$synchronousResult;
@@ -103,7 +103,7 @@ public class ComponentActivity extends androidx.core.app.ComponentActivity imple
             }
         }
 
-        /* renamed from: androidx.activity.ComponentActivity$2$2, reason: invalid class name */
+        /* JADX INFO: renamed from: androidx.activity.ComponentActivity$2$2, reason: invalid class name */
         public class AnonymousClass2 implements Runnable {
             public final /* synthetic */ IntentSender.SendIntentException val$e;
             public final /* synthetic */ int val$requestCode;
@@ -170,7 +170,7 @@ public class ComponentActivity extends androidx.core.app.ComponentActivity imple
         }
     }
 
-    /* renamed from: androidx.activity.ComponentActivity$3 */
+    /* JADX INFO: renamed from: androidx.activity.ComponentActivity$3 */
     public class C00353 implements LifecycleEventObserver {
         public C00353() {
         }
@@ -187,7 +187,7 @@ public class ComponentActivity extends androidx.core.app.ComponentActivity imple
         }
     }
 
-    /* renamed from: androidx.activity.ComponentActivity$4 */
+    /* JADX INFO: renamed from: androidx.activity.ComponentActivity$4 */
     public class C00364 implements LifecycleEventObserver {
         public C00364() {
         }
@@ -204,7 +204,7 @@ public class ComponentActivity extends androidx.core.app.ComponentActivity imple
         }
     }
 
-    /* renamed from: androidx.activity.ComponentActivity$5 */
+    /* JADX INFO: renamed from: androidx.activity.ComponentActivity$5 */
     public class C00375 implements LifecycleEventObserver {
         public C00375() {
         }

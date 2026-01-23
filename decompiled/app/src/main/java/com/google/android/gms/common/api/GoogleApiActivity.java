@@ -14,15 +14,15 @@ import com.google.android.gms.common.GoogleApiAvailability;
 import com.google.android.gms.common.annotation.KeepName;
 import p007b.p225i.p226a.p288f.p299e.p300h.p301j.C3293g;
 
-/* compiled from: com.google.android.gms:play-services-base@@17.3.0 */
+/* JADX INFO: compiled from: com.google.android.gms:play-services-base@@17.3.0 */
+/* JADX INFO: loaded from: classes3.dex */
 @KeepName
-/* loaded from: classes3.dex */
 public class GoogleApiActivity extends Activity implements DialogInterface.OnCancelListener {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static final /* synthetic */ int f20485j = 0;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public int f20486k = 0;
 
     @Override // android.app.Activity

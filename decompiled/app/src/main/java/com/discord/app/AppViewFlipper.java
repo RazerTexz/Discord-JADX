@@ -14,11 +14,11 @@ import com.discord.utilities.view.extensions.ViewExtensions;
 import java.util.Iterator;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: AppViewFlipper.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: AppViewFlipper.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class AppViewFlipper extends ViewFlipper {
 
-    /* renamed from: j, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: j, reason: from kotlin metadata */
     public int previewedChildIndex;
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */

@@ -10,13 +10,13 @@ import android.os.RemoteException;
 import java.util.List;
 import p668x.p669a.p670a.ICustomTabsCallback;
 
-/* compiled from: ICustomTabsService.java */
-/* renamed from: x.a.a.b, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: x.a.a.b, reason: use source file name */
+/* JADX INFO: compiled from: ICustomTabsService.java */
+/* JADX INFO: loaded from: classes.dex */
 public interface ICustomTabsService extends IInterface {
 
-    /* compiled from: ICustomTabsService.java */
-    /* renamed from: x.a.a.b$a */
+    /* JADX INFO: renamed from: x.a.a.b$a */
+    /* JADX INFO: compiled from: ICustomTabsService.java */
     public static abstract class a extends Binder implements ICustomTabsService {
         private static final String DESCRIPTOR = "android.support.customtabs.ICustomTabsService";
         public static final int TRANSACTION_extraCommand = 5;
@@ -31,14 +31,14 @@ public interface ICustomTabsService extends IInterface {
         public static final int TRANSACTION_validateRelationship = 9;
         public static final int TRANSACTION_warmup = 2;
 
-        /* compiled from: ICustomTabsService.java */
-        /* renamed from: x.a.a.b$a$a, reason: collision with other inner class name */
+        /* JADX INFO: renamed from: x.a.a.b$a$a, reason: collision with other inner class name */
+        /* JADX INFO: compiled from: ICustomTabsService.java */
         public static class C13356a implements ICustomTabsService {
 
-            /* renamed from: a */
+            /* JADX INFO: renamed from: a */
             public static ICustomTabsService f27933a;
 
-            /* renamed from: b */
+            /* JADX INFO: renamed from: b */
             public IBinder f27934b;
 
             public C13356a(IBinder iBinder) {

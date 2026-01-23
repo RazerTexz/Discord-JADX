@@ -8,7 +8,7 @@ import java.util.Iterator;
 import java.util.Map;
 import java.util.Set;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public final class ArraySet<E> implements Collection<E>, Set<E> {
     private static final int BASE_SIZE = 4;
     private static final int CACHE_SIZE = 10;
@@ -29,7 +29,7 @@ public final class ArraySet<E> implements Collection<E>, Set<E> {
     private int[] mHashes;
     public int mSize;
 
-    /* renamed from: androidx.collection.ArraySet$1 */
+    /* JADX INFO: renamed from: androidx.collection.ArraySet$1 */
     public class C01641 extends MapCollections<E, E> {
         public C01641() {
         }

@@ -15,16 +15,16 @@ import p507d0.p580t.Collections2;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: specialBuiltinMembers.kt */
-/* renamed from: d0.e0.p.d.m0.e.a.g, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.e.a.g, reason: use source file name */
+/* JADX INFO: compiled from: specialBuiltinMembers.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class specialBuiltinMembers2 extends SpecialGenericSignatures {
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public static final specialBuiltinMembers2 f23218m = new specialBuiltinMembers2();
 
-    /* compiled from: specialBuiltinMembers.kt */
-    /* renamed from: d0.e0.p.d.m0.e.a.g$a */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.e.a.g$a */
+    /* JADX INFO: compiled from: specialBuiltinMembers.kt */
     public static final class a extends Lambda implements Function1<CallableMemberDescriptor, Boolean> {
         public final /* synthetic */ SimpleFunctionDescriptor $functionDescriptor;
 
@@ -39,7 +39,7 @@ public final class specialBuiltinMembers2 extends SpecialGenericSignatures {
             return Boolean.valueOf(invoke2(callableMemberDescriptor));
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final boolean invoke2(CallableMemberDescriptor callableMemberDescriptor) {
             Intrinsics3.checkNotNullParameter(callableMemberDescriptor, "it");
             Map<String, Name> signature_to_jvm_representation_name = SpecialGenericSignatures.f23195a.getSIGNATURE_TO_JVM_REPRESENTATION_NAME();

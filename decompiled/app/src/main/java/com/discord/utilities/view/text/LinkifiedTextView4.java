@@ -12,10 +12,10 @@ import p507d0.p584w.p586i.p587a.ContinuationImpl6;
 import p507d0.p584w.p586i.p587a.DebugMetadata;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: LinkifiedTextView.kt */
+/* JADX INFO: renamed from: com.discord.utilities.view.text.LinkifiedTextView$ClickableSpanOnTouchListener$onTouch$newJob$1$invokeSuspend$$inlined$also$lambda$1, reason: use source file name */
+/* JADX INFO: compiled from: LinkifiedTextView.kt */
+/* JADX INFO: loaded from: classes2.dex */
 @DebugMetadata(m10084c = "com.discord.utilities.view.text.LinkifiedTextView$ClickableSpanOnTouchListener$onTouch$newJob$1$1$1", m10085f = "LinkifiedTextView.kt", m10086l = {}, m10087m = "invokeSuspend")
-/* renamed from: com.discord.utilities.view.text.LinkifiedTextView$ClickableSpanOnTouchListener$onTouch$newJob$1$invokeSuspend$$inlined$also$lambda$1, reason: use source file name */
-/* loaded from: classes2.dex */
 public final class LinkifiedTextView4 extends ContinuationImpl6 implements Function2<CoroutineScope, Continuation<? super Unit>, Object> {
     public final /* synthetic */ View $it;
     public final /* synthetic */ CoroutineScope $this_launch$inlined;

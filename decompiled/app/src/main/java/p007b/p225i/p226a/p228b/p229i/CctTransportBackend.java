@@ -23,19 +23,19 @@ import p007b.p225i.p226a.p228b.p229i.p230e.AutoValue_LogResponse;
 import p007b.p225i.p226a.p228b.p229i.p230e.LogResponse;
 import p007b.p225i.p361c.p393p.p395h.JsonDataEncoderBuilder4;
 
-/* compiled from: CctTransportBackend.java */
-/* renamed from: b.i.a.b.i.b, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.b.i.b, reason: use source file name */
+/* JADX INFO: compiled from: CctTransportBackend.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final /* synthetic */ class CctTransportBackend {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final CctTransportBackend3 f5130a;
 
     public CctTransportBackend(CctTransportBackend3 cctTransportBackend3) {
         this.f5130a = cctTransportBackend3;
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public Object m2295a(Object obj) throws IOException {
         CctTransportBackend3 cctTransportBackend3 = this.f5130a;
         CctTransportBackend3.a aVar = (CctTransportBackend3.a) obj;

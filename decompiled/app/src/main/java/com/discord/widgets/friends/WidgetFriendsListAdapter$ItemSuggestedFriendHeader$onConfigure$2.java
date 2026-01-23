@@ -3,8 +3,8 @@ package com.discord.widgets.friends;
 import android.view.View;
 import com.discord.widgets.friends.WidgetFriendsListAdapter;
 
-/* compiled from: WidgetFriendsListAdapter.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetFriendsListAdapter.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetFriendsListAdapter$ItemSuggestedFriendHeader$onConfigure$2 implements View.OnClickListener {
     public final /* synthetic */ WidgetFriendsListAdapter.ItemSuggestedFriendHeader this$0;
 

@@ -10,8 +10,8 @@ import kotlin.jvm.functions.Function1;
 import p507d0.p592z.p594d.FunctionReferenceImpl;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: WidgetSettingsVoice.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetSettingsVoice.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final /* synthetic */ class WidgetSettingsVoice$InputModeSelector$binding$2 extends FunctionReferenceImpl implements Function1<View, WidgetSettingsVoiceInputModeBinding> {
     public static final WidgetSettingsVoice$InputModeSelector$binding$2 INSTANCE = new WidgetSettingsVoice$InputModeSelector$binding$2();
 
@@ -19,7 +19,7 @@ public final /* synthetic */ class WidgetSettingsVoice$InputModeSelector$binding
         super(1, WidgetSettingsVoiceInputModeBinding.class, "bind", "bind(Landroid/view/View;)Lcom/discord/databinding/WidgetSettingsVoiceInputModeBinding;", 0);
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final WidgetSettingsVoiceInputModeBinding invoke2(View view) {
         Intrinsics3.checkNotNullParameter(view, "p1");
         int i = C5419R.id.guild_actions_overview_header_tv;

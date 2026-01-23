@@ -21,9 +21,9 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
-/* compiled from: DrawableWithAnimatedVisibilityChange.java */
-/* renamed from: b.i.a.g.g.e, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.g.g.e, reason: use source file name */
+/* JADX INFO: compiled from: DrawableWithAnimatedVisibilityChange.java */
+/* JADX INFO: loaded from: classes3.dex */
 public abstract class DrawableWithAnimatedVisibilityChange extends Drawable implements Animatable2Compat {
     private static final boolean DEFAULT_DRAWABLE_RESTART = false;
     private static final int GROW_DURATION = 500;
@@ -43,8 +43,8 @@ public abstract class DrawableWithAnimatedVisibilityChange extends Drawable impl
     public final Paint paint = new Paint();
     public AnimatorDurationScaleProvider animatorDurationScaleProvider = new AnimatorDurationScaleProvider();
 
-    /* compiled from: DrawableWithAnimatedVisibilityChange.java */
-    /* renamed from: b.i.a.g.g.e$a */
+    /* JADX INFO: renamed from: b.i.a.g.g.e$a */
+    /* JADX INFO: compiled from: DrawableWithAnimatedVisibilityChange.java */
     public class a extends AnimatorListenerAdapter {
         public a() {
         }
@@ -56,8 +56,8 @@ public abstract class DrawableWithAnimatedVisibilityChange extends Drawable impl
         }
     }
 
-    /* compiled from: DrawableWithAnimatedVisibilityChange.java */
-    /* renamed from: b.i.a.g.g.e$b */
+    /* JADX INFO: renamed from: b.i.a.g.g.e$b */
+    /* JADX INFO: compiled from: DrawableWithAnimatedVisibilityChange.java */
     public class b extends AnimatorListenerAdapter {
         public b() {
         }
@@ -70,8 +70,8 @@ public abstract class DrawableWithAnimatedVisibilityChange extends Drawable impl
         }
     }
 
-    /* compiled from: DrawableWithAnimatedVisibilityChange.java */
-    /* renamed from: b.i.a.g.g.e$c */
+    /* JADX INFO: renamed from: b.i.a.g.g.e$c */
+    /* JADX INFO: compiled from: DrawableWithAnimatedVisibilityChange.java */
     public static class c extends Property<DrawableWithAnimatedVisibilityChange, Float> {
         public c(Class cls, String str) {
             super(cls, str);

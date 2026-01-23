@@ -13,27 +13,27 @@ import p007b.p225i.p226a.p288f.p330i.p332b.InterfaceC4195t8;
 import p007b.p225i.p226a.p288f.p330i.p332b.RunnableC4173r8;
 import p007b.p225i.p226a.p288f.p330i.p332b.RunnableC4206u8;
 
-/* compiled from: com.google.android.gms:play-services-measurement@@18.0.0 */
+/* JADX INFO: compiled from: com.google.android.gms:play-services-measurement@@18.0.0 */
+/* JADX INFO: loaded from: classes3.dex */
 @TargetApi(24)
-/* loaded from: classes3.dex */
 public final class AppMeasurementJobService extends JobService implements InterfaceC4195t8 {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public C4151p8<AppMeasurementJobService> f20656j;
 
     @Override // p007b.p225i.p226a.p288f.p330i.p332b.InterfaceC4195t8
     @TargetApi(24)
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final void mo5868a(JobParameters jobParameters, boolean z2) {
         jobFinished(jobParameters, false);
     }
 
     @Override // p007b.p225i.p226a.p288f.p330i.p332b.InterfaceC4195t8
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final void mo5869b(Intent intent) {
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final C4151p8<AppMeasurementJobService> m9109c() {
         if (this.f20656j == null) {
             this.f20656j = new C4151p8<>(this);
@@ -42,7 +42,7 @@ public final class AppMeasurementJobService extends JobService implements Interf
     }
 
     @Override // p007b.p225i.p226a.p288f.p330i.p332b.InterfaceC4195t8
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final boolean mo5870f(int i) {
         throw new UnsupportedOperationException();
     }
@@ -68,7 +68,7 @@ public final class AppMeasurementJobService extends JobService implements Interf
     }
 
     @Override // android.app.job.JobService
-    public final boolean onStartJob(JobParameters jobParameters) throws IllegalStateException {
+    public final boolean onStartJob(JobParameters jobParameters) {
         C4151p8<AppMeasurementJobService> c4151p8M9109c = m9109c();
         C4157q3 c4157q3Mo5726g = C4202u4.m5933b(c4151p8M9109c.f11131a, null, null).mo5726g();
         String string = jobParameters.getExtras().getString("action");

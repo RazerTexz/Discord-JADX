@@ -10,8 +10,8 @@ import com.discord.api.science.AnalyticsSchema;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: TrackGuildAutomodFeedback.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: TrackGuildAutomodFeedback.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class TrackGuildAutomodFeedback implements AnalyticsSchema, TrackBase2, TrackGuild2, TrackChannel2 {
     private final transient String analyticsSchemaTypeName;
     private final CharSequence content;
@@ -42,19 +42,19 @@ public final /* data */ class TrackGuildAutomodFeedback implements AnalyticsSche
     }
 
     @Override // com.discord.analytics.generated.traits.TrackGuild2
-    /* renamed from: a, reason: from getter */
+    /* JADX INFO: renamed from: a, reason: from getter */
     public TrackGuild getTrackGuild() {
         return this.trackGuild;
     }
 
     @Override // com.discord.analytics.generated.traits.TrackGuild2
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public void mo7508c(TrackGuild trackGuild) {
         this.trackGuild = trackGuild;
     }
 
     @Override // com.discord.api.science.AnalyticsSchema
-    /* renamed from: d, reason: from getter */
+    /* JADX INFO: renamed from: d, reason: from getter */
     public String getAnalyticsSchemaTypeName() {
         return this.analyticsSchemaTypeName;
     }

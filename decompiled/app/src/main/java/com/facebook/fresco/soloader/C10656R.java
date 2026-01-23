@@ -1,7 +1,7 @@
 package com.facebook.fresco.soloader;
 
-/* renamed from: com.facebook.fresco.soloader.R */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: com.facebook.fresco.soloader.R */
+/* JADX INFO: loaded from: classes.dex */
 public final class C10656R {
     private C10656R() {
     }

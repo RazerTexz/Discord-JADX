@@ -6,27 +6,27 @@ import android.graphics.Rect;
 import android.graphics.drawable.Drawable;
 import androidx.annotation.IntRange;
 
-/* compiled from: AnimationBackend.java */
-/* renamed from: b.f.h.a.a.a, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.f.h.a.a.a, reason: use source file name */
+/* JADX INFO: compiled from: AnimationBackend.java */
+/* JADX INFO: loaded from: classes.dex */
 public interface AnimationBackend extends AnimationInformation {
     void clear();
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     void mo1136d(ColorFilter colorFilter);
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     void mo1137f(@IntRange(from = 0, m76to = 255) int i);
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     int mo1138g();
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     void mo1139h(Rect rect);
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     int mo1140i();
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     boolean mo1141j(Drawable drawable, Canvas canvas, int i);
 }

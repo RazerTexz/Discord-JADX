@@ -71,8 +71,8 @@ import p507d0.p592z.p594d.Lambda;
 import p658rx.Observable;
 import p658rx.Subscription;
 
-/* compiled from: WidgetChatListAdapterItemStageInvite.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetChatListAdapterItemStageInvite.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetChatListAdapterItemStageInvite extends WidgetChatListAdapterItemInviteBase {
     private final WidgetChatListAdapterItemStageInviteBinding binding;
     private String iconUrl;
@@ -80,10 +80,10 @@ public final class WidgetChatListAdapterItemStageInvite extends WidgetChatListAd
     private StageInviteEntry item;
     private Subscription subscription;
 
-    /* compiled from: WidgetChatListAdapterItemStageInvite.kt */
+    /* JADX INFO: compiled from: WidgetChatListAdapterItemStageInvite.kt */
     public static final /* data */ class Model {
 
-        /* renamed from: Companion, reason: from kotlin metadata */
+        /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
         public static final Companion INSTANCE = new Companion(null);
         private final User authorUser;
         private final Channel channel;
@@ -94,7 +94,7 @@ public final class WidgetChatListAdapterItemStageInvite extends WidgetChatListAd
         private final List<StageCardSpeaker> speakers;
         private final StageInstance stageInstance;
 
-        /* compiled from: WidgetChatListAdapterItemStageInvite.kt */
+        /* JADX INFO: compiled from: WidgetChatListAdapterItemStageInvite.kt */
         public static final class Companion {
             private Companion() {
             }
@@ -176,36 +176,37 @@ public final class WidgetChatListAdapterItemStageInvite extends WidgetChatListAd
             this.listenersCount = num;
         }
 
+        /* JADX WARN: Multi-variable type inference failed */
         public static /* synthetic */ Model copy$default(Model model, ModelInvite modelInvite, long j, User user, Channel channel, boolean z2, StageInstance stageInstance, List list, Integer num, int i, Object obj) {
             return model.copy((i & 1) != 0 ? model.invite : modelInvite, (i & 2) != 0 ? model.meId : j, (i & 4) != 0 ? model.authorUser : user, (i & 8) != 0 ? model.channel : channel, (i & 16) != 0 ? model.shouldAnimateGuildIcon : z2, (i & 32) != 0 ? model.stageInstance : stageInstance, (i & 64) != 0 ? model.speakers : list, (i & 128) != 0 ? model.listenersCount : num);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final ModelInvite getInvite() {
             return this.invite;
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final long getMeId() {
             return this.meId;
         }
 
-        /* renamed from: component3, reason: from getter */
+        /* JADX INFO: renamed from: component3, reason: from getter */
         public final User getAuthorUser() {
             return this.authorUser;
         }
 
-        /* renamed from: component4, reason: from getter */
+        /* JADX INFO: renamed from: component4, reason: from getter */
         public final Channel getChannel() {
             return this.channel;
         }
 
-        /* renamed from: component5, reason: from getter */
+        /* JADX INFO: renamed from: component5, reason: from getter */
         public final boolean getShouldAnimateGuildIcon() {
             return this.shouldAnimateGuildIcon;
         }
 
-        /* renamed from: component6, reason: from getter */
+        /* JADX INFO: renamed from: component6, reason: from getter */
         public final StageInstance getStageInstance() {
             return this.stageInstance;
         }
@@ -214,7 +215,7 @@ public final class WidgetChatListAdapterItemStageInvite extends WidgetChatListAd
             return this.speakers;
         }
 
-        /* renamed from: component8, reason: from getter */
+        /* JADX INFO: renamed from: component8, reason: from getter */
         public final Integer getListenersCount() {
             return this.listenersCount;
         }
@@ -269,6 +270,9 @@ public final class WidgetChatListAdapterItemStageInvite extends WidgetChatListAd
         }
 
         /* JADX WARN: Multi-variable type inference failed */
+        /* JADX WARN: Type inference failed for: r0v11, types: [int] */
+        /* JADX WARN: Type inference failed for: r0v21 */
+        /* JADX WARN: Type inference failed for: r0v25 */
         public int hashCode() {
             ModelInvite modelInvite = this.invite;
             int iM3a = (C0002b.m3a(this.meId) + ((modelInvite != null ? modelInvite.hashCode() : 0) * 31)) * 31;
@@ -277,13 +281,13 @@ public final class WidgetChatListAdapterItemStageInvite extends WidgetChatListAd
             Channel channel = this.channel;
             int iHashCode2 = (iHashCode + (channel != null ? channel.hashCode() : 0)) * 31;
             boolean z2 = this.shouldAnimateGuildIcon;
-            int i = z2;
-            if (z2 != 0) {
-                i = 1;
+            ?? r0 = z2;
+            if (z2) {
+                r0 = 1;
             }
-            int i2 = (iHashCode2 + i) * 31;
+            int i = (iHashCode2 + r0) * 31;
             StageInstance stageInstance = this.stageInstance;
-            int iHashCode3 = (i2 + (stageInstance != null ? stageInstance.hashCode() : 0)) * 31;
+            int iHashCode3 = (i + (stageInstance != null ? stageInstance.hashCode() : 0)) * 31;
             List<StageCardSpeaker> list = this.speakers;
             int iHashCode4 = (iHashCode3 + (list != null ? list.hashCode() : 0)) * 31;
             Integer num = this.listenersCount;
@@ -310,15 +314,15 @@ public final class WidgetChatListAdapterItemStageInvite extends WidgetChatListAd
         }
     }
 
-    /* compiled from: WidgetChatListAdapterItemStageInvite.kt */
-    /* renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemStageInvite$configureUI$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemStageInvite$configureUI$2 */
+    /* JADX INFO: compiled from: WidgetChatListAdapterItemStageInvite.kt */
     public static final class ViewOnClickListenerC81202 implements View.OnClickListener {
         public final /* synthetic */ Context $context;
         public final /* synthetic */ Model $model;
 
-        /* compiled from: WidgetChatListAdapterItemStageInvite.kt */
+        /* JADX INFO: renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemStageInvite$configureUI$2$1, reason: invalid class name */
+        /* JADX INFO: compiled from: WidgetChatListAdapterItemStageInvite.kt */
         @DebugMetadata(m10084c = "com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemStageInvite$configureUI$2$1", m10085f = "WidgetChatListAdapterItemStageInvite.kt", m10086l = {121}, m10087m = "invokeSuspend")
-        /* renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemStageInvite$configureUI$2$1, reason: invalid class name */
         public static final class AnonymousClass1 extends ContinuationImpl6 implements Function2<ModelInvite, Continuation<? super Unit>, Object> {
             public final /* synthetic */ long $channelId;
             public final /* synthetic */ long $guildId;
@@ -414,8 +418,8 @@ public final class WidgetChatListAdapterItemStageInvite extends WidgetChatListAd
         }
     }
 
-    /* compiled from: WidgetChatListAdapterItemStageInvite.kt */
-    /* renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemStageInvite$onConfigure$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemStageInvite$onConfigure$1 */
+    /* JADX INFO: compiled from: WidgetChatListAdapterItemStageInvite.kt */
     public static final /* synthetic */ class C81211 extends FunctionReferenceImpl implements Function1<Model, Unit> {
         public C81211(WidgetChatListAdapterItemStageInvite widgetChatListAdapterItemStageInvite) {
             super(1, widgetChatListAdapterItemStageInvite, WidgetChatListAdapterItemStageInvite.class, "configureUI", "configureUI(Lcom/discord/widgets/chat/list/adapter/WidgetChatListAdapterItemStageInvite$Model;)V", 0);
@@ -427,15 +431,15 @@ public final class WidgetChatListAdapterItemStageInvite extends WidgetChatListAd
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Model model) {
             Intrinsics3.checkNotNullParameter(model, "p1");
             WidgetChatListAdapterItemStageInvite.access$configureUI((WidgetChatListAdapterItemStageInvite) this.receiver, model);
         }
     }
 
-    /* compiled from: WidgetChatListAdapterItemStageInvite.kt */
-    /* renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemStageInvite$onConfigure$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemStageInvite$onConfigure$2 */
+    /* JADX INFO: compiled from: WidgetChatListAdapterItemStageInvite.kt */
     public static final class C81222 extends Lambda implements Function1<Subscription, Unit> {
         public C81222() {
             super(1);
@@ -447,7 +451,7 @@ public final class WidgetChatListAdapterItemStageInvite extends WidgetChatListAd
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Subscription subscription) {
             Intrinsics3.checkNotNullParameter(subscription, "it");
             WidgetChatListAdapterItemStageInvite.access$setSubscription$p(WidgetChatListAdapterItemStageInvite.this, subscription);

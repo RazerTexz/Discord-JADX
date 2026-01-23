@@ -8,12 +8,12 @@ import p007b.p085c.p086a.p090c0.Keyframe;
 import p007b.p085c.p086a.p095y.p097l.GradientColor;
 import p007b.p100d.p104b.p105a.outline;
 
-/* compiled from: GradientColorKeyframeAnimation.java */
-/* renamed from: b.c.a.w.c.d, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.c.a.w.c.d, reason: use source file name */
+/* JADX INFO: compiled from: GradientColorKeyframeAnimation.java */
+/* JADX INFO: loaded from: classes.dex */
 public class GradientColorKeyframeAnimation extends KeyframeAnimation<GradientColor> {
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public final GradientColor f2610i;
 
     public GradientColorKeyframeAnimation(List<Keyframe<GradientColor>> list) {
@@ -25,7 +25,7 @@ public class GradientColorKeyframeAnimation extends KeyframeAnimation<GradientCo
 
     /* JADX WARN: Multi-variable type inference failed */
     @Override // p007b.p085c.p086a.p091w.p093c.BaseKeyframeAnimation
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public Object mo728f(Keyframe keyframe, float f) {
         GradientColor gradientColor = this.f2610i;
         GradientColor gradientColor2 = (GradientColor) keyframe.f2317b;

@@ -68,8 +68,8 @@ import org.eclipse.jdt.internal.compiler.lookup.ClassScope;
 import org.eclipse.jdt.internal.compiler.lookup.MethodScope;
 import org.eclipse.jdt.internal.compiler.lookup.TypeConstants;
 
+/* JADX INFO: loaded from: discord-126021.apk:lombok/eclipse/handlers/HandleBuilder.SCL.lombok */
 @HandlerPriority(-1024)
-/* loaded from: discord-126021.apk:lombok/eclipse/handlers/HandleBuilder.SCL.lombok */
 public class HandleBuilder extends EclipseAnnotationHandler<Builder> {
     private HandleConstructor handleConstructor = new HandleConstructor();
     static final char[] CLEAN_FIELD_NAME = "$lombokUnclean".toCharArray();
@@ -83,10 +83,10 @@ public class HandleBuilder extends EclipseAnnotationHandler<Builder> {
     static final AbstractMethodDeclaration[] EMPTY_METHODS = new AbstractMethodDeclaration[0];
     static final String TO_BUILDER_NOT_SUPPORTED = "@Builder(toBuilder=true) is only supported if you return your own type.";
 
-    /* renamed from: $SWITCH_TABLE$lombok$eclipse$handlers$EclipseHandlerUtil$MemberExistsResult */
+    /* JADX INFO: renamed from: $SWITCH_TABLE$lombok$eclipse$handlers$EclipseHandlerUtil$MemberExistsResult */
     private static /* synthetic */ int[] f27467xb87c1847;
 
-    /* renamed from: $SWITCH_TABLE$lombok$eclipse$handlers$EclipseHandlerUtil$MemberExistsResult */
+    /* JADX INFO: renamed from: $SWITCH_TABLE$lombok$eclipse$handlers$EclipseHandlerUtil$MemberExistsResult */
     static /* synthetic */ int[] m10929xb87c1847() {
         int[] iArr = f27467xb87c1847;
         if (iArr != null) {
@@ -126,7 +126,7 @@ public class HandleBuilder extends EclipseAnnotationHandler<Builder> {
         return ((Boolean) expr).booleanValue();
     }
 
-    /* loaded from: discord-126021.apk:lombok/eclipse/handlers/HandleBuilder$BuilderJob.SCL.lombok */
+    /* JADX INFO: loaded from: discord-126021.apk:lombok/eclipse/handlers/HandleBuilder$BuilderJob.SCL.lombok */
     static class BuilderJob {
         CheckerFrameworkVersion checkerFramework;
         EclipseNode parentType;
@@ -160,7 +160,7 @@ public class HandleBuilder extends EclipseAnnotationHandler<Builder> {
         }
 
         long getPos() {
-            return (this.source.sourceStart << 32) | this.source.sourceEnd;
+            return (((long) this.source.sourceStart) << 32) | ((long) this.source.sourceEnd);
         }
 
         public TypeReference createBuilderTypeReference() {
@@ -224,7 +224,7 @@ public class HandleBuilder extends EclipseAnnotationHandler<Builder> {
         }
     }
 
-    /* loaded from: discord-126021.apk:lombok/eclipse/handlers/HandleBuilder$BuilderFieldData.SCL.lombok */
+    /* JADX INFO: loaded from: discord-126021.apk:lombok/eclipse/handlers/HandleBuilder$BuilderFieldData.SCL.lombok */
     static class BuilderFieldData {
         Annotation[] annotations;
         TypeReference type;
@@ -279,12 +279,10 @@ public class HandleBuilder extends EclipseAnnotationHandler<Builder> {
     }
 
     /* JADX WARN: Multi-variable type inference failed */
-    /* JADX WARN: Type inference failed for: r0v156, types: [org.eclipse.jdt.internal.compiler.ast.TypeReference[]] */
-    /* JADX WARN: Type inference failed for: r1v66, types: [char[][]] */
     /* JADX WARN: Type inference failed for: r2v51, types: [org.eclipse.jdt.internal.compiler.ast.Annotation[], org.eclipse.jdt.internal.compiler.ast.Annotation[][]] */
     /* JADX WARN: Type inference failed for: r2v62, types: [org.eclipse.jdt.internal.compiler.ast.Annotation[], org.eclipse.jdt.internal.compiler.ast.Annotation[][]] */
     @Override // lombok.eclipse.EclipseAnnotationHandler
-    public void handle(AnnotationValues<Builder> annotation, Annotation ast, EclipseNode annotationNode) throws SecurityException, IllegalArgumentException {
+    public void handle(AnnotationValues<Builder> annotation, Annotation ast, EclipseNode annotationNode) {
         boolean generateBuilderMethod;
         TypeReference buildMethodReturnType;
         TypeReference[] buildMethodThrownExceptions;
@@ -423,28 +421,28 @@ public class HandleBuilder extends EclipseAnnotationHandler<Builder> {
                     }
                     TypeParameter[] tpOnType = job.parentType.get().typeParameters;
                     TypeParameter[] tpOnMethod = md4.typeParameters;
-                    SingleTypeReference[][] singleTypeReferenceArr = null;
+                    Object[] objArr = null;
                     if (md4.returnType instanceof ParameterizedSingleTypeReference) {
-                        singleTypeReferenceArr = new TypeReference[]{md4.returnType.typeArguments};
+                        objArr = new TypeReference[]{md4.returnType.typeArguments};
                     } else if (md4.returnType instanceof ParameterizedQualifiedTypeReference) {
-                        singleTypeReferenceArr = md4.returnType.typeArguments;
+                        objArr = md4.returnType.typeArguments;
                     }
-                    if (singleTypeReferenceArr != null) {
-                        for (int i = 0; i < singleTypeReferenceArr.length - 1; i++) {
-                            if (singleTypeReferenceArr[i] != null && singleTypeReferenceArr[i].length > 0) {
+                    if (objArr != null) {
+                        for (int i = 0; i < objArr.length - 1; i++) {
+                            if (objArr[i] != null && objArr[i].length > 0) {
                                 annotationNode.addError("@Builder(toBuilder=true) is not supported if returning a type with generics applied to an intermediate.");
                                 return;
                             }
                         }
                     }
-                    SingleTypeReference[] singleTypeReferenceArr2 = singleTypeReferenceArr == null ? null : singleTypeReferenceArr[singleTypeReferenceArr.length - 1];
+                    Object[] objArr2 = objArr == null ? null : objArr[objArr.length - 1];
                     typeArgsForToBuilder = new ArrayList<>();
                     if (tpOnMethod != null) {
                         for (TypeParameter onMethod : tpOnMethod) {
                             int pos = -1;
-                            if (singleTypeReferenceArr2 != null) {
-                                for (int i2 = 0; i2 < singleTypeReferenceArr2.length; i2++) {
-                                    if (singleTypeReferenceArr2[i2].getClass() == SingleTypeReference.class && Arrays.equals(singleTypeReferenceArr2[i2].token, onMethod.name)) {
+                            if (objArr2 != 0) {
+                                for (int i2 = 0; i2 < objArr2.length; i2++) {
+                                    if (objArr2[i2].getClass() == SingleTypeReference.class && Arrays.equals(((SingleTypeReference) objArr2[i2]).token, onMethod.name)) {
                                         pos = i2;
                                     }
                                 }
@@ -1100,7 +1098,7 @@ public class HandleBuilder extends EclipseAnnotationHandler<Builder> {
         job.builderType = EclipseHandlerUtil.injectType(job.parentType, builder);
     }
 
-    private void addObtainVia(BuilderFieldData bfd, EclipseNode node) throws SecurityException {
+    private void addObtainVia(BuilderFieldData bfd, EclipseNode node) {
         for (EclipseNode child : node.down()) {
             if (EclipseHandlerUtil.annotationTypeMatches((Class<? extends java.lang.annotation.Annotation>) Builder.ObtainVia.class, child)) {
                 AnnotationValues<Builder.ObtainVia> ann = EclipseHandlerUtil.createAnnotation(Builder.ObtainVia.class, child);
@@ -1111,7 +1109,7 @@ public class HandleBuilder extends EclipseAnnotationHandler<Builder> {
         }
     }
 
-    private EclipseSingularsRecipes.SingularData getSingularData(EclipseNode node, ASTNode source, String setterPrefix) throws SecurityException {
+    private EclipseSingularsRecipes.SingularData getSingularData(EclipseNode node, ASTNode source, String setterPrefix) {
         String typeName;
         for (EclipseNode child : node.down()) {
             if (EclipseHandlerUtil.annotationTypeMatches((Class<? extends java.lang.annotation.Annotation>) Singular.class, child)) {

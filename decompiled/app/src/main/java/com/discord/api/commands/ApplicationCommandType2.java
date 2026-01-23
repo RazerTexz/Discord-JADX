@@ -8,9 +8,9 @@ import java.io.IOException;
 import java.util.Objects;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ApplicationCommandType.kt */
-/* renamed from: com.discord.api.commands.CommandTypeAdapter, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: com.discord.api.commands.CommandTypeAdapter, reason: use source file name */
+/* JADX INFO: compiled from: ApplicationCommandType.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class ApplicationCommandType2 extends TypeAdapter<ApplicationCommandType> {
     @Override // com.google.gson.TypeAdapter
     public ApplicationCommandType read(JsonReader jsonReader) throws IOException {

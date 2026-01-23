@@ -23,7 +23,7 @@ import com.google.android.material.theme.overlay.MaterialThemeOverlay;
 import java.util.ArrayList;
 import java.util.List;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public class ChipGroup extends FlowLayout {
     private static final int DEF_STYLE_RES = C10817R.style.Widget_MaterialComponents_ChipGroup;
 
@@ -99,7 +99,7 @@ public class ChipGroup extends FlowLayout {
 
     public class PassThroughHierarchyChangeListener implements ViewGroup.OnHierarchyChangeListener {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public ViewGroup.OnHierarchyChangeListener f20954j;
 
         public PassThroughHierarchyChangeListener(C10875a c10875a) {

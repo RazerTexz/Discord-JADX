@@ -6,24 +6,24 @@ import androidx.viewbinding.ViewBinding;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
 
-/* compiled from: ViewPhoneOrEmailInputBinding.java */
-/* renamed from: b.a.i.u2, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.a.i.u2, reason: use source file name */
+/* JADX INFO: compiled from: ViewPhoneOrEmailInputBinding.java */
+/* JADX INFO: loaded from: classes.dex */
 public final class ViewPhoneOrEmailInputBinding implements ViewBinding {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     @NonNull
     public final View f1286a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     @NonNull
     public final TextInputLayout f1287b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     @NonNull
     public final TextInputEditText f1288c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     @NonNull
     public final TextInputLayout f1289d;
 

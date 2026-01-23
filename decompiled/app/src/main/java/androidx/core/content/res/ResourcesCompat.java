@@ -33,7 +33,7 @@ import java.util.WeakHashMap;
 import org.xmlpull.v1.XmlPullParserException;
 import p007b.p100d.p104b.p105a.outline;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public final class ResourcesCompat {
 
     @AnyRes
@@ -82,7 +82,7 @@ public final class ResourcesCompat {
 
     public static abstract class FontCallback {
 
-        /* renamed from: androidx.core.content.res.ResourcesCompat$FontCallback$1 */
+        /* JADX INFO: renamed from: androidx.core.content.res.ResourcesCompat$FontCallback$1 */
         public class RunnableC02211 implements Runnable {
             public final /* synthetic */ Typeface val$typeface;
 
@@ -96,7 +96,7 @@ public final class ResourcesCompat {
             }
         }
 
-        /* renamed from: androidx.core.content.res.ResourcesCompat$FontCallback$2 */
+        /* JADX INFO: renamed from: androidx.core.content.res.ResourcesCompat$FontCallback$2 */
         public class RunnableC02222 implements Runnable {
             public final /* synthetic */ int val$reason;
 
@@ -280,7 +280,7 @@ public final class ResourcesCompat {
         return resources.getDrawableForDensity(i, i2, theme);
     }
 
-    public static float getFloat(@NonNull Resources resources, @DimenRes int i) throws Resources.NotFoundException {
+    public static float getFloat(@NonNull Resources resources, @DimenRes int i) {
         if (Build.VERSION.SDK_INT >= 29) {
             return ImplApi29.getFloat(resources, i);
         }
@@ -330,14 +330,14 @@ public final class ResourcesCompat {
         }
     }
 
-    private static boolean isColorInt(@NonNull Resources resources, @ColorRes int i) throws Resources.NotFoundException {
+    private static boolean isColorInt(@NonNull Resources resources, @ColorRes int i) {
         TypedValue typedValue = getTypedValue();
         resources.getValue(i, typedValue, true);
         int i2 = typedValue.type;
         return i2 >= 28 && i2 <= 31;
     }
 
-    private static Typeface loadFont(@NonNull Context context, int i, TypedValue typedValue, int i2, @Nullable FontCallback fontCallback, @Nullable Handler handler, boolean z2, boolean z3) throws Resources.NotFoundException {
+    private static Typeface loadFont(@NonNull Context context, int i, TypedValue typedValue, int i2, @Nullable FontCallback fontCallback, @Nullable Handler handler, boolean z2, boolean z3) {
         Resources resources = context.getResources();
         resources.getValue(i, typedValue, true);
         Typeface typefaceLoadFont = loadFont(context, resources, typedValue, i, i2, fontCallback, handler, z2, z3);

@@ -5,15 +5,15 @@ import android.os.IInterface;
 import android.os.Parcel;
 import android.os.RemoteException;
 
-/* compiled from: com.google.android.gms:play-services-basement@@17.6.0 */
-/* renamed from: b.i.a.f.h.g.a */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.h.g.a */
+/* JADX INFO: compiled from: com.google.android.gms:play-services-basement@@17.6.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public class C3481a implements IInterface {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final IBinder f9648a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final String f9649b;
 
     public C3481a(IBinder iBinder, String str) {
@@ -26,7 +26,7 @@ public class C3481a implements IInterface {
         return this.f9648a;
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final Parcel m4407c(int i, Parcel parcel) throws RemoteException {
         Parcel parcelObtain = Parcel.obtain();
         try {
@@ -43,7 +43,7 @@ public class C3481a implements IInterface {
         }
     }
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public final Parcel m4408g() {
         Parcel parcelObtain = Parcel.obtain();
         parcelObtain.writeInterfaceToken(this.f9649b);

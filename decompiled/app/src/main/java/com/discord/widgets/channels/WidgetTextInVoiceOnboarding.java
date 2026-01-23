@@ -26,20 +26,20 @@ import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetTextInVoiceOnboarding.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetTextInVoiceOnboarding.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetTextInVoiceOnboarding extends AppBottomSheet {
     public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetTextInVoiceOnboarding.class, "binding", "getBinding()Lcom/discord/databinding/WidgetTextInVoiceOnboardingBinding;", 0)};
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     public static final String VIDEO_URL = "https://cdn.discordapp.com/attachments/727325253608538113/942859496601043024/Text_in_Voice_NUX_Mobile_In-App.mp4";
 
-    /* renamed from: binding$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
     private Function0<Unit> onCtaClicked;
 
-    /* compiled from: WidgetTextInVoiceOnboarding.kt */
+    /* JADX INFO: compiled from: WidgetTextInVoiceOnboarding.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -57,8 +57,8 @@ public final class WidgetTextInVoiceOnboarding extends AppBottomSheet {
         }
     }
 
-    /* compiled from: WidgetTextInVoiceOnboarding.kt */
-    /* renamed from: com.discord.widgets.channels.WidgetTextInVoiceOnboarding$configureMedia$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.channels.WidgetTextInVoiceOnboarding$configureMedia$1 */
+    /* JADX INFO: compiled from: WidgetTextInVoiceOnboarding.kt */
     public static final class RunnableC73931 implements Runnable {
         public RunnableC73931() {
         }
@@ -82,8 +82,8 @@ public final class WidgetTextInVoiceOnboarding extends AppBottomSheet {
         }
     }
 
-    /* compiled from: WidgetTextInVoiceOnboarding.kt */
-    /* renamed from: com.discord.widgets.channels.WidgetTextInVoiceOnboarding$configureMedia$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.channels.WidgetTextInVoiceOnboarding$configureMedia$2 */
+    /* JADX INFO: compiled from: WidgetTextInVoiceOnboarding.kt */
     public static final class ViewOnClickListenerC73942 implements View.OnClickListener {
         public ViewOnClickListenerC73942() {
         }
@@ -102,14 +102,14 @@ public final class WidgetTextInVoiceOnboarding extends AppBottomSheet {
         }
     }
 
-    /* compiled from: WidgetTextInVoiceOnboarding.kt */
-    /* renamed from: com.discord.widgets.channels.WidgetTextInVoiceOnboarding$configureMedia$3 */
+    /* JADX INFO: renamed from: com.discord.widgets.channels.WidgetTextInVoiceOnboarding$configureMedia$3 */
+    /* JADX INFO: compiled from: WidgetTextInVoiceOnboarding.kt */
     public static final class C73953 implements MediaPlayer.OnPreparedListener {
         public C73953() {
         }
 
         @Override // android.media.MediaPlayer.OnPreparedListener
-        public final void onPrepared(MediaPlayer mediaPlayer) throws IllegalStateException {
+        public final void onPrepared(MediaPlayer mediaPlayer) {
             Intrinsics3.checkNotNullParameter(mediaPlayer, "mp");
             mediaPlayer.start();
             mediaPlayer.setLooping(true);
@@ -120,8 +120,8 @@ public final class WidgetTextInVoiceOnboarding extends AppBottomSheet {
         }
     }
 
-    /* compiled from: WidgetTextInVoiceOnboarding.kt */
-    /* renamed from: com.discord.widgets.channels.WidgetTextInVoiceOnboarding$configureMedia$4 */
+    /* JADX INFO: renamed from: com.discord.widgets.channels.WidgetTextInVoiceOnboarding$configureMedia$4 */
+    /* JADX INFO: compiled from: WidgetTextInVoiceOnboarding.kt */
     public static final class C73964 implements MediaPlayer.OnInfoListener {
         public C73964() {
         }
@@ -142,8 +142,8 @@ public final class WidgetTextInVoiceOnboarding extends AppBottomSheet {
         }
     }
 
-    /* compiled from: WidgetTextInVoiceOnboarding.kt */
-    /* renamed from: com.discord.widgets.channels.WidgetTextInVoiceOnboarding$hideVideoOverlay$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.channels.WidgetTextInVoiceOnboarding$hideVideoOverlay$1 */
+    /* JADX INFO: compiled from: WidgetTextInVoiceOnboarding.kt */
     public static final class C73971 extends Lambda implements Function1<ViewPropertyAnimator, Unit> {
         public static final C73971 INSTANCE = new C73971();
 
@@ -157,7 +157,7 @@ public final class WidgetTextInVoiceOnboarding extends AppBottomSheet {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(ViewPropertyAnimator viewPropertyAnimator) {
             Intrinsics3.checkNotNullParameter(viewPropertyAnimator, "$receiver");
             viewPropertyAnimator.scaleX(2.0f);
@@ -165,8 +165,8 @@ public final class WidgetTextInVoiceOnboarding extends AppBottomSheet {
         }
     }
 
-    /* compiled from: WidgetTextInVoiceOnboarding.kt */
-    /* renamed from: com.discord.widgets.channels.WidgetTextInVoiceOnboarding$onViewCreated$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.channels.WidgetTextInVoiceOnboarding$onViewCreated$1 */
+    /* JADX INFO: compiled from: WidgetTextInVoiceOnboarding.kt */
     public static final class ViewOnClickListenerC73981 implements View.OnClickListener {
         public ViewOnClickListenerC73981() {
         }
@@ -177,8 +177,8 @@ public final class WidgetTextInVoiceOnboarding extends AppBottomSheet {
         }
     }
 
-    /* compiled from: WidgetTextInVoiceOnboarding.kt */
-    /* renamed from: com.discord.widgets.channels.WidgetTextInVoiceOnboarding$onViewCreated$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.channels.WidgetTextInVoiceOnboarding$onViewCreated$2 */
+    /* JADX INFO: compiled from: WidgetTextInVoiceOnboarding.kt */
     public static final class ViewOnClickListenerC73992 implements View.OnClickListener {
         public ViewOnClickListenerC73992() {
         }
@@ -192,8 +192,8 @@ public final class WidgetTextInVoiceOnboarding extends AppBottomSheet {
         }
     }
 
-    /* compiled from: WidgetTextInVoiceOnboarding.kt */
-    /* renamed from: com.discord.widgets.channels.WidgetTextInVoiceOnboarding$showVideoOverlay$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.channels.WidgetTextInVoiceOnboarding$showVideoOverlay$1 */
+    /* JADX INFO: compiled from: WidgetTextInVoiceOnboarding.kt */
     public static final class C74001 extends Lambda implements Function1<View, Unit> {
         public static final C74001 INSTANCE = new C74001();
 
@@ -207,7 +207,7 @@ public final class WidgetTextInVoiceOnboarding extends AppBottomSheet {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(View view) {
             Intrinsics3.checkNotNullParameter(view, "view");
             view.setScaleX(2.0f);
@@ -215,8 +215,8 @@ public final class WidgetTextInVoiceOnboarding extends AppBottomSheet {
         }
     }
 
-    /* compiled from: WidgetTextInVoiceOnboarding.kt */
-    /* renamed from: com.discord.widgets.channels.WidgetTextInVoiceOnboarding$showVideoOverlay$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.channels.WidgetTextInVoiceOnboarding$showVideoOverlay$2 */
+    /* JADX INFO: compiled from: WidgetTextInVoiceOnboarding.kt */
     public static final class C74012 extends Lambda implements Function1<ViewPropertyAnimator, Unit> {
         public static final C74012 INSTANCE = new C74012();
 
@@ -230,7 +230,7 @@ public final class WidgetTextInVoiceOnboarding extends AppBottomSheet {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(ViewPropertyAnimator viewPropertyAnimator) {
             Intrinsics3.checkNotNullParameter(viewPropertyAnimator, "$receiver");
             viewPropertyAnimator.scaleX(1.0f);

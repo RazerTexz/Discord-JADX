@@ -12,12 +12,12 @@ import p658rx.Observable;
 import p658rx.Subscription;
 import p658rx.functions.Action1;
 
-/* compiled from: Backgrounded.kt */
-/* renamed from: b.a.e.b, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.a.e.b, reason: use source file name */
+/* JADX INFO: compiled from: Backgrounded.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class Backgrounded2 implements Application.ActivityLifecycleCallbacks {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final /* synthetic */ Function1 f595j;
 
     public Backgrounded2(Function1 function1) {
@@ -34,19 +34,18 @@ public final class Backgrounded2 implements Application.ActivityLifecycleCallbac
         Intrinsics3.checkNotNullParameter(activity, ActivityChooserModel.ATTRIBUTE_ACTIVITY);
     }
 
-    /* JADX WARN: Multi-variable type inference failed */
-    /* JADX WARN: Type inference failed for: r2v1, types: [b.a.e.c] */
     @Override // android.app.Application.ActivityLifecycleCallbacks
     public void onActivityPaused(Activity activity) {
         Intrinsics3.checkNotNullParameter(activity, ActivityChooserModel.ATTRIBUTE_ACTIVITY);
         Backgrounded4 backgrounded4 = Backgrounded4.f600d;
-        Function1 backgrounded3 = this.f595j;
-        Observable observableM11111q = new ScalarSynchronousObservable(Boolean.TRUE).m11111q(2000L, TimeUnit.MILLISECONDS);
-        Backgrounded3 backgrounded32 = new Backgrounded3(new Backgrounded(backgrounded4));
-        if (backgrounded3 != null) {
-            backgrounded3 = new Backgrounded3(backgrounded3);
+        Function1 function1 = this.f595j;
+        Observable<T> observableM11111q = new ScalarSynchronousObservable(Boolean.TRUE).m11111q(2000L, TimeUnit.MILLISECONDS);
+        Backgrounded3 backgrounded3 = new Backgrounded3(new Backgrounded(backgrounded4));
+        Object backgrounded32 = function1;
+        if (function1 != null) {
+            backgrounded32 = new Backgrounded3(function1);
         }
-        Backgrounded4.f599c = observableM11111q.m11097W(backgrounded32, (Action1) backgrounded3);
+        Backgrounded4.f599c = observableM11111q.m11097W(backgrounded3, (Action1) backgrounded32);
     }
 
     @Override // android.app.Application.ActivityLifecycleCallbacks

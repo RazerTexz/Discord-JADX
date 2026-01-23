@@ -1,20 +1,19 @@
 package com.discord.widgets.hubs.events;
 
-import android.content.res.Resources;
 import android.view.View;
 import com.discord.databinding.WidgetHubEventBinding;
 import com.discord.widgets.guildscheduledevent.GuildScheduledEventItemView;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: WidgetHubEventsPageViewHolder.kt */
-/* renamed from: com.discord.widgets.hubs.events.WidgetHubEventViewHolder, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.hubs.events.WidgetHubEventViewHolder, reason: use source file name */
+/* JADX INFO: compiled from: WidgetHubEventsPageViewHolder.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetHubEventsPageViewHolder2 extends WidgetHubEventsPageViewHolder {
     private final WidgetHubEventBinding binding;
     private final WidgetHubEventsPage3 listener;
 
-    /* compiled from: WidgetHubEventsPageViewHolder.kt */
-    /* renamed from: com.discord.widgets.hubs.events.WidgetHubEventViewHolder$bind$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.hubs.events.WidgetHubEventViewHolder$bind$1 */
+    /* JADX INFO: compiled from: WidgetHubEventsPageViewHolder.kt */
     public static final class ViewOnClickListenerC90491 implements View.OnClickListener {
         public final /* synthetic */ WidgetHubEventsViewModel2 $eventData;
 
@@ -28,8 +27,8 @@ public final class WidgetHubEventsPageViewHolder2 extends WidgetHubEventsPageVie
         }
     }
 
-    /* compiled from: WidgetHubEventsPageViewHolder.kt */
-    /* renamed from: com.discord.widgets.hubs.events.WidgetHubEventViewHolder$bind$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.hubs.events.WidgetHubEventViewHolder$bind$2 */
+    /* JADX INFO: compiled from: WidgetHubEventsPageViewHolder.kt */
     public static final class ViewOnClickListenerC90502 implements View.OnClickListener {
         public final /* synthetic */ WidgetHubEventsViewModel2 $eventData;
 
@@ -43,8 +42,8 @@ public final class WidgetHubEventsPageViewHolder2 extends WidgetHubEventsPageVie
         }
     }
 
-    /* compiled from: WidgetHubEventsPageViewHolder.kt */
-    /* renamed from: com.discord.widgets.hubs.events.WidgetHubEventViewHolder$bind$3 */
+    /* JADX INFO: renamed from: com.discord.widgets.hubs.events.WidgetHubEventViewHolder$bind$3 */
+    /* JADX INFO: compiled from: WidgetHubEventsPageViewHolder.kt */
     public static final class ViewOnClickListenerC90513 implements View.OnClickListener {
         public final /* synthetic */ WidgetHubEventsViewModel2 $eventData;
 
@@ -58,8 +57,8 @@ public final class WidgetHubEventsPageViewHolder2 extends WidgetHubEventsPageVie
         }
     }
 
-    /* compiled from: WidgetHubEventsPageViewHolder.kt */
-    /* renamed from: com.discord.widgets.hubs.events.WidgetHubEventViewHolder$bind$4 */
+    /* JADX INFO: renamed from: com.discord.widgets.hubs.events.WidgetHubEventViewHolder$bind$4 */
+    /* JADX INFO: compiled from: WidgetHubEventsPageViewHolder.kt */
     public static final class ViewOnClickListenerC90524 implements View.OnClickListener {
         public final /* synthetic */ WidgetHubEventsViewModel2 $eventData;
 
@@ -84,7 +83,7 @@ public final class WidgetHubEventsPageViewHolder2 extends WidgetHubEventsPageVie
         this.listener = widgetHubEventsPage3;
     }
 
-    public final void bind(WidgetHubEventsViewModel2 eventData) throws Resources.NotFoundException {
+    public final void bind(WidgetHubEventsViewModel2 eventData) {
         Intrinsics3.checkNotNullParameter(eventData, "eventData");
         this.binding.f17180b.configureInDirectoryEventList(eventData, new ViewOnClickListenerC90491(eventData), new ViewOnClickListenerC90502(eventData), new ViewOnClickListenerC90513(eventData), new ViewOnClickListenerC90524(eventData));
     }

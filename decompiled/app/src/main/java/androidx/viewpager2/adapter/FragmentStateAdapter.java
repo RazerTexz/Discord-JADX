@@ -27,7 +27,7 @@ import androidx.viewpager2.widget.ViewPager2;
 import java.util.Iterator;
 import p007b.p100d.p104b.p105a.outline;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public abstract class FragmentStateAdapter extends RecyclerView.Adapter<FragmentViewHolder> implements StatefulAdapter {
     private static final long GRACE_WINDOW_TIME_MS = 10000;
     private static final String KEY_PREFIX_FRAGMENT = "f#";
@@ -41,7 +41,7 @@ public abstract class FragmentStateAdapter extends RecyclerView.Adapter<Fragment
     public final Lifecycle mLifecycle;
     private final LongSparseArray<Fragment.SavedState> mSavedStates;
 
-    /* renamed from: androidx.viewpager2.adapter.FragmentStateAdapter$1 */
+    /* JADX INFO: renamed from: androidx.viewpager2.adapter.FragmentStateAdapter$1 */
     public class ViewOnLayoutChangeListenerC06941 implements View.OnLayoutChangeListener {
         public final /* synthetic */ FrameLayout val$container;
         public final /* synthetic */ FragmentViewHolder val$holder;
@@ -60,7 +60,7 @@ public abstract class FragmentStateAdapter extends RecyclerView.Adapter<Fragment
         }
     }
 
-    /* renamed from: androidx.viewpager2.adapter.FragmentStateAdapter$2 */
+    /* JADX INFO: renamed from: androidx.viewpager2.adapter.FragmentStateAdapter$2 */
     public class C06952 implements LifecycleEventObserver {
         public final /* synthetic */ FragmentViewHolder val$holder;
 
@@ -80,7 +80,7 @@ public abstract class FragmentStateAdapter extends RecyclerView.Adapter<Fragment
         }
     }
 
-    /* renamed from: androidx.viewpager2.adapter.FragmentStateAdapter$3 */
+    /* JADX INFO: renamed from: androidx.viewpager2.adapter.FragmentStateAdapter$3 */
     public class C06963 extends FragmentManager.FragmentLifecycleCallbacks {
         public final /* synthetic */ FrameLayout val$container;
         public final /* synthetic */ Fragment val$fragment;
@@ -99,7 +99,7 @@ public abstract class FragmentStateAdapter extends RecyclerView.Adapter<Fragment
         }
     }
 
-    /* renamed from: androidx.viewpager2.adapter.FragmentStateAdapter$4 */
+    /* JADX INFO: renamed from: androidx.viewpager2.adapter.FragmentStateAdapter$4 */
     public class RunnableC06974 implements Runnable {
         public RunnableC06974() {
         }
@@ -112,7 +112,7 @@ public abstract class FragmentStateAdapter extends RecyclerView.Adapter<Fragment
         }
     }
 
-    /* renamed from: androidx.viewpager2.adapter.FragmentStateAdapter$5 */
+    /* JADX INFO: renamed from: androidx.viewpager2.adapter.FragmentStateAdapter$5 */
     public class C06985 implements LifecycleEventObserver {
         public final /* synthetic */ Handler val$handler;
         public final /* synthetic */ Runnable val$runnable;
@@ -175,7 +175,7 @@ public abstract class FragmentStateAdapter extends RecyclerView.Adapter<Fragment
         private long mPrimaryItemId = -1;
         private ViewPager2 mViewPager;
 
-        /* renamed from: androidx.viewpager2.adapter.FragmentStateAdapter$FragmentMaxLifecycleEnforcer$1 */
+        /* JADX INFO: renamed from: androidx.viewpager2.adapter.FragmentStateAdapter$FragmentMaxLifecycleEnforcer$1 */
         public class C06991 extends ViewPager2.OnPageChangeCallback {
             public C06991() {
             }
@@ -191,7 +191,7 @@ public abstract class FragmentStateAdapter extends RecyclerView.Adapter<Fragment
             }
         }
 
-        /* renamed from: androidx.viewpager2.adapter.FragmentStateAdapter$FragmentMaxLifecycleEnforcer$2 */
+        /* JADX INFO: renamed from: androidx.viewpager2.adapter.FragmentStateAdapter$FragmentMaxLifecycleEnforcer$2 */
         public class C07002 extends DataSetChangeObserver {
             public C07002() {
                 super(null);
@@ -203,7 +203,7 @@ public abstract class FragmentStateAdapter extends RecyclerView.Adapter<Fragment
             }
         }
 
-        /* renamed from: androidx.viewpager2.adapter.FragmentStateAdapter$FragmentMaxLifecycleEnforcer$3 */
+        /* JADX INFO: renamed from: androidx.viewpager2.adapter.FragmentStateAdapter$FragmentMaxLifecycleEnforcer$3 */
         public class C07013 implements LifecycleEventObserver {
             public C07013() {
             }

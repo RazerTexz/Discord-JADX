@@ -5,9 +5,9 @@ import com.discord.stores.StoreStream;
 import com.discord.widgets.servers.auditlog.WidgetServerSettingsAuditLogFilterAdapter;
 import kotlin.jvm.functions.Function0;
 
-/* compiled from: WidgetServerSettingsAuditLogFilterAdapter.kt */
-/* renamed from: com.discord.widgets.servers.auditlog.WidgetServerSettingsAuditLogFilterAdapter$AuditLogFilterUserViewHolder$onConfigure$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.servers.auditlog.WidgetServerSettingsAuditLogFilterAdapter$AuditLogFilterUserViewHolder$onConfigure$1, reason: use source file name */
+/* JADX INFO: compiled from: WidgetServerSettingsAuditLogFilterAdapter.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetServerSettingsAuditLogFilterAdapter3 implements CompoundButton.OnCheckedChangeListener {
     public final /* synthetic */ WidgetServerSettingsAuditLogFilterAdapter.AuditLogUserFilterItem $item;
     public final /* synthetic */ WidgetServerSettingsAuditLogFilterAdapter.AuditLogFilterUserViewHolder this$0;

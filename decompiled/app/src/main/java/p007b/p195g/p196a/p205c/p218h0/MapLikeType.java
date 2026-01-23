@@ -2,9 +2,9 @@ package p007b.p195g.p196a.p205c.p218h0;
 
 import p007b.p195g.p196a.p205c.JavaType;
 
-/* compiled from: MapLikeType.java */
-/* renamed from: b.g.a.c.h0.f, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.g.a.c.h0.f, reason: use source file name */
+/* JADX INFO: compiled from: MapLikeType.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class MapLikeType extends TypeBase {
     private static final long serialVersionUID = 1;
     public final JavaType _keyType;
@@ -17,25 +17,25 @@ public class MapLikeType extends TypeBase {
     }
 
     @Override // p007b.p195g.p196a.p205c.JavaType
-    /* renamed from: C */
+    /* JADX INFO: renamed from: C */
     public JavaType mo2093C(Class<?> cls, TypeBindings typeBindings, JavaType javaType, JavaType[] javaTypeArr) {
         return new MapLikeType(cls, typeBindings, javaType, javaTypeArr, this._keyType, this._valueType, this._valueHandler, this._typeHandler, this._asStatic);
     }
 
     @Override // p007b.p195g.p196a.p205c.JavaType
-    /* renamed from: D */
+    /* JADX INFO: renamed from: D */
     public JavaType mo2094D(JavaType javaType) {
         return this._valueType == javaType ? this : new MapLikeType(this._class, this._bindings, this._superClass, this._superInterfaces, this._keyType, javaType, this._valueHandler, this._typeHandler, this._asStatic);
     }
 
     @Override // p007b.p195g.p196a.p205c.JavaType
-    /* renamed from: E */
+    /* JADX INFO: renamed from: E */
     public /* bridge */ /* synthetic */ JavaType mo2095E(Object obj) {
         return mo2116L(obj);
     }
 
     @Override // p007b.p195g.p196a.p205c.JavaType
-    /* renamed from: F */
+    /* JADX INFO: renamed from: F */
     public JavaType mo2105F(JavaType javaType) {
         JavaType javaTypeMo2105F;
         JavaType javaTypeMo2105F2;
@@ -49,25 +49,25 @@ public class MapLikeType extends TypeBase {
     }
 
     @Override // p007b.p195g.p196a.p205c.JavaType
-    /* renamed from: G */
+    /* JADX INFO: renamed from: G */
     public /* bridge */ /* synthetic */ JavaType mo2096G() {
         return mo2118N();
     }
 
     @Override // p007b.p195g.p196a.p205c.JavaType
-    /* renamed from: H */
+    /* JADX INFO: renamed from: H */
     public /* bridge */ /* synthetic */ JavaType mo2097H(Object obj) {
         return mo2119O(obj);
     }
 
     @Override // p007b.p195g.p196a.p205c.JavaType
-    /* renamed from: I */
+    /* JADX INFO: renamed from: I */
     public /* bridge */ /* synthetic */ JavaType mo2098I(Object obj) {
         return mo2120P(obj);
     }
 
     @Override // p007b.p195g.p196a.p205c.p218h0.TypeBase
-    /* renamed from: K */
+    /* JADX INFO: renamed from: K */
     public String mo2106K() {
         StringBuilder sb = new StringBuilder();
         sb.append(this._class.getName());
@@ -81,27 +81,27 @@ public class MapLikeType extends TypeBase {
         return sb.toString();
     }
 
-    /* renamed from: L */
+    /* JADX INFO: renamed from: L */
     public MapLikeType mo2116L(Object obj) {
         return new MapLikeType(this._class, this._bindings, this._superClass, this._superInterfaces, this._keyType, this._valueType.mo2097H(obj), this._valueHandler, this._typeHandler, this._asStatic);
     }
 
-    /* renamed from: M */
+    /* JADX INFO: renamed from: M */
     public MapLikeType mo2117M(JavaType javaType) {
         return javaType == this._keyType ? this : new MapLikeType(this._class, this._bindings, this._superClass, this._superInterfaces, javaType, this._valueType, this._valueHandler, this._typeHandler, this._asStatic);
     }
 
-    /* renamed from: N */
+    /* JADX INFO: renamed from: N */
     public MapLikeType mo2118N() {
         return this._asStatic ? this : new MapLikeType(this._class, this._bindings, this._superClass, this._superInterfaces, this._keyType, this._valueType.mo2096G(), this._valueHandler, this._typeHandler, true);
     }
 
-    /* renamed from: O */
+    /* JADX INFO: renamed from: O */
     public MapLikeType mo2119O(Object obj) {
         return new MapLikeType(this._class, this._bindings, this._superClass, this._superInterfaces, this._keyType, this._valueType, this._valueHandler, obj, this._asStatic);
     }
 
-    /* renamed from: P */
+    /* JADX INFO: renamed from: P */
     public MapLikeType mo2120P(Object obj) {
         return new MapLikeType(this._class, this._bindings, this._superClass, this._superInterfaces, this._keyType, this._valueType, obj, this._typeHandler, this._asStatic);
     }
@@ -119,20 +119,20 @@ public class MapLikeType extends TypeBase {
     }
 
     @Override // p007b.p195g.p196a.p205c.JavaType
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public JavaType mo2099k() {
         return this._valueType;
     }
 
     @Override // p007b.p195g.p196a.p205c.JavaType
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public StringBuilder mo2100l(StringBuilder sb) {
         TypeBase.m2139J(this._class, sb, true);
         return sb;
     }
 
     @Override // p007b.p195g.p196a.p205c.JavaType
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public StringBuilder mo2101m(StringBuilder sb) {
         TypeBase.m2139J(this._class, sb, false);
         sb.append('<');
@@ -143,13 +143,13 @@ public class MapLikeType extends TypeBase {
     }
 
     @Override // p007b.p195g.p196a.p205c.JavaType
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public JavaType mo2121o() {
         return this._keyType;
     }
 
     @Override // p007b.p195g.p196a.p205c.JavaType
-    /* renamed from: s */
+    /* JADX INFO: renamed from: s */
     public boolean mo2103s() {
         return super.mo2103s() || this._valueType.mo2103s() || this._keyType.mo2103s();
     }
@@ -159,13 +159,13 @@ public class MapLikeType extends TypeBase {
     }
 
     @Override // p007b.p195g.p196a.p205c.JavaType
-    /* renamed from: v */
+    /* JADX INFO: renamed from: v */
     public boolean mo2104v() {
         return true;
     }
 
     @Override // p007b.p195g.p196a.p205c.JavaType
-    /* renamed from: z */
+    /* JADX INFO: renamed from: z */
     public boolean mo2122z() {
         return true;
     }

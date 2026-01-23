@@ -4,9 +4,9 @@ import com.discord.models.domain.ModelAuditLogEntry;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: PayoutGroup.kt */
-/* renamed from: com.discord.api.guildrolesubscription.Payout, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: com.discord.api.guildrolesubscription.Payout, reason: use source file name */
+/* JADX INFO: compiled from: PayoutGroup.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class PayoutGroup2 {
     private final Long amount;
     private final long id;

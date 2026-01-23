@@ -5,18 +5,18 @@ import android.animation.AnimatorListenerAdapter;
 import android.view.ViewGroup;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: SwipeDismissTouchListener.kt */
-/* renamed from: b.p.a.m, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.p.a.m, reason: use source file name */
+/* JADX INFO: compiled from: SwipeDismissTouchListener.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class SwipeDismissTouchListener2 extends AnimatorListenerAdapter {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final /* synthetic */ SwipeDismissTouchListener f14382a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final /* synthetic */ ViewGroup.LayoutParams f14383b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final /* synthetic */ int f14384c;
 
     public SwipeDismissTouchListener2(SwipeDismissTouchListener swipeDismissTouchListener, ViewGroup.LayoutParams layoutParams, int i) {

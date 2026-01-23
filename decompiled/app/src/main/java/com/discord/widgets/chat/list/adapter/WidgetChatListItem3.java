@@ -6,9 +6,9 @@ import java.util.Iterator;
 import java.util.List;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: WidgetChatListItem.kt */
-/* renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListItemKt, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListItemKt, reason: use source file name */
+/* JADX INFO: compiled from: WidgetChatListItem.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetChatListItem3 {
     /* JADX WARN: Removed duplicated region for block: B:27:0x007d A[RETURN] */
     /*

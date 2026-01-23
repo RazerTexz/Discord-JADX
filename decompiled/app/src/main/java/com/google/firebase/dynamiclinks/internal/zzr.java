@@ -6,12 +6,12 @@ import com.google.android.gms.common.internal.safeparcel.AbstractSafeParcelable;
 import p007b.p085c.p086a.p087a0.AnimatableValueParser;
 import p007b.p225i.p361c.p391o.p392b.C4781n;
 
-/* compiled from: com.google.firebase:firebase-dynamic-links@@19.1.1 */
-/* loaded from: classes3.dex */
+/* JADX INFO: compiled from: com.google.firebase:firebase-dynamic-links@@19.1.1 */
+/* JADX INFO: loaded from: classes3.dex */
 public final class zzr extends AbstractSafeParcelable {
     public static final Parcelable.Creator<zzr> CREATOR = new C4781n();
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final String f21431j;
 
     public zzr(String str) {

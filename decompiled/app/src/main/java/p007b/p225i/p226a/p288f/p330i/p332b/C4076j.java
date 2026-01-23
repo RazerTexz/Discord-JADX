@@ -16,27 +16,27 @@ import java.util.concurrent.TimeUnit;
 import p007b.p100d.p104b.p105a.outline;
 import p007b.p225i.p226a.p288f.p299e.p308o.C3401c;
 
-/* compiled from: com.google.android.gms:play-services-measurement-impl@@18.0.0 */
-/* renamed from: b.i.a.f.i.b.j */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.i.b.j */
+/* JADX INFO: compiled from: com.google.android.gms:play-services-measurement-impl@@18.0.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public final class C4076j extends AbstractC4170r5 {
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public long f10829c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public String f10830d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public Boolean f10831e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public AccountManager f10832f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public Boolean f10833g;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public long f10834h;
 
     public C4076j(C4202u4 c4202u4) {
@@ -44,7 +44,7 @@ public final class C4076j extends AbstractC4170r5 {
     }
 
     @Override // p007b.p225i.p226a.p288f.p330i.p332b.AbstractC4170r5
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     public final boolean mo5574r() {
         Calendar calendar = Calendar.getInstance();
         this.f10829c = TimeUnit.MINUTES.convert(calendar.get(16) + calendar.get(15), TimeUnit.MILLISECONDS);
@@ -57,7 +57,7 @@ public final class C4076j extends AbstractC4170r5 {
         return false;
     }
 
-    /* renamed from: s */
+    /* JADX INFO: renamed from: s */
     public final boolean m5688s(Context context) {
         if (this.f10831e == null) {
             this.f10831e = Boolean.FALSE;
@@ -73,27 +73,27 @@ public final class C4076j extends AbstractC4170r5 {
         return this.f10831e.booleanValue();
     }
 
-    /* renamed from: t */
+    /* JADX INFO: renamed from: t */
     public final long m5689t() {
         m5857o();
         return this.f10829c;
     }
 
-    /* renamed from: u */
+    /* JADX INFO: renamed from: u */
     public final String m5690u() {
         m5857o();
         return this.f10830d;
     }
 
     @WorkerThread
-    /* renamed from: v */
+    /* JADX INFO: renamed from: v */
     public final long m5691v() {
         mo5848b();
         return this.f10834h;
     }
 
     @WorkerThread
-    /* renamed from: w */
+    /* JADX INFO: renamed from: w */
     public final boolean m5692w() {
         Account[] result;
         mo5848b();

@@ -15,8 +15,8 @@ import androidx.appcompat.graphics.drawable.DrawableWrapper;
 import androidx.core.content.ContextCompat;
 import com.google.android.material.C10817R;
 
+/* JADX INFO: loaded from: classes3.dex */
 @Deprecated
-/* loaded from: classes3.dex */
 public class ShadowDrawableWrapper extends DrawableWrapper {
     public static final double COS_45 = Math.cos(Math.toRadians(45.0d));
     public static final float SHADOW_BOTTOM_SCALE = 1.0f;
@@ -106,14 +106,14 @@ public class ShadowDrawableWrapper extends DrawableWrapper {
         if (!z2) {
             return f;
         }
-        return (float) (((1.0d - COS_45) * f2) + f);
+        return (float) (((1.0d - COS_45) * ((double) f2)) + ((double) f));
     }
 
     public static float calculateVerticalPadding(float f, float f2, boolean z2) {
         if (!z2) {
             return f * 1.5f;
         }
-        return (float) (((1.0d - COS_45) * f2) + (f * 1.5f));
+        return (float) (((1.0d - COS_45) * ((double) f2)) + ((double) (f * 1.5f)));
     }
 
     private void drawShadow(@NonNull Canvas canvas) {

@@ -18,11 +18,11 @@ import p007b.p008a.p027k.FormatUtils;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: Badge.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: Badge.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class Badge {
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private static final int GUILD_BOOST_LEVEL_1_MONTHS = 1;
     private static final int GUILD_BOOST_LEVEL_2_MONTHS = 2;
@@ -39,7 +39,7 @@ public final /* data */ class Badge {
     private final CharSequence text;
     private final CharSequence tooltip;
 
-    /* compiled from: Badge.kt */
+    /* JADX INFO: compiled from: Badge.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -143,27 +143,27 @@ public final /* data */ class Badge {
         return INSTANCE.onBadgeClick(fragmentManager, context);
     }
 
-    /* renamed from: component1, reason: from getter */
+    /* JADX INFO: renamed from: component1, reason: from getter */
     public final int getIcon() {
         return this.icon;
     }
 
-    /* renamed from: component2, reason: from getter */
+    /* JADX INFO: renamed from: component2, reason: from getter */
     public final CharSequence getText() {
         return this.text;
     }
 
-    /* renamed from: component3, reason: from getter */
+    /* JADX INFO: renamed from: component3, reason: from getter */
     public final CharSequence getTooltip() {
         return this.tooltip;
     }
 
-    /* renamed from: component4, reason: from getter */
+    /* JADX INFO: renamed from: component4, reason: from getter */
     public final boolean getShowPremiumUpSell() {
         return this.showPremiumUpSell;
     }
 
-    /* renamed from: component5, reason: from getter */
+    /* JADX INFO: renamed from: component5, reason: from getter */
     public final String getObjectType() {
         return this.objectType;
     }
@@ -204,6 +204,9 @@ public final /* data */ class Badge {
     }
 
     /* JADX WARN: Multi-variable type inference failed */
+    /* JADX WARN: Type inference failed for: r1v12 */
+    /* JADX WARN: Type inference failed for: r1v7, types: [int] */
+    /* JADX WARN: Type inference failed for: r1v9 */
     public int hashCode() {
         int i = this.icon * 31;
         CharSequence charSequence = this.text;
@@ -211,13 +214,13 @@ public final /* data */ class Badge {
         CharSequence charSequence2 = this.tooltip;
         int iHashCode2 = (iHashCode + (charSequence2 != null ? charSequence2.hashCode() : 0)) * 31;
         boolean z2 = this.showPremiumUpSell;
-        int i2 = z2;
-        if (z2 != 0) {
-            i2 = 1;
+        ?? r1 = z2;
+        if (z2) {
+            r1 = 1;
         }
-        int i3 = (iHashCode2 + i2) * 31;
+        int i2 = (iHashCode2 + r1) * 31;
         String str = this.objectType;
-        return i3 + (str != null ? str.hashCode() : 0);
+        return i2 + (str != null ? str.hashCode() : 0);
     }
 
     public String toString() {

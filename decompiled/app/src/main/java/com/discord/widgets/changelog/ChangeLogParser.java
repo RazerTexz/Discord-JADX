@@ -18,8 +18,8 @@ import p007b.p008a.p050t.p056c.MarkdownRules;
 import p507d0.p580t.Collections2;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ChangeLogParser.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: ChangeLogParser.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class ChangeLogParser {
     public static final ChangeLogParser INSTANCE = new ChangeLogParser();
 

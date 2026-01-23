@@ -3,9 +3,9 @@ package com.discord.widgets.notice;
 import kotlin.jvm.functions.Function9;
 import p658rx.functions.Func9;
 
-/* compiled from: NoticePopupChannel.kt */
-/* renamed from: com.discord.widgets.notice.NoticePopupChannel$sam$rx_functions_Func9$0, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.notice.NoticePopupChannel$sam$rx_functions_Func9$0, reason: use source file name */
+/* JADX INFO: compiled from: NoticePopupChannel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class NoticePopupChannel4 implements Func9 {
     private final /* synthetic */ Function9 function;
 

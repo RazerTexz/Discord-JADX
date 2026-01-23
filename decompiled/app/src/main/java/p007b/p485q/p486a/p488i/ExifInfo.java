@@ -1,17 +1,17 @@
 package p007b.p485q.p486a.p488i;
 
-/* compiled from: ExifInfo.java */
-/* renamed from: b.q.a.i.b, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.q.a.i.b, reason: use source file name */
+/* JADX INFO: compiled from: ExifInfo.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class ExifInfo {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public int f14402a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public int f14403b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public int f14404c;
 
     public ExifInfo(int i, int i2, int i3) {

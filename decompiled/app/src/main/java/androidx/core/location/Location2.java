@@ -3,9 +3,9 @@ package androidx.core.location;
 import android.location.Location;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: Location.kt */
-/* renamed from: androidx.core.location.LocationKt, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: androidx.core.location.LocationKt, reason: use source file name */
+/* JADX INFO: compiled from: Location.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class Location2 {
     public static final double component1(Location location) {
         Intrinsics3.checkNotNullParameter(location, "<this>");

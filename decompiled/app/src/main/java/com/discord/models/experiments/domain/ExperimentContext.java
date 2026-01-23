@@ -4,8 +4,8 @@ import kotlin.jvm.internal.DefaultConstructorMarker;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ExperimentContext.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: ExperimentContext.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class ExperimentContext {
     private final Long channelId;
     private final Long guildId;
@@ -34,17 +34,17 @@ public final /* data */ class ExperimentContext {
         return experimentContext.copy(z2, l, l2);
     }
 
-    /* renamed from: component1, reason: from getter */
+    /* JADX INFO: renamed from: component1, reason: from getter */
     public final boolean getShouldTrigger() {
         return this.shouldTrigger;
     }
 
-    /* renamed from: component2, reason: from getter */
+    /* JADX INFO: renamed from: component2, reason: from getter */
     public final Long getGuildId() {
         return this.guildId;
     }
 
-    /* renamed from: component3, reason: from getter */
+    /* JADX INFO: renamed from: component3, reason: from getter */
     public final Long getChannelId() {
         return this.channelId;
     }

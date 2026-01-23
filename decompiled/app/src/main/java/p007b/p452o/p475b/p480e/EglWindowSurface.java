@@ -10,9 +10,9 @@ import p007b.p452o.p475b.p478c.egl4;
 import p007b.p452o.p475b.p478c.egl5;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: EglWindowSurface.kt */
-/* renamed from: b.o.b.e.b, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.o.b.e.b, reason: use source file name */
+/* JADX INFO: compiled from: EglWindowSurface.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public class EglWindowSurface extends EglSurface {
     public EglWindowSurface(EglCore eglCore, SurfaceTexture surfaceTexture) {
         Intrinsics3.checkNotNullParameter(eglCore, "eglCore");

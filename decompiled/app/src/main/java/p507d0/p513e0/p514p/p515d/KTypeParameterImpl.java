@@ -32,25 +32,25 @@ import p507d0.p592z.p594d.PropertyReference1Impl;
 import p507d0.p592z.p594d.Reflection2;
 import p507d0.p592z.p594d.TypeParameterReference;
 
-/* compiled from: KTypeParameterImpl.kt */
-/* renamed from: d0.e0.p.d.y, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.y, reason: use source file name */
+/* JADX INFO: compiled from: KTypeParameterImpl.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class KTypeParameterImpl implements KTypeParameter {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static final /* synthetic */ KProperty[] f25067j = {Reflection2.property1(new PropertyReference1Impl(Reflection2.getOrCreateKotlinClass(KTypeParameterImpl.class), "upperBounds", "getUpperBounds()Ljava/util/List;"))};
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final ReflectProperties.a f25068k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final KTypeParameterOwnerImpl f25069l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public final TypeParameterDescriptor f25070m;
 
-    /* compiled from: KTypeParameterImpl.kt */
-    /* renamed from: d0.e0.p.d.y$a */
+    /* JADX INFO: renamed from: d0.e0.p.d.y$a */
+    /* JADX INFO: compiled from: KTypeParameterImpl.kt */
     public static final class a extends Lambda implements Function0<List<? extends KTypeImpl>> {
         public a() {
             super(0);
@@ -62,7 +62,7 @@ public final class KTypeParameterImpl implements KTypeParameter {
         }
 
         @Override // kotlin.jvm.functions.Function0
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final List<? extends KTypeImpl> invoke2() {
             List<KotlinType> upperBounds = KTypeParameterImpl.this.getDescriptor().getUpperBounds();
             Intrinsics3.checkNotNullExpressionValue(upperBounds, "descriptor.upperBounds");
@@ -119,7 +119,7 @@ public final class KTypeParameterImpl implements KTypeParameter {
         this.f25069l = kTypeParameterOwnerImpl;
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final KClassImpl<?> m10058a(ClassDescriptor classDescriptor) {
         Class<?> javaClass = util2.toJavaClass(classDescriptor);
         KClassImpl<?> kClassImpl = (KClassImpl) (javaClass != null ? JvmClassMapping.getKotlinClass(javaClass) : null);

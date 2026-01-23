@@ -5,36 +5,36 @@ import java.util.List;
 import p007b.p225i.p414e.ResultPointCallback;
 import p007b.p225i.p414e.p418n.BitMatrix;
 
-/* compiled from: AlignmentPatternFinder.java */
-/* renamed from: b.i.e.s.c.b, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.e.s.c.b, reason: use source file name */
+/* JADX INFO: compiled from: AlignmentPatternFinder.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class AlignmentPatternFinder {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final BitMatrix f13559a;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final int f13561c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final int f13562d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final int f13563e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final int f13564f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public final float f13565g;
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public final ResultPointCallback f13567i;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final List<AlignmentPattern> f13560b = new ArrayList(5);
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public final int[] f13566h = new int[3];
 
     public AlignmentPatternFinder(BitMatrix bitMatrix, int i, int i2, int i3, int i4, float f, ResultPointCallback resultPointCallback) {
@@ -47,12 +47,12 @@ public final class AlignmentPatternFinder {
         this.f13567i = resultPointCallback;
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static float m7106a(int[] iArr, int i) {
         return (i - iArr[2]) - (iArr[1] / 2.0f);
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final boolean m7107b(int[] iArr) {
         float f = this.f13565g;
         float f2 = f / 2.0f;
@@ -65,7 +65,7 @@ public final class AlignmentPatternFinder {
     }
 
     /* JADX WARN: Removed duplicated region for block: B:63:0x00fd  */
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */

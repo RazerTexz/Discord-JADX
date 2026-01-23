@@ -30,8 +30,8 @@ import p507d0.p592z.p594d.Lambda;
 import p658rx.Observable;
 import p658rx.Subscription;
 
-/* compiled from: WidgetGuildRoleSubscriptionEntryPointViewModel.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetGuildRoleSubscriptionEntryPointViewModel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetGuildRoleSubscriptionEntryPointViewModel extends AppViewModel<ViewState> {
     private final StoreConnectivity connectivityStore;
     private final StoreExperiments experimentsStore;
@@ -43,7 +43,7 @@ public final class WidgetGuildRoleSubscriptionEntryPointViewModel extends AppVie
     private final StoreSubscriptions subscriptionsStore;
     private String trackingSourceLocation;
 
-    /* compiled from: WidgetGuildRoleSubscriptionEntryPointViewModel.kt */
+    /* JADX INFO: compiled from: WidgetGuildRoleSubscriptionEntryPointViewModel.kt */
     public static final /* data */ class StoreState {
         private final Guild guild;
         private final Long guildRoleSubscriptionGroupListingId;
@@ -81,27 +81,27 @@ public final class WidgetGuildRoleSubscriptionEntryPointViewModel extends AppVie
             return storeState.copy(z2, z4, guild2, bool2, l);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final boolean getIsConnected() {
             return this.isConnected;
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final boolean getIsAccessible() {
             return this.isAccessible;
         }
 
-        /* renamed from: component3, reason: from getter */
+        /* JADX INFO: renamed from: component3, reason: from getter */
         public final Guild getGuild() {
             return this.guild;
         }
 
-        /* renamed from: component4, reason: from getter */
+        /* JADX INFO: renamed from: component4, reason: from getter */
         public final Boolean getHasUserActiveSubscription() {
             return this.hasUserActiveSubscription;
         }
 
-        /* renamed from: component5, reason: from getter */
+        /* JADX INFO: renamed from: component5, reason: from getter */
         public final Long getGuildRoleSubscriptionGroupListingId() {
             return this.guildRoleSubscriptionGroupListingId;
         }
@@ -137,6 +137,9 @@ public final class WidgetGuildRoleSubscriptionEntryPointViewModel extends AppVie
         /* JADX WARN: Type inference failed for: r0v1, types: [int] */
         /* JADX WARN: Type inference failed for: r0v10 */
         /* JADX WARN: Type inference failed for: r0v11 */
+        /* JADX WARN: Type inference failed for: r1v0 */
+        /* JADX WARN: Type inference failed for: r1v1, types: [int] */
+        /* JADX WARN: Type inference failed for: r1v11 */
         public int hashCode() {
             boolean z2 = this.isConnected;
             ?? r0 = z2;
@@ -145,7 +148,7 @@ public final class WidgetGuildRoleSubscriptionEntryPointViewModel extends AppVie
             }
             int i = r0 * 31;
             boolean z3 = this.isAccessible;
-            int i2 = (i + (z3 ? 1 : z3 ? 1 : 0)) * 31;
+            int i2 = (i + (z3 ? 1 : z3)) * 31;
             Guild guild = this.guild;
             int iHashCode = (i2 + (guild != null ? guild.hashCode() : 0)) * 31;
             Boolean bool = this.hasUserActiveSubscription;
@@ -176,10 +179,10 @@ public final class WidgetGuildRoleSubscriptionEntryPointViewModel extends AppVie
         }
     }
 
-    /* compiled from: WidgetGuildRoleSubscriptionEntryPointViewModel.kt */
+    /* JADX INFO: compiled from: WidgetGuildRoleSubscriptionEntryPointViewModel.kt */
     public static abstract class ViewState {
 
-        /* compiled from: WidgetGuildRoleSubscriptionEntryPointViewModel.kt */
+        /* JADX INFO: compiled from: WidgetGuildRoleSubscriptionEntryPointViewModel.kt */
         public static final class Invalid extends ViewState {
             public static final Invalid INSTANCE = new Invalid();
 
@@ -188,7 +191,7 @@ public final class WidgetGuildRoleSubscriptionEntryPointViewModel extends AppVie
             }
         }
 
-        /* compiled from: WidgetGuildRoleSubscriptionEntryPointViewModel.kt */
+        /* JADX INFO: compiled from: WidgetGuildRoleSubscriptionEntryPointViewModel.kt */
         public static final class Uninitialized extends ViewState {
             public static final Uninitialized INSTANCE = new Uninitialized();
 
@@ -197,7 +200,7 @@ public final class WidgetGuildRoleSubscriptionEntryPointViewModel extends AppVie
             }
         }
 
-        /* compiled from: WidgetGuildRoleSubscriptionEntryPointViewModel.kt */
+        /* JADX INFO: compiled from: WidgetGuildRoleSubscriptionEntryPointViewModel.kt */
         public static final /* data */ class Valid extends ViewState {
             private final Guild guild;
 
@@ -215,7 +218,7 @@ public final class WidgetGuildRoleSubscriptionEntryPointViewModel extends AppVie
                 return valid.copy(guild);
             }
 
-            /* renamed from: component1, reason: from getter */
+            /* JADX INFO: renamed from: component1, reason: from getter */
             public final Guild getGuild() {
                 return this.guild;
             }
@@ -260,8 +263,8 @@ public final class WidgetGuildRoleSubscriptionEntryPointViewModel extends AppVie
         }
     }
 
-    /* compiled from: WidgetGuildRoleSubscriptionEntryPointViewModel.kt */
-    /* renamed from: com.discord.widgets.guild_role_subscriptions.entrypoint.WidgetGuildRoleSubscriptionEntryPointViewModel$observeStoreState$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.guild_role_subscriptions.entrypoint.WidgetGuildRoleSubscriptionEntryPointViewModel$observeStoreState$1 */
+    /* JADX INFO: compiled from: WidgetGuildRoleSubscriptionEntryPointViewModel.kt */
     public static final class C84461 extends Lambda implements Function0<StoreState> {
         public final /* synthetic */ long $guildId;
 
@@ -300,8 +303,8 @@ public final class WidgetGuildRoleSubscriptionEntryPointViewModel extends AppVie
         }
     }
 
-    /* compiled from: WidgetGuildRoleSubscriptionEntryPointViewModel.kt */
-    /* renamed from: com.discord.widgets.guild_role_subscriptions.entrypoint.WidgetGuildRoleSubscriptionEntryPointViewModel$setGuildId$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.guild_role_subscriptions.entrypoint.WidgetGuildRoleSubscriptionEntryPointViewModel$setGuildId$1 */
+    /* JADX INFO: compiled from: WidgetGuildRoleSubscriptionEntryPointViewModel.kt */
     public static final class C84471 extends Lambda implements Function1<Subscription, Unit> {
         public C84471() {
             super(1);
@@ -313,15 +316,15 @@ public final class WidgetGuildRoleSubscriptionEntryPointViewModel extends AppVie
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Subscription subscription) {
             Intrinsics3.checkNotNullParameter(subscription, "it");
             WidgetGuildRoleSubscriptionEntryPointViewModel.access$setStoreObservableSubscription$p(WidgetGuildRoleSubscriptionEntryPointViewModel.this, subscription);
         }
     }
 
-    /* compiled from: WidgetGuildRoleSubscriptionEntryPointViewModel.kt */
-    /* renamed from: com.discord.widgets.guild_role_subscriptions.entrypoint.WidgetGuildRoleSubscriptionEntryPointViewModel$setGuildId$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.guild_role_subscriptions.entrypoint.WidgetGuildRoleSubscriptionEntryPointViewModel$setGuildId$2 */
+    /* JADX INFO: compiled from: WidgetGuildRoleSubscriptionEntryPointViewModel.kt */
     public static final class C84482 extends Lambda implements Function1<StoreState, Unit> {
         public C84482() {
             super(1);
@@ -333,7 +336,7 @@ public final class WidgetGuildRoleSubscriptionEntryPointViewModel extends AppVie
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(StoreState storeState) {
             WidgetGuildRoleSubscriptionEntryPointViewModel widgetGuildRoleSubscriptionEntryPointViewModel = WidgetGuildRoleSubscriptionEntryPointViewModel.this;
             Intrinsics3.checkNotNullExpressionValue(storeState, "storeState");

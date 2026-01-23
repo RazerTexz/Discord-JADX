@@ -4,9 +4,9 @@ import android.text.Editable;
 import android.text.TextWatcher;
 import androidx.core.app.NotificationCompat;
 
-/* compiled from: TextView.kt */
-/* renamed from: com.discord.widgets.guildscheduledevent.WidgetGuildScheduledEventLocationSelect$onViewBound$$inlined$addTextChangedListener$1 */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.guildscheduledevent.WidgetGuildScheduledEventLocationSelect$onViewBound$$inlined$addTextChangedListener$1 */
+/* JADX INFO: compiled from: TextView.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class C8899x17ce3023 implements TextWatcher {
     public final /* synthetic */ WidgetGuildScheduledEventLocationSelect this$0;
 

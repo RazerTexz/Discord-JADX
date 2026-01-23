@@ -27,16 +27,16 @@ import p507d0.p580t.Collections2;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: EmojiCategoryAdapter.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: EmojiCategoryAdapter.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class EmojiCategoryAdapter extends RecyclerView.Adapter<EmojiCategoryViewHolder> {
     private final DiffCreator<List<EmojiCategoryItem>, EmojiCategoryViewHolder> diffCreator;
     private List<? extends EmojiCategoryItem> items;
     private final Function1<EmojiCategoryItem, Unit> onCategoryClicked;
     private final Function1<Integer, Unit> onSelectedItemAdapterPositionUpdated;
 
-    /* compiled from: EmojiCategoryAdapter.kt */
-    /* renamed from: com.discord.widgets.chat.input.emoji.EmojiCategoryAdapter$setItems$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.input.emoji.EmojiCategoryAdapter$setItems$1 */
+    /* JADX INFO: compiled from: EmojiCategoryAdapter.kt */
     public static final class C78111 extends Lambda implements Function1<List<? extends EmojiCategoryItem>, Unit> {
         public C78111() {
             super(1);
@@ -48,7 +48,7 @@ public final class EmojiCategoryAdapter extends RecyclerView.Adapter<EmojiCatego
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(List<? extends EmojiCategoryItem> list) {
             Intrinsics3.checkNotNullParameter(list, "items");
             EmojiCategoryAdapter.access$setItems$p(EmojiCategoryAdapter.this, list);
@@ -91,7 +91,7 @@ public final class EmojiCategoryAdapter extends RecyclerView.Adapter<EmojiCatego
     }
 
     @Override // androidx.recyclerview.widget.RecyclerView.Adapter
-    /* renamed from: getItemCount */
+    /* JADX INFO: renamed from: getItemCount */
     public int getPageSize() {
         return this.items.size();
     }

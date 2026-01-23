@@ -3,22 +3,22 @@ package p007b.p225i.p361c.p397r;
 import android.content.Context;
 import android.content.SharedPreferences;
 
-/* compiled from: HeartBeatInfoStorage.java */
-/* renamed from: b.i.c.r.e, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.c.r.e, reason: use source file name */
+/* JADX INFO: compiled from: HeartBeatInfoStorage.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class HeartBeatInfoStorage {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static HeartBeatInfoStorage f12841a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final SharedPreferences f12842b;
 
     public HeartBeatInfoStorage(Context context) {
         this.f12842b = context.getSharedPreferences("FirebaseAppHeartBeat", 0);
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public synchronized boolean m6718a(String str, long j) {
         if (!this.f12842b.contains(str)) {
             this.f12842b.edit().putLong(str, j).apply();

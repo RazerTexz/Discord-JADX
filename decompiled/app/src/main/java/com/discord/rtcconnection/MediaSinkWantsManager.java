@@ -33,63 +33,63 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 import p658rx.subjects.BehaviorSubject;
 
-/* compiled from: MediaSinkWantsManager.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: MediaSinkWantsManager.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class MediaSinkWantsManager implements MediaEngineConnection.InterfaceC5648d {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final Map<Long, Long> f18742a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final Map<Long, List<C5603b>> f18743b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final Set<Long> f18744c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public MediaEngineConnection f18745d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public Long f18746e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final BehaviorSubject<Map<String, MediaSinkWantsManager9>> f18747f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public Map<String, ? extends MediaSinkWantsManager9> f18748g;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public final long f18749h;
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public final MediaEngineExecutorService f18750i;
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final MediaSinkWantsLadder3 f18751j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final Logger f18752k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final InterfaceC5602a f18753l;
 
-    /* compiled from: MediaSinkWantsManager.kt */
+    /* JADX INFO: compiled from: MediaSinkWantsManager.kt */
     public enum VideoQualityMode {
         AUTO(1),
         FULL(2);
 
 
-        /* renamed from: Companion, reason: from kotlin metadata */
+        /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
         public static final Companion INSTANCE = new Companion(null);
         private final int numeral;
 
-        /* compiled from: MediaSinkWantsManager.kt */
-        /* renamed from: com.discord.rtcconnection.MediaSinkWantsManager$VideoQualityMode$a, reason: from kotlin metadata */
+        /* JADX INFO: renamed from: com.discord.rtcconnection.MediaSinkWantsManager$VideoQualityMode$a, reason: from kotlin metadata */
+        /* JADX INFO: compiled from: MediaSinkWantsManager.kt */
         public static final class Companion {
             public Companion(DefaultConstructorMarker defaultConstructorMarker) {
             }
 
-            /* renamed from: a */
+            /* JADX INFO: renamed from: a */
             public final VideoQualityMode m8457a(Integer num) {
                 return (num != null && num.intValue() == 1) ? VideoQualityMode.AUTO : (num != null && num.intValue() == 2) ? VideoQualityMode.FULL : VideoQualityMode.AUTO;
             }
@@ -104,24 +104,24 @@ public final class MediaSinkWantsManager implements MediaEngineConnection.Interf
         }
     }
 
-    /* compiled from: MediaSinkWantsManager.kt */
-    /* renamed from: com.discord.rtcconnection.MediaSinkWantsManager$a */
+    /* JADX INFO: renamed from: com.discord.rtcconnection.MediaSinkWantsManager$a */
+    /* JADX INFO: compiled from: MediaSinkWantsManager.kt */
     public interface InterfaceC5602a {
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         void mo8458a(long j, long j2, long j3, VideoMetadata videoMetadata);
     }
 
-    /* compiled from: MediaSinkWantsManager.kt */
-    /* renamed from: com.discord.rtcconnection.MediaSinkWantsManager$b */
+    /* JADX INFO: renamed from: com.discord.rtcconnection.MediaSinkWantsManager$b */
+    /* JADX INFO: compiled from: MediaSinkWantsManager.kt */
     public static final class C5603b {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final MediaSinkWantsManager9 f18754a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final long f18755b;
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public final VideoMetadata f18756c;
 
         public C5603b(MediaSinkWantsManager9 mediaSinkWantsManager9, long j, VideoMetadata videoMetadata) {
@@ -161,8 +161,8 @@ public final class MediaSinkWantsManager implements MediaEngineConnection.Interf
         }
     }
 
-    /* compiled from: MediaSinkWantsManager.kt */
-    /* renamed from: com.discord.rtcconnection.MediaSinkWantsManager$c */
+    /* JADX INFO: renamed from: com.discord.rtcconnection.MediaSinkWantsManager$c */
+    /* JADX INFO: compiled from: MediaSinkWantsManager.kt */
     public static final class C5604c extends Lambda implements Function0<Unit> {
         public final /* synthetic */ Long $ssrc;
         public final /* synthetic */ long $userId;
@@ -204,30 +204,30 @@ public final class MediaSinkWantsManager implements MediaEngineConnection.Interf
         this.f18748g = Maps6.emptyMap();
     }
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public static /* synthetic */ void m8452e(MediaSinkWantsManager mediaSinkWantsManager, List list, int i) {
         mediaSinkWantsManager.m8456d((i & 1) != 0 ? Collections2.emptyList() : null);
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final void m8453a(String str) {
         Logger.w$default(this.f18752k, "MediaSinkWantsManager", str, null, 4, null);
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final Future<?> m8454b(Function0<Unit> function0) {
         MediaEngineExecutorService mediaEngineExecutorService = this.f18750i;
         return mediaEngineExecutorService.f1609l.submit(new MediaSinkWantsManager8(function0));
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final Future<?> m8455c(long j, Long l) {
         return m8454b(new C5604c(l, j));
     }
 
     /* JADX WARN: Removed duplicated region for block: B:19:0x003d  */
     /* JADX WARN: Removed duplicated region for block: B:80:0x014a  */
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */

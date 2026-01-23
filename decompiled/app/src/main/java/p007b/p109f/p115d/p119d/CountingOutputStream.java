@@ -4,12 +4,12 @@ import java.io.FilterOutputStream;
 import java.io.IOException;
 import java.io.OutputStream;
 
-/* compiled from: CountingOutputStream.java */
-/* renamed from: b.f.d.d.b, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.f.d.d.b, reason: use source file name */
+/* JADX INFO: compiled from: CountingOutputStream.java */
+/* JADX INFO: loaded from: classes.dex */
 public class CountingOutputStream extends FilterOutputStream {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public long f3092j;
 
     public CountingOutputStream(OutputStream outputStream) {
@@ -25,7 +25,7 @@ public class CountingOutputStream extends FilterOutputStream {
     @Override // java.io.FilterOutputStream, java.io.OutputStream
     public void write(byte[] bArr, int i, int i2) throws IOException {
         ((FilterOutputStream) this).out.write(bArr, i, i2);
-        this.f3092j += i2;
+        this.f3092j += (long) i2;
     }
 
     @Override // java.io.FilterOutputStream, java.io.OutputStream

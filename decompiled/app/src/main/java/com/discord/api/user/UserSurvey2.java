@@ -1,9 +1,9 @@
 package com.discord.api.user;
 
 
-/* compiled from: UserSurvey.kt */
-/* renamed from: com.discord.api.user.SurveyGuildRequirements, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: com.discord.api.user.SurveyGuildRequirements, reason: use source file name */
+/* JADX INFO: compiled from: UserSurvey.kt */
+/* JADX INFO: loaded from: classes.dex */
 public enum UserSurvey2 {
     IS_OWNER("is_owner"),
     IS_ADMIN("is_admin"),

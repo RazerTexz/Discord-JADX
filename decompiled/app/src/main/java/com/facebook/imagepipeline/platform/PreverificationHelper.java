@@ -4,8 +4,8 @@ import android.annotation.TargetApi;
 import android.graphics.Bitmap;
 import p007b.p109f.p190m.DoNotOptimize;
 
+/* JADX INFO: loaded from: classes3.dex */
 @DoNotOptimize
-/* loaded from: classes3.dex */
 public class PreverificationHelper {
     @DoNotOptimize
     @TargetApi(26)

@@ -10,9 +10,9 @@ import p658rx.Subscriber;
 import p658rx.Subscription;
 
 /* JADX INFO: Add missing generic type declarations: [T] */
-/* compiled from: OnDelayedEmissionHandler.kt */
-/* renamed from: com.discord.utilities.rx.OnDelayedEmissionHandler$call$wrappedSubscriber$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.utilities.rx.OnDelayedEmissionHandler$call$wrappedSubscriber$1, reason: use source file name */
+/* JADX INFO: compiled from: OnDelayedEmissionHandler.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class OnDelayedEmissionHandler2<T> extends Subscriber<T> {
     public final /* synthetic */ Subscriber $subscriber;
     public final /* synthetic */ OnDelayedEmissionHandler this$0;

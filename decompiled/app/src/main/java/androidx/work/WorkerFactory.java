@@ -6,11 +6,11 @@ import androidx.annotation.Nullable;
 import androidx.annotation.RestrictTo;
 import p007b.p100d.p104b.p105a.outline;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public abstract class WorkerFactory {
     private static final String TAG = Logger.tagWithPrefix("WorkerFactory");
 
-    /* renamed from: androidx.work.WorkerFactory$1 */
+    /* JADX INFO: renamed from: androidx.work.WorkerFactory$1 */
     public class C07211 extends WorkerFactory {
         @Override // androidx.work.WorkerFactory
         @Nullable

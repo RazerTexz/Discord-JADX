@@ -10,22 +10,22 @@ import p507d0.p513e0.p514p.p515d.p517m0.p550i.ByteString3;
 import p507d0.p513e0.p514p.p515d.p517m0.p550i.LazyFieldLite;
 import p507d0.p513e0.p514p.p515d.p517m0.p550i.MessageLite;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public final class CodedOutputStream {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final byte[] f27445a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final int f27446b;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final OutputStream f27449e;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public int f27448d = 0;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public int f27447c = 0;
 
     public static class OutOfSpaceException extends IOException {
@@ -219,7 +219,7 @@ public final class CodedOutputStream {
         return new CodedOutputStream(outputStream, new byte[i]);
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final void m10894a() throws IOException {
         OutputStream outputStream = this.f27449e;
         if (outputStream == null) {

@@ -29,73 +29,73 @@ import p007b.p195g.p196a.p205c.p219i0.ClassUtil;
 import p007b.p195g.p196a.p205c.p219i0.LRUMap;
 import p007b.p195g.p196a.p205c.p219i0.LookupCache;
 
-/* compiled from: TypeFactory.java */
-/* renamed from: b.g.a.c.h0.n, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.g.a.c.h0.n, reason: use source file name */
+/* JADX INFO: compiled from: TypeFactory.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class TypeFactory implements Serializable {
 
-    /* renamed from: A */
+    /* JADX INFO: renamed from: A */
     public static final SimpleType f4920A;
 
-    /* renamed from: B */
+    /* JADX INFO: renamed from: B */
     public static final SimpleType f4921B;
 
-    /* renamed from: C */
+    /* JADX INFO: renamed from: C */
     public static final SimpleType f4922C;
 
-    /* renamed from: D */
+    /* JADX INFO: renamed from: D */
     public static final SimpleType f4923D;
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static final JavaType[] f4924j = new JavaType[0];
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public static final TypeFactory f4925k = new TypeFactory();
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public static final TypeBindings f4926l = TypeBindings.f4908l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public static final Class<?> f4927m = String.class;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public static final Class<?> f4928n = Object.class;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public static final Class<?> f4929o = Comparable.class;
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public static final Class<?> f4930p = Class.class;
 
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     public static final Class<?> f4931q = Enum.class;
 
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     public static final Class<?> f4932r = JsonNode.class;
 
-    /* renamed from: s */
+    /* JADX INFO: renamed from: s */
     public static final Class<?> f4933s;
     private static final long serialVersionUID = 1;
 
-    /* renamed from: t */
+    /* JADX INFO: renamed from: t */
     public static final Class<?> f4934t;
 
-    /* renamed from: u */
+    /* JADX INFO: renamed from: u */
     public static final Class<?> f4935u;
 
-    /* renamed from: v */
+    /* JADX INFO: renamed from: v */
     public static final SimpleType f4936v;
 
-    /* renamed from: w */
+    /* JADX INFO: renamed from: w */
     public static final SimpleType f4937w;
 
-    /* renamed from: x */
+    /* JADX INFO: renamed from: x */
     public static final SimpleType f4938x;
 
-    /* renamed from: y */
+    /* JADX INFO: renamed from: y */
     public static final SimpleType f4939y;
 
-    /* renamed from: z */
+    /* JADX INFO: renamed from: z */
     public static final SimpleType f4940z;
     public final LookupCache<Object, JavaType> _typeCache = new LRUMap(16, 200);
     public final TypeParser _parser = new TypeParser(this);
@@ -120,13 +120,13 @@ public class TypeFactory implements Serializable {
         f4923D = new SimpleType(JsonNode.class);
     }
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public static JavaType m2158k() {
         Objects.requireNonNull(f4925k);
         return f4940z;
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public JavaType m2159a(Class<?> cls) {
         if (cls.isPrimitive()) {
             if (cls == f4933s) {
@@ -152,7 +152,7 @@ public class TypeFactory implements Serializable {
         return null;
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public JavaType m2160b(ClassStack classStack, Type type, TypeBindings typeBindings) {
         JavaType javaTypeM2160b;
         Type[] bounds;
@@ -226,12 +226,8 @@ public class TypeFactory implements Serializable {
         return javaTypeM2160b;
     }
 
-    /* JADX WARN: Multi-variable type inference failed */
     /* JADX WARN: Removed duplicated region for block: B:100:0x01ac  */
-    /* JADX WARN: Type inference failed for: r1v41, types: [b.g.a.c.j] */
-    /* JADX WARN: Type inference failed for: r2v25, types: [b.g.a.c.j] */
-    /* JADX WARN: Type inference failed for: r2v42, types: [java.lang.Object] */
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
@@ -240,20 +236,20 @@ public class TypeFactory implements Serializable {
         ClassStack classStack3;
         JavaType javaTypeM2160b;
         JavaType[] javaTypeArrM2163e;
-        Class<?> cls2;
+        Object obj;
         JavaType referenceType;
         JavaType javaType;
         JavaType javaType2;
         JavaType javaType3;
         SimpleType simpleType;
-        SimpleType simpleType2;
-        SimpleType simpleType3;
+        JavaType javaType4;
+        JavaType javaType5;
         JavaType javaTypeM2159a = m2159a(cls);
         if (javaTypeM2159a != null) {
             return javaTypeM2159a;
         }
-        Class<?> clsM2149a = (typeBindings == null || typeBindings.m2154i()) ? cls : typeBindings.m2149a(cls);
-        JavaType javaTypeMo2093C = this._typeCache.get(clsM2149a);
+        Object objM2149a = (typeBindings == null || typeBindings.m2154i()) ? cls : typeBindings.m2149a(cls);
+        JavaType javaTypeMo2093C = this._typeCache.get(objM2149a);
         if (javaTypeMo2093C != null) {
             return javaTypeMo2093C;
         }
@@ -287,7 +283,7 @@ public class TypeFactory implements Serializable {
         }
         if (cls.isArray()) {
             referenceType = ArrayType.m2092L(m2160b(classStack3, cls.getComponentType(), typeBindings), typeBindings);
-            cls2 = clsM2149a;
+            obj = objM2149a;
         } else {
             if (cls.isInterface()) {
                 javaTypeArrM2163e = m2163e(classStack3, cls, typeBindings);
@@ -299,12 +295,12 @@ public class TypeFactory implements Serializable {
                 javaTypeArrM2163e = m2163e(classStack3, cls, typeBindings);
             }
             JavaType[] javaTypeArr = javaTypeArrM2163e;
-            JavaType javaType4 = javaTypeM2160b;
+            JavaType javaType6 = javaTypeM2160b;
             if (cls == Properties.class) {
-                SimpleType simpleType4 = f4939y;
-                javaTypeMo2093C = MapType.m2123Q(cls, typeBindings, javaType4, javaTypeArr, simpleType4, simpleType4);
-            } else if (javaType4 != null) {
-                javaTypeMo2093C = javaType4.mo2093C(cls, typeBindings, javaType4, javaTypeArr);
+                SimpleType simpleType2 = f4939y;
+                javaTypeMo2093C = MapType.m2123Q(cls, typeBindings, javaType6, javaTypeArr, simpleType2, simpleType2);
+            } else if (javaType6 != null) {
+                javaTypeMo2093C = javaType6.mo2093C(cls, typeBindings, javaType6, javaTypeArr);
             }
             if (javaTypeMo2093C == null) {
                 TypeBindings typeBindings2 = typeBindings == null ? f4926l : typeBindings;
@@ -325,15 +321,15 @@ public class TypeFactory implements Serializable {
                                 objArr[3] = typeBindings2;
                                 throw new IllegalArgumentException(String.format("Strange Map type %s with %d type parameter%s (%s), can not resolve", objArr));
                             }
-                            JavaType javaType5 = listM2152g.get(0);
-                            simpleType2 = listM2152g.get(1);
-                            simpleType3 = javaType5;
-                            referenceType = MapType.m2123Q(cls, typeBindings2, javaType4, javaTypeArr, simpleType3, simpleType2);
+                            JavaType javaType7 = listM2152g.get(0);
+                            javaType4 = listM2152g.get(1);
+                            javaType5 = javaType7;
+                            referenceType = MapType.m2123Q(cls, typeBindings2, javaType6, javaTypeArr, javaType5, javaType4);
                         }
                     }
-                    simpleType3 = simpleType;
-                    simpleType2 = simpleType3;
-                    referenceType = MapType.m2123Q(cls, typeBindings2, javaType4, javaTypeArr, simpleType3, simpleType2);
+                    javaType5 = simpleType;
+                    javaType4 = javaType5;
+                    referenceType = MapType.m2123Q(cls, typeBindings2, javaType6, javaTypeArr, javaType5, javaType4);
                 } else if (cls == Collection.class) {
                     List<JavaType> listM2152g2 = typeBindings2.m2152g();
                     if (listM2152g2.isEmpty()) {
@@ -344,7 +340,7 @@ public class TypeFactory implements Serializable {
                         }
                         javaType3 = listM2152g2.get(0);
                     }
-                    referenceType = new CollectionType(cls, typeBindings2, javaType4, javaTypeArr, javaType3, null, null, false);
+                    referenceType = new CollectionType(cls, typeBindings2, javaType6, javaTypeArr, javaType3, null, null, false);
                 } else {
                     if (cls == AtomicReference.class) {
                         List<JavaType> listM2152g3 = typeBindings2.m2152g();
@@ -356,12 +352,12 @@ public class TypeFactory implements Serializable {
                             }
                             javaType2 = listM2152g3.get(0);
                         }
-                        cls2 = clsM2149a;
-                        javaType = javaType4;
-                        referenceType = new ReferenceType(cls, typeBindings2, javaType4, javaTypeArr, javaType2, null, null, null, false);
+                        obj = objM2149a;
+                        javaType = javaType6;
+                        referenceType = new ReferenceType(cls, typeBindings2, javaType6, javaTypeArr, javaType2, null, null, null, false);
                     } else {
-                        cls2 = clsM2149a;
-                        javaType = javaType4;
+                        obj = objM2149a;
+                        javaType = javaType6;
                         referenceType = null;
                     }
                     if (referenceType == null) {
@@ -384,12 +380,12 @@ public class TypeFactory implements Serializable {
                         }
                     }
                 }
-                cls2 = clsM2149a;
-                javaType = javaType4;
+                obj = objM2149a;
+                javaType = javaType6;
                 if (referenceType == null) {
                 }
             } else {
-                cls2 = clsM2149a;
+                obj = objM2149a;
                 referenceType = javaTypeMo2093C;
             }
         }
@@ -407,17 +403,17 @@ public class TypeFactory implements Serializable {
             }
         }
         if (!referenceType.mo2103s()) {
-            this._typeCache.putIfAbsent(cls2, referenceType);
+            this._typeCache.putIfAbsent(obj, referenceType);
         }
         return referenceType;
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public JavaType m2162d(Class<?> cls, TypeBindings typeBindings, JavaType javaType, JavaType[] javaTypeArr) {
         return new SimpleType(cls, typeBindings, javaType, javaTypeArr, null, null, false);
     }
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public JavaType[] m2163e(ClassStack classStack, Class<?> cls, TypeBindings typeBindings) {
         Annotation[] annotationArr = ClassUtil.f4944a;
         Type[] genericInterfaces = cls.getGenericInterfaces();
@@ -432,7 +428,7 @@ public class TypeFactory implements Serializable {
         return javaTypeArr;
     }
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final boolean m2164f(JavaType javaType, JavaType javaType2) {
         if (javaType2 instanceof PlaceholderForType) {
             ((PlaceholderForType) javaType2)._actualType = javaType;
@@ -452,7 +448,7 @@ public class TypeFactory implements Serializable {
         return true;
     }
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public JavaType m2165g(JavaType javaType, Class<?> cls) {
         Class<?> cls2 = javaType._class;
         if (cls2 == cls) {
@@ -473,7 +469,7 @@ public class TypeFactory implements Serializable {
     /* JADX WARN: Removed duplicated region for block: B:46:0x009d A[LOOP:0: B:45:0x009b->B:46:0x009d, LOOP_END] */
     /* JADX WARN: Removed duplicated region for block: B:49:0x00b7  */
     /* JADX WARN: Removed duplicated region for block: B:72:0x0107  */
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
@@ -581,14 +577,14 @@ public class TypeFactory implements Serializable {
         return javaTypeM2161c.mo2105F(javaType);
     }
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public JavaType[] m2167i(JavaType javaType, Class<?> cls) {
         JavaType javaTypeMo2144i = javaType.mo2144i(cls);
         return javaTypeMo2144i == null ? f4924j : javaTypeMo2144i.mo2136j().m2156k();
     }
 
     @Deprecated
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public JavaType m2168j(Class<?> cls) {
         JavaType javaTypeM2159a;
         TypeBindings typeBindings = f4926l;

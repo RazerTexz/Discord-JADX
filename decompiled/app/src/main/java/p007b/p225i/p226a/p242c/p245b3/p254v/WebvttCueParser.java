@@ -36,34 +36,34 @@ import p007b.p225i.p226a.p242c.p245b3.p249q.RubySpan;
 import p007b.p225i.p226a.p242c.p259f3.ParsableByteArray;
 import p007b.p225i.p226a.p242c.p259f3.Util2;
 
-/* compiled from: WebvttCueParser.java */
-/* renamed from: b.i.a.c.b3.v.h, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.b3.v.h, reason: use source file name */
+/* JADX INFO: compiled from: WebvttCueParser.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class WebvttCueParser {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final Pattern f6134a = Pattern.compile("^(\\S+)\\s+-->\\s+(\\S+)(.*)?$");
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static final Pattern f6135b = Pattern.compile("(\\S+?):(\\S+)");
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public static final Map<String, Integer> f6136c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public static final Map<String, Integer> f6137d;
 
-    /* compiled from: WebvttCueParser.java */
-    /* renamed from: b.i.a.c.b3.v.h$b */
+    /* JADX INFO: renamed from: b.i.a.c.b3.v.h$b */
+    /* JADX INFO: compiled from: WebvttCueParser.java */
     public static class b {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public static final /* synthetic */ int f6138a = 0;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final c f6139b;
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public final int f6140c;
 
         public b(c cVar, int i, a aVar) {
@@ -72,20 +72,20 @@ public final class WebvttCueParser {
         }
     }
 
-    /* compiled from: WebvttCueParser.java */
-    /* renamed from: b.i.a.c.b3.v.h$c */
+    /* JADX INFO: renamed from: b.i.a.c.b3.v.h$c */
+    /* JADX INFO: compiled from: WebvttCueParser.java */
     public static final class c {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final String f6141a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final int f6142b;
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public final String f6143c;
 
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         public final Set<String> f6144d;
 
         public c(String str, int i, String str2, Set<String> set) {
@@ -96,14 +96,14 @@ public final class WebvttCueParser {
         }
     }
 
-    /* compiled from: WebvttCueParser.java */
-    /* renamed from: b.i.a.c.b3.v.h$d */
+    /* JADX INFO: renamed from: b.i.a.c.b3.v.h$d */
+    /* JADX INFO: compiled from: WebvttCueParser.java */
     public static final class d implements Comparable<d> {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public final int f6145j;
 
-        /* renamed from: k */
+        /* JADX INFO: renamed from: k */
         public final WebvttCssStyle f6146k;
 
         public d(int i, WebvttCssStyle webvttCssStyle) {
@@ -117,41 +117,41 @@ public final class WebvttCueParser {
         }
     }
 
-    /* compiled from: WebvttCueParser.java */
-    /* renamed from: b.i.a.c.b3.v.h$e */
+    /* JADX INFO: renamed from: b.i.a.c.b3.v.h$e */
+    /* JADX INFO: compiled from: WebvttCueParser.java */
     public static final class e {
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public CharSequence f6149c;
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public long f6147a = 0;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public long f6148b = 0;
 
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         public int f6150d = 2;
 
-        /* renamed from: e */
+        /* JADX INFO: renamed from: e */
         public float f6151e = -3.4028235E38f;
 
-        /* renamed from: f */
+        /* JADX INFO: renamed from: f */
         public int f6152f = 1;
 
-        /* renamed from: g */
+        /* JADX INFO: renamed from: g */
         public int f6153g = 0;
 
-        /* renamed from: h */
+        /* JADX INFO: renamed from: h */
         public float f6154h = -3.4028235E38f;
 
-        /* renamed from: i */
+        /* JADX INFO: renamed from: i */
         public int f6155i = Integer.MIN_VALUE;
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public float f6156j = 1.0f;
 
-        /* renamed from: k */
+        /* JADX INFO: renamed from: k */
         public int f6157k = Integer.MIN_VALUE;
 
         /* JADX WARN: Removed duplicated region for block: B:20:0x0034  */
@@ -159,7 +159,7 @@ public final class WebvttCueParser {
         /* JADX WARN: Removed duplicated region for block: B:29:0x0053  */
         /* JADX WARN: Removed duplicated region for block: B:31:0x0059  */
         /* JADX WARN: Removed duplicated region for block: B:43:0x0076  */
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         /*
             Code decompiled incorrectly, please refer to instructions dump.
         */
@@ -255,12 +255,12 @@ public final class WebvttCueParser {
     }
 
     /* JADX WARN: Removed duplicated region for block: B:49:0x008f  */
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
     public static void m2710a(@Nullable String str, c cVar, List<b> list, SpannableStringBuilder spannableStringBuilder, List<WebvttCssStyle> list2) {
-        char c2;
+        byte b2;
         int i = cVar.f6142b;
         int length = spannableStringBuilder.length();
         String str2 = cVar.f6141a;
@@ -274,29 +274,29 @@ public final class WebvttCueParser {
                         if (iHashCode != 98) {
                             if (iHashCode != 99) {
                                 if (iHashCode != 117) {
-                                    c2 = (iHashCode == 118 && str2.equals("v")) ? (char) 5 : (char) 65535;
+                                    b2 = (iHashCode == 118 && str2.equals("v")) ? (byte) 5 : (byte) -1;
                                 } else if (str2.equals("u")) {
-                                    c2 = 4;
+                                    b2 = 4;
                                 }
                             } else if (str2.equals("c")) {
-                                c2 = 2;
+                                b2 = 2;
                             }
                         } else if (str2.equals("b")) {
-                            c2 = 1;
+                            b2 = 1;
                         }
                     } else if (str2.equals("ruby")) {
-                        c2 = 7;
+                        b2 = 7;
                     }
                 } else if (str2.equals("lang")) {
-                    c2 = 6;
+                    b2 = 6;
                 }
             } else if (str2.equals("i")) {
-                c2 = 3;
+                b2 = 3;
             }
         } else if (str2.equals("")) {
-            c2 = 0;
+            b2 = 0;
         }
-        switch (c2) {
+        switch (b2) {
             case 0:
             case 5:
             case 6:
@@ -404,9 +404,13 @@ public final class WebvttCueParser {
     }
 
     /* JADX WARN: Multi-variable type inference failed */
-    /* renamed from: b */
+    /* JADX WARN: Type inference failed for: r4v3 */
+    /* JADX WARN: Type inference failed for: r4v5, types: [int] */
+    /* JADX WARN: Type inference failed for: r4v7 */
+    /* JADX WARN: Type inference failed for: r4v8 */
+    /* JADX INFO: renamed from: b */
     public static List<d> m2711b(List<WebvttCssStyle> list, @Nullable String str, c cVar) {
-        int size;
+        ?? size;
         ArrayList arrayList = new ArrayList();
         for (int i = 0; i < list.size(); i++) {
             WebvttCssStyle webvttCssStyle = list.get(i);
@@ -427,7 +431,7 @@ public final class WebvttCueParser {
         return arrayList;
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public static int m2712c(List<WebvttCssStyle> list, @Nullable String str, c cVar) {
         List<d> listM2711b = m2711b(list, str, cVar);
         int i = 0;
@@ -445,7 +449,7 @@ public final class WebvttCueParser {
     }
 
     @Nullable
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public static WebvttCueInfo m2713d(@Nullable String str, Matcher matcher, ParsableByteArray parsableByteArray, List<WebvttCssStyle> list) {
         e eVar = new e();
         try {
@@ -477,7 +481,7 @@ public final class WebvttCueParser {
     }
 
     /* JADX WARN: Can't fix incorrect switch cases order, some code will duplicate */
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public static void m2714e(String str, e eVar) {
         Matcher matcher = f6135b.matcher(str);
         while (matcher.find()) {
@@ -541,7 +545,7 @@ public final class WebvttCueParser {
 
     /* JADX WARN: Can't fix incorrect switch cases order, some code will duplicate */
     /* JADX WARN: Removed duplicated region for block: B:69:0x00f5  */
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
@@ -677,7 +681,7 @@ public final class WebvttCueParser {
         }
     }
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public static void m2716g(String str, e eVar) {
         String strSubstring;
         int i;
@@ -713,7 +717,7 @@ public final class WebvttCueParser {
         }
     }
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public static void m2717h(String str, e eVar) {
         String strSubstring;
         int i;

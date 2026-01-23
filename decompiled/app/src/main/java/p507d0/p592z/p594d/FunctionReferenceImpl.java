@@ -3,9 +3,9 @@ package p507d0.p592z.p594d;
 import kotlin.reflect.KDeclarationContainer;
 import p507d0.p513e0.KClass;
 
-/* compiled from: FunctionReferenceImpl.java */
-/* renamed from: d0.z.d.k, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.z.d.k, reason: use source file name */
+/* JADX INFO: compiled from: FunctionReferenceImpl.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class FunctionReferenceImpl extends FunctionReference {
     public FunctionReferenceImpl(int i, KDeclarationContainer kDeclarationContainer, String str, String str2) {
         super(i, CallableReference.NO_RECEIVER, ((ClassBasedDeclarationContainer) kDeclarationContainer).getJClass(), str, str2, !(kDeclarationContainer instanceof KClass) ? 1 : 0);

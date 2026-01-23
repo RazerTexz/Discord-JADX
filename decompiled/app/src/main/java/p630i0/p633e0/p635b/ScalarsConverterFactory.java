@@ -7,9 +7,9 @@ import okhttp3.ResponseBody;
 import p630i0.Converter2;
 import p630i0.Retrofit2;
 
-/* compiled from: ScalarsConverterFactory.java */
-/* renamed from: i0.e0.b.k, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: i0.e0.b.k, reason: use source file name */
+/* JADX INFO: compiled from: ScalarsConverterFactory.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class ScalarsConverterFactory extends Converter2.a {
     @Override // p630i0.Converter2.a
     public Converter2<?, RequestBody> requestBodyConverter(Type type, Annotation[] annotationArr, Annotation[] annotationArr2, Retrofit2 retrofit22) {

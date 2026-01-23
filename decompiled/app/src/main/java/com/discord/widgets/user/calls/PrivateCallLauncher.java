@@ -7,8 +7,8 @@ import com.discord.app.AppPermissions2;
 import com.discord.widgets.voice.call.PrivateCallLaunchUtils;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: PrivateCallLauncher.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: PrivateCallLauncher.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class PrivateCallLauncher {
     private final AppComponent appComponent;
     private final AppPermissions2 appPermissionsRequests;

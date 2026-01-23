@@ -16,15 +16,15 @@ import kotlin.Unit;
 import kotlin.jvm.functions.Function2;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: SelectComponentBottomSheetAdapter.kt */
-/* renamed from: com.discord.widgets.botuikit.views.select.SelectComponentBottomSheetItemViewHolder, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.botuikit.views.select.SelectComponentBottomSheetItemViewHolder, reason: use source file name */
+/* JADX INFO: compiled from: SelectComponentBottomSheetAdapter.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class SelectComponentBottomSheetAdapter3 extends RecyclerView.ViewHolder {
     private final WidgetSelectComponentBottomSheetItemBinding binding;
     private final Function2<SelectComponent2, Boolean, Unit> onItemSelected;
 
-    /* compiled from: SelectComponentBottomSheetAdapter.kt */
-    /* renamed from: com.discord.widgets.botuikit.views.select.SelectComponentBottomSheetItemViewHolder$bind$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.botuikit.views.select.SelectComponentBottomSheetItemViewHolder$bind$1 */
+    /* JADX INFO: compiled from: SelectComponentBottomSheetAdapter.kt */
     public static final class ViewOnClickListenerC72791 implements View.OnClickListener {
         public final /* synthetic */ SelectComponentBottomSheetAdapter2 $data;
 

@@ -4,52 +4,52 @@ import java.util.Arrays;
 import p007b.p085c.p086a.p087a0.AnimatableValueParser;
 import p007b.p100d.p104b.p105a.outline;
 
-/* compiled from: NalUnitUtil.java */
-/* renamed from: b.i.a.c.f3.u, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.f3.u, reason: use source file name */
+/* JADX INFO: compiled from: NalUnitUtil.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class NalUnitUtil {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final byte[] f6753a = {0, 0, 0, 1};
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static final float[] f6754b = {1.0f, 1.0f, 1.0909091f, 0.90909094f, 1.4545455f, 1.2121212f, 2.1818182f, 1.8181819f, 2.909091f, 2.4242425f, 1.6363636f, 1.3636364f, 1.939394f, 1.6161616f, 1.3333334f, 1.5f, 2.0f};
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public static final Object f6755c = new Object();
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public static int[] f6756d = new int[10];
 
-    /* compiled from: NalUnitUtil.java */
-    /* renamed from: b.i.a.c.f3.u$a */
+    /* JADX INFO: renamed from: b.i.a.c.f3.u$a */
+    /* JADX INFO: compiled from: NalUnitUtil.java */
     public static final class a {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final int f6757a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final boolean f6758b;
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public final int f6759c;
 
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         public final int f6760d;
 
-        /* renamed from: e */
+        /* JADX INFO: renamed from: e */
         public final int[] f6761e;
 
-        /* renamed from: f */
+        /* JADX INFO: renamed from: f */
         public final int f6762f;
 
-        /* renamed from: g */
+        /* JADX INFO: renamed from: g */
         public final int f6763g;
 
-        /* renamed from: h */
+        /* JADX INFO: renamed from: h */
         public final int f6764h;
 
-        /* renamed from: i */
+        /* JADX INFO: renamed from: i */
         public final float f6765i;
 
         public a(int i, boolean z2, int i2, int i3, int[] iArr, int i4, int i5, int i6, int i7, float f) {
@@ -65,17 +65,17 @@ public final class NalUnitUtil {
         }
     }
 
-    /* compiled from: NalUnitUtil.java */
-    /* renamed from: b.i.a.c.f3.u$b */
+    /* JADX INFO: renamed from: b.i.a.c.f3.u$b */
+    /* JADX INFO: compiled from: NalUnitUtil.java */
     public static final class b {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final int f6766a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final int f6767b;
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public final boolean f6768c;
 
         public b(int i, int i2, boolean z2) {
@@ -85,47 +85,47 @@ public final class NalUnitUtil {
         }
     }
 
-    /* compiled from: NalUnitUtil.java */
-    /* renamed from: b.i.a.c.f3.u$c */
+    /* JADX INFO: renamed from: b.i.a.c.f3.u$c */
+    /* JADX INFO: compiled from: NalUnitUtil.java */
     public static final class c {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final int f6769a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final int f6770b;
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public final int f6771c;
 
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         public final int f6772d;
 
-        /* renamed from: e */
+        /* JADX INFO: renamed from: e */
         public final int f6773e;
 
-        /* renamed from: f */
+        /* JADX INFO: renamed from: f */
         public final int f6774f;
 
-        /* renamed from: g */
+        /* JADX INFO: renamed from: g */
         public final float f6775g;
 
-        /* renamed from: h */
+        /* JADX INFO: renamed from: h */
         public final boolean f6776h;
 
-        /* renamed from: i */
+        /* JADX INFO: renamed from: i */
         public final boolean f6777i;
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public final int f6778j;
 
-        /* renamed from: k */
+        /* JADX INFO: renamed from: k */
         public final int f6779k;
 
-        /* renamed from: l */
+        /* JADX INFO: renamed from: l */
         public final int f6780l;
 
-        /* renamed from: m */
+        /* JADX INFO: renamed from: m */
         public final boolean f6781m;
 
         public c(int i, int i2, int i3, int i4, int i5, int i6, float f, boolean z2, boolean z3, int i7, int i8, int i9, boolean z4) {
@@ -145,14 +145,14 @@ public final class NalUnitUtil {
         }
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static void m3054a(boolean[] zArr) {
         zArr[0] = false;
         zArr[1] = false;
         zArr[2] = false;
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static int m3055b(byte[] bArr, int i, int i2, boolean[] zArr) {
         int i3 = i2 - i;
         AnimatableValueParser.m426D(i3 >= 0);
@@ -198,7 +198,7 @@ public final class NalUnitUtil {
         return i2;
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public static a m3056c(byte[] bArr, int i, int i2) {
         int i3 = 2;
         ParsableNalUnitBitArray parsableNalUnitBitArray = new ParsableNalUnitBitArray(bArr, i + 2, i2);
@@ -371,7 +371,7 @@ public final class NalUnitUtil {
         return new a(iM3111e2, zM3110d, iM3111e3, i4, iArr, iM3111e4, iM3112f, iM3112f3, iM3112f4, f);
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public static b m3057d(byte[] bArr, int i, int i2) {
         ParsableNalUnitBitArray parsableNalUnitBitArray = new ParsableNalUnitBitArray(bArr, i + 1, i2);
         int iM3112f = parsableNalUnitBitArray.m3112f();
@@ -384,7 +384,7 @@ public final class NalUnitUtil {
     /* JADX WARN: Removed duplicated region for block: B:67:0x0108  */
     /* JADX WARN: Removed duplicated region for block: B:79:0x013c  */
     /* JADX WARN: Removed duplicated region for block: B:94:0x017d  */
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
@@ -535,7 +535,7 @@ public final class NalUnitUtil {
         return new c(iM3111e, iM3111e2, iM3111e3, iM3112f3, i182, i192, f, z2, zM3110d, iM3112f4, i3, i5, z3);
     }
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public static int m3059f(byte[] bArr, int i) {
         int i2;
         synchronized (f6755c) {

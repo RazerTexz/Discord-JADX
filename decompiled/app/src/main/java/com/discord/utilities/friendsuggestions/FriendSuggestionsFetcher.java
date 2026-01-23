@@ -15,8 +15,8 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 import p658rx.Subscription;
 
-/* compiled from: FriendSuggestionsFetcher.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: FriendSuggestionsFetcher.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class FriendSuggestionsFetcher {
     private final Dispatcher dispatcher;
     private Subscription fetchSubscription;
@@ -24,8 +24,8 @@ public final class FriendSuggestionsFetcher {
     private final Function1<List<FriendSuggestion>, Unit> onFetchSuccess;
     private final RestAPIInterface restApi;
 
-    /* compiled from: FriendSuggestionsFetcher.kt */
-    /* renamed from: com.discord.utilities.friendsuggestions.FriendSuggestionsFetcher$maybeFetch$1 */
+    /* JADX INFO: renamed from: com.discord.utilities.friendsuggestions.FriendSuggestionsFetcher$maybeFetch$1 */
+    /* JADX INFO: compiled from: FriendSuggestionsFetcher.kt */
     public static final class C67581 extends Lambda implements Function1<Subscription, Unit> {
         public C67581() {
             super(1);
@@ -37,19 +37,19 @@ public final class FriendSuggestionsFetcher {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Subscription subscription) {
             Intrinsics3.checkNotNullParameter(subscription, Traits.Payment.Type.SUBSCRIPTION);
             FriendSuggestionsFetcher.access$setFetchSubscription$p(FriendSuggestionsFetcher.this, subscription);
         }
     }
 
-    /* compiled from: FriendSuggestionsFetcher.kt */
-    /* renamed from: com.discord.utilities.friendsuggestions.FriendSuggestionsFetcher$maybeFetch$2 */
+    /* JADX INFO: renamed from: com.discord.utilities.friendsuggestions.FriendSuggestionsFetcher$maybeFetch$2 */
+    /* JADX INFO: compiled from: FriendSuggestionsFetcher.kt */
     public static final class C67592 extends Lambda implements Function1<List<? extends FriendSuggestion>, Unit> {
 
-        /* compiled from: FriendSuggestionsFetcher.kt */
-        /* renamed from: com.discord.utilities.friendsuggestions.FriendSuggestionsFetcher$maybeFetch$2$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.utilities.friendsuggestions.FriendSuggestionsFetcher$maybeFetch$2$1, reason: invalid class name */
+        /* JADX INFO: compiled from: FriendSuggestionsFetcher.kt */
         public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
             public final /* synthetic */ List $response;
 
@@ -65,7 +65,7 @@ public final class FriendSuggestionsFetcher {
                 return Unit.f27425a;
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2() {
                 FriendSuggestionsFetcher.access$getOnFetchSuccess$p(FriendSuggestionsFetcher.this).invoke(this.$response);
             }
@@ -81,19 +81,19 @@ public final class FriendSuggestionsFetcher {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(List<FriendSuggestion> list) {
             Intrinsics3.checkNotNullParameter(list, "response");
             FriendSuggestionsFetcher.access$getDispatcher$p(FriendSuggestionsFetcher.this).schedule(new AnonymousClass1(list));
         }
     }
 
-    /* compiled from: FriendSuggestionsFetcher.kt */
-    /* renamed from: com.discord.utilities.friendsuggestions.FriendSuggestionsFetcher$maybeFetch$3 */
+    /* JADX INFO: renamed from: com.discord.utilities.friendsuggestions.FriendSuggestionsFetcher$maybeFetch$3 */
+    /* JADX INFO: compiled from: FriendSuggestionsFetcher.kt */
     public static final class C67603 extends Lambda implements Function1<Error, Unit> {
 
-        /* compiled from: FriendSuggestionsFetcher.kt */
-        /* renamed from: com.discord.utilities.friendsuggestions.FriendSuggestionsFetcher$maybeFetch$3$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.utilities.friendsuggestions.FriendSuggestionsFetcher$maybeFetch$3$1, reason: invalid class name */
+        /* JADX INFO: compiled from: FriendSuggestionsFetcher.kt */
         public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
             public AnonymousClass1() {
                 super(0);
@@ -105,7 +105,7 @@ public final class FriendSuggestionsFetcher {
                 return Unit.f27425a;
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2() {
                 FriendSuggestionsFetcher.access$getOnFetchFailure$p(FriendSuggestionsFetcher.this).invoke();
             }
@@ -121,7 +121,7 @@ public final class FriendSuggestionsFetcher {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Error error) {
             Intrinsics3.checkNotNullParameter(error, "it");
             FriendSuggestionsFetcher.access$getDispatcher$p(FriendSuggestionsFetcher.this).schedule(new AnonymousClass1());

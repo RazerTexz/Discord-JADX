@@ -7,8 +7,8 @@ import android.view.View;
 import androidx.constraintlayout.motion.widget.Key;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ViewScalingOnTouchListener.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: ViewScalingOnTouchListener.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class ViewScalingOnTouchListener implements View.OnTouchListener {
     private final float scaledownFactor;
 

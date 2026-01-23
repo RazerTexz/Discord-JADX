@@ -9,9 +9,9 @@ import p007b.p100d.p104b.p105a.outline;
 import p507d0.p580t.Collections2;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: WidgetHubEventsViewModel.kt */
-/* renamed from: com.discord.widgets.hubs.events.WidgetHubEventsState, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.hubs.events.WidgetHubEventsState, reason: use source file name */
+/* JADX INFO: compiled from: WidgetHubEventsViewModel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final /* data */ class WidgetHubEventsViewModel3 {
     private final RestCallState<List<DirectoryEntryGuild2>> eventsAsync;
     private final List<WidgetHubEventsViewModel2> eventsData;
@@ -44,7 +44,7 @@ public final /* data */ class WidgetHubEventsViewModel3 {
         return widgetHubEventsViewModel3.copy(z2, list, restCallState);
     }
 
-    /* renamed from: component1, reason: from getter */
+    /* JADX INFO: renamed from: component1, reason: from getter */
     public final boolean getShowHeader() {
         return this.showHeader;
     }

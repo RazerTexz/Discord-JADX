@@ -11,12 +11,12 @@ import javax.net.ssl.SSLPeerUnverifiedException;
 import kotlin.TypeCastException;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: BasicCertificateChainCleaner.kt */
-/* renamed from: f0.e0.m.a, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: f0.e0.m.a, reason: use source file name */
+/* JADX INFO: compiled from: BasicCertificateChainCleaner.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class BasicCertificateChainCleaner extends CertificateChainCleaner {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final TrustRootIndex f25809a;
 
     public BasicCertificateChainCleaner(TrustRootIndex trustRootIndex) {
@@ -25,7 +25,7 @@ public final class BasicCertificateChainCleaner extends CertificateChainCleaner 
     }
 
     @Override // p600f0.p601e0.p612m.CertificateChainCleaner
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public List<Certificate> mo10338a(List<? extends Certificate> list, String str) throws SSLPeerUnverifiedException {
         Intrinsics3.checkParameterIsNotNull(list, "chain");
         Intrinsics3.checkParameterIsNotNull(str, "hostname");
@@ -72,7 +72,7 @@ public final class BasicCertificateChainCleaner extends CertificateChainCleaner 
         throw new SSLPeerUnverifiedException("Certificate chain too long: " + arrayList);
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final boolean m10342b(X509Certificate x509Certificate, X509Certificate x509Certificate2) {
         if (!Intrinsics3.areEqual(x509Certificate.getIssuerDN(), x509Certificate2.getSubjectDN())) {
             return false;

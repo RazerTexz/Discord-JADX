@@ -2,18 +2,18 @@ package p007b.p195g.p196a.p198b.p200p;
 
 import org.objectweb.asm.Opcodes;
 
-/* compiled from: NumberOutput.java */
-/* renamed from: b.g.a.b.p.g, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.g.a.b.p.g, reason: use source file name */
+/* JADX INFO: compiled from: NumberOutput.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class NumberOutput {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final String f4554a = String.valueOf(Integer.MIN_VALUE);
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static final String f4555b = String.valueOf(Long.MIN_VALUE);
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public static final int[] f4556c = new int[1000];
 
     static {
@@ -30,7 +30,7 @@ public final class NumberOutput {
         }
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static int m1698a(int i, char[] cArr, int i2) {
         int i3 = f4556c[i];
         int i4 = i2 + 1;
@@ -42,7 +42,7 @@ public final class NumberOutput {
         return i6;
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static int m1699b(int i, char[] cArr, int i2) {
         int i3 = f4556c[i];
         if (i > 9) {
@@ -58,7 +58,7 @@ public final class NumberOutput {
         return i4;
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public static int m1700c(int i, char[] cArr, int i2) {
         int i3 = i / 1000;
         int i4 = i - (i3 * 1000);
@@ -88,7 +88,7 @@ public final class NumberOutput {
         return i17;
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public static int m1701d(int i, char[] cArr, int i2) {
         int i3;
         if (i < 0) {
@@ -130,7 +130,7 @@ public final class NumberOutput {
         return m1700c(i7, cArr, i3);
     }
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public static int m1702e(long j, char[] cArr, int i) {
         int iM1700c;
         int i2;

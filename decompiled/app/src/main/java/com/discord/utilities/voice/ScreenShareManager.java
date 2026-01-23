@@ -40,8 +40,8 @@ import p658rx.functions.Func3;
 import p658rx.subjects.BehaviorSubject;
 import p658rx.subscriptions.CompositeSubscription;
 
-/* compiled from: ScreenShareManager.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: ScreenShareManager.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class ScreenShareManager {
     public static final int JPEG_QUALITY = 92;
     public static final long PREVIEW_DELAY_MS = 5000;
@@ -63,7 +63,7 @@ public final class ScreenShareManager {
     private final BehaviorSubject<Bitmap> thumbnailBitmapSubject;
     private final TooltipManager tooltipManager;
 
-    /* compiled from: ScreenShareManager.kt */
+    /* JADX INFO: compiled from: ScreenShareManager.kt */
     public final class RtcConnectionListener extends RtcConnection.AbstractC5616b {
         public RtcConnectionListener() {
         }
@@ -87,7 +87,7 @@ public final class ScreenShareManager {
         }
     }
 
-    /* compiled from: ScreenShareManager.kt */
+    /* JADX INFO: compiled from: ScreenShareManager.kt */
     public static final /* data */ class State {
         private final StoreApplicationStreaming.ActiveApplicationStream activeStream;
         private final Long meId;
@@ -112,17 +112,17 @@ public final class ScreenShareManager {
             return state.copy(activeApplicationStream, rtcConnection, l);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final StoreApplicationStreaming.ActiveApplicationStream getActiveStream() {
             return this.activeStream;
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final RtcConnection getRtcConnection() {
             return this.rtcConnection;
         }
 
-        /* renamed from: component3, reason: from getter */
+        /* JADX INFO: renamed from: component3, reason: from getter */
         public final Long getMeId() {
             return this.meId;
         }
@@ -173,8 +173,8 @@ public final class ScreenShareManager {
         }
     }
 
-    /* compiled from: ScreenShareManager.kt */
-    /* renamed from: com.discord.utilities.voice.ScreenShareManager$createThumbnailEmitter$1 */
+    /* JADX INFO: renamed from: com.discord.utilities.voice.ScreenShareManager$createThumbnailEmitter$1 */
+    /* JADX INFO: compiled from: ScreenShareManager.kt */
     public static final class C70381 extends Lambda implements Function1<Bitmap, Unit> {
         public C70381() {
             super(1);
@@ -186,15 +186,15 @@ public final class ScreenShareManager {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Bitmap bitmap) {
             Intrinsics3.checkNotNullParameter(bitmap, "thumbnailBitmap");
             ScreenShareManager.access$getThumbnailBitmapSubject$p(ScreenShareManager.this).onNext(bitmap);
         }
     }
 
-    /* compiled from: ScreenShareManager.kt */
-    /* renamed from: com.discord.utilities.voice.ScreenShareManager$startStream$1 */
+    /* JADX INFO: renamed from: com.discord.utilities.voice.ScreenShareManager$startStream$1 */
+    /* JADX INFO: compiled from: ScreenShareManager.kt */
     public static final class C70391<T, R> implements Func1<RtcConnection.Metadata, Boolean> {
         public C70391() {
         }
@@ -204,15 +204,15 @@ public final class ScreenShareManager {
             return call2(metadata);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final Boolean call2(RtcConnection.Metadata metadata) {
             Long l = metadata != null ? metadata.channelId : null;
             return Boolean.valueOf(l != null && l.longValue() == ScreenShareManager.this.getChannelId() && Intrinsics3.areEqual(metadata.guildId, ScreenShareManager.this.getGuildId()));
         }
     }
 
-    /* compiled from: ScreenShareManager.kt */
-    /* renamed from: com.discord.utilities.voice.ScreenShareManager$startStream$2 */
+    /* JADX INFO: renamed from: com.discord.utilities.voice.ScreenShareManager$startStream$2 */
+    /* JADX INFO: compiled from: ScreenShareManager.kt */
     public static final class C70402 extends Lambda implements Function1<Subscription, Unit> {
         public C70402() {
             super(1);
@@ -224,15 +224,15 @@ public final class ScreenShareManager {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Subscription subscription) {
             Intrinsics3.checkNotNullParameter(subscription, Traits.Payment.Type.SUBSCRIPTION);
             ScreenShareManager.access$getCompositeSubscription$p(ScreenShareManager.this).m11136a(subscription);
         }
     }
 
-    /* compiled from: ScreenShareManager.kt */
-    /* renamed from: com.discord.utilities.voice.ScreenShareManager$startStream$3 */
+    /* JADX INFO: renamed from: com.discord.utilities.voice.ScreenShareManager$startStream$3 */
+    /* JADX INFO: compiled from: ScreenShareManager.kt */
     public static final class C70413 extends Lambda implements Function1<RtcConnection.Metadata, Unit> {
         public final /* synthetic */ Intent $intent;
 
@@ -248,14 +248,14 @@ public final class ScreenShareManager {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(RtcConnection.Metadata metadata) {
             ScreenShareManager.access$handleStartStream(ScreenShareManager.this, this.$intent);
         }
     }
 
-    /* compiled from: ScreenShareManager.kt */
-    /* renamed from: com.discord.utilities.voice.ScreenShareManager$subscribeToStores$1 */
+    /* JADX INFO: renamed from: com.discord.utilities.voice.ScreenShareManager$subscribeToStores$1 */
+    /* JADX INFO: compiled from: ScreenShareManager.kt */
     public static final class C70421<T1, T2, T3, R> implements Func3<StoreApplicationStreaming.ActiveApplicationStream, RtcConnection, MeUser, State> {
         public static final C70421 INSTANCE = new C70421();
 
@@ -264,14 +264,14 @@ public final class ScreenShareManager {
             return call2(activeApplicationStream, rtcConnection, meUser);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final State call2(StoreApplicationStreaming.ActiveApplicationStream activeApplicationStream, RtcConnection rtcConnection, MeUser meUser) {
             return new State(activeApplicationStream, rtcConnection, meUser != null ? Long.valueOf(meUser.getId()) : null);
         }
     }
 
-    /* compiled from: ScreenShareManager.kt */
-    /* renamed from: com.discord.utilities.voice.ScreenShareManager$subscribeToStores$2 */
+    /* JADX INFO: renamed from: com.discord.utilities.voice.ScreenShareManager$subscribeToStores$2 */
+    /* JADX INFO: compiled from: ScreenShareManager.kt */
     public static final class C70432 extends Lambda implements Function1<Subscription, Unit> {
         public C70432() {
             super(1);
@@ -283,15 +283,15 @@ public final class ScreenShareManager {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Subscription subscription) {
             Intrinsics3.checkNotNullParameter(subscription, Traits.Payment.Type.SUBSCRIPTION);
             ScreenShareManager.access$getCompositeSubscription$p(ScreenShareManager.this).m11136a(subscription);
         }
     }
 
-    /* compiled from: ScreenShareManager.kt */
-    /* renamed from: com.discord.utilities.voice.ScreenShareManager$subscribeToStores$3 */
+    /* JADX INFO: renamed from: com.discord.utilities.voice.ScreenShareManager$subscribeToStores$3 */
+    /* JADX INFO: compiled from: ScreenShareManager.kt */
     public static final class C70443 extends Lambda implements Function1<State, Unit> {
         public C70443() {
             super(1);
@@ -303,7 +303,7 @@ public final class ScreenShareManager {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(State state) {
             ScreenShareManager screenShareManager = ScreenShareManager.this;
             Intrinsics3.checkNotNullExpressionValue(state, "it");
@@ -311,8 +311,8 @@ public final class ScreenShareManager {
         }
     }
 
-    /* compiled from: ScreenShareManager.kt */
-    /* renamed from: com.discord.utilities.voice.ScreenShareManager$uploadScreenSharePreviews$1 */
+    /* JADX INFO: renamed from: com.discord.utilities.voice.ScreenShareManager$uploadScreenSharePreviews$1 */
+    /* JADX INFO: compiled from: ScreenShareManager.kt */
     public static final class C70451<T, R> implements Func1<Bitmap, Observable<? extends Void>> {
         public C70451() {
         }
@@ -322,7 +322,7 @@ public final class ScreenShareManager {
             return call2(bitmap);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final Observable<? extends Void> call2(Bitmap bitmap) {
             State stateAccess$getPreviousState$p = ScreenShareManager.access$getPreviousState$p(ScreenShareManager.this);
             StoreApplicationStreaming.ActiveApplicationStream activeStream = stateAccess$getPreviousState$p != null ? stateAccess$getPreviousState$p.getActiveStream() : null;
@@ -335,8 +335,8 @@ public final class ScreenShareManager {
         }
     }
 
-    /* compiled from: ScreenShareManager.kt */
-    /* renamed from: com.discord.utilities.voice.ScreenShareManager$uploadScreenSharePreviews$2 */
+    /* JADX INFO: renamed from: com.discord.utilities.voice.ScreenShareManager$uploadScreenSharePreviews$2 */
+    /* JADX INFO: compiled from: ScreenShareManager.kt */
     public static final class C70462 extends Lambda implements Function1<Subscription, Unit> {
         public C70462() {
             super(1);
@@ -348,15 +348,15 @@ public final class ScreenShareManager {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Subscription subscription) {
             Intrinsics3.checkNotNullParameter(subscription, Traits.Payment.Type.SUBSCRIPTION);
             ScreenShareManager.access$getCompositeSubscription$p(ScreenShareManager.this).m11136a(subscription);
         }
     }
 
-    /* compiled from: ScreenShareManager.kt */
-    /* renamed from: com.discord.utilities.voice.ScreenShareManager$uploadScreenSharePreviews$3 */
+    /* JADX INFO: renamed from: com.discord.utilities.voice.ScreenShareManager$uploadScreenSharePreviews$3 */
+    /* JADX INFO: compiled from: ScreenShareManager.kt */
     public static final class C70473 extends Lambda implements Function1<Void, Unit> {
         public static final C70473 INSTANCE = new C70473();
 
@@ -370,7 +370,7 @@ public final class ScreenShareManager {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Void r1) {
         }
     }

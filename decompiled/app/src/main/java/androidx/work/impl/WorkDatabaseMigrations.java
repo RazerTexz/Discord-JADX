@@ -1,7 +1,6 @@
 package androidx.work.impl;
 
 import android.content.Context;
-import android.database.SQLException;
 import android.os.Build;
 import androidx.annotation.NonNull;
 import androidx.annotation.RestrictTo;
@@ -10,8 +9,8 @@ import androidx.sqlite.p006db.SupportSQLiteDatabase;
 import androidx.work.impl.utils.IdGenerator;
 import androidx.work.impl.utils.PreferenceUtils;
 
+/* JADX INFO: loaded from: classes.dex */
 @RestrictTo({RestrictTo.Scope.LIBRARY_GROUP})
-/* loaded from: classes.dex */
 public class WorkDatabaseMigrations {
     private static final String CREATE_INDEX_PERIOD_START_TIME = "CREATE INDEX IF NOT EXISTS `index_WorkSpec_period_start_time` ON `workspec` (`period_start_time`)";
     private static final String CREATE_PREFERENCE = "CREATE TABLE IF NOT EXISTS `Preference` (`key` TEXT NOT NULL, `long_value` INTEGER, PRIMARY KEY(`key`))";
@@ -54,14 +53,14 @@ public class WorkDatabaseMigrations {
     private static final String WORKSPEC_ADD_TRIGGER_MAX_CONTENT_DELAY = "ALTER TABLE workspec ADD COLUMN `trigger_max_content_delay` INTEGER NOT NULL DEFAULT -1";
     private static final String WORKSPEC_ADD_TRIGGER_UPDATE_DELAY = "ALTER TABLE workspec ADD COLUMN `trigger_content_update_delay` INTEGER NOT NULL DEFAULT -1";
 
-    /* renamed from: androidx.work.impl.WorkDatabaseMigrations$1 */
+    /* JADX INFO: renamed from: androidx.work.impl.WorkDatabaseMigrations$1 */
     public class C07241 extends Migration {
         public C07241(int i, int i2) {
             super(i, i2);
         }
 
         @Override // androidx.room.migration.Migration
-        public void migrate(@NonNull SupportSQLiteDatabase supportSQLiteDatabase) throws SQLException {
+        public void migrate(@NonNull SupportSQLiteDatabase supportSQLiteDatabase) {
             supportSQLiteDatabase.execSQL(WorkDatabaseMigrations.CREATE_SYSTEM_ID_INFO);
             supportSQLiteDatabase.execSQL(WorkDatabaseMigrations.MIGRATE_ALARM_INFO_TO_SYSTEM_ID_INFO);
             supportSQLiteDatabase.execSQL(WorkDatabaseMigrations.REMOVE_ALARM_INFO);
@@ -69,65 +68,65 @@ public class WorkDatabaseMigrations {
         }
     }
 
-    /* renamed from: androidx.work.impl.WorkDatabaseMigrations$2 */
+    /* JADX INFO: renamed from: androidx.work.impl.WorkDatabaseMigrations$2 */
     public class C07252 extends Migration {
         public C07252(int i, int i2) {
             super(i, i2);
         }
 
         @Override // androidx.room.migration.Migration
-        public void migrate(@NonNull SupportSQLiteDatabase supportSQLiteDatabase) throws SQLException {
+        public void migrate(@NonNull SupportSQLiteDatabase supportSQLiteDatabase) {
             if (Build.VERSION.SDK_INT >= 23) {
                 supportSQLiteDatabase.execSQL(WorkDatabaseMigrations.PERIODIC_WORK_SET_SCHEDULE_REQUESTED_AT);
             }
         }
     }
 
-    /* renamed from: androidx.work.impl.WorkDatabaseMigrations$3 */
+    /* JADX INFO: renamed from: androidx.work.impl.WorkDatabaseMigrations$3 */
     public class C07263 extends Migration {
         public C07263(int i, int i2) {
             super(i, i2);
         }
 
         @Override // androidx.room.migration.Migration
-        public void migrate(@NonNull SupportSQLiteDatabase supportSQLiteDatabase) throws SQLException {
+        public void migrate(@NonNull SupportSQLiteDatabase supportSQLiteDatabase) {
             supportSQLiteDatabase.execSQL(WorkDatabaseMigrations.WORKSPEC_ADD_TRIGGER_UPDATE_DELAY);
             supportSQLiteDatabase.execSQL(WorkDatabaseMigrations.WORKSPEC_ADD_TRIGGER_MAX_CONTENT_DELAY);
         }
     }
 
-    /* renamed from: androidx.work.impl.WorkDatabaseMigrations$4 */
+    /* JADX INFO: renamed from: androidx.work.impl.WorkDatabaseMigrations$4 */
     public class C07274 extends Migration {
         public C07274(int i, int i2) {
             super(i, i2);
         }
 
         @Override // androidx.room.migration.Migration
-        public void migrate(@NonNull SupportSQLiteDatabase supportSQLiteDatabase) throws SQLException {
+        public void migrate(@NonNull SupportSQLiteDatabase supportSQLiteDatabase) {
             supportSQLiteDatabase.execSQL(WorkDatabaseMigrations.CREATE_WORK_PROGRESS);
         }
     }
 
-    /* renamed from: androidx.work.impl.WorkDatabaseMigrations$5 */
+    /* JADX INFO: renamed from: androidx.work.impl.WorkDatabaseMigrations$5 */
     public class C07285 extends Migration {
         public C07285(int i, int i2) {
             super(i, i2);
         }
 
         @Override // androidx.room.migration.Migration
-        public void migrate(@NonNull SupportSQLiteDatabase supportSQLiteDatabase) throws SQLException {
+        public void migrate(@NonNull SupportSQLiteDatabase supportSQLiteDatabase) {
             supportSQLiteDatabase.execSQL(WorkDatabaseMigrations.CREATE_INDEX_PERIOD_START_TIME);
         }
     }
 
-    /* renamed from: androidx.work.impl.WorkDatabaseMigrations$6 */
+    /* JADX INFO: renamed from: androidx.work.impl.WorkDatabaseMigrations$6 */
     public class C07296 extends Migration {
         public C07296(int i, int i2) {
             super(i, i2);
         }
 
         @Override // androidx.room.migration.Migration
-        public void migrate(@NonNull SupportSQLiteDatabase supportSQLiteDatabase) throws SQLException {
+        public void migrate(@NonNull SupportSQLiteDatabase supportSQLiteDatabase) {
             supportSQLiteDatabase.execSQL(WorkDatabaseMigrations.CREATE_RUN_IN_FOREGROUND);
         }
     }
@@ -141,7 +140,7 @@ public class WorkDatabaseMigrations {
         }
 
         @Override // androidx.room.migration.Migration
-        public void migrate(@NonNull SupportSQLiteDatabase supportSQLiteDatabase) throws SQLException {
+        public void migrate(@NonNull SupportSQLiteDatabase supportSQLiteDatabase) {
             if (this.endVersion >= 10) {
                 supportSQLiteDatabase.execSQL(WorkDatabaseMigrations.INSERT_PREFERENCE, new Object[]{PreferenceUtils.KEY_RESCHEDULE_NEEDED, 1});
             } else {
@@ -159,7 +158,7 @@ public class WorkDatabaseMigrations {
         }
 
         @Override // androidx.room.migration.Migration
-        public void migrate(@NonNull SupportSQLiteDatabase supportSQLiteDatabase) throws SQLException {
+        public void migrate(@NonNull SupportSQLiteDatabase supportSQLiteDatabase) {
             supportSQLiteDatabase.execSQL(WorkDatabaseMigrations.CREATE_PREFERENCE);
             PreferenceUtils.migrateLegacyPreferences(this.mContext, supportSQLiteDatabase);
             IdGenerator.migrateLegacyIdGenerator(this.mContext, supportSQLiteDatabase);

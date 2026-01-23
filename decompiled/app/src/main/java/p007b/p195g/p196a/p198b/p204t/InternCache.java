@@ -2,12 +2,12 @@ package p007b.p195g.p196a.p198b.p204t;
 
 import java.util.concurrent.ConcurrentHashMap;
 
-/* compiled from: InternCache.java */
-/* renamed from: b.g.a.b.t.f, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.g.a.b.t.f, reason: use source file name */
+/* JADX INFO: compiled from: InternCache.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class InternCache extends ConcurrentHashMap<String, String> {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static final InternCache f4602j = new InternCache();
     private static final long serialVersionUID = 1;
     private final Object lock;
@@ -17,7 +17,7 @@ public final class InternCache extends ConcurrentHashMap<String, String> {
         this.lock = new Object();
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public String m1733a(String str) {
         String str2 = get(str);
         if (str2 != null) {

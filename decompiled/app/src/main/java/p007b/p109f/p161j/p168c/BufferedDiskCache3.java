@@ -4,15 +4,15 @@ import com.facebook.cache.common.CacheKey;
 import java.util.concurrent.Callable;
 import p007b.p109f.p111b.p113b.DiskStorageCache;
 
-/* compiled from: BufferedDiskCache.java */
-/* renamed from: b.f.j.c.g, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.f.j.c.g, reason: use source file name */
+/* JADX INFO: compiled from: BufferedDiskCache.java */
+/* JADX INFO: loaded from: classes.dex */
 public class BufferedDiskCache3 implements Callable<Void> {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final /* synthetic */ CacheKey f3671j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final /* synthetic */ BufferedDiskCache2 f3672k;
 
     public BufferedDiskCache3(BufferedDiskCache2 bufferedDiskCache2, Object obj, CacheKey cacheKey) {

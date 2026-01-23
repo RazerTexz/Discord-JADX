@@ -8,12 +8,12 @@ import java.util.Objects;
 import p007b.p100d.p104b.p105a.outline;
 import p007b.p225i.p226a.p288f.p340n.InterfaceC4353a;
 
-/* compiled from: com.google.firebase:firebase-iid@@21.0.0 */
-/* renamed from: b.i.c.s.m */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.c.s.m */
+/* JADX INFO: compiled from: com.google.firebase:firebase-iid@@21.0.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public final /* synthetic */ class C4822m implements InterfaceC4353a {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final C4823n f12876a;
 
     public C4822m(C4823n c4823n) {
@@ -21,7 +21,7 @@ public final /* synthetic */ class C4822m implements InterfaceC4353a {
     }
 
     @Override // p007b.p225i.p226a.p288f.p340n.InterfaceC4353a
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final Object mo4012a(Task task) throws IOException {
         Objects.requireNonNull(this.f12876a);
         Bundle bundle = (Bundle) task.mo6018m(IOException.class);

@@ -5,24 +5,24 @@ import kotlin.coroutines.CoroutineContext;
 import kotlinx.coroutines.Executors;
 import p659s.p660a.DefaultExecutor;
 
-/* compiled from: Dispatcher.kt */
-/* renamed from: s.a.e2.c, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: s.a.e2.c, reason: use source file name */
+/* JADX INFO: compiled from: Dispatcher.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public class Dispatcher4 extends Executors {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public CoroutineScheduler f27815j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final int f27816k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final int f27817l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public final long f27818m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public final String f27819n;
 
     public Dispatcher4(int i, int i2, String str, int i3) {

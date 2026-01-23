@@ -13,9 +13,9 @@ import p507d0.p580t.MapsJVM;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: RtcConnection.kt */
-/* renamed from: b.a.q.s */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.a.q.s */
+/* JADX INFO: compiled from: RtcConnection.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class C1261s extends Lambda implements Function0<Unit> {
     public final /* synthetic */ C1262t this$0;
 

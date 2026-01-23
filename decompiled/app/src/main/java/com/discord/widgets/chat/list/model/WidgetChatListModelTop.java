@@ -18,15 +18,15 @@ import p507d0.p580t.CollectionsJVM;
 import p507d0.p592z.p594d.Intrinsics3;
 import p658rx.Observable;
 
-/* compiled from: WidgetChatListModelTop.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetChatListModelTop.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final /* data */ class WidgetChatListModelTop {
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private final ChatListEntry item;
 
-    /* compiled from: WidgetChatListModelTop.kt */
+    /* JADX INFO: compiled from: WidgetChatListModelTop.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -84,7 +84,7 @@ public final /* data */ class WidgetChatListModelTop {
         return INSTANCE.get(channel);
     }
 
-    /* renamed from: component1, reason: from getter */
+    /* JADX INFO: renamed from: component1, reason: from getter */
     public final ChatListEntry getItem() {
         return this.item;
     }

@@ -13,32 +13,32 @@ import p007b.p225i.p355b.p357b.AbstractIndexedListIterator;
 import p007b.p225i.p355b.p357b.ImmutableCollection;
 import p007b.p225i.p355b.p357b.ImmutableList2;
 
-/* compiled from: AudioCapabilities.java */
-/* renamed from: b.i.a.c.t2.p, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.t2.p, reason: use source file name */
+/* JADX INFO: compiled from: AudioCapabilities.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class AudioCapabilities {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final AudioCapabilities f7785a = new AudioCapabilities(new int[]{2}, 8);
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static final AudioCapabilities f7786b = new AudioCapabilities(new int[]{2, 5, 6}, 8);
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public static final int[] f7787c = {5, 6, 18, 17, 14, 7, 8};
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final int[] f7788d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final int f7789e;
 
-    /* compiled from: AudioCapabilities.java */
+    /* JADX INFO: renamed from: b.i.a.c.t2.p$a */
+    /* JADX INFO: compiled from: AudioCapabilities.java */
     @RequiresApi(29)
-    /* renamed from: b.i.a.c.t2.p$a */
     public static final class a {
         @DoNotInline
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public static int[] m3496a() {
             AbstractIndexedListIterator<Object> abstractIndexedListIterator = ImmutableList2.f12045k;
             C3404f.m4189A(4, "initialCapacity");
@@ -87,7 +87,7 @@ public final class AudioCapabilities {
         this.f7789e = i;
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public boolean m3495a(int i) {
         return Arrays.binarySearch(this.f7788d, i) >= 0;
     }

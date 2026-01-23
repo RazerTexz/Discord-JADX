@@ -5,9 +5,9 @@ import com.discord.utilities.textprocessing.node.EmojiNode;
 import com.discord.utilities.view.text.SimpleDraweeSpanTextView;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: EmojiNode.kt */
-/* renamed from: com.discord.utilities.textprocessing.node.EmojiNode$Companion$renderEmoji$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.utilities.textprocessing.node.EmojiNode$Companion$renderEmoji$1, reason: use source file name */
+/* JADX INFO: compiled from: EmojiNode.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class EmojiNode4 implements EmojiNode.RenderContext {
     public final /* synthetic */ boolean $isAnimationEnabled;
     public final /* synthetic */ SimpleDraweeSpanTextView $this_renderEmoji;
@@ -27,7 +27,7 @@ public final class EmojiNode4 implements EmojiNode.RenderContext {
     }
 
     @Override // com.discord.utilities.textprocessing.node.EmojiNode.RenderContext
-    /* renamed from: isAnimationEnabled, reason: from getter */
+    /* JADX INFO: renamed from: isAnimationEnabled, reason: from getter */
     public boolean getIsAnimationEnabled() {
         return this.isAnimationEnabled;
     }

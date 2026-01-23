@@ -7,10 +7,10 @@ import com.google.android.gms.common.data.DataHolder;
 import com.google.android.gms.safetynet.SafeBrowsingData;
 import p007b.p085c.p086a.p087a0.AnimatableValueParser;
 
-/* renamed from: b.i.a.f.k.g */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.k.g */
+/* JADX INFO: loaded from: classes3.dex */
 public final class C4333g implements Parcelable.Creator<SafeBrowsingData> {
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static void m5997a(SafeBrowsingData safeBrowsingData, Parcel parcel, int i) {
         int iM594y2 = AnimatableValueParser.m594y2(parcel, 20293);
         AnimatableValueParser.m574t2(parcel, 2, safeBrowsingData.f20821j, false);

@@ -8,7 +8,7 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.Locale;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class MacAddressUtil {
     public static String getMacAddress(Context context) {
         String rawMacAddress = getRawMacAddress(context);

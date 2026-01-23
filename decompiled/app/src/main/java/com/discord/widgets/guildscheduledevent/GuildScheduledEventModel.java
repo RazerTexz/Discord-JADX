@@ -15,8 +15,8 @@ import p001a0.p002a.p003a.C0002b;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: GuildScheduledEventModel.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: GuildScheduledEventModel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final /* data */ class GuildScheduledEventModel implements Serializable {
     private final Boolean broadcastToDirectoryChannels;
     private final Long channelId;
@@ -55,67 +55,67 @@ public final /* data */ class GuildScheduledEventModel implements Serializable {
         return guildScheduledEventModel.copy((i & 1) != 0 ? guildScheduledEventModel.guildId : j, (i & 2) != 0 ? guildScheduledEventModel.name : str, (i & 4) != 0 ? guildScheduledEventModel.channelId : l, (i & 8) != 0 ? guildScheduledEventModel.creatorId : l2, (i & 16) != 0 ? guildScheduledEventModel.startDate : guildScheduledEventPickerDateTime2, (i & 32) != 0 ? guildScheduledEventModel.startTime : guildScheduledEventPickerDateTime3, (i & 64) != 0 ? guildScheduledEventModel.endDate : guildScheduledEventPickerDateTime22, (i & 128) != 0 ? guildScheduledEventModel.endTime : guildScheduledEventPickerDateTime32, (i & 256) != 0 ? guildScheduledEventModel.description : str2, (i & 512) != 0 ? guildScheduledEventModel.entityType : guildScheduledEventEntityType, (i & 1024) != 0 ? guildScheduledEventModel.entityMetadata : guildScheduledEventEntityMetadata, (i & 2048) != 0 ? guildScheduledEventModel.userCount : num, (i & 4096) != 0 ? guildScheduledEventModel.broadcastToDirectoryChannels : bool);
     }
 
-    /* renamed from: component1, reason: from getter */
+    /* JADX INFO: renamed from: component1, reason: from getter */
     public final long getGuildId() {
         return this.guildId;
     }
 
-    /* renamed from: component10, reason: from getter */
+    /* JADX INFO: renamed from: component10, reason: from getter */
     public final GuildScheduledEventEntityType getEntityType() {
         return this.entityType;
     }
 
-    /* renamed from: component11, reason: from getter */
+    /* JADX INFO: renamed from: component11, reason: from getter */
     public final GuildScheduledEventEntityMetadata getEntityMetadata() {
         return this.entityMetadata;
     }
 
-    /* renamed from: component12, reason: from getter */
+    /* JADX INFO: renamed from: component12, reason: from getter */
     public final Integer getUserCount() {
         return this.userCount;
     }
 
-    /* renamed from: component13, reason: from getter */
+    /* JADX INFO: renamed from: component13, reason: from getter */
     public final Boolean getBroadcastToDirectoryChannels() {
         return this.broadcastToDirectoryChannels;
     }
 
-    /* renamed from: component2, reason: from getter */
+    /* JADX INFO: renamed from: component2, reason: from getter */
     public final String getName() {
         return this.name;
     }
 
-    /* renamed from: component3, reason: from getter */
+    /* JADX INFO: renamed from: component3, reason: from getter */
     public final Long getChannelId() {
         return this.channelId;
     }
 
-    /* renamed from: component4, reason: from getter */
+    /* JADX INFO: renamed from: component4, reason: from getter */
     public final Long getCreatorId() {
         return this.creatorId;
     }
 
-    /* renamed from: component5, reason: from getter */
+    /* JADX INFO: renamed from: component5, reason: from getter */
     public final GuildScheduledEventPickerDateTime2 getStartDate() {
         return this.startDate;
     }
 
-    /* renamed from: component6, reason: from getter */
+    /* JADX INFO: renamed from: component6, reason: from getter */
     public final GuildScheduledEventPickerDateTime3 getStartTime() {
         return this.startTime;
     }
 
-    /* renamed from: component7, reason: from getter */
+    /* JADX INFO: renamed from: component7, reason: from getter */
     public final GuildScheduledEventPickerDateTime2 getEndDate() {
         return this.endDate;
     }
 
-    /* renamed from: component8, reason: from getter */
+    /* JADX INFO: renamed from: component8, reason: from getter */
     public final GuildScheduledEventPickerDateTime3 getEndTime() {
         return this.endTime;
     }
 
-    /* renamed from: component9, reason: from getter */
+    /* JADX INFO: renamed from: component9, reason: from getter */
     public final String getDescription() {
         return this.description;
     }

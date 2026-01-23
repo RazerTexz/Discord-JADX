@@ -8,15 +8,15 @@ import p507d0.p513e0.p514p.p515d.p517m0.p531e.p541b.methodSignatureBuildingUtils
 import p507d0.p513e0.p514p.p515d.p517m0.p576p.DFS;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: JvmBuiltInsCustomizer.kt */
-/* renamed from: d0.e0.p.d.m0.b.q.l, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.b.q.l, reason: use source file name */
+/* JADX INFO: compiled from: JvmBuiltInsCustomizer.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class JvmBuiltInsCustomizer7 extends DFS.b<ClassDescriptor, JvmBuiltInsCustomizer2.a> {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final /* synthetic */ String f22663a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final /* synthetic */ Ref$ObjectRef<JvmBuiltInsCustomizer2.a> f22664b;
 
     public JvmBuiltInsCustomizer7(String str, Ref$ObjectRef<JvmBuiltInsCustomizer2.a> ref$ObjectRef) {

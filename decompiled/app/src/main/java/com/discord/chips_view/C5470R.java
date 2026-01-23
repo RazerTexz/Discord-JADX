@@ -2,11 +2,11 @@ package com.discord.chips_view;
 
 import com.discord.C5419R;
 
-/* renamed from: com.discord.chips_view.R */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: com.discord.chips_view.R */
+/* JADX INFO: loaded from: classes.dex */
 public final class C5470R {
 
-    /* renamed from: com.discord.chips_view.R$a */
+    /* JADX INFO: renamed from: com.discord.chips_view.R$a */
     public static final class a {
         public static final int accessibility_action_clickable_span = 2131361830;
         public static final int accessibility_custom_action_0 = 2131361831;
@@ -110,7 +110,7 @@ public final class C5470R {
         public static final int notification_main_column_container = 2131364559;
         public static final int off = 2131364616;
 
-        /* renamed from: on */
+        /* JADX INFO: renamed from: on */
         public static final int f15004on = 2131364620;
         public static final int parentPanel = 2131364665;
         public static final int progress_circular = 2131364859;
@@ -162,7 +162,7 @@ public final class C5470R {
         public static final int unchecked = 2131365926;
         public static final int uniform = 2131365931;
 
-        /* renamed from: up */
+        /* JADX INFO: renamed from: up */
         public static final int f15005up = 2131365940;
         public static final int wrap_content = 2131366286;
 
@@ -170,7 +170,7 @@ public final class C5470R {
         }
     }
 
-    /* renamed from: com.discord.chips_view.R$b */
+    /* JADX INFO: renamed from: com.discord.chips_view.R$b */
     public static final class b {
         public static final int abc_action_bar_title_item = 2131558400;
         public static final int abc_action_bar_up_container = 2131558401;
@@ -217,7 +217,7 @@ public final class C5470R {
         }
     }
 
-    /* renamed from: com.discord.chips_view.R$c */
+    /* JADX INFO: renamed from: com.discord.chips_view.R$c */
     public static final class c {
         public static final int ActionBarLayout_android_layout_gravity = 0;
         public static final int ActionBar_background = 0;

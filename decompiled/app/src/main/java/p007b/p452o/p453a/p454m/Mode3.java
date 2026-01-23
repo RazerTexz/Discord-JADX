@@ -2,9 +2,9 @@ package p007b.p452o.p453a.p454m;
 
 import androidx.annotation.NonNull;
 
-/* compiled from: Mode.java */
-/* renamed from: b.o.a.m.i, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.o.a.m.i, reason: use source file name */
+/* JADX INFO: compiled from: Mode.java */
+/* JADX INFO: loaded from: classes3.dex */
 public enum Mode3 implements Control {
     PICTURE(0),
     VIDEO(1);
@@ -16,7 +16,7 @@ public enum Mode3 implements Control {
     }
 
     @NonNull
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public static Mode3 m7180f(int i) {
         Mode3[] mode3ArrValues = values();
         for (int i2 = 0; i2 < 2; i2++) {
@@ -28,7 +28,7 @@ public enum Mode3 implements Control {
         return PICTURE;
     }
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public int m7181g() {
         return this.value;
     }

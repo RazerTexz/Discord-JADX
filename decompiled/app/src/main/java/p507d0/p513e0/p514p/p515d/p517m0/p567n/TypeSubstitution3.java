@@ -11,26 +11,26 @@ import p507d0.p580t.Maps6;
 import p507d0.p580t._Collections;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: TypeSubstitution.kt */
-/* renamed from: d0.e0.p.d.m0.n.v0, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.n.v0, reason: use source file name */
+/* JADX INFO: compiled from: TypeSubstitution.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public abstract class TypeSubstitution3 extends TypeSubstitution5 {
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static final a f24889b = new a(null);
 
-    /* compiled from: TypeSubstitution.kt */
-    /* renamed from: d0.e0.p.d.m0.n.v0$a */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.n.v0$a */
+    /* JADX INFO: compiled from: TypeSubstitution.kt */
     public static final class a {
 
-        /* compiled from: TypeSubstitution.kt */
-        /* renamed from: d0.e0.p.d.m0.n.v0$a$a, reason: collision with other inner class name */
+        /* JADX INFO: renamed from: d0.e0.p.d.m0.n.v0$a$a, reason: collision with other inner class name */
+        /* JADX INFO: compiled from: TypeSubstitution.kt */
         public static final class C13339a extends TypeSubstitution3 {
 
-            /* renamed from: c */
+            /* JADX INFO: renamed from: c */
             public final /* synthetic */ Map<TypeConstructor, TypeProjection> f24890c;
 
-            /* renamed from: d */
+            /* JADX INFO: renamed from: d */
             public final /* synthetic */ boolean f24891d;
 
             /* JADX WARN: Multi-variable type inference failed */

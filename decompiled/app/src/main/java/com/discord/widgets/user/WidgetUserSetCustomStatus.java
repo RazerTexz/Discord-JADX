@@ -50,23 +50,23 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 import p507d0.p592z.p594d.Reflection2;
 
-/* compiled from: WidgetUserSetCustomStatus.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: WidgetUserSetCustomStatus.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class WidgetUserSetCustomStatus extends AppFragment {
     public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetUserSetCustomStatus.class, "binding", "getBinding()Lcom/discord/databinding/WidgetUserSetCustomStatusBinding;", 0)};
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
 
-    /* renamed from: binding$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
     private String currentEmojiUri;
     private RadioManager expirationRadioManager;
 
-    /* renamed from: viewModel$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: viewModel$delegate, reason: from kotlin metadata */
     private final Lazy viewModel;
 
-    /* compiled from: WidgetUserSetCustomStatus.kt */
+    /* JADX INFO: compiled from: WidgetUserSetCustomStatus.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -96,8 +96,8 @@ public final class WidgetUserSetCustomStatus extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetUserSetCustomStatus.kt */
-    /* renamed from: com.discord.widgets.user.WidgetUserSetCustomStatus$onViewBound$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.user.WidgetUserSetCustomStatus$onViewBound$1 */
+    /* JADX INFO: compiled from: WidgetUserSetCustomStatus.kt */
     public static final class ViewOnClickListenerC102281 implements View.OnClickListener {
         public ViewOnClickListenerC102281() {
         }
@@ -108,8 +108,8 @@ public final class WidgetUserSetCustomStatus extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetUserSetCustomStatus.kt */
-    /* renamed from: com.discord.widgets.user.WidgetUserSetCustomStatus$onViewBound$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.user.WidgetUserSetCustomStatus$onViewBound$2 */
+    /* JADX INFO: compiled from: WidgetUserSetCustomStatus.kt */
     public static final class ViewOnClickListenerC102292 implements View.OnClickListener {
         public ViewOnClickListenerC102292() {
         }
@@ -120,8 +120,8 @@ public final class WidgetUserSetCustomStatus extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetUserSetCustomStatus.kt */
-    /* renamed from: com.discord.widgets.user.WidgetUserSetCustomStatus$onViewBound$3 */
+    /* JADX INFO: renamed from: com.discord.widgets.user.WidgetUserSetCustomStatus$onViewBound$3 */
+    /* JADX INFO: compiled from: WidgetUserSetCustomStatus.kt */
     public static final class C102303 extends Lambda implements Function1<Editable, Unit> {
         public C102303() {
             super(1);
@@ -133,15 +133,15 @@ public final class WidgetUserSetCustomStatus extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Editable editable) {
             Intrinsics3.checkNotNullParameter(editable, "editable");
             WidgetUserSetCustomStatus.access$getViewModel$p(WidgetUserSetCustomStatus.this).setStatusText(editable.toString());
         }
     }
 
-    /* compiled from: WidgetUserSetCustomStatus.kt */
-    /* renamed from: com.discord.widgets.user.WidgetUserSetCustomStatus$onViewBound$4 */
+    /* JADX INFO: renamed from: com.discord.widgets.user.WidgetUserSetCustomStatus$onViewBound$4 */
+    /* JADX INFO: compiled from: WidgetUserSetCustomStatus.kt */
     public static final class ViewOnClickListenerC102314 implements View.OnClickListener {
         public ViewOnClickListenerC102314() {
         }
@@ -152,8 +152,8 @@ public final class WidgetUserSetCustomStatus extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetUserSetCustomStatus.kt */
-    /* renamed from: com.discord.widgets.user.WidgetUserSetCustomStatus$onViewBoundOrOnResume$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.user.WidgetUserSetCustomStatus$onViewBoundOrOnResume$1 */
+    /* JADX INFO: compiled from: WidgetUserSetCustomStatus.kt */
     public static final /* synthetic */ class C102321 extends FunctionReferenceImpl implements Function1<WidgetUserSetCustomStatusViewModel.ViewState, Unit> {
         public C102321(WidgetUserSetCustomStatus widgetUserSetCustomStatus) {
             super(1, widgetUserSetCustomStatus, WidgetUserSetCustomStatus.class, "updateView", "updateView(Lcom/discord/widgets/user/WidgetUserSetCustomStatusViewModel$ViewState;)V", 0);
@@ -165,15 +165,15 @@ public final class WidgetUserSetCustomStatus extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(WidgetUserSetCustomStatusViewModel.ViewState viewState) {
             Intrinsics3.checkNotNullParameter(viewState, "p1");
             WidgetUserSetCustomStatus.access$updateView((WidgetUserSetCustomStatus) this.receiver, viewState);
         }
     }
 
-    /* compiled from: WidgetUserSetCustomStatus.kt */
-    /* renamed from: com.discord.widgets.user.WidgetUserSetCustomStatus$onViewBoundOrOnResume$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.user.WidgetUserSetCustomStatus$onViewBoundOrOnResume$2 */
+    /* JADX INFO: compiled from: WidgetUserSetCustomStatus.kt */
     public static final /* synthetic */ class C102332 extends FunctionReferenceImpl implements Function1<WidgetUserSetCustomStatusViewModel.Event, Unit> {
         public C102332(WidgetUserSetCustomStatus widgetUserSetCustomStatus) {
             super(1, widgetUserSetCustomStatus, WidgetUserSetCustomStatus.class, "handleEvent", "handleEvent(Lcom/discord/widgets/user/WidgetUserSetCustomStatusViewModel$Event;)V", 0);
@@ -185,15 +185,15 @@ public final class WidgetUserSetCustomStatus extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(WidgetUserSetCustomStatusViewModel.Event event) {
             Intrinsics3.checkNotNullParameter(event, "p1");
             WidgetUserSetCustomStatus.access$handleEvent((WidgetUserSetCustomStatus) this.receiver, event);
         }
     }
 
-    /* compiled from: WidgetUserSetCustomStatus.kt */
-    /* renamed from: com.discord.widgets.user.WidgetUserSetCustomStatus$openEmojiPicker$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.user.WidgetUserSetCustomStatus$openEmojiPicker$1 */
+    /* JADX INFO: compiled from: WidgetUserSetCustomStatus.kt */
     public static final class C102341 implements EmojiPickerListener {
         public C102341() {
         }
@@ -205,8 +205,8 @@ public final class WidgetUserSetCustomStatus extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetUserSetCustomStatus.kt */
-    /* renamed from: com.discord.widgets.user.WidgetUserSetCustomStatus$setExpirationOnCheck$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.user.WidgetUserSetCustomStatus$setExpirationOnCheck$1 */
+    /* JADX INFO: compiled from: WidgetUserSetCustomStatus.kt */
     public static final class ViewOnClickListenerC102351 implements View.OnClickListener {
         public final /* synthetic */ WidgetUserSetCustomStatusViewModel.FormState.Expiration $expiration;
 
@@ -339,7 +339,7 @@ public final class WidgetUserSetCustomStatus extends AppFragment {
     }
 
     @Override // com.discord.app.AppFragment
-    public void onViewBound(View view) throws Resources.NotFoundException {
+    public void onViewBound(View view) {
         Window window;
         Intrinsics3.checkNotNullParameter(view, "view");
         super.onViewBound(view);

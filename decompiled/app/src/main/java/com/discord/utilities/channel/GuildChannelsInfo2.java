@@ -17,9 +17,9 @@ import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 import p658rx.functions.Func8;
 
-/* compiled from: GuildChannelsInfo.kt */
-/* renamed from: com.discord.utilities.channel.GuildChannelsInfo$Companion$get$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.utilities.channel.GuildChannelsInfo$Companion$get$1, reason: use source file name */
+/* JADX INFO: compiled from: GuildChannelsInfo.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class GuildChannelsInfo2<T1, T2, T3, T4, T5, T6, T7, T8, R> implements Func8<MeUser, Guild, ModelNotificationSettings, Boolean, Map<Long, ? extends GuildRole>, Long, Map<Long, ? extends Long>, List<? extends Channel>, GuildChannelsInfo> {
     public static final GuildChannelsInfo2 INSTANCE = new GuildChannelsInfo2();
 
@@ -29,7 +29,7 @@ public final class GuildChannelsInfo2<T1, T2, T3, T4, T5, T6, T7, T8, R> impleme
     }
 
     /* JADX WARN: Removed duplicated region for block: B:25:0x0042  */
-    /* renamed from: call, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */

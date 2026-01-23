@@ -11,26 +11,26 @@ import com.discord.views.SearchInputView;
 import com.discord.widgets.chat.input.gifpicker.GifLoadingView;
 import com.google.android.material.appbar.AppBarLayout;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public final class WidgetGifPickerSearchBinding implements ViewBinding {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     @NonNull
     public final CoordinatorLayout f16702a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     @NonNull
     public final RecyclerView f16703b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     @NonNull
     public final GifLoadingView f16704c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     @NonNull
     public final AppViewFlipper f16705d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     @NonNull
     public final SearchInputView f16706e;
 

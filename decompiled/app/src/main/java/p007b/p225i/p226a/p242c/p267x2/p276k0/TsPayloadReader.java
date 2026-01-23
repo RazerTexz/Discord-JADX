@@ -10,19 +10,19 @@ import p007b.p225i.p226a.p242c.p259f3.ParsableByteArray;
 import p007b.p225i.p226a.p242c.p259f3.TimestampAdjuster;
 import p007b.p225i.p226a.p242c.p267x2.ExtractorOutput;
 
-/* compiled from: TsPayloadReader.java */
-/* renamed from: b.i.a.c.x2.k0.i0, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.x2.k0.i0, reason: use source file name */
+/* JADX INFO: compiled from: TsPayloadReader.java */
+/* JADX INFO: loaded from: classes3.dex */
 public interface TsPayloadReader {
 
-    /* compiled from: TsPayloadReader.java */
-    /* renamed from: b.i.a.c.x2.k0.i0$a */
+    /* JADX INFO: renamed from: b.i.a.c.x2.k0.i0$a */
+    /* JADX INFO: compiled from: TsPayloadReader.java */
     public static final class a {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final String f8674a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final byte[] f8675b;
 
         public a(String str, int i, byte[] bArr) {
@@ -31,21 +31,21 @@ public interface TsPayloadReader {
         }
     }
 
-    /* compiled from: TsPayloadReader.java */
-    /* renamed from: b.i.a.c.x2.k0.i0$b */
+    /* JADX INFO: renamed from: b.i.a.c.x2.k0.i0$b */
+    /* JADX INFO: compiled from: TsPayloadReader.java */
     public static final class b {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final int f8676a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         @Nullable
         public final String f8677b;
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public final List<a> f8678c;
 
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         public final byte[] f8679d;
 
         public b(int i, @Nullable String str, @Nullable List<a> list, byte[] bArr) {
@@ -56,31 +56,31 @@ public interface TsPayloadReader {
         }
     }
 
-    /* compiled from: TsPayloadReader.java */
-    /* renamed from: b.i.a.c.x2.k0.i0$c */
+    /* JADX INFO: renamed from: b.i.a.c.x2.k0.i0$c */
+    /* JADX INFO: compiled from: TsPayloadReader.java */
     public interface c {
         @Nullable
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         TsPayloadReader mo3764a(int i, b bVar);
     }
 
-    /* compiled from: TsPayloadReader.java */
-    /* renamed from: b.i.a.c.x2.k0.i0$d */
+    /* JADX INFO: renamed from: b.i.a.c.x2.k0.i0$d */
+    /* JADX INFO: compiled from: TsPayloadReader.java */
     public static final class d {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final String f8680a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final int f8681b;
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public final int f8682c;
 
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         public int f8683d;
 
-        /* renamed from: e */
+        /* JADX INFO: renamed from: e */
         public String f8684e;
 
         public d(int i, int i2, int i3) {
@@ -100,7 +100,7 @@ public interface TsPayloadReader {
             this.f8684e = "";
         }
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public void m3765a() {
             int i = this.f8683d;
             int i2 = i == Integer.MIN_VALUE ? this.f8681b : i + this.f8682c;
@@ -109,7 +109,7 @@ public interface TsPayloadReader {
             this.f8684e = outline.m851g(outline.m841b(str, 11), str, i2);
         }
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public String m3766b() {
             if (this.f8683d != Integer.MIN_VALUE) {
                 return this.f8684e;
@@ -117,7 +117,7 @@ public interface TsPayloadReader {
             throw new IllegalStateException("generateNewId() must be called before retrieving ids.");
         }
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public int m3767c() {
             int i = this.f8683d;
             if (i != Integer.MIN_VALUE) {
@@ -127,12 +127,12 @@ public interface TsPayloadReader {
         }
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     void mo3754a(TimestampAdjuster timestampAdjuster, ExtractorOutput extractorOutput, d dVar);
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     void mo3755b(ParsableByteArray parsableByteArray, int i) throws ParserException;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     void mo3756c();
 }

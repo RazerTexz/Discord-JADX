@@ -5,16 +5,16 @@ import kotlin.Unit;
 import kotlin.jvm.functions.Function0;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: MediaEngineConnectionLegacy.kt */
-/* renamed from: b.a.q.m0.c.c, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.a.q.m0.c.c, reason: use source file name */
+/* JADX INFO: compiled from: MediaEngineConnectionLegacy.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class MediaEngineConnectionLegacy3 implements Connection.UserSpeakingStatusChangedCallback {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final /* synthetic */ MediaEngineConnectionLegacy5 f1696a;
 
-    /* compiled from: MediaEngineConnectionLegacy.kt */
-    /* renamed from: b.a.q.m0.c.c$a */
+    /* JADX INFO: renamed from: b.a.q.m0.c.c$a */
+    /* JADX INFO: compiled from: MediaEngineConnectionLegacy.kt */
     public static final class a extends Lambda implements Function0<Unit> {
         public final /* synthetic */ boolean $isUserSpeakingNow;
         public final /* synthetic */ long $userId;

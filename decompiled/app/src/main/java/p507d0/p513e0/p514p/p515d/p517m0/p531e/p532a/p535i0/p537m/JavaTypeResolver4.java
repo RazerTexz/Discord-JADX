@@ -38,15 +38,15 @@ import p507d0.p580t.Iterables2;
 import p507d0.p580t._Collections;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: JavaTypeResolver.kt */
-/* renamed from: d0.e0.p.d.m0.e.a.i0.m.d, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.e.a.i0.m.d, reason: use source file name */
+/* JADX INFO: compiled from: JavaTypeResolver.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class JavaTypeResolver4 {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final context4 f23429a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final resolvers2 f23430b;
 
     public JavaTypeResolver4(context4 context4Var, resolvers2 resolvers2Var) {
@@ -56,7 +56,7 @@ public final class JavaTypeResolver4 {
         this.f23430b = resolvers2Var;
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public static final KotlinType4 m9498c(javaTypes3 javatypes3) {
         KotlinType4 kotlinType4CreateErrorType = ErrorUtils.createErrorType(Intrinsics3.stringPlus("Unresolved java class ", javatypes3.getPresentableText()));
         Intrinsics3.checkNotNullExpressionValue(kotlinType4CreateErrorType, "createErrorType(\"Unresolved java class ${javaType.presentableText}\")");
@@ -76,7 +76,7 @@ public final class JavaTypeResolver4 {
     /* JADX WARN: Removed duplicated region for block: B:55:0x00e6  */
     /* JADX WARN: Removed duplicated region for block: B:72:0x012b A[RETURN] */
     /* JADX WARN: Removed duplicated region for block: B:73:0x012c  */
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
@@ -238,7 +238,7 @@ public final class JavaTypeResolver4 {
         }
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final TypeConstructor m9500b(javaTypes3 javatypes3) {
         ClassId classId = ClassId.topLevel(new FqName(javatypes3.getClassifierQualifiedName()));
         Intrinsics3.checkNotNullExpressionValue(classId, "topLevel(FqName(javaType.classifierQualifiedName))");

@@ -3,21 +3,21 @@ package p007b.p225i.p226a.p242c.p260g3;
 import p007b.p225i.p226a.p242c.p259f3.Util2;
 import p007b.p225i.p226a.p242c.p260g3.VideoRendererEventListener2;
 
-/* compiled from: lambda */
-/* renamed from: b.i.a.c.g3.i */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.g3.i */
+/* JADX INFO: compiled from: lambda */
+/* JADX INFO: loaded from: classes3.dex */
 public final /* synthetic */ class RunnableC2772i implements Runnable {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final /* synthetic */ VideoRendererEventListener2.a f6825j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final /* synthetic */ String f6826k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final /* synthetic */ long f6827l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public final /* synthetic */ long f6828m;
 
     public /* synthetic */ RunnableC2772i(VideoRendererEventListener2.a aVar, String str, long j, long j2) {

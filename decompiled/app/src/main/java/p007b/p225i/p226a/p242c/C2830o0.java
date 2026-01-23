@@ -5,16 +5,16 @@ import p007b.p085c.p086a.p087a0.AnimatableValueParser;
 import p007b.p100d.p104b.p105a.outline;
 import p007b.p225i.p226a.p242c.Bundleable;
 
-/* compiled from: lambda */
-/* renamed from: b.i.a.c.o0 */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.o0 */
+/* JADX INFO: compiled from: lambda */
+/* JADX INFO: loaded from: classes3.dex */
 public final /* synthetic */ class C2830o0 implements Bundleable.a {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final /* synthetic */ C2830o0 f7260a = new C2830o0();
 
     @Override // p007b.p225i.p226a.p242c.Bundleable.a
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final Bundleable mo2576a(Bundle bundle) {
         Bundleable heartRating;
         int i = bundle.getInt(Integer.toString(0, 36), -1);

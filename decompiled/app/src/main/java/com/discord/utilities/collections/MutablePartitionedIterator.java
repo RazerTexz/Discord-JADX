@@ -6,8 +6,8 @@ import java.util.LinkedList;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.p595g0.KMarkers;
 
-/* compiled from: MutablePartitionedIterator.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: MutablePartitionedIterator.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class MutablePartitionedIterator<T> implements Iterator<T>, KMarkers {
     private Iterator<? extends T> currentPartitionIterator;
     private final Iterator<Iterable<T>> partitionIterator;

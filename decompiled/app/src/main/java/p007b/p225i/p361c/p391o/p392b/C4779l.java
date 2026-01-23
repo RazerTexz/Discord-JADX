@@ -7,15 +7,15 @@ import android.os.RemoteException;
 import p007b.p225i.p226a.p288f.p313h.p321h.BinderC3485a;
 import p007b.p225i.p226a.p288f.p313h.p321h.C3486b;
 
-/* compiled from: com.google.firebase:firebase-dynamic-links@@19.1.1 */
-/* renamed from: b.i.c.o.b.l */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.c.o.b.l */
+/* JADX INFO: compiled from: com.google.firebase:firebase-dynamic-links@@19.1.1 */
+/* JADX INFO: loaded from: classes3.dex */
 public final class C4779l implements InterfaceC4777j, IInterface {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final IBinder f12815a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final String f12816b = "com.google.firebase.dynamiclinks.internal.IDynamicLinksService";
 
     public C4779l(IBinder iBinder) {
@@ -29,7 +29,7 @@ public final class C4779l implements InterfaceC4777j, IInterface {
 
     /* JADX WARN: Multi-variable type inference failed */
     @Override // p007b.p225i.p361c.p391o.p392b.InterfaceC4777j
-    /* renamed from: b0 */
+    /* JADX INFO: renamed from: b0 */
     public final void mo6704b0(InterfaceC4775h interfaceC4775h, String str) throws RemoteException {
         Parcel parcelObtain = Parcel.obtain();
         parcelObtain.writeInterfaceToken(this.f12816b);

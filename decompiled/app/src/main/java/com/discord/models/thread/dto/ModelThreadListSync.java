@@ -13,15 +13,15 @@ import p007b.p100d.p104b.p105a.outline;
 import p507d0.p580t.Collections2;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ModelThreadListSync.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: ModelThreadListSync.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class ModelThreadListSync {
     private final long guildId;
     private final List<ThreadMember> members;
     private final List<Message> mostRecentMessages;
     private final List<Channel> threads;
 
-    /* compiled from: ModelThreadListSync.kt */
+    /* JADX INFO: compiled from: ModelThreadListSync.kt */
     public static final class Parser implements Model.Parser<ModelThreadListSync> {
         public static final Parser INSTANCE = new Parser();
 
@@ -65,6 +65,7 @@ public final /* data */ class ModelThreadListSync {
         this.mostRecentMessages = list3;
     }
 
+    /* JADX WARN: Multi-variable type inference failed */
     public static /* synthetic */ ModelThreadListSync copy$default(ModelThreadListSync modelThreadListSync, long j, List list, List list2, List list3, int i, Object obj) {
         if ((i & 1) != 0) {
             j = modelThreadListSync.guildId;
@@ -84,7 +85,7 @@ public final /* data */ class ModelThreadListSync {
         return modelThreadListSync.copy(j2, list4, list5, list3);
     }
 
-    /* renamed from: component1, reason: from getter */
+    /* JADX INFO: renamed from: component1, reason: from getter */
     public final long getGuildId() {
         return this.guildId;
     }

@@ -29,8 +29,8 @@ import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: PreviewGuildScheduledEventViewModel.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: PreviewGuildScheduledEventViewModel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class PreviewGuildScheduledEventViewModel extends AppViewModel<ViewState> {
     private final StoreChannels channelsStore;
     private ViewState currentViewState;
@@ -39,10 +39,10 @@ public final class PreviewGuildScheduledEventViewModel extends AppViewModel<View
     private final StoreGuildScheduledEvents guildScheduledEventsStore;
     private final StorePermissions permissionsStore;
 
-    /* compiled from: PreviewGuildScheduledEventViewModel.kt */
+    /* JADX INFO: compiled from: PreviewGuildScheduledEventViewModel.kt */
     public static abstract class ViewState {
 
-        /* compiled from: PreviewGuildScheduledEventViewModel.kt */
+        /* JADX INFO: compiled from: PreviewGuildScheduledEventViewModel.kt */
         public static final class Initial extends ViewState {
             public static final Initial INSTANCE = new Initial();
 
@@ -51,7 +51,7 @@ public final class PreviewGuildScheduledEventViewModel extends AppViewModel<View
             }
         }
 
-        /* compiled from: PreviewGuildScheduledEventViewModel.kt */
+        /* JADX INFO: compiled from: PreviewGuildScheduledEventViewModel.kt */
         public static final /* data */ class Initialized extends ViewState {
             private final boolean canNotifyEveryone;
             private final GuildScheduledEventModel eventModel;
@@ -95,27 +95,27 @@ public final class PreviewGuildScheduledEventViewModel extends AppViewModel<View
                 return initialized.copy(z2, action2, z4, guildScheduledEventLocationInfo2, guildScheduledEventModel);
             }
 
-            /* renamed from: component1, reason: from getter */
+            /* JADX INFO: renamed from: component1, reason: from getter */
             public final boolean getRequestProcessing() {
                 return this.requestProcessing;
             }
 
-            /* renamed from: component2, reason: from getter */
+            /* JADX INFO: renamed from: component2, reason: from getter */
             public final WidgetPreviewGuildScheduledEvent.Companion.Action getExistingEventAction() {
                 return this.existingEventAction;
             }
 
-            /* renamed from: component3, reason: from getter */
+            /* JADX INFO: renamed from: component3, reason: from getter */
             public final boolean getCanNotifyEveryone() {
                 return this.canNotifyEveryone;
             }
 
-            /* renamed from: component4, reason: from getter */
+            /* JADX INFO: renamed from: component4, reason: from getter */
             public final GuildScheduledEventLocationInfo getLocationInfo() {
                 return this.locationInfo;
             }
 
-            /* renamed from: component5, reason: from getter */
+            /* JADX INFO: renamed from: component5, reason: from getter */
             public final GuildScheduledEventModel getEventModel() {
                 return this.eventModel;
             }
@@ -161,6 +161,9 @@ public final class PreviewGuildScheduledEventViewModel extends AppViewModel<View
             /* JADX WARN: Type inference failed for: r0v1, types: [int] */
             /* JADX WARN: Type inference failed for: r0v10 */
             /* JADX WARN: Type inference failed for: r0v11 */
+            /* JADX WARN: Type inference failed for: r1v0 */
+            /* JADX WARN: Type inference failed for: r1v1, types: [int] */
+            /* JADX WARN: Type inference failed for: r1v7 */
             public int hashCode() {
                 boolean z2 = this.requestProcessing;
                 ?? r0 = z2;
@@ -171,14 +174,14 @@ public final class PreviewGuildScheduledEventViewModel extends AppViewModel<View
                 WidgetPreviewGuildScheduledEvent.Companion.Action action = this.existingEventAction;
                 int iHashCode = (i + (action != null ? action.hashCode() : 0)) * 31;
                 boolean z3 = this.canNotifyEveryone;
-                int i2 = (iHashCode + (z3 ? 1 : z3 ? 1 : 0)) * 31;
+                int i2 = (iHashCode + (z3 ? 1 : z3)) * 31;
                 GuildScheduledEventLocationInfo guildScheduledEventLocationInfo = this.locationInfo;
                 int iHashCode2 = (i2 + (guildScheduledEventLocationInfo != null ? guildScheduledEventLocationInfo.hashCode() : 0)) * 31;
                 GuildScheduledEventModel guildScheduledEventModel = this.eventModel;
                 return iHashCode2 + (guildScheduledEventModel != null ? guildScheduledEventModel.hashCode() : 0);
             }
 
-            /* renamed from: isStartingEvent, reason: from getter */
+            /* JADX INFO: renamed from: isStartingEvent, reason: from getter */
             public final boolean getIsStartingEvent() {
                 return this.isStartingEvent;
             }
@@ -199,7 +202,7 @@ public final class PreviewGuildScheduledEventViewModel extends AppViewModel<View
             }
         }
 
-        /* compiled from: PreviewGuildScheduledEventViewModel.kt */
+        /* JADX INFO: compiled from: PreviewGuildScheduledEventViewModel.kt */
         public static final class Invalid extends ViewState {
             public static final Invalid INSTANCE = new Invalid();
 
@@ -227,8 +230,8 @@ public final class PreviewGuildScheduledEventViewModel extends AppViewModel<View
         }
     }
 
-    /* compiled from: PreviewGuildScheduledEventViewModel.kt */
-    /* renamed from: com.discord.widgets.guildscheduledevent.PreviewGuildScheduledEventViewModel$createEvent$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.guildscheduledevent.PreviewGuildScheduledEventViewModel$createEvent$1 */
+    /* JADX INFO: compiled from: PreviewGuildScheduledEventViewModel.kt */
     public static final class C88321 extends Lambda implements Function1<Error, Unit> {
         public C88321() {
             super(1);
@@ -240,15 +243,15 @@ public final class PreviewGuildScheduledEventViewModel extends AppViewModel<View
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Error error) {
             Intrinsics3.checkNotNullParameter(error, "it");
             PreviewGuildScheduledEventViewModel.access$setRequestFinished(PreviewGuildScheduledEventViewModel.this);
         }
     }
 
-    /* compiled from: PreviewGuildScheduledEventViewModel.kt */
-    /* renamed from: com.discord.widgets.guildscheduledevent.PreviewGuildScheduledEventViewModel$createEvent$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.guildscheduledevent.PreviewGuildScheduledEventViewModel$createEvent$2 */
+    /* JADX INFO: compiled from: PreviewGuildScheduledEventViewModel.kt */
     public static final class C88332 extends Lambda implements Function1<GuildScheduledEvent, Unit> {
         public final /* synthetic */ Function1 $onRequestSuccess;
 
@@ -264,15 +267,15 @@ public final class PreviewGuildScheduledEventViewModel extends AppViewModel<View
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(GuildScheduledEvent guildScheduledEvent) {
             PreviewGuildScheduledEventViewModel.access$setRequestFinished(PreviewGuildScheduledEventViewModel.this);
             this.$onRequestSuccess.invoke(guildScheduledEvent != null ? Long.valueOf(guildScheduledEvent.getId()) : null);
         }
     }
 
-    /* compiled from: PreviewGuildScheduledEventViewModel.kt */
-    /* renamed from: com.discord.widgets.guildscheduledevent.PreviewGuildScheduledEventViewModel$editEvent$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.guildscheduledevent.PreviewGuildScheduledEventViewModel$editEvent$1 */
+    /* JADX INFO: compiled from: PreviewGuildScheduledEventViewModel.kt */
     public static final class C88341 extends Lambda implements Function1<Error, Unit> {
         public C88341() {
             super(1);
@@ -284,15 +287,15 @@ public final class PreviewGuildScheduledEventViewModel extends AppViewModel<View
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Error error) {
             Intrinsics3.checkNotNullParameter(error, "it");
             PreviewGuildScheduledEventViewModel.access$setRequestFinished(PreviewGuildScheduledEventViewModel.this);
         }
     }
 
-    /* compiled from: PreviewGuildScheduledEventViewModel.kt */
-    /* renamed from: com.discord.widgets.guildscheduledevent.PreviewGuildScheduledEventViewModel$editEvent$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.guildscheduledevent.PreviewGuildScheduledEventViewModel$editEvent$2 */
+    /* JADX INFO: compiled from: PreviewGuildScheduledEventViewModel.kt */
     public static final class C88352 extends Lambda implements Function1<Unit, Unit> {
         public final /* synthetic */ long $eventId;
         public final /* synthetic */ Function1 $onRequestSuccess;
@@ -310,7 +313,7 @@ public final class PreviewGuildScheduledEventViewModel extends AppViewModel<View
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Unit unit) {
             Intrinsics3.checkNotNullParameter(unit, "it");
             PreviewGuildScheduledEventViewModel.access$setRequestFinished(PreviewGuildScheduledEventViewModel.this);
@@ -318,8 +321,8 @@ public final class PreviewGuildScheduledEventViewModel extends AppViewModel<View
         }
     }
 
-    /* compiled from: PreviewGuildScheduledEventViewModel.kt */
-    /* renamed from: com.discord.widgets.guildscheduledevent.PreviewGuildScheduledEventViewModel$startEvent$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.guildscheduledevent.PreviewGuildScheduledEventViewModel$startEvent$1 */
+    /* JADX INFO: compiled from: PreviewGuildScheduledEventViewModel.kt */
     public static final class C88361 extends Lambda implements Function1<Error, Unit> {
         public C88361() {
             super(1);
@@ -331,15 +334,15 @@ public final class PreviewGuildScheduledEventViewModel extends AppViewModel<View
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Error error) {
             Intrinsics3.checkNotNullParameter(error, "it");
             PreviewGuildScheduledEventViewModel.access$setRequestFinished(PreviewGuildScheduledEventViewModel.this);
         }
     }
 
-    /* compiled from: PreviewGuildScheduledEventViewModel.kt */
-    /* renamed from: com.discord.widgets.guildscheduledevent.PreviewGuildScheduledEventViewModel$startEvent$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.guildscheduledevent.PreviewGuildScheduledEventViewModel$startEvent$2 */
+    /* JADX INFO: compiled from: PreviewGuildScheduledEventViewModel.kt */
     public static final class C88372 extends Lambda implements Function1<Unit, Unit> {
         public final /* synthetic */ long $eventId;
         public final /* synthetic */ Function1 $onRequestSuccess;
@@ -357,7 +360,7 @@ public final class PreviewGuildScheduledEventViewModel extends AppViewModel<View
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Unit unit) {
             Intrinsics3.checkNotNullParameter(unit, "it");
             PreviewGuildScheduledEventViewModel.access$setRequestFinished(PreviewGuildScheduledEventViewModel.this);
@@ -365,8 +368,8 @@ public final class PreviewGuildScheduledEventViewModel extends AppViewModel<View
         }
     }
 
-    /* compiled from: PreviewGuildScheduledEventViewModel.kt */
-    /* renamed from: com.discord.widgets.guildscheduledevent.PreviewGuildScheduledEventViewModel$startStageEvent$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.guildscheduledevent.PreviewGuildScheduledEventViewModel$startStageEvent$1 */
+    /* JADX INFO: compiled from: PreviewGuildScheduledEventViewModel.kt */
     public static final class C88381 extends Lambda implements Function1<Error, Unit> {
         public C88381() {
             super(1);
@@ -378,15 +381,15 @@ public final class PreviewGuildScheduledEventViewModel extends AppViewModel<View
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Error error) {
             Intrinsics3.checkNotNullParameter(error, "it");
             PreviewGuildScheduledEventViewModel.access$setRequestFinished(PreviewGuildScheduledEventViewModel.this);
         }
     }
 
-    /* compiled from: PreviewGuildScheduledEventViewModel.kt */
-    /* renamed from: com.discord.widgets.guildscheduledevent.PreviewGuildScheduledEventViewModel$startStageEvent$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.guildscheduledevent.PreviewGuildScheduledEventViewModel$startStageEvent$2 */
+    /* JADX INFO: compiled from: PreviewGuildScheduledEventViewModel.kt */
     public static final class C88392 extends Lambda implements Function1<StageInstance, Unit> {
         public final /* synthetic */ Long $eventId;
         public final /* synthetic */ Function1 $onRequestSuccess;
@@ -404,7 +407,7 @@ public final class PreviewGuildScheduledEventViewModel extends AppViewModel<View
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(StageInstance stageInstance) {
             Intrinsics3.checkNotNullParameter(stageInstance, "it");
             PreviewGuildScheduledEventViewModel.access$setRequestFinished(PreviewGuildScheduledEventViewModel.this);

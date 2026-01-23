@@ -5,18 +5,18 @@ import p658rx.Observable;
 import p658rx.Scheduler;
 import p658rx.Subscriber;
 
-/* compiled from: OnSubscribeTimerOnce.java */
-/* renamed from: j0.l.a.i0, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: j0.l.a.i0, reason: use source file name */
+/* JADX INFO: compiled from: OnSubscribeTimerOnce.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class OnSubscribeTimerOnce2 implements Observable.InterfaceC13005a<Long> {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final long f26847j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final TimeUnit f26848k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final Scheduler f26849l;
 
     public OnSubscribeTimerOnce2(long j, TimeUnit timeUnit, Scheduler scheduler) {

@@ -6,42 +6,42 @@ import java.util.Map;
 import org.checkerframework.checker.nullness.compatqual.NullableDecl;
 import p007b.p225i.p226a.p288f.p299e.p308o.C3404f;
 
-/* compiled from: RegularImmutableMap.java */
-/* renamed from: b.i.b.b.i0, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.b.b.i0, reason: use source file name */
+/* JADX INFO: compiled from: RegularImmutableMap.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class RegularImmutableMap<K, V> extends ImmutableMap2<K, V> {
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public static final ImmutableMap2<Object, Object> f12015m = new RegularImmutableMap(null, new Object[0], 0);
     private static final long serialVersionUID = 0;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public final transient int[] f12016n;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public final transient Object[] f12017o;
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public final transient int f12018p;
 
-    /* compiled from: RegularImmutableMap.java */
-    /* renamed from: b.i.b.b.i0$a */
+    /* JADX INFO: renamed from: b.i.b.b.i0$a */
+    /* JADX INFO: compiled from: RegularImmutableMap.java */
     public static class a<K, V> extends ImmutableSet2<Map.Entry<K, V>> {
 
-        /* renamed from: m */
+        /* JADX INFO: renamed from: m */
         public final transient ImmutableMap2<K, V> f12019m;
 
-        /* renamed from: n */
+        /* JADX INFO: renamed from: n */
         public final transient Object[] f12020n;
 
-        /* renamed from: o */
+        /* JADX INFO: renamed from: o */
         public final transient int f12021o;
 
-        /* renamed from: p */
+        /* JADX INFO: renamed from: p */
         public final transient int f12022p;
 
-        /* compiled from: RegularImmutableMap.java */
-        /* renamed from: b.i.b.b.i0$a$a, reason: collision with other inner class name */
+        /* JADX INFO: renamed from: b.i.b.b.i0$a$a, reason: collision with other inner class name */
+        /* JADX INFO: compiled from: RegularImmutableMap.java */
         public class C13231a extends ImmutableList2<Map.Entry<K, V>> {
             public C13231a() {
             }
@@ -57,7 +57,7 @@ public final class RegularImmutableMap<K, V> extends ImmutableMap2<K, V> {
             }
 
             @Override // p007b.p225i.p355b.p357b.ImmutableCollection
-            /* renamed from: i */
+            /* JADX INFO: renamed from: i */
             public boolean mo6246i() {
                 return true;
             }
@@ -87,13 +87,13 @@ public final class RegularImmutableMap<K, V> extends ImmutableMap2<K, V> {
         }
 
         @Override // p007b.p225i.p355b.p357b.ImmutableCollection
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         public int mo6242d(Object[] objArr, int i) {
             return mo6253c().mo6242d(objArr, i);
         }
 
         @Override // p007b.p225i.p355b.p357b.ImmutableCollection
-        /* renamed from: i */
+        /* JADX INFO: renamed from: i */
         public boolean mo6246i() {
             return true;
         }
@@ -104,13 +104,13 @@ public final class RegularImmutableMap<K, V> extends ImmutableMap2<K, V> {
         }
 
         @Override // p007b.p225i.p355b.p357b.ImmutableCollection
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public UnmodifiableIterator<Map.Entry<K, V>> mo6251j() {
             return mo6253c().m6268p();
         }
 
         @Override // p007b.p225i.p355b.p357b.ImmutableSet2
-        /* renamed from: o */
+        /* JADX INFO: renamed from: o */
         public ImmutableList2<Map.Entry<K, V>> mo6252o() {
             return new C13231a();
         }
@@ -121,14 +121,14 @@ public final class RegularImmutableMap<K, V> extends ImmutableMap2<K, V> {
         }
     }
 
-    /* compiled from: RegularImmutableMap.java */
-    /* renamed from: b.i.b.b.i0$b */
+    /* JADX INFO: renamed from: b.i.b.b.i0$b */
+    /* JADX INFO: compiled from: RegularImmutableMap.java */
     public static final class b<K> extends ImmutableSet2<K> {
 
-        /* renamed from: m */
+        /* JADX INFO: renamed from: m */
         public final transient ImmutableMap2<K, ?> f12023m;
 
-        /* renamed from: n */
+        /* JADX INFO: renamed from: n */
         public final transient ImmutableList2<K> f12024n;
 
         public b(ImmutableMap2<K, ?> immutableMap2, ImmutableList2<K> immutableList2) {
@@ -137,7 +137,7 @@ public final class RegularImmutableMap<K, V> extends ImmutableMap2<K, V> {
         }
 
         @Override // p007b.p225i.p355b.p357b.ImmutableSet2, p007b.p225i.p355b.p357b.ImmutableCollection
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public ImmutableList2<K> mo6253c() {
             return this.f12024n;
         }
@@ -148,13 +148,13 @@ public final class RegularImmutableMap<K, V> extends ImmutableMap2<K, V> {
         }
 
         @Override // p007b.p225i.p355b.p357b.ImmutableCollection
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         public int mo6242d(Object[] objArr, int i) {
             return this.f12024n.mo6242d(objArr, i);
         }
 
         @Override // p007b.p225i.p355b.p357b.ImmutableCollection
-        /* renamed from: i */
+        /* JADX INFO: renamed from: i */
         public boolean mo6246i() {
             return true;
         }
@@ -165,7 +165,7 @@ public final class RegularImmutableMap<K, V> extends ImmutableMap2<K, V> {
         }
 
         @Override // p007b.p225i.p355b.p357b.ImmutableCollection
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public UnmodifiableIterator<K> mo6251j() {
             return this.f12024n.m6268p();
         }
@@ -176,17 +176,17 @@ public final class RegularImmutableMap<K, V> extends ImmutableMap2<K, V> {
         }
     }
 
-    /* compiled from: RegularImmutableMap.java */
-    /* renamed from: b.i.b.b.i0$c */
+    /* JADX INFO: renamed from: b.i.b.b.i0$c */
+    /* JADX INFO: compiled from: RegularImmutableMap.java */
     public static final class c extends ImmutableList2<Object> {
 
-        /* renamed from: l */
+        /* JADX INFO: renamed from: l */
         public final transient Object[] f12025l;
 
-        /* renamed from: m */
+        /* JADX INFO: renamed from: m */
         public final transient int f12026m;
 
-        /* renamed from: n */
+        /* JADX INFO: renamed from: n */
         public final transient int f12027n;
 
         public c(Object[] objArr, int i, int i2) {
@@ -202,7 +202,7 @@ public final class RegularImmutableMap<K, V> extends ImmutableMap2<K, V> {
         }
 
         @Override // p007b.p225i.p355b.p357b.ImmutableCollection
-        /* renamed from: i */
+        /* JADX INFO: renamed from: i */
         public boolean mo6246i() {
             return true;
         }
@@ -220,25 +220,25 @@ public final class RegularImmutableMap<K, V> extends ImmutableMap2<K, V> {
     }
 
     @Override // p007b.p225i.p355b.p357b.ImmutableMap2
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public ImmutableSet2<Map.Entry<K, V>> mo6247b() {
         return new a(this, this.f12017o, 0, this.f12018p);
     }
 
     @Override // p007b.p225i.p355b.p357b.ImmutableMap2
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public ImmutableSet2<K> mo6248c() {
         return new b(this, new c(this.f12017o, 0, this.f12018p));
     }
 
     @Override // p007b.p225i.p355b.p357b.ImmutableMap2
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public ImmutableCollection<V> mo6249d() {
         return new c(this.f12017o, 1, this.f12018p);
     }
 
     @Override // p007b.p225i.p355b.p357b.ImmutableMap2
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public boolean mo6250f() {
         return false;
     }

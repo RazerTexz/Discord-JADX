@@ -10,8 +10,8 @@ import p007b.p100d.p104b.p105a.outline;
 import p507d0.p580t.Iterables2;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: Autocompletable.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: Autocompletable.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final /* data */ class EmojiAutocompletable extends Autocompletable {
     private final boolean animationsEnabled;
     private final Emoji emoji;
@@ -43,12 +43,12 @@ public final /* data */ class EmojiAutocompletable extends Autocompletable {
         return emojiAutocompletable.copy(emoji, z2);
     }
 
-    /* renamed from: component1, reason: from getter */
+    /* JADX INFO: renamed from: component1, reason: from getter */
     public final Emoji getEmoji() {
         return this.emoji;
     }
 
-    /* renamed from: component2, reason: from getter */
+    /* JADX INFO: renamed from: component2, reason: from getter */
     public final boolean getAnimationsEnabled() {
         return this.animationsEnabled;
     }
@@ -107,15 +107,18 @@ public final /* data */ class EmojiAutocompletable extends Autocompletable {
     }
 
     /* JADX WARN: Multi-variable type inference failed */
+    /* JADX WARN: Type inference failed for: r1v1, types: [int] */
+    /* JADX WARN: Type inference failed for: r1v2 */
+    /* JADX WARN: Type inference failed for: r1v3 */
     public int hashCode() {
         Emoji emoji = this.emoji;
         int iHashCode = (emoji != null ? emoji.hashCode() : 0) * 31;
         boolean z2 = this.animationsEnabled;
-        int i = z2;
-        if (z2 != 0) {
-            i = 1;
+        ?? r1 = z2;
+        if (z2) {
+            r1 = 1;
         }
-        return iHashCode + i;
+        return iHashCode + r1;
     }
 
     @Override // com.discord.widgets.chat.input.autocomplete.Autocompletable

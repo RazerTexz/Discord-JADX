@@ -3,9 +3,9 @@ package com.discord.widgets.settings.premium;
 import kotlin.jvm.functions.Function0;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetClaimOutboundPromo.kt */
-/* renamed from: com.discord.widgets.settings.premium.WidgetClaimOutboundPromo$viewModel$2, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.settings.premium.WidgetClaimOutboundPromo$viewModel$2, reason: use source file name */
+/* JADX INFO: compiled from: WidgetClaimOutboundPromo.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetClaimOutboundPromo4 extends Lambda implements Function0<ClaimOutboundPromoViewModel> {
     public final /* synthetic */ WidgetClaimOutboundPromo this$0;
 

@@ -6,9 +6,9 @@ import kotlin.jvm.functions.Function1;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: GuildScheduledEventDetailsViewModel.kt */
-/* renamed from: com.discord.widgets.guildscheduledevent.GuildScheduledEventDetailsViewModel$Companion$observeStores$1$rsvpUsers$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.guildscheduledevent.GuildScheduledEventDetailsViewModel$Companion$observeStores$1$rsvpUsers$1, reason: use source file name */
+/* JADX INFO: compiled from: GuildScheduledEventDetailsViewModel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class GuildScheduledEventDetailsViewModel5 extends Lambda implements Function1<GuildScheduledEventUser, GuildScheduledEventRsvpUserListItem.RsvpUser> {
     public final /* synthetic */ GuildScheduledEvent $guildScheduledEvent;
 
@@ -23,7 +23,7 @@ public final class GuildScheduledEventDetailsViewModel5 extends Lambda implement
         return invoke2(guildScheduledEventUser);
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final GuildScheduledEventRsvpUserListItem.RsvpUser invoke2(GuildScheduledEventUser guildScheduledEventUser) {
         Intrinsics3.checkNotNullParameter(guildScheduledEventUser, "guildScheduledEventUser");
         return GuildScheduledEventRsvpUserListItem.RsvpUser.INSTANCE.from(guildScheduledEventUser, this.$guildScheduledEvent.getGuildId());

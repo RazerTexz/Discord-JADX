@@ -17,8 +17,8 @@ import kotlin.jvm.internal.DefaultConstructorMarker;
 import p007b.p008a.p027k.FormatUtils;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: PaymentSourceView.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: PaymentSourceView.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class PaymentSourceView extends ConstraintLayout {
     private final PaymentSourceViewBinding binding;
 

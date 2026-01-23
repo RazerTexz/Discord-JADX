@@ -26,38 +26,38 @@ import p007b.p225i.p226a.p242c.p267x2.p276k0.PsExtractor;
 import p007b.p225i.p226a.p242c.p267x2.p276k0.TsExtractor;
 import p007b.p225i.p226a.p242c.p267x2.p277l0.WavExtractor;
 
-/* compiled from: DefaultExtractorsFactory.java */
-/* renamed from: b.i.a.c.x2.f, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.x2.f, reason: use source file name */
+/* JADX INFO: compiled from: DefaultExtractorsFactory.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class DefaultExtractorsFactory implements ExtractorsFactory2 {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final int[] f8151a = {5, 4, 12, 8, 3, 10, 9, 11, 6, 2, 0, 1, 7, 14};
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static final a f8152b = new a();
 
-    /* compiled from: DefaultExtractorsFactory.java */
-    /* renamed from: b.i.a.c.x2.f$a */
+    /* JADX INFO: renamed from: b.i.a.c.x2.f$a */
+    /* JADX INFO: compiled from: DefaultExtractorsFactory.java */
     public static final class a {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final AtomicBoolean f8153a = new AtomicBoolean(false);
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         @Nullable
         @GuardedBy("extensionLoaded")
         public Constructor<? extends Extractor> f8154b;
     }
 
     @Override // p007b.p225i.p226a.p242c.p267x2.ExtractorsFactory2
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public synchronized Extractor[] mo3630a() {
         return mo3631b(Uri.EMPTY, new HashMap());
     }
 
     @Override // p007b.p225i.p226a.p242c.p267x2.ExtractorsFactory2
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public synchronized Extractor[] mo3631b(Uri uri, Map<String, List<String>> map) {
         ArrayList arrayList;
         arrayList = new ArrayList(14);
@@ -77,7 +77,7 @@ public final class DefaultExtractorsFactory implements ExtractorsFactory2 {
         return (Extractor[]) arrayList.toArray(new Extractor[arrayList.size()]);
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final void m3664c(int i, List<Extractor> list) {
         Extractor extractorNewInstance;
         Constructor<? extends Extractor> constructor;

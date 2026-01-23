@@ -23,7 +23,7 @@ import androidx.annotation.StyleRes;
 import androidx.view.LifecycleOwner;
 import androidx.view.Observer;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class DialogFragment extends Fragment implements DialogInterface.OnCancelListener, DialogInterface.OnDismissListener {
     private static final String SAVED_BACK_STACK_ID = "android:backStackId";
     private static final String SAVED_CANCELABLE = "android:cancelable";
@@ -55,7 +55,7 @@ public class DialogFragment extends Fragment implements DialogInterface.OnCancel
     private int mTheme;
     private boolean mViewDestroyed;
 
-    /* renamed from: androidx.fragment.app.DialogFragment$1 */
+    /* JADX INFO: renamed from: androidx.fragment.app.DialogFragment$1 */
     public class RunnableC03561 implements Runnable {
         public RunnableC03561() {
         }
@@ -67,7 +67,7 @@ public class DialogFragment extends Fragment implements DialogInterface.OnCancel
         }
     }
 
-    /* renamed from: androidx.fragment.app.DialogFragment$2 */
+    /* JADX INFO: renamed from: androidx.fragment.app.DialogFragment$2 */
     public class DialogInterfaceOnCancelListenerC03572 implements DialogInterface.OnCancelListener {
         public DialogInterfaceOnCancelListenerC03572() {
         }
@@ -82,7 +82,7 @@ public class DialogFragment extends Fragment implements DialogInterface.OnCancel
         }
     }
 
-    /* renamed from: androidx.fragment.app.DialogFragment$3 */
+    /* JADX INFO: renamed from: androidx.fragment.app.DialogFragment$3 */
     public class DialogInterfaceOnDismissListenerC03583 implements DialogInterface.OnDismissListener {
         public DialogInterfaceOnDismissListenerC03583() {
         }
@@ -97,7 +97,7 @@ public class DialogFragment extends Fragment implements DialogInterface.OnCancel
         }
     }
 
-    /* renamed from: androidx.fragment.app.DialogFragment$4 */
+    /* JADX INFO: renamed from: androidx.fragment.app.DialogFragment$4 */
     public class C03594 implements Observer<LifecycleOwner> {
         public C03594() {
         }
@@ -109,7 +109,7 @@ public class DialogFragment extends Fragment implements DialogInterface.OnCancel
         }
 
         @SuppressLint({"SyntheticAccessor"})
-        /* renamed from: onChanged, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: onChanged, reason: avoid collision after fix types in other method */
         public void onChanged2(LifecycleOwner lifecycleOwner) {
             if (lifecycleOwner == null || !DialogFragment.access$200(DialogFragment.this)) {
                 return;
@@ -127,7 +127,7 @@ public class DialogFragment extends Fragment implements DialogInterface.OnCancel
         }
     }
 
-    /* renamed from: androidx.fragment.app.DialogFragment$5 */
+    /* JADX INFO: renamed from: androidx.fragment.app.DialogFragment$5 */
     public class C03605 extends FragmentContainer {
         public final /* synthetic */ FragmentContainer val$fragmentContainer;
 

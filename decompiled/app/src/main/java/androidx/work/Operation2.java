@@ -11,9 +11,9 @@ import p507d0.p592z.p594d.InlineMarker;
 import p507d0.p592z.p594d.Intrinsics3;
 import p659s.p660a.CancellableContinuationImpl5;
 
-/* compiled from: Operation.kt */
-/* renamed from: androidx.work.OperationKt, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: androidx.work.OperationKt, reason: use source file name */
+/* JADX INFO: compiled from: Operation.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class Operation2 {
     public static final Object await(Operation operation, Continuation<? super Operation.State.SUCCESS> continuation) throws Throwable {
         ListenableFuture8<Operation.State.SUCCESS> result = operation.getResult();

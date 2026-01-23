@@ -5,19 +5,19 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 
-/* compiled from: HttpDataSource.java */
-/* renamed from: b.i.a.c.e3.u, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.e3.u, reason: use source file name */
+/* JADX INFO: compiled from: HttpDataSource.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class HttpDataSource2 {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final Map<String, String> f6626a = new HashMap();
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     @Nullable
     public Map<String, String> f6627b;
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public synchronized Map<String, String> m2874a() {
         if (this.f6627b == null) {
             this.f6627b = Collections.unmodifiableMap(new HashMap(this.f6626a));

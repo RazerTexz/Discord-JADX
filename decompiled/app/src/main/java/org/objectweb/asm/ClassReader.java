@@ -7,7 +7,7 @@ import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 
-/* loaded from: discord-126021.apk:org/objectweb/asm/ClassReader.SCL.lombok */
+/* JADX INFO: loaded from: discord-126021.apk:org/objectweb/asm/ClassReader.SCL.lombok */
 public class ClassReader {
     public static final int SKIP_CODE = 1;
     public static final int SKIP_DEBUG = 2;
@@ -16,7 +16,7 @@ public class ClassReader {
     static final int EXPAND_ASM_INSNS = 256;
     private static final int INPUT_STREAM_DATA_CHUNK_SIZE = 4096;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     @Deprecated
     public final byte[] f27597b;
     public final int header;
@@ -115,7 +115,12 @@ public class ClassReader {
         this(readStream(ClassLoader.getSystemResourceAsStream(className.replace('.', MentionUtils.SLASH_CHAR) + ".class"), true));
     }
 
+    /* JADX WARN: Removed duplicated region for block: B:30:0x007b  */
+    /*
+        Code decompiled incorrectly, please refer to instructions dump.
+    */
     private static byte[] readStream(InputStream inputStream, boolean close) throws IOException {
+        byte[] data;
         if (inputStream == null) {
             throw new IOException("Class not found");
         }
@@ -124,42 +129,45 @@ public class ClassReader {
             Throwable th = null;
             try {
                 try {
-                    byte[] data = new byte[4096];
-                    while (true) {
-                        int bytesRead = inputStream.read(data, 0, data.length);
-                        if (bytesRead == -1) {
-                            break;
-                        }
-                        outputStream.write(data, 0, bytesRead);
-                    }
-                    outputStream.flush();
-                    byte[] byteArray = outputStream.toByteArray();
-                    if (outputStream != null) {
-                        if (0 != 0) {
-                            try {
-                                outputStream.close();
-                            } catch (Throwable th2) {
-                            }
-                        } else {
-                            outputStream.close();
-                        }
-                    }
-                    return byteArray;
+                    data = new byte[4096];
                 } finally {
                 }
-            } catch (Throwable th3) {
+            } catch (Throwable th2) {
+                if (outputStream != null) {
+                }
+                throw th2;
+            }
+            while (true) {
+                int bytesRead = inputStream.read(data, 0, data.length);
+                if (bytesRead == -1) {
+                    break;
+                }
+                outputStream.write(data, 0, bytesRead);
                 if (outputStream != null) {
                     if (th != null) {
                         try {
                             outputStream.close();
-                        } catch (Throwable th4) {
+                        } catch (Throwable th3) {
                         }
                     } else {
                         outputStream.close();
                     }
                 }
-                throw th3;
+                throw th2;
             }
+            outputStream.flush();
+            byte[] byteArray = outputStream.toByteArray();
+            if (outputStream != null) {
+                if (0 != 0) {
+                    try {
+                        outputStream.close();
+                    } catch (Throwable th4) {
+                    }
+                } else {
+                    outputStream.close();
+                }
+            }
+            return byteArray;
         } finally {
             if (close) {
                 inputStream.close();
@@ -2681,7 +2689,7 @@ public class ClassReader {
 
     public long readLong(int offset) {
         long l1 = readInt(offset);
-        long l0 = readInt(offset + 4) & 4294967295L;
+        long l0 = ((long) readInt(offset + 4)) & 4294967295L;
         return (l1 << 32) | l0;
     }
 

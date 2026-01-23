@@ -4,13 +4,13 @@ import java.util.Collection;
 import java.util.List;
 import p507d0.p513e0.p514p.p515d.p517m0.p567n.KotlinType;
 
-/* compiled from: CallableDescriptor.java */
-/* renamed from: d0.e0.p.d.m0.c.a, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.c.a, reason: use source file name */
+/* JADX INFO: compiled from: CallableDescriptor.java */
+/* JADX INFO: loaded from: classes3.dex */
 public interface CallableDescriptor extends DeclarationDescriptorNonRoot, DeclarationDescriptorWithVisibility, Substitutable<CallableDescriptor> {
 
-    /* compiled from: CallableDescriptor.java */
-    /* renamed from: d0.e0.p.d.m0.c.a$a */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.c.a$a */
+    /* JADX INFO: compiled from: CallableDescriptor.java */
     public interface a<V> {
     }
 

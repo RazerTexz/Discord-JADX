@@ -9,7 +9,7 @@ import androidx.work.impl.constraints.trackers.Trackers;
 import androidx.work.impl.model.WorkSpec;
 import androidx.work.impl.utils.taskexecutor.TaskExecutor;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class NetworkConnectedController extends ConstraintController<NetworkState> {
     public NetworkConnectedController(Context context, TaskExecutor taskExecutor) {
         super(Trackers.getInstance(context, taskExecutor).getNetworkStateTracker());
@@ -25,7 +25,7 @@ public class NetworkConnectedController extends ConstraintController<NetworkStat
         return isConstrained2(networkState);
     }
 
-    /* renamed from: isConstrained, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: isConstrained, reason: avoid collision after fix types in other method */
     public boolean isConstrained2(@NonNull NetworkState networkState) {
         return Build.VERSION.SDK_INT >= 26 ? (networkState.isConnected() && networkState.isValidated()) ? false : true : !networkState.isConnected();
     }

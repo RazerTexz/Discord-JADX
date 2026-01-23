@@ -10,9 +10,9 @@ import com.discord.widgets.servers.WidgetServerSettingsEditIntegration;
 import java.util.Map;
 import p658rx.functions.Func5;
 
-/* compiled from: WidgetServerSettingsEditIntegration.kt */
-/* renamed from: com.discord.widgets.servers.WidgetServerSettingsEditIntegration$Model$Companion$get$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.servers.WidgetServerSettingsEditIntegration$Model$Companion$get$1, reason: use source file name */
+/* JADX INFO: compiled from: WidgetServerSettingsEditIntegration.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetServerSettingsEditIntegration2<T1, T2, T3, T4, T5, R> implements Func5<MeUser, Guild, Map<Long, ? extends GuildRole>, Long, ModelGuildIntegration, WidgetServerSettingsEditIntegration.Model> {
     public static final WidgetServerSettingsEditIntegration2 INSTANCE = new WidgetServerSettingsEditIntegration2();
 
@@ -21,7 +21,7 @@ public final class WidgetServerSettingsEditIntegration2<T1, T2, T3, T4, T5, R> i
         return call2(meUser, guild, (Map<Long, GuildRole>) map, l, modelGuildIntegration);
     }
 
-    /* renamed from: call, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
     public final WidgetServerSettingsEditIntegration.Model call2(MeUser meUser, Guild guild, Map<Long, GuildRole> map, Long l, ModelGuildIntegration modelGuildIntegration) {
         if (guild == null || map == null || l == null || modelGuildIntegration == null) {
             return null;

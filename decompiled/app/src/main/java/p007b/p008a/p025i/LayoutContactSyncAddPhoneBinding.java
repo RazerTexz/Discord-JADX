@@ -8,20 +8,20 @@ import androidx.viewbinding.ViewBinding;
 import com.discord.views.phone.PhoneOrEmailInputView;
 import com.google.android.material.button.MaterialButton;
 
-/* compiled from: LayoutContactSyncAddPhoneBinding.java */
-/* renamed from: b.a.i.j0, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.a.i.j0, reason: use source file name */
+/* JADX INFO: compiled from: LayoutContactSyncAddPhoneBinding.java */
+/* JADX INFO: loaded from: classes.dex */
 public final class LayoutContactSyncAddPhoneBinding implements ViewBinding {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     @NonNull
     public final ConstraintLayout f966a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     @NonNull
     public final PhoneOrEmailInputView f967b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     @NonNull
     public final MaterialButton f968c;
 

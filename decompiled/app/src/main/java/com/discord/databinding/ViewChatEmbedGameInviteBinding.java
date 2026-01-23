@@ -12,42 +12,42 @@ import com.discord.C5419R;
 import com.facebook.drawee.view.SimpleDraweeView;
 import com.google.android.material.button.MaterialButton;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public final class ViewChatEmbedGameInviteBinding implements ViewBinding {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     @NonNull
     public final View f15386a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     @NonNull
     public final MaterialButton f15387b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     @NonNull
     public final TextView f15388c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     @NonNull
     public final SimpleDraweeView f15389d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     @NonNull
     public final SimpleDraweeView f15390e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     @NonNull
     public final SimpleDraweeView f15391f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     @NonNull
     public final TextView f15392g;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     @NonNull
     public final RecyclerView f15393h;
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     @NonNull
     public final TextView f15394i;
 
@@ -64,7 +64,7 @@ public final class ViewChatEmbedGameInviteBinding implements ViewBinding {
     }
 
     @NonNull
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static ViewChatEmbedGameInviteBinding m8392a(@NonNull LayoutInflater layoutInflater, @NonNull ViewGroup viewGroup) {
         layoutInflater.inflate(C5419R.layout.view_chat_embed_game_invite, viewGroup);
         int i = C5419R.id.item_game_invite_action_btn;

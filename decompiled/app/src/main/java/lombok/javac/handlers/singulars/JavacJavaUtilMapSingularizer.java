@@ -14,7 +14,7 @@ import lombok.javac.JavacTreeMaker;
 import lombok.javac.handlers.JavacHandlerUtil;
 import lombok.javac.handlers.JavacSingularsRecipes;
 
-/* loaded from: discord-126021.apk:lombok/javac/handlers/singulars/JavacJavaUtilMapSingularizer.SCL.lombok */
+/* JADX INFO: loaded from: discord-126021.apk:lombok/javac/handlers/singulars/JavacJavaUtilMapSingularizer.SCL.lombok */
 public class JavacJavaUtilMapSingularizer extends JavacJavaUtilSingularizer {
     @Override // lombok.javac.handlers.JavacSingularsRecipes.JavacSingularizer
     public LombokImmutableList<String> getSupportedTypes() {

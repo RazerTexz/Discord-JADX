@@ -7,16 +7,16 @@ import java.io.InputStream;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-/* compiled from: Closeables.java */
-/* renamed from: b.f.d.d.a, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.f.d.d.a, reason: use source file name */
+/* JADX INFO: compiled from: Closeables.java */
+/* JADX INFO: loaded from: classes.dex */
 public final class Closeables {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     @VisibleForTesting
     public static final Logger f3091a = Logger.getLogger(Closeables.class.getName());
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static void m965a(Closeable closeable, boolean z2) throws IOException {
         if (closeable == null) {
             return;
@@ -31,7 +31,7 @@ public final class Closeables {
         }
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static void m966b(InputStream inputStream) {
         try {
             m965a(inputStream, true);

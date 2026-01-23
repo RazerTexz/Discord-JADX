@@ -39,8 +39,8 @@ import p507d0.p580t.MapsJVM;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: StoreContactSync.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: StoreContactSync.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class StoreContactSync extends StoreV2 {
     private final Clock clock;
     private final StoreUserConnections connectionsStore;
@@ -56,8 +56,8 @@ public final class StoreContactSync extends StoreV2 {
     private final StoreUserSettings userSettingsStore;
     private final StoreUser usersStore;
 
-    /* compiled from: StoreContactSync.kt */
-    /* renamed from: com.discord.stores.StoreContactSync$backgroundUploadContacts$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreContactSync$backgroundUploadContacts$1 */
+    /* JADX INFO: compiled from: StoreContactSync.kt */
     public static final class C58581 extends Lambda implements Function1<BulkFriendSuggestions, TrackNetworkMetadata2> {
         public static final C58581 INSTANCE = new C58581();
 
@@ -70,14 +70,14 @@ public final class StoreContactSync extends StoreV2 {
             return invoke2(bulkFriendSuggestions);
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final TrackNetworkMetadata2 invoke2(BulkFriendSuggestions bulkFriendSuggestions) {
             return new TrackNetworkActionUserContactsSync();
         }
     }
 
-    /* compiled from: StoreContactSync.kt */
-    /* renamed from: com.discord.stores.StoreContactSync$clearDismissStates$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreContactSync$clearDismissStates$1 */
+    /* JADX INFO: compiled from: StoreContactSync.kt */
     public static final class C58591 extends Lambda implements Function0<Unit> {
         public C58591() {
             super(0);
@@ -89,15 +89,15 @@ public final class StoreContactSync extends StoreV2 {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             StoreContactSync.access$getDismissState$p(StoreContactSync.this).clear();
             StoreContactSync.this.markChanged();
         }
     }
 
-    /* compiled from: StoreContactSync.kt */
-    /* renamed from: com.discord.stores.StoreContactSync$createContactSyncNotice$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreContactSync$createContactSyncNotice$1 */
+    /* JADX INFO: compiled from: StoreContactSync.kt */
     public static final class C58601 extends Lambda implements Function1<FragmentActivity, Boolean> {
         public static final C58601 INSTANCE = new C58601();
 
@@ -110,7 +110,7 @@ public final class StoreContactSync extends StoreV2 {
             return Boolean.valueOf(invoke2(fragmentActivity));
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final boolean invoke2(FragmentActivity fragmentActivity) {
             Intrinsics3.checkNotNullParameter(fragmentActivity, "appActivity");
             AnalyticsTracker.INSTANCE.openPopout("Contact Sync", new Traits.Location("Release Upsell", null, null, null, null, 30, null));
@@ -123,8 +123,8 @@ public final class StoreContactSync extends StoreV2 {
         }
     }
 
-    /* compiled from: StoreContactSync.kt */
-    /* renamed from: com.discord.stores.StoreContactSync$dismissFriendsListUpsell$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreContactSync$dismissFriendsListUpsell$1 */
+    /* JADX INFO: compiled from: StoreContactSync.kt */
     public static final class C58611 extends Lambda implements Function0<Unit> {
         public C58611() {
             super(0);
@@ -136,15 +136,15 @@ public final class StoreContactSync extends StoreV2 {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             StoreContactSync.access$getDismissState$p(StoreContactSync.this).put("CONTACT_SYNC_DISMISS_FRIENDS_UPSELL", Boolean.TRUE);
             StoreContactSync.this.markChanged();
         }
     }
 
-    /* compiled from: StoreContactSync.kt */
-    /* renamed from: com.discord.stores.StoreContactSync$dismissUpsell$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreContactSync$dismissUpsell$1 */
+    /* JADX INFO: compiled from: StoreContactSync.kt */
     public static final class C58621 extends Lambda implements Function0<Unit> {
         public C58621() {
             super(0);
@@ -156,15 +156,15 @@ public final class StoreContactSync extends StoreV2 {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             StoreContactSync.access$getDismissState$p(StoreContactSync.this).put("CONTACT_SYNC_DISMISS_UPSELL", Boolean.TRUE);
             StoreContactSync.this.markChanged();
         }
     }
 
-    /* compiled from: StoreContactSync.kt */
-    /* renamed from: com.discord.stores.StoreContactSync$handleConnectionOpen$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreContactSync$handleConnectionOpen$1 */
+    /* JADX INFO: compiled from: StoreContactSync.kt */
     public static final class C58631 extends Lambda implements Function0<Unit> {
         public C58631() {
             super(0);
@@ -176,14 +176,14 @@ public final class StoreContactSync extends StoreV2 {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             StoreContactSync.this.handlePostConnectionOpen();
         }
     }
 
-    /* compiled from: StoreContactSync.kt */
-    /* renamed from: com.discord.stores.StoreContactSync$setContactSyncUploadTimestamp$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreContactSync$setContactSyncUploadTimestamp$1 */
+    /* JADX INFO: compiled from: StoreContactSync.kt */
     public static final class C58641 extends Lambda implements Function0<Unit> {
         public final /* synthetic */ long $timestamp;
 
@@ -199,7 +199,7 @@ public final class StoreContactSync extends StoreV2 {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             StoreContactSync storeContactSync = StoreContactSync.this;
             StoreContactSync.access$setShouldTryUploadContacts$p(storeContactSync, StoreContactSync.access$getClock$p(storeContactSync).currentTimeMillis() - this.$timestamp > 86400000);

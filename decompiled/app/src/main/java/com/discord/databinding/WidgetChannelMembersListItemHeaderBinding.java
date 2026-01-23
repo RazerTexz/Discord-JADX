@@ -11,18 +11,18 @@ import androidx.viewbinding.ViewBinding;
 import com.discord.C5419R;
 import com.discord.widgets.roles.RoleIconView;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public final class WidgetChannelMembersListItemHeaderBinding implements ViewBinding {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     @NonNull
     public final LinearLayout f15856a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     @NonNull
     public final RoleIconView f15857b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     @NonNull
     public final TextView f15858c;
 
@@ -33,7 +33,7 @@ public final class WidgetChannelMembersListItemHeaderBinding implements ViewBind
     }
 
     @NonNull
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static WidgetChannelMembersListItemHeaderBinding m8404a(@NonNull LayoutInflater layoutInflater, @Nullable ViewGroup viewGroup, boolean z2) {
         View viewInflate = layoutInflater.inflate(C5419R.layout.widget_channel_members_list_item_header, viewGroup, false);
         if (z2) {

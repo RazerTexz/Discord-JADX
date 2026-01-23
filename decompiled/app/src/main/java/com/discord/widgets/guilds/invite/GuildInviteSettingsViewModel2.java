@@ -8,9 +8,9 @@ import java.util.Map;
 import p507d0.p592z.p594d.Intrinsics3;
 import p658rx.functions.Func2;
 
-/* compiled from: GuildInviteSettingsViewModel.kt */
-/* renamed from: com.discord.widgets.guilds.invite.GuildInviteSettingsViewModel$Companion$observeStoreState$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.guilds.invite.GuildInviteSettingsViewModel$Companion$observeStoreState$1, reason: use source file name */
+/* JADX INFO: compiled from: GuildInviteSettingsViewModel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class GuildInviteSettingsViewModel2<T1, T2, R> implements Func2<ModelInvite.Settings, Map<Long, ? extends Channel>, GuildInviteSettingsViewModel.StoreState> {
     public static final GuildInviteSettingsViewModel2 INSTANCE = new GuildInviteSettingsViewModel2();
 
@@ -19,7 +19,7 @@ public final class GuildInviteSettingsViewModel2<T1, T2, R> implements Func2<Mod
         return call2(settings, (Map<Long, Channel>) map);
     }
 
-    /* renamed from: call, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
     public final GuildInviteSettingsViewModel.StoreState call2(ModelInvite.Settings settings, Map<Long, Channel> map) {
         Intrinsics3.checkNotNullExpressionValue(settings, "inviteSettings");
         Intrinsics3.checkNotNullExpressionValue(map, "invitableChannels");

@@ -5,7 +5,7 @@ import android.view.ViewTreeObserver;
 import androidx.annotation.NonNull;
 import java.util.Objects;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public final class OneShotPreDrawListener implements ViewTreeObserver.OnPreDrawListener, View.OnAttachStateChangeListener {
     private final Runnable mRunnable;
     private final View mView;

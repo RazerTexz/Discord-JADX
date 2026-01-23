@@ -11,33 +11,33 @@ import com.google.android.material.timepicker.TimePickerView;
 import java.util.Locale;
 import java.util.Objects;
 
-/* compiled from: TimePickerClockPresenter.java */
-/* renamed from: b.i.a.g.k.f, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.g.k.f, reason: use source file name */
+/* JADX INFO: compiled from: TimePickerClockPresenter.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class TimePickerClockPresenter implements ClockHandView.OnRotateListener, TimePickerView.InterfaceC11031d, TimePickerView.InterfaceC11030c, ClockHandView.OnActionUpListener, TimePickerPresenter {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static final String[] f11865j = {"12", "1", ExifInterface.GPS_MEASUREMENT_2D, ExifInterface.GPS_MEASUREMENT_3D, "4", "5", "6", "7", "8", "9", "10", "11"};
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public static final String[] f11866k = {"00", ExifInterface.GPS_MEASUREMENT_2D, "4", "6", "8", "10", "12", "14", "16", "18", "20", "22"};
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public static final String[] f11867l = {"00", "5", "10", "15", "20", "25", "30", "35", "40", "45", "50", "55"};
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public TimePickerView f11868m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public TimeModel f11869n;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public float f11870o;
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public float f11871p;
 
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     public boolean f11872q = false;
 
     public TimePickerClockPresenter(TimePickerView timePickerView, TimeModel timeModel) {
@@ -58,7 +58,7 @@ public class TimePickerClockPresenter implements ClockHandView.OnRotateListener,
     }
 
     @Override // p007b.p225i.p226a.p341g.p352k.TimePickerPresenter
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public void mo6171a() {
         this.f11871p = m6174d() * this.f11869n.m9161b();
         TimeModel timeModel = this.f11869n;
@@ -68,23 +68,23 @@ public class TimePickerClockPresenter implements ClockHandView.OnRotateListener,
     }
 
     @Override // com.google.android.material.timepicker.TimePickerView.InterfaceC11031d
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public void mo6172b(int i) {
         m6175e(i, true);
     }
 
     @Override // p007b.p225i.p226a.p341g.p352k.TimePickerPresenter
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public void mo6173c() {
         this.f11868m.setVisibility(8);
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final int m6174d() {
         return this.f11869n.f21222l == 1 ? 15 : 30;
     }
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public void m6175e(int i, boolean z2) {
         boolean z3 = i == 12;
         TimePickerView timePickerView = this.f11868m;
@@ -100,7 +100,7 @@ public class TimePickerClockPresenter implements ClockHandView.OnRotateListener,
         ViewCompat.setAccessibilityDelegate(this.f11868m.f21227j, new ClickActionDelegate(this.f11868m.getContext(), C10817R.string.material_minute_selection));
     }
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final void m6176f() {
         TimePickerView timePickerView = this.f11868m;
         TimeModel timeModel = this.f11869n;
@@ -115,7 +115,7 @@ public class TimePickerClockPresenter implements ClockHandView.OnRotateListener,
         timePickerView.f21228k.setText(str2);
     }
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public final void m6177g(String[] strArr, String str) {
         for (int i = 0; i < strArr.length; i++) {
             strArr[i] = TimeModel.m9160a(this.f11868m.getResources(), strArr[i], str);

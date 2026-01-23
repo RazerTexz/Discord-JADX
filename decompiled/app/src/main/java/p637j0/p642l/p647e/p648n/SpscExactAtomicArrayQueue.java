@@ -8,9 +8,9 @@ import java.util.concurrent.atomic.AtomicLong;
 import java.util.concurrent.atomic.AtomicReferenceArray;
 import p637j0.p642l.p647e.UtilityFunctions;
 
-/* compiled from: SpscExactAtomicArrayQueue.java */
-/* renamed from: j0.l.e.n.d, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: j0.l.e.n.d, reason: use source file name */
+/* JADX INFO: compiled from: SpscExactAtomicArrayQueue.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class SpscExactAtomicArrayQueue<T> extends AtomicReferenceArray<T> implements Queue<T> {
     private static final long serialVersionUID = 6210984603741293445L;
     public final int capacitySkip;
@@ -76,7 +76,7 @@ public final class SpscExactAtomicArrayQueue<T> extends AtomicReferenceArray<T> 
         Objects.requireNonNull(t);
         long j = this.producerIndex.get();
         int i = this.mask;
-        if (get(((int) (this.capacitySkip + j)) & i) != null) {
+        if (get(((int) (((long) this.capacitySkip) + j)) & i) != null) {
             return false;
         }
         this.producerIndex.lazySet(j + 1);

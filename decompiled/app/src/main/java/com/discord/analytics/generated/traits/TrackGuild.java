@@ -3,8 +3,8 @@ package com.discord.analytics.generated.traits;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: TrackGuild.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: TrackGuild.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class TrackGuild {
     private final Long guildId;
     private final Boolean guildIsVip;
@@ -38,12 +38,12 @@ public final /* data */ class TrackGuild {
         this.isOwner = bool3;
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static TrackGuild m7530a(TrackGuild trackGuild, Long l, Long l2, Long l3, Long l4, Long l5, Long l6, Long l7, Long l8, Boolean bool, Boolean bool2, Long l9, Boolean bool3, int i) {
         return new TrackGuild((i & 1) != 0 ? trackGuild.guildId : null, (i & 2) != 0 ? trackGuild.guildSizeTotal : null, (i & 4) != 0 ? trackGuild.guildMemberNumRoles : null, (i & 8) != 0 ? trackGuild.guildMemberPerms : null, (i & 16) != 0 ? trackGuild.guildNumChannels : null, (i & 32) != 0 ? trackGuild.guildNumTextChannels : null, (i & 64) != 0 ? trackGuild.guildNumVoiceChannels : null, (i & 128) != 0 ? trackGuild.guildNumRoles : null, (i & 256) != 0 ? trackGuild.guildIsVip : null, (i & 512) != 0 ? trackGuild.isMember : bool2, (i & 1024) != 0 ? trackGuild.numVoiceChannelsActive : null, (i & 2048) != 0 ? trackGuild.isOwner : bool3);
     }
 
-    /* renamed from: b, reason: from getter */
+    /* JADX INFO: renamed from: b, reason: from getter */
     public final Long getGuildId() {
         return this.guildId;
     }

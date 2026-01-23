@@ -13,7 +13,6 @@ import com.discord.utilities.rest.SendUtils;
 import com.discord.utilities.time.Clock;
 import com.google.gson.Gson;
 import com.google.gson.JsonElement;
-import com.google.gson.JsonSyntaxException;
 import com.google.gson.reflect.TypeToken;
 import java.lang.reflect.Type;
 import java.util.List;
@@ -43,106 +42,106 @@ import p600f0.OkHttpClient;
 import p600f0.p601e0.p609k.Platform2;
 import p600f0.p601e0.p613n.RealWebSocket;
 
-/* compiled from: RtcControlSocket.kt */
-/* renamed from: b.a.q.n0.a, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.a.q.n0.a, reason: use source file name */
+/* JADX INFO: compiled from: RtcControlSocket.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class RtcControlSocket extends WebSocketListener implements DebugPrintable {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static int f1763j;
 
-    /* renamed from: A */
+    /* JADX INFO: renamed from: A */
     public Long f1766A;
 
-    /* renamed from: B */
+    /* JADX INFO: renamed from: B */
     public c f1767B;
 
-    /* renamed from: C */
+    /* JADX INFO: renamed from: C */
     public boolean f1768C;
 
-    /* renamed from: D */
+    /* JADX INFO: renamed from: D */
     public final String f1769D;
 
-    /* renamed from: E */
+    /* JADX INFO: renamed from: E */
     public final String f1770E;
 
-    /* renamed from: F */
+    /* JADX INFO: renamed from: F */
     public final SSLSocketFactory f1771F;
 
-    /* renamed from: G */
+    /* JADX INFO: renamed from: G */
     public final Logger f1772G;
 
-    /* renamed from: H */
+    /* JADX INFO: renamed from: H */
     public final MediaEngineExecutorService f1773H;
 
-    /* renamed from: I */
+    /* JADX INFO: renamed from: I */
     public final Clock f1774I;
 
-    /* renamed from: J */
+    /* JADX INFO: renamed from: J */
     public final String f1775J;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public final String f1776m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public final Gson f1777n;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public final Timer f1778o;
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public final Backoff f1779p;
 
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     public final CopyOnWriteArraySet<d> f1780q;
 
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     public int f1781r;
 
-    /* renamed from: s */
+    /* JADX INFO: renamed from: s */
     public WebSocket f1782s;
 
-    /* renamed from: t */
+    /* JADX INFO: renamed from: t */
     public String f1783t;
 
-    /* renamed from: u */
+    /* JADX INFO: renamed from: u */
     public String f1784u;
 
-    /* renamed from: v */
+    /* JADX INFO: renamed from: v */
     public Long f1785v;
 
-    /* renamed from: w */
+    /* JADX INFO: renamed from: w */
     public boolean f1786w;
 
-    /* renamed from: x */
+    /* JADX INFO: renamed from: x */
     public RtcControlSocket2 f1787x;
 
-    /* renamed from: y */
+    /* JADX INFO: renamed from: y */
     public Long f1788y;
 
-    /* renamed from: z */
+    /* JADX INFO: renamed from: z */
     public TimerTask f1789z;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public static final b f1765l = new b(null);
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public static final Type f1764k = new a().getType();
 
-    /* compiled from: RtcControlSocket.kt */
-    /* renamed from: b.a.q.n0.a$a */
+    /* JADX INFO: renamed from: b.a.q.n0.a$a */
+    /* JADX INFO: compiled from: RtcControlSocket.kt */
     public static final class a extends TypeToken<Map<String, ? extends Integer>> {
     }
 
-    /* compiled from: RtcControlSocket.kt */
-    /* renamed from: b.a.q.n0.a$b */
+    /* JADX INFO: renamed from: b.a.q.n0.a$b */
+    /* JADX INFO: compiled from: RtcControlSocket.kt */
     public static final class b {
         public b(DefaultConstructorMarker defaultConstructorMarker) {
         }
     }
 
-    /* compiled from: RtcControlSocket.kt */
-    /* renamed from: b.a.q.n0.a$c */
+    /* JADX INFO: renamed from: b.a.q.n0.a$c */
+    /* JADX INFO: compiled from: RtcControlSocket.kt */
     public enum c {
         DISCONNECTED,
         CONNECTING,
@@ -152,40 +151,40 @@ public final class RtcControlSocket extends WebSocketListener implements DebugPr
         RECONNECTING
     }
 
-    /* compiled from: RtcControlSocket.kt */
-    /* renamed from: b.a.q.n0.a$d */
+    /* JADX INFO: renamed from: b.a.q.n0.a$d */
+    /* JADX INFO: compiled from: RtcControlSocket.kt */
     public interface d {
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         void mo267a(String str, String str2);
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         void mo268b(boolean z2, Integer num, String str);
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         void mo269c(String str, List<Integer> list);
 
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         void mo270d(String str);
 
-        /* renamed from: e */
+        /* JADX INFO: renamed from: e */
         void mo271e(long j, int i, int i2, List<Payloads.Stream> list);
 
-        /* renamed from: f */
+        /* JADX INFO: renamed from: f */
         void mo272f(Map<String, Integer> map);
 
-        /* renamed from: g */
+        /* JADX INFO: renamed from: g */
         void mo273g(long j);
 
-        /* renamed from: h */
+        /* JADX INFO: renamed from: h */
         void mo274h();
 
-        /* renamed from: i */
+        /* JADX INFO: renamed from: i */
         void mo275i();
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         void mo276j(long j);
 
-        /* renamed from: k */
+        /* JADX INFO: renamed from: k */
         void mo277k(int i, int i2, String str, List<Payloads.Stream> list);
 
         void onConnecting();
@@ -193,11 +192,11 @@ public final class RtcControlSocket extends WebSocketListener implements DebugPr
         void onSpeaking(long j, int i, boolean z2);
     }
 
-    /* compiled from: RtcControlSocket.kt */
-    /* renamed from: b.a.q.n0.a$e */
+    /* JADX INFO: renamed from: b.a.q.n0.a$e */
+    /* JADX INFO: compiled from: RtcControlSocket.kt */
     public static final class e extends Lambda implements Function1<WebSocket, Unit> {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public static final e f1797j = new e();
 
         public e() {
@@ -213,11 +212,11 @@ public final class RtcControlSocket extends WebSocketListener implements DebugPr
         }
     }
 
-    /* compiled from: RtcControlSocket.kt */
-    /* renamed from: b.a.q.n0.a$f */
+    /* JADX INFO: renamed from: b.a.q.n0.a$f */
+    /* JADX INFO: compiled from: RtcControlSocket.kt */
     public static final class f extends Lambda implements Function1<WebSocket, Unit> {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public static final f f1798j = new f();
 
         public f() {
@@ -233,12 +232,12 @@ public final class RtcControlSocket extends WebSocketListener implements DebugPr
         }
     }
 
-    /* compiled from: RtcControlSocket.kt */
-    /* renamed from: b.a.q.n0.a$g */
+    /* JADX INFO: renamed from: b.a.q.n0.a$g */
+    /* JADX INFO: compiled from: RtcControlSocket.kt */
     public static final class g extends TimerTask {
 
-        /* compiled from: RtcControlSocket.kt */
-        /* renamed from: b.a.q.n0.a$g$a */
+        /* JADX INFO: renamed from: b.a.q.n0.a$g$a */
+        /* JADX INFO: compiled from: RtcControlSocket.kt */
         public static final class a extends Lambda implements Function0<Unit> {
             public a() {
                 super(0);
@@ -260,8 +259,8 @@ public final class RtcControlSocket extends WebSocketListener implements DebugPr
         }
     }
 
-    /* compiled from: RtcControlSocket.kt */
-    /* renamed from: b.a.q.n0.a$h */
+    /* JADX INFO: renamed from: b.a.q.n0.a$h */
+    /* JADX INFO: compiled from: RtcControlSocket.kt */
     public static final class h extends Lambda implements Function0<Unit> {
         public final /* synthetic */ int $code;
         public final /* synthetic */ String $reason;
@@ -284,11 +283,11 @@ public final class RtcControlSocket extends WebSocketListener implements DebugPr
         }
     }
 
-    /* compiled from: RtcControlSocket.kt */
-    /* renamed from: b.a.q.n0.a$i */
+    /* JADX INFO: renamed from: b.a.q.n0.a$i */
+    /* JADX INFO: compiled from: RtcControlSocket.kt */
     public static final class i extends Lambda implements Function0<Unit> {
 
-        /* renamed from: $t */
+        /* JADX INFO: renamed from: $t */
         public final /* synthetic */ Throwable f1800$t;
         public final /* synthetic */ WebSocket $webSocket;
 
@@ -311,8 +310,8 @@ public final class RtcControlSocket extends WebSocketListener implements DebugPr
         }
     }
 
-    /* compiled from: RtcControlSocket.kt */
-    /* renamed from: b.a.q.n0.a$j */
+    /* JADX INFO: renamed from: b.a.q.n0.a$j */
+    /* JADX INFO: compiled from: RtcControlSocket.kt */
     public static final class j extends Lambda implements Function0<Unit> {
         public final /* synthetic */ Payloads.Incoming $message;
         public final /* synthetic */ WebSocket $webSocket;
@@ -325,7 +324,7 @@ public final class RtcControlSocket extends WebSocketListener implements DebugPr
         }
 
         @Override // kotlin.jvm.functions.Function0
-        public Unit invoke() throws JsonSyntaxException {
+        public Unit invoke() {
             if (!(!Intrinsics3.areEqual(this.$webSocket, RtcControlSocket.this.f1782s))) {
                 switch (this.$message.getOpcode()) {
                     case 2:
@@ -482,8 +481,8 @@ public final class RtcControlSocket extends WebSocketListener implements DebugPr
         }
     }
 
-    /* compiled from: RtcControlSocket.kt */
-    /* renamed from: b.a.q.n0.a$k */
+    /* JADX INFO: renamed from: b.a.q.n0.a$k */
+    /* JADX INFO: compiled from: RtcControlSocket.kt */
     public static final class k extends Lambda implements Function0<Unit> {
         public final /* synthetic */ WebSocket $webSocket;
 
@@ -543,18 +542,18 @@ public final class RtcControlSocket extends WebSocketListener implements DebugPr
                 rtcControlSocket4.f1773H.m266a();
                 for (d dVar3 : rtcControlSocket4.f1780q) {
                     Intrinsics3.checkNotNullExpressionValue(dVar3, "it");
-                    dVar3.mo273g(jLongValue / 2);
+                    dVar3.mo273g(jLongValue / ((long) 2));
                 }
             }
             return Unit.f27425a;
         }
     }
 
-    /* compiled from: RtcControlSocket.kt */
-    /* renamed from: b.a.q.n0.a$l */
+    /* JADX INFO: renamed from: b.a.q.n0.a$l */
+    /* JADX INFO: compiled from: RtcControlSocket.kt */
     public static final class l extends Lambda implements Function1<WebSocket, Unit> {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public static final l f1801j = new l();
 
         public l() {
@@ -599,7 +598,7 @@ public final class RtcControlSocket extends WebSocketListener implements DebugPr
         this.f1767B = c.DISCONNECTED;
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final void m337a(RtcControlSocket rtcControlSocket, boolean z2, Integer num, String str) {
         rtcControlSocket.f1767B = c.DISCONNECTED;
         if ((num != null && num.intValue() == 4004) || ((num != null && num.intValue() == 4015) || ((num != null && num.intValue() == 4011) || (num != null && num.intValue() == 4006)))) {
@@ -615,7 +614,7 @@ public final class RtcControlSocket extends WebSocketListener implements DebugPr
         rtcControlSocket.m346j("`[WS CLOSED] (" + z2 + ", " + num + ", " + str + ") retrying in " + outline.m828P(new Object[]{Double.valueOf(rtcControlSocket.f1779p.fail(new RtcControlSocket3(rtcControlSocket, z2, num, str)) / 1000.0d)}, 1, "%.2f", "java.lang.String.format(this, *args)") + " seconds.");
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final void m338b(Function1<? super WebSocket, Unit> function1) {
         this.f1779p.cancel();
         this.f1787x.cancel();
@@ -630,7 +629,7 @@ public final class RtcControlSocket extends WebSocketListener implements DebugPr
         this.f1782s = (WebSocket) null;
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final void m339c() {
         this.f1773H.m266a();
         m345i("[CLOSE]");
@@ -646,7 +645,7 @@ public final class RtcControlSocket extends WebSocketListener implements DebugPr
         }
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final boolean m340d() {
         this.f1773H.m266a();
         if (this.f1767B != c.DISCONNECTED) {
@@ -675,7 +674,7 @@ public final class RtcControlSocket extends WebSocketListener implements DebugPr
         debugPrintable2.appendKeyValue("resumable", Boolean.valueOf(this.f1768C));
     }
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final void m341e() {
         StringBuilder sbM833U = outline.m833U("[CONNECT] ");
         sbM833U.append(this.f1769D);
@@ -708,7 +707,7 @@ public final class RtcControlSocket extends WebSocketListener implements DebugPr
         this.f1782s = okHttpClient.m10419g(c12935a.m10978a(), this);
     }
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final void m342f(boolean z2, Integer num, String str) {
         m346j("[DISCONNECT] (" + z2 + ", " + num + ", " + str + ')');
         m338b(null);
@@ -723,7 +722,7 @@ public final class RtcControlSocket extends WebSocketListener implements DebugPr
         }
     }
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public final void m343g(long j2, String str, boolean z2) {
         Intrinsics3.checkNotNullParameter(str, ModelAuditLogEntry.CHANGE_KEY_REASON);
         this.f1773H.m266a();
@@ -746,22 +745,22 @@ public final class RtcControlSocket extends WebSocketListener implements DebugPr
         }
     }
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public final void m344h(String str) {
         Logger.d$default(this.f1772G, this.f1776m, str, null, 4, null);
     }
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public final void m345i(String str) {
         Logger.i$default(this.f1772G, this.f1776m, str, null, 4, null);
     }
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final void m346j(String str) {
         Logger.w$default(this.f1772G, this.f1776m, str, null, 4, null);
     }
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final void m347k() {
         if (!this.f1786w) {
             m338b(RtcControlSocket4.f1803j);
@@ -780,7 +779,7 @@ public final class RtcControlSocket extends WebSocketListener implements DebugPr
         this.f1778o.schedule(rtcControlSocket2, l2.longValue());
     }
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final void m348l(boolean z2, Integer num, String str) {
         m345i("[RECONNECT] wasFatal=" + z2 + " code=" + num + " reason=" + str);
         m338b(l.f1801j);
@@ -788,19 +787,18 @@ public final class RtcControlSocket extends WebSocketListener implements DebugPr
         m341e();
     }
 
-    /* JADX WARN: Multi-variable type inference failed */
-    /* JADX WARN: Type inference failed for: r1v0, types: [b.a.q.n0.f] */
     @AnyThread
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public final void m349m(Function0<Unit> function0) {
         MediaEngineExecutorService mediaEngineExecutorService = this.f1773H;
+        Object rtcControlSocket6 = function0;
         if (function0 != null) {
-            function0 = new RtcControlSocket6(function0);
+            rtcControlSocket6 = new RtcControlSocket6(function0);
         }
-        mediaEngineExecutorService.f1609l.execute((Runnable) function0);
+        mediaEngineExecutorService.f1609l.execute((Runnable) rtcControlSocket6);
     }
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public final void m350n(int i2, Object obj) {
         WebSocket webSocket = this.f1782s;
         if (webSocket == null) {
@@ -843,7 +841,7 @@ public final class RtcControlSocket extends WebSocketListener implements DebugPr
     }
 
     @Override // okhttp3.WebSocketListener
-    public void onMessage(WebSocket webSocket, String str) throws JsonSyntaxException {
+    public void onMessage(WebSocket webSocket, String str) {
         Intrinsics3.checkNotNullParameter(webSocket, "webSocket");
         Intrinsics3.checkNotNullParameter(str, NotificationCompat.MessagingStyle.Message.KEY_TEXT);
         Payloads.Incoming incoming = (Payloads.Incoming) C3404f.m4203E1(Payloads.Incoming.class).cast(this.f1777n.m9203g(str, Payloads.Incoming.class));

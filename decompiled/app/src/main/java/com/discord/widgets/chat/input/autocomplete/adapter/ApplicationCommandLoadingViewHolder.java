@@ -4,8 +4,8 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.discord.databinding.WidgetChatInputSlashLoadingItemBinding;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ApplicationCommandLoadingViewHolder.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: ApplicationCommandLoadingViewHolder.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class ApplicationCommandLoadingViewHolder extends RecyclerView.ViewHolder {
     private final WidgetChatInputSlashLoadingItemBinding binding;
 

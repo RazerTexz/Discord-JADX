@@ -6,8 +6,8 @@ import kotlin.Unit;
 import kotlin.jvm.functions.Function0;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: StoreStreamRtcConnection.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: StoreStreamRtcConnection.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class StoreStreamRtcConnection$RtcConnectionListener$onStateChange$2 extends Lambda implements Function0<Unit> {
     public final /* synthetic */ RtcConnection.StateChange $stateChange;
     public final /* synthetic */ StoreStreamRtcConnection.RtcConnectionListener this$0;
@@ -25,7 +25,7 @@ public final class StoreStreamRtcConnection$RtcConnectionListener$onStateChange$
         return Unit.f27425a;
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final void invoke2() {
         StoreStreamRtcConnection.access$getStoreStream$p(StoreStreamRtcConnection.this).handleStreamRtcConnectionStateChange(this.$stateChange);
     }

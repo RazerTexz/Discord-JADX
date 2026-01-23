@@ -3,9 +3,9 @@ package p007b.p225i.p226a.p288f.p313h.p325l;
 import com.discord.widgets.chat.input.MentionUtils;
 import p007b.p225i.p226a.p288f.p313h.p325l.AbstractC3851u4;
 
-/* compiled from: com.google.android.gms:play-services-measurement@@18.0.0 */
-/* renamed from: b.i.a.f.h.l.n0 */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.h.l.n0 */
+/* JADX INFO: compiled from: com.google.android.gms:play-services-measurement@@18.0.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public final class C3756n0 extends AbstractC3851u4<C3756n0, b> implements InterfaceC3626d6 {
     private static final C3756n0 zzi;
     private static volatile InterfaceC3710j6<C3756n0> zzj;
@@ -16,8 +16,8 @@ public final class C3756n0 extends AbstractC3851u4<C3756n0, b> implements Interf
     private String zzg = "";
     private String zzh = "";
 
-    /* compiled from: com.google.android.gms:play-services-measurement@@18.0.0 */
-    /* renamed from: b.i.a.f.h.l.n0$a */
+    /* JADX INFO: renamed from: b.i.a.f.h.l.n0$a */
+    /* JADX INFO: compiled from: com.google.android.gms:play-services-measurement@@18.0.0 */
     public enum a implements InterfaceC3903y4 {
         UNKNOWN_COMPARISON_TYPE(0),
         LESS_THAN(1),
@@ -31,7 +31,7 @@ public final class C3756n0 extends AbstractC3851u4<C3756n0, b> implements Interf
             this.zzg = i;
         }
 
-        /* renamed from: f */
+        /* JADX INFO: renamed from: f */
         public static a m5122f(int i) {
             if (i == 0) {
                 return UNKNOWN_COMPARISON_TYPE;
@@ -52,7 +52,7 @@ public final class C3756n0 extends AbstractC3851u4<C3756n0, b> implements Interf
         }
 
         @Override // p007b.p225i.p226a.p288f.p313h.p325l.InterfaceC3903y4
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final int mo4875a() {
             return this.zzg;
         }
@@ -63,8 +63,8 @@ public final class C3756n0 extends AbstractC3851u4<C3756n0, b> implements Interf
         }
     }
 
-    /* compiled from: com.google.android.gms:play-services-measurement@@18.0.0 */
-    /* renamed from: b.i.a.f.h.l.n0$b */
+    /* JADX INFO: renamed from: b.i.a.f.h.l.n0$b */
+    /* JADX INFO: compiled from: com.google.android.gms:play-services-measurement@@18.0.0 */
     public static final class b extends AbstractC3851u4.b<C3756n0, b> implements InterfaceC3626d6 {
         public b(C3795q0 c3795q0) {
             super(C3756n0.m5111F());
@@ -77,38 +77,38 @@ public final class C3756n0 extends AbstractC3851u4<C3756n0, b> implements Interf
         AbstractC3851u4.m5313r(C3756n0.class, c3756n0);
     }
 
-    /* renamed from: E */
+    /* JADX INFO: renamed from: E */
     public static C3756n0 m5110E() {
         return zzi;
     }
 
-    /* renamed from: F */
+    /* JADX INFO: renamed from: F */
     public static /* synthetic */ C3756n0 m5111F() {
         return zzi;
     }
 
-    /* renamed from: A */
+    /* JADX INFO: renamed from: A */
     public final boolean m5112A() {
         return (this.zzc & 8) != 0;
     }
 
-    /* renamed from: B */
+    /* JADX INFO: renamed from: B */
     public final String m5113B() {
         return this.zzg;
     }
 
-    /* renamed from: C */
+    /* JADX INFO: renamed from: C */
     public final boolean m5114C() {
         return (this.zzc & 16) != 0;
     }
 
-    /* renamed from: D */
+    /* JADX INFO: renamed from: D */
     public final String m5115D() {
         return this.zzh;
     }
 
     @Override // p007b.p225i.p226a.p288f.p313h.p325l.AbstractC3851u4
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public final Object mo4541p(int i, Object obj, Object obj2) {
         switch (C3795q0.f10256a[i - 1]) {
             case 1:
@@ -141,33 +141,33 @@ public final class C3756n0 extends AbstractC3851u4<C3756n0, b> implements Interf
         }
     }
 
-    /* renamed from: u */
+    /* JADX INFO: renamed from: u */
     public final boolean m5116u() {
         return (this.zzc & 1) != 0;
     }
 
-    /* renamed from: v */
+    /* JADX INFO: renamed from: v */
     public final a m5117v() {
         a aVarM5122f = a.m5122f(this.zzd);
         return aVarM5122f == null ? a.UNKNOWN_COMPARISON_TYPE : aVarM5122f;
     }
 
-    /* renamed from: w */
+    /* JADX INFO: renamed from: w */
     public final boolean m5118w() {
         return (this.zzc & 2) != 0;
     }
 
-    /* renamed from: x */
+    /* JADX INFO: renamed from: x */
     public final boolean m5119x() {
         return this.zze;
     }
 
-    /* renamed from: y */
+    /* JADX INFO: renamed from: y */
     public final boolean m5120y() {
         return (this.zzc & 4) != 0;
     }
 
-    /* renamed from: z */
+    /* JADX INFO: renamed from: z */
     public final String m5121z() {
         return this.zzf;
     }

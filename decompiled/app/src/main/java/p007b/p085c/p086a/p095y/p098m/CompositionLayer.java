@@ -23,25 +23,25 @@ import p007b.p085c.p086a.p095y.KeyPath;
 import p007b.p085c.p086a.p095y.p096k.AnimatableFloatValue;
 import p007b.p100d.p104b.p105a.outline;
 
-/* compiled from: CompositionLayer.java */
-/* renamed from: b.c.a.y.m.c, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.c.a.y.m.c, reason: use source file name */
+/* JADX INFO: compiled from: CompositionLayer.java */
+/* JADX INFO: loaded from: classes.dex */
 public class CompositionLayer extends BaseLayer2 {
 
-    /* renamed from: A */
+    /* JADX INFO: renamed from: A */
     public final RectF f2859A;
 
-    /* renamed from: B */
+    /* JADX INFO: renamed from: B */
     public Paint f2860B;
 
-    /* renamed from: x */
+    /* JADX INFO: renamed from: x */
     @Nullable
     public BaseKeyframeAnimation<Float, Float> f2861x;
 
-    /* renamed from: y */
+    /* JADX INFO: renamed from: y */
     public final List<BaseLayer2> f2862y;
 
-    /* renamed from: z */
+    /* JADX INFO: renamed from: z */
     public final RectF f2863z;
 
     public CompositionLayer(LottieDrawable lottieDrawable, Layer2 layer2, List<Layer2> list, LottieComposition lottieComposition) {
@@ -113,7 +113,7 @@ public class CompositionLayer extends BaseLayer2 {
     }
 
     @Override // p007b.p085c.p086a.p095y.p098m.BaseLayer2, p007b.p085c.p086a.p091w.p092b.DrawingContent
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public void mo712d(RectF rectF, Matrix matrix, boolean z2) {
         super.mo712d(rectF, matrix, z2);
         for (int size = this.f2862y.size() - 1; size >= 0; size--) {
@@ -124,7 +124,7 @@ public class CompositionLayer extends BaseLayer2 {
     }
 
     @Override // p007b.p085c.p086a.p095y.p098m.BaseLayer2, p007b.p085c.p086a.p095y.KeyPathElement
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public <T> void mo714g(T t, @Nullable LottieValueCallback<T> lottieValueCallback) {
         this.f2857v.m745c(t, lottieValueCallback);
         if (t == LottieProperty.f2419A) {
@@ -144,7 +144,7 @@ public class CompositionLayer extends BaseLayer2 {
     }
 
     @Override // p007b.p085c.p086a.p095y.p098m.BaseLayer2
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public void mo780j(Canvas canvas, Matrix matrix, int i) {
         RectF rectF = this.f2859A;
         Layer2 layer2 = this.f2850o;
@@ -170,7 +170,7 @@ public class CompositionLayer extends BaseLayer2 {
     }
 
     @Override // p007b.p085c.p086a.p095y.p098m.BaseLayer2
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public void mo784n(KeyPath keyPath, int i, List<KeyPath> list, KeyPath keyPath2) {
         for (int i2 = 0; i2 < this.f2862y.size(); i2++) {
             this.f2862y.get(i2).mo711c(keyPath, i, list, keyPath2);
@@ -178,7 +178,7 @@ public class CompositionLayer extends BaseLayer2 {
     }
 
     @Override // p007b.p085c.p086a.p095y.p098m.BaseLayer2
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public void mo785o(@FloatRange(from = 0.0d, m75to = 1.0d) float f) {
         super.mo785o(f);
         if (this.f2861x != null) {

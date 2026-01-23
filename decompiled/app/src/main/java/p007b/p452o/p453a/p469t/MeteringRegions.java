@@ -9,12 +9,12 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Objects;
 
-/* compiled from: MeteringRegions.java */
-/* renamed from: b.o.a.t.b, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.o.a.t.b, reason: use source file name */
+/* JADX INFO: compiled from: MeteringRegions.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class MeteringRegions {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     @VisibleForTesting
     public final List<MeteringRegion> f14142a;
 
@@ -23,7 +23,7 @@ public class MeteringRegions {
     }
 
     @NonNull
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static RectF m7409a(@NonNull PointF pointF, float f, float f2) {
         float f3 = pointF.x;
         float f4 = f / 2.0f;
@@ -33,7 +33,7 @@ public class MeteringRegions {
     }
 
     @NonNull
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public <T> List<T> m7410b(int i, @NonNull MeteringTransform<T> meteringTransform) {
         ArrayList arrayList = new ArrayList();
         Collections.sort(this.f14142a);
@@ -44,7 +44,7 @@ public class MeteringRegions {
     }
 
     @NonNull
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public MeteringRegions m7411c(@NonNull MeteringTransform meteringTransform) {
         ArrayList arrayList = new ArrayList();
         for (MeteringRegion meteringRegion : this.f14142a) {

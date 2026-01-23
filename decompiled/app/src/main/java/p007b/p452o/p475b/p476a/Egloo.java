@@ -11,12 +11,12 @@ import p007b.p452o.p475b.p478c.gl;
 import p507d0.UInt;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: Egloo.kt */
-/* renamed from: b.o.b.a.d, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.o.b.a.d, reason: use source file name */
+/* JADX INFO: compiled from: Egloo.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class Egloo {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final float[] f14263a;
 
     static {
@@ -27,7 +27,7 @@ public final class Egloo {
         f14263a = fArr;
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final void m7456a(String str) {
         Intrinsics3.checkNotNullParameter(str, "opName");
         int iEglGetError = EGL14.eglGetError();
@@ -43,7 +43,7 @@ public final class Egloo {
         throw new RuntimeException(string);
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static final void m7457b(String str) {
         Intrinsics3.checkNotNullParameter(str, "opName");
         int iM11482constructorimpl = UInt.m11482constructorimpl(GLES20.glGetError());

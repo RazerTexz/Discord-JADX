@@ -5,15 +5,15 @@ import p658rx.Observable;
 import p658rx.Scheduler;
 import p658rx.Subscriber;
 
-/* compiled from: OperatorThrottleFirst.java */
-/* renamed from: j0.l.a.l2, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: j0.l.a.l2, reason: use source file name */
+/* JADX INFO: compiled from: OperatorThrottleFirst.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class OperatorThrottleFirst2<T> implements Observable.InterfaceC13006b<T, T> {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final long f26907j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final Scheduler f26908k;
 
     public OperatorThrottleFirst2(long j, TimeUnit timeUnit, Scheduler scheduler) {

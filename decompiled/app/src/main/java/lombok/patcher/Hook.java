@@ -9,7 +9,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-/* loaded from: discord-126021.apk:lombok/patcher/Hook.SCL.lombok */
+/* JADX INFO: loaded from: discord-126021.apk:lombok/patcher/Hook.SCL.lombok */
 public class Hook {
     private final String className;
     private final String methodName;

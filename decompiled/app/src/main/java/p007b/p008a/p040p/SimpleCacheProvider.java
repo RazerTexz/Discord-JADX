@@ -12,22 +12,22 @@ import p507d0.LazyJVM;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: SimpleCacheProvider.kt */
-/* renamed from: b.a.p.l, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.a.p.l, reason: use source file name */
+/* JADX INFO: compiled from: SimpleCacheProvider.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class SimpleCacheProvider {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final Lazy f1596a = LazyJVM.lazy(a.f1598j);
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static final SimpleCacheProvider f1597b = null;
 
-    /* compiled from: SimpleCacheProvider.kt */
-    /* renamed from: b.a.p.l$a */
+    /* JADX INFO: renamed from: b.a.p.l$a */
+    /* JADX INFO: compiled from: SimpleCacheProvider.kt */
     public static final class a extends Lambda implements Function0<SimpleCache2> {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public static final a f1598j = new a();
 
         public a() {

@@ -13,30 +13,30 @@ import p007b.p085c.p086a.p087a0.AnimatableValueParser;
 import p007b.p100d.p104b.p105a.outline;
 import p007b.p225i.p226a.p288f.p333j.p334b.C4322f;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public class Message extends AbstractSafeParcelable implements ReflectedParcelable {
     public static final Parcelable.Creator<Message> CREATOR = new C4322f();
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static final zzgs[] f20711j = {zzgs.f20644j};
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final int f20712k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final byte[] f20713l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public final String f20714m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public final String f20715n;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     @Deprecated
     public final zzgs[] f20716o;
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public final long f20717p;
 
     public Message(int i, @Nullable byte[] bArr, @Nullable String str, String str2, @Nullable zzgs[] zzgsVarArr, long j) {

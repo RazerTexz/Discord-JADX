@@ -6,20 +6,20 @@ import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
 import androidx.viewbinding.ViewBinding;
 
-/* compiled from: WidgetSettingsPremiumPriceChangeNoticeBinding.java */
-/* renamed from: b.a.i.a6, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.a.i.a6, reason: use source file name */
+/* JADX INFO: compiled from: WidgetSettingsPremiumPriceChangeNoticeBinding.java */
+/* JADX INFO: loaded from: classes.dex */
 public final class WidgetSettingsPremiumPriceChangeNoticeBinding implements ViewBinding {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     @NonNull
     public final CardView f682a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     @NonNull
     public final CardView f683b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     @NonNull
     public final TextView f684c;
 

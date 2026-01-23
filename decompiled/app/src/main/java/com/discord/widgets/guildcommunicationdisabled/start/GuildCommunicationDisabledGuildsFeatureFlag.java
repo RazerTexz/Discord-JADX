@@ -14,18 +14,18 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 import p658rx.Observable;
 
-/* compiled from: GuildCommunicationDisabledGuildsFeatureFlag.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: GuildCommunicationDisabledGuildsFeatureFlag.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class GuildCommunicationDisabledGuildsFeatureFlag {
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private static final Lazy INSTANCE$delegate = LazyJVM.lazy(GuildCommunicationDisabledGuildsFeatureFlag2.INSTANCE);
     private final StoreGuilds guildsStore;
     private final ObservationDeck observationDeck;
     private final StoreExperiments storeExperiments;
 
-    /* compiled from: GuildCommunicationDisabledGuildsFeatureFlag.kt */
+    /* JADX INFO: compiled from: GuildCommunicationDisabledGuildsFeatureFlag.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -41,8 +41,8 @@ public final class GuildCommunicationDisabledGuildsFeatureFlag {
         }
     }
 
-    /* compiled from: GuildCommunicationDisabledGuildsFeatureFlag.kt */
-    /* renamed from: com.discord.widgets.guildcommunicationdisabled.start.GuildCommunicationDisabledGuildsFeatureFlag$observeCanGuildAccessCommunicationDisabled$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.guildcommunicationdisabled.start.GuildCommunicationDisabledGuildsFeatureFlag$observeCanGuildAccessCommunicationDisabled$1 */
+    /* JADX INFO: compiled from: GuildCommunicationDisabledGuildsFeatureFlag.kt */
     public static final class C85581 extends Lambda implements Function0<Boolean> {
         public final /* synthetic */ long $guildId;
 
@@ -57,7 +57,7 @@ public final class GuildCommunicationDisabledGuildsFeatureFlag {
             return Boolean.valueOf(invoke2());
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final boolean invoke2() {
             return GuildCommunicationDisabledGuildsFeatureFlag.this.canGuildAccessCommunicationDisabled(this.$guildId) && GuildCommunicationDisabledGuildsFeatureFlag.this.canUserAccessDisableCommunication();
         }

@@ -8,17 +8,17 @@ import p007b.p225i.p226a.p242c.Format2;
 import p007b.p225i.p226a.p242c.MediaMetadata;
 import p007b.p225i.p226a.p242c.p279z2.Metadata2;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public final class SmtaMetadataEntry implements Metadata.Entry {
     public static final Parcelable.Creator<SmtaMetadataEntry> CREATOR = new C10741a();
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final float f20017j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final int f20018k;
 
-    /* renamed from: com.google.android.exoplayer2.metadata.mp4.SmtaMetadataEntry$a */
+    /* JADX INFO: renamed from: com.google.android.exoplayer2.metadata.mp4.SmtaMetadataEntry$a */
     public class C10741a implements Parcelable.Creator<SmtaMetadataEntry> {
         @Override // android.os.Parcelable.Creator
         public SmtaMetadataEntry createFromParcel(Parcel parcel) {
@@ -57,13 +57,13 @@ public final class SmtaMetadataEntry implements Metadata.Entry {
     }
 
     @Override // com.google.android.exoplayer2.metadata.Metadata.Entry
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public /* synthetic */ void mo8878n(MediaMetadata.b bVar) {
         Metadata2.m3894c(this, bVar);
     }
 
     @Override // com.google.android.exoplayer2.metadata.Metadata.Entry
-    /* renamed from: o0 */
+    /* JADX INFO: renamed from: o0 */
     public /* synthetic */ byte[] mo8879o0() {
         return Metadata2.m3892a(this);
     }
@@ -86,7 +86,7 @@ public final class SmtaMetadataEntry implements Metadata.Entry {
     }
 
     @Override // com.google.android.exoplayer2.metadata.Metadata.Entry
-    /* renamed from: y */
+    /* JADX INFO: renamed from: y */
     public /* synthetic */ Format2 mo8880y() {
         return Metadata2.m3893b(this);
     }

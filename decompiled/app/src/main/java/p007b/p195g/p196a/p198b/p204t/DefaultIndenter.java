@@ -4,15 +4,15 @@ import java.io.IOException;
 import p007b.p195g.p196a.p198b.JsonGenerator;
 import p007b.p195g.p196a.p198b.p204t.DefaultPrettyPrinter;
 
-/* compiled from: DefaultIndenter.java */
-/* renamed from: b.g.a.b.t.c, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.g.a.b.t.c, reason: use source file name */
+/* JADX INFO: compiled from: DefaultIndenter.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class DefaultIndenter extends DefaultPrettyPrinter.c {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static final String f4597j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public static final DefaultIndenter f4598k;
     private static final long serialVersionUID = 1;
     private final int charsPerLevel;
@@ -35,7 +35,7 @@ public class DefaultIndenter extends DefaultPrettyPrinter.c {
     }
 
     @Override // p007b.p195g.p196a.p198b.p204t.DefaultPrettyPrinter.b
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public void mo1731a(JsonGenerator jsonGenerator, int i) throws IOException {
         jsonGenerator.mo1642T(this.eol);
         if (i <= 0) {

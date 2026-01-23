@@ -6,9 +6,9 @@ import kotlin.Unit;
 import kotlin.jvm.functions.Function2;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: NotificationsOverridesAdapter.kt */
-/* renamed from: com.discord.widgets.servers.NotificationsOverridesAdapter$ViewHolder$onBind$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.servers.NotificationsOverridesAdapter$ViewHolder$onBind$1, reason: use source file name */
+/* JADX INFO: compiled from: NotificationsOverridesAdapter.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class NotificationsOverridesAdapter2 implements View.OnClickListener {
     public final /* synthetic */ NotificationsOverridesAdapter.Item $data;
     public final /* synthetic */ NotificationsOverridesAdapter.ViewHolder this$0;

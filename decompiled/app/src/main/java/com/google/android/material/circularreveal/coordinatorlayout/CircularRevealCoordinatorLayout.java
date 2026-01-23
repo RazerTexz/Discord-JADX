@@ -11,7 +11,7 @@ import androidx.coordinatorlayout.widget.CoordinatorLayout;
 import com.google.android.material.circularreveal.CircularRevealHelper;
 import com.google.android.material.circularreveal.CircularRevealWidget;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public class CircularRevealCoordinatorLayout extends CoordinatorLayout implements CircularRevealWidget {
 
     @NonNull

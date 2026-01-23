@@ -12,25 +12,25 @@ import p007b.p100d.p104b.p105a.outline;
 import p007b.p225i.p226a.p288f.p299e.p308o.C3404f;
 import p007b.p225i.p226a.p288f.p299e.p310p.C3411b;
 
-/* compiled from: com.google.android.gms:play-services-cloud-messaging@@16.0.0 */
-/* renamed from: b.i.a.f.d.r */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.d.r */
+/* JADX INFO: compiled from: com.google.android.gms:play-services-cloud-messaging@@16.0.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public final class C3243r {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final Context f9283a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public int f9284b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public int f9285c = 0;
 
     public C3243r(Context context) {
         this.f9283a = context;
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final synchronized int m4010a() {
         int i = this.f9285c;
         if (i != 0) {
@@ -67,7 +67,7 @@ public final class C3243r {
     }
 
     @Nullable
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final PackageInfo m4011b(String str) {
         try {
             return C3411b.m4376a(this.f9283a).f9605a.getPackageManager().getPackageInfo(str, 0);

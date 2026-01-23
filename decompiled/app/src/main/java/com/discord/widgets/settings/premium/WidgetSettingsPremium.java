@@ -87,8 +87,8 @@ import p507d0.p592z.p594d.Lambda;
 import p507d0.p592z.p594d.Reflection2;
 import p658rx.Observable;
 
-/* compiled from: WidgetSettingsPremium.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetSettingsPremium.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetSettingsPremium extends AppFragment {
     private static final String ANALYTICS_LOCATION_SECTION = "analytics_location_section";
     private static final String INTENT_SCROLL_TO_SECTION = "intent_section";
@@ -98,21 +98,21 @@ public final class WidgetSettingsPremium extends AppFragment {
     private static final int VIEW_INDEX_ERROR = 2;
     private static final int VIEW_INDEX_LOADING = 1;
 
-    /* renamed from: binding$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
     private final LocaleManager localeManager;
 
-    /* renamed from: viewModel$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: viewModel$delegate, reason: from kotlin metadata */
     private final Lazy viewModel;
     public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetSettingsPremium.class, "binding", "getBinding()Lcom/discord/databinding/WidgetSettingsPremiumBinding;", 0)};
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
 
-    /* compiled from: WidgetSettingsPremium.kt */
+    /* JADX INFO: compiled from: WidgetSettingsPremium.kt */
     public static final class Companion {
 
-        /* compiled from: WidgetSettingsPremium.kt */
+        /* JADX INFO: compiled from: WidgetSettingsPremium.kt */
         public static final /* data */ class SubscriptionViewCallbacks {
             private final Function0<Unit> cancelCallback;
             private final Function0<Unit> manageBillingCallback;
@@ -128,6 +128,7 @@ public final class WidgetSettingsPremium extends AppFragment {
                 this.manageBillingCallback = function05;
             }
 
+            /* JADX WARN: Multi-variable type inference failed */
             public static /* synthetic */ SubscriptionViewCallbacks copy$default(SubscriptionViewCallbacks subscriptionViewCallbacks, Function0 function0, Function0 function02, Function0 function03, Function0 function04, Function0 function05, int i, Object obj) {
                 if ((i & 1) != 0) {
                     function0 = subscriptionViewCallbacks.restoreCallback;
@@ -311,8 +312,8 @@ public final class WidgetSettingsPremium extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetSettingsPremium.kt */
-    /* renamed from: com.discord.widgets.settings.premium.WidgetSettingsPremium$configurePaymentInfo$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.premium.WidgetSettingsPremium$configurePaymentInfo$1 */
+    /* JADX INFO: compiled from: WidgetSettingsPremium.kt */
     public static final class ViewOnClickListenerC99231 implements View.OnClickListener {
         public final /* synthetic */ boolean $isAppleSubscription;
 
@@ -332,8 +333,8 @@ public final class WidgetSettingsPremium extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetSettingsPremium.kt */
-    /* renamed from: com.discord.widgets.settings.premium.WidgetSettingsPremium$configurePaymentInfo$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.premium.WidgetSettingsPremium$configurePaymentInfo$2 */
+    /* JADX INFO: compiled from: WidgetSettingsPremium.kt */
     public static final class ViewOnClickListenerC99242 implements View.OnClickListener {
         public final /* synthetic */ boolean $isGoogleSubscription;
         public final /* synthetic */ ModelSubscription $subscription;
@@ -354,8 +355,8 @@ public final class WidgetSettingsPremium extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetSettingsPremium.kt */
-    /* renamed from: com.discord.widgets.settings.premium.WidgetSettingsPremium$configurePriceChangeNotice$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.premium.WidgetSettingsPremium$configurePriceChangeNotice$2 */
+    /* JADX INFO: compiled from: WidgetSettingsPremium.kt */
     public static final class ViewOnClickListenerC99252 implements View.OnClickListener {
         public ViewOnClickListenerC99252() {
         }
@@ -366,8 +367,8 @@ public final class WidgetSettingsPremium extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetSettingsPremium.kt */
-    /* renamed from: com.discord.widgets.settings.premium.WidgetSettingsPremium$configureStatusNotice$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.premium.WidgetSettingsPremium$configureStatusNotice$1 */
+    /* JADX INFO: compiled from: WidgetSettingsPremium.kt */
     public static final class ViewOnClickListenerC99261 implements View.OnClickListener {
         public final /* synthetic */ ModelSubscription $subscription;
 
@@ -381,8 +382,8 @@ public final class WidgetSettingsPremium extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetSettingsPremium.kt */
-    /* renamed from: com.discord.widgets.settings.premium.WidgetSettingsPremium$getGuildBoostViewCallbacks$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.premium.WidgetSettingsPremium$getGuildBoostViewCallbacks$1 */
+    /* JADX INFO: compiled from: WidgetSettingsPremium.kt */
     public static final class C99271 extends Lambda implements Function0<Unit> {
         public C99271() {
             super(0);
@@ -394,14 +395,14 @@ public final class WidgetSettingsPremium extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             WidgetSettingsGuildBoost.INSTANCE.launch(WidgetSettingsPremium.this.requireContext());
         }
     }
 
-    /* compiled from: WidgetSettingsPremium.kt */
-    /* renamed from: com.discord.widgets.settings.premium.WidgetSettingsPremium$getGuildBoostViewCallbacks$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.premium.WidgetSettingsPremium$getGuildBoostViewCallbacks$2 */
+    /* JADX INFO: compiled from: WidgetSettingsPremium.kt */
     public static final class C99282 extends Lambda implements Function0<Unit> {
         public final /* synthetic */ String $skuName;
 
@@ -417,14 +418,14 @@ public final class WidgetSettingsPremium extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             PremiumUtils.INSTANCE.openGooglePlayBilling(WidgetSettingsPremium.this.requireContext(), this.$skuName);
         }
     }
 
-    /* compiled from: WidgetSettingsPremium.kt */
-    /* renamed from: com.discord.widgets.settings.premium.WidgetSettingsPremium$getGuildBoostViewCallbacks$3 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.premium.WidgetSettingsPremium$getGuildBoostViewCallbacks$3 */
+    /* JADX INFO: compiled from: WidgetSettingsPremium.kt */
     public static final class C99293 extends Lambda implements Function0<Unit> {
         public final /* synthetic */ String $skuName;
 
@@ -440,14 +441,14 @@ public final class WidgetSettingsPremium extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             WidgetChoosePlan.Companion.launch$default(WidgetChoosePlan.INSTANCE, WidgetSettingsPremium.this.requireContext(), null, WidgetChoosePlan.ViewType.SWITCH_PLANS, this.$skuName, new Traits.Location(Traits.Location.Page.USER_SETTINGS, WidgetSettingsPremium.access$getAnalyticsLocationSection$p(WidgetSettingsPremium.this), Traits.Location.Obj.BUTTON_CTA, Traits.Location.ObjType.BUY, null, 16, null), null, 34, null);
         }
     }
 
-    /* compiled from: WidgetSettingsPremium.kt */
-    /* renamed from: com.discord.widgets.settings.premium.WidgetSettingsPremium$getGuildBoostViewCallbacks$4 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.premium.WidgetSettingsPremium$getGuildBoostViewCallbacks$4 */
+    /* JADX INFO: compiled from: WidgetSettingsPremium.kt */
     public static final class C99304 extends Lambda implements Function0<Unit> {
         public final /* synthetic */ String $skuName;
 
@@ -463,14 +464,14 @@ public final class WidgetSettingsPremium extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             PremiumUtils.INSTANCE.openGooglePlayBilling(WidgetSettingsPremium.this.requireContext(), this.$skuName);
         }
     }
 
-    /* compiled from: WidgetSettingsPremium.kt */
-    /* renamed from: com.discord.widgets.settings.premium.WidgetSettingsPremium$getGuildBoostViewCallbacks$5 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.premium.WidgetSettingsPremium$getGuildBoostViewCallbacks$5 */
+    /* JADX INFO: compiled from: WidgetSettingsPremium.kt */
     public static final class C99315 extends Lambda implements Function0<Unit> {
         public final /* synthetic */ String $skuName;
 
@@ -486,14 +487,14 @@ public final class WidgetSettingsPremium extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             PremiumUtils.INSTANCE.openGooglePlayBilling(WidgetSettingsPremium.this.requireContext(), this.$skuName);
         }
     }
 
-    /* compiled from: WidgetSettingsPremium.kt */
-    /* renamed from: com.discord.widgets.settings.premium.WidgetSettingsPremium$getGuildBoostViewCallbacks$6 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.premium.WidgetSettingsPremium$getGuildBoostViewCallbacks$6 */
+    /* JADX INFO: compiled from: WidgetSettingsPremium.kt */
     public static final class C99326 extends Lambda implements Function0<Unit> {
         public C99326() {
             super(0);
@@ -505,14 +506,14 @@ public final class WidgetSettingsPremium extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             WidgetSettingsGuildBoost.INSTANCE.launch(WidgetSettingsPremium.this.requireContext());
         }
     }
 
-    /* compiled from: WidgetSettingsPremium.kt */
-    /* renamed from: com.discord.widgets.settings.premium.WidgetSettingsPremium$getPremiumSubscriptionViewCallbacks$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.premium.WidgetSettingsPremium$getPremiumSubscriptionViewCallbacks$1 */
+    /* JADX INFO: compiled from: WidgetSettingsPremium.kt */
     public static final class C99331 extends Lambda implements Function0<Unit> {
         public final /* synthetic */ ModelSubscription $premiumSubscription;
 
@@ -528,14 +529,14 @@ public final class WidgetSettingsPremium extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             PremiumUtils.INSTANCE.openGooglePlayBilling(WidgetSettingsPremium.this.requireContext(), this.$premiumSubscription.getPaymentGatewayPlanId());
         }
     }
 
-    /* compiled from: WidgetSettingsPremium.kt */
-    /* renamed from: com.discord.widgets.settings.premium.WidgetSettingsPremium$getPremiumSubscriptionViewCallbacks$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.premium.WidgetSettingsPremium$getPremiumSubscriptionViewCallbacks$2 */
+    /* JADX INFO: compiled from: WidgetSettingsPremium.kt */
     public static final class C99342 extends Lambda implements Function0<Unit> {
         public final /* synthetic */ ModelSubscription $premiumSubscription;
 
@@ -551,14 +552,14 @@ public final class WidgetSettingsPremium extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             PremiumUtils.INSTANCE.openGooglePlayBilling(WidgetSettingsPremium.this.requireContext(), this.$premiumSubscription.getPaymentGatewayPlanId());
         }
     }
 
-    /* compiled from: WidgetSettingsPremium.kt */
-    /* renamed from: com.discord.widgets.settings.premium.WidgetSettingsPremium$getPremiumSubscriptionViewCallbacks$3 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.premium.WidgetSettingsPremium$getPremiumSubscriptionViewCallbacks$3 */
+    /* JADX INFO: compiled from: WidgetSettingsPremium.kt */
     public static final class C99353 extends Lambda implements Function0<Unit> {
         public final /* synthetic */ ModelSubscription $premiumSubscription;
 
@@ -574,14 +575,14 @@ public final class WidgetSettingsPremium extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             PremiumUtils.INSTANCE.openGooglePlayBilling(WidgetSettingsPremium.this.requireContext(), this.$premiumSubscription.getPaymentGatewayPlanId());
         }
     }
 
-    /* compiled from: WidgetSettingsPremium.kt */
-    /* renamed from: com.discord.widgets.settings.premium.WidgetSettingsPremium$getPremiumSubscriptionViewCallbacks$4 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.premium.WidgetSettingsPremium$getPremiumSubscriptionViewCallbacks$4 */
+    /* JADX INFO: compiled from: WidgetSettingsPremium.kt */
     public static final class C99364 extends Lambda implements Function0<Unit> {
         public C99364() {
             super(0);
@@ -593,14 +594,14 @@ public final class WidgetSettingsPremium extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             WidgetSettingsPremium.access$showDesktopManageAlert(WidgetSettingsPremium.this);
         }
     }
 
-    /* compiled from: WidgetSettingsPremium.kt */
-    /* renamed from: com.discord.widgets.settings.premium.WidgetSettingsPremium$getPremiumSubscriptionViewCallbacks$5 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.premium.WidgetSettingsPremium$getPremiumSubscriptionViewCallbacks$5 */
+    /* JADX INFO: compiled from: WidgetSettingsPremium.kt */
     public static final class C99375 extends Lambda implements Function0<Unit> {
         public C99375() {
             super(0);
@@ -612,15 +613,15 @@ public final class WidgetSettingsPremium extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             WidgetSettingsPremium widgetSettingsPremium = WidgetSettingsPremium.this;
             WidgetSettingsPremium.access$showCancelConfirmationAlert(widgetSettingsPremium, WidgetSettingsPremium.access$getViewModel$p(widgetSettingsPremium));
         }
     }
 
-    /* compiled from: WidgetSettingsPremium.kt */
-    /* renamed from: com.discord.widgets.settings.premium.WidgetSettingsPremium$onViewBoundOrOnResume$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.premium.WidgetSettingsPremium$onViewBoundOrOnResume$1 */
+    /* JADX INFO: compiled from: WidgetSettingsPremium.kt */
     public static final class C99471 extends Lambda implements Function1<SettingsPremiumViewModel.ViewState, Unit> {
         public C99471() {
             super(1);
@@ -632,7 +633,7 @@ public final class WidgetSettingsPremium extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(SettingsPremiumViewModel.ViewState viewState) {
             if (viewState instanceof SettingsPremiumViewModel.ViewState.Loaded) {
                 WidgetSettingsPremium.access$showContent(WidgetSettingsPremium.this, (SettingsPremiumViewModel.ViewState.Loaded) viewState);
@@ -644,8 +645,8 @@ public final class WidgetSettingsPremium extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetSettingsPremium.kt */
-    /* renamed from: com.discord.widgets.settings.premium.WidgetSettingsPremium$onViewBoundOrOnResume$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.premium.WidgetSettingsPremium$onViewBoundOrOnResume$2 */
+    /* JADX INFO: compiled from: WidgetSettingsPremium.kt */
     public static final /* synthetic */ class C99482 extends FunctionReferenceImpl implements Function1<SettingsPremiumViewModel.Event, Unit> {
         public C99482(WidgetSettingsPremium widgetSettingsPremium) {
             super(1, widgetSettingsPremium, WidgetSettingsPremium.class, "handleEvent", "handleEvent(Lcom/discord/widgets/settings/premium/SettingsPremiumViewModel$Event;)V", 0);
@@ -657,15 +658,15 @@ public final class WidgetSettingsPremium extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(SettingsPremiumViewModel.Event event) {
             Intrinsics3.checkNotNullParameter(event, "p1");
             WidgetSettingsPremium.access$handleEvent((WidgetSettingsPremium) this.receiver, event);
         }
     }
 
-    /* compiled from: WidgetSettingsPremium.kt */
-    /* renamed from: com.discord.widgets.settings.premium.WidgetSettingsPremium$showCancelConfirmationAlert$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.premium.WidgetSettingsPremium$showCancelConfirmationAlert$1 */
+    /* JADX INFO: compiled from: WidgetSettingsPremium.kt */
     public static final class C99491 extends Lambda implements Function1<View, Unit> {
         public final /* synthetic */ SettingsPremiumViewModel $viewModel;
 
@@ -681,15 +682,15 @@ public final class WidgetSettingsPremium extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(View view) {
             Intrinsics3.checkNotNullParameter(view, "it");
             this.$viewModel.cancelSubscription();
         }
     }
 
-    /* compiled from: WidgetSettingsPremium.kt */
-    /* renamed from: com.discord.widgets.settings.premium.WidgetSettingsPremium$showContent$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.premium.WidgetSettingsPremium$showContent$1 */
+    /* JADX INFO: compiled from: WidgetSettingsPremium.kt */
     public static final class C99501 extends Lambda implements Function1<Long, Unit> {
         public final /* synthetic */ Integer $scrollTargetSection;
 
@@ -705,14 +706,14 @@ public final class WidgetSettingsPremium extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Long l) {
             WidgetSettingsPremium.access$scrollToSection(WidgetSettingsPremium.this, this.$scrollTargetSection);
         }
     }
 
-    /* compiled from: WidgetSettingsPremium.kt */
-    /* renamed from: com.discord.widgets.settings.premium.WidgetSettingsPremium$showFailureUI$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.premium.WidgetSettingsPremium$showFailureUI$1 */
+    /* JADX INFO: compiled from: WidgetSettingsPremium.kt */
     public static final class ViewOnClickListenerC99511 implements View.OnClickListener {
         public ViewOnClickListenerC99511() {
         }
@@ -1511,14 +1512,14 @@ public final class WidgetSettingsPremium extends AppFragment {
         return FormatUtils.m219k(this, i, objArr2, null, 4);
     }
 
-    /* compiled from: WidgetSettingsPremium.kt */
-    /* renamed from: com.discord.widgets.settings.premium.WidgetSettingsPremium$onViewBound$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.premium.WidgetSettingsPremium$onViewBound$1 */
+    /* JADX INFO: compiled from: WidgetSettingsPremium.kt */
     public static final class C99411 extends Lambda implements Function1<RenderContext, Unit> {
         public C99411() {
             super(1);
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(RenderContext renderContext) {
             Intrinsics3.checkNotNullParameter(renderContext, "$receiver");
             renderContext.args.put("maxUploadStandard", FormatUtils.m219k(WidgetSettingsPremium.this, C5419R.string.file_upload_limit_standard, new Object[0], null, 4).toString());
@@ -1532,14 +1533,14 @@ public final class WidgetSettingsPremium extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetSettingsPremium.kt */
-    /* renamed from: com.discord.widgets.settings.premium.WidgetSettingsPremium$onViewBound$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.premium.WidgetSettingsPremium$onViewBound$2 */
+    /* JADX INFO: compiled from: WidgetSettingsPremium.kt */
     public static final class C99422 extends Lambda implements Function1<RenderContext, Unit> {
         public C99422() {
             super(1);
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(RenderContext renderContext) {
             Intrinsics3.checkNotNullParameter(renderContext, "$receiver");
             renderContext.args.put("maxUploadStandard", FormatUtils.m219k(WidgetSettingsPremium.this, C5419R.string.file_upload_limit_standard, new Object[0], null, 4).toString());
@@ -1553,8 +1554,8 @@ public final class WidgetSettingsPremium extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetSettingsPremium.kt */
-    /* renamed from: com.discord.widgets.settings.premium.WidgetSettingsPremium$onViewBound$4 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.premium.WidgetSettingsPremium$onViewBound$4 */
+    /* JADX INFO: compiled from: WidgetSettingsPremium.kt */
     public static final class C99444 extends Lambda implements Function1<RenderContext, Unit> {
         public static final C99444 INSTANCE = new C99444();
 
@@ -1562,7 +1563,7 @@ public final class WidgetSettingsPremium extends AppFragment {
             super(1);
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(RenderContext renderContext) {
             Intrinsics3.checkNotNullParameter(renderContext, "$receiver");
             Map<String, String> map = renderContext.args;
@@ -1578,8 +1579,8 @@ public final class WidgetSettingsPremium extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetSettingsPremium.kt */
-    /* renamed from: com.discord.widgets.settings.premium.WidgetSettingsPremium$onViewBound$5 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.premium.WidgetSettingsPremium$onViewBound$5 */
+    /* JADX INFO: compiled from: WidgetSettingsPremium.kt */
     public static final class C99455 extends Lambda implements Function1<RenderContext, Unit> {
         public final /* synthetic */ NumberFormat $numberFormat;
 
@@ -1589,7 +1590,7 @@ public final class WidgetSettingsPremium extends AppFragment {
             this.$numberFormat = numberFormat;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(RenderContext renderContext) {
             Intrinsics3.checkNotNullParameter(renderContext, "$receiver");
             Map<String, String> map = renderContext.args;
@@ -1609,8 +1610,8 @@ public final class WidgetSettingsPremium extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetSettingsPremium.kt */
-    /* renamed from: com.discord.widgets.settings.premium.WidgetSettingsPremium$onViewBound$3 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.premium.WidgetSettingsPremium$onViewBound$3 */
+    /* JADX INFO: compiled from: WidgetSettingsPremium.kt */
     public static final class C99433 extends Lambda implements Function1<RenderContext, Unit> {
         public static final C99433 INSTANCE = new C99433();
 
@@ -1618,7 +1619,7 @@ public final class WidgetSettingsPremium extends AppFragment {
             super(1);
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(RenderContext renderContext) {
             Intrinsics3.checkNotNullParameter(renderContext, "$receiver");
             renderContext.args.put("numBoosts", String.valueOf(2));
@@ -1635,8 +1636,8 @@ public final class WidgetSettingsPremium extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetSettingsPremium.kt */
-    /* renamed from: com.discord.widgets.settings.premium.WidgetSettingsPremium$onViewBound$6 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.premium.WidgetSettingsPremium$onViewBound$6 */
+    /* JADX INFO: compiled from: WidgetSettingsPremium.kt */
     public static final class C99466 extends Lambda implements Function1<RenderContext, Unit> {
         public final /* synthetic */ NumberFormat $numberFormat;
 
@@ -1646,7 +1647,7 @@ public final class WidgetSettingsPremium extends AppFragment {
             this.$numberFormat = numberFormat;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(RenderContext renderContext) {
             Intrinsics3.checkNotNullParameter(renderContext, "$receiver");
             Map<String, String> map = renderContext.args;

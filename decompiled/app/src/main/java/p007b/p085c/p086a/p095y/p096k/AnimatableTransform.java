@@ -7,44 +7,44 @@ import p007b.p085c.p086a.p091w.p092b.Content2;
 import p007b.p085c.p086a.p095y.p097l.ContentModel2;
 import p007b.p085c.p086a.p095y.p098m.BaseLayer2;
 
-/* compiled from: AnimatableTransform.java */
-/* renamed from: b.c.a.y.k.l, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.c.a.y.k.l, reason: use source file name */
+/* JADX INFO: compiled from: AnimatableTransform.java */
+/* JADX INFO: loaded from: classes.dex */
 public class AnimatableTransform implements ContentModel2 {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     @Nullable
     public final AnimatablePathValue f2729a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     @Nullable
     public final AnimatableValue<PointF, PointF> f2730b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     @Nullable
     public final AnimatableScaleValue f2731c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     @Nullable
     public final AnimatableFloatValue f2732d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     @Nullable
     public final AnimatableIntegerValue f2733e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     @Nullable
     public final AnimatableFloatValue f2734f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     @Nullable
     public final AnimatableFloatValue f2735g;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     @Nullable
     public final AnimatableFloatValue f2736h;
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     @Nullable
     public final AnimatableFloatValue f2737i;
 
@@ -54,7 +54,7 @@ public class AnimatableTransform implements ContentModel2 {
 
     @Override // p007b.p085c.p086a.p095y.p097l.ContentModel2
     @Nullable
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public Content2 mo775a(LottieDrawable lottieDrawable, BaseLayer2 baseLayer2) {
         return null;
     }

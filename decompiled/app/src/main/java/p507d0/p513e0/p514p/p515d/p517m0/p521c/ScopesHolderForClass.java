@@ -16,31 +16,31 @@ import p507d0.p592z.p594d.Lambda;
 import p507d0.p592z.p594d.PropertyReference1Impl;
 import p507d0.p592z.p594d.Reflection2;
 
-/* compiled from: ScopesHolderForClass.kt */
-/* renamed from: d0.e0.p.d.m0.c.r0, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.c.r0, reason: use source file name */
+/* JADX INFO: compiled from: ScopesHolderForClass.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class ScopesHolderForClass<T extends MemberScope3> {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final a f23077a = new a(null);
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static final /* synthetic */ KProperty<Object>[] f23078b = {Reflection2.property1(new PropertyReference1Impl(Reflection2.getOrCreateKotlinClass(ScopesHolderForClass.class), "scopeForOwnerModule", "getScopeForOwnerModule()Lorg/jetbrains/kotlin/resolve/scopes/MemberScope;"))};
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final ClassDescriptor f23079c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final Function1<KotlinTypeRefiner, T> f23080d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final KotlinTypeRefiner f23081e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final storage5 f23082f;
 
-    /* compiled from: ScopesHolderForClass.kt */
-    /* renamed from: d0.e0.p.d.m0.c.r0$a */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.c.r0$a */
+    /* JADX INFO: compiled from: ScopesHolderForClass.kt */
     public static final class a {
         public a(DefaultConstructorMarker defaultConstructorMarker) {
         }
@@ -54,8 +54,8 @@ public final class ScopesHolderForClass<T extends MemberScope3> {
         }
     }
 
-    /* compiled from: ScopesHolderForClass.kt */
-    /* renamed from: d0.e0.p.d.m0.c.r0$b */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.c.r0$b */
+    /* JADX INFO: compiled from: ScopesHolderForClass.kt */
     public static final class b extends Lambda implements Function0<T> {
         public final /* synthetic */ KotlinTypeRefiner $kotlinTypeRefiner;
         public final /* synthetic */ ScopesHolderForClass<T> this$0;

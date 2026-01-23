@@ -2,7 +2,7 @@ package com.google.android.exoplayer2.upstream;
 
 import p007b.p225i.p226a.p242c.p257e3.DataSpec;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public final class HttpDataSource$InvalidContentTypeException extends HttpDataSource$HttpDataSourceException {
     public final String contentType;
 

@@ -8,7 +8,7 @@ import androidx.core.content.ContextCompat;
 import java.util.Iterator;
 import java.util.List;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public final class TrustedWebActivityIntent {
 
     @NonNull

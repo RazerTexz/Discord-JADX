@@ -32,21 +32,21 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 import p507d0.p592z.p594d.Reflection2;
 
-/* compiled from: WidgetUserStatusSheet.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: WidgetUserStatusSheet.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class WidgetUserStatusSheet extends AppBottomSheet {
     public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetUserStatusSheet.class, "binding", "getBinding()Lcom/discord/databinding/WidgetUserStatusUpdateBinding;", 0)};
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
 
-    /* renamed from: binding$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
 
-    /* renamed from: viewModel$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: viewModel$delegate, reason: from kotlin metadata */
     private final Lazy viewModel;
 
-    /* compiled from: WidgetUserStatusSheet.kt */
+    /* JADX INFO: compiled from: WidgetUserStatusSheet.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -64,8 +64,8 @@ public final class WidgetUserStatusSheet extends AppBottomSheet {
         }
     }
 
-    /* compiled from: WidgetUserStatusSheet.kt */
-    /* renamed from: com.discord.widgets.user.WidgetUserStatusSheet$onResume$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.user.WidgetUserStatusSheet$onResume$1 */
+    /* JADX INFO: compiled from: WidgetUserStatusSheet.kt */
     public static final /* synthetic */ class C102391 extends FunctionReferenceImpl implements Function1<WidgetUserStatusSheetViewModel.ViewState, Unit> {
         public C102391(WidgetUserStatusSheet widgetUserStatusSheet) {
             super(1, widgetUserStatusSheet, WidgetUserStatusSheet.class, "updateView", "updateView(Lcom/discord/widgets/user/WidgetUserStatusSheetViewModel$ViewState;)V", 0);
@@ -77,15 +77,15 @@ public final class WidgetUserStatusSheet extends AppBottomSheet {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(WidgetUserStatusSheetViewModel.ViewState viewState) {
             Intrinsics3.checkNotNullParameter(viewState, "p1");
             WidgetUserStatusSheet.access$updateView((WidgetUserStatusSheet) this.receiver, viewState);
         }
     }
 
-    /* compiled from: WidgetUserStatusSheet.kt */
-    /* renamed from: com.discord.widgets.user.WidgetUserStatusSheet$onViewCreated$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.user.WidgetUserStatusSheet$onViewCreated$1 */
+    /* JADX INFO: compiled from: WidgetUserStatusSheet.kt */
     public static final class ViewOnClickListenerC102401 implements View.OnClickListener {
         public ViewOnClickListenerC102401() {
         }
@@ -96,8 +96,8 @@ public final class WidgetUserStatusSheet extends AppBottomSheet {
         }
     }
 
-    /* compiled from: WidgetUserStatusSheet.kt */
-    /* renamed from: com.discord.widgets.user.WidgetUserStatusSheet$onViewCreated$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.user.WidgetUserStatusSheet$onViewCreated$2 */
+    /* JADX INFO: compiled from: WidgetUserStatusSheet.kt */
     public static final class ViewOnClickListenerC102412 implements View.OnClickListener {
         public ViewOnClickListenerC102412() {
         }
@@ -108,8 +108,8 @@ public final class WidgetUserStatusSheet extends AppBottomSheet {
         }
     }
 
-    /* compiled from: WidgetUserStatusSheet.kt */
-    /* renamed from: com.discord.widgets.user.WidgetUserStatusSheet$onViewCreated$3 */
+    /* JADX INFO: renamed from: com.discord.widgets.user.WidgetUserStatusSheet$onViewCreated$3 */
+    /* JADX INFO: compiled from: WidgetUserStatusSheet.kt */
     public static final class ViewOnClickListenerC102423 implements View.OnClickListener {
         public ViewOnClickListenerC102423() {
         }
@@ -120,8 +120,8 @@ public final class WidgetUserStatusSheet extends AppBottomSheet {
         }
     }
 
-    /* compiled from: WidgetUserStatusSheet.kt */
-    /* renamed from: com.discord.widgets.user.WidgetUserStatusSheet$onViewCreated$4 */
+    /* JADX INFO: renamed from: com.discord.widgets.user.WidgetUserStatusSheet$onViewCreated$4 */
+    /* JADX INFO: compiled from: WidgetUserStatusSheet.kt */
     public static final class ViewOnClickListenerC102434 implements View.OnClickListener {
         public ViewOnClickListenerC102434() {
         }
@@ -132,8 +132,8 @@ public final class WidgetUserStatusSheet extends AppBottomSheet {
         }
     }
 
-    /* compiled from: WidgetUserStatusSheet.kt */
-    /* renamed from: com.discord.widgets.user.WidgetUserStatusSheet$onViewCreated$5 */
+    /* JADX INFO: renamed from: com.discord.widgets.user.WidgetUserStatusSheet$onViewCreated$5 */
+    /* JADX INFO: compiled from: WidgetUserStatusSheet.kt */
     public static final class ViewOnClickListenerC102445 implements View.OnClickListener {
         public ViewOnClickListenerC102445() {
         }
@@ -148,8 +148,8 @@ public final class WidgetUserStatusSheet extends AppBottomSheet {
         }
     }
 
-    /* compiled from: WidgetUserStatusSheet.kt */
-    /* renamed from: com.discord.widgets.user.WidgetUserStatusSheet$onViewCreated$6 */
+    /* JADX INFO: renamed from: com.discord.widgets.user.WidgetUserStatusSheet$onViewCreated$6 */
+    /* JADX INFO: compiled from: WidgetUserStatusSheet.kt */
     public static final class C102456 extends Lambda implements Function0<Unit> {
         public C102456() {
             super(0);
@@ -161,7 +161,7 @@ public final class WidgetUserStatusSheet extends AppBottomSheet {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             WidgetUserStatusSheet.access$clearCustomStatus(WidgetUserStatusSheet.this);
         }

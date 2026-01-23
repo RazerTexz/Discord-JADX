@@ -13,8 +13,8 @@ import java.util.Set;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: AutocompleteInputSelectionModel.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: AutocompleteInputSelectionModel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final /* data */ class AutocompleteInputSelectionModel {
     private final MentionToken autocompleteToken;
     private final Map<LeadingIdentifier, List<Autocompletable>> filteredAutocompletables;
@@ -49,6 +49,7 @@ public final /* data */ class AutocompleteInputSelectionModel {
         this.stickerMatches = list;
     }
 
+    /* JADX WARN: Multi-variable type inference failed */
     public static /* synthetic */ AutocompleteInputSelectionModel copy$default(AutocompleteInputSelectionModel autocompleteInputSelectionModel, MentionToken mentionToken, Map map, InputSelectionModel inputSelectionModel, Set set, List list, int i, Object obj) {
         if ((i & 1) != 0) {
             mentionToken = autocompleteInputSelectionModel.autocompleteToken;
@@ -71,7 +72,7 @@ public final /* data */ class AutocompleteInputSelectionModel {
         return autocompleteInputSelectionModel.copy(mentionToken, map2, inputSelectionModel2, set2, list);
     }
 
-    /* renamed from: component1, reason: from getter */
+    /* JADX INFO: renamed from: component1, reason: from getter */
     public final MentionToken getAutocompleteToken() {
         return this.autocompleteToken;
     }
@@ -80,7 +81,7 @@ public final /* data */ class AutocompleteInputSelectionModel {
         return this.filteredAutocompletables;
     }
 
-    /* renamed from: component3, reason: from getter */
+    /* JADX INFO: renamed from: component3, reason: from getter */
     public final InputSelectionModel getInputSelectionModel() {
         return this.inputSelectionModel;
     }

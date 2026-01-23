@@ -84,109 +84,109 @@ import p007b.p225i.p361c.p369m.p370d.p387t.RemoveRepeatsStrategy;
 import p007b.p225i.p361c.p369m.p370d.p387t.StackTraceTrimmingStrategy;
 import p007b.p225i.p361c.p369m.p370d.p387t.TrimmedThrowableData;
 
-/* compiled from: CrashlyticsController.java */
-/* renamed from: b.i.c.m.d.k.x */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.c.m.d.k.x */
+/* JADX INFO: compiled from: CrashlyticsController.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class C4663x {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final FilenameFilter f12415a = new a("BeginSession");
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static final FilenameFilter f12416b = new b();
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public static final Comparator<File> f12417c = new c();
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public static final Comparator<File> f12418d = new d();
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public static final Pattern f12419e = Pattern.compile("([\\d|A-Z|a-z]{12}\\-[\\d|A-Z|a-z]{4}\\-[\\d|A-Z|a-z]{4}\\-[\\d|A-Z|a-z]{12}).+");
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public static final Map<String, String> f12420f = Collections.singletonMap("X-CRASHLYTICS-SEND-FLAGS", "1");
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public static final String[] f12421g = {"SessionUser", "SessionApp", "SessionOS", "SessionDevice"};
 
-    /* renamed from: A */
+    /* JADX INFO: renamed from: A */
     public final SessionReportingCoordinator3 f12422A;
 
-    /* renamed from: B */
+    /* JADX INFO: renamed from: B */
     public CrashlyticsUncaughtExceptionHandler f12423B;
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public final Context f12429i;
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final DataCollectionArbiter f12430j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final CrashlyticsFileMarker f12431k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final UserMetadata f12432l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public final CrashlyticsBackgroundWorker f12433m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public final HttpRequestFactory f12434n;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public final IdManager f12435o;
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public final FileStoreImpl f12436p;
 
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     public final AppData f12437q;
 
-    /* renamed from: s */
+    /* JADX INFO: renamed from: s */
     public final j f12439s;
 
-    /* renamed from: t */
+    /* JADX INFO: renamed from: t */
     public final LogFileManager f12440t;
 
-    /* renamed from: u */
+    /* JADX INFO: renamed from: u */
     public final ReportManager f12441u;
 
-    /* renamed from: v */
+    /* JADX INFO: renamed from: v */
     public final ReportUploader.a f12442v;
 
-    /* renamed from: w */
+    /* JADX INFO: renamed from: w */
     public final CrashlyticsNativeComponent f12443w;
 
-    /* renamed from: x */
+    /* JADX INFO: renamed from: x */
     public final StackTraceTrimmingStrategy f12444x;
 
-    /* renamed from: y */
+    /* JADX INFO: renamed from: y */
     public final String f12445y;
 
-    /* renamed from: z */
+    /* JADX INFO: renamed from: z */
     public final AnalyticsEventLogger f12446z;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public final AtomicInteger f12428h = new AtomicInteger(0);
 
-    /* renamed from: C */
+    /* JADX INFO: renamed from: C */
     public TaskCompletionSource<Boolean> f12424C = new TaskCompletionSource<>();
 
-    /* renamed from: D */
+    /* JADX INFO: renamed from: D */
     public TaskCompletionSource<Boolean> f12425D = new TaskCompletionSource<>();
 
-    /* renamed from: E */
+    /* JADX INFO: renamed from: E */
     public TaskCompletionSource<Void> f12426E = new TaskCompletionSource<>();
 
-    /* renamed from: F */
+    /* JADX INFO: renamed from: F */
     public AtomicBoolean f12427F = new AtomicBoolean(false);
 
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     public final ReportUploader.b f12438r = new C4629h0(this);
 
-    /* compiled from: CrashlyticsController.java */
-    /* renamed from: b.i.c.m.d.k.x$a */
+    /* JADX INFO: renamed from: b.i.c.m.d.k.x$a */
+    /* JADX INFO: compiled from: CrashlyticsController.java */
     public class a extends h {
         public a(String str) {
             super(str);
@@ -198,8 +198,8 @@ public class C4663x {
         }
     }
 
-    /* compiled from: CrashlyticsController.java */
-    /* renamed from: b.i.c.m.d.k.x$b */
+    /* JADX INFO: renamed from: b.i.c.m.d.k.x$b */
+    /* JADX INFO: compiled from: CrashlyticsController.java */
     public class b implements FilenameFilter {
         @Override // java.io.FilenameFilter
         public boolean accept(File file, String str) {
@@ -207,8 +207,8 @@ public class C4663x {
         }
     }
 
-    /* compiled from: CrashlyticsController.java */
-    /* renamed from: b.i.c.m.d.k.x$c */
+    /* JADX INFO: renamed from: b.i.c.m.d.k.x$c */
+    /* JADX INFO: compiled from: CrashlyticsController.java */
     public class c implements Comparator<File> {
         @Override // java.util.Comparator
         public int compare(File file, File file2) {
@@ -216,8 +216,8 @@ public class C4663x {
         }
     }
 
-    /* compiled from: CrashlyticsController.java */
-    /* renamed from: b.i.c.m.d.k.x$d */
+    /* JADX INFO: renamed from: b.i.c.m.d.k.x$d */
+    /* JADX INFO: compiled from: CrashlyticsController.java */
     public class d implements Comparator<File> {
         @Override // java.util.Comparator
         public int compare(File file, File file2) {
@@ -225,14 +225,14 @@ public class C4663x {
         }
     }
 
-    /* compiled from: CrashlyticsController.java */
-    /* renamed from: b.i.c.m.d.k.x$e */
+    /* JADX INFO: renamed from: b.i.c.m.d.k.x$e */
+    /* JADX INFO: compiled from: CrashlyticsController.java */
     public class e implements InterfaceC4362f<Boolean, Void> {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final /* synthetic */ Task f12447a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final /* synthetic */ float f12448b;
 
         public e(Task task, float f) {
@@ -242,14 +242,14 @@ public class C4663x {
 
         @Override // p007b.p225i.p226a.p288f.p340n.InterfaceC4362f
         @NonNull
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public Task<Void> mo4013a(@Nullable Boolean bool) throws Exception {
             return C4663x.this.f12433m.m6438c(new CallableC4626g0(this, bool));
         }
     }
 
-    /* compiled from: CrashlyticsController.java */
-    /* renamed from: b.i.c.m.d.k.x$f */
+    /* JADX INFO: renamed from: b.i.c.m.d.k.x$f */
+    /* JADX INFO: compiled from: CrashlyticsController.java */
     public static class f implements FilenameFilter {
         public f(a aVar) {
         }
@@ -260,18 +260,18 @@ public class C4663x {
         }
     }
 
-    /* compiled from: CrashlyticsController.java */
-    /* renamed from: b.i.c.m.d.k.x$g */
+    /* JADX INFO: renamed from: b.i.c.m.d.k.x$g */
+    /* JADX INFO: compiled from: CrashlyticsController.java */
     public interface g {
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         void mo6454a(CodedOutputStream2 codedOutputStream2) throws Exception;
     }
 
-    /* compiled from: CrashlyticsController.java */
-    /* renamed from: b.i.c.m.d.k.x$h */
+    /* JADX INFO: renamed from: b.i.c.m.d.k.x$h */
+    /* JADX INFO: compiled from: CrashlyticsController.java */
     public static class h implements FilenameFilter {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final String f12450a;
 
         public h(String str) {
@@ -284,8 +284,8 @@ public class C4663x {
         }
     }
 
-    /* compiled from: CrashlyticsController.java */
-    /* renamed from: b.i.c.m.d.k.x$i */
+    /* JADX INFO: renamed from: b.i.c.m.d.k.x$i */
+    /* JADX INFO: compiled from: CrashlyticsController.java */
     public static class i implements FilenameFilter {
         @Override // java.io.FilenameFilter
         public boolean accept(File file, String str) {
@@ -293,18 +293,18 @@ public class C4663x {
         }
     }
 
-    /* compiled from: CrashlyticsController.java */
-    /* renamed from: b.i.c.m.d.k.x$j */
+    /* JADX INFO: renamed from: b.i.c.m.d.k.x$j */
+    /* JADX INFO: compiled from: CrashlyticsController.java */
     public static final class j implements LogFileManager.b {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final FileStoreImpl f12451a;
 
         public j(FileStoreImpl fileStoreImpl) {
             this.f12451a = fileStoreImpl;
         }
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public File m6487a() {
             File file = new File(this.f12451a.m6636a(), "log-files");
             if (!file.exists()) {
@@ -314,34 +314,34 @@ public class C4663x {
         }
     }
 
-    /* compiled from: CrashlyticsController.java */
-    /* renamed from: b.i.c.m.d.k.x$k */
+    /* JADX INFO: renamed from: b.i.c.m.d.k.x$k */
+    /* JADX INFO: compiled from: CrashlyticsController.java */
     public final class k implements ReportUploader.c {
         public k(a aVar) {
         }
     }
 
-    /* compiled from: CrashlyticsController.java */
-    /* renamed from: b.i.c.m.d.k.x$l */
+    /* JADX INFO: renamed from: b.i.c.m.d.k.x$l */
+    /* JADX INFO: compiled from: CrashlyticsController.java */
     public final class l implements ReportUploader.a {
         public l(a aVar) {
         }
     }
 
-    /* compiled from: CrashlyticsController.java */
-    /* renamed from: b.i.c.m.d.k.x$m */
+    /* JADX INFO: renamed from: b.i.c.m.d.k.x$m */
+    /* JADX INFO: compiled from: CrashlyticsController.java */
     public static final class m implements Runnable {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public final Context f12454j;
 
-        /* renamed from: k */
+        /* JADX INFO: renamed from: k */
         public final Report2 f12455k;
 
-        /* renamed from: l */
+        /* JADX INFO: renamed from: l */
         public final ReportUploader f12456l;
 
-        /* renamed from: m */
+        /* JADX INFO: renamed from: m */
         public final boolean f12457m;
 
         public m(Context context, Report2 report2, ReportUploader reportUploader, boolean z2) {
@@ -360,11 +360,11 @@ public class C4663x {
         }
     }
 
-    /* compiled from: CrashlyticsController.java */
-    /* renamed from: b.i.c.m.d.k.x$n */
+    /* JADX INFO: renamed from: b.i.c.m.d.k.x$n */
+    /* JADX INFO: compiled from: CrashlyticsController.java */
     public static class n implements FilenameFilter {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final String f12458a;
 
         public n(String str) {
@@ -413,7 +413,7 @@ public class C4663x {
         this.f12422A = new SessionReportingCoordinator3(crashlyticsReportDataCapture, crashlyticsReportPersistence7, new DataTransportCrashlyticsReportSender3(((TransportFactoryImpl) transportFactoryM2361c).mo2291a("FIREBASE_CRASHLYTICS_REPORT", CrashlyticsReport.class, encoding2, transformer), transformer), logFileManager, userMetadata);
     }
 
-    /* renamed from: A */
+    /* JADX INFO: renamed from: A */
     public static void m6460A(CodedOutputStream2 codedOutputStream2, File file) throws Throwable {
         if (!file.exists()) {
             Logger3 logger3 = Logger3.f12227a;
@@ -439,7 +439,7 @@ public class C4663x {
         }
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static void m6461a(C4663x c4663x) throws Exception {
         String str;
         String str2;
@@ -485,7 +485,7 @@ public class C4663x {
         String str11 = Build.MODEL;
         int iAvailableProcessors = Runtime.getRuntime().availableProcessors();
         long jM6422p = CommonUtils.m6422p();
-        long blockCount = statFs.getBlockCount() * statFs.getBlockSize();
+        long blockCount = ((long) statFs.getBlockCount()) * ((long) statFs.getBlockSize());
         boolean zM6425s = CommonUtils.m6425s(context);
         int iM6417k = CommonUtils.m6417k(context);
         String str12 = Build.MANUFACTURER;
@@ -555,7 +555,7 @@ public class C4663x {
         }
         int iAvailableProcessors2 = Runtime.getRuntime().availableProcessors();
         long jM6422p2 = CommonUtils.m6422p();
-        long blockCount2 = statFs2.getBlockCount() * statFs2.getBlockSize();
+        long blockCount2 = ((long) statFs2.getBlockCount()) * ((long) statFs2.getBlockSize());
         boolean zM6425s2 = CommonUtils.m6425s(crashlyticsReportDataCapture.f12355c);
         int iM6417k2 = CommonUtils.m6417k(crashlyticsReportDataCapture.f12355c);
         AutoValue_CrashlyticsReport_Session_Device.b bVar5 = new AutoValue_CrashlyticsReport_Session_Device.b();
@@ -592,7 +592,7 @@ public class C4663x {
         }
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static Task m6462b(C4663x c4663x) {
         boolean z2;
         Task taskM4323o;
@@ -625,7 +625,7 @@ public class C4663x {
         return C3404f.m4194B1(arrayList);
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public static void m6463c(@Nullable String str, @NonNull File file) throws Exception {
         FileOutputStream fileOutputStream;
         if (str == null) {
@@ -662,7 +662,7 @@ public class C4663x {
         }
     }
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public static void m6464e(InputStream inputStream, CodedOutputStream2 codedOutputStream2, int i2) throws IOException {
         byte[] bArr = new byte[i2];
         int i3 = 0;
@@ -696,29 +696,29 @@ public class C4663x {
         }
     }
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static long m6465j() {
         return new Date().getTime() / 1000;
     }
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public static String m6466o(File file) {
         return file.getName().substring(0, 35);
     }
 
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     public static File[] m6467r(File file, FilenameFilter filenameFilter) {
         File[] fileArrListFiles = file.listFiles(filenameFilter);
         return fileArrListFiles == null ? new File[0] : fileArrListFiles;
     }
 
     @NonNull
-    /* renamed from: t */
+    /* JADX INFO: renamed from: t */
     public static String m6468t(@NonNull String str) {
         return str.replaceAll("-", "");
     }
 
-    /* renamed from: x */
+    /* JADX INFO: renamed from: x */
     public static void m6469x(CodedOutputStream2 codedOutputStream2, File[] fileArr, String str) throws Throwable {
         Arrays.sort(fileArr, CommonUtils.f12299c);
         for (File file : fileArr) {
@@ -733,7 +733,7 @@ public class C4663x {
         }
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final void m6470d(ClsFileOutputStream clsFileOutputStream) {
         if (clsFileOutputStream == null) {
             return;
@@ -748,29 +748,17 @@ public class C4663x {
     }
 
     /* JADX WARN: Multi-variable type inference failed */
-    /* JADX WARN: Removed duplicated region for block: B:152:0x04a2 A[LOOP:6: B:151:0x04a0->B:152:0x04a2, LOOP_END] */
-    /* JADX WARN: Removed duplicated region for block: B:158:0x04bf  */
-    /* JADX WARN: Removed duplicated region for block: B:159:0x04cb  */
-    /* JADX WARN: Removed duplicated region for block: B:163:0x04ed  */
-    /* JADX WARN: Removed duplicated region for block: B:171:0x0518  */
     /* JADX WARN: Removed duplicated region for block: B:215:0x0628  */
     /* JADX WARN: Removed duplicated region for block: B:216:0x062b  */
     /* JADX WARN: Removed duplicated region for block: B:219:0x0646 A[Catch: IOException -> 0x0685, TryCatch #14 {IOException -> 0x0685, blocks: (B:217:0x062d, B:219:0x0646, B:222:0x0669, B:223:0x067d, B:224:0x0684), top: B:250:0x062d }] */
     /* JADX WARN: Removed duplicated region for block: B:223:0x067d A[Catch: IOException -> 0x0685, TryCatch #14 {IOException -> 0x0685, blocks: (B:217:0x062d, B:219:0x0646, B:222:0x0669, B:223:0x067d, B:224:0x0684), top: B:250:0x062d }] */
-    /* JADX WARN: Removed duplicated region for block: B:231:0x06c0  */
-    /* JADX WARN: Removed duplicated region for block: B:235:0x06d8 A[ORIG_RETURN, RETURN] */
-    /* JADX WARN: Removed duplicated region for block: B:53:0x0142  */
-    /* JADX WARN: Removed duplicated region for block: B:97:0x030e  */
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
     public final void m6471f(int i2, boolean z2) throws Exception {
         FileInputStream fileInputStream;
         UserMetadata userMetadata;
-        int i3;
-        List<File> listM6626f;
-        int size;
         String strM6629j;
         File file;
         String str;
@@ -779,13 +767,13 @@ public class C4663x {
         ClsFileOutputStream clsFileOutputStream;
         String str2;
         InputStream inputStreamMo6394h;
-        int i4 = i2;
-        int i5 = (z2 ? 1 : 0) + 8;
+        int i3 = i2;
+        int i4 = (z2 ? 1 : 0) + 8;
         HashSet hashSet = new HashSet();
         File[] fileArrM6481s = m6481s();
-        int iMin = Math.min(i5, fileArrM6481s.length);
-        for (int i6 = 0; i6 < iMin; i6++) {
-            hashSet.add(m6466o(fileArrM6481s[i6]));
+        int iMin = Math.min(i4, fileArrM6481s.length);
+        for (int i5 = 0; i5 < iMin; i5++) {
+            hashSet.add(m6466o(fileArrM6481s[i5]));
         }
         File[] fileArrListFiles = ((j) this.f12440t.f12472c).m6487a().listFiles();
         if (fileArrListFiles != null) {
@@ -844,33 +832,6 @@ public class C4663x {
                     }
                     CommonUtils.m6409c(fileInputStream2, "Failed to close user metadata file.");
                     userMetadata = new UserMetadata();
-                    m6486z(strM6466o, "SessionUser", new C4667z(this, userMetadata));
-                    String str3 = "report";
-                    String str4 = "user";
-                    if (this.f12443w.mo6366e(strM6466o)) {
-                    }
-                    Logger3.f12227a.m6371b("Closing open sessions.");
-                    i3 = z2 ? 1 : 0;
-                    while (i3 < fileArrM6481s2.length) {
-                    }
-                    String str5 = str3;
-                    String str6 = str4;
-                    if (z2 == 0) {
-                    }
-                    SessionReportingCoordinator3 sessionReportingCoordinator3 = this.f12422A;
-                    long jM6465j = m6465j();
-                    CrashlyticsReportPersistence7 crashlyticsReportPersistence7 = sessionReportingCoordinator3.f12279b;
-                    listM6626f = CrashlyticsReportPersistence7.m6626f(crashlyticsReportPersistence7.f12678g, new CrashlyticsReportPersistence2(strM6468t));
-                    Collections.sort(listM6626f, CrashlyticsReportPersistence7.f12675d);
-                    if (listM6626f.size() > 8) {
-                    }
-                    while (r6.hasNext()) {
-                    }
-                    Objects.requireNonNull(((SettingsController) crashlyticsReportPersistence7.f12682k).m6685c().mo6690b());
-                    ArrayList arrayList = (ArrayList) crashlyticsReportPersistence7.m6634e();
-                    size = arrayList.size();
-                    if (size > 4) {
-                    }
                 } catch (Throwable th2) {
                     th = th2;
                     CommonUtils.m6409c(fileInputStream, "Failed to close user metadata file.");
@@ -881,8 +842,8 @@ public class C4663x {
             }
         }
         m6486z(strM6466o, "SessionUser", new C4667z(this, userMetadata));
-        String str32 = "report";
-        String str42 = "user";
+        String str3 = "report";
+        String str4 = "user";
         if (this.f12443w.mo6366e(strM6466o)) {
             Logger3 logger3 = Logger3.f12227a;
             outline.m868o0("Finalizing native report for session ", strM6466o, logger3);
@@ -901,17 +862,17 @@ public class C4663x {
                     MetaDataStore2 metaDataStore2 = new MetaDataStore2(fileM6476l);
                     File fileM6490b2 = metaDataStore2.m6490b(strM6466o);
                     File fileM6489a = metaDataStore2.m6489a(strM6466o);
-                    ArrayList<NativeSessionFile> arrayList2 = new ArrayList();
-                    arrayList2.add(new BytesBackedNativeSessionFile("logs_file", "logs", bArrMo6493c));
-                    arrayList2.add(new FileBackedNativeSessionFile("crash_meta_file", "metadata", nativeSessionFileProviderMo6363b.mo6382f()));
-                    arrayList2.add(new FileBackedNativeSessionFile("session_meta_file", "session", nativeSessionFileProviderMo6363b.mo6381e()));
-                    arrayList2.add(new FileBackedNativeSessionFile("app_meta_file", "app", nativeSessionFileProviderMo6363b.mo6377a()));
-                    arrayList2.add(new FileBackedNativeSessionFile("device_meta_file", "device", nativeSessionFileProviderMo6363b.mo6379c()));
-                    arrayList2.add(new FileBackedNativeSessionFile("os_meta_file", "os", nativeSessionFileProviderMo6363b.mo6378b()));
-                    arrayList2.add(new FileBackedNativeSessionFile("minidump_file", "minidump", nativeSessionFileProviderMo6363b.mo6380d()));
-                    arrayList2.add(new FileBackedNativeSessionFile("user_meta_file", "user", fileM6490b2));
-                    arrayList2.add(new FileBackedNativeSessionFile("keys_file", "keys", fileM6489a));
-                    for (NativeSessionFile nativeSessionFile : arrayList2) {
+                    ArrayList<NativeSessionFile> arrayList = new ArrayList();
+                    arrayList.add(new BytesBackedNativeSessionFile("logs_file", "logs", bArrMo6493c));
+                    arrayList.add(new FileBackedNativeSessionFile("crash_meta_file", "metadata", nativeSessionFileProviderMo6363b.mo6382f()));
+                    arrayList.add(new FileBackedNativeSessionFile("session_meta_file", "session", nativeSessionFileProviderMo6363b.mo6381e()));
+                    arrayList.add(new FileBackedNativeSessionFile("app_meta_file", "app", nativeSessionFileProviderMo6363b.mo6377a()));
+                    arrayList.add(new FileBackedNativeSessionFile("device_meta_file", "device", nativeSessionFileProviderMo6363b.mo6379c()));
+                    arrayList.add(new FileBackedNativeSessionFile("os_meta_file", "os", nativeSessionFileProviderMo6363b.mo6378b()));
+                    arrayList.add(new FileBackedNativeSessionFile("minidump_file", "minidump", nativeSessionFileProviderMo6363b.mo6380d()));
+                    arrayList.add(new FileBackedNativeSessionFile("user_meta_file", "user", fileM6490b2));
+                    arrayList.add(new FileBackedNativeSessionFile("keys_file", "keys", fileM6489a));
+                    for (NativeSessionFile nativeSessionFile : arrayList) {
                         try {
                             inputStreamMo6394h = nativeSessionFile.mo6394h();
                             if (inputStreamMo6394h != null) {
@@ -932,22 +893,22 @@ public class C4663x {
                         }
                         CommonUtils.m6410d(inputStreamMo6394h);
                     }
-                    SessionReportingCoordinator3 sessionReportingCoordinator32 = this.f12422A;
+                    SessionReportingCoordinator3 sessionReportingCoordinator3 = this.f12422A;
                     String strReplaceAll = strM6466o.replaceAll("-", "");
-                    Objects.requireNonNull(sessionReportingCoordinator32);
-                    ArrayList arrayList3 = new ArrayList();
-                    Iterator it = arrayList2.iterator();
+                    Objects.requireNonNull(sessionReportingCoordinator3);
+                    ArrayList arrayList2 = new ArrayList();
+                    Iterator it = arrayList.iterator();
                     while (it.hasNext()) {
                         CrashlyticsReport.c.a aVarMo6393b = ((NativeSessionFile) it.next()).mo6393b();
                         if (aVarMo6393b != null) {
-                            arrayList3.add(aVarMo6393b);
+                            arrayList2.add(aVarMo6393b);
                         }
                     }
-                    CrashlyticsReportPersistence7 crashlyticsReportPersistence72 = sessionReportingCoordinator32.f12279b;
-                    AutoValue_CrashlyticsReport_FilesPayload autoValue_CrashlyticsReport_FilesPayload = new AutoValue_CrashlyticsReport_FilesPayload(new ImmutableList3(arrayList3), null, null);
-                    Objects.requireNonNull(crashlyticsReportPersistence72);
-                    File file5 = new File(crashlyticsReportPersistence72.m6635h(strReplaceAll), "report");
-                    File file6 = crashlyticsReportPersistence72.f12681j;
+                    CrashlyticsReportPersistence7 crashlyticsReportPersistence7 = sessionReportingCoordinator3.f12279b;
+                    AutoValue_CrashlyticsReport_FilesPayload autoValue_CrashlyticsReport_FilesPayload = new AutoValue_CrashlyticsReport_FilesPayload(new ImmutableList3(arrayList2), null, null);
+                    Objects.requireNonNull(crashlyticsReportPersistence7);
+                    File file5 = new File(crashlyticsReportPersistence7.m6635h(strReplaceAll), "report");
+                    File file6 = crashlyticsReportPersistence7.f12681j;
                     try {
                         CrashlyticsReportJsonTransform8 crashlyticsReportJsonTransform8 = CrashlyticsReportPersistence7.f12674c;
                         AutoValue_CrashlyticsReport.b bVar = (AutoValue_CrashlyticsReport.b) crashlyticsReportJsonTransform8.m6619f(CrashlyticsReportPersistence7.m6629j(file5)).mo6523i();
@@ -969,9 +930,9 @@ public class C4663x {
             }
         }
         Logger3.f12227a.m6371b("Closing open sessions.");
-        i3 = z2 ? 1 : 0;
-        while (i3 < fileArrM6481s2.length) {
-            File file7 = fileArrM6481s2[i3];
+        int i6 = z2 ? 1 : 0;
+        while (i6 < fileArrM6481s2.length) {
+            File file7 = fileArrM6481s2[i6];
             String strM6466o2 = m6466o(file7);
             Logger3 logger32 = Logger3.f12227a;
             logger32.m6371b("Closing session: " + strM6466o2);
@@ -982,12 +943,12 @@ public class C4663x {
             logger32.m6371b(String.format(locale, "Session %s has fatal exception: %s", strM6466o2, Boolean.valueOf(z3)));
             File[] fileArrM6467r2 = m6467r(m6476l(), new h(outline.m883w(strM6466o2, "SessionEvent")));
             boolean z4 = fileArrM6467r2.length > 0;
-            String str7 = str32;
+            String str5 = str3;
             logger32.m6371b(String.format(locale, "Session %s has non-fatal exceptions: %s", strM6466o2, Boolean.valueOf(z4)));
             if (z3 || z4) {
-                if (fileArrM6467r2.length > i4) {
+                if (fileArrM6467r2.length > i3) {
                     logger32.m6371b(String.format(locale, "Trimming down to %d logged exceptions.", Integer.valueOf(i2)));
-                    m6483v(strM6466o2, i4);
+                    m6483v(strM6466o2, i3);
                     fileArrM6467r2 = m6467r(m6476l(), new h(outline.m883w(strM6466o2, "SessionEvent")));
                 }
                 File file8 = z3 ? fileArrM6467r[0] : null;
@@ -1004,10 +965,10 @@ public class C4663x {
                             try {
                                 logger32.m6371b("Collecting SessionStart data for session ID " + strM6466o2);
                                 m6460A(codedOutputStream2M6646i, file7);
-                                str2 = str42;
+                                str2 = str4;
                             } catch (Exception e5) {
                                 e = e5;
-                                str2 = str42;
+                                str2 = str4;
                             }
                             try {
                                 codedOutputStream2M6646i.m6656t(4, m6465j());
@@ -1026,14 +987,6 @@ public class C4663x {
                                 Logger3.f12227a.m6374e("Failed to write session file for session ID: " + strM6466o2, e);
                                 CommonUtils.m6414h(codedOutputStream2M6646i, "Error flushing session file stream");
                                 m6470d(clsFileOutputStream);
-                                Logger3.f12227a.m6371b("Removing session part files for ID " + strM6466o2);
-                                File[] fileArrM6467r3 = m6467r(m6476l(), new n(strM6466o2));
-                                while (i < r5) {
-                                }
-                                i3++;
-                                str42 = str2;
-                                str32 = str7;
-                                i4 = i2;
                             }
                         } catch (Throwable th5) {
                             th = th5;
@@ -1043,7 +996,7 @@ public class C4663x {
                         }
                     } catch (Exception e7) {
                         e = e7;
-                        str2 = str42;
+                        str2 = str4;
                         codedOutputStream2M6646i = null;
                     } catch (Throwable th6) {
                         th = th6;
@@ -1051,7 +1004,7 @@ public class C4663x {
                     }
                 } catch (Exception e8) {
                     e = e8;
-                    str2 = str42;
+                    str2 = str4;
                     codedOutputStream2M6646i = null;
                     clsFileOutputStream = null;
                 } catch (Throwable th7) {
@@ -1061,25 +1014,25 @@ public class C4663x {
                 }
             } else {
                 outline.m868o0("No events present for session ID ", strM6466o2, logger32);
-                str2 = str42;
+                str2 = str4;
             }
             Logger3.f12227a.m6371b("Removing session part files for ID " + strM6466o2);
-            File[] fileArrM6467r32 = m6467r(m6476l(), new n(strM6466o2));
-            for (File file9 : fileArrM6467r32) {
+            File[] fileArrM6467r3 = m6467r(m6476l(), new n(strM6466o2));
+            for (File file9 : fileArrM6467r3) {
                 file9.delete();
             }
-            i3++;
-            str42 = str2;
-            str32 = str7;
-            i4 = i2;
+            i6++;
+            str4 = str2;
+            str3 = str5;
+            i3 = i2;
         }
-        String str52 = str32;
-        String str62 = str42;
-        String strM6468t = z2 == 0 ? m6468t(m6466o(fileArrM6481s2[0])) : null;
-        SessionReportingCoordinator3 sessionReportingCoordinator33 = this.f12422A;
-        long jM6465j2 = m6465j();
-        CrashlyticsReportPersistence7 crashlyticsReportPersistence73 = sessionReportingCoordinator33.f12279b;
-        listM6626f = CrashlyticsReportPersistence7.m6626f(crashlyticsReportPersistence73.f12678g, new CrashlyticsReportPersistence2(strM6468t));
+        String str6 = str3;
+        String str7 = str4;
+        String strM6468t = z2 != 0 ? m6468t(m6466o(fileArrM6481s2[0])) : null;
+        SessionReportingCoordinator3 sessionReportingCoordinator32 = this.f12422A;
+        long jM6465j = m6465j();
+        CrashlyticsReportPersistence7 crashlyticsReportPersistence72 = sessionReportingCoordinator32.f12279b;
+        List<File> listM6626f = CrashlyticsReportPersistence7.m6626f(crashlyticsReportPersistence72.f12678g, new CrashlyticsReportPersistence2(strM6468t));
         Collections.sort(listM6626f, CrashlyticsReportPersistence7.f12675d);
         if (listM6626f.size() > 8) {
             Iterator<File> it2 = listM6626f.subList(8, listM6626f.size()).iterator();
@@ -1101,7 +1054,7 @@ public class C4663x {
                 logger33.m6371b(sbM833U2.toString());
             } else {
                 Collections.sort(listM6627g);
-                ArrayList arrayList4 = new ArrayList();
+                ArrayList arrayList3 = new ArrayList();
                 while (true) {
                     boolean z6 = false;
                     for (File file11 : listM6627g) {
@@ -1114,7 +1067,7 @@ public class C4663x {
                                 try {
                                     CrashlyticsReport.d.AbstractC13233d abstractC13233dM6615b = CrashlyticsReportJsonTransform8.m6615b(jsonReader);
                                     jsonReader.close();
-                                    arrayList4.add(abstractC13233dM6615b);
+                                    arrayList3.add(abstractC13233dM6615b);
                                     if (!z6) {
                                         String name3 = file11.getName();
                                         if (!(name3.startsWith("event") && name3.endsWith("_"))) {
@@ -1136,13 +1089,13 @@ public class C4663x {
                             Logger3.f12227a.m6372c("Could not add event to report for " + file11, e10);
                         }
                     }
-                    if (arrayList4.isEmpty()) {
+                    if (arrayList3.isEmpty()) {
                         Logger3 logger34 = Logger3.f12227a;
                         StringBuilder sbM833U3 = outline.m833U("Could not parse event files for session ");
                         sbM833U3.append(file10.getName());
                         logger34.m6371b(sbM833U3.toString());
                     } else {
-                        File file12 = new File(file10, str62);
+                        File file12 = new File(file10, str7);
                         if (file12.isFile()) {
                             try {
                                 strM6629j = CrashlyticsReportPersistence7.m6629j(file12);
@@ -1151,14 +1104,15 @@ public class C4663x {
                                 StringBuilder sbM833U4 = outline.m833U("Could not read user ID file in ");
                                 sbM833U4.append(file10.getName());
                                 logger35.m6372c(sbM833U4.toString(), e11);
+                                strM6629j = null;
                             }
-                            str = str52;
+                            str = str6;
                             file = new File(file10, str);
-                            File file13 = !z6 ? crashlyticsReportPersistence73.f12679h : crashlyticsReportPersistence73.f12680i;
+                            File file13 = !z6 ? crashlyticsReportPersistence72.f12679h : crashlyticsReportPersistence72.f12680i;
                             try {
                                 CrashlyticsReportJsonTransform8 crashlyticsReportJsonTransform83 = CrashlyticsReportPersistence7.f12674c;
-                                crashlyticsReportM6612j = crashlyticsReportJsonTransform83.m6619f(CrashlyticsReportPersistence7.m6629j(file)).m6612j(jM6465j2, z6, strM6629j);
-                                ImmutableList3<CrashlyticsReport.d.AbstractC13233d> immutableList3 = new ImmutableList3<>(arrayList4);
+                                crashlyticsReportM6612j = crashlyticsReportJsonTransform83.m6619f(CrashlyticsReportPersistence7.m6629j(file)).m6612j(jM6465j, z6, strM6629j);
+                                ImmutableList3<CrashlyticsReport.d.AbstractC13233d> immutableList3 = new ImmutableList3<>(arrayList3);
                                 if (crashlyticsReportM6612j.mo6522h() != null) {
                                     throw new IllegalStateException("Reports without sessions cannot have events added to them.");
                                 }
@@ -1178,38 +1132,38 @@ public class C4663x {
                             }
                         } else {
                             strM6629j = null;
-                            str = str52;
+                            str = str6;
                             file = new File(file10, str);
                             if (!z6) {
                             }
                             CrashlyticsReportJsonTransform8 crashlyticsReportJsonTransform832 = CrashlyticsReportPersistence7.f12674c;
-                            crashlyticsReportM6612j = crashlyticsReportJsonTransform832.m6619f(CrashlyticsReportPersistence7.m6629j(file)).m6612j(jM6465j2, z6, strM6629j);
-                            ImmutableList3<CrashlyticsReport.d.AbstractC13233d> immutableList32 = new ImmutableList3<>(arrayList4);
+                            crashlyticsReportM6612j = crashlyticsReportJsonTransform832.m6619f(CrashlyticsReportPersistence7.m6629j(file)).m6612j(jM6465j, z6, strM6629j);
+                            ImmutableList3<CrashlyticsReport.d.AbstractC13233d> immutableList32 = new ImmutableList3<>(arrayList3);
                             if (crashlyticsReportM6612j.mo6522h() != null) {
                             }
                         }
                     }
                 }
                 CrashlyticsReportPersistence7.m6630k(file10);
-                str52 = str;
+                str6 = str;
             }
-            str = str52;
+            str = str6;
             CrashlyticsReportPersistence7.m6630k(file10);
-            str52 = str;
+            str6 = str;
         }
-        Objects.requireNonNull(((SettingsController) crashlyticsReportPersistence73.f12682k).m6685c().mo6690b());
-        ArrayList arrayList5 = (ArrayList) crashlyticsReportPersistence73.m6634e();
-        size = arrayList5.size();
-        if (size > 4) {
+        Objects.requireNonNull(((SettingsController) crashlyticsReportPersistence72.f12682k).m6685c().mo6690b());
+        ArrayList arrayList4 = (ArrayList) crashlyticsReportPersistence72.m6634e();
+        int size = arrayList4.size();
+        if (size <= 4) {
             return;
         }
-        Iterator it3 = arrayList5.subList(4, size).iterator();
+        Iterator it3 = arrayList4.subList(4, size).iterator();
         while (it3.hasNext()) {
             ((File) it3.next()).delete();
         }
     }
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public final void m6472g(long j2) {
         try {
             new File(m6476l(), ".ae" + j2).createNewFile();
@@ -1218,7 +1172,7 @@ public class C4663x {
         }
     }
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public boolean m6473h(int i2) {
         this.f12433m.m6436a();
         if (m6479p()) {
@@ -1240,7 +1194,7 @@ public class C4663x {
     }
 
     @Nullable
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public final String m6474i() {
         File[] fileArrM6481s = m6481s();
         if (fileArrM6481s.length > 0) {
@@ -1249,33 +1203,33 @@ public class C4663x {
         return null;
     }
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public File m6475k() {
         return new File(m6476l(), "fatal-sessions");
     }
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public File m6476l() {
         return this.f12436p.m6636a();
     }
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public File m6477m() {
         return new File(m6476l(), "native-sessions");
     }
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public File m6478n() {
         return new File(m6476l(), "nonfatal-sessions");
     }
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public boolean m6479p() {
         CrashlyticsUncaughtExceptionHandler crashlyticsUncaughtExceptionHandler = this.f12423B;
         return crashlyticsUncaughtExceptionHandler != null && crashlyticsUncaughtExceptionHandler.f12368d.get();
     }
 
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     public File[] m6480q() {
         LinkedList linkedList = new LinkedList();
         File fileM6475k = m6475k();
@@ -1294,14 +1248,14 @@ public class C4663x {
         return (File[]) linkedList.toArray(new File[linkedList.size()]);
     }
 
-    /* renamed from: s */
+    /* JADX INFO: renamed from: s */
     public final File[] m6481s() {
         File[] fileArrM6467r = m6467r(m6476l(), f12415a);
         Arrays.sort(fileArrM6467r, f12417c);
         return fileArrM6467r;
     }
 
-    /* renamed from: u */
+    /* JADX INFO: renamed from: u */
     public Task<Void> m6482u(float f2, Task<AppSettingsData> task) {
         C4358c0<Void> c4358c0;
         Task taskM4264Z;
@@ -1343,12 +1297,12 @@ public class C4663x {
         return taskM4264Z.mo6022q(new e(task, f2));
     }
 
-    /* renamed from: v */
+    /* JADX INFO: renamed from: v */
     public final void m6483v(String str, int i2) {
         Utils3.m6433b(m6476l(), new h(outline.m883w(str, "SessionEvent")), i2, f12418d);
     }
 
-    /* renamed from: w */
+    /* JADX INFO: renamed from: w */
     public final void m6484w(CodedOutputStream2 codedOutputStream2, String str) throws Throwable {
         for (String str2 : f12421g) {
             File[] fileArrM6467r = m6467r(m6476l(), new h(outline.m886y(str, str2, ".cls")));
@@ -1372,7 +1326,7 @@ public class C4663x {
     /* JADX WARN: Removed duplicated region for block: B:47:0x0295  */
     /* JADX WARN: Removed duplicated region for block: B:53:0x02bd  */
     /* JADX WARN: Removed duplicated region for block: B:56:0x0306  */
-    /* renamed from: y */
+    /* JADX INFO: renamed from: y */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
@@ -1592,7 +1546,7 @@ public class C4663x {
         this.f12440t.f12473d.mo6494d();
     }
 
-    /* renamed from: z */
+    /* JADX INFO: renamed from: z */
     public final void m6486z(String str, String str2, g gVar) throws Exception {
         Throwable th;
         ClsFileOutputStream clsFileOutputStream;

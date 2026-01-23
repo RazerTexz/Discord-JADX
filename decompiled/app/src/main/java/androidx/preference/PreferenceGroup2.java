@@ -10,13 +10,13 @@ import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.p595g0.KMarkers;
 
-/* compiled from: PreferenceGroup.kt */
-/* renamed from: androidx.preference.PreferenceGroupKt, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: androidx.preference.PreferenceGroupKt, reason: use source file name */
+/* JADX INFO: compiled from: PreferenceGroup.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class PreferenceGroup2 {
 
-    /* compiled from: PreferenceGroup.kt */
-    /* renamed from: androidx.preference.PreferenceGroupKt$iterator$1 */
+    /* JADX INFO: renamed from: androidx.preference.PreferenceGroupKt$iterator$1 */
+    /* JADX INFO: compiled from: PreferenceGroup.kt */
     public static final class C05231 implements Iterator<Preference>, KMarkers {
         public final /* synthetic */ PreferenceGroup $this_iterator;
         private int index;

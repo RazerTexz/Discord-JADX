@@ -1,9 +1,9 @@
 package com.discord.widgets.stage.model;
 
 
-/* compiled from: DiscoveryModel.kt */
-/* renamed from: com.discord.widgets.stage.model.AnalyticsDiscoverySourceValues, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.stage.model.AnalyticsDiscoverySourceValues, reason: use source file name */
+/* JADX INFO: compiled from: DiscoveryModel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class DiscoveryModel {
     public static final int FEATURED = 6;
     public static final DiscoveryModel INSTANCE = new DiscoveryModel();

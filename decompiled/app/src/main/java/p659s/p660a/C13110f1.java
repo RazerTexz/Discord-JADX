@@ -2,12 +2,12 @@ package p659s.p660a;
 
 import kotlinx.coroutines.Job;
 
-/* compiled from: JobSupport.kt */
-/* renamed from: s.a.f1 */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: s.a.f1 */
+/* JADX INFO: compiled from: JobSupport.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public class C13110f1 extends C13116h1 implements CompletableJob {
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final boolean f27843k;
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -34,13 +34,13 @@ public class C13110f1 extends C13116h1 implements CompletableJob {
     }
 
     @Override // p659s.p660a.C13116h1
-    /* renamed from: J */
+    /* JADX INFO: renamed from: J */
     public boolean mo11279J() {
         return this.f27843k;
     }
 
     @Override // p659s.p660a.C13116h1
-    /* renamed from: K */
+    /* JADX INFO: renamed from: K */
     public boolean mo11280K() {
         return true;
     }

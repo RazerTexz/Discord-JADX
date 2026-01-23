@@ -8,9 +8,9 @@ import p637j0.p641k.Func1;
 import p637j0.p642l.p647e.ScalarSynchronousObservable;
 import p658rx.Observable;
 
-/* compiled from: WidgetChatListModel.kt */
-/* renamed from: com.discord.widgets.chat.list.model.WidgetChatListModel$Companion$get$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.chat.list.model.WidgetChatListModel$Companion$get$1, reason: use source file name */
+/* JADX INFO: compiled from: WidgetChatListModel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetChatListModel3<T, R> implements Func1<StoreChannelsSelected.ResolvedSelectedChannel, Observable<? extends WidgetChatListModel>> {
     public static final WidgetChatListModel3 INSTANCE = new WidgetChatListModel3();
 
@@ -19,7 +19,7 @@ public final class WidgetChatListModel3<T, R> implements Func1<StoreChannelsSele
         return call2(resolvedSelectedChannel);
     }
 
-    /* renamed from: call, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
     public final Observable<? extends WidgetChatListModel> call2(StoreChannelsSelected.ResolvedSelectedChannel resolvedSelectedChannel) {
         if (resolvedSelectedChannel instanceof StoreChannelsSelected.ResolvedSelectedChannel.Channel) {
             StoreChannelsSelected.ResolvedSelectedChannel.Channel channel = (StoreChannelsSelected.ResolvedSelectedChannel.Channel) resolvedSelectedChannel;

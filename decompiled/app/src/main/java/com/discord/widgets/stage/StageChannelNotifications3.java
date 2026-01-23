@@ -5,9 +5,9 @@ import androidx.core.app.NotificationCompat;
 import p637j0.p641k.Func1;
 import p658rx.Observable;
 
-/* compiled from: StageChannelNotifications.kt */
-/* renamed from: com.discord.widgets.stage.StageChannelNotifications$onInvitedToSpeak$1$bitmap$1$1$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.stage.StageChannelNotifications$onInvitedToSpeak$1$bitmap$1$1$1, reason: use source file name */
+/* JADX INFO: compiled from: StageChannelNotifications.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class StageChannelNotifications3<T, R> implements Func1<Throwable, Observable<? extends Bitmap>> {
     public static final StageChannelNotifications3 INSTANCE = new StageChannelNotifications3();
 
@@ -16,7 +16,7 @@ public final class StageChannelNotifications3<T, R> implements Func1<Throwable, 
         return call2(th);
     }
 
-    /* renamed from: call, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
     public final Observable<? extends Bitmap> call2(Throwable th) {
         return null;
     }

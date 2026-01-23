@@ -2,9 +2,9 @@ package p007b.p225i.p226a.p228b.p229i.p230e;
 
 import android.util.SparseArray;
 
-/* compiled from: QosTier.java */
-/* renamed from: b.i.a.b.i.e.p, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.b.i.e.p, reason: use source file name */
+/* JADX INFO: compiled from: QosTier.java */
+/* JADX INFO: loaded from: classes3.dex */
 public enum QosTier {
     DEFAULT(0),
     UNMETERED_ONLY(1),
@@ -14,7 +14,7 @@ public enum QosTier {
     UNRECOGNIZED(-1);
 
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public static final SparseArray<QosTier> f5244p;
     private final int value;
 

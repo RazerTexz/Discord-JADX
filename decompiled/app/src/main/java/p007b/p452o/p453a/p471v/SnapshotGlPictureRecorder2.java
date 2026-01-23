@@ -31,27 +31,27 @@ import p007b.p452o.p475b.p480e.EglWindowSurface;
 import p507d0.p591y.Closeable;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: SnapshotGlPictureRecorder.java */
-/* renamed from: b.o.a.v.h, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.o.a.v.h, reason: use source file name */
+/* JADX INFO: compiled from: SnapshotGlPictureRecorder.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class SnapshotGlPictureRecorder2 implements Runnable {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final /* synthetic */ SurfaceTexture f14199j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final /* synthetic */ int f14200k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final /* synthetic */ float f14201l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public final /* synthetic */ float f14202m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public final /* synthetic */ EGLContext f14203n;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public final /* synthetic */ SnapshotGlPictureRecorder f14204o;
 
     public SnapshotGlPictureRecorder2(SnapshotGlPictureRecorder snapshotGlPictureRecorder, SurfaceTexture surfaceTexture, int i, float f, float f2, EGLContext eGLContext) {

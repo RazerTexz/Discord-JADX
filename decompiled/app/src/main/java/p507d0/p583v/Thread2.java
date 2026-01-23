@@ -4,16 +4,16 @@ import kotlin.Unit;
 import kotlin.jvm.functions.Function0;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: Thread.kt */
-/* renamed from: d0.v.a, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.v.a, reason: use source file name */
+/* JADX INFO: compiled from: Thread.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class Thread2 {
 
-    /* compiled from: Thread.kt */
-    /* renamed from: d0.v.a$a */
+    /* JADX INFO: renamed from: d0.v.a$a */
+    /* JADX INFO: compiled from: Thread.kt */
     public static final class a extends Thread {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public final /* synthetic */ Function0 f25231j;
 
         public a(Function0 function0) {

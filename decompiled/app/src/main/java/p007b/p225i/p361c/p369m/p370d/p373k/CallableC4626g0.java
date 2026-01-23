@@ -17,15 +17,15 @@ import p007b.p225i.p361c.p369m.p370d.p380q.p381c.NativeSessionReport;
 import p007b.p225i.p361c.p369m.p370d.p380q.p381c.Report2;
 import p007b.p225i.p361c.p369m.p370d.p380q.p381c.SessionReport;
 
-/* compiled from: CrashlyticsController.java */
-/* renamed from: b.i.c.m.d.k.g0 */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.c.m.d.k.g0 */
+/* JADX INFO: compiled from: CrashlyticsController.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class CallableC4626g0 implements Callable<Task<Void>> {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final /* synthetic */ Boolean f12294j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final /* synthetic */ C4663x.e f12295k;
 
     public CallableC4626g0(C4663x.e eVar, Boolean bool) {

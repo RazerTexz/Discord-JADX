@@ -28,7 +28,7 @@ import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 import p658rx.Observable;
 
-/* loaded from: classes2.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class WidgetChannelSettingsPermissionsAddRole extends AppFragment {
     private static final String INTENT_EXTRA_CHANNEL_ID = "INTENT_EXTRA_CHANNEL_ID";
     private SimpleRolesAdapter rolesAdapter;
@@ -140,7 +140,7 @@ public class WidgetChannelSettingsPermissionsAddRole extends AppFragment {
         AppScreen2.m156d(context, WidgetChannelSettingsPermissionsAddRole.class, intent);
     }
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public static /* synthetic */ void m8627g(WidgetChannelSettingsPermissionsAddRole widgetChannelSettingsPermissionsAddRole, Model model) {
         widgetChannelSettingsPermissionsAddRole.configureUI(model);
     }

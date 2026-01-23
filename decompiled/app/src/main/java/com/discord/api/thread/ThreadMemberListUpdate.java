@@ -4,24 +4,24 @@ import java.util.List;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ThreadMemberListUpdate.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: ThreadMemberListUpdate.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class ThreadMemberListUpdate {
     private final long guildId;
     private final List<ThreadListMember> members;
     private final long threadId;
 
-    /* renamed from: a, reason: from getter */
+    /* JADX INFO: renamed from: a, reason: from getter */
     public final long getGuildId() {
         return this.guildId;
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final List<ThreadListMember> m8266b() {
         return this.members;
     }
 
-    /* renamed from: c, reason: from getter */
+    /* JADX INFO: renamed from: c, reason: from getter */
     public final long getThreadId() {
         return this.threadId;
     }

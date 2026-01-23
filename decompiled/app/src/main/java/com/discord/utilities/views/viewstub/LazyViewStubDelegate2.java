@@ -4,9 +4,9 @@ import android.view.ViewStub;
 import kotlin.jvm.functions.Function0;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: LazyViewStubDelegate.kt */
-/* renamed from: com.discord.utilities.views.viewstub.LazyViewStubDelegate$Companion$lazyViewStub$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.utilities.views.viewstub.LazyViewStubDelegate$Companion$lazyViewStub$1, reason: use source file name */
+/* JADX INFO: compiled from: LazyViewStubDelegate.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class LazyViewStubDelegate2 extends Lambda implements Function0<LazyViewStubDelegate> {
     public final /* synthetic */ Function0 $getViewStub;
 

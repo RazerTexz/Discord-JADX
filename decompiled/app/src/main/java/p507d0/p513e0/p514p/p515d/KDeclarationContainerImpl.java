@@ -44,22 +44,22 @@ import p507d0.p592z.p594d.Lambda;
 import p507d0.p592z.p594d.PropertyReference1Impl;
 import p507d0.p592z.p594d.Reflection2;
 
-/* compiled from: KDeclarationContainerImpl.kt */
-/* renamed from: d0.e0.p.d.i, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.i, reason: use source file name */
+/* JADX INFO: compiled from: KDeclarationContainerImpl.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public abstract class KDeclarationContainerImpl implements ClassBasedDeclarationContainer {
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public static final a f22380l = new a(null);
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static final Class<?> f22378j = Class.forName("kotlin.jvm.internal.DefaultConstructorMarker");
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public static final Regex f22379k = new Regex("<v#(\\d+)>");
 
-    /* compiled from: KDeclarationContainerImpl.kt */
-    /* renamed from: d0.e0.p.d.i$a */
+    /* JADX INFO: renamed from: d0.e0.p.d.i$a */
+    /* JADX INFO: compiled from: KDeclarationContainerImpl.kt */
     public static final class a {
         public a(DefaultConstructorMarker defaultConstructorMarker) {
         }
@@ -69,18 +69,18 @@ public abstract class KDeclarationContainerImpl implements ClassBasedDeclaration
         }
     }
 
-    /* compiled from: KDeclarationContainerImpl.kt */
-    /* renamed from: d0.e0.p.d.i$b */
+    /* JADX INFO: renamed from: d0.e0.p.d.i$b */
+    /* JADX INFO: compiled from: KDeclarationContainerImpl.kt */
     public abstract class b {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public static final /* synthetic */ KProperty[] f22381a = {Reflection2.property1(new PropertyReference1Impl(Reflection2.getOrCreateKotlinClass(b.class), "moduleData", "getModuleData()Lorg/jetbrains/kotlin/descriptors/runtime/components/RuntimeModuleData;"))};
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final ReflectProperties.a f22382b = ReflectProperties.lazySoft(new a());
 
-        /* compiled from: KDeclarationContainerImpl.kt */
-        /* renamed from: d0.e0.p.d.i$b$a */
+        /* JADX INFO: renamed from: d0.e0.p.d.i$b$a */
+        /* JADX INFO: compiled from: KDeclarationContainerImpl.kt */
         public static final class a extends Lambda implements Function0<RuntimeModuleData> {
             public a() {
                 super(0);
@@ -107,8 +107,8 @@ public abstract class KDeclarationContainerImpl implements ClassBasedDeclaration
         }
     }
 
-    /* compiled from: KDeclarationContainerImpl.kt */
-    /* renamed from: d0.e0.p.d.i$c */
+    /* JADX INFO: renamed from: d0.e0.p.d.i$c */
+    /* JADX INFO: compiled from: KDeclarationContainerImpl.kt */
     public enum c {
         DECLARED,
         INHERITED;
@@ -121,11 +121,11 @@ public abstract class KDeclarationContainerImpl implements ClassBasedDeclaration
         }
     }
 
-    /* compiled from: KDeclarationContainerImpl.kt */
-    /* renamed from: d0.e0.p.d.i$d */
+    /* JADX INFO: renamed from: d0.e0.p.d.i$d */
+    /* JADX INFO: compiled from: KDeclarationContainerImpl.kt */
     public static final class d extends Lambda implements Function1<FunctionDescriptor, CharSequence> {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public static final d f22387j = new d();
 
         public d() {
@@ -137,18 +137,18 @@ public abstract class KDeclarationContainerImpl implements ClassBasedDeclaration
             return invoke2(functionDescriptor);
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final CharSequence invoke2(FunctionDescriptor functionDescriptor) {
             Intrinsics3.checkNotNullParameter(functionDescriptor, "descriptor");
             return DescriptorRenderer2.f24227c.render(functionDescriptor) + " | " + RuntimeTypeMapper3.f22358b.mapSignature(functionDescriptor).asString();
         }
     }
 
-    /* compiled from: KDeclarationContainerImpl.kt */
-    /* renamed from: d0.e0.p.d.i$e */
+    /* JADX INFO: renamed from: d0.e0.p.d.i$e */
+    /* JADX INFO: compiled from: KDeclarationContainerImpl.kt */
     public static final class e extends Lambda implements Function1<PropertyDescriptor, CharSequence> {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public static final e f22388j = new e();
 
         public e() {
@@ -160,18 +160,18 @@ public abstract class KDeclarationContainerImpl implements ClassBasedDeclaration
             return invoke2(propertyDescriptor);
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final CharSequence invoke2(PropertyDescriptor propertyDescriptor) {
             Intrinsics3.checkNotNullParameter(propertyDescriptor, "descriptor");
             return DescriptorRenderer2.f24227c.render(propertyDescriptor) + " | " + RuntimeTypeMapper3.f22358b.mapPropertySignature(propertyDescriptor).asString();
         }
     }
 
-    /* compiled from: KDeclarationContainerImpl.kt */
-    /* renamed from: d0.e0.p.d.i$f */
+    /* JADX INFO: renamed from: d0.e0.p.d.i$f */
+    /* JADX INFO: compiled from: KDeclarationContainerImpl.kt */
     public static final class f<T> implements Comparator<DescriptorVisibility2> {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public static final f f22389j = new f();
 
         @Override // java.util.Comparator
@@ -179,7 +179,7 @@ public abstract class KDeclarationContainerImpl implements ClassBasedDeclaration
             return compare2(descriptorVisibility2, descriptorVisibility22);
         }
 
-        /* renamed from: compare, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: compare, reason: avoid collision after fix types in other method */
         public final int compare2(DescriptorVisibility2 descriptorVisibility2, DescriptorVisibility2 descriptorVisibility22) {
             Integer numCompare = DescriptorVisibilities.compare(descriptorVisibility2, descriptorVisibility22);
             if (numCompare != null) {
@@ -189,8 +189,8 @@ public abstract class KDeclarationContainerImpl implements ClassBasedDeclaration
         }
     }
 
-    /* compiled from: KDeclarationContainerImpl.kt */
-    /* renamed from: d0.e0.p.d.i$g */
+    /* JADX INFO: renamed from: d0.e0.p.d.i$g */
+    /* JADX INFO: compiled from: KDeclarationContainerImpl.kt */
     public static final class g extends util {
         public g(KDeclarationContainerImpl kDeclarationContainerImpl, KDeclarationContainerImpl kDeclarationContainerImpl2) {
             super(kDeclarationContainerImpl2);
@@ -212,7 +212,7 @@ public abstract class KDeclarationContainerImpl implements ClassBasedDeclaration
         return f22379k;
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final void m9340a(List<Class<?>> list, String str, boolean z2) {
         list.addAll(m9343d(str));
         int size = ((((ArrayList) r5).size() + 32) - 1) / 32;
@@ -227,7 +227,7 @@ public abstract class KDeclarationContainerImpl implements ClassBasedDeclaration
     }
 
     /* JADX WARN: Removed duplicated region for block: B:12:0x004e  */
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
@@ -250,13 +250,13 @@ public abstract class KDeclarationContainerImpl implements ClassBasedDeclaration
         return _Collections.toList(arrayList);
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public Class<?> mo9342c() {
         Class<?> wrapperByPrimitive = reflectClassUtil.getWrapperByPrimitive(getJClass());
         return wrapperByPrimitive != null ? wrapperByPrimitive : getJClass();
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final List<Class<?>> m9343d(String str) {
         ArrayList arrayList = new ArrayList();
         int i = 1;
@@ -279,13 +279,13 @@ public abstract class KDeclarationContainerImpl implements ClassBasedDeclaration
         return arrayList;
     }
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final Class<?> m9344e(String str) {
         return m9346g(str, Strings4.indexOf$default((CharSequence) str, ')', 0, false, 6, (Object) null) + 1, str.length());
     }
 
-    /* renamed from: f */
-    public final Method m9345f(Class<?> cls, String str, Class<?>[] clsArr, Class<?> cls2, boolean z2) throws SecurityException {
+    /* JADX INFO: renamed from: f */
+    public final Method m9345f(Class<?> cls, String str, Class<?>[] clsArr, Class<?> cls2, boolean z2) {
         Method methodM9345f;
         if (z2) {
             clsArr[0] = cls;
@@ -385,7 +385,7 @@ public abstract class KDeclarationContainerImpl implements ClassBasedDeclaration
         throw new KotlinReflectionInternalError(sb.toString());
     }
 
-    public final Method findMethodBySignature(String str, String str2) throws SecurityException {
+    public final Method findMethodBySignature(String str, String str2) {
         Method methodM9345f;
         Intrinsics3.checkNotNullParameter(str, ModelAuditLogEntry.CHANGE_KEY_NAME);
         Intrinsics3.checkNotNullParameter(str2, "desc");
@@ -467,7 +467,7 @@ public abstract class KDeclarationContainerImpl implements ClassBasedDeclaration
         throw new KotlinReflectionInternalError(sb.toString());
     }
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public final Class<?> m9346g(String str, int i, int i2) throws ClassNotFoundException {
         char cCharAt = str.charAt(i);
         if (cCharAt == 'F') {
@@ -521,7 +521,7 @@ public abstract class KDeclarationContainerImpl implements ClassBasedDeclaration
 
     public abstract Collection<PropertyDescriptor> getProperties(Name name);
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public final Constructor<?> m9347h(Class<?> cls, List<? extends Class<?>> list) {
         try {
             Object[] array = list.toArray(new Class[0]);
@@ -536,11 +536,11 @@ public abstract class KDeclarationContainerImpl implements ClassBasedDeclaration
     }
 
     /* JADX WARN: Removed duplicated region for block: B:15:0x0055  */
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
-    public final Method m9348i(Class<?> cls, String str, Class<?>[] clsArr, Class<?> cls2) throws SecurityException {
+    public final Method m9348i(Class<?> cls, String str, Class<?>[] clsArr, Class<?> cls2) {
         boolean z2;
         try {
             Method declaredMethod = cls.getDeclaredMethod(str, (Class[]) Arrays.copyOf(clsArr, clsArr.length));

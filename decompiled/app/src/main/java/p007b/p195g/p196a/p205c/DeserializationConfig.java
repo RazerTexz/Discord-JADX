@@ -13,12 +13,12 @@ import p007b.p195g.p196a.p205c.p221z.ConstructorDetector;
 import p007b.p195g.p196a.p205c.p221z.MapperConfig;
 import p007b.p195g.p196a.p205c.p221z.MapperConfigBase;
 
-/* compiled from: DeserializationConfig.java */
-/* renamed from: b.g.a.c.f, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.g.a.c.f, reason: use source file name */
+/* JADX INFO: compiled from: DeserializationConfig.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class DeserializationConfig extends MapperConfigBase<DeserializationFeature, DeserializationConfig> implements Serializable {
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public static final int f4781l = MapperConfig.m2264c(DeserializationFeature.class);
     private static final long serialVersionUID = 2;
     public final CoercionConfigs _coercionConfigs;
@@ -44,7 +44,7 @@ public final class DeserializationConfig extends MapperConfigBase<Deserializatio
     }
 
     @Override // p007b.p195g.p196a.p205c.p221z.MapperConfigBase
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     public MapperConfigBase mo1969r(int i) {
         return new DeserializationConfig(this, i, this._deserFeatures, this._parserFeatures, this._parserFeaturesToChange, this._formatReadFeatures, this._formatReadFeaturesToChange);
     }

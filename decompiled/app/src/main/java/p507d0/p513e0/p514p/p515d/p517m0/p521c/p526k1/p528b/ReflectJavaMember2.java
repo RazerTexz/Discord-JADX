@@ -23,12 +23,12 @@ import p507d0.p580t._Arrays;
 import p507d0.p580t._Collections;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ReflectJavaMember.kt */
-/* renamed from: d0.e0.p.d.m0.c.k1.b.r, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.c.k1.b.r, reason: use source file name */
+/* JADX INFO: compiled from: ReflectJavaMember.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public abstract class ReflectJavaMember2 extends ReflectJavaElement implements ReflectJavaAnnotationOwner, ReflectJavaModifierListOwner, InterfaceC11584q {
-    /* renamed from: a */
-    public final List<InterfaceC11565a0> m9436a(Type[] typeArr, Annotation[][] annotationArr, boolean z2) throws IllegalAccessException, SecurityException, IllegalArgumentException, InvocationTargetException {
+    /* JADX INFO: renamed from: a */
+    public final List<InterfaceC11565a0> m9436a(Type[] typeArr, Annotation[][] annotationArr, boolean z2) throws IllegalAccessException, InvocationTargetException {
         String str;
         Intrinsics3.checkNotNullParameter(typeArr, "parameterTypes");
         Intrinsics3.checkNotNullParameter(annotationArr, "parameterAnnotations");

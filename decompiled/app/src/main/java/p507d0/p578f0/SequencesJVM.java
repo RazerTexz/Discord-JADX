@@ -5,12 +5,12 @@ import java.util.concurrent.atomic.AtomicReference;
 import kotlin.sequences.Sequence;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: SequencesJVM.kt */
-/* renamed from: d0.f0.a, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.f0.a, reason: use source file name */
+/* JADX INFO: compiled from: SequencesJVM.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class SequencesJVM<T> implements Sequence<T> {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final AtomicReference<Sequence<T>> f25071a;
 
     public SequencesJVM(Sequence<? extends T> sequence) {

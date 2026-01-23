@@ -6,7 +6,7 @@ import java.lang.reflect.Field;
 import java.lang.reflect.Method;
 import sun.misc.Unsafe;
 
-/* loaded from: discord-126021.apk:lombok/permit/Permit.SCL.lombok */
+/* JADX INFO: loaded from: discord-126021.apk:lombok/permit/Permit.SCL.lombok */
 public class Permit {
     private static final long ACCESSIBLE_OVERRIDE_FIELD_OFFSET;
     private static final IllegalAccessException INIT_ERROR;
@@ -39,7 +39,7 @@ public class Permit {
         INIT_ERROR = null;
     }
 
-    public static <T extends AccessibleObject> T setAccessible(T accessor) throws SecurityException {
+    public static <T extends AccessibleObject> T setAccessible(T accessor) {
         if (INIT_ERROR == null) {
             UNSAFE.putBoolean(accessor, ACCESSIBLE_OVERRIDE_FIELD_OFFSET, true);
         } else {
@@ -62,7 +62,7 @@ public class Permit {
         return UNSAFE.objectFieldOffset(Fake.class.getDeclaredField("override"));
     }
 
-    /* loaded from: discord-126021.apk:lombok/permit/Permit$Fake.SCL.lombok */
+    /* JADX INFO: loaded from: discord-126021.apk:lombok/permit/Permit$Fake.SCL.lombok */
     static class Fake {
         boolean override;
         Object accessCheckCache;
@@ -71,7 +71,7 @@ public class Permit {
         }
     }
 
-    public static Method getMethod(Class<?> c, String mName, Class<?>... clsArr) throws NoSuchMethodException, SecurityException {
+    public static Method getMethod(Class<?> c, String mName, Class<?>... clsArr) throws NoSuchMethodException {
         Method m = null;
         while (c != null) {
             try {

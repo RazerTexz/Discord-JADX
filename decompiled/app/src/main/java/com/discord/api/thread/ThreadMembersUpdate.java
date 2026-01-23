@@ -5,8 +5,8 @@ import java.util.List;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ThreadMembersUpdate.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: ThreadMembersUpdate.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class ThreadMembersUpdate {
     private final List<AugmentedThreadMember> addedMembers;
     private final long guildId;
@@ -15,22 +15,22 @@ public final /* data */ class ThreadMembersUpdate {
     private final List<Long> memberIdsPreview;
     private final List<Long> removedMemberIds;
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final List<AugmentedThreadMember> m8275a() {
         return this.addedMembers;
     }
 
-    /* renamed from: b, reason: from getter */
+    /* JADX INFO: renamed from: b, reason: from getter */
     public final long getGuildId() {
         return this.guildId;
     }
 
-    /* renamed from: c, reason: from getter */
+    /* JADX INFO: renamed from: c, reason: from getter */
     public final long getId() {
         return this.id;
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final List<Long> m8278d() {
         return this.removedMemberIds;
     }

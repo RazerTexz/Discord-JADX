@@ -78,12 +78,12 @@ import p507d0.p592z.p594d.Lambda;
 import p658rx.Observable;
 import p658rx.functions.Action2;
 
-/* compiled from: WidgetCreateChannel.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetCreateChannel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetCreateChannel extends AppFragment {
     public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetCreateChannel.class, "binding", "getBinding()Lcom/discord/databinding/WidgetCreateChannelBinding;", 0)};
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private static final String INTENT_CATEGORY_ID = "INTENT_CATEGORY_ID";
     private static final String INTENT_DISABLE_ANNOUNCEMENT_CHANNEL_TYPE = "INTENT_DISABLE_ANNOUNCEMENT_CHANNEL_TYPE";
@@ -96,33 +96,33 @@ public final class WidgetCreateChannel extends AppFragment {
     private static final String RESULT_EXTRA_CHANNEL_ID = "RESULT_EXTRA_CHANNEL_ID";
     private static final String RESULT_EXTRA_CHANNEL_NAME = "RESULT_EXTRA_CHANNEL_NAME";
 
-    /* renamed from: binding$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
 
-    /* renamed from: categoryId$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: categoryId$delegate, reason: from kotlin metadata */
     private final Lazy categoryId;
 
-    /* renamed from: disableAnnouncementChannelType$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: disableAnnouncementChannelType$delegate, reason: from kotlin metadata */
     private final Lazy disableAnnouncementChannelType;
 
-    /* renamed from: disablePrivateSwitch$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: disablePrivateSwitch$delegate, reason: from kotlin metadata */
     private final Lazy disablePrivateSwitch;
 
-    /* renamed from: guildId$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: guildId$delegate, reason: from kotlin metadata */
     private final Lazy guildId;
     private final AppLogger2 loggingConfig;
 
-    /* renamed from: provideResultOnly$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: provideResultOnly$delegate, reason: from kotlin metadata */
     private final Lazy provideResultOnly;
     private RolesAdapter rolesAdapter;
 
-    /* renamed from: shouldChannelDefaultPrivate$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: shouldChannelDefaultPrivate$delegate, reason: from kotlin metadata */
     private final Lazy shouldChannelDefaultPrivate;
 
-    /* renamed from: type$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: type$delegate, reason: from kotlin metadata */
     private final Lazy type;
 
-    /* compiled from: WidgetCreateChannel.kt */
+    /* JADX INFO: compiled from: WidgetCreateChannel.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -176,10 +176,10 @@ public final class WidgetCreateChannel extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetCreateChannel.kt */
+    /* JADX INFO: compiled from: WidgetCreateChannel.kt */
     public static final class Model {
 
-        /* renamed from: Companion, reason: from kotlin metadata */
+        /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
         public static final Companion INSTANCE = new Companion(null);
         private final boolean canCreate;
         private final boolean canCreateCommunityChannels;
@@ -187,7 +187,7 @@ public final class WidgetCreateChannel extends AppFragment {
         private final boolean canManageRoles;
         private final List<SingleTypePayload<GuildRole>> roleItems;
 
-        /* compiled from: WidgetCreateChannel.kt */
+        /* JADX INFO: compiled from: WidgetCreateChannel.kt */
         public static final class Companion {
             private Companion() {
             }
@@ -239,11 +239,11 @@ public final class WidgetCreateChannel extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetCreateChannel.kt */
+    /* JADX INFO: compiled from: WidgetCreateChannel.kt */
     public static final class RolesAdapter extends MGRecyclerAdapterSimple<SingleTypePayload<GuildRole>> {
         private final Map<Long, Integer> checkedRoles;
 
-        /* compiled from: WidgetCreateChannel.kt */
+        /* JADX INFO: compiled from: WidgetCreateChannel.kt */
         public static final class RoleListItem extends MGRecyclerViewHolder<RolesAdapter, SingleTypePayload<GuildRole>> {
             private final ViewCheckableRoleListItemThemedBinding binding;
 
@@ -272,7 +272,7 @@ public final class WidgetCreateChannel extends AppFragment {
                 onConfigure2(i, singleTypePayload);
             }
 
-            /* renamed from: onConfigure, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: onConfigure, reason: avoid collision after fix types in other method */
             public void onConfigure2(int position, SingleTypePayload<GuildRole> data) {
                 Intrinsics3.checkNotNullParameter(data, "data");
                 super.onConfigure(position, data);
@@ -342,12 +342,12 @@ public final class WidgetCreateChannel extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetCreateChannel.kt */
-    /* renamed from: com.discord.widgets.channels.WidgetCreateChannel$configureUI$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.channels.WidgetCreateChannel$configureUI$1 */
+    /* JADX INFO: compiled from: WidgetCreateChannel.kt */
     public static final class C73701<T1, T2> implements Action2<MenuItem, Context> {
 
-        /* compiled from: WidgetCreateChannel.kt */
-        /* renamed from: com.discord.widgets.channels.WidgetCreateChannel$configureUI$1$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.widgets.channels.WidgetCreateChannel$configureUI$1$1, reason: invalid class name */
+        /* JADX INFO: compiled from: WidgetCreateChannel.kt */
         public static final class AnonymousClass1 extends Lambda implements Function1<Channel, TrackNetworkMetadata2> {
             public AnonymousClass1() {
                 super(1);
@@ -358,15 +358,15 @@ public final class WidgetCreateChannel extends AppFragment {
                 return invoke2(channel);
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final TrackNetworkMetadata2 invoke2(Channel channel) {
                 List<PermissionOverwrite> listM7655v;
                 return new TrackNetworkActionChannelCreate((channel == null || (listM7655v = channel.m7655v()) == null) ? null : Boolean.valueOf(!listM7655v.isEmpty()), channel != null ? Long.valueOf(channel.getType()) : null, channel != null ? Long.valueOf(channel.getId()) : null, channel != null ? Long.valueOf(channel.getParentId()) : null, Long.valueOf(WidgetCreateChannel.access$getGuildId$p(WidgetCreateChannel.this)));
             }
         }
 
-        /* compiled from: WidgetCreateChannel.kt */
-        /* renamed from: com.discord.widgets.channels.WidgetCreateChannel$configureUI$1$2, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.widgets.channels.WidgetCreateChannel$configureUI$1$2, reason: invalid class name */
+        /* JADX INFO: compiled from: WidgetCreateChannel.kt */
         public static final /* synthetic */ class AnonymousClass2 extends FunctionReferenceImpl implements Function1<Channel, Unit> {
             public AnonymousClass2(WidgetCreateChannel widgetCreateChannel) {
                 super(1, widgetCreateChannel, WidgetCreateChannel.class, "onChannelCreated", "onChannelCreated(Lcom/discord/api/channel/Channel;)V", 0);
@@ -378,7 +378,7 @@ public final class WidgetCreateChannel extends AppFragment {
                 return Unit.f27425a;
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2(Channel channel) {
                 Intrinsics3.checkNotNullParameter(channel, "p1");
                 WidgetCreateChannel.access$onChannelCreated((WidgetCreateChannel) this.receiver, channel);
@@ -393,7 +393,7 @@ public final class WidgetCreateChannel extends AppFragment {
             call2(menuItem, context);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final void call2(MenuItem menuItem, Context context) {
             Intrinsics3.checkNotNullParameter(menuItem, "menuItem");
             if (menuItem.getItemId() == C5419R.id.menu_sort_channel) {
@@ -407,8 +407,8 @@ public final class WidgetCreateChannel extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetCreateChannel.kt */
-    /* renamed from: com.discord.widgets.channels.WidgetCreateChannel$onViewBoundOrOnResume$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.channels.WidgetCreateChannel$onViewBoundOrOnResume$1 */
+    /* JADX INFO: compiled from: WidgetCreateChannel.kt */
     public static final /* synthetic */ class C73711 extends FunctionReferenceImpl implements Function1<Model, Unit> {
         public C73711(WidgetCreateChannel widgetCreateChannel) {
             super(1, widgetCreateChannel, WidgetCreateChannel.class, "configureUI", "configureUI(Lcom/discord/widgets/channels/WidgetCreateChannel$Model;)V", 0);
@@ -420,14 +420,14 @@ public final class WidgetCreateChannel extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Model model) {
             WidgetCreateChannel.access$configureUI((WidgetCreateChannel) this.receiver, model);
         }
     }
 
-    /* compiled from: WidgetCreateChannel.kt */
-    /* renamed from: com.discord.widgets.channels.WidgetCreateChannel$onViewBoundOrOnResume$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.channels.WidgetCreateChannel$onViewBoundOrOnResume$2 */
+    /* JADX INFO: compiled from: WidgetCreateChannel.kt */
     public static final class ViewOnClickListenerC73722 implements View.OnClickListener {
         public final /* synthetic */ RadioManager $radioManager;
 
@@ -445,8 +445,8 @@ public final class WidgetCreateChannel extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetCreateChannel.kt */
-    /* renamed from: com.discord.widgets.channels.WidgetCreateChannel$onViewBoundOrOnResume$3 */
+    /* JADX INFO: renamed from: com.discord.widgets.channels.WidgetCreateChannel$onViewBoundOrOnResume$3 */
+    /* JADX INFO: compiled from: WidgetCreateChannel.kt */
     public static final class ViewOnClickListenerC73733 implements View.OnClickListener {
         public final /* synthetic */ RadioManager $radioManager;
 
@@ -464,8 +464,8 @@ public final class WidgetCreateChannel extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetCreateChannel.kt */
-    /* renamed from: com.discord.widgets.channels.WidgetCreateChannel$onViewBoundOrOnResume$4 */
+    /* JADX INFO: renamed from: com.discord.widgets.channels.WidgetCreateChannel$onViewBoundOrOnResume$4 */
+    /* JADX INFO: compiled from: WidgetCreateChannel.kt */
     public static final class ViewOnClickListenerC73744 implements View.OnClickListener {
         public final /* synthetic */ RadioManager $radioManager;
 
@@ -483,8 +483,8 @@ public final class WidgetCreateChannel extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetCreateChannel.kt */
-    /* renamed from: com.discord.widgets.channels.WidgetCreateChannel$onViewBoundOrOnResume$5 */
+    /* JADX INFO: renamed from: com.discord.widgets.channels.WidgetCreateChannel$onViewBoundOrOnResume$5 */
+    /* JADX INFO: compiled from: WidgetCreateChannel.kt */
     public static final class ViewOnClickListenerC73755 implements View.OnClickListener {
         public final /* synthetic */ RadioManager $radioManager;
 
@@ -502,8 +502,8 @@ public final class WidgetCreateChannel extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetCreateChannel.kt */
-    /* renamed from: com.discord.widgets.channels.WidgetCreateChannel$onViewBoundOrOnResume$6 */
+    /* JADX INFO: renamed from: com.discord.widgets.channels.WidgetCreateChannel$onViewBoundOrOnResume$6 */
+    /* JADX INFO: compiled from: WidgetCreateChannel.kt */
     public static final class ViewOnClickListenerC73766 implements View.OnClickListener {
         public final /* synthetic */ RadioManager $radioManager;
 
@@ -521,8 +521,8 @@ public final class WidgetCreateChannel extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetCreateChannel.kt */
-    /* renamed from: com.discord.widgets.channels.WidgetCreateChannel$onViewBoundOrOnResume$7 */
+    /* JADX INFO: renamed from: com.discord.widgets.channels.WidgetCreateChannel$onViewBoundOrOnResume$7 */
+    /* JADX INFO: compiled from: WidgetCreateChannel.kt */
     public static final class ViewOnClickListenerC73777 implements View.OnClickListener {
         public ViewOnClickListenerC73777() {
         }

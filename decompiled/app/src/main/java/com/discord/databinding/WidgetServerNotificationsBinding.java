@@ -12,74 +12,74 @@ import com.discord.widgets.servers.NotificationHighlightsSettingsView;
 import com.discord.widgets.servers.NotificationMuteSettingsView;
 import p007b.p008a.p025i.ViewAddOverrideItemBinding;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public final class WidgetServerNotificationsBinding implements ViewBinding {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     @NonNull
     public final CoordinatorLayout f17489a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     @NonNull
     public final ViewAddOverrideItemBinding f17490b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     @NonNull
     public final RecyclerView f17491c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     @NonNull
     public final CheckedSetting f17492d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     @NonNull
     public final CheckedSetting f17493e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     @NonNull
     public final CheckedSetting f17494f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     @NonNull
     public final CheckedSetting f17495g;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     @NonNull
     public final View f17496h;
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     @NonNull
     public final LinearLayout f17497i;
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     @NonNull
     public final NotificationHighlightsSettingsView f17498j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     @NonNull
     public final View f17499k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     @NonNull
     public final NotificationMuteSettingsView f17500l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     @NonNull
     public final View f17501m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     @NonNull
     public final TextView f17502n;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     @NonNull
     public final CheckedSetting f17503o;
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     @NonNull
     public final View f17504p;
 
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     @NonNull
     public final CheckedSetting f17505q;
 

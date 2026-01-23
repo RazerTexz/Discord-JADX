@@ -11,37 +11,37 @@ import java.util.Iterator;
 import p007b.p085c.p086a.L;
 import p007b.p085c.p086a.LottieComposition;
 
-/* compiled from: LottieValueAnimator.java */
-/* renamed from: b.c.a.b0.d, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.c.a.b0.d, reason: use source file name */
+/* JADX INFO: compiled from: LottieValueAnimator.java */
+/* JADX INFO: loaded from: classes.dex */
 public class LottieValueAnimator extends BaseLottieAnimator implements Choreographer.FrameCallback {
 
-    /* renamed from: s */
+    /* JADX INFO: renamed from: s */
     @Nullable
     public LottieComposition f2304s;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public float f2297l = 1.0f;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public boolean f2298m = false;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public long f2299n = 0;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public float f2300o = 0.0f;
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public int f2301p = 0;
 
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     public float f2302q = -2.1474836E9f;
 
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     public float f2303r = 2.1474836E9f;
 
-    /* renamed from: t */
+    /* JADX INFO: renamed from: t */
     @VisibleForTesting
     public boolean f2305t = false;
 
@@ -106,7 +106,7 @@ public class LottieValueAnimator extends BaseLottieAnimator implements Choreogra
     }
 
     @MainThread
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public void m642g() {
         m648m();
         m637b(m646k());
@@ -148,7 +148,7 @@ public class LottieValueAnimator extends BaseLottieAnimator implements Choreogra
     }
 
     @FloatRange(from = 0.0d, m75to = 1.0d)
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public float m643h() {
         LottieComposition lottieComposition = this.f2304s;
         if (lottieComposition == null) {
@@ -159,7 +159,7 @@ public class LottieValueAnimator extends BaseLottieAnimator implements Choreogra
         return (f - f2) / (lottieComposition.f2347l - f2);
     }
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public float m644i() {
         LottieComposition lottieComposition = this.f2304s;
         if (lottieComposition == null) {
@@ -174,7 +174,7 @@ public class LottieValueAnimator extends BaseLottieAnimator implements Choreogra
         return this.f2305t;
     }
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public float m645j() {
         LottieComposition lottieComposition = this.f2304s;
         if (lottieComposition == null) {
@@ -184,12 +184,12 @@ public class LottieValueAnimator extends BaseLottieAnimator implements Choreogra
         return f == -2.1474836E9f ? lottieComposition.f2346k : f;
     }
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final boolean m646k() {
         return this.f2297l < 0.0f;
     }
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public void m647l() {
         if (this.f2305t) {
             Choreographer.getInstance().removeFrameCallback(this);
@@ -198,13 +198,13 @@ public class LottieValueAnimator extends BaseLottieAnimator implements Choreogra
     }
 
     @MainThread
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public void m648m() {
         Choreographer.getInstance().removeFrameCallback(this);
         this.f2305t = false;
     }
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public void m649n(float f) {
         if (this.f2300o == f) {
             return;
@@ -214,7 +214,7 @@ public class LottieValueAnimator extends BaseLottieAnimator implements Choreogra
         m638f();
     }
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public void m650o(float f, float f2) {
         if (f > f2) {
             throw new IllegalArgumentException(String.format("minFrame (%s) must be <= maxFrame (%s)", Float.valueOf(f), Float.valueOf(f2)));

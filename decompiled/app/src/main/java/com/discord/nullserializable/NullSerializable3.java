@@ -10,9 +10,9 @@ import java.util.Objects;
 import p007b.p225i.p408d.TypeAdapterFactory2;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: NullSerializable.kt */
-/* renamed from: com.discord.nullserializable.NullSerializableTypeAdapterFactory, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: com.discord.nullserializable.NullSerializableTypeAdapterFactory, reason: use source file name */
+/* JADX INFO: compiled from: NullSerializable.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class NullSerializable3 implements TypeAdapterFactory2 {
     @Override // p007b.p225i.p408d.TypeAdapterFactory2
     public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {

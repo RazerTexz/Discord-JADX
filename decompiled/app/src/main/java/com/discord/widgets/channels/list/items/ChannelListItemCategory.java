@@ -4,8 +4,8 @@ import com.discord.api.channel.Channel;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ChannelListItemCategory.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: ChannelListItemCategory.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final /* data */ class ChannelListItemCategory implements ChannelListItem {
     private final boolean canManageChannels;
     private final Channel channel;
@@ -43,22 +43,22 @@ public final /* data */ class ChannelListItemCategory implements ChannelListItem
         return channelListItemCategory.copy(channel, z2, z3, z4);
     }
 
-    /* renamed from: component1, reason: from getter */
+    /* JADX INFO: renamed from: component1, reason: from getter */
     public final Channel getChannel() {
         return this.channel;
     }
 
-    /* renamed from: component2, reason: from getter */
+    /* JADX INFO: renamed from: component2, reason: from getter */
     public final boolean getIsCollapsed() {
         return this.isCollapsed;
     }
 
-    /* renamed from: component3, reason: from getter */
+    /* JADX INFO: renamed from: component3, reason: from getter */
     public final boolean getIsMuted() {
         return this.isMuted;
     }
 
-    /* renamed from: component4, reason: from getter */
+    /* JADX INFO: renamed from: component4, reason: from getter */
     public final boolean getCanManageChannels() {
         return this.canManageChannels;
     }
@@ -98,23 +98,32 @@ public final /* data */ class ChannelListItemCategory implements ChannelListItem
     }
 
     /* JADX WARN: Multi-variable type inference failed */
+    /* JADX WARN: Type inference failed for: r1v1, types: [int] */
+    /* JADX WARN: Type inference failed for: r1v3, types: [int] */
+    /* JADX WARN: Type inference failed for: r1v5 */
+    /* JADX WARN: Type inference failed for: r1v6 */
+    /* JADX WARN: Type inference failed for: r1v7 */
+    /* JADX WARN: Type inference failed for: r1v8 */
+    /* JADX WARN: Type inference failed for: r2v0 */
+    /* JADX WARN: Type inference failed for: r2v1, types: [int] */
+    /* JADX WARN: Type inference failed for: r2v2 */
     public int hashCode() {
         Channel channel = this.channel;
         int iHashCode = (channel != null ? channel.hashCode() : 0) * 31;
         boolean z2 = this.isCollapsed;
-        int i = z2;
-        if (z2 != 0) {
-            i = 1;
+        ?? r1 = z2;
+        if (z2) {
+            r1 = 1;
         }
-        int i2 = (iHashCode + i) * 31;
+        int i = (iHashCode + r1) * 31;
         boolean z3 = this.isMuted;
-        int i3 = z3;
-        if (z3 != 0) {
-            i3 = 1;
+        ?? r12 = z3;
+        if (z3) {
+            r12 = 1;
         }
-        int i4 = (i2 + i3) * 31;
+        int i2 = (i + r12) * 31;
         boolean z4 = this.canManageChannels;
-        return i4 + (z4 ? 1 : z4 ? 1 : 0);
+        return i2 + (z4 ? 1 : z4);
     }
 
     public final boolean isCollapsed() {

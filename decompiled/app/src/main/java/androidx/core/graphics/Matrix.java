@@ -2,9 +2,9 @@ package androidx.core.graphics;
 
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: Matrix.kt */
-/* renamed from: androidx.core.graphics.MatrixKt, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: androidx.core.graphics.MatrixKt, reason: use source file name */
+/* JADX INFO: compiled from: Matrix.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class Matrix {
     public static final android.graphics.Matrix rotationMatrix(float f, float f2, float f3) {
         android.graphics.Matrix matrix = new android.graphics.Matrix();

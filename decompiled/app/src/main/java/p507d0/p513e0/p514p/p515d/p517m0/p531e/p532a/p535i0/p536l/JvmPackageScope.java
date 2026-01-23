@@ -36,28 +36,28 @@ import p507d0.p592z.p594d.Lambda;
 import p507d0.p592z.p594d.PropertyReference1Impl;
 import p507d0.p592z.p594d.Reflection2;
 
-/* compiled from: JvmPackageScope.kt */
-/* renamed from: d0.e0.p.d.m0.e.a.i0.l.d, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.e.a.i0.l.d, reason: use source file name */
+/* JADX INFO: compiled from: JvmPackageScope.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class JvmPackageScope implements MemberScope3 {
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static final /* synthetic */ KProperty<Object>[] f23329b = {Reflection2.property1(new PropertyReference1Impl(Reflection2.getOrCreateKotlinClass(JvmPackageScope.class), "kotlinScopes", "getKotlinScopes()[Lorg/jetbrains/kotlin/resolve/scopes/MemberScope;"))};
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final context4 f23330c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final LazyJavaPackageFragment f23331d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final LazyJavaPackageScope f23332e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final storage5 f23333f;
 
-    /* compiled from: JvmPackageScope.kt */
-    /* renamed from: d0.e0.p.d.m0.e.a.i0.l.d$a */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.e.a.i0.l.d$a */
+    /* JADX INFO: compiled from: JvmPackageScope.kt */
     public static final class a extends Lambda implements Function0<MemberScope3[]> {
         public a() {
             super(0);
@@ -69,7 +69,7 @@ public final class JvmPackageScope implements MemberScope3 {
         }
 
         @Override // kotlin.jvm.functions.Function0
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final MemberScope3[] invoke2() {
             Collection<KotlinJvmBinaryClass> collectionValues = JvmPackageScope.access$getPackageFragment$p(JvmPackageScope.this).getBinaryClasses$descriptors_jvm().values();
             JvmPackageScope jvmPackageScope = JvmPackageScope.this;
@@ -105,7 +105,7 @@ public final class JvmPackageScope implements MemberScope3 {
         return jvmPackageScope.f23331d;
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final MemberScope3[] m9462a() {
         return (MemberScope3[]) storage7.getValue(this.f23333f, this, (KProperty<?>) f23329b[0]);
     }

@@ -8,22 +8,22 @@ import p007b.p085c.p086a.p091w.p092b.MergePathsContent;
 import p007b.p085c.p086a.p095y.p098m.BaseLayer2;
 import p007b.p100d.p104b.p105a.outline;
 
-/* compiled from: MergePaths.java */
-/* renamed from: b.c.a.y.l.g, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.c.a.y.l.g, reason: use source file name */
+/* JADX INFO: compiled from: MergePaths.java */
+/* JADX INFO: loaded from: classes.dex */
 public class MergePaths implements ContentModel2 {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final String f2771a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final a f2772b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final boolean f2773c;
 
-    /* compiled from: MergePaths.java */
-    /* renamed from: b.c.a.y.l.g$a */
+    /* JADX INFO: renamed from: b.c.a.y.l.g$a */
+    /* JADX INFO: compiled from: MergePaths.java */
     public enum a {
         MERGE,
         ADD,
@@ -40,7 +40,7 @@ public class MergePaths implements ContentModel2 {
 
     @Override // p007b.p085c.p086a.p095y.p097l.ContentModel2
     @Nullable
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public Content2 mo775a(LottieDrawable lottieDrawable, BaseLayer2 baseLayer2) {
         if (lottieDrawable.f2382w) {
             return new MergePathsContent(this);

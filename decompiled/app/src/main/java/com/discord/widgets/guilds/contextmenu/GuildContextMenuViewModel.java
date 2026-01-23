@@ -23,19 +23,19 @@ import p507d0.p592z.p594d.Lambda;
 import p658rx.Observable;
 import p658rx.subjects.PublishSubject;
 
-/* compiled from: GuildContextMenuViewModel.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: GuildContextMenuViewModel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class GuildContextMenuViewModel extends AppViewModel<ViewState> {
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private final PublishSubject<Event> eventSubject;
     private final long guildId;
     private final RestAPI restAPI;
     private final Observable<StoreState> storeStateObservable;
 
-    /* compiled from: GuildContextMenuViewModel.kt */
-    /* renamed from: com.discord.widgets.guilds.contextmenu.GuildContextMenuViewModel$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.guilds.contextmenu.GuildContextMenuViewModel$1 */
+    /* JADX INFO: compiled from: GuildContextMenuViewModel.kt */
     public static final /* synthetic */ class C85851 extends FunctionReferenceImpl implements Function1<StoreState, Unit> {
         public C85851(GuildContextMenuViewModel guildContextMenuViewModel) {
             super(1, guildContextMenuViewModel, GuildContextMenuViewModel.class, "handleStoreState", "handleStoreState(Lcom/discord/widgets/guilds/contextmenu/GuildContextMenuViewModel$StoreState;)V", 0);
@@ -47,14 +47,14 @@ public final class GuildContextMenuViewModel extends AppViewModel<ViewState> {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(StoreState storeState) {
             Intrinsics3.checkNotNullParameter(storeState, "p1");
             GuildContextMenuViewModel.access$handleStoreState((GuildContextMenuViewModel) this.receiver, storeState);
         }
     }
 
-    /* compiled from: GuildContextMenuViewModel.kt */
+    /* JADX INFO: compiled from: GuildContextMenuViewModel.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -74,10 +74,10 @@ public final class GuildContextMenuViewModel extends AppViewModel<ViewState> {
         }
     }
 
-    /* compiled from: GuildContextMenuViewModel.kt */
+    /* JADX INFO: compiled from: GuildContextMenuViewModel.kt */
     public static abstract class Event {
 
-        /* compiled from: GuildContextMenuViewModel.kt */
+        /* JADX INFO: compiled from: GuildContextMenuViewModel.kt */
         public static final class Dismiss extends Event {
             public static final Dismiss INSTANCE = new Dismiss();
 
@@ -94,10 +94,10 @@ public final class GuildContextMenuViewModel extends AppViewModel<ViewState> {
         }
     }
 
-    /* compiled from: GuildContextMenuViewModel.kt */
+    /* JADX INFO: compiled from: GuildContextMenuViewModel.kt */
     public static abstract class StoreState {
 
-        /* compiled from: GuildContextMenuViewModel.kt */
+        /* JADX INFO: compiled from: GuildContextMenuViewModel.kt */
         public static final class Invalid extends StoreState {
             public static final Invalid INSTANCE = new Invalid();
 
@@ -106,7 +106,7 @@ public final class GuildContextMenuViewModel extends AppViewModel<ViewState> {
             }
         }
 
-        /* compiled from: GuildContextMenuViewModel.kt */
+        /* JADX INFO: compiled from: GuildContextMenuViewModel.kt */
         public static final /* data */ class Valid extends StoreState {
             private final Guild guild;
             private final boolean isGuildUnread;
@@ -141,22 +141,22 @@ public final class GuildContextMenuViewModel extends AppViewModel<ViewState> {
                 return valid.copy(guild, j3, z3, j2);
             }
 
-            /* renamed from: component1, reason: from getter */
+            /* JADX INFO: renamed from: component1, reason: from getter */
             public final Guild getGuild() {
                 return this.guild;
             }
 
-            /* renamed from: component2, reason: from getter */
+            /* JADX INFO: renamed from: component2, reason: from getter */
             public final long getMyUserId() {
                 return this.myUserId;
             }
 
-            /* renamed from: component3, reason: from getter */
+            /* JADX INFO: renamed from: component3, reason: from getter */
             public final boolean getIsGuildUnread() {
                 return this.isGuildUnread;
             }
 
-            /* renamed from: component4, reason: from getter */
+            /* JADX INFO: renamed from: component4, reason: from getter */
             public final long getSelectedGuildId() {
                 return this.selectedGuildId;
             }
@@ -190,15 +190,18 @@ public final class GuildContextMenuViewModel extends AppViewModel<ViewState> {
             }
 
             /* JADX WARN: Multi-variable type inference failed */
+            /* JADX WARN: Type inference failed for: r0v10 */
+            /* JADX WARN: Type inference failed for: r0v5, types: [int] */
+            /* JADX WARN: Type inference failed for: r0v8 */
             public int hashCode() {
                 Guild guild = this.guild;
                 int iM3a = (C0002b.m3a(this.myUserId) + ((guild != null ? guild.hashCode() : 0) * 31)) * 31;
                 boolean z2 = this.isGuildUnread;
-                int i = z2;
-                if (z2 != 0) {
-                    i = 1;
+                ?? r0 = z2;
+                if (z2) {
+                    r0 = 1;
                 }
-                return C0002b.m3a(this.selectedGuildId) + ((iM3a + i) * 31);
+                return C0002b.m3a(this.selectedGuildId) + ((iM3a + r0) * 31);
             }
 
             public final boolean isGuildUnread() {
@@ -225,10 +228,10 @@ public final class GuildContextMenuViewModel extends AppViewModel<ViewState> {
         }
     }
 
-    /* compiled from: GuildContextMenuViewModel.kt */
+    /* JADX INFO: compiled from: GuildContextMenuViewModel.kt */
     public static abstract class ViewState {
 
-        /* compiled from: GuildContextMenuViewModel.kt */
+        /* JADX INFO: compiled from: GuildContextMenuViewModel.kt */
         public static final class Invalid extends ViewState {
             public static final Invalid INSTANCE = new Invalid();
 
@@ -237,7 +240,7 @@ public final class GuildContextMenuViewModel extends AppViewModel<ViewState> {
             }
         }
 
-        /* compiled from: GuildContextMenuViewModel.kt */
+        /* JADX INFO: compiled from: GuildContextMenuViewModel.kt */
         public static final /* data */ class Valid extends ViewState {
             private final Guild guild;
             private final boolean isGuildSelected;
@@ -270,22 +273,22 @@ public final class GuildContextMenuViewModel extends AppViewModel<ViewState> {
                 return valid.copy(guild, z2, z3, z4);
             }
 
-            /* renamed from: component1, reason: from getter */
+            /* JADX INFO: renamed from: component1, reason: from getter */
             public final Guild getGuild() {
                 return this.guild;
             }
 
-            /* renamed from: component2, reason: from getter */
+            /* JADX INFO: renamed from: component2, reason: from getter */
             public final boolean getShowMarkAsRead() {
                 return this.showMarkAsRead;
             }
 
-            /* renamed from: component3, reason: from getter */
+            /* JADX INFO: renamed from: component3, reason: from getter */
             public final boolean getShowLeaveGuild() {
                 return this.showLeaveGuild;
             }
 
-            /* renamed from: component4, reason: from getter */
+            /* JADX INFO: renamed from: component4, reason: from getter */
             public final boolean getIsGuildSelected() {
                 return this.isGuildSelected;
             }
@@ -319,23 +322,32 @@ public final class GuildContextMenuViewModel extends AppViewModel<ViewState> {
             }
 
             /* JADX WARN: Multi-variable type inference failed */
+            /* JADX WARN: Type inference failed for: r1v1, types: [int] */
+            /* JADX WARN: Type inference failed for: r1v3, types: [int] */
+            /* JADX WARN: Type inference failed for: r1v5 */
+            /* JADX WARN: Type inference failed for: r1v6 */
+            /* JADX WARN: Type inference failed for: r1v7 */
+            /* JADX WARN: Type inference failed for: r1v8 */
+            /* JADX WARN: Type inference failed for: r2v0 */
+            /* JADX WARN: Type inference failed for: r2v1, types: [int] */
+            /* JADX WARN: Type inference failed for: r2v2 */
             public int hashCode() {
                 Guild guild = this.guild;
                 int iHashCode = (guild != null ? guild.hashCode() : 0) * 31;
                 boolean z2 = this.showMarkAsRead;
-                int i = z2;
-                if (z2 != 0) {
-                    i = 1;
+                ?? r1 = z2;
+                if (z2) {
+                    r1 = 1;
                 }
-                int i2 = (iHashCode + i) * 31;
+                int i = (iHashCode + r1) * 31;
                 boolean z3 = this.showLeaveGuild;
-                int i3 = z3;
-                if (z3 != 0) {
-                    i3 = 1;
+                ?? r12 = z3;
+                if (z3) {
+                    r12 = 1;
                 }
-                int i4 = (i2 + i3) * 31;
+                int i2 = (i + r12) * 31;
                 boolean z4 = this.isGuildSelected;
-                return i4 + (z4 ? 1 : z4 ? 1 : 0);
+                return i2 + (z4 ? 1 : z4);
             }
 
             public final boolean isGuildSelected() {
@@ -362,8 +374,8 @@ public final class GuildContextMenuViewModel extends AppViewModel<ViewState> {
         }
     }
 
-    /* compiled from: GuildContextMenuViewModel.kt */
-    /* renamed from: com.discord.widgets.guilds.contextmenu.GuildContextMenuViewModel$onMarkAsReadClicked$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.guilds.contextmenu.GuildContextMenuViewModel$onMarkAsReadClicked$1 */
+    /* JADX INFO: compiled from: GuildContextMenuViewModel.kt */
     public static final class C85861 extends Lambda implements Function1<Void, Unit> {
         public C85861() {
             super(1);
@@ -375,7 +387,7 @@ public final class GuildContextMenuViewModel extends AppViewModel<ViewState> {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Void r2) {
             PublishSubject publishSubjectAccess$getEventSubject$p = GuildContextMenuViewModel.access$getEventSubject$p(GuildContextMenuViewModel.this);
             publishSubjectAccess$getEventSubject$p.f27650k.onNext(Event.Dismiss.INSTANCE);

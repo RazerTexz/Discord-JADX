@@ -5,15 +5,15 @@ import java.util.List;
 import java.util.Map;
 import p637j0.p641k.Func1;
 
-/* compiled from: lambda */
-/* renamed from: b.a.z.a.a.i */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: b.a.z.a.a.i */
+/* JADX INFO: compiled from: lambda */
+/* JADX INFO: loaded from: classes2.dex */
 public final /* synthetic */ class C1399i implements Func1 {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final /* synthetic */ List f2097j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final /* synthetic */ String f2098k;
 
     public /* synthetic */ C1399i(List list, String str) {

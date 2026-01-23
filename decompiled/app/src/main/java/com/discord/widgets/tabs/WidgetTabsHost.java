@@ -50,13 +50,13 @@ import p507d0.p592z.p594d.Reflection2;
 import p658rx.Observable;
 import p658rx.functions.Func0;
 
-/* compiled from: WidgetTabsHost.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: WidgetTabsHost.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class WidgetTabsHost extends AppFragment {
     private static final long BOTTOM_TABS_DOWNWARD_ANIMATION_DURATION_MS = 200;
     private static final long BOTTOM_TABS_UPWARD_ANIMATION_DURATION_MS = 250;
 
-    /* renamed from: binding$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
     private ValueAnimator bottomNavAnimator;
     private final WidgetGlobalStatusIndicatorState globalStatusIndicatorStateObserver;
@@ -64,13 +64,13 @@ public final class WidgetTabsHost extends AppFragment {
     private Boolean previousShowBottomNav;
     private final Map<NavigationTab, OnTabSelectedListener> tabToTabSelectionListenerMap;
 
-    /* renamed from: viewModel$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: viewModel$delegate, reason: from kotlin metadata */
     private final Lazy viewModel;
     private TabsHostViewModel.ViewState viewState;
     public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetTabsHost.class, "binding", "getBinding()Lcom/discord/databinding/WidgetTabsHostBinding;", 0)};
 
-    /* compiled from: WidgetTabsHost.kt */
-    /* renamed from: com.discord.widgets.tabs.WidgetTabsHost$configureSystemStatusBar$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.tabs.WidgetTabsHost$configureSystemStatusBar$1 */
+    /* JADX INFO: compiled from: WidgetTabsHost.kt */
     public static final class C101571 extends Lambda implements Function1<WidgetGlobalStatusIndicatorState.State, Unit> {
         public final /* synthetic */ int $defaultStatusBarColor;
 
@@ -86,7 +86,7 @@ public final class WidgetTabsHost extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(WidgetGlobalStatusIndicatorState.State state) {
             Intrinsics3.checkNotNullParameter(state, "state");
             WidgetTabsHost.access$setPanelWindowInsetsListeners(WidgetTabsHost.this, state.isVisible());
@@ -98,8 +98,8 @@ public final class WidgetTabsHost extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetTabsHost.kt */
-    /* renamed from: com.discord.widgets.tabs.WidgetTabsHost$onViewBound$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.tabs.WidgetTabsHost$onViewBound$1 */
+    /* JADX INFO: compiled from: WidgetTabsHost.kt */
     public static final class C101581<R> implements Func0<Boolean> {
         public C101581() {
         }
@@ -115,8 +115,8 @@ public final class WidgetTabsHost extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetTabsHost.kt */
-    /* renamed from: com.discord.widgets.tabs.WidgetTabsHost$onViewBoundOrOnResume$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.tabs.WidgetTabsHost$onViewBoundOrOnResume$1 */
+    /* JADX INFO: compiled from: WidgetTabsHost.kt */
     public static final class C101591 extends Lambda implements Function1<TabsHostViewModel.ViewState, Unit> {
         public C101591() {
             super(1);
@@ -128,7 +128,7 @@ public final class WidgetTabsHost extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(TabsHostViewModel.ViewState viewState) {
             WidgetTabsHost widgetTabsHost = WidgetTabsHost.this;
             Intrinsics3.checkNotNullExpressionValue(viewState, "viewState");
@@ -136,8 +136,8 @@ public final class WidgetTabsHost extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetTabsHost.kt */
-    /* renamed from: com.discord.widgets.tabs.WidgetTabsHost$onViewBoundOrOnResume$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.tabs.WidgetTabsHost$onViewBoundOrOnResume$2 */
+    /* JADX INFO: compiled from: WidgetTabsHost.kt */
     public static final /* synthetic */ class C101602 extends FunctionReferenceImpl implements Function1<TabsHostViewModel.Event, Unit> {
         public C101602(WidgetTabsHost widgetTabsHost) {
             super(1, widgetTabsHost, WidgetTabsHost.class, "handleEvent", "handleEvent(Lcom/discord/widgets/tabs/TabsHostViewModel$Event;)V", 0);
@@ -149,15 +149,15 @@ public final class WidgetTabsHost extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(TabsHostViewModel.Event event) {
             Intrinsics3.checkNotNullParameter(event, "p1");
             WidgetTabsHost.access$handleEvent((WidgetTabsHost) this.receiver, event);
         }
     }
 
-    /* compiled from: WidgetTabsHost.kt */
-    /* renamed from: com.discord.widgets.tabs.WidgetTabsHost$setPanelWindowInsetsListeners$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.tabs.WidgetTabsHost$setPanelWindowInsetsListeners$1 */
+    /* JADX INFO: compiled from: WidgetTabsHost.kt */
     public static final class C101611 implements OnApplyWindowInsetsListener {
         public static final C101611 INSTANCE = new C101611();
 
@@ -183,8 +183,8 @@ public final class WidgetTabsHost extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetTabsHost.kt */
-    /* renamed from: com.discord.widgets.tabs.WidgetTabsHost$setPanelWindowInsetsListeners$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.tabs.WidgetTabsHost$setPanelWindowInsetsListeners$2 */
+    /* JADX INFO: compiled from: WidgetTabsHost.kt */
     public static final class C101622 implements OnApplyWindowInsetsListener {
         public final /* synthetic */ boolean $isCallStatusVisible;
 
@@ -218,8 +218,8 @@ public final class WidgetTabsHost extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetTabsHost.kt */
-    /* renamed from: com.discord.widgets.tabs.WidgetTabsHost$setPanelWindowInsetsListeners$3 */
+    /* JADX INFO: renamed from: com.discord.widgets.tabs.WidgetTabsHost$setPanelWindowInsetsListeners$3 */
+    /* JADX INFO: compiled from: WidgetTabsHost.kt */
     public static final class C101633 implements OnApplyWindowInsetsListener {
         public final /* synthetic */ boolean $isCallStatusVisible;
 
@@ -242,8 +242,8 @@ public final class WidgetTabsHost extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetTabsHost.kt */
-    /* renamed from: com.discord.widgets.tabs.WidgetTabsHost$setPanelWindowInsetsListeners$4 */
+    /* JADX INFO: renamed from: com.discord.widgets.tabs.WidgetTabsHost$setPanelWindowInsetsListeners$4 */
+    /* JADX INFO: compiled from: WidgetTabsHost.kt */
     public static final class C101644 implements OnApplyWindowInsetsListener {
         public static final C101644 INSTANCE = new C101644();
 
@@ -256,8 +256,8 @@ public final class WidgetTabsHost extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetTabsHost.kt */
-    /* renamed from: com.discord.widgets.tabs.WidgetTabsHost$updateViews$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.tabs.WidgetTabsHost$updateViews$1 */
+    /* JADX INFO: compiled from: WidgetTabsHost.kt */
     public static final /* synthetic */ class C101651 extends FunctionReferenceImpl implements Function1<NavigationTab, Unit> {
         public C101651(TabsHostViewModel tabsHostViewModel) {
             super(1, tabsHostViewModel, TabsHostViewModel.class, "selectTab", "selectTab(Lcom/discord/widgets/tabs/NavigationTab;)V", 0);
@@ -269,15 +269,15 @@ public final class WidgetTabsHost extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(NavigationTab navigationTab) {
             Intrinsics3.checkNotNullParameter(navigationTab, "p1");
             ((TabsHostViewModel) this.receiver).selectTab(navigationTab);
         }
     }
 
-    /* compiled from: WidgetTabsHost.kt */
-    /* renamed from: com.discord.widgets.tabs.WidgetTabsHost$updateViews$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.tabs.WidgetTabsHost$updateViews$2 */
+    /* JADX INFO: compiled from: WidgetTabsHost.kt */
     public static final /* synthetic */ class C101662 extends FunctionReferenceImpl implements Function0<Unit> {
         public C101662(WidgetTabsHost widgetTabsHost) {
             super(0, widgetTabsHost, WidgetTabsHost.class, "onSearchClick", "onSearchClick()V", 0);
@@ -289,14 +289,14 @@ public final class WidgetTabsHost extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             WidgetTabsHost.access$onSearchClick((WidgetTabsHost) this.receiver);
         }
     }
 
-    /* compiled from: WidgetTabsHost.kt */
-    /* renamed from: com.discord.widgets.tabs.WidgetTabsHost$updateViews$3 */
+    /* JADX INFO: renamed from: com.discord.widgets.tabs.WidgetTabsHost$updateViews$3 */
+    /* JADX INFO: compiled from: WidgetTabsHost.kt */
     public static final /* synthetic */ class C101673 extends FunctionReferenceImpl implements Function0<Unit> {
         public C101673(WidgetTabsHost widgetTabsHost) {
             super(0, widgetTabsHost, WidgetTabsHost.class, "onSettingsLongPress", "onSettingsLongPress()V", 0);
@@ -308,14 +308,14 @@ public final class WidgetTabsHost extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             WidgetTabsHost.access$onSettingsLongPress((WidgetTabsHost) this.receiver);
         }
     }
 
-    /* compiled from: WidgetTabsHost.kt */
-    /* renamed from: com.discord.widgets.tabs.WidgetTabsHost$updateViews$4 */
+    /* JADX INFO: renamed from: com.discord.widgets.tabs.WidgetTabsHost$updateViews$4 */
+    /* JADX INFO: compiled from: WidgetTabsHost.kt */
     public static final /* synthetic */ class C101684 extends FunctionReferenceImpl implements Function0<Unit> {
         public C101684(WidgetTabsHost widgetTabsHost) {
             super(0, widgetTabsHost, WidgetTabsHost.class, "onSearchClick", "onSearchClick()V", 0);
@@ -327,7 +327,7 @@ public final class WidgetTabsHost extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             WidgetTabsHost.access$onSearchClick((WidgetTabsHost) this.receiver);
         }

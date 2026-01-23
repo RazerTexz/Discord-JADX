@@ -14,14 +14,14 @@ import com.facebook.drawee.view.SimpleDraweeView;
 import java.util.Objects;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: WidgetChatListActionsEmojisAdapter.kt */
-/* renamed from: com.discord.widgets.chat.list.actions.EmojiViewHolder, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.chat.list.actions.EmojiViewHolder, reason: use source file name */
+/* JADX INFO: compiled from: WidgetChatListActionsEmojisAdapter.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetChatListActionsEmojisAdapter3 extends MGRecyclerViewHolder<WidgetChatListActionsEmojisAdapter, WidgetChatListActionsEmojisAdapter2> {
     private final ViewChatListActionsEmojiItemBinding binding;
 
-    /* compiled from: WidgetChatListActionsEmojisAdapter.kt */
-    /* renamed from: com.discord.widgets.chat.list.actions.EmojiViewHolder$onConfigure$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.list.actions.EmojiViewHolder$onConfigure$1 */
+    /* JADX INFO: compiled from: WidgetChatListActionsEmojisAdapter.kt */
     public static final class ViewOnClickListenerC79571 implements View.OnClickListener {
         public final /* synthetic */ WidgetChatListActionsEmojisAdapter2 $data;
 
@@ -56,7 +56,7 @@ public final class WidgetChatListActionsEmojisAdapter3 extends MGRecyclerViewHol
         onConfigure2(i, widgetChatListActionsEmojisAdapter2);
     }
 
-    /* renamed from: onConfigure, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: onConfigure, reason: avoid collision after fix types in other method */
     public void onConfigure2(int position, WidgetChatListActionsEmojisAdapter2 data) {
         Intrinsics3.checkNotNullParameter(data, "data");
         super.onConfigure(position, data);

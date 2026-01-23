@@ -7,12 +7,12 @@ import p007b.p085c.p086a.p091w.p093c.BaseKeyframeAnimation;
 import p007b.p085c.p086a.p091w.p093c.PathKeyframeAnimation;
 import p007b.p085c.p086a.p091w.p093c.PointKeyframeAnimation;
 
-/* compiled from: AnimatablePathValue.java */
-/* renamed from: b.c.a.y.k.e, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.c.a.y.k.e, reason: use source file name */
+/* JADX INFO: compiled from: AnimatablePathValue.java */
+/* JADX INFO: loaded from: classes.dex */
 public class AnimatablePathValue implements AnimatableValue<PointF, PointF> {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final List<Keyframe<PointF>> f2722a;
 
     public AnimatablePathValue(List<Keyframe<PointF>> list) {
@@ -20,13 +20,13 @@ public class AnimatablePathValue implements AnimatableValue<PointF, PointF> {
     }
 
     @Override // p007b.p085c.p086a.p095y.p096k.AnimatableValue
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public BaseKeyframeAnimation<PointF, PointF> mo773a() {
         return this.f2722a.get(0).m667d() ? new PointKeyframeAnimation(this.f2722a) : new PathKeyframeAnimation(this.f2722a);
     }
 
     @Override // p007b.p085c.p086a.p095y.p096k.AnimatableValue
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public List<Keyframe<PointF>> mo774b() {
         return this.f2722a;
     }

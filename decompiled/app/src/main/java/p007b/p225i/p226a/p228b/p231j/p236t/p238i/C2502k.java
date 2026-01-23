@@ -9,18 +9,18 @@ import p007b.p225i.p226a.p228b.p231j.EncodedPayload;
 import p007b.p225i.p226a.p228b.p231j.TransportContext;
 import p007b.p225i.p226a.p228b.p231j.p236t.p238i.C2511t;
 
-/* compiled from: SQLiteEventStore.java */
-/* renamed from: b.i.a.b.j.t.i.k */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.b.j.t.i.k */
+/* JADX INFO: compiled from: SQLiteEventStore.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final /* synthetic */ class C2502k implements C2511t.b {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final C2511t f5428a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final List f5429b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final TransportContext f5430c;
 
     public C2502k(C2511t c2511t, List list, TransportContext transportContext) {

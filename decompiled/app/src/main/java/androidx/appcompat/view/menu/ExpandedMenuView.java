@@ -10,8 +10,8 @@ import androidx.annotation.RestrictTo;
 import androidx.appcompat.view.menu.MenuBuilder;
 import androidx.appcompat.widget.TintTypedArray;
 
+/* JADX INFO: loaded from: classes.dex */
 @RestrictTo({RestrictTo.Scope.LIBRARY_GROUP_PREFIX})
-/* loaded from: classes.dex */
 public final class ExpandedMenuView extends ListView implements MenuBuilder.ItemInvoker, MenuView, AdapterView.OnItemClickListener {
     private static final int[] TINT_ATTRS = {R.attr.background, R.attr.divider};
     private int mAnimations;

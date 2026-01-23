@@ -12,8 +12,8 @@ import com.discord.utilities.view.extensions.ViewExtensions;
 import com.discord.widgets.guildscheduledevent.buttonconfiguration.ButtonConfiguration;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: GuildScheduledEventBottomButtonView.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: GuildScheduledEventBottomButtonView.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class GuildScheduledEventBottomButtonView extends ConstraintLayout {
     private final GuildScheduledEventBottomButtonViewBinding binding;
 

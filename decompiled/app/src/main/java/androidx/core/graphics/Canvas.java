@@ -9,9 +9,9 @@ import kotlin.jvm.functions.Function1;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: Canvas.kt */
-/* renamed from: androidx.core.graphics.CanvasKt, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: androidx.core.graphics.CanvasKt, reason: use source file name */
+/* JADX INFO: compiled from: Canvas.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class Canvas {
     public static final void withClip(android.graphics.Canvas canvas, Rect rect, Function1<? super android.graphics.Canvas, Unit> function1) {
         Intrinsics3.checkNotNullParameter(canvas, "<this>");

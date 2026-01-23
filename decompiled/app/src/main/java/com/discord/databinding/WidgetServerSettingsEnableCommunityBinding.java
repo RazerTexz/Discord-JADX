@@ -9,14 +9,14 @@ import androidx.viewbinding.ViewBinding;
 import com.discord.views.ScreenTitleView;
 import com.google.android.material.button.MaterialButton;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public final class WidgetServerSettingsEnableCommunityBinding implements ViewBinding {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     @NonNull
     public final ScrollView f17658a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     @NonNull
     public final MaterialButton f17659b;
 

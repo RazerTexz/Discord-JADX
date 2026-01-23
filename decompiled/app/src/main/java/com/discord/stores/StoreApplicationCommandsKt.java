@@ -20,8 +20,8 @@ import p507d0.p580t.Collections2;
 import p507d0.p580t.Iterables2;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: StoreApplicationCommands.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: StoreApplicationCommands.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class StoreApplicationCommandsKt {
     private static final ApplicationCommand3 expandSubCommand(ApplicationCommand applicationCommand, ApplicationCommandOption applicationCommandOption) {
         String name = applicationCommandOption.getName();
@@ -113,7 +113,7 @@ public final class StoreApplicationCommandsKt {
         return arrayList;
     }
 
-    public static final String getDescriptionText(ApplicationCommand applicationCommand, Resources resources) throws Resources.NotFoundException {
+    public static final String getDescriptionText(ApplicationCommand applicationCommand, Resources resources) {
         Intrinsics3.checkNotNullParameter(applicationCommand, "$this$getDescriptionText");
         Intrinsics3.checkNotNullParameter(resources, "resources");
         Integer descriptionRes = applicationCommand.getDescriptionRes();

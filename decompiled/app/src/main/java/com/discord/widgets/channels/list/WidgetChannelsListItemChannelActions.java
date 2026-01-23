@@ -39,19 +39,19 @@ import p507d0.p592z.p594d.Lambda;
 import p658rx.Observable;
 import p658rx.subscriptions.CompositeSubscription;
 
-/* compiled from: WidgetChannelsListItemChannelActions.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetChannelsListItemChannelActions.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetChannelsListItemChannelActions extends AppBottomSheet {
     public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetChannelsListItemChannelActions.class, "binding", "getBinding()Lcom/discord/databinding/WidgetChannelsListItemActionsBinding;", 0)};
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private static final String INTENT_EXTRA_CHANNEL_ID = "INTENT_EXTRA_CHANNEL_ID";
 
-    /* renamed from: binding$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
 
-    /* compiled from: WidgetChannelsListItemChannelActions.kt */
+    /* JADX INFO: compiled from: WidgetChannelsListItemChannelActions.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -70,10 +70,10 @@ public final class WidgetChannelsListItemChannelActions extends AppBottomSheet {
         }
     }
 
-    /* compiled from: WidgetChannelsListItemChannelActions.kt */
+    /* JADX INFO: compiled from: WidgetChannelsListItemChannelActions.kt */
     public static final /* data */ class Model {
 
-        /* renamed from: Companion, reason: from kotlin metadata */
+        /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
         public static final Companion INSTANCE = new Companion(null);
         private final boolean canCreateInstantInvite;
         private final boolean canManageChannel;
@@ -83,7 +83,7 @@ public final class WidgetChannelsListItemChannelActions extends AppBottomSheet {
         private final boolean isMuted;
         private final Long permissions;
 
-        /* compiled from: WidgetChannelsListItemChannelActions.kt */
+        /* JADX INFO: compiled from: WidgetChannelsListItemChannelActions.kt */
         public static final class Companion {
             private Companion() {
             }
@@ -128,22 +128,22 @@ public final class WidgetChannelsListItemChannelActions extends AppBottomSheet {
             return model.copy(channel, guild, l, z2);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final Channel getChannel() {
             return this.channel;
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final Guild getGuild() {
             return this.guild;
         }
 
-        /* renamed from: component3, reason: from getter */
+        /* JADX INFO: renamed from: component3, reason: from getter */
         public final Long getPermissions() {
             return this.permissions;
         }
 
-        /* renamed from: component4, reason: from getter */
+        /* JADX INFO: renamed from: component4, reason: from getter */
         public final boolean getIsMuted() {
             return this.isMuted;
         }
@@ -196,6 +196,9 @@ public final class WidgetChannelsListItemChannelActions extends AppBottomSheet {
         }
 
         /* JADX WARN: Multi-variable type inference failed */
+        /* JADX WARN: Type inference failed for: r1v3, types: [int] */
+        /* JADX WARN: Type inference failed for: r1v4 */
+        /* JADX WARN: Type inference failed for: r1v6 */
         public int hashCode() {
             Channel channel = this.channel;
             int iHashCode = (channel != null ? channel.hashCode() : 0) * 31;
@@ -204,14 +207,14 @@ public final class WidgetChannelsListItemChannelActions extends AppBottomSheet {
             Long l = this.permissions;
             int iHashCode3 = (iHashCode2 + (l != null ? l.hashCode() : 0)) * 31;
             boolean z2 = this.isMuted;
-            int i = z2;
-            if (z2 != 0) {
-                i = 1;
+            ?? r1 = z2;
+            if (z2) {
+                r1 = 1;
             }
-            return iHashCode3 + i;
+            return iHashCode3 + r1;
         }
 
-        /* renamed from: isDeveloper, reason: from getter */
+        /* JADX INFO: renamed from: isDeveloper, reason: from getter */
         public final boolean getIsDeveloper() {
             return this.isDeveloper;
         }
@@ -232,8 +235,8 @@ public final class WidgetChannelsListItemChannelActions extends AppBottomSheet {
         }
     }
 
-    /* compiled from: WidgetChannelsListItemChannelActions.kt */
-    /* renamed from: com.discord.widgets.channels.list.WidgetChannelsListItemChannelActions$bindSubscriptions$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.channels.list.WidgetChannelsListItemChannelActions$bindSubscriptions$1 */
+    /* JADX INFO: compiled from: WidgetChannelsListItemChannelActions.kt */
     public static final class C74521 extends Lambda implements Function1<Model, Unit> {
         public C74521() {
             super(1);
@@ -245,7 +248,7 @@ public final class WidgetChannelsListItemChannelActions extends AppBottomSheet {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Model model) {
             WidgetChannelsListItemChannelActions.access$configureUI(WidgetChannelsListItemChannelActions.this, model);
         }

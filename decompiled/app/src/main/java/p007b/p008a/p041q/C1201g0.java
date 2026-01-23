@@ -4,12 +4,12 @@ import kotlin.jvm.functions.Function1;
 import p507d0.p592z.p594d.Intrinsics3;
 import p658rx.functions.Action1;
 
-/* compiled from: RtcConnection.kt */
-/* renamed from: b.a.q.g0 */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.a.q.g0 */
+/* JADX INFO: compiled from: RtcConnection.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class C1201g0 implements Action1 {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final /* synthetic */ Function1 f1627j;
 
     public C1201g0(Function1 function1) {

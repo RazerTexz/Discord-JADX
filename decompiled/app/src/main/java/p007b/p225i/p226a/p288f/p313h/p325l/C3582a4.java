@@ -9,17 +9,17 @@ import android.util.Log;
 import androidx.annotation.Nullable;
 import java.lang.reflect.Method;
 
-/* compiled from: com.google.android.gms:play-services-measurement@@18.0.0 */
+/* JADX INFO: renamed from: b.i.a.f.h.l.a4 */
+/* JADX INFO: compiled from: com.google.android.gms:play-services-measurement@@18.0.0 */
+/* JADX INFO: loaded from: classes3.dex */
 @TargetApi(24)
-/* renamed from: b.i.a.f.h.l.a4 */
-/* loaded from: classes3.dex */
 public final class C3582a4 {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     @Nullable
     public static final Method f9846a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     @Nullable
     public static final Method f9847b;
 
@@ -33,6 +33,7 @@ public final class C3582a4 {
                 if (Log.isLoggable("JobSchedulerCompat", 6)) {
                     Log.e("JobSchedulerCompat", "No scheduleAsPackage method available, falling back to schedule");
                 }
+                declaredMethod = null;
             }
         } else {
             declaredMethod = null;

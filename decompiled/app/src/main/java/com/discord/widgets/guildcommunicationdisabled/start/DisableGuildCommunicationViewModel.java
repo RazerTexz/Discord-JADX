@@ -29,17 +29,17 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 import p658rx.Observable;
 
-/* compiled from: DisableGuildCommunicationViewModel.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: DisableGuildCommunicationViewModel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class DisableGuildCommunicationViewModel extends AppViewModel<ViewState> {
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private final long guildId;
     private final long userId;
 
-    /* compiled from: DisableGuildCommunicationViewModel.kt */
-    /* renamed from: com.discord.widgets.guildcommunicationdisabled.start.DisableGuildCommunicationViewModel$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.guildcommunicationdisabled.start.DisableGuildCommunicationViewModel$1 */
+    /* JADX INFO: compiled from: DisableGuildCommunicationViewModel.kt */
     public static final /* synthetic */ class C85521 extends FunctionReferenceImpl implements Function1<StoreState, Unit> {
         public C85521(DisableGuildCommunicationViewModel disableGuildCommunicationViewModel) {
             super(1, disableGuildCommunicationViewModel, DisableGuildCommunicationViewModel.class, "handleStoreState", "handleStoreState(Lcom/discord/widgets/guildcommunicationdisabled/start/DisableGuildCommunicationViewModel$StoreState;)V", 0);
@@ -51,14 +51,14 @@ public final class DisableGuildCommunicationViewModel extends AppViewModel<ViewS
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(StoreState storeState) {
             Intrinsics3.checkNotNullParameter(storeState, "p1");
             DisableGuildCommunicationViewModel.access$handleStoreState((DisableGuildCommunicationViewModel) this.receiver, storeState);
         }
     }
 
-    /* compiled from: DisableGuildCommunicationViewModel.kt */
+    /* JADX INFO: compiled from: DisableGuildCommunicationViewModel.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -76,7 +76,7 @@ public final class DisableGuildCommunicationViewModel extends AppViewModel<ViewS
         }
     }
 
-    /* compiled from: DisableGuildCommunicationViewModel.kt */
+    /* JADX INFO: compiled from: DisableGuildCommunicationViewModel.kt */
     public static final /* data */ class StoreState {
         private final Guild guild;
         private final User user;
@@ -96,12 +96,12 @@ public final class DisableGuildCommunicationViewModel extends AppViewModel<ViewS
             return storeState.copy(user, guild);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final User getUser() {
             return this.user;
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final Guild getGuild() {
             return this.guild;
         }
@@ -146,10 +146,10 @@ public final class DisableGuildCommunicationViewModel extends AppViewModel<ViewS
         }
     }
 
-    /* compiled from: DisableGuildCommunicationViewModel.kt */
+    /* JADX INFO: compiled from: DisableGuildCommunicationViewModel.kt */
     public static abstract class ViewState {
 
-        /* compiled from: DisableGuildCommunicationViewModel.kt */
+        /* JADX INFO: compiled from: DisableGuildCommunicationViewModel.kt */
         public static final class Invalid extends ViewState {
             public static final Invalid INSTANCE = new Invalid();
 
@@ -158,7 +158,7 @@ public final class DisableGuildCommunicationViewModel extends AppViewModel<ViewS
             }
         }
 
-        /* compiled from: DisableGuildCommunicationViewModel.kt */
+        /* JADX INFO: compiled from: DisableGuildCommunicationViewModel.kt */
         public static final /* data */ class Valid extends ViewState {
             private final long guildId;
             private final GuildCommunicationDisabledDateUtils2 selectedDurationOption;
@@ -186,17 +186,17 @@ public final class DisableGuildCommunicationViewModel extends AppViewModel<ViewS
                 return valid.copy(user, j, guildCommunicationDisabledDateUtils2);
             }
 
-            /* renamed from: component1, reason: from getter */
+            /* JADX INFO: renamed from: component1, reason: from getter */
             public final User getUser() {
                 return this.user;
             }
 
-            /* renamed from: component2, reason: from getter */
+            /* JADX INFO: renamed from: component2, reason: from getter */
             public final long getGuildId() {
                 return this.guildId;
             }
 
-            /* renamed from: component3, reason: from getter */
+            /* JADX INFO: renamed from: component3, reason: from getter */
             public final GuildCommunicationDisabledDateUtils2 getSelectedDurationOption() {
                 return this.selectedDurationOption;
             }
@@ -256,8 +256,8 @@ public final class DisableGuildCommunicationViewModel extends AppViewModel<ViewS
         }
     }
 
-    /* compiled from: DisableGuildCommunicationViewModel.kt */
-    /* renamed from: com.discord.widgets.guildcommunicationdisabled.start.DisableGuildCommunicationViewModel$onDisableCommunicationConfirm$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.guildcommunicationdisabled.start.DisableGuildCommunicationViewModel$onDisableCommunicationConfirm$1 */
+    /* JADX INFO: compiled from: DisableGuildCommunicationViewModel.kt */
     public static final class C85531 extends Lambda implements Function1<Void, TrackNetworkMetadata2> {
         public final /* synthetic */ long $disabledUntilTimestamp;
         public final /* synthetic */ long $durationS;
@@ -276,14 +276,14 @@ public final class DisableGuildCommunicationViewModel extends AppViewModel<ViewS
             return invoke2(r1);
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final TrackNetworkMetadata2 invoke2(Void r7) {
             return new TrackNetworkActionUserCommunicationDisabledUpdate(Long.valueOf(DisableGuildCommunicationViewModel.access$getGuildId$p(DisableGuildCommunicationViewModel.this)), Long.valueOf(DisableGuildCommunicationViewModel.access$getUserId$p(DisableGuildCommunicationViewModel.this)), Float.valueOf(this.$durationS), this.$reason, Long.valueOf(this.$disabledUntilTimestamp));
         }
     }
 
-    /* compiled from: DisableGuildCommunicationViewModel.kt */
-    /* renamed from: com.discord.widgets.guildcommunicationdisabled.start.DisableGuildCommunicationViewModel$onDisableCommunicationConfirm$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.guildcommunicationdisabled.start.DisableGuildCommunicationViewModel$onDisableCommunicationConfirm$2 */
+    /* JADX INFO: compiled from: DisableGuildCommunicationViewModel.kt */
     public static final class C85542 extends Lambda implements Function1<Void, Unit> {
         public final /* synthetic */ Function0 $onFinished;
 
@@ -299,7 +299,7 @@ public final class DisableGuildCommunicationViewModel extends AppViewModel<ViewS
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Void r1) {
             this.$onFinished.invoke();
         }
@@ -351,8 +351,11 @@ public final class DisableGuildCommunicationViewModel extends AppViewModel<ViewS
         Intrinsics3.checkNotNullParameter(onFinished, "onFinished");
         ViewState viewState = getViewState();
         if (viewState instanceof ViewState.Valid) {
-            Tuples2<String, Long> futureTimestamp = GuildCommunicationDisabledDateUtils.INSTANCE.getFutureTimestamp(((ViewState.Valid) viewState).getSelectedDurationOption().getDurationMs());
-            ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.ui$default(RestCallState5.logNetworkAction(ObservableExtensionsKt.restSubscribeOn$default(RestAPI.INSTANCE.getApi().disableGuildCommunication(this.guildId, this.userId, new RestAPIParams.DisableGuildCommunication(futureTimestamp.component1()), reason), false, 1, null), new C85531(r0.getSelectedDurationOption().getDurationMs() / 1000, futureTimestamp.component2().longValue(), reason)), this, null, 2, null), DisableGuildCommunicationViewModel.class, context.get(), (Function1) null, (Function1) null, (Function0) null, (Function0) null, new C85542(onFinished), 60, (Object) null);
+            ViewState.Valid valid = (ViewState.Valid) viewState;
+            Tuples2<String, Long> futureTimestamp = GuildCommunicationDisabledDateUtils.INSTANCE.getFutureTimestamp(valid.getSelectedDurationOption().getDurationMs());
+            String strComponent1 = futureTimestamp.component1();
+            long jLongValue = futureTimestamp.component2().longValue();
+            ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.ui$default(RestCallState5.logNetworkAction(ObservableExtensionsKt.restSubscribeOn$default(RestAPI.INSTANCE.getApi().disableGuildCommunication(this.guildId, this.userId, new RestAPIParams.DisableGuildCommunication(strComponent1), reason), false, 1, null), new C85531(((long) valid.getSelectedDurationOption().getDurationMs()) / 1000, jLongValue, reason)), this, null, 2, null), DisableGuildCommunicationViewModel.class, context.get(), (Function1) null, (Function1) null, (Function0) null, (Function0) null, new C85542(onFinished), 60, (Object) null);
         }
     }
 

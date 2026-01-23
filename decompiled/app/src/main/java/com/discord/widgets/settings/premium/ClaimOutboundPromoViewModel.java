@@ -20,17 +20,17 @@ import p507d0.p592z.p594d.Lambda;
 import p658rx.Observable;
 import p658rx.subjects.PublishSubject;
 
-/* compiled from: ClaimOutboundPromoViewModel.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: ClaimOutboundPromoViewModel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class ClaimOutboundPromoViewModel extends AppViewModel<ViewState> {
     private ClaimStatus claimStatus;
     private final PublishSubject<Event> eventSubject;
     private final StoreOutboundPromotions storeOutboundPromotions;
 
-    /* compiled from: ClaimOutboundPromoViewModel.kt */
+    /* JADX INFO: compiled from: ClaimOutboundPromoViewModel.kt */
     public static abstract class Event {
 
-        /* compiled from: ClaimOutboundPromoViewModel.kt */
+        /* JADX INFO: compiled from: ClaimOutboundPromoViewModel.kt */
         public static final /* data */ class Claimed extends Event {
             private final ClaimStatus.Claimed claimedStatus;
 
@@ -48,7 +48,7 @@ public final class ClaimOutboundPromoViewModel extends AppViewModel<ViewState> {
                 return claimed.copy(claimed2);
             }
 
-            /* renamed from: component1, reason: from getter */
+            /* JADX INFO: renamed from: component1, reason: from getter */
             public final ClaimStatus.Claimed getClaimedStatus() {
                 return this.claimedStatus;
             }
@@ -85,7 +85,7 @@ public final class ClaimOutboundPromoViewModel extends AppViewModel<ViewState> {
             }
         }
 
-        /* compiled from: ClaimOutboundPromoViewModel.kt */
+        /* JADX INFO: compiled from: ClaimOutboundPromoViewModel.kt */
         public static final /* data */ class CopyCode extends Event {
             private final String code;
 
@@ -103,7 +103,7 @@ public final class ClaimOutboundPromoViewModel extends AppViewModel<ViewState> {
                 return copyCode.copy(str);
             }
 
-            /* renamed from: component1, reason: from getter */
+            /* JADX INFO: renamed from: component1, reason: from getter */
             public final String getCode() {
                 return this.code;
             }
@@ -137,7 +137,7 @@ public final class ClaimOutboundPromoViewModel extends AppViewModel<ViewState> {
             }
         }
 
-        /* compiled from: ClaimOutboundPromoViewModel.kt */
+        /* JADX INFO: compiled from: ClaimOutboundPromoViewModel.kt */
         public static final class Dismiss extends Event {
             public static final Dismiss INSTANCE = new Dismiss();
 
@@ -146,7 +146,7 @@ public final class ClaimOutboundPromoViewModel extends AppViewModel<ViewState> {
             }
         }
 
-        /* compiled from: ClaimOutboundPromoViewModel.kt */
+        /* JADX INFO: compiled from: ClaimOutboundPromoViewModel.kt */
         public static final /* data */ class OpenRedemptionUrl extends Event {
             private final String url;
 
@@ -164,7 +164,7 @@ public final class ClaimOutboundPromoViewModel extends AppViewModel<ViewState> {
                 return openRedemptionUrl.copy(str);
             }
 
-            /* renamed from: component1, reason: from getter */
+            /* JADX INFO: renamed from: component1, reason: from getter */
             public final String getUrl() {
                 return this.url;
             }
@@ -206,10 +206,10 @@ public final class ClaimOutboundPromoViewModel extends AppViewModel<ViewState> {
         }
     }
 
-    /* compiled from: ClaimOutboundPromoViewModel.kt */
+    /* JADX INFO: compiled from: ClaimOutboundPromoViewModel.kt */
     public static abstract class ViewState {
 
-        /* compiled from: ClaimOutboundPromoViewModel.kt */
+        /* JADX INFO: compiled from: ClaimOutboundPromoViewModel.kt */
         public static final class ClaimFailed extends ViewState {
             public static final ClaimFailed INSTANCE = new ClaimFailed();
 
@@ -218,7 +218,7 @@ public final class ClaimOutboundPromoViewModel extends AppViewModel<ViewState> {
             }
         }
 
-        /* compiled from: ClaimOutboundPromoViewModel.kt */
+        /* JADX INFO: compiled from: ClaimOutboundPromoViewModel.kt */
         public static final class ClaimInProgress extends ViewState {
             public static final ClaimInProgress INSTANCE = new ClaimInProgress();
 
@@ -227,7 +227,7 @@ public final class ClaimOutboundPromoViewModel extends AppViewModel<ViewState> {
             }
         }
 
-        /* compiled from: ClaimOutboundPromoViewModel.kt */
+        /* JADX INFO: compiled from: ClaimOutboundPromoViewModel.kt */
         public static final /* data */ class Claimed extends ViewState {
             private final ClaimStatus.Claimed claimedStatus;
 
@@ -245,7 +245,7 @@ public final class ClaimOutboundPromoViewModel extends AppViewModel<ViewState> {
                 return claimed.copy(claimed2);
             }
 
-            /* renamed from: component1, reason: from getter */
+            /* JADX INFO: renamed from: component1, reason: from getter */
             public final ClaimStatus.Claimed getClaimedStatus() {
                 return this.claimedStatus;
             }
@@ -290,8 +290,8 @@ public final class ClaimOutboundPromoViewModel extends AppViewModel<ViewState> {
         }
     }
 
-    /* compiled from: ClaimOutboundPromoViewModel.kt */
-    /* renamed from: com.discord.widgets.settings.premium.ClaimOutboundPromoViewModel$claimPromo$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.premium.ClaimOutboundPromoViewModel$claimPromo$1 */
+    /* JADX INFO: compiled from: ClaimOutboundPromoViewModel.kt */
     public static final class C98711 extends Lambda implements Function1<ClaimedOutboundPromotion, Unit> {
         public C98711() {
             super(1);
@@ -303,7 +303,7 @@ public final class ClaimOutboundPromoViewModel extends AppViewModel<ViewState> {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(ClaimedOutboundPromotion claimedOutboundPromotion) {
             Intrinsics3.checkNotNullParameter(claimedOutboundPromotion, "claimedPromo");
             ClaimOutboundPromoViewModel claimOutboundPromoViewModel = ClaimOutboundPromoViewModel.this;
@@ -315,8 +315,8 @@ public final class ClaimOutboundPromoViewModel extends AppViewModel<ViewState> {
         }
     }
 
-    /* compiled from: ClaimOutboundPromoViewModel.kt */
-    /* renamed from: com.discord.widgets.settings.premium.ClaimOutboundPromoViewModel$claimPromo$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.premium.ClaimOutboundPromoViewModel$claimPromo$2 */
+    /* JADX INFO: compiled from: ClaimOutboundPromoViewModel.kt */
     public static final class C98722 extends Lambda implements Function1<Error, Unit> {
         public C98722() {
             super(1);
@@ -328,7 +328,7 @@ public final class ClaimOutboundPromoViewModel extends AppViewModel<ViewState> {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Error error) {
             Intrinsics3.checkNotNullParameter(error, "it");
             ClaimOutboundPromoViewModel.access$updateViewState(ClaimOutboundPromoViewModel.this, ViewState.ClaimFailed.INSTANCE);

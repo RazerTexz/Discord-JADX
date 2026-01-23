@@ -14,8 +14,8 @@ import java.util.Iterator;
 import java.util.Set;
 import p007b.p100d.p104b.p105a.outline;
 
+/* JADX INFO: loaded from: classes.dex */
 @SuppressLint({"RestrictedApi"})
-/* loaded from: classes.dex */
 public final class Recreator implements GenericLifecycleObserver {
     public static final String CLASSES_KEY = "classes_to_restore";
     public static final String COMPONENT_KEY = "androidx.savedstate.Restarter";
@@ -45,7 +45,7 @@ public final class Recreator implements GenericLifecycleObserver {
         this.mOwner = savedStateRegistryOwner;
     }
 
-    private void reflectiveNew(String str) throws SecurityException {
+    private void reflectiveNew(String str) {
         try {
             Class<? extends U> clsAsSubclass = Class.forName(str, false, Recreator.class.getClassLoader()).asSubclass(SavedStateRegistry.AutoRecreated.class);
             try {
@@ -68,7 +68,7 @@ public final class Recreator implements GenericLifecycleObserver {
     }
 
     @Override // androidx.view.LifecycleEventObserver
-    public void onStateChanged(LifecycleOwner lifecycleOwner, Lifecycle.Event event) throws SecurityException {
+    public void onStateChanged(LifecycleOwner lifecycleOwner, Lifecycle.Event event) {
         if (event != Lifecycle.Event.ON_CREATE) {
             throw new AssertionError("Next event must be ON_CREATE");
         }

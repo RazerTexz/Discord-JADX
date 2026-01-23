@@ -24,21 +24,21 @@ import p007b.p225i.p226a.p288f.p299e.p304k.AbstractC3349d;
 import p007b.p225i.p226a.p288f.p299e.p304k.C3347c;
 import p007b.p225i.p226a.p288f.p337l.InterfaceC4349f;
 
-/* compiled from: com.google.android.gms:play-services-base@@17.3.0 */
-/* renamed from: b.i.a.f.l.b.a */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.l.b.a */
+/* JADX INFO: compiled from: com.google.android.gms:play-services-base@@17.3.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public class C4336a extends AbstractC3349d<InterfaceC4340e> implements InterfaceC4349f {
 
-    /* renamed from: A */
+    /* JADX INFO: renamed from: A */
     public final boolean f11448A;
 
-    /* renamed from: B */
+    /* JADX INFO: renamed from: B */
     public final C3347c f11449B;
 
-    /* renamed from: C */
+    /* JADX INFO: renamed from: C */
     public final Bundle f11450C;
 
-    /* renamed from: D */
+    /* JADX INFO: renamed from: D */
     @Nullable
     public final Integer f11451D;
 
@@ -51,7 +51,7 @@ public class C4336a extends AbstractC3349d<InterfaceC4340e> implements Interface
     }
 
     @Override // p007b.p225i.p226a.p288f.p337l.InterfaceC4349f
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final void mo5998d(InterfaceC4338c interfaceC4338c) {
         AnimatableValueParser.m595z(interfaceC4338c, "Expecting a valid ISignInCallbacks");
         try {
@@ -75,25 +75,25 @@ public class C4336a extends AbstractC3349d<InterfaceC4340e> implements Interface
     }
 
     @Override // p007b.p225i.p226a.p288f.p299e.p304k.AbstractC3345b, p007b.p225i.p226a.p288f.p299e.p300h.C3266a.f
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public int mo3982l() {
         return 12451000;
     }
 
     @Override // p007b.p225i.p226a.p288f.p299e.p304k.AbstractC3345b, p007b.p225i.p226a.p288f.p299e.p300h.C3266a.f
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public boolean mo4042o() {
         return this.f11448A;
     }
 
     @Override // p007b.p225i.p226a.p288f.p337l.InterfaceC4349f
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public final void mo5999p() {
         m4132g(new AbstractC3345b.d());
     }
 
     @Override // p007b.p225i.p226a.p288f.p299e.p304k.AbstractC3345b
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     public /* synthetic */ IInterface mo3983r(IBinder iBinder) {
         if (iBinder == null) {
             return null;
@@ -103,7 +103,7 @@ public class C4336a extends AbstractC3349d<InterfaceC4340e> implements Interface
     }
 
     @Override // p007b.p225i.p226a.p288f.p299e.p304k.AbstractC3345b
-    /* renamed from: u */
+    /* JADX INFO: renamed from: u */
     public Bundle mo4140u() {
         if (!this.f9479d.getPackageName().equals(this.f11449B.f9505e)) {
             this.f11450C.putString("com.google.android.gms.signin.internal.realClientPackageName", this.f11449B.f9505e);
@@ -112,13 +112,13 @@ public class C4336a extends AbstractC3349d<InterfaceC4340e> implements Interface
     }
 
     @Override // p007b.p225i.p226a.p288f.p299e.p304k.AbstractC3345b
-    /* renamed from: x */
+    /* JADX INFO: renamed from: x */
     public String mo3984x() {
         return "com.google.android.gms.signin.internal.ISignInService";
     }
 
     @Override // p007b.p225i.p226a.p288f.p299e.p304k.AbstractC3345b
-    /* renamed from: y */
+    /* JADX INFO: renamed from: y */
     public String mo3985y() {
         return "com.google.android.gms.signin.service.START";
     }

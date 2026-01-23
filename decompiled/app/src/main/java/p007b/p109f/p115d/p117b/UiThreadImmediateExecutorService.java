@@ -3,12 +3,12 @@ package p007b.p109f.p115d.p117b;
 import android.os.Handler;
 import android.os.Looper;
 
-/* compiled from: UiThreadImmediateExecutorService.java */
-/* renamed from: b.f.d.b.g, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.f.d.b.g, reason: use source file name */
+/* JADX INFO: compiled from: UiThreadImmediateExecutorService.java */
+/* JADX INFO: loaded from: classes.dex */
 public class UiThreadImmediateExecutorService extends HandlerExecutorServiceImpl {
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public static UiThreadImmediateExecutorService f3090k;
 
     public UiThreadImmediateExecutorService() {

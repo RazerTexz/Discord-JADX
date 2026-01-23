@@ -23,8 +23,8 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 import p658rx.Observable;
 
-/* compiled from: StoreGuildJoinRequest.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: StoreGuildJoinRequest.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class StoreGuildJoinRequest extends StoreV2 {
     private final Dispatcher dispatcher;
     private final HashMap<Long, GuildJoinRequest> guildJoinRequests;
@@ -35,16 +35,16 @@ public final class StoreGuildJoinRequest extends StoreV2 {
     private Map<Long, Guild> pendingGuildsSnapshot;
     private final StoreUser userStore;
 
-    /* compiled from: StoreGuildJoinRequest.kt */
-    /* renamed from: com.discord.stores.StoreGuildJoinRequest$fetchPendingGuilds$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreGuildJoinRequest$fetchPendingGuilds$1 */
+    /* JADX INFO: compiled from: StoreGuildJoinRequest.kt */
     public static final class C60281 extends Lambda implements Function0<Unit> {
 
-        /* compiled from: StoreGuildJoinRequest.kt */
-        /* renamed from: com.discord.stores.StoreGuildJoinRequest$fetchPendingGuilds$1$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.stores.StoreGuildJoinRequest$fetchPendingGuilds$1$1, reason: invalid class name */
+        /* JADX INFO: compiled from: StoreGuildJoinRequest.kt */
         public static final class AnonymousClass1 extends Lambda implements Function1<List<? extends com.discord.api.guild.Guild>, Unit> {
 
-            /* compiled from: StoreGuildJoinRequest.kt */
-            /* renamed from: com.discord.stores.StoreGuildJoinRequest$fetchPendingGuilds$1$1$1, reason: invalid class name and collision with other inner class name */
+            /* JADX INFO: renamed from: com.discord.stores.StoreGuildJoinRequest$fetchPendingGuilds$1$1$1, reason: invalid class name and collision with other inner class name */
+            /* JADX INFO: compiled from: StoreGuildJoinRequest.kt */
             public static final class C132541 extends Lambda implements Function0<Unit> {
                 public final /* synthetic */ List $results;
 
@@ -60,7 +60,7 @@ public final class StoreGuildJoinRequest extends StoreV2 {
                     return Unit.f27425a;
                 }
 
-                /* renamed from: invoke, reason: avoid collision after fix types in other method */
+                /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
                 public final void invoke2() {
                     for (com.discord.api.guild.Guild guild : this.$results) {
                         StoreGuildJoinRequest.access$getPendingGuilds$p(StoreGuildJoinRequest.this).put(Long.valueOf(guild.getId()), new Guild(guild));
@@ -79,7 +79,7 @@ public final class StoreGuildJoinRequest extends StoreV2 {
                 return Unit.f27425a;
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2(List<com.discord.api.guild.Guild> list) {
                 Intrinsics3.checkNotNullParameter(list, "results");
                 StoreGuildJoinRequest.access$getDispatcher$p(StoreGuildJoinRequest.this).schedule(new C132541(list));
@@ -96,7 +96,7 @@ public final class StoreGuildJoinRequest extends StoreV2 {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             Map<Long, Guild> guilds = StoreGuildJoinRequest.access$getGuildsStore$p(StoreGuildJoinRequest.this).getGuilds();
             Set setKeySet = StoreGuildJoinRequest.access$getGuildJoinRequests$p(StoreGuildJoinRequest.this).keySet();
@@ -124,8 +124,8 @@ public final class StoreGuildJoinRequest extends StoreV2 {
         }
     }
 
-    /* compiled from: StoreGuildJoinRequest.kt */
-    /* renamed from: com.discord.stores.StoreGuildJoinRequest$observeGuildJoinRequest$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreGuildJoinRequest$observeGuildJoinRequest$1 */
+    /* JADX INFO: compiled from: StoreGuildJoinRequest.kt */
     public static final class C60291 extends Lambda implements Function0<GuildJoinRequest> {
         public final /* synthetic */ long $guildId;
 
@@ -147,8 +147,8 @@ public final class StoreGuildJoinRequest extends StoreV2 {
         }
     }
 
-    /* compiled from: StoreGuildJoinRequest.kt */
-    /* renamed from: com.discord.stores.StoreGuildJoinRequest$observeGuildJoinRequests$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreGuildJoinRequest$observeGuildJoinRequests$1 */
+    /* JADX INFO: compiled from: StoreGuildJoinRequest.kt */
     public static final class C60301 extends Lambda implements Function0<Map<Long, ? extends GuildJoinRequest>> {
         public C60301() {
             super(0);
@@ -160,14 +160,14 @@ public final class StoreGuildJoinRequest extends StoreV2 {
         }
 
         @Override // kotlin.jvm.functions.Function0
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final Map<Long, ? extends GuildJoinRequest> invoke2() {
             return StoreGuildJoinRequest.access$getGuildJoinRequestsSnapshot$p(StoreGuildJoinRequest.this);
         }
     }
 
-    /* compiled from: StoreGuildJoinRequest.kt */
-    /* renamed from: com.discord.stores.StoreGuildJoinRequest$observePendingGuilds$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreGuildJoinRequest$observePendingGuilds$1 */
+    /* JADX INFO: compiled from: StoreGuildJoinRequest.kt */
     public static final class C60311 extends Lambda implements Function0<Map<Long, ? extends Guild>> {
         public C60311() {
             super(0);
@@ -179,7 +179,7 @@ public final class StoreGuildJoinRequest extends StoreV2 {
         }
 
         @Override // kotlin.jvm.functions.Function0
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final Map<Long, ? extends Guild> invoke2() {
             return StoreGuildJoinRequest.access$getPendingGuildsSnapshot$p(StoreGuildJoinRequest.this);
         }

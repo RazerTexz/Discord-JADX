@@ -7,16 +7,16 @@ import androidx.annotation.NonNull;
 import androidx.viewbinding.ViewBinding;
 import com.google.android.material.button.MaterialButton;
 
-/* compiled from: WidgetChatInputPermReqFilesBinding.java */
-/* renamed from: b.a.i.w4, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.a.i.w4, reason: use source file name */
+/* JADX INFO: compiled from: WidgetChatInputPermReqFilesBinding.java */
+/* JADX INFO: loaded from: classes.dex */
 public final class WidgetChatInputPermReqFilesBinding implements ViewBinding {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     @NonNull
     public final LinearLayout f1356a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     @NonNull
     public final TextView f1357b;
 

@@ -20,7 +20,7 @@ import org.eclipse.jdt.internal.compiler.ast.Statement;
 import org.eclipse.jdt.internal.compiler.ast.TypeDeclaration;
 import org.eclipse.jdt.internal.compiler.ast.TypeReference;
 
-/* loaded from: discord-126021.apk:lombok/eclipse/EclipseNode.SCL.lombok */
+/* JADX INFO: loaded from: discord-126021.apk:lombok/eclipse/EclipseNode.SCL.lombok */
 public class EclipseNode extends LombokNode<EclipseAST, EclipseNode, ASTNode> {
     private EclipseAST ast;
     private static /* synthetic */ int[] $SWITCH_TABLE$lombok$core$AST$Kind;
@@ -184,7 +184,7 @@ public class EclipseNode extends LombokNode<EclipseAST, EclipseNode, ASTNode> {
         }
     }
 
-    /* renamed from: fieldContainsAnnotation, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: fieldContainsAnnotation, reason: avoid collision after fix types in other method */
     protected boolean fieldContainsAnnotation2(ASTNode field, ASTNode annotation) {
         if (!(field instanceof FieldDeclaration)) {
             return false;
@@ -243,7 +243,7 @@ public class EclipseNode extends LombokNode<EclipseAST, EclipseNode, ASTNode> {
         eclipseAST.addProblem(eclipseAST2.new ParseProblem(true, message, sourceStart, sourceEnd));
     }
 
-    /* renamed from: calculateIsStructurallySignificant, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: calculateIsStructurallySignificant, reason: avoid collision after fix types in other method */
     protected boolean calculateIsStructurallySignificant2(ASTNode parent) {
         return (this.node instanceof TypeDeclaration) || (this.node instanceof AbstractMethodDeclaration) || (this.node instanceof FieldDeclaration) || (this.node instanceof LocalDeclaration) || (this.node instanceof CompilationUnitDeclaration);
     }

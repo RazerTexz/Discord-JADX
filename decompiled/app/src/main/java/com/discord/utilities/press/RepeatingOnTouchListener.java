@@ -15,8 +15,8 @@ import p658rx.Subscription;
 import p658rx.functions.Action0;
 import p658rx.functions.Action1;
 
-/* compiled from: RepeatingOnTouchListener.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: RepeatingOnTouchListener.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class RepeatingOnTouchListener implements View.OnTouchListener {
     private final Action0 action;
     private final Action0 initialAction;
@@ -25,8 +25,8 @@ public final class RepeatingOnTouchListener implements View.OnTouchListener {
     private Subscription subscription;
     private final TimeUnit timeUnit;
 
-    /* compiled from: RepeatingOnTouchListener.kt */
-    /* renamed from: com.discord.utilities.press.RepeatingOnTouchListener$subscribe$1 */
+    /* JADX INFO: renamed from: com.discord.utilities.press.RepeatingOnTouchListener$subscribe$1 */
+    /* JADX INFO: compiled from: RepeatingOnTouchListener.kt */
     public static final class C68431<T, R> implements Func1<Long, Observable<? extends Long>> {
         public C68431() {
         }
@@ -36,15 +36,15 @@ public final class RepeatingOnTouchListener implements View.OnTouchListener {
             return call2(l);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final Observable<? extends Long> call2(Long l) {
             long repeatRate = RepeatingOnTouchListener.this.getRepeatRate();
             return Observable.m11062F(repeatRate, repeatRate, RepeatingOnTouchListener.this.getTimeUnit(), Schedulers2.m10873a());
         }
     }
 
-    /* compiled from: RepeatingOnTouchListener.kt */
-    /* renamed from: com.discord.utilities.press.RepeatingOnTouchListener$subscribe$2 */
+    /* JADX INFO: renamed from: com.discord.utilities.press.RepeatingOnTouchListener$subscribe$2 */
+    /* JADX INFO: compiled from: RepeatingOnTouchListener.kt */
     public static final class C68442<T> implements Action1<Long> {
         public C68442() {
         }
@@ -54,14 +54,14 @@ public final class RepeatingOnTouchListener implements View.OnTouchListener {
             call2(l);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final void call2(Long l) {
             RepeatingOnTouchListener.this.getAction().call();
         }
     }
 
-    /* compiled from: RepeatingOnTouchListener.kt */
-    /* renamed from: com.discord.utilities.press.RepeatingOnTouchListener$subscribe$3 */
+    /* JADX INFO: renamed from: com.discord.utilities.press.RepeatingOnTouchListener$subscribe$3 */
+    /* JADX INFO: compiled from: RepeatingOnTouchListener.kt */
     public static final class C68453<T> implements Action1<Throwable> {
         public static final C68453 INSTANCE = new C68453();
 
@@ -70,7 +70,7 @@ public final class RepeatingOnTouchListener implements View.OnTouchListener {
             call2(th);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final void call2(Throwable th) {
         }
     }

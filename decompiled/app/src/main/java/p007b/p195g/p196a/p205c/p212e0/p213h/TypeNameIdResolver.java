@@ -9,18 +9,18 @@ import p007b.p195g.p196a.p205c.p210c0.BasicBeanDescription;
 import p007b.p195g.p196a.p205c.p218h0.TypeFactory;
 import p007b.p195g.p196a.p205c.p221z.MapperConfig;
 
-/* compiled from: TypeNameIdResolver.java */
-/* renamed from: b.g.a.c.e0.h.l, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.g.a.c.e0.h.l, reason: use source file name */
+/* JADX INFO: compiled from: TypeNameIdResolver.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class TypeNameIdResolver extends TypeIdResolverBase {
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final MapperConfig<?> f4776c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final ConcurrentHashMap<String, String> f4777d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final Map<String, JavaType> f4778e;
 
     public TypeNameIdResolver(MapperConfig<?> mapperConfig, JavaType javaType, ConcurrentHashMap<String, String> concurrentHashMap, HashMap<String, JavaType> map) {
@@ -31,7 +31,7 @@ public class TypeNameIdResolver extends TypeIdResolverBase {
         mapperConfig.m2279q(MapperFeature.ACCEPT_CASE_INSENSITIVE_VALUES);
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public static String m1967d(Class<?> cls) {
         String name = cls.getName();
         int iLastIndexOf = name.lastIndexOf(46);
@@ -39,18 +39,18 @@ public class TypeNameIdResolver extends TypeIdResolverBase {
     }
 
     @Override // p007b.p195g.p196a.p205c.p212e0.TypeIdResolver
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public String mo1946a(Object obj) {
         return m1968e(obj.getClass());
     }
 
     @Override // p007b.p195g.p196a.p205c.p212e0.TypeIdResolver
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public String mo1948c(Object obj, Class<?> cls) {
         return obj == null ? m1968e(cls) : m1968e(obj.getClass());
     }
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public String m1968e(Class<?> cls) {
         if (cls == null) {
             return null;

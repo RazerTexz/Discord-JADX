@@ -5,9 +5,9 @@ import com.discord.app.AppActivity;
 import kotlin.jvm.functions.Function2;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: AppActivity.kt */
-/* renamed from: b.a.d.c, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.a.d.c, reason: use source file name */
+/* JADX INFO: compiled from: AppActivity.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class AppActivity3 extends Lambda implements Function2<Integer, Boolean, TypedValue> {
     public final /* synthetic */ AppActivity this$0;
 

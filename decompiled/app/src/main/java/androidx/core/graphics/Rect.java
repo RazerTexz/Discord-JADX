@@ -8,9 +8,9 @@ import android.graphics.RectF;
 import android.graphics.Region;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: Rect.kt */
-/* renamed from: androidx.core.graphics.RectKt, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: androidx.core.graphics.RectKt, reason: use source file name */
+/* JADX INFO: compiled from: Rect.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class Rect {
     @SuppressLint({"CheckResult"})
     public static final android.graphics.Rect and(android.graphics.Rect rect, android.graphics.Rect rect2) {
@@ -55,7 +55,7 @@ public final class Rect {
         return region;
     }
 
-    /* renamed from: or */
+    /* JADX INFO: renamed from: or */
     public static final android.graphics.Rect m85or(android.graphics.Rect rect, android.graphics.Rect rect2) {
         Intrinsics3.checkNotNullParameter(rect, "<this>");
         Intrinsics3.checkNotNullParameter(rect2, "r");
@@ -168,7 +168,7 @@ public final class Rect {
         return region;
     }
 
-    /* renamed from: or */
+    /* JADX INFO: renamed from: or */
     public static final RectF m86or(RectF rectF, RectF rectF2) {
         Intrinsics3.checkNotNullParameter(rectF, "<this>");
         Intrinsics3.checkNotNullParameter(rectF2, "r");

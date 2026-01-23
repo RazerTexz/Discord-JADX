@@ -6,13 +6,13 @@ import kotlin.jvm.internal.Ref$ObjectRef;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ModelStoreListing.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: ModelStoreListing.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class ModelStoreListing {
     private final long id;
     private final ModelSku sku;
 
-    /* compiled from: ModelStoreListing.kt */
+    /* JADX INFO: compiled from: ModelStoreListing.kt */
     public static final class Parser implements Model.Parser<ModelStoreListing> {
         public static final Parser INSTANCE = new Parser();
 
@@ -56,12 +56,12 @@ public final /* data */ class ModelStoreListing {
         return modelStoreListing.copy(modelSku, j);
     }
 
-    /* renamed from: component1, reason: from getter */
+    /* JADX INFO: renamed from: component1, reason: from getter */
     public final ModelSku getSku() {
         return this.sku;
     }
 
-    /* renamed from: component2, reason: from getter */
+    /* JADX INFO: renamed from: component2, reason: from getter */
     public final long getId() {
         return this.id;
     }

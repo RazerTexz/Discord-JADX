@@ -20,14 +20,14 @@ import p637j0.p642l.p647e.ScalarSynchronousObservable;
 import p658rx.Observable;
 import p658rx.functions.Func7;
 
-/* compiled from: StageCallModel.kt */
-/* renamed from: com.discord.widgets.stage.model.StageCallModel$Companion$observeStageCallModel$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.stage.model.StageCallModel$Companion$observeStageCallModel$1, reason: use source file name */
+/* JADX INFO: compiled from: StageCallModel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class StageCallModel4<T, R> implements Func1<Channel, Observable<? extends StageCallModel>> {
     public final /* synthetic */ long $channelId;
 
-    /* compiled from: StageCallModel.kt */
-    /* renamed from: com.discord.widgets.stage.model.StageCallModel$Companion$observeStageCallModel$1$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.stage.model.StageCallModel$Companion$observeStageCallModel$1$1 */
+    /* JADX INFO: compiled from: StageCallModel.kt */
     public static final class C100151<T1, T2, T3, T4, T5, T6, T7, R> implements Func7<Map<Long, ? extends StoreVoiceParticipants.VoiceUser>, Map<Long, ? extends GuildMember>, Map<Long, ? extends GuildRole>, Guild, Map<Long, ? extends Integer>, StageInstance, Boolean, StageCallModel> {
         public final /* synthetic */ Channel $channel;
 
@@ -40,7 +40,7 @@ public final class StageCallModel4<T, R> implements Func1<Channel, Observable<? 
             return call2((Map<Long, StoreVoiceParticipants.VoiceUser>) map, (Map<Long, GuildMember>) map2, (Map<Long, GuildRole>) map3, guild, (Map<Long, Integer>) map4, stageInstance, bool);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final StageCallModel call2(Map<Long, StoreVoiceParticipants.VoiceUser> map, Map<Long, GuildMember> map2, Map<Long, GuildRole> map3, Guild guild, Map<Long, Integer> map4, StageInstance stageInstance, Boolean bool) {
             StageCallModel.Companion companion = StageCallModel.INSTANCE;
             Channel channel = this.$channel;
@@ -62,7 +62,7 @@ public final class StageCallModel4<T, R> implements Func1<Channel, Observable<? 
         return call2(channel);
     }
 
-    /* renamed from: call, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
     public final Observable<? extends StageCallModel> call2(Channel channel) {
         if (channel == null) {
             return new ScalarSynchronousObservable(null);

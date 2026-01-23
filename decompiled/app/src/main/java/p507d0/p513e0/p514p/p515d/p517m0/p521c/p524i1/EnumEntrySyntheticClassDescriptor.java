@@ -41,41 +41,41 @@ import p507d0.p513e0.p514p.p515d.p517m0.p567n.KotlinType;
 import p507d0.p513e0.p514p.p515d.p517m0.p567n.TypeConstructor;
 import p507d0.p513e0.p514p.p515d.p517m0.p567n.p568l1.KotlinTypeRefiner;
 
-/* compiled from: EnumEntrySyntheticClassDescriptor.java */
-/* renamed from: d0.e0.p.d.m0.c.i1.o, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.c.i1.o, reason: use source file name */
+/* JADX INFO: compiled from: EnumEntrySyntheticClassDescriptor.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class EnumEntrySyntheticClassDescriptor extends ClassDescriptorBase {
 
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     public final TypeConstructor f22909r;
 
-    /* renamed from: s */
+    /* JADX INFO: renamed from: s */
     public final MemberScope3 f22910s;
 
-    /* renamed from: t */
+    /* JADX INFO: renamed from: t */
     public final storage5<Set<Name>> f22911t;
 
-    /* renamed from: u */
+    /* JADX INFO: renamed from: u */
     public final Annotations4 f22912u;
 
-    /* compiled from: EnumEntrySyntheticClassDescriptor.java */
-    /* renamed from: d0.e0.p.d.m0.c.i1.o$a */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.c.i1.o$a */
+    /* JADX INFO: compiled from: EnumEntrySyntheticClassDescriptor.java */
     public class a extends MemberScopeImpl {
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final storage3<Name, Collection<? extends SimpleFunctionDescriptor>> f22913b;
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public final storage3<Name, Collection<? extends PropertyDescriptor>> f22914c;
 
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         public final storage5<Collection<DeclarationDescriptor>> f22915d;
 
-        /* renamed from: e */
+        /* JADX INFO: renamed from: e */
         public final /* synthetic */ EnumEntrySyntheticClassDescriptor f22916e;
 
-        /* compiled from: EnumEntrySyntheticClassDescriptor.java */
-        /* renamed from: d0.e0.p.d.m0.c.i1.o$a$a, reason: collision with other inner class name */
+        /* JADX INFO: renamed from: d0.e0.p.d.m0.c.i1.o$a$a, reason: collision with other inner class name */
+        /* JADX INFO: compiled from: EnumEntrySyntheticClassDescriptor.java */
         public class C13308a implements Function1<Name, Collection<? extends SimpleFunctionDescriptor>> {
             public C13308a(EnumEntrySyntheticClassDescriptor enumEntrySyntheticClassDescriptor) {
             }
@@ -85,7 +85,7 @@ public class EnumEntrySyntheticClassDescriptor extends ClassDescriptorBase {
                 return invoke2(name);
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public Collection<? extends SimpleFunctionDescriptor> invoke2(Name name) {
                 a aVar = a.this;
                 Objects.requireNonNull(aVar);
@@ -97,8 +97,8 @@ public class EnumEntrySyntheticClassDescriptor extends ClassDescriptorBase {
             }
         }
 
-        /* compiled from: EnumEntrySyntheticClassDescriptor.java */
-        /* renamed from: d0.e0.p.d.m0.c.i1.o$a$b */
+        /* JADX INFO: renamed from: d0.e0.p.d.m0.c.i1.o$a$b */
+        /* JADX INFO: compiled from: EnumEntrySyntheticClassDescriptor.java */
         public class b implements Function1<Name, Collection<? extends PropertyDescriptor>> {
             public b(EnumEntrySyntheticClassDescriptor enumEntrySyntheticClassDescriptor) {
             }
@@ -108,7 +108,7 @@ public class EnumEntrySyntheticClassDescriptor extends ClassDescriptorBase {
                 return invoke2(name);
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public Collection<? extends PropertyDescriptor> invoke2(Name name) {
                 a aVar = a.this;
                 Objects.requireNonNull(aVar);
@@ -120,8 +120,8 @@ public class EnumEntrySyntheticClassDescriptor extends ClassDescriptorBase {
             }
         }
 
-        /* compiled from: EnumEntrySyntheticClassDescriptor.java */
-        /* renamed from: d0.e0.p.d.m0.c.i1.o$a$c */
+        /* JADX INFO: renamed from: d0.e0.p.d.m0.c.i1.o$a$c */
+        /* JADX INFO: compiled from: EnumEntrySyntheticClassDescriptor.java */
         public class c implements Function0<Collection<DeclarationDescriptor>> {
             public c(EnumEntrySyntheticClassDescriptor enumEntrySyntheticClassDescriptor) {
             }
@@ -132,7 +132,7 @@ public class EnumEntrySyntheticClassDescriptor extends ClassDescriptorBase {
             }
 
             @Override // kotlin.jvm.functions.Function0
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public Collection<DeclarationDescriptor> invoke2() {
                 a aVar = a.this;
                 Objects.requireNonNull(aVar);
@@ -146,18 +146,18 @@ public class EnumEntrySyntheticClassDescriptor extends ClassDescriptorBase {
             }
         }
 
-        /* compiled from: EnumEntrySyntheticClassDescriptor.java */
-        /* renamed from: d0.e0.p.d.m0.c.i1.o$a$d */
+        /* JADX INFO: renamed from: d0.e0.p.d.m0.c.i1.o$a$d */
+        /* JADX INFO: compiled from: EnumEntrySyntheticClassDescriptor.java */
         public class d extends OverridingStrategy {
 
-            /* renamed from: a */
+            /* JADX INFO: renamed from: a */
             public final /* synthetic */ Set f22920a;
 
             public d(a aVar, Set set) {
                 this.f22920a = set;
             }
 
-            /* renamed from: a */
+            /* JADX INFO: renamed from: a */
             public static /* synthetic */ void m9423a(int i) {
                 Object[] objArr = new Object[3];
                 if (i == 1) {
@@ -213,7 +213,7 @@ public class EnumEntrySyntheticClassDescriptor extends ClassDescriptorBase {
 
         /* JADX WARN: Removed duplicated region for block: B:17:0x0024  */
         /* JADX WARN: Removed duplicated region for block: B:9:0x0014  */
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         /*
             Code decompiled incorrectly, please refer to instructions dump.
         */
@@ -376,7 +376,7 @@ public class EnumEntrySyntheticClassDescriptor extends ClassDescriptorBase {
             throw new IllegalStateException(str2);
         }
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final MemberScope3 m9421b() {
             MemberScope3 memberScope = this.f22916e.getTypeConstructor().getSupertypes().iterator().next().getMemberScope();
             if (memberScope != null) {
@@ -386,7 +386,7 @@ public class EnumEntrySyntheticClassDescriptor extends ClassDescriptorBase {
             throw null;
         }
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public final <D extends CallableMemberDescriptor> Collection<? extends D> m9422c(Name name, Collection<? extends D> collection) {
             if (name == null) {
                 m9420a(10);
@@ -519,7 +519,7 @@ public class EnumEntrySyntheticClassDescriptor extends ClassDescriptorBase {
         this.f22911t = storage5Var;
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static /* synthetic */ void m9419a(int i) {
         String str;
         int i2;

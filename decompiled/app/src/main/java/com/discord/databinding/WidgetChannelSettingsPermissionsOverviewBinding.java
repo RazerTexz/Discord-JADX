@@ -8,18 +8,18 @@ import androidx.viewbinding.ViewBinding;
 import com.discord.app.AppViewFlipper;
 import com.discord.views.segmentedcontrol.SegmentedControlContainer;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public final class WidgetChannelSettingsPermissionsOverviewBinding implements ViewBinding {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     @NonNull
     public final CoordinatorLayout f15955a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     @NonNull
     public final AppViewFlipper f15956b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     @NonNull
     public final SegmentedControlContainer f15957c;
 

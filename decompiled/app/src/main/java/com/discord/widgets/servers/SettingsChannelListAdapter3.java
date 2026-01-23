@@ -4,9 +4,9 @@ import android.view.View;
 import com.discord.widgets.servers.SettingsChannelListAdapter;
 import kotlin.jvm.functions.Function1;
 
-/* compiled from: SettingsChannelListAdapter.kt */
-/* renamed from: com.discord.widgets.servers.SettingsChannelListAdapter$ChannelListItem$onConfigure$$inlined$let$lambda$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.servers.SettingsChannelListAdapter$ChannelListItem$onConfigure$$inlined$let$lambda$1, reason: use source file name */
+/* JADX INFO: compiled from: SettingsChannelListAdapter.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class SettingsChannelListAdapter3 implements View.OnClickListener {
     public final /* synthetic */ SettingsChannelListAdapter.ChannelItem $it$inlined;
     public final /* synthetic */ Function1 $onClick;

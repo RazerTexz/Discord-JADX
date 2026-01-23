@@ -13,9 +13,9 @@ import p637j0.p641k.Func1;
 import p637j0.p642l.p647e.ScalarSynchronousObservable;
 import p658rx.Observable;
 
-/* compiled from: WidgetChannelTopicViewModel.kt */
-/* renamed from: com.discord.widgets.channels.WidgetChannelTopicViewModel$Companion$observeStoreState$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.channels.WidgetChannelTopicViewModel$Companion$observeStoreState$1, reason: use source file name */
+/* JADX INFO: compiled from: WidgetChannelTopicViewModel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetChannelTopicViewModel7<T, R> implements Func1<Channel, Observable<? extends WidgetChannelTopicViewModel.StoreState>> {
     public final /* synthetic */ WidgetChannelTopicViewModel.Companion.NavState $navState;
     public final /* synthetic */ StoreChannels $storeChannels;
@@ -36,7 +36,7 @@ public final class WidgetChannelTopicViewModel7<T, R> implements Func1<Channel, 
         return call2(channel);
     }
 
-    /* renamed from: call, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
     public final Observable<? extends WidgetChannelTopicViewModel.StoreState> call2(Channel channel) {
         if (channel == null) {
             return new ScalarSynchronousObservable(new WidgetChannelTopicViewModel.StoreState.NoChannel(this.$navState.isRightPanelOpened(), this.$navState.isOnHomeTab()));

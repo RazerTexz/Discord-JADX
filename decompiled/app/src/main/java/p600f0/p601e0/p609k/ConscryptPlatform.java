@@ -24,38 +24,38 @@ import p507d0.p580t.Iterables2;
 import p507d0.p592z.p594d.Intrinsics3;
 import p600f0.Protocol2;
 
-/* compiled from: ConscryptPlatform.kt */
-/* renamed from: f0.e0.k.d, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: f0.e0.k.d, reason: use source file name */
+/* JADX INFO: compiled from: ConscryptPlatform.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class ConscryptPlatform extends Platform2 {
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public static final boolean f25766d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public static final a f25767e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final Provider f25768f;
 
-    /* compiled from: ConscryptPlatform.kt */
-    /* renamed from: f0.e0.k.d$a */
+    /* JADX INFO: renamed from: f0.e0.k.d$a */
+    /* JADX INFO: compiled from: ConscryptPlatform.kt */
     public static final class a {
         public a(DefaultConstructorMarker defaultConstructorMarker) {
         }
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final boolean m10327a(int i, int i2, int i3) {
             Conscrypt.Version version = Conscrypt.version();
             return version.major() != i ? version.major() > i : version.minor() != i2 ? version.minor() > i2 : version.patch() >= i3;
         }
     }
 
-    /* compiled from: ConscryptPlatform.kt */
-    /* renamed from: f0.e0.k.d$b */
+    /* JADX INFO: renamed from: f0.e0.k.d$b */
+    /* JADX INFO: compiled from: ConscryptPlatform.kt */
     public static final class b implements ConscryptHostnameVerifier {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public static final b f25769a = new b();
     }
 
@@ -82,7 +82,7 @@ public final class ConscryptPlatform extends Platform2 {
     }
 
     @Override // p600f0.p601e0.p609k.Platform2
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public void mo10316d(SSLSocket sSLSocket, String str, List<Protocol2> list) {
         Intrinsics3.checkParameterIsNotNull(sSLSocket, "sslSocket");
         Intrinsics3.checkParameterIsNotNull(list, "protocols");
@@ -117,7 +117,7 @@ public final class ConscryptPlatform extends Platform2 {
     }
 
     @Override // p600f0.p601e0.p609k.Platform2
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public String mo10317f(SSLSocket sSLSocket) {
         Intrinsics3.checkParameterIsNotNull(sSLSocket, "sslSocket");
         if (Conscrypt.isConscrypt(sSLSocket)) {
@@ -128,7 +128,7 @@ public final class ConscryptPlatform extends Platform2 {
     }
 
     @Override // p600f0.p601e0.p609k.Platform2
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public SSLContext mo10324l() throws NoSuchAlgorithmException {
         SSLContext sSLContext = SSLContext.getInstance("TLS", this.f25768f);
         Intrinsics3.checkExpressionValueIsNotNull(sSLContext, "SSLContext.getInstance(\"TLS\", provider)");
@@ -136,7 +136,7 @@ public final class ConscryptPlatform extends Platform2 {
     }
 
     @Override // p600f0.p601e0.p609k.Platform2
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public SSLSocketFactory mo10326m(X509TrustManager x509TrustManager) throws NoSuchAlgorithmException, KeyManagementException {
         Intrinsics3.checkParameterIsNotNull(x509TrustManager, "trustManager");
         SSLContext sSLContext = SSLContext.getInstance("TLS", this.f25768f);
@@ -149,7 +149,7 @@ public final class ConscryptPlatform extends Platform2 {
     }
 
     @Override // p600f0.p601e0.p609k.Platform2
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public X509TrustManager mo10325n() throws NoSuchAlgorithmException, KeyStoreException {
         TrustManagerFactory trustManagerFactory = TrustManagerFactory.getInstance(TrustManagerFactory.getDefaultAlgorithm());
         trustManagerFactory.init((KeyStore) null);

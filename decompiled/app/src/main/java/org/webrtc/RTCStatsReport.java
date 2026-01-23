@@ -3,7 +3,7 @@ package org.webrtc;
 import java.util.Map;
 import p007b.p100d.p104b.p105a.outline;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public class RTCStatsReport {
     private final Map<String, RTCStats> stats;
     private final long timestampUs;

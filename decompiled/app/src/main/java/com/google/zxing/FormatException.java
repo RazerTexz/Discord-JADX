@@ -1,9 +1,9 @@
 package com.google.zxing;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public final class FormatException extends ReaderException {
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public static final FormatException f21664l;
 
     static {
@@ -15,7 +15,7 @@ public final class FormatException extends ReaderException {
     private FormatException() {
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static FormatException m9260a() {
         return ReaderException.f21666j ? new FormatException() : f21664l;
     }

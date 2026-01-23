@@ -28,9 +28,9 @@ import p507d0.p592z.p594d.Lambda;
 import p637j0.p641k.Func1;
 import p658rx.Observable;
 
-/* compiled from: WidgetThreadBrowserActiveViewModel.kt */
-/* renamed from: com.discord.widgets.channels.threads.browser.WidgetThreadBrowserActiveViewModel$Companion$observeStoreState$3, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.channels.threads.browser.WidgetThreadBrowserActiveViewModel$Companion$observeStoreState$3, reason: use source file name */
+/* JADX INFO: compiled from: WidgetThreadBrowserActiveViewModel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetThreadBrowserActiveViewModel4<T, R> implements Func1<Tuples2<? extends Map<Long, ? extends Channel>, ? extends Map<Long, ? extends Channel>>, Observable<? extends WidgetThreadBrowserActiveViewModel.StoreState>> {
     public final /* synthetic */ long $channelId;
     public final /* synthetic */ long $guildId;
@@ -40,8 +40,8 @@ public final class WidgetThreadBrowserActiveViewModel4<T, R> implements Func1<Tu
     public final /* synthetic */ StoreThreadMessages $storeThreadMessages;
     public final /* synthetic */ StoreUser $storeUser;
 
-    /* compiled from: WidgetThreadBrowserActiveViewModel.kt */
-    /* renamed from: com.discord.widgets.channels.threads.browser.WidgetThreadBrowserActiveViewModel$Companion$observeStoreState$3$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.channels.threads.browser.WidgetThreadBrowserActiveViewModel$Companion$observeStoreState$3$2 */
+    /* JADX INFO: compiled from: WidgetThreadBrowserActiveViewModel.kt */
     public static final class C76492 extends Lambda implements Function10<MeUser, Map<Long, ? extends User>, Map<Long, ? extends StoreThreadMessages.ThreadState>, Map<Long, ? extends GuildMember>, Map<Long, ? extends GuildRole>, Map<Long, ? extends String>, Long, Map<Long, ? extends Integer>, Channel, Guild, WidgetThreadBrowserActiveViewModel.StoreState> {
         public final /* synthetic */ Map $activeJoinedThreads;
         public final /* synthetic */ Map $activeThreads;
@@ -58,7 +58,7 @@ public final class WidgetThreadBrowserActiveViewModel4<T, R> implements Func1<Tu
             return invoke2(meUser, map, (Map<Long, StoreThreadMessages.ThreadState>) map2, (Map<Long, GuildMember>) map3, (Map<Long, GuildRole>) map4, (Map<Long, String>) map5, l, (Map<Long, Integer>) map6, channel, guild);
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final WidgetThreadBrowserActiveViewModel.StoreState invoke2(MeUser meUser, Map<Long, ? extends User> map, Map<Long, StoreThreadMessages.ThreadState> map2, Map<Long, GuildMember> map3, Map<Long, GuildRole> map4, Map<Long, String> map5, Long l, Map<Long, Integer> map6, Channel channel, Guild guild) {
             Intrinsics3.checkNotNullParameter(meUser, "meUser");
             Intrinsics3.checkNotNullParameter(map, "users");
@@ -90,7 +90,7 @@ public final class WidgetThreadBrowserActiveViewModel4<T, R> implements Func1<Tu
         return call2((Tuples2<? extends Map<Long, Channel>, ? extends Map<Long, Channel>>) tuples2);
     }
 
-    /* renamed from: call, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
     public final Observable<? extends WidgetThreadBrowserActiveViewModel.StoreState> call2(Tuples2<? extends Map<Long, Channel>, ? extends Map<Long, Channel>> tuples2) {
         Map<Long, Channel> mapComponent1 = tuples2.component1();
         Map<Long, Channel> mapComponent2 = tuples2.component2();

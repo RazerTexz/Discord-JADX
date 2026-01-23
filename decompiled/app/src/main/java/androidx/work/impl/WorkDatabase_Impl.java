@@ -1,6 +1,5 @@
 package androidx.work.impl;
 
-import android.database.SQLException;
 import androidx.room.DatabaseConfiguration;
 import androidx.room.InvalidationTracker;
 import androidx.room.RoomDatabase;
@@ -32,7 +31,7 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public final class WorkDatabase_Impl extends WorkDatabase {
     private volatile DependencyDao _dependencyDao;
     private volatile PreferenceDao _preferenceDao;
@@ -43,14 +42,14 @@ public final class WorkDatabase_Impl extends WorkDatabase {
     private volatile WorkSpecDao _workSpecDao;
     private volatile WorkTagDao _workTagDao;
 
-    /* renamed from: androidx.work.impl.WorkDatabase_Impl$1 */
+    /* JADX INFO: renamed from: androidx.work.impl.WorkDatabase_Impl$1 */
     public class C07301 extends RoomOpenHelper.Delegate {
         public C07301(int i) {
             super(i);
         }
 
         @Override // androidx.room.RoomOpenHelper.Delegate
-        public void createAllTables(SupportSQLiteDatabase supportSQLiteDatabase) throws SQLException {
+        public void createAllTables(SupportSQLiteDatabase supportSQLiteDatabase) {
             supportSQLiteDatabase.execSQL("CREATE TABLE IF NOT EXISTS `Dependency` (`work_spec_id` TEXT NOT NULL, `prerequisite_id` TEXT NOT NULL, PRIMARY KEY(`work_spec_id`, `prerequisite_id`), FOREIGN KEY(`work_spec_id`) REFERENCES `WorkSpec`(`id`) ON UPDATE CASCADE ON DELETE CASCADE , FOREIGN KEY(`prerequisite_id`) REFERENCES `WorkSpec`(`id`) ON UPDATE CASCADE ON DELETE CASCADE )");
             supportSQLiteDatabase.execSQL("CREATE INDEX IF NOT EXISTS `index_Dependency_work_spec_id` ON `Dependency` (`work_spec_id`)");
             supportSQLiteDatabase.execSQL("CREATE INDEX IF NOT EXISTS `index_Dependency_prerequisite_id` ON `Dependency` (`prerequisite_id`)");
@@ -69,7 +68,7 @@ public final class WorkDatabase_Impl extends WorkDatabase {
         }
 
         @Override // androidx.room.RoomOpenHelper.Delegate
-        public void dropAllTables(SupportSQLiteDatabase supportSQLiteDatabase) throws SQLException {
+        public void dropAllTables(SupportSQLiteDatabase supportSQLiteDatabase) {
             supportSQLiteDatabase.execSQL("DROP TABLE IF EXISTS `Dependency`");
             supportSQLiteDatabase.execSQL("DROP TABLE IF EXISTS `WorkSpec`");
             supportSQLiteDatabase.execSQL("DROP TABLE IF EXISTS `WorkTag`");
@@ -96,7 +95,7 @@ public final class WorkDatabase_Impl extends WorkDatabase {
         }
 
         @Override // androidx.room.RoomOpenHelper.Delegate
-        public void onOpen(SupportSQLiteDatabase supportSQLiteDatabase) throws SQLException {
+        public void onOpen(SupportSQLiteDatabase supportSQLiteDatabase) {
             WorkDatabase_Impl.access$602(WorkDatabase_Impl.this, supportSQLiteDatabase);
             supportSQLiteDatabase.execSQL("PRAGMA foreign_keys = ON");
             WorkDatabase_Impl.access$700(WorkDatabase_Impl.this, supportSQLiteDatabase);
@@ -113,7 +112,7 @@ public final class WorkDatabase_Impl extends WorkDatabase {
         }
 
         @Override // androidx.room.RoomOpenHelper.Delegate
-        public void onPreMigrate(SupportSQLiteDatabase supportSQLiteDatabase) throws SQLException {
+        public void onPreMigrate(SupportSQLiteDatabase supportSQLiteDatabase) {
             DBUtil.dropFtsSyncTriggers(supportSQLiteDatabase);
         }
 
@@ -269,7 +268,7 @@ public final class WorkDatabase_Impl extends WorkDatabase {
     }
 
     @Override // androidx.room.RoomDatabase
-    public void clearAllTables() throws SQLException {
+    public void clearAllTables() {
         super.assertNotMainThread();
         SupportSQLiteDatabase writableDatabase = super.getOpenHelper().getWritableDatabase();
         if (1 == 0) {

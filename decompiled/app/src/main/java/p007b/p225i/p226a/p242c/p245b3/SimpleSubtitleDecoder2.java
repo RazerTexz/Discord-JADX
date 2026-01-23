@@ -10,9 +10,9 @@ import p007b.p085c.p086a.p087a0.AnimatableValueParser;
 import p007b.p225i.p226a.p242c.p265v2.DecoderOutputBuffer;
 import p007b.p225i.p226a.p242c.p265v2.SimpleDecoder;
 
-/* compiled from: SimpleSubtitleDecoder.java */
-/* renamed from: b.i.a.c.b3.f, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.b3.f, reason: use source file name */
+/* JADX INFO: compiled from: SimpleSubtitleDecoder.java */
+/* JADX INFO: loaded from: classes3.dex */
 public abstract class SimpleSubtitleDecoder2 extends SimpleDecoder<SubtitleInputBuffer, SubtitleOutputBuffer, SubtitleDecoderException> implements SubtitleDecoder {
     public SimpleSubtitleDecoder2(String str) {
         super(new SubtitleInputBuffer[2], new SubtitleOutputBuffer[2]);
@@ -23,13 +23,13 @@ public abstract class SimpleSubtitleDecoder2 extends SimpleDecoder<SubtitleInput
     }
 
     @Override // p007b.p225i.p226a.p242c.p245b3.SubtitleDecoder
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public void mo2607a(long j) {
     }
 
     @Override // p007b.p225i.p226a.p242c.p265v2.SimpleDecoder
     @Nullable
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public DecoderException mo2616e(DecoderInputBuffer decoderInputBuffer, DecoderOutputBuffer decoderOutputBuffer, boolean z2) {
         SubtitleInputBuffer subtitleInputBuffer = (SubtitleInputBuffer) decoderInputBuffer;
         SubtitleOutputBuffer subtitleOutputBuffer = (SubtitleOutputBuffer) decoderOutputBuffer;
@@ -44,6 +44,6 @@ public abstract class SimpleSubtitleDecoder2 extends SimpleDecoder<SubtitleInput
         }
     }
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public abstract Subtitle mo2617j(byte[] bArr, int i, boolean z2) throws SubtitleDecoderException;
 }

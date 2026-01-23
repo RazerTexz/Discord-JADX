@@ -25,8 +25,8 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 import p658rx.Observable;
 
-/* compiled from: StoreEmojiCustom.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: StoreEmojiCustom.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class StoreEmojiCustom extends StoreV2 {
     private static final long NO_ROLE = 0;
     private final Map<Long, Map<Long, ModelEmojiCustom>> allGuildEmoji;
@@ -36,8 +36,8 @@ public final class StoreEmojiCustom extends StoreV2 {
     private long me;
     private final StoreStream stream;
 
-    /* compiled from: StoreEmojiCustom.kt */
-    /* renamed from: com.discord.stores.StoreEmojiCustom$updateAllowedGuildEmojis$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreEmojiCustom$updateAllowedGuildEmojis$1 */
+    /* JADX INFO: compiled from: StoreEmojiCustom.kt */
     public static final class C58981 extends Lambda implements Function2<Long, ModelEmojiCustom, Unit> {
         public final /* synthetic */ Map $allowed;
 

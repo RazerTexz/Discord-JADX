@@ -30,7 +30,7 @@ import androidx.core.view.ActionProvider;
 import androidx.core.view.GravityCompat;
 import java.util.ArrayList;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class ActionMenuPresenter extends BaseMenuPresenter implements ActionProvider.SubUiVisibilityListener {
     private static final String TAG = "ActionMenuPresenter";
     private final SparseBooleanArray mActionButtonGroups;
@@ -109,7 +109,7 @@ public class ActionMenuPresenter extends BaseMenuPresenter implements ActionProv
 
     public class OverflowMenuButton extends AppCompatImageView implements ActionMenuView.ActionMenuChildView {
 
-        /* renamed from: androidx.appcompat.widget.ActionMenuPresenter$OverflowMenuButton$1 */
+        /* JADX INFO: renamed from: androidx.appcompat.widget.ActionMenuPresenter$OverflowMenuButton$1 */
         public class C00941 extends ForwardingListener {
             public final /* synthetic */ ActionMenuPresenter val$this$0;
 
@@ -243,7 +243,7 @@ public class ActionMenuPresenter extends BaseMenuPresenter implements ActionProv
         public static final Parcelable.Creator<SavedState> CREATOR = new C00951();
         public int openSubMenuId;
 
-        /* renamed from: androidx.appcompat.widget.ActionMenuPresenter$SavedState$1 */
+        /* JADX INFO: renamed from: androidx.appcompat.widget.ActionMenuPresenter$SavedState$1 */
         public class C00951 implements Parcelable.Creator<SavedState> {
             @Override // android.os.Parcelable.Creator
             public /* bridge */ /* synthetic */ SavedState createFromParcel(Parcel parcel) {

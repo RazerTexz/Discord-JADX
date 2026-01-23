@@ -4,8 +4,8 @@ import androidx.annotation.RestrictTo;
 import androidx.sqlite.p006db.SupportSQLiteStatement;
 import java.util.concurrent.atomic.AtomicBoolean;
 
+/* JADX INFO: loaded from: classes.dex */
 @RestrictTo({RestrictTo.Scope.LIBRARY_GROUP_PREFIX})
-/* loaded from: classes.dex */
 public abstract class SharedSQLiteStatement {
     private final RoomDatabase mDatabase;
     private final AtomicBoolean mLock = new AtomicBoolean(false);

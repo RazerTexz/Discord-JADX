@@ -6,8 +6,8 @@ import com.discord.widgets.voice.feedback.FeedbackSubmitter;
 import com.discord.widgets.voice.feedback.PendingFeedback;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: GuildDeleteFeedbackSubmitter.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: GuildDeleteFeedbackSubmitter.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class GuildDeleteFeedbackSubmitter implements FeedbackSubmitter {
     private final PendingFeedback.GuildDeleteFeedback pendingFeedback;
 

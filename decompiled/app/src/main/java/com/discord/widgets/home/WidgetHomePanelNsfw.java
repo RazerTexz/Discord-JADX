@@ -32,8 +32,8 @@ import p507d0.p592z.p594d.Lambda;
 import p658rx.Observable;
 import p658rx.Subscription;
 
-/* compiled from: WidgetHomePanelNsfw.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetHomePanelNsfw.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetHomePanelNsfw {
     private static final Companion Companion = new Companion(null);
 
@@ -45,7 +45,7 @@ public final class WidgetHomePanelNsfw {
     private Subscription hidePanelSubscription;
     private boolean stubInflated;
 
-    /* compiled from: WidgetHomePanelNsfw.kt */
+    /* JADX INFO: compiled from: WidgetHomePanelNsfw.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -55,8 +55,8 @@ public final class WidgetHomePanelNsfw {
         }
     }
 
-    /* compiled from: WidgetHomePanelNsfw.kt */
-    /* renamed from: com.discord.widgets.home.WidgetHomePanelNsfw$configureUI$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.home.WidgetHomePanelNsfw$configureUI$1 */
+    /* JADX INFO: compiled from: WidgetHomePanelNsfw.kt */
     public static final class ViewOnClickListenerC89751 implements View.OnClickListener {
         public final /* synthetic */ long $guildId;
         public final /* synthetic */ Function0 $onDenyNsfw;
@@ -75,8 +75,8 @@ public final class WidgetHomePanelNsfw {
         }
     }
 
-    /* compiled from: WidgetHomePanelNsfw.kt */
-    /* renamed from: com.discord.widgets.home.WidgetHomePanelNsfw$configureUI$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.home.WidgetHomePanelNsfw$configureUI$2 */
+    /* JADX INFO: compiled from: WidgetHomePanelNsfw.kt */
     public static final class ViewOnClickListenerC89762 implements View.OnClickListener {
         public final /* synthetic */ long $guildId;
         public final /* synthetic */ Function1 $onToggleNsfw;
@@ -93,8 +93,8 @@ public final class WidgetHomePanelNsfw {
         }
     }
 
-    /* compiled from: WidgetHomePanelNsfw.kt */
-    /* renamed from: com.discord.widgets.home.WidgetHomePanelNsfw$toggleContainerVisibility$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.home.WidgetHomePanelNsfw$toggleContainerVisibility$2 */
+    /* JADX INFO: compiled from: WidgetHomePanelNsfw.kt */
     public static final class C89772 extends Lambda implements Function1<Subscription, Unit> {
         public C89772() {
             super(1);
@@ -106,15 +106,15 @@ public final class WidgetHomePanelNsfw {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Subscription subscription) {
             Intrinsics3.checkNotNullParameter(subscription, Traits.Payment.Type.SUBSCRIPTION);
             WidgetHomePanelNsfw.access$setHidePanelSubscription$p(WidgetHomePanelNsfw.this, subscription);
         }
     }
 
-    /* compiled from: WidgetHomePanelNsfw.kt */
-    /* renamed from: com.discord.widgets.home.WidgetHomePanelNsfw$toggleContainerVisibility$3 */
+    /* JADX INFO: renamed from: com.discord.widgets.home.WidgetHomePanelNsfw$toggleContainerVisibility$3 */
+    /* JADX INFO: compiled from: WidgetHomePanelNsfw.kt */
     public static final class C89783 extends Lambda implements Function1<Long, Unit> {
         public final /* synthetic */ Function1 $onToggleNsfw;
 
@@ -130,7 +130,7 @@ public final class WidgetHomePanelNsfw {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Long l) {
             WidgetHomePanelNsfw.access$setContainerViewHidden(WidgetHomePanelNsfw.this, true, this.$onToggleNsfw);
         }
@@ -158,6 +158,7 @@ public final class WidgetHomePanelNsfw {
         widgetHomePanelNsfw.hidePanelSubscription = subscription;
     }
 
+    /* JADX WARN: Multi-variable type inference failed */
     public static /* synthetic */ void configureUI$default(WidgetHomePanelNsfw widgetHomePanelNsfw, long j, boolean z2, boolean z3, NsfwAllowance nsfwAllowance, ViewStub viewStub, Function1 function1, Function0 function0, int i, Object obj) {
         widgetHomePanelNsfw.configureUI(j, z2, z3, nsfwAllowance, viewStub, function1, (i & 64) != 0 ? null : function0);
     }

@@ -40,31 +40,31 @@ import p007b.p225i.p355b.p357b.Multimaps;
 import p007b.p225i.p355b.p357b.NaturalOrdering;
 import p007b.p225i.p355b.p357b.RegularImmutableList;
 
-/* compiled from: MappingTrackSelector.java */
-/* renamed from: b.i.a.c.c3.l, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.c3.l, reason: use source file name */
+/* JADX INFO: compiled from: MappingTrackSelector.java */
+/* JADX INFO: loaded from: classes3.dex */
 public abstract class MappingTrackSelector extends TrackSelector {
 
-    /* compiled from: MappingTrackSelector.java */
-    /* renamed from: b.i.a.c.c3.l$a */
+    /* JADX INFO: renamed from: b.i.a.c.c3.l$a */
+    /* JADX INFO: compiled from: MappingTrackSelector.java */
     public static final class a {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final int f6262a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final int[] f6263b;
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public final TrackGroupArray[] f6264c;
 
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         public final int[] f6265d;
 
-        /* renamed from: e */
+        /* JADX INFO: renamed from: e */
         public final int[][][] f6266e;
 
-        /* renamed from: f */
+        /* JADX INFO: renamed from: f */
         public final TrackGroupArray f6267f;
 
         @VisibleForTesting
@@ -77,14 +77,14 @@ public abstract class MappingTrackSelector extends TrackSelector {
             this.f6262a = iArr.length;
         }
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public int m2754a(int i, int i2, int i3) {
             return this.f6266e[i][i2][i3] & 7;
         }
     }
 
     @Override // p007b.p225i.p226a.p242c.p255c3.TrackSelector
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final void mo2752a(@Nullable Object obj) {
     }
 
@@ -100,7 +100,7 @@ public abstract class MappingTrackSelector extends TrackSelector {
     /* JADX WARN: Removed duplicated region for block: B:489:0x09b6  */
     /* JADX WARN: Removed duplicated region for block: B:541:0x0287 A[SYNTHETIC] */
     @Override // p007b.p225i.p226a.p242c.p255c3.TrackSelector
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */

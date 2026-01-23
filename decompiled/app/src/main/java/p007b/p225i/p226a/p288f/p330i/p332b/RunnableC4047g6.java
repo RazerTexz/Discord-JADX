@@ -1,14 +1,14 @@
 package p007b.p225i.p226a.p288f.p330i.p332b;
 
-/* compiled from: com.google.android.gms:play-services-measurement-impl@@18.0.0 */
-/* renamed from: b.i.a.f.i.b.g6 */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.i.b.g6 */
+/* JADX INFO: compiled from: com.google.android.gms:play-services-measurement-impl@@18.0.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public final class RunnableC4047g6 implements Runnable {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final /* synthetic */ boolean f10753j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final /* synthetic */ C3999c6 f10754k;
 
     public RunnableC4047g6(C3999c6 c3999c6, boolean z2) {
@@ -17,7 +17,7 @@ public final class RunnableC4047g6 implements Runnable {
     }
 
     @Override // java.lang.Runnable
-    public final void run() throws IllegalStateException {
+    public final void run() {
         boolean zM5940d = this.f10754k.f11202a.m5940d();
         boolean zM5938B = this.f10754k.f11202a.m5938B();
         this.f10754k.f11202a.f11247B = Boolean.valueOf(this.f10753j);

@@ -6,9 +6,9 @@ import com.google.android.gms.measurement.internal.zzap;
 import com.google.android.gms.measurement.internal.zzaq;
 import p007b.p085c.p086a.p087a0.AnimatableValueParser;
 
-/* compiled from: com.google.android.gms:play-services-measurement-impl@@18.0.0 */
-/* renamed from: b.i.a.f.i.b.q */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.i.b.q */
+/* JADX INFO: compiled from: com.google.android.gms:play-services-measurement-impl@@18.0.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public final class C4153q implements Parcelable.Creator<zzaq> {
     @Override // android.os.Parcelable.Creator
     public final zzaq createFromParcel(Parcel parcel) {

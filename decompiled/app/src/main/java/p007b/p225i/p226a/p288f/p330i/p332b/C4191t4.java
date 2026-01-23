@@ -2,15 +2,15 @@ package p007b.p225i.p226a.p288f.p330i.p332b;
 
 import java.lang.Thread;
 
-/* compiled from: com.google.android.gms:play-services-measurement-impl@@18.0.0 */
-/* renamed from: b.i.a.f.i.b.t4 */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.i.b.t4 */
+/* JADX INFO: compiled from: com.google.android.gms:play-services-measurement-impl@@18.0.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public final class C4191t4 implements Thread.UncaughtExceptionHandler {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final String f11225a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final /* synthetic */ C4169r4 f11226b;
 
     public C4191t4(C4169r4 c4169r4, String str) {

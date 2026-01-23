@@ -14,46 +14,46 @@ import p007b.p445m.p446a.SyncListener;
 import p007b.p445m.p446a.p447g.p448d.SntpClient;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: SntpService.kt */
-/* renamed from: b.m.a.g.d.i, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.m.a.g.d.i, reason: use source file name */
+/* JADX INFO: compiled from: SntpService.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class SntpService2 implements SntpService {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final AtomicReference<a> f13658a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final AtomicLong f13659b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final ExecutorService f13660c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final SntpClient f13661d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final Clock5 f13662e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final SntpResponseCache f13663f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public final SyncListener f13664g;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public final List<String> f13665h;
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public final long f13666i;
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final long f13667j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final long f13668k;
 
-    /* compiled from: SntpService.kt */
-    /* renamed from: b.m.a.g.d.i$a */
+    /* JADX INFO: renamed from: b.m.a.g.d.i$a */
+    /* JADX INFO: compiled from: SntpService.kt */
     public enum a {
         INIT,
         IDLE,
@@ -61,11 +61,11 @@ public final class SntpService2 implements SntpService {
         STOPPED
     }
 
-    /* compiled from: SntpService.kt */
-    /* renamed from: b.m.a.g.d.i$b */
+    /* JADX INFO: renamed from: b.m.a.g.d.i$b */
+    /* JADX INFO: compiled from: SntpService.kt */
     public static final class b implements ThreadFactory {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public static final b f13674j = new b();
 
         @Override // java.util.concurrent.ThreadFactory
@@ -74,8 +74,8 @@ public final class SntpService2 implements SntpService {
         }
     }
 
-    /* compiled from: SntpService.kt */
-    /* renamed from: b.m.a.g.d.i$c */
+    /* JADX INFO: renamed from: b.m.a.g.d.i$c */
+    /* JADX INFO: compiled from: SntpService.kt */
     public static final class c implements Runnable {
         public c() {
         }
@@ -147,7 +147,7 @@ public final class SntpService2 implements SntpService {
 
     /* JADX WARN: Removed duplicated region for block: B:11:0x003c  */
     @Override // p007b.p445m.p446a.p447g.p448d.SntpService
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
@@ -179,7 +179,7 @@ public final class SntpService2 implements SntpService {
     }
 
     @Override // p007b.p445m.p446a.p447g.p448d.SntpService
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public void mo7151b() {
         m7152c();
         if (this.f13658a.get() != a.SYNCING) {
@@ -187,7 +187,7 @@ public final class SntpService2 implements SntpService {
         }
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final void m7152c() {
         if (this.f13658a.get() == a.STOPPED) {
             throw new IllegalStateException("Service already shutdown");

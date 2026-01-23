@@ -4,9 +4,9 @@ import kotlin.Unit;
 import kotlin.jvm.functions.Function2;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetSettingsGuildBoostSubscriptionAdapter.kt */
-/* renamed from: com.discord.widgets.settings.guildboost.WidgetSettingsGuildBoostSubscriptionAdapter$cancelListener$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.settings.guildboost.WidgetSettingsGuildBoostSubscriptionAdapter$cancelListener$1, reason: use source file name */
+/* JADX INFO: compiled from: WidgetSettingsGuildBoostSubscriptionAdapter.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetSettingsGuildBoostSubscriptionAdapter6 extends Lambda implements Function2<Long, Boolean, Unit> {
     public static final WidgetSettingsGuildBoostSubscriptionAdapter6 INSTANCE = new WidgetSettingsGuildBoostSubscriptionAdapter6();
 

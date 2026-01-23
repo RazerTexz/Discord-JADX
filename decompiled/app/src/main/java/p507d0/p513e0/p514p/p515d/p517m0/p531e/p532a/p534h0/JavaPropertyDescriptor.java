@@ -24,15 +24,15 @@ import p507d0.p513e0.p514p.p515d.p517m0.p552k.p557v.AbstractC11815g;
 import p507d0.p513e0.p514p.p515d.p517m0.p566m.storage6;
 import p507d0.p513e0.p514p.p515d.p517m0.p567n.KotlinType;
 
-/* compiled from: JavaPropertyDescriptor.java */
-/* renamed from: d0.e0.p.d.m0.e.a.h0.g, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.e.a.h0.g, reason: use source file name */
+/* JADX INFO: compiled from: JavaPropertyDescriptor.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class JavaPropertyDescriptor extends PropertyDescriptorImpl implements JavaCallableMemberDescriptor {
 
-    /* renamed from: J */
+    /* JADX INFO: renamed from: J */
     public final boolean f23270J;
 
-    /* renamed from: K */
+    /* JADX INFO: renamed from: K */
     public final Tuples2<CallableDescriptor.a<?>, ?> f23271K;
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -70,7 +70,7 @@ public class JavaPropertyDescriptor extends PropertyDescriptorImpl implements Ja
         this.f23271K = tuples2;
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static /* synthetic */ void m9459a(int i) {
         String str = i != 21 ? "Argument for @NotNull parameter '%s' of %s.%s must not be null" : "@NotNull method %s.%s must not return null";
         Object[] objArr = new Object[i != 21 ? 3 : 2];
@@ -193,7 +193,7 @@ public class JavaPropertyDescriptor extends PropertyDescriptorImpl implements Ja
     }
 
     @Override // p507d0.p513e0.p514p.p515d.p517m0.p521c.p524i1.PropertyDescriptorImpl
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public PropertyDescriptorImpl mo9394b(DeclarationDescriptor declarationDescriptor, Modality modality, DescriptorVisibility2 descriptorVisibility2, PropertyDescriptor propertyDescriptor, CallableMemberDescriptor.a aVar, Name name, SourceElement sourceElement) {
         if (declarationDescriptor == null) {
             m9459a(13);

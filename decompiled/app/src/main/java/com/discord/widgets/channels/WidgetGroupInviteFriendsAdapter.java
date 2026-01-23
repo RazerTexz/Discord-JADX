@@ -25,12 +25,12 @@ import kotlin.Unit;
 import kotlin.jvm.functions.Function2;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: WidgetGroupInviteFriendsAdapter.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetGroupInviteFriendsAdapter.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetGroupInviteFriendsAdapter extends MGRecyclerAdapterSimple<WidgetGroupInviteFriends.Model.FriendItem> {
     private Function2<? super User, ? super Boolean, Unit> listener;
 
-    /* compiled from: WidgetGroupInviteFriendsAdapter.kt */
+    /* JADX INFO: compiled from: WidgetGroupInviteFriendsAdapter.kt */
     public final class WidgetGroupInviteFriendsListItem extends MGRecyclerViewHolder<WidgetGroupInviteFriendsAdapter, WidgetGroupInviteFriends.Model.FriendItem> {
         private final WidgetGroupInviteFriendsItemBinding binding;
         public final /* synthetic */ WidgetGroupInviteFriendsAdapter this$0;
@@ -85,7 +85,7 @@ public final class WidgetGroupInviteFriendsAdapter extends MGRecyclerAdapterSimp
             onConfigure2(i, friendItem);
         }
 
-        /* renamed from: onConfigure, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: onConfigure, reason: avoid collision after fix types in other method */
         public void onConfigure2(int position, WidgetGroupInviteFriends.Model.FriendItem data) {
             Intrinsics3.checkNotNullParameter(data, "data");
             super.onConfigure(position, data);

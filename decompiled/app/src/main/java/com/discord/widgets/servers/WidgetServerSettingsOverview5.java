@@ -26,9 +26,9 @@ import p007b.p008a.p025i.WidgetServerSettingsOverviewSectionAfkChannelBinding;
 import p507d0.p592z.p594d.FunctionReferenceImpl;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: WidgetServerSettingsOverview.kt */
-/* renamed from: com.discord.widgets.servers.WidgetServerSettingsOverview$binding$2, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.servers.WidgetServerSettingsOverview$binding$2, reason: use source file name */
+/* JADX INFO: compiled from: WidgetServerSettingsOverview.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final /* synthetic */ class WidgetServerSettingsOverview5 extends FunctionReferenceImpl implements Function1<View, WidgetServerSettingsOverviewBinding> {
     public static final WidgetServerSettingsOverview5 INSTANCE = new WidgetServerSettingsOverview5();
 
@@ -41,7 +41,7 @@ public final /* synthetic */ class WidgetServerSettingsOverview5 extends Functio
         return invoke2(view);
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final WidgetServerSettingsOverviewBinding invoke2(View view) {
         Intrinsics3.checkNotNullParameter(view, "p1");
         int i = C5419R.id.afk;

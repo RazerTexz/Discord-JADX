@@ -8,18 +8,18 @@ import java.lang.reflect.Type;
 import p007b.p100d.p104b.p105a.outline;
 
 /* JADX INFO: Add missing generic type declarations: [T] */
-/* compiled from: ConstructorConstructor.java */
-/* renamed from: b.i.d.q.f */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.d.q.f */
+/* JADX INFO: compiled from: ConstructorConstructor.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class C4921f<T> implements ObjectConstructor<T> {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final UnsafeAllocator5 f13112a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final /* synthetic */ Class f13113b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final /* synthetic */ Type f13114c;
 
     public C4921f(C4922g c4922g, Class cls, Type type) {
@@ -53,7 +53,7 @@ public class C4921f<T> implements ObjectConstructor<T> {
     }
 
     @Override // p007b.p225i.p408d.p410q.ObjectConstructor
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public T mo6869a() {
         try {
             return (T) this.f13112a.mo6871b(this.f13113b);

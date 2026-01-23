@@ -40,100 +40,100 @@ import p600f0.p601e0.p613n.WebSocketReader;
 import p615g0.Buffer3;
 import p615g0.BufferedSource;
 
-/* compiled from: RealWebSocket.kt */
-/* renamed from: f0.e0.n.d, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: f0.e0.n.d, reason: use source file name */
+/* JADX INFO: compiled from: RealWebSocket.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class RealWebSocket implements WebSocket, WebSocketReader.a {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final List<Protocol2> f25821a = CollectionsJVM.listOf(Protocol2.HTTP_1_1);
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final String f25822b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public Call2 f25823c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public Task2 f25824d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public WebSocketReader f25825e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public WebSocketWriter f25826f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public TaskQueue2 f25827g;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public String f25828h;
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public c f25829i;
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final ArrayDeque<ByteString> f25830j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final ArrayDeque<Object> f25831k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public long f25832l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public boolean f25833m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public int f25834n;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public String f25835o;
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public boolean f25836p;
 
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     public int f25837q;
 
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     public int f25838r;
 
-    /* renamed from: s */
+    /* JADX INFO: renamed from: s */
     public int f25839s;
 
-    /* renamed from: t */
+    /* JADX INFO: renamed from: t */
     public boolean f25840t;
 
-    /* renamed from: u */
+    /* JADX INFO: renamed from: u */
     public final Request f25841u;
 
-    /* renamed from: v */
+    /* JADX INFO: renamed from: v */
     public final WebSocketListener f25842v;
 
-    /* renamed from: w */
+    /* JADX INFO: renamed from: w */
     public final Random f25843w;
 
-    /* renamed from: x */
+    /* JADX INFO: renamed from: x */
     public final long f25844x;
 
-    /* renamed from: y */
+    /* JADX INFO: renamed from: y */
     public WebSocketExtensions f25845y;
 
-    /* renamed from: z */
+    /* JADX INFO: renamed from: z */
     public long f25846z;
 
-    /* compiled from: RealWebSocket.kt */
-    /* renamed from: f0.e0.n.d$a */
+    /* JADX INFO: renamed from: f0.e0.n.d$a */
+    /* JADX INFO: compiled from: RealWebSocket.kt */
     public static final class a {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final int f25847a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final ByteString f25848b;
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public final long f25849c;
 
         public a(int i, ByteString byteString, long j) {
@@ -143,14 +143,14 @@ public final class RealWebSocket implements WebSocket, WebSocketReader.a {
         }
     }
 
-    /* compiled from: RealWebSocket.kt */
-    /* renamed from: f0.e0.n.d$b */
+    /* JADX INFO: renamed from: f0.e0.n.d$b */
+    /* JADX INFO: compiled from: RealWebSocket.kt */
     public static final class b {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final int f25850a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final ByteString f25851b;
 
         public b(int i, ByteString byteString) {
@@ -160,17 +160,17 @@ public final class RealWebSocket implements WebSocket, WebSocketReader.a {
         }
     }
 
-    /* compiled from: RealWebSocket.kt */
-    /* renamed from: f0.e0.n.d$c */
+    /* JADX INFO: renamed from: f0.e0.n.d$c */
+    /* JADX INFO: compiled from: RealWebSocket.kt */
     public static abstract class c implements Closeable {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public final boolean f25852j;
 
-        /* renamed from: k */
+        /* JADX INFO: renamed from: k */
         public final BufferedSource f25853k;
 
-        /* renamed from: l */
+        /* JADX INFO: renamed from: l */
         public final BufferedSink f25854l;
 
         public c(boolean z2, BufferedSource bufferedSource, BufferedSink bufferedSink) {
@@ -182,15 +182,15 @@ public final class RealWebSocket implements WebSocket, WebSocketReader.a {
         }
     }
 
-    /* compiled from: RealWebSocket.kt */
-    /* renamed from: f0.e0.n.d$d */
+    /* JADX INFO: renamed from: f0.e0.n.d$d */
+    /* JADX INFO: compiled from: RealWebSocket.kt */
     public final class d extends Task2 {
         public d() {
             super(outline.m822J(new StringBuilder(), RealWebSocket.this.f25828h, " writer"), false, 2);
         }
 
         @Override // p600f0.p601e0.p604f.Task2
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public long mo10150a() {
             try {
                 return RealWebSocket.this.m10357m() ? 0L : -1L;
@@ -201,14 +201,14 @@ public final class RealWebSocket implements WebSocket, WebSocketReader.a {
         }
     }
 
-    /* compiled from: TaskQueue.kt */
-    /* renamed from: f0.e0.n.d$e */
+    /* JADX INFO: renamed from: f0.e0.n.d$e */
+    /* JADX INFO: compiled from: TaskQueue.kt */
     public static final class e extends Task2 {
 
-        /* renamed from: e */
+        /* JADX INFO: renamed from: e */
         public final /* synthetic */ long f25856e;
 
-        /* renamed from: f */
+        /* JADX INFO: renamed from: f */
         public final /* synthetic */ RealWebSocket f25857f;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -219,7 +219,7 @@ public final class RealWebSocket implements WebSocket, WebSocketReader.a {
         }
 
         @Override // p600f0.p601e0.p604f.Task2
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public long mo10150a() {
             WebSocketWriter webSocketWriter;
             RealWebSocket realWebSocket = this.f25857f;
@@ -250,11 +250,11 @@ public final class RealWebSocket implements WebSocket, WebSocketReader.a {
         }
     }
 
-    /* compiled from: TaskQueue.kt */
-    /* renamed from: f0.e0.n.d$f */
+    /* JADX INFO: renamed from: f0.e0.n.d$f */
+    /* JADX INFO: compiled from: TaskQueue.kt */
     public static final class f extends Task2 {
 
-        /* renamed from: e */
+        /* JADX INFO: renamed from: e */
         public final /* synthetic */ RealWebSocket f25858e;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -264,7 +264,7 @@ public final class RealWebSocket implements WebSocket, WebSocketReader.a {
         }
 
         @Override // p600f0.p601e0.p604f.Task2
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public long mo10150a() {
             Call2 call2 = this.f25858e.f25823c;
             if (call2 == null) {
@@ -302,17 +302,17 @@ public final class RealWebSocket implements WebSocket, WebSocketReader.a {
     }
 
     @Override // okhttp3.WebSocket
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public boolean mo10345a(String str) {
         Intrinsics3.checkParameterIsNotNull(str, NotificationCompat.MessagingStyle.Message.KEY_TEXT);
         ByteString byteStringM11012c = ByteString.INSTANCE.m11012c(str);
         synchronized (this) {
             if (!this.f25836p && !this.f25833m) {
-                if (this.f25832l + byteStringM11012c.mo10502j() > Permission.MOVE_MEMBERS) {
+                if (this.f25832l + ((long) byteStringM11012c.mo10502j()) > Permission.MOVE_MEMBERS) {
                     mo10349e(PointerIconCompat.TYPE_CONTEXT_MENU, null);
                     return false;
                 }
-                this.f25832l += byteStringM11012c.mo10502j();
+                this.f25832l += (long) byteStringM11012c.mo10502j();
                 this.f25831k.add(new b(1, byteStringM11012c));
                 m10356l();
                 return true;
@@ -322,21 +322,21 @@ public final class RealWebSocket implements WebSocket, WebSocketReader.a {
     }
 
     @Override // p600f0.p601e0.p613n.WebSocketReader.a
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public void mo10346b(ByteString byteString) throws IOException {
         Intrinsics3.checkParameterIsNotNull(byteString, "bytes");
         this.f25842v.onMessage(this, byteString);
     }
 
     @Override // p600f0.p601e0.p613n.WebSocketReader.a
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public void mo10347c(String str) throws IOException {
         Intrinsics3.checkParameterIsNotNull(str, NotificationCompat.MessagingStyle.Message.KEY_TEXT);
         this.f25842v.onMessage(this, str);
     }
 
     @Override // p600f0.p601e0.p613n.WebSocketReader.a
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public synchronized void mo10348d(ByteString byteString) {
         Intrinsics3.checkParameterIsNotNull(byteString, "payload");
         if (!this.f25836p && (!this.f25833m || !this.f25831k.isEmpty())) {
@@ -347,7 +347,7 @@ public final class RealWebSocket implements WebSocket, WebSocketReader.a {
     }
 
     @Override // okhttp3.WebSocket
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public boolean mo10349e(int i, String str) {
         String str2;
         synchronized (this) {
@@ -382,7 +382,7 @@ public final class RealWebSocket implements WebSocket, WebSocketReader.a {
     }
 
     @Override // p600f0.p601e0.p613n.WebSocketReader.a
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public synchronized void mo10350f(ByteString byteString) {
         Intrinsics3.checkParameterIsNotNull(byteString, "payload");
         this.f25839s++;
@@ -390,7 +390,7 @@ public final class RealWebSocket implements WebSocket, WebSocketReader.a {
     }
 
     @Override // p600f0.p601e0.p613n.WebSocketReader.a
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public void mo10351g(int i, String str) {
         c cVar;
         WebSocketReader webSocketReader;
@@ -492,7 +492,7 @@ public final class RealWebSocket implements WebSocket, WebSocketReader.a {
         }
     }
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public final void m10352h(Response response, Exchange exchange) throws IOException {
         Intrinsics3.checkParameterIsNotNull(response, "response");
         if (response.com.discord.models.domain.ModelAuditLogEntry.CHANGE_KEY_CODE java.lang.String != 101) {
@@ -520,7 +520,7 @@ public final class RealWebSocket implements WebSocket, WebSocketReader.a {
         throw new ProtocolException("Expected 'Sec-WebSocket-Accept' header value '" + strMo10500f + "' but was '" + strM10989a3 + '\'');
     }
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public final void m10353i(Exception exc, Response response) {
         Intrinsics3.checkParameterIsNotNull(exc, "e");
         synchronized (this) {
@@ -605,7 +605,7 @@ public final class RealWebSocket implements WebSocket, WebSocketReader.a {
         }
     }
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final void m10354j(String str, c cVar) throws IOException {
         Intrinsics3.checkParameterIsNotNull(str, ModelAuditLogEntry.CHANGE_KEY_NAME);
         Intrinsics3.checkParameterIsNotNull(cVar, "streams");
@@ -633,7 +633,7 @@ public final class RealWebSocket implements WebSocket, WebSocketReader.a {
         this.f25825e = new WebSocketReader(z3, cVar.f25853k, this, webSocketExtensions.f25861a, z3 ^ true ? webSocketExtensions.f25863c : webSocketExtensions.f25865e);
     }
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final void m10355k() throws IOException {
         while (this.f25834n == -1) {
             WebSocketReader webSocketReader = this.f25825e;
@@ -718,7 +718,7 @@ public final class RealWebSocket implements WebSocket, WebSocketReader.a {
         }
     }
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final void m10356l() {
         byte[] bArr = Util7.f25397a;
         Task2 task2 = this.f25824d;
@@ -745,7 +745,7 @@ public final class RealWebSocket implements WebSocket, WebSocketReader.a {
     /* JADX WARN: Type inference failed for: r3v4 */
     /* JADX WARN: Type inference failed for: r3v8 */
     /* JADX WARN: Type inference failed for: r4v4, types: [T, java.lang.String] */
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
@@ -843,154 +843,153 @@ public final class RealWebSocket implements WebSocket, WebSocketReader.a {
             }
             Ref$ObjectRef ref$ObjectRef13 = byteString;
             try {
-                if (ref$ObjectRef13 != 0) {
-                    WebSocketWriter webSocketWriter4 = webSocketWriter;
-                    if (webSocketWriter4 == 0) {
-                        Intrinsics3.throwNpe();
-                    }
-                    Objects.requireNonNull(webSocketWriter4);
-                    Intrinsics3.checkParameterIsNotNull(ref$ObjectRef13, "payload");
-                    webSocketWriter4.m10364b(10, ref$ObjectRef13);
-                } else {
-                    ref$ObjectRef6 = webSocketWriter;
-                    T t2 = ref$ObjectRef8.element;
-                    if (!(t2 instanceof b)) {
-                        ref$ObjectRef5 = t2 instanceof a;
-                        try {
-                            if (ref$ObjectRef5 == 0) {
-                                throw new AssertionError();
-                            }
-                            if (t2 == 0) {
-                                throw new TypeCastException("null cannot be cast to non-null type okhttp3.internal.ws.RealWebSocket.Close");
-                            }
-                            a aVar = (a) t2;
-                            if (ref$ObjectRef6 == 0) {
-                                Intrinsics3.throwNpe();
-                            }
-                            ref$ObjectRef6.m10363a(aVar.f25847a, aVar.f25848b);
-                            ref$ObjectRef6 = ref$ObjectRef3;
-                            try {
-                                c cVar2 = (c) ref$ObjectRef6.element;
-                                ref$ObjectRef7 = ref$ObjectRef6;
-                                if (cVar2 != null) {
-                                    WebSocketListener webSocketListener = this.f25842v;
-                                    int i2 = ref$IntRef.element;
-                                    String str2 = (String) ref$ObjectRef4.element;
-                                    if (str2 == null) {
-                                        Intrinsics3.throwNpe();
-                                    }
-                                    webSocketListener.onClosed(this, i2, str2);
-                                    ref$ObjectRef7 = ref$ObjectRef6;
-                                }
-                                cVar = (c) ref$ObjectRef7.element;
-                                if (cVar != null) {
-                                    byte[] bArr = Util7.f25397a;
-                                    Intrinsics3.checkParameterIsNotNull(cVar, "$this$closeQuietly");
-                                    try {
-                                        cVar.close();
-                                    } catch (RuntimeException e2) {
-                                        throw e2;
-                                    } catch (Exception unused) {
-                                    }
-                                }
-                                webSocketReader = (WebSocketReader) ref$ObjectRef2.element;
-                                if (webSocketReader != null) {
-                                    byte[] bArr2 = Util7.f25397a;
-                                    Intrinsics3.checkParameterIsNotNull(webSocketReader, "$this$closeQuietly");
-                                    try {
-                                        webSocketReader.close();
-                                    } catch (RuntimeException e3) {
-                                        throw e3;
-                                    } catch (Exception unused2) {
-                                    }
-                                }
-                                webSocketWriter2 = (WebSocketWriter) ref$ObjectRef.element;
-                                if (webSocketWriter2 != null) {
-                                    byte[] bArr3 = Util7.f25397a;
-                                    Intrinsics3.checkParameterIsNotNull(webSocketWriter2, "$this$closeQuietly");
-                                    try {
-                                        webSocketWriter2.close();
-                                    } catch (RuntimeException e4) {
-                                        throw e4;
-                                    } catch (Exception unused3) {
-                                    }
-                                }
-                                return true;
-                            } catch (Throwable th) {
-                                th = th;
-                                ref$ObjectRef13 = ref$ObjectRef;
-                                ref$ObjectRef5 = ref$ObjectRef2;
-                                c cVar3 = (c) ref$ObjectRef6.element;
-                                if (cVar3 != null) {
-                                    byte[] bArr4 = Util7.f25397a;
-                                    Intrinsics3.checkParameterIsNotNull(cVar3, "$this$closeQuietly");
-                                    try {
-                                        cVar3.close();
-                                    } catch (RuntimeException e5) {
-                                        throw e5;
-                                    } catch (Exception unused4) {
-                                    }
-                                }
-                                WebSocketReader webSocketReader2 = (WebSocketReader) ref$ObjectRef5.element;
-                                if (webSocketReader2 != null) {
-                                    byte[] bArr5 = Util7.f25397a;
-                                    Intrinsics3.checkParameterIsNotNull(webSocketReader2, "$this$closeQuietly");
-                                    try {
-                                        webSocketReader2.close();
-                                    } catch (RuntimeException e6) {
-                                        throw e6;
-                                    } catch (Exception unused5) {
-                                    }
-                                }
-                                WebSocketWriter webSocketWriter5 = (WebSocketWriter) ref$ObjectRef13.element;
-                                if (webSocketWriter5 == null) {
-                                    throw th;
-                                }
-                                byte[] bArr6 = Util7.f25397a;
-                                Intrinsics3.checkParameterIsNotNull(webSocketWriter5, "$this$closeQuietly");
-                                try {
-                                    webSocketWriter5.close();
-                                    throw th;
-                                } catch (RuntimeException e7) {
-                                    throw e7;
-                                } catch (Exception unused6) {
-                                    throw th;
-                                }
-                            }
-                        } catch (Throwable th2) {
-                            th = th2;
-                        }
-                    } else {
-                        if (t2 == 0) {
-                            throw new TypeCastException("null cannot be cast to non-null type okhttp3.internal.ws.RealWebSocket.Message");
-                        }
-                        b bVar = (b) t2;
-                        if (ref$ObjectRef6 == 0) {
-                            Intrinsics3.throwNpe();
-                        }
-                        ref$ObjectRef6.m10365c(bVar.f25850a, bVar.f25851b);
-                        synchronized (this) {
-                            this.f25832l -= bVar.f25851b.mo10502j();
-                        }
-                    }
-                }
-                ref$ObjectRef7 = ref$ObjectRef3;
-                cVar = (c) ref$ObjectRef7.element;
-                if (cVar != null) {
-                }
-                webSocketReader = (WebSocketReader) ref$ObjectRef2.element;
-                if (webSocketReader != null) {
-                }
-                webSocketWriter2 = (WebSocketWriter) ref$ObjectRef.element;
-                if (webSocketWriter2 != null) {
-                }
-                return true;
-            } catch (Throwable th3) {
-                th = th3;
+            } catch (Throwable th) {
+                th = th;
                 ref$ObjectRef13 = ref$ObjectRef;
                 ref$ObjectRef5 = ref$ObjectRef2;
                 ref$ObjectRef6 = ref$ObjectRef3;
             }
+            if (ref$ObjectRef13 == 0) {
+                ref$ObjectRef6 = webSocketWriter;
+                T t2 = ref$ObjectRef8.element;
+                if (!(t2 instanceof b)) {
+                    ref$ObjectRef5 = t2 instanceof a;
+                    try {
+                        if (ref$ObjectRef5 == 0) {
+                            throw new AssertionError();
+                        }
+                        if (t2 == 0) {
+                            throw new TypeCastException("null cannot be cast to non-null type okhttp3.internal.ws.RealWebSocket.Close");
+                        }
+                        a aVar = (a) t2;
+                        if (ref$ObjectRef6 == 0) {
+                            Intrinsics3.throwNpe();
+                        }
+                        ref$ObjectRef6.m10363a(aVar.f25847a, aVar.f25848b);
+                        ref$ObjectRef6 = ref$ObjectRef3;
+                        try {
+                            c cVar2 = (c) ref$ObjectRef6.element;
+                            ref$ObjectRef7 = ref$ObjectRef6;
+                            if (cVar2 != null) {
+                                WebSocketListener webSocketListener = this.f25842v;
+                                int i2 = ref$IntRef.element;
+                                String str2 = (String) ref$ObjectRef4.element;
+                                if (str2 == null) {
+                                    Intrinsics3.throwNpe();
+                                }
+                                webSocketListener.onClosed(this, i2, str2);
+                                ref$ObjectRef7 = ref$ObjectRef6;
+                            }
+                            cVar = (c) ref$ObjectRef7.element;
+                            if (cVar != null) {
+                                byte[] bArr = Util7.f25397a;
+                                Intrinsics3.checkParameterIsNotNull(cVar, "$this$closeQuietly");
+                                try {
+                                    cVar.close();
+                                } catch (RuntimeException e2) {
+                                    throw e2;
+                                } catch (Exception unused) {
+                                }
+                            }
+                            webSocketReader = (WebSocketReader) ref$ObjectRef2.element;
+                            if (webSocketReader != null) {
+                                byte[] bArr2 = Util7.f25397a;
+                                Intrinsics3.checkParameterIsNotNull(webSocketReader, "$this$closeQuietly");
+                                try {
+                                    webSocketReader.close();
+                                } catch (RuntimeException e3) {
+                                    throw e3;
+                                } catch (Exception unused2) {
+                                }
+                            }
+                            webSocketWriter2 = (WebSocketWriter) ref$ObjectRef.element;
+                            if (webSocketWriter2 != null) {
+                                byte[] bArr3 = Util7.f25397a;
+                                Intrinsics3.checkParameterIsNotNull(webSocketWriter2, "$this$closeQuietly");
+                                try {
+                                    webSocketWriter2.close();
+                                } catch (RuntimeException e4) {
+                                    throw e4;
+                                } catch (Exception unused3) {
+                                }
+                            }
+                            return true;
+                        } catch (Throwable th2) {
+                            th = th2;
+                            ref$ObjectRef13 = ref$ObjectRef;
+                            ref$ObjectRef5 = ref$ObjectRef2;
+                        }
+                    } catch (Throwable th3) {
+                        th = th3;
+                    }
+                } else {
+                    if (t2 == 0) {
+                        throw new TypeCastException("null cannot be cast to non-null type okhttp3.internal.ws.RealWebSocket.Message");
+                    }
+                    b bVar = (b) t2;
+                    if (ref$ObjectRef6 == 0) {
+                        Intrinsics3.throwNpe();
+                    }
+                    ref$ObjectRef6.m10365c(bVar.f25850a, bVar.f25851b);
+                    synchronized (this) {
+                        this.f25832l -= (long) bVar.f25851b.mo10502j();
+                    }
+                }
+                c cVar3 = (c) ref$ObjectRef6.element;
+                if (cVar3 != null) {
+                    byte[] bArr4 = Util7.f25397a;
+                    Intrinsics3.checkParameterIsNotNull(cVar3, "$this$closeQuietly");
+                    try {
+                        cVar3.close();
+                    } catch (RuntimeException e5) {
+                        throw e5;
+                    } catch (Exception unused4) {
+                    }
+                }
+                WebSocketReader webSocketReader2 = (WebSocketReader) ref$ObjectRef5.element;
+                if (webSocketReader2 != null) {
+                    byte[] bArr5 = Util7.f25397a;
+                    Intrinsics3.checkParameterIsNotNull(webSocketReader2, "$this$closeQuietly");
+                    try {
+                        webSocketReader2.close();
+                    } catch (RuntimeException e6) {
+                        throw e6;
+                    } catch (Exception unused5) {
+                    }
+                }
+                WebSocketWriter webSocketWriter4 = (WebSocketWriter) ref$ObjectRef13.element;
+                if (webSocketWriter4 == null) {
+                    throw th;
+                }
+                byte[] bArr6 = Util7.f25397a;
+                Intrinsics3.checkParameterIsNotNull(webSocketWriter4, "$this$closeQuietly");
+                try {
+                    webSocketWriter4.close();
+                    throw th;
+                } catch (RuntimeException e7) {
+                    throw e7;
+                } catch (Exception unused6) {
+                    throw th;
+                }
+            }
+            WebSocketWriter webSocketWriter5 = webSocketWriter;
+            if (webSocketWriter5 == 0) {
+                Intrinsics3.throwNpe();
+            }
+            Objects.requireNonNull(webSocketWriter5);
+            Intrinsics3.checkParameterIsNotNull(ref$ObjectRef13, "payload");
+            webSocketWriter5.m10364b(10, ref$ObjectRef13);
+            ref$ObjectRef7 = ref$ObjectRef3;
+            cVar = (c) ref$ObjectRef7.element;
+            if (cVar != null) {
+            }
+            webSocketReader = (WebSocketReader) ref$ObjectRef2.element;
+            if (webSocketReader != null) {
+            }
+            webSocketWriter2 = (WebSocketWriter) ref$ObjectRef.element;
+            if (webSocketWriter2 != null) {
+            }
+            return true;
         }
     }
 }

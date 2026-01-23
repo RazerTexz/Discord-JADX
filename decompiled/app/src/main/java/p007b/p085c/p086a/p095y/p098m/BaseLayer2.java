@@ -40,82 +40,82 @@ import p007b.p085c.p086a.p095y.p097l.Mask;
 import p007b.p085c.p086a.p095y.p097l.ShapeData;
 import p007b.p100d.p104b.p105a.outline;
 
-/* compiled from: BaseLayer.java */
-/* renamed from: b.c.a.y.m.b, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.c.a.y.m.b, reason: use source file name */
+/* JADX INFO: compiled from: BaseLayer.java */
+/* JADX INFO: loaded from: classes.dex */
 public abstract class BaseLayer2 implements DrawingContent, BaseKeyframeAnimation.b, KeyPathElement {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final Path f2836a = new Path();
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final Matrix f2837b = new Matrix();
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final Paint f2838c = new LPaint(1);
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final Paint f2839d = new LPaint(1, PorterDuff.Mode.DST_IN);
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final Paint f2840e = new LPaint(1, PorterDuff.Mode.DST_OUT);
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final Paint f2841f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public final Paint f2842g;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public final RectF f2843h;
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public final RectF f2844i;
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final RectF f2845j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final RectF f2846k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final String f2847l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public final Matrix f2848m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public final LottieDrawable f2849n;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public final Layer2 f2850o;
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     @Nullable
     public MaskKeyframeAnimation f2851p;
 
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     @Nullable
     public FloatKeyframeAnimation f2852q;
 
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     @Nullable
     public BaseLayer2 f2853r;
 
-    /* renamed from: s */
+    /* JADX INFO: renamed from: s */
     @Nullable
     public BaseLayer2 f2854s;
 
-    /* renamed from: t */
+    /* JADX INFO: renamed from: t */
     public List<BaseLayer2> f2855t;
 
-    /* renamed from: u */
+    /* JADX INFO: renamed from: u */
     public final List<BaseKeyframeAnimation<?, ?>> f2856u;
 
-    /* renamed from: v */
+    /* JADX INFO: renamed from: v */
     public final TransformKeyframeAnimation f2857v;
 
-    /* renamed from: w */
+    /* JADX INFO: renamed from: w */
     public boolean f2858w;
 
     public BaseLayer2(LottieDrawable lottieDrawable, Layer2 layer2) {
@@ -168,18 +168,18 @@ public abstract class BaseLayer2 implements DrawingContent, BaseKeyframeAnimatio
     }
 
     @Override // p007b.p085c.p086a.p091w.p093c.BaseKeyframeAnimation.b
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public void mo709a() {
         this.f2849n.invalidateSelf();
     }
 
     @Override // p007b.p085c.p086a.p091w.p092b.Content2
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public void mo710b(List<Content2> list, List<Content2> list2) {
     }
 
     @Override // p007b.p085c.p086a.p095y.KeyPathElement
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public void mo711c(KeyPath keyPath, int i, List<KeyPath> list, KeyPath keyPath2) {
         if (keyPath.m770e(this.f2850o.f2870c, i)) {
             if (!"__container".equals(this.f2850o.f2870c)) {
@@ -196,7 +196,7 @@ public abstract class BaseLayer2 implements DrawingContent, BaseKeyframeAnimatio
 
     @Override // p007b.p085c.p086a.p091w.p092b.DrawingContent
     @CallSuper
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public void mo712d(RectF rectF, Matrix matrix, boolean z2) {
         this.f2843h.set(0.0f, 0.0f, 0.0f, 0.0f);
         m778h();
@@ -217,7 +217,7 @@ public abstract class BaseLayer2 implements DrawingContent, BaseKeyframeAnimatio
         this.f2848m.preConcat(this.f2857v.m747e());
     }
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public void m777e(@Nullable BaseKeyframeAnimation<?, ?> baseKeyframeAnimation) {
         if (baseKeyframeAnimation == null) {
             return;
@@ -231,7 +231,7 @@ public abstract class BaseLayer2 implements DrawingContent, BaseKeyframeAnimatio
     /* JADX WARN: Removed duplicated region for block: B:46:0x0134  */
     /* JADX WARN: Removed duplicated region for block: B:85:0x024b  */
     @Override // p007b.p085c.p086a.p091w.p092b.DrawingContent
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
@@ -442,7 +442,7 @@ public abstract class BaseLayer2 implements DrawingContent, BaseKeyframeAnimatio
 
     @Override // p007b.p085c.p086a.p095y.KeyPathElement
     @CallSuper
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public <T> void mo714g(T t, @Nullable LottieValueCallback<T> lottieValueCallback) {
         this.f2857v.m745c(t, lottieValueCallback);
     }
@@ -452,7 +452,7 @@ public abstract class BaseLayer2 implements DrawingContent, BaseKeyframeAnimatio
         return this.f2850o.f2870c;
     }
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public final void m778h() {
         if (this.f2855t != null) {
             return;
@@ -467,28 +467,28 @@ public abstract class BaseLayer2 implements DrawingContent, BaseKeyframeAnimatio
         }
     }
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public final void m779i(Canvas canvas) {
         RectF rectF = this.f2843h;
         canvas.drawRect(rectF.left - 1.0f, rectF.top - 1.0f, rectF.right + 1.0f, rectF.bottom + 1.0f, this.f2842g);
         L.m663a("Layer#clearLayer");
     }
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public abstract void mo780j(Canvas canvas, Matrix matrix, int i);
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public boolean m781k() {
         MaskKeyframeAnimation maskKeyframeAnimation = this.f2851p;
         return (maskKeyframeAnimation == null || maskKeyframeAnimation.f2611a.isEmpty()) ? false : true;
     }
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public boolean m782l() {
         return this.f2853r != null;
     }
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public final void m783m(float f) {
         PerformanceTracker performanceTracker = this.f2849n.f2370k.f2336a;
         String str = this.f2850o.f2870c;
@@ -515,11 +515,11 @@ public abstract class BaseLayer2 implements DrawingContent, BaseKeyframeAnimatio
         }
     }
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public void mo784n(KeyPath keyPath, int i, List<KeyPath> list, KeyPath keyPath2) {
     }
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public void mo785o(@FloatRange(from = 0.0d, m75to = 1.0d) float f) {
         TransformKeyframeAnimation transformKeyframeAnimation = this.f2857v;
         BaseKeyframeAnimation<Integer, Integer> baseKeyframeAnimation = transformKeyframeAnimation.f2636j;
@@ -580,7 +580,7 @@ public abstract class BaseLayer2 implements DrawingContent, BaseKeyframeAnimatio
         }
     }
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public final void m786p(boolean z2) {
         if (z2 != this.f2858w) {
             this.f2858w = z2;

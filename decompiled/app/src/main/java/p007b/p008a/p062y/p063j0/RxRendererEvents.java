@@ -4,25 +4,25 @@ import org.webrtc.RendererCommon;
 import p007b.p100d.p104b.p105a.outline;
 import p658rx.subjects.BehaviorSubject;
 
-/* compiled from: RxRendererEvents.kt */
-/* renamed from: b.a.y.j0.e, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: b.a.y.j0.e, reason: use source file name */
+/* JADX INFO: compiled from: RxRendererEvents.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class RxRendererEvents implements RendererCommon.RendererEvents {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final BehaviorSubject<a> f2030j = BehaviorSubject.m11129k0();
 
-    /* compiled from: RxRendererEvents.kt */
-    /* renamed from: b.a.y.j0.e$a */
+    /* JADX INFO: renamed from: b.a.y.j0.e$a */
+    /* JADX INFO: compiled from: RxRendererEvents.kt */
     public static final class a {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final int f2031a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final int f2032b;
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public final int f2033c;
 
         public a(int i, int i2, int i3) {

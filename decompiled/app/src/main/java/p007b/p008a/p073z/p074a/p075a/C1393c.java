@@ -6,15 +6,15 @@ import com.discord.widgets.channels.permissions.WidgetChannelSettingsPermissions
 import kotlin.Unit;
 import kotlin.jvm.functions.Function1;
 
-/* compiled from: lambda */
-/* renamed from: b.a.z.a.a.c */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: b.a.z.a.a.c */
+/* JADX INFO: compiled from: lambda */
+/* JADX INFO: loaded from: classes2.dex */
 public final /* synthetic */ class C1393c implements Function1 {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final /* synthetic */ WidgetChannelSettingsPermissionsAddMember f2085j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final /* synthetic */ WidgetChannelSettingsPermissionsAddMember.Model f2086k;
 
     public /* synthetic */ C1393c(WidgetChannelSettingsPermissionsAddMember widgetChannelSettingsPermissionsAddMember, WidgetChannelSettingsPermissionsAddMember.Model model) {

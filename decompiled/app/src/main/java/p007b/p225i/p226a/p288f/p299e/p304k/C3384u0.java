@@ -2,12 +2,12 @@ package p007b.p225i.p226a.p288f.p299e.p304k;
 
 import android.net.Uri;
 
-/* compiled from: com.google.android.gms:play-services-basement@@17.6.0 */
-/* renamed from: b.i.a.f.e.k.u0 */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.e.k.u0 */
+/* JADX INFO: compiled from: com.google.android.gms:play-services-basement@@17.6.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public final class C3384u0 {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final Uri f9570a;
 
     static {

@@ -11,34 +11,34 @@ import com.discord.utilities.view.text.SimpleDraweeSpanTextView;
 import com.discord.views.StatusView;
 import com.facebook.drawee.view.SimpleDraweeView;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public final class WidgetFriendsListAdapterItemPendingBinding implements ViewBinding {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     @NonNull
     public final RelativeLayout f16667a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     @NonNull
     public final AppCompatImageView f16668b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     @NonNull
     public final SimpleDraweeSpanTextView f16669c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     @NonNull
     public final SimpleDraweeView f16670d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     @NonNull
     public final AppCompatImageView f16671e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     @NonNull
     public final TextView f16672f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     @NonNull
     public final StatusView f16673g;
 

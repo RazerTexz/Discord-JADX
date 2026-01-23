@@ -4,27 +4,27 @@ import java.util.Iterator;
 import org.checkerframework.checker.nullness.compatqual.NullableDecl;
 import p007b.p225i.p226a.p288f.p299e.p308o.C3404f;
 
-/* compiled from: RegularImmutableSet.java */
-/* renamed from: b.i.b.b.j0, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.b.b.j0, reason: use source file name */
+/* JADX INFO: compiled from: RegularImmutableSet.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class RegularImmutableSet<E> extends ImmutableSet2<E> {
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public static final RegularImmutableSet<Object> f12032m = new RegularImmutableSet<>(new Object[0], 0, null, 0, 0);
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public final transient Object[] f12033n;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public final transient Object[] f12034o;
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public final transient int f12035p;
 
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     public final transient int f12036q;
 
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     public final transient int f12037r;
 
     public RegularImmutableSet(Object[] objArr, int i, Object[] objArr2, int i2, int i3) {
@@ -56,26 +56,26 @@ public final class RegularImmutableSet<E> extends ImmutableSet2<E> {
     }
 
     @Override // p007b.p225i.p355b.p357b.ImmutableCollection
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public int mo6242d(Object[] objArr, int i) {
         System.arraycopy(this.f12033n, 0, objArr, i, this.f12037r);
         return i + this.f12037r;
     }
 
     @Override // p007b.p225i.p355b.p357b.ImmutableCollection
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public Object[] mo6243e() {
         return this.f12033n;
     }
 
     @Override // p007b.p225i.p355b.p357b.ImmutableCollection
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public int mo6244g() {
         return this.f12037r;
     }
 
     @Override // p007b.p225i.p355b.p357b.ImmutableCollection
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public int mo6245h() {
         return 0;
     }
@@ -86,7 +86,7 @@ public final class RegularImmutableSet<E> extends ImmutableSet2<E> {
     }
 
     @Override // p007b.p225i.p355b.p357b.ImmutableCollection
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public boolean mo6246i() {
         return false;
     }
@@ -97,13 +97,13 @@ public final class RegularImmutableSet<E> extends ImmutableSet2<E> {
     }
 
     @Override // p007b.p225i.p355b.p357b.ImmutableCollection
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public UnmodifiableIterator<E> mo6251j() {
         return mo6253c().m6268p();
     }
 
     @Override // p007b.p225i.p355b.p357b.ImmutableSet2
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public ImmutableList2<E> mo6252o() {
         return ImmutableList2.m6262l(this.f12033n, this.f12037r);
     }

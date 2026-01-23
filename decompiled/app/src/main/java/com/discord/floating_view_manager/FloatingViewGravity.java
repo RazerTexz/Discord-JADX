@@ -1,8 +1,8 @@
 package com.discord.floating_view_manager;
 
 
-/* compiled from: FloatingViewGravity.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: FloatingViewGravity.kt */
+/* JADX INFO: loaded from: classes.dex */
 public enum FloatingViewGravity {
     TOP,
     CENTER,

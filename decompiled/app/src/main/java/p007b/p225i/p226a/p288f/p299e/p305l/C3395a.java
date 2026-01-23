@@ -7,18 +7,18 @@ import java.util.Locale;
 import p007b.p100d.p104b.p105a.outline;
 import p007b.p225i.p226a.p288f.p299e.p304k.C3353f;
 
-/* compiled from: com.google.android.gms:play-services-basement@@17.6.0 */
-/* renamed from: b.i.a.f.e.l.a */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.e.l.a */
+/* JADX INFO: compiled from: com.google.android.gms:play-services-basement@@17.6.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public class C3395a {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final String f9577a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final String f9578b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final int f9579c;
 
     public C3395a(@RecentlyNonNull String str, @RecentlyNonNull String... strArr) {
@@ -46,7 +46,7 @@ public class C3395a {
         this.f9579c = i;
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public void m4179a(@RecentlyNonNull String str, @Nullable Object... objArr) {
         if (this.f9579c <= 3) {
             String str2 = this.f9577a;
@@ -57,7 +57,7 @@ public class C3395a {
         }
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public void m4180b(@RecentlyNonNull String str, @Nullable Object... objArr) {
         String str2 = this.f9577a;
         if (objArr.length > 0) {

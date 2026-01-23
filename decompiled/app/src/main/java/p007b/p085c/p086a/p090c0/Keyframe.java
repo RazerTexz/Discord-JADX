@@ -7,56 +7,56 @@ import androidx.annotation.Nullable;
 import p007b.p085c.p086a.LottieComposition;
 import p007b.p100d.p104b.p105a.outline;
 
-/* compiled from: Keyframe.java */
-/* renamed from: b.c.a.c0.a, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.c.a.c0.a, reason: use source file name */
+/* JADX INFO: compiled from: Keyframe.java */
+/* JADX INFO: loaded from: classes.dex */
 public class Keyframe<T> {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     @Nullable
     public final LottieComposition f2316a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     @Nullable
     public final T f2317b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     @Nullable
     public T f2318c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     @Nullable
     public final Interpolator f2319d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final float f2320e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     @Nullable
     public Float f2321f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public float f2322g;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public float f2323h;
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public int f2324i;
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public int f2325j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public float f2326k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public float f2327l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public PointF f2328m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public PointF f2329n;
 
     public Keyframe(LottieComposition lottieComposition, @Nullable T t, @Nullable T t2, @Nullable Interpolator interpolator, float f, @Nullable Float f2) {
@@ -76,12 +76,12 @@ public class Keyframe<T> {
         this.f2321f = f2;
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public boolean m664a(@FloatRange(from = 0.0d, m75to = 1.0d) float f) {
         return f >= m666c() && f < m665b();
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public float m665b() {
         if (this.f2316a == null) {
             return 1.0f;
@@ -96,7 +96,7 @@ public class Keyframe<T> {
         return this.f2327l;
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public float m666c() {
         LottieComposition lottieComposition = this.f2316a;
         if (lottieComposition == null) {
@@ -108,7 +108,7 @@ public class Keyframe<T> {
         return this.f2326k;
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public boolean m667d() {
         return this.f2319d == null;
     }

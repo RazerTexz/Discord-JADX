@@ -1,8 +1,8 @@
 package com.discord.utilities.search.strings;
 
 
-/* compiled from: SearchStringProvider.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: SearchStringProvider.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public interface SearchStringProvider {
     String getEmbedAnswerString();
 

@@ -4,145 +4,145 @@ import p007b.p225i.p414e.p418n.BitMatrix;
 
 /* JADX WARN: Failed to restore enum class, 'enum' modifier and super class removed */
 /* JADX WARN: Unknown enum class pattern. Please report as an issue! */
-/* compiled from: DataMask.java */
-/* renamed from: b.i.e.s.b.c, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.e.s.b.c, reason: use source file name */
+/* JADX INFO: compiled from: DataMask.java */
+/* JADX INFO: loaded from: classes3.dex */
 public abstract class DataMask {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static final DataMask f13516j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public static final DataMask f13517k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public static final DataMask f13518l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public static final DataMask f13519m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public static final DataMask f13520n;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public static final DataMask f13521o;
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public static final DataMask f13522p;
 
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     public static final DataMask f13523q;
 
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     public static final /* synthetic */ DataMask[] f13524r;
 
-    /* compiled from: DataMask.java */
-    /* renamed from: b.i.e.s.b.c$a */
+    /* JADX INFO: renamed from: b.i.e.s.b.c$a */
+    /* JADX INFO: compiled from: DataMask.java */
     public enum a extends DataMask {
         public a(String str, int i) {
             super(str, i, null);
         }
 
         @Override // p007b.p225i.p414e.p434s.p435b.DataMask
-        /* renamed from: f */
+        /* JADX INFO: renamed from: f */
         public boolean mo7089f(int i, int i2) {
             return ((i + i2) & 1) == 0;
         }
     }
 
-    /* compiled from: DataMask.java */
-    /* renamed from: b.i.e.s.b.c$b */
+    /* JADX INFO: renamed from: b.i.e.s.b.c$b */
+    /* JADX INFO: compiled from: DataMask.java */
     public enum b extends DataMask {
         public b(String str, int i) {
             super(str, i, null);
         }
 
         @Override // p007b.p225i.p414e.p434s.p435b.DataMask
-        /* renamed from: f */
+        /* JADX INFO: renamed from: f */
         public boolean mo7089f(int i, int i2) {
             return (i & 1) == 0;
         }
     }
 
-    /* compiled from: DataMask.java */
-    /* renamed from: b.i.e.s.b.c$c */
+    /* JADX INFO: renamed from: b.i.e.s.b.c$c */
+    /* JADX INFO: compiled from: DataMask.java */
     public enum c extends DataMask {
         public c(String str, int i) {
             super(str, i, null);
         }
 
         @Override // p007b.p225i.p414e.p434s.p435b.DataMask
-        /* renamed from: f */
+        /* JADX INFO: renamed from: f */
         public boolean mo7089f(int i, int i2) {
             return i2 % 3 == 0;
         }
     }
 
-    /* compiled from: DataMask.java */
-    /* renamed from: b.i.e.s.b.c$d */
+    /* JADX INFO: renamed from: b.i.e.s.b.c$d */
+    /* JADX INFO: compiled from: DataMask.java */
     public enum d extends DataMask {
         public d(String str, int i) {
             super(str, i, null);
         }
 
         @Override // p007b.p225i.p414e.p434s.p435b.DataMask
-        /* renamed from: f */
+        /* JADX INFO: renamed from: f */
         public boolean mo7089f(int i, int i2) {
             return (i + i2) % 3 == 0;
         }
     }
 
-    /* compiled from: DataMask.java */
-    /* renamed from: b.i.e.s.b.c$e */
+    /* JADX INFO: renamed from: b.i.e.s.b.c$e */
+    /* JADX INFO: compiled from: DataMask.java */
     public enum e extends DataMask {
         public e(String str, int i) {
             super(str, i, null);
         }
 
         @Override // p007b.p225i.p414e.p434s.p435b.DataMask
-        /* renamed from: f */
+        /* JADX INFO: renamed from: f */
         public boolean mo7089f(int i, int i2) {
             return (((i2 / 3) + (i / 2)) & 1) == 0;
         }
     }
 
-    /* compiled from: DataMask.java */
-    /* renamed from: b.i.e.s.b.c$f */
+    /* JADX INFO: renamed from: b.i.e.s.b.c$f */
+    /* JADX INFO: compiled from: DataMask.java */
     public enum f extends DataMask {
         public f(String str, int i) {
             super(str, i, null);
         }
 
         @Override // p007b.p225i.p414e.p434s.p435b.DataMask
-        /* renamed from: f */
+        /* JADX INFO: renamed from: f */
         public boolean mo7089f(int i, int i2) {
             return (i * i2) % 6 == 0;
         }
     }
 
-    /* compiled from: DataMask.java */
-    /* renamed from: b.i.e.s.b.c$g */
+    /* JADX INFO: renamed from: b.i.e.s.b.c$g */
+    /* JADX INFO: compiled from: DataMask.java */
     public enum g extends DataMask {
         public g(String str, int i) {
             super(str, i, null);
         }
 
         @Override // p007b.p225i.p414e.p434s.p435b.DataMask
-        /* renamed from: f */
+        /* JADX INFO: renamed from: f */
         public boolean mo7089f(int i, int i2) {
             return (i * i2) % 6 < 3;
         }
     }
 
-    /* compiled from: DataMask.java */
-    /* renamed from: b.i.e.s.b.c$h */
+    /* JADX INFO: renamed from: b.i.e.s.b.c$h */
+    /* JADX INFO: compiled from: DataMask.java */
     public enum h extends DataMask {
         public h(String str, int i) {
             super(str, i, null);
         }
 
         @Override // p007b.p225i.p414e.p434s.p435b.DataMask
-        /* renamed from: f */
+        /* JADX INFO: renamed from: f */
         public boolean mo7089f(int i, int i2) {
             return ((((i * i2) % 3) + (i + i2)) & 1) == 0;
         }
@@ -179,10 +179,10 @@ public abstract class DataMask {
         return (DataMask[]) f13524r.clone();
     }
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public abstract boolean mo7089f(int i, int i2);
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public final void m7090g(BitMatrix bitMatrix, int i) {
         for (int i2 = 0; i2 < i; i2++) {
             for (int i3 = 0; i3 < i; i3++) {

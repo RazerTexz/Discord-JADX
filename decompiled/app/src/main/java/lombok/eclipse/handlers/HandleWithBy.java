@@ -34,7 +34,7 @@ import org.eclipse.jdt.internal.compiler.ast.TypeDeclaration;
 import org.eclipse.jdt.internal.compiler.ast.TypeReference;
 import org.eclipse.jdt.internal.compiler.ast.Wildcard;
 
-/* loaded from: discord-126021.apk:lombok/eclipse/handlers/HandleWithBy.SCL.lombok */
+/* JADX INFO: loaded from: discord-126021.apk:lombok/eclipse/handlers/HandleWithBy.SCL.lombok */
 public class HandleWithBy extends EclipseAnnotationHandler<WithBy> {
     private static final char[][] NAME_JUF_FUNCTION = Eclipse.fromQualifiedName("java.util.function.Function");
     private static final char[][] NAME_JUF_OP = Eclipse.fromQualifiedName("java.util.function.UnaryOperator");
@@ -57,7 +57,7 @@ public class HandleWithBy extends EclipseAnnotationHandler<WithBy> {
     private static final char[] NAME_TRANSFORMER = {'t', 'r', 'a', 'n', 's', 'f', 'o', 'r', 'm', 'e', 'r'};
     private static /* synthetic */ int[] $SWITCH_TABLE$lombok$core$AST$Kind;
 
-    /* renamed from: $SWITCH_TABLE$lombok$eclipse$handlers$EclipseHandlerUtil$MemberExistsResult */
+    /* JADX INFO: renamed from: $SWITCH_TABLE$lombok$eclipse$handlers$EclipseHandlerUtil$MemberExistsResult */
     private static /* synthetic */ int[] f27477xb87c1847;
 
     static /* synthetic */ int[] $SWITCH_TABLE$lombok$core$AST$Kind() {
@@ -110,7 +110,7 @@ public class HandleWithBy extends EclipseAnnotationHandler<WithBy> {
         return iArr2;
     }
 
-    /* renamed from: $SWITCH_TABLE$lombok$eclipse$handlers$EclipseHandlerUtil$MemberExistsResult */
+    /* JADX INFO: renamed from: $SWITCH_TABLE$lombok$eclipse$handlers$EclipseHandlerUtil$MemberExistsResult */
     static /* synthetic */ int[] m10937xb87c1847() {
         int[] iArr = f27477xb87c1847;
         if (iArr != null) {
@@ -133,7 +133,7 @@ public class HandleWithBy extends EclipseAnnotationHandler<WithBy> {
         return iArr2;
     }
 
-    public boolean generateWithByForType(EclipseNode typeNode, EclipseNode pos, AccessLevel level, boolean checkForTypeLevelWithBy) throws IllegalArgumentException {
+    public boolean generateWithByForType(EclipseNode typeNode, EclipseNode pos, AccessLevel level, boolean checkForTypeLevelWithBy) {
         if (checkForTypeLevelWithBy && EclipseHandlerUtil.hasAnnotation((Class<? extends Annotation>) WithBy.class, typeNode)) {
             return true;
         }
@@ -155,7 +155,7 @@ public class HandleWithBy extends EclipseAnnotationHandler<WithBy> {
         return true;
     }
 
-    public void generateWithByForField(EclipseNode fieldNode, EclipseNode sourceNode, AccessLevel level) throws IllegalArgumentException {
+    public void generateWithByForField(EclipseNode fieldNode, EclipseNode sourceNode, AccessLevel level) {
         for (EclipseNode child : fieldNode.down()) {
             if (child.getKind() == AST.Kind.ANNOTATION && EclipseHandlerUtil.annotationTypeMatches((Class<? extends Annotation>) WithBy.class, child)) {
                 return;
@@ -166,7 +166,7 @@ public class HandleWithBy extends EclipseAnnotationHandler<WithBy> {
     }
 
     @Override // lombok.eclipse.EclipseAnnotationHandler
-    public void handle(AnnotationValues<WithBy> annotation, org.eclipse.jdt.internal.compiler.ast.Annotation ast, EclipseNode annotationNode) throws IllegalArgumentException {
+    public void handle(AnnotationValues<WithBy> annotation, org.eclipse.jdt.internal.compiler.ast.Annotation ast, EclipseNode annotationNode) {
         HandlerUtil.handleExperimentalFlagUsage(annotationNode, ConfigurationKeys.WITHBY_FLAG_USAGE, "@WithBy");
         EclipseNode node = annotationNode.m10925up();
         AccessLevel level = annotation.getInstance().value();
@@ -187,13 +187,13 @@ public class HandleWithBy extends EclipseAnnotationHandler<WithBy> {
         }
     }
 
-    public void createWithByForFields(AccessLevel level, Collection<EclipseNode> fieldNodes, EclipseNode sourceNode, boolean whineIfExists, List<org.eclipse.jdt.internal.compiler.ast.Annotation> onMethod) throws IllegalArgumentException {
+    public void createWithByForFields(AccessLevel level, Collection<EclipseNode> fieldNodes, EclipseNode sourceNode, boolean whineIfExists, List<org.eclipse.jdt.internal.compiler.ast.Annotation> onMethod) {
         for (EclipseNode fieldNode : fieldNodes) {
             createWithByForField(level, fieldNode, sourceNode, whineIfExists, onMethod);
         }
     }
 
-    public void createWithByForField(AccessLevel level, EclipseNode fieldNode, EclipseNode sourceNode, boolean whineIfExists, List<org.eclipse.jdt.internal.compiler.ast.Annotation> onMethod) throws IllegalArgumentException {
+    public void createWithByForField(AccessLevel level, EclipseNode fieldNode, EclipseNode sourceNode, boolean whineIfExists, List<org.eclipse.jdt.internal.compiler.ast.Annotation> onMethod) {
         ASTNode source = sourceNode.get();
         if (fieldNode.getKind() != AST.Kind.FIELD) {
             sourceNode.addError("@WithBy is only supported on a class or a field.");
@@ -242,7 +242,7 @@ public class HandleWithBy extends EclipseAnnotationHandler<WithBy> {
     /* JADX WARN: Type inference failed for: r0v132, types: [org.eclipse.jdt.internal.compiler.ast.TypeReference[], org.eclipse.jdt.internal.compiler.ast.TypeReference[][]] */
     /* JADX WARN: Type inference failed for: r0v145, types: [org.eclipse.jdt.internal.compiler.ast.TypeReference[], org.eclipse.jdt.internal.compiler.ast.TypeReference[][]] */
     /* JADX WARN: Type inference failed for: r2v4, types: [org.eclipse.jdt.internal.compiler.ast.Annotation[], org.eclipse.jdt.internal.compiler.ast.Annotation[][]] */
-    public MethodDeclaration createWithBy(TypeDeclaration parent, EclipseNode fieldNode, String name, int modifier, EclipseNode sourceNode, List<org.eclipse.jdt.internal.compiler.ast.Annotation> onMethod, boolean makeAbstract) throws IllegalArgumentException {
+    public MethodDeclaration createWithBy(TypeDeclaration parent, EclipseNode fieldNode, String name, int modifier, EclipseNode sourceNode, List<org.eclipse.jdt.internal.compiler.ast.Annotation> onMethod, boolean makeAbstract) {
         Statement nullCheck;
         ASTNode source = sourceNode.get();
         if (name == null) {
@@ -251,7 +251,7 @@ public class HandleWithBy extends EclipseAnnotationHandler<WithBy> {
         FieldDeclaration field = fieldNode.get();
         int pS = source.sourceStart;
         int pE = source.sourceEnd;
-        long p = (pS << 32) | pE;
+        long p = (((long) pS) << 32) | ((long) pE);
         MethodDeclaration method = new MethodDeclaration(parent.compilationResult);
         if (makeAbstract) {
             modifier = modifier | 1024 | 16777216;

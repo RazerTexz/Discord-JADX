@@ -21,18 +21,18 @@ import p600f0.p601e0.p609k.p610i.DeferredSocketAdapter;
 import p600f0.p601e0.p609k.p610i.SocketAdapter;
 import p600f0.p601e0.p612m.CertificateChainCleaner;
 
-/* compiled from: Android10Platform.kt */
-/* renamed from: f0.e0.k.a, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: f0.e0.k.a, reason: use source file name */
+/* JADX INFO: compiled from: Android10Platform.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class Android10Platform extends Platform2 {
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public static final boolean f25754d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public static final Android10Platform f25755e = null;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final List<SocketAdapter> f25756f;
 
     static {
@@ -57,7 +57,7 @@ public final class Android10Platform extends Platform2 {
     }
 
     @Override // p600f0.p601e0.p609k.Platform2
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public CertificateChainCleaner mo10315b(X509TrustManager x509TrustManager) {
         X509TrustManagerExtensions x509TrustManagerExtensions;
         Intrinsics3.checkParameterIsNotNull(x509TrustManager, "trustManager");
@@ -72,7 +72,7 @@ public final class Android10Platform extends Platform2 {
     }
 
     @Override // p600f0.p601e0.p609k.Platform2
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public void mo10316d(SSLSocket sSLSocket, String str, List<? extends Protocol2> list) {
         Object next;
         Intrinsics3.checkParameterIsNotNull(sSLSocket, "sslSocket");
@@ -96,7 +96,7 @@ public final class Android10Platform extends Platform2 {
     }
 
     @Override // p600f0.p601e0.p609k.Platform2
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public String mo10317f(SSLSocket sSLSocket) {
         Object next;
         Intrinsics3.checkParameterIsNotNull(sSLSocket, "sslSocket");
@@ -120,7 +120,7 @@ public final class Android10Platform extends Platform2 {
 
     @Override // p600f0.p601e0.p609k.Platform2
     @SuppressLint({"NewApi"})
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public boolean mo10318h(String str) {
         Intrinsics3.checkParameterIsNotNull(str, "hostname");
         return NetworkSecurityPolicy.getInstance().isCleartextTrafficPermitted(str);

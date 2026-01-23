@@ -4,18 +4,18 @@ import java.util.List;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: BulkFriendSuggestions.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: BulkFriendSuggestions.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class BulkFriendSuggestions {
     private final String bulkAddToken;
     private final List<FriendSuggestion> friendSuggestions;
 
-    /* renamed from: a, reason: from getter */
+    /* JADX INFO: renamed from: a, reason: from getter */
     public final String getBulkAddToken() {
         return this.bulkAddToken;
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final List<FriendSuggestion> m7829b() {
         return this.friendSuggestions;
     }

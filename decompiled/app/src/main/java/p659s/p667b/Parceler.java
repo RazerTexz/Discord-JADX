@@ -2,9 +2,9 @@ package p659s.p667b;
 
 import android.os.Parcel;
 
-/* compiled from: Parceler.kt */
-/* renamed from: s.b.a, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: s.b.a, reason: use source file name */
+/* JADX INFO: compiled from: Parceler.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public interface Parceler<T> {
     T create(Parcel parcel);
 

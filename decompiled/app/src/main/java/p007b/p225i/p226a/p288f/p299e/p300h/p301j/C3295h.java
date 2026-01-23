@@ -8,27 +8,27 @@ import com.google.android.gms.common.C10800R;
 import com.google.android.gms.common.api.Status;
 import p007b.p225i.p226a.p288f.p299e.p304k.C3354f0;
 
-/* compiled from: com.google.android.gms:play-services-basement@@17.6.0 */
+/* JADX INFO: renamed from: b.i.a.f.e.h.j.h */
+/* JADX INFO: compiled from: com.google.android.gms:play-services-basement@@17.6.0 */
+/* JADX INFO: loaded from: classes3.dex */
 @Deprecated
-/* renamed from: b.i.a.f.e.h.j.h */
-/* loaded from: classes3.dex */
 public final class C3295h {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final Object f9421a = new Object();
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     @Nullable
     public static C3295h f9422b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     @Nullable
     public final String f9423c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final Status f9424d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final boolean f9425e;
 
     public C3295h(Context context) {
@@ -56,7 +56,7 @@ public final class C3295h {
         }
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static C3295h m4105a(String str) {
         C3295h c3295h;
         synchronized (f9421a) {

@@ -10,8 +10,8 @@ import java.util.Map;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: AutoModSystemMessageEmbedEntry.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: AutoModSystemMessageEmbedEntry.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final /* data */ class AutoModSystemMessageEmbedEntry extends ChatListEntry {
     private final boolean animateEmojis;
     private final GuildMember author;
@@ -44,36 +44,37 @@ public final /* data */ class AutoModSystemMessageEmbedEntry extends ChatListEnt
         this.key = sb.toString();
     }
 
+    /* JADX WARN: Multi-variable type inference failed */
     public static /* synthetic */ AutoModSystemMessageEmbedEntry copy$default(AutoModSystemMessageEmbedEntry autoModSystemMessageEmbedEntry, Channel channel, Message message, StoreMessageState.State state, MessageEmbed messageEmbed, GuildMember guildMember, boolean z2, Map map, Map map2, int i, Object obj) {
         return autoModSystemMessageEmbedEntry.copy((i & 1) != 0 ? autoModSystemMessageEmbedEntry.channel : channel, (i & 2) != 0 ? autoModSystemMessageEmbedEntry.message : message, (i & 4) != 0 ? autoModSystemMessageEmbedEntry.messageState : state, (i & 8) != 0 ? autoModSystemMessageEmbedEntry.embed : messageEmbed, (i & 16) != 0 ? autoModSystemMessageEmbedEntry.author : guildMember, (i & 32) != 0 ? autoModSystemMessageEmbedEntry.animateEmojis : z2, (i & 64) != 0 ? autoModSystemMessageEmbedEntry.roles : map, (i & 128) != 0 ? autoModSystemMessageEmbedEntry.nickOrUsernames : map2);
     }
 
-    /* renamed from: component1, reason: from getter */
+    /* JADX INFO: renamed from: component1, reason: from getter */
     public final Channel getChannel() {
         return this.channel;
     }
 
-    /* renamed from: component2, reason: from getter */
+    /* JADX INFO: renamed from: component2, reason: from getter */
     public final Message getMessage() {
         return this.message;
     }
 
-    /* renamed from: component3, reason: from getter */
+    /* JADX INFO: renamed from: component3, reason: from getter */
     public final StoreMessageState.State getMessageState() {
         return this.messageState;
     }
 
-    /* renamed from: component4, reason: from getter */
+    /* JADX INFO: renamed from: component4, reason: from getter */
     public final MessageEmbed getEmbed() {
         return this.embed;
     }
 
-    /* renamed from: component5, reason: from getter */
+    /* JADX INFO: renamed from: component5, reason: from getter */
     public final GuildMember getAuthor() {
         return this.author;
     }
 
-    /* renamed from: component6, reason: from getter */
+    /* JADX INFO: renamed from: component6, reason: from getter */
     public final boolean getAnimateEmojis() {
         return this.animateEmojis;
     }
@@ -148,6 +149,9 @@ public final /* data */ class AutoModSystemMessageEmbedEntry extends ChatListEnt
     }
 
     /* JADX WARN: Multi-variable type inference failed */
+    /* JADX WARN: Type inference failed for: r2v13, types: [int] */
+    /* JADX WARN: Type inference failed for: r2v19 */
+    /* JADX WARN: Type inference failed for: r2v24 */
     public int hashCode() {
         Channel channel = this.channel;
         int iHashCode = (channel != null ? channel.hashCode() : 0) * 31;
@@ -160,13 +164,13 @@ public final /* data */ class AutoModSystemMessageEmbedEntry extends ChatListEnt
         GuildMember guildMember = this.author;
         int iHashCode5 = (iHashCode4 + (guildMember != null ? guildMember.hashCode() : 0)) * 31;
         boolean z2 = this.animateEmojis;
-        int i = z2;
-        if (z2 != 0) {
-            i = 1;
+        ?? r2 = z2;
+        if (z2) {
+            r2 = 1;
         }
-        int i2 = (iHashCode5 + i) * 31;
+        int i = (iHashCode5 + r2) * 31;
         Map<Long, GuildRole> map = this.roles;
-        int iHashCode6 = (i2 + (map != null ? map.hashCode() : 0)) * 31;
+        int iHashCode6 = (i + (map != null ? map.hashCode() : 0)) * 31;
         Map<Long, String> map2 = this.nickOrUsernames;
         return iHashCode6 + (map2 != null ? map2.hashCode() : 0);
     }

@@ -7,9 +7,9 @@ import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: RtcConnection.kt */
-/* renamed from: b.a.q.e0 */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.a.q.e0 */
+/* JADX INFO: compiled from: RtcConnection.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class C1197e0 extends Lambda implements Function1<Exception, Unit> {
     public final /* synthetic */ RtcConnection this$0;
 

@@ -6,12 +6,12 @@ import java.lang.reflect.Method;
 import p507d0.p513e0.p514p.p515d.p517m0.p521c.p526k1.p528b.reflectClassUtil;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ReflectKotlinClass.kt */
-/* renamed from: d0.e0.p.d.m0.c.k1.a.n, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.c.k1.a.n, reason: use source file name */
+/* JADX INFO: compiled from: ReflectKotlinClass.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class ReflectKotlinClass4 {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final ReflectKotlinClass4 f23027a = new ReflectKotlinClass4();
 
     public final String constructorDesc(Constructor<?> constructor) {

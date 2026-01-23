@@ -29,9 +29,9 @@ import p637j0.p641k.Func1;
 import p658rx.Observable;
 import p658rx.subjects.BehaviorSubject;
 
-/* compiled from: StickerPickerViewModel.kt */
-/* renamed from: com.discord.widgets.chat.input.sticker.StickerPickerViewModel$Companion$observeStoreState$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.chat.input.sticker.StickerPickerViewModel$Companion$observeStoreState$1, reason: use source file name */
+/* JADX INFO: compiled from: StickerPickerViewModel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class StickerPickerViewModel2<T, R> implements Func1<StoreChannelsSelected.ResolvedSelectedChannel, Observable<? extends StickerPickerViewModel.StoreState>> {
     public final /* synthetic */ BehaviorSubject $searchSubject;
     public final /* synthetic */ BehaviorSubject $selectedPackIdSubject;
@@ -45,8 +45,8 @@ public final class StickerPickerViewModel2<T, R> implements Func1<StoreChannelsS
     public final /* synthetic */ StoreUser $storeUser;
     public final /* synthetic */ StoreUserSettings $storeUserSettings;
 
-    /* compiled from: StickerPickerViewModel.kt */
-    /* renamed from: com.discord.widgets.chat.input.sticker.StickerPickerViewModel$Companion$observeStoreState$1$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.input.sticker.StickerPickerViewModel$Companion$observeStoreState$1$1 */
+    /* JADX INFO: compiled from: StickerPickerViewModel.kt */
     public static final class C78951<T, R> implements Func1<LinkedHashMap<Long, Guild>, LinkedHashMap<Long, Guild>> {
         public final /* synthetic */ Guild $currentGuild;
 
@@ -59,7 +59,7 @@ public final class StickerPickerViewModel2<T, R> implements Func1<StoreChannelsS
             return call2(linkedHashMap);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final LinkedHashMap<Long, Guild> call2(LinkedHashMap<Long, Guild> linkedHashMap) {
             LinkedHashMap<Long, Guild> linkedHashMap2 = new LinkedHashMap<>();
             Guild guild = this.$currentGuild;
@@ -79,8 +79,8 @@ public final class StickerPickerViewModel2<T, R> implements Func1<StoreChannelsS
         }
     }
 
-    /* compiled from: StickerPickerViewModel.kt */
-    /* renamed from: com.discord.widgets.chat.input.sticker.StickerPickerViewModel$Companion$observeStoreState$1$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.input.sticker.StickerPickerViewModel$Companion$observeStoreState$1$2 */
+    /* JADX INFO: compiled from: StickerPickerViewModel.kt */
     public static final class C78962 extends Lambda implements Function11<LinkedHashMap<Long, Guild>, Map<Long, ? extends Map<Long, ? extends Sticker>>, List<? extends ModelStickerPack>, List<? extends Long>, String, Integer, Long, MeUser, ExpressionTrayTab, Map<Long, ? extends Long>, Integer, StickerPickerViewModel.StoreState.Loaded> {
         public final /* synthetic */ Channel $channel;
 
@@ -131,7 +131,7 @@ public final class StickerPickerViewModel2<T, R> implements Func1<StoreChannelsS
     }
 
     /* JADX WARN: Removed duplicated region for block: B:7:0x0016  */
-    /* renamed from: call, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */

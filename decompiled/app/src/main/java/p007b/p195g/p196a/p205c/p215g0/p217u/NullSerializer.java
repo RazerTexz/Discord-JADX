@@ -6,13 +6,13 @@ import p007b.p195g.p196a.p205c.SerializerProvider;
 import p007b.p195g.p196a.p205c.p212e0.TypeSerializer;
 import p007b.p195g.p196a.p205c.p220y.JacksonStdImpl;
 
-/* compiled from: NullSerializer.java */
+/* JADX INFO: renamed from: b.g.a.c.g0.u.u, reason: use source file name */
+/* JADX INFO: compiled from: NullSerializer.java */
+/* JADX INFO: loaded from: classes3.dex */
 @JacksonStdImpl
-/* renamed from: b.g.a.c.g0.u.u, reason: use source file name */
-/* loaded from: classes3.dex */
 public class NullSerializer extends StdSerializer<Object> {
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public static final NullSerializer f4867k = new NullSerializer();
 
     public NullSerializer() {
@@ -20,13 +20,13 @@ public class NullSerializer extends StdSerializer<Object> {
     }
 
     @Override // p007b.p195g.p196a.p205c.JsonSerializer
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public void mo1807f(Object obj, JsonGenerator jsonGenerator, SerializerProvider serializerProvider) throws IOException {
         jsonGenerator.mo1631A();
     }
 
     @Override // p007b.p195g.p196a.p205c.JsonSerializer
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public void mo1808g(Object obj, JsonGenerator jsonGenerator, SerializerProvider serializerProvider, TypeSerializer typeSerializer) throws IOException {
         jsonGenerator.mo1631A();
     }

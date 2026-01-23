@@ -28,31 +28,31 @@ import p507d0.p580t._Collections;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: IntegerLiteralTypeConstructor.kt */
-/* renamed from: d0.e0.p.d.m0.k.v.n, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.k.v.n, reason: use source file name */
+/* JADX INFO: compiled from: IntegerLiteralTypeConstructor.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class IntegerLiteralTypeConstructor implements TypeConstructor {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final a f24444a = new a(null);
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final long f24445b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final ModuleDescriptor2 f24446c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final Set<KotlinType> f24447d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final KotlinType4 f24448e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final Lazy f24449f;
 
-    /* compiled from: IntegerLiteralTypeConstructor.kt */
-    /* renamed from: d0.e0.p.d.m0.k.v.n$a */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.k.v.n$a */
+    /* JADX INFO: compiled from: IntegerLiteralTypeConstructor.kt */
     public static final class a {
         public a(DefaultConstructorMarker defaultConstructorMarker) {
         }
@@ -65,6 +65,7 @@ public final class IntegerLiteralTypeConstructor implements TypeConstructor {
         /* JADX WARN: Type inference failed for: r0v6, types: [d0.e0.p.d.m0.n.c0, d0.e0.p.d.m0.n.j0, java.lang.Object] */
         /* JADX WARN: Type inference failed for: r0v7 */
         /* JADX WARN: Type inference failed for: r0v8 */
+        /* JADX WARN: Type inference failed for: r1v1 */
         public final KotlinType4 findIntersectionType(Collection<? extends KotlinType4> collection) {
             Intrinsics3.checkNotNullParameter(collection, "types");
             if (collection.isEmpty()) {
@@ -74,10 +75,10 @@ public final class IntegerLiteralTypeConstructor implements TypeConstructor {
             if (!it.hasNext()) {
                 throw new UnsupportedOperationException("Empty collection can't be reduced.");
             }
-            KotlinType4 next = it.next();
+            ?? next = it.next();
             while (it.hasNext()) {
                 KotlinType4 kotlinType4 = (KotlinType4) it.next();
-                next = next;
+                next = (KotlinType4) next;
                 if (next != 0 && kotlinType4 != null) {
                     TypeConstructor constructor = next.getConstructor();
                     TypeConstructor constructor2 = kotlinType4.getConstructor();
@@ -96,12 +97,12 @@ public final class IntegerLiteralTypeConstructor implements TypeConstructor {
                 }
                 next = 0;
             }
-            return next;
+            return (KotlinType4) next;
         }
     }
 
-    /* compiled from: IntegerLiteralTypeConstructor.kt */
-    /* renamed from: d0.e0.p.d.m0.k.v.n$b */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.k.v.n$b */
+    /* JADX INFO: compiled from: IntegerLiteralTypeConstructor.kt */
     public static final class b extends Lambda implements Function0<List<KotlinType4>> {
         public b() {
             super(0);
@@ -113,7 +114,7 @@ public final class IntegerLiteralTypeConstructor implements TypeConstructor {
         }
 
         @Override // kotlin.jvm.functions.Function0
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final List<KotlinType4> invoke2() {
             KotlinType4 defaultType = IntegerLiteralTypeConstructor.this.getBuiltIns().getComparable().getDefaultType();
             Intrinsics3.checkNotNullExpressionValue(defaultType, "builtIns.comparable.defaultType");

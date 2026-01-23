@@ -5,9 +5,9 @@ import com.discord.utilities.mg_recycler.MGRecyclerAdapter;
 import com.discord.widgets.servers.WidgetServerSettingsRolesAdapter;
 import java.util.Objects;
 
-/* compiled from: WidgetServerSettingsRolesAdapter.kt */
-/* renamed from: com.discord.widgets.servers.WidgetServerSettingsRolesAdapter$RoleListItem$onConfigure$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.servers.WidgetServerSettingsRolesAdapter$RoleListItem$onConfigure$1, reason: use source file name */
+/* JADX INFO: compiled from: WidgetServerSettingsRolesAdapter.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetServerSettingsRolesAdapter3 implements View.OnClickListener {
     public final /* synthetic */ WidgetServerSettingsRolesAdapter.RoleItem $roleItem;
     public final /* synthetic */ WidgetServerSettingsRolesAdapter.RoleListItem this$0;

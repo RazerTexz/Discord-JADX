@@ -7,21 +7,21 @@ import p007b.p225i.p226a.p228b.p231j.EventInternal;
 import p007b.p225i.p226a.p228b.p231j.TransportContext;
 import p007b.p225i.p226a.p228b.p231j.p232q.TransportBackend;
 
-/* compiled from: DefaultScheduler.java */
-/* renamed from: b.i.a.b.j.t.a, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.b.j.t.a, reason: use source file name */
+/* JADX INFO: compiled from: DefaultScheduler.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final /* synthetic */ class DefaultScheduler implements Runnable {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final DefaultScheduler3 f5329j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final TransportContext f5330k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final TransportScheduleCallback f5331l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public final EventInternal f5332m;
 
     public DefaultScheduler(DefaultScheduler3 defaultScheduler3, TransportContext transportContext, TransportScheduleCallback transportScheduleCallback, EventInternal eventInternal) {

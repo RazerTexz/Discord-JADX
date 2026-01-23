@@ -30,30 +30,30 @@ import p507d0.p592z.p594d.Lambda;
 import p507d0.p592z.p594d.Reflection2;
 import p658rx.Observable;
 
-/* compiled from: WidgetServerSettingsEmptyGuildRoleSubscriptions.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetServerSettingsEmptyGuildRoleSubscriptions.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetServerSettingsEmptyGuildRoleSubscriptions extends AppFragment {
     public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetServerSettingsEmptyGuildRoleSubscriptions.class, "binding", "getBinding()Lcom/discord/databinding/WidgetServerSettingsEmptyGuildRoleSubscriptionBinding;", 0)};
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
 
-    /* renamed from: SERVER_SETTINGS_EMPTY_GUILD_ROLE_SUBSCRIPTIONS_VIEW_FLIPPER_LOADED_STATE */
+    /* JADX INFO: renamed from: SERVER_SETTINGS_EMPTY_GUILD_ROLE_SUBSCRIPTIONS_VIEW_FLIPPER_LOADED_STATE */
     private static final int f19391x695af06c = 1;
 
-    /* renamed from: SERVER_SETTINGS_EMPTY_GUILD_ROLE_SUBSCRIPTIONS_VIEW_FLIPPER_LOADING_STATE */
+    /* JADX INFO: renamed from: SERVER_SETTINGS_EMPTY_GUILD_ROLE_SUBSCRIPTIONS_VIEW_FLIPPER_LOADING_STATE */
     private static final int f19392x40bf7979 = 0;
 
-    /* renamed from: binding$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
 
-    /* renamed from: guildId$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: guildId$delegate, reason: from kotlin metadata */
     private final Lazy guildId;
 
-    /* renamed from: viewModel$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: viewModel$delegate, reason: from kotlin metadata */
     private final Lazy viewModel;
 
-    /* compiled from: WidgetServerSettingsEmptyGuildRoleSubscriptions.kt */
+    /* JADX INFO: compiled from: WidgetServerSettingsEmptyGuildRoleSubscriptions.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -70,8 +70,8 @@ public final class WidgetServerSettingsEmptyGuildRoleSubscriptions extends AppFr
         }
     }
 
-    /* compiled from: WidgetServerSettingsEmptyGuildRoleSubscriptions.kt */
-    /* renamed from: com.discord.widgets.servers.guild_role_subscription.WidgetServerSettingsEmptyGuildRoleSubscriptions$onViewBound$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.guild_role_subscription.WidgetServerSettingsEmptyGuildRoleSubscriptions$onViewBound$1 */
+    /* JADX INFO: compiled from: WidgetServerSettingsEmptyGuildRoleSubscriptions.kt */
     public static final class ViewOnClickListenerC94521 implements View.OnClickListener {
         public ViewOnClickListenerC94521() {
         }
@@ -83,8 +83,8 @@ public final class WidgetServerSettingsEmptyGuildRoleSubscriptions extends AppFr
         }
     }
 
-    /* compiled from: WidgetServerSettingsEmptyGuildRoleSubscriptions.kt */
-    /* renamed from: com.discord.widgets.servers.guild_role_subscription.WidgetServerSettingsEmptyGuildRoleSubscriptions$onViewBoundOrOnResume$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.guild_role_subscription.WidgetServerSettingsEmptyGuildRoleSubscriptions$onViewBoundOrOnResume$1 */
+    /* JADX INFO: compiled from: WidgetServerSettingsEmptyGuildRoleSubscriptions.kt */
     public static final class C94531 extends Lambda implements Function1<ServerSettingsEmptyGuildRoleSubscriptionsViewModel.ViewState, Unit> {
         public C94531() {
             super(1);
@@ -96,7 +96,7 @@ public final class WidgetServerSettingsEmptyGuildRoleSubscriptions extends AppFr
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(ServerSettingsEmptyGuildRoleSubscriptionsViewModel.ViewState viewState) {
             WidgetServerSettingsEmptyGuildRoleSubscriptions widgetServerSettingsEmptyGuildRoleSubscriptions = WidgetServerSettingsEmptyGuildRoleSubscriptions.this;
             Intrinsics3.checkNotNullExpressionValue(viewState, "it");

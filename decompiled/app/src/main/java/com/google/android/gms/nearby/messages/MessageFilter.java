@@ -15,29 +15,29 @@ import java.util.Objects;
 import p007b.p085c.p086a.p087a0.AnimatableValueParser;
 import p007b.p225i.p226a.p288f.p333j.p334b.C4323g;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public class MessageFilter extends AbstractSafeParcelable {
     public static final Parcelable.Creator<MessageFilter> CREATOR = new C4323g();
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static final MessageFilter f20718j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final int f20719k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final List<zzad> f20720l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public final List<zzgu> f20721m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public final boolean f20722n;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public final List<zzgp> f20723o;
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public final int f20724p;
 
     static {

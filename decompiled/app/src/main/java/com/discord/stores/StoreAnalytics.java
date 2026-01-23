@@ -79,8 +79,8 @@ import p637j0.p642l.p647e.ScalarSynchronousObservable;
 import p658rx.Observable;
 import p658rx.subjects.PublishSubject;
 
-/* compiled from: StoreAnalytics.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: StoreAnalytics.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class StoreAnalytics extends Store {
     private String analyticsToken;
     private String authToken;
@@ -93,7 +93,7 @@ public final class StoreAnalytics extends Store {
     private Channel selectedVoiceChannel;
     private final StoreStream stores;
 
-    /* compiled from: StoreAnalytics.kt */
+    /* JADX INFO: compiled from: StoreAnalytics.kt */
     public static final /* data */ class ScreenViewed {
         private final Class<? extends AppComponent> screen;
         private final long timestamp;
@@ -119,7 +119,7 @@ public final class StoreAnalytics extends Store {
             return this.screen;
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final long getTimestamp() {
             return this.timestamp;
         }
@@ -179,13 +179,13 @@ public final class StoreAnalytics extends Store {
         }
     }
 
-    /* compiled from: StoreAnalytics.kt */
-    /* renamed from: com.discord.stores.StoreAnalytics$ackMessage$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreAnalytics$ackMessage$1 */
+    /* JADX INFO: compiled from: StoreAnalytics.kt */
     public static final class C56751 extends Lambda implements Function0<Unit> {
         public final /* synthetic */ long $channelId;
 
-        /* compiled from: StoreAnalytics.kt */
-        /* renamed from: com.discord.stores.StoreAnalytics$ackMessage$1$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.stores.StoreAnalytics$ackMessage$1$1, reason: invalid class name */
+        /* JADX INFO: compiled from: StoreAnalytics.kt */
         public static final class AnonymousClass1 extends Lambda implements Function0<Map<String, ? extends Object>> {
             public final /* synthetic */ Map $properties;
 
@@ -201,7 +201,7 @@ public final class StoreAnalytics extends Store {
             }
 
             @Override // kotlin.jvm.functions.Function0
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final Map<String, ? extends Object> invoke2() {
                 return this.$properties;
             }
@@ -219,7 +219,7 @@ public final class StoreAnalytics extends Store {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             Channel channelFindChannelByIdInternal$app_productionGoogleRelease = StoreAnalytics.access$getStores$p(StoreAnalytics.this).getChannels().findChannelByIdInternal$app_productionGoogleRelease(this.$channelId);
             if (channelFindChannelByIdInternal$app_productionGoogleRelease != null) {
@@ -228,8 +228,8 @@ public final class StoreAnalytics extends Store {
         }
     }
 
-    /* compiled from: StoreAnalytics.kt */
-    /* renamed from: com.discord.stores.StoreAnalytics$init$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreAnalytics$init$1 */
+    /* JADX INFO: compiled from: StoreAnalytics.kt */
     public static final class C56761 extends Lambda implements Function1<MediaEngineConnection.InputMode, Unit> {
         public C56761() {
             super(1);
@@ -241,15 +241,15 @@ public final class StoreAnalytics extends Store {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(MediaEngineConnection.InputMode inputMode) {
             Intrinsics3.checkNotNullParameter(inputMode, "it");
             StoreAnalytics.access$setInputMode$p(StoreAnalytics.this, inputMode.toString());
         }
     }
 
-    /* compiled from: StoreAnalytics.kt */
-    /* renamed from: com.discord.stores.StoreAnalytics$init$2 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreAnalytics$init$2 */
+    /* JADX INFO: compiled from: StoreAnalytics.kt */
     public static final class C56772 extends Lambda implements Function1<Channel, Unit> {
         public C56772() {
             super(1);
@@ -261,19 +261,19 @@ public final class StoreAnalytics extends Store {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Channel channel) {
             StoreAnalytics.access$setSelectedVoiceChannel$p(StoreAnalytics.this, channel);
         }
     }
 
-    /* compiled from: StoreAnalytics.kt */
-    /* renamed from: com.discord.stores.StoreAnalytics$init$3 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreAnalytics$init$3 */
+    /* JADX INFO: compiled from: StoreAnalytics.kt */
     public static final class C56783<T, R> implements Func1<ScreenViewed, Observable<? extends ScreenViewed>> {
         public static final C56783 INSTANCE = new C56783();
 
-        /* compiled from: StoreAnalytics.kt */
-        /* renamed from: com.discord.stores.StoreAnalytics$init$3$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.stores.StoreAnalytics$init$3$1, reason: invalid class name */
+        /* JADX INFO: compiled from: StoreAnalytics.kt */
         public static final class AnonymousClass1<T, R> implements Func1<Long, ScreenViewed> {
             public final /* synthetic */ ScreenViewed $screenViewed;
 
@@ -286,7 +286,7 @@ public final class StoreAnalytics extends Store {
                 return call2(l);
             }
 
-            /* renamed from: call, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
             public final ScreenViewed call2(Long l) {
                 return this.$screenViewed;
             }
@@ -297,14 +297,14 @@ public final class StoreAnalytics extends Store {
             return call2(screenViewed);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final Observable<? extends ScreenViewed> call2(ScreenViewed screenViewed) {
             return Intrinsics3.areEqual(screenViewed.getScreen(), WidgetHome.class) ? Observable.m11068d0(2L, TimeUnit.SECONDS).m11083G(new AnonymousClass1(screenViewed)) : new ScalarSynchronousObservable(screenViewed);
         }
     }
 
-    /* compiled from: StoreAnalytics.kt */
-    /* renamed from: com.discord.stores.StoreAnalytics$init$4 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreAnalytics$init$4 */
+    /* JADX INFO: compiled from: StoreAnalytics.kt */
     public static final /* synthetic */ class C56794 extends FunctionReferenceImpl implements Function1<ScreenViewed, Unit> {
         public C56794(StoreAnalytics storeAnalytics) {
             super(1, storeAnalytics, StoreAnalytics.class, "onScreenViewed", "onScreenViewed(Lcom/discord/stores/StoreAnalytics$ScreenViewed;)V", 0);
@@ -316,15 +316,15 @@ public final class StoreAnalytics extends Store {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(ScreenViewed screenViewed) {
             Intrinsics3.checkNotNullParameter(screenViewed, "p1");
             StoreAnalytics.access$onScreenViewed((StoreAnalytics) this.receiver, screenViewed);
         }
     }
 
-    /* compiled from: StoreAnalytics.kt */
-    /* renamed from: com.discord.stores.StoreAnalytics$onGuildSettingsPaneViewed$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreAnalytics$onGuildSettingsPaneViewed$1 */
+    /* JADX INFO: compiled from: StoreAnalytics.kt */
     public static final class C56801 extends Lambda implements Function0<Unit> {
         public final /* synthetic */ long $guildId;
         public final /* synthetic */ String $pane;
@@ -342,14 +342,14 @@ public final class StoreAnalytics extends Store {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             AnalyticsTracker.INSTANCE.settingsPaneViewed("guild", this.$pane, StoreAnalytics.access$getGuildAnalyticsPropertiesInternal(StoreAnalytics.this, this.$guildId));
         }
     }
 
-    /* compiled from: StoreAnalytics.kt */
-    /* renamed from: com.discord.stores.StoreAnalytics$onNotificationSettingsUpdated$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreAnalytics$onNotificationSettingsUpdated$1 */
+    /* JADX INFO: compiled from: StoreAnalytics.kt */
     public static final class C56811 extends Lambda implements Function0<Unit> {
         public final /* synthetic */ Long $channelId;
         public final /* synthetic */ ModelNotificationSettings $notifSettings;
@@ -369,7 +369,7 @@ public final class StoreAnalytics extends Store {
 
         /* JADX WARN: Removed duplicated region for block: B:19:0x0047  */
         /* JADX WARN: Removed duplicated region for block: B:21:0x004a  */
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         /*
             Code decompiled incorrectly, please refer to instructions dump.
         */
@@ -407,8 +407,8 @@ public final class StoreAnalytics extends Store {
         }
     }
 
-    /* compiled from: StoreAnalytics.kt */
-    /* renamed from: com.discord.stores.StoreAnalytics$onOverlayVoiceEvent$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreAnalytics$onOverlayVoiceEvent$1 */
+    /* JADX INFO: compiled from: StoreAnalytics.kt */
     public static final class C56821 extends Lambda implements Function0<Unit> {
         public final /* synthetic */ boolean $isActive;
 
@@ -424,7 +424,7 @@ public final class StoreAnalytics extends Store {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             Map<String, String> mapEmptyMap;
             RtcConnection rtcConnection$app_productionGoogleRelease = StoreAnalytics.access$getStores$p(StoreAnalytics.this).getRtcConnection().getRtcConnection();
@@ -450,8 +450,8 @@ public final class StoreAnalytics extends Store {
         }
     }
 
-    /* compiled from: StoreAnalytics.kt */
-    /* renamed from: com.discord.stores.StoreAnalytics$onScreenViewed$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreAnalytics$onScreenViewed$1 */
+    /* JADX INFO: compiled from: StoreAnalytics.kt */
     public static final class C56831 extends Lambda implements Function0<Unit> {
         public final /* synthetic */ ScreenViewed $screenViewed;
 
@@ -467,7 +467,7 @@ public final class StoreAnalytics extends Store {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             Class<? extends AppComponent> screen = this.$screenViewed.getScreen();
             String simpleName = Intrinsics3.areEqual(screen, WidgetHome.class) ? StoreAnalytics.access$getStores$p(StoreAnalytics.this).getGuildSelected().getSelectedGuildId() == 0 ? "private_channel" : "guild" : Intrinsics3.areEqual(screen, WidgetGuildInvite.class) ? "invite" : Intrinsics3.areEqual(screen, WidgetIncomingShare.class) ? AnalyticsTracker.ATTACHMENT_SOURCE_SHARE : Intrinsics3.areEqual(screen, WidgetAuthLanding.class) ? "app_landing" : this.$screenViewed.getScreen().getSimpleName();
@@ -477,8 +477,8 @@ public final class StoreAnalytics extends Store {
         }
     }
 
-    /* compiled from: StoreAnalytics.kt */
-    /* renamed from: com.discord.stores.StoreAnalytics$onThreadNotificationSettingsUpdated$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreAnalytics$onThreadNotificationSettingsUpdated$1 */
+    /* JADX INFO: compiled from: StoreAnalytics.kt */
     public static final class C56841 extends Lambda implements Function0<Unit> {
         public final /* synthetic */ long $channelId;
         public final /* synthetic */ int $flags;
@@ -500,7 +500,7 @@ public final class StoreAnalytics extends Store {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             Channel channelFindChannelByIdInternal$app_productionGoogleRelease;
             ModelNotificationSettings modelNotificationSettings;
@@ -518,8 +518,8 @@ public final class StoreAnalytics extends Store {
         }
     }
 
-    /* compiled from: StoreAnalytics.kt */
-    /* renamed from: com.discord.stores.StoreAnalytics$trackCallReportProblem$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreAnalytics$trackCallReportProblem$1 */
+    /* JADX INFO: compiled from: StoreAnalytics.kt */
     public static final class C56851 extends Lambda implements Function0<Unit> {
         public final /* synthetic */ PendingFeedback.CallFeedback $pendingCallFeedback;
 
@@ -535,7 +535,7 @@ public final class StoreAnalytics extends Store {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             long id2 = StoreAnalytics.access$getStores$p(StoreAnalytics.this).getUsers().getMe().getId();
             Channel channelFindChannelByIdInternal$app_productionGoogleRelease = StoreAnalytics.access$getStores$p(StoreAnalytics.this).getChannels().findChannelByIdInternal$app_productionGoogleRelease(this.$pendingCallFeedback.getChannelId());
@@ -553,8 +553,8 @@ public final class StoreAnalytics extends Store {
         }
     }
 
-    /* compiled from: StoreAnalytics.kt */
-    /* renamed from: com.discord.stores.StoreAnalytics$trackGuildViewed$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreAnalytics$trackGuildViewed$1 */
+    /* JADX INFO: compiled from: StoreAnalytics.kt */
     public static final class C56861 extends Lambda implements Function0<Map<String, ? extends Object>> {
         public final /* synthetic */ Map $properties;
 
@@ -570,14 +570,14 @@ public final class StoreAnalytics extends Store {
         }
 
         @Override // kotlin.jvm.functions.Function0
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final Map<String, ? extends Object> invoke2() {
             return this.$properties;
         }
     }
 
-    /* compiled from: StoreAnalytics.kt */
-    /* renamed from: com.discord.stores.StoreAnalytics$trackMediaSessionJoined$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreAnalytics$trackMediaSessionJoined$1 */
+    /* JADX INFO: compiled from: StoreAnalytics.kt */
     public static final class C56871 extends Lambda implements Function0<Unit> {
         public final /* synthetic */ Map $properties;
 
@@ -593,14 +593,14 @@ public final class StoreAnalytics extends Store {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             AnalyticsTracker.INSTANCE.mediaSessionJoined(this.$properties, StoreAnalytics.access$getStores$p(StoreAnalytics.this).getChannels().findChannelByIdInternal$app_productionGoogleRelease(StoreAnalytics.access$getStores$p(StoreAnalytics.this).getVoiceChannelSelected().getLastSelectedVoiceChannelId()));
         }
     }
 
-    /* compiled from: StoreAnalytics.kt */
-    /* renamed from: com.discord.stores.StoreAnalytics$trackOpenGiftAcceptModal$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreAnalytics$trackOpenGiftAcceptModal$1 */
+    /* JADX INFO: compiled from: StoreAnalytics.kt */
     public static final class C56881 extends Lambda implements Function0<Unit> {
         public final /* synthetic */ long $channelId;
         public final /* synthetic */ String $giftCode;
@@ -620,7 +620,7 @@ public final class StoreAnalytics extends Store {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             StoreGifting.GiftState giftState = StoreAnalytics.access$getStores$p(StoreAnalytics.this).getGifting().getKnownGifts().get(this.$giftCode);
             ModelGift gift = giftState instanceof StoreGifting.GiftState.Resolved ? ((StoreGifting.GiftState.Resolved) giftState).getGift() : giftState instanceof StoreGifting.GiftState.Redeeming ? ((StoreGifting.GiftState.Redeeming) giftState).getGift() : giftState instanceof StoreGifting.GiftState.RedeemedFailed ? ((StoreGifting.GiftState.RedeemedFailed) giftState).getGift() : null;
@@ -630,8 +630,8 @@ public final class StoreAnalytics extends Store {
         }
     }
 
-    /* compiled from: StoreAnalytics.kt */
-    /* renamed from: com.discord.stores.StoreAnalytics$trackShowCallFeedbackSheet$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreAnalytics$trackShowCallFeedbackSheet$1 */
+    /* JADX INFO: compiled from: StoreAnalytics.kt */
     public static final class C56891 extends Lambda implements Function0<Unit> {
         public final /* synthetic */ long $channelId;
 
@@ -647,7 +647,7 @@ public final class StoreAnalytics extends Store {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             Channel channelFindChannelByIdInternal$app_productionGoogleRelease = StoreAnalytics.access$getStores$p(StoreAnalytics.this).getChannels().findChannelByIdInternal$app_productionGoogleRelease(this.$channelId);
             if (channelFindChannelByIdInternal$app_productionGoogleRelease != null) {
@@ -656,8 +656,8 @@ public final class StoreAnalytics extends Store {
         }
     }
 
-    /* compiled from: StoreAnalytics.kt */
-    /* renamed from: com.discord.stores.StoreAnalytics$trackVoiceAudioOutputModeSelected$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreAnalytics$trackVoiceAudioOutputModeSelected$1 */
+    /* JADX INFO: compiled from: StoreAnalytics.kt */
     public static final class C56901 extends Lambda implements Function0<Unit> {
         public final /* synthetic */ long $channelId;
         public final /* synthetic */ DiscordAudioManager.DeviceTypes $fromAudioOutputMode;
@@ -677,7 +677,7 @@ public final class StoreAnalytics extends Store {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             long id2 = StoreAnalytics.access$getStores$p(StoreAnalytics.this).getUsers().getMe().getId();
             Channel channelFindChannelByIdInternal$app_productionGoogleRelease = StoreAnalytics.access$getStores$p(StoreAnalytics.this).getChannels().findChannelByIdInternal$app_productionGoogleRelease(this.$channelId);
@@ -688,8 +688,8 @@ public final class StoreAnalytics extends Store {
         }
     }
 
-    /* compiled from: StoreAnalytics.kt */
-    /* renamed from: com.discord.stores.StoreAnalytics$trackVoiceConnectionFailure$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreAnalytics$trackVoiceConnectionFailure$1 */
+    /* JADX INFO: compiled from: StoreAnalytics.kt */
     public static final class C56911 extends Lambda implements Function0<Unit> {
         public final /* synthetic */ Map $properties;
 
@@ -705,19 +705,19 @@ public final class StoreAnalytics extends Store {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             AnalyticsTracker.INSTANCE.voiceConnectionFailure(this.$properties, StoreAnalytics.access$getStores$p(StoreAnalytics.this).getChannels().findChannelByIdInternal$app_productionGoogleRelease(StoreAnalytics.access$getStores$p(StoreAnalytics.this).getVoiceChannelSelected().getSelectedVoiceChannelId()), StoreAnalytics.access$getStores$p(StoreAnalytics.this).getRtcRegion().getPreferredRegion());
         }
     }
 
-    /* compiled from: StoreAnalytics.kt */
-    /* renamed from: com.discord.stores.StoreAnalytics$trackVoiceConnectionSuccess$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreAnalytics$trackVoiceConnectionSuccess$1 */
+    /* JADX INFO: compiled from: StoreAnalytics.kt */
     public static final class C56921 extends Lambda implements Function0<Unit> {
         public final /* synthetic */ Map $properties;
 
-        /* compiled from: StoreAnalytics.kt */
-        /* renamed from: com.discord.stores.StoreAnalytics$trackVoiceConnectionSuccess$1$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.stores.StoreAnalytics$trackVoiceConnectionSuccess$1$1, reason: invalid class name */
+        /* JADX INFO: compiled from: StoreAnalytics.kt */
         public static final class AnonymousClass1 extends Lambda implements Function1<MediaEngine.AudioInfo, Unit> {
             public final /* synthetic */ Channel $channel;
 
@@ -733,7 +733,7 @@ public final class StoreAnalytics extends Store {
                 return Unit.f27425a;
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2(MediaEngine.AudioInfo audioInfo) {
                 Intrinsics3.checkNotNullParameter(audioInfo, "audioInfo");
                 AnalyticsTracker analyticsTracker = AnalyticsTracker.INSTANCE;
@@ -754,14 +754,14 @@ public final class StoreAnalytics extends Store {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.computationLatest(StoreAnalytics.access$getStores$p(StoreAnalytics.this).getMediaEngine().getMediaEngine().mo325e()), StoreAnalytics.this.getClass(), (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new AnonymousClass1(StoreAnalytics.access$getStores$p(StoreAnalytics.this).getChannels().findChannelByIdInternal$app_productionGoogleRelease(StoreAnalytics.access$getStores$p(StoreAnalytics.this).getVoiceChannelSelected().getSelectedVoiceChannelId())), 62, (Object) null);
         }
     }
 
-    /* compiled from: StoreAnalytics.kt */
-    /* renamed from: com.discord.stores.StoreAnalytics$trackVoiceDisconnect$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreAnalytics$trackVoiceDisconnect$1 */
+    /* JADX INFO: compiled from: StoreAnalytics.kt */
     public static final class C56931 extends Lambda implements Function0<Unit> {
         public final /* synthetic */ Map $properties;
 
@@ -777,7 +777,7 @@ public final class StoreAnalytics extends Store {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             AnalyticsTracker.INSTANCE.voiceDisconnect(this.$properties, StoreAnalytics.access$getStores$p(StoreAnalytics.this).getMediaSettings().getVoiceConfigurationBlocking(), StoreAnalytics.access$getStores$p(StoreAnalytics.this).getChannels().findChannelByIdInternal$app_productionGoogleRelease(StoreAnalytics.access$getStores$p(StoreAnalytics.this).getVoiceChannelSelected().getLastSelectedVoiceChannelId()), StoreAnalytics.access$getStores$p(StoreAnalytics.this).getRtcRegion().getPreferredRegion());
         }

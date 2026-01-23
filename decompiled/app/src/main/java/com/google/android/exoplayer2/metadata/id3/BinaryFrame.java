@@ -7,14 +7,14 @@ import java.util.Arrays;
 import p007b.p100d.p104b.p105a.outline;
 import p007b.p225i.p226a.p242c.p259f3.Util2;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public final class BinaryFrame extends Id3Frame {
     public static final Parcelable.Creator<BinaryFrame> CREATOR = new C10727a();
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final byte[] f19970k;
 
-    /* renamed from: com.google.android.exoplayer2.metadata.id3.BinaryFrame$a */
+    /* JADX INFO: renamed from: com.google.android.exoplayer2.metadata.id3.BinaryFrame$a */
     public class C10727a implements Parcelable.Creator<BinaryFrame> {
         @Override // android.os.Parcelable.Creator
         public BinaryFrame createFromParcel(Parcel parcel) {

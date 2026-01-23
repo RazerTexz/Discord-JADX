@@ -5,16 +5,16 @@ import com.facebook.common.references.SharedReference;
 import p007b.p085c.p086a.p087a0.AnimatableValueParser;
 import p007b.p109f.p115d.p120e.FLog;
 
-/* compiled from: DefaultCloseableReference.java */
-/* renamed from: b.f.d.h.a, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.f.d.h.a, reason: use source file name */
+/* JADX INFO: compiled from: DefaultCloseableReference.java */
+/* JADX INFO: loaded from: classes.dex */
 public class DefaultCloseableReference<T> extends CloseableReference<T> {
     public DefaultCloseableReference(SharedReference<T> sharedReference, CloseableReference.InterfaceC10637c interfaceC10637c, Throwable th) {
         super(sharedReference, interfaceC10637c, th);
     }
 
     @Override // com.facebook.common.references.CloseableReference
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public CloseableReference<T> mo999b() {
         AnimatableValueParser.m419B(m8643x());
         return new DefaultCloseableReference(this.f19443o, this.f19444p, this.f19445q != null ? new Throwable(this.f19445q) : null);

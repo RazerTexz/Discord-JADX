@@ -8,15 +8,15 @@ import kotlin.jvm.internal.Ref$ObjectRef;
 import p507d0.p592z.p594d.Intrinsics3;
 import p658rx.functions.Action1;
 
-/* compiled from: GuildExperimentDto.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: GuildExperimentDto.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class GuildExperimentOverridesDto$Parser$parse$1<T> implements Action1<String> {
     public final /* synthetic */ Ref$IntRef $bucket;
     public final /* synthetic */ Ref$ObjectRef $guildIds;
     public final /* synthetic */ Model.JsonReader $reader;
 
-    /* compiled from: GuildExperimentDto.kt */
-    /* renamed from: com.discord.models.experiments.dto.GuildExperimentOverridesDto$Parser$parse$1$1 */
+    /* JADX INFO: renamed from: com.discord.models.experiments.dto.GuildExperimentOverridesDto$Parser$parse$1$1 */
+    /* JADX INFO: compiled from: GuildExperimentDto.kt */
     public static final class C55591<T> implements Model.JsonReader.ItemFactory<Long> {
         public C55591() {
         }
@@ -44,7 +44,7 @@ public final class GuildExperimentOverridesDto$Parser$parse$1<T> implements Acti
         call2(str);
     }
 
-    /* renamed from: call, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
     public final void call2(String str) {
         if (str == null) {
             return;

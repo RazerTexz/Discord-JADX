@@ -10,9 +10,9 @@ import com.discord.widgets.chat.MessageManager;
 import java.util.List;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: WidgetChatOverlay.kt */
-/* renamed from: com.discord.widgets.chat.overlay.WidgetChatOverlay$configureStickerSuggestions$$inlined$forEachIndexed$lambda$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.chat.overlay.WidgetChatOverlay$configureStickerSuggestions$$inlined$forEachIndexed$lambda$1, reason: use source file name */
+/* JADX INFO: compiled from: WidgetChatOverlay.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetChatOverlay7 implements View.OnClickListener {
     public final /* synthetic */ Sticker $matchedSticker$inlined;
     public final /* synthetic */ boolean $shouldClearTextOnSend$inlined;

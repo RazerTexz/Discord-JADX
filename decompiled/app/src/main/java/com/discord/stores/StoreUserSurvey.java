@@ -27,8 +27,8 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 import p658rx.Observable;
 
-/* compiled from: StoreUserSurvey.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: StoreUserSurvey.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class StoreUserSurvey extends StoreV2 {
     private final Clock clock;
     private final Dispatcher dispatcher;
@@ -41,8 +41,8 @@ public final class StoreUserSurvey extends StoreV2 {
     private final StoreUser storeUser;
     private UserSurvey userSurvey;
 
-    /* compiled from: StoreUserSurvey.kt */
-    /* renamed from: com.discord.stores.StoreUserSurvey$fetchUserSurvey$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreUserSurvey$fetchUserSurvey$1 */
+    /* JADX INFO: compiled from: StoreUserSurvey.kt */
     public static final class C66071 extends Lambda implements Function1<UserSurvey3, TrackNetworkMetadata2> {
         public static final C66071 INSTANCE = new C66071();
 
@@ -55,19 +55,19 @@ public final class StoreUserSurvey extends StoreV2 {
             return invoke2(userSurvey3);
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final TrackNetworkMetadata2 invoke2(UserSurvey3 userSurvey3) {
             UserSurvey survey;
             return new TrackNetworkActionUserSurveyFetch((userSurvey3 == null || (survey = userSurvey3.getSurvey()) == null) ? null : survey.getKey());
         }
     }
 
-    /* compiled from: StoreUserSurvey.kt */
-    /* renamed from: com.discord.stores.StoreUserSurvey$fetchUserSurvey$2 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreUserSurvey$fetchUserSurvey$2 */
+    /* JADX INFO: compiled from: StoreUserSurvey.kt */
     public static final class C66082 extends Lambda implements Function1<UserSurvey3, Unit> {
 
-        /* compiled from: StoreUserSurvey.kt */
-        /* renamed from: com.discord.stores.StoreUserSurvey$fetchUserSurvey$2$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.stores.StoreUserSurvey$fetchUserSurvey$2$1, reason: invalid class name */
+        /* JADX INFO: compiled from: StoreUserSurvey.kt */
         public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
             public final /* synthetic */ UserSurvey3 $res;
 
@@ -83,7 +83,7 @@ public final class StoreUserSurvey extends StoreV2 {
                 return Unit.f27425a;
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2() {
                 StoreUserSurvey.access$handleUserSurveyFetchSuccess(StoreUserSurvey.this, this.$res);
             }
@@ -99,15 +99,15 @@ public final class StoreUserSurvey extends StoreV2 {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(UserSurvey3 userSurvey3) {
             Intrinsics3.checkNotNullParameter(userSurvey3, "res");
             StoreUserSurvey.access$getDispatcher$p(StoreUserSurvey.this).schedule(new AnonymousClass1(userSurvey3));
         }
     }
 
-    /* compiled from: StoreUserSurvey.kt */
-    /* renamed from: com.discord.stores.StoreUserSurvey$observeUserSurvey$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreUserSurvey$observeUserSurvey$1 */
+    /* JADX INFO: compiled from: StoreUserSurvey.kt */
     public static final class C66091 extends Lambda implements Function0<UserSurvey> {
         public C66091() {
             super(0);

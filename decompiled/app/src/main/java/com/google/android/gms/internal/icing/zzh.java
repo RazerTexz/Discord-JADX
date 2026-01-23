@@ -8,21 +8,21 @@ import java.util.Arrays;
 import p007b.p085c.p086a.p087a0.AnimatableValueParser;
 import p007b.p225i.p226a.p288f.p313h.p324k.C3568m;
 
-/* compiled from: com.google.firebase:firebase-appindexing@@19.1.0 */
-/* loaded from: classes3.dex */
+/* JADX INFO: compiled from: com.google.firebase:firebase-appindexing@@19.1.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public final class zzh extends AbstractSafeParcelable {
     public static final Parcelable.Creator<zzh> CREATOR = new C3568m();
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final zzk[] f20585j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final String f20586k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final boolean f20587l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public final Account f20588m;
 
     public zzh(zzk[] zzkVarArr, String str, boolean z2, Account account) {

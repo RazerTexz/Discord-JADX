@@ -5,19 +5,19 @@ import android.graphics.Matrix;
 import android.graphics.Rect;
 import android.graphics.drawable.Drawable;
 
-/* compiled from: MatrixDrawable.java */
-/* renamed from: b.f.g.e.h, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.f.g.e.h, reason: use source file name */
+/* JADX INFO: compiled from: MatrixDrawable.java */
+/* JADX INFO: loaded from: classes.dex */
 public class MatrixDrawable extends ForwardingDrawable {
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public int f3363n;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public int f3364o;
 
     @Override // p007b.p109f.p132g.p142e.ForwardingDrawable, p007b.p109f.p132g.p142e.TransformCallback
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public void mo1096d(Matrix matrix) {
         m1103n(matrix);
     }
@@ -34,7 +34,7 @@ public class MatrixDrawable extends ForwardingDrawable {
     }
 
     @Override // p007b.p109f.p132g.p142e.ForwardingDrawable
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public Drawable mo1104o(Drawable drawable) {
         Drawable drawableMo1104o = super.mo1104o(drawable);
         m1105p();
@@ -50,7 +50,7 @@ public class MatrixDrawable extends ForwardingDrawable {
         m1105p();
     }
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public final void m1105p() {
         Drawable drawable = this.f3360k;
         Rect bounds = getBounds();

@@ -1,11 +1,11 @@
 package org.objectweb.asm;
 
-/* loaded from: discord-126021.apk:org/objectweb/asm/MethodVisitor.SCL.lombok */
+/* JADX INFO: loaded from: discord-126021.apk:org/objectweb/asm/MethodVisitor.SCL.lombok */
 public abstract class MethodVisitor {
     private static final String REQUIRES_ASM5 = "This feature requires ASM5";
     protected final int api;
 
-    /* renamed from: mv */
+    /* JADX INFO: renamed from: mv */
     protected MethodVisitor f27600mv;
 
     public MethodVisitor(int api) {

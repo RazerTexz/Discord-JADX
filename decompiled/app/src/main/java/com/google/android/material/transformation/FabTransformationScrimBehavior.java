@@ -17,8 +17,8 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import java.util.ArrayList;
 import java.util.List;
 
+/* JADX INFO: loaded from: classes3.dex */
 @Deprecated
-/* loaded from: classes3.dex */
 public class FabTransformationScrimBehavior extends ExpandableTransformationBehavior {
     public static final long COLLAPSE_DELAY = 0;
     public static final long COLLAPSE_DURATION = 150;
@@ -27,13 +27,13 @@ public class FabTransformationScrimBehavior extends ExpandableTransformationBeha
     private final MotionTiming collapseTiming;
     private final MotionTiming expandTiming;
 
-    /* renamed from: com.google.android.material.transformation.FabTransformationScrimBehavior$a */
+    /* JADX INFO: renamed from: com.google.android.material.transformation.FabTransformationScrimBehavior$a */
     public class C11039a extends AnimatorListenerAdapter {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final /* synthetic */ boolean f21250a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final /* synthetic */ View f21251b;
 
         public C11039a(FabTransformationScrimBehavior fabTransformationScrimBehavior, boolean z2, View view) {

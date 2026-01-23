@@ -7,22 +7,22 @@ import androidx.viewbinding.ViewBinding;
 import com.discord.utilities.view.text.LinkifiedTextView;
 import com.discord.views.LoadingButton;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public final class WidgetThreadStatusBinding implements ViewBinding {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     @NonNull
     public final ConstraintLayout f18289a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     @NonNull
     public final ConstraintLayout f18290b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     @NonNull
     public final LoadingButton f18291c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     @NonNull
     public final LinkifiedTextView f18292d;
 

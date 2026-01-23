@@ -6,18 +6,18 @@ import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
-/* compiled from: JsonSetter.java */
+/* JADX INFO: renamed from: b.g.a.a.z, reason: use source file name */
+/* JADX INFO: compiled from: JsonSetter.java */
+/* JADX INFO: loaded from: classes3.dex */
 @Target({ElementType.ANNOTATION_TYPE, ElementType.FIELD, ElementType.METHOD, ElementType.PARAMETER})
 @Retention(RetentionPolicy.RUNTIME)
-/* renamed from: b.g.a.a.z, reason: use source file name */
-/* loaded from: classes3.dex */
 public @interface JsonSetter {
 
-    /* compiled from: JsonSetter.java */
-    /* renamed from: b.g.a.a.z$a */
+    /* JADX INFO: renamed from: b.g.a.a.z$a */
+    /* JADX INFO: compiled from: JsonSetter.java */
     public static class a implements Serializable {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public static final a f4443j;
         private static final long serialVersionUID = 1;
         private final Nulls _contentNulls;
@@ -33,7 +33,7 @@ public @interface JsonSetter {
             this._contentNulls = nulls2;
         }
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public Nulls m1620a() {
             Nulls nulls = this._contentNulls;
             if (nulls == Nulls.DEFAULT) {
@@ -42,7 +42,7 @@ public @interface JsonSetter {
             return nulls;
         }
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public Nulls m1621b() {
             Nulls nulls = this._nulls;
             if (nulls == Nulls.DEFAULT) {

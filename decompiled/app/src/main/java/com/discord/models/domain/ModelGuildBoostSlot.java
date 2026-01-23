@@ -4,8 +4,8 @@ import com.discord.utilities.time.TimeUtils;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ModelGuildBoostSlot.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: ModelGuildBoostSlot.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class ModelGuildBoostSlot {
     private final boolean canceled;
     private final String cooldownEndsAt;
@@ -21,7 +21,7 @@ public final /* data */ class ModelGuildBoostSlot {
         this.canceled = z2;
     }
 
-    /* renamed from: component1, reason: from getter */
+    /* JADX INFO: renamed from: component1, reason: from getter */
     private final String getCooldownEndsAt() {
         return this.cooldownEndsAt;
     }
@@ -48,22 +48,22 @@ public final /* data */ class ModelGuildBoostSlot {
         return modelGuildBoostSlot.copy(str, j3, j4, modelAppliedGuildBoost2, z2);
     }
 
-    /* renamed from: component2, reason: from getter */
+    /* JADX INFO: renamed from: component2, reason: from getter */
     public final long getId() {
         return this.id;
     }
 
-    /* renamed from: component3, reason: from getter */
+    /* JADX INFO: renamed from: component3, reason: from getter */
     public final long getSubscriptionId() {
         return this.subscriptionId;
     }
 
-    /* renamed from: component4, reason: from getter */
+    /* JADX INFO: renamed from: component4, reason: from getter */
     public final ModelAppliedGuildBoost getPremiumGuildSubscription() {
         return this.premiumGuildSubscription;
     }
 
-    /* renamed from: component5, reason: from getter */
+    /* JADX INFO: renamed from: component5, reason: from getter */
     public final boolean getCanceled() {
         return this.canceled;
     }
@@ -104,6 +104,9 @@ public final /* data */ class ModelGuildBoostSlot {
     }
 
     /* JADX WARN: Multi-variable type inference failed */
+    /* JADX WARN: Type inference failed for: r1v3, types: [int] */
+    /* JADX WARN: Type inference failed for: r1v4 */
+    /* JADX WARN: Type inference failed for: r1v6 */
     public int hashCode() {
         String str = this.cooldownEndsAt;
         int iHashCode = str != null ? str.hashCode() : 0;
@@ -114,11 +117,11 @@ public final /* data */ class ModelGuildBoostSlot {
         ModelAppliedGuildBoost modelAppliedGuildBoost = this.premiumGuildSubscription;
         int iHashCode2 = (i2 + (modelAppliedGuildBoost != null ? modelAppliedGuildBoost.hashCode() : 0)) * 31;
         boolean z2 = this.canceled;
-        int i3 = z2;
-        if (z2 != 0) {
-            i3 = 1;
+        ?? r1 = z2;
+        if (z2) {
+            r1 = 1;
         }
-        return iHashCode2 + i3;
+        return iHashCode2 + r1;
     }
 
     public String toString() {

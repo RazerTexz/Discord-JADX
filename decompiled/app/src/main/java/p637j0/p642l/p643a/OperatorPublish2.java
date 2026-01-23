@@ -21,19 +21,19 @@ import p658rx.Subscription;
 import p658rx.exceptions.MissingBackpressureException;
 import p658rx.functions.Action1;
 
-/* compiled from: OperatorPublish.java */
-/* renamed from: j0.l.a.h1, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: j0.l.a.h1, reason: use source file name */
+/* JADX INFO: compiled from: OperatorPublish.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class OperatorPublish2<T> extends ConnectableObservable<T> {
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final Observable<? extends T> f26830k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final AtomicReference<b<T>> f26831l;
 
-    /* compiled from: OperatorPublish.java */
-    /* renamed from: j0.l.a.h1$a */
+    /* JADX INFO: renamed from: j0.l.a.h1$a */
+    /* JADX INFO: compiled from: OperatorPublish.java */
     public static final class a<T> extends AtomicLong implements Producer, Subscription {
         private static final long serialVersionUID = -4453897557930727610L;
         public final Subscriber<? super T> child;
@@ -45,7 +45,7 @@ public final class OperatorPublish2<T> extends ConnectableObservable<T> {
             lazySet(-4611686018427387904L);
         }
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public long m10754a(long j) {
             long j2;
             long j3;
@@ -78,7 +78,7 @@ public final class OperatorPublish2<T> extends ConnectableObservable<T> {
         }
 
         @Override // p658rx.Producer
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public void mo10704j(long j) throws Throwable {
             long j2;
             long j3;
@@ -147,35 +147,35 @@ public final class OperatorPublish2<T> extends ConnectableObservable<T> {
         }
     }
 
-    /* compiled from: OperatorPublish.java */
-    /* renamed from: j0.l.a.h1$b */
+    /* JADX INFO: renamed from: j0.l.a.h1$b */
+    /* JADX INFO: compiled from: OperatorPublish.java */
     public static final class b<T> extends Subscriber<T> implements Subscription {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public static final a[] f26832j = new a[0];
 
-        /* renamed from: k */
+        /* JADX INFO: renamed from: k */
         public static final a[] f26833k = new a[0];
 
-        /* renamed from: l */
+        /* JADX INFO: renamed from: l */
         public final Queue<Object> f26834l;
 
-        /* renamed from: m */
+        /* JADX INFO: renamed from: m */
         public final AtomicReference<b<T>> f26835m;
 
-        /* renamed from: n */
+        /* JADX INFO: renamed from: n */
         public volatile Object f26836n;
 
-        /* renamed from: o */
+        /* JADX INFO: renamed from: o */
         public final AtomicReference<a[]> f26837o;
 
-        /* renamed from: p */
+        /* JADX INFO: renamed from: p */
         public final AtomicBoolean f26838p;
 
-        /* renamed from: q */
+        /* JADX INFO: renamed from: q */
         public boolean f26839q;
 
-        /* renamed from: r */
+        /* JADX INFO: renamed from: r */
         public boolean f26840r;
 
         public b(AtomicReference<b<T>> atomicReference) {
@@ -185,7 +185,7 @@ public final class OperatorPublish2<T> extends ConnectableObservable<T> {
             this.f26838p = new AtomicBoolean();
         }
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public boolean m10755a(Object obj, boolean z2) {
             int i = 0;
             if (obj != null) {
@@ -220,7 +220,7 @@ public final class OperatorPublish2<T> extends ConnectableObservable<T> {
             return false;
         }
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public void m10756b() throws Throwable {
             boolean z2;
             long j;
@@ -305,35 +305,34 @@ public final class OperatorPublish2<T> extends ConnectableObservable<T> {
                                     } catch (Throwable th2) {
                                         th = th2;
                                         z2 = true;
-                                        while (true) {
-                                            try {
-                                                throw th;
-                                            } catch (Throwable th3) {
-                                                th = th3;
-                                            }
-                                        }
                                     }
                                 }
-                            } catch (Throwable th4) {
-                                th = th4;
+                            } catch (Throwable th3) {
+                                th = th3;
                                 z2 = false;
+                            }
+                            while (true) {
+                                try {
+                                } catch (Throwable th4) {
+                                    th = th4;
+                                }
                             }
                         }
                         try {
                             throw th;
                         } catch (Throwable th5) {
                             th = th5;
-                            if (!z2) {
-                                synchronized (this) {
-                                    this.f26839q = false;
-                                }
-                            }
-                            throw th;
                         }
                     } catch (Throwable th6) {
                         th = th6;
                         z2 = false;
                     }
+                    if (!z2) {
+                        synchronized (this) {
+                            this.f26839q = false;
+                        }
+                    }
+                    throw th;
                 }
             }
         }
@@ -384,7 +383,7 @@ public final class OperatorPublish2<T> extends ConnectableObservable<T> {
     }
 
     @Override // p637j0.p650m.ConnectableObservable
-    /* renamed from: k0 */
+    /* JADX INFO: renamed from: k0 */
     public void mo10753k0(Action1<? super Subscription> action1) {
         b<T> bVar;
         while (true) {

@@ -8,9 +8,9 @@ import java.util.TreeSet;
 import p007b.p109f.p190m.DoNotOptimize;
 import p007b.p109f.p190m.MinElf2;
 
+/* JADX INFO: loaded from: classes3.dex */
 @DoNotOptimize
 @TargetApi(23)
-/* loaded from: classes3.dex */
 public final class SysUtil$MarshmallowSysdeps {
     private SysUtil$MarshmallowSysdeps() {
     }

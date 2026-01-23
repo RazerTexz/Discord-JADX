@@ -22,18 +22,18 @@ import p507d0.p580t.CollectionsJVM;
 import p507d0.p580t.Iterables2;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: LazyJavaTypeParameterDescriptor.kt */
-/* renamed from: d0.e0.p.d.m0.e.a.i0.l.s, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.e.a.i0.l.s, reason: use source file name */
+/* JADX INFO: compiled from: LazyJavaTypeParameterDescriptor.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class LazyJavaTypeParameterDescriptor extends AbstractLazyTypeParameterDescriptor {
 
-    /* renamed from: t */
+    /* JADX INFO: renamed from: t */
     public final context4 f23418t;
 
-    /* renamed from: u */
+    /* JADX INFO: renamed from: u */
     public final InterfaceC11592y f23419u;
 
-    /* renamed from: v */
+    /* JADX INFO: renamed from: v */
     public final LazyJavaAnnotations f23420v;
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -48,20 +48,20 @@ public final class LazyJavaTypeParameterDescriptor extends AbstractLazyTypeParam
     }
 
     @Override // p507d0.p513e0.p514p.p515d.p517m0.p521c.p524i1.AbstractTypeParameterDescriptor
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public List<KotlinType> mo9399b(List<? extends KotlinType> list) {
         Intrinsics3.checkNotNullParameter(list, "bounds");
         return this.f23418t.getComponents().getSignatureEnhancement().enhanceTypeParameterBounds(this, list, this.f23418t);
     }
 
     @Override // p507d0.p513e0.p514p.p515d.p517m0.p521c.p524i1.AbstractTypeParameterDescriptor
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public void mo9400c(KotlinType kotlinType) {
         Intrinsics3.checkNotNullParameter(kotlinType, "type");
     }
 
     @Override // p507d0.p513e0.p514p.p515d.p517m0.p521c.p524i1.AbstractTypeParameterDescriptor
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public List<KotlinType> mo9401d() {
         Collection<javaTypes3> upperBounds = this.f23419u.getUpperBounds();
         if (upperBounds.isEmpty()) {

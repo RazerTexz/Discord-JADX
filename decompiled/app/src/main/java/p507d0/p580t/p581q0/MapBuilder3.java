@@ -5,12 +5,12 @@ import java.util.Iterator;
 import java.util.Map;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: MapBuilder.kt */
-/* renamed from: d0.t.q0.d, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.t.q0.d, reason: use source file name */
+/* JADX INFO: compiled from: MapBuilder.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class MapBuilder3<K, V> extends MapBuilder<Map.Entry<K, V>, K, V> {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final MapBuilder2<K, V> f25216j;
 
     public MapBuilder3(MapBuilder2<K, V> mapBuilder2) {

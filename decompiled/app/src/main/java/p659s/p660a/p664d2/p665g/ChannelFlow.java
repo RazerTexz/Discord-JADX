@@ -23,29 +23,29 @@ import p659s.p660a.p663c2.Produce3;
 import p659s.p660a.p664d2.Flow3;
 import p659s.p660a.p664d2.FlowCollector;
 
-/* compiled from: ChannelFlow.kt */
-/* renamed from: s.a.d2.g.a, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: s.a.d2.g.a, reason: use source file name */
+/* JADX INFO: compiled from: ChannelFlow.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public abstract class ChannelFlow<T> implements Flow3 {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final CoroutineContext f27784a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final int f27785b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final BufferOverflow f27786c;
 
-    /* compiled from: ChannelFlow.kt */
+    /* JADX INFO: renamed from: s.a.d2.g.a$a */
+    /* JADX INFO: compiled from: ChannelFlow.kt */
     @DebugMetadata(m10084c = "kotlinx.coroutines.flow.internal.ChannelFlow$collect$2", m10085f = "ChannelFlow.kt", m10086l = {Opcodes.I2D}, m10087m = "invokeSuspend")
-    /* renamed from: s.a.d2.g.a$a */
     public static final class a extends ContinuationImpl6 implements Function2<CoroutineScope, Continuation<? super Unit>, Object> {
         public final /* synthetic */ FlowCollector $collector;
         public Object L$0;
         public int label;
 
-        /* renamed from: p$ */
+        /* JADX INFO: renamed from: p$ */
         private CoroutineScope f27787p$;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -113,13 +113,13 @@ public abstract class ChannelFlow<T> implements Flow3 {
     }
 
     @Override // p659s.p660a.p664d2.Flow3
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public Object mo11246a(FlowCollector<? super T> flowCollector, Continuation<? super Unit> continuation) throws Throwable {
         Object objM4225M = C3404f.m4225M(new a(flowCollector, null), continuation);
         return objM4225M == Intrinsics2.getCOROUTINE_SUSPENDED() ? objM4225M : Unit.f27425a;
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public abstract Object mo11248b(Produce<? super T> produce, Continuation<? super Unit> continuation);
 
     public String toString() {

@@ -4,9 +4,9 @@ import com.discord.models.domain.ModelAuditLogEntry;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: DeviceDescription.kt */
-/* renamed from: co.discord.media_engine.AudioOutputDeviceDescription, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: co.discord.media_engine.AudioOutputDeviceDescription, reason: use source file name */
+/* JADX INFO: compiled from: DeviceDescription.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class DeviceDescription2 {
     private final String guid;
     private final String name;
@@ -28,12 +28,12 @@ public final /* data */ class DeviceDescription2 {
         return deviceDescription2.copy(str, str2);
     }
 
-    /* renamed from: component1, reason: from getter */
+    /* JADX INFO: renamed from: component1, reason: from getter */
     public final String getName() {
         return this.name;
     }
 
-    /* renamed from: component2, reason: from getter */
+    /* JADX INFO: renamed from: component2, reason: from getter */
     public final String getGuid() {
         return this.guid;
     }

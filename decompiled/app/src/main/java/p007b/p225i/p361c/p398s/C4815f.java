@@ -15,21 +15,21 @@ import p007b.p225i.p226a.p288f.p340n.C4358c0;
 import p007b.p225i.p226a.p288f.p340n.C4374r;
 import p007b.p225i.p361c.p398s.ServiceConnectionC4812d0;
 
-/* compiled from: com.google.firebase:firebase-iid@@21.0.0 */
-/* renamed from: b.i.c.s.f */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.c.s.f */
+/* JADX INFO: compiled from: com.google.firebase:firebase-iid@@21.0.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public class C4815f {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final Object f12861a = new Object();
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static ServiceConnectionC4812d0 f12862b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final Context f12863c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final Executor f12864d;
 
     public C4815f(Context context) {
@@ -37,7 +37,7 @@ public class C4815f {
         this.f12864d = ExecutorC4805a.f12843j;
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static Task<Integer> m6724a(Context context, Intent intent) {
         ServiceConnectionC4812d0 serviceConnectionC4812d0;
         C4358c0<Void> c4358c0;
@@ -68,7 +68,7 @@ public class C4815f {
         return c4358c0.mo6014i(ExecutorC4816g.f12865j, C4811d.f12851a);
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public Task<Integer> m6725b(Intent intent) {
         String stringExtra = intent.getStringExtra("gcm.rawData64");
         if (stringExtra != null) {

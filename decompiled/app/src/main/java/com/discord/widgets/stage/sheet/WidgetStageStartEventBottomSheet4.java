@@ -3,9 +3,9 @@ package com.discord.widgets.stage.sheet;
 import kotlin.jvm.functions.Function0;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetStageStartEventBottomSheet.kt */
-/* renamed from: com.discord.widgets.stage.sheet.WidgetStageStartEventBottomSheet$viewModel$2, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.stage.sheet.WidgetStageStartEventBottomSheet$viewModel$2, reason: use source file name */
+/* JADX INFO: compiled from: WidgetStageStartEventBottomSheet.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetStageStartEventBottomSheet4 extends Lambda implements Function0<WidgetStageStartEventBottomSheetViewModel> {
     public final /* synthetic */ WidgetStageStartEventBottomSheet this$0;
 

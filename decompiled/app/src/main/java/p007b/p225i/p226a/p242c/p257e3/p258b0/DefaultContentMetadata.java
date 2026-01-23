@@ -11,25 +11,25 @@ import java.util.Map;
 import java.util.Objects;
 import p007b.p225i.p355b.p356a.Charsets;
 
-/* compiled from: DefaultContentMetadata.java */
-/* renamed from: b.i.a.c.e3.b0.n, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.e3.b0.n, reason: use source file name */
+/* JADX INFO: compiled from: DefaultContentMetadata.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class DefaultContentMetadata implements ContentMetadata2 {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final DefaultContentMetadata f6498a = new DefaultContentMetadata(Collections.emptyMap());
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public int f6499b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final Map<String, byte[]> f6500c;
 
     public DefaultContentMetadata() {
         this(Collections.emptyMap());
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static boolean m2816b(Map<String, byte[]> map, Map<String, byte[]> map2) {
         if (map.size() != map2.size()) {
             return false;
@@ -42,7 +42,7 @@ public final class DefaultContentMetadata implements ContentMetadata2 {
         return true;
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public DefaultContentMetadata m2817a(ContentMetadataMutations contentMetadataMutations) {
         byte[] bytes;
         HashMap map = new HashMap(this.f6500c);

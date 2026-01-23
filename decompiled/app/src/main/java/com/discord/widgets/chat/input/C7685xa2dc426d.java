@@ -5,9 +5,9 @@ import com.discord.models.member.GuildMember;
 import java.util.Map;
 import p637j0.p641k.Func1;
 
-/* compiled from: ChatInputViewModel.kt */
-/* renamed from: com.discord.widgets.chat.input.ChatInputViewModel$Companion$getPendingReplyStateObservable$1$$special$$inlined$let$lambda$1 */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.chat.input.ChatInputViewModel$Companion$getPendingReplyStateObservable$1$$special$$inlined$let$lambda$1 */
+/* JADX INFO: compiled from: ChatInputViewModel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class C7685xa2dc426d<T, R> implements Func1<Map<Long, ? extends GuildMember>, GuildMember> {
     public final /* synthetic */ long $originalAuthorId$inlined;
 
@@ -20,7 +20,7 @@ public final class C7685xa2dc426d<T, R> implements Func1<Map<Long, ? extends Gui
         return call2((Map<Long, GuildMember>) map);
     }
 
-    /* renamed from: call, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
     public final GuildMember call2(Map<Long, GuildMember> map) {
         return map.get(Long.valueOf(this.$originalAuthorId$inlined));
     }

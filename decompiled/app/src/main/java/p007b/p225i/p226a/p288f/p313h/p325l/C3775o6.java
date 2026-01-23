@@ -1,20 +1,20 @@
 package p007b.p225i.p226a.p288f.p313h.p325l;
 
-/* compiled from: com.google.android.gms:play-services-measurement-base@@18.0.0 */
-/* renamed from: b.i.a.f.h.l.o6 */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.h.l.o6 */
+/* JADX INFO: compiled from: com.google.android.gms:play-services-measurement-base@@18.0.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public final class C3775o6 implements InterfaceC3584a6 {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final InterfaceC3612c6 f10178a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final String f10179b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final Object[] f10180c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final int f10181d;
 
     public C3775o6(InterfaceC3612c6 interfaceC3612c6, String str, Object[] objArr) {
@@ -44,19 +44,19 @@ public final class C3775o6 implements InterfaceC3584a6 {
     }
 
     @Override // p007b.p225i.p226a.p288f.p313h.p325l.InterfaceC3584a6
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final int mo4557a() {
         return (this.f10181d & 1) == 1 ? 1 : 2;
     }
 
     @Override // p007b.p225i.p226a.p288f.p313h.p325l.InterfaceC3584a6
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final boolean mo4558b() {
         return (this.f10181d & 2) == 2;
     }
 
     @Override // p007b.p225i.p226a.p288f.p313h.p325l.InterfaceC3584a6
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final InterfaceC3612c6 mo4559c() {
         return this.f10178a;
     }

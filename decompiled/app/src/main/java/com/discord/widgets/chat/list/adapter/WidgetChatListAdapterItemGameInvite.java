@@ -21,14 +21,14 @@ import p507d0.p592z.p594d.Lambda;
 import p658rx.Observable;
 import p658rx.Subscription;
 
-/* compiled from: WidgetChatListAdapterItemGameInvite.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetChatListAdapterItemGameInvite.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetChatListAdapterItemGameInvite extends WidgetChatListItem {
     private final WidgetChatListAdapterItemGameInviteBinding binding;
     private Subscription subscription;
 
-    /* compiled from: WidgetChatListAdapterItemGameInvite.kt */
-    /* renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemGameInvite$onConfigure$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemGameInvite$onConfigure$1 */
+    /* JADX INFO: compiled from: WidgetChatListAdapterItemGameInvite.kt */
     public static final class C80621 extends Lambda implements Function2<View, ViewEmbedGameInvite.Model, Unit> {
         public final /* synthetic */ GameInviteEntry $item;
 
@@ -44,7 +44,7 @@ public final class WidgetChatListAdapterItemGameInvite extends WidgetChatListIte
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(View view, ViewEmbedGameInvite.Model model) {
             Intrinsics3.checkNotNullParameter(view, "<anonymous parameter 0>");
             Intrinsics3.checkNotNullParameter(model, "model");
@@ -55,8 +55,8 @@ public final class WidgetChatListAdapterItemGameInvite extends WidgetChatListIte
         }
     }
 
-    /* compiled from: WidgetChatListAdapterItemGameInvite.kt */
-    /* renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemGameInvite$onConfigure$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemGameInvite$onConfigure$2 */
+    /* JADX INFO: compiled from: WidgetChatListAdapterItemGameInvite.kt */
     public static final class C80632 extends Lambda implements Function1<ViewEmbedGameInvite.Model, Unit> {
         public C80632() {
             super(1);
@@ -68,15 +68,15 @@ public final class WidgetChatListAdapterItemGameInvite extends WidgetChatListIte
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(ViewEmbedGameInvite.Model model) {
             Intrinsics3.checkNotNullParameter(model, "it");
             WidgetChatListAdapterItemGameInvite.access$getBinding$p(WidgetChatListAdapterItemGameInvite.this).f16208b.bind(model, WidgetChatListAdapterItemGameInvite.access$getAdapter$p(WidgetChatListAdapterItemGameInvite.this).getClock());
         }
     }
 
-    /* compiled from: WidgetChatListAdapterItemGameInvite.kt */
-    /* renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemGameInvite$onConfigure$3 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemGameInvite$onConfigure$3 */
+    /* JADX INFO: compiled from: WidgetChatListAdapterItemGameInvite.kt */
     public static final class C80643 extends Lambda implements Function1<Subscription, Unit> {
         public C80643() {
             super(1);
@@ -88,7 +88,7 @@ public final class WidgetChatListAdapterItemGameInvite extends WidgetChatListIte
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Subscription subscription) {
             Intrinsics3.checkNotNullParameter(subscription, "it");
             WidgetChatListAdapterItemGameInvite.access$setSubscription$p(WidgetChatListAdapterItemGameInvite.this, subscription);

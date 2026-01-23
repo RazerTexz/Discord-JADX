@@ -15,14 +15,14 @@ import com.discord.widgets.guilds.join.WidgetGuildWelcomeSheetChannelAdapter3;
 import com.facebook.drawee.view.SimpleDraweeView;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: WidgetGuildWelcomeSheetChannelAdapter.kt */
-/* renamed from: com.discord.widgets.guilds.join.ChannelViewHolder, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.guilds.join.ChannelViewHolder, reason: use source file name */
+/* JADX INFO: compiled from: WidgetGuildWelcomeSheetChannelAdapter.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetGuildWelcomeSheetChannelAdapter4 extends WidgetGuildWelcomeSheetChannelAdapter2 {
     private final WidgetGuildWelcomeChannelBinding binding;
 
-    /* compiled from: WidgetGuildWelcomeSheetChannelAdapter.kt */
-    /* renamed from: com.discord.widgets.guilds.join.ChannelViewHolder$bind$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.guilds.join.ChannelViewHolder$bind$1 */
+    /* JADX INFO: compiled from: WidgetGuildWelcomeSheetChannelAdapter.kt */
     public static final class ViewOnClickListenerC87151 implements View.OnClickListener {
         public final /* synthetic */ WidgetGuildWelcomeSheetChannelAdapter3 $data;
 

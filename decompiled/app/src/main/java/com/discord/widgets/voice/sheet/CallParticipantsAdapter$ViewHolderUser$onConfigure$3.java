@@ -4,8 +4,8 @@ import android.view.View;
 import com.discord.stores.StoreVoiceParticipants;
 import com.discord.widgets.voice.sheet.CallParticipantsAdapter;
 
-/* compiled from: CallParticipantsAdapter.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: CallParticipantsAdapter.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class CallParticipantsAdapter$ViewHolderUser$onConfigure$3 implements View.OnClickListener {
     public final /* synthetic */ StoreVoiceParticipants.VoiceUser $voiceUser;
     public final /* synthetic */ CallParticipantsAdapter.ViewHolderUser this$0;

@@ -4,43 +4,43 @@ import kotlin.jvm.internal.DefaultConstructorMarker;
 import p507d0.p513e0.p514p.p515d.p517m0.p552k.p560y.JvmPrimitiveType;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: methodSignatureMapping.kt */
-/* renamed from: d0.e0.p.d.m0.e.b.k, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.e.b.k, reason: use source file name */
+/* JADX INFO: compiled from: methodSignatureMapping.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public abstract class methodSignatureMapping {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final b f23617a = new b(null);
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static final d f23618b = new d(JvmPrimitiveType.BOOLEAN);
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public static final d f23619c = new d(JvmPrimitiveType.CHAR);
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public static final d f23620d = new d(JvmPrimitiveType.BYTE);
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public static final d f23621e = new d(JvmPrimitiveType.SHORT);
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public static final d f23622f = new d(JvmPrimitiveType.INT);
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public static final d f23623g = new d(JvmPrimitiveType.FLOAT);
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public static final d f23624h = new d(JvmPrimitiveType.LONG);
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public static final d f23625i = new d(JvmPrimitiveType.DOUBLE);
 
-    /* compiled from: methodSignatureMapping.kt */
-    /* renamed from: d0.e0.p.d.m0.e.b.k$a */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.e.b.k$a */
+    /* JADX INFO: compiled from: methodSignatureMapping.kt */
     public static final class a extends methodSignatureMapping {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public final methodSignatureMapping f23626j;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -55,8 +55,8 @@ public abstract class methodSignatureMapping {
         }
     }
 
-    /* compiled from: methodSignatureMapping.kt */
-    /* renamed from: d0.e0.p.d.m0.e.b.k$b */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.e.b.k$b */
+    /* JADX INFO: compiled from: methodSignatureMapping.kt */
     public static final class b {
         public b(DefaultConstructorMarker defaultConstructorMarker) {
         }
@@ -94,11 +94,11 @@ public abstract class methodSignatureMapping {
         }
     }
 
-    /* compiled from: methodSignatureMapping.kt */
-    /* renamed from: d0.e0.p.d.m0.e.b.k$c */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.e.b.k$c */
+    /* JADX INFO: compiled from: methodSignatureMapping.kt */
     public static final class c extends methodSignatureMapping {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public final String f23627j;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -113,11 +113,11 @@ public abstract class methodSignatureMapping {
         }
     }
 
-    /* compiled from: methodSignatureMapping.kt */
-    /* renamed from: d0.e0.p.d.m0.e.b.k$d */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.e.b.k$d */
+    /* JADX INFO: compiled from: methodSignatureMapping.kt */
     public static final class d extends methodSignatureMapping {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public final JvmPrimitiveType f23628j;
 
         public d(JvmPrimitiveType jvmPrimitiveType) {

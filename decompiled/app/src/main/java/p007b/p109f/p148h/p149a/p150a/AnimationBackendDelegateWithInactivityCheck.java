@@ -7,31 +7,31 @@ import java.util.concurrent.TimeUnit;
 import p007b.p109f.p115d.p126k.MonotonicClock;
 import p007b.p109f.p148h.p149a.p150a.AnimationBackend;
 
-/* compiled from: AnimationBackendDelegateWithInactivityCheck.java */
-/* renamed from: b.f.h.a.a.c, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.f.h.a.a.c, reason: use source file name */
+/* JADX INFO: compiled from: AnimationBackendDelegateWithInactivityCheck.java */
+/* JADX INFO: loaded from: classes.dex */
 public class AnimationBackendDelegateWithInactivityCheck<T extends AnimationBackend> extends AnimationBackendDelegate<T> {
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final MonotonicClock f3489b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final ScheduledExecutorService f3490c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public boolean f3491d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public long f3492e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public b f3493f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public final Runnable f3494g;
 
-    /* compiled from: AnimationBackendDelegateWithInactivityCheck.java */
-    /* renamed from: b.f.h.a.a.c$a */
+    /* JADX INFO: renamed from: b.f.h.a.a.c$a */
+    /* JADX INFO: compiled from: AnimationBackendDelegateWithInactivityCheck.java */
     public class a implements Runnable {
         public a() {
         }
@@ -53,10 +53,10 @@ public class AnimationBackendDelegateWithInactivityCheck<T extends AnimationBack
         }
     }
 
-    /* compiled from: AnimationBackendDelegateWithInactivityCheck.java */
-    /* renamed from: b.f.h.a.a.c$b */
+    /* JADX INFO: renamed from: b.f.h.a.a.c$b */
+    /* JADX INFO: compiled from: AnimationBackendDelegateWithInactivityCheck.java */
     public interface b {
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         void mo1146c();
     }
 
@@ -69,7 +69,7 @@ public class AnimationBackendDelegateWithInactivityCheck<T extends AnimationBack
         this.f3490c = scheduledExecutorService;
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final synchronized void m1145c() {
         if (!this.f3491d) {
             this.f3491d = true;
@@ -78,7 +78,7 @@ public class AnimationBackendDelegateWithInactivityCheck<T extends AnimationBack
     }
 
     @Override // p007b.p109f.p148h.p149a.p150a.AnimationBackendDelegate, p007b.p109f.p148h.p149a.p150a.AnimationBackend
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public boolean mo1141j(Drawable drawable, Canvas canvas, int i) {
         this.f3492e = this.f3489b.now();
         boolean zMo1141j = super.mo1141j(drawable, canvas, i);

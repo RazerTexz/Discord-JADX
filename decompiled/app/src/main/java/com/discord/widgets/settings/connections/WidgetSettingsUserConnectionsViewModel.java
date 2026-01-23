@@ -28,18 +28,18 @@ import p658rx.Observable;
 import p658rx.functions.Func2;
 import p658rx.subjects.BehaviorSubject;
 
-/* compiled from: WidgetSettingsUserConnectionsViewModel.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetSettingsUserConnectionsViewModel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetSettingsUserConnectionsViewModel extends AppViewModel<ViewState> {
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private final BehaviorSubject<Map<String, JoinStatus>> joinStateSubject;
     private final Map<String, JoinStatus> joinStatusMap;
     private final RestAPI restApi;
 
-    /* compiled from: WidgetSettingsUserConnectionsViewModel.kt */
-    /* renamed from: com.discord.widgets.settings.connections.WidgetSettingsUserConnectionsViewModel$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.connections.WidgetSettingsUserConnectionsViewModel$1 */
+    /* JADX INFO: compiled from: WidgetSettingsUserConnectionsViewModel.kt */
     public static final class C98401<T1, T2, R> implements Func2<StoreState, Map<String, ? extends JoinStatus>, List<? extends ConnectionState>> {
         public C98401() {
         }
@@ -49,7 +49,7 @@ public final class WidgetSettingsUserConnectionsViewModel extends AppViewModel<V
             return call2(storeState, map);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final List<ConnectionState> call2(StoreState storeState, Map<String, ? extends JoinStatus> map) {
             WidgetSettingsUserConnectionsViewModel widgetSettingsUserConnectionsViewModel = WidgetSettingsUserConnectionsViewModel.this;
             Intrinsics3.checkNotNullExpressionValue(storeState, "storeState");
@@ -58,8 +58,8 @@ public final class WidgetSettingsUserConnectionsViewModel extends AppViewModel<V
         }
     }
 
-    /* compiled from: WidgetSettingsUserConnectionsViewModel.kt */
-    /* renamed from: com.discord.widgets.settings.connections.WidgetSettingsUserConnectionsViewModel$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.connections.WidgetSettingsUserConnectionsViewModel$2 */
+    /* JADX INFO: compiled from: WidgetSettingsUserConnectionsViewModel.kt */
     public static final class C98412 extends Lambda implements Function1<List<? extends ConnectionState>, Unit> {
         public C98412() {
             super(1);
@@ -71,7 +71,7 @@ public final class WidgetSettingsUserConnectionsViewModel extends AppViewModel<V
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(List<ConnectionState> list) {
             WidgetSettingsUserConnectionsViewModel widgetSettingsUserConnectionsViewModel = WidgetSettingsUserConnectionsViewModel.this;
             Intrinsics3.checkNotNullExpressionValue(list, "storeState");
@@ -79,7 +79,7 @@ public final class WidgetSettingsUserConnectionsViewModel extends AppViewModel<V
         }
     }
 
-    /* compiled from: WidgetSettingsUserConnectionsViewModel.kt */
+    /* JADX INFO: compiled from: WidgetSettingsUserConnectionsViewModel.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -100,7 +100,7 @@ public final class WidgetSettingsUserConnectionsViewModel extends AppViewModel<V
         }
     }
 
-    /* compiled from: WidgetSettingsUserConnectionsViewModel.kt */
+    /* JADX INFO: compiled from: WidgetSettingsUserConnectionsViewModel.kt */
     public static final /* data */ class ConnectionState {
         private final ConnectedAccount connection;
         private final Map<String, JoinStatus> integrationGuildJoinStatus;
@@ -124,7 +124,7 @@ public final class WidgetSettingsUserConnectionsViewModel extends AppViewModel<V
             return connectionState.copy(connectedAccount, map);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final ConnectedAccount getConnection() {
             return this.connection;
         }
@@ -173,10 +173,10 @@ public final class WidgetSettingsUserConnectionsViewModel extends AppViewModel<V
         }
     }
 
-    /* compiled from: WidgetSettingsUserConnectionsViewModel.kt */
+    /* JADX INFO: compiled from: WidgetSettingsUserConnectionsViewModel.kt */
     public static abstract class JoinStatus {
 
-        /* compiled from: WidgetSettingsUserConnectionsViewModel.kt */
+        /* JADX INFO: compiled from: WidgetSettingsUserConnectionsViewModel.kt */
         public static final class JoinFailed extends JoinStatus {
             public static final JoinFailed INSTANCE = new JoinFailed();
 
@@ -185,7 +185,7 @@ public final class WidgetSettingsUserConnectionsViewModel extends AppViewModel<V
             }
         }
 
-        /* compiled from: WidgetSettingsUserConnectionsViewModel.kt */
+        /* JADX INFO: compiled from: WidgetSettingsUserConnectionsViewModel.kt */
         public static final class Joined extends JoinStatus {
             public static final Joined INSTANCE = new Joined();
 
@@ -194,7 +194,7 @@ public final class WidgetSettingsUserConnectionsViewModel extends AppViewModel<V
             }
         }
 
-        /* compiled from: WidgetSettingsUserConnectionsViewModel.kt */
+        /* JADX INFO: compiled from: WidgetSettingsUserConnectionsViewModel.kt */
         public static final class Joining extends JoinStatus {
             public static final Joining INSTANCE = new Joining();
 
@@ -211,7 +211,7 @@ public final class WidgetSettingsUserConnectionsViewModel extends AppViewModel<V
         }
     }
 
-    /* compiled from: WidgetSettingsUserConnectionsViewModel.kt */
+    /* JADX INFO: compiled from: WidgetSettingsUserConnectionsViewModel.kt */
     public static final /* data */ class StoreState {
         private final List<ConnectedAccount> connectedAccounts;
         private final Map<Long, Guild> guilds;
@@ -282,10 +282,10 @@ public final class WidgetSettingsUserConnectionsViewModel extends AppViewModel<V
         }
     }
 
-    /* compiled from: WidgetSettingsUserConnectionsViewModel.kt */
+    /* JADX INFO: compiled from: WidgetSettingsUserConnectionsViewModel.kt */
     public static abstract class ViewState {
 
-        /* compiled from: WidgetSettingsUserConnectionsViewModel.kt */
+        /* JADX INFO: compiled from: WidgetSettingsUserConnectionsViewModel.kt */
         public static final class Empty extends ViewState {
             public static final Empty INSTANCE = new Empty();
 
@@ -294,7 +294,7 @@ public final class WidgetSettingsUserConnectionsViewModel extends AppViewModel<V
             }
         }
 
-        /* compiled from: WidgetSettingsUserConnectionsViewModel.kt */
+        /* JADX INFO: compiled from: WidgetSettingsUserConnectionsViewModel.kt */
         public static final /* data */ class Loaded extends ViewState {
             private final List<ConnectionState> data;
 
@@ -346,7 +346,7 @@ public final class WidgetSettingsUserConnectionsViewModel extends AppViewModel<V
             }
         }
 
-        /* compiled from: WidgetSettingsUserConnectionsViewModel.kt */
+        /* JADX INFO: compiled from: WidgetSettingsUserConnectionsViewModel.kt */
         public static final class Uninitialized extends ViewState {
             public static final Uninitialized INSTANCE = new Uninitialized();
 
@@ -363,8 +363,8 @@ public final class WidgetSettingsUserConnectionsViewModel extends AppViewModel<V
         }
     }
 
-    /* compiled from: WidgetSettingsUserConnectionsViewModel.kt */
-    /* renamed from: com.discord.widgets.settings.connections.WidgetSettingsUserConnectionsViewModel$joinConnectionIntegrationGuild$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.connections.WidgetSettingsUserConnectionsViewModel$joinConnectionIntegrationGuild$1 */
+    /* JADX INFO: compiled from: WidgetSettingsUserConnectionsViewModel.kt */
     public static final class C98421 extends Lambda implements Function1<Error, Unit> {
         public final /* synthetic */ String $integrationId;
 
@@ -380,7 +380,7 @@ public final class WidgetSettingsUserConnectionsViewModel extends AppViewModel<V
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Error error) {
             Intrinsics3.checkNotNullParameter(error, "it");
             WidgetSettingsUserConnectionsViewModel.access$getJoinStatusMap$p(WidgetSettingsUserConnectionsViewModel.this).put(this.$integrationId, JoinStatus.JoinFailed.INSTANCE);
@@ -388,8 +388,8 @@ public final class WidgetSettingsUserConnectionsViewModel extends AppViewModel<V
         }
     }
 
-    /* compiled from: WidgetSettingsUserConnectionsViewModel.kt */
-    /* renamed from: com.discord.widgets.settings.connections.WidgetSettingsUserConnectionsViewModel$joinConnectionIntegrationGuild$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.connections.WidgetSettingsUserConnectionsViewModel$joinConnectionIntegrationGuild$2 */
+    /* JADX INFO: compiled from: WidgetSettingsUserConnectionsViewModel.kt */
     public static final class C98432 extends Lambda implements Function1<Void, Unit> {
         public final /* synthetic */ String $integrationId;
 
@@ -405,7 +405,7 @@ public final class WidgetSettingsUserConnectionsViewModel extends AppViewModel<V
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Void r3) {
             WidgetSettingsUserConnectionsViewModel.access$getJoinStatusMap$p(WidgetSettingsUserConnectionsViewModel.this).put(this.$integrationId, JoinStatus.Joined.INSTANCE);
             WidgetSettingsUserConnectionsViewModel.access$getJoinStateSubject$p(WidgetSettingsUserConnectionsViewModel.this).onNext(WidgetSettingsUserConnectionsViewModel.access$getJoinStatusMap$p(WidgetSettingsUserConnectionsViewModel.this));

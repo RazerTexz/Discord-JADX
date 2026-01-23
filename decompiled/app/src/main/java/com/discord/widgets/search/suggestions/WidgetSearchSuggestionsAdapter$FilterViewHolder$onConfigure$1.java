@@ -4,8 +4,8 @@ import android.view.View;
 import com.discord.utilities.search.query.FilterType;
 import com.discord.widgets.search.suggestions.WidgetSearchSuggestionsAdapter;
 
-/* compiled from: WidgetSearchSuggestionsAdapter.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetSearchSuggestionsAdapter.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetSearchSuggestionsAdapter$FilterViewHolder$onConfigure$1 implements View.OnClickListener {
     public final /* synthetic */ FilterType $filterType;
     public final /* synthetic */ WidgetSearchSuggestionsAdapter.FilterViewHolder this$0;

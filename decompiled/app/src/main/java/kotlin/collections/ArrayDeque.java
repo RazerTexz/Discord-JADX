@@ -16,27 +16,27 @@ import p507d0.p580t._Arrays;
 import p507d0.p580t._ArraysJvm;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ArrayDeque.kt */
-/* loaded from: classes3.dex */
+/* JADX INFO: compiled from: ArrayDeque.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class ArrayDeque<E> extends AbstractMutableList<E> {
 
-    /* renamed from: l, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: l, reason: from kotlin metadata */
     public int head;
 
-    /* renamed from: m, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: m, reason: from kotlin metadata */
     public Object[] elementData;
 
-    /* renamed from: n, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: n, reason: from kotlin metadata */
     public int size;
 
-    /* renamed from: k, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: k, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static final Object[] f27426j = new Object[0];
 
-    /* compiled from: ArrayDeque.kt */
-    /* renamed from: kotlin.collections.ArrayDeque$a, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: kotlin.collections.ArrayDeque$a, reason: from kotlin metadata */
+    /* JADX INFO: compiled from: ArrayDeque.kt */
     public static final class Companion {
         public Companion(DefaultConstructorMarker defaultConstructorMarker) {
         }
@@ -117,7 +117,7 @@ public final class ArrayDeque<E> extends AbstractMutableList<E> {
         this.size = size() + 1;
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final void m10890c(int internalIndex, Collection<? extends E> elements) {
         Iterator<? extends E> it = elements.iterator();
         int length = this.elementData.length;
@@ -152,12 +152,12 @@ public final class ArrayDeque<E> extends AbstractMutableList<E> {
         return indexOf(element) != -1;
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final int m10891d(int index) {
         return index == 0 ? _Arrays.getLastIndex(this.elementData) : index - 1;
     }
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final void m10892e(int minCapacity) {
         if (minCapacity < 0) {
             throw new IllegalStateException("Deque is too big.");
@@ -181,7 +181,7 @@ public final class ArrayDeque<E> extends AbstractMutableList<E> {
         this.elementData = objArr2;
     }
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public final int m10893g(int index) {
         if (index == _Arrays.getLastIndex(this.elementData)) {
             return 0;

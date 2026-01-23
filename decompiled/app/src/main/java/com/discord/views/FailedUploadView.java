@@ -14,11 +14,11 @@ import com.discord.utilities.view.extensions.ViewExtensions;
 import p007b.p008a.p025i.ViewChatUploadBinding;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: FailedUploadView.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: FailedUploadView.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class FailedUploadView extends ConstraintLayout {
 
-    /* renamed from: j, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: j, reason: from kotlin metadata */
     public final ViewChatUploadBinding binding;
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -50,7 +50,7 @@ public final class FailedUploadView extends ConstraintLayout {
         throw new NullPointerException("Missing required view with ID: ".concat(viewInflate.getResources().getResourceName(i)));
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final void m8544a(CharSequence title, @DrawableRes int iconResId, String subtitle) {
         Intrinsics3.checkNotNullParameter(title, "title");
         TextView textView = this.binding.f739b;

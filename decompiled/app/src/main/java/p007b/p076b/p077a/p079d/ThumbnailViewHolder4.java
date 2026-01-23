@@ -6,15 +6,15 @@ import android.util.Log;
 import com.lytefast.flexinput.model.Media;
 import p007b.p100d.p104b.p105a.outline;
 
-/* compiled from: ThumbnailViewHolder.kt */
-/* renamed from: b.b.a.d.l, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.b.a.d.l, reason: use source file name */
+/* JADX INFO: compiled from: ThumbnailViewHolder.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class ThumbnailViewHolder4 implements Runnable {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final /* synthetic */ ThumbnailViewHolder5 f2170j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final /* synthetic */ ContentResolver f2171k;
 
     public ThumbnailViewHolder4(ThumbnailViewHolder5 thumbnailViewHolder5, ContentResolver contentResolver) {

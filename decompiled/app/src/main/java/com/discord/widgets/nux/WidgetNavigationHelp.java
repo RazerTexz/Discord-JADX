@@ -25,18 +25,18 @@ import kotlin.reflect.KProperty;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: WidgetNavigationHelp.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetNavigationHelp.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetNavigationHelp extends AppDialog {
     public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetNavigationHelp.class, "binding", "getBinding()Lcom/discord/databinding/WidgetNavigationHelpBinding;", 0)};
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
 
-    /* renamed from: binding$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
 
-    /* compiled from: WidgetNavigationHelp.kt */
+    /* JADX INFO: compiled from: WidgetNavigationHelp.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -52,28 +52,28 @@ public final class WidgetNavigationHelp extends AppDialog {
         }
     }
 
-    /* compiled from: WidgetNavigationHelp.kt */
+    /* JADX INFO: compiled from: WidgetNavigationHelp.kt */
     public static final class NuxChannelsPageFragment extends AppFragment {
         public NuxChannelsPageFragment() {
             super(C5419R.layout.widget_navigation_help_nux_channels);
         }
     }
 
-    /* compiled from: WidgetNavigationHelp.kt */
+    /* JADX INFO: compiled from: WidgetNavigationHelp.kt */
     public static final class NuxDmsPageFragment extends AppFragment {
         public NuxDmsPageFragment() {
             super(C5419R.layout.widget_navigation_help_nux_dms);
         }
     }
 
-    /* compiled from: WidgetNavigationHelp.kt */
+    /* JADX INFO: compiled from: WidgetNavigationHelp.kt */
     public static final class NuxGuildsPageFragment extends AppFragment {
         public NuxGuildsPageFragment() {
             super(C5419R.layout.widget_navigation_help_nux_guilds);
         }
     }
 
-    /* compiled from: WidgetNavigationHelp.kt */
+    /* JADX INFO: compiled from: WidgetNavigationHelp.kt */
     public static final class NuxPagerAdapter extends FragmentStateAdapter {
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
         public NuxPagerAdapter(Fragment fragment) {
@@ -96,14 +96,14 @@ public final class WidgetNavigationHelp extends AppDialog {
         }
 
         @Override // androidx.recyclerview.widget.RecyclerView.Adapter
-        /* renamed from: getItemCount */
+        /* JADX INFO: renamed from: getItemCount */
         public int getPageSize() {
             return 3;
         }
     }
 
-    /* compiled from: WidgetNavigationHelp.kt */
-    /* renamed from: com.discord.widgets.nux.WidgetNavigationHelp$onViewBound$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.nux.WidgetNavigationHelp$onViewBound$1 */
+    /* JADX INFO: compiled from: WidgetNavigationHelp.kt */
     public static final class ViewOnClickListenerC91061 implements View.OnClickListener {
         public ViewOnClickListenerC91061() {
         }

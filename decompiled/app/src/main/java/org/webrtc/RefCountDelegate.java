@@ -3,7 +3,7 @@ package org.webrtc;
 import androidx.annotation.Nullable;
 import java.util.concurrent.atomic.AtomicInteger;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public class RefCountDelegate implements RefCounted {
     private final AtomicInteger refCount = new AtomicInteger(1);
 

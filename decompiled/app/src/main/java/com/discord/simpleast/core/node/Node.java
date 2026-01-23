@@ -10,20 +10,20 @@ import p507d0.p580t._Collections;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: Node.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: Node.kt */
+/* JADX INFO: loaded from: classes.dex */
 public class Node<R> {
     private Collection<Node<R>> children;
 
-    /* compiled from: Node.kt */
-    /* renamed from: com.discord.simpleast.core.node.Node$a */
+    /* JADX INFO: renamed from: com.discord.simpleast.core.node.Node$a */
+    /* JADX INFO: compiled from: Node.kt */
     public static class C5655a<R> extends Node<R> {
 
-        /* compiled from: Node.kt */
-        /* renamed from: com.discord.simpleast.core.node.Node$a$a */
+        /* JADX INFO: renamed from: com.discord.simpleast.core.node.Node$a$a */
+        /* JADX INFO: compiled from: Node.kt */
         public static final class a extends Lambda implements Function1<Node<R>, CharSequence> {
 
-            /* renamed from: j */
+            /* JADX INFO: renamed from: j */
             public static final a f18951j = new a();
 
             public a() {

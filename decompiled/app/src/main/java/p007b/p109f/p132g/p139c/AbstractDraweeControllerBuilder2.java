@@ -8,27 +8,27 @@ import p007b.p085c.p086a.p087a0.AnimatableValueParser;
 import p007b.p109f.p115d.p119d.Objects2;
 
 /* JADX INFO: Add missing generic type declarations: [IMAGE] */
-/* compiled from: AbstractDraweeControllerBuilder.java */
-/* renamed from: b.f.g.c.b, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.f.g.c.b, reason: use source file name */
+/* JADX INFO: compiled from: AbstractDraweeControllerBuilder.java */
+/* JADX INFO: loaded from: classes.dex */
 public class AbstractDraweeControllerBuilder2<IMAGE> implements Supplier<DataSource<IMAGE>> {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final /* synthetic */ DraweeController f3292a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final /* synthetic */ String f3293b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final /* synthetic */ Object f3294c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final /* synthetic */ Object f3295d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final /* synthetic */ AbstractDraweeControllerBuilder.EnumC10643b f3296e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final /* synthetic */ AbstractDraweeControllerBuilder f3297f;
 
     public AbstractDraweeControllerBuilder2(AbstractDraweeControllerBuilder abstractDraweeControllerBuilder, DraweeController draweeController, String str, Object obj, Object obj2, AbstractDraweeControllerBuilder.EnumC10643b enumC10643b) {

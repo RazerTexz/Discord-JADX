@@ -4,25 +4,25 @@ import com.discord.models.domain.ModelAuditLogEntry;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: GuildRoleSubscriptionTierFreeTrial.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: GuildRoleSubscriptionTierFreeTrial.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class GuildRoleSubscriptionTierFreeTrial {
     private final SubscriptionTrial activeTrial;
     private final long id;
     private final Integer maxNumActiveTrialUsers;
     private final Integer numActiveTrialUsers;
 
-    /* renamed from: a, reason: from getter */
+    /* JADX INFO: renamed from: a, reason: from getter */
     public final SubscriptionTrial getActiveTrial() {
         return this.activeTrial;
     }
 
-    /* renamed from: b, reason: from getter */
+    /* JADX INFO: renamed from: b, reason: from getter */
     public final long getId() {
         return this.id;
     }
 
-    /* renamed from: c, reason: from getter */
+    /* JADX INFO: renamed from: c, reason: from getter */
     public final Integer getMaxNumActiveTrialUsers() {
         return this.maxNumActiveTrialUsers;
     }

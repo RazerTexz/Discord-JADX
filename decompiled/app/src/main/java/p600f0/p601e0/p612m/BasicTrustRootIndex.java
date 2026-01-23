@@ -9,12 +9,12 @@ import java.util.Set;
 import javax.security.auth.x500.X500Principal;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: BasicTrustRootIndex.kt */
-/* renamed from: f0.e0.m.b, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: f0.e0.m.b, reason: use source file name */
+/* JADX INFO: compiled from: BasicTrustRootIndex.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class BasicTrustRootIndex implements TrustRootIndex {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final Map<X500Principal, Set<X509Certificate>> f25810a;
 
     public BasicTrustRootIndex(X509Certificate... x509CertificateArr) {
@@ -34,7 +34,7 @@ public final class BasicTrustRootIndex implements TrustRootIndex {
     }
 
     @Override // p600f0.p601e0.p612m.TrustRootIndex
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public X509Certificate mo10323a(X509Certificate x509Certificate) {
         boolean z2;
         Intrinsics3.checkParameterIsNotNull(x509Certificate, "cert");

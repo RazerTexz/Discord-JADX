@@ -9,8 +9,8 @@ import com.google.android.gms.nearby.messages.internal.zzad;
 import java.util.ArrayList;
 import p007b.p085c.p086a.p087a0.AnimatableValueParser;
 
-/* renamed from: b.i.a.f.j.b.g */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.j.b.g */
+/* JADX INFO: loaded from: classes3.dex */
 public final class C4323g implements Parcelable.Creator<MessageFilter> {
     @Override // android.os.Parcelable.Creator
     public final MessageFilter createFromParcel(Parcel parcel) {

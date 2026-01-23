@@ -8,15 +8,15 @@ import p507d0.p513e0.p514p.p515d.p517m0.p521c.SourceElement;
 import p507d0.p513e0.p514p.p515d.p517m0.p521c.p522g1.Annotations4;
 import p507d0.p513e0.p514p.p515d.p517m0.p548g.Name;
 
-/* compiled from: DeclarationDescriptorNonRootImpl.java */
-/* renamed from: d0.e0.p.d.m0.c.i1.l, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.c.i1.l, reason: use source file name */
+/* JADX INFO: compiled from: DeclarationDescriptorNonRootImpl.java */
+/* JADX INFO: loaded from: classes3.dex */
 public abstract class DeclarationDescriptorNonRootImpl extends DeclarationDescriptorImpl implements DeclarationDescriptorNonRoot {
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final DeclarationDescriptor f22896l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public final SourceElement f22897m;
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -42,7 +42,7 @@ public abstract class DeclarationDescriptorNonRootImpl extends DeclarationDescri
         this.f22897m = sourceElement;
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static /* synthetic */ void m9416a(int i) {
         String str = (i == 4 || i == 5 || i == 6) ? "@NotNull method %s.%s must not return null" : "Argument for @NotNull parameter '%s' of %s.%s must not be null";
         Object[] objArr = new Object[(i == 4 || i == 5 || i == 6) ? 2 : 3];

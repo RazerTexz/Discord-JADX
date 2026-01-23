@@ -5,9 +5,9 @@ import com.discord.models.domain.ModelGuildBoostSlot;
 import com.discord.widgets.settings.guildboost.WidgetSettingsGuildBoostSubscriptionAdapter;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: WidgetSettingsGuildBoostSubscriptionAdapter.kt */
-/* renamed from: com.discord.widgets.settings.guildboost.WidgetSettingsGuildBoostSubscriptionAdapter$GuildBoostListItem$onConfigure$2, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.settings.guildboost.WidgetSettingsGuildBoostSubscriptionAdapter$GuildBoostListItem$onConfigure$2, reason: use source file name */
+/* JADX INFO: compiled from: WidgetSettingsGuildBoostSubscriptionAdapter.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetSettingsGuildBoostSubscriptionAdapter2 implements View.OnClickListener {
     public final /* synthetic */ WidgetSettingsGuildBoostSubscriptionAdapter.Item $data;
     public final /* synthetic */ boolean $hasCooldown;

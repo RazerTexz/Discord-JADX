@@ -1,7 +1,6 @@
 package com.esotericsoftware.kryo.serializers;
 
 import com.esotericsoftware.kryo.Kryo;
-import com.esotericsoftware.kryo.KryoException;
 import com.esotericsoftware.kryo.Serializer;
 import com.esotericsoftware.kryo.p502io.Input;
 import com.esotericsoftware.kryo.p502io.Output;
@@ -11,7 +10,7 @@ import java.util.OptionalDouble;
 import java.util.OptionalInt;
 import java.util.OptionalLong;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public final class OptionalSerializers {
 
     public static class OptionalDoubleSerializer extends Serializer<OptionalDouble> {
@@ -25,18 +24,18 @@ public final class OptionalSerializers {
         }
 
         @Override // com.esotericsoftware.kryo.Serializer
-        public /* bridge */ /* synthetic */ void write(Kryo kryo, Output output, OptionalDouble optionalDouble) throws KryoException {
+        public /* bridge */ /* synthetic */ void write(Kryo kryo, Output output, OptionalDouble optionalDouble) {
             write2(kryo, output, optionalDouble);
         }
 
         @Override // com.esotericsoftware.kryo.Serializer
-        /* renamed from: read, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: read, reason: avoid collision after fix types in other method */
         public OptionalDouble read2(Kryo kryo, Input input, Class<OptionalDouble> cls) {
             return input.readBoolean() ? OptionalDouble.of(input.readDouble()) : OptionalDouble.empty();
         }
 
-        /* renamed from: write, reason: avoid collision after fix types in other method */
-        public void write2(Kryo kryo, Output output, OptionalDouble optionalDouble) throws KryoException {
+        /* JADX INFO: renamed from: write, reason: avoid collision after fix types in other method */
+        public void write2(Kryo kryo, Output output, OptionalDouble optionalDouble) {
             output.writeBoolean(optionalDouble.isPresent());
             if (optionalDouble.isPresent()) {
                 output.writeDouble(optionalDouble.getAsDouble());
@@ -59,18 +58,18 @@ public final class OptionalSerializers {
         }
 
         @Override // com.esotericsoftware.kryo.Serializer
-        public /* bridge */ /* synthetic */ void write(Kryo kryo, Output output, OptionalInt optionalInt) throws KryoException {
+        public /* bridge */ /* synthetic */ void write(Kryo kryo, Output output, OptionalInt optionalInt) {
             write2(kryo, output, optionalInt);
         }
 
         @Override // com.esotericsoftware.kryo.Serializer
-        /* renamed from: read, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: read, reason: avoid collision after fix types in other method */
         public OptionalInt read2(Kryo kryo, Input input, Class<OptionalInt> cls) {
             return input.readBoolean() ? OptionalInt.of(input.readInt()) : OptionalInt.empty();
         }
 
-        /* renamed from: write, reason: avoid collision after fix types in other method */
-        public void write2(Kryo kryo, Output output, OptionalInt optionalInt) throws KryoException {
+        /* JADX INFO: renamed from: write, reason: avoid collision after fix types in other method */
+        public void write2(Kryo kryo, Output output, OptionalInt optionalInt) {
             output.writeBoolean(optionalInt.isPresent());
             if (optionalInt.isPresent()) {
                 output.writeInt(optionalInt.getAsInt());
@@ -93,18 +92,18 @@ public final class OptionalSerializers {
         }
 
         @Override // com.esotericsoftware.kryo.Serializer
-        public /* bridge */ /* synthetic */ void write(Kryo kryo, Output output, OptionalLong optionalLong) throws KryoException {
+        public /* bridge */ /* synthetic */ void write(Kryo kryo, Output output, OptionalLong optionalLong) {
             write2(kryo, output, optionalLong);
         }
 
         @Override // com.esotericsoftware.kryo.Serializer
-        /* renamed from: read, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: read, reason: avoid collision after fix types in other method */
         public OptionalLong read2(Kryo kryo, Input input, Class<OptionalLong> cls) {
             return input.readBoolean() ? OptionalLong.of(input.readLong()) : OptionalLong.empty();
         }
 
-        /* renamed from: write, reason: avoid collision after fix types in other method */
-        public void write2(Kryo kryo, Output output, OptionalLong optionalLong) throws KryoException {
+        /* JADX INFO: renamed from: write, reason: avoid collision after fix types in other method */
+        public void write2(Kryo kryo, Output output, OptionalLong optionalLong) {
             output.writeBoolean(optionalLong.isPresent());
             if (optionalLong.isPresent()) {
                 output.writeLong(optionalLong.getAsLong());
@@ -136,18 +135,18 @@ public final class OptionalSerializers {
             write2(kryo, output, optional);
         }
 
-        /* renamed from: copy, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: copy, reason: avoid collision after fix types in other method */
         public Optional copy2(Kryo kryo, Optional optional) {
             return optional.isPresent() ? Optional.of(kryo.copy(optional.get())) : optional;
         }
 
         @Override // com.esotericsoftware.kryo.Serializer
-        /* renamed from: read, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: read, reason: avoid collision after fix types in other method */
         public Optional read2(Kryo kryo, Input input, Class<Optional> cls) {
             return Optional.ofNullable(kryo.readClassAndObject(input));
         }
 
-        /* renamed from: write, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: write, reason: avoid collision after fix types in other method */
         public void write2(Kryo kryo, Output output, Optional optional) {
             kryo.writeClassAndObject(output, optional.isPresent() ? optional.get() : null);
         }

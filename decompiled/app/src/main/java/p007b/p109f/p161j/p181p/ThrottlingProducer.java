@@ -5,32 +5,32 @@ import java.util.Objects;
 import java.util.concurrent.ConcurrentLinkedQueue;
 import java.util.concurrent.Executor;
 
-/* compiled from: ThrottlingProducer.java */
-/* renamed from: b.f.j.p.i1, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.f.j.p.i1, reason: use source file name */
+/* JADX INFO: compiled from: ThrottlingProducer.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class ThrottlingProducer<T> implements Producer2<T> {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final Producer2<T> f4082a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public int f4083b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final ConcurrentLinkedQueue<Pair<Consumer2<T>, ProducerContext>> f4084c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final Executor f4085d;
 
-    /* compiled from: ThrottlingProducer.java */
-    /* renamed from: b.f.j.p.i1$b */
+    /* JADX INFO: renamed from: b.f.j.p.i1$b */
+    /* JADX INFO: compiled from: ThrottlingProducer.java */
     public class b extends DelegatingConsumer<T, T> {
 
-        /* compiled from: ThrottlingProducer.java */
-        /* renamed from: b.f.j.p.i1$b$a */
+        /* JADX INFO: renamed from: b.f.j.p.i1$b$a */
+        /* JADX INFO: compiled from: ThrottlingProducer.java */
         public class a implements Runnable {
 
-            /* renamed from: j */
+            /* JADX INFO: renamed from: j */
             public final /* synthetic */ Pair f4087j;
 
             public a(Pair pair) {
@@ -54,21 +54,21 @@ public class ThrottlingProducer<T> implements Producer2<T> {
         }
 
         @Override // p007b.p109f.p161j.p181p.DelegatingConsumer, p007b.p109f.p161j.p181p.BaseConsumer
-        /* renamed from: g */
+        /* JADX INFO: renamed from: g */
         public void mo1318g() {
             this.f4179b.mo1426d();
             m1479n();
         }
 
         @Override // p007b.p109f.p161j.p181p.DelegatingConsumer, p007b.p109f.p161j.p181p.BaseConsumer
-        /* renamed from: h */
+        /* JADX INFO: renamed from: h */
         public void mo1319h(Throwable th) {
             this.f4179b.mo1425c(th);
             m1479n();
         }
 
         @Override // p007b.p109f.p161j.p181p.BaseConsumer
-        /* renamed from: i */
+        /* JADX INFO: renamed from: i */
         public void mo1320i(T t, int i) {
             this.f4179b.mo1424b(t, i);
             if (BaseConsumer.m1419e(i)) {
@@ -76,7 +76,7 @@ public class ThrottlingProducer<T> implements Producer2<T> {
             }
         }
 
-        /* renamed from: n */
+        /* JADX INFO: renamed from: n */
         public final void m1479n() {
             Pair<Consumer2<T>, ProducerContext> pairPoll;
             synchronized (ThrottlingProducer.this) {
@@ -102,7 +102,7 @@ public class ThrottlingProducer<T> implements Producer2<T> {
     }
 
     @Override // p007b.p109f.p161j.p181p.Producer2
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public void mo1417b(Consumer2<T> consumer2, ProducerContext producerContext) {
         boolean z2;
         producerContext.mo1457o().mo1358e(producerContext, "ThrottlingProducer");

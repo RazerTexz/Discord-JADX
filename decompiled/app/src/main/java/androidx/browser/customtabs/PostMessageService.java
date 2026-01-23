@@ -10,11 +10,11 @@ import androidx.annotation.Nullable;
 import p668x.p669a.p670a.ICustomTabsCallback;
 import p668x.p669a.p670a.IPostMessageService;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class PostMessageService extends Service {
     private IPostMessageService.a mBinder = new BinderC01561();
 
-    /* renamed from: androidx.browser.customtabs.PostMessageService$1 */
+    /* JADX INFO: renamed from: androidx.browser.customtabs.PostMessageService$1 */
     public class BinderC01561 extends IPostMessageService.a {
         public BinderC01561() {
         }

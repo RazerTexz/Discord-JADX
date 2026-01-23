@@ -18,7 +18,7 @@ import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserException;
 import p007b.p100d.p104b.p105a.outline;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class TransitionInflater {
     private final Context mContext;
     private static final Class<?>[] CONSTRUCTOR_SIGNATURE = {Context.class, AttributeSet.class};
@@ -142,7 +142,7 @@ public class TransitionInflater {
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
-    private TransitionManager createTransitionManagerFromXml(XmlPullParser xmlPullParser, AttributeSet attributeSet, ViewGroup viewGroup) throws XmlPullParserException, Resources.NotFoundException, IOException {
+    private TransitionManager createTransitionManagerFromXml(XmlPullParser xmlPullParser, AttributeSet attributeSet, ViewGroup viewGroup) throws XmlPullParserException, IOException {
         int depth = xmlPullParser.getDepth();
         TransitionManager transitionManager = null;
         while (true) {
@@ -247,7 +247,7 @@ public class TransitionInflater {
         typedArrayObtainStyledAttributes.recycle();
     }
 
-    public Transition inflateTransition(int i) throws Resources.NotFoundException {
+    public Transition inflateTransition(int i) {
         XmlResourceParser xml = this.mContext.getResources().getXml(i);
         try {
             try {
@@ -262,7 +262,7 @@ public class TransitionInflater {
         }
     }
 
-    public TransitionManager inflateTransitionManager(int i, ViewGroup viewGroup) throws Resources.NotFoundException {
+    public TransitionManager inflateTransitionManager(int i, ViewGroup viewGroup) {
         XmlResourceParser xml = this.mContext.getResources().getXml(i);
         try {
             try {

@@ -4,16 +4,16 @@ import java.util.Objects;
 import p007b.p225i.p361c.p396q.Event3;
 import p007b.p225i.p361c.p396q.EventHandler2;
 
-/* compiled from: com.google.android.gms:play-services-measurement-api@@18.0.0 */
-/* renamed from: b.i.c.j.a.d */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.c.j.a.d */
+/* JADX INFO: compiled from: com.google.android.gms:play-services-measurement-api@@18.0.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public final /* synthetic */ class C4557d implements EventHandler2 {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final EventHandler2 f12160a = new C4557d();
 
     @Override // p007b.p225i.p361c.p396q.EventHandler2
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final void mo6343a(Event3 event3) {
         Objects.requireNonNull(event3);
         Objects.requireNonNull(null);

@@ -40,24 +40,24 @@ import p507d0.p592z.p594d.FunctionReferenceImpl;
 import p507d0.p592z.p594d.Intrinsics3;
 import p658rx.Observable;
 
-/* compiled from: WidgetServerSettingsSecurity.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetServerSettingsSecurity.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetServerSettingsSecurity extends AppFragment {
     public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetServerSettingsSecurity.class, "binding", "getBinding()Lcom/discord/databinding/WidgetServerSettingsSecurityBinding;", 0)};
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private static final String INTENT_EXTRA_GUILD_ID = "INTENT_EXTRA_GUILD_ID";
     private static final String TAG_TOGGLE_MFA_DIALOG = "TAG_TOGGLE_MFA_DIALOG";
 
-    /* renamed from: binding$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
 
-    /* renamed from: guildId$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: guildId$delegate, reason: from kotlin metadata */
     private final Lazy guildId;
     private final AppLogger2 loggingConfig;
 
-    /* compiled from: WidgetServerSettingsSecurity.kt */
+    /* JADX INFO: compiled from: WidgetServerSettingsSecurity.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -75,16 +75,16 @@ public final class WidgetServerSettingsSecurity extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetServerSettingsSecurity.kt */
+    /* JADX INFO: compiled from: WidgetServerSettingsSecurity.kt */
     public static final /* data */ class Model {
 
-        /* renamed from: Companion, reason: from kotlin metadata */
+        /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
         public static final Companion INSTANCE = new Companion(null);
         private final long guildId;
         private final String guildName;
         private final boolean isMfaEnabled;
 
-        /* compiled from: WidgetServerSettingsSecurity.kt */
+        /* JADX INFO: compiled from: WidgetServerSettingsSecurity.kt */
         public static final class Companion {
             private Companion() {
             }
@@ -122,17 +122,17 @@ public final class WidgetServerSettingsSecurity extends AppFragment {
             return model.copy(j, str, z2);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final long getGuildId() {
             return this.guildId;
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final String getGuildName() {
             return this.guildName;
         }
 
-        /* renamed from: component3, reason: from getter */
+        /* JADX INFO: renamed from: component3, reason: from getter */
         public final boolean getIsMfaEnabled() {
             return this.isMfaEnabled;
         }
@@ -161,16 +161,19 @@ public final class WidgetServerSettingsSecurity extends AppFragment {
         }
 
         /* JADX WARN: Multi-variable type inference failed */
+        /* JADX WARN: Type inference failed for: r1v4, types: [int] */
+        /* JADX WARN: Type inference failed for: r1v5 */
+        /* JADX WARN: Type inference failed for: r1v7 */
         public int hashCode() {
             int iM3a = C0002b.m3a(this.guildId) * 31;
             String str = this.guildName;
             int iHashCode = (iM3a + (str != null ? str.hashCode() : 0)) * 31;
             boolean z2 = this.isMfaEnabled;
-            int i = z2;
-            if (z2 != 0) {
-                i = 1;
+            ?? r1 = z2;
+            if (z2) {
+                r1 = 1;
             }
-            return iHashCode + i;
+            return iHashCode + r1;
         }
 
         public final boolean isMfaEnabled() {
@@ -187,25 +190,25 @@ public final class WidgetServerSettingsSecurity extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetServerSettingsSecurity.kt */
+    /* JADX INFO: compiled from: WidgetServerSettingsSecurity.kt */
     public static final class ToggleMfaDialog extends AppDialog {
         private static final String ARG_GUILD_ID = "ARG_GUILD_ID";
         private static final String ARG_MFA_ENABLED = "ARG_MFA_ENABLED";
 
-        /* renamed from: binding$delegate, reason: from kotlin metadata */
+        /* JADX INFO: renamed from: binding$delegate, reason: from kotlin metadata */
         private final FragmentViewBindingDelegate binding;
 
-        /* renamed from: guildId$delegate, reason: from kotlin metadata */
+        /* JADX INFO: renamed from: guildId$delegate, reason: from kotlin metadata */
         private final Lazy guildId;
 
-        /* renamed from: mfaEnabled$delegate, reason: from kotlin metadata */
+        /* JADX INFO: renamed from: mfaEnabled$delegate, reason: from kotlin metadata */
         private final Lazy mfaEnabled;
         public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(ToggleMfaDialog.class, "binding", "getBinding()Lcom/discord/databinding/WidgetServerSettingsSecurityDialogBinding;", 0)};
 
-        /* renamed from: Companion, reason: from kotlin metadata */
+        /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
         public static final Companion INSTANCE = new Companion(null);
 
-        /* compiled from: WidgetServerSettingsSecurity.kt */
+        /* JADX INFO: compiled from: WidgetServerSettingsSecurity.kt */
         public static final class Companion {
             private Companion() {
             }
@@ -282,8 +285,8 @@ public final class WidgetServerSettingsSecurity extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetServerSettingsSecurity.kt */
-    /* renamed from: com.discord.widgets.servers.WidgetServerSettingsSecurity$configureUI$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.WidgetServerSettingsSecurity$configureUI$1 */
+    /* JADX INFO: compiled from: WidgetServerSettingsSecurity.kt */
     public static final class ViewOnClickListenerC93101 implements View.OnClickListener {
         public final /* synthetic */ Model $model;
 
@@ -300,8 +303,8 @@ public final class WidgetServerSettingsSecurity extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetServerSettingsSecurity.kt */
-    /* renamed from: com.discord.widgets.servers.WidgetServerSettingsSecurity$onViewBoundOrOnResume$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.WidgetServerSettingsSecurity$onViewBoundOrOnResume$1 */
+    /* JADX INFO: compiled from: WidgetServerSettingsSecurity.kt */
     public static final /* synthetic */ class C93111 extends FunctionReferenceImpl implements Function1<Model, Unit> {
         public C93111(WidgetServerSettingsSecurity widgetServerSettingsSecurity) {
             super(1, widgetServerSettingsSecurity, WidgetServerSettingsSecurity.class, "configureUI", "configureUI(Lcom/discord/widgets/servers/WidgetServerSettingsSecurity$Model;)V", 0);
@@ -313,7 +316,7 @@ public final class WidgetServerSettingsSecurity extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Model model) throws Exception {
             WidgetServerSettingsSecurity.access$configureUI((WidgetServerSettingsSecurity) this.receiver, model);
         }

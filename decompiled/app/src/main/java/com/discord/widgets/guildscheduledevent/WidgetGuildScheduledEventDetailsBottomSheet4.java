@@ -8,9 +8,9 @@ import kotlin.jvm.functions.Function1;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetGuildScheduledEventDetailsBottomSheet.kt */
-/* renamed from: com.discord.widgets.guildscheduledevent.WidgetGuildScheduledEventDetailsBottomSheet$Companion$enqueue$guildScheduledEventDetailsNotice$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.guildscheduledevent.WidgetGuildScheduledEventDetailsBottomSheet$Companion$enqueue$guildScheduledEventDetailsNotice$1, reason: use source file name */
+/* JADX INFO: compiled from: WidgetGuildScheduledEventDetailsBottomSheet.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetGuildScheduledEventDetailsBottomSheet4 extends Lambda implements Function1<FragmentActivity, Boolean> {
     public final /* synthetic */ long $guildScheduledEventId;
     public final /* synthetic */ String $noticeName;
@@ -29,7 +29,7 @@ public final class WidgetGuildScheduledEventDetailsBottomSheet4 extends Lambda i
         return Boolean.valueOf(invoke2(fragmentActivity));
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final boolean invoke2(FragmentActivity fragmentActivity) {
         Intrinsics3.checkNotNullParameter(fragmentActivity, "appActivity");
         WidgetGuildScheduledEventDetailsBottomSheet.Companion companion = WidgetGuildScheduledEventDetailsBottomSheet.INSTANCE;

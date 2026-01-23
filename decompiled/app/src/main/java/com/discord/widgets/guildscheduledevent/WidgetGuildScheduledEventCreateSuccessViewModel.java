@@ -37,8 +37,8 @@ import p507d0.p592z.p594d.Lambda;
 import p658rx.Observable;
 import p658rx.functions.Action1;
 
-/* compiled from: WidgetGuildScheduledEventCreateSuccessViewModel.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetGuildScheduledEventCreateSuccessViewModel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetGuildScheduledEventCreateSuccessViewModel extends AppViewModel<ViewState> {
     private final Long channelId;
     private final long guildId;
@@ -53,8 +53,8 @@ public final class WidgetGuildScheduledEventCreateSuccessViewModel extends AppVi
     private final StoreStageInstances storeStageInstances;
     private final StoreUser storeUser;
 
-    /* compiled from: WidgetGuildScheduledEventCreateSuccessViewModel.kt */
-    /* renamed from: com.discord.widgets.guildscheduledevent.WidgetGuildScheduledEventCreateSuccessViewModel$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.guildscheduledevent.WidgetGuildScheduledEventCreateSuccessViewModel$1 */
+    /* JADX INFO: compiled from: WidgetGuildScheduledEventCreateSuccessViewModel.kt */
     public static final class C88521<T> implements Action1<ViewState.Loaded> {
         public C88521() {
         }
@@ -64,7 +64,7 @@ public final class WidgetGuildScheduledEventCreateSuccessViewModel extends AppVi
             call2(loaded);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final void call2(ViewState.Loaded loaded) {
             WidgetGuildScheduledEventCreateSuccessViewModel widgetGuildScheduledEventCreateSuccessViewModel = WidgetGuildScheduledEventCreateSuccessViewModel.this;
             Intrinsics3.checkNotNullExpressionValue(loaded, "viewState");
@@ -72,8 +72,8 @@ public final class WidgetGuildScheduledEventCreateSuccessViewModel extends AppVi
         }
     }
 
-    /* compiled from: WidgetGuildScheduledEventCreateSuccessViewModel.kt */
-    /* renamed from: com.discord.widgets.guildscheduledevent.WidgetGuildScheduledEventCreateSuccessViewModel$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.guildscheduledevent.WidgetGuildScheduledEventCreateSuccessViewModel$2 */
+    /* JADX INFO: compiled from: WidgetGuildScheduledEventCreateSuccessViewModel.kt */
     public static final /* synthetic */ class C88532 extends FunctionReferenceImpl implements Function1<ViewState, Unit> {
         public C88532(WidgetGuildScheduledEventCreateSuccessViewModel widgetGuildScheduledEventCreateSuccessViewModel) {
             super(1, widgetGuildScheduledEventCreateSuccessViewModel, WidgetGuildScheduledEventCreateSuccessViewModel.class, "updateViewState", "updateViewState(Ljava/lang/Object;)V", 0);
@@ -85,17 +85,17 @@ public final class WidgetGuildScheduledEventCreateSuccessViewModel extends AppVi
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(ViewState viewState) {
             Intrinsics3.checkNotNullParameter(viewState, "p1");
             WidgetGuildScheduledEventCreateSuccessViewModel.access$updateViewState((WidgetGuildScheduledEventCreateSuccessViewModel) this.receiver, viewState);
         }
     }
 
-    /* compiled from: WidgetGuildScheduledEventCreateSuccessViewModel.kt */
+    /* JADX INFO: compiled from: WidgetGuildScheduledEventCreateSuccessViewModel.kt */
     public static abstract class ViewState {
 
-        /* compiled from: WidgetGuildScheduledEventCreateSuccessViewModel.kt */
+        /* JADX INFO: compiled from: WidgetGuildScheduledEventCreateSuccessViewModel.kt */
         public static final /* data */ class Loaded extends ViewState {
             private final boolean showInviteSettings;
             private final WidgetInviteModel widgetInviteModel;
@@ -114,12 +114,12 @@ public final class WidgetGuildScheduledEventCreateSuccessViewModel extends AppVi
                 return loaded.copy(widgetInviteModel, z2);
             }
 
-            /* renamed from: component1, reason: from getter */
+            /* JADX INFO: renamed from: component1, reason: from getter */
             public final WidgetInviteModel getWidgetInviteModel() {
                 return this.widgetInviteModel;
             }
 
-            /* renamed from: component2, reason: from getter */
+            /* JADX INFO: renamed from: component2, reason: from getter */
             public final boolean getShowInviteSettings() {
                 return this.showInviteSettings;
             }
@@ -149,15 +149,18 @@ public final class WidgetGuildScheduledEventCreateSuccessViewModel extends AppVi
             }
 
             /* JADX WARN: Multi-variable type inference failed */
+            /* JADX WARN: Type inference failed for: r1v1, types: [int] */
+            /* JADX WARN: Type inference failed for: r1v2 */
+            /* JADX WARN: Type inference failed for: r1v3 */
             public int hashCode() {
                 WidgetInviteModel widgetInviteModel = this.widgetInviteModel;
                 int iHashCode = (widgetInviteModel != null ? widgetInviteModel.hashCode() : 0) * 31;
                 boolean z2 = this.showInviteSettings;
-                int i = z2;
-                if (z2 != 0) {
-                    i = 1;
+                ?? r1 = z2;
+                if (z2) {
+                    r1 = 1;
                 }
-                return iHashCode + i;
+                return iHashCode + r1;
             }
 
             public String toString() {
@@ -176,7 +179,7 @@ public final class WidgetGuildScheduledEventCreateSuccessViewModel extends AppVi
             }
         }
 
-        /* compiled from: WidgetGuildScheduledEventCreateSuccessViewModel.kt */
+        /* JADX INFO: compiled from: WidgetGuildScheduledEventCreateSuccessViewModel.kt */
         public static final class Uninitialized extends ViewState {
             public static final Uninitialized INSTANCE = new Uninitialized();
 
@@ -193,8 +196,8 @@ public final class WidgetGuildScheduledEventCreateSuccessViewModel extends AppVi
         }
     }
 
-    /* compiled from: WidgetGuildScheduledEventCreateSuccessViewModel.kt */
-    /* renamed from: com.discord.widgets.guildscheduledevent.WidgetGuildScheduledEventCreateSuccessViewModel$generateInviteLink$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.guildscheduledevent.WidgetGuildScheduledEventCreateSuccessViewModel$generateInviteLink$1 */
+    /* JADX INFO: compiled from: WidgetGuildScheduledEventCreateSuccessViewModel.kt */
     public static final class C88541 extends Lambda implements Function1<Channel, Unit> {
         public final /* synthetic */ Long $channelId;
 
@@ -210,7 +213,7 @@ public final class WidgetGuildScheduledEventCreateSuccessViewModel extends AppVi
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Channel channel) {
             Long lValueOf = this.$channelId;
             if (lValueOf == null) {
@@ -222,8 +225,8 @@ public final class WidgetGuildScheduledEventCreateSuccessViewModel extends AppVi
         }
     }
 
-    /* compiled from: WidgetGuildScheduledEventCreateSuccessViewModel.kt */
-    /* renamed from: com.discord.widgets.guildscheduledevent.WidgetGuildScheduledEventCreateSuccessViewModel$observeInvite$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.guildscheduledevent.WidgetGuildScheduledEventCreateSuccessViewModel$observeInvite$1 */
+    /* JADX INFO: compiled from: WidgetGuildScheduledEventCreateSuccessViewModel.kt */
     public static final class C88551 extends Lambda implements Function10<ModelInvite.Settings, Map<Long, ? extends Channel>, InviteGenerator.InviteGenerationState, MeUser, List<? extends Channel>, Guild, Map<Long, ? extends StageInstance>, GuildScheduledEvent, StoreInstantInvites.InviteState, Channel, ViewState.Loaded> {
         public static final C88551 INSTANCE = new C88551();
 
@@ -236,7 +239,7 @@ public final class WidgetGuildScheduledEventCreateSuccessViewModel extends AppVi
             return invoke2(settings, (Map<Long, Channel>) map, inviteGenerationState, meUser, (List<Channel>) list, guild, (Map<Long, StageInstance>) map2, guildScheduledEvent, inviteState, channel);
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final ViewState.Loaded invoke2(ModelInvite.Settings settings, Map<Long, Channel> map, InviteGenerator.InviteGenerationState inviteGenerationState, MeUser meUser, List<Channel> list, Guild guild, Map<Long, StageInstance> map2, GuildScheduledEvent guildScheduledEvent, StoreInstantInvites.InviteState inviteState, Channel channel) {
             Long lValueOf;
             StoreInstantInvites.InviteState inviteState2 = inviteState;

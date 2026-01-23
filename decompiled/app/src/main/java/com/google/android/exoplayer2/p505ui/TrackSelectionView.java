@@ -19,43 +19,43 @@ import p007b.p225i.p226a.p242c.p255c3.DefaultTrackSelector;
 import p007b.p225i.p226a.p242c.p256d3.DefaultTrackNameProvider;
 import p007b.p225i.p226a.p242c.p256d3.TrackNameProvider;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public class TrackSelectionView extends LinearLayout {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final int f20200j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final LayoutInflater f20201k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final CheckedTextView f20202l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public final CheckedTextView f20203m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public final ViewOnClickListenerC10762b f20204n;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public final SparseArray<DefaultTrackSelector.f> f20205o;
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public boolean f20206p;
 
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     public boolean f20207q;
 
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     public TrackNameProvider f20208r;
 
-    /* renamed from: s */
+    /* JADX INFO: renamed from: s */
     public TrackGroupArray f20209s;
 
-    /* renamed from: t */
+    /* JADX INFO: renamed from: t */
     public boolean f20210t;
 
-    /* renamed from: com.google.android.exoplayer2.ui.TrackSelectionView$b */
+    /* JADX INFO: renamed from: com.google.android.exoplayer2.ui.TrackSelectionView$b */
     public class ViewOnClickListenerC10762b implements View.OnClickListener {
         public ViewOnClickListenerC10762b(C10761a c10761a) {
         }
@@ -82,10 +82,10 @@ public class TrackSelectionView extends LinearLayout {
         }
     }
 
-    /* renamed from: com.google.android.exoplayer2.ui.TrackSelectionView$c */
+    /* JADX INFO: renamed from: com.google.android.exoplayer2.ui.TrackSelectionView$c */
     public static final class C10763c {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final int f20212a;
     }
 
@@ -124,14 +124,14 @@ public class TrackSelectionView extends LinearLayout {
         addView(checkedTextView2);
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final void m8932a() {
         this.f20202l.setChecked(this.f20210t);
         this.f20203m.setChecked(!this.f20210t && this.f20205o.size() == 0);
         throw null;
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final void m8933b() {
         int childCount = getChildCount();
         while (true) {

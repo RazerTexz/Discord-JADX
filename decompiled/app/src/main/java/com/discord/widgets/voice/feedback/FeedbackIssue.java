@@ -4,8 +4,8 @@ import androidx.annotation.StringRes;
 import com.discord.C5419R;
 import com.discord.utilities.mg_recycler.MGRecyclerDataPayload;
 
-/* compiled from: FeedbackIssue.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: FeedbackIssue.kt */
+/* JADX INFO: loaded from: classes.dex */
 public enum FeedbackIssue implements MGRecyclerDataPayload {
     OTHER(C5419R.string.call_feedback_option_other),
     COULD_NOT_HEAR_AUDIO(C5419R.string.call_feedback_option_could_not_hear_audio),

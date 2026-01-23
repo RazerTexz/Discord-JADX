@@ -6,8 +6,8 @@ import kotlin.jvm.functions.Function2;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: GatewaySocket.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: GatewaySocket.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class GatewaySocket$connect$$inlined$apply$lambda$3 extends Lambda implements Function2<InputStreamReader, Integer, Unit> {
     public final /* synthetic */ String $gatewayUrl$inlined;
     public final /* synthetic */ GatewaySocket this$0;

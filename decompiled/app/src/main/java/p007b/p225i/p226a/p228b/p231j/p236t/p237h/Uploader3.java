@@ -5,24 +5,24 @@ import p007b.p225i.p226a.p228b.p231j.p232q.BackendResponse;
 import p007b.p225i.p226a.p228b.p231j.p236t.p238i.PersistedEvent;
 import p007b.p225i.p226a.p228b.p231j.p239u.SynchronizationGuard;
 
-/* compiled from: Uploader.java */
-/* renamed from: b.i.a.b.j.t.h.i, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.b.j.t.h.i, reason: use source file name */
+/* JADX INFO: compiled from: Uploader.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final /* synthetic */ class Uploader3 implements SynchronizationGuard.a {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final Uploader6 f5376a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final BackendResponse f5377b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final Iterable f5378c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final TransportContext f5379d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final int f5380e;
 
     public Uploader3(Uploader6 uploader6, BackendResponse backendResponse, Iterable iterable, TransportContext transportContext, int i) {

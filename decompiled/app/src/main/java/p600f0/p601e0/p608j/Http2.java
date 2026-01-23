@@ -6,24 +6,24 @@ import p507d0.p579g0.StringsJVM;
 import p507d0.p592z.p594d.Intrinsics3;
 import p600f0.p601e0.Util7;
 
-/* compiled from: Http2.kt */
-/* renamed from: f0.e0.j.d, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: f0.e0.j.d, reason: use source file name */
+/* JADX INFO: compiled from: Http2.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class Http2 {
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public static final String[] f25613d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public static final Http2 f25614e = new Http2();
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final ByteString f25610a = ByteString.INSTANCE.m11012c("PRI * HTTP/2.0\r\n\r\nSM\r\n\r\n");
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static final String[] f25611b = {"DATA", "HEADERS", "PRIORITY", "RST_STREAM", "SETTINGS", "PUSH_PROMISE", "PING", "GOAWAY", "WINDOW_UPDATE", "CONTINUATION"};
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public static final String[] f25612c = new String[64];
 
     static {
@@ -71,14 +71,14 @@ public final class Http2 {
         }
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final String m10256a(int i) {
         String[] strArr = f25611b;
         return i < strArr.length ? strArr[i] : Util7.m10129j("0x%02x", Integer.valueOf(i));
     }
 
     /* JADX WARN: Removed duplicated region for block: B:33:0x0066  */
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */

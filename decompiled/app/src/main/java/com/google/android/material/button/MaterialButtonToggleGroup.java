@@ -34,7 +34,7 @@ import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.TreeMap;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public class MaterialButtonToggleGroup extends LinearLayout {
 
     @IdRes
@@ -55,7 +55,7 @@ public class MaterialButtonToggleGroup extends LinearLayout {
         void onButtonChecked(MaterialButtonToggleGroup materialButtonToggleGroup, @IdRes int i, boolean z2);
     }
 
-    /* renamed from: com.google.android.material.button.MaterialButtonToggleGroup$a */
+    /* JADX INFO: renamed from: com.google.android.material.button.MaterialButtonToggleGroup$a */
     public class C10867a implements Comparator<MaterialButton> {
         public C10867a() {
         }
@@ -73,7 +73,7 @@ public class MaterialButtonToggleGroup extends LinearLayout {
         }
     }
 
-    /* renamed from: com.google.android.material.button.MaterialButtonToggleGroup$b */
+    /* JADX INFO: renamed from: com.google.android.material.button.MaterialButtonToggleGroup$b */
     public class C10868b extends AccessibilityDelegateCompat {
         public C10868b() {
         }
@@ -85,7 +85,7 @@ public class MaterialButtonToggleGroup extends LinearLayout {
         }
     }
 
-    /* renamed from: com.google.android.material.button.MaterialButtonToggleGroup$c */
+    /* JADX INFO: renamed from: com.google.android.material.button.MaterialButtonToggleGroup$c */
     public class C10869c implements MaterialButton.OnCheckedChangeListener {
         public C10869c(C10867a c10867a) {
         }
@@ -105,22 +105,22 @@ public class MaterialButtonToggleGroup extends LinearLayout {
         }
     }
 
-    /* renamed from: com.google.android.material.button.MaterialButtonToggleGroup$d */
+    /* JADX INFO: renamed from: com.google.android.material.button.MaterialButtonToggleGroup$d */
     public static class C10870d {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public static final CornerSize f20944a = new AbsoluteCornerSize(0.0f);
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public CornerSize f20945b;
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public CornerSize f20946c;
 
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         public CornerSize f20947d;
 
-        /* renamed from: e */
+        /* JADX INFO: renamed from: e */
         public CornerSize f20948e;
 
         public C10870d(CornerSize cornerSize, CornerSize cornerSize2, CornerSize cornerSize3, CornerSize cornerSize4) {
@@ -131,7 +131,7 @@ public class MaterialButtonToggleGroup extends LinearLayout {
         }
     }
 
-    /* renamed from: com.google.android.material.button.MaterialButtonToggleGroup$e */
+    /* JADX INFO: renamed from: com.google.android.material.button.MaterialButtonToggleGroup$e */
     public class C10871e implements MaterialButton.InterfaceC10866a {
         public C10871e(C10867a c10867a) {
         }

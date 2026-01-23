@@ -25,13 +25,13 @@ import p007b.p008a.p027k.FormatUtils;
 import p507d0.p579g0.Strings4;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ViewHolderStreamRichPresence.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: ViewHolderStreamRichPresence.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class ViewHolderStreamRichPresence extends ViewHolderUserRichPresence {
     private final StreamPreviewView streamPreview;
 
-    /* compiled from: ViewHolderStreamRichPresence.kt */
-    /* renamed from: com.discord.widgets.user.presence.ViewHolderStreamRichPresence$setOnStreamPreviewClicked$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.user.presence.ViewHolderStreamRichPresence$setOnStreamPreviewClicked$1 */
+    /* JADX INFO: compiled from: ViewHolderStreamRichPresence.kt */
     public static final class ViewOnClickListenerC102801 implements View.OnClickListener {
         public final /* synthetic */ Function0 $onStreamPreviewClicked;
 

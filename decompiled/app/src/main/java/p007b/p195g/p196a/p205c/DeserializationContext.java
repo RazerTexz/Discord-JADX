@@ -12,9 +12,9 @@ import p007b.p195g.p196a.p205c.p206a0.DeserializerFactory;
 import p007b.p195g.p196a.p205c.p218h0.TypeFactory;
 import p007b.p195g.p196a.p205c.p219i0.LinkedNode;
 
-/* compiled from: DeserializationContext.java */
-/* renamed from: b.g.a.c.g, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.g.a.c.g, reason: use source file name */
+/* JADX INFO: compiled from: DeserializationContext.java */
+/* JADX INFO: loaded from: classes3.dex */
 public abstract class DeserializationContext extends DatabindContext implements Serializable {
     private static final long serialVersionUID = 1;
     public final DeserializerCache _cache;
@@ -37,13 +37,13 @@ public abstract class DeserializationContext extends DatabindContext implements 
     }
 
     @Override // p007b.p195g.p196a.p205c.DatabindContext
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final TypeFactory mo1940d() {
         return this._config._base._typeFactory;
     }
 
     @Override // p007b.p195g.p196a.p205c.DatabindContext
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public <T> T mo1942f(JavaType javaType, String str) throws JsonMappingException {
         throw new InvalidDefinitionException((JsonParser) null, str, javaType);
     }

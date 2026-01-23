@@ -11,22 +11,22 @@ import p507d0.p580t._Collections;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: SignatureBuildingComponents.kt */
-/* renamed from: d0.e0.p.d.m0.e.b.w, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.e.b.w, reason: use source file name */
+/* JADX INFO: compiled from: SignatureBuildingComponents.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class SignatureBuildingComponents {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final SignatureBuildingComponents f23636a = new SignatureBuildingComponents();
 
-    /* compiled from: SignatureBuildingComponents.kt */
-    /* renamed from: d0.e0.p.d.m0.e.b.w$a */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.e.b.w$a */
+    /* JADX INFO: compiled from: SignatureBuildingComponents.kt */
     public static final class a extends Lambda implements Function1<String, CharSequence> {
         public a() {
             super(1);
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final CharSequence invoke2(String str) {
             Intrinsics3.checkNotNullParameter(str, "it");
             return SignatureBuildingComponents.access$escapeClassName(SignatureBuildingComponents.this, str);
@@ -42,7 +42,7 @@ public final class SignatureBuildingComponents {
         return signatureBuildingComponents.m9550a(str);
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final String m9550a(String str) {
         if (str.length() <= 1) {
             return str;

@@ -4,21 +4,21 @@ import java.util.Map;
 import p007b.p109f.p161j.p176k.RequestListener;
 import p007b.p109f.p161j.p176k.RequestListener2;
 
-/* compiled from: InternalRequestListener.java */
-/* renamed from: b.f.j.p.b0, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.f.j.p.b0, reason: use source file name */
+/* JADX INFO: compiled from: InternalRequestListener.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class InternalRequestListener implements RequestListener2, ProducerListener2 {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final ProducerListener f3994a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final ProducerListener2 f3995b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final RequestListener f3996c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final RequestListener2 f3997d;
 
     public InternalRequestListener(RequestListener requestListener, RequestListener2 requestListener2) {
@@ -29,7 +29,7 @@ public class InternalRequestListener implements RequestListener2, ProducerListen
     }
 
     @Override // p007b.p109f.p161j.p181p.ProducerListener2
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public void mo1354a(ProducerContext producerContext, String str, String str2) {
         ProducerListener producerListener = this.f3994a;
         if (producerListener != null) {
@@ -42,7 +42,7 @@ public class InternalRequestListener implements RequestListener2, ProducerListen
     }
 
     @Override // p007b.p109f.p161j.p176k.RequestListener2
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public void mo1355b(ProducerContext producerContext) {
         RequestListener requestListener = this.f3996c;
         if (requestListener != null) {
@@ -55,7 +55,7 @@ public class InternalRequestListener implements RequestListener2, ProducerListen
     }
 
     @Override // p007b.p109f.p161j.p181p.ProducerListener2
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public void mo1356c(ProducerContext producerContext, String str, boolean z2) {
         ProducerListener producerListener = this.f3994a;
         if (producerListener != null) {
@@ -68,7 +68,7 @@ public class InternalRequestListener implements RequestListener2, ProducerListen
     }
 
     @Override // p007b.p109f.p161j.p181p.ProducerListener2
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public void mo1357d(ProducerContext producerContext, String str, Map map) {
         ProducerListener producerListener = this.f3994a;
         if (producerListener != null) {
@@ -81,7 +81,7 @@ public class InternalRequestListener implements RequestListener2, ProducerListen
     }
 
     @Override // p007b.p109f.p161j.p181p.ProducerListener2
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public void mo1358e(ProducerContext producerContext, String str) {
         ProducerListener producerListener = this.f3994a;
         if (producerListener != null) {
@@ -94,7 +94,7 @@ public class InternalRequestListener implements RequestListener2, ProducerListen
     }
 
     @Override // p007b.p109f.p161j.p176k.RequestListener2
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public void mo1359f(ProducerContext producerContext) {
         RequestListener requestListener = this.f3996c;
         if (requestListener != null) {
@@ -107,7 +107,7 @@ public class InternalRequestListener implements RequestListener2, ProducerListen
     }
 
     @Override // p007b.p109f.p161j.p181p.ProducerListener2
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public boolean mo1360g(ProducerContext producerContext, String str) {
         ProducerListener2 producerListener2;
         ProducerListener producerListener = this.f3994a;
@@ -116,7 +116,7 @@ public class InternalRequestListener implements RequestListener2, ProducerListen
     }
 
     @Override // p007b.p109f.p161j.p176k.RequestListener2
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public void mo1361h(ProducerContext producerContext, Throwable th) {
         RequestListener requestListener = this.f3996c;
         if (requestListener != null) {
@@ -129,7 +129,7 @@ public class InternalRequestListener implements RequestListener2, ProducerListen
     }
 
     @Override // p007b.p109f.p161j.p176k.RequestListener2
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public void mo1362i(ProducerContext producerContext) {
         RequestListener requestListener = this.f3996c;
         if (requestListener != null) {
@@ -142,7 +142,7 @@ public class InternalRequestListener implements RequestListener2, ProducerListen
     }
 
     @Override // p007b.p109f.p161j.p181p.ProducerListener2
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public void mo1363j(ProducerContext producerContext, String str, Map map) {
         ProducerListener producerListener = this.f3994a;
         if (producerListener != null) {
@@ -155,7 +155,7 @@ public class InternalRequestListener implements RequestListener2, ProducerListen
     }
 
     @Override // p007b.p109f.p161j.p181p.ProducerListener2
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public void mo1364k(ProducerContext producerContext, String str, Throwable th, Map map) {
         ProducerListener producerListener = this.f3994a;
         if (producerListener != null) {

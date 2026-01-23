@@ -20,15 +20,15 @@ import p658rx.Emitter;
 import p658rx.Observable;
 import p658rx.functions.Action1;
 
-/* compiled from: DownloadUtils.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: DownloadUtils.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class DownloadUtils {
     public static final DownloadUtils INSTANCE = new DownloadUtils();
 
-    /* compiled from: DownloadUtils.kt */
+    /* JADX INFO: compiled from: DownloadUtils.kt */
     public static abstract class DownloadState {
 
-        /* compiled from: DownloadUtils.kt */
+        /* JADX INFO: compiled from: DownloadUtils.kt */
         public static final class Completed extends DownloadState {
             private final File file;
 
@@ -44,7 +44,7 @@ public final class DownloadUtils {
             }
         }
 
-        /* compiled from: DownloadUtils.kt */
+        /* JADX INFO: compiled from: DownloadUtils.kt */
         public static final class Failure extends DownloadState {
             private final Exception exception;
 
@@ -60,7 +60,7 @@ public final class DownloadUtils {
             }
         }
 
-        /* compiled from: DownloadUtils.kt */
+        /* JADX INFO: compiled from: DownloadUtils.kt */
         public static final class InProgress extends DownloadState {
             private final float progress;
 
@@ -82,15 +82,15 @@ public final class DownloadUtils {
         }
     }
 
-    /* compiled from: DownloadUtils.kt */
-    /* renamed from: com.discord.utilities.file.DownloadUtils$downloadFile$1 */
+    /* JADX INFO: renamed from: com.discord.utilities.file.DownloadUtils$downloadFile$1 */
+    /* JADX INFO: compiled from: DownloadUtils.kt */
     public static final class C67551<T> implements Action1<Emitter<DownloadState>> {
         public final /* synthetic */ File $downloadDirectory;
         public final /* synthetic */ String $fileName;
         public final /* synthetic */ String $fileUrl;
 
-        /* compiled from: DownloadUtils.kt */
-        /* renamed from: com.discord.utilities.file.DownloadUtils$downloadFile$1$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.utilities.file.DownloadUtils$downloadFile$1$1, reason: invalid class name */
+        /* JADX INFO: compiled from: DownloadUtils.kt */
         public static final class AnonymousClass1 extends Lambda implements Function1<ResponseBody, Unit> {
             public final /* synthetic */ Emitter $emitter;
 
@@ -106,7 +106,7 @@ public final class DownloadUtils {
                 return Unit.f27425a;
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2(ResponseBody responseBody) {
                 Intrinsics3.checkNotNullParameter(responseBody, "responseBody");
                 try {
@@ -149,7 +149,7 @@ public final class DownloadUtils {
             call2(emitter);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final void call2(Emitter<DownloadState> emitter) {
             Intrinsics3.checkNotNullParameter(emitter, "emitter");
             emitter.onNext(new DownloadState.InProgress(0.0f));

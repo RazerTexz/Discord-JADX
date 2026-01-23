@@ -3,18 +3,18 @@ package p007b.p225i.p361c.p401u;
 import androidx.annotation.NonNull;
 import p007b.p100d.p104b.p105a.outline;
 
-/* compiled from: com.google.firebase:firebase-installations-interop@@16.0.0 */
-/* renamed from: b.i.c.u.a */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.c.u.a */
+/* JADX INFO: compiled from: com.google.firebase:firebase-installations-interop@@16.0.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public final class C4837a extends AbstractC4847k {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final String f12918a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final long f12919b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final long f12920c;
 
     public C4837a(String str, long j, long j2, a aVar) {
@@ -25,21 +25,21 @@ public final class C4837a extends AbstractC4847k {
 
     @Override // p007b.p225i.p361c.p401u.AbstractC4847k
     @NonNull
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public String mo6750a() {
         return this.f12918a;
     }
 
     @Override // p007b.p225i.p361c.p401u.AbstractC4847k
     @NonNull
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public long mo6751b() {
         return this.f12920c;
     }
 
     @Override // p007b.p225i.p361c.p401u.AbstractC4847k
     @NonNull
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public long mo6752c() {
         return this.f12919b;
     }

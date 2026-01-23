@@ -6,9 +6,9 @@ import kotlin.jvm.functions.Function5;
 import p507d0.p592z.p594d.FunctionReferenceImpl;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: StoreGatewayConnection.kt */
-/* renamed from: com.discord.stores.StoreGatewayConnection$ClientState$Companion$initialize$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.stores.StoreGatewayConnection$ClientState$Companion$initialize$1, reason: use source file name */
+/* JADX INFO: compiled from: StoreGatewayConnection.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final /* synthetic */ class StoreGatewayConnection2 extends FunctionReferenceImpl implements Function5<Boolean, String, Long, Boolean, StoreClientDataState.ClientDataState, StoreGatewayConnection.ClientState> {
     public StoreGatewayConnection2(StoreGatewayConnection.ClientState.Companion companion) {
         super(5, companion, StoreGatewayConnection.ClientState.Companion.class, "create", "create(ZLjava/lang/String;JZLcom/discord/stores/StoreClientDataState$ClientDataState;)Lcom/discord/stores/StoreGatewayConnection$ClientState;", 0);

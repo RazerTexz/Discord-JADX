@@ -7,7 +7,7 @@ import java.io.ObjectStreamField;
 import java.io.Serializable;
 import org.json.JSONObject;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class AdjustAttribution implements Serializable {
     private static final ObjectStreamField[] serialPersistentFields = {new ObjectStreamField("trackerToken", String.class), new ObjectStreamField("trackerName", String.class), new ObjectStreamField("network", String.class), new ObjectStreamField("campaign", String.class), new ObjectStreamField("adgroup", String.class), new ObjectStreamField("creative", String.class), new ObjectStreamField("clickLabel", String.class), new ObjectStreamField("adid", String.class)};
     private static final long serialVersionUID = 1;

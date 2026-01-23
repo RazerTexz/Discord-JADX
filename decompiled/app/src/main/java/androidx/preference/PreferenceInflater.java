@@ -2,7 +2,6 @@ package androidx.preference;
 
 import android.content.Context;
 import android.content.Intent;
-import android.content.res.Resources;
 import android.content.res.XmlResourceParser;
 import android.util.AttributeSet;
 import android.util.Xml;
@@ -15,7 +14,7 @@ import java.util.HashMap;
 import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserException;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class PreferenceInflater {
     private static final String EXTRA_TAG_NAME = "extra";
     private static final String INTENT_TAG_NAME = "intent";
@@ -161,7 +160,7 @@ public class PreferenceInflater {
         return this.mDefaultPackages;
     }
 
-    public Preference inflate(int i, @Nullable PreferenceGroup preferenceGroup) throws Resources.NotFoundException {
+    public Preference inflate(int i, @Nullable PreferenceGroup preferenceGroup) {
         XmlResourceParser xml = getContext().getResources().getXml(i);
         try {
             return inflate(xml, preferenceGroup);

@@ -5,25 +5,25 @@ import com.google.zxing.FormatException;
 import com.google.zxing.NotFoundException;
 import p007b.p225i.p414e.p418n.BitArray;
 
-/* compiled from: GeneralAppIdDecoder.java */
-/* renamed from: b.i.e.q.r.f.d.s, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.e.q.r.f.d.s, reason: use source file name */
+/* JADX INFO: compiled from: GeneralAppIdDecoder.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class GeneralAppIdDecoder {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final BitArray f13457a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final CurrentParsingState f13458b = new CurrentParsingState();
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final StringBuilder f13459c = new StringBuilder();
 
     public GeneralAppIdDecoder(BitArray bitArray) {
         this.f13457a = bitArray;
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public static int m7038d(BitArray bitArray, int i, int i2) {
         int i3 = 0;
         for (int i4 = 0; i4 < i2; i4++) {
@@ -34,7 +34,7 @@ public final class GeneralAppIdDecoder {
         return i3;
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public String m7039a(StringBuilder sb, int i) throws NotFoundException, FormatException {
         String str = null;
         while (true) {
@@ -69,7 +69,7 @@ public final class GeneralAppIdDecoder {
     /* JADX WARN: Removed duplicated region for block: B:26:0x005e  */
     /* JADX WARN: Removed duplicated region for block: B:28:0x0061  */
     /* JADX WARN: Removed duplicated region for block: B:96:0x017b  */
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
@@ -428,12 +428,12 @@ public final class GeneralAppIdDecoder {
         return (decodedInformation == null || !decodedInformation.f13448d) ? new DecodedInformation(i2, this.f13459c.toString()) : new DecodedInformation(i2, this.f13459c.toString(), decodedInformation.f13447c);
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public int m7041c(int i, int i2) {
         return m7038d(this.f13457a, i, i2);
     }
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final boolean m7042e(int i) {
         int i2 = i + 3;
         if (i2 > this.f13457a.f13228k) {
@@ -448,7 +448,7 @@ public final class GeneralAppIdDecoder {
         return true;
     }
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final boolean m7043f(int i) {
         if (i + 1 > this.f13457a.f13228k) {
             return false;

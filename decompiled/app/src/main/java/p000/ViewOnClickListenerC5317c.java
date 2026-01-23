@@ -3,15 +3,15 @@ package p000;
 import android.view.View;
 import com.discord.views.TernaryCheckBox;
 
-/* compiled from: java-style lambda group */
-/* renamed from: c */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: c */
+/* JADX INFO: compiled from: java-style lambda group */
+/* JADX INFO: loaded from: classes.dex */
 public final class ViewOnClickListenerC5317c implements View.OnClickListener {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final /* synthetic */ int f14511j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final /* synthetic */ Object f14512k;
 
     public ViewOnClickListenerC5317c(int i, Object obj) {

@@ -57,8 +57,8 @@ import p637j0.p641k.Func1;
 import p658rx.Observable;
 import p658rx.subscriptions.CompositeSubscription;
 
-/* compiled from: WidgetGuildSelector.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetGuildSelector.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetGuildSelector extends AppBottomSheet {
     private static final String ARG_FILTER_FUNCTION = "INTENT_EXTRA_FILTER_FUNCTION";
     private static final String ARG_INCLUDE_NO_GUILD = "INTENT_EXTRA_INCLUDE_NO_GUILD";
@@ -69,22 +69,22 @@ public final class WidgetGuildSelector extends AppBottomSheet {
     private static final String RESULT_EXTRA_GUILD_NAME = "INTENT_EXTRA_GUILD_NAME";
     private Adapter adapter;
 
-    /* renamed from: binding$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
 
-    /* renamed from: requestKey$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: requestKey$delegate, reason: from kotlin metadata */
     private final Lazy requestKey;
     public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetGuildSelector.class, "binding", "getBinding()Lcom/discord/databinding/WidgetGuildSelectorBinding;", 0)};
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
 
-    /* compiled from: WidgetGuildSelector.kt */
+    /* JADX INFO: compiled from: WidgetGuildSelector.kt */
     public static final class Adapter extends MGRecyclerAdapterSimple<Item> {
         private final WidgetGuildSelector dialog;
         private final int noGuildStringId;
 
-        /* compiled from: WidgetGuildSelector.kt */
+        /* JADX INFO: compiled from: WidgetGuildSelector.kt */
         public static final class ItemGuild extends MGRecyclerViewHolder<Adapter, Item> {
             private final WidgetGuildSelectorItemBinding binding;
             private final int noGuildStringId;
@@ -131,7 +131,7 @@ public final class WidgetGuildSelector extends AppBottomSheet {
                 onConfigure2(i, item);
             }
 
-            /* renamed from: onConfigure, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: onConfigure, reason: avoid collision after fix types in other method */
             public void onConfigure2(int position, Item data) {
                 CharSequence charSequenceM218j;
                 Guild guild;
@@ -201,7 +201,7 @@ public final class WidgetGuildSelector extends AppBottomSheet {
         }
     }
 
-    /* compiled from: WidgetGuildSelector.kt */
+    /* JADX INFO: compiled from: WidgetGuildSelector.kt */
     public static final class BaseFilterFunction implements FilterFunction {
         @Override // com.discord.widgets.guilds.WidgetGuildSelector.FilterFunction
         public boolean includeGuild(Guild guild) {
@@ -210,7 +210,7 @@ public final class WidgetGuildSelector extends AppBottomSheet {
         }
     }
 
-    /* compiled from: WidgetGuildSelector.kt */
+    /* JADX INFO: compiled from: WidgetGuildSelector.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -265,10 +265,10 @@ public final class WidgetGuildSelector extends AppBottomSheet {
         }
     }
 
-    /* compiled from: WidgetGuildSelector.kt */
+    /* JADX INFO: compiled from: WidgetGuildSelector.kt */
     public interface FilterFunction extends Serializable {
 
-        /* compiled from: WidgetGuildSelector.kt */
+        /* JADX INFO: compiled from: WidgetGuildSelector.kt */
         public static final class DefaultImpls {
             public static boolean includeGuild(FilterFunction filterFunction, Guild guild) {
                 Intrinsics3.checkNotNullParameter(guild, "guild");
@@ -279,7 +279,7 @@ public final class WidgetGuildSelector extends AppBottomSheet {
         boolean includeGuild(Guild guild);
     }
 
-    /* compiled from: WidgetGuildSelector.kt */
+    /* JADX INFO: compiled from: WidgetGuildSelector.kt */
     public static final /* data */ class GuildFilterFunction implements FilterFunction {
         private final Set<Long> guildIds;
 
@@ -331,7 +331,7 @@ public final class WidgetGuildSelector extends AppBottomSheet {
         }
     }
 
-    /* compiled from: WidgetGuildSelector.kt */
+    /* JADX INFO: compiled from: WidgetGuildSelector.kt */
     public static final /* data */ class Item implements MGRecyclerDataPayload {
         private final Guild guild;
         private final String key;
@@ -350,7 +350,7 @@ public final class WidgetGuildSelector extends AppBottomSheet {
             return item.copy(guild);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final Guild getGuild() {
             return this.guild;
         }
@@ -396,8 +396,8 @@ public final class WidgetGuildSelector extends AppBottomSheet {
         }
     }
 
-    /* compiled from: WidgetGuildSelector.kt */
-    /* renamed from: com.discord.widgets.guilds.WidgetGuildSelector$bindSubscriptions$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.guilds.WidgetGuildSelector$bindSubscriptions$1 */
+    /* JADX INFO: compiled from: WidgetGuildSelector.kt */
     public static final class C85811 extends Lambda implements Function1<List<? extends Item>, Unit> {
         public C85811() {
             super(1);
@@ -409,15 +409,15 @@ public final class WidgetGuildSelector extends AppBottomSheet {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(List<Item> list) {
             Intrinsics3.checkNotNullParameter(list, "it");
             WidgetGuildSelector.access$getAdapter$p(WidgetGuildSelector.this).setData(list);
         }
     }
 
-    /* compiled from: WidgetGuildSelector.kt */
-    /* renamed from: com.discord.widgets.guilds.WidgetGuildSelector$get$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.guilds.WidgetGuildSelector$get$1 */
+    /* JADX INFO: compiled from: WidgetGuildSelector.kt */
     public static final class C85821<T, R> implements Func1<LinkedHashMap<Long, Guild>, List<? extends Item>> {
         public final /* synthetic */ FilterFunction $filterFunction;
         public final /* synthetic */ boolean $includeNoGuild;
@@ -432,7 +432,7 @@ public final class WidgetGuildSelector extends AppBottomSheet {
             return call2(linkedHashMap);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final List<Item> call2(LinkedHashMap<Long, Guild> linkedHashMap) {
             Collection<Guild> collectionValues = linkedHashMap.values();
             Intrinsics3.checkNotNullExpressionValue(collectionValues, "guilds.values");

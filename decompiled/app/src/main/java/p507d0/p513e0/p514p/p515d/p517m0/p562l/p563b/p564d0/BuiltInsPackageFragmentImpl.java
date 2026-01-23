@@ -13,16 +13,16 @@ import p507d0.p513e0.p514p.p515d.p517m0.p566m.StorageManager;
 import p507d0.p591y.Closeable;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: BuiltInsPackageFragmentImpl.kt */
-/* renamed from: d0.e0.p.d.m0.l.b.d0.c, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.l.b.d0.c, reason: use source file name */
+/* JADX INFO: compiled from: BuiltInsPackageFragmentImpl.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class BuiltInsPackageFragmentImpl extends DeserializedPackageFragmentImpl implements BuiltInsPackageFragment {
 
-    /* renamed from: v */
+    /* JADX INFO: renamed from: v */
     public static final a f24517v = new a(null);
 
-    /* compiled from: BuiltInsPackageFragmentImpl.kt */
-    /* renamed from: d0.e0.p.d.m0.l.b.d0.c$a */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.l.b.d0.c$a */
+    /* JADX INFO: compiled from: BuiltInsPackageFragmentImpl.kt */
     public static final class a {
         public a(DefaultConstructorMarker defaultConstructorMarker) {
         }

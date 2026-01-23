@@ -15,28 +15,28 @@ import p007b.p085c.p086a.p091w.LPaint;
 import p007b.p085c.p086a.p091w.p093c.BaseKeyframeAnimation;
 import p007b.p085c.p086a.p091w.p093c.ValueCallbackKeyframeAnimation;
 
-/* compiled from: SolidLayer.java */
-/* renamed from: b.c.a.y.m.h, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.c.a.y.m.h, reason: use source file name */
+/* JADX INFO: compiled from: SolidLayer.java */
+/* JADX INFO: loaded from: classes.dex */
 public class SolidLayer extends BaseLayer2 {
 
-    /* renamed from: A */
+    /* JADX INFO: renamed from: A */
     public final Path f2899A;
 
-    /* renamed from: B */
+    /* JADX INFO: renamed from: B */
     public final Layer2 f2900B;
 
-    /* renamed from: C */
+    /* JADX INFO: renamed from: C */
     @Nullable
     public BaseKeyframeAnimation<ColorFilter, ColorFilter> f2901C;
 
-    /* renamed from: x */
+    /* JADX INFO: renamed from: x */
     public final RectF f2902x;
 
-    /* renamed from: y */
+    /* JADX INFO: renamed from: y */
     public final Paint f2903y;
 
-    /* renamed from: z */
+    /* JADX INFO: renamed from: z */
     public final float[] f2904z;
 
     public SolidLayer(LottieDrawable lottieDrawable, Layer2 layer2) {
@@ -53,7 +53,7 @@ public class SolidLayer extends BaseLayer2 {
     }
 
     @Override // p007b.p085c.p086a.p095y.p098m.BaseLayer2, p007b.p085c.p086a.p091w.p092b.DrawingContent
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public void mo712d(RectF rectF, Matrix matrix, boolean z2) {
         super.mo712d(rectF, matrix, z2);
         RectF rectF2 = this.f2902x;
@@ -64,7 +64,7 @@ public class SolidLayer extends BaseLayer2 {
     }
 
     @Override // p007b.p085c.p086a.p095y.p098m.BaseLayer2, p007b.p085c.p086a.p095y.KeyPathElement
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public <T> void mo714g(T t, @Nullable LottieValueCallback<T> lottieValueCallback) {
         this.f2857v.m745c(t, lottieValueCallback);
         if (t == LottieProperty.f2421C) {
@@ -77,7 +77,7 @@ public class SolidLayer extends BaseLayer2 {
     }
 
     @Override // p007b.p085c.p086a.p095y.p098m.BaseLayer2
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public void mo780j(Canvas canvas, Matrix matrix, int i) {
         int iAlpha = Color.alpha(this.f2900B.f2879l);
         if (iAlpha == 0) {

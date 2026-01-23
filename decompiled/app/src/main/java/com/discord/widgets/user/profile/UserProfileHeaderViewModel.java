@@ -47,19 +47,19 @@ import p507d0.p592z.p594d.Lambda;
 import p637j0.p642l.p647e.ScalarSynchronousObservable;
 import p658rx.Observable;
 
-/* compiled from: UserProfileHeaderViewModel.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: UserProfileHeaderViewModel.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class UserProfileHeaderViewModel extends AppViewModel<ViewState> {
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
 
-    /* renamed from: ME */
+    /* JADX INFO: renamed from: ME */
     public static final long f19406ME = -1;
     private final long userId;
 
-    /* compiled from: UserProfileHeaderViewModel.kt */
-    /* renamed from: com.discord.widgets.user.profile.UserProfileHeaderViewModel$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.user.profile.UserProfileHeaderViewModel$1 */
+    /* JADX INFO: compiled from: UserProfileHeaderViewModel.kt */
     public static final class C103091 extends Lambda implements Function1<StoreState, Unit> {
         public C103091() {
             super(1);
@@ -71,14 +71,14 @@ public final class UserProfileHeaderViewModel extends AppViewModel<ViewState> {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(StoreState storeState) {
             Intrinsics3.checkNotNullParameter(storeState, "storeState");
             UserProfileHeaderViewModel.access$handleStoreState(UserProfileHeaderViewModel.this, storeState);
         }
     }
 
-    /* compiled from: UserProfileHeaderViewModel.kt */
+    /* JADX INFO: compiled from: UserProfileHeaderViewModel.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -126,7 +126,7 @@ public final class UserProfileHeaderViewModel extends AppViewModel<ViewState> {
         }
     }
 
-    /* compiled from: UserProfileHeaderViewModel.kt */
+    /* JADX INFO: compiled from: UserProfileHeaderViewModel.kt */
     public static final /* data */ class StoreState {
         private final boolean allowAnimatedEmojis;
         private final Channel channel;
@@ -158,21 +158,22 @@ public final class UserProfileHeaderViewModel extends AppViewModel<ViewState> {
             this.channel = channel;
         }
 
+        /* JADX WARN: Multi-variable type inference failed */
         public static /* synthetic */ StoreState copy$default(StoreState storeState, MeUser meUser, User user, Map map, Collection collection, ModelRichPresence modelRichPresence, StreamContext streamContext, UserProfile userProfile, boolean z2, boolean z3, Channel channel, int i, Object obj) {
             return storeState.copy((i & 1) != 0 ? storeState.me : meUser, (i & 2) != 0 ? storeState.user : user, (i & 4) != 0 ? storeState.userIdToGuildMemberMap : map, (i & 8) != 0 ? storeState.guildMembers : collection, (i & 16) != 0 ? storeState.richPresence : modelRichPresence, (i & 32) != 0 ? storeState.streamContext : streamContext, (i & 64) != 0 ? storeState.userProfile : userProfile, (i & 128) != 0 ? storeState.allowAnimatedEmojis : z2, (i & 256) != 0 ? storeState.reducedMotionEnabled : z3, (i & 512) != 0 ? storeState.channel : channel);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final MeUser getMe() {
             return this.me;
         }
 
-        /* renamed from: component10, reason: from getter */
+        /* JADX INFO: renamed from: component10, reason: from getter */
         public final Channel getChannel() {
             return this.channel;
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final User getUser() {
             return this.user;
         }
@@ -185,27 +186,27 @@ public final class UserProfileHeaderViewModel extends AppViewModel<ViewState> {
             return this.guildMembers;
         }
 
-        /* renamed from: component5, reason: from getter */
+        /* JADX INFO: renamed from: component5, reason: from getter */
         public final ModelRichPresence getRichPresence() {
             return this.richPresence;
         }
 
-        /* renamed from: component6, reason: from getter */
+        /* JADX INFO: renamed from: component6, reason: from getter */
         public final StreamContext getStreamContext() {
             return this.streamContext;
         }
 
-        /* renamed from: component7, reason: from getter */
+        /* JADX INFO: renamed from: component7, reason: from getter */
         public final UserProfile getUserProfile() {
             return this.userProfile;
         }
 
-        /* renamed from: component8, reason: from getter */
+        /* JADX INFO: renamed from: component8, reason: from getter */
         public final boolean getAllowAnimatedEmojis() {
             return this.allowAnimatedEmojis;
         }
 
-        /* renamed from: component9, reason: from getter */
+        /* JADX INFO: renamed from: component9, reason: from getter */
         public final boolean getReducedMotionEnabled() {
             return this.reducedMotionEnabled;
         }
@@ -271,6 +272,12 @@ public final class UserProfileHeaderViewModel extends AppViewModel<ViewState> {
         }
 
         /* JADX WARN: Multi-variable type inference failed */
+        /* JADX WARN: Type inference failed for: r2v19, types: [int] */
+        /* JADX WARN: Type inference failed for: r2v22 */
+        /* JADX WARN: Type inference failed for: r2v29 */
+        /* JADX WARN: Type inference failed for: r3v0 */
+        /* JADX WARN: Type inference failed for: r3v1, types: [int] */
+        /* JADX WARN: Type inference failed for: r3v2 */
         public int hashCode() {
             MeUser meUser = this.me;
             int iHashCode = (meUser != null ? meUser.hashCode() : 0) * 31;
@@ -287,15 +294,15 @@ public final class UserProfileHeaderViewModel extends AppViewModel<ViewState> {
             UserProfile userProfile = this.userProfile;
             int iHashCode7 = (iHashCode6 + (userProfile != null ? userProfile.hashCode() : 0)) * 31;
             boolean z2 = this.allowAnimatedEmojis;
-            int i = z2;
-            if (z2 != 0) {
-                i = 1;
+            ?? r2 = z2;
+            if (z2) {
+                r2 = 1;
             }
-            int i2 = (iHashCode7 + i) * 31;
+            int i = (iHashCode7 + r2) * 31;
             boolean z3 = this.reducedMotionEnabled;
-            int i3 = (i2 + (z3 ? 1 : z3 ? 1 : 0)) * 31;
+            int i2 = (i + (z3 ? 1 : z3)) * 31;
             Channel channel = this.channel;
-            return i3 + (channel != null ? channel.hashCode() : 0);
+            return i2 + (channel != null ? channel.hashCode() : 0);
         }
 
         public String toString() {
@@ -324,10 +331,10 @@ public final class UserProfileHeaderViewModel extends AppViewModel<ViewState> {
         }
     }
 
-    /* compiled from: UserProfileHeaderViewModel.kt */
+    /* JADX INFO: compiled from: UserProfileHeaderViewModel.kt */
     public static abstract class ViewState {
 
-        /* compiled from: UserProfileHeaderViewModel.kt */
+        /* JADX INFO: compiled from: UserProfileHeaderViewModel.kt */
         public static final class Uninitialized extends ViewState {
             public static final Uninitialized INSTANCE = new Uninitialized();
 
@@ -343,19 +350,19 @@ public final class UserProfileHeaderViewModel extends AppViewModel<ViewState> {
             this();
         }
 
-        /* compiled from: UserProfileHeaderViewModel.kt */
+        /* JADX INFO: compiled from: UserProfileHeaderViewModel.kt */
         public static final /* data */ class Loaded extends ViewState {
             private final boolean allowAnimatedEmojis;
             private final boolean allowAnimationInReducedMotion;
 
-            /* renamed from: avatarColorId$delegate, reason: from kotlin metadata */
+            /* JADX INFO: renamed from: avatarColorId$delegate, reason: from kotlin metadata */
             private final Lazy avatarColorId;
             private final String banner;
             private final String bannerColorHex;
             private final boolean editable;
             private final GuildMember guildMember;
 
-            /* renamed from: guildMemberColorId$delegate, reason: from kotlin metadata */
+            /* JADX INFO: renamed from: guildMemberColorId$delegate, reason: from kotlin metadata */
             private final Lazy guildMemberColorId;
             private final List<GuildMember> guildMembersForAka;
             private final boolean hasGuildMemberAvatar;
@@ -380,61 +387,62 @@ public final class UserProfileHeaderViewModel extends AppViewModel<ViewState> {
                 this(user, str, str2, (i & 8) != 0 ? null : guildMember, (i & 16) != 0 ? Collections2.emptyList() : list, (i & 32) != 0 ? null : presence, (i & 64) != 0 ? null : streamContext, (i & 128) != 0 ? StoreUserProfile.INSTANCE.getEMPTY_PROFILE() : userProfile, z2, z3, (i & 1024) != 0 ? false : z4, z5, (i & 4096) != 0 ? false : z6, (i & 8192) != 0 ? false : z7, (i & 16384) != 0 ? false : z8, (i & 32768) != 0 ? false : z9);
             }
 
+            /* JADX WARN: Multi-variable type inference failed */
             public static /* synthetic */ Loaded copy$default(Loaded loaded, User user, String str, String str2, GuildMember guildMember, List list, Presence presence, StreamContext streamContext, UserProfile userProfile, boolean z2, boolean z3, boolean z4, boolean z5, boolean z6, boolean z7, boolean z8, boolean z9, int i, Object obj) {
                 return loaded.copy((i & 1) != 0 ? loaded.user : user, (i & 2) != 0 ? loaded.banner : str, (i & 4) != 0 ? loaded.bannerColorHex : str2, (i & 8) != 0 ? loaded.guildMember : guildMember, (i & 16) != 0 ? loaded.guildMembersForAka : list, (i & 32) != 0 ? loaded.presence : presence, (i & 64) != 0 ? loaded.streamContext : streamContext, (i & 128) != 0 ? loaded.userProfile : userProfile, (i & 256) != 0 ? loaded.isMeUserPremium : z2, (i & 512) != 0 ? loaded.isMeUserVerified : z3, (i & 1024) != 0 ? loaded.allowAnimatedEmojis : z4, (i & 2048) != 0 ? loaded.showPresence : z5, (i & 4096) != 0 ? loaded.editable : z6, (i & 8192) != 0 ? loaded.reducedMotionEnabled : z7, (i & 16384) != 0 ? loaded.allowAnimationInReducedMotion : z8, (i & 32768) != 0 ? loaded.isMe : z9);
             }
 
-            /* renamed from: component1, reason: from getter */
+            /* JADX INFO: renamed from: component1, reason: from getter */
             public final User getUser() {
                 return this.user;
             }
 
-            /* renamed from: component10, reason: from getter */
+            /* JADX INFO: renamed from: component10, reason: from getter */
             public final boolean getIsMeUserVerified() {
                 return this.isMeUserVerified;
             }
 
-            /* renamed from: component11, reason: from getter */
+            /* JADX INFO: renamed from: component11, reason: from getter */
             public final boolean getAllowAnimatedEmojis() {
                 return this.allowAnimatedEmojis;
             }
 
-            /* renamed from: component12, reason: from getter */
+            /* JADX INFO: renamed from: component12, reason: from getter */
             public final boolean getShowPresence() {
                 return this.showPresence;
             }
 
-            /* renamed from: component13, reason: from getter */
+            /* JADX INFO: renamed from: component13, reason: from getter */
             public final boolean getEditable() {
                 return this.editable;
             }
 
-            /* renamed from: component14, reason: from getter */
+            /* JADX INFO: renamed from: component14, reason: from getter */
             public final boolean getReducedMotionEnabled() {
                 return this.reducedMotionEnabled;
             }
 
-            /* renamed from: component15, reason: from getter */
+            /* JADX INFO: renamed from: component15, reason: from getter */
             public final boolean getAllowAnimationInReducedMotion() {
                 return this.allowAnimationInReducedMotion;
             }
 
-            /* renamed from: component16, reason: from getter */
+            /* JADX INFO: renamed from: component16, reason: from getter */
             public final boolean getIsMe() {
                 return this.isMe;
             }
 
-            /* renamed from: component2, reason: from getter */
+            /* JADX INFO: renamed from: component2, reason: from getter */
             public final String getBanner() {
                 return this.banner;
             }
 
-            /* renamed from: component3, reason: from getter */
+            /* JADX INFO: renamed from: component3, reason: from getter */
             public final String getBannerColorHex() {
                 return this.bannerColorHex;
             }
 
-            /* renamed from: component4, reason: from getter */
+            /* JADX INFO: renamed from: component4, reason: from getter */
             public final GuildMember getGuildMember() {
                 return this.guildMember;
             }
@@ -443,22 +451,22 @@ public final class UserProfileHeaderViewModel extends AppViewModel<ViewState> {
                 return this.guildMembersForAka;
             }
 
-            /* renamed from: component6, reason: from getter */
+            /* JADX INFO: renamed from: component6, reason: from getter */
             public final Presence getPresence() {
                 return this.presence;
             }
 
-            /* renamed from: component7, reason: from getter */
+            /* JADX INFO: renamed from: component7, reason: from getter */
             public final StreamContext getStreamContext() {
                 return this.streamContext;
             }
 
-            /* renamed from: component8, reason: from getter */
+            /* JADX INFO: renamed from: component8, reason: from getter */
             public final UserProfile getUserProfile() {
                 return this.userProfile;
             }
 
-            /* renamed from: component9, reason: from getter */
+            /* JADX INFO: renamed from: component9, reason: from getter */
             public final boolean getIsMeUserPremium() {
                 return this.isMeUserPremium;
             }
@@ -570,6 +578,30 @@ public final class UserProfileHeaderViewModel extends AppViewModel<ViewState> {
             }
 
             /* JADX WARN: Multi-variable type inference failed */
+            /* JADX WARN: Type inference failed for: r1v11, types: [int] */
+            /* JADX WARN: Type inference failed for: r1v13, types: [int] */
+            /* JADX WARN: Type inference failed for: r1v15, types: [int] */
+            /* JADX WARN: Type inference failed for: r1v17 */
+            /* JADX WARN: Type inference failed for: r1v18 */
+            /* JADX WARN: Type inference failed for: r1v19 */
+            /* JADX WARN: Type inference failed for: r1v20 */
+            /* JADX WARN: Type inference failed for: r1v21 */
+            /* JADX WARN: Type inference failed for: r1v22 */
+            /* JADX WARN: Type inference failed for: r1v23 */
+            /* JADX WARN: Type inference failed for: r1v25 */
+            /* JADX WARN: Type inference failed for: r1v26 */
+            /* JADX WARN: Type inference failed for: r1v27 */
+            /* JADX WARN: Type inference failed for: r1v28 */
+            /* JADX WARN: Type inference failed for: r1v29 */
+            /* JADX WARN: Type inference failed for: r1v3, types: [int] */
+            /* JADX WARN: Type inference failed for: r1v30 */
+            /* JADX WARN: Type inference failed for: r1v31 */
+            /* JADX WARN: Type inference failed for: r1v5, types: [int] */
+            /* JADX WARN: Type inference failed for: r1v7, types: [int] */
+            /* JADX WARN: Type inference failed for: r1v9, types: [int] */
+            /* JADX WARN: Type inference failed for: r2v19 */
+            /* JADX WARN: Type inference failed for: r2v20, types: [int] */
+            /* JADX WARN: Type inference failed for: r2v21 */
             public int hashCode() {
                 User user = this.user;
                 int iHashCode = (user != null ? user.hashCode() : 0) * 31;
@@ -588,49 +620,49 @@ public final class UserProfileHeaderViewModel extends AppViewModel<ViewState> {
                 UserProfile userProfile = this.userProfile;
                 int iHashCode8 = (iHashCode7 + (userProfile != null ? userProfile.hashCode() : 0)) * 31;
                 boolean z2 = this.isMeUserPremium;
-                int i = z2;
-                if (z2 != 0) {
-                    i = 1;
+                ?? r1 = z2;
+                if (z2) {
+                    r1 = 1;
                 }
-                int i2 = (iHashCode8 + i) * 31;
+                int i = (iHashCode8 + r1) * 31;
                 boolean z3 = this.isMeUserVerified;
-                int i3 = z3;
-                if (z3 != 0) {
-                    i3 = 1;
+                ?? r12 = z3;
+                if (z3) {
+                    r12 = 1;
                 }
-                int i4 = (i2 + i3) * 31;
+                int i2 = (i + r12) * 31;
                 boolean z4 = this.allowAnimatedEmojis;
-                int i5 = z4;
-                if (z4 != 0) {
-                    i5 = 1;
+                ?? r13 = z4;
+                if (z4) {
+                    r13 = 1;
                 }
-                int i6 = (i4 + i5) * 31;
+                int i3 = (i2 + r13) * 31;
                 boolean z5 = this.showPresence;
-                int i7 = z5;
-                if (z5 != 0) {
-                    i7 = 1;
+                ?? r14 = z5;
+                if (z5) {
+                    r14 = 1;
                 }
-                int i8 = (i6 + i7) * 31;
+                int i4 = (i3 + r14) * 31;
                 boolean z6 = this.editable;
-                int i9 = z6;
-                if (z6 != 0) {
-                    i9 = 1;
+                ?? r15 = z6;
+                if (z6) {
+                    r15 = 1;
                 }
-                int i10 = (i8 + i9) * 31;
+                int i5 = (i4 + r15) * 31;
                 boolean z7 = this.reducedMotionEnabled;
-                int i11 = z7;
-                if (z7 != 0) {
-                    i11 = 1;
+                ?? r16 = z7;
+                if (z7) {
+                    r16 = 1;
                 }
-                int i12 = (i10 + i11) * 31;
+                int i6 = (i5 + r16) * 31;
                 boolean z8 = this.allowAnimationInReducedMotion;
-                int i13 = z8;
-                if (z8 != 0) {
-                    i13 = 1;
+                ?? r17 = z8;
+                if (z8) {
+                    r17 = 1;
                 }
-                int i14 = (i12 + i13) * 31;
+                int i7 = (i6 + r17) * 31;
                 boolean z9 = this.isMe;
-                return i14 + (z9 ? 1 : z9 ? 1 : 0);
+                return i7 + (z9 ? 1 : z9);
             }
 
             public final boolean isMe() {
@@ -645,7 +677,7 @@ public final class UserProfileHeaderViewModel extends AppViewModel<ViewState> {
                 return this.isMeUserVerified;
             }
 
-            /* renamed from: isProfileLoaded, reason: from getter */
+            /* JADX INFO: renamed from: isProfileLoaded, reason: from getter */
             public final boolean getIsProfileLoaded() {
                 return this.isProfileLoaded;
             }

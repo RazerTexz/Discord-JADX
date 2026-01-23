@@ -3,8 +3,8 @@ package com.google.android.gms.common.internal.safeparcel;
 import android.os.Parcel;
 import androidx.annotation.RecentlyNonNull;
 
-/* compiled from: com.google.android.gms:play-services-basement@@17.6.0 */
-/* loaded from: classes3.dex */
+/* JADX INFO: compiled from: com.google.android.gms:play-services-basement@@17.6.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public class SafeParcelReader$ParseException extends RuntimeException {
     public SafeParcelReader$ParseException(@RecentlyNonNull String str, @RecentlyNonNull Parcel parcel) {
         int iDataPosition = parcel.dataPosition();

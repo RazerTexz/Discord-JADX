@@ -14,42 +14,42 @@ import p007b.p225i.p226a.p288f.p299e.p308o.C3401c;
 import p007b.p225i.p226a.p288f.p313h.p325l.C3830s9;
 import p007b.p225i.p226a.p288f.p313h.p325l.InterfaceC3869v9;
 
-/* compiled from: com.google.android.gms:play-services-measurement-impl@@18.0.0 */
-/* renamed from: b.i.a.f.i.b.h7 */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.i.b.h7 */
+/* JADX INFO: compiled from: com.google.android.gms:play-services-measurement-impl@@18.0.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public final class C4060h7 extends AbstractC3974a5 {
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public volatile C4072i7 f10775c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public C4072i7 f10776d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public C4072i7 f10777e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final Map<Activity, C4072i7> f10778f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public Activity f10779g;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public volatile boolean f10780h;
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public volatile C4072i7 f10781i;
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public C4072i7 f10782j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public boolean f10783k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final Object f10784l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public String f10785m;
 
     public C4060h7(C4202u4 c4202u4) {
@@ -58,7 +58,7 @@ public final class C4060h7 extends AbstractC3974a5 {
         this.f10778f = new ConcurrentHashMap();
     }
 
-    /* renamed from: A */
+    /* JADX INFO: renamed from: A */
     public static void m5650A(C4072i7 c4072i7, Bundle bundle, boolean z2) {
         if (c4072i7 == null || (bundle.containsKey("_sc") && !z2)) {
             if (c4072i7 == null && z2) {
@@ -84,7 +84,7 @@ public final class C4060h7 extends AbstractC3974a5 {
         bundle.putLong("_si", c4072i7.f10818c);
     }
 
-    /* renamed from: x */
+    /* JADX INFO: renamed from: x */
     public static String m5651x(String str) {
         String[] strArrSplit = str.split("\\.");
         String str2 = strArrSplit.length > 0 ? strArrSplit[strArrSplit.length - 1] : "";
@@ -96,11 +96,11 @@ public final class C4060h7 extends AbstractC3974a5 {
     /* JADX WARN: Removed duplicated region for block: B:67:0x0126  */
     /* JADX WARN: Removed duplicated region for block: B:69:0x0131  */
     @WorkerThread
-    /* renamed from: B */
+    /* JADX INFO: renamed from: B */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
-    public final void m5652B(C4072i7 c4072i7, C4072i7 c4072i72, long j, boolean z2, Bundle bundle) throws IllegalStateException {
+    public final void m5652B(C4072i7 c4072i7, C4072i7 c4072i72, long j, boolean z2, Bundle bundle) {
         boolean z3;
         C4072i7 c4072i73;
         String str;
@@ -187,7 +187,7 @@ public final class C4060h7 extends AbstractC3974a5 {
     }
 
     @WorkerThread
-    /* renamed from: C */
+    /* JADX INFO: renamed from: C */
     public final void m5653C(C4072i7 c4072i7, boolean z2, long j) {
         C3968a c3968aM5968m = m5968m();
         Objects.requireNonNull((C3401c) this.f11202a.f11267o);
@@ -199,7 +199,7 @@ public final class C4060h7 extends AbstractC3974a5 {
     }
 
     @WorkerThread
-    /* renamed from: D */
+    /* JADX INFO: renamed from: D */
     public final void m5654D(String str, C4072i7 c4072i7) {
         mo5848b();
         synchronized (this) {
@@ -211,7 +211,7 @@ public final class C4060h7 extends AbstractC3974a5 {
     }
 
     @MainThread
-    /* renamed from: E */
+    /* JADX INFO: renamed from: E */
     public final C4072i7 m5655E(@NonNull Activity activity) {
         Objects.requireNonNull(activity, "null reference");
         C4072i7 c4072i7 = this.f10778f.get(activity);
@@ -224,13 +224,13 @@ public final class C4060h7 extends AbstractC3974a5 {
     }
 
     @Override // p007b.p225i.p226a.p288f.p330i.p332b.AbstractC3974a5
-    /* renamed from: v */
+    /* JADX INFO: renamed from: v */
     public final boolean mo5499v() {
         return false;
     }
 
     @WorkerThread
-    /* renamed from: w */
+    /* JADX INFO: renamed from: w */
     public final C4072i7 m5656w(boolean z2) {
         m5497t();
         mo5848b();
@@ -242,7 +242,7 @@ public final class C4060h7 extends AbstractC3974a5 {
     }
 
     @MainThread
-    /* renamed from: y */
+    /* JADX INFO: renamed from: y */
     public final void m5657y(Activity activity, Bundle bundle) {
         Bundle bundle2;
         if (!this.f11202a.f11260h.m5537z().booleanValue() || bundle == null || (bundle2 = bundle.getBundle("com.google.app_measurement.screen_service")) == null) {
@@ -252,8 +252,8 @@ public final class C4060h7 extends AbstractC3974a5 {
     }
 
     @MainThread
-    /* renamed from: z */
-    public final void m5658z(Activity activity, C4072i7 c4072i7, boolean z2) throws IllegalStateException {
+    /* JADX INFO: renamed from: z */
+    public final void m5658z(Activity activity, C4072i7 c4072i7, boolean z2) {
         C4072i7 c4072i72;
         C4072i7 c4072i73 = this.f10775c == null ? this.f10776d : this.f10775c;
         if (c4072i7.f10817b == null) {

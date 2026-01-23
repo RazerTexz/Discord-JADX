@@ -30,37 +30,37 @@ import p507d0.p513e0.p514p.p515d.p517m0.p567n.KotlinTypeFactory;
 import p507d0.p513e0.p514p.p515d.p517m0.p567n.TypeConstructor;
 import p507d0.p513e0.p514p.p515d.p517m0.p567n.Variance;
 
-/* compiled from: AbstractTypeParameterDescriptor.java */
-/* renamed from: d0.e0.p.d.m0.c.i1.f, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.c.i1.f, reason: use source file name */
+/* JADX INFO: compiled from: AbstractTypeParameterDescriptor.java */
+/* JADX INFO: loaded from: classes3.dex */
 public abstract class AbstractTypeParameterDescriptor extends DeclarationDescriptorNonRootImpl implements TypeParameterDescriptor {
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public final Variance f22857n;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public final boolean f22858o;
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public final int f22859p;
 
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     public final storage5<TypeConstructor> f22860q;
 
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     public final storage5<KotlinType4> f22861r;
 
-    /* renamed from: s */
+    /* JADX INFO: renamed from: s */
     public final StorageManager f22862s;
 
-    /* compiled from: AbstractTypeParameterDescriptor.java */
-    /* renamed from: d0.e0.p.d.m0.c.i1.f$a */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.c.i1.f$a */
+    /* JADX INFO: compiled from: AbstractTypeParameterDescriptor.java */
     public class a implements Function0<TypeConstructor> {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public final /* synthetic */ StorageManager f22863j;
 
-        /* renamed from: k */
+        /* JADX INFO: renamed from: k */
         public final /* synthetic */ SupertypeLoopChecker f22864k;
 
         public a(StorageManager storageManager, SupertypeLoopChecker supertypeLoopChecker) {
@@ -80,15 +80,15 @@ public abstract class AbstractTypeParameterDescriptor extends DeclarationDescrip
         }
     }
 
-    /* compiled from: AbstractTypeParameterDescriptor.java */
-    /* renamed from: d0.e0.p.d.m0.c.i1.f$b */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.c.i1.f$b */
+    /* JADX INFO: compiled from: AbstractTypeParameterDescriptor.java */
     public class b implements Function0<KotlinType4> {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public final /* synthetic */ Name f22866j;
 
-        /* compiled from: AbstractTypeParameterDescriptor.java */
-        /* renamed from: d0.e0.p.d.m0.c.i1.f$b$a */
+        /* JADX INFO: renamed from: d0.e0.p.d.m0.c.i1.f$b$a */
+        /* JADX INFO: compiled from: AbstractTypeParameterDescriptor.java */
         public class a implements Function0<MemberScope3> {
             public a() {
             }
@@ -123,14 +123,14 @@ public abstract class AbstractTypeParameterDescriptor extends DeclarationDescrip
         }
     }
 
-    /* compiled from: AbstractTypeParameterDescriptor.java */
-    /* renamed from: d0.e0.p.d.m0.c.i1.f$c */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.c.i1.f$c */
+    /* JADX INFO: compiled from: AbstractTypeParameterDescriptor.java */
     public class c extends AbstractTypeConstructor {
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final SupertypeLoopChecker f22869b;
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public final /* synthetic */ AbstractTypeParameterDescriptor f22870c;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -144,7 +144,7 @@ public abstract class AbstractTypeParameterDescriptor extends DeclarationDescrip
             this.f22869b = supertypeLoopChecker;
         }
 
-        /* renamed from: g */
+        /* JADX INFO: renamed from: g */
         public static /* synthetic */ void m9402g(int i) {
             String str = (i == 1 || i == 2 || i == 3 || i == 4 || i == 5 || i == 8) ? "@NotNull method %s.%s must not return null" : "Argument for @NotNull parameter '%s' of %s.%s must not be null";
             Object[] objArr = new Object[(i == 1 || i == 2 || i == 3 || i == 4 || i == 5 || i == 8) ? 2 : 3];
@@ -208,7 +208,7 @@ public abstract class AbstractTypeParameterDescriptor extends DeclarationDescrip
         }
 
         @Override // p507d0.p513e0.p514p.p515d.p517m0.p567n.AbstractTypeConstructor
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public Collection<KotlinType> mo9370a() {
             List<KotlinType> listMo9401d = this.f22870c.mo9401d();
             if (listMo9401d != null) {
@@ -219,13 +219,13 @@ public abstract class AbstractTypeParameterDescriptor extends DeclarationDescrip
         }
 
         @Override // p507d0.p513e0.p514p.p515d.p517m0.p567n.AbstractTypeConstructor
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public KotlinType mo9403b() {
             return ErrorUtils.createErrorType("Cyclic upper bounds");
         }
 
         @Override // p507d0.p513e0.p514p.p515d.p517m0.p567n.AbstractTypeConstructor
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         public SupertypeLoopChecker mo9371d() {
             SupertypeLoopChecker supertypeLoopChecker = this.f22869b;
             if (supertypeLoopChecker != null) {
@@ -236,7 +236,7 @@ public abstract class AbstractTypeParameterDescriptor extends DeclarationDescrip
         }
 
         @Override // p507d0.p513e0.p514p.p515d.p517m0.p567n.AbstractTypeConstructor
-        /* renamed from: e */
+        /* JADX INFO: renamed from: e */
         public List<KotlinType> mo9404e(List<KotlinType> list) {
             if (list == null) {
                 m9402g(7);
@@ -251,7 +251,7 @@ public abstract class AbstractTypeParameterDescriptor extends DeclarationDescrip
         }
 
         @Override // p507d0.p513e0.p514p.p515d.p517m0.p567n.AbstractTypeConstructor
-        /* renamed from: f */
+        /* JADX INFO: renamed from: f */
         public void mo9405f(KotlinType kotlinType) {
             if (kotlinType != null) {
                 this.f22870c.mo9400c(kotlinType);
@@ -340,7 +340,7 @@ public abstract class AbstractTypeParameterDescriptor extends DeclarationDescrip
         this.f22862s = storageManager;
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static /* synthetic */ void m9398a(int i) {
         String str;
         int i2;
@@ -474,7 +474,7 @@ public abstract class AbstractTypeParameterDescriptor extends DeclarationDescrip
         return declarationDescriptorVisitor.visitTypeParameterDescriptor(this, d);
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public List<KotlinType> mo9399b(List<KotlinType> list) {
         if (list == null) {
             m9398a(12);
@@ -487,10 +487,10 @@ public abstract class AbstractTypeParameterDescriptor extends DeclarationDescrip
         throw null;
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public abstract void mo9400c(KotlinType kotlinType);
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public abstract List<KotlinType> mo9401d();
 
     @Override // p507d0.p513e0.p514p.p515d.p517m0.p521c.ClassifierDescriptor

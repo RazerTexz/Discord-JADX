@@ -36,11 +36,11 @@ import p507d0.p592z.p594d.Lambda;
 import p637j0.p641k.Func1;
 import p658rx.Observable;
 
-/* compiled from: WidgetApplicationCommandBottomSheetViewModel.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetApplicationCommandBottomSheetViewModel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetApplicationCommandBottomSheetViewModel extends AppViewModel<ViewState> {
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private final long applicationId;
     private final long channelId;
@@ -50,8 +50,8 @@ public final class WidgetApplicationCommandBottomSheetViewModel extends AppViewM
     private final long messageId;
     private final String messageNonce;
 
-    /* compiled from: WidgetApplicationCommandBottomSheetViewModel.kt */
-    /* renamed from: com.discord.widgets.chat.list.sheet.WidgetApplicationCommandBottomSheetViewModel$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.list.sheet.WidgetApplicationCommandBottomSheetViewModel$1 */
+    /* JADX INFO: compiled from: WidgetApplicationCommandBottomSheetViewModel.kt */
     public static final /* synthetic */ class C81691 extends FunctionReferenceImpl implements Function1<StoreState, Unit> {
         public C81691(WidgetApplicationCommandBottomSheetViewModel widgetApplicationCommandBottomSheetViewModel) {
             super(1, widgetApplicationCommandBottomSheetViewModel, WidgetApplicationCommandBottomSheetViewModel.class, "handleStoreState", "handleStoreState(Lcom/discord/widgets/chat/list/sheet/WidgetApplicationCommandBottomSheetViewModel$StoreState;)V", 0);
@@ -63,15 +63,15 @@ public final class WidgetApplicationCommandBottomSheetViewModel extends AppViewM
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(StoreState storeState) {
             Intrinsics3.checkNotNullParameter(storeState, "p1");
             WidgetApplicationCommandBottomSheetViewModel.access$handleStoreState((WidgetApplicationCommandBottomSheetViewModel) this.receiver, storeState);
         }
     }
 
-    /* compiled from: WidgetApplicationCommandBottomSheetViewModel.kt */
-    /* renamed from: com.discord.widgets.chat.list.sheet.WidgetApplicationCommandBottomSheetViewModel$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.list.sheet.WidgetApplicationCommandBottomSheetViewModel$2 */
+    /* JADX INFO: compiled from: WidgetApplicationCommandBottomSheetViewModel.kt */
     public static final class C81702<T, R> implements Func1<StoreState, UserData> {
         public static final C81702 INSTANCE = new C81702();
 
@@ -80,14 +80,14 @@ public final class WidgetApplicationCommandBottomSheetViewModel extends AppViewM
             return call2(storeState);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final UserData call2(StoreState storeState) {
             return new UserData(storeState.getMentionedUsers(), storeState.getUsers());
         }
     }
 
-    /* compiled from: WidgetApplicationCommandBottomSheetViewModel.kt */
-    /* renamed from: com.discord.widgets.chat.list.sheet.WidgetApplicationCommandBottomSheetViewModel$3 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.list.sheet.WidgetApplicationCommandBottomSheetViewModel$3 */
+    /* JADX INFO: compiled from: WidgetApplicationCommandBottomSheetViewModel.kt */
     public static final class C81713 extends Lambda implements Function1<UserData, Unit> {
         public C81713() {
             super(1);
@@ -99,7 +99,7 @@ public final class WidgetApplicationCommandBottomSheetViewModel extends AppViewM
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(UserData userData) {
             if (WidgetApplicationCommandBottomSheetViewModel.this.getGuildId() != null) {
                 StoreGatewayConnection.requestGuildMembers$default(StoreStream.INSTANCE.getGatewaySocket(), WidgetApplicationCommandBottomSheetViewModel.this.getGuildId().longValue(), null, _Collections.toList(userData.getMentionedUserIds()), null, 10, null);
@@ -110,7 +110,7 @@ public final class WidgetApplicationCommandBottomSheetViewModel extends AppViewM
         }
     }
 
-    /* compiled from: WidgetApplicationCommandBottomSheetViewModel.kt */
+    /* JADX INFO: compiled from: WidgetApplicationCommandBottomSheetViewModel.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -128,7 +128,7 @@ public final class WidgetApplicationCommandBottomSheetViewModel extends AppViewM
         }
     }
 
-    /* compiled from: WidgetApplicationCommandBottomSheetViewModel.kt */
+    /* JADX INFO: compiled from: WidgetApplicationCommandBottomSheetViewModel.kt */
     public static final /* data */ class SlashCommandParam {
         private final String copyText;
         private final String name;
@@ -159,22 +159,22 @@ public final class WidgetApplicationCommandBottomSheetViewModel extends AppViewM
             return slashCommandParam.copy(str, str2, num, str3);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final String getName() {
             return this.name;
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final String getValue() {
             return this.value;
         }
 
-        /* renamed from: component3, reason: from getter */
+        /* JADX INFO: renamed from: component3, reason: from getter */
         public final Integer getValueColor() {
             return this.valueColor;
         }
 
-        /* renamed from: component4, reason: from getter */
+        /* JADX INFO: renamed from: component4, reason: from getter */
         public final String getCopyText() {
             return this.copyText;
         }
@@ -236,7 +236,7 @@ public final class WidgetApplicationCommandBottomSheetViewModel extends AppViewM
         }
     }
 
-    /* compiled from: WidgetApplicationCommandBottomSheetViewModel.kt */
+    /* JADX INFO: compiled from: WidgetApplicationCommandBottomSheetViewModel.kt */
     public static final /* data */ class StoreState {
         private final Application application;
         private final Map<Long, Channel> channels;
@@ -267,11 +267,12 @@ public final class WidgetApplicationCommandBottomSheetViewModel extends AppViewM
             this.commandValues = map5;
         }
 
+        /* JADX WARN: Multi-variable type inference failed */
         public static /* synthetic */ StoreState copy$default(StoreState storeState, User user, GuildMember guildMember, StoreApplicationInteractions.State state, Application application, Set set, Map map, Map map2, Map map3, Map map4, Map map5, int i, Object obj) {
             return storeState.copy((i & 1) != 0 ? storeState.user : user, (i & 2) != 0 ? storeState.interactionUser : guildMember, (i & 4) != 0 ? storeState.interactionState : state, (i & 8) != 0 ? storeState.application : application, (i & 16) != 0 ? storeState.mentionedUsers : set, (i & 32) != 0 ? storeState.guildMembers : map, (i & 64) != 0 ? storeState.guildRoles : map2, (i & 128) != 0 ? storeState.users : map3, (i & 256) != 0 ? storeState.channels : map4, (i & 512) != 0 ? storeState.commandValues : map5);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final User getUser() {
             return this.user;
         }
@@ -280,17 +281,17 @@ public final class WidgetApplicationCommandBottomSheetViewModel extends AppViewM
             return this.commandValues;
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final GuildMember getInteractionUser() {
             return this.interactionUser;
         }
 
-        /* renamed from: component3, reason: from getter */
+        /* JADX INFO: renamed from: component3, reason: from getter */
         public final StoreApplicationInteractions.State getInteractionState() {
             return this.interactionState;
         }
 
-        /* renamed from: component4, reason: from getter */
+        /* JADX INFO: renamed from: component4, reason: from getter */
         public final Application getApplication() {
             return this.application;
         }
@@ -425,7 +426,7 @@ public final class WidgetApplicationCommandBottomSheetViewModel extends AppViewM
         }
     }
 
-    /* compiled from: WidgetApplicationCommandBottomSheetViewModel.kt */
+    /* JADX INFO: compiled from: WidgetApplicationCommandBottomSheetViewModel.kt */
     public static final /* data */ class UserData {
         private final Set<Long> mentionedUserIds;
         private final Map<Long, User> users;
@@ -497,10 +498,10 @@ public final class WidgetApplicationCommandBottomSheetViewModel extends AppViewM
         }
     }
 
-    /* compiled from: WidgetApplicationCommandBottomSheetViewModel.kt */
+    /* JADX INFO: compiled from: WidgetApplicationCommandBottomSheetViewModel.kt */
     public static abstract class ViewState {
 
-        /* compiled from: WidgetApplicationCommandBottomSheetViewModel.kt */
+        /* JADX INFO: compiled from: WidgetApplicationCommandBottomSheetViewModel.kt */
         public static final class Failed extends ViewState {
             public static final Failed INSTANCE = new Failed();
 
@@ -509,7 +510,7 @@ public final class WidgetApplicationCommandBottomSheetViewModel extends AppViewM
             }
         }
 
-        /* compiled from: WidgetApplicationCommandBottomSheetViewModel.kt */
+        /* JADX INFO: compiled from: WidgetApplicationCommandBottomSheetViewModel.kt */
         public static final class Loaded extends ViewState {
             private final Application application;
             private final ApplicationCommandData applicationCommandData;
@@ -593,7 +594,7 @@ public final class WidgetApplicationCommandBottomSheetViewModel extends AppViewM
             }
         }
 
-        /* compiled from: WidgetApplicationCommandBottomSheetViewModel.kt */
+        /* JADX INFO: compiled from: WidgetApplicationCommandBottomSheetViewModel.kt */
         public static final class Loading extends ViewState {
             public static final Loading INSTANCE = new Loading();
 

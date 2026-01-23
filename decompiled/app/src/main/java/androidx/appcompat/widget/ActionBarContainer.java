@@ -14,8 +14,8 @@ import androidx.appcompat.C0051R;
 import androidx.core.view.ViewCompat;
 import org.objectweb.asm.Opcodes;
 
+/* JADX INFO: loaded from: classes.dex */
 @RestrictTo({RestrictTo.Scope.LIBRARY_GROUP_PREFIX})
-/* loaded from: classes.dex */
 public class ActionBarContainer extends FrameLayout {
     private View mActionBarView;
     public Drawable mBackground;

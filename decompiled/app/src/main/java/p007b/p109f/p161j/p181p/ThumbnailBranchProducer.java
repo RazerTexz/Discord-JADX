@@ -6,25 +6,25 @@ import p007b.p100d.p104b.p105a.outline;
 import p007b.p109f.p161j.p169d.ResizeOptions;
 import p007b.p109f.p161j.p175j.EncodedImage2;
 
-/* compiled from: ThumbnailBranchProducer.java */
-/* renamed from: b.f.j.p.j1, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.f.j.p.j1, reason: use source file name */
+/* JADX INFO: compiled from: ThumbnailBranchProducer.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class ThumbnailBranchProducer implements Producer2<EncodedImage2> {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final ThumbnailProducer<EncodedImage2>[] f4111a;
 
-    /* compiled from: ThumbnailBranchProducer.java */
-    /* renamed from: b.f.j.p.j1$a */
+    /* JADX INFO: renamed from: b.f.j.p.j1$a */
+    /* JADX INFO: compiled from: ThumbnailBranchProducer.java */
     public class a extends DelegatingConsumer<EncodedImage2, EncodedImage2> {
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public final ProducerContext f4112c;
 
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         public final int f4113d;
 
-        /* renamed from: e */
+        /* JADX INFO: renamed from: e */
         public final ResizeOptions f4114e;
 
         public a(Consumer2<EncodedImage2> consumer2, ProducerContext producerContext, int i) {
@@ -35,7 +35,7 @@ public class ThumbnailBranchProducer implements Producer2<EncodedImage2> {
         }
 
         @Override // p007b.p109f.p161j.p181p.DelegatingConsumer, p007b.p109f.p161j.p181p.BaseConsumer
-        /* renamed from: h */
+        /* JADX INFO: renamed from: h */
         public void mo1319h(Throwable th) {
             if (ThumbnailBranchProducer.this.m1480c(this.f4113d + 1, this.f4179b, this.f4112c)) {
                 return;
@@ -44,7 +44,7 @@ public class ThumbnailBranchProducer implements Producer2<EncodedImage2> {
         }
 
         @Override // p007b.p109f.p161j.p181p.BaseConsumer
-        /* renamed from: i */
+        /* JADX INFO: renamed from: i */
         public void mo1320i(Object obj, int i) {
             EncodedImage2 encodedImage2 = (EncodedImage2) obj;
             if (encodedImage2 != null && (BaseConsumer.m1420f(i) || AnimatableValueParser.m475T0(encodedImage2, this.f4114e))) {
@@ -76,7 +76,7 @@ public class ThumbnailBranchProducer implements Producer2<EncodedImage2> {
     }
 
     @Override // p007b.p109f.p161j.p181p.Producer2
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public void mo1417b(Consumer2<EncodedImage2> consumer2, ProducerContext producerContext) {
         if (producerContext.mo1447e().f19592j == null) {
             consumer2.mo1424b(null, 1);
@@ -88,7 +88,7 @@ public class ThumbnailBranchProducer implements Producer2<EncodedImage2> {
         }
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final boolean m1480c(int i, Consumer2<EncodedImage2> consumer2, ProducerContext producerContext) {
         ResizeOptions resizeOptions = producerContext.mo1447e().f19592j;
         while (true) {

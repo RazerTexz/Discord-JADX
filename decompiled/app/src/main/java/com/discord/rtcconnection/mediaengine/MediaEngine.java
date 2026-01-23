@@ -15,17 +15,17 @@ import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 import p658rx.Observable;
 
-/* compiled from: MediaEngine.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: MediaEngine.kt */
+/* JADX INFO: loaded from: classes.dex */
 public interface MediaEngine {
 
-    /* compiled from: MediaEngine.kt */
+    /* JADX INFO: compiled from: MediaEngine.kt */
     public static final /* data */ class AudioInfo {
 
-        /* renamed from: a, reason: from kotlin metadata */
+        /* JADX INFO: renamed from: a, reason: from kotlin metadata */
         public final String audioSubsystem;
 
-        /* renamed from: b, reason: from kotlin metadata */
+        /* JADX INFO: renamed from: b, reason: from kotlin metadata */
         public final String audioLayer;
 
         public AudioInfo(String str, String str2) {
@@ -61,34 +61,34 @@ public interface MediaEngine {
         }
     }
 
-    /* compiled from: MediaEngine.kt */
+    /* JADX INFO: compiled from: MediaEngine.kt */
     public static final /* data */ class EchoCancellationInfo {
 
-        /* renamed from: a, reason: from kotlin metadata */
+        /* JADX INFO: renamed from: a, reason: from kotlin metadata */
         public final boolean builtinAecRequested;
 
-        /* renamed from: b, reason: from kotlin metadata */
+        /* JADX INFO: renamed from: b, reason: from kotlin metadata */
         public final boolean builtinAecSupportedNative;
 
-        /* renamed from: c, reason: from kotlin metadata */
+        /* JADX INFO: renamed from: c, reason: from kotlin metadata */
         public final boolean builtinAecSupportedJava;
 
-        /* renamed from: d, reason: from kotlin metadata */
+        /* JADX INFO: renamed from: d, reason: from kotlin metadata */
         public final boolean builtinAecEnabled;
 
-        /* renamed from: e, reason: from kotlin metadata */
+        /* JADX INFO: renamed from: e, reason: from kotlin metadata */
         public final boolean aecEnabledInSettings;
 
-        /* renamed from: f, reason: from kotlin metadata */
+        /* JADX INFO: renamed from: f, reason: from kotlin metadata */
         public final boolean aecEnabledInNativeConfig;
 
-        /* renamed from: g, reason: from kotlin metadata */
+        /* JADX INFO: renamed from: g, reason: from kotlin metadata */
         public final boolean aecMobileMode;
 
-        /* renamed from: h, reason: from kotlin metadata */
+        /* JADX INFO: renamed from: h, reason: from kotlin metadata */
         public final boolean aecEnabledByDefault;
 
-        /* renamed from: i, reason: from kotlin metadata */
+        /* JADX INFO: renamed from: i, reason: from kotlin metadata */
         public final boolean aecMobileModeByDefault;
 
         public EchoCancellationInfo() {
@@ -122,13 +122,30 @@ public interface MediaEngine {
         /* JADX WARN: Type inference failed for: r0v1, types: [int] */
         /* JADX WARN: Type inference failed for: r0v18 */
         /* JADX WARN: Type inference failed for: r0v19 */
-        /* JADX WARN: Type inference failed for: r2v0, types: [boolean] */
-        /* JADX WARN: Type inference failed for: r2v10, types: [boolean] */
-        /* JADX WARN: Type inference failed for: r2v12, types: [boolean] */
-        /* JADX WARN: Type inference failed for: r2v2, types: [boolean] */
-        /* JADX WARN: Type inference failed for: r2v4, types: [boolean] */
-        /* JADX WARN: Type inference failed for: r2v6, types: [boolean] */
-        /* JADX WARN: Type inference failed for: r2v8, types: [boolean] */
+        /* JADX WARN: Type inference failed for: r1v0 */
+        /* JADX WARN: Type inference failed for: r1v1, types: [int] */
+        /* JADX WARN: Type inference failed for: r1v2 */
+        /* JADX WARN: Type inference failed for: r2v1, types: [int] */
+        /* JADX WARN: Type inference failed for: r2v11, types: [int] */
+        /* JADX WARN: Type inference failed for: r2v13, types: [int] */
+        /* JADX WARN: Type inference failed for: r2v15 */
+        /* JADX WARN: Type inference failed for: r2v16 */
+        /* JADX WARN: Type inference failed for: r2v17 */
+        /* JADX WARN: Type inference failed for: r2v18 */
+        /* JADX WARN: Type inference failed for: r2v19 */
+        /* JADX WARN: Type inference failed for: r2v20 */
+        /* JADX WARN: Type inference failed for: r2v21 */
+        /* JADX WARN: Type inference failed for: r2v22 */
+        /* JADX WARN: Type inference failed for: r2v23 */
+        /* JADX WARN: Type inference failed for: r2v24 */
+        /* JADX WARN: Type inference failed for: r2v25 */
+        /* JADX WARN: Type inference failed for: r2v26 */
+        /* JADX WARN: Type inference failed for: r2v27 */
+        /* JADX WARN: Type inference failed for: r2v28 */
+        /* JADX WARN: Type inference failed for: r2v3, types: [int] */
+        /* JADX WARN: Type inference failed for: r2v5, types: [int] */
+        /* JADX WARN: Type inference failed for: r2v7, types: [int] */
+        /* JADX WARN: Type inference failed for: r2v9, types: [int] */
         public int hashCode() {
             boolean z2 = this.builtinAecRequested;
             ?? r0 = z2;
@@ -136,50 +153,50 @@ public interface MediaEngine {
                 r0 = 1;
             }
             int i = r0 * 31;
-            ?? r2 = this.builtinAecSupportedNative;
-            int i2 = r2;
-            if (r2 != 0) {
-                i2 = 1;
+            boolean z3 = this.builtinAecSupportedNative;
+            ?? r2 = z3;
+            if (z3) {
+                r2 = 1;
             }
-            int i3 = (i + i2) * 31;
-            ?? r22 = this.builtinAecSupportedJava;
-            int i4 = r22;
-            if (r22 != 0) {
-                i4 = 1;
+            int i2 = (i + r2) * 31;
+            boolean z4 = this.builtinAecSupportedJava;
+            ?? r22 = z4;
+            if (z4) {
+                r22 = 1;
             }
-            int i5 = (i3 + i4) * 31;
-            ?? r23 = this.builtinAecEnabled;
-            int i6 = r23;
-            if (r23 != 0) {
-                i6 = 1;
+            int i3 = (i2 + r22) * 31;
+            boolean z5 = this.builtinAecEnabled;
+            ?? r23 = z5;
+            if (z5) {
+                r23 = 1;
             }
-            int i7 = (i5 + i6) * 31;
-            ?? r24 = this.aecEnabledInSettings;
-            int i8 = r24;
-            if (r24 != 0) {
-                i8 = 1;
+            int i4 = (i3 + r23) * 31;
+            boolean z6 = this.aecEnabledInSettings;
+            ?? r24 = z6;
+            if (z6) {
+                r24 = 1;
             }
-            int i9 = (i7 + i8) * 31;
-            ?? r25 = this.aecEnabledInNativeConfig;
-            int i10 = r25;
-            if (r25 != 0) {
-                i10 = 1;
+            int i5 = (i4 + r24) * 31;
+            boolean z7 = this.aecEnabledInNativeConfig;
+            ?? r25 = z7;
+            if (z7) {
+                r25 = 1;
             }
-            int i11 = (i9 + i10) * 31;
-            ?? r26 = this.aecMobileMode;
-            int i12 = r26;
-            if (r26 != 0) {
-                i12 = 1;
+            int i6 = (i5 + r25) * 31;
+            boolean z8 = this.aecMobileMode;
+            ?? r26 = z8;
+            if (z8) {
+                r26 = 1;
             }
-            int i13 = (i11 + i12) * 31;
-            ?? r27 = this.aecEnabledByDefault;
-            int i14 = r27;
-            if (r27 != 0) {
-                i14 = 1;
+            int i7 = (i6 + r26) * 31;
+            boolean z9 = this.aecEnabledByDefault;
+            ?? r27 = z9;
+            if (z9) {
+                r27 = 1;
             }
-            int i15 = (i13 + i14) * 31;
-            boolean z3 = this.aecMobileModeByDefault;
-            return i15 + (z3 ? 1 : z3 ? 1 : 0);
+            int i8 = (i7 + r27) * 31;
+            boolean z10 = this.aecMobileModeByDefault;
+            return i8 + (z10 ? 1 : z10);
         }
 
         public String toString() {
@@ -208,13 +225,13 @@ public interface MediaEngine {
         }
     }
 
-    /* compiled from: MediaEngine.kt */
+    /* JADX INFO: compiled from: MediaEngine.kt */
     public static final /* data */ class LocalVoiceStatus {
 
-        /* renamed from: a, reason: from kotlin metadata */
+        /* JADX INFO: renamed from: a, reason: from kotlin metadata */
         public final float amplitude;
 
-        /* renamed from: b, reason: from kotlin metadata */
+        /* JADX INFO: renamed from: b, reason: from kotlin metadata */
         public final boolean isSpeaking;
 
         public LocalVoiceStatus(float f, boolean z2) {
@@ -234,14 +251,17 @@ public interface MediaEngine {
         }
 
         /* JADX WARN: Multi-variable type inference failed */
+        /* JADX WARN: Type inference failed for: r1v1, types: [int] */
+        /* JADX WARN: Type inference failed for: r1v2 */
+        /* JADX WARN: Type inference failed for: r1v3 */
         public int hashCode() {
             int iFloatToIntBits = Float.floatToIntBits(this.amplitude) * 31;
             boolean z2 = this.isSpeaking;
-            int i = z2;
-            if (z2 != 0) {
-                i = 1;
+            ?? r1 = z2;
+            if (z2) {
+                r1 = 1;
             }
-            return iFloatToIntBits + i;
+            return iFloatToIntBits + r1;
         }
 
         public String toString() {
@@ -252,47 +272,47 @@ public interface MediaEngine {
         }
     }
 
-    /* compiled from: MediaEngine.kt */
+    /* JADX INFO: compiled from: MediaEngine.kt */
     public enum OpenSLESConfig {
         DEFAULT,
         FORCE_ENABLED,
         FORCE_DISABLED
     }
 
-    /* compiled from: MediaEngine.kt */
+    /* JADX INFO: compiled from: MediaEngine.kt */
     public enum OpenSLUsageMode {
         ALLOW_LIST,
         EXCLUDE_LIST
     }
 
-    /* compiled from: MediaEngine.kt */
+    /* JADX INFO: compiled from: MediaEngine.kt */
     public static final /* data */ class VoiceConfig {
 
-        /* renamed from: a, reason: from kotlin metadata */
+        /* JADX INFO: renamed from: a, reason: from kotlin metadata */
         public final float outputVolume;
 
-        /* renamed from: b, reason: from kotlin metadata */
+        /* JADX INFO: renamed from: b, reason: from kotlin metadata */
         public final boolean echoCancellation;
 
-        /* renamed from: c, reason: from kotlin metadata */
+        /* JADX INFO: renamed from: c, reason: from kotlin metadata */
         public final boolean noiseSuppression;
 
-        /* renamed from: d, reason: from kotlin metadata */
+        /* JADX INFO: renamed from: d, reason: from kotlin metadata */
         public final boolean noiseCancellation;
 
-        /* renamed from: e, reason: from kotlin metadata */
+        /* JADX INFO: renamed from: e, reason: from kotlin metadata */
         public final boolean automaticGainControl;
 
-        /* renamed from: f, reason: from kotlin metadata */
+        /* JADX INFO: renamed from: f, reason: from kotlin metadata */
         public final MediaEngineConnection.InputMode inputMode;
 
-        /* renamed from: g, reason: from kotlin metadata */
+        /* JADX INFO: renamed from: g, reason: from kotlin metadata */
         public final MediaEngineConnection.C5647c inputModeOptions;
 
-        /* renamed from: h, reason: from kotlin metadata */
+        /* JADX INFO: renamed from: h, reason: from kotlin metadata */
         public final boolean isSelfDeafened;
 
-        /* renamed from: i, reason: from kotlin metadata */
+        /* JADX INFO: renamed from: i, reason: from kotlin metadata */
         public final boolean isSelfMuted;
 
         public VoiceConfig(float f, boolean z2, boolean z3, boolean z4, boolean z5, MediaEngineConnection.InputMode inputMode, MediaEngineConnection.C5647c c5647c, boolean z6, boolean z7) {
@@ -321,44 +341,62 @@ public interface MediaEngine {
         }
 
         /* JADX WARN: Multi-variable type inference failed */
+        /* JADX WARN: Type inference failed for: r1v1, types: [int] */
+        /* JADX WARN: Type inference failed for: r1v13, types: [int] */
+        /* JADX WARN: Type inference failed for: r1v15 */
+        /* JADX WARN: Type inference failed for: r1v17 */
+        /* JADX WARN: Type inference failed for: r1v18 */
+        /* JADX WARN: Type inference failed for: r1v19 */
+        /* JADX WARN: Type inference failed for: r1v20 */
+        /* JADX WARN: Type inference failed for: r1v21 */
+        /* JADX WARN: Type inference failed for: r1v22 */
+        /* JADX WARN: Type inference failed for: r1v23 */
+        /* JADX WARN: Type inference failed for: r1v24 */
+        /* JADX WARN: Type inference failed for: r1v25 */
+        /* JADX WARN: Type inference failed for: r1v3, types: [int] */
+        /* JADX WARN: Type inference failed for: r1v5, types: [int] */
+        /* JADX WARN: Type inference failed for: r1v7, types: [int] */
+        /* JADX WARN: Type inference failed for: r2v0 */
+        /* JADX WARN: Type inference failed for: r2v1, types: [int] */
+        /* JADX WARN: Type inference failed for: r2v2 */
         public int hashCode() {
             int iFloatToIntBits = Float.floatToIntBits(this.outputVolume) * 31;
             boolean z2 = this.echoCancellation;
-            int i = z2;
-            if (z2 != 0) {
-                i = 1;
+            ?? r1 = z2;
+            if (z2) {
+                r1 = 1;
             }
-            int i2 = (iFloatToIntBits + i) * 31;
+            int i = (iFloatToIntBits + r1) * 31;
             boolean z3 = this.noiseSuppression;
-            int i3 = z3;
-            if (z3 != 0) {
-                i3 = 1;
+            ?? r12 = z3;
+            if (z3) {
+                r12 = 1;
             }
-            int i4 = (i2 + i3) * 31;
+            int i2 = (i + r12) * 31;
             boolean z4 = this.noiseCancellation;
-            int i5 = z4;
-            if (z4 != 0) {
-                i5 = 1;
+            ?? r13 = z4;
+            if (z4) {
+                r13 = 1;
             }
-            int i6 = (i4 + i5) * 31;
+            int i3 = (i2 + r13) * 31;
             boolean z5 = this.automaticGainControl;
-            int i7 = z5;
-            if (z5 != 0) {
-                i7 = 1;
+            ?? r14 = z5;
+            if (z5) {
+                r14 = 1;
             }
-            int i8 = (i6 + i7) * 31;
+            int i4 = (i3 + r14) * 31;
             MediaEngineConnection.InputMode inputMode = this.inputMode;
-            int iHashCode = (i8 + (inputMode != null ? inputMode.hashCode() : 0)) * 31;
+            int iHashCode = (i4 + (inputMode != null ? inputMode.hashCode() : 0)) * 31;
             MediaEngineConnection.C5647c c5647c = this.inputModeOptions;
             int iHashCode2 = (iHashCode + (c5647c != null ? c5647c.hashCode() : 0)) * 31;
             boolean z6 = this.isSelfDeafened;
-            int i9 = z6;
-            if (z6 != 0) {
-                i9 = 1;
+            ?? r15 = z6;
+            if (z6) {
+                r15 = 1;
             }
-            int i10 = (iHashCode2 + i9) * 31;
+            int i5 = (iHashCode2 + r15) * 31;
             boolean z7 = this.isSelfMuted;
-            return i10 + (z7 ? 1 : z7 ? 1 : 0);
+            return i5 + (z7 ? 1 : z7);
         }
 
         public String toString() {
@@ -383,20 +421,20 @@ public interface MediaEngine {
         }
     }
 
-    /* compiled from: MediaEngine.kt */
-    /* renamed from: com.discord.rtcconnection.mediaengine.MediaEngine$a */
+    /* JADX INFO: renamed from: com.discord.rtcconnection.mediaengine.MediaEngine$a */
+    /* JADX INFO: compiled from: MediaEngine.kt */
     public static final class C5640a {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final int f18898a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final String f18899b;
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public final int f18900c;
 
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         public final List<StreamParameters> f18901d;
 
         public C5640a(int i, String str, int i2, List<StreamParameters> list) {
@@ -439,14 +477,14 @@ public interface MediaEngine {
         }
     }
 
-    /* compiled from: MediaEngine.kt */
-    /* renamed from: com.discord.rtcconnection.mediaengine.MediaEngine$b */
+    /* JADX INFO: renamed from: com.discord.rtcconnection.mediaengine.MediaEngine$b */
+    /* JADX INFO: compiled from: MediaEngine.kt */
     public interface InterfaceC5641b {
         void onEchoCancellationUpdated(EchoCancellationInfo echoCancellationInfo);
     }
 
-    /* compiled from: MediaEngine.kt */
-    /* renamed from: com.discord.rtcconnection.mediaengine.MediaEngine$c */
+    /* JADX INFO: renamed from: com.discord.rtcconnection.mediaengine.MediaEngine$c */
+    /* JADX INFO: compiled from: MediaEngine.kt */
     public interface InterfaceC5642c {
         void onConnected();
 
@@ -457,42 +495,42 @@ public interface MediaEngine {
         void onNewConnection(MediaEngineConnection mediaEngineConnection);
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     Observable<Unit> mo321a();
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     void mo322b(RtcRegion[] regionsWithIps, Function1<? super String[], Unit> callback);
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     MediaEngineExecutorService mo323c();
 
     @AnyThread
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     void mo324d(VoiceConfig voiceConfig);
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     Observable<AudioInfo> mo325e();
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     void mo326f(int deviceIndex);
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     MediaEngineConnection mo327g(long userId, C5640a options, MediaEngineConnection.Type type, Function1<? super Exception, Unit> onFailure);
 
     List<MediaEngineConnection> getConnections();
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     void mo328h(OpenSLUsageMode openSLUsageMode);
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     Discord mo329i();
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     void mo330j(Function1<? super DeviceDescription4[], Unit> devicesCallback);
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     void mo331k(boolean enabled);
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     void mo332l(Function1<? super LocalVoiceStatus, Unit> voiceStatusListener);
 }

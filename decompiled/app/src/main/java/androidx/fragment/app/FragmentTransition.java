@@ -16,13 +16,13 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class FragmentTransition {
     private static final int[] INVERSE_OPS = {0, 3, 0, 1, 5, 4, 7, 6, 9, 8, 10};
     public static final FragmentTransitionImpl PLATFORM_IMPL = new FragmentTransitionCompat21();
     public static final FragmentTransitionImpl SUPPORT_IMPL = resolveSupportImpl();
 
-    /* renamed from: androidx.fragment.app.FragmentTransition$1 */
+    /* JADX INFO: renamed from: androidx.fragment.app.FragmentTransition$1 */
     public class RunnableC03951 implements Runnable {
         public final /* synthetic */ Callback val$callback;
         public final /* synthetic */ Fragment val$outFragment;
@@ -40,7 +40,7 @@ public class FragmentTransition {
         }
     }
 
-    /* renamed from: androidx.fragment.app.FragmentTransition$2 */
+    /* JADX INFO: renamed from: androidx.fragment.app.FragmentTransition$2 */
     public class RunnableC03962 implements Runnable {
         public final /* synthetic */ ArrayList val$exitingViews;
 
@@ -54,7 +54,7 @@ public class FragmentTransition {
         }
     }
 
-    /* renamed from: androidx.fragment.app.FragmentTransition$3 */
+    /* JADX INFO: renamed from: androidx.fragment.app.FragmentTransition$3 */
     public class RunnableC03973 implements Runnable {
         public final /* synthetic */ Callback val$callback;
         public final /* synthetic */ Fragment val$outFragment;
@@ -72,7 +72,7 @@ public class FragmentTransition {
         }
     }
 
-    /* renamed from: androidx.fragment.app.FragmentTransition$4 */
+    /* JADX INFO: renamed from: androidx.fragment.app.FragmentTransition$4 */
     public class RunnableC03984 implements Runnable {
         public final /* synthetic */ Object val$enterTransition;
         public final /* synthetic */ ArrayList val$enteringViews;
@@ -113,7 +113,7 @@ public class FragmentTransition {
         }
     }
 
-    /* renamed from: androidx.fragment.app.FragmentTransition$5 */
+    /* JADX INFO: renamed from: androidx.fragment.app.FragmentTransition$5 */
     public class RunnableC03995 implements Runnable {
         public final /* synthetic */ Rect val$epicenter;
         public final /* synthetic */ View val$epicenterView;
@@ -143,7 +143,7 @@ public class FragmentTransition {
         }
     }
 
-    /* renamed from: androidx.fragment.app.FragmentTransition$6 */
+    /* JADX INFO: renamed from: androidx.fragment.app.FragmentTransition$6 */
     public class RunnableC04006 implements Runnable {
         public final /* synthetic */ Object val$enterTransition;
         public final /* synthetic */ Object val$finalSharedElementTransition;

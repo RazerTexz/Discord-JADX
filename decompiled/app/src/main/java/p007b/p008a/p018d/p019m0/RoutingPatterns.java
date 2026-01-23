@@ -7,108 +7,108 @@ import p507d0.p579g0.Regex5;
 import p507d0.p579g0.StringsJVM;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: RoutingPatterns.kt */
-/* renamed from: b.a.d.m0.a, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.a.d.m0.a, reason: use source file name */
+/* JADX INFO: compiled from: RoutingPatterns.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class RoutingPatterns {
 
-    /* renamed from: A */
+    /* JADX INFO: renamed from: A */
     public static final Regex f532A;
 
-    /* renamed from: B */
+    /* JADX INFO: renamed from: B */
     public static final Regex f533B;
 
-    /* renamed from: C */
+    /* JADX INFO: renamed from: C */
     public static final Regex f534C;
 
-    /* renamed from: D */
+    /* JADX INFO: renamed from: D */
     public static final Regex f535D;
 
-    /* renamed from: E */
+    /* JADX INFO: renamed from: E */
     public static final Regex f536E;
 
-    /* renamed from: F */
+    /* JADX INFO: renamed from: F */
     public static final Regex f537F;
 
-    /* renamed from: G */
+    /* JADX INFO: renamed from: G */
     public static final RoutingPatterns f538G;
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final String f539a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static final String f540b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public static final String f541c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public static final String f542d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public static final String f543e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public static final String f544f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public static final String f545g;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public static final String f546h;
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public static final String f547i;
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static final String f548j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public static final String f549k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public static final Regex f550l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public static final Regex f551m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public static final Regex f552n;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public static final Regex f553o;
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public static final Regex f554p;
 
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     public static final Regex f555q;
 
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     public static final Regex f556r;
 
-    /* renamed from: s */
+    /* JADX INFO: renamed from: s */
     public static final Regex f557s;
 
-    /* renamed from: t */
+    /* JADX INFO: renamed from: t */
     public static final Regex f558t;
 
-    /* renamed from: u */
+    /* JADX INFO: renamed from: u */
     public static final Regex f559u;
 
-    /* renamed from: v */
+    /* JADX INFO: renamed from: v */
     public static final Regex f560v;
 
-    /* renamed from: w */
+    /* JADX INFO: renamed from: w */
     public static final Regex f561w;
 
-    /* renamed from: x */
+    /* JADX INFO: renamed from: x */
     public static final Regex f562x;
 
-    /* renamed from: y */
+    /* JADX INFO: renamed from: y */
     public static final Regex f563y;
 
-    /* renamed from: z */
+    /* JADX INFO: renamed from: z */
     public static final Regex f564z;
 
     static {
@@ -178,7 +178,7 @@ public final class RoutingPatterns {
         f537F = new Regex("^/events/(\\d+)/(\\d+)/?$", regex5);
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final boolean m173a(String str) {
         if (str == null) {
             return false;
@@ -189,7 +189,7 @@ public final class RoutingPatterns {
         return f550l.matches(str);
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final String m174b(String str) {
         Uri uri = Uri.parse(str);
         Intrinsics3.checkNotNullExpressionValue(uri, "Uri.parse(this)");

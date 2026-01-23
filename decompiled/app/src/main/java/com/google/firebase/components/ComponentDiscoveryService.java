@@ -5,7 +5,7 @@ import android.content.Intent;
 import android.os.IBinder;
 import androidx.annotation.Nullable;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public class ComponentDiscoveryService extends Service {
     @Override // android.app.Service
     @Nullable

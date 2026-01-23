@@ -4,25 +4,25 @@ import androidx.core.view.PointerIconCompat;
 import p007b.p225i.p226a.p242c.p259f3.ParsableBitArray;
 import p007b.p225i.p226a.p242c.p259f3.ParsableByteArray;
 
-/* compiled from: Ac4Util.java */
-/* renamed from: b.i.a.c.t2.n, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.t2.n, reason: use source file name */
+/* JADX INFO: compiled from: Ac4Util.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class Ac4Util {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final int[] f7775a = {2002, 2000, 1920, 1601, 1600, PointerIconCompat.TYPE_CONTEXT_MENU, 1000, 960, 800, 800, 480, 400, 400, 2048};
 
-    /* compiled from: Ac4Util.java */
-    /* renamed from: b.i.a.c.t2.n$b */
+    /* JADX INFO: renamed from: b.i.a.c.t2.n$b */
+    /* JADX INFO: compiled from: Ac4Util.java */
     public static final class b {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final int f7776a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final int f7777b;
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public final int f7778c;
 
         public b(int i, int i2, int i3, int i4, int i5, a aVar) {
@@ -32,7 +32,7 @@ public final class Ac4Util {
         }
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static void m3492a(int i, ParsableByteArray parsableByteArray) {
         parsableByteArray.m3075A(7);
         byte[] bArr = parsableByteArray.f6793a;
@@ -48,7 +48,7 @@ public final class Ac4Util {
     /* JADX WARN: Removed duplicated region for block: B:47:0x009b  */
     /* JADX WARN: Removed duplicated region for block: B:51:0x00a2  */
     /* JADX WARN: Removed duplicated region for block: B:52:0x00a5  */
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */

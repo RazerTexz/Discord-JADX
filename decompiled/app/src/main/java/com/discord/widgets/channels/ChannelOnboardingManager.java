@@ -2,8 +2,8 @@ package com.discord.widgets.channels;
 
 import com.discord.utilities.cache.SharedPreferencesProvider;
 
-/* compiled from: ChannelOnboardingManager.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: ChannelOnboardingManager.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class ChannelOnboardingManager {
     public final boolean hasUserSeenChannelOnboarding() {
         return SharedPreferencesProvider.INSTANCE.get().getBoolean("CACHE_KEY_CHANNEL_ONBOARDED", false);

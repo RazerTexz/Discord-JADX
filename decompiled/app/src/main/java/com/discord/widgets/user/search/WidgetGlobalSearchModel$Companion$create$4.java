@@ -15,15 +15,15 @@ import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetGlobalSearchModel.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: WidgetGlobalSearchModel.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class WidgetGlobalSearchModel$Companion$create$4 extends Lambda implements Function2<Channel, String, WidgetGlobalSearchModel.ItemDataPayload> {
     public final /* synthetic */ WidgetGlobalSearchModel.ChannelContext $channelContext;
     public final /* synthetic */ WidgetGlobalSearchModel.SearchContext $searchContext;
     public final /* synthetic */ WidgetGlobalSearchModel$Companion$create$2 $toItemUser$2;
 
-    /* compiled from: WidgetGlobalSearchModel.kt */
-    /* renamed from: com.discord.widgets.user.search.WidgetGlobalSearchModel$Companion$create$4$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.user.search.WidgetGlobalSearchModel$Companion$create$4$1 */
+    /* JADX INFO: compiled from: WidgetGlobalSearchModel.kt */
     public static final class C103301 extends Lambda implements Function0<WidgetGlobalSearchModel.MatchedResult> {
         public final /* synthetic */ String $channelFilter;
         public final /* synthetic */ Channel $this_toItemChannel;
@@ -83,7 +83,7 @@ public final class WidgetGlobalSearchModel$Companion$create$4 extends Lambda imp
         return invoke2(channel, str);
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final WidgetGlobalSearchModel.ItemDataPayload invoke2(Channel channel, String str) {
         Intrinsics3.checkNotNullParameter(channel, "$this$toItemChannel");
         Intrinsics3.checkNotNullParameter(str, "channelFilter");

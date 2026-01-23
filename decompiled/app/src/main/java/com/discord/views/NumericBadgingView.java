@@ -16,39 +16,39 @@ import p007b.p085c.p086a.p087a0.AnimatableValueParser;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: NumericBadgingView.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: NumericBadgingView.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class NumericBadgingView extends CutoutView {
 
-    /* renamed from: q, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: q, reason: from kotlin metadata */
     public float badgeTextSizePx;
 
-    /* renamed from: r, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: r, reason: from kotlin metadata */
     public int badgeTextPaddingVerticalPx;
 
-    /* renamed from: s, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: s, reason: from kotlin metadata */
     public float badgeInsetSizePx;
 
-    /* renamed from: t, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: t, reason: from kotlin metadata */
     public RectF badgeRect;
 
-    /* renamed from: u, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: u, reason: from kotlin metadata */
     public String badgeString;
 
-    /* renamed from: v, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: v, reason: from kotlin metadata */
     public final Paint badgePaint;
 
-    /* renamed from: w, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: w, reason: from kotlin metadata */
     public final Paint textPaint;
 
-    /* compiled from: NumericBadgingView.kt */
-    /* renamed from: com.discord.views.NumericBadgingView$a */
+    /* JADX INFO: renamed from: com.discord.views.NumericBadgingView$a */
+    /* JADX INFO: compiled from: NumericBadgingView.kt */
     public static final class C7079a implements CutoutView.InterfaceC7075a {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final RectF f19090a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final float f19091b;
 
         public C7079a(RectF rectF, float f) {
@@ -58,7 +58,7 @@ public final class NumericBadgingView extends CutoutView {
         }
 
         @Override // com.discord.views.CutoutView.InterfaceC7075a
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public Path mo8543a(Context context, int i, int i2) {
             Intrinsics3.checkNotNullParameter(context, "context");
             RectF rectF = new RectF(0.0f, 0.0f, this.f19090a.width(), this.f19090a.height());

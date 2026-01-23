@@ -9,8 +9,8 @@ import kotlin.Unit;
 import kotlin.jvm.functions.Function1;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: StreamNavigator.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: StreamNavigator.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class StreamNavigator {
     public static final StreamNavigator INSTANCE = new StreamNavigator();
     private static final int START_SCREENSHARE_REQUEST_CODE = 420;

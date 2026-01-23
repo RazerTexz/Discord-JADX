@@ -8,24 +8,24 @@ import kotlin.jvm.functions.Function1;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: CustomAppBarLayout.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: CustomAppBarLayout.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class CustomAppBarLayout extends AppBarLayout {
 
-    /* renamed from: j, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: j, reason: from kotlin metadata */
     public float percentCollapsed;
 
-    /* renamed from: k, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: k, reason: from kotlin metadata */
     public final AppBarLayout.OnOffsetChangedListener percentCollapsedOffsetChangeListener;
 
-    /* renamed from: l, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: l, reason: from kotlin metadata */
     public Function1<? super Float, Unit> onPercentCollapsedCallback;
 
-    /* compiled from: CustomAppBarLayout.kt */
-    /* renamed from: com.discord.views.CustomAppBarLayout$a */
+    /* JADX INFO: renamed from: com.discord.views.CustomAppBarLayout$a */
+    /* JADX INFO: compiled from: CustomAppBarLayout.kt */
     public static final class C7073a extends Lambda implements Function1<Float, Unit> {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public static final C7073a f19048j = new C7073a();
 
         public C7073a() {
@@ -39,8 +39,8 @@ public final class CustomAppBarLayout extends AppBarLayout {
         }
     }
 
-    /* compiled from: CustomAppBarLayout.kt */
-    /* renamed from: com.discord.views.CustomAppBarLayout$b */
+    /* JADX INFO: renamed from: com.discord.views.CustomAppBarLayout$b */
+    /* JADX INFO: compiled from: CustomAppBarLayout.kt */
     public static final class C7074b implements AppBarLayout.OnOffsetChangedListener {
         public C7074b() {
         }
@@ -65,7 +65,7 @@ public final class CustomAppBarLayout extends AppBarLayout {
         this.onPercentCollapsedCallback = C7073a.f19048j;
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final boolean m8542a() {
         return this.percentCollapsed == 1.0f;
     }

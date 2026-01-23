@@ -6,9 +6,9 @@ import kotlin.jvm.functions.Function0;
 import p507d0.p580t.Collections2;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetServerSettingsEditIntegration.kt */
-/* renamed from: com.discord.widgets.servers.WidgetServerSettingsEditIntegration$expiryBehaviorRadios$2, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.servers.WidgetServerSettingsEditIntegration$expiryBehaviorRadios$2, reason: use source file name */
+/* JADX INFO: compiled from: WidgetServerSettingsEditIntegration.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetServerSettingsEditIntegration4 extends Lambda implements Function0<List<? extends CheckedSetting>> {
     public final /* synthetic */ WidgetServerSettingsEditIntegration this$0;
 
@@ -24,7 +24,7 @@ public final class WidgetServerSettingsEditIntegration4 extends Lambda implement
     }
 
     @Override // kotlin.jvm.functions.Function0
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final List<? extends CheckedSetting> invoke2() {
         return Collections2.listOf((Object[]) new CheckedSetting[]{WidgetServerSettingsEditIntegration.access$getBinding$p(this.this$0).f17616f, WidgetServerSettingsEditIntegration.access$getBinding$p(this.this$0).f17615e});
     }

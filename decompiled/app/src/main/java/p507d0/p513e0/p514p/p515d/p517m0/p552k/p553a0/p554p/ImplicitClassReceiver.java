@@ -6,15 +6,15 @@ import p507d0.p513e0.p514p.p515d.p517m0.p567n.KotlinType;
 import p507d0.p513e0.p514p.p515d.p517m0.p567n.KotlinType4;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ImplicitClassReceiver.kt */
-/* renamed from: d0.e0.p.d.m0.k.a0.p.c, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.k.a0.p.c, reason: use source file name */
+/* JADX INFO: compiled from: ImplicitClassReceiver.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public class ImplicitClassReceiver implements ReceiverValue, ImplicitClassReceiver2 {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final ClassDescriptor f24389a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final ClassDescriptor f24390b;
 
     public ImplicitClassReceiver(ClassDescriptor classDescriptor, ImplicitClassReceiver implicitClassReceiver) {

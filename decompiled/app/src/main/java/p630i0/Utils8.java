@@ -20,19 +20,19 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p600f0.ResponseBody2;
 import p615g0.Buffer3;
 
-/* compiled from: Utils.java */
-/* renamed from: i0.c0, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: i0.c0, reason: use source file name */
+/* JADX INFO: compiled from: Utils.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class Utils8 {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final Type[] f26490a = new Type[0];
 
-    /* compiled from: Utils.java */
-    /* renamed from: i0.c0$a */
+    /* JADX INFO: renamed from: i0.c0$a */
+    /* JADX INFO: compiled from: Utils.java */
     public static final class a implements GenericArrayType {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public final Type f26491j;
 
         public a(Type type) {
@@ -57,17 +57,17 @@ public final class Utils8 {
         }
     }
 
-    /* compiled from: Utils.java */
-    /* renamed from: i0.c0$b */
+    /* JADX INFO: renamed from: i0.c0$b */
+    /* JADX INFO: compiled from: Utils.java */
     public static final class b implements ParameterizedType {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public final Type f26492j;
 
-        /* renamed from: k */
+        /* JADX INFO: renamed from: k */
         public final Type f26493k;
 
-        /* renamed from: l */
+        /* JADX INFO: renamed from: l */
         public final Type[] f26494l;
 
         public b(Type type, Type type2, Type... typeArr) {
@@ -128,14 +128,14 @@ public final class Utils8 {
         }
     }
 
-    /* compiled from: Utils.java */
-    /* renamed from: i0.c0$c */
+    /* JADX INFO: renamed from: i0.c0$c */
+    /* JADX INFO: compiled from: Utils.java */
     public static final class c implements WildcardType {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public final Type f26495j;
 
-        /* renamed from: k */
+        /* JADX INFO: renamed from: k */
         public final Type f26496k;
 
         public c(Type[] typeArr, Type[] typeArr2) {
@@ -196,7 +196,7 @@ public final class Utils8 {
         }
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static ResponseBody m10681a(ResponseBody responseBody) throws IOException {
         Buffer3 buffer3 = new Buffer3();
         responseBody.mo10105c().mo10459k0(buffer3);
@@ -207,14 +207,14 @@ public final class Utils8 {
         return new ResponseBody2(buffer3, mediaTypeMo10104b, jMo10103a);
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static void m10682b(Type type) {
         if ((type instanceof Class) && ((Class) type).isPrimitive()) {
             throw new IllegalArgumentException();
         }
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public static boolean m10683c(Type type, Type type2) {
         if (type == type2) {
             return true;
@@ -254,7 +254,7 @@ public final class Utils8 {
         return typeVariable.getGenericDeclaration() == typeVariable2.getGenericDeclaration() && typeVariable.getName().equals(typeVariable2.getName());
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public static Type m10684d(Type type, Class<?> cls, Class<?> cls2) {
         if (cls2 == cls) {
             return type;
@@ -286,7 +286,7 @@ public final class Utils8 {
         return cls2;
     }
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public static Type m10685e(int i, ParameterizedType parameterizedType) {
         Type[] actualTypeArguments = parameterizedType.getActualTypeArguments();
         if (i >= 0 && i < actualTypeArguments.length) {
@@ -300,7 +300,7 @@ public final class Utils8 {
         throw new IllegalArgumentException(sbM834V.toString());
     }
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public static Class<?> m10686f(Type type) {
         Objects.requireNonNull(type, "type == null");
         if (type instanceof Class) {
@@ -325,7 +325,7 @@ public final class Utils8 {
         throw new IllegalArgumentException("Expected a Class, ParameterizedType, or GenericArrayType, but <" + type + "> is of type " + type.getClass().getName());
     }
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public static Type m10687g(Type type, Class<?> cls, Class<?> cls2) {
         if (cls2.isAssignableFrom(cls)) {
             return m10694n(type, cls, m10684d(type, cls, cls2));
@@ -333,7 +333,7 @@ public final class Utils8 {
         throw new IllegalArgumentException();
     }
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public static boolean m10688h(Type type) {
         if (type instanceof Class) {
             return false;
@@ -355,7 +355,7 @@ public final class Utils8 {
         throw new IllegalArgumentException("Expected a Class, ParameterizedType, or GenericArrayType, but <" + type + "> is of type " + (type == null ? "null" : type.getClass().getName()));
     }
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public static boolean m10689i(Annotation[] annotationArr, Class<? extends Annotation> cls) {
         for (Annotation annotation : annotationArr) {
             if (cls.isInstance(annotation)) {
@@ -365,12 +365,12 @@ public final class Utils8 {
         return false;
     }
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static RuntimeException m10690j(Method method, String str, Object... objArr) {
         return m10691k(method, null, str, objArr);
     }
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public static RuntimeException m10691k(Method method, Throwable th, String str, Object... objArr) {
         StringBuilder sbM836X = outline.m836X(String.format(str, objArr), "\n    for method ");
         sbM836X.append(method.getDeclaringClass().getSimpleName());
@@ -379,7 +379,7 @@ public final class Utils8 {
         return new IllegalArgumentException(sbM836X.toString(), th);
     }
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public static RuntimeException m10692l(Method method, int i, String str, Object... objArr) {
         StringBuilder sbM836X = outline.m836X(str, " (parameter #");
         sbM836X.append(i + 1);
@@ -387,7 +387,7 @@ public final class Utils8 {
         return m10690j(method, sbM836X.toString(), objArr);
     }
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public static RuntimeException m10693m(Method method, Throwable th, int i, String str, Object... objArr) {
         StringBuilder sbM836X = outline.m836X(str, " (parameter #");
         sbM836X.append(i + 1);
@@ -396,7 +396,7 @@ public final class Utils8 {
     }
 
     /* JADX WARN: Removed duplicated region for block: B:21:0x003f  */
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
@@ -491,7 +491,7 @@ public final class Utils8 {
         }
     }
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public static void m10695o(Throwable th) {
         if (th instanceof VirtualMachineError) {
             throw ((VirtualMachineError) th);
@@ -504,7 +504,7 @@ public final class Utils8 {
         }
     }
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public static String m10696p(Type type) {
         return type instanceof Class ? ((Class) type).getName() : type.toString();
     }

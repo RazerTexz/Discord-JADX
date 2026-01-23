@@ -7,8 +7,8 @@ import p001a0.p002a.p003a.C0002b;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: StartOfChatEntry.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: StartOfChatEntry.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final /* data */ class StartOfChatEntry extends ChatListEntry {
     private final List<Long> appliedTags;
     private final List<ForumTag> availableTags;
@@ -51,26 +51,27 @@ public final /* data */ class StartOfChatEntry extends ChatListEntry {
         this.key = sb.toString();
     }
 
+    /* JADX WARN: Multi-variable type inference failed */
     public static /* synthetic */ StartOfChatEntry copy$default(StartOfChatEntry startOfChatEntry, long j, String str, boolean z2, boolean z3, boolean z4, boolean z5, Integer num, GuildMember guildMember, String str2, boolean z6, boolean z7, boolean z8, List list, List list2, int i, Object obj) {
         return startOfChatEntry.copy((i & 1) != 0 ? startOfChatEntry.channelId : j, (i & 2) != 0 ? startOfChatEntry.channelName : str, (i & 4) != 0 ? startOfChatEntry.canReadMessageHistory : z2, (i & 8) != 0 ? startOfChatEntry.canManageChannel : z3, (i & 16) != 0 ? startOfChatEntry.canManageThread : z4, (i & 32) != 0 ? startOfChatEntry.isThread : z5, (i & 64) != 0 ? startOfChatEntry.threadAutoArchiveDuration : num, (i & 128) != 0 ? startOfChatEntry.threadCreatorMember : guildMember, (i & 256) != 0 ? startOfChatEntry.threadCreatorName : str2, (i & 512) != 0 ? startOfChatEntry.isTextInVoice : z6, (i & 1024) != 0 ? startOfChatEntry.isGuildForumPost : z7, (i & 2048) != 0 ? startOfChatEntry.canAccessRedesignedForumChannels : z8, (i & 4096) != 0 ? startOfChatEntry.availableTags : list, (i & 8192) != 0 ? startOfChatEntry.appliedTags : list2);
     }
 
-    /* renamed from: component1, reason: from getter */
+    /* JADX INFO: renamed from: component1, reason: from getter */
     public final long getChannelId() {
         return this.channelId;
     }
 
-    /* renamed from: component10, reason: from getter */
+    /* JADX INFO: renamed from: component10, reason: from getter */
     public final boolean getIsTextInVoice() {
         return this.isTextInVoice;
     }
 
-    /* renamed from: component11, reason: from getter */
+    /* JADX INFO: renamed from: component11, reason: from getter */
     public final boolean getIsGuildForumPost() {
         return this.isGuildForumPost;
     }
 
-    /* renamed from: component12, reason: from getter */
+    /* JADX INFO: renamed from: component12, reason: from getter */
     public final boolean getCanAccessRedesignedForumChannels() {
         return this.canAccessRedesignedForumChannels;
     }
@@ -83,42 +84,42 @@ public final /* data */ class StartOfChatEntry extends ChatListEntry {
         return this.appliedTags;
     }
 
-    /* renamed from: component2, reason: from getter */
+    /* JADX INFO: renamed from: component2, reason: from getter */
     public final String getChannelName() {
         return this.channelName;
     }
 
-    /* renamed from: component3, reason: from getter */
+    /* JADX INFO: renamed from: component3, reason: from getter */
     public final boolean getCanReadMessageHistory() {
         return this.canReadMessageHistory;
     }
 
-    /* renamed from: component4, reason: from getter */
+    /* JADX INFO: renamed from: component4, reason: from getter */
     public final boolean getCanManageChannel() {
         return this.canManageChannel;
     }
 
-    /* renamed from: component5, reason: from getter */
+    /* JADX INFO: renamed from: component5, reason: from getter */
     public final boolean getCanManageThread() {
         return this.canManageThread;
     }
 
-    /* renamed from: component6, reason: from getter */
+    /* JADX INFO: renamed from: component6, reason: from getter */
     public final boolean getIsThread() {
         return this.isThread;
     }
 
-    /* renamed from: component7, reason: from getter */
+    /* JADX INFO: renamed from: component7, reason: from getter */
     public final Integer getThreadAutoArchiveDuration() {
         return this.threadAutoArchiveDuration;
     }
 
-    /* renamed from: component8, reason: from getter */
+    /* JADX INFO: renamed from: component8, reason: from getter */
     public final GuildMember getThreadCreatorMember() {
         return this.threadCreatorMember;
     }
 
-    /* renamed from: component9, reason: from getter */
+    /* JADX INFO: renamed from: component9, reason: from getter */
     public final String getThreadCreatorName() {
         return this.threadCreatorName;
     }
@@ -195,56 +196,77 @@ public final /* data */ class StartOfChatEntry extends ChatListEntry {
     }
 
     /* JADX WARN: Multi-variable type inference failed */
+    /* JADX WARN: Type inference failed for: r1v10, types: [int] */
+    /* JADX WARN: Type inference failed for: r1v21, types: [int] */
+    /* JADX WARN: Type inference failed for: r1v23, types: [int] */
+    /* JADX WARN: Type inference failed for: r1v30 */
+    /* JADX WARN: Type inference failed for: r1v31 */
+    /* JADX WARN: Type inference failed for: r1v35 */
+    /* JADX WARN: Type inference failed for: r1v36 */
+    /* JADX WARN: Type inference failed for: r1v37 */
+    /* JADX WARN: Type inference failed for: r1v38 */
+    /* JADX WARN: Type inference failed for: r1v4, types: [int] */
+    /* JADX WARN: Type inference failed for: r1v40 */
+    /* JADX WARN: Type inference failed for: r1v41 */
+    /* JADX WARN: Type inference failed for: r1v42 */
+    /* JADX WARN: Type inference failed for: r1v43 */
+    /* JADX WARN: Type inference failed for: r1v44 */
+    /* JADX WARN: Type inference failed for: r1v45 */
+    /* JADX WARN: Type inference failed for: r1v6, types: [int] */
+    /* JADX WARN: Type inference failed for: r1v8, types: [int] */
+    /* JADX WARN: Type inference failed for: r3v0 */
+    /* JADX WARN: Type inference failed for: r3v1, types: [int] */
+    /* JADX WARN: Type inference failed for: r3v2 */
     public int hashCode() {
         int iM3a = C0002b.m3a(this.channelId) * 31;
         String str = this.channelName;
         int iHashCode = (iM3a + (str != null ? str.hashCode() : 0)) * 31;
         boolean z2 = this.canReadMessageHistory;
-        int i = z2;
-        if (z2 != 0) {
-            i = 1;
+        ?? r1 = z2;
+        if (z2) {
+            r1 = 1;
         }
-        int i2 = (iHashCode + i) * 31;
+        int i = (iHashCode + r1) * 31;
         boolean z3 = this.canManageChannel;
-        int i3 = z3;
-        if (z3 != 0) {
-            i3 = 1;
+        ?? r12 = z3;
+        if (z3) {
+            r12 = 1;
         }
-        int i4 = (i2 + i3) * 31;
+        int i2 = (i + r12) * 31;
         boolean z4 = this.canManageThread;
-        int i5 = z4;
-        if (z4 != 0) {
-            i5 = 1;
+        ?? r13 = z4;
+        if (z4) {
+            r13 = 1;
         }
-        int i6 = (i4 + i5) * 31;
+        int i3 = (i2 + r13) * 31;
         boolean z5 = this.isThread;
-        int i7 = z5;
-        if (z5 != 0) {
-            i7 = 1;
+        ?? r14 = z5;
+        if (z5) {
+            r14 = 1;
         }
-        int i8 = (i6 + i7) * 31;
+        int i4 = (i3 + r14) * 31;
         Integer num = this.threadAutoArchiveDuration;
-        int iHashCode2 = (i8 + (num != null ? num.hashCode() : 0)) * 31;
+        int iHashCode2 = (i4 + (num != null ? num.hashCode() : 0)) * 31;
         GuildMember guildMember = this.threadCreatorMember;
         int iHashCode3 = (iHashCode2 + (guildMember != null ? guildMember.hashCode() : 0)) * 31;
         String str2 = this.threadCreatorName;
         int iHashCode4 = (iHashCode3 + (str2 != null ? str2.hashCode() : 0)) * 31;
         boolean z6 = this.isTextInVoice;
-        int i9 = z6;
-        if (z6 != 0) {
-            i9 = 1;
+        ?? r15 = z6;
+        if (z6) {
+            r15 = 1;
         }
-        int i10 = (iHashCode4 + i9) * 31;
+        int i5 = (iHashCode4 + r15) * 31;
         boolean z7 = this.isGuildForumPost;
-        int i11 = z7;
-        if (z7 != 0) {
-            i11 = 1;
+        ?? r16 = z7;
+        if (z7) {
+            r16 = 1;
         }
-        int i12 = (i10 + i11) * 31;
+        int i6 = (i5 + r16) * 31;
         boolean z8 = this.canAccessRedesignedForumChannels;
-        int i13 = (i12 + (z8 ? 1 : z8 ? 1 : 0)) * 31;
+        int i7 = (i6 + (z8 ? 1 : z8)) * 31;
         List<ForumTag> list = this.availableTags;
-        int iHashCode5 = (i13 + (list != null ? list.hashCode() : 0)) * 31;
+        int iHashCode5 = (i7 + (list != null ? list.hashCode() : 0)) * 31;
         List<Long> list2 = this.appliedTags;
         return iHashCode5 + (list2 != null ? list2.hashCode() : 0);
     }

@@ -14,7 +14,7 @@ import java.util.Map;
 import lombok.core.AST;
 import lombok.permit.Permit;
 
-/* loaded from: discord-126021.apk:lombok/core/AnnotationValues.SCL.lombok */
+/* JADX INFO: loaded from: discord-126021.apk:lombok/core/AnnotationValues.SCL.lombok */
 public class AnnotationValues<A extends Annotation> {
     private final Class<A> type;
     private final Map<String, AnnotationValue> values;
@@ -25,7 +25,7 @@ public class AnnotationValues<A extends Annotation> {
         return annotationValues.values;
     }
 
-    /* loaded from: discord-126021.apk:lombok/core/AnnotationValues$AnnotationValue.SCL.lombok */
+    /* JADX INFO: loaded from: discord-126021.apk:lombok/core/AnnotationValues$AnnotationValue.SCL.lombok */
     public static class AnnotationValue {
         public final List<String> raws;
         public final List<Object> valueGuesses;
@@ -64,17 +64,17 @@ public class AnnotationValues<A extends Annotation> {
         this.ast = ast;
     }
 
-    /* renamed from: of */
+    /* JADX INFO: renamed from: of */
     public static <A extends Annotation> AnnotationValues<A> m10916of(Class<A> type) {
         return new AnnotationValues<>(type, Collections.emptyMap(), null);
     }
 
-    /* renamed from: of */
+    /* JADX INFO: renamed from: of */
     public static <A extends Annotation> AnnotationValues<A> m10917of(Class<A> type, LombokNode<?, ?, ?> ast) {
         return new AnnotationValues<>(type, Collections.emptyMap(), ast);
     }
 
-    /* loaded from: discord-126021.apk:lombok/core/AnnotationValues$AnnotationValueDecodeFail.SCL.lombok */
+    /* JADX INFO: loaded from: discord-126021.apk:lombok/core/AnnotationValues$AnnotationValueDecodeFail.SCL.lombok */
     public static class AnnotationValueDecodeFail extends RuntimeException {
         private static final long serialVersionUID = 1;
         public final int idx;
@@ -144,8 +144,8 @@ public class AnnotationValues<A extends Annotation> {
         }
     }
 
-    /* renamed from: lombok.core.AnnotationValues$1 */
-    /* loaded from: discord-126021.apk:lombok/core/AnnotationValues$1.SCL.lombok */
+    /* JADX INFO: renamed from: lombok.core.AnnotationValues$1 */
+    /* JADX INFO: loaded from: discord-126021.apk:lombok/core/AnnotationValues$1.SCL.lombok */
     class C128111 implements InvocationHandler {
         C128111() {
         }

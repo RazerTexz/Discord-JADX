@@ -15,13 +15,13 @@ import kotlin.Unit;
 import kotlin.jvm.functions.Function0;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ChannelMembersListViewHolderJoinLeaveThread.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: ChannelMembersListViewHolderJoinLeaveThread.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class ChannelMembersListViewHolderJoinLeaveThread extends RecyclerView.ViewHolder {
     private final WidgetChannelMembersListItemAddOrLeaveBinding binding;
 
-    /* compiled from: ChannelMembersListViewHolderJoinLeaveThread.kt */
-    /* renamed from: com.discord.widgets.channels.memberlist.adapter.ChannelMembersListViewHolderJoinLeaveThread$bind$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.channels.memberlist.adapter.ChannelMembersListViewHolderJoinLeaveThread$bind$1 */
+    /* JADX INFO: compiled from: ChannelMembersListViewHolderJoinLeaveThread.kt */
     public static final class ViewOnClickListenerC75141 implements View.OnClickListener {
         public final /* synthetic */ Function0 $onClicked;
 

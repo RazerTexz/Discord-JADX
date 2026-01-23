@@ -12,21 +12,21 @@ import com.google.android.gms.common.api.internal.LifecycleCallback;
 import java.util.concurrent.atomic.AtomicReference;
 import p007b.p225i.p226a.p288f.p313h.p318e.HandlerC3479c;
 
-/* compiled from: com.google.android.gms:play-services-base@@17.3.0 */
-/* renamed from: b.i.a.f.e.h.j.t0 */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.e.h.j.t0 */
+/* JADX INFO: compiled from: com.google.android.gms:play-services-base@@17.3.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public abstract class AbstractDialogInterfaceOnCancelListenerC3320t0 extends LifecycleCallback implements DialogInterface.OnCancelListener {
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public volatile boolean f9451k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final AtomicReference<C3318s0> f9452l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public final Handler f9453m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public final GoogleApiAvailability f9454n;
 
     public AbstractDialogInterfaceOnCancelListenerC3320t0(InterfaceC3299j interfaceC3299j, GoogleApiAvailability googleApiAvailability) {
@@ -37,7 +37,7 @@ public abstract class AbstractDialogInterfaceOnCancelListenerC3320t0 extends Lif
     }
 
     @Override // com.google.android.gms.common.api.internal.LifecycleCallback
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public void mo4115d(int i, int i2, Intent intent) {
         C3318s0 c3318s0 = this.f9452l.get();
         if (i != 1) {
@@ -69,7 +69,7 @@ public abstract class AbstractDialogInterfaceOnCancelListenerC3320t0 extends Lif
     }
 
     @Override // com.google.android.gms.common.api.internal.LifecycleCallback
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public void mo4116e(Bundle bundle) {
         if (bundle != null) {
             this.f9452l.set(bundle.getBoolean("resolving_error", false) ? new C3318s0(new ConnectionResult(bundle.getInt("failed_status"), (PendingIntent) bundle.getParcelable("failed_resolution")), bundle.getInt("failed_client_id", -1)) : null);
@@ -77,7 +77,7 @@ public abstract class AbstractDialogInterfaceOnCancelListenerC3320t0 extends Lif
     }
 
     @Override // com.google.android.gms.common.api.internal.LifecycleCallback
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public void mo4117h(Bundle bundle) {
         C3318s0 c3318s0 = this.f9452l.get();
         if (c3318s0 != null) {
@@ -89,30 +89,30 @@ public abstract class AbstractDialogInterfaceOnCancelListenerC3320t0 extends Lif
     }
 
     @Override // com.google.android.gms.common.api.internal.LifecycleCallback
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public void mo4059i() {
         this.f9451k = true;
     }
 
     @Override // com.google.android.gms.common.api.internal.LifecycleCallback
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public void mo4060j() {
         this.f9451k = false;
     }
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public abstract void mo4061k();
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public abstract void mo4062l(ConnectionResult connectionResult, int i);
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public final void m4118m() {
         this.f9452l.set(null);
         mo4061k();
     }
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public final void m4119n(ConnectionResult connectionResult, int i) {
         C3318s0 c3318s0 = new C3318s0(connectionResult, i);
         if (this.f9452l.compareAndSet(null, c3318s0)) {

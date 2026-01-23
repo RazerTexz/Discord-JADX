@@ -73,7 +73,7 @@ import java.util.Collections;
 import java.util.List;
 import p007b.p100d.p104b.p105a.outline;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class RecyclerView extends ViewGroup implements ScrollingView, NestedScrollingChild2, NestedScrollingChild3 {
     public static final boolean ALLOW_SIZE_IN_UNSPECIFIED_SPEC;
     public static final boolean ALLOW_THREAD_GAP_WORK;
@@ -197,7 +197,7 @@ public class RecyclerView extends ViewGroup implements ScrollingView, NestedScro
     private final ViewInfoStore.ProcessCallback mViewInfoProcessCallback;
     public final ViewInfoStore mViewInfoStore;
 
-    /* renamed from: androidx.recyclerview.widget.RecyclerView$1 */
+    /* JADX INFO: renamed from: androidx.recyclerview.widget.RecyclerView$1 */
     public class RunnableC05661 implements Runnable {
         public RunnableC05661() {
         }
@@ -219,7 +219,7 @@ public class RecyclerView extends ViewGroup implements ScrollingView, NestedScro
         }
     }
 
-    /* renamed from: androidx.recyclerview.widget.RecyclerView$2 */
+    /* JADX INFO: renamed from: androidx.recyclerview.widget.RecyclerView$2 */
     public class RunnableC05672 implements Runnable {
         public RunnableC05672() {
         }
@@ -234,7 +234,7 @@ public class RecyclerView extends ViewGroup implements ScrollingView, NestedScro
         }
     }
 
-    /* renamed from: androidx.recyclerview.widget.RecyclerView$3 */
+    /* JADX INFO: renamed from: androidx.recyclerview.widget.RecyclerView$3 */
     public class InterpolatorC05683 implements Interpolator {
         @Override // android.animation.TimeInterpolator
         public float getInterpolation(float f) {
@@ -243,7 +243,7 @@ public class RecyclerView extends ViewGroup implements ScrollingView, NestedScro
         }
     }
 
-    /* renamed from: androidx.recyclerview.widget.RecyclerView$4 */
+    /* JADX INFO: renamed from: androidx.recyclerview.widget.RecyclerView$4 */
     public class C05694 implements ViewInfoStore.ProcessCallback {
         public C05694() {
         }
@@ -279,7 +279,7 @@ public class RecyclerView extends ViewGroup implements ScrollingView, NestedScro
         }
     }
 
-    /* renamed from: androidx.recyclerview.widget.RecyclerView$5 */
+    /* JADX INFO: renamed from: androidx.recyclerview.widget.RecyclerView$5 */
     public class C05705 implements ChildHelper.Callback {
         public C05705() {
         }
@@ -379,7 +379,7 @@ public class RecyclerView extends ViewGroup implements ScrollingView, NestedScro
         }
     }
 
-    /* renamed from: androidx.recyclerview.widget.RecyclerView$6 */
+    /* JADX INFO: renamed from: androidx.recyclerview.widget.RecyclerView$6 */
     public class C05716 implements AdapterHelper.Callback {
         public C05716() {
         }
@@ -458,10 +458,10 @@ public class RecyclerView extends ViewGroup implements ScrollingView, NestedScro
         }
     }
 
-    /* renamed from: androidx.recyclerview.widget.RecyclerView$7 */
+    /* JADX INFO: renamed from: androidx.recyclerview.widget.RecyclerView$7 */
     public static /* synthetic */ class C05727 {
 
-        /* renamed from: $SwitchMap$androidx$recyclerview$widget$RecyclerView$Adapter$StateRestorationPolicy */
+        /* JADX INFO: renamed from: $SwitchMap$androidx$recyclerview$widget$RecyclerView$Adapter$StateRestorationPolicy */
         public static final /* synthetic */ int[] f154x3d106619;
 
         static {
@@ -984,7 +984,7 @@ public class RecyclerView extends ViewGroup implements ScrollingView, NestedScro
         private int mWidth;
         private int mWidthMode;
 
-        /* renamed from: androidx.recyclerview.widget.RecyclerView$LayoutManager$1 */
+        /* JADX INFO: renamed from: androidx.recyclerview.widget.RecyclerView$LayoutManager$1 */
         public class C05731 implements ViewBoundsCheck.Callback {
             public C05731() {
             }
@@ -1015,7 +1015,7 @@ public class RecyclerView extends ViewGroup implements ScrollingView, NestedScro
             }
         }
 
-        /* renamed from: androidx.recyclerview.widget.RecyclerView$LayoutManager$2 */
+        /* JADX INFO: renamed from: androidx.recyclerview.widget.RecyclerView$LayoutManager$2 */
         public class C05742 implements ViewBoundsCheck.Callback {
             public C05742() {
             }
@@ -4268,7 +4268,7 @@ public class RecyclerView extends ViewGroup implements ScrollingView, NestedScro
         }
     }
 
-    private void createLayoutManager(Context context, String str, AttributeSet attributeSet, int i, int i2) throws SecurityException {
+    private void createLayoutManager(Context context, String str, AttributeSet attributeSet, int i, int i2) {
         Constructor constructor;
         if (str != null) {
             String strTrim = str.trim();
@@ -4675,7 +4675,7 @@ public class RecyclerView extends ViewGroup implements ScrollingView, NestedScro
         this.mTempRect2.set(0, 0, view2.getWidth(), view2.getHeight());
         offsetDescendantRectToMyCoords(view, this.mTempRect);
         offsetDescendantRectToMyCoords(view2, this.mTempRect2);
-        char c = 65535;
+        byte b2 = -1;
         int i3 = this.mLayout.getLayoutDirection() == 1 ? -1 : 1;
         Rect rect = this.mTempRect;
         int i4 = rect.left;
@@ -4691,31 +4691,31 @@ public class RecyclerView extends ViewGroup implements ScrollingView, NestedScro
         int i8 = rect.top;
         int i9 = rect2.top;
         if ((i8 < i9 || rect.bottom <= i9) && rect.bottom < rect2.bottom) {
-            c = 1;
+            b2 = 1;
         } else {
             int i10 = rect.bottom;
             int i11 = rect2.bottom;
             if ((i10 <= i11 && i8 < i11) || i8 <= i9) {
-                c = 0;
+                b2 = 0;
             }
         }
         if (i == 1) {
-            return c < 0 || (c == 0 && i2 * i3 < 0);
+            return b2 < 0 || (b2 == 0 && i2 * i3 < 0);
         }
         if (i == 2) {
-            return c > 0 || (c == 0 && i2 * i3 > 0);
+            return b2 > 0 || (b2 == 0 && i2 * i3 > 0);
         }
         if (i == 17) {
             return i2 < 0;
         }
         if (i == 33) {
-            return c < 0;
+            return b2 < 0;
         }
         if (i == 66) {
             return i2 > 0;
         }
         if (i == 130) {
-            return c > 0;
+            return b2 > 0;
         }
         StringBuilder sb = new StringBuilder();
         sb.append("Invalid direction: ");
@@ -6292,7 +6292,7 @@ public class RecyclerView extends ViewGroup implements ScrollingView, NestedScro
             if (this.mScrollState != 1) {
                 int i2 = x3 - this.mInitialTouchX;
                 int i3 = y3 - this.mInitialTouchY;
-                if (zCanScrollHorizontally == 0 || Math.abs(i2) <= this.mTouchSlop) {
+                if (!zCanScrollHorizontally || Math.abs(i2) <= this.mTouchSlop) {
                     z2 = false;
                 } else {
                     this.mLastTouchX = x3;
@@ -6506,7 +6506,7 @@ public class RecyclerView extends ViewGroup implements ScrollingView, NestedScro
         } else if (actionMasked == 1) {
             this.mVelocityTracker.addMovement(motionEventObtain);
             this.mVelocityTracker.computeCurrentVelocity(1000, this.mMaxFlingVelocity);
-            float f = zCanScrollHorizontally != 0 ? -this.mVelocityTracker.getXVelocity(this.mScrollPointerId) : 0.0f;
+            float f = zCanScrollHorizontally ? -this.mVelocityTracker.getXVelocity(this.mScrollPointerId) : 0.0f;
             float f2 = zCanScrollVertically ? -this.mVelocityTracker.getYVelocity(this.mScrollPointerId) : 0.0f;
             if ((f == 0.0f && f2 == 0.0f) || !fling((int) f, (int) f2)) {
                 setScrollState(0);
@@ -6527,7 +6527,16 @@ public class RecyclerView extends ViewGroup implements ScrollingView, NestedScro
             int iMax = this.mLastTouchX - x3;
             int iMax2 = this.mLastTouchY - y3;
             if (this.mScrollState != 1) {
-                if (zCanScrollHorizontally == 0) {
+                if (zCanScrollHorizontally) {
+                    iMax = iMax > 0 ? Math.max(0, iMax - this.mTouchSlop) : Math.min(0, iMax + this.mTouchSlop);
+                    if (iMax != 0) {
+                        z2 = true;
+                    }
+                    if (zCanScrollVertically) {
+                    }
+                    if (z2) {
+                    }
+                } else {
                     z2 = false;
                     if (zCanScrollVertically) {
                         iMax2 = iMax2 > 0 ? Math.max(0, iMax2 - this.mTouchSlop) : Math.min(0, iMax2 + this.mTouchSlop);
@@ -6538,15 +6547,6 @@ public class RecyclerView extends ViewGroup implements ScrollingView, NestedScro
                     if (z2) {
                         setScrollState(1);
                     }
-                } else {
-                    iMax = iMax > 0 ? Math.max(0, iMax - this.mTouchSlop) : Math.min(0, iMax + this.mTouchSlop);
-                    if (iMax != 0) {
-                        z2 = true;
-                    }
-                    if (zCanScrollVertically) {
-                    }
-                    if (z2) {
-                    }
                 }
             }
             int i2 = iMax;
@@ -6555,7 +6555,7 @@ public class RecyclerView extends ViewGroup implements ScrollingView, NestedScro
                 int[] iArr3 = this.mReusableIntPair;
                 iArr3[0] = 0;
                 iArr3[1] = 0;
-                if (dispatchNestedPreScroll(zCanScrollHorizontally != 0 ? i2 : 0, zCanScrollVertically ? i3 : 0, iArr3, this.mScrollOffset, 0)) {
+                if (dispatchNestedPreScroll(zCanScrollHorizontally ? i2 : 0, zCanScrollVertically ? i3 : 0, iArr3, this.mScrollOffset, 0)) {
                     int[] iArr4 = this.mReusableIntPair;
                     i2 -= iArr4[0];
                     i3 -= iArr4[1];
@@ -6570,7 +6570,7 @@ public class RecyclerView extends ViewGroup implements ScrollingView, NestedScro
                 int[] iArr7 = this.mScrollOffset;
                 this.mLastTouchX = x3 - iArr7[0];
                 this.mLastTouchY = y3 - iArr7[1];
-                if (scrollByInternal(zCanScrollHorizontally != 0 ? i2 : 0, zCanScrollVertically ? i5 : 0, motionEvent, 0)) {
+                if (scrollByInternal(zCanScrollHorizontally ? i2 : 0, zCanScrollVertically ? i5 : 0, motionEvent, 0)) {
                     getParent().requestDisallowInterceptTouchEvent(true);
                 }
                 GapWorker gapWorker = this.mGapWorker;
@@ -7258,7 +7258,7 @@ public class RecyclerView extends ViewGroup implements ScrollingView, NestedScro
         public static final Parcelable.Creator<SavedState> CREATOR = new C05751();
         public Parcelable mLayoutState;
 
-        /* renamed from: androidx.recyclerview.widget.RecyclerView$SavedState$1 */
+        /* JADX INFO: renamed from: androidx.recyclerview.widget.RecyclerView$SavedState$1 */
         public class C05751 implements Parcelable.ClassLoaderCreator<SavedState> {
             @Override // android.os.Parcelable.Creator
             public /* bridge */ /* synthetic */ Object createFromParcel(Parcel parcel) {
@@ -7312,7 +7312,7 @@ public class RecyclerView extends ViewGroup implements ScrollingView, NestedScro
         }
     }
 
-    public RecyclerView(@NonNull Context context, @Nullable AttributeSet attributeSet, int i) throws SecurityException {
+    public RecyclerView(@NonNull Context context, @Nullable AttributeSet attributeSet, int i) {
         super(context, attributeSet, i);
         this.mObserver = new RecyclerViewDataObserver();
         this.mRecycler = new Recycler();

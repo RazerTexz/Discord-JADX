@@ -9,11 +9,11 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatDialogFragment;
 import com.google.android.material.bottomsheet.BottomSheetBehavior;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public class BottomSheetDialogFragment extends AppCompatDialogFragment {
     private boolean waitingForDismissAllowingStateLoss;
 
-    /* renamed from: com.google.android.material.bottomsheet.BottomSheetDialogFragment$b */
+    /* JADX INFO: renamed from: com.google.android.material.bottomsheet.BottomSheetDialogFragment$b */
     public class C10864b extends BottomSheetBehavior.BottomSheetCallback {
         public C10864b(C10863a c10863a) {
         }

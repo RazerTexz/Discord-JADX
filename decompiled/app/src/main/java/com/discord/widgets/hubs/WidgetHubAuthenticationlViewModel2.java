@@ -7,15 +7,15 @@ import kotlin.jvm.internal.DefaultConstructorMarker;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: WidgetHubAuthenticationlViewModel.kt */
-/* renamed from: com.discord.widgets.hubs.HubAuthenticationArgs, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.hubs.HubAuthenticationArgs, reason: use source file name */
+/* JADX INFO: compiled from: WidgetHubAuthenticationlViewModel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final /* data */ class WidgetHubAuthenticationlViewModel2 implements Parcelable {
     public static final Parcelable.Creator<WidgetHubAuthenticationlViewModel2> CREATOR = new Creator();
     private final String email;
     private final Long guildId;
 
-    /* renamed from: com.discord.widgets.hubs.HubAuthenticationArgs$Creator */
+    /* JADX INFO: renamed from: com.discord.widgets.hubs.HubAuthenticationArgs$Creator */
     public static class Creator implements Parcelable.Creator<WidgetHubAuthenticationlViewModel2> {
         /* JADX WARN: Can't rename method to resolve collision */
         @Override // android.os.Parcelable.Creator
@@ -61,12 +61,12 @@ public final /* data */ class WidgetHubAuthenticationlViewModel2 implements Parc
         return widgetHubAuthenticationlViewModel2.copy(str, l);
     }
 
-    /* renamed from: component1, reason: from getter */
+    /* JADX INFO: renamed from: component1, reason: from getter */
     public final String getEmail() {
         return this.email;
     }
 
-    /* renamed from: component2, reason: from getter */
+    /* JADX INFO: renamed from: component2, reason: from getter */
     public final Long getGuildId() {
         return this.guildId;
     }

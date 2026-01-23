@@ -14,14 +14,14 @@ import java.util.List;
 import kotlin.NoWhenBranchMatchedException;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: MediaPicker.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: MediaPicker.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class MediaPicker {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final MediaPicker f18555a = new MediaPicker();
 
-    /* compiled from: MediaPicker.kt */
+    /* JADX INFO: compiled from: MediaPicker.kt */
     public interface Provider {
         File getImageFile();
 
@@ -30,17 +30,17 @@ public final class MediaPicker {
         void startActivityForResult(Intent intent, int requestCode);
     }
 
-    /* compiled from: MediaPicker.kt */
-    /* renamed from: com.discord.media_picker.MediaPicker$a */
+    /* JADX INFO: renamed from: com.discord.media_picker.MediaPicker$a */
+    /* JADX INFO: compiled from: MediaPicker.kt */
     public interface InterfaceC5527a {
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         void mo8354a(Exception exc);
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         void mo8355b(Uri uri, RequestType requestType);
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final Uri m8424a(Provider provider) throws IOException {
         File imageFile = provider.getImageFile();
         Context contextRequireContext = provider.requireContext();
@@ -50,7 +50,7 @@ public final class MediaPicker {
         return uriForFile;
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final Uri m8425b(Context context) {
         SharedPreferences sharedPreferences = context.getSharedPreferences("picker", 0);
         Intrinsics3.checkNotNullExpressionValue(sharedPreferences, "context.getSharedPrefere…r\", Context.MODE_PRIVATE)");
@@ -67,7 +67,7 @@ public final class MediaPicker {
     }
 
     @SuppressLint({"QueryPermissionsNeeded"})
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final void m8426c(Context context, Intent intent, Uri uri) {
         List<ResolveInfo> listQueryIntentActivities = context.getPackageManager().queryIntentActivities(intent, 65536);
         Intrinsics3.checkNotNullExpressionValue(listQueryIntentActivities, "context\n        .package…nager.MATCH_DEFAULT_ONLY)");
@@ -77,7 +77,7 @@ public final class MediaPicker {
         }
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final Uri m8427d(Context context, RequestType requestType, Intent intent) throws IOException {
         Uri uri;
         Uri uriM8425b;
@@ -118,7 +118,7 @@ public final class MediaPicker {
         return uriM8425b;
     }
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final void m8428e(Context context, String str) {
         SharedPreferences sharedPreferences = context.getSharedPreferences("picker", 0);
         Intrinsics3.checkNotNullExpressionValue(sharedPreferences, "context.getSharedPrefere…r\", Context.MODE_PRIVATE)");

@@ -9,9 +9,9 @@ import p007b.p008a.p009a.p010a.GuildBoostUncancelViewModel3;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: GuildBoostUncancelViewModel.kt */
-/* renamed from: b.a.a.a.i, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.a.a.a.i, reason: use source file name */
+/* JADX INFO: compiled from: GuildBoostUncancelViewModel.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class GuildBoostUncancelViewModel extends Lambda implements Function1<GuildBoostUncancelViewModel3.b, Unit> {
     public final /* synthetic */ GuildBoostUncancelViewModel3 this$0;
 

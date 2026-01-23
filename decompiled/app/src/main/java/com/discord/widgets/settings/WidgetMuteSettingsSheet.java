@@ -38,25 +38,25 @@ import p507d0.p592z.p594d.Lambda;
 import p507d0.p592z.p594d.Reflection2;
 import p658rx.subscriptions.CompositeSubscription;
 
-/* compiled from: WidgetMuteSettingsSheet.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetMuteSettingsSheet.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetMuteSettingsSheet extends AppBottomSheet {
     private static final float ACTIVE_OPACITY = 1.0f;
     private static final String ARG_CHANNEL_ID = "ARG_CHANNEL_ID";
     private static final String ARG_GUILD_ID = "ARG_GUILD_ID";
     private static final float INACTIVE_OPACITY = 0.2f;
 
-    /* renamed from: binding$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
 
-    /* renamed from: viewModel$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: viewModel$delegate, reason: from kotlin metadata */
     private final Lazy viewModel;
     public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetMuteSettingsSheet.class, "binding", "getBinding()Lcom/discord/databinding/WidgetMuteSettingsSheetBinding;", 0)};
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
 
-    /* compiled from: WidgetMuteSettingsSheet.kt */
+    /* JADX INFO: compiled from: WidgetMuteSettingsSheet.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -118,8 +118,8 @@ public final class WidgetMuteSettingsSheet extends AppBottomSheet {
         }
     }
 
-    /* compiled from: WidgetMuteSettingsSheet.kt */
-    /* renamed from: com.discord.widgets.settings.WidgetMuteSettingsSheet$bindSubscriptions$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.WidgetMuteSettingsSheet$bindSubscriptions$1 */
+    /* JADX INFO: compiled from: WidgetMuteSettingsSheet.kt */
     public static final class ViewOnClickListenerC95991 implements View.OnClickListener {
         public ViewOnClickListenerC95991() {
         }
@@ -134,8 +134,8 @@ public final class WidgetMuteSettingsSheet extends AppBottomSheet {
         }
     }
 
-    /* compiled from: WidgetMuteSettingsSheet.kt */
-    /* renamed from: com.discord.widgets.settings.WidgetMuteSettingsSheet$bindSubscriptions$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.WidgetMuteSettingsSheet$bindSubscriptions$2 */
+    /* JADX INFO: compiled from: WidgetMuteSettingsSheet.kt */
     public static final /* synthetic */ class C96002 extends FunctionReferenceImpl implements Function1<MuteSettingsSheetViewModel.ViewState, Unit> {
         public C96002(WidgetMuteSettingsSheet widgetMuteSettingsSheet) {
             super(1, widgetMuteSettingsSheet, WidgetMuteSettingsSheet.class, "updateViews", "updateViews(Lcom/discord/widgets/settings/MuteSettingsSheetViewModel$ViewState;)V", 0);
@@ -147,15 +147,15 @@ public final class WidgetMuteSettingsSheet extends AppBottomSheet {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(MuteSettingsSheetViewModel.ViewState viewState) {
             Intrinsics3.checkNotNullParameter(viewState, "p1");
             WidgetMuteSettingsSheet.access$updateViews((WidgetMuteSettingsSheet) this.receiver, viewState);
         }
     }
 
-    /* compiled from: WidgetMuteSettingsSheet.kt */
-    /* renamed from: com.discord.widgets.settings.WidgetMuteSettingsSheet$bindSubscriptions$3 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.WidgetMuteSettingsSheet$bindSubscriptions$3 */
+    /* JADX INFO: compiled from: WidgetMuteSettingsSheet.kt */
     public static final /* synthetic */ class C96013 extends FunctionReferenceImpl implements Function1<MuteSettingsSheetViewModel.Event, Unit> {
         public C96013(WidgetMuteSettingsSheet widgetMuteSettingsSheet) {
             super(1, widgetMuteSettingsSheet, WidgetMuteSettingsSheet.class, "handleEvent", "handleEvent(Lcom/discord/widgets/settings/MuteSettingsSheetViewModel$Event;)V", 0);
@@ -167,15 +167,15 @@ public final class WidgetMuteSettingsSheet extends AppBottomSheet {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(MuteSettingsSheetViewModel.Event event) {
             Intrinsics3.checkNotNullParameter(event, "p1");
             WidgetMuteSettingsSheet.access$handleEvent((WidgetMuteSettingsSheet) this.receiver, event);
         }
     }
 
-    /* compiled from: WidgetMuteSettingsSheet.kt */
-    /* renamed from: com.discord.widgets.settings.WidgetMuteSettingsSheet$configureNotificationSettings$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.WidgetMuteSettingsSheet$configureNotificationSettings$1 */
+    /* JADX INFO: compiled from: WidgetMuteSettingsSheet.kt */
     public static final class C96021 extends Lambda implements Function1<RenderContext, Unit> {
         public C96021() {
             super(1);
@@ -187,15 +187,15 @@ public final class WidgetMuteSettingsSheet extends AppBottomSheet {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(RenderContext renderContext) {
             Intrinsics3.checkNotNullParameter(renderContext, "$receiver");
             renderContext.boldColor = Integer.valueOf(ColorCompat.getColor(WidgetMuteSettingsSheet.this.requireContext(), C5419R.color.status_red_500));
         }
     }
 
-    /* compiled from: WidgetMuteSettingsSheet.kt */
-    /* renamed from: com.discord.widgets.settings.WidgetMuteSettingsSheet$configureNotificationSettings$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.WidgetMuteSettingsSheet$configureNotificationSettings$2 */
+    /* JADX INFO: compiled from: WidgetMuteSettingsSheet.kt */
     public static final class ViewOnClickListenerC96032 implements View.OnClickListener {
         public ViewOnClickListenerC96032() {
         }
@@ -206,8 +206,8 @@ public final class WidgetMuteSettingsSheet extends AppBottomSheet {
         }
     }
 
-    /* compiled from: WidgetMuteSettingsSheet.kt */
-    /* renamed from: com.discord.widgets.settings.WidgetMuteSettingsSheet$onViewCreated$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.WidgetMuteSettingsSheet$onViewCreated$1 */
+    /* JADX INFO: compiled from: WidgetMuteSettingsSheet.kt */
     public static final class ViewOnClickListenerC96051 implements View.OnClickListener {
         public ViewOnClickListenerC96051() {
         }
@@ -222,8 +222,8 @@ public final class WidgetMuteSettingsSheet extends AppBottomSheet {
         }
     }
 
-    /* compiled from: WidgetMuteSettingsSheet.kt */
-    /* renamed from: com.discord.widgets.settings.WidgetMuteSettingsSheet$onViewCreated$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.WidgetMuteSettingsSheet$onViewCreated$2 */
+    /* JADX INFO: compiled from: WidgetMuteSettingsSheet.kt */
     public static final class ViewOnClickListenerC96062 implements View.OnClickListener {
         public ViewOnClickListenerC96062() {
         }
@@ -238,8 +238,8 @@ public final class WidgetMuteSettingsSheet extends AppBottomSheet {
         }
     }
 
-    /* compiled from: WidgetMuteSettingsSheet.kt */
-    /* renamed from: com.discord.widgets.settings.WidgetMuteSettingsSheet$onViewCreated$3 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.WidgetMuteSettingsSheet$onViewCreated$3 */
+    /* JADX INFO: compiled from: WidgetMuteSettingsSheet.kt */
     public static final class ViewOnClickListenerC96073 implements View.OnClickListener {
         public ViewOnClickListenerC96073() {
         }
@@ -254,8 +254,8 @@ public final class WidgetMuteSettingsSheet extends AppBottomSheet {
         }
     }
 
-    /* compiled from: WidgetMuteSettingsSheet.kt */
-    /* renamed from: com.discord.widgets.settings.WidgetMuteSettingsSheet$onViewCreated$4 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.WidgetMuteSettingsSheet$onViewCreated$4 */
+    /* JADX INFO: compiled from: WidgetMuteSettingsSheet.kt */
     public static final class ViewOnClickListenerC96084 implements View.OnClickListener {
         public ViewOnClickListenerC96084() {
         }
@@ -270,8 +270,8 @@ public final class WidgetMuteSettingsSheet extends AppBottomSheet {
         }
     }
 
-    /* compiled from: WidgetMuteSettingsSheet.kt */
-    /* renamed from: com.discord.widgets.settings.WidgetMuteSettingsSheet$onViewCreated$5 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.WidgetMuteSettingsSheet$onViewCreated$5 */
+    /* JADX INFO: compiled from: WidgetMuteSettingsSheet.kt */
     public static final class ViewOnClickListenerC96095 implements View.OnClickListener {
         public ViewOnClickListenerC96095() {
         }

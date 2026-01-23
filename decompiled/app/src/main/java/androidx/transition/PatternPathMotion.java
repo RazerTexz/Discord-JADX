@@ -11,7 +11,7 @@ import androidx.core.content.res.TypedArrayUtils;
 import androidx.core.graphics.PathParser;
 import org.xmlpull.v1.XmlPullParser;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class PatternPathMotion extends PathMotion {
     private Path mOriginalPatternPath;
     private final Path mPatternPath;

@@ -50,8 +50,8 @@ import p507d0.p580t.Maps6;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetNoticeDialog.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetNoticeDialog.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetNoticeDialog extends AppDialog {
     private static final String ARG_ABOVE_LAYOUT_ID = "above_layout_id";
     private static final String ARG_BELOW_LAYOUT_ID = "below_layout_id";
@@ -68,16 +68,16 @@ public final class WidgetNoticeDialog extends AppDialog {
     public static final int OK_BUTTON = 2131364555;
     public static final int ON_SHOW = 0;
 
-    /* renamed from: binding$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
     private Map<Integer, ? extends Function1<? super View, Unit>> listenerMap;
     private Function0<Unit> onDismiss;
     public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetNoticeDialog.class, "binding", "getBinding()Lcom/discord/databinding/WidgetNoticeDialogBinding;", 0)};
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
 
-    /* compiled from: WidgetNoticeDialog.kt */
+    /* JADX INFO: compiled from: WidgetNoticeDialog.kt */
     public static final class ActionLinkMovementMethod extends LinkMovementMethod {
         private final Function0<Unit> linkAction;
 
@@ -99,7 +99,7 @@ public final class WidgetNoticeDialog extends AppDialog {
         }
     }
 
-    /* compiled from: WidgetNoticeDialog.kt */
+    /* JADX INFO: compiled from: WidgetNoticeDialog.kt */
     public static final class Builder {
         private String cancelText;
         private String confirmText;
@@ -239,15 +239,17 @@ public final class WidgetNoticeDialog extends AppDialog {
         }
     }
 
-    /* compiled from: WidgetNoticeDialog.kt */
+    /* JADX INFO: compiled from: WidgetNoticeDialog.kt */
     public static final class Companion {
         private Companion() {
         }
 
+        /* JADX WARN: Multi-variable type inference failed */
         public static /* synthetic */ void show$default(Companion companion, FragmentManager fragmentManager, CharSequence charSequence, CharSequence charSequence2, CharSequence charSequence3, CharSequence charSequence4, Map map, StoreNotices.Dialog.Type type, Integer num, Integer num2, Integer num3, Boolean bool, String str, int i, Function0 function0, int i2, Object obj) {
             companion.show(fragmentManager, (i2 & 2) != 0 ? null : charSequence, charSequence2, charSequence3, (i2 & 16) != 0 ? null : charSequence4, (i2 & 32) != 0 ? null : map, (i2 & 64) != 0 ? null : type, (i2 & 128) != 0 ? null : num, (i2 & 256) != 0 ? null : num2, (i2 & 512) != 0 ? null : num3, (i2 & 1024) != 0 ? null : bool, (i2 & 2048) != 0 ? null : str, (i2 & 4096) != 0 ? 2 : i, (i2 & 8192) != 0 ? null : function0);
         }
 
+        /* JADX WARN: Multi-variable type inference failed */
         public static /* synthetic */ void showInputModal$default(Companion companion, AppActivity appActivity, CharSequence charSequence, CharSequence charSequence2, CharSequence charSequence3, Function2 function2, Function0 function0, Boolean bool, StoreNotices.InputDialog.Type type, CharSequence charSequence4, boolean z2, int i, Object obj) {
             companion.showInputModal(appActivity, charSequence, charSequence2, charSequence3, function2, (i & 32) != 0 ? null : function0, (i & 64) != 0 ? null : bool, (i & 128) != 0 ? StoreNotices.InputDialog.Type.PASSWORD : type, (i & 256) != 0 ? null : charSequence4, (i & 512) != 0 ? false : z2);
         }
@@ -325,8 +327,8 @@ public final class WidgetNoticeDialog extends AppDialog {
         }
     }
 
-    /* compiled from: WidgetNoticeDialog.kt */
-    /* renamed from: com.discord.widgets.notice.WidgetNoticeDialog$onViewBound$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.notice.WidgetNoticeDialog$onViewBound$2 */
+    /* JADX INFO: compiled from: WidgetNoticeDialog.kt */
     public static final class C90952 extends Lambda implements Function0<Unit> {
         public C90952() {
             super(0);
@@ -338,14 +340,14 @@ public final class WidgetNoticeDialog extends AppDialog {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             WidgetNoticeDialog.this.dismiss();
         }
     }
 
-    /* compiled from: WidgetNoticeDialog.kt */
-    /* renamed from: com.discord.widgets.notice.WidgetNoticeDialog$onViewBound$4 */
+    /* JADX INFO: renamed from: com.discord.widgets.notice.WidgetNoticeDialog$onViewBound$4 */
+    /* JADX INFO: compiled from: WidgetNoticeDialog.kt */
     public static final class ViewOnClickListenerC90964 implements View.OnClickListener {
         public ViewOnClickListenerC90964() {
         }
@@ -356,8 +358,8 @@ public final class WidgetNoticeDialog extends AppDialog {
         }
     }
 
-    /* compiled from: WidgetNoticeDialog.kt */
-    /* renamed from: com.discord.widgets.notice.WidgetNoticeDialog$onViewBound$5 */
+    /* JADX INFO: renamed from: com.discord.widgets.notice.WidgetNoticeDialog$onViewBound$5 */
+    /* JADX INFO: compiled from: WidgetNoticeDialog.kt */
     public static final class ViewOnClickListenerC90975 implements View.OnClickListener {
         public ViewOnClickListenerC90975() {
         }

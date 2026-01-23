@@ -8,9 +8,9 @@ import java.util.List;
 import p507d0.p580t.Iterables2;
 import p507d0.p580t._Collections;
 
-/* compiled from: ModelSubscription.kt */
-/* renamed from: com.discord.models.domain.HasSubscriptionItems, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: com.discord.models.domain.HasSubscriptionItems, reason: use source file name */
+/* JADX INFO: compiled from: ModelSubscription.kt */
+/* JADX INFO: loaded from: classes.dex */
 public abstract class ModelSubscription2 {
     public final Long getGuildBoostPlanId() {
         ModelSubscription.SubscriptionAdditionalPlan subscriptionAdditionalPlan = (ModelSubscription.SubscriptionAdditionalPlan) _Collections.firstOrNull((List) getPremiumAdditionalPlans());

@@ -11,7 +11,7 @@ import p677y.p681b.p684b.RunnableC13192b;
 import p677y.p681b.p684b.RunnableC13193c;
 import p677y.p681b.p684b.RunnableC13194d;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class ContentLoadingProgressBar extends ProgressBar {
     private static final int MIN_DELAY_MS = 500;
     private static final int MIN_SHOW_TIME_MS = 500;
@@ -26,12 +26,12 @@ public class ContentLoadingProgressBar extends ProgressBar {
         this(context, null);
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static /* synthetic */ void m93a(ContentLoadingProgressBar contentLoadingProgressBar) {
         contentLoadingProgressBar.hideOnUiThread();
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static /* synthetic */ void m94b(ContentLoadingProgressBar contentLoadingProgressBar) {
         contentLoadingProgressBar.showOnUiThread();
     }

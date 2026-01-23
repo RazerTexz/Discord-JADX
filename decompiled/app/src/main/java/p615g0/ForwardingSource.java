@@ -3,12 +3,12 @@ package p615g0;
 import java.io.IOException;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ForwardingSource.kt */
-/* renamed from: g0.j, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: g0.j, reason: use source file name */
+/* JADX INFO: compiled from: ForwardingSource.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public abstract class ForwardingSource implements Source2 {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final Source2 f26093j;
 
     public ForwardingSource(Source2 source2) {

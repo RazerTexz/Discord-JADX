@@ -6,8 +6,8 @@ import kotlin.jvm.internal.DefaultConstructorMarker;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: UserGuildMember.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: UserGuildMember.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class UserGuildMember {
     private final GuildMember guildMember;
     private final String nickname;
@@ -30,12 +30,12 @@ public final /* data */ class UserGuildMember {
         return userGuildMember.copy(user, guildMember);
     }
 
-    /* renamed from: component1, reason: from getter */
+    /* JADX INFO: renamed from: component1, reason: from getter */
     public final User getUser() {
         return this.user;
     }
 
-    /* renamed from: component2, reason: from getter */
+    /* JADX INFO: renamed from: component2, reason: from getter */
     public final GuildMember getGuildMember() {
         return this.guildMember;
     }

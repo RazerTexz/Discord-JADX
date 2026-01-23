@@ -11,8 +11,8 @@ import org.webrtc.TimestampAligner;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: SoundshareAudioSource.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: SoundshareAudioSource.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class SoundshareAudioSource {
     private static final long AUDIO_RECORD_THREAD_JOIN_TIMEOUT_MS = 2000;
     private static final int BITS_PER_SAMPLE = 16;
@@ -20,7 +20,7 @@ public final class SoundshareAudioSource {
     private static final int BUFFER_SIZE_FACTOR = 2;
     private static final int CALLBACK_BUFFER_SIZE_MS = 10;
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private static final String TAG = "SoundshareAudioSource";
     private static volatile boolean microphoneMute;
@@ -30,7 +30,7 @@ public final class SoundshareAudioSource {
     private final long nativeInstance = nativeCreateInstance();
     private boolean released;
 
-    /* compiled from: SoundshareAudioSource.kt */
+    /* JADX INFO: compiled from: SoundshareAudioSource.kt */
     public final class AudioRecordThread extends Thread {
         private final AudioRecord audioRecord;
         private final ByteBuffer byteBuffer;
@@ -54,7 +54,7 @@ public final class SoundshareAudioSource {
         }
 
         @Override // java.lang.Thread, java.lang.Runnable
-        public void run() throws SecurityException, IllegalArgumentException {
+        public void run() {
             Process.setThreadPriority(-19);
             Companion.access$assertTrue(SoundshareAudioSource.INSTANCE, this.audioRecord.getRecordingState() == 3);
             while (this.keepAlive) {
@@ -93,7 +93,7 @@ public final class SoundshareAudioSource {
         }
     }
 
-    /* compiled from: SoundshareAudioSource.kt */
+    /* JADX INFO: compiled from: SoundshareAudioSource.kt */
     public static final class Companion {
         private Companion() {
         }

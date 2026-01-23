@@ -7,16 +7,16 @@ import androidx.annotation.NonNull;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.viewbinding.ViewBinding;
 
-/* compiled from: ForumBrowserEmptyBinding.java */
-/* renamed from: b.a.i.o, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.a.i.o, reason: use source file name */
+/* JADX INFO: compiled from: ForumBrowserEmptyBinding.java */
+/* JADX INFO: loaded from: classes.dex */
 public final class ForumBrowserEmptyBinding implements ViewBinding {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     @NonNull
     public final ConstraintLayout f1092a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     @NonNull
     public final TextView f1093b;
 

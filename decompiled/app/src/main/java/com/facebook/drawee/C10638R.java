@@ -2,11 +2,11 @@ package com.facebook.drawee;
 
 import com.discord.C5419R;
 
-/* renamed from: com.facebook.drawee.R */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: com.facebook.drawee.R */
+/* JADX INFO: loaded from: classes.dex */
 public final class C10638R {
 
-    /* renamed from: com.facebook.drawee.R$a */
+    /* JADX INFO: renamed from: com.facebook.drawee.R$a */
     public static final class a {
         public static final int ColorStateListItem_alpha = 2;
         public static final int ColorStateListItem_android_alpha = 1;

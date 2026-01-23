@@ -4,9 +4,9 @@ import java.lang.reflect.Field;
 import java.security.PrivilegedExceptionAction;
 import sun.misc.Unsafe;
 
-/* compiled from: com.google.android.gms:play-services-measurement-base@@18.0.0 */
-/* renamed from: b.i.a.f.h.l.i7 */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.h.l.i7 */
+/* JADX INFO: compiled from: com.google.android.gms:play-services-measurement-base@@18.0.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public final class C3697i7 implements PrivilegedExceptionAction<Unsafe> {
     @Override // java.security.PrivilegedExceptionAction
     public final /* synthetic */ Unsafe run() throws Exception {

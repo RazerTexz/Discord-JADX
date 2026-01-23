@@ -5,17 +5,17 @@ import android.text.style.BackgroundColorSpan;
 import androidx.annotation.ColorInt;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: SpoilerSpan.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: SpoilerSpan.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class SpoilerSpan extends BackgroundColorSpan {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public int f0j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public int f1k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public boolean f2l;
 
     public SpoilerSpan() {

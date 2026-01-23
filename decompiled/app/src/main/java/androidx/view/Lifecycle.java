@@ -6,14 +6,14 @@ import androidx.annotation.Nullable;
 import androidx.annotation.RestrictTo;
 import java.util.concurrent.atomic.AtomicReference;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public abstract class Lifecycle {
 
     @NonNull
     @RestrictTo({RestrictTo.Scope.LIBRARY_GROUP})
     public AtomicReference<Object> mInternalScopeRef = new AtomicReference<>();
 
-    /* renamed from: androidx.lifecycle.Lifecycle$1 */
+    /* JADX INFO: renamed from: androidx.lifecycle.Lifecycle$1 */
     public static /* synthetic */ class C04371 {
         public static final /* synthetic */ int[] $SwitchMap$androidx$lifecycle$Lifecycle$Event;
         public static final /* synthetic */ int[] $SwitchMap$androidx$lifecycle$Lifecycle$State;

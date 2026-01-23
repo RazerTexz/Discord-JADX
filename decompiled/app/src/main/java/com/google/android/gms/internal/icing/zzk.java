@@ -9,23 +9,23 @@ import p007b.p100d.p104b.p105a.outline;
 import p007b.p225i.p226a.p288f.p313h.p324k.C3570o;
 import p007b.p225i.p226a.p288f.p313h.p324k.C3572q;
 
-/* compiled from: com.google.firebase:firebase-appindexing@@19.1.0 */
-/* loaded from: classes3.dex */
+/* JADX INFO: compiled from: com.google.firebase:firebase-appindexing@@19.1.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public final class zzk extends AbstractSafeParcelable {
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final String f20593k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final zzt f20594l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public final int f20595m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public final byte[] f20596n;
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static final int f20592j = Integer.parseInt("-1");
     public static final Parcelable.Creator<zzk> CREATOR = new C3570o();
 

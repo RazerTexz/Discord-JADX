@@ -22,13 +22,13 @@ import p007b.p008a.p027k.FormatUtils;
 import p507d0.p580t.CollectionsJVM;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: GuildScheduledEventUtilities.kt */
-/* renamed from: com.discord.utilities.guildscheduledevent.GuildScheduledEventUtilitiesKt, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.utilities.guildscheduledevent.GuildScheduledEventUtilitiesKt, reason: use source file name */
+/* JADX INFO: compiled from: GuildScheduledEventUtilities.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class GuildScheduledEventUtilities5 {
     public static final int DATE_FORMAT_FLAGS = 101139;
 
-    /* renamed from: com.discord.utilities.guildscheduledevent.GuildScheduledEventUtilitiesKt$WhenMappings */
+    /* JADX INFO: renamed from: com.discord.utilities.guildscheduledevent.GuildScheduledEventUtilitiesKt$WhenMappings */
     public final /* synthetic */ class WhenMappings {
         public static final /* synthetic */ int[] $EnumSwitchMapping$0;
         public static final /* synthetic */ int[] $EnumSwitchMapping$1;

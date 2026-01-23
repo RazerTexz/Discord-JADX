@@ -16,18 +16,18 @@ import p007b.p008a.p025i.BottomSheetSimpleSelectorItemBinding;
 import p007b.p008a.p027k.FormatUtils;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: SelectorBottomSheet.kt */
-/* renamed from: b.a.y.e0, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: b.a.y.e0, reason: use source file name */
+/* JADX INFO: compiled from: SelectorBottomSheet.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class SelectorBottomSheet4 extends SimpleRecyclerAdapter.ViewHolder<SelectorBottomSheet2> {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final SelectorBottomSheet5 f2018a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final DialogInterface f2019b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final BottomSheetSimpleSelectorItemBinding f2020c;
 
     /* JADX WARN: Illegal instructions before constructor call */

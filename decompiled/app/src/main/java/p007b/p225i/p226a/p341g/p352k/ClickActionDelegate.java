@@ -5,12 +5,12 @@ import android.view.View;
 import androidx.core.view.AccessibilityDelegateCompat;
 import androidx.core.view.accessibility.AccessibilityNodeInfoCompat;
 
-/* compiled from: ClickActionDelegate.java */
-/* renamed from: b.i.a.g.k.a, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.g.k.a, reason: use source file name */
+/* JADX INFO: compiled from: ClickActionDelegate.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class ClickActionDelegate extends AccessibilityDelegateCompat {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final AccessibilityNodeInfoCompat.AccessibilityActionCompat f11857a;
 
     public ClickActionDelegate(Context context, int i) {

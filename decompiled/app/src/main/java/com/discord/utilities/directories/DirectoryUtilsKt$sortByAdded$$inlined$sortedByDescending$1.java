@@ -5,8 +5,8 @@ import com.discord.widgets.directories.DirectoryEntryData;
 import java.util.Comparator;
 import p507d0.p582u.C12169a;
 
-/* compiled from: Comparisons.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: Comparisons.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class DirectoryUtilsKt$sortByAdded$$inlined$sortedByDescending$1<T> implements Comparator {
     /* JADX WARN: Multi-variable type inference failed */
     @Override // java.util.Comparator

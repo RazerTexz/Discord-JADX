@@ -9,13 +9,13 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 import p507d0.p592z.p594d.p595g0.KMarkers;
 
-/* compiled from: AbstractCollection.kt */
-/* renamed from: d0.t.a, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.t.a, reason: use source file name */
+/* JADX INFO: compiled from: AbstractCollection.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public abstract class AbstractCollection<E> implements Collection<E>, KMarkers {
 
-    /* compiled from: AbstractCollection.kt */
-    /* renamed from: d0.t.a$a */
+    /* JADX INFO: renamed from: d0.t.a$a */
+    /* JADX INFO: compiled from: AbstractCollection.kt */
     public static final class a extends Lambda implements Function1<E, CharSequence> {
         public a() {
             super(1);

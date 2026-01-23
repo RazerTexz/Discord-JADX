@@ -19,8 +19,8 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 import p658rx.Observable;
 
-/* compiled from: StoreGuildMemberVerificationForm.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: StoreGuildMemberVerificationForm.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class StoreGuildMemberVerificationForm extends StoreV2 {
     private final Dispatcher dispatcher;
     private Map<Long, MemberVerificationFormData> memberVerificationFormSnapshot;
@@ -28,14 +28,14 @@ public final class StoreGuildMemberVerificationForm extends StoreV2 {
     private final ObservationDeck observationDeck;
     private final RestAPI restAPI;
 
-    /* compiled from: StoreGuildMemberVerificationForm.kt */
+    /* JADX INFO: compiled from: StoreGuildMemberVerificationForm.kt */
     public enum FetchStates {
         FETCHING,
         FAILED,
         SUCCEEDED
     }
 
-    /* compiled from: StoreGuildMemberVerificationForm.kt */
+    /* JADX INFO: compiled from: StoreGuildMemberVerificationForm.kt */
     public static final /* data */ class MemberVerificationFormData {
         private final FetchStates fetchState;
         private final ModelMemberVerificationForm form;
@@ -56,12 +56,12 @@ public final class StoreGuildMemberVerificationForm extends StoreV2 {
             return memberVerificationFormData.copy(fetchStates, modelMemberVerificationForm);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final FetchStates getFetchState() {
             return this.fetchState;
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final ModelMemberVerificationForm getForm() {
             return this.form;
         }
@@ -107,17 +107,17 @@ public final class StoreGuildMemberVerificationForm extends StoreV2 {
         }
     }
 
-    /* compiled from: StoreGuildMemberVerificationForm.kt */
-    /* renamed from: com.discord.stores.StoreGuildMemberVerificationForm$fetchMemberVerificationForm$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreGuildMemberVerificationForm$fetchMemberVerificationForm$1 */
+    /* JADX INFO: compiled from: StoreGuildMemberVerificationForm.kt */
     public static final class C60351 extends Lambda implements Function0<Unit> {
         public final /* synthetic */ long $guildId;
 
-        /* compiled from: StoreGuildMemberVerificationForm.kt */
-        /* renamed from: com.discord.stores.StoreGuildMemberVerificationForm$fetchMemberVerificationForm$1$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.stores.StoreGuildMemberVerificationForm$fetchMemberVerificationForm$1$1, reason: invalid class name */
+        /* JADX INFO: compiled from: StoreGuildMemberVerificationForm.kt */
         public static final class AnonymousClass1 extends Lambda implements Function1<ModelMemberVerificationForm, Unit> {
 
-            /* compiled from: StoreGuildMemberVerificationForm.kt */
-            /* renamed from: com.discord.stores.StoreGuildMemberVerificationForm$fetchMemberVerificationForm$1$1$1, reason: invalid class name and collision with other inner class name */
+            /* JADX INFO: renamed from: com.discord.stores.StoreGuildMemberVerificationForm$fetchMemberVerificationForm$1$1$1, reason: invalid class name and collision with other inner class name */
+            /* JADX INFO: compiled from: StoreGuildMemberVerificationForm.kt */
             public static final class C132551 extends Lambda implements Function0<Unit> {
                 public final /* synthetic */ ModelMemberVerificationForm $memberVerificationForm;
 
@@ -133,7 +133,7 @@ public final class StoreGuildMemberVerificationForm extends StoreV2 {
                     return Unit.f27425a;
                 }
 
-                /* renamed from: invoke, reason: avoid collision after fix types in other method */
+                /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
                 public final void invoke2() {
                     C60351 c60351 = C60351.this;
                     StoreGuildMemberVerificationForm.access$handleMemberVerificationFormFetchSuccess(StoreGuildMemberVerificationForm.this, c60351.$guildId, this.$memberVerificationForm);
@@ -150,19 +150,19 @@ public final class StoreGuildMemberVerificationForm extends StoreV2 {
                 return Unit.f27425a;
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2(ModelMemberVerificationForm modelMemberVerificationForm) {
                 Intrinsics3.checkNotNullParameter(modelMemberVerificationForm, "memberVerificationForm");
                 StoreGuildMemberVerificationForm.access$getDispatcher$p(StoreGuildMemberVerificationForm.this).schedule(new C132551(modelMemberVerificationForm));
             }
         }
 
-        /* compiled from: StoreGuildMemberVerificationForm.kt */
-        /* renamed from: com.discord.stores.StoreGuildMemberVerificationForm$fetchMemberVerificationForm$1$2, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.stores.StoreGuildMemberVerificationForm$fetchMemberVerificationForm$1$2, reason: invalid class name */
+        /* JADX INFO: compiled from: StoreGuildMemberVerificationForm.kt */
         public static final class AnonymousClass2 extends Lambda implements Function1<Error, Unit> {
 
-            /* compiled from: StoreGuildMemberVerificationForm.kt */
-            /* renamed from: com.discord.stores.StoreGuildMemberVerificationForm$fetchMemberVerificationForm$1$2$1, reason: invalid class name */
+            /* JADX INFO: renamed from: com.discord.stores.StoreGuildMemberVerificationForm$fetchMemberVerificationForm$1$2$1, reason: invalid class name */
+            /* JADX INFO: compiled from: StoreGuildMemberVerificationForm.kt */
             public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
                 public AnonymousClass1() {
                     super(0);
@@ -174,7 +174,7 @@ public final class StoreGuildMemberVerificationForm extends StoreV2 {
                     return Unit.f27425a;
                 }
 
-                /* renamed from: invoke, reason: avoid collision after fix types in other method */
+                /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
                 public final void invoke2() {
                     C60351 c60351 = C60351.this;
                     StoreGuildMemberVerificationForm.access$handleMemberVerificationFormFetchFailed(StoreGuildMemberVerificationForm.this, c60351.$guildId);
@@ -191,7 +191,7 @@ public final class StoreGuildMemberVerificationForm extends StoreV2 {
                 return Unit.f27425a;
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2(Error error) {
                 Intrinsics3.checkNotNullParameter(error, "it");
                 StoreGuildMemberVerificationForm.access$getDispatcher$p(StoreGuildMemberVerificationForm.this).schedule(new AnonymousClass1());
@@ -210,7 +210,7 @@ public final class StoreGuildMemberVerificationForm extends StoreV2 {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             MemberVerificationFormData memberVerificationFormData = (MemberVerificationFormData) StoreGuildMemberVerificationForm.access$getMemberVerificationFormState$p(StoreGuildMemberVerificationForm.this).get(Long.valueOf(this.$guildId));
             if ((memberVerificationFormData != null ? memberVerificationFormData.getFetchState() : null) == FetchStates.FETCHING) {
@@ -221,8 +221,8 @@ public final class StoreGuildMemberVerificationForm extends StoreV2 {
         }
     }
 
-    /* compiled from: StoreGuildMemberVerificationForm.kt */
-    /* renamed from: com.discord.stores.StoreGuildMemberVerificationForm$observeMemberVerificationFormData$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreGuildMemberVerificationForm$observeMemberVerificationFormData$1 */
+    /* JADX INFO: compiled from: StoreGuildMemberVerificationForm.kt */
     public static final class C60361 extends Lambda implements Function0<MemberVerificationFormData> {
         public final /* synthetic */ long $guildId;
 

@@ -10,9 +10,9 @@ import p637j0.p641k.Func1;
 import p637j0.p642l.p647e.ScalarSynchronousObservable;
 import p658rx.Observable;
 
-/* compiled from: ChatTypingModel.kt */
-/* renamed from: com.discord.widgets.chat.overlay.ChatTypingModel$Companion$getTypingObservableForDraft$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.chat.overlay.ChatTypingModel$Companion$getTypingObservableForDraft$1, reason: use source file name */
+/* JADX INFO: compiled from: ChatTypingModel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class ChatTypingModel5<T, R> implements Func1<Integer, Observable<? extends ChatTypingModel>> {
     public final /* synthetic */ Channel $parentChannel;
 
@@ -25,7 +25,7 @@ public final class ChatTypingModel5<T, R> implements Func1<Integer, Observable<?
         return call2(num);
     }
 
-    /* renamed from: call, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
     public final Observable<? extends ChatTypingModel> call2(Integer num) {
         List listEmptyList = Collections2.emptyList();
         int rateLimitPerUser = this.$parentChannel.getRateLimitPerUser();

@@ -3,13 +3,13 @@ package p637j0.p642l.p647e;
 import org.objectweb.asm.Opcodes;
 import p637j0.p641k.Func1;
 
-/* compiled from: UtilityFunctions.java */
-/* renamed from: j0.l.e.m, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: j0.l.e.m, reason: use source file name */
+/* JADX INFO: compiled from: UtilityFunctions.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class UtilityFunctions {
 
-    /* compiled from: UtilityFunctions.java */
-    /* renamed from: j0.l.e.m$a */
+    /* JADX INFO: renamed from: j0.l.e.m$a */
+    /* JADX INFO: compiled from: UtilityFunctions.java */
     public enum a implements Func1<Object, Object> {
         INSTANCE;
 
@@ -19,7 +19,7 @@ public final class UtilityFunctions {
         }
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static int m10822a(CharSequence charSequence, int i, int i2, int i3) {
         int i4 = i + i2;
         int i5 = i;
@@ -69,7 +69,7 @@ public final class UtilityFunctions {
         return i18 ^ (i18 >>> 16);
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static int m10823b(int i) {
         return 1 << (32 - Integer.numberOfLeadingZeros(i - 1));
     }

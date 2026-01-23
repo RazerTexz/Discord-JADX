@@ -2,11 +2,11 @@ package com.jaredrummler.android.colorpicker;
 
 import com.discord.C5419R;
 
-/* renamed from: com.jaredrummler.android.colorpicker.R */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: com.jaredrummler.android.colorpicker.R */
+/* JADX INFO: loaded from: classes3.dex */
 public final class C11167R {
 
-    /* renamed from: com.jaredrummler.android.colorpicker.R$a */
+    /* JADX INFO: renamed from: com.jaredrummler.android.colorpicker.R$a */
     public static final class a {
         public static final int abc_action_bar_content_inset_material = 2131165184;
         public static final int abc_action_bar_content_inset_with_nav = 2131165185;
@@ -142,7 +142,7 @@ public final class C11167R {
         }
     }
 
-    /* renamed from: com.jaredrummler.android.colorpicker.R$b */
+    /* JADX INFO: renamed from: com.jaredrummler.android.colorpicker.R$b */
     public static final class b {
         public static final int abc_ab_share_pack_mtrl_alpha = 2131230859;
         public static final int abc_action_bar_item_background_material = 2131230860;
@@ -254,7 +254,7 @@ public final class C11167R {
         }
     }
 
-    /* renamed from: com.jaredrummler.android.colorpicker.R$c */
+    /* JADX INFO: renamed from: com.jaredrummler.android.colorpicker.R$c */
     public static final class c {
         public static final int action_bar = 2131361870;
         public static final int action_bar_activity_content = 2131361871;
@@ -393,7 +393,7 @@ public final class C11167R {
         public static final int transparency_title = 2131365908;
         public static final int uniform = 2131365931;
 
-        /* renamed from: up */
+        /* JADX INFO: renamed from: up */
         public static final int f21819up = 2131365940;
         public static final int wrap_content = 2131366286;
 
@@ -401,7 +401,7 @@ public final class C11167R {
         }
     }
 
-    /* renamed from: com.jaredrummler.android.colorpicker.R$d */
+    /* JADX INFO: renamed from: com.jaredrummler.android.colorpicker.R$d */
     public static final class d {
         public static final int abc_action_bar_title_item = 2131558400;
         public static final int abc_action_bar_up_container = 2131558401;
@@ -472,7 +472,7 @@ public final class C11167R {
         }
     }
 
-    /* renamed from: com.jaredrummler.android.colorpicker.R$e */
+    /* JADX INFO: renamed from: com.jaredrummler.android.colorpicker.R$e */
     public static final class e {
         public static final int abc_action_bar_home_description = 2131886099;
         public static final int abc_action_bar_up_description = 2131886100;
@@ -517,7 +517,7 @@ public final class C11167R {
         }
     }
 
-    /* renamed from: com.jaredrummler.android.colorpicker.R$f */
+    /* JADX INFO: renamed from: com.jaredrummler.android.colorpicker.R$f */
     public static final class f {
         public static final int ActionBarLayout_android_layout_gravity = 0;
         public static final int ActionBar_background = 0;

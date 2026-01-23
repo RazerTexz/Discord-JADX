@@ -30,28 +30,28 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 import p658rx.Observable;
 
-/* compiled from: WidgetForumGuidelinesBottomSheet.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetForumGuidelinesBottomSheet.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetForumGuidelinesBottomSheet extends AppBottomSheet {
     public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetForumGuidelinesBottomSheet.class, "binding", "getBinding()Lcom/discord/databinding/WidgetForumGuidelinesBottomSheetBinding;", 0)};
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private static final String EXTRA_REQUEST_KEY = "INTENT_EXTRA_REQUEST_KEY";
 
-    /* renamed from: binding$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
 
-    /* renamed from: channelId$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: channelId$delegate, reason: from kotlin metadata */
     private final Lazy channelId;
 
-    /* renamed from: guildId$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: guildId$delegate, reason: from kotlin metadata */
     private final Lazy guildId;
 
-    /* renamed from: requestKey$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: requestKey$delegate, reason: from kotlin metadata */
     private final Lazy requestKey;
 
-    /* compiled from: WidgetForumGuidelinesBottomSheet.kt */
+    /* JADX INFO: compiled from: WidgetForumGuidelinesBottomSheet.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -77,8 +77,8 @@ public final class WidgetForumGuidelinesBottomSheet extends AppBottomSheet {
         }
     }
 
-    /* compiled from: WidgetForumGuidelinesBottomSheet.kt */
-    /* renamed from: com.discord.widgets.forums.WidgetForumGuidelinesBottomSheet$configureUI$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.forums.WidgetForumGuidelinesBottomSheet$configureUI$1 */
+    /* JADX INFO: compiled from: WidgetForumGuidelinesBottomSheet.kt */
     public static final class ViewOnClickListenerC83531 implements View.OnClickListener {
         public final /* synthetic */ Bundle $bundle;
 
@@ -96,8 +96,8 @@ public final class WidgetForumGuidelinesBottomSheet extends AppBottomSheet {
         }
     }
 
-    /* compiled from: WidgetForumGuidelinesBottomSheet.kt */
-    /* renamed from: com.discord.widgets.forums.WidgetForumGuidelinesBottomSheet$onResume$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.forums.WidgetForumGuidelinesBottomSheet$onResume$1 */
+    /* JADX INFO: compiled from: WidgetForumGuidelinesBottomSheet.kt */
     public static final class C83541 extends Lambda implements Function1<Channel, Unit> {
         public C83541() {
             super(1);
@@ -109,7 +109,7 @@ public final class WidgetForumGuidelinesBottomSheet extends AppBottomSheet {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Channel channel) {
             Intrinsics3.checkNotNullParameter(channel, "channel");
             WidgetForumGuidelinesBottomSheet.access$configureUI(WidgetForumGuidelinesBottomSheet.this, channel);

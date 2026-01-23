@@ -25,22 +25,22 @@ import p659s.p660a.p663c2.Produce2;
 import p659s.p660a.p664d2.Builders;
 import p659s.p660a.p664d2.Flow3;
 
-/* compiled from: RxCoroutineUtils.kt */
-/* renamed from: com.discord.utilities.rx.RxCoroutineUtilsKt, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.utilities.rx.RxCoroutineUtilsKt, reason: use source file name */
+/* JADX INFO: compiled from: RxCoroutineUtils.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class RxCoroutineUtils {
 
     /* JADX INFO: Add missing generic type declarations: [T] */
-    /* compiled from: RxCoroutineUtils.kt */
+    /* JADX INFO: renamed from: com.discord.utilities.rx.RxCoroutineUtilsKt$toFlow$2 */
+    /* JADX INFO: compiled from: RxCoroutineUtils.kt */
     @DebugMetadata(m10084c = "com.discord.utilities.rx.RxCoroutineUtilsKt$toFlow$2", m10085f = "RxCoroutineUtils.kt", m10086l = {47}, m10087m = "invokeSuspend")
-    /* renamed from: com.discord.utilities.rx.RxCoroutineUtilsKt$toFlow$2 */
     public static final class C68982<T> extends ContinuationImpl6 implements Function2<Produce<? super T>, Continuation<? super Unit>, Object> {
         public final /* synthetic */ Observable $this_toFlow;
         private /* synthetic */ Object L$0;
         public int label;
 
-        /* compiled from: RxCoroutineUtils.kt */
-        /* renamed from: com.discord.utilities.rx.RxCoroutineUtilsKt$toFlow$2$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.utilities.rx.RxCoroutineUtilsKt$toFlow$2$1, reason: invalid class name */
+        /* JADX INFO: compiled from: RxCoroutineUtils.kt */
         public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
             public final /* synthetic */ Subscription $subscription;
 
@@ -56,7 +56,7 @@ public final class RxCoroutineUtils {
                 return Unit.f27425a;
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2() {
                 this.$subscription.unsubscribe();
             }

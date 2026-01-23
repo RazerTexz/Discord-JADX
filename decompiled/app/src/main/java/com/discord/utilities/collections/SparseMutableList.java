@@ -18,22 +18,22 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.p595g0.KMarkers;
 import p507d0.p592z.p594d.p595g0.KMarkers3;
 
-/* compiled from: SparseMutableList.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: SparseMutableList.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class SparseMutableList<T> implements List<T>, KMarkers3 {
     private final List<Chunk<T>> chunks;
     private final int expectedChunkSize;
     private int size;
 
-    /* compiled from: SparseMutableList.kt */
+    /* JADX INFO: compiled from: SparseMutableList.kt */
     public static final /* data */ class Chunk<T> implements Comparable<Chunk<T>> {
 
-        /* renamed from: Companion, reason: from kotlin metadata */
+        /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
         public static final Companion INSTANCE = new Companion(null);
         private List<T> list;
         private int startIndex;
 
-        /* compiled from: SparseMutableList.kt */
+        /* JADX INFO: compiled from: SparseMutableList.kt */
         public static final class Companion {
             private Companion() {
             }
@@ -88,7 +88,7 @@ public final class SparseMutableList<T> implements List<T>, KMarkers3 {
             chunk.startIndex = i;
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         private final int getStartIndex() {
             return this.startIndex;
         }
@@ -261,7 +261,7 @@ public final class SparseMutableList<T> implements List<T>, KMarkers3 {
         }
     }
 
-    /* compiled from: SparseMutableList.kt */
+    /* JADX INFO: compiled from: SparseMutableList.kt */
     public static final class SparseMutableListIterator<T> implements ListIterator<T>, KMarkers {
         private int index;
         private final SparseMutableList<T> sparseMutableList;

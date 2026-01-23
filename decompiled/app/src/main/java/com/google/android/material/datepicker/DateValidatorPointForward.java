@@ -7,12 +7,12 @@ import com.google.android.material.datepicker.CalendarConstraints;
 import java.util.Arrays;
 import p007b.p225i.p226a.p341g.p345d.UtcDates;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public class DateValidatorPointForward implements CalendarConstraints.DateValidator {
     public static final Parcelable.Creator<DateValidatorPointForward> CREATOR = new C10884a();
     private final long point;
 
-    /* renamed from: com.google.android.material.datepicker.DateValidatorPointForward$a */
+    /* JADX INFO: renamed from: com.google.android.material.datepicker.DateValidatorPointForward$a */
     public static class C10884a implements Parcelable.Creator<DateValidatorPointForward> {
         @Override // android.os.Parcelable.Creator
         @NonNull

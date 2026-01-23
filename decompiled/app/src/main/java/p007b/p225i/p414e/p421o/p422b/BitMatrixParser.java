@@ -3,18 +3,18 @@ package p007b.p225i.p414e.p421o.p422b;
 import com.google.zxing.FormatException;
 import p007b.p225i.p414e.p418n.BitMatrix;
 
-/* compiled from: BitMatrixParser.java */
-/* renamed from: b.i.e.o.b.a, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.e.o.b.a, reason: use source file name */
+/* JADX INFO: compiled from: BitMatrixParser.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class BitMatrixParser {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final BitMatrix f13319a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final BitMatrix f13320b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final Version2 f13321c;
 
     public BitMatrixParser(BitMatrix bitMatrix) throws FormatException {
@@ -63,7 +63,7 @@ public final class BitMatrixParser {
         throw FormatException.m9260a();
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final boolean m6969a(int i, int i2, int i3, int i4) {
         if (i < 0) {
             i += i3;
@@ -77,7 +77,7 @@ public final class BitMatrixParser {
         return this.f13319a.m6942f(i2, i);
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final int m6970b(int i, int i2, int i3, int i4) {
         int i5 = i - 2;
         int i6 = i2 - 2;

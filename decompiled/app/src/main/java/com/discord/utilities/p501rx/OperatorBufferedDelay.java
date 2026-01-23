@@ -16,18 +16,18 @@ import p658rx.Subscriber;
 import p658rx.Subscription;
 import p658rx.observers.SerializedSubscriber;
 
-/* compiled from: OperatorBufferedDelay.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: OperatorBufferedDelay.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class OperatorBufferedDelay<T> implements Observable.InterfaceC13006b<List<? extends T>, T> {
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private final Scheduler scheduler;
     private final int size;
     private final long timeSpan;
     private final TimeUnit timeUnit;
 
-    /* compiled from: OperatorBufferedDelay.kt */
+    /* JADX INFO: compiled from: OperatorBufferedDelay.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -58,7 +58,7 @@ public final class OperatorBufferedDelay<T> implements Observable.InterfaceC1300
         }
     }
 
-    /* compiled from: OperatorBufferedDelay.kt */
+    /* JADX INFO: compiled from: OperatorBufferedDelay.kt */
     public final class ExactSubscriber<T> extends Subscriber<T> {
         private List<T> buffer;
         private final Subscriber<List<T>> child;

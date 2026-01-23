@@ -7,13 +7,13 @@ import androidx.annotation.NonNull;
 import androidx.annotation.RequiresApi;
 import com.google.android.material.internal.ViewOverlayImpl;
 
-/* compiled from: ViewOverlayApi18.java */
+/* JADX INFO: renamed from: b.i.a.g.f.b, reason: use source file name */
+/* JADX INFO: compiled from: ViewOverlayApi18.java */
+/* JADX INFO: loaded from: classes3.dex */
 @RequiresApi(18)
-/* renamed from: b.i.a.g.f.b, reason: use source file name */
-/* loaded from: classes3.dex */
 public class ViewOverlayApi182 implements ViewOverlayImpl {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final ViewOverlay f11712a;
 
     public ViewOverlayApi182(@NonNull View view) {

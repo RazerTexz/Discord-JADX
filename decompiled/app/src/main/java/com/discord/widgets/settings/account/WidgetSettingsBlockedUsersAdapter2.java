@@ -4,9 +4,9 @@ import android.view.View;
 import com.discord.widgets.settings.account.WidgetSettingsBlockedUsersAdapter;
 import com.discord.widgets.settings.account.WidgetSettingsBlockedUsersViewModel;
 
-/* compiled from: WidgetSettingsBlockedUsersAdapter.kt */
-/* renamed from: com.discord.widgets.settings.account.WidgetSettingsBlockedUsersAdapter$BlockedUserViewHolder$onConfigure$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.settings.account.WidgetSettingsBlockedUsersAdapter$BlockedUserViewHolder$onConfigure$1, reason: use source file name */
+/* JADX INFO: compiled from: WidgetSettingsBlockedUsersAdapter.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetSettingsBlockedUsersAdapter2 implements View.OnClickListener {
     public final /* synthetic */ WidgetSettingsBlockedUsersViewModel.Item $data;
     public final /* synthetic */ WidgetSettingsBlockedUsersAdapter.BlockedUserViewHolder this$0;

@@ -3,17 +3,17 @@ package com.fasterxml.jackson.databind.exc;
 import java.util.Collection;
 import java.util.Iterator;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public abstract class PropertyBindingException extends MismatchedInputException {
     public final Collection<Object> _propertyIds;
     public final String _propertyName;
     public final Class<?> _referringClass;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public transient String f19664l;
 
     @Override // com.fasterxml.jackson.core.JsonProcessingException
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public String mo8739a() {
         String str = this.f19664l;
         if (str != null || this._propertyIds == null) {

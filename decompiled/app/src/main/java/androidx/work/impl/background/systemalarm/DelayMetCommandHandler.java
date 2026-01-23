@@ -18,8 +18,8 @@ import androidx.work.impl.utils.WorkTimer;
 import java.util.Collections;
 import java.util.List;
 
+/* JADX INFO: loaded from: classes.dex */
 @RestrictTo({RestrictTo.Scope.LIBRARY_GROUP})
-/* loaded from: classes.dex */
 public class DelayMetCommandHandler implements WorkConstraintsCallback, ExecutionListener, WorkTimer.TimeLimitExceededListener {
     private static final int STATE_INITIAL = 0;
     private static final int STATE_START_REQUESTED = 1;

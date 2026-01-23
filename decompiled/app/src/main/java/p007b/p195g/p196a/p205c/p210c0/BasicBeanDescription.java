@@ -11,36 +11,36 @@ import p007b.p195g.p196a.p205c.BeanDescription;
 import p007b.p195g.p196a.p205c.JavaType;
 import p007b.p195g.p196a.p205c.p221z.MapperConfig;
 
-/* compiled from: BasicBeanDescription.java */
-/* renamed from: b.g.a.c.c0.q, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.g.a.c.c0.q, reason: use source file name */
+/* JADX INFO: compiled from: BasicBeanDescription.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class BasicBeanDescription extends BeanDescription {
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static final Class<?>[] f4732b = new Class[0];
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final POJOPropertiesCollector f4733c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final MapperConfig<?> f4734d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final AnnotationIntrospector f4735e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final AnnotatedClass f4736f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public Class<?>[] f4737g;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public boolean f4738h;
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public List<BeanPropertyDefinition> f4739i;
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public ObjectIdInfo f4740j;
 
     public BasicBeanDescription(MapperConfig<?> mapperConfig, JavaType javaType, AnnotatedClass annotatedClass, List<BeanPropertyDefinition> list) {
@@ -56,13 +56,13 @@ public class BasicBeanDescription extends BeanDescription {
         this.f4739i = list;
     }
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public static BasicBeanDescription m1918e(MapperConfig<?> mapperConfig, JavaType javaType, AnnotatedClass annotatedClass) {
         return new BasicBeanDescription(mapperConfig, javaType, annotatedClass, Collections.emptyList());
     }
 
     @Override // p007b.p195g.p196a.p205c.BeanDescription
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public JsonFormat.d mo1812a(JsonFormat.d dVar) {
         JsonFormat.d dVarMo1784h;
         AnnotationIntrospector annotationIntrospector = this.f4735e;
@@ -74,7 +74,7 @@ public class BasicBeanDescription extends BeanDescription {
     }
 
     @Override // p007b.p195g.p196a.p205c.BeanDescription
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public AnnotatedMember mo1813b() {
         POJOPropertiesCollector pOJOPropertiesCollector = this.f4733c;
         if (pOJOPropertiesCollector == null) {
@@ -95,14 +95,14 @@ public class BasicBeanDescription extends BeanDescription {
     }
 
     @Override // p007b.p195g.p196a.p205c.BeanDescription
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public JsonInclude.b mo1814c(JsonInclude.b bVar) {
         JsonInclude.b bVarMo1802z;
         AnnotationIntrospector annotationIntrospector = this.f4735e;
         return (annotationIntrospector == null || (bVarMo1802z = annotationIntrospector.mo1802z(this.f4736f)) == null) ? bVar : bVar == null ? bVarMo1802z : bVar.m1618a(bVarMo1802z);
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public List<BeanPropertyDefinition> m1919d() {
         if (this.f4739i == null) {
             POJOPropertiesCollector pOJOPropertiesCollector = this.f4733c;

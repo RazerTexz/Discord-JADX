@@ -8,7 +8,7 @@ import java.util.Map;
 import lombok.core.configuration.ConfigurationParser;
 import lombok.core.configuration.ConfigurationSource;
 
-/* loaded from: discord-126021.apk:lombok/core/configuration/SingleConfigurationSource.SCL.lombok */
+/* JADX INFO: loaded from: discord-126021.apk:lombok/core/configuration/SingleConfigurationSource.SCL.lombok */
 public final class SingleConfigurationSource implements ConfigurationSource {
     private final Map<ConfigurationKey<?>, ConfigurationSource.Result> values = new HashMap();
     private final List<ConfigurationFile> imports;
@@ -21,8 +21,8 @@ public final class SingleConfigurationSource implements ConfigurationSource {
         return new SingleConfigurationSource(values, imports);
     }
 
-    /* renamed from: lombok.core.configuration.SingleConfigurationSource$1 */
-    /* loaded from: discord-126021.apk:lombok/core/configuration/SingleConfigurationSource$1.SCL.lombok */
+    /* JADX INFO: renamed from: lombok.core.configuration.SingleConfigurationSource$1 */
+    /* JADX INFO: loaded from: discord-126021.apk:lombok/core/configuration/SingleConfigurationSource$1.SCL.lombok */
     class C128381 implements ConfigurationParser.Collector {
         private final /* synthetic */ List val$imports;
         private final /* synthetic */ Map val$values;

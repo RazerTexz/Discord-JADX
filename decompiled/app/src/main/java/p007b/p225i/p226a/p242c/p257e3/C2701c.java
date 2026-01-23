@@ -3,12 +3,12 @@ package p007b.p225i.p226a.p242c.p257e3;
 import java.util.Comparator;
 import p007b.p225i.p226a.p242c.p257e3.SlidingPercentile;
 
-/* compiled from: lambda */
-/* renamed from: b.i.a.c.e3.c */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.e3.c */
+/* JADX INFO: compiled from: lambda */
+/* JADX INFO: loaded from: classes3.dex */
 public final /* synthetic */ class C2701c implements Comparator {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static final /* synthetic */ C2701c f6520j = new C2701c();
 
     @Override // java.util.Comparator

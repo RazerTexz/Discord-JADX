@@ -5,15 +5,15 @@ import android.os.IInterface;
 import android.os.Parcel;
 import android.os.RemoteException;
 
-/* compiled from: com.google.android.gms:play-services-auth-api-phone@@17.4.0 */
-/* renamed from: b.i.a.f.h.b.d */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.h.b.d */
+/* JADX INFO: compiled from: com.google.android.gms:play-services-auth-api-phone@@17.4.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public final class C3444d implements InterfaceC3445e, IInterface {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final IBinder f9630a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final String f9631b = "com.google.android.gms.auth.api.phone.internal.ISmsRetrieverApiService";
 
     public C3444d(IBinder iBinder) {
@@ -22,7 +22,7 @@ public final class C3444d implements InterfaceC3445e, IInterface {
 
     /* JADX WARN: Multi-variable type inference failed */
     @Override // p007b.p225i.p226a.p288f.p313h.p315b.InterfaceC3445e
-    /* renamed from: Y */
+    /* JADX INFO: renamed from: Y */
     public final void mo4393Y(InterfaceC3447g interfaceC3447g) throws RemoteException {
         Parcel parcelObtain = Parcel.obtain();
         parcelObtain.writeInterfaceToken(this.f9631b);

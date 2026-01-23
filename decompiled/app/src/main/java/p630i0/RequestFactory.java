@@ -11,121 +11,121 @@ import okhttp3.Headers;
 import okhttp3.MediaType;
 import p600f0.HttpUrl;
 
-/* compiled from: RequestFactory.java */
-/* renamed from: i0.w, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: i0.w, reason: use source file name */
+/* JADX INFO: compiled from: RequestFactory.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class RequestFactory {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final Method f26633a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final HttpUrl f26634b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final String f26635c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final String f26636d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final Headers f26637e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final MediaType f26638f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public final boolean f26639g;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public final boolean f26640h;
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public final boolean f26641i;
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final ParameterHandler3<?>[] f26642j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final boolean f26643k;
 
-    /* compiled from: RequestFactory.java */
-    /* renamed from: i0.w$a */
+    /* JADX INFO: renamed from: i0.w$a */
+    /* JADX INFO: compiled from: RequestFactory.java */
     public static final class a {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public static final Pattern f26644a = Pattern.compile("\\{([a-zA-Z][a-zA-Z0-9_-]*)\\}");
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public static final Pattern f26645b = Pattern.compile("[a-zA-Z][a-zA-Z0-9_-]*");
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public final Retrofit2 f26646c;
 
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         public final Method f26647d;
 
-        /* renamed from: e */
+        /* JADX INFO: renamed from: e */
         public final Annotation[] f26648e;
 
-        /* renamed from: f */
+        /* JADX INFO: renamed from: f */
         public final Annotation[][] f26649f;
 
-        /* renamed from: g */
+        /* JADX INFO: renamed from: g */
         public final Type[] f26650g;
 
-        /* renamed from: h */
+        /* JADX INFO: renamed from: h */
         public boolean f26651h;
 
-        /* renamed from: i */
+        /* JADX INFO: renamed from: i */
         public boolean f26652i;
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public boolean f26653j;
 
-        /* renamed from: k */
+        /* JADX INFO: renamed from: k */
         public boolean f26654k;
 
-        /* renamed from: l */
+        /* JADX INFO: renamed from: l */
         public boolean f26655l;
 
-        /* renamed from: m */
+        /* JADX INFO: renamed from: m */
         public boolean f26656m;
 
-        /* renamed from: n */
+        /* JADX INFO: renamed from: n */
         public boolean f26657n;
 
-        /* renamed from: o */
+        /* JADX INFO: renamed from: o */
         public boolean f26658o;
 
-        /* renamed from: p */
+        /* JADX INFO: renamed from: p */
         public String f26659p;
 
-        /* renamed from: q */
+        /* JADX INFO: renamed from: q */
         public boolean f26660q;
 
-        /* renamed from: r */
+        /* JADX INFO: renamed from: r */
         public boolean f26661r;
 
-        /* renamed from: s */
+        /* JADX INFO: renamed from: s */
         public boolean f26662s;
 
-        /* renamed from: t */
+        /* JADX INFO: renamed from: t */
         public String f26663t;
 
-        /* renamed from: u */
+        /* JADX INFO: renamed from: u */
         public Headers f26664u;
 
-        /* renamed from: v */
+        /* JADX INFO: renamed from: v */
         public MediaType f26665v;
 
-        /* renamed from: w */
+        /* JADX INFO: renamed from: w */
         public Set<String> f26666w;
 
-        /* renamed from: x */
+        /* JADX INFO: renamed from: x */
         public ParameterHandler3<?>[] f26667x;
 
-        /* renamed from: y */
+        /* JADX INFO: renamed from: y */
         public boolean f26668y;
 
         public a(Retrofit2 retrofit22, Method method) {
@@ -136,12 +136,12 @@ public final class RequestFactory {
             this.f26649f = method.getParameterAnnotations();
         }
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public static Class<?> m10722a(Class<?> cls) {
             return Boolean.TYPE == cls ? Boolean.class : Byte.TYPE == cls ? Byte.class : Character.TYPE == cls ? Character.class : Double.TYPE == cls ? Double.class : Float.TYPE == cls ? Float.class : Integer.TYPE == cls ? Integer.class : Long.TYPE == cls ? Long.class : Short.TYPE == cls ? Short.class : cls;
         }
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final void m10723b(String str, String str2, boolean z2) {
             String str3 = this.f26659p;
             if (str3 != null) {
@@ -168,7 +168,7 @@ public final class RequestFactory {
             this.f26666w = linkedHashSet;
         }
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public final void m10724c(int i, Type type) {
             if (Utils8.m10688h(type)) {
                 throw Utils8.m10692l(this.f26647d, i, "Parameter type must not include a type variable or wildcard: %s", type);

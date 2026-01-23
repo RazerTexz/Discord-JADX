@@ -4,12 +4,12 @@ import com.google.android.material.C10817R;
 import com.google.android.material.button.MaterialButtonToggleGroup;
 import com.google.android.material.timepicker.TimePickerView;
 
-/* compiled from: TimePickerView.java */
-/* renamed from: b.i.a.g.k.k, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.g.k.k, reason: use source file name */
+/* JADX INFO: compiled from: TimePickerView.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class TimePickerView2 implements MaterialButtonToggleGroup.OnButtonCheckedListener {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final /* synthetic */ TimePickerView f11891a;
 
     public TimePickerView2(TimePickerView timePickerView) {

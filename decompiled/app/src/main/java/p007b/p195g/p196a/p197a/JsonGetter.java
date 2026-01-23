@@ -5,11 +5,11 @@ import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
-/* compiled from: JsonGetter.java */
+/* JADX INFO: renamed from: b.g.a.a.j, reason: use source file name */
+/* JADX INFO: compiled from: JsonGetter.java */
+/* JADX INFO: loaded from: classes3.dex */
 @Target({ElementType.ANNOTATION_TYPE, ElementType.METHOD})
 @Retention(RetentionPolicy.RUNTIME)
-/* renamed from: b.g.a.a.j, reason: use source file name */
-/* loaded from: classes3.dex */
 public @interface JsonGetter {
     String value() default "";
 }

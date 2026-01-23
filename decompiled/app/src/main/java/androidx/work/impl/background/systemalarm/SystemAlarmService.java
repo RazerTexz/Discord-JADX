@@ -8,8 +8,8 @@ import androidx.work.Logger;
 import androidx.work.impl.background.systemalarm.SystemAlarmDispatcher;
 import androidx.work.impl.utils.WakeLocks;
 
+/* JADX INFO: loaded from: classes.dex */
 @RestrictTo({RestrictTo.Scope.LIBRARY_GROUP})
-/* loaded from: classes.dex */
 public class SystemAlarmService extends LifecycleService implements SystemAlarmDispatcher.CommandsCompletedListener {
     private static final String TAG = Logger.tagWithPrefix("SystemAlarmService");
     private SystemAlarmDispatcher mDispatcher;

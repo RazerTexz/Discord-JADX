@@ -9,12 +9,12 @@ import androidx.sqlite.p006db.SupportSQLiteStatement;
 import java.util.ArrayList;
 import java.util.List;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public final class WorkTagDao_Impl implements WorkTagDao {
     private final RoomDatabase __db;
     private final EntityInsertionAdapter<WorkTag> __insertionAdapterOfWorkTag;
 
-    /* renamed from: androidx.work.impl.model.WorkTagDao_Impl$1 */
+    /* JADX INFO: renamed from: androidx.work.impl.model.WorkTagDao_Impl$1 */
     public class C07691 extends EntityInsertionAdapter<WorkTag> {
         public C07691(RoomDatabase roomDatabase) {
             super(roomDatabase);
@@ -30,7 +30,7 @@ public final class WorkTagDao_Impl implements WorkTagDao {
             return "INSERT OR IGNORE INTO `WorkTag` (`tag`,`work_spec_id`) VALUES (?,?)";
         }
 
-        /* renamed from: bind, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: bind, reason: avoid collision after fix types in other method */
         public void bind2(SupportSQLiteStatement supportSQLiteStatement, WorkTag workTag) {
             String str = workTag.tag;
             if (str == null) {

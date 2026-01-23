@@ -11,9 +11,9 @@ import p637j0.p641k.Func1;
 import p637j0.p642l.p647e.ScalarSynchronousObservable;
 import p658rx.Observable;
 
-/* compiled from: MessageManager.kt */
-/* renamed from: com.discord.widgets.chat.MessageManager$sendMessage$messageResultObservable$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.chat.MessageManager$sendMessage$messageResultObservable$1, reason: use source file name */
+/* JADX INFO: compiled from: MessageManager.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class MessageManager3<T, R> implements Func1<Integer, Observable<? extends MessageQueue4>> {
     public final /* synthetic */ MessageAllowedMentions $allowedMentions;
     public final /* synthetic */ List $attachments;
@@ -42,10 +42,10 @@ public final class MessageManager3<T, R> implements Func1<Integer, Observable<? 
         return call2(num);
     }
 
-    /* renamed from: call, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
     public final Observable<? extends MessageQueue4> call2(Integer num) {
         if (num.intValue() > 0) {
-            return new ScalarSynchronousObservable(new MessageQueue4.Slowmode(num.intValue() * 1000));
+            return new ScalarSynchronousObservable(new MessageQueue4.Slowmode(((long) num.intValue()) * 1000));
         }
         if (this.$pendingReply != null) {
             MessageManager.access$getStorePendingReplies$p(this.this$0).onDeletePendingReply(this.$nonNullChannelId);

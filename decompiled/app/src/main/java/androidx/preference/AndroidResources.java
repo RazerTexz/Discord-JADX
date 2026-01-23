@@ -3,9 +3,9 @@ package androidx.preference;
 import android.annotation.SuppressLint;
 import androidx.annotation.RestrictTo;
 
+/* JADX INFO: loaded from: classes.dex */
 @SuppressLint({"InlinedApi"})
 @RestrictTo({RestrictTo.Scope.LIBRARY})
-/* loaded from: classes.dex */
 public class AndroidResources {
     public static final int ANDROID_R_ICON_FRAME = 16908350;
     public static final int ANDROID_R_LIST_CONTAINER = 16908351;

@@ -12,8 +12,8 @@ import p007b.p225i.p361c.p369m.p370d.p373k.CommonUtils;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetNoticeDialog.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetNoticeDialog.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetNoticeDialog$Companion$showInputModal$1 extends Lambda implements Function1<View, Unit> {
     public final /* synthetic */ Function2 $onOKClicked;
     public final /* synthetic */ boolean $shouldHideKeyboard;
@@ -31,7 +31,7 @@ public final class WidgetNoticeDialog$Companion$showInputModal$1 extends Lambda 
         return Unit.f27425a;
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final void invoke2(View view) {
         Intrinsics3.checkNotNullParameter(view, "view");
         Function2 function2 = this.$onOKClicked;

@@ -6,18 +6,18 @@ import kotlin.jvm.internal.DefaultConstructorMarker;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: PostData.kt */
-/* renamed from: com.discord.widgets.forums.PostTagData, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.forums.PostTagData, reason: use source file name */
+/* JADX INFO: compiled from: PostData.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final /* data */ class PostData2 {
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private final MessageReactionEmoji messageReactionEmoji;
     private final String tagName;
 
-    /* compiled from: PostData.kt */
-    /* renamed from: com.discord.widgets.forums.PostTagData$Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: com.discord.widgets.forums.PostTagData$Companion, reason: from kotlin metadata */
+    /* JADX INFO: compiled from: PostData.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -56,12 +56,12 @@ public final /* data */ class PostData2 {
         return postData2.copy(messageReactionEmoji, str);
     }
 
-    /* renamed from: component1, reason: from getter */
+    /* JADX INFO: renamed from: component1, reason: from getter */
     public final MessageReactionEmoji getMessageReactionEmoji() {
         return this.messageReactionEmoji;
     }
 
-    /* renamed from: component2, reason: from getter */
+    /* JADX INFO: renamed from: component2, reason: from getter */
     public final String getTagName() {
         return this.tagName;
     }

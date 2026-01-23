@@ -25,8 +25,8 @@ import p507d0.p580t._Collections;
 import p507d0.p582u.C12169a;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: PresenceUtils.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: PresenceUtils.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class PresenceUtils {
     public static final PresenceUtils INSTANCE = new PresenceUtils();
     private static final Comparator<Activity> ACTIVITY_COMPARATOR = C12169a.compareBy(PresenceUtils2.INSTANCE, PresenceUtils3.INSTANCE, PresenceUtils4.INSTANCE);
@@ -67,8 +67,8 @@ public final class PresenceUtils {
         }
     }
 
-    /* compiled from: PresenceUtils.kt */
-    /* renamed from: com.discord.utilities.presence.PresenceUtils$getStatusDraweeSpanStringBuilder$1 */
+    /* JADX INFO: renamed from: com.discord.utilities.presence.PresenceUtils$getStatusDraweeSpanStringBuilder$1 */
+    /* JADX INFO: compiled from: PresenceUtils.kt */
     public static final class C68411 implements EmojiNode.RenderContext {
         public final /* synthetic */ boolean $animateCustomStatusEmoji;
         public final /* synthetic */ Context $context;
@@ -88,7 +88,7 @@ public final class PresenceUtils {
         }
 
         @Override // com.discord.utilities.textprocessing.node.EmojiNode.RenderContext
-        /* renamed from: isAnimationEnabled, reason: from getter */
+        /* JADX INFO: renamed from: isAnimationEnabled, reason: from getter */
         public boolean getIsAnimationEnabled() {
             return this.isAnimationEnabled;
         }

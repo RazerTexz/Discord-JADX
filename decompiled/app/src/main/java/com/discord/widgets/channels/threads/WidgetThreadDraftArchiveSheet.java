@@ -30,19 +30,19 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p658rx.Observable;
 import p658rx.subscriptions.CompositeSubscription;
 
-/* compiled from: WidgetThreadDraftArchiveSheet.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetThreadDraftArchiveSheet.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetThreadDraftArchiveSheet extends AppBottomSheet {
     public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetThreadDraftArchiveSheet.class, "binding", "getBinding()Lcom/discord/databinding/WidgetThreadArchiveActionsSheetBinding;", 0)};
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private static final String INTENT_EXTRA_GUILD_ID = "INTENT_EXTRA_GUILD_ID";
 
-    /* renamed from: binding$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
 
-    /* compiled from: WidgetThreadDraftArchiveSheet.kt */
+    /* JADX INFO: compiled from: WidgetThreadDraftArchiveSheet.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -61,16 +61,16 @@ public final class WidgetThreadDraftArchiveSheet extends AppBottomSheet {
         }
     }
 
-    /* compiled from: WidgetThreadDraftArchiveSheet.kt */
+    /* JADX INFO: compiled from: WidgetThreadDraftArchiveSheet.kt */
     public static final /* data */ class Model {
 
-        /* renamed from: Companion, reason: from kotlin metadata */
+        /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
         public static final Companion INSTANCE = new Companion(null);
         private final Channel channel;
         private final StoreThreadDraft.ThreadDraftState draftState;
         private final Guild guild;
 
-        /* compiled from: WidgetThreadDraftArchiveSheet.kt */
+        /* JADX INFO: compiled from: WidgetThreadDraftArchiveSheet.kt */
         public static final class Companion {
             private Companion() {
             }
@@ -109,17 +109,17 @@ public final class WidgetThreadDraftArchiveSheet extends AppBottomSheet {
             return model.copy(threadDraftState, guild, channel);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final StoreThreadDraft.ThreadDraftState getDraftState() {
             return this.draftState;
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final Guild getGuild() {
             return this.guild;
         }
 
-        /* renamed from: component3, reason: from getter */
+        /* JADX INFO: renamed from: component3, reason: from getter */
         public final Channel getChannel() {
             return this.channel;
         }
@@ -173,8 +173,8 @@ public final class WidgetThreadDraftArchiveSheet extends AppBottomSheet {
         }
     }
 
-    /* compiled from: WidgetThreadDraftArchiveSheet.kt */
-    /* renamed from: com.discord.widgets.channels.threads.WidgetThreadDraftArchiveSheet$bindSubscriptions$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.channels.threads.WidgetThreadDraftArchiveSheet$bindSubscriptions$1 */
+    /* JADX INFO: compiled from: WidgetThreadDraftArchiveSheet.kt */
     public static final /* synthetic */ class C76261 extends FunctionReferenceImpl implements Function1<Model, Unit> {
         public C76261(WidgetThreadDraftArchiveSheet widgetThreadDraftArchiveSheet) {
             super(1, widgetThreadDraftArchiveSheet, WidgetThreadDraftArchiveSheet.class, "configureUI", "configureUI(Lcom/discord/widgets/channels/threads/WidgetThreadDraftArchiveSheet$Model;)V", 0);
@@ -186,15 +186,15 @@ public final class WidgetThreadDraftArchiveSheet extends AppBottomSheet {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Model model) {
             Intrinsics3.checkNotNullParameter(model, "p1");
             WidgetThreadDraftArchiveSheet.access$configureUI((WidgetThreadDraftArchiveSheet) this.receiver, model);
         }
     }
 
-    /* compiled from: WidgetThreadDraftArchiveSheet.kt */
-    /* renamed from: com.discord.widgets.channels.threads.WidgetThreadDraftArchiveSheet$configureUI$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.channels.threads.WidgetThreadDraftArchiveSheet$configureUI$1 */
+    /* JADX INFO: compiled from: WidgetThreadDraftArchiveSheet.kt */
     public static final class ViewOnClickListenerC76271 implements View.OnClickListener {
         public final /* synthetic */ StoreThreadDraft.ThreadDraftState $draftState;
 
@@ -208,8 +208,8 @@ public final class WidgetThreadDraftArchiveSheet extends AppBottomSheet {
         }
     }
 
-    /* compiled from: WidgetThreadDraftArchiveSheet.kt */
-    /* renamed from: com.discord.widgets.channels.threads.WidgetThreadDraftArchiveSheet$configureUI$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.channels.threads.WidgetThreadDraftArchiveSheet$configureUI$2 */
+    /* JADX INFO: compiled from: WidgetThreadDraftArchiveSheet.kt */
     public static final class ViewOnClickListenerC76282 implements View.OnClickListener {
         public final /* synthetic */ StoreThreadDraft.ThreadDraftState $draftState;
 
@@ -223,8 +223,8 @@ public final class WidgetThreadDraftArchiveSheet extends AppBottomSheet {
         }
     }
 
-    /* compiled from: WidgetThreadDraftArchiveSheet.kt */
-    /* renamed from: com.discord.widgets.channels.threads.WidgetThreadDraftArchiveSheet$configureUI$3 */
+    /* JADX INFO: renamed from: com.discord.widgets.channels.threads.WidgetThreadDraftArchiveSheet$configureUI$3 */
+    /* JADX INFO: compiled from: WidgetThreadDraftArchiveSheet.kt */
     public static final class ViewOnClickListenerC76293 implements View.OnClickListener {
         public final /* synthetic */ StoreThreadDraft.ThreadDraftState $draftState;
 
@@ -238,8 +238,8 @@ public final class WidgetThreadDraftArchiveSheet extends AppBottomSheet {
         }
     }
 
-    /* compiled from: WidgetThreadDraftArchiveSheet.kt */
-    /* renamed from: com.discord.widgets.channels.threads.WidgetThreadDraftArchiveSheet$configureUI$4 */
+    /* JADX INFO: renamed from: com.discord.widgets.channels.threads.WidgetThreadDraftArchiveSheet$configureUI$4 */
+    /* JADX INFO: compiled from: WidgetThreadDraftArchiveSheet.kt */
     public static final class ViewOnClickListenerC76304 implements View.OnClickListener {
         public final /* synthetic */ StoreThreadDraft.ThreadDraftState $draftState;
 

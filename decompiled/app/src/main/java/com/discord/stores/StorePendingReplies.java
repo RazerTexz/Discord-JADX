@@ -18,15 +18,15 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 import p658rx.Observable;
 
-/* compiled from: StorePendingReplies.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: StorePendingReplies.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class StorePendingReplies extends StoreV2 {
     private final Dispatcher dispatcher;
     private final ObservationDeck observationDeck;
     private final SnowflakePartitionMap.CopiablePartitionMap<PendingReply> pendingReplies;
     private Map<Long, PendingReply> pendingRepliesSnapshot;
 
-    /* compiled from: StorePendingReplies.kt */
+    /* JADX INFO: compiled from: StorePendingReplies.kt */
     public static final /* data */ class PendingReply {
         private final MessageReference messageReference;
         private final Message originalMessage;
@@ -58,22 +58,22 @@ public final class StorePendingReplies extends StoreV2 {
             return pendingReply.copy(messageReference, message, z2, z3);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final MessageReference getMessageReference() {
             return this.messageReference;
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final Message getOriginalMessage() {
             return this.originalMessage;
         }
 
-        /* renamed from: component3, reason: from getter */
+        /* JADX INFO: renamed from: component3, reason: from getter */
         public final boolean getShouldMention() {
             return this.shouldMention;
         }
 
-        /* renamed from: component4, reason: from getter */
+        /* JADX INFO: renamed from: component4, reason: from getter */
         public final boolean getShowMentionToggle() {
             return this.showMentionToggle;
         }
@@ -112,19 +112,25 @@ public final class StorePendingReplies extends StoreV2 {
         }
 
         /* JADX WARN: Multi-variable type inference failed */
+        /* JADX WARN: Type inference failed for: r1v3, types: [int] */
+        /* JADX WARN: Type inference failed for: r1v5 */
+        /* JADX WARN: Type inference failed for: r1v7 */
+        /* JADX WARN: Type inference failed for: r2v1 */
+        /* JADX WARN: Type inference failed for: r2v2, types: [int] */
+        /* JADX WARN: Type inference failed for: r2v3 */
         public int hashCode() {
             MessageReference messageReference = this.messageReference;
             int iHashCode = (messageReference != null ? messageReference.hashCode() : 0) * 31;
             Message message = this.originalMessage;
             int iHashCode2 = (iHashCode + (message != null ? message.hashCode() : 0)) * 31;
             boolean z2 = this.shouldMention;
-            int i = z2;
-            if (z2 != 0) {
-                i = 1;
+            ?? r1 = z2;
+            if (z2) {
+                r1 = 1;
             }
-            int i2 = (iHashCode2 + i) * 31;
+            int i = (iHashCode2 + r1) * 31;
             boolean z3 = this.showMentionToggle;
-            return i2 + (z3 ? 1 : z3 ? 1 : 0);
+            return i + (z3 ? 1 : z3);
         }
 
         public final void setShouldMention(boolean z2) {
@@ -143,8 +149,8 @@ public final class StorePendingReplies extends StoreV2 {
         }
     }
 
-    /* compiled from: StorePendingReplies.kt */
-    /* renamed from: com.discord.stores.StorePendingReplies$observePendingReply$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StorePendingReplies$observePendingReply$1 */
+    /* JADX INFO: compiled from: StorePendingReplies.kt */
     public static final class C63251 extends Lambda implements Function0<PendingReply> {
         public final /* synthetic */ long $channelId;
 
@@ -166,8 +172,8 @@ public final class StorePendingReplies extends StoreV2 {
         }
     }
 
-    /* compiled from: StorePendingReplies.kt */
-    /* renamed from: com.discord.stores.StorePendingReplies$onCreatePendingReply$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StorePendingReplies$onCreatePendingReply$1 */
+    /* JADX INFO: compiled from: StorePendingReplies.kt */
     public static final class C63261 extends Lambda implements Function0<Unit> {
         public final /* synthetic */ Channel $channel;
         public final /* synthetic */ Message $message;
@@ -189,15 +195,15 @@ public final class StorePendingReplies extends StoreV2 {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             StorePendingReplies.access$getPendingReplies$p(StorePendingReplies.this).put(Long.valueOf(this.$channel.getId()), new PendingReply(new MessageReference(ChannelUtils.m7667B(this.$channel) ? null : Long.valueOf(this.$channel.getGuildId()), Long.valueOf(this.$channel.getId()), Long.valueOf(this.$message.getId())), this.$message, this.$shouldMention, this.$showMentionToggle));
             StorePendingReplies.this.markChanged();
         }
     }
 
-    /* compiled from: StorePendingReplies.kt */
-    /* renamed from: com.discord.stores.StorePendingReplies$onDeletePendingReply$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StorePendingReplies$onDeletePendingReply$1 */
+    /* JADX INFO: compiled from: StorePendingReplies.kt */
     public static final class C63271 extends Lambda implements Function0<Unit> {
         public final /* synthetic */ long $channelId;
 
@@ -213,15 +219,15 @@ public final class StorePendingReplies extends StoreV2 {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             StorePendingReplies.access$getPendingReplies$p(StorePendingReplies.this).remove(Long.valueOf(this.$channelId));
             StorePendingReplies.this.markChanged();
         }
     }
 
-    /* compiled from: StorePendingReplies.kt */
-    /* renamed from: com.discord.stores.StorePendingReplies$onSetPendingReplyShouldMention$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StorePendingReplies$onSetPendingReplyShouldMention$1 */
+    /* JADX INFO: compiled from: StorePendingReplies.kt */
     public static final class C63281 extends Lambda implements Function0<Unit> {
         public final /* synthetic */ long $channelId;
         public final /* synthetic */ boolean $shouldMention;
@@ -239,7 +245,7 @@ public final class StorePendingReplies extends StoreV2 {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             PendingReply pendingReply = (PendingReply) StorePendingReplies.access$getPendingReplies$p(StorePendingReplies.this).get(Long.valueOf(this.$channelId));
             if (pendingReply != null) {

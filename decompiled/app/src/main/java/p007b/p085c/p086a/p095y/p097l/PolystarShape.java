@@ -8,43 +8,43 @@ import p007b.p085c.p086a.p095y.p096k.AnimatableFloatValue;
 import p007b.p085c.p086a.p095y.p096k.AnimatableValue;
 import p007b.p085c.p086a.p095y.p098m.BaseLayer2;
 
-/* compiled from: PolystarShape.java */
-/* renamed from: b.c.a.y.l.h, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.c.a.y.l.h, reason: use source file name */
+/* JADX INFO: compiled from: PolystarShape.java */
+/* JADX INFO: loaded from: classes.dex */
 public class PolystarShape implements ContentModel2 {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final String f2780a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final a f2781b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final AnimatableFloatValue f2782c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final AnimatableValue<PointF, PointF> f2783d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final AnimatableFloatValue f2784e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final AnimatableFloatValue f2785f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public final AnimatableFloatValue f2786g;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public final AnimatableFloatValue f2787h;
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public final AnimatableFloatValue f2788i;
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final boolean f2789j;
 
-    /* compiled from: PolystarShape.java */
-    /* renamed from: b.c.a.y.l.h$a */
+    /* JADX INFO: renamed from: b.c.a.y.l.h$a */
+    /* JADX INFO: compiled from: PolystarShape.java */
     public enum a {
         STAR(1),
         POLYGON(2);
@@ -55,7 +55,7 @@ public class PolystarShape implements ContentModel2 {
             this.value = i;
         }
 
-        /* renamed from: f */
+        /* JADX INFO: renamed from: f */
         public static a m776f(int i) {
             a[] aVarArrValues = values();
             for (int i2 = 0; i2 < 2; i2++) {
@@ -82,7 +82,7 @@ public class PolystarShape implements ContentModel2 {
     }
 
     @Override // p007b.p085c.p086a.p095y.p097l.ContentModel2
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public Content2 mo775a(LottieDrawable lottieDrawable, BaseLayer2 baseLayer2) {
         return new PolystarContent(lottieDrawable, baseLayer2, this);
     }

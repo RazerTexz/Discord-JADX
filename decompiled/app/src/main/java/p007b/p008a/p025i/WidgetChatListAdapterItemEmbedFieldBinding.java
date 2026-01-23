@@ -6,12 +6,12 @@ import androidx.annotation.NonNull;
 import androidx.viewbinding.ViewBinding;
 import com.discord.utilities.view.text.LinkifiedTextView;
 
-/* compiled from: WidgetChatListAdapterItemEmbedFieldBinding.java */
-/* renamed from: b.a.i.y4, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.a.i.y4, reason: use source file name */
+/* JADX INFO: compiled from: WidgetChatListAdapterItemEmbedFieldBinding.java */
+/* JADX INFO: loaded from: classes.dex */
 public final class WidgetChatListAdapterItemEmbedFieldBinding implements ViewBinding {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     @NonNull
     public final LinearLayout f1426a;
 

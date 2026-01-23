@@ -15,43 +15,43 @@ import p007b.p225i.p226a.p242c.SimpleExoPlayer;
 import p007b.p225i.p226a.p242c.p259f3.Log2;
 import p007b.p225i.p226a.p242c.p259f3.Util2;
 
-/* compiled from: StreamVolumeManager.java */
-/* renamed from: b.i.a.c.m2, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.m2, reason: use source file name */
+/* JADX INFO: compiled from: StreamVolumeManager.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class StreamVolumeManager {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final Context f7246a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final Handler f7247b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final b f7248c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final AudioManager f7249d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     @Nullable
     public c f7250e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public int f7251f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public int f7252g;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public boolean f7253h;
 
-    /* compiled from: StreamVolumeManager.java */
-    /* renamed from: b.i.a.c.m2$b */
+    /* JADX INFO: renamed from: b.i.a.c.m2$b */
+    /* JADX INFO: compiled from: StreamVolumeManager.java */
     public interface b {
     }
 
-    /* compiled from: StreamVolumeManager.java */
-    /* renamed from: b.i.a.c.m2$c */
+    /* JADX INFO: renamed from: b.i.a.c.m2$c */
+    /* JADX INFO: compiled from: StreamVolumeManager.java */
     public final class c extends BroadcastReceiver {
         public c(a aVar) {
         }
@@ -83,12 +83,12 @@ public final class StreamVolumeManager {
         }
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static boolean m3305a(AudioManager audioManager, int i) {
         return Util2.f6708a >= 23 ? audioManager.isStreamMute(i) : m3306b(audioManager, i) == 0;
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static int m3306b(AudioManager audioManager, int i) {
         try {
             return audioManager.getStreamVolume(i);
@@ -101,7 +101,7 @@ public final class StreamVolumeManager {
         }
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public void m3307c(int i) {
         if (this.f7251f == i) {
             return;
@@ -121,7 +121,7 @@ public final class StreamVolumeManager {
         }
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final void m3308d() {
         int iM3306b = m3306b(this.f7249d, this.f7251f);
         boolean zM3305a = m3305a(this.f7249d, this.f7251f);

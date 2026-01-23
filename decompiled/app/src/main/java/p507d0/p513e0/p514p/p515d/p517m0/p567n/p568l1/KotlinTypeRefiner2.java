@@ -8,12 +8,12 @@ import p507d0.p513e0.p514p.p515d.p517m0.p567n.KotlinType;
 import p507d0.p580t.Iterables2;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: KotlinTypeRefiner.kt */
-/* renamed from: d0.e0.p.d.m0.n.l1.h, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.n.l1.h, reason: use source file name */
+/* JADX INFO: compiled from: KotlinTypeRefiner.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class KotlinTypeRefiner2 {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final ModuleCapability<KotlinTypeRefiner3<KotlinTypeRefiner>> f24808a = new ModuleCapability<>("KotlinTypeRefiner");
 
     public static final ModuleCapability<KotlinTypeRefiner3<KotlinTypeRefiner>> getREFINER_CAPABILITY() {

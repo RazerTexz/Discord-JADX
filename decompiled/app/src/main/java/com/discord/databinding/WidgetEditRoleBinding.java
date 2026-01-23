@@ -12,218 +12,218 @@ import com.discord.widgets.roles.RoleIconView;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.textfield.TextInputLayout;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public final class WidgetEditRoleBinding implements ViewBinding {
 
-    /* renamed from: A */
+    /* JADX INFO: renamed from: A */
     @NonNull
     public final CheckedSetting f16498A;
 
-    /* renamed from: B */
+    /* JADX INFO: renamed from: B */
     @NonNull
     public final CheckedSetting f16499B;
 
-    /* renamed from: C */
+    /* JADX INFO: renamed from: C */
     @NonNull
     public final CheckedSetting f16500C;
 
-    /* renamed from: D */
+    /* JADX INFO: renamed from: D */
     @NonNull
     public final CheckedSetting f16501D;
 
-    /* renamed from: E */
+    /* JADX INFO: renamed from: E */
     @NonNull
     public final CheckedSetting f16502E;
 
-    /* renamed from: F */
+    /* JADX INFO: renamed from: F */
     @NonNull
     public final CheckedSetting f16503F;
 
-    /* renamed from: G */
+    /* JADX INFO: renamed from: G */
     @NonNull
     public final CheckedSetting f16504G;
 
-    /* renamed from: H */
+    /* JADX INFO: renamed from: H */
     @NonNull
     public final CheckedSetting f16505H;
 
-    /* renamed from: I */
+    /* JADX INFO: renamed from: I */
     @NonNull
     public final CheckedSetting f16506I;
 
-    /* renamed from: J */
+    /* JADX INFO: renamed from: J */
     @NonNull
     public final RoleIconView f16507J;
 
-    /* renamed from: K */
+    /* JADX INFO: renamed from: K */
     @NonNull
     public final View f16508K;
 
-    /* renamed from: L */
+    /* JADX INFO: renamed from: L */
     @NonNull
     public final TextView f16509L;
 
-    /* renamed from: M */
+    /* JADX INFO: renamed from: M */
     @NonNull
     public final CheckedSetting f16510M;
 
-    /* renamed from: N */
+    /* JADX INFO: renamed from: N */
     @NonNull
     public final CheckedSetting f16511N;
 
-    /* renamed from: O */
+    /* JADX INFO: renamed from: O */
     @NonNull
     public final CheckedSetting f16512O;
 
-    /* renamed from: P */
+    /* JADX INFO: renamed from: P */
     @NonNull
     public final CheckedSetting f16513P;
 
-    /* renamed from: Q */
+    /* JADX INFO: renamed from: Q */
     @NonNull
     public final CheckedSetting f16514Q;
 
-    /* renamed from: R */
+    /* JADX INFO: renamed from: R */
     @NonNull
     public final CheckedSetting f16515R;
 
-    /* renamed from: S */
+    /* JADX INFO: renamed from: S */
     @NonNull
     public final CheckedSetting f16516S;
 
-    /* renamed from: T */
+    /* JADX INFO: renamed from: T */
     @NonNull
     public final CheckedSetting f16517T;
 
-    /* renamed from: U */
+    /* JADX INFO: renamed from: U */
     @NonNull
     public final CheckedSetting f16518U;
 
-    /* renamed from: V */
+    /* JADX INFO: renamed from: V */
     @NonNull
     public final CheckedSetting f16519V;
 
-    /* renamed from: W */
+    /* JADX INFO: renamed from: W */
     @NonNull
     public final CheckedSetting f16520W;
 
-    /* renamed from: X */
+    /* JADX INFO: renamed from: X */
     @NonNull
     public final CheckedSetting f16521X;
 
-    /* renamed from: Y */
+    /* JADX INFO: renamed from: Y */
     @NonNull
     public final CheckedSetting f16522Y;
 
-    /* renamed from: Z */
+    /* JADX INFO: renamed from: Z */
     @NonNull
     public final CheckedSetting f16523Z;
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     @NonNull
     public final CoordinatorLayout f16524a;
 
-    /* renamed from: a0 */
+    /* JADX INFO: renamed from: a0 */
     @NonNull
     public final CheckedSetting f16525a0;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     @NonNull
     public final TextInputLayout f16526b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     @NonNull
     public final FloatingActionButton f16527c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     @NonNull
     public final CheckedSetting f16528d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     @NonNull
     public final CheckedSetting f16529e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     @NonNull
     public final CheckedSetting f16530f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     @NonNull
     public final CheckedSetting f16531g;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     @NonNull
     public final CheckedSetting f16532h;
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     @NonNull
     public final View f16533i;
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     @NonNull
     public final RelativeLayout f16534j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     @NonNull
     public final CheckedSetting f16535k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     @NonNull
     public final CheckedSetting f16536l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     @NonNull
     public final CheckedSetting f16537m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     @NonNull
     public final View f16538n;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     @NonNull
     public final View f16539o;
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     @NonNull
     public final CheckedSetting f16540p;
 
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     @NonNull
     public final CheckedSetting f16541q;
 
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     @NonNull
     public final RelativeLayout f16542r;
 
-    /* renamed from: s */
+    /* JADX INFO: renamed from: s */
     @NonNull
     public final CheckedSetting f16543s;
 
-    /* renamed from: t */
+    /* JADX INFO: renamed from: t */
     @NonNull
     public final CheckedSetting f16544t;
 
-    /* renamed from: u */
+    /* JADX INFO: renamed from: u */
     @NonNull
     public final CheckedSetting f16545u;
 
-    /* renamed from: v */
+    /* JADX INFO: renamed from: v */
     @NonNull
     public final CheckedSetting f16546v;
 
-    /* renamed from: w */
+    /* JADX INFO: renamed from: w */
     @NonNull
     public final CheckedSetting f16547w;
 
-    /* renamed from: x */
+    /* JADX INFO: renamed from: x */
     @NonNull
     public final CheckedSetting f16548x;
 
-    /* renamed from: y */
+    /* JADX INFO: renamed from: y */
     @NonNull
     public final CheckedSetting f16549y;
 
-    /* renamed from: z */
+    /* JADX INFO: renamed from: z */
     @NonNull
     public final CheckedSetting f16550z;
 

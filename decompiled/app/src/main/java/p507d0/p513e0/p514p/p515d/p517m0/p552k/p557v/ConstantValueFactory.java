@@ -13,16 +13,16 @@ import p507d0.p580t._Collections;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: ConstantValueFactory.kt */
-/* renamed from: d0.e0.p.d.m0.k.v.h, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.k.v.h, reason: use source file name */
+/* JADX INFO: compiled from: ConstantValueFactory.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class ConstantValueFactory {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final ConstantValueFactory f24439a = new ConstantValueFactory();
 
-    /* compiled from: ConstantValueFactory.kt */
-    /* renamed from: d0.e0.p.d.m0.k.v.h$a */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.k.v.h$a */
+    /* JADX INFO: compiled from: ConstantValueFactory.kt */
     public static final class a extends Lambda implements Function1<ModuleDescriptor2, KotlinType> {
         public final /* synthetic */ KotlinType $type;
 
@@ -37,15 +37,15 @@ public final class ConstantValueFactory {
             return invoke2(moduleDescriptor2);
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final KotlinType invoke2(ModuleDescriptor2 moduleDescriptor2) {
             Intrinsics3.checkNotNullParameter(moduleDescriptor2, "it");
             return this.$type;
         }
     }
 
-    /* compiled from: ConstantValueFactory.kt */
-    /* renamed from: d0.e0.p.d.m0.k.v.h$b */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.k.v.h$b */
+    /* JADX INFO: compiled from: ConstantValueFactory.kt */
     public static final class b extends Lambda implements Function1<ModuleDescriptor2, KotlinType> {
         public final /* synthetic */ PrimitiveType $componentType;
 
@@ -60,7 +60,7 @@ public final class ConstantValueFactory {
             return invoke2(moduleDescriptor2);
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final KotlinType invoke2(ModuleDescriptor2 moduleDescriptor2) {
             Intrinsics3.checkNotNullParameter(moduleDescriptor2, "module");
             KotlinType4 primitiveArrayKotlinType = moduleDescriptor2.getBuiltIns().getPrimitiveArrayKotlinType(this.$componentType);
@@ -69,7 +69,7 @@ public final class ConstantValueFactory {
         }
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final C11809b m9942a(List<?> list, PrimitiveType primitiveType) {
         List list2 = _Collections.toList(list);
         ArrayList arrayList = new ArrayList();

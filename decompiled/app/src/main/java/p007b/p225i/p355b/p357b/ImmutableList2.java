@@ -15,23 +15,23 @@ import org.checkerframework.checker.nullness.compatqual.NullableDecl;
 import p007b.p225i.p226a.p288f.p299e.p308o.C3404f;
 import p007b.p225i.p355b.p357b.ImmutableCollection;
 
-/* compiled from: ImmutableList.java */
-/* renamed from: b.i.b.b.p, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.b.b.p, reason: use source file name */
+/* JADX INFO: compiled from: ImmutableList.java */
+/* JADX INFO: loaded from: classes3.dex */
 public abstract class ImmutableList2<E> extends ImmutableCollection<E> implements List<E>, RandomAccess {
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public static final AbstractIndexedListIterator<Object> f12045k = new b(RegularImmutableList.f12012l, 0);
 
-    /* compiled from: ImmutableList.java */
-    /* renamed from: b.i.b.b.p$a */
+    /* JADX INFO: renamed from: b.i.b.b.p$a */
+    /* JADX INFO: compiled from: ImmutableList.java */
     public static final class a<E> extends ImmutableCollection.a<E> {
         public a() {
             super(4);
         }
 
         @CanIgnoreReturnValue
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public a<E> m6271b(E e) {
             Objects.requireNonNull(e);
             int i = this.f12041b + 1;
@@ -50,18 +50,18 @@ public abstract class ImmutableList2<E> extends ImmutableCollection<E> implement
             return this;
         }
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public ImmutableList2<E> m6272c() {
             this.f12042c = true;
             return ImmutableList2.m6262l(this.f12040a, this.f12041b);
         }
     }
 
-    /* compiled from: ImmutableList.java */
-    /* renamed from: b.i.b.b.p$b */
+    /* JADX INFO: renamed from: b.i.b.b.p$b */
+    /* JADX INFO: compiled from: ImmutableList.java */
     public static class b<E> extends AbstractIndexedListIterator<E> {
 
-        /* renamed from: l */
+        /* JADX INFO: renamed from: l */
         public final ImmutableList2<E> f12046l;
 
         public b(ImmutableList2<E> immutableList2, int i) {
@@ -70,8 +70,8 @@ public abstract class ImmutableList2<E> extends ImmutableCollection<E> implement
         }
     }
 
-    /* compiled from: ImmutableList.java */
-    /* renamed from: b.i.b.b.p$c */
+    /* JADX INFO: renamed from: b.i.b.b.p$c */
+    /* JADX INFO: compiled from: ImmutableList.java */
     public static class c implements Serializable {
         private static final long serialVersionUID = 0;
         public final Object[] elements;
@@ -85,14 +85,14 @@ public abstract class ImmutableList2<E> extends ImmutableCollection<E> implement
         }
     }
 
-    /* compiled from: ImmutableList.java */
-    /* renamed from: b.i.b.b.p$d */
+    /* JADX INFO: renamed from: b.i.b.b.p$d */
+    /* JADX INFO: compiled from: ImmutableList.java */
     public class d extends ImmutableList2<E> {
 
-        /* renamed from: l */
+        /* JADX INFO: renamed from: l */
         public final transient int f12047l;
 
-        /* renamed from: m */
+        /* JADX INFO: renamed from: m */
         public final transient int f12048m;
 
         public d(int i, int i2) {
@@ -101,13 +101,13 @@ public abstract class ImmutableList2<E> extends ImmutableCollection<E> implement
         }
 
         @Override // p007b.p225i.p355b.p357b.ImmutableCollection
-        /* renamed from: e */
+        /* JADX INFO: renamed from: e */
         public Object[] mo6243e() {
             return ImmutableList2.this.mo6243e();
         }
 
         @Override // p007b.p225i.p355b.p357b.ImmutableCollection
-        /* renamed from: g */
+        /* JADX INFO: renamed from: g */
         public int mo6244g() {
             return ImmutableList2.this.mo6245h() + this.f12047l + this.f12048m;
         }
@@ -119,13 +119,13 @@ public abstract class ImmutableList2<E> extends ImmutableCollection<E> implement
         }
 
         @Override // p007b.p225i.p355b.p357b.ImmutableCollection
-        /* renamed from: h */
+        /* JADX INFO: renamed from: h */
         public int mo6245h() {
             return ImmutableList2.this.mo6245h() + this.f12047l;
         }
 
         @Override // p007b.p225i.p355b.p357b.ImmutableCollection
-        /* renamed from: i */
+        /* JADX INFO: renamed from: i */
         public boolean mo6246i() {
             return true;
         }
@@ -151,7 +151,7 @@ public abstract class ImmutableList2<E> extends ImmutableCollection<E> implement
         }
 
         @Override // p007b.p225i.p355b.p357b.ImmutableList2
-        /* renamed from: w */
+        /* JADX INFO: renamed from: w */
         public ImmutableList2<E> mo6270w(int i, int i2) {
             C3404f.m4198D(i, i2, this.f12048m);
             ImmutableList2 immutableList2 = ImmutableList2.this;
@@ -165,17 +165,17 @@ public abstract class ImmutableList2<E> extends ImmutableCollection<E> implement
         }
     }
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public static <E> ImmutableList2<E> m6261k(Object[] objArr) {
         return m6262l(objArr, objArr.length);
     }
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public static <E> ImmutableList2<E> m6262l(Object[] objArr, int i) {
         return i == 0 ? (ImmutableList2<E>) RegularImmutableList.f12012l : new RegularImmutableList(objArr, i);
     }
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public static <E> ImmutableList2<E> m6263m(Object... objArr) {
         int length = objArr.length;
         for (int i = 0; i < length; i++) {
@@ -184,7 +184,7 @@ public abstract class ImmutableList2<E> extends ImmutableCollection<E> implement
         return m6262l(objArr, objArr.length);
     }
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public static <E> ImmutableList2<E> m6264n(Collection<? extends E> collection) {
         if (!(collection instanceof ImmutableCollection)) {
             return m6263m(collection.toArray());
@@ -193,7 +193,7 @@ public abstract class ImmutableList2<E> extends ImmutableCollection<E> implement
         return immutableList2Mo6253c.mo6246i() ? m6261k(immutableList2Mo6253c.toArray()) : immutableList2Mo6253c;
     }
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public static <E> ImmutableList2<E> m6265o(E[] eArr) {
         return eArr.length == 0 ? (ImmutableList2<E>) RegularImmutableList.f12012l : m6263m((Object[]) eArr.clone());
     }
@@ -202,12 +202,12 @@ public abstract class ImmutableList2<E> extends ImmutableCollection<E> implement
         throw new InvalidObjectException("Use SerializedForm");
     }
 
-    /* renamed from: u */
+    /* JADX INFO: renamed from: u */
     public static <E> ImmutableList2<E> m6266u(E e) {
         return m6263m(e);
     }
 
-    /* renamed from: v */
+    /* JADX INFO: renamed from: v */
     public static <E> ImmutableList2<E> m6267v(E e, E e2, E e3, E e4, E e5) {
         return m6263m(e, e2, e3, e4, e5);
     }
@@ -226,7 +226,7 @@ public abstract class ImmutableList2<E> extends ImmutableCollection<E> implement
     }
 
     @Override // p007b.p225i.p355b.p357b.ImmutableCollection
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final ImmutableList2<E> mo6253c() {
         return this;
     }
@@ -237,7 +237,7 @@ public abstract class ImmutableList2<E> extends ImmutableCollection<E> implement
     }
 
     @Override // p007b.p225i.p355b.p357b.ImmutableCollection
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public int mo6242d(Object[] objArr, int i) {
         int size = size();
         for (int i2 = 0; i2 < size; i2++) {
@@ -306,7 +306,7 @@ public abstract class ImmutableList2<E> extends ImmutableCollection<E> implement
     }
 
     @Override // p007b.p225i.p355b.p357b.ImmutableCollection
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public UnmodifiableIterator<E> mo6251j() {
         return m6268p();
     }
@@ -329,12 +329,12 @@ public abstract class ImmutableList2<E> extends ImmutableCollection<E> implement
         return m6268p();
     }
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public AbstractIndexedListIterator<E> m6268p() {
         return m6269r(0);
     }
 
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     public AbstractIndexedListIterator<E> m6269r(int i) {
         C3404f.m4195C(i, size());
         return isEmpty() ? (AbstractIndexedListIterator<E>) f12045k : new b(this, i);
@@ -359,7 +359,7 @@ public abstract class ImmutableList2<E> extends ImmutableCollection<E> implement
         return mo6270w(i, i2);
     }
 
-    /* renamed from: w */
+    /* JADX INFO: renamed from: w */
     public ImmutableList2<E> mo6270w(int i, int i2) {
         C3404f.m4198D(i, i2, size());
         int i3 = i2 - i;

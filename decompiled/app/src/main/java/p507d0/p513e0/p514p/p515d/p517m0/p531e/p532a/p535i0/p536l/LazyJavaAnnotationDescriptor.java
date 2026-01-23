@@ -58,40 +58,40 @@ import p507d0.p592z.p594d.Lambda;
 import p507d0.p592z.p594d.PropertyReference1Impl;
 import p507d0.p592z.p594d.Reflection2;
 
-/* compiled from: LazyJavaAnnotationDescriptor.kt */
-/* renamed from: d0.e0.p.d.m0.e.a.i0.l.e, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.e.a.i0.l.e, reason: use source file name */
+/* JADX INFO: compiled from: LazyJavaAnnotationDescriptor.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class LazyJavaAnnotationDescriptor implements AnnotationDescriptor, PossiblyExternalAnnotationDescriptor {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final /* synthetic */ KProperty<Object>[] f23334a = {Reflection2.property1(new PropertyReference1Impl(Reflection2.getOrCreateKotlinClass(LazyJavaAnnotationDescriptor.class), "fqName", "getFqName()Lorg/jetbrains/kotlin/name/FqName;")), Reflection2.property1(new PropertyReference1Impl(Reflection2.getOrCreateKotlinClass(LazyJavaAnnotationDescriptor.class), "type", "getType()Lorg/jetbrains/kotlin/types/SimpleType;")), Reflection2.property1(new PropertyReference1Impl(Reflection2.getOrCreateKotlinClass(LazyJavaAnnotationDescriptor.class), "allValueArguments", "getAllValueArguments()Ljava/util/Map;"))};
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final context4 f23335b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final InterfaceC11564a f23336c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final storage6 f23337d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final storage5 f23338e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final JavaSourceElementFactory f23339f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public final storage5 f23340g;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public final boolean f23341h;
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public final boolean f23342i;
 
-    /* compiled from: LazyJavaAnnotationDescriptor.kt */
-    /* renamed from: d0.e0.p.d.m0.e.a.i0.l.e$a */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.e.a.i0.l.e$a */
+    /* JADX INFO: compiled from: LazyJavaAnnotationDescriptor.kt */
     public static final class a extends Lambda implements Function0<Map<Name, ? extends AbstractC11815g<?>>> {
         public a() {
             super(0);
@@ -103,7 +103,7 @@ public final class LazyJavaAnnotationDescriptor implements AnnotationDescriptor,
         }
 
         @Override // kotlin.jvm.functions.Function0
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final Map<Name, ? extends AbstractC11815g<?>> invoke2() {
             Collection<annotationArguments> arguments = LazyJavaAnnotationDescriptor.access$getJavaAnnotation$p(LazyJavaAnnotationDescriptor.this).getArguments();
             LazyJavaAnnotationDescriptor lazyJavaAnnotationDescriptor = LazyJavaAnnotationDescriptor.this;
@@ -123,8 +123,8 @@ public final class LazyJavaAnnotationDescriptor implements AnnotationDescriptor,
         }
     }
 
-    /* compiled from: LazyJavaAnnotationDescriptor.kt */
-    /* renamed from: d0.e0.p.d.m0.e.a.i0.l.e$b */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.e.a.i0.l.e$b */
+    /* JADX INFO: compiled from: LazyJavaAnnotationDescriptor.kt */
     public static final class b extends Lambda implements Function0<FqName> {
         public b() {
             super(0);
@@ -146,8 +146,8 @@ public final class LazyJavaAnnotationDescriptor implements AnnotationDescriptor,
         }
     }
 
-    /* compiled from: LazyJavaAnnotationDescriptor.kt */
-    /* renamed from: d0.e0.p.d.m0.e.a.i0.l.e$c */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.e.a.i0.l.e$c */
+    /* JADX INFO: compiled from: LazyJavaAnnotationDescriptor.kt */
     public static final class c extends Lambda implements Function0<KotlinType4> {
         public c() {
             super(0);
@@ -209,7 +209,7 @@ public final class LazyJavaAnnotationDescriptor implements AnnotationDescriptor,
         return lazyJavaAnnotationDescriptor.m9463a(annotationarguments);
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final AbstractC11815g<?> m9463a(annotationArguments annotationarguments) {
         AbstractC11815g<?> c11807a;
         if (annotationarguments instanceof annotationArguments6) {

@@ -5,7 +5,7 @@ import com.sun.tools.javac.parser.ScannerFactory;
 import com.sun.tools.javac.util.Context;
 import java.nio.CharBuffer;
 
-/* loaded from: discord-126021.apk:lombok/javac/java8/CommentCollectingScannerFactory.SCL.lombok */
+/* JADX INFO: loaded from: discord-126021.apk:lombok/javac/java8/CommentCollectingScannerFactory.SCL.lombok */
 public class CommentCollectingScannerFactory extends ScannerFactory {
     public static boolean findTextBlocks;
 
@@ -16,8 +16,8 @@ public class CommentCollectingScannerFactory extends ScannerFactory {
         }
     }
 
-    /* renamed from: lombok.javac.java8.CommentCollectingScannerFactory$1MyFactory, reason: invalid class name */
-    /* loaded from: discord-126021.apk:lombok/javac/java8/CommentCollectingScannerFactory$1MyFactory.SCL.lombok */
+    /* JADX INFO: renamed from: lombok.javac.java8.CommentCollectingScannerFactory$1MyFactory, reason: invalid class name */
+    /* JADX INFO: loaded from: discord-126021.apk:lombok/javac/java8/CommentCollectingScannerFactory$1MyFactory.SCL.lombok */
     class C1MyFactory implements Context.Factory {
         private final /* synthetic */ Context val$context;
 

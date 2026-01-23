@@ -3,12 +3,12 @@ package p659s.p660a;
 import kotlin.coroutines.CoroutineContext;
 import kotlinx.coroutines.CoroutineDispatcher;
 
-/* compiled from: Unconfined.kt */
-/* renamed from: s.a.y1, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: s.a.y1, reason: use source file name */
+/* JADX INFO: compiled from: Unconfined.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class Unconfined2 extends CoroutineDispatcher {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static final Unconfined2 f27922j = new Unconfined2();
 
     @Override // kotlinx.coroutines.CoroutineDispatcher

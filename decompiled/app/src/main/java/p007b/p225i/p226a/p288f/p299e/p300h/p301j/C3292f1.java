@@ -19,26 +19,26 @@ import java.util.WeakHashMap;
 import p007b.p100d.p104b.p105a.outline;
 import p007b.p225i.p226a.p288f.p313h.p320g.HandlerC3484d;
 
-/* compiled from: com.google.android.gms:play-services-basement@@17.6.0 */
-/* renamed from: b.i.a.f.e.h.j.f1 */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.e.h.j.f1 */
+/* JADX INFO: compiled from: com.google.android.gms:play-services-basement@@17.6.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public final class C3292f1 extends Fragment implements InterfaceC3299j {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static final WeakHashMap<FragmentActivity, WeakReference<C3292f1>> f9372j = new WeakHashMap<>();
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final Map<String, LifecycleCallback> f9373k = Collections.synchronizedMap(new ArrayMap());
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public int f9374l = 0;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     @Nullable
     public Bundle f9375m;
 
     @Override // p007b.p225i.p226a.p288f.p299e.p300h.p301j.InterfaceC3299j
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final void mo4069a(String str, @NonNull LifecycleCallback lifecycleCallback) {
         if (this.f9373k.containsKey(str)) {
             throw new IllegalArgumentException(outline.m823K(new StringBuilder(str.length() + 59), "LifecycleCallback with tag ", str, " already added to this fragment."));
@@ -51,7 +51,7 @@ public final class C3292f1 extends Fragment implements InterfaceC3299j {
 
     @Override // p007b.p225i.p226a.p288f.p299e.p300h.p301j.InterfaceC3299j
     @Nullable
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final <T extends LifecycleCallback> T mo4070d(String str, Class<T> cls) {
         return cls.cast(this.f9373k.get(str));
     }

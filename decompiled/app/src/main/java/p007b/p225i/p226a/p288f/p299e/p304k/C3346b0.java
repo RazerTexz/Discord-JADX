@@ -7,12 +7,12 @@ import androidx.annotation.Nullable;
 import com.google.android.gms.common.internal.GetServiceRequest;
 import p007b.p225i.p226a.p288f.p313h.p320g.BinderC3482b;
 
-/* compiled from: com.google.android.gms:play-services-basement@@17.6.0 */
-/* renamed from: b.i.a.f.e.k.b0 */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.e.k.b0 */
+/* JADX INFO: compiled from: com.google.android.gms:play-services-basement@@17.6.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public final class C3346b0 implements InterfaceC3359i {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final IBinder f9500a;
 
     public C3346b0(IBinder iBinder) {
@@ -26,7 +26,7 @@ public final class C3346b0 implements InterfaceC3359i {
 
     /* JADX WARN: Multi-variable type inference failed */
     @Override // p007b.p225i.p226a.p288f.p299e.p304k.InterfaceC3359i
-    /* renamed from: w */
+    /* JADX INFO: renamed from: w */
     public final void mo4147w(InterfaceC3357h interfaceC3357h, @Nullable GetServiceRequest getServiceRequest) throws RemoteException {
         Parcel parcelObtain = Parcel.obtain();
         Parcel parcelObtain2 = Parcel.obtain();

@@ -7,9 +7,9 @@ import java.util.Map;
 import p507d0.p580t._Collections;
 import p637j0.p641k.Func1;
 
-/* compiled from: ManageReactionsModel.kt */
-/* renamed from: com.discord.widgets.chat.managereactions.ManageReactionsModelProvider$get$reactionsObs$2, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.chat.managereactions.ManageReactionsModelProvider$get$reactionsObs$2, reason: use source file name */
+/* JADX INFO: compiled from: ManageReactionsModel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class ManageReactionsModel5<T, R> implements Func1<Map<String, ? extends MessageReaction>, List<? extends MessageReaction>> {
     public static final ManageReactionsModel5 INSTANCE = new ManageReactionsModel5();
 
@@ -18,7 +18,7 @@ public final class ManageReactionsModel5<T, R> implements Func1<Map<String, ? ex
         return call2((Map<String, MessageReaction>) map);
     }
 
-    /* renamed from: call, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
     public final List<MessageReaction> call2(Map<String, MessageReaction> map) {
         return _Collections.sortedWith(map.values(), new C8180xeb27760a());
     }

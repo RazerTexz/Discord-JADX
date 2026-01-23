@@ -9,8 +9,8 @@ import kotlin.text.MatchResult;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: IntentUtils.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: IntentUtils.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class IntentUtils$pathRouterMap$2 extends Lambda implements Function3<Uri, MatchResult, Context, RouteHandlers.AnalyticsMetadata> {
     public static final IntentUtils$pathRouterMap$2 INSTANCE = new IntentUtils$pathRouterMap$2();
 
@@ -23,7 +23,7 @@ public final class IntentUtils$pathRouterMap$2 extends Lambda implements Functio
         return invoke2(uri, matchResult, context);
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final RouteHandlers.AnalyticsMetadata invoke2(Uri uri, MatchResult matchResult, Context context) {
         Intrinsics3.checkNotNullParameter(uri, NotificationCompat.MessagingStyle.Message.KEY_DATA_URI);
         Intrinsics3.checkNotNullParameter(context, "context");

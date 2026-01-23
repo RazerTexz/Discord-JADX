@@ -14,37 +14,37 @@ import p507d0.p580t.Iterables2;
 import p507d0.p592z.p594d.Intrinsics3;
 import p600f0.Protocol2;
 
-/* compiled from: Jdk8WithJettyBootPlatform.kt */
-/* renamed from: f0.e0.k.e, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: f0.e0.k.e, reason: use source file name */
+/* JADX INFO: compiled from: Jdk8WithJettyBootPlatform.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class Jdk8WithJettyBootPlatform extends Platform2 {
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final Method f25770d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final Method f25771e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final Method f25772f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public final Class<?> f25773g;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public final Class<?> f25774h;
 
-    /* compiled from: Jdk8WithJettyBootPlatform.kt */
-    /* renamed from: f0.e0.k.e$a */
+    /* JADX INFO: renamed from: f0.e0.k.e$a */
+    /* JADX INFO: compiled from: Jdk8WithJettyBootPlatform.kt */
     public static final class a implements InvocationHandler {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public boolean f25775a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public String f25776b;
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public final List<String> f25777c;
 
         public a(List<String> list) {
@@ -129,8 +129,8 @@ public final class Jdk8WithJettyBootPlatform extends Platform2 {
     }
 
     @Override // p600f0.p601e0.p609k.Platform2
-    /* renamed from: a */
-    public void mo10328a(SSLSocket sSLSocket) throws IllegalArgumentException {
+    /* JADX INFO: renamed from: a */
+    public void mo10328a(SSLSocket sSLSocket) {
         Intrinsics3.checkParameterIsNotNull(sSLSocket, "sslSocket");
         try {
             this.f25772f.invoke(null, sSLSocket);
@@ -142,8 +142,8 @@ public final class Jdk8WithJettyBootPlatform extends Platform2 {
     }
 
     @Override // p600f0.p601e0.p609k.Platform2
-    /* renamed from: d */
-    public void mo10316d(SSLSocket sSLSocket, String str, List<? extends Protocol2> list) throws IllegalArgumentException {
+    /* JADX INFO: renamed from: d */
+    public void mo10316d(SSLSocket sSLSocket, String str, List<? extends Protocol2> list) {
         Intrinsics3.checkParameterIsNotNull(sSLSocket, "sslSocket");
         Intrinsics3.checkParameterIsNotNull(list, "protocols");
         Intrinsics3.checkParameterIsNotNull(list, "protocols");
@@ -173,8 +173,8 @@ public final class Jdk8WithJettyBootPlatform extends Platform2 {
     }
 
     @Override // p600f0.p601e0.p609k.Platform2
-    /* renamed from: f */
-    public String mo10317f(SSLSocket sSLSocket) throws IllegalArgumentException {
+    /* JADX INFO: renamed from: f */
+    public String mo10317f(SSLSocket sSLSocket) {
         Intrinsics3.checkParameterIsNotNull(sSLSocket, "sslSocket");
         try {
             InvocationHandler invocationHandler = Proxy.getInvocationHandler(this.f25771e.invoke(null, sSLSocket));

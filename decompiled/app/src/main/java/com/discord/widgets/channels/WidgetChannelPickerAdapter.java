@@ -6,13 +6,13 @@ import kotlin.jvm.internal.DefaultConstructorMarker;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: WidgetChannelPickerAdapter.kt */
-/* renamed from: com.discord.widgets.channels.ChannelPickerAdapterItem, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.channels.ChannelPickerAdapterItem, reason: use source file name */
+/* JADX INFO: compiled from: WidgetChannelPickerAdapter.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public abstract class WidgetChannelPickerAdapter implements DiffKeyProvider {
 
-    /* compiled from: WidgetChannelPickerAdapter.kt */
-    /* renamed from: com.discord.widgets.channels.ChannelPickerAdapterItem$ChannelItem */
+    /* JADX INFO: renamed from: com.discord.widgets.channels.ChannelPickerAdapterItem$ChannelItem */
+    /* JADX INFO: compiled from: WidgetChannelPickerAdapter.kt */
     public static final /* data */ class ChannelItem extends WidgetChannelPickerAdapter {
         private final Channel channel;
         private final boolean isSelected;
@@ -37,12 +37,12 @@ public abstract class WidgetChannelPickerAdapter implements DiffKeyProvider {
             return channelItem.copy(channel, z2);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final Channel getChannel() {
             return this.channel;
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final boolean getIsSelected() {
             return this.isSelected;
         }
@@ -73,15 +73,18 @@ public abstract class WidgetChannelPickerAdapter implements DiffKeyProvider {
         }
 
         /* JADX WARN: Multi-variable type inference failed */
+        /* JADX WARN: Type inference failed for: r1v1, types: [int] */
+        /* JADX WARN: Type inference failed for: r1v2 */
+        /* JADX WARN: Type inference failed for: r1v3 */
         public int hashCode() {
             Channel channel = this.channel;
             int iHashCode = (channel != null ? channel.hashCode() : 0) * 31;
             boolean z2 = this.isSelected;
-            int i = z2;
-            if (z2 != 0) {
-                i = 1;
+            ?? r1 = z2;
+            if (z2) {
+                r1 = 1;
             }
-            return iHashCode + i;
+            return iHashCode + r1;
         }
 
         public final boolean isSelected() {
@@ -96,8 +99,8 @@ public abstract class WidgetChannelPickerAdapter implements DiffKeyProvider {
         }
     }
 
-    /* compiled from: WidgetChannelPickerAdapter.kt */
-    /* renamed from: com.discord.widgets.channels.ChannelPickerAdapterItem$CreateChannelItem */
+    /* JADX INFO: renamed from: com.discord.widgets.channels.ChannelPickerAdapterItem$CreateChannelItem */
+    /* JADX INFO: compiled from: WidgetChannelPickerAdapter.kt */
     public static final class CreateChannelItem extends WidgetChannelPickerAdapter {
         public static final CreateChannelItem INSTANCE = new CreateChannelItem();
         private static final String key = "channel-picker-create-channel-item";

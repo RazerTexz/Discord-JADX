@@ -6,8 +6,8 @@ import com.discord.widgets.user.search.WidgetGlobalSearchModel;
 import java.util.Comparator;
 import p507d0.p582u.C12169a;
 
-/* compiled from: Comparisons.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: Comparisons.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class WidgetGlobalSearchModel$Companion$create$$inlined$sortedBy$1<T> implements Comparator {
     public final /* synthetic */ WidgetGlobalSearchModel.SearchContext $searchContext$inlined;
 

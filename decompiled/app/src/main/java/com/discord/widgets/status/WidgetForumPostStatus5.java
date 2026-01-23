@@ -3,9 +3,9 @@ package com.discord.widgets.status;
 import kotlin.jvm.functions.Function0;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetForumPostStatus.kt */
-/* renamed from: com.discord.widgets.status.WidgetForumPostStatus$viewModel$2, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.status.WidgetForumPostStatus$viewModel$2, reason: use source file name */
+/* JADX INFO: compiled from: WidgetForumPostStatus.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetForumPostStatus5 extends Lambda implements Function0<WidgetForumPostStatusViewModel> {
     public final /* synthetic */ WidgetForumPostStatus this$0;
 

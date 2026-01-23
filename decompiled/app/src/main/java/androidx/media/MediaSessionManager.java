@@ -13,7 +13,7 @@ import androidx.media.MediaSessionManagerImplApi28;
 import androidx.media.MediaSessionManagerImplBase;
 import java.util.Objects;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public final class MediaSessionManager {
     private static volatile MediaSessionManager sSessionManager;
     public MediaSessionManagerImpl mImpl;

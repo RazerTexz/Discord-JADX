@@ -8,8 +8,8 @@ import com.discord.api.science.AnalyticsSchema;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: TrackChangeMarketingLocale.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: TrackChangeMarketingLocale.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class TrackChangeMarketingLocale implements AnalyticsSchema, TrackBase2, TrackMarketingSite2 {
     private TrackBase trackBase;
     private TrackMarketingSite trackMarketingSite;
@@ -18,7 +18,7 @@ public final /* data */ class TrackChangeMarketingLocale implements AnalyticsSch
     private final transient String analyticsSchemaTypeName = "change_marketing_locale";
 
     @Override // com.discord.api.science.AnalyticsSchema
-    /* renamed from: d, reason: from getter */
+    /* JADX INFO: renamed from: d, reason: from getter */
     public String getAnalyticsSchemaTypeName() {
         return this.analyticsSchemaTypeName;
     }

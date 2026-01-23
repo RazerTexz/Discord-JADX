@@ -47,12 +47,12 @@ import p637j0.p641k.Func1;
 import p658rx.Observable;
 import p658rx.subjects.PublishSubject;
 
-/* compiled from: EditUserOrGuildMemberProfileViewModel.kt */
-/* renamed from: com.discord.widgets.settings.profile.SettingsUserProfileViewModel, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.settings.profile.SettingsUserProfileViewModel, reason: use source file name */
+/* JADX INFO: compiled from: EditUserOrGuildMemberProfileViewModel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class EditUserOrGuildMemberProfileViewModel2 extends AppViewModel<ViewState> {
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private final Parser<MessageRenderContext, Node<MessageRenderContext>, MessageParseState> bioParser;
     private final PublishSubject<Event> eventSubject;
@@ -62,8 +62,8 @@ public final class EditUserOrGuildMemberProfileViewModel2 extends AppViewModel<V
     private final StoreGuilds storeGuilds;
     private final StoreUserProfile storeUserProfile;
 
-    /* compiled from: EditUserOrGuildMemberProfileViewModel.kt */
-    /* renamed from: com.discord.widgets.settings.profile.SettingsUserProfileViewModel$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.profile.SettingsUserProfileViewModel$1 */
+    /* JADX INFO: compiled from: EditUserOrGuildMemberProfileViewModel.kt */
     public static final class C99531 extends Lambda implements Function1<MeUser, Unit> {
         public C99531() {
             super(1);
@@ -75,14 +75,14 @@ public final class EditUserOrGuildMemberProfileViewModel2 extends AppViewModel<V
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(MeUser meUser) {
             StoreUserProfile.fetchProfile$default(EditUserOrGuildMemberProfileViewModel2.access$getStoreUserProfile$p(EditUserOrGuildMemberProfileViewModel2.this), meUser.getId(), EditUserOrGuildMemberProfileViewModel2.access$getGuildId$p(EditUserOrGuildMemberProfileViewModel2.this), false, null, 12, null);
         }
     }
 
-    /* compiled from: EditUserOrGuildMemberProfileViewModel.kt */
-    /* renamed from: com.discord.widgets.settings.profile.SettingsUserProfileViewModel$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.profile.SettingsUserProfileViewModel$2 */
+    /* JADX INFO: compiled from: EditUserOrGuildMemberProfileViewModel.kt */
     public static final class C99542 extends Lambda implements Function1<StoreState, Unit> {
         public C99542() {
             super(1);
@@ -94,7 +94,7 @@ public final class EditUserOrGuildMemberProfileViewModel2 extends AppViewModel<V
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(StoreState storeState) {
             EditUserOrGuildMemberProfileViewModel2 editUserOrGuildMemberProfileViewModel2 = EditUserOrGuildMemberProfileViewModel2.this;
             Intrinsics3.checkNotNullExpressionValue(storeState, "storeState");
@@ -102,8 +102,8 @@ public final class EditUserOrGuildMemberProfileViewModel2 extends AppViewModel<V
         }
     }
 
-    /* compiled from: EditUserOrGuildMemberProfileViewModel.kt */
-    /* renamed from: com.discord.widgets.settings.profile.SettingsUserProfileViewModel$Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.profile.SettingsUserProfileViewModel$Companion, reason: from kotlin metadata */
+    /* JADX INFO: compiled from: EditUserOrGuildMemberProfileViewModel.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -132,12 +132,12 @@ public final class EditUserOrGuildMemberProfileViewModel2 extends AppViewModel<V
         }
     }
 
-    /* compiled from: EditUserOrGuildMemberProfileViewModel.kt */
-    /* renamed from: com.discord.widgets.settings.profile.SettingsUserProfileViewModel$Event */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.profile.SettingsUserProfileViewModel$Event */
+    /* JADX INFO: compiled from: EditUserOrGuildMemberProfileViewModel.kt */
     public static abstract class Event {
 
-        /* compiled from: EditUserOrGuildMemberProfileViewModel.kt */
-        /* renamed from: com.discord.widgets.settings.profile.SettingsUserProfileViewModel$Event$UserUpdateRequestCompleted */
+        /* JADX INFO: renamed from: com.discord.widgets.settings.profile.SettingsUserProfileViewModel$Event$UserUpdateRequestCompleted */
+        /* JADX INFO: compiled from: EditUserOrGuildMemberProfileViewModel.kt */
         public static final class UserUpdateRequestCompleted extends Event {
             public static final UserUpdateRequestCompleted INSTANCE = new UserUpdateRequestCompleted();
 
@@ -154,8 +154,8 @@ public final class EditUserOrGuildMemberProfileViewModel2 extends AppViewModel<V
         }
     }
 
-    /* compiled from: EditUserOrGuildMemberProfileViewModel.kt */
-    /* renamed from: com.discord.widgets.settings.profile.SettingsUserProfileViewModel$StoreState */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.profile.SettingsUserProfileViewModel$StoreState */
+    /* JADX INFO: compiled from: EditUserOrGuildMemberProfileViewModel.kt */
     public static final /* data */ class StoreState {
         private final Guild guild;
         private final GuildChannelsInfo guildChannelsInfo;
@@ -196,27 +196,27 @@ public final class EditUserOrGuildMemberProfileViewModel2 extends AppViewModel<V
             return storeState.copy(meUser, guild2, userProfile2, guildMember2, guildChannelsInfo);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final MeUser getUser() {
             return this.user;
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final Guild getGuild() {
             return this.guild;
         }
 
-        /* renamed from: component3, reason: from getter */
+        /* JADX INFO: renamed from: component3, reason: from getter */
         public final UserProfile getUserProfile() {
             return this.userProfile;
         }
 
-        /* renamed from: component4, reason: from getter */
+        /* JADX INFO: renamed from: component4, reason: from getter */
         public final GuildMember getMeMember() {
             return this.meMember;
         }
 
-        /* renamed from: component5, reason: from getter */
+        /* JADX INFO: renamed from: component5, reason: from getter */
         public final GuildChannelsInfo getGuildChannelsInfo() {
             return this.guildChannelsInfo;
         }
@@ -288,12 +288,12 @@ public final class EditUserOrGuildMemberProfileViewModel2 extends AppViewModel<V
         }
     }
 
-    /* compiled from: EditUserOrGuildMemberProfileViewModel.kt */
-    /* renamed from: com.discord.widgets.settings.profile.SettingsUserProfileViewModel$ViewState */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.profile.SettingsUserProfileViewModel$ViewState */
+    /* JADX INFO: compiled from: EditUserOrGuildMemberProfileViewModel.kt */
     public static abstract class ViewState {
 
-        /* compiled from: EditUserOrGuildMemberProfileViewModel.kt */
-        /* renamed from: com.discord.widgets.settings.profile.SettingsUserProfileViewModel$ViewState$Loaded */
+        /* JADX INFO: renamed from: com.discord.widgets.settings.profile.SettingsUserProfileViewModel$ViewState$Loaded */
+        /* JADX INFO: compiled from: EditUserOrGuildMemberProfileViewModel.kt */
         public static final /* data */ class Loaded extends ViewState {
             private final List<Node<MessageRenderContext>> bioAst;
             private final boolean canEditNickname;
@@ -324,11 +324,12 @@ public final class EditUserOrGuildMemberProfileViewModel2 extends AppViewModel<V
                 this(meUser, guild, guildMember, userProfile, (i & 16) != 0 ? null : nullSerializable, (i & 32) != 0 ? null : nullSerializable2, (i & 64) != 0 ? null : nullSerializable3, (i & 128) != 0 ? null : str, str2, list, z2, z3);
             }
 
+            /* JADX WARN: Multi-variable type inference failed */
             public static /* synthetic */ Loaded copy$default(Loaded loaded, MeUser meUser, Guild guild, GuildMember guildMember, UserProfile userProfile, NullSerializable nullSerializable, NullSerializable nullSerializable2, NullSerializable nullSerializable3, String str, String str2, List list, boolean z2, boolean z3, int i, Object obj) {
                 return loaded.copy((i & 1) != 0 ? loaded.user : meUser, (i & 2) != 0 ? loaded.guild : guild, (i & 4) != 0 ? loaded.meMember : guildMember, (i & 8) != 0 ? loaded.userProfile : userProfile, (i & 16) != 0 ? loaded.currentAvatar : nullSerializable, (i & 32) != 0 ? loaded.currentBannerImage : nullSerializable2, (i & 64) != 0 ? loaded.currentBannerColorHex : nullSerializable3, (i & 128) != 0 ? loaded.currentNickname : str, (i & 256) != 0 ? loaded.currentBio : str2, (i & 512) != 0 ? loaded.bioAst : list, (i & 1024) != 0 ? loaded.isEditingBio : z2, (i & 2048) != 0 ? loaded.canEditNickname : z3);
             }
 
-            /* renamed from: component1, reason: from getter */
+            /* JADX INFO: renamed from: component1, reason: from getter */
             public final MeUser getUser() {
                 return this.user;
             }
@@ -337,27 +338,27 @@ public final class EditUserOrGuildMemberProfileViewModel2 extends AppViewModel<V
                 return this.bioAst;
             }
 
-            /* renamed from: component11, reason: from getter */
+            /* JADX INFO: renamed from: component11, reason: from getter */
             public final boolean getIsEditingBio() {
                 return this.isEditingBio;
             }
 
-            /* renamed from: component12, reason: from getter */
+            /* JADX INFO: renamed from: component12, reason: from getter */
             public final boolean getCanEditNickname() {
                 return this.canEditNickname;
             }
 
-            /* renamed from: component2, reason: from getter */
+            /* JADX INFO: renamed from: component2, reason: from getter */
             public final Guild getGuild() {
                 return this.guild;
             }
 
-            /* renamed from: component3, reason: from getter */
+            /* JADX INFO: renamed from: component3, reason: from getter */
             public final GuildMember getMeMember() {
                 return this.meMember;
             }
 
-            /* renamed from: component4, reason: from getter */
+            /* JADX INFO: renamed from: component4, reason: from getter */
             public final UserProfile getUserProfile() {
                 return this.userProfile;
             }
@@ -374,12 +375,12 @@ public final class EditUserOrGuildMemberProfileViewModel2 extends AppViewModel<V
                 return this.currentBannerColorHex;
             }
 
-            /* renamed from: component8, reason: from getter */
+            /* JADX INFO: renamed from: component8, reason: from getter */
             public final String getCurrentNickname() {
                 return this.currentNickname;
             }
 
-            /* renamed from: component9, reason: from getter */
+            /* JADX INFO: renamed from: component9, reason: from getter */
             public final String getCurrentBio() {
                 return this.currentBio;
             }
@@ -470,6 +471,12 @@ public final class EditUserOrGuildMemberProfileViewModel2 extends AppViewModel<V
             }
 
             /* JADX WARN: Multi-variable type inference failed */
+            /* JADX WARN: Type inference failed for: r1v3, types: [int] */
+            /* JADX WARN: Type inference failed for: r1v5 */
+            /* JADX WARN: Type inference failed for: r1v7 */
+            /* JADX WARN: Type inference failed for: r2v25 */
+            /* JADX WARN: Type inference failed for: r2v26, types: [int] */
+            /* JADX WARN: Type inference failed for: r2v27 */
             public int hashCode() {
                 MeUser meUser = this.user;
                 int iHashCode = (meUser != null ? meUser.hashCode() : 0) * 31;
@@ -492,21 +499,21 @@ public final class EditUserOrGuildMemberProfileViewModel2 extends AppViewModel<V
                 List<Node<MessageRenderContext>> list = this.bioAst;
                 int iHashCode10 = (iHashCode9 + (list != null ? list.hashCode() : 0)) * 31;
                 boolean z2 = this.isEditingBio;
-                int i = z2;
-                if (z2 != 0) {
-                    i = 1;
+                ?? r1 = z2;
+                if (z2) {
+                    r1 = 1;
                 }
-                int i2 = (iHashCode10 + i) * 31;
+                int i = (iHashCode10 + r1) * 31;
                 boolean z3 = this.canEditNickname;
-                return i2 + (z3 ? 1 : z3 ? 1 : 0);
+                return i + (z3 ? 1 : z3);
             }
 
-            /* renamed from: isBioChanged, reason: from getter */
+            /* JADX INFO: renamed from: isBioChanged, reason: from getter */
             public final boolean getIsBioChanged() {
                 return this.isBioChanged;
             }
 
-            /* renamed from: isDirty, reason: from getter */
+            /* JADX INFO: renamed from: isDirty, reason: from getter */
             public final boolean getIsDirty() {
                 return this.isDirty;
             }
@@ -622,8 +629,8 @@ public final class EditUserOrGuildMemberProfileViewModel2 extends AppViewModel<V
         }
     }
 
-    /* compiled from: EditUserOrGuildMemberProfileViewModel.kt */
-    /* renamed from: com.discord.widgets.settings.profile.SettingsUserProfileViewModel$observeHeaderViewState$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.profile.SettingsUserProfileViewModel$observeHeaderViewState$1 */
+    /* JADX INFO: compiled from: EditUserOrGuildMemberProfileViewModel.kt */
     public static final class C99561<T, R> implements Func1<ViewState, UserProfileHeaderViewModel.ViewState> {
         public static final C99561 INSTANCE = new C99561();
 
@@ -632,7 +639,7 @@ public final class EditUserOrGuildMemberProfileViewModel2 extends AppViewModel<V
             return call2(viewState);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final UserProfileHeaderViewModel.ViewState call2(ViewState viewState) {
             String banner;
             GuildMember meMember;
@@ -675,8 +682,8 @@ public final class EditUserOrGuildMemberProfileViewModel2 extends AppViewModel<V
         }
     }
 
-    /* compiled from: EditUserOrGuildMemberProfileViewModel.kt */
-    /* renamed from: com.discord.widgets.settings.profile.SettingsUserProfileViewModel$saveGuildMemberChanges$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.profile.SettingsUserProfileViewModel$saveGuildMemberChanges$1 */
+    /* JADX INFO: compiled from: EditUserOrGuildMemberProfileViewModel.kt */
     public static final class C99571 extends Lambda implements Function1<Error, Unit> {
         public C99571() {
             super(1);
@@ -688,7 +695,7 @@ public final class EditUserOrGuildMemberProfileViewModel2 extends AppViewModel<V
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Error error) {
             Intrinsics3.checkNotNullParameter(error, "it");
             PublishSubject publishSubjectAccess$getEventSubject$p = EditUserOrGuildMemberProfileViewModel2.access$getEventSubject$p(EditUserOrGuildMemberProfileViewModel2.this);
@@ -696,8 +703,8 @@ public final class EditUserOrGuildMemberProfileViewModel2 extends AppViewModel<V
         }
     }
 
-    /* compiled from: EditUserOrGuildMemberProfileViewModel.kt */
-    /* renamed from: com.discord.widgets.settings.profile.SettingsUserProfileViewModel$saveGuildMemberChanges$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.profile.SettingsUserProfileViewModel$saveGuildMemberChanges$2 */
+    /* JADX INFO: compiled from: EditUserOrGuildMemberProfileViewModel.kt */
     public static final class C99582 extends Lambda implements Function1<com.discord.api.guildmember.GuildMember, Unit> {
         public final /* synthetic */ ViewState.Loaded $viewState;
 
@@ -713,7 +720,7 @@ public final class EditUserOrGuildMemberProfileViewModel2 extends AppViewModel<V
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(com.discord.api.guildmember.GuildMember guildMember) {
             Intrinsics3.checkNotNullParameter(guildMember, "apiMember");
             EditUserOrGuildMemberProfileViewModel2.access$getStoreGuilds$p(EditUserOrGuildMemberProfileViewModel2.this).handleGuildMember(com.discord.api.guildmember.GuildMember.m7915a(guildMember, EditUserOrGuildMemberProfileViewModel2.access$getGuildId$p(EditUserOrGuildMemberProfileViewModel2.this).longValue(), null, null, null, null, null, false, null, null, null, null, null, null, 8190), EditUserOrGuildMemberProfileViewModel2.access$getGuildId$p(EditUserOrGuildMemberProfileViewModel2.this).longValue(), true);
@@ -723,8 +730,8 @@ public final class EditUserOrGuildMemberProfileViewModel2 extends AppViewModel<V
         }
     }
 
-    /* compiled from: EditUserOrGuildMemberProfileViewModel.kt */
-    /* renamed from: com.discord.widgets.settings.profile.SettingsUserProfileViewModel$saveUserChanges$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.profile.SettingsUserProfileViewModel$saveUserChanges$1 */
+    /* JADX INFO: compiled from: EditUserOrGuildMemberProfileViewModel.kt */
     public static final class C99591 extends Lambda implements Function1<Error, Unit> {
         public C99591() {
             super(1);
@@ -736,7 +743,7 @@ public final class EditUserOrGuildMemberProfileViewModel2 extends AppViewModel<V
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Error error) {
             Intrinsics3.checkNotNullParameter(error, "it");
             PublishSubject publishSubjectAccess$getEventSubject$p = EditUserOrGuildMemberProfileViewModel2.access$getEventSubject$p(EditUserOrGuildMemberProfileViewModel2.this);
@@ -744,8 +751,8 @@ public final class EditUserOrGuildMemberProfileViewModel2 extends AppViewModel<V
         }
     }
 
-    /* compiled from: EditUserOrGuildMemberProfileViewModel.kt */
-    /* renamed from: com.discord.widgets.settings.profile.SettingsUserProfileViewModel$saveUserChanges$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.profile.SettingsUserProfileViewModel$saveUserChanges$2 */
+    /* JADX INFO: compiled from: EditUserOrGuildMemberProfileViewModel.kt */
     public static final class C99602 extends Lambda implements Function1<User, Unit> {
         public final /* synthetic */ MeUser $meUser;
         public final /* synthetic */ ViewState.Loaded $viewState;
@@ -763,7 +770,7 @@ public final class EditUserOrGuildMemberProfileViewModel2 extends AppViewModel<V
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(User user) {
             Intrinsics3.checkNotNullParameter(user, "apiUser");
             EditUserOrGuildMemberProfileViewModel2.access$getStoreUserProfile$p(EditUserOrGuildMemberProfileViewModel2.this).updateUser(user);

@@ -12,16 +12,16 @@ import p507d0.p592z.p594d.MutablePropertyReference1Impl;
 import p507d0.p592z.p594d.Reflection2;
 import p658rx.Observable;
 
-/* compiled from: StoreConnectionOpen.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: StoreConnectionOpen.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class StoreConnectionOpen extends StoreV2 {
     public static final /* synthetic */ KProperty[] $$delegatedProperties = {Reflection2.mutableProperty1(new MutablePropertyReference1Impl(StoreConnectionOpen.class, "isConnectionOpen", "isConnectionOpen()Z", 0))};
 
-    /* renamed from: isConnectionOpen$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: isConnectionOpen$delegate, reason: from kotlin metadata */
     private final StoreV2.MarkChangedDelegate isConnectionOpen = new StoreV2.MarkChangedDelegate(Boolean.FALSE, null, 2, null);
 
-    /* compiled from: StoreConnectionOpen.kt */
-    /* renamed from: com.discord.stores.StoreConnectionOpen$observeConnectionOpen$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreConnectionOpen$observeConnectionOpen$1 */
+    /* JADX INFO: compiled from: StoreConnectionOpen.kt */
     public static final class C58521 extends Lambda implements Function0<Boolean> {
         public C58521() {
             super(0);
@@ -32,7 +32,7 @@ public final class StoreConnectionOpen extends StoreV2 {
             return Boolean.valueOf(invoke2());
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final boolean invoke2() {
             return StoreConnectionOpen.access$isConnectionOpen$p(StoreConnectionOpen.this);
         }

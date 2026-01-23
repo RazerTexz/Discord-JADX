@@ -5,13 +5,13 @@ import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
-/* compiled from: Experimental.kt */
+/* JADX INFO: compiled from: Experimental.kt */
+/* JADX INFO: loaded from: classes.dex */
 @Target({ElementType.ANNOTATION_TYPE})
 @Retention(RetentionPolicy.CLASS)
-/* loaded from: classes.dex */
 public @interface Experimental {
 
-    /* compiled from: Experimental.kt */
+    /* JADX INFO: compiled from: Experimental.kt */
     public enum Level {
         WARNING,
         ERROR

@@ -6,8 +6,8 @@ import android.view.View;
 import android.widget.GridView;
 import androidx.annotation.RestrictTo;
 
+/* JADX INFO: loaded from: classes3.dex */
 @RestrictTo({RestrictTo.Scope.LIBRARY})
-/* loaded from: classes3.dex */
 public class NestedGridView extends GridView {
     public NestedGridView(Context context, AttributeSet attributeSet) {
         super(context, attributeSet);

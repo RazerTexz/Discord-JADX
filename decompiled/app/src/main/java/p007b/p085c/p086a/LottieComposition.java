@@ -15,76 +15,76 @@ import p007b.p085c.p086a.p095y.FontCharacter;
 import p007b.p085c.p086a.p095y.Marker2;
 import p007b.p085c.p086a.p095y.p098m.Layer2;
 
-/* compiled from: LottieComposition.java */
-/* renamed from: b.c.a.d, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.c.a.d, reason: use source file name */
+/* JADX INFO: compiled from: LottieComposition.java */
+/* JADX INFO: loaded from: classes.dex */
 public class LottieComposition {
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public Map<String, List<Layer2>> f2338c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public Map<String, LottieImageAsset> f2339d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public Map<String, Font> f2340e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public List<Marker2> f2341f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public SparseArrayCompat<FontCharacter> f2342g;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public LongSparseArray<Layer2> f2343h;
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public List<Layer2> f2344i;
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public Rect f2345j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public float f2346k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public float f2347l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public float f2348m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public boolean f2349n;
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final PerformanceTracker f2336a = new PerformanceTracker();
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final HashSet<String> f2337b = new HashSet<>();
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public int f2350o = 0;
 
     @RestrictTo({RestrictTo.Scope.LIBRARY})
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public void m669a(String str) {
         Logger2.m640b(str);
         this.f2337b.add(str);
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public float m670b() {
         return (long) ((m671c() / this.f2348m) * 1000.0f);
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public float m671c() {
         return this.f2347l - this.f2346k;
     }
 
     /* JADX WARN: Removed duplicated region for block: B:13:0x003d  */
     @Nullable
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
@@ -109,7 +109,7 @@ public class LottieComposition {
     }
 
     @RestrictTo({RestrictTo.Scope.LIBRARY})
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public Layer2 m673e(long j) {
         return this.f2343h.get(j);
     }

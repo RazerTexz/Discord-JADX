@@ -6,15 +6,15 @@ import p007b.p225i.p226a.p288f.p313h.p325l.C3691i1;
 import p007b.p225i.p226a.p288f.p313h.p325l.C3743m0;
 import p007b.p225i.p226a.p288f.p313h.p325l.C3769o0;
 
-/* compiled from: com.google.android.gms:play-services-measurement@@18.0.0 */
-/* renamed from: b.i.a.f.i.b.ha */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.i.b.ha */
+/* JADX INFO: compiled from: com.google.android.gms:play-services-measurement@@18.0.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public final class C4063ha extends AbstractC4027ea {
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public C3769o0 f10796g;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public final /* synthetic */ C3991ba f10797h;
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -25,24 +25,24 @@ public final class C4063ha extends AbstractC4027ea {
     }
 
     @Override // p007b.p225i.p226a.p288f.p330i.p332b.AbstractC4027ea
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final int mo5593a() {
         return this.f10796g.m5148w();
     }
 
     @Override // p007b.p225i.p226a.p288f.p330i.p332b.AbstractC4027ea
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public final boolean mo5594g() {
         return true;
     }
 
     @Override // p007b.p225i.p226a.p288f.p330i.p332b.AbstractC4027ea
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public final boolean mo5595h() {
         return false;
     }
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public final boolean m5662i(Long l, Long l2, C3691i1 c3691i1, boolean z2) {
         boolean z3 = C3657f9.m4881b() && this.f10797h.f11202a.f11260h.m5532u(this.f10698a, C4142p.f11062a0);
         boolean zM5151z = this.f10796g.m5151z();

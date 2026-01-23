@@ -31,137 +31,137 @@ import p007b.p225i.p226a.p242c.p256d3.RunnableC2658b;
 import p007b.p225i.p226a.p242c.p256d3.TimeBar;
 import p007b.p225i.p226a.p242c.p259f3.Util2;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public class DefaultTimeBar extends View implements TimeBar {
 
-    /* renamed from: A */
+    /* JADX INFO: renamed from: A */
     public final int f20063A;
 
-    /* renamed from: B */
+    /* JADX INFO: renamed from: B */
     public final int f20064B;
 
-    /* renamed from: C */
+    /* JADX INFO: renamed from: C */
     public final int f20065C;
 
-    /* renamed from: D */
+    /* JADX INFO: renamed from: D */
     public final StringBuilder f20066D;
 
-    /* renamed from: E */
+    /* JADX INFO: renamed from: E */
     public final Formatter f20067E;
 
-    /* renamed from: F */
+    /* JADX INFO: renamed from: F */
     public final Runnable f20068F;
 
-    /* renamed from: G */
+    /* JADX INFO: renamed from: G */
     public final CopyOnWriteArraySet<TimeBar.a> f20069G;
 
-    /* renamed from: H */
+    /* JADX INFO: renamed from: H */
     public final Point f20070H;
 
-    /* renamed from: I */
+    /* JADX INFO: renamed from: I */
     public final float f20071I;
 
-    /* renamed from: J */
+    /* JADX INFO: renamed from: J */
     public int f20072J;
 
-    /* renamed from: K */
+    /* JADX INFO: renamed from: K */
     public long f20073K;
 
-    /* renamed from: L */
+    /* JADX INFO: renamed from: L */
     public int f20074L;
 
-    /* renamed from: M */
+    /* JADX INFO: renamed from: M */
     public Rect f20075M;
 
-    /* renamed from: N */
+    /* JADX INFO: renamed from: N */
     public ValueAnimator f20076N;
 
-    /* renamed from: O */
+    /* JADX INFO: renamed from: O */
     public float f20077O;
 
-    /* renamed from: P */
+    /* JADX INFO: renamed from: P */
     public boolean f20078P;
 
-    /* renamed from: Q */
+    /* JADX INFO: renamed from: Q */
     public long f20079Q;
 
-    /* renamed from: R */
+    /* JADX INFO: renamed from: R */
     public long f20080R;
 
-    /* renamed from: S */
+    /* JADX INFO: renamed from: S */
     public long f20081S;
 
-    /* renamed from: T */
+    /* JADX INFO: renamed from: T */
     public long f20082T;
 
-    /* renamed from: U */
+    /* JADX INFO: renamed from: U */
     public int f20083U;
 
-    /* renamed from: V */
+    /* JADX INFO: renamed from: V */
     @Nullable
     public long[] f20084V;
 
-    /* renamed from: W */
+    /* JADX INFO: renamed from: W */
     @Nullable
     public boolean[] f20085W;
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final Rect f20086j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final Rect f20087k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final Rect f20088l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public final Rect f20089m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public final Paint f20090n;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public final Paint f20091o;
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public final Paint f20092p;
 
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     public final Paint f20093q;
 
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     public final Paint f20094r;
 
-    /* renamed from: s */
+    /* JADX INFO: renamed from: s */
     public final Paint f20095s;
 
-    /* renamed from: t */
+    /* JADX INFO: renamed from: t */
     @Nullable
     public final Drawable f20096t;
 
-    /* renamed from: u */
+    /* JADX INFO: renamed from: u */
     public final int f20097u;
 
-    /* renamed from: v */
+    /* JADX INFO: renamed from: v */
     public final int f20098v;
 
-    /* renamed from: w */
+    /* JADX INFO: renamed from: w */
     public final int f20099w;
 
-    /* renamed from: x */
+    /* JADX INFO: renamed from: x */
     public final int f20100x;
 
-    /* renamed from: y */
+    /* JADX INFO: renamed from: y */
     public final int f20101y;
 
-    /* renamed from: z */
+    /* JADX INFO: renamed from: z */
     public final int f20102z;
 
     public DefaultTimeBar(Context context, @Nullable AttributeSet attributeSet) {
         this(context, attributeSet, 0, attributeSet);
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public static int m8885c(float f, int i) {
         return (int) ((i * f) + 0.5f);
     }
@@ -175,7 +175,7 @@ public class DefaultTimeBar extends View implements TimeBar {
         if (j2 == -9223372036854775807L) {
             return 0L;
         }
-        return j2 / this.f20072J;
+        return j2 / ((long) this.f20072J);
     }
 
     private String getProgressText() {
@@ -186,11 +186,11 @@ public class DefaultTimeBar extends View implements TimeBar {
         if (this.f20087k.width() <= 0 || this.f20080R == -9223372036854775807L) {
             return 0L;
         }
-        return (this.f20089m.width() * this.f20080R) / this.f20087k.width();
+        return (((long) this.f20089m.width()) * this.f20080R) / ((long) this.f20087k.width());
     }
 
     @Override // p007b.p225i.p226a.p242c.p256d3.TimeBar
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public void mo2761a(@Nullable long[] jArr, @Nullable boolean[] zArr, int i) {
         AnimatableValueParser.m531j(i == 0 || !(jArr == null || zArr == null));
         this.f20083U = i;
@@ -200,12 +200,12 @@ public class DefaultTimeBar extends View implements TimeBar {
     }
 
     @Override // p007b.p225i.p226a.p242c.p256d3.TimeBar
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public void mo2762b(TimeBar.a aVar) {
         this.f20069G.add(aVar);
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final void m8886d(float f) {
         Rect rect = this.f20089m;
         Rect rect2 = this.f20087k;
@@ -218,7 +218,7 @@ public class DefaultTimeBar extends View implements TimeBar {
         m8891i();
     }
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final boolean m8887e(long j) {
         long j2 = this.f20080R;
         if (j2 <= 0) {
@@ -238,7 +238,7 @@ public class DefaultTimeBar extends View implements TimeBar {
         return true;
     }
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final void m8888f(long j) {
         this.f20079Q = j;
         this.f20078P = true;
@@ -253,7 +253,7 @@ public class DefaultTimeBar extends View implements TimeBar {
         }
     }
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public final void m8889g(boolean z2) {
         removeCallbacks(this.f20068F);
         this.f20078P = false;
@@ -275,23 +275,23 @@ public class DefaultTimeBar extends View implements TimeBar {
         if (iWidth != 0) {
             long j = this.f20080R;
             if (j != 0 && j != -9223372036854775807L) {
-                return j / iWidth;
+                return j / ((long) iWidth);
             }
         }
         return RecyclerView.FOREVER_NS;
     }
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public final void m8890h() {
         this.f20088l.set(this.f20087k);
         this.f20089m.set(this.f20087k);
         long j = this.f20078P ? this.f20079Q : this.f20081S;
         if (this.f20080R > 0) {
-            int iWidth = (int) ((this.f20087k.width() * this.f20082T) / this.f20080R);
+            int iWidth = (int) ((((long) this.f20087k.width()) * this.f20082T) / this.f20080R);
             Rect rect = this.f20088l;
             Rect rect2 = this.f20087k;
             rect.right = Math.min(rect2.left + iWidth, rect2.right);
-            int iWidth2 = (int) ((this.f20087k.width() * j) / this.f20080R);
+            int iWidth2 = (int) ((((long) this.f20087k.width()) * j) / this.f20080R);
             Rect rect3 = this.f20089m;
             Rect rect4 = this.f20087k;
             rect3.right = Math.min(rect4.left + iWidth2, rect4.right);
@@ -304,7 +304,7 @@ public class DefaultTimeBar extends View implements TimeBar {
         invalidate(this.f20086j);
     }
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public final void m8891i() {
         Drawable drawable = this.f20096t;
         if (drawable != null && drawable.isStateful() && this.f20096t.setState(getDrawableState())) {
@@ -312,7 +312,7 @@ public class DefaultTimeBar extends View implements TimeBar {
         }
     }
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final void m8892j(long j) {
         if (this.f20079Q == j) {
             return;
@@ -366,7 +366,7 @@ public class DefaultTimeBar extends View implements TimeBar {
                 Objects.requireNonNull(zArr);
                 int i5 = this.f20100x / 2;
                 for (int i6 = 0; i6 < this.f20083U; i6++) {
-                    int iWidth = ((int) ((this.f20087k.width() * Util2.m3001i(jArr[i6], 0L, this.f20080R)) / this.f20080R)) - i5;
+                    int iWidth = ((int) ((((long) this.f20087k.width()) * Util2.m3001i(jArr[i6], 0L, this.f20080R)) / this.f20080R)) - i5;
                     Rect rect4 = this.f20087k;
                     canvas.drawRect(Math.min(rect4.width() - this.f20100x, Math.max(0, iWidth)) + rect4.left, iCenterY, r1 + this.f20100x, i, zArr[i6] ? this.f20094r : this.f20093q);
                 }

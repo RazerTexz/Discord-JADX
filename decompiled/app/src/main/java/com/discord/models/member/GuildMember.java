@@ -21,11 +21,11 @@ import p001a0.p002a.p003a.C0002b;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: GuildMember.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: GuildMember.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class GuildMember {
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private static final List<Long> emptyRoles = new ArrayList();
     private final String avatarHash;
@@ -42,11 +42,12 @@ public final /* data */ class GuildMember {
     private final List<Long> roles;
     private final long userId;
 
-    /* compiled from: GuildMember.kt */
+    /* JADX INFO: compiled from: GuildMember.kt */
     public static final class Companion {
         private Companion() {
         }
 
+        /* JADX WARN: Multi-variable type inference failed */
         public static /* synthetic */ GuildMember from$default(Companion companion, com.discord.api.guildmember.GuildMember guildMember, long j, Map map, StoreGuilds storeGuilds, int i, Object obj) {
             return companion.from(guildMember, j, (i & 4) != 0 ? null : map, (i & 8) != 0 ? null : storeGuilds);
         }
@@ -177,6 +178,7 @@ public final /* data */ class GuildMember {
         return this.roles;
     }
 
+    /* JADX WARN: Multi-variable type inference failed */
     public static /* synthetic */ GuildMember copy$default(GuildMember guildMember, int i, long j, List list, String str, String str2, boolean z2, UtcDateTime utcDateTime, long j2, long j3, String str3, String str4, String str5, UtcDateTime utcDateTime2, int i2, Object obj) {
         return guildMember.copy((i2 & 1) != 0 ? guildMember.color : i, (i2 & 2) != 0 ? guildMember.hoistRoleId : j, (i2 & 4) != 0 ? guildMember.roles : list, (i2 & 8) != 0 ? guildMember.nick : str, (i2 & 16) != 0 ? guildMember.premiumSince : str2, (i2 & 32) != 0 ? guildMember.pending : z2, (i2 & 64) != 0 ? guildMember.joinedAt : utcDateTime, (i2 & 128) != 0 ? guildMember.guildId : j2, (i2 & 256) != 0 ? guildMember.userId : j3, (i2 & 512) != 0 ? guildMember.avatarHash : str3, (i2 & 1024) != 0 ? guildMember.bannerHash : str4, (i2 & 2048) != 0 ? guildMember.bio : str5, (i2 & 4096) != 0 ? guildMember.communicationDisabledUntil : utcDateTime2);
     }
@@ -193,62 +195,62 @@ public final /* data */ class GuildMember {
         return INSTANCE.getNickOrUsername(guildMember, user);
     }
 
-    /* renamed from: component1, reason: from getter */
+    /* JADX INFO: renamed from: component1, reason: from getter */
     public final int getColor() {
         return this.color;
     }
 
-    /* renamed from: component10, reason: from getter */
+    /* JADX INFO: renamed from: component10, reason: from getter */
     public final String getAvatarHash() {
         return this.avatarHash;
     }
 
-    /* renamed from: component11, reason: from getter */
+    /* JADX INFO: renamed from: component11, reason: from getter */
     public final String getBannerHash() {
         return this.bannerHash;
     }
 
-    /* renamed from: component12, reason: from getter */
+    /* JADX INFO: renamed from: component12, reason: from getter */
     public final String getBio() {
         return this.bio;
     }
 
-    /* renamed from: component13, reason: from getter */
+    /* JADX INFO: renamed from: component13, reason: from getter */
     public final UtcDateTime getCommunicationDisabledUntil() {
         return this.communicationDisabledUntil;
     }
 
-    /* renamed from: component2, reason: from getter */
+    /* JADX INFO: renamed from: component2, reason: from getter */
     public final long getHoistRoleId() {
         return this.hoistRoleId;
     }
 
-    /* renamed from: component4, reason: from getter */
+    /* JADX INFO: renamed from: component4, reason: from getter */
     public final String getNick() {
         return this.nick;
     }
 
-    /* renamed from: component5, reason: from getter */
+    /* JADX INFO: renamed from: component5, reason: from getter */
     public final String getPremiumSince() {
         return this.premiumSince;
     }
 
-    /* renamed from: component6, reason: from getter */
+    /* JADX INFO: renamed from: component6, reason: from getter */
     public final boolean getPending() {
         return this.pending;
     }
 
-    /* renamed from: component7, reason: from getter */
+    /* JADX INFO: renamed from: component7, reason: from getter */
     public final UtcDateTime getJoinedAt() {
         return this.joinedAt;
     }
 
-    /* renamed from: component8, reason: from getter */
+    /* JADX INFO: renamed from: component8, reason: from getter */
     public final long getGuildId() {
         return this.guildId;
     }
 
-    /* renamed from: component9, reason: from getter */
+    /* JADX INFO: renamed from: component9, reason: from getter */
     public final long getUserId() {
         return this.userId;
     }
@@ -338,6 +340,9 @@ public final /* data */ class GuildMember {
     }
 
     /* JADX WARN: Multi-variable type inference failed */
+    /* JADX WARN: Type inference failed for: r0v12, types: [int] */
+    /* JADX WARN: Type inference failed for: r0v33 */
+    /* JADX WARN: Type inference failed for: r0v37 */
     public int hashCode() {
         int iM3a = (C0002b.m3a(this.hoistRoleId) + (this.color * 31)) * 31;
         List<Long> list = this.roles;
@@ -347,13 +352,13 @@ public final /* data */ class GuildMember {
         String str2 = this.premiumSince;
         int iHashCode3 = (iHashCode2 + (str2 != null ? str2.hashCode() : 0)) * 31;
         boolean z2 = this.pending;
-        int i = z2;
-        if (z2 != 0) {
-            i = 1;
+        ?? r0 = z2;
+        if (z2) {
+            r0 = 1;
         }
-        int i2 = (iHashCode3 + i) * 31;
+        int i = (iHashCode3 + r0) * 31;
         UtcDateTime utcDateTime = this.joinedAt;
-        int iM3a2 = (C0002b.m3a(this.userId) + ((C0002b.m3a(this.guildId) + ((i2 + (utcDateTime != null ? utcDateTime.hashCode() : 0)) * 31)) * 31)) * 31;
+        int iM3a2 = (C0002b.m3a(this.userId) + ((C0002b.m3a(this.guildId) + ((i + (utcDateTime != null ? utcDateTime.hashCode() : 0)) * 31)) * 31)) * 31;
         String str3 = this.avatarHash;
         int iHashCode4 = (iM3a2 + (str3 != null ? str3.hashCode() : 0)) * 31;
         String str4 = this.bannerHash;

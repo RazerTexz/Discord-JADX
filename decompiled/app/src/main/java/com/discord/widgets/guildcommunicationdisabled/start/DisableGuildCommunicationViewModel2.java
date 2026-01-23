@@ -6,9 +6,9 @@ import com.discord.widgets.guildcommunicationdisabled.start.DisableGuildCommunic
 import kotlin.jvm.functions.Function0;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: DisableGuildCommunicationViewModel.kt */
-/* renamed from: com.discord.widgets.guildcommunicationdisabled.start.DisableGuildCommunicationViewModel$Companion$observeStores$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.guildcommunicationdisabled.start.DisableGuildCommunicationViewModel$Companion$observeStores$1, reason: use source file name */
+/* JADX INFO: compiled from: DisableGuildCommunicationViewModel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class DisableGuildCommunicationViewModel2 extends Lambda implements Function0<DisableGuildCommunicationViewModel.StoreState> {
     public final /* synthetic */ long $guildId;
     public final /* synthetic */ StoreGuilds $guildsStore;

@@ -4,9 +4,9 @@ import com.discord.widgets.channels.permissions.WidgetChannelSettingsPermissions
 import p507d0.p580t.Collections2;
 import p507d0.p580t.CollectionsJVM;
 
-/* compiled from: WidgetChannelSettingsPermissionsOverviewViewModel.kt */
-/* renamed from: com.discord.widgets.channels.permissions.WidgetChannelSettingsPermissionsOverviewViewModelKt, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.channels.permissions.WidgetChannelSettingsPermissionsOverviewViewModelKt, reason: use source file name */
+/* JADX INFO: compiled from: WidgetChannelSettingsPermissionsOverviewViewModel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetChannelSettingsPermissionsOverviewViewModel2 {
     public static final /* synthetic */ WidgetChannelSettingsPermissionsOverviewViewModel.ViewState access$generateInitialViewState(boolean z2) {
         return generateInitialViewState(z2);

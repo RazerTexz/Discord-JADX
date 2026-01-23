@@ -29,15 +29,15 @@ import p658rx.Observable;
 import p658rx.Subscription;
 import p658rx.functions.Func2;
 
-/* compiled from: GuildBoostInProgressViewModel.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: GuildBoostInProgressViewModel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class GuildBoostInProgressViewModel extends AppViewModel<ViewState> {
     private Subscription guildBoostSubscription;
     private final long guildId;
     private final StoreGuildBoost storeGuildBoost;
 
-    /* compiled from: GuildBoostInProgressViewModel.kt */
-    /* renamed from: com.discord.widgets.servers.guildboost.GuildBoostInProgressViewModel$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.guildboost.GuildBoostInProgressViewModel$1 */
+    /* JADX INFO: compiled from: GuildBoostInProgressViewModel.kt */
     public static final class C94931<T1, T2, R> implements Func2<Guild, StoreGuildBoost.State, StoreState> {
         public static final C94931 INSTANCE = new C94931();
 
@@ -46,15 +46,15 @@ public final class GuildBoostInProgressViewModel extends AppViewModel<ViewState>
             return call2(guild, state);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final StoreState call2(Guild guild, StoreGuildBoost.State state) {
             Intrinsics3.checkNotNullExpressionValue(state, "guildBoostState");
             return new StoreState(guild, state);
         }
     }
 
-    /* compiled from: GuildBoostInProgressViewModel.kt */
-    /* renamed from: com.discord.widgets.servers.guildboost.GuildBoostInProgressViewModel$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.guildboost.GuildBoostInProgressViewModel$2 */
+    /* JADX INFO: compiled from: GuildBoostInProgressViewModel.kt */
     public static final class C94942 extends Lambda implements Function1<StoreState, Unit> {
         public C94942() {
             super(1);
@@ -66,14 +66,14 @@ public final class GuildBoostInProgressViewModel extends AppViewModel<ViewState>
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(StoreState storeState) {
             Intrinsics3.checkNotNullParameter(storeState, "storeState");
             GuildBoostInProgressViewModel.access$handleStoreState(GuildBoostInProgressViewModel.this, storeState);
         }
     }
 
-    /* compiled from: GuildBoostInProgressViewModel.kt */
+    /* JADX INFO: compiled from: GuildBoostInProgressViewModel.kt */
     public enum GuildBoostState {
         NOT_IN_PROGRESS,
         CALL_IN_PROGRESS,
@@ -81,7 +81,7 @@ public final class GuildBoostInProgressViewModel extends AppViewModel<ViewState>
         ERROR
     }
 
-    /* compiled from: GuildBoostInProgressViewModel.kt */
+    /* JADX INFO: compiled from: GuildBoostInProgressViewModel.kt */
     public static final /* data */ class StoreState {
         private final Guild guild;
         private final StoreGuildBoost.State guildBoostState;
@@ -102,12 +102,12 @@ public final class GuildBoostInProgressViewModel extends AppViewModel<ViewState>
             return storeState.copy(guild, state);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final Guild getGuild() {
             return this.guild;
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final StoreGuildBoost.State getGuildBoostState() {
             return this.guildBoostState;
         }
@@ -153,11 +153,11 @@ public final class GuildBoostInProgressViewModel extends AppViewModel<ViewState>
         }
     }
 
-    /* compiled from: GuildBoostInProgressViewModel.kt */
+    /* JADX INFO: compiled from: GuildBoostInProgressViewModel.kt */
     public static abstract class ViewState {
         private final GuildBoostState guildBoostState;
 
-        /* compiled from: GuildBoostInProgressViewModel.kt */
+        /* JADX INFO: compiled from: GuildBoostInProgressViewModel.kt */
         public static final /* data */ class Loaded extends ViewState {
             private final boolean canShowConfirmationDialog;
             private final Guild guild;
@@ -188,17 +188,17 @@ public final class GuildBoostInProgressViewModel extends AppViewModel<ViewState>
                 return getGuildBoostState();
             }
 
-            /* renamed from: component2, reason: from getter */
+            /* JADX INFO: renamed from: component2, reason: from getter */
             public final Guild getGuild() {
                 return this.guild;
             }
 
-            /* renamed from: component3, reason: from getter */
+            /* JADX INFO: renamed from: component3, reason: from getter */
             public final int getSubscriptionCount() {
                 return this.subscriptionCount;
             }
 
-            /* renamed from: component4, reason: from getter */
+            /* JADX INFO: renamed from: component4, reason: from getter */
             public final boolean getCanShowConfirmationDialog() {
                 return this.canShowConfirmationDialog;
             }
@@ -237,17 +237,20 @@ public final class GuildBoostInProgressViewModel extends AppViewModel<ViewState>
             }
 
             /* JADX WARN: Multi-variable type inference failed */
+            /* JADX WARN: Type inference failed for: r1v4, types: [int] */
+            /* JADX WARN: Type inference failed for: r1v5 */
+            /* JADX WARN: Type inference failed for: r1v7 */
             public int hashCode() {
                 GuildBoostState guildBoostState = getGuildBoostState();
                 int iHashCode = (guildBoostState != null ? guildBoostState.hashCode() : 0) * 31;
                 Guild guild = this.guild;
                 int iHashCode2 = (((iHashCode + (guild != null ? guild.hashCode() : 0)) * 31) + this.subscriptionCount) * 31;
                 boolean z2 = this.canShowConfirmationDialog;
-                int i = z2;
-                if (z2 != 0) {
-                    i = 1;
+                ?? r1 = z2;
+                if (z2) {
+                    r1 = 1;
                 }
-                return iHashCode2 + i;
+                return iHashCode2 + r1;
             }
 
             public String toString() {
@@ -272,7 +275,7 @@ public final class GuildBoostInProgressViewModel extends AppViewModel<ViewState>
             }
         }
 
-        /* compiled from: GuildBoostInProgressViewModel.kt */
+        /* JADX INFO: compiled from: GuildBoostInProgressViewModel.kt */
         public static final /* data */ class Uninitialized extends ViewState {
             private final GuildBoostState guildBoostState;
 
@@ -340,8 +343,8 @@ public final class GuildBoostInProgressViewModel extends AppViewModel<ViewState>
         }
     }
 
-    /* compiled from: GuildBoostInProgressViewModel.kt */
-    /* renamed from: com.discord.widgets.servers.guildboost.GuildBoostInProgressViewModel$subscribeToGuildBoost$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.guildboost.GuildBoostInProgressViewModel$subscribeToGuildBoost$1 */
+    /* JADX INFO: compiled from: GuildBoostInProgressViewModel.kt */
     public static final class C94951 extends Lambda implements Function1<Subscription, Unit> {
         public C94951() {
             super(1);
@@ -353,15 +356,15 @@ public final class GuildBoostInProgressViewModel extends AppViewModel<ViewState>
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Subscription subscription) {
             Intrinsics3.checkNotNullParameter(subscription, "it");
             GuildBoostInProgressViewModel.access$setGuildBoostSubscription$p(GuildBoostInProgressViewModel.this, subscription);
         }
     }
 
-    /* compiled from: GuildBoostInProgressViewModel.kt */
-    /* renamed from: com.discord.widgets.servers.guildboost.GuildBoostInProgressViewModel$subscribeToGuildBoost$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.guildboost.GuildBoostInProgressViewModel$subscribeToGuildBoost$2 */
+    /* JADX INFO: compiled from: GuildBoostInProgressViewModel.kt */
     public static final class C94962 extends Lambda implements Function1<Error, Unit> {
         public C94962() {
             super(1);
@@ -373,15 +376,15 @@ public final class GuildBoostInProgressViewModel extends AppViewModel<ViewState>
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Error error) {
             Intrinsics3.checkNotNullParameter(error, "it");
             GuildBoostInProgressViewModel.access$handleGuildBoostingError(GuildBoostInProgressViewModel.this);
         }
     }
 
-    /* compiled from: GuildBoostInProgressViewModel.kt */
-    /* renamed from: com.discord.widgets.servers.guildboost.GuildBoostInProgressViewModel$subscribeToGuildBoost$3 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.guildboost.GuildBoostInProgressViewModel$subscribeToGuildBoost$3 */
+    /* JADX INFO: compiled from: GuildBoostInProgressViewModel.kt */
     public static final class C94973 extends Lambda implements Function1<List<? extends ModelAppliedGuildBoost>, Unit> {
         public C94973() {
             super(1);
@@ -393,7 +396,7 @@ public final class GuildBoostInProgressViewModel extends AppViewModel<ViewState>
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(List<ModelAppliedGuildBoost> list) {
             Intrinsics3.checkNotNullParameter(list, "it");
             GuildBoostInProgressViewModel.access$handleGuildBoostingCompleted(GuildBoostInProgressViewModel.this);

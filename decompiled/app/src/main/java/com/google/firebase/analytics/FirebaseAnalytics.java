@@ -20,14 +20,14 @@ import p007b.p225i.p226a.p288f.p330i.p332b.InterfaceC3988b7;
 import p007b.p225i.p361c.p362j.C4559b;
 import p007b.p225i.p361c.p401u.FirebaseInstallations4;
 
-/* compiled from: com.google.android.gms:play-services-measurement-api@@18.0.0 */
-/* loaded from: classes3.dex */
+/* JADX INFO: compiled from: com.google.android.gms:play-services-measurement-api@@18.0.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public final class FirebaseAnalytics {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static volatile FirebaseAnalytics f21403a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final C3661g f21404b;
 
     public FirebaseAnalytics(C3661g c3661g) {

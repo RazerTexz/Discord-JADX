@@ -20,24 +20,24 @@ import p007b.p225i.p361c.p369m.p370d.p384s.SettingsController;
 import p007b.p225i.p361c.p369m.p370d.p384s.SettingsDataProvider;
 import p007b.p225i.p361c.p369m.p370d.p384s.p385h.Settings2;
 
-/* compiled from: CrashlyticsController.java */
-/* renamed from: b.i.c.m.d.k.d0 */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.c.m.d.k.d0 */
+/* JADX INFO: compiled from: CrashlyticsController.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class CallableC4617d0 implements Callable<Task<Void>> {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final /* synthetic */ Date f12273j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final /* synthetic */ Throwable f12274k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final /* synthetic */ Thread f12275l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public final /* synthetic */ SettingsDataProvider f12276m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public final /* synthetic */ C4663x f12277n;
 
     public CallableC4617d0(C4663x c4663x, Date date, Throwable th, Thread thread, SettingsDataProvider settingsDataProvider) {
@@ -48,19 +48,10 @@ public class CallableC4617d0 implements Callable<Task<Void>> {
         this.f12276m = settingsDataProvider;
     }
 
-    /* JADX WARN: Removed duplicated region for block: B:26:0x00ec  */
-    /* JADX WARN: Removed duplicated region for block: B:29:0x00f1  */
-    /* JADX WARN: Removed duplicated region for block: B:32:0x0122  */
-    /* JADX WARN: Removed duplicated region for block: B:33:0x0127  */
     @Override // java.util.concurrent.Callable
-    /*
-        Code decompiled incorrectly, please refer to instructions dump.
-    */
     public Task<Void> call() throws Exception {
         ClsFileOutputStream clsFileOutputStream;
         CodedOutputStream2 codedOutputStream2M6646i;
-        File[] fileArrListFiles;
-        File[] fileArrListFiles2;
         long time = this.f12273j.getTime() / 1000;
         String strM6474i = this.f12277n.m6474i();
         CodedOutputStream2 codedOutputStream2 = null;
@@ -92,33 +83,6 @@ public class CallableC4617d0 implements Callable<Task<Void>> {
                         if (Logger3.f12227a.m6370a(6)) {
                             Log.e("FirebaseCrashlytics", "An error occurred in the fatal exception logger", e);
                         }
-                        CommonUtils.m6414h(codedOutputStream2M6646i, "Failed to flush to session begin file.");
-                        CommonUtils.m6409c(clsFileOutputStream, "Failed to close fatal exception file output stream.");
-                        this.f12277n.m6472g(this.f12273j.getTime());
-                        Settings2 settings2M6685c = ((SettingsController) this.f12276m).m6685c();
-                        int i = settings2M6685c.mo6690b().f12758a;
-                        Objects.requireNonNull(settings2M6685c.mo6690b());
-                        this.f12277n.m6471f(i, false);
-                        C4663x.m6461a(this.f12277n);
-                        C4663x c4663x2 = this.f12277n;
-                        File fileM6477m = c4663x2.m6477m();
-                        File fileM6475k = c4663x2.m6475k();
-                        Comparator<File> comparator = C4663x.f12418d;
-                        FilenameFilter filenameFilter = Utils3.f12313a;
-                        ArrayList arrayList = new ArrayList();
-                        fileArrListFiles = fileM6477m.listFiles();
-                        FilenameFilter filenameFilter2 = Utils3.f12313a;
-                        fileArrListFiles2 = fileM6475k.listFiles(filenameFilter2);
-                        if (fileArrListFiles == null) {
-                        }
-                        if (fileArrListFiles2 == null) {
-                        }
-                        arrayList.addAll(Arrays.asList(fileArrListFiles));
-                        arrayList.addAll(Arrays.asList(fileArrListFiles2));
-                        int iM6434c = 4 - Utils3.m6434c(arrayList, 4, comparator);
-                        Utils3.m6433b(c4663x2.m6476l(), C4663x.f12416b, iM6434c - Utils3.m6433b(c4663x2.m6478n(), filenameFilter2, iM6434c, comparator), comparator);
-                        if (this.f12277n.f12430j.m6450b()) {
-                        }
                     }
                 } catch (Throwable th3) {
                     th = th3;
@@ -147,31 +111,31 @@ public class CallableC4617d0 implements Callable<Task<Void>> {
         CommonUtils.m6414h(codedOutputStream2M6646i, "Failed to flush to session begin file.");
         CommonUtils.m6409c(clsFileOutputStream, "Failed to close fatal exception file output stream.");
         this.f12277n.m6472g(this.f12273j.getTime());
-        Settings2 settings2M6685c2 = ((SettingsController) this.f12276m).m6685c();
-        int i2 = settings2M6685c2.mo6690b().f12758a;
-        Objects.requireNonNull(settings2M6685c2.mo6690b());
-        this.f12277n.m6471f(i2, false);
+        Settings2 settings2M6685c = ((SettingsController) this.f12276m).m6685c();
+        int i = settings2M6685c.mo6690b().f12758a;
+        Objects.requireNonNull(settings2M6685c.mo6690b());
+        this.f12277n.m6471f(i, false);
         C4663x.m6461a(this.f12277n);
-        C4663x c4663x22 = this.f12277n;
-        File fileM6477m2 = c4663x22.m6477m();
-        File fileM6475k2 = c4663x22.m6475k();
-        Comparator<File> comparator2 = C4663x.f12418d;
-        FilenameFilter filenameFilter3 = Utils3.f12313a;
-        ArrayList arrayList2 = new ArrayList();
-        fileArrListFiles = fileM6477m2.listFiles();
-        FilenameFilter filenameFilter22 = Utils3.f12313a;
-        fileArrListFiles2 = fileM6475k2.listFiles(filenameFilter22);
+        C4663x c4663x2 = this.f12277n;
+        File fileM6477m = c4663x2.m6477m();
+        File fileM6475k = c4663x2.m6475k();
+        Comparator<File> comparator = C4663x.f12418d;
+        FilenameFilter filenameFilter = Utils3.f12313a;
+        ArrayList arrayList = new ArrayList();
+        File[] fileArrListFiles = fileM6477m.listFiles();
+        FilenameFilter filenameFilter2 = Utils3.f12313a;
+        File[] fileArrListFiles2 = fileM6475k.listFiles(filenameFilter2);
         if (fileArrListFiles == null) {
             fileArrListFiles = new File[0];
         }
         if (fileArrListFiles2 == null) {
             fileArrListFiles2 = new File[0];
         }
-        arrayList2.addAll(Arrays.asList(fileArrListFiles));
-        arrayList2.addAll(Arrays.asList(fileArrListFiles2));
-        int iM6434c2 = 4 - Utils3.m6434c(arrayList2, 4, comparator2);
-        Utils3.m6433b(c4663x22.m6476l(), C4663x.f12416b, iM6434c2 - Utils3.m6433b(c4663x22.m6478n(), filenameFilter22, iM6434c2, comparator2), comparator2);
-        if (this.f12277n.f12430j.m6450b()) {
+        arrayList.addAll(Arrays.asList(fileArrListFiles));
+        arrayList.addAll(Arrays.asList(fileArrListFiles2));
+        int iM6434c = 4 - Utils3.m6434c(arrayList, 4, comparator);
+        Utils3.m6433b(c4663x2.m6476l(), C4663x.f12416b, iM6434c - Utils3.m6433b(c4663x2.m6478n(), filenameFilter2, iM6434c, comparator), comparator);
+        if (!this.f12277n.f12430j.m6450b()) {
             return C3404f.m4264Z(null);
         }
         Executor executor = this.f12277n.f12433m.f12315a;

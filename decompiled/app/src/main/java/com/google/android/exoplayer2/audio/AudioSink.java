@@ -8,7 +8,7 @@ import p007b.p225i.p226a.p242c.PlaybackParameters;
 import p007b.p225i.p226a.p242c.p263t2.AudioAttributes;
 import p007b.p225i.p226a.p242c.p263t2.AuxEffectInfo;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public interface AudioSink {
 
     public static final class InitializationException extends Exception {
@@ -64,75 +64,75 @@ public interface AudioSink {
         }
     }
 
-    /* renamed from: com.google.android.exoplayer2.audio.AudioSink$a */
+    /* JADX INFO: renamed from: com.google.android.exoplayer2.audio.AudioSink$a */
     public interface InterfaceC10686a {
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     boolean mo8757a(Format2 format2);
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     boolean mo8758b();
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     PlaybackParameters mo8759c();
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     void mo8760d();
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     void mo8761e();
 
     void flush();
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     void mo8762i(PlaybackParameters playbackParameters);
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     void mo8763j() throws WriteException;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     boolean mo8764k();
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     void mo8765l(int i);
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     long mo8766m(boolean z2);
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     void mo8767n();
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     void mo8768o(AudioAttributes audioAttributes);
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     void mo8769p();
 
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     void mo8770q(float f);
 
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     void mo8771r();
 
     void reset();
 
-    /* renamed from: s */
+    /* JADX INFO: renamed from: s */
     boolean mo8772s(ByteBuffer byteBuffer, long j, int i) throws WriteException, InitializationException;
 
-    /* renamed from: t */
+    /* JADX INFO: renamed from: t */
     void mo8773t(InterfaceC10686a interfaceC10686a);
 
-    /* renamed from: u */
+    /* JADX INFO: renamed from: u */
     int mo8774u(Format2 format2);
 
-    /* renamed from: v */
+    /* JADX INFO: renamed from: v */
     void mo8775v(Format2 format2, int i, @Nullable int[] iArr) throws ConfigurationException;
 
-    /* renamed from: w */
+    /* JADX INFO: renamed from: w */
     void mo8776w(boolean z2);
 
-    /* renamed from: x */
+    /* JADX INFO: renamed from: x */
     void mo8777x(AuxEffectInfo auxEffectInfo);
 
     public static final class ConfigurationException extends Exception {

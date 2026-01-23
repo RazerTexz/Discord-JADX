@@ -13,7 +13,7 @@ import lombok.installer.IdeLocation;
 import lombok.installer.IdeLocationProvider;
 import lombok.installer.OsUtils;
 
-/* loaded from: discord-126021.apk:lombok/installer/eclipse/EclipseProductLocationProvider.SCL.lombok */
+/* JADX INFO: loaded from: discord-126021.apk:lombok/installer/eclipse/EclipseProductLocationProvider.SCL.lombok */
 public class EclipseProductLocationProvider implements IdeLocationProvider {
     private final EclipseProductDescriptor descriptor;
     private static /* synthetic */ int[] $SWITCH_TABLE$lombok$installer$OsUtils$OS;
@@ -203,7 +203,7 @@ public class EclipseProductLocationProvider implements IdeLocationProvider {
         return dirs;
     }
 
-    /* loaded from: discord-126021.apk:lombok/installer/eclipse/EclipseProductLocationProvider$UnixFinder.SCL.lombok */
+    /* JADX INFO: loaded from: discord-126021.apk:lombok/installer/eclipse/EclipseProductLocationProvider$UnixFinder.SCL.lombok */
     private class UnixFinder extends DirectoryFinder {
         UnixFinder() {
             super(EclipseProductLocationProvider.access$0(EclipseProductLocationProvider.this), EclipseProductLocationProvider.access$1(EclipseProductLocationProvider.this));
@@ -250,7 +250,7 @@ public class EclipseProductLocationProvider implements IdeLocationProvider {
         return path.length() > 1 && path.charAt(1) == ':';
     }
 
-    /* loaded from: discord-126021.apk:lombok/installer/eclipse/EclipseProductLocationProvider$WindowsFinder.SCL.lombok */
+    /* JADX INFO: loaded from: discord-126021.apk:lombok/installer/eclipse/EclipseProductLocationProvider$WindowsFinder.SCL.lombok */
     private class WindowsFinder extends DirectoryFinder {
         WindowsFinder() {
             super(EclipseProductLocationProvider.access$4(EclipseProductLocationProvider.this, EclipseProductLocationProvider.access$3(EclipseProductLocationProvider.this)), Collections.emptyList());
@@ -266,7 +266,7 @@ public class EclipseProductLocationProvider implements IdeLocationProvider {
         }
     }
 
-    /* loaded from: discord-126021.apk:lombok/installer/eclipse/EclipseProductLocationProvider$MacFinder.SCL.lombok */
+    /* JADX INFO: loaded from: discord-126021.apk:lombok/installer/eclipse/EclipseProductLocationProvider$MacFinder.SCL.lombok */
     private class MacFinder extends DirectoryFinder {
         MacFinder() {
             super(EclipseProductLocationProvider.access$4(EclipseProductLocationProvider.this, EclipseProductLocationProvider.access$2(EclipseProductLocationProvider.this).getSourceDirsOnMac()), Collections.emptyList());
@@ -284,7 +284,7 @@ public class EclipseProductLocationProvider implements IdeLocationProvider {
         }
     }
 
-    /* loaded from: discord-126021.apk:lombok/installer/eclipse/EclipseProductLocationProvider$DirectoryFinder.SCL.lombok */
+    /* JADX INFO: loaded from: discord-126021.apk:lombok/installer/eclipse/EclipseProductLocationProvider$DirectoryFinder.SCL.lombok */
     private abstract class DirectoryFinder {
         private final List<File> flatSourceDirs;
         private final List<File> nestedSourceDirs;

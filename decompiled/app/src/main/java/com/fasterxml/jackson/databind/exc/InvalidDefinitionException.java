@@ -7,7 +7,7 @@ import p007b.p195g.p196a.p205c.BeanDescription;
 import p007b.p195g.p196a.p205c.JavaType;
 import p007b.p195g.p196a.p205c.p210c0.BeanPropertyDefinition;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public class InvalidDefinitionException extends JsonMappingException {
     public final JavaType _type;
 

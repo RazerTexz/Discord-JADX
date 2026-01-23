@@ -10,8 +10,8 @@ import androidx.annotation.Nullable;
 import androidx.annotation.RestrictTo;
 import androidx.appcompat.C0051R;
 
+/* JADX INFO: loaded from: classes.dex */
 @RestrictTo({RestrictTo.Scope.LIBRARY_GROUP_PREFIX})
-/* loaded from: classes.dex */
 public class DialogTitle extends AppCompatTextView {
     public DialogTitle(@NonNull Context context, @Nullable AttributeSet attributeSet, int i) {
         super(context, attributeSet, i);

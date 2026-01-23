@@ -6,30 +6,30 @@ import androidx.annotation.AnimatorRes;
 import androidx.annotation.Nullable;
 import com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton;
 
-/* compiled from: MotionStrategy.java */
-/* renamed from: b.i.a.g.e.j, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.g.e.j, reason: use source file name */
+/* JADX INFO: compiled from: MotionStrategy.java */
+/* JADX INFO: loaded from: classes3.dex */
 public interface MotionStrategy {
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     void mo6078a();
 
     @AnimatorRes
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     int mo6112b();
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     void mo6113c();
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     boolean mo6114d();
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     void mo6079e();
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     AnimatorSet mo6080f();
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     void mo6115g(@Nullable ExtendedFloatingActionButton.OnChangedCallback onChangedCallback);
 
     void onAnimationStart(Animator animator);

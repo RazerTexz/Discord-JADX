@@ -4,8 +4,8 @@ import com.discord.models.domain.ModelAuditLogEntry;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: Statistics.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: Statistics.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class StatsCodec {
     private final int id;
     private final String name;
@@ -26,12 +26,12 @@ public final /* data */ class StatsCodec {
         return statsCodec.copy(i, str);
     }
 
-    /* renamed from: component1, reason: from getter */
+    /* JADX INFO: renamed from: component1, reason: from getter */
     public final int getId() {
         return this.id;
     }
 
-    /* renamed from: component2, reason: from getter */
+    /* JADX INFO: renamed from: component2, reason: from getter */
     public final String getName() {
         return this.name;
     }

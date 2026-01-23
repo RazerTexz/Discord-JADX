@@ -3,22 +3,22 @@ package p007b.p106e.p107a;
 import com.discord.widgets.chat.input.MentionUtils;
 import java.util.Date;
 
-/* compiled from: Log.java */
-/* renamed from: b.e.a.a, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.e.a.a, reason: use source file name */
+/* JADX INFO: compiled from: Log.java */
+/* JADX INFO: loaded from: classes.dex */
 public class Log {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static a f3007a = new a();
 
-    /* compiled from: Log.java */
-    /* renamed from: b.e.a.a$a */
+    /* JADX INFO: renamed from: b.e.a.a$a */
+    /* JADX INFO: compiled from: Log.java */
     public static class a {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public long f3008a = new Date().getTime();
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public void m888a(int i, String str, String str2, Throwable th) {
             StringBuilder sb = new StringBuilder(256);
             long time = new Date().getTime() - this.f3008a;

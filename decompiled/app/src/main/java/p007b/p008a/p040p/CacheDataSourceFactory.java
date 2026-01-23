@@ -8,15 +8,15 @@ import p007b.p225i.p226a.p242c.p257e3.p258b0.CacheDataSource;
 import p007b.p225i.p226a.p242c.p257e3.p258b0.SimpleCache2;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: CacheDataSourceFactory.kt */
-/* renamed from: b.a.p.j, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.a.p.j, reason: use source file name */
+/* JADX INFO: compiled from: CacheDataSourceFactory.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class CacheDataSourceFactory implements DataSource3.a {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final DefaultDataSource.a f1588a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final long f1589b;
 
     public CacheDataSourceFactory(DefaultDataSource.a aVar, long j) {
@@ -26,7 +26,7 @@ public final class CacheDataSourceFactory implements DataSource3.a {
     }
 
     @Override // p007b.p225i.p226a.p242c.p257e3.DataSource3.a
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public DataSource3 mo234a() {
         SimpleCacheProvider simpleCacheProvider = SimpleCacheProvider.f1597b;
         SimpleCache2 simpleCache2 = (SimpleCache2) SimpleCacheProvider.f1596a.getValue();

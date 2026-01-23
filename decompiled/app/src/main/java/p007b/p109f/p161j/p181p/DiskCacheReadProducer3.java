@@ -11,21 +11,21 @@ import p007b.p109f.p161j.p168c.CacheKeyFactory;
 import p007b.p109f.p161j.p168c.DefaultCacheKeyFactory;
 import p007b.p109f.p161j.p175j.EncodedImage2;
 
-/* compiled from: DiskCacheReadProducer.java */
-/* renamed from: b.f.j.p.s, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.f.j.p.s, reason: use source file name */
+/* JADX INFO: compiled from: DiskCacheReadProducer.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class DiskCacheReadProducer3 implements Producer2<EncodedImage2> {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final BufferedDiskCache2 f4202a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final BufferedDiskCache2 f4203b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final CacheKeyFactory f4204c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final Producer2<EncodedImage2> f4205d;
 
     public DiskCacheReadProducer3(BufferedDiskCache2 bufferedDiskCache2, BufferedDiskCache2 bufferedDiskCache22, CacheKeyFactory cacheKeyFactory, Producer2<EncodedImage2> producer2) {
@@ -36,7 +36,7 @@ public class DiskCacheReadProducer3 implements Producer2<EncodedImage2> {
     }
 
     @VisibleForTesting
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public static Map<String, String> m1516c(ProducerListener2 producerListener2, ProducerContext producerContext, boolean z2, int i) {
         if (producerListener2.mo1360g(producerContext, "DiskCacheProducer")) {
             return z2 ? ImmutableMap.m968of("cached_value_found", String.valueOf(z2), "encodedImageSize", String.valueOf(i)) : ImmutableMap.m967of("cached_value_found", String.valueOf(z2));
@@ -45,7 +45,7 @@ public class DiskCacheReadProducer3 implements Producer2<EncodedImage2> {
     }
 
     @Override // p007b.p109f.p161j.p181p.Producer2
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public void mo1417b(Consumer2<EncodedImage2> consumer2, ProducerContext producerContext) {
         ImageRequest imageRequestMo1447e = producerContext.mo1447e();
         if (!producerContext.mo1447e().m8720b(16)) {

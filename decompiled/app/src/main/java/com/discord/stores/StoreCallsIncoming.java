@@ -12,8 +12,8 @@ import p507d0.p592z.p594d.Lambda;
 import p637j0.p641k.Func1;
 import p658rx.Observable;
 
-/* compiled from: StoreCallsIncoming.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: StoreCallsIncoming.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class StoreCallsIncoming extends StoreV2 {
     private final Dispatcher dispatcher;
     private Set<Long> incomingCallSnapshot;
@@ -21,8 +21,8 @@ public final class StoreCallsIncoming extends StoreV2 {
     private final ObservationDeck observationDeck;
     private final StoreUser userStore;
 
-    /* compiled from: StoreCallsIncoming.kt */
-    /* renamed from: com.discord.stores.StoreCallsIncoming$observeHasIncoming$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreCallsIncoming$observeHasIncoming$1 */
+    /* JADX INFO: compiled from: StoreCallsIncoming.kt */
     public static final class C58051<T, R> implements Func1<Set<? extends Long>, Boolean> {
         public static final C58051 INSTANCE = new C58051();
 
@@ -31,15 +31,15 @@ public final class StoreCallsIncoming extends StoreV2 {
             return call2((Set<Long>) set);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final Boolean call2(Set<Long> set) {
             Intrinsics3.checkNotNullExpressionValue(set, "incomingCalls");
             return Boolean.valueOf(!set.isEmpty());
         }
     }
 
-    /* compiled from: StoreCallsIncoming.kt */
-    /* renamed from: com.discord.stores.StoreCallsIncoming$observeIncoming$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreCallsIncoming$observeIncoming$1 */
+    /* JADX INFO: compiled from: StoreCallsIncoming.kt */
     public static final class C58061 extends Lambda implements Function0<Set<? extends Long>> {
         public C58061() {
             super(0);
@@ -51,14 +51,14 @@ public final class StoreCallsIncoming extends StoreV2 {
         }
 
         @Override // kotlin.jvm.functions.Function0
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final Set<? extends Long> invoke2() {
             return StoreCallsIncoming.this.getIncomingCalls();
         }
     }
 
-    /* compiled from: StoreCallsIncoming.kt */
-    /* renamed from: com.discord.stores.StoreCallsIncoming$removeIncomingCall$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreCallsIncoming$removeIncomingCall$1 */
+    /* JADX INFO: compiled from: StoreCallsIncoming.kt */
     public static final class C58071 extends Lambda implements Function0<Unit> {
         public final /* synthetic */ long $channelId;
 
@@ -74,7 +74,7 @@ public final class StoreCallsIncoming extends StoreV2 {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             StoreCallsIncoming.access$clearIncomingCall(StoreCallsIncoming.this, this.$channelId);
         }

@@ -9,19 +9,19 @@ import kotlin.jvm.internal.DefaultConstructorMarker;
 import p507d0.p580t.Maps6;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ContactSyncFlowAnalytics.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: ContactSyncFlowAnalytics.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class ContactSyncFlowAnalytics {
     private static final String CONTACT_SYNC_FLOW_KEY = "Contact Sync";
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private final Clock clock;
     private final boolean isOnboarding;
     private String lastStep;
     private long lastStepTimestamp;
 
-    /* compiled from: ContactSyncFlowAnalytics.kt */
+    /* JADX INFO: compiled from: ContactSyncFlowAnalytics.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -84,7 +84,7 @@ public final class ContactSyncFlowAnalytics {
         return this.clock;
     }
 
-    /* renamed from: isOnboarding, reason: from getter */
+    /* JADX INFO: renamed from: isOnboarding, reason: from getter */
     public final boolean getIsOnboarding() {
         return this.isOnboarding;
     }
@@ -92,7 +92,7 @@ public final class ContactSyncFlowAnalytics {
     public final void trackEnd(boolean skip, Map<String, ? extends Object> additionalProps) {
         long jCurrentTimeMillis = this.clock.currentTimeMillis();
         AnalyticsTracker analyticsTracker = AnalyticsTracker.INSTANCE;
-        analyticsTracker.relationshipSyncFlow(CONTACT_SYNC_FLOW_KEY, this.lastStep, "Complete", (int) ((jCurrentTimeMillis - this.lastStepTimestamp) / 1000), skip, false, additionalProps);
+        analyticsTracker.relationshipSyncFlow(CONTACT_SYNC_FLOW_KEY, this.lastStep, "Complete", (int) ((jCurrentTimeMillis - this.lastStepTimestamp) / ((long) 1000)), skip, false, additionalProps);
         if (this.isOnboarding) {
             analyticsTracker.newUserOnboarding(CONTACT_SYNC_FLOW_KEY, this.lastStep, "Complete", Long.valueOf(this.lastStepTimestamp), skip);
         }
@@ -102,7 +102,7 @@ public final class ContactSyncFlowAnalytics {
         Intrinsics3.checkNotNullParameter(toStep, "toStep");
         long jCurrentTimeMillis = this.clock.currentTimeMillis();
         AnalyticsTracker analyticsTracker = AnalyticsTracker.INSTANCE;
-        analyticsTracker.relationshipSyncFlow(CONTACT_SYNC_FLOW_KEY, this.lastStep, toStep, (int) ((jCurrentTimeMillis - this.lastStepTimestamp) / 1000), skip, back, additionalProps);
+        analyticsTracker.relationshipSyncFlow(CONTACT_SYNC_FLOW_KEY, this.lastStep, toStep, (int) ((jCurrentTimeMillis - this.lastStepTimestamp) / ((long) 1000)), skip, back, additionalProps);
         if (this.isOnboarding) {
             analyticsTracker.newUserOnboarding(CONTACT_SYNC_FLOW_KEY, this.lastStep, toStep, Long.valueOf(this.lastStepTimestamp), skip);
         }

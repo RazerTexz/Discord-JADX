@@ -8,15 +8,15 @@ import com.google.android.material.datepicker.MonthsPagerAdapter;
 import com.google.android.material.datepicker.OnSelectionChangedListener;
 import java.util.Iterator;
 
-/* compiled from: MonthsPagerAdapter.java */
-/* renamed from: b.i.a.g.d.h, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.g.d.h, reason: use source file name */
+/* JADX INFO: compiled from: MonthsPagerAdapter.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class MonthsPagerAdapter2 implements AdapterView.OnItemClickListener {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final /* synthetic */ MaterialCalendarGridView f11612j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final /* synthetic */ MonthsPagerAdapter f11613k;
 
     public MonthsPagerAdapter2(MonthsPagerAdapter monthsPagerAdapter, MaterialCalendarGridView materialCalendarGridView) {

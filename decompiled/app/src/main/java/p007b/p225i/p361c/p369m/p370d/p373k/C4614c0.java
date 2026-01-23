@@ -16,15 +16,15 @@ import p007b.p225i.p361c.p369m.p370d.p380q.ReportUploader;
 import p007b.p225i.p361c.p369m.p370d.p380q.p381c.SessionReport;
 import p007b.p225i.p361c.p369m.p370d.p384s.p385h.AppSettingsData;
 
-/* compiled from: CrashlyticsController.java */
-/* renamed from: b.i.c.m.d.k.c0 */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.c.m.d.k.c0 */
+/* JADX INFO: compiled from: CrashlyticsController.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class C4614c0 implements InterfaceC4362f<AppSettingsData, Void> {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final /* synthetic */ Executor f12270a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final /* synthetic */ CallableC4617d0 f12271b;
 
     public C4614c0(CallableC4617d0 callableC4617d0, Executor executor) {
@@ -34,7 +34,7 @@ public class C4614c0 implements InterfaceC4362f<AppSettingsData, Void> {
 
     @Override // p007b.p225i.p226a.p288f.p340n.InterfaceC4362f
     @NonNull
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public Task<Void> mo4013a(@Nullable AppSettingsData appSettingsData) throws Exception {
         AppSettingsData appSettingsData2 = appSettingsData;
         if (appSettingsData2 == null) {

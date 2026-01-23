@@ -72,40 +72,40 @@ import p507d0.p592z.p594d.Lambda;
 import p507d0.p592z.p594d.Reflection2;
 import p658rx.Subscription;
 
-/* compiled from: WidgetVoiceBottomSheet.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: WidgetVoiceBottomSheet.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class WidgetVoiceBottomSheet extends AppBottomSheet {
     private static final String ANALYTICS_SOURCE = "Voice Channel Bottom Sheet";
     private static final String ARG_FEATURE_CONTEXT = "ARG_FEATURE_CONTEXT";
     private static final String ARG_FORWARD_TO_FULLSCREEN_IF_VIDEO_ACTIVATED = "ARG_FORWARD_TO_FULLSCREEN_IF_VIDEO_ACTIVATED";
     private static final String END_EVENT_REQUEST_KEY = "END_EVENT_REQUEST_KEY";
 
-    /* renamed from: binding$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
 
-    /* renamed from: channelId$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: channelId$delegate, reason: from kotlin metadata */
     private final Lazy channelId;
 
-    /* renamed from: featureContext$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: featureContext$delegate, reason: from kotlin metadata */
     private final Lazy featureContext;
 
-    /* renamed from: forwardToFullscreenIfVideoActivated$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: forwardToFullscreenIfVideoActivated$delegate, reason: from kotlin metadata */
     private final Lazy forwardToFullscreenIfVideoActivated;
     private Function1<? super StreamContext, Unit> onStreamPreviewClickedListener;
     private CallParticipantsAdapter participantsAdapter;
 
-    /* renamed from: viewModel$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: viewModel$delegate, reason: from kotlin metadata */
     private final Lazy viewModel;
     private Subscription viewModelEventSubscription;
     public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetVoiceBottomSheet.class, "binding", "getBinding()Lcom/discord/databinding/WidgetVoiceBottomSheetBinding;", 0)};
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
 
-    /* compiled from: WidgetVoiceBottomSheet.kt */
+    /* JADX INFO: compiled from: WidgetVoiceBottomSheet.kt */
     public static abstract class BottomContent {
 
-        /* compiled from: WidgetVoiceBottomSheet.kt */
+        /* JADX INFO: compiled from: WidgetVoiceBottomSheet.kt */
         public static final /* data */ class Connect extends BottomContent {
             private final boolean isConnectEnabled;
 
@@ -121,7 +121,7 @@ public final class WidgetVoiceBottomSheet extends AppBottomSheet {
                 return connect.copy(z2);
             }
 
-            /* renamed from: component1, reason: from getter */
+            /* JADX INFO: renamed from: component1, reason: from getter */
             public final boolean getIsConnectEnabled() {
                 return this.isConnectEnabled;
             }
@@ -154,7 +154,7 @@ public final class WidgetVoiceBottomSheet extends AppBottomSheet {
             }
         }
 
-        /* compiled from: WidgetVoiceBottomSheet.kt */
+        /* JADX INFO: compiled from: WidgetVoiceBottomSheet.kt */
         public static final /* data */ class Controls extends BottomContent {
             private final StoreAudioManagerV2.State audioManagerState;
             private final CameraState cameraState;
@@ -203,32 +203,32 @@ public final class WidgetVoiceBottomSheet extends AppBottomSheet {
                 return controls.copy(inputMode, state2, z5, cameraState2, z6, z4);
             }
 
-            /* renamed from: component1, reason: from getter */
+            /* JADX INFO: renamed from: component1, reason: from getter */
             public final MediaEngineConnection.InputMode getInputMode() {
                 return this.inputMode;
             }
 
-            /* renamed from: component2, reason: from getter */
+            /* JADX INFO: renamed from: component2, reason: from getter */
             public final StoreAudioManagerV2.State getAudioManagerState() {
                 return this.audioManagerState;
             }
 
-            /* renamed from: component3, reason: from getter */
+            /* JADX INFO: renamed from: component3, reason: from getter */
             public final boolean getIsMuted() {
                 return this.isMuted;
             }
 
-            /* renamed from: component4, reason: from getter */
+            /* JADX INFO: renamed from: component4, reason: from getter */
             public final CameraState getCameraState() {
                 return this.cameraState;
             }
 
-            /* renamed from: component5, reason: from getter */
+            /* JADX INFO: renamed from: component5, reason: from getter */
             public final boolean getShowScreenShareSparkle() {
                 return this.showScreenShareSparkle;
             }
 
-            /* renamed from: component6, reason: from getter */
+            /* JADX INFO: renamed from: component6, reason: from getter */
             public final boolean getIsScreensharing() {
                 return this.isScreensharing;
             }
@@ -268,27 +268,36 @@ public final class WidgetVoiceBottomSheet extends AppBottomSheet {
             }
 
             /* JADX WARN: Multi-variable type inference failed */
+            /* JADX WARN: Type inference failed for: r1v3, types: [int] */
+            /* JADX WARN: Type inference failed for: r1v5 */
+            /* JADX WARN: Type inference failed for: r1v7 */
+            /* JADX WARN: Type inference failed for: r2v4, types: [int] */
+            /* JADX WARN: Type inference failed for: r2v6 */
+            /* JADX WARN: Type inference failed for: r2v8 */
+            /* JADX WARN: Type inference failed for: r3v0 */
+            /* JADX WARN: Type inference failed for: r3v1, types: [int] */
+            /* JADX WARN: Type inference failed for: r3v2 */
             public int hashCode() {
                 MediaEngineConnection.InputMode inputMode = this.inputMode;
                 int iHashCode = (inputMode != null ? inputMode.hashCode() : 0) * 31;
                 StoreAudioManagerV2.State state = this.audioManagerState;
                 int iHashCode2 = (iHashCode + (state != null ? state.hashCode() : 0)) * 31;
                 boolean z2 = this.isMuted;
-                int i = z2;
-                if (z2 != 0) {
-                    i = 1;
+                ?? r2 = z2;
+                if (z2) {
+                    r2 = 1;
                 }
-                int i2 = (iHashCode2 + i) * 31;
+                int i = (iHashCode2 + r2) * 31;
                 CameraState cameraState = this.cameraState;
-                int iHashCode3 = (i2 + (cameraState != null ? cameraState.hashCode() : 0)) * 31;
+                int iHashCode3 = (i + (cameraState != null ? cameraState.hashCode() : 0)) * 31;
                 boolean z3 = this.showScreenShareSparkle;
-                int i3 = z3;
-                if (z3 != 0) {
-                    i3 = 1;
+                ?? r1 = z3;
+                if (z3) {
+                    r1 = 1;
                 }
-                int i4 = (iHashCode3 + i3) * 31;
+                int i2 = (iHashCode3 + r1) * 31;
                 boolean z4 = this.isScreensharing;
-                return i4 + (z4 ? 1 : z4 ? 1 : 0);
+                return i2 + (z4 ? 1 : z4);
             }
 
             public final boolean isMuted() {
@@ -323,10 +332,10 @@ public final class WidgetVoiceBottomSheet extends AppBottomSheet {
         }
     }
 
-    /* compiled from: WidgetVoiceBottomSheet.kt */
+    /* JADX INFO: compiled from: WidgetVoiceBottomSheet.kt */
     public static abstract class CenterContent {
 
-        /* compiled from: WidgetVoiceBottomSheet.kt */
+        /* JADX INFO: compiled from: WidgetVoiceBottomSheet.kt */
         public static final /* data */ class Empty extends CenterContent {
             private final List<CallParticipantsAdapter.ListItem> items;
 
@@ -379,7 +388,7 @@ public final class WidgetVoiceBottomSheet extends AppBottomSheet {
             }
         }
 
-        /* compiled from: WidgetVoiceBottomSheet.kt */
+        /* JADX INFO: compiled from: WidgetVoiceBottomSheet.kt */
         public static final /* data */ class ListItems extends CenterContent {
             private final List<CallParticipantsAdapter.ListItem> items;
 
@@ -440,7 +449,7 @@ public final class WidgetVoiceBottomSheet extends AppBottomSheet {
         }
     }
 
-    /* compiled from: WidgetVoiceBottomSheet.kt */
+    /* JADX INFO: compiled from: WidgetVoiceBottomSheet.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -463,13 +472,13 @@ public final class WidgetVoiceBottomSheet extends AppBottomSheet {
         }
     }
 
-    /* compiled from: WidgetVoiceBottomSheet.kt */
+    /* JADX INFO: compiled from: WidgetVoiceBottomSheet.kt */
     public enum FeatureContext {
         HOME,
         FULLSCREEN_CALL
     }
 
-    /* compiled from: WidgetVoiceBottomSheet.kt */
+    /* JADX INFO: compiled from: WidgetVoiceBottomSheet.kt */
     public interface ViewState {
         BottomContent getBottomContent();
 
@@ -483,10 +492,10 @@ public final class WidgetVoiceBottomSheet extends AppBottomSheet {
 
         String getTitle();
 
-        /* renamed from: isDeafened */
+        /* JADX INFO: renamed from: isDeafened */
         boolean getIsDeafened();
 
-        /* renamed from: isNoiseCancellationActive */
+        /* JADX INFO: renamed from: isNoiseCancellationActive */
         Boolean getIsNoiseCancellationActive();
     }
 
@@ -502,8 +511,8 @@ public final class WidgetVoiceBottomSheet extends AppBottomSheet {
         }
     }
 
-    /* compiled from: WidgetVoiceBottomSheet.kt */
-    /* renamed from: com.discord.widgets.voice.sheet.WidgetVoiceBottomSheet$configureBottomContent$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.voice.sheet.WidgetVoiceBottomSheet$configureBottomContent$1 */
+    /* JADX INFO: compiled from: WidgetVoiceBottomSheet.kt */
     public static final /* synthetic */ class C105751 extends FunctionReferenceImpl implements Function0<Unit> {
         public C105751(WidgetVoiceBottomSheetViewModel widgetVoiceBottomSheetViewModel) {
             super(0, widgetVoiceBottomSheetViewModel, WidgetVoiceBottomSheetViewModel.class, "onMutePressed", "onMutePressed()V", 0);
@@ -515,14 +524,14 @@ public final class WidgetVoiceBottomSheet extends AppBottomSheet {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             ((WidgetVoiceBottomSheetViewModel) this.receiver).onMutePressed();
         }
     }
 
-    /* compiled from: WidgetVoiceBottomSheet.kt */
-    /* renamed from: com.discord.widgets.voice.sheet.WidgetVoiceBottomSheet$configureBottomContent$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.voice.sheet.WidgetVoiceBottomSheet$configureBottomContent$2 */
+    /* JADX INFO: compiled from: WidgetVoiceBottomSheet.kt */
     public static final /* synthetic */ class C105762 extends FunctionReferenceImpl implements Function0<Unit> {
         public C105762(WidgetVoiceBottomSheetViewModel widgetVoiceBottomSheetViewModel) {
             super(0, widgetVoiceBottomSheetViewModel, WidgetVoiceBottomSheetViewModel.class, "onScreenSharePressed", "onScreenSharePressed()V", 0);
@@ -534,14 +543,14 @@ public final class WidgetVoiceBottomSheet extends AppBottomSheet {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             ((WidgetVoiceBottomSheetViewModel) this.receiver).onScreenSharePressed();
         }
     }
 
-    /* compiled from: WidgetVoiceBottomSheet.kt */
-    /* renamed from: com.discord.widgets.voice.sheet.WidgetVoiceBottomSheet$configureBottomContent$3 */
+    /* JADX INFO: renamed from: com.discord.widgets.voice.sheet.WidgetVoiceBottomSheet$configureBottomContent$3 */
+    /* JADX INFO: compiled from: WidgetVoiceBottomSheet.kt */
     public static final class C105773 extends Lambda implements Function0<Unit> {
         public C105773() {
             super(0);
@@ -553,7 +562,7 @@ public final class WidgetVoiceBottomSheet extends AppBottomSheet {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             AudioOutputSelectionDialog.Companion companion = AudioOutputSelectionDialog.INSTANCE;
             FragmentManager parentFragmentManager = WidgetVoiceBottomSheet.this.getParentFragmentManager();
@@ -564,8 +573,8 @@ public final class WidgetVoiceBottomSheet extends AppBottomSheet {
         }
     }
 
-    /* compiled from: WidgetVoiceBottomSheet.kt */
-    /* renamed from: com.discord.widgets.voice.sheet.WidgetVoiceBottomSheet$configureBottomContent$4 */
+    /* JADX INFO: renamed from: com.discord.widgets.voice.sheet.WidgetVoiceBottomSheet$configureBottomContent$4 */
+    /* JADX INFO: compiled from: WidgetVoiceBottomSheet.kt */
     public static final /* synthetic */ class C105784 extends FunctionReferenceImpl implements Function0<Unit> {
         public C105784(WidgetVoiceBottomSheetViewModel widgetVoiceBottomSheetViewModel) {
             super(0, widgetVoiceBottomSheetViewModel, WidgetVoiceBottomSheetViewModel.class, "onCameraButtonPressed", "onCameraButtonPressed()V", 0);
@@ -577,14 +586,14 @@ public final class WidgetVoiceBottomSheet extends AppBottomSheet {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             ((WidgetVoiceBottomSheetViewModel) this.receiver).onCameraButtonPressed();
         }
     }
 
-    /* compiled from: WidgetVoiceBottomSheet.kt */
-    /* renamed from: com.discord.widgets.voice.sheet.WidgetVoiceBottomSheet$configureBottomContent$5 */
+    /* JADX INFO: renamed from: com.discord.widgets.voice.sheet.WidgetVoiceBottomSheet$configureBottomContent$5 */
+    /* JADX INFO: compiled from: WidgetVoiceBottomSheet.kt */
     public static final /* synthetic */ class C105795 extends FunctionReferenceImpl implements Function0<Unit> {
         public C105795(WidgetVoiceBottomSheetViewModel widgetVoiceBottomSheetViewModel) {
             super(0, widgetVoiceBottomSheetViewModel, WidgetVoiceBottomSheetViewModel.class, "onDisconnectPressed", "onDisconnectPressed()V", 0);
@@ -596,14 +605,14 @@ public final class WidgetVoiceBottomSheet extends AppBottomSheet {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             ((WidgetVoiceBottomSheetViewModel) this.receiver).onDisconnectPressed();
         }
     }
 
-    /* compiled from: WidgetVoiceBottomSheet.kt */
-    /* renamed from: com.discord.widgets.voice.sheet.WidgetVoiceBottomSheet$configureBottomContent$6 */
+    /* JADX INFO: renamed from: com.discord.widgets.voice.sheet.WidgetVoiceBottomSheet$configureBottomContent$6 */
+    /* JADX INFO: compiled from: WidgetVoiceBottomSheet.kt */
     public static final class C105806 extends Lambda implements Function0<Unit> {
         public C105806() {
             super(0);
@@ -615,18 +624,18 @@ public final class WidgetVoiceBottomSheet extends AppBottomSheet {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             WidgetVoiceBottomSheet.this.dismiss();
         }
     }
 
-    /* compiled from: WidgetVoiceBottomSheet.kt */
-    /* renamed from: com.discord.widgets.voice.sheet.WidgetVoiceBottomSheet$configureBottomContent$7 */
+    /* JADX INFO: renamed from: com.discord.widgets.voice.sheet.WidgetVoiceBottomSheet$configureBottomContent$7 */
+    /* JADX INFO: compiled from: WidgetVoiceBottomSheet.kt */
     public static final class ViewOnClickListenerC105817 implements View.OnClickListener {
 
-        /* compiled from: WidgetVoiceBottomSheet.kt */
-        /* renamed from: com.discord.widgets.voice.sheet.WidgetVoiceBottomSheet$configureBottomContent$7$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.widgets.voice.sheet.WidgetVoiceBottomSheet$configureBottomContent$7$1, reason: invalid class name */
+        /* JADX INFO: compiled from: WidgetVoiceBottomSheet.kt */
         public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
             public AnonymousClass1() {
                 super(0);
@@ -638,7 +647,7 @@ public final class WidgetVoiceBottomSheet extends AppBottomSheet {
                 return Unit.f27425a;
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2() {
                 WidgetVoiceBottomSheet.access$getViewModel$p(WidgetVoiceBottomSheet.this).tryConnectToVoice(false);
             }
@@ -653,12 +662,12 @@ public final class WidgetVoiceBottomSheet extends AppBottomSheet {
         }
     }
 
-    /* compiled from: WidgetVoiceBottomSheet.kt */
-    /* renamed from: com.discord.widgets.voice.sheet.WidgetVoiceBottomSheet$configureBottomContent$8 */
+    /* JADX INFO: renamed from: com.discord.widgets.voice.sheet.WidgetVoiceBottomSheet$configureBottomContent$8 */
+    /* JADX INFO: compiled from: WidgetVoiceBottomSheet.kt */
     public static final class ViewOnClickListenerC105828 implements View.OnClickListener {
 
-        /* compiled from: WidgetVoiceBottomSheet.kt */
-        /* renamed from: com.discord.widgets.voice.sheet.WidgetVoiceBottomSheet$configureBottomContent$8$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.widgets.voice.sheet.WidgetVoiceBottomSheet$configureBottomContent$8$1, reason: invalid class name */
+        /* JADX INFO: compiled from: WidgetVoiceBottomSheet.kt */
         public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
             public AnonymousClass1() {
                 super(0);
@@ -670,7 +679,7 @@ public final class WidgetVoiceBottomSheet extends AppBottomSheet {
                 return Unit.f27425a;
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2() {
                 WidgetVoiceBottomSheet.access$getViewModel$p(WidgetVoiceBottomSheet.this).tryConnectToVoice(true);
             }
@@ -685,8 +694,8 @@ public final class WidgetVoiceBottomSheet extends AppBottomSheet {
         }
     }
 
-    /* compiled from: WidgetVoiceBottomSheet.kt */
-    /* renamed from: com.discord.widgets.voice.sheet.WidgetVoiceBottomSheet$configureCenterContent$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.voice.sheet.WidgetVoiceBottomSheet$configureCenterContent$1 */
+    /* JADX INFO: compiled from: WidgetVoiceBottomSheet.kt */
     public static final /* synthetic */ class C105831 extends FunctionReferenceImpl implements Function1<StreamContext, Unit> {
         public C105831(WidgetVoiceBottomSheet widgetVoiceBottomSheet) {
             super(1, widgetVoiceBottomSheet, WidgetVoiceBottomSheet.class, "onStreamPreviewClicked", "onStreamPreviewClicked(Lcom/discord/utilities/streams/StreamContext;)V", 0);
@@ -698,15 +707,15 @@ public final class WidgetVoiceBottomSheet extends AppBottomSheet {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(StreamContext streamContext) {
             Intrinsics3.checkNotNullParameter(streamContext, "p1");
             WidgetVoiceBottomSheet.access$onStreamPreviewClicked((WidgetVoiceBottomSheet) this.receiver, streamContext);
         }
     }
 
-    /* compiled from: WidgetVoiceBottomSheet.kt */
-    /* renamed from: com.discord.widgets.voice.sheet.WidgetVoiceBottomSheet$configureCenterContent$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.voice.sheet.WidgetVoiceBottomSheet$configureCenterContent$2 */
+    /* JADX INFO: compiled from: WidgetVoiceBottomSheet.kt */
     public static final class C105842 extends Lambda implements Function1<StoreVoiceParticipants.VoiceUser, Unit> {
         public final /* synthetic */ Channel $channel;
 
@@ -722,7 +731,7 @@ public final class WidgetVoiceBottomSheet extends AppBottomSheet {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(StoreVoiceParticipants.VoiceUser voiceUser) {
             Intrinsics3.checkNotNullParameter(voiceUser, "clickedUser");
             WidgetUserSheet.Companion companion = WidgetUserSheet.INSTANCE;
@@ -734,8 +743,8 @@ public final class WidgetVoiceBottomSheet extends AppBottomSheet {
         }
     }
 
-    /* compiled from: WidgetVoiceBottomSheet.kt */
-    /* renamed from: com.discord.widgets.voice.sheet.WidgetVoiceBottomSheet$configureCenterContent$3 */
+    /* JADX INFO: renamed from: com.discord.widgets.voice.sheet.WidgetVoiceBottomSheet$configureCenterContent$3 */
+    /* JADX INFO: compiled from: WidgetVoiceBottomSheet.kt */
     public static final class C105853 extends Lambda implements Function1<StoreVoiceParticipants.VoiceUser, Unit> {
         public C105853() {
             super(1);
@@ -747,15 +756,15 @@ public final class WidgetVoiceBottomSheet extends AppBottomSheet {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(StoreVoiceParticipants.VoiceUser voiceUser) {
             Intrinsics3.checkNotNullParameter(voiceUser, "voiceUser");
             WidgetVoiceBottomSheet.access$getViewModel$p(WidgetVoiceBottomSheet.this).onToggleRingingPressed(voiceUser);
         }
     }
 
-    /* compiled from: WidgetVoiceBottomSheet.kt */
-    /* renamed from: com.discord.widgets.voice.sheet.WidgetVoiceBottomSheet$configureCenterContent$4 */
+    /* JADX INFO: renamed from: com.discord.widgets.voice.sheet.WidgetVoiceBottomSheet$configureCenterContent$4 */
+    /* JADX INFO: compiled from: WidgetVoiceBottomSheet.kt */
     public static final class C105864 extends Lambda implements Function1<View, Unit> {
         public final /* synthetic */ Channel $channel;
 
@@ -771,15 +780,15 @@ public final class WidgetVoiceBottomSheet extends AppBottomSheet {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(View view) {
             Intrinsics3.checkNotNullParameter(view, "it");
             ChannelInviteLaunchUtils.inviteToChannel$default(ChannelInviteLaunchUtils.INSTANCE, WidgetVoiceBottomSheet.this, this.$channel, WidgetVoiceBottomSheet.ANALYTICS_SOURCE, null, null, 24, null);
         }
     }
 
-    /* compiled from: WidgetVoiceBottomSheet.kt */
-    /* renamed from: com.discord.widgets.voice.sheet.WidgetVoiceBottomSheet$configureCenterContent$5 */
+    /* JADX INFO: renamed from: com.discord.widgets.voice.sheet.WidgetVoiceBottomSheet$configureCenterContent$5 */
+    /* JADX INFO: compiled from: WidgetVoiceBottomSheet.kt */
     public static final class C105875 extends Lambda implements Function0<Unit> {
         public C105875() {
             super(0);
@@ -791,7 +800,7 @@ public final class WidgetVoiceBottomSheet extends AppBottomSheet {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             FragmentManager parentFragmentManager = WidgetVoiceBottomSheet.this.getParentFragmentManager();
             Intrinsics3.checkNotNullExpressionValue(parentFragmentManager, "parentFragmentManager");
@@ -807,8 +816,8 @@ public final class WidgetVoiceBottomSheet extends AppBottomSheet {
         }
     }
 
-    /* compiled from: WidgetVoiceBottomSheet.kt */
-    /* renamed from: com.discord.widgets.voice.sheet.WidgetVoiceBottomSheet$configureUI$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.voice.sheet.WidgetVoiceBottomSheet$configureUI$1 */
+    /* JADX INFO: compiled from: WidgetVoiceBottomSheet.kt */
     public static final class ViewOnClickListenerC105881 implements View.OnClickListener {
         public ViewOnClickListenerC105881() {
         }
@@ -819,8 +828,8 @@ public final class WidgetVoiceBottomSheet extends AppBottomSheet {
         }
     }
 
-    /* compiled from: WidgetVoiceBottomSheet.kt */
-    /* renamed from: com.discord.widgets.voice.sheet.WidgetVoiceBottomSheet$configureUI$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.voice.sheet.WidgetVoiceBottomSheet$configureUI$2 */
+    /* JADX INFO: compiled from: WidgetVoiceBottomSheet.kt */
     public static final class ViewOnClickListenerC105892 implements View.OnClickListener {
         public final /* synthetic */ WidgetVoiceBottomSheetViewModel.ViewState $viewState;
 
@@ -834,8 +843,8 @@ public final class WidgetVoiceBottomSheet extends AppBottomSheet {
         }
     }
 
-    /* compiled from: WidgetVoiceBottomSheet.kt */
-    /* renamed from: com.discord.widgets.voice.sheet.WidgetVoiceBottomSheet$configureUI$3 */
+    /* JADX INFO: renamed from: com.discord.widgets.voice.sheet.WidgetVoiceBottomSheet$configureUI$3 */
+    /* JADX INFO: compiled from: WidgetVoiceBottomSheet.kt */
     public static final class ViewOnClickListenerC105903 implements View.OnClickListener {
         public ViewOnClickListenerC105903() {
         }
@@ -849,8 +858,8 @@ public final class WidgetVoiceBottomSheet extends AppBottomSheet {
         }
     }
 
-    /* compiled from: WidgetVoiceBottomSheet.kt */
-    /* renamed from: com.discord.widgets.voice.sheet.WidgetVoiceBottomSheet$configureUI$4 */
+    /* JADX INFO: renamed from: com.discord.widgets.voice.sheet.WidgetVoiceBottomSheet$configureUI$4 */
+    /* JADX INFO: compiled from: WidgetVoiceBottomSheet.kt */
     public static final class ViewOnClickListenerC105914 implements View.OnClickListener {
         public ViewOnClickListenerC105914() {
         }
@@ -861,8 +870,8 @@ public final class WidgetVoiceBottomSheet extends AppBottomSheet {
         }
     }
 
-    /* compiled from: WidgetVoiceBottomSheet.kt */
-    /* renamed from: com.discord.widgets.voice.sheet.WidgetVoiceBottomSheet$handleEvent$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.voice.sheet.WidgetVoiceBottomSheet$handleEvent$1 */
+    /* JADX INFO: compiled from: WidgetVoiceBottomSheet.kt */
     public static final class C105921 extends Lambda implements Function0<Unit> {
         public C105921() {
             super(0);
@@ -874,14 +883,14 @@ public final class WidgetVoiceBottomSheet extends AppBottomSheet {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             WidgetVoiceBottomSheet.access$getViewModel$p(WidgetVoiceBottomSheet.this).onCameraPermissionsGranted();
         }
     }
 
-    /* compiled from: WidgetVoiceBottomSheet.kt */
-    /* renamed from: com.discord.widgets.voice.sheet.WidgetVoiceBottomSheet$onActivityResult$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.voice.sheet.WidgetVoiceBottomSheet$onActivityResult$1 */
+    /* JADX INFO: compiled from: WidgetVoiceBottomSheet.kt */
     public static final class C105931 extends Lambda implements Function1<Intent, Unit> {
         public C105931() {
             super(1);
@@ -893,15 +902,15 @@ public final class WidgetVoiceBottomSheet extends AppBottomSheet {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Intent intent) {
             Intrinsics3.checkNotNullParameter(intent, "it");
             WidgetVoiceBottomSheet.access$getViewModel$p(WidgetVoiceBottomSheet.this).startStream(intent);
         }
     }
 
-    /* compiled from: WidgetVoiceBottomSheet.kt */
-    /* renamed from: com.discord.widgets.voice.sheet.WidgetVoiceBottomSheet$onResume$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.voice.sheet.WidgetVoiceBottomSheet$onResume$1 */
+    /* JADX INFO: compiled from: WidgetVoiceBottomSheet.kt */
     public static final class C105941 extends Lambda implements Function1<GuildScheduledEvent, Unit> {
         public C105941() {
             super(1);
@@ -913,7 +922,7 @@ public final class WidgetVoiceBottomSheet extends AppBottomSheet {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(GuildScheduledEvent guildScheduledEvent) {
             Intrinsics3.checkNotNullParameter(guildScheduledEvent, "event");
             WidgetGuildScheduledEventDetailsBottomSheet.Companion companion = WidgetGuildScheduledEventDetailsBottomSheet.INSTANCE;
@@ -923,8 +932,8 @@ public final class WidgetVoiceBottomSheet extends AppBottomSheet {
         }
     }
 
-    /* compiled from: WidgetVoiceBottomSheet.kt */
-    /* renamed from: com.discord.widgets.voice.sheet.WidgetVoiceBottomSheet$onResume$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.voice.sheet.WidgetVoiceBottomSheet$onResume$2 */
+    /* JADX INFO: compiled from: WidgetVoiceBottomSheet.kt */
     public static final class C105952 extends Lambda implements Function1<GuildScheduledEvent, Unit> {
         public C105952() {
             super(1);
@@ -936,7 +945,7 @@ public final class WidgetVoiceBottomSheet extends AppBottomSheet {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(GuildScheduledEvent guildScheduledEvent) {
             Intrinsics3.checkNotNullParameter(guildScheduledEvent, "event");
             WidgetPreviewGuildScheduledEvent.Companion companion = WidgetPreviewGuildScheduledEvent.INSTANCE;
@@ -950,8 +959,8 @@ public final class WidgetVoiceBottomSheet extends AppBottomSheet {
         }
     }
 
-    /* compiled from: WidgetVoiceBottomSheet.kt */
-    /* renamed from: com.discord.widgets.voice.sheet.WidgetVoiceBottomSheet$onResume$3 */
+    /* JADX INFO: renamed from: com.discord.widgets.voice.sheet.WidgetVoiceBottomSheet$onResume$3 */
+    /* JADX INFO: compiled from: WidgetVoiceBottomSheet.kt */
     public static final class C105963 extends Lambda implements Function1<WidgetVoiceBottomSheetViewModel.ViewState, Unit> {
         public C105963() {
             super(1);
@@ -963,15 +972,15 @@ public final class WidgetVoiceBottomSheet extends AppBottomSheet {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(WidgetVoiceBottomSheetViewModel.ViewState viewState) {
             Intrinsics3.checkNotNullParameter(viewState, "viewState");
             WidgetVoiceBottomSheet.access$configureUI(WidgetVoiceBottomSheet.this, viewState);
         }
     }
 
-    /* compiled from: WidgetVoiceBottomSheet.kt */
-    /* renamed from: com.discord.widgets.voice.sheet.WidgetVoiceBottomSheet$onResume$4 */
+    /* JADX INFO: renamed from: com.discord.widgets.voice.sheet.WidgetVoiceBottomSheet$onResume$4 */
+    /* JADX INFO: compiled from: WidgetVoiceBottomSheet.kt */
     public static final /* synthetic */ class C105974 extends FunctionReferenceImpl implements Function1<WidgetVoiceBottomSheetViewModel.Event, Unit> {
         public C105974(WidgetVoiceBottomSheet widgetVoiceBottomSheet) {
             super(1, widgetVoiceBottomSheet, WidgetVoiceBottomSheet.class, "handleEvent", "handleEvent(Lcom/discord/widgets/voice/sheet/WidgetVoiceBottomSheetViewModel$Event;)V", 0);
@@ -983,15 +992,15 @@ public final class WidgetVoiceBottomSheet extends AppBottomSheet {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(WidgetVoiceBottomSheetViewModel.Event event) {
             Intrinsics3.checkNotNullParameter(event, "p1");
             WidgetVoiceBottomSheet.access$handleEvent((WidgetVoiceBottomSheet) this.receiver, event);
         }
     }
 
-    /* compiled from: WidgetVoiceBottomSheet.kt */
-    /* renamed from: com.discord.widgets.voice.sheet.WidgetVoiceBottomSheet$onResume$5 */
+    /* JADX INFO: renamed from: com.discord.widgets.voice.sheet.WidgetVoiceBottomSheet$onResume$5 */
+    /* JADX INFO: compiled from: WidgetVoiceBottomSheet.kt */
     public static final class C105985 extends Lambda implements Function1<Subscription, Unit> {
         public C105985() {
             super(1);
@@ -1003,15 +1012,15 @@ public final class WidgetVoiceBottomSheet extends AppBottomSheet {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Subscription subscription) {
             Intrinsics3.checkNotNullParameter(subscription, Traits.Payment.Type.SUBSCRIPTION);
             WidgetVoiceBottomSheet.access$setViewModelEventSubscription$p(WidgetVoiceBottomSheet.this, subscription);
         }
     }
 
-    /* compiled from: WidgetVoiceBottomSheet.kt */
-    /* renamed from: com.discord.widgets.voice.sheet.WidgetVoiceBottomSheet$onStreamPreviewClicked$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.voice.sheet.WidgetVoiceBottomSheet$onStreamPreviewClicked$1 */
+    /* JADX INFO: compiled from: WidgetVoiceBottomSheet.kt */
     public static final class C105991 extends Lambda implements Function0<Unit> {
         public final /* synthetic */ StreamContext $streamContext;
 
@@ -1027,14 +1036,14 @@ public final class WidgetVoiceBottomSheet extends AppBottomSheet {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             WidgetVoiceBottomSheet.access$getViewModel$p(WidgetVoiceBottomSheet.this).onStreamPreviewClicked(this.$streamContext.getStream().getEncodedStreamKey());
         }
     }
 
-    /* compiled from: WidgetVoiceBottomSheet.kt */
-    /* renamed from: com.discord.widgets.voice.sheet.WidgetVoiceBottomSheet$onViewCreated$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.voice.sheet.WidgetVoiceBottomSheet$onViewCreated$1 */
+    /* JADX INFO: compiled from: WidgetVoiceBottomSheet.kt */
     public static final /* synthetic */ class C106001 extends FunctionReferenceImpl implements Function1<Boolean, Unit> {
         public C106001(WidgetVoiceBottomSheetViewModel widgetVoiceBottomSheetViewModel) {
             super(1, widgetVoiceBottomSheetViewModel, WidgetVoiceBottomSheetViewModel.class, "onPttPressed", "onPttPressed(Z)V", 0);
@@ -1051,8 +1060,8 @@ public final class WidgetVoiceBottomSheet extends AppBottomSheet {
         }
     }
 
-    /* compiled from: WidgetVoiceBottomSheet.kt */
-    /* renamed from: com.discord.widgets.voice.sheet.WidgetVoiceBottomSheet$onViewCreated$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.voice.sheet.WidgetVoiceBottomSheet$onViewCreated$2 */
+    /* JADX INFO: compiled from: WidgetVoiceBottomSheet.kt */
     public static final /* synthetic */ class C106012 extends FunctionReferenceImpl implements Function0<Unit> {
         public C106012(WidgetVoiceBottomSheetViewModel widgetVoiceBottomSheetViewModel) {
             super(0, widgetVoiceBottomSheetViewModel, WidgetVoiceBottomSheetViewModel.class, "onDisconnect", "onDisconnect()V", 0);
@@ -1064,7 +1073,7 @@ public final class WidgetVoiceBottomSheet extends AppBottomSheet {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             ((WidgetVoiceBottomSheetViewModel) this.receiver).onDisconnect();
         }

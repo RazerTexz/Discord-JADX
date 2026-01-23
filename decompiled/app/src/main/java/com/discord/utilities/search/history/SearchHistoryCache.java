@@ -6,8 +6,8 @@ import java.util.Collection;
 import java.util.List;
 import p658rx.Observable;
 
-/* compiled from: SearchHistoryCache.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: SearchHistoryCache.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public interface SearchHistoryCache {
     void clear(StoreSearch.SearchTarget searchTarget);
 

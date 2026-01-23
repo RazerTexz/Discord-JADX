@@ -4,9 +4,9 @@ import java.util.Collection;
 import java.util.List;
 import p507d0.p513e0.p514p.p515d.p517m0.p567n.TypeSubstitutor2;
 
-/* compiled from: PropertyDescriptor.java */
-/* renamed from: d0.e0.p.d.m0.c.n0, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.c.n0, reason: use source file name */
+/* JADX INFO: compiled from: PropertyDescriptor.java */
+/* JADX INFO: loaded from: classes3.dex */
 public interface PropertyDescriptor extends CallableMemberDescriptor, VariableDescriptor {
     List<PropertyAccessorDescriptor> getAccessors();
 

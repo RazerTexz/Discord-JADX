@@ -19,20 +19,20 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 import p658rx.Observable;
 
-/* compiled from: StoreLibrary.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: StoreLibrary.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class StoreLibrary extends StoreV2 {
     private final Dispatcher dispatcher;
     private Map<Long, ModelLibraryApplication> libraryApplicationSnapshot;
     private final Map<Long, ModelLibraryApplication> libraryApplications;
     private final ObservationDeck observationDeck;
 
-    /* compiled from: StoreLibrary.kt */
-    /* renamed from: com.discord.stores.StoreLibrary$fetchApplications$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreLibrary$fetchApplications$1 */
+    /* JADX INFO: compiled from: StoreLibrary.kt */
     public static final class C61401 extends Lambda implements Function1<Error, Unit> {
 
-        /* compiled from: StoreLibrary.kt */
-        /* renamed from: com.discord.stores.StoreLibrary$fetchApplications$1$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.stores.StoreLibrary$fetchApplications$1$1, reason: invalid class name */
+        /* JADX INFO: compiled from: StoreLibrary.kt */
         public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
             public AnonymousClass1() {
                 super(0);
@@ -44,7 +44,7 @@ public final class StoreLibrary extends StoreV2 {
                 return Unit.f27425a;
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2() {
                 StoreLibrary.access$getLibraryApplications$p(StoreLibrary.this).clear();
                 StoreLibrary.this.markChanged();
@@ -61,19 +61,19 @@ public final class StoreLibrary extends StoreV2 {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Error error) {
             Intrinsics3.checkNotNullParameter(error, "it");
             StoreLibrary.this.getDispatcher().schedule(new AnonymousClass1());
         }
     }
 
-    /* compiled from: StoreLibrary.kt */
-    /* renamed from: com.discord.stores.StoreLibrary$fetchApplications$2 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreLibrary$fetchApplications$2 */
+    /* JADX INFO: compiled from: StoreLibrary.kt */
     public static final class C61412 extends Lambda implements Function1<List<? extends ModelLibraryApplication>, Unit> {
 
-        /* compiled from: StoreLibrary.kt */
-        /* renamed from: com.discord.stores.StoreLibrary$fetchApplications$2$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.stores.StoreLibrary$fetchApplications$2$1, reason: invalid class name */
+        /* JADX INFO: compiled from: StoreLibrary.kt */
         public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
             public final /* synthetic */ List $libraryApps;
 
@@ -89,7 +89,7 @@ public final class StoreLibrary extends StoreV2 {
                 return Unit.f27425a;
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2() {
                 HashMap map = new HashMap();
                 for (ModelLibraryApplication modelLibraryApplication : this.$libraryApps) {
@@ -111,15 +111,15 @@ public final class StoreLibrary extends StoreV2 {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(List<ModelLibraryApplication> list) {
             Intrinsics3.checkNotNullParameter(list, "libraryApps");
             StoreLibrary.this.getDispatcher().schedule(new AnonymousClass1(list));
         }
     }
 
-    /* compiled from: StoreLibrary.kt */
-    /* renamed from: com.discord.stores.StoreLibrary$observeApplications$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreLibrary$observeApplications$1 */
+    /* JADX INFO: compiled from: StoreLibrary.kt */
     public static final class C61421 extends Lambda implements Function0<Map<Long, ? extends ModelLibraryApplication>> {
         public C61421() {
             super(0);
@@ -131,7 +131,7 @@ public final class StoreLibrary extends StoreV2 {
         }
 
         @Override // kotlin.jvm.functions.Function0
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final Map<Long, ? extends ModelLibraryApplication> invoke2() {
             return StoreLibrary.access$getLibraryApplicationSnapshot$p(StoreLibrary.this);
         }

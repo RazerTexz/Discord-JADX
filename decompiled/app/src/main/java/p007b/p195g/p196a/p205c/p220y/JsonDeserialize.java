@@ -14,10 +14,10 @@ import java.lang.annotation.Target;
 /* JADX WARN: Method from annotation default annotation not found: keyAs */
 /* JADX WARN: Method from annotation default annotation not found: keyUsing */
 /* JADX WARN: Method from annotation default annotation not found: using */
-/* compiled from: JsonDeserialize.java */
+/* JADX INFO: renamed from: b.g.a.c.y.c, reason: use source file name */
+/* JADX INFO: compiled from: JsonDeserialize.java */
+/* JADX INFO: loaded from: classes3.dex */
 @Target({ElementType.ANNOTATION_TYPE, ElementType.METHOD, ElementType.FIELD, ElementType.TYPE, ElementType.PARAMETER})
 @Retention(RetentionPolicy.RUNTIME)
-/* renamed from: b.g.a.c.y.c, reason: use source file name */
-/* loaded from: classes3.dex */
 public @interface JsonDeserialize {
 }

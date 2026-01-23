@@ -6,8 +6,8 @@ import java.util.TreeMap;
 import kotlin.jvm.internal.DefaultConstructorMarker;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ThreadMemberList.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: ThreadMemberList.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class ThreadMemberList implements MemberList {
     private SortedMap<Integer, String> groupIndices;
     private final int initialSize;

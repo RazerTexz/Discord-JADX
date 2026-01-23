@@ -5,9 +5,9 @@ import android.view.View;
 import com.discord.widgets.user.email.WidgetUserEmailVerify;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: WidgetUserAccountVerify.kt */
-/* renamed from: com.discord.widgets.user.account.WidgetUserAccountVerify$onViewBound$$inlined$with$lambda$1, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: com.discord.widgets.user.account.WidgetUserAccountVerify$onViewBound$$inlined$with$lambda$1, reason: use source file name */
+/* JADX INFO: compiled from: WidgetUserAccountVerify.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class WidgetUserAccountVerify3 implements View.OnClickListener {
     public final /* synthetic */ WidgetUserAccountVerify this$0;
 

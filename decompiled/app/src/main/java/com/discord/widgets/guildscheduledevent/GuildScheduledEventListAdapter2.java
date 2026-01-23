@@ -4,9 +4,9 @@ import android.view.View;
 import com.discord.widgets.guildscheduledevent.GuildScheduledEventListAdapter;
 import com.discord.widgets.guildscheduledevent.GuildScheduledEventListItem;
 
-/* compiled from: GuildScheduledEventListAdapter.kt */
-/* renamed from: com.discord.widgets.guildscheduledevent.GuildScheduledEventListAdapter$EventViewHolder$onConfigure$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.guildscheduledevent.GuildScheduledEventListAdapter$EventViewHolder$onConfigure$1, reason: use source file name */
+/* JADX INFO: compiled from: GuildScheduledEventListAdapter.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class GuildScheduledEventListAdapter2 implements View.OnClickListener {
     public final /* synthetic */ GuildScheduledEventListItem.Event $item;
     public final /* synthetic */ GuildScheduledEventListAdapter.EventViewHolder this$0;

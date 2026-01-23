@@ -24,46 +24,46 @@ import p615g0.BufferedSource;
 import p615g0.RealBufferedSource;
 import p615g0.Source2;
 
-/* compiled from: Hpack.kt */
-/* renamed from: f0.e0.j.c, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: f0.e0.j.c, reason: use source file name */
+/* JADX INFO: compiled from: Hpack.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class Hpack {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final Header2[] f25589a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static final Map<ByteString, Integer> f25590b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public static final Hpack f25591c = new Hpack();
 
-    /* compiled from: Hpack.kt */
-    /* renamed from: f0.e0.j.c$a */
+    /* JADX INFO: renamed from: f0.e0.j.c$a */
+    /* JADX INFO: compiled from: Hpack.kt */
     public static final class a {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final List<Header2> f25592a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final BufferedSource f25593b;
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public Header2[] f25594c;
 
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         public int f25595d;
 
-        /* renamed from: e */
+        /* JADX INFO: renamed from: e */
         public int f25596e;
 
-        /* renamed from: f */
+        /* JADX INFO: renamed from: f */
         public int f25597f;
 
-        /* renamed from: g */
+        /* JADX INFO: renamed from: g */
         public final int f25598g;
 
-        /* renamed from: h */
+        /* JADX INFO: renamed from: h */
         public int f25599h;
 
         public a(Source2 source2, int i, int i2, int i3) {
@@ -78,7 +78,7 @@ public final class Hpack {
             this.f25595d = 7;
         }
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final void m10243a() {
             _ArraysJvm.fill$default(this.f25594c, null, 0, 0, 6, null);
             this.f25595d = this.f25594c.length - 1;
@@ -86,12 +86,12 @@ public final class Hpack {
             this.f25597f = 0;
         }
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final int m10244b(int i) {
             return this.f25595d + 1 + i;
         }
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public final int m10245c(int i) {
             int i2;
             int i3 = 0;
@@ -121,7 +121,7 @@ public final class Hpack {
         }
 
         /* JADX WARN: Removed duplicated region for block: B:6:0x000d  */
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         /*
             Code decompiled incorrectly, please refer to instructions dump.
         */
@@ -152,7 +152,7 @@ public final class Hpack {
             throw new IOException(sbM833U.toString());
         }
 
-        /* renamed from: e */
+        /* JADX INFO: renamed from: e */
         public final void m10247e(int i, Header2 header2) {
             this.f25592a.add(header2);
             int i2 = header2.f25586g;
@@ -188,7 +188,7 @@ public final class Hpack {
             this.f25597f += i2;
         }
 
-        /* renamed from: f */
+        /* JADX INFO: renamed from: f */
         public final ByteString m10248f() throws IOException {
             byte b2 = this.f25593b.readByte();
             byte[] bArr = Util7.f25397a;
@@ -251,7 +251,7 @@ public final class Hpack {
             return buffer3.m10473x();
         }
 
-        /* renamed from: g */
+        /* JADX INFO: renamed from: g */
         public final int m10249g(int i, int i2) throws IOException {
             int i3 = i & i2;
             if (i3 < i2) {
@@ -271,38 +271,38 @@ public final class Hpack {
         }
     }
 
-    /* compiled from: Hpack.kt */
-    /* renamed from: f0.e0.j.c$b */
+    /* JADX INFO: renamed from: f0.e0.j.c$b */
+    /* JADX INFO: compiled from: Hpack.kt */
     public static final class b {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public int f25600a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public boolean f25601b;
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public int f25602c;
 
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         public Header2[] f25603d;
 
-        /* renamed from: e */
+        /* JADX INFO: renamed from: e */
         public int f25604e;
 
-        /* renamed from: f */
+        /* JADX INFO: renamed from: f */
         public int f25605f;
 
-        /* renamed from: g */
+        /* JADX INFO: renamed from: g */
         public int f25606g;
 
-        /* renamed from: h */
+        /* JADX INFO: renamed from: h */
         public int f25607h;
 
-        /* renamed from: i */
+        /* JADX INFO: renamed from: i */
         public final boolean f25608i;
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public final Buffer3 f25609j;
 
         public b(int i, boolean z2, Buffer3 buffer3, int i2) {
@@ -318,7 +318,7 @@ public final class Hpack {
             this.f25604e = 7;
         }
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final void m10250a() {
             _ArraysJvm.fill$default(this.f25603d, null, 0, 0, 6, null);
             this.f25604e = this.f25603d.length - 1;
@@ -326,7 +326,7 @@ public final class Hpack {
             this.f25606g = 0;
         }
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final int m10251b(int i) {
             int i2;
             int i3 = 0;
@@ -362,7 +362,7 @@ public final class Hpack {
             return i3;
         }
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public final void m10252c(Header2 header2) {
             int i = header2.f25586g;
             int i2 = this.f25602c;
@@ -386,7 +386,7 @@ public final class Hpack {
             this.f25606g += i;
         }
 
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         public final void m10253d(ByteString byteString) throws IOException {
             Intrinsics3.checkParameterIsNotNull(byteString, "data");
             if (this.f25608i) {
@@ -397,9 +397,9 @@ public final class Hpack {
                 for (int i = 0; i < iMo10502j; i++) {
                     byte bMo10505m = byteString.mo10505m(i);
                     byte[] bArr = Util7.f25397a;
-                    j += Huffman.f25745b[bMo10505m & 255];
+                    j += (long) Huffman.f25745b[bMo10505m & 255];
                 }
-                if (((int) ((j + 7) >> 3)) < byteString.mo10502j()) {
+                if (((int) ((j + ((long) 7)) >> 3)) < byteString.mo10502j()) {
                     Buffer3 buffer3 = new Buffer3();
                     Huffman huffman2 = Huffman.f25747d;
                     Intrinsics3.checkParameterIsNotNull(byteString, "source");
@@ -413,7 +413,7 @@ public final class Hpack {
                         int i4 = bMo10505m2 & 255;
                         int i5 = Huffman.f25744a[i4];
                         byte b2 = Huffman.f25745b[i4];
-                        j2 = (j2 << b2) | i5;
+                        j2 = (j2 << b2) | ((long) i5);
                         i2 += b2;
                         while (i2 >= 8) {
                             i2 -= 8;
@@ -434,7 +434,7 @@ public final class Hpack {
         }
 
         /* JADX WARN: Removed duplicated region for block: B:22:0x0072  */
-        /* renamed from: e */
+        /* JADX INFO: renamed from: e */
         /*
             Code decompiled incorrectly, please refer to instructions dump.
         */
@@ -529,7 +529,7 @@ public final class Hpack {
             }
         }
 
-        /* renamed from: f */
+        /* JADX INFO: renamed from: f */
         public final void m10255f(int i, int i2, int i3) {
             if (i < i2) {
                 this.f25609j.m10444T(i | i3);
@@ -566,7 +566,7 @@ public final class Hpack {
         f25590b = mapUnmodifiableMap;
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final ByteString m10242a(ByteString byteString) throws IOException {
         Intrinsics3.checkParameterIsNotNull(byteString, ModelAuditLogEntry.CHANGE_KEY_NAME);
         int iMo10502j = byteString.mo10502j();

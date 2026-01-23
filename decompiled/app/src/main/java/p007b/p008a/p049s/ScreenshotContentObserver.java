@@ -25,56 +25,56 @@ import p507d0.p580t._ArraysJvm;
 import p507d0.p591y.Closeable;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ScreenshotContentObserver.kt */
-/* renamed from: b.a.s.b, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.a.s.b, reason: use source file name */
+/* JADX INFO: compiled from: ScreenshotContentObserver.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class ScreenshotContentObserver extends ContentObserver {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final a f1879a = new a(null);
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public String f1880b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final Logger f1881c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final ContentResolver f1882d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final Clock f1883e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final Function2<Uri, String, Unit> f1884f;
 
-    /* compiled from: ScreenshotContentObserver.kt */
-    /* renamed from: b.a.s.b$a */
+    /* JADX INFO: renamed from: b.a.s.b$a */
+    /* JADX INFO: compiled from: ScreenshotContentObserver.kt */
     public static final class a {
         public a(DefaultConstructorMarker defaultConstructorMarker) {
         }
     }
 
-    /* compiled from: ScreenshotContentObserver.kt */
-    /* renamed from: b.a.s.b$b */
+    /* JADX INFO: renamed from: b.a.s.b$b */
+    /* JADX INFO: compiled from: ScreenshotContentObserver.kt */
     public static final class b {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final String f1885a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final long f1886b;
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public final String f1887c;
 
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         public final String f1888d;
 
-        /* renamed from: e */
+        /* JADX INFO: renamed from: e */
         public final Uri f1889e;
 
-        /* renamed from: f */
+        /* JADX INFO: renamed from: f */
         public final long f1890f;
 
         public b(long j, String str, String str2, Uri uri, long j2) {
@@ -139,7 +139,7 @@ public final class ScreenshotContentObserver extends ContentObserver {
     }
 
     /* JADX WARN: Removed duplicated region for block: B:29:0x00bc  */
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */

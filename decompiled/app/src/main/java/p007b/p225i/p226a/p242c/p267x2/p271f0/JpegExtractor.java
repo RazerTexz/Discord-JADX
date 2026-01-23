@@ -21,44 +21,44 @@ import p007b.p225i.p226a.p242c.p267x2.p271f0.MotionPhotoDescription;
 import p007b.p225i.p226a.p242c.p267x2.p274i0.Mp4Extractor;
 import p007b.p225i.p226a.p242c.p267x2.p274i0.Sniffer2;
 
-/* compiled from: JpegExtractor.java */
-/* renamed from: b.i.a.c.x2.f0.a, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.x2.f0.a, reason: use source file name */
+/* JADX INFO: compiled from: JpegExtractor.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class JpegExtractor implements Extractor {
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public ExtractorOutput f8156b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public int f8157c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public int f8158d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public int f8159e;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     @Nullable
     public MotionPhotoMetadata f8161g;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public ExtractorInput f8162h;
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public StartOffsetExtractorInput f8163i;
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     @Nullable
     public Mp4Extractor f8164j;
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final ParsableByteArray f8155a = new ParsableByteArray(6);
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public long f8160f = -1;
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final void m3665a() {
         m3666c(new Metadata.Entry[0]);
         ExtractorOutput extractorOutput = this.f8156b;
@@ -69,7 +69,7 @@ public final class JpegExtractor implements Extractor {
     }
 
     @Override // p007b.p225i.p226a.p242c.p267x2.Extractor
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public boolean mo3633b(ExtractorInput extractorInput) throws IOException {
         if (m3667d(extractorInput) != 65496) {
             return false;
@@ -91,7 +91,7 @@ public final class JpegExtractor implements Extractor {
         return this.f8155a.m3101u() == 1165519206 && this.f8155a.m3105y() == 0;
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final void m3666c(Metadata.Entry... entryArr) {
         ExtractorOutput extractorOutput = this.f8156b;
         Objects.requireNonNull(extractorOutput);
@@ -102,7 +102,7 @@ public final class JpegExtractor implements Extractor {
         trackOutput2Mo2492p.mo2526e(bVar.m3277a());
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final int m3667d(ExtractorInput extractorInput) throws IOException {
         this.f8155a.m3075A(2);
         extractorInput.mo3652o(this.f8155a.f6793a, 0, 2);
@@ -110,7 +110,7 @@ public final class JpegExtractor implements Extractor {
     }
 
     @Override // p007b.p225i.p226a.p242c.p267x2.Extractor
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public int mo3635e(ExtractorInput extractorInput, PositionHolder positionHolder) throws IOException {
         int i;
         String strM3005m;
@@ -277,13 +277,13 @@ public final class JpegExtractor implements Extractor {
     }
 
     @Override // p007b.p225i.p226a.p242c.p267x2.Extractor
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public void mo3636f(ExtractorOutput extractorOutput) {
         this.f8156b = extractorOutput;
     }
 
     @Override // p007b.p225i.p226a.p242c.p267x2.Extractor
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public void mo3637g(long j, long j2) {
         if (j == 0) {
             this.f8157c = 0;

@@ -9,41 +9,41 @@ import java.util.Arrays;
 import p007b.p085c.p086a.p087a0.AnimatableValueParser;
 import p007b.p225i.p226a.p288f.p313h.p326m.C3927d;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public final class zzgp extends AbstractSafeParcelable {
     public static final Parcelable.Creator<zzgp> CREATOR = new C3927d();
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final int f20635j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     @Nullable
     public final ParcelUuid f20636k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     @Nullable
     public final ParcelUuid f20637l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     @Nullable
     public final ParcelUuid f20638m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     @Nullable
     public final byte[] f20639n;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     @Nullable
     public final byte[] f20640o;
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public final int f20641p;
 
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     @Nullable
     public final byte[] f20642q;
 
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     @Nullable
     public final byte[] f20643r;
 

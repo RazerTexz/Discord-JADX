@@ -4,8 +4,8 @@ import java.util.concurrent.CancellationException;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: AppCancellationException.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: AppCancellationException.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final /* data */ class AppCancellationException extends CancellationException {
     private final Throwable cause;
     private final Error error;
@@ -39,7 +39,7 @@ public final /* data */ class AppCancellationException extends CancellationExcep
         return getCause();
     }
 
-    /* renamed from: component3, reason: from getter */
+    /* JADX INFO: renamed from: component3, reason: from getter */
     public final Error getError() {
         return this.error;
     }

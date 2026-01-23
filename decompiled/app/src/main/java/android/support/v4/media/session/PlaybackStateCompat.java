@@ -12,45 +12,45 @@ import java.util.ArrayList;
 import java.util.List;
 import p007b.p100d.p104b.p105a.outline;
 
+/* JADX INFO: loaded from: classes.dex */
 @SuppressLint({"BanParcelableUsage"})
-/* loaded from: classes.dex */
 public final class PlaybackStateCompat implements Parcelable {
     public static final Parcelable.Creator<PlaybackStateCompat> CREATOR = new C0027a();
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final int f59j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final long f60k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final long f61l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public final float f62m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public final long f63n;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public final int f64o;
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public final CharSequence f65p;
 
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     public final long f66q;
 
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     public List<CustomAction> f67r;
 
-    /* renamed from: s */
+    /* JADX INFO: renamed from: s */
     public final long f68s;
 
-    /* renamed from: t */
+    /* JADX INFO: renamed from: t */
     public final Bundle f69t;
 
-    /* renamed from: android.support.v4.media.session.PlaybackStateCompat$a */
+    /* JADX INFO: renamed from: android.support.v4.media.session.PlaybackStateCompat$a */
     public class C0027a implements Parcelable.Creator<PlaybackStateCompat> {
         @Override // android.os.Parcelable.Creator
         public PlaybackStateCompat createFromParcel(Parcel parcel) {
@@ -63,165 +63,165 @@ public final class PlaybackStateCompat implements Parcelable {
         }
     }
 
+    /* JADX INFO: renamed from: android.support.v4.media.session.PlaybackStateCompat$b */
     @RequiresApi(21)
-    /* renamed from: android.support.v4.media.session.PlaybackStateCompat$b */
     public static class C0028b {
         @DoNotInline
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public static void m47a(PlaybackState.Builder builder, PlaybackState.CustomAction customAction) {
             builder.addCustomAction(customAction);
         }
 
         @DoNotInline
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public static PlaybackState.CustomAction m48b(PlaybackState.CustomAction.Builder builder) {
             return builder.build();
         }
 
         @DoNotInline
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public static PlaybackState m49c(PlaybackState.Builder builder) {
             return builder.build();
         }
 
         @DoNotInline
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         public static PlaybackState.Builder m50d() {
             return new PlaybackState.Builder();
         }
 
         @DoNotInline
-        /* renamed from: e */
+        /* JADX INFO: renamed from: e */
         public static PlaybackState.CustomAction.Builder m51e(String str, CharSequence charSequence, int i) {
             return new PlaybackState.CustomAction.Builder(str, charSequence, i);
         }
 
         @DoNotInline
-        /* renamed from: f */
+        /* JADX INFO: renamed from: f */
         public static String m52f(PlaybackState.CustomAction customAction) {
             return customAction.getAction();
         }
 
         @DoNotInline
-        /* renamed from: g */
+        /* JADX INFO: renamed from: g */
         public static long m53g(PlaybackState playbackState) {
             return playbackState.getActions();
         }
 
         @DoNotInline
-        /* renamed from: h */
+        /* JADX INFO: renamed from: h */
         public static long m54h(PlaybackState playbackState) {
             return playbackState.getActiveQueueItemId();
         }
 
         @DoNotInline
-        /* renamed from: i */
+        /* JADX INFO: renamed from: i */
         public static long m55i(PlaybackState playbackState) {
             return playbackState.getBufferedPosition();
         }
 
         @DoNotInline
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public static List<PlaybackState.CustomAction> m56j(PlaybackState playbackState) {
             return playbackState.getCustomActions();
         }
 
         @DoNotInline
-        /* renamed from: k */
+        /* JADX INFO: renamed from: k */
         public static CharSequence m57k(PlaybackState playbackState) {
             return playbackState.getErrorMessage();
         }
 
         @DoNotInline
-        /* renamed from: l */
+        /* JADX INFO: renamed from: l */
         public static Bundle m58l(PlaybackState.CustomAction customAction) {
             return customAction.getExtras();
         }
 
         @DoNotInline
-        /* renamed from: m */
+        /* JADX INFO: renamed from: m */
         public static int m59m(PlaybackState.CustomAction customAction) {
             return customAction.getIcon();
         }
 
         @DoNotInline
-        /* renamed from: n */
+        /* JADX INFO: renamed from: n */
         public static long m60n(PlaybackState playbackState) {
             return playbackState.getLastPositionUpdateTime();
         }
 
         @DoNotInline
-        /* renamed from: o */
+        /* JADX INFO: renamed from: o */
         public static CharSequence m61o(PlaybackState.CustomAction customAction) {
             return customAction.getName();
         }
 
         @DoNotInline
-        /* renamed from: p */
+        /* JADX INFO: renamed from: p */
         public static float m62p(PlaybackState playbackState) {
             return playbackState.getPlaybackSpeed();
         }
 
         @DoNotInline
-        /* renamed from: q */
+        /* JADX INFO: renamed from: q */
         public static long m63q(PlaybackState playbackState) {
             return playbackState.getPosition();
         }
 
         @DoNotInline
-        /* renamed from: r */
+        /* JADX INFO: renamed from: r */
         public static int m64r(PlaybackState playbackState) {
             return playbackState.getState();
         }
 
         @DoNotInline
-        /* renamed from: s */
+        /* JADX INFO: renamed from: s */
         public static void m65s(PlaybackState.Builder builder, long j) {
             builder.setActions(j);
         }
 
         @DoNotInline
-        /* renamed from: t */
+        /* JADX INFO: renamed from: t */
         public static void m66t(PlaybackState.Builder builder, long j) {
             builder.setActiveQueueItemId(j);
         }
 
         @DoNotInline
-        /* renamed from: u */
+        /* JADX INFO: renamed from: u */
         public static void m67u(PlaybackState.Builder builder, long j) {
             builder.setBufferedPosition(j);
         }
 
         @DoNotInline
-        /* renamed from: v */
+        /* JADX INFO: renamed from: v */
         public static void m68v(PlaybackState.Builder builder, CharSequence charSequence) {
             builder.setErrorMessage(charSequence);
         }
 
         @DoNotInline
-        /* renamed from: w */
+        /* JADX INFO: renamed from: w */
         public static void m69w(PlaybackState.CustomAction.Builder builder, Bundle bundle) {
             builder.setExtras(bundle);
         }
 
         @DoNotInline
-        /* renamed from: x */
+        /* JADX INFO: renamed from: x */
         public static void m70x(PlaybackState.Builder builder, int i, long j, float f, long j2) {
             builder.setState(i, j, f, j2);
         }
     }
 
+    /* JADX INFO: renamed from: android.support.v4.media.session.PlaybackStateCompat$c */
     @RequiresApi(22)
-    /* renamed from: android.support.v4.media.session.PlaybackStateCompat$c */
     public static class C0029c {
         @DoNotInline
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public static Bundle m71a(PlaybackState playbackState) {
             return playbackState.getExtras();
         }
 
         @DoNotInline
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public static void m72b(PlaybackState.Builder builder, Bundle bundle) {
             builder.setExtras(bundle);
         }
@@ -288,19 +288,19 @@ public final class PlaybackStateCompat implements Parcelable {
     public static final class CustomAction implements Parcelable {
         public static final Parcelable.Creator<CustomAction> CREATOR = new C0026a();
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public final String f70j;
 
-        /* renamed from: k */
+        /* JADX INFO: renamed from: k */
         public final CharSequence f71k;
 
-        /* renamed from: l */
+        /* JADX INFO: renamed from: l */
         public final int f72l;
 
-        /* renamed from: m */
+        /* JADX INFO: renamed from: m */
         public final Bundle f73m;
 
-        /* renamed from: android.support.v4.media.session.PlaybackStateCompat$CustomAction$a */
+        /* JADX INFO: renamed from: android.support.v4.media.session.PlaybackStateCompat$CustomAction$a */
         public class C0026a implements Parcelable.Creator<CustomAction> {
             @Override // android.os.Parcelable.Creator
             public CustomAction createFromParcel(Parcel parcel) {

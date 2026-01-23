@@ -5,36 +5,36 @@ import p007b.p085c.p086a.p087a0.AnimatableValueParser;
 import p007b.p225i.p226a.p242c.p243a3.MediaSource2;
 import p007b.p225i.p226a.p242c.p259f3.Util2;
 
-/* compiled from: MediaPeriodInfo.java */
-/* renamed from: b.i.a.c.r1, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.r1, reason: use source file name */
+/* JADX INFO: compiled from: MediaPeriodInfo.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class MediaPeriodInfo {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final MediaSource2.a f7465a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final long f7466b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final long f7467c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final long f7468d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final long f7469e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final boolean f7470f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public final boolean f7471g;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public final boolean f7472h;
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public final boolean f7473i;
 
     public MediaPeriodInfo(MediaSource2.a aVar, long j, long j2, long j3, long j4, boolean z2, boolean z3, boolean z4, boolean z5) {
@@ -56,12 +56,12 @@ public final class MediaPeriodInfo {
         this.f7473i = z5;
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public MediaPeriodInfo m3360a(long j) {
         return j == this.f7467c ? this : new MediaPeriodInfo(this.f7465a, this.f7466b, j, this.f7468d, this.f7469e, this.f7470f, this.f7471g, this.f7472h, this.f7473i);
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public MediaPeriodInfo m3361b(long j) {
         return j == this.f7466b ? this : new MediaPeriodInfo(this.f7465a, j, this.f7467c, this.f7468d, this.f7469e, this.f7470f, this.f7471g, this.f7472h, this.f7473i);
     }

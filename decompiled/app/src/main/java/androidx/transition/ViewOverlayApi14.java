@@ -15,7 +15,7 @@ import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.util.ArrayList;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class ViewOverlayApi14 implements ViewOverlayImpl {
     public OverlayViewGroup mOverlayViewGroup;
 
@@ -163,7 +163,7 @@ public class ViewOverlayApi14 implements ViewOverlayImpl {
         }
 
         @RestrictTo({RestrictTo.Scope.LIBRARY_GROUP_PREFIX})
-        public ViewParent invalidateChildInParentFast(int i, int i2, Rect rect) throws IllegalArgumentException {
+        public ViewParent invalidateChildInParentFast(int i, int i2, Rect rect) {
             if (!(this.mHostView instanceof ViewGroup) || sInvalidateChildInParentFastMethod == null) {
                 return null;
             }

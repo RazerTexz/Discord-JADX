@@ -9,14 +9,14 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.recyclerview.widget.RecyclerView;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public abstract class SnapHelper extends RecyclerView.OnFlingListener {
     public static final float MILLISECONDS_PER_INCH = 100.0f;
     private Scroller mGravityScroller;
     public RecyclerView mRecyclerView;
     private final RecyclerView.OnScrollListener mScrollListener = new C05761();
 
-    /* renamed from: androidx.recyclerview.widget.SnapHelper$1 */
+    /* JADX INFO: renamed from: androidx.recyclerview.widget.SnapHelper$1 */
     public class C05761 extends RecyclerView.OnScrollListener {
         public boolean mScrolled = false;
 
@@ -41,7 +41,7 @@ public abstract class SnapHelper extends RecyclerView.OnFlingListener {
         }
     }
 
-    /* renamed from: androidx.recyclerview.widget.SnapHelper$2 */
+    /* JADX INFO: renamed from: androidx.recyclerview.widget.SnapHelper$2 */
     public class C05772 extends LinearSmoothScroller {
         public C05772(Context context) {
             super(context);

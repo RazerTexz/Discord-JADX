@@ -8,9 +8,9 @@ import p007b.p100d.p104b.p105a.outline;
 import p507d0.p580t.Collections2;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: WidgetHubAddServerViewModel.kt */
-/* renamed from: com.discord.widgets.hubs.HubAddServerState, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.hubs.HubAddServerState, reason: use source file name */
+/* JADX INFO: compiled from: WidgetHubAddServerViewModel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final /* data */ class WidgetHubAddServerViewModel2 {
     private final List<DirectoryEntryGuild> addedDirectories;
     private final List<Guild> addedGuilds;
@@ -36,6 +36,7 @@ public final /* data */ class WidgetHubAddServerViewModel2 {
         this.addedDirectories = list3;
     }
 
+    /* JADX WARN: Multi-variable type inference failed */
     public static /* synthetic */ WidgetHubAddServerViewModel2 copy$default(WidgetHubAddServerViewModel2 widgetHubAddServerViewModel2, String str, Long l, int i, List list, List list2, List list3, int i2, Object obj) {
         if ((i2 & 1) != 0) {
             str = widgetHubAddServerViewModel2.hubName;
@@ -62,17 +63,17 @@ public final /* data */ class WidgetHubAddServerViewModel2 {
         return widgetHubAddServerViewModel2.copy(str, l2, i3, list4, list5, list3);
     }
 
-    /* renamed from: component1, reason: from getter */
+    /* JADX INFO: renamed from: component1, reason: from getter */
     public final String getHubName() {
         return this.hubName;
     }
 
-    /* renamed from: component2, reason: from getter */
+    /* JADX INFO: renamed from: component2, reason: from getter */
     public final Long getDirectoryChannelId() {
         return this.directoryChannelId;
     }
 
-    /* renamed from: component3, reason: from getter */
+    /* JADX INFO: renamed from: component3, reason: from getter */
     public final int getSelectedIndex() {
         return this.selectedIndex;
     }

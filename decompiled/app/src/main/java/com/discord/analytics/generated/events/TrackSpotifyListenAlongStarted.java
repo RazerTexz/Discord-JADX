@@ -6,8 +6,8 @@ import com.discord.api.science.AnalyticsSchema;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: TrackSpotifyListenAlongStarted.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: TrackSpotifyListenAlongStarted.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class TrackSpotifyListenAlongStarted implements AnalyticsSchema, TrackBase2 {
     private TrackBase trackBase;
     private final CharSequence partyId = null;
@@ -15,7 +15,7 @@ public final /* data */ class TrackSpotifyListenAlongStarted implements Analytic
     private final transient String analyticsSchemaTypeName = "spotify_listen_along_started";
 
     @Override // com.discord.api.science.AnalyticsSchema
-    /* renamed from: d, reason: from getter */
+    /* JADX INFO: renamed from: d, reason: from getter */
     public String getAnalyticsSchemaTypeName() {
         return this.analyticsSchemaTypeName;
     }

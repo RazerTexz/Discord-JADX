@@ -34,16 +34,16 @@ import p507d0.p592z.p594d.FunctionReference;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Reflection2;
 
-/* compiled from: BuiltInsLoaderImpl.kt */
-/* renamed from: d0.e0.p.d.m0.l.b.d0.b, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.l.b.d0.b, reason: use source file name */
+/* JADX INFO: compiled from: BuiltInsLoaderImpl.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class BuiltInsLoaderImpl implements BuiltInsLoader {
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final BuiltInsResourceLoader f24516b = new BuiltInsResourceLoader();
 
-    /* compiled from: BuiltInsLoaderImpl.kt */
-    /* renamed from: d0.e0.p.d.m0.l.b.d0.b$a */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.l.b.d0.b$a */
+    /* JADX INFO: compiled from: BuiltInsLoaderImpl.kt */
     public /* synthetic */ class a extends FunctionReference implements Function1<String, InputStream> {
         public a(BuiltInsResourceLoader builtInsResourceLoader) {
             super(1, builtInsResourceLoader);
@@ -64,7 +64,7 @@ public final class BuiltInsLoaderImpl implements BuiltInsLoader {
             return "loadResource(Ljava/lang/String;)Ljava/io/InputStream;";
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final InputStream invoke2(String str) {
             Intrinsics3.checkNotNullParameter(str, "p0");
             return ((BuiltInsResourceLoader) this.receiver).loadResource(str);

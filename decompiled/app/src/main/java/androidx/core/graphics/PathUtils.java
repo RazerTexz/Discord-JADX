@@ -8,7 +8,7 @@ import androidx.annotation.RequiresApi;
 import java.util.ArrayList;
 import java.util.Collection;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public final class PathUtils {
     private PathUtils() {
     }

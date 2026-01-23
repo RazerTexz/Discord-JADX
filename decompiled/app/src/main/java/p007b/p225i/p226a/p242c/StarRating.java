@@ -6,16 +6,16 @@ import androidx.annotation.Nullable;
 import java.util.Arrays;
 import p007b.p085c.p086a.p087a0.AnimatableValueParser;
 
-/* compiled from: StarRating.java */
-/* renamed from: b.i.a.c.l2, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.l2, reason: use source file name */
+/* JADX INFO: compiled from: StarRating.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class StarRating extends Rating {
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     @IntRange(from = 1)
     public final int f7240k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final float f7241l;
 
     public StarRating(@IntRange(from = 1) int i) {
@@ -24,7 +24,7 @@ public final class StarRating extends Rating {
         this.f7241l = -1.0f;
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static String m3304a(int i) {
         return Integer.toString(i, 36);
     }

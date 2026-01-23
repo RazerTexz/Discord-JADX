@@ -30,8 +30,8 @@ import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserException;
 import p007b.p100d.p104b.p105a.outline;
 
+/* JADX INFO: loaded from: classes.dex */
 @RestrictTo({RestrictTo.Scope.LIBRARY_GROUP_PREFIX})
-/* loaded from: classes.dex */
 public class AnimatorInflaterCompat {
     private static final boolean DBG_ANIMATOR_INFLATER = false;
     private static final int MAX_NUM_POINTS = 100;
@@ -58,7 +58,7 @@ public class AnimatorInflaterCompat {
             this.mNodeArray = pathDataNodeArr;
         }
 
-        /* renamed from: evaluate, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: evaluate, reason: avoid collision after fix types in other method */
         public PathParser.PathDataNode[] evaluate2(float f, PathParser.PathDataNode[] pathDataNodeArr, PathParser.PathDataNode[] pathDataNodeArr2) {
             if (!PathParser.canMorph(pathDataNodeArr, pathDataNodeArr2)) {
                 throw new IllegalArgumentException("Can't interpolate between two incompatible pathData");
@@ -468,13 +468,12 @@ public class AnimatorInflaterCompat {
     
         return r0;
      */
-    /* JADX WARN: Multi-variable type inference failed */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
-    private static Animator createAnimatorFromXml(Context context, Resources resources, Resources.Theme theme, XmlPullParser xmlPullParser, AttributeSet attributeSet, AnimatorSet animatorSet, int i, float f) throws XmlPullParserException, Resources.NotFoundException, IOException {
+    private static Animator createAnimatorFromXml(Context context, Resources resources, Resources.Theme theme, XmlPullParser xmlPullParser, AttributeSet attributeSet, AnimatorSet animatorSet, int i, float f) throws XmlPullParserException, IOException {
         int depth = xmlPullParser.getDepth();
-        ValueAnimator valueAnimatorLoadAnimator = null;
+        Animator animatorLoadAnimator = null;
         ArrayList arrayList = null;
         while (true) {
             int next = xmlPullParser.next();
@@ -485,16 +484,16 @@ public class AnimatorInflaterCompat {
             if (next == 2) {
                 String name = xmlPullParser.getName();
                 if (name.equals("objectAnimator")) {
-                    valueAnimatorLoadAnimator = loadObjectAnimator(context, resources, theme, attributeSet, f, xmlPullParser);
+                    animatorLoadAnimator = loadObjectAnimator(context, resources, theme, attributeSet, f, xmlPullParser);
                 } else if (name.equals("animator")) {
-                    valueAnimatorLoadAnimator = loadAnimator(context, resources, theme, attributeSet, null, f, xmlPullParser);
+                    animatorLoadAnimator = loadAnimator(context, resources, theme, attributeSet, null, f, xmlPullParser);
                 } else {
                     if (name.equals("set")) {
                         AnimatorSet animatorSet2 = new AnimatorSet();
                         TypedArray typedArrayObtainAttributes = TypedArrayUtils.obtainAttributes(resources, theme, attributeSet, AndroidResources.STYLEABLE_ANIMATOR_SET);
                         createAnimatorFromXml(context, resources, theme, xmlPullParser, attributeSet, animatorSet2, TypedArrayUtils.getNamedInt(typedArrayObtainAttributes, xmlPullParser, "ordering", 0, 0), f);
                         typedArrayObtainAttributes.recycle();
-                        valueAnimatorLoadAnimator = animatorSet2;
+                        animatorLoadAnimator = animatorSet2;
                     } else {
                         if (!name.equals("propertyValuesHolder")) {
                             StringBuilder sbM833U = outline.m833U("Unknown animator name: ");
@@ -502,8 +501,8 @@ public class AnimatorInflaterCompat {
                             throw new RuntimeException(sbM833U.toString());
                         }
                         PropertyValuesHolder[] propertyValuesHolderArrLoadValues = loadValues(context, resources, theme, xmlPullParser, Xml.asAttributeSet(xmlPullParser));
-                        if (propertyValuesHolderArrLoadValues != null && (valueAnimatorLoadAnimator instanceof ValueAnimator)) {
-                            valueAnimatorLoadAnimator.setValues(propertyValuesHolderArrLoadValues);
+                        if (propertyValuesHolderArrLoadValues != null && (animatorLoadAnimator instanceof ValueAnimator)) {
+                            ((ValueAnimator) animatorLoadAnimator).setValues(propertyValuesHolderArrLoadValues);
                         }
                         i2 = 1;
                     }
@@ -511,7 +510,7 @@ public class AnimatorInflaterCompat {
                         if (arrayList == null) {
                             arrayList = new ArrayList();
                         }
-                        arrayList.add(valueAnimatorLoadAnimator);
+                        arrayList.add(animatorLoadAnimator);
                     }
                 }
                 if (animatorSet == null) {

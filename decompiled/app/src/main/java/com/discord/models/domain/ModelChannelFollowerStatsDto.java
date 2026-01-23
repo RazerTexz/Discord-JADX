@@ -3,8 +3,8 @@ package com.discord.models.domain;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ModelChannelFollowerStatsDto.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: ModelChannelFollowerStatsDto.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class ModelChannelFollowerStatsDto {
     private final Integer channelsFollowing;
     private final Integer guildMembers;
@@ -48,32 +48,32 @@ public final /* data */ class ModelChannelFollowerStatsDto {
         return modelChannelFollowerStatsDto.copy(num, num7, num8, num9, num10, num6);
     }
 
-    /* renamed from: component1, reason: from getter */
+    /* JADX INFO: renamed from: component1, reason: from getter */
     public final Integer getGuildsFollowing() {
         return this.guildsFollowing;
     }
 
-    /* renamed from: component2, reason: from getter */
+    /* JADX INFO: renamed from: component2, reason: from getter */
     public final Integer getChannelsFollowing() {
         return this.channelsFollowing;
     }
 
-    /* renamed from: component3, reason: from getter */
+    /* JADX INFO: renamed from: component3, reason: from getter */
     public final Integer getGuildMembers() {
         return this.guildMembers;
     }
 
-    /* renamed from: component4, reason: from getter */
+    /* JADX INFO: renamed from: component4, reason: from getter */
     public final Integer getUsersSeenEver() {
         return this.usersSeenEver;
     }
 
-    /* renamed from: component5, reason: from getter */
+    /* JADX INFO: renamed from: component5, reason: from getter */
     public final Integer getSubscribersGainedSinceLastPost() {
         return this.subscribersGainedSinceLastPost;
     }
 
-    /* renamed from: component6, reason: from getter */
+    /* JADX INFO: renamed from: component6, reason: from getter */
     public final Integer getSubscribersLostSinceLastPost() {
         return this.subscribersLostSinceLastPost;
     }

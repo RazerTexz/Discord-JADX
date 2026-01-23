@@ -6,9 +6,9 @@ import android.os.IInterface;
 import android.os.Parcel;
 import android.os.RemoteException;
 
-/* compiled from: com.google.android.gms:play-services-measurement-base@@18.0.0 */
-/* renamed from: b.i.a.f.h.l.s0 */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.h.l.s0 */
+/* JADX INFO: compiled from: com.google.android.gms:play-services-measurement-base@@18.0.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public class BinderC3821s0 extends Binder implements IInterface {
     public BinderC3821s0(String str) {
         attachInterface(this, str);
@@ -19,7 +19,7 @@ public class BinderC3821s0 extends Binder implements IInterface {
         return this;
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public boolean mo4565c(int i, Parcel parcel, Parcel parcel2, int i2) throws RemoteException {
         throw null;
     }

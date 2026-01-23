@@ -4,12 +4,12 @@ import java.lang.reflect.Constructor;
 import org.objenesis.ObjenesisException;
 import p617h0.p620b.p621a.ObjectInstantiator;
 
-/* compiled from: AccessibleInstantiator.java */
-/* renamed from: h0.b.a.c.a, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: h0.b.a.c.a, reason: use source file name */
+/* JADX INFO: compiled from: AccessibleInstantiator.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class AccessibleInstantiator<T> implements ObjectInstantiator {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public Constructor<T> f26384a;
 
     public AccessibleInstantiator(Class<T> cls) {

@@ -12,9 +12,9 @@ import java.util.Map;
 import p507d0.p592z.p594d.Intrinsics3;
 import p658rx.functions.Func5;
 
-/* compiled from: WidgetChannelTopicViewModel.kt */
-/* renamed from: com.discord.widgets.channels.WidgetChannelTopicViewModel$Companion$mapChannelToGuildStoreState$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.channels.WidgetChannelTopicViewModel$Companion$mapChannelToGuildStoreState$1, reason: use source file name */
+/* JADX INFO: compiled from: WidgetChannelTopicViewModel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetChannelTopicViewModel2<T1, T2, T3, T4, T5, R> implements Func5<Map<Long, ? extends Channel>, Map<Long, ? extends User>, Map<Long, ? extends GuildMember>, Map<Long, ? extends GuildRole>, Boolean, WidgetChannelTopicViewModel.StoreState.Guild> {
     public final /* synthetic */ Channel $channel;
     public final /* synthetic */ WidgetChannelTopicViewModel.Companion.NavState $navState;
@@ -29,7 +29,7 @@ public final class WidgetChannelTopicViewModel2<T1, T2, T3, T4, T5, R> implement
         return call2((Map<Long, Channel>) map, map2, (Map<Long, GuildMember>) map3, (Map<Long, GuildRole>) map4, bool);
     }
 
-    /* renamed from: call, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
     public final WidgetChannelTopicViewModel.StoreState.Guild call2(Map<Long, Channel> map, Map<Long, ? extends User> map2, Map<Long, GuildMember> map3, Map<Long, GuildRole> map4, Boolean bool) {
         Channel channel = this.$channel;
         Intrinsics3.checkNotNullExpressionValue(map, "channels");

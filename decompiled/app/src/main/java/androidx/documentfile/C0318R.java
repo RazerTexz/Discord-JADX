@@ -1,7 +1,7 @@
 package androidx.documentfile;
 
-/* renamed from: androidx.documentfile.R */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: androidx.documentfile.R */
+/* JADX INFO: loaded from: classes.dex */
 public final class C0318R {
     private C0318R() {
     }

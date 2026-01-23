@@ -3,8 +3,8 @@ package co.discord.media_engine.internal;
 import p001a0.p002a.p003a.C0002b;
 import p007b.p100d.p104b.p105a.outline;
 
-/* compiled from: NativeStatistics.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: NativeStatistics.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class InboundRtpStats {
     private final long headerBytes;
     private final long jitter;
@@ -26,32 +26,32 @@ public final /* data */ class InboundRtpStats {
         return inboundRtpStats.copy((i2 & 1) != 0 ? inboundRtpStats.packets : j, (i2 & 2) != 0 ? inboundRtpStats.jitter : j2, (i2 & 4) != 0 ? inboundRtpStats.packetsLost : i, (i2 & 8) != 0 ? inboundRtpStats.headerBytes : j3, (i2 & 16) != 0 ? inboundRtpStats.paddingBytes : j4, (i2 & 32) != 0 ? inboundRtpStats.payloadBytes : j5);
     }
 
-    /* renamed from: component1, reason: from getter */
+    /* JADX INFO: renamed from: component1, reason: from getter */
     public final long getPackets() {
         return this.packets;
     }
 
-    /* renamed from: component2, reason: from getter */
+    /* JADX INFO: renamed from: component2, reason: from getter */
     public final long getJitter() {
         return this.jitter;
     }
 
-    /* renamed from: component3, reason: from getter */
+    /* JADX INFO: renamed from: component3, reason: from getter */
     public final int getPacketsLost() {
         return this.packetsLost;
     }
 
-    /* renamed from: component4, reason: from getter */
+    /* JADX INFO: renamed from: component4, reason: from getter */
     public final long getHeaderBytes() {
         return this.headerBytes;
     }
 
-    /* renamed from: component5, reason: from getter */
+    /* JADX INFO: renamed from: component5, reason: from getter */
     public final long getPaddingBytes() {
         return this.paddingBytes;
     }
 
-    /* renamed from: component6, reason: from getter */
+    /* JADX INFO: renamed from: component6, reason: from getter */
     public final long getPayloadBytes() {
         return this.payloadBytes;
     }

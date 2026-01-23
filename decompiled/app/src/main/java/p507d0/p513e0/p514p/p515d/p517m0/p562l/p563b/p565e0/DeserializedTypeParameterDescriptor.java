@@ -27,22 +27,22 @@ import p507d0.p580t._Collections;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: DeserializedTypeParameterDescriptor.kt */
-/* renamed from: d0.e0.p.d.m0.l.b.e0.m, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.l.b.e0.m, reason: use source file name */
+/* JADX INFO: compiled from: DeserializedTypeParameterDescriptor.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class DeserializedTypeParameterDescriptor extends AbstractLazyTypeParameterDescriptor {
 
-    /* renamed from: t */
+    /* JADX INFO: renamed from: t */
     public final context6 f24622t;
 
-    /* renamed from: u */
+    /* JADX INFO: renamed from: u */
     public final C11694s f24623u;
 
-    /* renamed from: v */
+    /* JADX INFO: renamed from: v */
     public final DeserializedAnnotations f24624v;
 
-    /* compiled from: DeserializedTypeParameterDescriptor.kt */
-    /* renamed from: d0.e0.p.d.m0.l.b.e0.m$a */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.l.b.e0.m$a */
+    /* JADX INFO: compiled from: DeserializedTypeParameterDescriptor.kt */
     public static final class a extends Lambda implements Function0<List<? extends AnnotationDescriptor>> {
         public a() {
             super(0);
@@ -54,7 +54,7 @@ public final class DeserializedTypeParameterDescriptor extends AbstractLazyTypeP
         }
 
         @Override // kotlin.jvm.functions.Function0
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final List<? extends AnnotationDescriptor> invoke2() {
             return _Collections.toList(DeserializedTypeParameterDescriptor.access$getC$p(DeserializedTypeParameterDescriptor.this).getComponents().getAnnotationAndConstantLoader().loadTypeParameterAnnotations(DeserializedTypeParameterDescriptor.this.getProto(), DeserializedTypeParameterDescriptor.access$getC$p(DeserializedTypeParameterDescriptor.this).getNameResolver()));
         }
@@ -81,14 +81,14 @@ public final class DeserializedTypeParameterDescriptor extends AbstractLazyTypeP
     }
 
     @Override // p507d0.p513e0.p514p.p515d.p517m0.p521c.p524i1.AbstractTypeParameterDescriptor
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public void mo9400c(KotlinType kotlinType) {
         Intrinsics3.checkNotNullParameter(kotlinType, "type");
         throw new IllegalStateException(Intrinsics3.stringPlus("There should be no cycles for deserialized type parameters, but found for: ", this));
     }
 
     @Override // p507d0.p513e0.p514p.p515d.p517m0.p521c.p524i1.AbstractTypeParameterDescriptor
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public List<KotlinType> mo9401d() {
         List<C11692q> listUpperBounds = protoTypeTableUtil.upperBounds(this.f24623u, this.f24622t.getTypeTable());
         if (listUpperBounds.isEmpty()) {

@@ -4,9 +4,9 @@ import java.util.List;
 import p507d0.p513e0.p514p.p515d.p517m0.p567n.KotlinType;
 import p507d0.p513e0.p514p.p515d.p517m0.p567n.TypeSubstitutor2;
 
-/* compiled from: ConstructorDescriptor.java */
-/* renamed from: d0.e0.p.d.m0.c.l, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.c.l, reason: use source file name */
+/* JADX INFO: compiled from: ConstructorDescriptor.java */
+/* JADX INFO: loaded from: classes3.dex */
 public interface ConstructorDescriptor extends FunctionDescriptor {
     ClassDescriptor getConstructedClass();
 

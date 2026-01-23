@@ -26,12 +26,12 @@ import p507d0.p580t.Collections2;
 import p507d0.p580t._Collections;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ExperimentOverridesAdapter.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: ExperimentOverridesAdapter.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class ExperimentOverridesAdapter extends RecyclerView.Adapter<ExperimentViewHolder> {
     private List<? extends Item> items = Collections2.emptyList();
 
-    /* compiled from: ExperimentOverridesAdapter.kt */
+    /* JADX INFO: compiled from: ExperimentOverridesAdapter.kt */
     public static final class ExperimentViewHolder extends RecyclerView.ViewHolder {
         private final ExperimentOverridesListItemBinding binding;
 
@@ -92,7 +92,7 @@ public final class ExperimentOverridesAdapter extends RecyclerView.Adapter<Exper
         }
     }
 
-    /* compiled from: ExperimentOverridesAdapter.kt */
+    /* JADX INFO: compiled from: ExperimentOverridesAdapter.kt */
     public interface Item {
         String getApiName();
 
@@ -108,7 +108,7 @@ public final class ExperimentOverridesAdapter extends RecyclerView.Adapter<Exper
     }
 
     @Override // androidx.recyclerview.widget.RecyclerView.Adapter
-    /* renamed from: getItemCount */
+    /* JADX INFO: renamed from: getItemCount */
     public int getPageSize() {
         return this.items.size();
     }

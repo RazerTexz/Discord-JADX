@@ -4,11 +4,11 @@ import kotlin.jvm.internal.DefaultConstructorMarker;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: Phone.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: Phone.kt */
+/* JADX INFO: loaded from: classes.dex */
 public abstract class Phone {
 
-    /* compiled from: Phone.kt */
+    /* JADX INFO: compiled from: Phone.kt */
     public static final class NoPhoneNumber extends Phone {
         public static final NoPhoneNumber INSTANCE = new NoPhoneNumber();
 
@@ -17,7 +17,7 @@ public abstract class Phone {
         }
     }
 
-    /* compiled from: Phone.kt */
+    /* JADX INFO: compiled from: Phone.kt */
     public static final /* data */ class PhoneNumber extends Phone {
         private final String number;
 
@@ -28,7 +28,7 @@ public abstract class Phone {
             this.number = str;
         }
 
-        /* renamed from: a, reason: from getter */
+        /* JADX INFO: renamed from: a, reason: from getter */
         public final String getNumber() {
             return this.number;
         }

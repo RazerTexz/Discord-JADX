@@ -6,9 +6,9 @@ import kotlin.Unit;
 import kotlin.jvm.functions.Function0;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: StoreMediaEngine.kt */
-/* renamed from: com.discord.stores.StoreMediaEngine$init$echoCancellationCallback$1$onEchoCancellationUpdated$1 */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.stores.StoreMediaEngine$init$echoCancellationCallback$1$onEchoCancellationUpdated$1 */
+/* JADX INFO: compiled from: StoreMediaEngine.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class C6174x527da00c extends Lambda implements Function0<Unit> {
     public final /* synthetic */ MediaEngine.EchoCancellationInfo $info;
 
@@ -24,7 +24,7 @@ public final class C6174x527da00c extends Lambda implements Function0<Unit> {
         return Unit.f27425a;
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final void invoke2() {
         AnalyticsTracker.INSTANCE.echoCancellationConfigured(this.$info);
     }

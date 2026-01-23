@@ -5,7 +5,7 @@ import org.objectweb.asm.Opcodes;
 import org.objectweb.asm.RecordComponentVisitor;
 import org.objectweb.asm.TypePath;
 
-/* loaded from: discord-126021.apk:org/objectweb/asm/commons/RecordComponentRemapper.SCL.lombok */
+/* JADX INFO: loaded from: discord-126021.apk:org/objectweb/asm/commons/RecordComponentRemapper.SCL.lombok */
 public class RecordComponentRemapper extends RecordComponentVisitor {
     protected final Remapper remapper;
 

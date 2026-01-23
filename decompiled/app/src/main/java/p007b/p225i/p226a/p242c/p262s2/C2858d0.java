@@ -4,15 +4,15 @@ import p007b.p225i.p226a.p242c.p259f3.ListenerSet;
 import p007b.p225i.p226a.p242c.p262s2.AnalyticsListener;
 import p007b.p225i.p226a.p242c.p265v2.DecoderCounters;
 
-/* compiled from: lambda */
-/* renamed from: b.i.a.c.s2.d0 */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.s2.d0 */
+/* JADX INFO: compiled from: lambda */
+/* JADX INFO: loaded from: classes3.dex */
 public final /* synthetic */ class C2858d0 implements ListenerSet.a {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final /* synthetic */ AnalyticsListener.a f7523a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final /* synthetic */ DecoderCounters f7524b;
 
     public /* synthetic */ C2858d0(AnalyticsListener.a aVar, DecoderCounters decoderCounters) {

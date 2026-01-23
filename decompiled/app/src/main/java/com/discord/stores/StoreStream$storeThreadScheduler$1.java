@@ -3,8 +3,8 @@ package com.discord.stores;
 import com.discord.stores.StoreStream;
 import java.util.concurrent.ThreadFactory;
 
-/* compiled from: StoreStream.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: StoreStream.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class StoreStream$storeThreadScheduler$1 implements ThreadFactory {
     public static final StoreStream$storeThreadScheduler$1 INSTANCE = new StoreStream$storeThreadScheduler$1();
 

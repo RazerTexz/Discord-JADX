@@ -5,25 +5,25 @@ import java.util.concurrent.Callable;
 import java.util.concurrent.Executor;
 import p007b.p225i.p226a.p288f.p299e.p308o.C3404f;
 
-/* compiled from: CrashlyticsBackgroundWorker.java */
-/* renamed from: b.i.c.m.d.k.i, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.c.m.d.k.i, reason: use source file name */
+/* JADX INFO: compiled from: CrashlyticsBackgroundWorker.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class CrashlyticsBackgroundWorker {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final Executor f12315a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public Task<Void> f12316b = C3404f.m4264Z(null);
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final Object f12317c = new Object();
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public ThreadLocal<Boolean> f12318d = new ThreadLocal<>();
 
-    /* compiled from: CrashlyticsBackgroundWorker.java */
-    /* renamed from: b.i.c.m.d.k.i$a */
+    /* JADX INFO: renamed from: b.i.c.m.d.k.i$a */
+    /* JADX INFO: compiled from: CrashlyticsBackgroundWorker.java */
     public class a implements Runnable {
         public a() {
         }
@@ -39,14 +39,14 @@ public class CrashlyticsBackgroundWorker {
         executor.execute(new a());
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public void m6436a() {
         if (!Boolean.TRUE.equals(this.f12318d.get())) {
             throw new IllegalStateException("Not running on background worker thread as intended.");
         }
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public <T> Task<T> m6437b(Callable<T> callable) {
         Task<T> task;
         synchronized (this.f12317c) {
@@ -56,7 +56,7 @@ public class CrashlyticsBackgroundWorker {
         return task;
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public <T> Task<T> m6438c(Callable<Task<T>> callable) {
         Task<T> task;
         synchronized (this.f12317c) {

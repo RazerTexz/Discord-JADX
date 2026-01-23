@@ -5,12 +5,12 @@ import com.discord.models.deserialization.gson.InboundGatewayGsonParser;
 import com.discord.models.domain.Model;
 import com.discord.models.domain.ModelCall;
 
-/* compiled from: lambda */
-/* renamed from: b.a.m.a.j */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.a.m.a.j */
+/* JADX INFO: compiled from: lambda */
+/* JADX INFO: loaded from: classes.dex */
 public final /* synthetic */ class C1149j implements Model.JsonReader.ItemFactory {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final /* synthetic */ Model.JsonReader f1529a;
 
     public /* synthetic */ C1149j(Model.JsonReader jsonReader) {

@@ -7,9 +7,9 @@ import android.os.Parcelable;
 import com.google.android.gms.common.data.DataHolder;
 import p007b.p085c.p086a.p087a0.AnimatableValueParser;
 
-/* compiled from: com.google.android.gms:play-services-base@@17.3.0 */
-/* renamed from: b.i.a.f.e.j.a */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.e.j.a */
+/* JADX INFO: compiled from: com.google.android.gms:play-services-base@@17.3.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public final class C3342a implements Parcelable.Creator<DataHolder> {
     @Override // android.os.Parcelable.Creator
     public final DataHolder createFromParcel(Parcel parcel) {

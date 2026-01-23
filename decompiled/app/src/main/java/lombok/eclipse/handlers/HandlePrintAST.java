@@ -13,9 +13,9 @@ import lombok.eclipse.EclipseAnnotationHandler;
 import lombok.eclipse.EclipseNode;
 import org.eclipse.jdt.internal.compiler.ast.Annotation;
 
+/* JADX INFO: loaded from: discord-126021.apk:lombok/eclipse/handlers/HandlePrintAST.SCL.lombok */
 @DeferUntilPostDiet
 @HandlerPriority(536870912)
-/* loaded from: discord-126021.apk:lombok/eclipse/handlers/HandlePrintAST.SCL.lombok */
 public class HandlePrintAST extends EclipseAnnotationHandler<PrintAST> {
     @Override // lombok.eclipse.EclipseAnnotationHandler
     public void handle(AnnotationValues<PrintAST> annotation, Annotation ast, EclipseNode annotationNode) {

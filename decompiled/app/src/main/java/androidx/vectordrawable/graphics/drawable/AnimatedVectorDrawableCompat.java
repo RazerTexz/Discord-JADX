@@ -35,7 +35,7 @@ import java.util.ArrayList;
 import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserException;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class AnimatedVectorDrawableCompat extends VectorDrawableCommon implements Animatable2Compat {
     private static final String ANIMATED_VECTOR = "animated-vector";
     private static final boolean DBG_ANIMATION_VECTOR_DRAWABLE = false;
@@ -49,7 +49,7 @@ public class AnimatedVectorDrawableCompat extends VectorDrawableCommon implement
     public final Drawable.Callback mCallback;
     private Context mContext;
 
-    /* renamed from: androidx.vectordrawable.graphics.drawable.AnimatedVectorDrawableCompat$1 */
+    /* JADX INFO: renamed from: androidx.vectordrawable.graphics.drawable.AnimatedVectorDrawableCompat$1 */
     public class C06771 implements Drawable.Callback {
         public C06771() {
         }
@@ -70,7 +70,7 @@ public class AnimatedVectorDrawableCompat extends VectorDrawableCommon implement
         }
     }
 
-    /* renamed from: androidx.vectordrawable.graphics.drawable.AnimatedVectorDrawableCompat$2 */
+    /* JADX INFO: renamed from: androidx.vectordrawable.graphics.drawable.AnimatedVectorDrawableCompat$2 */
     public class C06782 extends AnimatorListenerAdapter {
         public C06782() {
         }
@@ -164,7 +164,7 @@ public class AnimatedVectorDrawableCompat extends VectorDrawableCommon implement
     }
 
     @Nullable
-    public static AnimatedVectorDrawableCompat create(@NonNull Context context, @DrawableRes int i) throws Resources.NotFoundException {
+    public static AnimatedVectorDrawableCompat create(@NonNull Context context, @DrawableRes int i) {
         int next;
         if (Build.VERSION.SDK_INT >= 24) {
             AnimatedVectorDrawableCompat animatedVectorDrawableCompat = new AnimatedVectorDrawableCompat(context);

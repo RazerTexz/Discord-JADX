@@ -46,18 +46,18 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 import p507d0.p592z.p594d.Reflection2;
 
-/* compiled from: AttachmentBottomSheet.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: AttachmentBottomSheet.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class AttachmentBottomSheet extends AppBottomSheet {
     public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(AttachmentBottomSheet.class, "binding", "getBinding()Lcom/discord/databinding/WidgetAttachmentBottomSheetBinding;", 0)};
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private Attachment<? extends Object> attachment;
     private ImageInfo attachmentImageInfo;
     private Integer attachmentViewSize;
 
-    /* renamed from: binding$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
     private final ControllerListener<ImageInfo> draweeControllerListener;
     private boolean isSpoiler;
@@ -65,11 +65,12 @@ public final class AttachmentBottomSheet extends AppBottomSheet {
     private Function0<Unit> onFileRemoved;
     private Function1<? super Boolean, Unit> onMarkSpoiler;
 
-    /* compiled from: AttachmentBottomSheet.kt */
+    /* JADX INFO: compiled from: AttachmentBottomSheet.kt */
     public static final class Companion {
         private Companion() {
         }
 
+        /* JADX WARN: Multi-variable type inference failed */
         public static /* synthetic */ AttachmentBottomSheet show$default(Companion companion, FragmentManager fragmentManager, Attachment attachment, Function0 function0, Function1 function1, Function0 function02, int i, Object obj) {
             if ((i & 16) != 0) {
                 function02 = null;
@@ -97,8 +98,8 @@ public final class AttachmentBottomSheet extends AppBottomSheet {
         }
     }
 
-    /* compiled from: AttachmentBottomSheet.kt */
-    /* renamed from: com.discord.widgets.chat.input.attachments.AttachmentBottomSheet$onViewCreated$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.input.attachments.AttachmentBottomSheet$onViewCreated$1 */
+    /* JADX INFO: compiled from: AttachmentBottomSheet.kt */
     public static final class C77591 extends Lambda implements Function4<Integer, Integer, Integer, Integer, Unit> {
         public C77591() {
             super(4);
@@ -116,8 +117,8 @@ public final class AttachmentBottomSheet extends AppBottomSheet {
         }
     }
 
-    /* compiled from: AttachmentBottomSheet.kt */
-    /* renamed from: com.discord.widgets.chat.input.attachments.AttachmentBottomSheet$onViewCreated$3 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.input.attachments.AttachmentBottomSheet$onViewCreated$3 */
+    /* JADX INFO: compiled from: AttachmentBottomSheet.kt */
     public static final class ViewOnClickListenerC77603 implements View.OnClickListener {
         public ViewOnClickListenerC77603() {
         }
@@ -131,8 +132,8 @@ public final class AttachmentBottomSheet extends AppBottomSheet {
         }
     }
 
-    /* compiled from: AttachmentBottomSheet.kt */
-    /* renamed from: com.discord.widgets.chat.input.attachments.AttachmentBottomSheet$onViewCreated$4 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.input.attachments.AttachmentBottomSheet$onViewCreated$4 */
+    /* JADX INFO: compiled from: AttachmentBottomSheet.kt */
     public static final class ViewOnClickListenerC77614 implements View.OnClickListener {
         public ViewOnClickListenerC77614() {
         }

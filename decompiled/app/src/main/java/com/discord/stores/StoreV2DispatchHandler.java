@@ -8,8 +8,8 @@ import java.util.Set;
 import kotlin.jvm.internal.DefaultConstructorMarker;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: StoreV2DispatchHandler.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: StoreV2DispatchHandler.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class StoreV2DispatchHandler implements Store2 {
     private final ObservationDeck observationDeck;
     private final List<StoreV2> storesV2;

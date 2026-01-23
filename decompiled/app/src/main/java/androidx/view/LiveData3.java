@@ -3,9 +3,9 @@ package androidx.view;
 import androidx.exifinterface.media.ExifInterface;
 import kotlin.jvm.functions.Function1;
 
-/* compiled from: LiveData.kt */
-/* renamed from: androidx.lifecycle.LiveDataKt$observe$wrappedObserver$1, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: androidx.lifecycle.LiveDataKt$observe$wrappedObserver$1, reason: use source file name */
+/* JADX INFO: compiled from: LiveData.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class LiveData3<T> implements Observer<T> {
     public final /* synthetic */ Function1 $onChanged;
 

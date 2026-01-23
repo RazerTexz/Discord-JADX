@@ -12,13 +12,13 @@ import com.discord.widgets.hubs.WidgetHubAddServerConfirmationDialog2;
 import com.discord.widgets.hubs.WidgetHubDescription2;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: HubUtils.kt */
-/* renamed from: com.discord.utilities.hubs.HubUtilsKt, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.utilities.hubs.HubUtilsKt, reason: use source file name */
+/* JADX INFO: compiled from: HubUtils.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class HubUtils {
 
-    /* compiled from: HubUtils.kt */
-    /* renamed from: com.discord.utilities.hubs.HubUtilsKt$getAddServerActivityResultHandler$1 */
+    /* JADX INFO: renamed from: com.discord.utilities.hubs.HubUtilsKt$getAddServerActivityResultHandler$1 */
+    /* JADX INFO: compiled from: HubUtils.kt */
     public static final class C67731<O> implements ActivityResultCallback<ActivityResult> {
         public final /* synthetic */ AppFragment $this_getAddServerActivityResultHandler;
 
@@ -26,7 +26,7 @@ public final class HubUtils {
             this.$this_getAddServerActivityResultHandler = appFragment;
         }
 
-        /* renamed from: onActivityResult, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: onActivityResult, reason: avoid collision after fix types in other method */
         public final void onActivityResult2(ActivityResult activityResult) {
             Intent data;
             if (activityResult == null || (data = activityResult.getData()) == null) {

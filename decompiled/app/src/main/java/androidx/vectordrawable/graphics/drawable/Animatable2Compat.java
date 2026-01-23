@@ -6,13 +6,13 @@ import android.graphics.drawable.Drawable;
 import androidx.annotation.NonNull;
 import androidx.annotation.RequiresApi;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public interface Animatable2Compat extends Animatable {
 
     public static abstract class AnimationCallback {
         public Animatable2.AnimationCallback mPlatformCallback;
 
-        /* renamed from: androidx.vectordrawable.graphics.drawable.Animatable2Compat$AnimationCallback$1 */
+        /* JADX INFO: renamed from: androidx.vectordrawable.graphics.drawable.Animatable2Compat$AnimationCallback$1 */
         public class C06761 extends Animatable2.AnimationCallback {
             public C06761() {
             }

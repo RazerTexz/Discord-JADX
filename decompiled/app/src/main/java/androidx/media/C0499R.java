@@ -1,10 +1,10 @@
 package androidx.media;
 
-/* renamed from: androidx.media.R */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: androidx.media.R */
+/* JADX INFO: loaded from: classes.dex */
 public final class C0499R {
 
-    /* renamed from: androidx.media.R$color */
+    /* JADX INFO: renamed from: androidx.media.R$color */
     public static final class color {
         public static final int notification_material_background_media_default_color = 2131100117;
         public static final int primary_text_default_material_dark = 2131100263;
@@ -14,7 +14,7 @@ public final class C0499R {
         }
     }
 
-    /* renamed from: androidx.media.R$id */
+    /* JADX INFO: renamed from: androidx.media.R$id */
     public static final class id {
         public static final int action0 = 2131361869;
         public static final int action_divider = 2131361888;
@@ -40,7 +40,7 @@ public final class C0499R {
         }
     }
 
-    /* renamed from: androidx.media.R$integer */
+    /* JADX INFO: renamed from: androidx.media.R$integer */
     public static final class integer {
         public static final int cancel_button_image_alpha = 2131427335;
 
@@ -48,7 +48,7 @@ public final class C0499R {
         }
     }
 
-    /* renamed from: androidx.media.R$layout */
+    /* JADX INFO: renamed from: androidx.media.R$layout */
     public static final class layout {
         public static final int notification_media_action = 2131558629;
         public static final int notification_media_cancel_action = 2131558630;
@@ -64,7 +64,7 @@ public final class C0499R {
         }
     }
 
-    /* renamed from: androidx.media.R$style */
+    /* JADX INFO: renamed from: androidx.media.R$style */
     public static final class style {
         public static final int TextAppearance_Compat_Notification_Info_Media = 2131952219;
         public static final int TextAppearance_Compat_Notification_Line2_Media = 2131952221;

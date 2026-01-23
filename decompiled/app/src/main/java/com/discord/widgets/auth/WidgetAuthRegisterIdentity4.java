@@ -5,9 +5,9 @@ import com.discord.utilities.view.validators.ValidationManager;
 import kotlin.jvm.functions.Function0;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetAuthRegisterIdentity.kt */
-/* renamed from: com.discord.widgets.auth.WidgetAuthRegisterIdentity$emailValidationManager$2, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.auth.WidgetAuthRegisterIdentity$emailValidationManager$2, reason: use source file name */
+/* JADX INFO: compiled from: WidgetAuthRegisterIdentity.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetAuthRegisterIdentity4 extends Lambda implements Function0<ValidationManager> {
     public final /* synthetic */ WidgetAuthRegisterIdentity this$0;
 

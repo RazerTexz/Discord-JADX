@@ -58,11 +58,11 @@ import p658rx.subjects.BehaviorSubject;
 import p658rx.subjects.PublishSubject;
 import p658rx.subscriptions.CompositeSubscription;
 
-/* compiled from: SettingsGiftingViewModel.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: SettingsGiftingViewModel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class SettingsGiftingViewModel extends AppViewModel<ViewState> {
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private final BehaviorSubject<List<ClaimedOutboundPromotion>> claimedPromotionsSubject;
     private final PublishSubject<Event> eventSubject;
@@ -76,8 +76,8 @@ public final class SettingsGiftingViewModel extends AppViewModel<ViewState> {
     private final StoreUserSettingsSystem storeUserSettingsSystem;
     private final CompositeSubscription subscriptions;
 
-    /* compiled from: SettingsGiftingViewModel.kt */
-    /* renamed from: com.discord.widgets.settings.premium.SettingsGiftingViewModel$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.premium.SettingsGiftingViewModel$1 */
+    /* JADX INFO: compiled from: SettingsGiftingViewModel.kt */
     public static final /* synthetic */ class C98731 extends FunctionReferenceImpl implements Function1<StoreGooglePlayPurchases.Event, Unit> {
         public C98731(SettingsGiftingViewModel settingsGiftingViewModel) {
             super(1, settingsGiftingViewModel, SettingsGiftingViewModel.class, "handleGooglePlayPurchaseEvent", "handleGooglePlayPurchaseEvent(Lcom/discord/stores/StoreGooglePlayPurchases$Event;)V", 0);
@@ -89,15 +89,15 @@ public final class SettingsGiftingViewModel extends AppViewModel<ViewState> {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(StoreGooglePlayPurchases.Event event) {
             Intrinsics3.checkNotNullParameter(event, "p1");
             SettingsGiftingViewModel.access$handleGooglePlayPurchaseEvent((SettingsGiftingViewModel) this.receiver, event);
         }
     }
 
-    /* compiled from: SettingsGiftingViewModel.kt */
-    /* renamed from: com.discord.widgets.settings.premium.SettingsGiftingViewModel$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.premium.SettingsGiftingViewModel$2 */
+    /* JADX INFO: compiled from: SettingsGiftingViewModel.kt */
     public static final /* synthetic */ class C98742 extends FunctionReferenceImpl implements Function1<StoreGooglePlayPurchases.QueryState, Unit> {
         public C98742(SettingsGiftingViewModel settingsGiftingViewModel) {
             super(1, settingsGiftingViewModel, SettingsGiftingViewModel.class, "handleGooglePlayQueryStateUpdate", "handleGooglePlayQueryStateUpdate(Lcom/discord/stores/StoreGooglePlayPurchases$QueryState;)V", 0);
@@ -109,15 +109,15 @@ public final class SettingsGiftingViewModel extends AppViewModel<ViewState> {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(StoreGooglePlayPurchases.QueryState queryState) {
             Intrinsics3.checkNotNullParameter(queryState, "p1");
             SettingsGiftingViewModel.access$handleGooglePlayQueryStateUpdate((SettingsGiftingViewModel) this.receiver, queryState);
         }
     }
 
-    /* compiled from: SettingsGiftingViewModel.kt */
-    /* renamed from: com.discord.widgets.settings.premium.SettingsGiftingViewModel$3 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.premium.SettingsGiftingViewModel$3 */
+    /* JADX INFO: compiled from: SettingsGiftingViewModel.kt */
     public static final class C98753<T> implements Action1<StoreState> {
         public C98753() {
         }
@@ -127,14 +127,14 @@ public final class SettingsGiftingViewModel extends AppViewModel<ViewState> {
             call2(storeState);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final void call2(StoreState storeState) {
             SettingsGiftingViewModel.access$maybeCheckClaimedPromos(SettingsGiftingViewModel.this, storeState.isUserPremium());
         }
     }
 
-    /* compiled from: SettingsGiftingViewModel.kt */
-    /* renamed from: com.discord.widgets.settings.premium.SettingsGiftingViewModel$4 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.premium.SettingsGiftingViewModel$4 */
+    /* JADX INFO: compiled from: SettingsGiftingViewModel.kt */
     public static final /* synthetic */ class C98764 extends FunctionReferenceImpl implements Function1<StoreState, Unit> {
         public C98764(BehaviorSubject behaviorSubject) {
             super(1, behaviorSubject, BehaviorSubject.class, "onNext", "onNext(Ljava/lang/Object;)V", 0);
@@ -146,14 +146,14 @@ public final class SettingsGiftingViewModel extends AppViewModel<ViewState> {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(StoreState storeState) {
             ((BehaviorSubject) this.receiver).onNext(storeState);
         }
     }
 
-    /* compiled from: SettingsGiftingViewModel.kt */
-    /* renamed from: com.discord.widgets.settings.premium.SettingsGiftingViewModel$5 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.premium.SettingsGiftingViewModel$5 */
+    /* JADX INFO: compiled from: SettingsGiftingViewModel.kt */
     public static final /* synthetic */ class C98775 extends FunctionReferenceImpl implements Function2<StoreState, List<? extends ClaimedOutboundPromotion>, GiftAndPromoData> {
         public C98775(SettingsGiftingViewModel settingsGiftingViewModel) {
             super(2, settingsGiftingViewModel, SettingsGiftingViewModel.class, "combineData", "combineData(Lcom/discord/widgets/settings/premium/SettingsGiftingViewModel$StoreState;Ljava/util/List;)Lcom/discord/widgets/settings/premium/SettingsGiftingViewModel$GiftAndPromoData;", 0);
@@ -164,7 +164,7 @@ public final class SettingsGiftingViewModel extends AppViewModel<ViewState> {
             return invoke2(storeState, (List<ClaimedOutboundPromotion>) list);
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final GiftAndPromoData invoke2(StoreState storeState, List<ClaimedOutboundPromotion> list) {
             Intrinsics3.checkNotNullParameter(storeState, "p1");
             Intrinsics3.checkNotNullParameter(list, "p2");
@@ -172,8 +172,8 @@ public final class SettingsGiftingViewModel extends AppViewModel<ViewState> {
         }
     }
 
-    /* compiled from: SettingsGiftingViewModel.kt */
-    /* renamed from: com.discord.widgets.settings.premium.SettingsGiftingViewModel$6 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.premium.SettingsGiftingViewModel$6 */
+    /* JADX INFO: compiled from: SettingsGiftingViewModel.kt */
     public static final /* synthetic */ class C98786 extends FunctionReferenceImpl implements Function1<GiftAndPromoData, Unit> {
         public C98786(SettingsGiftingViewModel settingsGiftingViewModel) {
             super(1, settingsGiftingViewModel, SettingsGiftingViewModel.class, "handleAsyncData", "handleAsyncData(Lcom/discord/widgets/settings/premium/SettingsGiftingViewModel$GiftAndPromoData;)V", 0);
@@ -185,14 +185,14 @@ public final class SettingsGiftingViewModel extends AppViewModel<ViewState> {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(GiftAndPromoData giftAndPromoData) {
             Intrinsics3.checkNotNullParameter(giftAndPromoData, "p1");
             SettingsGiftingViewModel.access$handleAsyncData((SettingsGiftingViewModel) this.receiver, giftAndPromoData);
         }
     }
 
-    /* compiled from: SettingsGiftingViewModel.kt */
+    /* JADX INFO: compiled from: SettingsGiftingViewModel.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -222,10 +222,10 @@ public final class SettingsGiftingViewModel extends AppViewModel<ViewState> {
         }
     }
 
-    /* compiled from: SettingsGiftingViewModel.kt */
+    /* JADX INFO: compiled from: SettingsGiftingViewModel.kt */
     public static abstract class Event {
 
-        /* compiled from: SettingsGiftingViewModel.kt */
+        /* JADX INFO: compiled from: SettingsGiftingViewModel.kt */
         public static final /* data */ class ShowPromoBottomSheet extends Event {
             private final String content;
 
@@ -243,7 +243,7 @@ public final class SettingsGiftingViewModel extends AppViewModel<ViewState> {
                 return showPromoBottomSheet.copy(str);
             }
 
-            /* renamed from: component1, reason: from getter */
+            /* JADX INFO: renamed from: component1, reason: from getter */
             public final String getContent() {
                 return this.content;
             }
@@ -277,7 +277,7 @@ public final class SettingsGiftingViewModel extends AppViewModel<ViewState> {
             }
         }
 
-        /* compiled from: SettingsGiftingViewModel.kt */
+        /* JADX INFO: compiled from: SettingsGiftingViewModel.kt */
         public static final /* data */ class ShowPromoDialog extends Event {
             private final ClaimStatus claimStatus;
 
@@ -295,7 +295,7 @@ public final class SettingsGiftingViewModel extends AppViewModel<ViewState> {
                 return showPromoDialog.copy(claimStatus);
             }
 
-            /* renamed from: component1, reason: from getter */
+            /* JADX INFO: renamed from: component1, reason: from getter */
             public final ClaimStatus getClaimStatus() {
                 return this.claimStatus;
             }
@@ -340,7 +340,7 @@ public final class SettingsGiftingViewModel extends AppViewModel<ViewState> {
         }
     }
 
-    /* compiled from: SettingsGiftingViewModel.kt */
+    /* JADX INFO: compiled from: SettingsGiftingViewModel.kt */
     public static final /* data */ class GiftAndPromoData {
         private final List<ClaimedOutboundPromotion> claimedOutboundPromotions;
         private final StoreEntitlements.State entitlementState;
@@ -362,6 +362,7 @@ public final class SettingsGiftingViewModel extends AppViewModel<ViewState> {
             this.claimedOutboundPromotions = list;
         }
 
+        /* JADX WARN: Multi-variable type inference failed */
         public static /* synthetic */ GiftAndPromoData copy$default(GiftAndPromoData giftAndPromoData, StoreEntitlements.State state, ResolvingGiftState resolvingGiftState, Map map, StoreOutboundPromotions.State state2, List list, int i, Object obj) {
             if ((i & 1) != 0) {
                 state = giftAndPromoData.entitlementState;
@@ -384,12 +385,12 @@ public final class SettingsGiftingViewModel extends AppViewModel<ViewState> {
             return giftAndPromoData.copy(state, resolvingGiftState2, map2, state3, list);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final StoreEntitlements.State getEntitlementState() {
             return this.entitlementState;
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final ResolvingGiftState getResolvingGiftState() {
             return this.resolvingGiftState;
         }
@@ -398,7 +399,7 @@ public final class SettingsGiftingViewModel extends AppViewModel<ViewState> {
             return this.myPurchasedGifts;
         }
 
-        /* renamed from: component4, reason: from getter */
+        /* JADX INFO: renamed from: component4, reason: from getter */
         public final StoreOutboundPromotions.State getOutboundPromoState() {
             return this.outboundPromoState;
         }
@@ -474,10 +475,10 @@ public final class SettingsGiftingViewModel extends AppViewModel<ViewState> {
         }
     }
 
-    /* compiled from: SettingsGiftingViewModel.kt */
+    /* JADX INFO: compiled from: SettingsGiftingViewModel.kt */
     public static abstract class GiftPurchaseEvent {
 
-        /* compiled from: SettingsGiftingViewModel.kt */
+        /* JADX INFO: compiled from: SettingsGiftingViewModel.kt */
         public static final /* data */ class CompleteGiftPurchase extends GiftPurchaseEvent {
             private final String newGiftCode;
             private final String skuName;
@@ -501,12 +502,12 @@ public final class SettingsGiftingViewModel extends AppViewModel<ViewState> {
                 return completeGiftPurchase.copy(str, str2);
             }
 
-            /* renamed from: component1, reason: from getter */
+            /* JADX INFO: renamed from: component1, reason: from getter */
             public final String getSkuName() {
                 return this.skuName;
             }
 
-            /* renamed from: component2, reason: from getter */
+            /* JADX INFO: renamed from: component2, reason: from getter */
             public final String getNewGiftCode() {
                 return this.newGiftCode;
             }
@@ -551,7 +552,7 @@ public final class SettingsGiftingViewModel extends AppViewModel<ViewState> {
             }
         }
 
-        /* compiled from: SettingsGiftingViewModel.kt */
+        /* JADX INFO: compiled from: SettingsGiftingViewModel.kt */
         public static final /* data */ class ErrorGiftPurchase extends GiftPurchaseEvent {
             private final int message;
 
@@ -567,7 +568,7 @@ public final class SettingsGiftingViewModel extends AppViewModel<ViewState> {
                 return errorGiftPurchase.copy(i);
             }
 
-            /* renamed from: component1, reason: from getter */
+            /* JADX INFO: renamed from: component1, reason: from getter */
             public final int getMessage() {
                 return this.message;
             }
@@ -596,7 +597,7 @@ public final class SettingsGiftingViewModel extends AppViewModel<ViewState> {
             }
         }
 
-        /* compiled from: SettingsGiftingViewModel.kt */
+        /* JADX INFO: compiled from: SettingsGiftingViewModel.kt */
         public static final class NotInProgress extends GiftPurchaseEvent {
             public static final NotInProgress INSTANCE = new NotInProgress();
 
@@ -605,7 +606,7 @@ public final class SettingsGiftingViewModel extends AppViewModel<ViewState> {
             }
         }
 
-        /* compiled from: SettingsGiftingViewModel.kt */
+        /* JADX INFO: compiled from: SettingsGiftingViewModel.kt */
         public static final class StartGiftPurchase extends GiftPurchaseEvent {
             public static final StartGiftPurchase INSTANCE = new StartGiftPurchase();
 
@@ -622,10 +623,10 @@ public final class SettingsGiftingViewModel extends AppViewModel<ViewState> {
         }
     }
 
-    /* compiled from: SettingsGiftingViewModel.kt */
+    /* JADX INFO: compiled from: SettingsGiftingViewModel.kt */
     public static abstract class OutboundPromoData {
 
-        /* compiled from: SettingsGiftingViewModel.kt */
+        /* JADX INFO: compiled from: SettingsGiftingViewModel.kt */
         public static final /* data */ class Loaded extends OutboundPromoData {
             private final List<OutboundPromoItem> outboundPromos;
 
@@ -677,7 +678,7 @@ public final class SettingsGiftingViewModel extends AppViewModel<ViewState> {
             }
         }
 
-        /* compiled from: SettingsGiftingViewModel.kt */
+        /* JADX INFO: compiled from: SettingsGiftingViewModel.kt */
         public static final class Loading extends OutboundPromoData {
             public static final Loading INSTANCE = new Loading();
 
@@ -694,7 +695,7 @@ public final class SettingsGiftingViewModel extends AppViewModel<ViewState> {
         }
     }
 
-    /* compiled from: SettingsGiftingViewModel.kt */
+    /* JADX INFO: compiled from: SettingsGiftingViewModel.kt */
     public static final /* data */ class OutboundPromoItem {
         private final ClaimStatus claimStatus;
         private final long id;
@@ -736,27 +737,27 @@ public final class SettingsGiftingViewModel extends AppViewModel<ViewState> {
             return outboundPromoItem.copy(claimStatus, j2, str4, str5, str3);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final ClaimStatus getClaimStatus() {
             return this.claimStatus;
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final long getId() {
             return this.id;
         }
 
-        /* renamed from: component3, reason: from getter */
+        /* JADX INFO: renamed from: component3, reason: from getter */
         public final String getTitle() {
             return this.title;
         }
 
-        /* renamed from: component4, reason: from getter */
+        /* JADX INFO: renamed from: component4, reason: from getter */
         public final String getTerms() {
             return this.terms;
         }
 
-        /* renamed from: component5, reason: from getter */
+        /* JADX INFO: renamed from: component5, reason: from getter */
         public final String getImageUrl() {
             return this.imageUrl;
         }
@@ -825,10 +826,10 @@ public final class SettingsGiftingViewModel extends AppViewModel<ViewState> {
         }
     }
 
-    /* compiled from: SettingsGiftingViewModel.kt */
+    /* JADX INFO: compiled from: SettingsGiftingViewModel.kt */
     public static abstract class ResolvingGiftState {
 
-        /* compiled from: SettingsGiftingViewModel.kt */
+        /* JADX INFO: compiled from: SettingsGiftingViewModel.kt */
         public static final class Error extends ResolvingGiftState {
             public static final Error INSTANCE = new Error();
 
@@ -837,7 +838,7 @@ public final class SettingsGiftingViewModel extends AppViewModel<ViewState> {
             }
         }
 
-        /* compiled from: SettingsGiftingViewModel.kt */
+        /* JADX INFO: compiled from: SettingsGiftingViewModel.kt */
         public static final class NotResolving extends ResolvingGiftState {
             public static final NotResolving INSTANCE = new NotResolving();
 
@@ -846,7 +847,7 @@ public final class SettingsGiftingViewModel extends AppViewModel<ViewState> {
             }
         }
 
-        /* compiled from: SettingsGiftingViewModel.kt */
+        /* JADX INFO: compiled from: SettingsGiftingViewModel.kt */
         public static final class Resolving extends ResolvingGiftState {
             public static final Resolving INSTANCE = new Resolving();
 
@@ -863,7 +864,7 @@ public final class SettingsGiftingViewModel extends AppViewModel<ViewState> {
         }
     }
 
-    /* compiled from: SettingsGiftingViewModel.kt */
+    /* JADX INFO: compiled from: SettingsGiftingViewModel.kt */
     public static final /* data */ class StoreState {
         private final StoreEntitlements.State entitlementState;
         private final boolean isUserPremium;
@@ -897,7 +898,7 @@ public final class SettingsGiftingViewModel extends AppViewModel<ViewState> {
             return storeState.copy(state, list, state2, z2);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final StoreEntitlements.State getEntitlementState() {
             return this.entitlementState;
         }
@@ -906,12 +907,12 @@ public final class SettingsGiftingViewModel extends AppViewModel<ViewState> {
             return this.myResolvedGifts;
         }
 
-        /* renamed from: component3, reason: from getter */
+        /* JADX INFO: renamed from: component3, reason: from getter */
         public final StoreOutboundPromotions.State getOutboundPromoState() {
             return this.outboundPromoState;
         }
 
-        /* renamed from: component4, reason: from getter */
+        /* JADX INFO: renamed from: component4, reason: from getter */
         public final boolean getIsUserPremium() {
             return this.isUserPremium;
         }
@@ -947,6 +948,9 @@ public final class SettingsGiftingViewModel extends AppViewModel<ViewState> {
         }
 
         /* JADX WARN: Multi-variable type inference failed */
+        /* JADX WARN: Type inference failed for: r1v3, types: [int] */
+        /* JADX WARN: Type inference failed for: r1v4 */
+        /* JADX WARN: Type inference failed for: r1v6 */
         public int hashCode() {
             StoreEntitlements.State state = this.entitlementState;
             int iHashCode = (state != null ? state.hashCode() : 0) * 31;
@@ -955,11 +959,11 @@ public final class SettingsGiftingViewModel extends AppViewModel<ViewState> {
             StoreOutboundPromotions.State state2 = this.outboundPromoState;
             int iHashCode3 = (iHashCode2 + (state2 != null ? state2.hashCode() : 0)) * 31;
             boolean z2 = this.isUserPremium;
-            int i = z2;
-            if (z2 != 0) {
-                i = 1;
+            ?? r1 = z2;
+            if (z2) {
+                r1 = 1;
             }
-            return iHashCode3 + i;
+            return iHashCode3 + r1;
         }
 
         public final boolean isUserPremium() {
@@ -978,10 +982,10 @@ public final class SettingsGiftingViewModel extends AppViewModel<ViewState> {
         }
     }
 
-    /* compiled from: SettingsGiftingViewModel.kt */
+    /* JADX INFO: compiled from: SettingsGiftingViewModel.kt */
     public static abstract class ViewState {
 
-        /* compiled from: SettingsGiftingViewModel.kt */
+        /* JADX INFO: compiled from: SettingsGiftingViewModel.kt */
         public static final class Failure extends ViewState {
             public static final Failure INSTANCE = new Failure();
 
@@ -990,7 +994,7 @@ public final class SettingsGiftingViewModel extends AppViewModel<ViewState> {
             }
         }
 
-        /* compiled from: SettingsGiftingViewModel.kt */
+        /* JADX INFO: compiled from: SettingsGiftingViewModel.kt */
         public static final /* data */ class Loaded extends ViewState {
             private final Set<Long> expandedSkuOrPlanIds;
             private final String lastCopiedCode;
@@ -1016,6 +1020,7 @@ public final class SettingsGiftingViewModel extends AppViewModel<ViewState> {
                 this.lastCopiedCode = str;
             }
 
+            /* JADX WARN: Multi-variable type inference failed */
             public static /* synthetic */ Loaded copy$default(Loaded loaded, Map map, ResolvingGiftState resolvingGiftState, Set set, List list, Map map2, String str, int i, Object obj) {
                 if ((i & 1) != 0) {
                     map = loaded.myEntitlements;
@@ -1046,7 +1051,7 @@ public final class SettingsGiftingViewModel extends AppViewModel<ViewState> {
                 return this.myEntitlements;
             }
 
-            /* renamed from: component2, reason: from getter */
+            /* JADX INFO: renamed from: component2, reason: from getter */
             public final ResolvingGiftState getResolvingGiftState() {
                 return this.resolvingGiftState;
             }
@@ -1063,7 +1068,7 @@ public final class SettingsGiftingViewModel extends AppViewModel<ViewState> {
                 return this.myPurchasedGifts;
             }
 
-            /* renamed from: component6, reason: from getter */
+            /* JADX INFO: renamed from: component6, reason: from getter */
             public final String getLastCopiedCode() {
                 return this.lastCopiedCode;
             }
@@ -1143,7 +1148,7 @@ public final class SettingsGiftingViewModel extends AppViewModel<ViewState> {
             }
         }
 
-        /* compiled from: SettingsGiftingViewModel.kt */
+        /* JADX INFO: compiled from: SettingsGiftingViewModel.kt */
         public static final class Loading extends ViewState {
             public static final Loading INSTANCE = new Loading();
 
@@ -1160,8 +1165,8 @@ public final class SettingsGiftingViewModel extends AppViewModel<ViewState> {
         }
     }
 
-    /* compiled from: SettingsGiftingViewModel.kt */
-    /* renamed from: com.discord.widgets.settings.premium.SettingsGiftingViewModel$handleGooglePlayPurchaseEvent$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.premium.SettingsGiftingViewModel$handleGooglePlayPurchaseEvent$1 */
+    /* JADX INFO: compiled from: SettingsGiftingViewModel.kt */
     public static final class C98791 extends Lambda implements Function1<Error, Unit> {
         public C98791() {
             super(1);
@@ -1173,7 +1178,7 @@ public final class SettingsGiftingViewModel extends AppViewModel<ViewState> {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Error error) {
             Intrinsics3.checkNotNullParameter(error, "it");
             SettingsGiftingViewModel.access$getStoreEntitlements$p(SettingsGiftingViewModel.this).fetchMyGiftEntitlements();
@@ -1182,8 +1187,8 @@ public final class SettingsGiftingViewModel extends AppViewModel<ViewState> {
         }
     }
 
-    /* compiled from: SettingsGiftingViewModel.kt */
-    /* renamed from: com.discord.widgets.settings.premium.SettingsGiftingViewModel$handleGooglePlayPurchaseEvent$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.premium.SettingsGiftingViewModel$handleGooglePlayPurchaseEvent$2 */
+    /* JADX INFO: compiled from: SettingsGiftingViewModel.kt */
     public static final class C98802 extends Lambda implements Function1<ModelGift, Unit> {
         public final /* synthetic */ StoreGooglePlayPurchases.Event $event;
 
@@ -1199,7 +1204,7 @@ public final class SettingsGiftingViewModel extends AppViewModel<ViewState> {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(ModelGift modelGift) {
             Intrinsics3.checkNotNullParameter(modelGift, "it");
             SettingsGiftingViewModel.access$getStoreEntitlements$p(SettingsGiftingViewModel.this).fetchMyGiftEntitlements();
@@ -1208,8 +1213,8 @@ public final class SettingsGiftingViewModel extends AppViewModel<ViewState> {
         }
     }
 
-    /* compiled from: SettingsGiftingViewModel.kt */
-    /* renamed from: com.discord.widgets.settings.premium.SettingsGiftingViewModel$maybeCheckClaimedPromos$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.premium.SettingsGiftingViewModel$maybeCheckClaimedPromos$1 */
+    /* JADX INFO: compiled from: SettingsGiftingViewModel.kt */
     public static final class C98811<T> implements Action1<Throwable> {
         public C98811() {
         }
@@ -1219,14 +1224,14 @@ public final class SettingsGiftingViewModel extends AppViewModel<ViewState> {
             call2(th);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final void call2(Throwable th) {
             SettingsGiftingViewModel.access$getShouldCheckClaimedPromos$p(SettingsGiftingViewModel.this).set(true);
         }
     }
 
-    /* compiled from: SettingsGiftingViewModel.kt */
-    /* renamed from: com.discord.widgets.settings.premium.SettingsGiftingViewModel$maybeCheckClaimedPromos$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.premium.SettingsGiftingViewModel$maybeCheckClaimedPromos$2 */
+    /* JADX INFO: compiled from: SettingsGiftingViewModel.kt */
     public static final class C98822<T, R> implements Func1<Throwable, List<? extends ClaimedOutboundPromotion>> {
         public static final C98822 INSTANCE = new C98822();
 
@@ -1235,14 +1240,14 @@ public final class SettingsGiftingViewModel extends AppViewModel<ViewState> {
             return call2(th);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final List<ClaimedOutboundPromotion> call2(Throwable th) {
             return Collections2.emptyList();
         }
     }
 
-    /* compiled from: SettingsGiftingViewModel.kt */
-    /* renamed from: com.discord.widgets.settings.premium.SettingsGiftingViewModel$maybeCheckClaimedPromos$3 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.premium.SettingsGiftingViewModel$maybeCheckClaimedPromos$3 */
+    /* JADX INFO: compiled from: SettingsGiftingViewModel.kt */
     public static final /* synthetic */ class C98833 extends FunctionReferenceImpl implements Function1<List<? extends ClaimedOutboundPromotion>, Unit> {
         public C98833(BehaviorSubject behaviorSubject) {
             super(1, behaviorSubject, BehaviorSubject.class, "onNext", "onNext(Ljava/lang/Object;)V", 0);
@@ -1254,14 +1259,14 @@ public final class SettingsGiftingViewModel extends AppViewModel<ViewState> {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(List<ClaimedOutboundPromotion> list) {
             ((BehaviorSubject) this.receiver).onNext(list);
         }
     }
 
-    /* compiled from: SettingsGiftingViewModel.kt */
-    /* renamed from: com.discord.widgets.settings.premium.SettingsGiftingViewModel$redeemGiftCode$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.premium.SettingsGiftingViewModel$redeemGiftCode$1 */
+    /* JADX INFO: compiled from: SettingsGiftingViewModel.kt */
     public static final class C98841 extends Lambda implements Function1<Subscription, Unit> {
         public C98841() {
             super(1);
@@ -1273,15 +1278,15 @@ public final class SettingsGiftingViewModel extends AppViewModel<ViewState> {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Subscription subscription) {
             Intrinsics3.checkNotNullParameter(subscription, "it");
             SettingsGiftingViewModel.access$getSubscriptions$p(SettingsGiftingViewModel.this).m11136a(subscription);
         }
     }
 
-    /* compiled from: SettingsGiftingViewModel.kt */
-    /* renamed from: com.discord.widgets.settings.premium.SettingsGiftingViewModel$redeemGiftCode$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.premium.SettingsGiftingViewModel$redeemGiftCode$2 */
+    /* JADX INFO: compiled from: SettingsGiftingViewModel.kt */
     public static final /* synthetic */ class C98852 extends FunctionReferenceImpl implements Function1<StoreGifting.GiftState, Unit> {
         public C98852(SettingsGiftingViewModel settingsGiftingViewModel) {
             super(1, settingsGiftingViewModel, SettingsGiftingViewModel.class, "onHandleGiftCode", "onHandleGiftCode(Lcom/discord/stores/StoreGifting$GiftState;)V", 0);
@@ -1293,7 +1298,7 @@ public final class SettingsGiftingViewModel extends AppViewModel<ViewState> {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(StoreGifting.GiftState giftState) {
             Intrinsics3.checkNotNullParameter(giftState, "p1");
             SettingsGiftingViewModel.access$onHandleGiftCode((SettingsGiftingViewModel) this.receiver, giftState);

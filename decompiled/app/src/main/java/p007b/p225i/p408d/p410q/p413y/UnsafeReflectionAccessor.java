@@ -4,18 +4,18 @@ import com.google.gson.JsonIOException;
 import java.lang.reflect.AccessibleObject;
 import java.lang.reflect.Field;
 
-/* compiled from: UnsafeReflectionAccessor.java */
-/* renamed from: b.i.d.q.y.c, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.d.q.y.c, reason: use source file name */
+/* JADX INFO: compiled from: UnsafeReflectionAccessor.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class UnsafeReflectionAccessor extends ReflectionAccessor {
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static Class f13149b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final Object f13150c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final Field f13151d;
 
     public UnsafeReflectionAccessor() {
@@ -39,7 +39,7 @@ public final class UnsafeReflectionAccessor extends ReflectionAccessor {
     }
 
     @Override // p007b.p225i.p408d.p410q.p413y.ReflectionAccessor
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public void mo6912a(AccessibleObject accessibleObject) {
         boolean z2 = false;
         if (this.f13150c != null && this.f13151d != null) {

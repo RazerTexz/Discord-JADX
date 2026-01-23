@@ -52,11 +52,11 @@ import p637j0.p642l.p647e.ScalarSynchronousObservable;
 import p658rx.Observable;
 import p658rx.subjects.PublishSubject;
 
-/* compiled from: WidgetChannelTopicViewModel.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetChannelTopicViewModel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetChannelTopicViewModel extends AppViewModel<ViewState> {
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private final PublishSubject<Event> eventSubject;
     private Long previousChannelId;
@@ -65,8 +65,8 @@ public final class WidgetChannelTopicViewModel extends AppViewModel<ViewState> {
     private boolean wasOnHomeTab;
     private boolean wasRightPanelOpened;
 
-    /* compiled from: WidgetChannelTopicViewModel.kt */
-    /* renamed from: com.discord.widgets.channels.WidgetChannelTopicViewModel$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.channels.WidgetChannelTopicViewModel$1 */
+    /* JADX INFO: compiled from: WidgetChannelTopicViewModel.kt */
     public static final class C73631<T, R> implements Func1<Companion.NavState, Observable<? extends StoreState>> {
         public static final C73631 INSTANCE = new C73631();
 
@@ -75,7 +75,7 @@ public final class WidgetChannelTopicViewModel extends AppViewModel<ViewState> {
             return call2(navState);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final Observable<? extends StoreState> call2(Companion.NavState navState) {
             if (navState.isRightPanelOpened()) {
                 Companion companion = WidgetChannelTopicViewModel.INSTANCE;
@@ -88,8 +88,8 @@ public final class WidgetChannelTopicViewModel extends AppViewModel<ViewState> {
         }
     }
 
-    /* compiled from: WidgetChannelTopicViewModel.kt */
-    /* renamed from: com.discord.widgets.channels.WidgetChannelTopicViewModel$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.channels.WidgetChannelTopicViewModel$2 */
+    /* JADX INFO: compiled from: WidgetChannelTopicViewModel.kt */
     public static final class C73642 extends Lambda implements Function1<StoreState, Unit> {
         public C73642() {
             super(1);
@@ -101,17 +101,17 @@ public final class WidgetChannelTopicViewModel extends AppViewModel<ViewState> {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(StoreState storeState) {
             Intrinsics3.checkNotNullParameter(storeState, "storeState");
             WidgetChannelTopicViewModel.access$handleStoreState(WidgetChannelTopicViewModel.this, storeState);
         }
     }
 
-    /* compiled from: WidgetChannelTopicViewModel.kt */
+    /* JADX INFO: compiled from: WidgetChannelTopicViewModel.kt */
     public static final class Companion {
 
-        /* compiled from: WidgetChannelTopicViewModel.kt */
+        /* JADX INFO: compiled from: WidgetChannelTopicViewModel.kt */
         public static final /* data */ class NavState {
             private final boolean isOnHomeTab;
             private final boolean isRightPanelOpened;
@@ -131,12 +131,12 @@ public final class WidgetChannelTopicViewModel extends AppViewModel<ViewState> {
                 return navState.copy(z2, z3);
             }
 
-            /* renamed from: component1, reason: from getter */
+            /* JADX INFO: renamed from: component1, reason: from getter */
             public final boolean getIsRightPanelOpened() {
                 return this.isRightPanelOpened;
             }
 
-            /* renamed from: component2, reason: from getter */
+            /* JADX INFO: renamed from: component2, reason: from getter */
             public final boolean getIsOnHomeTab() {
                 return this.isOnHomeTab;
             }
@@ -160,6 +160,9 @@ public final class WidgetChannelTopicViewModel extends AppViewModel<ViewState> {
             /* JADX WARN: Type inference failed for: r0v1, types: [int] */
             /* JADX WARN: Type inference failed for: r0v4 */
             /* JADX WARN: Type inference failed for: r0v5 */
+            /* JADX WARN: Type inference failed for: r1v0 */
+            /* JADX WARN: Type inference failed for: r1v1, types: [int] */
+            /* JADX WARN: Type inference failed for: r1v2 */
             public int hashCode() {
                 boolean z2 = this.isRightPanelOpened;
                 ?? r0 = z2;
@@ -168,7 +171,7 @@ public final class WidgetChannelTopicViewModel extends AppViewModel<ViewState> {
                 }
                 int i = r0 * 31;
                 boolean z3 = this.isOnHomeTab;
-                return i + (z3 ? 1 : z3 ? 1 : 0);
+                return i + (z3 ? 1 : z3);
             }
 
             public final boolean isOnHomeTab() {
@@ -266,10 +269,10 @@ public final class WidgetChannelTopicViewModel extends AppViewModel<ViewState> {
         }
     }
 
-    /* compiled from: WidgetChannelTopicViewModel.kt */
+    /* JADX INFO: compiled from: WidgetChannelTopicViewModel.kt */
     public static abstract class Event {
 
-        /* compiled from: WidgetChannelTopicViewModel.kt */
+        /* JADX INFO: compiled from: WidgetChannelTopicViewModel.kt */
         public static final class FocusFirstElement extends Event {
             public static final FocusFirstElement INSTANCE = new FocusFirstElement();
 
@@ -286,13 +289,13 @@ public final class WidgetChannelTopicViewModel extends AppViewModel<ViewState> {
         }
     }
 
-    /* compiled from: WidgetChannelTopicViewModel.kt */
+    /* JADX INFO: compiled from: WidgetChannelTopicViewModel.kt */
     public static abstract class StoreState {
         private final boolean isOnHomeTab;
         private final boolean isRightPanelOpened;
 
-        /* compiled from: WidgetChannelTopicViewModel.kt */
-        /* renamed from: com.discord.widgets.channels.WidgetChannelTopicViewModel$StoreState$DM */
+        /* JADX INFO: renamed from: com.discord.widgets.channels.WidgetChannelTopicViewModel$StoreState$DM */
+        /* JADX INFO: compiled from: WidgetChannelTopicViewModel.kt */
         public static final /* data */ class C7367DM extends StoreState {
             private final Channel channel;
             private final boolean developerModeEnabled;
@@ -304,6 +307,7 @@ public final class WidgetChannelTopicViewModel extends AppViewModel<ViewState> {
                 this(channel, collection, (i & 4) != 0 ? false : z2, z3, z4);
             }
 
+            /* JADX WARN: Multi-variable type inference failed */
             public static /* synthetic */ C7367DM copy$default(C7367DM c7367dm, Channel channel, Collection collection, boolean z2, boolean z3, boolean z4, int i, Object obj) {
                 if ((i & 1) != 0) {
                     channel = c7367dm.channel;
@@ -326,7 +330,7 @@ public final class WidgetChannelTopicViewModel extends AppViewModel<ViewState> {
                 return c7367dm.copy(channel, collection2, z5, z6, z4);
             }
 
-            /* renamed from: component1, reason: from getter */
+            /* JADX INFO: renamed from: component1, reason: from getter */
             public final Channel getChannel() {
                 return this.channel;
             }
@@ -335,7 +339,7 @@ public final class WidgetChannelTopicViewModel extends AppViewModel<ViewState> {
                 return this.guildMembers;
             }
 
-            /* renamed from: component3, reason: from getter */
+            /* JADX INFO: renamed from: component3, reason: from getter */
             public final boolean getDeveloperModeEnabled() {
                 return this.developerModeEnabled;
             }
@@ -378,10 +382,12 @@ public final class WidgetChannelTopicViewModel extends AppViewModel<ViewState> {
             }
 
             /* JADX WARN: Multi-variable type inference failed */
+            /* JADX WARN: Type inference failed for: r1v10 */
             /* JADX WARN: Type inference failed for: r1v11 */
-            /* JADX WARN: Type inference failed for: r1v2, types: [boolean] */
+            /* JADX WARN: Type inference failed for: r1v3, types: [int] */
             /* JADX WARN: Type inference failed for: r1v5, types: [int] */
             /* JADX WARN: Type inference failed for: r1v7 */
+            /* JADX WARN: Type inference failed for: r1v8 */
             /* JADX WARN: Type inference failed for: r2v1 */
             /* JADX WARN: Type inference failed for: r2v2, types: [int] */
             /* JADX WARN: Type inference failed for: r2v3 */
@@ -390,30 +396,30 @@ public final class WidgetChannelTopicViewModel extends AppViewModel<ViewState> {
                 int iHashCode = (channel != null ? channel.hashCode() : 0) * 31;
                 Collection<Map<Long, GuildMember>> collection = this.guildMembers;
                 int iHashCode2 = (iHashCode + (collection != null ? collection.hashCode() : 0)) * 31;
-                ?? r1 = this.developerModeEnabled;
-                int i = r1;
-                if (r1 != 0) {
-                    i = 1;
+                boolean z2 = this.developerModeEnabled;
+                ?? r1 = z2;
+                if (z2) {
+                    r1 = 1;
                 }
-                int i2 = (iHashCode2 + i) * 31;
+                int i = (iHashCode2 + r1) * 31;
                 boolean isRightPanelOpened = getIsRightPanelOpened();
                 ?? r12 = isRightPanelOpened;
                 if (isRightPanelOpened) {
                     r12 = 1;
                 }
-                int i3 = (i2 + r12) * 31;
+                int i2 = (i + r12) * 31;
                 boolean isOnHomeTab = getIsOnHomeTab();
-                return i3 + (isOnHomeTab ? 1 : isOnHomeTab);
+                return i2 + (isOnHomeTab ? 1 : isOnHomeTab);
             }
 
             @Override // com.discord.widgets.channels.WidgetChannelTopicViewModel.StoreState
-            /* renamed from: isOnHomeTab, reason: from getter */
+            /* JADX INFO: renamed from: isOnHomeTab, reason: from getter */
             public boolean getIsOnHomeTab() {
                 return this.isOnHomeTab;
             }
 
             @Override // com.discord.widgets.channels.WidgetChannelTopicViewModel.StoreState
-            /* renamed from: isRightPanelOpened, reason: from getter */
+            /* JADX INFO: renamed from: isRightPanelOpened, reason: from getter */
             public boolean getIsRightPanelOpened() {
                 return this.isRightPanelOpened;
             }
@@ -447,7 +453,7 @@ public final class WidgetChannelTopicViewModel extends AppViewModel<ViewState> {
             }
         }
 
-        /* compiled from: WidgetChannelTopicViewModel.kt */
+        /* JADX INFO: compiled from: WidgetChannelTopicViewModel.kt */
         public static final /* data */ class GDM extends StoreState {
             private final Channel channel;
             private final boolean developerModeEnabled;
@@ -474,12 +480,12 @@ public final class WidgetChannelTopicViewModel extends AppViewModel<ViewState> {
                 return gdm.copy(channel, z2, z3, z4);
             }
 
-            /* renamed from: component1, reason: from getter */
+            /* JADX INFO: renamed from: component1, reason: from getter */
             public final Channel getChannel() {
                 return this.channel;
             }
 
-            /* renamed from: component2, reason: from getter */
+            /* JADX INFO: renamed from: component2, reason: from getter */
             public final boolean getDeveloperModeEnabled() {
                 return this.developerModeEnabled;
             }
@@ -517,9 +523,11 @@ public final class WidgetChannelTopicViewModel extends AppViewModel<ViewState> {
             }
 
             /* JADX WARN: Multi-variable type inference failed */
-            /* JADX WARN: Type inference failed for: r1v0, types: [boolean] */
+            /* JADX WARN: Type inference failed for: r1v1, types: [int] */
             /* JADX WARN: Type inference failed for: r1v3, types: [int] */
             /* JADX WARN: Type inference failed for: r1v5 */
+            /* JADX WARN: Type inference failed for: r1v6 */
+            /* JADX WARN: Type inference failed for: r1v7 */
             /* JADX WARN: Type inference failed for: r1v8 */
             /* JADX WARN: Type inference failed for: r2v0 */
             /* JADX WARN: Type inference failed for: r2v1, types: [int] */
@@ -527,30 +535,30 @@ public final class WidgetChannelTopicViewModel extends AppViewModel<ViewState> {
             public int hashCode() {
                 Channel channel = this.channel;
                 int iHashCode = (channel != null ? channel.hashCode() : 0) * 31;
-                ?? r1 = this.developerModeEnabled;
-                int i = r1;
-                if (r1 != 0) {
-                    i = 1;
+                boolean z2 = this.developerModeEnabled;
+                ?? r1 = z2;
+                if (z2) {
+                    r1 = 1;
                 }
-                int i2 = (iHashCode + i) * 31;
+                int i = (iHashCode + r1) * 31;
                 boolean isRightPanelOpened = getIsRightPanelOpened();
                 ?? r12 = isRightPanelOpened;
                 if (isRightPanelOpened) {
                     r12 = 1;
                 }
-                int i3 = (i2 + r12) * 31;
+                int i2 = (i + r12) * 31;
                 boolean isOnHomeTab = getIsOnHomeTab();
-                return i3 + (isOnHomeTab ? 1 : isOnHomeTab);
+                return i2 + (isOnHomeTab ? 1 : isOnHomeTab);
             }
 
             @Override // com.discord.widgets.channels.WidgetChannelTopicViewModel.StoreState
-            /* renamed from: isOnHomeTab, reason: from getter */
+            /* JADX INFO: renamed from: isOnHomeTab, reason: from getter */
             public boolean getIsOnHomeTab() {
                 return this.isOnHomeTab;
             }
 
             @Override // com.discord.widgets.channels.WidgetChannelTopicViewModel.StoreState
-            /* renamed from: isRightPanelOpened, reason: from getter */
+            /* JADX INFO: renamed from: isRightPanelOpened, reason: from getter */
             public boolean getIsRightPanelOpened() {
                 return this.isRightPanelOpened;
             }
@@ -579,12 +587,12 @@ public final class WidgetChannelTopicViewModel extends AppViewModel<ViewState> {
             }
         }
 
-        /* compiled from: WidgetChannelTopicViewModel.kt */
+        /* JADX INFO: compiled from: WidgetChannelTopicViewModel.kt */
         public static abstract class Guild extends StoreState {
             private final boolean isOnHomeTab;
             private final boolean isRightPanelOpened;
 
-            /* compiled from: WidgetChannelTopicViewModel.kt */
+            /* JADX INFO: compiled from: WidgetChannelTopicViewModel.kt */
             public static final /* data */ class DefaultTopic extends Guild {
                 private final Channel channel;
                 private final GuildChannelIconUtils channelIconType;
@@ -618,12 +626,12 @@ public final class WidgetChannelTopicViewModel extends AppViewModel<ViewState> {
                     return defaultTopic.copy(channel, guildChannelIconUtils, z2, z3);
                 }
 
-                /* renamed from: component1, reason: from getter */
+                /* JADX INFO: renamed from: component1, reason: from getter */
                 public final Channel getChannel() {
                     return this.channel;
                 }
 
-                /* renamed from: component2, reason: from getter */
+                /* JADX INFO: renamed from: component2, reason: from getter */
                 public final GuildChannelIconUtils getChannelIconType() {
                     return this.channelIconType;
                 }
@@ -684,13 +692,13 @@ public final class WidgetChannelTopicViewModel extends AppViewModel<ViewState> {
                 }
 
                 @Override // com.discord.widgets.channels.WidgetChannelTopicViewModel.StoreState.Guild, com.discord.widgets.channels.WidgetChannelTopicViewModel.StoreState
-                /* renamed from: isOnHomeTab, reason: from getter */
+                /* JADX INFO: renamed from: isOnHomeTab, reason: from getter */
                 public boolean getIsOnHomeTab() {
                     return this.isOnHomeTab;
                 }
 
                 @Override // com.discord.widgets.channels.WidgetChannelTopicViewModel.StoreState.Guild, com.discord.widgets.channels.WidgetChannelTopicViewModel.StoreState
-                /* renamed from: isRightPanelOpened, reason: from getter */
+                /* JADX INFO: renamed from: isRightPanelOpened, reason: from getter */
                 public boolean getIsRightPanelOpened() {
                     return this.isRightPanelOpened;
                 }
@@ -709,7 +717,7 @@ public final class WidgetChannelTopicViewModel extends AppViewModel<ViewState> {
                 }
             }
 
-            /* compiled from: WidgetChannelTopicViewModel.kt */
+            /* JADX INFO: compiled from: WidgetChannelTopicViewModel.kt */
             public static final /* data */ class Topic extends Guild {
                 private final boolean allowAnimatedEmojis;
                 private final Channel channel;
@@ -742,11 +750,12 @@ public final class WidgetChannelTopicViewModel extends AppViewModel<ViewState> {
                     this.isOnHomeTab = z4;
                 }
 
+                /* JADX WARN: Multi-variable type inference failed */
                 public static /* synthetic */ Topic copy$default(Topic topic, Channel channel, Map map, GuildChannelIconUtils guildChannelIconUtils, Map map2, Map map3, Map map4, boolean z2, boolean z3, boolean z4, int i, Object obj) {
                     return topic.copy((i & 1) != 0 ? topic.channel : channel, (i & 2) != 0 ? topic.channels : map, (i & 4) != 0 ? topic.channelIconType : guildChannelIconUtils, (i & 8) != 0 ? topic.users : map2, (i & 16) != 0 ? topic.members : map3, (i & 32) != 0 ? topic.roles : map4, (i & 64) != 0 ? topic.allowAnimatedEmojis : z2, (i & 128) != 0 ? topic.getIsRightPanelOpened() : z3, (i & 256) != 0 ? topic.getIsOnHomeTab() : z4);
                 }
 
-                /* renamed from: component1, reason: from getter */
+                /* JADX INFO: renamed from: component1, reason: from getter */
                 public final Channel getChannel() {
                     return this.channel;
                 }
@@ -755,7 +764,7 @@ public final class WidgetChannelTopicViewModel extends AppViewModel<ViewState> {
                     return this.channels;
                 }
 
-                /* renamed from: component3, reason: from getter */
+                /* JADX INFO: renamed from: component3, reason: from getter */
                 public final GuildChannelIconUtils getChannelIconType() {
                     return this.channelIconType;
                 }
@@ -772,7 +781,7 @@ public final class WidgetChannelTopicViewModel extends AppViewModel<ViewState> {
                     return this.roles;
                 }
 
-                /* renamed from: component7, reason: from getter */
+                /* JADX INFO: renamed from: component7, reason: from getter */
                 public final boolean getAllowAnimatedEmojis() {
                     return this.allowAnimatedEmojis;
                 }
@@ -835,10 +844,12 @@ public final class WidgetChannelTopicViewModel extends AppViewModel<ViewState> {
                 }
 
                 /* JADX WARN: Multi-variable type inference failed */
+                /* JADX WARN: Type inference failed for: r1v10 */
                 /* JADX WARN: Type inference failed for: r1v11 */
-                /* JADX WARN: Type inference failed for: r1v2, types: [boolean] */
+                /* JADX WARN: Type inference failed for: r1v3, types: [int] */
                 /* JADX WARN: Type inference failed for: r1v5, types: [int] */
                 /* JADX WARN: Type inference failed for: r1v7 */
+                /* JADX WARN: Type inference failed for: r1v8 */
                 /* JADX WARN: Type inference failed for: r2v13 */
                 /* JADX WARN: Type inference failed for: r2v14, types: [int] */
                 /* JADX WARN: Type inference failed for: r2v15 */
@@ -855,30 +866,30 @@ public final class WidgetChannelTopicViewModel extends AppViewModel<ViewState> {
                     int iHashCode5 = (iHashCode4 + (map3 != null ? map3.hashCode() : 0)) * 31;
                     Map<Long, GuildRole> map4 = this.roles;
                     int iHashCode6 = (iHashCode5 + (map4 != null ? map4.hashCode() : 0)) * 31;
-                    ?? r1 = this.allowAnimatedEmojis;
-                    int i = r1;
-                    if (r1 != 0) {
-                        i = 1;
+                    boolean z2 = this.allowAnimatedEmojis;
+                    ?? r1 = z2;
+                    if (z2) {
+                        r1 = 1;
                     }
-                    int i2 = (iHashCode6 + i) * 31;
+                    int i = (iHashCode6 + r1) * 31;
                     boolean isRightPanelOpened = getIsRightPanelOpened();
                     ?? r12 = isRightPanelOpened;
                     if (isRightPanelOpened) {
                         r12 = 1;
                     }
-                    int i3 = (i2 + r12) * 31;
+                    int i2 = (i + r12) * 31;
                     boolean isOnHomeTab = getIsOnHomeTab();
-                    return i3 + (isOnHomeTab ? 1 : isOnHomeTab);
+                    return i2 + (isOnHomeTab ? 1 : isOnHomeTab);
                 }
 
                 @Override // com.discord.widgets.channels.WidgetChannelTopicViewModel.StoreState.Guild, com.discord.widgets.channels.WidgetChannelTopicViewModel.StoreState
-                /* renamed from: isOnHomeTab, reason: from getter */
+                /* JADX INFO: renamed from: isOnHomeTab, reason: from getter */
                 public boolean getIsOnHomeTab() {
                     return this.isOnHomeTab;
                 }
 
                 @Override // com.discord.widgets.channels.WidgetChannelTopicViewModel.StoreState.Guild, com.discord.widgets.channels.WidgetChannelTopicViewModel.StoreState
-                /* renamed from: isRightPanelOpened, reason: from getter */
+                /* JADX INFO: renamed from: isRightPanelOpened, reason: from getter */
                 public boolean getIsRightPanelOpened() {
                     return this.isRightPanelOpened;
                 }
@@ -912,13 +923,13 @@ public final class WidgetChannelTopicViewModel extends AppViewModel<ViewState> {
             }
 
             @Override // com.discord.widgets.channels.WidgetChannelTopicViewModel.StoreState
-            /* renamed from: isOnHomeTab, reason: from getter */
+            /* JADX INFO: renamed from: isOnHomeTab, reason: from getter */
             public boolean getIsOnHomeTab() {
                 return this.isOnHomeTab;
             }
 
             @Override // com.discord.widgets.channels.WidgetChannelTopicViewModel.StoreState
-            /* renamed from: isRightPanelOpened, reason: from getter */
+            /* JADX INFO: renamed from: isRightPanelOpened, reason: from getter */
             public boolean getIsRightPanelOpened() {
                 return this.isRightPanelOpened;
             }
@@ -930,7 +941,7 @@ public final class WidgetChannelTopicViewModel extends AppViewModel<ViewState> {
             }
         }
 
-        /* compiled from: WidgetChannelTopicViewModel.kt */
+        /* JADX INFO: compiled from: WidgetChannelTopicViewModel.kt */
         public static final /* data */ class NoChannel extends StoreState {
             private final boolean isOnHomeTab;
             private final boolean isRightPanelOpened;
@@ -993,13 +1004,13 @@ public final class WidgetChannelTopicViewModel extends AppViewModel<ViewState> {
             }
 
             @Override // com.discord.widgets.channels.WidgetChannelTopicViewModel.StoreState
-            /* renamed from: isOnHomeTab, reason: from getter */
+            /* JADX INFO: renamed from: isOnHomeTab, reason: from getter */
             public boolean getIsOnHomeTab() {
                 return this.isOnHomeTab;
             }
 
             @Override // com.discord.widgets.channels.WidgetChannelTopicViewModel.StoreState
-            /* renamed from: isRightPanelOpened, reason: from getter */
+            /* JADX INFO: renamed from: isRightPanelOpened, reason: from getter */
             public boolean getIsRightPanelOpened() {
                 return this.isRightPanelOpened;
             }
@@ -1019,12 +1030,12 @@ public final class WidgetChannelTopicViewModel extends AppViewModel<ViewState> {
             this.isOnHomeTab = z3;
         }
 
-        /* renamed from: isOnHomeTab, reason: from getter */
+        /* JADX INFO: renamed from: isOnHomeTab, reason: from getter */
         public boolean getIsOnHomeTab() {
             return this.isOnHomeTab;
         }
 
-        /* renamed from: isRightPanelOpened, reason: from getter */
+        /* JADX INFO: renamed from: isRightPanelOpened, reason: from getter */
         public boolean getIsRightPanelOpened() {
             return this.isRightPanelOpened;
         }
@@ -1034,13 +1045,13 @@ public final class WidgetChannelTopicViewModel extends AppViewModel<ViewState> {
         }
     }
 
-    /* compiled from: WidgetChannelTopicViewModel.kt */
+    /* JADX INFO: compiled from: WidgetChannelTopicViewModel.kt */
     public static abstract class ViewState {
         private final boolean isOnHomeTab;
         private final boolean isRightPanelOpened;
 
-        /* compiled from: WidgetChannelTopicViewModel.kt */
-        /* renamed from: com.discord.widgets.channels.WidgetChannelTopicViewModel$ViewState$DM */
+        /* JADX INFO: renamed from: com.discord.widgets.channels.WidgetChannelTopicViewModel$ViewState$DM */
+        /* JADX INFO: compiled from: WidgetChannelTopicViewModel.kt */
         public static final /* data */ class C7368DM extends ViewState {
             private final long channelId;
             private final boolean developerModeEnabled;
@@ -1055,16 +1066,17 @@ public final class WidgetChannelTopicViewModel extends AppViewModel<ViewState> {
                 this(str, l, set, list, j, (i & 32) != 0 ? false : z2, z3, z4);
             }
 
+            /* JADX WARN: Multi-variable type inference failed */
             public static /* synthetic */ C7368DM copy$default(C7368DM c7368dm, String str, Long l, Set set, List list, long j, boolean z2, boolean z3, boolean z4, int i, Object obj) {
                 return c7368dm.copy((i & 1) != 0 ? c7368dm.recipientName : str, (i & 2) != 0 ? c7368dm.recipientUserId : l, (i & 4) != 0 ? c7368dm.recipientNicknames : set, (i & 8) != 0 ? c7368dm.guildMembers : list, (i & 16) != 0 ? c7368dm.channelId : j, (i & 32) != 0 ? c7368dm.developerModeEnabled : z2, (i & 64) != 0 ? c7368dm.getIsRightPanelOpened() : z3, (i & 128) != 0 ? c7368dm.getIsOnHomeTab() : z4);
             }
 
-            /* renamed from: component1, reason: from getter */
+            /* JADX INFO: renamed from: component1, reason: from getter */
             public final String getRecipientName() {
                 return this.recipientName;
             }
 
-            /* renamed from: component2, reason: from getter */
+            /* JADX INFO: renamed from: component2, reason: from getter */
             public final Long getRecipientUserId() {
                 return this.recipientUserId;
             }
@@ -1077,12 +1089,12 @@ public final class WidgetChannelTopicViewModel extends AppViewModel<ViewState> {
                 return this.guildMembers;
             }
 
-            /* renamed from: component5, reason: from getter */
+            /* JADX INFO: renamed from: component5, reason: from getter */
             public final long getChannelId() {
                 return this.channelId;
             }
 
-            /* renamed from: component6, reason: from getter */
+            /* JADX INFO: renamed from: component6, reason: from getter */
             public final boolean getDeveloperModeEnabled() {
                 return this.developerModeEnabled;
             }
@@ -1137,9 +1149,11 @@ public final class WidgetChannelTopicViewModel extends AppViewModel<ViewState> {
             }
 
             /* JADX WARN: Multi-variable type inference failed */
-            /* JADX WARN: Type inference failed for: r0v10, types: [boolean] */
+            /* JADX WARN: Type inference failed for: r0v11, types: [int] */
             /* JADX WARN: Type inference failed for: r0v13, types: [int] */
             /* JADX WARN: Type inference failed for: r0v15 */
+            /* JADX WARN: Type inference failed for: r0v16 */
+            /* JADX WARN: Type inference failed for: r0v18 */
             /* JADX WARN: Type inference failed for: r0v19 */
             /* JADX WARN: Type inference failed for: r2v7 */
             /* JADX WARN: Type inference failed for: r2v8, types: [int] */
@@ -1153,30 +1167,30 @@ public final class WidgetChannelTopicViewModel extends AppViewModel<ViewState> {
                 int iHashCode3 = (iHashCode2 + (set != null ? set.hashCode() : 0)) * 31;
                 List<GuildMember> list = this.guildMembers;
                 int iM3a = (C0002b.m3a(this.channelId) + ((iHashCode3 + (list != null ? list.hashCode() : 0)) * 31)) * 31;
-                ?? r0 = this.developerModeEnabled;
-                int i = r0;
-                if (r0 != 0) {
-                    i = 1;
+                boolean z2 = this.developerModeEnabled;
+                ?? r0 = z2;
+                if (z2) {
+                    r0 = 1;
                 }
-                int i2 = (iM3a + i) * 31;
+                int i = (iM3a + r0) * 31;
                 boolean isRightPanelOpened = getIsRightPanelOpened();
                 ?? r02 = isRightPanelOpened;
                 if (isRightPanelOpened) {
                     r02 = 1;
                 }
-                int i3 = (i2 + r02) * 31;
+                int i2 = (i + r02) * 31;
                 boolean isOnHomeTab = getIsOnHomeTab();
-                return i3 + (isOnHomeTab ? 1 : isOnHomeTab);
+                return i2 + (isOnHomeTab ? 1 : isOnHomeTab);
             }
 
             @Override // com.discord.widgets.channels.WidgetChannelTopicViewModel.ViewState
-            /* renamed from: isOnHomeTab, reason: from getter */
+            /* JADX INFO: renamed from: isOnHomeTab, reason: from getter */
             public boolean getIsOnHomeTab() {
                 return this.isOnHomeTab;
             }
 
             @Override // com.discord.widgets.channels.WidgetChannelTopicViewModel.ViewState
-            /* renamed from: isRightPanelOpened, reason: from getter */
+            /* JADX INFO: renamed from: isRightPanelOpened, reason: from getter */
             public boolean getIsRightPanelOpened() {
                 return this.isRightPanelOpened;
             }
@@ -1218,7 +1232,7 @@ public final class WidgetChannelTopicViewModel extends AppViewModel<ViewState> {
             }
         }
 
-        /* compiled from: WidgetChannelTopicViewModel.kt */
+        /* JADX INFO: compiled from: WidgetChannelTopicViewModel.kt */
         public static final /* data */ class GDM extends ViewState {
             private final Channel channel;
             private final long channelId;
@@ -1252,17 +1266,17 @@ public final class WidgetChannelTopicViewModel extends AppViewModel<ViewState> {
                 return gdm.copy(channel, j2, z5, z6, z4);
             }
 
-            /* renamed from: component1, reason: from getter */
+            /* JADX INFO: renamed from: component1, reason: from getter */
             public final Channel getChannel() {
                 return this.channel;
             }
 
-            /* renamed from: component2, reason: from getter */
+            /* JADX INFO: renamed from: component2, reason: from getter */
             public final long getChannelId() {
                 return this.channelId;
             }
 
-            /* renamed from: component3, reason: from getter */
+            /* JADX INFO: renamed from: component3, reason: from getter */
             public final boolean getDeveloperModeEnabled() {
                 return this.developerModeEnabled;
             }
@@ -1304,8 +1318,10 @@ public final class WidgetChannelTopicViewModel extends AppViewModel<ViewState> {
             }
 
             /* JADX WARN: Multi-variable type inference failed */
+            /* JADX WARN: Type inference failed for: r0v10 */
+            /* JADX WARN: Type inference failed for: r0v12 */
             /* JADX WARN: Type inference failed for: r0v13 */
-            /* JADX WARN: Type inference failed for: r0v4, types: [boolean] */
+            /* JADX WARN: Type inference failed for: r0v5, types: [int] */
             /* JADX WARN: Type inference failed for: r0v7, types: [int] */
             /* JADX WARN: Type inference failed for: r0v9 */
             /* JADX WARN: Type inference failed for: r2v0 */
@@ -1314,30 +1330,30 @@ public final class WidgetChannelTopicViewModel extends AppViewModel<ViewState> {
             public int hashCode() {
                 Channel channel = this.channel;
                 int iM3a = (C0002b.m3a(this.channelId) + ((channel != null ? channel.hashCode() : 0) * 31)) * 31;
-                ?? r0 = this.developerModeEnabled;
-                int i = r0;
-                if (r0 != 0) {
-                    i = 1;
+                boolean z2 = this.developerModeEnabled;
+                ?? r0 = z2;
+                if (z2) {
+                    r0 = 1;
                 }
-                int i2 = (iM3a + i) * 31;
+                int i = (iM3a + r0) * 31;
                 boolean isRightPanelOpened = getIsRightPanelOpened();
                 ?? r02 = isRightPanelOpened;
                 if (isRightPanelOpened) {
                     r02 = 1;
                 }
-                int i3 = (i2 + r02) * 31;
+                int i2 = (i + r02) * 31;
                 boolean isOnHomeTab = getIsOnHomeTab();
-                return i3 + (isOnHomeTab ? 1 : isOnHomeTab);
+                return i2 + (isOnHomeTab ? 1 : isOnHomeTab);
             }
 
             @Override // com.discord.widgets.channels.WidgetChannelTopicViewModel.ViewState
-            /* renamed from: isOnHomeTab, reason: from getter */
+            /* JADX INFO: renamed from: isOnHomeTab, reason: from getter */
             public boolean getIsOnHomeTab() {
                 return this.isOnHomeTab;
             }
 
             @Override // com.discord.widgets.channels.WidgetChannelTopicViewModel.ViewState
-            /* renamed from: isRightPanelOpened, reason: from getter */
+            /* JADX INFO: renamed from: isRightPanelOpened, reason: from getter */
             public boolean getIsRightPanelOpened() {
                 return this.isRightPanelOpened;
             }
@@ -1369,13 +1385,13 @@ public final class WidgetChannelTopicViewModel extends AppViewModel<ViewState> {
             }
         }
 
-        /* compiled from: WidgetChannelTopicViewModel.kt */
+        /* JADX INFO: compiled from: WidgetChannelTopicViewModel.kt */
         public static abstract class Guild extends ViewState {
             private final GuildChannelIconUtils channelIconType;
             private final boolean isOnHomeTab;
             private final boolean isRightPanelOpened;
 
-            /* compiled from: WidgetChannelTopicViewModel.kt */
+            /* JADX INFO: compiled from: WidgetChannelTopicViewModel.kt */
             public static final /* data */ class DefaultTopic extends Guild {
                 private final Channel channel;
                 private final GuildChannelIconUtils channelIconType;
@@ -1413,7 +1429,7 @@ public final class WidgetChannelTopicViewModel extends AppViewModel<ViewState> {
                     return getChannelIconType();
                 }
 
-                /* renamed from: component2, reason: from getter */
+                /* JADX INFO: renamed from: component2, reason: from getter */
                 public final Channel getChannel() {
                     return this.channel;
                 }
@@ -1452,29 +1468,36 @@ public final class WidgetChannelTopicViewModel extends AppViewModel<ViewState> {
                     return this.channelIconType;
                 }
 
+                /* JADX WARN: Multi-variable type inference failed */
+                /* JADX WARN: Type inference failed for: r1v3, types: [int] */
+                /* JADX WARN: Type inference failed for: r1v5 */
+                /* JADX WARN: Type inference failed for: r1v7 */
+                /* JADX WARN: Type inference failed for: r2v1 */
+                /* JADX WARN: Type inference failed for: r2v2, types: [int] */
+                /* JADX WARN: Type inference failed for: r2v3 */
                 public int hashCode() {
                     GuildChannelIconUtils channelIconType = getChannelIconType();
                     int iHashCode = (channelIconType != null ? channelIconType.hashCode() : 0) * 31;
                     Channel channel = this.channel;
                     int iHashCode2 = (iHashCode + (channel != null ? channel.hashCode() : 0)) * 31;
                     boolean isRightPanelOpened = getIsRightPanelOpened();
-                    int i = isRightPanelOpened;
+                    ?? r1 = isRightPanelOpened;
                     if (isRightPanelOpened) {
-                        i = 1;
+                        r1 = 1;
                     }
-                    int i2 = (iHashCode2 + i) * 31;
+                    int i = (iHashCode2 + r1) * 31;
                     boolean isOnHomeTab = getIsOnHomeTab();
-                    return i2 + (isOnHomeTab ? 1 : isOnHomeTab);
+                    return i + (isOnHomeTab ? 1 : isOnHomeTab);
                 }
 
                 @Override // com.discord.widgets.channels.WidgetChannelTopicViewModel.ViewState.Guild, com.discord.widgets.channels.WidgetChannelTopicViewModel.ViewState
-                /* renamed from: isOnHomeTab, reason: from getter */
+                /* JADX INFO: renamed from: isOnHomeTab, reason: from getter */
                 public boolean getIsOnHomeTab() {
                     return this.isOnHomeTab;
                 }
 
                 @Override // com.discord.widgets.channels.WidgetChannelTopicViewModel.ViewState.Guild, com.discord.widgets.channels.WidgetChannelTopicViewModel.ViewState
-                /* renamed from: isRightPanelOpened, reason: from getter */
+                /* JADX INFO: renamed from: isRightPanelOpened, reason: from getter */
                 public boolean getIsRightPanelOpened() {
                     return this.isRightPanelOpened;
                 }
@@ -1493,7 +1516,7 @@ public final class WidgetChannelTopicViewModel extends AppViewModel<ViewState> {
                 }
             }
 
-            /* compiled from: WidgetChannelTopicViewModel.kt */
+            /* JADX INFO: compiled from: WidgetChannelTopicViewModel.kt */
             public static final /* data */ class Topic extends Guild {
                 private final boolean allowAnimatedEmojis;
                 private final List<Node<MessageRenderContext>> ast;
@@ -1530,11 +1553,12 @@ public final class WidgetChannelTopicViewModel extends AppViewModel<ViewState> {
                     this.isOnHomeTab = z5;
                 }
 
+                /* JADX WARN: Multi-variable type inference failed */
                 public static /* synthetic */ Topic copy$default(Topic topic, String str, Map map, Map map2, Map map3, boolean z2, List list, boolean z3, GuildChannelIconUtils guildChannelIconUtils, Channel channel, boolean z4, boolean z5, int i, Object obj) {
                     return topic.copy((i & 1) != 0 ? topic.rawTopicString : str, (i & 2) != 0 ? topic.channelNames : map, (i & 4) != 0 ? topic.userNames : map2, (i & 8) != 0 ? topic.roles : map3, (i & 16) != 0 ? topic.allowAnimatedEmojis : z2, (i & 32) != 0 ? topic.ast : list, (i & 64) != 0 ? topic.isLinkifyConflicting : z3, (i & 128) != 0 ? topic.getChannelIconType() : guildChannelIconUtils, (i & 256) != 0 ? topic.channel : channel, (i & 512) != 0 ? topic.getIsRightPanelOpened() : z4, (i & 1024) != 0 ? topic.getIsOnHomeTab() : z5);
                 }
 
-                /* renamed from: component1, reason: from getter */
+                /* JADX INFO: renamed from: component1, reason: from getter */
                 public final String getRawTopicString() {
                     return this.rawTopicString;
                 }
@@ -1559,7 +1583,7 @@ public final class WidgetChannelTopicViewModel extends AppViewModel<ViewState> {
                     return this.roles;
                 }
 
-                /* renamed from: component5, reason: from getter */
+                /* JADX INFO: renamed from: component5, reason: from getter */
                 public final boolean getAllowAnimatedEmojis() {
                     return this.allowAnimatedEmojis;
                 }
@@ -1568,7 +1592,7 @@ public final class WidgetChannelTopicViewModel extends AppViewModel<ViewState> {
                     return this.ast;
                 }
 
-                /* renamed from: component7, reason: from getter */
+                /* JADX INFO: renamed from: component7, reason: from getter */
                 public final boolean getIsLinkifyConflicting() {
                     return this.isLinkifyConflicting;
                 }
@@ -1577,7 +1601,7 @@ public final class WidgetChannelTopicViewModel extends AppViewModel<ViewState> {
                     return getChannelIconType();
                 }
 
-                /* renamed from: component9, reason: from getter */
+                /* JADX INFO: renamed from: component9, reason: from getter */
                 public final Channel getChannel() {
                     return this.channel;
                 }
@@ -1638,6 +1662,18 @@ public final class WidgetChannelTopicViewModel extends AppViewModel<ViewState> {
                 }
 
                 /* JADX WARN: Multi-variable type inference failed */
+                /* JADX WARN: Type inference failed for: r1v3, types: [int] */
+                /* JADX WARN: Type inference failed for: r1v5 */
+                /* JADX WARN: Type inference failed for: r1v7 */
+                /* JADX WARN: Type inference failed for: r2v10, types: [int] */
+                /* JADX WARN: Type inference failed for: r2v15, types: [int] */
+                /* JADX WARN: Type inference failed for: r2v21 */
+                /* JADX WARN: Type inference failed for: r2v23 */
+                /* JADX WARN: Type inference failed for: r2v27 */
+                /* JADX WARN: Type inference failed for: r2v28 */
+                /* JADX WARN: Type inference failed for: r3v0 */
+                /* JADX WARN: Type inference failed for: r3v1, types: [int] */
+                /* JADX WARN: Type inference failed for: r3v2 */
                 public int hashCode() {
                     String str = this.rawTopicString;
                     int iHashCode = (str != null ? str.hashCode() : 0) * 31;
@@ -1648,31 +1684,31 @@ public final class WidgetChannelTopicViewModel extends AppViewModel<ViewState> {
                     Map<Long, GuildRole> map3 = this.roles;
                     int iHashCode4 = (iHashCode3 + (map3 != null ? map3.hashCode() : 0)) * 31;
                     boolean z2 = this.allowAnimatedEmojis;
-                    int i = z2;
-                    if (z2 != 0) {
-                        i = 1;
+                    ?? r2 = z2;
+                    if (z2) {
+                        r2 = 1;
                     }
-                    int i2 = (iHashCode4 + i) * 31;
+                    int i = (iHashCode4 + r2) * 31;
                     List<Node<MessageRenderContext>> list = this.ast;
-                    int iHashCode5 = (i2 + (list != null ? list.hashCode() : 0)) * 31;
+                    int iHashCode5 = (i + (list != null ? list.hashCode() : 0)) * 31;
                     boolean z3 = this.isLinkifyConflicting;
-                    int i3 = z3;
-                    if (z3 != 0) {
-                        i3 = 1;
+                    ?? r22 = z3;
+                    if (z3) {
+                        r22 = 1;
                     }
-                    int i4 = (iHashCode5 + i3) * 31;
+                    int i2 = (iHashCode5 + r22) * 31;
                     GuildChannelIconUtils channelIconType = getChannelIconType();
-                    int iHashCode6 = (i4 + (channelIconType != null ? channelIconType.hashCode() : 0)) * 31;
+                    int iHashCode6 = (i2 + (channelIconType != null ? channelIconType.hashCode() : 0)) * 31;
                     Channel channel = this.channel;
                     int iHashCode7 = (iHashCode6 + (channel != null ? channel.hashCode() : 0)) * 31;
                     boolean isRightPanelOpened = getIsRightPanelOpened();
-                    int i5 = isRightPanelOpened;
+                    ?? r1 = isRightPanelOpened;
                     if (isRightPanelOpened) {
-                        i5 = 1;
+                        r1 = 1;
                     }
-                    int i6 = (iHashCode7 + i5) * 31;
+                    int i3 = (iHashCode7 + r1) * 31;
                     boolean isOnHomeTab = getIsOnHomeTab();
-                    return i6 + (isOnHomeTab ? 1 : isOnHomeTab);
+                    return i3 + (isOnHomeTab ? 1 : isOnHomeTab);
                 }
 
                 public final boolean isLinkifyConflicting() {
@@ -1680,13 +1716,13 @@ public final class WidgetChannelTopicViewModel extends AppViewModel<ViewState> {
                 }
 
                 @Override // com.discord.widgets.channels.WidgetChannelTopicViewModel.ViewState.Guild, com.discord.widgets.channels.WidgetChannelTopicViewModel.ViewState
-                /* renamed from: isOnHomeTab, reason: from getter */
+                /* JADX INFO: renamed from: isOnHomeTab, reason: from getter */
                 public boolean getIsOnHomeTab() {
                     return this.isOnHomeTab;
                 }
 
                 @Override // com.discord.widgets.channels.WidgetChannelTopicViewModel.ViewState.Guild, com.discord.widgets.channels.WidgetChannelTopicViewModel.ViewState
-                /* renamed from: isRightPanelOpened, reason: from getter */
+                /* JADX INFO: renamed from: isRightPanelOpened, reason: from getter */
                 public boolean getIsRightPanelOpened() {
                     return this.isRightPanelOpened;
                 }
@@ -1728,13 +1764,13 @@ public final class WidgetChannelTopicViewModel extends AppViewModel<ViewState> {
             }
 
             @Override // com.discord.widgets.channels.WidgetChannelTopicViewModel.ViewState
-            /* renamed from: isOnHomeTab, reason: from getter */
+            /* JADX INFO: renamed from: isOnHomeTab, reason: from getter */
             public boolean getIsOnHomeTab() {
                 return this.isOnHomeTab;
             }
 
             @Override // com.discord.widgets.channels.WidgetChannelTopicViewModel.ViewState
-            /* renamed from: isRightPanelOpened, reason: from getter */
+            /* JADX INFO: renamed from: isRightPanelOpened, reason: from getter */
             public boolean getIsRightPanelOpened() {
                 return this.isRightPanelOpened;
             }
@@ -1747,7 +1783,7 @@ public final class WidgetChannelTopicViewModel extends AppViewModel<ViewState> {
             }
         }
 
-        /* compiled from: WidgetChannelTopicViewModel.kt */
+        /* JADX INFO: compiled from: WidgetChannelTopicViewModel.kt */
         public static final /* data */ class NoChannel extends ViewState {
             private final boolean isOnHomeTab;
             private final boolean isRightPanelOpened;
@@ -1810,13 +1846,13 @@ public final class WidgetChannelTopicViewModel extends AppViewModel<ViewState> {
             }
 
             @Override // com.discord.widgets.channels.WidgetChannelTopicViewModel.ViewState
-            /* renamed from: isOnHomeTab, reason: from getter */
+            /* JADX INFO: renamed from: isOnHomeTab, reason: from getter */
             public boolean getIsOnHomeTab() {
                 return this.isOnHomeTab;
             }
 
             @Override // com.discord.widgets.channels.WidgetChannelTopicViewModel.ViewState
-            /* renamed from: isRightPanelOpened, reason: from getter */
+            /* JADX INFO: renamed from: isRightPanelOpened, reason: from getter */
             public boolean getIsRightPanelOpened() {
                 return this.isRightPanelOpened;
             }
@@ -1836,12 +1872,12 @@ public final class WidgetChannelTopicViewModel extends AppViewModel<ViewState> {
             this.isOnHomeTab = z3;
         }
 
-        /* renamed from: isOnHomeTab, reason: from getter */
+        /* JADX INFO: renamed from: isOnHomeTab, reason: from getter */
         public boolean getIsOnHomeTab() {
             return this.isOnHomeTab;
         }
 
-        /* renamed from: isRightPanelOpened, reason: from getter */
+        /* JADX INFO: renamed from: isRightPanelOpened, reason: from getter */
         public boolean getIsRightPanelOpened() {
             return this.isRightPanelOpened;
         }

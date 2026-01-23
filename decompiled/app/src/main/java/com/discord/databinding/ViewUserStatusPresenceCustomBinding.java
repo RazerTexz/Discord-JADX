@@ -8,22 +8,22 @@ import androidx.appcompat.widget.AppCompatImageView;
 import androidx.viewbinding.ViewBinding;
 import com.facebook.drawee.view.SimpleDraweeView;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public final class ViewUserStatusPresenceCustomBinding implements ViewBinding {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     @NonNull
     public final LinearLayout f15587a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     @NonNull
     public final AppCompatImageView f15588b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     @NonNull
     public final SimpleDraweeView f15589c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     @NonNull
     public final TextView f15590d;
 

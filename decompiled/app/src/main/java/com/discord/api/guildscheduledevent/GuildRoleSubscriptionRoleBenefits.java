@@ -5,13 +5,13 @@ import java.util.List;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: GuildRoleSubscriptionRoleBenefits.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: GuildRoleSubscriptionRoleBenefits.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class GuildRoleSubscriptionRoleBenefits {
     private final List<GuildRoleSubscriptionBenefit> benefits;
     private final long skuId;
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final List<GuildRoleSubscriptionBenefit> m7971a() {
         return this.benefits;
     }

@@ -7,12 +7,12 @@ import java.util.EnumSet;
 import p007b.p100d.p104b.p105a.outline;
 
 /* JADX INFO: Add missing generic type declarations: [T] */
-/* compiled from: ConstructorConstructor.java */
-/* renamed from: b.i.d.q.j */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.d.q.j */
+/* JADX INFO: compiled from: ConstructorConstructor.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class C4925j<T> implements ObjectConstructor<T> {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final /* synthetic */ Type f13122a;
 
     public C4925j(C4922g c4922g, Type type) {
@@ -20,7 +20,7 @@ public class C4925j<T> implements ObjectConstructor<T> {
     }
 
     @Override // p007b.p225i.p408d.p410q.ObjectConstructor
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public T mo6869a() {
         Type type = this.f13122a;
         if (!(type instanceof ParameterizedType)) {

@@ -3,16 +3,16 @@ package com.discord.utilities.textprocessing;
 import com.discord.utilities.textprocessing.Rules;
 import kotlin.jvm.internal.DefaultConstructorMarker;
 
-/* compiled from: MessageParseState.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: MessageParseState.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class MessageParseState implements Rules.BlockQuoteState<MessageParseState> {
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private static final MessageParseState initialState = new MessageParseState(false);
     private final boolean isInQuote;
 
-    /* compiled from: MessageParseState.kt */
+    /* JADX INFO: compiled from: MessageParseState.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -35,7 +35,7 @@ public final class MessageParseState implements Rules.BlockQuoteState<MessagePar
     }
 
     @Override // com.discord.utilities.textprocessing.Rules.BlockQuoteState
-    /* renamed from: isInQuote, reason: from getter */
+    /* JADX INFO: renamed from: isInQuote, reason: from getter */
     public boolean getIsInQuote() {
         return this.isInQuote;
     }

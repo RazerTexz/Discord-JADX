@@ -3,12 +3,12 @@ package com.discord.api.activity;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ActivityActionConfirmation.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: ActivityActionConfirmation.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class ActivityActionConfirmation {
     private final String secret;
 
-    /* renamed from: a, reason: from getter */
+    /* JADX INFO: renamed from: a, reason: from getter */
     public final String getSecret() {
         return this.secret;
     }

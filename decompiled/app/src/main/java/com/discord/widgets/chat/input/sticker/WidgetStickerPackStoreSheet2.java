@@ -1,9 +1,9 @@
 package com.discord.widgets.chat.input.sticker;
 
 
-/* compiled from: WidgetStickerPackStoreSheet.kt */
-/* renamed from: com.discord.widgets.chat.input.sticker.StickerPackStoreSheetViewType, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.chat.input.sticker.StickerPackStoreSheetViewType, reason: use source file name */
+/* JADX INFO: compiled from: WidgetStickerPackStoreSheet.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public enum WidgetStickerPackStoreSheet2 {
     STICKER_POPOUT_VIEW_ALL("Sticker Popout View All"),
     STICKER_SEARCH_VIEW_ALL("Sticker Search View All"),

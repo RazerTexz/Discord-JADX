@@ -12,7 +12,7 @@ import androidx.annotation.Nullable;
 import p007b.p085c.p086a.p087a0.AnimatableValueParser;
 import p007b.p225i.p361c.FirebaseApp2;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public class FirebaseInitProvider extends ContentProvider {
     @Override // android.content.ContentProvider
     public void attachInfo(@NonNull Context context, @NonNull ProviderInfo providerInfo) {

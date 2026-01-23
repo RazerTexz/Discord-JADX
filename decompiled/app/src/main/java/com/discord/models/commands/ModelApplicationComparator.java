@@ -4,14 +4,14 @@ import java.util.Comparator;
 import kotlin.jvm.internal.DefaultConstructorMarker;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ModelApplicationComparator.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: ModelApplicationComparator.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class ModelApplicationComparator {
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
 
-    /* compiled from: ModelApplicationComparator.kt */
+    /* JADX INFO: compiled from: ModelApplicationComparator.kt */
     public static final class Companion implements Comparator<Application> {
         private Companion() {
         }
@@ -25,7 +25,7 @@ public final class ModelApplicationComparator {
             this();
         }
 
-        /* renamed from: compare, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: compare, reason: avoid collision after fix types in other method */
         public int compare2(Application a, Application b2) {
             Intrinsics3.checkNotNullParameter(a, "a");
             Intrinsics3.checkNotNullParameter(b2, "b");

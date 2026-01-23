@@ -37,31 +37,31 @@ import p507d0.p580t._Collections;
 import p507d0.p592z.p594d.FunctionReferenceImpl;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: MultiValuePropPremiumUpsellDialog.kt */
-/* renamed from: b.a.a.b.c, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.a.a.b.c, reason: use source file name */
+/* JADX INFO: compiled from: MultiValuePropPremiumUpsellDialog.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class MultiValuePropPremiumUpsellDialog extends AppDialog {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static final /* synthetic */ KProperty[] f264j = {outline.m846d0(MultiValuePropPremiumUpsellDialog.class, "binding", "getBinding()Lcom/discord/databinding/MultiValuePropPremiumUpsellDialogBinding;", 0)};
 
-    /* renamed from: k, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: k, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
 
-    /* renamed from: l, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: l, reason: from kotlin metadata */
     public final FragmentViewBindingDelegate binding;
 
-    /* renamed from: m, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: m, reason: from kotlin metadata */
     public e pagerAdapter;
 
-    /* compiled from: java-style lambda group */
-    /* renamed from: b.a.a.b.c$a */
+    /* JADX INFO: renamed from: b.a.a.b.c$a */
+    /* JADX INFO: compiled from: java-style lambda group */
     public static final class a implements View.OnClickListener {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public final /* synthetic */ int f268j;
 
-        /* renamed from: k */
+        /* JADX INFO: renamed from: k */
         public final /* synthetic */ Object f269k;
 
         public a(int i, Object obj) {
@@ -85,13 +85,13 @@ public final class MultiValuePropPremiumUpsellDialog extends AppDialog {
         }
     }
 
-    /* compiled from: MultiValuePropPremiumUpsellDialog.kt */
-    /* renamed from: b.a.a.b.c$b, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: b.a.a.b.c$b, reason: from kotlin metadata */
+    /* JADX INFO: compiled from: MultiValuePropPremiumUpsellDialog.kt */
     public static final class Companion {
         public Companion(DefaultConstructorMarker defaultConstructorMarker) {
         }
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public static void m114a(Companion companion, FragmentManager fragmentManager, int i, String str, String str2, String str3, String str4, String str5, String str6, boolean z2, boolean z3, int i2) {
             if ((i2 & 4) != 0) {
                 str = null;
@@ -139,17 +139,17 @@ public final class MultiValuePropPremiumUpsellDialog extends AppDialog {
         }
     }
 
-    /* compiled from: MultiValuePropPremiumUpsellDialog.kt */
-    /* renamed from: b.a.a.b.c$c */
+    /* JADX INFO: renamed from: b.a.a.b.c$c */
+    /* JADX INFO: compiled from: MultiValuePropPremiumUpsellDialog.kt */
     public static final class c {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final int f270a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public CharSequence f271b;
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public CharSequence f272c;
 
         public c(@DrawableRes int i, CharSequence charSequence, CharSequence charSequence2) {
@@ -189,31 +189,31 @@ public final class MultiValuePropPremiumUpsellDialog extends AppDialog {
         }
     }
 
-    /* compiled from: MultiValuePropPremiumUpsellDialog.kt */
-    /* renamed from: b.a.a.b.c$d */
+    /* JADX INFO: renamed from: b.a.a.b.c$d */
+    /* JADX INFO: compiled from: MultiValuePropPremiumUpsellDialog.kt */
     public static final class d extends AppFragment {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public static final /* synthetic */ KProperty[] f273j = {outline.m846d0(d.class, "binding", "getBinding()Lcom/discord/databinding/WidgetPremiumUpsellBinding;", 0)};
 
-        /* renamed from: k, reason: from kotlin metadata */
+        /* JADX INFO: renamed from: k, reason: from kotlin metadata */
         public static final Companion INSTANCE = new Companion(null);
 
-        /* renamed from: l, reason: from kotlin metadata */
+        /* JADX INFO: renamed from: l, reason: from kotlin metadata */
         public final FragmentViewBindingDelegate binding;
 
-        /* compiled from: MultiValuePropPremiumUpsellDialog.kt */
-        /* renamed from: b.a.a.b.c$d$a, reason: from kotlin metadata */
+        /* JADX INFO: renamed from: b.a.a.b.c$d$a, reason: from kotlin metadata */
+        /* JADX INFO: compiled from: MultiValuePropPremiumUpsellDialog.kt */
         public static final class Companion {
             public Companion(DefaultConstructorMarker defaultConstructorMarker) {
             }
         }
 
-        /* compiled from: MultiValuePropPremiumUpsellDialog.kt */
-        /* renamed from: b.a.a.b.c$d$b */
+        /* JADX INFO: renamed from: b.a.a.b.c$d$b */
+        /* JADX INFO: compiled from: MultiValuePropPremiumUpsellDialog.kt */
         public static final /* synthetic */ class b extends FunctionReferenceImpl implements Function1<View, WidgetPremiumUpsellBinding> {
 
-            /* renamed from: j */
+            /* JADX INFO: renamed from: j */
             public static final b f276j = new b();
 
             public b() {
@@ -246,7 +246,7 @@ public final class MultiValuePropPremiumUpsellDialog extends AppDialog {
             this.binding = FragmentViewBindingDelegate3.viewBinding$default(this, b.f276j, null, 2, null);
         }
 
-        /* renamed from: g */
+        /* JADX INFO: renamed from: g */
         public final WidgetPremiumUpsellBinding m115g() {
             return (WidgetPremiumUpsellBinding) this.binding.getValue((Fragment) this, f273j[0]);
         }
@@ -269,11 +269,11 @@ public final class MultiValuePropPremiumUpsellDialog extends AppDialog {
         }
     }
 
-    /* compiled from: MultiValuePropPremiumUpsellDialog.kt */
-    /* renamed from: b.a.a.b.c$e */
+    /* JADX INFO: renamed from: b.a.a.b.c$e */
+    /* JADX INFO: compiled from: MultiValuePropPremiumUpsellDialog.kt */
     public static final class e extends FragmentStateAdapter {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final List<c> f277a;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -304,17 +304,17 @@ public final class MultiValuePropPremiumUpsellDialog extends AppDialog {
         }
 
         @Override // androidx.recyclerview.widget.RecyclerView.Adapter
-        /* renamed from: getItemCount */
+        /* JADX INFO: renamed from: getItemCount */
         public int getPageSize() {
             return this.f277a.size();
         }
     }
 
-    /* compiled from: MultiValuePropPremiumUpsellDialog.kt */
-    /* renamed from: b.a.a.b.c$f */
+    /* JADX INFO: renamed from: b.a.a.b.c$f */
+    /* JADX INFO: compiled from: MultiValuePropPremiumUpsellDialog.kt */
     public static final /* synthetic */ class f extends FunctionReferenceImpl implements Function1<View, MultiValuePropPremiumUpsellDialogBinding> {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public static final f f278j = new f();
 
         public f() {
@@ -363,7 +363,7 @@ public final class MultiValuePropPremiumUpsellDialog extends AppDialog {
         this.binding = FragmentViewBindingDelegate3.viewBinding$default(this, f.f278j, null, 2, null);
     }
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public static final void m110g(MultiValuePropPremiumUpsellDialog multiValuePropPremiumUpsellDialog) {
         Bundle arguments = multiValuePropPremiumUpsellDialog.getArguments();
         String string = arguments != null ? arguments.getString("extra_page_name") : null;
@@ -380,18 +380,18 @@ public final class MultiValuePropPremiumUpsellDialog extends AppDialog {
         multiValuePropPremiumUpsellDialog.dismiss();
     }
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public final MultiValuePropPremiumUpsellDialogBinding m111h() {
         return (MultiValuePropPremiumUpsellDialogBinding) this.binding.getValue((Fragment) this, f264j[0]);
     }
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public final boolean m112i() {
         Bundle arguments = getArguments();
         return arguments != null && arguments.getBoolean("extra_show_learn_more");
     }
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final boolean m113j() {
         Bundle arguments = getArguments();
         return arguments != null && arguments.getBoolean("extra_show_other_pages");

@@ -18,7 +18,6 @@ import com.adjust.sdk.GooglePlayServicesClient;
 import com.adjust.sdk.scheduler.SingleThreadFutureScheduler;
 import java.io.BufferedInputStream;
 import java.io.BufferedOutputStream;
-import java.io.Closeable;
 import java.io.FileNotFoundException;
 import java.io.NotSerializableException;
 import java.io.ObjectInputStream;
@@ -42,7 +41,7 @@ import java.util.concurrent.TimeoutException;
 import java.util.regex.Pattern;
 import p007b.p100d.p104b.p105a.outline;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class Util {
     private static final String fieldReadErrorMessage = "Unable to read '%s' field in migration device with message (%s)";
     public static final DecimalFormat SecondsDisplayFormat = newLocalDecimalFormat();
@@ -50,7 +49,7 @@ public class Util {
     public static final SimpleDateFormat dateFormatter = new SimpleDateFormat(DATE_FORMAT, Locale.US);
     private static volatile SingleThreadFutureScheduler playAdIdScheduler = null;
 
-    /* renamed from: com.adjust.sdk.Util$1 */
+    /* JADX INFO: renamed from: com.adjust.sdk.Util$1 */
     public static class CallableC53931 implements Callable<Object> {
         public final /* synthetic */ Context val$context;
 
@@ -68,7 +67,7 @@ public class Util {
         }
     }
 
-    /* renamed from: com.adjust.sdk.Util$2 */
+    /* JADX INFO: renamed from: com.adjust.sdk.Util$2 */
     public static class CallableC53942 implements Callable<String> {
         public final /* synthetic */ Object val$advertisingInfoObject;
         public final /* synthetic */ Context val$context;
@@ -84,13 +83,13 @@ public class Util {
         }
 
         @Override // java.util.concurrent.Callable
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public String call2() {
             return Reflection.getPlayAdId(this.val$context, this.val$advertisingInfoObject);
         }
     }
 
-    /* renamed from: com.adjust.sdk.Util$3 */
+    /* JADX INFO: renamed from: com.adjust.sdk.Util$3 */
     public static class CallableC53953 implements Callable<Boolean> {
         public final /* synthetic */ Object val$advertisingInfoObject;
         public final /* synthetic */ Context val$context;
@@ -112,7 +111,7 @@ public class Util {
         }
     }
 
-    /* renamed from: com.adjust.sdk.Util$4 */
+    /* JADX INFO: renamed from: com.adjust.sdk.Util$4 */
     public static class AsyncTaskC53964 extends AsyncTask<Object, Void, Void> {
         @Override // android.os.AsyncTask
         public /* bridge */ /* synthetic */ Void doInBackground(Object[] objArr) {
@@ -120,14 +119,14 @@ public class Util {
         }
 
         @Override // android.os.AsyncTask
-        /* renamed from: doInBackground, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: doInBackground, reason: avoid collision after fix types in other method */
         public Void doInBackground2(Object... objArr) {
             ((Runnable) objArr[0]).run();
             return null;
         }
     }
 
-    /* renamed from: com.adjust.sdk.Util$5 */
+    /* JADX INFO: renamed from: com.adjust.sdk.Util$5 */
     public static class AsyncTaskC53975 extends AsyncTask<Context, Void, String> {
         public final /* synthetic */ OnDeviceIdsRead val$onDeviceIdRead;
 
@@ -145,7 +144,7 @@ public class Util {
             onPostExecute2(str);
         }
 
-        /* renamed from: doInBackground, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: doInBackground, reason: avoid collision after fix types in other method */
         public String doInBackground2(Context... contextArr) {
             ILogger logger = AdjustFactory.getLogger();
             String strAccess$000 = Util.access$000(contextArr[0]);
@@ -153,7 +152,7 @@ public class Util {
             return strAccess$000;
         }
 
-        /* renamed from: onPostExecute, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: onPostExecute, reason: avoid collision after fix types in other method */
         public void onPostExecute2(String str) {
             AdjustFactory.getLogger();
             this.val$onDeviceIdRead.onGoogleAdIdRead(str);
@@ -546,17 +545,14 @@ public class Util {
     }
 
     /* JADX WARN: Multi-variable type inference failed */
-    /* JADX WARN: Removed duplicated region for block: B:33:0x00a2 A[EXC_TOP_SPLITTER, SYNTHETIC] */
+    /* JADX WARN: Type inference failed for: r0v20 */
+    /* JADX WARN: Type inference failed for: r0v21 */
     /* JADX WARN: Type inference failed for: r7v10, types: [java.io.FileInputStream, java.io.InputStream] */
     /* JADX WARN: Type inference failed for: r7v11 */
     /* JADX WARN: Type inference failed for: r7v13 */
     /* JADX WARN: Type inference failed for: r7v18, types: [java.io.ObjectInputStream] */
     /* JADX WARN: Type inference failed for: r7v5 */
     /* JADX WARN: Type inference failed for: r7v7, types: [java.io.Closeable] */
-    /* JADX WARN: Type inference failed for: r8v7, types: [java.io.BufferedInputStream, java.io.InputStream] */
-    /*
-        Code decompiled incorrectly, please refer to instructions dump.
-    */
     public static <T> T readObject(Context context, String str, String str2, Class<T> cls) {
         T t;
         ?? OpenFileInput;
@@ -564,7 +560,7 @@ public class Util {
         try {
             OpenFileInput = context.openFileInput(str);
             try {
-                ?? bufferedInputStream = new BufferedInputStream(OpenFileInput);
+                BufferedInputStream bufferedInputStream = new BufferedInputStream(OpenFileInput);
                 try {
                     OpenFileInput = new ObjectInputStream(bufferedInputStream);
                     try {
@@ -579,34 +575,28 @@ public class Util {
                     }
                 } catch (FileNotFoundException unused) {
                     t = null;
-                    tCast = bufferedInputStream;
+                    tCast = (T) bufferedInputStream;
                     getLogger().debug("%s file not found", str2);
                     T t2 = tCast;
                     tCast = t;
                     OpenFileInput = t2;
-                    if (OpenFileInput != 0) {
-                    }
-                    return tCast;
                 } catch (Exception e4) {
                     e = e4;
                     t = null;
-                    tCast = bufferedInputStream;
+                    tCast = (T) bufferedInputStream;
                     getLogger().error("Failed to open %s file for reading (%s)", str2, e);
                     T t22 = tCast;
                     tCast = t;
                     OpenFileInput = t22;
-                    if (OpenFileInput != 0) {
-                    }
-                    return tCast;
                 }
             } catch (FileNotFoundException unused2) {
                 T t3 = tCast;
-                tCast = OpenFileInput;
+                tCast = (T) OpenFileInput;
                 t = t3;
             } catch (Exception e5) {
                 e = e5;
                 T t4 = tCast;
-                tCast = OpenFileInput;
+                tCast = (T) OpenFileInput;
                 t = t4;
             }
         } catch (FileNotFoundException unused3) {
@@ -678,20 +668,19 @@ public class Util {
     }
 
     /* JADX WARN: Multi-variable type inference failed */
-    /* JADX WARN: Removed duplicated region for block: B:23:0x004a A[EXC_TOP_SPLITTER, SYNTHETIC] */
-    /* JADX WARN: Removed duplicated region for block: B:33:? A[RETURN, SYNTHETIC] */
     /* JADX WARN: Type inference failed for: r6v1 */
+    /* JADX WARN: Type inference failed for: r6v10 */
+    /* JADX WARN: Type inference failed for: r6v11 */
     /* JADX WARN: Type inference failed for: r6v2 */
+    /* JADX WARN: Type inference failed for: r6v3, types: [java.io.Closeable] */
     /* JADX WARN: Type inference failed for: r6v5, types: [java.io.FileOutputStream, java.io.OutputStream] */
     /* JADX WARN: Type inference failed for: r6v6 */
     /* JADX WARN: Type inference failed for: r6v7 */
     /* JADX WARN: Type inference failed for: r6v8, types: [java.io.ObjectOutputStream] */
-    /*
-        Code decompiled incorrectly, please refer to instructions dump.
-    */
+    /* JADX WARN: Type inference failed for: r6v9 */
     public static <T> void writeObject(T t, Context context, String str, String str2) {
         ?? OpenFileOutput;
-        Closeable closeable;
+        ?? r6;
         BufferedOutputStream bufferedOutputStream;
         try {
             OpenFileOutput = context.openFileOutput(str, 0);
@@ -704,31 +693,27 @@ public class Util {
         } catch (Exception e2) {
             e = e2;
             getLogger().error("Failed to open %s for writing (%s)", str2, e);
-            closeable = OpenFileOutput;
-            if (closeable != null) {
-            }
+            r6 = OpenFileOutput;
         }
         try {
             OpenFileOutput = new ObjectOutputStream(bufferedOutputStream);
             try {
                 OpenFileOutput.writeObject(t);
                 getLogger().debug("Wrote %s: %s", str2, t);
-                closeable = OpenFileOutput;
+                r6 = OpenFileOutput;
             } catch (NotSerializableException unused) {
                 getLogger().error("Failed to serialize %s", str2);
-                closeable = OpenFileOutput;
+                r6 = OpenFileOutput;
             }
         } catch (Exception e3) {
             e = e3;
             OpenFileOutput = bufferedOutputStream;
             getLogger().error("Failed to open %s for writing (%s)", str2, e);
-            closeable = OpenFileOutput;
-            if (closeable != null) {
-            }
+            r6 = OpenFileOutput;
         }
-        if (closeable != null) {
+        if (r6 != 0) {
             try {
-                closeable.close();
+                r6.close();
             } catch (Exception e4) {
                 getLogger().error("Failed to close %s file for writing (%s)", str2, e4);
             }

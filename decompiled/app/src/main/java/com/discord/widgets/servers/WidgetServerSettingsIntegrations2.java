@@ -14,9 +14,9 @@ import p507d0.p580t._Arrays;
 import p507d0.p592z.p594d.Intrinsics3;
 import p658rx.functions.Func5;
 
-/* compiled from: WidgetServerSettingsIntegrations.kt */
-/* renamed from: com.discord.widgets.servers.WidgetServerSettingsIntegrations$Model$Companion$get$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.servers.WidgetServerSettingsIntegrations$Model$Companion$get$1, reason: use source file name */
+/* JADX INFO: compiled from: WidgetServerSettingsIntegrations.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetServerSettingsIntegrations2<T1, T2, T3, T4, T5, R> implements Func5<Map<Long, ? extends ModelGuildIntegration>, MeUser, Long, Guild, Map<Long, ? extends GuildRole>, WidgetServerSettingsIntegrations.Model> {
     public static final WidgetServerSettingsIntegrations2 INSTANCE = new WidgetServerSettingsIntegrations2();
 
@@ -25,7 +25,7 @@ public final class WidgetServerSettingsIntegrations2<T1, T2, T3, T4, T5, R> impl
         return call2(map, meUser, l, guild, (Map<Long, GuildRole>) map2);
     }
 
-    /* renamed from: call, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
     public final WidgetServerSettingsIntegrations.Model call2(Map<Long, ? extends ModelGuildIntegration> map, MeUser meUser, Long l, Guild guild, Map<Long, GuildRole> map2) {
         boolean z2 = false;
         if (l != null && guild != null && (guild.isOwner(meUser.getId()) || PermissionUtils.canAndIsElevated(32L, l, meUser.getMfaEnabled(), guild.getMfaLevel()))) {

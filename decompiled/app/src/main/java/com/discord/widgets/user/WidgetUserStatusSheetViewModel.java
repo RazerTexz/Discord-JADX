@@ -29,20 +29,20 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 import p658rx.Observable;
 
-/* compiled from: WidgetUserStatusSheetViewModel.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: WidgetUserStatusSheetViewModel.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class WidgetUserStatusSheetViewModel extends AppViewModel<ViewState> {
     private boolean hasTrackedOpenPopout;
     private final RestAPI restAPI;
     private final StoreUserPresence storePresences;
     private final StoreUserSettings storeUserSettings;
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private static final String[] CUSTOM_EMOJI_PLACEHOLDER_EMOJIS = {"grinning", "grimacing", "grin", "joy", "smiley", "smile", "sweat_smile", "laughing", "innocent", "wink", "blush", "slight_smile", "upside_down", "relaxed", "yum", "relieved", "heart_eyes", "kissing_heart", "kissing", "kissing_smiling_eyes", "kissing_closed_eyes", "stuck_out_tongue_winking_eye", "stuck_out_tongue_closed_eyes", "stuck_out_tongue", "money_mouth", "nerd", "sunglasses", "hugging", "smirk", "no_mouth", "neutral_face", "expressionless", "unamused", "rolling_eyes", "thinking", "flushed", "disappointed", "worried", "angry", "rage", "pensive", "confused", "slight_frown", "frowning2", "persevere", "confounded", "tired_face", "weary", "triumph", "open_mouth", "eggplant"};
 
-    /* compiled from: WidgetUserStatusSheetViewModel.kt */
-    /* renamed from: com.discord.widgets.user.WidgetUserStatusSheetViewModel$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.user.WidgetUserStatusSheetViewModel$1 */
+    /* JADX INFO: compiled from: WidgetUserStatusSheetViewModel.kt */
     public static final class C102461 extends Lambda implements Function1<StoreState, Unit> {
         public C102461() {
             super(1);
@@ -54,14 +54,14 @@ public final class WidgetUserStatusSheetViewModel extends AppViewModel<ViewState
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(StoreState storeState) {
             Intrinsics3.checkNotNullParameter(storeState, "storeState");
             WidgetUserStatusSheetViewModel.access$handleStoreState(WidgetUserStatusSheetViewModel.this, storeState);
         }
     }
 
-    /* compiled from: WidgetUserStatusSheetViewModel.kt */
+    /* JADX INFO: compiled from: WidgetUserStatusSheetViewModel.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -81,7 +81,7 @@ public final class WidgetUserStatusSheetViewModel extends AppViewModel<ViewState
         }
     }
 
-    /* compiled from: WidgetUserStatusSheetViewModel.kt */
+    /* JADX INFO: compiled from: WidgetUserStatusSheetViewModel.kt */
     public static final /* data */ class StoreState {
         private final Activity customStatusActivity;
 
@@ -96,7 +96,7 @@ public final class WidgetUserStatusSheetViewModel extends AppViewModel<ViewState
             return storeState.copy(activity);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final Activity getCustomStatusActivity() {
             return this.customStatusActivity;
         }
@@ -132,10 +132,10 @@ public final class WidgetUserStatusSheetViewModel extends AppViewModel<ViewState
         }
     }
 
-    /* compiled from: WidgetUserStatusSheetViewModel.kt */
+    /* JADX INFO: compiled from: WidgetUserStatusSheetViewModel.kt */
     public static abstract class ViewState {
 
-        /* compiled from: WidgetUserStatusSheetViewModel.kt */
+        /* JADX INFO: compiled from: WidgetUserStatusSheetViewModel.kt */
         public static final /* data */ class Loaded extends ViewState {
             private final UserStatusPresenceCustomView.ViewState customStatusViewState;
 
@@ -153,7 +153,7 @@ public final class WidgetUserStatusSheetViewModel extends AppViewModel<ViewState
                 return loaded.copy(viewState);
             }
 
-            /* renamed from: component1, reason: from getter */
+            /* JADX INFO: renamed from: component1, reason: from getter */
             public final UserStatusPresenceCustomView.ViewState getCustomStatusViewState() {
                 return this.customStatusViewState;
             }
@@ -190,7 +190,7 @@ public final class WidgetUserStatusSheetViewModel extends AppViewModel<ViewState
             }
         }
 
-        /* compiled from: WidgetUserStatusSheetViewModel.kt */
+        /* JADX INFO: compiled from: WidgetUserStatusSheetViewModel.kt */
         public static final class Uninitialized extends ViewState {
             public static final Uninitialized INSTANCE = new Uninitialized();
 
@@ -207,8 +207,8 @@ public final class WidgetUserStatusSheetViewModel extends AppViewModel<ViewState
         }
     }
 
-    /* compiled from: WidgetUserStatusSheetViewModel.kt */
-    /* renamed from: com.discord.widgets.user.WidgetUserStatusSheetViewModel$clearCustomStatus$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.user.WidgetUserStatusSheetViewModel$clearCustomStatus$1 */
+    /* JADX INFO: compiled from: WidgetUserStatusSheetViewModel.kt */
     public static final class C102471 extends Lambda implements Function1<ModelUserSettings, Unit> {
         public static final C102471 INSTANCE = new C102471();
 
@@ -222,14 +222,14 @@ public final class WidgetUserStatusSheetViewModel extends AppViewModel<ViewState
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(ModelUserSettings modelUserSettings) {
             Intrinsics3.checkNotNullParameter(modelUserSettings, "it");
         }
     }
 
-    /* compiled from: WidgetUserStatusSheetViewModel.kt */
-    /* renamed from: com.discord.widgets.user.WidgetUserStatusSheetViewModel$setStatus$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.user.WidgetUserStatusSheetViewModel$setStatus$1 */
+    /* JADX INFO: compiled from: WidgetUserStatusSheetViewModel.kt */
     public static final class C102481 extends Lambda implements Function1<ModelUserSettings, Unit> {
         public static final C102481 INSTANCE = new C102481();
 
@@ -243,7 +243,7 @@ public final class WidgetUserStatusSheetViewModel extends AppViewModel<ViewState
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(ModelUserSettings modelUserSettings) {
             Intrinsics3.checkNotNullParameter(modelUserSettings, "it");
         }

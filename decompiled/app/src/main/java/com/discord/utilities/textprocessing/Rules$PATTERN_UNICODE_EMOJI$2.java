@@ -5,8 +5,8 @@ import kotlin.jvm.functions.Function0;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: Rules.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: Rules.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class Rules$PATTERN_UNICODE_EMOJI$2 extends Lambda implements Function0<Pattern> {
     public static final Rules$PATTERN_UNICODE_EMOJI$2 INSTANCE = new Rules$PATTERN_UNICODE_EMOJI$2();
 
@@ -20,7 +20,7 @@ public final class Rules$PATTERN_UNICODE_EMOJI$2 extends Lambda implements Funct
     }
 
     @Override // kotlin.jvm.functions.Function0
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final Pattern invoke2() {
         StringBuilder sbM833U = outline.m833U("^(");
         sbM833U.append(Rules.access$getEmojiDataProvider$p(Rules.INSTANCE).getUnicodeEmojisPattern().pattern());

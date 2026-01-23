@@ -9,24 +9,24 @@ import com.google.android.gms.nearby.messages.internal.zzce;
 import com.google.android.gms.nearby.messages.internal.zzcg;
 import com.google.android.gms.nearby.messages.internal.zzj;
 
-/* renamed from: b.i.a.f.j.b.e.u0 */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.j.b.e.u0 */
+/* JADX INFO: loaded from: classes3.dex */
 public interface InterfaceC4311u0 extends IInterface {
-    /* renamed from: C */
+    /* JADX INFO: renamed from: C */
     void mo5991C(SubscribeRequest subscribeRequest) throws RemoteException;
 
-    /* renamed from: P */
+    /* JADX INFO: renamed from: P */
     void mo5992P(zzce zzceVar) throws RemoteException;
 
-    /* renamed from: i0 */
+    /* JADX INFO: renamed from: i0 */
     void mo5993i0(zzj zzjVar) throws RemoteException;
 
-    /* renamed from: j0 */
+    /* JADX INFO: renamed from: j0 */
     void mo5994j0(zzcg zzcgVar) throws RemoteException;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     void mo5995n(zzbz zzbzVar) throws RemoteException;
 
-    /* renamed from: s */
+    /* JADX INFO: renamed from: s */
     void mo5996s(zzcb zzcbVar) throws RemoteException;
 }

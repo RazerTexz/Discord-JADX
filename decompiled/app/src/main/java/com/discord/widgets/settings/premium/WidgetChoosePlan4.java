@@ -6,9 +6,9 @@ import kotlin.Unit;
 import kotlin.jvm.functions.Function0;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetChoosePlan.kt */
-/* renamed from: com.discord.widgets.settings.premium.WidgetChoosePlan$handleEvent$onDismiss$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.settings.premium.WidgetChoosePlan$handleEvent$onDismiss$1, reason: use source file name */
+/* JADX INFO: compiled from: WidgetChoosePlan.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetChoosePlan4 extends Lambda implements Function0<Unit> {
     public final /* synthetic */ WidgetChoosePlan this$0;
 
@@ -24,7 +24,7 @@ public final class WidgetChoosePlan4 extends Lambda implements Function0<Unit> {
         return Unit.f27425a;
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final void invoke2() throws Exception {
         GooglePlayBillingManager.INSTANCE.queryPurchases();
         AppActivity appActivityRequireAppActivity = this.this$0.requireAppActivity();

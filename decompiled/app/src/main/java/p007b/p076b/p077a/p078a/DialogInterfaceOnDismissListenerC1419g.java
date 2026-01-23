@@ -5,12 +5,12 @@ import com.lytefast.flexinput.fragment.FlexInputFragment;
 import com.lytefast.flexinput.viewmodel.FlexInputViewModel;
 import p007b.p225i.p226a.p288f.p299e.p308o.C3404f;
 
-/* compiled from: FlexInputFragment.kt */
-/* renamed from: b.b.a.a.g */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.b.a.a.g */
+/* JADX INFO: compiled from: FlexInputFragment.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class DialogInterfaceOnDismissListenerC1419g implements DialogInterface.OnDismissListener {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final /* synthetic */ FlexInputFragment f2134j;
 
     public DialogInterfaceOnDismissListenerC1419g(FlexInputFragment flexInputFragment) {

@@ -1,11 +1,11 @@
 package p507d0.p592z.p594d;
 
-/* compiled from: PackageReference.kt */
-/* renamed from: d0.z.d.u, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.z.d.u, reason: use source file name */
+/* JADX INFO: compiled from: PackageReference.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class PackageReference implements ClassBasedDeclarationContainer {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final Class<?> f25292j;
 
     public PackageReference(Class<?> cls, String str) {

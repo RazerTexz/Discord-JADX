@@ -8,9 +8,9 @@ import kotlinx.coroutines.CoroutineDispatcher;
 import p507d0.p584w.CoroutineContextImpl4;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WithLifecycleState.kt */
-/* renamed from: androidx.lifecycle.WithLifecycleStateKt$suspendWithStateAtLeastUnchecked$$inlined$suspendCancellableCoroutine$lambda$3, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: androidx.lifecycle.WithLifecycleStateKt$suspendWithStateAtLeastUnchecked$$inlined$suspendCancellableCoroutine$lambda$3, reason: use source file name */
+/* JADX INFO: compiled from: WithLifecycleState.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class WithLifecycleState5 extends Lambda implements Function1<Throwable, Unit> {
     public final /* synthetic */ Function0 $block$inlined;
     public final /* synthetic */ boolean $dispatchNeeded$inlined;
@@ -19,8 +19,8 @@ public final class WithLifecycleState5 extends Lambda implements Function1<Throw
     public final /* synthetic */ Lifecycle.State $state$inlined;
     public final /* synthetic */ Lifecycle $this_suspendWithStateAtLeastUnchecked$inlined;
 
-    /* compiled from: WithLifecycleState.kt */
-    /* renamed from: androidx.lifecycle.WithLifecycleStateKt$suspendWithStateAtLeastUnchecked$$inlined$suspendCancellableCoroutine$lambda$3$1, reason: invalid class name */
+    /* JADX INFO: renamed from: androidx.lifecycle.WithLifecycleStateKt$suspendWithStateAtLeastUnchecked$$inlined$suspendCancellableCoroutine$lambda$3$1, reason: invalid class name */
+    /* JADX INFO: compiled from: WithLifecycleState.kt */
     public static final class AnonymousClass1 implements Runnable {
         public AnonymousClass1() {
         }
@@ -49,7 +49,7 @@ public final class WithLifecycleState5 extends Lambda implements Function1<Throw
         return Unit.f27425a;
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final void invoke2(Throwable th) {
         CoroutineDispatcher coroutineDispatcher = this.$lifecycleDispatcher$inlined;
         CoroutineContextImpl4 coroutineContextImpl4 = CoroutineContextImpl4.f25237j;

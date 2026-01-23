@@ -6,15 +6,15 @@ import p637j0.p652o.C12774l;
 import p658rx.Observable;
 import p658rx.Subscriber;
 
-/* compiled from: OnSubscribeLift.java */
-/* renamed from: j0.l.a.r, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: j0.l.a.r, reason: use source file name */
+/* JADX INFO: compiled from: OnSubscribeLift.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class OnSubscribeLift<T, R> implements Observable.InterfaceC13005a<R> {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final Observable.InterfaceC13005a<T> f27013j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final Observable.InterfaceC13006b<? extends R, ? super T> f27014k;
 
     public OnSubscribeLift(Observable.InterfaceC13005a<T> interfaceC13005a, Observable.InterfaceC13006b<? extends R, ? super T> interfaceC13006b) {

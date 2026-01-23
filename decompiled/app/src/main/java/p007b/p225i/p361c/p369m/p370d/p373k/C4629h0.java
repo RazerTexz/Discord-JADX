@@ -9,19 +9,19 @@ import p007b.p225i.p361c.p369m.p370d.p380q.p382d.DefaultCreateReportSpiCall;
 import p007b.p225i.p361c.p369m.p370d.p380q.p382d.NativeCreateReportSpiCall;
 import p007b.p225i.p361c.p369m.p370d.p384s.p385h.AppSettingsData;
 
-/* compiled from: CrashlyticsController.java */
-/* renamed from: b.i.c.m.d.k.h0 */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.c.m.d.k.h0 */
+/* JADX INFO: compiled from: CrashlyticsController.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class C4629h0 implements ReportUploader.b {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final /* synthetic */ C4663x f12312a;
 
     public C4629h0(C4663x c4663x) {
         this.f12312a = c4663x;
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public ReportUploader m6431a(@NonNull AppSettingsData appSettingsData) {
         String str = appSettingsData.f12751c;
         String str2 = appSettingsData.f12752d;

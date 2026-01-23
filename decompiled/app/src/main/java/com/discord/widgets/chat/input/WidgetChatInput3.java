@@ -6,9 +6,9 @@ import kotlin.jvm.functions.Function1;
 import p507d0.p592z.p594d.FunctionReferenceImpl;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: WidgetChatInput.kt */
-/* renamed from: com.discord.widgets.chat.input.WidgetChatInput$binding$3, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.chat.input.WidgetChatInput$binding$3, reason: use source file name */
+/* JADX INFO: compiled from: WidgetChatInput.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final /* synthetic */ class WidgetChatInput3 extends FunctionReferenceImpl implements Function1<WidgetChatInputBinding, Unit> {
     public WidgetChatInput3(WidgetChatInput widgetChatInput) {
         super(1, widgetChatInput, WidgetChatInput.class, "onViewBindingDestroy", "onViewBindingDestroy(Lcom/discord/databinding/WidgetChatInputBinding;)V", 0);
@@ -20,7 +20,7 @@ public final /* synthetic */ class WidgetChatInput3 extends FunctionReferenceImp
         return Unit.f27425a;
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final void invoke2(WidgetChatInputBinding widgetChatInputBinding) {
         Intrinsics3.checkNotNullParameter(widgetChatInputBinding, "p1");
         WidgetChatInput.access$onViewBindingDestroy((WidgetChatInput) this.receiver, widgetChatInputBinding);

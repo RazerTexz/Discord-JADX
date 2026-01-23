@@ -7,8 +7,8 @@ import org.webrtc.MediaStreamTrack;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: MessageEmbed.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: MessageEmbed.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class MessageEmbed {
     private final EmbedAuthor author;
     private final Integer color;
@@ -24,27 +24,27 @@ public final /* data */ class MessageEmbed {
     private final String url;
     private final EmbedVideo video;
 
-    /* renamed from: a, reason: from getter */
+    /* JADX INFO: renamed from: a, reason: from getter */
     public final EmbedAuthor getAuthor() {
         return this.author;
     }
 
-    /* renamed from: b, reason: from getter */
+    /* JADX INFO: renamed from: b, reason: from getter */
     public final Integer getColor() {
         return this.color;
     }
 
-    /* renamed from: c, reason: from getter */
+    /* JADX INFO: renamed from: c, reason: from getter */
     public final String getDescription() {
         return this.description;
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final List<EmbedField> m8101d() {
         return this.fields;
     }
 
-    /* renamed from: e, reason: from getter */
+    /* JADX INFO: renamed from: e, reason: from getter */
     public final EmbedFooter getFooter() {
         return this.footer;
     }
@@ -60,17 +60,17 @@ public final /* data */ class MessageEmbed {
         return Intrinsics3.areEqual(this.title, messageEmbed.title) && Intrinsics3.areEqual(this.type, messageEmbed.type) && Intrinsics3.areEqual(this.description, messageEmbed.description) && Intrinsics3.areEqual(this.url, messageEmbed.url) && Intrinsics3.areEqual(this.timestamp, messageEmbed.timestamp) && Intrinsics3.areEqual(this.color, messageEmbed.color) && Intrinsics3.areEqual(this.footer, messageEmbed.footer) && Intrinsics3.areEqual(this.image, messageEmbed.image) && Intrinsics3.areEqual(this.thumbnail, messageEmbed.thumbnail) && Intrinsics3.areEqual(this.video, messageEmbed.video) && Intrinsics3.areEqual(this.provider, messageEmbed.provider) && Intrinsics3.areEqual(this.author, messageEmbed.author) && Intrinsics3.areEqual(this.fields, messageEmbed.fields);
     }
 
-    /* renamed from: f, reason: from getter */
+    /* JADX INFO: renamed from: f, reason: from getter */
     public final EmbedImage getImage() {
         return this.image;
     }
 
-    /* renamed from: g, reason: from getter */
+    /* JADX INFO: renamed from: g, reason: from getter */
     public final EmbedProvider getProvider() {
         return this.provider;
     }
 
-    /* renamed from: h, reason: from getter */
+    /* JADX INFO: renamed from: h, reason: from getter */
     public final EmbedThumbnail getThumbnail() {
         return this.thumbnail;
     }
@@ -104,27 +104,27 @@ public final /* data */ class MessageEmbed {
         return iHashCode12 + (list != null ? list.hashCode() : 0);
     }
 
-    /* renamed from: i, reason: from getter */
+    /* JADX INFO: renamed from: i, reason: from getter */
     public final UtcDateTime getTimestamp() {
         return this.timestamp;
     }
 
-    /* renamed from: j, reason: from getter */
+    /* JADX INFO: renamed from: j, reason: from getter */
     public final String getTitle() {
         return this.title;
     }
 
-    /* renamed from: k, reason: from getter */
+    /* JADX INFO: renamed from: k, reason: from getter */
     public final EmbedType getType() {
         return this.type;
     }
 
-    /* renamed from: l, reason: from getter */
+    /* JADX INFO: renamed from: l, reason: from getter */
     public final String getUrl() {
         return this.url;
     }
 
-    /* renamed from: m, reason: from getter */
+    /* JADX INFO: renamed from: m, reason: from getter */
     public final EmbedVideo getVideo() {
         return this.video;
     }

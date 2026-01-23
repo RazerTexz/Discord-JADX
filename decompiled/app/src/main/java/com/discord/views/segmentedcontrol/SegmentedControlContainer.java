@@ -12,21 +12,21 @@ import p007b.p008a.p062y.p067n0.SegmentedControlSegment;
 import p507d0.p580t.Collections2;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: SegmentedControlContainer.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: SegmentedControlContainer.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class SegmentedControlContainer extends LinearLayout {
 
-    /* renamed from: j, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: j, reason: from kotlin metadata */
     public Function1<? super Integer, Unit> segmentSelectedChangeListener;
 
-    /* compiled from: SegmentedControlContainer.kt */
-    /* renamed from: com.discord.views.segmentedcontrol.SegmentedControlContainer$a */
+    /* JADX INFO: renamed from: com.discord.views.segmentedcontrol.SegmentedControlContainer$a */
+    /* JADX INFO: compiled from: SegmentedControlContainer.kt */
     public static final class ViewOnClickListenerC7120a implements View.OnClickListener {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public final /* synthetic */ int f19288j;
 
-        /* renamed from: k */
+        /* JADX INFO: renamed from: k */
         public final /* synthetic */ SegmentedControlContainer f19289k;
 
         public ViewOnClickListenerC7120a(int i, SegmentedControlContainer segmentedControlContainer) {
@@ -49,7 +49,7 @@ public final class SegmentedControlContainer extends LinearLayout {
         Intrinsics3.checkNotNullParameter(context, "context");
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static /* synthetic */ void m8606b(SegmentedControlContainer segmentedControlContainer, int i, int i2) {
         if ((i2 & 1) != 0) {
             i = 0;
@@ -57,7 +57,7 @@ public final class SegmentedControlContainer extends LinearLayout {
         segmentedControlContainer.m8607a(i);
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final void m8607a(int selectedIndex) {
         int i = 0;
         for (View view : ViewGroup.getChildren(this)) {

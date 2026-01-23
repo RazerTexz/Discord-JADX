@@ -1,7 +1,7 @@
 package co.discord.media_engine.internal;
 
 
-/* compiled from: NativeStatistics.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: NativeStatistics.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class NativeStatisticsKt {
 }

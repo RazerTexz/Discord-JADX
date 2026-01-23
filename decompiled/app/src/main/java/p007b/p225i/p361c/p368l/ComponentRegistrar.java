@@ -2,9 +2,9 @@ package p007b.p225i.p361c.p368l;
 
 import java.util.List;
 
-/* compiled from: ComponentRegistrar.java */
-/* renamed from: b.i.c.l.g, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.c.l.g, reason: use source file name */
+/* JADX INFO: compiled from: ComponentRegistrar.java */
+/* JADX INFO: loaded from: classes3.dex */
 public interface ComponentRegistrar {
     List<Component4<?>> getComponents();
 }

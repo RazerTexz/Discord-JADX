@@ -20,12 +20,12 @@ import p507d0.p580t.MapsJVM;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: AppStartAnalyticsTracker.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: AppStartAnalyticsTracker.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class AppStartAnalyticsTracker {
     private static final String APP_FIRST_LAUNCHED = "app_first_launched";
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private static final Lazy instance$delegate = LazyJVM.lazy(AppStartAnalyticsTracker2.INSTANCE);
     private Long appOpenTimestamp;
@@ -34,7 +34,7 @@ public final class AppStartAnalyticsTracker {
     private final StoreUserSettingsSystem storeUserSettingsSystem;
     private final AnalyticsUtils.Tracker tracker;
 
-    /* compiled from: AppStartAnalyticsTracker.kt */
+    /* JADX INFO: compiled from: AppStartAnalyticsTracker.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -76,8 +76,8 @@ public final class AppStartAnalyticsTracker {
         }
     }
 
-    /* compiled from: AppStartAnalyticsTracker.kt */
-    /* renamed from: com.discord.utilities.analytics.AppStartAnalyticsTracker$appOpen$1 */
+    /* JADX INFO: renamed from: com.discord.utilities.analytics.AppStartAnalyticsTracker$appOpen$1 */
+    /* JADX INFO: compiled from: AppStartAnalyticsTracker.kt */
     public static final class C66831 extends Lambda implements Function0<Map<String, ? extends Object>> {
         public final /* synthetic */ boolean $isNotificationRoute;
         public final /* synthetic */ Uri $uri;
@@ -97,7 +97,7 @@ public final class AppStartAnalyticsTracker {
         }
 
         @Override // kotlin.jvm.functions.Function0
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final Map<String, ? extends Object> invoke2() {
             Tuples2[] tuples2Arr = new Tuples2[2];
             tuples2Arr[0] = Tuples.m10073to("opened_from", this.$isNotificationRoute ? "notification" : this.$uriCanBeRouted ? Constants.DEEPLINK : "launcher");

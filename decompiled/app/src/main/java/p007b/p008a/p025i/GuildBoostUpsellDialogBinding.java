@@ -8,24 +8,24 @@ import androidx.annotation.NonNull;
 import androidx.viewbinding.ViewBinding;
 import com.google.android.material.button.MaterialButton;
 
-/* compiled from: GuildBoostUpsellDialogBinding.java */
-/* renamed from: b.a.i.w, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.a.i.w, reason: use source file name */
+/* JADX INFO: compiled from: GuildBoostUpsellDialogBinding.java */
+/* JADX INFO: loaded from: classes.dex */
 public final class GuildBoostUpsellDialogBinding implements ViewBinding {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     @NonNull
     public final RelativeLayout f1328a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     @NonNull
     public final ImageView f1329b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     @NonNull
     public final TextView f1330c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     @NonNull
     public final MaterialButton f1331d;
 

@@ -33,29 +33,29 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 import p507d0.p592z.p594d.Reflection2;
 
-/* compiled from: WidgetStageAudienceBlockedBottomSheet.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetStageAudienceBlockedBottomSheet.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetStageAudienceBlockedBottomSheet extends AppBottomSheet {
     public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetStageAudienceBlockedBottomSheet.class, "binding", "getBinding()Lcom/discord/databinding/WidgetStageAudienceBlockedBottomSheetBinding;", 0)};
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private static final String EXTRA_LAUNCH_FULL_SCREEN = "LAUNCH_FULL_SCREEN";
     private StageAudienceBlockedBottomSheetAdapter adapter;
 
-    /* renamed from: binding$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
 
-    /* renamed from: channelId$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: channelId$delegate, reason: from kotlin metadata */
     private final Lazy channelId;
 
-    /* renamed from: launchStageFullScreen$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: launchStageFullScreen$delegate, reason: from kotlin metadata */
     private final Lazy launchStageFullScreen;
 
-    /* renamed from: viewModel$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: viewModel$delegate, reason: from kotlin metadata */
     private final Lazy viewModel;
 
-    /* compiled from: WidgetStageAudienceBlockedBottomSheet.kt */
+    /* JADX INFO: compiled from: WidgetStageAudienceBlockedBottomSheet.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -72,13 +72,13 @@ public final class WidgetStageAudienceBlockedBottomSheet extends AppBottomSheet 
         }
     }
 
-    /* compiled from: WidgetStageAudienceBlockedBottomSheet.kt */
-    /* renamed from: com.discord.widgets.stage.sheet.WidgetStageAudienceBlockedBottomSheet$configureUI$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.stage.sheet.WidgetStageAudienceBlockedBottomSheet$configureUI$1 */
+    /* JADX INFO: compiled from: WidgetStageAudienceBlockedBottomSheet.kt */
     public static final class ViewOnClickListenerC100221 implements View.OnClickListener {
         public final /* synthetic */ StageAudienceBlockedBottomSheetViewModel.ViewState $viewState;
 
-        /* compiled from: WidgetStageAudienceBlockedBottomSheet.kt */
-        /* renamed from: com.discord.widgets.stage.sheet.WidgetStageAudienceBlockedBottomSheet$configureUI$1$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.widgets.stage.sheet.WidgetStageAudienceBlockedBottomSheet$configureUI$1$1, reason: invalid class name */
+        /* JADX INFO: compiled from: WidgetStageAudienceBlockedBottomSheet.kt */
         public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
             public AnonymousClass1() {
                 super(0);
@@ -90,7 +90,7 @@ public final class WidgetStageAudienceBlockedBottomSheet extends AppBottomSheet 
                 return Unit.f27425a;
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2() {
                 WidgetStageAudienceBlockedBottomSheet.this.dismiss();
             }
@@ -111,8 +111,8 @@ public final class WidgetStageAudienceBlockedBottomSheet extends AppBottomSheet 
         }
     }
 
-    /* compiled from: WidgetStageAudienceBlockedBottomSheet.kt */
-    /* renamed from: com.discord.widgets.stage.sheet.WidgetStageAudienceBlockedBottomSheet$configureUI$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.stage.sheet.WidgetStageAudienceBlockedBottomSheet$configureUI$2 */
+    /* JADX INFO: compiled from: WidgetStageAudienceBlockedBottomSheet.kt */
     public static final class ViewOnClickListenerC100232 implements View.OnClickListener {
         public ViewOnClickListenerC100232() {
         }
@@ -123,8 +123,8 @@ public final class WidgetStageAudienceBlockedBottomSheet extends AppBottomSheet 
         }
     }
 
-    /* compiled from: WidgetStageAudienceBlockedBottomSheet.kt */
-    /* renamed from: com.discord.widgets.stage.sheet.WidgetStageAudienceBlockedBottomSheet$onResume$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.stage.sheet.WidgetStageAudienceBlockedBottomSheet$onResume$1 */
+    /* JADX INFO: compiled from: WidgetStageAudienceBlockedBottomSheet.kt */
     public static final /* synthetic */ class C100241 extends FunctionReferenceImpl implements Function1<StageAudienceBlockedBottomSheetViewModel.ViewState, Unit> {
         public C100241(WidgetStageAudienceBlockedBottomSheet widgetStageAudienceBlockedBottomSheet) {
             super(1, widgetStageAudienceBlockedBottomSheet, WidgetStageAudienceBlockedBottomSheet.class, "configureUI", "configureUI(Lcom/discord/widgets/stage/sheet/StageAudienceBlockedBottomSheetViewModel$ViewState;)V", 0);
@@ -136,7 +136,7 @@ public final class WidgetStageAudienceBlockedBottomSheet extends AppBottomSheet 
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(StageAudienceBlockedBottomSheetViewModel.ViewState viewState) {
             Intrinsics3.checkNotNullParameter(viewState, "p1");
             WidgetStageAudienceBlockedBottomSheet.access$configureUI((WidgetStageAudienceBlockedBottomSheet) this.receiver, viewState);

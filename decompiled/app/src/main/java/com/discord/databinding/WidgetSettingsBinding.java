@@ -11,162 +11,162 @@ import com.discord.views.StatusView;
 import com.discord.widgets.user.profile.UserProfileHeaderView;
 import com.google.android.material.button.MaterialButton;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public final class WidgetSettingsBinding implements ViewBinding {
 
-    /* renamed from: A */
+    /* JADX INFO: renamed from: A */
     @NonNull
     public final TextView f17878A;
 
-    /* renamed from: B */
+    /* JADX INFO: renamed from: B */
     @NonNull
     public final TextView f17879B;
 
-    /* renamed from: C */
+    /* JADX INFO: renamed from: C */
     @NonNull
     public final TextView f17880C;
 
-    /* renamed from: D */
+    /* JADX INFO: renamed from: D */
     @NonNull
     public final LinearLayout f17881D;
 
-    /* renamed from: E */
+    /* JADX INFO: renamed from: E */
     @NonNull
     public final TextView f17882E;
 
-    /* renamed from: F */
+    /* JADX INFO: renamed from: F */
     @NonNull
     public final TextView f17883F;
 
-    /* renamed from: G */
+    /* JADX INFO: renamed from: G */
     @NonNull
     public final StatusView f17884G;
 
-    /* renamed from: H */
+    /* JADX INFO: renamed from: H */
     @NonNull
     public final TextView f17885H;
 
-    /* renamed from: I */
+    /* JADX INFO: renamed from: I */
     @NonNull
     public final TextView f17886I;
 
-    /* renamed from: J */
+    /* JADX INFO: renamed from: J */
     @NonNull
     public final TextView f17887J;
 
-    /* renamed from: K */
+    /* JADX INFO: renamed from: K */
     @NonNull
     public final TextView f17888K;
 
-    /* renamed from: L */
+    /* JADX INFO: renamed from: L */
     @NonNull
     public final UserProfileHeaderView f17889L;
 
-    /* renamed from: M */
+    /* JADX INFO: renamed from: M */
     @NonNull
     public final TextView f17890M;
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     @NonNull
     public final CoordinatorLayout f17891a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     @NonNull
     public final TextView f17892b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     @NonNull
     public final TextView f17893c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     @NonNull
     public final TextView f17894d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     @NonNull
     public final TextView f17895e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     @NonNull
     public final TextView f17896f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     @NonNull
     public final TextView f17897g;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     @NonNull
     public final TextView f17898h;
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     @NonNull
     public final TextView f17899i;
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     @NonNull
     public final TextView f17900j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     @NonNull
     public final TextView f17901k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     @NonNull
     public final TextView f17902l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     @NonNull
     public final TextView f17903m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     @NonNull
     public final View f17904n;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     @NonNull
     public final TextView f17905o;
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     @NonNull
     public final TextView f17906p;
 
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     @NonNull
     public final TextView f17907q;
 
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     @NonNull
     public final TextView f17908r;
 
-    /* renamed from: s */
+    /* JADX INFO: renamed from: s */
     @NonNull
     public final LinearLayout f17909s;
 
-    /* renamed from: t */
+    /* JADX INFO: renamed from: t */
     @NonNull
     public final TextView f17910t;
 
-    /* renamed from: u */
+    /* JADX INFO: renamed from: u */
     @NonNull
     public final LinearLayout f17911u;
 
-    /* renamed from: v */
+    /* JADX INFO: renamed from: v */
     @NonNull
     public final LinearLayout f17912v;
 
-    /* renamed from: w */
+    /* JADX INFO: renamed from: w */
     @NonNull
     public final AppCompatImageView f17913w;
 
-    /* renamed from: x */
+    /* JADX INFO: renamed from: x */
     @NonNull
     public final MaterialButton f17914x;
 
-    /* renamed from: y */
+    /* JADX INFO: renamed from: y */
     @NonNull
     public final TextView f17915y;
 
-    /* renamed from: z */
+    /* JADX INFO: renamed from: z */
     @NonNull
     public final TextView f17916z;
 

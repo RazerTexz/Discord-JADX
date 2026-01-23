@@ -3,15 +3,15 @@ package p007b.p008a.p062y.p063j0;
 import android.view.View;
 import com.discord.views.calls.VideoCallParticipantView;
 
-/* compiled from: VideoCallParticipantView.kt */
-/* renamed from: b.a.y.j0.n, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: b.a.y.j0.n, reason: use source file name */
+/* JADX INFO: compiled from: VideoCallParticipantView.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class VideoCallParticipantView6 implements View.OnClickListener {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final /* synthetic */ VideoCallParticipantView f2037j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final /* synthetic */ VideoCallParticipantView.ParticipantData f2038k;
 
     public VideoCallParticipantView6(VideoCallParticipantView videoCallParticipantView, VideoCallParticipantView.ParticipantData participantData) {

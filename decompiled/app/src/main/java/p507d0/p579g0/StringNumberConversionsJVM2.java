@@ -2,9 +2,9 @@ package p507d0.p579g0;
 
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: StringNumberConversionsJVM.kt */
-/* renamed from: d0.g0.r, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.g0.r, reason: use source file name */
+/* JADX INFO: compiled from: StringNumberConversionsJVM.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public class StringNumberConversionsJVM2 extends StringBuilder {
     public static final Double toDoubleOrNull(String str) {
         Intrinsics3.checkNotNullParameter(str, "$this$toDoubleOrNull");

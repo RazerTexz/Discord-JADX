@@ -12,15 +12,15 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+/* JADX INFO: loaded from: classes.dex */
 @RestrictTo({RestrictTo.Scope.LIBRARY_GROUP_PREFIX})
-/* loaded from: classes.dex */
 public class Lifecycling {
     private static final int GENERATED_CALLBACK = 2;
     private static final int REFLECTIVE_CALLBACK = 1;
     private static Map<Class<?>, Integer> sCallbackCache = new HashMap();
     private static Map<Class<?>, List<Constructor<? extends GeneratedAdapter>>> sClassToAdapters = new HashMap();
 
-    /* renamed from: androidx.lifecycle.Lifecycling$1 */
+    /* JADX INFO: renamed from: androidx.lifecycle.Lifecycling$1 */
     public class C04421 implements GenericLifecycleObserver {
         public final /* synthetic */ LifecycleEventObserver val$observer;
 
@@ -50,7 +50,7 @@ public class Lifecycling {
     }
 
     @Nullable
-    private static Constructor<? extends GeneratedAdapter> generatedConstructor(Class<?> cls) throws SecurityException {
+    private static Constructor<? extends GeneratedAdapter> generatedConstructor(Class<?> cls) {
         try {
             Package r0 = cls.getPackage();
             String canonicalName = cls.getCanonicalName();
@@ -84,7 +84,7 @@ public class Lifecycling {
         return new C04421(lifecycleEventObserver(obj));
     }
 
-    private static int getObserverConstructorType(Class<?> cls) throws SecurityException {
+    private static int getObserverConstructorType(Class<?> cls) {
         Integer num = sCallbackCache.get(cls);
         if (num != null) {
             return num.intValue();
@@ -126,7 +126,7 @@ public class Lifecycling {
         return new CompositeGeneratedAdaptersObserver(generatedAdapterArr);
     }
 
-    private static int resolveObserverCallbackType(Class<?> cls) throws SecurityException {
+    private static int resolveObserverCallbackType(Class<?> cls) {
         if (cls.getCanonicalName() == null) {
             return 1;
         }

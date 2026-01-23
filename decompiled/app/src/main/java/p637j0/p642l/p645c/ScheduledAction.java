@@ -11,19 +11,19 @@ import p658rx.functions.Action0;
 import p658rx.internal.util.SubscriptionList;
 import p658rx.subscriptions.CompositeSubscription;
 
-/* compiled from: ScheduledAction.java */
-/* renamed from: j0.l.c.j, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: j0.l.c.j, reason: use source file name */
+/* JADX INFO: compiled from: ScheduledAction.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class ScheduledAction extends AtomicReference<Thread> implements Runnable, Subscription {
     private static final long serialVersionUID = -3962399486978279857L;
     public final Action0 action;
     public final SubscriptionList cancel;
 
-    /* compiled from: ScheduledAction.java */
-    /* renamed from: j0.l.c.j$a */
+    /* JADX INFO: renamed from: j0.l.c.j$a */
+    /* JADX INFO: compiled from: ScheduledAction.java */
     public final class a implements Subscription {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public final Future<?> f27243j;
 
         public a(Future<?> future) {
@@ -45,13 +45,13 @@ public final class ScheduledAction extends AtomicReference<Thread> implements Ru
         }
     }
 
-    /* compiled from: ScheduledAction.java */
-    /* renamed from: j0.l.c.j$b */
+    /* JADX INFO: renamed from: j0.l.c.j$b */
+    /* JADX INFO: compiled from: ScheduledAction.java */
     public static final class b extends AtomicBoolean implements Subscription {
         private static final long serialVersionUID = 247232374289553518L;
         public final SubscriptionList parent;
 
-        /* renamed from: s */
+        /* JADX INFO: renamed from: s */
         public final ScheduledAction f27245s;
 
         public b(ScheduledAction scheduledAction, SubscriptionList subscriptionList) {
@@ -85,13 +85,13 @@ public final class ScheduledAction extends AtomicReference<Thread> implements Ru
         }
     }
 
-    /* compiled from: ScheduledAction.java */
-    /* renamed from: j0.l.c.j$c */
+    /* JADX INFO: renamed from: j0.l.c.j$c */
+    /* JADX INFO: compiled from: ScheduledAction.java */
     public static final class c extends AtomicBoolean implements Subscription {
         private static final long serialVersionUID = 247232374289553518L;
         public final CompositeSubscription parent;
 
-        /* renamed from: s */
+        /* JADX INFO: renamed from: s */
         public final ScheduledAction f27246s;
 
         public c(ScheduledAction scheduledAction, CompositeSubscription compositeSubscription) {
@@ -117,7 +117,7 @@ public final class ScheduledAction extends AtomicReference<Thread> implements Ru
         this.cancel = new SubscriptionList();
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public void m10807a(Future<?> future) {
         this.cancel.m11128a(new a(future));
     }

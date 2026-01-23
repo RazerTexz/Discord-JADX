@@ -4,9 +4,9 @@ import android.view.GestureDetector;
 import android.view.MotionEvent;
 import com.discord.widgets.chat.list.adapter.WidgetChatListAdapter;
 
-/* compiled from: WidgetChatListAdapter.kt */
-/* renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapter$HandlerOfTouches$tapGestureDetector$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapter$HandlerOfTouches$tapGestureDetector$1, reason: use source file name */
+/* JADX INFO: compiled from: WidgetChatListAdapter.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetChatListAdapter2 extends GestureDetector.SimpleOnGestureListener {
     public final /* synthetic */ WidgetChatListAdapter.HandlerOfTouches this$0;
 

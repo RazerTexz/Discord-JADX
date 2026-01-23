@@ -24,7 +24,7 @@ import java.util.ArrayList;
 import java.util.List;
 import p007b.p100d.p104b.p105a.outline;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class ItemTouchHelper extends RecyclerView.ItemDecoration implements RecyclerView.OnChildAttachStateChangeListener {
     public static final int ACTION_MODE_DRAG_MASK = 16711680;
     private static final int ACTION_MODE_IDLE_MASK = 255;
@@ -46,7 +46,7 @@ public class ItemTouchHelper extends RecyclerView.ItemDecoration implements Recy
     public static final int START = 16;
     private static final String TAG = "ItemTouchHelper";
 
-    /* renamed from: UP */
+    /* JADX INFO: renamed from: UP */
     public static final int f151UP = 1;
 
     @NonNull
@@ -83,7 +83,7 @@ public class ItemTouchHelper extends RecyclerView.ItemDecoration implements Recy
     public int mOverdrawChildPosition = -1;
     private final RecyclerView.OnItemTouchListener mOnItemTouchListener = new C05512();
 
-    /* renamed from: androidx.recyclerview.widget.ItemTouchHelper$1 */
+    /* JADX INFO: renamed from: androidx.recyclerview.widget.ItemTouchHelper$1 */
     public class RunnableC05501 implements Runnable {
         public RunnableC05501() {
         }
@@ -105,7 +105,7 @@ public class ItemTouchHelper extends RecyclerView.ItemDecoration implements Recy
         }
     }
 
-    /* renamed from: androidx.recyclerview.widget.ItemTouchHelper$2 */
+    /* JADX INFO: renamed from: androidx.recyclerview.widget.ItemTouchHelper$2 */
     public class C05512 implements RecyclerView.OnItemTouchListener {
         public C05512() {
         }
@@ -217,7 +217,7 @@ public class ItemTouchHelper extends RecyclerView.ItemDecoration implements Recy
         }
     }
 
-    /* renamed from: androidx.recyclerview.widget.ItemTouchHelper$3 */
+    /* JADX INFO: renamed from: androidx.recyclerview.widget.ItemTouchHelper$3 */
     public class C05523 extends RecoverAnimation {
         public final /* synthetic */ RecyclerView.ViewHolder val$prevSelected;
         public final /* synthetic */ int val$swipeDir;
@@ -255,7 +255,7 @@ public class ItemTouchHelper extends RecyclerView.ItemDecoration implements Recy
         }
     }
 
-    /* renamed from: androidx.recyclerview.widget.ItemTouchHelper$4 */
+    /* JADX INFO: renamed from: androidx.recyclerview.widget.ItemTouchHelper$4 */
     public class RunnableC05534 implements Runnable {
         public final /* synthetic */ RecoverAnimation val$anim;
         public final /* synthetic */ int val$swipeDir;
@@ -284,7 +284,7 @@ public class ItemTouchHelper extends RecyclerView.ItemDecoration implements Recy
         }
     }
 
-    /* renamed from: androidx.recyclerview.widget.ItemTouchHelper$5 */
+    /* JADX INFO: renamed from: androidx.recyclerview.widget.ItemTouchHelper$5 */
     public class C05545 implements RecyclerView.ChildDrawingOrderCallback {
         public C05545() {
         }
@@ -315,7 +315,7 @@ public class ItemTouchHelper extends RecyclerView.ItemDecoration implements Recy
         private static final Interpolator sDragViewScrollCapInterpolator = new InterpolatorC05562();
         private int mCachedMaxScrollSpeed = -1;
 
-        /* renamed from: androidx.recyclerview.widget.ItemTouchHelper$Callback$1 */
+        /* JADX INFO: renamed from: androidx.recyclerview.widget.ItemTouchHelper$Callback$1 */
         public class InterpolatorC05551 implements Interpolator {
             @Override // android.animation.TimeInterpolator
             public float getInterpolation(float f) {
@@ -323,7 +323,7 @@ public class ItemTouchHelper extends RecyclerView.ItemDecoration implements Recy
             }
         }
 
-        /* renamed from: androidx.recyclerview.widget.ItemTouchHelper$Callback$2 */
+        /* JADX INFO: renamed from: androidx.recyclerview.widget.ItemTouchHelper$Callback$2 */
         public class InterpolatorC05562 implements Interpolator {
             @Override // android.animation.TimeInterpolator
             public float getInterpolation(float f) {
@@ -630,15 +630,15 @@ public class ItemTouchHelper extends RecyclerView.ItemDecoration implements Recy
         public final ValueAnimator mValueAnimator;
         public final RecyclerView.ViewHolder mViewHolder;
 
-        /* renamed from: mX */
+        /* JADX INFO: renamed from: mX */
         public float f152mX;
 
-        /* renamed from: mY */
+        /* JADX INFO: renamed from: mY */
         public float f153mY;
         public boolean mOverridden = false;
         public boolean mEnded = false;
 
-        /* renamed from: androidx.recyclerview.widget.ItemTouchHelper$RecoverAnimation$1 */
+        /* JADX INFO: renamed from: androidx.recyclerview.widget.ItemTouchHelper$RecoverAnimation$1 */
         public class C05571 implements ValueAnimator.AnimatorUpdateListener {
             public C05571() {
             }

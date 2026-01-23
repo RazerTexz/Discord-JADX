@@ -6,9 +6,9 @@ import kotlin.jvm.functions.Function1;
 import p507d0.p592z.p594d.FunctionReferenceImpl;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: WidgetChangeLogSpecial.kt */
-/* renamed from: com.discord.widgets.changelog.WidgetChangeLogSpecial$binding$3, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.changelog.WidgetChangeLogSpecial$binding$3, reason: use source file name */
+/* JADX INFO: compiled from: WidgetChangeLogSpecial.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final /* synthetic */ class WidgetChangeLogSpecial3 extends FunctionReferenceImpl implements Function1<WidgetChangeLogSpecialBinding, Unit> {
     public WidgetChangeLogSpecial3(WidgetChangeLogSpecial widgetChangeLogSpecial) {
         super(1, widgetChangeLogSpecial, WidgetChangeLogSpecial.class, "onViewBindingDestroy", "onViewBindingDestroy(Lcom/discord/databinding/WidgetChangeLogSpecialBinding;)V", 0);
@@ -20,7 +20,7 @@ public final /* synthetic */ class WidgetChangeLogSpecial3 extends FunctionRefer
         return Unit.f27425a;
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final void invoke2(WidgetChangeLogSpecialBinding widgetChangeLogSpecialBinding) {
         Intrinsics3.checkNotNullParameter(widgetChangeLogSpecialBinding, "p1");
         WidgetChangeLogSpecial.access$onViewBindingDestroy((WidgetChangeLogSpecial) this.receiver, widgetChangeLogSpecialBinding);

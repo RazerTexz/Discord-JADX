@@ -5,9 +5,9 @@ import p507d0.p579g0.StringsJVM;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: TestUtils.kt */
-/* renamed from: com.discord.utilities.testing.TestUtilsKt$IS_JUNIT_TEST$2, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.utilities.testing.TestUtilsKt$IS_JUNIT_TEST$2, reason: use source file name */
+/* JADX INFO: compiled from: TestUtils.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class TestUtils2 extends Lambda implements Function0<Boolean> {
     public static final TestUtils2 INSTANCE = new TestUtils2();
 
@@ -20,7 +20,7 @@ public final class TestUtils2 extends Lambda implements Function0<Boolean> {
         return Boolean.valueOf(invoke2());
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final boolean invoke2() {
         Thread threadCurrentThread = Thread.currentThread();
         Intrinsics3.checkNotNullExpressionValue(threadCurrentThread, "Thread.currentThread()");

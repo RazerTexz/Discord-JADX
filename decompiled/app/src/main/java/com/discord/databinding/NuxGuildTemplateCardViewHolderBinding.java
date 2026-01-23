@@ -6,18 +6,18 @@ import androidx.annotation.NonNull;
 import androidx.viewbinding.ViewBinding;
 import com.google.android.material.card.MaterialCardView;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public final class NuxGuildTemplateCardViewHolderBinding implements ViewBinding {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     @NonNull
     public final MaterialCardView f15197a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     @NonNull
     public final MaterialCardView f15198b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     @NonNull
     public final TextView f15199c;
 

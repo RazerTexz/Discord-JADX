@@ -6,12 +6,12 @@ import p007b.p225i.p361c.p368l.Lazy2;
 import p007b.p225i.p361c.p397r.HeartBeatInfo;
 import p007b.p225i.p361c.p400t.Provider2;
 
-/* compiled from: DefaultHeartBeatInfo.java */
-/* renamed from: b.i.c.r.c, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.c.r.c, reason: use source file name */
+/* JADX INFO: compiled from: DefaultHeartBeatInfo.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class DefaultHeartBeatInfo3 implements HeartBeatInfo {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public Provider2<HeartBeatInfoStorage> f12835a;
 
     public DefaultHeartBeatInfo3(Context context) {
@@ -20,7 +20,7 @@ public class DefaultHeartBeatInfo3 implements HeartBeatInfo {
 
     @Override // p007b.p225i.p361c.p397r.HeartBeatInfo
     @NonNull
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public HeartBeatInfo.a mo6716a(@NonNull String str) {
         boolean zM6718a;
         long jCurrentTimeMillis = System.currentTimeMillis();

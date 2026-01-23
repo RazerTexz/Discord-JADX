@@ -6,9 +6,9 @@ import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: GuildVerificationLevel.kt */
-/* renamed from: com.discord.api.guild.GuildVerificationLevelTypeAdapter, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: com.discord.api.guild.GuildVerificationLevelTypeAdapter, reason: use source file name */
+/* JADX INFO: compiled from: GuildVerificationLevel.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class GuildVerificationLevel2 extends TypeAdapter<GuildVerificationLevel> {
     @Override // com.google.gson.TypeAdapter
     public GuildVerificationLevel read(JsonReader jsonReader) throws IOException {

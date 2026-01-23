@@ -14,31 +14,31 @@ import p507d0.p513e0.p514p.p515d.p517m0.p567n.p570n1.InterfaceC11985n;
 import p507d0.p513e0.p514p.p515d.p517m0.p576p.SmartSet;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: AbstractTypeChecker.kt */
-/* renamed from: d0.e0.p.d.m0.n.f, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.n.f, reason: use source file name */
+/* JADX INFO: compiled from: AbstractTypeChecker.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public abstract class AbstractTypeChecker3 implements InterfaceC11985n {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public int f24758a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public boolean f24759b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public ArrayDeque<InterfaceC11980i> f24760c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public Set<InterfaceC11980i> f24761d;
 
-    /* compiled from: AbstractTypeChecker.kt */
-    /* renamed from: d0.e0.p.d.m0.n.f$a */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.n.f$a */
+    /* JADX INFO: compiled from: AbstractTypeChecker.kt */
     public enum a {
         CHECK_ONLY_LOWER,
         CHECK_SUBTYPE_AND_LOWER,
         SKIP_LOWER;
 
-        /* renamed from: values, reason: to resolve conflict with enum method */
+        /* JADX INFO: renamed from: values, reason: to resolve conflict with enum method */
         public static a[] valuesCustom() {
             a[] aVarArrValuesCustom = values();
             a[] aVarArr = new a[aVarArrValuesCustom.length];
@@ -47,23 +47,23 @@ public abstract class AbstractTypeChecker3 implements InterfaceC11985n {
         }
     }
 
-    /* compiled from: AbstractTypeChecker.kt */
-    /* renamed from: d0.e0.p.d.m0.n.f$b */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.n.f$b */
+    /* JADX INFO: compiled from: AbstractTypeChecker.kt */
     public static abstract class b {
 
-        /* compiled from: AbstractTypeChecker.kt */
-        /* renamed from: d0.e0.p.d.m0.n.f$b$a */
+        /* JADX INFO: renamed from: d0.e0.p.d.m0.n.f$b$a */
+        /* JADX INFO: compiled from: AbstractTypeChecker.kt */
         public static abstract class a extends b {
             public a() {
                 super(null);
             }
         }
 
-        /* compiled from: AbstractTypeChecker.kt */
-        /* renamed from: d0.e0.p.d.m0.n.f$b$b, reason: collision with other inner class name */
+        /* JADX INFO: renamed from: d0.e0.p.d.m0.n.f$b$b, reason: collision with other inner class name */
+        /* JADX INFO: compiled from: AbstractTypeChecker.kt */
         public static final class C13335b extends b {
 
-            /* renamed from: a */
+            /* JADX INFO: renamed from: a */
             public static final C13335b f24766a = new C13335b();
 
             public C13335b() {
@@ -78,11 +78,11 @@ public abstract class AbstractTypeChecker3 implements InterfaceC11985n {
             }
         }
 
-        /* compiled from: AbstractTypeChecker.kt */
-        /* renamed from: d0.e0.p.d.m0.n.f$b$c */
+        /* JADX INFO: renamed from: d0.e0.p.d.m0.n.f$b$c */
+        /* JADX INFO: compiled from: AbstractTypeChecker.kt */
         public static final class c extends b {
 
-            /* renamed from: a */
+            /* JADX INFO: renamed from: a */
             public static final c f24767a = new c();
 
             public c() {
@@ -94,7 +94,7 @@ public abstract class AbstractTypeChecker3 implements InterfaceC11985n {
                 return (InterfaceC11980i) m11472transformType(abstractTypeChecker3, interfaceC11979h);
             }
 
-            /* renamed from: transformType, reason: collision with other method in class */
+            /* JADX INFO: renamed from: transformType, reason: collision with other method in class */
             public Void m11472transformType(AbstractTypeChecker3 abstractTypeChecker3, InterfaceC11979h interfaceC11979h) {
                 Intrinsics3.checkNotNullParameter(abstractTypeChecker3, "context");
                 Intrinsics3.checkNotNullParameter(interfaceC11979h, "type");
@@ -102,11 +102,11 @@ public abstract class AbstractTypeChecker3 implements InterfaceC11985n {
             }
         }
 
-        /* compiled from: AbstractTypeChecker.kt */
-        /* renamed from: d0.e0.p.d.m0.n.f$b$d */
+        /* JADX INFO: renamed from: d0.e0.p.d.m0.n.f$b$d */
+        /* JADX INFO: compiled from: AbstractTypeChecker.kt */
         public static final class d extends b {
 
-            /* renamed from: a */
+            /* JADX INFO: renamed from: a */
             public static final d f24768a = new d();
 
             public d() {

@@ -11,7 +11,7 @@ import android.widget.TextView;
 import androidx.annotation.RestrictTo;
 import androidx.preference.Preference;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public abstract class TwoStatePreference extends Preference {
     public boolean mChecked;
     private boolean mCheckedSet;
@@ -128,7 +128,7 @@ public abstract class TwoStatePreference extends Preference {
         public static final Parcelable.Creator<SavedState> CREATOR = new C05291();
         public boolean mChecked;
 
-        /* renamed from: androidx.preference.TwoStatePreference$SavedState$1 */
+        /* JADX INFO: renamed from: androidx.preference.TwoStatePreference$SavedState$1 */
         public static class C05291 implements Parcelable.Creator<SavedState> {
             @Override // android.os.Parcelable.Creator
             public /* bridge */ /* synthetic */ SavedState createFromParcel(Parcel parcel) {

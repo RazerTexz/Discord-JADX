@@ -3,15 +3,15 @@ package p007b.p225i.p226a.p242c;
 import androidx.annotation.Nullable;
 import java.util.Arrays;
 
-/* compiled from: HeartRating.java */
-/* renamed from: b.i.a.c.l1, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.l1, reason: use source file name */
+/* JADX INFO: compiled from: HeartRating.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class HeartRating extends Rating {
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final boolean f7238k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final boolean f7239l;
 
     public HeartRating() {
@@ -19,7 +19,7 @@ public final class HeartRating extends Rating {
         this.f7239l = false;
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static String m3303a(int i) {
         return Integer.toString(i, 36);
     }

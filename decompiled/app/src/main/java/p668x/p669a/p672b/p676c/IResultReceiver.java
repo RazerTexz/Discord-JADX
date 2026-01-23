@@ -8,23 +8,23 @@ import android.os.Parcel;
 import android.os.RemoteException;
 import android.support.v4.os.ResultReceiver;
 
-/* compiled from: IResultReceiver.java */
-/* renamed from: x.a.b.c.a, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: x.a.b.c.a, reason: use source file name */
+/* JADX INFO: compiled from: IResultReceiver.java */
+/* JADX INFO: loaded from: classes.dex */
 public interface IResultReceiver extends IInterface {
 
-    /* compiled from: IResultReceiver.java */
-    /* renamed from: x.a.b.c.a$a */
+    /* JADX INFO: renamed from: x.a.b.c.a$a */
+    /* JADX INFO: compiled from: IResultReceiver.java */
     public static abstract class a extends Binder implements IResultReceiver {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public static final /* synthetic */ int f27948a = 0;
 
-        /* compiled from: IResultReceiver.java */
-        /* renamed from: x.a.b.c.a$a$a, reason: collision with other inner class name */
+        /* JADX INFO: renamed from: x.a.b.c.a$a$a, reason: collision with other inner class name */
+        /* JADX INFO: compiled from: IResultReceiver.java */
         public static class C13362a implements IResultReceiver {
 
-            /* renamed from: a */
+            /* JADX INFO: renamed from: a */
             public IBinder f27949a;
 
             public C13362a(IBinder iBinder) {
@@ -37,7 +37,7 @@ public interface IResultReceiver extends IInterface {
             }
 
             @Override // p668x.p669a.p672b.p676c.IResultReceiver
-            /* renamed from: r0 */
+            /* JADX INFO: renamed from: r0 */
             public void mo74r0(int i, Bundle bundle) throws RemoteException {
                 Parcel parcelObtain = Parcel.obtain();
                 try {
@@ -82,6 +82,6 @@ public interface IResultReceiver extends IInterface {
         }
     }
 
-    /* renamed from: r0 */
+    /* JADX INFO: renamed from: r0 */
     void mo74r0(int i, Bundle bundle) throws RemoteException;
 }

@@ -6,8 +6,8 @@ import java.util.Set;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: RecommendedStageInstanceGuild.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: RecommendedStageInstanceGuild.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class RecommendedStageInstanceGuild {
     private final Set<GuildFeature> features;
     private final String icon;

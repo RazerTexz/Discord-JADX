@@ -3,27 +3,27 @@ package p007b.p225i.p414e.p426q.p427r;
 import com.google.zxing.NotFoundException;
 import p007b.p225i.p414e.p426q.OneDReader;
 
-/* compiled from: AbstractRSSReader.java */
-/* renamed from: b.i.e.q.r.a, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.e.q.r.a, reason: use source file name */
+/* JADX INFO: compiled from: AbstractRSSReader.java */
+/* JADX INFO: loaded from: classes3.dex */
 public abstract class AbstractRSSReader extends OneDReader {
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final int[] f13400b;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final int[] f13403e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final int[] f13404f;
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final int[] f13399a = new int[4];
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final float[] f13401c = new float[4];
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final float[] f13402d = new float[4];
 
     public AbstractRSSReader() {
@@ -33,7 +33,7 @@ public abstract class AbstractRSSReader extends OneDReader {
         this.f13404f = new int[iArr.length / 2];
     }
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public static void m7009g(int[] iArr, float[] fArr) {
         int i = 0;
         float f = fArr[0];
@@ -46,7 +46,7 @@ public abstract class AbstractRSSReader extends OneDReader {
         iArr[i] = iArr[i] - 1;
     }
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public static void m7010h(int[] iArr, float[] fArr) {
         int i = 0;
         float f = fArr[0];
@@ -59,7 +59,7 @@ public abstract class AbstractRSSReader extends OneDReader {
         iArr[i] = iArr[i] + 1;
     }
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public static boolean m7011i(int[] iArr) {
         float f = (iArr[0] + iArr[1]) / ((iArr[2] + r1) + iArr[3]);
         if (f >= 0.7916667f && f <= 0.89285713f) {
@@ -80,7 +80,7 @@ public abstract class AbstractRSSReader extends OneDReader {
         return false;
     }
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static int m7012j(int[] iArr, int[][] iArr2) throws NotFoundException {
         for (int i = 0; i < iArr2.length; i++) {
             if (OneDReader.m6996d(iArr, iArr2[i], 0.45f) < 0.2f) {

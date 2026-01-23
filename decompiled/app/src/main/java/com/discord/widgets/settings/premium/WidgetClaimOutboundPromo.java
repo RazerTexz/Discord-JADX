@@ -51,8 +51,8 @@ import p507d0.p592z.p594d.FunctionReferenceImpl;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Reflection2;
 
-/* compiled from: WidgetClaimOutboundPromo.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetClaimOutboundPromo.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetClaimOutboundPromo extends AppDialog {
     private static final String ARG_CLAIM_STATUS = "ARG_CLAIM_STATUS";
     private static final int INDEX_FAILURE = 2;
@@ -60,18 +60,18 @@ public final class WidgetClaimOutboundPromo extends AppDialog {
     private static final int INDEX_SUCCESS = 1;
     private static final String KEY_PROMO_CLAIMED = "KEY_PROMO_CLAIMED";
 
-    /* renamed from: binding$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
     private final MaterialShapeDrawable codeBoxBackground;
 
-    /* renamed from: viewModel$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: viewModel$delegate, reason: from kotlin metadata */
     private final Lazy viewModel;
     public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetClaimOutboundPromo.class, "binding", "getBinding()Lcom/discord/databinding/WidgetClaimOutboundPromoBinding;", 0)};
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
 
-    /* compiled from: WidgetClaimOutboundPromo.kt */
+    /* JADX INFO: compiled from: WidgetClaimOutboundPromo.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -100,8 +100,8 @@ public final class WidgetClaimOutboundPromo extends AppDialog {
         }
     }
 
-    /* compiled from: WidgetClaimOutboundPromo.kt */
-    /* renamed from: com.discord.widgets.settings.premium.WidgetClaimOutboundPromo$onViewBound$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.premium.WidgetClaimOutboundPromo$onViewBound$1 */
+    /* JADX INFO: compiled from: WidgetClaimOutboundPromo.kt */
     public static final class ViewOnClickListenerC98951 implements View.OnClickListener {
         public ViewOnClickListenerC98951() {
         }
@@ -112,8 +112,8 @@ public final class WidgetClaimOutboundPromo extends AppDialog {
         }
     }
 
-    /* compiled from: WidgetClaimOutboundPromo.kt */
-    /* renamed from: com.discord.widgets.settings.premium.WidgetClaimOutboundPromo$onViewBound$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.premium.WidgetClaimOutboundPromo$onViewBound$2 */
+    /* JADX INFO: compiled from: WidgetClaimOutboundPromo.kt */
     public static final class ViewOnClickListenerC98962 implements View.OnClickListener {
         public ViewOnClickListenerC98962() {
         }
@@ -124,8 +124,8 @@ public final class WidgetClaimOutboundPromo extends AppDialog {
         }
     }
 
-    /* compiled from: WidgetClaimOutboundPromo.kt */
-    /* renamed from: com.discord.widgets.settings.premium.WidgetClaimOutboundPromo$onViewBound$3 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.premium.WidgetClaimOutboundPromo$onViewBound$3 */
+    /* JADX INFO: compiled from: WidgetClaimOutboundPromo.kt */
     public static final class ViewOnClickListenerC98973 implements View.OnClickListener {
         public ViewOnClickListenerC98973() {
         }
@@ -136,8 +136,8 @@ public final class WidgetClaimOutboundPromo extends AppDialog {
         }
     }
 
-    /* compiled from: WidgetClaimOutboundPromo.kt */
-    /* renamed from: com.discord.widgets.settings.premium.WidgetClaimOutboundPromo$onViewBound$4 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.premium.WidgetClaimOutboundPromo$onViewBound$4 */
+    /* JADX INFO: compiled from: WidgetClaimOutboundPromo.kt */
     public static final class ViewOnClickListenerC98984 implements View.OnClickListener {
         public ViewOnClickListenerC98984() {
         }
@@ -148,8 +148,8 @@ public final class WidgetClaimOutboundPromo extends AppDialog {
         }
     }
 
-    /* compiled from: WidgetClaimOutboundPromo.kt */
-    /* renamed from: com.discord.widgets.settings.premium.WidgetClaimOutboundPromo$onViewBoundOrOnResume$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.premium.WidgetClaimOutboundPromo$onViewBoundOrOnResume$1 */
+    /* JADX INFO: compiled from: WidgetClaimOutboundPromo.kt */
     public static final /* synthetic */ class C98991 extends FunctionReferenceImpl implements Function1<ClaimOutboundPromoViewModel.ViewState, Unit> {
         public C98991(WidgetClaimOutboundPromo widgetClaimOutboundPromo) {
             super(1, widgetClaimOutboundPromo, WidgetClaimOutboundPromo.class, "configureUi", "configureUi(Lcom/discord/widgets/settings/premium/ClaimOutboundPromoViewModel$ViewState;)V", 0);
@@ -161,15 +161,15 @@ public final class WidgetClaimOutboundPromo extends AppDialog {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(ClaimOutboundPromoViewModel.ViewState viewState) {
             Intrinsics3.checkNotNullParameter(viewState, "p1");
             WidgetClaimOutboundPromo.access$configureUi((WidgetClaimOutboundPromo) this.receiver, viewState);
         }
     }
 
-    /* compiled from: WidgetClaimOutboundPromo.kt */
-    /* renamed from: com.discord.widgets.settings.premium.WidgetClaimOutboundPromo$onViewBoundOrOnResume$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.premium.WidgetClaimOutboundPromo$onViewBoundOrOnResume$2 */
+    /* JADX INFO: compiled from: WidgetClaimOutboundPromo.kt */
     public static final /* synthetic */ class C99002 extends FunctionReferenceImpl implements Function1<ClaimOutboundPromoViewModel.Event, Unit> {
         public C99002(WidgetClaimOutboundPromo widgetClaimOutboundPromo) {
             super(1, widgetClaimOutboundPromo, WidgetClaimOutboundPromo.class, "handleEvent", "handleEvent(Lcom/discord/widgets/settings/premium/ClaimOutboundPromoViewModel$Event;)V", 0);
@@ -181,7 +181,7 @@ public final class WidgetClaimOutboundPromo extends AppDialog {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(ClaimOutboundPromoViewModel.Event event) {
             Intrinsics3.checkNotNullParameter(event, "p1");
             WidgetClaimOutboundPromo.access$handleEvent((WidgetClaimOutboundPromo) this.receiver, event);

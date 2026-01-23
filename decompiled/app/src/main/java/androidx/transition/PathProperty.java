@@ -5,7 +5,7 @@ import android.graphics.PathMeasure;
 import android.graphics.PointF;
 import android.util.Property;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class PathProperty<T> extends Property<T, Float> {
     private float mCurrentFraction;
     private final float mPathLength;
@@ -42,7 +42,7 @@ public class PathProperty<T> extends Property<T, Float> {
         return Float.valueOf(this.mCurrentFraction);
     }
 
-    /* renamed from: set, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: set, reason: avoid collision after fix types in other method */
     public void set2(T t, Float f) {
         this.mCurrentFraction = f.floatValue();
         this.mPathMeasure.getPosTan(f.floatValue() * this.mPathLength, this.mPosition, null);

@@ -6,8 +6,8 @@ import androidx.room.Dao;
 import androidx.room.Insert;
 import androidx.room.Query;
 
+/* JADX INFO: loaded from: classes.dex */
 @Dao
-/* loaded from: classes.dex */
 public interface SystemIdInfoDao {
     @Nullable
     @Query("SELECT * FROM SystemIdInfo WHERE work_spec_id=:workSpecId")

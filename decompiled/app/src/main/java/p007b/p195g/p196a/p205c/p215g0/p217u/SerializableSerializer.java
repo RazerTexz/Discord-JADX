@@ -8,13 +8,13 @@ import p007b.p195g.p196a.p205c.SerializerProvider;
 import p007b.p195g.p196a.p205c.p212e0.TypeSerializer;
 import p007b.p195g.p196a.p205c.p220y.JacksonStdImpl;
 
-/* compiled from: SerializableSerializer.java */
+/* JADX INFO: renamed from: b.g.a.c.g0.u.g0, reason: use source file name */
+/* JADX INFO: compiled from: SerializableSerializer.java */
+/* JADX INFO: loaded from: classes3.dex */
 @JacksonStdImpl
-/* renamed from: b.g.a.c.g0.u.g0, reason: use source file name */
-/* loaded from: classes3.dex */
 public class SerializableSerializer extends StdSerializer<JsonSerializable> {
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public static final SerializableSerializer f4853k = new SerializableSerializer();
 
     public SerializableSerializer() {
@@ -22,7 +22,7 @@ public class SerializableSerializer extends StdSerializer<JsonSerializable> {
     }
 
     @Override // p007b.p195g.p196a.p205c.JsonSerializer
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public boolean mo2021d(SerializerProvider serializerProvider, Object obj) {
         JsonSerializable jsonSerializable = (JsonSerializable) obj;
         if (!(jsonSerializable instanceof JsonSerializable.a)) {
@@ -33,13 +33,13 @@ public class SerializableSerializer extends StdSerializer<JsonSerializable> {
     }
 
     @Override // p007b.p195g.p196a.p205c.JsonSerializer
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public void mo1807f(Object obj, JsonGenerator jsonGenerator, SerializerProvider serializerProvider) throws IOException {
         ((JsonSerializable) obj).mo2140c(jsonGenerator, serializerProvider);
     }
 
     @Override // p007b.p195g.p196a.p205c.JsonSerializer
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public void mo1808g(Object obj, JsonGenerator jsonGenerator, SerializerProvider serializerProvider, TypeSerializer typeSerializer) throws IOException {
         ((JsonSerializable) obj).mo2141d(jsonGenerator, serializerProvider, typeSerializer);
     }

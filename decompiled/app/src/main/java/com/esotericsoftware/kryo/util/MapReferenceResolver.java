@@ -4,7 +4,7 @@ import com.esotericsoftware.kryo.Kryo;
 import com.esotericsoftware.kryo.ReferenceResolver;
 import java.util.ArrayList;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class MapReferenceResolver implements ReferenceResolver {
     public Kryo kryo;
     public final IdentityObjectIntMap writtenObjects = new IdentityObjectIntMap();

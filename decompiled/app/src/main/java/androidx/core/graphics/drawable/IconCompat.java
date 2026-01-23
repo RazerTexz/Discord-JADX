@@ -51,7 +51,7 @@ import java.lang.reflect.InvocationTargetException;
 import java.nio.charset.Charset;
 import p007b.p100d.p104b.p105a.outline;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class IconCompat extends CustomVersionedParcelable {
     private static final float ADAPTIVE_ICON_INSET_FACTOR = 0.25f;
     private static final int AMBIENT_SHADOW_ALPHA = 30;

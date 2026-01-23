@@ -4,10 +4,10 @@ import p637j0.Observer2;
 import p637j0.p651n.SerializedObserver;
 import p658rx.Subscriber;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public class SerializedSubscriber<T> extends Subscriber<T> {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final Observer2<T> f27646j;
 
     public SerializedSubscriber(Subscriber<? super T> subscriber) {

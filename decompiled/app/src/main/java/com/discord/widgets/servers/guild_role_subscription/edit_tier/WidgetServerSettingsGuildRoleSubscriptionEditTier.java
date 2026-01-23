@@ -43,43 +43,43 @@ import p507d0.p592z.p594d.Lambda;
 import p507d0.p592z.p594d.Reflection2;
 import p658rx.Observable;
 
-/* compiled from: WidgetServerSettingsGuildRoleSubscriptionEditTier.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetServerSettingsGuildRoleSubscriptionEditTier.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetServerSettingsGuildRoleSubscriptionEditTier extends AppFragment {
     public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetServerSettingsGuildRoleSubscriptionEditTier.class, "binding", "getBinding()Lcom/discord/databinding/WidgetServerSettingsGuildRoleSubscriptionEditTierBinding;", 0)};
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private static final String INTENT_EXTRA_GUILD_ROLE_SUBSCRIPTION_GROUP_LISTING_ID = "INTENT_EXTRA_GUILD_ROLE_SUBSCRIPTION_GROUP_LISTING_ID";
     private static final String INTENT_EXTRA_GUILD_ROLE_SUBSCRIPTION_TIER_LISTING_ID = "INTENT_EXTRA_GUILD_ROLE_SUBSCRIPTION_TIER_LISTING_ID";
 
-    /* renamed from: SERVER_SETTINGS_GUILD_ROLE_SUBSCRIPTIONS_EDIT_TIER_VIEW_FLIPPER_LOADED_STATE */
+    /* JADX INFO: renamed from: SERVER_SETTINGS_GUILD_ROLE_SUBSCRIPTIONS_EDIT_TIER_VIEW_FLIPPER_LOADED_STATE */
     private static final int f19397xde0fc452 = 1;
 
-    /* renamed from: SERVER_SETTINGS_GUILD_ROLE_SUBSCRIPTION_EDIT_TIER_VIEW_FLIPPER_LOADING_STATE */
+    /* JADX INFO: renamed from: SERVER_SETTINGS_GUILD_ROLE_SUBSCRIPTION_EDIT_TIER_VIEW_FLIPPER_LOADING_STATE */
     private static final int f19398x15e1b612 = 0;
     private static final int TIER_PAGE_SIZE = 3;
     private WidgetServerSettingsGuildRoleSubscriptionEditTier2 adapter;
 
-    /* renamed from: binding$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
 
-    /* renamed from: guildId$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: guildId$delegate, reason: from kotlin metadata */
     private final Lazy guildId;
 
-    /* renamed from: guildRoleSubscriptionGroupListingId$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: guildRoleSubscriptionGroupListingId$delegate, reason: from kotlin metadata */
     private final Lazy guildRoleSubscriptionGroupListingId;
 
-    /* renamed from: guildRoleSubscriptionTierListingId$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: guildRoleSubscriptionTierListingId$delegate, reason: from kotlin metadata */
     private final Lazy guildRoleSubscriptionTierListingId;
 
-    /* renamed from: tierViewModel$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: tierViewModel$delegate, reason: from kotlin metadata */
     private final Lazy tierViewModel;
 
-    /* renamed from: viewModel$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: viewModel$delegate, reason: from kotlin metadata */
     private final Lazy viewModel;
 
-    /* compiled from: WidgetServerSettingsGuildRoleSubscriptionEditTier.kt */
+    /* JADX INFO: compiled from: WidgetServerSettingsGuildRoleSubscriptionEditTier.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -98,8 +98,8 @@ public final class WidgetServerSettingsGuildRoleSubscriptionEditTier extends App
         }
     }
 
-    /* compiled from: WidgetServerSettingsGuildRoleSubscriptionEditTier.kt */
-    /* renamed from: com.discord.widgets.servers.guild_role_subscription.edit_tier.WidgetServerSettingsGuildRoleSubscriptionEditTier$onViewBound$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.guild_role_subscription.edit_tier.WidgetServerSettingsGuildRoleSubscriptionEditTier$onViewBound$1 */
+    /* JADX INFO: compiled from: WidgetServerSettingsGuildRoleSubscriptionEditTier.kt */
     public static final class ViewOnClickListenerC94811 implements View.OnClickListener {
         public ViewOnClickListenerC94811() {
         }
@@ -110,12 +110,12 @@ public final class WidgetServerSettingsGuildRoleSubscriptionEditTier extends App
         }
     }
 
-    /* compiled from: WidgetServerSettingsGuildRoleSubscriptionEditTier.kt */
-    /* renamed from: com.discord.widgets.servers.guild_role_subscription.edit_tier.WidgetServerSettingsGuildRoleSubscriptionEditTier$onViewBound$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.guild_role_subscription.edit_tier.WidgetServerSettingsGuildRoleSubscriptionEditTier$onViewBound$2 */
+    /* JADX INFO: compiled from: WidgetServerSettingsGuildRoleSubscriptionEditTier.kt */
     public static final class ViewOnClickListenerC94822 implements View.OnClickListener {
 
-        /* compiled from: WidgetServerSettingsGuildRoleSubscriptionEditTier.kt */
-        /* renamed from: com.discord.widgets.servers.guild_role_subscription.edit_tier.WidgetServerSettingsGuildRoleSubscriptionEditTier$onViewBound$2$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.widgets.servers.guild_role_subscription.edit_tier.WidgetServerSettingsGuildRoleSubscriptionEditTier$onViewBound$2$1, reason: invalid class name */
+        /* JADX INFO: compiled from: WidgetServerSettingsGuildRoleSubscriptionEditTier.kt */
         public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
             public AnonymousClass1() {
                 super(0);
@@ -127,7 +127,7 @@ public final class WidgetServerSettingsGuildRoleSubscriptionEditTier extends App
                 return Unit.f27425a;
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2() {
                 WidgetServerSettingsGuildRoleSubscriptionEditTier.access$getViewModel$p(WidgetServerSettingsGuildRoleSubscriptionEditTier.this).publishTier();
             }
@@ -151,12 +151,12 @@ public final class WidgetServerSettingsGuildRoleSubscriptionEditTier extends App
         }
     }
 
-    /* compiled from: WidgetServerSettingsGuildRoleSubscriptionEditTier.kt */
-    /* renamed from: com.discord.widgets.servers.guild_role_subscription.edit_tier.WidgetServerSettingsGuildRoleSubscriptionEditTier$onViewBound$3 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.guild_role_subscription.edit_tier.WidgetServerSettingsGuildRoleSubscriptionEditTier$onViewBound$3 */
+    /* JADX INFO: compiled from: WidgetServerSettingsGuildRoleSubscriptionEditTier.kt */
     public static final class ViewOnClickListenerC94833 implements View.OnClickListener {
 
-        /* compiled from: WidgetServerSettingsGuildRoleSubscriptionEditTier.kt */
-        /* renamed from: com.discord.widgets.servers.guild_role_subscription.edit_tier.WidgetServerSettingsGuildRoleSubscriptionEditTier$onViewBound$3$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.widgets.servers.guild_role_subscription.edit_tier.WidgetServerSettingsGuildRoleSubscriptionEditTier$onViewBound$3$1, reason: invalid class name */
+        /* JADX INFO: compiled from: WidgetServerSettingsGuildRoleSubscriptionEditTier.kt */
         public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
             public AnonymousClass1() {
                 super(0);
@@ -168,7 +168,7 @@ public final class WidgetServerSettingsGuildRoleSubscriptionEditTier extends App
                 return Unit.f27425a;
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2() {
                 WidgetServerSettingsGuildRoleSubscriptionEditTier.access$getViewModel$p(WidgetServerSettingsGuildRoleSubscriptionEditTier.this).deleteTier();
             }
@@ -192,8 +192,8 @@ public final class WidgetServerSettingsGuildRoleSubscriptionEditTier extends App
         }
     }
 
-    /* compiled from: WidgetServerSettingsGuildRoleSubscriptionEditTier.kt */
-    /* renamed from: com.discord.widgets.servers.guild_role_subscription.edit_tier.WidgetServerSettingsGuildRoleSubscriptionEditTier$onViewBoundOrOnResume$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.guild_role_subscription.edit_tier.WidgetServerSettingsGuildRoleSubscriptionEditTier$onViewBoundOrOnResume$1 */
+    /* JADX INFO: compiled from: WidgetServerSettingsGuildRoleSubscriptionEditTier.kt */
     public static final class C94841 extends Lambda implements Function1<ServerSettingsGuildRoleSubscriptionEditTierViewModel.ViewState, Unit> {
         public C94841() {
             super(1);
@@ -205,7 +205,7 @@ public final class WidgetServerSettingsGuildRoleSubscriptionEditTier extends App
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(ServerSettingsGuildRoleSubscriptionEditTierViewModel.ViewState viewState) {
             WidgetServerSettingsGuildRoleSubscriptionEditTier widgetServerSettingsGuildRoleSubscriptionEditTier = WidgetServerSettingsGuildRoleSubscriptionEditTier.this;
             Intrinsics3.checkNotNullExpressionValue(viewState, "it");
@@ -213,8 +213,8 @@ public final class WidgetServerSettingsGuildRoleSubscriptionEditTier extends App
         }
     }
 
-    /* compiled from: WidgetServerSettingsGuildRoleSubscriptionEditTier.kt */
-    /* renamed from: com.discord.widgets.servers.guild_role_subscription.edit_tier.WidgetServerSettingsGuildRoleSubscriptionEditTier$onViewBoundOrOnResume$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.guild_role_subscription.edit_tier.WidgetServerSettingsGuildRoleSubscriptionEditTier$onViewBoundOrOnResume$2 */
+    /* JADX INFO: compiled from: WidgetServerSettingsGuildRoleSubscriptionEditTier.kt */
     public static final class C94852 extends Lambda implements Function1<GuildRoleSubscriptionTierViewModel.ViewState, Unit> {
         public C94852() {
             super(1);
@@ -226,14 +226,14 @@ public final class WidgetServerSettingsGuildRoleSubscriptionEditTier extends App
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(GuildRoleSubscriptionTierViewModel.ViewState viewState) {
             WidgetServerSettingsGuildRoleSubscriptionEditTier.access$getViewModel$p(WidgetServerSettingsGuildRoleSubscriptionEditTier.this).onTierUpdated(viewState.getGuildRoleSubscriptionTier());
         }
     }
 
-    /* compiled from: WidgetServerSettingsGuildRoleSubscriptionEditTier.kt */
-    /* renamed from: com.discord.widgets.servers.guild_role_subscription.edit_tier.WidgetServerSettingsGuildRoleSubscriptionEditTier$onViewBoundOrOnResume$3 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.guild_role_subscription.edit_tier.WidgetServerSettingsGuildRoleSubscriptionEditTier$onViewBoundOrOnResume$3 */
+    /* JADX INFO: compiled from: WidgetServerSettingsGuildRoleSubscriptionEditTier.kt */
     public static final class C94863 extends Lambda implements Function1<ServerSettingsGuildRoleSubscriptionEditTierViewModel.Event, Unit> {
         public C94863() {
             super(1);
@@ -245,15 +245,15 @@ public final class WidgetServerSettingsGuildRoleSubscriptionEditTier extends App
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(ServerSettingsGuildRoleSubscriptionEditTierViewModel.Event event) {
             Intrinsics3.checkNotNullParameter(event, "it");
             WidgetServerSettingsGuildRoleSubscriptionEditTier.access$handleEvents(WidgetServerSettingsGuildRoleSubscriptionEditTier.this, event);
         }
     }
 
-    /* compiled from: WidgetServerSettingsGuildRoleSubscriptionEditTier.kt */
-    /* renamed from: com.discord.widgets.servers.guild_role_subscription.edit_tier.WidgetServerSettingsGuildRoleSubscriptionEditTier$setupAdapter$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.guild_role_subscription.edit_tier.WidgetServerSettingsGuildRoleSubscriptionEditTier$setupAdapter$1 */
+    /* JADX INFO: compiled from: WidgetServerSettingsGuildRoleSubscriptionEditTier.kt */
     public static final class C94871 extends Lambda implements Function2<TabLayout.Tab, Integer, Unit> {
         public C94871() {
             super(2);
@@ -271,8 +271,8 @@ public final class WidgetServerSettingsGuildRoleSubscriptionEditTier extends App
         }
     }
 
-    /* compiled from: WidgetServerSettingsGuildRoleSubscriptionEditTier.kt */
-    /* renamed from: com.discord.widgets.servers.guild_role_subscription.edit_tier.WidgetServerSettingsGuildRoleSubscriptionEditTier$setupAdapter$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.guild_role_subscription.edit_tier.WidgetServerSettingsGuildRoleSubscriptionEditTier$setupAdapter$2 */
+    /* JADX INFO: compiled from: WidgetServerSettingsGuildRoleSubscriptionEditTier.kt */
     public static final class C94882 implements TabLayout.OnTabSelectedListener {
         public C94882() {
         }

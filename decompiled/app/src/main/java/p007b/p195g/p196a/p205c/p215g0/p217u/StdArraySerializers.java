@@ -15,17 +15,17 @@ import p007b.p195g.p196a.p205c.p215g0.ContainerSerializer;
 import p007b.p195g.p196a.p205c.p218h0.TypeFactory;
 import p007b.p195g.p196a.p205c.p220y.JacksonStdImpl;
 
-/* compiled from: StdArraySerializers.java */
-/* renamed from: b.g.a.c.g0.u.i0, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.g.a.c.g0.u.i0, reason: use source file name */
+/* JADX INFO: compiled from: StdArraySerializers.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class StdArraySerializers {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final HashMap<String, JsonSerializer<?>> f4855a;
 
-    /* compiled from: StdArraySerializers.java */
+    /* JADX INFO: renamed from: b.g.a.c.g0.u.i0$a */
+    /* JADX INFO: compiled from: StdArraySerializers.java */
     @JacksonStdImpl
-    /* renamed from: b.g.a.c.g0.u.i0$a */
     public static class a extends ArraySerializerBase<boolean[]> {
         static {
             TypeFactory.f4925k.m2168j(Boolean.class);
@@ -36,13 +36,13 @@ public class StdArraySerializers {
         }
 
         @Override // p007b.p195g.p196a.p205c.JsonSerializer
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         public boolean mo2021d(SerializerProvider serializerProvider, Object obj) {
             return ((boolean[]) obj).length == 0;
         }
 
         @Override // p007b.p195g.p196a.p205c.p215g0.p217u.ArraySerializerBase, p007b.p195g.p196a.p205c.JsonSerializer
-        /* renamed from: f */
+        /* JADX INFO: renamed from: f */
         public void mo1807f(Object obj, JsonGenerator jsonGenerator, SerializerProvider serializerProvider) throws IOException {
             boolean[] zArr = (boolean[]) obj;
             int length = zArr.length;
@@ -56,30 +56,30 @@ public class StdArraySerializers {
         }
 
         @Override // p007b.p195g.p196a.p205c.p215g0.ContainerSerializer
-        /* renamed from: p */
+        /* JADX INFO: renamed from: p */
         public ContainerSerializer<?> mo1995p(TypeSerializer typeSerializer) {
             return this;
         }
 
         @Override // p007b.p195g.p196a.p205c.p215g0.ContainerSerializer
-        /* renamed from: q */
+        /* JADX INFO: renamed from: q */
         public boolean mo1996q(Object obj) {
             return ((boolean[]) obj).length == 1;
         }
 
         @Override // p007b.p195g.p196a.p205c.p215g0.p217u.ArraySerializerBase
-        /* renamed from: s */
+        /* JADX INFO: renamed from: s */
         public JsonSerializer<?> mo2037s(BeanProperty beanProperty, Boolean bool) {
             return new a(this, beanProperty, bool);
         }
 
         @Override // p007b.p195g.p196a.p205c.p215g0.p217u.ArraySerializerBase
-        /* renamed from: t */
+        /* JADX INFO: renamed from: t */
         public /* bridge */ /* synthetic */ void mo2038t(boolean[] zArr, JsonGenerator jsonGenerator, SerializerProvider serializerProvider) throws IOException {
             m2061u(zArr, jsonGenerator);
         }
 
-        /* renamed from: u */
+        /* JADX INFO: renamed from: u */
         public void m2061u(boolean[] zArr, JsonGenerator jsonGenerator) throws IOException {
             for (boolean z2 : zArr) {
                 jsonGenerator.mo1662s(z2);
@@ -91,22 +91,22 @@ public class StdArraySerializers {
         }
     }
 
-    /* compiled from: StdArraySerializers.java */
+    /* JADX INFO: renamed from: b.g.a.c.g0.u.i0$b */
+    /* JADX INFO: compiled from: StdArraySerializers.java */
     @JacksonStdImpl
-    /* renamed from: b.g.a.c.g0.u.i0$b */
     public static class b extends StdSerializer<char[]> {
         public b() {
             super(char[].class);
         }
 
         @Override // p007b.p195g.p196a.p205c.JsonSerializer
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         public boolean mo2021d(SerializerProvider serializerProvider, Object obj) {
             return ((char[]) obj).length == 0;
         }
 
         @Override // p007b.p195g.p196a.p205c.JsonSerializer
-        /* renamed from: f */
+        /* JADX INFO: renamed from: f */
         public void mo1807f(Object obj, JsonGenerator jsonGenerator, SerializerProvider serializerProvider) throws IOException {
             char[] cArr = (char[]) obj;
             if (!serializerProvider.m2240D(SerializationFeature.WRITE_CHAR_ARRAYS_AS_JSON_ARRAYS)) {
@@ -122,7 +122,7 @@ public class StdArraySerializers {
         }
 
         @Override // p007b.p195g.p196a.p205c.JsonSerializer
-        /* renamed from: g */
+        /* JADX INFO: renamed from: g */
         public void mo1808g(Object obj, JsonGenerator jsonGenerator, SerializerProvider serializerProvider, TypeSerializer typeSerializer) throws IOException {
             WritableTypeId writableTypeIdMo1959e;
             char[] cArr = (char[]) obj;
@@ -140,9 +140,9 @@ public class StdArraySerializers {
         }
     }
 
-    /* compiled from: StdArraySerializers.java */
+    /* JADX INFO: renamed from: b.g.a.c.g0.u.i0$c */
+    /* JADX INFO: compiled from: StdArraySerializers.java */
     @JacksonStdImpl
-    /* renamed from: b.g.a.c.g0.u.i0$c */
     public static class c extends ArraySerializerBase<double[]> {
         static {
             TypeFactory.f4925k.m2168j(Double.TYPE);
@@ -153,13 +153,13 @@ public class StdArraySerializers {
         }
 
         @Override // p007b.p195g.p196a.p205c.JsonSerializer
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         public boolean mo2021d(SerializerProvider serializerProvider, Object obj) {
             return ((double[]) obj).length == 0;
         }
 
         @Override // p007b.p195g.p196a.p205c.p215g0.p217u.ArraySerializerBase, p007b.p195g.p196a.p205c.JsonSerializer
-        /* renamed from: f */
+        /* JADX INFO: renamed from: f */
         public void mo1807f(Object obj, JsonGenerator jsonGenerator, SerializerProvider serializerProvider) throws IOException {
             double[] dArr = (double[]) obj;
             int i = 0;
@@ -184,25 +184,25 @@ public class StdArraySerializers {
         }
 
         @Override // p007b.p195g.p196a.p205c.p215g0.ContainerSerializer
-        /* renamed from: p */
+        /* JADX INFO: renamed from: p */
         public ContainerSerializer<?> mo1995p(TypeSerializer typeSerializer) {
             return this;
         }
 
         @Override // p007b.p195g.p196a.p205c.p215g0.ContainerSerializer
-        /* renamed from: q */
+        /* JADX INFO: renamed from: q */
         public boolean mo1996q(Object obj) {
             return ((double[]) obj).length == 1;
         }
 
         @Override // p007b.p195g.p196a.p205c.p215g0.p217u.ArraySerializerBase
-        /* renamed from: s */
+        /* JADX INFO: renamed from: s */
         public JsonSerializer<?> mo2037s(BeanProperty beanProperty, Boolean bool) {
             return new c(this, beanProperty, bool);
         }
 
         @Override // p007b.p195g.p196a.p205c.p215g0.p217u.ArraySerializerBase
-        /* renamed from: t */
+        /* JADX INFO: renamed from: t */
         public void mo2038t(double[] dArr, JsonGenerator jsonGenerator, SerializerProvider serializerProvider) throws IOException {
             for (double d : dArr) {
                 jsonGenerator.mo1632C(d);
@@ -214,9 +214,9 @@ public class StdArraySerializers {
         }
     }
 
-    /* compiled from: StdArraySerializers.java */
+    /* JADX INFO: renamed from: b.g.a.c.g0.u.i0$d */
+    /* JADX INFO: compiled from: StdArraySerializers.java */
     @JacksonStdImpl
-    /* renamed from: b.g.a.c.g0.u.i0$d */
     public static class d extends h<float[]> {
         static {
             TypeFactory.f4925k.m2168j(Float.TYPE);
@@ -227,13 +227,13 @@ public class StdArraySerializers {
         }
 
         @Override // p007b.p195g.p196a.p205c.JsonSerializer
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         public boolean mo2021d(SerializerProvider serializerProvider, Object obj) {
             return ((float[]) obj).length == 0;
         }
 
         @Override // p007b.p195g.p196a.p205c.p215g0.p217u.ArraySerializerBase, p007b.p195g.p196a.p205c.JsonSerializer
-        /* renamed from: f */
+        /* JADX INFO: renamed from: f */
         public void mo1807f(Object obj, JsonGenerator jsonGenerator, SerializerProvider serializerProvider) throws IOException {
             float[] fArr = (float[]) obj;
             int length = fArr.length;
@@ -247,24 +247,24 @@ public class StdArraySerializers {
         }
 
         @Override // p007b.p195g.p196a.p205c.p215g0.ContainerSerializer
-        /* renamed from: q */
+        /* JADX INFO: renamed from: q */
         public boolean mo1996q(Object obj) {
             return ((float[]) obj).length == 1;
         }
 
         @Override // p007b.p195g.p196a.p205c.p215g0.p217u.ArraySerializerBase
-        /* renamed from: s */
+        /* JADX INFO: renamed from: s */
         public JsonSerializer<?> mo2037s(BeanProperty beanProperty, Boolean bool) {
             return new d(this, beanProperty, bool);
         }
 
         @Override // p007b.p195g.p196a.p205c.p215g0.p217u.ArraySerializerBase
-        /* renamed from: t */
+        /* JADX INFO: renamed from: t */
         public /* bridge */ /* synthetic */ void mo2038t(Object obj, JsonGenerator jsonGenerator, SerializerProvider serializerProvider) throws IOException {
             m2062u((float[]) obj, jsonGenerator);
         }
 
-        /* renamed from: u */
+        /* JADX INFO: renamed from: u */
         public void m2062u(float[] fArr, JsonGenerator jsonGenerator) throws IOException {
             for (float f : fArr) {
                 jsonGenerator.mo1633D(f);
@@ -276,9 +276,9 @@ public class StdArraySerializers {
         }
     }
 
-    /* compiled from: StdArraySerializers.java */
+    /* JADX INFO: renamed from: b.g.a.c.g0.u.i0$e */
+    /* JADX INFO: compiled from: StdArraySerializers.java */
     @JacksonStdImpl
-    /* renamed from: b.g.a.c.g0.u.i0$e */
     public static class e extends ArraySerializerBase<int[]> {
         static {
             TypeFactory.f4925k.m2168j(Integer.TYPE);
@@ -289,13 +289,13 @@ public class StdArraySerializers {
         }
 
         @Override // p007b.p195g.p196a.p205c.JsonSerializer
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         public boolean mo2021d(SerializerProvider serializerProvider, Object obj) {
             return ((int[]) obj).length == 0;
         }
 
         @Override // p007b.p195g.p196a.p205c.p215g0.p217u.ArraySerializerBase, p007b.p195g.p196a.p205c.JsonSerializer
-        /* renamed from: f */
+        /* JADX INFO: renamed from: f */
         public void mo1807f(Object obj, JsonGenerator jsonGenerator, SerializerProvider serializerProvider) throws IOException {
             int[] iArr = (int[]) obj;
             int i = 0;
@@ -320,25 +320,25 @@ public class StdArraySerializers {
         }
 
         @Override // p007b.p195g.p196a.p205c.p215g0.ContainerSerializer
-        /* renamed from: p */
+        /* JADX INFO: renamed from: p */
         public ContainerSerializer<?> mo1995p(TypeSerializer typeSerializer) {
             return this;
         }
 
         @Override // p007b.p195g.p196a.p205c.p215g0.ContainerSerializer
-        /* renamed from: q */
+        /* JADX INFO: renamed from: q */
         public boolean mo1996q(Object obj) {
             return ((int[]) obj).length == 1;
         }
 
         @Override // p007b.p195g.p196a.p205c.p215g0.p217u.ArraySerializerBase
-        /* renamed from: s */
+        /* JADX INFO: renamed from: s */
         public JsonSerializer<?> mo2037s(BeanProperty beanProperty, Boolean bool) {
             return new e(this, beanProperty, bool);
         }
 
         @Override // p007b.p195g.p196a.p205c.p215g0.p217u.ArraySerializerBase
-        /* renamed from: t */
+        /* JADX INFO: renamed from: t */
         public void mo2038t(int[] iArr, JsonGenerator jsonGenerator, SerializerProvider serializerProvider) throws IOException {
             for (int i : iArr) {
                 jsonGenerator.mo1634H(i);
@@ -350,9 +350,9 @@ public class StdArraySerializers {
         }
     }
 
-    /* compiled from: StdArraySerializers.java */
+    /* JADX INFO: renamed from: b.g.a.c.g0.u.i0$f */
+    /* JADX INFO: compiled from: StdArraySerializers.java */
     @JacksonStdImpl
-    /* renamed from: b.g.a.c.g0.u.i0$f */
     public static class f extends h<long[]> {
         static {
             TypeFactory.f4925k.m2168j(Long.TYPE);
@@ -363,13 +363,13 @@ public class StdArraySerializers {
         }
 
         @Override // p007b.p195g.p196a.p205c.JsonSerializer
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         public boolean mo2021d(SerializerProvider serializerProvider, Object obj) {
             return ((long[]) obj).length == 0;
         }
 
         @Override // p007b.p195g.p196a.p205c.p215g0.p217u.ArraySerializerBase, p007b.p195g.p196a.p205c.JsonSerializer
-        /* renamed from: f */
+        /* JADX INFO: renamed from: f */
         public void mo1807f(Object obj, JsonGenerator jsonGenerator, SerializerProvider serializerProvider) throws IOException {
             long[] jArr = (long[]) obj;
             int i = 0;
@@ -394,19 +394,19 @@ public class StdArraySerializers {
         }
 
         @Override // p007b.p195g.p196a.p205c.p215g0.ContainerSerializer
-        /* renamed from: q */
+        /* JADX INFO: renamed from: q */
         public boolean mo1996q(Object obj) {
             return ((long[]) obj).length == 1;
         }
 
         @Override // p007b.p195g.p196a.p205c.p215g0.p217u.ArraySerializerBase
-        /* renamed from: s */
+        /* JADX INFO: renamed from: s */
         public JsonSerializer<?> mo2037s(BeanProperty beanProperty, Boolean bool) {
             return new f(this, beanProperty, bool);
         }
 
         @Override // p007b.p195g.p196a.p205c.p215g0.p217u.ArraySerializerBase
-        /* renamed from: t */
+        /* JADX INFO: renamed from: t */
         public void mo2038t(Object obj, JsonGenerator jsonGenerator, SerializerProvider serializerProvider) throws IOException {
             for (long j : (long[]) obj) {
                 jsonGenerator.mo1635I(j);
@@ -418,9 +418,9 @@ public class StdArraySerializers {
         }
     }
 
-    /* compiled from: StdArraySerializers.java */
+    /* JADX INFO: renamed from: b.g.a.c.g0.u.i0$g */
+    /* JADX INFO: compiled from: StdArraySerializers.java */
     @JacksonStdImpl
-    /* renamed from: b.g.a.c.g0.u.i0$g */
     public static class g extends h<short[]> {
         static {
             TypeFactory.f4925k.m2168j(Short.TYPE);
@@ -431,13 +431,13 @@ public class StdArraySerializers {
         }
 
         @Override // p007b.p195g.p196a.p205c.JsonSerializer
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         public boolean mo2021d(SerializerProvider serializerProvider, Object obj) {
             return ((short[]) obj).length == 0;
         }
 
         @Override // p007b.p195g.p196a.p205c.p215g0.p217u.ArraySerializerBase, p007b.p195g.p196a.p205c.JsonSerializer
-        /* renamed from: f */
+        /* JADX INFO: renamed from: f */
         public void mo1807f(Object obj, JsonGenerator jsonGenerator, SerializerProvider serializerProvider) throws IOException {
             short[] sArr = (short[]) obj;
             int length = sArr.length;
@@ -451,24 +451,24 @@ public class StdArraySerializers {
         }
 
         @Override // p007b.p195g.p196a.p205c.p215g0.ContainerSerializer
-        /* renamed from: q */
+        /* JADX INFO: renamed from: q */
         public boolean mo1996q(Object obj) {
             return ((short[]) obj).length == 1;
         }
 
         @Override // p007b.p195g.p196a.p205c.p215g0.p217u.ArraySerializerBase
-        /* renamed from: s */
+        /* JADX INFO: renamed from: s */
         public JsonSerializer<?> mo2037s(BeanProperty beanProperty, Boolean bool) {
             return new g(this, beanProperty, bool);
         }
 
         @Override // p007b.p195g.p196a.p205c.p215g0.p217u.ArraySerializerBase
-        /* renamed from: t */
+        /* JADX INFO: renamed from: t */
         public /* bridge */ /* synthetic */ void mo2038t(Object obj, JsonGenerator jsonGenerator, SerializerProvider serializerProvider) throws IOException {
             m2063u((short[]) obj, jsonGenerator);
         }
 
-        /* renamed from: u */
+        /* JADX INFO: renamed from: u */
         public void m2063u(short[] sArr, JsonGenerator jsonGenerator) throws IOException {
             for (short s2 : sArr) {
                 jsonGenerator.mo1634H(s2);
@@ -480,15 +480,15 @@ public class StdArraySerializers {
         }
     }
 
-    /* compiled from: StdArraySerializers.java */
-    /* renamed from: b.g.a.c.g0.u.i0$h */
+    /* JADX INFO: renamed from: b.g.a.c.g0.u.i0$h */
+    /* JADX INFO: compiled from: StdArraySerializers.java */
     public static abstract class h<T> extends ArraySerializerBase<T> {
         public h(Class<T> cls) {
             super(cls);
         }
 
         @Override // p007b.p195g.p196a.p205c.p215g0.ContainerSerializer
-        /* renamed from: p */
+        /* JADX INFO: renamed from: p */
         public final ContainerSerializer<?> mo1995p(TypeSerializer typeSerializer) {
             return this;
         }

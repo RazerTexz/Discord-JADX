@@ -2,12 +2,12 @@ package p007b.p225i.p226a.p288f.p313h.p325l;
 
 import p007b.p225i.p226a.p288f.p313h.p325l.AbstractC3851u4;
 
-/* compiled from: com.google.android.gms:play-services-measurement@@18.0.0 */
-/* renamed from: b.i.a.f.h.l.r1 */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.h.l.r1 */
+/* JADX INFO: compiled from: com.google.android.gms:play-services-measurement@@18.0.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public final /* synthetic */ class C3809r1 {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final /* synthetic */ int[] f10282a;
 
     static {

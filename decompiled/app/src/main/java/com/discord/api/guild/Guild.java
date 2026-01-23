@@ -20,8 +20,8 @@ import java.util.Objects;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: Guild.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: Guild.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class Guild {
     private final Long afkChannelId;
     private final int afkTimeout;
@@ -122,7 +122,7 @@ public final /* data */ class Guild {
         this.hubType = guildHubType;
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static Guild m7835a(Guild guild, List list, List list2, List list3, String str, String str2, Integer num, long j, String str3, long j2, String str4, GuildVerificationLevel guildVerificationLevel, GuildExplicitContentFilter guildExplicitContentFilter, List list4, List list5, List list6, List list7, boolean z2, int i, int i2, Long l, Long l2, List list8, int i3, String str5, String str6, int i4, int i5, int i6, String str7, Long l3, Long l4, String str8, GuildWelcomeScreen guildWelcomeScreen, GuildMaxVideoChannelUsers guildMaxVideoChannelUsers, String str9, int i7, int i8, Long l5, GuildHashes guildHashes, List list9, List list10, boolean z3, List list11, List list12, List list13, GuildHubType guildHubType, int i9, int i10) {
         List list14 = (i9 & 1) != 0 ? guild.roles : list;
         List list15 = (i9 & 2) != 0 ? guild.emojis : list2;
@@ -177,117 +177,117 @@ public final /* data */ class Guild {
         return new Guild(list14, list15, list16, str10, str11, num2, j3, str12, j4, str14, guildVerificationLevel2, guildExplicitContentFilter2, list17, list18, list19, list20, z4, i11, i12, l6, l7, list21, i13, str15, str16, i14, i15, i16, str17, l8, l9, str18, guildWelcomeScreen2, guildMaxVideoChannelUsers2, str19, i17, i18, l10, guildHashes2, list22, list23, z5, list24, list25, list26, guildHubType2);
     }
 
-    /* renamed from: A, reason: from getter */
+    /* JADX INFO: renamed from: A, reason: from getter */
     public final String getPreferredLocale() {
         return this.preferredLocale;
     }
 
-    /* renamed from: B, reason: from getter */
+    /* JADX INFO: renamed from: B, reason: from getter */
     public final int getPremiumSubscriptionCount() {
         return this.premiumSubscriptionCount;
     }
 
-    /* renamed from: C, reason: from getter */
+    /* JADX INFO: renamed from: C, reason: from getter */
     public final int getPremiumTier() {
         return this.premiumTier;
     }
 
-    /* renamed from: D */
+    /* JADX INFO: renamed from: D */
     public final List<Presence> m7839D() {
         return this.presences;
     }
 
-    /* renamed from: E, reason: from getter */
+    /* JADX INFO: renamed from: E, reason: from getter */
     public final Long getPublicUpdatesChannelId() {
         return this.publicUpdatesChannelId;
     }
 
-    /* renamed from: F, reason: from getter */
+    /* JADX INFO: renamed from: F, reason: from getter */
     public final String getRegion() {
         return this.region;
     }
 
-    /* renamed from: G */
+    /* JADX INFO: renamed from: G */
     public final List<GuildRole> m7842G() {
         return this.roles;
     }
 
-    /* renamed from: H, reason: from getter */
+    /* JADX INFO: renamed from: H, reason: from getter */
     public final Long getRulesChannelId() {
         return this.rulesChannelId;
     }
 
-    /* renamed from: I, reason: from getter */
+    /* JADX INFO: renamed from: I, reason: from getter */
     public final String getSplash() {
         return this.splash;
     }
 
-    /* renamed from: J */
+    /* JADX INFO: renamed from: J */
     public final List<StageInstance> m7845J() {
         return this.stageInstances;
     }
 
-    /* renamed from: K */
+    /* JADX INFO: renamed from: K */
     public final List<Sticker> m7846K() {
         return this.stickers;
     }
 
-    /* renamed from: L, reason: from getter */
+    /* JADX INFO: renamed from: L, reason: from getter */
     public final int getSystemChannelFlags() {
         return this.systemChannelFlags;
     }
 
-    /* renamed from: M, reason: from getter */
+    /* JADX INFO: renamed from: M, reason: from getter */
     public final Long getSystemChannelId() {
         return this.systemChannelId;
     }
 
-    /* renamed from: N */
+    /* JADX INFO: renamed from: N */
     public final List<Channel> m7849N() {
         return this.threads;
     }
 
-    /* renamed from: O, reason: from getter */
+    /* JADX INFO: renamed from: O, reason: from getter */
     public final boolean getUnavailable() {
         return this.unavailable;
     }
 
-    /* renamed from: P, reason: from getter */
+    /* JADX INFO: renamed from: P, reason: from getter */
     public final String getVanityUrlCode() {
         return this.vanityUrlCode;
     }
 
-    /* renamed from: Q, reason: from getter */
+    /* JADX INFO: renamed from: Q, reason: from getter */
     public final GuildVerificationLevel getVerificationLevel() {
         return this.verificationLevel;
     }
 
-    /* renamed from: R */
+    /* JADX INFO: renamed from: R */
     public final List<VoiceState> m7853R() {
         return this.voiceStates;
     }
 
-    /* renamed from: S, reason: from getter */
+    /* JADX INFO: renamed from: S, reason: from getter */
     public final GuildWelcomeScreen getWelcomeScreen() {
         return this.welcomeScreen;
     }
 
-    /* renamed from: b, reason: from getter */
+    /* JADX INFO: renamed from: b, reason: from getter */
     public final Long getAfkChannelId() {
         return this.afkChannelId;
     }
 
-    /* renamed from: c, reason: from getter */
+    /* JADX INFO: renamed from: c, reason: from getter */
     public final int getAfkTimeout() {
         return this.afkTimeout;
     }
 
-    /* renamed from: d, reason: from getter */
+    /* JADX INFO: renamed from: d, reason: from getter */
     public final int getApproximatePresenceCount() {
         return this.approximatePresenceCount;
     }
 
-    /* renamed from: e, reason: from getter */
+    /* JADX INFO: renamed from: e, reason: from getter */
     public final String getBanner() {
         return this.banner;
     }
@@ -303,22 +303,28 @@ public final /* data */ class Guild {
         return Intrinsics3.areEqual(this.roles, guild.roles) && Intrinsics3.areEqual(this.emojis, guild.emojis) && Intrinsics3.areEqual(this.stickers, guild.stickers) && Intrinsics3.areEqual(this.name, guild.name) && Intrinsics3.areEqual(this.description, guild.description) && Intrinsics3.areEqual(this.defaultMessageNotifications, guild.defaultMessageNotifications) && this.id == guild.id && Intrinsics3.areEqual(this.region, guild.region) && this.ownerId == guild.ownerId && Intrinsics3.areEqual(this.icon, guild.icon) && Intrinsics3.areEqual(this.verificationLevel, guild.verificationLevel) && Intrinsics3.areEqual(this.explicitContentFilter, guild.explicitContentFilter) && Intrinsics3.areEqual(this.presences, guild.presences) && Intrinsics3.areEqual(this.channels, guild.channels) && Intrinsics3.areEqual(this.members, guild.members) && Intrinsics3.areEqual(this.voiceStates, guild.voiceStates) && this.unavailable == guild.unavailable && this.mfaLevel == guild.mfaLevel && this.afkTimeout == guild.afkTimeout && Intrinsics3.areEqual(this.afkChannelId, guild.afkChannelId) && Intrinsics3.areEqual(this.systemChannelId, guild.systemChannelId) && Intrinsics3.areEqual(this.features, guild.features) && this.memberCount == guild.memberCount && Intrinsics3.areEqual(this.banner, guild.banner) && Intrinsics3.areEqual(this.splash, guild.splash) && this.premiumTier == guild.premiumTier && this.premiumSubscriptionCount == guild.premiumSubscriptionCount && this.systemChannelFlags == guild.systemChannelFlags && Intrinsics3.areEqual(this.joinedAt, guild.joinedAt) && Intrinsics3.areEqual(this.rulesChannelId, guild.rulesChannelId) && Intrinsics3.areEqual(this.publicUpdatesChannelId, guild.publicUpdatesChannelId) && Intrinsics3.areEqual(this.preferredLocale, guild.preferredLocale) && Intrinsics3.areEqual(this.welcomeScreen, guild.welcomeScreen) && Intrinsics3.areEqual(this.maxVideoChannelUsers, guild.maxVideoChannelUsers) && Intrinsics3.areEqual(this.vanityUrlCode, guild.vanityUrlCode) && this.approximateMemberCount == guild.approximateMemberCount && this.approximatePresenceCount == guild.approximatePresenceCount && Intrinsics3.areEqual(this.permissions, guild.permissions) && Intrinsics3.areEqual(this.guildHashes, guild.guildHashes) && Intrinsics3.areEqual(this.channelUpdates, guild.channelUpdates) && Intrinsics3.areEqual(this.threads, guild.threads) && this.nsfw == guild.nsfw && Intrinsics3.areEqual(this.stageInstances, guild.stageInstances) && Intrinsics3.areEqual(this.guildScheduledEvents, guild.guildScheduledEvents) && Intrinsics3.areEqual(this.embeddedActivities, guild.embeddedActivities) && Intrinsics3.areEqual(this.hubType, guild.hubType);
     }
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final List<Channel> m7859f() {
         return this.channelUpdates;
     }
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public final List<Channel> m7860g() {
         return this.channels;
     }
 
-    /* renamed from: h, reason: from getter */
+    /* JADX INFO: renamed from: h, reason: from getter */
     public final Integer getDefaultMessageNotifications() {
         return this.defaultMessageNotifications;
     }
 
     /* JADX WARN: Multi-variable type inference failed */
+    /* JADX WARN: Type inference failed for: r2v131 */
+    /* JADX WARN: Type inference failed for: r2v145 */
+    /* JADX WARN: Type inference failed for: r2v44, types: [int] */
+    /* JADX WARN: Type inference failed for: r3v2 */
+    /* JADX WARN: Type inference failed for: r3v3, types: [int] */
+    /* JADX WARN: Type inference failed for: r3v4 */
     public int hashCode() {
         List<GuildRole> list = this.roles;
         int iHashCode = (list != null ? list.hashCode() : 0) * 31;
@@ -353,13 +359,13 @@ public final /* data */ class Guild {
         List<VoiceState> list7 = this.voiceStates;
         int iHashCode14 = (iHashCode13 + (list7 != null ? list7.hashCode() : 0)) * 31;
         boolean z2 = this.unavailable;
-        int i3 = z2;
-        if (z2 != 0) {
-            i3 = 1;
+        ?? r2 = z2;
+        if (z2) {
+            r2 = 1;
         }
-        int i4 = (((((iHashCode14 + i3) * 31) + this.mfaLevel) * 31) + this.afkTimeout) * 31;
+        int i3 = (((((iHashCode14 + r2) * 31) + this.mfaLevel) * 31) + this.afkTimeout) * 31;
         Long l = this.afkChannelId;
-        int iHashCode15 = (i4 + (l != null ? l.hashCode() : 0)) * 31;
+        int iHashCode15 = (i3 + (l != null ? l.hashCode() : 0)) * 31;
         Long l2 = this.systemChannelId;
         int iHashCode16 = (iHashCode15 + (l2 != null ? l2.hashCode() : 0)) * 31;
         List<GuildFeature> list8 = this.features;
@@ -391,9 +397,9 @@ public final /* data */ class Guild {
         List<Channel> list10 = this.threads;
         int iHashCode30 = (iHashCode29 + (list10 != null ? list10.hashCode() : 0)) * 31;
         boolean z3 = this.nsfw;
-        int i5 = (iHashCode30 + (z3 ? 1 : z3 ? 1 : 0)) * 31;
+        int i4 = (iHashCode30 + (z3 ? 1 : z3)) * 31;
         List<StageInstance> list11 = this.stageInstances;
-        int iHashCode31 = (i5 + (list11 != null ? list11.hashCode() : 0)) * 31;
+        int iHashCode31 = (i4 + (list11 != null ? list11.hashCode() : 0)) * 31;
         List<GuildScheduledEvent> list12 = this.guildScheduledEvents;
         int iHashCode32 = (iHashCode31 + (list12 != null ? list12.hashCode() : 0)) * 31;
         List<EmbeddedActivityInGuild> list13 = this.embeddedActivities;
@@ -402,62 +408,62 @@ public final /* data */ class Guild {
         return iHashCode33 + (guildHubType != null ? guildHubType.hashCode() : 0);
     }
 
-    /* renamed from: i, reason: from getter */
+    /* JADX INFO: renamed from: i, reason: from getter */
     public final String getDescription() {
         return this.description;
     }
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final List<EmbeddedActivityInGuild> m7863j() {
         return this.embeddedActivities;
     }
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final List<GuildEmoji> m7864k() {
         return this.emojis;
     }
 
-    /* renamed from: l, reason: from getter */
+    /* JADX INFO: renamed from: l, reason: from getter */
     public final GuildExplicitContentFilter getExplicitContentFilter() {
         return this.explicitContentFilter;
     }
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public final List<GuildFeature> m7866m() {
         return this.features;
     }
 
-    /* renamed from: n, reason: from getter */
+    /* JADX INFO: renamed from: n, reason: from getter */
     public final GuildHashes getGuildHashes() {
         return this.guildHashes;
     }
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public final List<GuildScheduledEvent> m7868o() {
         return this.guildScheduledEvents;
     }
 
-    /* renamed from: p, reason: from getter */
+    /* JADX INFO: renamed from: p, reason: from getter */
     public final GuildHubType getHubType() {
         return this.hubType;
     }
 
-    /* renamed from: q, reason: from getter */
+    /* JADX INFO: renamed from: q, reason: from getter */
     public final String getIcon() {
         return this.icon;
     }
 
-    /* renamed from: r, reason: from getter */
+    /* JADX INFO: renamed from: r, reason: from getter */
     public final long getId() {
         return this.id;
     }
 
-    /* renamed from: s, reason: from getter */
+    /* JADX INFO: renamed from: s, reason: from getter */
     public final String getJoinedAt() {
         return this.joinedAt;
     }
 
-    /* renamed from: t, reason: from getter */
+    /* JADX INFO: renamed from: t, reason: from getter */
     public final GuildMaxVideoChannelUsers getMaxVideoChannelUsers() {
         return this.maxVideoChannelUsers;
     }
@@ -559,32 +565,32 @@ public final /* data */ class Guild {
         return sbM833U.toString();
     }
 
-    /* renamed from: u, reason: from getter */
+    /* JADX INFO: renamed from: u, reason: from getter */
     public final int getMemberCount() {
         return this.memberCount;
     }
 
-    /* renamed from: v */
+    /* JADX INFO: renamed from: v */
     public final List<GuildMember> m7875v() {
         return this.members;
     }
 
-    /* renamed from: w, reason: from getter */
+    /* JADX INFO: renamed from: w, reason: from getter */
     public final int getMfaLevel() {
         return this.mfaLevel;
     }
 
-    /* renamed from: x, reason: from getter */
+    /* JADX INFO: renamed from: x, reason: from getter */
     public final String getName() {
         return this.name;
     }
 
-    /* renamed from: y, reason: from getter */
+    /* JADX INFO: renamed from: y, reason: from getter */
     public final boolean getNsfw() {
         return this.nsfw;
     }
 
-    /* renamed from: z, reason: from getter */
+    /* JADX INFO: renamed from: z, reason: from getter */
     public final long getOwnerId() {
         return this.ownerId;
     }

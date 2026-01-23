@@ -6,9 +6,9 @@ import p507d0.Tuples;
 import p507d0.p508a0.MathJVM;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: DurationUtils.kt */
-/* renamed from: com.discord.utilities.resources.MillisecondsFormatter, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.utilities.resources.MillisecondsFormatter, reason: use source file name */
+/* JADX INFO: compiled from: DurationUtils.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class DurationUtils4 {
     public static final DurationUtils4 INSTANCE = new DurationUtils4();
     private static final long MS_IN_DAY = 86400000;

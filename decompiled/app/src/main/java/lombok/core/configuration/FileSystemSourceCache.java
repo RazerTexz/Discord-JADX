@@ -7,7 +7,7 @@ import java.util.concurrent.ConcurrentMap;
 import java.util.concurrent.TimeUnit;
 import lombok.core.debug.ProblemReporter;
 
-/* loaded from: discord-126021.apk:lombok/core/configuration/FileSystemSourceCache.SCL.lombok */
+/* JADX INFO: loaded from: discord-126021.apk:lombok/core/configuration/FileSystemSourceCache.SCL.lombok */
 public class FileSystemSourceCache {
     private static final long FULL_CACHE_CLEAR_INTERVAL = TimeUnit.MINUTES.toMillis(30);
     private static final long RECHECK_FILESYSTEM = TimeUnit.SECONDS.toMillis(2);
@@ -27,8 +27,8 @@ public class FileSystemSourceCache {
         }
     }
 
-    /* renamed from: lombok.core.configuration.FileSystemSourceCache$1 */
-    /* loaded from: discord-126021.apk:lombok/core/configuration/FileSystemSourceCache$1.SCL.lombok */
+    /* JADX INFO: renamed from: lombok.core.configuration.FileSystemSourceCache$1 */
+    /* JADX INFO: loaded from: discord-126021.apk:lombok/core/configuration/FileSystemSourceCache$1.SCL.lombok */
     class C128321 implements ConfigurationFileToSource {
         private final /* synthetic */ ConfigurationParser val$parser;
 
@@ -106,7 +106,7 @@ public class FileSystemSourceCache {
         return this.fileCache.get(context);
     }
 
-    /* loaded from: discord-126021.apk:lombok/core/configuration/FileSystemSourceCache$Content.SCL.lombok */
+    /* JADX INFO: loaded from: discord-126021.apk:lombok/core/configuration/FileSystemSourceCache$Content.SCL.lombok */
     private static class Content {
         ConfigurationSource source;
         long lastModified;

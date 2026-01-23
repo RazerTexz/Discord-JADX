@@ -7,9 +7,9 @@ import androidx.fragment.app.FragmentActivity;
 import com.discord.app.AppComponent;
 import p637j0.p641k.Func1;
 
-/* compiled from: ObservableExtensions.kt */
-/* renamed from: com.discord.utilities.rx.ObservableExtensionsKt$bindToComponentLifecycle$$inlined$let$lambda$1 */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.utilities.rx.ObservableExtensionsKt$bindToComponentLifecycle$$inlined$let$lambda$1 */
+/* JADX INFO: compiled from: ObservableExtensions.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class C6883x1d5b58ff<T, R> implements Func1<T, Boolean> {
     public final /* synthetic */ AppComponent $appComponent$inlined;
 

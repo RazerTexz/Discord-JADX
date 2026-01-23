@@ -9,9 +9,9 @@ import android.widget.ImageView;
 import androidx.annotation.RestrictTo;
 import androidx.preference.C0525R;
 
+/* JADX INFO: loaded from: classes.dex */
 @SuppressLint({"AppCompatCustomView"})
 @RestrictTo({RestrictTo.Scope.LIBRARY_GROUP_PREFIX})
-/* loaded from: classes.dex */
 public class PreferenceImageView extends ImageView {
     private int mMaxHeight;
     private int mMaxWidth;

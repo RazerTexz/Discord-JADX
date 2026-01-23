@@ -4,18 +4,18 @@ import p007b.p225i.p226a.p228b.p231j.EventInternal;
 import p007b.p225i.p226a.p228b.p231j.TransportContext;
 import p007b.p225i.p226a.p228b.p231j.p239u.SynchronizationGuard;
 
-/* compiled from: DefaultScheduler.java */
-/* renamed from: b.i.a.b.j.t.b, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.b.j.t.b, reason: use source file name */
+/* JADX INFO: compiled from: DefaultScheduler.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final /* synthetic */ class DefaultScheduler2 implements SynchronizationGuard.a {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final DefaultScheduler3 f5333a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final TransportContext f5334b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final EventInternal f5335c;
 
     public DefaultScheduler2(DefaultScheduler3 defaultScheduler3, TransportContext transportContext, EventInternal eventInternal) {

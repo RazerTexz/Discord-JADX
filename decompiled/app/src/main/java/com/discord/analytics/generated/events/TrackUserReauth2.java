@@ -2,8 +2,8 @@ package com.discord.analytics.generated.events;
 
 import com.discord.api.science.AnalyticsSchema;
 
-/* compiled from: TrackUserReauth.kt */
-/* renamed from: com.discord.analytics.generated.events.TrackUserReauthReceiver, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: com.discord.analytics.generated.events.TrackUserReauthReceiver, reason: use source file name */
+/* JADX INFO: compiled from: TrackUserReauth.kt */
+/* JADX INFO: loaded from: classes.dex */
 public interface TrackUserReauth2 extends AnalyticsSchema {
 }

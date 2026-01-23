@@ -23,18 +23,18 @@ import p007b.p225i.p226a.p242c.p278y2.MediaCodecSelector;
 import p007b.p225i.p226a.p242c.p279z2.MetadataOutput;
 import p007b.p225i.p226a.p242c.p279z2.MetadataRenderer;
 
-/* compiled from: DefaultRenderersFactory.java */
-/* renamed from: b.i.a.c.b1, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.b1, reason: use source file name */
+/* JADX INFO: compiled from: DefaultRenderersFactory.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class DefaultRenderersFactory implements RenderersFactory {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final Context f5739a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final DefaultMediaCodecAdapterFactory f5740b = new DefaultMediaCodecAdapterFactory();
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public MediaCodecSelector f5741c;
 
     public DefaultRenderersFactory(Context context) {
@@ -46,7 +46,7 @@ public class DefaultRenderersFactory implements RenderersFactory {
     /* JADX WARN: Removed duplicated region for block: B:27:0x0087  */
     /* JADX WARN: Removed duplicated region for block: B:9:0x004a  */
     @Override // p007b.p225i.p226a.p242c.RenderersFactory
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */

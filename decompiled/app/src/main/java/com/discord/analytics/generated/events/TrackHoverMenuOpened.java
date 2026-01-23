@@ -8,8 +8,8 @@ import com.discord.api.science.AnalyticsSchema;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: TrackHoverMenuOpened.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: TrackHoverMenuOpened.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class TrackHoverMenuOpened implements AnalyticsSchema, TrackBase2, TrackLocationMetadata2 {
     private TrackBase trackBase;
     private TrackLocationMetadata trackLocationMetadata;
@@ -18,7 +18,7 @@ public final /* data */ class TrackHoverMenuOpened implements AnalyticsSchema, T
     private final transient String analyticsSchemaTypeName = "hover_menu_opened";
 
     @Override // com.discord.api.science.AnalyticsSchema
-    /* renamed from: d, reason: from getter */
+    /* JADX INFO: renamed from: d, reason: from getter */
     public String getAnalyticsSchemaTypeName() {
         return this.analyticsSchemaTypeName;
     }

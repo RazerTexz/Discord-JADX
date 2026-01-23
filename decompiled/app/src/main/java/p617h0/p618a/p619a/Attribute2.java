@@ -2,31 +2,31 @@ package p617h0.p618a.p619a;
 
 import p007b.p100d.p104b.p105a.outline;
 
-/* compiled from: Attribute.java */
-/* renamed from: h0.a.a.b, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: h0.a.a.b, reason: use source file name */
+/* JADX INFO: compiled from: Attribute.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class Attribute2 {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final String f26148a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public byte[] f26149b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public Attribute2 f26150c;
 
-    /* compiled from: Attribute.java */
-    /* renamed from: h0.a.a.b$a */
+    /* JADX INFO: renamed from: h0.a.a.b$a */
+    /* JADX INFO: compiled from: Attribute.java */
     public static final class a {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public int f26151a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public Attribute2[] f26152b = new Attribute2[6];
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public void m10528a(Attribute2 attribute2) {
             boolean z2;
             while (attribute2 != null) {
@@ -65,12 +65,12 @@ public class Attribute2 {
         this.f26148a = str;
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final int m10523a(SymbolTable2 symbolTable2) {
         return m10524b(symbolTable2, null, 0, -1, -1);
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final int m10524b(SymbolTable2 symbolTable2, byte[] bArr, int i, int i2, int i3) {
         ClassWriter2 classWriter2 = symbolTable2.f26347a;
         int length = 0;
@@ -81,7 +81,7 @@ public class Attribute2 {
         return length;
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final int m10525c() {
         int i = 0;
         for (Attribute2 attribute2 = this; attribute2 != null; attribute2 = attribute2.f26150c) {
@@ -90,12 +90,12 @@ public class Attribute2 {
         return i;
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final void m10526d(SymbolTable2 symbolTable2, ByteVector2 byteVector2) {
         m10527e(symbolTable2, null, 0, -1, -1, byteVector2);
     }
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final void m10527e(SymbolTable2 symbolTable2, byte[] bArr, int i, int i2, int i3, ByteVector2 byteVector2) {
         ClassWriter2 classWriter2 = symbolTable2.f26347a;
         for (Attribute2 attribute2 = this; attribute2 != null; attribute2 = attribute2.f26150c) {

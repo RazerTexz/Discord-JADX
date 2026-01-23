@@ -13,15 +13,15 @@ import p007b.p085c.p086a.p095y.p096k.AnimatablePathValue;
 import p007b.p085c.p086a.p095y.p096k.AnimatableSplitDimensionPathValue;
 import p007b.p085c.p086a.p095y.p096k.AnimatableValue;
 
-/* compiled from: AnimatablePathValueParser.java */
-/* renamed from: b.c.a.a0.a, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.c.a.a0.a, reason: use source file name */
+/* JADX INFO: compiled from: AnimatablePathValueParser.java */
+/* JADX INFO: loaded from: classes.dex */
 public class AnimatablePathValueParser {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static JsonReader2.a f2207a = JsonReader2.a.m616a("k", "x", "y");
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static AnimatablePathValue m411a(JsonReader2 jsonReader2, LottieComposition lottieComposition) throws IOException {
         ArrayList arrayList = new ArrayList();
         if (jsonReader2.mo613u() == JsonReader2.b.BEGIN_ARRAY) {
@@ -37,7 +37,7 @@ public class AnimatablePathValueParser {
         return new AnimatablePathValue(arrayList);
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static AnimatableValue<PointF, PointF> m412b(JsonReader2 jsonReader2, LottieComposition lottieComposition) throws IOException {
         JsonReader2.b bVar = JsonReader2.b.STRING;
         jsonReader2.mo604b();

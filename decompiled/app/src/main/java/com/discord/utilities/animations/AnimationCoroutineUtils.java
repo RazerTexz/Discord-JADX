@@ -8,9 +8,9 @@ import p507d0.p584w.p585h.IntrinsicsJvm;
 import p507d0.p584w.p586i.p587a.DebugProbes;
 import p659s.p660a.CancellableContinuationImpl5;
 
-/* compiled from: AnimationCoroutineUtils.kt */
-/* renamed from: com.discord.utilities.animations.AnimationCoroutineUtilsKt, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.utilities.animations.AnimationCoroutineUtilsKt, reason: use source file name */
+/* JADX INFO: compiled from: AnimationCoroutineUtils.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class AnimationCoroutineUtils {
     public static final Object await(ViewPropertyAnimator viewPropertyAnimator, Continuation<? super Unit> continuation) {
         CancellableContinuationImpl5 cancellableContinuationImpl5 = new CancellableContinuationImpl5(IntrinsicsJvm.intercepted(continuation), 1);

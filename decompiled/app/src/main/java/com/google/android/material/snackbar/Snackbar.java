@@ -25,7 +25,7 @@ import androidx.coordinatorlayout.widget.CoordinatorLayout;
 import com.google.android.material.C10817R;
 import com.google.android.material.snackbar.BaseTransientBottomBar;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public class Snackbar extends BaseTransientBottomBar<Snackbar> {
     private static final int[] SNACKBAR_BUTTON_STYLE_ATTR;
     private static final int[] SNACKBAR_CONTENT_STYLE_ATTRS;
@@ -44,7 +44,7 @@ public class Snackbar extends BaseTransientBottomBar<Snackbar> {
         public static final int DISMISS_EVENT_SWIPE = 0;
         public static final int DISMISS_EVENT_TIMEOUT = 2;
 
-        /* renamed from: onDismissed, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: onDismissed, reason: avoid collision after fix types in other method */
         public void onDismissed2(Snackbar snackbar, int i) {
         }
 
@@ -53,7 +53,7 @@ public class Snackbar extends BaseTransientBottomBar<Snackbar> {
             onDismissed2(snackbar, i);
         }
 
-        /* renamed from: onShown, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: onShown, reason: avoid collision after fix types in other method */
         public void onShown2(Snackbar snackbar) {
         }
 
@@ -112,10 +112,10 @@ public class Snackbar extends BaseTransientBottomBar<Snackbar> {
         }
     }
 
-    /* renamed from: com.google.android.material.snackbar.Snackbar$a */
+    /* JADX INFO: renamed from: com.google.android.material.snackbar.Snackbar$a */
     public class ViewOnClickListenerC11003a implements View.OnClickListener {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public final /* synthetic */ View.OnClickListener f21146j;
 
         public ViewOnClickListenerC11003a(View.OnClickListener onClickListener) {

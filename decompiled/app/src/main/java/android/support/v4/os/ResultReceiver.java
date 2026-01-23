@@ -11,16 +11,16 @@ import androidx.annotation.RestrictTo;
 import java.util.Objects;
 import p668x.p669a.p672b.p676c.IResultReceiver;
 
+/* JADX INFO: loaded from: classes.dex */
 @SuppressLint({"BanParcelableUsage"})
 @RestrictTo({RestrictTo.Scope.LIBRARY_GROUP_PREFIX})
-/* loaded from: classes.dex */
 public class ResultReceiver implements Parcelable {
     public static final Parcelable.Creator<ResultReceiver> CREATOR = new C0030a();
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public IResultReceiver f74j;
 
-    /* renamed from: android.support.v4.os.ResultReceiver$a */
+    /* JADX INFO: renamed from: android.support.v4.os.ResultReceiver$a */
     public class C0030a implements Parcelable.Creator<ResultReceiver> {
         @Override // android.os.Parcelable.Creator
         public ResultReceiver createFromParcel(Parcel parcel) {
@@ -33,13 +33,13 @@ public class ResultReceiver implements Parcelable {
         }
     }
 
-    /* renamed from: android.support.v4.os.ResultReceiver$b */
+    /* JADX INFO: renamed from: android.support.v4.os.ResultReceiver$b */
     public class BinderC0031b extends IResultReceiver.a {
         public BinderC0031b() {
         }
 
         @Override // p668x.p669a.p672b.p676c.IResultReceiver
-        /* renamed from: r0 */
+        /* JADX INFO: renamed from: r0 */
         public void mo74r0(int i, Bundle bundle) {
             Objects.requireNonNull(ResultReceiver.this);
             ResultReceiver.this.mo4a(i, bundle);
@@ -59,11 +59,11 @@ public class ResultReceiver implements Parcelable {
         this.f74j = c13362a;
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public void mo4a(int i, Bundle bundle) {
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public void m73b(int i, Bundle bundle) {
         IResultReceiver iResultReceiver = this.f74j;
         if (iResultReceiver != null) {

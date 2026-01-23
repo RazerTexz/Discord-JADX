@@ -3,9 +3,9 @@ package com.discord.widgets.servers;
 import android.view.View;
 import com.discord.widgets.servers.WidgetServerSettingsEmojis;
 
-/* compiled from: WidgetServerSettingsEmojis.kt */
-/* renamed from: com.discord.widgets.servers.WidgetServerSettingsEmojis$Adapter$EmojiHeaderViewHolder$onConfigure$1 */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.servers.WidgetServerSettingsEmojis$Adapter$EmojiHeaderViewHolder$onConfigure$1 */
+/* JADX INFO: compiled from: WidgetServerSettingsEmojis.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class ViewOnClickListenerC9247x171546d2 implements View.OnClickListener {
     public final /* synthetic */ WidgetServerSettingsEmojis.Adapter.EmojiHeaderViewHolder this$0;
 

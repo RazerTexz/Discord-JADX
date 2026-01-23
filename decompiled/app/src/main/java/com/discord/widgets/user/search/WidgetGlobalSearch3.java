@@ -7,9 +7,9 @@ import kotlin.jvm.functions.Function2;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetGlobalSearch.kt */
-/* renamed from: com.discord.widgets.user.search.WidgetGlobalSearch$configureUI$$inlined$apply$lambda$1, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: com.discord.widgets.user.search.WidgetGlobalSearch$configureUI$$inlined$apply$lambda$1, reason: use source file name */
+/* JADX INFO: compiled from: WidgetGlobalSearch.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class WidgetGlobalSearch3 extends Lambda implements Function2<List<? extends WidgetGlobalSearchModel.ItemDataPayload>, List<? extends WidgetGlobalSearchModel.ItemDataPayload>, Unit> {
     public final /* synthetic */ WidgetGlobalSearchModel $model$inlined;
     public final /* synthetic */ WidgetGlobalSearch this$0;
@@ -27,7 +27,7 @@ public final class WidgetGlobalSearch3 extends Lambda implements Function2<List<
         return Unit.f27425a;
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final void invoke2(List<? extends WidgetGlobalSearchModel.ItemDataPayload> list, List<? extends WidgetGlobalSearchModel.ItemDataPayload> list2) {
         Intrinsics3.checkNotNullParameter(list, "<anonymous parameter 0>");
         Intrinsics3.checkNotNullParameter(list2, "<anonymous parameter 1>");

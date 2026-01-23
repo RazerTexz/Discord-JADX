@@ -3,9 +3,9 @@ package com.discord.widgets.friends;
 import android.view.View;
 import com.discord.widgets.friends.WidgetFriendsAddUserAdapter;
 
-/* compiled from: WidgetFriendsAddUserAdapter.kt */
-/* renamed from: com.discord.widgets.friends.WidgetFriendsAddUserAdapter$UserViewHolder$onConfigure$4, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.friends.WidgetFriendsAddUserAdapter$UserViewHolder$onConfigure$4, reason: use source file name */
+/* JADX INFO: compiled from: WidgetFriendsAddUserAdapter.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetFriendsAddUserAdapter5 implements View.OnClickListener {
     public final /* synthetic */ long $userId;
     public final /* synthetic */ WidgetFriendsAddUserAdapter.UserViewHolder this$0;

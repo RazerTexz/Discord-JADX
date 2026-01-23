@@ -19,15 +19,15 @@ import p507d0.p580t.Collections2;
 import p507d0.p580t.Sets5;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: SubpackagesScope.kt */
-/* renamed from: d0.e0.p.d.m0.c.i1.h0, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.c.i1.h0, reason: use source file name */
+/* JADX INFO: compiled from: SubpackagesScope.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public class SubpackagesScope extends MemberScopeImpl {
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final ModuleDescriptor2 f22878b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final FqName f22879c;
 
     public SubpackagesScope(ModuleDescriptor2 moduleDescriptor2, FqName fqName) {

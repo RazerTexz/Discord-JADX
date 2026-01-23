@@ -5,15 +5,15 @@ import android.database.Cursor;
 import android.net.Uri;
 import java.util.HashMap;
 
-/* compiled from: com.google.android.gms:play-services-measurement-impl@@18.0.0 */
-/* renamed from: b.i.a.f.h.l.g2 */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.h.l.g2 */
+/* JADX INFO: compiled from: com.google.android.gms:play-services-measurement-impl@@18.0.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public final /* synthetic */ class C3664g2 implements InterfaceC3622d2 {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final C3608c2 f9964a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final String f9965b;
 
     public C3664g2(C3608c2 c3608c2, String str) {
@@ -78,7 +78,7 @@ public final /* synthetic */ class C3664g2 implements InterfaceC3622d2 {
         throw r1;
      */
     @Override // p007b.p225i.p226a.p288f.p313h.p325l.InterfaceC3622d2
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */

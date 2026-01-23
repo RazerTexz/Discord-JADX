@@ -2,12 +2,12 @@ package p007b.p225i.p226a.p288f.p330i.p332b;
 
 import android.os.Bundle;
 
-/* compiled from: com.google.android.gms:play-services-measurement-impl@@18.0.0 */
-/* renamed from: b.i.a.f.i.b.a9 */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.i.b.a9 */
+/* JADX INFO: compiled from: com.google.android.gms:play-services-measurement-impl@@18.0.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public final /* synthetic */ class RunnableC3978a9 implements Runnable {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final RunnableC3990b9 f10553j;
 
     public RunnableC3978a9(RunnableC3990b9 runnableC3990b9) {
@@ -15,7 +15,7 @@ public final /* synthetic */ class RunnableC3978a9 implements Runnable {
     }
 
     @Override // java.lang.Runnable
-    public final void run() throws IllegalStateException {
+    public final void run() {
         RunnableC3990b9 runnableC3990b9 = this.f10553j;
         C4239x8 c4239x8 = runnableC3990b9.f10573l;
         long j = runnableC3990b9.f10571j;

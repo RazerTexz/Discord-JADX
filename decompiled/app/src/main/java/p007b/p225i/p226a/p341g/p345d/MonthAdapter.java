@@ -22,27 +22,27 @@ import java.util.Iterator;
 import java.util.Locale;
 import java.util.concurrent.atomic.AtomicReference;
 
-/* compiled from: MonthAdapter.java */
-/* renamed from: b.i.a.g.d.g, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.g.d.g, reason: use source file name */
+/* JADX INFO: compiled from: MonthAdapter.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class MonthAdapter extends BaseAdapter {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static final int f11606j = UtcDates.m6076i().getMaximum(4);
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final Month f11607k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final DateSelector<?> f11608l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public Collection<Long> f11609m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public CalendarStyle f11610n;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public final CalendarConstraints f11611o;
 
     public MonthAdapter(Month month, DateSelector<?> dateSelector, CalendarConstraints calendarConstraints) {
@@ -52,18 +52,18 @@ public class MonthAdapter extends BaseAdapter {
         this.f11609m = dateSelector.getSelectedDays();
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public int m6062a(int i) {
         return m6063b() + (i - 1);
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public int m6063b() {
         return this.f11607k.m9135j();
     }
 
     @Nullable
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public Long m6064c(int i) {
         if (i < this.f11607k.m9135j() || i > m6065d()) {
             return null;
@@ -72,12 +72,12 @@ public class MonthAdapter extends BaseAdapter {
         return Long.valueOf(month.m9136k((i - month.m9135j()) + 1));
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public int m6065d() {
         return (this.f11607k.m9135j() + this.f11607k.f20988n) - 1;
     }
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final void m6066e(@Nullable TextView textView, long j) {
         CalendarItemStyle calendarItemStyle;
         if (textView == null) {
@@ -104,7 +104,7 @@ public class MonthAdapter extends BaseAdapter {
         calendarItemStyle.m6059b(textView);
     }
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final void m6067f(MaterialCalendarGridView materialCalendarGridView, long j) {
         if (Month.m9132h(j).equals(this.f11607k)) {
             Calendar calendarM6071d = UtcDates.m6071d(this.f11607k.f20984j);

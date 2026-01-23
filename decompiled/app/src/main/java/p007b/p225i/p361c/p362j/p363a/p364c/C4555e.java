@@ -7,12 +7,12 @@ import p007b.p225i.p226a.p288f.p330i.p331a.C3967a;
 import p007b.p225i.p226a.p288f.p330i.p332b.C4214v5;
 import p007b.p225i.p361c.p369m.CrashlyticsAnalyticsListener;
 
-/* compiled from: com.google.android.gms:play-services-measurement-api@@18.0.0 */
-/* renamed from: b.i.c.j.a.c.e */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.c.j.a.c.e */
+/* JADX INFO: compiled from: com.google.android.gms:play-services-measurement-api@@18.0.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public final class C4555e implements C3967a.a {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final /* synthetic */ C4552b f12158a;
 
     public C4555e(C4552b c4552b) {
@@ -20,7 +20,7 @@ public final class C4555e implements C3967a.a {
     }
 
     @Override // p007b.p225i.p226a.p288f.p330i.p332b.InterfaceC4258z5
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final void mo5979a(String str, String str2, Bundle bundle, long j) {
         if (this.f12158a.f12145a.contains(str2)) {
             Bundle bundle2 = new Bundle();

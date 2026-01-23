@@ -11,7 +11,7 @@ import androidx.core.view.ViewCompat;
 import java.util.Objects;
 import p007b.p100d.p104b.p105a.outline;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public final class ColorUtils {
     private static final int MIN_ALPHA_SEARCH_MAX_ITERATIONS = 10;
     private static final int MIN_ALPHA_SEARCH_PRECISION = 1;
@@ -137,11 +137,11 @@ public final class ColorUtils {
         if (dArr.length != 3) {
             throw new IllegalArgumentException("outXyz must have a length of 3.");
         }
-        double d = i / 255.0d;
+        double d = ((double) i) / 255.0d;
         double dPow = d < 0.04045d ? d / 12.92d : Math.pow((d + 0.055d) / 1.055d, 2.4d);
-        double d2 = i2 / 255.0d;
+        double d2 = ((double) i2) / 255.0d;
         double dPow2 = d2 < 0.04045d ? d2 / 12.92d : Math.pow((d2 + 0.055d) / 1.055d, 2.4d);
-        double d3 = i3 / 255.0d;
+        double d3 = ((double) i3) / 255.0d;
         double dPow3 = d3 < 0.04045d ? d3 / 12.92d : Math.pow((d3 + 0.055d) / 1.055d, 2.4d);
         dArr[0] = ((0.1805d * dPow3) + (0.3576d * dPow2) + (0.4124d * dPow)) * XYZ_WHITE_REFERENCE_Y;
         dArr[1] = ((0.0722d * dPow3) + (0.7152d * dPow2) + (0.2126d * dPow)) * XYZ_WHITE_REFERENCE_Y;

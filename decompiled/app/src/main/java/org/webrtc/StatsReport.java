@@ -2,10 +2,10 @@ package org.webrtc;
 
 import p007b.p100d.p104b.p105a.outline;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public class StatsReport {
 
-    /* renamed from: id */
+    /* JADX INFO: renamed from: id */
     public final String f27616id;
     public final double timestamp;
     public final String type;

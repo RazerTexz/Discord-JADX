@@ -11,7 +11,7 @@ import androidx.annotation.Nullable;
 import androidx.annotation.RequiresApi;
 import androidx.core.util.Preconditions;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class NotificationChannelCompat {
     public static final String DEFAULT_CHANNEL_ID = "miscellaneous";
     private static final int DEFAULT_LIGHT_COLOR = 0;

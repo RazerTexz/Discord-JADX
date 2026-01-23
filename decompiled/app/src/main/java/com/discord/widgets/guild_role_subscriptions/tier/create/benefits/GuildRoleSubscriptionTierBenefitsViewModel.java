@@ -23,8 +23,8 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 import p658rx.Observable;
 
-/* compiled from: GuildRoleSubscriptionTierBenefitsViewModel.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: GuildRoleSubscriptionTierBenefitsViewModel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class GuildRoleSubscriptionTierBenefitsViewModel extends AppViewModel<ViewState> {
     private final GuildRoleSubscriptionTierBenefitListType benefitListType;
     private final StoreExperiments experimentsStore;
@@ -35,8 +35,8 @@ public final class GuildRoleSubscriptionTierBenefitsViewModel extends AppViewMod
     private final ObservationDeck observationDeck;
     private StoreState storeState;
 
-    /* compiled from: GuildRoleSubscriptionTierBenefitsViewModel.kt */
-    /* renamed from: com.discord.widgets.guild_role_subscriptions.tier.create.benefits.GuildRoleSubscriptionTierBenefitsViewModel$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.guild_role_subscriptions.tier.create.benefits.GuildRoleSubscriptionTierBenefitsViewModel$1 */
+    /* JADX INFO: compiled from: GuildRoleSubscriptionTierBenefitsViewModel.kt */
     public static final class C85241 extends Lambda implements Function1<StoreState, Unit> {
         public C85241() {
             super(1);
@@ -48,7 +48,7 @@ public final class GuildRoleSubscriptionTierBenefitsViewModel extends AppViewMod
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(StoreState storeState) {
             GuildRoleSubscriptionTierBenefitsViewModel guildRoleSubscriptionTierBenefitsViewModel = GuildRoleSubscriptionTierBenefitsViewModel.this;
             Intrinsics3.checkNotNullExpressionValue(storeState, "storeState");
@@ -56,7 +56,7 @@ public final class GuildRoleSubscriptionTierBenefitsViewModel extends AppViewMod
         }
     }
 
-    /* compiled from: GuildRoleSubscriptionTierBenefitsViewModel.kt */
+    /* JADX INFO: compiled from: GuildRoleSubscriptionTierBenefitsViewModel.kt */
     public static final /* data */ class StoreState {
         private final List<Integer> activeTrialUserLimitOptions;
         private final boolean isGuildEligibleForTrials;
@@ -84,7 +84,7 @@ public final class GuildRoleSubscriptionTierBenefitsViewModel extends AppViewMod
             return storeState.copy(z2, list, list2);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final boolean getIsGuildEligibleForTrials() {
             return this.isGuildEligibleForTrials;
         }
@@ -153,7 +153,7 @@ public final class GuildRoleSubscriptionTierBenefitsViewModel extends AppViewMod
         }
     }
 
-    /* compiled from: GuildRoleSubscriptionTierBenefitsViewModel.kt */
+    /* JADX INFO: compiled from: GuildRoleSubscriptionTierBenefitsViewModel.kt */
     public static final /* data */ class ViewState {
         private final List<Integer> activeTrialUserLimitOptions;
         private final Boolean canAccessAllChannels;
@@ -177,6 +177,7 @@ public final class GuildRoleSubscriptionTierBenefitsViewModel extends AppViewMod
             this.trialIntervalOptions = list3;
         }
 
+        /* JADX WARN: Multi-variable type inference failed */
         public static /* synthetic */ ViewState copy$default(ViewState viewState, boolean z2, List list, Boolean bool, List list2, List list3, int i, Object obj) {
             if ((i & 1) != 0) {
                 z2 = viewState.canChangeChannelSettings;
@@ -199,7 +200,7 @@ public final class GuildRoleSubscriptionTierBenefitsViewModel extends AppViewMod
             return viewState.copy(z2, list4, bool2, list5, list3);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final boolean getCanChangeChannelSettings() {
             return this.canChangeChannelSettings;
         }
@@ -208,7 +209,7 @@ public final class GuildRoleSubscriptionTierBenefitsViewModel extends AppViewMod
             return this.items;
         }
 
-        /* renamed from: component3, reason: from getter */
+        /* JADX INFO: renamed from: component3, reason: from getter */
         public final Boolean getCanAccessAllChannels() {
             return this.canAccessAllChannels;
         }
@@ -298,8 +299,8 @@ public final class GuildRoleSubscriptionTierBenefitsViewModel extends AppViewMod
         }
     }
 
-    /* compiled from: GuildRoleSubscriptionTierBenefitsViewModel.kt */
-    /* renamed from: com.discord.widgets.guild_role_subscriptions.tier.create.benefits.GuildRoleSubscriptionTierBenefitsViewModel$observeStoreState$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.guild_role_subscriptions.tier.create.benefits.GuildRoleSubscriptionTierBenefitsViewModel$observeStoreState$1 */
+    /* JADX INFO: compiled from: GuildRoleSubscriptionTierBenefitsViewModel.kt */
     public static final class C85251 extends Lambda implements Function0<StoreState> {
         public final /* synthetic */ long $guildId;
 

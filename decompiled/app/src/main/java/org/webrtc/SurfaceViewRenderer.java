@@ -13,7 +13,7 @@ import org.webrtc.RendererCommon;
 import p007b.p100d.p104b.p105a.outline;
 import p617h0.p628c.RunnableC12495y;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public class SurfaceViewRenderer extends SurfaceView implements SurfaceHolder.Callback, VideoSink, RendererCommon.RendererEvents {
     private static final String TAG = "SurfaceViewRenderer";
     private final SurfaceEglRenderer eglRenderer;
@@ -100,7 +100,7 @@ public class SurfaceViewRenderer extends SurfaceView implements SurfaceHolder.Ca
         getHolder().setFixedSize(iMin, iMin2);
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public /* synthetic */ void m11047a(int i, int i2) {
         this.rotatedFrameWidth = i;
         this.rotatedFrameHeight = i2;

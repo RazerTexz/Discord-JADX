@@ -5,15 +5,15 @@ import android.view.Surface;
 import java.util.Iterator;
 import p007b.p225i.p226a.p242c.p260g3.p261z.SphericalGLSurfaceView;
 
-/* compiled from: lambda */
-/* renamed from: b.i.a.c.g3.z.b */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.g3.z.b */
+/* JADX INFO: compiled from: lambda */
+/* JADX INFO: loaded from: classes3.dex */
 public final /* synthetic */ class RunnableC2790b implements Runnable {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final /* synthetic */ SphericalGLSurfaceView f6960j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final /* synthetic */ SurfaceTexture f6961k;
 
     public /* synthetic */ RunnableC2790b(SphericalGLSurfaceView sphericalGLSurfaceView, SurfaceTexture surfaceTexture) {

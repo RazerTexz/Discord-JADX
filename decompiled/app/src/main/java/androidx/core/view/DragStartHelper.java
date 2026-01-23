@@ -4,7 +4,7 @@ import android.graphics.Point;
 import android.view.MotionEvent;
 import android.view.View;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class DragStartHelper {
     private boolean mDragging;
     private int mLastTouchX;
@@ -14,7 +14,7 @@ public class DragStartHelper {
     private final View.OnTouchListener mTouchListener = new ViewOnTouchListenerC02782();
     private final View mView;
 
-    /* renamed from: androidx.core.view.DragStartHelper$1 */
+    /* JADX INFO: renamed from: androidx.core.view.DragStartHelper$1 */
     public class ViewOnLongClickListenerC02771 implements View.OnLongClickListener {
         public ViewOnLongClickListenerC02771() {
         }
@@ -25,7 +25,7 @@ public class DragStartHelper {
         }
     }
 
-    /* renamed from: androidx.core.view.DragStartHelper$2 */
+    /* JADX INFO: renamed from: androidx.core.view.DragStartHelper$2 */
     public class ViewOnTouchListenerC02782 implements View.OnTouchListener {
         public ViewOnTouchListenerC02782() {
         }

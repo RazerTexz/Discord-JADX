@@ -18,11 +18,11 @@ import p007b.p008a.p062y.p064k0.GuildChannelSideBarActionsView2;
 import p007b.p008a.p062y.p064k0.GuildChannelSideBarActionsView3;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: GuildChannelSideBarActionsView.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: GuildChannelSideBarActionsView.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class GuildChannelSideBarActionsView extends LinearLayout {
 
-    /* renamed from: j, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: j, reason: from kotlin metadata */
     public final GuildChannelSideBarActionsViewBinding binding;
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -54,7 +54,7 @@ public final class GuildChannelSideBarActionsView extends LinearLayout {
         throw new NullPointerException("Missing required view with ID: ".concat(getResources().getResourceName(i)));
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final void m8589a(Function1<? super View, Unit> onSearchClicked, Function1<? super View, Unit> onThreadBrowserClicked, Function1<? super View, Unit> onNotificationsClicked, Function1<? super View, Unit> onPinsClicked, Function1<? super View, Unit> onSettingsClicked, boolean hasUnseenPins, boolean channelIsMuted, boolean disablePins, boolean showSearch) {
         Intrinsics3.checkNotNullParameter(onSearchClicked, "onSearchClicked");
         Intrinsics3.checkNotNullParameter(onThreadBrowserClicked, "onThreadBrowserClicked");

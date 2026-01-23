@@ -1,8 +1,8 @@
 package com.discord.utilities.search.network.state;
 
 
-/* compiled from: QueryFetchState.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: QueryFetchState.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public enum QueryFetchState {
     NONE,
     INDEXING,

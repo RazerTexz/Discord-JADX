@@ -31,15 +31,15 @@ import p600f0.HttpUrl;
 import p600f0.p601e0.Util7;
 import p615g0.Buffer3;
 
-/* compiled from: HttpHeaders.kt */
-/* renamed from: f0.e0.h.e, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: f0.e0.h.e, reason: use source file name */
+/* JADX INFO: compiled from: HttpHeaders.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class HttpHeaders {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final ByteString f25529a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static final ByteString f25530b;
 
     static {
@@ -48,7 +48,7 @@ public final class HttpHeaders {
         f25530b = companion.m11012c("\t ,=");
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final boolean m10221a(Response response) {
         Intrinsics3.checkParameterIsNotNull(response, "$this$promisesBody");
         if (Intrinsics3.areEqual(response.request.method, "HEAD")) {
@@ -67,7 +67,7 @@ public final class HttpHeaders {
         continue;
      */
     /* JADX WARN: Removed duplicated region for block: B:29:0x0091  */
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
@@ -166,7 +166,7 @@ public final class HttpHeaders {
         }
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public static final String m10223c(Buffer3 buffer3) {
         long jMo10430E = buffer3.mo10430E(f25530b);
         if (jMo10430E == -1) {
@@ -184,7 +184,7 @@ public final class HttpHeaders {
      */
     /* JADX WARN: Removed duplicated region for block: B:21:0x0093  */
     /* JADX WARN: Removed duplicated region for block: B:33:0x00c4  */
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
@@ -290,12 +290,6 @@ public final class HttpHeaders {
                                             z4 = true;
                                         } catch (NumberFormatException | IllegalArgumentException unused) {
                                             i3 = length;
-                                            i7 = iM10125f + 1;
-                                            list2 = list3;
-                                            str3 = str7;
-                                            size2 = i8;
-                                            length = i3;
-                                            c = '=';
                                         }
                                     } else if (StringsJVM.equals(strM10118C3, "max-age", true)) {
                                         try {
@@ -314,12 +308,6 @@ public final class HttpHeaders {
                                                 }
                                                 j2 = j3;
                                             } catch (NumberFormatException | IllegalArgumentException unused2) {
-                                                i7 = iM10125f + 1;
-                                                list2 = list3;
-                                                str3 = str7;
-                                                size2 = i8;
-                                                length = i3;
-                                                c = '=';
                                             }
                                             i7 = iM10125f + 1;
                                             list2 = list3;
@@ -363,7 +351,7 @@ public final class HttpHeaders {
                                         j = Long.MIN_VALUE;
                                     } else if (j2 != -1) {
                                         if (j2 <= 9223372036854775L) {
-                                            j3 = j2 * 1000;
+                                            j3 = j2 * ((long) 1000);
                                         }
                                         long j5 = jCurrentTimeMillis + j3;
                                         if (j5 >= jCurrentTimeMillis && j5 <= 253402300799999L) {
@@ -428,7 +416,7 @@ public final class HttpHeaders {
         cookieJar2.mo8745a(httpUrl, listEmptyList2);
     }
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public static final boolean m10225e(Buffer3 buffer3) throws EOFException {
         boolean z2 = false;
         while (!buffer3.mo10472w()) {

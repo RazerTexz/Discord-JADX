@@ -5,23 +5,23 @@ import p001a0.p002a.p003a.C0002b;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: VideoMetadata.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: VideoMetadata.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class VideoMetadata {
 
-    /* renamed from: a, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: a, reason: from kotlin metadata */
     public final long userID;
 
-    /* renamed from: b, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: b, reason: from kotlin metadata */
     public final int maxWidth;
 
-    /* renamed from: c, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: c, reason: from kotlin metadata */
     public final int maxHeight;
 
-    /* renamed from: d, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: d, reason: from kotlin metadata */
     public final Integer maxFrameRate;
 
-    /* renamed from: e, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: e, reason: from kotlin metadata */
     public final Payloads.ResolutionType type;
 
     public VideoMetadata(long j, int i, int i2, Integer num, Payloads.ResolutionType resolutionType) {

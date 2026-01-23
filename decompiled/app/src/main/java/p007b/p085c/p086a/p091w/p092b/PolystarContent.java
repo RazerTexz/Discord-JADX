@@ -14,53 +14,53 @@ import p007b.p085c.p086a.p095y.p097l.PolystarShape;
 import p007b.p085c.p086a.p095y.p098m.BaseLayer2;
 import p007b.p100d.p104b.p105a.outline;
 
-/* compiled from: PolystarContent.java */
-/* renamed from: b.c.a.w.b.n, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.c.a.w.b.n, reason: use source file name */
+/* JADX INFO: compiled from: PolystarContent.java */
+/* JADX INFO: loaded from: classes.dex */
 public class PolystarContent implements PathContent, BaseKeyframeAnimation.b, KeyPathElementContent {
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final String f2546b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final LottieDrawable f2547c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final PolystarShape.a f2548d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final boolean f2549e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final BaseKeyframeAnimation<?, Float> f2550f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public final BaseKeyframeAnimation<?, PointF> f2551g;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public final BaseKeyframeAnimation<?, Float> f2552h;
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     @Nullable
     public final BaseKeyframeAnimation<?, Float> f2553i;
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final BaseKeyframeAnimation<?, Float> f2554j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     @Nullable
     public final BaseKeyframeAnimation<?, Float> f2555k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final BaseKeyframeAnimation<?, Float> f2556l;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public boolean f2558n;
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final Path f2545a = new Path();
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public CompoundTrimPathContent f2557m = new CompoundTrimPathContent();
 
     public PolystarContent(LottieDrawable lottieDrawable, BaseLayer2 baseLayer2, PolystarShape polystarShape) {
@@ -108,14 +108,14 @@ public class PolystarContent implements PathContent, BaseKeyframeAnimation.b, Ke
     }
 
     @Override // p007b.p085c.p086a.p091w.p093c.BaseKeyframeAnimation.b
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public void mo709a() {
         this.f2558n = false;
         this.f2547c.invalidateSelf();
     }
 
     @Override // p007b.p085c.p086a.p091w.p092b.Content2
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public void mo710b(List<Content2> list, List<Content2> list2) {
         for (int i = 0; i < list.size(); i++) {
             Content2 content2 = list.get(i);
@@ -130,14 +130,14 @@ public class PolystarContent implements PathContent, BaseKeyframeAnimation.b, Ke
     }
 
     @Override // p007b.p085c.p086a.p095y.KeyPathElement
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public void mo711c(KeyPath keyPath, int i, List<KeyPath> list, KeyPath keyPath2) {
         MiscUtils.m656f(keyPath, i, list, keyPath2, this);
     }
 
     /* JADX WARN: Multi-variable type inference failed */
     @Override // p007b.p085c.p086a.p095y.KeyPathElement
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public <T> void mo714g(T t, @Nullable LottieValueCallback<T> lottieValueCallback) {
         BaseKeyframeAnimation<?, Float> baseKeyframeAnimation;
         BaseKeyframeAnimation<?, Float> baseKeyframeAnimation2;
@@ -218,7 +218,7 @@ public class PolystarContent implements PathContent, BaseKeyframeAnimation.b, Ke
             float f10 = f9 / 2.0f;
             float f11 = fFloatValue - ((int) fFloatValue);
             if (f11 != 0.0f) {
-                radians += (1.0f - f11) * f10;
+                radians += (double) ((1.0f - f11) * f10);
             }
             float fFloatValue2 = this.f2554j.mo727e().floatValue();
             float fFloatValue3 = this.f2553i.mo727e().floatValue();
@@ -234,7 +234,7 @@ public class PolystarContent implements PathContent, BaseKeyframeAnimation.b, Ke
                 fCos = (float) (Math.cos(radians) * d7);
                 fSin = (float) (d7 * Math.sin(radians));
                 this.f2545a.moveTo(fCos, fSin);
-                d = radians + ((f9 * f11) / 2.0f);
+                d = radians + ((double) ((f9 * f11) / 2.0f));
             } else {
                 f = fFloatValue3;
                 f2 = fFloatValue4;
@@ -242,7 +242,7 @@ public class PolystarContent implements PathContent, BaseKeyframeAnimation.b, Ke
                 float fCos2 = (float) (Math.cos(radians) * d8);
                 fSin = (float) (Math.sin(radians) * d8);
                 this.f2545a.moveTo(fCos2, fSin);
-                d = radians + f10;
+                d = radians + ((double) f10);
                 fCos = fCos2;
                 fM839a = 0.0f;
             }
@@ -308,7 +308,7 @@ public class PolystarContent implements PathContent, BaseKeyframeAnimation.b, Ke
                     }
                     this.f2545a.cubicTo(fCos - f17, f13 - f18, fCos3 + f20, f7 + f21, fCos3, f7);
                 }
-                d = d2 + f6;
+                d = d2 + ((double) f6);
                 z2 = !z2;
                 i++;
                 fCos = fCos3;

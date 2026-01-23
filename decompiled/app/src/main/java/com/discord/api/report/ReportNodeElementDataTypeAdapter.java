@@ -1,8 +1,6 @@
 package com.discord.api.report;
 
 import com.google.gson.Gson;
-import com.google.gson.JsonIOException;
-import com.google.gson.JsonSyntaxException;
 import com.google.gson.TypeAdapter;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
@@ -11,11 +9,11 @@ import java.util.List;
 import p007b.p008a.p059w.TypeTokens;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: InAppReportsMenu.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: InAppReportsMenu.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class ReportNodeElementDataTypeAdapter extends TypeAdapter<ReportNodeElementData> {
     @Override // com.google.gson.TypeAdapter
-    public ReportNodeElementData read(JsonReader jsonReader) throws JsonSyntaxException, JsonIOException {
+    public ReportNodeElementData read(JsonReader jsonReader) {
         Intrinsics3.checkNotNullParameter(jsonReader, "reader");
         Object objM9200d = new Gson().m9200d(jsonReader, TypeTokens.f2003a);
         Intrinsics3.checkNotNullExpressionValue(objM9200d, "Gson().fromJson(reader, STRING_LIST_TYPE)");

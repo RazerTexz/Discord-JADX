@@ -2,22 +2,22 @@ package p007b.p225i.p226a.p288f.p313h.p325l;
 
 import com.google.android.gms.internal.measurement.zzij;
 
-/* compiled from: com.google.android.gms:play-services-measurement-base@@18.0.0 */
-/* renamed from: b.i.a.f.h.l.h5 */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.h.l.h5 */
+/* JADX INFO: compiled from: com.google.android.gms:play-services-measurement-base@@18.0.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public class C3681h5 {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public volatile InterfaceC3612c6 f9990a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public volatile AbstractC3837t3 f9991b;
 
     static {
         C3680h4.m4933a();
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final int m4934a() {
         if (this.f9991b != null) {
             return this.f9991b.mo5282d();
@@ -28,7 +28,7 @@ public class C3681h5 {
         return 0;
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final InterfaceC3612c6 m4935b(InterfaceC3612c6 interfaceC3612c6) {
         if (this.f9990a == null) {
             synchronized (this) {
@@ -46,7 +46,7 @@ public class C3681h5 {
         return this.f9990a;
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final AbstractC3837t3 m4936c() {
         if (this.f9991b != null) {
             return this.f9991b;

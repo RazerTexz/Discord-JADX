@@ -21,8 +21,8 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import p007b.p100d.p104b.p105a.outline;
 
+/* JADX INFO: loaded from: classes.dex */
 @Deprecated
-/* loaded from: classes.dex */
 public abstract class JobIntentService extends Service {
     public static final boolean DEBUG = false;
     public static final String TAG = "JobIntentService";
@@ -55,7 +55,7 @@ public abstract class JobIntentService extends Service {
             onPostExecute2(r1);
         }
 
-        /* renamed from: doInBackground, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: doInBackground, reason: avoid collision after fix types in other method */
         public Void doInBackground2(Void... voidArr) {
             while (true) {
                 GenericWorkItem genericWorkItemDequeueWork = JobIntentService.this.dequeueWork();
@@ -67,12 +67,12 @@ public abstract class JobIntentService extends Service {
             }
         }
 
-        /* renamed from: onCancelled, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: onCancelled, reason: avoid collision after fix types in other method */
         public void onCancelled2(Void r1) {
             JobIntentService.this.processorFinished();
         }
 
-        /* renamed from: onPostExecute, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: onPostExecute, reason: avoid collision after fix types in other method */
         public void onPostExecute2(Void r1) {
             JobIntentService.this.processorFinished();
         }

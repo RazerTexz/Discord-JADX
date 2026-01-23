@@ -7,9 +7,9 @@ import com.discord.models.user.User;
 import com.discord.widgets.servers.WidgetServerSettingsTransferOwnership;
 import p658rx.functions.Func3;
 
-/* compiled from: WidgetServerSettingsTransferOwnership.kt */
-/* renamed from: com.discord.widgets.servers.WidgetServerSettingsTransferOwnership$Model$Companion$get$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.servers.WidgetServerSettingsTransferOwnership$Model$Companion$get$1, reason: use source file name */
+/* JADX INFO: compiled from: WidgetServerSettingsTransferOwnership.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetServerSettingsTransferOwnership2<T1, T2, T3, R> implements Func3<Guild, User, MeUser, WidgetServerSettingsTransferOwnership.Model> {
     public static final WidgetServerSettingsTransferOwnership2 INSTANCE = new WidgetServerSettingsTransferOwnership2();
 
@@ -18,7 +18,7 @@ public final class WidgetServerSettingsTransferOwnership2<T1, T2, T3, R> impleme
         return call2(guild, user, meUser);
     }
 
-    /* renamed from: call, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
     public final WidgetServerSettingsTransferOwnership.Model call2(Guild guild, User user, MeUser meUser) {
         if (guild == null || meUser == null || user == null) {
             return null;

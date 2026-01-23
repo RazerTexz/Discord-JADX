@@ -4,36 +4,36 @@ import androidx.annotation.ColorInt;
 import java.util.Arrays;
 import p007b.p085c.p086a.p095y.C1563b;
 
-/* compiled from: RoundingParams.java */
-/* renamed from: b.f.g.f.c, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.f.g.f.c, reason: use source file name */
+/* JADX INFO: compiled from: RoundingParams.java */
+/* JADX INFO: loaded from: classes.dex */
 public class RoundingParams {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public int f3471a = 2;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public boolean f3472b = false;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public float[] f3473c = null;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public int f3474d = 0;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public float f3475e = 0.0f;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public int f3476f = 0;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public float f3477g = 0.0f;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public boolean f3478h = false;
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static RoundingParams m1124a(float f) {
         RoundingParams roundingParams = new RoundingParams();
         if (roundingParams.f3473c == null) {
@@ -43,7 +43,7 @@ public class RoundingParams {
         return roundingParams;
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public RoundingParams m1125b(@ColorInt int i) {
         this.f3474d = i;
         this.f3471a = 1;

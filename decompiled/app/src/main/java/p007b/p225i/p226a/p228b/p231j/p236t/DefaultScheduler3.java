@@ -11,27 +11,27 @@ import p007b.p225i.p226a.p228b.p231j.p236t.p237h.WorkScheduler;
 import p007b.p225i.p226a.p228b.p231j.p236t.p238i.EventStore;
 import p007b.p225i.p226a.p228b.p231j.p239u.SynchronizationGuard;
 
-/* compiled from: DefaultScheduler.java */
-/* renamed from: b.i.a.b.j.t.c, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.b.j.t.c, reason: use source file name */
+/* JADX INFO: compiled from: DefaultScheduler.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class DefaultScheduler3 implements Scheduler2 {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final Logger f5336a = Logger.getLogger(TransportRuntime.class.getName());
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final WorkScheduler f5337b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final Executor f5338c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final BackendRegistry f5339d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final EventStore f5340e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final SynchronizationGuard f5341f;
 
     public DefaultScheduler3(Executor executor, BackendRegistry backendRegistry, WorkScheduler workScheduler, EventStore eventStore, SynchronizationGuard synchronizationGuard) {
@@ -43,7 +43,7 @@ public class DefaultScheduler3 implements Scheduler2 {
     }
 
     @Override // p007b.p225i.p226a.p228b.p231j.p236t.Scheduler2
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public void mo2373a(TransportContext transportContext, EventInternal eventInternal, TransportScheduleCallback transportScheduleCallback) {
         this.f5338c.execute(new DefaultScheduler(this, transportContext, transportScheduleCallback, eventInternal));
     }

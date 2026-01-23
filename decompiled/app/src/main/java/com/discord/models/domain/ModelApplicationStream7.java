@@ -6,16 +6,16 @@ import kotlin.jvm.internal.Ref$ObjectRef;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ModelApplicationStream.kt */
-/* renamed from: com.discord.models.domain.StreamServerUpdate, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: com.discord.models.domain.StreamServerUpdate, reason: use source file name */
+/* JADX INFO: compiled from: ModelApplicationStream.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class ModelApplicationStream7 {
     private final String endpoint;
     private final String streamKey;
     private final String token;
 
-    /* compiled from: ModelApplicationStream.kt */
-    /* renamed from: com.discord.models.domain.StreamServerUpdate$Parser */
+    /* JADX INFO: renamed from: com.discord.models.domain.StreamServerUpdate$Parser */
+    /* JADX INFO: compiled from: ModelApplicationStream.kt */
     public static final class Parser implements Model.Parser<ModelApplicationStream7> {
         public static final Parser INSTANCE = new Parser();
 
@@ -66,17 +66,17 @@ public final /* data */ class ModelApplicationStream7 {
         return modelApplicationStream7.copy(str, str2, str3);
     }
 
-    /* renamed from: component1, reason: from getter */
+    /* JADX INFO: renamed from: component1, reason: from getter */
     public final String getStreamKey() {
         return this.streamKey;
     }
 
-    /* renamed from: component2, reason: from getter */
+    /* JADX INFO: renamed from: component2, reason: from getter */
     public final String getEndpoint() {
         return this.endpoint;
     }
 
-    /* renamed from: component3, reason: from getter */
+    /* JADX INFO: renamed from: component3, reason: from getter */
     public final String getToken() {
         return this.token;
     }

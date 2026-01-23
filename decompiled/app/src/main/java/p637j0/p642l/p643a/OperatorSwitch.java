@@ -5,12 +5,12 @@ import p007b.p225i.p226a.p288f.p299e.p308o.C3404f;
 import p637j0.p642l.p643a.OperatorSwitch2;
 import p658rx.Producer;
 
-/* compiled from: OperatorSwitch.java */
-/* renamed from: j0.l.a.a2, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: j0.l.a.a2, reason: use source file name */
+/* JADX INFO: compiled from: OperatorSwitch.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class OperatorSwitch implements Producer {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final /* synthetic */ OperatorSwitch2.c f26736j;
 
     public OperatorSwitch(OperatorSwitch2.c cVar) {
@@ -18,7 +18,7 @@ public class OperatorSwitch implements Producer {
     }
 
     @Override // p658rx.Producer
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public void mo10704j(long j) {
         Producer producer;
         if (j <= 0) {

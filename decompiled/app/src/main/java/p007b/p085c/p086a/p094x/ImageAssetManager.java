@@ -14,25 +14,25 @@ import p007b.p085c.p086a.LottieImageAsset;
 import p007b.p085c.p086a.p089b0.Logger2;
 import p007b.p100d.p104b.p105a.outline;
 
-/* compiled from: ImageAssetManager.java */
-/* renamed from: b.c.a.x.b, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.c.a.x.b, reason: use source file name */
+/* JADX INFO: compiled from: ImageAssetManager.java */
+/* JADX INFO: loaded from: classes.dex */
 public class ImageAssetManager {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final Object f2647a = new Object();
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final Context f2648b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public String f2649c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     @Nullable
     public ImageAssetDelegate f2650d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final Map<String, LottieImageAsset> f2651e;
 
     public ImageAssetManager(Drawable.Callback callback, String str, ImageAssetDelegate imageAssetDelegate, Map<String, LottieImageAsset> map) {
@@ -53,7 +53,7 @@ public class ImageAssetManager {
         }
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final Bitmap m749a(String str, @Nullable Bitmap bitmap) {
         synchronized (f2647a) {
             this.f2651e.get(str).f2418e = bitmap;

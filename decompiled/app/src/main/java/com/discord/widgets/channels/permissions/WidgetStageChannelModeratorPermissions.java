@@ -30,22 +30,22 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Reflection2;
 import p658rx.Observable;
 
-/* compiled from: WidgetStageChannelModeratorPermissions.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetStageChannelModeratorPermissions.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetStageChannelModeratorPermissions extends AppFragment {
     public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetStageChannelModeratorPermissions.class, "viewBinding", "getViewBinding()Lcom/discord/databinding/WidgetStageChannelModeratorPermissionsBinding;", 0)};
 
-    /* renamed from: channelId$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: channelId$delegate, reason: from kotlin metadata */
     private final Lazy channelId;
 
-    /* renamed from: viewBinding$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: viewBinding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate viewBinding;
 
-    /* renamed from: viewModel$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: viewModel$delegate, reason: from kotlin metadata */
     private final Lazy viewModel;
 
-    /* compiled from: WidgetStageChannelModeratorPermissions.kt */
-    /* renamed from: com.discord.widgets.channels.permissions.WidgetStageChannelModeratorPermissions$configureUI$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.channels.permissions.WidgetStageChannelModeratorPermissions$configureUI$1 */
+    /* JADX INFO: compiled from: WidgetStageChannelModeratorPermissions.kt */
     public static final class ViewOnClickListenerC75611 implements View.OnClickListener {
         public final /* synthetic */ WidgetStageChannelModeratorPermissionsViewModel.ViewState $viewState;
 
@@ -70,8 +70,8 @@ public final class WidgetStageChannelModeratorPermissions extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetStageChannelModeratorPermissions.kt */
-    /* renamed from: com.discord.widgets.channels.permissions.WidgetStageChannelModeratorPermissions$configureUI$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.channels.permissions.WidgetStageChannelModeratorPermissions$configureUI$2 */
+    /* JADX INFO: compiled from: WidgetStageChannelModeratorPermissions.kt */
     public static final /* synthetic */ class C75622 extends FunctionReferenceImpl implements Function1<PermissionOwner, Unit> {
         public C75622(WidgetStageChannelModeratorPermissions widgetStageChannelModeratorPermissions) {
             super(1, widgetStageChannelModeratorPermissions, WidgetStageChannelModeratorPermissions.class, "confirmRemoveModerator", "confirmRemoveModerator(Lcom/discord/widgets/channels/permissions/PermissionOwner;)V", 0);
@@ -83,15 +83,15 @@ public final class WidgetStageChannelModeratorPermissions extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(PermissionOwner permissionOwner) {
             Intrinsics3.checkNotNullParameter(permissionOwner, "p1");
             WidgetStageChannelModeratorPermissions.access$confirmRemoveModerator((WidgetStageChannelModeratorPermissions) this.receiver, permissionOwner);
         }
     }
 
-    /* compiled from: WidgetStageChannelModeratorPermissions.kt */
-    /* renamed from: com.discord.widgets.channels.permissions.WidgetStageChannelModeratorPermissions$configureUI$3 */
+    /* JADX INFO: renamed from: com.discord.widgets.channels.permissions.WidgetStageChannelModeratorPermissions$configureUI$3 */
+    /* JADX INFO: compiled from: WidgetStageChannelModeratorPermissions.kt */
     public static final /* synthetic */ class C75633 extends FunctionReferenceImpl implements Function1<PermissionOwner, Unit> {
         public C75633(WidgetStageChannelModeratorPermissions widgetStageChannelModeratorPermissions) {
             super(1, widgetStageChannelModeratorPermissions, WidgetStageChannelModeratorPermissions.class, "confirmRemoveModerator", "confirmRemoveModerator(Lcom/discord/widgets/channels/permissions/PermissionOwner;)V", 0);
@@ -103,15 +103,15 @@ public final class WidgetStageChannelModeratorPermissions extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(PermissionOwner permissionOwner) {
             Intrinsics3.checkNotNullParameter(permissionOwner, "p1");
             WidgetStageChannelModeratorPermissions.access$confirmRemoveModerator((WidgetStageChannelModeratorPermissions) this.receiver, permissionOwner);
         }
     }
 
-    /* compiled from: WidgetStageChannelModeratorPermissions.kt */
-    /* renamed from: com.discord.widgets.channels.permissions.WidgetStageChannelModeratorPermissions$onViewBoundOrOnResume$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.channels.permissions.WidgetStageChannelModeratorPermissions$onViewBoundOrOnResume$1 */
+    /* JADX INFO: compiled from: WidgetStageChannelModeratorPermissions.kt */
     public static final /* synthetic */ class C75641 extends FunctionReferenceImpl implements Function1<WidgetStageChannelModeratorPermissionsViewModel.ViewState, Unit> {
         public C75641(WidgetStageChannelModeratorPermissions widgetStageChannelModeratorPermissions) {
             super(1, widgetStageChannelModeratorPermissions, WidgetStageChannelModeratorPermissions.class, "configureUI", "configureUI(Lcom/discord/widgets/channels/permissions/WidgetStageChannelModeratorPermissionsViewModel$ViewState;)V", 0);
@@ -123,7 +123,7 @@ public final class WidgetStageChannelModeratorPermissions extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(WidgetStageChannelModeratorPermissionsViewModel.ViewState viewState) {
             Intrinsics3.checkNotNullParameter(viewState, "p1");
             WidgetStageChannelModeratorPermissions.access$configureUI((WidgetStageChannelModeratorPermissions) this.receiver, viewState);

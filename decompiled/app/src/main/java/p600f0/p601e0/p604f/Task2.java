@@ -3,21 +3,21 @@ package p600f0.p601e0.p604f;
 import com.discord.models.domain.ModelAuditLogEntry;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: Task.kt */
-/* renamed from: f0.e0.f.a, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: f0.e0.f.a, reason: use source file name */
+/* JADX INFO: compiled from: Task.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public abstract class Task2 {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public TaskQueue2 f25409a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public long f25410b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final String f25411c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final boolean f25412d;
 
     public Task2(String str, boolean z2) {
@@ -27,7 +27,7 @@ public abstract class Task2 {
         this.f25410b = -1L;
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public abstract long mo10150a();
 
     public String toString() {

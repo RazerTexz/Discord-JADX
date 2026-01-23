@@ -14,15 +14,15 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.PropertyReference1Impl;
 import p507d0.p592z.p594d.Reflection2;
 
-/* compiled from: DeserializedAnnotations.kt */
-/* renamed from: d0.e0.p.d.m0.l.b.e0.a, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.l.b.e0.a, reason: use source file name */
+/* JADX INFO: compiled from: DeserializedAnnotations.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public class DeserializedAnnotations implements Annotations4 {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static final /* synthetic */ KProperty<Object>[] f24521j = {Reflection2.property1(new PropertyReference1Impl(Reflection2.getOrCreateKotlinClass(DeserializedAnnotations.class), "annotations", "getAnnotations()Ljava/util/List;"))};
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final storage5 f24522k;
 
     public DeserializedAnnotations(StorageManager storageManager, Function0<? extends List<? extends AnnotationDescriptor>> function0) {

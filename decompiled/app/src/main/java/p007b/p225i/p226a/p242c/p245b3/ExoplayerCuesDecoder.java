@@ -16,34 +16,34 @@ import p007b.p225i.p355b.p357b.AbstractIndexedListIterator;
 import p007b.p225i.p355b.p357b.ImmutableList2;
 import p007b.p225i.p355b.p357b.RegularImmutableList;
 
-/* compiled from: ExoplayerCuesDecoder.java */
-/* renamed from: b.i.a.c.b3.d, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.b3.d, reason: use source file name */
+/* JADX INFO: compiled from: ExoplayerCuesDecoder.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class ExoplayerCuesDecoder implements SubtitleDecoder {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final CueDecoder f5790a = new CueDecoder();
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final SubtitleInputBuffer f5791b = new SubtitleInputBuffer();
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final Deque<SubtitleOutputBuffer> f5792c = new ArrayDeque();
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public int f5793d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public boolean f5794e;
 
-    /* compiled from: ExoplayerCuesDecoder.java */
-    /* renamed from: b.i.a.c.b3.d$a */
+    /* JADX INFO: renamed from: b.i.a.c.b3.d$a */
+    /* JADX INFO: compiled from: ExoplayerCuesDecoder.java */
     public class a extends SubtitleOutputBuffer {
         public a() {
         }
 
         @Override // p007b.p225i.p226a.p242c.p265v2.DecoderOutputBuffer
-        /* renamed from: p */
+        /* JADX INFO: renamed from: p */
         public void mo2611p() {
             ExoplayerCuesDecoder exoplayerCuesDecoder = ExoplayerCuesDecoder.this;
             AnimatableValueParser.m426D(exoplayerCuesDecoder.f5792c.size() < 2);
@@ -53,14 +53,14 @@ public final class ExoplayerCuesDecoder implements SubtitleDecoder {
         }
     }
 
-    /* compiled from: ExoplayerCuesDecoder.java */
-    /* renamed from: b.i.a.c.b3.d$b */
+    /* JADX INFO: renamed from: b.i.a.c.b3.d$b */
+    /* JADX INFO: compiled from: ExoplayerCuesDecoder.java */
     public static final class b implements Subtitle {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public final long f5796j;
 
-        /* renamed from: k */
+        /* JADX INFO: renamed from: k */
         public final ImmutableList2<Cue> f5797k;
 
         public b(long j, ImmutableList2<Cue> immutableList2) {
@@ -69,20 +69,20 @@ public final class ExoplayerCuesDecoder implements SubtitleDecoder {
         }
 
         @Override // p007b.p225i.p226a.p242c.p245b3.Subtitle
-        /* renamed from: f */
+        /* JADX INFO: renamed from: f */
         public int mo2612f(long j) {
             return this.f5796j > j ? 0 : -1;
         }
 
         @Override // p007b.p225i.p226a.p242c.p245b3.Subtitle
-        /* renamed from: g */
+        /* JADX INFO: renamed from: g */
         public long mo2613g(int i) {
             AnimatableValueParser.m531j(i == 0);
             return this.f5796j;
         }
 
         @Override // p007b.p225i.p226a.p242c.p245b3.Subtitle
-        /* renamed from: h */
+        /* JADX INFO: renamed from: h */
         public List<Cue> mo2614h(long j) {
             if (j >= this.f5796j) {
                 return this.f5797k;
@@ -92,7 +92,7 @@ public final class ExoplayerCuesDecoder implements SubtitleDecoder {
         }
 
         @Override // p007b.p225i.p226a.p242c.p245b3.Subtitle
-        /* renamed from: i */
+        /* JADX INFO: renamed from: i */
         public int mo2615i() {
             return 1;
         }
@@ -106,13 +106,13 @@ public final class ExoplayerCuesDecoder implements SubtitleDecoder {
     }
 
     @Override // p007b.p225i.p226a.p242c.p245b3.SubtitleDecoder
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public void mo2607a(long j) {
     }
 
     @Override // p007b.p225i.p226a.p242c.p265v2.Decoder
     @Nullable
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public SubtitleOutputBuffer mo2608b() throws DecoderException {
         AnimatableValueParser.m426D(!this.f5794e);
         if (this.f5793d != 2 || this.f5792c.isEmpty()) {
@@ -145,7 +145,7 @@ public final class ExoplayerCuesDecoder implements SubtitleDecoder {
 
     @Override // p007b.p225i.p226a.p242c.p265v2.Decoder
     @Nullable
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public SubtitleInputBuffer mo2609c() throws DecoderException {
         AnimatableValueParser.m426D(!this.f5794e);
         if (this.f5793d != 0) {
@@ -156,7 +156,7 @@ public final class ExoplayerCuesDecoder implements SubtitleDecoder {
     }
 
     @Override // p007b.p225i.p226a.p242c.p265v2.Decoder
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public void mo2610d(SubtitleInputBuffer subtitleInputBuffer) throws DecoderException {
         SubtitleInputBuffer subtitleInputBuffer2 = subtitleInputBuffer;
         AnimatableValueParser.m426D(!this.f5794e);

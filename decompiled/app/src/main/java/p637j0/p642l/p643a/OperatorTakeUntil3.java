@@ -4,12 +4,12 @@ import p658rx.Observable;
 import p658rx.Subscriber;
 import p658rx.observers.SerializedSubscriber;
 
-/* compiled from: OperatorTakeUntil.java */
-/* renamed from: j0.l.a.f2, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: j0.l.a.f2, reason: use source file name */
+/* JADX INFO: compiled from: OperatorTakeUntil.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class OperatorTakeUntil3<T, E> implements Observable.InterfaceC13006b<T, T> {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final Observable<? extends E> f26789j;
 
     public OperatorTakeUntil3(Observable<? extends E> observable) {

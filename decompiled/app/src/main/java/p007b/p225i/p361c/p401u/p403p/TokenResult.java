@@ -5,27 +5,27 @@ import androidx.annotation.Nullable;
 import com.google.auto.value.AutoValue;
 import p007b.p225i.p361c.p401u.p403p.AutoValue_TokenResult;
 
-/* compiled from: TokenResult.java */
+/* JADX INFO: renamed from: b.i.c.u.p.f, reason: use source file name */
+/* JADX INFO: compiled from: TokenResult.java */
+/* JADX INFO: loaded from: classes3.dex */
 @AutoValue
-/* renamed from: b.i.c.u.p.f, reason: use source file name */
-/* loaded from: classes3.dex */
 public abstract class TokenResult {
 
-    /* compiled from: TokenResult.java */
+    /* JADX INFO: renamed from: b.i.c.u.p.f$a */
+    /* JADX INFO: compiled from: TokenResult.java */
     @AutoValue.Builder
-    /* renamed from: b.i.c.u.p.f$a */
     public static abstract class a {
         @NonNull
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public abstract TokenResult mo6800a();
 
         @NonNull
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public abstract a mo6801b(long j);
     }
 
-    /* compiled from: TokenResult.java */
-    /* renamed from: b.i.c.u.p.f$b */
+    /* JADX INFO: renamed from: b.i.c.u.p.f$b */
+    /* JADX INFO: compiled from: TokenResult.java */
     public enum b {
         OK,
         BAD_CONFIG,
@@ -33,7 +33,7 @@ public abstract class TokenResult {
     }
 
     @NonNull
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static a m6813a() {
         AutoValue_TokenResult.b bVar = new AutoValue_TokenResult.b();
         bVar.mo6801b(0L);
@@ -41,14 +41,14 @@ public abstract class TokenResult {
     }
 
     @Nullable
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public abstract b mo6797b();
 
     @Nullable
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public abstract String mo6798c();
 
     @NonNull
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public abstract long mo6799d();
 }

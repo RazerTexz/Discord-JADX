@@ -8,9 +8,9 @@ import java.util.List;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ApiGuildScheduledEventUser.kt */
-/* renamed from: com.discord.api.guildscheduledevent.ApiGuildScheduledEventUserGuildMember, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: com.discord.api.guildscheduledevent.ApiGuildScheduledEventUserGuildMember, reason: use source file name */
+/* JADX INFO: compiled from: ApiGuildScheduledEventUser.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class ApiGuildScheduledEventUser2 {
     private final String avatar;
     private final UtcDateTime joinedAt;
@@ -19,7 +19,7 @@ public final /* data */ class ApiGuildScheduledEventUser2 {
     private final String premiumSince;
     private final List<Long> roles;
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final GuildMember m7970a(User user, long guildId) {
         Intrinsics3.checkNotNullParameter(user, "user");
         return new GuildMember(guildId, user, this.roles, this.nick, this.premiumSince, this.joinedAt, this.pending, null, Long.valueOf(user.getId()), this.avatar, null, null, null, 4096);
@@ -37,6 +37,9 @@ public final /* data */ class ApiGuildScheduledEventUser2 {
     }
 
     /* JADX WARN: Multi-variable type inference failed */
+    /* JADX WARN: Type inference failed for: r2v10, types: [int] */
+    /* JADX WARN: Type inference failed for: r2v12 */
+    /* JADX WARN: Type inference failed for: r2v16 */
     public int hashCode() {
         List<Long> list = this.roles;
         int iHashCode = (list != null ? list.hashCode() : 0) * 31;
@@ -47,13 +50,13 @@ public final /* data */ class ApiGuildScheduledEventUser2 {
         UtcDateTime utcDateTime = this.joinedAt;
         int iHashCode4 = (iHashCode3 + (utcDateTime != null ? utcDateTime.hashCode() : 0)) * 31;
         boolean z2 = this.pending;
-        int i = z2;
-        if (z2 != 0) {
-            i = 1;
+        ?? r2 = z2;
+        if (z2) {
+            r2 = 1;
         }
-        int i2 = (iHashCode4 + i) * 31;
+        int i = (iHashCode4 + r2) * 31;
         String str3 = this.avatar;
-        return i2 + (str3 != null ? str3.hashCode() : 0);
+        return i + (str3 != null ? str3.hashCode() : 0);
     }
 
     public String toString() {

@@ -8,9 +8,9 @@ import com.discord.utilities.permissions.PermissionUtils;
 import com.discord.widgets.servers.WidgetServerSettingsEmojis;
 import p658rx.functions.Func3;
 
-/* compiled from: WidgetServerSettingsEmojis.kt */
-/* renamed from: com.discord.widgets.servers.WidgetServerSettingsEmojis$Model$Companion$canManageEmojisAndStickers$1 */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.servers.WidgetServerSettingsEmojis$Model$Companion$canManageEmojisAndStickers$1 */
+/* JADX INFO: compiled from: WidgetServerSettingsEmojis.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class C9249x4cd96a38<T1, T2, T3, R> implements Func3<Long, Guild, MeUser, WidgetServerSettingsEmojis.Model.Permission> {
     public static final C9249x4cd96a38 INSTANCE = new C9249x4cd96a38();
 
@@ -19,7 +19,7 @@ public final class C9249x4cd96a38<T1, T2, T3, R> implements Func3<Long, Guild, M
         return call2(l, guild, meUser);
     }
 
-    /* renamed from: call, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
     public final WidgetServerSettingsEmojis.Model.Permission call2(Long l, Guild guild, MeUser meUser) {
         if (guild == null || l == null) {
             return null;

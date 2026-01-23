@@ -4,12 +4,12 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import p007b.p085c.p086a.p089b0.Logger2;
 
-/* compiled from: LottieTask.java */
-/* renamed from: b.c.a.q, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.c.a.q, reason: use source file name */
+/* JADX INFO: compiled from: LottieTask.java */
+/* JADX INFO: loaded from: classes.dex */
 public class LottieTask implements Runnable {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final /* synthetic */ LottieTask2 f2451j;
 
     public LottieTask(LottieTask2 lottieTask2) {

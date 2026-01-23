@@ -12,9 +12,9 @@ import java.util.regex.Pattern;
 import p507d0.p592z.p594d.Intrinsics3;
 
 /* JADX INFO: Add missing generic type declarations: [R, S] */
-/* compiled from: SimpleMarkdownRules.kt */
-/* renamed from: b.a.t.b.b.c, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.a.t.b.b.c, reason: use source file name */
+/* JADX INFO: compiled from: SimpleMarkdownRules.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class SimpleMarkdownRules3<R, S> extends Rule<R, Node<R>, S> {
     public SimpleMarkdownRules3(SimpleMarkdownRules5 simpleMarkdownRules5, Pattern pattern) {
         super(pattern);

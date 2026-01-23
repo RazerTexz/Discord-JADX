@@ -10,9 +10,9 @@ import com.discord.stores.StoreGuildMemberVerificationForm;
 import com.discord.widgets.servers.member_verification.MemberVerificationPendingViewModel;
 import p658rx.functions.Func3;
 
-/* compiled from: MemberVerificationPendingViewModel.kt */
-/* renamed from: com.discord.widgets.servers.member_verification.MemberVerificationPendingViewModel$Companion$observeStores$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.servers.member_verification.MemberVerificationPendingViewModel$Companion$observeStores$1, reason: use source file name */
+/* JADX INFO: compiled from: MemberVerificationPendingViewModel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class MemberVerificationPendingViewModel2<T1, T2, T3, R> implements Func3<StoreGuildMemberVerificationForm.MemberVerificationFormData, Guild, GuildJoinRequest, MemberVerificationPendingViewModel.StoreState> {
     public static final MemberVerificationPendingViewModel2 INSTANCE = new MemberVerificationPendingViewModel2();
 
@@ -21,7 +21,7 @@ public final class MemberVerificationPendingViewModel2<T1, T2, T3, R> implements
         return call2(memberVerificationFormData, guild, guildJoinRequest);
     }
 
-    /* renamed from: call, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
     public final MemberVerificationPendingViewModel.StoreState call2(StoreGuildMemberVerificationForm.MemberVerificationFormData memberVerificationFormData, Guild guild, GuildJoinRequest guildJoinRequest) {
         ApplicationStatus applicationStatus;
         ModelMemberVerificationForm form;

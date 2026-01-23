@@ -5,8 +5,8 @@ import com.discord.models.message.Message;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: StickerEntry.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: StickerEntry.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final /* data */ class StickerEntry extends ChatListEntry {
     private final String key;
     private final Message message;
@@ -32,12 +32,12 @@ public final /* data */ class StickerEntry extends ChatListEntry {
         return stickerEntry.copy(message, baseSticker);
     }
 
-    /* renamed from: component1, reason: from getter */
+    /* JADX INFO: renamed from: component1, reason: from getter */
     public final Message getMessage() {
         return this.message;
     }
 
-    /* renamed from: component2, reason: from getter */
+    /* JADX INFO: renamed from: component2, reason: from getter */
     public final BaseSticker getSticker() {
         return this.sticker;
     }

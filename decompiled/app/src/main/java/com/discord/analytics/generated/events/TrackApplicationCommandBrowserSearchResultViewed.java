@@ -7,8 +7,8 @@ import java.util.List;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: TrackApplicationCommandBrowserSearchResultViewed.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: TrackApplicationCommandBrowserSearchResultViewed.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class TrackApplicationCommandBrowserSearchResultViewed implements AnalyticsSchema, TrackBase2 {
     private TrackBase trackBase;
     private final CharSequence query = null;
@@ -16,7 +16,7 @@ public final /* data */ class TrackApplicationCommandBrowserSearchResultViewed i
     private final transient String analyticsSchemaTypeName = "application_command_browser_search_result_viewed";
 
     @Override // com.discord.api.science.AnalyticsSchema
-    /* renamed from: d, reason: from getter */
+    /* JADX INFO: renamed from: d, reason: from getter */
     public String getAnalyticsSchemaTypeName() {
         return this.analyticsSchemaTypeName;
     }

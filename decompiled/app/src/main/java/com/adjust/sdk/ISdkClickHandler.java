@@ -1,6 +1,6 @@
 package com.adjust.sdk;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public interface ISdkClickHandler {
     void init(IActivityHandler iActivityHandler, boolean z2);
 

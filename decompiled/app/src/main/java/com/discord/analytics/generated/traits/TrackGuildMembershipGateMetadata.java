@@ -4,8 +4,8 @@ import java.util.List;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: TrackGuildMembershipGateMetadata.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: TrackGuildMembershipGateMetadata.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class TrackGuildMembershipGateMetadata {
     private final Boolean previewEnabled = null;
     private final List<CharSequence> requirements = null;

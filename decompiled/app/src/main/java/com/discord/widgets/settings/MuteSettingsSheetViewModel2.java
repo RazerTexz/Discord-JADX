@@ -9,9 +9,9 @@ import com.discord.widgets.settings.MuteSettingsSheetViewModel;
 import java.util.Map;
 import p658rx.functions.Func4;
 
-/* compiled from: MuteSettingsSheetViewModel.kt */
-/* renamed from: com.discord.widgets.settings.MuteSettingsSheetViewModel$Companion$observeStoreState$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.settings.MuteSettingsSheetViewModel$Companion$observeStoreState$1, reason: use source file name */
+/* JADX INFO: compiled from: MuteSettingsSheetViewModel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class MuteSettingsSheetViewModel2<T1, T2, T3, T4, R> implements Func4<Guild, Channel, Map<Long, ? extends ModelNotificationSettings>, StoreThreadsJoined.JoinedThread, MuteSettingsSheetViewModel.StoreState> {
     public static final MuteSettingsSheetViewModel2 INSTANCE = new MuteSettingsSheetViewModel2();
 
@@ -22,7 +22,7 @@ public final class MuteSettingsSheetViewModel2<T1, T2, T3, T4, R> implements Fun
 
     /* JADX WARN: Removed duplicated region for block: B:10:0x0017  */
     /* JADX WARN: Removed duplicated region for block: B:11:0x001c  */
-    /* renamed from: call, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */

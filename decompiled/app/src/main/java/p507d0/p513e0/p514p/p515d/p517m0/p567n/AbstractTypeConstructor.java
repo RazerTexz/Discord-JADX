@@ -23,29 +23,29 @@ import p507d0.p580t._Collections;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: AbstractTypeConstructor.kt */
-/* renamed from: d0.e0.p.d.m0.n.g, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.n.g, reason: use source file name */
+/* JADX INFO: compiled from: AbstractTypeConstructor.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public abstract class AbstractTypeConstructor implements TypeConstructor {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final storage5<b> f24772a;
 
-    /* compiled from: AbstractTypeConstructor.kt */
-    /* renamed from: d0.e0.p.d.m0.n.g$a */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.n.g$a */
+    /* JADX INFO: compiled from: AbstractTypeConstructor.kt */
     public final class a implements TypeConstructor {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final KotlinTypeRefiner f24773a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final Lazy f24774b;
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public final /* synthetic */ AbstractTypeConstructor f24775c;
 
-        /* compiled from: AbstractTypeConstructor.kt */
-        /* renamed from: d0.e0.p.d.m0.n.g$a$a, reason: collision with other inner class name */
+        /* JADX INFO: renamed from: d0.e0.p.d.m0.n.g$a$a, reason: collision with other inner class name */
+        /* JADX INFO: compiled from: AbstractTypeConstructor.kt */
         public static final class C13336a extends Lambda implements Function0<List<? extends KotlinType>> {
             public final /* synthetic */ AbstractTypeConstructor this$1;
 
@@ -61,7 +61,7 @@ public abstract class AbstractTypeConstructor implements TypeConstructor {
             }
 
             @Override // kotlin.jvm.functions.Function0
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final List<? extends KotlinType> invoke2() {
                 return KotlinTypeRefiner2.refineTypes(a.access$getKotlinTypeRefiner$p(a.this), this.this$1.getSupertypes());
             }
@@ -132,14 +132,14 @@ public abstract class AbstractTypeConstructor implements TypeConstructor {
         }
     }
 
-    /* compiled from: AbstractTypeConstructor.kt */
-    /* renamed from: d0.e0.p.d.m0.n.g$b */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.n.g$b */
+    /* JADX INFO: compiled from: AbstractTypeConstructor.kt */
     public static final class b {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final Collection<KotlinType> f24776a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public List<? extends KotlinType> f24777b;
 
         /* JADX WARN: Multi-variable type inference failed */
@@ -163,8 +163,8 @@ public abstract class AbstractTypeConstructor implements TypeConstructor {
         }
     }
 
-    /* compiled from: AbstractTypeConstructor.kt */
-    /* renamed from: d0.e0.p.d.m0.n.g$c */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.n.g$c */
+    /* JADX INFO: compiled from: AbstractTypeConstructor.kt */
     public static final class c extends Lambda implements Function0<b> {
         public c() {
             super(0);
@@ -182,11 +182,11 @@ public abstract class AbstractTypeConstructor implements TypeConstructor {
         }
     }
 
-    /* compiled from: AbstractTypeConstructor.kt */
-    /* renamed from: d0.e0.p.d.m0.n.g$d */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.n.g$d */
+    /* JADX INFO: compiled from: AbstractTypeConstructor.kt */
     public static final class d extends Lambda implements Function1<Boolean, b> {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public static final d f24778j = new d();
 
         public d() {
@@ -203,12 +203,12 @@ public abstract class AbstractTypeConstructor implements TypeConstructor {
         }
     }
 
-    /* compiled from: AbstractTypeConstructor.kt */
-    /* renamed from: d0.e0.p.d.m0.n.g$e */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.n.g$e */
+    /* JADX INFO: compiled from: AbstractTypeConstructor.kt */
     public static final class e extends Lambda implements Function1<b, Unit> {
 
-        /* compiled from: AbstractTypeConstructor.kt */
-        /* renamed from: d0.e0.p.d.m0.n.g$e$a */
+        /* JADX INFO: renamed from: d0.e0.p.d.m0.n.g$e$a */
+        /* JADX INFO: compiled from: AbstractTypeConstructor.kt */
         public static final class a extends Lambda implements Function1<TypeConstructor, Iterable<? extends KotlinType>> {
             public final /* synthetic */ AbstractTypeConstructor this$0;
 
@@ -218,7 +218,7 @@ public abstract class AbstractTypeConstructor implements TypeConstructor {
                 this.this$0 = abstractTypeConstructor;
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final Iterable<KotlinType> invoke2(TypeConstructor typeConstructor) {
                 Intrinsics3.checkNotNullParameter(typeConstructor, "it");
                 return AbstractTypeConstructor.access$computeNeighbours(this.this$0, typeConstructor, false);
@@ -230,8 +230,8 @@ public abstract class AbstractTypeConstructor implements TypeConstructor {
             }
         }
 
-        /* compiled from: AbstractTypeConstructor.kt */
-        /* renamed from: d0.e0.p.d.m0.n.g$e$b */
+        /* JADX INFO: renamed from: d0.e0.p.d.m0.n.g$e$b */
+        /* JADX INFO: compiled from: AbstractTypeConstructor.kt */
         public static final class b extends Lambda implements Function1<KotlinType, Unit> {
             public final /* synthetic */ AbstractTypeConstructor this$0;
 
@@ -247,7 +247,7 @@ public abstract class AbstractTypeConstructor implements TypeConstructor {
                 return Unit.f27425a;
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2(KotlinType kotlinType) {
                 Intrinsics3.checkNotNullParameter(kotlinType, "it");
                 this.this$0.mo9405f(kotlinType);
@@ -264,7 +264,7 @@ public abstract class AbstractTypeConstructor implements TypeConstructor {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(b bVar) {
             Intrinsics3.checkNotNullParameter(bVar, "supertypes");
             Collection<KotlinType> collectionFindLoopsInSupertypesAndDisconnect = AbstractTypeConstructor.this.mo9371d().findLoopsInSupertypesAndDisconnect(AbstractTypeConstructor.this, bVar.getAllSupertypes(), new a(AbstractTypeConstructor.this), new b(AbstractTypeConstructor.this));
@@ -302,29 +302,29 @@ public abstract class AbstractTypeConstructor implements TypeConstructor {
         return supertypes;
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public abstract Collection<KotlinType> mo9370a();
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public KotlinType mo9403b() {
         return null;
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public Collection<KotlinType> mo9996c(boolean z2) {
         return Collections2.emptyList();
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public abstract SupertypeLoopChecker mo9371d();
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public List<KotlinType> mo9404e(List<KotlinType> list) {
         Intrinsics3.checkNotNullParameter(list, "supertypes");
         return list;
     }
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public void mo9405f(KotlinType kotlinType) {
         Intrinsics3.checkNotNullParameter(kotlinType, "type");
     }

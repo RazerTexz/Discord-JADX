@@ -6,8 +6,8 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p659s.p660a.Dispatchers;
 import p659s.p660a.p661a.MainDispatchers;
 
-/* compiled from: PausingDispatcher.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: PausingDispatcher.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class PausingDispatcher extends CoroutineDispatcher {
     public final DispatchQueue dispatchQueue = new DispatchQueue();
 

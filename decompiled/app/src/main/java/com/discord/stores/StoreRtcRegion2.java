@@ -7,9 +7,9 @@ import p007b.p100d.p104b.p105a.outline;
 import p507d0.p580t.Collections2;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: StoreRtcRegion.kt */
-/* renamed from: com.discord.stores.RtcLatencyTestResult, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.stores.RtcLatencyTestResult, reason: use source file name */
+/* JADX INFO: compiled from: StoreRtcRegion.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final /* data */ class StoreRtcRegion2 {
     private final List<String> geoRankedRegions;
     private final long lastTestTimestampMs;
@@ -49,7 +49,7 @@ public final /* data */ class StoreRtcRegion2 {
         return this.geoRankedRegions;
     }
 
-    /* renamed from: component3, reason: from getter */
+    /* JADX INFO: renamed from: component3, reason: from getter */
     public final long getLastTestTimestampMs() {
         return this.lastTestTimestampMs;
     }

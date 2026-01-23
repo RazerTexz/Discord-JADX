@@ -31,19 +31,19 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 import p507d0.p592z.p594d.Reflection2;
 
-/* compiled from: WidgetScreenShareNfxSheet.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: WidgetScreenShareNfxSheet.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class WidgetScreenShareNfxSheet extends AppBottomSheet {
     private static final String ARG_VOICE_BOTTOM_SHEET_PARAMS = "ARG_VOICE_BOTTOM_SHEET_PARAMS";
 
-    /* renamed from: binding$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
     public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetScreenShareNfxSheet.class, "binding", "getBinding()Lcom/discord/databinding/WidgetScreenShareNfxSheetBinding;", 0)};
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
 
-    /* compiled from: WidgetScreenShareNfxSheet.kt */
+    /* JADX INFO: compiled from: WidgetScreenShareNfxSheet.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -78,7 +78,7 @@ public final class WidgetScreenShareNfxSheet extends AppBottomSheet {
         }
     }
 
-    /* compiled from: WidgetScreenShareNfxSheet.kt */
+    /* JADX INFO: compiled from: WidgetScreenShareNfxSheet.kt */
     public static final /* data */ class VoiceBottomSheetParams implements Serializable {
         private final WidgetVoiceBottomSheet.FeatureContext featureContext;
         private final boolean forwardToFullscreenIfVideoActivated;
@@ -99,12 +99,12 @@ public final class WidgetScreenShareNfxSheet extends AppBottomSheet {
             return voiceBottomSheetParams.copy(z2, featureContext);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final boolean getForwardToFullscreenIfVideoActivated() {
             return this.forwardToFullscreenIfVideoActivated;
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final WidgetVoiceBottomSheet.FeatureContext getFeatureContext() {
             return this.featureContext;
         }
@@ -158,8 +158,8 @@ public final class WidgetScreenShareNfxSheet extends AppBottomSheet {
         }
     }
 
-    /* compiled from: WidgetScreenShareNfxSheet.kt */
-    /* renamed from: com.discord.widgets.voice.controls.WidgetScreenShareNfxSheet$onActivityResult$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.voice.controls.WidgetScreenShareNfxSheet$onActivityResult$1 */
+    /* JADX INFO: compiled from: WidgetScreenShareNfxSheet.kt */
     public static final class C104441 extends Lambda implements Function1<Intent, Unit> {
         public C104441() {
             super(1);
@@ -171,7 +171,7 @@ public final class WidgetScreenShareNfxSheet extends AppBottomSheet {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Intent intent) {
             Intrinsics3.checkNotNullParameter(intent, "it");
             VoiceEngineServiceController.INSTANCE.getINSTANCE().startStream(intent);
@@ -185,8 +185,8 @@ public final class WidgetScreenShareNfxSheet extends AppBottomSheet {
         }
     }
 
-    /* compiled from: WidgetScreenShareNfxSheet.kt */
-    /* renamed from: com.discord.widgets.voice.controls.WidgetScreenShareNfxSheet$onViewCreated$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.voice.controls.WidgetScreenShareNfxSheet$onViewCreated$1 */
+    /* JADX INFO: compiled from: WidgetScreenShareNfxSheet.kt */
     public static final class ViewOnClickListenerC104451 implements View.OnClickListener {
         public ViewOnClickListenerC104451() {
         }
@@ -197,8 +197,8 @@ public final class WidgetScreenShareNfxSheet extends AppBottomSheet {
         }
     }
 
-    /* compiled from: WidgetScreenShareNfxSheet.kt */
-    /* renamed from: com.discord.widgets.voice.controls.WidgetScreenShareNfxSheet$onViewCreated$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.voice.controls.WidgetScreenShareNfxSheet$onViewCreated$2 */
+    /* JADX INFO: compiled from: WidgetScreenShareNfxSheet.kt */
     public static final class ViewOnClickListenerC104462 implements View.OnClickListener {
         public ViewOnClickListenerC104462() {
         }

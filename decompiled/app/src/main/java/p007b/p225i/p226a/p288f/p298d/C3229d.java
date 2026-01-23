@@ -4,9 +4,9 @@ import android.os.Parcel;
 import android.os.Parcelable;
 import com.google.android.gms.cloudmessaging.zza;
 
-/* compiled from: com.google.android.gms:play-services-cloud-messaging@@16.0.0 */
-/* renamed from: b.i.a.f.d.d */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.d.d */
+/* JADX INFO: compiled from: com.google.android.gms:play-services-cloud-messaging@@16.0.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public final class C3229d implements Parcelable.Creator<zza> {
     @Override // android.os.Parcelable.Creator
     public final /* synthetic */ zza createFromParcel(Parcel parcel) {

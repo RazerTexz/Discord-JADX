@@ -17,14 +17,14 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 import p658rx.functions.Func3;
 
-/* compiled from: WidgetServerSettingsAuditLogFilter.kt */
-/* renamed from: com.discord.widgets.servers.auditlog.WidgetServerSettingsAuditLogFilter$Model$Companion$getPermissionUserIds$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.servers.auditlog.WidgetServerSettingsAuditLogFilter$Model$Companion$getPermissionUserIds$1, reason: use source file name */
+/* JADX INFO: compiled from: WidgetServerSettingsAuditLogFilter.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetServerSettingsAuditLogFilter6<T1, T2, T3, R> implements Func3<Guild, Map<Long, ? extends GuildRole>, Map<Long, ? extends GuildMember>, Set<? extends Long>> {
     public static final WidgetServerSettingsAuditLogFilter6 INSTANCE = new WidgetServerSettingsAuditLogFilter6();
 
-    /* compiled from: WidgetServerSettingsAuditLogFilter.kt */
-    /* renamed from: com.discord.widgets.servers.auditlog.WidgetServerSettingsAuditLogFilter$Model$Companion$getPermissionUserIds$1$1, reason: invalid class name */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.auditlog.WidgetServerSettingsAuditLogFilter$Model$Companion$getPermissionUserIds$1$1, reason: invalid class name */
+    /* JADX INFO: compiled from: WidgetServerSettingsAuditLogFilter.kt */
     public static final class AnonymousClass1 extends Lambda implements Function1<Map.Entry<? extends Long, ? extends GuildMember>, Boolean> {
         public final /* synthetic */ Guild $guild;
         public final /* synthetic */ Map $roles;
@@ -41,7 +41,7 @@ public final class WidgetServerSettingsAuditLogFilter6<T1, T2, T3, R> implements
             return Boolean.valueOf(invoke2((Map.Entry<Long, GuildMember>) entry));
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final boolean invoke2(Map.Entry<Long, GuildMember> entry) {
             boolean z2;
             Intrinsics3.checkNotNullParameter(entry, "<name for destructuring parameter 0>");
@@ -69,8 +69,8 @@ public final class WidgetServerSettingsAuditLogFilter6<T1, T2, T3, R> implements
         }
     }
 
-    /* compiled from: WidgetServerSettingsAuditLogFilter.kt */
-    /* renamed from: com.discord.widgets.servers.auditlog.WidgetServerSettingsAuditLogFilter$Model$Companion$getPermissionUserIds$1$2, reason: invalid class name */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.auditlog.WidgetServerSettingsAuditLogFilter$Model$Companion$getPermissionUserIds$1$2, reason: invalid class name */
+    /* JADX INFO: compiled from: WidgetServerSettingsAuditLogFilter.kt */
     public static final class AnonymousClass2 extends Lambda implements Function1<Map.Entry<? extends Long, ? extends GuildMember>, Long> {
         public static final AnonymousClass2 INSTANCE = new AnonymousClass2();
 
@@ -83,7 +83,7 @@ public final class WidgetServerSettingsAuditLogFilter6<T1, T2, T3, R> implements
             return Long.valueOf(invoke2((Map.Entry<Long, GuildMember>) entry));
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final long invoke2(Map.Entry<Long, GuildMember> entry) {
             Intrinsics3.checkNotNullParameter(entry, "it");
             return entry.getKey().longValue();
@@ -95,7 +95,7 @@ public final class WidgetServerSettingsAuditLogFilter6<T1, T2, T3, R> implements
         return call2(guild, (Map<Long, GuildRole>) map, (Map<Long, GuildMember>) map2);
     }
 
-    /* renamed from: call, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
     public final Set<Long> call2(Guild guild, Map<Long, GuildRole> map, Map<Long, GuildMember> map2) {
         Intrinsics3.checkNotNullExpressionValue(map2, "members");
         return _Sequences2.toSet(_Sequences2.map(_Sequences2.filter(_Maps.asSequence(map2), new AnonymousClass1(guild, map)), AnonymousClass2.INSTANCE));

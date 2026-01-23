@@ -32,8 +32,8 @@ import p658rx.Subscription;
 import p658rx.subjects.BehaviorSubject;
 import p658rx.subjects.Subject;
 
-/* compiled from: StoreSearchData.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: StoreSearchData.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class StoreSearchData {
     private final ObservationDeck observationDeck;
     private final Subject<SearchData, SearchData> searchDataSubject;
@@ -54,8 +54,8 @@ public final class StoreSearchData {
         }
     }
 
-    /* compiled from: StoreSearchData.kt */
-    /* renamed from: com.discord.stores.StoreSearchData$getChannelSearchData$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreSearchData$getChannelSearchData$1 */
+    /* JADX INFO: compiled from: StoreSearchData.kt */
     public static final class C63831 extends Lambda implements Function0<SearchData> {
         public final /* synthetic */ long $channelId;
 
@@ -83,8 +83,8 @@ public final class StoreSearchData {
         }
     }
 
-    /* compiled from: StoreSearchData.kt */
-    /* renamed from: com.discord.stores.StoreSearchData$getGuildSearchData$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreSearchData$getGuildSearchData$1 */
+    /* JADX INFO: compiled from: StoreSearchData.kt */
     public static final class C63841<T, R> implements Func1<Map<Long, ? extends Channel>, Map<Long, ? extends Channel>> {
         public static final C63841 INSTANCE = new C63841();
 
@@ -93,7 +93,7 @@ public final class StoreSearchData {
             return call2((Map<Long, Channel>) map);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final Map<Long, Channel> call2(Map<Long, Channel> map) {
             Intrinsics3.checkNotNullExpressionValue(map, "guildChannels");
             LinkedHashMap linkedHashMap = new LinkedHashMap();
@@ -106,8 +106,8 @@ public final class StoreSearchData {
         }
     }
 
-    /* compiled from: StoreSearchData.kt */
-    /* renamed from: com.discord.stores.StoreSearchData$getGuildSearchData$2 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreSearchData$getGuildSearchData$2 */
+    /* JADX INFO: compiled from: StoreSearchData.kt */
     public static final /* synthetic */ class C63852 extends FunctionReferenceImpl implements Function4<Map<Long, ? extends GuildMember>, Map<Long, ? extends User>, Map<Long, ? extends Channel>, Map<Long, ? extends Long>, SearchData> {
         public C63852(SearchData.Builder builder) {
             super(4, builder, SearchData.Builder.class, "buildForGuild", "buildForGuild(Ljava/util/Map;Ljava/util/Map;Ljava/util/Map;Ljava/util/Map;)Lcom/discord/utilities/search/validation/SearchData;", 0);
@@ -118,7 +118,7 @@ public final class StoreSearchData {
             return invoke2((Map<Long, GuildMember>) map, map2, (Map<Long, Channel>) map3, (Map<Long, Long>) map4);
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final SearchData invoke2(Map<Long, GuildMember> map, Map<Long, ? extends User> map2, Map<Long, Channel> map3, Map<Long, Long> map4) {
             Intrinsics3.checkNotNullParameter(map, "p1");
             Intrinsics3.checkNotNullParameter(map2, "p2");
@@ -128,8 +128,8 @@ public final class StoreSearchData {
         }
     }
 
-    /* compiled from: StoreSearchData.kt */
-    /* renamed from: com.discord.stores.StoreSearchData$init$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreSearchData$init$1 */
+    /* JADX INFO: compiled from: StoreSearchData.kt */
     public static final /* synthetic */ class C63861 extends FunctionReferenceImpl implements Function1<Subscription, Unit> {
         public C63861(StoreSearchData storeSearchData) {
             super(1, storeSearchData, StoreSearchData.class, "handleSubscription", "handleSubscription(Lrx/Subscription;)V", 0);
@@ -141,14 +141,14 @@ public final class StoreSearchData {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Subscription subscription) {
             StoreSearchData.access$handleSubscription((StoreSearchData) this.receiver, subscription);
         }
     }
 
-    /* compiled from: StoreSearchData.kt */
-    /* renamed from: com.discord.stores.StoreSearchData$init$2 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreSearchData$init$2 */
+    /* JADX INFO: compiled from: StoreSearchData.kt */
     public static final /* synthetic */ class C63872 extends FunctionReferenceImpl implements Function1<SearchData, Unit> {
         public C63872(StoreSearchData storeSearchData) {
             super(1, storeSearchData, StoreSearchData.class, "handleNewData", "handleNewData(Lcom/discord/utilities/search/validation/SearchData;)V", 0);
@@ -160,7 +160,7 @@ public final class StoreSearchData {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(SearchData searchData) {
             Intrinsics3.checkNotNullParameter(searchData, "p1");
             StoreSearchData.access$handleNewData((StoreSearchData) this.receiver, searchData);

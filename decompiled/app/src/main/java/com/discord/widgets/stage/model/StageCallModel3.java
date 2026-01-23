@@ -6,9 +6,9 @@ import kotlin.jvm.functions.Function1;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: StageCallModel.kt */
-/* renamed from: com.discord.widgets.stage.model.StageCallModel$Companion$create$3, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.stage.model.StageCallModel$Companion$create$3, reason: use source file name */
+/* JADX INFO: compiled from: StageCallModel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class StageCallModel3 extends Lambda implements Function1<StageCallItem.SpeakerItem, StoreVoiceParticipants.VoiceUser> {
     public static final StageCallModel3 INSTANCE = new StageCallModel3();
 
@@ -21,7 +21,7 @@ public final class StageCallModel3 extends Lambda implements Function1<StageCall
         return invoke2(speakerItem);
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final StoreVoiceParticipants.VoiceUser invoke2(StageCallItem.SpeakerItem speakerItem) {
         Intrinsics3.checkNotNullParameter(speakerItem, "it");
         return speakerItem.getVoiceUser();

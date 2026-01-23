@@ -6,12 +6,12 @@ import com.google.android.material.shape.CornerSize;
 import com.google.android.material.shape.RelativeCornerSize;
 import com.google.android.material.shape.ShapeAppearanceModel;
 
-/* compiled from: TransitionUtils.java */
-/* renamed from: b.i.a.g.l.l.j, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.g.l.l.j, reason: use source file name */
+/* JADX INFO: compiled from: TransitionUtils.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class TransitionUtils4 implements ShapeAppearanceModel.CornerSizeUnaryOperator {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final /* synthetic */ RectF f11936a;
 
     public TransitionUtils4(RectF rectF) {

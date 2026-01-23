@@ -28,7 +28,7 @@ import java.util.List;
 import java.util.Objects;
 import p007b.p100d.p104b.p105a.outline;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public final class WindowInsetsAnimationCompat {
     private static final boolean DEBUG = false;
     private static final String TAG = "WindowInsetsAnimCompat";
@@ -127,7 +127,7 @@ public final class WindowInsetsAnimationCompat {
             public final Callback mCallback;
             private WindowInsetsCompat mLastInsets;
 
-            /* renamed from: androidx.core.view.WindowInsetsAnimationCompat$Impl21$Impl21OnApplyWindowInsetsListener$1 */
+            /* JADX INFO: renamed from: androidx.core.view.WindowInsetsAnimationCompat$Impl21$Impl21OnApplyWindowInsetsListener$1 */
             public class C02951 implements ValueAnimator.AnimatorUpdateListener {
                 public final /* synthetic */ WindowInsetsAnimationCompat val$anim;
                 public final /* synthetic */ int val$animationMask;
@@ -150,7 +150,7 @@ public final class WindowInsetsAnimationCompat {
                 }
             }
 
-            /* renamed from: androidx.core.view.WindowInsetsAnimationCompat$Impl21$Impl21OnApplyWindowInsetsListener$2 */
+            /* JADX INFO: renamed from: androidx.core.view.WindowInsetsAnimationCompat$Impl21$Impl21OnApplyWindowInsetsListener$2 */
             public class C02962 extends AnimatorListenerAdapter {
                 public final /* synthetic */ WindowInsetsAnimationCompat val$anim;
                 public final /* synthetic */ View val$v;
@@ -167,7 +167,7 @@ public final class WindowInsetsAnimationCompat {
                 }
             }
 
-            /* renamed from: androidx.core.view.WindowInsetsAnimationCompat$Impl21$Impl21OnApplyWindowInsetsListener$3 */
+            /* JADX INFO: renamed from: androidx.core.view.WindowInsetsAnimationCompat$Impl21$Impl21OnApplyWindowInsetsListener$3 */
             public class RunnableC02973 implements Runnable {
                 public final /* synthetic */ WindowInsetsAnimationCompat val$anim;
                 public final /* synthetic */ BoundsCompat val$animationBounds;
@@ -346,7 +346,7 @@ public final class WindowInsetsAnimationCompat {
                     Insets insets = windowInsetsCompat.getInsets(i2);
                     Insets insets2 = windowInsetsCompat2.getInsets(i2);
                     float f2 = 1.0f - f;
-                    builder.setInsets(i2, WindowInsetsCompat.insetInsets(insets, (int) (((insets.left - insets2.left) * f2) + 0.5d), (int) (((insets.top - insets2.top) * f2) + 0.5d), (int) (((insets.right - insets2.right) * f2) + 0.5d), (int) (((insets.bottom - insets2.bottom) * f2) + 0.5d)));
+                    builder.setInsets(i2, WindowInsetsCompat.insetInsets(insets, (int) (((double) ((insets.left - insets2.left) * f2)) + 0.5d), (int) (((double) ((insets.top - insets2.top) * f2)) + 0.5d), (int) (((double) ((insets.right - insets2.right) * f2)) + 0.5d), (int) (((double) ((insets.bottom - insets2.bottom) * f2)) + 0.5d)));
                 }
             }
             return builder.build();

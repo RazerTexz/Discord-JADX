@@ -8,14 +8,14 @@ import kotlin.jvm.functions.Function1;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: StoreOutboundPromotions.kt */
-/* renamed from: com.discord.stores.StoreOutboundPromotions$handleConnectionOpen$3, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.stores.StoreOutboundPromotions$handleConnectionOpen$3, reason: use source file name */
+/* JADX INFO: compiled from: StoreOutboundPromotions.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class StoreOutboundPromotions3 extends Lambda implements Function1<Error, Unit> {
     public final /* synthetic */ StoreOutboundPromotions this$0;
 
-    /* compiled from: StoreOutboundPromotions.kt */
-    /* renamed from: com.discord.stores.StoreOutboundPromotions$handleConnectionOpen$3$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreOutboundPromotions$handleConnectionOpen$3$1 */
+    /* JADX INFO: compiled from: StoreOutboundPromotions.kt */
     public static final class C63171 extends Lambda implements Function0<Unit> {
         public C63171() {
             super(0);
@@ -27,7 +27,7 @@ public final class StoreOutboundPromotions3 extends Lambda implements Function1<
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             StoreOutboundPromotions.access$setState$p(StoreOutboundPromotions3.this.this$0, StoreOutboundPromotions.State.Failed.INSTANCE);
             StoreOutboundPromotions3.this.this$0.markChanged();
@@ -46,7 +46,7 @@ public final class StoreOutboundPromotions3 extends Lambda implements Function1<
         return Unit.f27425a;
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final void invoke2(Error error) {
         Intrinsics3.checkNotNullParameter(error, "it");
         StoreOutboundPromotions.access$getDispatcher$p(this.this$0).schedule(new C63171());

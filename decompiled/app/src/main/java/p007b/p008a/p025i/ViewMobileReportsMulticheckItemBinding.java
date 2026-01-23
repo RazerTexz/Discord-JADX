@@ -5,12 +5,12 @@ import androidx.annotation.NonNull;
 import androidx.viewbinding.ViewBinding;
 import com.discord.views.CheckedSetting;
 
-/* compiled from: ViewMobileReportsMulticheckItemBinding.java */
-/* renamed from: b.a.i.r2, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.a.i.r2, reason: use source file name */
+/* JADX INFO: compiled from: ViewMobileReportsMulticheckItemBinding.java */
+/* JADX INFO: loaded from: classes.dex */
 public final class ViewMobileReportsMulticheckItemBinding implements ViewBinding {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     @NonNull
     public final CheckedSetting f1180a;
 

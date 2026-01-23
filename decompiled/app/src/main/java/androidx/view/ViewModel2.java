@@ -6,9 +6,9 @@ import kotlinx.coroutines.CoroutineScope;
 import p007b.p225i.p226a.p288f.p299e.p308o.C3404f;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ViewModel.kt */
-/* renamed from: androidx.lifecycle.CloseableCoroutineScope, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: androidx.lifecycle.CloseableCoroutineScope, reason: use source file name */
+/* JADX INFO: compiled from: ViewModel.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class ViewModel2 implements Closeable, CoroutineScope {
     private final CoroutineContext coroutineContext;
 

@@ -60,30 +60,30 @@ import p507d0.p592z.p594d.Lambda;
 import p507d0.p592z.p594d.Reflection2;
 import p658rx.Observable;
 
-/* compiled from: WidgetHubEmailFlow.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetHubEmailFlow.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetHubEmailFlow extends AppFragment {
     public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetHubEmailFlow.class, "binding", "getBinding()Lcom/discord/databinding/WidgetHubEmailFlowBinding;", 0)};
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private static final String NAME = WidgetHubEmailFlow.class.getName();
     private final ActivityResultLauncher<Intent> activityResultHandler;
 
-    /* renamed from: args$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: args$delegate, reason: from kotlin metadata */
     private final Lazy args;
 
-    /* renamed from: binding$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
     private final AppLogger2 loggingConfig;
 
-    /* renamed from: validationManager$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: validationManager$delegate, reason: from kotlin metadata */
     private final Lazy validationManager;
 
-    /* renamed from: viewModel$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: viewModel$delegate, reason: from kotlin metadata */
     private final Lazy viewModel;
 
-    /* compiled from: WidgetHubEmailFlow.kt */
+    /* JADX INFO: compiled from: WidgetHubEmailFlow.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -117,8 +117,8 @@ public final class WidgetHubEmailFlow extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetHubEmailFlow.kt */
-    /* renamed from: com.discord.widgets.hubs.WidgetHubEmailFlow$onViewBoundOrOnResume$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.hubs.WidgetHubEmailFlow$onViewBoundOrOnResume$1 */
+    /* JADX INFO: compiled from: WidgetHubEmailFlow.kt */
     public static final class C90341 extends Lambda implements Function1<WidgetHubEmailViewModel4, Unit> {
         public C90341() {
             super(1);
@@ -130,7 +130,7 @@ public final class WidgetHubEmailFlow extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(WidgetHubEmailViewModel4 widgetHubEmailViewModel4) {
             WidgetHubEmailFlow widgetHubEmailFlow = WidgetHubEmailFlow.this;
             Intrinsics3.checkNotNullExpressionValue(widgetHubEmailViewModel4, "viewState");
@@ -138,8 +138,8 @@ public final class WidgetHubEmailFlow extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetHubEmailFlow.kt */
-    /* renamed from: com.discord.widgets.hubs.WidgetHubEmailFlow$onViewCreated$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.hubs.WidgetHubEmailFlow$onViewCreated$1 */
+    /* JADX INFO: compiled from: WidgetHubEmailFlow.kt */
     public static final class ViewOnClickListenerC90351 implements View.OnClickListener {
         public ViewOnClickListenerC90351() {
         }
@@ -150,12 +150,12 @@ public final class WidgetHubEmailFlow extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetHubEmailFlow.kt */
-    /* renamed from: com.discord.widgets.hubs.WidgetHubEmailFlow$onViewCreated$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.hubs.WidgetHubEmailFlow$onViewCreated$2 */
+    /* JADX INFO: compiled from: WidgetHubEmailFlow.kt */
     public static final class ViewOnClickListenerC90362 implements View.OnClickListener {
 
-        /* compiled from: WidgetHubEmailFlow.kt */
-        /* renamed from: com.discord.widgets.hubs.WidgetHubEmailFlow$onViewCreated$2$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.widgets.hubs.WidgetHubEmailFlow$onViewCreated$2$1, reason: invalid class name */
+        /* JADX INFO: compiled from: WidgetHubEmailFlow.kt */
         public static final class AnonymousClass1 extends Lambda implements Function1<StoreNux.NuxState, StoreNux.NuxState> {
             public static final AnonymousClass1 INSTANCE = new AnonymousClass1();
 
@@ -168,7 +168,7 @@ public final class WidgetHubEmailFlow extends AppFragment {
                 return invoke2(nuxState);
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final StoreNux.NuxState invoke2(StoreNux.NuxState nuxState) {
                 Intrinsics3.checkNotNullParameter(nuxState, "it");
                 return StoreNux.NuxState.copy$default(nuxState, false, false, false, false, false, null, 62, null);
@@ -192,8 +192,8 @@ public final class WidgetHubEmailFlow extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetHubEmailFlow.kt */
-    /* renamed from: com.discord.widgets.hubs.WidgetHubEmailFlow$onViewCreated$3 */
+    /* JADX INFO: renamed from: com.discord.widgets.hubs.WidgetHubEmailFlow$onViewCreated$3 */
+    /* JADX INFO: compiled from: WidgetHubEmailFlow.kt */
     public static final class ViewOnClickListenerC90373 implements View.OnClickListener {
         public ViewOnClickListenerC90373() {
         }
@@ -204,8 +204,8 @@ public final class WidgetHubEmailFlow extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetHubEmailFlow.kt */
-    /* renamed from: com.discord.widgets.hubs.WidgetHubEmailFlow$updateView$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.hubs.WidgetHubEmailFlow$updateView$2 */
+    /* JADX INFO: compiled from: WidgetHubEmailFlow.kt */
     public static final class ViewOnClickListenerC90392 implements View.OnClickListener {
         public ViewOnClickListenerC90392() {
         }
@@ -219,8 +219,8 @@ public final class WidgetHubEmailFlow extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetHubEmailFlow.kt */
-    /* renamed from: com.discord.widgets.hubs.WidgetHubEmailFlow$updateView$3 */
+    /* JADX INFO: renamed from: com.discord.widgets.hubs.WidgetHubEmailFlow$updateView$3 */
+    /* JADX INFO: compiled from: WidgetHubEmailFlow.kt */
     public static final class ViewOnClickListenerC90403 implements View.OnClickListener {
         public ViewOnClickListenerC90403() {
         }
@@ -231,8 +231,8 @@ public final class WidgetHubEmailFlow extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetHubEmailFlow.kt */
-    /* renamed from: com.discord.widgets.hubs.WidgetHubEmailFlow$updateView$4 */
+    /* JADX INFO: renamed from: com.discord.widgets.hubs.WidgetHubEmailFlow$updateView$4 */
+    /* JADX INFO: compiled from: WidgetHubEmailFlow.kt */
     public static final class C90414 extends Lambda implements Function1<RestCallState6<? extends EmailVerification>, Unit> {
         public final /* synthetic */ Context $context;
         public final /* synthetic */ String $email;
@@ -252,7 +252,7 @@ public final class WidgetHubEmailFlow extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(RestCallState6<EmailVerification> restCallState6) {
             Intrinsics3.checkNotNullParameter(restCallState6, "it");
             StoreStream.INSTANCE.getDirectories().markDiscordHubClicked();

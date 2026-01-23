@@ -6,9 +6,9 @@ import java.io.StringWriter;
 import java.io.Writer;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ReadWrite.kt */
-/* renamed from: d0.y.i, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.y.i, reason: use source file name */
+/* JADX INFO: compiled from: ReadWrite.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class ReadWrite {
     public static final long copyTo(Reader reader, Writer writer, int i) throws IOException {
         Intrinsics3.checkNotNullParameter(reader, "$this$copyTo");
@@ -18,7 +18,7 @@ public final class ReadWrite {
         long j = 0;
         while (i2 >= 0) {
             writer.write(cArr, 0, i2);
-            j += i2;
+            j += (long) i2;
             i2 = reader.read(cArr);
         }
         return j;

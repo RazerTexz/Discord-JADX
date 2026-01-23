@@ -44,8 +44,8 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 import p658rx.Observable;
 
-/* compiled from: StoreGuildScheduledEvents.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: StoreGuildScheduledEvents.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class StoreGuildScheduledEvents extends StoreV2 {
     public static final long FETCH_GUILD_EVENTS_THRESHOLD = 1800000;
     private final Clock clock;
@@ -70,8 +70,8 @@ public final class StoreGuildScheduledEvents extends StoreV2 {
     private HashSet<Long> rsvpsAwaitingSnapshot;
     private final StoreUser userStore;
 
-    /* compiled from: StoreGuildScheduledEvents.kt */
-    /* renamed from: com.discord.stores.StoreGuildScheduledEvents$ackGuildEvents$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreGuildScheduledEvents$ackGuildEvents$1 */
+    /* JADX INFO: compiled from: StoreGuildScheduledEvents.kt */
     public static final class C60631 extends Lambda implements Function1<Void, Unit> {
         public final /* synthetic */ long $guildId;
         public final /* synthetic */ GuildScheduledEvent $mostRecentEvent;
@@ -89,19 +89,19 @@ public final class StoreGuildScheduledEvents extends StoreV2 {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Void r4) {
             StoreGuildScheduledEvents.access$getLastAckedGuildScheduledEventIds$p(StoreGuildScheduledEvents.this).put(Long.valueOf(this.$guildId), Long.valueOf(this.$mostRecentEvent.getId()));
         }
     }
 
-    /* compiled from: StoreGuildScheduledEvents.kt */
-    /* renamed from: com.discord.stores.StoreGuildScheduledEvents$fetchGuildScheduledEventUserCounts$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreGuildScheduledEvents$fetchGuildScheduledEventUserCounts$1 */
+    /* JADX INFO: compiled from: StoreGuildScheduledEvents.kt */
     public static final class C60641 extends Lambda implements Function1<List<? extends GuildScheduledEvent>, Unit> {
         public final /* synthetic */ long $guildId;
 
-        /* compiled from: StoreGuildScheduledEvents.kt */
-        /* renamed from: com.discord.stores.StoreGuildScheduledEvents$fetchGuildScheduledEventUserCounts$1$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.stores.StoreGuildScheduledEvents$fetchGuildScheduledEventUserCounts$1$1, reason: invalid class name */
+        /* JADX INFO: compiled from: StoreGuildScheduledEvents.kt */
         public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
             public final /* synthetic */ List $events;
 
@@ -117,7 +117,7 @@ public final class StoreGuildScheduledEvents extends StoreV2 {
                 return Unit.f27425a;
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2() {
                 StoreGuildScheduledEvents.access$getGuildScheduledEvents$p(StoreGuildScheduledEvents.this).put(Long.valueOf(C60641.this.$guildId), _Collections.toMutableList((Collection) this.$events));
                 StoreGuildScheduledEvents.access$getGuildScheduledEventsFetchTimestamps$p(StoreGuildScheduledEvents.this).put(Long.valueOf(C60641.this.$guildId), Long.valueOf(StoreGuildScheduledEvents.access$getClock$p(StoreGuildScheduledEvents.this).currentTimeMillis()));
@@ -137,21 +137,21 @@ public final class StoreGuildScheduledEvents extends StoreV2 {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(List<GuildScheduledEvent> list) {
             Intrinsics3.checkNotNullParameter(list, "events");
             StoreGuildScheduledEvents.access$getDispatcher$p(StoreGuildScheduledEvents.this).schedule(new AnonymousClass1(list));
         }
     }
 
-    /* compiled from: StoreGuildScheduledEvents.kt */
-    /* renamed from: com.discord.stores.StoreGuildScheduledEvents$fetchGuildScheduledEventUsers$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreGuildScheduledEvents$fetchGuildScheduledEventUsers$1 */
+    /* JADX INFO: compiled from: StoreGuildScheduledEvents.kt */
     public static final class C60651 extends Lambda implements Function0<Unit> {
         public final /* synthetic */ long $eventId;
         public final /* synthetic */ long $guildId;
 
-        /* compiled from: StoreGuildScheduledEvents.kt */
-        /* renamed from: com.discord.stores.StoreGuildScheduledEvents$fetchGuildScheduledEventUsers$1$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.stores.StoreGuildScheduledEvents$fetchGuildScheduledEventUsers$1$1, reason: invalid class name */
+        /* JADX INFO: compiled from: StoreGuildScheduledEvents.kt */
         public static final class AnonymousClass1 extends Lambda implements Function1<Error, Unit> {
             public AnonymousClass1() {
                 super(1);
@@ -163,24 +163,24 @@ public final class StoreGuildScheduledEvents extends StoreV2 {
                 return Unit.f27425a;
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2(Error error) {
                 Intrinsics3.checkNotNullParameter(error, "it");
                 StoreGuildScheduledEvents.access$handleFetchRsvpUsersFailure(StoreGuildScheduledEvents.this);
             }
         }
 
-        /* compiled from: StoreGuildScheduledEvents.kt */
-        /* renamed from: com.discord.stores.StoreGuildScheduledEvents$fetchGuildScheduledEventUsers$1$2, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.stores.StoreGuildScheduledEvents$fetchGuildScheduledEventUsers$1$2, reason: invalid class name */
+        /* JADX INFO: compiled from: StoreGuildScheduledEvents.kt */
         public static final class AnonymousClass2 extends Lambda implements Function1<List<? extends ApiGuildScheduledEventUser>, Unit> {
 
-            /* compiled from: StoreGuildScheduledEvents.kt */
-            /* renamed from: com.discord.stores.StoreGuildScheduledEvents$fetchGuildScheduledEventUsers$1$2$1, reason: invalid class name */
+            /* JADX INFO: renamed from: com.discord.stores.StoreGuildScheduledEvents$fetchGuildScheduledEventUsers$1$2$1, reason: invalid class name */
+            /* JADX INFO: compiled from: StoreGuildScheduledEvents.kt */
             public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
                 public final /* synthetic */ List $apiGuildScheduledEventUsers;
 
-                /* compiled from: StoreGuildScheduledEvents.kt */
-                /* renamed from: com.discord.stores.StoreGuildScheduledEvents$fetchGuildScheduledEventUsers$1$2$1$1, reason: invalid class name and collision with other inner class name */
+                /* JADX INFO: renamed from: com.discord.stores.StoreGuildScheduledEvents$fetchGuildScheduledEventUsers$1$2$1$1, reason: invalid class name and collision with other inner class name */
+                /* JADX INFO: compiled from: StoreGuildScheduledEvents.kt */
                 public static final class C132571 extends Lambda implements Function1<ApiGuildScheduledEventUser, GuildScheduledEventUser> {
                     public C132571() {
                         super(1);
@@ -191,7 +191,7 @@ public final class StoreGuildScheduledEvents extends StoreV2 {
                         return invoke2(apiGuildScheduledEventUser);
                     }
 
-                    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+                    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
                     public final GuildScheduledEventUser invoke2(ApiGuildScheduledEventUser apiGuildScheduledEventUser) {
                         Intrinsics3.checkNotNullParameter(apiGuildScheduledEventUser, "apiEventUser");
                         return GuildScheduledEventUser.INSTANCE.from(apiGuildScheduledEventUser, C60651.this.$guildId);
@@ -210,7 +210,7 @@ public final class StoreGuildScheduledEvents extends StoreV2 {
                     return Unit.f27425a;
                 }
 
-                /* renamed from: invoke, reason: avoid collision after fix types in other method */
+                /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
                 public final void invoke2() {
                     StoreGuildScheduledEvents.access$getUserStore$p(StoreGuildScheduledEvents.this).handleGuildScheduledEventUsersFetch(this.$apiGuildScheduledEventUsers);
                     StoreGuildScheduledEvents.access$getGuildsStore$p(StoreGuildScheduledEvents.this).handleGuildScheduledEventUsersFetch(this.$apiGuildScheduledEventUsers, C60651.this.$guildId);
@@ -244,7 +244,7 @@ public final class StoreGuildScheduledEvents extends StoreV2 {
                 return Unit.f27425a;
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2(List<ApiGuildScheduledEventUser> list) {
                 Intrinsics3.checkNotNullParameter(list, "apiGuildScheduledEventUsers");
                 StoreGuildScheduledEvents.access$getDispatcher$p(StoreGuildScheduledEvents.this).schedule(new AnonymousClass1(list));
@@ -264,7 +264,7 @@ public final class StoreGuildScheduledEvents extends StoreV2 {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             Set setEmptySet = (Set) StoreGuildScheduledEvents.access$getGuildScheduledEventUsersFetches$p(StoreGuildScheduledEvents.this).get(Long.valueOf(this.$guildId));
             if (setEmptySet == null) {
@@ -280,13 +280,13 @@ public final class StoreGuildScheduledEvents extends StoreV2 {
         }
     }
 
-    /* compiled from: StoreGuildScheduledEvents.kt */
-    /* renamed from: com.discord.stores.StoreGuildScheduledEvents$fetchMeGuildScheduledEvents$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreGuildScheduledEvents$fetchMeGuildScheduledEvents$1 */
+    /* JADX INFO: compiled from: StoreGuildScheduledEvents.kt */
     public static final class C60661 extends Lambda implements Function1<List<? extends GuildScheduledEventMeUser>, Unit> {
         public final /* synthetic */ long $guildId;
 
-        /* compiled from: StoreGuildScheduledEvents.kt */
-        /* renamed from: com.discord.stores.StoreGuildScheduledEvents$fetchMeGuildScheduledEvents$1$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.stores.StoreGuildScheduledEvents$fetchMeGuildScheduledEvents$1$1, reason: invalid class name */
+        /* JADX INFO: compiled from: StoreGuildScheduledEvents.kt */
         public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
             public final /* synthetic */ List $eventUsers;
 
@@ -302,7 +302,7 @@ public final class StoreGuildScheduledEvents extends StoreV2 {
                 return Unit.f27425a;
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2() {
                 List list = this.$eventUsers;
                 ArrayList arrayList = new ArrayList(Iterables2.collectionSizeOrDefault(list, 10));
@@ -328,15 +328,15 @@ public final class StoreGuildScheduledEvents extends StoreV2 {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(List<GuildScheduledEventMeUser> list) {
             Intrinsics3.checkNotNullParameter(list, "eventUsers");
             StoreGuildScheduledEvents.access$getDispatcher$p(StoreGuildScheduledEvents.this).schedule(new AnonymousClass1(list));
         }
     }
 
-    /* compiled from: StoreGuildScheduledEvents.kt */
-    /* renamed from: com.discord.stores.StoreGuildScheduledEvents$handleFetchRsvpUsersFailure$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreGuildScheduledEvents$handleFetchRsvpUsersFailure$1 */
+    /* JADX INFO: compiled from: StoreGuildScheduledEvents.kt */
     public static final class C60671 extends Lambda implements Function0<Unit> {
         public C60671() {
             super(0);
@@ -348,7 +348,7 @@ public final class StoreGuildScheduledEvents extends StoreV2 {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             StoreGuildScheduledEvents.access$setFetchingGuildScheduledEventUsers$p(StoreGuildScheduledEvents.this, false);
             StoreGuildScheduledEvents.access$setGuildScheduledEventUsersError$p(StoreGuildScheduledEvents.this, true);
@@ -356,8 +356,8 @@ public final class StoreGuildScheduledEvents extends StoreV2 {
         }
     }
 
-    /* compiled from: StoreGuildScheduledEvents.kt */
-    /* renamed from: com.discord.stores.StoreGuildScheduledEvents$observeGuildScheduledEvent$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreGuildScheduledEvents$observeGuildScheduledEvent$1 */
+    /* JADX INFO: compiled from: StoreGuildScheduledEvents.kt */
     public static final class C60681 extends Lambda implements Function0<GuildScheduledEvent> {
         public final /* synthetic */ Long $eventId;
         public final /* synthetic */ Long $guildId;
@@ -385,8 +385,8 @@ public final class StoreGuildScheduledEvents extends StoreV2 {
         }
     }
 
-    /* compiled from: StoreGuildScheduledEvents.kt */
-    /* renamed from: com.discord.stores.StoreGuildScheduledEvents$observeGuildScheduledEvents$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreGuildScheduledEvents$observeGuildScheduledEvents$1 */
+    /* JADX INFO: compiled from: StoreGuildScheduledEvents.kt */
     public static final class C60691 extends Lambda implements Function0<List<? extends GuildScheduledEvent>> {
         public final /* synthetic */ boolean $filterInaccessible;
         public final /* synthetic */ long $guildId;
@@ -404,21 +404,21 @@ public final class StoreGuildScheduledEvents extends StoreV2 {
         }
 
         @Override // kotlin.jvm.functions.Function0
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final List<? extends GuildScheduledEvent> invoke2() {
             return StoreGuildScheduledEvents.this.getGuildScheduledEvents(this.$guildId, this.$filterInaccessible);
         }
     }
 
-    /* compiled from: StoreGuildScheduledEvents.kt */
-    /* renamed from: com.discord.stores.StoreGuildScheduledEvents$toggleMeRsvpForEvent$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreGuildScheduledEvents$toggleMeRsvpForEvent$1 */
+    /* JADX INFO: compiled from: StoreGuildScheduledEvents.kt */
     public static final class C60701 extends Lambda implements Function0<Unit> {
         public final /* synthetic */ long $eventId;
         public final /* synthetic */ GuildScheduledEvent $guildScheduledEvent;
         public final /* synthetic */ GuildScheduledEvent $storeEvent;
 
-        /* compiled from: StoreGuildScheduledEvents.kt */
-        /* renamed from: com.discord.stores.StoreGuildScheduledEvents$toggleMeRsvpForEvent$1$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.stores.StoreGuildScheduledEvents$toggleMeRsvpForEvent$1$1, reason: invalid class name */
+        /* JADX INFO: compiled from: StoreGuildScheduledEvents.kt */
         public static final class AnonymousClass1 extends Lambda implements Function1<Error, Unit> {
             public AnonymousClass1() {
                 super(1);
@@ -430,7 +430,7 @@ public final class StoreGuildScheduledEvents extends StoreV2 {
                 return Unit.f27425a;
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2(Error error) {
                 Intrinsics3.checkNotNullParameter(error, "it");
                 C60701 c60701 = C60701.this;
@@ -440,8 +440,8 @@ public final class StoreGuildScheduledEvents extends StoreV2 {
             }
         }
 
-        /* compiled from: StoreGuildScheduledEvents.kt */
-        /* renamed from: com.discord.stores.StoreGuildScheduledEvents$toggleMeRsvpForEvent$1$2, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.stores.StoreGuildScheduledEvents$toggleMeRsvpForEvent$1$2, reason: invalid class name */
+        /* JADX INFO: compiled from: StoreGuildScheduledEvents.kt */
         public static final class AnonymousClass2 extends Lambda implements Function1<Void, Unit> {
             public AnonymousClass2() {
                 super(1);
@@ -453,14 +453,14 @@ public final class StoreGuildScheduledEvents extends StoreV2 {
                 return Unit.f27425a;
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2(Void r3) {
                 StoreGuildScheduledEvents.access$getRsvpsAwaitingNetwork$p(StoreGuildScheduledEvents.this).remove(Long.valueOf(C60701.this.$eventId));
             }
         }
 
-        /* compiled from: StoreGuildScheduledEvents.kt */
-        /* renamed from: com.discord.stores.StoreGuildScheduledEvents$toggleMeRsvpForEvent$1$3, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.stores.StoreGuildScheduledEvents$toggleMeRsvpForEvent$1$3, reason: invalid class name */
+        /* JADX INFO: compiled from: StoreGuildScheduledEvents.kt */
         public static final class AnonymousClass3 extends Lambda implements Function1<Error, Unit> {
             public AnonymousClass3() {
                 super(1);
@@ -472,7 +472,7 @@ public final class StoreGuildScheduledEvents extends StoreV2 {
                 return Unit.f27425a;
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2(Error error) {
                 Intrinsics3.checkNotNullParameter(error, "it");
                 C60701 c60701 = C60701.this;
@@ -482,8 +482,8 @@ public final class StoreGuildScheduledEvents extends StoreV2 {
             }
         }
 
-        /* compiled from: StoreGuildScheduledEvents.kt */
-        /* renamed from: com.discord.stores.StoreGuildScheduledEvents$toggleMeRsvpForEvent$1$4, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.stores.StoreGuildScheduledEvents$toggleMeRsvpForEvent$1$4, reason: invalid class name */
+        /* JADX INFO: compiled from: StoreGuildScheduledEvents.kt */
         public static final class AnonymousClass4 extends Lambda implements Function1<Unit, Unit> {
             public AnonymousClass4() {
                 super(1);
@@ -495,7 +495,7 @@ public final class StoreGuildScheduledEvents extends StoreV2 {
                 return Unit.f27425a;
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2(Unit unit) {
                 Intrinsics3.checkNotNullParameter(unit, "it");
                 StoreGuildScheduledEvents.access$getRsvpsAwaitingNetwork$p(StoreGuildScheduledEvents.this).remove(Long.valueOf(C60701.this.$eventId));
@@ -516,7 +516,7 @@ public final class StoreGuildScheduledEvents extends StoreV2 {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             if (StoreGuildScheduledEvents.this.isMeRsvpedToEvent(this.$guildScheduledEvent.getGuildId(), this.$eventId)) {
                 StoreGuildScheduledEvents storeGuildScheduledEvents = StoreGuildScheduledEvents.this;

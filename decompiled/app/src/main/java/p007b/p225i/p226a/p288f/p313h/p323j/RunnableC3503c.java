@@ -1,13 +1,13 @@
 package p007b.p225i.p226a.p288f.p313h.p323j;
 
-/* renamed from: b.i.a.f.h.j.c */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.h.j.c */
+/* JADX INFO: loaded from: classes3.dex */
 public final class RunnableC3503c implements Runnable {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final /* synthetic */ InterfaceC3507d0 f9677j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final /* synthetic */ C3497a f9678k;
 
     public RunnableC3503c(C3497a c3497a, InterfaceC3507d0 interfaceC3507d0) {

@@ -10,12 +10,12 @@ import java.util.concurrent.CancellationException;
 import p007b.p085c.p086a.p087a0.AnimatableValueParser;
 import p007b.p225i.p226a.p288f.p299e.C3256c;
 
-/* compiled from: com.google.android.gms:play-services-base@@17.3.0 */
-/* renamed from: b.i.a.f.e.h.j.b0 */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.e.h.j.b0 */
+/* JADX INFO: compiled from: com.google.android.gms:play-services-base@@17.3.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public class C3279b0 extends AbstractDialogInterfaceOnCancelListenerC3320t0 {
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public TaskCompletionSource<Void> f9348o;
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -27,13 +27,13 @@ public class C3279b0 extends AbstractDialogInterfaceOnCancelListenerC3320t0 {
     }
 
     @Override // com.google.android.gms.common.api.internal.LifecycleCallback
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public void mo4063f() {
         this.f9348o.m9125a(new CancellationException("Host activity was destroyed before Google Play services could be made available."));
     }
 
     @Override // p007b.p225i.p226a.p288f.p299e.p300h.p301j.AbstractDialogInterfaceOnCancelListenerC3320t0
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final void mo4061k() {
         Activity activityMo4071e = this.f20511j.mo4071e();
         if (activityMo4071e == null) {
@@ -52,7 +52,7 @@ public class C3279b0 extends AbstractDialogInterfaceOnCancelListenerC3320t0 {
     }
 
     @Override // p007b.p225i.p226a.p288f.p299e.p300h.p301j.AbstractDialogInterfaceOnCancelListenerC3320t0
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final void mo4062l(ConnectionResult connectionResult, int i) {
         TaskCompletionSource<Void> taskCompletionSource = this.f9348o;
         taskCompletionSource.f20845a.m6025t(AnimatableValueParser.m540l0(new Status(connectionResult.f20474l, connectionResult.f20476n, connectionResult.f20475m)));

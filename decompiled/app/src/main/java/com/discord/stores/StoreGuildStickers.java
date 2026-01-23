@@ -29,8 +29,8 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 import p658rx.Observable;
 
-/* compiled from: StoreGuildStickers.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: StoreGuildStickers.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class StoreGuildStickers extends StoreV2 {
     private final Map<Long, Map<Long, Sticker>> allGuildStickers;
     private List<Sticker> allGuildStickersFlattenedSnapshot;
@@ -40,8 +40,8 @@ public final class StoreGuildStickers extends StoreV2 {
     private final ObservationDeck observationDeck;
     private final Function1<List<Long>, Unit> onStickersDeleted;
 
-    /* compiled from: StoreGuildStickers.kt */
-    /* renamed from: com.discord.stores.StoreGuildStickers$handleFetchedSticker$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreGuildStickers$handleFetchedSticker$1 */
+    /* JADX INFO: compiled from: StoreGuildStickers.kt */
     public static final class C60771 extends Lambda implements Function0<Unit> {
         public final /* synthetic */ long $guildId;
         public final /* synthetic */ Sticker $sticker;
@@ -59,7 +59,7 @@ public final class StoreGuildStickers extends StoreV2 {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             LinkedHashMap linkedHashMap = new LinkedHashMap();
             Map mapEmptyMap = (Map) StoreGuildStickers.access$getAllGuildStickers$p(StoreGuildStickers.this).get(Long.valueOf(this.$guildId));
@@ -73,8 +73,8 @@ public final class StoreGuildStickers extends StoreV2 {
         }
     }
 
-    /* compiled from: StoreGuildStickers.kt */
-    /* renamed from: com.discord.stores.StoreGuildStickers$observeGuildStickers$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreGuildStickers$observeGuildStickers$1 */
+    /* JADX INFO: compiled from: StoreGuildStickers.kt */
     public static final class C60781 extends Lambda implements Function0<Map<Long, ? extends Map<Long, ? extends Sticker>>> {
         public C60781() {
             super(0);
@@ -86,7 +86,7 @@ public final class StoreGuildStickers extends StoreV2 {
         }
 
         @Override // kotlin.jvm.functions.Function0
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final Map<Long, ? extends Map<Long, ? extends Sticker>> invoke2() {
             return StoreGuildStickers.access$getAllGuildStickersSnapshot$p(StoreGuildStickers.this);
         }

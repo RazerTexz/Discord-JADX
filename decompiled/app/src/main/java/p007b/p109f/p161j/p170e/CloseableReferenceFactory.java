@@ -8,19 +8,19 @@ import java.util.Objects;
 import p007b.p109f.p115d.p120e.FLog;
 import p007b.p109f.p161j.p172g.NoOpCloseableReferenceLeakTracker;
 
-/* compiled from: CloseableReferenceFactory.java */
-/* renamed from: b.f.j.e.a, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.f.j.e.a, reason: use source file name */
+/* JADX INFO: compiled from: CloseableReferenceFactory.java */
+/* JADX INFO: loaded from: classes.dex */
 public class CloseableReferenceFactory {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final CloseableReference.InterfaceC10637c f3725a;
 
-    /* compiled from: CloseableReferenceFactory.java */
-    /* renamed from: b.f.j.e.a$a */
+    /* JADX INFO: renamed from: b.f.j.e.a$a */
+    /* JADX INFO: compiled from: CloseableReferenceFactory.java */
     public class a implements CloseableReference.InterfaceC10637c {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final /* synthetic */ NoOpCloseableReferenceLeakTracker f3726a;
 
         public a(CloseableReferenceFactory closeableReferenceFactory, NoOpCloseableReferenceLeakTracker noOpCloseableReferenceLeakTracker) {
@@ -28,7 +28,7 @@ public class CloseableReferenceFactory {
         }
 
         @Override // com.facebook.common.references.CloseableReference.InterfaceC10637c
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public void mo1252a(SharedReference<Object> sharedReference, Throwable th) {
             String string;
             Objects.requireNonNull(this.f3726a);
@@ -50,7 +50,7 @@ public class CloseableReferenceFactory {
         }
 
         @Override // com.facebook.common.references.CloseableReference.InterfaceC10637c
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public boolean mo1253b() {
             Objects.requireNonNull(this.f3726a);
             return false;

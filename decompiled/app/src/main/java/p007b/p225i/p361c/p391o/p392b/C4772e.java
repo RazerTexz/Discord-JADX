@@ -17,15 +17,15 @@ import p007b.p225i.p361c.FirebaseApp2;
 import p007b.p225i.p361c.p362j.p363a.InterfaceC4549a;
 import p007b.p225i.p361c.p391o.AbstractC4767a;
 
-/* compiled from: com.google.firebase:firebase-dynamic-links@@19.1.1 */
-/* renamed from: b.i.c.o.b.e */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.c.o.b.e */
+/* JADX INFO: compiled from: com.google.firebase:firebase-dynamic-links@@19.1.1 */
+/* JADX INFO: loaded from: classes3.dex */
 public final class C4772e extends AbstractC4767a {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final C3267b<C3266a.d.c> f12808a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     @Nullable
     public final InterfaceC4549a f12809b;
 
@@ -39,7 +39,7 @@ public final class C4772e extends AbstractC4767a {
     }
 
     @Override // p007b.p225i.p361c.p391o.AbstractC4767a
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final Task<PendingDynamicLinkData> mo6703a(@NonNull Intent intent) {
         DynamicLinkData dynamicLinkDataCreateFromParcel;
         Task taskM4046c = this.f12808a.m4046c(new C4776i(this.f12809b, intent.getDataString()));

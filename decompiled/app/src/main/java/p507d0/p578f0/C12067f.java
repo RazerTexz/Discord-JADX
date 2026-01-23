@@ -4,12 +4,12 @@ import java.util.Iterator;
 import kotlin.sequences.Sequence;
 import p507d0.p580t.Collections3;
 
-/* compiled from: Sequences.kt */
-/* renamed from: d0.f0.f */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.f0.f */
+/* JADX INFO: compiled from: Sequences.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class C12067f implements Sequence, InterfaceC12066e {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final C12067f f25081a = new C12067f();
 
     @Override // p507d0.p578f0.InterfaceC12066e

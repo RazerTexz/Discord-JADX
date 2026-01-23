@@ -3,9 +3,9 @@ package com.discord.utilities.guildautomod;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: AutoModUtils.kt */
-/* renamed from: com.discord.utilities.guildautomod.AutoModBlockFailure, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.utilities.guildautomod.AutoModBlockFailure, reason: use source file name */
+/* JADX INFO: compiled from: AutoModUtils.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final /* data */ class AutoModUtils2 extends Throwable {
     private final int errorStringId;
     private final String reasonCode;
@@ -26,12 +26,12 @@ public final /* data */ class AutoModUtils2 extends Throwable {
         return autoModUtils2.copy(i, str);
     }
 
-    /* renamed from: component1, reason: from getter */
+    /* JADX INFO: renamed from: component1, reason: from getter */
     public final int getErrorStringId() {
         return this.errorStringId;
     }
 
-    /* renamed from: component2, reason: from getter */
+    /* JADX INFO: renamed from: component2, reason: from getter */
     public final String getReasonCode() {
         return this.reasonCode;
     }

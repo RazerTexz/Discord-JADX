@@ -5,7 +5,7 @@ import java.io.DataInput;
 import java.io.EOFException;
 import java.io.IOException;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class KryoDataInput implements DataInput {
     public Input input;
 

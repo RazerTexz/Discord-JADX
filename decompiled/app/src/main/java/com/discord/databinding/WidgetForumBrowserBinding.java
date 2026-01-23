@@ -14,34 +14,34 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import p007b.p008a.p025i.ForumBrowserEmptyBinding;
 import p007b.p008a.p025i.ForumBrowserLoadingBinding;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public final class WidgetForumBrowserBinding implements ViewBinding {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     @NonNull
     public final ConstraintLayout f16633a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     @NonNull
     public final ExtendedFloatingActionButton f16634b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     @NonNull
     public final ForumBrowserEmptyBinding f16635c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     @NonNull
     public final ForumBrowserLoadingBinding f16636d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     @NonNull
     public final ViewStub f16637e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     @NonNull
     public final RecyclerView f16638f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     @NonNull
     public final FloatingActionButton f16639g;
 

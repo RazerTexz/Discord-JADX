@@ -51,59 +51,59 @@ import p007b.p225i.p355b.p357b.ImmutableMap2;
 import p007b.p225i.p355b.p357b.RegularImmutableList;
 import p007b.p225i.p355b.p357b.RegularImmutableMap;
 
-/* compiled from: AnalyticsCollector.java */
-/* renamed from: b.i.a.c.s2.g1, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.s2.g1, reason: use source file name */
+/* JADX INFO: compiled from: AnalyticsCollector.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class AnalyticsCollector implements Player2.e, AudioRendererEventListener2, VideoRendererEventListener2, MediaSourceEventListener, BandwidthMeter.a, DrmSessionEventListener {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final Clock4 f7547j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final Timeline.b f7548k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final Timeline.c f7549l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public final a f7550m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public final SparseArray<AnalyticsListener.a> f7551n;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public ListenerSet<AnalyticsListener> f7552o;
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public Player2 f7553p;
 
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     public HandlerWrapper f7554q;
 
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     public boolean f7555r;
 
-    /* compiled from: AnalyticsCollector.java */
-    /* renamed from: b.i.a.c.s2.g1$a */
+    /* JADX INFO: renamed from: b.i.a.c.s2.g1$a */
+    /* JADX INFO: compiled from: AnalyticsCollector.java */
     public static final class a {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final Timeline.b f7556a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public ImmutableList2<MediaSource2.a> f7557b;
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public ImmutableMap2<MediaSource2.a, Timeline> f7558c;
 
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         @Nullable
         public MediaSource2.a f7559d;
 
-        /* renamed from: e */
+        /* JADX INFO: renamed from: e */
         public MediaSource2.a f7560e;
 
-        /* renamed from: f */
+        /* JADX INFO: renamed from: f */
         public MediaSource2.a f7561f;
 
         public a(Timeline.b bVar) {
@@ -114,7 +114,7 @@ public class AnalyticsCollector implements Player2.e, AudioRendererEventListener
         }
 
         @Nullable
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public static MediaSource2.a m3388b(Player2 player2, ImmutableList2<MediaSource2.a> immutableList2, @Nullable MediaSource2.a aVar, Timeline.b bVar) {
             Timeline timelineMo2888K = player2.mo2888K();
             int iMo2912m = player2.mo2912m();
@@ -134,7 +134,7 @@ public class AnalyticsCollector implements Player2.e, AudioRendererEventListener
             return null;
         }
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public static boolean m3389c(MediaSource2.a aVar, @Nullable Object obj, boolean z2, int i, int i2, int i3) {
             if (aVar.f5732a.equals(obj)) {
                 return (z2 && aVar.f5733b == i && aVar.f5734c == i2) || (!z2 && aVar.f5733b == -1 && aVar.f5736e == i3);
@@ -142,7 +142,7 @@ public class AnalyticsCollector implements Player2.e, AudioRendererEventListener
             return false;
         }
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final void m3390a(ImmutableMap2.a<MediaSource2.a, Timeline> aVar, @Nullable MediaSource2.a aVar2, Timeline timeline) {
             if (aVar2 == null) {
                 return;
@@ -157,7 +157,7 @@ public class AnalyticsCollector implements Player2.e, AudioRendererEventListener
             }
         }
 
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         public final void m3391d(Timeline timeline) {
             ImmutableMap2.a<MediaSource2.a, Timeline> aVar = new ImmutableMap2.a<>(4);
             if (this.f7557b.isEmpty()) {
@@ -191,7 +191,7 @@ public class AnalyticsCollector implements Player2.e, AudioRendererEventListener
     }
 
     @Override // p007b.p225i.p226a.p242c.Player2.c
-    /* renamed from: A */
+    /* JADX INFO: renamed from: A */
     public void mo235A(MediaMetadata mediaMetadata) {
         AnalyticsListener.a aVarM3382k0 = m3382k0();
         C2891r0 c2891r0 = new C2891r0(aVarM3382k0, mediaMetadata);
@@ -202,7 +202,7 @@ public class AnalyticsCollector implements Player2.e, AudioRendererEventListener
     }
 
     @Override // p007b.p225i.p226a.p242c.p263t2.AudioRendererEventListener2
-    /* renamed from: B */
+    /* JADX INFO: renamed from: B */
     public final void mo3291B(String str) {
         AnalyticsListener.a aVarM3387p0 = m3387p0();
         C2894t c2894t = new C2894t(aVarM3387p0, str);
@@ -213,7 +213,7 @@ public class AnalyticsCollector implements Player2.e, AudioRendererEventListener
     }
 
     @Override // p007b.p225i.p226a.p242c.p263t2.AudioRendererEventListener2
-    /* renamed from: C */
+    /* JADX INFO: renamed from: C */
     public final void mo3292C(String str, long j, long j2) {
         AnalyticsListener.a aVarM3387p0 = m3387p0();
         C2879l0 c2879l0 = new C2879l0(aVarM3387p0, str, j2, j);
@@ -224,7 +224,7 @@ public class AnalyticsCollector implements Player2.e, AudioRendererEventListener
     }
 
     @Override // p007b.p225i.p226a.p242c.Player2.c
-    /* renamed from: D */
+    /* JADX INFO: renamed from: D */
     public final void mo236D(boolean z2) {
         AnalyticsListener.a aVarM3382k0 = m3382k0();
         C2867g0 c2867g0 = new C2867g0(aVarM3382k0, z2);
@@ -235,13 +235,13 @@ public class AnalyticsCollector implements Player2.e, AudioRendererEventListener
     }
 
     @Override // p007b.p225i.p226a.p242c.Player2.c
-    /* renamed from: E */
+    /* JADX INFO: renamed from: E */
     public /* synthetic */ void mo237E(Player2 player2, Player2.d dVar) {
         Player.m2423e(this, player2, dVar);
     }
 
     @Override // p007b.p225i.p226a.p242c.p260g3.VideoRendererEventListener2
-    /* renamed from: F */
+    /* JADX INFO: renamed from: F */
     public final void mo3185F(int i, long j) {
         AnalyticsListener.a aVarM3386o0 = m3386o0();
         C2906z c2906z = new C2906z(aVarM3386o0, i, j);
@@ -252,13 +252,13 @@ public class AnalyticsCollector implements Player2.e, AudioRendererEventListener
     }
 
     @Override // p007b.p225i.p226a.p242c.Player2.e
-    /* renamed from: G */
+    /* JADX INFO: renamed from: G */
     public /* synthetic */ void mo238G(int i, boolean z2) {
         Player.m2422d(this, i, z2);
     }
 
     @Override // p007b.p225i.p226a.p242c.Player2.c
-    /* renamed from: H */
+    /* JADX INFO: renamed from: H */
     public final void mo239H(boolean z2, int i) {
         AnalyticsListener.a aVarM3382k0 = m3382k0();
         C2875j0 c2875j0 = new C2875j0(aVarM3382k0, z2, i);
@@ -269,7 +269,7 @@ public class AnalyticsCollector implements Player2.e, AudioRendererEventListener
     }
 
     @Override // p007b.p225i.p226a.p242c.p263t2.AudioRendererEventListener2
-    /* renamed from: I */
+    /* JADX INFO: renamed from: I */
     public final void mo3293I(Format2 format2, @Nullable DecoderReuseEvaluation decoderReuseEvaluation) {
         AnalyticsListener.a aVarM3387p0 = m3387p0();
         C2873i0 c2873i0 = new C2873i0(aVarM3387p0, format2, decoderReuseEvaluation);
@@ -280,7 +280,7 @@ public class AnalyticsCollector implements Player2.e, AudioRendererEventListener
     }
 
     @Override // p007b.p225i.p226a.p242c.p266w2.DrmSessionEventListener
-    /* renamed from: J */
+    /* JADX INFO: renamed from: J */
     public final void mo2567J(int i, @Nullable MediaSource2.a aVar) {
         AnalyticsListener.a aVarM3385n0 = m3385n0(i, aVar);
         C2895t0 c2895t0 = new C2895t0(aVarM3385n0);
@@ -291,7 +291,7 @@ public class AnalyticsCollector implements Player2.e, AudioRendererEventListener
     }
 
     @Override // p007b.p225i.p226a.p242c.p260g3.VideoRendererEventListener2
-    /* renamed from: K */
+    /* JADX INFO: renamed from: K */
     public final void mo3186K(Object obj, long j) {
         AnalyticsListener.a aVarM3387p0 = m3387p0();
         C2865f1 c2865f1 = new C2865f1(aVarM3387p0, obj, j);
@@ -302,7 +302,7 @@ public class AnalyticsCollector implements Player2.e, AudioRendererEventListener
     }
 
     @Override // p007b.p225i.p226a.p242c.Player2.c
-    /* renamed from: L */
+    /* JADX INFO: renamed from: L */
     public final void mo240L(int i) {
         AnalyticsListener.a aVarM3382k0 = m3382k0();
         C2852b0 c2852b0 = new C2852b0(aVarM3382k0, i);
@@ -313,7 +313,7 @@ public class AnalyticsCollector implements Player2.e, AudioRendererEventListener
     }
 
     @Override // p007b.p225i.p226a.p242c.Player2.c
-    /* renamed from: M */
+    /* JADX INFO: renamed from: M */
     public final void mo241M(@Nullable MediaItem2 mediaItem2, int i) {
         AnalyticsListener.a aVarM3382k0 = m3382k0();
         C2888q c2888q = new C2888q(aVarM3382k0, mediaItem2, i);
@@ -324,7 +324,7 @@ public class AnalyticsCollector implements Player2.e, AudioRendererEventListener
     }
 
     @Override // p007b.p225i.p226a.p242c.p263t2.AudioRendererEventListener2
-    /* renamed from: N */
+    /* JADX INFO: renamed from: N */
     public final void mo3294N(Exception exc) {
         AnalyticsListener.a aVarM3387p0 = m3387p0();
         C2861e0 c2861e0 = new C2861e0(aVarM3387p0, exc);
@@ -335,13 +335,13 @@ public class AnalyticsCollector implements Player2.e, AudioRendererEventListener
     }
 
     @Override // p007b.p225i.p226a.p242c.p260g3.VideoRendererEventListener2
-    /* renamed from: O */
+    /* JADX INFO: renamed from: O */
     public /* synthetic */ void mo3187O(Format2 format2) {
         VideoRendererEventListener.m3184a(this, format2);
     }
 
     @Override // p007b.p225i.p226a.p242c.p260g3.VideoRendererEventListener2
-    /* renamed from: P */
+    /* JADX INFO: renamed from: P */
     public final void mo3188P(DecoderCounters decoderCounters) {
         AnalyticsListener.a aVarM3387p0 = m3387p0();
         C2858d0 c2858d0 = new C2858d0(aVarM3387p0, decoderCounters);
@@ -352,7 +352,7 @@ public class AnalyticsCollector implements Player2.e, AudioRendererEventListener
     }
 
     @Override // p007b.p225i.p226a.p242c.p260g3.VideoRendererEventListener2
-    /* renamed from: Q */
+    /* JADX INFO: renamed from: Q */
     public final void mo3189Q(Format2 format2, @Nullable DecoderReuseEvaluation decoderReuseEvaluation) {
         AnalyticsListener.a aVarM3387p0 = m3387p0();
         C2905y0 c2905y0 = new C2905y0(aVarM3387p0, format2, decoderReuseEvaluation);
@@ -363,7 +363,7 @@ public class AnalyticsCollector implements Player2.e, AudioRendererEventListener
     }
 
     @Override // p007b.p225i.p226a.p242c.p263t2.AudioRendererEventListener2
-    /* renamed from: R */
+    /* JADX INFO: renamed from: R */
     public final void mo3295R(long j) {
         AnalyticsListener.a aVarM3387p0 = m3387p0();
         C2883n0 c2883n0 = new C2883n0(aVarM3387p0, j);
@@ -374,7 +374,7 @@ public class AnalyticsCollector implements Player2.e, AudioRendererEventListener
     }
 
     @Override // p007b.p225i.p226a.p242c.p266w2.DrmSessionEventListener
-    /* renamed from: S */
+    /* JADX INFO: renamed from: S */
     public final void mo2568S(int i, @Nullable MediaSource2.a aVar) {
         AnalyticsListener.a aVarM3385n0 = m3385n0(i, aVar);
         C2862e1 c2862e1 = new C2862e1(aVarM3385n0);
@@ -385,7 +385,7 @@ public class AnalyticsCollector implements Player2.e, AudioRendererEventListener
     }
 
     @Override // p007b.p225i.p226a.p242c.p263t2.AudioRendererEventListener2
-    /* renamed from: T */
+    /* JADX INFO: renamed from: T */
     public final void mo3296T(Exception exc) {
         AnalyticsListener.a aVarM3387p0 = m3387p0();
         C2876k c2876k = new C2876k(aVarM3387p0, exc);
@@ -396,13 +396,13 @@ public class AnalyticsCollector implements Player2.e, AudioRendererEventListener
     }
 
     @Override // p007b.p225i.p226a.p242c.p263t2.AudioRendererEventListener2
-    /* renamed from: U */
+    /* JADX INFO: renamed from: U */
     public /* synthetic */ void mo3297U(Format2 format2) {
         AudioRendererEventListener.m3497a(this, format2);
     }
 
     @Override // p007b.p225i.p226a.p242c.p260g3.VideoRendererEventListener2
-    /* renamed from: V */
+    /* JADX INFO: renamed from: V */
     public final void mo3190V(Exception exc) {
         AnalyticsListener.a aVarM3387p0 = m3387p0();
         C2889q0 c2889q0 = new C2889q0(aVarM3387p0, exc);
@@ -413,7 +413,7 @@ public class AnalyticsCollector implements Player2.e, AudioRendererEventListener
     }
 
     @Override // p007b.p225i.p226a.p242c.Player2.c
-    /* renamed from: W */
+    /* JADX INFO: renamed from: W */
     public final void mo242W(boolean z2, int i) {
         AnalyticsListener.a aVarM3382k0 = m3382k0();
         C2859d1 c2859d1 = new C2859d1(aVarM3382k0, z2, i);
@@ -424,7 +424,7 @@ public class AnalyticsCollector implements Player2.e, AudioRendererEventListener
     }
 
     @Override // p007b.p225i.p226a.p242c.p243a3.MediaSourceEventListener
-    /* renamed from: X */
+    /* JADX INFO: renamed from: X */
     public final void mo2461X(int i, @Nullable MediaSource2.a aVar, LoadEventInfo loadEventInfo, MediaLoadData mediaLoadData) {
         AnalyticsListener.a aVarM3385n0 = m3385n0(i, aVar);
         C2904y c2904y = new C2904y(aVarM3385n0, loadEventInfo, mediaLoadData);
@@ -435,7 +435,7 @@ public class AnalyticsCollector implements Player2.e, AudioRendererEventListener
     }
 
     @Override // p007b.p225i.p226a.p242c.Player2.c
-    /* renamed from: Y */
+    /* JADX INFO: renamed from: Y */
     public final void mo243Y(TrackGroupArray trackGroupArray, TrackSelectionArray trackSelectionArray) {
         AnalyticsListener.a aVarM3382k0 = m3382k0();
         C2872i c2872i = new C2872i(aVarM3382k0, trackGroupArray, trackSelectionArray);
@@ -446,7 +446,7 @@ public class AnalyticsCollector implements Player2.e, AudioRendererEventListener
     }
 
     @Override // p007b.p225i.p226a.p242c.p260g3.VideoRendererEventListener2
-    /* renamed from: Z */
+    /* JADX INFO: renamed from: Z */
     public final void mo3191Z(DecoderCounters decoderCounters) {
         AnalyticsListener.a aVarM3386o0 = m3386o0();
         C2874j c2874j = new C2874j(aVarM3386o0, decoderCounters);
@@ -457,7 +457,7 @@ public class AnalyticsCollector implements Player2.e, AudioRendererEventListener
     }
 
     @Override // p007b.p225i.p226a.p242c.Player2.c
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final void mo244a() {
         AnalyticsListener.a aVarM3382k0 = m3382k0();
         C2896u c2896u = new C2896u(aVarM3382k0);
@@ -468,7 +468,7 @@ public class AnalyticsCollector implements Player2.e, AudioRendererEventListener
     }
 
     @Override // p007b.p225i.p226a.p242c.Player2.e
-    /* renamed from: a0 */
+    /* JADX INFO: renamed from: a0 */
     public void mo245a0(int i, int i2) {
         AnalyticsListener.a aVarM3387p0 = m3387p0();
         C2882n c2882n = new C2882n(aVarM3387p0, i, i2);
@@ -479,7 +479,7 @@ public class AnalyticsCollector implements Player2.e, AudioRendererEventListener
     }
 
     @Override // p007b.p225i.p226a.p242c.Player2.e
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final void mo246b(Metadata metadata) {
         AnalyticsListener.a aVarM3382k0 = m3382k0();
         C2898v c2898v = new C2898v(aVarM3382k0, metadata);
@@ -490,7 +490,7 @@ public class AnalyticsCollector implements Player2.e, AudioRendererEventListener
     }
 
     @Override // p007b.p225i.p226a.p242c.Player2.c
-    /* renamed from: b0 */
+    /* JADX INFO: renamed from: b0 */
     public final void mo247b0(PlaybackParameters playbackParameters) {
         AnalyticsListener.a aVarM3382k0 = m3382k0();
         C2880m c2880m = new C2880m(aVarM3382k0, playbackParameters);
@@ -501,13 +501,13 @@ public class AnalyticsCollector implements Player2.e, AudioRendererEventListener
     }
 
     @Override // p007b.p225i.p226a.p242c.Player2.e
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public /* synthetic */ void mo248c() {
         Player.m2436r(this);
     }
 
     @Override // p007b.p225i.p226a.p242c.p266w2.DrmSessionEventListener
-    /* renamed from: c0 */
+    /* JADX INFO: renamed from: c0 */
     public final void mo2571c0(int i, @Nullable MediaSource2.a aVar, int i2) {
         AnalyticsListener.a aVarM3385n0 = m3385n0(i, aVar);
         C2887p0 c2887p0 = new C2887p0(aVarM3385n0, i2);
@@ -518,7 +518,7 @@ public class AnalyticsCollector implements Player2.e, AudioRendererEventListener
     }
 
     @Override // p007b.p225i.p226a.p242c.Player2.e
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final void mo249d(boolean z2) {
         AnalyticsListener.a aVarM3387p0 = m3387p0();
         C2897u0 c2897u0 = new C2897u0(aVarM3387p0, z2);
@@ -529,7 +529,7 @@ public class AnalyticsCollector implements Player2.e, AudioRendererEventListener
     }
 
     @Override // p007b.p225i.p226a.p242c.p266w2.DrmSessionEventListener
-    /* renamed from: d0 */
+    /* JADX INFO: renamed from: d0 */
     public final void mo2572d0(int i, @Nullable MediaSource2.a aVar) {
         AnalyticsListener.a aVarM3385n0 = m3385n0(i, aVar);
         C2851b c2851b = new C2851b(aVarM3385n0);
@@ -540,13 +540,13 @@ public class AnalyticsCollector implements Player2.e, AudioRendererEventListener
     }
 
     @Override // p007b.p225i.p226a.p242c.Player2.e
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public /* synthetic */ void mo250e(List list) {
         Player.m2420b(this, list);
     }
 
     @Override // p007b.p225i.p226a.p242c.p263t2.AudioRendererEventListener2
-    /* renamed from: e0 */
+    /* JADX INFO: renamed from: e0 */
     public final void mo3300e0(int i, long j, long j2) {
         AnalyticsListener.a aVarM3387p0 = m3387p0();
         C2855c0 c2855c0 = new C2855c0(aVarM3387p0, i, j, j2);
@@ -557,7 +557,7 @@ public class AnalyticsCollector implements Player2.e, AudioRendererEventListener
     }
 
     @Override // p007b.p225i.p226a.p242c.Player2.e
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final void mo251f(VideoSize videoSize) {
         AnalyticsListener.a aVarM3387p0 = m3387p0();
         C2881m0 c2881m0 = new C2881m0(aVarM3387p0, videoSize);
@@ -568,13 +568,13 @@ public class AnalyticsCollector implements Player2.e, AudioRendererEventListener
     }
 
     @Override // p007b.p225i.p226a.p242c.Player2.c
-    /* renamed from: f0 */
+    /* JADX INFO: renamed from: f0 */
     public /* synthetic */ void mo252f0(PlaybackException playbackException) {
         Player.m2434p(this, playbackException);
     }
 
     @Override // p007b.p225i.p226a.p242c.Player2.c
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public final void mo253g(Player2.f fVar, Player2.f fVar2, int i) {
         if (i == 1) {
             this.f7555r = false;
@@ -592,7 +592,7 @@ public class AnalyticsCollector implements Player2.e, AudioRendererEventListener
     }
 
     @Override // p007b.p225i.p226a.p242c.p243a3.MediaSourceEventListener
-    /* renamed from: g0 */
+    /* JADX INFO: renamed from: g0 */
     public final void mo2462g0(int i, @Nullable MediaSource2.a aVar, LoadEventInfo loadEventInfo, MediaLoadData mediaLoadData, IOException iOException, boolean z2) {
         AnalyticsListener.a aVarM3385n0 = m3385n0(i, aVar);
         C2864f0 c2864f0 = new C2864f0(aVarM3385n0, loadEventInfo, mediaLoadData, iOException, z2);
@@ -603,7 +603,7 @@ public class AnalyticsCollector implements Player2.e, AudioRendererEventListener
     }
 
     @Override // p007b.p225i.p226a.p242c.Player2.c
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public final void mo254h(int i) {
         AnalyticsListener.a aVarM3382k0 = m3382k0();
         C2853b1 c2853b1 = new C2853b1(aVarM3382k0, i);
@@ -614,7 +614,7 @@ public class AnalyticsCollector implements Player2.e, AudioRendererEventListener
     }
 
     @Override // p007b.p225i.p226a.p242c.p260g3.VideoRendererEventListener2
-    /* renamed from: h0 */
+    /* JADX INFO: renamed from: h0 */
     public final void mo3193h0(long j, int i) {
         AnalyticsListener.a aVarM3386o0 = m3386o0();
         C2856c1 c2856c1 = new C2856c1(aVarM3386o0, j, i);
@@ -625,13 +625,13 @@ public class AnalyticsCollector implements Player2.e, AudioRendererEventListener
     }
 
     @Override // p007b.p225i.p226a.p242c.Player2.c
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public /* synthetic */ void mo255i(boolean z2) {
         Player3.m3876d(this, z2);
     }
 
     @Override // p007b.p225i.p226a.p242c.p266w2.DrmSessionEventListener
-    /* renamed from: i0 */
+    /* JADX INFO: renamed from: i0 */
     public final void mo2573i0(int i, @Nullable MediaSource2.a aVar) {
         AnalyticsListener.a aVarM3385n0 = m3385n0(i, aVar);
         C2899v0 c2899v0 = new C2899v0(aVarM3385n0);
@@ -642,13 +642,13 @@ public class AnalyticsCollector implements Player2.e, AudioRendererEventListener
     }
 
     @Override // p007b.p225i.p226a.p242c.Player2.c
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public /* synthetic */ void mo256j(int i) {
         Player3.m3884l(this, i);
     }
 
     @Override // p007b.p225i.p226a.p242c.Player2.c
-    /* renamed from: j0 */
+    /* JADX INFO: renamed from: j0 */
     public void mo257j0(boolean z2) {
         AnalyticsListener.a aVarM3382k0 = m3382k0();
         C2907z0 c2907z0 = new C2907z0(aVarM3382k0, z2);
@@ -659,7 +659,7 @@ public class AnalyticsCollector implements Player2.e, AudioRendererEventListener
     }
 
     @Override // p007b.p225i.p226a.p242c.p263t2.AudioRendererEventListener2
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final void mo3301k(DecoderCounters decoderCounters) {
         AnalyticsListener.a aVarM3386o0 = m3386o0();
         C2901w0 c2901w0 = new C2901w0(aVarM3386o0, decoderCounters);
@@ -669,13 +669,13 @@ public class AnalyticsCollector implements Player2.e, AudioRendererEventListener
         listenerSet.m3034a();
     }
 
-    /* renamed from: k0 */
+    /* JADX INFO: renamed from: k0 */
     public final AnalyticsListener.a m3382k0() {
         return m3384m0(this.f7550m.f7559d);
     }
 
     @Override // p007b.p225i.p226a.p242c.p260g3.VideoRendererEventListener2
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final void mo3194l(String str) {
         AnalyticsListener.a aVarM3387p0 = m3387p0();
         C2863f c2863f = new C2863f(aVarM3387p0, str);
@@ -686,7 +686,7 @@ public class AnalyticsCollector implements Player2.e, AudioRendererEventListener
     }
 
     @RequiresNonNull({"player"})
-    /* renamed from: l0 */
+    /* JADX INFO: renamed from: l0 */
     public final AnalyticsListener.a m3383l0(Timeline timeline, int i, @Nullable MediaSource2.a aVar) {
         long jMo2928w;
         MediaSource2.a aVar2 = timeline.m3331q() ? null : aVar;
@@ -715,7 +715,7 @@ public class AnalyticsCollector implements Player2.e, AudioRendererEventListener
     }
 
     @Override // p007b.p225i.p226a.p242c.p263t2.AudioRendererEventListener2
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public final void mo3302m(DecoderCounters decoderCounters) {
         AnalyticsListener.a aVarM3387p0 = m3387p0();
         C2878l c2878l = new C2878l(aVarM3387p0, decoderCounters);
@@ -725,7 +725,7 @@ public class AnalyticsCollector implements Player2.e, AudioRendererEventListener
         listenerSet.m3034a();
     }
 
-    /* renamed from: m0 */
+    /* JADX INFO: renamed from: m0 */
     public final AnalyticsListener.a m3384m0(@Nullable MediaSource2.a aVar) {
         Objects.requireNonNull(this.f7553p);
         Timeline timeline = aVar == null ? null : this.f7550m.f7558c.get(aVar);
@@ -741,7 +741,7 @@ public class AnalyticsCollector implements Player2.e, AudioRendererEventListener
     }
 
     @Override // p007b.p225i.p226a.p242c.p260g3.VideoRendererEventListener2
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public final void mo3195n(String str, long j, long j2) {
         AnalyticsListener.a aVarM3387p0 = m3387p0();
         C2857d c2857d = new C2857d(aVarM3387p0, str, j2, j);
@@ -751,7 +751,7 @@ public class AnalyticsCollector implements Player2.e, AudioRendererEventListener
         listenerSet.m3034a();
     }
 
-    /* renamed from: n0 */
+    /* JADX INFO: renamed from: n0 */
     public final AnalyticsListener.a m3385n0(int i, @Nullable MediaSource2.a aVar) {
         Objects.requireNonNull(this.f7553p);
         if (aVar != null) {
@@ -765,7 +765,7 @@ public class AnalyticsCollector implements Player2.e, AudioRendererEventListener
     }
 
     @Override // p007b.p225i.p226a.p242c.p243a3.MediaSourceEventListener
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public final void mo2463o(int i, @Nullable MediaSource2.a aVar, MediaLoadData mediaLoadData) {
         AnalyticsListener.a aVarM3385n0 = m3385n0(i, aVar);
         C2866g c2866g = new C2866g(aVarM3385n0, mediaLoadData);
@@ -775,13 +775,13 @@ public class AnalyticsCollector implements Player2.e, AudioRendererEventListener
         listenerSet.m3034a();
     }
 
-    /* renamed from: o0 */
+    /* JADX INFO: renamed from: o0 */
     public final AnalyticsListener.a m3386o0() {
         return m3384m0(this.f7550m.f7560e);
     }
 
     @Override // p007b.p225i.p226a.p242c.Player2.c
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public void mo258p(TracksInfo tracksInfo) {
         AnalyticsListener.a aVarM3382k0 = m3382k0();
         C2900w c2900w = new C2900w(aVarM3382k0, tracksInfo);
@@ -791,13 +791,13 @@ public class AnalyticsCollector implements Player2.e, AudioRendererEventListener
         listenerSet.m3034a();
     }
 
-    /* renamed from: p0 */
+    /* JADX INFO: renamed from: p0 */
     public final AnalyticsListener.a m3387p0() {
         return m3384m0(this.f7550m.f7561f);
     }
 
     @Override // p007b.p225i.p226a.p242c.p243a3.MediaSourceEventListener
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     public final void mo2464q(int i, @Nullable MediaSource2.a aVar, LoadEventInfo loadEventInfo, MediaLoadData mediaLoadData) {
         AnalyticsListener.a aVarM3385n0 = m3385n0(i, aVar);
         C2870h0 c2870h0 = new C2870h0(aVarM3385n0, loadEventInfo, mediaLoadData);
@@ -808,7 +808,7 @@ public class AnalyticsCollector implements Player2.e, AudioRendererEventListener
     }
 
     @Override // p007b.p225i.p226a.p242c.Player2.c
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     public final void mo259r(boolean z2) {
         AnalyticsListener.a aVarM3382k0 = m3382k0();
         C2860e c2860e = new C2860e(aVarM3382k0, z2);
@@ -819,7 +819,7 @@ public class AnalyticsCollector implements Player2.e, AudioRendererEventListener
     }
 
     @Override // p007b.p225i.p226a.p242c.Player2.c
-    /* renamed from: s */
+    /* JADX INFO: renamed from: s */
     public final void mo260s(PlaybackException playbackException) {
         MediaPeriodId mediaPeriodId;
         AnalyticsListener.a aVarM3384m0 = (!(playbackException instanceof ExoPlaybackException) || (mediaPeriodId = ((ExoPlaybackException) playbackException).mediaPeriodId) == null) ? null : m3384m0(new MediaSource2.a(mediaPeriodId));
@@ -834,7 +834,7 @@ public class AnalyticsCollector implements Player2.e, AudioRendererEventListener
     }
 
     @Override // p007b.p225i.p226a.p242c.Player2.c
-    /* renamed from: t */
+    /* JADX INFO: renamed from: t */
     public void mo261t(Player2.b bVar) {
         AnalyticsListener.a aVarM3382k0 = m3382k0();
         C2849a0 c2849a0 = new C2849a0(aVarM3382k0, bVar);
@@ -845,7 +845,7 @@ public class AnalyticsCollector implements Player2.e, AudioRendererEventListener
     }
 
     @Override // p007b.p225i.p226a.p242c.p266w2.DrmSessionEventListener
-    /* renamed from: u */
+    /* JADX INFO: renamed from: u */
     public final void mo2574u(int i, @Nullable MediaSource2.a aVar, Exception exc) {
         AnalyticsListener.a aVarM3385n0 = m3385n0(i, aVar);
         C2854c c2854c = new C2854c(aVarM3385n0, exc);
@@ -856,7 +856,7 @@ public class AnalyticsCollector implements Player2.e, AudioRendererEventListener
     }
 
     @Override // p007b.p225i.p226a.p242c.Player2.c
-    /* renamed from: v */
+    /* JADX INFO: renamed from: v */
     public final void mo262v(Timeline timeline, int i) {
         a aVar = this.f7550m;
         Player2 player2 = this.f7553p;
@@ -872,7 +872,7 @@ public class AnalyticsCollector implements Player2.e, AudioRendererEventListener
     }
 
     @Override // p007b.p225i.p226a.p242c.Player2.e
-    /* renamed from: w */
+    /* JADX INFO: renamed from: w */
     public final void mo263w(float f) {
         AnalyticsListener.a aVarM3387p0 = m3387p0();
         C2892s c2892s = new C2892s(aVarM3387p0, f);
@@ -883,7 +883,7 @@ public class AnalyticsCollector implements Player2.e, AudioRendererEventListener
     }
 
     @Override // p007b.p225i.p226a.p242c.p243a3.MediaSourceEventListener
-    /* renamed from: x */
+    /* JADX INFO: renamed from: x */
     public final void mo2465x(int i, @Nullable MediaSource2.a aVar, LoadEventInfo loadEventInfo, MediaLoadData mediaLoadData) {
         AnalyticsListener.a aVarM3385n0 = m3385n0(i, aVar);
         C2877k0 c2877k0 = new C2877k0(aVarM3385n0, loadEventInfo, mediaLoadData);
@@ -894,7 +894,7 @@ public class AnalyticsCollector implements Player2.e, AudioRendererEventListener
     }
 
     @Override // p007b.p225i.p226a.p242c.Player2.c
-    /* renamed from: y */
+    /* JADX INFO: renamed from: y */
     public final void mo264y(int i) {
         AnalyticsListener.a aVarM3382k0 = m3382k0();
         C2850a1 c2850a1 = new C2850a1(aVarM3382k0, i);
@@ -905,7 +905,7 @@ public class AnalyticsCollector implements Player2.e, AudioRendererEventListener
     }
 
     @Override // p007b.p225i.p226a.p242c.Player2.e
-    /* renamed from: z */
+    /* JADX INFO: renamed from: z */
     public /* synthetic */ void mo265z(DeviceInfo2 deviceInfo2) {
         Player.m2421c(this, deviceInfo2);
     }

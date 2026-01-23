@@ -3,14 +3,13 @@ package com.discord.utilities.views;
 import android.R;
 import android.animation.Animator;
 import android.animation.AnimatorInflater;
-import android.content.res.Resources;
 import android.view.View;
 import com.discord.utilities.views.FloatingButtonMenuInitializer;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: FloatingButtonMenuInitializer.kt */
-/* renamed from: com.discord.utilities.views.FloatingButtonMenuInitializer$animatorFactoryFadeIn$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.utilities.views.FloatingButtonMenuInitializer$animatorFactoryFadeIn$1, reason: use source file name */
+/* JADX INFO: compiled from: FloatingButtonMenuInitializer.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class FloatingButtonMenuInitializer2 implements FloatingButtonMenuInitializer.AnimatorFactory<View> {
     public final /* synthetic */ FloatingButtonMenuInitializer this$0;
 
@@ -19,7 +18,7 @@ public final class FloatingButtonMenuInitializer2 implements FloatingButtonMenuI
     }
 
     @Override // com.discord.utilities.views.FloatingButtonMenuInitializer.AnimatorFactory
-    public Animator createAnimator(View view) throws Resources.NotFoundException {
+    public Animator createAnimator(View view) {
         Intrinsics3.checkNotNullParameter(view, "view");
         Animator animatorLoadAnimator = AnimatorInflater.loadAnimator(FloatingButtonMenuInitializer.access$getContext$p(this.this$0), R.animator.fade_in);
         animatorLoadAnimator.setTarget(view);

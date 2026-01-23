@@ -5,15 +5,15 @@ import java.util.Iterator;
 import java.util.Objects;
 import p007b.p100d.p104b.p105a.outline;
 
-/* compiled from: SingletonImmutableSet.java */
-/* renamed from: b.i.b.b.q0, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.b.b.q0, reason: use source file name */
+/* JADX INFO: compiled from: SingletonImmutableSet.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class SingletonImmutableSet<E> extends ImmutableSet2<E> {
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public final transient E f12055m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     @LazyInit
     public transient int f12056n;
 
@@ -28,7 +28,7 @@ public final class SingletonImmutableSet<E> extends ImmutableSet2<E> {
     }
 
     @Override // p007b.p225i.p355b.p357b.ImmutableCollection
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public int mo6242d(Object[] objArr, int i) {
         objArr[i] = this.f12055m;
         return i + 1;
@@ -46,7 +46,7 @@ public final class SingletonImmutableSet<E> extends ImmutableSet2<E> {
     }
 
     @Override // p007b.p225i.p355b.p357b.ImmutableCollection
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public boolean mo6246i() {
         return false;
     }
@@ -57,19 +57,19 @@ public final class SingletonImmutableSet<E> extends ImmutableSet2<E> {
     }
 
     @Override // p007b.p225i.p355b.p357b.ImmutableCollection
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public UnmodifiableIterator<E> mo6251j() {
         return new Iterators(this.f12055m);
     }
 
     @Override // p007b.p225i.p355b.p357b.ImmutableSet2
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public ImmutableList2<E> mo6252o() {
         return ImmutableList2.m6266u(this.f12055m);
     }
 
     @Override // p007b.p225i.p355b.p357b.ImmutableSet2
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public boolean mo6278p() {
         return this.f12056n != 0;
     }

@@ -17,16 +17,16 @@ import java.util.Objects;
 import p007b.p100d.p104b.p105a.outline;
 import p007b.p225i.p226a.p288f.p299e.p308o.C3404f;
 
-/* compiled from: $Gson$Types.java */
-/* renamed from: b.i.d.q.a, reason: use source file name and invalid class name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.d.q.a, reason: use source file name and invalid class name */
+/* JADX INFO: compiled from: $Gson$Types.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class C$Gson$Types {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final Type[] f13111a = new Type[0];
 
-    /* compiled from: $Gson$Types.java */
-    /* renamed from: b.i.d.q.a$a */
+    /* JADX INFO: renamed from: b.i.d.q.a$a */
+    /* JADX INFO: compiled from: $Gson$Types.java */
     public static final class a implements GenericArrayType, Serializable {
         private static final long serialVersionUID = 0;
         private final Type componentType;
@@ -53,8 +53,8 @@ public final class C$Gson$Types {
         }
     }
 
-    /* compiled from: $Gson$Types.java */
-    /* renamed from: b.i.d.q.a$b */
+    /* JADX INFO: renamed from: b.i.d.q.a$b */
+    /* JADX INFO: compiled from: $Gson$Types.java */
     public static final class b implements ParameterizedType, Serializable {
         private static final long serialVersionUID = 0;
         private final Type ownerType;
@@ -127,8 +127,8 @@ public final class C$Gson$Types {
         }
     }
 
-    /* compiled from: $Gson$Types.java */
-    /* renamed from: b.i.d.q.a$c */
+    /* JADX INFO: renamed from: b.i.d.q.a$c */
+    /* JADX INFO: compiled from: $Gson$Types.java */
     public static final class c implements WildcardType, Serializable {
         private static final long serialVersionUID = 0;
         private final Type lowerBound;
@@ -186,7 +186,7 @@ public final class C$Gson$Types {
         }
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static Type m6860a(Type type) {
         if (type instanceof Class) {
             Class cls = (Class) type;
@@ -206,12 +206,12 @@ public final class C$Gson$Types {
         return new c(wildcardType.getUpperBounds(), wildcardType.getLowerBounds());
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static void m6861b(Type type) {
         C3404f.m4355w(((type instanceof Class) && ((Class) type).isPrimitive()) ? false : true);
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public static boolean m6862c(Type type, Type type2) {
         if (type == type2) {
             return true;
@@ -251,7 +251,7 @@ public final class C$Gson$Types {
         return typeVariable.getGenericDeclaration() == typeVariable2.getGenericDeclaration() && typeVariable.getName().equals(typeVariable2.getName());
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public static Type m6863d(Type type, Class<?> cls, Class<?> cls2) {
         if (cls2 == cls) {
             return type;
@@ -283,7 +283,7 @@ public final class C$Gson$Types {
         return cls2;
     }
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public static Class<?> m6864e(Type type) {
         if (type instanceof Class) {
             return (Class) type;
@@ -305,7 +305,7 @@ public final class C$Gson$Types {
         throw new IllegalArgumentException("Expected a Class, ParameterizedType, or GenericArrayType, but <" + type + "> is of type " + (type == null ? "null" : type.getClass().getName()));
     }
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public static Type m6865f(Type type, Class<?> cls, Class<?> cls2) {
         if (type instanceof WildcardType) {
             type = ((WildcardType) type).getUpperBounds()[0];
@@ -314,13 +314,13 @@ public final class C$Gson$Types {
         return m6866g(type, cls, m6863d(type, cls, cls2));
     }
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public static Type m6866g(Type type, Class<?> cls, Type type2) {
         return m6867h(type, cls, type2, new HashSet());
     }
 
     /* JADX WARN: Removed duplicated region for block: B:23:0x004a  */
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
@@ -416,7 +416,7 @@ public final class C$Gson$Types {
         return type2;
     }
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public static String m6868i(Type type) {
         return type instanceof Class ? ((Class) type).getName() : type.toString();
     }

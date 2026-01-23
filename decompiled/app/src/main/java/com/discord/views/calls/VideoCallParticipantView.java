@@ -60,69 +60,69 @@ import p658rx.Observable;
 import p658rx.Subscription;
 import p658rx.subjects.BehaviorSubject;
 
-/* compiled from: VideoCallParticipantView.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: VideoCallParticipantView.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class VideoCallParticipantView extends ConstraintLayout implements FrameGridLayout.DataView {
 
-    /* renamed from: j, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: j, reason: from kotlin metadata */
     public final ViewVideoCallParticipantBinding binding;
 
-    /* renamed from: k, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: k, reason: from kotlin metadata */
     public final boolean matchVideoOrientation;
 
-    /* renamed from: l, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: l, reason: from kotlin metadata */
     public ParticipantData data;
 
-    /* renamed from: m, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: m, reason: from kotlin metadata */
     public String userAvatarUrl;
 
-    /* renamed from: n, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: n, reason: from kotlin metadata */
     public Function1<? super String, Unit> onWatchStreamClicked;
 
-    /* renamed from: o, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: o, reason: from kotlin metadata */
     public Subscription representativeColorSubscription;
 
-    /* renamed from: p, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: p, reason: from kotlin metadata */
     public boolean animateLabelFades;
 
-    /* renamed from: q, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: q, reason: from kotlin metadata */
     public Subscription frameRenderedSubscription;
 
-    /* renamed from: r, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: r, reason: from kotlin metadata */
     public DisplayCutoutCompat displayCutout;
 
-    /* renamed from: s, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: s, reason: from kotlin metadata */
     public boolean canOverlapTopCutout;
 
-    /* renamed from: t, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: t, reason: from kotlin metadata */
     public VideoCallGridAdapter.CallUiInsets callUiInsets;
 
-    /* renamed from: u, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: u, reason: from kotlin metadata */
     public boolean controlsVisible;
 
-    /* renamed from: v, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: v, reason: from kotlin metadata */
     public Drawable livePillBg;
 
-    /* renamed from: w, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: w, reason: from kotlin metadata */
     public Drawable liveSplitPillBg;
 
-    /* renamed from: x, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: x, reason: from kotlin metadata */
     public Function2<? super StreamResolution, ? super StreamFps, Unit> onStreamQualityIndicatorClicked;
 
-    /* renamed from: y, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: y, reason: from kotlin metadata */
     public Function2<? super StreamResolution, ? super StreamFps, Unit> onStreamQualityIndicatorShown;
 
-    /* compiled from: VideoCallParticipantView.kt */
+    /* JADX INFO: compiled from: VideoCallParticipantView.kt */
     public static final /* data */ class StreamFps {
 
-        /* renamed from: a, reason: from kotlin metadata */
+        /* JADX INFO: renamed from: a, reason: from kotlin metadata */
         public final int fps;
 
         public StreamFps(int i) {
             this.fps = i;
         }
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final boolean m8586a() {
             return this.fps == 60;
         }
@@ -134,7 +134,7 @@ public final class VideoCallParticipantView extends ConstraintLayout implements 
             return true;
         }
 
-        /* renamed from: hashCode, reason: from getter */
+        /* JADX INFO: renamed from: hashCode, reason: from getter */
         public int getFps() {
             return this.fps;
         }
@@ -144,14 +144,14 @@ public final class VideoCallParticipantView extends ConstraintLayout implements 
         }
     }
 
-    /* compiled from: VideoCallParticipantView.kt */
+    /* JADX INFO: compiled from: VideoCallParticipantView.kt */
     public static abstract class StreamResolution {
 
-        /* compiled from: VideoCallParticipantView.kt */
-        /* renamed from: com.discord.views.calls.VideoCallParticipantView$StreamResolution$a */
+        /* JADX INFO: renamed from: com.discord.views.calls.VideoCallParticipantView$StreamResolution$a */
+        /* JADX INFO: compiled from: VideoCallParticipantView.kt */
         public static final class C7108a extends StreamResolution {
 
-            /* renamed from: a */
+            /* JADX INFO: renamed from: a */
             public final int f19254a;
 
             public C7108a(int i) {
@@ -160,7 +160,7 @@ public final class VideoCallParticipantView extends ConstraintLayout implements 
             }
 
             @Override // com.discord.views.calls.VideoCallParticipantView.StreamResolution
-            /* renamed from: a */
+            /* JADX INFO: renamed from: a */
             public CharSequence mo8587a(Context context) {
                 Intrinsics3.checkNotNullParameter(context, "context");
                 return FormatUtils.m216h(context, C5419R.string.screenshare_resolution_abbreviated, new Object[]{Integer.valueOf(this.f19254a)}, null, 4);
@@ -182,11 +182,11 @@ public final class VideoCallParticipantView extends ConstraintLayout implements 
             }
         }
 
-        /* compiled from: VideoCallParticipantView.kt */
-        /* renamed from: com.discord.views.calls.VideoCallParticipantView$StreamResolution$b */
+        /* JADX INFO: renamed from: com.discord.views.calls.VideoCallParticipantView$StreamResolution$b */
+        /* JADX INFO: compiled from: VideoCallParticipantView.kt */
         public static final class C7109b extends StreamResolution {
 
-            /* renamed from: a */
+            /* JADX INFO: renamed from: a */
             public static final C7109b f19255a = new C7109b();
 
             public C7109b() {
@@ -194,7 +194,7 @@ public final class VideoCallParticipantView extends ConstraintLayout implements 
             }
 
             @Override // com.discord.views.calls.VideoCallParticipantView.StreamResolution
-            /* renamed from: a */
+            /* JADX INFO: renamed from: a */
             public CharSequence mo8587a(Context context) {
                 Intrinsics3.checkNotNullParameter(context, "context");
                 return FormatUtils.m216h(context, C5419R.string.screenshare_source, new Object[0], null, 4);
@@ -204,10 +204,10 @@ public final class VideoCallParticipantView extends ConstraintLayout implements 
         public StreamResolution() {
         }
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public abstract CharSequence mo8587a(Context context);
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final boolean m8588b() {
             return (this instanceof C7109b) || ((this instanceof C7108a) && ((C7108a) this).f19254a == 1080);
         }
@@ -216,11 +216,11 @@ public final class VideoCallParticipantView extends ConstraintLayout implements 
         }
     }
 
-    /* compiled from: VideoCallParticipantView.kt */
-    /* renamed from: com.discord.views.calls.VideoCallParticipantView$a */
+    /* JADX INFO: renamed from: com.discord.views.calls.VideoCallParticipantView$a */
+    /* JADX INFO: compiled from: VideoCallParticipantView.kt */
     public static final class ViewOnClickListenerC7110a implements View.OnClickListener {
 
-        /* renamed from: k */
+        /* JADX INFO: renamed from: k */
         public final /* synthetic */ ParticipantData.C7107a f19257k;
 
         public ViewOnClickListenerC7110a(ParticipantData.C7107a c7107a) {
@@ -364,7 +364,7 @@ public final class VideoCallParticipantView extends ConstraintLayout implements 
         throw new NullPointerException("Missing required view with ID: ".concat(getResources().getResourceName(i4)));
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public static /* synthetic */ void m8580d(VideoCallParticipantView videoCallParticipantView, ParticipantData participantData, DisplayCutoutCompat displayCutoutCompat, boolean z2, VideoCallGridAdapter.CallUiInsets callUiInsets, boolean z3, int i) {
         DisplayCutoutCompat displayCutoutCompat2 = (i & 2) != 0 ? videoCallParticipantView.displayCutout : null;
         if ((i & 4) != 0) {
@@ -378,7 +378,7 @@ public final class VideoCallParticipantView extends ConstraintLayout implements 
         videoCallParticipantView.m8583c(participantData, displayCutoutCompat2, z4, callUiInsets2, z3);
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final void m8581a(ParticipantData participantData) {
         CharSequence charSequenceM216h;
         ParticipantData.C7107a c7107a = participantData.streamQualityIndicatorData;
@@ -429,14 +429,14 @@ public final class VideoCallParticipantView extends ConstraintLayout implements 
         m8582b(true);
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final void m8582b(boolean visible) {
         ViewExtensions.fadeBy(this.binding.f916e, visible, 200L);
     }
 
     /* JADX WARN: Removed duplicated region for block: B:141:0x047e  */
     @MainThread
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
@@ -850,40 +850,40 @@ public final class VideoCallParticipantView extends ConstraintLayout implements 
         this.onWatchStreamClicked = onWatchStreamClicked;
     }
 
-    /* compiled from: VideoCallParticipantView.kt */
+    /* JADX INFO: compiled from: VideoCallParticipantView.kt */
     public static final /* data */ class ParticipantData implements FrameGridLayout.Data {
 
-        /* renamed from: a, reason: from kotlin metadata */
+        /* JADX INFO: renamed from: a, reason: from kotlin metadata */
         public final String id;
 
-        /* renamed from: b, reason: from kotlin metadata */
+        /* JADX INFO: renamed from: b, reason: from kotlin metadata */
         public final StoreVoiceParticipants.VoiceUser voiceParticipant;
 
-        /* renamed from: c, reason: from kotlin metadata */
+        /* JADX INFO: renamed from: c, reason: from kotlin metadata */
         public final boolean mirrorVideo;
 
-        /* renamed from: d, reason: from kotlin metadata */
+        /* JADX INFO: renamed from: d, reason: from kotlin metadata */
         public final RendererCommon.ScalingType scalingType;
 
-        /* renamed from: e, reason: from kotlin metadata */
+        /* JADX INFO: renamed from: e, reason: from kotlin metadata */
         public final RendererCommon.ScalingType scalingTypeMismatchOrientation;
 
-        /* renamed from: f, reason: from kotlin metadata */
+        /* JADX INFO: renamed from: f, reason: from kotlin metadata */
         public final ApplicationStreamState applicationStreamState;
 
-        /* renamed from: g, reason: from kotlin metadata */
+        /* JADX INFO: renamed from: g, reason: from kotlin metadata */
         public final Type type;
 
-        /* renamed from: h, reason: from kotlin metadata */
+        /* JADX INFO: renamed from: h, reason: from kotlin metadata */
         public final boolean showLabel;
 
-        /* renamed from: i, reason: from kotlin metadata */
+        /* JADX INFO: renamed from: i, reason: from kotlin metadata */
         public final boolean isFocused;
 
-        /* renamed from: j, reason: from kotlin metadata */
+        /* JADX INFO: renamed from: j, reason: from kotlin metadata */
         public final C7107a streamQualityIndicatorData;
 
-        /* compiled from: VideoCallParticipantView.kt */
+        /* JADX INFO: compiled from: VideoCallParticipantView.kt */
         public enum ApplicationStreamState {
             CONNECTING,
             ACTIVE,
@@ -892,26 +892,26 @@ public final class VideoCallParticipantView extends ConstraintLayout implements 
             ENDED
         }
 
-        /* compiled from: VideoCallParticipantView.kt */
+        /* JADX INFO: compiled from: VideoCallParticipantView.kt */
         public enum Type {
             DEFAULT,
             APPLICATION_STREAMING
         }
 
-        /* compiled from: VideoCallParticipantView.kt */
-        /* renamed from: com.discord.views.calls.VideoCallParticipantView$ParticipantData$a */
+        /* JADX INFO: renamed from: com.discord.views.calls.VideoCallParticipantView$ParticipantData$a */
+        /* JADX INFO: compiled from: VideoCallParticipantView.kt */
         public static final class C7107a {
 
-            /* renamed from: a */
+            /* JADX INFO: renamed from: a */
             public final boolean f19249a;
 
-            /* renamed from: b */
+            /* JADX INFO: renamed from: b */
             public final StreamResolution f19250b;
 
-            /* renamed from: c */
+            /* JADX INFO: renamed from: c */
             public final StreamFps f19251c;
 
-            /* renamed from: d */
+            /* JADX INFO: renamed from: d */
             public final boolean f19252d;
 
             public C7107a(boolean z2, StreamResolution streamResolution, StreamFps streamFps, boolean z3) {
@@ -937,6 +937,9 @@ public final class VideoCallParticipantView extends ConstraintLayout implements 
             /* JADX WARN: Type inference failed for: r0v1, types: [int] */
             /* JADX WARN: Type inference failed for: r0v8 */
             /* JADX WARN: Type inference failed for: r0v9 */
+            /* JADX WARN: Type inference failed for: r1v0 */
+            /* JADX WARN: Type inference failed for: r1v1, types: [int] */
+            /* JADX WARN: Type inference failed for: r1v2 */
             public int hashCode() {
                 boolean z2 = this.f19249a;
                 ?? r0 = z2;
@@ -949,7 +952,7 @@ public final class VideoCallParticipantView extends ConstraintLayout implements 
                 StreamFps streamFps = this.f19251c;
                 int fps = (iHashCode + (streamFps != null ? streamFps.getFps() : 0)) * 31;
                 boolean z3 = this.f19252d;
-                return fps + (z3 ? 1 : z3 ? 1 : 0);
+                return fps + (z3 ? 1 : z3);
             }
 
             public String toString() {
@@ -982,7 +985,7 @@ public final class VideoCallParticipantView extends ConstraintLayout implements 
             this.id = sb.toString();
         }
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public static ParticipantData m8584a(ParticipantData participantData, StoreVoiceParticipants.VoiceUser voiceUser, boolean z2, RendererCommon.ScalingType scalingType, RendererCommon.ScalingType scalingType2, ApplicationStreamState applicationStreamState, Type type, boolean z3, boolean z4, C7107a c7107a, int i) {
             StoreVoiceParticipants.VoiceUser voiceUser2 = (i & 1) != 0 ? participantData.voiceParticipant : null;
             boolean z5 = (i & 2) != 0 ? participantData.mirrorVideo : z2;
@@ -999,7 +1002,7 @@ public final class VideoCallParticipantView extends ConstraintLayout implements 
             return new ParticipantData(voiceUser2, z5, scalingType3, scalingType4, applicationStreamState2, type2, z6, z7, c7107a2);
         }
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final Integer m8585b() {
             VoiceState voiceState;
             int iOrdinal = this.type.ordinal();
@@ -1043,17 +1046,26 @@ public final class VideoCallParticipantView extends ConstraintLayout implements 
         }
 
         /* JADX WARN: Multi-variable type inference failed */
+        /* JADX WARN: Type inference failed for: r2v1, types: [int] */
+        /* JADX WARN: Type inference failed for: r2v15, types: [int] */
+        /* JADX WARN: Type inference failed for: r2v18 */
+        /* JADX WARN: Type inference failed for: r2v23 */
+        /* JADX WARN: Type inference failed for: r2v24 */
+        /* JADX WARN: Type inference failed for: r2v25 */
+        /* JADX WARN: Type inference failed for: r3v0 */
+        /* JADX WARN: Type inference failed for: r3v1, types: [int] */
+        /* JADX WARN: Type inference failed for: r3v2 */
         public int hashCode() {
             StoreVoiceParticipants.VoiceUser voiceUser = this.voiceParticipant;
             int iHashCode = (voiceUser != null ? voiceUser.hashCode() : 0) * 31;
             boolean z2 = this.mirrorVideo;
-            int i = z2;
-            if (z2 != 0) {
-                i = 1;
+            ?? r2 = z2;
+            if (z2) {
+                r2 = 1;
             }
-            int i2 = (iHashCode + i) * 31;
+            int i = (iHashCode + r2) * 31;
             RendererCommon.ScalingType scalingType = this.scalingType;
-            int iHashCode2 = (i2 + (scalingType != null ? scalingType.hashCode() : 0)) * 31;
+            int iHashCode2 = (i + (scalingType != null ? scalingType.hashCode() : 0)) * 31;
             RendererCommon.ScalingType scalingType2 = this.scalingTypeMismatchOrientation;
             int iHashCode3 = (iHashCode2 + (scalingType2 != null ? scalingType2.hashCode() : 0)) * 31;
             ApplicationStreamState applicationStreamState = this.applicationStreamState;
@@ -1061,15 +1073,15 @@ public final class VideoCallParticipantView extends ConstraintLayout implements 
             Type type = this.type;
             int iHashCode5 = (iHashCode4 + (type != null ? type.hashCode() : 0)) * 31;
             boolean z3 = this.showLabel;
-            int i3 = z3;
-            if (z3 != 0) {
-                i3 = 1;
+            ?? r22 = z3;
+            if (z3) {
+                r22 = 1;
             }
-            int i4 = (iHashCode5 + i3) * 31;
+            int i2 = (iHashCode5 + r22) * 31;
             boolean z4 = this.isFocused;
-            int i5 = (i4 + (z4 ? 1 : z4 ? 1 : 0)) * 31;
+            int i3 = (i2 + (z4 ? 1 : z4)) * 31;
             C7107a c7107a = this.streamQualityIndicatorData;
-            return i5 + (c7107a != null ? c7107a.hashCode() : 0);
+            return i3 + (c7107a != null ? c7107a.hashCode() : 0);
         }
 
         public String toString() {

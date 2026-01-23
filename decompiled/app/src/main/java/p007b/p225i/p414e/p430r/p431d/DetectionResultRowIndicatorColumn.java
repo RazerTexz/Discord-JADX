@@ -1,11 +1,11 @@
 package p007b.p225i.p414e.p430r.p431d;
 
-/* compiled from: DetectionResultRowIndicatorColumn.java */
-/* renamed from: b.i.e.r.d.h, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.e.r.d.h, reason: use source file name */
+/* JADX INFO: compiled from: DetectionResultRowIndicatorColumn.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class DetectionResultRowIndicatorColumn extends DetectionResultColumn {
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final boolean f13493c;
 
     public DetectionResultRowIndicatorColumn(BoundingBox boundingBox, boolean z2) {
@@ -13,7 +13,7 @@ public final class DetectionResultRowIndicatorColumn extends DetectionResultColu
         this.f13493c = z2;
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public BarcodeMetadata m7059c() {
         Codeword[] codewordArr = this.f13492b;
         BarcodeValue barcodeValue = new BarcodeValue();
@@ -47,7 +47,7 @@ public final class DetectionResultRowIndicatorColumn extends DetectionResultColu
         return barcodeMetadata;
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final void m7060d(Codeword[] codewordArr, BarcodeMetadata barcodeMetadata) {
         for (int i = 0; i < codewordArr.length; i++) {
             Codeword codeword = codewordArr[i];

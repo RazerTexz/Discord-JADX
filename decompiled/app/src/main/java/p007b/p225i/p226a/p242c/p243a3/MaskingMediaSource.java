@@ -14,51 +14,51 @@ import p007b.p225i.p226a.p242c.p257e3.DefaultAllocator;
 import p007b.p225i.p226a.p242c.p257e3.TransferListener;
 import p007b.p225i.p226a.p242c.p259f3.Util2;
 
-/* compiled from: MaskingMediaSource.java */
-/* renamed from: b.i.a.c.a3.v, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.a3.v, reason: use source file name */
+/* JADX INFO: compiled from: MaskingMediaSource.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class MaskingMediaSource extends CompositeMediaSource<Void> {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final MediaSource2 f5712j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final boolean f5713k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final Timeline.c f5714l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public final Timeline.b f5715m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public a f5716n;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     @Nullable
     public MaskingMediaPeriod f5717o;
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public boolean f5718p;
 
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     public boolean f5719q;
 
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     public boolean f5720r;
 
-    /* compiled from: MaskingMediaSource.java */
-    /* renamed from: b.i.a.c.a3.v$a */
+    /* JADX INFO: renamed from: b.i.a.c.a3.v$a */
+    /* JADX INFO: compiled from: MaskingMediaSource.java */
     public static final class a extends ForwardingTimeline {
 
-        /* renamed from: l */
+        /* JADX INFO: renamed from: l */
         public static final Object f5721l = new Object();
 
-        /* renamed from: m */
+        /* JADX INFO: renamed from: m */
         @Nullable
         public final Object f5722m;
 
-        /* renamed from: n */
+        /* JADX INFO: renamed from: n */
         @Nullable
         public final Object f5723n;
 
@@ -69,7 +69,7 @@ public final class MaskingMediaSource extends CompositeMediaSource<Void> {
         }
 
         @Override // p007b.p225i.p226a.p242c.p243a3.ForwardingTimeline, p007b.p225i.p226a.p242c.Timeline
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public int mo2554b(Object obj) {
             Object obj2;
             Timeline timeline = this.f5697k;
@@ -80,7 +80,7 @@ public final class MaskingMediaSource extends CompositeMediaSource<Void> {
         }
 
         @Override // p007b.p225i.p226a.p242c.Timeline
-        /* renamed from: g */
+        /* JADX INFO: renamed from: g */
         public Timeline.b mo2513g(int i, Timeline.b bVar, boolean z2) {
             this.f5697k.mo2513g(i, bVar, z2);
             if (Util2.m2993a(bVar.f7339k, this.f5723n) && z2) {
@@ -90,14 +90,14 @@ public final class MaskingMediaSource extends CompositeMediaSource<Void> {
         }
 
         @Override // p007b.p225i.p226a.p242c.p243a3.ForwardingTimeline, p007b.p225i.p226a.p242c.Timeline
-        /* renamed from: m */
+        /* JADX INFO: renamed from: m */
         public Object mo2556m(int i) {
             Object objMo2556m = this.f5697k.mo2556m(i);
             return Util2.m2993a(objMo2556m, this.f5723n) ? f5721l : objMo2556m;
         }
 
         @Override // p007b.p225i.p226a.p242c.Timeline
-        /* renamed from: o */
+        /* JADX INFO: renamed from: o */
         public Timeline.c mo2514o(int i, Timeline.c cVar, long j) {
             this.f5697k.mo2514o(i, cVar, j);
             if (Util2.m2993a(cVar.f7353n, this.f5722m)) {
@@ -107,12 +107,12 @@ public final class MaskingMediaSource extends CompositeMediaSource<Void> {
         }
     }
 
-    /* compiled from: MaskingMediaSource.java */
+    /* JADX INFO: renamed from: b.i.a.c.a3.v$b */
+    /* JADX INFO: compiled from: MaskingMediaSource.java */
     @VisibleForTesting
-    /* renamed from: b.i.a.c.a3.v$b */
     public static final class b extends Timeline {
 
-        /* renamed from: k */
+        /* JADX INFO: renamed from: k */
         public final MediaItem2 f5724k;
 
         public b(MediaItem2 mediaItem2) {
@@ -120,32 +120,32 @@ public final class MaskingMediaSource extends CompositeMediaSource<Void> {
         }
 
         @Override // p007b.p225i.p226a.p242c.Timeline
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public int mo2554b(Object obj) {
             return obj == a.f5721l ? 0 : -1;
         }
 
         @Override // p007b.p225i.p226a.p242c.Timeline
-        /* renamed from: g */
+        /* JADX INFO: renamed from: g */
         public Timeline.b mo2513g(int i, Timeline.b bVar, boolean z2) {
             bVar.m3337f(z2 ? 0 : null, z2 ? a.f5721l : null, 0, -9223372036854775807L, 0L, AdPlaybackState.f5680j, true);
             return bVar;
         }
 
         @Override // p007b.p225i.p226a.p242c.Timeline
-        /* renamed from: i */
+        /* JADX INFO: renamed from: i */
         public int mo2555i() {
             return 1;
         }
 
         @Override // p007b.p225i.p226a.p242c.Timeline
-        /* renamed from: m */
+        /* JADX INFO: renamed from: m */
         public Object mo2556m(int i) {
             return a.f5721l;
         }
 
         @Override // p007b.p225i.p226a.p242c.Timeline
-        /* renamed from: o */
+        /* JADX INFO: renamed from: o */
         public Timeline.c mo2514o(int i, Timeline.c cVar, long j) {
             cVar.m3342e(Timeline.c.f7345j, this.f5724k, null, -9223372036854775807L, -9223372036854775807L, -9223372036854775807L, false, true, null, 0L, -9223372036854775807L, 0, 0, 0L);
             cVar.f7364y = true;
@@ -153,7 +153,7 @@ public final class MaskingMediaSource extends CompositeMediaSource<Void> {
         }
 
         @Override // p007b.p225i.p226a.p242c.Timeline
-        /* renamed from: p */
+        /* JADX INFO: renamed from: p */
         public int mo2557p() {
             return 1;
         }
@@ -174,18 +174,18 @@ public final class MaskingMediaSource extends CompositeMediaSource<Void> {
     }
 
     @Override // p007b.p225i.p226a.p242c.p243a3.MediaSource2
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public MediaItem2 mo2450e() {
         return this.f5712j.mo2450e();
     }
 
     @Override // p007b.p225i.p226a.p242c.p243a3.MediaSource2
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public void mo2453h() {
     }
 
     @Override // p007b.p225i.p226a.p242c.p243a3.MediaSource2
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public void mo2455j(MediaPeriod mediaPeriod) {
         MaskingMediaPeriod maskingMediaPeriod = (MaskingMediaPeriod) mediaPeriod;
         if (maskingMediaPeriod.f5709n != null) {
@@ -199,13 +199,13 @@ public final class MaskingMediaSource extends CompositeMediaSource<Void> {
     }
 
     @Override // p007b.p225i.p226a.p242c.p243a3.MediaSource2
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public /* bridge */ /* synthetic */ MediaPeriod mo2459n(MediaSource2.a aVar, DefaultAllocator defaultAllocator, long j) {
         return m2591u(aVar, defaultAllocator, j);
     }
 
     @Override // p007b.p225i.p226a.p242c.p243a3.BaseMediaSource
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     public void mo2509q(@Nullable TransferListener transferListener) {
         this.f5666i = transferListener;
         this.f5665h = Util2.m3002j();
@@ -217,7 +217,7 @@ public final class MaskingMediaSource extends CompositeMediaSource<Void> {
     }
 
     @Override // p007b.p225i.p226a.p242c.p243a3.BaseMediaSource
-    /* renamed from: s */
+    /* JADX INFO: renamed from: s */
     public void mo2510s() {
         this.f5719q = false;
         this.f5718p = false;
@@ -229,7 +229,7 @@ public final class MaskingMediaSource extends CompositeMediaSource<Void> {
         this.f5664g.clear();
     }
 
-    /* renamed from: u */
+    /* JADX INFO: renamed from: u */
     public MaskingMediaPeriod m2591u(MediaSource2.a aVar, DefaultAllocator defaultAllocator, long j) {
         MaskingMediaPeriod maskingMediaPeriod = new MaskingMediaPeriod(aVar, defaultAllocator, j);
         MediaSource2 mediaSource2 = this.f5712j;
@@ -252,7 +252,7 @@ public final class MaskingMediaSource extends CompositeMediaSource<Void> {
     }
 
     @RequiresNonNull({"unpreparedMaskingMediaPeriod"})
-    /* renamed from: v */
+    /* JADX INFO: renamed from: v */
     public final void m2592v(long j) {
         MaskingMediaPeriod maskingMediaPeriod = this.f5717o;
         int iMo2554b = this.f5716n.mo2554b(maskingMediaPeriod.f5705j.f5732a);

@@ -9,8 +9,8 @@ import androidx.appcompat.view.menu.MenuPresenter;
 import androidx.appcompat.view.menu.MenuView;
 import java.util.ArrayList;
 
+/* JADX INFO: loaded from: classes.dex */
 @RestrictTo({RestrictTo.Scope.LIBRARY_GROUP_PREFIX})
-/* loaded from: classes.dex */
 public abstract class BaseMenuPresenter implements MenuPresenter {
     private MenuPresenter.Callback mCallback;
     public Context mContext;
@@ -106,19 +106,17 @@ public abstract class BaseMenuPresenter implements MenuPresenter {
         }
     }
 
-    /* JADX WARN: Multi-variable type inference failed */
-    /* JADX WARN: Type inference failed for: r2v4, types: [androidx.appcompat.view.menu.MenuBuilder] */
     @Override // androidx.appcompat.view.menu.MenuPresenter
     public boolean onSubMenuSelected(SubMenuBuilder subMenuBuilder) {
         MenuPresenter.Callback callback = this.mCallback;
-        SubMenuBuilder subMenuBuilder2 = subMenuBuilder;
+        MenuBuilder menuBuilder = subMenuBuilder;
         if (callback == null) {
             return false;
         }
         if (subMenuBuilder == null) {
-            subMenuBuilder2 = this.mMenu;
+            menuBuilder = this.mMenu;
         }
-        return callback.onOpenSubMenu(subMenuBuilder2);
+        return callback.onOpenSubMenu(menuBuilder);
     }
 
     @Override // androidx.appcompat.view.menu.MenuPresenter

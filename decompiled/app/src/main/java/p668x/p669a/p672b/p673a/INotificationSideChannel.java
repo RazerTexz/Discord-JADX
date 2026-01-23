@@ -7,27 +7,27 @@ import android.os.IInterface;
 import android.os.Parcel;
 import android.os.RemoteException;
 
-/* compiled from: INotificationSideChannel.java */
-/* renamed from: x.a.b.a.a, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: x.a.b.a.a, reason: use source file name */
+/* JADX INFO: compiled from: INotificationSideChannel.java */
+/* JADX INFO: loaded from: classes.dex */
 public interface INotificationSideChannel extends IInterface {
 
-    /* compiled from: INotificationSideChannel.java */
-    /* renamed from: x.a.b.a.a$a */
+    /* JADX INFO: renamed from: x.a.b.a.a$a */
+    /* JADX INFO: compiled from: INotificationSideChannel.java */
     public static abstract class a extends Binder implements INotificationSideChannel {
         private static final String DESCRIPTOR = "android.support.v4.app.INotificationSideChannel";
         public static final int TRANSACTION_cancel = 2;
         public static final int TRANSACTION_cancelAll = 3;
         public static final int TRANSACTION_notify = 1;
 
-        /* compiled from: INotificationSideChannel.java */
-        /* renamed from: x.a.b.a.a$a$a, reason: collision with other inner class name */
+        /* JADX INFO: renamed from: x.a.b.a.a$a$a, reason: collision with other inner class name */
+        /* JADX INFO: compiled from: INotificationSideChannel.java */
         public static class C13360a implements INotificationSideChannel {
 
-            /* renamed from: a */
+            /* JADX INFO: renamed from: a */
             public static INotificationSideChannel f27941a;
 
-            /* renamed from: b */
+            /* JADX INFO: renamed from: b */
             public IBinder f27942b;
 
             public C13360a(IBinder iBinder) {

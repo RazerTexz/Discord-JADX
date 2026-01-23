@@ -10,40 +10,40 @@ import androidx.viewbinding.ViewBinding;
 import com.facebook.drawee.view.SimpleDraweeView;
 import com.google.android.material.button.MaterialButton;
 
-/* compiled from: WidgetPlatformRichPresenceBinding.java */
-/* renamed from: b.a.i.t5, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.a.i.t5, reason: use source file name */
+/* JADX INFO: compiled from: WidgetPlatformRichPresenceBinding.java */
+/* JADX INFO: loaded from: classes.dex */
 public final class WidgetPlatformRichPresenceBinding implements ViewBinding {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     @NonNull
     public final LinearLayout f1257a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     @NonNull
     public final LinearLayout f1258b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     @NonNull
     public final TextView f1259c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     @NonNull
     public final SimpleDraweeView f1260d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     @NonNull
     public final SimpleDraweeView f1261e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     @NonNull
     public final MaterialButton f1262f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     @NonNull
     public final TextView f1263g;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     @NonNull
     public final TextView f1264h;
 

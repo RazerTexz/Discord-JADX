@@ -7,7 +7,7 @@ import androidx.annotation.Nullable;
 import java.io.IOException;
 import java.util.List;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public final class Token {
     private static final String TAG = "Token";
 

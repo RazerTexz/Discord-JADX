@@ -5,31 +5,31 @@ import androidx.core.view.ViewCompat;
 import com.discord.floating_view_manager.FloatingViewGravity;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: View.kt */
-/* renamed from: b.a.j.b */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.a.j.b */
+/* JADX INFO: compiled from: View.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class ViewOnLayoutChangeListenerC1101b implements View.OnLayoutChangeListener {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final /* synthetic */ FloatingViewManager f1461j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final /* synthetic */ View f1462k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final /* synthetic */ View f1463l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public final /* synthetic */ FloatingViewGravity f1464m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public final /* synthetic */ int f1465n;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public final /* synthetic */ int f1466o;
 
-    /* compiled from: View.kt */
-    /* renamed from: b.a.j.b$a */
+    /* JADX INFO: renamed from: b.a.j.b$a */
+    /* JADX INFO: compiled from: View.kt */
     public static final class a implements View.OnLayoutChangeListener {
         public a() {
         }

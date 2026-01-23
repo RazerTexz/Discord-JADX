@@ -8,18 +8,18 @@ import java.util.Objects;
 import java.util.RandomAccess;
 import p007b.p100d.p104b.p105a.outline;
 
-/* compiled from: com.google.android.gms:play-services-measurement-base@@18.0.0 */
-/* renamed from: b.i.a.f.h.l.q5 */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.h.l.q5 */
+/* JADX INFO: compiled from: com.google.android.gms:play-services-measurement-base@@18.0.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public final class C3800q5 extends AbstractC3772o3<Long> implements InterfaceC3611c5, InterfaceC3736l6, RandomAccess {
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public static final C3800q5 f10271k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public long[] f10272l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public int f10273m;
 
     static {
@@ -88,7 +88,7 @@ public final class C3800q5 extends AbstractC3772o3<Long> implements InterfaceC36
         return indexOf(obj) != -1;
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final void m5186d(long j) {
         m5153c();
         int i = this.f10273m;
@@ -104,7 +104,7 @@ public final class C3800q5 extends AbstractC3772o3<Long> implements InterfaceC36
         jArr3[i2] = j;
     }
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final long m5187e(int i) {
         m5189h(i);
         return this.f10272l[i];
@@ -132,12 +132,12 @@ public final class C3800q5 extends AbstractC3772o3<Long> implements InterfaceC36
     }
 
     @Override // p007b.p225i.p226a.p288f.p313h.p325l.InterfaceC3597b5
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final /* synthetic */ InterfaceC3597b5<Long> mo4569f(int i) {
         return m5188g(i);
     }
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public final InterfaceC3611c5 m5188g(int i) {
         if (i >= this.f10273m) {
             return new C3800q5(Arrays.copyOf(this.f10272l, i), this.f10273m);
@@ -151,7 +151,7 @@ public final class C3800q5 extends AbstractC3772o3<Long> implements InterfaceC36
         return Long.valueOf(this.f10272l[i]);
     }
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public final void m5189h(int i) {
         if (i < 0 || i >= this.f10273m) {
             throw new IndexOutOfBoundsException(m5190i(i));
@@ -167,7 +167,7 @@ public final class C3800q5 extends AbstractC3772o3<Long> implements InterfaceC36
         return iM5344a;
     }
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public final String m5190i(int i) {
         return outline.m853h(35, "Index:", i, ", Size:", this.f10273m);
     }

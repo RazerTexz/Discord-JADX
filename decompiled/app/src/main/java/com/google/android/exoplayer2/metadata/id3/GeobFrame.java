@@ -7,23 +7,23 @@ import java.util.Arrays;
 import p007b.p100d.p104b.p105a.outline;
 import p007b.p225i.p226a.p242c.p259f3.Util2;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public final class GeobFrame extends Id3Frame {
     public static final Parcelable.Creator<GeobFrame> CREATOR = new C10731a();
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final String f19985k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final String f19986l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public final String f19987m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public final byte[] f19988n;
 
-    /* renamed from: com.google.android.exoplayer2.metadata.id3.GeobFrame$a */
+    /* JADX INFO: renamed from: com.google.android.exoplayer2.metadata.id3.GeobFrame$a */
     public class C10731a implements Parcelable.Creator<GeobFrame> {
         @Override // android.os.Parcelable.Creator
         public GeobFrame createFromParcel(Parcel parcel) {

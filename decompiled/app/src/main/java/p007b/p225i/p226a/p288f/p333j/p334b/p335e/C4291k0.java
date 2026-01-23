@@ -9,8 +9,8 @@ import com.google.android.gms.nearby.messages.internal.zza;
 import com.google.android.gms.nearby.messages.internal.zze;
 import p007b.p085c.p086a.p087a0.AnimatableValueParser;
 
-/* renamed from: b.i.a.f.j.b.e.k0 */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.j.b.e.k0 */
+/* JADX INFO: loaded from: classes3.dex */
 public final class C4291k0 implements Parcelable.Creator<Update> {
     @Override // android.os.Parcelable.Creator
     public final Update createFromParcel(Parcel parcel) {

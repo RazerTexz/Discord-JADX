@@ -49,8 +49,8 @@ import p658rx.Subscription;
 import p658rx.functions.Func2;
 import p658rx.subjects.PublishSubject;
 
-/* compiled from: ChannelMembersListAdapter.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: ChannelMembersListAdapter.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class ChannelMembersListAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> implements StickyHeaderItemDecoration.StickyHeaderAdapter {
     private WidgetChannelMembersListViewModel.MemberList memberList;
     private Function0<Unit> onAddMemberClicked;
@@ -60,8 +60,8 @@ public final class ChannelMembersListAdapter extends RecyclerView.Adapter<Recycl
     private final PublishSubject<ListUpdateRequest> updatesSubject;
     private Subscription updatesSubscription;
 
-    /* compiled from: ChannelMembersListAdapter.kt */
-    /* renamed from: com.discord.widgets.channels.memberlist.adapter.ChannelMembersListAdapter$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.channels.memberlist.adapter.ChannelMembersListAdapter$1 */
+    /* JADX INFO: compiled from: ChannelMembersListAdapter.kt */
     public static final class C75051 extends Lambda implements Function2<ListUpdateRequest, ListUpdateRequest, ListUpdateOperation> {
         public static final C75051 INSTANCE = new C75051();
 
@@ -74,7 +74,7 @@ public final class ChannelMembersListAdapter extends RecyclerView.Adapter<Recycl
             return invoke2(listUpdateRequest, listUpdateRequest2);
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final ListUpdateOperation invoke2(ListUpdateRequest listUpdateRequest, ListUpdateRequest listUpdateRequest2) {
             Intrinsics3.checkNotNullParameter(listUpdateRequest, "prevRequest");
             Intrinsics3.checkNotNullParameter(listUpdateRequest2, "nextRequest");
@@ -94,8 +94,8 @@ public final class ChannelMembersListAdapter extends RecyclerView.Adapter<Recycl
         }
     }
 
-    /* compiled from: ChannelMembersListAdapter.kt */
-    /* renamed from: com.discord.widgets.channels.memberlist.adapter.ChannelMembersListAdapter$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.channels.memberlist.adapter.ChannelMembersListAdapter$2 */
+    /* JADX INFO: compiled from: ChannelMembersListAdapter.kt */
     public static final class C75062<T1, T2, R> implements Func2<ListUpdateOperation, ListUpdateRequest, ListUpdateOperation> {
         public static final C75062 INSTANCE = new C75062();
 
@@ -104,7 +104,7 @@ public final class ChannelMembersListAdapter extends RecyclerView.Adapter<Recycl
             return call2(listUpdateOperation, listUpdateRequest);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final ListUpdateOperation call2(ListUpdateOperation listUpdateOperation, ListUpdateRequest listUpdateRequest) {
             C75051 c75051 = C75051.INSTANCE;
             ListUpdateRequest request = listUpdateOperation.getRequest();
@@ -113,8 +113,8 @@ public final class ChannelMembersListAdapter extends RecyclerView.Adapter<Recycl
         }
     }
 
-    /* compiled from: ChannelMembersListAdapter.kt */
-    /* renamed from: com.discord.widgets.channels.memberlist.adapter.ChannelMembersListAdapter$3 */
+    /* JADX INFO: renamed from: com.discord.widgets.channels.memberlist.adapter.ChannelMembersListAdapter$3 */
+    /* JADX INFO: compiled from: ChannelMembersListAdapter.kt */
     public static final class C75073 extends Lambda implements Function1<ListUpdateOperation, Unit> {
         public C75073() {
             super(1);
@@ -126,7 +126,7 @@ public final class ChannelMembersListAdapter extends RecyclerView.Adapter<Recycl
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(ListUpdateOperation listUpdateOperation) {
             ChannelMembersListAdapter.access$setMemberList$p(ChannelMembersListAdapter.this, listUpdateOperation.getRequest().getRows());
             if (listUpdateOperation instanceof ListUpdateOperation.DiffUpdate) {
@@ -137,8 +137,8 @@ public final class ChannelMembersListAdapter extends RecyclerView.Adapter<Recycl
         }
     }
 
-    /* compiled from: ChannelMembersListAdapter.kt */
-    /* renamed from: com.discord.widgets.channels.memberlist.adapter.ChannelMembersListAdapter$4 */
+    /* JADX INFO: renamed from: com.discord.widgets.channels.memberlist.adapter.ChannelMembersListAdapter$4 */
+    /* JADX INFO: compiled from: ChannelMembersListAdapter.kt */
     public static final class C75084 extends Lambda implements Function1<Subscription, Unit> {
         public C75084() {
             super(1);
@@ -150,14 +150,14 @@ public final class ChannelMembersListAdapter extends RecyclerView.Adapter<Recycl
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Subscription subscription) {
             Intrinsics3.checkNotNullParameter(subscription, "it");
             ChannelMembersListAdapter.access$setUpdatesSubscription$p(ChannelMembersListAdapter.this, subscription);
         }
     }
 
-    /* compiled from: ChannelMembersListAdapter.kt */
+    /* JADX INFO: compiled from: ChannelMembersListAdapter.kt */
     public static final class DiffUtilCallback extends DiffUtil.Callback {
         private final WidgetChannelMembersListViewModel.MemberList nextMemberList;
         private final WidgetChannelMembersListViewModel.MemberList prevMemberList;
@@ -190,12 +190,12 @@ public final class ChannelMembersListAdapter extends RecyclerView.Adapter<Recycl
         }
     }
 
-    /* compiled from: ChannelMembersListAdapter.kt */
+    /* JADX INFO: compiled from: ChannelMembersListAdapter.kt */
     public static abstract class Item {
         private final Object rowId;
         private final ViewType type;
 
-        /* compiled from: ChannelMembersListAdapter.kt */
+        /* JADX INFO: compiled from: ChannelMembersListAdapter.kt */
         public static final /* data */ class AddMember extends Item {
             private final String rowId;
             private final int title;
@@ -222,7 +222,7 @@ public final class ChannelMembersListAdapter extends RecyclerView.Adapter<Recycl
                 return getRowId();
             }
 
-            /* renamed from: component2, reason: from getter */
+            /* JADX INFO: renamed from: component2, reason: from getter */
             public final int getTitle() {
                 return this.title;
             }
@@ -270,13 +270,13 @@ public final class ChannelMembersListAdapter extends RecyclerView.Adapter<Recycl
             }
         }
 
-        /* compiled from: ChannelMembersListAdapter.kt */
+        /* JADX INFO: compiled from: ChannelMembersListAdapter.kt */
         public static final /* data */ class Header extends Item {
             private final Type headerType;
             private final int memberCount;
             private final String rowId;
 
-            /* compiled from: ChannelMembersListAdapter.kt */
+            /* JADX INFO: compiled from: ChannelMembersListAdapter.kt */
             public enum Type {
                 ONLINE,
                 OFFLINE,
@@ -310,12 +310,12 @@ public final class ChannelMembersListAdapter extends RecyclerView.Adapter<Recycl
                 return getRowId();
             }
 
-            /* renamed from: component2, reason: from getter */
+            /* JADX INFO: renamed from: component2, reason: from getter */
             public final Type getHeaderType() {
                 return this.headerType;
             }
 
-            /* renamed from: component3, reason: from getter */
+            /* JADX INFO: renamed from: component3, reason: from getter */
             public final int getMemberCount() {
                 return this.memberCount;
             }
@@ -372,7 +372,7 @@ public final class ChannelMembersListAdapter extends RecyclerView.Adapter<Recycl
             }
         }
 
-        /* compiled from: ChannelMembersListAdapter.kt */
+        /* JADX INFO: compiled from: ChannelMembersListAdapter.kt */
         public static final /* data */ class JoinLeaveThread extends Item {
             private final boolean isThreadJoined;
             private final String rowId;
@@ -399,7 +399,7 @@ public final class ChannelMembersListAdapter extends RecyclerView.Adapter<Recycl
                 return getRowId();
             }
 
-            /* renamed from: component2, reason: from getter */
+            /* JADX INFO: renamed from: component2, reason: from getter */
             public final boolean getIsThreadJoined() {
                 return this.isThreadJoined;
             }
@@ -426,15 +426,18 @@ public final class ChannelMembersListAdapter extends RecyclerView.Adapter<Recycl
             }
 
             /* JADX WARN: Multi-variable type inference failed */
+            /* JADX WARN: Type inference failed for: r1v1, types: [int] */
+            /* JADX WARN: Type inference failed for: r1v2 */
+            /* JADX WARN: Type inference failed for: r1v3 */
             public int hashCode() {
                 String rowId = getRowId();
                 int iHashCode = (rowId != null ? rowId.hashCode() : 0) * 31;
                 boolean z2 = this.isThreadJoined;
-                int i = z2;
-                if (z2 != 0) {
-                    i = 1;
+                ?? r1 = z2;
+                if (z2) {
+                    r1 = 1;
                 }
-                return iHashCode + i;
+                return iHashCode + r1;
             }
 
             public final boolean isThreadJoined() {
@@ -454,7 +457,7 @@ public final class ChannelMembersListAdapter extends RecyclerView.Adapter<Recycl
             }
         }
 
-        /* compiled from: ChannelMembersListAdapter.kt */
+        /* JADX INFO: compiled from: ChannelMembersListAdapter.kt */
         public static final /* data */ class Member extends Item {
             private final String avatarUrl;
             private final boolean canDisplayStatusEmoji;
@@ -495,72 +498,72 @@ public final class ChannelMembersListAdapter extends RecyclerView.Adapter<Recycl
                 return member.copy((i2 & 1) != 0 ? member.userId : j, (i2 & 2) != 0 ? member.guildId : l, (i2 & 4) != 0 ? member.name : str, (i2 & 8) != 0 ? member.isBot : z2, (i2 & 16) != 0 ? member.tagText : num, (i2 & 32) != 0 ? member.tagVerified : z3, (i2 & 64) != 0 ? member.presence : presence, (i2 & 128) != 0 ? member.color : num2, (i2 & 256) != 0 ? member.avatarUrl : str2, (i2 & 512) != 0 ? member.showOwnerIndicator : z4, (i2 & 1024) != 0 ? member.premiumSince : str3, (i2 & 2048) != 0 ? member.isApplicationStreaming : z5, (i2 & 4096) != 0 ? member.canDisplayStatusEmoji : z6, (i2 & 8192) != 0 ? member.userFlags : i);
             }
 
-            /* renamed from: component1, reason: from getter */
+            /* JADX INFO: renamed from: component1, reason: from getter */
             public final long getUserId() {
                 return this.userId;
             }
 
-            /* renamed from: component10, reason: from getter */
+            /* JADX INFO: renamed from: component10, reason: from getter */
             public final boolean getShowOwnerIndicator() {
                 return this.showOwnerIndicator;
             }
 
-            /* renamed from: component11, reason: from getter */
+            /* JADX INFO: renamed from: component11, reason: from getter */
             public final String getPremiumSince() {
                 return this.premiumSince;
             }
 
-            /* renamed from: component12, reason: from getter */
+            /* JADX INFO: renamed from: component12, reason: from getter */
             public final boolean getIsApplicationStreaming() {
                 return this.isApplicationStreaming;
             }
 
-            /* renamed from: component13, reason: from getter */
+            /* JADX INFO: renamed from: component13, reason: from getter */
             public final boolean getCanDisplayStatusEmoji() {
                 return this.canDisplayStatusEmoji;
             }
 
-            /* renamed from: component14, reason: from getter */
+            /* JADX INFO: renamed from: component14, reason: from getter */
             public final int getUserFlags() {
                 return this.userFlags;
             }
 
-            /* renamed from: component2, reason: from getter */
+            /* JADX INFO: renamed from: component2, reason: from getter */
             public final Long getGuildId() {
                 return this.guildId;
             }
 
-            /* renamed from: component3, reason: from getter */
+            /* JADX INFO: renamed from: component3, reason: from getter */
             public final String getName() {
                 return this.name;
             }
 
-            /* renamed from: component4, reason: from getter */
+            /* JADX INFO: renamed from: component4, reason: from getter */
             public final boolean getIsBot() {
                 return this.isBot;
             }
 
-            /* renamed from: component5, reason: from getter */
+            /* JADX INFO: renamed from: component5, reason: from getter */
             public final Integer getTagText() {
                 return this.tagText;
             }
 
-            /* renamed from: component6, reason: from getter */
+            /* JADX INFO: renamed from: component6, reason: from getter */
             public final boolean getTagVerified() {
                 return this.tagVerified;
             }
 
-            /* renamed from: component7, reason: from getter */
+            /* JADX INFO: renamed from: component7, reason: from getter */
             public final Presence getPresence() {
                 return this.presence;
             }
 
-            /* renamed from: component8, reason: from getter */
+            /* JADX INFO: renamed from: component8, reason: from getter */
             public final Integer getColor() {
                 return this.color;
             }
 
-            /* renamed from: component9, reason: from getter */
+            /* JADX INFO: renamed from: component9, reason: from getter */
             public final String getAvatarUrl() {
                 return this.avatarUrl;
             }
@@ -630,6 +633,21 @@ public final class ChannelMembersListAdapter extends RecyclerView.Adapter<Recycl
             }
 
             /* JADX WARN: Multi-variable type inference failed */
+            /* JADX WARN: Type inference failed for: r1v12, types: [int] */
+            /* JADX WARN: Type inference failed for: r1v23, types: [int] */
+            /* JADX WARN: Type inference failed for: r1v26, types: [int] */
+            /* JADX WARN: Type inference failed for: r1v29 */
+            /* JADX WARN: Type inference failed for: r1v30 */
+            /* JADX WARN: Type inference failed for: r1v34 */
+            /* JADX WARN: Type inference failed for: r1v36 */
+            /* JADX WARN: Type inference failed for: r1v39 */
+            /* JADX WARN: Type inference failed for: r1v40 */
+            /* JADX WARN: Type inference failed for: r1v41 */
+            /* JADX WARN: Type inference failed for: r1v42 */
+            /* JADX WARN: Type inference failed for: r1v7, types: [int] */
+            /* JADX WARN: Type inference failed for: r3v0 */
+            /* JADX WARN: Type inference failed for: r3v1, types: [int] */
+            /* JADX WARN: Type inference failed for: r3v2 */
             public int hashCode() {
                 int iM3a = C0002b.m3a(this.userId) * 31;
                 Long l = this.guildId;
@@ -637,41 +655,41 @@ public final class ChannelMembersListAdapter extends RecyclerView.Adapter<Recycl
                 String str = this.name;
                 int iHashCode2 = (iHashCode + (str != null ? str.hashCode() : 0)) * 31;
                 boolean z2 = this.isBot;
-                int i = z2;
-                if (z2 != 0) {
-                    i = 1;
+                ?? r1 = z2;
+                if (z2) {
+                    r1 = 1;
                 }
-                int i2 = (iHashCode2 + i) * 31;
+                int i = (iHashCode2 + r1) * 31;
                 Integer num = this.tagText;
-                int iHashCode3 = (i2 + (num != null ? num.hashCode() : 0)) * 31;
+                int iHashCode3 = (i + (num != null ? num.hashCode() : 0)) * 31;
                 boolean z3 = this.tagVerified;
-                int i3 = z3;
-                if (z3 != 0) {
-                    i3 = 1;
+                ?? r12 = z3;
+                if (z3) {
+                    r12 = 1;
                 }
-                int i4 = (iHashCode3 + i3) * 31;
+                int i2 = (iHashCode3 + r12) * 31;
                 Presence presence = this.presence;
-                int iHashCode4 = (i4 + (presence != null ? presence.hashCode() : 0)) * 31;
+                int iHashCode4 = (i2 + (presence != null ? presence.hashCode() : 0)) * 31;
                 Integer num2 = this.color;
                 int iHashCode5 = (iHashCode4 + (num2 != null ? num2.hashCode() : 0)) * 31;
                 String str2 = this.avatarUrl;
                 int iHashCode6 = (iHashCode5 + (str2 != null ? str2.hashCode() : 0)) * 31;
                 boolean z4 = this.showOwnerIndicator;
-                int i5 = z4;
-                if (z4 != 0) {
-                    i5 = 1;
+                ?? r13 = z4;
+                if (z4) {
+                    r13 = 1;
                 }
-                int i6 = (iHashCode6 + i5) * 31;
+                int i3 = (iHashCode6 + r13) * 31;
                 String str3 = this.premiumSince;
-                int iHashCode7 = (i6 + (str3 != null ? str3.hashCode() : 0)) * 31;
+                int iHashCode7 = (i3 + (str3 != null ? str3.hashCode() : 0)) * 31;
                 boolean z5 = this.isApplicationStreaming;
-                int i7 = z5;
-                if (z5 != 0) {
-                    i7 = 1;
+                ?? r14 = z5;
+                if (z5) {
+                    r14 = 1;
                 }
-                int i8 = (iHashCode7 + i7) * 31;
+                int i4 = (iHashCode7 + r14) * 31;
                 boolean z6 = this.canDisplayStatusEmoji;
-                return ((i8 + (z6 ? 1 : z6 ? 1 : 0)) * 31) + this.userFlags;
+                return ((i4 + (z6 ? 1 : z6)) * 31) + this.userFlags;
             }
 
             public final boolean isApplicationStreaming() {
@@ -714,7 +732,7 @@ public final class ChannelMembersListAdapter extends RecyclerView.Adapter<Recycl
             }
         }
 
-        /* compiled from: ChannelMembersListAdapter.kt */
+        /* JADX INFO: compiled from: ChannelMembersListAdapter.kt */
         public static final /* data */ class PlaceholderHeader extends Item {
             private final String listId;
 
@@ -732,7 +750,7 @@ public final class ChannelMembersListAdapter extends RecyclerView.Adapter<Recycl
                 return placeholderHeader.copy(str);
             }
 
-            /* renamed from: component1, reason: from getter */
+            /* JADX INFO: renamed from: component1, reason: from getter */
             public final String getListId() {
                 return this.listId;
             }
@@ -766,7 +784,7 @@ public final class ChannelMembersListAdapter extends RecyclerView.Adapter<Recycl
             }
         }
 
-        /* compiled from: ChannelMembersListAdapter.kt */
+        /* JADX INFO: compiled from: ChannelMembersListAdapter.kt */
         public static final /* data */ class PlaceholderMember extends Item {
             private final float placeholderSize;
 
@@ -775,7 +793,7 @@ public final class ChannelMembersListAdapter extends RecyclerView.Adapter<Recycl
                 this.placeholderSize = f;
             }
 
-            /* renamed from: component1, reason: from getter */
+            /* JADX INFO: renamed from: component1, reason: from getter */
             private final float getPlaceholderSize() {
                 return this.placeholderSize;
             }
@@ -810,7 +828,7 @@ public final class ChannelMembersListAdapter extends RecyclerView.Adapter<Recycl
             }
         }
 
-        /* compiled from: ChannelMembersListAdapter.kt */
+        /* JADX INFO: compiled from: ChannelMembersListAdapter.kt */
         public static final /* data */ class RoleHeader extends Item {
             private final Long guildId;
             private final int memberCount;
@@ -846,22 +864,22 @@ public final class ChannelMembersListAdapter extends RecyclerView.Adapter<Recycl
                 return roleHeader.copy(j2, str2, i3, l);
             }
 
-            /* renamed from: component1, reason: from getter */
+            /* JADX INFO: renamed from: component1, reason: from getter */
             public final long getRoleId() {
                 return this.roleId;
             }
 
-            /* renamed from: component2, reason: from getter */
+            /* JADX INFO: renamed from: component2, reason: from getter */
             public final String getRoleName() {
                 return this.roleName;
             }
 
-            /* renamed from: component3, reason: from getter */
+            /* JADX INFO: renamed from: component3, reason: from getter */
             public final int getMemberCount() {
                 return this.memberCount;
             }
 
-            /* renamed from: component4, reason: from getter */
+            /* JADX INFO: renamed from: component4, reason: from getter */
             public final Long getGuildId() {
                 return this.guildId;
             }
@@ -936,11 +954,11 @@ public final class ChannelMembersListAdapter extends RecyclerView.Adapter<Recycl
         }
     }
 
-    /* compiled from: ChannelMembersListAdapter.kt */
+    /* JADX INFO: compiled from: ChannelMembersListAdapter.kt */
     public static abstract class ListUpdateOperation {
         private final ListUpdateRequest request;
 
-        /* compiled from: ChannelMembersListAdapter.kt */
+        /* JADX INFO: compiled from: ChannelMembersListAdapter.kt */
         public static final class DiffUpdate extends ListUpdateOperation {
             private final DiffUtil.DiffResult diffResult;
 
@@ -957,7 +975,7 @@ public final class ChannelMembersListAdapter extends RecyclerView.Adapter<Recycl
             }
         }
 
-        /* compiled from: ChannelMembersListAdapter.kt */
+        /* JADX INFO: compiled from: ChannelMembersListAdapter.kt */
         public static final class OverwriteUpdate extends ListUpdateOperation {
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
             public OverwriteUpdate(ListUpdateRequest listUpdateRequest) {
@@ -979,7 +997,7 @@ public final class ChannelMembersListAdapter extends RecyclerView.Adapter<Recycl
         }
     }
 
-    /* compiled from: ChannelMembersListAdapter.kt */
+    /* JADX INFO: compiled from: ChannelMembersListAdapter.kt */
     public static final /* data */ class ListUpdateRequest {
         private final boolean forceOverwrite;
         private final String listId;
@@ -1006,17 +1024,17 @@ public final class ChannelMembersListAdapter extends RecyclerView.Adapter<Recycl
             return listUpdateRequest.copy(str, memberList, z2);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final String getListId() {
             return this.listId;
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final WidgetChannelMembersListViewModel.MemberList getRows() {
             return this.rows;
         }
 
-        /* renamed from: component3, reason: from getter */
+        /* JADX INFO: renamed from: component3, reason: from getter */
         public final boolean getForceOverwrite() {
             return this.forceOverwrite;
         }
@@ -1051,17 +1069,20 @@ public final class ChannelMembersListAdapter extends RecyclerView.Adapter<Recycl
         }
 
         /* JADX WARN: Multi-variable type inference failed */
+        /* JADX WARN: Type inference failed for: r1v3, types: [int] */
+        /* JADX WARN: Type inference failed for: r1v4 */
+        /* JADX WARN: Type inference failed for: r1v6 */
         public int hashCode() {
             String str = this.listId;
             int iHashCode = (str != null ? str.hashCode() : 0) * 31;
             WidgetChannelMembersListViewModel.MemberList memberList = this.rows;
             int iHashCode2 = (iHashCode + (memberList != null ? memberList.hashCode() : 0)) * 31;
             boolean z2 = this.forceOverwrite;
-            int i = z2;
-            if (z2 != 0) {
-                i = 1;
+            ?? r1 = z2;
+            if (z2) {
+                r1 = 1;
             }
-            return iHashCode2 + i;
+            return iHashCode2 + r1;
         }
 
         public String toString() {
@@ -1074,7 +1095,7 @@ public final class ChannelMembersListAdapter extends RecyclerView.Adapter<Recycl
         }
     }
 
-    /* compiled from: ChannelMembersListAdapter.kt */
+    /* JADX INFO: compiled from: ChannelMembersListAdapter.kt */
     public static final class StickyHeadersManager {
         private View currentStickyHeaderView;
         private final WidgetChannelMembersListItemHeaderBinding headerViewBinding;
@@ -1138,7 +1159,7 @@ public final class ChannelMembersListAdapter extends RecyclerView.Adapter<Recycl
         }
     }
 
-    /* compiled from: ChannelMembersListAdapter.kt */
+    /* JADX INFO: compiled from: ChannelMembersListAdapter.kt */
     public enum ViewType {
         ROLE_HEADER,
         PLACEHOLDER_HEADER,
@@ -1149,11 +1170,11 @@ public final class ChannelMembersListAdapter extends RecyclerView.Adapter<Recycl
         JOIN_LEAVE_THREAD;
 
 
-        /* renamed from: Companion, reason: from kotlin metadata */
+        /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
         public static final Companion INSTANCE = new Companion(null);
         private static final ViewType[] cachedValues = values();
 
-        /* compiled from: ChannelMembersListAdapter.kt */
+        /* JADX INFO: compiled from: ChannelMembersListAdapter.kt */
         public static final class Companion {
             private Companion() {
             }
@@ -1196,8 +1217,8 @@ public final class ChannelMembersListAdapter extends RecyclerView.Adapter<Recycl
         }
     }
 
-    /* compiled from: ChannelMembersListAdapter.kt */
-    /* renamed from: com.discord.widgets.channels.memberlist.adapter.ChannelMembersListAdapter$onAttachedToRecyclerView$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.channels.memberlist.adapter.ChannelMembersListAdapter$onAttachedToRecyclerView$1 */
+    /* JADX INFO: compiled from: ChannelMembersListAdapter.kt */
     public static final class ViewOnLayoutChangeListenerC75091 implements View.OnLayoutChangeListener {
         public final /* synthetic */ RecyclerView $recyclerView;
 
@@ -1211,8 +1232,8 @@ public final class ChannelMembersListAdapter extends RecyclerView.Adapter<Recycl
         }
     }
 
-    /* compiled from: ChannelMembersListAdapter.kt */
-    /* renamed from: com.discord.widgets.channels.memberlist.adapter.ChannelMembersListAdapter$onBindViewHolder$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.channels.memberlist.adapter.ChannelMembersListAdapter$onBindViewHolder$1 */
+    /* JADX INFO: compiled from: ChannelMembersListAdapter.kt */
     public static final class C75101 extends Lambda implements Function0<Unit> {
         public final /* synthetic */ Item.Member $item;
 
@@ -1228,7 +1249,7 @@ public final class ChannelMembersListAdapter extends RecyclerView.Adapter<Recycl
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             Function1 function1Access$getOnUserClicked$p = ChannelMembersListAdapter.access$getOnUserClicked$p(ChannelMembersListAdapter.this);
             if (function1Access$getOnUserClicked$p != null) {
@@ -1236,8 +1257,8 @@ public final class ChannelMembersListAdapter extends RecyclerView.Adapter<Recycl
         }
     }
 
-    /* compiled from: ChannelMembersListAdapter.kt */
-    /* renamed from: com.discord.widgets.channels.memberlist.adapter.ChannelMembersListAdapter$onBindViewHolder$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.channels.memberlist.adapter.ChannelMembersListAdapter$onBindViewHolder$2 */
+    /* JADX INFO: compiled from: ChannelMembersListAdapter.kt */
     public static final class C75112 extends Lambda implements Function0<Unit> {
         public C75112() {
             super(0);
@@ -1249,7 +1270,7 @@ public final class ChannelMembersListAdapter extends RecyclerView.Adapter<Recycl
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             Function0 function0Access$getOnAddMemberClicked$p = ChannelMembersListAdapter.access$getOnAddMemberClicked$p(ChannelMembersListAdapter.this);
             if (function0Access$getOnAddMemberClicked$p != null) {
@@ -1257,8 +1278,8 @@ public final class ChannelMembersListAdapter extends RecyclerView.Adapter<Recycl
         }
     }
 
-    /* compiled from: ChannelMembersListAdapter.kt */
-    /* renamed from: com.discord.widgets.channels.memberlist.adapter.ChannelMembersListAdapter$onBindViewHolder$3 */
+    /* JADX INFO: renamed from: com.discord.widgets.channels.memberlist.adapter.ChannelMembersListAdapter$onBindViewHolder$3 */
+    /* JADX INFO: compiled from: ChannelMembersListAdapter.kt */
     public static final class C75123 extends Lambda implements Function0<Unit> {
         public C75123() {
             super(0);
@@ -1270,7 +1291,7 @@ public final class ChannelMembersListAdapter extends RecyclerView.Adapter<Recycl
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             Function0 function0Access$getOnJoinLeaveThreadClicked$p = ChannelMembersListAdapter.access$getOnJoinLeaveThreadClicked$p(ChannelMembersListAdapter.this);
             if (function0Access$getOnJoinLeaveThreadClicked$p != null) {
@@ -1411,7 +1432,7 @@ public final class ChannelMembersListAdapter extends RecyclerView.Adapter<Recycl
                 return -5L;
             }
             if (item instanceof Item.PlaceholderMember) {
-                return (-1) * (position + 6);
+                return (-1) * ((long) (position + 6));
             }
             throw new NoWhenBranchMatchedException();
         }

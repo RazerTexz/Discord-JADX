@@ -1,16 +1,16 @@
 package p507d0.p588x;
 
-/* compiled from: progressionUtil.kt */
-/* renamed from: d0.x.c, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.x.c, reason: use source file name */
+/* JADX INFO: compiled from: progressionUtil.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class progressionUtil {
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final int m10089a(int i, int i2) {
         int i3 = i % i2;
         return i3 >= 0 ? i3 : i3 + i2;
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static final long m10090b(long j, long j2) {
         long j3 = j % j2;
         return j3 >= 0 ? j3 : j3 + j2;

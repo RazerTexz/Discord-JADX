@@ -4,30 +4,30 @@ import java.util.Arrays;
 import p007b.p085c.p086a.p087a0.AnimatableValueParser;
 import p007b.p225i.p226a.p242c.p259f3.Util2;
 
-/* compiled from: DefaultAllocator.java */
-/* renamed from: b.i.a.c.e3.o, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.e3.o, reason: use source file name */
+/* JADX INFO: compiled from: DefaultAllocator.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class DefaultAllocator {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final boolean f6562a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final int f6563b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final Allocation[] f6564c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public int f6565d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public int f6566e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public int f6567f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public Allocation[] f6568g;
 
     public DefaultAllocator(boolean z2, int i) {
@@ -40,7 +40,7 @@ public final class DefaultAllocator {
         this.f6564c = new Allocation[1];
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public synchronized void m2858a(Allocation[] allocationArr) {
         int i = this.f6567f;
         int length = allocationArr.length + i;
@@ -58,7 +58,7 @@ public final class DefaultAllocator {
         notifyAll();
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public synchronized void m2859b(int i) {
         boolean z2 = i < this.f6565d;
         this.f6565d = i;
@@ -67,7 +67,7 @@ public final class DefaultAllocator {
         }
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public synchronized void m2860c() {
         int iMax = Math.max(0, Util2.m2998f(this.f6565d, this.f6563b) - this.f6566e);
         int i = this.f6567f;

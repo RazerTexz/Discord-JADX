@@ -9,25 +9,25 @@ import java.util.ListIterator;
 import p007b.p085c.p086a.p091w.p093c.TransformKeyframeAnimation;
 import p007b.p085c.p086a.p095y.p097l.MergePaths;
 
-/* compiled from: MergePathsContent.java */
+/* JADX INFO: renamed from: b.c.a.w.b.l, reason: use source file name */
+/* JADX INFO: compiled from: MergePathsContent.java */
+/* JADX INFO: loaded from: classes.dex */
 @TargetApi(19)
-/* renamed from: b.c.a.w.b.l, reason: use source file name */
-/* loaded from: classes.dex */
 public class MergePathsContent implements PathContent, GreedyContent {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final Path f2540a = new Path();
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final Path f2541b = new Path();
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final Path f2542c = new Path();
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final List<PathContent> f2543d = new ArrayList();
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final MergePaths f2544e;
 
     public MergePathsContent(MergePaths mergePaths) {
@@ -35,7 +35,7 @@ public class MergePathsContent implements PathContent, GreedyContent {
     }
 
     @TargetApi(19)
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final void m722a(Path.Op op) {
         Matrix matrixM747e;
         Matrix matrixM747e2;
@@ -85,7 +85,7 @@ public class MergePathsContent implements PathContent, GreedyContent {
     }
 
     @Override // p007b.p085c.p086a.p091w.p092b.Content2
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public void mo710b(List<Content2> list, List<Content2> list2) {
         for (int i = 0; i < this.f2543d.size(); i++) {
             this.f2543d.get(i).mo710b(list, list2);
@@ -93,7 +93,7 @@ public class MergePathsContent implements PathContent, GreedyContent {
     }
 
     @Override // p007b.p085c.p086a.p091w.p092b.GreedyContent
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public void mo721e(ListIterator<Content2> listIterator) {
         while (listIterator.hasPrevious() && listIterator.previous() != this) {
         }

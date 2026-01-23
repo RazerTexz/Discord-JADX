@@ -38,8 +38,8 @@ import java.io.IOException;
 import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserException;
 
+/* JADX INFO: loaded from: classes.dex */
 @SuppressLint({"RestrictedAPI"})
-/* loaded from: classes.dex */
 public class AnimatedStateListDrawableCompat extends StateListDrawable implements TintAwareDrawable {
     private static final String ELEMENT_ITEM = "item";
     private static final String ELEMENT_TRANSITION = "transition";
@@ -55,7 +55,7 @@ public class AnimatedStateListDrawableCompat extends StateListDrawable implement
 
     public static class AnimatableTransition extends Transition {
 
-        /* renamed from: mA */
+        /* JADX INFO: renamed from: mA */
         private final Animatable f88mA;
 
         public AnimatableTransition(Animatable animatable) {
@@ -92,7 +92,7 @@ public class AnimatedStateListDrawableCompat extends StateListDrawable implement
         }
 
         private static long generateTransitionKey(int i, int i2) {
-            return i2 | (i << 32);
+            return ((long) i2) | (((long) i) << 32);
         }
 
         public int addStateSet(@NonNull int[] iArr, @NonNull Drawable drawable, int i) {
@@ -284,7 +284,7 @@ public class AnimatedStateListDrawableCompat extends StateListDrawable implement
     }
 
     @Nullable
-    public static AnimatedStateListDrawableCompat create(@NonNull Context context, @DrawableRes int i, @Nullable Resources.Theme theme) throws Resources.NotFoundException {
+    public static AnimatedStateListDrawableCompat create(@NonNull Context context, @DrawableRes int i, @Nullable Resources.Theme theme) {
         int next;
         try {
             Resources resources = context.getResources();

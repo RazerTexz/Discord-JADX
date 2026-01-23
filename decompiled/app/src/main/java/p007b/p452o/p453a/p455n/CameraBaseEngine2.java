@@ -2,12 +2,12 @@ package p007b.p452o.p453a.p455n;
 
 import p007b.p452o.p453a.p473x.Size3;
 
-/* compiled from: CameraBaseEngine.java */
-/* renamed from: b.o.a.n.h, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.o.a.n.h, reason: use source file name */
+/* JADX INFO: compiled from: CameraBaseEngine.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class CameraBaseEngine2 implements Runnable {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final /* synthetic */ CameraBaseEngine f13917j;
 
     public CameraBaseEngine2(CameraBaseEngine cameraBaseEngine) {

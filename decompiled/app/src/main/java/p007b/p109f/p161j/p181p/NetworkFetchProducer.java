@@ -16,32 +16,32 @@ import p007b.p109f.p161j.p181p.HttpUrlConnectionNetworkFetcher;
 import p007b.p109f.p161j.p181p.NetworkFetcher2;
 import p007b.p109f.p161j.p183r.FrescoSystrace;
 
-/* compiled from: NetworkFetchProducer.java */
-/* renamed from: b.f.j.p.n0, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.f.j.p.n0, reason: use source file name */
+/* JADX INFO: compiled from: NetworkFetchProducer.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class NetworkFetchProducer implements Producer2<EncodedImage2> {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final PooledByteBufferFactory f4169a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final ByteArrayPool f4170b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final NetworkFetcher2 f4171c;
 
-    /* compiled from: NetworkFetchProducer.java */
-    /* renamed from: b.f.j.p.n0$a */
+    /* JADX INFO: renamed from: b.f.j.p.n0$a */
+    /* JADX INFO: compiled from: NetworkFetchProducer.java */
     public class a implements NetworkFetcher2.a {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final /* synthetic */ FetchState2 f4172a;
 
         public a(FetchState2 fetchState2) {
             this.f4172a = fetchState2;
         }
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public void m1508a(Throwable th) {
             NetworkFetchProducer networkFetchProducer = NetworkFetchProducer.this;
             FetchState2 fetchState2 = this.f4172a;
@@ -52,7 +52,7 @@ public class NetworkFetchProducer implements Producer2<EncodedImage2> {
             fetchState2.f4258a.mo1425c(th);
         }
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public void m1509b(InputStream inputStream, int i) throws Throwable {
             FrescoSystrace.m1527b();
             NetworkFetchProducer networkFetchProducer = NetworkFetchProducer.this;
@@ -77,7 +77,8 @@ public class NetworkFetchProducer implements Producer2<EncodedImage2> {
                     if (i2 > 0) {
                         pooledByteBufferOutputStreamMo997e.write(bArr, 0, i2);
                         networkFetchProducer.m1507d(pooledByteBufferOutputStreamMo997e, fetchState2);
-                        fetchState2.f4258a.mo1423a(i > 0 ? ((MemoryPooledByteBufferOutputStream) pooledByteBufferOutputStreamMo997e).f19562l / i : 1.0f - ((float) Math.exp((-r4) / 50000.0d)));
+                        int i4 = ((MemoryPooledByteBufferOutputStream) pooledByteBufferOutputStreamMo997e).f19562l;
+                        fetchState2.f4258a.mo1423a(i > 0 ? i4 / i : 1.0f - ((float) Math.exp(((double) (-i4)) / 50000.0d)));
                     }
                 } catch (Throwable th) {
                     networkFetchProducer.f4170b.release(bArr);
@@ -94,7 +95,7 @@ public class NetworkFetchProducer implements Producer2<EncodedImage2> {
         this.f4171c = networkFetcher2;
     }
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public static void m1505e(PooledByteBufferOutputStream pooledByteBufferOutputStream, int i, BytesRange bytesRange, Consumer2<EncodedImage2> consumer2, ProducerContext producerContext) throws Throwable {
         CloseableReference closeableReferenceM8632A = CloseableReference.m8632A(((MemoryPooledByteBufferOutputStream) pooledByteBufferOutputStream).m8707b());
         EncodedImage2 encodedImage2 = null;
@@ -126,7 +127,7 @@ public class NetworkFetchProducer implements Producer2<EncodedImage2> {
     }
 
     @Override // p007b.p109f.p161j.p181p.Producer2
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public void mo1417b(Consumer2<EncodedImage2> consumer2, ProducerContext producerContext) {
         producerContext.mo1457o().mo1358e(producerContext, "NetworkFetchProducer");
         Objects.requireNonNull((HttpUrlConnectionNetworkFetcher) this.f4171c);
@@ -139,7 +140,7 @@ public class NetworkFetchProducer implements Producer2<EncodedImage2> {
         producerContext.mo1448f(new HttpUrlConnectionNetworkFetcher3(httpUrlConnectionNetworkFetcher, httpUrlConnectionNetworkFetcher.f3988b.submit(new HttpUrlConnectionNetworkFetcher2(httpUrlConnectionNetworkFetcher, aVar, aVar2)), aVar2));
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public void m1506c(PooledByteBufferOutputStream pooledByteBufferOutputStream, FetchState2 fetchState2) throws Throwable {
         HashMap map;
         int i = ((MemoryPooledByteBufferOutputStream) pooledByteBufferOutputStream).f19562l;
@@ -161,7 +162,7 @@ public class NetworkFetchProducer implements Producer2<EncodedImage2> {
         m1505e(pooledByteBufferOutputStream, 1, null, fetchState2.f4258a, fetchState2.f4259b);
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public void m1507d(PooledByteBufferOutputStream pooledByteBufferOutputStream, FetchState2 fetchState2) throws Throwable {
         boolean z2;
         long jUptimeMillis = SystemClock.uptimeMillis();

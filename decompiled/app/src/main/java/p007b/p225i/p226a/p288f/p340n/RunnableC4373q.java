@@ -2,15 +2,15 @@ package p007b.p225i.p226a.p288f.p340n;
 
 import com.google.android.gms.tasks.Task;
 
-/* compiled from: com.google.android.gms:play-services-tasks@@17.2.1 */
-/* renamed from: b.i.a.f.n.q */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.n.q */
+/* JADX INFO: compiled from: com.google.android.gms:play-services-tasks@@17.2.1 */
+/* JADX INFO: loaded from: classes3.dex */
 public final class RunnableC4373q implements Runnable {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final /* synthetic */ Task f11504j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final /* synthetic */ C4374r f11505k;
 
     public RunnableC4373q(C4374r c4374r, Task task) {

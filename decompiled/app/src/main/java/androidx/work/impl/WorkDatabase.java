@@ -32,16 +32,16 @@ import java.util.concurrent.Executor;
 import java.util.concurrent.TimeUnit;
 import p007b.p100d.p104b.p105a.outline;
 
+/* JADX INFO: loaded from: classes.dex */
 @TypeConverters({Data.class, WorkTypeConverters.class})
 @Database(entities = {Dependency.class, WorkSpec.class, WorkTag.class, SystemIdInfo.class, WorkName.class, WorkProgress.class, Preference.class}, version = 11)
 @RestrictTo({RestrictTo.Scope.LIBRARY_GROUP})
-/* loaded from: classes.dex */
 public abstract class WorkDatabase extends RoomDatabase {
     private static final String PRUNE_SQL_FORMAT_PREFIX = "DELETE FROM workspec WHERE state IN (2, 3, 5) AND (period_start_time + minimum_retention_duration) < ";
     private static final String PRUNE_SQL_FORMAT_SUFFIX = " AND (SELECT COUNT(*)=0 FROM dependency WHERE     prerequisite_id=id AND     work_spec_id NOT IN         (SELECT id FROM workspec WHERE state IN (2, 3, 5)))";
     private static final long PRUNE_THRESHOLD_MILLIS = TimeUnit.DAYS.toMillis(7);
 
-    /* renamed from: androidx.work.impl.WorkDatabase$1 */
+    /* JADX INFO: renamed from: androidx.work.impl.WorkDatabase$1 */
     public class C07221 implements SupportSQLiteOpenHelper.Factory {
         public final /* synthetic */ Context val$context;
 
@@ -58,7 +58,7 @@ public abstract class WorkDatabase extends RoomDatabase {
         }
     }
 
-    /* renamed from: androidx.work.impl.WorkDatabase$2 */
+    /* JADX INFO: renamed from: androidx.work.impl.WorkDatabase$2 */
     public class C07232 extends RoomDatabase.Callback {
         @Override // androidx.room.RoomDatabase.Callback
         public void onOpen(@NonNull SupportSQLiteDatabase supportSQLiteDatabase) {

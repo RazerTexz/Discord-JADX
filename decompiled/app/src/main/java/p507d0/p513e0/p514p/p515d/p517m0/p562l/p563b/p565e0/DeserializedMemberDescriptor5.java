@@ -30,27 +30,27 @@ import p507d0.p513e0.p514p.p515d.p517m0.p562l.p563b.p565e0.DeserializedMemberDes
 import p507d0.p513e0.p514p.p515d.p517m0.p567n.KotlinType;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: DeserializedMemberDescriptor.kt */
-/* renamed from: d0.e0.p.d.m0.l.b.e0.k, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.l.b.e0.k, reason: use source file name */
+/* JADX INFO: compiled from: DeserializedMemberDescriptor.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class DeserializedMemberDescriptor5 extends SimpleFunctionDescriptorImpl implements DeserializedMemberDescriptor {
 
-    /* renamed from: M */
+    /* JADX INFO: renamed from: M */
     public final C11684i f24604M;
 
-    /* renamed from: N */
+    /* JADX INFO: renamed from: N */
     public final NameResolver f24605N;
 
-    /* renamed from: O */
+    /* JADX INFO: renamed from: O */
     public final TypeTable f24606O;
 
-    /* renamed from: P */
+    /* JADX INFO: renamed from: P */
     public final VersionRequirement2 f24607P;
 
-    /* renamed from: Q */
+    /* JADX INFO: renamed from: Q */
     public final DeserializedContainerSource2 f24608Q;
 
-    /* renamed from: R */
+    /* JADX INFO: renamed from: R */
     public DeserializedMemberDescriptor3.a f24609R;
 
     public /* synthetic */ DeserializedMemberDescriptor5(DeclarationDescriptor declarationDescriptor, SimpleFunctionDescriptor simpleFunctionDescriptor, Annotations4 annotations4, Name name, CallableMemberDescriptor.a aVar, C11684i c11684i, NameResolver nameResolver, TypeTable typeTable, VersionRequirement2 versionRequirement2, DeserializedContainerSource2 deserializedContainerSource2, SourceElement sourceElement, int i, DefaultConstructorMarker defaultConstructorMarker) {
@@ -58,7 +58,7 @@ public final class DeserializedMemberDescriptor5 extends SimpleFunctionDescripto
     }
 
     @Override // p507d0.p513e0.p514p.p515d.p517m0.p521c.p524i1.SimpleFunctionDescriptorImpl, p507d0.p513e0.p514p.p515d.p517m0.p521c.p524i1.FunctionDescriptorImpl
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public FunctionDescriptorImpl mo9373b(DeclarationDescriptor declarationDescriptor, FunctionDescriptor functionDescriptor, CallableMemberDescriptor.a aVar, Name name, Annotations4 annotations4, SourceElement sourceElement) {
         Name name2;
         Intrinsics3.checkNotNullParameter(declarationDescriptor, "newOwner");

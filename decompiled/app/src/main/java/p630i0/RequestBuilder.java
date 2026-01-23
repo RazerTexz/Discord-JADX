@@ -17,58 +17,58 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p600f0.FormBody;
 import p600f0.HttpUrl;
 
-/* compiled from: RequestBuilder.java */
-/* renamed from: i0.v, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: i0.v, reason: use source file name */
+/* JADX INFO: compiled from: RequestBuilder.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class RequestBuilder {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final char[] f26618a = {'0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D', 'E', 'F'};
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static final Pattern f26619b = Pattern.compile("(.*/)?(\\.|%2e|%2E){1,2}(/.*)?");
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final String f26620c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final HttpUrl f26621d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public String f26622e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public HttpUrl.a f26623f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public final Request.C12935a f26624g = new Request.C12935a();
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public final Headers.C12930a f26625h;
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public MediaType f26626i;
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final boolean f26627j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public MultipartBody.C12933a f26628k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public FormBody.a f26629l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public RequestBody f26630m;
 
-    /* compiled from: RequestBuilder.java */
-    /* renamed from: i0.v$a */
+    /* JADX INFO: renamed from: i0.v$a */
+    /* JADX INFO: compiled from: RequestBuilder.java */
     public static class a extends RequestBody {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final RequestBody f26631a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final MediaType f26632b;
 
         public a(RequestBody requestBody, MediaType mediaType) {
@@ -112,7 +112,7 @@ public final class RequestBuilder {
         }
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public void m10718a(String str, String str2, boolean z2) {
         if (z2) {
             FormBody.a aVar = this.f26629l;
@@ -135,7 +135,7 @@ public final class RequestBuilder {
         aVar2.f25967b.add(HttpUrl.b.m10413a(bVar2, str2, 0, 0, " \"':;<=>@[]^`{}|/\\?#&!$(),~", false, false, true, false, aVar2.f25968c, 91));
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public void m10719b(String str, String str2) {
         if (!"Content-Type".equalsIgnoreCase(str)) {
             this.f26625h.m10958a(str, str2);
@@ -149,7 +149,7 @@ public final class RequestBuilder {
         }
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public void m10720c(Headers headers, RequestBody requestBody) {
         MultipartBody.C12933a c12933a = this.f26628k;
         Objects.requireNonNull(c12933a);
@@ -164,7 +164,7 @@ public final class RequestBuilder {
         c12933a.m10972a(new MultipartBody.Part(headers, requestBody, null));
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public void m10721d(String str, String str2, boolean z2) {
         String str3 = this.f26622e;
         if (str3 != null) {

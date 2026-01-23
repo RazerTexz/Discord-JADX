@@ -18,8 +18,8 @@ import p658rx.Observable;
 import p658rx.functions.Func6;
 import p658rx.subjects.BehaviorSubject;
 
-/* compiled from: EmojiPickerViewModel.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: EmojiPickerViewModel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class EmojiPickerViewModel$Companion$observeStoreState$1<T, R> implements Func1<StoreEmoji.EmojiContext, Observable<? extends EmojiPickerViewModel.StoreState>> {
     public final /* synthetic */ BehaviorSubject $searchSubject;
     public final /* synthetic */ BehaviorSubject $selectedCategoryItemIdSubject;
@@ -28,8 +28,8 @@ public final class EmojiPickerViewModel$Companion$observeStoreState$1<T, R> impl
     public final /* synthetic */ StoreGuildsSorted $storeGuildsSorted;
     public final /* synthetic */ StoreUserSettings $storeUserSettings;
 
-    /* compiled from: EmojiPickerViewModel.kt */
-    /* renamed from: com.discord.widgets.chat.input.emoji.EmojiPickerViewModel$Companion$observeStoreState$1$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.input.emoji.EmojiPickerViewModel$Companion$observeStoreState$1$1 */
+    /* JADX INFO: compiled from: EmojiPickerViewModel.kt */
     public static final class C78141<T1, T2, T3, T4, T5, T6, R> implements Func6<EmojiSet, LinkedHashMap<Long, Guild>, String, Boolean, Boolean, Long, EmojiPickerViewModel.StoreState> {
         public final /* synthetic */ StoreEmoji.EmojiContext $emojiContext;
 
@@ -70,7 +70,7 @@ public final class EmojiPickerViewModel$Companion$observeStoreState$1<T, R> impl
         return call2(emojiContext);
     }
 
-    /* renamed from: call, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
     public final Observable<? extends EmojiPickerViewModel.StoreState> call2(StoreEmoji.EmojiContext emojiContext) {
         return emojiContext == null ? new ScalarSynchronousObservable(EmojiPickerViewModel.StoreState.Uninitialized.INSTANCE) : Observable.m11071f(this.$storeEmoji.getEmojiSet(emojiContext, true, true), this.$storeGuildsSorted.observeOrderedGuilds(), this.$searchSubject, StoreUserSettings.observeIsAnimatedEmojisEnabled$default(this.$storeUserSettings, false, 1, null), this.$storeAccessibility.observeReducedMotionEnabled(), this.$selectedCategoryItemIdSubject, new C78141(emojiContext));
     }

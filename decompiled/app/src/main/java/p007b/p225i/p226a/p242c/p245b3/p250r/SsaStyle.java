@@ -14,66 +14,66 @@ import p007b.p225i.p226a.p242c.p259f3.Log2;
 import p007b.p225i.p226a.p242c.p259f3.Util2;
 import p007b.p225i.p226a.p288f.p299e.p308o.C3404f;
 
-/* compiled from: SsaStyle.java */
-/* renamed from: b.i.a.c.b3.r.c, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.b3.r.c, reason: use source file name */
+/* JADX INFO: compiled from: SsaStyle.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class SsaStyle {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final String f5997a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final int f5998b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     @Nullable
     @ColorInt
     public final Integer f5999c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final float f6000d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final boolean f6001e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final boolean f6002f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public final boolean f6003g;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public final boolean f6004h;
 
-    /* compiled from: SsaStyle.java */
-    /* renamed from: b.i.a.c.b3.r.c$a */
+    /* JADX INFO: renamed from: b.i.a.c.b3.r.c$a */
+    /* JADX INFO: compiled from: SsaStyle.java */
     public static final class a {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final int f6005a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final int f6006b;
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public final int f6007c;
 
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         public final int f6008d;
 
-        /* renamed from: e */
+        /* JADX INFO: renamed from: e */
         public final int f6009e;
 
-        /* renamed from: f */
+        /* JADX INFO: renamed from: f */
         public final int f6010f;
 
-        /* renamed from: g */
+        /* JADX INFO: renamed from: g */
         public final int f6011g;
 
-        /* renamed from: h */
+        /* JADX INFO: renamed from: h */
         public final int f6012h;
 
-        /* renamed from: i */
+        /* JADX INFO: renamed from: i */
         public final int f6013i;
 
         public a(int i, int i2, int i3, int i4, int i5, int i6, int i7, int i8, int i9) {
@@ -89,25 +89,25 @@ public final class SsaStyle {
         }
     }
 
-    /* compiled from: SsaStyle.java */
-    /* renamed from: b.i.a.c.b3.r.c$b */
+    /* JADX INFO: renamed from: b.i.a.c.b3.r.c$b */
+    /* JADX INFO: compiled from: SsaStyle.java */
     public static final class b {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public static final Pattern f6014a = Pattern.compile("\\{([^}]*)\\}");
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public static final Pattern f6015b = Pattern.compile(Util2.m3003k("\\\\pos\\((%1$s),(%1$s)\\)", "\\s*\\d+(?:\\.\\d+)?\\s*"));
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public static final Pattern f6016c = Pattern.compile(Util2.m3003k("\\\\move\\(%1$s,%1$s,(%1$s),(%1$s)(?:,%1$s,%1$s)?\\)", "\\s*\\d+(?:\\.\\d+)?\\s*"));
 
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         public static final Pattern f6017d = Pattern.compile("\\\\an(\\d+)");
 
         @Nullable
-        /* renamed from: a */
-        public static PointF m2676a(String str) throws NumberFormatException {
+        /* JADX INFO: renamed from: a */
+        public static PointF m2676a(String str) {
             String strGroup;
             String strGroup2;
             Matcher matcher = f6015b.matcher(str);
@@ -149,7 +149,7 @@ public final class SsaStyle {
         this.f6004h = z5;
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static int m2673a(String str) {
         boolean z2;
         try {
@@ -180,7 +180,7 @@ public final class SsaStyle {
         return -1;
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static boolean m2674b(String str) {
         try {
             int i = Integer.parseInt(str);
@@ -193,7 +193,7 @@ public final class SsaStyle {
 
     @Nullable
     @ColorInt
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public static Integer m2675c(String str) {
         try {
             long j = str.startsWith("&H") ? Long.parseLong(str.substring(2), 16) : Long.parseLong(str);

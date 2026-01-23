@@ -25,33 +25,33 @@ import p507d0.p513e0.p514p.p515d.p517m0.p567n.KotlinType;
 import p507d0.p513e0.p514p.p515d.p517m0.p567n.TypeConstructor;
 import p507d0.p513e0.p514p.p515d.p517m0.p567n.p568l1.KotlinTypeRefiner;
 
-/* compiled from: MutableClassDescriptor.java */
-/* renamed from: d0.e0.p.d.m0.c.i1.z, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.c.i1.z, reason: use source file name */
+/* JADX INFO: compiled from: MutableClassDescriptor.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class MutableClassDescriptor extends ClassDescriptorBase {
 
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     public final ClassKind f22998r;
 
-    /* renamed from: s */
+    /* JADX INFO: renamed from: s */
     public final boolean f22999s;
 
-    /* renamed from: t */
+    /* JADX INFO: renamed from: t */
     public Modality f23000t;
 
-    /* renamed from: u */
+    /* JADX INFO: renamed from: u */
     public DescriptorVisibility2 f23001u;
 
-    /* renamed from: v */
+    /* JADX INFO: renamed from: v */
     public TypeConstructor f23002v;
 
-    /* renamed from: w */
+    /* JADX INFO: renamed from: w */
     public List<TypeParameterDescriptor> f23003w;
 
-    /* renamed from: x */
+    /* JADX INFO: renamed from: x */
     public final Collection<KotlinType> f23004x;
 
-    /* renamed from: y */
+    /* JADX INFO: renamed from: y */
     public final StorageManager f23005y;
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -83,7 +83,7 @@ public class MutableClassDescriptor extends ClassDescriptorBase {
         this.f22999s = z2;
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static /* synthetic */ void m9431a(int i) {
         String str;
         int i2;

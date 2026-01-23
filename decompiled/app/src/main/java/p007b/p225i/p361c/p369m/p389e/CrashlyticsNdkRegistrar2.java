@@ -8,12 +8,12 @@ import java.util.Objects;
 import p007b.p225i.p361c.p368l.ComponentContainer;
 import p007b.p225i.p361c.p368l.ComponentFactory;
 
-/* compiled from: CrashlyticsNdkRegistrar.java */
-/* renamed from: b.i.c.m.e.b, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.c.m.e.b, reason: use source file name */
+/* JADX INFO: compiled from: CrashlyticsNdkRegistrar.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final /* synthetic */ class CrashlyticsNdkRegistrar2 implements ComponentFactory {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final CrashlyticsNdkRegistrar f12788a;
 
     public CrashlyticsNdkRegistrar2(CrashlyticsNdkRegistrar crashlyticsNdkRegistrar) {
@@ -21,7 +21,7 @@ public final /* synthetic */ class CrashlyticsNdkRegistrar2 implements Component
     }
 
     @Override // p007b.p225i.p361c.p368l.ComponentFactory
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public Object mo6341a(ComponentContainer componentContainer) {
         Objects.requireNonNull(this.f12788a);
         Context context = (Context) componentContainer.mo6346a(Context.class);

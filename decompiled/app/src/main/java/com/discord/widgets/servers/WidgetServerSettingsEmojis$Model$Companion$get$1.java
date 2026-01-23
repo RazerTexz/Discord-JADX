@@ -6,8 +6,8 @@ import p637j0.p641k.Func1;
 import p637j0.p642l.p647e.ScalarSynchronousObservable;
 import p658rx.Observable;
 
-/* compiled from: WidgetServerSettingsEmojis.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetServerSettingsEmojis.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetServerSettingsEmojis$Model$Companion$get$1<T, R> implements Func1<WidgetServerSettingsEmojis.Model.Permission, Observable<? extends WidgetServerSettingsEmojis.Model>> {
     public static final WidgetServerSettingsEmojis$Model$Companion$get$1 INSTANCE = new WidgetServerSettingsEmojis$Model$Companion$get$1();
 
@@ -16,7 +16,7 @@ public final class WidgetServerSettingsEmojis$Model$Companion$get$1<T, R> implem
         return call2(permission);
     }
 
-    /* renamed from: call, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
     public final Observable<? extends WidgetServerSettingsEmojis.Model> call2(WidgetServerSettingsEmojis.Model.Permission permission) {
         return (permission == null || !permission.getCanManage()) ? new ScalarSynchronousObservable(null) : WidgetServerSettingsEmojis.Model.Companion.access$getGuildEmojis(WidgetServerSettingsEmojis.Model.INSTANCE, permission.getGuild());
     }

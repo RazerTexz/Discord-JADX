@@ -12,8 +12,8 @@ import com.discord.widgets.chat.list.entries.TimestampEntry;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: WidgetChatListAdapterItemTimestamp.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetChatListAdapterItemTimestamp.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetChatListAdapterItemTimestamp extends WidgetChatListItem {
     private final WidgetChatListAdapterItemTextDividerBinding binding;
 

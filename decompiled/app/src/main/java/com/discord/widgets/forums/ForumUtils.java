@@ -28,8 +28,8 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 import p658rx.Observable;
 
-/* compiled from: ForumUtils.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: ForumUtils.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class ForumUtils {
     public static final ForumUtils INSTANCE = new ForumUtils();
     private static final long ONE_DAY_IN_MILLIS = 86400000;
@@ -37,8 +37,8 @@ public final class ForumUtils {
     private static final String PLACEHOLDER_EMOJI_KEY = "heart";
     private static final long THIRTY_DAYS_IN_MILLIS = 2592000000L;
 
-    /* compiled from: ForumUtils.kt */
-    /* renamed from: com.discord.widgets.forums.ForumUtils$getMessageReactionComparator$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.forums.ForumUtils$getMessageReactionComparator$1 */
+    /* JADX INFO: compiled from: ForumUtils.kt */
     public static final class C83341<T> implements Comparator<MessageReaction> {
         public final /* synthetic */ StoreEmoji $storeEmoji;
 
@@ -51,7 +51,7 @@ public final class ForumUtils {
             return compare2(messageReaction, messageReaction2);
         }
 
-        /* renamed from: compare, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: compare, reason: avoid collision after fix types in other method */
         public final int compare2(MessageReaction messageReaction, MessageReaction messageReaction2) {
             if (messageReaction != null && messageReaction2 != null) {
                 int count = messageReaction.getCount();
@@ -77,8 +77,8 @@ public final class ForumUtils {
         }
     }
 
-    /* compiled from: ForumUtils.kt */
-    /* renamed from: com.discord.widgets.forums.ForumUtils$observeCanAccessRedesignedForumChannels$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.forums.ForumUtils$observeCanAccessRedesignedForumChannels$1 */
+    /* JADX INFO: compiled from: ForumUtils.kt */
     public static final class C83351 extends Lambda implements Function0<Boolean> {
         public final /* synthetic */ StoreExperiments $experimentsStore;
         public final /* synthetic */ long $guildId;
@@ -95,14 +95,14 @@ public final class ForumUtils {
             return Boolean.valueOf(invoke2());
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final boolean invoke2() {
             return ForumUtils.INSTANCE.canAccessRedesignedForumChannels(this.$guildId, this.$experimentsStore);
         }
     }
 
-    /* compiled from: ForumUtils.kt */
-    /* renamed from: com.discord.widgets.forums.ForumUtils$observeCanCreateForumChannels$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.forums.ForumUtils$observeCanCreateForumChannels$1 */
+    /* JADX INFO: compiled from: ForumUtils.kt */
     public static final class C83361 extends Lambda implements Function0<Boolean> {
         public final /* synthetic */ StoreExperiments $experimentsStore;
         public final /* synthetic */ long $guildId;
@@ -119,14 +119,14 @@ public final class ForumUtils {
             return Boolean.valueOf(invoke2());
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final boolean invoke2() {
             return ForumUtils.access$canAccessForumChannels(ForumUtils.INSTANCE, this.$guildId, this.$experimentsStore);
         }
     }
 
-    /* compiled from: ForumUtils.kt */
-    /* renamed from: com.discord.widgets.forums.ForumUtils$observeSelectedPostChannel$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.forums.ForumUtils$observeSelectedPostChannel$1 */
+    /* JADX INFO: compiled from: ForumUtils.kt */
     public static final class C83371 extends Lambda implements Function0<Channel> {
         public final /* synthetic */ StoreChannels $storeChannels;
         public final /* synthetic */ StoreChannelsSelected $storeChannelsSelected;

@@ -10,8 +10,8 @@ import kotlin.Tuples2;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: GuildCommunicationDisabledDateUtils.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: GuildCommunicationDisabledDateUtils.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class GuildCommunicationDisabledDateUtils {
     public static final GuildCommunicationDisabledDateUtils INSTANCE = new GuildCommunicationDisabledDateUtils();
 

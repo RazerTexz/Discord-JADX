@@ -8,24 +8,24 @@ import p007b.p085c.p086a.p095y.p096k.AnimatableFloatValue;
 import p007b.p085c.p086a.p095y.p096k.AnimatableTransform;
 import p007b.p085c.p086a.p095y.p098m.BaseLayer2;
 
-/* compiled from: Repeater.java */
-/* renamed from: b.c.a.y.l.j, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.c.a.y.l.j, reason: use source file name */
+/* JADX INFO: compiled from: Repeater.java */
+/* JADX INFO: loaded from: classes.dex */
 public class Repeater implements ContentModel2 {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final String f2798a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final AnimatableFloatValue f2799b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final AnimatableFloatValue f2800c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final AnimatableTransform f2801d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final boolean f2802e;
 
     public Repeater(String str, AnimatableFloatValue animatableFloatValue, AnimatableFloatValue animatableFloatValue2, AnimatableTransform animatableTransform, boolean z2) {
@@ -38,7 +38,7 @@ public class Repeater implements ContentModel2 {
 
     @Override // p007b.p085c.p086a.p095y.p097l.ContentModel2
     @Nullable
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public Content2 mo775a(LottieDrawable lottieDrawable, BaseLayer2 baseLayer2) {
         return new RepeaterContent(lottieDrawable, baseLayer2, this);
     }

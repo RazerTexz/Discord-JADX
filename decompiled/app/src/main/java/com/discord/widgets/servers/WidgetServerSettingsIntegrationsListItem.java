@@ -29,13 +29,13 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p658rx.Observable;
 import p658rx.functions.Action1;
 
-/* compiled from: WidgetServerSettingsIntegrationsListItem.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetServerSettingsIntegrationsListItem.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetServerSettingsIntegrationsListItem extends MGRecyclerViewHolder<WidgetServerSettingsIntegrations.Adapter, WidgetServerSettingsIntegrations.Model.IntegrationItem> {
     private final WidgetServerSettingsIntegrationListItemBinding binding;
 
-    /* compiled from: WidgetServerSettingsIntegrationsListItem.kt */
-    /* renamed from: com.discord.widgets.servers.WidgetServerSettingsIntegrationsListItem$onConfigure$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.WidgetServerSettingsIntegrationsListItem$onConfigure$1 */
+    /* JADX INFO: compiled from: WidgetServerSettingsIntegrationsListItem.kt */
     public static final class ViewOnClickListenerC92651 implements View.OnClickListener {
         public final /* synthetic */ long $integrationId;
 
@@ -49,15 +49,15 @@ public final class WidgetServerSettingsIntegrationsListItem extends MGRecyclerVi
         }
     }
 
-    /* compiled from: WidgetServerSettingsIntegrationsListItem.kt */
-    /* renamed from: com.discord.widgets.servers.WidgetServerSettingsIntegrationsListItem$onConfigure$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.WidgetServerSettingsIntegrationsListItem$onConfigure$2 */
+    /* JADX INFO: compiled from: WidgetServerSettingsIntegrationsListItem.kt */
     public static final class C92662<T> implements Action1<Boolean> {
         public final /* synthetic */ WidgetServerSettingsIntegrations.Model.IntegrationItem $data;
         public final /* synthetic */ long $integrationId;
         public final /* synthetic */ boolean $isTwitch;
 
-        /* compiled from: WidgetServerSettingsIntegrationsListItem.kt */
-        /* renamed from: com.discord.widgets.servers.WidgetServerSettingsIntegrationsListItem$onConfigure$2$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.widgets.servers.WidgetServerSettingsIntegrationsListItem$onConfigure$2$1, reason: invalid class name */
+        /* JADX INFO: compiled from: WidgetServerSettingsIntegrationsListItem.kt */
         public static final class AnonymousClass1<T> implements Action1<Void> {
             public AnonymousClass1() {
             }
@@ -67,7 +67,7 @@ public final class WidgetServerSettingsIntegrationsListItem extends MGRecyclerVi
                 call2(r1);
             }
 
-            /* renamed from: call, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
             public final void call2(Void r3) {
                 CheckedSetting checkedSetting = WidgetServerSettingsIntegrationsListItem.access$getBinding$p(WidgetServerSettingsIntegrationsListItem.this).f17697h;
                 Intrinsics3.checkNotNullExpressionValue(checkedSetting, "binding.integrationSyncSwitch");
@@ -90,7 +90,7 @@ public final class WidgetServerSettingsIntegrationsListItem extends MGRecyclerVi
             call2(bool);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final void call2(Boolean bool) {
             Intrinsics3.checkNotNullExpressionValue(bool, "checked");
             if (!bool.booleanValue()) {
@@ -113,8 +113,8 @@ public final class WidgetServerSettingsIntegrationsListItem extends MGRecyclerVi
         }
     }
 
-    /* compiled from: WidgetServerSettingsIntegrationsListItem.kt */
-    /* renamed from: com.discord.widgets.servers.WidgetServerSettingsIntegrationsListItem$showDisableSyncDialog$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.WidgetServerSettingsIntegrationsListItem$showDisableSyncDialog$1 */
+    /* JADX INFO: compiled from: WidgetServerSettingsIntegrationsListItem.kt */
     public static final class ViewOnClickListenerC92671 implements View.OnClickListener {
         public final /* synthetic */ AlertDialog $dialog;
 
@@ -128,16 +128,16 @@ public final class WidgetServerSettingsIntegrationsListItem extends MGRecyclerVi
         }
     }
 
-    /* compiled from: WidgetServerSettingsIntegrationsListItem.kt */
-    /* renamed from: com.discord.widgets.servers.WidgetServerSettingsIntegrationsListItem$showDisableSyncDialog$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.WidgetServerSettingsIntegrationsListItem$showDisableSyncDialog$2 */
+    /* JADX INFO: compiled from: WidgetServerSettingsIntegrationsListItem.kt */
     public static final class ViewOnClickListenerC92682 implements View.OnClickListener {
         public final /* synthetic */ Context $context;
         public final /* synthetic */ AlertDialog $dialog;
         public final /* synthetic */ long $guildId;
         public final /* synthetic */ long $integrationId;
 
-        /* compiled from: WidgetServerSettingsIntegrationsListItem.kt */
-        /* renamed from: com.discord.widgets.servers.WidgetServerSettingsIntegrationsListItem$showDisableSyncDialog$2$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.widgets.servers.WidgetServerSettingsIntegrationsListItem$showDisableSyncDialog$2$1, reason: invalid class name */
+        /* JADX INFO: compiled from: WidgetServerSettingsIntegrationsListItem.kt */
         public static final class AnonymousClass1<T> implements Action1<Void> {
             public AnonymousClass1() {
             }
@@ -147,7 +147,7 @@ public final class WidgetServerSettingsIntegrationsListItem extends MGRecyclerVi
                 call2(r1);
             }
 
-            /* renamed from: call, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
             public final void call2(Void r1) {
                 ViewOnClickListenerC92682.this.$dialog.dismiss();
             }
@@ -280,7 +280,7 @@ public final class WidgetServerSettingsIntegrationsListItem extends MGRecyclerVi
         onConfigure2(i, integrationItem);
     }
 
-    /* renamed from: onConfigure, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: onConfigure, reason: avoid collision after fix types in other method */
     public void onConfigure2(int position, WidgetServerSettingsIntegrations.Model.IntegrationItem data) {
         Intrinsics3.checkNotNullParameter(data, "data");
         super.onConfigure(position, data);

@@ -13,16 +13,16 @@ import p007b.p225i.p361c.p368l.ComponentContainer;
 import p007b.p225i.p361c.p368l.ComponentFactory;
 import p007b.p225i.p361c.p396q.Subscriber2;
 
-/* compiled from: com.google.android.gms:play-services-measurement-api@@18.0.0 */
-/* renamed from: b.i.c.j.a.c.a */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.c.j.a.c.a */
+/* JADX INFO: compiled from: com.google.android.gms:play-services-measurement-api@@18.0.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public final /* synthetic */ class C4551a implements ComponentFactory {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final ComponentFactory f12144a = new C4551a();
 
     @Override // p007b.p225i.p361c.p368l.ComponentFactory
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final Object mo6341a(ComponentContainer componentContainer) {
         FirebaseApp2 firebaseApp2 = (FirebaseApp2) componentContainer.mo6346a(FirebaseApp2.class);
         Context context = (Context) componentContainer.mo6346a(Context.class);

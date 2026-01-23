@@ -6,17 +6,17 @@ import java.util.IdentityHashMap;
 import java.util.Objects;
 import java.util.Set;
 
-/* compiled from: DummyTrackingInUseBitmapPool.java */
-/* renamed from: b.f.j.l.m, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.f.j.l.m, reason: use source file name */
+/* JADX INFO: compiled from: DummyTrackingInUseBitmapPool.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class DummyTrackingInUseBitmapPool implements BitmapPool {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final Set<Bitmap> f3943a = Collections.newSetFromMap(new IdentityHashMap());
 
     @Override // p007b.p109f.p115d.p122g.Pool2
     public Bitmap get(int i) {
-        Bitmap bitmapCreateBitmap = Bitmap.createBitmap(1, (int) Math.ceil(i / 2.0d), Bitmap.Config.RGB_565);
+        Bitmap bitmapCreateBitmap = Bitmap.createBitmap(1, (int) Math.ceil(((double) i) / 2.0d), Bitmap.Config.RGB_565);
         this.f3943a.add(bitmapCreateBitmap);
         return bitmapCreateBitmap;
     }

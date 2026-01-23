@@ -56,11 +56,11 @@ import p659s.p660a.Dispatchers;
 import p659s.p660a.MainCoroutineDispatcher;
 import p659s.p660a.p661a.MainDispatchers;
 
-/* compiled from: WidgetOauth2AuthorizeSamsung.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetOauth2AuthorizeSamsung.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetOauth2AuthorizeSamsung extends WidgetOauth2Authorize {
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private static final int REQ_CODE_SAMSUNG = 5459;
     private final ActivityResultLauncher<Intent> captchaLauncher;
@@ -68,7 +68,7 @@ public final class WidgetOauth2AuthorizeSamsung extends WidgetOauth2Authorize {
     private final ActivityResultLauncher<Intent> samsungConnectLauncher;
     private final ActivityResultLauncher<Intent> samsungDisclaimerLauncher;
 
-    /* compiled from: WidgetOauth2AuthorizeSamsung.kt */
+    /* JADX INFO: compiled from: WidgetOauth2AuthorizeSamsung.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -115,8 +115,8 @@ public final class WidgetOauth2AuthorizeSamsung extends WidgetOauth2Authorize {
         }
     }
 
-    /* compiled from: WidgetOauth2AuthorizeSamsung.kt */
-    /* renamed from: com.discord.widgets.auth.WidgetOauth2AuthorizeSamsung$authorizeForSamsung$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.auth.WidgetOauth2AuthorizeSamsung$authorizeForSamsung$1 */
+    /* JADX INFO: compiled from: WidgetOauth2AuthorizeSamsung.kt */
     public static final class C72521 extends Lambda implements Function1<Error, Unit> {
         public C72521() {
             super(1);
@@ -128,7 +128,7 @@ public final class WidgetOauth2AuthorizeSamsung extends WidgetOauth2Authorize {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Error error) {
             Intrinsics3.checkNotNullParameter(error, "error");
             Companion.access$logI(WidgetOauth2AuthorizeSamsung.INSTANCE, "POST /authorize: error " + error);
@@ -140,14 +140,14 @@ public final class WidgetOauth2AuthorizeSamsung extends WidgetOauth2Authorize {
         }
     }
 
-    /* compiled from: WidgetOauth2AuthorizeSamsung.kt */
-    /* renamed from: com.discord.widgets.auth.WidgetOauth2AuthorizeSamsung$authorizeForSamsung$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.auth.WidgetOauth2AuthorizeSamsung$authorizeForSamsung$2 */
+    /* JADX INFO: compiled from: WidgetOauth2AuthorizeSamsung.kt */
     public static final class C72532 extends Lambda implements Function1<RestAPIParams.OAuth2Authorize.ResponsePost, Unit> {
         public final /* synthetic */ String $samsungAuthCode;
 
-        /* compiled from: WidgetOauth2AuthorizeSamsung.kt */
+        /* JADX INFO: renamed from: com.discord.widgets.auth.WidgetOauth2AuthorizeSamsung$authorizeForSamsung$2$1, reason: invalid class name */
+        /* JADX INFO: compiled from: WidgetOauth2AuthorizeSamsung.kt */
         @DebugMetadata(m10084c = "com.discord.widgets.auth.WidgetOauth2AuthorizeSamsung$authorizeForSamsung$2$1", m10085f = "WidgetOauth2AuthorizeSamsung.kt", m10086l = {157}, m10087m = "invokeSuspend")
-        /* renamed from: com.discord.widgets.auth.WidgetOauth2AuthorizeSamsung$authorizeForSamsung$2$1, reason: invalid class name */
         public static final class AnonymousClass1 extends ContinuationImpl6 implements Function2<CoroutineScope, Continuation<? super Unit>, Object> {
             public final /* synthetic */ RestAPIParams.OAuth2Authorize.ResponsePost $it;
             public int label;
@@ -204,7 +204,7 @@ public final class WidgetOauth2AuthorizeSamsung extends WidgetOauth2Authorize {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(RestAPIParams.OAuth2Authorize.ResponsePost responsePost) {
             Intrinsics3.checkNotNullParameter(responsePost, "it");
             Companion.access$logI(WidgetOauth2AuthorizeSamsung.INSTANCE, "POST /authorize success");
@@ -212,8 +212,8 @@ public final class WidgetOauth2AuthorizeSamsung extends WidgetOauth2Authorize {
         }
     }
 
-    /* compiled from: WidgetOauth2AuthorizeSamsung.kt */
-    /* renamed from: com.discord.widgets.auth.WidgetOauth2AuthorizeSamsung$configureUI$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.auth.WidgetOauth2AuthorizeSamsung$configureUI$1 */
+    /* JADX INFO: compiled from: WidgetOauth2AuthorizeSamsung.kt */
     public static final class ViewOnClickListenerC72541 implements View.OnClickListener {
         public ViewOnClickListenerC72541() {
         }
@@ -244,9 +244,9 @@ public final class WidgetOauth2AuthorizeSamsung extends WidgetOauth2Authorize {
         }
     }
 
-    /* compiled from: WidgetOauth2AuthorizeSamsung.kt */
+    /* JADX INFO: renamed from: com.discord.widgets.auth.WidgetOauth2AuthorizeSamsung$samsungCallbackHandshake$1 */
+    /* JADX INFO: compiled from: WidgetOauth2AuthorizeSamsung.kt */
     @DebugMetadata(m10084c = "com.discord.widgets.auth.WidgetOauth2AuthorizeSamsung", m10085f = "WidgetOauth2AuthorizeSamsung.kt", m10086l = {Opcodes.RETURN, Opcodes.NEWARRAY, Opcodes.CHECKCAST}, m10087m = "samsungCallbackHandshake")
-    /* renamed from: com.discord.widgets.auth.WidgetOauth2AuthorizeSamsung$samsungCallbackHandshake$1 */
     public static final class C72551 extends ContinuationImpl3 {
         public Object L$0;
         public Object L$1;
@@ -266,9 +266,9 @@ public final class WidgetOauth2AuthorizeSamsung extends WidgetOauth2Authorize {
         }
     }
 
-    /* compiled from: WidgetOauth2AuthorizeSamsung.kt */
+    /* JADX INFO: renamed from: com.discord.widgets.auth.WidgetOauth2AuthorizeSamsung$samsungCallbackHandshake$2 */
+    /* JADX INFO: compiled from: WidgetOauth2AuthorizeSamsung.kt */
     @DebugMetadata(m10084c = "com.discord.widgets.auth.WidgetOauth2AuthorizeSamsung$samsungCallbackHandshake$2", m10085f = "WidgetOauth2AuthorizeSamsung.kt", m10086l = {}, m10087m = "invokeSuspend")
-    /* renamed from: com.discord.widgets.auth.WidgetOauth2AuthorizeSamsung$samsungCallbackHandshake$2 */
     public static final class C72562 extends ContinuationImpl6 implements Function2<CoroutineScope, Continuation<? super Unit>, Object> {
         public int label;
 
@@ -304,8 +304,8 @@ public final class WidgetOauth2AuthorizeSamsung extends WidgetOauth2Authorize {
         }
     }
 
-    /* compiled from: WidgetOauth2AuthorizeSamsung.kt */
-    /* renamed from: com.discord.widgets.auth.WidgetOauth2AuthorizeSamsung$startSamsungAccountLink$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.auth.WidgetOauth2AuthorizeSamsung$startSamsungAccountLink$1 */
+    /* JADX INFO: compiled from: WidgetOauth2AuthorizeSamsung.kt */
     public static final class C72571 extends Lambda implements Function1<Error, Unit> {
         public C72571() {
             super(1);
@@ -317,7 +317,7 @@ public final class WidgetOauth2AuthorizeSamsung extends WidgetOauth2Authorize {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Error error) throws Exception {
             Intrinsics3.checkNotNullParameter(error, "error");
             Companion.access$logI(WidgetOauth2AuthorizeSamsung.INSTANCE, "GET /authorize: error " + error);
@@ -328,8 +328,8 @@ public final class WidgetOauth2AuthorizeSamsung extends WidgetOauth2Authorize {
         }
     }
 
-    /* compiled from: WidgetOauth2AuthorizeSamsung.kt */
-    /* renamed from: com.discord.widgets.auth.WidgetOauth2AuthorizeSamsung$startSamsungAccountLink$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.auth.WidgetOauth2AuthorizeSamsung$startSamsungAccountLink$2 */
+    /* JADX INFO: compiled from: WidgetOauth2AuthorizeSamsung.kt */
     public static final class C72582 extends Lambda implements Function1<Void, Unit> {
         public final /* synthetic */ String $samsungAuthCode;
 
@@ -345,7 +345,7 @@ public final class WidgetOauth2AuthorizeSamsung extends WidgetOauth2Authorize {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Void r3) {
             WidgetOauth2AuthorizeSamsung.access$authorizeForSamsung(WidgetOauth2AuthorizeSamsung.this, this.$samsungAuthCode, null);
         }

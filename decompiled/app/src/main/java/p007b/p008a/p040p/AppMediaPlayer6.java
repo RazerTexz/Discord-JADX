@@ -10,12 +10,12 @@ import p658rx.Subscription;
 import p658rx.functions.Action1;
 import p658rx.subjects.PublishSubject;
 
-/* compiled from: AppMediaPlayer.kt */
-/* renamed from: b.a.p.e, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.a.p.e, reason: use source file name */
+/* JADX INFO: compiled from: AppMediaPlayer.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class AppMediaPlayer6<T> implements Action1<RxPlayerEventListener.c> {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final /* synthetic */ AppMediaPlayer f1584j;
 
     public AppMediaPlayer6(AppMediaPlayer appMediaPlayer) {

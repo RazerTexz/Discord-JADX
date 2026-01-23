@@ -8,26 +8,26 @@ import androidx.viewbinding.ViewBinding;
 import com.discord.utilities.view.text.LinkifiedTextView;
 import com.discord.views.CheckedSetting;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public final class ContactSyncPermissionsSheetBinding implements ViewBinding {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     @NonNull
     public final ConstraintLayout f15025a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     @NonNull
     public final CheckedSetting f15026b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     @NonNull
     public final CheckedSetting f15027c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     @NonNull
     public final LinkifiedTextView f15028d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     @NonNull
     public final CheckedSetting f15029e;
 

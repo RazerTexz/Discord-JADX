@@ -35,22 +35,22 @@ import p507d0.p592z.p594d.Lambda;
 import p507d0.p592z.p594d.PropertyReference1Impl;
 import p507d0.p592z.p594d.Reflection2;
 
-/* compiled from: GivenFunctionsMemberScope.kt */
-/* renamed from: d0.e0.p.d.m0.k.a0.e, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.k.a0.e, reason: use source file name */
+/* JADX INFO: compiled from: GivenFunctionsMemberScope.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public abstract class GivenFunctionsMemberScope extends MemberScopeImpl {
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static final /* synthetic */ KProperty<Object>[] f24362b = {Reflection2.property1(new PropertyReference1Impl(Reflection2.getOrCreateKotlinClass(GivenFunctionsMemberScope.class), "allDescriptors", "getAllDescriptors()Ljava/util/List;"))};
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final ClassDescriptor f24363c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final storage5 f24364d;
 
-    /* compiled from: GivenFunctionsMemberScope.kt */
-    /* renamed from: d0.e0.p.d.m0.k.a0.e$a */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.k.a0.e$a */
+    /* JADX INFO: compiled from: GivenFunctionsMemberScope.kt */
     public static final class a extends Lambda implements Function0<List<? extends DeclarationDescriptor>> {
         public a() {
             super(0);
@@ -62,7 +62,7 @@ public abstract class GivenFunctionsMemberScope extends MemberScopeImpl {
         }
 
         @Override // kotlin.jvm.functions.Function0
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final List<? extends DeclarationDescriptor> invoke2() {
             List<FunctionDescriptor> listMo9372a = GivenFunctionsMemberScope.this.mo9372a();
             return _Collections.plus((Collection) listMo9372a, (Iterable) GivenFunctionsMemberScope.access$createFakeOverrides(GivenFunctionsMemberScope.this, listMo9372a));
@@ -77,11 +77,13 @@ public abstract class GivenFunctionsMemberScope extends MemberScopeImpl {
     }
 
     /* JADX WARN: Multi-variable type inference failed */
+    /* JADX WARN: Type inference failed for: r4v6, types: [d0.e0.p.d.m0.k.k] */
     /* JADX WARN: Type inference failed for: r5v4, types: [java.util.List] */
     /* JADX WARN: Type inference failed for: r5v5 */
     /* JADX WARN: Type inference failed for: r5v7, types: [java.util.ArrayList] */
+    /* JADX WARN: Type inference failed for: r7v0, types: [java.util.Collection] */
     public static final List access$createFakeOverrides(GivenFunctionsMemberScope givenFunctionsMemberScope, List list) {
-        Collection<? extends CallableMemberDescriptor> collectionEmptyList;
+        ?? EmptyList;
         Objects.requireNonNull(givenFunctionsMemberScope);
         ArrayList arrayList = new ArrayList(3);
         Collection<KotlinType> supertypes = givenFunctionsMemberScope.f24363c.getTypeConstructor().getSupertypes();
@@ -123,27 +125,27 @@ public abstract class GivenFunctionsMemberScope extends MemberScopeImpl {
             for (Map.Entry entry2 : linkedHashMap2.entrySet()) {
                 boolean zBooleanValue = ((Boolean) entry2.getKey()).booleanValue();
                 List list3 = (List) entry2.getValue();
-                OverridingUtil overridingUtil = OverridingUtil.f24411b;
+                ?? r4 = OverridingUtil.f24411b;
                 if (zBooleanValue) {
-                    collectionEmptyList = new ArrayList();
+                    EmptyList = new ArrayList();
                     for (Object obj4 : list) {
                         if (Intrinsics3.areEqual(((FunctionDescriptor) obj4).getName(), name2)) {
-                            collectionEmptyList.add(obj4);
+                            EmptyList.add(obj4);
                         }
                     }
                 } else {
-                    collectionEmptyList = Collections2.emptyList();
+                    EmptyList = Collections2.emptyList();
                 }
-                overridingUtil.generateOverridesInFunctionGroup(name2, list3, collectionEmptyList, givenFunctionsMemberScope.f24363c, new GivenFunctionsMemberScope2(arrayList, givenFunctionsMemberScope));
+                r4.generateOverridesInFunctionGroup(name2, list3, EmptyList, givenFunctionsMemberScope.f24363c, new GivenFunctionsMemberScope2(arrayList, givenFunctionsMemberScope));
             }
         }
         return collections.compact(arrayList);
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public abstract List<FunctionDescriptor> mo9372a();
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final List<DeclarationDescriptor> m9911b() {
         return (List) storage7.getValue(this.f24364d, this, (KProperty<?>) f24362b[0]);
     }

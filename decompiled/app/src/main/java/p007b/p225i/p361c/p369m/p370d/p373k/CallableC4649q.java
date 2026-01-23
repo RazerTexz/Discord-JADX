@@ -10,15 +10,15 @@ import java.util.concurrent.Callable;
 import org.json.JSONObject;
 import p007b.p225i.p361c.p369m.p370d.Logger3;
 
-/* compiled from: CrashlyticsController.java */
-/* renamed from: b.i.c.m.d.k.q */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.c.m.d.k.q */
+/* JADX INFO: compiled from: CrashlyticsController.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class CallableC4649q implements Callable<Void> {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final /* synthetic */ Map f12369j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final /* synthetic */ C4663x f12370k;
 
     public CallableC4649q(C4663x c4663x, Map map) {
@@ -46,8 +46,6 @@ public class CallableC4649q implements Callable<Void> {
                     if (Logger3.f12227a.m6370a(6)) {
                         Log.e("FirebaseCrashlytics", "Error serializing key/value metadata.", e);
                     }
-                    CommonUtils.m6409c(bufferedWriter, "Failed to close key/value metadata file.");
-                    return null;
                 } catch (Throwable th) {
                     th = th;
                     bufferedWriter2 = bufferedWriter;

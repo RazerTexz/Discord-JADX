@@ -2,18 +2,18 @@ package p007b.p225i.p226a.p288f.p313h.p325l;
 
 import java.util.ListIterator;
 
-/* compiled from: com.google.android.gms:play-services-measurement-base@@18.0.0 */
-/* renamed from: b.i.a.f.h.l.h7 */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.h.l.h7 */
+/* JADX INFO: compiled from: com.google.android.gms:play-services-measurement-base@@18.0.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public final class C3683h7 implements ListIterator<String> {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public ListIterator<String> f9992j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final /* synthetic */ int f9993k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final /* synthetic */ C3641e7 f9994l;
 
     public C3683h7(C3641e7 c3641e7, int i) {

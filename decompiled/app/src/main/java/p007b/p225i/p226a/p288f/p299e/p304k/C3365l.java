@@ -17,20 +17,20 @@ import p007b.p225i.p226a.p288f.p299e.C3258d;
 import p007b.p225i.p226a.p288f.p299e.p310p.C3410a;
 import p007b.p225i.p226a.p288f.p299e.p310p.C3411b;
 
-/* compiled from: com.google.android.gms:play-services-base@@17.3.0 */
-/* renamed from: b.i.a.f.e.k.l */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.e.k.l */
+/* JADX INFO: compiled from: com.google.android.gms:play-services-base@@17.3.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public final class C3365l {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final SimpleArrayMap<String, String> f9534a = new SimpleArrayMap<>();
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     @Nullable
     public static Locale f9535b;
 
     @Nullable
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static String m4166a(Context context, int i) {
         Resources resources = context.getResources();
         switch (i) {
@@ -86,7 +86,7 @@ public final class C3365l {
     }
 
     @Nullable
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static String m4167b(Context context, String str) {
         Resources resourcesForApplication;
         SimpleArrayMap<String, String> simpleArrayMap = f9534a;
@@ -126,8 +126,8 @@ public final class C3365l {
         }
     }
 
-    /* renamed from: c */
-    public static String m4168c(Context context, String str, String str2) throws Resources.NotFoundException {
+    /* JADX INFO: renamed from: c */
+    public static String m4168c(Context context, String str, String str2) {
         Resources resources = context.getResources();
         String strM4167b = m4167b(context, str);
         if (strM4167b == null) {
@@ -136,7 +136,7 @@ public final class C3365l {
         return String.format(resources.getConfiguration().locale, strM4167b, str2);
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public static String m4169d(Context context) {
         String packageName = context.getPackageName();
         try {
@@ -149,7 +149,7 @@ public final class C3365l {
     }
 
     @NonNull
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public static String m4170e(Context context, int i) {
         Resources resources = context.getResources();
         String strM4169d = m4169d(context);

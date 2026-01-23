@@ -54,12 +54,12 @@ import p637j0.p642l.p647e.ScalarSynchronousObservable;
 import p658rx.Observable;
 import p658rx.functions.Func2;
 
-/* compiled from: ShareUtils.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: ShareUtils.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class ShareUtils {
     public static final ShareUtils INSTANCE = new ShareUtils();
 
-    /* compiled from: ShareUtils.kt */
+    /* JADX INFO: compiled from: ShareUtils.kt */
     public static final /* data */ class SharedContent {
         private final CharSequence text;
         private final List<Uri> uris;
@@ -81,7 +81,7 @@ public final class ShareUtils {
             return sharedContent.copy(charSequence, list);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final CharSequence getText() {
             return this.text;
         }
@@ -128,20 +128,20 @@ public final class ShareUtils {
         }
     }
 
-    /* compiled from: ShareUtils.kt */
-    /* renamed from: com.discord.utilities.ShareUtils$loadAdaptiveBitmaps$1 */
+    /* JADX INFO: renamed from: com.discord.utilities.ShareUtils$loadAdaptiveBitmaps$1 */
+    /* JADX INFO: compiled from: ShareUtils.kt */
     public static final class C66491<T, R> implements Func1<MGImagesBitmap.CloseableBitmaps, Observable<? extends MGImagesBitmap.CloseableBitmaps>> {
         public final /* synthetic */ int $fillMargins;
         public final /* synthetic */ int $fullBitmapSize;
         public final /* synthetic */ int $iconSize;
 
-        /* compiled from: ShareUtils.kt */
-        /* renamed from: com.discord.utilities.ShareUtils$loadAdaptiveBitmaps$1$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.utilities.ShareUtils$loadAdaptiveBitmaps$1$1, reason: invalid class name */
+        /* JADX INFO: compiled from: ShareUtils.kt */
         public static final class AnonymousClass1<T, R> implements Func1<Map.Entry<? extends String, ? extends Bitmap>, Observable<? extends Tuples2<? extends String, ? extends Bitmap>>> {
             public final /* synthetic */ RepresentativeColors $representativeColors;
 
-            /* compiled from: ShareUtils.kt */
-            /* renamed from: com.discord.utilities.ShareUtils$loadAdaptiveBitmaps$1$1$1, reason: invalid class name and collision with other inner class name */
+            /* JADX INFO: renamed from: com.discord.utilities.ShareUtils$loadAdaptiveBitmaps$1$1$1, reason: invalid class name and collision with other inner class name */
+            /* JADX INFO: compiled from: ShareUtils.kt */
             public static final class C132701<T, R> implements Func1<Integer, Tuples2<? extends String, ? extends Bitmap>> {
                 public final /* synthetic */ Bitmap $bitmap;
                 public final /* synthetic */ String $url;
@@ -156,7 +156,7 @@ public final class ShareUtils {
                     return call2(num);
                 }
 
-                /* renamed from: call, reason: avoid collision after fix types in other method */
+                /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
                 public final Tuples2<String, Bitmap> call2(Integer num) {
                     String str = this.$url;
                     MGImages mGImages = MGImages.INSTANCE;
@@ -177,7 +177,7 @@ public final class ShareUtils {
                 return call2((Map.Entry<String, Bitmap>) entry);
             }
 
-            /* renamed from: call, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
             public final Observable<? extends Tuples2<String, Bitmap>> call2(Map.Entry<String, Bitmap> entry) {
                 Observable<R> scalarSynchronousObservable;
                 String key = entry.getKey();
@@ -194,8 +194,8 @@ public final class ShareUtils {
             }
         }
 
-        /* compiled from: ShareUtils.kt */
-        /* renamed from: com.discord.utilities.ShareUtils$loadAdaptiveBitmaps$1$2, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.utilities.ShareUtils$loadAdaptiveBitmaps$1$2, reason: invalid class name */
+        /* JADX INFO: compiled from: ShareUtils.kt */
         public static final class AnonymousClass2<T, R> implements Func1<Map<String, ? extends Bitmap>, MGImagesBitmap.CloseableBitmaps> {
             public final /* synthetic */ MGImagesBitmap.CloseableBitmaps $iconBitmaps;
 
@@ -208,7 +208,7 @@ public final class ShareUtils {
                 return call2((Map<String, Bitmap>) map);
             }
 
-            /* renamed from: call, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
             public final MGImagesBitmap.CloseableBitmaps call2(Map<String, Bitmap> map) {
                 this.$iconBitmaps.close();
                 Intrinsics3.checkNotNullExpressionValue(map, "bitmaps");
@@ -227,7 +227,7 @@ public final class ShareUtils {
             return call2(closeableBitmaps);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final Observable<? extends MGImagesBitmap.CloseableBitmaps> call2(MGImagesBitmap.CloseableBitmaps closeableBitmaps) {
             Observable<R> observableM11109n = Observable.m11058B(closeableBitmaps.entrySet()).m11109n(new AnonymousClass1(new RepresentativeColors()));
             Intrinsics3.checkNotNullExpressionValue(observableM11109n, "Observable.from(iconBitm…        }\n              }");
@@ -235,8 +235,8 @@ public final class ShareUtils {
         }
     }
 
-    /* compiled from: ShareUtils.kt */
-    /* renamed from: com.discord.utilities.ShareUtils$observeChannelAndIconPairs$1 */
+    /* JADX INFO: renamed from: com.discord.utilities.ShareUtils$observeChannelAndIconPairs$1 */
+    /* JADX INFO: compiled from: ShareUtils.kt */
     public static final class C66501<T, R> implements Func1<List<? extends Channel>, List<? extends ChannelShortcutInfo>> {
         public static final C66501 INSTANCE = new C66501();
 
@@ -245,7 +245,7 @@ public final class ShareUtils {
             return call2((List<Channel>) list);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final List<ChannelShortcutInfo> call2(List<Channel> list) {
             Intrinsics3.checkNotNullExpressionValue(list, "it");
             ArrayList arrayList = new ArrayList(Iterables2.collectionSizeOrDefault(list, 10));
@@ -262,8 +262,8 @@ public final class ShareUtils {
         }
     }
 
-    /* compiled from: ShareUtils.kt */
-    /* renamed from: com.discord.utilities.ShareUtils$observeChannelAndIconPairs$2 */
+    /* JADX INFO: renamed from: com.discord.utilities.ShareUtils$observeChannelAndIconPairs$2 */
+    /* JADX INFO: compiled from: ShareUtils.kt */
     public static final class C66512<T, R> implements Func1<Map<Long, ? extends Channel>, Boolean> {
         public static final C66512 INSTANCE = new C66512();
 
@@ -272,15 +272,15 @@ public final class ShareUtils {
             return call2((Map<Long, Channel>) map);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final Boolean call2(Map<Long, Channel> map) {
             Intrinsics3.checkNotNullExpressionValue(map, "it");
             return Boolean.valueOf(!map.isEmpty());
         }
     }
 
-    /* compiled from: ShareUtils.kt */
-    /* renamed from: com.discord.utilities.ShareUtils$observeChannelAndIconPairs$3 */
+    /* JADX INFO: renamed from: com.discord.utilities.ShareUtils$observeChannelAndIconPairs$3 */
+    /* JADX INFO: compiled from: ShareUtils.kt */
     public static final class C66523<T1, T2, R> implements Func2<List<? extends ChannelShortcutInfo>, Map<Long, ? extends Channel>, List<? extends Tuples2<? extends ChannelShortcutInfo, ? extends String>>> {
         public final /* synthetic */ Context $context;
 
@@ -293,7 +293,7 @@ public final class ShareUtils {
             return call2((List<ChannelShortcutInfo>) list, (Map<Long, Channel>) map);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final List<Tuples2<ChannelShortcutInfo, String>> call2(List<ChannelShortcutInfo> list, Map<Long, Channel> map) {
             Intrinsics3.checkNotNullExpressionValue(list, "directShareChannels");
             ArrayList arrayList = new ArrayList(Iterables2.collectionSizeOrDefault(list, 10));
@@ -317,13 +317,13 @@ public final class ShareUtils {
         }
     }
 
-    /* compiled from: ShareUtils.kt */
-    /* renamed from: com.discord.utilities.ShareUtils$updateDirectShareTargets$1 */
+    /* JADX INFO: renamed from: com.discord.utilities.ShareUtils$updateDirectShareTargets$1 */
+    /* JADX INFO: compiled from: ShareUtils.kt */
     public static final class C66581<T, R> implements Func1<List<? extends Tuples2<? extends ChannelShortcutInfo, ? extends String>>, Observable<? extends Tuples2<? extends List<? extends Tuples2<? extends ChannelShortcutInfo, ? extends String>>, ? extends MGImagesBitmap.CloseableBitmaps>>> {
         public static final C66581 INSTANCE = new C66581();
 
-        /* compiled from: ShareUtils.kt */
-        /* renamed from: com.discord.utilities.ShareUtils$updateDirectShareTargets$1$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.utilities.ShareUtils$updateDirectShareTargets$1$1, reason: invalid class name */
+        /* JADX INFO: compiled from: ShareUtils.kt */
         public static final class AnonymousClass1<T, R> implements Func1<MGImagesBitmap.CloseableBitmaps, Tuples2<? extends List<? extends Tuples2<? extends ChannelShortcutInfo, ? extends String>>, ? extends MGImagesBitmap.CloseableBitmaps>> {
             public final /* synthetic */ List $channelAndIconUriPairs;
 
@@ -336,7 +336,7 @@ public final class ShareUtils {
                 return call2(closeableBitmaps);
             }
 
-            /* renamed from: call, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
             public final Tuples2<List<Tuples2<ChannelShortcutInfo, String>>, MGImagesBitmap.CloseableBitmaps> call2(MGImagesBitmap.CloseableBitmaps closeableBitmaps) {
                 return Tuples.m10073to(this.$channelAndIconUriPairs, closeableBitmaps);
             }
@@ -347,15 +347,15 @@ public final class ShareUtils {
             return call2((List<Tuples2<ChannelShortcutInfo, String>>) list);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final Observable<? extends Tuples2<List<Tuples2<ChannelShortcutInfo, String>>, MGImagesBitmap.CloseableBitmaps>> call2(List<Tuples2<ChannelShortcutInfo, String>> list) {
             Intrinsics3.checkNotNullExpressionValue(list, "channelAndIconUriPairs");
             return ShareUtils.INSTANCE.loadAdaptiveBitmaps(_Sequences2.map(_Collections.asSequence(list), ShareUtils$updateDirectShareTargets$1$uris$1.INSTANCE)).m11083G(new AnonymousClass1(list));
         }
     }
 
-    /* compiled from: ShareUtils.kt */
-    /* renamed from: com.discord.utilities.ShareUtils$updateDirectShareTargets$2 */
+    /* JADX INFO: renamed from: com.discord.utilities.ShareUtils$updateDirectShareTargets$2 */
+    /* JADX INFO: compiled from: ShareUtils.kt */
     public static final class C66592 extends Lambda implements Function1<Tuples2<? extends List<? extends Tuples2<? extends ChannelShortcutInfo, ? extends String>>, ? extends MGImagesBitmap.CloseableBitmaps>, Unit> {
         public final /* synthetic */ Context $context;
 
@@ -371,7 +371,7 @@ public final class ShareUtils {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Tuples2<? extends List<Tuples2<ChannelShortcutInfo, String>>, MGImagesBitmap.CloseableBitmaps> tuples2) throws IOException {
             List<Tuples2<ChannelShortcutInfo, String>> listComponent1 = tuples2.component1();
             MGImagesBitmap.CloseableBitmaps closeableBitmapsComponent2 = tuples2.component2();
@@ -387,8 +387,8 @@ public final class ShareUtils {
         }
     }
 
-    /* compiled from: ShareUtils.kt */
-    /* renamed from: com.discord.utilities.ShareUtils$updateDirectShareTargets$3 */
+    /* JADX INFO: renamed from: com.discord.utilities.ShareUtils$updateDirectShareTargets$3 */
+    /* JADX INFO: compiled from: ShareUtils.kt */
     public static final class C66603<T, R> implements Func1<Map<Long, ? extends Channel>, Boolean> {
         public static final C66603 INSTANCE = new C66603();
 
@@ -397,15 +397,15 @@ public final class ShareUtils {
             return call2((Map<Long, Channel>) map);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final Boolean call2(Map<Long, Channel> map) {
             Intrinsics3.checkNotNullExpressionValue(map, "it");
             return Boolean.valueOf(!map.isEmpty());
         }
     }
 
-    /* compiled from: ShareUtils.kt */
-    /* renamed from: com.discord.utilities.ShareUtils$updateDirectShareTargets$4 */
+    /* JADX INFO: renamed from: com.discord.utilities.ShareUtils$updateDirectShareTargets$4 */
+    /* JADX INFO: compiled from: ShareUtils.kt */
     public static final class C66614 extends Lambda implements Function1<Map<Long, ? extends Channel>, Unit> {
         public final /* synthetic */ Context $context;
 
@@ -422,7 +422,7 @@ public final class ShareUtils {
         }
 
         /* JADX WARN: Removed duplicated region for block: B:10:0x0041  */
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         /*
             Code decompiled incorrectly, please refer to instructions dump.
         */
@@ -474,6 +474,7 @@ public final class ShareUtils {
         return Observable.m11076j(observableM11083G, ObservableExtensionsKt.takeSingleUntilTimeout$default(observableM11118y, 0L, false, 1, null), new C66523(context));
     }
 
+    /* JADX WARN: Multi-variable type inference failed */
     public static /* synthetic */ ShortcutInfoCompat toShortcutInfo$default(ShareUtils shareUtils, Context context, long j, CharSequence charSequence, CharSequence charSequence2, IconCompat iconCompat, List list, int i, int i2, Object obj) {
         return shareUtils.toShortcutInfo(context, j, charSequence, (i2 & 8) != 0 ? charSequence : charSequence2, (i2 & 16) != 0 ? null : iconCompat, (i2 & 32) != 0 ? Collections2.emptyList() : list, (i2 & 64) != 0 ? 0 : i);
     }

@@ -40,11 +40,11 @@ import p658rx.Subscription;
 import p658rx.subjects.BehaviorSubject;
 import p658rx.subjects.SerializedSubject;
 
-/* compiled from: StoreMessagesLoader.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: StoreMessagesLoader.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class StoreMessagesLoader extends Store {
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     public static final long SCROLL_TO_LAST_UNREAD = 0;
     public static final long SCROLL_TO_LATEST = 1;
@@ -69,7 +69,7 @@ public final class StoreMessagesLoader extends Store {
     private long selectedChannelId;
     private final StoreStream stream;
 
-    /* compiled from: StoreMessagesLoader.kt */
+    /* JADX INFO: compiled from: StoreMessagesLoader.kt */
     public static final /* data */ class ChannelChunk {
         private final long channelId;
         private final boolean isAppendingTop;
@@ -88,11 +88,12 @@ public final class StoreMessagesLoader extends Store {
             this.isJump = z5;
         }
 
+        /* JADX WARN: Multi-variable type inference failed */
         public static /* synthetic */ ChannelChunk copy$default(ChannelChunk channelChunk, long j, List list, boolean z2, boolean z3, boolean z4, boolean z5, int i, Object obj) {
             return channelChunk.copy((i & 1) != 0 ? channelChunk.channelId : j, (i & 2) != 0 ? channelChunk.messages : list, (i & 4) != 0 ? channelChunk.isInitial : z2, (i & 8) != 0 ? channelChunk.isPresent : z3, (i & 16) != 0 ? channelChunk.isAppendingTop : z4, (i & 32) != 0 ? channelChunk.isJump : z5);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final long getChannelId() {
             return this.channelId;
         }
@@ -101,22 +102,22 @@ public final class StoreMessagesLoader extends Store {
             return this.messages;
         }
 
-        /* renamed from: component3, reason: from getter */
+        /* JADX INFO: renamed from: component3, reason: from getter */
         public final boolean getIsInitial() {
             return this.isInitial;
         }
 
-        /* renamed from: component4, reason: from getter */
+        /* JADX INFO: renamed from: component4, reason: from getter */
         public final boolean getIsPresent() {
             return this.isPresent;
         }
 
-        /* renamed from: component5, reason: from getter */
+        /* JADX INFO: renamed from: component5, reason: from getter */
         public final boolean getIsAppendingTop() {
             return this.isAppendingTop;
         }
 
-        /* renamed from: component6, reason: from getter */
+        /* JADX INFO: renamed from: component6, reason: from getter */
         public final boolean getIsJump() {
             return this.isJump;
         }
@@ -146,30 +147,42 @@ public final class StoreMessagesLoader extends Store {
         }
 
         /* JADX WARN: Multi-variable type inference failed */
+        /* JADX WARN: Type inference failed for: r1v10 */
+        /* JADX WARN: Type inference failed for: r1v11 */
+        /* JADX WARN: Type inference failed for: r1v12 */
+        /* JADX WARN: Type inference failed for: r1v14 */
+        /* JADX WARN: Type inference failed for: r1v15 */
+        /* JADX WARN: Type inference failed for: r1v16 */
+        /* JADX WARN: Type inference failed for: r1v4, types: [int] */
+        /* JADX WARN: Type inference failed for: r1v6, types: [int] */
+        /* JADX WARN: Type inference failed for: r1v8, types: [int] */
+        /* JADX WARN: Type inference failed for: r2v0 */
+        /* JADX WARN: Type inference failed for: r2v1, types: [int] */
+        /* JADX WARN: Type inference failed for: r2v2 */
         public int hashCode() {
             int iM3a = C0002b.m3a(this.channelId) * 31;
             List<Message> list = this.messages;
             int iHashCode = (iM3a + (list != null ? list.hashCode() : 0)) * 31;
             boolean z2 = this.isInitial;
-            int i = z2;
-            if (z2 != 0) {
-                i = 1;
+            ?? r1 = z2;
+            if (z2) {
+                r1 = 1;
             }
-            int i2 = (iHashCode + i) * 31;
+            int i = (iHashCode + r1) * 31;
             boolean z3 = this.isPresent;
-            int i3 = z3;
-            if (z3 != 0) {
-                i3 = 1;
+            ?? r12 = z3;
+            if (z3) {
+                r12 = 1;
             }
-            int i4 = (i2 + i3) * 31;
+            int i2 = (i + r12) * 31;
             boolean z4 = this.isAppendingTop;
-            int i5 = z4;
-            if (z4 != 0) {
-                i5 = 1;
+            ?? r13 = z4;
+            if (z4) {
+                r13 = 1;
             }
-            int i6 = (i4 + i5) * 31;
+            int i3 = (i2 + r13) * 31;
             boolean z5 = this.isJump;
-            return i6 + (z5 ? 1 : z5 ? 1 : 0);
+            return i3 + (z5 ? 1 : z5);
         }
 
         public final boolean isAppendingTop() {
@@ -204,7 +217,7 @@ public final class StoreMessagesLoader extends Store {
         }
     }
 
-    /* compiled from: StoreMessagesLoader.kt */
+    /* JADX INFO: compiled from: StoreMessagesLoader.kt */
     public static final /* data */ class ChannelLoadedState {
         private final boolean isInitialMessagesLoaded;
         private final boolean isLoadingMessages;
@@ -246,27 +259,27 @@ public final class StoreMessagesLoader extends Store {
             return channelLoadedState.copy(z2, z6, z7, z8, l);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final boolean getIsInitialMessagesLoaded() {
             return this.isInitialMessagesLoaded;
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final boolean getIsOldestMessagesLoaded() {
             return this.isOldestMessagesLoaded;
         }
 
-        /* renamed from: component3, reason: from getter */
+        /* JADX INFO: renamed from: component3, reason: from getter */
         public final boolean getIsLoadingMessages() {
             return this.isLoadingMessages;
         }
 
-        /* renamed from: component4, reason: from getter */
+        /* JADX INFO: renamed from: component4, reason: from getter */
         public final boolean getIsTouchedSinceLastJump() {
             return this.isTouchedSinceLastJump;
         }
 
-        /* renamed from: component5, reason: from getter */
+        /* JADX INFO: renamed from: component5, reason: from getter */
         public final Long getNewestSentByUserMessageId() {
             return this.newestSentByUserMessageId;
         }
@@ -294,8 +307,15 @@ public final class StoreMessagesLoader extends Store {
         /* JADX WARN: Type inference failed for: r0v1, types: [int] */
         /* JADX WARN: Type inference failed for: r0v10 */
         /* JADX WARN: Type inference failed for: r0v11 */
-        /* JADX WARN: Type inference failed for: r2v0, types: [boolean] */
-        /* JADX WARN: Type inference failed for: r2v2, types: [boolean] */
+        /* JADX WARN: Type inference failed for: r1v0 */
+        /* JADX WARN: Type inference failed for: r1v1, types: [int] */
+        /* JADX WARN: Type inference failed for: r1v6 */
+        /* JADX WARN: Type inference failed for: r2v1, types: [int] */
+        /* JADX WARN: Type inference failed for: r2v3, types: [int] */
+        /* JADX WARN: Type inference failed for: r2v5 */
+        /* JADX WARN: Type inference failed for: r2v6 */
+        /* JADX WARN: Type inference failed for: r2v7 */
+        /* JADX WARN: Type inference failed for: r2v8 */
         public int hashCode() {
             boolean z2 = this.isInitialMessagesLoaded;
             ?? r0 = z2;
@@ -303,22 +323,22 @@ public final class StoreMessagesLoader extends Store {
                 r0 = 1;
             }
             int i = r0 * 31;
-            ?? r2 = this.isOldestMessagesLoaded;
-            int i2 = r2;
-            if (r2 != 0) {
-                i2 = 1;
+            boolean z3 = this.isOldestMessagesLoaded;
+            ?? r2 = z3;
+            if (z3) {
+                r2 = 1;
             }
-            int i3 = (i + i2) * 31;
-            ?? r22 = this.isLoadingMessages;
-            int i4 = r22;
-            if (r22 != 0) {
-                i4 = 1;
+            int i2 = (i + r2) * 31;
+            boolean z4 = this.isLoadingMessages;
+            ?? r22 = z4;
+            if (z4) {
+                r22 = 1;
             }
-            int i5 = (i3 + i4) * 31;
-            boolean z3 = this.isTouchedSinceLastJump;
-            int i6 = (i5 + (z3 ? 1 : z3 ? 1 : 0)) * 31;
+            int i3 = (i2 + r22) * 31;
+            boolean z5 = this.isTouchedSinceLastJump;
+            int i4 = (i3 + (z5 ? 1 : z5)) * 31;
             Long l = this.newestSentByUserMessageId;
-            return i6 + (l != null ? l.hashCode() : 0);
+            return i4 + (l != null ? l.hashCode() : 0);
         }
 
         public final boolean isInitialMessagesLoaded() {
@@ -355,7 +375,7 @@ public final class StoreMessagesLoader extends Store {
         }
     }
 
-    /* compiled from: StoreMessagesLoader.kt */
+    /* JADX INFO: compiled from: StoreMessagesLoader.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -369,8 +389,8 @@ public final class StoreMessagesLoader extends Store {
         }
     }
 
-    /* compiled from: StoreMessagesLoader.kt */
-    /* renamed from: com.discord.stores.StoreMessagesLoader$getMessagesLoadedState$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreMessagesLoader$getMessagesLoadedState$1 */
+    /* JADX INFO: compiled from: StoreMessagesLoader.kt */
     public static final class C62511<T, R> implements Func1<Map<Long, ? extends ChannelLoadedState>, ChannelLoadedState> {
         public final /* synthetic */ long $channelId;
 
@@ -383,15 +403,15 @@ public final class StoreMessagesLoader extends Store {
             return call2((Map<Long, ChannelLoadedState>) map);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final ChannelLoadedState call2(Map<Long, ChannelLoadedState> map) {
             ChannelLoadedState channelLoadedState = map.get(Long.valueOf(this.$channelId));
             return channelLoadedState != null ? channelLoadedState : new ChannelLoadedState(false, false, false, false, null, 31, null);
         }
     }
 
-    /* compiled from: StoreMessagesLoader.kt */
-    /* renamed from: com.discord.stores.StoreMessagesLoader$handleChannelSelected$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreMessagesLoader$handleChannelSelected$1 */
+    /* JADX INFO: compiled from: StoreMessagesLoader.kt */
     public static final class C62521 extends Lambda implements Function1<ChannelLoadedState, ChannelLoadedState> {
         public static final C62521 INSTANCE = new C62521();
 
@@ -404,15 +424,15 @@ public final class StoreMessagesLoader extends Store {
             return invoke2(channelLoadedState);
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final ChannelLoadedState invoke2(ChannelLoadedState channelLoadedState) {
             Intrinsics3.checkNotNullParameter(channelLoadedState, "it");
             return ChannelLoadedState.copy$default(channelLoadedState, false, false, false, false, null, 23, null);
         }
     }
 
-    /* compiled from: StoreMessagesLoader.kt */
-    /* renamed from: com.discord.stores.StoreMessagesLoader$handleLoadMessagesError$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreMessagesLoader$handleLoadMessagesError$1 */
+    /* JADX INFO: compiled from: StoreMessagesLoader.kt */
     public static final class C62531 extends Lambda implements Function1<ChannelLoadedState, ChannelLoadedState> {
         public static final C62531 INSTANCE = new C62531();
 
@@ -425,15 +445,15 @@ public final class StoreMessagesLoader extends Store {
             return invoke2(channelLoadedState);
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final ChannelLoadedState invoke2(ChannelLoadedState channelLoadedState) {
             Intrinsics3.checkNotNullParameter(channelLoadedState, "it");
             return ChannelLoadedState.copy$default(channelLoadedState, false, false, false, false, null, 27, null);
         }
     }
 
-    /* compiled from: StoreMessagesLoader.kt */
-    /* renamed from: com.discord.stores.StoreMessagesLoader$handleLoadedMessages$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreMessagesLoader$handleLoadedMessages$1 */
+    /* JADX INFO: compiled from: StoreMessagesLoader.kt */
     public static final class C62541 extends Lambda implements Function1<ChannelLoadedState, ChannelLoadedState> {
         public final /* synthetic */ boolean $isAllLoaded;
         public final /* synthetic */ boolean $isAppendingTop;
@@ -454,7 +474,7 @@ public final class StoreMessagesLoader extends Store {
             return invoke2(channelLoadedState);
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final ChannelLoadedState invoke2(ChannelLoadedState channelLoadedState) {
             Object next;
             Intrinsics3.checkNotNullParameter(channelLoadedState, "it");
@@ -477,8 +497,8 @@ public final class StoreMessagesLoader extends Store {
         }
     }
 
-    /* compiled from: StoreMessagesLoader.kt */
-    /* renamed from: com.discord.stores.StoreMessagesLoader$init$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreMessagesLoader$init$1 */
+    /* JADX INFO: compiled from: StoreMessagesLoader.kt */
     public static final /* synthetic */ class C62551 extends FunctionReferenceImpl implements Function1<StoreChat.InteractionState, Unit> {
         public C62551(StoreMessagesLoader storeMessagesLoader) {
             super(1, storeMessagesLoader, StoreMessagesLoader.class, "handleChatInteraction", "handleChatInteraction(Lcom/discord/stores/StoreChat$InteractionState;)V", 0);
@@ -490,15 +510,15 @@ public final class StoreMessagesLoader extends Store {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(StoreChat.InteractionState interactionState) {
             Intrinsics3.checkNotNullParameter(interactionState, "p1");
             StoreMessagesLoader.access$handleChatInteraction((StoreMessagesLoader) this.receiver, interactionState);
         }
     }
 
-    /* compiled from: StoreMessagesLoader.kt */
-    /* renamed from: com.discord.stores.StoreMessagesLoader$init$2 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreMessagesLoader$init$2 */
+    /* JADX INFO: compiled from: StoreMessagesLoader.kt */
     public static final /* synthetic */ class C62562 extends FunctionReferenceImpl implements Function1<Set<? extends Long>, Unit> {
         public C62562(StoreMessagesLoader storeMessagesLoader) {
             super(1, storeMessagesLoader, StoreMessagesLoader.class, "handleChatDetached", "handleChatDetached(Ljava/util/Set;)V", 0);
@@ -510,21 +530,21 @@ public final class StoreMessagesLoader extends Store {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Set<Long> set) {
             Intrinsics3.checkNotNullParameter(set, "p1");
             StoreMessagesLoader.access$handleChatDetached((StoreMessagesLoader) this.receiver, set);
         }
     }
 
-    /* compiled from: StoreMessagesLoader.kt */
-    /* renamed from: com.discord.stores.StoreMessagesLoader$jumpToMessage$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreMessagesLoader$jumpToMessage$1 */
+    /* JADX INFO: compiled from: StoreMessagesLoader.kt */
     public static final class C62571 extends Lambda implements Function1<Message, Unit> {
         public final /* synthetic */ long $channelId;
         public final /* synthetic */ long $messageId;
 
-        /* compiled from: StoreMessagesLoader.kt */
-        /* renamed from: com.discord.stores.StoreMessagesLoader$jumpToMessage$1$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.stores.StoreMessagesLoader$jumpToMessage$1$1, reason: invalid class name */
+        /* JADX INFO: compiled from: StoreMessagesLoader.kt */
         public static final class AnonymousClass1 extends Lambda implements Function1<ChannelLoadedState, ChannelLoadedState> {
             public static final AnonymousClass1 INSTANCE = new AnonymousClass1();
 
@@ -537,7 +557,7 @@ public final class StoreMessagesLoader extends Store {
                 return invoke2(channelLoadedState);
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final ChannelLoadedState invoke2(ChannelLoadedState channelLoadedState) {
                 Intrinsics3.checkNotNullParameter(channelLoadedState, "it");
                 return ChannelLoadedState.copy$default(channelLoadedState, false, false, false, false, null, 29, null);
@@ -557,7 +577,7 @@ public final class StoreMessagesLoader extends Store {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final synchronized void invoke2(Message message) {
             if (message != null) {
                 SerializedSubject serializedSubjectAccess$getScrollToSubject$p = StoreMessagesLoader.access$getScrollToSubject$p(StoreMessagesLoader.this);
@@ -569,13 +589,13 @@ public final class StoreMessagesLoader extends Store {
         }
     }
 
-    /* compiled from: StoreMessagesLoader.kt */
-    /* renamed from: com.discord.stores.StoreMessagesLoader$jumpToMessage$2 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreMessagesLoader$jumpToMessage$2 */
+    /* JADX INFO: compiled from: StoreMessagesLoader.kt */
     public static final class C62582 extends Lambda implements Function1<Channel, Unit> {
         public final /* synthetic */ long $channelId;
 
-        /* compiled from: StoreMessagesLoader.kt */
-        /* renamed from: com.discord.stores.StoreMessagesLoader$jumpToMessage$2$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.stores.StoreMessagesLoader$jumpToMessage$2$1, reason: invalid class name */
+        /* JADX INFO: compiled from: StoreMessagesLoader.kt */
         public static final class AnonymousClass1 extends Lambda implements Function1<ChannelLoadedState, ChannelLoadedState> {
             public static final AnonymousClass1 INSTANCE = new AnonymousClass1();
 
@@ -588,7 +608,7 @@ public final class StoreMessagesLoader extends Store {
                 return invoke2(channelLoadedState);
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final ChannelLoadedState invoke2(ChannelLoadedState channelLoadedState) {
                 Intrinsics3.checkNotNullParameter(channelLoadedState, "it");
                 return ChannelLoadedState.copy$default(channelLoadedState, true, false, false, false, null, 30, null);
@@ -607,7 +627,7 @@ public final class StoreMessagesLoader extends Store {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final synchronized void invoke2(Channel channel) {
             Intrinsics3.checkNotNullParameter(channel, "channel");
             if (channel.getId() != StoreMessagesLoader.access$getSelectedChannelId$p(StoreMessagesLoader.this)) {
@@ -617,8 +637,8 @@ public final class StoreMessagesLoader extends Store {
         }
     }
 
-    /* compiled from: StoreMessagesLoader.kt */
-    /* renamed from: com.discord.stores.StoreMessagesLoader$jumpToMessage$3 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreMessagesLoader$jumpToMessage$3 */
+    /* JADX INFO: compiled from: StoreMessagesLoader.kt */
     public static final class C62593 extends Lambda implements Function1<Long, Boolean> {
         public final /* synthetic */ long $channelId;
 
@@ -633,14 +653,14 @@ public final class StoreMessagesLoader extends Store {
             return Boolean.valueOf(invoke2(l));
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final boolean invoke2(Long l) {
             return l != null && l.longValue() == this.$channelId;
         }
     }
 
-    /* compiled from: StoreMessagesLoader.kt */
-    /* renamed from: com.discord.stores.StoreMessagesLoader$jumpToMessage$4 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreMessagesLoader$jumpToMessage$4 */
+    /* JADX INFO: compiled from: StoreMessagesLoader.kt */
     public static final class C62604<T, R> implements Func1<Long, Observable<? extends Message>> {
         public final /* synthetic */ long $channelId;
         public final /* synthetic */ long $messageId;
@@ -655,19 +675,19 @@ public final class StoreMessagesLoader extends Store {
             return call2(l);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final Observable<? extends Message> call2(Long l) {
             return StoreMessagesLoader.access$getStream$p(StoreMessagesLoader.this).getMessages().observeMessagesForChannel(this.$channelId, this.$messageId);
         }
     }
 
-    /* compiled from: StoreMessagesLoader.kt */
-    /* renamed from: com.discord.stores.StoreMessagesLoader$jumpToMessage$5 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreMessagesLoader$jumpToMessage$5 */
+    /* JADX INFO: compiled from: StoreMessagesLoader.kt */
     public static final class C62615 extends Lambda implements Function1<Message, Unit> {
         public final /* synthetic */ C62571 $handleTargetChannelSelected$1;
 
-        /* compiled from: StoreMessagesLoader.kt */
-        /* renamed from: com.discord.stores.StoreMessagesLoader$jumpToMessage$5$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.stores.StoreMessagesLoader$jumpToMessage$5$1, reason: invalid class name */
+        /* JADX INFO: compiled from: StoreMessagesLoader.kt */
         public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
             public final /* synthetic */ Message $message;
 
@@ -683,7 +703,7 @@ public final class StoreMessagesLoader extends Store {
                 return Unit.f27425a;
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2() {
                 C62615.this.$handleTargetChannelSelected$1.invoke2(this.$message);
             }
@@ -701,14 +721,14 @@ public final class StoreMessagesLoader extends Store {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Message message) {
             StoreMessagesLoader.access$getDispatcher$p(StoreMessagesLoader.this).schedule(new AnonymousClass1(message));
         }
     }
 
-    /* compiled from: StoreMessagesLoader.kt */
-    /* renamed from: com.discord.stores.StoreMessagesLoader$jumpToMessage$6 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreMessagesLoader$jumpToMessage$6 */
+    /* JADX INFO: compiled from: StoreMessagesLoader.kt */
     public static final class C62626<T, R> implements Func1<Boolean, Observable<? extends Channel>> {
         public final /* synthetic */ long $channelId;
 
@@ -721,18 +741,18 @@ public final class StoreMessagesLoader extends Store {
             return call2(bool);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final Observable<? extends Channel> call2(Boolean bool) {
             Intrinsics3.checkNotNullExpressionValue(bool, "isConnected");
             int i = bool.booleanValue() ? 1 : 3;
             Observable<R> observableM11083G = StoreMessagesLoader.access$getStream$p(StoreMessagesLoader.this).getChannels().observeChannel(this.$channelId).m11118y(ObservableExtensionsKt.C68871.INSTANCE).m11083G(ObservableExtensionsKt.C68882.INSTANCE);
             Intrinsics3.checkNotNullExpressionValue(observableM11083G, "filter { it != null }.map { it!! }");
-            return ObservableExtensionsKt.takeSingleUntilTimeout$default(observableM11083G, 1000 * i, false, 2, null);
+            return ObservableExtensionsKt.takeSingleUntilTimeout$default(observableM11083G, 1000 * ((long) i), false, 2, null);
         }
     }
 
-    /* compiled from: StoreMessagesLoader.kt */
-    /* renamed from: com.discord.stores.StoreMessagesLoader$jumpToMessage$7 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreMessagesLoader$jumpToMessage$7 */
+    /* JADX INFO: compiled from: StoreMessagesLoader.kt */
     public static final class C62637 extends Lambda implements Function1<Error, Unit> {
         public static final C62637 INSTANCE = new C62637();
 
@@ -746,15 +766,15 @@ public final class StoreMessagesLoader extends Store {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Error error) {
             Intrinsics3.checkNotNullParameter(error, "it");
             Logger.w$default(AppLog.f14950g, "Dropped message jump action", null, 2, null);
         }
     }
 
-    /* compiled from: StoreMessagesLoader.kt */
-    /* renamed from: com.discord.stores.StoreMessagesLoader$jumpToMessage$8 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreMessagesLoader$jumpToMessage$8 */
+    /* JADX INFO: compiled from: StoreMessagesLoader.kt */
     public static final /* synthetic */ class C62648 extends FunctionReferenceImpl implements Function1<Channel, Unit> {
         public final /* synthetic */ C62582 $handleTargetChannelResolved$2;
 
@@ -770,15 +790,15 @@ public final class StoreMessagesLoader extends Store {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Channel channel) {
             Intrinsics3.checkNotNullParameter(channel, "p1");
             this.$handleTargetChannelResolved$2.invoke2(channel);
         }
     }
 
-    /* compiled from: StoreMessagesLoader.kt */
-    /* renamed from: com.discord.stores.StoreMessagesLoader$requestNewestMessages$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreMessagesLoader$requestNewestMessages$1 */
+    /* JADX INFO: compiled from: StoreMessagesLoader.kt */
     public static final class C62651 extends Lambda implements Function1<ChannelLoadedState, ChannelLoadedState> {
         public static final C62651 INSTANCE = new C62651();
 
@@ -791,15 +811,15 @@ public final class StoreMessagesLoader extends Store {
             return invoke2(channelLoadedState);
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final ChannelLoadedState invoke2(ChannelLoadedState channelLoadedState) {
             Intrinsics3.checkNotNullParameter(channelLoadedState, "it");
             return ChannelLoadedState.copy$default(channelLoadedState, false, false, false, false, null, 30, null);
         }
     }
 
-    /* compiled from: StoreMessagesLoader.kt */
-    /* renamed from: com.discord.stores.StoreMessagesLoader$tryLoadMessages$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreMessagesLoader$tryLoadMessages$1 */
+    /* JADX INFO: compiled from: StoreMessagesLoader.kt */
     public static final class C62661 extends Lambda implements Function1<Long, Unit> {
         public C62661() {
             super(1);
@@ -811,14 +831,14 @@ public final class StoreMessagesLoader extends Store {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Long l) {
             StoreMessagesLoader.tryLoadMessages$default(StoreMessagesLoader.this, 0L, false, false, true, null, null, 55, null);
         }
     }
 
-    /* compiled from: StoreMessagesLoader.kt */
-    /* renamed from: com.discord.stores.StoreMessagesLoader$tryLoadMessages$2 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreMessagesLoader$tryLoadMessages$2 */
+    /* JADX INFO: compiled from: StoreMessagesLoader.kt */
     public static final class C62672 extends Lambda implements Function1<Subscription, Unit> {
         public C62672() {
             super(1);
@@ -830,19 +850,19 @@ public final class StoreMessagesLoader extends Store {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Subscription subscription) {
             Intrinsics3.checkNotNullParameter(subscription, Traits.Payment.Type.SUBSCRIPTION);
             StoreMessagesLoader.access$setDelayLoadingMessagesSubscription$p(StoreMessagesLoader.this, subscription);
         }
     }
 
-    /* compiled from: StoreMessagesLoader.kt */
-    /* renamed from: com.discord.stores.StoreMessagesLoader$tryLoadMessages$3 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreMessagesLoader$tryLoadMessages$3 */
+    /* JADX INFO: compiled from: StoreMessagesLoader.kt */
     public static final class C62683 extends Lambda implements Function4<Long, Long, Long, Long, Unit> {
 
-        /* compiled from: StoreMessagesLoader.kt */
-        /* renamed from: com.discord.stores.StoreMessagesLoader$tryLoadMessages$3$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.stores.StoreMessagesLoader$tryLoadMessages$3$1, reason: invalid class name */
+        /* JADX INFO: compiled from: StoreMessagesLoader.kt */
         public static final class AnonymousClass1 extends Lambda implements Function1<ChannelLoadedState, ChannelLoadedState> {
             public static final AnonymousClass1 INSTANCE = new AnonymousClass1();
 
@@ -855,15 +875,15 @@ public final class StoreMessagesLoader extends Store {
                 return invoke2(channelLoadedState);
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final ChannelLoadedState invoke2(ChannelLoadedState channelLoadedState) {
                 Intrinsics3.checkNotNullParameter(channelLoadedState, "it");
                 return ChannelLoadedState.copy$default(channelLoadedState, false, false, true, false, null, 27, null);
             }
         }
 
-        /* compiled from: StoreMessagesLoader.kt */
-        /* renamed from: com.discord.stores.StoreMessagesLoader$tryLoadMessages$3$2, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.stores.StoreMessagesLoader$tryLoadMessages$3$2, reason: invalid class name */
+        /* JADX INFO: compiled from: StoreMessagesLoader.kt */
         public static final class AnonymousClass2<T, R> implements Func1<List<? extends com.discord.api.message.Message>, List<? extends Message>> {
             public static final AnonymousClass2 INSTANCE = new AnonymousClass2();
 
@@ -872,7 +892,7 @@ public final class StoreMessagesLoader extends Store {
                 return call2((List<com.discord.api.message.Message>) list);
             }
 
-            /* renamed from: call, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
             public final List<Message> call2(List<com.discord.api.message.Message> list) {
                 Intrinsics3.checkNotNullExpressionValue(list, "messages");
                 ArrayList arrayList = new ArrayList(Iterables2.collectionSizeOrDefault(list, 10));
@@ -884,8 +904,8 @@ public final class StoreMessagesLoader extends Store {
             }
         }
 
-        /* compiled from: StoreMessagesLoader.kt */
-        /* renamed from: com.discord.stores.StoreMessagesLoader$tryLoadMessages$3$3, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.stores.StoreMessagesLoader$tryLoadMessages$3$3, reason: invalid class name */
+        /* JADX INFO: compiled from: StoreMessagesLoader.kt */
         public static final class AnonymousClass3 extends Lambda implements Function1<List<? extends Message>, Unit> {
             public final /* synthetic */ Long $after;
             public final /* synthetic */ Long $before;
@@ -907,7 +927,7 @@ public final class StoreMessagesLoader extends Store {
                 return Unit.f27425a;
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2(List<Message> list) {
                 StoreMessagesLoader storeMessagesLoader = StoreMessagesLoader.this;
                 Intrinsics3.checkNotNullExpressionValue(list, "it");
@@ -917,8 +937,8 @@ public final class StoreMessagesLoader extends Store {
             }
         }
 
-        /* compiled from: StoreMessagesLoader.kt */
-        /* renamed from: com.discord.stores.StoreMessagesLoader$tryLoadMessages$3$4, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.stores.StoreMessagesLoader$tryLoadMessages$3$4, reason: invalid class name */
+        /* JADX INFO: compiled from: StoreMessagesLoader.kt */
         public static final class AnonymousClass4 extends Lambda implements Function1<Error, Unit> {
             public final /* synthetic */ long $channelId;
 
@@ -934,15 +954,15 @@ public final class StoreMessagesLoader extends Store {
                 return Unit.f27425a;
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2(Error error) {
                 Intrinsics3.checkNotNullParameter(error, "it");
                 StoreMessagesLoader.access$handleLoadMessagesError(StoreMessagesLoader.this, this.$channelId);
             }
         }
 
-        /* compiled from: StoreMessagesLoader.kt */
-        /* renamed from: com.discord.stores.StoreMessagesLoader$tryLoadMessages$3$5, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.stores.StoreMessagesLoader$tryLoadMessages$3$5, reason: invalid class name */
+        /* JADX INFO: compiled from: StoreMessagesLoader.kt */
         public static final class AnonymousClass5 extends Lambda implements Function1<Subscription, Unit> {
             public AnonymousClass5() {
                 super(1);
@@ -954,7 +974,7 @@ public final class StoreMessagesLoader extends Store {
                 return Unit.f27425a;
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2(Subscription subscription) {
                 Intrinsics3.checkNotNullParameter(subscription, "it");
                 StoreMessagesLoader.access$setLoadingMessagesSubscription$p(StoreMessagesLoader.this, subscription);
@@ -1005,13 +1025,13 @@ public final class StoreMessagesLoader extends Store {
         }
     }
 
-    /* compiled from: StoreMessagesLoader.kt */
-    /* renamed from: com.discord.stores.StoreMessagesLoader$tryLoadMessages$4 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreMessagesLoader$tryLoadMessages$4 */
+    /* JADX INFO: compiled from: StoreMessagesLoader.kt */
     public static final class C62694 extends Lambda implements Function4<Long, List<? extends Message>, Boolean, Boolean, Unit> {
         public final /* synthetic */ C62683 $loadMessages$3;
 
-        /* compiled from: StoreMessagesLoader.kt */
-        /* renamed from: com.discord.stores.StoreMessagesLoader$tryLoadMessages$4$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.stores.StoreMessagesLoader$tryLoadMessages$4$1, reason: invalid class name */
+        /* JADX INFO: compiled from: StoreMessagesLoader.kt */
         public static final class AnonymousClass1 extends Lambda implements Function1<ChannelLoadedState, ChannelLoadedState> {
             public static final AnonymousClass1 INSTANCE = new AnonymousClass1();
 
@@ -1024,7 +1044,7 @@ public final class StoreMessagesLoader extends Store {
                 return invoke2(channelLoadedState);
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final ChannelLoadedState invoke2(ChannelLoadedState channelLoadedState) {
                 Intrinsics3.checkNotNullParameter(channelLoadedState, "it");
                 return ChannelLoadedState.copy$default(channelLoadedState, false, false, false, false, null, 27, null);
@@ -1180,7 +1200,7 @@ public final class StoreMessagesLoader extends Store {
         channelLoadedStateUpdate(channelId, C62531.INSTANCE);
         long j = this.loadingMessagesRetryDelayMillis;
         if (j < this.loadingMessagesRetryMax) {
-            this.loadingMessagesRetryDelayMillis = (j * 2) + new Random().nextInt(this.loadingMessagesRetryJitter);
+            this.loadingMessagesRetryDelayMillis = (j * ((long) 2)) + ((long) new Random().nextInt(this.loadingMessagesRetryJitter));
         }
         StringBuilder sb = new StringBuilder();
         sb.append("Failed to load messages for channel [" + channelId + "], ");

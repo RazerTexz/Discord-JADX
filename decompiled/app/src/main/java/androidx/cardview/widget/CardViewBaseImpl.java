@@ -9,11 +9,11 @@ import android.graphics.RectF;
 import androidx.annotation.Nullable;
 import androidx.cardview.widget.RoundRectDrawableWithShadow;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class CardViewBaseImpl implements CardViewImpl {
     public final RectF mCornerRect = new RectF();
 
-    /* renamed from: androidx.cardview.widget.CardViewBaseImpl$1 */
+    /* JADX INFO: renamed from: androidx.cardview.widget.CardViewBaseImpl$1 */
     public class C01621 implements RoundRectDrawableWithShadow.RoundRectHelper {
         public C01621() {
         }

@@ -7,9 +7,9 @@ import kotlin.jvm.functions.Function4;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetGlobalSearch.kt */
-/* renamed from: com.discord.widgets.user.search.WidgetGlobalSearch$configureUI$$inlined$apply$lambda$2, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: com.discord.widgets.user.search.WidgetGlobalSearch$configureUI$$inlined$apply$lambda$2, reason: use source file name */
+/* JADX INFO: compiled from: WidgetGlobalSearch.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class WidgetGlobalSearch4 extends Lambda implements Function4<View, Integer, WidgetGlobalSearchModel.ItemDataPayload, Boolean, Unit> {
     public final /* synthetic */ WidgetGlobalSearchModel $model$inlined;
     public final /* synthetic */ WidgetGlobalSearch this$0;

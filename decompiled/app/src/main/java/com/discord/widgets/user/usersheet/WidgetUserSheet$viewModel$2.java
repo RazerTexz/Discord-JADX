@@ -6,8 +6,8 @@ import java.util.Objects;
 import kotlin.jvm.functions.Function0;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetUserSheet.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: WidgetUserSheet.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class WidgetUserSheet$viewModel$2 extends Lambda implements Function0<WidgetUserSheetViewModel> {
     public final /* synthetic */ WidgetUserSheet this$0;
 

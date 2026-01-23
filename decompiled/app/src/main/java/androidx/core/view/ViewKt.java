@@ -17,12 +17,12 @@ import p507d0.p578f0.C12075n;
 import p507d0.p578f0.SequenceBuilder3;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: View.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: View.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class ViewKt {
 
-    /* compiled from: View.kt */
-    /* renamed from: androidx.core.view.ViewKt$doOnAttach$1 */
+    /* JADX INFO: renamed from: androidx.core.view.ViewKt$doOnAttach$1 */
+    /* JADX INFO: compiled from: View.kt */
     public static final class ViewOnAttachStateChangeListenerC02891 implements View.OnAttachStateChangeListener {
         public final /* synthetic */ Function1<View, Unit> $action;
         public final /* synthetic */ View $this_doOnAttach;
@@ -46,8 +46,8 @@ public final class ViewKt {
         }
     }
 
-    /* compiled from: View.kt */
-    /* renamed from: androidx.core.view.ViewKt$doOnDetach$1 */
+    /* JADX INFO: renamed from: androidx.core.view.ViewKt$doOnDetach$1 */
+    /* JADX INFO: compiled from: View.kt */
     public static final class ViewOnAttachStateChangeListenerC02901 implements View.OnAttachStateChangeListener {
         public final /* synthetic */ Function1<View, Unit> $action;
         public final /* synthetic */ View $this_doOnDetach;
@@ -71,8 +71,8 @@ public final class ViewKt {
         }
     }
 
-    /* compiled from: View.kt */
-    /* renamed from: androidx.core.view.ViewKt$doOnNextLayout$1 */
+    /* JADX INFO: renamed from: androidx.core.view.ViewKt$doOnNextLayout$1 */
+    /* JADX INFO: compiled from: View.kt */
     public static final class ViewOnLayoutChangeListenerC02911 implements View.OnLayoutChangeListener {
         public final /* synthetic */ Function1<View, Unit> $action;
 
@@ -89,8 +89,8 @@ public final class ViewKt {
         }
     }
 
-    /* compiled from: View.kt */
-    /* renamed from: androidx.core.view.ViewKt$doOnPreDraw$1 */
+    /* JADX INFO: renamed from: androidx.core.view.ViewKt$doOnPreDraw$1 */
+    /* JADX INFO: compiled from: View.kt */
     public static final class RunnableC02921 implements Runnable {
         public final /* synthetic */ Function1<View, Unit> $action;
         public final /* synthetic */ View $this_doOnPreDraw;

@@ -3,7 +3,7 @@ package androidx.collection;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class SparseArrayCompat<E> implements Cloneable {
     private static final Object DELETED = new Object();
     private boolean mGarbage;
@@ -15,7 +15,7 @@ public class SparseArrayCompat<E> implements Cloneable {
         this(10);
     }
 
-    /* renamed from: gc */
+    /* JADX INFO: renamed from: gc */
     private void m81gc() {
         int i = this.mSize;
         int[] iArr = this.mKeys;
@@ -72,7 +72,7 @@ public class SparseArrayCompat<E> implements Cloneable {
         this.mGarbage = false;
     }
 
-    /* renamed from: clone, reason: collision with other method in class */
+    /* JADX INFO: renamed from: clone, reason: collision with other method in class */
     public /* bridge */ /* synthetic */ Object m11378clone() throws CloneNotSupportedException {
         return clone();
     }

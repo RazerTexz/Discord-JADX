@@ -5,12 +5,12 @@ import android.os.IInterface;
 import android.os.Parcel;
 import android.os.RemoteException;
 
-/* compiled from: com.android.billingclient:billing@@4.0.0 */
-/* renamed from: b.i.a.f.h.n.e */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.h.n.e */
+/* JADX INFO: compiled from: com.android.billingclient:billing@@4.0.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public class C3945e implements IInterface {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final IBinder f10481a;
 
     public C3945e(IBinder iBinder) {
@@ -22,14 +22,14 @@ public class C3945e implements IInterface {
         return this.f10481a;
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final Parcel m5427c() {
         Parcel parcelObtain = Parcel.obtain();
         parcelObtain.writeInterfaceToken("com.android.vending.billing.IInAppBillingService");
         return parcelObtain;
     }
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public final Parcel m5428g(int i, Parcel parcel) throws RemoteException {
         Parcel parcelObtain = Parcel.obtain();
         try {

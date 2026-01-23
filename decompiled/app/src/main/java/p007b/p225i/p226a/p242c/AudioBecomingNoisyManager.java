@@ -6,28 +6,28 @@ import android.content.Intent;
 import android.content.IntentFilter;
 import android.os.Handler;
 
-/* compiled from: AudioBecomingNoisyManager.java */
-/* renamed from: b.i.a.c.s0, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.s0, reason: use source file name */
+/* JADX INFO: compiled from: AudioBecomingNoisyManager.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class AudioBecomingNoisyManager {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final Context f7480a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final a f7481b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public boolean f7482c;
 
-    /* compiled from: AudioBecomingNoisyManager.java */
-    /* renamed from: b.i.a.c.s0$a */
+    /* JADX INFO: renamed from: b.i.a.c.s0$a */
+    /* JADX INFO: compiled from: AudioBecomingNoisyManager.java */
     public final class a extends BroadcastReceiver implements Runnable {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public final b f7483j;
 
-        /* renamed from: k */
+        /* JADX INFO: renamed from: k */
         public final Handler f7484k;
 
         public a(Handler handler, b bVar) {
@@ -50,8 +50,8 @@ public final class AudioBecomingNoisyManager {
         }
     }
 
-    /* compiled from: AudioBecomingNoisyManager.java */
-    /* renamed from: b.i.a.c.s0$b */
+    /* JADX INFO: renamed from: b.i.a.c.s0$b */
+    /* JADX INFO: compiled from: AudioBecomingNoisyManager.java */
     public interface b {
     }
 
@@ -60,7 +60,7 @@ public final class AudioBecomingNoisyManager {
         this.f7481b = new a(handler, bVar);
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public void m3363a(boolean z2) {
         if (z2 && !this.f7482c) {
             this.f7480a.registerReceiver(this.f7481b, new IntentFilter("android.media.AUDIO_BECOMING_NOISY"));

@@ -1,15 +1,15 @@
 package p617h0.p618a.p619a;
 
-/* compiled from: CurrentFrame.java */
-/* renamed from: h0.a.a.i, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: h0.a.a.i, reason: use source file name */
+/* JADX INFO: compiled from: CurrentFrame.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class CurrentFrame2 extends Frame3 {
     public CurrentFrame2(Label2 label2) {
         super(label2);
     }
 
     @Override // p617h0.p618a.p619a.Frame3
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public void mo10569b(int i, int i2, Symbol2 symbol2, SymbolTable2 symbolTable2) {
         super.mo10569b(i, i2, symbol2, symbolTable2);
         Frame3 frame3 = new Frame3(null);

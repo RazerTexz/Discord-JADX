@@ -28,7 +28,7 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class AccessibilityNodeInfoCompat {
     public static final int ACTION_ACCESSIBILITY_FOCUS = 64;
     public static final String ACTION_ARGUMENT_COLUMN_INT = "android.view.accessibility.action.ARGUMENT_COLUMN_INT";
@@ -232,7 +232,6 @@ public class AccessibilityNodeInfoCompat {
                     commandArguments = commandArgumentsNewInstance;
                     Class<? extends AccessibilityViewCommand.CommandArguments> cls2 = this.mViewCommandArgumentClass;
                     Log.e(TAG, "Failed to execute command with argument class ViewCommandArgument: " + (cls2 == null ? "null" : cls2.getName()), e);
-                    return this.mCommand.perform(view, commandArguments);
                 }
             }
             return this.mCommand.perform(view, commandArguments);

@@ -35,34 +35,34 @@ import p507d0.p592z.p594d.Lambda;
 import p507d0.p592z.p594d.Reflection2;
 import p658rx.Observable;
 
-/* compiled from: WidgetServerSettingsGuildRoleSubscriptions.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetServerSettingsGuildRoleSubscriptions.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetServerSettingsGuildRoleSubscriptions extends AppFragment {
     public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetServerSettingsGuildRoleSubscriptions.class, "binding", "getBinding()Lcom/discord/databinding/WidgetServerSettingsGuildRoleSubscriptionsBinding;", 0)};
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private static final String INTENT_EXTRA_SERVER_SETTINGS_GUILD_ROLE_SUBSCRIPTION_GUILD_ID = "INTENT_EXTRA_SERVER_SETTINGS_GUILD_ROLE_SUBSCRIPTION_GUILD_ID";
 
-    /* renamed from: SERVER_SETTINGS_GUILD_ROLE_SUBSCRIPTIONS_VIEW_FLIPPER_LOADING_STATE */
+    /* JADX INFO: renamed from: SERVER_SETTINGS_GUILD_ROLE_SUBSCRIPTIONS_VIEW_FLIPPER_LOADING_STATE */
     private static final int f19395x4404778b = 0;
 
-    /* renamed from: SERVER_SETTINGS_GUILD_ROLE_SUBSCRIPTIONS_VIEW_FLIPPER_OVERVIEW_STATE */
+    /* JADX INFO: renamed from: SERVER_SETTINGS_GUILD_ROLE_SUBSCRIPTIONS_VIEW_FLIPPER_OVERVIEW_STATE */
     private static final int f19396xcae62dce = 1;
 
-    /* renamed from: binding$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
 
-    /* renamed from: guildId$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: guildId$delegate, reason: from kotlin metadata */
     private final Lazy guildId;
 
-    /* renamed from: planDetailsViewModel$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: planDetailsViewModel$delegate, reason: from kotlin metadata */
     private final Lazy planDetailsViewModel;
 
-    /* renamed from: viewModel$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: viewModel$delegate, reason: from kotlin metadata */
     private final Lazy viewModel;
 
-    /* compiled from: WidgetServerSettingsGuildRoleSubscriptions.kt */
+    /* JADX INFO: compiled from: WidgetServerSettingsGuildRoleSubscriptions.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -79,8 +79,8 @@ public final class WidgetServerSettingsGuildRoleSubscriptions extends AppFragmen
         }
     }
 
-    /* compiled from: WidgetServerSettingsGuildRoleSubscriptions.kt */
-    /* renamed from: com.discord.widgets.servers.guild_role_subscription.WidgetServerSettingsGuildRoleSubscriptions$onViewBound$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.guild_role_subscription.WidgetServerSettingsGuildRoleSubscriptions$onViewBound$1 */
+    /* JADX INFO: compiled from: WidgetServerSettingsGuildRoleSubscriptions.kt */
     public static final class ViewOnClickListenerC94601 implements View.OnClickListener {
         public ViewOnClickListenerC94601() {
         }
@@ -91,8 +91,8 @@ public final class WidgetServerSettingsGuildRoleSubscriptions extends AppFragmen
         }
     }
 
-    /* compiled from: WidgetServerSettingsGuildRoleSubscriptions.kt */
-    /* renamed from: com.discord.widgets.servers.guild_role_subscription.WidgetServerSettingsGuildRoleSubscriptions$onViewBoundOrOnResume$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.guild_role_subscription.WidgetServerSettingsGuildRoleSubscriptions$onViewBoundOrOnResume$1 */
+    /* JADX INFO: compiled from: WidgetServerSettingsGuildRoleSubscriptions.kt */
     public static final class C94611 extends Lambda implements Function1<ServerSettingsGuildRoleSubscriptionViewModel.ViewState, Unit> {
         public C94611() {
             super(1);
@@ -104,7 +104,7 @@ public final class WidgetServerSettingsGuildRoleSubscriptions extends AppFragmen
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(ServerSettingsGuildRoleSubscriptionViewModel.ViewState viewState) {
             WidgetServerSettingsGuildRoleSubscriptions widgetServerSettingsGuildRoleSubscriptions = WidgetServerSettingsGuildRoleSubscriptions.this;
             Intrinsics3.checkNotNullExpressionValue(viewState, "it");
@@ -112,8 +112,8 @@ public final class WidgetServerSettingsGuildRoleSubscriptions extends AppFragmen
         }
     }
 
-    /* compiled from: WidgetServerSettingsGuildRoleSubscriptions.kt */
-    /* renamed from: com.discord.widgets.servers.guild_role_subscription.WidgetServerSettingsGuildRoleSubscriptions$onViewBoundOrOnResume$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.guild_role_subscription.WidgetServerSettingsGuildRoleSubscriptions$onViewBoundOrOnResume$2 */
+    /* JADX INFO: compiled from: WidgetServerSettingsGuildRoleSubscriptions.kt */
     public static final class C94622 extends Lambda implements Function1<ServerSettingsGuildRoleSubscriptionViewModel.Event, Unit> {
         public C94622() {
             super(1);
@@ -125,7 +125,7 @@ public final class WidgetServerSettingsGuildRoleSubscriptions extends AppFragmen
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(ServerSettingsGuildRoleSubscriptionViewModel.Event event) {
             WidgetServerSettingsGuildRoleSubscriptions widgetServerSettingsGuildRoleSubscriptions = WidgetServerSettingsGuildRoleSubscriptions.this;
             Intrinsics3.checkNotNullExpressionValue(event, "it");
@@ -133,8 +133,8 @@ public final class WidgetServerSettingsGuildRoleSubscriptions extends AppFragmen
         }
     }
 
-    /* compiled from: WidgetServerSettingsGuildRoleSubscriptions.kt */
-    /* renamed from: com.discord.widgets.servers.guild_role_subscription.WidgetServerSettingsGuildRoleSubscriptions$onViewBoundOrOnResume$3 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.guild_role_subscription.WidgetServerSettingsGuildRoleSubscriptions$onViewBoundOrOnResume$3 */
+    /* JADX INFO: compiled from: WidgetServerSettingsGuildRoleSubscriptions.kt */
     public static final class C94633 extends Lambda implements Function1<GuildRoleSubscriptionPlanDetailsViewModel.ViewState, Unit> {
         public C94633() {
             super(1);
@@ -146,7 +146,7 @@ public final class WidgetServerSettingsGuildRoleSubscriptions extends AppFragmen
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(GuildRoleSubscriptionPlanDetailsViewModel.ViewState viewState) {
             WidgetServerSettingsGuildRoleSubscriptions.access$getViewModel$p(WidgetServerSettingsGuildRoleSubscriptions.this).onGuildRoleSubscriptionGroupUpdated(viewState.getDescription(), viewState.getCoverImage(), viewState.isFullServerGate());
         }

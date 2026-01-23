@@ -4,9 +4,9 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.discord.databinding.NuxGuildTemplateTextViewHolderBinding;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: GuildTemplateViewHolders.kt */
-/* renamed from: com.discord.widgets.nux.GuildTemplateTextViewHolder, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.nux.GuildTemplateTextViewHolder, reason: use source file name */
+/* JADX INFO: compiled from: GuildTemplateViewHolders.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class GuildTemplateViewHolders2 extends RecyclerView.ViewHolder {
     private final NuxGuildTemplateTextViewHolderBinding binding;
 

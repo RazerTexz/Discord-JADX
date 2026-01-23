@@ -16,16 +16,16 @@ import p507d0.p583v.Thread2;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: SystemLogCapture.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: SystemLogCapture.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class SystemLogCapture {
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private final FixedSizeLineBuffer buffer = new FixedSizeLineBuffer(524288);
     private final FixedSizeLineBuffer tombstoneBuffer = new FixedSizeLineBuffer(102400);
 
-    /* compiled from: SystemLogCapture.kt */
+    /* JADX INFO: compiled from: SystemLogCapture.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -40,8 +40,8 @@ public final class SystemLogCapture {
         }
     }
 
-    /* compiled from: SystemLogCapture.kt */
-    /* renamed from: com.discord.utilities.systemlog.SystemLogCapture$startThread$1 */
+    /* JADX INFO: renamed from: com.discord.utilities.systemlog.SystemLogCapture$startThread$1 */
+    /* JADX INFO: compiled from: SystemLogCapture.kt */
     public static final class C69331 extends Lambda implements Function0<Unit> {
         public C69331() {
             super(0);
@@ -53,7 +53,7 @@ public final class SystemLogCapture {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() throws InterruptedException {
             SystemLogCapture.access$start(SystemLogCapture.this);
         }
@@ -104,6 +104,7 @@ public final class SystemLogCapture {
                     }
                     if (processStart != null) {
                     }
+                    Thread.sleep(1000L);
                 }
                 processStart.destroy();
                 Thread.sleep(1000L);

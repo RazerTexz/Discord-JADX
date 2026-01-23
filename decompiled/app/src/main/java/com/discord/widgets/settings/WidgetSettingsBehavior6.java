@@ -7,9 +7,9 @@ import com.discord.views.CheckedSetting;
 import p507d0.p592z.p594d.Intrinsics3;
 import p658rx.functions.Action0;
 
-/* compiled from: WidgetSettingsBehavior.kt */
-/* renamed from: com.discord.widgets.settings.WidgetSettingsBehavior$onViewBound$2$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.settings.WidgetSettingsBehavior$onViewBound$2$1, reason: use source file name */
+/* JADX INFO: compiled from: WidgetSettingsBehavior.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetSettingsBehavior6 implements Action0 {
     public final /* synthetic */ CheckedSetting $this_apply;
 

@@ -2,13 +2,13 @@ package p007b.p195g.p196a.p198b.p202r;
 
 import java.util.concurrent.atomic.AtomicReference;
 
-/* compiled from: ByteQuadsCanonicalizer.java */
-/* renamed from: b.g.a.b.r.a, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.g.a.b.r.a, reason: use source file name */
+/* JADX INFO: compiled from: ByteQuadsCanonicalizer.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class ByteQuadsCanonicalizer {
 
-    /* compiled from: ByteQuadsCanonicalizer.java */
-    /* renamed from: b.g.a.b.r.a$a */
+    /* JADX INFO: renamed from: b.g.a.b.r.a$a */
+    /* JADX INFO: compiled from: ByteQuadsCanonicalizer.java */
     public static final class a {
         public a(int i, int i2, int i3, int[] iArr, String[] strArr, int i4, int i5) {
         }
@@ -32,7 +32,7 @@ public final class ByteQuadsCanonicalizer {
         new AtomicReference(new a(i3, 0, i6 < 64 ? 4 : i6 <= 256 ? 5 : i6 <= 1024 ? 6 : 7, new int[i5], new String[i3 << 1], i5 - i3, i5));
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static ByteQuadsCanonicalizer m1725a() {
         long jCurrentTimeMillis = System.currentTimeMillis();
         return new ByteQuadsCanonicalizer(64, true, (((int) jCurrentTimeMillis) + ((int) (jCurrentTimeMillis >>> 32))) | 1, true);

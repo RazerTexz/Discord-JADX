@@ -9,12 +9,12 @@ import p007b.p225i.p226a.p242c.p259f3.ParsableByteArray;
 import p007b.p225i.p226a.p242c.p279z2.MetadataInputBuffer;
 import p007b.p225i.p226a.p242c.p279z2.SimpleMetadataDecoder;
 
-/* compiled from: EventMessageDecoder.java */
-/* renamed from: b.i.a.c.z2.i.a, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.z2.i.a, reason: use source file name */
+/* JADX INFO: compiled from: EventMessageDecoder.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class EventMessageDecoder extends SimpleMetadataDecoder {
     @Override // p007b.p225i.p226a.p242c.p279z2.SimpleMetadataDecoder
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public Metadata mo3899b(MetadataInputBuffer metadataInputBuffer, ByteBuffer byteBuffer) {
         ParsableByteArray parsableByteArray = new ParsableByteArray(byteBuffer.array(), byteBuffer.limit());
         String strM3094n = parsableByteArray.m3094n();

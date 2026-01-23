@@ -5,9 +5,9 @@ import p507d0.p513e0.p514p.p515d.p517m0.p567n.KotlinType;
 import p507d0.p513e0.p514p.p515d.p517m0.p567n.KotlinType4;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: constantValues.kt */
-/* renamed from: d0.e0.p.d.m0.k.v.s */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.k.v.s */
+/* JADX INFO: compiled from: constantValues.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class C11827s extends AbstractC11824p<Long> {
     public C11827s(long j) {
         super(Long.valueOf(j));

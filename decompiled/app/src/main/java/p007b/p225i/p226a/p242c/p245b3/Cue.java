@@ -13,70 +13,70 @@ import java.util.Objects;
 import p007b.p085c.p086a.p087a0.AnimatableValueParser;
 import p007b.p225i.p226a.p242c.Bundleable;
 
-/* compiled from: Cue.java */
-/* renamed from: b.i.a.c.b3.b, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.b3.b, reason: use source file name */
+/* JADX INFO: compiled from: Cue.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class Cue implements Bundleable {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static final Cue f5754j = new Cue("", null, null, null, -3.4028235E38f, Integer.MIN_VALUE, Integer.MIN_VALUE, -3.4028235E38f, Integer.MIN_VALUE, Integer.MIN_VALUE, -3.4028235E38f, -3.4028235E38f, -3.4028235E38f, false, ViewCompat.MEASURED_STATE_MASK, Integer.MIN_VALUE, 0.0f, null);
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public static final Bundleable.a<Cue> f5755k = C2577a.f5753a;
 
-    /* renamed from: A */
+    /* JADX INFO: renamed from: A */
     public final int f5756A;
 
-    /* renamed from: B */
+    /* JADX INFO: renamed from: B */
     public final float f5757B;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     @Nullable
     public final CharSequence f5758l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     @Nullable
     public final Layout.Alignment f5759m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     @Nullable
     public final Layout.Alignment f5760n;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     @Nullable
     public final Bitmap f5761o;
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public final float f5762p;
 
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     public final int f5763q;
 
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     public final int f5764r;
 
-    /* renamed from: s */
+    /* JADX INFO: renamed from: s */
     public final float f5765s;
 
-    /* renamed from: t */
+    /* JADX INFO: renamed from: t */
     public final int f5766t;
 
-    /* renamed from: u */
+    /* JADX INFO: renamed from: u */
     public final float f5767u;
 
-    /* renamed from: v */
+    /* JADX INFO: renamed from: v */
     public final float f5768v;
 
-    /* renamed from: w */
+    /* JADX INFO: renamed from: w */
     public final boolean f5769w;
 
-    /* renamed from: x */
+    /* JADX INFO: renamed from: x */
     public final int f5770x;
 
-    /* renamed from: y */
+    /* JADX INFO: renamed from: y */
     public final int f5771y;
 
-    /* renamed from: z */
+    /* JADX INFO: renamed from: z */
     public final float f5772z;
 
     public Cue(CharSequence charSequence, Layout.Alignment alignment, Layout.Alignment alignment2, Bitmap bitmap, float f, int i, int i2, float f2, int i3, int i4, float f3, float f4, float f5, boolean z2, int i5, int i6, float f6, a aVar) {
@@ -110,12 +110,12 @@ public final class Cue implements Bundleable {
         this.f5757B = f6;
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static String m2604b(int i) {
         return Integer.toString(i, 36);
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public b m2605a() {
         return new b(this, null);
     }
@@ -137,64 +137,64 @@ public final class Cue implements Bundleable {
         return Arrays.hashCode(new Object[]{this.f5758l, this.f5759m, this.f5760n, this.f5761o, Float.valueOf(this.f5762p), Integer.valueOf(this.f5763q), Integer.valueOf(this.f5764r), Float.valueOf(this.f5765s), Integer.valueOf(this.f5766t), Float.valueOf(this.f5767u), Float.valueOf(this.f5768v), Boolean.valueOf(this.f5769w), Integer.valueOf(this.f5770x), Integer.valueOf(this.f5771y), Float.valueOf(this.f5772z), Integer.valueOf(this.f5756A), Float.valueOf(this.f5757B)});
     }
 
-    /* compiled from: Cue.java */
-    /* renamed from: b.i.a.c.b3.b$b */
+    /* JADX INFO: renamed from: b.i.a.c.b3.b$b */
+    /* JADX INFO: compiled from: Cue.java */
     public static final class b {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         @Nullable
         public CharSequence f5773a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         @Nullable
         public Bitmap f5774b;
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         @Nullable
         public Layout.Alignment f5775c;
 
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         @Nullable
         public Layout.Alignment f5776d;
 
-        /* renamed from: e */
+        /* JADX INFO: renamed from: e */
         public float f5777e;
 
-        /* renamed from: f */
+        /* JADX INFO: renamed from: f */
         public int f5778f;
 
-        /* renamed from: g */
+        /* JADX INFO: renamed from: g */
         public int f5779g;
 
-        /* renamed from: h */
+        /* JADX INFO: renamed from: h */
         public float f5780h;
 
-        /* renamed from: i */
+        /* JADX INFO: renamed from: i */
         public int f5781i;
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public int f5782j;
 
-        /* renamed from: k */
+        /* JADX INFO: renamed from: k */
         public float f5783k;
 
-        /* renamed from: l */
+        /* JADX INFO: renamed from: l */
         public float f5784l;
 
-        /* renamed from: m */
+        /* JADX INFO: renamed from: m */
         public float f5785m;
 
-        /* renamed from: n */
+        /* JADX INFO: renamed from: n */
         public boolean f5786n;
 
-        /* renamed from: o */
+        /* JADX INFO: renamed from: o */
         @ColorInt
         public int f5787o;
 
-        /* renamed from: p */
+        /* JADX INFO: renamed from: p */
         public int f5788p;
 
-        /* renamed from: q */
+        /* JADX INFO: renamed from: q */
         public float f5789q;
 
         public b() {
@@ -216,7 +216,7 @@ public final class Cue implements Bundleable {
             this.f5788p = Integer.MIN_VALUE;
         }
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public Cue m2606a() {
             return new Cue(this.f5773a, this.f5775c, this.f5776d, this.f5774b, this.f5777e, this.f5778f, this.f5779g, this.f5780h, this.f5781i, this.f5782j, this.f5783k, this.f5784l, this.f5785m, this.f5786n, this.f5787o, this.f5788p, this.f5789q, null);
         }

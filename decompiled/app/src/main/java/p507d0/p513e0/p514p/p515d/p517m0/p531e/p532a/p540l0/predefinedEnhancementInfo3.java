@@ -20,12 +20,12 @@ import p507d0.p580t.MapsJVM;
 import p507d0.p580t._Arrays;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: predefinedEnhancementInfo.kt */
-/* renamed from: d0.e0.p.d.m0.e.a.l0.q, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.e.a.l0.q, reason: use source file name */
+/* JADX INFO: compiled from: predefinedEnhancementInfo.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class predefinedEnhancementInfo3 {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final Map<String, predefinedEnhancementInfo2> f23492a = new LinkedHashMap();
 
     public static final /* synthetic */ Map access$getSignatures$p(predefinedEnhancementInfo3 predefinedenhancementinfo3) {
@@ -36,14 +36,14 @@ public final class predefinedEnhancementInfo3 {
         return this.f23492a;
     }
 
-    /* compiled from: predefinedEnhancementInfo.kt */
-    /* renamed from: d0.e0.p.d.m0.e.a.l0.q$a */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.e.a.l0.q$a */
+    /* JADX INFO: compiled from: predefinedEnhancementInfo.kt */
     public final class a {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final String f23493a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final /* synthetic */ predefinedEnhancementInfo3 f23494b;
 
         public a(predefinedEnhancementInfo3 predefinedenhancementinfo3, String str) {
@@ -67,20 +67,20 @@ public final class predefinedEnhancementInfo3 {
             return this.f23493a;
         }
 
-        /* compiled from: predefinedEnhancementInfo.kt */
-        /* renamed from: d0.e0.p.d.m0.e.a.l0.q$a$a, reason: collision with other inner class name */
+        /* JADX INFO: renamed from: d0.e0.p.d.m0.e.a.l0.q$a$a, reason: collision with other inner class name */
+        /* JADX INFO: compiled from: predefinedEnhancementInfo.kt */
         public final class C13313a {
 
-            /* renamed from: a */
+            /* JADX INFO: renamed from: a */
             public final String f23495a;
 
-            /* renamed from: b */
+            /* JADX INFO: renamed from: b */
             public final List<Tuples2<String, predefinedEnhancementInfo4>> f23496b;
 
-            /* renamed from: c */
+            /* JADX INFO: renamed from: c */
             public Tuples2<String, predefinedEnhancementInfo4> f23497c;
 
-            /* renamed from: d */
+            /* JADX INFO: renamed from: d */
             public final /* synthetic */ a f23498d;
 
             public C13313a(a aVar, String str) {

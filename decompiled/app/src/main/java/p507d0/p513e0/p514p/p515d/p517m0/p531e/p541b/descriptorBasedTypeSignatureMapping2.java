@@ -5,13 +5,13 @@ import p507d0.p513e0.p514p.p515d.p517m0.p521c.ClassDescriptor;
 import p507d0.p513e0.p514p.p515d.p517m0.p567n.KotlinType;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: descriptorBasedTypeSignatureMapping.kt */
-/* renamed from: d0.e0.p.d.m0.e.b.x, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.e.b.x, reason: use source file name */
+/* JADX INFO: compiled from: descriptorBasedTypeSignatureMapping.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public interface descriptorBasedTypeSignatureMapping2<T> {
 
-    /* compiled from: descriptorBasedTypeSignatureMapping.kt */
-    /* renamed from: d0.e0.p.d.m0.e.b.x$a */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.e.b.x$a */
+    /* JADX INFO: compiled from: descriptorBasedTypeSignatureMapping.kt */
     public static final class a {
         public static <T> String getPredefinedFullInternalNameForClass(descriptorBasedTypeSignatureMapping2<? extends T> descriptorbasedtypesignaturemapping2, ClassDescriptor classDescriptor) {
             Intrinsics3.checkNotNullParameter(descriptorbasedtypesignaturemapping2, "this");

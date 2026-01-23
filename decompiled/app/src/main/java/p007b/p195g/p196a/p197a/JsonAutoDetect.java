@@ -7,15 +7,15 @@ import java.lang.annotation.Target;
 import java.lang.reflect.Member;
 import java.lang.reflect.Modifier;
 
-/* compiled from: JsonAutoDetect.java */
+/* JADX INFO: renamed from: b.g.a.a.e, reason: use source file name */
+/* JADX INFO: compiled from: JsonAutoDetect.java */
+/* JADX INFO: loaded from: classes3.dex */
 @Target({ElementType.ANNOTATION_TYPE, ElementType.TYPE})
 @Retention(RetentionPolicy.RUNTIME)
-/* renamed from: b.g.a.a.e, reason: use source file name */
-/* loaded from: classes3.dex */
 public @interface JsonAutoDetect {
 
-    /* compiled from: JsonAutoDetect.java */
-    /* renamed from: b.g.a.a.e$a */
+    /* JADX INFO: renamed from: b.g.a.a.e$a */
+    /* JADX INFO: compiled from: JsonAutoDetect.java */
     public enum a {
         ANY,
         NON_PRIVATE,
@@ -24,7 +24,7 @@ public @interface JsonAutoDetect {
         NONE,
         DEFAULT;
 
-        /* renamed from: f */
+        /* JADX INFO: renamed from: f */
         public boolean m1595f(Member member) {
             int iOrdinal = ordinal();
             if (iOrdinal == 0) {

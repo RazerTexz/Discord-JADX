@@ -4,30 +4,30 @@ import java.util.List;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: EmbeddedActivityInboundUpdate.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: EmbeddedActivityInboundUpdate.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class EmbeddedActivityInboundUpdate {
     private final long channelId;
     private final EmbeddedActivity embeddedActivity;
     private final long guildId;
     private final List<Long> users;
 
-    /* renamed from: a, reason: from getter */
+    /* JADX INFO: renamed from: a, reason: from getter */
     public final long getChannelId() {
         return this.channelId;
     }
 
-    /* renamed from: b, reason: from getter */
+    /* JADX INFO: renamed from: b, reason: from getter */
     public final EmbeddedActivity getEmbeddedActivity() {
         return this.embeddedActivity;
     }
 
-    /* renamed from: c, reason: from getter */
+    /* JADX INFO: renamed from: c, reason: from getter */
     public final long getGuildId() {
         return this.guildId;
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final List<Long> m7808d() {
         return this.users;
     }

@@ -10,8 +10,8 @@ import com.discord.widgets.channels.invite.GroupInviteFriendsSheetFeatureFlag;
 import com.discord.widgets.guilds.invite.WidgetGuildInviteShare;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ChannelInviteLaunchUtils.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: ChannelInviteLaunchUtils.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class ChannelInviteLaunchUtils {
     public static final ChannelInviteLaunchUtils INSTANCE = new ChannelInviteLaunchUtils();
 

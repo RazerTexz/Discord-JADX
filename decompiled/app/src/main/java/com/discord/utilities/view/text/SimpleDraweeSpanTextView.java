@@ -7,7 +7,7 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.widget.AppCompatTextView;
 import com.facebook.drawee.span.DraweeSpanStringBuilder;
 
-/* loaded from: classes2.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class SimpleDraweeSpanTextView extends AppCompatTextView {
     private DraweeSpanStringBuilder mDraweeStringBuilder;
     private boolean mIsAttached;

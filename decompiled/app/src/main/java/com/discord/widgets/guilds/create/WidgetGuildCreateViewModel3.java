@@ -3,9 +3,9 @@ package com.discord.widgets.guilds.create;
 import kotlin.jvm.functions.Function2;
 import p658rx.functions.Func2;
 
-/* compiled from: WidgetGuildCreateViewModel.kt */
-/* renamed from: com.discord.widgets.guilds.create.WidgetGuildCreateViewModel$sam$rx_functions_Func2$0, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.guilds.create.WidgetGuildCreateViewModel$sam$rx_functions_Func2$0, reason: use source file name */
+/* JADX INFO: compiled from: WidgetGuildCreateViewModel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetGuildCreateViewModel3 implements Func2 {
     private final /* synthetic */ Function2 function;
 

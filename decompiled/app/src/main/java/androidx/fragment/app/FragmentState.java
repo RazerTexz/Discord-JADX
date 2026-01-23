@@ -6,8 +6,8 @@ import android.os.Parcel;
 import android.os.Parcelable;
 import androidx.annotation.NonNull;
 
+/* JADX INFO: loaded from: classes.dex */
 @SuppressLint({"BanParcelableUsage"})
-/* loaded from: classes.dex */
 public final class FragmentState implements Parcelable {
     public static final Parcelable.Creator<FragmentState> CREATOR = new C03901();
     public final Bundle mArguments;
@@ -24,7 +24,7 @@ public final class FragmentState implements Parcelable {
     public final String mTag;
     public final String mWho;
 
-    /* renamed from: androidx.fragment.app.FragmentState$1 */
+    /* JADX INFO: renamed from: androidx.fragment.app.FragmentState$1 */
     public class C03901 implements Parcelable.Creator<FragmentState> {
         @Override // android.os.Parcelable.Creator
         public /* bridge */ /* synthetic */ FragmentState createFromParcel(Parcel parcel) {

@@ -9,14 +9,14 @@ import kotlin.Unit;
 import kotlin.jvm.functions.Function1;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: WidgetBugReport.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetBugReport.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class BugReportFeatureViewHolder extends RecyclerView.ViewHolder {
     private final WidgetBugReportFeatureListItemBinding binding;
     private final Function1<BugReportConfig2, Unit> onClickListener;
 
-    /* compiled from: WidgetBugReport.kt */
-    /* renamed from: com.discord.widgets.bugreports.BugReportFeatureViewHolder$bind$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.bugreports.BugReportFeatureViewHolder$bind$1 */
+    /* JADX INFO: compiled from: WidgetBugReport.kt */
     public static final class ViewOnClickListenerC72821 implements View.OnClickListener {
         public final /* synthetic */ BugReportConfig2 $data;
 

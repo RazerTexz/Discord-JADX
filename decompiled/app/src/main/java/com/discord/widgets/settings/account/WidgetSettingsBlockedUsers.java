@@ -35,24 +35,24 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 import p507d0.p592z.p594d.Reflection2;
 
-/* compiled from: WidgetSettingsBlockedUsers.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetSettingsBlockedUsers.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetSettingsBlockedUsers extends AppFragment {
     public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetSettingsBlockedUsers.class, "binding", "getBinding()Lcom/discord/databinding/WidgetSettingsBlockedUsersBinding;", 0)};
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private static final int VIEW_INDEX_EMPTY = 1;
     private static final int VIEW_INDEX_RECYCLER = 0;
     private WidgetSettingsBlockedUsersAdapter adapter;
 
-    /* renamed from: binding$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
 
-    /* renamed from: viewModel$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: viewModel$delegate, reason: from kotlin metadata */
     private final Lazy viewModel;
 
-    /* compiled from: WidgetSettingsBlockedUsers.kt */
+    /* JADX INFO: compiled from: WidgetSettingsBlockedUsers.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -67,8 +67,8 @@ public final class WidgetSettingsBlockedUsers extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetSettingsBlockedUsers.kt */
-    /* renamed from: com.discord.widgets.settings.account.WidgetSettingsBlockedUsers$onViewBoundOrOnResume$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.account.WidgetSettingsBlockedUsers$onViewBoundOrOnResume$1 */
+    /* JADX INFO: compiled from: WidgetSettingsBlockedUsers.kt */
     public static final /* synthetic */ class C97741 extends FunctionReferenceImpl implements Function1<WidgetSettingsBlockedUsersViewModel.ViewState, Unit> {
         public C97741(WidgetSettingsBlockedUsers widgetSettingsBlockedUsers) {
             super(1, widgetSettingsBlockedUsers, WidgetSettingsBlockedUsers.class, "configureUI", "configureUI(Lcom/discord/widgets/settings/account/WidgetSettingsBlockedUsersViewModel$ViewState;)V", 0);
@@ -80,15 +80,15 @@ public final class WidgetSettingsBlockedUsers extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(WidgetSettingsBlockedUsersViewModel.ViewState viewState) {
             Intrinsics3.checkNotNullParameter(viewState, "p1");
             WidgetSettingsBlockedUsers.access$configureUI((WidgetSettingsBlockedUsers) this.receiver, viewState);
         }
     }
 
-    /* compiled from: WidgetSettingsBlockedUsers.kt */
-    /* renamed from: com.discord.widgets.settings.account.WidgetSettingsBlockedUsers$onViewBoundOrOnResume$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.account.WidgetSettingsBlockedUsers$onViewBoundOrOnResume$2 */
+    /* JADX INFO: compiled from: WidgetSettingsBlockedUsers.kt */
     public static final /* synthetic */ class C97752 extends FunctionReferenceImpl implements Function1<WidgetSettingsBlockedUsersViewModel.Event, Unit> {
         public C97752(WidgetSettingsBlockedUsers widgetSettingsBlockedUsers) {
             super(1, widgetSettingsBlockedUsers, WidgetSettingsBlockedUsers.class, "handleEvent", "handleEvent(Lcom/discord/widgets/settings/account/WidgetSettingsBlockedUsersViewModel$Event;)V", 0);
@@ -100,15 +100,15 @@ public final class WidgetSettingsBlockedUsers extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(WidgetSettingsBlockedUsersViewModel.Event event) {
             Intrinsics3.checkNotNullParameter(event, "p1");
             WidgetSettingsBlockedUsers.access$handleEvent((WidgetSettingsBlockedUsers) this.receiver, event);
         }
     }
 
-    /* compiled from: WidgetSettingsBlockedUsers.kt */
-    /* renamed from: com.discord.widgets.settings.account.WidgetSettingsBlockedUsers$onViewCreated$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.account.WidgetSettingsBlockedUsers$onViewCreated$2 */
+    /* JADX INFO: compiled from: WidgetSettingsBlockedUsers.kt */
     public static final class C97762 extends Lambda implements Function1<User, Unit> {
         public C97762() {
             super(1);
@@ -120,15 +120,15 @@ public final class WidgetSettingsBlockedUsers extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(User user) {
             Intrinsics3.checkNotNullParameter(user, "user");
             WidgetSettingsBlockedUsers.access$getViewModel$p(WidgetSettingsBlockedUsers.this).onClickUnblock(user.getId());
         }
     }
 
-    /* compiled from: WidgetSettingsBlockedUsers.kt */
-    /* renamed from: com.discord.widgets.settings.account.WidgetSettingsBlockedUsers$onViewCreated$3 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.account.WidgetSettingsBlockedUsers$onViewCreated$3 */
+    /* JADX INFO: compiled from: WidgetSettingsBlockedUsers.kt */
     public static final class C97773 extends Lambda implements Function1<User, Unit> {
         public C97773() {
             super(1);
@@ -140,7 +140,7 @@ public final class WidgetSettingsBlockedUsers extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(User user) {
             Intrinsics3.checkNotNullParameter(user, "user");
             WidgetUserSheet.Companion companion = WidgetUserSheet.INSTANCE;

@@ -50,22 +50,22 @@ import p507d0.p592z.p594d.Lambda;
 import p658rx.functions.Action1;
 import p658rx.functions.Func0;
 
-/* compiled from: WidgetNuxChannelPrompt.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetNuxChannelPrompt.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetNuxChannelPrompt extends AppFragment {
     public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetNuxChannelPrompt.class, "binding", "getBinding()Lcom/discord/databinding/WidgetNuxChannelPromptBinding;", 0)};
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
 
-    /* renamed from: binding$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
     private final AppLogger2 loggingConfig;
 
-    /* renamed from: validationManager$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: validationManager$delegate, reason: from kotlin metadata */
     private final Lazy validationManager;
 
-    /* compiled from: WidgetNuxChannelPrompt.kt */
+    /* JADX INFO: compiled from: WidgetNuxChannelPrompt.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -82,13 +82,13 @@ public final class WidgetNuxChannelPrompt extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetNuxChannelPrompt.kt */
-    /* renamed from: com.discord.widgets.nux.WidgetNuxChannelPrompt$handleSubmit$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.nux.WidgetNuxChannelPrompt$handleSubmit$1 */
+    /* JADX INFO: compiled from: WidgetNuxChannelPrompt.kt */
     public static final class C91071 extends Lambda implements Function1<Channel, Unit> {
         public final /* synthetic */ long $guildId;
 
-        /* compiled from: WidgetNuxChannelPrompt.kt */
-        /* renamed from: com.discord.widgets.nux.WidgetNuxChannelPrompt$handleSubmit$1$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.widgets.nux.WidgetNuxChannelPrompt$handleSubmit$1$1, reason: invalid class name */
+        /* JADX INFO: compiled from: WidgetNuxChannelPrompt.kt */
         public static final class AnonymousClass1 extends Lambda implements Function1<Channel, TrackNetworkMetadata2> {
             public AnonymousClass1() {
                 super(1);
@@ -99,15 +99,15 @@ public final class WidgetNuxChannelPrompt extends AppFragment {
                 return invoke2(channel);
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final TrackNetworkMetadata2 invoke2(Channel channel) {
                 List<PermissionOverwrite> listM7655v;
                 return new TrackNetworkActionChannelCreate((channel == null || (listM7655v = channel.m7655v()) == null) ? null : Boolean.valueOf(!listM7655v.isEmpty()), channel != null ? Long.valueOf(channel.getType()) : null, channel != null ? Long.valueOf(channel.getId()) : null, channel != null ? Long.valueOf(channel.getParentId()) : null, Long.valueOf(C91071.this.$guildId));
             }
         }
 
-        /* compiled from: WidgetNuxChannelPrompt.kt */
-        /* renamed from: com.discord.widgets.nux.WidgetNuxChannelPrompt$handleSubmit$1$2, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.widgets.nux.WidgetNuxChannelPrompt$handleSubmit$1$2, reason: invalid class name */
+        /* JADX INFO: compiled from: WidgetNuxChannelPrompt.kt */
         public static final class AnonymousClass2 extends Lambda implements Function1<Channel, Unit> {
             public AnonymousClass2() {
                 super(1);
@@ -119,15 +119,15 @@ public final class WidgetNuxChannelPrompt extends AppFragment {
                 return Unit.f27425a;
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2(Channel channel) {
                 C91071 c91071 = C91071.this;
                 WidgetNuxChannelPrompt.access$finishActivity(WidgetNuxChannelPrompt.this, c91071.$guildId);
             }
         }
 
-        /* compiled from: WidgetNuxChannelPrompt.kt */
-        /* renamed from: com.discord.widgets.nux.WidgetNuxChannelPrompt$handleSubmit$1$3, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.widgets.nux.WidgetNuxChannelPrompt$handleSubmit$1$3, reason: invalid class name */
+        /* JADX INFO: compiled from: WidgetNuxChannelPrompt.kt */
         public static final class AnonymousClass3<T> implements Action1<Error> {
             public AnonymousClass3() {
             }
@@ -137,7 +137,7 @@ public final class WidgetNuxChannelPrompt extends AppFragment {
                 call2(error);
             }
 
-            /* renamed from: call, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
             public final void call2(Error error) {
                 WidgetNuxChannelPrompt widgetNuxChannelPrompt = WidgetNuxChannelPrompt.this;
                 Intrinsics3.checkNotNullExpressionValue(error, "error");
@@ -157,7 +157,7 @@ public final class WidgetNuxChannelPrompt extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Channel channel) {
             if (channel == null) {
                 WidgetNuxChannelPrompt.access$getBinding$p(WidgetNuxChannelPrompt.this).f17317b.setIsLoading(false);
@@ -170,8 +170,8 @@ public final class WidgetNuxChannelPrompt extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetNuxChannelPrompt.kt */
-    /* renamed from: com.discord.widgets.nux.WidgetNuxChannelPrompt$onViewBound$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.nux.WidgetNuxChannelPrompt$onViewBound$1 */
+    /* JADX INFO: compiled from: WidgetNuxChannelPrompt.kt */
     public static final class C91081 extends Lambda implements Function1<Guild, Unit> {
         public C91081() {
             super(1);
@@ -183,14 +183,14 @@ public final class WidgetNuxChannelPrompt extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Guild guild) {
             WidgetNuxChannelPrompt.access$handleGuild(WidgetNuxChannelPrompt.this, guild);
         }
     }
 
-    /* compiled from: WidgetNuxChannelPrompt.kt */
-    /* renamed from: com.discord.widgets.nux.WidgetNuxChannelPrompt$onViewBound$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.nux.WidgetNuxChannelPrompt$onViewBound$2 */
+    /* JADX INFO: compiled from: WidgetNuxChannelPrompt.kt */
     public static final class ViewOnClickListenerC91092 implements View.OnClickListener {
         public final /* synthetic */ long $guildId;
 
@@ -204,8 +204,8 @@ public final class WidgetNuxChannelPrompt extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetNuxChannelPrompt.kt */
-    /* renamed from: com.discord.widgets.nux.WidgetNuxChannelPrompt$onViewBound$3 */
+    /* JADX INFO: renamed from: com.discord.widgets.nux.WidgetNuxChannelPrompt$onViewBound$3 */
+    /* JADX INFO: compiled from: WidgetNuxChannelPrompt.kt */
     public static final class C91103<R> implements Func0<Boolean> {
         public final /* synthetic */ long $guildId;
 
@@ -225,8 +225,8 @@ public final class WidgetNuxChannelPrompt extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetNuxChannelPrompt.kt */
-    /* renamed from: com.discord.widgets.nux.WidgetNuxChannelPrompt$onViewBound$4 */
+    /* JADX INFO: renamed from: com.discord.widgets.nux.WidgetNuxChannelPrompt$onViewBound$4 */
+    /* JADX INFO: compiled from: WidgetNuxChannelPrompt.kt */
     public static final class ViewOnClickListenerC91114 implements View.OnClickListener {
         public final /* synthetic */ long $guildId;
 
@@ -240,8 +240,8 @@ public final class WidgetNuxChannelPrompt extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetNuxChannelPrompt.kt */
-    /* renamed from: com.discord.widgets.nux.WidgetNuxChannelPrompt$onViewBound$5 */
+    /* JADX INFO: renamed from: com.discord.widgets.nux.WidgetNuxChannelPrompt$onViewBound$5 */
+    /* JADX INFO: compiled from: WidgetNuxChannelPrompt.kt */
     public static final class C91125 extends Lambda implements Function1<TextView, Unit> {
         public C91125() {
             super(1);
@@ -253,7 +253,7 @@ public final class WidgetNuxChannelPrompt extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(TextView textView) {
             Intrinsics3.checkNotNullParameter(textView, "it");
             WidgetNuxChannelPrompt.access$getBinding$p(WidgetNuxChannelPrompt.this).f17317b.performClick();

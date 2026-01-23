@@ -2,7 +2,6 @@ package com.discord.widgets.forums;
 
 import android.content.Context;
 import android.content.res.ColorStateList;
-import android.content.res.Resources;
 import android.graphics.drawable.Drawable;
 import android.os.Build;
 import android.text.style.StyleSpan;
@@ -53,20 +52,20 @@ import p507d0.p512d0._Ranges;
 import p507d0.p579g0.StringsJVM;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ForumBrowserPostView.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: ForumBrowserPostView.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class ForumBrowserPostView extends ConstraintLayout {
     private final int avatarSizePx;
     private final ForumBrowserPostViewBinding binding;
 
-    /* renamed from: cardPressHighlight$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: cardPressHighlight$delegate, reason: from kotlin metadata */
     private final Lazy cardPressHighlight;
 
-    /* renamed from: defaultReactionMeTextColor$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: defaultReactionMeTextColor$delegate, reason: from kotlin metadata */
     private final Lazy defaultReactionMeTextColor;
     private final int overlapAmountPx;
 
-    /* renamed from: reactionMeTextColor$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: reactionMeTextColor$delegate, reason: from kotlin metadata */
     private final Lazy reactionMeTextColor;
 
     public ForumBrowserPostView(Context context) {
@@ -81,9 +80,9 @@ public final class ForumBrowserPostView extends ConstraintLayout {
         this(context, (i2 & 2) != 0 ? null : attributeSet, (i2 & 4) != 0 ? 0 : i);
     }
 
-    /* JADX WARN: Multi-variable type inference failed */
     private final void configureAttachments(List<MessageAttachment> attachments) {
         MessageAttachment messageAttachment = null;
+        Object obj = null;
         if (attachments != null) {
             Iterator<T> it = attachments.iterator();
             while (true) {
@@ -92,11 +91,11 @@ public final class ForumBrowserPostView extends ConstraintLayout {
                 }
                 Object next = it.next();
                 if (!((MessageAttachment) next).m8071h()) {
-                    messageAttachment = next;
+                    obj = next;
                     break;
                 }
             }
-            messageAttachment = messageAttachment;
+            messageAttachment = (MessageAttachment) obj;
         }
         if (messageAttachment == null) {
             SimpleDraweeView simpleDraweeView = this.binding.f15086g;
@@ -181,7 +180,7 @@ public final class ForumBrowserPostView extends ConstraintLayout {
         }
     }
 
-    private final void configurePostOwner(PostData post) throws Resources.NotFoundException {
+    private final void configurePostOwner(PostData post) {
         String username;
         User owner = post.getOwner();
         SimpleDraweeView simpleDraweeView = this.binding.f15083d;
@@ -278,7 +277,7 @@ public final class ForumBrowserPostView extends ConstraintLayout {
         return (ColorStateList) this.reactionMeTextColor.getValue();
     }
 
-    public final void configurePost(PostData post) throws Resources.NotFoundException {
+    public final void configurePost(PostData post) {
         Intrinsics3.checkNotNullParameter(post, "post");
         TextView textView = this.binding.f15081b;
         Intrinsics3.checkNotNullExpressionValue(textView, "binding.formPostTitle");

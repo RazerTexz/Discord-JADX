@@ -5,9 +5,9 @@ import kotlin.Unit;
 import kotlin.jvm.functions.Function1;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetAuthBirthday.kt */
-/* renamed from: com.discord.widgets.auth.WidgetAuthBirthday$onViewBoundOrOnResume$1$$special$$inlined$apply$lambda$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.auth.WidgetAuthBirthday$onViewBoundOrOnResume$1$$special$$inlined$apply$lambda$1, reason: use source file name */
+/* JADX INFO: compiled from: WidgetAuthBirthday.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetAuthBirthday4 extends Lambda implements Function1<Long, Unit> {
     public final /* synthetic */ WidgetAuthBirthday.C71671 this$0;
 

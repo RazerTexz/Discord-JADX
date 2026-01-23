@@ -11,18 +11,18 @@ import p507d0.p513e0.p514p.p515d.p517m0.p521c.TypeParameterDescriptor;
 import p507d0.p513e0.p514p.p515d.p517m0.p552k.DescriptorUtils;
 import p507d0.p513e0.p514p.p515d.p517m0.p566m.StorageManager;
 
-/* compiled from: ClassTypeConstructorImpl.java */
-/* renamed from: d0.e0.p.d.m0.n.i, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.n.i, reason: use source file name */
+/* JADX INFO: compiled from: ClassTypeConstructorImpl.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class ClassTypeConstructorImpl extends AbstractClassTypeConstructor implements TypeConstructor {
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final ClassDescriptor f24781c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final List<TypeParameterDescriptor> f24782d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final Collection<KotlinType> f24783e;
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -49,7 +49,7 @@ public class ClassTypeConstructorImpl extends AbstractClassTypeConstructor imple
         this.f24783e = Collections.unmodifiableCollection(collection);
     }
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public static /* synthetic */ void m10012g(int i) {
         String str = (i == 4 || i == 5 || i == 6 || i == 7) ? "@NotNull method %s.%s must not return null" : "Argument for @NotNull parameter '%s' of %s.%s must not be null";
         Object[] objArr = new Object[(i == 4 || i == 5 || i == 6 || i == 7) ? 2 : 3];
@@ -95,7 +95,7 @@ public class ClassTypeConstructorImpl extends AbstractClassTypeConstructor imple
     }
 
     @Override // p507d0.p513e0.p514p.p515d.p517m0.p567n.AbstractTypeConstructor
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public Collection<KotlinType> mo9370a() {
         Collection<KotlinType> collection = this.f24783e;
         if (collection != null) {
@@ -106,7 +106,7 @@ public class ClassTypeConstructorImpl extends AbstractClassTypeConstructor imple
     }
 
     @Override // p507d0.p513e0.p514p.p515d.p517m0.p567n.AbstractTypeConstructor
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public SupertypeLoopChecker mo9371d() {
         return SupertypeLoopChecker.a.f23103a;
     }

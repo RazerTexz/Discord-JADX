@@ -22,17 +22,17 @@ import p507d0.p580t.Collections2;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: ConfirmRemovePermissionDialogViewModel.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: ConfirmRemovePermissionDialogViewModel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class ConfirmRemovePermissionDialogViewModel extends AppViewModel<ViewState> {
     private final long channelId;
     private final StoreChannels channelStore;
     private final PermissionOwner permissionOwner;
 
-    /* compiled from: ConfirmRemovePermissionDialogViewModel.kt */
+    /* JADX INFO: compiled from: ConfirmRemovePermissionDialogViewModel.kt */
     public static abstract class ViewState {
 
-        /* compiled from: ConfirmRemovePermissionDialogViewModel.kt */
+        /* JADX INFO: compiled from: ConfirmRemovePermissionDialogViewModel.kt */
         public static final class Complete extends ViewState {
             public static final Complete INSTANCE = new Complete();
 
@@ -41,7 +41,7 @@ public final class ConfirmRemovePermissionDialogViewModel extends AppViewModel<V
             }
         }
 
-        /* compiled from: ConfirmRemovePermissionDialogViewModel.kt */
+        /* JADX INFO: compiled from: ConfirmRemovePermissionDialogViewModel.kt */
         public static final /* data */ class Default extends ViewState {
             private final boolean isSubmitting;
 
@@ -57,7 +57,7 @@ public final class ConfirmRemovePermissionDialogViewModel extends AppViewModel<V
                 return r0.copy(z2);
             }
 
-            /* renamed from: component1, reason: from getter */
+            /* JADX INFO: renamed from: component1, reason: from getter */
             public final boolean getIsSubmitting() {
                 return this.isSubmitting;
             }
@@ -98,8 +98,8 @@ public final class ConfirmRemovePermissionDialogViewModel extends AppViewModel<V
         }
     }
 
-    /* compiled from: ConfirmRemovePermissionDialogViewModel.kt */
-    /* renamed from: com.discord.widgets.channels.permissions.ConfirmRemovePermissionDialogViewModel$submit$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.channels.permissions.ConfirmRemovePermissionDialogViewModel$submit$1 */
+    /* JADX INFO: compiled from: ConfirmRemovePermissionDialogViewModel.kt */
     public static final class C75221 extends Lambda implements Function1<Void, Unit> {
         public C75221() {
             super(1);
@@ -111,7 +111,7 @@ public final class ConfirmRemovePermissionDialogViewModel extends AppViewModel<V
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Void r1) {
             ConfirmRemovePermissionDialogViewModel.access$handleSubmissionComplete(ConfirmRemovePermissionDialogViewModel.this);
         }

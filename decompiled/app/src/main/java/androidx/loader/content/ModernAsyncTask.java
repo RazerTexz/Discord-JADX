@@ -22,7 +22,7 @@ import java.util.concurrent.atomic.AtomicBoolean;
 import java.util.concurrent.atomic.AtomicInteger;
 import p007b.p100d.p104b.p105a.outline;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public abstract class ModernAsyncTask<Params, Progress, Result> {
     private static final int CORE_POOL_SIZE = 5;
     private static final int KEEP_ALIVE = 1;
@@ -41,7 +41,7 @@ public abstract class ModernAsyncTask<Params, Progress, Result> {
     public final AtomicBoolean mCancelled = new AtomicBoolean();
     public final AtomicBoolean mTaskInvoked = new AtomicBoolean();
 
-    /* renamed from: androidx.loader.content.ModernAsyncTask$1 */
+    /* JADX INFO: renamed from: androidx.loader.content.ModernAsyncTask$1 */
     public static class ThreadFactoryC04701 implements ThreadFactory {
         private final AtomicInteger mCount = new AtomicInteger(1);
 
@@ -53,7 +53,7 @@ public abstract class ModernAsyncTask<Params, Progress, Result> {
         }
     }
 
-    /* renamed from: androidx.loader.content.ModernAsyncTask$2 */
+    /* JADX INFO: renamed from: androidx.loader.content.ModernAsyncTask$2 */
     public class C04712 extends WorkerRunnable<Params, Result> {
         public C04712() {
         }
@@ -72,7 +72,7 @@ public abstract class ModernAsyncTask<Params, Progress, Result> {
         }
     }
 
-    /* renamed from: androidx.loader.content.ModernAsyncTask$3 */
+    /* JADX INFO: renamed from: androidx.loader.content.ModernAsyncTask$3 */
     public class C04723 extends FutureTask<Result> {
         public C04723(Callable callable) {
             super(callable);
@@ -94,7 +94,7 @@ public abstract class ModernAsyncTask<Params, Progress, Result> {
         }
     }
 
-    /* renamed from: androidx.loader.content.ModernAsyncTask$4 */
+    /* JADX INFO: renamed from: androidx.loader.content.ModernAsyncTask$4 */
     public static /* synthetic */ class C04734 {
         public static final /* synthetic */ int[] $SwitchMap$androidx$loader$content$ModernAsyncTask$Status;
 

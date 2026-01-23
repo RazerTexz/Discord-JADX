@@ -36,21 +36,21 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 import p507d0.p592z.p594d.Reflection2;
 
-/* compiled from: WidgetGuildCallOnboardingSheet.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: WidgetGuildCallOnboardingSheet.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class WidgetGuildCallOnboardingSheet extends AppBottomSheet {
     public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetGuildCallOnboardingSheet.class, "binding", "getBinding()Lcom/discord/databinding/WidgetGuildCallOnboardingBinding;", 0)};
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
 
-    /* renamed from: binding$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
 
-    /* renamed from: viewModel$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: viewModel$delegate, reason: from kotlin metadata */
     private final Lazy viewModel;
 
-    /* compiled from: WidgetGuildCallOnboardingSheet.kt */
+    /* JADX INFO: compiled from: WidgetGuildCallOnboardingSheet.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -79,12 +79,12 @@ public final class WidgetGuildCallOnboardingSheet extends AppBottomSheet {
         }
     }
 
-    /* compiled from: WidgetGuildCallOnboardingSheet.kt */
-    /* renamed from: com.discord.widgets.voice.fullscreen.WidgetGuildCallOnboardingSheet$configureUI$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.voice.fullscreen.WidgetGuildCallOnboardingSheet$configureUI$1 */
+    /* JADX INFO: compiled from: WidgetGuildCallOnboardingSheet.kt */
     public static final class C105481 extends Lambda implements Function0<Unit> {
 
-        /* compiled from: WidgetGuildCallOnboardingSheet.kt */
-        /* renamed from: com.discord.widgets.voice.fullscreen.WidgetGuildCallOnboardingSheet$configureUI$1$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.widgets.voice.fullscreen.WidgetGuildCallOnboardingSheet$configureUI$1$1, reason: invalid class name */
+        /* JADX INFO: compiled from: WidgetGuildCallOnboardingSheet.kt */
         public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
             public AnonymousClass1() {
                 super(0);
@@ -96,7 +96,7 @@ public final class WidgetGuildCallOnboardingSheet extends AppBottomSheet {
                 return Unit.f27425a;
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2() {
                 Companion companion = WidgetGuildCallOnboardingSheet.INSTANCE;
                 Context contextRequireContext = WidgetGuildCallOnboardingSheet.this.requireContext();
@@ -116,14 +116,14 @@ public final class WidgetGuildCallOnboardingSheet extends AppBottomSheet {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             AnimatableValueParser.m473S1(WidgetGuildCallOnboardingSheet.this, null, new AnonymousClass1(), 1, null);
         }
     }
 
-    /* compiled from: WidgetGuildCallOnboardingSheet.kt */
-    /* renamed from: com.discord.widgets.voice.fullscreen.WidgetGuildCallOnboardingSheet$onResume$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.voice.fullscreen.WidgetGuildCallOnboardingSheet$onResume$1 */
+    /* JADX INFO: compiled from: WidgetGuildCallOnboardingSheet.kt */
     public static final class C105491 extends Lambda implements Function1<WidgetGuildCallOnboardingSheetViewModel.ViewState, Unit> {
         public C105491() {
             super(1);
@@ -135,15 +135,15 @@ public final class WidgetGuildCallOnboardingSheet extends AppBottomSheet {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(WidgetGuildCallOnboardingSheetViewModel.ViewState viewState) {
             Intrinsics3.checkNotNullParameter(viewState, "viewState");
             WidgetGuildCallOnboardingSheet.access$configureUI(WidgetGuildCallOnboardingSheet.this, viewState);
         }
     }
 
-    /* compiled from: WidgetGuildCallOnboardingSheet.kt */
-    /* renamed from: com.discord.widgets.voice.fullscreen.WidgetGuildCallOnboardingSheet$onResume$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.voice.fullscreen.WidgetGuildCallOnboardingSheet$onResume$2 */
+    /* JADX INFO: compiled from: WidgetGuildCallOnboardingSheet.kt */
     public static final class C105502 extends Lambda implements Function1<WidgetGuildCallOnboardingSheetViewModel.Event, Unit> {
         public C105502() {
             super(1);
@@ -155,7 +155,7 @@ public final class WidgetGuildCallOnboardingSheet extends AppBottomSheet {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(WidgetGuildCallOnboardingSheetViewModel.Event event) {
             Intrinsics3.checkNotNullParameter(event, "event");
             WidgetGuildCallOnboardingSheet.access$handleEvent(WidgetGuildCallOnboardingSheet.this, event);

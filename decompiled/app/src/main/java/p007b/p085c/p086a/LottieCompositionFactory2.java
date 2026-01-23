@@ -15,18 +15,18 @@ import p007b.p085c.p086a.p099z.NetworkCache;
 import p007b.p085c.p086a.p099z.NetworkFetcher;
 import p007b.p100d.p104b.p105a.outline;
 
-/* compiled from: LottieCompositionFactory.java */
-/* renamed from: b.c.a.f, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.c.a.f, reason: use source file name */
+/* JADX INFO: compiled from: LottieCompositionFactory.java */
+/* JADX INFO: loaded from: classes.dex */
 public class LottieCompositionFactory2 implements Callable<LottieResult<LottieComposition>> {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final /* synthetic */ Context f2355j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final /* synthetic */ String f2356k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final /* synthetic */ String f2357l;
 
     public LottieCompositionFactory2(Context context, String str, String str2) {
@@ -63,17 +63,7 @@ public class LottieCompositionFactory2 implements Callable<LottieResult<LottieCo
                 }
             } catch (FileNotFoundException unused) {
             }
-            if (file == null) {
-                pair = null;
-                if (pair != null) {
-                    FileExtension fileExtension3 = (FileExtension) pair.first;
-                    InputStream inputStream = (InputStream) pair.second;
-                    LottieComposition lottieComposition2 = (fileExtension3 == fileExtension2 ? LottieCompositionFactory.m677d(new ZipInputStream(inputStream), networkFetcher.f2929b) : LottieCompositionFactory.m675b(inputStream, networkFetcher.f2929b)).f2449a;
-                    if (lottieComposition2 != null) {
-                        lottieComposition = lottieComposition2;
-                    }
-                }
-            } else {
+            if (file != null) {
                 FileInputStream fileInputStream = new FileInputStream(file);
                 if (file.getAbsolutePath().endsWith(".zip")) {
                     fileExtension = fileExtension2;
@@ -83,7 +73,16 @@ public class LottieCompositionFactory2 implements Callable<LottieResult<LottieCo
                 Logger2.m639a(sbM837Y.toString());
                 pair = new Pair(fileExtension, fileInputStream);
                 if (pair != null) {
+                    FileExtension fileExtension3 = (FileExtension) pair.first;
+                    InputStream inputStream = (InputStream) pair.second;
+                    LottieComposition lottieComposition2 = (fileExtension3 == fileExtension2 ? LottieCompositionFactory.m677d(new ZipInputStream(inputStream), networkFetcher.f2929b) : LottieCompositionFactory.m675b(inputStream, networkFetcher.f2929b)).f2449a;
+                    if (lottieComposition2 != null) {
+                        lottieComposition = lottieComposition2;
+                    }
                 }
+            }
+            pair = null;
+            if (pair != null) {
             }
         }
         if (lottieComposition != null) {

@@ -4,8 +4,8 @@ import p001a0.p002a.p003a.C0002b;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: InviteEntry.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: InviteEntry.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final /* data */ class InviteEntry extends ChatListEntry {
     private final String eventId;
     private final long guildId;
@@ -30,27 +30,27 @@ public final /* data */ class InviteEntry extends ChatListEntry {
         return inviteEntry.copy((i & 1) != 0 ? inviteEntry.userId : j, (i & 2) != 0 ? inviteEntry.messageId : j2, (i & 4) != 0 ? inviteEntry.inviteCode : str, (i & 8) != 0 ? inviteEntry.guildId : j3, (i & 16) != 0 ? inviteEntry.eventId : str2);
     }
 
-    /* renamed from: component1, reason: from getter */
+    /* JADX INFO: renamed from: component1, reason: from getter */
     public final long getUserId() {
         return this.userId;
     }
 
-    /* renamed from: component2, reason: from getter */
+    /* JADX INFO: renamed from: component2, reason: from getter */
     public final long getMessageId() {
         return this.messageId;
     }
 
-    /* renamed from: component3, reason: from getter */
+    /* JADX INFO: renamed from: component3, reason: from getter */
     public final String getInviteCode() {
         return this.inviteCode;
     }
 
-    /* renamed from: component4, reason: from getter */
+    /* JADX INFO: renamed from: component4, reason: from getter */
     public final long getGuildId() {
         return this.guildId;
     }
 
-    /* renamed from: component5, reason: from getter */
+    /* JADX INFO: renamed from: component5, reason: from getter */
     public final String getEventId() {
         return this.eventId;
     }

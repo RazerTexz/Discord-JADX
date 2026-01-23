@@ -19,14 +19,14 @@ import p637j0.p641k.Func1;
 import p658rx.Observable;
 import p658rx.functions.Func4;
 
-/* compiled from: WidgetServerSettingsRoles.kt */
-/* renamed from: com.discord.widgets.servers.WidgetServerSettingsRoles$Model$Companion$get$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.servers.WidgetServerSettingsRoles$Model$Companion$get$1, reason: use source file name */
+/* JADX INFO: compiled from: WidgetServerSettingsRoles.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetServerSettingsRoles2<T, R> implements Func1<MeUser, Observable<? extends WidgetServerSettingsRoles.Model>> {
     public final /* synthetic */ long $guildId;
 
-    /* compiled from: WidgetServerSettingsRoles.kt */
-    /* renamed from: com.discord.widgets.servers.WidgetServerSettingsRoles$Model$Companion$get$1$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.WidgetServerSettingsRoles$Model$Companion$get$1$1 */
+    /* JADX INFO: compiled from: WidgetServerSettingsRoles.kt */
     public static final class C92981<T, R> implements Func1<Map<Long, ? extends GuildMember>, GuildMember> {
         public final /* synthetic */ MeUser $meUser;
 
@@ -39,14 +39,14 @@ public final class WidgetServerSettingsRoles2<T, R> implements Func1<MeUser, Obs
             return call2((Map<Long, GuildMember>) map);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final GuildMember call2(Map<Long, GuildMember> map) {
             return map.get(Long.valueOf(this.$meUser.getId()));
         }
     }
 
-    /* compiled from: WidgetServerSettingsRoles.kt */
-    /* renamed from: com.discord.widgets.servers.WidgetServerSettingsRoles$Model$Companion$get$1$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.WidgetServerSettingsRoles$Model$Companion$get$1$2 */
+    /* JADX INFO: compiled from: WidgetServerSettingsRoles.kt */
     public static final class C92992<T1, T2, T3, T4, R> implements Func4<Guild, GuildMember, Long, Map<Long, ? extends GuildRole>, WidgetServerSettingsRoles.Model> {
         public final /* synthetic */ MeUser $meUser;
 
@@ -59,7 +59,7 @@ public final class WidgetServerSettingsRoles2<T, R> implements Func1<MeUser, Obs
             return call2(guild, guildMember, l, (Map<Long, GuildRole>) map);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final WidgetServerSettingsRoles.Model call2(Guild guild, GuildMember guildMember, Long l, Map<Long, GuildRole> map) {
             if (guild == null || guildMember == null || l == null || map == null) {
                 return null;
@@ -87,7 +87,7 @@ public final class WidgetServerSettingsRoles2<T, R> implements Func1<MeUser, Obs
         return call2(meUser);
     }
 
-    /* renamed from: call, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
     public final Observable<? extends WidgetServerSettingsRoles.Model> call2(MeUser meUser) {
         StoreStream.Companion companion = StoreStream.INSTANCE;
         return Observable.m11073h(companion.getGuilds().observeGuild(this.$guildId), companion.getGuilds().observeComputed(this.$guildId, CollectionsJVM.listOf(Long.valueOf(meUser.getId()))).m11083G(new C92981(meUser)), companion.getPermissions().observePermissionsForGuild(this.$guildId), companion.getGuilds().observeRoles(this.$guildId), new C92992(meUser));

@@ -14,7 +14,7 @@ import java.io.ObjectInput;
 import java.io.ObjectOutput;
 import java.lang.reflect.Method;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class ExternalizableSerializer extends Serializer {
     private ObjectMap<Class, JavaSerializer> javaSerializerByType;
     private KryoObjectInput objectInput = null;
@@ -54,7 +54,7 @@ public class ExternalizableSerializer extends Serializer {
         return this.objectOutput;
     }
 
-    private static boolean hasInheritableReplaceMethod(Class cls, String str) throws SecurityException {
+    private static boolean hasInheritableReplaceMethod(Class cls, String str) {
         Method declaredMethod;
         while (true) {
             if (cls == null) {

@@ -5,7 +5,6 @@ import android.os.Handler;
 import android.os.Message;
 import android.util.AttributeSet;
 import android.util.Log;
-import android.view.InflateException;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -17,7 +16,7 @@ import androidx.core.util.Pools;
 import java.util.Objects;
 import java.util.concurrent.ArrayBlockingQueue;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public final class AsyncLayoutInflater {
     private static final String TAG = "AsyncLayoutInflater";
     public LayoutInflater mInflater;
@@ -25,7 +24,7 @@ public final class AsyncLayoutInflater {
     public Handler mHandler = new Handler(this.mHandlerCallback);
     public InflateThread mInflateThread = InflateThread.getInstance();
 
-    /* renamed from: androidx.asynclayoutinflater.view.AsyncLayoutInflater$1 */
+    /* JADX INFO: renamed from: androidx.asynclayoutinflater.view.AsyncLayoutInflater$1 */
     public class C01421 implements Handler.Callback {
         public C01421() {
         }
@@ -55,7 +54,7 @@ public final class AsyncLayoutInflater {
         }
 
         @Override // android.view.LayoutInflater
-        public View onCreateView(String str, AttributeSet attributeSet) throws InflateException, ClassNotFoundException {
+        public View onCreateView(String str, AttributeSet attributeSet) throws ClassNotFoundException {
             View viewCreateView;
             for (String str2 : sClassPrefixList) {
                 try {

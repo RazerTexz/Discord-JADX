@@ -7,18 +7,18 @@ import com.google.android.gms.common.internal.safeparcel.AbstractSafeParcelable;
 import p007b.p085c.p086a.p087a0.AnimatableValueParser;
 import p007b.p225i.p226a.p288f.p292c.p293a.p296f.p297b.C3199b;
 
-/* compiled from: com.google.android.gms:play-services-base@@17.3.0 */
-/* loaded from: classes3.dex */
+/* JADX INFO: compiled from: com.google.android.gms:play-services-base@@17.3.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public class GoogleSignInOptionsExtensionParcelable extends AbstractSafeParcelable {
     public static final Parcelable.Creator<GoogleSignInOptionsExtensionParcelable> CREATOR = new C3199b();
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final int f20458j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public int f20459k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public Bundle f20460l;
 
     public GoogleSignInOptionsExtensionParcelable(int i, int i2, Bundle bundle) {

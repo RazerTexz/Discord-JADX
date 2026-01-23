@@ -9,17 +9,17 @@ import p007b.p195g.p196a.p205c.p212e0.TypeSerializer;
 import p007b.p195g.p196a.p205c.p219i0.TokenBuffer;
 import p007b.p195g.p196a.p205c.p220y.JacksonStdImpl;
 
-/* compiled from: TokenBufferSerializer.java */
+/* JADX INFO: renamed from: b.g.a.c.g0.u.v0, reason: use source file name */
+/* JADX INFO: compiled from: TokenBufferSerializer.java */
+/* JADX INFO: loaded from: classes3.dex */
 @JacksonStdImpl
-/* renamed from: b.g.a.c.g0.u.v0, reason: use source file name */
-/* loaded from: classes3.dex */
 public class TokenBufferSerializer extends StdSerializer<TokenBuffer> {
     public TokenBufferSerializer() {
         super(TokenBuffer.class);
     }
 
     @Override // p007b.p195g.p196a.p205c.JsonSerializer
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public void mo1807f(Object obj, JsonGenerator jsonGenerator, SerializerProvider serializerProvider) throws IOException {
         Objects.requireNonNull((TokenBuffer) obj);
         Objects.requireNonNull(null);
@@ -27,7 +27,7 @@ public class TokenBufferSerializer extends StdSerializer<TokenBuffer> {
     }
 
     @Override // p007b.p195g.p196a.p205c.JsonSerializer
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public void mo1808g(Object obj, JsonGenerator jsonGenerator, SerializerProvider serializerProvider, TypeSerializer typeSerializer) throws IOException {
         TokenBuffer tokenBuffer = (TokenBuffer) obj;
         typeSerializer.mo1959e(jsonGenerator, typeSerializer.m1958d(tokenBuffer, JsonToken2.VALUE_EMBEDDED_OBJECT));

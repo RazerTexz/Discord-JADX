@@ -8,15 +8,15 @@ import p007b.p225i.p361c.p401u.p402o.AutoValue_PersistedInstallationEntry;
 import p007b.p225i.p361c.p401u.p402o.PersistedInstallation;
 import p007b.p225i.p361c.p401u.p402o.PersistedInstallationEntry;
 
-/* compiled from: FirebaseInstallations.java */
-/* renamed from: b.i.c.u.e, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.c.u.e, reason: use source file name */
+/* JADX INFO: compiled from: FirebaseInstallations.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final /* synthetic */ class FirebaseInstallations3 implements Runnable {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final FirebaseInstallations4 f12926j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final boolean f12927k;
 
     public FirebaseInstallations3(FirebaseInstallations4 firebaseInstallations4, boolean z2) {

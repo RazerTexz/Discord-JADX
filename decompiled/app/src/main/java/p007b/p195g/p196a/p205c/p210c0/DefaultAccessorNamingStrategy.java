@@ -11,35 +11,35 @@ import p007b.p195g.p196a.p205c.p211d0.JDK14Util;
 import p007b.p195g.p196a.p205c.p219i0.ClassUtil;
 import p007b.p195g.p196a.p205c.p221z.MapperConfig;
 
-/* compiled from: DefaultAccessorNamingStrategy.java */
-/* renamed from: b.g.a.c.c0.w, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.g.a.c.c0.w, reason: use source file name */
+/* JADX INFO: compiled from: DefaultAccessorNamingStrategy.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class DefaultAccessorNamingStrategy extends AccessorNamingStrategy {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final a f4751a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final boolean f4752b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final String f4753c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final String f4754d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final String f4755e;
 
-    /* compiled from: DefaultAccessorNamingStrategy.java */
-    /* renamed from: b.g.a.c.c0.w$a */
+    /* JADX INFO: renamed from: b.g.a.c.c0.w$a */
+    /* JADX INFO: compiled from: DefaultAccessorNamingStrategy.java */
     public interface a {
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         boolean m1932a(char c, String str, int i);
     }
 
-    /* compiled from: DefaultAccessorNamingStrategy.java */
-    /* renamed from: b.g.a.c.c0.w$b */
+    /* JADX INFO: renamed from: b.g.a.c.c0.w$b */
+    /* JADX INFO: compiled from: DefaultAccessorNamingStrategy.java */
     public static class b extends AccessorNamingStrategy.a implements Serializable {
         private static final long serialVersionUID = 1;
         public final String _setterPrefix = "set";
@@ -49,11 +49,11 @@ public class DefaultAccessorNamingStrategy extends AccessorNamingStrategy {
         public final a _baseNameValidator = null;
     }
 
-    /* compiled from: DefaultAccessorNamingStrategy.java */
-    /* renamed from: b.g.a.c.c0.w$c */
+    /* JADX INFO: renamed from: b.g.a.c.c0.w$c */
+    /* JADX INFO: compiled from: DefaultAccessorNamingStrategy.java */
     public static class c extends DefaultAccessorNamingStrategy {
 
-        /* renamed from: f */
+        /* JADX INFO: renamed from: f */
         public final Set<String> f4756f;
 
         public c(MapperConfig<?> mapperConfig, AnnotatedClass annotatedClass) {
@@ -88,7 +88,7 @@ public class DefaultAccessorNamingStrategy extends AccessorNamingStrategy {
         }
 
         @Override // p007b.p195g.p196a.p205c.p210c0.DefaultAccessorNamingStrategy, p007b.p195g.p196a.p205c.p210c0.AccessorNamingStrategy
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public String mo1817c(AnnotatedMethod annotatedMethod, String str) {
             return this.f4756f.contains(str) ? str : super.mo1817c(annotatedMethod, str);
         }
@@ -103,7 +103,7 @@ public class DefaultAccessorNamingStrategy extends AccessorNamingStrategy {
     }
 
     @Override // p007b.p195g.p196a.p205c.p210c0.AccessorNamingStrategy
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public String mo1815a(AnnotatedMethod annotatedMethod, String str) {
         if (this.f4754d == null) {
             return null;
@@ -116,7 +116,7 @@ public class DefaultAccessorNamingStrategy extends AccessorNamingStrategy {
     }
 
     @Override // p007b.p195g.p196a.p205c.p210c0.AccessorNamingStrategy
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public String mo1816b(AnnotatedMethod annotatedMethod, String str) {
         String str2 = this.f4755e;
         if (str2 == null || !str.startsWith(str2)) {
@@ -126,7 +126,7 @@ public class DefaultAccessorNamingStrategy extends AccessorNamingStrategy {
     }
 
     @Override // p007b.p195g.p196a.p205c.p210c0.AccessorNamingStrategy
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public String mo1817c(AnnotatedMethod annotatedMethod, String str) {
         String str2 = this.f4753c;
         if (str2 == null || !str.startsWith(str2)) {
@@ -150,7 +150,7 @@ public class DefaultAccessorNamingStrategy extends AccessorNamingStrategy {
         return this.f4752b ? m1931e(str, this.f4753c.length()) : m1930d(str, this.f4753c.length());
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public String m1930d(String str, int i) {
         int length = str.length();
         if (length == i) {
@@ -183,7 +183,7 @@ public class DefaultAccessorNamingStrategy extends AccessorNamingStrategy {
         return sb.toString();
     }
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public String m1931e(String str, int i) {
         int length = str.length();
         if (length == i) {

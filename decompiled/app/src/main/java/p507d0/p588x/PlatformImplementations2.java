@@ -3,14 +3,16 @@ package p507d0.p588x;
 import p507d0.p579g0.Strings4;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: PlatformImplementations.kt */
-/* renamed from: d0.x.b, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.x.b, reason: use source file name */
+/* JADX INFO: compiled from: PlatformImplementations.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class PlatformImplementations2 {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final PlatformImplementations f25252a;
 
+    /* JADX WARN: Removed duplicated region for block: B:55:0x018b  */
+    /* JADX WARN: Removed duplicated region for block: B:62:0x00fa A[EXC_TOP_SPLITTER, SYNTHETIC] */
     static {
         PlatformImplementations platformImplementations;
         String property = System.getProperty("java.specification.version");
@@ -51,6 +53,8 @@ public final class PlatformImplementations2 {
                         throw thInitCause;
                     }
                 } catch (ClassNotFoundException unused2) {
+                    if (i < 65543) {
+                    }
                 }
             } catch (ClassNotFoundException unused3) {
                 Object objNewInstance2 = Class.forName("kotlin.internal.JRE8PlatformImplementations").newInstance();
@@ -66,7 +70,7 @@ public final class PlatformImplementations2 {
                     throw thInitCause2;
                 }
             }
-        } else if (i >= 65543) {
+        } else if (i < 65543) {
             try {
                 try {
                     Object objNewInstance3 = Class.forName("d0.x.d.a").newInstance();
@@ -96,6 +100,7 @@ public final class PlatformImplementations2 {
                     }
                 }
             } catch (ClassNotFoundException unused5) {
+                platformImplementations = new PlatformImplementations();
             }
         } else {
             platformImplementations = new PlatformImplementations();

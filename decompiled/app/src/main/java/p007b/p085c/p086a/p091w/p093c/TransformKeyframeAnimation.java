@@ -18,59 +18,59 @@ import p007b.p085c.p086a.p095y.p096k.AnimatableTransform;
 import p007b.p085c.p086a.p095y.p096k.AnimatableValue;
 import p007b.p085c.p086a.p095y.p098m.BaseLayer2;
 
-/* compiled from: TransformKeyframeAnimation.java */
-/* renamed from: b.c.a.w.c.o, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.c.a.w.c.o, reason: use source file name */
+/* JADX INFO: compiled from: TransformKeyframeAnimation.java */
+/* JADX INFO: loaded from: classes.dex */
 public class TransformKeyframeAnimation {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final Matrix f2627a = new Matrix();
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final Matrix f2628b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final Matrix f2629c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final Matrix f2630d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final float[] f2631e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     @NonNull
     public BaseKeyframeAnimation<PointF, PointF> f2632f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     @NonNull
     public BaseKeyframeAnimation<?, PointF> f2633g;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     @NonNull
     public BaseKeyframeAnimation<ScaleXY, ScaleXY> f2634h;
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     @NonNull
     public BaseKeyframeAnimation<Float, Float> f2635i;
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     @NonNull
     public BaseKeyframeAnimation<Integer, Integer> f2636j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     @Nullable
     public FloatKeyframeAnimation f2637k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     @Nullable
     public FloatKeyframeAnimation f2638l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     @Nullable
     public BaseKeyframeAnimation<?, Float> f2639m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     @Nullable
     public BaseKeyframeAnimation<?, Float> f2640n;
 
@@ -117,7 +117,7 @@ public class TransformKeyframeAnimation {
         }
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public void m743a(BaseLayer2 baseLayer2) {
         baseLayer2.m777e(this.f2636j);
         baseLayer2.m777e(this.f2639m);
@@ -130,7 +130,7 @@ public class TransformKeyframeAnimation {
         baseLayer2.m777e(this.f2638l);
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public void m744b(BaseKeyframeAnimation.b bVar) {
         BaseKeyframeAnimation<Integer, Integer> baseKeyframeAnimation = this.f2636j;
         if (baseKeyframeAnimation != null) {
@@ -171,7 +171,7 @@ public class TransformKeyframeAnimation {
     }
 
     /* JADX WARN: Multi-variable type inference failed */
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public <T> boolean m745c(T t, @Nullable LottieValueCallback<T> lottieValueCallback) {
         FloatKeyframeAnimation floatKeyframeAnimation;
         FloatKeyframeAnimation floatKeyframeAnimation2;
@@ -266,14 +266,14 @@ public class TransformKeyframeAnimation {
         return true;
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final void m746d() {
         for (int i = 0; i < 9; i++) {
             this.f2631e[i] = 0.0f;
         }
     }
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public Matrix m747e() {
         this.f2627a.reset();
         BaseKeyframeAnimation<?, PointF> baseKeyframeAnimation = this.f2633g;
@@ -342,7 +342,7 @@ public class TransformKeyframeAnimation {
         return this.f2627a;
     }
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public Matrix m748f(float f) {
         BaseKeyframeAnimation<?, PointF> baseKeyframeAnimation = this.f2633g;
         PointF pointFMo727e = baseKeyframeAnimation == null ? null : baseKeyframeAnimation.mo727e();

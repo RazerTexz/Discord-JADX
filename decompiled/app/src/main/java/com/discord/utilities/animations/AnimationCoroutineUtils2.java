@@ -5,9 +5,9 @@ import kotlin.Unit;
 import kotlin.jvm.functions.Function1;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: AnimationCoroutineUtils.kt */
-/* renamed from: com.discord.utilities.animations.AnimationCoroutineUtilsKt$await$$inlined$suspendCancellableCoroutine$lambda$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.utilities.animations.AnimationCoroutineUtilsKt$await$$inlined$suspendCancellableCoroutine$lambda$1, reason: use source file name */
+/* JADX INFO: compiled from: AnimationCoroutineUtils.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class AnimationCoroutineUtils2 extends Lambda implements Function1<Throwable, Unit> {
     public final /* synthetic */ ViewPropertyAnimator $this_await$inlined;
 
@@ -23,7 +23,7 @@ public final class AnimationCoroutineUtils2 extends Lambda implements Function1<
         return Unit.f27425a;
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final void invoke2(Throwable th) {
         this.$this_await$inlined.setListener(null);
         this.$this_await$inlined.cancel();

@@ -17,8 +17,8 @@ import androidx.work.impl.utils.PackageManagerHelper;
 import java.util.Iterator;
 import java.util.List;
 
+/* JADX INFO: loaded from: classes.dex */
 @RestrictTo({RestrictTo.Scope.LIBRARY_GROUP})
-/* loaded from: classes.dex */
 public class Schedulers {
     public static final String GCM_SCHEDULER = "androidx.work.impl.background.gcm.GcmScheduler";
     private static final String TAG = Logger.tagWithPrefix("Schedulers");

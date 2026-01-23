@@ -42,14 +42,14 @@ import p658rx.Observable;
 import p658rx.subjects.BehaviorSubject;
 import p658rx.subjects.Subject;
 
-/* loaded from: classes2.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class WidgetChannelSettingsPermissionsAddMember extends AppFragment {
     private static final String INTENT_EXTRA_CHANNEL_ID = "INTENT_EXTRA_CHANNEL_ID";
     private static final String INTENT_EXTRA_GUILD_ID = "INTENT_EXTRA_GUILD_ID";
     private static final int VIEW_INDEX_MEMBER_LIST = 0;
     private static final int VIEW_INDEX_NO_RESULTS = 1;
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static final /* synthetic */ int f19372j = 0;
     private SimpleMembersAdapter membersAdapter;
     private RecyclerView membersRecycler;
@@ -179,12 +179,12 @@ public class WidgetChannelSettingsPermissionsAddMember extends AppFragment {
         AppScreen2.m156d(context, WidgetChannelSettingsPermissionsAddMember.class, intent);
     }
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public static /* synthetic */ void m8625g(WidgetChannelSettingsPermissionsAddMember widgetChannelSettingsPermissionsAddMember, Model model) {
         widgetChannelSettingsPermissionsAddMember.configureUI(model);
     }
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public /* synthetic */ Unit m8626h(Editable editable) {
         this.nameFilterPublisher.onNext(editable.toString());
         return null;

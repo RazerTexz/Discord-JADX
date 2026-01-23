@@ -43,17 +43,17 @@ import p507d0.p580t.Maps6;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: IntentUtils.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: IntentUtils.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class IntentUtils {
     public static final IntentUtils INSTANCE = new IntentUtils();
     private static final Map<Regex, Function3<Uri, MatchResult, Context, RouteHandlers.AnalyticsMetadata>> pathRouterMap;
 
-    /* compiled from: IntentUtils.kt */
+    /* JADX INFO: compiled from: IntentUtils.kt */
     public static final class RouteBuilders {
         public static final RouteBuilders INSTANCE = new RouteBuilders();
 
-        /* compiled from: IntentUtils.kt */
+        /* JADX INFO: compiled from: IntentUtils.kt */
         public static final class SDK {
             public static final SDK INSTANCE = new SDK();
 
@@ -66,7 +66,7 @@ public final class IntentUtils {
             }
         }
 
-        /* compiled from: IntentUtils.kt */
+        /* JADX INFO: compiled from: IntentUtils.kt */
         public static final class Uris {
             public static final Uris INSTANCE = new Uris();
 
@@ -183,8 +183,8 @@ public final class IntentUtils {
         }
     }
 
-    /* compiled from: IntentUtils.kt */
-    /* renamed from: com.discord.utilities.intent.IntentUtils$consumeExternalRoutingIntent$1 */
+    /* JADX INFO: renamed from: com.discord.utilities.intent.IntentUtils$consumeExternalRoutingIntent$1 */
+    /* JADX INFO: compiled from: IntentUtils.kt */
     public static final class C67831 extends Lambda implements Function2<Uri, Boolean, Unit> {
         public final /* synthetic */ Intent $intent;
 
@@ -212,8 +212,8 @@ public final class IntentUtils {
         }
     }
 
-    /* compiled from: IntentUtils.kt */
-    /* renamed from: com.discord.utilities.intent.IntentUtils$consumeRoutingIntent$1 */
+    /* JADX INFO: renamed from: com.discord.utilities.intent.IntentUtils$consumeRoutingIntent$1 */
+    /* JADX INFO: compiled from: IntentUtils.kt */
     public static final class C67841 extends Lambda implements Function2<Uri, Boolean, Unit> {
         public static final C67841 INSTANCE = new C67841();
 

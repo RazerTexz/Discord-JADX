@@ -5,8 +5,8 @@ import kotlin.jvm.internal.DefaultConstructorMarker;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: HomeConfig.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: HomeConfig.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final /* data */ class HomeConfig implements Serializable {
     private final boolean ageGated;
     private final Long guildScheduledEventId;
@@ -35,17 +35,17 @@ public final /* data */ class HomeConfig implements Serializable {
         return homeConfig.copy(l, l2, z2);
     }
 
-    /* renamed from: component1, reason: from getter */
+    /* JADX INFO: renamed from: component1, reason: from getter */
     public final Long getGuildWelcomeSheetId() {
         return this.guildWelcomeSheetId;
     }
 
-    /* renamed from: component2, reason: from getter */
+    /* JADX INFO: renamed from: component2, reason: from getter */
     public final Long getGuildScheduledEventId() {
         return this.guildScheduledEventId;
     }
 
-    /* renamed from: component3, reason: from getter */
+    /* JADX INFO: renamed from: component3, reason: from getter */
     public final boolean getAgeGated() {
         return this.ageGated;
     }
@@ -78,17 +78,20 @@ public final /* data */ class HomeConfig implements Serializable {
     }
 
     /* JADX WARN: Multi-variable type inference failed */
+    /* JADX WARN: Type inference failed for: r1v3, types: [int] */
+    /* JADX WARN: Type inference failed for: r1v4 */
+    /* JADX WARN: Type inference failed for: r1v6 */
     public int hashCode() {
         Long l = this.guildWelcomeSheetId;
         int iHashCode = (l != null ? l.hashCode() : 0) * 31;
         Long l2 = this.guildScheduledEventId;
         int iHashCode2 = (iHashCode + (l2 != null ? l2.hashCode() : 0)) * 31;
         boolean z2 = this.ageGated;
-        int i = z2;
-        if (z2 != 0) {
-            i = 1;
+        ?? r1 = z2;
+        if (z2) {
+            r1 = 1;
         }
-        return iHashCode2 + i;
+        return iHashCode2 + r1;
     }
 
     public String toString() {

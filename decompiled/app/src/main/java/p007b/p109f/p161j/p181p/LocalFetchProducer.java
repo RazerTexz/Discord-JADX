@@ -9,28 +9,28 @@ import p007b.p109f.p115d.p119d.Closeables;
 import p007b.p109f.p115d.p122g.PooledByteBufferFactory;
 import p007b.p109f.p161j.p175j.EncodedImage2;
 
-/* compiled from: LocalFetchProducer.java */
-/* renamed from: b.f.j.p.g0, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.f.j.p.g0, reason: use source file name */
+/* JADX INFO: compiled from: LocalFetchProducer.java */
+/* JADX INFO: loaded from: classes3.dex */
 public abstract class LocalFetchProducer implements Producer2<EncodedImage2> {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final Executor f4060a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final PooledByteBufferFactory f4061b;
 
-    /* compiled from: LocalFetchProducer.java */
-    /* renamed from: b.f.j.p.g0$a */
+    /* JADX INFO: renamed from: b.f.j.p.g0$a */
+    /* JADX INFO: compiled from: LocalFetchProducer.java */
     public class a extends StatefulProducerRunnable<EncodedImage2> {
 
-        /* renamed from: o */
+        /* JADX INFO: renamed from: o */
         public final /* synthetic */ ImageRequest f4062o;
 
-        /* renamed from: p */
+        /* JADX INFO: renamed from: p */
         public final /* synthetic */ ProducerListener2 f4063p;
 
-        /* renamed from: q */
+        /* JADX INFO: renamed from: q */
         public final /* synthetic */ ProducerContext f4064q;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -42,7 +42,7 @@ public abstract class LocalFetchProducer implements Producer2<EncodedImage2> {
         }
 
         @Override // p007b.p109f.p161j.p181p.StatefulProducerRunnable
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public void mo1465b(EncodedImage2 encodedImage2) {
             EncodedImage2 encodedImage22 = encodedImage2;
             if (encodedImage22 != null) {
@@ -51,7 +51,7 @@ public abstract class LocalFetchProducer implements Producer2<EncodedImage2> {
         }
 
         @Override // p007b.p109f.p161j.p181p.StatefulProducerRunnable
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         public EncodedImage2 mo1467d() throws Exception {
             EncodedImage2 encodedImage2Mo1428d = LocalFetchProducer.this.mo1428d(this.f4062o);
             if (encodedImage2Mo1428d == null) {
@@ -66,11 +66,11 @@ public abstract class LocalFetchProducer implements Producer2<EncodedImage2> {
         }
     }
 
-    /* compiled from: LocalFetchProducer.java */
-    /* renamed from: b.f.j.p.g0$b */
+    /* JADX INFO: renamed from: b.f.j.p.g0$b */
+    /* JADX INFO: compiled from: LocalFetchProducer.java */
     public class b extends BaseProducerContextCallbacks {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final /* synthetic */ StatefulProducerRunnable f4066a;
 
         public b(LocalFetchProducer localFetchProducer, StatefulProducerRunnable statefulProducerRunnable) {
@@ -78,7 +78,7 @@ public abstract class LocalFetchProducer implements Producer2<EncodedImage2> {
         }
 
         @Override // p007b.p109f.p161j.p181p.ProducerContextCallbacks
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public void mo1438a() {
             this.f4066a.m1464a();
         }
@@ -90,7 +90,7 @@ public abstract class LocalFetchProducer implements Producer2<EncodedImage2> {
     }
 
     @Override // p007b.p109f.p161j.p181p.Producer2
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public void mo1417b(Consumer2<EncodedImage2> consumer2, ProducerContext producerContext) {
         ProducerListener2 producerListener2Mo1457o = producerContext.mo1457o();
         ImageRequest imageRequestMo1447e = producerContext.mo1447e();
@@ -100,7 +100,7 @@ public abstract class LocalFetchProducer implements Producer2<EncodedImage2> {
         this.f4060a.execute(aVar);
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public EncodedImage2 m1478c(InputStream inputStream, int i) throws IOException {
         CloseableReference closeableReferenceM8632A = null;
         try {
@@ -121,9 +121,9 @@ public abstract class LocalFetchProducer implements Producer2<EncodedImage2> {
         }
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public abstract EncodedImage2 mo1428d(ImageRequest imageRequest) throws IOException;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public abstract String mo1429e();
 }

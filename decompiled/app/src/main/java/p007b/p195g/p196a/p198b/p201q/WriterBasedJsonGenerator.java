@@ -21,33 +21,33 @@ import p007b.p195g.p196a.p198b.p200p.NumberOutput;
 import p007b.p195g.p196a.p198b.p204t.BufferRecycler;
 import p007b.p195g.p196a.p198b.p204t.VersionUtil;
 
-/* compiled from: WriterBasedJsonGenerator.java */
-/* renamed from: b.g.a.b.q.d, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.g.a.b.q.d, reason: use source file name */
+/* JADX INFO: compiled from: WriterBasedJsonGenerator.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class WriterBasedJsonGenerator extends JsonGeneratorImpl {
 
-    /* renamed from: x */
+    /* JADX INFO: renamed from: x */
     public static final char[] f4576x = (char[]) CharTypes.f4536a.clone();
 
-    /* renamed from: A */
+    /* JADX INFO: renamed from: A */
     public char[] f4577A;
 
-    /* renamed from: B */
+    /* JADX INFO: renamed from: B */
     public int f4578B;
 
-    /* renamed from: C */
+    /* JADX INFO: renamed from: C */
     public int f4579C;
 
-    /* renamed from: D */
+    /* JADX INFO: renamed from: D */
     public int f4580D;
 
-    /* renamed from: E */
+    /* JADX INFO: renamed from: E */
     public char[] f4581E;
 
-    /* renamed from: y */
+    /* JADX INFO: renamed from: y */
     public final Writer f4582y;
 
-    /* renamed from: z */
+    /* JADX INFO: renamed from: z */
     public char f4583z;
 
     public WriterBasedJsonGenerator(IOContext iOContext, int i, ObjectCodec objectCodec, Writer writer, char c) {
@@ -82,13 +82,13 @@ public class WriterBasedJsonGenerator extends JsonGeneratorImpl {
     }
 
     @Override // p007b.p195g.p196a.p198b.JsonGenerator
-    /* renamed from: A */
+    /* JADX INFO: renamed from: A */
     public void mo1631A() throws IOException {
         mo1693t0("write a null");
         m1721H0();
     }
 
-    /* renamed from: A0 */
+    /* JADX INFO: renamed from: A0 */
     public final void m1714A0(char c, int i) throws IOException {
         int i2;
         if (i >= 0) {
@@ -138,7 +138,7 @@ public class WriterBasedJsonGenerator extends JsonGeneratorImpl {
         this.f4579C = i11 + 1;
     }
 
-    /* renamed from: B0 */
+    /* JADX INFO: renamed from: B0 */
     public void m1715B0() throws IOException {
         int i = this.f4579C;
         int i2 = this.f4578B;
@@ -151,7 +151,7 @@ public class WriterBasedJsonGenerator extends JsonGeneratorImpl {
     }
 
     @Override // p007b.p195g.p196a.p198b.JsonGenerator
-    /* renamed from: C */
+    /* JADX INFO: renamed from: C */
     public void mo1632C(double d) throws IOException {
         if (!this.f4530p) {
             String str = NumberOutput.f4554a;
@@ -164,7 +164,7 @@ public class WriterBasedJsonGenerator extends JsonGeneratorImpl {
         mo1658j0(String.valueOf(d));
     }
 
-    /* renamed from: C0 */
+    /* JADX INFO: renamed from: C0 */
     public final int m1716C0(char[] cArr, int i, int i2, char c, int i3) throws IOException {
         int i4;
         if (i3 >= 0) {
@@ -236,7 +236,7 @@ public class WriterBasedJsonGenerator extends JsonGeneratorImpl {
     }
 
     @Override // p007b.p195g.p196a.p198b.JsonGenerator
-    /* renamed from: D */
+    /* JADX INFO: renamed from: D */
     public void mo1633D(float f) throws IOException {
         if (!this.f4530p) {
             String str = NumberOutput.f4554a;
@@ -249,7 +249,7 @@ public class WriterBasedJsonGenerator extends JsonGeneratorImpl {
         mo1658j0(String.valueOf(f));
     }
 
-    /* renamed from: D0 */
+    /* JADX INFO: renamed from: D0 */
     public final void m1717D0(char c, int i) throws IOException {
         int i2;
         if (i >= 0) {
@@ -325,7 +325,7 @@ public class WriterBasedJsonGenerator extends JsonGeneratorImpl {
         cArr4[i13 + 1] = cArr6[c & 15];
     }
 
-    /* renamed from: E0 */
+    /* JADX INFO: renamed from: E0 */
     public final int m1718E0(InputStream inputStream, byte[] bArr, int i, int i2, int i3) throws IOException {
         int i4 = 0;
         while (i < i2) {
@@ -348,7 +348,7 @@ public class WriterBasedJsonGenerator extends JsonGeneratorImpl {
         return i4;
     }
 
-    /* renamed from: F0 */
+    /* JADX INFO: renamed from: F0 */
     public final int m1719F0(Base64Variant base64Variant, InputStream inputStream, byte[] bArr) throws IOException {
         int i = this.f4580D - 6;
         int i2 = 2;
@@ -404,7 +404,7 @@ public class WriterBasedJsonGenerator extends JsonGeneratorImpl {
         return i11;
     }
 
-    /* renamed from: G0 */
+    /* JADX INFO: renamed from: G0 */
     public final int m1720G0(Base64Variant base64Variant, InputStream inputStream, byte[] bArr, int i) throws IOException {
         int iM1718E0;
         int i2 = this.f4580D - 6;
@@ -464,7 +464,7 @@ public class WriterBasedJsonGenerator extends JsonGeneratorImpl {
     }
 
     @Override // p007b.p195g.p196a.p198b.JsonGenerator
-    /* renamed from: H */
+    /* JADX INFO: renamed from: H */
     public void mo1634H(int i) throws IOException {
         mo1693t0("write a number");
         if (!this.f4530p) {
@@ -489,7 +489,7 @@ public class WriterBasedJsonGenerator extends JsonGeneratorImpl {
         cArr2[iM1701d] = this.f4583z;
     }
 
-    /* renamed from: H0 */
+    /* JADX INFO: renamed from: H0 */
     public final void m1721H0() throws IOException {
         if (this.f4579C + 4 >= this.f4580D) {
             m1715B0();
@@ -507,7 +507,7 @@ public class WriterBasedJsonGenerator extends JsonGeneratorImpl {
     }
 
     @Override // p007b.p195g.p196a.p198b.JsonGenerator
-    /* renamed from: I */
+    /* JADX INFO: renamed from: I */
     public void mo1635I(long j) throws IOException {
         mo1693t0("write a number");
         if (!this.f4530p) {
@@ -532,7 +532,7 @@ public class WriterBasedJsonGenerator extends JsonGeneratorImpl {
         cArr2[iM1702e] = this.f4583z;
     }
 
-    /* renamed from: I0 */
+    /* JADX INFO: renamed from: I0 */
     public final void m1722I0(String str) throws IOException {
         if (this.f4579C >= this.f4580D) {
             m1715B0();
@@ -552,7 +552,7 @@ public class WriterBasedJsonGenerator extends JsonGeneratorImpl {
     }
 
     @Override // p007b.p195g.p196a.p198b.JsonGenerator
-    /* renamed from: J */
+    /* JADX INFO: renamed from: J */
     public void mo1636J(String str) throws IOException {
         mo1693t0("write a number");
         if (str == null) {
@@ -566,7 +566,7 @@ public class WriterBasedJsonGenerator extends JsonGeneratorImpl {
 
     /* JADX WARN: Removed duplicated region for block: B:101:0x00e3 A[SYNTHETIC] */
     /* JADX WARN: Removed duplicated region for block: B:63:0x00de  */
-    /* renamed from: J0 */
+    /* JADX INFO: renamed from: J0 */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
@@ -742,7 +742,7 @@ public class WriterBasedJsonGenerator extends JsonGeneratorImpl {
     }
 
     @Override // p007b.p195g.p196a.p198b.JsonGenerator
-    /* renamed from: L */
+    /* JADX INFO: renamed from: L */
     public void mo1637L(BigDecimal bigDecimal) throws IOException {
         mo1693t0("write a number");
         if (bigDecimal == null) {
@@ -755,7 +755,7 @@ public class WriterBasedJsonGenerator extends JsonGeneratorImpl {
     }
 
     @Override // p007b.p195g.p196a.p198b.JsonGenerator
-    /* renamed from: N */
+    /* JADX INFO: renamed from: N */
     public void mo1638N(BigInteger bigInteger) throws IOException {
         mo1693t0("write a number");
         if (bigInteger == null) {
@@ -768,7 +768,7 @@ public class WriterBasedJsonGenerator extends JsonGeneratorImpl {
     }
 
     @Override // p007b.p195g.p196a.p198b.JsonGenerator
-    /* renamed from: O */
+    /* JADX INFO: renamed from: O */
     public void mo1639O(short s2) throws IOException {
         mo1693t0("write a number");
         if (!this.f4530p) {
@@ -794,7 +794,7 @@ public class WriterBasedJsonGenerator extends JsonGeneratorImpl {
     }
 
     @Override // p007b.p195g.p196a.p198b.JsonGenerator
-    /* renamed from: R */
+    /* JADX INFO: renamed from: R */
     public void mo1640R(char c) throws IOException {
         if (this.f4579C >= this.f4580D) {
             m1715B0();
@@ -806,7 +806,7 @@ public class WriterBasedJsonGenerator extends JsonGeneratorImpl {
     }
 
     @Override // p007b.p195g.p196a.p198b.JsonGenerator
-    /* renamed from: S */
+    /* JADX INFO: renamed from: S */
     public void mo1641S(SerializableString serializableString) throws IOException {
         int iMo1689b = serializableString.mo1689b(this.f4577A, this.f4579C);
         if (iMo1689b < 0) {
@@ -817,7 +817,7 @@ public class WriterBasedJsonGenerator extends JsonGeneratorImpl {
     }
 
     @Override // p007b.p195g.p196a.p198b.JsonGenerator
-    /* renamed from: T */
+    /* JADX INFO: renamed from: T */
     public void mo1642T(String str) throws IOException {
         int length = str.length();
         int i = this.f4580D - this.f4579C;
@@ -857,7 +857,7 @@ public class WriterBasedJsonGenerator extends JsonGeneratorImpl {
     }
 
     @Override // p007b.p195g.p196a.p198b.JsonGenerator
-    /* renamed from: U */
+    /* JADX INFO: renamed from: U */
     public void mo1643U(char[] cArr, int i, int i2) throws IOException {
         if (i2 >= 32) {
             m1715B0();
@@ -872,7 +872,7 @@ public class WriterBasedJsonGenerator extends JsonGeneratorImpl {
     }
 
     @Override // p007b.p195g.p196a.p198b.JsonGenerator
-    /* renamed from: W */
+    /* JADX INFO: renamed from: W */
     public void mo1645W() throws IOException {
         mo1693t0("start an array");
         this.f4531q = this.f4531q.m1706f();
@@ -891,7 +891,7 @@ public class WriterBasedJsonGenerator extends JsonGeneratorImpl {
     }
 
     @Override // p007b.p195g.p196a.p198b.JsonGenerator
-    /* renamed from: X */
+    /* JADX INFO: renamed from: X */
     public void mo1646X(Object obj) throws IOException {
         mo1693t0("start an array");
         this.f4531q = this.f4531q.m1707g(obj);
@@ -910,7 +910,7 @@ public class WriterBasedJsonGenerator extends JsonGeneratorImpl {
     }
 
     @Override // p007b.p195g.p196a.p198b.JsonGenerator
-    /* renamed from: b0 */
+    /* JADX INFO: renamed from: b0 */
     public void mo1649b0(Object obj, int i) throws IOException {
         mo1693t0("start an array");
         this.f4531q = this.f4531q.m1707g(obj);
@@ -929,7 +929,7 @@ public class WriterBasedJsonGenerator extends JsonGeneratorImpl {
     }
 
     @Override // p007b.p195g.p196a.p198b.JsonGenerator
-    /* renamed from: c0 */
+    /* JADX INFO: renamed from: c0 */
     public void mo1651c0() throws IOException {
         mo1693t0("start an object");
         this.f4531q = this.f4531q.m1708h();
@@ -988,7 +988,7 @@ public class WriterBasedJsonGenerator extends JsonGeneratorImpl {
     }
 
     @Override // p007b.p195g.p196a.p198b.JsonGenerator
-    /* renamed from: d0 */
+    /* JADX INFO: renamed from: d0 */
     public void mo1653d0(Object obj) throws IOException {
         mo1693t0("start an object");
         this.f4531q = this.f4531q.m1709i(obj);
@@ -1007,7 +1007,7 @@ public class WriterBasedJsonGenerator extends JsonGeneratorImpl {
     }
 
     @Override // p007b.p195g.p196a.p198b.JsonGenerator
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public int mo1655f(Base64Variant base64Variant, InputStream inputStream, int i) throws IOException {
         mo1693t0("write a binary value");
         if (this.f4579C >= this.f4580D) {
@@ -1066,7 +1066,7 @@ public class WriterBasedJsonGenerator extends JsonGeneratorImpl {
     }
 
     @Override // p007b.p195g.p196a.p198b.JsonGenerator
-    /* renamed from: g0 */
+    /* JADX INFO: renamed from: g0 */
     public void mo1657g0(SerializableString serializableString) throws IOException {
         mo1693t0("write a string");
         if (this.f4579C >= this.f4580D) {
@@ -1112,7 +1112,7 @@ public class WriterBasedJsonGenerator extends JsonGeneratorImpl {
     }
 
     @Override // p007b.p195g.p196a.p198b.JsonGenerator
-    /* renamed from: j0 */
+    /* JADX INFO: renamed from: j0 */
     public void mo1658j0(String str) throws IOException {
         mo1693t0("write a string");
         if (str == null) {
@@ -1139,7 +1139,7 @@ public class WriterBasedJsonGenerator extends JsonGeneratorImpl {
     /* JADX WARN: Removed duplicated region for block: B:17:0x003c A[PHI: r4
       0x003c: PHI (r4v10 int) = (r4v7 int), (r4v11 int) binds: [B:15:0x0038, B:13:0x0035] A[DONT_GENERATE, DONT_INLINE]] */
     @Override // p007b.p195g.p196a.p198b.JsonGenerator
-    /* renamed from: m0 */
+    /* JADX INFO: renamed from: m0 */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
@@ -1241,7 +1241,7 @@ public class WriterBasedJsonGenerator extends JsonGeneratorImpl {
     }
 
     @Override // p007b.p195g.p196a.p198b.JsonGenerator
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public void mo1660n(Base64Variant base64Variant, byte[] bArr, int i, int i2) throws IOException {
         mo1693t0("write a binary value");
         if (this.f4579C >= this.f4580D) {
@@ -1299,7 +1299,7 @@ public class WriterBasedJsonGenerator extends JsonGeneratorImpl {
     }
 
     @Override // p007b.p195g.p196a.p198b.JsonGenerator
-    /* renamed from: s */
+    /* JADX INFO: renamed from: s */
     public void mo1662s(boolean z2) throws IOException {
         int i;
         mo1693t0("write a boolean value");
@@ -1331,7 +1331,7 @@ public class WriterBasedJsonGenerator extends JsonGeneratorImpl {
     }
 
     @Override // p007b.p195g.p196a.p198b.JsonGenerator
-    /* renamed from: t */
+    /* JADX INFO: renamed from: t */
     public void mo1663t() throws IOException {
         if (!this.f4531q.m1674b()) {
             StringBuilder sbM833U = outline.m833U("Current context not Array but ");
@@ -1356,7 +1356,7 @@ public class WriterBasedJsonGenerator extends JsonGeneratorImpl {
     }
 
     @Override // p007b.p195g.p196a.p198b.p199o.GeneratorBase
-    /* renamed from: t0 */
+    /* JADX INFO: renamed from: t0 */
     public final void mo1693t0(String str) throws IOException {
         char c;
         int iM1713m = this.f4531q.m1713m();
@@ -1424,7 +1424,7 @@ public class WriterBasedJsonGenerator extends JsonGeneratorImpl {
     }
 
     @Override // p007b.p195g.p196a.p198b.JsonGenerator
-    /* renamed from: u */
+    /* JADX INFO: renamed from: u */
     public void mo1664u() throws IOException {
         if (!this.f4531q.m1675c()) {
             StringBuilder sbM833U = outline.m833U("Current context not Object but ");
@@ -1449,7 +1449,7 @@ public class WriterBasedJsonGenerator extends JsonGeneratorImpl {
     }
 
     @Override // p007b.p195g.p196a.p198b.JsonGenerator
-    /* renamed from: x */
+    /* JADX INFO: renamed from: x */
     public void mo1665x(SerializableString serializableString) throws IOException {
         int iM1712l = this.f4531q.m1712l(serializableString.getValue());
         if (iM1712l == 4) {
@@ -1529,7 +1529,7 @@ public class WriterBasedJsonGenerator extends JsonGeneratorImpl {
     }
 
     @Override // p007b.p195g.p196a.p198b.JsonGenerator
-    /* renamed from: y */
+    /* JADX INFO: renamed from: y */
     public void mo1666y(String str) throws IOException {
         int iM1712l = this.f4531q.m1712l(str);
         if (iM1712l == 4) {
@@ -1591,7 +1591,7 @@ public class WriterBasedJsonGenerator extends JsonGeneratorImpl {
         cArr5[i5] = this.f4583z;
     }
 
-    /* renamed from: z0 */
+    /* JADX INFO: renamed from: z0 */
     public final char[] m1724z0() {
         char[] cArr = {'\\', 0, '\\', 'u', '0', '0', 0, 0, '\\', 'u', 0, 0, 0, 0};
         this.f4581E = cArr;

@@ -5,16 +5,16 @@ import java.util.List;
 import java.util.Objects;
 import java.util.Vector;
 
-/* compiled from: com.google.firebase:firebase-messaging@@21.0.0 */
-/* renamed from: b.i.a.f.h.i.h */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.h.i.h */
+/* JADX INFO: compiled from: com.google.firebase:firebase-messaging@@21.0.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public final class C3494h extends AbstractC3493g {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final C3492f f9659a = new C3492f();
 
     @Override // p007b.p225i.p226a.p288f.p313h.p322i.AbstractC3493g
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final void mo4413a(Throwable th, Throwable th2) {
         List<Throwable> listPutIfAbsent;
         if (th2 == th) {

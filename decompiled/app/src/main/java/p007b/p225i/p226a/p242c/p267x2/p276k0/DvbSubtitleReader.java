@@ -8,27 +8,27 @@ import p007b.p225i.p226a.p242c.p267x2.ExtractorOutput;
 import p007b.p225i.p226a.p242c.p267x2.TrackOutput2;
 import p007b.p225i.p226a.p242c.p267x2.p276k0.TsPayloadReader;
 
-/* compiled from: DvbSubtitleReader.java */
-/* renamed from: b.i.a.c.x2.k0.n, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.x2.k0.n, reason: use source file name */
+/* JADX INFO: compiled from: DvbSubtitleReader.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class DvbSubtitleReader implements ElementaryStreamReader {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final List<TsPayloadReader.a> f8734a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final TrackOutput2[] f8735b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public boolean f8736c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public int f8737d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public int f8738e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public long f8739f = -9223372036854775807L;
 
     public DvbSubtitleReader(List<TsPayloadReader.a> list) {
@@ -36,7 +36,7 @@ public final class DvbSubtitleReader implements ElementaryStreamReader {
         this.f8735b = new TrackOutput2[list.size()];
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final boolean m3778a(ParsableByteArray parsableByteArray, int i) {
         if (parsableByteArray.m3081a() == 0) {
             return false;
@@ -49,7 +49,7 @@ public final class DvbSubtitleReader implements ElementaryStreamReader {
     }
 
     @Override // p007b.p225i.p226a.p242c.p267x2.p276k0.ElementaryStreamReader
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public void mo3758b(ParsableByteArray parsableByteArray) {
         if (this.f8736c) {
             if (this.f8737d != 2 || m3778a(parsableByteArray, 32)) {
@@ -67,14 +67,14 @@ public final class DvbSubtitleReader implements ElementaryStreamReader {
     }
 
     @Override // p007b.p225i.p226a.p242c.p267x2.p276k0.ElementaryStreamReader
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public void mo3759c() {
         this.f8736c = false;
         this.f8739f = -9223372036854775807L;
     }
 
     @Override // p007b.p225i.p226a.p242c.p267x2.p276k0.ElementaryStreamReader
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public void mo3760d() {
         if (this.f8736c) {
             if (this.f8739f != -9223372036854775807L) {
@@ -87,7 +87,7 @@ public final class DvbSubtitleReader implements ElementaryStreamReader {
     }
 
     @Override // p007b.p225i.p226a.p242c.p267x2.p276k0.ElementaryStreamReader
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public void mo3761e(ExtractorOutput extractorOutput, TsPayloadReader.d dVar) {
         for (int i = 0; i < this.f8735b.length; i++) {
             TsPayloadReader.a aVar = this.f8734a.get(i);
@@ -104,7 +104,7 @@ public final class DvbSubtitleReader implements ElementaryStreamReader {
     }
 
     @Override // p007b.p225i.p226a.p242c.p267x2.p276k0.ElementaryStreamReader
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public void mo3762f(long j, int i) {
         if ((i & 4) == 0) {
             return;

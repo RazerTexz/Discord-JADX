@@ -23,53 +23,53 @@ import p007b.p109f.p161j.p184s.ImageTranscoder;
 import p007b.p109f.p161j.p184s.ImageTranscoderFactory;
 import p007b.p109f.p161j.p184s.JpegTranscoderUtils;
 
-/* compiled from: ResizeAndRotateProducer.java */
-/* renamed from: b.f.j.p.c1, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.f.j.p.c1, reason: use source file name */
+/* JADX INFO: compiled from: ResizeAndRotateProducer.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class ResizeAndRotateProducer implements Producer2<EncodedImage2> {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final Executor f4011a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final PooledByteBufferFactory f4012b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final Producer2<EncodedImage2> f4013c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final boolean f4014d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final ImageTranscoderFactory f4015e;
 
-    /* compiled from: ResizeAndRotateProducer.java */
-    /* renamed from: b.f.j.p.c1$a */
+    /* JADX INFO: renamed from: b.f.j.p.c1$a */
+    /* JADX INFO: compiled from: ResizeAndRotateProducer.java */
     public class a extends DelegatingConsumer<EncodedImage2, EncodedImage2> {
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public final boolean f4016c;
 
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         public final ImageTranscoderFactory f4017d;
 
-        /* renamed from: e */
+        /* JADX INFO: renamed from: e */
         public final ProducerContext f4018e;
 
-        /* renamed from: f */
+        /* JADX INFO: renamed from: f */
         public boolean f4019f;
 
-        /* renamed from: g */
+        /* JADX INFO: renamed from: g */
         public final JobScheduler f4020g;
 
-        /* compiled from: ResizeAndRotateProducer.java */
-        /* renamed from: b.f.j.p.c1$a$a, reason: collision with other inner class name */
+        /* JADX INFO: renamed from: b.f.j.p.c1$a$a, reason: collision with other inner class name */
+        /* JADX INFO: compiled from: ResizeAndRotateProducer.java */
         public class C13220a implements JobScheduler.c {
             public C13220a(ResizeAndRotateProducer resizeAndRotateProducer) {
             }
 
             @Override // p007b.p109f.p161j.p181p.JobScheduler.c
-            /* renamed from: a */
+            /* JADX INFO: renamed from: a */
             public void mo1436a(EncodedImage2 encodedImage2, int i) throws Throwable {
                 ImageTranscodeResult imageTranscodeResultMo1530c;
                 a aVar = a.this;
@@ -118,11 +118,11 @@ public class ResizeAndRotateProducer implements Producer2<EncodedImage2> {
             }
         }
 
-        /* compiled from: ResizeAndRotateProducer.java */
-        /* renamed from: b.f.j.p.c1$a$b */
+        /* JADX INFO: renamed from: b.f.j.p.c1$a$b */
+        /* JADX INFO: compiled from: ResizeAndRotateProducer.java */
         public class b extends BaseProducerContextCallbacks {
 
-            /* renamed from: a */
+            /* JADX INFO: renamed from: a */
             public final /* synthetic */ Consumer2 f4023a;
 
             public b(ResizeAndRotateProducer resizeAndRotateProducer, Consumer2 consumer2) {
@@ -130,7 +130,7 @@ public class ResizeAndRotateProducer implements Producer2<EncodedImage2> {
             }
 
             @Override // p007b.p109f.p161j.p181p.ProducerContextCallbacks
-            /* renamed from: a */
+            /* JADX INFO: renamed from: a */
             public void mo1438a() {
                 a.this.f4020g.m1431a();
                 a.this.f4019f = true;
@@ -138,7 +138,7 @@ public class ResizeAndRotateProducer implements Producer2<EncodedImage2> {
             }
 
             @Override // p007b.p109f.p161j.p181p.BaseProducerContextCallbacks, p007b.p109f.p161j.p181p.ProducerContextCallbacks
-            /* renamed from: b */
+            /* JADX INFO: renamed from: b */
             public void mo1439b() {
                 if (a.this.f4018e.mo1458p()) {
                     a.this.f4020g.m1434d();
@@ -160,7 +160,7 @@ public class ResizeAndRotateProducer implements Producer2<EncodedImage2> {
         /* JADX WARN: Removed duplicated region for block: B:28:0x0079  */
         /* JADX WARN: Removed duplicated region for block: B:30:0x007c  */
         @Override // p007b.p109f.p161j.p181p.BaseConsumer
-        /* renamed from: i */
+        /* JADX INFO: renamed from: i */
         /*
             Code decompiled incorrectly, please refer to instructions dump.
         */
@@ -259,7 +259,7 @@ public class ResizeAndRotateProducer implements Producer2<EncodedImage2> {
             }
         }
 
-        /* renamed from: n */
+        /* JADX INFO: renamed from: n */
         public final Map<String, String> m1437n(EncodedImage2 encodedImage2, ResizeOptions resizeOptions, ImageTranscodeResult imageTranscodeResult, String str) {
             String str2;
             long j;
@@ -307,7 +307,7 @@ public class ResizeAndRotateProducer implements Producer2<EncodedImage2> {
     }
 
     @Override // p007b.p109f.p161j.p181p.Producer2
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public void mo1417b(Consumer2<EncodedImage2> consumer2, ProducerContext producerContext) {
         this.f4013c.mo1417b(new a(consumer2, producerContext, this.f4014d, this.f4015e), producerContext);
     }

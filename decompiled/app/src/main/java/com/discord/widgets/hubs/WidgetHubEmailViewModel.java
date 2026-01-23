@@ -19,14 +19,14 @@ import p007b.p008a.p018d.AppViewModel;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetHubEmailViewModel.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetHubEmailViewModel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetHubEmailViewModel extends AppViewModel<WidgetHubEmailViewModel4> {
     private final boolean multiDomainEnabled;
     private final RestAPI restAPI;
 
-    /* compiled from: WidgetHubEmailViewModel.kt */
-    /* renamed from: com.discord.widgets.hubs.WidgetHubEmailViewModel$submitEmail$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.hubs.WidgetHubEmailViewModel$submitEmail$1 */
+    /* JADX INFO: compiled from: WidgetHubEmailViewModel.kt */
     public static final class C90421 extends Lambda implements Function1<EmailVerification, TrackNetworkMetadata2> {
         public static final C90421 INSTANCE = new C90421();
 
@@ -39,14 +39,14 @@ public final class WidgetHubEmailViewModel extends AppViewModel<WidgetHubEmailVi
             return invoke2(emailVerification);
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final TrackNetworkMetadata2 invoke2(EmailVerification emailVerification) {
             return new TrackNetworkActionHubEmailVerifySend(emailVerification != null ? Boolean.valueOf(emailVerification.getHasMatchingGuild()) : null);
         }
     }
 
-    /* compiled from: WidgetHubEmailViewModel.kt */
-    /* renamed from: com.discord.widgets.hubs.WidgetHubEmailViewModel$submitEmail$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.hubs.WidgetHubEmailViewModel$submitEmail$2 */
+    /* JADX INFO: compiled from: WidgetHubEmailViewModel.kt */
     public static final class C90432 extends Lambda implements Function1<RestCallState<? extends EmailVerification>, Unit> {
         public C90432() {
             super(1);
@@ -58,7 +58,7 @@ public final class WidgetHubEmailViewModel extends AppViewModel<WidgetHubEmailVi
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(RestCallState<EmailVerification> restCallState) {
             Intrinsics3.checkNotNullParameter(restCallState, "it");
             WidgetHubEmailViewModel widgetHubEmailViewModel = WidgetHubEmailViewModel.this;

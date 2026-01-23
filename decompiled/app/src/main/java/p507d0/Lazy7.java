@@ -5,9 +5,9 @@ import kotlin.Lazy;
 import kotlin.jvm.functions.Function0;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: Lazy.kt */
-/* renamed from: d0.s, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.s, reason: use source file name */
+/* JADX INFO: compiled from: Lazy.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class Lazy7<T> implements Lazy<T>, Serializable {
     private Object _value;
     private Function0<? extends T> initializer;

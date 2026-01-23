@@ -5,15 +5,15 @@ import java.util.List;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ModelSpotifyAlbum.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: ModelSpotifyAlbum.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class ModelSpotifyAlbum {
     private final String albumType;
     private final String id;
     private final List<AlbumImage> images;
     private final String name;
 
-    /* compiled from: ModelSpotifyAlbum.kt */
+    /* JADX INFO: compiled from: ModelSpotifyAlbum.kt */
     public static final /* data */ class AlbumImage {
         private final String url;
 
@@ -28,7 +28,7 @@ public final /* data */ class ModelSpotifyAlbum {
             return albumImage.copy(str);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final String getUrl() {
             return this.url;
         }
@@ -89,12 +89,12 @@ public final /* data */ class ModelSpotifyAlbum {
         return modelSpotifyAlbum.copy(str, str2, list, str3);
     }
 
-    /* renamed from: component1, reason: from getter */
+    /* JADX INFO: renamed from: component1, reason: from getter */
     public final String getAlbumType() {
         return this.albumType;
     }
 
-    /* renamed from: component2, reason: from getter */
+    /* JADX INFO: renamed from: component2, reason: from getter */
     public final String getId() {
         return this.id;
     }
@@ -103,7 +103,7 @@ public final /* data */ class ModelSpotifyAlbum {
         return this.images;
     }
 
-    /* renamed from: component4, reason: from getter */
+    /* JADX INFO: renamed from: component4, reason: from getter */
     public final String getName() {
         return this.name;
     }

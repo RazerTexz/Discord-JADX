@@ -13,8 +13,8 @@ import p658rx.Observable;
 import p658rx.Scheduler;
 import p658rx.Subscription;
 
-/* compiled from: GatewayDiscovery.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: GatewayDiscovery.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class GatewayDiscovery {
     private final Backoff backoff;
     private String gatewayUrl;
@@ -23,7 +23,7 @@ public final class GatewayDiscovery {
     private final Function1<String, Unit> log;
     private final Scheduler scheduler;
 
-    /* compiled from: GatewayDiscovery.kt */
+    /* JADX INFO: compiled from: GatewayDiscovery.kt */
     public static final class Cache {
         private static final String GATEWAY_URL_CACHE_KEY = "GATEWAY_URL_CACHE_KEY";
         public static final Cache INSTANCE = new Cache();
@@ -59,8 +59,8 @@ public final class GatewayDiscovery {
         }
     }
 
-    /* compiled from: GatewayDiscovery.kt */
-    /* renamed from: com.discord.gateway.GatewayDiscovery$discoverGatewayUrl$1 */
+    /* JADX INFO: renamed from: com.discord.gateway.GatewayDiscovery$discoverGatewayUrl$1 */
+    /* JADX INFO: compiled from: GatewayDiscovery.kt */
     public static final class C54821 extends Lambda implements Function1<Throwable, Unit> {
         public final /* synthetic */ Function1 $onFailure;
 
@@ -76,7 +76,7 @@ public final class GatewayDiscovery {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Throwable th) {
             Intrinsics3.checkNotNullParameter(th, "throwable");
             GatewayDiscovery.access$setGatewayUrl$p(GatewayDiscovery.this, null);
@@ -85,8 +85,8 @@ public final class GatewayDiscovery {
         }
     }
 
-    /* compiled from: GatewayDiscovery.kt */
-    /* renamed from: com.discord.gateway.GatewayDiscovery$discoverGatewayUrl$2 */
+    /* JADX INFO: renamed from: com.discord.gateway.GatewayDiscovery$discoverGatewayUrl$2 */
+    /* JADX INFO: compiled from: GatewayDiscovery.kt */
     public static final class C54832 extends Lambda implements Function1<String, Unit> {
         public final /* synthetic */ C54821 $handleFailure$1;
         public final /* synthetic */ Function1 $onSuccess;
@@ -104,7 +104,7 @@ public final class GatewayDiscovery {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(String str) {
             if (str == null) {
                 this.$handleFailure$1.invoke2(new Throwable("Malformed gateway url."));
@@ -117,8 +117,8 @@ public final class GatewayDiscovery {
         }
     }
 
-    /* compiled from: GatewayDiscovery.kt */
-    /* renamed from: com.discord.gateway.GatewayDiscovery$discoverGatewayUrl$3 */
+    /* JADX INFO: renamed from: com.discord.gateway.GatewayDiscovery$discoverGatewayUrl$3 */
+    /* JADX INFO: compiled from: GatewayDiscovery.kt */
     public static final /* synthetic */ class C54843 extends FunctionReferenceImpl implements Function1<String, Unit> {
         public final /* synthetic */ C54832 $handleSuccess$2;
 
@@ -134,14 +134,14 @@ public final class GatewayDiscovery {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(String str) {
             this.$handleSuccess$2.invoke2(str);
         }
     }
 
-    /* compiled from: GatewayDiscovery.kt */
-    /* renamed from: com.discord.gateway.GatewayDiscovery$discoverGatewayUrl$4 */
+    /* JADX INFO: renamed from: com.discord.gateway.GatewayDiscovery$discoverGatewayUrl$4 */
+    /* JADX INFO: compiled from: GatewayDiscovery.kt */
     public static final /* synthetic */ class C54854 extends FunctionReferenceImpl implements Function1<Throwable, Unit> {
         public final /* synthetic */ C54821 $handleFailure$1;
 
@@ -157,7 +157,7 @@ public final class GatewayDiscovery {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Throwable th) {
             Intrinsics3.checkNotNullParameter(th, "p1");
             this.$handleFailure$1.invoke2(th);

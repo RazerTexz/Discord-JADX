@@ -26,7 +26,7 @@ import lombok.javac.JavacNode;
 import lombok.javac.JavacTreeMaker;
 import lombok.javac.handlers.JavacHandlerUtil;
 
-/* loaded from: discord-126021.apk:lombok/javac/handlers/HandleEqualsAndHashCode.SCL.lombok */
+/* JADX INFO: loaded from: discord-126021.apk:lombok/javac/handlers/HandleEqualsAndHashCode.SCL.lombok */
 public class HandleEqualsAndHashCode extends JavacAnnotationHandler<EqualsAndHashCode> {
     private static final String RESULT_NAME = "result";
     private static final String PRIME_NAME = "PRIME";
@@ -36,7 +36,7 @@ public class HandleEqualsAndHashCode extends JavacAnnotationHandler<EqualsAndHas
     private Field jcAnnotatedTypeUnderlyingTypeField = null;
     private static /* synthetic */ int[] $SWITCH_TABLE$lombok$core$configuration$CallSuperType;
 
-    /* renamed from: $SWITCH_TABLE$lombok$javac$handlers$JavacHandlerUtil$MemberExistsResult */
+    /* JADX INFO: renamed from: $SWITCH_TABLE$lombok$javac$handlers$JavacHandlerUtil$MemberExistsResult */
     private static /* synthetic */ int[] f27483x2486df07;
     private static /* synthetic */ int[] $SWITCH_TABLE$javax$lang$model$type$TypeKind;
 
@@ -62,7 +62,7 @@ public class HandleEqualsAndHashCode extends JavacAnnotationHandler<EqualsAndHas
         return iArr2;
     }
 
-    /* renamed from: $SWITCH_TABLE$lombok$javac$handlers$JavacHandlerUtil$MemberExistsResult */
+    /* JADX INFO: renamed from: $SWITCH_TABLE$lombok$javac$handlers$JavacHandlerUtil$MemberExistsResult */
     static /* synthetic */ int[] m10942x2486df07() {
         int[] iArr = f27483x2486df07;
         if (iArr != null) {
@@ -172,7 +172,7 @@ public class HandleEqualsAndHashCode extends JavacAnnotationHandler<EqualsAndHas
     }
 
     @Override // lombok.javac.JavacAnnotationHandler
-    public void handle(AnnotationValues<EqualsAndHashCode> annotation, JCTree.JCAnnotation ast, JavacNode annotationNode) throws IllegalArgumentException {
+    public void handle(AnnotationValues<EqualsAndHashCode> annotation, JCTree.JCAnnotation ast, JavacNode annotationNode) {
         HandlerUtil.handleFlagUsage(annotationNode, ConfigurationKeys.EQUALS_AND_HASH_CODE_FLAG_USAGE, "@EqualsAndHashCode");
         JavacHandlerUtil.deleteAnnotationIfNeccessary(annotationNode, (Class<? extends Annotation>) EqualsAndHashCode.class);
         JavacHandlerUtil.deleteImportFromCompilationUnit(annotationNode, EqualsAndHashCode.CacheStrategy.class.getName());

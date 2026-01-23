@@ -1,9 +1,9 @@
 package p507d0.p580t;
 
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.Iterator;
 import java.util.List;
-import java.util.RandomAccess;
 import kotlin.Unit;
 import kotlin.coroutines.Continuation;
 import kotlin.jvm.functions.Function2;
@@ -17,15 +17,15 @@ import p507d0.p584w.p586i.p587a.ContinuationImpl5;
 import p507d0.p584w.p586i.p587a.DebugMetadata;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: SlidingWindow.kt */
-/* renamed from: d0.t.p0, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.t.p0, reason: use source file name */
+/* JADX INFO: compiled from: SlidingWindow.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class SlidingWindow2 {
 
     /* JADX INFO: Add missing generic type declarations: [T] */
-    /* compiled from: SlidingWindow.kt */
+    /* JADX INFO: renamed from: d0.t.p0$a */
+    /* JADX INFO: compiled from: SlidingWindow.kt */
     @DebugMetadata(m10084c = "kotlin.collections.SlidingWindowKt$windowedIterator$1", m10085f = "SlidingWindow.kt", m10086l = {34, 40, 49, 55, 58}, m10087m = "invokeSuspend")
-    /* renamed from: d0.t.p0$a */
     public static final class a<T> extends ContinuationImpl5 implements Function2<SequenceBuilder2<? super List<? extends T>>, Continuation<? super Unit>, Object> {
         public final /* synthetic */ Iterator $iterator;
         public final /* synthetic */ boolean $partialWindows;
@@ -70,6 +70,39 @@ public final class SlidingWindow2 {
         /* JADX WARN: Removed duplicated region for block: B:62:0x0128  */
         /* JADX WARN: Removed duplicated region for block: B:65:0x0132  */
         /* JADX WARN: Removed duplicated region for block: B:73:0x0152  */
+        /* JADX WARN: Type inference failed for: r1v18 */
+        /* JADX WARN: Type inference failed for: r1v20, types: [d0.t.a, java.lang.Object, java.util.Collection] */
+        /* JADX WARN: Type inference failed for: r1v21, types: [d0.t.l0] */
+        /* JADX WARN: Type inference failed for: r1v27 */
+        /* JADX WARN: Type inference failed for: r1v28 */
+        /* JADX WARN: Type inference failed for: r1v29 */
+        /* JADX WARN: Type inference failed for: r4v11 */
+        /* JADX WARN: Type inference failed for: r4v12 */
+        /* JADX WARN: Type inference failed for: r4v13 */
+        /* JADX WARN: Type inference failed for: r4v4 */
+        /* JADX WARN: Type inference failed for: r4v5, types: [d0.f0.k, java.lang.Object] */
+        /* JADX WARN: Type inference failed for: r4v6 */
+        /* JADX WARN: Type inference failed for: r5v10, types: [java.lang.Object] */
+        /* JADX WARN: Type inference failed for: r5v12 */
+        /* JADX WARN: Type inference failed for: r5v16 */
+        /* JADX WARN: Type inference failed for: r5v17 */
+        /* JADX WARN: Type inference failed for: r5v18 */
+        /* JADX WARN: Type inference failed for: r5v19 */
+        /* JADX WARN: Type inference failed for: r5v2 */
+        /* JADX WARN: Type inference failed for: r5v20 */
+        /* JADX WARN: Type inference failed for: r5v3, types: [d0.t.a, d0.t.l0, java.lang.Object, java.util.Collection] */
+        /* JADX WARN: Type inference failed for: r5v4 */
+        /* JADX WARN: Type inference failed for: r5v5, types: [d0.t.l0] */
+        /* JADX WARN: Type inference failed for: r5v6, types: [d0.t.l0] */
+        /* JADX WARN: Type inference failed for: r8v13 */
+        /* JADX WARN: Type inference failed for: r8v14 */
+        /* JADX WARN: Type inference failed for: r8v15 */
+        /* JADX WARN: Type inference failed for: r8v3 */
+        /* JADX WARN: Type inference failed for: r8v8, types: [d0.f0.k, java.lang.Object] */
+        /* JADX WARN: Type inference failed for: r8v9 */
+        /* JADX WARN: Type inference failed for: r9v10, types: [java.lang.Object] */
+        /* JADX WARN: Type inference failed for: r9v12 */
+        /* JADX WARN: Type inference failed for: r9v14 */
         /* JADX WARN: Unsupported multi-entry loop pattern (BACK_EDGE: B:29:0x00a7 -> B:30:0x00a8). Please report as a decompilation issue!!! */
         /* JADX WARN: Unsupported multi-entry loop pattern (BACK_EDGE: B:57:0x011b -> B:59:0x011e). Please report as a decompilation issue!!! */
         /* JADX WARN: Unsupported multi-entry loop pattern (BACK_EDGE: B:70:0x0149 -> B:72:0x014c). Please report as a decompilation issue!!! */
@@ -80,29 +113,29 @@ public final class SlidingWindow2 {
         public final Object invokeSuspend(Object obj) {
             int i;
             Iterator it;
-            SequenceBuilder2 sequenceBuilder2;
+            ?? r8;
             a<T> aVar;
             int i2;
-            SequenceBuilder2 sequenceBuilder22;
+            SequenceBuilder2 sequenceBuilder2;
             a<T> aVar2;
             ArrayList arrayList;
             Iterator it2;
-            SlidingWindow slidingWindowExpanded;
-            SlidingWindow slidingWindow;
-            SequenceBuilder2 sequenceBuilder23;
+            ?? Expanded;
+            ?? r1;
+            ?? r4;
             Object coroutine_suspended = Intrinsics2.getCOROUTINE_SUSPENDED();
             int i3 = this.label;
             if (i3 == 0) {
                 Result3.throwOnFailure(obj);
-                SequenceBuilder2 sequenceBuilder24 = (SequenceBuilder2) this.L$0;
+                SequenceBuilder2 sequenceBuilder22 = (SequenceBuilder2) this.L$0;
                 int iCoerceAtMost = _Ranges.coerceAtMost(this.$size, 1024);
                 i = this.$step - this.$size;
                 if (i < 0) {
-                    SlidingWindow slidingWindow2 = new SlidingWindow(iCoerceAtMost);
+                    SlidingWindow slidingWindow = new SlidingWindow(iCoerceAtMost);
                     it = this.$iterator;
-                    sequenceBuilder2 = sequenceBuilder24;
+                    r8 = sequenceBuilder22;
                     aVar = this;
-                    slidingWindowExpanded = slidingWindow2;
+                    Expanded = slidingWindow;
                     while (it.hasNext()) {
                     }
                     if (aVar.$partialWindows) {
@@ -111,7 +144,7 @@ public final class SlidingWindow2 {
                 }
                 ArrayList arrayList2 = new ArrayList(iCoerceAtMost);
                 i2 = 0;
-                sequenceBuilder22 = sequenceBuilder24;
+                sequenceBuilder2 = sequenceBuilder22;
                 aVar2 = this;
                 arrayList = arrayList2;
                 it2 = this.$iterator;
@@ -122,7 +155,7 @@ public final class SlidingWindow2 {
                     aVar2.L$1 = null;
                     aVar2.L$2 = null;
                     aVar2.label = 2;
-                    if (sequenceBuilder22.yield(arrayList, aVar2) == coroutine_suspended) {
+                    if (sequenceBuilder2.yield(arrayList, aVar2) == coroutine_suspended) {
                     }
                 }
                 return Unit.f27425a;
@@ -131,7 +164,7 @@ public final class SlidingWindow2 {
                 i2 = this.I$0;
                 it2 = (Iterator) this.L$2;
                 arrayList = (ArrayList) this.L$1;
-                sequenceBuilder22 = (SequenceBuilder2) this.L$0;
+                sequenceBuilder2 = (SequenceBuilder2) this.L$0;
                 Result3.throwOnFailure(obj);
                 aVar2 = this;
                 if (aVar2.$reuseBuffer) {
@@ -147,12 +180,12 @@ public final class SlidingWindow2 {
                     } else {
                         arrayList.add(next);
                         if (arrayList.size() == aVar2.$size) {
-                            aVar2.L$0 = sequenceBuilder22;
+                            aVar2.L$0 = sequenceBuilder2;
                             aVar2.L$1 = arrayList;
                             aVar2.L$2 = it2;
                             aVar2.I$0 = i;
                             aVar2.label = 1;
-                            if (sequenceBuilder22.yield(arrayList, aVar2) == coroutine_suspended) {
+                            if (sequenceBuilder2.yield(arrayList, aVar2) == coroutine_suspended) {
                                 return coroutine_suspended;
                             }
                             i2 = i;
@@ -169,7 +202,7 @@ public final class SlidingWindow2 {
                     aVar2.L$1 = null;
                     aVar2.L$2 = null;
                     aVar2.label = 2;
-                    if (sequenceBuilder22.yield(arrayList, aVar2) == coroutine_suspended) {
+                    if (sequenceBuilder2.yield(arrayList, aVar2) == coroutine_suspended) {
                         return coroutine_suspended;
                     }
                 }
@@ -178,68 +211,82 @@ public final class SlidingWindow2 {
             if (i3 != 2) {
                 if (i3 == 3) {
                     it = (Iterator) this.L$2;
-                    SlidingWindow slidingWindow3 = (SlidingWindow) this.L$1;
-                    sequenceBuilder2 = (SequenceBuilder2) this.L$0;
+                    SlidingWindow slidingWindow2 = (SlidingWindow) this.L$1;
+                    SequenceBuilder2 sequenceBuilder23 = (SequenceBuilder2) this.L$0;
                     Result3.throwOnFailure(obj);
                     aVar = this;
-                    SlidingWindow slidingWindow4 = slidingWindow3;
-                    slidingWindow4.removeFirst(aVar.$step);
-                    slidingWindowExpanded = slidingWindow4;
+                    ?? r5 = slidingWindow2;
+                    ?? r82 = sequenceBuilder23;
+                    r5.removeFirst(aVar.$step);
+                    Expanded = r5;
+                    r8 = r82;
                     while (it.hasNext()) {
-                        slidingWindowExpanded.add(it.next());
-                        if (slidingWindowExpanded.isFull()) {
-                            int size = slidingWindowExpanded.size();
+                        Expanded.add(it.next());
+                        if (Expanded.isFull()) {
+                            int size = Expanded.size();
                             int i4 = aVar.$size;
                             if (size >= i4) {
-                                ArrayList arrayList3 = aVar.$reuseBuffer ? slidingWindowExpanded : new ArrayList(slidingWindowExpanded);
-                                aVar.L$0 = sequenceBuilder2;
-                                aVar.L$1 = slidingWindowExpanded;
+                                ?? arrayList3 = aVar.$reuseBuffer ? Expanded : new ArrayList((Collection) Expanded);
+                                aVar.L$0 = r8;
+                                aVar.L$1 = Expanded;
                                 aVar.L$2 = it;
                                 aVar.label = 3;
-                                slidingWindow4 = slidingWindowExpanded;
-                                if (sequenceBuilder2.yield(arrayList3, aVar) == coroutine_suspended) {
+                                Object objYield = r8.yield(arrayList3, aVar);
+                                r5 = Expanded;
+                                r82 = r8;
+                                if (objYield == coroutine_suspended) {
                                     return coroutine_suspended;
                                 }
-                                slidingWindow4.removeFirst(aVar.$step);
-                                slidingWindowExpanded = slidingWindow4;
+                                r5.removeFirst(aVar.$step);
+                                Expanded = r5;
+                                r8 = r82;
                                 while (it.hasNext()) {
                                 }
                             } else {
-                                slidingWindowExpanded = slidingWindowExpanded.expanded(i4);
+                                Expanded = Expanded.expanded(i4);
                             }
                         }
                     }
                     if (aVar.$partialWindows) {
-                        slidingWindow = slidingWindowExpanded;
-                        sequenceBuilder23 = sequenceBuilder2;
-                        if (slidingWindow.size() <= aVar.$step) {
+                        r1 = Expanded;
+                        r4 = r8;
+                        if (r1.size() <= aVar.$step) {
                         }
                     }
                     return Unit.f27425a;
                 }
                 if (i3 == 4) {
-                    slidingWindow = (SlidingWindow) this.L$1;
-                    sequenceBuilder23 = (SequenceBuilder2) this.L$0;
+                    SlidingWindow slidingWindow3 = (SlidingWindow) this.L$1;
+                    SequenceBuilder2 sequenceBuilder24 = (SequenceBuilder2) this.L$0;
                     Result3.throwOnFailure(obj);
                     aVar = this;
-                    slidingWindow.removeFirst(aVar.$step);
-                    if (slidingWindow.size() <= aVar.$step) {
-                        RandomAccess arrayList4 = aVar.$reuseBuffer ? slidingWindow : new ArrayList(slidingWindow);
-                        aVar.L$0 = sequenceBuilder23;
-                        aVar.L$1 = slidingWindow;
+                    ?? r12 = slidingWindow3;
+                    ?? r42 = sequenceBuilder24;
+                    r12.removeFirst(aVar.$step);
+                    r1 = r12;
+                    r4 = r42;
+                    if (r1.size() <= aVar.$step) {
+                        ?? arrayList4 = aVar.$reuseBuffer ? r1 : new ArrayList((Collection) r1);
+                        aVar.L$0 = r4;
+                        aVar.L$1 = r1;
                         aVar.L$2 = null;
                         aVar.label = 4;
-                        if (sequenceBuilder23.yield(arrayList4, aVar) == coroutine_suspended) {
+                        Object objYield2 = r4.yield(arrayList4, aVar);
+                        r12 = r1;
+                        r42 = r4;
+                        if (objYield2 == coroutine_suspended) {
                             return coroutine_suspended;
                         }
-                        slidingWindow.removeFirst(aVar.$step);
-                        if (slidingWindow.size() <= aVar.$step) {
-                            if (!slidingWindow.isEmpty()) {
+                        r12.removeFirst(aVar.$step);
+                        r1 = r12;
+                        r4 = r42;
+                        if (r1.size() <= aVar.$step) {
+                            if (!r1.isEmpty()) {
                                 aVar.L$0 = null;
                                 aVar.L$1 = null;
                                 aVar.L$2 = null;
                                 aVar.label = 5;
-                                if (sequenceBuilder23.yield(slidingWindow, aVar) == coroutine_suspended) {
+                                if (r4.yield(r1, aVar) == coroutine_suspended) {
                                     return coroutine_suspended;
                                 }
                             }

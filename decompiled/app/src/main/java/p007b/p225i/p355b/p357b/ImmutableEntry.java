@@ -3,9 +3,9 @@ package p007b.p225i.p355b.p357b;
 import java.io.Serializable;
 import org.checkerframework.checker.nullness.compatqual.NullableDecl;
 
-/* compiled from: ImmutableEntry.java */
-/* renamed from: b.i.b.b.o, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.b.b.o, reason: use source file name */
+/* JADX INFO: compiled from: ImmutableEntry.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class ImmutableEntry<K, V> extends AbstractMapEntry<K, V> implements Serializable {
     private static final long serialVersionUID = 0;
 

@@ -34,7 +34,7 @@ import p007b.p225i.p226a.p341g.p346e.AnimatorTracker;
 import p007b.p225i.p226a.p341g.p346e.BaseMotionStrategy;
 import p007b.p225i.p226a.p341g.p346e.MotionStrategy;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public class ExtendedFloatingActionButton extends MaterialButton implements CoordinatorLayout.AttachedBehavior {
     private static final int ANIM_STATE_HIDING = 1;
     private static final int ANIM_STATE_NONE = 0;
@@ -242,13 +242,13 @@ public class ExtendedFloatingActionButton extends MaterialButton implements Coor
         }
     }
 
-    /* renamed from: com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton$a */
+    /* JADX INFO: renamed from: com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton$a */
     public class C10908a implements InterfaceC10918k {
         public C10908a() {
         }
 
         @Override // com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton.InterfaceC10918k
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public ViewGroup.LayoutParams mo9143a() {
             return new ViewGroup.LayoutParams(-2, -2);
         }
@@ -274,13 +274,13 @@ public class ExtendedFloatingActionButton extends MaterialButton implements Coor
         }
     }
 
-    /* renamed from: com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton$b */
+    /* JADX INFO: renamed from: com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton$b */
     public class C10909b implements InterfaceC10918k {
         public C10909b() {
         }
 
         @Override // com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton.InterfaceC10918k
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public ViewGroup.LayoutParams mo9143a() {
             return new ViewGroup.LayoutParams(ExtendedFloatingActionButton.this.getCollapsedSize(), ExtendedFloatingActionButton.this.getCollapsedSize());
         }
@@ -306,16 +306,16 @@ public class ExtendedFloatingActionButton extends MaterialButton implements Coor
         }
     }
 
-    /* renamed from: com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton$c */
+    /* JADX INFO: renamed from: com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton$c */
     public class C10910c extends AnimatorListenerAdapter {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public boolean f21009a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final /* synthetic */ MotionStrategy f21010b;
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public final /* synthetic */ OnChangedCallback f21011c;
 
         public C10910c(ExtendedFloatingActionButton extendedFloatingActionButton, MotionStrategy motionStrategy, OnChangedCallback onChangedCallback) {
@@ -345,7 +345,7 @@ public class ExtendedFloatingActionButton extends MaterialButton implements Coor
         }
     }
 
-    /* renamed from: com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton$d */
+    /* JADX INFO: renamed from: com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton$d */
     public static class C10911d extends Property<View, Float> {
         public C10911d(Class cls, String str) {
             super(cls, str);
@@ -365,7 +365,7 @@ public class ExtendedFloatingActionButton extends MaterialButton implements Coor
         }
     }
 
-    /* renamed from: com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton$e */
+    /* JADX INFO: renamed from: com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton$e */
     public static class C10912e extends Property<View, Float> {
         public C10912e(Class cls, String str) {
             super(cls, str);
@@ -385,7 +385,7 @@ public class ExtendedFloatingActionButton extends MaterialButton implements Coor
         }
     }
 
-    /* renamed from: com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton$f */
+    /* JADX INFO: renamed from: com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton$f */
     public static class C10913f extends Property<View, Float> {
         public C10913f(Class cls, String str) {
             super(cls, str);
@@ -404,7 +404,7 @@ public class ExtendedFloatingActionButton extends MaterialButton implements Coor
         }
     }
 
-    /* renamed from: com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton$g */
+    /* JADX INFO: renamed from: com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton$g */
     public static class C10914g extends Property<View, Float> {
         public C10914g(Class cls, String str) {
             super(cls, str);
@@ -423,13 +423,13 @@ public class ExtendedFloatingActionButton extends MaterialButton implements Coor
         }
     }
 
-    /* renamed from: com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton$h */
+    /* JADX INFO: renamed from: com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton$h */
     public class C10915h extends BaseMotionStrategy {
 
-        /* renamed from: g */
+        /* JADX INFO: renamed from: g */
         public final InterfaceC10918k f21012g;
 
-        /* renamed from: h */
+        /* JADX INFO: renamed from: h */
         public final boolean f21013h;
 
         public C10915h(AnimatorTracker animatorTracker, InterfaceC10918k interfaceC10918k, boolean z2) {
@@ -439,13 +439,13 @@ public class ExtendedFloatingActionButton extends MaterialButton implements Coor
         }
 
         @Override // p007b.p225i.p226a.p341g.p346e.MotionStrategy
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public int mo6112b() {
             return this.f21013h ? C10817R.animator.mtrl_extended_fab_change_size_expand_motion_spec : C10817R.animator.mtrl_extended_fab_change_size_collapse_motion_spec;
         }
 
         @Override // p007b.p225i.p226a.p341g.p346e.MotionStrategy
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public void mo6113c() {
             ExtendedFloatingActionButton.access$702(ExtendedFloatingActionButton.this, this.f21013h);
             ViewGroup.LayoutParams layoutParams = ExtendedFloatingActionButton.this.getLayoutParams();
@@ -459,13 +459,13 @@ public class ExtendedFloatingActionButton extends MaterialButton implements Coor
         }
 
         @Override // p007b.p225i.p226a.p341g.p346e.MotionStrategy
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         public boolean mo6114d() {
             return this.f21013h == ExtendedFloatingActionButton.access$700(ExtendedFloatingActionButton.this) || ExtendedFloatingActionButton.this.getIcon() == null || TextUtils.isEmpty(ExtendedFloatingActionButton.this.getText());
         }
 
         @Override // p007b.p225i.p226a.p341g.p346e.BaseMotionStrategy, p007b.p225i.p226a.p341g.p346e.MotionStrategy
-        /* renamed from: e */
+        /* JADX INFO: renamed from: e */
         public void mo6079e() {
             super.mo6079e();
             ExtendedFloatingActionButton.access$802(ExtendedFloatingActionButton.this, false);
@@ -480,7 +480,7 @@ public class ExtendedFloatingActionButton extends MaterialButton implements Coor
 
         @Override // p007b.p225i.p226a.p341g.p346e.BaseMotionStrategy, p007b.p225i.p226a.p341g.p346e.MotionStrategy
         @NonNull
-        /* renamed from: f */
+        /* JADX INFO: renamed from: f */
         public AnimatorSet mo6080f() {
             MotionSpec motionSpecM6082i = m6082i();
             if (motionSpecM6082i.hasPropertyValues("width")) {
@@ -513,7 +513,7 @@ public class ExtendedFloatingActionButton extends MaterialButton implements Coor
         }
 
         @Override // p007b.p225i.p226a.p341g.p346e.MotionStrategy
-        /* renamed from: g */
+        /* JADX INFO: renamed from: g */
         public void mo6115g(@Nullable OnChangedCallback onChangedCallback) {
             if (onChangedCallback == null) {
                 return;
@@ -539,10 +539,10 @@ public class ExtendedFloatingActionButton extends MaterialButton implements Coor
         }
     }
 
-    /* renamed from: com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton$i */
+    /* JADX INFO: renamed from: com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton$i */
     public class C10916i extends BaseMotionStrategy {
 
-        /* renamed from: g */
+        /* JADX INFO: renamed from: g */
         public boolean f21015g;
 
         public C10916i(AnimatorTracker animatorTracker) {
@@ -550,32 +550,32 @@ public class ExtendedFloatingActionButton extends MaterialButton implements Coor
         }
 
         @Override // p007b.p225i.p226a.p341g.p346e.BaseMotionStrategy, p007b.p225i.p226a.p341g.p346e.MotionStrategy
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public void mo6078a() {
             this.f11624d.f11620a = null;
             this.f21015g = true;
         }
 
         @Override // p007b.p225i.p226a.p341g.p346e.MotionStrategy
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public int mo6112b() {
             return C10817R.animator.mtrl_extended_fab_hide_motion_spec;
         }
 
         @Override // p007b.p225i.p226a.p341g.p346e.MotionStrategy
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public void mo6113c() {
             ExtendedFloatingActionButton.this.setVisibility(8);
         }
 
         @Override // p007b.p225i.p226a.p341g.p346e.MotionStrategy
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         public boolean mo6114d() {
             return ExtendedFloatingActionButton.access$1100(ExtendedFloatingActionButton.this);
         }
 
         @Override // p007b.p225i.p226a.p341g.p346e.BaseMotionStrategy, p007b.p225i.p226a.p341g.p346e.MotionStrategy
-        /* renamed from: e */
+        /* JADX INFO: renamed from: e */
         public void mo6079e() {
             super.mo6079e();
             ExtendedFloatingActionButton.access$902(ExtendedFloatingActionButton.this, 0);
@@ -586,7 +586,7 @@ public class ExtendedFloatingActionButton extends MaterialButton implements Coor
         }
 
         @Override // p007b.p225i.p226a.p341g.p346e.MotionStrategy
-        /* renamed from: g */
+        /* JADX INFO: renamed from: g */
         public void mo6115g(@Nullable OnChangedCallback onChangedCallback) {
             if (onChangedCallback != null) {
                 onChangedCallback.onHidden(ExtendedFloatingActionButton.this);
@@ -607,20 +607,20 @@ public class ExtendedFloatingActionButton extends MaterialButton implements Coor
         }
     }
 
-    /* renamed from: com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton$j */
+    /* JADX INFO: renamed from: com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton$j */
     public class C10917j extends BaseMotionStrategy {
         public C10917j(AnimatorTracker animatorTracker) {
             super(ExtendedFloatingActionButton.this, animatorTracker);
         }
 
         @Override // p007b.p225i.p226a.p341g.p346e.MotionStrategy
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public int mo6112b() {
             return C10817R.animator.mtrl_extended_fab_show_motion_spec;
         }
 
         @Override // p007b.p225i.p226a.p341g.p346e.MotionStrategy
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public void mo6113c() {
             ExtendedFloatingActionButton.this.setVisibility(0);
             ExtendedFloatingActionButton.this.setAlpha(1.0f);
@@ -629,20 +629,20 @@ public class ExtendedFloatingActionButton extends MaterialButton implements Coor
         }
 
         @Override // p007b.p225i.p226a.p341g.p346e.MotionStrategy
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         public boolean mo6114d() {
             return ExtendedFloatingActionButton.access$1000(ExtendedFloatingActionButton.this);
         }
 
         @Override // p007b.p225i.p226a.p341g.p346e.BaseMotionStrategy, p007b.p225i.p226a.p341g.p346e.MotionStrategy
-        /* renamed from: e */
+        /* JADX INFO: renamed from: e */
         public void mo6079e() {
             super.mo6079e();
             ExtendedFloatingActionButton.access$902(ExtendedFloatingActionButton.this, 0);
         }
 
         @Override // p007b.p225i.p226a.p341g.p346e.MotionStrategy
-        /* renamed from: g */
+        /* JADX INFO: renamed from: g */
         public void mo6115g(@Nullable OnChangedCallback onChangedCallback) {
             if (onChangedCallback != null) {
                 onChangedCallback.onShown(ExtendedFloatingActionButton.this);
@@ -662,9 +662,9 @@ public class ExtendedFloatingActionButton extends MaterialButton implements Coor
         }
     }
 
-    /* renamed from: com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton$k */
+    /* JADX INFO: renamed from: com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton$k */
     public interface InterfaceC10918k {
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         ViewGroup.LayoutParams mo9143a();
 
         int getHeight();

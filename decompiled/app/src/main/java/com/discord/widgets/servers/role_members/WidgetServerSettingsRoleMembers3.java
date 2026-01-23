@@ -9,14 +9,14 @@ import kotlin.Unit;
 import kotlin.jvm.functions.Function2;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: WidgetServerSettingsRoleMembers.kt */
-/* renamed from: com.discord.widgets.servers.role_members.ServerSettingsRoleMembersViewHolder, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.servers.role_members.ServerSettingsRoleMembersViewHolder, reason: use source file name */
+/* JADX INFO: compiled from: WidgetServerSettingsRoleMembers.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetServerSettingsRoleMembers3 extends RecyclerView.ViewHolder {
     private final RemovablePermissionOwnerViewBinding binding;
 
-    /* compiled from: WidgetServerSettingsRoleMembers.kt */
-    /* renamed from: com.discord.widgets.servers.role_members.ServerSettingsRoleMembersViewHolder$configureUI$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.role_members.ServerSettingsRoleMembersViewHolder$configureUI$1 */
+    /* JADX INFO: compiled from: WidgetServerSettingsRoleMembers.kt */
     public static final class ViewOnClickListenerC95691 implements View.OnClickListener {
         public final /* synthetic */ ServerSettingsRoleMemberAdapterItem $adapterItem;
         public final /* synthetic */ Function2 $removeMemberClickListener;

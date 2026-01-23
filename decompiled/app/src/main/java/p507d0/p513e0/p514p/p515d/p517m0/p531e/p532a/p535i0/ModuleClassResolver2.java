@@ -5,12 +5,12 @@ import p507d0.p513e0.p514p.p515d.p517m0.p531e.p532a.p539k0.InterfaceC11574g;
 import p507d0.p513e0.p514p.p515d.p517m0.p552k.p560y.JavaDescriptorResolver;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ModuleClassResolver.kt */
-/* renamed from: d0.e0.p.d.m0.e.a.i0.j, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.e.a.i0.j, reason: use source file name */
+/* JADX INFO: compiled from: ModuleClassResolver.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class ModuleClassResolver2 implements ModuleClassResolver {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public JavaDescriptorResolver f23320a;
 
     public final JavaDescriptorResolver getResolver() {

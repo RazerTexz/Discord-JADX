@@ -7,9 +7,9 @@ import kotlin.jvm.internal.Ref$ObjectRef;
 import p507d0.p592z.p594d.Intrinsics3;
 import p658rx.functions.Action1;
 
-/* compiled from: ModelPhoneVerificationToken.kt */
-/* renamed from: com.discord.models.domain.ModelPhoneVerificationToken$Update$Parser$parse$1, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: com.discord.models.domain.ModelPhoneVerificationToken$Update$Parser$parse$1, reason: use source file name */
+/* JADX INFO: compiled from: ModelPhoneVerificationToken.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class ModelPhoneVerificationToken2<T> implements Action1<String> {
     public final /* synthetic */ Model.JsonReader $reader;
     public final /* synthetic */ Ref$ObjectRef $token;
@@ -24,7 +24,7 @@ public final class ModelPhoneVerificationToken2<T> implements Action1<String> {
         call2(str);
     }
 
-    /* renamed from: call, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
     public final void call2(String str) throws IOException {
         if (str == null || str.hashCode() != 110541305 || !str.equals("token")) {
             this.$reader.skipValue();

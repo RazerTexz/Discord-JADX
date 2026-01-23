@@ -6,9 +6,9 @@ import kotlin.jvm.functions.Function2;
 import p507d0.p592z.p594d.FunctionReferenceImpl;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: SelectComponentBottomSheet.kt */
-/* renamed from: com.discord.widgets.botuikit.views.select.SelectComponentBottomSheet$adapter$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.botuikit.views.select.SelectComponentBottomSheet$adapter$1, reason: use source file name */
+/* JADX INFO: compiled from: SelectComponentBottomSheet.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final /* synthetic */ class SelectComponentBottomSheet3 extends FunctionReferenceImpl implements Function2<SelectComponent2, Boolean, Unit> {
     public SelectComponentBottomSheet3(SelectComponentBottomSheet selectComponentBottomSheet) {
         super(2, selectComponentBottomSheet, SelectComponentBottomSheet.class, "onItemSelected", "onItemSelected(Lcom/discord/api/botuikit/SelectItem;Z)V", 0);

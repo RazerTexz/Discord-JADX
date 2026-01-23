@@ -6,7 +6,7 @@ import java.io.InputStream;
 import org.objectweb.asm.Opcodes;
 import p007b.p106e.p107a.Log;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class InputChunked extends Input {
     private int chunkSize;
 
@@ -54,7 +54,7 @@ public class InputChunked extends Input {
         return iFill;
     }
 
-    public void nextChunks() throws KryoException {
+    public void nextChunks() {
         if (this.chunkSize == -1) {
             readChunkSize();
         }

@@ -4,9 +4,9 @@ import android.view.View;
 import com.discord.widgets.channels.SimpleRolesAdapter;
 import kotlin.jvm.functions.Function1;
 
-/* compiled from: SimpleRolesAdapter.kt */
-/* renamed from: com.discord.widgets.channels.SimpleRolesAdapter$RoleAdapterItem$onConfigure$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.channels.SimpleRolesAdapter$RoleAdapterItem$onConfigure$1, reason: use source file name */
+/* JADX INFO: compiled from: SimpleRolesAdapter.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class SimpleRolesAdapter2 implements View.OnClickListener {
     public final /* synthetic */ SimpleRolesAdapter.RoleItem $data;
     public final /* synthetic */ SimpleRolesAdapter.RoleAdapterItem this$0;

@@ -8,19 +8,19 @@ import java.util.List;
 import p007b.p225i.p226a.p288f.p299e.p308o.C3404f;
 import p658rx.Subscription;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public final class SubscriptionList implements Subscription {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public List<Subscription> f27644j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public volatile boolean f27645k;
 
     public SubscriptionList() {
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public void m11128a(Subscription subscription) {
         if (subscription.isUnsubscribed()) {
             return;

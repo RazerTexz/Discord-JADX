@@ -10,9 +10,9 @@ import java.util.Map;
 import java.util.Scanner;
 import java.util.regex.Pattern;
 
-/* compiled from: com.google.android.gms:play-services-basement@@17.6.0 */
-/* renamed from: b.i.a.f.e.o.e */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.e.o.e */
+/* JADX INFO: compiled from: com.google.android.gms:play-services-basement@@17.6.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public class C3403e {
     static {
         Pattern.compile("^(25[0-5]|2[0-4]\\d|[0-1]?\\d?\\d)(\\.(25[0-5]|2[0-4]\\d|[0-1]?\\d?\\d)){3}$");
@@ -25,7 +25,7 @@ public class C3403e {
     /* JADX WARN: Type inference failed for: r0v1, types: [java.util.Map<java.lang.String, java.lang.String>] */
     /* JADX WARN: Type inference failed for: r0v2, types: [java.util.HashMap] */
     @RecentlyNonNull
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static Map<String, String> m4188a(@RecentlyNonNull URI uri, @RecentlyNonNull String str) {
         String strDecode;
         ?? EmptyMap = Collections.emptyMap();

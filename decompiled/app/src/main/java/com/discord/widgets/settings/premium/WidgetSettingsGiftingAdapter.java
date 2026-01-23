@@ -43,15 +43,15 @@ import p007b.p008a.p027k.FormatUtils;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: WidgetSettingsGiftingAdapter.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetSettingsGiftingAdapter.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetSettingsGiftingAdapter extends MGRecyclerAdapterSimple<GiftItem> {
     private Function1<? super String, Unit> onClickCopyListener;
     private Function2<? super Long, ? super Long, Unit> onClickSkuListener;
     private Function2<? super Long, ? super Long, Unit> onGenerateClickListener;
     private Function1<? super ModelGift, Unit> onRevokeClickListener;
 
-    /* compiled from: WidgetSettingsGiftingAdapter.kt */
+    /* JADX INFO: compiled from: WidgetSettingsGiftingAdapter.kt */
     public static final class EntitlementListItem extends MGRecyclerViewHolder<WidgetSettingsGiftingAdapter, GiftItem> {
         private static final int VIEW_INDEX_CODE = 0;
         private static final int VIEW_INDEX_GENERATE = 1;
@@ -107,7 +107,7 @@ public final class WidgetSettingsGiftingAdapter extends MGRecyclerAdapterSimple<
             onConfigure2(i, giftItem);
         }
 
-        /* renamed from: onConfigure, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: onConfigure, reason: avoid collision after fix types in other method */
         public void onConfigure2(int position, GiftItem data) {
             int themedDrawableRes$default;
             Intrinsics3.checkNotNullParameter(data, "data");
@@ -188,7 +188,7 @@ public final class WidgetSettingsGiftingAdapter extends MGRecyclerAdapterSimple<
         }
     }
 
-    /* compiled from: WidgetSettingsGiftingAdapter.kt */
+    /* JADX INFO: compiled from: WidgetSettingsGiftingAdapter.kt */
     public static final class NoGiftsListItem extends MGRecyclerViewHolder<WidgetSettingsGiftingAdapter, GiftItem> {
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
         public NoGiftsListItem(WidgetSettingsGiftingAdapter widgetSettingsGiftingAdapter) {
@@ -197,7 +197,7 @@ public final class WidgetSettingsGiftingAdapter extends MGRecyclerAdapterSimple<
         }
     }
 
-    /* compiled from: WidgetSettingsGiftingAdapter.kt */
+    /* JADX INFO: compiled from: WidgetSettingsGiftingAdapter.kt */
     public static final class SkuListItem extends MGRecyclerViewHolder<WidgetSettingsGiftingAdapter, GiftItem> {
         private final ViewGiftSkuListItemBinding binding;
 
@@ -238,7 +238,7 @@ public final class WidgetSettingsGiftingAdapter extends MGRecyclerAdapterSimple<
             onConfigure2(i, giftItem);
         }
 
-        /* renamed from: onConfigure, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: onConfigure, reason: avoid collision after fix types in other method */
         public void onConfigure2(int position, GiftItem data) {
             CharSequence name;
             String icon;
@@ -358,7 +358,7 @@ public final class WidgetSettingsGiftingAdapter extends MGRecyclerAdapterSimple<
         throw invalidViewTypeException(viewType);
     }
 
-    /* compiled from: WidgetSettingsGiftingAdapter.kt */
+    /* JADX INFO: compiled from: WidgetSettingsGiftingAdapter.kt */
     public static final /* data */ class GiftItem implements MGRecyclerDataPayload {
         public static final int TYPE_GIFT = 2;
         public static final int TYPE_NO_GIFTS = 0;
@@ -402,47 +402,47 @@ public final class WidgetSettingsGiftingAdapter extends MGRecyclerAdapterSimple<
             return giftItem.copy((i2 & 1) != 0 ? giftItem.typeInt : i, (i2 & 2) != 0 ? giftItem.gift : modelGift, (i2 & 4) != 0 ? giftItem.entitlement : modelEntitlement, (i2 & 8) != 0 ? giftItem.expanded : bool, (i2 & 16) != 0 ? giftItem.sku : modelSku, (i2 & 32) != 0 ? giftItem.copies : num, (i2 & 64) != 0 ? giftItem.planId : l, (i2 & 128) != 0 ? giftItem.isLastItem : bool2, (i2 & 256) != 0 ? giftItem.wasCopied : bool3);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final int getTypeInt() {
             return this.typeInt;
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final ModelGift getGift() {
             return this.gift;
         }
 
-        /* renamed from: component3, reason: from getter */
+        /* JADX INFO: renamed from: component3, reason: from getter */
         public final ModelEntitlement getEntitlement() {
             return this.entitlement;
         }
 
-        /* renamed from: component4, reason: from getter */
+        /* JADX INFO: renamed from: component4, reason: from getter */
         public final Boolean getExpanded() {
             return this.expanded;
         }
 
-        /* renamed from: component5, reason: from getter */
+        /* JADX INFO: renamed from: component5, reason: from getter */
         public final ModelSku getSku() {
             return this.sku;
         }
 
-        /* renamed from: component6, reason: from getter */
+        /* JADX INFO: renamed from: component6, reason: from getter */
         public final Integer getCopies() {
             return this.copies;
         }
 
-        /* renamed from: component7, reason: from getter */
+        /* JADX INFO: renamed from: component7, reason: from getter */
         public final Long getPlanId() {
             return this.planId;
         }
 
-        /* renamed from: component8, reason: from getter */
+        /* JADX INFO: renamed from: component8, reason: from getter */
         public final Boolean getIsLastItem() {
             return this.isLastItem;
         }
 
-        /* renamed from: component9, reason: from getter */
+        /* JADX INFO: renamed from: component9, reason: from getter */
         public final Boolean getWasCopied() {
             return this.wasCopied;
         }

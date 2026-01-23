@@ -2,16 +2,16 @@ package p507d0.p513e0.p514p.p515d.p517m0.p562l.p563b;
 
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: DeserializationConfiguration.kt */
-/* renamed from: d0.e0.p.d.m0.l.b.k, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.l.b.k, reason: use source file name */
+/* JADX INFO: compiled from: DeserializationConfiguration.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public interface DeserializationConfiguration {
 
-    /* compiled from: DeserializationConfiguration.kt */
-    /* renamed from: d0.e0.p.d.m0.l.b.k$a */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.l.b.k$a */
+    /* JADX INFO: compiled from: DeserializationConfiguration.kt */
     public static final class a implements DeserializationConfiguration {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public static final a f24658a = new a();
 
         @Override // p507d0.p513e0.p514p.p515d.p517m0.p562l.p563b.DeserializationConfiguration
@@ -50,8 +50,8 @@ public interface DeserializationConfiguration {
         }
     }
 
-    /* compiled from: DeserializationConfiguration.kt */
-    /* renamed from: d0.e0.p.d.m0.l.b.k$b */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.l.b.k$b */
+    /* JADX INFO: compiled from: DeserializationConfiguration.kt */
     public static final class b {
         public static boolean getAllowUnstableDependencies(DeserializationConfiguration deserializationConfiguration) {
             Intrinsics3.checkNotNullParameter(deserializationConfiguration, "this");

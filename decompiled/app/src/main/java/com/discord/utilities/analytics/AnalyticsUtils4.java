@@ -12,9 +12,9 @@ import p507d0.p580t.Iterables2;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: AnalyticsUtils.kt */
-/* renamed from: com.discord.utilities.analytics.AnalyticsUtils$Tracker$drainEventsQueue$2, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.utilities.analytics.AnalyticsUtils$Tracker$drainEventsQueue$2, reason: use source file name */
+/* JADX INFO: compiled from: AnalyticsUtils.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class AnalyticsUtils4 extends Lambda implements Function1<Error, Unit> {
     public final /* synthetic */ ArrayList $copy;
     public final /* synthetic */ AnalyticsUtils.Tracker this$0;
@@ -32,7 +32,7 @@ public final class AnalyticsUtils4 extends Lambda implements Function1<Error, Un
         return Unit.f27425a;
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final void invoke2(Error error) {
         Intrinsics3.checkNotNullParameter(error, "error");
         ArrayList arrayList = this.$copy;

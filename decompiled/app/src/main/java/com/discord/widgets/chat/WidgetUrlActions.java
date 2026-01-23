@@ -29,22 +29,22 @@ import p507d0.p580t.Collections2;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Reflection2;
 
-/* compiled from: WidgetUrlActions.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetUrlActions.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetUrlActions extends AppBottomSheet {
     public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetUrlActions.class, "binding", "getBinding()Lcom/discord/databinding/WidgetUrlActionsBinding;", 0)};
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private static final String INTENT_URL = "INTENT_URL";
 
-    /* renamed from: binding$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
 
-    /* renamed from: url$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: url$delegate, reason: from kotlin metadata */
     private final Lazy url;
 
-    /* compiled from: WidgetUrlActions.kt */
+    /* JADX INFO: compiled from: WidgetUrlActions.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -69,8 +69,8 @@ public final class WidgetUrlActions extends AppBottomSheet {
         }
     }
 
-    /* compiled from: WidgetUrlActions.kt */
-    /* renamed from: com.discord.widgets.chat.WidgetUrlActions$onViewCreated$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.WidgetUrlActions$onViewCreated$1 */
+    /* JADX INFO: compiled from: WidgetUrlActions.kt */
     public static final class ViewOnClickListenerC76741 implements View.OnClickListener {
         public ViewOnClickListenerC76741() {
         }
@@ -82,8 +82,8 @@ public final class WidgetUrlActions extends AppBottomSheet {
         }
     }
 
-    /* compiled from: WidgetUrlActions.kt */
-    /* renamed from: com.discord.widgets.chat.WidgetUrlActions$onViewCreated$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.WidgetUrlActions$onViewCreated$2 */
+    /* JADX INFO: compiled from: WidgetUrlActions.kt */
     public static final class ViewOnClickListenerC76752 implements View.OnClickListener {
         public ViewOnClickListenerC76752() {
         }
@@ -95,8 +95,8 @@ public final class WidgetUrlActions extends AppBottomSheet {
         }
     }
 
-    /* compiled from: WidgetUrlActions.kt */
-    /* renamed from: com.discord.widgets.chat.WidgetUrlActions$onViewCreated$3 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.WidgetUrlActions$onViewCreated$3 */
+    /* JADX INFO: compiled from: WidgetUrlActions.kt */
     public static final class ViewOnClickListenerC76763 implements View.OnClickListener {
         public ViewOnClickListenerC76763() {
         }

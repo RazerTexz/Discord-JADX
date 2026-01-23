@@ -49,7 +49,7 @@ import p007b.p106e.p108b.ConstructorAccess;
 import p617h0.p620b.p621a.ObjectInstantiator;
 import p617h0.p620b.p627b.InstantiatorStrategy;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class Kryo {
     public static final byte NOT_NULL = 1;
     private static final int NO_REF = -2;
@@ -87,7 +87,7 @@ public class Kryo {
     public static class DefaultInstantiatorStrategy implements InstantiatorStrategy {
         private InstantiatorStrategy fallbackStrategy;
 
-        /* renamed from: com.esotericsoftware.kryo.Kryo$DefaultInstantiatorStrategy$1 */
+        /* JADX INFO: renamed from: com.esotericsoftware.kryo.Kryo$DefaultInstantiatorStrategy$1 */
         public class C106201 implements ObjectInstantiator {
             public final /* synthetic */ ConstructorAccess val$access;
             public final /* synthetic */ Class val$type;
@@ -109,7 +109,7 @@ public class Kryo {
             }
         }
 
-        /* renamed from: com.esotericsoftware.kryo.Kryo$DefaultInstantiatorStrategy$2 */
+        /* JADX INFO: renamed from: com.esotericsoftware.kryo.Kryo$DefaultInstantiatorStrategy$2 */
         public class C106212 implements ObjectInstantiator {
             public final /* synthetic */ Constructor val$constructor;
             public final /* synthetic */ Class val$type;
@@ -624,7 +624,7 @@ public class Kryo {
         }
     }
 
-    public int readReferenceOrNull(Input input, Class cls, boolean z2) throws KryoException {
+    public int readReferenceOrNull(Input input, Class cls, boolean z2) {
         int varInt;
         if (cls.isPrimitive()) {
             cls = Util.getWrapperClass(cls);
@@ -932,7 +932,7 @@ public class Kryo {
         }
     }
 
-    public boolean writeReferenceOrNull(Output output, Object obj, boolean z2) throws KryoException {
+    public boolean writeReferenceOrNull(Output output, Object obj, boolean z2) {
         if (obj == null) {
             Log.a aVar = Log.f3007a;
             output.writeVarInt(0, true);

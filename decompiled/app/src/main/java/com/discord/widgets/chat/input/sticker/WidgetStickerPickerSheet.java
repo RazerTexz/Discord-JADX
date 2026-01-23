@@ -1,6 +1,7 @@
 package com.discord.widgets.chat.input.sticker;
 
 import android.content.DialogInterface;
+import android.content.res.Resources;
 import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,21 +16,22 @@ import kotlin.jvm.functions.Function0;
 import kotlin.jvm.internal.DefaultConstructorMarker;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: WidgetStickerPickerSheet.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetStickerPickerSheet.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetStickerPickerSheet extends WidgetExpressionPickerSheet implements StickerPickerListener {
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private View container;
     private WidgetStickerPicker stickerPickerFragment;
     private StickerPickerListener stickerPickerListenerDelegate;
 
-    /* compiled from: WidgetStickerPickerSheet.kt */
+    /* JADX INFO: compiled from: WidgetStickerPickerSheet.kt */
     public static final class Companion {
         private Companion() {
         }
 
+        /* JADX WARN: Multi-variable type inference failed */
         public static /* synthetic */ WidgetStickerPickerSheet show$default(Companion companion, FragmentManager fragmentManager, StickerPickerListener stickerPickerListener, Long l, String str, Function0 function0, int i, Object obj) {
             return companion.show(fragmentManager, stickerPickerListener, (i & 4) != 0 ? null : l, (i & 8) != 0 ? null : str, (i & 16) != 0 ? null : function0);
         }
@@ -56,8 +58,8 @@ public final class WidgetStickerPickerSheet extends WidgetExpressionPickerSheet 
         }
     }
 
-    /* compiled from: WidgetStickerPickerSheet.kt */
-    /* renamed from: com.discord.widgets.chat.input.sticker.WidgetStickerPickerSheet$onViewCreated$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.input.sticker.WidgetStickerPickerSheet$onViewCreated$2 */
+    /* JADX INFO: compiled from: WidgetStickerPickerSheet.kt */
     public static final class RunnableC79312 implements Runnable {
         public RunnableC79312() {
         }
@@ -66,8 +68,9 @@ public final class WidgetStickerPickerSheet extends WidgetExpressionPickerSheet 
         public final void run() {
             ViewGroup.LayoutParams layoutParams = WidgetStickerPickerSheet.access$getContainer$p(WidgetStickerPickerSheet.this).getLayoutParams();
             if (layoutParams != null) {
-                Intrinsics3.checkNotNullExpressionValue(WidgetStickerPickerSheet.this.getResources(), "resources");
-                layoutParams.height = (int) (r1.getDisplayMetrics().heightPixels * 0.9d);
+                Resources resources = WidgetStickerPickerSheet.this.getResources();
+                Intrinsics3.checkNotNullExpressionValue(resources, "resources");
+                layoutParams.height = (int) (((double) resources.getDisplayMetrics().heightPixels) * 0.9d);
             }
         }
     }

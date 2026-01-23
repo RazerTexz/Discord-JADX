@@ -8,15 +8,15 @@ import kotlin.Unit;
 import kotlin.jvm.functions.Function1;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ClickableSpan.kt */
-/* renamed from: b.a.k.e.a, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.a.k.e.a, reason: use source file name */
+/* JADX INFO: compiled from: ClickableSpan.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class ClickableSpan2 extends ClickableSpan {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final Function1<View, Unit> f1498j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final Integer f1499k;
 
     /* JADX WARN: Multi-variable type inference failed */

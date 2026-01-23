@@ -3,7 +3,7 @@ package org.webrtc;
 import androidx.annotation.Nullable;
 import org.webrtc.MediaStreamTrack;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public class RtpReceiver {
 
     @Nullable
@@ -67,7 +67,7 @@ public class RtpReceiver {
         return nativeGetParameters(this.nativeRtpReceiver);
     }
 
-    /* renamed from: id */
+    /* JADX INFO: renamed from: id */
     public String m11038id() {
         checkRtpReceiverExists();
         return nativeGetId(this.nativeRtpReceiver);

@@ -7,12 +7,12 @@ import java.util.Objects;
 import p007b.p100d.p104b.p105a.outline;
 import p007b.p225i.p226a.p288f.p311f.InterfaceC3422a;
 
-/* compiled from: com.google.android.gms:play-services-basement@@17.6.0 */
-/* renamed from: b.i.a.f.f.b */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.f.b */
+/* JADX INFO: compiled from: com.google.android.gms:play-services-basement@@17.6.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public final class BinderC3423b<T> extends InterfaceC3422a.a {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final T f9615a;
 
     public BinderC3423b(T t) {
@@ -20,7 +20,7 @@ public final class BinderC3423b<T> extends InterfaceC3422a.a {
     }
 
     @RecentlyNonNull
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public static <T> T m4381i(@RecentlyNonNull InterfaceC3422a interfaceC3422a) {
         if (interfaceC3422a instanceof BinderC3423b) {
             return ((BinderC3423b) interfaceC3422a).f9615a;

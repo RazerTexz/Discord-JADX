@@ -7,9 +7,9 @@ import kotlin.jvm.functions.Function1;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: ThumbnailViewHolder.kt */
-/* renamed from: b.b.a.d.m, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.b.a.d.m, reason: use source file name */
+/* JADX INFO: compiled from: ThumbnailViewHolder.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class ThumbnailViewHolder5 extends Lambda implements Function1<ContentResolver, Unit> {
     public final /* synthetic */ long $id;
 

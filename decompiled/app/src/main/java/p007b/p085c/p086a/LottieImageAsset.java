@@ -4,24 +4,24 @@ import android.graphics.Bitmap;
 import androidx.annotation.Nullable;
 import androidx.annotation.RestrictTo;
 
-/* compiled from: LottieImageAsset.java */
-/* renamed from: b.c.a.k, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.c.a.k, reason: use source file name */
+/* JADX INFO: compiled from: LottieImageAsset.java */
+/* JADX INFO: loaded from: classes.dex */
 public class LottieImageAsset {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final int f2414a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final int f2415b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final String f2416c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final String f2417d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     @Nullable
     public Bitmap f2418e;
 

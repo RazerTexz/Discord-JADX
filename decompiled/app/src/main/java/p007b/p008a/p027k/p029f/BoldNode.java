@@ -7,9 +7,9 @@ import com.discord.i18n.RenderContext;
 import com.discord.simpleast.core.node.Node;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: BoldNode.kt */
-/* renamed from: b.a.k.f.a, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.a.k.f.a, reason: use source file name */
+/* JADX INFO: compiled from: BoldNode.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class BoldNode extends Node.C5655a<RenderContext> {
     public BoldNode() {
         super(new Node[0]);

@@ -18,60 +18,60 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p600f0.p601e0.Util7;
 import p600f0.p601e0.p606h.dates;
 
-/* compiled from: Cookie.kt */
-/* renamed from: f0.n, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: f0.n, reason: use source file name */
+/* JADX INFO: compiled from: Cookie.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class Cookie {
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final String f25947f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public final String f25948g;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public final long f25949h;
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public final String f25950i;
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final String f25951j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final boolean f25952k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final boolean f25953l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public final boolean f25954m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public final boolean f25955n;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public static final a f25946e = new a(null);
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final Pattern f25942a = Pattern.compile("(\\d{2,4})[^\\d]*");
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static final Pattern f25943b = Pattern.compile("(?i)(jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec).*");
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public static final Pattern f25944c = Pattern.compile("(\\d{1,2})[^\\d]*");
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public static final Pattern f25945d = Pattern.compile("(\\d{1,2}):(\\d{1,2}):(\\d{1,2})[^\\d]*");
 
-    /* compiled from: Cookie.kt */
-    /* renamed from: f0.n$a */
+    /* JADX INFO: renamed from: f0.n$a */
+    /* JADX INFO: compiled from: Cookie.kt */
     public static final class a {
         public a(DefaultConstructorMarker defaultConstructorMarker) {
         }
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final int m10385a(String str, int i, int i2, boolean z2) {
             while (i < i2) {
                 char cCharAt = str.charAt(i);
@@ -83,7 +83,7 @@ public final class Cookie {
             return i2;
         }
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final boolean m10386b(String str, String str2) {
             if (Intrinsics3.areEqual(str, str2)) {
                 return true;
@@ -99,11 +99,11 @@ public final class Cookie {
         }
 
         /* JADX WARN: Removed duplicated region for block: B:22:0x00c4  */
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         /*
             Code decompiled incorrectly, please refer to instructions dump.
         */
-        public final long m10387c(String str, int i, int i2) throws NumberFormatException {
+        public final long m10387c(String str, int i, int i2) {
             int iM10385a = m10385a(str, i, i2, false);
             Matcher matcher = Cookie.f25945d.matcher(str);
             int i3 = -1;
@@ -202,7 +202,7 @@ public final class Cookie {
     }
 
     /* JADX WARN: Removed duplicated region for block: B:14:0x0048  */
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */

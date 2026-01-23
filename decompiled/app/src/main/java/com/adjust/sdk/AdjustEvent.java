@@ -3,7 +3,7 @@ package com.adjust.sdk;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class AdjustEvent {
     private static ILogger logger = AdjustFactory.getLogger();
     public String callbackId;

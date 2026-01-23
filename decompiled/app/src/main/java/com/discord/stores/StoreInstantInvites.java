@@ -34,8 +34,8 @@ import p637j0.p641k.Func1;
 import p637j0.p642l.p647e.ScalarSynchronousObservable;
 import p658rx.Observable;
 
-/* compiled from: StoreInstantInvites.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: StoreInstantInvites.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class StoreInstantInvites extends StoreV2 {
     private final Dispatcher dispatcher;
     private final Map<Long, Map<String, ModelInvite>> invites;
@@ -45,10 +45,10 @@ public final class StoreInstantInvites extends StoreV2 {
     private final ObservationDeck observationDeck;
     private final RestAPI restAPI;
 
-    /* compiled from: StoreInstantInvites.kt */
+    /* JADX INFO: compiled from: StoreInstantInvites.kt */
     public static abstract class InviteState {
 
-        /* compiled from: StoreInstantInvites.kt */
+        /* JADX INFO: compiled from: StoreInstantInvites.kt */
         public static final class Invalid extends InviteState {
             public static final Invalid INSTANCE = new Invalid();
 
@@ -57,7 +57,7 @@ public final class StoreInstantInvites extends StoreV2 {
             }
         }
 
-        /* compiled from: StoreInstantInvites.kt */
+        /* JADX INFO: compiled from: StoreInstantInvites.kt */
         public static final class LoadFailed extends InviteState {
             public static final LoadFailed INSTANCE = new LoadFailed();
 
@@ -66,7 +66,7 @@ public final class StoreInstantInvites extends StoreV2 {
             }
         }
 
-        /* compiled from: StoreInstantInvites.kt */
+        /* JADX INFO: compiled from: StoreInstantInvites.kt */
         public static final class Loading extends InviteState {
             public static final Loading INSTANCE = new Loading();
 
@@ -75,7 +75,7 @@ public final class StoreInstantInvites extends StoreV2 {
             }
         }
 
-        /* compiled from: StoreInstantInvites.kt */
+        /* JADX INFO: compiled from: StoreInstantInvites.kt */
         public static final /* data */ class Resolved extends InviteState {
             private final ModelInvite invite;
 
@@ -93,7 +93,7 @@ public final class StoreInstantInvites extends StoreV2 {
                 return resolved.copy(modelInvite);
             }
 
-            /* renamed from: component1, reason: from getter */
+            /* JADX INFO: renamed from: component1, reason: from getter */
             public final ModelInvite getInvite() {
                 return this.invite;
             }
@@ -150,8 +150,8 @@ public final class StoreInstantInvites extends StoreV2 {
         }
     }
 
-    /* compiled from: StoreInstantInvites.kt */
-    /* renamed from: com.discord.stores.StoreInstantInvites$clearInvites$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreInstantInvites$clearInvites$1 */
+    /* JADX INFO: compiled from: StoreInstantInvites.kt */
     public static final class C61261 extends Lambda implements Function0<Unit> {
         public final /* synthetic */ long $guildId;
 
@@ -167,7 +167,7 @@ public final class StoreInstantInvites extends StoreV2 {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             Map map = (Map) StoreInstantInvites.access$getInvites$p(StoreInstantInvites.this).get(Long.valueOf(this.$guildId));
             if (map != null) {
@@ -177,12 +177,12 @@ public final class StoreInstantInvites extends StoreV2 {
         }
     }
 
-    /* compiled from: StoreInstantInvites.kt */
-    /* renamed from: com.discord.stores.StoreInstantInvites$fetchGuildInvites$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreInstantInvites$fetchGuildInvites$1 */
+    /* JADX INFO: compiled from: StoreInstantInvites.kt */
     public static final class C61271 extends Lambda implements Function1<List<? extends ModelInvite>, Unit> {
 
-        /* compiled from: StoreInstantInvites.kt */
-        /* renamed from: com.discord.stores.StoreInstantInvites$fetchGuildInvites$1$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.stores.StoreInstantInvites$fetchGuildInvites$1$1, reason: invalid class name */
+        /* JADX INFO: compiled from: StoreInstantInvites.kt */
         public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
             public final /* synthetic */ List $invites;
 
@@ -198,7 +198,7 @@ public final class StoreInstantInvites extends StoreV2 {
                 return Unit.f27425a;
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2() {
                 StoreInstantInvites.access$onLoadedInvites(StoreInstantInvites.this, this.$invites);
             }
@@ -214,15 +214,15 @@ public final class StoreInstantInvites extends StoreV2 {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(List<? extends ModelInvite> list) {
             Intrinsics3.checkNotNullParameter(list, "invites");
             StoreInstantInvites.access$getDispatcher$p(StoreInstantInvites.this).schedule(new AnonymousClass1(list));
         }
     }
 
-    /* compiled from: StoreInstantInvites.kt */
-    /* renamed from: com.discord.stores.StoreInstantInvites$fetchInviteIfNotLoaded$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreInstantInvites$fetchInviteIfNotLoaded$1 */
+    /* JADX INFO: compiled from: StoreInstantInvites.kt */
     public static final class C61281 extends Lambda implements Function0<Unit> {
         public final /* synthetic */ Long $eventId;
         public final /* synthetic */ String $inviteCode;
@@ -231,8 +231,8 @@ public final class StoreInstantInvites extends StoreV2 {
         public final /* synthetic */ String $location;
         public final /* synthetic */ Function0 $onError;
 
-        /* compiled from: StoreInstantInvites.kt */
-        /* renamed from: com.discord.stores.StoreInstantInvites$fetchInviteIfNotLoaded$1$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.stores.StoreInstantInvites$fetchInviteIfNotLoaded$1$1, reason: invalid class name */
+        /* JADX INFO: compiled from: StoreInstantInvites.kt */
         public static final class AnonymousClass1 extends Lambda implements Function1<ModelInvite, TrackNetworkMetadata2> {
             public AnonymousClass1() {
                 super(1);
@@ -243,7 +243,7 @@ public final class StoreInstantInvites extends StoreV2 {
                 return invoke2(modelInvite);
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final TrackNetworkMetadata2 invoke2(ModelInvite modelInvite) {
                 User inviter;
                 Channel channel;
@@ -254,12 +254,12 @@ public final class StoreInstantInvites extends StoreV2 {
             }
         }
 
-        /* compiled from: StoreInstantInvites.kt */
-        /* renamed from: com.discord.stores.StoreInstantInvites$fetchInviteIfNotLoaded$1$2, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.stores.StoreInstantInvites$fetchInviteIfNotLoaded$1$2, reason: invalid class name */
+        /* JADX INFO: compiled from: StoreInstantInvites.kt */
         public static final class AnonymousClass2 extends Lambda implements Function1<ModelInvite, Unit> {
 
-            /* compiled from: StoreInstantInvites.kt */
-            /* renamed from: com.discord.stores.StoreInstantInvites$fetchInviteIfNotLoaded$1$2$1, reason: invalid class name */
+            /* JADX INFO: renamed from: com.discord.stores.StoreInstantInvites$fetchInviteIfNotLoaded$1$2$1, reason: invalid class name */
+            /* JADX INFO: compiled from: StoreInstantInvites.kt */
             public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
                 public final /* synthetic */ ModelInvite $it;
 
@@ -275,7 +275,7 @@ public final class StoreInstantInvites extends StoreV2 {
                     return Unit.f27425a;
                 }
 
-                /* renamed from: invoke, reason: avoid collision after fix types in other method */
+                /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
                 public final void invoke2() {
                     C61281 c61281 = C61281.this;
                     StoreInstantInvites storeInstantInvites = StoreInstantInvites.this;
@@ -301,7 +301,7 @@ public final class StoreInstantInvites extends StoreV2 {
                 return Unit.f27425a;
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2(ModelInvite modelInvite) {
                 Intrinsics3.checkNotNullParameter(modelInvite, "it");
                 StoreInstantInvites.access$getDispatcher$p(StoreInstantInvites.this).schedule(new AnonymousClass1(modelInvite));
@@ -312,12 +312,12 @@ public final class StoreInstantInvites extends StoreV2 {
             }
         }
 
-        /* compiled from: StoreInstantInvites.kt */
-        /* renamed from: com.discord.stores.StoreInstantInvites$fetchInviteIfNotLoaded$1$3, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.stores.StoreInstantInvites$fetchInviteIfNotLoaded$1$3, reason: invalid class name */
+        /* JADX INFO: compiled from: StoreInstantInvites.kt */
         public static final class AnonymousClass3 extends Lambda implements Function1<Error, Unit> {
 
-            /* compiled from: StoreInstantInvites.kt */
-            /* renamed from: com.discord.stores.StoreInstantInvites$fetchInviteIfNotLoaded$1$3$1, reason: invalid class name */
+            /* JADX INFO: renamed from: com.discord.stores.StoreInstantInvites$fetchInviteIfNotLoaded$1$3$1, reason: invalid class name */
+            /* JADX INFO: compiled from: StoreInstantInvites.kt */
             public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
                 public AnonymousClass1() {
                     super(0);
@@ -329,7 +329,7 @@ public final class StoreInstantInvites extends StoreV2 {
                     return Unit.f27425a;
                 }
 
-                /* renamed from: invoke, reason: avoid collision after fix types in other method */
+                /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
                 public final void invoke2() {
                     C61281 c61281 = C61281.this;
                     StoreInstantInvites storeInstantInvites = StoreInstantInvites.this;
@@ -339,8 +339,8 @@ public final class StoreInstantInvites extends StoreV2 {
                 }
             }
 
-            /* compiled from: StoreInstantInvites.kt */
-            /* renamed from: com.discord.stores.StoreInstantInvites$fetchInviteIfNotLoaded$1$3$2, reason: invalid class name */
+            /* JADX INFO: renamed from: com.discord.stores.StoreInstantInvites$fetchInviteIfNotLoaded$1$3$2, reason: invalid class name */
+            /* JADX INFO: compiled from: StoreInstantInvites.kt */
             public static final class AnonymousClass2 extends Lambda implements Function0<Unit> {
                 public AnonymousClass2() {
                     super(0);
@@ -352,7 +352,7 @@ public final class StoreInstantInvites extends StoreV2 {
                     return Unit.f27425a;
                 }
 
-                /* renamed from: invoke, reason: avoid collision after fix types in other method */
+                /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
                 public final void invoke2() {
                     C61281 c61281 = C61281.this;
                     StoreInstantInvites storeInstantInvites = StoreInstantInvites.this;
@@ -372,7 +372,7 @@ public final class StoreInstantInvites extends StoreV2 {
                 return Unit.f27425a;
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2(Error error) {
                 Intrinsics3.checkNotNullParameter(error, "error");
                 Function0 function0 = C61281.this.$onError;
@@ -419,7 +419,7 @@ public final class StoreInstantInvites extends StoreV2 {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             if (!StoreInstantInvites.access$getKnownInvites$p(StoreInstantInvites.this).containsKey(this.$inviteKey) || (StoreInstantInvites.access$getKnownInvites$p(StoreInstantInvites.this).get(this.$inviteKey) instanceof InviteState.LoadFailed)) {
                 AnalyticsTracker.inviteOpened(this.$inviteCode);
@@ -432,8 +432,8 @@ public final class StoreInstantInvites extends StoreV2 {
         }
     }
 
-    /* compiled from: StoreInstantInvites.kt */
-    /* renamed from: com.discord.stores.StoreInstantInvites$observeInvite$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreInstantInvites$observeInvite$1 */
+    /* JADX INFO: compiled from: StoreInstantInvites.kt */
     public static final class C61291 extends Lambda implements Function0<Map<String, ? extends InviteState>> {
         public C61291() {
             super(0);
@@ -445,14 +445,14 @@ public final class StoreInstantInvites extends StoreV2 {
         }
 
         @Override // kotlin.jvm.functions.Function0
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final Map<String, ? extends InviteState> invoke2() {
             return StoreInstantInvites.access$getKnownInvites(StoreInstantInvites.this);
         }
     }
 
-    /* compiled from: StoreInstantInvites.kt */
-    /* renamed from: com.discord.stores.StoreInstantInvites$observeInvite$2 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreInstantInvites$observeInvite$2 */
+    /* JADX INFO: compiled from: StoreInstantInvites.kt */
     public static final class C61302<T, R> implements Func1<Map<String, ? extends InviteState>, InviteState> {
         public final /* synthetic */ String $inviteKey;
 
@@ -465,15 +465,15 @@ public final class StoreInstantInvites extends StoreV2 {
             return call2(map);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final InviteState call2(Map<String, ? extends InviteState> map) {
             InviteState inviteState = map.get(this.$inviteKey);
             return inviteState != null ? inviteState : InviteState.Loading.INSTANCE;
         }
     }
 
-    /* compiled from: StoreInstantInvites.kt */
-    /* renamed from: com.discord.stores.StoreInstantInvites$observeKnownInvites$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreInstantInvites$observeKnownInvites$1 */
+    /* JADX INFO: compiled from: StoreInstantInvites.kt */
     public static final class C61311 extends Lambda implements Function0<Map<String, ? extends InviteState>> {
         public C61311() {
             super(0);
@@ -485,14 +485,14 @@ public final class StoreInstantInvites extends StoreV2 {
         }
 
         @Override // kotlin.jvm.functions.Function0
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final Map<String, ? extends InviteState> invoke2() {
             return StoreInstantInvites.access$getKnownInvites(StoreInstantInvites.this);
         }
     }
 
-    /* compiled from: StoreInstantInvites.kt */
-    /* renamed from: com.discord.stores.StoreInstantInvites$onInviteRemoved$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreInstantInvites$onInviteRemoved$1 */
+    /* JADX INFO: compiled from: StoreInstantInvites.kt */
     public static final class C61321 extends Lambda implements Function0<Unit> {
         public final /* synthetic */ ModelInvite $invite;
 
@@ -508,7 +508,7 @@ public final class StoreInstantInvites extends StoreV2 {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             Map map;
             Guild guild = this.$invite.guild;
@@ -553,6 +553,7 @@ public final class StoreInstantInvites extends StoreV2 {
         storeInstantInvites.setChatInvites(str, inviteState);
     }
 
+    /* JADX WARN: Multi-variable type inference failed */
     public static /* synthetic */ void fetchInviteIfNotLoaded$default(StoreInstantInvites storeInstantInvites, String str, Long l, String str2, Boolean bool, Function0 function0, int i, Object obj) {
         storeInstantInvites.fetchInviteIfNotLoaded(str, (i & 2) != 0 ? null : l, (i & 4) != 0 ? null : str2, (i & 8) != 0 ? null : bool, (i & 16) != 0 ? null : function0);
     }

@@ -27,11 +27,11 @@ import p637j0.p642l.p647e.ScalarSynchronousObservable;
 import p658rx.Observable;
 import p658rx.functions.Func2;
 
-/* compiled from: WidgetChatListModel.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetChatListModel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final /* data */ class WidgetChatListModel implements WidgetChatListAdapter.Data {
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private static final int MAX_MESSAGES_PER_CHANNEL = 25;
     private static final long WUMPUS_PACK_ID = 847199849233514549L;
@@ -49,17 +49,17 @@ public final /* data */ class WidgetChatListModel implements WidgetChatListAdapt
     private final long oldestMessageId;
     private final long userId;
 
-    /* compiled from: WidgetChatListModel.kt */
+    /* JADX INFO: compiled from: WidgetChatListModel.kt */
     public enum ChatListState {
         DETACHED,
         DETACHED_UNTOUCHED,
         ATTACHED;
 
 
-        /* renamed from: Companion, reason: from kotlin metadata */
+        /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
         public static final Companion INSTANCE = new Companion(null);
 
-        /* compiled from: WidgetChatListModel.kt */
+        /* JADX INFO: compiled from: WidgetChatListModel.kt */
         public static final class Companion {
             private Companion() {
             }
@@ -76,7 +76,7 @@ public final /* data */ class WidgetChatListModel implements WidgetChatListAdapt
         }
     }
 
-    /* compiled from: WidgetChatListModel.kt */
+    /* JADX INFO: compiled from: WidgetChatListModel.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -209,6 +209,7 @@ public final /* data */ class WidgetChatListModel implements WidgetChatListAdapt
         this.isSpoilerClickAllowed = true;
     }
 
+    /* JADX WARN: Multi-variable type inference failed */
     public static /* synthetic */ WidgetChatListModel copy$default(WidgetChatListModel widgetChatListModel, long j, long j2, Guild guild, long j3, Map map, long j4, List list, Set set, long j5, long j6, boolean z2, int i, Object obj) {
         return widgetChatListModel.copy((i & 1) != 0 ? widgetChatListModel.getUserId() : j, (i & 2) != 0 ? widgetChatListModel.getChannelId() : j2, (i & 4) != 0 ? widgetChatListModel.getGuild() : guild, (i & 8) != 0 ? widgetChatListModel.getGuildId() : j3, (i & 16) != 0 ? widgetChatListModel.getChannelNames() : map, (i & 32) != 0 ? widgetChatListModel.getOldestMessageId() : j4, (i & 64) != 0 ? widgetChatListModel.getList() : list, (i & 128) != 0 ? widgetChatListModel.getMyRoleIds() : set, (i & 256) != 0 ? widgetChatListModel.getNewMessagesMarkerMessageId() : j5, (i & 512) != 0 ? widgetChatListModel.newestKnownMessageId : j6, (i & 1024) != 0 ? widgetChatListModel.isLoadingMessages : z2);
     }
@@ -217,12 +218,12 @@ public final /* data */ class WidgetChatListModel implements WidgetChatListAdapt
         return getUserId();
     }
 
-    /* renamed from: component10, reason: from getter */
+    /* JADX INFO: renamed from: component10, reason: from getter */
     public final long getNewestKnownMessageId() {
         return this.newestKnownMessageId;
     }
 
-    /* renamed from: component11, reason: from getter */
+    /* JADX INFO: renamed from: component11, reason: from getter */
     public final boolean getIsLoadingMessages() {
         return this.isLoadingMessages;
     }
@@ -327,6 +328,9 @@ public final /* data */ class WidgetChatListModel implements WidgetChatListAdapt
     }
 
     /* JADX WARN: Multi-variable type inference failed */
+    /* JADX WARN: Type inference failed for: r0v19, types: [int] */
+    /* JADX WARN: Type inference failed for: r0v20 */
+    /* JADX WARN: Type inference failed for: r0v23 */
     public int hashCode() {
         int iM3a = (C0002b.m3a(getChannelId()) + (C0002b.m3a(getUserId()) * 31)) * 31;
         Guild guild = getGuild();
@@ -338,11 +342,11 @@ public final /* data */ class WidgetChatListModel implements WidgetChatListAdapt
         Set<Long> myRoleIds = getMyRoleIds();
         int iM3a4 = (C0002b.m3a(this.newestKnownMessageId) + ((C0002b.m3a(getNewMessagesMarkerMessageId()) + ((iHashCode + (myRoleIds != null ? myRoleIds.hashCode() : 0)) * 31)) * 31)) * 31;
         boolean z2 = this.isLoadingMessages;
-        int i = z2;
-        if (z2 != 0) {
-            i = 1;
+        ?? r0 = z2;
+        if (z2) {
+            r0 = 1;
         }
-        return iM3a4 + i;
+        return iM3a4 + r0;
     }
 
     public final boolean isLoadingMessages() {
@@ -350,7 +354,7 @@ public final /* data */ class WidgetChatListModel implements WidgetChatListAdapt
     }
 
     @Override // com.discord.widgets.chat.list.adapter.WidgetChatListAdapter.Data
-    /* renamed from: isSpoilerClickAllowed, reason: from getter */
+    /* JADX INFO: renamed from: isSpoilerClickAllowed, reason: from getter */
     public boolean getIsSpoilerClickAllowed() {
         return this.isSpoilerClickAllowed;
     }

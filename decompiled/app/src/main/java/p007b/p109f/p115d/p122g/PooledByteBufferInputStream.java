@@ -6,20 +6,20 @@ import java.io.InputStream;
 import p007b.p085c.p086a.p087a0.AnimatableValueParser;
 import p007b.p100d.p104b.p105a.outline;
 
-/* compiled from: PooledByteBufferInputStream.java */
-/* renamed from: b.f.d.g.h, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.f.d.g.h, reason: use source file name */
+/* JADX INFO: compiled from: PooledByteBufferInputStream.java */
+/* JADX INFO: loaded from: classes.dex */
 public class PooledByteBufferInputStream extends InputStream {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     @VisibleForTesting
     public final PooledByteBuffer f3114j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     @VisibleForTesting
     public int f3115k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     @VisibleForTesting
     public int f3116l;
 

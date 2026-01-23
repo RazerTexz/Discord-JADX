@@ -9,15 +9,15 @@ import p007b.p109f.p161j.p175j.CloseableImage;
 import p007b.p109f.p161j.p175j.CloseableStaticBitmap;
 import p007b.p109f.p161j.p183r.FrescoSystrace;
 
-/* compiled from: DefaultDrawableFactory.java */
-/* renamed from: b.f.g.a.a.a, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.f.g.a.a.a, reason: use source file name */
+/* JADX INFO: compiled from: DefaultDrawableFactory.java */
+/* JADX INFO: loaded from: classes.dex */
 public class DefaultDrawableFactory implements DrawableFactory {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final Resources f3166a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final DrawableFactory f3167b;
 
     public DefaultDrawableFactory(Resources resources, DrawableFactory drawableFactory) {
@@ -26,13 +26,13 @@ public class DefaultDrawableFactory implements DrawableFactory {
     }
 
     @Override // p007b.p109f.p161j.p174i.DrawableFactory
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public boolean mo1035a(CloseableImage closeableImage) {
         return true;
     }
 
     @Override // p007b.p109f.p161j.p174i.DrawableFactory
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public Drawable mo1036b(CloseableImage closeableImage) {
         try {
             FrescoSystrace.m1527b();

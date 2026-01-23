@@ -3,24 +3,23 @@ package p007b.p225i.p226a.p341g.p342a;
 import android.R;
 import android.animation.ObjectAnimator;
 import android.animation.StateListAnimator;
-import android.content.res.Resources;
 import android.view.View;
 import androidx.annotation.NonNull;
 import androidx.annotation.RequiresApi;
 import androidx.constraintlayout.motion.widget.Key;
 import com.google.android.material.C10817R;
 
-/* compiled from: ViewUtilsLollipop.java */
+/* JADX INFO: renamed from: b.i.a.g.a.e, reason: use source file name */
+/* JADX INFO: compiled from: ViewUtilsLollipop.java */
+/* JADX INFO: loaded from: classes3.dex */
 @RequiresApi(21)
-/* renamed from: b.i.a.g.a.e, reason: use source file name */
-/* loaded from: classes3.dex */
 public class ViewUtilsLollipop {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final int[] f11537a = {R.attr.stateListAnimator};
 
-    /* renamed from: a */
-    public static void m6035a(@NonNull View view, float f) throws Resources.NotFoundException {
+    /* JADX INFO: renamed from: a */
+    public static void m6035a(@NonNull View view, float f) {
         int integer = view.getResources().getInteger(C10817R.integer.app_bar_elevation_anim_duration);
         StateListAnimator stateListAnimator = new StateListAnimator();
         long j = integer;

@@ -12,8 +12,8 @@ import kotlin.ranges.Ranges2;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ModelGuildMemberListUpdate.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: ModelGuildMemberListUpdate.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class ModelGuildMemberListUpdate {
     public static final String EVERYONE_ID = "everyone";
     private final List<Group> groups;
@@ -21,13 +21,13 @@ public final /* data */ class ModelGuildMemberListUpdate {
     private final String id;
     private final List<Operation> operations;
 
-    /* compiled from: ModelGuildMemberListUpdate.kt */
+    /* JADX INFO: compiled from: ModelGuildMemberListUpdate.kt */
     public static final /* data */ class Group {
         private final int count;
         private final String id;
         private final Type type;
 
-        /* compiled from: ModelGuildMemberListUpdate.kt */
+        /* JADX INFO: compiled from: ModelGuildMemberListUpdate.kt */
         public static final class Parser implements Model.Parser<Group> {
             public static final Parser INSTANCE = new Parser();
 
@@ -53,7 +53,7 @@ public final /* data */ class ModelGuildMemberListUpdate {
             }
         }
 
-        /* compiled from: ModelGuildMemberListUpdate.kt */
+        /* JADX INFO: compiled from: ModelGuildMemberListUpdate.kt */
         public enum Type {
             ROLE,
             OFFLINE,
@@ -88,12 +88,12 @@ public final /* data */ class ModelGuildMemberListUpdate {
             return group.copy(str, i);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final String getId() {
             return this.id;
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final int getCount() {
             return this.count;
         }
@@ -139,12 +139,12 @@ public final /* data */ class ModelGuildMemberListUpdate {
         }
     }
 
-    /* compiled from: ModelGuildMemberListUpdate.kt */
+    /* JADX INFO: compiled from: ModelGuildMemberListUpdate.kt */
     public static abstract class Operation {
         private final Item item;
         private final List<Item> items;
 
-        /* compiled from: ModelGuildMemberListUpdate.kt */
+        /* JADX INFO: compiled from: ModelGuildMemberListUpdate.kt */
         public static final /* data */ class Delete extends Operation {
             private final int index;
 
@@ -160,7 +160,7 @@ public final /* data */ class ModelGuildMemberListUpdate {
                 return delete.copy(i);
             }
 
-            /* renamed from: component1, reason: from getter */
+            /* JADX INFO: renamed from: component1, reason: from getter */
             public final int getIndex() {
                 return this.index;
             }
@@ -189,7 +189,7 @@ public final /* data */ class ModelGuildMemberListUpdate {
             }
         }
 
-        /* compiled from: ModelGuildMemberListUpdate.kt */
+        /* JADX INFO: compiled from: ModelGuildMemberListUpdate.kt */
         public static final /* data */ class Insert extends Operation {
             private final int index;
             private final Item item;
@@ -212,7 +212,7 @@ public final /* data */ class ModelGuildMemberListUpdate {
                 return insert.copy(i, item);
             }
 
-            /* renamed from: component1, reason: from getter */
+            /* JADX INFO: renamed from: component1, reason: from getter */
             public final int getIndex() {
                 return this.index;
             }
@@ -262,7 +262,7 @@ public final /* data */ class ModelGuildMemberListUpdate {
             }
         }
 
-        /* compiled from: ModelGuildMemberListUpdate.kt */
+        /* JADX INFO: compiled from: ModelGuildMemberListUpdate.kt */
         public static final /* data */ class Invalidate extends Operation {
             private final Ranges2 range;
 
@@ -280,7 +280,7 @@ public final /* data */ class ModelGuildMemberListUpdate {
                 return invalidate.copy(ranges2);
             }
 
-            /* renamed from: component1, reason: from getter */
+            /* JADX INFO: renamed from: component1, reason: from getter */
             public final Ranges2 getRange() {
                 return this.range;
             }
@@ -317,10 +317,10 @@ public final /* data */ class ModelGuildMemberListUpdate {
             }
         }
 
-        /* compiled from: ModelGuildMemberListUpdate.kt */
+        /* JADX INFO: compiled from: ModelGuildMemberListUpdate.kt */
         public static abstract class Item {
 
-            /* compiled from: ModelGuildMemberListUpdate.kt */
+            /* JADX INFO: compiled from: ModelGuildMemberListUpdate.kt */
             public static final /* data */ class GroupItem extends Item {
                 private final Group group;
 
@@ -338,7 +338,7 @@ public final /* data */ class ModelGuildMemberListUpdate {
                     return groupItem.copy(group);
                 }
 
-                /* renamed from: component1, reason: from getter */
+                /* JADX INFO: renamed from: component1, reason: from getter */
                 public final Group getGroup() {
                     return this.group;
                 }
@@ -375,7 +375,7 @@ public final /* data */ class ModelGuildMemberListUpdate {
                 }
             }
 
-            /* compiled from: ModelGuildMemberListUpdate.kt */
+            /* JADX INFO: compiled from: ModelGuildMemberListUpdate.kt */
             public static final /* data */ class MemberItem extends Item {
                 private final GuildMember member;
 
@@ -393,7 +393,7 @@ public final /* data */ class ModelGuildMemberListUpdate {
                     return memberItem.copy(guildMember);
                 }
 
-                /* renamed from: component1, reason: from getter */
+                /* JADX INFO: renamed from: component1, reason: from getter */
                 public final GuildMember getMember() {
                     return this.member;
                 }
@@ -430,7 +430,7 @@ public final /* data */ class ModelGuildMemberListUpdate {
                 }
             }
 
-            /* compiled from: ModelGuildMemberListUpdate.kt */
+            /* JADX INFO: compiled from: ModelGuildMemberListUpdate.kt */
             public static final class Parser implements Model.Parser<Item> {
                 public static final Parser INSTANCE = new Parser();
 
@@ -475,7 +475,7 @@ public final /* data */ class ModelGuildMemberListUpdate {
             }
         }
 
-        /* compiled from: ModelGuildMemberListUpdate.kt */
+        /* JADX INFO: compiled from: ModelGuildMemberListUpdate.kt */
         public static final class Parser implements Model.Parser<Operation> {
             public static final Parser INSTANCE = new Parser();
 
@@ -488,13 +488,7 @@ public final /* data */ class ModelGuildMemberListUpdate {
             }
 
             /* JADX WARN: Can't rename method to resolve collision */
-            /* JADX WARN: Failed to restore switch over string. Please report as a decompilation issue
-            java.lang.NullPointerException: Cannot invoke "java.util.List.iterator()" because the return value of "jadx.core.dex.visitors.regions.SwitchOverStringVisitor$SwitchData.getNewCases()" is null
-            	at jadx.core.dex.visitors.regions.SwitchOverStringVisitor.restoreSwitchOverString(SwitchOverStringVisitor.java:109)
-            	at jadx.core.dex.visitors.regions.SwitchOverStringVisitor.visitRegion(SwitchOverStringVisitor.java:66)
-            	at jadx.core.dex.visitors.regions.DepthRegionTraversal.traverseIterativeStepInternal(DepthRegionTraversal.java:77)
-            	at jadx.core.dex.visitors.regions.DepthRegionTraversal.traverseIterativeStepInternal(DepthRegionTraversal.java:82)
-             */
+            /* JADX WARN: Failed to restore switch over string. Please report as a decompilation issue */
             /* JADX WARN: Multi-variable type inference failed */
             @Override // com.discord.models.domain.Model.Parser
             public Operation parse(Model.JsonReader reader) throws IOException {
@@ -563,7 +557,7 @@ public final /* data */ class ModelGuildMemberListUpdate {
             }
         }
 
-        /* compiled from: ModelGuildMemberListUpdate.kt */
+        /* JADX INFO: compiled from: ModelGuildMemberListUpdate.kt */
         public static final /* data */ class Sync extends Operation {
             private final List<Item> items;
             private final Ranges2 range;
@@ -589,7 +583,7 @@ public final /* data */ class ModelGuildMemberListUpdate {
                 return sync.copy(ranges2, list);
             }
 
-            /* renamed from: component1, reason: from getter */
+            /* JADX INFO: renamed from: component1, reason: from getter */
             public final Ranges2 getRange() {
                 return this.range;
             }
@@ -641,7 +635,7 @@ public final /* data */ class ModelGuildMemberListUpdate {
             }
         }
 
-        /* compiled from: ModelGuildMemberListUpdate.kt */
+        /* JADX INFO: compiled from: ModelGuildMemberListUpdate.kt */
         public static final /* data */ class Update extends Operation {
             private final int index;
             private final Item item;
@@ -664,7 +658,7 @@ public final /* data */ class ModelGuildMemberListUpdate {
                 return update.copy(i, item);
             }
 
-            /* renamed from: component1, reason: from getter */
+            /* JADX INFO: renamed from: component1, reason: from getter */
             public final int getIndex() {
                 return this.index;
             }
@@ -733,7 +727,7 @@ public final /* data */ class ModelGuildMemberListUpdate {
         }
     }
 
-    /* compiled from: ModelGuildMemberListUpdate.kt */
+    /* JADX INFO: compiled from: ModelGuildMemberListUpdate.kt */
     public static final class Parser implements Model.Parser<ModelGuildMemberListUpdate> {
         public static final Parser INSTANCE = new Parser();
 
@@ -785,6 +779,7 @@ public final /* data */ class ModelGuildMemberListUpdate {
         this.groups = list2;
     }
 
+    /* JADX WARN: Multi-variable type inference failed */
     public static /* synthetic */ ModelGuildMemberListUpdate copy$default(ModelGuildMemberListUpdate modelGuildMemberListUpdate, long j, String str, List list, List list2, int i, Object obj) {
         if ((i & 1) != 0) {
             j = modelGuildMemberListUpdate.guildId;
@@ -804,12 +799,12 @@ public final /* data */ class ModelGuildMemberListUpdate {
         return modelGuildMemberListUpdate.copy(j2, str2, list3, list2);
     }
 
-    /* renamed from: component1, reason: from getter */
+    /* JADX INFO: renamed from: component1, reason: from getter */
     public final long getGuildId() {
         return this.guildId;
     }
 
-    /* renamed from: component2, reason: from getter */
+    /* JADX INFO: renamed from: component2, reason: from getter */
     public final String getId() {
         return this.id;
     }

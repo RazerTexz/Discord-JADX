@@ -5,22 +5,22 @@ import kotlin.jvm.internal.DefaultConstructorMarker;
 import p507d0.p588x.progressionUtil;
 import p507d0.p592z.p594d.p595g0.KMarkers;
 
-/* compiled from: Progressions.kt */
-/* renamed from: d0.d0.c, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.d0.c, reason: use source file name */
+/* JADX INFO: compiled from: Progressions.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public class Progressions implements Iterable<Long>, KMarkers {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final long f22283j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final long f22284k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final long f22285l;
 
-    /* compiled from: Progressions.kt */
-    /* renamed from: d0.d0.c$a */
+    /* JADX INFO: renamed from: d0.d0.c$a */
+    /* JADX INFO: compiled from: Progressions.kt */
     public static final class a {
         public a(DefaultConstructorMarker defaultConstructorMarker) {
         }
@@ -51,7 +51,7 @@ public class Progressions implements Iterable<Long>, KMarkers {
     }
 
     @Override // java.lang.Iterable
-    /* renamed from: iterator, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: iterator, reason: avoid collision after fix types in other method */
     public /* bridge */ /* synthetic */ Iterator<Long> iterator2() {
         return iterator();
     }

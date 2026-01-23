@@ -7,11 +7,11 @@ import p507d0.p513e0.p514p.p515d.p517m0.p567n.p570n1.InterfaceC11983l;
 import p507d0.p513e0.p514p.p515d.p517m0.p567n.p570n1.InterfaceC11984m;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: expandedTypeUtils.kt */
-/* renamed from: d0.e0.p.d.m0.n.u, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.n.u, reason: use source file name */
+/* JADX INFO: compiled from: expandedTypeUtils.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class expandedTypeUtils {
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final InterfaceC11979h m10038a(TypeSystemCommonBackendContext typeSystemCommonBackendContext, InterfaceC11979h interfaceC11979h, HashSet<InterfaceC11983l> hashSet) {
         InterfaceC11979h interfaceC11979hM10038a;
         InterfaceC11983l interfaceC11983lTypeConstructor = typeSystemCommonBackendContext.typeConstructor(interfaceC11979h);

@@ -5,7 +5,7 @@ import android.view.ViewGroup;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import p007b.p100d.p104b.p105a.outline;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class ConstraintProperties {
     public static final int BASELINE = 5;
     public static final int BOTTOM = 4;

@@ -4,30 +4,30 @@ import android.content.Context;
 import android.net.wifi.WifiManager;
 import androidx.annotation.Nullable;
 
-/* compiled from: WifiLockManager.java */
-/* renamed from: b.i.a.c.r2, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.r2, reason: use source file name */
+/* JADX INFO: compiled from: WifiLockManager.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class WifiLockManager {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     @Nullable
     public final WifiManager f7474a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     @Nullable
     public WifiManager.WifiLock f7475b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public boolean f7476c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public boolean f7477d;
 
     public WifiLockManager(Context context) {
         this.f7474a = (WifiManager) context.getApplicationContext().getSystemService("wifi");
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final void m3362a() {
         WifiManager.WifiLock wifiLock = this.f7475b;
         if (wifiLock == null) {

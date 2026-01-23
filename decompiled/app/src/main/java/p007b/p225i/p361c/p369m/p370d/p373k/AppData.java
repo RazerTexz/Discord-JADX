@@ -2,30 +2,30 @@ package p007b.p225i.p361c.p369m.p370d.p373k;
 
 import p007b.p225i.p361c.p369m.p370d.p388u.ResourceUnityVersionProvider;
 
-/* compiled from: AppData.java */
-/* renamed from: b.i.c.m.d.k.b, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.c.m.d.k.b, reason: use source file name */
+/* JADX INFO: compiled from: AppData.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class AppData {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final String f12259a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final String f12260b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final String f12261c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final String f12262d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final String f12263e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final String f12264f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public final ResourceUnityVersionProvider f12265g;
 
     public AppData(String str, String str2, String str3, String str4, String str5, String str6, ResourceUnityVersionProvider resourceUnityVersionProvider) {

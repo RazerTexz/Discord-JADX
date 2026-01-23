@@ -12,7 +12,7 @@ import java.util.Iterator;
 import java.util.Locale;
 import p007b.p100d.p104b.p105a.outline;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public final class LocaleListCompatWrapper implements LocaleListInterface {
     private final Locale[] mList;
 

@@ -10,79 +10,79 @@ import p007b.p085c.p086a.p087a0.AnimatableValueParser;
 import p007b.p100d.p104b.p105a.outline;
 import p007b.p225i.p226a.p242c.ExoPlayerLibraryInfo;
 
-/* compiled from: DataSpec.java */
-/* renamed from: b.i.a.c.e3.n, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.e3.n, reason: use source file name */
+/* JADX INFO: compiled from: DataSpec.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class DataSpec {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final Uri f6542a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final long f6543b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final int f6544c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     @Nullable
     public final byte[] f6545d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final Map<String, String> f6546e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final long f6547f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public final long f6548g;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     @Nullable
     public final String f6549h;
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public final int f6550i;
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     @Nullable
     public final Object f6551j;
 
-    /* compiled from: DataSpec.java */
-    /* renamed from: b.i.a.c.e3.n$b */
+    /* JADX INFO: renamed from: b.i.a.c.e3.n$b */
+    /* JADX INFO: compiled from: DataSpec.java */
     public static final class b {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         @Nullable
         public Uri f6552a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public long f6553b;
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public int f6554c;
 
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         @Nullable
         public byte[] f6555d;
 
-        /* renamed from: e */
+        /* JADX INFO: renamed from: e */
         public Map<String, String> f6556e;
 
-        /* renamed from: f */
+        /* JADX INFO: renamed from: f */
         public long f6557f;
 
-        /* renamed from: g */
+        /* JADX INFO: renamed from: g */
         public long f6558g;
 
-        /* renamed from: h */
+        /* JADX INFO: renamed from: h */
         @Nullable
         public String f6559h;
 
-        /* renamed from: i */
+        /* JADX INFO: renamed from: i */
         public int f6560i;
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         @Nullable
         public Object f6561j;
 
@@ -99,7 +99,7 @@ public final class DataSpec {
             this.f6561j = dataSpec.f6551j;
         }
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public DataSpec m2857a() {
             if (this.f6552a != null) {
                 return new DataSpec(this.f6552a, this.f6553b, this.f6554c, this.f6555d, this.f6556e, this.f6557f, this.f6558g, this.f6559h, this.f6560i, this.f6561j);
@@ -133,7 +133,7 @@ public final class DataSpec {
         this.f6551j = obj;
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static String m2854b(int i) {
         if (i == 1) {
             return ShareTarget.METHOD_GET;
@@ -147,12 +147,12 @@ public final class DataSpec {
         throw new IllegalStateException();
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public b m2855a() {
         return new b(this, null);
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public boolean m2856c(int i) {
         return (this.f6550i & i) == i;
     }

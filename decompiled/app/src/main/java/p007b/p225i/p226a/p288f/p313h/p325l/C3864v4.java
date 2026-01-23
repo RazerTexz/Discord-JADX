@@ -1,21 +1,21 @@
 package p007b.p225i.p226a.p288f.p313h.p325l;
 
-/* compiled from: com.google.android.gms:play-services-measurement-base@@18.0.0 */
-/* renamed from: b.i.a.f.h.l.v4 */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.h.l.v4 */
+/* JADX INFO: compiled from: com.google.android.gms:play-services-measurement-base@@18.0.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public final class C3864v4 implements InterfaceC3917z5 {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final C3864v4 f10363a = new C3864v4();
 
     @Override // p007b.p225i.p226a.p288f.p313h.p325l.InterfaceC3917z5
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final boolean mo5201a(Class<?> cls) {
         return AbstractC3851u4.class.isAssignableFrom(cls);
     }
 
     @Override // p007b.p225i.p226a.p288f.p313h.p325l.InterfaceC3917z5
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final InterfaceC3584a6 mo5202b(Class<?> cls) {
         if (!AbstractC3851u4.class.isAssignableFrom(cls)) {
             String name = cls.getName();

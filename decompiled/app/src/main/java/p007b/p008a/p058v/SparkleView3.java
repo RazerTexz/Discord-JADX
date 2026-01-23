@@ -16,17 +16,17 @@ import p507d0.p584w.p586i.p587a.ContinuationImpl6;
 import p507d0.p584w.p586i.p587a.DebugMetadata;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: SparkleView.kt */
-/* renamed from: b.a.v.d, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: b.a.v.d, reason: use source file name */
+/* JADX INFO: compiled from: SparkleView.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class SparkleView3 extends Animatable2Compat.AnimationCallback {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final /* synthetic */ SparkleView f2002a;
 
-    /* compiled from: SparkleView.kt */
+    /* JADX INFO: renamed from: b.a.v.d$a */
+    /* JADX INFO: compiled from: SparkleView.kt */
     @DebugMetadata(m10084c = "com.discord.tooltips.SparkleView$startAnimation$1$onAnimationEnd$1", m10085f = "SparkleView.kt", m10086l = {61}, m10087m = "invokeSuspend")
-    /* renamed from: b.a.v.d$a */
     public static final class a extends ContinuationImpl6 implements Function2<CoroutineScope, Continuation<? super Unit>, Object> {
         public int label;
 

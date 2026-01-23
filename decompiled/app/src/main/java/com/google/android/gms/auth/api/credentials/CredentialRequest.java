@@ -8,38 +8,38 @@ import java.util.Objects;
 import p007b.p085c.p086a.p087a0.AnimatableValueParser;
 import p007b.p225i.p226a.p288f.p292c.p293a.p294d.C3192g;
 
-/* compiled from: com.google.android.gms:play-services-auth@@19.0.0 */
-/* loaded from: classes3.dex */
+/* JADX INFO: compiled from: com.google.android.gms:play-services-auth@@19.0.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public final class CredentialRequest extends AbstractSafeParcelable {
     public static final Parcelable.Creator<CredentialRequest> CREATOR = new C3192g();
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final int f20405j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final boolean f20406k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final String[] f20407l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public final CredentialPickerConfig f20408m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public final CredentialPickerConfig f20409n;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public final boolean f20410o;
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     @Nullable
     public final String f20411p;
 
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     @Nullable
     public final String f20412q;
 
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     public final boolean f20413r;
 
     public CredentialRequest(int i, boolean z2, String[] strArr, @Nullable CredentialPickerConfig credentialPickerConfig, @Nullable CredentialPickerConfig credentialPickerConfig2, boolean z3, @Nullable String str, @Nullable String str2, boolean z4) {

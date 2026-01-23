@@ -13,27 +13,27 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p600f0.p601e0.Util7;
 import p600f0.p601e0.p604f.TaskRunner;
 
-/* compiled from: TaskQueue.kt */
-/* renamed from: f0.e0.f.c, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: f0.e0.f.c, reason: use source file name */
+/* JADX INFO: compiled from: TaskQueue.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class TaskQueue2 {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public boolean f25414a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public Task2 f25415b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final List<Task2> f25416c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public boolean f25417d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final TaskRunner f25418e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final String f25419f;
 
     public TaskQueue2(TaskRunner taskRunner, String str) {
@@ -44,7 +44,7 @@ public final class TaskQueue2 {
         this.f25416c = new ArrayList();
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public static /* synthetic */ void m10151d(TaskQueue2 taskQueue2, Task2 task2, long j, int i) {
         if ((i & 2) != 0) {
             j = 0;
@@ -52,7 +52,7 @@ public final class TaskQueue2 {
         taskQueue2.m10154c(task2, j);
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final void m10152a() {
         byte[] bArr = Util7.f25397a;
         synchronized (this.f25418e) {
@@ -62,7 +62,7 @@ public final class TaskQueue2 {
         }
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final boolean m10153b() {
         Task2 task2 = this.f25415b;
         if (task2 != null) {
@@ -88,7 +88,7 @@ public final class TaskQueue2 {
         return z2;
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final void m10154c(Task2 task2, long j) {
         Intrinsics3.checkParameterIsNotNull(task2, "task");
         synchronized (this.f25418e) {
@@ -111,7 +111,7 @@ public final class TaskQueue2 {
         }
     }
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final boolean m10155e(Task2 task2, long j, boolean z2) {
         String string;
         Intrinsics3.checkParameterIsNotNull(task2, "task");
@@ -170,7 +170,7 @@ public final class TaskQueue2 {
         return size == 0;
     }
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final void m10156f() {
         byte[] bArr = Util7.f25397a;
         synchronized (this.f25418e) {

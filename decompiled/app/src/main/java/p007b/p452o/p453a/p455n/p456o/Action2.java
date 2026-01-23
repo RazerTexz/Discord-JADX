@@ -6,23 +6,23 @@ import android.hardware.camera2.TotalCaptureResult;
 import androidx.annotation.NonNull;
 import androidx.annotation.RequiresApi;
 
-/* compiled from: Action.java */
+/* JADX INFO: renamed from: b.o.a.n.o.a, reason: use source file name */
+/* JADX INFO: compiled from: Action.java */
+/* JADX INFO: loaded from: classes3.dex */
 @RequiresApi(21)
-/* renamed from: b.o.a.n.o.a, reason: use source file name */
-/* loaded from: classes3.dex */
 public interface Action2 {
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     void mo7330a(@NonNull ActionHolder actionHolder);
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     void mo7248b(@NonNull ActionHolder actionHolder, @NonNull CaptureRequest captureRequest, @NonNull TotalCaptureResult totalCaptureResult);
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     void mo7331c(@NonNull ActionHolder actionHolder, @NonNull CaptureRequest captureRequest);
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     void mo7332d(@NonNull ActionHolder actionHolder, @NonNull CaptureRequest captureRequest, @NonNull CaptureResult captureResult);
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     void mo7333e(@NonNull ActionHolder actionHolder);
 }

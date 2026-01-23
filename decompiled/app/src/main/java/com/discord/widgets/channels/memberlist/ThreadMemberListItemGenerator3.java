@@ -6,9 +6,9 @@ import java.util.List;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ThreadMemberListItemGenerator.kt */
-/* renamed from: com.discord.widgets.channels.memberlist.ThreadMemberListItems, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.channels.memberlist.ThreadMemberListItems, reason: use source file name */
+/* JADX INFO: compiled from: ThreadMemberListItemGenerator.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final /* data */ class ThreadMemberListItemGenerator3 implements WidgetChannelMembersListViewModel.MemberList {
     private final String listId;
     private final List<ChannelMembersListAdapter.Item> listItems;

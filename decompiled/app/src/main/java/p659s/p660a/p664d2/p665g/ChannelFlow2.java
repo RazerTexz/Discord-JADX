@@ -10,10 +10,10 @@ import p507d0.p584w.p586i.p587a.ContinuationImpl6;
 import p507d0.p584w.p586i.p587a.DebugMetadata;
 
 /* JADX INFO: Add missing generic type declarations: [T] */
-/* compiled from: ChannelFlow.kt */
+/* JADX INFO: renamed from: s.a.d2.g.b, reason: use source file name */
+/* JADX INFO: compiled from: ChannelFlow.kt */
+/* JADX INFO: loaded from: classes3.dex */
 @DebugMetadata(m10084c = "kotlinx.coroutines.flow.internal.ChannelFlow$collectToFun$1", m10085f = "ChannelFlow.kt", m10086l = {60}, m10087m = "invokeSuspend")
-/* renamed from: s.a.d2.g.b, reason: use source file name */
-/* loaded from: classes3.dex */
 public final class ChannelFlow2<T> extends ContinuationImpl6 implements Function2<Produce<? super T>, Continuation<? super Unit>, Object> {
     public Object L$0;
     public int label;

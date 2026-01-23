@@ -9,8 +9,8 @@ import java.util.Collection;
 import p507d0.p580t._Collections;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: WidgetGlobalSearchScoreStrategy.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: WidgetGlobalSearchScoreStrategy.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class WidgetGlobalSearchScoreStrategy {
     public static final int FRECENCY_PRI_LIMIT = 50;
     private static final int FUZZY_MATCH_SCORE_BASE = -100;
@@ -18,7 +18,7 @@ public final class WidgetGlobalSearchScoreStrategy {
     public static final WidgetGlobalSearchScoreStrategy INSTANCE = new WidgetGlobalSearchScoreStrategy();
     private static final int MENTIONS_MATCH_SCORE = 100;
 
-    /* compiled from: WidgetGlobalSearchScoreStrategy.kt */
+    /* JADX INFO: compiled from: WidgetGlobalSearchScoreStrategy.kt */
     public enum SearchType {
         USER(10, 5),
         NONE(1, 1);

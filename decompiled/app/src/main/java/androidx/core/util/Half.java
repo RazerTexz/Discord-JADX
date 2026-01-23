@@ -3,9 +3,9 @@ package androidx.core.util;
 import androidx.annotation.RequiresApi;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: Half.kt */
-/* renamed from: androidx.core.util.HalfKt, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: androidx.core.util.HalfKt, reason: use source file name */
+/* JADX INFO: compiled from: Half.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class Half {
     @RequiresApi(26)
     public static final android.util.Half toHalf(short s2) {

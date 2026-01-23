@@ -3,9 +3,9 @@ package co.discord.media_engine;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: VoiceQuality.kt */
-/* renamed from: co.discord.media_engine.InboundBufferStats, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: co.discord.media_engine.InboundBufferStats, reason: use source file name */
+/* JADX INFO: compiled from: VoiceQuality.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class VoiceQuality4 {
     private final PlayoutMetric audioJitterBuffer;
     private final PlayoutMetric audioJitterDelay;
@@ -43,27 +43,27 @@ public final /* data */ class VoiceQuality4 {
         return voiceQuality4.copy(playoutMetric, playoutMetric6, playoutMetric7, playoutMetric8, playoutMetric5);
     }
 
-    /* renamed from: component1, reason: from getter */
+    /* JADX INFO: renamed from: component1, reason: from getter */
     public final PlayoutMetric getAudioJitterBuffer() {
         return this.audioJitterBuffer;
     }
 
-    /* renamed from: component2, reason: from getter */
+    /* JADX INFO: renamed from: component2, reason: from getter */
     public final PlayoutMetric getAudioJitterTarget() {
         return this.audioJitterTarget;
     }
 
-    /* renamed from: component3, reason: from getter */
+    /* JADX INFO: renamed from: component3, reason: from getter */
     public final PlayoutMetric getAudioJitterDelay() {
         return this.audioJitterDelay;
     }
 
-    /* renamed from: component4, reason: from getter */
+    /* JADX INFO: renamed from: component4, reason: from getter */
     public final PlayoutMetric getRelativeReceptionDelay() {
         return this.relativeReceptionDelay;
     }
 
-    /* renamed from: component5, reason: from getter */
+    /* JADX INFO: renamed from: component5, reason: from getter */
     public final PlayoutMetric getRelativePlayoutDelay() {
         return this.relativePlayoutDelay;
     }

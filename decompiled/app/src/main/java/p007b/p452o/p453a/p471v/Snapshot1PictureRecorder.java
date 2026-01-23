@@ -14,41 +14,41 @@ import p007b.p452o.p453a.p467r.WorkerHandler;
 import p007b.p452o.p453a.p473x.AspectRatio2;
 import p007b.p452o.p453a.p473x.Size3;
 
-/* compiled from: Snapshot1PictureRecorder.java */
-/* renamed from: b.o.a.v.e, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.o.a.v.e, reason: use source file name */
+/* JADX INFO: compiled from: Snapshot1PictureRecorder.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class Snapshot1PictureRecorder extends SnapshotPictureRecorder {
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public Camera1Engine2 f14175n;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public Camera f14176o;
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public AspectRatio2 f14177p;
 
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     public int f14178q;
 
-    /* compiled from: Snapshot1PictureRecorder.java */
-    /* renamed from: b.o.a.v.e$a */
+    /* JADX INFO: renamed from: b.o.a.v.e$a */
+    /* JADX INFO: compiled from: Snapshot1PictureRecorder.java */
     public class a implements Camera.PreviewCallback {
 
-        /* compiled from: Snapshot1PictureRecorder.java */
-        /* renamed from: b.o.a.v.e$a$a, reason: collision with other inner class name */
+        /* JADX INFO: renamed from: b.o.a.v.e$a$a, reason: collision with other inner class name */
+        /* JADX INFO: compiled from: Snapshot1PictureRecorder.java */
         public class RunnableC13245a implements Runnable {
 
-            /* renamed from: j */
+            /* JADX INFO: renamed from: j */
             public final /* synthetic */ byte[] f14180j;
 
-            /* renamed from: k */
+            /* JADX INFO: renamed from: k */
             public final /* synthetic */ Size3 f14181k;
 
-            /* renamed from: l */
+            /* JADX INFO: renamed from: l */
             public final /* synthetic */ int f14182l;
 
-            /* renamed from: m */
+            /* JADX INFO: renamed from: m */
             public final /* synthetic */ Size3 f14183m;
 
             public RunnableC13245a(byte[] bArr, Size3 size3, int i, Size3 size32) {
@@ -149,7 +149,7 @@ public class Snapshot1PictureRecorder extends SnapshotPictureRecorder {
     }
 
     @Override // p007b.p452o.p453a.p471v.PictureRecorder
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public void mo7416b() {
         this.f14175n = null;
         this.f14176o = null;
@@ -159,7 +159,7 @@ public class Snapshot1PictureRecorder extends SnapshotPictureRecorder {
     }
 
     @Override // p007b.p452o.p453a.p471v.PictureRecorder
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public void mo7417c() {
         this.f14176o.setOneShotPreviewCallback(new a());
     }

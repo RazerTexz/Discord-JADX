@@ -40,8 +40,8 @@ import p658rx.Subscription;
 import p658rx.functions.Func2;
 import p658rx.subjects.BehaviorSubject;
 
-/* compiled from: StoreSpotify.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: StoreSpotify.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class StoreSpotify {
     private final Clock clock;
     private final Dispatcher dispatcher;
@@ -51,7 +51,7 @@ public final class StoreSpotify {
     private SpotifyState spotifyState;
     private final StoreStream stream;
 
-    /* compiled from: StoreSpotify.kt */
+    /* JADX INFO: compiled from: StoreSpotify.kt */
     public static final /* data */ class SpotifyState {
         private final boolean playing;
         private final int position;
@@ -87,22 +87,22 @@ public final class StoreSpotify {
             return spotifyState.copy(modelSpotifyTrack, z3, i3, j);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final ModelSpotifyTrack getTrack() {
             return this.track;
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final boolean getPlaying() {
             return this.playing;
         }
 
-        /* renamed from: component3, reason: from getter */
+        /* JADX INFO: renamed from: component3, reason: from getter */
         public final int getPosition() {
             return this.position;
         }
 
-        /* renamed from: component4, reason: from getter */
+        /* JADX INFO: renamed from: component4, reason: from getter */
         public final long getStart() {
             return this.start;
         }
@@ -139,15 +139,18 @@ public final class StoreSpotify {
         }
 
         /* JADX WARN: Multi-variable type inference failed */
+        /* JADX WARN: Type inference failed for: r1v1, types: [int] */
+        /* JADX WARN: Type inference failed for: r1v6 */
+        /* JADX WARN: Type inference failed for: r1v7 */
         public int hashCode() {
             ModelSpotifyTrack modelSpotifyTrack = this.track;
             int iHashCode = (modelSpotifyTrack != null ? modelSpotifyTrack.hashCode() : 0) * 31;
             boolean z2 = this.playing;
-            int i = z2;
-            if (z2 != 0) {
-                i = 1;
+            ?? r1 = z2;
+            if (z2) {
+                r1 = 1;
             }
-            return C0002b.m3a(this.start) + ((((iHashCode + i) * 31) + this.position) * 31);
+            return C0002b.m3a(this.start) + ((((iHashCode + r1) * 31) + this.position) * 31);
         }
 
         public String toString() {
@@ -166,13 +169,13 @@ public final class StoreSpotify {
         }
     }
 
-    /* compiled from: StoreSpotify.kt */
-    /* renamed from: com.discord.stores.StoreSpotify$init$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreSpotify$init$1 */
+    /* JADX INFO: compiled from: StoreSpotify.kt */
     public static final class C64021<T, R> implements Func1<ModelSpotifyTrack, Observable<? extends ModelSpotifyTrack>> {
         public static final C64021 INSTANCE = new C64021();
 
-        /* compiled from: StoreSpotify.kt */
-        /* renamed from: com.discord.stores.StoreSpotify$init$1$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.stores.StoreSpotify$init$1$1, reason: invalid class name */
+        /* JADX INFO: compiled from: StoreSpotify.kt */
         public static final class AnonymousClass1<T, R> implements Func1 {
             public static final AnonymousClass1 INSTANCE = new AnonymousClass1();
 
@@ -191,18 +194,18 @@ public final class StoreSpotify {
             return call2(modelSpotifyTrack);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final Observable<? extends ModelSpotifyTrack> call2(ModelSpotifyTrack modelSpotifyTrack) {
             return modelSpotifyTrack != null ? new ScalarSynchronousObservable(modelSpotifyTrack) : Observable.m11068d0(1L, TimeUnit.SECONDS).m11083G(AnonymousClass1.INSTANCE);
         }
     }
 
-    /* compiled from: StoreSpotify.kt */
-    /* renamed from: com.discord.stores.StoreSpotify$init$2 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreSpotify$init$2 */
+    /* JADX INFO: compiled from: StoreSpotify.kt */
     public static final class C64032<T1, T2, R> implements Func2<Unit, ModelSpotifyTrack, ModelSpotifyTrack> {
         public static final C64032 INSTANCE = new C64032();
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final ModelSpotifyTrack call2(Unit unit, ModelSpotifyTrack modelSpotifyTrack) {
             return modelSpotifyTrack;
         }
@@ -213,12 +216,12 @@ public final class StoreSpotify {
         }
     }
 
-    /* compiled from: StoreSpotify.kt */
-    /* renamed from: com.discord.stores.StoreSpotify$init$3 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreSpotify$init$3 */
+    /* JADX INFO: compiled from: StoreSpotify.kt */
     public static final class C64043 extends Lambda implements Function1<ModelSpotifyTrack, Unit> {
 
-        /* compiled from: StoreSpotify.kt */
-        /* renamed from: com.discord.stores.StoreSpotify$init$3$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.stores.StoreSpotify$init$3$1, reason: invalid class name */
+        /* JADX INFO: compiled from: StoreSpotify.kt */
         public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
             public final /* synthetic */ ModelSpotifyTrack $track;
 
@@ -234,7 +237,7 @@ public final class StoreSpotify {
                 return Unit.f27425a;
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2() {
                 SpotifyState spotifyStateAccess$getSpotifyState$p = StoreSpotify.access$getSpotifyState$p(StoreSpotify.this);
                 if (spotifyStateAccess$getSpotifyState$p != null) {
@@ -261,14 +264,14 @@ public final class StoreSpotify {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(ModelSpotifyTrack modelSpotifyTrack) {
             StoreSpotify.access$getDispatcher$p(StoreSpotify.this).schedule(new AnonymousClass1(modelSpotifyTrack));
         }
     }
 
-    /* compiled from: StoreSpotify.kt */
-    /* renamed from: com.discord.stores.StoreSpotify$setPlayingStatus$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreSpotify$setPlayingStatus$1 */
+    /* JADX INFO: compiled from: StoreSpotify.kt */
     public static final class C64051 extends Lambda implements Function0<Unit> {
         public final /* synthetic */ boolean $playing;
         public final /* synthetic */ int $position;
@@ -286,20 +289,20 @@ public final class StoreSpotify {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             if (StoreSpotify.access$getSpotifyState$p(StoreSpotify.this) == null) {
                 StoreSpotify.access$setSpotifyState$p(StoreSpotify.this, new SpotifyState(null, false, 0, 0L, 15, null));
             }
             StoreSpotify storeSpotify = StoreSpotify.this;
             SpotifyState spotifyStateAccess$getSpotifyState$p = StoreSpotify.access$getSpotifyState$p(storeSpotify);
-            StoreSpotify.access$setSpotifyState$p(storeSpotify, spotifyStateAccess$getSpotifyState$p != null ? SpotifyState.copy$default(spotifyStateAccess$getSpotifyState$p, null, this.$playing, this.$position, StoreSpotify.access$getClock$p(StoreSpotify.this).currentTimeMillis() - this.$position, 1, null) : null);
+            StoreSpotify.access$setSpotifyState$p(storeSpotify, spotifyStateAccess$getSpotifyState$p != null ? SpotifyState.copy$default(spotifyStateAccess$getSpotifyState$p, null, this.$playing, this.$position, StoreSpotify.access$getClock$p(StoreSpotify.this).currentTimeMillis() - ((long) this.$position), 1, null) : null);
             StoreSpotify.access$getPublishStateTrigger$p(StoreSpotify.this).onNext(Unit.f27425a);
         }
     }
 
-    /* compiled from: StoreSpotify.kt */
-    /* renamed from: com.discord.stores.StoreSpotify$startStateExpiration$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreSpotify$startStateExpiration$1 */
+    /* JADX INFO: compiled from: StoreSpotify.kt */
     public static final class C64061 extends Lambda implements Function1<Subscription, Unit> {
         public C64061() {
             super(1);
@@ -311,19 +314,19 @@ public final class StoreSpotify {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Subscription subscription) {
             Intrinsics3.checkNotNullParameter(subscription, "it");
             StoreSpotify.access$setExpireStateSub$p(StoreSpotify.this, subscription);
         }
     }
 
-    /* compiled from: StoreSpotify.kt */
-    /* renamed from: com.discord.stores.StoreSpotify$startStateExpiration$2 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreSpotify$startStateExpiration$2 */
+    /* JADX INFO: compiled from: StoreSpotify.kt */
     public static final class C64072 extends Lambda implements Function1<Long, Unit> {
 
-        /* compiled from: StoreSpotify.kt */
-        /* renamed from: com.discord.stores.StoreSpotify$startStateExpiration$2$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.stores.StoreSpotify$startStateExpiration$2$1, reason: invalid class name */
+        /* JADX INFO: compiled from: StoreSpotify.kt */
         public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
             public AnonymousClass1() {
                 super(0);
@@ -335,7 +338,7 @@ public final class StoreSpotify {
                 return Unit.f27425a;
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2() {
                 StoreSpotify.access$setSpotifyState$p(StoreSpotify.this, null);
                 StoreSpotify.access$publishState(StoreSpotify.this);
@@ -352,7 +355,7 @@ public final class StoreSpotify {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Long l) {
             StoreSpotify.access$getDispatcher$p(StoreSpotify.this).schedule(new AnonymousClass1());
         }

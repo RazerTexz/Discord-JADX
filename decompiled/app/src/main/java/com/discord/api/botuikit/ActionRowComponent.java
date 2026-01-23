@@ -4,19 +4,19 @@ import java.util.List;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ActionRowComponent.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: ActionRowComponent.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class ActionRowComponent extends Component8 {
     private final List<Component> components;
     private final Component6 type;
 
     @Override // com.discord.api.botuikit.Component8
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public List<Component> mo7593a() {
         return this.components;
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final List<Component> m7594b() {
         return this.components;
     }

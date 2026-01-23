@@ -45,29 +45,29 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 import p507d0.p592z.p594d.Reflection2;
 
-/* compiled from: WidgetHubEventsPage.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetHubEventsPage.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetHubEventsPage extends AppBottomSheet {
     public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetHubEventsPage.class, "binding", "getBinding()Lcom/discord/databinding/WidgetHubEventsPageBinding;", 0)};
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
 
-    /* renamed from: adapter$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: adapter$delegate, reason: from kotlin metadata */
     private final Lazy adapter;
 
-    /* renamed from: args$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: args$delegate, reason: from kotlin metadata */
     private final Lazy args;
 
-    /* renamed from: binding$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
     private final WidgetHubEventsPage3 listener;
     private final AppLogger2 loggingConfig;
 
-    /* renamed from: viewModel$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: viewModel$delegate, reason: from kotlin metadata */
     private final Lazy viewModel;
 
-    /* compiled from: WidgetHubEventsPage.kt */
+    /* JADX INFO: compiled from: WidgetHubEventsPage.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -84,8 +84,8 @@ public final class WidgetHubEventsPage extends AppBottomSheet {
         }
     }
 
-    /* compiled from: WidgetHubEventsPage.kt */
-    /* renamed from: com.discord.widgets.hubs.events.WidgetHubEventsPage$configUI$3 */
+    /* JADX INFO: renamed from: com.discord.widgets.hubs.events.WidgetHubEventsPage$configUI$3 */
+    /* JADX INFO: compiled from: WidgetHubEventsPage.kt */
     public static final class C90533 extends Lambda implements Function1<RestCallState6<? extends List<? extends DirectoryEntryGuild2>>, Unit> {
         public C90533() {
             super(1);
@@ -97,7 +97,7 @@ public final class WidgetHubEventsPage extends AppBottomSheet {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(RestCallState6<? extends List<DirectoryEntryGuild2>> restCallState6) {
             Intrinsics3.checkNotNullParameter(restCallState6, "it");
             WidgetHubEventsPage.this.getBinding().f17186b.smoothScrollToPosition(0);
@@ -105,8 +105,8 @@ public final class WidgetHubEventsPage extends AppBottomSheet {
         }
     }
 
-    /* compiled from: WidgetHubEventsPage.kt */
-    /* renamed from: com.discord.widgets.hubs.events.WidgetHubEventsPage$onResume$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.hubs.events.WidgetHubEventsPage$onResume$1 */
+    /* JADX INFO: compiled from: WidgetHubEventsPage.kt */
     public static final /* synthetic */ class C90541 extends FunctionReferenceImpl implements Function1<WidgetHubEventsViewModel3, Unit> {
         public C90541(WidgetHubEventsPage widgetHubEventsPage) {
             super(1, widgetHubEventsPage, WidgetHubEventsPage.class, "configUI", "configUI(Lcom/discord/widgets/hubs/events/WidgetHubEventsState;)V", 0);
@@ -118,7 +118,7 @@ public final class WidgetHubEventsPage extends AppBottomSheet {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(WidgetHubEventsViewModel3 widgetHubEventsViewModel3) {
             Intrinsics3.checkNotNullParameter(widgetHubEventsViewModel3, "p1");
             WidgetHubEventsPage.access$configUI((WidgetHubEventsPage) this.receiver, widgetHubEventsViewModel3);

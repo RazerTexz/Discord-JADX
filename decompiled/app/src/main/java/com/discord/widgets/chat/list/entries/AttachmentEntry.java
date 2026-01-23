@@ -7,8 +7,8 @@ import p001a0.p002a.p003a.C0002b;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: AttachmentEntry.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: AttachmentEntry.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final /* data */ class AttachmentEntry extends ChatListEntry {
     private final boolean allowAnimatedEmojis;
     private final MessageAttachment attachment;
@@ -45,47 +45,47 @@ public final /* data */ class AttachmentEntry extends ChatListEntry {
         return attachmentEntry.copy((i2 & 1) != 0 ? attachmentEntry.embedIndex : i, (i2 & 2) != 0 ? attachmentEntry.guildId : j, (i2 & 4) != 0 ? attachmentEntry.message : message, (i2 & 8) != 0 ? attachmentEntry.messageState : state, (i2 & 16) != 0 ? attachmentEntry.attachment : messageAttachment, (i2 & 32) != 0 ? attachmentEntry.isBlockedExpanded : z2, (i2 & 64) != 0 ? attachmentEntry.allowAnimatedEmojis : z3, (i2 & 128) != 0 ? attachmentEntry.autoPlayGifs : z4, (i2 & 256) != 0 ? attachmentEntry.isThreadStarterMessage : z5);
     }
 
-    /* renamed from: component1, reason: from getter */
+    /* JADX INFO: renamed from: component1, reason: from getter */
     public final int getEmbedIndex() {
         return this.embedIndex;
     }
 
-    /* renamed from: component2, reason: from getter */
+    /* JADX INFO: renamed from: component2, reason: from getter */
     public final long getGuildId() {
         return this.guildId;
     }
 
-    /* renamed from: component3, reason: from getter */
+    /* JADX INFO: renamed from: component3, reason: from getter */
     public final Message getMessage() {
         return this.message;
     }
 
-    /* renamed from: component4, reason: from getter */
+    /* JADX INFO: renamed from: component4, reason: from getter */
     public final StoreMessageState.State getMessageState() {
         return this.messageState;
     }
 
-    /* renamed from: component5, reason: from getter */
+    /* JADX INFO: renamed from: component5, reason: from getter */
     public final MessageAttachment getAttachment() {
         return this.attachment;
     }
 
-    /* renamed from: component6, reason: from getter */
+    /* JADX INFO: renamed from: component6, reason: from getter */
     public final boolean getIsBlockedExpanded() {
         return this.isBlockedExpanded;
     }
 
-    /* renamed from: component7, reason: from getter */
+    /* JADX INFO: renamed from: component7, reason: from getter */
     public final boolean getAllowAnimatedEmojis() {
         return this.allowAnimatedEmojis;
     }
 
-    /* renamed from: component8, reason: from getter */
+    /* JADX INFO: renamed from: component8, reason: from getter */
     public final boolean getAutoPlayGifs() {
         return this.autoPlayGifs;
     }
 
-    /* renamed from: component9, reason: from getter */
+    /* JADX INFO: renamed from: component9, reason: from getter */
     public final boolean getIsThreadStarterMessage() {
         return this.isThreadStarterMessage;
     }
@@ -146,6 +146,18 @@ public final /* data */ class AttachmentEntry extends ChatListEntry {
     }
 
     /* JADX WARN: Multi-variable type inference failed */
+    /* JADX WARN: Type inference failed for: r0v10, types: [int] */
+    /* JADX WARN: Type inference failed for: r0v12, types: [int] */
+    /* JADX WARN: Type inference failed for: r0v14, types: [int] */
+    /* JADX WARN: Type inference failed for: r0v16 */
+    /* JADX WARN: Type inference failed for: r0v17 */
+    /* JADX WARN: Type inference failed for: r0v18 */
+    /* JADX WARN: Type inference failed for: r0v21 */
+    /* JADX WARN: Type inference failed for: r0v22 */
+    /* JADX WARN: Type inference failed for: r0v23 */
+    /* JADX WARN: Type inference failed for: r2v2 */
+    /* JADX WARN: Type inference failed for: r2v3, types: [int] */
+    /* JADX WARN: Type inference failed for: r2v4 */
     public int hashCode() {
         int iM3a = (C0002b.m3a(this.guildId) + (this.embedIndex * 31)) * 31;
         Message message = this.message;
@@ -155,25 +167,25 @@ public final /* data */ class AttachmentEntry extends ChatListEntry {
         MessageAttachment messageAttachment = this.attachment;
         int iHashCode3 = (iHashCode2 + (messageAttachment != null ? messageAttachment.hashCode() : 0)) * 31;
         boolean z2 = this.isBlockedExpanded;
-        int i = z2;
-        if (z2 != 0) {
-            i = 1;
+        ?? r0 = z2;
+        if (z2) {
+            r0 = 1;
         }
-        int i2 = (iHashCode3 + i) * 31;
+        int i = (iHashCode3 + r0) * 31;
         boolean z3 = this.allowAnimatedEmojis;
-        int i3 = z3;
-        if (z3 != 0) {
-            i3 = 1;
+        ?? r02 = z3;
+        if (z3) {
+            r02 = 1;
         }
-        int i4 = (i2 + i3) * 31;
+        int i2 = (i + r02) * 31;
         boolean z4 = this.autoPlayGifs;
-        int i5 = z4;
-        if (z4 != 0) {
-            i5 = 1;
+        ?? r03 = z4;
+        if (z4) {
+            r03 = 1;
         }
-        int i6 = (i4 + i5) * 31;
+        int i3 = (i2 + r03) * 31;
         boolean z5 = this.isThreadStarterMessage;
-        return i6 + (z5 ? 1 : z5 ? 1 : 0);
+        return i3 + (z5 ? 1 : z5);
     }
 
     public final boolean isBlockedExpanded() {

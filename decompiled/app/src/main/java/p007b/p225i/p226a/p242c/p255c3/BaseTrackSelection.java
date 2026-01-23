@@ -7,24 +7,24 @@ import p007b.p085c.p086a.p087a0.AnimatableValueParser;
 import p007b.p225i.p226a.p242c.Format2;
 import p007b.p225i.p226a.p242c.p243a3.TrackGroup;
 
-/* compiled from: BaseTrackSelection.java */
-/* renamed from: b.i.a.c.c3.g, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.c3.g, reason: use source file name */
+/* JADX INFO: compiled from: BaseTrackSelection.java */
+/* JADX INFO: loaded from: classes3.dex */
 public abstract class BaseTrackSelection implements ExoTrackSelection2 {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final TrackGroup f6187a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final int f6188b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final int[] f6189c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final Format2[] f6190d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public int f6191e;
 
     public BaseTrackSelection(TrackGroup trackGroup, int[] iArr, int i) {
@@ -66,25 +66,25 @@ public abstract class BaseTrackSelection implements ExoTrackSelection2 {
     }
 
     @Override // p007b.p225i.p226a.p242c.p255c3.TrackSelection
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final TrackGroup mo2727a() {
         return this.f6187a;
     }
 
     @Override // p007b.p225i.p226a.p242c.p255c3.ExoTrackSelection2
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public /* synthetic */ void mo2728c(boolean z2) {
         ExoTrackSelection.m2750b(this, z2);
     }
 
     @Override // p007b.p225i.p226a.p242c.p255c3.TrackSelection
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final Format2 mo2729d(int i) {
         return this.f6190d[i];
     }
 
     @Override // p007b.p225i.p226a.p242c.p255c3.ExoTrackSelection2
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public void mo2724e() {
     }
 
@@ -100,18 +100,18 @@ public abstract class BaseTrackSelection implements ExoTrackSelection2 {
     }
 
     @Override // p007b.p225i.p226a.p242c.p255c3.TrackSelection
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final int mo2730f(int i) {
         return this.f6189c[i];
     }
 
     @Override // p007b.p225i.p226a.p242c.p255c3.ExoTrackSelection2
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public void mo2725g() {
     }
 
     @Override // p007b.p225i.p226a.p242c.p255c3.ExoTrackSelection2
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public final Format2 mo2731h() {
         return this.f6190d[mo2723b()];
     }
@@ -124,24 +124,24 @@ public abstract class BaseTrackSelection implements ExoTrackSelection2 {
     }
 
     @Override // p007b.p225i.p226a.p242c.p255c3.ExoTrackSelection2
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public void mo2726i(float f) {
     }
 
     @Override // p007b.p225i.p226a.p242c.p255c3.ExoTrackSelection2
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public /* synthetic */ void mo2732j() {
         ExoTrackSelection.m2749a(this);
     }
 
     @Override // p007b.p225i.p226a.p242c.p255c3.ExoTrackSelection2
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public /* synthetic */ void mo2733k() {
         ExoTrackSelection.m2751c(this);
     }
 
     @Override // p007b.p225i.p226a.p242c.p255c3.TrackSelection
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final int mo2734l(int i) {
         for (int i2 = 0; i2 < this.f6188b; i2++) {
             if (this.f6189c[i2] == i) {

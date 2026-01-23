@@ -16,9 +16,9 @@ import p007b.p085c.p086a.p087a0.AnimatableValueParser;
 import p507d0.p580t.Collections2;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: StoreStageChannels.kt */
-/* renamed from: com.discord.stores.StageChannelRoleContext, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.stores.StageChannelRoleContext, reason: use source file name */
+/* JADX INFO: compiled from: StoreStageChannels.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class StoreStageChannels2 {
     private final Channel channel;
     private final Guild guild;
@@ -55,7 +55,7 @@ public final class StoreStageChannels2 {
         return AnimatableValueParser.m592y0(this.voiceStates.get(Long.valueOf(userId)));
     }
 
-    /* renamed from: getRole-K-6mKVE, reason: not valid java name */
+    /* JADX INFO: renamed from: getRole-K-6mKVE, reason: not valid java name */
     public final int m11384getRoleK6mKVE(long userId, GuildMember member) {
         Intrinsics3.checkNotNullParameter(member, "member");
         return StageRoles.INSTANCE.m11415invokeH48EO60(isSpeaker(userId, member), isModerator(userId, member), getRequestToSpeakState(userId) == StageRequestToSpeakState.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK);

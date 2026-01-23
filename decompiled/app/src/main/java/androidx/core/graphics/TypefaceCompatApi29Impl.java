@@ -18,9 +18,9 @@ import androidx.core.provider.FontsContractCompat;
 import java.io.IOException;
 import java.io.InputStream;
 
+/* JADX INFO: loaded from: classes.dex */
 @RequiresApi(29)
 @RestrictTo({RestrictTo.Scope.LIBRARY_GROUP})
-/* loaded from: classes.dex */
 public class TypefaceCompatApi29Impl extends TypefaceCompatBaseImpl {
     @Override // androidx.core.graphics.TypefaceCompatBaseImpl
     @Nullable

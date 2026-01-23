@@ -6,12 +6,12 @@ import p658rx.Observable;
 import p658rx.Subscriber;
 import p658rx.functions.Action0;
 
-/* compiled from: OperatorDoOnUnsubscribe.java */
-/* renamed from: j0.l.a.w0, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: j0.l.a.w0, reason: use source file name */
+/* JADX INFO: compiled from: OperatorDoOnUnsubscribe.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class OperatorDoOnUnsubscribe<T> implements Observable.InterfaceC13006b<T, T> {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final Action0 f27074j;
 
     public OperatorDoOnUnsubscribe(Action0 action0) {

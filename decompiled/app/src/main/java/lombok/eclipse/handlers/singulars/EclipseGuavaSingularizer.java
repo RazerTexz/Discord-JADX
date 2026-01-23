@@ -33,10 +33,10 @@ import org.eclipse.jdt.internal.compiler.ast.Statement;
 import org.eclipse.jdt.internal.compiler.ast.ThisReference;
 import org.eclipse.jdt.internal.compiler.ast.TypeReference;
 
-/* loaded from: discord-126021.apk:lombok/eclipse/handlers/singulars/EclipseGuavaSingularizer.SCL.lombok */
+/* JADX INFO: loaded from: discord-126021.apk:lombok/eclipse/handlers/singulars/EclipseGuavaSingularizer.SCL.lombok */
 abstract class EclipseGuavaSingularizer extends EclipseSingularsRecipes.EclipseSingularizer {
 
-    /* renamed from: OF */
+    /* JADX INFO: renamed from: OF */
     protected static final char[] f27478OF = {'o', 'f'};
     protected static final char[][] CGCC = {new char[]{'c', 'o', 'm'}, new char[]{'g', 'o', 'o', 'g', 'l', 'e'}, new char[]{'c', 'o', 'm', 'm', 'o', 'n'}, new char[]{'c', 'o', 'l', 'l', 'e', 'c', 't'}};
 

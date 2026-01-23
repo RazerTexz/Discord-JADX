@@ -4,9 +4,9 @@ import kotlin.reflect.KCallable;
 import kotlin.reflect.KFunction;
 import p007b.p100d.p104b.p105a.outline;
 
-/* compiled from: FunctionReference.java */
-/* renamed from: d0.z.d.j, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.z.d.j, reason: use source file name */
+/* JADX INFO: compiled from: FunctionReference.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class FunctionReference extends CallableReference implements FunctionBase, KFunction {
     private final int arity;
     private final int flags;

@@ -16,42 +16,42 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p600f0.HttpUrl;
 import p600f0.p601e0.Util7;
 
-/* compiled from: Address.kt */
-/* renamed from: f0.a, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: f0.a, reason: use source file name */
+/* JADX INFO: compiled from: Address.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class Address {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final HttpUrl f25353a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final List<Protocol2> f25354b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final List<ConnectionSpec> f25355c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final Dns2 f25356d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final SocketFactory f25357e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final SSLSocketFactory f25358f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public final HostnameVerifier f25359g;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public final CertificatePinner f25360h;
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public final Authenticator2 f25361i;
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final Proxy f25362j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final ProxySelector f25363k;
 
     public Address(String str, int i, Dns2 dns2, SocketFactory socketFactory, SSLSocketFactory sSLSocketFactory, HostnameVerifier hostnameVerifier, CertificatePinner certificatePinner, Authenticator2 authenticator2, Proxy proxy, List<? extends Protocol2> list, List<ConnectionSpec> list2, ProxySelector proxySelector) {
@@ -96,7 +96,7 @@ public final class Address {
         this.f25355c = Util7.m10145z(list2);
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final boolean m10101a(Address address) {
         Intrinsics3.checkParameterIsNotNull(address, "that");
         return Intrinsics3.areEqual(this.f25356d, address.f25356d) && Intrinsics3.areEqual(this.f25361i, address.f25361i) && Intrinsics3.areEqual(this.f25354b, address.f25354b) && Intrinsics3.areEqual(this.f25355c, address.f25355c) && Intrinsics3.areEqual(this.f25363k, address.f25363k) && Intrinsics3.areEqual(this.f25362j, address.f25362j) && Intrinsics3.areEqual(this.f25358f, address.f25358f) && Intrinsics3.areEqual(this.f25359g, address.f25359g) && Intrinsics3.areEqual(this.f25360h, address.f25360h) && this.f25353a.f25980h == address.f25353a.f25980h;

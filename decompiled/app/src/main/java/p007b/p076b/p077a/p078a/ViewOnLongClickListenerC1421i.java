@@ -5,12 +5,12 @@ import com.lytefast.flexinput.fragment.FlexInputFragment;
 import com.lytefast.flexinput.viewmodel.FlexInputViewModel;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: FlexInputFragment.kt */
-/* renamed from: b.b.a.a.i */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.b.a.a.i */
+/* JADX INFO: compiled from: FlexInputFragment.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class ViewOnLongClickListenerC1421i implements View.OnLongClickListener {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final /* synthetic */ FlexInputFragment f2135j;
 
     public ViewOnLongClickListenerC1421i(FlexInputFragment flexInputFragment) {

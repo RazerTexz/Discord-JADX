@@ -19,31 +19,31 @@ import p007b.p100d.p104b.p105a.outline;
 import p507d0.p580t.Sets5;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: BluetoothBroadcastReceiver.kt */
-/* renamed from: b.a.q.k0.c, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.a.q.k0.c, reason: use source file name */
+/* JADX INFO: compiled from: BluetoothBroadcastReceiver.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class BluetoothBroadcastReceiver extends BroadcastReceiver implements BluetoothProfile.ServiceListener {
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public boolean f1649l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public BluetoothHeadset f1650m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public final Context f1651n;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public final OnBluetoothBroadcastListener f1652o;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public static final a f1648k = new a(null);
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static final Set<BluetoothBroadcastAction> f1647j = Sets5.setOf((Object[]) new BluetoothBroadcastAction[]{BluetoothBroadcastAction.HeadsetConnectionStateChanged, BluetoothBroadcastAction.HeadsetAudioStateChanged});
 
-    /* compiled from: BluetoothBroadcastReceiver.kt */
-    /* renamed from: b.a.q.k0.c$a */
+    /* JADX INFO: renamed from: b.a.q.k0.c$a */
+    /* JADX INFO: compiled from: BluetoothBroadcastReceiver.kt */
     public static final class a {
         public a(DefaultConstructorMarker defaultConstructorMarker) {
         }

@@ -5,14 +5,14 @@ import android.os.IInterface;
 import android.os.Parcel;
 import android.os.RemoteException;
 
-/* renamed from: b.i.a.f.h.a.d */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.h.a.d */
+/* JADX INFO: loaded from: classes3.dex */
 public final class C3440d implements InterfaceC3438b, IInterface {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final IBinder f9623a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final String f9624b = "com.google.android.gms.ads.identifier.internal.IAdvertisingIdService";
 
     public C3440d(IBinder iBinder) {
@@ -20,7 +20,7 @@ public final class C3440d implements InterfaceC3438b, IInterface {
     }
 
     @Override // p007b.p225i.p226a.p288f.p313h.p314a.InterfaceC3438b
-    /* renamed from: D */
+    /* JADX INFO: renamed from: D */
     public final boolean mo4391D(boolean z2) throws RemoteException {
         Parcel parcelObtain = Parcel.obtain();
         parcelObtain.writeInterfaceToken(this.f9624b);
@@ -37,7 +37,7 @@ public final class C3440d implements InterfaceC3438b, IInterface {
         return this.f9623a;
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final Parcel m4392c(int i, Parcel parcel) {
         Parcel parcelObtain = Parcel.obtain();
         try {

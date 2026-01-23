@@ -24,9 +24,9 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Locale;
 
+/* JADX INFO: loaded from: classes.dex */
 @RequiresApi(23)
 @RestrictTo({RestrictTo.Scope.LIBRARY_GROUP})
-/* loaded from: classes.dex */
 public class SystemJobScheduler implements Scheduler {
     private static final String TAG = Logger.tagWithPrefix("SystemJobScheduler");
     private final Context mContext;

@@ -26,106 +26,106 @@ import com.google.android.material.textview.MaterialTextView;
 import p007b.p008a.p025i.WidgetCallFullscreenAudioShareWarningBinding;
 import p007b.p008a.p025i.WidgetCallFullscreenPrivateCallBinding;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public final class WidgetCallFullscreenBinding implements ViewBinding {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     @NonNull
     public final ConstraintLayout f15758a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     @NonNull
     public final Toolbar f15759b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     @NonNull
     public final AppBarLayout f15760c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     @NonNull
     public final RelativeLayout f15761d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     @NonNull
     public final WidgetCallFullscreenAudioShareWarningBinding f15762e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     @NonNull
     public final CoordinatorLayout f15763f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     @NonNull
     public final MaterialButton f15764g;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     @NonNull
     public final TextView f15765h;
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     @NonNull
     public final ConstraintLayout f15766i;
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     @NonNull
     public final LinearLayout f15767j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     @NonNull
     public final MaterialButton f15768k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     @NonNull
     public final VideoCallParticipantView f15769l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     @NonNull
     public final RecyclerView f15770m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     @NonNull
     public final MaterialButton f15771n;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     @NonNull
     public final ConstraintLayout f15772o;
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     @NonNull
     public final RecyclerView f15773p;
 
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     @NonNull
     public final StageCallVisitCommunityView f15774q;
 
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     @NonNull
     public final ViewStub f15775r;
 
-    /* renamed from: s */
+    /* JADX INFO: renamed from: s */
     @NonNull
     public final WidgetCallFullscreenPrivateCallBinding f15776s;
 
-    /* renamed from: t */
+    /* JADX INFO: renamed from: t */
     @NonNull
     public final ConstraintLayout f15777t;
 
-    /* renamed from: u */
+    /* JADX INFO: renamed from: u */
     @NonNull
     public final UserSummaryView f15778u;
 
-    /* renamed from: v */
+    /* JADX INFO: renamed from: v */
     @NonNull
     public final MaterialTextView f15779v;
 
-    /* renamed from: w */
+    /* JADX INFO: renamed from: w */
     @NonNull
     public final CallEventsButtonView f15780w;
 
-    /* renamed from: x */
+    /* JADX INFO: renamed from: x */
     @NonNull
     public final VoiceCallActiveEventView f15781x;
 
-    /* renamed from: y */
+    /* JADX INFO: renamed from: y */
     @NonNull
     public final VoiceControlsSheetView f15782y;
 

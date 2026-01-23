@@ -8,27 +8,27 @@ import java.util.Objects;
 import p007b.p085c.p086a.p087a0.AnimatableValueParser;
 import p007b.p100d.p104b.p105a.outline;
 
-/* compiled from: com.google.android.gms:play-services-measurement-impl@@18.0.0 */
-/* renamed from: b.i.a.f.i.b.m */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.i.b.m */
+/* JADX INFO: compiled from: com.google.android.gms:play-services-measurement-impl@@18.0.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public final class C4109m {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final String f10952a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final String f10953b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final String f10954c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final long f10955d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final long f10956e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final zzap f10957f;
 
     public C4109m(C4202u4 c4202u4, String str, String str2, String str3, long j, long j2, zzap zzapVar) {
@@ -46,7 +46,7 @@ public final class C4109m {
         this.f10957f = zzapVar;
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final C4109m m5752a(C4202u4 c4202u4, long j) {
         return new C4109m(c4202u4, this.f10954c, this.f10952a, this.f10953b, this.f10955d, j, this.f10957f);
     }

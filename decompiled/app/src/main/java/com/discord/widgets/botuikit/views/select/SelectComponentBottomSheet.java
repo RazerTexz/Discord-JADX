@@ -34,12 +34,12 @@ import p507d0.p592z.p594d.FunctionReferenceImpl;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Reflection2;
 
-/* compiled from: SelectComponentBottomSheet.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: SelectComponentBottomSheet.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class SelectComponentBottomSheet extends AppBottomSheet {
     public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(SelectComponentBottomSheet.class, "binding", "getBinding()Lcom/discord/databinding/WidgetSelectComponentBottomSheetBinding;", 0)};
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     public static final String EXTRA_COMPONENT_CONTEXT = "extra_component_context";
     public static final String EXTRA_COMPONENT_INDEX = "extra_component_index";
@@ -52,13 +52,13 @@ public final class SelectComponentBottomSheet extends AppBottomSheet {
     public static final String EXTRA_SELECTED = "extra_selected";
     private final SelectComponentBottomSheetAdapter adapter;
 
-    /* renamed from: binding$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
 
-    /* renamed from: viewModel$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: viewModel$delegate, reason: from kotlin metadata */
     private final Lazy viewModel;
 
-    /* compiled from: SelectComponentBottomSheet.kt */
+    /* JADX INFO: compiled from: SelectComponentBottomSheet.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -79,8 +79,8 @@ public final class SelectComponentBottomSheet extends AppBottomSheet {
         }
     }
 
-    /* compiled from: SelectComponentBottomSheet.kt */
-    /* renamed from: com.discord.widgets.botuikit.views.select.SelectComponentBottomSheet$configureUI$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.botuikit.views.select.SelectComponentBottomSheet$configureUI$1 */
+    /* JADX INFO: compiled from: SelectComponentBottomSheet.kt */
     public static final class ViewOnClickListenerC72761 implements View.OnClickListener {
         public ViewOnClickListenerC72761() {
         }
@@ -91,8 +91,8 @@ public final class SelectComponentBottomSheet extends AppBottomSheet {
         }
     }
 
-    /* compiled from: SelectComponentBottomSheet.kt */
-    /* renamed from: com.discord.widgets.botuikit.views.select.SelectComponentBottomSheet$onResume$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.botuikit.views.select.SelectComponentBottomSheet$onResume$1 */
+    /* JADX INFO: compiled from: SelectComponentBottomSheet.kt */
     public static final /* synthetic */ class C72771 extends FunctionReferenceImpl implements Function1<SelectComponentBottomSheetViewModel.ViewState, Unit> {
         public C72771(SelectComponentBottomSheet selectComponentBottomSheet) {
             super(1, selectComponentBottomSheet, SelectComponentBottomSheet.class, "configureUI", "configureUI(Lcom/discord/widgets/botuikit/views/select/SelectComponentBottomSheetViewModel$ViewState;)V", 0);
@@ -104,15 +104,15 @@ public final class SelectComponentBottomSheet extends AppBottomSheet {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(SelectComponentBottomSheetViewModel.ViewState viewState) {
             Intrinsics3.checkNotNullParameter(viewState, "p1");
             SelectComponentBottomSheet.access$configureUI((SelectComponentBottomSheet) this.receiver, viewState);
         }
     }
 
-    /* compiled from: SelectComponentBottomSheet.kt */
-    /* renamed from: com.discord.widgets.botuikit.views.select.SelectComponentBottomSheet$onResume$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.botuikit.views.select.SelectComponentBottomSheet$onResume$2 */
+    /* JADX INFO: compiled from: SelectComponentBottomSheet.kt */
     public static final /* synthetic */ class C72782 extends FunctionReferenceImpl implements Function1<SelectComponentBottomSheetViewModel.Event, Unit> {
         public C72782(SelectComponentBottomSheet selectComponentBottomSheet) {
             super(1, selectComponentBottomSheet, SelectComponentBottomSheet.class, "handleEvent", "handleEvent(Lcom/discord/widgets/botuikit/views/select/SelectComponentBottomSheetViewModel$Event;)V", 0);
@@ -124,7 +124,7 @@ public final class SelectComponentBottomSheet extends AppBottomSheet {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(SelectComponentBottomSheetViewModel.Event event) {
             Intrinsics3.checkNotNullParameter(event, "p1");
             SelectComponentBottomSheet.access$handleEvent((SelectComponentBottomSheet) this.receiver, event);

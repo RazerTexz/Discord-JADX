@@ -7,9 +7,9 @@ import p659s.p660a.MainCoroutineDispatcher;
 import p659s.p660a.p662b2.HandlerDispatcher2;
 import p659s.p660a.p662b2.HandlerDispatcher4;
 
-/* compiled from: HandlerDispatcher.kt */
-/* renamed from: kotlinx.coroutines.android.AndroidDispatcherFactory, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: kotlinx.coroutines.android.AndroidDispatcherFactory, reason: use source file name */
+/* JADX INFO: compiled from: HandlerDispatcher.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class HandlerDispatcher implements MainDispatcherFactory {
     @Override // kotlinx.coroutines.internal.MainDispatcherFactory
     public /* bridge */ /* synthetic */ MainCoroutineDispatcher createDispatcher(List list) {

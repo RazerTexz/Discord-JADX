@@ -16,26 +16,26 @@ import com.discord.utilities.view.text.SimpleDraweeSpanTextView;
 import p007b.p008a.p025i.ReactionViewBinding;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ReactionView.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: ReactionView.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class ReactionView extends LinearLayout {
 
-    /* renamed from: j, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: j, reason: from kotlin metadata */
     public int curCount;
 
-    /* renamed from: k, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: k, reason: from kotlin metadata */
     public Long curMessageId;
 
-    /* renamed from: l, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: l, reason: from kotlin metadata */
     public MessageReaction reaction;
 
-    /* renamed from: m, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: m, reason: from kotlin metadata */
     public ColorStateList textColor;
 
-    /* renamed from: n, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: n, reason: from kotlin metadata */
     public ColorStateList meTextColor;
 
-    /* renamed from: o, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: o, reason: from kotlin metadata */
     public final ReactionViewBinding binding;
 
     public ReactionView(Context context, AttributeSet attributeSet) {
@@ -100,7 +100,7 @@ public final class ReactionView extends LinearLayout {
         }
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final void m8552a(MessageReaction reaction, long messageId, boolean animateEmojis) {
         Intrinsics3.checkNotNullParameter(reaction, "reaction");
         Long l = this.curMessageId;

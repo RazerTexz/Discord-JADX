@@ -5,12 +5,12 @@ import android.graphics.PorterDuff;
 import android.graphics.drawable.Drawable;
 import android.graphics.drawable.StateListDrawable;
 
-/* compiled from: SelectedStateListDrawable.java */
-/* renamed from: b.q.a.k.d, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.q.a.k.d, reason: use source file name */
+/* JADX INFO: compiled from: SelectedStateListDrawable.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class SelectedStateListDrawable extends StateListDrawable {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public int f14453j;
 
     public SelectedStateListDrawable(Drawable drawable, int i) {

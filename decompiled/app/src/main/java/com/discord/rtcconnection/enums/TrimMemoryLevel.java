@@ -2,8 +2,8 @@ package com.discord.rtcconnection.enums;
 
 import kotlin.jvm.internal.DefaultConstructorMarker;
 
-/* compiled from: TrimMemoryLevel.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: TrimMemoryLevel.kt */
+/* JADX INFO: loaded from: classes.dex */
 public enum TrimMemoryLevel {
     Background(40),
     RunningModerate(5),
@@ -14,12 +14,12 @@ public enum TrimMemoryLevel {
     UiHidden(20);
 
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private final int value;
 
-    /* compiled from: TrimMemoryLevel.kt */
-    /* renamed from: com.discord.rtcconnection.enums.TrimMemoryLevel$a, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: com.discord.rtcconnection.enums.TrimMemoryLevel$a, reason: from kotlin metadata */
+    /* JADX INFO: compiled from: TrimMemoryLevel.kt */
     public static final class Companion {
         public Companion(DefaultConstructorMarker defaultConstructorMarker) {
         }

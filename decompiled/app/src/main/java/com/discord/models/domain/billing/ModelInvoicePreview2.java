@@ -2,9 +2,9 @@ package com.discord.models.domain.billing;
 
 import p007b.p100d.p104b.p105a.outline;
 
-/* compiled from: ModelInvoicePreview.kt */
-/* renamed from: com.discord.models.domain.billing.ModelInvoiceDiscount, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: com.discord.models.domain.billing.ModelInvoiceDiscount, reason: use source file name */
+/* JADX INFO: compiled from: ModelInvoicePreview.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class ModelInvoicePreview2 {
     private final int amount;
     private final int type;
@@ -24,12 +24,12 @@ public final /* data */ class ModelInvoicePreview2 {
         return modelInvoicePreview2.copy(i, i2);
     }
 
-    /* renamed from: component1, reason: from getter */
+    /* JADX INFO: renamed from: component1, reason: from getter */
     public final int getAmount() {
         return this.amount;
     }
 
-    /* renamed from: component2, reason: from getter */
+    /* JADX INFO: renamed from: component2, reason: from getter */
     public final int getType() {
         return this.type;
     }

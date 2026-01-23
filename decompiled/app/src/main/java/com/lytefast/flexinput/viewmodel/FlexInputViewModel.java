@@ -9,8 +9,8 @@ import kotlin.jvm.functions.Function0;
 import p007b.p076b.p077a.p083h.FlexInputEvent;
 import p658rx.Observable;
 
-/* compiled from: FlexInputViewModel.kt */
-/* loaded from: classes3.dex */
+/* JADX INFO: compiled from: FlexInputViewModel.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public interface FlexInputViewModel {
     boolean hasMediaPermissions();
 

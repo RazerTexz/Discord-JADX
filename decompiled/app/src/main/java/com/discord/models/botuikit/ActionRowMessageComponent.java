@@ -6,8 +6,8 @@ import kotlin.jvm.internal.DefaultConstructorMarker;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ActionRowMessageComponent.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: ActionRowMessageComponent.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class ActionRowMessageComponent extends MessageComponent3 {
     private final List<MessageComponent> components;
     private final int index;

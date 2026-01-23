@@ -8,16 +8,16 @@ import p007b.p085c.p086a.LottieComposition;
 import p007b.p085c.p086a.p089b0.Utils;
 import p007b.p085c.p086a.p090c0.Keyframe;
 
-/* compiled from: PathKeyframe.java */
-/* renamed from: b.c.a.w.c.h, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.c.a.w.c.h, reason: use source file name */
+/* JADX INFO: compiled from: PathKeyframe.java */
+/* JADX INFO: loaded from: classes.dex */
 public class PathKeyframe extends Keyframe<PointF> {
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     @Nullable
     public Path f2614o;
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public final Keyframe<PointF> f2615p;
 
     public PathKeyframe(LottieComposition lottieComposition, Keyframe<PointF> keyframe) {
@@ -27,7 +27,7 @@ public class PathKeyframe extends Keyframe<PointF> {
     }
 
     /* JADX WARN: Multi-variable type inference failed */
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public void m742e() {
         T t;
         T t2 = this.f2318c;

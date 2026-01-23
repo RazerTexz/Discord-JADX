@@ -1,6 +1,6 @@
 package org.webrtc;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public interface CapturerObserver {
     void onCapturerStarted(boolean z2);
 

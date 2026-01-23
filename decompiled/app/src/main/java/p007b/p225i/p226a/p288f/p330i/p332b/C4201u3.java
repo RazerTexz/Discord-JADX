@@ -7,23 +7,23 @@ import com.google.android.gms.measurement.internal.zzap;
 import com.google.android.gms.measurement.internal.zzaq;
 import p007b.p100d.p104b.p105a.outline;
 
-/* compiled from: com.google.android.gms:play-services-measurement-impl@@18.0.0 */
-/* renamed from: b.i.a.f.i.b.u3 */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.i.b.u3 */
+/* JADX INFO: compiled from: com.google.android.gms:play-services-measurement-impl@@18.0.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public final class C4201u3 {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     @NonNull
     public String f11241a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     @NonNull
     public String f11242b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public long f11243c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     @NonNull
     public Bundle f11244d;
 
@@ -34,12 +34,12 @@ public final class C4201u3 {
         this.f11243c = j;
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static C4201u3 m5931b(zzaq zzaqVar) {
         return new C4201u3(zzaqVar.f20666j, zzaqVar.f20668l, zzaqVar.f20667k.m9114x0(), zzaqVar.f20669m);
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final zzaq m5932a() {
         return new zzaq(this.f11241a, new zzap(new Bundle(this.f11244d)), this.f11242b, this.f11243c);
     }

@@ -3,9 +3,9 @@ package com.discord.widgets.user;
 import kotlin.jvm.functions.Function0;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetUserStatusSheet.kt */
-/* renamed from: com.discord.widgets.user.WidgetUserStatusSheet$viewModel$2, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: com.discord.widgets.user.WidgetUserStatusSheet$viewModel$2, reason: use source file name */
+/* JADX INFO: compiled from: WidgetUserStatusSheet.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class WidgetUserStatusSheet3 extends Lambda implements Function0<WidgetUserStatusSheetViewModel> {
     public static final WidgetUserStatusSheet3 INSTANCE = new WidgetUserStatusSheet3();
 

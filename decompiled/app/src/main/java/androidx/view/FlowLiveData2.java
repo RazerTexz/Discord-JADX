@@ -3,9 +3,9 @@ package androidx.view;
 import androidx.exifinterface.media.ExifInterface;
 import p659s.p660a.p663c2.Channel4;
 
-/* compiled from: FlowLiveData.kt */
-/* renamed from: androidx.lifecycle.FlowLiveDataConversions$asFlow$1$observer$1, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: androidx.lifecycle.FlowLiveDataConversions$asFlow$1$observer$1, reason: use source file name */
+/* JADX INFO: compiled from: FlowLiveData.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class FlowLiveData2<T> implements Observer<T> {
     public final /* synthetic */ Channel4 $channel;
 

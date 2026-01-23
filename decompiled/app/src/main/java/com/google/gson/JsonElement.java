@@ -6,14 +6,14 @@ import java.io.IOException;
 import java.io.StringWriter;
 import p007b.p225i.p408d.JsonPrimitive;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public abstract class JsonElement {
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public int mo6854c() {
         throw new UnsupportedOperationException(getClass().getSimpleName());
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public JsonObject m9212d() {
         if (this instanceof JsonObject) {
             return (JsonObject) this;
@@ -21,7 +21,7 @@ public abstract class JsonElement {
         throw new IllegalStateException("Not a JSON Object: " + this);
     }
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public JsonPrimitive m9213e() {
         if (this instanceof JsonPrimitive) {
             return (JsonPrimitive) this;
@@ -29,7 +29,7 @@ public abstract class JsonElement {
         throw new IllegalStateException("Not a JSON Primitive: " + this);
     }
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public String mo6855g() {
         throw new UnsupportedOperationException(getClass().getSimpleName());
     }

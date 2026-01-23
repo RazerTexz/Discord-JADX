@@ -10,7 +10,7 @@ import com.discord.utilities.time.TimeUtils;
 import java.io.Serializable;
 import p007b.p100d.p104b.p105a.outline;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class ModelInvite implements Serializable {
     public static final String URL_FORMAT = "%1$s/%2$s";
     public static final String URL_FORMAT_WITH_EVENT = "%1$s/%2$s?event=%3$s";
@@ -236,7 +236,7 @@ public class ModelInvite implements Serializable {
     }
 
     public long getExpirationTime() {
-        return getCreatedAt() + (this.maxAge * 1000);
+        return getCreatedAt() + ((long) (this.maxAge * 1000));
     }
 
     public Guild getGuild() {

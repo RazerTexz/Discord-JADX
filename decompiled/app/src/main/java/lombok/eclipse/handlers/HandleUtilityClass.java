@@ -26,8 +26,8 @@ import org.eclipse.jdt.internal.compiler.ast.ThrowStatement;
 import org.eclipse.jdt.internal.compiler.ast.TypeDeclaration;
 import org.eclipse.jdt.internal.compiler.lookup.TypeConstants;
 
+/* JADX INFO: loaded from: discord-126021.apk:lombok/eclipse/handlers/HandleUtilityClass.SCL.lombok */
 @HandlerPriority(-4096)
-/* loaded from: discord-126021.apk:lombok/eclipse/handlers/HandleUtilityClass.SCL.lombok */
 public class HandleUtilityClass extends EclipseAnnotationHandler<UtilityClass> {
     private static final char[][] JAVA_LANG_UNSUPPORTED_OPERATION_EXCEPTION = {TypeConstants.JAVA, TypeConstants.LANG, "UnsupportedOperationException".toCharArray()};
     private static final char[] UNSUPPORTED_MESSAGE = "This is a utility class and cannot be instantiated".toCharArray();
@@ -101,7 +101,7 @@ public class HandleUtilityClass extends EclipseAnnotationHandler<UtilityClass> {
         	at jadx.core.dex.visitors.regions.maker.LoopRegionMaker.process(LoopRegionMaker.java:104)
         	at jadx.core.dex.visitors.regions.maker.RegionMaker.traverse(RegionMaker.java:89)
         	at jadx.core.dex.visitors.regions.maker.RegionMaker.makeRegion(RegionMaker.java:66)
-        	at jadx.core.dex.visitors.regions.maker.IfRegionMaker.process(IfRegionMaker.java:101)
+        	at jadx.core.dex.visitors.regions.maker.IfRegionMaker.process(IfRegionMaker.java:102)
         	at jadx.core.dex.visitors.regions.maker.RegionMaker.traverse(RegionMaker.java:106)
         	at jadx.core.dex.visitors.regions.maker.RegionMaker.makeRegion(RegionMaker.java:66)
         	at jadx.core.dex.visitors.regions.maker.RegionMaker.makeMthRegion(RegionMaker.java:48)
@@ -256,7 +256,7 @@ public class HandleUtilityClass extends EclipseAnnotationHandler<UtilityClass> {
     private void createPrivateDefaultConstructor(EclipseNode typeNode, EclipseNode sourceNode) {
         ASTNode source = sourceNode.get();
         TypeDeclaration typeDeclaration = typeNode.get();
-        long p = (source.sourceStart << 32) | source.sourceEnd;
+        long p = (((long) source.sourceStart) << 32) | ((long) source.sourceEnd);
         ConstructorDeclaration constructor = new ConstructorDeclaration(typeNode.top().get().compilationResult);
         constructor.modifiers = 2;
         constructor.selector = typeDeclaration.name;

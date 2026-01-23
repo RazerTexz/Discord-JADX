@@ -8,9 +8,9 @@ import p007b.p452o.p475b.p478c.gl;
 import p507d0.UInt;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: GlTexture.kt */
-/* renamed from: b.o.b.f.a, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.o.b.f.a, reason: use source file name */
+/* JADX INFO: compiled from: GlTexture.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class GlTexture extends Lambda implements Function0<Unit> {
     public final /* synthetic */ Integer $internalFormat;
     public final /* synthetic */ GlTexture2 this$0;

@@ -5,9 +5,9 @@ import p007b.p195g.p196a.p205c.PropertyMetadata;
 import p007b.p195g.p196a.p205c.p210c0.BeanPropertyDefinition;
 import p007b.p195g.p196a.p205c.p210c0.ConcreteBeanPropertyBase;
 
-/* compiled from: PropertyWriter.java */
-/* renamed from: b.g.a.c.g0.n, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.g.a.c.g0.n, reason: use source file name */
+/* JADX INFO: compiled from: PropertyWriter.java */
+/* JADX INFO: loaded from: classes3.dex */
 public abstract class PropertyWriter extends ConcreteBeanPropertyBase implements Serializable {
     private static final long serialVersionUID = 1;
 

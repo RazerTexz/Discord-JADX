@@ -21,16 +21,16 @@ import p007b.p225i.p408d.TypeAdapterFactory2;
 import p007b.p225i.p408d.p410q.JavaVersion;
 import p007b.p225i.p408d.p410q.p411x.p412d.ISO8601Utils;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public final class DateTypeAdapter extends TypeAdapter<Date> {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final TypeAdapterFactory2 f21516a = new C111071();
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final List<DateFormat> f21517b;
 
-    /* renamed from: com.google.gson.internal.bind.DateTypeAdapter$1 */
+    /* JADX INFO: renamed from: com.google.gson.internal.bind.DateTypeAdapter$1 */
     public class C111071 implements TypeAdapterFactory2 {
         @Override // p007b.p225i.p408d.TypeAdapterFactory2
         public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> typeToken) {

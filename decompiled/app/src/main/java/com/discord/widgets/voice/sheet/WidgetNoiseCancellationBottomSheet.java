@@ -30,21 +30,21 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 import p507d0.p592z.p594d.Reflection2;
 
-/* compiled from: WidgetNoiseCancellationBottomSheet.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: WidgetNoiseCancellationBottomSheet.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class WidgetNoiseCancellationBottomSheet extends AppBottomSheet {
     public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetNoiseCancellationBottomSheet.class, "binding", "getBinding()Lcom/discord/databinding/WidgetVoiceNoiseCancellationBottomSheetBinding;", 0)};
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
 
-    /* renamed from: binding$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
 
-    /* renamed from: viewModel$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: viewModel$delegate, reason: from kotlin metadata */
     private final Lazy viewModel;
 
-    /* compiled from: WidgetNoiseCancellationBottomSheet.kt */
+    /* JADX INFO: compiled from: WidgetNoiseCancellationBottomSheet.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -62,8 +62,8 @@ public final class WidgetNoiseCancellationBottomSheet extends AppBottomSheet {
         }
     }
 
-    /* compiled from: WidgetNoiseCancellationBottomSheet.kt */
-    /* renamed from: com.discord.widgets.voice.sheet.WidgetNoiseCancellationBottomSheet$configureUI$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.voice.sheet.WidgetNoiseCancellationBottomSheet$configureUI$1 */
+    /* JADX INFO: compiled from: WidgetNoiseCancellationBottomSheet.kt */
     public static final class ViewOnClickListenerC105731 implements View.OnClickListener {
         public ViewOnClickListenerC105731() {
         }
@@ -75,8 +75,8 @@ public final class WidgetNoiseCancellationBottomSheet extends AppBottomSheet {
         }
     }
 
-    /* compiled from: WidgetNoiseCancellationBottomSheet.kt */
-    /* renamed from: com.discord.widgets.voice.sheet.WidgetNoiseCancellationBottomSheet$onResume$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.voice.sheet.WidgetNoiseCancellationBottomSheet$onResume$1 */
+    /* JADX INFO: compiled from: WidgetNoiseCancellationBottomSheet.kt */
     public static final class C105741 extends Lambda implements Function1<WidgetNoiseCancellationBottomSheetViewModel.Event, Unit> {
         public C105741() {
             super(1);
@@ -88,7 +88,7 @@ public final class WidgetNoiseCancellationBottomSheet extends AppBottomSheet {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(WidgetNoiseCancellationBottomSheetViewModel.Event event) {
             Intrinsics3.checkNotNullParameter(event, "event");
             WidgetNoiseCancellationBottomSheet.access$handleEvent(WidgetNoiseCancellationBottomSheet.this, event);

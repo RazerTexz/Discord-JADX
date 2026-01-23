@@ -10,9 +10,9 @@ import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetServerSettingsAuditLogFilter.kt */
-/* renamed from: com.discord.widgets.servers.auditlog.WidgetServerSettingsAuditLogFilter$Model$Companion$get$2$listItems$2, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.servers.auditlog.WidgetServerSettingsAuditLogFilter$Model$Companion$get$2$listItems$2, reason: use source file name */
+/* JADX INFO: compiled from: WidgetServerSettingsAuditLogFilter.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetServerSettingsAuditLogFilter5 extends Lambda implements Function1<User, WidgetServerSettingsAuditLogFilterAdapter.AuditLogUserFilterItem> {
     public final /* synthetic */ StoreAuditLog.AuditLogState $auditLogState;
     public final /* synthetic */ Map $guildMembers;
@@ -29,7 +29,7 @@ public final class WidgetServerSettingsAuditLogFilter5 extends Lambda implements
         return invoke2(user);
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final WidgetServerSettingsAuditLogFilterAdapter.AuditLogUserFilterItem invoke2(User user) {
         Intrinsics3.checkNotNullParameter(user, "user");
         return new WidgetServerSettingsAuditLogFilterAdapter.AuditLogUserFilterItem(user, (GuildMember) outline.m849f(user, this.$guildMembers), user.getId(), null, Integer.valueOf(user.getDiscriminator()), this.$auditLogState.getFilter().getUserFilter() == user.getId());

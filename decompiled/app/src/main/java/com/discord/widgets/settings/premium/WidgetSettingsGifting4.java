@@ -4,9 +4,9 @@ import kotlin.jvm.functions.Function0;
 import org.objectweb.asm.Opcodes;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetSettingsGifting.kt */
-/* renamed from: com.discord.widgets.settings.premium.WidgetSettingsGifting$viewModel$2, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.settings.premium.WidgetSettingsGifting$viewModel$2, reason: use source file name */
+/* JADX INFO: compiled from: WidgetSettingsGifting.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetSettingsGifting4 extends Lambda implements Function0<SettingsGiftingViewModel> {
     public static final WidgetSettingsGifting4 INSTANCE = new WidgetSettingsGifting4();
 

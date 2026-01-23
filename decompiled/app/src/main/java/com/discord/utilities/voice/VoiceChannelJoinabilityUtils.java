@@ -31,13 +31,13 @@ import p637j0.p642l.p647e.ScalarSynchronousObservable;
 import p658rx.Observable;
 import p658rx.functions.Func6;
 
-/* compiled from: VoiceChannelJoinabilityUtils.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: VoiceChannelJoinabilityUtils.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class VoiceChannelJoinabilityUtils {
     public static final VoiceChannelJoinabilityUtils INSTANCE = new VoiceChannelJoinabilityUtils();
 
-    /* compiled from: VoiceChannelJoinabilityUtils.kt */
-    /* renamed from: com.discord.utilities.voice.VoiceChannelJoinabilityUtils$observeJoinability$1 */
+    /* JADX INFO: renamed from: com.discord.utilities.voice.VoiceChannelJoinabilityUtils$observeJoinability$1 */
+    /* JADX INFO: compiled from: VoiceChannelJoinabilityUtils.kt */
     public static final class C70481<T, R> implements Func1<Channel, Observable<? extends VoiceChannelJoinabilityUtils2>> {
         public final /* synthetic */ long $channelId;
         public final /* synthetic */ StoreGuilds $guildsStore;
@@ -46,8 +46,8 @@ public final class VoiceChannelJoinabilityUtils {
         public final /* synthetic */ StoreVoiceChannelSelected $voiceChannelSelectedStore;
         public final /* synthetic */ StoreVoiceStates $voiceStatesStore;
 
-        /* compiled from: VoiceChannelJoinabilityUtils.kt */
-        /* renamed from: com.discord.utilities.voice.VoiceChannelJoinabilityUtils$observeJoinability$1$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.utilities.voice.VoiceChannelJoinabilityUtils$observeJoinability$1$1, reason: invalid class name */
+        /* JADX INFO: compiled from: VoiceChannelJoinabilityUtils.kt */
         public static final class AnonymousClass1<T1, T2, T3, T4, T5, T6, R> implements Func6<Map<Long, ? extends VoiceState>, Long, Guild, GuildVerificationLevel, Long, StageInstance, VoiceChannelJoinabilityUtils2> {
             public final /* synthetic */ Channel $channel;
 
@@ -60,7 +60,7 @@ public final class VoiceChannelJoinabilityUtils {
                 return call2((Map<Long, VoiceState>) map, l, guild, guildVerificationLevel, l2, stageInstance);
             }
 
-            /* renamed from: call, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
             public final VoiceChannelJoinabilityUtils2 call2(Map<Long, VoiceState> map, Long l, Guild guild, GuildVerificationLevel guildVerificationLevel, Long l2, StageInstance stageInstance) {
                 GuildMaxVideoChannelUsers maxVideoChannelUsers;
                 VoiceChannelJoinabilityUtils voiceChannelJoinabilityUtils = VoiceChannelJoinabilityUtils.INSTANCE;
@@ -88,7 +88,7 @@ public final class VoiceChannelJoinabilityUtils {
             return call2(channel);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final Observable<? extends VoiceChannelJoinabilityUtils2> call2(Channel channel) {
             return channel == null ? new ScalarSynchronousObservable(VoiceChannelJoinabilityUtils2.CHANNEL_DOES_NOT_EXIST) : Observable.m11071f(this.$voiceStatesStore.observe(channel.getGuildId(), this.$channelId), this.$permissionsStore.observePermissionsForChannel(this.$channelId), this.$guildsStore.observeGuild(channel.getGuildId()), GuildVerificationLevelUtils.observeVerificationLevelTriggered$default(GuildVerificationLevelUtils.INSTANCE, channel.getGuildId(), null, null, null, 14, null), this.$voiceChannelSelectedStore.observeSelectedVoiceChannelId(), this.$stageInstancesStore.observeStageInstanceForChannel(this.$channelId), new AnonymousClass1(channel));
         }

@@ -1,7 +1,6 @@
 package com.discord.widgets.chat.list.adapter;
 
 import android.content.Context;
-import android.content.res.Resources;
 import android.graphics.Typeface;
 import android.text.style.ForegroundColorSpan;
 import android.view.View;
@@ -38,13 +37,13 @@ import p507d0.p580t.Collections2;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetChatListAdapterItemStart.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetChatListAdapterItemStart.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetChatListAdapterItemStart extends WidgetChatListItem {
     private final WidgetChatListAdapterItemStartBinding binding;
 
-    /* compiled from: WidgetChatListAdapterItemStart.kt */
-    /* renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemStart$configureChannel$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemStart$configureChannel$1 */
+    /* JADX INFO: compiled from: WidgetChatListAdapterItemStart.kt */
     public static final class ViewOnClickListenerC81231 implements View.OnClickListener {
         public final /* synthetic */ long $channelId;
 
@@ -58,15 +57,15 @@ public final class WidgetChatListAdapterItemStart extends WidgetChatListItem {
         }
     }
 
-    /* compiled from: WidgetChatListAdapterItemStart.kt */
-    /* renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemStart$configureThread$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemStart$configureThread$1 */
+    /* JADX INFO: compiled from: WidgetChatListAdapterItemStart.kt */
     public static final class C81241 extends Lambda implements Function1<RenderContext, Unit> {
         public final /* synthetic */ Context $context;
         public final /* synthetic */ GuildMember $threadCreatorMember;
         public final /* synthetic */ String $threadCreatorName;
 
-        /* compiled from: WidgetChatListAdapterItemStart.kt */
-        /* renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemStart$configureThread$1$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemStart$configureThread$1$1, reason: invalid class name */
+        /* JADX INFO: compiled from: WidgetChatListAdapterItemStart.kt */
         public static final class AnonymousClass1 extends Lambda implements Function1<Hook, Unit> {
             public AnonymousClass1() {
                 super(1);
@@ -78,7 +77,7 @@ public final class WidgetChatListAdapterItemStart extends WidgetChatListItem {
                 return Unit.f27425a;
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2(Hook hook) {
                 Intrinsics3.checkNotNullParameter(hook, "$receiver");
                 C81241 c81241 = C81241.this;
@@ -110,21 +109,21 @@ public final class WidgetChatListAdapterItemStart extends WidgetChatListItem {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(RenderContext renderContext) {
             Intrinsics3.checkNotNullParameter(renderContext, "$receiver");
             renderContext.m8422a("usernameHook", new AnonymousClass1());
         }
     }
 
-    /* compiled from: WidgetChatListAdapterItemStart.kt */
-    /* renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemStart$configureThread$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemStart$configureThread$2 */
+    /* JADX INFO: compiled from: WidgetChatListAdapterItemStart.kt */
     public static final class C81252 extends Lambda implements Function1<RenderContext, Unit> {
         public final /* synthetic */ String $autoArchiveString;
         public final /* synthetic */ Context $context;
 
-        /* compiled from: WidgetChatListAdapterItemStart.kt */
-        /* renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemStart$configureThread$2$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemStart$configureThread$2$1, reason: invalid class name */
+        /* JADX INFO: compiled from: WidgetChatListAdapterItemStart.kt */
         public static final class AnonymousClass1 extends Lambda implements Function1<Hook, Unit> {
             public AnonymousClass1() {
                 super(1);
@@ -136,7 +135,7 @@ public final class WidgetChatListAdapterItemStart extends WidgetChatListItem {
                 return Unit.f27425a;
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2(Hook hook) {
                 Intrinsics3.checkNotNullParameter(hook, "$receiver");
                 C81252 c81252 = C81252.this;
@@ -165,15 +164,15 @@ public final class WidgetChatListAdapterItemStart extends WidgetChatListItem {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(RenderContext renderContext) {
             Intrinsics3.checkNotNullParameter(renderContext, "$receiver");
             renderContext.m8422a("autoArchiveDurationHook", new AnonymousClass1());
         }
     }
 
-    /* compiled from: WidgetChatListAdapterItemStart.kt */
-    /* renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemStart$configureThread$3 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemStart$configureThread$3 */
+    /* JADX INFO: compiled from: WidgetChatListAdapterItemStart.kt */
     public static final class ViewOnClickListenerC81263 implements View.OnClickListener {
         public final /* synthetic */ long $channelId;
 
@@ -338,7 +337,7 @@ public final class WidgetChatListAdapterItemStart extends WidgetChatListItem {
         }
     }
 
-    private final void configureThread(long channelId, String channelName, boolean canReadMessageHistory, boolean canManageThread, GuildMember threadCreatorMember, String threadCreatorName, Integer threadAutoArchiveDuration) throws Resources.NotFoundException {
+    private final void configureThread(long channelId, String channelName, boolean canReadMessageHistory, boolean canManageThread, GuildMember threadCreatorMember, String threadCreatorName, Integer threadAutoArchiveDuration) {
         TextView textView = this.binding.f16292c;
         Intrinsics3.checkNotNullExpressionValue(textView, "binding.chatListAdapterItemHeader");
         Context context = textView.getContext();
@@ -389,13 +388,13 @@ public final class WidgetChatListAdapterItemStart extends WidgetChatListItem {
     }
 
     @Override // com.discord.widgets.chat.list.adapter.WidgetChatListItem, com.discord.utilities.mg_recycler.MGRecyclerViewHolder
-    public /* bridge */ /* synthetic */ void onConfigure(int i, ChatListEntry chatListEntry) throws Resources.NotFoundException {
+    public /* bridge */ /* synthetic */ void onConfigure(int i, ChatListEntry chatListEntry) {
         onConfigure(i, chatListEntry);
     }
 
     /* JADX WARN: Can't rename method to resolve collision */
     @Override // com.discord.widgets.chat.list.adapter.WidgetChatListItem
-    public void onConfigure(int position, ChatListEntry data) throws Resources.NotFoundException {
+    public void onConfigure(int position, ChatListEntry data) {
         Intrinsics3.checkNotNullParameter(data, "data");
         super.onConfigure(position, data);
         StartOfChatEntry startOfChatEntry = (StartOfChatEntry) data;

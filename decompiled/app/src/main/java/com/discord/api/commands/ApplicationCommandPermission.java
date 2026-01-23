@@ -4,19 +4,19 @@ import com.discord.models.domain.ModelAuditLogEntry;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ApplicationCommandPermission.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: ApplicationCommandPermission.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class ApplicationCommandPermission {
     private final long id;
     private final boolean permission;
     private final ApplicationCommandPermission2 type;
 
-    /* renamed from: a, reason: from getter */
+    /* JADX INFO: renamed from: a, reason: from getter */
     public final long getId() {
         return this.id;
     }
 
-    /* renamed from: b, reason: from getter */
+    /* JADX INFO: renamed from: b, reason: from getter */
     public final boolean getPermission() {
         return this.permission;
     }
@@ -33,17 +33,20 @@ public final /* data */ class ApplicationCommandPermission {
     }
 
     /* JADX WARN: Multi-variable type inference failed */
+    /* JADX WARN: Type inference failed for: r0v6, types: [int] */
+    /* JADX WARN: Type inference failed for: r0v7 */
+    /* JADX WARN: Type inference failed for: r0v9 */
     public int hashCode() {
         long j = this.id;
         int i = ((int) (j ^ (j >>> 32))) * 31;
         ApplicationCommandPermission2 applicationCommandPermission2 = this.type;
         int iHashCode = (i + (applicationCommandPermission2 != null ? applicationCommandPermission2.hashCode() : 0)) * 31;
         boolean z2 = this.permission;
-        int i2 = z2;
-        if (z2 != 0) {
-            i2 = 1;
+        ?? r0 = z2;
+        if (z2) {
+            r0 = 1;
         }
-        return iHashCode + i2;
+        return iHashCode + r0;
     }
 
     public String toString() {

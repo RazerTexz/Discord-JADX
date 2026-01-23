@@ -8,27 +8,27 @@ import com.discord.models.domain.ModelAuditLogEntry;
 import p007b.p109f.p115d.p120e.FLog;
 import p007b.p109f.p187l.p188a.TransformGestureDetector;
 
-/* compiled from: AbstractAnimatedZoomableController.java */
-/* renamed from: b.f.l.b.a, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.f.l.b.a, reason: use source file name */
+/* JADX INFO: compiled from: AbstractAnimatedZoomableController.java */
+/* JADX INFO: loaded from: classes3.dex */
 public abstract class AbstractAnimatedZoomableController extends DefaultZoomableController {
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public boolean f4289m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public final float[] f4290n;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public final float[] f4291o;
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public final float[] f4292p;
 
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     public final Matrix f4293q;
 
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     public final Matrix f4294r;
 
     public AbstractAnimatedZoomableController(TransformGestureDetector transformGestureDetector) {
@@ -41,13 +41,13 @@ public abstract class AbstractAnimatedZoomableController extends DefaultZoomable
     }
 
     @Override // p007b.p109f.p187l.p189b.DefaultZoomableController, p007b.p109f.p187l.p189b.ZoomableController
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public boolean mo1551a() {
         return !this.f4289m && super.mo1551a();
     }
 
     @Override // p007b.p109f.p187l.p189b.DefaultZoomableController, p007b.p109f.p187l.p188a.TransformGestureDetector.a
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public void mo1549b(TransformGestureDetector transformGestureDetector) {
         mo1553m();
         boolean z2 = this.f4289m;
@@ -59,7 +59,7 @@ public abstract class AbstractAnimatedZoomableController extends DefaultZoomable
     }
 
     @Override // p007b.p109f.p187l.p189b.DefaultZoomableController, p007b.p109f.p187l.p188a.TransformGestureDetector.a
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public void mo1550c(TransformGestureDetector transformGestureDetector) {
         FLog.m981i(mo1553m(), "onGestureBegin");
         mo1555o();
@@ -67,7 +67,7 @@ public abstract class AbstractAnimatedZoomableController extends DefaultZoomable
     }
 
     @Override // p007b.p109f.p187l.p189b.DefaultZoomableController
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public void mo1552j() {
         FLog.m981i(mo1553m(), ModelAuditLogEntry.CHANGE_KEY_PERMISSIONS_RESET);
         mo1555o();
@@ -76,16 +76,16 @@ public abstract class AbstractAnimatedZoomableController extends DefaultZoomable
         super.mo1552j();
     }
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public abstract Class<?> mo1553m();
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public abstract void mo1554n(Matrix matrix, long j, @Nullable Runnable runnable);
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public abstract void mo1555o();
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public void m1556p(float f, PointF pointF, PointF pointF2, int i, long j, @Nullable Runnable runnable) {
         mo1553m();
         int i2 = FLog.f3102a;

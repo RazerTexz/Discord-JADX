@@ -8,8 +8,8 @@ import com.discord.utilities.analytics.ChatInputComponentTypes;
 import org.webrtc.CameraSession;
 import org.webrtc.CameraVideoCapturer;
 
+/* JADX INFO: loaded from: classes3.dex */
 @TargetApi(21)
-/* loaded from: classes3.dex */
 public class Camera2Capturer extends CameraCapturer {
 
     @Nullable

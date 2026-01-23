@@ -16,9 +16,9 @@ import p007b.p109f.p132g.p143f.GenericDraweeHierarchyBuilder;
 import p007b.p109f.p132g.p143f.RoundingParams;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: DraweeSpanStringBuilderExtensions.kt */
-/* renamed from: com.discord.widgets.user.profile.DraweeSpanStringBuilderExtensionsKt, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: com.discord.widgets.user.profile.DraweeSpanStringBuilderExtensionsKt, reason: use source file name */
+/* JADX INFO: compiled from: DraweeSpanStringBuilderExtensions.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class DraweeSpanStringBuilderExtensions {
     /* JADX WARN: Type inference failed for: r0v2, types: [REQUEST, com.facebook.imagepipeline.request.ImageRequest] */
     public static final DraweeSpanStringBuilder setAvatar(DraweeSpanStringBuilder draweeSpanStringBuilder, Context context, String str, boolean z2, Integer num, @ColorInt Integer num2, Character ch) {

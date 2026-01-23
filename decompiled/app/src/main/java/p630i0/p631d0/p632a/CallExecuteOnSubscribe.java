@@ -6,12 +6,12 @@ import p658rx.Observable;
 import p658rx.Subscriber;
 import retrofit2.Response;
 
-/* compiled from: CallExecuteOnSubscribe.java */
-/* renamed from: i0.d0.a.c, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: i0.d0.a.c, reason: use source file name */
+/* JADX INFO: compiled from: CallExecuteOnSubscribe.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class CallExecuteOnSubscribe<T> implements Observable.InterfaceC13005a<Response<T>> {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final Call3<T> f26500j;
 
     public CallExecuteOnSubscribe(Call3<T> call3) {

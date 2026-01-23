@@ -20,10 +20,10 @@ import androidx.versionedparcelable.VersionedParcelable;
 import p007b.p100d.p104b.p105a.outline;
 import p668x.p669a.p672b.p674b.p675a.IMediaSession;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class MediaSessionCompat {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     @RestrictTo({RestrictTo.Scope.LIBRARY})
     public static final int f46a;
 
@@ -31,10 +31,10 @@ public class MediaSessionCompat {
     public static final class ResultReceiverWrapper implements Parcelable {
         public static final Parcelable.Creator<ResultReceiverWrapper> CREATOR = new C0023a();
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public ResultReceiver f49j;
 
-        /* renamed from: android.support.v4.media.session.MediaSessionCompat$ResultReceiverWrapper$a */
+        /* JADX INFO: renamed from: android.support.v4.media.session.MediaSessionCompat$ResultReceiverWrapper$a */
         public class C0023a implements Parcelable.Creator<ResultReceiverWrapper> {
             @Override // android.os.Parcelable.Creator
             public ResultReceiverWrapper createFromParcel(Parcel parcel) {
@@ -67,7 +67,7 @@ public class MediaSessionCompat {
     }
 
     @RestrictTo({RestrictTo.Scope.LIBRARY})
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static void m40a(@Nullable Bundle bundle) {
         if (bundle != null) {
             bundle.setClassLoader(MediaSessionCompat.class.getClassLoader());
@@ -76,7 +76,7 @@ public class MediaSessionCompat {
 
     @Nullable
     @RestrictTo({RestrictTo.Scope.LIBRARY})
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static Bundle m41b(@Nullable Bundle bundle) {
         m40a(bundle);
         try {
@@ -92,21 +92,21 @@ public class MediaSessionCompat {
     public static final class Token implements Parcelable {
         public static final Parcelable.Creator<Token> CREATOR = new C0024a();
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public final Object f50j;
 
-        /* renamed from: k */
+        /* JADX INFO: renamed from: k */
         public final Object f51k;
 
-        /* renamed from: l */
+        /* JADX INFO: renamed from: l */
         @GuardedBy("mLock")
         public IMediaSession f52l;
 
-        /* renamed from: m */
+        /* JADX INFO: renamed from: m */
         @GuardedBy("mLock")
         public VersionedParcelable f53m;
 
-        /* renamed from: android.support.v4.media.session.MediaSessionCompat$Token$a */
+        /* JADX INFO: renamed from: android.support.v4.media.session.MediaSessionCompat$Token$a */
         public class C0024a implements Parcelable.Creator<Token> {
             @Override // android.os.Parcelable.Creator
             public Token createFromParcel(Parcel parcel) {
@@ -126,7 +126,7 @@ public class MediaSessionCompat {
         }
 
         @RestrictTo({RestrictTo.Scope.LIBRARY})
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public static Token m45a(Object obj, IMediaSession iMediaSession) {
             if (obj == null) {
                 return null;
@@ -138,7 +138,7 @@ public class MediaSessionCompat {
         }
 
         @RestrictTo({RestrictTo.Scope.LIBRARY})
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public IMediaSession m46b() {
             IMediaSession iMediaSession;
             synchronized (this.f50j) {
@@ -195,13 +195,13 @@ public class MediaSessionCompat {
     public static final class QueueItem implements Parcelable {
         public static final Parcelable.Creator<QueueItem> CREATOR = new C0021a();
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public final MediaDescriptionCompat f47j;
 
-        /* renamed from: k */
+        /* JADX INFO: renamed from: k */
         public final long f48k;
 
-        /* renamed from: android.support.v4.media.session.MediaSessionCompat$QueueItem$a */
+        /* JADX INFO: renamed from: android.support.v4.media.session.MediaSessionCompat$QueueItem$a */
         public class C0021a implements Parcelable.Creator<QueueItem> {
             @Override // android.os.Parcelable.Creator
             public QueueItem createFromParcel(Parcel parcel) {
@@ -214,23 +214,23 @@ public class MediaSessionCompat {
             }
         }
 
+        /* JADX INFO: renamed from: android.support.v4.media.session.MediaSessionCompat$QueueItem$b */
         @RequiresApi(21)
-        /* renamed from: android.support.v4.media.session.MediaSessionCompat$QueueItem$b */
         public static class C0022b {
             @DoNotInline
-            /* renamed from: a */
+            /* JADX INFO: renamed from: a */
             public static MediaSession.QueueItem m42a(MediaDescription mediaDescription, long j) {
                 return new MediaSession.QueueItem(mediaDescription, j);
             }
 
             @DoNotInline
-            /* renamed from: b */
+            /* JADX INFO: renamed from: b */
             public static MediaDescription m43b(MediaSession.QueueItem queueItem) {
                 return queueItem.getDescription();
             }
 
             @DoNotInline
-            /* renamed from: c */
+            /* JADX INFO: renamed from: c */
             public static long m44c(MediaSession.QueueItem queueItem) {
                 return queueItem.getQueueId();
             }

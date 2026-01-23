@@ -7,42 +7,42 @@ import p007b.p225i.p226a.p242c.p255c3.ExoTrackSelection2;
 import p007b.p225i.p226a.p242c.p257e3.DefaultAllocator;
 import p007b.p225i.p226a.p242c.p259f3.Util2;
 
-/* compiled from: DefaultLoadControl.java */
-/* renamed from: b.i.a.c.z0, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.z0, reason: use source file name */
+/* JADX INFO: compiled from: DefaultLoadControl.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class DefaultLoadControl implements LoadControl {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final DefaultAllocator f9125a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final long f9126b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final long f9127c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final long f9128d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final long f9129e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final int f9130f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public final boolean f9131g;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public final long f9132h;
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public final boolean f9133i;
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public int f9134j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public boolean f9135k;
 
     public DefaultLoadControl(DefaultAllocator defaultAllocator, int i, int i2, int i3, int i4, int i5, boolean z2, int i6, boolean z3) {
@@ -64,7 +64,7 @@ public class DefaultLoadControl implements LoadControl {
         this.f9133i = z3;
     }
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static void m3871j(int i, int i2, String str, String str2) {
         boolean z2 = i >= i2;
         StringBuilder sb = new StringBuilder(String.valueOf(str2).length() + String.valueOf(str).length() + 21);
@@ -75,26 +75,26 @@ public class DefaultLoadControl implements LoadControl {
     }
 
     @Override // p007b.p225i.p226a.p242c.LoadControl
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public boolean mo3309a() {
         return this.f9133i;
     }
 
     @Override // p007b.p225i.p226a.p242c.LoadControl
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public long mo3310b() {
         return this.f9132h;
     }
 
     @Override // p007b.p225i.p226a.p242c.LoadControl
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public void mo3311c() {
         m3872k(false);
     }
 
     /* JADX WARN: Can't fix incorrect switch cases order, some code will duplicate */
     @Override // p007b.p225i.p226a.p242c.LoadControl
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public void mo3312d(Renderer2[] renderer2Arr, TrackGroupArray trackGroupArray, ExoTrackSelection2[] exoTrackSelection2Arr) {
         int iMax = this.f9130f;
         if (iMax == -1) {
@@ -143,18 +143,18 @@ public class DefaultLoadControl implements LoadControl {
     }
 
     @Override // p007b.p225i.p226a.p242c.LoadControl
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public void mo3313e() {
         m3872k(true);
     }
 
     @Override // p007b.p225i.p226a.p242c.LoadControl
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public boolean mo3314f(long j, float f, boolean z2, long j2) {
         int i;
         int i2 = Util2.f6708a;
         if (f != 1.0f) {
-            j = Math.round(j / f);
+            j = Math.round(j / ((double) f));
         }
         long jMin = z2 ? this.f9129e : this.f9128d;
         if (j2 != -9223372036854775807L) {
@@ -175,7 +175,7 @@ public class DefaultLoadControl implements LoadControl {
     }
 
     @Override // p007b.p225i.p226a.p242c.LoadControl
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public boolean mo3315g(long j, long j2, float f) {
         int i;
         DefaultAllocator defaultAllocator = this.f9125a;
@@ -203,18 +203,18 @@ public class DefaultLoadControl implements LoadControl {
     }
 
     @Override // p007b.p225i.p226a.p242c.LoadControl
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public DefaultAllocator mo3316h() {
         return this.f9125a;
     }
 
     @Override // p007b.p225i.p226a.p242c.LoadControl
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public void mo3317i() {
         m3872k(true);
     }
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final void m3872k(boolean z2) {
         int i = this.f9130f;
         if (i == -1) {

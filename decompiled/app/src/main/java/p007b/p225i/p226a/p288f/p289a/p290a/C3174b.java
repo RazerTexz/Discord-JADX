@@ -7,11 +7,11 @@ import android.util.Log;
 import java.util.concurrent.atomic.AtomicBoolean;
 import p007b.p225i.p226a.p288f.p299e.C3260e;
 
-/* renamed from: b.i.a.f.a.a.b */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.a.a.b */
+/* JADX INFO: loaded from: classes3.dex */
 public final class C3174b {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public SharedPreferences f9191a;
 
     public C3174b(Context context) {
@@ -30,7 +30,7 @@ public final class C3174b {
         }
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final boolean m3965a(String str) {
         try {
             SharedPreferences sharedPreferences = this.f9191a;

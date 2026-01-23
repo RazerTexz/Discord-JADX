@@ -9,19 +9,19 @@ import p007b.p109f.p115d.p120e.FLog;
 import p007b.p109f.p115d.p123h.HasBitmap;
 import p007b.p109f.p115d.p123h.ResourceReleaser;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class SharedReference<T> {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final Map<Object, Integer> f19446a = new IdentityHashMap();
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public T f19447b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public int f19448c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final ResourceReleaser<T> f19449d;
 
     public static class NullReferenceException extends RuntimeException {
@@ -50,7 +50,7 @@ public class SharedReference<T> {
         }
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public void m8644a() {
         int i;
         T t;
@@ -82,7 +82,7 @@ public class SharedReference<T> {
         }
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final void m8645b() {
         boolean z2;
         synchronized (this) {
@@ -93,7 +93,7 @@ public class SharedReference<T> {
         }
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public synchronized T m8646c() {
         return this.f19447b;
     }

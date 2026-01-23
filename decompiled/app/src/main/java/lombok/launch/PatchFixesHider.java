@@ -64,12 +64,12 @@ import p007b.p109f.p129e.AbstractDataSource3;
 import p007b.p109f.p129e.DataSubscriber;
 import p507d0.p513e0.p514p.p515d.p517m0.p548g.FqName;
 
-/* loaded from: discord-126021.apk:Class50/lombok/launch/PatchFixesHider.SCL.lombok */
+/* JADX INFO: loaded from: discord-126021.apk:Class50/lombok/launch/PatchFixesHider.SCL.lombok */
 final class PatchFixesHider {
     PatchFixesHider() {
     }
 
-    /* loaded from: discord-126021.apk:Class50/lombok/launch/PatchFixesHider$Util.SCL.lombok */
+    /* JADX INFO: loaded from: discord-126021.apk:Class50/lombok/launch/PatchFixesHider$Util.SCL.lombok */
     public static final class Util {
         private static ClassLoader shadowLoader;
 
@@ -120,7 +120,7 @@ final class PatchFixesHider {
         }
     }
 
-    /* loaded from: discord-126021.apk:Class50/lombok/launch/PatchFixesHider$LombokDeps.SCL.lombok */
+    /* JADX INFO: loaded from: discord-126021.apk:Class50/lombok/launch/PatchFixesHider$LombokDeps.SCL.lombok */
     public static final class LombokDeps {
         public static final Method ADD_LOMBOK_NOTES;
         public static final Method POST_COMPILER_BYTES_STRING;
@@ -156,7 +156,7 @@ final class PatchFixesHider {
         }
     }
 
-    /* loaded from: discord-126021.apk:Class50/lombok/launch/PatchFixesHider$Transform.SCL.lombok */
+    /* JADX INFO: loaded from: discord-126021.apk:Class50/lombok/launch/PatchFixesHider$Transform.SCL.lombok */
     public static final class Transform {
         private static final Method TRANSFORM;
         private static final Method TRANSFORM_SWAPPED;
@@ -176,7 +176,7 @@ final class PatchFixesHider {
         }
     }
 
-    /* loaded from: discord-126021.apk:Class50/lombok/launch/PatchFixesHider$Delegate.SCL.lombok */
+    /* JADX INFO: loaded from: discord-126021.apk:Class50/lombok/launch/PatchFixesHider$Delegate.SCL.lombok */
     public static final class Delegate {
         private static final Method HANDLE_DELEGATE_FOR_TYPE = null;
         private static final Method GET_CHILDREN = null;
@@ -207,7 +207,7 @@ final class PatchFixesHider {
             	at jadx.core.dex.visitors.ssa.SSATransform.process(SSATransform.java:57)
             	at jadx.core.dex.visitors.ssa.SSATransform.visit(SSATransform.java:44)
             */
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         static boolean m1016d(
         /*  JADX ERROR: ArrayIndexOutOfBoundsException in pass: SSATransform
             java.lang.ArrayIndexOutOfBoundsException: Index 8 out of bounds for length 8
@@ -219,11 +219,11 @@ final class PatchFixesHider {
         /*  JADX ERROR: Method generation error
             jadx.core.utils.exceptions.JadxRuntimeException: Code variable not set in r7v0 ??
             	at jadx.core.dex.instructions.args.SSAVar.getCodeVar(SSAVar.java:236)
-            	at jadx.core.codegen.MethodGen.addMethodArguments(MethodGen.java:222)
-            	at jadx.core.codegen.MethodGen.addDefinition(MethodGen.java:167)
-            	at jadx.core.codegen.ClassGen.addMethodCode(ClassGen.java:405)
-            	at jadx.core.codegen.ClassGen.addMethod(ClassGen.java:335)
-            	at jadx.core.codegen.ClassGen.lambda$addInnerClsAndMethods$3(ClassGen.java:301)
+            	at jadx.core.codegen.MethodGen.addMethodArguments(MethodGen.java:224)
+            	at jadx.core.codegen.MethodGen.addDefinition(MethodGen.java:169)
+            	at jadx.core.codegen.ClassGen.addMethodCode(ClassGen.java:407)
+            	at jadx.core.codegen.ClassGen.addMethod(ClassGen.java:337)
+            	at jadx.core.codegen.ClassGen.lambda$addInnerClsAndMethods$3(ClassGen.java:303)
             	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:184)
             	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
             	at java.base/java.util.stream.SortedOps$RefSortingSink.end(SortedOps.java:395)
@@ -241,14 +241,14 @@ final class PatchFixesHider {
         }
 
         /* JADX WARN: Type inference failed for: r0v2, types: [java.lang.Object[], void] */
-        /* renamed from: <init>, reason: not valid java name */
+        /* JADX INFO: renamed from: <init>, reason: not valid java name */
         public static void m11645init(AbstractDataSource3 abstractDataSource3, DataSubscriber dataSubscriber) {
             Method method = GET_CHILDREN;
             Object[] objArr = {abstractDataSource3, dataSubscriber};
         }
     }
 
-    /* loaded from: discord-126021.apk:Class50/lombok/launch/PatchFixesHider$ValPortal.SCL.lombok */
+    /* JADX INFO: loaded from: discord-126021.apk:Class50/lombok/launch/PatchFixesHider$ValPortal.SCL.lombok */
     public static final class ValPortal {
         private static final Method COPY_INITIALIZATION_OF_FOR_EACH_ITERABLE;
         private static final Method COPY_INITIALIZATION_OF_LOCAL_DECLARATION;
@@ -280,7 +280,7 @@ final class PatchFixesHider {
         }
     }
 
-    /* loaded from: discord-126021.apk:Class50/lombok/launch/PatchFixesHider$Val.SCL.lombok */
+    /* JADX INFO: loaded from: discord-126021.apk:Class50/lombok/launch/PatchFixesHider$Val.SCL.lombok */
     public static final class Val {
         private static final Method SKIP_RESOLVE_INITIALIZER_IF_ALREADY_CALLED;
         private static final Method SKIP_RESOLVE_INITIALIZER_IF_ALREADY_CALLED2;
@@ -312,7 +312,7 @@ final class PatchFixesHider {
         }
     }
 
-    /* loaded from: discord-126021.apk:Class50/lombok/launch/PatchFixesHider$ExtensionMethod.SCL.lombok */
+    /* JADX INFO: loaded from: discord-126021.apk:Class50/lombok/launch/PatchFixesHider$ExtensionMethod.SCL.lombok */
     public static final class ExtensionMethod {
         private static final Method RESOLVE_TYPE = null;
         private static final Method ERROR_NO_METHOD_FOR = null;
@@ -334,7 +334,7 @@ final class PatchFixesHider {
             	at jadx.core.dex.visitors.ssa.SSATransform.process(SSATransform.java:57)
             	at jadx.core.dex.visitors.ssa.SSATransform.visit(SSATransform.java:44)
             */
-        /* renamed from: <init>, reason: not valid java name */
+        /* JADX INFO: renamed from: <init>, reason: not valid java name */
         static void m11646init(
         /*  JADX ERROR: ArrayIndexOutOfBoundsException in pass: SSATransform
             java.lang.ArrayIndexOutOfBoundsException: Index 8 out of bounds for length 8
@@ -346,11 +346,11 @@ final class PatchFixesHider {
         /*  JADX ERROR: Method generation error
             jadx.core.utils.exceptions.JadxRuntimeException: Code variable not set in r7v0 ??
             	at jadx.core.dex.instructions.args.SSAVar.getCodeVar(SSAVar.java:236)
-            	at jadx.core.codegen.MethodGen.addMethodArguments(MethodGen.java:222)
-            	at jadx.core.codegen.MethodGen.addDefinition(MethodGen.java:167)
-            	at jadx.core.codegen.ClassGen.addMethodCode(ClassGen.java:405)
-            	at jadx.core.codegen.ClassGen.addMethod(ClassGen.java:335)
-            	at jadx.core.codegen.ClassGen.lambda$addInnerClsAndMethods$3(ClassGen.java:301)
+            	at jadx.core.codegen.MethodGen.addMethodArguments(MethodGen.java:224)
+            	at jadx.core.codegen.MethodGen.addDefinition(MethodGen.java:169)
+            	at jadx.core.codegen.ClassGen.addMethodCode(ClassGen.java:407)
+            	at jadx.core.codegen.ClassGen.addMethod(ClassGen.java:337)
+            	at jadx.core.codegen.ClassGen.lambda$addInnerClsAndMethods$3(ClassGen.java:303)
             	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:184)
             	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
             	at java.base/java.util.stream.SortedOps$RefSortingSink.end(SortedOps.java:395)
@@ -370,7 +370,7 @@ final class PatchFixesHider {
         /* JADX WARN: Type inference failed for: r0v1, types: [void] */
         /* JADX WARN: Type inference failed for: r0v2, types: [boolean, org.eclipse.jdt.internal.compiler.lookup.TypeBinding] */
         /* JADX WARN: Type inference failed for: r1v1, types: [java.lang.Object[], long] */
-        /* renamed from: component10 */
+        /* JADX INFO: renamed from: component10 */
         public static boolean getIsOnCooldown() {
             TypeBinding resolvedType;
             MessageSend methodCall;
@@ -393,7 +393,7 @@ final class PatchFixesHider {
         , block:B:2:0x0000 */
         /* JADX WARN: Type inference failed for: r0v0, types: [android.app.PendingIntent, int, java.lang.reflect.Method] */
         /* JADX WARN: Type inference failed for: r1v1, types: [java.lang.Object[], long] */
-        /* renamed from: component11 */
+        /* JADX INFO: renamed from: component11 */
         public static int getMaxFileSizeMB() {
             ProblemReporter problemReporter;
             MessageSend messageSend;
@@ -415,7 +415,7 @@ final class PatchFixesHider {
         , block:B:2:0x0000 */
         /* JADX WARN: Type inference failed for: r0v0, types: [android.app.PendingIntent, int, java.lang.reflect.Method] */
         /* JADX WARN: Type inference failed for: r1v1, types: [java.lang.Object[], long] */
-        /* renamed from: component12 */
+        /* JADX INFO: renamed from: component12 */
         public static boolean getShouldShowFollow() {
             ProblemReporter problemReporter;
             MessageSend messageSend;
@@ -439,7 +439,7 @@ final class PatchFixesHider {
         , block:B:2:0x0000 */
         /* JADX WARN: Type inference failed for: r0v0, types: [android.app.PendingIntent, int, java.lang.reflect.Method] */
         /* JADX WARN: Type inference failed for: r1v1, types: [java.lang.Object[], long] */
-        /* renamed from: component13 */
+        /* JADX INFO: renamed from: component13 */
         public static ChatInputViewModel.ViewState.Loaded.PendingReplyState getPendingReplyState() {
             ProblemReporter problemReporter;
             MessageSend messageSend;
@@ -464,7 +464,7 @@ final class PatchFixesHider {
         , block:B:2:0x0000 */
         /* JADX WARN: Type inference failed for: r0v0, types: [android.app.PendingIntent, int, java.lang.reflect.Method] */
         /* JADX WARN: Type inference failed for: r1v1, types: [java.lang.Object[], long] */
-        /* renamed from: component14 */
+        /* JADX INFO: renamed from: component14 */
         public static boolean getShouldBadgeChatInput() {
             ProblemReporter problemReporter;
             ASTNode location;
@@ -476,7 +476,7 @@ final class PatchFixesHider {
         }
     }
 
-    /* loaded from: discord-126021.apk:Class50/lombok/launch/PatchFixesHider$Javadoc.SCL.lombok */
+    /* JADX INFO: loaded from: discord-126021.apk:Class50/lombok/launch/PatchFixesHider$Javadoc.SCL.lombok */
     public static final class Javadoc {
         private static final Method GET_HTML = null;
         private static final Method PRINT_METHOD = null;
@@ -527,7 +527,7 @@ final class PatchFixesHider {
         , block:B:2:0x0000 */
         /* JADX WARN: Type inference failed for: r0v2, types: [java.lang.StringBuffer, void] */
         /* JADX WARN: Type inference failed for: r4v2, types: [void] */
-        /* renamed from: <init>, reason: not valid java name */
+        /* JADX INFO: renamed from: <init>, reason: not valid java name */
         public static void m11648init(String str, int tab) {
             StringBuffer output;
             TypeDeclaration type;
@@ -536,7 +536,7 @@ final class PatchFixesHider {
         }
     }
 
-    /* loaded from: discord-126021.apk:Class50/lombok/launch/PatchFixesHider$PatchFixes.SCL.lombok */
+    /* JADX INFO: loaded from: discord-126021.apk:Class50/lombok/launch/PatchFixesHider$PatchFixes.SCL.lombok */
     public static final class PatchFixes {
         public static final int ALREADY_PROCESSED_FLAG = 8388608;
 

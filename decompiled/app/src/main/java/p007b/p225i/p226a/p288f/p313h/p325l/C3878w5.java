@@ -8,12 +8,12 @@ import java.util.Map;
 import java.util.Objects;
 import java.util.Set;
 
-/* compiled from: com.google.android.gms:play-services-measurement-base@@18.0.0 */
-/* renamed from: b.i.a.f.h.l.w5 */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.h.l.w5 */
+/* JADX INFO: compiled from: com.google.android.gms:play-services-measurement-base@@18.0.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public final class C3878w5<K, V> extends LinkedHashMap<K, V> {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static final C3878w5 f10381j;
     private boolean zza;
 
@@ -27,7 +27,7 @@ public final class C3878w5<K, V> extends LinkedHashMap<K, V> {
         this.zza = true;
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static int m5347b(Object obj) {
         if (!(obj instanceof byte[])) {
             if (obj instanceof InterfaceC3903y4) {
@@ -95,17 +95,17 @@ public final class C3878w5<K, V> extends LinkedHashMap<K, V> {
         return false;
     }
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final void m5348f() {
         this.zza = false;
     }
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public final boolean m5349g() {
         return this.zza;
     }
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public final void m5350h() {
         if (!this.zza) {
             throw new UnsupportedOperationException();

@@ -1,9 +1,9 @@
 package com.discord.api.botuikit;
 
 
-/* compiled from: Component.kt */
-/* renamed from: com.discord.api.botuikit.ComponentType, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: com.discord.api.botuikit.ComponentType, reason: use source file name */
+/* JADX INFO: compiled from: Component.kt */
+/* JADX INFO: loaded from: classes.dex */
 public enum Component6 {
     UNKNOWN(0, Component9.class),
     ACTION_ROW(1, ActionRowComponent.class),

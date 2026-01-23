@@ -15,7 +15,7 @@ import androidx.core.widget.NestedScrollView;
 import org.xmlpull.v1.XmlPullParser;
 import p007b.p100d.p104b.p105a.outline;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class TouchResponse {
     private static final boolean DEBUG = false;
     public static final int FLAG_DISABLE_POST_SCROLL = 1;
@@ -58,7 +58,7 @@ public class TouchResponse {
     private int mFlags = 0;
     private float mDragThreshold = 10.0f;
 
-    /* renamed from: androidx.constraintlayout.motion.widget.TouchResponse$1 */
+    /* JADX INFO: renamed from: androidx.constraintlayout.motion.widget.TouchResponse$1 */
     public class ViewOnTouchListenerC01801 implements View.OnTouchListener {
         public ViewOnTouchListenerC01801() {
         }
@@ -69,7 +69,7 @@ public class TouchResponse {
         }
     }
 
-    /* renamed from: androidx.constraintlayout.motion.widget.TouchResponse$2 */
+    /* JADX INFO: renamed from: androidx.constraintlayout.motion.widget.TouchResponse$2 */
     public class C01812 implements NestedScrollView.OnScrollChangeListener {
         public C01812() {
         }

@@ -7,22 +7,22 @@ import java.util.Iterator;
 import java.util.Map;
 import p007b.p195g.p196a.p205c.p219i0.Annotations;
 
-/* compiled from: AnnotationCollector.java */
-/* renamed from: b.g.a.c.c0.o, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.g.a.c.c0.o, reason: use source file name */
+/* JADX INFO: compiled from: AnnotationCollector.java */
+/* JADX INFO: loaded from: classes3.dex */
 public abstract class AnnotationCollector {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final Annotations f4725a = new c();
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final Object f4726b;
 
-    /* compiled from: AnnotationCollector.java */
-    /* renamed from: b.g.a.c.c0.o$a */
+    /* JADX INFO: renamed from: b.g.a.c.c0.o$a */
+    /* JADX INFO: compiled from: AnnotationCollector.java */
     public static class a extends AnnotationCollector {
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public static final a f4727c = new a(null);
 
         public a(Object obj) {
@@ -30,35 +30,35 @@ public abstract class AnnotationCollector {
         }
 
         @Override // p007b.p195g.p196a.p205c.p210c0.AnnotationCollector
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public AnnotationCollector mo1911a(Annotation annotation) {
             return new e(this.f4726b, annotation.annotationType(), annotation);
         }
 
         @Override // p007b.p195g.p196a.p205c.p210c0.AnnotationCollector
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public AnnotationMap mo1912b() {
             return new AnnotationMap();
         }
 
         @Override // p007b.p195g.p196a.p205c.p210c0.AnnotationCollector
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public Annotations mo1913c() {
             return AnnotationCollector.f4725a;
         }
 
         @Override // p007b.p195g.p196a.p205c.p210c0.AnnotationCollector
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         public boolean mo1914d(Annotation annotation) {
             return false;
         }
     }
 
-    /* compiled from: AnnotationCollector.java */
-    /* renamed from: b.g.a.c.c0.o$b */
+    /* JADX INFO: renamed from: b.g.a.c.c0.o$b */
+    /* JADX INFO: compiled from: AnnotationCollector.java */
     public static class b extends AnnotationCollector {
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public final HashMap<Class<?>, Annotation> f4728c;
 
         public b(Object obj, Class<?> cls, Annotation annotation, Class<?> cls2, Annotation annotation2) {
@@ -70,14 +70,14 @@ public abstract class AnnotationCollector {
         }
 
         @Override // p007b.p195g.p196a.p205c.p210c0.AnnotationCollector
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public AnnotationCollector mo1911a(Annotation annotation) {
             this.f4728c.put(annotation.annotationType(), annotation);
             return this;
         }
 
         @Override // p007b.p195g.p196a.p205c.p210c0.AnnotationCollector
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public AnnotationMap mo1912b() {
             AnnotationMap annotationMap = new AnnotationMap();
             for (Annotation annotation : this.f4728c.values()) {
@@ -93,7 +93,7 @@ public abstract class AnnotationCollector {
         }
 
         @Override // p007b.p195g.p196a.p205c.p210c0.AnnotationCollector
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public Annotations mo1913c() {
             if (this.f4728c.size() != 2) {
                 return new AnnotationMap(this.f4728c);
@@ -105,19 +105,19 @@ public abstract class AnnotationCollector {
         }
 
         @Override // p007b.p195g.p196a.p205c.p210c0.AnnotationCollector
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         public boolean mo1914d(Annotation annotation) {
             return this.f4728c.containsKey(annotation.annotationType());
         }
     }
 
-    /* compiled from: AnnotationCollector.java */
-    /* renamed from: b.g.a.c.c0.o$c */
+    /* JADX INFO: renamed from: b.g.a.c.c0.o$c */
+    /* JADX INFO: compiled from: AnnotationCollector.java */
     public static class c implements Annotations, Serializable {
         private static final long serialVersionUID = 1;
 
         @Override // p007b.p195g.p196a.p205c.p219i0.Annotations
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public <A extends Annotation> A mo1915a(Class<A> cls) {
             return null;
         }
@@ -128,8 +128,8 @@ public abstract class AnnotationCollector {
         }
     }
 
-    /* compiled from: AnnotationCollector.java */
-    /* renamed from: b.g.a.c.c0.o$d */
+    /* JADX INFO: renamed from: b.g.a.c.c0.o$d */
+    /* JADX INFO: compiled from: AnnotationCollector.java */
     public static class d implements Annotations, Serializable {
         private static final long serialVersionUID = 1;
         private final Class<?> _type;
@@ -141,7 +141,7 @@ public abstract class AnnotationCollector {
         }
 
         @Override // p007b.p195g.p196a.p205c.p219i0.Annotations
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public <A extends Annotation> A mo1915a(Class<A> cls) {
             if (this._type == cls) {
                 return (A) this._value;
@@ -155,14 +155,14 @@ public abstract class AnnotationCollector {
         }
     }
 
-    /* compiled from: AnnotationCollector.java */
-    /* renamed from: b.g.a.c.c0.o$e */
+    /* JADX INFO: renamed from: b.g.a.c.c0.o$e */
+    /* JADX INFO: compiled from: AnnotationCollector.java */
     public static class e extends AnnotationCollector {
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public Class<?> f4729c;
 
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         public Annotation f4730d;
 
         public e(Object obj, Class<?> cls, Annotation annotation) {
@@ -172,7 +172,7 @@ public abstract class AnnotationCollector {
         }
 
         @Override // p007b.p195g.p196a.p205c.p210c0.AnnotationCollector
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public AnnotationCollector mo1911a(Annotation annotation) {
             Class<? extends Annotation> clsAnnotationType = annotation.annotationType();
             Class<?> cls = this.f4729c;
@@ -184,7 +184,7 @@ public abstract class AnnotationCollector {
         }
 
         @Override // p007b.p195g.p196a.p205c.p210c0.AnnotationCollector
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public AnnotationMap mo1912b() {
             Class<?> cls = this.f4729c;
             Annotation annotation = this.f4730d;
@@ -194,20 +194,20 @@ public abstract class AnnotationCollector {
         }
 
         @Override // p007b.p195g.p196a.p205c.p210c0.AnnotationCollector
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public Annotations mo1913c() {
             return new d(this.f4729c, this.f4730d);
         }
 
         @Override // p007b.p195g.p196a.p205c.p210c0.AnnotationCollector
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         public boolean mo1914d(Annotation annotation) {
             return annotation.annotationType() == this.f4729c;
         }
     }
 
-    /* compiled from: AnnotationCollector.java */
-    /* renamed from: b.g.a.c.c0.o$f */
+    /* JADX INFO: renamed from: b.g.a.c.c0.o$f */
+    /* JADX INFO: compiled from: AnnotationCollector.java */
     public static class f implements Annotations, Serializable {
         private static final long serialVersionUID = 1;
         private final Class<?> _type1;
@@ -223,7 +223,7 @@ public abstract class AnnotationCollector {
         }
 
         @Override // p007b.p195g.p196a.p205c.p219i0.Annotations
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public <A extends Annotation> A mo1915a(Class<A> cls) {
             if (this._type1 == cls) {
                 return (A) this._value1;
@@ -244,15 +244,15 @@ public abstract class AnnotationCollector {
         this.f4726b = obj;
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public abstract AnnotationCollector mo1911a(Annotation annotation);
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public abstract AnnotationMap mo1912b();
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public abstract Annotations mo1913c();
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public abstract boolean mo1914d(Annotation annotation);
 }

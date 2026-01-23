@@ -2,9 +2,9 @@ package p007b.p452o.p453a.p454m;
 
 import androidx.annotation.NonNull;
 
-/* compiled from: Audio.java */
-/* renamed from: b.o.a.m.a, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.o.a.m.a, reason: use source file name */
+/* JADX INFO: compiled from: Audio.java */
+/* JADX INFO: loaded from: classes3.dex */
 public enum Audio implements Control {
     OFF(0),
     ON(1),
@@ -18,7 +18,7 @@ public enum Audio implements Control {
     }
 
     @NonNull
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public static Audio m7166f(int i) {
         Audio[] audioArrValues = values();
         for (int i2 = 0; i2 < 4; i2++) {
@@ -30,7 +30,7 @@ public enum Audio implements Control {
         return ON;
     }
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public int m7167g() {
         return this.value;
     }

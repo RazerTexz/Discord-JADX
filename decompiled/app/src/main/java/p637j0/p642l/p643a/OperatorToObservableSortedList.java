@@ -7,19 +7,19 @@ import p658rx.Observable;
 import p658rx.Subscriber;
 import p658rx.functions.Func2;
 
-/* compiled from: OperatorToObservableSortedList.java */
-/* renamed from: j0.l.a.o2, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: j0.l.a.o2, reason: use source file name */
+/* JADX INFO: compiled from: OperatorToObservableSortedList.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class OperatorToObservableSortedList<T> implements Observable.InterfaceC13006b<List<T>, T> {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final Comparator<? super T> f26970j;
 
-    /* compiled from: OperatorToObservableSortedList.java */
-    /* renamed from: j0.l.a.o2$a */
+    /* JADX INFO: renamed from: j0.l.a.o2$a */
+    /* JADX INFO: compiled from: OperatorToObservableSortedList.java */
     public class a implements Comparator<T> {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public final /* synthetic */ Func2 f26971j;
 
         public a(OperatorToObservableSortedList operatorToObservableSortedList, Func2 func2) {

@@ -95,86 +95,86 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 import p507d0.p592z.p594d.Reflection2;
 
-/* compiled from: DeserializedClassDescriptor.kt */
-/* renamed from: d0.e0.p.d.m0.l.b.e0.d, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.l.b.e0.d, reason: use source file name */
+/* JADX INFO: compiled from: DeserializedClassDescriptor.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class DeserializedClassDescriptor extends AbstractClassDescriptor implements DeclarationDescriptor {
 
-    /* renamed from: A */
+    /* JADX INFO: renamed from: A */
     public final DeclarationDescriptor f24529A;
 
-    /* renamed from: B */
+    /* JADX INFO: renamed from: B */
     public final storage6<ClassConstructorDescriptor> f24530B;
 
-    /* renamed from: C */
+    /* JADX INFO: renamed from: C */
     public final storage5<Collection<ClassConstructorDescriptor>> f24531C;
 
-    /* renamed from: D */
+    /* JADX INFO: renamed from: D */
     public final storage6<ClassDescriptor> f24532D;
 
-    /* renamed from: E */
+    /* JADX INFO: renamed from: E */
     public final storage5<Collection<ClassDescriptor>> f24533E;
 
-    /* renamed from: F */
+    /* JADX INFO: renamed from: F */
     public final ProtoContainer.a f24534F;
 
-    /* renamed from: G */
+    /* JADX INFO: renamed from: G */
     public final Annotations4 f24535G;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public final C11678c f24536o;
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public final BinaryVersion f24537p;
 
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     public final SourceElement f24538q;
 
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     public final ClassId f24539r;
 
-    /* renamed from: s */
+    /* JADX INFO: renamed from: s */
     public final Modality f24540s;
 
-    /* renamed from: t */
+    /* JADX INFO: renamed from: t */
     public final DescriptorVisibility2 f24541t;
 
-    /* renamed from: u */
+    /* JADX INFO: renamed from: u */
     public final ClassKind f24542u;
 
-    /* renamed from: v */
+    /* JADX INFO: renamed from: v */
     public final context6 f24543v;
 
-    /* renamed from: w */
+    /* JADX INFO: renamed from: w */
     public final MemberScopeImpl f24544w;
 
-    /* renamed from: x */
+    /* JADX INFO: renamed from: x */
     public final b f24545x;
 
-    /* renamed from: y */
+    /* JADX INFO: renamed from: y */
     public final ScopesHolderForClass<a> f24546y;
 
-    /* renamed from: z */
+    /* JADX INFO: renamed from: z */
     public final c f24547z;
 
-    /* compiled from: DeserializedClassDescriptor.kt */
-    /* renamed from: d0.e0.p.d.m0.l.b.e0.d$a */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.l.b.e0.d$a */
+    /* JADX INFO: compiled from: DeserializedClassDescriptor.kt */
     public final class a extends DeserializedMemberScope {
 
-        /* renamed from: g */
+        /* JADX INFO: renamed from: g */
         public final KotlinTypeRefiner f24548g;
 
-        /* renamed from: h */
+        /* JADX INFO: renamed from: h */
         public final storage5<Collection<DeclarationDescriptor>> f24549h;
 
-        /* renamed from: i */
+        /* JADX INFO: renamed from: i */
         public final storage5<Collection<KotlinType>> f24550i;
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public final /* synthetic */ DeserializedClassDescriptor f24551j;
 
-        /* compiled from: DeserializedClassDescriptor.kt */
-        /* renamed from: d0.e0.p.d.m0.l.b.e0.d$a$a, reason: collision with other inner class name */
+        /* JADX INFO: renamed from: d0.e0.p.d.m0.l.b.e0.d$a$a, reason: collision with other inner class name */
+        /* JADX INFO: compiled from: DeserializedClassDescriptor.kt */
         public static final class C13330a extends Lambda implements Function0<List<? extends Name>> {
             public final /* synthetic */ List<Name> $it;
 
@@ -190,14 +190,14 @@ public final class DeserializedClassDescriptor extends AbstractClassDescriptor i
             }
 
             @Override // kotlin.jvm.functions.Function0
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final List<? extends Name> invoke2() {
                 return this.$it;
             }
         }
 
-        /* compiled from: DeserializedClassDescriptor.kt */
-        /* renamed from: d0.e0.p.d.m0.l.b.e0.d$a$b */
+        /* JADX INFO: renamed from: d0.e0.p.d.m0.l.b.e0.d$a$b */
+        /* JADX INFO: compiled from: DeserializedClassDescriptor.kt */
         public static final class b extends Lambda implements Function0<Collection<? extends DeclarationDescriptor>> {
             public b() {
                 super(0);
@@ -209,17 +209,17 @@ public final class DeserializedClassDescriptor extends AbstractClassDescriptor i
             }
 
             @Override // kotlin.jvm.functions.Function0
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final Collection<? extends DeclarationDescriptor> invoke2() {
                 return a.this.m9964b(MemberScope2.f24351m, MemberScope3.f24369a.getALL_NAME_FILTER(), LookupLocation3.WHEN_GET_ALL_DESCRIPTORS);
             }
         }
 
-        /* compiled from: DeserializedClassDescriptor.kt */
-        /* renamed from: d0.e0.p.d.m0.l.b.e0.d$a$c */
+        /* JADX INFO: renamed from: d0.e0.p.d.m0.l.b.e0.d$a$c */
+        /* JADX INFO: compiled from: DeserializedClassDescriptor.kt */
         public static final class c extends OverridingStrategy {
 
-            /* renamed from: a */
+            /* JADX INFO: renamed from: a */
             public final /* synthetic */ List<D> f24552a;
 
             public c(List<D> list) {
@@ -240,8 +240,8 @@ public final class DeserializedClassDescriptor extends AbstractClassDescriptor i
             }
         }
 
-        /* compiled from: DeserializedClassDescriptor.kt */
-        /* renamed from: d0.e0.p.d.m0.l.b.e0.d$a$d */
+        /* JADX INFO: renamed from: d0.e0.p.d.m0.l.b.e0.d$a$d */
+        /* JADX INFO: compiled from: DeserializedClassDescriptor.kt */
         public static final class d extends Lambda implements Function0<Collection<? extends KotlinType>> {
             public d() {
                 super(0);
@@ -253,7 +253,7 @@ public final class DeserializedClassDescriptor extends AbstractClassDescriptor i
             }
 
             @Override // kotlin.jvm.functions.Function0
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final Collection<? extends KotlinType> invoke2() {
                 return a.access$getKotlinTypeRefiner$p(a.this).refineSupertypes(a.access$getClassDescriptor(a.this));
             }
@@ -293,7 +293,7 @@ public final class DeserializedClassDescriptor extends AbstractClassDescriptor i
         }
 
         @Override // p507d0.p513e0.p514p.p515d.p517m0.p562l.p563b.p565e0.DeserializedMemberScope
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public void mo9955a(Collection<DeclarationDescriptor> collection, Function1<? super Name, Boolean> function1) {
             Intrinsics3.checkNotNullParameter(collection, "result");
             Intrinsics3.checkNotNullParameter(function1, "nameFilter");
@@ -306,7 +306,7 @@ public final class DeserializedClassDescriptor extends AbstractClassDescriptor i
         }
 
         @Override // p507d0.p513e0.p514p.p515d.p517m0.p562l.p563b.p565e0.DeserializedMemberScope
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public void mo9956c(Name name, List<SimpleFunctionDescriptor> list) {
             Intrinsics3.checkNotNullParameter(name, ModelAuditLogEntry.CHANGE_KEY_NAME);
             Intrinsics3.checkNotNullParameter(list, "functions");
@@ -320,7 +320,7 @@ public final class DeserializedClassDescriptor extends AbstractClassDescriptor i
         }
 
         @Override // p507d0.p513e0.p514p.p515d.p517m0.p562l.p563b.p565e0.DeserializedMemberScope
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         public void mo9957d(Name name, List<PropertyDescriptor> list) {
             Intrinsics3.checkNotNullParameter(name, ModelAuditLogEntry.CHANGE_KEY_NAME);
             Intrinsics3.checkNotNullParameter(list, "descriptors");
@@ -333,7 +333,7 @@ public final class DeserializedClassDescriptor extends AbstractClassDescriptor i
         }
 
         @Override // p507d0.p513e0.p514p.p515d.p517m0.p562l.p563b.p565e0.DeserializedMemberScope
-        /* renamed from: e */
+        /* JADX INFO: renamed from: e */
         public ClassId mo9958e(Name name) {
             Intrinsics3.checkNotNullParameter(name, ModelAuditLogEntry.CHANGE_KEY_NAME);
             ClassId classIdCreateNestedClassId = DeserializedClassDescriptor.access$getClassId$p(this.f24551j).createNestedClassId(name);
@@ -342,7 +342,7 @@ public final class DeserializedClassDescriptor extends AbstractClassDescriptor i
         }
 
         @Override // p507d0.p513e0.p514p.p515d.p517m0.p562l.p563b.p565e0.DeserializedMemberScope
-        /* renamed from: f */
+        /* JADX INFO: renamed from: f */
         public Set<Name> mo9959f() {
             List<KotlinType> supertypes = DeserializedClassDescriptor.access$getTypeConstructor$p(this.f24551j).getSupertypes();
             LinkedHashSet linkedHashSet = new LinkedHashSet();
@@ -358,7 +358,7 @@ public final class DeserializedClassDescriptor extends AbstractClassDescriptor i
         }
 
         @Override // p507d0.p513e0.p514p.p515d.p517m0.p562l.p563b.p565e0.DeserializedMemberScope
-        /* renamed from: g */
+        /* JADX INFO: renamed from: g */
         public Set<Name> mo9960g() {
             List<KotlinType> supertypes = DeserializedClassDescriptor.access$getTypeConstructor$p(this.f24551j).getSupertypes();
             LinkedHashSet linkedHashSet = new LinkedHashSet();
@@ -404,7 +404,7 @@ public final class DeserializedClassDescriptor extends AbstractClassDescriptor i
         }
 
         @Override // p507d0.p513e0.p514p.p515d.p517m0.p562l.p563b.p565e0.DeserializedMemberScope
-        /* renamed from: h */
+        /* JADX INFO: renamed from: h */
         public Set<Name> mo9961h() {
             List<KotlinType> supertypes = DeserializedClassDescriptor.access$getTypeConstructor$p(this.f24551j).getSupertypes();
             LinkedHashSet linkedHashSet = new LinkedHashSet();
@@ -416,13 +416,13 @@ public final class DeserializedClassDescriptor extends AbstractClassDescriptor i
         }
 
         @Override // p507d0.p513e0.p514p.p515d.p517m0.p562l.p563b.p565e0.DeserializedMemberScope
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public boolean mo9962j(SimpleFunctionDescriptor simpleFunctionDescriptor) {
             Intrinsics3.checkNotNullParameter(simpleFunctionDescriptor, "function");
             return this.f24568c.getComponents().getPlatformDependentDeclarationFilter().isFunctionAvailable(this.f24551j, simpleFunctionDescriptor);
         }
 
-        /* renamed from: k */
+        /* JADX INFO: renamed from: k */
         public final <D extends CallableMemberDescriptor> void m9963k(Name name, Collection<? extends D> collection, List<D> list) {
             this.f24568c.getComponents().getKotlinTypeChecker().getOverridingUtil().generateOverridesInFunctionGroup(name, collection, new ArrayList(list), this.f24551j, new c(list));
         }
@@ -434,18 +434,18 @@ public final class DeserializedClassDescriptor extends AbstractClassDescriptor i
         }
     }
 
-    /* compiled from: DeserializedClassDescriptor.kt */
-    /* renamed from: d0.e0.p.d.m0.l.b.e0.d$b */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.l.b.e0.d$b */
+    /* JADX INFO: compiled from: DeserializedClassDescriptor.kt */
     public final class b extends AbstractClassTypeConstructor {
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public final storage5<List<TypeParameterDescriptor>> f24553c;
 
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         public final /* synthetic */ DeserializedClassDescriptor f24554d;
 
-        /* compiled from: DeserializedClassDescriptor.kt */
-        /* renamed from: d0.e0.p.d.m0.l.b.e0.d$b$a */
+        /* JADX INFO: renamed from: d0.e0.p.d.m0.l.b.e0.d$b$a */
+        /* JADX INFO: compiled from: DeserializedClassDescriptor.kt */
         public static final class a extends Lambda implements Function0<List<? extends TypeParameterDescriptor>> {
             public final /* synthetic */ DeserializedClassDescriptor this$0;
 
@@ -461,7 +461,7 @@ public final class DeserializedClassDescriptor extends AbstractClassDescriptor i
             }
 
             @Override // kotlin.jvm.functions.Function0
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final List<? extends TypeParameterDescriptor> invoke2() {
                 return typeParameterUtils.computeConstructorTypeParameters(this.this$0);
             }
@@ -476,7 +476,7 @@ public final class DeserializedClassDescriptor extends AbstractClassDescriptor i
         }
 
         @Override // p507d0.p513e0.p514p.p515d.p517m0.p567n.AbstractTypeConstructor
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public Collection<KotlinType> mo9370a() {
             FqName fqNameAsSingleFqName;
             List<C11692q> listSupertypes = protoTypeTableUtil.supertypes(this.f24554d.getClassProto(), this.f24554d.getC().getTypeTable());
@@ -517,7 +517,7 @@ public final class DeserializedClassDescriptor extends AbstractClassDescriptor i
         }
 
         @Override // p507d0.p513e0.p514p.p515d.p517m0.p567n.AbstractTypeConstructor
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         public SupertypeLoopChecker mo9371d() {
             return SupertypeLoopChecker.a.f23103a;
         }
@@ -554,29 +554,29 @@ public final class DeserializedClassDescriptor extends AbstractClassDescriptor i
         }
     }
 
-    /* compiled from: DeserializedClassDescriptor.kt */
-    /* renamed from: d0.e0.p.d.m0.l.b.e0.d$c */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.l.b.e0.d$c */
+    /* JADX INFO: compiled from: DeserializedClassDescriptor.kt */
     public final class c {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final Map<Name, C11682g> f24555a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final storage4<Name, ClassDescriptor> f24556b;
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public final storage5<Set<Name>> f24557c;
 
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         public final /* synthetic */ DeserializedClassDescriptor f24558d;
 
-        /* compiled from: DeserializedClassDescriptor.kt */
-        /* renamed from: d0.e0.p.d.m0.l.b.e0.d$c$a */
+        /* JADX INFO: renamed from: d0.e0.p.d.m0.l.b.e0.d$c$a */
+        /* JADX INFO: compiled from: DeserializedClassDescriptor.kt */
         public static final class a extends Lambda implements Function1<Name, ClassDescriptor> {
             public final /* synthetic */ DeserializedClassDescriptor this$1;
 
-            /* compiled from: DeserializedClassDescriptor.kt */
-            /* renamed from: d0.e0.p.d.m0.l.b.e0.d$c$a$a, reason: collision with other inner class name */
+            /* JADX INFO: renamed from: d0.e0.p.d.m0.l.b.e0.d$c$a$a, reason: collision with other inner class name */
+            /* JADX INFO: compiled from: DeserializedClassDescriptor.kt */
             public static final class C13331a extends Lambda implements Function0<List<? extends AnnotationDescriptor>> {
                 public final /* synthetic */ C11682g $proto;
                 public final /* synthetic */ DeserializedClassDescriptor this$0;
@@ -594,7 +594,7 @@ public final class DeserializedClassDescriptor extends AbstractClassDescriptor i
                 }
 
                 @Override // kotlin.jvm.functions.Function0
-                /* renamed from: invoke, reason: avoid collision after fix types in other method */
+                /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
                 public final List<? extends AnnotationDescriptor> invoke2() {
                     return _Collections.toList(this.this$0.getC().getComponents().getAnnotationAndConstantLoader().loadEnumEntryAnnotations(this.this$0.getThisAsProtoContainer$deserialization(), this.$proto));
                 }
@@ -611,7 +611,7 @@ public final class DeserializedClassDescriptor extends AbstractClassDescriptor i
                 return invoke2(name);
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final ClassDescriptor invoke2(Name name) {
                 Intrinsics3.checkNotNullParameter(name, ModelAuditLogEntry.CHANGE_KEY_NAME);
                 C11682g c11682g = (C11682g) c.access$getEnumEntryProtos$p(c.this).get(name);
@@ -623,8 +623,8 @@ public final class DeserializedClassDescriptor extends AbstractClassDescriptor i
             }
         }
 
-        /* compiled from: DeserializedClassDescriptor.kt */
-        /* renamed from: d0.e0.p.d.m0.l.b.e0.d$c$b */
+        /* JADX INFO: renamed from: d0.e0.p.d.m0.l.b.e0.d$c$b */
+        /* JADX INFO: compiled from: DeserializedClassDescriptor.kt */
         public static final class b extends Lambda implements Function0<Set<? extends Name>> {
             public b() {
                 super(0);
@@ -636,7 +636,7 @@ public final class DeserializedClassDescriptor extends AbstractClassDescriptor i
             }
 
             @Override // kotlin.jvm.functions.Function0
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final Set<? extends Name> invoke2() {
                 return c.access$computeEnumMemberNames(c.this);
             }
@@ -711,8 +711,8 @@ public final class DeserializedClassDescriptor extends AbstractClassDescriptor i
         }
     }
 
-    /* compiled from: DeserializedClassDescriptor.kt */
-    /* renamed from: d0.e0.p.d.m0.l.b.e0.d$d */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.l.b.e0.d$d */
+    /* JADX INFO: compiled from: DeserializedClassDescriptor.kt */
     public static final class d extends Lambda implements Function0<List<? extends AnnotationDescriptor>> {
         public d() {
             super(0);
@@ -724,14 +724,14 @@ public final class DeserializedClassDescriptor extends AbstractClassDescriptor i
         }
 
         @Override // kotlin.jvm.functions.Function0
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final List<? extends AnnotationDescriptor> invoke2() {
             return _Collections.toList(DeserializedClassDescriptor.this.getC().getComponents().getAnnotationAndConstantLoader().loadClassAnnotations(DeserializedClassDescriptor.this.getThisAsProtoContainer$deserialization()));
         }
     }
 
-    /* compiled from: DeserializedClassDescriptor.kt */
-    /* renamed from: d0.e0.p.d.m0.l.b.e0.d$e */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.l.b.e0.d$e */
+    /* JADX INFO: compiled from: DeserializedClassDescriptor.kt */
     public static final class e extends Lambda implements Function0<ClassDescriptor> {
         public e() {
             super(0);
@@ -749,8 +749,8 @@ public final class DeserializedClassDescriptor extends AbstractClassDescriptor i
         }
     }
 
-    /* compiled from: DeserializedClassDescriptor.kt */
-    /* renamed from: d0.e0.p.d.m0.l.b.e0.d$f */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.l.b.e0.d$f */
+    /* JADX INFO: compiled from: DeserializedClassDescriptor.kt */
     public static final class f extends Lambda implements Function0<Collection<? extends ClassConstructorDescriptor>> {
         public f() {
             super(0);
@@ -762,14 +762,14 @@ public final class DeserializedClassDescriptor extends AbstractClassDescriptor i
         }
 
         @Override // kotlin.jvm.functions.Function0
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final Collection<? extends ClassConstructorDescriptor> invoke2() {
             return DeserializedClassDescriptor.access$computeConstructors(DeserializedClassDescriptor.this);
         }
     }
 
-    /* compiled from: DeserializedClassDescriptor.kt */
-    /* renamed from: d0.e0.p.d.m0.l.b.e0.d$g */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.l.b.e0.d$g */
+    /* JADX INFO: compiled from: DeserializedClassDescriptor.kt */
     public /* synthetic */ class g extends FunctionReference implements Function1<KotlinTypeRefiner, a> {
         public g(DeserializedClassDescriptor deserializedClassDescriptor) {
             super(1, deserializedClassDescriptor);
@@ -795,15 +795,15 @@ public final class DeserializedClassDescriptor extends AbstractClassDescriptor i
             return invoke2(kotlinTypeRefiner);
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final a invoke2(KotlinTypeRefiner kotlinTypeRefiner) {
             Intrinsics3.checkNotNullParameter(kotlinTypeRefiner, "p0");
             return new a((DeserializedClassDescriptor) this.receiver, kotlinTypeRefiner);
         }
     }
 
-    /* compiled from: DeserializedClassDescriptor.kt */
-    /* renamed from: d0.e0.p.d.m0.l.b.e0.d$h */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.l.b.e0.d$h */
+    /* JADX INFO: compiled from: DeserializedClassDescriptor.kt */
     public static final class h extends Lambda implements Function0<ClassConstructorDescriptor> {
         public h() {
             super(0);
@@ -821,8 +821,8 @@ public final class DeserializedClassDescriptor extends AbstractClassDescriptor i
         }
     }
 
-    /* compiled from: DeserializedClassDescriptor.kt */
-    /* renamed from: d0.e0.p.d.m0.l.b.e0.d$i */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.l.b.e0.d$i */
+    /* JADX INFO: compiled from: DeserializedClassDescriptor.kt */
     public static final class i extends Lambda implements Function0<Collection<? extends ClassDescriptor>> {
         public i() {
             super(0);
@@ -834,7 +834,7 @@ public final class DeserializedClassDescriptor extends AbstractClassDescriptor i
         }
 
         @Override // kotlin.jvm.functions.Function0
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final Collection<? extends ClassDescriptor> invoke2() {
             return DeserializedClassDescriptor.access$computeSubclassesForSealedClass(DeserializedClassDescriptor.this);
         }
@@ -976,7 +976,7 @@ public final class DeserializedClassDescriptor extends AbstractClassDescriptor i
         return deserializedClassDescriptor.f24545x;
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final a m9954b() {
         return (a) this.f24546y.getScope(this.f24543v.getComponents().getKotlinTypeChecker().getKotlinTypeRefiner());
     }

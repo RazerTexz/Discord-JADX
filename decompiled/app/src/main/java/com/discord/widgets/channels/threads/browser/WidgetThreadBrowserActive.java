@@ -37,31 +37,31 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 import p507d0.p592z.p594d.Reflection2;
 
-/* compiled from: WidgetThreadBrowserActive.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetThreadBrowserActive.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetThreadBrowserActive extends AppFragment {
     public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetThreadBrowserActive.class, "binding", "getBinding()Lcom/discord/databinding/WidgetThreadBrowserActiveBinding;", 0)};
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private WidgetThreadBrowserAdapter adapter;
 
-    /* renamed from: binding$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
 
-    /* renamed from: browserViewModel$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: browserViewModel$delegate, reason: from kotlin metadata */
     private final Lazy browserViewModel;
 
-    /* renamed from: channelId$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: channelId$delegate, reason: from kotlin metadata */
     private final Lazy channelId;
 
-    /* renamed from: guildId$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: guildId$delegate, reason: from kotlin metadata */
     private final Lazy guildId;
 
-    /* renamed from: viewModel$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: viewModel$delegate, reason: from kotlin metadata */
     private final Lazy viewModel;
 
-    /* compiled from: WidgetThreadBrowserActive.kt */
+    /* JADX INFO: compiled from: WidgetThreadBrowserActive.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -79,8 +79,8 @@ public final class WidgetThreadBrowserActive extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetThreadBrowserActive.kt */
-    /* renamed from: com.discord.widgets.channels.threads.browser.WidgetThreadBrowserActive$onResume$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.channels.threads.browser.WidgetThreadBrowserActive$onResume$1 */
+    /* JADX INFO: compiled from: WidgetThreadBrowserActive.kt */
     public static final class C76441 extends Lambda implements Function1<WidgetThreadBrowserActiveViewModel.ViewState, Unit> {
         public C76441() {
             super(1);
@@ -92,15 +92,15 @@ public final class WidgetThreadBrowserActive extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(WidgetThreadBrowserActiveViewModel.ViewState viewState) {
             Intrinsics3.checkNotNullParameter(viewState, "viewState");
             WidgetThreadBrowserActive.access$updateView(WidgetThreadBrowserActive.this, viewState);
         }
     }
 
-    /* compiled from: WidgetThreadBrowserActive.kt */
-    /* renamed from: com.discord.widgets.channels.threads.browser.WidgetThreadBrowserActive$onViewBound$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.channels.threads.browser.WidgetThreadBrowserActive$onViewBound$1 */
+    /* JADX INFO: compiled from: WidgetThreadBrowserActive.kt */
     public static final /* synthetic */ class C76451 extends FunctionReferenceImpl implements Function1<Channel, Unit> {
         public C76451(WidgetThreadBrowserViewModel widgetThreadBrowserViewModel) {
             super(1, widgetThreadBrowserViewModel, WidgetThreadBrowserViewModel.class, "openThread", "openThread(Lcom/discord/api/channel/Channel;)V", 0);
@@ -112,15 +112,15 @@ public final class WidgetThreadBrowserActive extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Channel channel) {
             Intrinsics3.checkNotNullParameter(channel, "p1");
             ((WidgetThreadBrowserViewModel) this.receiver).openThread(channel);
         }
     }
 
-    /* compiled from: WidgetThreadBrowserActive.kt */
-    /* renamed from: com.discord.widgets.channels.threads.browser.WidgetThreadBrowserActive$onViewBound$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.channels.threads.browser.WidgetThreadBrowserActive$onViewBound$2 */
+    /* JADX INFO: compiled from: WidgetThreadBrowserActive.kt */
     public static final class C76462 extends Lambda implements Function1<Channel, Unit> {
         public C76462() {
             super(1);
@@ -132,7 +132,7 @@ public final class WidgetThreadBrowserActive extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Channel channel) {
             Intrinsics3.checkNotNullParameter(channel, "channel");
             WidgetChannelsListItemThreadActions.Companion companion = WidgetChannelsListItemThreadActions.INSTANCE;
@@ -142,8 +142,8 @@ public final class WidgetThreadBrowserActive extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetThreadBrowserActive.kt */
-    /* renamed from: com.discord.widgets.channels.threads.browser.WidgetThreadBrowserActive$onViewBound$3 */
+    /* JADX INFO: renamed from: com.discord.widgets.channels.threads.browser.WidgetThreadBrowserActive$onViewBound$3 */
+    /* JADX INFO: compiled from: WidgetThreadBrowserActive.kt */
     public static final class ViewOnClickListenerC76473 implements View.OnClickListener {
         public ViewOnClickListenerC76473() {
         }

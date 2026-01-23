@@ -4,12 +4,12 @@ import java.util.List;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: BugReportConfig.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: BugReportConfig.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class BugReportConfig {
     private final List<BugReportConfig2> features;
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final List<BugReportConfig2> m7625a() {
         return this.features;
     }

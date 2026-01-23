@@ -22,9 +22,9 @@ import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 
+/* JADX INFO: loaded from: classes.dex */
 @RequiresApi(21)
 @RestrictTo({RestrictTo.Scope.LIBRARY_GROUP_PREFIX})
-/* loaded from: classes.dex */
 public class TypefaceCompatApi21Impl extends TypefaceCompatBaseImpl {
     private static final String ADD_FONT_WEIGHT_STYLE_METHOD = "addFontWeightStyle";
     private static final String CREATE_FROM_FAMILIES_WITH_DEFAULT_METHOD = "createFromFamiliesWithDefault";
@@ -36,7 +36,7 @@ public class TypefaceCompatApi21Impl extends TypefaceCompatBaseImpl {
     private static Constructor<?> sFontFamilyCtor = null;
     private static boolean sHasInitBeenCalled = false;
 
-    private static boolean addFontWeightStyle(Object obj, String str, int i, boolean z2) throws NoSuchMethodException, SecurityException {
+    private static boolean addFontWeightStyle(Object obj, String str, int i, boolean z2) throws NoSuchMethodException {
         init();
         try {
             return ((Boolean) sAddFontWeightStyle.invoke(obj, str, Integer.valueOf(i), Boolean.valueOf(z2))).booleanValue();
@@ -45,7 +45,7 @@ public class TypefaceCompatApi21Impl extends TypefaceCompatBaseImpl {
         }
     }
 
-    private static Typeface createFromFamiliesWithDefault(Object obj) throws NoSuchMethodException, SecurityException {
+    private static Typeface createFromFamiliesWithDefault(Object obj) throws NoSuchMethodException {
         init();
         try {
             Object objNewInstance = Array.newInstance(sFontFamily, 1);
@@ -67,7 +67,7 @@ public class TypefaceCompatApi21Impl extends TypefaceCompatBaseImpl {
         return null;
     }
 
-    private static void init() throws NoSuchMethodException, SecurityException {
+    private static void init() throws NoSuchMethodException {
         Method method;
         Class<?> cls;
         Method method2;
@@ -94,7 +94,7 @@ public class TypefaceCompatApi21Impl extends TypefaceCompatBaseImpl {
         sCreateFromFamiliesWithDefault = method;
     }
 
-    private static Object newFamily() throws NoSuchMethodException, SecurityException {
+    private static Object newFamily() throws NoSuchMethodException {
         init();
         try {
             return sFontFamilyCtor.newInstance(new Object[0]);
@@ -104,7 +104,7 @@ public class TypefaceCompatApi21Impl extends TypefaceCompatBaseImpl {
     }
 
     @Override // androidx.core.graphics.TypefaceCompatBaseImpl
-    public Typeface createFromFontFamilyFilesResourceEntry(Context context, FontResourcesParserCompat.FontFamilyFilesResourceEntry fontFamilyFilesResourceEntry, Resources resources, int i) throws NoSuchMethodException, SecurityException {
+    public Typeface createFromFontFamilyFilesResourceEntry(Context context, FontResourcesParserCompat.FontFamilyFilesResourceEntry fontFamilyFilesResourceEntry, Resources resources, int i) throws NoSuchMethodException {
         Object objNewFamily = newFamily();
         for (FontResourcesParserCompat.FontFileResourceEntry fontFileResourceEntry : fontFamilyFilesResourceEntry.getEntries()) {
             File tempFile = TypefaceCompatUtil.getTempFile(context);

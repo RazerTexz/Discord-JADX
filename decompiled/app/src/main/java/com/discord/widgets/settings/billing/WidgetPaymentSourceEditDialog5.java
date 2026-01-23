@@ -11,9 +11,9 @@ import kotlin.jvm.functions.Function0;
 import p507d0.p591y.Closeable;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetPaymentSourceEditDialog.kt */
-/* renamed from: com.discord.widgets.settings.billing.WidgetPaymentSourceEditDialog$usStates$2, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.settings.billing.WidgetPaymentSourceEditDialog$usStates$2, reason: use source file name */
+/* JADX INFO: compiled from: WidgetPaymentSourceEditDialog.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetPaymentSourceEditDialog5 extends Lambda implements Function0<WidgetPaymentSourceEditDialog.StateEntry[]> {
     public final /* synthetic */ WidgetPaymentSourceEditDialog this$0;
 
@@ -29,7 +29,7 @@ public final class WidgetPaymentSourceEditDialog5 extends Lambda implements Func
     }
 
     @Override // kotlin.jvm.functions.Function0
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final WidgetPaymentSourceEditDialog.StateEntry[] invoke2() throws IOException {
         AssetManager assets;
         Context context = this.this$0.getContext();

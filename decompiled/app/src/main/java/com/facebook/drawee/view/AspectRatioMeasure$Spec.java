@@ -1,11 +1,11 @@
 package com.facebook.drawee.view;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class AspectRatioMeasure$Spec {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public int f19523a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public int f19524b;
 }

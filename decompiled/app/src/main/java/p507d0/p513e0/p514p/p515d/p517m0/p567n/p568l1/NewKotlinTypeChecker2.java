@@ -25,15 +25,15 @@ import p507d0.p580t.Collections2;
 import p507d0.p580t.Iterables2;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: NewKotlinTypeChecker.kt */
-/* renamed from: d0.e0.p.d.m0.n.l1.m, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.n.l1.m, reason: use source file name */
+/* JADX INFO: compiled from: NewKotlinTypeChecker.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class NewKotlinTypeChecker2 implements NewKotlinTypeChecker {
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final KotlinTypeRefiner f24823c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final OverridingUtil f24824d;
 
     public NewKotlinTypeChecker2(KotlinTypeRefiner kotlinTypeRefiner) {

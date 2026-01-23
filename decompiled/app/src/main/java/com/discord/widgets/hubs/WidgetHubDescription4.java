@@ -2,9 +2,9 @@ package com.discord.widgets.hubs;
 
 import android.view.View;
 
-/* compiled from: WidgetHubDescription.kt */
-/* renamed from: com.discord.widgets.hubs.WidgetHubDescription$configureUI$$inlined$apply$lambda$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.hubs.WidgetHubDescription$configureUI$$inlined$apply$lambda$1, reason: use source file name */
+/* JADX INFO: compiled from: WidgetHubDescription.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetHubDescription4 implements View.OnClickListener {
     public final /* synthetic */ WidgetHubDescriptionViewModel3 $state$inlined;
     public final /* synthetic */ WidgetHubDescription this$0;

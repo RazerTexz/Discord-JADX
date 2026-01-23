@@ -3,9 +3,9 @@ package com.discord.widgets.stage.sheet;
 import android.widget.CompoundButton;
 import com.discord.widgets.stage.sheet.WidgetStageRaisedHandsBottomSheetViewModel;
 
-/* compiled from: WidgetStageRaisedHandsBottomSheet.kt */
-/* renamed from: com.discord.widgets.stage.sheet.WidgetStageRaisedHandsBottomSheet$configureUI$$inlined$apply$lambda$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.stage.sheet.WidgetStageRaisedHandsBottomSheet$configureUI$$inlined$apply$lambda$1, reason: use source file name */
+/* JADX INFO: compiled from: WidgetStageRaisedHandsBottomSheet.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetStageRaisedHandsBottomSheet5 implements CompoundButton.OnCheckedChangeListener {
     public final /* synthetic */ WidgetStageRaisedHandsBottomSheetViewModel.ViewState $viewState$inlined;
     public final /* synthetic */ WidgetStageRaisedHandsBottomSheet this$0;

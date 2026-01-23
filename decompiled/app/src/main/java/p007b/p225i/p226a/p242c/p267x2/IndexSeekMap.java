@@ -4,21 +4,21 @@ import p007b.p085c.p086a.p087a0.AnimatableValueParser;
 import p007b.p225i.p226a.p242c.p259f3.Util2;
 import p007b.p225i.p226a.p242c.p267x2.SeekMap;
 
-/* compiled from: IndexSeekMap.java */
-/* renamed from: b.i.a.c.x2.r, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.x2.r, reason: use source file name */
+/* JADX INFO: compiled from: IndexSeekMap.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class IndexSeekMap implements SeekMap {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final long[] f8988a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final long[] f8989b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final long f8990c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final boolean f8991d;
 
     public IndexSeekMap(long[] jArr, long[] jArr2, long j) {
@@ -42,13 +42,13 @@ public final class IndexSeekMap implements SeekMap {
     }
 
     @Override // p007b.p225i.p226a.p242c.p267x2.SeekMap
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public boolean mo3619c() {
         return this.f8991d;
     }
 
     @Override // p007b.p225i.p226a.p242c.p267x2.SeekMap
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public SeekMap.a mo3620h(long j) {
         if (!this.f8991d) {
             return new SeekMap.a(SeekPoint.f8997a);
@@ -66,7 +66,7 @@ public final class IndexSeekMap implements SeekMap {
     }
 
     @Override // p007b.p225i.p226a.p242c.p267x2.SeekMap
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public long mo3621i() {
         return this.f8990c;
     }

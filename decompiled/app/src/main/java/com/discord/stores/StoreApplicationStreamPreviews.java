@@ -26,8 +26,8 @@ import p658rx.Observable;
 import p658rx.Subscription;
 import retrofit2.HttpException;
 
-/* compiled from: StoreApplicationStreamPreviews.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: StoreApplicationStreamPreviews.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class StoreApplicationStreamPreviews extends StoreV2 {
     private static final Companion Companion = new Companion(null);
 
@@ -42,7 +42,7 @@ public final class StoreApplicationStreamPreviews extends StoreV2 {
     private final Map<String, StreamPreview> streamKeyToPreviewMap;
     private Map<String, ? extends StreamPreview> streamKeyToPreviewMapSnapshot;
 
-    /* compiled from: StoreApplicationStreamPreviews.kt */
+    /* JADX INFO: compiled from: StoreApplicationStreamPreviews.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -52,10 +52,10 @@ public final class StoreApplicationStreamPreviews extends StoreV2 {
         }
     }
 
-    /* compiled from: StoreApplicationStreamPreviews.kt */
+    /* JADX INFO: compiled from: StoreApplicationStreamPreviews.kt */
     public static abstract class StreamPreview {
 
-        /* compiled from: StoreApplicationStreamPreviews.kt */
+        /* JADX INFO: compiled from: StoreApplicationStreamPreviews.kt */
         public static final class Fetching extends StreamPreview {
             public static final Fetching INSTANCE = new Fetching();
 
@@ -64,7 +64,7 @@ public final class StoreApplicationStreamPreviews extends StoreV2 {
             }
         }
 
-        /* compiled from: StoreApplicationStreamPreviews.kt */
+        /* JADX INFO: compiled from: StoreApplicationStreamPreviews.kt */
         public static final /* data */ class Resolved extends StreamPreview {
             private final String url;
 
@@ -80,7 +80,7 @@ public final class StoreApplicationStreamPreviews extends StoreV2 {
                 return resolved.copy(str);
             }
 
-            /* renamed from: component1, reason: from getter */
+            /* JADX INFO: renamed from: component1, reason: from getter */
             public final String getUrl() {
                 return this.url;
             }
@@ -121,8 +121,8 @@ public final class StoreApplicationStreamPreviews extends StoreV2 {
         }
     }
 
-    /* compiled from: StoreApplicationStreamPreviews.kt */
-    /* renamed from: com.discord.stores.StoreApplicationStreamPreviews$fetchStreamPreview$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreApplicationStreamPreviews$fetchStreamPreview$1 */
+    /* JADX INFO: compiled from: StoreApplicationStreamPreviews.kt */
     public static final class C57351 extends Lambda implements Function0<Unit> {
         public final /* synthetic */ String $streamKey;
 
@@ -138,14 +138,14 @@ public final class StoreApplicationStreamPreviews extends StoreV2 {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             StoreApplicationStreamPreviews.this.handleFetchStart(this.$streamKey);
         }
     }
 
-    /* compiled from: StoreApplicationStreamPreviews.kt */
-    /* renamed from: com.discord.stores.StoreApplicationStreamPreviews$fetchStreamPreview$2 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreApplicationStreamPreviews$fetchStreamPreview$2 */
+    /* JADX INFO: compiled from: StoreApplicationStreamPreviews.kt */
     public static final class C57362 extends Lambda implements Function1<Subscription, Unit> {
         public final /* synthetic */ String $streamKey;
 
@@ -161,20 +161,20 @@ public final class StoreApplicationStreamPreviews extends StoreV2 {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Subscription subscription) {
             Intrinsics3.checkNotNullParameter(subscription, Traits.Payment.Type.SUBSCRIPTION);
             StoreApplicationStreamPreviews.access$getFetchStreamPreviewSubscriptions$p(StoreApplicationStreamPreviews.this).put(this.$streamKey, subscription);
         }
     }
 
-    /* compiled from: StoreApplicationStreamPreviews.kt */
-    /* renamed from: com.discord.stores.StoreApplicationStreamPreviews$fetchStreamPreview$3 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreApplicationStreamPreviews$fetchStreamPreview$3 */
+    /* JADX INFO: compiled from: StoreApplicationStreamPreviews.kt */
     public static final class C57373 extends Lambda implements Function1<ModelApplicationStreamPreview, Unit> {
         public final /* synthetic */ String $streamKey;
 
-        /* compiled from: StoreApplicationStreamPreviews.kt */
-        /* renamed from: com.discord.stores.StoreApplicationStreamPreviews$fetchStreamPreview$3$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.stores.StoreApplicationStreamPreviews$fetchStreamPreview$3$1, reason: invalid class name */
+        /* JADX INFO: compiled from: StoreApplicationStreamPreviews.kt */
         public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
             public final /* synthetic */ ModelApplicationStreamPreview $res;
 
@@ -190,7 +190,7 @@ public final class StoreApplicationStreamPreviews extends StoreV2 {
                 return Unit.f27425a;
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2() {
                 C57373 c57373 = C57373.this;
                 StoreApplicationStreamPreviews.this.handleFetchSuccess(c57373.$streamKey, this.$res.getUrl());
@@ -209,20 +209,20 @@ public final class StoreApplicationStreamPreviews extends StoreV2 {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(ModelApplicationStreamPreview modelApplicationStreamPreview) {
             Intrinsics3.checkNotNullParameter(modelApplicationStreamPreview, "res");
             StoreApplicationStreamPreviews.access$getDispatcher$p(StoreApplicationStreamPreviews.this).schedule(new AnonymousClass1(modelApplicationStreamPreview));
         }
     }
 
-    /* compiled from: StoreApplicationStreamPreviews.kt */
-    /* renamed from: com.discord.stores.StoreApplicationStreamPreviews$fetchStreamPreview$4 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreApplicationStreamPreviews$fetchStreamPreview$4 */
+    /* JADX INFO: compiled from: StoreApplicationStreamPreviews.kt */
     public static final class C57384 extends Lambda implements Function1<Error, Unit> {
         public final /* synthetic */ String $streamKey;
 
-        /* compiled from: StoreApplicationStreamPreviews.kt */
-        /* renamed from: com.discord.stores.StoreApplicationStreamPreviews$fetchStreamPreview$4$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.stores.StoreApplicationStreamPreviews$fetchStreamPreview$4$1, reason: invalid class name */
+        /* JADX INFO: compiled from: StoreApplicationStreamPreviews.kt */
         public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
             public final /* synthetic */ Error $error;
 
@@ -238,7 +238,7 @@ public final class StoreApplicationStreamPreviews extends StoreV2 {
                 return Unit.f27425a;
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2() {
                 C57384 c57384 = C57384.this;
                 StoreApplicationStreamPreviews.this.handleFetchFailed(c57384.$streamKey, this.$error);
@@ -257,15 +257,15 @@ public final class StoreApplicationStreamPreviews extends StoreV2 {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Error error) {
             Intrinsics3.checkNotNullParameter(error, "error");
             StoreApplicationStreamPreviews.access$getDispatcher$p(StoreApplicationStreamPreviews.this).schedule(new AnonymousClass1(error));
         }
     }
 
-    /* compiled from: StoreApplicationStreamPreviews.kt */
-    /* renamed from: com.discord.stores.StoreApplicationStreamPreviews$fetchStreamPreview$5 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreApplicationStreamPreviews$fetchStreamPreview$5 */
+    /* JADX INFO: compiled from: StoreApplicationStreamPreviews.kt */
     public static final class C57395 extends Lambda implements Function0<Unit> {
         public final /* synthetic */ String $streamKey;
 
@@ -281,14 +281,14 @@ public final class StoreApplicationStreamPreviews extends StoreV2 {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             StoreApplicationStreamPreviews.access$getFetchStreamPreviewSubscriptions$p(StoreApplicationStreamPreviews.this).remove(this.$streamKey);
         }
     }
 
-    /* compiled from: StoreApplicationStreamPreviews.kt */
-    /* renamed from: com.discord.stores.StoreApplicationStreamPreviews$handleFetchFailed$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreApplicationStreamPreviews$handleFetchFailed$1 */
+    /* JADX INFO: compiled from: StoreApplicationStreamPreviews.kt */
     public static final class C57401 extends Lambda implements Function1<Subscription, Unit> {
         public final /* synthetic */ String $streamKey;
 
@@ -304,15 +304,15 @@ public final class StoreApplicationStreamPreviews extends StoreV2 {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Subscription subscription) {
             Intrinsics3.checkNotNullParameter(subscription, Traits.Payment.Type.SUBSCRIPTION);
             StoreApplicationStreamPreviews.access$getFetchStreamPreviewSubscriptions$p(StoreApplicationStreamPreviews.this).put(this.$streamKey, subscription);
         }
     }
 
-    /* compiled from: StoreApplicationStreamPreviews.kt */
-    /* renamed from: com.discord.stores.StoreApplicationStreamPreviews$handleFetchFailed$2 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreApplicationStreamPreviews$handleFetchFailed$2 */
+    /* JADX INFO: compiled from: StoreApplicationStreamPreviews.kt */
     public static final class C57412 extends Lambda implements Function0<Unit> {
         public final /* synthetic */ String $streamKey;
 
@@ -328,19 +328,19 @@ public final class StoreApplicationStreamPreviews extends StoreV2 {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             StoreApplicationStreamPreviews.access$getFetchStreamPreviewSubscriptions$p(StoreApplicationStreamPreviews.this).remove(this.$streamKey);
         }
     }
 
-    /* compiled from: StoreApplicationStreamPreviews.kt */
-    /* renamed from: com.discord.stores.StoreApplicationStreamPreviews$handleFetchFailed$3 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreApplicationStreamPreviews$handleFetchFailed$3 */
+    /* JADX INFO: compiled from: StoreApplicationStreamPreviews.kt */
     public static final class C57423 extends Lambda implements Function1<Long, Unit> {
         public final /* synthetic */ String $streamKey;
 
-        /* compiled from: StoreApplicationStreamPreviews.kt */
-        /* renamed from: com.discord.stores.StoreApplicationStreamPreviews$handleFetchFailed$3$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.stores.StoreApplicationStreamPreviews$handleFetchFailed$3$1, reason: invalid class name */
+        /* JADX INFO: compiled from: StoreApplicationStreamPreviews.kt */
         public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
             public AnonymousClass1() {
                 super(0);
@@ -352,7 +352,7 @@ public final class StoreApplicationStreamPreviews extends StoreV2 {
                 return Unit.f27425a;
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2() {
                 C57423 c57423 = C57423.this;
                 StoreApplicationStreamPreviews.access$fetchStreamPreviewIfNotFetching(StoreApplicationStreamPreviews.this, c57423.$streamKey);
@@ -371,14 +371,14 @@ public final class StoreApplicationStreamPreviews extends StoreV2 {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Long l) {
             StoreApplicationStreamPreviews.access$getDispatcher$p(StoreApplicationStreamPreviews.this).schedule(new AnonymousClass1());
         }
     }
 
-    /* compiled from: StoreApplicationStreamPreviews.kt */
-    /* renamed from: com.discord.stores.StoreApplicationStreamPreviews$observeStreamPreview$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreApplicationStreamPreviews$observeStreamPreview$1 */
+    /* JADX INFO: compiled from: StoreApplicationStreamPreviews.kt */
     public static final class C57431 extends Lambda implements Function0<StreamPreview> {
         public final /* synthetic */ String $streamKey;
 
@@ -455,7 +455,7 @@ public final class StoreApplicationStreamPreviews extends StoreV2 {
         }
         Intrinsics3.checkNotNullExpressionValue(num, "fetchAttempts[streamKey] ?: 0");
         int iIntValue = num.intValue() + 1;
-        long jLongValue = iIntValue * 10000;
+        long jLongValue = ((long) iIntValue) * 10000;
         if (numValueOf == null) {
             lValueOf = Long.valueOf(jLongValue);
         } else if (numValueOf.intValue() == 429) {

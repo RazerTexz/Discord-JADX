@@ -7,9 +7,9 @@ import kotlin.jvm.functions.Function1;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: Persister.kt */
-/* renamed from: com.discord.utilities.persister.Persister$Companion$kryoConfig$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.utilities.persister.Persister$Companion$kryoConfig$1, reason: use source file name */
+/* JADX INFO: compiled from: Persister.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class Persister4 extends Lambda implements Function1<Kryo, Unit> {
     public static final Persister4 INSTANCE = new Persister4();
 
@@ -23,7 +23,7 @@ public final class Persister4 extends Lambda implements Function1<Kryo, Unit> {
         return Unit.f27425a;
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final void invoke2(Kryo kryo) {
         Intrinsics3.checkNotNullParameter(kryo, "it");
     }

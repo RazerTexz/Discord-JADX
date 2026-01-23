@@ -5,16 +5,16 @@ import p007b.p085c.p086a.p087a0.AnimatableValueParser;
 import p007b.p225i.p226a.p242c.Bundleable;
 import p007b.p225i.p226a.p242c.MediaItem2;
 
-/* compiled from: lambda */
-/* renamed from: b.i.a.c.i0 */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.i0 */
+/* JADX INFO: compiled from: lambda */
+/* JADX INFO: loaded from: classes3.dex */
 public final /* synthetic */ class C2806i0 implements Bundleable.a {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final /* synthetic */ C2806i0 f7120a = new C2806i0();
 
     @Override // p007b.p225i.p226a.p242c.Bundleable.a
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final Bundleable mo2576a(Bundle bundle) {
         MediaItem2.d.a aVar = new MediaItem2.d.a();
         long j = bundle.getLong(MediaItem2.d.m3321a(0), 0L);

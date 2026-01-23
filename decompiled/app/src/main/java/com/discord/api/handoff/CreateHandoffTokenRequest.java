@@ -3,8 +3,8 @@ package com.discord.api.handoff;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: CreateHandoffTokenRequest.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: CreateHandoffTokenRequest.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class CreateHandoffTokenRequest {
     private final String key;
 

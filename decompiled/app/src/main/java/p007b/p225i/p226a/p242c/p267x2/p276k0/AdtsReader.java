@@ -16,76 +16,76 @@ import p007b.p225i.p226a.p242c.p267x2.ExtractorOutput;
 import p007b.p225i.p226a.p242c.p267x2.TrackOutput2;
 import p007b.p225i.p226a.p242c.p267x2.p276k0.TsPayloadReader;
 
-/* compiled from: AdtsReader.java */
-/* renamed from: b.i.a.c.x2.k0.k, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.x2.k0.k, reason: use source file name */
+/* JADX INFO: compiled from: AdtsReader.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class AdtsReader implements ElementaryStreamReader {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final byte[] f8699a = {73, 68, 51};
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final boolean f8700b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final ParsableBitArray f8701c = new ParsableBitArray(new byte[7]);
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final ParsableByteArray f8702d = new ParsableByteArray(Arrays.copyOf(f8699a, 10));
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     @Nullable
     public final String f8703e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public String f8704f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public TrackOutput2 f8705g;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public TrackOutput2 f8706h;
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public int f8707i;
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public int f8708j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public int f8709k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public boolean f8710l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public boolean f8711m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public int f8712n;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public int f8713o;
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public int f8714p;
 
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     public boolean f8715q;
 
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     public long f8716r;
 
-    /* renamed from: s */
+    /* JADX INFO: renamed from: s */
     public int f8717s;
 
-    /* renamed from: t */
+    /* JADX INFO: renamed from: t */
     public long f8718t;
 
-    /* renamed from: u */
+    /* JADX INFO: renamed from: u */
     public TrackOutput2 f8719u;
 
-    /* renamed from: v */
+    /* JADX INFO: renamed from: v */
     public long f8720v;
 
     public AdtsReader(boolean z2, @Nullable String str) {
@@ -98,12 +98,12 @@ public final class AdtsReader implements ElementaryStreamReader {
         this.f8703e = str;
     }
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public static boolean m3771g(int i) {
         return (i & 65526) == 65520;
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final boolean m3772a(ParsableByteArray parsableByteArray, byte[] bArr, int i) {
         int iMin = Math.min(parsableByteArray.m3081a(), i - this.f8708j);
         System.arraycopy(parsableByteArray.f6793a, parsableByteArray.f6794b, bArr, this.f8708j, iMin);
@@ -157,7 +157,7 @@ public final class AdtsReader implements ElementaryStreamReader {
     /* JADX WARN: Removed duplicated region for block: B:160:0x0275 A[EDGE_INSN: B:160:0x0275->B:111:0x0275 BREAK  A[LOOP:1: B:52:0x01a6->B:137:0x02e4], SYNTHETIC] */
     /* JADX WARN: Removed duplicated region for block: B:78:0x021d  */
     @Override // p007b.p225i.p226a.p242c.p267x2.p276k0.ElementaryStreamReader
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
@@ -341,7 +341,7 @@ public final class AdtsReader implements ElementaryStreamReader {
                                 bVar.f7175m = Collections.singletonList(bArr3);
                                 bVar.f7165c = this.f8703e;
                                 Format2 format2M3277a = bVar.m3277a();
-                                this.f8716r = 1024000000 / format2M3277a.f7137K;
+                                this.f8716r = 1024000000 / ((long) format2M3277a.f7137K);
                                 this.f8705g.mo2526e(format2M3277a);
                                 this.f8715q = true;
                             }
@@ -410,7 +410,7 @@ public final class AdtsReader implements ElementaryStreamReader {
     }
 
     @Override // p007b.p225i.p226a.p242c.p267x2.p276k0.ElementaryStreamReader
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public void mo3759c() {
         this.f8718t = -9223372036854775807L;
         this.f8711m = false;
@@ -418,12 +418,12 @@ public final class AdtsReader implements ElementaryStreamReader {
     }
 
     @Override // p007b.p225i.p226a.p242c.p267x2.p276k0.ElementaryStreamReader
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public void mo3760d() {
     }
 
     @Override // p007b.p225i.p226a.p242c.p267x2.p276k0.ElementaryStreamReader
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public void mo3761e(ExtractorOutput extractorOutput, TsPayloadReader.d dVar) {
         dVar.m3765a();
         this.f8704f = dVar.m3766b();
@@ -444,21 +444,21 @@ public final class AdtsReader implements ElementaryStreamReader {
     }
 
     @Override // p007b.p225i.p226a.p242c.p267x2.p276k0.ElementaryStreamReader
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public void mo3762f(long j, int i) {
         if (j != -9223372036854775807L) {
             this.f8718t = j;
         }
     }
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public final void m3773h() {
         this.f8707i = 0;
         this.f8708j = 0;
         this.f8709k = 256;
     }
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public final boolean m3774i(ParsableByteArray parsableByteArray, byte[] bArr, int i) {
         if (parsableByteArray.m3081a() < i) {
             return false;

@@ -3,7 +3,6 @@ package androidx.room;
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.database.Cursor;
-import android.database.SQLException;
 import android.database.sqlite.SQLiteException;
 import android.util.Log;
 import androidx.annotation.NonNull;
@@ -30,7 +29,7 @@ import java.util.concurrent.atomic.AtomicBoolean;
 import java.util.concurrent.locks.Lock;
 import p007b.p100d.p104b.p105a.outline;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class InvalidationTracker {
     private static final String CREATE_TRACKING_TABLE_SQL = "CREATE TEMP TABLE room_table_modification_log(table_id INTEGER PRIMARY KEY, invalidated INTEGER NOT NULL DEFAULT 0)";
     private static final String INVALIDATED_COLUMN_NAME = "invalidated";
@@ -65,7 +64,7 @@ public class InvalidationTracker {
     @NonNull
     private Map<String, Set<String>> mViewTables;
 
-    /* renamed from: androidx.room.InvalidationTracker$1 */
+    /* JADX INFO: renamed from: androidx.room.InvalidationTracker$1 */
     public class RunnableC05831 implements Runnable {
         public RunnableC05831() {
         }
@@ -354,7 +353,7 @@ public class InvalidationTracker {
         return (String[]) hashSet.toArray(new String[hashSet.size()]);
     }
 
-    private void startTrackingTable(SupportSQLiteDatabase supportSQLiteDatabase, int i) throws SQLException {
+    private void startTrackingTable(SupportSQLiteDatabase supportSQLiteDatabase, int i) {
         supportSQLiteDatabase.execSQL("INSERT OR IGNORE INTO room_table_modification_log VALUES(" + i + ", 0)");
         String str = this.mTableNames[i];
         StringBuilder sb = new StringBuilder();
@@ -374,7 +373,7 @@ public class InvalidationTracker {
         }
     }
 
-    private void stopTrackingTable(SupportSQLiteDatabase supportSQLiteDatabase, int i) throws SQLException {
+    private void stopTrackingTable(SupportSQLiteDatabase supportSQLiteDatabase, int i) {
         String str = this.mTableNames[i];
         StringBuilder sb = new StringBuilder();
         for (String str2 : TRIGGERS) {

@@ -4,9 +4,9 @@ import com.discord.widgets.guild_role_subscriptions.setup.GuildRoleSubscriptionP
 import kotlin.jvm.functions.Function0;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetGuildRoleSubscriptionReview.kt */
-/* renamed from: com.discord.widgets.guild_role_subscriptions.tier.create.WidgetGuildRoleSubscriptionReview$planSetupViewModel$2, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.guild_role_subscriptions.tier.create.WidgetGuildRoleSubscriptionReview$planSetupViewModel$2, reason: use source file name */
+/* JADX INFO: compiled from: WidgetGuildRoleSubscriptionReview.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetGuildRoleSubscriptionReview4 extends Lambda implements Function0<GuildRoleSubscriptionPlanSetupViewModel> {
     public final /* synthetic */ WidgetGuildRoleSubscriptionReview this$0;
 

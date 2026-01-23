@@ -45,234 +45,234 @@ import p007b.p225i.p226a.p242c.p278y2.MediaCodecAdapter;
 import p007b.p225i.p226a.p242c.p278y2.MediaCodecInfo;
 import p007b.p225i.p226a.p242c.p278y2.MediaCodecSelector;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public abstract class MediaCodecRenderer extends BaseRenderer {
 
-    /* renamed from: u */
+    /* JADX INFO: renamed from: u */
     public static final byte[] f19857u = {0, 0, 1, 103, 66, -64, 11, -38, 37, -112, 0, 0, 1, 104, -50, 15, 19, 32, 0, 0, 1, 101, -120, -124, 13, -50, 113, 24, -96, 0, 47, -65, 28, 49, -61, 39, 93, 120};
 
-    /* renamed from: A */
+    /* JADX INFO: renamed from: A */
     public final DecoderInputBuffer f19858A;
 
-    /* renamed from: A0 */
+    /* JADX INFO: renamed from: A0 */
     public boolean f19859A0;
 
-    /* renamed from: B */
+    /* JADX INFO: renamed from: B */
     public final DecoderInputBuffer f19860B;
 
-    /* renamed from: B0 */
+    /* JADX INFO: renamed from: B0 */
     public boolean f19861B0;
 
-    /* renamed from: C */
+    /* JADX INFO: renamed from: C */
     public final BatchBuffer f19862C;
 
-    /* renamed from: C0 */
+    /* JADX INFO: renamed from: C0 */
     public long f19863C0;
 
-    /* renamed from: D */
+    /* JADX INFO: renamed from: D */
     public final TimedValueQueue<Format2> f19864D;
 
-    /* renamed from: D0 */
+    /* JADX INFO: renamed from: D0 */
     public long f19865D0;
 
-    /* renamed from: E */
+    /* JADX INFO: renamed from: E */
     public final ArrayList<Long> f19866E;
 
-    /* renamed from: E0 */
+    /* JADX INFO: renamed from: E0 */
     public boolean f19867E0;
 
-    /* renamed from: F */
+    /* JADX INFO: renamed from: F */
     public final MediaCodec.BufferInfo f19868F;
 
-    /* renamed from: F0 */
+    /* JADX INFO: renamed from: F0 */
     public boolean f19869F0;
 
-    /* renamed from: G */
+    /* JADX INFO: renamed from: G */
     public final long[] f19870G;
 
-    /* renamed from: G0 */
+    /* JADX INFO: renamed from: G0 */
     public boolean f19871G0;
 
-    /* renamed from: H */
+    /* JADX INFO: renamed from: H */
     public final long[] f19872H;
 
-    /* renamed from: H0 */
+    /* JADX INFO: renamed from: H0 */
     public boolean f19873H0;
 
-    /* renamed from: I */
+    /* JADX INFO: renamed from: I */
     public final long[] f19874I;
 
-    /* renamed from: I0 */
+    /* JADX INFO: renamed from: I0 */
     @Nullable
     public ExoPlaybackException f19875I0;
 
-    /* renamed from: J */
+    /* JADX INFO: renamed from: J */
     @Nullable
     public Format2 f19876J;
 
-    /* renamed from: J0 */
+    /* JADX INFO: renamed from: J0 */
     public DecoderCounters f19877J0;
 
-    /* renamed from: K */
+    /* JADX INFO: renamed from: K */
     @Nullable
     public Format2 f19878K;
 
-    /* renamed from: K0 */
+    /* JADX INFO: renamed from: K0 */
     public long f19879K0;
 
-    /* renamed from: L */
+    /* JADX INFO: renamed from: L */
     @Nullable
     public DrmSession f19880L;
 
-    /* renamed from: L0 */
+    /* JADX INFO: renamed from: L0 */
     public long f19881L0;
 
-    /* renamed from: M */
+    /* JADX INFO: renamed from: M */
     @Nullable
     public DrmSession f19882M;
 
-    /* renamed from: M0 */
+    /* JADX INFO: renamed from: M0 */
     public int f19883M0;
 
-    /* renamed from: N */
+    /* JADX INFO: renamed from: N */
     @Nullable
     public MediaCrypto f19884N;
 
-    /* renamed from: O */
+    /* JADX INFO: renamed from: O */
     public boolean f19885O;
 
-    /* renamed from: P */
+    /* JADX INFO: renamed from: P */
     public long f19886P;
 
-    /* renamed from: Q */
+    /* JADX INFO: renamed from: Q */
     public float f19887Q;
 
-    /* renamed from: R */
+    /* JADX INFO: renamed from: R */
     public float f19888R;
 
-    /* renamed from: S */
+    /* JADX INFO: renamed from: S */
     @Nullable
     public MediaCodecAdapter f19889S;
 
-    /* renamed from: T */
+    /* JADX INFO: renamed from: T */
     @Nullable
     public Format2 f19890T;
 
-    /* renamed from: U */
+    /* JADX INFO: renamed from: U */
     @Nullable
     public MediaFormat f19891U;
 
-    /* renamed from: V */
+    /* JADX INFO: renamed from: V */
     public boolean f19892V;
 
-    /* renamed from: W */
+    /* JADX INFO: renamed from: W */
     public float f19893W;
 
-    /* renamed from: X */
+    /* JADX INFO: renamed from: X */
     @Nullable
     public ArrayDeque<MediaCodecInfo> f19894X;
 
-    /* renamed from: Y */
+    /* JADX INFO: renamed from: Y */
     @Nullable
     public DecoderInitializationException f19895Y;
 
-    /* renamed from: Z */
+    /* JADX INFO: renamed from: Z */
     @Nullable
     public MediaCodecInfo f19896Z;
 
-    /* renamed from: a0 */
+    /* JADX INFO: renamed from: a0 */
     public int f19897a0;
 
-    /* renamed from: b0 */
+    /* JADX INFO: renamed from: b0 */
     public boolean f19898b0;
 
-    /* renamed from: c0 */
+    /* JADX INFO: renamed from: c0 */
     public boolean f19899c0;
 
-    /* renamed from: d0 */
+    /* JADX INFO: renamed from: d0 */
     public boolean f19900d0;
 
-    /* renamed from: e0 */
+    /* JADX INFO: renamed from: e0 */
     public boolean f19901e0;
 
-    /* renamed from: f0 */
+    /* JADX INFO: renamed from: f0 */
     public boolean f19902f0;
 
-    /* renamed from: g0 */
+    /* JADX INFO: renamed from: g0 */
     public boolean f19903g0;
 
-    /* renamed from: h0 */
+    /* JADX INFO: renamed from: h0 */
     public boolean f19904h0;
 
-    /* renamed from: i0 */
+    /* JADX INFO: renamed from: i0 */
     public boolean f19905i0;
 
-    /* renamed from: j0 */
+    /* JADX INFO: renamed from: j0 */
     public boolean f19906j0;
 
-    /* renamed from: k0 */
+    /* JADX INFO: renamed from: k0 */
     public boolean f19907k0;
 
-    /* renamed from: l0 */
+    /* JADX INFO: renamed from: l0 */
     @Nullable
     public C2Mp3TimestampTracker f19908l0;
 
-    /* renamed from: m0 */
+    /* JADX INFO: renamed from: m0 */
     public long f19909m0;
 
-    /* renamed from: n0 */
+    /* JADX INFO: renamed from: n0 */
     public int f19910n0;
 
-    /* renamed from: o0 */
+    /* JADX INFO: renamed from: o0 */
     public int f19911o0;
 
-    /* renamed from: p0 */
+    /* JADX INFO: renamed from: p0 */
     @Nullable
     public ByteBuffer f19912p0;
 
-    /* renamed from: q0 */
+    /* JADX INFO: renamed from: q0 */
     public boolean f19913q0;
 
-    /* renamed from: r0 */
+    /* JADX INFO: renamed from: r0 */
     public boolean f19914r0;
 
-    /* renamed from: s0 */
+    /* JADX INFO: renamed from: s0 */
     public boolean f19915s0;
 
-    /* renamed from: t0 */
+    /* JADX INFO: renamed from: t0 */
     public boolean f19916t0;
 
-    /* renamed from: u0 */
+    /* JADX INFO: renamed from: u0 */
     public boolean f19917u0;
 
-    /* renamed from: v */
+    /* JADX INFO: renamed from: v */
     public final MediaCodecAdapter.b f19918v;
 
-    /* renamed from: v0 */
+    /* JADX INFO: renamed from: v0 */
     public boolean f19919v0;
 
-    /* renamed from: w */
+    /* JADX INFO: renamed from: w */
     public final MediaCodecSelector f19920w;
 
-    /* renamed from: w0 */
+    /* JADX INFO: renamed from: w0 */
     public int f19921w0;
 
-    /* renamed from: x */
+    /* JADX INFO: renamed from: x */
     public final boolean f19922x;
 
-    /* renamed from: x0 */
+    /* JADX INFO: renamed from: x0 */
     public int f19923x0;
 
-    /* renamed from: y */
+    /* JADX INFO: renamed from: y */
     public final float f19924y;
 
-    /* renamed from: y0 */
+    /* JADX INFO: renamed from: y0 */
     public int f19925y0;
 
-    /* renamed from: z */
+    /* JADX INFO: renamed from: z */
     public final DecoderInputBuffer f19926z;
 
-    /* renamed from: z0 */
+    /* JADX INFO: renamed from: z0 */
     public boolean f19927z0;
 
     public MediaCodecRenderer(int i, MediaCodecAdapter.b bVar, MediaCodecSelector mediaCodecSelector, boolean z2, float f) {
@@ -313,7 +313,7 @@ public abstract class MediaCodecRenderer extends BaseRenderer {
     }
 
     @RequiresApi(23)
-    /* renamed from: A0 */
+    /* JADX INFO: renamed from: A0 */
     public final void m8838A0() throws ExoPlaybackException {
         try {
             this.f19884N.setMediaDrmSession(m8849X(this.f19882M).f7974c);
@@ -326,7 +326,7 @@ public abstract class MediaCodecRenderer extends BaseRenderer {
     }
 
     @Override // p007b.p225i.p226a.p242c.BaseRenderer
-    /* renamed from: B */
+    /* JADX INFO: renamed from: B */
     public void mo2621B() {
         this.f19876J = null;
         this.f19879K0 = -9223372036854775807L;
@@ -335,7 +335,7 @@ public abstract class MediaCodecRenderer extends BaseRenderer {
         m8847S();
     }
 
-    /* renamed from: B0 */
+    /* JADX INFO: renamed from: B0 */
     public final void m8839B0(long j) throws ExoPlaybackException {
         boolean z2;
         Format2 format2M2971f;
@@ -360,7 +360,7 @@ public abstract class MediaCodecRenderer extends BaseRenderer {
     }
 
     @Override // p007b.p225i.p226a.p242c.BaseRenderer
-    /* renamed from: D */
+    /* JADX INFO: renamed from: D */
     public void mo2622D(long j, boolean z2) throws ExoPlaybackException {
         int i;
         this.f19867E0 = false;
@@ -390,7 +390,7 @@ public abstract class MediaCodecRenderer extends BaseRenderer {
     }
 
     @Override // p007b.p225i.p226a.p242c.BaseRenderer
-    /* renamed from: H */
+    /* JADX INFO: renamed from: H */
     public void mo2623H(Format2[] format2Arr, long j, long j2) throws ExoPlaybackException {
         if (this.f19881L0 == -9223372036854775807L) {
             AnimatableValueParser.m426D(this.f19879K0 == -9223372036854775807L);
@@ -416,7 +416,7 @@ public abstract class MediaCodecRenderer extends BaseRenderer {
         this.f19874I[i2 - 1] = this.f19863C0;
     }
 
-    /* renamed from: J */
+    /* JADX INFO: renamed from: J */
     public final boolean m8840J(long j, long j2) throws ExoPlaybackException {
         AnimatableValueParser.m426D(!this.f19869F0);
         if (this.f19862C.m3858v()) {
@@ -485,15 +485,15 @@ public abstract class MediaCodecRenderer extends BaseRenderer {
         return this.f19862C.m3858v() || this.f19867E0 || this.f19917u0;
     }
 
-    /* renamed from: K */
+    /* JADX INFO: renamed from: K */
     public abstract DecoderReuseEvaluation mo3144K(MediaCodecInfo mediaCodecInfo, Format2 format2, Format2 format22);
 
-    /* renamed from: L */
+    /* JADX INFO: renamed from: L */
     public MediaCodecDecoderException mo3146L(Throwable th, @Nullable MediaCodecInfo mediaCodecInfo) {
         return new MediaCodecDecoderException(th, mediaCodecInfo);
     }
 
-    /* renamed from: M */
+    /* JADX INFO: renamed from: M */
     public final void m8841M() {
         this.f19917u0 = false;
         this.f19862C.mo3856p();
@@ -502,7 +502,7 @@ public abstract class MediaCodecRenderer extends BaseRenderer {
         this.f19915s0 = false;
     }
 
-    /* renamed from: N */
+    /* JADX INFO: renamed from: N */
     public final void m8842N() throws ExoPlaybackException {
         if (this.f19927z0) {
             this.f19923x0 = 1;
@@ -514,7 +514,7 @@ public abstract class MediaCodecRenderer extends BaseRenderer {
     }
 
     @TargetApi(23)
-    /* renamed from: O */
+    /* JADX INFO: renamed from: O */
     public final boolean m8843O() throws ExoPlaybackException {
         if (this.f19927z0) {
             this.f19923x0 = 1;
@@ -529,7 +529,7 @@ public abstract class MediaCodecRenderer extends BaseRenderer {
         return true;
     }
 
-    /* renamed from: P */
+    /* JADX INFO: renamed from: P */
     public final boolean m8844P(long j, long j2) throws ExoPlaybackException {
         boolean z2;
         boolean z3;
@@ -664,7 +664,7 @@ public abstract class MediaCodecRenderer extends BaseRenderer {
     /* JADX WARN: Multi-variable type inference failed */
     /* JADX WARN: Type inference failed for: r1v0 */
     /* JADX WARN: Type inference failed for: r1v3, types: [int] */
-    /* renamed from: Q */
+    /* JADX INFO: renamed from: Q */
     public final boolean m8845Q() throws ExoPlaybackException {
         MediaCodecAdapter mediaCodecAdapter = this.f19889S;
         boolean z2 = 0;
@@ -824,7 +824,7 @@ public abstract class MediaCodecRenderer extends BaseRenderer {
                         j = decoderInputBuffer.f19780n;
                     } else {
                         long jM3859a = c2Mp3TimestampTracker.m3859a(format2.f7137K);
-                        c2Mp3TimestampTracker.f9100b += iM3468d;
+                        c2Mp3TimestampTracker.f9100b += (long) iM3468d;
                         j = jM3859a;
                     }
                 }
@@ -872,7 +872,7 @@ public abstract class MediaCodecRenderer extends BaseRenderer {
         }
     }
 
-    /* renamed from: R */
+    /* JADX INFO: renamed from: R */
     public final void m8846R() {
         try {
             this.f19889S.flush();
@@ -881,7 +881,7 @@ public abstract class MediaCodecRenderer extends BaseRenderer {
         }
     }
 
-    /* renamed from: S */
+    /* JADX INFO: renamed from: S */
     public boolean m8847S() {
         if (this.f19889S == null) {
             return false;
@@ -894,7 +894,7 @@ public abstract class MediaCodecRenderer extends BaseRenderer {
         return false;
     }
 
-    /* renamed from: T */
+    /* JADX INFO: renamed from: T */
     public final List<MediaCodecInfo> m8848T(boolean z2) throws MediaCodecUtil.DecoderQueryException {
         List<MediaCodecInfo> listMo3160W = mo3160W(this.f19920w, this.f19876J, z2);
         if (listMo3160W.isEmpty() && z2) {
@@ -908,19 +908,19 @@ public abstract class MediaCodecRenderer extends BaseRenderer {
         return listMo3160W;
     }
 
-    /* renamed from: U */
+    /* JADX INFO: renamed from: U */
     public boolean mo3156U() {
         return false;
     }
 
-    /* renamed from: V */
+    /* JADX INFO: renamed from: V */
     public abstract float mo3158V(float f, Format2 format2, Format2[] format2Arr);
 
-    /* renamed from: W */
+    /* JADX INFO: renamed from: W */
     public abstract List<MediaCodecInfo> mo3160W(MediaCodecSelector mediaCodecSelector, Format2 format2, boolean z2) throws MediaCodecUtil.DecoderQueryException;
 
     @Nullable
-    /* renamed from: X */
+    /* JADX INFO: renamed from: X */
     public final FrameworkCryptoConfig m8849X(DrmSession drmSession) throws ExoPlaybackException {
         CryptoConfig cryptoConfigMo3612g = drmSession.mo3612g();
         if (cryptoConfigMo3612g == null || (cryptoConfigMo3612g instanceof FrameworkCryptoConfig)) {
@@ -930,15 +930,15 @@ public abstract class MediaCodecRenderer extends BaseRenderer {
         throw m3550z(new IllegalArgumentException(outline.m857j(strValueOf.length() + 43, "Expecting FrameworkCryptoConfig but found: ", strValueOf)), this.f19876J, false, 6001);
     }
 
-    /* renamed from: Y */
+    /* JADX INFO: renamed from: Y */
     public abstract MediaCodecAdapter.a mo3161Y(MediaCodecInfo mediaCodecInfo, Format2 format2, @Nullable MediaCrypto mediaCrypto, float f);
 
-    /* renamed from: Z */
+    /* JADX INFO: renamed from: Z */
     public void mo3162Z(DecoderInputBuffer decoderInputBuffer) throws ExoPlaybackException {
     }
 
     @Override // p007b.p225i.p226a.p242c.RendererCapabilities
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final int mo2630a(Format2 format2) throws ExoPlaybackException {
         try {
             return mo3174y0(this.f19920w, format2);
@@ -951,7 +951,7 @@ public abstract class MediaCodecRenderer extends BaseRenderer {
     /* JADX WARN: Removed duplicated region for block: B:27:0x0091  */
     /* JADX WARN: Removed duplicated region for block: B:42:0x00c9  */
     /* JADX WARN: Removed duplicated region for block: B:87:0x015e  */
-    /* renamed from: a0 */
+    /* JADX INFO: renamed from: a0 */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
@@ -1033,12 +1033,12 @@ public abstract class MediaCodecRenderer extends BaseRenderer {
     }
 
     @Override // p007b.p225i.p226a.p242c.Renderer2
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public boolean mo2631b() {
         return this.f19869F0;
     }
 
-    /* renamed from: b0 */
+    /* JADX INFO: renamed from: b0 */
     public final void m8851b0() throws ExoPlaybackException {
         Format2 format2;
         if (this.f19889S != null || this.f19915s0 || (format2 = this.f19876J) == null) {
@@ -1099,7 +1099,7 @@ public abstract class MediaCodecRenderer extends BaseRenderer {
         }
     }
 
-    /* renamed from: c0 */
+    /* JADX INFO: renamed from: c0 */
     public final void m8852c0(MediaCrypto mediaCrypto, boolean z2) throws DecoderInitializationException {
         if (this.f19894X == null) {
             try {
@@ -1153,7 +1153,7 @@ public abstract class MediaCodecRenderer extends BaseRenderer {
     }
 
     @Override // p007b.p225i.p226a.p242c.Renderer2
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public boolean mo2632d() {
         boolean zMo2508d;
         if (this.f19876J == null) {
@@ -1174,20 +1174,20 @@ public abstract class MediaCodecRenderer extends BaseRenderer {
         return true;
     }
 
-    /* renamed from: d0 */
+    /* JADX INFO: renamed from: d0 */
     public abstract void mo3163d0(Exception exc);
 
-    /* renamed from: e0 */
+    /* JADX INFO: renamed from: e0 */
     public abstract void mo3164e0(String str, long j, long j2);
 
-    /* renamed from: f0 */
+    /* JADX INFO: renamed from: f0 */
     public abstract void mo3165f0(String str);
 
     /* JADX WARN: Removed duplicated region for block: B:14:0x0032  */
     /* JADX WARN: Removed duplicated region for block: B:84:0x00f3  */
     @Nullable
     @CallSuper
-    /* renamed from: g0 */
+    /* JADX INFO: renamed from: g0 */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
@@ -1284,11 +1284,11 @@ public abstract class MediaCodecRenderer extends BaseRenderer {
         }
     }
 
-    /* renamed from: h0 */
+    /* JADX INFO: renamed from: h0 */
     public abstract void mo3167h0(Format2 format2, @Nullable MediaFormat mediaFormat) throws ExoPlaybackException;
 
     @CallSuper
-    /* renamed from: i0 */
+    /* JADX INFO: renamed from: i0 */
     public void mo3168i0(long j) {
         while (true) {
             int i = this.f19883M0;
@@ -1309,14 +1309,14 @@ public abstract class MediaCodecRenderer extends BaseRenderer {
         }
     }
 
-    /* renamed from: j0 */
+    /* JADX INFO: renamed from: j0 */
     public abstract void mo3169j0();
 
-    /* renamed from: k0 */
+    /* JADX INFO: renamed from: k0 */
     public abstract void mo3170k0(DecoderInputBuffer decoderInputBuffer) throws ExoPlaybackException;
 
     @TargetApi(23)
-    /* renamed from: l0 */
+    /* JADX INFO: renamed from: l0 */
     public final void m8853l0() throws ExoPlaybackException {
         int i = this.f19925y0;
         if (i == 1) {
@@ -1335,18 +1335,18 @@ public abstract class MediaCodecRenderer extends BaseRenderer {
         }
     }
 
-    /* renamed from: m0 */
+    /* JADX INFO: renamed from: m0 */
     public abstract boolean mo3171m0(long j, long j2, @Nullable MediaCodecAdapter mediaCodecAdapter, @Nullable ByteBuffer byteBuffer, int i, int i2, int i3, long j3, boolean z2, boolean z3, Format2 format2) throws ExoPlaybackException;
 
     @Override // p007b.p225i.p226a.p242c.BaseRenderer, p007b.p225i.p226a.p242c.Renderer2
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public void mo2939n(float f, float f2) throws ExoPlaybackException {
         this.f19887Q = f;
         this.f19888R = f2;
         m8861z0(this.f19890T);
     }
 
-    /* renamed from: n0 */
+    /* JADX INFO: renamed from: n0 */
     public final boolean m8854n0(int i) throws ExoPlaybackException {
         FormatHolder formatHolderM3547A = m3547A();
         this.f19926z.mo3856p();
@@ -1364,7 +1364,7 @@ public abstract class MediaCodecRenderer extends BaseRenderer {
     }
 
     /* JADX WARN: Multi-variable type inference failed */
-    /* renamed from: o0 */
+    /* JADX INFO: renamed from: o0 */
     public void m8855o0() {
         try {
             MediaCodecAdapter mediaCodecAdapter = this.f19889S;
@@ -1395,18 +1395,18 @@ public abstract class MediaCodecRenderer extends BaseRenderer {
     }
 
     @Override // p007b.p225i.p226a.p242c.BaseRenderer, p007b.p225i.p226a.p242c.RendererCapabilities
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public final int mo3119p() {
         return 8;
     }
 
-    /* renamed from: p0 */
+    /* JADX INFO: renamed from: p0 */
     public void mo3515p0() throws ExoPlaybackException {
     }
 
     /* JADX WARN: Removed duplicated region for block: B:53:0x00a1  */
     @Override // p007b.p225i.p226a.p242c.Renderer2
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
@@ -1476,7 +1476,7 @@ public abstract class MediaCodecRenderer extends BaseRenderer {
     }
 
     @CallSuper
-    /* renamed from: q0 */
+    /* JADX INFO: renamed from: q0 */
     public void mo3172q0() {
         m8857s0();
         this.f19911o0 = -1;
@@ -1503,7 +1503,7 @@ public abstract class MediaCodecRenderer extends BaseRenderer {
     }
 
     @CallSuper
-    /* renamed from: r0 */
+    /* JADX INFO: renamed from: r0 */
     public void m8856r0() {
         mo3172q0();
         this.f19875I0 = null;
@@ -1529,13 +1529,13 @@ public abstract class MediaCodecRenderer extends BaseRenderer {
         this.f19885O = false;
     }
 
-    /* renamed from: s0 */
+    /* JADX INFO: renamed from: s0 */
     public final void m8857s0() {
         this.f19910n0 = -1;
         this.f19858A.f19778l = null;
     }
 
-    /* renamed from: t0 */
+    /* JADX INFO: renamed from: t0 */
     public final void m8858t0(@Nullable DrmSession drmSession) {
         DrmSession drmSession2 = this.f19880L;
         if (drmSession2 != drmSession) {
@@ -1549,7 +1549,7 @@ public abstract class MediaCodecRenderer extends BaseRenderer {
         this.f19880L = drmSession;
     }
 
-    /* renamed from: u0 */
+    /* JADX INFO: renamed from: u0 */
     public final void m8859u0(@Nullable DrmSession drmSession) {
         DrmSession drmSession2 = this.f19882M;
         if (drmSession2 != drmSession) {
@@ -1563,25 +1563,25 @@ public abstract class MediaCodecRenderer extends BaseRenderer {
         this.f19882M = drmSession;
     }
 
-    /* renamed from: v0 */
+    /* JADX INFO: renamed from: v0 */
     public final boolean m8860v0(long j) {
         return this.f19886P == -9223372036854775807L || SystemClock.elapsedRealtime() - j < this.f19886P;
     }
 
-    /* renamed from: w0 */
+    /* JADX INFO: renamed from: w0 */
     public boolean mo3173w0(MediaCodecInfo mediaCodecInfo) {
         return true;
     }
 
-    /* renamed from: x0 */
+    /* JADX INFO: renamed from: x0 */
     public boolean mo3516x0(Format2 format2) {
         return false;
     }
 
-    /* renamed from: y0 */
+    /* JADX INFO: renamed from: y0 */
     public abstract int mo3174y0(MediaCodecSelector mediaCodecSelector, Format2 format2) throws MediaCodecUtil.DecoderQueryException;
 
-    /* renamed from: z0 */
+    /* JADX INFO: renamed from: z0 */
     public final boolean m8861z0(Format2 format2) throws ExoPlaybackException {
         if (Util2.f6708a >= 23 && this.f19889S != null && this.f19925y0 != 3 && this.f7893n != 0) {
             float f = this.f19888R;

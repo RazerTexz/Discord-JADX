@@ -5,25 +5,25 @@ import p007b.p085c.p086a.p087a0.AnimatableValueParser;
 import p007b.p100d.p104b.p105a.outline;
 import p007b.p225i.p226a.p242c.p267x2.TrackOutput2;
 
-/* compiled from: TrackEncryptionBox.java */
-/* renamed from: b.i.a.c.x2.i0.n, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.x2.i0.n, reason: use source file name */
+/* JADX INFO: compiled from: TrackEncryptionBox.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class TrackEncryptionBox {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final boolean f8471a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     @Nullable
     public final String f8472b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final TrackOutput2.a f8473c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final int f8474d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     @Nullable
     public final byte[] f8475e;
 
@@ -34,7 +34,7 @@ public final class TrackEncryptionBox {
         Code decompiled incorrectly, please refer to instructions dump.
     */
     public TrackEncryptionBox(boolean z2, @Nullable String str, int i, byte[] bArr, int i2, int i3, @Nullable byte[] bArr2) {
-        char c = 0;
+        byte b2 = 0;
         int i4 = 1;
         AnimatableValueParser.m531j((i == 0) ^ (bArr2 == null));
         this.f8471a = z2;
@@ -45,31 +45,31 @@ public final class TrackEncryptionBox {
             switch (str.hashCode()) {
                 case 3046605:
                     if (!str.equals("cbc1")) {
-                        c = 65535;
+                        b2 = -1;
                     }
                     break;
                 case 3046671:
                     if (str.equals("cbcs")) {
-                        c = 1;
+                        b2 = 1;
                         break;
                     }
                     break;
                 case 3049879:
                     if (str.equals("cenc")) {
-                        c = 2;
+                        b2 = 2;
                         break;
                     }
                     break;
                 case 3049895:
                     if (str.equals("cens")) {
-                        c = 3;
+                        b2 = 3;
                         break;
                     }
                     break;
             }
-            if (c == 0 || c == 1) {
+            if (b2 == 0 || b2 == 1) {
                 i4 = 2;
-            } else if (c != 2 && c != 3) {
+            } else if (b2 != 2 && b2 != 3) {
                 outline.m856i0(str.length() + 68, "Unsupported protection scheme type '", str, "'. Assuming AES-CTR crypto mode.", "TrackEncryptionBox");
             }
         }

@@ -4,9 +4,9 @@ import androidx.core.app.NotificationCompat;
 import com.discord.models.authentication.AuthState;
 import p637j0.p641k.Func1;
 
-/* compiled from: StoreAuthentication.kt */
-/* renamed from: com.discord.stores.StoreAuthentication$observeIsAuthed$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.stores.StoreAuthentication$observeIsAuthed$1, reason: use source file name */
+/* JADX INFO: compiled from: StoreAuthentication.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class StoreAuthentication5<T, R> implements Func1<AuthState, Boolean> {
     public static final StoreAuthentication5 INSTANCE = new StoreAuthentication5();
 
@@ -15,7 +15,7 @@ public final class StoreAuthentication5<T, R> implements Func1<AuthState, Boolea
         return call2(authState);
     }
 
-    /* renamed from: call, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
     public final Boolean call2(AuthState authState) {
         return Boolean.valueOf(authState != null);
     }

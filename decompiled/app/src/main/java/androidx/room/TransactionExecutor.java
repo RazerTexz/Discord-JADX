@@ -4,13 +4,13 @@ import androidx.annotation.NonNull;
 import java.util.ArrayDeque;
 import java.util.concurrent.Executor;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class TransactionExecutor implements Executor {
     private Runnable mActive;
     private final Executor mExecutor;
     private final ArrayDeque<Runnable> mTasks = new ArrayDeque<>();
 
-    /* renamed from: androidx.room.TransactionExecutor$1 */
+    /* JADX INFO: renamed from: androidx.room.TransactionExecutor$1 */
     public class RunnableC05971 implements Runnable {
         public final /* synthetic */ Runnable val$command;
 

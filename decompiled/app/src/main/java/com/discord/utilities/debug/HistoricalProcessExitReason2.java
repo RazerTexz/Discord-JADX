@@ -4,9 +4,9 @@ import com.discord.utilities.debug.HistoricalProcessExitReason;
 import kotlin.jvm.functions.Function0;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: HistoricalProcessExitReason.kt */
-/* renamed from: com.discord.utilities.debug.HistoricalProcessExitReason$lastReason$2, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.utilities.debug.HistoricalProcessExitReason$lastReason$2, reason: use source file name */
+/* JADX INFO: compiled from: HistoricalProcessExitReason.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class HistoricalProcessExitReason2 extends Lambda implements Function0<HistoricalProcessExitReason.Reason> {
     public static final HistoricalProcessExitReason2 INSTANCE = new HistoricalProcessExitReason2();
 

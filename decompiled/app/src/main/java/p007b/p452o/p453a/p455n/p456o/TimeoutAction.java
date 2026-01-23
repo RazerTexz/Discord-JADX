@@ -5,19 +5,19 @@ import android.hardware.camera2.TotalCaptureResult;
 import androidx.annotation.NonNull;
 import androidx.annotation.RequiresApi;
 
-/* compiled from: TimeoutAction.java */
+/* JADX INFO: renamed from: b.o.a.n.o.i, reason: use source file name */
+/* JADX INFO: compiled from: TimeoutAction.java */
+/* JADX INFO: loaded from: classes3.dex */
 @RequiresApi(21)
-/* renamed from: b.o.a.n.o.i, reason: use source file name */
-/* loaded from: classes3.dex */
 public class TimeoutAction extends ActionWrapper {
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public long f13946e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public long f13947f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public BaseAction f13948g;
 
     public TimeoutAction(long j, @NonNull BaseAction baseAction) {
@@ -26,7 +26,7 @@ public class TimeoutAction extends ActionWrapper {
     }
 
     @Override // p007b.p452o.p453a.p455n.p456o.ActionWrapper, p007b.p452o.p453a.p455n.p456o.BaseAction, p007b.p452o.p453a.p455n.p456o.Action2
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public void mo7248b(@NonNull ActionHolder actionHolder, @NonNull CaptureRequest captureRequest, @NonNull TotalCaptureResult totalCaptureResult) {
         super.mo7248b(actionHolder, captureRequest, totalCaptureResult);
         if (m7338g() || System.currentTimeMillis() <= this.f13946e + this.f13947f) {
@@ -36,7 +36,7 @@ public class TimeoutAction extends ActionWrapper {
     }
 
     @Override // p007b.p452o.p453a.p455n.p456o.ActionWrapper, p007b.p452o.p453a.p455n.p456o.BaseAction
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public void mo7249j(@NonNull ActionHolder actionHolder) {
         this.f13946e = System.currentTimeMillis();
         super.mo7249j(actionHolder);
@@ -44,7 +44,7 @@ public class TimeoutAction extends ActionWrapper {
 
     @Override // p007b.p452o.p453a.p455n.p456o.ActionWrapper
     @NonNull
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public BaseAction mo7336m() {
         return this.f13948g;
     }

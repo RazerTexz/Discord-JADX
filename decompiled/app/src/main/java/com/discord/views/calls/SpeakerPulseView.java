@@ -36,42 +36,42 @@ import p507d0.p592z.p594d.Lambda;
 import p659s.p660a.CompletableJob;
 import p659s.p660a.Deferred;
 
-/* compiled from: SpeakerPulseView.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: SpeakerPulseView.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class SpeakerPulseView extends FrameLayout {
 
-    /* renamed from: j, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: j, reason: from kotlin metadata */
     public final PathInterpolator rampUpInterpolator;
 
-    /* renamed from: k, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: k, reason: from kotlin metadata */
     public final PathInterpolator fadeOutInterpolator;
 
-    /* renamed from: l, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: l, reason: from kotlin metadata */
     public boolean hasEverAnimated;
 
-    /* renamed from: m, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: m, reason: from kotlin metadata */
     public final CompletableJob animationSupervisor;
 
-    /* renamed from: n, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: n, reason: from kotlin metadata */
     public Job animationJob;
 
-    /* renamed from: o, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: o, reason: from kotlin metadata */
     public final Lazy innerView;
 
-    /* renamed from: p, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: p, reason: from kotlin metadata */
     public final Lazy outerView;
 
-    /* renamed from: q, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: q, reason: from kotlin metadata */
     public boolean isPulsing;
 
-    /* compiled from: kotlin-style lambda group */
-    /* renamed from: com.discord.views.calls.SpeakerPulseView$a */
+    /* JADX INFO: renamed from: com.discord.views.calls.SpeakerPulseView$a */
+    /* JADX INFO: compiled from: kotlin-style lambda group */
     public static final class C7101a extends Lambda implements Function0<ImageView> {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public final /* synthetic */ int f19218j;
 
-        /* renamed from: k */
+        /* JADX INFO: renamed from: k */
         public final /* synthetic */ Object f19219k;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -94,9 +94,9 @@ public final class SpeakerPulseView extends FrameLayout {
         }
     }
 
-    /* compiled from: SpeakerPulseView.kt */
+    /* JADX INFO: renamed from: com.discord.views.calls.SpeakerPulseView$b */
+    /* JADX INFO: compiled from: SpeakerPulseView.kt */
     @DebugMetadata(m10084c = "com.discord.views.calls.SpeakerPulseView", m10085f = "SpeakerPulseView.kt", m10086l = {Opcodes.LOR, Opcodes.I2D}, m10087m = "animatePulse")
-    /* renamed from: com.discord.views.calls.SpeakerPulseView$b */
     public static final class C7102b extends ContinuationImpl3 {
         public long J$0;
         public Object L$0;
@@ -116,9 +116,9 @@ public final class SpeakerPulseView extends FrameLayout {
         }
     }
 
-    /* compiled from: SpeakerPulseView.kt */
+    /* JADX INFO: renamed from: com.discord.views.calls.SpeakerPulseView$c */
+    /* JADX INFO: compiled from: SpeakerPulseView.kt */
     @DebugMetadata(m10084c = "com.discord.views.calls.SpeakerPulseView", m10085f = "SpeakerPulseView.kt", m10086l = {117}, m10087m = "performPulseAnimation")
-    /* renamed from: com.discord.views.calls.SpeakerPulseView$c */
     public static final class C7103c extends ContinuationImpl3 {
         public Object L$0;
         public Object L$1;
@@ -137,9 +137,9 @@ public final class SpeakerPulseView extends FrameLayout {
         }
     }
 
-    /* compiled from: SpeakerPulseView.kt */
+    /* JADX INFO: renamed from: com.discord.views.calls.SpeakerPulseView$d */
+    /* JADX INFO: compiled from: SpeakerPulseView.kt */
     @DebugMetadata(m10084c = "com.discord.views.calls.SpeakerPulseView$performPulseAnimation$inner$1", m10085f = "SpeakerPulseView.kt", m10086l = {106}, m10087m = "invokeSuspend")
-    /* renamed from: com.discord.views.calls.SpeakerPulseView$d */
     public static final class C7104d extends ContinuationImpl6 implements Function2<CoroutineScope, Continuation<? super Unit>, Object> {
         public int label;
 
@@ -182,9 +182,9 @@ public final class SpeakerPulseView extends FrameLayout {
         }
     }
 
-    /* compiled from: SpeakerPulseView.kt */
+    /* JADX INFO: renamed from: com.discord.views.calls.SpeakerPulseView$e */
+    /* JADX INFO: compiled from: SpeakerPulseView.kt */
     @DebugMetadata(m10084c = "com.discord.views.calls.SpeakerPulseView$performPulseAnimation$outer$1", m10085f = "SpeakerPulseView.kt", m10086l = {113}, m10087m = "invokeSuspend")
-    /* renamed from: com.discord.views.calls.SpeakerPulseView$e */
     public static final class C7105e extends ContinuationImpl6 implements Function2<CoroutineScope, Continuation<? super Unit>, Object> {
         public int label;
 
@@ -227,15 +227,15 @@ public final class SpeakerPulseView extends FrameLayout {
         }
     }
 
-    /* compiled from: SpeakerPulseView.kt */
+    /* JADX INFO: renamed from: com.discord.views.calls.SpeakerPulseView$f */
+    /* JADX INFO: compiled from: SpeakerPulseView.kt */
     @DebugMetadata(m10084c = "com.discord.views.calls.SpeakerPulseView$startAnimating$1", m10085f = "SpeakerPulseView.kt", m10086l = {87}, m10087m = "invokeSuspend")
-    /* renamed from: com.discord.views.calls.SpeakerPulseView$f */
     public static final class C7106f extends ContinuationImpl6 implements Function2<CoroutineScope, Continuation<? super Unit>, Object> {
         public int label;
 
-        /* compiled from: SpeakerPulseView.kt */
+        /* JADX INFO: renamed from: com.discord.views.calls.SpeakerPulseView$f$a */
+        /* JADX INFO: compiled from: SpeakerPulseView.kt */
         @DebugMetadata(m10084c = "com.discord.views.calls.SpeakerPulseView$startAnimating$1$1", m10085f = "SpeakerPulseView.kt", m10086l = {88}, m10087m = "invokeSuspend")
-        /* renamed from: com.discord.views.calls.SpeakerPulseView$f$a */
         public static final class a extends ContinuationImpl6 implements Function2<CoroutineScope, Continuation<? super Unit>, Object> {
             private /* synthetic */ Object L$0;
             public int label;
@@ -338,7 +338,7 @@ public final class SpeakerPulseView extends FrameLayout {
         setClipToPadding(false);
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final ImageView m8574a(SpeakerPulseView speakerPulseView, int i) {
         Objects.requireNonNull(speakerPulseView);
         ImageView imageView = new ImageView(speakerPulseView.getContext());
@@ -357,12 +357,12 @@ public final class SpeakerPulseView extends FrameLayout {
         return imageView;
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static final /* synthetic */ ImageView m8575b(SpeakerPulseView speakerPulseView) {
         return speakerPulseView.getInnerView();
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public static final /* synthetic */ ImageView m8576c(SpeakerPulseView speakerPulseView) {
         return speakerPulseView.getOuterView();
     }
@@ -376,7 +376,7 @@ public final class SpeakerPulseView extends FrameLayout {
     }
 
     /* JADX WARN: Removed duplicated region for block: B:7:0x0013  */
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
@@ -432,7 +432,7 @@ public final class SpeakerPulseView extends FrameLayout {
     }
 
     /* JADX WARN: Removed duplicated region for block: B:7:0x0017  */
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
@@ -481,7 +481,7 @@ public final class SpeakerPulseView extends FrameLayout {
         return Unit.f27425a;
     }
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final void m8579f() {
         CoroutineScope coroutineScope = ViewCoroutineScope.getCoroutineScope(this);
         if (coroutineScope == null || AccessibilityUtils.INSTANCE.isReducedMotionEnabled()) {

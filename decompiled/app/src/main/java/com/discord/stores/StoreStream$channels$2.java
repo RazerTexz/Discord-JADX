@@ -5,8 +5,8 @@ import kotlin.jvm.functions.Function0;
 import p507d0.p580t._Collections;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: StoreStream.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: StoreStream.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class StoreStream$channels$2 extends Lambda implements Function0<List<? extends Long>> {
     public final /* synthetic */ StoreStream this$0;
 
@@ -22,7 +22,7 @@ public final class StoreStream$channels$2 extends Lambda implements Function0<Li
     }
 
     @Override // kotlin.jvm.functions.Function0
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final List<? extends Long> invoke2() {
         return _Collections.toList(this.this$0.getLurking().getLurkingGuildIdsSync());
     }

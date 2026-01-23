@@ -6,20 +6,20 @@ import androidx.annotation.NonNull;
 import androidx.viewbinding.ViewBinding;
 import com.google.android.material.button.MaterialButton;
 
-/* compiled from: WidgetSettingsPrivacyDefaultsBinding.java */
-/* renamed from: b.a.i.b6, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.a.i.b6, reason: use source file name */
+/* JADX INFO: compiled from: WidgetSettingsPrivacyDefaultsBinding.java */
+/* JADX INFO: loaded from: classes.dex */
 public final class WidgetSettingsPrivacyDefaultsBinding implements ViewBinding {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     @NonNull
     public final LinearLayout f719a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     @NonNull
     public final MaterialButton f720b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     @NonNull
     public final MaterialButton f721c;
 

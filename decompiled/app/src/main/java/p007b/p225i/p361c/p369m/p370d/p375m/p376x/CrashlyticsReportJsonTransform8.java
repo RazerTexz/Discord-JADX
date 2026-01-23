@@ -33,18 +33,18 @@ import p007b.p225i.p361c.p393p.DataEncoder;
 import p007b.p225i.p361c.p393p.p395h.JsonDataEncoderBuilder4;
 import p007b.p225i.p361c.p393p.p395h.JsonDataEncoderBuilder5;
 
-/* compiled from: CrashlyticsReportJsonTransform.java */
-/* renamed from: b.i.c.m.d.m.x.h, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.c.m.d.m.x.h, reason: use source file name */
+/* JADX INFO: compiled from: CrashlyticsReportJsonTransform.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class CrashlyticsReportJsonTransform8 {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final DataEncoder f12656a;
 
-    /* compiled from: CrashlyticsReportJsonTransform.java */
-    /* renamed from: b.i.c.m.d.m.x.h$a */
+    /* JADX INFO: renamed from: b.i.c.m.d.m.x.h$a */
+    /* JADX INFO: compiled from: CrashlyticsReportJsonTransform.java */
     public interface a<T> {
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         T mo6613a(@NonNull JsonReader jsonReader) throws IOException;
     }
 
@@ -56,7 +56,7 @@ public class CrashlyticsReportJsonTransform8 {
     }
 
     @NonNull
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static <T> ImmutableList3<T> m6614a(@NonNull JsonReader jsonReader, @NonNull a<T> aVar) throws IOException {
         ArrayList arrayList = new ArrayList();
         jsonReader.beginArray();
@@ -75,24 +75,43 @@ public class CrashlyticsReportJsonTransform8 {
     /* JADX WARN: Removed duplicated region for block: B:212:0x032a  */
     /* JADX WARN: Removed duplicated region for block: B:28:0x005f  */
     /* JADX WARN: Removed duplicated region for block: B:74:0x0113  */
+    /* JADX WARN: Type inference failed for: r10v24 */
+    /* JADX WARN: Type inference failed for: r10v5 */
+    /* JADX WARN: Type inference failed for: r10v6, types: [b.i.c.m.d.m.v$d$d$a$b] */
+    /* JADX WARN: Type inference failed for: r10v8 */
+    /* JADX WARN: Type inference failed for: r11v1 */
+    /* JADX WARN: Type inference failed for: r11v2, types: [b.i.c.m.d.m.w] */
+    /* JADX WARN: Type inference failed for: r11v3 */
+    /* JADX WARN: Type inference failed for: r11v4 */
+    /* JADX WARN: Type inference failed for: r12v1 */
+    /* JADX WARN: Type inference failed for: r12v2, types: [java.lang.Boolean] */
+    /* JADX WARN: Type inference failed for: r12v3 */
+    /* JADX WARN: Type inference failed for: r12v4 */
+    /* JADX WARN: Type inference failed for: r2v0 */
     /* JADX WARN: Type inference failed for: r2v1, types: [b.i.c.m.d.m.s$a] */
     /* JADX WARN: Type inference failed for: r2v5 */
+    /* JADX WARN: Type inference failed for: r2v6, types: [java.lang.Integer] */
+    /* JADX WARN: Type inference failed for: r2v8, types: [java.lang.Integer] */
     /* JADX WARN: Type inference failed for: r2v9 */
+    /* JADX WARN: Type inference failed for: r3v68 */
+    /* JADX WARN: Type inference failed for: r3v69, types: [java.lang.String] */
+    /* JADX WARN: Type inference failed for: r3v70 */
+    /* JADX WARN: Type inference failed for: r3v71, types: [java.lang.Object, java.lang.String] */
     @NonNull
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
     public static CrashlyticsReport.d.AbstractC13233d m6615b(@NonNull JsonReader jsonReader) throws IOException {
         String strM883w;
-        char c;
-        char c2;
-        char c3;
-        char c4;
-        char c5;
+        byte b2;
+        byte b3;
+        byte b4;
+        byte b5;
+        byte b6;
         jsonReader.beginObject();
         Long lValueOf = null;
-        Integer numValueOf = 0;
+        ?? ValueOf = 0;
         String str = null;
         AutoValue_CrashlyticsReport_Session_Event_Application autoValue_CrashlyticsReport_Session_Event_Application = null;
         CrashlyticsReport.d.AbstractC13233d.b bVarM6605a = null;
@@ -119,34 +138,34 @@ public class CrashlyticsReportJsonTransform8 {
             strNextName.hashCode();
             switch (strNextName.hashCode()) {
                 case -1335157162:
-                    c = !strNextName.equals("device") ? (char) 65535 : (char) 0;
+                    b2 = !strNextName.equals("device") ? (byte) -1 : (byte) 0;
                     break;
                 case 96801:
                     if (strNextName.equals("app")) {
-                        c = 1;
+                        b2 = 1;
                         break;
                     }
                     break;
                 case 107332:
                     if (strNextName.equals("log")) {
-                        c = 2;
+                        b2 = 2;
                         break;
                     }
                     break;
                 case 3575610:
                     if (strNextName.equals("type")) {
-                        c = 3;
+                        b2 = 3;
                         break;
                     }
                     break;
                 case 55126294:
                     if (strNextName.equals("timestamp")) {
-                        c = 4;
+                        b2 = 4;
                         break;
                     }
                     break;
             }
-            if (c == 0) {
+            if (b2 == 0) {
                 AutoValue_CrashlyticsReport_Session_Event_Device.b bVar = new AutoValue_CrashlyticsReport_Session_Event_Device.b();
                 jsonReader.beginObject();
                 while (jsonReader.hasNext()) {
@@ -154,50 +173,50 @@ public class CrashlyticsReportJsonTransform8 {
                     strNextName2.hashCode();
                     switch (strNextName2.hashCode()) {
                         case -1708606089:
-                            c2 = !strNextName2.equals("batteryLevel") ? (char) 65535 : (char) 0;
+                            b3 = !strNextName2.equals("batteryLevel") ? (byte) -1 : (byte) 0;
                             break;
                         case -1455558134:
                             if (strNextName2.equals("batteryVelocity")) {
-                                c2 = 1;
+                                b3 = 1;
                                 break;
                             }
                             break;
                         case -1439500848:
                             if (strNextName2.equals("orientation")) {
-                                c2 = 2;
+                                b3 = 2;
                                 break;
                             }
                             break;
                         case 279795450:
                             if (strNextName2.equals("diskUsed")) {
-                                c2 = 3;
+                                b3 = 3;
                                 break;
                             }
                             break;
                         case 976541947:
                             if (strNextName2.equals("ramUsed")) {
-                                c2 = 4;
+                                b3 = 4;
                                 break;
                             }
                             break;
                         case 1516795582:
                             if (strNextName2.equals("proximityOn")) {
-                                c2 = 5;
+                                b3 = 5;
                                 break;
                             }
                             break;
                     }
-                    if (c2 == 0) {
+                    if (b3 == 0) {
                         bVar.f12635a = Double.valueOf(jsonReader.nextDouble());
-                    } else if (c2 == 1) {
+                    } else if (b3 == 1) {
                         bVar.f12636b = Integer.valueOf(jsonReader.nextInt());
-                    } else if (c2 == 2) {
+                    } else if (b3 == 2) {
                         bVar.f12638d = Integer.valueOf(jsonReader.nextInt());
-                    } else if (c2 == 3) {
+                    } else if (b3 == 3) {
                         bVar.f12640f = Long.valueOf(jsonReader.nextLong());
-                    } else if (c2 == 4) {
+                    } else if (b3 == 4) {
                         bVar.f12639e = Long.valueOf(jsonReader.nextLong());
-                    } else if (c2 != 5) {
+                    } else if (b3 != 5) {
                         jsonReader.skipValue();
                     } else {
                         bVar.f12637c = Boolean.valueOf(jsonReader.nextBoolean());
@@ -205,76 +224,76 @@ public class CrashlyticsReportJsonTransform8 {
                 }
                 jsonReader.endObject();
                 bVarM6605a = bVar.m6605a();
-            } else if (c == 1) {
+            } else if (b2 == 1) {
                 jsonReader.beginObject();
-                AutoValue_CrashlyticsReport_Session_Event_Application_Execution autoValue_CrashlyticsReport_Session_Event_Application_Execution = numValueOf;
-                ImmutableList3 immutableList3M6614a = autoValue_CrashlyticsReport_Session_Event_Application_Execution;
-                Boolean boolValueOf = immutableList3M6614a;
+                ?? autoValue_CrashlyticsReport_Session_Event_Application_Execution = ValueOf;
+                ?? M6614a = autoValue_CrashlyticsReport_Session_Event_Application_Execution;
+                ?? ValueOf2 = M6614a;
                 while (true) {
-                    char c6 = 3;
+                    char c = 3;
                     if (jsonReader.hasNext()) {
                         String strNextName3 = jsonReader.nextName();
                         strNextName3.hashCode();
                         switch (strNextName3.hashCode()) {
                             case -1332194002:
-                                c3 = !strNextName3.equals("background") ? (char) 65535 : (char) 0;
+                                b4 = !strNextName3.equals("background") ? (byte) -1 : (byte) 0;
                                 break;
                             case -1090974952:
                                 if (strNextName3.equals("execution")) {
-                                    c3 = 1;
+                                    b4 = 1;
                                     break;
                                 }
                                 break;
                             case 555169704:
                                 if (strNextName3.equals("customAttributes")) {
-                                    c3 = 2;
+                                    b4 = 2;
                                     break;
                                 }
                                 break;
                             case 928737948:
                                 if (strNextName3.equals("uiOrientation")) {
-                                    c3 = 3;
+                                    b4 = 3;
                                     break;
                                 }
                                 break;
                         }
-                        if (c3 == 0) {
-                            boolValueOf = Boolean.valueOf(jsonReader.nextBoolean());
-                        } else if (c3 == 1) {
+                        if (b4 == 0) {
+                            ValueOf2 = Boolean.valueOf(jsonReader.nextBoolean());
+                        } else if (b4 == 1) {
                             jsonReader.beginObject();
                             CrashlyticsReport.d.AbstractC13233d.a.b.AbstractC13236b abstractC13236bM6616c = null;
                             AutoValue_CrashlyticsReport_Session_Event_Application_Execution_Signal autoValue_CrashlyticsReport_Session_Event_Application_Execution_Signal = null;
+                            ImmutableList3 immutableList3M6614a = null;
                             ImmutableList3 immutableList3M6614a2 = null;
-                            ImmutableList3 immutableList3M6614a3 = null;
                             while (jsonReader.hasNext()) {
                                 String strNextName4 = jsonReader.nextName();
                                 strNextName4.hashCode();
                                 switch (strNextName4.hashCode()) {
                                     case -1337936983:
-                                        c4 = !strNextName4.equals("threads") ? (char) 65535 : (char) 0;
+                                        b5 = !strNextName4.equals("threads") ? (byte) -1 : (byte) 0;
                                         break;
                                     case -902467928:
                                         if (strNextName4.equals("signal")) {
-                                            c4 = 1;
+                                            b5 = 1;
                                             break;
                                         }
                                         break;
                                     case 937615455:
                                         if (strNextName4.equals("binaries")) {
-                                            c4 = 2;
+                                            b5 = 2;
                                             break;
                                         }
                                         break;
                                     case 1481625679:
                                         if (strNextName4.equals("exception")) {
-                                            c4 = 3;
+                                            b5 = 3;
                                             break;
                                         }
                                         break;
                                 }
-                                if (c4 == 0) {
-                                    immutableList3M6614a3 = m6614a(jsonReader, CrashlyticsReportJsonTransform4.f12652a);
-                                } else if (c4 == 1) {
+                                if (b5 == 0) {
+                                    immutableList3M6614a2 = m6614a(jsonReader, CrashlyticsReportJsonTransform4.f12652a);
+                                } else if (b5 == 1) {
                                     jsonReader.beginObject();
                                     Long lValueOf2 = null;
                                     String str2 = null;
@@ -285,20 +304,20 @@ public class CrashlyticsReportJsonTransform8 {
                                         int iHashCode = strNextName5.hashCode();
                                         if (iHashCode != -1147692044) {
                                             if (iHashCode != 3059181) {
-                                                c5 = (iHashCode == 3373707 && strNextName5.equals(ModelAuditLogEntry.CHANGE_KEY_NAME)) ? (char) 2 : (char) 65535;
+                                                b6 = (iHashCode == 3373707 && strNextName5.equals(ModelAuditLogEntry.CHANGE_KEY_NAME)) ? (byte) 2 : (byte) -1;
                                             } else if (strNextName5.equals(ModelAuditLogEntry.CHANGE_KEY_CODE)) {
-                                                c5 = 1;
+                                                b6 = 1;
                                             }
                                         } else if (strNextName5.equals("address")) {
-                                            c5 = 0;
+                                            b6 = 0;
                                         }
-                                        if (c5 == 0) {
+                                        if (b6 == 0) {
                                             lValueOf2 = Long.valueOf(jsonReader.nextLong());
-                                        } else if (c5 == 1) {
+                                        } else if (b6 == 1) {
                                             String strNextString = jsonReader.nextString();
                                             Objects.requireNonNull(strNextString, "Null code");
                                             str3 = strNextString;
-                                        } else if (c5 != 2) {
+                                        } else if (b6 != 2) {
                                             jsonReader.skipValue();
                                         } else {
                                             String strNextString2 = jsonReader.nextString();
@@ -318,83 +337,83 @@ public class CrashlyticsReportJsonTransform8 {
                                         throw new IllegalStateException(outline.m883w("Missing required properties:", strM883w2));
                                     }
                                     autoValue_CrashlyticsReport_Session_Event_Application_Execution_Signal = new AutoValue_CrashlyticsReport_Session_Event_Application_Execution_Signal(str2, str3, lValueOf2.longValue(), null);
-                                } else if (c4 == 2) {
-                                    immutableList3M6614a2 = m6614a(jsonReader, CrashlyticsReportJsonTransform5.f12653a);
-                                } else if (c4 != c6) {
+                                } else if (b5 == 2) {
+                                    immutableList3M6614a = m6614a(jsonReader, CrashlyticsReportJsonTransform5.f12653a);
+                                } else if (b5 != c) {
                                     jsonReader.skipValue();
                                 } else {
                                     abstractC13236bM6616c = m6616c(jsonReader);
                                 }
-                                c6 = 3;
+                                c = 3;
                             }
                             jsonReader.endObject();
-                            String strM883w3 = immutableList3M6614a3 == null ? " threads" : "";
+                            String strM883w3 = immutableList3M6614a2 == null ? " threads" : "";
                             if (abstractC13236bM6616c == null) {
                                 strM883w3 = outline.m883w(strM883w3, " exception");
                             }
                             if (autoValue_CrashlyticsReport_Session_Event_Application_Execution_Signal == null) {
                                 strM883w3 = outline.m883w(strM883w3, " signal");
                             }
-                            if (immutableList3M6614a2 == null) {
+                            if (immutableList3M6614a == null) {
                                 strM883w3 = outline.m883w(strM883w3, " binaries");
                             }
                             if (!strM883w3.isEmpty()) {
                                 throw new IllegalStateException(outline.m883w("Missing required properties:", strM883w3));
                             }
-                            autoValue_CrashlyticsReport_Session_Event_Application_Execution = new AutoValue_CrashlyticsReport_Session_Event_Application_Execution(immutableList3M6614a3, abstractC13236bM6616c, autoValue_CrashlyticsReport_Session_Event_Application_Execution_Signal, immutableList3M6614a2, null);
-                        } else if (c3 == 2) {
-                            immutableList3M6614a = m6614a(jsonReader, CrashlyticsReportJsonTransform3.f12651a);
-                        } else if (c3 != 3) {
+                            autoValue_CrashlyticsReport_Session_Event_Application_Execution = new AutoValue_CrashlyticsReport_Session_Event_Application_Execution(immutableList3M6614a2, abstractC13236bM6616c, autoValue_CrashlyticsReport_Session_Event_Application_Execution_Signal, immutableList3M6614a, null);
+                        } else if (b4 == 2) {
+                            M6614a = m6614a(jsonReader, CrashlyticsReportJsonTransform3.f12651a);
+                        } else if (b4 != 3) {
                             jsonReader.skipValue();
                         } else {
-                            numValueOf = Integer.valueOf(jsonReader.nextInt());
+                            ValueOf = Integer.valueOf(jsonReader.nextInt());
                         }
                     } else {
                         jsonReader.endObject();
-                        strM883w = autoValue_CrashlyticsReport_Session_Event_Application_Execution == null ? " execution" : "";
-                        if (numValueOf == 0) {
+                        strM883w = autoValue_CrashlyticsReport_Session_Event_Application_Execution == 0 ? " execution" : "";
+                        if (ValueOf == 0) {
                             strM883w = outline.m883w(strM883w, " uiOrientation");
                         }
                         if (!strM883w.isEmpty()) {
                             throw new IllegalStateException(outline.m883w("Missing required properties:", strM883w));
                         }
-                        autoValue_CrashlyticsReport_Session_Event_Application = new AutoValue_CrashlyticsReport_Session_Event_Application(autoValue_CrashlyticsReport_Session_Event_Application_Execution, immutableList3M6614a, boolValueOf, numValueOf.intValue(), null);
+                        autoValue_CrashlyticsReport_Session_Event_Application = new AutoValue_CrashlyticsReport_Session_Event_Application(autoValue_CrashlyticsReport_Session_Event_Application_Execution, M6614a, ValueOf2, ValueOf.intValue(), null);
                     }
                 }
-            } else if (c == 2) {
+            } else if (b2 == 2) {
                 jsonReader.beginObject();
-                String strNextString3 = numValueOf;
+                ?? NextString = ValueOf;
                 while (jsonReader.hasNext()) {
                     String strNextName6 = jsonReader.nextName();
                     strNextName6.hashCode();
                     if (strNextName6.equals("content")) {
-                        strNextString3 = jsonReader.nextString();
-                        Objects.requireNonNull(strNextString3, "Null content");
+                        NextString = jsonReader.nextString();
+                        Objects.requireNonNull(NextString, "Null content");
                     } else {
                         jsonReader.skipValue();
                     }
                 }
                 jsonReader.endObject();
-                strM883w = strNextString3 == null ? " content" : "";
+                strM883w = NextString == 0 ? " content" : "";
                 if (!strM883w.isEmpty()) {
                     throw new IllegalStateException(outline.m883w("Missing required properties:", strM883w));
                 }
-                autoValue_CrashlyticsReport_Session_Event_Log = new AutoValue_CrashlyticsReport_Session_Event_Log(strNextString3, numValueOf);
-            } else if (c == 3) {
-                String strNextString4 = jsonReader.nextString();
-                Objects.requireNonNull(strNextString4, "Null type");
-                str = strNextString4;
-            } else if (c != 4) {
+                autoValue_CrashlyticsReport_Session_Event_Log = new AutoValue_CrashlyticsReport_Session_Event_Log(NextString, ValueOf);
+            } else if (b2 == 3) {
+                String strNextString3 = jsonReader.nextString();
+                Objects.requireNonNull(strNextString3, "Null type");
+                str = strNextString3;
+            } else if (b2 != 4) {
                 jsonReader.skipValue();
             } else {
                 lValueOf = Long.valueOf(jsonReader.nextLong());
             }
-            numValueOf = 0;
+            ValueOf = 0;
         }
     }
 
     @NonNull
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public static CrashlyticsReport.d.AbstractC13233d.a.b.AbstractC13236b m6616c(@NonNull JsonReader jsonReader) throws IOException {
         jsonReader.beginObject();
         Integer numValueOf = null;
@@ -443,7 +462,7 @@ public class CrashlyticsReportJsonTransform8 {
     }
 
     @NonNull
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public static CrashlyticsReport.d.AbstractC13233d.a.b.AbstractC13237d.AbstractC13238a m6617d(@NonNull JsonReader jsonReader) throws IOException {
         AutoValue_CrashlyticsReport_Session_Event_Application_Execution_Thread_Frame.b bVar = new AutoValue_CrashlyticsReport_Session_Event_Application_Execution_Thread_Frame.b();
         jsonReader.beginObject();
@@ -480,22 +499,30 @@ public class CrashlyticsReportJsonTransform8 {
     /* JADX WARN: Can't fix incorrect switch cases order, some code will duplicate */
     /* JADX WARN: Failed to restore switch over string. Please report as a decompilation issue */
     /* JADX WARN: Removed duplicated region for block: B:149:0x021a A[PHI: r17
-      0x021a: PHI (r17v15 java.lang.String) = (r17v10 java.lang.String), (r17v11 java.lang.String), (r17v12 java.lang.String), (r17v16 java.lang.String) binds: [B:146:0x0215, B:142:0x020a, B:138:0x01fd, B:123:0x01d5] A[DONT_GENERATE, DONT_INLINE]] */
+      0x021a: PHI (r17v18 java.lang.String) = 
+      (r17v10 java.lang.String)
+      (r17v11 java.lang.String)
+      (r17v12 java.lang.String)
+      (r17v13 java.lang.String)
+      (r17v14 java.lang.String)
+      (r17v16 java.lang.String)
+      (r17v19 java.lang.String)
+     binds: [B:146:0x0215, B:142:0x020a, B:138:0x01fd, B:414:?, B:413:?, B:412:?, B:123:0x01d5] A[DONT_GENERATE, DONT_INLINE]] */
     /* JADX WARN: Removed duplicated region for block: B:202:0x02dc  */
     /* JADX WARN: Removed duplicated region for block: B:273:0x03e9  */
     /* JADX WARN: Removed duplicated region for block: B:40:0x007a  */
     /* JADX WARN: Removed duplicated region for block: B:94:0x012b  */
     @NonNull
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
     public static CrashlyticsReport m6618e(@NonNull JsonReader jsonReader) throws IOException {
-        char c;
+        byte b2;
         String str;
-        char c2;
+        byte b3;
         String str2;
-        char c3;
+        byte b4;
         Charset charset = CrashlyticsReport.f12647a;
         AutoValue_CrashlyticsReport.b bVar = new AutoValue_CrashlyticsReport.b();
         jsonReader.beginObject();
@@ -504,53 +531,53 @@ public class CrashlyticsReportJsonTransform8 {
             strNextName.hashCode();
             switch (strNextName.hashCode()) {
                 case -2118372775:
-                    c = !strNextName.equals("ndkPayload") ? (char) 65535 : (char) 0;
+                    b2 = !strNextName.equals("ndkPayload") ? (byte) -1 : (byte) 0;
                     break;
                 case -1962630338:
                     if (strNextName.equals("sdkVersion")) {
-                        c = 1;
+                        b2 = 1;
                         break;
                     }
                     break;
                 case -911706486:
                     if (strNextName.equals("buildVersion")) {
-                        c = 2;
+                        b2 = 2;
                         break;
                     }
                     break;
                 case 344431858:
                     if (strNextName.equals("gmpAppId")) {
-                        c = 3;
+                        b2 = 3;
                         break;
                     }
                     break;
                 case 719853845:
                     if (strNextName.equals("installationUuid")) {
-                        c = 4;
+                        b2 = 4;
                         break;
                     }
                     break;
                 case 1874684019:
                     if (strNextName.equals("platform")) {
-                        c = 5;
+                        b2 = 5;
                         break;
                     }
                     break;
                 case 1975623094:
                     if (strNextName.equals("displayVersion")) {
-                        c = 6;
+                        b2 = 6;
                         break;
                     }
                     break;
                 case 1984987798:
                     if (strNextName.equals("session")) {
-                        c = 7;
+                        b2 = 7;
                         break;
                     }
                     break;
             }
             String str3 = "";
-            switch (c) {
+            switch (b2) {
                 case 0:
                     jsonReader.beginObject();
                     String strNextString = null;
@@ -692,38 +719,38 @@ public class CrashlyticsReportJsonTransform8 {
                                     strNextName5.hashCode();
                                     switch (strNextName5.hashCode()) {
                                         case -911706486:
-                                            c2 = !strNextName5.equals("buildVersion") ? (char) 65535 : (char) 0;
+                                            b3 = !strNextName5.equals("buildVersion") ? (byte) -1 : (byte) 0;
                                             break;
                                         case -293026577:
                                             if (strNextName5.equals("jailbroken")) {
-                                                c2 = 1;
+                                                b3 = 1;
                                                 break;
                                             }
                                             break;
                                         case 351608024:
                                             if (strNextName5.equals("version")) {
-                                                c2 = 2;
+                                                b3 = 2;
                                                 break;
                                             }
                                             break;
                                         case 1874684019:
                                             if (strNextName5.equals("platform")) {
-                                                c2 = 3;
+                                                b3 = 3;
                                                 break;
                                             }
                                             break;
                                     }
-                                    if (c2 == 0) {
+                                    if (b3 == 0) {
                                         String strNextString10 = jsonReader.nextString();
                                         Objects.requireNonNull(strNextString10, "Null buildVersion");
                                         str6 = strNextString10;
-                                    } else if (c2 == 1) {
+                                    } else if (b3 == 1) {
                                         boolValueOf = Boolean.valueOf(jsonReader.nextBoolean());
-                                    } else if (c2 == 2) {
+                                    } else if (b3 == 2) {
                                         String strNextString11 = jsonReader.nextString();
                                         Objects.requireNonNull(strNextString11, "Null version");
                                         str5 = strNextString11;
-                                    } else if (c2 != 3) {
+                                    } else if (b3 != 3) {
                                         jsonReader.skipValue();
                                     } else {
                                         numValueOf = Integer.valueOf(jsonReader.nextInt());
@@ -761,62 +788,65 @@ public class CrashlyticsReportJsonTransform8 {
                                     switch (strNextName6.hashCode()) {
                                         case -1618432855:
                                             str2 = str3;
-                                            c3 = !strNextName6.equals("identifier") ? (char) 65535 : (char) 0;
+                                            b4 = !strNextName6.equals("identifier") ? (byte) -1 : (byte) 0;
                                             break;
                                         case -519438642:
                                             str2 = str3;
                                             if (strNextName6.equals("developmentPlatform")) {
-                                                c3 = 1;
+                                                b4 = 1;
                                                 break;
                                             }
                                             break;
                                         case 213652010:
                                             str2 = str3;
                                             if (strNextName6.equals("developmentPlatformVersion")) {
-                                                c3 = 2;
+                                                b4 = 2;
                                                 break;
                                             }
                                             break;
                                         case 351608024:
-                                            if (strNextName6.equals("version")) {
-                                                c3 = 3;
+                                            if (!strNextName6.equals("version")) {
+                                                str2 = str3;
+                                            } else {
+                                                b4 = 3;
                                                 str2 = str3;
                                             }
-                                            str2 = str3;
                                             break;
                                         case 719853845:
-                                            if (strNextName6.equals("installationUuid")) {
-                                                c3 = 4;
+                                            if (!strNextName6.equals("installationUuid")) {
+                                                str2 = str3;
+                                            } else {
+                                                b4 = 4;
                                                 str2 = str3;
                                             }
-                                            str2 = str3;
                                             break;
                                         case 1975623094:
-                                            if (strNextName6.equals("displayVersion")) {
-                                                c3 = 5;
+                                            if (!strNextName6.equals("displayVersion")) {
+                                                str2 = str3;
+                                            } else {
+                                                b4 = 5;
                                                 str2 = str3;
                                             }
-                                            str2 = str3;
                                             break;
                                         default:
                                             str2 = str3;
                                             break;
                                     }
-                                    if (c3 == 0) {
+                                    if (b4 == 0) {
                                         String strNextString16 = jsonReader.nextString();
                                         Objects.requireNonNull(strNextString16, "Null identifier");
                                         str7 = strNextString16;
-                                    } else if (c3 == 1) {
+                                    } else if (b4 == 1) {
                                         strNextString14 = jsonReader.nextString();
-                                    } else if (c3 == 2) {
+                                    } else if (b4 == 2) {
                                         strNextString15 = jsonReader.nextString();
-                                    } else if (c3 == 3) {
+                                    } else if (b4 == 3) {
                                         String strNextString17 = jsonReader.nextString();
                                         Objects.requireNonNull(strNextString17, "Null version");
                                         str8 = strNextString17;
-                                    } else if (c3 == 4) {
+                                    } else if (b4 == 4) {
                                         strNextString13 = jsonReader.nextString();
-                                    } else if (c3 != 5) {
+                                    } else if (b4 != 5) {
                                         jsonReader.skipValue();
                                     } else {
                                         strNextString12 = jsonReader.nextString();
@@ -896,7 +926,7 @@ public class CrashlyticsReportJsonTransform8 {
     }
 
     @NonNull
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public CrashlyticsReport m6619f(@NonNull String str) throws IOException {
         try {
             JsonReader jsonReader = new JsonReader(new StringReader(str));
@@ -917,7 +947,7 @@ public class CrashlyticsReportJsonTransform8 {
     }
 
     @NonNull
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public String m6620g(@NonNull CrashlyticsReport crashlyticsReport) {
         return ((JsonDataEncoderBuilder4) f12656a).m6711a(crashlyticsReport);
     }

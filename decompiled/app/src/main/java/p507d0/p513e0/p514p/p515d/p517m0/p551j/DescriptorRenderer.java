@@ -1,8 +1,8 @@
 package p507d0.p513e0.p514p.p515d.p517m0.p551j;
 
-/* compiled from: DescriptorRenderer.kt */
-/* renamed from: d0.e0.p.d.m0.j.a, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.j.a, reason: use source file name */
+/* JADX INFO: compiled from: DescriptorRenderer.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public enum DescriptorRenderer {
     NO_ARGUMENTS(false, false, 3),
     UNLESS_EMPTY(true, false, 2),
@@ -16,7 +16,7 @@ public enum DescriptorRenderer {
         this.includeEmptyAnnotationArguments = z3;
     }
 
-    /* renamed from: values, reason: to resolve conflict with enum method */
+    /* JADX INFO: renamed from: values, reason: to resolve conflict with enum method */
     public static DescriptorRenderer[] valuesCustom() {
         DescriptorRenderer[] descriptorRendererArrValuesCustom = values();
         DescriptorRenderer[] descriptorRendererArr = new DescriptorRenderer[descriptorRendererArrValuesCustom.length];

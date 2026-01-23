@@ -12,12 +12,12 @@ import p007b.p225i.p226a.p242c.p259f3.Util2;
 import p007b.p225i.p226a.p242c.p278y2.AsynchronousMediaCodecAdapter;
 import p007b.p225i.p226a.p242c.p278y2.MediaCodecAdapter;
 
-/* compiled from: DefaultMediaCodecAdapterFactory.java */
-/* renamed from: b.i.a.c.y2.r, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.y2.r, reason: use source file name */
+/* JADX INFO: compiled from: DefaultMediaCodecAdapterFactory.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class DefaultMediaCodecAdapterFactory implements MediaCodecAdapter.b {
     @Override // p007b.p225i.p226a.p242c.p278y2.MediaCodecAdapter.b
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public MediaCodecAdapter mo3845a(MediaCodecAdapter.a aVar) throws Throwable {
         MediaCodec mediaCodecCreateByCodecName;
         String string;

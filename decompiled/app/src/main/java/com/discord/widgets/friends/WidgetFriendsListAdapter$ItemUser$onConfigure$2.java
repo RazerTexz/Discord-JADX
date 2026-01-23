@@ -4,8 +4,8 @@ import android.view.View;
 import com.discord.widgets.friends.FriendsListViewModel;
 import com.discord.widgets.friends.WidgetFriendsListAdapter;
 
-/* compiled from: WidgetFriendsListAdapter.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetFriendsListAdapter.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetFriendsListAdapter$ItemUser$onConfigure$2 implements View.OnClickListener {
     public final /* synthetic */ FriendsListViewModel.Item.Friend $item;
     public final /* synthetic */ WidgetFriendsListAdapter.ItemUser this$0;

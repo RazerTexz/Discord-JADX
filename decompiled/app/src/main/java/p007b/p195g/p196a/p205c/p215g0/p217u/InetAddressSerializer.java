@@ -13,9 +13,9 @@ import p007b.p195g.p196a.p205c.SerializerProvider;
 import p007b.p195g.p196a.p205c.p212e0.TypeSerializer;
 import p007b.p195g.p196a.p205c.p215g0.ContextualSerializer;
 
-/* compiled from: InetAddressSerializer.java */
-/* renamed from: b.g.a.c.g0.u.p, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.g.a.c.g0.u.p, reason: use source file name */
+/* JADX INFO: compiled from: InetAddressSerializer.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class InetAddressSerializer extends StdScalarSerializer<InetAddress> implements ContextualSerializer {
     public final boolean _asNumeric;
 
@@ -26,7 +26,7 @@ public class InetAddressSerializer extends StdScalarSerializer<InetAddress> impl
 
     /* JADX WARN: Removed duplicated region for block: B:9:0x0018  */
     @Override // p007b.p195g.p196a.p205c.p215g0.ContextualSerializer
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
@@ -41,13 +41,13 @@ public class InetAddressSerializer extends StdScalarSerializer<InetAddress> impl
     }
 
     @Override // p007b.p195g.p196a.p205c.JsonSerializer
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public /* bridge */ /* synthetic */ void mo1807f(Object obj, JsonGenerator jsonGenerator, SerializerProvider serializerProvider) throws IOException {
         m2070p((InetAddress) obj, jsonGenerator);
     }
 
     @Override // p007b.p195g.p196a.p205c.p215g0.p217u.StdScalarSerializer, p007b.p195g.p196a.p205c.JsonSerializer
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public void mo1808g(Object obj, JsonGenerator jsonGenerator, SerializerProvider serializerProvider, TypeSerializer typeSerializer) throws IOException {
         InetAddress inetAddress = (InetAddress) obj;
         WritableTypeId writableTypeIdM1958d = typeSerializer.m1958d(inetAddress, JsonToken2.VALUE_STRING);
@@ -57,7 +57,7 @@ public class InetAddressSerializer extends StdScalarSerializer<InetAddress> impl
         typeSerializer.mo1960f(jsonGenerator, writableTypeIdMo1959e);
     }
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public void m2070p(InetAddress inetAddress, JsonGenerator jsonGenerator) throws IOException {
         String strTrim;
         if (this._asNumeric) {

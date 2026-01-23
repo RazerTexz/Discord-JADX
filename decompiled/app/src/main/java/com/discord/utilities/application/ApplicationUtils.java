@@ -8,8 +8,8 @@ import com.discord.models.domain.ModelAuditLogEntry;
 import kotlin.jvm.functions.Function1;
 import p507d0.p580t._Arrays;
 
-/* compiled from: ApplicationUtils.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: ApplicationUtils.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class ApplicationUtils {
     public static final ApplicationUtils INSTANCE = new ApplicationUtils();
 

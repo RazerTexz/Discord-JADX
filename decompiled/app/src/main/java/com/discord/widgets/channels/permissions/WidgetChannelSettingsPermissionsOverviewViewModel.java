@@ -5,18 +5,18 @@ import p007b.p008a.p018d.AppViewModel;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: WidgetChannelSettingsPermissionsOverviewViewModel.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetChannelSettingsPermissionsOverviewViewModel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetChannelSettingsPermissionsOverviewViewModel extends AppViewModel<ViewState> {
     private final long channelId;
 
-    /* compiled from: WidgetChannelSettingsPermissionsOverviewViewModel.kt */
+    /* JADX INFO: compiled from: WidgetChannelSettingsPermissionsOverviewViewModel.kt */
     public enum Tab {
         MODERATOR,
         ADVANCED
     }
 
-    /* compiled from: WidgetChannelSettingsPermissionsOverviewViewModel.kt */
+    /* JADX INFO: compiled from: WidgetChannelSettingsPermissionsOverviewViewModel.kt */
     public static final /* data */ class ViewState {
         private final List<Tab> availableTabs;
         private final Tab selectedTab;
@@ -40,7 +40,7 @@ public final class WidgetChannelSettingsPermissionsOverviewViewModel extends App
             return viewState.copy(tab, list);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final Tab getSelectedTab() {
             return this.selectedTab;
         }

@@ -10,15 +10,15 @@ import p507d0.p513e0.p514p.p515d.p517m0.p562l.p563b.p564d0.BuiltInSerializerProt
 import p507d0.p513e0.p514p.p515d.p517m0.p562l.p563b.p564d0.BuiltInsResourceLoader;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ReflectKotlinClassFinder.kt */
-/* renamed from: d0.e0.p.d.m0.c.k1.a.g, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.c.k1.a.g, reason: use source file name */
+/* JADX INFO: compiled from: ReflectKotlinClassFinder.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class ReflectKotlinClassFinder implements KotlinClassFinder {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final ClassLoader f23018a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final BuiltInsResourceLoader f23019b;
 
     public ReflectKotlinClassFinder(ClassLoader classLoader) {
@@ -27,7 +27,7 @@ public final class ReflectKotlinClassFinder implements KotlinClassFinder {
         this.f23019b = new BuiltInsResourceLoader();
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final KotlinClassFinder.a m9435a(String str) {
         ReflectKotlinClass2 reflectKotlinClass2Create;
         Class<?> clsTryLoadClass = ReflectJavaClassFinder2.tryLoadClass(this.f23018a, str);

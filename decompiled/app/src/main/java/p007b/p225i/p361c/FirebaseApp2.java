@@ -52,61 +52,61 @@ import p007b.p225i.p361c.p396q.Event3;
 import p007b.p225i.p361c.p396q.EventHandler2;
 import p007b.p225i.p361c.p405v.DataCollectionConfigStorage;
 
-/* compiled from: FirebaseApp.java */
-/* renamed from: b.i.c.c, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.c.c, reason: use source file name */
+/* JADX INFO: compiled from: FirebaseApp.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class FirebaseApp2 {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final Object f12115a = new Object();
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static final Executor f12116b = new d(null);
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public static final Map<String, FirebaseApp2> f12117c = new ArrayMap();
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final Context f12118d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final String f12119e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final FirebaseOptions f12120f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public final ComponentRuntime4 f12121g;
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final Lazy2<DataCollectionConfigStorage> f12124j;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public final AtomicBoolean f12122h = new AtomicBoolean(false);
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public final AtomicBoolean f12123i = new AtomicBoolean();
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final List<b> f12125k = new CopyOnWriteArrayList();
 
-    /* compiled from: FirebaseApp.java */
-    /* renamed from: b.i.c.c$b */
+    /* JADX INFO: renamed from: b.i.c.c$b */
+    /* JADX INFO: compiled from: FirebaseApp.java */
     public interface b {
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         void m6335a(boolean z2);
     }
 
-    /* compiled from: FirebaseApp.java */
+    /* JADX INFO: renamed from: b.i.c.c$c */
+    /* JADX INFO: compiled from: FirebaseApp.java */
     @TargetApi(14)
-    /* renamed from: b.i.c.c$c */
     public static class c implements ComponentCallbacks2C3281c.a {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public static AtomicReference<c> f12126a = new AtomicReference<>();
 
         @Override // p007b.p225i.p226a.p288f.p299e.p300h.p301j.ComponentCallbacks2C3281c.a
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public void mo4066a(boolean z2) {
             Object obj = FirebaseApp2.f12115a;
             synchronized (FirebaseApp2.f12115a) {
@@ -123,11 +123,11 @@ public class FirebaseApp2 {
         }
     }
 
-    /* compiled from: FirebaseApp.java */
-    /* renamed from: b.i.c.c$d */
+    /* JADX INFO: renamed from: b.i.c.c$d */
+    /* JADX INFO: compiled from: FirebaseApp.java */
     public static class d implements Executor {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public static final Handler f12127j = new Handler(Looper.getMainLooper());
 
         public d(a aVar) {
@@ -139,15 +139,15 @@ public class FirebaseApp2 {
         }
     }
 
-    /* compiled from: FirebaseApp.java */
+    /* JADX INFO: renamed from: b.i.c.c$e */
+    /* JADX INFO: compiled from: FirebaseApp.java */
     @TargetApi(24)
-    /* renamed from: b.i.c.c$e */
     public static class e extends BroadcastReceiver {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public static AtomicReference<e> f12128a = new AtomicReference<>();
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final Context f12129b;
 
         public e(Context context) {
@@ -245,7 +245,7 @@ public class FirebaseApp2 {
     }
 
     @NonNull
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static FirebaseApp2 m6327b() {
         FirebaseApp2 firebaseApp2;
         synchronized (f12115a) {
@@ -258,7 +258,7 @@ public class FirebaseApp2 {
     }
 
     @Nullable
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public static FirebaseApp2 m6328e(@NonNull Context context) {
         synchronized (f12115a) {
             if (f12117c.containsKey("[DEFAULT]")) {
@@ -274,7 +274,7 @@ public class FirebaseApp2 {
     }
 
     @NonNull
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public static FirebaseApp2 m6329f(@NonNull Context context, @NonNull FirebaseOptions firebaseOptions) {
         FirebaseApp2 firebaseApp2;
         AtomicReference<c> atomicReference = c.f12126a;
@@ -306,12 +306,12 @@ public class FirebaseApp2 {
         return firebaseApp2;
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final void m6330a() {
         AnimatableValueParser.m435G(!this.f12123i.get(), "FirebaseApp was deleted");
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public String m6331c() {
         StringBuilder sb = new StringBuilder();
         m6330a();
@@ -324,7 +324,7 @@ public class FirebaseApp2 {
         return sb.toString();
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final void m6332d() {
         Queue<Event3<?>> queue;
         Set<Map.Entry<EventHandler2<Object>, Executor>> setEmptySet;
@@ -402,7 +402,7 @@ public class FirebaseApp2 {
         return str.equals(firebaseApp2.f12119e);
     }
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public boolean m6333g() {
         boolean z2;
         m6330a();
@@ -414,7 +414,7 @@ public class FirebaseApp2 {
     }
 
     @VisibleForTesting
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public boolean m6334h() {
         m6330a();
         return "[DEFAULT]".equals(this.f12119e);

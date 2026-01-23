@@ -6,8 +6,8 @@ import kotlin.jvm.internal.DefaultConstructorMarker;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ApplicationCommandValue.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: ApplicationCommandValue.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final /* data */ class ApplicationCommandValue {
     private final Boolean focused;
     private final String name;
@@ -24,6 +24,7 @@ public final /* data */ class ApplicationCommandValue {
         this.focused = bool;
     }
 
+    /* JADX WARN: Multi-variable type inference failed */
     public static /* synthetic */ ApplicationCommandValue copy$default(ApplicationCommandValue applicationCommandValue, String str, Object obj, int i, List list, Boolean bool, int i2, Object obj2) {
         if ((i2 & 1) != 0) {
             str = applicationCommandValue.name;
@@ -46,17 +47,17 @@ public final /* data */ class ApplicationCommandValue {
         return applicationCommandValue.copy(str, obj3, i3, list2, bool);
     }
 
-    /* renamed from: component1, reason: from getter */
+    /* JADX INFO: renamed from: component1, reason: from getter */
     public final String getName() {
         return this.name;
     }
 
-    /* renamed from: component2, reason: from getter */
+    /* JADX INFO: renamed from: component2, reason: from getter */
     public final Object getValue() {
         return this.value;
     }
 
-    /* renamed from: component3, reason: from getter */
+    /* JADX INFO: renamed from: component3, reason: from getter */
     public final int getType() {
         return this.type;
     }
@@ -65,7 +66,7 @@ public final /* data */ class ApplicationCommandValue {
         return this.options;
     }
 
-    /* renamed from: component5, reason: from getter */
+    /* JADX INFO: renamed from: component5, reason: from getter */
     public final Boolean getFocused() {
         return this.focused;
     }

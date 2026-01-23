@@ -10,14 +10,14 @@ import androidx.annotation.Nullable;
 import androidx.viewbinding.ViewBinding;
 import com.discord.C5419R;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public final class ViewGuildRoleSubscriptionSectionHeaderItemBinding implements ViewBinding {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     @NonNull
     public final LinearLayout f15491a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     @NonNull
     public final TextView f15492b;
 
@@ -27,7 +27,7 @@ public final class ViewGuildRoleSubscriptionSectionHeaderItemBinding implements 
     }
 
     @NonNull
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static ViewGuildRoleSubscriptionSectionHeaderItemBinding m8399a(@NonNull LayoutInflater layoutInflater, @Nullable ViewGroup viewGroup, boolean z2) {
         View viewInflate = layoutInflater.inflate(C5419R.layout.view_guild_role_subscription_section_header_item, viewGroup, false);
         if (z2) {

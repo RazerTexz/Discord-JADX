@@ -3,9 +3,9 @@ package com.discord.widgets.guilds.create;
 import kotlin.jvm.functions.Function0;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetGuildCreate.kt */
-/* renamed from: com.discord.widgets.guilds.create.WidgetGuildCreate$viewModel$2, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.guilds.create.WidgetGuildCreate$viewModel$2, reason: use source file name */
+/* JADX INFO: compiled from: WidgetGuildCreate.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetGuildCreate4 extends Lambda implements Function0<WidgetGuildCreateViewModel> {
     public final /* synthetic */ WidgetGuildCreate this$0;
 

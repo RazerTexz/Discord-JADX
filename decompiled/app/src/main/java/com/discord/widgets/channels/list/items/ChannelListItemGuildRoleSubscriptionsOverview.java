@@ -1,8 +1,8 @@
 package com.discord.widgets.channels.list.items;
 
 
-/* compiled from: ChannelListItemGuildRoleSubscriptionsOverview.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: ChannelListItemGuildRoleSubscriptionsOverview.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class ChannelListItemGuildRoleSubscriptionsOverview implements ChannelListItem {
     public static final ChannelListItemGuildRoleSubscriptionsOverview INSTANCE;
     private static final String key;

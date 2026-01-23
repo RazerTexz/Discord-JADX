@@ -25,18 +25,18 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 import p658rx.functions.Action1;
 
-/* compiled from: WidgetSettingsActivityStatus.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetSettingsActivityStatus.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetSettingsActivityStatus extends AppFragment {
     public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetSettingsActivityStatus.class, "binding", "getBinding()Lcom/discord/databinding/WidgetSettingsActivityStatusBinding;", 0)};
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
 
-    /* renamed from: binding$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
 
-    /* compiled from: WidgetSettingsActivityStatus.kt */
+    /* JADX INFO: compiled from: WidgetSettingsActivityStatus.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -51,8 +51,8 @@ public final class WidgetSettingsActivityStatus extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetSettingsActivityStatus.kt */
-    /* renamed from: com.discord.widgets.settings.WidgetSettingsActivityStatus$configureUI$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.WidgetSettingsActivityStatus$configureUI$1 */
+    /* JADX INFO: compiled from: WidgetSettingsActivityStatus.kt */
     public static final class C96251<T> implements Action1<Boolean> {
         public C96251() {
         }
@@ -62,7 +62,7 @@ public final class WidgetSettingsActivityStatus extends AppFragment {
             call2(bool);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final void call2(Boolean bool) {
             StoreUserSettings userSettings = StoreStream.INSTANCE.getUserSettings();
             AppActivity appActivity = WidgetSettingsActivityStatus.this.getAppActivity();
@@ -71,8 +71,8 @@ public final class WidgetSettingsActivityStatus extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetSettingsActivityStatus.kt */
-    /* renamed from: com.discord.widgets.settings.WidgetSettingsActivityStatus$onViewBoundOrOnResume$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.WidgetSettingsActivityStatus$onViewBoundOrOnResume$1 */
+    /* JADX INFO: compiled from: WidgetSettingsActivityStatus.kt */
     public static final class C96261 extends Lambda implements Function1<Boolean, Unit> {
         public C96261() {
             super(1);

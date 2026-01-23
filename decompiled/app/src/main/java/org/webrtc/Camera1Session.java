@@ -15,7 +15,7 @@ import p617h0.p628c.C12454c;
 import p617h0.p628c.CameraSession2;
 import p617h0.p628c.RunnableC12452b;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public class Camera1Session implements CameraSession {
     private static final int NUMBER_OF_CAPTURE_BUFFERS = 3;
     private static final String TAG = "Camera1Session";
@@ -35,7 +35,7 @@ public class Camera1Session implements CameraSession {
     private static final Histogram camera1StopTimeMsHistogram = Histogram.createCounts("WebRTC.Android.Camera1.StopTimeMs", 1, 10000, 50);
     private static final Histogram camera1ResolutionHistogram = Histogram.createEnumeration("WebRTC.Android.Camera1.Resolution", CameraEnumerationAndroid.COMMON_RESOLUTIONS.size());
 
-    /* renamed from: org.webrtc.Camera1Session$1 */
+    /* JADX INFO: renamed from: org.webrtc.Camera1Session$1 */
     public class C129451 implements Camera.ErrorCallback {
         public C129451() {
         }
@@ -53,7 +53,7 @@ public class Camera1Session implements CameraSession {
         }
     }
 
-    /* renamed from: org.webrtc.Camera1Session$2 */
+    /* JADX INFO: renamed from: org.webrtc.Camera1Session$2 */
     public class C129462 implements Camera.PreviewCallback {
         public C129462() {
         }
@@ -300,7 +300,7 @@ public class Camera1Session implements CameraSession {
         camera.setParameters(parameters);
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public /* synthetic */ void m11014a(VideoFrame videoFrame) {
         lambda$listenForTextureFrames$0(videoFrame);
     }

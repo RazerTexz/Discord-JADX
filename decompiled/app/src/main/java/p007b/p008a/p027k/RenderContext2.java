@@ -7,9 +7,9 @@ import kotlin.jvm.functions.Function2;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: RenderContext.kt */
-/* renamed from: b.a.k.d, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.a.k.d, reason: use source file name */
+/* JADX INFO: compiled from: RenderContext.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class RenderContext2 extends Lambda implements Function2<String, View, Unit> {
     public final /* synthetic */ RenderContext.C5526a this$0;
 

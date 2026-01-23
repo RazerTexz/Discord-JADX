@@ -4,8 +4,8 @@ import java.util.List;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: MemberVerificationItemMultipleChoice.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: MemberVerificationItemMultipleChoice.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final /* data */ class MemberVerificationItemMultipleChoice implements MemberVerificationItem {
     private final List<String> choices;
     private final int fieldIndex;
@@ -39,7 +39,7 @@ public final /* data */ class MemberVerificationItemMultipleChoice implements Me
         return memberVerificationItemMultipleChoice.copy(i, list, num);
     }
 
-    /* renamed from: component1, reason: from getter */
+    /* JADX INFO: renamed from: component1, reason: from getter */
     public final int getFieldIndex() {
         return this.fieldIndex;
     }
@@ -48,7 +48,7 @@ public final /* data */ class MemberVerificationItemMultipleChoice implements Me
         return this.choices;
     }
 
-    /* renamed from: component3, reason: from getter */
+    /* JADX INFO: renamed from: component3, reason: from getter */
     public final Integer getResponse() {
         return this.response;
     }

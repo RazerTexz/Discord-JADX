@@ -7,8 +7,8 @@ import kotlin.jvm.functions.Function3;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: Rules.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: Rules.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class Rules$createCustomEmojiRule$1$parse$emojiNode$1 extends Lambda implements Function3<Boolean, Integer, Context, String> {
     public final /* synthetic */ long $emojiId;
     public final /* synthetic */ boolean $isAnimated;

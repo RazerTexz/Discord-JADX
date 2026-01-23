@@ -9,7 +9,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.C0051R;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class AppCompatRatingBar extends RatingBar {
     private final AppCompatProgressBarHelper mAppCompatProgressBarHelper;
 

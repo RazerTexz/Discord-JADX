@@ -6,8 +6,8 @@ import kotlin.Unit;
 import kotlin.jvm.functions.Function0;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetFriendsListAdapter.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetFriendsListAdapter.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetFriendsListAdapter$ItemSuggestedFriend$onConfigure$2 extends Lambda implements Function0<Unit> {
     public final /* synthetic */ FriendsListViewModel.Item $data;
     public final /* synthetic */ WidgetFriendsListAdapter.ItemSuggestedFriend this$0;
@@ -25,7 +25,7 @@ public final class WidgetFriendsListAdapter$ItemSuggestedFriend$onConfigure$2 ex
         return Unit.f27425a;
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final void invoke2() {
         WidgetFriendsListAdapter.ItemSuggestedFriend.access$getAdapter$p(this.this$0).getOnClickApproveSuggestion().invoke(((FriendsListViewModel.Item.SuggestedFriend) this.$data).getSuggestion().getUser());
     }

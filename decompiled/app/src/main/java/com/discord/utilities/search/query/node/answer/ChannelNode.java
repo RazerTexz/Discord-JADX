@@ -12,8 +12,8 @@ import p507d0.p580t.SetsJVM;
 import p507d0.p580t._Collections;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ChannelNode.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: ChannelNode.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final /* data */ class ChannelNode extends AnswerNode {
     private final String channelName;
 
@@ -29,7 +29,7 @@ public final /* data */ class ChannelNode extends AnswerNode {
         return channelNode.copy(str);
     }
 
-    /* renamed from: component1, reason: from getter */
+    /* JADX INFO: renamed from: component1, reason: from getter */
     public final String getChannelName() {
         return this.channelName;
     }

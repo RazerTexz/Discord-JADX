@@ -11,9 +11,9 @@ import p507d0.p580t.Maps6;
 import p507d0.p592z.p594d.Intrinsics3;
 import p658rx.functions.Func3;
 
-/* compiled from: WidgetChatListModelMessages.kt */
-/* renamed from: com.discord.widgets.chat.list.model.WidgetChatListModelMessages$MessagesWithMetadata$Companion$get$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.chat.list.model.WidgetChatListModelMessages$MessagesWithMetadata$Companion$get$1, reason: use source file name */
+/* JADX INFO: compiled from: WidgetChatListModelMessages.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetChatListModelMessages5<T1, T2, T3, R> implements Func3<Map<Long, ? extends StoreMessageState.State>, Map<Long, ? extends Channel>, Map<Long, ? extends StoreThreadMessages.ThreadState>, WidgetChatListModelMessages.MessagesWithMetadata> {
     public final /* synthetic */ List $messages;
 
@@ -26,7 +26,7 @@ public final class WidgetChatListModelMessages5<T1, T2, T3, R> implements Func3<
         return call2((Map<Long, StoreMessageState.State>) map, (Map<Long, Channel>) map2, (Map<Long, StoreThreadMessages.ThreadState>) map3);
     }
 
-    /* renamed from: call, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
     public final WidgetChatListModelMessages.MessagesWithMetadata call2(Map<Long, StoreMessageState.State> map, Map<Long, Channel> map2, Map<Long, StoreThreadMessages.ThreadState> map3) {
         List list = this.$messages;
         Intrinsics3.checkNotNullExpressionValue(map, "messageState");

@@ -9,7 +9,7 @@ import androidx.constraintlayout.widget.C0201R;
 import androidx.constraintlayout.widget.ConstraintHelper;
 import androidx.constraintlayout.widget.ConstraintLayout;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class Layer extends ConstraintHelper {
     private static final String TAG = "Layer";
     private boolean mApplyElevationOnAttach;

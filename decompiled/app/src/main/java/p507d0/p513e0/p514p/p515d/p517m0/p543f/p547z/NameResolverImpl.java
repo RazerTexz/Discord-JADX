@@ -10,15 +10,15 @@ import p507d0.p513e0.p514p.p515d.p517m0.p543f.C11691p;
 import p507d0.p580t._Collections;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: NameResolverImpl.kt */
-/* renamed from: d0.e0.p.d.m0.f.z.d, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.f.z.d, reason: use source file name */
+/* JADX INFO: compiled from: NameResolverImpl.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class NameResolverImpl implements NameResolver {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final C11691p f24059a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final C11690o f24060b;
 
     public NameResolverImpl(C11691p c11691p, C11690o c11690o) {
@@ -28,7 +28,7 @@ public final class NameResolverImpl implements NameResolver {
         this.f24060b = c11690o;
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final Tuples3<List<String>, List<String>, Boolean> m9815a(int i) {
         LinkedList linkedList = new LinkedList();
         LinkedList linkedList2 = new LinkedList();

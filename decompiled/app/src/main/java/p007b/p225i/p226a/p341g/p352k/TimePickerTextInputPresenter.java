@@ -21,43 +21,43 @@ import com.google.android.material.timepicker.TimePickerView;
 import java.util.Locale;
 import java.util.Objects;
 
-/* compiled from: TimePickerTextInputPresenter.java */
-/* renamed from: b.i.a.g.k.i, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.g.k.i, reason: use source file name */
+/* JADX INFO: compiled from: TimePickerTextInputPresenter.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class TimePickerTextInputPresenter implements TimePickerView.InterfaceC11031d, TimePickerPresenter {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final LinearLayout f11877j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final TimeModel f11878k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final TextWatcher f11879l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public final TextWatcher f11880m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public final ChipTextInputComboView f11881n;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public final ChipTextInputComboView f11882o;
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public final TimePickerTextInputKeyController f11883p;
 
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     public final EditText f11884q;
 
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     public final EditText f11885r;
 
-    /* renamed from: s */
+    /* JADX INFO: renamed from: s */
     public MaterialButtonToggleGroup f11886s;
 
-    /* compiled from: TimePickerTextInputPresenter.java */
-    /* renamed from: b.i.a.g.k.i$a */
+    /* JADX INFO: renamed from: b.i.a.g.k.i$a */
+    /* JADX INFO: compiled from: TimePickerTextInputPresenter.java */
     public class a extends TextWatcherAdapter {
         public a() {
         }
@@ -80,8 +80,8 @@ public class TimePickerTextInputPresenter implements TimePickerView.InterfaceC11
         }
     }
 
-    /* compiled from: TimePickerTextInputPresenter.java */
-    /* renamed from: b.i.a.g.k.i$b */
+    /* JADX INFO: renamed from: b.i.a.g.k.i$b */
+    /* JADX INFO: compiled from: TimePickerTextInputPresenter.java */
     public class b extends TextWatcherAdapter {
         public b() {
         }
@@ -99,8 +99,8 @@ public class TimePickerTextInputPresenter implements TimePickerView.InterfaceC11
         }
     }
 
-    /* compiled from: TimePickerTextInputPresenter.java */
-    /* renamed from: b.i.a.g.k.i$c */
+    /* JADX INFO: renamed from: b.i.a.g.k.i$c */
+    /* JADX INFO: compiled from: TimePickerTextInputPresenter.java */
     public class c implements View.OnClickListener {
         public c() {
         }
@@ -166,13 +166,13 @@ public class TimePickerTextInputPresenter implements TimePickerView.InterfaceC11
     }
 
     @Override // p007b.p225i.p226a.p341g.p352k.TimePickerPresenter
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public void mo6171a() {
         m6179d(this.f11878k);
     }
 
     @Override // com.google.android.material.timepicker.TimePickerView.InterfaceC11031d
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public void mo6172b(int i) {
         this.f11878k.f21225o = i;
         this.f11881n.setChecked(i == 12);
@@ -181,7 +181,7 @@ public class TimePickerTextInputPresenter implements TimePickerView.InterfaceC11
     }
 
     @Override // p007b.p225i.p226a.p341g.p352k.TimePickerPresenter
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public void mo6173c() {
         View focusedChild = this.f11877j.getFocusedChild();
         if (focusedChild == null) {
@@ -195,7 +195,7 @@ public class TimePickerTextInputPresenter implements TimePickerView.InterfaceC11
         this.f11877j.setVisibility(8);
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final void m6179d(TimeModel timeModel) {
         this.f11884q.removeTextChangedListener(this.f11880m);
         this.f11885r.removeTextChangedListener(this.f11879l);
@@ -209,7 +209,7 @@ public class TimePickerTextInputPresenter implements TimePickerView.InterfaceC11
         m6180e();
     }
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final void m6180e() {
         MaterialButtonToggleGroup materialButtonToggleGroup = this.f11886s;
         if (materialButtonToggleGroup == null) {

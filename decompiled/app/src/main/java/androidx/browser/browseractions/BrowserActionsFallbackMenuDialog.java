@@ -9,14 +9,14 @@ import android.view.MotionEvent;
 import android.view.View;
 import androidx.interpolator.view.animation.LinearOutSlowInInterpolator;
 
+/* JADX INFO: loaded from: classes.dex */
 @Deprecated
-/* loaded from: classes.dex */
 public class BrowserActionsFallbackMenuDialog extends Dialog {
     private static final long ENTER_ANIMATION_DURATION_MS = 250;
     private static final long EXIT_ANIMATION_DURATION_MS = 150;
     private final View mContentView;
 
-    /* renamed from: androidx.browser.browseractions.BrowserActionsFallbackMenuDialog$1 */
+    /* JADX INFO: renamed from: androidx.browser.browseractions.BrowserActionsFallbackMenuDialog$1 */
     public class C01461 extends AnimatorListenerAdapter {
         public final /* synthetic */ boolean val$isEnterAnimation;
 

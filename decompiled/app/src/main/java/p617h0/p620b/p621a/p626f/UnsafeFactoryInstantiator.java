@@ -5,15 +5,15 @@ import org.objenesis.ObjenesisException;
 import p617h0.p620b.p621a.ObjectInstantiator;
 import sun.misc.Unsafe;
 
-/* compiled from: UnsafeFactoryInstantiator.java */
-/* renamed from: h0.b.a.f.b, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: h0.b.a.f.b, reason: use source file name */
+/* JADX INFO: compiled from: UnsafeFactoryInstantiator.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class UnsafeFactoryInstantiator<T> implements ObjectInstantiator<T> {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static Unsafe f26400a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final Class<T> f26401b;
 
     public UnsafeFactoryInstantiator(Class<T> cls) {

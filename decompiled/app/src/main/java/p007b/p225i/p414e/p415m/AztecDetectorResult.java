@@ -4,18 +4,18 @@ import p007b.p225i.p414e.ResultPoint;
 import p007b.p225i.p414e.p418n.BitMatrix;
 import p007b.p225i.p414e.p418n.DetectorResult;
 
-/* compiled from: AztecDetectorResult.java */
-/* renamed from: b.i.e.m.a, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.e.m.a, reason: use source file name */
+/* JADX INFO: compiled from: AztecDetectorResult.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class AztecDetectorResult extends DetectorResult {
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final boolean f13209c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final int f13210d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final int f13211e;
 
     public AztecDetectorResult(BitMatrix bitMatrix, ResultPoint[] resultPointArr, boolean z2, int i, int i2) {

@@ -21,24 +21,24 @@ import p659s.p660a.p661a.DispatchedContinuation;
 import p659s.p660a.p661a.DispatchedContinuation2;
 import p659s.p660a.p661a.Symbol3;
 
-/* compiled from: CancellableContinuationImpl.kt */
-/* renamed from: s.a.l, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: s.a.l, reason: use source file name */
+/* JADX INFO: compiled from: CancellableContinuationImpl.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public class CancellableContinuationImpl5<T> extends DispatchedTask<T> implements CancellableContinuation<T>, CoroutineStackFrame {
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public static final AtomicIntegerFieldUpdater f27869m = AtomicIntegerFieldUpdater.newUpdater(CancellableContinuationImpl5.class, "_decision");
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public static final AtomicReferenceFieldUpdater f27870n = AtomicReferenceFieldUpdater.newUpdater(CancellableContinuationImpl5.class, Object.class, "_state");
     public volatile int _decision;
     public volatile Object _parentHandle;
     public volatile Object _state;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public final CoroutineContext f27871o;
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public final Continuation<T> f27872p;
 
     /* JADX WARN: Multi-variable type inference failed */
@@ -67,7 +67,7 @@ public class CancellableContinuationImpl5<T> extends DispatchedTask<T> implement
     
         r0 = true;
      */
-    /* renamed from: A */
+    /* JADX INFO: renamed from: A */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
@@ -113,7 +113,7 @@ public class CancellableContinuationImpl5<T> extends DispatchedTask<T> implement
         this._parentHandle = Job3.f27880j;
     }
 
-    /* renamed from: B */
+    /* JADX INFO: renamed from: B */
     public final Symbol3 m11319B(Object obj, Object obj2, Function1<? super Throwable, Unit> function1) {
         Object obj3;
         do {
@@ -130,13 +130,13 @@ public class CancellableContinuationImpl5<T> extends DispatchedTask<T> implement
     }
 
     @Override // kotlinx.coroutines.CancellableContinuation
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public boolean mo10900a() {
         return this._state instanceof CancellableContinuationImpl7;
     }
 
     @Override // p659s.p660a.DispatchedTask
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public void mo11145b(Object obj, Throwable th) {
         while (true) {
             Object obj2 = this._state;
@@ -170,19 +170,19 @@ public class CancellableContinuationImpl5<T> extends DispatchedTask<T> implement
     }
 
     @Override // kotlinx.coroutines.CancellableContinuation
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public Object mo10901c(T t, Object obj) {
         return m11319B(t, obj, null);
     }
 
     @Override // p659s.p660a.DispatchedTask
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final Continuation<T> mo11146d() {
         return this.f27872p;
     }
 
     @Override // p659s.p660a.DispatchedTask
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public Throwable mo11315e(Object obj) {
         Throwable thMo11315e = super.mo11315e(obj);
         if (thMo11315e != null) {
@@ -192,7 +192,7 @@ public class CancellableContinuationImpl5<T> extends DispatchedTask<T> implement
     }
 
     @Override // kotlinx.coroutines.CancellableContinuation
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public void mo10902f(Function1<? super Throwable, Unit> function1) {
         CancellableContinuationImpl4 cancellableContinuationImpl = function1 instanceof CancellableContinuationImpl4 ? (CancellableContinuationImpl4) function1 : new CancellableContinuationImpl(function1);
         while (true) {
@@ -253,7 +253,7 @@ public class CancellableContinuationImpl5<T> extends DispatchedTask<T> implement
     }
 
     @Override // kotlinx.coroutines.CancellableContinuation
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public Object mo10903g(Throwable th) {
         return m11319B(new CompletionState2(th, false, 2), null, null);
     }
@@ -264,13 +264,13 @@ public class CancellableContinuationImpl5<T> extends DispatchedTask<T> implement
     }
 
     @Override // kotlinx.coroutines.CancellableContinuation
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public Object mo10904h(T t, Object obj, Function1<? super Throwable, Unit> function1) {
         return m11319B(t, null, function1);
     }
 
     @Override // kotlinx.coroutines.CancellableContinuation
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public void mo10905i(CoroutineDispatcher coroutineDispatcher, T t) {
         Continuation<T> continuation = this.f27872p;
         if (!(continuation instanceof DispatchedContinuation)) {
@@ -282,13 +282,13 @@ public class CancellableContinuationImpl5<T> extends DispatchedTask<T> implement
 
     /* JADX WARN: Multi-variable type inference failed */
     @Override // p659s.p660a.DispatchedTask
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public <T> T mo11316j(Object obj) {
         return obj instanceof CancellableContinuationImpl8 ? (T) ((CancellableContinuationImpl8) obj).f27906a : obj;
     }
 
     @Override // kotlinx.coroutines.CancellableContinuation
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public boolean mo10906k(Throwable th) {
         Object obj;
         boolean z2;
@@ -312,12 +312,12 @@ public class CancellableContinuationImpl5<T> extends DispatchedTask<T> implement
     }
 
     @Override // p659s.p660a.DispatchedTask
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public Object mo11147m() {
         return this._state;
     }
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public final void m11320n(Function1<? super Throwable, Unit> function1, Throwable th) {
         try {
             function1.invoke(th);
@@ -326,7 +326,7 @@ public class CancellableContinuationImpl5<T> extends DispatchedTask<T> implement
         }
     }
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public final void m11321o(CancellableContinuationImpl4 cancellableContinuationImpl4, Throwable th) {
         try {
             cancellableContinuationImpl4.mo11193a(th);
@@ -335,7 +335,7 @@ public class CancellableContinuationImpl5<T> extends DispatchedTask<T> implement
         }
     }
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public final void m11322p(Function1<? super Throwable, Unit> function1, Throwable th) {
         try {
             function1.invoke(th);
@@ -344,7 +344,7 @@ public class CancellableContinuationImpl5<T> extends DispatchedTask<T> implement
         }
     }
 
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     public final void m11323q() {
         Job2 job2 = (Job2) this._parentHandle;
         if (job2 != null) {
@@ -354,7 +354,7 @@ public class CancellableContinuationImpl5<T> extends DispatchedTask<T> implement
     }
 
     @Override // kotlinx.coroutines.CancellableContinuation
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     public void mo10907r(Object obj) {
         m11325t(this.f27864l);
     }
@@ -368,7 +368,7 @@ public class CancellableContinuationImpl5<T> extends DispatchedTask<T> implement
         m11330y(obj, this.f27864l, null);
     }
 
-    /* renamed from: s */
+    /* JADX INFO: renamed from: s */
     public final void m11324s() {
         if (m11328w()) {
             return;
@@ -377,7 +377,7 @@ public class CancellableContinuationImpl5<T> extends DispatchedTask<T> implement
     }
 
     /* JADX WARN: Finally extract failed */
-    /* renamed from: t */
+    /* JADX INFO: renamed from: t */
     public final void m11325t(int i) {
         boolean z2;
         while (true) {
@@ -431,7 +431,7 @@ public class CancellableContinuationImpl5<T> extends DispatchedTask<T> implement
         return "CancellableContinuation(" + C3404f.m4341s1(this.f27872p) + "){" + this._state + "}@" + C3404f.m4312l0(this);
     }
 
-    /* renamed from: u */
+    /* JADX INFO: renamed from: u */
     public final Object m11326u() {
         boolean z2;
         Job job;
@@ -463,12 +463,12 @@ public class CancellableContinuationImpl5<T> extends DispatchedTask<T> implement
         throw cancellationExceptionMo10914q;
     }
 
-    /* renamed from: v */
+    /* JADX INFO: renamed from: v */
     public boolean m11327v() {
         return !(this._state instanceof CancellableContinuationImpl7);
     }
 
-    /* renamed from: w */
+    /* JADX INFO: renamed from: w */
     public final boolean m11328w() {
         Continuation<T> continuation = this.f27872p;
         if (!(continuation instanceof DispatchedContinuation)) {
@@ -478,12 +478,12 @@ public class CancellableContinuationImpl5<T> extends DispatchedTask<T> implement
         return obj != null && (!(obj instanceof CancellableContinuationImpl5) || obj == this);
     }
 
-    /* renamed from: x */
+    /* JADX INFO: renamed from: x */
     public final void m11329x(Function1<? super Throwable, Unit> function1, Object obj) {
         throw new IllegalStateException(("It's prohibited to register multiple handlers, tried to register " + function1 + ", already has " + obj).toString());
     }
 
-    /* renamed from: y */
+    /* JADX INFO: renamed from: y */
     public final void m11330y(Object obj, int i, Function1<? super Throwable, Unit> function1) {
         Object obj2;
         do {
@@ -507,7 +507,7 @@ public class CancellableContinuationImpl5<T> extends DispatchedTask<T> implement
         m11325t(i);
     }
 
-    /* renamed from: z */
+    /* JADX INFO: renamed from: z */
     public final Object m11331z(CancellableContinuationImpl7 cancellableContinuationImpl7, Object obj, int i, Function1<? super Throwable, Unit> function1, Object obj2) {
         if (obj instanceof CompletionState2) {
             return obj;

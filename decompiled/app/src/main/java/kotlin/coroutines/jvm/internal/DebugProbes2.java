@@ -6,9 +6,9 @@ import kotlin.jvm.internal.Intrinsics;
 import kotlinx.coroutines.debug.internal.DebugProbesImpl;
 import org.jetbrains.annotations.NotNull;
 
-/* compiled from: DebugProbes.kt */
-/* renamed from: kotlin.coroutines.jvm.internal.DebugProbesKt, reason: use source file name */
-/* loaded from: discord-126021.apk:DebugProbesKt.bin */
+/* JADX INFO: renamed from: kotlin.coroutines.jvm.internal.DebugProbesKt, reason: use source file name */
+/* JADX INFO: compiled from: DebugProbes.kt */
+/* JADX INFO: loaded from: discord-126021.apk:DebugProbesKt.bin */
 public final class DebugProbes2 {
     @NotNull
     public static final <T> Continuation<T> probeCoroutineCreated(@NotNull Continuation<? super T> continuation) {

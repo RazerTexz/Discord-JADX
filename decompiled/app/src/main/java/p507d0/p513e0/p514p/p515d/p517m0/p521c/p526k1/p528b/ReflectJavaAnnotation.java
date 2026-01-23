@@ -15,12 +15,12 @@ import p507d0.p513e0.p514p.p515d.p517m0.p548g.Name;
 import p507d0.p592z.JvmClassMapping;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ReflectJavaAnnotation.kt */
-/* renamed from: d0.e0.p.d.m0.c.k1.b.c, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.c.k1.b.c, reason: use source file name */
+/* JADX INFO: compiled from: ReflectJavaAnnotation.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class ReflectJavaAnnotation extends ReflectJavaElement implements InterfaceC11564a {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final Annotation f23038a;
 
     public ReflectJavaAnnotation(Annotation annotation) {
@@ -37,7 +37,7 @@ public final class ReflectJavaAnnotation extends ReflectJavaElement implements I
     }
 
     @Override // p507d0.p513e0.p514p.p515d.p517m0.p531e.p532a.p539k0.InterfaceC11564a
-    public Collection<annotationArguments> getArguments() throws IllegalAccessException, SecurityException, IllegalArgumentException, InvocationTargetException {
+    public Collection<annotationArguments> getArguments() throws IllegalAccessException, InvocationTargetException {
         Method[] declaredMethods = JvmClassMapping.getJavaClass(JvmClassMapping.getAnnotationClass(this.f23038a)).getDeclaredMethods();
         Intrinsics3.checkNotNullExpressionValue(declaredMethods, "annotation.annotationClass.java.declaredMethods");
         ArrayList arrayList = new ArrayList(declaredMethods.length);

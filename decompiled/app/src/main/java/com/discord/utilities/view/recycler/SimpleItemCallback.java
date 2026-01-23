@@ -6,8 +6,8 @@ import androidx.recyclerview.widget.DiffUtil;
 import kotlin.jvm.functions.Function1;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: SimpleItemCallback.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: SimpleItemCallback.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class SimpleItemCallback<T> extends DiffUtil.ItemCallback<T> {
     private final Function1<T, Object> idGenerator;
 

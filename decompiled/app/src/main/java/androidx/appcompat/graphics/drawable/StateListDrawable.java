@@ -19,9 +19,9 @@ import java.io.IOException;
 import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserException;
 
+/* JADX INFO: loaded from: classes.dex */
 @SuppressLint({"RestrictedAPI"})
 @RestrictTo({RestrictTo.Scope.LIBRARY_GROUP_PREFIX})
-/* loaded from: classes.dex */
 public class StateListDrawable extends DrawableContainer {
     private static final boolean DEBUG = false;
     private static final String TAG = "StateListDrawable";

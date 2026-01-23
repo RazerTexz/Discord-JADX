@@ -5,9 +5,9 @@ import android.view.MenuItem;
 import java.util.Iterator;
 import kotlin.sequences.Sequence;
 
-/* compiled from: Menu.kt */
-/* renamed from: androidx.core.view.MenuKt$children$1, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: androidx.core.view.MenuKt$children$1, reason: use source file name */
+/* JADX INFO: compiled from: Menu.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class Menu3 implements Sequence<MenuItem> {
     public final /* synthetic */ Menu $this_children;
 

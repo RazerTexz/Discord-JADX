@@ -8,22 +8,22 @@ import java.lang.ref.WeakReference;
 import java.util.concurrent.Executor;
 import java.util.regex.Pattern;
 
-/* compiled from: com.google.firebase:firebase-messaging@@21.0.0 */
-/* renamed from: b.i.c.w.w */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.c.w.w */
+/* JADX INFO: compiled from: com.google.firebase:firebase-messaging@@21.0.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public final class C4885w {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     @GuardedBy("TopicsStore.class")
     public static WeakReference<C4885w> f13050a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final SharedPreferences f13051b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public C4883u f13052c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final Executor f13053d;
 
     public C4885w(SharedPreferences sharedPreferences, Executor executor) {
@@ -32,7 +32,7 @@ public final class C4885w {
     }
 
     @Nullable
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final synchronized C4884v m6829a() {
         String strPeek;
         C4884v c4884v;

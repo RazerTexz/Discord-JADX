@@ -4,9 +4,9 @@ import com.discord.api.botuikit.SelectComponent2;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: SelectComponentBottomSheetAdapter.kt */
-/* renamed from: com.discord.widgets.botuikit.views.select.SelectComponentBottomSheetItem, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.botuikit.views.select.SelectComponentBottomSheetItem, reason: use source file name */
+/* JADX INFO: compiled from: SelectComponentBottomSheetAdapter.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final /* data */ class SelectComponentBottomSheetAdapter2 {
     private final SelectComponent2 selectItem;
     private final boolean selected;
@@ -27,12 +27,12 @@ public final /* data */ class SelectComponentBottomSheetAdapter2 {
         return selectComponentBottomSheetAdapter2.copy(selectComponent2, z2);
     }
 
-    /* renamed from: component1, reason: from getter */
+    /* JADX INFO: renamed from: component1, reason: from getter */
     public final SelectComponent2 getSelectItem() {
         return this.selectItem;
     }
 
-    /* renamed from: component2, reason: from getter */
+    /* JADX INFO: renamed from: component2, reason: from getter */
     public final boolean getSelected() {
         return this.selected;
     }
@@ -62,15 +62,18 @@ public final /* data */ class SelectComponentBottomSheetAdapter2 {
     }
 
     /* JADX WARN: Multi-variable type inference failed */
+    /* JADX WARN: Type inference failed for: r1v1, types: [int] */
+    /* JADX WARN: Type inference failed for: r1v2 */
+    /* JADX WARN: Type inference failed for: r1v3 */
     public int hashCode() {
         SelectComponent2 selectComponent2 = this.selectItem;
         int iHashCode = (selectComponent2 != null ? selectComponent2.hashCode() : 0) * 31;
         boolean z2 = this.selected;
-        int i = z2;
-        if (z2 != 0) {
-            i = 1;
+        ?? r1 = z2;
+        if (z2) {
+            r1 = 1;
         }
-        return iHashCode + i;
+        return iHashCode + r1;
     }
 
     public String toString() {

@@ -3,9 +3,9 @@ package com.discord.widgets.servers.creator_monetization_eligibility;
 import kotlin.jvm.functions.Function0;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: CreatorMonetizationCountryAllowlist.kt */
-/* renamed from: com.discord.widgets.servers.creator_monetization_eligibility.CreatorMonetizationCountryAllowlist$Companion$INSTANCE$2, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.servers.creator_monetization_eligibility.CreatorMonetizationCountryAllowlist$Companion$INSTANCE$2, reason: use source file name */
+/* JADX INFO: compiled from: CreatorMonetizationCountryAllowlist.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class CreatorMonetizationCountryAllowlist2 extends Lambda implements Function0<CreatorMonetizationCountryAllowlist> {
     public static final CreatorMonetizationCountryAllowlist2 INSTANCE = new CreatorMonetizationCountryAllowlist2();
 

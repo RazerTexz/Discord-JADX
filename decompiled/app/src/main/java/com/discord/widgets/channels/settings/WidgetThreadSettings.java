@@ -52,21 +52,21 @@ import p658rx.Observable;
 import p658rx.functions.Action1;
 import p658rx.functions.Action2;
 
-/* compiled from: WidgetThreadSettings.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetThreadSettings.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetThreadSettings extends AppFragment {
     public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetThreadSettings.class, "binding", "getBinding()Lcom/discord/databinding/WidgetThreadSettingsBinding;", 0)};
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
 
-    /* renamed from: binding$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
 
-    /* renamed from: viewModel$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: viewModel$delegate, reason: from kotlin metadata */
     private final Lazy viewModel;
 
-    /* compiled from: WidgetThreadSettings.kt */
+    /* JADX INFO: compiled from: WidgetThreadSettings.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -83,8 +83,8 @@ public final class WidgetThreadSettings extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetThreadSettings.kt */
-    /* renamed from: com.discord.widgets.channels.settings.WidgetThreadSettings$configureUI$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.channels.settings.WidgetThreadSettings$configureUI$1 */
+    /* JADX INFO: compiled from: WidgetThreadSettings.kt */
     public static final class C76091<T1, T2> implements Action2<MenuItem, Context> {
         public final /* synthetic */ WidgetThreadSettingsViewModel.ViewState $viewState;
 
@@ -97,7 +97,7 @@ public final class WidgetThreadSettings extends AppFragment {
             call2(menuItem, context);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final void call2(MenuItem menuItem, Context context) {
             Intrinsics3.checkNotNullExpressionValue(menuItem, "menuItem");
             if (menuItem.getItemId() != C5419R.id.menu_channel_settings_delete) {
@@ -107,8 +107,8 @@ public final class WidgetThreadSettings extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetThreadSettings.kt */
-    /* renamed from: com.discord.widgets.channels.settings.WidgetThreadSettings$configureUI$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.channels.settings.WidgetThreadSettings$configureUI$2 */
+    /* JADX INFO: compiled from: WidgetThreadSettings.kt */
     public static final class C76102<T> implements Action1<Menu> {
         public final /* synthetic */ WidgetThreadSettingsViewModel.ViewState $viewState;
 
@@ -121,7 +121,7 @@ public final class WidgetThreadSettings extends AppFragment {
             call2(menu);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final void call2(Menu menu) {
             MenuItem menuItemFindItem = menu.findItem(C5419R.id.menu_channel_settings_delete);
             Intrinsics3.checkNotNullExpressionValue(menuItemFindItem, "it.findItem(R.id.menu_channel_settings_delete)");
@@ -133,8 +133,8 @@ public final class WidgetThreadSettings extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetThreadSettings.kt */
-    /* renamed from: com.discord.widgets.channels.settings.WidgetThreadSettings$configureUI$3 */
+    /* JADX INFO: renamed from: com.discord.widgets.channels.settings.WidgetThreadSettings$configureUI$3 */
+    /* JADX INFO: compiled from: WidgetThreadSettings.kt */
     public static final class ViewOnClickListenerC76113 implements View.OnClickListener {
         public final /* synthetic */ WidgetThreadSettingsViewModel.ViewState $viewState;
 
@@ -148,8 +148,8 @@ public final class WidgetThreadSettings extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetThreadSettings.kt */
-    /* renamed from: com.discord.widgets.channels.settings.WidgetThreadSettings$configureUI$4 */
+    /* JADX INFO: renamed from: com.discord.widgets.channels.settings.WidgetThreadSettings$configureUI$4 */
+    /* JADX INFO: compiled from: WidgetThreadSettings.kt */
     public static final class ViewOnClickListenerC76124 implements View.OnClickListener {
         public static final ViewOnClickListenerC76124 INSTANCE = new ViewOnClickListenerC76124();
 
@@ -160,8 +160,8 @@ public final class WidgetThreadSettings extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetThreadSettings.kt */
-    /* renamed from: com.discord.widgets.channels.settings.WidgetThreadSettings$configureUI$5 */
+    /* JADX INFO: renamed from: com.discord.widgets.channels.settings.WidgetThreadSettings$configureUI$5 */
+    /* JADX INFO: compiled from: WidgetThreadSettings.kt */
     public static final class ViewOnClickListenerC76135 implements View.OnClickListener {
         public ViewOnClickListenerC76135() {
         }
@@ -172,8 +172,8 @@ public final class WidgetThreadSettings extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetThreadSettings.kt */
-    /* renamed from: com.discord.widgets.channels.settings.WidgetThreadSettings$confirmDelete$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.channels.settings.WidgetThreadSettings$confirmDelete$1 */
+    /* JADX INFO: compiled from: WidgetThreadSettings.kt */
     public static final class ViewOnClickListenerC76141 implements View.OnClickListener {
         public final /* synthetic */ AlertDialog $dialog;
 
@@ -187,8 +187,8 @@ public final class WidgetThreadSettings extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetThreadSettings.kt */
-    /* renamed from: com.discord.widgets.channels.settings.WidgetThreadSettings$confirmDelete$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.channels.settings.WidgetThreadSettings$confirmDelete$2 */
+    /* JADX INFO: compiled from: WidgetThreadSettings.kt */
     public static final class ViewOnClickListenerC76152 implements View.OnClickListener {
         public final /* synthetic */ Channel $channel;
 
@@ -202,8 +202,8 @@ public final class WidgetThreadSettings extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetThreadSettings.kt */
-    /* renamed from: com.discord.widgets.channels.settings.WidgetThreadSettings$onViewBound$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.channels.settings.WidgetThreadSettings$onViewBound$1 */
+    /* JADX INFO: compiled from: WidgetThreadSettings.kt */
     public static final class C76161 extends Lambda implements Function1<Editable, Unit> {
         public C76161() {
             super(1);
@@ -215,15 +215,15 @@ public final class WidgetThreadSettings extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Editable editable) {
             Intrinsics3.checkNotNullParameter(editable, "editable");
             WidgetThreadSettings.access$getViewModel$p(WidgetThreadSettings.this).onChannelNameInputChanged(editable.toString());
         }
     }
 
-    /* compiled from: WidgetThreadSettings.kt */
-    /* renamed from: com.discord.widgets.channels.settings.WidgetThreadSettings$onViewBound$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.channels.settings.WidgetThreadSettings$onViewBound$2 */
+    /* JADX INFO: compiled from: WidgetThreadSettings.kt */
     public static final class C76172 extends OnSeekBarChangeListenerAdapter {
         public C76172() {
         }
@@ -243,8 +243,8 @@ public final class WidgetThreadSettings extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetThreadSettings.kt */
-    /* renamed from: com.discord.widgets.channels.settings.WidgetThreadSettings$onViewBoundOrOnResume$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.channels.settings.WidgetThreadSettings$onViewBoundOrOnResume$1 */
+    /* JADX INFO: compiled from: WidgetThreadSettings.kt */
     public static final /* synthetic */ class C76181 extends FunctionReferenceImpl implements Function1<WidgetThreadSettingsViewModel.ViewState, Unit> {
         public C76181(WidgetThreadSettings widgetThreadSettings) {
             super(1, widgetThreadSettings, WidgetThreadSettings.class, "configureUI", "configureUI(Lcom/discord/widgets/channels/settings/WidgetThreadSettingsViewModel$ViewState;)V", 0);
@@ -256,15 +256,15 @@ public final class WidgetThreadSettings extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(WidgetThreadSettingsViewModel.ViewState viewState) {
             Intrinsics3.checkNotNullParameter(viewState, "p1");
             WidgetThreadSettings.access$configureUI((WidgetThreadSettings) this.receiver, viewState);
         }
     }
 
-    /* compiled from: WidgetThreadSettings.kt */
-    /* renamed from: com.discord.widgets.channels.settings.WidgetThreadSettings$onViewBoundOrOnResume$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.channels.settings.WidgetThreadSettings$onViewBoundOrOnResume$2 */
+    /* JADX INFO: compiled from: WidgetThreadSettings.kt */
     public static final /* synthetic */ class C76192 extends FunctionReferenceImpl implements Function1<WidgetThreadSettingsViewModel.Event, Unit> {
         public C76192(WidgetThreadSettings widgetThreadSettings) {
             super(1, widgetThreadSettings, WidgetThreadSettings.class, "handleEvent", "handleEvent(Lcom/discord/widgets/channels/settings/WidgetThreadSettingsViewModel$Event;)V", 0);
@@ -276,7 +276,7 @@ public final class WidgetThreadSettings extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(WidgetThreadSettingsViewModel.Event event) {
             Intrinsics3.checkNotNullParameter(event, "p1");
             WidgetThreadSettings.access$handleEvent((WidgetThreadSettings) this.receiver, event);

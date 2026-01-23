@@ -33,33 +33,33 @@ import p507d0.p592z.p594d.Reflection2;
 import p658rx.Observable;
 import p658rx.subjects.BehaviorSubject;
 
-/* compiled from: WidgetChannelSettingsAddMemberFragment.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetChannelSettingsAddMemberFragment.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetChannelSettingsAddMemberFragment extends AppFragment {
     public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetChannelSettingsAddMemberFragment.class, "binding", "getBinding()Lcom/discord/databinding/WidgetChannelSettingsAddMemberBinding;", 0)};
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private static final String EXTRA_SHOW_ROLES_WITH_GUILD_PERMISSION = "EXTRA_SHOW_ROLES_WITH_GUILD_PERMISSION";
 
-    /* renamed from: adapter$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: adapter$delegate, reason: from kotlin metadata */
     private final Lazy adapter;
 
-    /* renamed from: binding$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
 
-    /* renamed from: channelId$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: channelId$delegate, reason: from kotlin metadata */
     private final Lazy channelId;
     private final BehaviorSubject<String> querySubject;
     private final BehaviorSubject<Map<Long, PermissionOverwrite.Type>> selectedSubject;
 
-    /* renamed from: showRolesWithGuildPermission$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: showRolesWithGuildPermission$delegate, reason: from kotlin metadata */
     private final Lazy showRolesWithGuildPermission;
 
-    /* renamed from: viewModel$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: viewModel$delegate, reason: from kotlin metadata */
     private final Lazy viewModel;
 
-    /* compiled from: WidgetChannelSettingsAddMemberFragment.kt */
+    /* JADX INFO: compiled from: WidgetChannelSettingsAddMemberFragment.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -75,8 +75,8 @@ public final class WidgetChannelSettingsAddMemberFragment extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetChannelSettingsAddMemberFragment.kt */
-    /* renamed from: com.discord.widgets.channels.permissions.WidgetChannelSettingsAddMemberFragment$onViewBoundOrOnResume$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.channels.permissions.WidgetChannelSettingsAddMemberFragment$onViewBoundOrOnResume$1 */
+    /* JADX INFO: compiled from: WidgetChannelSettingsAddMemberFragment.kt */
     public static final class C75241 extends Lambda implements Function1<String, Unit> {
         public C75241() {
             super(1);
@@ -88,7 +88,7 @@ public final class WidgetChannelSettingsAddMemberFragment extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(String str) {
             WidgetChannelSettingsAddMemberFragmentViewModel widgetChannelSettingsAddMemberFragmentViewModelAccess$getViewModel$p = WidgetChannelSettingsAddMemberFragment.access$getViewModel$p(WidgetChannelSettingsAddMemberFragment.this);
             Intrinsics3.checkNotNullExpressionValue(str, "it");
@@ -96,8 +96,8 @@ public final class WidgetChannelSettingsAddMemberFragment extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetChannelSettingsAddMemberFragment.kt */
-    /* renamed from: com.discord.widgets.channels.permissions.WidgetChannelSettingsAddMemberFragment$onViewBoundOrOnResume$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.channels.permissions.WidgetChannelSettingsAddMemberFragment$onViewBoundOrOnResume$2 */
+    /* JADX INFO: compiled from: WidgetChannelSettingsAddMemberFragment.kt */
     public static final class C75252 extends Lambda implements Function1<String, Unit> {
         public C75252() {
             super(1);
@@ -109,15 +109,15 @@ public final class WidgetChannelSettingsAddMemberFragment extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(String str) {
             Intrinsics3.checkNotNullParameter(str, "it");
             WidgetChannelSettingsAddMemberFragment.access$getQuerySubject$p(WidgetChannelSettingsAddMemberFragment.this).onNext(str);
         }
     }
 
-    /* compiled from: WidgetChannelSettingsAddMemberFragment.kt */
-    /* renamed from: com.discord.widgets.channels.permissions.WidgetChannelSettingsAddMemberFragment$onViewBoundOrOnResume$3 */
+    /* JADX INFO: renamed from: com.discord.widgets.channels.permissions.WidgetChannelSettingsAddMemberFragment$onViewBoundOrOnResume$3 */
+    /* JADX INFO: compiled from: WidgetChannelSettingsAddMemberFragment.kt */
     public static final class C75263 extends Lambda implements Function2<Long, PermissionOverwrite.Type, Unit> {
         public C75263() {
             super(2);
@@ -135,8 +135,8 @@ public final class WidgetChannelSettingsAddMemberFragment extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetChannelSettingsAddMemberFragment.kt */
-    /* renamed from: com.discord.widgets.channels.permissions.WidgetChannelSettingsAddMemberFragment$onViewBoundOrOnResume$4 */
+    /* JADX INFO: renamed from: com.discord.widgets.channels.permissions.WidgetChannelSettingsAddMemberFragment$onViewBoundOrOnResume$4 */
+    /* JADX INFO: compiled from: WidgetChannelSettingsAddMemberFragment.kt */
     public static final class C75274 extends Lambda implements Function1<WidgetChannelSettingsAddMemberFragmentViewModel.ViewState, Unit> {
         public C75274() {
             super(1);
@@ -148,7 +148,7 @@ public final class WidgetChannelSettingsAddMemberFragment extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(WidgetChannelSettingsAddMemberFragmentViewModel.ViewState viewState) {
             Intrinsics3.checkNotNullParameter(viewState, "viewState");
             WidgetChannelSettingsAddMemberFragment.access$configureUI(WidgetChannelSettingsAddMemberFragment.this, viewState);

@@ -6,9 +6,9 @@ import java.io.InputStream;
 import java.io.OutputStream;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: IOStreams.kt */
-/* renamed from: d0.y.a, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.y.a, reason: use source file name */
+/* JADX INFO: compiled from: IOStreams.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class IOStreams {
     public static final long copyTo(InputStream inputStream, OutputStream outputStream, int i) throws IOException {
         Intrinsics3.checkNotNullParameter(inputStream, "$this$copyTo");
@@ -18,7 +18,7 @@ public final class IOStreams {
         long j = 0;
         while (i2 >= 0) {
             outputStream.write(bArr, 0, i2);
-            j += i2;
+            j += (long) i2;
             i2 = inputStream.read(bArr);
         }
         return j;

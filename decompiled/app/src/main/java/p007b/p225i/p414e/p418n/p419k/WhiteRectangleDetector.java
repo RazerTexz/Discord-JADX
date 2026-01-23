@@ -5,30 +5,30 @@ import p007b.p225i.p226a.p288f.p299e.p308o.C3404f;
 import p007b.p225i.p414e.ResultPoint;
 import p007b.p225i.p414e.p418n.BitMatrix;
 
-/* compiled from: WhiteRectangleDetector.java */
-/* renamed from: b.i.e.n.k.a, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.e.n.k.a, reason: use source file name */
+/* JADX INFO: compiled from: WhiteRectangleDetector.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class WhiteRectangleDetector {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final BitMatrix f13292a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final int f13293b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final int f13294c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final int f13295d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final int f13296e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final int f13297f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public final int f13298g;
 
     public WhiteRectangleDetector(BitMatrix bitMatrix, int i, int i2, int i3) throws NotFoundException {
@@ -51,7 +51,7 @@ public final class WhiteRectangleDetector {
         }
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final boolean m6956a(int i, int i2, int i3, boolean z2) {
         if (z2) {
             while (i <= i2) {
@@ -71,7 +71,7 @@ public final class WhiteRectangleDetector {
         return false;
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public ResultPoint[] m6957b() throws NotFoundException {
         boolean z2;
         int i = this.f13295d;
@@ -201,7 +201,7 @@ public final class WhiteRectangleDetector {
         return f < ((float) this.f13294c) / 2.0f ? new ResultPoint[]{new ResultPoint(f7 - 1.0f, f8 + 1.0f), new ResultPoint(f3 + 1.0f, f4 + 1.0f), new ResultPoint(f5 - 1.0f, f6 - 1.0f), new ResultPoint(f + 1.0f, f2 - 1.0f)} : new ResultPoint[]{new ResultPoint(f7 + 1.0f, f8 + 1.0f), new ResultPoint(f3 + 1.0f, f4 - 1.0f), new ResultPoint(f5 - 1.0f, f6 + 1.0f), new ResultPoint(f - 1.0f, f2 - 1.0f)};
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final ResultPoint m6958c(float f, float f2, float f3, float f4) {
         int iM4265Z0 = C3404f.m4265Z0(C3404f.m4237Q(f, f2, f3, f4));
         float f5 = iM4265Z0;

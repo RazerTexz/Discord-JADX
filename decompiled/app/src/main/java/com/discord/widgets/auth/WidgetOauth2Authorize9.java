@@ -15,14 +15,14 @@ import p507d0.p580t._Collections;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetOauth2Authorize.kt */
-/* renamed from: com.discord.widgets.auth.WidgetOauth2Authorize$validationManager$2, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.auth.WidgetOauth2Authorize$validationManager$2, reason: use source file name */
+/* JADX INFO: compiled from: WidgetOauth2Authorize.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetOauth2Authorize9 extends Lambda implements Function0<ValidationManager> {
     public final /* synthetic */ WidgetOauth2Authorize this$0;
 
-    /* compiled from: WidgetOauth2Authorize.kt */
-    /* renamed from: com.discord.widgets.auth.WidgetOauth2Authorize$validationManager$2$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.auth.WidgetOauth2Authorize$validationManager$2$1 */
+    /* JADX INFO: compiled from: WidgetOauth2Authorize.kt */
     public static final class C72501 extends Input<View> {
         public C72501(String str, View view, InputValidator[] inputValidatorArr) {
             super(str, view, inputValidatorArr);
@@ -38,8 +38,8 @@ public final class WidgetOauth2Authorize9 extends Lambda implements Function0<Va
         }
     }
 
-    /* compiled from: WidgetOauth2Authorize.kt */
-    /* renamed from: com.discord.widgets.auth.WidgetOauth2Authorize$validationManager$2$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.auth.WidgetOauth2Authorize$validationManager$2$2 */
+    /* JADX INFO: compiled from: WidgetOauth2Authorize.kt */
     public static final class C72512 extends Input<View> {
         public C72512(String str, View view, InputValidator[] inputValidatorArr) {
             super(str, view, inputValidatorArr);

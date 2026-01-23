@@ -2,9 +2,9 @@ package p007b.p225i.p408d;
 
 import java.lang.reflect.Field;
 
-/* compiled from: FieldAttributes.java */
-/* renamed from: b.i.d.b, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.d.b, reason: use source file name */
+/* JADX INFO: compiled from: FieldAttributes.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class FieldAttributes {
     public FieldAttributes(Field field) {
     }

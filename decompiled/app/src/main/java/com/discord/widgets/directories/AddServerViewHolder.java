@@ -5,13 +5,13 @@ import android.widget.TextView;
 import com.discord.databinding.DirectoryAddServerListItemBinding;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: WidgetDirectoryEntryViewHolder.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetDirectoryEntryViewHolder.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class AddServerViewHolder extends DirectoryChannelViewHolder {
     private final DirectoryAddServerListItemBinding viewBinding;
 
-    /* compiled from: WidgetDirectoryEntryViewHolder.kt */
-    /* renamed from: com.discord.widgets.directories.AddServerViewHolder$bind$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.directories.AddServerViewHolder$bind$1 */
+    /* JADX INFO: compiled from: WidgetDirectoryEntryViewHolder.kt */
     public static final class ViewOnClickListenerC82701 implements View.OnClickListener {
         public final /* synthetic */ DirectoryChannelItemClickInterface $listener;
 

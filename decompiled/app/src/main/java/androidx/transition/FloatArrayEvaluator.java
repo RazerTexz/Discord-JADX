@@ -3,7 +3,7 @@ package androidx.transition;
 import android.animation.TypeEvaluator;
 import p007b.p100d.p104b.p105a.outline;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class FloatArrayEvaluator implements TypeEvaluator<float[]> {
     private float[] mArray;
 
@@ -16,7 +16,7 @@ public class FloatArrayEvaluator implements TypeEvaluator<float[]> {
         return evaluate2(f, fArr, fArr2);
     }
 
-    /* renamed from: evaluate, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: evaluate, reason: avoid collision after fix types in other method */
     public float[] evaluate2(float f, float[] fArr, float[] fArr2) {
         float[] fArr3 = this.mArray;
         if (fArr3 == null) {

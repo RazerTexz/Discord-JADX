@@ -6,16 +6,16 @@ import android.text.Layout;
 import androidx.core.view.ViewCompat;
 import p007b.p225i.p226a.p242c.Bundleable;
 
-/* compiled from: lambda */
-/* renamed from: b.i.a.c.b3.a */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.b3.a */
+/* JADX INFO: compiled from: lambda */
+/* JADX INFO: loaded from: classes3.dex */
 public final /* synthetic */ class C2577a implements Bundleable.a {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final /* synthetic */ C2577a f5753a = new C2577a();
 
     @Override // p007b.p225i.p226a.p242c.Bundleable.a
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final Bundleable mo2576a(Bundle bundle) {
         float f;
         int i;

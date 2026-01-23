@@ -6,8 +6,8 @@ import java.util.List;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ChannelListItemGuildScheduledEvents.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: ChannelListItemGuildScheduledEvents.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final /* data */ class ChannelListItemGuildScheduledEvents implements ChannelListItem {
     private final List<GuildScheduledEvent> data;
     private final Guild guild;
@@ -38,7 +38,7 @@ public final /* data */ class ChannelListItemGuildScheduledEvents implements Cha
         return this.data;
     }
 
-    /* renamed from: component2, reason: from getter */
+    /* JADX INFO: renamed from: component2, reason: from getter */
     public final Guild getGuild() {
         return this.guild;
     }

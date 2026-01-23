@@ -15,31 +15,31 @@ import kotlin.Unit;
 import kotlin.jvm.functions.Function1;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: FloatingViewManager.kt */
-/* renamed from: b.a.j.a, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.a.j.a, reason: use source file name */
+/* JADX INFO: compiled from: FloatingViewManager.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class FloatingViewManager {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public Function1<? super Integer, Unit> f1454a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final Map<Integer, a> f1455b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final Logger f1456c;
 
-    /* compiled from: FloatingViewManager.kt */
-    /* renamed from: b.a.j.a$a */
+    /* JADX INFO: renamed from: b.a.j.a$a */
+    /* JADX INFO: compiled from: FloatingViewManager.kt */
     public static final class a {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final View f1457a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final ViewGroup f1458b;
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public final ViewTreeObserver.OnPreDrawListener f1459c;
 
         public a(View view, ViewGroup viewGroup, ViewTreeObserver.OnPreDrawListener onPreDrawListener) {
@@ -52,11 +52,11 @@ public final class FloatingViewManager {
         }
     }
 
-    /* compiled from: FloatingViewManager.kt */
-    /* renamed from: b.a.j.a$b */
+    /* JADX INFO: renamed from: b.a.j.a$b */
+    /* JADX INFO: compiled from: FloatingViewManager.kt */
     public static final class b {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public static WeakReference<FloatingViewManager> f1460a;
     }
 
@@ -66,7 +66,7 @@ public final class FloatingViewManager {
         this.f1455b = new LinkedHashMap();
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final void m207a(FloatingViewManager floatingViewManager, View view, View view2, FloatingViewGravity floatingViewGravity, int i, int i2) {
         int height;
         Objects.requireNonNull(floatingViewManager);
@@ -91,7 +91,7 @@ public final class FloatingViewManager {
     }
 
     @MainThread
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final void m208b(int i) {
         a aVar = this.f1455b.get(Integer.valueOf(i));
         if (aVar != null) {

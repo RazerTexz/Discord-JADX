@@ -2,15 +2,15 @@ package p007b.p452o.p453a.p473x;
 
 import androidx.annotation.NonNull;
 
-/* compiled from: SizeSelectors.java */
-/* renamed from: b.o.a.x.d, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.o.a.x.d, reason: use source file name */
+/* JADX INFO: compiled from: SizeSelectors.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class SizeSelectors implements SizeSelectors7 {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final /* synthetic */ float f14253a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final /* synthetic */ float f14254b;
 
     public SizeSelectors(float f, float f2) {
@@ -19,7 +19,7 @@ public class SizeSelectors implements SizeSelectors7 {
     }
 
     @Override // p007b.p452o.p453a.p473x.SizeSelectors7
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public boolean mo4369a(@NonNull Size3 size3) {
         float fM7450i = AspectRatio2.m7447f(size3.f14251j, size3.f14252k).m7450i();
         float f = this.f14253a;

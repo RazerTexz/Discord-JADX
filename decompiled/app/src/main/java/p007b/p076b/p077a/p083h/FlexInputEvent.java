@@ -6,16 +6,16 @@ import kotlin.jvm.internal.DefaultConstructorMarker;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: FlexInputEvent.kt */
-/* renamed from: b.b.a.h.a, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.b.a.h.a, reason: use source file name */
+/* JADX INFO: compiled from: FlexInputEvent.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public abstract class FlexInputEvent {
 
-    /* compiled from: FlexInputEvent.kt */
-    /* renamed from: b.b.a.h.a$a */
+    /* JADX INFO: renamed from: b.b.a.h.a$a */
+    /* JADX INFO: compiled from: FlexInputEvent.kt */
     public static final class a extends FlexInputEvent {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public static final a f2202a = new a();
 
         public a() {
@@ -23,11 +23,11 @@ public abstract class FlexInputEvent {
         }
     }
 
-    /* compiled from: FlexInputEvent.kt */
-    /* renamed from: b.b.a.h.a$b */
+    /* JADX INFO: renamed from: b.b.a.h.a$b */
+    /* JADX INFO: compiled from: FlexInputEvent.kt */
     public static final class b extends FlexInputEvent {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public static final b f2203a = new b();
 
         public b() {
@@ -35,11 +35,11 @@ public abstract class FlexInputEvent {
         }
     }
 
-    /* compiled from: FlexInputEvent.kt */
-    /* renamed from: b.b.a.h.a$c */
+    /* JADX INFO: renamed from: b.b.a.h.a$c */
+    /* JADX INFO: compiled from: FlexInputEvent.kt */
     public static final class c extends FlexInputEvent {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public static final c f2204a = new c();
 
         public c() {
@@ -47,11 +47,11 @@ public abstract class FlexInputEvent {
         }
     }
 
-    /* compiled from: FlexInputEvent.kt */
-    /* renamed from: b.b.a.h.a$d */
+    /* JADX INFO: renamed from: b.b.a.h.a$d */
+    /* JADX INFO: compiled from: FlexInputEvent.kt */
     public static final class d extends FlexInputEvent {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final String f2205a;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -81,11 +81,11 @@ public abstract class FlexInputEvent {
         }
     }
 
-    /* compiled from: FlexInputEvent.kt */
-    /* renamed from: b.b.a.h.a$e */
+    /* JADX INFO: renamed from: b.b.a.h.a$e */
+    /* JADX INFO: compiled from: FlexInputEvent.kt */
     public static final class e extends FlexInputEvent {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final int f2206a;
 
         public e(@StringRes int i) {

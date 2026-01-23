@@ -13,7 +13,7 @@ import java.util.zip.DeflaterOutputStream;
 import java.util.zip.Inflater;
 import java.util.zip.InflaterInputStream;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class DeflateSerializer extends Serializer {
     private final Serializer serializer;
     private boolean noHeaders = true;
@@ -47,7 +47,7 @@ public class DeflateSerializer extends Serializer {
     }
 
     @Override // com.esotericsoftware.kryo.Serializer
-    public void write(Kryo kryo, Output output, Object obj) throws KryoException {
+    public void write(Kryo kryo, Output output, Object obj) {
         OutputChunked outputChunked = new OutputChunked(output, 256);
         Deflater deflater = new Deflater(this.compressionLevel, this.noHeaders);
         try {

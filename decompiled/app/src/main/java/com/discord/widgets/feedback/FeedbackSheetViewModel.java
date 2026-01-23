@@ -10,21 +10,21 @@ import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 import p658rx.Observable;
 
-/* compiled from: FeedbackSheetViewModel.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: FeedbackSheetViewModel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public interface FeedbackSheetViewModel {
 
-    /* compiled from: FeedbackSheetViewModel.kt */
+    /* JADX INFO: compiled from: FeedbackSheetViewModel.kt */
     public static final class DefaultImpls {
         public static void selectRating(FeedbackSheetViewModel feedbackSheetViewModel, FeedbackRating feedbackRating) {
             Intrinsics3.checkNotNullParameter(feedbackRating, "feedbackRating");
         }
     }
 
-    /* compiled from: FeedbackSheetViewModel.kt */
+    /* JADX INFO: compiled from: FeedbackSheetViewModel.kt */
     public static abstract class Event {
 
-        /* compiled from: FeedbackSheetViewModel.kt */
+        /* JADX INFO: compiled from: FeedbackSheetViewModel.kt */
         public static final /* data */ class NavigateToIssueDetails extends Event {
             private final PendingFeedback pendingFeedback;
             private final boolean showCxLinkForIssueDetails;
@@ -47,12 +47,12 @@ public interface FeedbackSheetViewModel {
                 return navigateToIssueDetails.copy(pendingFeedback, z2);
             }
 
-            /* renamed from: component1, reason: from getter */
+            /* JADX INFO: renamed from: component1, reason: from getter */
             public final PendingFeedback getPendingFeedback() {
                 return this.pendingFeedback;
             }
 
-            /* renamed from: component2, reason: from getter */
+            /* JADX INFO: renamed from: component2, reason: from getter */
             public final boolean getShowCxLinkForIssueDetails() {
                 return this.showCxLinkForIssueDetails;
             }
@@ -82,15 +82,18 @@ public interface FeedbackSheetViewModel {
             }
 
             /* JADX WARN: Multi-variable type inference failed */
+            /* JADX WARN: Type inference failed for: r1v1, types: [int] */
+            /* JADX WARN: Type inference failed for: r1v2 */
+            /* JADX WARN: Type inference failed for: r1v3 */
             public int hashCode() {
                 PendingFeedback pendingFeedback = this.pendingFeedback;
                 int iHashCode = (pendingFeedback != null ? pendingFeedback.hashCode() : 0) * 31;
                 boolean z2 = this.showCxLinkForIssueDetails;
-                int i = z2;
-                if (z2 != 0) {
-                    i = 1;
+                ?? r1 = z2;
+                if (z2) {
+                    r1 = 1;
                 }
-                return iHashCode + i;
+                return iHashCode + r1;
             }
 
             public String toString() {
@@ -101,7 +104,7 @@ public interface FeedbackSheetViewModel {
             }
         }
 
-        /* compiled from: FeedbackSheetViewModel.kt */
+        /* JADX INFO: compiled from: FeedbackSheetViewModel.kt */
         public static final /* data */ class Submitted extends Event {
             private final boolean showConfirmation;
 
@@ -117,7 +120,7 @@ public interface FeedbackSheetViewModel {
                 return submitted.copy(z2);
             }
 
-            /* renamed from: component1, reason: from getter */
+            /* JADX INFO: renamed from: component1, reason: from getter */
             public final boolean getShowConfirmation() {
                 return this.showConfirmation;
             }
@@ -168,7 +171,7 @@ public interface FeedbackSheetViewModel {
 
     void submitForm();
 
-    /* compiled from: FeedbackSheetViewModel.kt */
+    /* JADX INFO: compiled from: FeedbackSheetViewModel.kt */
     public static final /* data */ class ViewState {
         private final List<FeedbackIssue> feedbackIssues;
         private final int issuesHeaderTextResId;
@@ -189,6 +192,7 @@ public interface FeedbackSheetViewModel {
             this.showFaceRatings = num != null;
         }
 
+        /* JADX WARN: Multi-variable type inference failed */
         public static /* synthetic */ ViewState copy$default(ViewState viewState, FeedbackRating feedbackRating, List list, int i, Integer num, int i2, int i3, Object obj) {
             if ((i3 & 1) != 0) {
                 feedbackRating = viewState.selectedFeedbackRating;
@@ -211,7 +215,7 @@ public interface FeedbackSheetViewModel {
             return viewState.copy(feedbackRating, list2, i4, num2, i2);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final FeedbackRating getSelectedFeedbackRating() {
             return this.selectedFeedbackRating;
         }
@@ -220,17 +224,17 @@ public interface FeedbackSheetViewModel {
             return this.feedbackIssues;
         }
 
-        /* renamed from: component3, reason: from getter */
+        /* JADX INFO: renamed from: component3, reason: from getter */
         public final int getTitleTextResId() {
             return this.titleTextResId;
         }
 
-        /* renamed from: component4, reason: from getter */
+        /* JADX INFO: renamed from: component4, reason: from getter */
         public final Integer getPromptTextResId() {
             return this.promptTextResId;
         }
 
-        /* renamed from: component5, reason: from getter */
+        /* JADX INFO: renamed from: component5, reason: from getter */
         public final int getIssuesHeaderTextResId() {
             return this.issuesHeaderTextResId;
         }

@@ -10,42 +10,42 @@ jadx.core.utils.exceptions.JadxRuntimeException: Init of enum field 'k' uses ext
 	at jadx.core.dex.visitors.EnumVisitor.visit(EnumVisitor.java:100)
  */
 /* JADX WARN: Failed to restore enum class, 'enum' modifier and super class removed */
-/* compiled from: com.google.android.gms:play-services-measurement-base@@18.0.0 */
-/* renamed from: b.i.a.f.h.l.e5 */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.h.l.e5 */
+/* JADX INFO: compiled from: com.google.android.gms:play-services-measurement-base@@18.0.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public final class EnumC3639e5 {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static final EnumC3639e5 f9902j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public static final EnumC3639e5 f9903k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public static final EnumC3639e5 f9904l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public static final EnumC3639e5 f9905m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public static final EnumC3639e5 f9906n;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public static final EnumC3639e5 f9907o;
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public static final EnumC3639e5 f9908p;
 
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     public static final EnumC3639e5 f9909q;
 
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     public static final EnumC3639e5 f9910r;
 
-    /* renamed from: s */
+    /* JADX INFO: renamed from: s */
     public static final EnumC3639e5 f9911s;
 
-    /* renamed from: t */
+    /* JADX INFO: renamed from: t */
     public static final /* synthetic */ EnumC3639e5[] f9912t;
     private final Class<?> zzk;
     private final Class<?> zzl;
@@ -86,7 +86,7 @@ public final class EnumC3639e5 {
         return (EnumC3639e5[]) f9912t.clone();
     }
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final Class<?> m4822f() {
         return this.zzl;
     }

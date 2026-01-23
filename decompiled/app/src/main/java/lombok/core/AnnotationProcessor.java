@@ -25,8 +25,8 @@ import javax.tools.Diagnostic;
 import lombok.patcher.ClassRootFinder;
 import lombok.permit.Permit;
 
+/* JADX INFO: loaded from: discord-126021.apk:lombok/core/AnnotationProcessor.SCL.lombok */
 @SupportedAnnotationTypes({"*"})
-/* loaded from: discord-126021.apk:lombok/core/AnnotationProcessor.SCL.lombok */
 public class AnnotationProcessor extends AbstractProcessor {
     private final List<ProcessorDescriptor> registered = Arrays.asList(new JavacDescriptor(), new EcjDescriptor());
     private final List<ProcessorDescriptor> active = new ArrayList();
@@ -42,7 +42,7 @@ public class AnnotationProcessor extends AbstractProcessor {
         return w.toString();
     }
 
-    /* loaded from: discord-126021.apk:lombok/core/AnnotationProcessor$ProcessorDescriptor.SCL.lombok */
+    /* JADX INFO: loaded from: discord-126021.apk:lombok/core/AnnotationProcessor$ProcessorDescriptor.SCL.lombok */
     static abstract class ProcessorDescriptor {
         abstract boolean want(ProcessingEnvironment processingEnvironment, List<String> list);
 
@@ -59,7 +59,6 @@ public class AnnotationProcessor extends AbstractProcessor {
     }
 
     private static ProcessingEnvironment tryRecursivelyObtainJavacProcessingEnvironment(ProcessingEnvironment procEnv) {
-        Object delegate;
         if (procEnv.getClass().getName().equals("com.sun.tools.javac.processing.JavacProcessingEnvironment")) {
             return procEnv;
         }
@@ -68,19 +67,19 @@ public class AnnotationProcessor extends AbstractProcessor {
             Class<?> procEnvClass = superclass;
             if (procEnvClass != null) {
                 try {
-                    delegate = tryGetDelegateField(procEnvClass, procEnv);
+                    Object delegate = tryGetDelegateField(procEnvClass, procEnv);
                     if (delegate == null) {
                         delegate = tryGetProcessingEnvField(procEnvClass, procEnv);
                     }
                     if (delegate == null) {
                         delegate = tryGetProxyDelegateToField(procEnvClass, procEnv);
                     }
+                    if (delegate != null) {
+                        return tryRecursivelyObtainJavacProcessingEnvironment((ProcessingEnvironment) delegate);
+                    }
+                    continue;
                 } catch (Exception unused) {
                 }
-                if (delegate != null) {
-                    return tryRecursivelyObtainJavacProcessingEnvironment((ProcessingEnvironment) delegate);
-                }
-                continue;
                 superclass = procEnvClass.getSuperclass();
             } else {
                 return null;
@@ -113,7 +112,7 @@ public class AnnotationProcessor extends AbstractProcessor {
         }
     }
 
-    /* loaded from: discord-126021.apk:lombok/core/AnnotationProcessor$JavacDescriptor.SCL.lombok */
+    /* JADX INFO: loaded from: discord-126021.apk:lombok/core/AnnotationProcessor$JavacDescriptor.SCL.lombok */
     static class JavacDescriptor extends ProcessorDescriptor {
         private Processor processor;
 
@@ -170,7 +169,7 @@ public class AnnotationProcessor extends AbstractProcessor {
         }
     }
 
-    /* loaded from: discord-126021.apk:lombok/core/AnnotationProcessor$EcjDescriptor.SCL.lombok */
+    /* JADX INFO: loaded from: discord-126021.apk:lombok/core/AnnotationProcessor$EcjDescriptor.SCL.lombok */
     static class EcjDescriptor extends ProcessorDescriptor {
         EcjDescriptor() {
         }

@@ -6,9 +6,9 @@ import kotlin.jvm.functions.Function2;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: StoreGuildSubscriptions.kt */
-/* renamed from: com.discord.stores.StoreGuildSubscriptions$subscriptionsManager$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.stores.StoreGuildSubscriptions$subscriptionsManager$1, reason: use source file name */
+/* JADX INFO: compiled from: StoreGuildSubscriptions.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class StoreGuildSubscriptions3 extends Lambda implements Function2<Long, GuildSubscriptions, Unit> {
     public final /* synthetic */ StoreGuildSubscriptions this$0;
 

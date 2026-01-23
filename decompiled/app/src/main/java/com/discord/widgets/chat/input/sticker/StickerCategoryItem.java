@@ -10,8 +10,8 @@ import kotlin.jvm.internal.DefaultConstructorMarker;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: StickerCategoryItem.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: StickerCategoryItem.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public abstract class StickerCategoryItem implements DiffKeyProvider {
     public static final int TYPE_GUILD = 2;
     public static final int TYPE_PACK = 1;
@@ -20,7 +20,7 @@ public abstract class StickerCategoryItem implements DiffKeyProvider {
     private final Tuples2<Integer, Integer> categoryRange;
     private final boolean isSelected;
 
-    /* compiled from: StickerCategoryItem.kt */
+    /* JADX INFO: compiled from: StickerCategoryItem.kt */
     public static final /* data */ class GuildItem extends StickerCategoryItem {
         private final Tuples2<Integer, Integer> categoryRange;
         private final Guild guild;
@@ -58,7 +58,7 @@ public abstract class StickerCategoryItem implements DiffKeyProvider {
             return guildItem.copy(guild, list, tuples2, z2);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final Guild getGuild() {
             return this.guild;
         }
@@ -131,7 +131,7 @@ public abstract class StickerCategoryItem implements DiffKeyProvider {
         }
 
         @Override // com.discord.widgets.chat.input.sticker.StickerCategoryItem
-        /* renamed from: isSelected, reason: from getter */
+        /* JADX INFO: renamed from: isSelected, reason: from getter */
         public boolean getIsSelected() {
             return this.isSelected;
         }
@@ -150,7 +150,7 @@ public abstract class StickerCategoryItem implements DiffKeyProvider {
         }
     }
 
-    /* compiled from: StickerCategoryItem.kt */
+    /* JADX INFO: compiled from: StickerCategoryItem.kt */
     public static final /* data */ class PackItem extends StickerCategoryItem {
         private final Tuples2<Integer, Integer> categoryRange;
         private final boolean isSelected;
@@ -182,7 +182,7 @@ public abstract class StickerCategoryItem implements DiffKeyProvider {
             return packItem.copy(modelStickerPack, tuples2, z2);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final ModelStickerPack getPack() {
             return this.pack;
         }
@@ -244,7 +244,7 @@ public abstract class StickerCategoryItem implements DiffKeyProvider {
         }
 
         @Override // com.discord.widgets.chat.input.sticker.StickerCategoryItem
-        /* renamed from: isSelected, reason: from getter */
+        /* JADX INFO: renamed from: isSelected, reason: from getter */
         public boolean getIsSelected() {
             return this.isSelected;
         }
@@ -261,7 +261,7 @@ public abstract class StickerCategoryItem implements DiffKeyProvider {
         }
     }
 
-    /* compiled from: StickerCategoryItem.kt */
+    /* JADX INFO: compiled from: StickerCategoryItem.kt */
     public static final /* data */ class RecentItem extends StickerCategoryItem {
         private final Tuples2<Integer, Integer> categoryRange;
         private final boolean isSelected;
@@ -337,7 +337,7 @@ public abstract class StickerCategoryItem implements DiffKeyProvider {
         }
 
         @Override // com.discord.widgets.chat.input.sticker.StickerCategoryItem
-        /* renamed from: isSelected, reason: from getter */
+        /* JADX INFO: renamed from: isSelected, reason: from getter */
         public boolean getIsSelected() {
             return this.isSelected;
         }
@@ -366,7 +366,7 @@ public abstract class StickerCategoryItem implements DiffKeyProvider {
         return this.categoryRange;
     }
 
-    /* renamed from: isSelected, reason: from getter */
+    /* JADX INFO: renamed from: isSelected, reason: from getter */
     public boolean getIsSelected() {
         return this.isSelected;
     }

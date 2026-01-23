@@ -16,40 +16,40 @@ import p007b.p225i.p226a.p242c.p257e3.DataSpec;
 import p007b.p225i.p226a.p242c.p257e3.p258b0.ReusableBufferedOutputStream;
 import p007b.p225i.p226a.p242c.p259f3.Util2;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public final class CacheDataSink implements DataSink {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final Cache f20263a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final long f20264b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final int f20265c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     @Nullable
     public DataSpec f20266d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public long f20267e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     @Nullable
     public File f20268f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     @Nullable
     public OutputStream f20269g;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public long f20270h;
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public long f20271i;
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public ReusableBufferedOutputStream f20272j;
 
     public static final class CacheDataSinkException extends Cache.CacheException {
@@ -70,7 +70,7 @@ public final class CacheDataSink implements DataSink {
     }
 
     @Override // p007b.p225i.p226a.p242c.p257e3.DataSink
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public void mo2852a(DataSpec dataSpec) throws CacheDataSinkException {
         Objects.requireNonNull(dataSpec.f6549h);
         if (dataSpec.f6548g == -1 && dataSpec.m2856c(2)) {
@@ -87,7 +87,7 @@ public final class CacheDataSink implements DataSink {
         }
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final void m8943b() throws IOException {
         OutputStream outputStream = this.f20269g;
         if (outputStream == null) {
@@ -124,7 +124,7 @@ public final class CacheDataSink implements DataSink {
         }
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final void m8944c(DataSpec dataSpec) throws IOException {
         long j = dataSpec.f6548g;
         long jMin = j != -1 ? Math.min(j - this.f20271i, this.f20267e) : -1L;

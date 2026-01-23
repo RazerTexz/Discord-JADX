@@ -26,11 +26,11 @@ import p658rx.functions.Action1;
 import p658rx.subjects.BehaviorSubject;
 import p658rx.subjects.SerializedSubject;
 
-/* compiled from: AccessibilityMonitor.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: AccessibilityMonitor.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class AccessibilityMonitor {
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private static final Lazy INSTANCE$delegate = LazyJVM.lazy(AccessibilityMonitor2.INSTANCE);
     private AccessibilityManager accessibilityManager;
@@ -39,7 +39,7 @@ public final class AccessibilityMonitor {
     private final ContentObserver animationScaleObserver = new AccessibilityMonitor3(this, new Handler(Looper.getMainLooper()));
     private ContentResolver contentResolver;
 
-    /* compiled from: AccessibilityMonitor.kt */
+    /* JADX INFO: compiled from: AccessibilityMonitor.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -60,12 +60,12 @@ public final class AccessibilityMonitor {
         }
     }
 
-    /* compiled from: AccessibilityMonitor.kt */
-    /* renamed from: com.discord.utilities.accessibility.AccessibilityMonitor$handleInitialState$1 */
+    /* JADX INFO: renamed from: com.discord.utilities.accessibility.AccessibilityMonitor$handleInitialState$1 */
+    /* JADX INFO: compiled from: AccessibilityMonitor.kt */
     public static final class AccessibilityManagerAccessibilityStateChangeListenerC66641 implements AccessibilityManager.AccessibilityStateChangeListener {
 
-        /* compiled from: AccessibilityMonitor.kt */
-        /* renamed from: com.discord.utilities.accessibility.AccessibilityMonitor$handleInitialState$1$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.utilities.accessibility.AccessibilityMonitor$handleInitialState$1$1, reason: invalid class name */
+        /* JADX INFO: compiled from: AccessibilityMonitor.kt */
         public static final class AnonymousClass1<T> implements Action1<Unit> {
             public final /* synthetic */ boolean $enabled;
 
@@ -78,7 +78,7 @@ public final class AccessibilityMonitor {
                 call2(unit);
             }
 
-            /* renamed from: call, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
             public final void call2(Unit unit) {
                 AccessibilityMonitor.access$handleScreenreaderEnabledUpdate(AccessibilityMonitor.this, this.$enabled);
             }

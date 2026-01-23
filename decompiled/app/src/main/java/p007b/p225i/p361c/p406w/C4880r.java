@@ -12,12 +12,12 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import p007b.p100d.p104b.p105a.outline;
 
-/* compiled from: com.google.firebase:firebase-messaging@@21.0.0 */
-/* renamed from: b.i.c.w.r */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.c.w.r */
+/* JADX INFO: compiled from: com.google.firebase:firebase-messaging@@21.0.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public class C4880r {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     @NonNull
     public final Bundle f13039a;
 
@@ -25,23 +25,23 @@ public class C4880r {
         this.f13039a = new Bundle(bundle);
     }
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public static boolean m6820f(Bundle bundle) {
         return "1".equals(bundle.getString("gcm.n.e")) || "1".equals(bundle.getString("gcm.n.e".replace("gcm.n.", "gcm.notification.")));
     }
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public static String m6821h(String str) {
         return str.startsWith("gcm.n.") ? str.substring(6) : str;
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public boolean m6822a(String str) {
         String strM6826e = m6826e(str);
         return "1".equals(strM6826e) || Boolean.parseBoolean(strM6826e);
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public Integer m6823b(String str) {
         String strM6826e = m6826e(str);
         if (TextUtils.isEmpty(strM6826e)) {
@@ -57,7 +57,7 @@ public class C4880r {
     }
 
     @Nullable
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public JSONArray m6824c(String str) {
         String strM6826e = m6826e(str);
         if (TextUtils.isEmpty(strM6826e)) {
@@ -72,7 +72,7 @@ public class C4880r {
         }
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public String m6825d(Resources resources, String str, String str2) {
         String[] strArr;
         String strM6826e = m6826e(str2);
@@ -114,7 +114,7 @@ public class C4880r {
         }
     }
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public String m6826e(String str) {
         Bundle bundle = this.f13039a;
         if (!bundle.containsKey(str) && str.startsWith("gcm.n.")) {
@@ -126,7 +126,7 @@ public class C4880r {
         return bundle.getString(str);
     }
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public Bundle m6827g() {
         Bundle bundle = new Bundle(this.f13039a);
         for (String str : this.f13039a.keySet()) {

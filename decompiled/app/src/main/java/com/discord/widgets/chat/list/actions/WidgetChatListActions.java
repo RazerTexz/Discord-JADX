@@ -2,7 +2,6 @@ package com.discord.widgets.chat.list.actions;
 
 import android.content.Context;
 import android.content.Intent;
-import android.content.res.Resources;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
@@ -75,12 +74,12 @@ import p637j0.p642l.p647e.ScalarSynchronousObservable;
 import p658rx.Observable;
 import p658rx.functions.Func3;
 
-/* compiled from: WidgetChatListActions.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetChatListActions.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetChatListActions extends AppBottomSheet {
     public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetChatListActions.class, "binding", "getBinding()Lcom/discord/databinding/WidgetChatListActionsBinding;", 0)};
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private static final String INTENT_EXTRA_MESSAGE_CHANNEL_ID = "INTENT_EXTRA_MESSAGE_CHANNEL_ID";
     private static final String INTENT_EXTRA_MESSAGE_CONTENT = "INTENT_EXTRA_MESSAGE_CONTENT";
@@ -90,13 +89,13 @@ public final class WidgetChatListActions extends AppBottomSheet {
     private static final int TYPE_PINS = 1;
     private WidgetChatListActionsEmojisAdapter adapter;
 
-    /* renamed from: binding$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
     private long channelId;
     private PaddedItemDecorator itemDecorator;
     private long messageId;
 
-    /* compiled from: WidgetChatListActions.kt */
+    /* JADX INFO: compiled from: WidgetChatListActions.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -131,10 +130,10 @@ public final class WidgetChatListActions extends AppBottomSheet {
         }
     }
 
-    /* compiled from: WidgetChatListActions.kt */
+    /* JADX INFO: compiled from: WidgetChatListActions.kt */
     public static final /* data */ class Model {
 
-        /* renamed from: Companion, reason: from kotlin metadata */
+        /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
         public static final Companion INSTANCE = new Companion(null);
         private final Channel channel;
         private final Guild guild;
@@ -148,7 +147,7 @@ public final class WidgetChatListActions extends AppBottomSheet {
         private final List<Emoji> recentEmojis;
         private final int type;
 
-        /* compiled from: WidgetChatListActions.kt */
+        /* JADX INFO: compiled from: WidgetChatListActions.kt */
         public static final class Companion {
             private Companion() {
             }
@@ -214,51 +213,52 @@ public final class WidgetChatListActions extends AppBottomSheet {
             this.me = meUser;
         }
 
+        /* JADX WARN: Multi-variable type inference failed */
         public static /* synthetic */ Model copy$default(Model model, Message message, Guild guild, String str, CharSequence charSequence, PermissionsContexts2 permissionsContexts2, int i, boolean z2, List list, Channel channel, Long l, MeUser meUser, int i2, Object obj) {
             return model.copy((i2 & 1) != 0 ? model.message : message, (i2 & 2) != 0 ? model.guild : guild, (i2 & 4) != 0 ? model.messageAuthorName : str, (i2 & 8) != 0 ? model.messageContent : charSequence, (i2 & 16) != 0 ? model.manageMessageContext : permissionsContexts2, (i2 & 32) != 0 ? model.type : i, (i2 & 64) != 0 ? model.isDeveloper : z2, (i2 & 128) != 0 ? model.recentEmojis : list, (i2 & 256) != 0 ? model.channel : channel, (i2 & 512) != 0 ? model.permissions : l, (i2 & 1024) != 0 ? model.me : meUser);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final Message getMessage() {
             return this.message;
         }
 
-        /* renamed from: component10, reason: from getter */
+        /* JADX INFO: renamed from: component10, reason: from getter */
         public final Long getPermissions() {
             return this.permissions;
         }
 
-        /* renamed from: component11, reason: from getter */
+        /* JADX INFO: renamed from: component11, reason: from getter */
         public final MeUser getMe() {
             return this.me;
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final Guild getGuild() {
             return this.guild;
         }
 
-        /* renamed from: component3, reason: from getter */
+        /* JADX INFO: renamed from: component3, reason: from getter */
         public final String getMessageAuthorName() {
             return this.messageAuthorName;
         }
 
-        /* renamed from: component4, reason: from getter */
+        /* JADX INFO: renamed from: component4, reason: from getter */
         public final CharSequence getMessageContent() {
             return this.messageContent;
         }
 
-        /* renamed from: component5, reason: from getter */
+        /* JADX INFO: renamed from: component5, reason: from getter */
         public final PermissionsContexts2 getManageMessageContext() {
             return this.manageMessageContext;
         }
 
-        /* renamed from: component6, reason: from getter */
+        /* JADX INFO: renamed from: component6, reason: from getter */
         public final int getType() {
             return this.type;
         }
 
-        /* renamed from: component7, reason: from getter */
+        /* JADX INFO: renamed from: component7, reason: from getter */
         public final boolean getIsDeveloper() {
             return this.isDeveloper;
         }
@@ -267,7 +267,7 @@ public final class WidgetChatListActions extends AppBottomSheet {
             return this.recentEmojis;
         }
 
-        /* renamed from: component9, reason: from getter */
+        /* JADX INFO: renamed from: component9, reason: from getter */
         public final Channel getChannel() {
             return this.channel;
         }
@@ -333,6 +333,9 @@ public final class WidgetChatListActions extends AppBottomSheet {
         }
 
         /* JADX WARN: Multi-variable type inference failed */
+        /* JADX WARN: Type inference failed for: r2v14, types: [int] */
+        /* JADX WARN: Type inference failed for: r2v28 */
+        /* JADX WARN: Type inference failed for: r2v33 */
         public int hashCode() {
             Message message = this.message;
             int iHashCode = (message != null ? message.hashCode() : 0) * 31;
@@ -345,13 +348,13 @@ public final class WidgetChatListActions extends AppBottomSheet {
             PermissionsContexts2 permissionsContexts2 = this.manageMessageContext;
             int iHashCode5 = (((iHashCode4 + (permissionsContexts2 != null ? permissionsContexts2.hashCode() : 0)) * 31) + this.type) * 31;
             boolean z2 = this.isDeveloper;
-            int i = z2;
-            if (z2 != 0) {
-                i = 1;
+            ?? r2 = z2;
+            if (z2) {
+                r2 = 1;
             }
-            int i2 = (iHashCode5 + i) * 31;
+            int i = (iHashCode5 + r2) * 31;
             List<Emoji> list = this.recentEmojis;
-            int iHashCode6 = (i2 + (list != null ? list.hashCode() : 0)) * 31;
+            int iHashCode6 = (i + (list != null ? list.hashCode() : 0)) * 31;
             Channel channel = this.channel;
             int iHashCode7 = (iHashCode6 + (channel != null ? channel.hashCode() : 0)) * 31;
             Long l = this.permissions;
@@ -392,8 +395,8 @@ public final class WidgetChatListActions extends AppBottomSheet {
         }
     }
 
-    /* compiled from: WidgetChatListActions.kt */
-    /* renamed from: com.discord.widgets.chat.list.actions.WidgetChatListActions$addReaction$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.list.actions.WidgetChatListActions$addReaction$1 */
+    /* JADX INFO: compiled from: WidgetChatListActions.kt */
     public static final class C79631 extends Lambda implements Function1<Void, Unit> {
         public final /* synthetic */ Emoji $emoji;
 
@@ -409,15 +412,15 @@ public final class WidgetChatListActions extends AppBottomSheet {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Void r2) {
             StoreStream.INSTANCE.getEmojis().onEmojiUsed(this.$emoji);
             WidgetChatListActions.this.dismiss();
         }
     }
 
-    /* compiled from: WidgetChatListActions.kt */
-    /* renamed from: com.discord.widgets.chat.list.actions.WidgetChatListActions$configureUI$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.list.actions.WidgetChatListActions$configureUI$1 */
+    /* JADX INFO: compiled from: WidgetChatListActions.kt */
     public static final class ViewOnClickListenerC79641 implements View.OnClickListener {
         public final /* synthetic */ Model $data;
 
@@ -432,8 +435,8 @@ public final class WidgetChatListActions extends AppBottomSheet {
         }
     }
 
-    /* compiled from: WidgetChatListActions.kt */
-    /* renamed from: com.discord.widgets.chat.list.actions.WidgetChatListActions$configureUI$10 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.list.actions.WidgetChatListActions$configureUI$10 */
+    /* JADX INFO: compiled from: WidgetChatListActions.kt */
     public static final class ViewOnClickListenerC796510 implements View.OnClickListener {
         public final /* synthetic */ Model $data;
         public final /* synthetic */ long $guildId;
@@ -450,8 +453,8 @@ public final class WidgetChatListActions extends AppBottomSheet {
         }
     }
 
-    /* compiled from: WidgetChatListActions.kt */
-    /* renamed from: com.discord.widgets.chat.list.actions.WidgetChatListActions$configureUI$11 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.list.actions.WidgetChatListActions$configureUI$11 */
+    /* JADX INFO: compiled from: WidgetChatListActions.kt */
     public static final class ViewOnClickListenerC796611 implements View.OnClickListener {
         public final /* synthetic */ Model $data;
 
@@ -465,8 +468,8 @@ public final class WidgetChatListActions extends AppBottomSheet {
         }
     }
 
-    /* compiled from: WidgetChatListActions.kt */
-    /* renamed from: com.discord.widgets.chat.list.actions.WidgetChatListActions$configureUI$12 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.list.actions.WidgetChatListActions$configureUI$12 */
+    /* JADX INFO: compiled from: WidgetChatListActions.kt */
     public static final class ViewOnClickListenerC796712 implements View.OnClickListener {
         public final /* synthetic */ Model $data;
 
@@ -480,8 +483,8 @@ public final class WidgetChatListActions extends AppBottomSheet {
         }
     }
 
-    /* compiled from: WidgetChatListActions.kt */
-    /* renamed from: com.discord.widgets.chat.list.actions.WidgetChatListActions$configureUI$13 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.list.actions.WidgetChatListActions$configureUI$13 */
+    /* JADX INFO: compiled from: WidgetChatListActions.kt */
     public static final class ViewOnClickListenerC796813 implements View.OnClickListener {
         public final /* synthetic */ Model $data;
 
@@ -503,8 +506,8 @@ public final class WidgetChatListActions extends AppBottomSheet {
         }
     }
 
-    /* compiled from: WidgetChatListActions.kt */
-    /* renamed from: com.discord.widgets.chat.list.actions.WidgetChatListActions$configureUI$14 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.list.actions.WidgetChatListActions$configureUI$14 */
+    /* JADX INFO: compiled from: WidgetChatListActions.kt */
     public static final class ViewOnClickListenerC796914 implements View.OnClickListener {
         public final /* synthetic */ Model $data;
 
@@ -521,8 +524,8 @@ public final class WidgetChatListActions extends AppBottomSheet {
         }
     }
 
-    /* compiled from: WidgetChatListActions.kt */
-    /* renamed from: com.discord.widgets.chat.list.actions.WidgetChatListActions$configureUI$15 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.list.actions.WidgetChatListActions$configureUI$15 */
+    /* JADX INFO: compiled from: WidgetChatListActions.kt */
     public static final class ViewOnClickListenerC797015 implements View.OnClickListener {
         public final /* synthetic */ Model $data;
         public final /* synthetic */ long $guildId;
@@ -539,8 +542,8 @@ public final class WidgetChatListActions extends AppBottomSheet {
         }
     }
 
-    /* compiled from: WidgetChatListActions.kt */
-    /* renamed from: com.discord.widgets.chat.list.actions.WidgetChatListActions$configureUI$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.list.actions.WidgetChatListActions$configureUI$2 */
+    /* JADX INFO: compiled from: WidgetChatListActions.kt */
     public static final class ViewOnClickListenerC79712 implements View.OnClickListener {
         public final /* synthetic */ Model $data;
 
@@ -554,8 +557,8 @@ public final class WidgetChatListActions extends AppBottomSheet {
         }
     }
 
-    /* compiled from: WidgetChatListActions.kt */
-    /* renamed from: com.discord.widgets.chat.list.actions.WidgetChatListActions$configureUI$3 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.list.actions.WidgetChatListActions$configureUI$3 */
+    /* JADX INFO: compiled from: WidgetChatListActions.kt */
     public static final class ViewOnClickListenerC79723 implements View.OnClickListener {
         public ViewOnClickListenerC79723() {
         }
@@ -571,8 +574,8 @@ public final class WidgetChatListActions extends AppBottomSheet {
         }
     }
 
-    /* compiled from: WidgetChatListActions.kt */
-    /* renamed from: com.discord.widgets.chat.list.actions.WidgetChatListActions$configureUI$4 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.list.actions.WidgetChatListActions$configureUI$4 */
+    /* JADX INFO: compiled from: WidgetChatListActions.kt */
     public static final class ViewOnClickListenerC79734 implements View.OnClickListener {
         public final /* synthetic */ Model $data;
 
@@ -586,13 +589,13 @@ public final class WidgetChatListActions extends AppBottomSheet {
         }
     }
 
-    /* compiled from: WidgetChatListActions.kt */
-    /* renamed from: com.discord.widgets.chat.list.actions.WidgetChatListActions$configureUI$5 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.list.actions.WidgetChatListActions$configureUI$5 */
+    /* JADX INFO: compiled from: WidgetChatListActions.kt */
     public static final class ViewOnClickListenerC79745 implements View.OnClickListener {
         public final /* synthetic */ Model $data;
 
-        /* compiled from: WidgetChatListActions.kt */
-        /* renamed from: com.discord.widgets.chat.list.actions.WidgetChatListActions$configureUI$5$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.widgets.chat.list.actions.WidgetChatListActions$configureUI$5$1, reason: invalid class name */
+        /* JADX INFO: compiled from: WidgetChatListActions.kt */
         public static final class AnonymousClass1 extends Lambda implements Function1<MessageQueue4, Unit> {
             public static final AnonymousClass1 INSTANCE = new AnonymousClass1();
 
@@ -606,7 +609,7 @@ public final class WidgetChatListActions extends AppBottomSheet {
                 return Unit.f27425a;
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2(MessageQueue4 messageQueue4) {
                 Intrinsics3.checkNotNullParameter(messageQueue4, "messageResult");
                 if (messageQueue4 instanceof MessageQueue4.CaptchaRequired) {
@@ -631,8 +634,8 @@ public final class WidgetChatListActions extends AppBottomSheet {
         }
     }
 
-    /* compiled from: WidgetChatListActions.kt */
-    /* renamed from: com.discord.widgets.chat.list.actions.WidgetChatListActions$configureUI$6 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.list.actions.WidgetChatListActions$configureUI$6 */
+    /* JADX INFO: compiled from: WidgetChatListActions.kt */
     public static final class ViewOnClickListenerC79756 implements View.OnClickListener {
         public final /* synthetic */ Model $data;
 
@@ -647,8 +650,8 @@ public final class WidgetChatListActions extends AppBottomSheet {
         }
     }
 
-    /* compiled from: WidgetChatListActions.kt */
-    /* renamed from: com.discord.widgets.chat.list.actions.WidgetChatListActions$configureUI$7 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.list.actions.WidgetChatListActions$configureUI$7 */
+    /* JADX INFO: compiled from: WidgetChatListActions.kt */
     public static final class ViewOnClickListenerC79767 implements View.OnClickListener {
         public final /* synthetic */ Model $data;
 
@@ -670,8 +673,8 @@ public final class WidgetChatListActions extends AppBottomSheet {
         }
     }
 
-    /* compiled from: WidgetChatListActions.kt */
-    /* renamed from: com.discord.widgets.chat.list.actions.WidgetChatListActions$configureUI$8 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.list.actions.WidgetChatListActions$configureUI$8 */
+    /* JADX INFO: compiled from: WidgetChatListActions.kt */
     public static final class ViewOnClickListenerC79778 implements View.OnClickListener {
         public final /* synthetic */ Model $data;
 
@@ -688,8 +691,8 @@ public final class WidgetChatListActions extends AppBottomSheet {
         }
     }
 
-    /* compiled from: WidgetChatListActions.kt */
-    /* renamed from: com.discord.widgets.chat.list.actions.WidgetChatListActions$configureUI$9 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.list.actions.WidgetChatListActions$configureUI$9 */
+    /* JADX INFO: compiled from: WidgetChatListActions.kt */
     public static final class ViewOnClickListenerC79789 implements View.OnClickListener {
         public final /* synthetic */ Model $data;
 
@@ -708,8 +711,8 @@ public final class WidgetChatListActions extends AppBottomSheet {
         }
     }
 
-    /* compiled from: WidgetChatListActions.kt */
-    /* renamed from: com.discord.widgets.chat.list.actions.WidgetChatListActions$confirmPublishMessage$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.list.actions.WidgetChatListActions$confirmPublishMessage$1 */
+    /* JADX INFO: compiled from: WidgetChatListActions.kt */
     public static final /* synthetic */ class C79791 extends FunctionReferenceImpl implements Function0<Unit> {
         public C79791(WidgetChatListActions widgetChatListActions) {
             super(0, widgetChatListActions, WidgetChatListActions.class, "dismiss", "dismiss()V", 0);
@@ -721,14 +724,14 @@ public final class WidgetChatListActions extends AppBottomSheet {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             ((WidgetChatListActions) this.receiver).dismiss();
         }
     }
 
-    /* compiled from: WidgetChatListActions.kt */
-    /* renamed from: com.discord.widgets.chat.list.actions.WidgetChatListActions$deleteMessage$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.list.actions.WidgetChatListActions$deleteMessage$1 */
+    /* JADX INFO: compiled from: WidgetChatListActions.kt */
     public static final /* synthetic */ class C79801 extends FunctionReferenceImpl implements Function0<Unit> {
         public C79801(WidgetChatListActions widgetChatListActions) {
             super(0, widgetChatListActions, WidgetChatListActions.class, "dismiss", "dismiss()V", 0);
@@ -740,19 +743,19 @@ public final class WidgetChatListActions extends AppBottomSheet {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             ((WidgetChatListActions) this.receiver).dismiss();
         }
     }
 
-    /* compiled from: WidgetChatListActions.kt */
-    /* renamed from: com.discord.widgets.chat.list.actions.WidgetChatListActions$editMessage$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.list.actions.WidgetChatListActions$editMessage$1 */
+    /* JADX INFO: compiled from: WidgetChatListActions.kt */
     public static final class C79811<T, R> implements Func1<Map<Long, ? extends Channel>, Observable<? extends CharSequence>> {
         public final /* synthetic */ Message $message;
 
-        /* compiled from: WidgetChatListActions.kt */
-        /* renamed from: com.discord.widgets.chat.list.actions.WidgetChatListActions$editMessage$1$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.widgets.chat.list.actions.WidgetChatListActions$editMessage$1$1, reason: invalid class name */
+        /* JADX INFO: compiled from: WidgetChatListActions.kt */
         public static final class AnonymousClass1<T1, T2, T3, R> implements Func3<Map<Long, ? extends com.discord.models.user.User>, Map<Long, ? extends Guild>, EmojiSet, CharSequence> {
             public final /* synthetic */ Map $channels;
             public final /* synthetic */ long $guildId;
@@ -767,7 +770,7 @@ public final class WidgetChatListActions extends AppBottomSheet {
                 return call2(map, (Map<Long, Guild>) map2, emojiSet);
             }
 
-            /* renamed from: call, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
             public final CharSequence call2(Map<Long, ? extends com.discord.models.user.User> map, Map<Long, Guild> map2, EmojiSet emojiSet) {
                 String content = C79811.this.$message.getContent();
                 if (content == null) {
@@ -791,7 +794,7 @@ public final class WidgetChatListActions extends AppBottomSheet {
             return call2((Map<Long, Channel>) map);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final Observable<? extends CharSequence> call2(Map<Long, Channel> map) {
             Channel channel = map.get(Long.valueOf(this.$message.getChannelId()));
             long guildId = channel != null ? channel.getGuildId() : 0L;
@@ -800,8 +803,8 @@ public final class WidgetChatListActions extends AppBottomSheet {
         }
     }
 
-    /* compiled from: WidgetChatListActions.kt */
-    /* renamed from: com.discord.widgets.chat.list.actions.WidgetChatListActions$editMessage$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.list.actions.WidgetChatListActions$editMessage$2 */
+    /* JADX INFO: compiled from: WidgetChatListActions.kt */
     public static final class C79822 extends Lambda implements Function1<CharSequence, Unit> {
         public final /* synthetic */ Message $message;
 
@@ -817,7 +820,7 @@ public final class WidgetChatListActions extends AppBottomSheet {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(CharSequence charSequence) {
             StoreChat chat = StoreStream.INSTANCE.getChat();
             Message message = this.$message;
@@ -826,27 +829,27 @@ public final class WidgetChatListActions extends AppBottomSheet {
         }
     }
 
-    /* compiled from: WidgetChatListActions.kt */
-    /* renamed from: com.discord.widgets.chat.list.actions.WidgetChatListActions$onResume$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.list.actions.WidgetChatListActions$onResume$1 */
+    /* JADX INFO: compiled from: WidgetChatListActions.kt */
     public static final class C79831 extends Lambda implements Function1<Model, Unit> {
         public C79831() {
             super(1);
         }
 
         @Override // kotlin.jvm.functions.Function1
-        public /* bridge */ /* synthetic */ Unit invoke(Model model) throws Resources.NotFoundException {
+        public /* bridge */ /* synthetic */ Unit invoke(Model model) {
             invoke2(model);
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
-        public final void invoke2(Model model) throws Resources.NotFoundException {
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
+        public final void invoke2(Model model) {
             WidgetChatListActions.access$configureUI(WidgetChatListActions.this, model);
         }
     }
 
-    /* compiled from: WidgetChatListActions.kt */
-    /* renamed from: com.discord.widgets.chat.list.actions.WidgetChatListActions$onViewCreated$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.list.actions.WidgetChatListActions$onViewCreated$1 */
+    /* JADX INFO: compiled from: WidgetChatListActions.kt */
     public static final class C79841 extends Lambda implements Function1<Emoji, Unit> {
         public C79841() {
             super(1);
@@ -858,19 +861,19 @@ public final class WidgetChatListActions extends AppBottomSheet {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Emoji emoji) {
             Intrinsics3.checkNotNullParameter(emoji, "emoji");
             WidgetChatListActions.access$addReaction(WidgetChatListActions.this, emoji);
         }
     }
 
-    /* compiled from: WidgetChatListActions.kt */
-    /* renamed from: com.discord.widgets.chat.list.actions.WidgetChatListActions$onViewCreated$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.list.actions.WidgetChatListActions$onViewCreated$2 */
+    /* JADX INFO: compiled from: WidgetChatListActions.kt */
     public static final class C79852 extends Lambda implements Function0<Unit> {
 
-        /* compiled from: WidgetChatListActions.kt */
-        /* renamed from: com.discord.widgets.chat.list.actions.WidgetChatListActions$onViewCreated$2$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.widgets.chat.list.actions.WidgetChatListActions$onViewCreated$2$1, reason: invalid class name */
+        /* JADX INFO: compiled from: WidgetChatListActions.kt */
         public static final class AnonymousClass1 implements EmojiPickerListener {
             public AnonymousClass1() {
             }
@@ -882,8 +885,8 @@ public final class WidgetChatListActions extends AppBottomSheet {
             }
         }
 
-        /* compiled from: WidgetChatListActions.kt */
-        /* renamed from: com.discord.widgets.chat.list.actions.WidgetChatListActions$onViewCreated$2$2, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.widgets.chat.list.actions.WidgetChatListActions$onViewCreated$2$2, reason: invalid class name */
+        /* JADX INFO: compiled from: WidgetChatListActions.kt */
         public static final class AnonymousClass2 extends Lambda implements Function0<Unit> {
             public AnonymousClass2() {
                 super(0);
@@ -895,7 +898,7 @@ public final class WidgetChatListActions extends AppBottomSheet {
                 return Unit.f27425a;
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2() {
                 WidgetChatListActions.this.dismiss();
             }
@@ -911,7 +914,7 @@ public final class WidgetChatListActions extends AppBottomSheet {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             FragmentManager parentFragmentManager = WidgetChatListActions.this.getParentFragmentManager();
             Intrinsics3.checkNotNullExpressionValue(parentFragmentManager, "parentFragmentManager");
@@ -919,13 +922,13 @@ public final class WidgetChatListActions extends AppBottomSheet {
         }
     }
 
-    /* compiled from: WidgetChatListActions.kt */
-    /* renamed from: com.discord.widgets.chat.list.actions.WidgetChatListActions$removeAllReactions$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.list.actions.WidgetChatListActions$removeAllReactions$1 */
+    /* JADX INFO: compiled from: WidgetChatListActions.kt */
     public static final class C79861 extends Lambda implements Function1<View, Unit> {
         public final /* synthetic */ Model $model;
 
-        /* compiled from: WidgetChatListActions.kt */
-        /* renamed from: com.discord.widgets.chat.list.actions.WidgetChatListActions$removeAllReactions$1$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.widgets.chat.list.actions.WidgetChatListActions$removeAllReactions$1$1, reason: invalid class name */
+        /* JADX INFO: compiled from: WidgetChatListActions.kt */
         public static final class AnonymousClass1 extends Lambda implements Function1<Void, Unit> {
             public AnonymousClass1() {
                 super(1);
@@ -937,7 +940,7 @@ public final class WidgetChatListActions extends AppBottomSheet {
                 return Unit.f27425a;
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2(Void r1) {
                 WidgetChatListActions.this.dismiss();
             }
@@ -955,15 +958,15 @@ public final class WidgetChatListActions extends AppBottomSheet {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(View view) {
             Intrinsics3.checkNotNullParameter(view, "view");
             ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.ui$default(ObservableExtensionsKt.restSubscribeOn$default(RestAPI.INSTANCE.getApi().removeAllReactions(this.$model.getMessage().getChannelId(), this.$model.getMessage().getId()), false, 1, null), WidgetChatListActions.this, null, 2, null), view.getContext(), "REST: removeAllReactions", (Function1) null, new AnonymousClass1(), (Function1) null, (Function0) null, (Function0) null, 116, (Object) null);
         }
     }
 
-    /* compiled from: WidgetChatListActions.kt */
-    /* renamed from: com.discord.widgets.chat.list.actions.WidgetChatListActions$toggleMessagePin$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.list.actions.WidgetChatListActions$toggleMessagePin$1 */
+    /* JADX INFO: compiled from: WidgetChatListActions.kt */
     public static final /* synthetic */ class C79871 extends FunctionReferenceImpl implements Function0<Unit> {
         public C79871(WidgetChatListActions widgetChatListActions) {
             super(0, widgetChatListActions, WidgetChatListActions.class, "dismiss", "dismiss()V", 0);
@@ -975,7 +978,7 @@ public final class WidgetChatListActions extends AppBottomSheet {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             ((WidgetChatListActions) this.receiver).dismiss();
         }
@@ -990,7 +993,7 @@ public final class WidgetChatListActions extends AppBottomSheet {
         widgetChatListActions.addReaction(emoji);
     }
 
-    public static final /* synthetic */ void access$configureUI(WidgetChatListActions widgetChatListActions, Model model) throws Resources.NotFoundException {
+    public static final /* synthetic */ void access$configureUI(WidgetChatListActions widgetChatListActions, Model model) {
         widgetChatListActions.configureUI(model);
     }
 
@@ -1043,7 +1046,7 @@ public final class WidgetChatListActions extends AppBottomSheet {
         ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.ui$default(ObservableExtensionsKt.restSubscribeOn$default(api.addReaction(j, j2, reactionKey), false, 1, null), this, null, 2, null), getContext(), "REST: addReaction", (Function1) null, new C79631(emoji), (Function1) null, (Function0) null, (Function0) null, 116, (Object) null);
     }
 
-    private final void configureAddReactionEmojisList(List<? extends Emoji> recentEmojis, boolean isLocalMessage, boolean canAddReactions) throws Resources.NotFoundException {
+    private final void configureAddReactionEmojisList(List<? extends Emoji> recentEmojis, boolean isLocalMessage, boolean canAddReactions) {
         if (recentEmojis.isEmpty() || isLocalMessage || !canAddReactions) {
             RecyclerView recyclerView = getBinding().f16122b;
             Intrinsics3.checkNotNullExpressionValue(recyclerView, "binding.dialogChatActionsAddReactionEmojisList");
@@ -1086,7 +1089,7 @@ public final class WidgetChatListActions extends AppBottomSheet {
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
-    private final void configureUI(Model data) throws Resources.NotFoundException {
+    private final void configureUI(Model data) {
         Channel channel;
         Integer type;
         if (data == null) {

@@ -7,7 +7,6 @@ import com.discord.utilities.cache.SharedPreferencesProvider;
 import com.discord.utilities.logging.Logger;
 import com.discord.utilities.message.MessageUtils;
 import com.google.gson.Gson;
-import com.google.gson.JsonIOException;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;
@@ -29,8 +28,8 @@ import p658rx.subjects.BehaviorSubject;
 import p658rx.subjects.SerializedSubject;
 import p658rx.subjects.Subject;
 
-/* compiled from: StoreLocalMessagesHolder.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: StoreLocalMessagesHolder.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class StoreLocalMessagesHolder {
     private boolean cacheEnabled;
     private final Gson gson;
@@ -47,7 +46,7 @@ public final class StoreLocalMessagesHolder {
         this.gson = gsonBuilder.m6851a();
     }
 
-    public static /* synthetic */ void init$default(StoreLocalMessagesHolder storeLocalMessagesHolder, boolean z2, int i, Object obj) throws JsonIOException {
+    public static /* synthetic */ void init$default(StoreLocalMessagesHolder storeLocalMessagesHolder, boolean z2, int i, Object obj) {
         if ((i & 1) != 0) {
             z2 = true;
         }
@@ -55,7 +54,7 @@ public final class StoreLocalMessagesHolder {
     }
 
     @Store3
-    private final void messageCacheTryPersist() throws JsonIOException {
+    private final void messageCacheTryPersist() {
         if (this.cacheEnabled) {
             HashMap map = new HashMap();
             for (Map.Entry<Long, TreeMap<Long, Message>> entry : this.messages.entrySet()) {
@@ -76,7 +75,7 @@ public final class StoreLocalMessagesHolder {
         }
     }
 
-    private final void publishIfUpdated(boolean force) throws JsonIOException {
+    private final void publishIfUpdated(boolean force) {
         Collection<Message> collectionEmptyList;
         if (!this.updatedChannels.isEmpty() || force) {
             HashMap map = new HashMap(this.messagesSnapshot);
@@ -97,7 +96,7 @@ public final class StoreLocalMessagesHolder {
         }
     }
 
-    public static /* synthetic */ void publishIfUpdated$default(StoreLocalMessagesHolder storeLocalMessagesHolder, boolean z2, int i, Object obj) throws JsonIOException {
+    public static /* synthetic */ void publishIfUpdated$default(StoreLocalMessagesHolder storeLocalMessagesHolder, boolean z2, int i, Object obj) {
         if ((i & 1) != 0) {
             z2 = false;
         }
@@ -119,7 +118,7 @@ public final class StoreLocalMessagesHolder {
     }
 
     @Store3
-    public final void clearCache() throws JsonIOException {
+    public final void clearCache() {
         for (Map.Entry<Long, TreeMap<Long, Message>> entry : this.messages.entrySet()) {
             Long key = entry.getKey();
             TreeMap<Long, Message> value = entry.getValue();
@@ -183,7 +182,7 @@ public final class StoreLocalMessagesHolder {
     }
 
     @Store3
-    public final void init(boolean cacheEnabled) throws JsonIOException {
+    public final void init(boolean cacheEnabled) {
         if (cacheEnabled) {
             try {
                 SharedPreferences sharedPreferences = SharedPreferencesProvider.INSTANCE.get();

@@ -7,9 +7,9 @@ import java.util.List;
 import java.util.Set;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: Iterables.kt */
-/* renamed from: d0.t.o, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.t.o, reason: use source file name */
+/* JADX INFO: compiled from: Iterables.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public class Iterables2 extends Collections2 {
     public static final <T> int collectionSizeOrDefault(Iterable<? extends T> iterable, int i) {
         Intrinsics3.checkNotNullParameter(iterable, "$this$collectionSizeOrDefault");

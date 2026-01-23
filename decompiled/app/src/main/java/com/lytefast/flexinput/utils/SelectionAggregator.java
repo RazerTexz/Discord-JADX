@@ -15,8 +15,8 @@ import kotlin.jvm.internal.DefaultConstructorMarker;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.TypeIntrinsics;
 
-/* compiled from: SelectionAggregator.kt */
-/* loaded from: classes3.dex */
+/* JADX INFO: compiled from: SelectionAggregator.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public class SelectionAggregator<T extends Attachment<? extends Object>> {
     private static final String TAG;
     private final AttachmentPreviewAdapter<T> adapter;
@@ -24,11 +24,11 @@ public class SelectionAggregator<T extends Attachment<? extends Object>> {
     private final ArrayList<SelectionCoordinator<T, ?>> childSelectionCoordinators;
     private ArrayList<SelectionCoordinator.ItemSelectionListener<T>> itemSelectionListeners;
 
-    /* compiled from: SelectionAggregator.kt */
-    /* renamed from: com.lytefast.flexinput.utils.SelectionAggregator$a */
+    /* JADX INFO: renamed from: com.lytefast.flexinput.utils.SelectionAggregator$a */
+    /* JADX INFO: compiled from: SelectionAggregator.kt */
     public static final class C11191a implements SelectionCoordinator.ItemSelectionListener<T> {
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final /* synthetic */ SelectionCoordinator f22085b;
 
         public C11191a(SelectionCoordinator selectionCoordinator) {

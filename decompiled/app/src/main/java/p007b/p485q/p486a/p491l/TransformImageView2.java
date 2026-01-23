@@ -21,58 +21,58 @@ import p007b.p225i.p226a.p288f.p299e.p308o.C3404f;
 import p007b.p485q.p486a.p488i.ExifInfo;
 import p007b.p485q.p486a.p490k.FastBitmapDrawable;
 
-/* compiled from: TransformImageView.java */
-/* renamed from: b.q.a.l.c, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.q.a.l.c, reason: use source file name */
+/* JADX INFO: compiled from: TransformImageView.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class TransformImageView2 extends AppCompatImageView {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final float[] f14484j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final float[] f14485k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final float[] f14486l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public Matrix f14487m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public int f14488n;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public int f14489o;
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public a f14490p;
 
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     public float[] f14491q;
 
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     public float[] f14492r;
 
-    /* renamed from: s */
+    /* JADX INFO: renamed from: s */
     public boolean f14493s;
 
-    /* renamed from: t */
+    /* JADX INFO: renamed from: t */
     public boolean f14494t;
 
-    /* renamed from: u */
+    /* JADX INFO: renamed from: u */
     public int f14495u;
 
-    /* renamed from: v */
+    /* JADX INFO: renamed from: v */
     public String f14496v;
 
-    /* renamed from: w */
+    /* JADX INFO: renamed from: w */
     public String f14497w;
 
-    /* renamed from: x */
+    /* JADX INFO: renamed from: x */
     public ExifInfo f14498x;
 
-    /* compiled from: TransformImageView.java */
-    /* renamed from: b.q.a.l.c$a */
+    /* JADX INFO: renamed from: b.q.a.l.c$a */
+    /* JADX INFO: compiled from: TransformImageView.java */
     public interface a {
     }
 
@@ -80,7 +80,7 @@ public class TransformImageView2 extends AppCompatImageView {
         this(context, attributeSet, 0);
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public float m7484a(@NonNull Matrix matrix) {
         matrix.getValues(this.f14486l);
         float[] fArr = this.f14486l;
@@ -89,7 +89,7 @@ public class TransformImageView2 extends AppCompatImageView {
         return (float) (-(Math.atan2(d, this.f14486l[0]) * 57.29577951308232d));
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public float m7485b(@NonNull Matrix matrix) {
         matrix.getValues(this.f14486l);
         double dPow = Math.pow(this.f14486l[0], 2.0d);
@@ -97,12 +97,12 @@ public class TransformImageView2 extends AppCompatImageView {
         return (float) Math.sqrt(Math.pow(this.f14486l[3], 2.0d) + dPow);
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public void mo7486c() {
         setScaleType(ImageView.ScaleType.MATRIX);
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public void mo7477d() {
         Drawable drawable = getDrawable();
         if (drawable == null) {
@@ -126,7 +126,7 @@ public class TransformImageView2 extends AppCompatImageView {
         }
     }
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public void m7487e(float f, float f2, float f3) {
         if (f != 0.0f) {
             this.f14487m.postRotate(f, f2, f3);
@@ -138,7 +138,7 @@ public class TransformImageView2 extends AppCompatImageView {
         }
     }
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public void mo7478f(float f, float f2, float f3) {
         if (f != 0.0f) {
             this.f14487m.postScale(f, f, f2, f3);
@@ -150,7 +150,7 @@ public class TransformImageView2 extends AppCompatImageView {
         }
     }
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public void m7488g(float f, float f2) {
         if (f == 0.0f && f2 == 0.0f) {
             return;

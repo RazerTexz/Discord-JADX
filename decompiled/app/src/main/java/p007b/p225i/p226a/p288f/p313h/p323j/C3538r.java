@@ -22,41 +22,41 @@ import p007b.p225i.p226a.p288f.p299e.p307n.C3398a;
 import p007b.p225i.p226a.p288f.p299e.p308o.C3401c;
 import p007b.p225i.p226a.p288f.p299e.p310p.C3411b;
 
-/* renamed from: b.i.a.f.h.j.r */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.h.j.r */
+/* JADX INFO: loaded from: classes3.dex */
 public final class C3538r extends AbstractC3509e {
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public boolean f9782l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public final C3532o f9783m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public final C3533o0 f9784n;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public final C3531n0 f9785o;
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public final C3522j f9786p;
 
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     public long f9787q;
 
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     public final AbstractC3498a0 f9788r;
 
-    /* renamed from: s */
+    /* JADX INFO: renamed from: s */
     public final AbstractC3498a0 f9789s;
 
-    /* renamed from: t */
+    /* JADX INFO: renamed from: t */
     public final C3553y0 f9790t;
 
-    /* renamed from: u */
+    /* JADX INFO: renamed from: u */
     public long f9791u;
 
-    /* renamed from: v */
+    /* JADX INFO: renamed from: v */
     public boolean f9792v;
 
     public C3538r(C3515g c3515g, C3520i c3520i) {
@@ -72,14 +72,14 @@ public final class C3538r extends AbstractC3509e {
     }
 
     @Override // p007b.p225i.p226a.p288f.p313h.p323j.AbstractC3509e
-    /* renamed from: L */
+    /* JADX INFO: renamed from: L */
     public final void mo4414L() {
         this.f9783m.m4443J();
         this.f9784n.m4443J();
         this.f9786p.m4443J();
     }
 
-    /* renamed from: O */
+    /* JADX INFO: renamed from: O */
     public final void m4487O() {
         C3180f.m3967b();
         C3180f.m3967b();
@@ -125,7 +125,7 @@ public final class C3538r extends AbstractC3509e {
         }
     }
 
-    /* renamed from: R */
+    /* JADX INFO: renamed from: R */
     public final void m4488R(InterfaceC3507d0 interfaceC3507d0) {
         long jAbs;
         long j = this.f9791u;
@@ -164,7 +164,7 @@ public final class C3538r extends AbstractC3509e {
         }
     }
 
-    /* renamed from: S */
+    /* JADX INFO: renamed from: S */
     public final void m4489S() {
         InterfaceC3525k0 interfaceC3525k0;
         if (this.f9792v || !C3510e0.f9689a.f9716a.booleanValue() || this.f9786p.m4458R()) {
@@ -225,7 +225,7 @@ public final class C3538r extends AbstractC3509e {
         }
     }
 
-    /* renamed from: T */
+    /* JADX INFO: renamed from: T */
     public final boolean m4490T() {
         C3180f.m3967b();
         m4444N();
@@ -378,7 +378,7 @@ public final class C3538r extends AbstractC3509e {
         }
     }
 
-    /* renamed from: U */
+    /* JADX INFO: renamed from: U */
     public final void m4491U() {
         long jMin;
         long jAbs;
@@ -462,7 +462,7 @@ public final class C3538r extends AbstractC3509e {
         }
     }
 
-    /* renamed from: V */
+    /* JADX INFO: renamed from: V */
     public final void m4492V() {
         long jM4473V;
         C3515g c3515g = this.f9684j;
@@ -515,7 +515,7 @@ public final class C3538r extends AbstractC3509e {
         }
     }
 
-    /* renamed from: W */
+    /* JADX INFO: renamed from: W */
     public final void m4493W() {
         if (this.f9788r.m4419d()) {
             m4427C("All hits dispatched or no network/service. Going to power save mode");
@@ -529,7 +529,7 @@ public final class C3538r extends AbstractC3509e {
         }
     }
 
-    /* renamed from: X */
+    /* JADX INFO: renamed from: X */
     public final long m4494X() {
         long j = this.f9787q;
         if (j != Long.MIN_VALUE) {
@@ -541,11 +541,12 @@ public final class C3538r extends AbstractC3509e {
         if (!c3499a1M4437t.f9668n) {
             return jLongValue;
         }
-        m4437t().m4444N();
-        return r0.f9669o * 1000;
+        C3499a1 c3499a1M4437t2 = m4437t();
+        c3499a1M4437t2.m4444N();
+        return ((long) c3499a1M4437t2.f9669o) * 1000;
     }
 
-    /* renamed from: b0 */
+    /* JADX INFO: renamed from: b0 */
     public final boolean m4495b0(String str) {
         return C3411b.m4376a(this.f9684j.f9722b).f9605a.checkCallingOrSelfPermission(str) == 0;
     }

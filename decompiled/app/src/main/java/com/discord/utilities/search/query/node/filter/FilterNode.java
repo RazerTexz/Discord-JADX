@@ -13,8 +13,8 @@ import com.discord.widgets.chat.input.MentionUtils;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: FilterNode.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: FilterNode.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final /* data */ class FilterNode extends QueryNode {
     private final FilterType filterType;
     private final CharSequence text;
@@ -36,7 +36,7 @@ public final /* data */ class FilterNode extends QueryNode {
         return filterNode.copy(filterType, charSequence);
     }
 
-    /* renamed from: component1, reason: from getter */
+    /* JADX INFO: renamed from: component1, reason: from getter */
     public final FilterType getFilterType() {
         return this.filterType;
     }
@@ -92,7 +92,7 @@ public final /* data */ class FilterNode extends QueryNode {
         return sbM833U.toString();
     }
 
-    /* renamed from: render, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: render, reason: avoid collision after fix types in other method */
     public void render2(SpannableStringBuilder builder, Context renderContext) {
         Intrinsics3.checkNotNullParameter(builder, "builder");
         Intrinsics3.checkNotNullParameter(renderContext, "renderContext");

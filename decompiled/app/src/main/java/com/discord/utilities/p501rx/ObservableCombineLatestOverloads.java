@@ -1,9 +1,9 @@
 package com.discord.utilities.p501rx;
 
 
-/* compiled from: ObservableCombineLatestOverloads.kt */
-/* renamed from: com.discord.utilities.rx.Holder, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.utilities.rx.Holder, reason: use source file name */
+/* JADX INFO: compiled from: ObservableCombineLatestOverloads.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class ObservableCombineLatestOverloads<T1, T2, T3, T4, T5, T6, T7, T8, T9> {
     private final T1 t1;
     private final T2 t2;

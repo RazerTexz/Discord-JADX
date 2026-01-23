@@ -42,8 +42,8 @@ import kotlin.jvm.functions.Function2;
 import p007b.p008a.p027k.FormatUtils;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: WidgetFriendsListAdapter.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetFriendsListAdapter.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetFriendsListAdapter extends MGRecyclerAdapterSimple<FriendsListViewModel.Item> {
     private Function1<? super User, Unit> onClickAcceptFriend;
     private Function1<? super User, Unit> onClickApproveSuggestion;
@@ -57,7 +57,7 @@ public final class WidgetFriendsListAdapter extends MGRecyclerAdapterSimple<Frie
     private Function0<Unit> onClickSuggestedHeaderExpandCollapse;
     private Function2<? super View, ? super User, Unit> onClickUserProfile;
 
-    /* compiled from: WidgetFriendsListAdapter.kt */
+    /* JADX INFO: compiled from: WidgetFriendsListAdapter.kt */
     public static abstract class Item extends MGRecyclerViewHolder<WidgetFriendsListAdapter, FriendsListViewModel.Item> {
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
         public Item(@LayoutRes int i, WidgetFriendsListAdapter widgetFriendsListAdapter) {
@@ -73,7 +73,7 @@ public final class WidgetFriendsListAdapter extends MGRecyclerAdapterSimple<Frie
         }
     }
 
-    /* compiled from: WidgetFriendsListAdapter.kt */
+    /* JADX INFO: compiled from: WidgetFriendsListAdapter.kt */
     public static final class ItemContactSyncUpsell extends Item {
         private final WidgetFriendsListContactSyncUpsellBinding binding;
 
@@ -115,7 +115,7 @@ public final class WidgetFriendsListAdapter extends MGRecyclerAdapterSimple<Frie
             onConfigure2(i, item);
         }
 
-        /* renamed from: onConfigure, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: onConfigure, reason: avoid collision after fix types in other method */
         public void onConfigure2(int position, FriendsListViewModel.Item data) {
             Intrinsics3.checkNotNullParameter(data, "data");
             this.binding.f16682b.setOnClickListener(new WidgetFriendsListAdapter$ItemContactSyncUpsell$onConfigure$1(this));
@@ -123,7 +123,7 @@ public final class WidgetFriendsListAdapter extends MGRecyclerAdapterSimple<Frie
         }
     }
 
-    /* compiled from: WidgetFriendsListAdapter.kt */
+    /* JADX INFO: compiled from: WidgetFriendsListAdapter.kt */
     public static final class ItemHeader extends Item {
         private final WidgetFriendsListAdapterItemHeaderBinding binding;
 
@@ -146,7 +146,7 @@ public final class WidgetFriendsListAdapter extends MGRecyclerAdapterSimple<Frie
             onConfigure2(i, item);
         }
 
-        /* renamed from: onConfigure, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: onConfigure, reason: avoid collision after fix types in other method */
         public void onConfigure2(int position, FriendsListViewModel.Item data) {
             Intrinsics3.checkNotNullParameter(data, "data");
             super.onConfigure(position, data);
@@ -157,7 +157,7 @@ public final class WidgetFriendsListAdapter extends MGRecyclerAdapterSimple<Frie
         }
     }
 
-    /* compiled from: WidgetFriendsListAdapter.kt */
+    /* JADX INFO: compiled from: WidgetFriendsListAdapter.kt */
     public static final class ItemPendingHeader extends Item {
         private final WidgetFriendsListExpandableHeaderBinding binding;
 
@@ -179,7 +179,7 @@ public final class WidgetFriendsListAdapter extends MGRecyclerAdapterSimple<Frie
             onConfigure2(i, item);
         }
 
-        /* renamed from: onConfigure, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: onConfigure, reason: avoid collision after fix types in other method */
         public void onConfigure2(int position, FriendsListViewModel.Item data) {
             Intrinsics3.checkNotNullParameter(data, "data");
             super.onConfigure(position, data);
@@ -211,7 +211,7 @@ public final class WidgetFriendsListAdapter extends MGRecyclerAdapterSimple<Frie
         }
     }
 
-    /* compiled from: WidgetFriendsListAdapter.kt */
+    /* JADX INFO: compiled from: WidgetFriendsListAdapter.kt */
     public static final class ItemPendingUser extends Item {
         private final WidgetFriendsListAdapterItemPendingBinding binding;
 
@@ -268,7 +268,7 @@ public final class WidgetFriendsListAdapter extends MGRecyclerAdapterSimple<Frie
             onConfigure2(i, item);
         }
 
-        /* renamed from: onConfigure, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: onConfigure, reason: avoid collision after fix types in other method */
         public void onConfigure2(int position, FriendsListViewModel.Item data) {
             Intrinsics3.checkNotNullParameter(data, "data");
             super.onConfigure(position, data);
@@ -306,7 +306,7 @@ public final class WidgetFriendsListAdapter extends MGRecyclerAdapterSimple<Frie
         }
     }
 
-    /* compiled from: WidgetFriendsListAdapter.kt */
+    /* JADX INFO: compiled from: WidgetFriendsListAdapter.kt */
     public static final class ItemSuggestedFriend extends Item {
         private final WidgetFriendsListAdapterSuggestedFriendBinding viewBinding;
 
@@ -329,7 +329,7 @@ public final class WidgetFriendsListAdapter extends MGRecyclerAdapterSimple<Frie
             onConfigure2(i, item);
         }
 
-        /* renamed from: onConfigure, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: onConfigure, reason: avoid collision after fix types in other method */
         public void onConfigure2(int position, FriendsListViewModel.Item data) {
             Intrinsics3.checkNotNullParameter(data, "data");
             FriendsListViewModel.Item.SuggestedFriend suggestedFriend = (FriendsListViewModel.Item.SuggestedFriend) data;
@@ -342,7 +342,7 @@ public final class WidgetFriendsListAdapter extends MGRecyclerAdapterSimple<Frie
         }
     }
 
-    /* compiled from: WidgetFriendsListAdapter.kt */
+    /* JADX INFO: compiled from: WidgetFriendsListAdapter.kt */
     public static final class ItemSuggestedFriendHeader extends Item {
         private final WidgetFriendsListExpandableHeaderBinding binding;
 
@@ -364,7 +364,7 @@ public final class WidgetFriendsListAdapter extends MGRecyclerAdapterSimple<Frie
             onConfigure2(i, item);
         }
 
-        /* renamed from: onConfigure, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: onConfigure, reason: avoid collision after fix types in other method */
         public void onConfigure2(int position, FriendsListViewModel.Item data) {
             CharSequence charSequenceM218j;
             Intrinsics3.checkNotNullParameter(data, "data");
@@ -404,7 +404,7 @@ public final class WidgetFriendsListAdapter extends MGRecyclerAdapterSimple<Frie
         }
     }
 
-    /* compiled from: WidgetFriendsListAdapter.kt */
+    /* JADX INFO: compiled from: WidgetFriendsListAdapter.kt */
     public static final class ItemUser extends Item {
         private final WidgetFriendsListAdapterItemFriendBinding binding;
 
@@ -461,7 +461,7 @@ public final class WidgetFriendsListAdapter extends MGRecyclerAdapterSimple<Frie
             onConfigure2(i, item);
         }
 
-        /* renamed from: onConfigure, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: onConfigure, reason: avoid collision after fix types in other method */
         public void onConfigure2(int position, FriendsListViewModel.Item data) {
             Intrinsics3.checkNotNullParameter(data, "data");
             super.onConfigure(position, data);

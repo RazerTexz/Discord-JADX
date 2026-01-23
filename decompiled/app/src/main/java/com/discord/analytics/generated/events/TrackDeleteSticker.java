@@ -7,8 +7,8 @@ import com.discord.models.domain.ModelAuditLogEntry;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: TrackDeleteSticker.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: TrackDeleteSticker.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class TrackDeleteSticker implements AnalyticsSchema, TrackBase2 {
     private TrackBase trackBase;
     private final Long id = null;
@@ -18,7 +18,7 @@ public final /* data */ class TrackDeleteSticker implements AnalyticsSchema, Tra
     private final transient String analyticsSchemaTypeName = "delete_sticker";
 
     @Override // com.discord.api.science.AnalyticsSchema
-    /* renamed from: d, reason: from getter */
+    /* JADX INFO: renamed from: d, reason: from getter */
     public String getAnalyticsSchemaTypeName() {
         return this.analyticsSchemaTypeName;
     }

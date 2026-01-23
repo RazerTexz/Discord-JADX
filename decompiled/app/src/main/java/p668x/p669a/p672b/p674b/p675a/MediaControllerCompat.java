@@ -23,20 +23,20 @@ import java.util.List;
 import java.util.Objects;
 import p668x.p669a.p672b.p674b.p675a.IMediaControllerCallback;
 
-/* compiled from: MediaControllerCompat.java */
-/* renamed from: x.a.b.b.a.c, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: x.a.b.b.a.c, reason: use source file name */
+/* JADX INFO: compiled from: MediaControllerCompat.java */
+/* JADX INFO: loaded from: classes.dex */
 public abstract class MediaControllerCompat implements IBinder.DeathRecipient {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public IMediaControllerCallback f27945a;
 
-    /* compiled from: MediaControllerCompat.java */
+    /* JADX INFO: renamed from: x.a.b.b.a.c$a */
+    /* JADX INFO: compiled from: MediaControllerCompat.java */
     @RequiresApi(21)
-    /* renamed from: x.a.b.b.a.c$a */
     public static class a extends MediaController.Callback {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final WeakReference<MediaControllerCompat> f27946a;
 
         public a(MediaControllerCompat mediaControllerCompat) {
@@ -150,33 +150,33 @@ public abstract class MediaControllerCompat implements IBinder.DeathRecipient {
         }
     }
 
-    /* compiled from: MediaControllerCompat.java */
-    /* renamed from: x.a.b.b.a.c$b */
+    /* JADX INFO: renamed from: x.a.b.b.a.c$b */
+    /* JADX INFO: compiled from: MediaControllerCompat.java */
     public static class b extends IMediaControllerCallback.a {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final WeakReference<MediaControllerCompat> f27947a;
 
         public b(MediaControllerCompat mediaControllerCompat) {
             this.f27947a = new WeakReference<>(mediaControllerCompat);
         }
 
-        /* renamed from: U */
+        /* JADX INFO: renamed from: U */
         public void mo34U(CharSequence charSequence) throws RemoteException {
             this.f27947a.get();
         }
 
-        /* renamed from: W */
+        /* JADX INFO: renamed from: W */
         public void mo35W() throws RemoteException {
             this.f27947a.get();
         }
 
-        /* renamed from: X */
+        /* JADX INFO: renamed from: X */
         public void mo36X(MediaMetadataCompat mediaMetadataCompat) throws RemoteException {
             this.f27947a.get();
         }
 
-        /* renamed from: s0 */
+        /* JADX INFO: renamed from: s0 */
         public void mo37s0(ParcelableVolumeInfo parcelableVolumeInfo) throws RemoteException {
             if (this.f27947a.get() == null || parcelableVolumeInfo == null) {
                 return;
@@ -184,12 +184,12 @@ public abstract class MediaControllerCompat implements IBinder.DeathRecipient {
             new AudioAttributesCompat.Builder().setLegacyStreamType(parcelableVolumeInfo.f55k).build();
         }
 
-        /* renamed from: y */
+        /* JADX INFO: renamed from: y */
         public void mo38y(Bundle bundle) throws RemoteException {
             this.f27947a.get();
         }
 
-        /* renamed from: z */
+        /* JADX INFO: renamed from: z */
         public void mo39z(List<MediaSessionCompat.QueueItem> list) throws RemoteException {
             this.f27947a.get();
         }

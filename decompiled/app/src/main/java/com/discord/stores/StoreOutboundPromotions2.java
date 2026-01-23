@@ -16,14 +16,14 @@ import p637j0.p642l.p647e.ScalarSynchronousObservable;
 import p658rx.Observable;
 import p658rx.functions.Action1;
 
-/* compiled from: StoreOutboundPromotions.kt */
-/* renamed from: com.discord.stores.StoreOutboundPromotions$handleConnectionOpen$2, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.stores.StoreOutboundPromotions$handleConnectionOpen$2, reason: use source file name */
+/* JADX INFO: compiled from: StoreOutboundPromotions.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class StoreOutboundPromotions2<T, R> implements Func1<List<? extends OutboundPromotion>, Observable<? extends List<? extends OutboundPromotion>>> {
     public final /* synthetic */ StoreOutboundPromotions this$0;
 
-    /* compiled from: StoreOutboundPromotions.kt */
-    /* renamed from: com.discord.stores.StoreOutboundPromotions$handleConnectionOpen$2$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreOutboundPromotions$handleConnectionOpen$2$1 */
+    /* JADX INFO: compiled from: StoreOutboundPromotions.kt */
     public static final class CallableC63131<V> implements Callable<List<? extends OutboundPromotion>> {
         public final /* synthetic */ List $activePromos;
 
@@ -37,7 +37,7 @@ public final class StoreOutboundPromotions2<T, R> implements Func1<List<? extend
         }
 
         @Override // java.util.concurrent.Callable
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final List<? extends OutboundPromotion> call2() {
             long j = StoreOutboundPromotions2.this.this$0.getPrefs().getLong("CONSUMED_ENTITLEMENT_CODE", -1L);
             List list = this.$activePromos;
@@ -51,8 +51,8 @@ public final class StoreOutboundPromotions2<T, R> implements Func1<List<? extend
         }
     }
 
-    /* compiled from: StoreOutboundPromotions.kt */
-    /* renamed from: com.discord.stores.StoreOutboundPromotions$handleConnectionOpen$2$2 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreOutboundPromotions$handleConnectionOpen$2$2 */
+    /* JADX INFO: compiled from: StoreOutboundPromotions.kt */
     public static final class C63142<T, R> implements Func1<List<? extends ModelEntitlement>, Long> {
         public static final C63142 INSTANCE = new C63142();
 
@@ -61,7 +61,7 @@ public final class StoreOutboundPromotions2<T, R> implements Func1<List<? extend
             return call2((List<ModelEntitlement>) list);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final Long call2(List<ModelEntitlement> list) {
             T next;
             Long promotionId;
@@ -83,8 +83,8 @@ public final class StoreOutboundPromotions2<T, R> implements Func1<List<? extend
         }
     }
 
-    /* compiled from: StoreOutboundPromotions.kt */
-    /* renamed from: com.discord.stores.StoreOutboundPromotions$handleConnectionOpen$2$3 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreOutboundPromotions$handleConnectionOpen$2$3 */
+    /* JADX INFO: compiled from: StoreOutboundPromotions.kt */
     public static final class C63153<T> implements Action1<Long> {
         public C63153() {
         }
@@ -94,7 +94,7 @@ public final class StoreOutboundPromotions2<T, R> implements Func1<List<? extend
             call2(l);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final void call2(Long l) {
             SharedPreferences.Editor editorEdit = StoreOutboundPromotions2.this.this$0.getPrefs().edit();
             Intrinsics3.checkNotNullExpressionValue(editorEdit, "editor");
@@ -104,8 +104,8 @@ public final class StoreOutboundPromotions2<T, R> implements Func1<List<? extend
         }
     }
 
-    /* compiled from: StoreOutboundPromotions.kt */
-    /* renamed from: com.discord.stores.StoreOutboundPromotions$handleConnectionOpen$2$4 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreOutboundPromotions$handleConnectionOpen$2$4 */
+    /* JADX INFO: compiled from: StoreOutboundPromotions.kt */
     public static final class C63164<T, R> implements Func1<Long, List<? extends OutboundPromotion>> {
         public final /* synthetic */ List $activePromos;
 
@@ -118,7 +118,7 @@ public final class StoreOutboundPromotions2<T, R> implements Func1<List<? extend
             return call2(l);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final List<OutboundPromotion> call2(Long l) {
             List list = this.$activePromos;
             ArrayList arrayListM840a0 = outline.m840a0(list, "activePromos");
@@ -140,7 +140,7 @@ public final class StoreOutboundPromotions2<T, R> implements Func1<List<? extend
         return call2((List<OutboundPromotion>) list);
     }
 
-    /* renamed from: call, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
     public final Observable<? extends List<OutboundPromotion>> call2(List<OutboundPromotion> list) {
         if (this.this$0.getPrefs().contains("CONSUMED_ENTITLEMENT_CODE")) {
             return Observable.m11060D(new CallableC63131(list));

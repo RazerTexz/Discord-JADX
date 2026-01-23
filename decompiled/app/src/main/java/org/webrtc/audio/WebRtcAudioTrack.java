@@ -16,7 +16,7 @@ import org.webrtc.ThreadUtils;
 import org.webrtc.audio.JavaAudioDeviceModule;
 import p007b.p100d.p104b.p105a.outline;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public class WebRtcAudioTrack {
     private static final int AUDIO_TRACK_START = 0;
     private static final int AUDIO_TRACK_STOP = 1;
@@ -67,7 +67,7 @@ public class WebRtcAudioTrack {
         }
 
         @Override // java.lang.Thread, java.lang.Runnable
-        public void run() throws SecurityException, IllegalArgumentException {
+        public void run() {
             Process.setThreadPriority(-19);
             Logging.m11027d(WebRtcAudioTrack.TAG, "AudioTrackThread" + WebRtcAudioUtils.getThreadInfo());
             WebRtcAudioTrack.access$100(WebRtcAudioTrack.access$000(WebRtcAudioTrack.this).getPlayState() == 3);

@@ -8,30 +8,30 @@ import com.google.android.gms.common.internal.safeparcel.AbstractSafeParcelable;
 import p007b.p085c.p086a.p087a0.AnimatableValueParser;
 import p007b.p225i.p226a.p288f.p299e.p304k.C3372o0;
 
-/* compiled from: com.google.android.gms:play-services-basement@@17.6.0 */
-/* loaded from: classes3.dex */
+/* JADX INFO: compiled from: com.google.android.gms:play-services-basement@@17.6.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public class ConnectionTelemetryConfiguration extends AbstractSafeParcelable {
 
     @RecentlyNonNull
     public static final Parcelable.Creator<ConnectionTelemetryConfiguration> CREATOR = new C3372o0();
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final RootTelemetryConfiguration f20521j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final boolean f20522k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final boolean f20523l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     @Nullable
     public final int[] f20524m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public final int f20525n;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     @Nullable
     public final int[] f20526o;
 

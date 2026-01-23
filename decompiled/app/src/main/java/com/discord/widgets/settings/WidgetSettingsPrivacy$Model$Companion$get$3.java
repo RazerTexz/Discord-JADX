@@ -19,13 +19,13 @@ import p637j0.p653p.Schedulers2;
 import p658rx.Observable;
 import p658rx.functions.Func3;
 
-/* compiled from: WidgetSettingsPrivacy.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetSettingsPrivacy.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetSettingsPrivacy$Model$Companion$get$3<T, R> implements Func1<WidgetSettingsPrivacy.LocalState, Observable<? extends WidgetSettingsPrivacy.Model>> {
     public static final WidgetSettingsPrivacy$Model$Companion$get$3 INSTANCE = new WidgetSettingsPrivacy$Model$Companion$get$3();
 
-    /* compiled from: WidgetSettingsPrivacy.kt */
-    /* renamed from: com.discord.widgets.settings.WidgetSettingsPrivacy$Model$Companion$get$3$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.WidgetSettingsPrivacy$Model$Companion$get$3$1 */
+    /* JADX INFO: compiled from: WidgetSettingsPrivacy.kt */
     public static final class C96581<T, R> implements Func1<MeUser, Boolean> {
         public static final C96581 INSTANCE = new C96581();
 
@@ -34,19 +34,19 @@ public final class WidgetSettingsPrivacy$Model$Companion$get$3<T, R> implements 
             return call2(meUser);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final Boolean call2(MeUser meUser) {
             return Boolean.valueOf(meUser.isVerified());
         }
     }
 
-    /* compiled from: WidgetSettingsPrivacy.kt */
-    /* renamed from: com.discord.widgets.settings.WidgetSettingsPrivacy$Model$Companion$get$3$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.WidgetSettingsPrivacy$Model$Companion$get$3$2 */
+    /* JADX INFO: compiled from: WidgetSettingsPrivacy.kt */
     public static final class C96592<T, R> implements Func1<MeUser, Observable<? extends RestAPI.HarvestState>> {
         public static final C96592 INSTANCE = new C96592();
 
-        /* compiled from: WidgetSettingsPrivacy.kt */
-        /* renamed from: com.discord.widgets.settings.WidgetSettingsPrivacy$Model$Companion$get$3$2$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.widgets.settings.WidgetSettingsPrivacy$Model$Companion$get$3$2$1, reason: invalid class name */
+        /* JADX INFO: compiled from: WidgetSettingsPrivacy.kt */
         public static final class AnonymousClass1<T, R> implements Func1<Throwable, RestAPI.HarvestState> {
             public static final AnonymousClass1 INSTANCE = new AnonymousClass1();
 
@@ -55,7 +55,7 @@ public final class WidgetSettingsPrivacy$Model$Companion$get$3<T, R> implements 
                 return call2(th);
             }
 
-            /* renamed from: call, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
             public final RestAPI.HarvestState call2(Throwable th) {
                 return new RestAPI.HarvestState.NeverRequested();
             }
@@ -66,7 +66,7 @@ public final class WidgetSettingsPrivacy$Model$Companion$get$3<T, R> implements 
             return call2(meUser);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final Observable<? extends RestAPI.HarvestState> call2(MeUser meUser) {
             RetryWithDelay retryWithDelay = RetryWithDelay.INSTANCE;
             Observable<RestAPI.HarvestState> observableM11084J = RestAPI.INSTANCE.getApi().getHarvestStatusGuarded().m11084J(Schedulers2.m10875c());
@@ -75,8 +75,8 @@ public final class WidgetSettingsPrivacy$Model$Companion$get$3<T, R> implements 
         }
     }
 
-    /* compiled from: WidgetSettingsPrivacy.kt */
-    /* renamed from: com.discord.widgets.settings.WidgetSettingsPrivacy$Model$Companion$get$3$3 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.WidgetSettingsPrivacy$Model$Companion$get$3$3 */
+    /* JADX INFO: compiled from: WidgetSettingsPrivacy.kt */
     public static final class C96603<T1, T2, T3, R> implements Func3<WidgetSettingsPrivacy.LocalState, ModelUserConsents2, RestAPI.HarvestState, WidgetSettingsPrivacy.Model> {
         public static final C96603 INSTANCE = new C96603();
 
@@ -85,7 +85,7 @@ public final class WidgetSettingsPrivacy$Model$Companion$get$3<T, R> implements 
             return call2(localState, modelUserConsents2, harvestState);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final WidgetSettingsPrivacy.Model call2(WidgetSettingsPrivacy.LocalState localState, ModelUserConsents2 modelUserConsents2, RestAPI.HarvestState harvestState) {
             ConnectedAccount contactSyncConnection = localState.getContactSyncConnection();
             Experiment contactSyncExperiment = localState.getContactSyncExperiment();
@@ -100,7 +100,7 @@ public final class WidgetSettingsPrivacy$Model$Companion$get$3<T, R> implements 
         }
     }
 
-    /* renamed from: call, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
     public final Observable<? extends WidgetSettingsPrivacy.Model> call2(WidgetSettingsPrivacy.LocalState localState) {
         ScalarSynchronousObservable scalarSynchronousObservable = new ScalarSynchronousObservable(localState);
         StoreStream.Companion companion = StoreStream.INSTANCE;

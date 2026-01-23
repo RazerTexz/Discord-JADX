@@ -2,7 +2,6 @@ package com.google.android.material.progressindicator;
 
 import android.R;
 import android.content.Context;
-import android.content.res.Resources;
 import android.content.res.TypedArray;
 import android.util.AttributeSet;
 import androidx.annotation.AttrRes;
@@ -16,7 +15,7 @@ import com.google.android.material.color.MaterialColors;
 import com.google.android.material.internal.ThemeEnforcement;
 import com.google.android.material.resources.MaterialResources;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public abstract class BaseProgressIndicatorSpec {
     public int hideAnimationBehavior;
 
@@ -33,7 +32,7 @@ public abstract class BaseProgressIndicatorSpec {
     @Px
     public int trackThickness;
 
-    public BaseProgressIndicatorSpec(@NonNull Context context, @Nullable AttributeSet attributeSet, @AttrRes int i, @StyleRes int i2) throws Resources.NotFoundException {
+    public BaseProgressIndicatorSpec(@NonNull Context context, @Nullable AttributeSet attributeSet, @AttrRes int i, @StyleRes int i2) {
         int dimensionPixelSize = context.getResources().getDimensionPixelSize(C10817R.dimen.mtrl_progress_track_thickness);
         TypedArray typedArrayObtainStyledAttributes = ThemeEnforcement.obtainStyledAttributes(context, attributeSet, C10817R.styleable.BaseProgressIndicator, i, i2, new int[0]);
         this.trackThickness = MaterialResources.getDimensionPixelSize(context, typedArrayObtainStyledAttributes, C10817R.styleable.BaseProgressIndicator_trackThickness, dimensionPixelSize);
@@ -45,7 +44,7 @@ public abstract class BaseProgressIndicatorSpec {
         typedArrayObtainStyledAttributes.recycle();
     }
 
-    private void loadIndicatorColors(@NonNull Context context, @NonNull TypedArray typedArray) throws Resources.NotFoundException {
+    private void loadIndicatorColors(@NonNull Context context, @NonNull TypedArray typedArray) {
         int i = C10817R.styleable.BaseProgressIndicator_indicatorColor;
         if (!typedArray.hasValue(i)) {
             this.indicatorColors = new int[]{MaterialColors.getColor(context, C10817R.attr.colorPrimary, -1)};

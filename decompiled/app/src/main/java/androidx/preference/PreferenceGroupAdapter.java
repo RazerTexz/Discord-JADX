@@ -21,8 +21,8 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
+/* JADX INFO: loaded from: classes.dex */
 @RestrictTo({RestrictTo.Scope.LIBRARY_GROUP_PREFIX})
-/* loaded from: classes.dex */
 public class PreferenceGroupAdapter extends RecyclerView.Adapter<PreferenceViewHolder> implements Preference.OnPreferenceChangeInternalListener, PreferenceGroup.PreferencePositionCallback {
     private PreferenceGroup mPreferenceGroup;
     private List<PreferenceResourceDescriptor> mPreferenceResourceDescriptors;
@@ -31,7 +31,7 @@ public class PreferenceGroupAdapter extends RecyclerView.Adapter<PreferenceViewH
     private Runnable mSyncRunnable = new RunnableC05201();
     private Handler mHandler = new Handler();
 
-    /* renamed from: androidx.preference.PreferenceGroupAdapter$1 */
+    /* JADX INFO: renamed from: androidx.preference.PreferenceGroupAdapter$1 */
     public class RunnableC05201 implements Runnable {
         public RunnableC05201() {
         }
@@ -42,7 +42,7 @@ public class PreferenceGroupAdapter extends RecyclerView.Adapter<PreferenceViewH
         }
     }
 
-    /* renamed from: androidx.preference.PreferenceGroupAdapter$2 */
+    /* JADX INFO: renamed from: androidx.preference.PreferenceGroupAdapter$2 */
     public class C05212 extends DiffUtil.Callback {
         public final /* synthetic */ PreferenceManager.PreferenceComparisonCallback val$comparisonCallback;
         public final /* synthetic */ List val$oldVisibleList;
@@ -75,7 +75,7 @@ public class PreferenceGroupAdapter extends RecyclerView.Adapter<PreferenceViewH
         }
     }
 
-    /* renamed from: androidx.preference.PreferenceGroupAdapter$3 */
+    /* JADX INFO: renamed from: androidx.preference.PreferenceGroupAdapter$3 */
     public class C05223 implements Preference.OnPreferenceClickListener {
         public final /* synthetic */ PreferenceGroup val$group;
 

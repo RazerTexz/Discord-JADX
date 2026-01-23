@@ -10,7 +10,7 @@ import java.util.concurrent.TimeoutException;
 import p007b.p100d.p104b.p105a.outline;
 import p007b.p225i.p355b.p359d.p360a.ListenableFuture8;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public final class CallbackToFutureAdapter {
 
     public static final class Completer<T> {
@@ -103,7 +103,7 @@ public final class CallbackToFutureAdapter {
         public final WeakReference<Completer<T>> completerWeakReference;
         private final AbstractResolvableFuture<T> delegate = new C01751();
 
-        /* renamed from: androidx.concurrent.futures.CallbackToFutureAdapter$SafeFuture$1 */
+        /* JADX INFO: renamed from: androidx.concurrent.futures.CallbackToFutureAdapter$SafeFuture$1 */
         public class C01751 extends AbstractResolvableFuture<T> {
             public C01751() {
             }

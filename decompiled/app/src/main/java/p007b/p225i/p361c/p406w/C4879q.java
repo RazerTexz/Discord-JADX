@@ -15,12 +15,12 @@ import p007b.p225i.p361c.p393p.p395h.JsonDataEncoderBuilder4;
 import p007b.p225i.p361c.p393p.p395h.JsonDataEncoderBuilder5;
 import p007b.p225i.p361c.p406w.C4875m;
 
-/* compiled from: com.google.firebase:firebase-messaging@@21.0.0 */
-/* renamed from: b.i.c.w.q */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.c.w.q */
+/* JADX INFO: compiled from: com.google.firebase:firebase-messaging@@21.0.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public class C4879q {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final DataEncoder f13038a;
 
     static {
@@ -33,7 +33,7 @@ public class C4879q {
     }
 
     @Nullable
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static String m6817a(Intent intent) {
         String stringExtra = intent.getStringExtra("from");
         if (stringExtra == null || !stringExtra.startsWith("/topics/")) {
@@ -43,7 +43,7 @@ public class C4879q {
     }
 
     @VisibleForTesting
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static void m6818b(String str, Intent intent) {
         Bundle bundle = new Bundle();
         String stringExtra = intent.getStringExtra("google.c.a.c_id");
@@ -100,7 +100,7 @@ public class C4879q {
         }
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public static boolean m6819c(Intent intent) {
         if (intent == null || FirebaseMessagingService.ACTION_DIRECT_BOOT_REMOTE_INTENT.equals(intent.getAction())) {
             return false;

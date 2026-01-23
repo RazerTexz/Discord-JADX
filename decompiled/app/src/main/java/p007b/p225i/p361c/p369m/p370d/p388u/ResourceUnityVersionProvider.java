@@ -1,31 +1,30 @@
 package p007b.p225i.p361c.p369m.p370d.p388u;
 
 import android.content.Context;
-import android.content.res.Resources;
 import p007b.p100d.p104b.p105a.outline;
 import p007b.p225i.p361c.p369m.p370d.Logger3;
 import p007b.p225i.p361c.p369m.p370d.p373k.CommonUtils;
 
-/* compiled from: ResourceUnityVersionProvider.java */
-/* renamed from: b.i.c.m.d.u.a, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.c.m.d.u.a, reason: use source file name */
+/* JADX INFO: compiled from: ResourceUnityVersionProvider.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class ResourceUnityVersionProvider {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final Context f12781a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public boolean f12782b = false;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public String f12783c;
 
     public ResourceUnityVersionProvider(Context context) {
         this.f12781a = context;
     }
 
-    /* renamed from: a */
-    public String m6697a() throws Resources.NotFoundException {
+    /* JADX INFO: renamed from: a */
+    public String m6697a() {
         String string;
         if (!this.f12782b) {
             Context context = this.f12781a;

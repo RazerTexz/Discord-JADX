@@ -4,8 +4,8 @@ import android.view.View;
 import com.discord.utilities.uri.UriHandler;
 import p007b.p100d.p104b.p105a.outline;
 
-/* compiled from: WidgetSettings.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetSettings.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetSettings$onViewBound$1$24 implements View.OnClickListener {
     public static final WidgetSettings$onViewBound$1$24 INSTANCE = new WidgetSettings$onViewBound$1$24();
 

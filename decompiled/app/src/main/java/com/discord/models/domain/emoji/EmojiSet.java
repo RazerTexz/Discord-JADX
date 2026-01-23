@@ -5,7 +5,7 @@ import java.util.Map;
 import java.util.Set;
 import p007b.p100d.p104b.p105a.outline;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class EmojiSet {
     public final Map<Long, List<Emoji>> customEmojis;
     public final Map<String, Emoji> emojiIndex;

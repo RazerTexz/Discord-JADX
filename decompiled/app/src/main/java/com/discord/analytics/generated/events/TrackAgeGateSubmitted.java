@@ -8,8 +8,8 @@ import com.discord.api.science.AnalyticsSchema;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: TrackAgeGateSubmitted.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: TrackAgeGateSubmitted.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class TrackAgeGateSubmitted implements AnalyticsSchema, TrackBase2, TrackSourceMetadata2 {
     private final transient String analyticsSchemaTypeName;
     private final Long dob;
@@ -28,12 +28,12 @@ public final /* data */ class TrackAgeGateSubmitted implements AnalyticsSchema, 
     }
 
     @Override // com.discord.api.science.AnalyticsSchema
-    /* renamed from: d, reason: from getter */
+    /* JADX INFO: renamed from: d, reason: from getter */
     public String getAnalyticsSchemaTypeName() {
         return this.analyticsSchemaTypeName;
     }
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public void m7509e(TrackSourceMetadata trackSourceMetadata) {
         this.trackSourceMetadata = trackSourceMetadata;
     }

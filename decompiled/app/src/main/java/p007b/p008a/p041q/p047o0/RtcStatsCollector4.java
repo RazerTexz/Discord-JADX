@@ -10,36 +10,36 @@ import java.util.LinkedList;
 import p507d0.p592z.p594d.Intrinsics3;
 import p658rx.Subscription;
 
-/* compiled from: RtcStatsCollector.kt */
-/* renamed from: b.a.q.o0.d, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.a.q.o0.d, reason: use source file name */
+/* JADX INFO: compiled from: RtcStatsCollector.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class RtcStatsCollector4 {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final Deque<Stats> f1807a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public Subscription f1808b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final long f1809c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final Logger f1810d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final MediaEngineConnection f1811e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final VoiceQuality f1812f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public final VideoQuality f1813g;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public final KrispOveruseDetector f1814h;
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public final int f1815i;
 
     public RtcStatsCollector4(long j, Logger logger, MediaEngineConnection mediaEngineConnection, VoiceQuality voiceQuality, VideoQuality videoQuality, KrispOveruseDetector krispOveruseDetector, int i, int i2) {
@@ -59,7 +59,7 @@ public final class RtcStatsCollector4 {
         this.f1807a = new LinkedList();
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final void m351a() {
         Subscription subscription = this.f1808b;
         if (subscription != null) {

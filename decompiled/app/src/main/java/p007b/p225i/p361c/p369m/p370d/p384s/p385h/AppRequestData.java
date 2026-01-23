@@ -1,35 +1,35 @@
 package p007b.p225i.p361c.p369m.p370d.p384s.p385h;
 
-/* compiled from: AppRequestData.java */
-/* renamed from: b.i.c.m.d.s.h.a, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.c.m.d.s.h.a, reason: use source file name */
+/* JADX INFO: compiled from: AppRequestData.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class AppRequestData {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final String f12740a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final String f12741b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final String f12742c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final String f12743d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final String f12744e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final String f12745f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public final String f12746g;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public final int f12747h;
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public final String f12748i;
 
     public AppRequestData(String str, String str2, String str3, String str4, String str5, String str6, String str7, int i, String str8, String str9) {

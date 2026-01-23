@@ -19,8 +19,8 @@ import java.util.logging.Logger;
 import p007b.p100d.p104b.p105a.outline;
 import p007b.p225i.p355b.p359d.p360a.ListenableFuture8;
 
+/* JADX INFO: loaded from: classes.dex */
 @RestrictTo({RestrictTo.Scope.LIBRARY_GROUP})
-/* loaded from: classes.dex */
 public abstract class AbstractFuture<V> implements ListenableFuture8<V> {
     public static final AtomicHelper ATOMIC_HELPER;
     private static final Object NULL;
@@ -84,7 +84,7 @@ public abstract class AbstractFuture<V> implements ListenableFuture8<V> {
         public static final Failure FALLBACK_INSTANCE = new Failure(new C07861("Failure occurred while trying to finish a future."));
         public final Throwable exception;
 
-        /* renamed from: androidx.work.impl.utils.futures.AbstractFuture$Failure$1 */
+        /* JADX INFO: renamed from: androidx.work.impl.utils.futures.AbstractFuture$Failure$1 */
         public class C07861 extends Throwable {
             public C07861(String str) {
                 super(str);

@@ -6,14 +6,14 @@ import com.google.android.gms.safetynet.zzf;
 import p007b.p225i.p226a.p288f.p299e.p300h.AbstractC3268c;
 import p007b.p225i.p226a.p288f.p299e.p300h.InterfaceC3273h;
 
-/* renamed from: b.i.a.f.h.o.i */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.h.o.i */
+/* JADX INFO: loaded from: classes3.dex */
 public class C3962i implements SafetyNetApi {
 
-    /* renamed from: b.i.a.f.h.o.i$a */
+    /* JADX INFO: renamed from: b.i.a.f.h.o.i$a */
     public static abstract class a extends AbstractC3957d<SafetyNetApi.InterfaceC10813a> {
 
-        /* renamed from: l */
+        /* JADX INFO: renamed from: l */
         public InterfaceC3958e f10495l;
 
         public a(AbstractC3268c abstractC3268c) {
@@ -22,19 +22,19 @@ public class C3962i implements SafetyNetApi {
         }
 
         @Override // com.google.android.gms.common.api.internal.BasePendingResult
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         public /* synthetic */ InterfaceC3273h mo3987d(Status status) {
             return new b(status, null);
         }
     }
 
-    /* renamed from: b.i.a.f.h.o.i$b */
+    /* JADX INFO: renamed from: b.i.a.f.h.o.i$b */
     public static class b implements SafetyNetApi.InterfaceC10813a {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public final Status f10496j;
 
-        /* renamed from: k */
+        /* JADX INFO: renamed from: k */
         public final zzf f10497k;
 
         public b(Status status, zzf zzfVar) {
@@ -43,7 +43,7 @@ public class C3962i implements SafetyNetApi {
         }
 
         @Override // com.google.android.gms.safetynet.SafetyNetApi.InterfaceC10813a
-        /* renamed from: C */
+        /* JADX INFO: renamed from: C */
         public final String mo5438C() {
             zzf zzfVar = this.f10497k;
             if (zzfVar == null) {
@@ -53,7 +53,7 @@ public class C3962i implements SafetyNetApi {
         }
 
         @Override // p007b.p225i.p226a.p288f.p299e.p300h.InterfaceC3273h
-        /* renamed from: b0 */
+        /* JADX INFO: renamed from: b0 */
         public final Status mo4053b0() {
             return this.f10496j;
         }

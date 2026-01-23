@@ -24,28 +24,28 @@ import p007b.p109f.p161j.p175j.CloseableImage;
 import p007b.p109f.p161j.p175j.CloseableStaticBitmap;
 import p007b.p109f.p161j.p175j.ImmutableQualityInfo;
 
-/* compiled from: LocalVideoThumbnailProducer.java */
-/* renamed from: b.f.j.p.k0, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.f.j.p.k0, reason: use source file name */
+/* JADX INFO: compiled from: LocalVideoThumbnailProducer.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class LocalVideoThumbnailProducer implements Producer2<CloseableReference<CloseableImage>> {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final Executor f4120a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final ContentResolver f4121b;
 
-    /* compiled from: LocalVideoThumbnailProducer.java */
-    /* renamed from: b.f.j.p.k0$a */
+    /* JADX INFO: renamed from: b.f.j.p.k0$a */
+    /* JADX INFO: compiled from: LocalVideoThumbnailProducer.java */
     public class a extends StatefulProducerRunnable<CloseableReference<CloseableImage>> {
 
-        /* renamed from: o */
+        /* JADX INFO: renamed from: o */
         public final /* synthetic */ ProducerListener2 f4122o;
 
-        /* renamed from: p */
+        /* JADX INFO: renamed from: p */
         public final /* synthetic */ ProducerContext f4123p;
 
-        /* renamed from: q */
+        /* JADX INFO: renamed from: q */
         public final /* synthetic */ ImageRequest f4124q;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -57,7 +57,7 @@ public class LocalVideoThumbnailProducer implements Producer2<CloseableReference
         }
 
         @Override // p007b.p109f.p161j.p181p.StatefulProducerRunnable
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public void mo1465b(CloseableReference<CloseableImage> closeableReference) {
             CloseableReference<CloseableImage> closeableReference2 = closeableReference;
             Class<CloseableReference> cls = CloseableReference.f19438j;
@@ -67,14 +67,14 @@ public class LocalVideoThumbnailProducer implements Producer2<CloseableReference
         }
 
         @Override // p007b.p109f.p161j.p181p.StatefulProducerRunnable
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public Map mo1466c(CloseableReference<CloseableImage> closeableReference) {
             return ImmutableMap.m967of("createdThumbnail", String.valueOf(closeableReference != null));
         }
 
         /* JADX WARN: Removed duplicated region for block: B:18:0x0027  */
         @Override // p007b.p109f.p161j.p181p.StatefulProducerRunnable
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         /*
             Code decompiled incorrectly, please refer to instructions dump.
         */
@@ -119,7 +119,7 @@ public class LocalVideoThumbnailProducer implements Producer2<CloseableReference
         }
 
         @Override // p007b.p109f.p161j.p181p.StatefulProducerRunnable
-        /* renamed from: f */
+        /* JADX INFO: renamed from: f */
         public void mo1469f(Exception exc) {
             super.mo1469f(exc);
             this.f4122o.mo1356c(this.f4123p, "VideoThumbnailProducer", false);
@@ -127,7 +127,7 @@ public class LocalVideoThumbnailProducer implements Producer2<CloseableReference
         }
 
         @Override // p007b.p109f.p161j.p181p.StatefulProducerRunnable
-        /* renamed from: g */
+        /* JADX INFO: renamed from: g */
         public void mo1470g(CloseableReference<CloseableImage> closeableReference) {
             CloseableReference<CloseableImage> closeableReference2 = closeableReference;
             super.mo1470g(closeableReference2);
@@ -136,11 +136,11 @@ public class LocalVideoThumbnailProducer implements Producer2<CloseableReference
         }
     }
 
-    /* compiled from: LocalVideoThumbnailProducer.java */
-    /* renamed from: b.f.j.p.k0$b */
+    /* JADX INFO: renamed from: b.f.j.p.k0$b */
+    /* JADX INFO: compiled from: LocalVideoThumbnailProducer.java */
     public class b extends BaseProducerContextCallbacks {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final /* synthetic */ StatefulProducerRunnable f4126a;
 
         public b(LocalVideoThumbnailProducer localVideoThumbnailProducer, StatefulProducerRunnable statefulProducerRunnable) {
@@ -148,7 +148,7 @@ public class LocalVideoThumbnailProducer implements Producer2<CloseableReference
         }
 
         @Override // p007b.p109f.p161j.p181p.ProducerContextCallbacks
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public void mo1438a() {
             this.f4126a.m1464a();
         }
@@ -159,7 +159,7 @@ public class LocalVideoThumbnailProducer implements Producer2<CloseableReference
         this.f4121b = contentResolver;
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public static String m1481c(LocalVideoThumbnailProducer localVideoThumbnailProducer, ImageRequest imageRequest) {
         Uri uri;
         String str;
@@ -200,7 +200,7 @@ public class LocalVideoThumbnailProducer implements Producer2<CloseableReference
     }
 
     @Override // p007b.p109f.p161j.p181p.Producer2
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public void mo1417b(Consumer2<CloseableReference<CloseableImage>> consumer2, ProducerContext producerContext) {
         ProducerListener2 producerListener2Mo1457o = producerContext.mo1457o();
         ImageRequest imageRequestMo1447e = producerContext.mo1447e();

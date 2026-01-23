@@ -7,14 +7,14 @@ import com.discord.models.domain.ModelAuditLogEntry;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-/* compiled from: com.android.billingclient:billing@@4.0.0 */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: com.android.billingclient:billing@@4.0.0 */
+/* JADX INFO: loaded from: classes.dex */
 public class SkuDetails {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final String f14566a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final JSONObject f14567b;
 
     public SkuDetails(@NonNull String str) throws JSONException {
@@ -30,30 +30,30 @@ public class SkuDetails {
     }
 
     @NonNull
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public String m7500a() {
         return this.f14567b.optString(ModelAuditLogEntry.CHANGE_KEY_DESCRIPTION);
     }
 
     @NonNull
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public String m7501b() {
         return this.f14567b.optString("price");
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public long m7502c() {
         return this.f14567b.optLong("price_amount_micros");
     }
 
     @NonNull
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public String m7503d() {
         return this.f14567b.optString("productId");
     }
 
     @NonNull
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public String m7504e() {
         return this.f14567b.optString("type");
     }
@@ -69,7 +69,7 @@ public class SkuDetails {
     }
 
     @NonNull
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final String m7505f() {
         return this.f14567b.optString("packageName");
     }

@@ -30,13 +30,13 @@ import p507d0.p580t._Collections;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: ViewGlobalSearchItem.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: ViewGlobalSearchItem.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class ViewGlobalSearchItem extends ConstraintLayout {
     private final ViewGlobalSearchItemBinding binding;
 
-    /* compiled from: ViewGlobalSearchItem.kt */
-    /* renamed from: com.discord.widgets.user.search.ViewGlobalSearchItem$onConfigure$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.user.search.ViewGlobalSearchItem$onConfigure$2 */
+    /* JADX INFO: compiled from: ViewGlobalSearchItem.kt */
     public static final class C103142 extends Lambda implements Function1<User, CharSequence> {
         public final /* synthetic */ int $discrimColor;
 
@@ -51,7 +51,7 @@ public final class ViewGlobalSearchItem extends ConstraintLayout {
             return invoke2(user);
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final CharSequence invoke2(User user) {
             Intrinsics3.checkNotNullParameter(user, "user");
             return UserUtils.INSTANCE.getUserNameWithDiscriminator(user, Integer.valueOf(this.$discrimColor), Float.valueOf(0.75f));

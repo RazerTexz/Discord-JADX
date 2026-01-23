@@ -10,15 +10,15 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 import java.net.URLConnection;
 
-/* compiled from: com.google.android.gms:play-services-measurement@@18.0.0 */
-/* renamed from: b.i.a.f.i.b.x3 */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.i.b.x3 */
+/* JADX INFO: compiled from: com.google.android.gms:play-services-measurement@@18.0.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public final class C4234x3 extends AbstractC4074i9 {
     public C4234x3(C4097k9 c4097k9) {
         super(c4097k9);
     }
 
-    /* renamed from: t */
+    /* JADX INFO: renamed from: t */
     public static byte[] m5961t(HttpURLConnection httpURLConnection) throws IOException {
         InputStream inputStream = null;
         try {
@@ -43,13 +43,13 @@ public final class C4234x3 extends AbstractC4074i9 {
     }
 
     @Override // p007b.p225i.p226a.p288f.p330i.p332b.AbstractC4074i9
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public final boolean mo5515p() {
         return false;
     }
 
     @WorkerThread
-    /* renamed from: s */
+    /* JADX INFO: renamed from: s */
     public final HttpURLConnection m5962s(URL url) throws IOException {
         URLConnection uRLConnectionOpenConnection = url.openConnection();
         if (!(uRLConnectionOpenConnection instanceof HttpURLConnection)) {
@@ -64,7 +64,7 @@ public final class C4234x3 extends AbstractC4074i9 {
         return httpURLConnection;
     }
 
-    /* renamed from: u */
+    /* JADX INFO: renamed from: u */
     public final boolean m5963u() {
         m5684n();
         NetworkInfo activeNetworkInfo = null;

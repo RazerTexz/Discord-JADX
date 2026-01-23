@@ -15,7 +15,7 @@ import java.security.NoSuchAlgorithmException;
 import java.util.ArrayList;
 import java.util.List;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class PackageIdentityUtils {
     private static final String TAG = "PackageIdentity";
 

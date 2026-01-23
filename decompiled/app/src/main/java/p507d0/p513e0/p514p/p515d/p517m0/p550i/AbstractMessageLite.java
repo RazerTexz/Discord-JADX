@@ -7,9 +7,9 @@ import java.io.OutputStream;
 import kotlin.reflect.jvm.internal.impl.protobuf.CodedOutputStream;
 import p507d0.p513e0.p514p.p515d.p517m0.p550i.MessageLite;
 
-/* compiled from: AbstractMessageLite.java */
-/* renamed from: d0.e0.p.d.m0.i.a, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.i.a, reason: use source file name */
+/* JADX INFO: compiled from: AbstractMessageLite.java */
+/* JADX INFO: loaded from: classes3.dex */
 public abstract class AbstractMessageLite implements MessageLite {
     public int memoizedHashCode = 0;
 
@@ -25,8 +25,8 @@ public abstract class AbstractMessageLite implements MessageLite {
         codedOutputStreamNewInstance.flush();
     }
 
-    /* compiled from: AbstractMessageLite.java */
-    /* renamed from: d0.e0.p.d.m0.i.a$a */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.i.a$a */
+    /* JADX INFO: compiled from: AbstractMessageLite.java */
     public static abstract class a<BuilderType extends a> implements MessageLite.a {
         @Override // p507d0.p513e0.p514p.p515d.p517m0.p550i.MessageLite.a
         public abstract BuilderType mergeFrom(CodedInputStream codedInputStream, ExtensionRegistryLite extensionRegistryLite) throws IOException;
@@ -36,11 +36,11 @@ public abstract class AbstractMessageLite implements MessageLite {
             return mergeFrom(codedInputStream, extensionRegistryLite);
         }
 
-        /* compiled from: AbstractMessageLite.java */
-        /* renamed from: d0.e0.p.d.m0.i.a$a$a, reason: collision with other inner class name */
+        /* JADX INFO: renamed from: d0.e0.p.d.m0.i.a$a$a, reason: collision with other inner class name */
+        /* JADX INFO: compiled from: AbstractMessageLite.java */
         public static final class C13324a extends FilterInputStream {
 
-            /* renamed from: j */
+            /* JADX INFO: renamed from: j */
             public int f24099j;
 
             public C13324a(InputStream inputStream, int i) {
@@ -69,7 +69,7 @@ public abstract class AbstractMessageLite implements MessageLite {
             public long skip(long j) throws IOException {
                 long jSkip = super.skip(Math.min(j, this.f24099j));
                 if (jSkip >= 0) {
-                    this.f24099j = (int) (this.f24099j - jSkip);
+                    this.f24099j = (int) (((long) this.f24099j) - jSkip);
                 }
                 return jSkip;
             }

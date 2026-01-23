@@ -21,72 +21,72 @@ import p507d0.p512d0._Ranges;
 import p507d0.p592z.p594d.Intrinsics3;
 import p659s.p660a.p661a.Symbol3;
 
-/* compiled from: CoroutineScheduler.kt */
-/* renamed from: s.a.e2.a, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: s.a.e2.a, reason: use source file name */
+/* JADX INFO: compiled from: CoroutineScheduler.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class CoroutineScheduler implements Executor, Closeable {
     public volatile int _isTerminated;
     public volatile long controlState;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public final Tasks f27798n;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public final Tasks f27799o;
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public final AtomicReferenceArray<a> f27800p;
     public volatile long parkedWorkersStack;
 
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     public final int f27801q;
 
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     public final int f27802r;
 
-    /* renamed from: s */
+    /* JADX INFO: renamed from: s */
     public final long f27803s;
 
-    /* renamed from: t */
+    /* JADX INFO: renamed from: t */
     public final String f27804t;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public static final Symbol3 f27797m = new Symbol3("NOT_IN_STACK");
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static final AtomicLongFieldUpdater f27794j = AtomicLongFieldUpdater.newUpdater(CoroutineScheduler.class, "parkedWorkersStack");
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public static final AtomicLongFieldUpdater f27795k = AtomicLongFieldUpdater.newUpdater(CoroutineScheduler.class, "controlState");
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public static final AtomicIntegerFieldUpdater f27796l = AtomicIntegerFieldUpdater.newUpdater(CoroutineScheduler.class, "_isTerminated");
 
-    /* compiled from: CoroutineScheduler.kt */
-    /* renamed from: s.a.e2.a$a */
+    /* JADX INFO: renamed from: s.a.e2.a$a */
+    /* JADX INFO: compiled from: CoroutineScheduler.kt */
     public final class a extends Thread {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public static final AtomicIntegerFieldUpdater f27805j = AtomicIntegerFieldUpdater.newUpdater(a.class, "workerCtl");
         public volatile int indexInArray;
 
-        /* renamed from: k */
+        /* JADX INFO: renamed from: k */
         public final WorkQueue f27806k;
 
-        /* renamed from: l */
+        /* JADX INFO: renamed from: l */
         public int f27807l;
 
-        /* renamed from: m */
+        /* JADX INFO: renamed from: m */
         public long f27808m;
 
-        /* renamed from: n */
+        /* JADX INFO: renamed from: n */
         public long f27809n;
         public volatile Object nextParkedWorker;
 
-        /* renamed from: o */
+        /* JADX INFO: renamed from: o */
         public int f27810o;
 
-        /* renamed from: p */
+        /* JADX INFO: renamed from: p */
         public boolean f27811p;
         public volatile int workerCtl;
 
@@ -100,7 +100,7 @@ public final class CoroutineScheduler implements Executor, Closeable {
             m11264d(i);
         }
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final Tasks4 m11261a(boolean z2) {
             boolean z3;
             Tasks4 tasks4M11164d;
@@ -156,7 +156,7 @@ public final class CoroutineScheduler implements Executor, Closeable {
             return m11266f(false);
         }
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final int m11262b(int i) {
             int i2 = this.f27810o;
             int i3 = i2 ^ (i2 << 13);
@@ -167,7 +167,7 @@ public final class CoroutineScheduler implements Executor, Closeable {
             return (i6 & i) == 0 ? i5 & i6 : (i5 & Integer.MAX_VALUE) % i;
         }
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public final Tasks4 m11263c() {
             if (m11262b(2) == 0) {
                 Tasks4 tasks4M11164d = CoroutineScheduler.this.f27798n.m11164d();
@@ -177,7 +177,7 @@ public final class CoroutineScheduler implements Executor, Closeable {
             return tasks4M11164d2 != null ? tasks4M11164d2 : CoroutineScheduler.this.f27798n.m11164d();
         }
 
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         public final void m11264d(int i) {
             StringBuilder sb = new StringBuilder();
             sb.append(CoroutineScheduler.this.f27804t);
@@ -187,7 +187,7 @@ public final class CoroutineScheduler implements Executor, Closeable {
             this.indexInArray = i;
         }
 
-        /* renamed from: e */
+        /* JADX INFO: renamed from: e */
         public final boolean m11265e(int i) {
             int i2 = this.f27807l;
             boolean z2 = i2 == 1;
@@ -200,7 +200,7 @@ public final class CoroutineScheduler implements Executor, Closeable {
             return z2;
         }
 
-        /* renamed from: f */
+        /* JADX INFO: renamed from: f */
         public final Tasks4 m11266f(boolean z2) {
             long jM11277g;
             int i = (int) (CoroutineScheduler.this.controlState & 2097151);
@@ -343,7 +343,7 @@ public final class CoroutineScheduler implements Executor, Closeable {
                                         j2 = (Permission.SPEAK + j) & (-2097152);
                                         i = this.indexInArray;
                                         this.nextParkedWorker = coroutineScheduler.f27800p.get((int) (j & 2097151));
-                                    } while (!CoroutineScheduler.f27794j.compareAndSet(coroutineScheduler, j, i | j2));
+                                    } while (!CoroutineScheduler.f27794j.compareAndSet(coroutineScheduler, j, ((long) i) | j2));
                                 }
                             }
                         } else if (z2) {
@@ -383,11 +383,11 @@ public final class CoroutineScheduler implements Executor, Closeable {
         this.f27799o = new Tasks();
         this.parkedWorkersStack = 0L;
         this.f27800p = new AtomicReferenceArray<>(i2 + 1);
-        this.controlState = i << 42;
+        this.controlState = ((long) i) << 42;
         this._isTerminated = 0;
     }
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public static /* synthetic */ void m11250e(CoroutineScheduler coroutineScheduler, Runnable runnable, Tasks5 tasks5, boolean z2, int i) {
         Tasks3 tasks3 = (i & 2) != 0 ? Tasks3.f27827j : null;
         if ((i & 4) != 0) {
@@ -396,7 +396,7 @@ public final class CoroutineScheduler implements Executor, Closeable {
         coroutineScheduler.m11254d(runnable, tasks3, z2);
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final int m11251a() {
         synchronized (this.f27800p) {
             if (this._isTerminated != 0) {
@@ -425,7 +425,7 @@ public final class CoroutineScheduler implements Executor, Closeable {
         }
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final Tasks4 m11252b(Runnable runnable, Tasks5 tasks5) {
         long jMo11270a = Tasks7.f27835e.mo11270a();
         if (!(runnable instanceof Tasks4)) {
@@ -437,7 +437,7 @@ public final class CoroutineScheduler implements Executor, Closeable {
         return tasks4;
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final a m11253c() {
         Thread threadCurrentThread = Thread.currentThread();
         if (!(threadCurrentThread instanceof a)) {
@@ -526,7 +526,7 @@ public final class CoroutineScheduler implements Executor, Closeable {
         }
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final void m11254d(Runnable runnable, Tasks5 tasks5, boolean z2) {
         Tasks4 tasks4M11271a;
         Tasks4 tasks4M11252b = m11252b(runnable, tasks5);
@@ -562,7 +562,7 @@ public final class CoroutineScheduler implements Executor, Closeable {
         m11250e(this, runnable, null, false, 6);
     }
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final int m11255f(a aVar) {
         Object obj = aVar.nextParkedWorker;
         while (obj != f27797m) {
@@ -579,7 +579,7 @@ public final class CoroutineScheduler implements Executor, Closeable {
         return -1;
     }
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public final void m11256n(a aVar, int i, int i2) {
         while (true) {
             long j = this.parkedWorkersStack;
@@ -588,13 +588,13 @@ public final class CoroutineScheduler implements Executor, Closeable {
             if (iM11255f == i) {
                 iM11255f = i2 == 0 ? m11255f(aVar) : i2;
             }
-            if (iM11255f >= 0 && f27794j.compareAndSet(this, j, j2 | iM11255f)) {
+            if (iM11255f >= 0 && f27794j.compareAndSet(this, j, j2 | ((long) iM11255f))) {
                 return;
             }
         }
     }
 
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     public final void m11257q(Tasks4 tasks4) {
         try {
             tasks4.run();
@@ -602,7 +602,7 @@ public final class CoroutineScheduler implements Executor, Closeable {
         }
     }
 
-    /* renamed from: s */
+    /* JADX INFO: renamed from: s */
     public final void m11258s() {
         if (m11260u() || m11259t(this.controlState)) {
             return;
@@ -610,7 +610,7 @@ public final class CoroutineScheduler implements Executor, Closeable {
         m11260u();
     }
 
-    /* renamed from: t */
+    /* JADX INFO: renamed from: t */
     public final boolean m11259t(long j) {
         if (_Ranges.coerceAtLeast(((int) (2097151 & j)) - ((int) ((j & 4398044413952L) >> 21)), 0) < this.f27801q) {
             int iM11251a = m11251a();
@@ -659,7 +659,7 @@ public final class CoroutineScheduler implements Executor, Closeable {
         return this.f27804t + MentionUtils.MENTIONS_CHAR + C3404f.m4312l0(this) + "[Pool Size {core = " + this.f27801q + ", max = " + this.f27802r + "}, Worker States {CPU = " + i + ", blocking = " + i2 + ", parked = " + i3 + ", dormant = " + i4 + ", terminated = " + i5 + "}, running workers queues = " + arrayList + ", global CPU queue size = " + this.f27798n.m11163c() + ", global blocking queue size = " + this.f27799o.m11163c() + ", Control State {created workers= " + ((int) (2097151 & j)) + ", blocking tasks = " + ((int) ((4398044413952L & j) >> 21)) + ", CPUs acquired = " + (this.f27801q - ((int) ((9223367638808264704L & j) >> 42))) + "}]";
     }
 
-    /* renamed from: u */
+    /* JADX INFO: renamed from: u */
     public final boolean m11260u() {
         while (true) {
             long j = this.parkedWorkersStack;
@@ -667,7 +667,7 @@ public final class CoroutineScheduler implements Executor, Closeable {
             if (aVar != null) {
                 long j2 = (Permission.SPEAK + j) & (-2097152);
                 int iM11255f = m11255f(aVar);
-                if (iM11255f >= 0 && f27794j.compareAndSet(this, j, iM11255f | j2)) {
+                if (iM11255f >= 0 && f27794j.compareAndSet(this, j, ((long) iM11255f) | j2)) {
                     aVar.nextParkedWorker = f27797m;
                 }
             } else {

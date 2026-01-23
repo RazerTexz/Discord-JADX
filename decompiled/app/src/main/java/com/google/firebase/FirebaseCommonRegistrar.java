@@ -20,9 +20,9 @@ import p007b.p225i.p361c.p407x.LibraryVersion;
 import p007b.p225i.p361c.p407x.UserAgentPublisher;
 import p507d0.KotlinVersion;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public class FirebaseCommonRegistrar implements ComponentRegistrar {
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static String m9175a(String str) {
         return str.replace(' ', '_').replace(MentionUtils.SLASH_CHAR, '_');
     }

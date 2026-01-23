@@ -51,25 +51,25 @@ import p507d0.p580t._Collections;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetUserPhoneManage.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: WidgetUserPhoneManage.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class WidgetUserPhoneManage extends WidgetUserAccountVerifyBase {
     public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetUserPhoneManage.class, "binding", "getBinding()Lcom/discord/databinding/WidgetUserPhoneManageBinding;", 0)};
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
 
-    /* renamed from: binding$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
     private final ActivityResultLauncher<Intent> captchaLauncher;
     private final ActivityResultLauncher<Intent> passwordVerifyLauncher;
     private final ActivityResultLauncher<Intent> phoneVerificationLauncher;
     private String source;
 
-    /* compiled from: WidgetUserPhoneManage.kt */
+    /* JADX INFO: compiled from: WidgetUserPhoneManage.kt */
     public static final class Companion {
 
-        /* compiled from: WidgetUserPhoneManage.kt */
+        /* JADX INFO: compiled from: WidgetUserPhoneManage.kt */
         public enum Source {
             USER_ACTION_REQUIRED("user_action_required"),
             USER_SETTINGS_UPDATE("user_settings_update"),
@@ -109,8 +109,8 @@ public final class WidgetUserPhoneManage extends WidgetUserAccountVerifyBase {
         }
     }
 
-    /* compiled from: WidgetUserPhoneManage.kt */
-    /* renamed from: com.discord.widgets.user.phone.WidgetUserPhoneManage$onViewBound$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.user.phone.WidgetUserPhoneManage$onViewBound$1 */
+    /* JADX INFO: compiled from: WidgetUserPhoneManage.kt */
     public static final class C102591 extends Lambda implements Function0<PhoneCountryCode> {
         public final /* synthetic */ StorePhone $phoneStore;
 
@@ -132,8 +132,8 @@ public final class WidgetUserPhoneManage extends WidgetUserAccountVerifyBase {
         }
     }
 
-    /* compiled from: WidgetUserPhoneManage.kt */
-    /* renamed from: com.discord.widgets.user.phone.WidgetUserPhoneManage$onViewBound$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.user.phone.WidgetUserPhoneManage$onViewBound$2 */
+    /* JADX INFO: compiled from: WidgetUserPhoneManage.kt */
     public static final class C102602 extends Lambda implements Function1<PhoneCountryCode, Unit> {
         public C102602() {
             super(1);
@@ -145,15 +145,15 @@ public final class WidgetUserPhoneManage extends WidgetUserAccountVerifyBase {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(PhoneCountryCode phoneCountryCode) {
             Intrinsics3.checkNotNullParameter(phoneCountryCode, "it");
             WidgetUserPhoneManage.access$getBinding$p(WidgetUserPhoneManage.this).f18353f.setCountryCode(phoneCountryCode);
         }
     }
 
-    /* compiled from: WidgetUserPhoneManage.kt */
-    /* renamed from: com.discord.widgets.user.phone.WidgetUserPhoneManage$onViewBound$3 */
+    /* JADX INFO: renamed from: com.discord.widgets.user.phone.WidgetUserPhoneManage$onViewBound$3 */
+    /* JADX INFO: compiled from: WidgetUserPhoneManage.kt */
     public static final class C102613 extends Lambda implements Function0<Unit> {
         public C102613() {
             super(0);
@@ -165,14 +165,14 @@ public final class WidgetUserPhoneManage extends WidgetUserAccountVerifyBase {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             WidgetUserPhoneManage.access$handlePhoneNumberTextChanged(WidgetUserPhoneManage.this);
         }
     }
 
-    /* compiled from: WidgetUserPhoneManage.kt */
-    /* renamed from: com.discord.widgets.user.phone.WidgetUserPhoneManage$onViewBound$4 */
+    /* JADX INFO: renamed from: com.discord.widgets.user.phone.WidgetUserPhoneManage$onViewBound$4 */
+    /* JADX INFO: compiled from: WidgetUserPhoneManage.kt */
     public static final class ViewOnClickListenerC102624 implements View.OnClickListener {
         public ViewOnClickListenerC102624() {
         }
@@ -183,8 +183,8 @@ public final class WidgetUserPhoneManage extends WidgetUserAccountVerifyBase {
         }
     }
 
-    /* compiled from: WidgetUserPhoneManage.kt */
-    /* renamed from: com.discord.widgets.user.phone.WidgetUserPhoneManage$onViewBound$5 */
+    /* JADX INFO: renamed from: com.discord.widgets.user.phone.WidgetUserPhoneManage$onViewBound$5 */
+    /* JADX INFO: compiled from: WidgetUserPhoneManage.kt */
     public static final class ViewOnClickListenerC102635 implements View.OnClickListener {
         public ViewOnClickListenerC102635() {
         }
@@ -195,8 +195,8 @@ public final class WidgetUserPhoneManage extends WidgetUserAccountVerifyBase {
         }
     }
 
-    /* compiled from: WidgetUserPhoneManage.kt */
-    /* renamed from: com.discord.widgets.user.phone.WidgetUserPhoneManage$onViewBoundOrOnResume$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.user.phone.WidgetUserPhoneManage$onViewBoundOrOnResume$1 */
+    /* JADX INFO: compiled from: WidgetUserPhoneManage.kt */
     public static final class C102641 extends Lambda implements Function1<MeUser, Unit> {
         public C102641() {
             super(1);
@@ -208,15 +208,15 @@ public final class WidgetUserPhoneManage extends WidgetUserAccountVerifyBase {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(MeUser meUser) {
             Intrinsics3.checkNotNullParameter(meUser, "it");
             WidgetUserPhoneManage.access$configureUI(WidgetUserPhoneManage.this, meUser);
         }
     }
 
-    /* compiled from: WidgetUserPhoneManage.kt */
-    /* renamed from: com.discord.widgets.user.phone.WidgetUserPhoneManage$removePhoneNumber$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.user.phone.WidgetUserPhoneManage$removePhoneNumber$1 */
+    /* JADX INFO: compiled from: WidgetUserPhoneManage.kt */
     public static final class C102651 extends Lambda implements Function1<View, Unit> {
         public C102651() {
             super(1);
@@ -228,15 +228,15 @@ public final class WidgetUserPhoneManage extends WidgetUserAccountVerifyBase {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(View view) {
             Intrinsics3.checkNotNullParameter(view, "it");
             WidgetUserPasswordVerify.INSTANCE.launchRemovePhoneNumber(WidgetUserPhoneManage.this.requireContext(), WidgetUserPhoneManage.access$getPasswordVerifyLauncher$p(WidgetUserPhoneManage.this));
         }
     }
 
-    /* compiled from: WidgetUserPhoneManage.kt */
-    /* renamed from: com.discord.widgets.user.phone.WidgetUserPhoneManage$updatePhoneNumber$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.user.phone.WidgetUserPhoneManage$updatePhoneNumber$1 */
+    /* JADX INFO: compiled from: WidgetUserPhoneManage.kt */
     public static final class C102661 extends Lambda implements Function1<Error, Unit> {
         public C102661() {
             super(1);
@@ -248,7 +248,7 @@ public final class WidgetUserPhoneManage extends WidgetUserAccountVerifyBase {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Error error) {
             Intrinsics3.checkNotNullParameter(error, "error");
             if (GrowthTeamFeatures.INSTANCE.isPhoneVerifyCaptchaEnabled()) {
@@ -262,8 +262,8 @@ public final class WidgetUserPhoneManage extends WidgetUserAccountVerifyBase {
         }
     }
 
-    /* compiled from: WidgetUserPhoneManage.kt */
-    /* renamed from: com.discord.widgets.user.phone.WidgetUserPhoneManage$updatePhoneNumber$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.user.phone.WidgetUserPhoneManage$updatePhoneNumber$2 */
+    /* JADX INFO: compiled from: WidgetUserPhoneManage.kt */
     public static final class C102672 extends Lambda implements Function1<Void, Unit> {
         public final /* synthetic */ String $phoneNumber;
 
@@ -279,7 +279,7 @@ public final class WidgetUserPhoneManage extends WidgetUserAccountVerifyBase {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Void r7) {
             WidgetUserPhoneVerify.INSTANCE.launch(WidgetUserPhoneManage.this.requireContext(), WidgetUserPhoneManage.access$getPhoneVerificationLauncher$p(WidgetUserPhoneManage.this), WidgetUserPhoneManage.access$getMode$p(WidgetUserPhoneManage.this), this.$phoneNumber, WidgetUserPhoneManage.access$getSource$p(WidgetUserPhoneManage.this));
         }

@@ -9,9 +9,9 @@ import com.discord.widgets.servers.WidgetServerSettingsVanityUrl;
 import p507d0.p592z.p594d.Intrinsics3;
 import p658rx.functions.Func4;
 
-/* compiled from: WidgetServerSettingsVanityUrl.kt */
-/* renamed from: com.discord.widgets.servers.WidgetServerSettingsVanityUrl$Model$Companion$get$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.servers.WidgetServerSettingsVanityUrl$Model$Companion$get$1, reason: use source file name */
+/* JADX INFO: compiled from: WidgetServerSettingsVanityUrl.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetServerSettingsVanityUrl2<T1, T2, T3, T4, R> implements Func4<MeUser, Long, Guild, VanityUrlResponse, WidgetServerSettingsVanityUrl.Model> {
     public final /* synthetic */ long $guildId;
 
@@ -24,7 +24,7 @@ public final class WidgetServerSettingsVanityUrl2<T1, T2, T3, T4, R> implements 
         return call2(meUser, l, guild, vanityUrlResponse);
     }
 
-    /* renamed from: call, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
     public final WidgetServerSettingsVanityUrl.Model call2(MeUser meUser, Long l, Guild guild, VanityUrlResponse vanityUrlResponse) {
         Intrinsics3.checkNotNullParameter(meUser, "meUser");
         int uses = vanityUrlResponse.getUses();

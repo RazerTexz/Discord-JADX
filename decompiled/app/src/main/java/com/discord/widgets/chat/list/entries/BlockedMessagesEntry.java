@@ -4,8 +4,8 @@ import com.discord.models.message.Message;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: BlockedMessagesEntry.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: BlockedMessagesEntry.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final /* data */ class BlockedMessagesEntry extends ChatListEntry {
     private final int blockedCount;
     private final boolean isExpandedBlock;
@@ -22,7 +22,7 @@ public final /* data */ class BlockedMessagesEntry extends ChatListEntry {
         this.key = String.valueOf(getType());
     }
 
-    /* renamed from: component3, reason: from getter */
+    /* JADX INFO: renamed from: component3, reason: from getter */
     private final boolean getIsExpandedBlock() {
         return this.isExpandedBlock;
     }
@@ -40,12 +40,12 @@ public final /* data */ class BlockedMessagesEntry extends ChatListEntry {
         return blockedMessagesEntry.copy(message, i, z2);
     }
 
-    /* renamed from: component1, reason: from getter */
+    /* JADX INFO: renamed from: component1, reason: from getter */
     public final Message getMessage() {
         return this.message;
     }
 
-    /* renamed from: component2, reason: from getter */
+    /* JADX INFO: renamed from: component2, reason: from getter */
     public final int getBlockedCount() {
         return this.blockedCount;
     }
@@ -85,15 +85,18 @@ public final /* data */ class BlockedMessagesEntry extends ChatListEntry {
     }
 
     /* JADX WARN: Multi-variable type inference failed */
+    /* JADX WARN: Type inference failed for: r1v2, types: [int] */
+    /* JADX WARN: Type inference failed for: r1v3 */
+    /* JADX WARN: Type inference failed for: r1v4 */
     public int hashCode() {
         Message message = this.message;
         int iHashCode = (((message != null ? message.hashCode() : 0) * 31) + this.blockedCount) * 31;
         boolean z2 = this.isExpandedBlock;
-        int i = z2;
-        if (z2 != 0) {
-            i = 1;
+        ?? r1 = z2;
+        if (z2) {
+            r1 = 1;
         }
-        return iHashCode + i;
+        return iHashCode + r1;
     }
 
     @Override // com.discord.widgets.chat.list.entries.ChatListEntry

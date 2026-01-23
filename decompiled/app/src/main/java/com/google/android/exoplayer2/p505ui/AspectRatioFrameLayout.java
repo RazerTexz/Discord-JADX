@@ -8,41 +8,41 @@ import android.widget.FrameLayout;
 import androidx.annotation.Nullable;
 import androidx.constraintlayout.solver.widgets.analyzer.BasicMeasure;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public final class AspectRatioFrameLayout extends FrameLayout {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final RunnableC10752c f20054j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     @Nullable
     public InterfaceC10751b f20055k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public float f20056l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public int f20057m;
 
-    /* renamed from: com.google.android.exoplayer2.ui.AspectRatioFrameLayout$b */
+    /* JADX INFO: renamed from: com.google.android.exoplayer2.ui.AspectRatioFrameLayout$b */
     public interface InterfaceC10751b {
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         void m8884a(float f, float f2, boolean z2);
     }
 
-    /* renamed from: com.google.android.exoplayer2.ui.AspectRatioFrameLayout$c */
+    /* JADX INFO: renamed from: com.google.android.exoplayer2.ui.AspectRatioFrameLayout$c */
     public final class RunnableC10752c implements Runnable {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public float f20058j;
 
-        /* renamed from: k */
+        /* JADX INFO: renamed from: k */
         public float f20059k;
 
-        /* renamed from: l */
+        /* JADX INFO: renamed from: l */
         public boolean f20060l;
 
-        /* renamed from: m */
+        /* JADX INFO: renamed from: m */
         public boolean f20061m;
 
         public RunnableC10752c(C10750a c10750a) {

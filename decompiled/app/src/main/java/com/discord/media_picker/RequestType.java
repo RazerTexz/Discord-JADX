@@ -4,8 +4,8 @@ import com.discord.models.domain.ModelAuditLogEntry;
 import kotlin.NoWhenBranchMatchedException;
 import kotlin.jvm.internal.DefaultConstructorMarker;
 
-/* compiled from: RequestType.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: RequestType.kt */
+/* JADX INFO: loaded from: classes.dex */
 public enum RequestType {
     CAMERA,
     GALLERY,
@@ -14,11 +14,11 @@ public enum RequestType {
     CHOOSER;
 
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
 
-    /* compiled from: RequestType.kt */
-    /* renamed from: com.discord.media_picker.RequestType$a, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: com.discord.media_picker.RequestType$a, reason: from kotlin metadata */
+    /* JADX INFO: compiled from: RequestType.kt */
     public static final class Companion {
         public Companion(DefaultConstructorMarker defaultConstructorMarker) {
         }

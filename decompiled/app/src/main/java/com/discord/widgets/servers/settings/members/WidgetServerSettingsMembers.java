@@ -65,29 +65,29 @@ import p658rx.functions.Action2;
 import p658rx.subjects.BehaviorSubject;
 import p658rx.subjects.Subject;
 
-/* compiled from: WidgetServerSettingsMembers.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetServerSettingsMembers.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetServerSettingsMembers extends AppFragment {
     public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetServerSettingsMembers.class, "binding", "getBinding()Lcom/discord/databinding/WidgetServerSettingsMembersBinding;", 0)};
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private static final String INTENT_EXTRA_GUILD_ID = "GUILD_ID";
     private static final int VIEW_INDEX_MEMBER_LIST = 0;
     private static final int VIEW_INDEX_NO_RESULTS = 1;
     private WidgetServerSettingsMembersAdapter adapter;
 
-    /* renamed from: binding$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
 
-    /* renamed from: guildId$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: guildId$delegate, reason: from kotlin metadata */
     private final Lazy guildId;
     private Map<Long, GuildRole> guildRoles;
     private final AppLogger2 loggingConfig;
     private final Subject<String, String> nameFilterPublisher;
     private final Subject<Long, Long> roleFilterPublisher;
 
-    /* compiled from: WidgetServerSettingsMembers.kt */
+    /* JADX INFO: compiled from: WidgetServerSettingsMembers.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -105,7 +105,7 @@ public final class WidgetServerSettingsMembers extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetServerSettingsMembers.kt */
+    /* JADX INFO: compiled from: WidgetServerSettingsMembers.kt */
     public static final class RolesSpinnerAdapter extends ArrayAdapter<GuildRole> {
         private final ArrayList<GuildRole> roles;
 
@@ -192,8 +192,8 @@ public final class WidgetServerSettingsMembers extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetServerSettingsMembers.kt */
-    /* renamed from: com.discord.widgets.servers.settings.members.WidgetServerSettingsMembers$configureUI$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.settings.members.WidgetServerSettingsMembers$configureUI$1 */
+    /* JADX INFO: compiled from: WidgetServerSettingsMembers.kt */
     public static final class C95891<T1, T2> implements Action2<MenuItem, Context> {
         public final /* synthetic */ WidgetServerSettingsMembersModel $model;
 
@@ -206,7 +206,7 @@ public final class WidgetServerSettingsMembers extends AppFragment {
             call2(menuItem, context);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final void call2(MenuItem menuItem, Context context) {
             Intrinsics3.checkNotNullExpressionValue(menuItem, "menuItem");
             if (menuItem.getItemId() != C5419R.id.menu_server_settings_members_prune) {
@@ -220,8 +220,8 @@ public final class WidgetServerSettingsMembers extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetServerSettingsMembers.kt */
-    /* renamed from: com.discord.widgets.servers.settings.members.WidgetServerSettingsMembers$configureUI$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.settings.members.WidgetServerSettingsMembers$configureUI$2 */
+    /* JADX INFO: compiled from: WidgetServerSettingsMembers.kt */
     public static final class C95902 extends Lambda implements Function2<Long, List<? extends Long>, Unit> {
         public final /* synthetic */ WidgetServerSettingsMembersModel $model;
 
@@ -266,8 +266,8 @@ public final class WidgetServerSettingsMembers extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetServerSettingsMembers.kt */
-    /* renamed from: com.discord.widgets.servers.settings.members.WidgetServerSettingsMembers$onViewBoundOrOnResume$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.settings.members.WidgetServerSettingsMembers$onViewBoundOrOnResume$1 */
+    /* JADX INFO: compiled from: WidgetServerSettingsMembers.kt */
     public static final class C95911<T> implements Action1<String> {
         public C95911() {
         }
@@ -277,14 +277,14 @@ public final class WidgetServerSettingsMembers extends AppFragment {
             call2(str);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final void call2(String str) {
             WidgetServerSettingsMembers.access$getNameFilterPublisher$p(WidgetServerSettingsMembers.this).onNext(str);
         }
     }
 
-    /* compiled from: WidgetServerSettingsMembers.kt */
-    /* renamed from: com.discord.widgets.servers.settings.members.WidgetServerSettingsMembers$onViewBoundOrOnResume$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.settings.members.WidgetServerSettingsMembers$onViewBoundOrOnResume$2 */
+    /* JADX INFO: compiled from: WidgetServerSettingsMembers.kt */
     public static final class C95922 extends Lambda implements Function1<String, Unit> {
         public C95922() {
             super(1);
@@ -296,7 +296,7 @@ public final class WidgetServerSettingsMembers extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(String str) {
             Intrinsics3.checkNotNullExpressionValue(str, "filterString");
             Long longOrNull = StringNumberConversions.toLongOrNull(str);
@@ -304,8 +304,8 @@ public final class WidgetServerSettingsMembers extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetServerSettingsMembers.kt */
-    /* renamed from: com.discord.widgets.servers.settings.members.WidgetServerSettingsMembers$onViewBoundOrOnResume$3 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.settings.members.WidgetServerSettingsMembers$onViewBoundOrOnResume$3 */
+    /* JADX INFO: compiled from: WidgetServerSettingsMembers.kt */
     public static final class C95933 extends Lambda implements Function1<WidgetServerSettingsMembersModel, Unit> {
         public C95933() {
             super(1);
@@ -317,14 +317,14 @@ public final class WidgetServerSettingsMembers extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(WidgetServerSettingsMembersModel widgetServerSettingsMembersModel) throws Exception {
             WidgetServerSettingsMembers.access$configureUI(WidgetServerSettingsMembers.this, widgetServerSettingsMembersModel);
         }
     }
 
-    /* compiled from: WidgetServerSettingsMembers.kt */
-    /* renamed from: com.discord.widgets.servers.settings.members.WidgetServerSettingsMembers$setupRolesSpinner$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.settings.members.WidgetServerSettingsMembers$setupRolesSpinner$1 */
+    /* JADX INFO: compiled from: WidgetServerSettingsMembers.kt */
     public static final class C95941 implements AdapterView.OnItemSelectedListener {
         public final /* synthetic */ RolesSpinnerAdapter $rolesSpinnerAdapter;
 

@@ -6,15 +6,15 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.nio.channels.FileLock;
 
-/* compiled from: FileLocker.java */
-/* renamed from: b.f.m.g, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.f.m.g, reason: use source file name */
+/* JADX INFO: compiled from: FileLocker.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class FileLocker implements Closeable {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final FileOutputStream f4335j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final FileLock f4336k;
 
     public FileLocker(File file) throws IOException {

@@ -32,16 +32,16 @@ import p507d0.p580t.Iterables2;
 import p507d0.p580t._Collections;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: FunctionInvokeDescriptor.kt */
-/* renamed from: d0.e0.p.d.m0.b.p.e, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.b.p.e, reason: use source file name */
+/* JADX INFO: compiled from: FunctionInvokeDescriptor.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class FunctionInvokeDescriptor extends SimpleFunctionDescriptorImpl {
 
-    /* renamed from: M */
+    /* JADX INFO: renamed from: M */
     public static final a f22609M = new a(null);
 
-    /* compiled from: FunctionInvokeDescriptor.kt */
-    /* renamed from: d0.e0.p.d.m0.b.p.e$a */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.b.p.e$a */
+    /* JADX INFO: compiled from: FunctionInvokeDescriptor.kt */
     public static final class a {
         public a(DefaultConstructorMarker defaultConstructorMarker) {
         }
@@ -104,7 +104,7 @@ public final class FunctionInvokeDescriptor extends SimpleFunctionDescriptorImpl
     }
 
     @Override // p507d0.p513e0.p514p.p515d.p517m0.p521c.p524i1.SimpleFunctionDescriptorImpl, p507d0.p513e0.p514p.p515d.p517m0.p521c.p524i1.FunctionDescriptorImpl
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public FunctionDescriptorImpl mo9373b(DeclarationDescriptor declarationDescriptor, FunctionDescriptor functionDescriptor, CallableMemberDescriptor.a aVar, Name name, Annotations4 annotations4, SourceElement sourceElement) {
         Intrinsics3.checkNotNullParameter(declarationDescriptor, "newOwner");
         Intrinsics3.checkNotNullParameter(aVar, "kind");
@@ -114,7 +114,7 @@ public final class FunctionInvokeDescriptor extends SimpleFunctionDescriptorImpl
     }
 
     @Override // p507d0.p513e0.p514p.p515d.p517m0.p521c.p524i1.FunctionDescriptorImpl
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public FunctionDescriptor mo9374c(FunctionDescriptorImpl.c cVar) {
         boolean z2;
         Name name;

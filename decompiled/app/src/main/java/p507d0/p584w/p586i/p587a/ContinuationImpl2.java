@@ -3,12 +3,12 @@ package p507d0.p584w.p586i.p587a;
 import kotlin.coroutines.Continuation;
 import kotlin.coroutines.CoroutineContext;
 
-/* compiled from: ContinuationImpl.kt */
-/* renamed from: d0.w.i.a.c, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.w.i.a.c, reason: use source file name */
+/* JADX INFO: compiled from: ContinuationImpl.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class ContinuationImpl2 implements Continuation<Object> {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static final ContinuationImpl2 f25244j = new ContinuationImpl2();
 
     @Override // kotlin.coroutines.Continuation

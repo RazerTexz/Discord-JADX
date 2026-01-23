@@ -10,18 +10,18 @@ import java.util.concurrent.atomic.AtomicBoolean;
 import p007b.p109f.p115d.p120e.FLog;
 import p007b.p109f.p161j.p175j.EncodedImage2;
 
-/* compiled from: BufferedDiskCache.java */
-/* renamed from: b.f.j.c.e, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.f.j.c.e, reason: use source file name */
+/* JADX INFO: compiled from: BufferedDiskCache.java */
+/* JADX INFO: loaded from: classes.dex */
 public class BufferedDiskCache implements Callable<EncodedImage2> {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final /* synthetic */ AtomicBoolean f3658j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final /* synthetic */ CacheKey f3659k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final /* synthetic */ BufferedDiskCache2 f3660l;
 
     public BufferedDiskCache(BufferedDiskCache2 bufferedDiskCache2, Object obj, AtomicBoolean atomicBoolean, CacheKey cacheKey) {

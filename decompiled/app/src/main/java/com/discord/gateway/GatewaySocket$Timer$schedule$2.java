@@ -3,8 +3,8 @@ package com.discord.gateway;
 import androidx.core.app.NotificationCompat;
 import p658rx.functions.Action1;
 
-/* compiled from: GatewaySocket.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: GatewaySocket.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class GatewaySocket$Timer$schedule$2<T> implements Action1<Throwable> {
     public static final GatewaySocket$Timer$schedule$2 INSTANCE = new GatewaySocket$Timer$schedule$2();
 
@@ -13,7 +13,7 @@ public final class GatewaySocket$Timer$schedule$2<T> implements Action1<Throwabl
         call2(th);
     }
 
-    /* renamed from: call, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
     public final void call2(Throwable th) {
     }
 }

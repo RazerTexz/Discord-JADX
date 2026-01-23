@@ -6,16 +6,16 @@ import androidx.annotation.NonNull;
 import androidx.viewbinding.ViewBinding;
 import com.discord.views.CutoutView;
 
-/* compiled from: PileItemOverflowViewBinding.java */
-/* renamed from: b.a.i.c1, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.a.i.c1, reason: use source file name */
+/* JADX INFO: compiled from: PileItemOverflowViewBinding.java */
+/* JADX INFO: loaded from: classes.dex */
 public final class PileItemOverflowViewBinding implements ViewBinding {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     @NonNull
     public final CutoutView f736a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     @NonNull
     public final TextView f737b;
 

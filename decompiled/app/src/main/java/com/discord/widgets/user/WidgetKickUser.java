@@ -29,18 +29,18 @@ import p507d0.p579g0.StringsJVM;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetKickUser.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: WidgetKickUser.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class WidgetKickUser extends AppDialog {
     public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetKickUser.class, "binding", "getBinding()Lcom/discord/databinding/WidgetKickUserBinding;", 0)};
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
 
-    /* renamed from: binding$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
 
-    /* compiled from: WidgetKickUser.kt */
+    /* JADX INFO: compiled from: WidgetKickUser.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -62,8 +62,8 @@ public final class WidgetKickUser extends AppDialog {
         }
     }
 
-    /* compiled from: WidgetKickUser.kt */
-    /* renamed from: com.discord.widgets.user.WidgetKickUser$onViewBoundOrOnResume$3 */
+    /* JADX INFO: renamed from: com.discord.widgets.user.WidgetKickUser$onViewBoundOrOnResume$3 */
+    /* JADX INFO: compiled from: WidgetKickUser.kt */
     public static final class ViewOnClickListenerC101893 implements View.OnClickListener {
         public ViewOnClickListenerC101893() {
         }
@@ -74,15 +74,15 @@ public final class WidgetKickUser extends AppDialog {
         }
     }
 
-    /* compiled from: WidgetKickUser.kt */
-    /* renamed from: com.discord.widgets.user.WidgetKickUser$onViewBoundOrOnResume$4 */
+    /* JADX INFO: renamed from: com.discord.widgets.user.WidgetKickUser$onViewBoundOrOnResume$4 */
+    /* JADX INFO: compiled from: WidgetKickUser.kt */
     public static final class ViewOnClickListenerC101904 implements View.OnClickListener {
         public final /* synthetic */ long $guildId;
         public final /* synthetic */ long $userId;
         public final /* synthetic */ String $userName;
 
-        /* compiled from: WidgetKickUser.kt */
-        /* renamed from: com.discord.widgets.user.WidgetKickUser$onViewBoundOrOnResume$4$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.widgets.user.WidgetKickUser$onViewBoundOrOnResume$4$1, reason: invalid class name */
+        /* JADX INFO: compiled from: WidgetKickUser.kt */
         public static final class AnonymousClass1 extends Lambda implements Function1<Void, Unit> {
             public AnonymousClass1() {
                 super(1);
@@ -94,7 +94,7 @@ public final class WidgetKickUser extends AppDialog {
                 return Unit.f27425a;
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2(Void r7) {
                 Context context = WidgetKickUser.this.getContext();
                 Context context2 = WidgetKickUser.this.getContext();
@@ -151,8 +151,8 @@ public final class WidgetKickUser extends AppDialog {
         getBinding().f17212d.setOnClickListener(new ViewOnClickListenerC101904(j, j2, string));
     }
 
-    /* compiled from: WidgetKickUser.kt */
-    /* renamed from: com.discord.widgets.user.WidgetKickUser$onViewBoundOrOnResume$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.user.WidgetKickUser$onViewBoundOrOnResume$1 */
+    /* JADX INFO: compiled from: WidgetKickUser.kt */
     public static final class C101871 extends Lambda implements Function1<RenderContext, Unit> {
         public final /* synthetic */ String $userName;
 
@@ -162,7 +162,7 @@ public final class WidgetKickUser extends AppDialog {
             this.$userName = str;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(RenderContext renderContext) {
             Intrinsics3.checkNotNullParameter(renderContext, "$receiver");
             Map<String, String> map = renderContext.args;
@@ -178,8 +178,8 @@ public final class WidgetKickUser extends AppDialog {
         }
     }
 
-    /* compiled from: WidgetKickUser.kt */
-    /* renamed from: com.discord.widgets.user.WidgetKickUser$onViewBoundOrOnResume$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.user.WidgetKickUser$onViewBoundOrOnResume$2 */
+    /* JADX INFO: compiled from: WidgetKickUser.kt */
     public static final class C101882 extends Lambda implements Function1<RenderContext, Unit> {
         public final /* synthetic */ String $userName;
 
@@ -189,7 +189,7 @@ public final class WidgetKickUser extends AppDialog {
             this.$userName = str;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(RenderContext renderContext) {
             Intrinsics3.checkNotNullParameter(renderContext, "$receiver");
             Map<String, String> map = renderContext.args;

@@ -4,9 +4,9 @@ import com.discord.api.guildscheduledevent.GuildScheduledEvent;
 import com.discord.api.guildscheduledevent.GuildScheduledEventStatus;
 import java.util.Comparator;
 
-/* compiled from: GuildScheduledEventUtilities.kt */
-/* renamed from: com.discord.utilities.guildscheduledevent.GuildScheduledEventsComparator, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.utilities.guildscheduledevent.GuildScheduledEventsComparator, reason: use source file name */
+/* JADX INFO: compiled from: GuildScheduledEventUtilities.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class GuildScheduledEventUtilities6 implements Comparator<GuildScheduledEvent> {
     public static final GuildScheduledEventUtilities6 INSTANCE = new GuildScheduledEventUtilities6();
 
@@ -19,7 +19,7 @@ public final class GuildScheduledEventUtilities6 implements Comparator<GuildSche
     }
 
     /* JADX WARN: Removed duplicated region for block: B:13:0x001b  */
-    /* renamed from: compare, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: compare, reason: avoid collision after fix types in other method */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */

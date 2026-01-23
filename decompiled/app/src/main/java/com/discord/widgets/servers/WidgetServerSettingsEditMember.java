@@ -54,22 +54,22 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 import p658rx.Observable;
 
-/* compiled from: WidgetServerSettingsEditMember.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetServerSettingsEditMember.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetServerSettingsEditMember extends AppFragment {
     public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetServerSettingsEditMember.class, "binding", "getBinding()Lcom/discord/databinding/WidgetServerSettingsEditMemberBinding;", 0)};
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private static final String INTENT_EXTRA_GUILD_ID = "INTENT_EXTRA_GUILD_ID";
     private static final String INTENT_EXTRA_USER_ID = "INTENT_EXTRA_USER_ID";
 
-    /* renamed from: binding$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
     private WidgetServerSettingsEditMemberRolesAdapter rolesAdapter;
     private final StatefulViews state;
 
-    /* compiled from: WidgetServerSettingsEditMember.kt */
+    /* JADX INFO: compiled from: WidgetServerSettingsEditMember.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -87,10 +87,10 @@ public final class WidgetServerSettingsEditMember extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetServerSettingsEditMember.kt */
+    /* JADX INFO: compiled from: WidgetServerSettingsEditMember.kt */
     public static final /* data */ class Model {
 
-        /* renamed from: Companion, reason: from kotlin metadata */
+        /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
         public static final Companion INSTANCE = new Companion(null);
         private final boolean canBan;
         private final boolean canChangeNickname;
@@ -105,7 +105,7 @@ public final class WidgetServerSettingsEditMember extends AppFragment {
         private final GuildMember userComputed;
         private final Set<Long> userRoles;
 
-        /* compiled from: WidgetServerSettingsEditMember.kt */
+        /* JADX INFO: compiled from: WidgetServerSettingsEditMember.kt */
         public static final class Companion {
             private Companion() {
             }
@@ -142,36 +142,37 @@ public final class WidgetServerSettingsEditMember extends AppFragment {
             this.canDisableCommunication = z7;
         }
 
+        /* JADX WARN: Multi-variable type inference failed */
         public static /* synthetic */ Model copy$default(Model model, long j, Guild guild, GuildMember guildMember, Set set, User user, List list, boolean z2, boolean z3, boolean z4, boolean z5, boolean z6, boolean z7, int i, Object obj) {
             return model.copy((i & 1) != 0 ? model.myId : j, (i & 2) != 0 ? model.guild : guild, (i & 4) != 0 ? model.userComputed : guildMember, (i & 8) != 0 ? model.userRoles : set, (i & 16) != 0 ? model.user : user, (i & 32) != 0 ? model.roleItems : list, (i & 64) != 0 ? model.canManage : z2, (i & 128) != 0 ? model.canKick : z3, (i & 256) != 0 ? model.canBan : z4, (i & 512) != 0 ? model.canChangeNickname : z5, (i & 1024) != 0 ? model.canTransferOwnership : z6, (i & 2048) != 0 ? model.canDisableCommunication : z7);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final long getMyId() {
             return this.myId;
         }
 
-        /* renamed from: component10, reason: from getter */
+        /* JADX INFO: renamed from: component10, reason: from getter */
         public final boolean getCanChangeNickname() {
             return this.canChangeNickname;
         }
 
-        /* renamed from: component11, reason: from getter */
+        /* JADX INFO: renamed from: component11, reason: from getter */
         public final boolean getCanTransferOwnership() {
             return this.canTransferOwnership;
         }
 
-        /* renamed from: component12, reason: from getter */
+        /* JADX INFO: renamed from: component12, reason: from getter */
         public final boolean getCanDisableCommunication() {
             return this.canDisableCommunication;
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final Guild getGuild() {
             return this.guild;
         }
 
-        /* renamed from: component3, reason: from getter */
+        /* JADX INFO: renamed from: component3, reason: from getter */
         public final GuildMember getUserComputed() {
             return this.userComputed;
         }
@@ -180,7 +181,7 @@ public final class WidgetServerSettingsEditMember extends AppFragment {
             return this.userRoles;
         }
 
-        /* renamed from: component5, reason: from getter */
+        /* JADX INFO: renamed from: component5, reason: from getter */
         public final User getUser() {
             return this.user;
         }
@@ -189,17 +190,17 @@ public final class WidgetServerSettingsEditMember extends AppFragment {
             return this.roleItems;
         }
 
-        /* renamed from: component7, reason: from getter */
+        /* JADX INFO: renamed from: component7, reason: from getter */
         public final boolean getCanManage() {
             return this.canManage;
         }
 
-        /* renamed from: component8, reason: from getter */
+        /* JADX INFO: renamed from: component8, reason: from getter */
         public final boolean getCanKick() {
             return this.canKick;
         }
 
-        /* renamed from: component9, reason: from getter */
+        /* JADX INFO: renamed from: component9, reason: from getter */
         public final boolean getCanBan() {
             return this.canBan;
         }
@@ -273,6 +274,24 @@ public final class WidgetServerSettingsEditMember extends AppFragment {
         }
 
         /* JADX WARN: Multi-variable type inference failed */
+        /* JADX WARN: Type inference failed for: r1v14, types: [int] */
+        /* JADX WARN: Type inference failed for: r1v16, types: [int] */
+        /* JADX WARN: Type inference failed for: r1v18, types: [int] */
+        /* JADX WARN: Type inference failed for: r1v20, types: [int] */
+        /* JADX WARN: Type inference failed for: r1v22, types: [int] */
+        /* JADX WARN: Type inference failed for: r1v24 */
+        /* JADX WARN: Type inference failed for: r1v25 */
+        /* JADX WARN: Type inference failed for: r1v26 */
+        /* JADX WARN: Type inference failed for: r1v27 */
+        /* JADX WARN: Type inference failed for: r1v28 */
+        /* JADX WARN: Type inference failed for: r1v33 */
+        /* JADX WARN: Type inference failed for: r1v34 */
+        /* JADX WARN: Type inference failed for: r1v35 */
+        /* JADX WARN: Type inference failed for: r1v36 */
+        /* JADX WARN: Type inference failed for: r1v37 */
+        /* JADX WARN: Type inference failed for: r2v2 */
+        /* JADX WARN: Type inference failed for: r2v3, types: [int] */
+        /* JADX WARN: Type inference failed for: r2v4 */
         public int hashCode() {
             int iM3a = C0002b.m3a(this.myId) * 31;
             Guild guild = this.guild;
@@ -286,37 +305,37 @@ public final class WidgetServerSettingsEditMember extends AppFragment {
             List<WidgetServerSettingsEditMemberRolesAdapter.RoleItem> list = this.roleItems;
             int iHashCode5 = (iHashCode4 + (list != null ? list.hashCode() : 0)) * 31;
             boolean z2 = this.canManage;
-            int i = z2;
-            if (z2 != 0) {
-                i = 1;
+            ?? r1 = z2;
+            if (z2) {
+                r1 = 1;
             }
-            int i2 = (iHashCode5 + i) * 31;
+            int i = (iHashCode5 + r1) * 31;
             boolean z3 = this.canKick;
-            int i3 = z3;
-            if (z3 != 0) {
-                i3 = 1;
+            ?? r12 = z3;
+            if (z3) {
+                r12 = 1;
             }
-            int i4 = (i2 + i3) * 31;
+            int i2 = (i + r12) * 31;
             boolean z4 = this.canBan;
-            int i5 = z4;
-            if (z4 != 0) {
-                i5 = 1;
+            ?? r13 = z4;
+            if (z4) {
+                r13 = 1;
             }
-            int i6 = (i4 + i5) * 31;
+            int i3 = (i2 + r13) * 31;
             boolean z5 = this.canChangeNickname;
-            int i7 = z5;
-            if (z5 != 0) {
-                i7 = 1;
+            ?? r14 = z5;
+            if (z5) {
+                r14 = 1;
             }
-            int i8 = (i6 + i7) * 31;
+            int i4 = (i3 + r14) * 31;
             boolean z6 = this.canTransferOwnership;
-            int i9 = z6;
-            if (z6 != 0) {
-                i9 = 1;
+            ?? r15 = z6;
+            if (z6) {
+                r15 = 1;
             }
-            int i10 = (i8 + i9) * 31;
+            int i5 = (i4 + r15) * 31;
             boolean z7 = this.canDisableCommunication;
-            return i10 + (z7 ? 1 : z7 ? 1 : 0);
+            return i5 + (z7 ? 1 : z7);
         }
 
         public String toString() {
@@ -347,8 +366,8 @@ public final class WidgetServerSettingsEditMember extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetServerSettingsEditMember.kt */
-    /* renamed from: com.discord.widgets.servers.WidgetServerSettingsEditMember$changeNickname$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.WidgetServerSettingsEditMember$changeNickname$1 */
+    /* JADX INFO: compiled from: WidgetServerSettingsEditMember.kt */
     public static final class C92241 extends Lambda implements Function1<Void, Unit> {
         public final /* synthetic */ String $nickname;
 
@@ -364,14 +383,14 @@ public final class WidgetServerSettingsEditMember extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Void r2) {
             WidgetServerSettingsEditMember.access$onNicknameChangeSuccessful(WidgetServerSettingsEditMember.this, this.$nickname);
         }
     }
 
-    /* compiled from: WidgetServerSettingsEditMember.kt */
-    /* renamed from: com.discord.widgets.servers.WidgetServerSettingsEditMember$changeNickname$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.WidgetServerSettingsEditMember$changeNickname$2 */
+    /* JADX INFO: compiled from: WidgetServerSettingsEditMember.kt */
     public static final class C92252 extends Lambda implements Function1<Void, Unit> {
         public final /* synthetic */ String $nickname;
 
@@ -387,14 +406,14 @@ public final class WidgetServerSettingsEditMember extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Void r2) {
             WidgetServerSettingsEditMember.access$onNicknameChangeSuccessful(WidgetServerSettingsEditMember.this, this.$nickname);
         }
     }
 
-    /* compiled from: WidgetServerSettingsEditMember.kt */
-    /* renamed from: com.discord.widgets.servers.WidgetServerSettingsEditMember$configureUI$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.WidgetServerSettingsEditMember$configureUI$1 */
+    /* JADX INFO: compiled from: WidgetServerSettingsEditMember.kt */
     public static final class ViewOnClickListenerC92261 implements View.OnClickListener {
         public final /* synthetic */ Model $data;
 
@@ -435,8 +454,8 @@ public final class WidgetServerSettingsEditMember extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetServerSettingsEditMember.kt */
-    /* renamed from: com.discord.widgets.servers.WidgetServerSettingsEditMember$configureUI$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.WidgetServerSettingsEditMember$configureUI$2 */
+    /* JADX INFO: compiled from: WidgetServerSettingsEditMember.kt */
     public static final class ViewOnClickListenerC92272 implements View.OnClickListener {
         public final /* synthetic */ Model $data;
         public final /* synthetic */ boolean $isCommunicationDisabled;
@@ -461,8 +480,8 @@ public final class WidgetServerSettingsEditMember extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetServerSettingsEditMember.kt */
-    /* renamed from: com.discord.widgets.servers.WidgetServerSettingsEditMember$configureUI$3 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.WidgetServerSettingsEditMember$configureUI$3 */
+    /* JADX INFO: compiled from: WidgetServerSettingsEditMember.kt */
     public static final class ViewOnClickListenerC92283 implements View.OnClickListener {
         public final /* synthetic */ Model $data;
         public final /* synthetic */ String $displayName;
@@ -484,8 +503,8 @@ public final class WidgetServerSettingsEditMember extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetServerSettingsEditMember.kt */
-    /* renamed from: com.discord.widgets.servers.WidgetServerSettingsEditMember$configureUI$4 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.WidgetServerSettingsEditMember$configureUI$4 */
+    /* JADX INFO: compiled from: WidgetServerSettingsEditMember.kt */
     public static final class ViewOnClickListenerC92294 implements View.OnClickListener {
         public final /* synthetic */ Model $data;
         public final /* synthetic */ String $displayName;
@@ -501,8 +520,8 @@ public final class WidgetServerSettingsEditMember extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetServerSettingsEditMember.kt */
-    /* renamed from: com.discord.widgets.servers.WidgetServerSettingsEditMember$configureUI$5 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.WidgetServerSettingsEditMember$configureUI$5 */
+    /* JADX INFO: compiled from: WidgetServerSettingsEditMember.kt */
     public static final class ViewOnClickListenerC92305 implements View.OnClickListener {
         public final /* synthetic */ Model $data;
 
@@ -525,8 +544,8 @@ public final class WidgetServerSettingsEditMember extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetServerSettingsEditMember.kt */
-    /* renamed from: com.discord.widgets.servers.WidgetServerSettingsEditMember$onViewBoundOrOnResume$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.WidgetServerSettingsEditMember$onViewBoundOrOnResume$1 */
+    /* JADX INFO: compiled from: WidgetServerSettingsEditMember.kt */
     public static final /* synthetic */ class C92311 extends FunctionReferenceImpl implements Function1<Model, Unit> {
         public C92311(WidgetServerSettingsEditMember widgetServerSettingsEditMember) {
             super(1, widgetServerSettingsEditMember, WidgetServerSettingsEditMember.class, "configureUI", "configureUI(Lcom/discord/widgets/servers/WidgetServerSettingsEditMember$Model;)V", 0);
@@ -538,19 +557,19 @@ public final class WidgetServerSettingsEditMember extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Model model) {
             WidgetServerSettingsEditMember.access$configureUI((WidgetServerSettingsEditMember) this.receiver, model);
         }
     }
 
-    /* compiled from: WidgetServerSettingsEditMember.kt */
-    /* renamed from: com.discord.widgets.servers.WidgetServerSettingsEditMember$setupRoles$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.WidgetServerSettingsEditMember$setupRoles$1 */
+    /* JADX INFO: compiled from: WidgetServerSettingsEditMember.kt */
     public static final class C92321 extends Lambda implements Function1<Long, Unit> {
         public final /* synthetic */ Model $data;
 
-        /* compiled from: WidgetServerSettingsEditMember.kt */
-        /* renamed from: com.discord.widgets.servers.WidgetServerSettingsEditMember$setupRoles$1$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.widgets.servers.WidgetServerSettingsEditMember$setupRoles$1$1, reason: invalid class name */
+        /* JADX INFO: compiled from: WidgetServerSettingsEditMember.kt */
         public static final class AnonymousClass1 extends Lambda implements Function1<Void, Unit> {
             public static final AnonymousClass1 INSTANCE = new AnonymousClass1();
 
@@ -564,7 +583,7 @@ public final class WidgetServerSettingsEditMember extends AppFragment {
                 return Unit.f27425a;
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2(Void r1) {
             }
         }

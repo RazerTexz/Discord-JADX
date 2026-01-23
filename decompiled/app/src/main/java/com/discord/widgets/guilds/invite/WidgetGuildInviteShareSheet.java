@@ -54,8 +54,8 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 import p507d0.p592z.p594d.Reflection2;
 
-/* compiled from: WidgetGuildInviteShareSheet.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetGuildInviteShareSheet.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetGuildInviteShareSheet extends AppBottomSheet {
     private static final String ARG_ANALYTICS_SOURCE = "ARG_ANALYTICS_SOURCE";
     private static final String ARG_CHANNEL_ID = "ARG_CHANNEL_ID";
@@ -63,21 +63,21 @@ public final class WidgetGuildInviteShareSheet extends AppBottomSheet {
     private InviteSuggestionsAdapter adapter;
     private String analyticsSource;
 
-    /* renamed from: binding$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
     private final ActivityResultLauncher<Intent> guildInviteSettingsLauncher;
     private boolean isFixedHeight;
     private final AppLogger2 loggingConfig;
     private boolean restoredSearchQueryFromViewModel;
 
-    /* renamed from: viewModel$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: viewModel$delegate, reason: from kotlin metadata */
     private final Lazy viewModel;
     public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetGuildInviteShareSheet.class, "binding", "getBinding()Lcom/discord/databinding/WidgetGuildInviteShareSheetBinding;", 0)};
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
 
-    /* compiled from: WidgetGuildInviteShareSheet.kt */
+    /* JADX INFO: compiled from: WidgetGuildInviteShareSheet.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -126,8 +126,8 @@ public final class WidgetGuildInviteShareSheet extends AppBottomSheet {
         }
     }
 
-    /* compiled from: WidgetGuildInviteShareSheet.kt */
-    /* renamed from: com.discord.widgets.guilds.invite.WidgetGuildInviteShareSheet$configureNormalUI$3 */
+    /* JADX INFO: renamed from: com.discord.widgets.guilds.invite.WidgetGuildInviteShareSheet$configureNormalUI$3 */
+    /* JADX INFO: compiled from: WidgetGuildInviteShareSheet.kt */
     public static final class C87043 extends Lambda implements Function1<InviteSuggestionItemV2, Unit> {
         public C87043() {
             super(1);
@@ -139,35 +139,35 @@ public final class WidgetGuildInviteShareSheet extends AppBottomSheet {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(InviteSuggestionItemV2 inviteSuggestionItemV2) {
             Intrinsics3.checkNotNullParameter(inviteSuggestionItemV2, "item");
             WidgetGuildInviteShareSheet.access$getViewModel$p(WidgetGuildInviteShareSheet.this).sendInvite(inviteSuggestionItemV2);
         }
     }
 
-    /* compiled from: WidgetGuildInviteShareSheet.kt */
-    /* renamed from: com.discord.widgets.guilds.invite.WidgetGuildInviteShareSheet$onResume$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.guilds.invite.WidgetGuildInviteShareSheet$onResume$1 */
+    /* JADX INFO: compiled from: WidgetGuildInviteShareSheet.kt */
     public static final class C87051 extends Lambda implements Function1<GuildInviteShareSheetViewModel.ViewState, Unit> {
         public C87051() {
             super(1);
         }
 
         @Override // kotlin.jvm.functions.Function1
-        public /* bridge */ /* synthetic */ Unit invoke(GuildInviteShareSheetViewModel.ViewState viewState) throws Resources.NotFoundException {
+        public /* bridge */ /* synthetic */ Unit invoke(GuildInviteShareSheetViewModel.ViewState viewState) {
             invoke2(viewState);
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
-        public final void invoke2(GuildInviteShareSheetViewModel.ViewState viewState) throws Resources.NotFoundException {
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
+        public final void invoke2(GuildInviteShareSheetViewModel.ViewState viewState) {
             Intrinsics3.checkNotNullParameter(viewState, "viewState");
             WidgetGuildInviteShareSheet.this.configureUI(viewState);
         }
     }
 
-    /* compiled from: WidgetGuildInviteShareSheet.kt */
-    /* renamed from: com.discord.widgets.guilds.invite.WidgetGuildInviteShareSheet$setUpSearchBar$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.guilds.invite.WidgetGuildInviteShareSheet$setUpSearchBar$1 */
+    /* JADX INFO: compiled from: WidgetGuildInviteShareSheet.kt */
     public static final class C87061 extends Lambda implements Function1<String, Unit> {
         public C87061() {
             super(1);
@@ -179,7 +179,7 @@ public final class WidgetGuildInviteShareSheet extends AppBottomSheet {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(String str) {
             Intrinsics3.checkNotNullParameter(str, "searchQuery");
             WidgetGuildInviteShareSheet.access$getViewModel$p(WidgetGuildInviteShareSheet.this).onSearchTextChanged(str);
@@ -221,7 +221,7 @@ public final class WidgetGuildInviteShareSheet extends AppBottomSheet {
         widgetGuildInviteShareSheet.analyticsSource = str;
     }
 
-    private final void configureEmptyStateUI(GuildInviteShareSheetViewModel.ViewState viewState) throws Resources.NotFoundException {
+    private final void configureEmptyStateUI(GuildInviteShareSheetViewModel.ViewState viewState) {
         if (this.isFixedHeight) {
             this.isFixedHeight = false;
             FrameLayout frameLayout = getBinding().f16846j;
@@ -286,8 +286,9 @@ public final class WidgetGuildInviteShareSheet extends AppBottomSheet {
                 ViewGroup.LayoutParams layoutParams = frameLayout.getLayoutParams();
                 Objects.requireNonNull(layoutParams, "null cannot be cast to non-null type android.widget.FrameLayout.LayoutParams");
                 FrameLayout.LayoutParams layoutParams2 = (FrameLayout.LayoutParams) layoutParams;
-                Intrinsics3.checkNotNullExpressionValue(getResources(), "resources");
-                layoutParams2.height = (int) (r3.getDisplayMetrics().heightPixels * 0.9d);
+                Resources resources = getResources();
+                Intrinsics3.checkNotNullExpressionValue(resources, "resources");
+                layoutParams2.height = (int) (((double) resources.getDisplayMetrics().heightPixels) * 0.9d);
                 frameLayout.setLayoutParams(layoutParams2);
                 access$getBinding$p(this).f16849m.requestLayout();
             }
@@ -363,7 +364,7 @@ public final class WidgetGuildInviteShareSheet extends AppBottomSheet {
         getBinding().f16847k.m8553a(this, new C87061());
     }
 
-    public final void configureUI(GuildInviteShareSheetViewModel.ViewState viewState) throws Resources.NotFoundException {
+    public final void configureUI(GuildInviteShareSheetViewModel.ViewState viewState) {
         Intrinsics3.checkNotNullParameter(viewState, "viewState");
         if (viewState.getHasResults()) {
             configureNormalUI(viewState);

@@ -10,42 +10,42 @@ import p007b.p100d.p104b.p105a.outline;
 import p615g0.Buffer3;
 import p615g0.BufferedSource;
 
-/* compiled from: JsonUtf8Reader.java */
-/* renamed from: b.c.a.a0.i0.d, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.c.a.a0.i0.d, reason: use source file name */
+/* JADX INFO: compiled from: JsonUtf8Reader.java */
+/* JADX INFO: loaded from: classes.dex */
 public final class JsonUtf8Reader extends JsonReader2 {
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public static final ByteString f2254o = ByteString.m11006h("'\\");
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public static final ByteString f2255p = ByteString.m11006h("\"\\");
 
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     public static final ByteString f2256q = ByteString.m11006h("{}[]:, \n\t\r\f/\\;#=");
 
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     public static final ByteString f2257r = ByteString.m11006h("\n\r");
 
-    /* renamed from: s */
+    /* JADX INFO: renamed from: s */
     public static final ByteString f2258s = ByteString.m11006h("*/");
 
-    /* renamed from: t */
+    /* JADX INFO: renamed from: t */
     public final BufferedSource f2259t;
 
-    /* renamed from: u */
+    /* JADX INFO: renamed from: u */
     public final Buffer3 f2260u;
 
-    /* renamed from: v */
+    /* JADX INFO: renamed from: v */
     public int f2261v = 0;
 
-    /* renamed from: w */
+    /* JADX INFO: renamed from: w */
     public long f2262w;
 
-    /* renamed from: x */
+    /* JADX INFO: renamed from: x */
     public int f2263x;
 
-    /* renamed from: y */
+    /* JADX INFO: renamed from: y */
     @Nullable
     public String f2264y;
 
@@ -57,7 +57,7 @@ public final class JsonUtf8Reader extends JsonReader2 {
     }
 
     @Override // p007b.p085c.p086a.p087a0.p088i0.JsonReader2
-    /* renamed from: A */
+    /* JADX INFO: renamed from: A */
     public void mo600A() throws IOException {
         int iM618I = this.f2261v;
         if (iM618I == 0) {
@@ -81,7 +81,7 @@ public final class JsonUtf8Reader extends JsonReader2 {
     }
 
     @Override // p007b.p085c.p086a.p087a0.p088i0.JsonReader2
-    /* renamed from: C */
+    /* JADX INFO: renamed from: C */
     public void mo601C() throws IOException {
         int i = 0;
         do {
@@ -141,7 +141,7 @@ public final class JsonUtf8Reader extends JsonReader2 {
         this.f2239m[i2 - 1] = "null";
     }
 
-    /* renamed from: H */
+    /* JADX INFO: renamed from: H */
     public final void m617H() throws IOException {
         m602D("Use JsonReader.setLenient(true) to accept malformed JSON");
         throw null;
@@ -220,7 +220,7 @@ public final class JsonUtf8Reader extends JsonReader2 {
     /* JADX WARN: Removed duplicated region for block: B:174:0x0214  */
     /* JADX WARN: Removed duplicated region for block: B:85:0x0122 A[RETURN] */
     /* JADX WARN: Removed duplicated region for block: B:86:0x0123  */
-    /* renamed from: I */
+    /* JADX INFO: renamed from: I */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
@@ -422,7 +422,7 @@ public final class JsonUtf8Reader extends JsonReader2 {
                                         break;
                                     }
                                     i3 = i7;
-                                    long j2 = (10 * j) - (bM10464q3 - 48);
+                                    long j2 = (10 * j) - ((long) (bM10464q3 - 48));
                                     z2 = (j > -922337203685477580L || (j == -922337203685477580L && j2 < j)) & z2;
                                     j = j2;
                                 }
@@ -480,7 +480,7 @@ public final class JsonUtf8Reader extends JsonReader2 {
         throw null;
     }
 
-    /* renamed from: J */
+    /* JADX INFO: renamed from: J */
     public final int m619J(String str, JsonReader2.a aVar) {
         int length = aVar.f2241a.length;
         for (int i = 0; i < length; i++) {
@@ -493,7 +493,7 @@ public final class JsonUtf8Reader extends JsonReader2 {
         return -1;
     }
 
-    /* renamed from: L */
+    /* JADX INFO: renamed from: L */
     public final boolean m620L(int i) throws IOException {
         if (i == 9 || i == 10 || i == 12 || i == 13 || i == 32) {
             return false;
@@ -523,7 +523,7 @@ public final class JsonUtf8Reader extends JsonReader2 {
         throw null;
     }
 
-    /* renamed from: N */
+    /* JADX INFO: renamed from: N */
     public final int m621N(boolean z2) throws IOException {
         int i = 0;
         while (true) {
@@ -554,7 +554,7 @@ public final class JsonUtf8Reader extends JsonReader2 {
         }
     }
 
-    /* renamed from: O */
+    /* JADX INFO: renamed from: O */
     public final String m622O(ByteString byteString) throws IOException {
         StringBuilder sb = null;
         while (true) {
@@ -582,13 +582,13 @@ public final class JsonUtf8Reader extends JsonReader2 {
         }
     }
 
-    /* renamed from: R */
+    /* JADX INFO: renamed from: R */
     public final String m623R() throws IOException {
         long jMo10430E = this.f2259t.mo10430E(f2256q);
         return jMo10430E != -1 ? this.f2260u.m10433H(jMo10430E) : this.f2260u.m10429D();
     }
 
-    /* renamed from: S */
+    /* JADX INFO: renamed from: S */
     public final char m624S() throws IOException {
         int i;
         int i2;
@@ -652,7 +652,7 @@ public final class JsonUtf8Reader extends JsonReader2 {
         return c;
     }
 
-    /* renamed from: T */
+    /* JADX INFO: renamed from: T */
     public final void m625T(ByteString byteString) throws IOException {
         while (true) {
             long jMo10430E = this.f2259t.mo10430E(byteString);
@@ -670,7 +670,7 @@ public final class JsonUtf8Reader extends JsonReader2 {
         }
     }
 
-    /* renamed from: U */
+    /* JADX INFO: renamed from: U */
     public final void m626U() throws IOException {
         long jMo10430E = this.f2259t.mo10430E(f2256q);
         Buffer3 buffer3 = this.f2260u;
@@ -681,7 +681,7 @@ public final class JsonUtf8Reader extends JsonReader2 {
     }
 
     @Override // p007b.p085c.p086a.p087a0.p088i0.JsonReader2
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public void mo603a() throws IOException {
         int iM618I = this.f2261v;
         if (iM618I == 0) {
@@ -701,7 +701,7 @@ public final class JsonUtf8Reader extends JsonReader2 {
     }
 
     @Override // p007b.p085c.p086a.p087a0.p088i0.JsonReader2
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public void mo604b() throws IOException {
         int iM618I = this.f2261v;
         if (iM618I == 0) {
@@ -720,7 +720,7 @@ public final class JsonUtf8Reader extends JsonReader2 {
     }
 
     @Override // p007b.p085c.p086a.p087a0.p088i0.JsonReader2
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public void mo605c() throws IOException {
         int iM618I = this.f2261v;
         if (iM618I == 0) {
@@ -752,7 +752,7 @@ public final class JsonUtf8Reader extends JsonReader2 {
     }
 
     @Override // p007b.p085c.p086a.p087a0.p088i0.JsonReader2
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public void mo606d() throws IOException {
         int iM618I = this.f2261v;
         if (iM618I == 0) {
@@ -775,7 +775,7 @@ public final class JsonUtf8Reader extends JsonReader2 {
     }
 
     @Override // p007b.p085c.p086a.p087a0.p088i0.JsonReader2
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public boolean mo607e() throws IOException {
         int iM618I = this.f2261v;
         if (iM618I == 0) {
@@ -785,7 +785,7 @@ public final class JsonUtf8Reader extends JsonReader2 {
     }
 
     @Override // p007b.p085c.p086a.p087a0.p088i0.JsonReader2
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public boolean mo608f() throws IOException {
         int iM618I = this.f2261v;
         if (iM618I == 0) {
@@ -813,7 +813,7 @@ public final class JsonUtf8Reader extends JsonReader2 {
     }
 
     @Override // p007b.p085c.p086a.p087a0.p088i0.JsonReader2
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public double mo609n() throws IOException {
         int iM618I = this.f2261v;
         if (iM618I == 0) {
@@ -863,7 +863,7 @@ public final class JsonUtf8Reader extends JsonReader2 {
     }
 
     @Override // p007b.p085c.p086a.p087a0.p088i0.JsonReader2
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     public int mo610q() throws IOException {
         int iM618I = this.f2261v;
         if (iM618I == 0) {
@@ -933,7 +933,7 @@ public final class JsonUtf8Reader extends JsonReader2 {
     }
 
     @Override // p007b.p085c.p086a.p087a0.p088i0.JsonReader2
-    /* renamed from: s */
+    /* JADX INFO: renamed from: s */
     public String mo611s() throws IOException {
         String strM622O;
         int iM618I = this.f2261v;
@@ -962,7 +962,7 @@ public final class JsonUtf8Reader extends JsonReader2 {
     }
 
     @Override // p007b.p085c.p086a.p087a0.p088i0.JsonReader2
-    /* renamed from: t */
+    /* JADX INFO: renamed from: t */
     public String mo612t() throws IOException {
         String strM10433H;
         int iM618I = this.f2261v;
@@ -1005,7 +1005,7 @@ public final class JsonUtf8Reader extends JsonReader2 {
     }
 
     @Override // p007b.p085c.p086a.p087a0.p088i0.JsonReader2
-    /* renamed from: u */
+    /* JADX INFO: renamed from: u */
     public JsonReader2.b mo613u() throws IOException {
         int iM618I = this.f2261v;
         if (iM618I == 0) {
@@ -1046,7 +1046,7 @@ public final class JsonUtf8Reader extends JsonReader2 {
     }
 
     @Override // p007b.p085c.p086a.p087a0.p088i0.JsonReader2
-    /* renamed from: y */
+    /* JADX INFO: renamed from: y */
     public int mo615y(JsonReader2.a aVar) throws IOException {
         int iM618I = this.f2261v;
         if (iM618I == 0) {

@@ -5,7 +5,7 @@ import com.esotericsoftware.kryo.util.UnsafeUtil;
 import java.io.InputStream;
 import java.nio.ByteBuffer;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public final class UnsafeMemoryInput extends ByteBufferInput {
     private long bufaddress;
 
@@ -39,7 +39,7 @@ public final class UnsafeMemoryInput extends ByteBufferInput {
     @Override // com.esotericsoftware.kryo.p502io.ByteBufferInput, com.esotericsoftware.kryo.p502io.Input
     public char readChar() throws KryoException {
         require(2);
-        char c = UnsafeUtil.unsafe().getChar(this.bufaddress + this.position);
+        char c = UnsafeUtil.unsafe().getChar(this.bufaddress + ((long) this.position));
         this.position += 2;
         return c;
     }
@@ -55,7 +55,7 @@ public final class UnsafeMemoryInput extends ByteBufferInput {
     @Override // com.esotericsoftware.kryo.p502io.ByteBufferInput, com.esotericsoftware.kryo.p502io.Input
     public double readDouble() throws KryoException {
         require(8);
-        double d = UnsafeUtil.unsafe().getDouble(this.bufaddress + this.position);
+        double d = UnsafeUtil.unsafe().getDouble(this.bufaddress + ((long) this.position));
         this.position += 8;
         return d;
     }
@@ -71,7 +71,7 @@ public final class UnsafeMemoryInput extends ByteBufferInput {
     @Override // com.esotericsoftware.kryo.p502io.ByteBufferInput, com.esotericsoftware.kryo.p502io.Input
     public float readFloat() throws KryoException {
         require(4);
-        float f = UnsafeUtil.unsafe().getFloat(this.bufaddress + this.position);
+        float f = UnsafeUtil.unsafe().getFloat(this.bufaddress + ((long) this.position));
         this.position += 4;
         return f;
     }
@@ -87,7 +87,7 @@ public final class UnsafeMemoryInput extends ByteBufferInput {
     @Override // com.esotericsoftware.kryo.p502io.ByteBufferInput, com.esotericsoftware.kryo.p502io.Input
     public int readInt() throws KryoException {
         require(4);
-        int i = UnsafeUtil.unsafe().getInt(this.bufaddress + this.position);
+        int i = UnsafeUtil.unsafe().getInt(this.bufaddress + ((long) this.position));
         this.position += 4;
         return i;
     }
@@ -106,7 +106,7 @@ public final class UnsafeMemoryInput extends ByteBufferInput {
     @Override // com.esotericsoftware.kryo.p502io.ByteBufferInput, com.esotericsoftware.kryo.p502io.Input
     public long readLong() throws KryoException {
         require(8);
-        long j = UnsafeUtil.unsafe().getLong(this.bufaddress + this.position);
+        long j = UnsafeUtil.unsafe().getLong(this.bufaddress + ((long) this.position));
         this.position += 8;
         return j;
     }
@@ -125,7 +125,7 @@ public final class UnsafeMemoryInput extends ByteBufferInput {
     @Override // com.esotericsoftware.kryo.p502io.ByteBufferInput, com.esotericsoftware.kryo.p502io.Input
     public short readShort() throws KryoException {
         require(2);
-        short s2 = UnsafeUtil.unsafe().getShort(this.bufaddress + this.position);
+        short s2 = UnsafeUtil.unsafe().getShort(this.bufaddress + ((long) this.position));
         this.position += 2;
         return s2;
     }
@@ -186,7 +186,7 @@ public final class UnsafeMemoryInput extends ByteBufferInput {
         long j3 = j2;
         while (true) {
             long j4 = iMin;
-            UnsafeUtil.unsafe().copyMemory((Object) null, this.bufaddress + this.position, obj, j + j3, j4);
+            UnsafeUtil.unsafe().copyMemory((Object) null, this.bufaddress + ((long) this.position), obj, j + j3, j4);
             this.position += iMin;
             i2 -= iMin;
             if (i2 == 0) {

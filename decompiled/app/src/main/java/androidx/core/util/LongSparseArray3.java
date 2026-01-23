@@ -11,13 +11,13 @@ import p507d0.p580t.Iterators5;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.p595g0.KMarkers;
 
-/* compiled from: LongSparseArray.kt */
-/* renamed from: androidx.core.util.LongSparseArrayKt, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: androidx.core.util.LongSparseArrayKt, reason: use source file name */
+/* JADX INFO: compiled from: LongSparseArray.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class LongSparseArray3 {
 
-    /* compiled from: LongSparseArray.kt */
-    /* renamed from: androidx.core.util.LongSparseArrayKt$keyIterator$1 */
+    /* JADX INFO: renamed from: androidx.core.util.LongSparseArrayKt$keyIterator$1 */
+    /* JADX INFO: compiled from: LongSparseArray.kt */
     public static final class C02621 extends Iterators5 {
         public final /* synthetic */ LongSparseArray<T> $this_keyIterator;
         private int index;
@@ -49,8 +49,8 @@ public final class LongSparseArray3 {
     }
 
     /* JADX INFO: Add missing generic type declarations: [T] */
-    /* compiled from: LongSparseArray.kt */
-    /* renamed from: androidx.core.util.LongSparseArrayKt$valueIterator$1 */
+    /* JADX INFO: renamed from: androidx.core.util.LongSparseArrayKt$valueIterator$1 */
+    /* JADX INFO: compiled from: LongSparseArray.kt */
     public static final class C02631<T> implements Iterator<T>, KMarkers {
         public final /* synthetic */ LongSparseArray<T> $this_valueIterator;
         private int index;

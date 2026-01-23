@@ -43,53 +43,53 @@ import p007b.p225i.p226a.p288f.p313h.p325l.C3842t8;
 import p007b.p225i.p226a.p288f.p313h.p325l.C3893x7;
 import p007b.p225i.p226a.p288f.p313h.p325l.InterfaceC3713j9;
 
-/* compiled from: com.google.android.gms:play-services-measurement-impl@@18.0.0 */
-/* renamed from: b.i.a.f.i.b.c6 */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.i.b.c6 */
+/* JADX INFO: compiled from: com.google.android.gms:play-services-measurement-impl@@18.0.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public final class C3999c6 extends AbstractC3974a5 {
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public C4248y6 f10594c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public InterfaceC4225w5 f10595d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final Set<InterfaceC4258z5> f10596e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public boolean f10597f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public final AtomicReference<String> f10598g;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public final Object f10599h;
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     @GuardedBy("consentLock")
     public C4004d f10600i;
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     @GuardedBy("consentLock")
     public int f10601j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final AtomicLong f10602k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public long f10603l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public int f10604m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public final C4251y9 f10605n;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public boolean f10606o;
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public final InterfaceC4218v9 f10607p;
 
     public C3999c6(C4202u4 c4202u4) {
@@ -108,11 +108,11 @@ public final class C3999c6 extends AbstractC3974a5 {
     }
 
     /* JADX WARN: Removed duplicated region for block: B:14:0x005f  */
-    /* renamed from: C */
+    /* JADX INFO: renamed from: C */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
-    public static void m5538C(C3999c6 c3999c6, C4004d c4004d, int i, long j, boolean z2, boolean z3) throws IllegalStateException {
+    public static void m5538C(C3999c6 c3999c6, C4004d c4004d, int i, long j, boolean z2, boolean z3) {
         boolean z4;
         c3999c6.mo5848b();
         c3999c6.m5497t();
@@ -157,8 +157,8 @@ public final class C3999c6 extends AbstractC3974a5 {
         }
     }
 
-    /* renamed from: A */
-    public final void m5539A(C4004d c4004d, int i, long j) throws IllegalStateException {
+    /* JADX INFO: renamed from: A */
+    public final void m5539A(C4004d c4004d, int i, long j) {
         boolean z2;
         C4004d c4004d2;
         boolean z3;
@@ -214,7 +214,7 @@ public final class C3999c6 extends AbstractC3974a5 {
     }
 
     @WorkerThread
-    /* renamed from: B */
+    /* JADX INFO: renamed from: B */
     public final void m5540B(InterfaceC4225w5 interfaceC4225w5) {
         InterfaceC4225w5 interfaceC4225w52;
         mo5848b();
@@ -226,8 +226,8 @@ public final class C3999c6 extends AbstractC3974a5 {
     }
 
     @WorkerThread
-    /* renamed from: D */
-    public final void m5541D(@Nullable Boolean bool, boolean z2) throws IllegalStateException {
+    /* JADX INFO: renamed from: D */
+    public final void m5541D(@Nullable Boolean bool, boolean z2) {
         mo5848b();
         m5497t();
         mo5726g().f11148m.m5861b("Setting app measurement enabled (FE)", bool);
@@ -253,8 +253,8 @@ public final class C3999c6 extends AbstractC3974a5 {
     }
 
     @WorkerThread
-    /* renamed from: E */
-    public final void m5542E(String str, String str2, long j, Bundle bundle) throws IllegalStateException {
+    /* JADX INFO: renamed from: E */
+    public final void m5542E(String str, String str2, long j, Bundle bundle) {
         mo5848b();
         m5543F(str, str2, j, bundle, true, this.f10595d == null || C4196t9.m5885r0(str2), false, null);
     }
@@ -265,11 +265,11 @@ public final class C3999c6 extends AbstractC3974a5 {
      */
     /* JADX WARN: Removed duplicated region for block: B:69:0x0157  */
     @WorkerThread
-    /* renamed from: F */
+    /* JADX INFO: renamed from: F */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
-    public final void m5543F(String str, String str2, long j, Bundle bundle, boolean z2, boolean z3, boolean z4, String str3) throws IllegalStateException {
+    public final void m5543F(String str, String str2, long j, Bundle bundle, boolean z2, boolean z3, boolean z4, String str3) {
         Bundle bundle2;
         ArrayList arrayList;
         boolean zM5755x;
@@ -500,19 +500,19 @@ public final class C3999c6 extends AbstractC3974a5 {
         }
     }
 
-    /* renamed from: G */
-    public final void m5544G(String str, String str2, long j, Object obj) throws IllegalStateException {
+    /* JADX INFO: renamed from: G */
+    public final void m5544G(String str, String str2, long j, Object obj) {
         mo5725f().m5852v(new RunnableC4083j6(this, str, str2, obj, j));
     }
 
-    /* renamed from: H */
-    public final void m5545H(String str, String str2, Bundle bundle) throws IllegalStateException {
+    /* JADX INFO: renamed from: H */
+    public final void m5545H(String str, String str2, Bundle bundle) {
         Objects.requireNonNull((C3401c) this.f11202a.f11267o);
         m5546I(str, str2, bundle, true, true, System.currentTimeMillis());
     }
 
-    /* renamed from: I */
-    public final void m5546I(String str, String str2, Bundle bundle, boolean z2, boolean z3, long j) throws IllegalStateException {
+    /* JADX INFO: renamed from: I */
+    public final void m5546I(String str, String str2, Bundle bundle, boolean z2, boolean z3, long j) {
         String strM5651x;
         String str3 = str == null ? "app" : str;
         Bundle bundle2 = bundle == null ? new Bundle() : bundle;
@@ -566,19 +566,19 @@ public final class C3999c6 extends AbstractC3974a5 {
         m5554Q(str3, str2, j, bundle2, z3, !z3 || this.f10595d == null || C4196t9.m5885r0(str2), !z2, null);
     }
 
-    /* renamed from: J */
-    public final void m5547J(String str, String str2, Object obj) throws IllegalStateException {
+    /* JADX INFO: renamed from: J */
+    public final void m5547J(String str, String str2, Object obj) {
         Objects.requireNonNull((C3401c) this.f11202a.f11267o);
         m5549L(str, str2, obj, true, System.currentTimeMillis());
     }
 
     /* JADX WARN: Removed duplicated region for block: B:16:0x0050  */
     @WorkerThread
-    /* renamed from: K */
+    /* JADX INFO: renamed from: K */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
-    public final void m5548K(String str, String str2, Object obj, long j) throws IllegalStateException {
+    public final void m5548K(String str, String str2, Object obj, long j) {
         String str3;
         Object obj2;
         AnimatableValueParser.m583w(str);
@@ -630,11 +630,11 @@ public final class C3999c6 extends AbstractC3974a5 {
     }
 
     /* JADX WARN: Removed duplicated region for block: B:9:0x0021  */
-    /* renamed from: L */
+    /* JADX INFO: renamed from: L */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
-    public final void m5549L(String str, String str2, Object obj, boolean z2, long j) throws IllegalStateException {
+    public final void m5549L(String str, String str2, Object obj, boolean z2, long j) {
         int iM5913h0;
         if (str == null) {
             str = "app";
@@ -669,7 +669,7 @@ public final class C3999c6 extends AbstractC3974a5 {
         }
     }
 
-    /* renamed from: M */
+    /* JADX INFO: renamed from: M */
     public final void m5550M() {
         if (this.f11202a.f11254b.getApplicationContext() instanceof Application) {
             ((Application) this.f11202a.f11254b.getApplicationContext()).unregisterActivityLifecycleCallbacks(this.f10594c);
@@ -677,8 +677,8 @@ public final class C3999c6 extends AbstractC3974a5 {
     }
 
     @WorkerThread
-    /* renamed from: N */
-    public final void m5551N() throws IllegalStateException {
+    /* JADX INFO: renamed from: N */
+    public final void m5551N() {
         mo5848b();
         m5497t();
         if (this.f11202a.m5944m()) {
@@ -720,7 +720,7 @@ public final class C3999c6 extends AbstractC3974a5 {
     }
 
     @Nullable
-    /* renamed from: O */
+    /* JADX INFO: renamed from: O */
     public final String m5552O() {
         C4202u4 c4202u4 = this.f11202a;
         String str = c4202u4.f11255c;
@@ -736,8 +736,8 @@ public final class C3999c6 extends AbstractC3974a5 {
     }
 
     @WorkerThread
-    /* renamed from: P */
-    public final void m5553P() throws IllegalStateException {
+    /* JADX INFO: renamed from: P */
+    public final void m5553P() {
         mo5848b();
         String strM5694a = m5867l().f10650t.m5694a();
         if (strM5694a != null) {
@@ -774,8 +774,8 @@ public final class C3999c6 extends AbstractC3974a5 {
         }
     }
 
-    /* renamed from: Q */
-    public final void m5554Q(String str, String str2, long j, Bundle bundle, boolean z2, boolean z3, boolean z4, String str3) throws IllegalStateException {
+    /* JADX INFO: renamed from: Q */
+    public final void m5554Q(String str, String str2, long j, Bundle bundle, boolean z2, boolean z3, boolean z4, String str3) {
         Bundle bundle2 = new Bundle(bundle);
         for (String str4 : bundle2.keySet()) {
             Object obj = bundle2.get(str4);
@@ -806,8 +806,8 @@ public final class C3999c6 extends AbstractC3974a5 {
         mo5725f().m5852v(new RunnableC4094k6(this, str, str2, j, bundle2, z2, z3, z4, null));
     }
 
-    /* renamed from: R */
-    public final void m5555R(String str, String str2, Bundle bundle) throws IllegalStateException {
+    /* JADX INFO: renamed from: R */
+    public final void m5555R(String str, String str2, Bundle bundle) {
         Objects.requireNonNull((C3401c) this.f11202a.f11267o);
         long jCurrentTimeMillis = System.currentTimeMillis();
         AnimatableValueParser.m583w(str);
@@ -822,13 +822,13 @@ public final class C3999c6 extends AbstractC3974a5 {
     }
 
     @Override // p007b.p225i.p226a.p288f.p330i.p332b.AbstractC3974a5
-    /* renamed from: v */
+    /* JADX INFO: renamed from: v */
     public final boolean mo5499v() {
         return false;
     }
 
-    /* renamed from: w */
-    public final void m5556w(long j, boolean z2) throws IllegalStateException {
+    /* JADX INFO: renamed from: w */
+    public final void m5556w(long j, boolean z2) {
         mo5848b();
         m5497t();
         mo5726g().f11148m.m5860a("Resetting analytics data (FE)");
@@ -867,8 +867,8 @@ public final class C3999c6 extends AbstractC3974a5 {
         this.f10606o = !zM5940d;
     }
 
-    /* renamed from: x */
-    public final void m5557x(Bundle bundle, int i, long j) throws IllegalStateException {
+    /* JADX INFO: renamed from: x */
+    public final void m5557x(Bundle bundle, int i, long j) {
         if (C3842t8.m5293b() && this.f11202a.f11260h.m5526o(C4142p.f11035H0)) {
             m5497t();
             String string = bundle.getString("ad_storage");
@@ -883,8 +883,8 @@ public final class C3999c6 extends AbstractC3974a5 {
         }
     }
 
-    /* renamed from: y */
-    public final void m5558y(Bundle bundle, long j) throws IllegalStateException {
+    /* JADX INFO: renamed from: y */
+    public final void m5558y(Bundle bundle, long j) {
         Objects.requireNonNull(bundle, "null reference");
         Bundle bundle2 = new Bundle(bundle);
         if (!TextUtils.isEmpty(bundle2.getString("app_id"))) {
@@ -939,11 +939,11 @@ public final class C3999c6 extends AbstractC3974a5 {
 
     /* JADX WARN: Removed duplicated region for block: B:19:0x0066  */
     @WorkerThread
-    /* renamed from: z */
+    /* JADX INFO: renamed from: z */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
-    public final void m5559z(C4004d c4004d) throws IllegalStateException {
+    public final void m5559z(C4004d c4004d) {
         Boolean boolValueOf;
         mo5848b();
         boolean z2 = (c4004d.m5572k() && c4004d.m5571j()) || m5971p().m5807E();

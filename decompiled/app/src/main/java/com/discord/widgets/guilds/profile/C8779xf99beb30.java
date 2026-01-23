@@ -6,9 +6,9 @@ import kotlin.jvm.functions.Function1;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetGuildProfileSheet.kt */
-/* renamed from: com.discord.widgets.guilds.profile.WidgetGuildProfileSheet$configureBottomActions$$inlined$apply$lambda$3 */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.guilds.profile.WidgetGuildProfileSheet$configureBottomActions$$inlined$apply$lambda$3 */
+/* JADX INFO: compiled from: WidgetGuildProfileSheet.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class C8779xf99beb30 extends Lambda implements Function1<View, Unit> {
     public final /* synthetic */ Long $channelId$inlined;
     public final /* synthetic */ long $guildId$inlined;
@@ -30,7 +30,7 @@ public final class C8779xf99beb30 extends Lambda implements Function1<View, Unit
         return Unit.f27425a;
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final void invoke2(View view) {
         Intrinsics3.checkNotNullParameter(view, "it");
         WidgetGuildProfileSheet.access$getViewModel$p(this.this$0).onClickViewServer(this.$guildId$inlined, this.$channelId$inlined);

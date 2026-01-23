@@ -4,9 +4,9 @@ import kotlin.jvm.internal.DefaultConstructorMarker;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: TlsVersion.kt */
-/* renamed from: f0.d0, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: f0.d0, reason: use source file name */
+/* JADX INFO: compiled from: TlsVersion.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public enum TlsVersion {
     TLS_1_3("TLSv1.3"),
     TLS_1_2("TLSv1.2"),
@@ -15,18 +15,18 @@ public enum TlsVersion {
     SSL_3_0("SSLv3");
 
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public static final a f25393p = new a(null);
     private final String javaName;
 
-    /* compiled from: TlsVersion.kt */
-    /* renamed from: f0.d0$a */
+    /* JADX INFO: renamed from: f0.d0$a */
+    /* JADX INFO: compiled from: TlsVersion.kt */
     public static final class a {
         public a(DefaultConstructorMarker defaultConstructorMarker) {
         }
 
         /* JADX WARN: Failed to restore switch over string. Please report as a decompilation issue */
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final TlsVersion m10110a(String str) {
             Intrinsics3.checkParameterIsNotNull(str, "javaName");
             int iHashCode = str.hashCode();
@@ -63,7 +63,7 @@ public enum TlsVersion {
         this.javaName = str;
     }
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final String m10109f() {
         return this.javaName;
     }

@@ -33,20 +33,20 @@ import p507d0.p592z.p594d.Lambda;
 import p658rx.Observable;
 import p658rx.subjects.BehaviorSubject;
 
-/* compiled from: WidgetPhoneCountryCodeBottomSheet.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetPhoneCountryCodeBottomSheet.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetPhoneCountryCodeBottomSheet extends AppBottomSheet {
     public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetPhoneCountryCodeBottomSheet.class, "binding", "getBinding()Lcom/discord/databinding/WidgetPhoneCountryCodeBottomSheetBinding;", 0)};
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private final PhoneCountryCodeAdapter adapter;
 
-    /* renamed from: binding$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
     private final BehaviorSubject<String> nameFilterSubject;
 
-    /* compiled from: WidgetPhoneCountryCodeBottomSheet.kt */
+    /* JADX INFO: compiled from: WidgetPhoneCountryCodeBottomSheet.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -61,8 +61,8 @@ public final class WidgetPhoneCountryCodeBottomSheet extends AppBottomSheet {
         }
     }
 
-    /* compiled from: WidgetPhoneCountryCodeBottomSheet.kt */
-    /* renamed from: com.discord.widgets.phone.WidgetPhoneCountryCodeBottomSheet$configureUI$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.phone.WidgetPhoneCountryCodeBottomSheet$configureUI$1 */
+    /* JADX INFO: compiled from: WidgetPhoneCountryCodeBottomSheet.kt */
     public static final class C91161 implements PhoneCountryCodeAdapter2 {
         public final /* synthetic */ StorePhone $phoneStore;
 
@@ -78,8 +78,8 @@ public final class WidgetPhoneCountryCodeBottomSheet extends AppBottomSheet {
         }
     }
 
-    /* compiled from: WidgetPhoneCountryCodeBottomSheet.kt */
-    /* renamed from: com.discord.widgets.phone.WidgetPhoneCountryCodeBottomSheet$onResume$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.phone.WidgetPhoneCountryCodeBottomSheet$onResume$1 */
+    /* JADX INFO: compiled from: WidgetPhoneCountryCodeBottomSheet.kt */
     public static final class C91171 extends Lambda implements Function1<Editable, Unit> {
         public C91171() {
             super(1);
@@ -91,15 +91,15 @@ public final class WidgetPhoneCountryCodeBottomSheet extends AppBottomSheet {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Editable editable) {
             Intrinsics3.checkNotNullParameter(editable, "it");
             WidgetPhoneCountryCodeBottomSheet.access$getNameFilterSubject$p(WidgetPhoneCountryCodeBottomSheet.this).onNext(editable.toString());
         }
     }
 
-    /* compiled from: WidgetPhoneCountryCodeBottomSheet.kt */
-    /* renamed from: com.discord.widgets.phone.WidgetPhoneCountryCodeBottomSheet$onResume$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.phone.WidgetPhoneCountryCodeBottomSheet$onResume$2 */
+    /* JADX INFO: compiled from: WidgetPhoneCountryCodeBottomSheet.kt */
     public static final class C91182 extends Lambda implements Function1<String, Unit> {
         public C91182() {
             super(1);
@@ -111,7 +111,7 @@ public final class WidgetPhoneCountryCodeBottomSheet extends AppBottomSheet {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(String str) {
             WidgetPhoneCountryCodeBottomSheet widgetPhoneCountryCodeBottomSheet = WidgetPhoneCountryCodeBottomSheet.this;
             Intrinsics3.checkNotNullExpressionValue(str, "it");

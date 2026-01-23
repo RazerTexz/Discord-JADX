@@ -1,16 +1,16 @@
 package p007b.p195g.p196a.p198b;
 
-/* compiled from: SerializableString.java */
-/* renamed from: b.g.a.b.k, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.g.a.b.k, reason: use source file name */
+/* JADX INFO: compiled from: SerializableString.java */
+/* JADX INFO: loaded from: classes3.dex */
 public interface SerializableString {
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     char[] mo1688a();
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     int mo1689b(char[] cArr, int i);
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     int mo1690c(char[] cArr, int i);
 
     String getValue();

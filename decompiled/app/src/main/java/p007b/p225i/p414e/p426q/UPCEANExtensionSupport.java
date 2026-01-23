@@ -9,21 +9,21 @@ import p007b.p225i.p414e.ResultMetadataType;
 import p007b.p225i.p414e.ResultPoint;
 import p007b.p225i.p414e.p418n.BitArray;
 
-/* compiled from: UPCEANExtensionSupport.java */
-/* renamed from: b.i.e.q.o, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.e.q.o, reason: use source file name */
+/* JADX INFO: compiled from: UPCEANExtensionSupport.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class UPCEANExtensionSupport {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final int[] f13386a = {1, 1, 2};
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final UPCEANExtension2Support f13387b = new UPCEANExtension2Support();
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final UPCEANExtension5Support f13388c = new UPCEANExtension5Support();
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public Result m7003a(int i, BitArray bitArray, int i2) throws NotFoundException {
         EnumMap enumMap;
         int[] iArr = f13386a;

@@ -15,36 +15,36 @@ import p007b.p100d.p104b.p105a.outline;
 import p007b.p452o.p453a.CameraLogger;
 import p007b.p452o.p453a.p470u.Overlay;
 
-/* compiled from: OverlayLayout.java */
+/* JADX INFO: renamed from: b.o.a.u.c, reason: use source file name */
+/* JADX INFO: compiled from: OverlayLayout.java */
+/* JADX INFO: loaded from: classes3.dex */
 @SuppressLint({"CustomViewStyleable"})
-/* renamed from: b.o.a.u.c, reason: use source file name */
-/* loaded from: classes3.dex */
 public class OverlayLayout extends FrameLayout implements Overlay {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static final String f14154j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public static final CameraLogger f14155k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     @VisibleForTesting
     public Overlay.a f14156l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public boolean f14157m;
 
-    /* compiled from: OverlayLayout.java */
-    /* renamed from: b.o.a.u.c$a */
+    /* JADX INFO: renamed from: b.o.a.u.c$a */
+    /* JADX INFO: compiled from: OverlayLayout.java */
     public static class a extends FrameLayout.LayoutParams {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public boolean f14158a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public boolean f14159b;
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public boolean f14160c;
 
         public a(@NonNull Context context, @NonNull AttributeSet attributeSet) {
@@ -63,7 +63,7 @@ public class OverlayLayout extends FrameLayout implements Overlay {
         }
 
         @VisibleForTesting
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public boolean m7415a(@NonNull Overlay.a aVar) {
             return (aVar == Overlay.a.PREVIEW && this.f14158a) || (aVar == Overlay.a.VIDEO_SNAPSHOT && this.f14160c) || (aVar == Overlay.a.PICTURE_SNAPSHOT && this.f14159b);
         }
@@ -92,7 +92,7 @@ public class OverlayLayout extends FrameLayout implements Overlay {
         setWillNotDraw(false);
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public void m7412a(@NonNull Overlay.a aVar, @NonNull Canvas canvas) {
         synchronized (this) {
             this.f14156l = aVar;
@@ -111,7 +111,7 @@ public class OverlayLayout extends FrameLayout implements Overlay {
         }
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public boolean m7413b(@NonNull Overlay.a aVar) {
         for (int i = 0; i < getChildCount(); i++) {
             if (((a) getChildAt(i).getLayoutParams()).m7415a(aVar)) {
@@ -121,7 +121,7 @@ public class OverlayLayout extends FrameLayout implements Overlay {
         return false;
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public a m7414c(AttributeSet attributeSet) {
         return new a(getContext(), attributeSet);
     }

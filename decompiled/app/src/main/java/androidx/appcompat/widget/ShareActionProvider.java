@@ -13,7 +13,7 @@ import androidx.appcompat.content.res.AppCompatResources;
 import androidx.appcompat.widget.ActivityChooserModel;
 import androidx.core.view.ActionProvider;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class ShareActionProvider extends ActionProvider {
     private static final int DEFAULT_INITIAL_ACTIVITY_COUNT = 4;
     public static final String DEFAULT_SHARE_HISTORY_FILE_NAME = "share_history.xml";
@@ -88,7 +88,7 @@ public class ShareActionProvider extends ActionProvider {
     }
 
     @Override // androidx.core.view.ActionProvider
-    public View onCreateActionView() throws IllegalArgumentException {
+    public View onCreateActionView() {
         ActivityChooserView activityChooserView = new ActivityChooserView(this.mContext);
         if (!activityChooserView.isInEditMode()) {
             activityChooserView.setActivityChooserModel(ActivityChooserModel.get(this.mContext, this.mShareHistoryFileName));

@@ -6,12 +6,12 @@ import p637j0.p641k.Func1;
 import p637j0.p642l.p643a.OnSubscribeFromIterable;
 import p658rx.Observable;
 
-/* compiled from: lambda */
-/* renamed from: b.a.z.a.a.s */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: b.a.z.a.a.s */
+/* JADX INFO: compiled from: lambda */
+/* JADX INFO: loaded from: classes2.dex */
 public final /* synthetic */ class C1409s implements Func1 {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final /* synthetic */ Channel f2108j;
 
     public /* synthetic */ C1409s(Channel channel) {

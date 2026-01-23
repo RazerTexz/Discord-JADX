@@ -6,21 +6,21 @@ import com.google.android.gms.cloudmessaging.zzp;
 import com.google.android.gms.tasks.TaskCompletionSource;
 import p007b.p100d.p104b.p105a.outline;
 
-/* compiled from: com.google.android.gms:play-services-cloud-messaging@@16.0.0 */
-/* renamed from: b.i.a.f.d.q */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.d.q */
+/* JADX INFO: compiled from: com.google.android.gms:play-services-cloud-messaging@@16.0.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public abstract class AbstractC3242q<T> {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final int f9279a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final TaskCompletionSource<T> f9280b = new TaskCompletionSource<>();
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final int f9281c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final Bundle f9282d;
 
     public AbstractC3242q(int i, int i2, Bundle bundle) {
@@ -29,10 +29,10 @@ public abstract class AbstractC3242q<T> {
         this.f9282d = bundle;
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public abstract void mo4006a(Bundle bundle);
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final void m4008b(zzp zzpVar) {
         if (Log.isLoggable("MessengerIpcClient", 3)) {
             String strValueOf = String.valueOf(this);
@@ -42,7 +42,7 @@ public abstract class AbstractC3242q<T> {
         this.f9280b.f20845a.m6025t(zzpVar);
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final void m4009c(T t) {
         if (Log.isLoggable("MessengerIpcClient", 3)) {
             String strValueOf = String.valueOf(this);
@@ -52,7 +52,7 @@ public abstract class AbstractC3242q<T> {
         this.f9280b.f20845a.m6024s(t);
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public abstract boolean mo4007d();
 
     public String toString() {

@@ -9,20 +9,20 @@ import androidx.viewbinding.ViewBinding;
 import com.discord.utilities.view.text.LinkifiedTextView;
 import com.discord.views.LoadingButton;
 
-/* compiled from: LayoutContactSyncSuggestionsBinding.java */
-/* renamed from: b.a.i.m0, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.a.i.m0, reason: use source file name */
+/* JADX INFO: compiled from: LayoutContactSyncSuggestionsBinding.java */
+/* JADX INFO: loaded from: classes.dex */
 public final class LayoutContactSyncSuggestionsBinding implements ViewBinding {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     @NonNull
     public final ConstraintLayout f1040a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     @NonNull
     public final RecyclerView f1041b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     @NonNull
     public final LoadingButton f1042c;
 

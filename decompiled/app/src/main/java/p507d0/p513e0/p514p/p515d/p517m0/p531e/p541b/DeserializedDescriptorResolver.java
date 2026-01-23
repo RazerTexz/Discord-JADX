@@ -27,34 +27,34 @@ import p507d0.p580t.SetsJVM;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: DeserializedDescriptorResolver.kt */
-/* renamed from: d0.e0.p.d.m0.e.b.f, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.e.b.f, reason: use source file name */
+/* JADX INFO: compiled from: DeserializedDescriptorResolver.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class DeserializedDescriptorResolver {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final a f23603a = new a(null);
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static final Set<KotlinClassHeader.a> f23604b = SetsJVM.setOf(KotlinClassHeader.a.CLASS);
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public static final Set<KotlinClassHeader.a> f23605c = Sets5.setOf((Object[]) new KotlinClassHeader.a[]{KotlinClassHeader.a.FILE_FACADE, KotlinClassHeader.a.MULTIFILE_CLASS_PART});
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public static final JvmMetadataVersion f23606d = new JvmMetadataVersion(1, 1, 2);
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public static final JvmMetadataVersion f23607e = new JvmMetadataVersion(1, 1, 11);
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public static final JvmMetadataVersion f23608f = new JvmMetadataVersion(1, 1, 13);
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public context5 f23609g;
 
-    /* compiled from: DeserializedDescriptorResolver.kt */
-    /* renamed from: d0.e0.p.d.m0.e.b.f$a */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.e.b.f$a */
+    /* JADX INFO: compiled from: DeserializedDescriptorResolver.kt */
     public static final class a {
         public a(DefaultConstructorMarker defaultConstructorMarker) {
         }
@@ -68,11 +68,11 @@ public final class DeserializedDescriptorResolver {
         }
     }
 
-    /* compiled from: DeserializedDescriptorResolver.kt */
-    /* renamed from: d0.e0.p.d.m0.e.b.f$b */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.e.b.f$b */
+    /* JADX INFO: compiled from: DeserializedDescriptorResolver.kt */
     public static final class b extends Lambda implements Function0<Collection<? extends Name>> {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public static final b f23610j = new b();
 
         public b() {
@@ -85,7 +85,7 @@ public final class DeserializedDescriptorResolver {
         }
 
         @Override // kotlin.jvm.functions.Function0
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final Collection<? extends Name> invoke2() {
             return Collections2.emptyList();
         }
@@ -103,13 +103,13 @@ public final class DeserializedDescriptorResolver {
         return deserializedDescriptorResolver.getComponents().getConfiguration().getSkipMetadataVersionCheck();
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final DeserializedContainerSource m9545a(KotlinJvmBinaryClass kotlinJvmBinaryClass) {
         DeserializedContainerSource deserializedContainerSource = DeserializedContainerSource.STABLE;
         return getComponents().getConfiguration().getAllowUnstableDependencies() ? deserializedContainerSource : kotlinJvmBinaryClass.getClassHeader().isUnstableFirBinary() ? DeserializedContainerSource.FIR_UNSTABLE : kotlinJvmBinaryClass.getClassHeader().isUnstableJvmIrBinary() ? DeserializedContainerSource.IR_UNSTABLE : deserializedContainerSource;
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final IncompatibleVersionErrorData<JvmMetadataVersion> m9546b(KotlinJvmBinaryClass kotlinJvmBinaryClass) {
         if (getComponents().getConfiguration().getSkipMetadataVersionCheck() || kotlinJvmBinaryClass.getClassHeader().getMetadataVersion().isCompatible()) {
             return null;
@@ -117,7 +117,7 @@ public final class DeserializedDescriptorResolver {
         return new IncompatibleVersionErrorData<>(kotlinJvmBinaryClass.getClassHeader().getMetadataVersion(), JvmMetadataVersion.f23711f, kotlinJvmBinaryClass.getLocation(), kotlinJvmBinaryClass.getClassId());
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final boolean m9547c(KotlinJvmBinaryClass kotlinJvmBinaryClass) {
         if (!getComponents().getConfiguration().getReportErrorsOnPreReleaseDependencies() || (!kotlinJvmBinaryClass.getClassHeader().isPreRelease() && !Intrinsics3.areEqual(kotlinJvmBinaryClass.getClassHeader().getMetadataVersion(), f23606d))) {
             if (!(!getComponents().getConfiguration().getSkipPrereleaseCheck() && kotlinJvmBinaryClass.getClassHeader().isPreRelease() && Intrinsics3.areEqual(kotlinJvmBinaryClass.getClassHeader().getMetadataVersion(), f23607e))) {
@@ -157,7 +157,7 @@ public final class DeserializedDescriptorResolver {
         return new DeserializedPackageMemberScope(packageFragmentDescriptor, c11687lComponent2, jvmNameResolverComponent1, kotlinJvmBinaryClass.getClassHeader().getMetadataVersion(), new JvmPackagePartSource(kotlinJvmBinaryClass, c11687lComponent2, jvmNameResolverComponent1, m9546b(kotlinJvmBinaryClass), m9547c(kotlinJvmBinaryClass), m9545a(kotlinJvmBinaryClass)), getComponents(), b.f23610j);
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final String[] m9548d(KotlinJvmBinaryClass kotlinJvmBinaryClass, Set<? extends KotlinClassHeader.a> set) {
         KotlinClassHeader classHeader = kotlinJvmBinaryClass.getClassHeader();
         String[] data = classHeader.getData();

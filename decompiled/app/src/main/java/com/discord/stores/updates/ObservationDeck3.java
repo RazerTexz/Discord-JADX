@@ -8,9 +8,9 @@ import kotlin.jvm.functions.Function0;
 import p507d0.p580t._Arrays;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ObservationDeck.kt */
-/* renamed from: com.discord.stores.updates.ObservationDeck$connect$observer$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.stores.updates.ObservationDeck$connect$observer$1, reason: use source file name */
+/* JADX INFO: compiled from: ObservationDeck.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class ObservationDeck3 extends ObservationDeck.Observer {
     public final /* synthetic */ String $observerName;
     public final /* synthetic */ Function0 $onUpdate;

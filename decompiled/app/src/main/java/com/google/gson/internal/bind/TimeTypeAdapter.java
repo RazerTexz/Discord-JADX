@@ -15,16 +15,16 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import p007b.p225i.p408d.TypeAdapterFactory2;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public final class TimeTypeAdapter extends TypeAdapter<Time> {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final TypeAdapterFactory2 f21539a = new C111111();
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final DateFormat f21540b = new SimpleDateFormat("hh:mm:ss a");
 
-    /* renamed from: com.google.gson.internal.bind.TimeTypeAdapter$1 */
+    /* JADX INFO: renamed from: com.google.gson.internal.bind.TimeTypeAdapter$1 */
     public class C111111 implements TypeAdapterFactory2 {
         @Override // p007b.p225i.p408d.TypeAdapterFactory2
         public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> typeToken) {

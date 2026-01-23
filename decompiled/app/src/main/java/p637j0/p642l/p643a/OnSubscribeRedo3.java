@@ -4,12 +4,12 @@ import p637j0.Notification;
 import p658rx.Observable;
 import p658rx.Subscriber;
 
-/* compiled from: OnSubscribeRedo.java */
-/* renamed from: j0.l.a.v, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: j0.l.a.v, reason: use source file name */
+/* JADX INFO: compiled from: OnSubscribeRedo.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class OnSubscribeRedo3 implements Observable.InterfaceC13006b<Notification<?>, Notification<?>> {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final /* synthetic */ OnSubscribeRedo6 f27064j;
 
     public OnSubscribeRedo3(OnSubscribeRedo6 onSubscribeRedo6) {

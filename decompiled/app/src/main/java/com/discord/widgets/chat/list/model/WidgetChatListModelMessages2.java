@@ -20,9 +20,9 @@ import p507d0.p580t._CollectionsJvm;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetChatListModelMessages.kt */
-/* renamed from: com.discord.widgets.chat.list.model.WidgetChatListModelMessages$Companion$get$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.chat.list.model.WidgetChatListModelMessages$Companion$get$1, reason: use source file name */
+/* JADX INFO: compiled from: WidgetChatListModelMessages.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetChatListModelMessages2 extends Lambda implements Function15<WidgetChatListModelMessages.MessagesWithMetadata, Channel, Map<Long, ? extends Integer>, List<? extends Long>, Map<Long, ? extends GuildMember>, Long, Map<Long, ? extends GuildRole>, Long, Boolean, Boolean, Boolean, Long, Map<Long, ? extends ComponentChatListState.ComponentStoreState>, InviteEmbedModel, Boolean, WidgetChatListModelMessages> {
     public final /* synthetic */ Channel $channel;
 

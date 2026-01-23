@@ -5,8 +5,8 @@ import java.util.Map;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: LocalizedString.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: LocalizedString.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class LocalizedString implements Serializable {
     private final String default;
     private final Map<String, String> localizations;
@@ -18,12 +18,12 @@ public final /* data */ class LocalizedString implements Serializable {
         this.localizations = map;
     }
 
-    /* renamed from: a, reason: from getter */
+    /* JADX INFO: renamed from: a, reason: from getter */
     public final String getDefault() {
         return this.default;
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final Map<String, String> m8017b() {
         return this.localizations;
     }

@@ -13,7 +13,7 @@ import java.util.Set;
 import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserException;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class KeyFrames {
     private static final String TAG = "KeyFrames";
     public static final int UNSET = -1;
@@ -57,8 +57,6 @@ public class KeyFrames {
                         } catch (Exception e3) {
                             e = e3;
                             Log.e(TAG, "unable to create ", e);
-                            key = keyNewInstance;
-                            eventType = xmlPullParser.next();
                         }
                         key = keyNewInstance;
                     } else if (name.equalsIgnoreCase("CustomAttribute") && key != null && (map = key.mCustomConstraints) != null) {

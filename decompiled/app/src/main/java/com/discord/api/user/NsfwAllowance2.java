@@ -8,12 +8,12 @@ import java.io.IOException;
 import kotlin.NoWhenBranchMatchedException;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: NsfwAllowance.kt */
-/* renamed from: com.discord.api.user.NsfwAllowanceTypeAdapter, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: com.discord.api.user.NsfwAllowanceTypeAdapter, reason: use source file name */
+/* JADX INFO: compiled from: NsfwAllowance.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class NsfwAllowance2 extends TypeAdapter<NsfwAllowance> {
 
-    /* renamed from: com.discord.api.user.NsfwAllowanceTypeAdapter$WhenMappings */
+    /* JADX INFO: renamed from: com.discord.api.user.NsfwAllowanceTypeAdapter$WhenMappings */
     public final /* synthetic */ class WhenMappings {
         public static final /* synthetic */ int[] $EnumSwitchMapping$0;
 

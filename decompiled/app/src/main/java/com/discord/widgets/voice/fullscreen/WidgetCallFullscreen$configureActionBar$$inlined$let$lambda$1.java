@@ -7,8 +7,8 @@ import com.discord.widgets.guildscheduledevent.WidgetGuildScheduledEventDetailsB
 import com.discord.widgets.voice.fullscreen.WidgetCallFullscreenViewModel;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: WidgetCallFullscreen.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: WidgetCallFullscreen.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class WidgetCallFullscreen$configureActionBar$$inlined$let$lambda$1 implements View.OnClickListener {
     public final /* synthetic */ GuildScheduledEvent $activeEvent$inlined;
     public final /* synthetic */ WidgetCallFullscreenViewModel.ViewState.Valid $viewState$inlined;

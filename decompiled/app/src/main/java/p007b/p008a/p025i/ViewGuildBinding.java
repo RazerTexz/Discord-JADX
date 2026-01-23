@@ -6,20 +6,20 @@ import androidx.annotation.NonNull;
 import androidx.viewbinding.ViewBinding;
 import com.facebook.drawee.view.SimpleDraweeView;
 
-/* compiled from: ViewGuildBinding.java */
-/* renamed from: b.a.i.k2, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.a.i.k2, reason: use source file name */
+/* JADX INFO: compiled from: ViewGuildBinding.java */
+/* JADX INFO: loaded from: classes.dex */
 public final class ViewGuildBinding implements ViewBinding {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     @NonNull
     public final View f998a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     @NonNull
     public final SimpleDraweeView f999b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     @NonNull
     public final TextView f1000c;
 

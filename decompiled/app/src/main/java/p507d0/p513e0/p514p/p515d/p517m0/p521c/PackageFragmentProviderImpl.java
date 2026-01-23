@@ -11,19 +11,19 @@ import p507d0.p580t._Collections;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: PackageFragmentProviderImpl.kt */
-/* renamed from: d0.e0.p.d.m0.c.g0, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.c.g0, reason: use source file name */
+/* JADX INFO: compiled from: PackageFragmentProviderImpl.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class PackageFragmentProviderImpl implements PackageFragmentProvider3 {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final Collection<PackageFragmentDescriptor> f22714a;
 
-    /* compiled from: PackageFragmentProviderImpl.kt */
-    /* renamed from: d0.e0.p.d.m0.c.g0$a */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.c.g0$a */
+    /* JADX INFO: compiled from: PackageFragmentProviderImpl.kt */
     public static final class a extends Lambda implements Function1<PackageFragmentDescriptor, FqName> {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public static final a f22715j = new a();
 
         public a() {
@@ -35,15 +35,15 @@ public final class PackageFragmentProviderImpl implements PackageFragmentProvide
             return invoke2(packageFragmentDescriptor);
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final FqName invoke2(PackageFragmentDescriptor packageFragmentDescriptor) {
             Intrinsics3.checkNotNullParameter(packageFragmentDescriptor, "it");
             return packageFragmentDescriptor.getFqName();
         }
     }
 
-    /* compiled from: PackageFragmentProviderImpl.kt */
-    /* renamed from: d0.e0.p.d.m0.c.g0$b */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.c.g0$b */
+    /* JADX INFO: compiled from: PackageFragmentProviderImpl.kt */
     public static final class b extends Lambda implements Function1<FqName, Boolean> {
         public final /* synthetic */ FqName $fqName;
 
@@ -58,7 +58,7 @@ public final class PackageFragmentProviderImpl implements PackageFragmentProvide
             return Boolean.valueOf(invoke2(fqName));
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final boolean invoke2(FqName fqName) {
             Intrinsics3.checkNotNullParameter(fqName, "it");
             return !fqName.isRoot() && Intrinsics3.areEqual(fqName.parent(), this.$fqName);

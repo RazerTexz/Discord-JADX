@@ -19,22 +19,22 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p659s.p660a.Dispatchers;
 import p659s.p660a.p661a.MainDispatchers;
 
-/* compiled from: CoroutineLiveData.kt */
-/* renamed from: androidx.lifecycle.CoroutineLiveDataKt, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: androidx.lifecycle.CoroutineLiveDataKt, reason: use source file name */
+/* JADX INFO: compiled from: CoroutineLiveData.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class CoroutineLiveData5 {
     public static final long DEFAULT_TIMEOUT = 5000;
 
-    /* compiled from: CoroutineLiveData.kt */
+    /* JADX INFO: renamed from: androidx.lifecycle.CoroutineLiveDataKt$addDisposableSource$2 */
+    /* JADX INFO: compiled from: CoroutineLiveData.kt */
     @DebugMetadata(m10084c = "androidx.lifecycle.CoroutineLiveDataKt$addDisposableSource$2", m10085f = "CoroutineLiveData.kt", m10086l = {}, m10087m = "invokeSuspend")
-    /* renamed from: androidx.lifecycle.CoroutineLiveDataKt$addDisposableSource$2 */
     public static final class C04302 extends ContinuationImpl6 implements Function2<CoroutineScope, Continuation<? super CoroutineLiveData6>, Object> {
         public final /* synthetic */ LiveData $source;
         public final /* synthetic */ MediatorLiveData $this_addDisposableSource;
         public int label;
 
-        /* compiled from: CoroutineLiveData.kt */
-        /* renamed from: androidx.lifecycle.CoroutineLiveDataKt$addDisposableSource$2$1, reason: invalid class name */
+        /* JADX INFO: renamed from: androidx.lifecycle.CoroutineLiveDataKt$addDisposableSource$2$1, reason: invalid class name */
+        /* JADX INFO: compiled from: CoroutineLiveData.kt */
         public static final class AnonymousClass1<T> implements Observer<T> {
             public AnonymousClass1() {
             }

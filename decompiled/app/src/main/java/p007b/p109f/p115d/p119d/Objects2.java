@@ -3,31 +3,31 @@ package p007b.p109f.p115d.p119d;
 import java.util.Arrays;
 import java.util.Objects;
 
-/* compiled from: Objects.java */
-/* renamed from: b.f.d.d.i, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.f.d.d.i, reason: use source file name */
+/* JADX INFO: compiled from: Objects.java */
+/* JADX INFO: loaded from: classes.dex */
 public final class Objects2 {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final String f3094a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final a f3095b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public a f3096c;
 
-    /* compiled from: Objects.java */
-    /* renamed from: b.f.d.d.i$a */
+    /* JADX INFO: renamed from: b.f.d.d.i$a */
+    /* JADX INFO: compiled from: Objects.java */
     public static final class a {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public String f3097a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public Object f3098b;
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public a f3099c;
 
         public a(Objects objects) {
@@ -41,19 +41,19 @@ public final class Objects2 {
         this.f3094a = str;
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public Objects2 m969a(String str, int i) {
         m971c(str, String.valueOf(i));
         return this;
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public Objects2 m970b(String str, boolean z2) {
         m971c(str, String.valueOf(z2));
         return this;
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final Objects2 m971c(String str, Object obj) {
         a aVar = new a(null);
         this.f3096c.f3099c = aVar;

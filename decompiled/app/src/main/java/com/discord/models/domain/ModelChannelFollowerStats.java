@@ -6,11 +6,11 @@ import org.objectweb.asm.Opcodes;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ModelChannelFollowerStats.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: ModelChannelFollowerStats.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class ModelChannelFollowerStats {
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private final Integer channelsFollowing;
     private final Integer guildMembers;
@@ -20,7 +20,7 @@ public final /* data */ class ModelChannelFollowerStats {
     private final Integer subscribersLostSinceLastPost;
     private final Integer usersSeenEver;
 
-    /* compiled from: ModelChannelFollowerStats.kt */
+    /* JADX INFO: compiled from: ModelChannelFollowerStats.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -52,37 +52,37 @@ public final /* data */ class ModelChannelFollowerStats {
         return modelChannelFollowerStats.copy((i & 1) != 0 ? modelChannelFollowerStats.lastFetched : j, (i & 2) != 0 ? modelChannelFollowerStats.channelsFollowing : num, (i & 4) != 0 ? modelChannelFollowerStats.guildMembers : num2, (i & 8) != 0 ? modelChannelFollowerStats.guildsFollowing : num3, (i & 16) != 0 ? modelChannelFollowerStats.usersSeenEver : num4, (i & 32) != 0 ? modelChannelFollowerStats.subscribersGainedSinceLastPost : num5, (i & 64) != 0 ? modelChannelFollowerStats.subscribersLostSinceLastPost : num6);
     }
 
-    /* renamed from: component1, reason: from getter */
+    /* JADX INFO: renamed from: component1, reason: from getter */
     public final long getLastFetched() {
         return this.lastFetched;
     }
 
-    /* renamed from: component2, reason: from getter */
+    /* JADX INFO: renamed from: component2, reason: from getter */
     public final Integer getChannelsFollowing() {
         return this.channelsFollowing;
     }
 
-    /* renamed from: component3, reason: from getter */
+    /* JADX INFO: renamed from: component3, reason: from getter */
     public final Integer getGuildMembers() {
         return this.guildMembers;
     }
 
-    /* renamed from: component4, reason: from getter */
+    /* JADX INFO: renamed from: component4, reason: from getter */
     public final Integer getGuildsFollowing() {
         return this.guildsFollowing;
     }
 
-    /* renamed from: component5, reason: from getter */
+    /* JADX INFO: renamed from: component5, reason: from getter */
     public final Integer getUsersSeenEver() {
         return this.usersSeenEver;
     }
 
-    /* renamed from: component6, reason: from getter */
+    /* JADX INFO: renamed from: component6, reason: from getter */
     public final Integer getSubscribersGainedSinceLastPost() {
         return this.subscribersGainedSinceLastPost;
     }
 
-    /* renamed from: component7, reason: from getter */
+    /* JADX INFO: renamed from: component7, reason: from getter */
     public final Integer getSubscribersLostSinceLastPost() {
         return this.subscribersLostSinceLastPost;
     }

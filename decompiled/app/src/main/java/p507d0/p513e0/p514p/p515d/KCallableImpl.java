@@ -44,25 +44,25 @@ import p507d0.p592z.JvmClassMapping;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: KCallableImpl.kt */
-/* renamed from: d0.e0.p.d.f, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.f, reason: use source file name */
+/* JADX INFO: compiled from: KCallableImpl.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public abstract class KCallableImpl<R> implements KCallable<R>, KTypeParameterOwnerImpl {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final ReflectProperties.a<List<Annotation>> f22352j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final ReflectProperties.a<ArrayList<KParameter>> f22353k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final ReflectProperties.a<KTypeImpl> f22354l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public final ReflectProperties.a<List<KTypeParameterImpl>> f22355m;
 
-    /* compiled from: KCallableImpl.kt */
-    /* renamed from: d0.e0.p.d.f$a */
+    /* JADX INFO: renamed from: d0.e0.p.d.f$a */
+    /* JADX INFO: compiled from: KCallableImpl.kt */
     public static final class a extends Lambda implements Function0<List<? extends Annotation>> {
         public a() {
             super(0);
@@ -74,18 +74,18 @@ public abstract class KCallableImpl<R> implements KCallable<R>, KTypeParameterOw
         }
 
         @Override // kotlin.jvm.functions.Function0
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final List<? extends Annotation> invoke2() {
             return util2.computeAnnotations(KCallableImpl.this.getDescriptor());
         }
     }
 
-    /* compiled from: KCallableImpl.kt */
-    /* renamed from: d0.e0.p.d.f$b */
+    /* JADX INFO: renamed from: d0.e0.p.d.f$b */
+    /* JADX INFO: compiled from: KCallableImpl.kt */
     public static final class b extends Lambda implements Function0<ArrayList<KParameter>> {
 
-        /* compiled from: Comparisons.kt */
-        /* renamed from: d0.e0.p.d.f$b$a */
+        /* JADX INFO: renamed from: d0.e0.p.d.f$b$a */
+        /* JADX INFO: compiled from: Comparisons.kt */
         public static final class a<T> implements Comparator<T> {
             @Override // java.util.Comparator
             public final int compare(T t, T t2) {
@@ -93,8 +93,8 @@ public abstract class KCallableImpl<R> implements KCallable<R>, KTypeParameterOw
             }
         }
 
-        /* compiled from: KCallableImpl.kt */
-        /* renamed from: d0.e0.p.d.f$b$b, reason: collision with other inner class name */
+        /* JADX INFO: renamed from: d0.e0.p.d.f$b$b, reason: collision with other inner class name */
+        /* JADX INFO: compiled from: KCallableImpl.kt */
         public static final class C13301b extends Lambda implements Function0<ParameterDescriptor> {
             public final /* synthetic */ ReceiverParameterDescriptor $instanceReceiver;
 
@@ -116,8 +116,8 @@ public abstract class KCallableImpl<R> implements KCallable<R>, KTypeParameterOw
             }
         }
 
-        /* compiled from: KCallableImpl.kt */
-        /* renamed from: d0.e0.p.d.f$b$c */
+        /* JADX INFO: renamed from: d0.e0.p.d.f$b$c */
+        /* JADX INFO: compiled from: KCallableImpl.kt */
         public static final class c extends Lambda implements Function0<ParameterDescriptor> {
             public final /* synthetic */ ReceiverParameterDescriptor $extensionReceiver;
 
@@ -139,12 +139,12 @@ public abstract class KCallableImpl<R> implements KCallable<R>, KTypeParameterOw
             }
         }
 
-        /* compiled from: KCallableImpl.kt */
-        /* renamed from: d0.e0.p.d.f$b$d */
+        /* JADX INFO: renamed from: d0.e0.p.d.f$b$d */
+        /* JADX INFO: compiled from: KCallableImpl.kt */
         public static final class d extends Lambda implements Function0<ParameterDescriptor> {
             public final /* synthetic */ CallableMemberDescriptor $descriptor;
 
-            /* renamed from: $i */
+            /* JADX INFO: renamed from: $i */
             public final /* synthetic */ int f22356$i;
 
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -178,7 +178,7 @@ public abstract class KCallableImpl<R> implements KCallable<R>, KTypeParameterOw
         }
 
         @Override // kotlin.jvm.functions.Function0
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final ArrayList<KParameter> invoke2() {
             int i;
             CallableMemberDescriptor descriptor = KCallableImpl.this.getDescriptor();
@@ -216,12 +216,12 @@ public abstract class KCallableImpl<R> implements KCallable<R>, KTypeParameterOw
         }
     }
 
-    /* compiled from: KCallableImpl.kt */
-    /* renamed from: d0.e0.p.d.f$c */
+    /* JADX INFO: renamed from: d0.e0.p.d.f$c */
+    /* JADX INFO: compiled from: KCallableImpl.kt */
     public static final class c extends Lambda implements Function0<KTypeImpl> {
 
-        /* compiled from: KCallableImpl.kt */
-        /* renamed from: d0.e0.p.d.f$c$a */
+        /* JADX INFO: renamed from: d0.e0.p.d.f$c$a */
+        /* JADX INFO: compiled from: KCallableImpl.kt */
         public static final class a extends Lambda implements Function0<Type> {
             public a() {
                 super(0);
@@ -233,7 +233,7 @@ public abstract class KCallableImpl<R> implements KCallable<R>, KTypeParameterOw
             }
 
             @Override // kotlin.jvm.functions.Function0
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final Type invoke2() {
                 Type typeAccess$extractContinuationArgument = KCallableImpl.access$extractContinuationArgument(KCallableImpl.this);
                 return typeAccess$extractContinuationArgument != null ? typeAccess$extractContinuationArgument : KCallableImpl.this.getCaller().getReturnType();
@@ -259,8 +259,8 @@ public abstract class KCallableImpl<R> implements KCallable<R>, KTypeParameterOw
         }
     }
 
-    /* compiled from: KCallableImpl.kt */
-    /* renamed from: d0.e0.p.d.f$d */
+    /* JADX INFO: renamed from: d0.e0.p.d.f$d */
+    /* JADX INFO: compiled from: KCallableImpl.kt */
     public static final class d extends Lambda implements Function0<List<? extends KTypeParameterImpl>> {
         public d() {
             super(0);
@@ -272,7 +272,7 @@ public abstract class KCallableImpl<R> implements KCallable<R>, KTypeParameterOw
         }
 
         @Override // kotlin.jvm.functions.Function0
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final List<? extends KTypeParameterImpl> invoke2() {
             List<TypeParameterDescriptor> typeParameters = KCallableImpl.this.getDescriptor().getTypeParameters();
             Intrinsics3.checkNotNullExpressionValue(typeParameters, "descriptor.typeParameters");
@@ -332,8 +332,8 @@ public abstract class KCallableImpl<R> implements KCallable<R>, KTypeParameterOw
         return (Type) _Arrays.first(lowerBounds);
     }
 
-    /* renamed from: a */
-    public final Object m9336a(KType kType) throws NegativeArraySizeException {
+    /* JADX INFO: renamed from: a */
+    public final Object m9336a(KType kType) {
         Class javaClass = JvmClassMapping.getJavaClass(KTypesJvm.getJvmErasure(kType));
         if (javaClass.isArray()) {
             Object objNewInstance = Array.newInstance(javaClass.getComponentType(), 0);
@@ -346,7 +346,7 @@ public abstract class KCallableImpl<R> implements KCallable<R>, KTypeParameterOw
         throw new KotlinReflectionInternalError(sbM833U.toString());
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final boolean m9337b() {
         return Intrinsics3.areEqual(getName(), "<init>") && getContainer().getJClass().isAnnotation();
     }
@@ -362,7 +362,7 @@ public abstract class KCallableImpl<R> implements KCallable<R>, KTypeParameterOw
     }
 
     @Override // kotlin.reflect.KCallable
-    public R callBy(Map<KParameter, ? extends Object> map) throws exceptions, NegativeArraySizeException {
+    public R callBy(Map<KParameter, ? extends Object> map) throws exceptions {
         Object objM9336a;
         Intrinsics3.checkNotNullParameter(map, "args");
         if (!m9337b()) {

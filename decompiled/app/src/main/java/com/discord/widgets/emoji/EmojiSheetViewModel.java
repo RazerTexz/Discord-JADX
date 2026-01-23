@@ -31,11 +31,11 @@ import p507d0.p592z.p594d.Lambda;
 import p637j0.p642l.p647e.ScalarSynchronousObservable;
 import p658rx.Observable;
 
-/* compiled from: EmojiSheetViewModel.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: EmojiSheetViewModel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class EmojiSheetViewModel extends AppViewModel<ViewState> {
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private final EmojiNode.EmojiIdAndType emojiIdAndType;
     private final RestAPI restAPI;
@@ -47,8 +47,8 @@ public final class EmojiSheetViewModel extends AppViewModel<ViewState> {
     private final StoreMediaFavorites storeMediaFavorites;
     private final StoreUser storeUsers;
 
-    /* compiled from: EmojiSheetViewModel.kt */
-    /* renamed from: com.discord.widgets.emoji.EmojiSheetViewModel$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.emoji.EmojiSheetViewModel$1 */
+    /* JADX INFO: compiled from: EmojiSheetViewModel.kt */
     public static final class C83031 extends Lambda implements Function1<StoreState, Unit> {
         public C83031() {
             super(1);
@@ -60,7 +60,7 @@ public final class EmojiSheetViewModel extends AppViewModel<ViewState> {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(StoreState storeState) {
             EmojiSheetViewModel emojiSheetViewModel = EmojiSheetViewModel.this;
             Intrinsics3.checkNotNullExpressionValue(storeState, "it");
@@ -68,13 +68,13 @@ public final class EmojiSheetViewModel extends AppViewModel<ViewState> {
         }
     }
 
-    /* compiled from: EmojiSheetViewModel.kt */
+    /* JADX INFO: compiled from: EmojiSheetViewModel.kt */
     public static final class Companion {
 
-        /* compiled from: EmojiSheetViewModel.kt */
+        /* JADX INFO: compiled from: EmojiSheetViewModel.kt */
         public static abstract class CustomEmojGuildInfo {
 
-            /* compiled from: EmojiSheetViewModel.kt */
+            /* JADX INFO: compiled from: EmojiSheetViewModel.kt */
             public static final /* data */ class Known extends CustomEmojGuildInfo {
                 private final Integer approximateOnline;
                 private final Guild guild;
@@ -107,7 +107,7 @@ public final class EmojiSheetViewModel extends AppViewModel<ViewState> {
                     return known.copy(guild, z2, z3, num);
                 }
 
-                /* renamed from: component1, reason: from getter */
+                /* JADX INFO: renamed from: component1, reason: from getter */
                 public final Guild getGuild() {
                     return this.guild;
                 }
@@ -120,7 +120,7 @@ public final class EmojiSheetViewModel extends AppViewModel<ViewState> {
                     return getIsUserInGuild();
                 }
 
-                /* renamed from: component4, reason: from getter */
+                /* JADX INFO: renamed from: component4, reason: from getter */
                 public final Integer getApproximateOnline() {
                     return this.approximateOnline;
                 }
@@ -172,13 +172,13 @@ public final class EmojiSheetViewModel extends AppViewModel<ViewState> {
                 }
 
                 @Override // com.discord.widgets.emoji.EmojiSheetViewModel.Companion.CustomEmojGuildInfo
-                /* renamed from: isPublic, reason: from getter */
+                /* JADX INFO: renamed from: isPublic, reason: from getter */
                 public boolean getIsPublic() {
                     return this.isPublic;
                 }
 
                 @Override // com.discord.widgets.emoji.EmojiSheetViewModel.Companion.CustomEmojGuildInfo
-                /* renamed from: isUserInGuild, reason: from getter */
+                /* JADX INFO: renamed from: isUserInGuild, reason: from getter */
                 public boolean getIsUserInGuild() {
                     return this.isUserInGuild;
                 }
@@ -195,7 +195,7 @@ public final class EmojiSheetViewModel extends AppViewModel<ViewState> {
                 }
             }
 
-            /* compiled from: EmojiSheetViewModel.kt */
+            /* JADX INFO: compiled from: EmojiSheetViewModel.kt */
             public static final class Unknown extends CustomEmojGuildInfo {
                 public static final Unknown INSTANCE = new Unknown();
                 private static final boolean isPublic = false;
@@ -206,13 +206,13 @@ public final class EmojiSheetViewModel extends AppViewModel<ViewState> {
                 }
 
                 @Override // com.discord.widgets.emoji.EmojiSheetViewModel.Companion.CustomEmojGuildInfo
-                /* renamed from: isPublic */
+                /* JADX INFO: renamed from: isPublic */
                 public boolean getIsPublic() {
                     return isPublic;
                 }
 
                 @Override // com.discord.widgets.emoji.EmojiSheetViewModel.Companion.CustomEmojGuildInfo
-                /* renamed from: isUserInGuild */
+                /* JADX INFO: renamed from: isUserInGuild */
                 public boolean getIsUserInGuild() {
                     return isUserInGuild;
                 }
@@ -221,10 +221,10 @@ public final class EmojiSheetViewModel extends AppViewModel<ViewState> {
             private CustomEmojGuildInfo() {
             }
 
-            /* renamed from: isPublic */
+            /* JADX INFO: renamed from: isPublic */
             public abstract boolean getIsPublic();
 
-            /* renamed from: isUserInGuild */
+            /* JADX INFO: renamed from: isUserInGuild */
             public abstract boolean getIsUserInGuild();
 
             public /* synthetic */ CustomEmojGuildInfo(DefaultConstructorMarker defaultConstructorMarker) {
@@ -265,7 +265,7 @@ public final class EmojiSheetViewModel extends AppViewModel<ViewState> {
         }
     }
 
-    /* compiled from: EmojiSheetViewModel.kt */
+    /* JADX INFO: compiled from: EmojiSheetViewModel.kt */
     public static final /* data */ class StoreState {
         private final Channel currentChannel;
         private final Companion.CustomEmojGuildInfo customEmojiGuildInfo;
@@ -287,6 +287,7 @@ public final class EmojiSheetViewModel extends AppViewModel<ViewState> {
             this.favorites = set2;
         }
 
+        /* JADX WARN: Multi-variable type inference failed */
         public static /* synthetic */ StoreState copy$default(StoreState storeState, Companion.CustomEmojGuildInfo customEmojGuildInfo, EmojiNode.EmojiIdAndType emojiIdAndType, boolean z2, Set set, Channel channel, Set set2, int i, Object obj) {
             if ((i & 1) != 0) {
                 customEmojGuildInfo = storeState.customEmojiGuildInfo;
@@ -313,17 +314,17 @@ public final class EmojiSheetViewModel extends AppViewModel<ViewState> {
             return storeState.copy(customEmojGuildInfo, emojiIdAndType2, z3, set3, channel2, set2);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final Companion.CustomEmojGuildInfo getCustomEmojiGuildInfo() {
             return this.customEmojiGuildInfo;
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final EmojiNode.EmojiIdAndType getEmoji() {
             return this.emoji;
         }
 
-        /* renamed from: component3, reason: from getter */
+        /* JADX INFO: renamed from: component3, reason: from getter */
         public final boolean getMeUserIsPremium() {
             return this.meUserIsPremium;
         }
@@ -332,7 +333,7 @@ public final class EmojiSheetViewModel extends AppViewModel<ViewState> {
             return this.joinedGuildIds;
         }
 
-        /* renamed from: component5, reason: from getter */
+        /* JADX INFO: renamed from: component5, reason: from getter */
         public final Channel getCurrentChannel() {
             return this.currentChannel;
         }
@@ -384,19 +385,22 @@ public final class EmojiSheetViewModel extends AppViewModel<ViewState> {
         }
 
         /* JADX WARN: Multi-variable type inference failed */
+        /* JADX WARN: Type inference failed for: r2v14 */
+        /* JADX WARN: Type inference failed for: r2v16 */
+        /* JADX WARN: Type inference failed for: r2v4, types: [int] */
         public int hashCode() {
             Companion.CustomEmojGuildInfo customEmojGuildInfo = this.customEmojiGuildInfo;
             int iHashCode = (customEmojGuildInfo != null ? customEmojGuildInfo.hashCode() : 0) * 31;
             EmojiNode.EmojiIdAndType emojiIdAndType = this.emoji;
             int iHashCode2 = (iHashCode + (emojiIdAndType != null ? emojiIdAndType.hashCode() : 0)) * 31;
             boolean z2 = this.meUserIsPremium;
-            int i = z2;
-            if (z2 != 0) {
-                i = 1;
+            ?? r2 = z2;
+            if (z2) {
+                r2 = 1;
             }
-            int i2 = (iHashCode2 + i) * 31;
+            int i = (iHashCode2 + r2) * 31;
             Set<Long> set = this.joinedGuildIds;
-            int iHashCode3 = (i2 + (set != null ? set.hashCode() : 0)) * 31;
+            int iHashCode3 = (i + (set != null ? set.hashCode() : 0)) * 31;
             Channel channel = this.currentChannel;
             int iHashCode4 = (iHashCode3 + (channel != null ? channel.hashCode() : 0)) * 31;
             Set<StoreMediaFavorites.Favorite> set2 = this.favorites;
@@ -419,10 +423,10 @@ public final class EmojiSheetViewModel extends AppViewModel<ViewState> {
         }
     }
 
-    /* compiled from: EmojiSheetViewModel.kt */
+    /* JADX INFO: compiled from: EmojiSheetViewModel.kt */
     public static abstract class ViewState {
 
-        /* compiled from: EmojiSheetViewModel.kt */
+        /* JADX INFO: compiled from: EmojiSheetViewModel.kt */
         public static final class Dismiss extends ViewState {
             public static final Dismiss INSTANCE = new Dismiss();
 
@@ -431,7 +435,7 @@ public final class EmojiSheetViewModel extends AppViewModel<ViewState> {
             }
         }
 
-        /* compiled from: EmojiSheetViewModel.kt */
+        /* JADX INFO: compiled from: EmojiSheetViewModel.kt */
         public static final /* data */ class EmojiCustom extends ViewState {
             private final boolean canFavorite;
             private final EmojiNode.EmojiIdAndType.Custom emojiCustom;
@@ -479,32 +483,32 @@ public final class EmojiSheetViewModel extends AppViewModel<ViewState> {
                 return emojiCustom.copy(custom, customEmojGuildInfo2, z6, z7, z8, z5);
             }
 
-            /* renamed from: component1, reason: from getter */
+            /* JADX INFO: renamed from: component1, reason: from getter */
             public final EmojiNode.EmojiIdAndType.Custom getEmojiCustom() {
                 return this.emojiCustom;
             }
 
-            /* renamed from: component2, reason: from getter */
+            /* JADX INFO: renamed from: component2, reason: from getter */
             public final Companion.CustomEmojGuildInfo getEmojiGuildInfo() {
                 return this.emojiGuildInfo;
             }
 
-            /* renamed from: component3, reason: from getter */
+            /* JADX INFO: renamed from: component3, reason: from getter */
             public final boolean getIsUserPremium() {
                 return this.isUserPremium;
             }
 
-            /* renamed from: component4, reason: from getter */
+            /* JADX INFO: renamed from: component4, reason: from getter */
             public final boolean getIsCurrentGuild() {
                 return this.isCurrentGuild;
             }
 
-            /* renamed from: component5, reason: from getter */
+            /* JADX INFO: renamed from: component5, reason: from getter */
             public final boolean getCanFavorite() {
                 return this.canFavorite;
             }
 
-            /* renamed from: component6, reason: from getter */
+            /* JADX INFO: renamed from: component6, reason: from getter */
             public final boolean getIsFavorite() {
                 return this.isFavorite;
             }
@@ -539,31 +543,43 @@ public final class EmojiSheetViewModel extends AppViewModel<ViewState> {
             }
 
             /* JADX WARN: Multi-variable type inference failed */
+            /* JADX WARN: Type inference failed for: r1v10 */
+            /* JADX WARN: Type inference failed for: r1v11 */
+            /* JADX WARN: Type inference failed for: r1v13 */
+            /* JADX WARN: Type inference failed for: r1v14 */
+            /* JADX WARN: Type inference failed for: r1v15 */
+            /* JADX WARN: Type inference failed for: r1v3, types: [int] */
+            /* JADX WARN: Type inference failed for: r1v5, types: [int] */
+            /* JADX WARN: Type inference failed for: r1v7, types: [int] */
+            /* JADX WARN: Type inference failed for: r1v9 */
+            /* JADX WARN: Type inference failed for: r2v1 */
+            /* JADX WARN: Type inference failed for: r2v2, types: [int] */
+            /* JADX WARN: Type inference failed for: r2v3 */
             public int hashCode() {
                 EmojiNode.EmojiIdAndType.Custom custom = this.emojiCustom;
                 int iHashCode = (custom != null ? custom.hashCode() : 0) * 31;
                 Companion.CustomEmojGuildInfo customEmojGuildInfo = this.emojiGuildInfo;
                 int iHashCode2 = (iHashCode + (customEmojGuildInfo != null ? customEmojGuildInfo.hashCode() : 0)) * 31;
                 boolean z2 = this.isUserPremium;
-                int i = z2;
-                if (z2 != 0) {
-                    i = 1;
+                ?? r1 = z2;
+                if (z2) {
+                    r1 = 1;
                 }
-                int i2 = (iHashCode2 + i) * 31;
+                int i = (iHashCode2 + r1) * 31;
                 boolean z3 = this.isCurrentGuild;
-                int i3 = z3;
-                if (z3 != 0) {
-                    i3 = 1;
+                ?? r12 = z3;
+                if (z3) {
+                    r12 = 1;
                 }
-                int i4 = (i2 + i3) * 31;
+                int i2 = (i + r12) * 31;
                 boolean z4 = this.canFavorite;
-                int i5 = z4;
-                if (z4 != 0) {
-                    i5 = 1;
+                ?? r13 = z4;
+                if (z4) {
+                    r13 = 1;
                 }
-                int i6 = (i4 + i5) * 31;
+                int i3 = (i2 + r13) * 31;
                 boolean z5 = this.isFavorite;
-                return i6 + (z5 ? 1 : z5 ? 1 : 0);
+                return i3 + (z5 ? 1 : z5);
             }
 
             public final boolean isCurrentGuild() {
@@ -594,7 +610,7 @@ public final class EmojiSheetViewModel extends AppViewModel<ViewState> {
             }
         }
 
-        /* compiled from: EmojiSheetViewModel.kt */
+        /* JADX INFO: compiled from: EmojiSheetViewModel.kt */
         public static final /* data */ class EmojiUnicode extends ViewState {
             private final boolean canFavorite;
             private final ModelEmojiUnicode emojiUnicode;
@@ -622,17 +638,17 @@ public final class EmojiSheetViewModel extends AppViewModel<ViewState> {
                 return emojiUnicode.copy(modelEmojiUnicode, z2, z3);
             }
 
-            /* renamed from: component1, reason: from getter */
+            /* JADX INFO: renamed from: component1, reason: from getter */
             public final ModelEmojiUnicode getEmojiUnicode() {
                 return this.emojiUnicode;
             }
 
-            /* renamed from: component2, reason: from getter */
+            /* JADX INFO: renamed from: component2, reason: from getter */
             public final boolean getCanFavorite() {
                 return this.canFavorite;
             }
 
-            /* renamed from: component3, reason: from getter */
+            /* JADX INFO: renamed from: component3, reason: from getter */
             public final boolean getIsFavorite() {
                 return this.isFavorite;
             }
@@ -662,17 +678,23 @@ public final class EmojiSheetViewModel extends AppViewModel<ViewState> {
             }
 
             /* JADX WARN: Multi-variable type inference failed */
+            /* JADX WARN: Type inference failed for: r1v1, types: [int] */
+            /* JADX WARN: Type inference failed for: r1v3 */
+            /* JADX WARN: Type inference failed for: r1v4 */
+            /* JADX WARN: Type inference failed for: r2v0 */
+            /* JADX WARN: Type inference failed for: r2v1, types: [int] */
+            /* JADX WARN: Type inference failed for: r2v2 */
             public int hashCode() {
                 ModelEmojiUnicode modelEmojiUnicode = this.emojiUnicode;
                 int iHashCode = (modelEmojiUnicode != null ? modelEmojiUnicode.hashCode() : 0) * 31;
                 boolean z2 = this.canFavorite;
-                int i = z2;
-                if (z2 != 0) {
-                    i = 1;
+                ?? r1 = z2;
+                if (z2) {
+                    r1 = 1;
                 }
-                int i2 = (iHashCode + i) * 31;
+                int i = (iHashCode + r1) * 31;
                 boolean z3 = this.isFavorite;
-                return i2 + (z3 ? 1 : z3 ? 1 : 0);
+                return i + (z3 ? 1 : z3);
             }
 
             public final boolean isFavorite() {
@@ -689,7 +711,7 @@ public final class EmojiSheetViewModel extends AppViewModel<ViewState> {
             }
         }
 
-        /* compiled from: EmojiSheetViewModel.kt */
+        /* JADX INFO: compiled from: EmojiSheetViewModel.kt */
         public static final class Invalid extends ViewState {
             public static final Invalid INSTANCE = new Invalid();
 
@@ -698,7 +720,7 @@ public final class EmojiSheetViewModel extends AppViewModel<ViewState> {
             }
         }
 
-        /* compiled from: EmojiSheetViewModel.kt */
+        /* JADX INFO: compiled from: EmojiSheetViewModel.kt */
         public static final class Loading extends ViewState {
             public static final Loading INSTANCE = new Loading();
 
@@ -715,8 +737,8 @@ public final class EmojiSheetViewModel extends AppViewModel<ViewState> {
         }
     }
 
-    /* compiled from: EmojiSheetViewModel.kt */
-    /* renamed from: com.discord.widgets.emoji.EmojiSheetViewModel$joinGuild$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.emoji.EmojiSheetViewModel$joinGuild$1 */
+    /* JADX INFO: compiled from: EmojiSheetViewModel.kt */
     public static final class C83101 extends Lambda implements Function1<com.discord.api.guild.Guild, Unit> {
         public C83101() {
             super(1);
@@ -728,7 +750,7 @@ public final class EmojiSheetViewModel extends AppViewModel<ViewState> {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(com.discord.api.guild.Guild guild) {
             Intrinsics3.checkNotNullParameter(guild, "it");
             EmojiSheetViewModel.access$updateViewState(EmojiSheetViewModel.this, ViewState.Dismiss.INSTANCE);

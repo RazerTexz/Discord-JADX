@@ -38,8 +38,8 @@ import p658rx.Observable;
 import p658rx.subjects.PublishSubject;
 import p658rx.subjects.Subject;
 
-/* compiled from: VoiceEngineForegroundService.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: VoiceEngineForegroundService.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class VoiceEngineForegroundService extends IntentService implements AppComponent {
     private static final String LOG_TAG = "DiscordVoiceService";
     private static final int NOTIFICATION_ID = 101;
@@ -52,19 +52,19 @@ public final class VoiceEngineForegroundService extends IntentService implements
     private PowerManager.WakeLock wakeLockProximity;
     private WifiManager.WifiLock wakeLockWifi;
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private static Function0<Unit> onDisconnect = VoiceEngineForegroundService2.INSTANCE;
     private static Function0<Unit> onToggleSelfDeafen = VoiceEngineForegroundService3.INSTANCE;
     private static Function0<Unit> onToggleSelfMute = VoiceEngineForegroundService4.INSTANCE;
 
-    /* compiled from: VoiceEngineForegroundService.kt */
+    /* JADX INFO: compiled from: VoiceEngineForegroundService.kt */
     public static final class Companion {
 
-        /* compiled from: VoiceEngineForegroundService.kt */
+        /* JADX INFO: compiled from: VoiceEngineForegroundService.kt */
         public interface ACTION {
 
-            /* renamed from: Companion, reason: from kotlin metadata */
+            /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
             public static final Companion INSTANCE = Companion.$$INSTANCE;
             public static final String DISCONNECT = "com.discord.utilities.voice.action.disconnect";
             public static final String MAIN_ACTION = "com.discord.utilities.voice.action.main";
@@ -77,7 +77,7 @@ public final class VoiceEngineForegroundService extends IntentService implements
             public static final String TOGGLE_DEAFENED = "com.discord.utilities.voice.action.toggle_deafened";
             public static final String TOGGLE_MUTED = "com.discord.utilities.voice.action.toggle_muted";
 
-            /* compiled from: VoiceEngineForegroundService.kt */
+            /* JADX INFO: compiled from: VoiceEngineForegroundService.kt */
             public static final class Companion {
                 public static final /* synthetic */ Companion $$INSTANCE = new Companion();
                 public static final String DISCONNECT = "com.discord.utilities.voice.action.disconnect";
@@ -96,11 +96,11 @@ public final class VoiceEngineForegroundService extends IntentService implements
             }
         }
 
-        /* compiled from: VoiceEngineForegroundService.kt */
+        /* JADX INFO: compiled from: VoiceEngineForegroundService.kt */
         public interface EXTRA {
             public static final String CHANNEL_ID = "com.discord.utilities.voice.extra.channel_id";
 
-            /* renamed from: Companion, reason: from kotlin metadata */
+            /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
             public static final Companion INSTANCE = Companion.$$INSTANCE;
             public static final String GUILD_ID = "com.discord.utilities.voice.extra.guild_id";
             public static final String ITEM_CAN_SPEAK = "com.discord.utilities.voice.extra.item_can_speak";
@@ -111,7 +111,7 @@ public final class VoiceEngineForegroundService extends IntentService implements
             public static final String TITLE = "com.discord.utilities.voice.extra.title";
             public static final String TITLE_SUBTEXT = "com.discord.utilities.voice.extra.title_subtext";
 
-            /* compiled from: VoiceEngineForegroundService.kt */
+            /* JADX INFO: compiled from: VoiceEngineForegroundService.kt */
             public static final class Companion {
                 public static final /* synthetic */ Companion $$INSTANCE = new Companion();
                 public static final String CHANNEL_ID = "com.discord.utilities.voice.extra.channel_id";
@@ -246,7 +246,7 @@ public final class VoiceEngineForegroundService extends IntentService implements
         }
     }
 
-    /* compiled from: VoiceEngineForegroundService.kt */
+    /* JADX INFO: compiled from: VoiceEngineForegroundService.kt */
     public static final class Connection {
         private final ServiceConnection connection;
         private final Context context;
@@ -288,7 +288,7 @@ public final class VoiceEngineForegroundService extends IntentService implements
         }
     }
 
-    /* compiled from: VoiceEngineForegroundService.kt */
+    /* JADX INFO: compiled from: VoiceEngineForegroundService.kt */
     public static final class LocalBinder extends Binder {
         private final VoiceEngineForegroundService service;
 
@@ -301,8 +301,8 @@ public final class VoiceEngineForegroundService extends IntentService implements
         }
     }
 
-    /* compiled from: VoiceEngineForegroundService.kt */
-    /* renamed from: com.discord.utilities.voice.VoiceEngineForegroundService$ackStageInvite$1 */
+    /* JADX INFO: renamed from: com.discord.utilities.voice.VoiceEngineForegroundService$ackStageInvite$1 */
+    /* JADX INFO: compiled from: VoiceEngineForegroundService.kt */
     public static final class C70491 extends Lambda implements Function1<Error, Unit> {
         public final /* synthetic */ long $channelId;
 
@@ -318,15 +318,15 @@ public final class VoiceEngineForegroundService extends IntentService implements
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Error error) {
             Intrinsics3.checkNotNullParameter(error, "it");
             StageChannelNotifications.INSTANCE.getINSTANCE().onInvitedToSpeakAckFailed(this.$channelId);
         }
     }
 
-    /* compiled from: VoiceEngineForegroundService.kt */
-    /* renamed from: com.discord.utilities.voice.VoiceEngineForegroundService$ackStageInvite$2 */
+    /* JADX INFO: renamed from: com.discord.utilities.voice.VoiceEngineForegroundService$ackStageInvite$2 */
+    /* JADX INFO: compiled from: VoiceEngineForegroundService.kt */
     public static final class C70502 extends Lambda implements Function1<Void, Unit> {
         public final /* synthetic */ boolean $accept;
         public final /* synthetic */ long $channelId;
@@ -344,7 +344,7 @@ public final class VoiceEngineForegroundService extends IntentService implements
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Void r3) {
             if (this.$accept) {
                 AnalyticsTracker.INSTANCE.promotedToSpeaker(this.$channelId);

@@ -7,8 +7,8 @@ import java.util.List;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: TrackBase.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: TrackBase.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class TrackBase {
     private final List<CharSequence> acceptedLanguages;
     private final List<CharSequence> acceptedLanguagesWeighted;

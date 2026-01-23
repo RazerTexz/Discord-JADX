@@ -7,9 +7,9 @@ import kotlin.jvm.functions.Function3;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: AppLog.kt */
-/* renamed from: b.a.d.g, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.a.d.g, reason: use source file name */
+/* JADX INFO: compiled from: AppLog.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class AppLog2 extends Lambda implements Function3<Integer, String, Exception, Unit> {
     public final /* synthetic */ String $tag;
 

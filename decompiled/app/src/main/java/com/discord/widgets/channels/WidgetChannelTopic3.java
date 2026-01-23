@@ -6,9 +6,9 @@ import kotlin.jvm.functions.Function1;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetChannelTopic.kt */
-/* renamed from: com.discord.widgets.channels.WidgetChannelTopic$getRenderedTopicForTopic$renderContext$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.channels.WidgetChannelTopic$getRenderedTopicForTopic$renderContext$1, reason: use source file name */
+/* JADX INFO: compiled from: WidgetChannelTopic.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetChannelTopic3 extends Lambda implements Function1<String, Unit> {
     public static final WidgetChannelTopic3 INSTANCE = new WidgetChannelTopic3();
 
@@ -22,7 +22,7 @@ public final class WidgetChannelTopic3 extends Lambda implements Function1<Strin
         return Unit.f27425a;
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final void invoke2(String str) {
         Intrinsics3.checkNotNullParameter(str, "url");
         WidgetUrlActions.INSTANCE.requestNotice(str);

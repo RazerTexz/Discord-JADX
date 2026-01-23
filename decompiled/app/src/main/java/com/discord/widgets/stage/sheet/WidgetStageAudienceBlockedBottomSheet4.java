@@ -3,9 +3,9 @@ package com.discord.widgets.stage.sheet;
 import kotlin.jvm.functions.Function0;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetStageAudienceBlockedBottomSheet.kt */
-/* renamed from: com.discord.widgets.stage.sheet.WidgetStageAudienceBlockedBottomSheet$launchStageFullScreen$2, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.stage.sheet.WidgetStageAudienceBlockedBottomSheet$launchStageFullScreen$2, reason: use source file name */
+/* JADX INFO: compiled from: WidgetStageAudienceBlockedBottomSheet.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetStageAudienceBlockedBottomSheet4 extends Lambda implements Function0<Boolean> {
     public final /* synthetic */ WidgetStageAudienceBlockedBottomSheet this$0;
 
@@ -20,7 +20,7 @@ public final class WidgetStageAudienceBlockedBottomSheet4 extends Lambda impleme
         return Boolean.valueOf(invoke2());
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final boolean invoke2() {
         return WidgetStageAudienceBlockedBottomSheet.access$getArgumentsOrDefault$p(this.this$0).getBoolean("LAUNCH_FULL_SCREEN");
     }

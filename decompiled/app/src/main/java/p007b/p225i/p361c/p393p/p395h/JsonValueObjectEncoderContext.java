@@ -16,27 +16,27 @@ import p007b.p225i.p361c.p393p.ObjectEncoderContext;
 import p007b.p225i.p361c.p393p.ValueEncoder;
 import p007b.p225i.p361c.p393p.ValueEncoderContext;
 
-/* compiled from: JsonValueObjectEncoderContext.java */
-/* renamed from: b.i.c.p.h.f, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.c.p.h.f, reason: use source file name */
+/* JADX INFO: compiled from: JsonValueObjectEncoderContext.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class JsonValueObjectEncoderContext implements ObjectEncoderContext, ValueEncoderContext {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public boolean f12827a = true;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final JsonWriter f12828b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final Map<Class<?>, ObjectEncoder<?>> f12829c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final Map<Class<?>, ValueEncoder<?>> f12830d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final ObjectEncoder<Object> f12831e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final boolean f12832f;
 
     public JsonValueObjectEncoderContext(@NonNull Writer writer, @NonNull Map<Class<?>, ObjectEncoder<?>> map, @NonNull Map<Class<?>, ValueEncoder<?>> map2, ObjectEncoder<Object> objectEncoder, boolean z2) {
@@ -49,7 +49,7 @@ public final class JsonValueObjectEncoderContext implements ObjectEncoderContext
 
     @Override // p007b.p225i.p361c.p393p.ObjectEncoderContext
     @NonNull
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public ObjectEncoderContext mo6705a(@NonNull String str, boolean z2) throws IOException {
         m6715i();
         this.f12828b.name(str);
@@ -60,7 +60,7 @@ public final class JsonValueObjectEncoderContext implements ObjectEncoderContext
 
     @Override // p007b.p225i.p361c.p393p.ObjectEncoderContext
     @NonNull
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public ObjectEncoderContext mo6706b(@NonNull String str, long j) throws IOException {
         m6715i();
         this.f12828b.name(str);
@@ -71,7 +71,7 @@ public final class JsonValueObjectEncoderContext implements ObjectEncoderContext
 
     @Override // p007b.p225i.p361c.p393p.ObjectEncoderContext
     @NonNull
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public ObjectEncoderContext mo6707c(@NonNull String str, int i) throws IOException {
         m6715i();
         this.f12828b.name(str);
@@ -82,7 +82,7 @@ public final class JsonValueObjectEncoderContext implements ObjectEncoderContext
 
     @Override // p007b.p225i.p361c.p393p.ValueEncoderContext
     @NonNull
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public ValueEncoderContext mo6709d(@Nullable String str) throws IOException {
         m6715i();
         this.f12828b.value(str);
@@ -91,7 +91,7 @@ public final class JsonValueObjectEncoderContext implements ObjectEncoderContext
 
     @Override // p007b.p225i.p361c.p393p.ValueEncoderContext
     @NonNull
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public ValueEncoderContext mo6710e(boolean z2) throws IOException {
         m6715i();
         this.f12828b.value(z2);
@@ -100,13 +100,13 @@ public final class JsonValueObjectEncoderContext implements ObjectEncoderContext
 
     @Override // p007b.p225i.p361c.p393p.ObjectEncoderContext
     @NonNull
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public /* bridge */ /* synthetic */ ObjectEncoderContext mo6708f(@NonNull String str, @Nullable Object obj) throws IOException {
         return m6714h(str, obj);
     }
 
     @NonNull
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public JsonValueObjectEncoderContext m6713g(@Nullable Object obj, boolean z2) throws IOException {
         int i = 0;
         if (z2) {
@@ -228,7 +228,7 @@ public final class JsonValueObjectEncoderContext implements ObjectEncoderContext
     }
 
     @NonNull
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public JsonValueObjectEncoderContext m6714h(@NonNull String str, @Nullable Object obj) throws IOException {
         if (this.f12832f) {
             if (obj == null) {
@@ -247,7 +247,7 @@ public final class JsonValueObjectEncoderContext implements ObjectEncoderContext
         return this;
     }
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public final void m6715i() throws IOException {
         if (!this.f12827a) {
             throw new IllegalStateException("Parent context used since this context was created. Cannot use this context anymore.");

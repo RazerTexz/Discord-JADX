@@ -7,9 +7,9 @@ import com.discord.utilities.user.UserUtils;
 import java.util.Comparator;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ParticipantsListItemGenerator.kt */
-/* renamed from: com.discord.widgets.voice.fullscreen.ParticipantsListItemGenerator$Companion$createUserItemsComparator$1, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: com.discord.widgets.voice.fullscreen.ParticipantsListItemGenerator$Companion$createUserItemsComparator$1, reason: use source file name */
+/* JADX INFO: compiled from: ParticipantsListItemGenerator.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class ParticipantsListItemGenerator2<T> implements Comparator<StoreVoiceParticipants.VoiceUser> {
     public final /* synthetic */ String $mySpectatingStreamKey;
 
@@ -22,7 +22,7 @@ public final class ParticipantsListItemGenerator2<T> implements Comparator<Store
         return compare2(voiceUser, voiceUser2);
     }
 
-    /* renamed from: compare, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: compare, reason: avoid collision after fix types in other method */
     public final int compare2(StoreVoiceParticipants.VoiceUser voiceUser, StoreVoiceParticipants.VoiceUser voiceUser2) {
         boolean z2 = false;
         boolean z3 = this.$mySpectatingStreamKey != null;

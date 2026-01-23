@@ -4,13 +4,13 @@ import androidx.annotation.Nullable;
 import p007b.p225i.p226a.p288f.p333j.p334b.C4265b;
 import p007b.p225i.p226a.p288f.p333j.p334b.C4325i;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public final class PublishOptions {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final Strategy f20725a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     @Nullable
     public final C4265b f20726b;
 

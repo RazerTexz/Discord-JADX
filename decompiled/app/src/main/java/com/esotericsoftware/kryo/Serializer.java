@@ -4,7 +4,7 @@ import com.esotericsoftware.kryo.p502io.Input;
 import com.esotericsoftware.kryo.p502io.Output;
 import p007b.p100d.p104b.p105a.outline;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public abstract class Serializer<T> {
     private boolean acceptsNull;
     private boolean immutable;

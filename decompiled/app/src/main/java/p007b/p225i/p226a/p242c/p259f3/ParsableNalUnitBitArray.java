@@ -2,21 +2,21 @@ package p007b.p225i.p226a.p242c.p259f3;
 
 import p007b.p085c.p086a.p087a0.AnimatableValueParser;
 
-/* compiled from: ParsableNalUnitBitArray.java */
-/* renamed from: b.i.a.c.f3.y, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.f3.y, reason: use source file name */
+/* JADX INFO: compiled from: ParsableNalUnitBitArray.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class ParsableNalUnitBitArray {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public byte[] f6796a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public int f6797b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public int f6798c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public int f6799d = 0;
 
     public ParsableNalUnitBitArray(byte[] bArr, int i, int i2) {
@@ -26,14 +26,14 @@ public final class ParsableNalUnitBitArray {
         m3107a();
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final void m3107a() {
         int i;
         int i2 = this.f6798c;
         AnimatableValueParser.m426D(i2 >= 0 && (i2 < (i = this.f6797b) || (i2 == i && this.f6799d == 0)));
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public boolean m3108b(int i) {
         int i2 = this.f6798c;
         int i3 = i / 8;
@@ -60,7 +60,7 @@ public final class ParsableNalUnitBitArray {
         return true;
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public boolean m3109c() {
         int i = this.f6798c;
         int i2 = this.f6799d;
@@ -74,14 +74,14 @@ public final class ParsableNalUnitBitArray {
         return !z2 && m3108b((i3 * 2) + 1);
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public boolean m3110d() {
         boolean z2 = (this.f6796a[this.f6798c] & (128 >> this.f6799d)) != 0;
         m3115i();
         return z2;
     }
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public int m3111e(int i) {
         int i2;
         this.f6799d += i;
@@ -112,7 +112,7 @@ public final class ParsableNalUnitBitArray {
         return i7;
     }
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final int m3112f() {
         int i = 0;
         while (!m3110d()) {
@@ -121,13 +121,13 @@ public final class ParsableNalUnitBitArray {
         return ((1 << i) - 1) + (i > 0 ? m3111e(i) : 0);
     }
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public int m3113g() {
         int iM3112f = m3112f();
         return ((iM3112f + 1) / 2) * (iM3112f % 2 == 0 ? -1 : 1);
     }
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public final boolean m3114h(int i) {
         if (2 <= i && i < this.f6797b) {
             byte[] bArr = this.f6796a;
@@ -138,7 +138,7 @@ public final class ParsableNalUnitBitArray {
         return false;
     }
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public void m3115i() {
         int i = this.f6799d + 1;
         this.f6799d = i;
@@ -150,7 +150,7 @@ public final class ParsableNalUnitBitArray {
         m3107a();
     }
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public void m3116j(int i) {
         int i2 = this.f6798c;
         int i3 = i / 8;

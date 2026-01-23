@@ -3,9 +3,9 @@ package com.discord.widgets.user;
 import android.view.View;
 import com.discord.widgets.user.WidgetPruneUsersViewModel;
 
-/* compiled from: WidgetPruneUsers.kt */
-/* renamed from: com.discord.widgets.user.WidgetPruneUsers$onViewBound$$inlined$apply$lambda$1, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: com.discord.widgets.user.WidgetPruneUsers$onViewBound$$inlined$apply$lambda$1, reason: use source file name */
+/* JADX INFO: compiled from: WidgetPruneUsers.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class WidgetPruneUsers3 implements View.OnClickListener {
     public final /* synthetic */ WidgetPruneUsers this$0;
 

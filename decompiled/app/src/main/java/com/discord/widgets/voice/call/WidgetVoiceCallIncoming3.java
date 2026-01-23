@@ -8,9 +8,9 @@ import kotlin.jvm.functions.Function1;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetVoiceCallIncoming.kt */
-/* renamed from: com.discord.widgets.voice.call.WidgetVoiceCallIncoming$SystemCallIncoming$onViewCreated$1, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: com.discord.widgets.voice.call.WidgetVoiceCallIncoming$SystemCallIncoming$onViewCreated$1, reason: use source file name */
+/* JADX INFO: compiled from: WidgetVoiceCallIncoming.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class WidgetVoiceCallIncoming3 extends Lambda implements Function1<Long, Unit> {
     public final /* synthetic */ WidgetVoiceCallIncoming.SystemCallIncoming this$0;
 
@@ -26,7 +26,7 @@ public final class WidgetVoiceCallIncoming3 extends Lambda implements Function1<
         return Unit.f27425a;
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final void invoke2(Long l) {
         StringBuilder sbM833U = outline.m833U("Stopping ");
         sbM833U.append(this.this$0.getClass().getName());

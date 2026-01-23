@@ -10,61 +10,61 @@ import p007b.p085c.p086a.p087a0.AnimatableValueParser;
 import p007b.p109f.p132g.p139c.AbstractDraweeController2;
 import p007b.p109f.p148h.p158b.p159a.OnFadeListener;
 
-/* compiled from: FadeDrawable.java */
-/* renamed from: b.f.g.e.f, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.f.g.e.f, reason: use source file name */
+/* JADX INFO: compiled from: FadeDrawable.java */
+/* JADX INFO: loaded from: classes.dex */
 public class FadeDrawable extends ArrayDrawable2 {
 
-    /* renamed from: A */
+    /* JADX INFO: renamed from: A */
     @VisibleForTesting
     public int f3344A;
 
-    /* renamed from: B */
+    /* JADX INFO: renamed from: B */
     @VisibleForTesting
     public boolean[] f3345B;
 
-    /* renamed from: C */
+    /* JADX INFO: renamed from: C */
     @VisibleForTesting
     public int f3346C;
 
-    /* renamed from: D */
+    /* JADX INFO: renamed from: D */
     public OnFadeListener f3347D;
 
-    /* renamed from: E */
+    /* JADX INFO: renamed from: E */
     public boolean f3348E;
 
-    /* renamed from: F */
+    /* JADX INFO: renamed from: F */
     public boolean f3349F;
 
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     public final Drawable[] f3350r;
 
-    /* renamed from: s */
+    /* JADX INFO: renamed from: s */
     public final boolean f3351s;
 
-    /* renamed from: t */
+    /* JADX INFO: renamed from: t */
     public final int f3352t;
 
-    /* renamed from: u */
+    /* JADX INFO: renamed from: u */
     public final int f3353u;
 
-    /* renamed from: v */
+    /* JADX INFO: renamed from: v */
     @VisibleForTesting
     public int f3354v;
 
-    /* renamed from: w */
+    /* JADX INFO: renamed from: w */
     @VisibleForTesting
     public int f3355w;
 
-    /* renamed from: x */
+    /* JADX INFO: renamed from: x */
     @VisibleForTesting
     public long f3356x;
 
-    /* renamed from: y */
+    /* JADX INFO: renamed from: y */
     @VisibleForTesting
     public int[] f3357y;
 
-    /* renamed from: z */
+    /* JADX INFO: renamed from: z */
     @VisibleForTesting
     public int[] f3358z;
 
@@ -126,7 +126,7 @@ public class FadeDrawable extends ArrayDrawable2 {
                 break;
             }
             Drawable drawable = drawableArr[i3];
-            int iCeil = (int) Math.ceil((this.f3358z[i3] * this.f3344A) / 255.0d);
+            int iCeil = (int) Math.ceil(((double) (this.f3358z[i3] * this.f3344A)) / 255.0d);
             if (drawable != null && iCeil > 0) {
                 this.f3346C++;
                 if (this.f3349F) {
@@ -151,18 +151,18 @@ public class FadeDrawable extends ArrayDrawable2 {
         }
     }
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public void m1098e() {
         this.f3346C++;
     }
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public void m1099f() {
         this.f3346C--;
         invalidateSelf();
     }
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public void m1100g() {
         this.f3354v = 2;
         for (int i = 0; i < this.f3350r.length; i++) {
@@ -176,7 +176,7 @@ public class FadeDrawable extends ArrayDrawable2 {
         return this.f3344A;
     }
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public final boolean m1101i(float f) {
         boolean z2 = true;
         for (int i = 0; i < this.f3350r.length; i++) {

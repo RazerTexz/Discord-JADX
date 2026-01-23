@@ -4,7 +4,7 @@ import androidx.annotation.NonNull;
 import java.io.Serializable;
 import p007b.p100d.p104b.p105a.outline;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public enum HCaptchaError implements Serializable {
     NETWORK_ERROR(7, "No internet connection"),
     SESSION_TIMEOUT(15, "Session Timeout"),

@@ -3,19 +3,19 @@ package p007b.p085c.p086a.p095y;
 import android.graphics.PointF;
 import androidx.annotation.RestrictTo;
 
-/* compiled from: CubicCurveData.java */
+/* JADX INFO: renamed from: b.c.a.y.a, reason: use source file name */
+/* JADX INFO: compiled from: CubicCurveData.java */
+/* JADX INFO: loaded from: classes.dex */
 @RestrictTo({RestrictTo.Scope.LIBRARY})
-/* renamed from: b.c.a.y.a, reason: use source file name */
-/* loaded from: classes.dex */
 public class CubicCurveData {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final PointF f2652a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final PointF f2653b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final PointF f2654c;
 
     public CubicCurveData() {

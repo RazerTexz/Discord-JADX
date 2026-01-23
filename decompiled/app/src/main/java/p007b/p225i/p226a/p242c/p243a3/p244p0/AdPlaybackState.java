@@ -9,65 +9,65 @@ import p007b.p100d.p104b.p105a.outline;
 import p007b.p225i.p226a.p242c.Bundleable;
 import p007b.p225i.p226a.p242c.p259f3.Util2;
 
-/* compiled from: AdPlaybackState.java */
-/* renamed from: b.i.a.c.a3.p0.c, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.a3.p0.c, reason: use source file name */
+/* JADX INFO: compiled from: AdPlaybackState.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class AdPlaybackState implements Bundleable {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static final AdPlaybackState f5680j = new AdPlaybackState(null, new a[0], 0, -9223372036854775807L, 0);
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public static final a f5681k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public static final Bundleable.a<AdPlaybackState> f5682l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     @Nullable
     public final Object f5683m = null;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public final int f5684n;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public final long f5685o;
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public final long f5686p;
 
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     public final int f5687q;
 
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     public final a[] f5688r;
 
-    /* compiled from: AdPlaybackState.java */
-    /* renamed from: b.i.a.c.a3.p0.c$a */
+    /* JADX INFO: renamed from: b.i.a.c.a3.p0.c$a */
+    /* JADX INFO: compiled from: AdPlaybackState.java */
     public static final class a implements Bundleable {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public static final /* synthetic */ int f5689j = 0;
 
-        /* renamed from: k */
+        /* JADX INFO: renamed from: k */
         public final long f5690k;
 
-        /* renamed from: l */
+        /* JADX INFO: renamed from: l */
         public final int f5691l;
 
-        /* renamed from: m */
+        /* JADX INFO: renamed from: m */
         public final Uri[] f5692m;
 
-        /* renamed from: n */
+        /* JADX INFO: renamed from: n */
         public final int[] f5693n;
 
-        /* renamed from: o */
+        /* JADX INFO: renamed from: o */
         public final long[] f5694o;
 
-        /* renamed from: p */
+        /* JADX INFO: renamed from: p */
         public final long f5695p;
 
-        /* renamed from: q */
+        /* JADX INFO: renamed from: q */
         public final boolean f5696q;
 
         public a(long j, int i, int[] iArr, Uri[] uriArr, long[] jArr, long j2, boolean z2) {
@@ -81,12 +81,12 @@ public final class AdPlaybackState implements Bundleable {
             this.f5696q = z2;
         }
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public static String m2579c(int i) {
             return Integer.toString(i, 36);
         }
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public int m2580a(@IntRange(from = -1) int i) {
             int i2 = i + 1;
             while (true) {
@@ -99,7 +99,7 @@ public final class AdPlaybackState implements Bundleable {
             return i2;
         }
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public boolean m2581b() {
             if (this.f5691l == -1) {
                 return true;
@@ -157,12 +157,12 @@ public final class AdPlaybackState implements Bundleable {
         this.f5687q = i;
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static String m2577b(int i) {
         return Integer.toString(i, 36);
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public a m2578a(@IntRange(from = 0) int i) {
         int i2 = this.f5687q;
         return i < i2 ? f5681k : this.f5688r[i - i2];

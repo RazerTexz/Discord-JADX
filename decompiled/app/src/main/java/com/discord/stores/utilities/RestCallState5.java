@@ -28,14 +28,14 @@ import p658rx.functions.Action1;
 import retrofit2.HttpException;
 import retrofit2.Response;
 
-/* compiled from: RestCallState.kt */
-/* renamed from: com.discord.stores.utilities.RestCallStateKt, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.stores.utilities.RestCallStateKt, reason: use source file name */
+/* JADX INFO: compiled from: RestCallState.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class RestCallState5 {
 
     /* JADX INFO: Add missing generic type declarations: [T] */
-    /* compiled from: RestCallState.kt */
-    /* renamed from: com.discord.stores.utilities.RestCallStateKt$executeRequest$1 */
+    /* JADX INFO: renamed from: com.discord.stores.utilities.RestCallStateKt$executeRequest$1 */
+    /* JADX INFO: compiled from: RestCallState.kt */
     public static final class C66371<T> extends Lambda implements Function1<T, Unit> {
         public final /* synthetic */ Function1 $resultHandler;
 
@@ -52,14 +52,14 @@ public final class RestCallState5 {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(T t) {
             this.$resultHandler.invoke(new RestCallState6(t));
         }
     }
 
-    /* compiled from: RestCallState.kt */
-    /* renamed from: com.discord.stores.utilities.RestCallStateKt$executeRequest$2 */
+    /* JADX INFO: renamed from: com.discord.stores.utilities.RestCallStateKt$executeRequest$2 */
+    /* JADX INFO: compiled from: RestCallState.kt */
     public static final class C66382 extends Lambda implements Function1<Error, Unit> {
         public final /* synthetic */ Function1 $resultHandler;
 
@@ -75,15 +75,15 @@ public final class RestCallState5 {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Error error) {
             Intrinsics3.checkNotNullParameter(error, "error");
             this.$resultHandler.invoke(new RestCallState3(error));
         }
     }
 
-    /* compiled from: RestCallState.kt */
-    /* renamed from: com.discord.stores.utilities.RestCallStateKt$handleResponse$1 */
+    /* JADX INFO: renamed from: com.discord.stores.utilities.RestCallStateKt$handleResponse$1 */
+    /* JADX INFO: compiled from: RestCallState.kt */
     public static final class C66391 extends Lambda implements Function1<RestCallState4, Unit> {
         public static final C66391 INSTANCE = new C66391();
 
@@ -97,20 +97,20 @@ public final class RestCallState5 {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(RestCallState4 restCallState4) {
             Intrinsics3.checkNotNullParameter(restCallState4, "it");
         }
     }
 
     /* JADX INFO: Add missing generic type declarations: [T] */
-    /* compiled from: RestCallState.kt */
-    /* renamed from: com.discord.stores.utilities.RestCallStateKt$handleResponse$2 */
+    /* JADX INFO: renamed from: com.discord.stores.utilities.RestCallStateKt$handleResponse$2 */
+    /* JADX INFO: compiled from: RestCallState.kt */
     public static final class C66402<T> extends Lambda implements Function1<RestCallState3<? extends T>, Unit> {
         public final /* synthetic */ Context $context;
 
-        /* compiled from: RestCallState.kt */
-        /* renamed from: com.discord.stores.utilities.RestCallStateKt$handleResponse$2$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.stores.utilities.RestCallStateKt$handleResponse$2$1, reason: invalid class name */
+        /* JADX INFO: compiled from: RestCallState.kt */
         public static final class AnonymousClass1 implements Runnable {
             public final /* synthetic */ RestCallState3 $failure;
 
@@ -143,8 +143,8 @@ public final class RestCallState5 {
     }
 
     /* JADX INFO: Add missing generic type declarations: [T] */
-    /* compiled from: RestCallState.kt */
-    /* renamed from: com.discord.stores.utilities.RestCallStateKt$handleResponse$3 */
+    /* JADX INFO: renamed from: com.discord.stores.utilities.RestCallStateKt$handleResponse$3 */
+    /* JADX INFO: compiled from: RestCallState.kt */
     public static final class C66413<T> extends Lambda implements Function1<RestCallState6<? extends T>, Unit> {
         public static final C66413 INSTANCE = new C66413();
 
@@ -163,8 +163,8 @@ public final class RestCallState5 {
         }
     }
 
-    /* compiled from: RestCallState.kt */
-    /* renamed from: com.discord.stores.utilities.RestCallStateKt$logNetworkAction$1 */
+    /* JADX INFO: renamed from: com.discord.stores.utilities.RestCallStateKt$logNetworkAction$1 */
+    /* JADX INFO: compiled from: RestCallState.kt */
     public static final class C66421<T, R> implements Func1<Response<T>, T> {
         public static final C66421 INSTANCE = new C66421();
 
@@ -178,8 +178,8 @@ public final class RestCallState5 {
         }
     }
 
-    /* compiled from: RestCallState.kt */
-    /* renamed from: com.discord.stores.utilities.RestCallStateKt$logNetworkAction$2 */
+    /* JADX INFO: renamed from: com.discord.stores.utilities.RestCallStateKt$logNetworkAction$2 */
+    /* JADX INFO: compiled from: RestCallState.kt */
     public static final class C66432<T> implements Action1<Response<T>> {
         public final /* synthetic */ Function1 $networkActionProvider;
         public final /* synthetic */ AnalyticsUtils.Tracker $tracker;
@@ -208,8 +208,8 @@ public final class RestCallState5 {
         }
     }
 
-    /* compiled from: RestCallState.kt */
-    /* renamed from: com.discord.stores.utilities.RestCallStateKt$logNetworkAction$3 */
+    /* JADX INFO: renamed from: com.discord.stores.utilities.RestCallStateKt$logNetworkAction$3 */
+    /* JADX INFO: compiled from: RestCallState.kt */
     public static final class C66443<T> implements Action1<Throwable> {
         public final /* synthetic */ Function1 $networkActionProvider;
         public final /* synthetic */ AnalyticsUtils.Tracker $tracker;
@@ -225,7 +225,7 @@ public final class RestCallState5 {
         }
 
         /* JADX WARN: Removed duplicated region for block: B:29:0x006e  */
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         /*
             Code decompiled incorrectly, please refer to instructions dump.
         */
@@ -262,8 +262,8 @@ public final class RestCallState5 {
         }
     }
 
-    /* compiled from: RestCallState.kt */
-    /* renamed from: com.discord.stores.utilities.RestCallStateKt$logNetworkAction$4 */
+    /* JADX INFO: renamed from: com.discord.stores.utilities.RestCallStateKt$logNetworkAction$4 */
+    /* JADX INFO: compiled from: RestCallState.kt */
     public static final class C66454<T, R> implements Func1<Response<T>, T> {
         public static final C66454 INSTANCE = new C66454();
 

@@ -1,10 +1,10 @@
 package org.objectweb.asm;
 
-/* loaded from: discord-126021.apk:org/objectweb/asm/ModuleVisitor.SCL.lombok */
+/* JADX INFO: loaded from: discord-126021.apk:org/objectweb/asm/ModuleVisitor.SCL.lombok */
 public abstract class ModuleVisitor {
     protected final int api;
 
-    /* renamed from: mv */
+    /* JADX INFO: renamed from: mv */
     protected ModuleVisitor f27602mv;
 
     public ModuleVisitor(int api) {

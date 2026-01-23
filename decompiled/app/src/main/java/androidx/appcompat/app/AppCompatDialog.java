@@ -16,12 +16,12 @@ import androidx.appcompat.C0051R;
 import androidx.appcompat.view.ActionMode;
 import androidx.core.view.KeyEventDispatcher;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class AppCompatDialog extends Dialog implements AppCompatCallback {
     private AppCompatDelegate mDelegate;
     private final KeyEventDispatcher.Component mKeyDispatcher;
 
-    /* renamed from: androidx.appcompat.app.AppCompatDialog$1 */
+    /* JADX INFO: renamed from: androidx.appcompat.app.AppCompatDialog$1 */
     public class C00721 implements KeyEventDispatcher.Component {
         public C00721() {
         }

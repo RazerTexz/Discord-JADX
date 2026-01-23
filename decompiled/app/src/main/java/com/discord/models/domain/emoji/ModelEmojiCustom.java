@@ -14,7 +14,7 @@ import java.util.regex.Pattern;
 import java.util.regex.PatternSyntaxException;
 import p007b.p100d.p104b.p105a.outline;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class ModelEmojiCustom implements Emoji {
     public static final int DISABLED_ALPHA = 100;
     public static final int NORMAL_ALPHA = 255;
@@ -23,7 +23,7 @@ public class ModelEmojiCustom implements Emoji {
     private transient int disambiguationIndex;
     private long guildId;
 
-    /* renamed from: id */
+    /* JADX INFO: renamed from: id */
     private long f18590id;
     private String idStr;
     private boolean isAnimated;
@@ -36,7 +36,7 @@ public class ModelEmojiCustom implements Emoji {
     private static final List<Long> EMPTY_ROLES = new ArrayList();
     public static final Parcelable.Creator<ModelEmojiCustom> CREATOR = new C55441();
 
-    /* renamed from: com.discord.models.domain.emoji.ModelEmojiCustom$1 */
+    /* JADX INFO: renamed from: com.discord.models.domain.emoji.ModelEmojiCustom$1 */
     public static class C55441 implements Parcelable.Creator<ModelEmojiCustom> {
         @Override // android.os.Parcelable.Creator
         public /* bridge */ /* synthetic */ ModelEmojiCustom createFromParcel(Parcel parcel) {

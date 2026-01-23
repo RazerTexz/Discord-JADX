@@ -19,12 +19,12 @@ import kotlin.jvm.internal.DefaultConstructorMarker;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: UserProfileStageActionsView.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: UserProfileStageActionsView.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class UserProfileStageActionsView extends LinearLayout {
     private final UserProfileStageActionsViewBinding binding;
 
-    /* compiled from: UserProfileStageActionsView.kt */
+    /* JADX INFO: compiled from: UserProfileStageActionsView.kt */
     public static final /* data */ class ViewState {
         private final boolean canMuteMembers;
         private final Channel channel;
@@ -46,52 +46,52 @@ public final class UserProfileStageActionsView extends LinearLayout {
             this.isInvitingToSpeak = z6;
         }
 
-        /* renamed from: copy-am1GJgw$default, reason: not valid java name */
+        /* JADX INFO: renamed from: copy-am1GJgw$default, reason: not valid java name */
         public static /* synthetic */ ViewState m11428copyam1GJgw$default(ViewState viewState, boolean z2, Channel channel, StageRoles stageRoles, StageRequestToSpeakState stageRequestToSpeakState, boolean z3, boolean z4, boolean z5, boolean z6, int i, Object obj) {
             return viewState.m11430copyam1GJgw((i & 1) != 0 ? viewState.isMe : z2, (i & 2) != 0 ? viewState.channel : channel, (i & 4) != 0 ? viewState.userStageRole : stageRoles, (i & 8) != 0 ? viewState.userRequestToSpeakState : stageRequestToSpeakState, (i & 16) != 0 ? viewState.userInSameVoiceChannel : z3, (i & 32) != 0 ? viewState.canMuteMembers : z4, (i & 64) != 0 ? viewState.isUpdatingSuppressed : z5, (i & 128) != 0 ? viewState.isInvitingToSpeak : z6);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final boolean getIsMe() {
             return this.isMe;
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final Channel getChannel() {
             return this.channel;
         }
 
-        /* renamed from: component3-twRsX-0, reason: not valid java name and from getter */
+        /* JADX INFO: renamed from: component3-twRsX-0, reason: not valid java name and from getter */
         public final StageRoles getUserStageRole() {
             return this.userStageRole;
         }
 
-        /* renamed from: component4, reason: from getter */
+        /* JADX INFO: renamed from: component4, reason: from getter */
         public final StageRequestToSpeakState getUserRequestToSpeakState() {
             return this.userRequestToSpeakState;
         }
 
-        /* renamed from: component5, reason: from getter */
+        /* JADX INFO: renamed from: component5, reason: from getter */
         public final boolean getUserInSameVoiceChannel() {
             return this.userInSameVoiceChannel;
         }
 
-        /* renamed from: component6, reason: from getter */
+        /* JADX INFO: renamed from: component6, reason: from getter */
         public final boolean getCanMuteMembers() {
             return this.canMuteMembers;
         }
 
-        /* renamed from: component7, reason: from getter */
+        /* JADX INFO: renamed from: component7, reason: from getter */
         public final boolean getIsUpdatingSuppressed() {
             return this.isUpdatingSuppressed;
         }
 
-        /* renamed from: component8, reason: from getter */
+        /* JADX INFO: renamed from: component8, reason: from getter */
         public final boolean getIsInvitingToSpeak() {
             return this.isInvitingToSpeak;
         }
 
-        /* renamed from: copy-am1GJgw, reason: not valid java name */
+        /* JADX INFO: renamed from: copy-am1GJgw, reason: not valid java name */
         public final ViewState m11430copyam1GJgw(boolean isMe, Channel channel, StageRoles userStageRole, StageRequestToSpeakState userRequestToSpeakState, boolean userInSameVoiceChannel, boolean canMuteMembers, boolean isUpdatingSuppressed, boolean isInvitingToSpeak) {
             Intrinsics3.checkNotNullParameter(userRequestToSpeakState, "userRequestToSpeakState");
             return new ViewState(isMe, channel, userStageRole, userRequestToSpeakState, userInSameVoiceChannel, canMuteMembers, isUpdatingSuppressed, isInvitingToSpeak);
@@ -124,7 +124,7 @@ public final class UserProfileStageActionsView extends LinearLayout {
             return this.userRequestToSpeakState;
         }
 
-        /* renamed from: getUserStageRole-twRsX-0, reason: not valid java name */
+        /* JADX INFO: renamed from: getUserStageRole-twRsX-0, reason: not valid java name */
         public final StageRoles m11431getUserStageRoletwRsX0() {
             return this.userStageRole;
         }
@@ -133,9 +133,18 @@ public final class UserProfileStageActionsView extends LinearLayout {
         /* JADX WARN: Type inference failed for: r0v1, types: [int] */
         /* JADX WARN: Type inference failed for: r0v16 */
         /* JADX WARN: Type inference failed for: r0v17 */
-        /* JADX WARN: Type inference failed for: r2v11, types: [boolean] */
-        /* JADX WARN: Type inference failed for: r2v7, types: [boolean] */
-        /* JADX WARN: Type inference failed for: r2v9, types: [boolean] */
+        /* JADX WARN: Type inference failed for: r1v0 */
+        /* JADX WARN: Type inference failed for: r1v1, types: [int] */
+        /* JADX WARN: Type inference failed for: r1v2 */
+        /* JADX WARN: Type inference failed for: r2v10, types: [int] */
+        /* JADX WARN: Type inference failed for: r2v12, types: [int] */
+        /* JADX WARN: Type inference failed for: r2v14 */
+        /* JADX WARN: Type inference failed for: r2v15 */
+        /* JADX WARN: Type inference failed for: r2v16 */
+        /* JADX WARN: Type inference failed for: r2v19 */
+        /* JADX WARN: Type inference failed for: r2v20 */
+        /* JADX WARN: Type inference failed for: r2v21 */
+        /* JADX WARN: Type inference failed for: r2v8, types: [int] */
         public int hashCode() {
             boolean z2 = this.isMe;
             ?? r0 = z2;
@@ -149,26 +158,26 @@ public final class UserProfileStageActionsView extends LinearLayout {
             int iHashCode2 = (iHashCode + (stageRoles != null ? stageRoles.hashCode() : 0)) * 31;
             StageRequestToSpeakState stageRequestToSpeakState = this.userRequestToSpeakState;
             int iHashCode3 = (iHashCode2 + (stageRequestToSpeakState != null ? stageRequestToSpeakState.hashCode() : 0)) * 31;
-            ?? r2 = this.userInSameVoiceChannel;
-            int i2 = r2;
-            if (r2 != 0) {
-                i2 = 1;
+            boolean z3 = this.userInSameVoiceChannel;
+            ?? r2 = z3;
+            if (z3) {
+                r2 = 1;
             }
-            int i3 = (iHashCode3 + i2) * 31;
-            ?? r22 = this.canMuteMembers;
-            int i4 = r22;
-            if (r22 != 0) {
-                i4 = 1;
+            int i2 = (iHashCode3 + r2) * 31;
+            boolean z4 = this.canMuteMembers;
+            ?? r22 = z4;
+            if (z4) {
+                r22 = 1;
             }
-            int i5 = (i3 + i4) * 31;
-            ?? r23 = this.isUpdatingSuppressed;
-            int i6 = r23;
-            if (r23 != 0) {
-                i6 = 1;
+            int i3 = (i2 + r22) * 31;
+            boolean z5 = this.isUpdatingSuppressed;
+            ?? r23 = z5;
+            if (z5) {
+                r23 = 1;
             }
-            int i7 = (i5 + i6) * 31;
-            boolean z3 = this.isInvitingToSpeak;
-            return i7 + (z3 ? 1 : z3 ? 1 : 0);
+            int i4 = (i3 + r23) * 31;
+            boolean z6 = this.isInvitingToSpeak;
+            return i4 + (z6 ? 1 : z6);
         }
 
         public final boolean isInvitingToSpeak() {
@@ -211,8 +220,8 @@ public final class UserProfileStageActionsView extends LinearLayout {
         }
     }
 
-    /* compiled from: UserProfileStageActionsView.kt */
-    /* renamed from: com.discord.widgets.stage.usersheet.UserProfileStageActionsView$setOnInviteToSpeak$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.stage.usersheet.UserProfileStageActionsView$setOnInviteToSpeak$1 */
+    /* JADX INFO: compiled from: UserProfileStageActionsView.kt */
     public static final class ViewOnClickListenerC100751 implements View.OnClickListener {
         public final /* synthetic */ Function0 $onInviteToSpeak;
 
@@ -226,8 +235,8 @@ public final class UserProfileStageActionsView extends LinearLayout {
         }
     }
 
-    /* compiled from: UserProfileStageActionsView.kt */
-    /* renamed from: com.discord.widgets.stage.usersheet.UserProfileStageActionsView$setOnMoveToAudience$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.stage.usersheet.UserProfileStageActionsView$setOnMoveToAudience$1 */
+    /* JADX INFO: compiled from: UserProfileStageActionsView.kt */
     public static final class ViewOnClickListenerC100761 implements View.OnClickListener {
         public final /* synthetic */ Function0 $onMoveToAudience;
 

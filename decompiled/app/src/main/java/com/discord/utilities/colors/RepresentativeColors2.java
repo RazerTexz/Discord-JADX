@@ -3,9 +3,9 @@ package com.discord.utilities.colors;
 import com.discord.models.user.User;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: RepresentativeColors.kt */
-/* renamed from: com.discord.utilities.colors.RepresentativeColorsKt, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.utilities.colors.RepresentativeColorsKt, reason: use source file name */
+/* JADX INFO: compiled from: RepresentativeColors.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class RepresentativeColors2 {
     private static final RepresentativeColors<String> UserRepresentativeColors = new RepresentativeColors<>();
     private static final RepresentativeColors<String> GuildMemberRepresentativeColors = new RepresentativeColors<>();

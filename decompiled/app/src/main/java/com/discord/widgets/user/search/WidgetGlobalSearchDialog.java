@@ -27,17 +27,17 @@ import p507d0.p592z.p594d.Lambda;
 import p507d0.p592z.p594d.Reflection2;
 import p658rx.Observable;
 
-/* compiled from: WidgetGlobalSearchDialog.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: WidgetGlobalSearchDialog.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class WidgetGlobalSearchDialog extends AppDialog {
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
 
-    /* renamed from: dismissViewModel$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: dismissViewModel$delegate, reason: from kotlin metadata */
     private final Lazy dismissViewModel;
 
-    /* compiled from: WidgetGlobalSearchDialog.kt */
+    /* JADX INFO: compiled from: WidgetGlobalSearchDialog.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -72,8 +72,8 @@ public final class WidgetGlobalSearchDialog extends AppDialog {
         }
     }
 
-    /* compiled from: WidgetGlobalSearchDialog.kt */
-    /* renamed from: com.discord.widgets.user.search.WidgetGlobalSearchDialog$onViewBoundOrOnResume$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.user.search.WidgetGlobalSearchDialog$onViewBoundOrOnResume$1 */
+    /* JADX INFO: compiled from: WidgetGlobalSearchDialog.kt */
     public static final class C103251 extends Lambda implements Function1<Unit, Unit> {
         public C103251() {
             super(1);
@@ -85,15 +85,15 @@ public final class WidgetGlobalSearchDialog extends AppDialog {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Unit unit) {
             Intrinsics3.checkNotNullParameter(unit, "it");
             WidgetGlobalSearchDialog.this.dismiss();
         }
     }
 
-    /* compiled from: WidgetGlobalSearchDialog.kt */
-    /* renamed from: com.discord.widgets.user.search.WidgetGlobalSearchDialog$onViewBoundOrOnResume$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.user.search.WidgetGlobalSearchDialog$onViewBoundOrOnResume$2 */
+    /* JADX INFO: compiled from: WidgetGlobalSearchDialog.kt */
     public static final class C103262 extends Lambda implements Function1<Long, Unit> {
         public C103262() {
             super(1);
@@ -105,7 +105,7 @@ public final class WidgetGlobalSearchDialog extends AppDialog {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Long l) {
             WidgetGlobalSearchDialog.this.dismissAllowingStateLoss();
         }

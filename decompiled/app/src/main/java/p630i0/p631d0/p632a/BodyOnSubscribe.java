@@ -12,22 +12,22 @@ import p658rx.exceptions.OnErrorNotImplementedException;
 import retrofit2.Response;
 import retrofit2.adapter.rxjava.HttpException;
 
-/* compiled from: BodyOnSubscribe.java */
-/* renamed from: i0.d0.a.a, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: i0.d0.a.a, reason: use source file name */
+/* JADX INFO: compiled from: BodyOnSubscribe.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class BodyOnSubscribe<T> implements Observable.InterfaceC13005a<T> {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final Observable.InterfaceC13005a<Response<T>> f26497j;
 
-    /* compiled from: BodyOnSubscribe.java */
-    /* renamed from: i0.d0.a.a$a */
+    /* JADX INFO: renamed from: i0.d0.a.a$a */
+    /* JADX INFO: compiled from: BodyOnSubscribe.java */
     public static class a<R> extends Subscriber<Response<R>> {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public final Subscriber<? super R> f26498j;
 
-        /* renamed from: k */
+        /* JADX INFO: renamed from: k */
         public boolean f26499k;
 
         public a(Subscriber<? super R> subscriber) {

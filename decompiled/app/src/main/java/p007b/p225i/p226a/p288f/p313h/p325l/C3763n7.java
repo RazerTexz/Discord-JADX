@@ -3,11 +3,11 @@ package p007b.p225i.p226a.p288f.p313h.p325l;
 import com.google.android.gms.internal.measurement.zzij;
 import p007b.p225i.p226a.p288f.p299e.p308o.C3404f;
 
-/* compiled from: com.google.android.gms:play-services-measurement-base@@18.0.0 */
-/* renamed from: b.i.a.f.h.l.n7 */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.h.l.n7 */
+/* JADX INFO: compiled from: com.google.android.gms:play-services-measurement-base@@18.0.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public final class C3763n7 extends AbstractC3750m7 {
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public static int m5140d(byte[] bArr, int i, long j, int i2) {
         if (i2 == 0) {
             AbstractC3750m7 abstractC3750m7 = C3724k7.f10058a;
@@ -39,7 +39,7 @@ public final class C3763n7 extends AbstractC3750m7 {
         return -1;
      */
     @Override // p007b.p225i.p226a.p288f.p313h.p325l.AbstractC3750m7
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
@@ -50,7 +50,7 @@ public final class C3763n7 extends AbstractC3750m7 {
             throw new ArrayIndexOutOfBoundsException(String.format("Array length=%d, index=%d, limit=%d", Integer.valueOf(bArr.length), Integer.valueOf(i2), Integer.valueOf(i3)));
         }
         long j2 = i2;
-        int i5 = (int) (i3 - j2);
+        int i5 = (int) (((long) i3) - j2);
         if (i5 >= 16) {
             long j3 = j2;
             i4 = 0;
@@ -70,7 +70,7 @@ public final class C3763n7 extends AbstractC3750m7 {
             i4 = 0;
         }
         int i6 = i5 - i4;
-        long j5 = j2 + i4;
+        long j5 = j2 + ((long) i4);
         while (true) {
             byte bM4976a = 0;
             while (true) {
@@ -144,7 +144,7 @@ public final class C3763n7 extends AbstractC3750m7 {
     }
 
     @Override // p007b.p225i.p226a.p288f.p313h.p325l.AbstractC3750m7
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final int mo5056b(CharSequence charSequence, byte[] bArr, int i, int i2) {
         char c;
         long j;
@@ -153,7 +153,7 @@ public final class C3763n7 extends AbstractC3750m7 {
         int i3;
         char cCharAt;
         long j4 = i;
-        long j5 = i2 + j4;
+        long j5 = ((long) i2) + j4;
         int length = charSequence.length();
         if (length > i2 || bArr.length - i2 < i) {
             char cCharAt2 = charSequence.charAt(length - 1);
@@ -250,7 +250,7 @@ public final class C3763n7 extends AbstractC3750m7 {
     }
 
     @Override // p007b.p225i.p226a.p288f.p313h.p325l.AbstractC3750m7
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final String mo5057c(byte[] bArr, int i, int i2) throws zzij {
         if ((i | i2 | ((bArr.length - i) - i2)) < 0) {
             throw new ArrayIndexOutOfBoundsException(String.format("buffer length=%d, index=%d, size=%d", Integer.valueOf(bArr.length), Integer.valueOf(i), Integer.valueOf(i2)));

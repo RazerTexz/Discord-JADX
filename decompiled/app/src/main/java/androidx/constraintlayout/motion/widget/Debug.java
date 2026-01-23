@@ -11,9 +11,9 @@ import java.lang.reflect.Field;
 import java.lang.reflect.Modifier;
 import p007b.p100d.p104b.p105a.outline;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class Debug {
-    public static void dumpLayoutParams(ViewGroup viewGroup, String str) throws SecurityException, IllegalArgumentException {
+    public static void dumpLayoutParams(ViewGroup viewGroup, String str) {
         StackTraceElement stackTraceElement = new Throwable().getStackTrace()[1];
         StringBuilder sbM833U = outline.m833U(".(");
         sbM833U.append(stackTraceElement.getFileName());
@@ -44,7 +44,7 @@ public class Debug {
         }
     }
 
-    public static void dumpPoc(Object obj) throws SecurityException, IllegalArgumentException {
+    public static void dumpPoc(Object obj) {
         StackTraceElement stackTraceElement = new Throwable().getStackTrace()[1];
         StringBuilder sbM833U = outline.m833U(".(");
         sbM833U.append(stackTraceElement.getFileName());
@@ -74,11 +74,14 @@ public class Debug {
         printStream2.println(sbM836X2.toString());
     }
 
-    public static String getActionType(MotionEvent motionEvent) throws SecurityException {
+    public static String getActionType(MotionEvent motionEvent) {
         int action = motionEvent.getAction();
         for (Field field : MotionEvent.class.getFields()) {
-            if (Modifier.isStatic(field.getModifiers()) && field.getType().equals(Integer.TYPE) && field.getInt(null) == action) {
-                return field.getName();
+            try {
+                if (Modifier.isStatic(field.getModifiers()) && field.getType().equals(Integer.TYPE) && field.getInt(null) == action) {
+                    return field.getName();
+                }
+            } catch (IllegalAccessException unused) {
             }
         }
         return "---";
@@ -209,7 +212,7 @@ public class Debug {
         }
     }
 
-    public static void dumpLayoutParams(ViewGroup.LayoutParams layoutParams, String str) throws SecurityException, IllegalArgumentException {
+    public static void dumpLayoutParams(ViewGroup.LayoutParams layoutParams, String str) {
         StackTraceElement stackTraceElement = new Throwable().getStackTrace()[1];
         StringBuilder sbM833U = outline.m833U(".(");
         sbM833U.append(stackTraceElement.getFileName());

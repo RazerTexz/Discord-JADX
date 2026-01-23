@@ -4,8 +4,8 @@ import com.discord.models.domain.ModelAuditLogEntry;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: InteractionStateUpdate.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: InteractionStateUpdate.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class InteractionStateUpdate {
     private final Long id;
     private final String nonce;
@@ -16,12 +16,12 @@ public final /* data */ class InteractionStateUpdate {
         this.nonce = str;
     }
 
-    /* renamed from: a, reason: from getter */
+    /* JADX INFO: renamed from: a, reason: from getter */
     public final Long getId() {
         return this.id;
     }
 
-    /* renamed from: b, reason: from getter */
+    /* JADX INFO: renamed from: b, reason: from getter */
     public final String getNonce() {
         return this.nonce;
     }

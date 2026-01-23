@@ -5,18 +5,18 @@ import p007b.p100d.p104b.p105a.outline;
 import p007b.p225i.p226a.p228b.p231j.EventInternal;
 import p007b.p225i.p226a.p228b.p231j.TransportContext;
 
-/* compiled from: AutoValue_PersistedEvent.java */
-/* renamed from: b.i.a.b.j.t.i.b, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.b.j.t.i.b, reason: use source file name */
+/* JADX INFO: compiled from: AutoValue_PersistedEvent.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class AutoValue_PersistedEvent extends PersistedEvent {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final long f5417a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final TransportContext f5418b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final EventInternal f5419c;
 
     public AutoValue_PersistedEvent(long j, TransportContext transportContext, EventInternal eventInternal) {
@@ -28,19 +28,19 @@ public final class AutoValue_PersistedEvent extends PersistedEvent {
     }
 
     @Override // p007b.p225i.p226a.p228b.p231j.p236t.p238i.PersistedEvent
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public EventInternal mo2391a() {
         return this.f5419c;
     }
 
     @Override // p007b.p225i.p226a.p228b.p231j.p236t.p238i.PersistedEvent
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public long mo2392b() {
         return this.f5417a;
     }
 
     @Override // p007b.p225i.p226a.p228b.p231j.p236t.p238i.PersistedEvent
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public TransportContext mo2393c() {
         return this.f5418b;
     }

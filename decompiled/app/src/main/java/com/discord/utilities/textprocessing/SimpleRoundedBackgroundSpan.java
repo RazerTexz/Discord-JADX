@@ -15,8 +15,8 @@ import p507d0.p579g0.StringsJVM;
 import p507d0.p579g0._Strings;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: SimpleRoundedBackgroundSpan.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: SimpleRoundedBackgroundSpan.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public class SimpleRoundedBackgroundSpan extends ReplacementSpan {
     private final int backgroundColor;
     private final float cornerRadius;

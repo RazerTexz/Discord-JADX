@@ -2,28 +2,28 @@ package p007b.p225i.p226a.p341g.p353l.p354l;
 
 import androidx.annotation.RequiresApi;
 
-/* compiled from: FitModeResult.java */
+/* JADX INFO: renamed from: b.i.a.g.l.l.f, reason: use source file name */
+/* JADX INFO: compiled from: FitModeResult.java */
+/* JADX INFO: loaded from: classes3.dex */
 @RequiresApi(21)
-/* renamed from: b.i.a.g.l.l.f, reason: use source file name */
-/* loaded from: classes3.dex */
 public class FitModeResult2 {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final float f11925a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final float f11926b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final float f11927c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final float f11928d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final float f11929e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final float f11930f;
 
     public FitModeResult2(float f, float f2, float f3, float f4, float f5, float f6) {

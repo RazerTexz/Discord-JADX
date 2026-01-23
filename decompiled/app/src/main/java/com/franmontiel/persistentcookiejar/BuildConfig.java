@@ -1,5 +1,5 @@
 package com.franmontiel.persistentcookiejar;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public final class BuildConfig {
 }

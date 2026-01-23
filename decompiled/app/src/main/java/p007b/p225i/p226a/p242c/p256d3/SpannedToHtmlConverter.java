@@ -6,22 +6,22 @@ import java.util.List;
 import java.util.Map;
 import java.util.regex.Pattern;
 
-/* compiled from: SpannedToHtmlConverter.java */
-/* renamed from: b.i.a.c.d3.m, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.d3.m, reason: use source file name */
+/* JADX INFO: compiled from: SpannedToHtmlConverter.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class SpannedToHtmlConverter {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final Pattern f6357a = Pattern.compile("(&#13;)?&#10;");
 
-    /* compiled from: SpannedToHtmlConverter.java */
-    /* renamed from: b.i.a.c.d3.m$b */
+    /* JADX INFO: renamed from: b.i.a.c.d3.m$b */
+    /* JADX INFO: compiled from: SpannedToHtmlConverter.java */
     public static class b {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final String f6358a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final Map<String, String> f6359b;
 
         public b(String str, Map map, a aVar) {
@@ -30,20 +30,20 @@ public final class SpannedToHtmlConverter {
         }
     }
 
-    /* compiled from: SpannedToHtmlConverter.java */
-    /* renamed from: b.i.a.c.d3.m$c */
+    /* JADX INFO: renamed from: b.i.a.c.d3.m$c */
+    /* JADX INFO: compiled from: SpannedToHtmlConverter.java */
     public static final class c {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final int f6360a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final int f6361b;
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public final String f6362c;
 
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         public final String f6363d;
 
         public c(int i, int i2, String str, String str2, a aVar) {
@@ -54,18 +54,18 @@ public final class SpannedToHtmlConverter {
         }
     }
 
-    /* compiled from: SpannedToHtmlConverter.java */
-    /* renamed from: b.i.a.c.d3.m$d */
+    /* JADX INFO: renamed from: b.i.a.c.d3.m$d */
+    /* JADX INFO: compiled from: SpannedToHtmlConverter.java */
     public static final class d {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final List<c> f6364a = new ArrayList();
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final List<c> f6365b = new ArrayList();
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static String m2759a(CharSequence charSequence) {
         return f6357a.matcher(Html.escapeHtml(charSequence)).replaceAll("<br>");
     }

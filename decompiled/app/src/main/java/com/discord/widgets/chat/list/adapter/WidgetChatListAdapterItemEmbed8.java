@@ -8,9 +8,9 @@ import com.discord.utilities.uri.UriHandler;
 import com.discord.widgets.media.WidgetMedia;
 import p007b.p100d.p104b.p105a.outline;
 
-/* compiled from: WidgetChatListAdapterItemEmbed.kt */
-/* renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemEmbed$configureEmbedImage$$inlined$apply$lambda$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemEmbed$configureEmbedImage$$inlined$apply$lambda$1, reason: use source file name */
+/* JADX INFO: compiled from: WidgetChatListAdapterItemEmbed.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetChatListAdapterItemEmbed8 implements View.OnClickListener {
     public final /* synthetic */ MessageEmbed $embed$inlined;
     public final /* synthetic */ RenderableEmbedMedia $previewImage$inlined;

@@ -22,21 +22,21 @@ import kotlin.jvm.internal.DefaultConstructorMarker;
 import p507d0.p580t.Collections2;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: SimpleRecyclerAdapter.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: SimpleRecyclerAdapter.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public class SimpleRecyclerAdapter<T, VH extends ViewHolder<T>> extends RecyclerView.Adapter<VH> {
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private final Function2<LayoutInflater, ViewGroup, VH> createViewHolder;
     private List<? extends T> data;
 
-    /* compiled from: SimpleRecyclerAdapter.kt */
+    /* JADX INFO: compiled from: SimpleRecyclerAdapter.kt */
     public static final class Companion {
         private Companion() {
         }
 
-        public final void addThemedDivider(RecyclerView recyclerView) throws Resources.NotFoundException {
+        public final void addThemedDivider(RecyclerView recyclerView) {
             Intrinsics3.checkNotNullParameter(recyclerView, "$this$addThemedDivider");
             int themedDrawableRes$default = DrawableCompat.getThemedDrawableRes$default(recyclerView, C5419R.attr.colorPrimaryDivider, 0, 2, (Object) null);
             Resources resources = recyclerView.getResources();
@@ -59,7 +59,7 @@ public class SimpleRecyclerAdapter<T, VH extends ViewHolder<T>> extends Recycler
         }
     }
 
-    /* compiled from: SimpleRecyclerAdapter.kt */
+    /* JADX INFO: compiled from: SimpleRecyclerAdapter.kt */
     public static abstract class ViewHolder<T> extends RecyclerView.ViewHolder {
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
         public ViewHolder(View view) {

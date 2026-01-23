@@ -1,9 +1,9 @@
 package com.discord.widgets.hubs.events;
 
 
-/* compiled from: WidgetHubEventsPage.kt */
-/* renamed from: com.discord.widgets.hubs.events.HubEventsEventListener, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.hubs.events.HubEventsEventListener, reason: use source file name */
+/* JADX INFO: compiled from: WidgetHubEventsPage.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public interface WidgetHubEventsPage3 {
     void dismissHeader();
 

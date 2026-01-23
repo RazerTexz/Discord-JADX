@@ -4,16 +4,16 @@ import p637j0.p641k.Func1;
 import p637j0.p652o.C12774l;
 import p658rx.functions.Action1;
 
-/* compiled from: Single.java */
-/* renamed from: j0.h, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: j0.h, reason: use source file name */
+/* JADX INFO: compiled from: Single.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class Single2<T> {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final a<T> f26696a;
 
-    /* compiled from: Single.java */
-    /* renamed from: j0.h$a */
+    /* JADX INFO: renamed from: j0.h$a */
+    /* JADX INFO: compiled from: Single.java */
     public interface a<T> extends Action1<SingleSubscriber<? super T>> {
     }
 

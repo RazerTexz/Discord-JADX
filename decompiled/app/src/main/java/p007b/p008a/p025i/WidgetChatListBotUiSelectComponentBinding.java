@@ -11,32 +11,32 @@ import com.facebook.drawee.view.SimpleDraweeView;
 import com.google.android.flexbox.FlexboxLayout;
 import com.google.android.material.textview.MaterialTextView;
 
-/* compiled from: WidgetChatListBotUiSelectComponentBinding.java */
-/* renamed from: b.a.i.b5, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.a.i.b5, reason: use source file name */
+/* JADX INFO: compiled from: WidgetChatListBotUiSelectComponentBinding.java */
+/* JADX INFO: loaded from: classes.dex */
 public final class WidgetChatListBotUiSelectComponentBinding implements ViewBinding {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     @NonNull
     public final SelectComponentView f713a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     @NonNull
     public final ImageView f714b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     @NonNull
     public final TypingDots f715c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     @NonNull
     public final SimpleDraweeView f716d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     @NonNull
     public final MaterialTextView f717e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     @NonNull
     public final FlexboxLayout f718f;
 
@@ -50,7 +50,7 @@ public final class WidgetChatListBotUiSelectComponentBinding implements ViewBind
     }
 
     @NonNull
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static WidgetChatListBotUiSelectComponentBinding m197a(@NonNull View view) {
         int i = C5419R.id.select_component_chevron;
         ImageView imageView = (ImageView) view.findViewById(C5419R.id.select_component_chevron);

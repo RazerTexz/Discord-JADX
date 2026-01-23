@@ -13,38 +13,38 @@ import java.util.Objects;
 import p007b.p225i.p226a.p242c.p257e3.BaseDataSource;
 import p007b.p225i.p226a.p242c.p257e3.DataSpec;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public final class UdpDataSource extends BaseDataSource {
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final int f20254e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final byte[] f20255f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public final DatagramPacket f20256g;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     @Nullable
     public Uri f20257h;
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     @Nullable
     public DatagramSocket f20258i;
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     @Nullable
     public MulticastSocket f20259j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     @Nullable
     public InetAddress f20260k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public boolean f20261l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public int f20262m;
 
     public static final class UdpDataSourceException extends DataSourceException {
@@ -62,7 +62,7 @@ public final class UdpDataSource extends BaseDataSource {
     }
 
     @Override // p007b.p225i.p226a.p242c.p257e3.DataSource3
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public long mo2586a(DataSpec dataSpec) throws UdpDataSourceException {
         Uri uri = dataSpec.f6542a;
         this.f20257h = uri;
@@ -120,7 +120,7 @@ public final class UdpDataSource extends BaseDataSource {
 
     @Override // p007b.p225i.p226a.p242c.p257e3.DataSource3
     @Nullable
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public Uri mo2589n() {
         return this.f20257h;
     }

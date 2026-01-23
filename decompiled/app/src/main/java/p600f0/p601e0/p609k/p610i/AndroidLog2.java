@@ -10,12 +10,12 @@ import p507d0.p579g0.Strings4;
 import p507d0.p579g0._Strings;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: AndroidLog.kt */
-/* renamed from: f0.e0.k.i.d, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: f0.e0.k.i.d, reason: use source file name */
+/* JADX INFO: compiled from: AndroidLog.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class AndroidLog2 extends Handler {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final AndroidLog2 f25791a = new AndroidLog2();
 
     @Override // java.util.logging.Handler

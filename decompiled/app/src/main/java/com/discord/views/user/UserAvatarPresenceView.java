@@ -38,27 +38,27 @@ import p507d0.p579g0.StringsJVM;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: UserAvatarPresenceView.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: UserAvatarPresenceView.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class UserAvatarPresenceView extends RelativeLayout {
 
-    /* renamed from: j, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: j, reason: from kotlin metadata */
     public final UserAvatarPresenceViewBinding binding;
 
-    /* renamed from: k, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: k, reason: from kotlin metadata */
     public final MGImages.DistinctChangeDetector imagesChangeDetector;
 
-    /* renamed from: l, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: l, reason: from kotlin metadata */
     public int cutoutSpacePx;
 
-    /* renamed from: m, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: m, reason: from kotlin metadata */
     public Function2<? super Bitmap, ? super String, Unit> onAvatarBitmapLoadedListener;
 
-    /* compiled from: UserAvatarPresenceView.kt */
-    /* renamed from: com.discord.views.user.UserAvatarPresenceView$b */
+    /* JADX INFO: renamed from: com.discord.views.user.UserAvatarPresenceView$b */
+    /* JADX INFO: compiled from: UserAvatarPresenceView.kt */
     public static final class C7132b extends Lambda implements Function2<Bitmap, String, Unit> {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public static final C7132b f19360j = new C7132b();
 
         public C7132b() {
@@ -72,8 +72,8 @@ public final class UserAvatarPresenceView extends RelativeLayout {
         }
     }
 
-    /* compiled from: UserAvatarPresenceView.kt */
-    /* renamed from: com.discord.views.user.UserAvatarPresenceView$c */
+    /* JADX INFO: renamed from: com.discord.views.user.UserAvatarPresenceView$c */
+    /* JADX INFO: compiled from: UserAvatarPresenceView.kt */
     public static final class C7133c extends Lambda implements Function1<ImageRequestBuilder, Unit> {
         public final /* synthetic */ String $iconUrl;
 
@@ -92,8 +92,8 @@ public final class UserAvatarPresenceView extends RelativeLayout {
         }
     }
 
-    /* compiled from: UserAvatarPresenceView.kt */
-    /* renamed from: com.discord.views.user.UserAvatarPresenceView$d */
+    /* JADX INFO: renamed from: com.discord.views.user.UserAvatarPresenceView$d */
+    /* JADX INFO: compiled from: UserAvatarPresenceView.kt */
     public static final class C7134d extends Lambda implements Function1<ImageRequestBuilder, Unit> {
         public final /* synthetic */ String $iconUrl;
 
@@ -160,7 +160,7 @@ public final class UserAvatarPresenceView extends RelativeLayout {
     /* JADX WARN: Removed duplicated region for block: B:43:0x00b0  */
     /* JADX WARN: Removed duplicated region for block: B:54:0x00fd  */
     /* JADX WARN: Removed duplicated region for block: B:57:0x0101  */
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
@@ -289,23 +289,23 @@ public final class UserAvatarPresenceView extends RelativeLayout {
         this.onAvatarBitmapLoadedListener = onAvatarBitmapLoadedListener;
     }
 
-    /* compiled from: UserAvatarPresenceView.kt */
-    /* renamed from: com.discord.views.user.UserAvatarPresenceView$a */
+    /* JADX INFO: renamed from: com.discord.views.user.UserAvatarPresenceView$a */
+    /* JADX INFO: compiled from: UserAvatarPresenceView.kt */
     public static final class C7131a {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final User f19355a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final Presence f19356b;
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public final StreamContext f19357c;
 
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         public final boolean f19358d;
 
-        /* renamed from: e */
+        /* JADX INFO: renamed from: e */
         public final GuildMember f19359e;
 
         public C7131a(User user, Presence presence, StreamContext streamContext, boolean z2, GuildMember guildMember, int i) {
@@ -330,6 +330,9 @@ public final class UserAvatarPresenceView extends RelativeLayout {
         }
 
         /* JADX WARN: Multi-variable type inference failed */
+        /* JADX WARN: Type inference failed for: r2v12 */
+        /* JADX WARN: Type inference failed for: r2v7, types: [int] */
+        /* JADX WARN: Type inference failed for: r2v9 */
         public int hashCode() {
             User user = this.f19355a;
             int iHashCode = (user != null ? user.hashCode() : 0) * 31;
@@ -338,13 +341,13 @@ public final class UserAvatarPresenceView extends RelativeLayout {
             StreamContext streamContext = this.f19357c;
             int iHashCode3 = (iHashCode2 + (streamContext != null ? streamContext.hashCode() : 0)) * 31;
             boolean z2 = this.f19358d;
-            int i = z2;
-            if (z2 != 0) {
-                i = 1;
+            ?? r2 = z2;
+            if (z2) {
+                r2 = 1;
             }
-            int i2 = (iHashCode3 + i) * 31;
+            int i = (iHashCode3 + r2) * 31;
             GuildMember guildMember = this.f19359e;
-            return i2 + (guildMember != null ? guildMember.hashCode() : 0);
+            return i + (guildMember != null ? guildMember.hashCode() : 0);
         }
 
         public String toString() {

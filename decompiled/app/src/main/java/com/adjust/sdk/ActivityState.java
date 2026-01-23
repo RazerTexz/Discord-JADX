@@ -8,7 +8,7 @@ import java.io.Serializable;
 import java.util.Calendar;
 import java.util.LinkedList;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class ActivityState implements Serializable, Cloneable {
     private static final int ORDER_ID_MAXCOUNT = 10;
     private static final ObjectStreamField[] serialPersistentFields;

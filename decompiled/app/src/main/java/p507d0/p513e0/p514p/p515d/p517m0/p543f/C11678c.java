@@ -21,15 +21,15 @@ import p507d0.p513e0.p514p.p515d.p517m0.p550i.MessageLite;
 import p507d0.p513e0.p514p.p515d.p517m0.p550i.MessageLiteOrBuilder;
 import p507d0.p513e0.p514p.p515d.p517m0.p550i.Parser2;
 
-/* compiled from: ProtoBuf.java */
-/* renamed from: d0.e0.p.d.m0.f.c */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.f.c */
+/* JADX INFO: compiled from: ProtoBuf.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class C11678c extends GeneratedMessageLite.d<C11678c> implements MessageLiteOrBuilder {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static final C11678c f23760j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public static Parser2<C11678c> f23761k = new a();
     private int bitField0_;
     private int companionObjectName_;
@@ -55,8 +55,8 @@ public final class C11678c extends GeneratedMessageLite.d<C11678c> implements Me
     private C11698w versionRequirementTable_;
     private List<Integer> versionRequirement_;
 
-    /* compiled from: ProtoBuf.java */
-    /* renamed from: d0.e0.p.d.m0.f.c$a */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.f.c$a */
+    /* JADX INFO: compiled from: ProtoBuf.java */
     public static class a extends AbstractParser<C11678c> {
         @Override // p507d0.p513e0.p514p.p515d.p517m0.p550i.Parser2
         public /* bridge */ /* synthetic */ Object parsePartialFrom(CodedInputStream codedInputStream, ExtensionRegistryLite extensionRegistryLite) throws InvalidProtocolBufferException {
@@ -69,59 +69,59 @@ public final class C11678c extends GeneratedMessageLite.d<C11678c> implements Me
         }
     }
 
-    /* compiled from: ProtoBuf.java */
-    /* renamed from: d0.e0.p.d.m0.f.c$b */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.f.c$b */
+    /* JADX INFO: compiled from: ProtoBuf.java */
     public static final class b extends GeneratedMessageLite.c<C11678c, b> implements MessageLiteOrBuilder {
 
-        /* renamed from: m */
+        /* JADX INFO: renamed from: m */
         public int f23765m;
 
-        /* renamed from: o */
+        /* JADX INFO: renamed from: o */
         public int f23767o;
 
-        /* renamed from: p */
+        /* JADX INFO: renamed from: p */
         public int f23768p;
 
-        /* renamed from: n */
+        /* JADX INFO: renamed from: n */
         public int f23766n = 6;
 
-        /* renamed from: q */
+        /* JADX INFO: renamed from: q */
         public List<C11694s> f23769q = Collections.emptyList();
 
-        /* renamed from: r */
+        /* JADX INFO: renamed from: r */
         public List<C11692q> f23770r = Collections.emptyList();
 
-        /* renamed from: s */
+        /* JADX INFO: renamed from: s */
         public List<Integer> f23771s = Collections.emptyList();
 
-        /* renamed from: t */
+        /* JADX INFO: renamed from: t */
         public List<Integer> f23772t = Collections.emptyList();
 
-        /* renamed from: u */
+        /* JADX INFO: renamed from: u */
         public List<C11679d> f23773u = Collections.emptyList();
 
-        /* renamed from: v */
+        /* JADX INFO: renamed from: v */
         public List<C11684i> f23774v = Collections.emptyList();
 
-        /* renamed from: w */
+        /* JADX INFO: renamed from: w */
         public List<C11689n> f23775w = Collections.emptyList();
 
-        /* renamed from: x */
+        /* JADX INFO: renamed from: x */
         public List<C11693r> f23776x = Collections.emptyList();
 
-        /* renamed from: y */
+        /* JADX INFO: renamed from: y */
         public List<C11682g> f23777y = Collections.emptyList();
 
-        /* renamed from: z */
+        /* JADX INFO: renamed from: z */
         public List<Integer> f23778z = Collections.emptyList();
 
-        /* renamed from: A */
+        /* JADX INFO: renamed from: A */
         public C11695t f23762A = C11695t.getDefaultInstance();
 
-        /* renamed from: B */
+        /* JADX INFO: renamed from: B */
         public List<Integer> f23763B = Collections.emptyList();
 
-        /* renamed from: C */
+        /* JADX INFO: renamed from: C */
         public C11698w f23764C = C11698w.getDefaultInstance();
 
         @Override // p507d0.p513e0.p514p.p515d.p517m0.p550i.MessageLite.a
@@ -210,7 +210,7 @@ public final class C11678c extends GeneratedMessageLite.d<C11678c> implements Me
         }
 
         @Override // p507d0.p513e0.p514p.p515d.p517m0.p550i.GeneratedMessageLite.b
-        /* renamed from: clone */
+        /* JADX INFO: renamed from: clone */
         public /* bridge */ /* synthetic */ Object mo11465clone() throws CloneNotSupportedException {
             return clone();
         }
@@ -479,8 +479,8 @@ public final class C11678c extends GeneratedMessageLite.d<C11678c> implements Me
         }
     }
 
-    /* compiled from: ProtoBuf.java */
-    /* renamed from: d0.e0.p.d.m0.f.c$c */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.f.c$c */
+    /* JADX INFO: compiled from: ProtoBuf.java */
     public enum c implements Internal.a {
         CLASS(0),
         INTERFACE(1),
@@ -518,56 +518,56 @@ public final class C11678c extends GeneratedMessageLite.d<C11678c> implements Me
         this.unknownFields = cVar.getUnknownFields();
     }
 
-    /* renamed from: A */
+    /* JADX INFO: renamed from: A */
     public static /* synthetic */ List m9611A(C11678c c11678c) {
         return c11678c.nestedClassName_;
     }
 
-    /* renamed from: B */
+    /* JADX INFO: renamed from: B */
     public static /* synthetic */ List m9612B(C11678c c11678c, List list) {
         c11678c.nestedClassName_ = list;
         return list;
     }
 
-    /* renamed from: C */
+    /* JADX INFO: renamed from: C */
     public static /* synthetic */ List m9613C(C11678c c11678c) {
         return c11678c.constructor_;
     }
 
-    /* renamed from: D */
+    /* JADX INFO: renamed from: D */
     public static /* synthetic */ List m9614D(C11678c c11678c, List list) {
         c11678c.constructor_ = list;
         return list;
     }
 
-    /* renamed from: E */
+    /* JADX INFO: renamed from: E */
     public static /* synthetic */ List m9615E(C11678c c11678c) {
         return c11678c.function_;
     }
 
-    /* renamed from: F */
+    /* JADX INFO: renamed from: F */
     public static /* synthetic */ List m9616F(C11678c c11678c, List list) {
         c11678c.function_ = list;
         return list;
     }
 
-    /* renamed from: G */
+    /* JADX INFO: renamed from: G */
     public static /* synthetic */ List m9617G(C11678c c11678c) {
         return c11678c.property_;
     }
 
-    /* renamed from: H */
+    /* JADX INFO: renamed from: H */
     public static /* synthetic */ List m9618H(C11678c c11678c, List list) {
         c11678c.property_ = list;
         return list;
     }
 
-    /* renamed from: I */
+    /* JADX INFO: renamed from: I */
     public static /* synthetic */ List m9619I(C11678c c11678c) {
         return c11678c.typeAlias_;
     }
 
-    /* renamed from: J */
+    /* JADX INFO: renamed from: J */
     public static /* synthetic */ List m9620J(C11678c c11678c, List list) {
         c11678c.typeAlias_ = list;
         return list;
@@ -577,40 +577,40 @@ public final class C11678c extends GeneratedMessageLite.d<C11678c> implements Me
         return f23760j;
     }
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public static /* synthetic */ List m9621h(C11678c c11678c) {
         return c11678c.enumEntry_;
     }
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public static /* synthetic */ List m9622i(C11678c c11678c, List list) {
         c11678c.enumEntry_ = list;
         return list;
     }
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static /* synthetic */ List m9623j(C11678c c11678c) {
         return c11678c.sealedSubclassFqName_;
     }
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public static /* synthetic */ List m9624k(C11678c c11678c, List list) {
         c11678c.sealedSubclassFqName_ = list;
         return list;
     }
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public static /* synthetic */ C11695t m9625l(C11678c c11678c, C11695t c11695t) {
         c11678c.typeTable_ = c11695t;
         return c11695t;
     }
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public static /* synthetic */ List m9626m(C11678c c11678c) {
         return c11678c.versionRequirement_;
     }
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public static /* synthetic */ List m9627n(C11678c c11678c, List list) {
         c11678c.versionRequirement_ = list;
         return list;
@@ -620,13 +620,13 @@ public final class C11678c extends GeneratedMessageLite.d<C11678c> implements Me
         return newBuilder().mergeFrom(c11678c);
     }
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public static /* synthetic */ C11698w m9628o(C11678c c11678c, C11698w c11698w) {
         c11678c.versionRequirementTable_ = c11698w;
         return c11698w;
     }
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public static /* synthetic */ int m9629p(C11678c c11678c, int i) {
         c11678c.bitField0_ = i;
         return i;
@@ -636,63 +636,63 @@ public final class C11678c extends GeneratedMessageLite.d<C11678c> implements Me
         return (C11678c) ((AbstractParser) f23761k).m11467parseFrom(inputStream, extensionRegistryLite);
     }
 
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     public static /* synthetic */ ByteString3 m9630q(C11678c c11678c) {
         return c11678c.unknownFields;
     }
 
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     public static /* synthetic */ int m9631r(C11678c c11678c, int i) {
         c11678c.flags_ = i;
         return i;
     }
 
-    /* renamed from: s */
+    /* JADX INFO: renamed from: s */
     public static /* synthetic */ int m9632s(C11678c c11678c, int i) {
         c11678c.fqName_ = i;
         return i;
     }
 
-    /* renamed from: t */
+    /* JADX INFO: renamed from: t */
     public static /* synthetic */ int m9633t(C11678c c11678c, int i) {
         c11678c.companionObjectName_ = i;
         return i;
     }
 
-    /* renamed from: u */
+    /* JADX INFO: renamed from: u */
     public static /* synthetic */ List m9634u(C11678c c11678c) {
         return c11678c.typeParameter_;
     }
 
-    /* renamed from: v */
+    /* JADX INFO: renamed from: v */
     public static /* synthetic */ List m9635v(C11678c c11678c, List list) {
         c11678c.typeParameter_ = list;
         return list;
     }
 
-    /* renamed from: w */
+    /* JADX INFO: renamed from: w */
     public static /* synthetic */ List m9636w(C11678c c11678c) {
         return c11678c.supertype_;
     }
 
-    /* renamed from: x */
+    /* JADX INFO: renamed from: x */
     public static /* synthetic */ List m9637x(C11678c c11678c, List list) {
         c11678c.supertype_ = list;
         return list;
     }
 
-    /* renamed from: y */
+    /* JADX INFO: renamed from: y */
     public static /* synthetic */ List m9638y(C11678c c11678c) {
         return c11678c.supertypeId_;
     }
 
-    /* renamed from: z */
+    /* JADX INFO: renamed from: z */
     public static /* synthetic */ List m9639z(C11678c c11678c, List list) {
         c11678c.supertypeId_ = list;
         return list;
     }
 
-    /* renamed from: K */
+    /* JADX INFO: renamed from: K */
     public final void m9640K() {
         this.flags_ = 6;
         this.fqName_ = 0;
@@ -1246,7 +1246,7 @@ public final class C11678c extends GeneratedMessageLite.d<C11678c> implements Me
                             C11695t.b builder = (this.bitField0_ & 8) == 8 ? this.typeTable_.toBuilder() : null;
                             C11695t c11695t = (C11695t) codedInputStream.readMessage(C11695t.f23957k, extensionRegistryLite);
                             this.typeTable_ = c11695t;
-                            if (builder != null) {
+                            if (builder != 0) {
                                 builder.mergeFrom(c11695t);
                                 this.typeTable_ = builder.buildPartial();
                             }
@@ -1274,7 +1274,7 @@ public final class C11678c extends GeneratedMessageLite.d<C11678c> implements Me
                             C11698w.b builder2 = (this.bitField0_ & 16) == 16 ? this.versionRequirementTable_.toBuilder() : null;
                             C11698w c11698w = (C11698w) codedInputStream.readMessage(C11698w.f23988k, extensionRegistryLite);
                             this.versionRequirementTable_ = c11698w;
-                            if (builder2 != null) {
+                            if (builder2 != 0) {
                                 builder2.mergeFrom(c11698w);
                                 this.versionRequirementTable_ = builder2.buildPartial();
                             }

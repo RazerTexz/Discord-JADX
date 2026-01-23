@@ -16,9 +16,9 @@ import p007b.p008a.p018d.AppToast;
 import p007b.p008a.p027k.FormatUtils;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: GuildInviteUiHelper.kt */
-/* renamed from: com.discord.widgets.guilds.invite.GuildInviteUiHelperKt, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.guilds.invite.GuildInviteUiHelperKt, reason: use source file name */
+/* JADX INFO: compiled from: GuildInviteUiHelper.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class GuildInviteUiHelper {
     private static final void copyLink(Context context, String str) {
         AppToast.m163a(context, str, C5419R.string.invite_link_copied);
@@ -48,7 +48,7 @@ public final class GuildInviteUiHelper {
         return FormatUtils.m216h(context, C5419R.string.invite_links_expire_after_default, new Object[]{(experiment == null || experiment.getBucket() != 1) ? StringResourceUtils.getI18nPluralString(context, C5419R.plurals.duration_days_days, 1, 1) : StringResourceUtils.getI18nPluralString(context, C5419R.plurals.duration_days_days, 7, 7)}, null, 4);
     }
 
-    public static final CharSequence getInviteSettingsText(Context context, long j, int i) throws Resources.NotFoundException {
+    public static final CharSequence getInviteSettingsText(Context context, long j, int i) {
         Object quantityString;
         Intrinsics3.checkNotNullParameter(context, "context");
         if (i == 0) {
@@ -62,7 +62,7 @@ public final class GuildInviteUiHelper {
         return j <= 0 ? FormatUtils.m216h(context, C5419R.string.invite_settings_description_no_expiration, new Object[]{context.getString(C5419R.string.max_age_never_description_mobile), quantityString}, null, 4) : FormatUtils.m216h(context, C5419R.string.invite_settings_expired_description, new Object[]{DurationUtils.humanizeDurationRounded(context, j), quantityString}, null, 4);
     }
 
-    private static final void shareLink(Context context, String str) throws Resources.NotFoundException {
+    private static final void shareLink(Context context, String str) {
         String string = context.getResources().getString(C5419R.string.tip_instant_invite_title3);
         Intrinsics3.checkNotNullExpressionValue(string, "context.resources.getStr…ip_instant_invite_title3)");
         IntentUtils.performChooserSendIntent(context, str, string);
@@ -87,7 +87,7 @@ public final class GuildInviteUiHelper {
         copyLink(context, getInviteLink(modelInvite, resources));
     }
 
-    public static final void shareLinkClick(Context context, GuildInvite guildInvite, Channel channel) throws Resources.NotFoundException {
+    public static final void shareLinkClick(Context context, GuildInvite guildInvite, Channel channel) {
         Intrinsics3.checkNotNullParameter(guildInvite, "guildInvite");
         AnalyticsTracker.INSTANCE.inviteShareClicked(guildInvite, channel);
         if (context != null) {

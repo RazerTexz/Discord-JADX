@@ -15,9 +15,9 @@ import p658rx.exceptions.OnErrorFailedException;
 import p658rx.exceptions.OnErrorNotImplementedException;
 import retrofit2.Response;
 
-/* compiled from: CallArbiter.java */
-/* renamed from: i0.d0.a.b, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: i0.d0.a.b, reason: use source file name */
+/* JADX INFO: compiled from: CallArbiter.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class CallArbiter<T> extends AtomicInteger implements Subscription, Producer {
     private final Call3<T> call;
     private volatile Response<T> response;
@@ -30,7 +30,7 @@ public final class CallArbiter<T> extends AtomicInteger implements Subscription,
         this.subscriber = subscriber;
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final void m10701a(Response<T> response) {
         try {
             if (!this.unsubscribed) {
@@ -63,7 +63,7 @@ public final class CallArbiter<T> extends AtomicInteger implements Subscription,
         }
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public void m10702b(Throwable th) {
         set(3);
         if (this.unsubscribed) {
@@ -80,7 +80,7 @@ public final class CallArbiter<T> extends AtomicInteger implements Subscription,
         }
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public void m10703c(Response<T> response) {
         while (true) {
             int i = get();
@@ -110,7 +110,7 @@ public final class CallArbiter<T> extends AtomicInteger implements Subscription,
     }
 
     @Override // p658rx.Producer
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public void mo10704j(long j) {
         if (j == 0) {
             return;

@@ -17,28 +17,28 @@ import com.yalantis.ucrop.C11199R;
 import com.yalantis.ucrop.model.AspectRatio;
 import java.util.Locale;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public class AspectRatioTextView extends AppCompatTextView {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final Rect f22243j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public Paint f22244k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public int f22245l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public float f22246m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public String f22247n;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public float f22248o;
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public float f22249p;
 
     public AspectRatioTextView(Context context, AttributeSet attributeSet) {
@@ -65,7 +65,7 @@ public class AspectRatioTextView extends AppCompatTextView {
         typedArrayObtainStyledAttributes.recycle();
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final void m9325a(@ColorInt int i) {
         Paint paint = this.f22244k;
         if (paint != null) {
@@ -74,7 +74,7 @@ public class AspectRatioTextView extends AppCompatTextView {
         setTextColor(new ColorStateList(new int[][]{new int[]{R.attr.state_selected}, new int[]{0}}, new int[]{i, ContextCompat.getColor(getContext(), C11199R.a.ucrop_color_widget)}));
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final void m9326b() {
         if (TextUtils.isEmpty(this.f22247n)) {
             setText(String.format(Locale.US, "%d:%d", Integer.valueOf((int) this.f22248o), Integer.valueOf((int) this.f22249p)));

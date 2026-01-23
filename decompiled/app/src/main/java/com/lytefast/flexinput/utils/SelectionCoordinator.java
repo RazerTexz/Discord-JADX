@@ -12,20 +12,20 @@ import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.TypeIntrinsics;
 
-/* compiled from: SelectionCoordinator.kt */
-/* loaded from: classes3.dex */
+/* JADX INFO: compiled from: SelectionCoordinator.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public class SelectionCoordinator<I, T extends I> {
 
-    /* renamed from: a, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: a, reason: from kotlin metadata */
     public RecyclerView.Adapter<?> adapter;
 
-    /* renamed from: b, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: b, reason: from kotlin metadata */
     public final ArrayMap<T, Integer> selectedItemPositionMap;
 
-    /* renamed from: c, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: c, reason: from kotlin metadata */
     public ItemSelectionListener<? super I> itemSelectionListener;
 
-    /* compiled from: SelectionCoordinator.kt */
+    /* JADX INFO: compiled from: SelectionCoordinator.kt */
     public interface ItemSelectionListener<I> {
         void onItemSelected(I item);
 
@@ -34,7 +34,7 @@ public class SelectionCoordinator<I, T extends I> {
         void unregister();
     }
 
-    /* compiled from: SelectionCoordinator.kt */
+    /* JADX INFO: compiled from: SelectionCoordinator.kt */
     public static final class RestorationException extends Exception {
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
         public RestorationException(String str) {
@@ -43,14 +43,14 @@ public class SelectionCoordinator<I, T extends I> {
         }
     }
 
-    /* compiled from: SelectionCoordinator.kt */
-    /* renamed from: com.lytefast.flexinput.utils.SelectionCoordinator$a */
+    /* JADX INFO: renamed from: com.lytefast.flexinput.utils.SelectionCoordinator$a */
+    /* JADX INFO: compiled from: SelectionCoordinator.kt */
     public static final class C11192a<T> {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final T f22089a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final boolean f22090b;
 
         public C11192a(T t, boolean z2) {
@@ -70,15 +70,18 @@ public class SelectionCoordinator<I, T extends I> {
         }
 
         /* JADX WARN: Multi-variable type inference failed */
+        /* JADX WARN: Type inference failed for: r1v1, types: [int] */
+        /* JADX WARN: Type inference failed for: r1v2 */
+        /* JADX WARN: Type inference failed for: r1v3 */
         public int hashCode() {
             T t = this.f22089a;
             int iHashCode = (t != null ? t.hashCode() : 0) * 31;
             boolean z2 = this.f22090b;
-            int i = z2;
-            if (z2 != 0) {
-                i = 1;
+            ?? r1 = z2;
+            if (z2) {
+                r1 = 1;
             }
-            return iHashCode + i;
+            return iHashCode + r1;
         }
 
         public String toString() {
@@ -102,7 +105,7 @@ public class SelectionCoordinator<I, T extends I> {
         this.itemSelectionListener = selectionCoordinator2;
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final boolean m9298a(T item, int position) {
         Integer num = this.selectedItemPositionMap.get(item);
         if (num == null) {
@@ -115,7 +118,7 @@ public class SelectionCoordinator<I, T extends I> {
         return true;
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final void m9299b(ArrayList<? extends I> selectedItems) throws RestorationException {
         Intrinsics3.checkNotNullParameter(selectedItems, "selectedItems");
         if (this.adapter != null) {
@@ -131,7 +134,7 @@ public class SelectionCoordinator<I, T extends I> {
         }
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final void m9300c(T item, int position) {
         this.selectedItemPositionMap.put(item, Integer.valueOf(position));
         RecyclerView.Adapter<?> adapter = this.adapter;
@@ -141,7 +144,7 @@ public class SelectionCoordinator<I, T extends I> {
         this.itemSelectionListener.onItemSelected(item);
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final boolean m9301d(I item) {
         ArrayMap<T, Integer> arrayMap = this.selectedItemPositionMap;
         Objects.requireNonNull(arrayMap, "null cannot be cast to non-null type kotlin.collections.MutableMap<K, V>");

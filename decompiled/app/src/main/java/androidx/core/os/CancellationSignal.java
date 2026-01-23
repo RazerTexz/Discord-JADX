@@ -2,7 +2,7 @@ package androidx.core.os;
 
 import androidx.annotation.Nullable;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public final class CancellationSignal {
     private boolean mCancelInProgress;
     private Object mCancellationSignalObj;

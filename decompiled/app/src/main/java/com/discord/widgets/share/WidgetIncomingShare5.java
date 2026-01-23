@@ -10,15 +10,15 @@ import kotlin.jvm.functions.Function4;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetIncomingShare.kt */
-/* renamed from: com.discord.widgets.share.WidgetIncomingShare$configureUi$$inlined$apply$lambda$2, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.share.WidgetIncomingShare$configureUi$$inlined$apply$lambda$2, reason: use source file name */
+/* JADX INFO: compiled from: WidgetIncomingShare.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetIncomingShare5 extends Lambda implements Function4<View, Integer, WidgetGlobalSearchModel.ItemDataPayload, Boolean, Unit> {
     public final /* synthetic */ WidgetIncomingShare.Model $this_configureUi$inlined;
     public final /* synthetic */ WidgetIncomingShare this$0;
 
-    /* compiled from: WidgetIncomingShare.kt */
-    /* renamed from: com.discord.widgets.share.WidgetIncomingShare$configureUi$$inlined$apply$lambda$2$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.share.WidgetIncomingShare$configureUi$$inlined$apply$lambda$2$1 */
+    /* JADX INFO: compiled from: WidgetIncomingShare.kt */
     public static final class RunnableC99861 implements Runnable {
         public RunnableC99861() {
         }

@@ -5,28 +5,28 @@ import java.util.Arrays;
 import org.checkerframework.dataflow.qual.Pure;
 import p007b.p225i.p226a.p242c.Bundleable;
 
-/* compiled from: ColorInfo.java */
-/* renamed from: b.i.a.c.g3.n, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.g3.n, reason: use source file name */
+/* JADX INFO: compiled from: ColorInfo.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class ColorInfo implements Bundleable {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static final /* synthetic */ int f6843j = 0;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final int f6844k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final int f6845l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public final int f6846m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     @Nullable
     public final byte[] f6847n;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public int f6848o;
 
     public ColorInfo(int i, int i2, int i3, @Nullable byte[] bArr) {
@@ -37,7 +37,7 @@ public final class ColorInfo implements Bundleable {
     }
 
     @Pure
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static int m3123a(int i) {
         if (i == 1) {
             return 1;
@@ -49,7 +49,7 @@ public final class ColorInfo implements Bundleable {
     }
 
     @Pure
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static int m3124b(int i) {
         if (i == 1) {
             return 3;
@@ -63,7 +63,7 @@ public final class ColorInfo implements Bundleable {
         return 7;
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public static String m3125c(int i) {
         return Integer.toString(i, 36);
     }

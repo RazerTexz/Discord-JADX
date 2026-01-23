@@ -5,9 +5,9 @@ import kotlin.jvm.functions.Function1;
 import p507d0.p592z.p594d.InlineMarker;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: SQLiteDatabase.kt */
-/* renamed from: androidx.core.database.sqlite.SQLiteDatabaseKt, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: androidx.core.database.sqlite.SQLiteDatabaseKt, reason: use source file name */
+/* JADX INFO: compiled from: SQLiteDatabase.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class SQLiteDatabase {
     public static final <T> T transaction(android.database.sqlite.SQLiteDatabase sQLiteDatabase, boolean z2, Function1<? super android.database.sqlite.SQLiteDatabase, ? extends T> function1) {
         Intrinsics3.checkNotNullParameter(sQLiteDatabase, "<this>");

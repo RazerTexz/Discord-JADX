@@ -4,27 +4,27 @@ import android.view.View;
 import com.discord.floating_view_manager.FloatingViewGravity;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: View.kt */
-/* renamed from: b.a.j.c */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.a.j.c */
+/* JADX INFO: compiled from: View.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class ViewOnLayoutChangeListenerC1102c implements View.OnLayoutChangeListener {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final /* synthetic */ FloatingViewManager f1468j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final /* synthetic */ View f1469k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final /* synthetic */ View f1470l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public final /* synthetic */ FloatingViewGravity f1471m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public final /* synthetic */ int f1472n;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public final /* synthetic */ int f1473o;
 
     public ViewOnLayoutChangeListenerC1102c(FloatingViewManager floatingViewManager, View view, View view2, FloatingViewGravity floatingViewGravity, int i, int i2) {

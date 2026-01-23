@@ -6,8 +6,8 @@ import androidx.core.app.NotificationCompat;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: TextView.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: TextView.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetDirectoriesSearch$onViewBound$$inlined$apply$lambda$1 implements TextWatcher {
     public final /* synthetic */ WidgetDirectoriesSearch this$0;
 

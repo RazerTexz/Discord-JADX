@@ -5,16 +5,16 @@ import java.util.ArrayList;
 import p007b.p225i.p226a.p242c.Bundleable;
 import p007b.p225i.p226a.p242c.p243a3.p244p0.AdPlaybackState;
 
-/* compiled from: lambda */
-/* renamed from: b.i.a.c.a3.p0.b */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.a3.p0.b */
+/* JADX INFO: compiled from: lambda */
+/* JADX INFO: loaded from: classes3.dex */
 public final /* synthetic */ class C2561b implements Bundleable.a {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final /* synthetic */ C2561b f5679a = new C2561b();
 
     @Override // p007b.p225i.p226a.p242c.Bundleable.a
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final Bundleable mo2576a(Bundle bundle) {
         AdPlaybackState.a[] aVarArr;
         ArrayList parcelableArrayList = bundle.getParcelableArrayList(AdPlaybackState.m2577b(1));

@@ -9,7 +9,7 @@ import com.esotericsoftware.kryo.p502io.Output;
 import p007b.p100d.p104b.p105a.outline;
 import p007b.p106e.p107a.Log;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class DefaultClassResolver implements ClassResolver {
     public static final byte NAME = -1;
     public IdentityObjectIntMap<Class> classToNameId;
@@ -46,7 +46,7 @@ public class DefaultClassResolver implements ClassResolver {
     }
 
     @Override // com.esotericsoftware.kryo.ClassResolver
-    public Registration readClass(Input input) throws KryoException {
+    public Registration readClass(Input input) {
         int varInt = input.readVarInt(true);
         if (varInt == 0) {
             Log.a aVar = Log.f3007a;
@@ -69,7 +69,7 @@ public class DefaultClassResolver implements ClassResolver {
         return registration;
     }
 
-    public Registration readName(Input input) throws KryoException {
+    public Registration readName(Input input) {
         int varInt = input.readVarInt(true);
         if (this.nameIdToClass == null) {
             this.nameIdToClass = new IntMap<>();
@@ -148,7 +148,7 @@ public class DefaultClassResolver implements ClassResolver {
     }
 
     @Override // com.esotericsoftware.kryo.ClassResolver
-    public Registration writeClass(Output output, Class cls) throws KryoException {
+    public Registration writeClass(Output output, Class cls) {
         if (cls == null) {
             Log.a aVar = Log.f3007a;
             output.writeVarInt(0, true);
@@ -164,7 +164,7 @@ public class DefaultClassResolver implements ClassResolver {
         return registration;
     }
 
-    public void writeName(Output output, Class cls, Registration registration) throws KryoException {
+    public void writeName(Output output, Class cls, Registration registration) {
         int i;
         output.writeVarInt(1, true);
         IdentityObjectIntMap<Class> identityObjectIntMap = this.classToNameId;

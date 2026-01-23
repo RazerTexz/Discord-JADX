@@ -3,8 +3,8 @@ package com.discord.api.message.embed;
 import androidx.core.os.EnvironmentCompat;
 import org.webrtc.MediaStreamTrack;
 
-/* compiled from: EmbedType.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: EmbedType.kt */
+/* JADX INFO: loaded from: classes.dex */
 public enum EmbedType {
     ARTICLE("article"),
     IMAGE("image"),

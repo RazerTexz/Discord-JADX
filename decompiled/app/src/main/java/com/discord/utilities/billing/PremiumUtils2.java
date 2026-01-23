@@ -13,9 +13,9 @@ import java.util.Date;
 import java.util.Objects;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: PremiumUtils.kt */
-/* renamed from: com.discord.utilities.billing.PremiumUtilsKt, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.utilities.billing.PremiumUtilsKt, reason: use source file name */
+/* JADX INFO: compiled from: PremiumUtils.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class PremiumUtils2 {
     public static final int GRACE_PERIOD_LONG = 7;
     public static final int GRACE_PERIOD_SHORT = 3;
@@ -55,13 +55,7 @@ public final class PremiumUtils2 {
         return GRANDFATHERED_YEARLY_END_DATE;
     }
 
-    /* JADX WARN: Failed to restore switch over string. Please report as a decompilation issue
-    java.lang.NullPointerException: Cannot invoke "java.util.List.iterator()" because the return value of "jadx.core.dex.visitors.regions.SwitchOverStringVisitor$SwitchData.getNewCases()" is null
-    	at jadx.core.dex.visitors.regions.SwitchOverStringVisitor.restoreSwitchOverString(SwitchOverStringVisitor.java:109)
-    	at jadx.core.dex.visitors.regions.SwitchOverStringVisitor.visitRegion(SwitchOverStringVisitor.java:66)
-    	at jadx.core.dex.visitors.regions.DepthRegionTraversal.traverseIterativeStepInternal(DepthRegionTraversal.java:77)
-    	at jadx.core.dex.visitors.regions.DepthRegionTraversal.traverseIterativeStepInternal(DepthRegionTraversal.java:82)
-     */
+    /* JADX WARN: Failed to restore switch over string. Please report as a decompilation issue */
     @DrawableRes
     @SuppressLint({"DefaultLocale"})
     public static final int getPaymentSourceIcon(ModelPaymentSource modelPaymentSource) {

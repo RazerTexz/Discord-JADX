@@ -6,8 +6,8 @@ import kotlin.Unit;
 import kotlin.jvm.functions.Function1;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: CallParticipantsAdapter.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: CallParticipantsAdapter.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class CallParticipantsAdapter$ViewHolderInvite$onConfigure$1 implements View.OnClickListener {
     public final /* synthetic */ CallParticipantsAdapter.ViewHolderInvite this$0;
 

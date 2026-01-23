@@ -8,11 +8,11 @@ import p007b.p100d.p104b.p105a.outline;
 import p507d0.p580t.Collections2;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: StoreApplicationCommands.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: StoreApplicationCommands.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final /* data */ class DiscoverCommands {
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private final List<ApplicationCommand> commands;
     private final int currentEndOffset;
@@ -23,7 +23,7 @@ public final /* data */ class DiscoverCommands {
     private final int jumpedSequenceId;
     private final LoadState loadState;
 
-    /* compiled from: StoreApplicationCommands.kt */
+    /* JADX INFO: compiled from: StoreApplicationCommands.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -51,6 +51,7 @@ public final /* data */ class DiscoverCommands {
         this.loadState = loadState;
     }
 
+    /* JADX WARN: Multi-variable type inference failed */
     public static /* synthetic */ DiscoverCommands copy$default(DiscoverCommands discoverCommands, List list, int i, int i2, boolean z2, boolean z3, int i3, Long l, LoadState loadState, int i4, Object obj) {
         return discoverCommands.copy((i4 & 1) != 0 ? discoverCommands.commands : list, (i4 & 2) != 0 ? discoverCommands.currentStartOffset : i, (i4 & 4) != 0 ? discoverCommands.currentEndOffset : i2, (i4 & 8) != 0 ? discoverCommands.hasMoreBefore : z2, (i4 & 16) != 0 ? discoverCommands.hasMoreAfter : z3, (i4 & 32) != 0 ? discoverCommands.jumpedSequenceId : i3, (i4 & 64) != 0 ? discoverCommands.jumpedApplicationId : l, (i4 & 128) != 0 ? discoverCommands.loadState : loadState);
     }
@@ -59,37 +60,37 @@ public final /* data */ class DiscoverCommands {
         return this.commands;
     }
 
-    /* renamed from: component2, reason: from getter */
+    /* JADX INFO: renamed from: component2, reason: from getter */
     public final int getCurrentStartOffset() {
         return this.currentStartOffset;
     }
 
-    /* renamed from: component3, reason: from getter */
+    /* JADX INFO: renamed from: component3, reason: from getter */
     public final int getCurrentEndOffset() {
         return this.currentEndOffset;
     }
 
-    /* renamed from: component4, reason: from getter */
+    /* JADX INFO: renamed from: component4, reason: from getter */
     public final boolean getHasMoreBefore() {
         return this.hasMoreBefore;
     }
 
-    /* renamed from: component5, reason: from getter */
+    /* JADX INFO: renamed from: component5, reason: from getter */
     public final boolean getHasMoreAfter() {
         return this.hasMoreAfter;
     }
 
-    /* renamed from: component6, reason: from getter */
+    /* JADX INFO: renamed from: component6, reason: from getter */
     public final int getJumpedSequenceId() {
         return this.jumpedSequenceId;
     }
 
-    /* renamed from: component7, reason: from getter */
+    /* JADX INFO: renamed from: component7, reason: from getter */
     public final Long getJumpedApplicationId() {
         return this.jumpedApplicationId;
     }
 
-    /* renamed from: component8, reason: from getter */
+    /* JADX INFO: renamed from: component8, reason: from getter */
     public final LoadState getLoadState() {
         return this.loadState;
     }
@@ -144,19 +145,25 @@ public final /* data */ class DiscoverCommands {
     }
 
     /* JADX WARN: Multi-variable type inference failed */
+    /* JADX WARN: Type inference failed for: r2v11 */
+    /* JADX WARN: Type inference failed for: r2v12 */
+    /* JADX WARN: Type inference failed for: r2v3, types: [int] */
+    /* JADX WARN: Type inference failed for: r3v0 */
+    /* JADX WARN: Type inference failed for: r3v1, types: [int] */
+    /* JADX WARN: Type inference failed for: r3v2 */
     public int hashCode() {
         List<ApplicationCommand> list = this.commands;
         int iHashCode = (((((list != null ? list.hashCode() : 0) * 31) + this.currentStartOffset) * 31) + this.currentEndOffset) * 31;
         boolean z2 = this.hasMoreBefore;
-        int i = z2;
-        if (z2 != 0) {
-            i = 1;
+        ?? r2 = z2;
+        if (z2) {
+            r2 = 1;
         }
-        int i2 = (iHashCode + i) * 31;
+        int i = (iHashCode + r2) * 31;
         boolean z3 = this.hasMoreAfter;
-        int i3 = (((i2 + (z3 ? 1 : z3 ? 1 : 0)) * 31) + this.jumpedSequenceId) * 31;
+        int i2 = (((i + (z3 ? 1 : z3)) * 31) + this.jumpedSequenceId) * 31;
         Long l = this.jumpedApplicationId;
-        int iHashCode2 = (i3 + (l != null ? l.hashCode() : 0)) * 31;
+        int iHashCode2 = (i2 + (l != null ? l.hashCode() : 0)) * 31;
         LoadState loadState = this.loadState;
         return iHashCode2 + (loadState != null ? loadState.hashCode() : 0);
     }

@@ -35,17 +35,17 @@ import p637j0.p653p.Schedulers2;
 import p658rx.Observable;
 import p658rx.subjects.BehaviorSubject;
 
-/* compiled from: StoreGifting.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: StoreGifting.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class StoreGifting {
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private final Dispatcher dispatcher;
     private HashMap<String, GiftState> knownGifts;
     private final BehaviorSubject<Map<String, GiftState>> knownGiftsSubject;
 
-    /* compiled from: StoreGifting.kt */
+    /* JADX INFO: compiled from: StoreGifting.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -63,10 +63,10 @@ public final class StoreGifting {
         }
     }
 
-    /* compiled from: StoreGifting.kt */
+    /* JADX INFO: compiled from: StoreGifting.kt */
     public static abstract class GiftState {
 
-        /* compiled from: StoreGifting.kt */
+        /* JADX INFO: compiled from: StoreGifting.kt */
         public static final class Invalid extends GiftState {
             public static final Invalid INSTANCE = new Invalid();
 
@@ -75,7 +75,7 @@ public final class StoreGifting {
             }
         }
 
-        /* compiled from: StoreGifting.kt */
+        /* JADX INFO: compiled from: StoreGifting.kt */
         public static final class LoadFailed extends GiftState {
             public static final LoadFailed INSTANCE = new LoadFailed();
 
@@ -84,7 +84,7 @@ public final class StoreGifting {
             }
         }
 
-        /* compiled from: StoreGifting.kt */
+        /* JADX INFO: compiled from: StoreGifting.kt */
         public static final class Loading extends GiftState {
             public static final Loading INSTANCE = new Loading();
 
@@ -93,7 +93,7 @@ public final class StoreGifting {
             }
         }
 
-        /* compiled from: StoreGifting.kt */
+        /* JADX INFO: compiled from: StoreGifting.kt */
         public static final /* data */ class RedeemedFailed extends GiftState implements HasGift {
             private final boolean canRetry;
             private final Integer errorCode;
@@ -125,12 +125,12 @@ public final class StoreGifting {
                 return getGift();
             }
 
-            /* renamed from: component2, reason: from getter */
+            /* JADX INFO: renamed from: component2, reason: from getter */
             public final boolean getCanRetry() {
                 return this.canRetry;
             }
 
-            /* renamed from: component3, reason: from getter */
+            /* JADX INFO: renamed from: component3, reason: from getter */
             public final Integer getErrorCode() {
                 return this.errorCode;
             }
@@ -165,17 +165,20 @@ public final class StoreGifting {
             }
 
             /* JADX WARN: Multi-variable type inference failed */
+            /* JADX WARN: Type inference failed for: r2v1, types: [int] */
+            /* JADX WARN: Type inference failed for: r2v3 */
+            /* JADX WARN: Type inference failed for: r2v4 */
             public int hashCode() {
                 ModelGift gift = getGift();
                 int iHashCode = (gift != null ? gift.hashCode() : 0) * 31;
                 boolean z2 = this.canRetry;
-                int i = z2;
-                if (z2 != 0) {
-                    i = 1;
+                ?? r2 = z2;
+                if (z2) {
+                    r2 = 1;
                 }
-                int i2 = (iHashCode + i) * 31;
+                int i = (iHashCode + r2) * 31;
                 Integer num = this.errorCode;
-                return i2 + (num != null ? num.hashCode() : 0);
+                return i + (num != null ? num.hashCode() : 0);
             }
 
             public String toString() {
@@ -188,7 +191,7 @@ public final class StoreGifting {
             }
         }
 
-        /* compiled from: StoreGifting.kt */
+        /* JADX INFO: compiled from: StoreGifting.kt */
         public static final /* data */ class Redeeming extends GiftState implements HasGift {
             private final ModelGift gift;
 
@@ -243,7 +246,7 @@ public final class StoreGifting {
             }
         }
 
-        /* compiled from: StoreGifting.kt */
+        /* JADX INFO: compiled from: StoreGifting.kt */
         public static final /* data */ class Resolved extends GiftState implements HasGift {
             private final ModelGift gift;
 
@@ -298,7 +301,7 @@ public final class StoreGifting {
             }
         }
 
-        /* compiled from: StoreGifting.kt */
+        /* JADX INFO: compiled from: StoreGifting.kt */
         public static final /* data */ class Revoking extends GiftState implements HasGift {
             private final ModelGift gift;
 
@@ -361,7 +364,7 @@ public final class StoreGifting {
         }
     }
 
-    /* compiled from: StoreGifting.kt */
+    /* JADX INFO: compiled from: StoreGifting.kt */
     public interface HasGift {
         ModelGift getGift();
     }
@@ -392,17 +395,17 @@ public final class StoreGifting {
         }
     }
 
-    /* compiled from: StoreGifting.kt */
-    /* renamed from: com.discord.stores.StoreGifting$acceptGift$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreGifting$acceptGift$1 */
+    /* JADX INFO: compiled from: StoreGifting.kt */
     public static final class C59871 extends Lambda implements Function0<Unit> {
         public final /* synthetic */ ModelGift $gift;
 
-        /* compiled from: StoreGifting.kt */
-        /* renamed from: com.discord.stores.StoreGifting$acceptGift$1$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.stores.StoreGifting$acceptGift$1$1, reason: invalid class name */
+        /* JADX INFO: compiled from: StoreGifting.kt */
         public static final class AnonymousClass1 extends Lambda implements Function1<Error, Unit> {
 
-            /* compiled from: StoreGifting.kt */
-            /* renamed from: com.discord.stores.StoreGifting$acceptGift$1$1$1, reason: invalid class name and collision with other inner class name */
+            /* JADX INFO: renamed from: com.discord.stores.StoreGifting$acceptGift$1$1$1, reason: invalid class name and collision with other inner class name */
+            /* JADX INFO: compiled from: StoreGifting.kt */
             public static final class C132531 extends Lambda implements Function0<Unit> {
                 public final /* synthetic */ Error $error;
 
@@ -418,7 +421,7 @@ public final class StoreGifting {
                     return Unit.f27425a;
                 }
 
-                /* renamed from: invoke, reason: avoid collision after fix types in other method */
+                /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
                 public final void invoke2() {
                     if (this.$error.getType() != Error.Type.DISCORD_BAD_REQUEST) {
                         C59871 c59871 = C59871.this;
@@ -462,19 +465,19 @@ public final class StoreGifting {
                 return Unit.f27425a;
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2(Error error) {
                 Intrinsics3.checkNotNullParameter(error, "error");
                 StoreGifting.this.getDispatcher().schedule(new C132531(error));
             }
         }
 
-        /* compiled from: StoreGifting.kt */
-        /* renamed from: com.discord.stores.StoreGifting$acceptGift$1$2, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.stores.StoreGifting$acceptGift$1$2, reason: invalid class name */
+        /* JADX INFO: compiled from: StoreGifting.kt */
         public static final class AnonymousClass2 extends Lambda implements Function1<Void, Unit> {
 
-            /* compiled from: StoreGifting.kt */
-            /* renamed from: com.discord.stores.StoreGifting$acceptGift$1$2$1, reason: invalid class name */
+            /* JADX INFO: renamed from: com.discord.stores.StoreGifting$acceptGift$1$2$1, reason: invalid class name */
+            /* JADX INFO: compiled from: StoreGifting.kt */
             public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
                 public AnonymousClass1() {
                     super(0);
@@ -486,7 +489,7 @@ public final class StoreGifting {
                     return Unit.f27425a;
                 }
 
-                /* renamed from: invoke, reason: avoid collision after fix types in other method */
+                /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
                 public final void invoke2() {
                     C59871 c59871 = C59871.this;
                     StoreGifting.access$setGifts(StoreGifting.this, c59871.$gift.getCode(), new GiftState.Resolved(ModelGift.copy$default(C59871.this.$gift, 0L, true, null, null, 0, null, 0, null, null, null, null, 2045, null)));
@@ -503,7 +506,7 @@ public final class StoreGifting {
                 return Unit.f27425a;
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2(Void r2) {
                 StoreGifting.this.getDispatcher().schedule(new AnonymousClass1());
                 StoreStream.INSTANCE.getLibrary().fetchApplications();
@@ -522,7 +525,7 @@ public final class StoreGifting {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             StoreGifting.access$setGifts(StoreGifting.this, this.$gift.getCode(), new GiftState.Redeeming(this.$gift));
             Observable<Void> observableM11098X = RestAPI.INSTANCE.getApi().acceptGift(this.$gift.getCode()).m11098X(Schedulers2.m10875c());
@@ -531,13 +534,13 @@ public final class StoreGifting {
         }
     }
 
-    /* compiled from: StoreGifting.kt */
-    /* renamed from: com.discord.stores.StoreGifting$fetchGift$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreGifting$fetchGift$1 */
+    /* JADX INFO: compiled from: StoreGifting.kt */
     public static final class C59881 extends Lambda implements Function1<ModelGift, Unit> {
         public final /* synthetic */ String $giftCode;
 
-        /* compiled from: StoreGifting.kt */
-        /* renamed from: com.discord.stores.StoreGifting$fetchGift$1$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.stores.StoreGifting$fetchGift$1$1, reason: invalid class name */
+        /* JADX INFO: compiled from: StoreGifting.kt */
         public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
             public final /* synthetic */ ModelGift $gift;
 
@@ -553,7 +556,7 @@ public final class StoreGifting {
                 return Unit.f27425a;
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2() {
                 AnalyticsTracker.INSTANCE.giftResolved(this.$gift);
                 C59881 c59881 = C59881.this;
@@ -573,20 +576,20 @@ public final class StoreGifting {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(ModelGift modelGift) {
             Intrinsics3.checkNotNullParameter(modelGift, "gift");
             StoreGifting.this.getDispatcher().schedule(new AnonymousClass1(modelGift));
         }
     }
 
-    /* compiled from: StoreGifting.kt */
-    /* renamed from: com.discord.stores.StoreGifting$fetchGift$2 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreGifting$fetchGift$2 */
+    /* JADX INFO: compiled from: StoreGifting.kt */
     public static final class C59892 extends Lambda implements Function1<Error, Unit> {
         public final /* synthetic */ String $giftCode;
 
-        /* compiled from: StoreGifting.kt */
-        /* renamed from: com.discord.stores.StoreGifting$fetchGift$2$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.stores.StoreGifting$fetchGift$2$1, reason: invalid class name */
+        /* JADX INFO: compiled from: StoreGifting.kt */
         public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
             public final /* synthetic */ Error $error;
 
@@ -602,7 +605,7 @@ public final class StoreGifting {
                 return Unit.f27425a;
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2() {
                 AnalyticsTracker.INSTANCE.giftResolvedFailed(C59892.this.$giftCode);
                 int iOrdinal = this.$error.getType().ordinal();
@@ -632,15 +635,15 @@ public final class StoreGifting {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Error error) {
             Intrinsics3.checkNotNullParameter(error, "error");
             StoreGifting.this.getDispatcher().schedule(new AnonymousClass1(error));
         }
     }
 
-    /* compiled from: StoreGifting.kt */
-    /* renamed from: com.discord.stores.StoreGifting$fetchMyGiftsForSku$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreGifting$fetchMyGiftsForSku$1 */
+    /* JADX INFO: compiled from: StoreGifting.kt */
     public static final class C59901 extends Lambda implements Function0<Unit> {
         public final /* synthetic */ String $comboId;
 
@@ -656,19 +659,19 @@ public final class StoreGifting {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             StoreGifting.access$setGifts(StoreGifting.this, this.$comboId, GiftState.Loading.INSTANCE);
         }
     }
 
-    /* compiled from: StoreGifting.kt */
-    /* renamed from: com.discord.stores.StoreGifting$fetchMyGiftsForSku$2 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreGifting$fetchMyGiftsForSku$2 */
+    /* JADX INFO: compiled from: StoreGifting.kt */
     public static final class C59912 extends Lambda implements Function1<Error, Unit> {
         public final /* synthetic */ String $comboId;
 
-        /* compiled from: StoreGifting.kt */
-        /* renamed from: com.discord.stores.StoreGifting$fetchMyGiftsForSku$2$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.stores.StoreGifting$fetchMyGiftsForSku$2$1, reason: invalid class name */
+        /* JADX INFO: compiled from: StoreGifting.kt */
         public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
             public final /* synthetic */ Error $error;
 
@@ -684,7 +687,7 @@ public final class StoreGifting {
                 return Unit.f27425a;
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2() {
                 int iOrdinal = this.$error.getType().ordinal();
                 if (iOrdinal == 3) {
@@ -714,22 +717,22 @@ public final class StoreGifting {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Error error) {
             Intrinsics3.checkNotNullParameter(error, "error");
             StoreGifting.this.getDispatcher().schedule(new AnonymousClass1(error));
         }
     }
 
-    /* compiled from: StoreGifting.kt */
-    /* renamed from: com.discord.stores.StoreGifting$fetchMyGiftsForSku$3 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreGifting$fetchMyGiftsForSku$3 */
+    /* JADX INFO: compiled from: StoreGifting.kt */
     public static final class C59923 extends Lambda implements Function1<List<? extends ModelGift>, Unit> {
         public final /* synthetic */ String $comboId;
         public final /* synthetic */ Long $planId;
         public final /* synthetic */ long $skuId;
 
-        /* compiled from: StoreGifting.kt */
-        /* renamed from: com.discord.stores.StoreGifting$fetchMyGiftsForSku$3$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.stores.StoreGifting$fetchMyGiftsForSku$3$1, reason: invalid class name */
+        /* JADX INFO: compiled from: StoreGifting.kt */
         public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
             public final /* synthetic */ List $gifts;
 
@@ -745,7 +748,7 @@ public final class StoreGifting {
                 return Unit.f27425a;
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2() {
                 C59923 c59923 = C59923.this;
                 StoreGifting.access$removeGiftCode(StoreGifting.this, c59923.$comboId);
@@ -771,15 +774,15 @@ public final class StoreGifting {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(List<ModelGift> list) {
             Intrinsics3.checkNotNullParameter(list, "gifts");
             StoreGifting.this.getDispatcher().schedule(new AnonymousClass1(list));
         }
     }
 
-    /* compiled from: StoreGifting.kt */
-    /* renamed from: com.discord.stores.StoreGifting$generateGiftCode$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreGifting$generateGiftCode$1 */
+    /* JADX INFO: compiled from: StoreGifting.kt */
     public static final class C59931 extends Lambda implements Function0<Unit> {
         public final /* synthetic */ String $comboId;
 
@@ -795,20 +798,20 @@ public final class StoreGifting {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             StoreGifting.access$setGifts(StoreGifting.this, this.$comboId, GiftState.Loading.INSTANCE);
         }
     }
 
-    /* compiled from: StoreGifting.kt */
-    /* renamed from: com.discord.stores.StoreGifting$generateGiftCode$2 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreGifting$generateGiftCode$2 */
+    /* JADX INFO: compiled from: StoreGifting.kt */
     public static final class C59942 extends Lambda implements Function1<Error, Unit> {
         public final /* synthetic */ String $comboId;
         public final /* synthetic */ Function1 $onError;
 
-        /* compiled from: StoreGifting.kt */
-        /* renamed from: com.discord.stores.StoreGifting$generateGiftCode$2$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.stores.StoreGifting$generateGiftCode$2$1, reason: invalid class name */
+        /* JADX INFO: compiled from: StoreGifting.kt */
         public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
             public final /* synthetic */ Error $error;
 
@@ -824,7 +827,7 @@ public final class StoreGifting {
                 return Unit.f27425a;
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2() {
                 int iOrdinal = this.$error.getType().ordinal();
                 if (iOrdinal == 3) {
@@ -857,7 +860,7 @@ public final class StoreGifting {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Error error) {
             Intrinsics3.checkNotNullParameter(error, "error");
             StoreGifting.this.getDispatcher().schedule(new AnonymousClass1(error));
@@ -867,14 +870,14 @@ public final class StoreGifting {
         }
     }
 
-    /* compiled from: StoreGifting.kt */
-    /* renamed from: com.discord.stores.StoreGifting$generateGiftCode$3 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreGifting$generateGiftCode$3 */
+    /* JADX INFO: compiled from: StoreGifting.kt */
     public static final class C59953 extends Lambda implements Function1<ModelGift, Unit> {
         public final /* synthetic */ String $comboId;
         public final /* synthetic */ Function1 $onSuccess;
 
-        /* compiled from: StoreGifting.kt */
-        /* renamed from: com.discord.stores.StoreGifting$generateGiftCode$3$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.stores.StoreGifting$generateGiftCode$3$1, reason: invalid class name */
+        /* JADX INFO: compiled from: StoreGifting.kt */
         public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
             public final /* synthetic */ ModelGift $newGift;
 
@@ -890,7 +893,7 @@ public final class StoreGifting {
                 return Unit.f27425a;
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2() {
                 C59953 c59953 = C59953.this;
                 StoreGifting.access$removeGiftCode(StoreGifting.this, c59953.$comboId);
@@ -911,7 +914,7 @@ public final class StoreGifting {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(ModelGift modelGift) {
             Intrinsics3.checkNotNullParameter(modelGift, "newGift");
             StoreGifting.this.getDispatcher().schedule(new AnonymousClass1(modelGift));
@@ -921,8 +924,8 @@ public final class StoreGifting {
         }
     }
 
-    /* compiled from: StoreGifting.kt */
-    /* renamed from: com.discord.stores.StoreGifting$getMyResolvedGifts$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreGifting$getMyResolvedGifts$1 */
+    /* JADX INFO: compiled from: StoreGifting.kt */
     public static final class C59961<T, R> implements Func1<Map<String, ? extends GiftState>, List<? extends ModelGift>> {
         public final /* synthetic */ long $userId;
 
@@ -935,7 +938,7 @@ public final class StoreGifting {
             return call2(map);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final List<ModelGift> call2(Map<String, ? extends GiftState> map) {
             User user;
             Collection<? extends GiftState> collectionValues = map.values();
@@ -955,8 +958,8 @@ public final class StoreGifting {
         }
     }
 
-    /* compiled from: StoreGifting.kt */
-    /* renamed from: com.discord.stores.StoreGifting$requestGift$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreGifting$requestGift$1 */
+    /* JADX INFO: compiled from: StoreGifting.kt */
     public static final class C59971 extends Lambda implements Function0<Unit> {
         public final /* synthetic */ String $giftCode;
 
@@ -972,14 +975,14 @@ public final class StoreGifting {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             StoreGifting.access$fetchGift(StoreGifting.this, this.$giftCode);
         }
     }
 
-    /* compiled from: StoreGifting.kt */
-    /* renamed from: com.discord.stores.StoreGifting$requestGift$2 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreGifting$requestGift$2 */
+    /* JADX INFO: compiled from: StoreGifting.kt */
     public static final class C59982<T, R> implements Func1<Map<String, ? extends GiftState>, GiftState> {
         public final /* synthetic */ String $giftCode;
 
@@ -992,15 +995,15 @@ public final class StoreGifting {
             return call2(map);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final GiftState call2(Map<String, ? extends GiftState> map) {
             GiftState giftState = map.get(this.$giftCode);
             return giftState != null ? giftState : GiftState.Loading.INSTANCE;
         }
     }
 
-    /* compiled from: StoreGifting.kt */
-    /* renamed from: com.discord.stores.StoreGifting$revokeGiftCode$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreGifting$revokeGiftCode$1 */
+    /* JADX INFO: compiled from: StoreGifting.kt */
     public static final class C59991 extends Lambda implements Function0<Unit> {
         public final /* synthetic */ ModelGift $gift;
 
@@ -1016,19 +1019,19 @@ public final class StoreGifting {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             StoreGifting.access$setGifts(StoreGifting.this, this.$gift.getCode(), new GiftState.Revoking(this.$gift));
         }
     }
 
-    /* compiled from: StoreGifting.kt */
-    /* renamed from: com.discord.stores.StoreGifting$revokeGiftCode$2 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreGifting$revokeGiftCode$2 */
+    /* JADX INFO: compiled from: StoreGifting.kt */
     public static final class C60002 extends Lambda implements Function1<Error, Unit> {
         public final /* synthetic */ ModelGift $gift;
 
-        /* compiled from: StoreGifting.kt */
-        /* renamed from: com.discord.stores.StoreGifting$revokeGiftCode$2$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.stores.StoreGifting$revokeGiftCode$2$1, reason: invalid class name */
+        /* JADX INFO: compiled from: StoreGifting.kt */
         public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
             public final /* synthetic */ Error $error;
 
@@ -1044,7 +1047,7 @@ public final class StoreGifting {
                 return Unit.f27425a;
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2() {
                 Logger.e$default(AppLog.f14950g, "Revoking Gift Error", new Exception(String.valueOf(this.$error.getType())), null, 4, null);
                 C60002 c60002 = C60002.this;
@@ -1064,20 +1067,20 @@ public final class StoreGifting {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Error error) {
             Intrinsics3.checkNotNullParameter(error, "error");
             StoreGifting.this.getDispatcher().schedule(new AnonymousClass1(error));
         }
     }
 
-    /* compiled from: StoreGifting.kt */
-    /* renamed from: com.discord.stores.StoreGifting$revokeGiftCode$3 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreGifting$revokeGiftCode$3 */
+    /* JADX INFO: compiled from: StoreGifting.kt */
     public static final class C60013 extends Lambda implements Function1<Void, Unit> {
         public final /* synthetic */ ModelGift $gift;
 
-        /* compiled from: StoreGifting.kt */
-        /* renamed from: com.discord.stores.StoreGifting$revokeGiftCode$3$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.stores.StoreGifting$revokeGiftCode$3$1, reason: invalid class name */
+        /* JADX INFO: compiled from: StoreGifting.kt */
         public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
             public AnonymousClass1() {
                 super(0);
@@ -1089,7 +1092,7 @@ public final class StoreGifting {
                 return Unit.f27425a;
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2() {
                 C60013 c60013 = C60013.this;
                 StoreGifting.access$removeGiftCode(StoreGifting.this, c60013.$gift.getCode());
@@ -1108,7 +1111,7 @@ public final class StoreGifting {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Void r2) {
             StoreGifting.this.getDispatcher().schedule(new AnonymousClass1());
         }
@@ -1173,6 +1176,7 @@ public final class StoreGifting {
         ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.restSubscribeOn$default(RestAPI.INSTANCE.getApi().resolveGiftCode(giftCode, true, true), false, 1, null), StoreGifting.class, (Context) null, (Function1) null, new C59892(giftCode), (Function0) null, (Function0) null, new C59881(giftCode), 54, (Object) null);
     }
 
+    /* JADX WARN: Multi-variable type inference failed */
     public static /* synthetic */ void generateGiftCode$default(StoreGifting storeGifting, long j, Long l, Function1 function1, Function1 function12, int i, Object obj) {
         storeGifting.generateGiftCode(j, (i & 2) != 0 ? null : l, (i & 4) != 0 ? null : function1, (i & 8) != 0 ? null : function12);
     }

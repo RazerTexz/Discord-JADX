@@ -5,8 +5,8 @@ import com.discord.models.domain.ModelAuditLogEntry;
 import p001a0.p002a.p003a.C0002b;
 import p007b.p100d.p104b.p105a.outline;
 
-/* compiled from: WidgetBugReport.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetBugReport.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final /* data */ class Priority {
     private final int description;
     private final long emojiId;
@@ -31,17 +31,17 @@ public final /* data */ class Priority {
         return priority.copy(i, i2, j);
     }
 
-    /* renamed from: component1, reason: from getter */
+    /* JADX INFO: renamed from: component1, reason: from getter */
     public final int getTitle() {
         return this.title;
     }
 
-    /* renamed from: component2, reason: from getter */
+    /* JADX INFO: renamed from: component2, reason: from getter */
     public final int getDescription() {
         return this.description;
     }
 
-    /* renamed from: component3, reason: from getter */
+    /* JADX INFO: renamed from: component3, reason: from getter */
     public final long getEmojiId() {
         return this.emojiId;
     }

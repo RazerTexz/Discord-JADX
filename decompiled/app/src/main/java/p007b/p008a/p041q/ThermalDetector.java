@@ -20,33 +20,33 @@ import p507d0.LazyJVM;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: ThermalDetector.kt */
+/* JADX INFO: renamed from: b.a.q.i0, reason: use source file name */
+/* JADX INFO: compiled from: ThermalDetector.kt */
+/* JADX INFO: loaded from: classes.dex */
 @AnyThread
 @RequiresApi(29)
-/* renamed from: b.a.q.i0, reason: use source file name */
-/* loaded from: classes.dex */
 public final class ThermalDetector implements PowerManager.OnThermalStatusChangedListener, Runnable, DebugPrintable {
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public static boolean f1630k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public static boolean f1631l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public static boolean f1632m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public static final ThermalDetector f1633n = new ThermalDetector();
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static final Lazy f1629j = LazyJVM.lazy(Lazy5.NONE, a.f1634j);
 
-    /* compiled from: ThermalDetector.kt */
-    /* renamed from: b.a.q.i0$a */
+    /* JADX INFO: renamed from: b.a.q.i0$a */
+    /* JADX INFO: compiled from: ThermalDetector.kt */
     public static final class a extends Lambda implements Function0<Handler> {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public static final a f1634j = new a();
 
         public a() {
@@ -59,7 +59,7 @@ public final class ThermalDetector implements PowerManager.OnThermalStatusChange
         }
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final ThermalStatus m278a() {
         ThermalStatus.Companion companion = ThermalStatus.INSTANCE;
         Application application = ApplicationProvider.INSTANCE.get();
@@ -70,7 +70,7 @@ public final class ThermalDetector implements PowerManager.OnThermalStatusChange
         return companion.m8500a(((PowerManager) systemService).getCurrentThermalStatus());
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final void m279b(ThermalStatus thermalStatus) {
         LoggingProvider.INSTANCE.get().recordBreadcrumb("thermalStatus = " + thermalStatus, "thermal");
         switch (thermalStatus.ordinal()) {
@@ -114,7 +114,7 @@ public final class ThermalDetector implements PowerManager.OnThermalStatusChange
         }
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final void m280c() {
         if (f1632m) {
             return;

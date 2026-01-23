@@ -10,9 +10,9 @@ import p007b.p008a.p027k.p029f.HookNode2;
 import p507d0.p592z.p594d.Intrinsics3;
 
 /* JADX INFO: Add missing generic type declarations: [S] */
-/* compiled from: HookRule.kt */
-/* renamed from: b.a.k.h.f, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.a.k.h.f, reason: use source file name */
+/* JADX INFO: compiled from: HookRule.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class HookRule<S> extends Rule<RenderContext, HookNode2, S> {
     public HookRule(Pattern pattern) {
         super(pattern);

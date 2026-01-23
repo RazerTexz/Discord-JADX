@@ -5,14 +5,14 @@ import android.os.IInterface;
 import android.os.Parcel;
 import android.os.RemoteException;
 
-/* renamed from: b.i.a.f.h.m.a */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.h.m.a */
+/* JADX INFO: loaded from: classes3.dex */
 public class C3924a implements IInterface {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final IBinder f10447a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final String f10448b;
 
     public C3924a(IBinder iBinder, String str) {
@@ -25,14 +25,14 @@ public class C3924a implements IInterface {
         return this.f10447a;
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final Parcel m5398c() {
         Parcel parcelObtain = Parcel.obtain();
         parcelObtain.writeInterfaceToken(this.f10448b);
         return parcelObtain;
     }
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public final void m5399g(int i, Parcel parcel) throws RemoteException {
         try {
             this.f10447a.transact(i, parcel, null, 1);

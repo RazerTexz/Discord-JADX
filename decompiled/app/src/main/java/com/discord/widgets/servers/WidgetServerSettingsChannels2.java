@@ -19,9 +19,9 @@ import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 import p658rx.functions.Func7;
 
-/* compiled from: WidgetServerSettingsChannels.kt */
-/* renamed from: com.discord.widgets.servers.WidgetServerSettingsChannels$Model$Companion$get$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.servers.WidgetServerSettingsChannels$Model$Companion$get$1, reason: use source file name */
+/* JADX INFO: compiled from: WidgetServerSettingsChannels.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetServerSettingsChannels2<T1, T2, T3, T4, T5, T6, T7, R> implements Func7<MeUser, Long, Guild, Map<Long, ? extends Channel>, List<? extends Channel>, Map<Long, ? extends Long>, Integer, WidgetServerSettingsChannels.Model> {
     public static final WidgetServerSettingsChannels2 INSTANCE = new WidgetServerSettingsChannels2();
 
@@ -31,7 +31,7 @@ public final class WidgetServerSettingsChannels2<T1, T2, T3, T4, T5, T6, T7, R> 
     }
 
     /* JADX WARN: Removed duplicated region for block: B:31:0x00d6  */
-    /* renamed from: call, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */

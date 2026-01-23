@@ -7,15 +7,15 @@ import java.util.concurrent.Executor;
 import p007b.p225i.p226a.p288f.p299e.p308o.C3404f;
 import p007b.p225i.p226a.p288f.p340n.InterfaceC4353a;
 
-/* compiled from: com.google.firebase:firebase-iid@@21.0.0 */
-/* renamed from: b.i.c.s.c */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.c.s.c */
+/* JADX INFO: compiled from: com.google.firebase:firebase-iid@@21.0.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public final /* synthetic */ class C4809c implements InterfaceC4353a {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final Context f12848a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final Intent f12849b;
 
     public C4809c(Context context, Intent intent) {
@@ -24,7 +24,7 @@ public final /* synthetic */ class C4809c implements InterfaceC4353a {
     }
 
     @Override // p007b.p225i.p226a.p288f.p340n.InterfaceC4353a
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final Object mo4012a(Task task) {
         Context context = this.f12848a;
         Intent intent = this.f12849b;

@@ -12,7 +12,7 @@ import java.util.List;
 import p007b.p008a.p033m.p034a.C1150k;
 import p007b.p100d.p104b.p105a.outline;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class ModelNotificationSettings implements Model {
     public static int FORUM_THREAD_CREATED_MASK = 8192 | 16384;
     public static int FORUM_THREAD_CREATED_OFF = 8192;

@@ -4,7 +4,7 @@ import androidx.annotation.RestrictTo;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public final class ScreenOrientation {
     public static final int ANY = 5;
     public static final int DEFAULT = 0;

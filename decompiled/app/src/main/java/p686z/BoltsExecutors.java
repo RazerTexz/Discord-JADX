@@ -8,31 +8,31 @@ import java.util.concurrent.LinkedBlockingQueue;
 import java.util.concurrent.ThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
 
-/* compiled from: BoltsExecutors.java */
-/* renamed from: z.b, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: z.b, reason: use source file name */
+/* JADX INFO: compiled from: BoltsExecutors.java */
+/* JADX INFO: loaded from: classes.dex */
 public final class BoltsExecutors {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final BoltsExecutors f27965a = new BoltsExecutors();
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final ExecutorService f27966b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final Executor f27967c;
 
-    /* compiled from: BoltsExecutors.java */
-    /* renamed from: z.b$b */
+    /* JADX INFO: renamed from: z.b$b */
+    /* JADX INFO: compiled from: BoltsExecutors.java */
     public static class b implements Executor {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public ThreadLocal<Integer> f27968j = new ThreadLocal<>();
 
         public b(a aVar) {
         }
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final int m11365a() {
             Integer num = this.f27968j.get();
             if (num == null) {
@@ -67,20 +67,18 @@ public final class BoltsExecutors {
         }
     }
 
-    /* JADX WARN: Multi-variable type inference failed */
-    /* JADX WARN: Type inference failed for: r0v9, types: [java.util.concurrent.ExecutorService] */
     public BoltsExecutors() {
-        ThreadPoolExecutor threadPoolExecutorNewCachedThreadPool;
+        ExecutorService executorServiceNewCachedThreadPool;
         String property = System.getProperty("java.runtime.name");
         if (property == null ? false : property.toLowerCase(Locale.US).contains("android")) {
             AndroidExecutors androidExecutors = AndroidExecutors.f27960a;
             ThreadPoolExecutor threadPoolExecutor = new ThreadPoolExecutor(AndroidExecutors.f27962c, AndroidExecutors.f27963d, 1L, TimeUnit.SECONDS, new LinkedBlockingQueue());
             threadPoolExecutor.allowCoreThreadTimeOut(true);
-            threadPoolExecutorNewCachedThreadPool = threadPoolExecutor;
+            executorServiceNewCachedThreadPool = threadPoolExecutor;
         } else {
-            threadPoolExecutorNewCachedThreadPool = Executors.newCachedThreadPool();
+            executorServiceNewCachedThreadPool = Executors.newCachedThreadPool();
         }
-        this.f27966b = threadPoolExecutorNewCachedThreadPool;
+        this.f27966b = executorServiceNewCachedThreadPool;
         Executors.newSingleThreadScheduledExecutor();
         this.f27967c = new b(null);
     }

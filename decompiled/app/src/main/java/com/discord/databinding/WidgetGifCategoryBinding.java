@@ -8,26 +8,26 @@ import androidx.viewbinding.ViewBinding;
 import com.discord.utilities.views.ContentResizingCoordinatorLayout;
 import com.discord.widgets.chat.input.gifpicker.GifLoadingView;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public final class WidgetGifCategoryBinding implements ViewBinding {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     @NonNull
     public final ContentResizingCoordinatorLayout f16693a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     @NonNull
     public final ContentResizingCoordinatorLayout f16694b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     @NonNull
     public final RecyclerView f16695c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     @NonNull
     public final GifLoadingView f16696d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     @NonNull
     public final TextView f16697e;
 

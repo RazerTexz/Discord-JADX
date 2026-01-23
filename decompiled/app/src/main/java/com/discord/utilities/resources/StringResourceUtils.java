@@ -12,9 +12,9 @@ import java.util.Objects;
 import p007b.p008a.p027k.FormatUtils;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: StringResourceUtils.kt */
-/* renamed from: com.discord.utilities.resources.StringResourceUtilsKt, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.utilities.resources.StringResourceUtilsKt, reason: use source file name */
+/* JADX INFO: compiled from: StringResourceUtils.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class StringResourceUtils {
     public static final CharSequence getI18nPluralString(Context context, @PluralsRes int i, int i2, Object... objArr) {
         Intrinsics3.checkNotNullParameter(context, "$this$getI18nPluralString");
@@ -35,7 +35,7 @@ public final class StringResourceUtils {
         return objArr.length == 0 ? FormatUtils.m220l(quantityString, new Object[0], null, 2) : FormatUtils.m220l(quantityString, Arrays.copyOf(objArr, objArr.length), null, 2);
     }
 
-    public static final CharSequence getQuantityString(Resources resources, Context context, @PluralsRes int i, int i2, Object... objArr) throws Resources.NotFoundException {
+    public static final CharSequence getQuantityString(Resources resources, Context context, @PluralsRes int i, int i2, Object... objArr) {
         Intrinsics3.checkNotNullParameter(resources, "$this$getQuantityString");
         Intrinsics3.checkNotNullParameter(context, "context");
         Intrinsics3.checkNotNullParameter(objArr, "formatArgs");

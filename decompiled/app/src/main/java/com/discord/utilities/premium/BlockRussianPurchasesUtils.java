@@ -10,16 +10,16 @@ import p007b.p008a.p009a.WidgetBlockRussianPurchasesDialog;
 import p507d0.LazyJVM;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: BlockRussianPurchasesUtils.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: BlockRussianPurchasesUtils.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class BlockRussianPurchasesUtils {
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private static final Lazy INSTANCE$delegate = LazyJVM.lazy(BlockRussianPurchasesUtils2.INSTANCE);
     private Boolean isBlockedFromPurchases;
 
-    /* compiled from: BlockRussianPurchasesUtils.kt */
+    /* JADX INFO: compiled from: BlockRussianPurchasesUtils.kt */
     public static final class Companion {
         private Companion() {
         }

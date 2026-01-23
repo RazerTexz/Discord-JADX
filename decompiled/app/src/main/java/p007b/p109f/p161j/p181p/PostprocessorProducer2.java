@@ -4,12 +4,12 @@ import com.facebook.common.references.CloseableReference;
 import p007b.p109f.p161j.p175j.CloseableImage;
 import p007b.p109f.p161j.p181p.PostprocessorProducer;
 
-/* compiled from: PostprocessorProducer.java */
-/* renamed from: b.f.j.p.u0, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.f.j.p.u0, reason: use source file name */
+/* JADX INFO: compiled from: PostprocessorProducer.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class PostprocessorProducer2 implements Runnable {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final /* synthetic */ PostprocessorProducer.b f4237j;
 
     public PostprocessorProducer2(PostprocessorProducer.b bVar) {

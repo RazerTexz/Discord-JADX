@@ -8,26 +8,26 @@ import p007b.p225i.p226a.p288f.p340n.InterfaceC4357c;
 import p007b.p452o.p453a.p455n.CameraEngine;
 import p007b.p452o.p453a.p455n.p463v.CameraOrchestrator;
 
-/* compiled from: CameraStateOrchestrator.java */
-/* renamed from: b.o.a.n.v.f, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.o.a.n.v.f, reason: use source file name */
+/* JADX INFO: compiled from: CameraStateOrchestrator.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class CameraStateOrchestrator extends CameraOrchestrator {
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public CameraState2 f14028f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public CameraState2 f14029g;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public int f14030h;
 
     /* JADX INFO: Add missing generic type declarations: [T] */
-    /* compiled from: CameraStateOrchestrator.java */
-    /* renamed from: b.o.a.n.v.f$a */
+    /* JADX INFO: renamed from: b.o.a.n.v.f$a */
+    /* JADX INFO: compiled from: CameraStateOrchestrator.java */
     public class a<T> implements InterfaceC4357c<T> {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final /* synthetic */ int f14031a;
 
         public a(int i) {
@@ -45,23 +45,23 @@ public class CameraStateOrchestrator extends CameraOrchestrator {
     }
 
     /* JADX INFO: Add missing generic type declarations: [T] */
-    /* compiled from: CameraStateOrchestrator.java */
-    /* renamed from: b.o.a.n.v.f$b */
+    /* JADX INFO: renamed from: b.o.a.n.v.f$b */
+    /* JADX INFO: compiled from: CameraStateOrchestrator.java */
     public class b<T> implements Callable<Task<T>> {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public final /* synthetic */ CameraState2 f14033j;
 
-        /* renamed from: k */
+        /* JADX INFO: renamed from: k */
         public final /* synthetic */ String f14034k;
 
-        /* renamed from: l */
+        /* JADX INFO: renamed from: l */
         public final /* synthetic */ CameraState2 f14035l;
 
-        /* renamed from: m */
+        /* JADX INFO: renamed from: m */
         public final /* synthetic */ Callable f14036m;
 
-        /* renamed from: n */
+        /* JADX INFO: renamed from: n */
         public final /* synthetic */ boolean f14037n;
 
         public b(CameraState2 cameraState2, String str, CameraState2 cameraState22, Callable callable, boolean z2) {
@@ -94,7 +94,7 @@ public class CameraStateOrchestrator extends CameraOrchestrator {
     }
 
     @NonNull
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public <T> Task<T> m7368f(@NonNull CameraState2 cameraState2, @NonNull CameraState2 cameraState22, boolean z2, @NonNull Callable<Task<T>> callable) {
         String str;
         int i = this.f14030h + 1;

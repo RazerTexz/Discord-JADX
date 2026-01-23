@@ -7,7 +7,7 @@ import java.util.Set;
 import p007b.p100d.p104b.p105a.outline;
 import p637j0.p652o.RxJavaPlugins;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public final class OnErrorThrowable extends RuntimeException {
     private static final long serialVersionUID = -569558213262703934L;
     private final boolean hasValue;
@@ -17,10 +17,10 @@ public final class OnErrorThrowable extends RuntimeException {
         private static final long serialVersionUID = -3454462756050397899L;
         private final Object value;
 
-        /* renamed from: rx.exceptions.OnErrorThrowable$OnNextValue$a */
+        /* JADX INFO: renamed from: rx.exceptions.OnErrorThrowable$OnNextValue$a */
         public static final class C13013a {
 
-            /* renamed from: a */
+            /* JADX INFO: renamed from: a */
             public static final Set<Class<?>> f27643a;
 
             static {
@@ -65,13 +65,13 @@ public final class OnErrorThrowable extends RuntimeException {
             this.value = obj;
         }
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public Object m11127a() {
             return this.value;
         }
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static Throwable m11126a(Throwable th, Object obj) {
         if (th == null) {
             th = new NullPointerException();

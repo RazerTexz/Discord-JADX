@@ -36,15 +36,15 @@ import p507d0.p580t.Sets5;
 import p507d0.p580t._Collections;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: DeserializedPackageMemberScope.kt */
-/* renamed from: d0.e0.p.d.m0.l.b.e0.i, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.l.b.e0.i, reason: use source file name */
+/* JADX INFO: compiled from: DeserializedPackageMemberScope.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public class DeserializedPackageMemberScope extends DeserializedMemberScope {
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public final PackageFragmentDescriptor f24597g;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public final FqName f24598h;
 
     public DeserializedPackageMemberScope(PackageFragmentDescriptor packageFragmentDescriptor, C11687l c11687l, NameResolver nameResolver, BinaryVersion binaryVersion, DeserializedContainerSource2 deserializedContainerSource2, context5 context5Var, Function0<? extends Collection<Name>> function0) {
@@ -73,27 +73,27 @@ public class DeserializedPackageMemberScope extends DeserializedMemberScope {
     }
 
     @Override // p507d0.p513e0.p514p.p515d.p517m0.p562l.p563b.p565e0.DeserializedMemberScope
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public void mo9955a(Collection<DeclarationDescriptor> collection, Function1<? super Name, Boolean> function1) {
         Intrinsics3.checkNotNullParameter(collection, "result");
         Intrinsics3.checkNotNullParameter(function1, "nameFilter");
     }
 
     @Override // p507d0.p513e0.p514p.p515d.p517m0.p562l.p563b.p565e0.DeserializedMemberScope
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public ClassId mo9958e(Name name) {
         Intrinsics3.checkNotNullParameter(name, ModelAuditLogEntry.CHANGE_KEY_NAME);
         return new ClassId(this.f24598h, name);
     }
 
     @Override // p507d0.p513e0.p514p.p515d.p517m0.p562l.p563b.p565e0.DeserializedMemberScope
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public Set<Name> mo9959f() {
         return Sets5.emptySet();
     }
 
     @Override // p507d0.p513e0.p514p.p515d.p517m0.p562l.p563b.p565e0.DeserializedMemberScope
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public Set<Name> mo9960g() {
         return Sets5.emptySet();
     }
@@ -112,13 +112,13 @@ public class DeserializedPackageMemberScope extends DeserializedMemberScope {
     }
 
     @Override // p507d0.p513e0.p514p.p515d.p517m0.p562l.p563b.p565e0.DeserializedMemberScope
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public Set<Name> mo9961h() {
         return Sets5.emptySet();
     }
 
     @Override // p507d0.p513e0.p514p.p515d.p517m0.p562l.p563b.p565e0.DeserializedMemberScope
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public boolean mo9965i(Name name) {
         boolean z2;
         Intrinsics3.checkNotNullParameter(name, ModelAuditLogEntry.CHANGE_KEY_NAME);

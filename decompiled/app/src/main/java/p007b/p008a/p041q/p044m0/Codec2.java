@@ -4,24 +4,24 @@ import com.discord.models.domain.ModelAuditLogEntry;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: Codec.kt */
-/* renamed from: b.a.q.m0.a, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.a.q.m0.a, reason: use source file name */
+/* JADX INFO: compiled from: Codec.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class Codec2 {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final String f1671a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final int f1672b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final String f1673c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final int f1674d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final Integer f1675e;
 
     public Codec2(String str, int i, String str2, int i2, Integer num) {

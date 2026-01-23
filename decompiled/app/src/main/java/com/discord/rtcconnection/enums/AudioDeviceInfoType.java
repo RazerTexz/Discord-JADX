@@ -6,9 +6,9 @@ import java.util.Set;
 import kotlin.jvm.internal.DefaultConstructorMarker;
 import p507d0.p580t.Sets5;
 
-/* compiled from: AudioDeviceInfoType.kt */
+/* JADX INFO: compiled from: AudioDeviceInfoType.kt */
+/* JADX INFO: loaded from: classes.dex */
 @SuppressLint({"InlinedApi"})
-/* loaded from: classes.dex */
 public enum AudioDeviceInfoType {
     BuiltinEarpiece(1),
     BuiltinSpeaker(2),
@@ -36,13 +36,13 @@ public enum AudioDeviceInfoType {
     Unknown(Integer.MIN_VALUE);
 
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE;
     private static final Set<AudioDeviceInfoType> supportedOutputTypes;
     private final int value;
 
-    /* compiled from: AudioDeviceInfoType.kt */
-    /* renamed from: com.discord.rtcconnection.enums.AudioDeviceInfoType$a, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: com.discord.rtcconnection.enums.AudioDeviceInfoType$a, reason: from kotlin metadata */
+    /* JADX INFO: compiled from: AudioDeviceInfoType.kt */
     public static final class Companion {
         public Companion(DefaultConstructorMarker defaultConstructorMarker) {
         }

@@ -12,8 +12,8 @@ import java.util.ArrayList;
 import p507d0.p580t._Collections;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ColorPickerUtils.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: ColorPickerUtils.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class ColorPickerUtils {
     public static final ColorPickerUtils INSTANCE = new ColorPickerUtils();
 
@@ -21,7 +21,7 @@ public final class ColorPickerUtils {
     }
 
     @ColorInt
-    private static final int[] getColorsToDisplayForPicker(Resources resources, @ColorInt int i) throws Resources.NotFoundException {
+    private static final int[] getColorsToDisplayForPicker(Resources resources, @ColorInt int i) {
         int[] intArray = resources.getIntArray(C5419R.array.color_picker_palette);
         Intrinsics3.checkNotNullExpressionValue(intArray, "getIntArray(com.discord.…ray.color_picker_palette)");
         ArrayList arrayList = new ArrayList();

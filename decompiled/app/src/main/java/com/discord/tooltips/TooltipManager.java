@@ -29,46 +29,46 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 import p658rx.Observable;
 
-/* compiled from: TooltipManager.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: TooltipManager.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public class TooltipManager {
 
-    /* renamed from: a, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: a, reason: from kotlin metadata */
     public Map<String, Integer> tooltipNameToTooltipViewIdMap;
 
-    /* renamed from: b, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: b, reason: from kotlin metadata */
     public final AcknowledgedTooltipsCache acknowledgedTooltipsCache;
 
-    /* renamed from: c, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: c, reason: from kotlin metadata */
     public final Set<String> shownTooltipNames;
 
-    /* renamed from: d, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: d, reason: from kotlin metadata */
     public final int maxTooltipsPerColdStart;
 
-    /* renamed from: e, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: e, reason: from kotlin metadata */
     public final FloatingViewManager floatingViewManager;
 
-    /* compiled from: TooltipManager.kt */
-    /* renamed from: com.discord.tooltips.TooltipManager$a */
+    /* JADX INFO: renamed from: com.discord.tooltips.TooltipManager$a */
+    /* JADX INFO: compiled from: TooltipManager.kt */
     public static final class C6647a {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public static WeakReference<TooltipManager> f18972a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public static final Lazy f18973b = LazyJVM.lazy(a.f18976j);
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public static final Lazy f18974c = LazyJVM.lazy(b.f18977j);
 
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         public static final C6647a f18975d = null;
 
-        /* compiled from: TooltipManager.kt */
-        /* renamed from: com.discord.tooltips.TooltipManager$a$a */
+        /* JADX INFO: renamed from: com.discord.tooltips.TooltipManager$a$a */
+        /* JADX INFO: compiled from: TooltipManager.kt */
         public static final class a extends Lambda implements Function0<AcknowledgedTooltipsCache> {
 
-            /* renamed from: j */
+            /* JADX INFO: renamed from: j */
             public static final a f18976j = new a();
 
             public a() {
@@ -81,11 +81,11 @@ public class TooltipManager {
             }
         }
 
-        /* compiled from: TooltipManager.kt */
-        /* renamed from: com.discord.tooltips.TooltipManager$a$b */
+        /* JADX INFO: renamed from: com.discord.tooltips.TooltipManager$a$b */
+        /* JADX INFO: compiled from: TooltipManager.kt */
         public static final class b extends Lambda implements Function0<Set<String>> {
 
-            /* renamed from: j */
+            /* JADX INFO: renamed from: j */
             public static final b f18977j = new b();
 
             public b() {
@@ -99,8 +99,8 @@ public class TooltipManager {
         }
     }
 
-    /* compiled from: TooltipManager.kt */
-    /* renamed from: com.discord.tooltips.TooltipManager$b */
+    /* JADX INFO: renamed from: com.discord.tooltips.TooltipManager$b */
+    /* JADX INFO: compiled from: TooltipManager.kt */
     public static class C6648b {
         private final String cacheKey;
         private final String tooltipName;
@@ -138,7 +138,7 @@ public class TooltipManager {
     }
 
     @MainThread
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final void m8512a(C6648b tooltip) {
         Intrinsics3.checkNotNullParameter(tooltip, "tooltip");
         m8514c(tooltip);
@@ -161,7 +161,7 @@ public class TooltipManager {
     }
 
     @MainThread
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final boolean m8513b(C6648b tooltip, boolean ignoreMaxTooltips) {
         Intrinsics3.checkNotNullParameter(tooltip, "tooltip");
         String cacheKey = tooltip.getCacheKey();
@@ -183,7 +183,7 @@ public class TooltipManager {
     }
 
     @MainThread
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final void m8514c(C6648b tooltip) {
         Intrinsics3.checkNotNullParameter(tooltip, "tooltip");
         Integer num = this.tooltipNameToTooltipViewIdMap.get(tooltip.getTooltipName());
@@ -193,7 +193,7 @@ public class TooltipManager {
     }
 
     @MainThread
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final void m8515d(View anchorView, View tooltipView, C6648b tooltip, FloatingViewGravity tooltipGravity, int xOffset, int yOffset, boolean ignoreMaxTooltips, Observable<Unit> componentPausedObservable) {
         Intrinsics3.checkNotNullParameter(anchorView, "anchorView");
         Intrinsics3.checkNotNullParameter(tooltipView, "tooltipView");

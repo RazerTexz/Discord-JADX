@@ -4,9 +4,9 @@ import android.view.View;
 import com.discord.widgets.servers.WidgetServerSettingsEditMemberRolesAdapter;
 import kotlin.jvm.functions.Function1;
 
-/* compiled from: WidgetServerSettingsEditMemberRolesAdapter.kt */
-/* renamed from: com.discord.widgets.servers.WidgetServerSettingsEditMemberRolesAdapter$RoleListItem$onConfigure$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.servers.WidgetServerSettingsEditMemberRolesAdapter$RoleListItem$onConfigure$1, reason: use source file name */
+/* JADX INFO: compiled from: WidgetServerSettingsEditMemberRolesAdapter.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetServerSettingsEditMemberRolesAdapter2 implements View.OnClickListener {
     public final /* synthetic */ WidgetServerSettingsEditMemberRolesAdapter.RoleItem $data;
     public final /* synthetic */ WidgetServerSettingsEditMemberRolesAdapter.RoleListItem this$0;

@@ -3,24 +3,24 @@ package p637j0.p642l.p647e.p649o;
 import java.util.Iterator;
 import p637j0.p642l.p647e.UtilityFunctions;
 
-/* compiled from: ConcurrentCircularArrayQueue.java */
-/* renamed from: j0.l.e.o.e, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: j0.l.e.o.e, reason: use source file name */
+/* JADX INFO: compiled from: ConcurrentCircularArrayQueue.java */
+/* JADX INFO: loaded from: classes3.dex */
 public abstract class ConcurrentCircularArrayQueue<E> extends ConcurrentCircularArrayQueue2<E> {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static final int f27334j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public static final long f27335k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public static final int f27336l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public final long f27337m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public final E[] f27338n;
 
     static {
@@ -44,7 +44,7 @@ public abstract class ConcurrentCircularArrayQueue<E> extends ConcurrentCircular
         this.f27338n = (E[]) new Object[(iM10823b << f27334j) + 64];
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final long m10835c(long j) {
         return f27335k + ((j & this.f27337m) << f27336l);
     }
@@ -58,22 +58,22 @@ public abstract class ConcurrentCircularArrayQueue<E> extends ConcurrentCircular
         }
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final E m10836d(E[] eArr, long j) {
         return (E) UnsafeAccess.f27357a.getObject(eArr, j);
     }
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final E m10837e(E[] eArr, long j) {
         return (E) UnsafeAccess.f27357a.getObjectVolatile(eArr, j);
     }
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public final void m10838g(E[] eArr, long j, E e) {
         UnsafeAccess.f27357a.putOrderedObject(eArr, j, e);
     }
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public final void m10839h(E[] eArr, long j, E e) {
         UnsafeAccess.f27357a.putObject(eArr, j, e);
     }

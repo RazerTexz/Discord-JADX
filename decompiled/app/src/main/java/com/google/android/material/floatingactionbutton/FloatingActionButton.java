@@ -68,7 +68,7 @@ import p007b.p225i.p226a.p341g.p346e.FloatingActionButtonImpl3;
 import p007b.p225i.p226a.p341g.p346e.FloatingActionButtonImpl5;
 import p007b.p225i.p226a.p341g.p346e.FloatingActionButtonImplLollipop;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public class FloatingActionButton extends VisibilityAwareImageButton implements TintableBackgroundView, TintableImageSourceView, ExpandableTransformationWidget, Shapeable, CoordinatorLayout.AttachedBehavior {
     private static final int AUTO_MINI_LARGEST_SCREEN_WIDTH = 470;
     private static final int DEF_STYLE_RES = C10817R.style.Widget_Design_FloatingActionButton;
@@ -320,10 +320,10 @@ public class FloatingActionButton extends VisibilityAwareImageButton implements 
     public @interface Size {
     }
 
-    /* renamed from: com.google.android.material.floatingactionbutton.FloatingActionButton$a */
+    /* JADX INFO: renamed from: com.google.android.material.floatingactionbutton.FloatingActionButton$a */
     public class C10919a implements FloatingActionButtonImpl3.f {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final /* synthetic */ OnVisibilityChangedListener f21018a;
 
         public C10919a(OnVisibilityChangedListener onVisibilityChangedListener) {
@@ -331,7 +331,7 @@ public class FloatingActionButton extends VisibilityAwareImageButton implements 
         }
     }
 
-    /* renamed from: com.google.android.material.floatingactionbutton.FloatingActionButton$b */
+    /* JADX INFO: renamed from: com.google.android.material.floatingactionbutton.FloatingActionButton$b */
     public class C10920b implements ShadowViewDelegate {
         public C10920b() {
         }
@@ -361,10 +361,10 @@ public class FloatingActionButton extends VisibilityAwareImageButton implements 
         }
     }
 
-    /* renamed from: com.google.android.material.floatingactionbutton.FloatingActionButton$c */
+    /* JADX INFO: renamed from: com.google.android.material.floatingactionbutton.FloatingActionButton$c */
     public class C10921c<T extends FloatingActionButton> implements FloatingActionButtonImpl3.e {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         @NonNull
         public final TransformationCallback<T> f21021a;
 
@@ -373,13 +373,13 @@ public class FloatingActionButton extends VisibilityAwareImageButton implements 
         }
 
         @Override // p007b.p225i.p226a.p341g.p346e.FloatingActionButtonImpl3.e
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public void mo6109a() {
             this.f21021a.onTranslationChanged(FloatingActionButton.this);
         }
 
         @Override // p007b.p225i.p226a.p341g.p346e.FloatingActionButtonImpl3.e
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public void mo6110b() {
             this.f21021a.onScaleChanged(FloatingActionButton.this);
         }
@@ -1026,7 +1026,7 @@ public class FloatingActionButton extends VisibilityAwareImageButton implements 
     }
 
     /* JADX WARN: Illegal instructions before constructor call */
-    public FloatingActionButton(@NonNull Context context, @Nullable AttributeSet attributeSet, int i) throws Resources.NotFoundException {
+    public FloatingActionButton(@NonNull Context context, @Nullable AttributeSet attributeSet, int i) {
         int i2 = DEF_STYLE_RES;
         super(MaterialThemeOverlay.wrap(context, attributeSet, i, i2), attributeSet, i);
         this.shadowPadding = new Rect();

@@ -1,8 +1,8 @@
 package com.discord.api.voice.state;
 
 
-/* compiled from: StageRequestToSpeakState.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: StageRequestToSpeakState.kt */
+/* JADX INFO: loaded from: classes.dex */
 public enum StageRequestToSpeakState {
     NONE(false, true),
     REQUESTED_TO_SPEAK(true, true),
@@ -21,7 +21,7 @@ public enum StageRequestToSpeakState {
         return this.canBeInvitedToSpeak;
     }
 
-    /* renamed from: isRequestingToSpeak, reason: from getter */
+    /* JADX INFO: renamed from: isRequestingToSpeak, reason: from getter */
     public final boolean getIsRequestingToSpeak() {
         return this.isRequestingToSpeak;
     }

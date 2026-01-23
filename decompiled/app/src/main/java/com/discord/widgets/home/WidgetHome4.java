@@ -3,9 +3,9 @@ package com.discord.widgets.home;
 import kotlin.jvm.functions.Function0;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetHome.kt */
-/* renamed from: com.discord.widgets.home.WidgetHome$viewModel$2, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.home.WidgetHome$viewModel$2, reason: use source file name */
+/* JADX INFO: compiled from: WidgetHome.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetHome4 extends Lambda implements Function0<WidgetHomeViewModel> {
     public static final WidgetHome4 INSTANCE = new WidgetHome4();
 

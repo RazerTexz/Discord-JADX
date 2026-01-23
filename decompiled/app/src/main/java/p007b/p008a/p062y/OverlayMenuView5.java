@@ -12,9 +12,9 @@ import p007b.p008a.p018d.AppToast;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: OverlayMenuView.kt */
-/* renamed from: b.a.y.t, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: b.a.y.t, reason: use source file name */
+/* JADX INFO: compiled from: OverlayMenuView.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class OverlayMenuView5 extends Lambda implements Function1<ModelInvite, Unit> {
     public final /* synthetic */ OverlayMenuView this$0;
 

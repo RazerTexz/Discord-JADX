@@ -6,24 +6,24 @@ import android.widget.SeekBar;
 import androidx.annotation.NonNull;
 import androidx.viewbinding.ViewBinding;
 
-/* compiled from: VolumeSliderViewBinding.java */
-/* renamed from: b.a.i.l4, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.a.i.l4, reason: use source file name */
+/* JADX INFO: compiled from: VolumeSliderViewBinding.java */
+/* JADX INFO: loaded from: classes.dex */
 public final class VolumeSliderViewBinding implements ViewBinding {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     @NonNull
     public final View f1031a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     @NonNull
     public final ImageView f1032b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     @NonNull
     public final ImageView f1033c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     @NonNull
     public final SeekBar f1034d;
 

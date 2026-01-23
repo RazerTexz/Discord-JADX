@@ -4,9 +4,9 @@ import java.util.Iterator;
 import java.util.NoSuchElementException;
 import p007b.p225i.p226a.p288f.p299e.p308o.C3404f;
 
-/* compiled from: Iterators.java */
-/* renamed from: b.i.b.b.t, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.b.b.t, reason: use source file name */
+/* JADX INFO: compiled from: Iterators.java */
+/* JADX INFO: loaded from: classes3.dex */
 public enum Iterators2 implements Iterator<Object> {
     INSTANCE;
 

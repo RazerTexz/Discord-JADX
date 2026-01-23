@@ -1,9 +1,9 @@
 package com.discord.api.science;
 
 
-/* compiled from: AnalyticsSchema.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: AnalyticsSchema.kt */
+/* JADX INFO: loaded from: classes.dex */
 public interface AnalyticsSchema {
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     String mo7506d();
 }

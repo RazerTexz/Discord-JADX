@@ -73,22 +73,16 @@ import p507d0.p592z.p594d.FunctionReference;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.PropertyReference;
 
-/* compiled from: util.kt */
-/* renamed from: d0.e0.p.d.j0, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.j0, reason: use source file name */
+/* JADX INFO: compiled from: util.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class util2 {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final FqName f22397a = new FqName("kotlin.jvm.JvmStatic");
 
-    /* JADX WARN: Failed to restore switch over string. Please report as a decompilation issue
-    java.lang.NullPointerException: Cannot invoke "java.util.List.iterator()" because the return value of "jadx.core.dex.visitors.regions.SwitchOverStringVisitor$SwitchData.getNewCases()" is null
-    	at jadx.core.dex.visitors.regions.SwitchOverStringVisitor.restoreSwitchOverString(SwitchOverStringVisitor.java:109)
-    	at jadx.core.dex.visitors.regions.SwitchOverStringVisitor.visitRegion(SwitchOverStringVisitor.java:66)
-    	at jadx.core.dex.visitors.regions.DepthRegionTraversal.traverseIterativeStepInternal(DepthRegionTraversal.java:77)
-    	at jadx.core.dex.visitors.regions.DepthRegionTraversal.traverseIterativeStepInternal(DepthRegionTraversal.java:82)
-     */
-    /* renamed from: a */
+    /* JADX WARN: Failed to restore switch over string. Please report as a decompilation issue */
+    /* JADX INFO: renamed from: a */
     public static final Class<?> m9349a(ClassLoader classLoader, ClassId classId, int i) {
         JavaToKotlinClassMap javaToKotlinClassMap = JavaToKotlinClassMap.f22614a;
         FqNameUnsafe unsafe = classId.asSingleFqName().toUnsafe();
@@ -183,7 +177,7 @@ public final class util2 {
         return (KPropertyImpl) (kCallableCompute instanceof KPropertyImpl ? kCallableCompute : null);
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static final Annotation m9350b(AnnotationDescriptor annotationDescriptor) {
         ClassDescriptor annotationClass = DescriptorUtils2.getAnnotationClass(annotationDescriptor);
         Class<?> javaClass = annotationClass != null ? toJavaClass(annotationClass) : null;
@@ -211,7 +205,7 @@ public final class util2 {
         return (Annotation) AnnotationConstructorCaller2.createAnnotationInstance$default(javaClass, Maps6.toMap(arrayList), null, 4, null);
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public static final Object m9351c(AbstractC11815g<?> abstractC11815g, ClassLoader classLoader) {
         if (abstractC11815g instanceof C11807a) {
             return m9350b(((C11807a) abstractC11815g).getValue());

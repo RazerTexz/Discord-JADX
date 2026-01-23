@@ -25,24 +25,24 @@ import p507d0.p513e0.p514p.p515d.p517m0.p562l.p563b.p565e0.DeserializedMemberDes
 import p507d0.p513e0.p514p.p515d.p517m0.p562l.p563b.p565e0.DeserializedMemberDescriptor3;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: DeserializedMemberDescriptor.kt */
-/* renamed from: d0.e0.p.d.m0.l.b.e0.j, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.l.b.e0.j, reason: use source file name */
+/* JADX INFO: compiled from: DeserializedMemberDescriptor.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class DeserializedMemberDescriptor4 extends PropertyDescriptorImpl implements DeserializedMemberDescriptor {
 
-    /* renamed from: J */
+    /* JADX INFO: renamed from: J */
     public final C11689n f24599J;
 
-    /* renamed from: K */
+    /* JADX INFO: renamed from: K */
     public final NameResolver f24600K;
 
-    /* renamed from: L */
+    /* JADX INFO: renamed from: L */
     public final TypeTable f24601L;
 
-    /* renamed from: M */
+    /* JADX INFO: renamed from: M */
     public final VersionRequirement2 f24602M;
 
-    /* renamed from: N */
+    /* JADX INFO: renamed from: N */
     public final DeserializedContainerSource2 f24603N;
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -66,7 +66,7 @@ public final class DeserializedMemberDescriptor4 extends PropertyDescriptorImpl 
     }
 
     @Override // p507d0.p513e0.p514p.p515d.p517m0.p521c.p524i1.PropertyDescriptorImpl
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public PropertyDescriptorImpl mo9394b(DeclarationDescriptor declarationDescriptor, Modality modality, DescriptorVisibility2 descriptorVisibility2, PropertyDescriptor propertyDescriptor, CallableMemberDescriptor.a aVar, Name name, SourceElement sourceElement) {
         Intrinsics3.checkNotNullParameter(declarationDescriptor, "newOwner");
         Intrinsics3.checkNotNullParameter(modality, "newModality");

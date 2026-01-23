@@ -2,11 +2,11 @@ package p007b.p008a.p023g;
 
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ColorUtils.kt */
-/* renamed from: b.a.g.c, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.a.g.c, reason: use source file name */
+/* JADX INFO: compiled from: ColorUtils.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class ColorUtils2 {
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final void m192a(int i, int i2, int i3, float[] fArr) {
         float f;
         float fAbs;

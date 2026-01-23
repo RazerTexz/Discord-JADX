@@ -20,9 +20,9 @@ import kotlin.jvm.functions.Function0;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetChannelListModel.kt */
-/* renamed from: com.discord.widgets.channels.list.WidgetChannelListModel$Companion$guildListBuilder$$inlined$forEach$lambda$5 */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.channels.list.WidgetChannelListModel$Companion$guildListBuilder$$inlined$forEach$lambda$5 */
+/* JADX INFO: compiled from: WidgetChannelListModel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class C7417x4d8eedc5 extends Lambda implements Function0<ChannelListItemVoiceChannel> {
     public final /* synthetic */ WidgetChannelListModel$Companion$guildListBuilder$4 $areAllChildThreadsRead$4$inlined;
     public final /* synthetic */ WidgetChannelListModel$Companion$guildListBuilder$5 $areAnyChildThreadsSelected$5$inlined;
@@ -94,7 +94,6 @@ public final class C7417x4d8eedc5 extends Lambda implements Function0<ChannelLis
     }
 
     /* JADX WARN: Can't rename method to resolve collision */
-    /* JADX WARN: Multi-variable type inference failed */
     /* JADX WARN: Removed duplicated region for block: B:15:0x0040  */
     /* JADX WARN: Removed duplicated region for block: B:31:0x007a  */
     /* JADX WARN: Removed duplicated region for block: B:32:0x007e  */
@@ -110,6 +109,7 @@ public final class C7417x4d8eedc5 extends Lambda implements Function0<ChannelLis
         boolean z3;
         WidgetChannelListModel.Companion.VocalChannelData vocalChannelDataInvoke2 = this.$getVocalChannelData$2.invoke2(this.$channel);
         ChannelListItemVoiceChannel channelListItemVoiceChannel = null;
+        Object obj = null;
         if (vocalChannelDataInvoke2 != null) {
             Iterator it = this.$guildScheduledEvents$inlined.iterator();
             while (true) {
@@ -122,12 +122,12 @@ public final class C7417x4d8eedc5 extends Lambda implements Function0<ChannelLis
                     Long channelId = guildScheduledEvent.getChannelId();
                     boolean z4 = channelId != null && channelId.longValue() == this.$channel.getId();
                     if (z4) {
-                        channelListItemVoiceChannel = next;
+                        obj = next;
                         break;
                     }
                 }
             }
-            GuildScheduledEvent guildScheduledEvent2 = (GuildScheduledEvent) channelListItemVoiceChannel;
+            GuildScheduledEvent guildScheduledEvent2 = (GuildScheduledEvent) obj;
             Collection collection = (Collection) outline.m845d(this.$channel, this.$voiceStates$inlined);
             if (collection == null) {
                 z2 = false;

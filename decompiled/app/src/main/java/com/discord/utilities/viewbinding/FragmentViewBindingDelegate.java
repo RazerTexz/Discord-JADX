@@ -13,16 +13,16 @@ import kotlin.reflect.KProperty;
 import p507d0.p592z.p594d.Intrinsics3;
 import p677y.p685c.DefaultLifecycleObserver2;
 
-/* compiled from: FragmentViewBindingDelegate.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: FragmentViewBindingDelegate.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class FragmentViewBindingDelegate<T extends ViewBinding> {
     private T binding;
     private final Fragment fragment;
     private final Function1<T, Unit> onViewBindingDestroy;
     private final Function1<View, T> viewBindingFactory;
 
-    /* compiled from: FragmentViewBindingDelegate.kt */
-    /* renamed from: com.discord.utilities.viewbinding.FragmentViewBindingDelegate$addOnDestroyObserver$1 */
+    /* JADX INFO: renamed from: com.discord.utilities.viewbinding.FragmentViewBindingDelegate$addOnDestroyObserver$1 */
+    /* JADX INFO: compiled from: FragmentViewBindingDelegate.kt */
     public static final class C70141 implements DefaultLifecycleObserver {
         public C70141() {
         }

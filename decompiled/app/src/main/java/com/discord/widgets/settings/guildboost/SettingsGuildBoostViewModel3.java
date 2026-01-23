@@ -10,9 +10,9 @@ import kotlin.jvm.functions.Function4;
 import p507d0.p592z.p594d.FunctionReferenceImpl;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: SettingsGuildBoostViewModel.kt */
-/* renamed from: com.discord.widgets.settings.guildboost.SettingsGuildBoostViewModel$Companion$observeStores$2, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.settings.guildboost.SettingsGuildBoostViewModel$Companion$observeStores$2, reason: use source file name */
+/* JADX INFO: compiled from: SettingsGuildBoostViewModel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final /* synthetic */ class SettingsGuildBoostViewModel3 extends FunctionReferenceImpl implements Function4<StoreGuildBoost.State, StoreSubscriptions.SubscriptionsState, Map<Long, ? extends Guild>, PremiumTier, SettingsGuildBoostViewModel.StoreState> {
     public static final SettingsGuildBoostViewModel3 INSTANCE = new SettingsGuildBoostViewModel3();
 
@@ -25,7 +25,7 @@ public final /* synthetic */ class SettingsGuildBoostViewModel3 extends Function
         return invoke2(state, subscriptionsState, (Map<Long, Guild>) map, premiumTier);
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final SettingsGuildBoostViewModel.StoreState invoke2(StoreGuildBoost.State state, StoreSubscriptions.SubscriptionsState subscriptionsState, Map<Long, Guild> map, PremiumTier premiumTier) {
         Intrinsics3.checkNotNullParameter(state, "p1");
         Intrinsics3.checkNotNullParameter(subscriptionsState, "p2");

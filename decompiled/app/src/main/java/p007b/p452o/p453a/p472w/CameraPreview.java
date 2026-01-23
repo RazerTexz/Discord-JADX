@@ -22,43 +22,43 @@ import p007b.p452o.p453a.p455n.p463v.CameraStateOrchestrator;
 import p007b.p452o.p453a.p455n.p463v.CameraStateOrchestrator3;
 import p007b.p452o.p453a.p473x.Size3;
 
-/* compiled from: CameraPreview.java */
-/* renamed from: b.o.a.w.a, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.o.a.w.a, reason: use source file name */
+/* JADX INFO: compiled from: CameraPreview.java */
+/* JADX INFO: loaded from: classes3.dex */
 public abstract class CameraPreview<T extends View, Output> {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final CameraLogger f14206a = new CameraLogger(CameraPreview.class.getSimpleName());
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public c f14207b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public T f14208c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public boolean f14209d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public int f14210e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public int f14211f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public int f14212g;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public int f14213h;
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public int f14214i;
 
-    /* compiled from: CameraPreview.java */
-    /* renamed from: b.o.a.w.a$a */
+    /* JADX INFO: renamed from: b.o.a.w.a$a */
+    /* JADX INFO: compiled from: CameraPreview.java */
     public class a implements Runnable {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public final /* synthetic */ TaskCompletionSource f14215j;
 
         public a(TaskCompletionSource taskCompletionSource) {
@@ -76,15 +76,15 @@ public abstract class CameraPreview<T extends View, Output> {
         }
     }
 
-    /* compiled from: CameraPreview.java */
-    /* renamed from: b.o.a.w.a$b */
+    /* JADX INFO: renamed from: b.o.a.w.a$b */
+    /* JADX INFO: compiled from: CameraPreview.java */
     public interface b {
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         void m7442a();
     }
 
-    /* compiled from: CameraPreview.java */
-    /* renamed from: b.o.a.w.a$c */
+    /* JADX INFO: renamed from: b.o.a.w.a$c */
+    /* JADX INFO: compiled from: CameraPreview.java */
     public interface c {
     }
 
@@ -92,11 +92,11 @@ public abstract class CameraPreview<T extends View, Output> {
         this.f14208c = (T) mo7434n(context, viewGroup);
     }
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public void mo7425e(@Nullable b bVar) {
     }
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final void m7426f(int i, int i2) {
         f14206a.m7159a(1, "dispatchOnSurfaceAvailable:", "w=", Integer.valueOf(i), "h=", Integer.valueOf(i2));
         this.f14210e = i;
@@ -110,7 +110,7 @@ public abstract class CameraPreview<T extends View, Output> {
         }
     }
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public final void m7427g() {
         this.f14210e = 0;
         this.f14211f = 0;
@@ -123,7 +123,7 @@ public abstract class CameraPreview<T extends View, Output> {
         }
     }
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public final void m7428h(int i, int i2) {
         f14206a.m7159a(1, "dispatchOnSurfaceSizeChanged:", "w=", Integer.valueOf(i), "h=", Integer.valueOf(i2));
         if (i == this.f14210e && i2 == this.f14211f) {
@@ -145,34 +145,34 @@ public abstract class CameraPreview<T extends View, Output> {
     }
 
     @NonNull
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public abstract Output mo7429i();
 
     @NonNull
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public abstract Class<Output> mo7430j();
 
     @NonNull
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public abstract View mo7431k();
 
     @NonNull
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final Size3 m7432l() {
         return new Size3(this.f14210e, this.f14211f);
     }
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public final boolean m7433m() {
         return this.f14210e > 0 && this.f14211f > 0;
     }
 
     @NonNull
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public abstract T mo7434n(@NonNull Context context, @NonNull ViewGroup viewGroup);
 
     @CallSuper
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public void mo7435o() {
         if (Thread.currentThread() == Looper.getMainLooper().getThread()) {
             View viewMo7431k = mo7431k();
@@ -192,20 +192,20 @@ public abstract class CameraPreview<T extends View, Output> {
         }
     }
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public void mo7436p() {
     }
 
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     public void mo7437q() {
     }
 
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     public void mo7438r(int i) {
         this.f14214i = i;
     }
 
-    /* renamed from: s */
+    /* JADX INFO: renamed from: s */
     public void m7439s(int i, int i2) {
         f14206a.m7159a(1, "setStreamSize:", "desiredW=", Integer.valueOf(i), "desiredH=", Integer.valueOf(i2));
         this.f14212g = i;
@@ -216,7 +216,7 @@ public abstract class CameraPreview<T extends View, Output> {
         mo7425e(null);
     }
 
-    /* renamed from: t */
+    /* JADX INFO: renamed from: t */
     public void m7440t(@Nullable c cVar) {
         c cVar2;
         c cVar3;
@@ -233,7 +233,7 @@ public abstract class CameraPreview<T extends View, Output> {
         ((CameraEngine) cVar2).m7325V();
     }
 
-    /* renamed from: u */
+    /* JADX INFO: renamed from: u */
     public boolean mo7441u() {
         return this instanceof GlCameraPreview2;
     }

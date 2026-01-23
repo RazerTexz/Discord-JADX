@@ -22,8 +22,8 @@ import p507d0.p580t.Collections2;
 import p507d0.p580t.Maps6;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: PermissionUtils.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: PermissionUtils.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class PermissionUtils {
     public static final PermissionUtils INSTANCE = new PermissionUtils();
 

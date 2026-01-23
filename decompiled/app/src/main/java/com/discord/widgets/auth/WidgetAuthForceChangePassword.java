@@ -12,14 +12,14 @@ import p007b.p008a.p018d.AppScreen2;
 import p507d0.p592z.p594d.Intrinsics3;
 import p658rx.functions.Func0;
 
-/* compiled from: WidgetAuthForceChangePassword.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetAuthForceChangePassword.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetAuthForceChangePassword extends WidgetSettingsAccountChangePassword {
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
 
-    /* compiled from: WidgetAuthForceChangePassword.kt */
+    /* JADX INFO: compiled from: WidgetAuthForceChangePassword.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -34,8 +34,8 @@ public final class WidgetAuthForceChangePassword extends WidgetSettingsAccountCh
         }
     }
 
-    /* compiled from: WidgetAuthForceChangePassword.kt */
-    /* renamed from: com.discord.widgets.auth.WidgetAuthForceChangePassword$onViewBound$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.auth.WidgetAuthForceChangePassword$onViewBound$1 */
+    /* JADX INFO: compiled from: WidgetAuthForceChangePassword.kt */
     public static final class C71721<R> implements Func0<Boolean> {
         public static final C71721 INSTANCE = new C71721();
 

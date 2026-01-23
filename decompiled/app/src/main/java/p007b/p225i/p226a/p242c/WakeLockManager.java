@@ -5,23 +5,23 @@ import android.content.Context;
 import android.os.PowerManager;
 import androidx.annotation.Nullable;
 
-/* compiled from: WakeLockManager.java */
-/* renamed from: b.i.a.c.q2, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.q2, reason: use source file name */
+/* JADX INFO: compiled from: WakeLockManager.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class WakeLockManager {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     @Nullable
     public final PowerManager f7457a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     @Nullable
     public PowerManager.WakeLock f7458b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public boolean f7459c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public boolean f7460d;
 
     public WakeLockManager(Context context) {
@@ -29,7 +29,7 @@ public final class WakeLockManager {
     }
 
     @SuppressLint({"WakelockTimeout"})
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final void m3357a() {
         PowerManager.WakeLock wakeLock = this.f7458b;
         if (wakeLock == null) {

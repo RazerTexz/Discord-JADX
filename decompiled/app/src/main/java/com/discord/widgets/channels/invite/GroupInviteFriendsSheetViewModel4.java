@@ -8,9 +8,9 @@ import java.util.Map;
 import p507d0.p592z.p594d.Intrinsics3;
 import p658rx.functions.Func2;
 
-/* compiled from: GroupInviteFriendsSheetViewModel.kt */
-/* renamed from: com.discord.widgets.channels.invite.GroupInviteFriendsSheetViewModel$Companion$observeStoreState$2, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.channels.invite.GroupInviteFriendsSheetViewModel$Companion$observeStoreState$2, reason: use source file name */
+/* JADX INFO: compiled from: GroupInviteFriendsSheetViewModel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class GroupInviteFriendsSheetViewModel4<T1, T2, R> implements Func2<Channel, Map<Long, ? extends User>, GroupInviteFriendsSheetViewModel.StoreState> {
     public static final GroupInviteFriendsSheetViewModel4 INSTANCE = new GroupInviteFriendsSheetViewModel4();
 
@@ -19,7 +19,7 @@ public final class GroupInviteFriendsSheetViewModel4<T1, T2, R> implements Func2
         return call2(channel, map);
     }
 
-    /* renamed from: call, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
     public final GroupInviteFriendsSheetViewModel.StoreState call2(Channel channel, Map<Long, ? extends User> map) {
         Intrinsics3.checkNotNullExpressionValue(map, "friendUsersMap");
         return new GroupInviteFriendsSheetViewModel.StoreState(map, channel);

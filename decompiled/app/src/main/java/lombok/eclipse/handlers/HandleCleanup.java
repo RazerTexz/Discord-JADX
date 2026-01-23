@@ -27,7 +27,7 @@ import org.eclipse.jdt.internal.compiler.ast.Statement;
 import org.eclipse.jdt.internal.compiler.ast.SwitchStatement;
 import org.eclipse.jdt.internal.compiler.ast.TryStatement;
 
-/* loaded from: discord-126021.apk:lombok/eclipse/handlers/HandleCleanup.SCL.lombok */
+/* JADX INFO: loaded from: discord-126021.apk:lombok/eclipse/handlers/HandleCleanup.SCL.lombok */
 public class HandleCleanup extends EclipseAnnotationHandler<Cleanup> {
     @Override // lombok.eclipse.EclipseAnnotationHandler
     public void handle(AnnotationValues<Cleanup> annotation, Annotation ast, EclipseNode annotationNode) {
@@ -114,7 +114,7 @@ public class HandleCleanup extends EclipseAnnotationHandler<Cleanup> {
         SingleNameReference receiver = new SingleNameReference(((LocalDeclaration) statement).name, 0L);
         EclipseHandlerUtil.setGeneratedBy(receiver, ast);
         ((MessageSend) messageSend).receiver = receiver;
-        long nameSourcePosition = (ast.sourceStart << 32) | ast.sourceEnd;
+        long nameSourcePosition = (((long) ast.sourceStart) << 32) | ((long) ast.sourceEnd);
         if (ast.memberValuePairs() != null) {
             MemberValuePair[] memberValuePairArrMemberValuePairs = ast.memberValuePairs();
             int length = memberValuePairArrMemberValuePairs.length;
@@ -125,7 +125,7 @@ public class HandleCleanup extends EclipseAnnotationHandler<Cleanup> {
                     if (pair.name == null || !new String(pair.name).equals("value")) {
                         i++;
                     } else {
-                        nameSourcePosition = (pair.value.sourceStart << 32) | pair.value.sourceEnd;
+                        nameSourcePosition = (((long) pair.value.sourceStart) << 32) | ((long) pair.value.sourceEnd);
                         break;
                     }
                 } else {
@@ -137,7 +137,7 @@ public class HandleCleanup extends EclipseAnnotationHandler<Cleanup> {
         ((MessageSend) messageSend).selector = cleanupName.toCharArray();
         int pS = ast.sourceStart;
         int pE = ast.sourceEnd;
-        long p = (pS << 32) | pE;
+        long p = (((long) pS) << 32) | ((long) pE);
         SingleNameReference varName = new SingleNameReference(((LocalDeclaration) statement).name, p);
         EclipseHandlerUtil.setGeneratedBy(varName, ast);
         NullLiteral nullLiteral = new NullLiteral(pS, pE);
@@ -178,7 +178,7 @@ public class HandleCleanup extends EclipseAnnotationHandler<Cleanup> {
         EclipseHandlerUtil.setGeneratedBy(singletonList, ast);
         int pS = ast.sourceStart;
         int pE = ast.sourceEnd;
-        long p = (pS << 32) | pE;
+        long p = (((long) pS) << 32) | ((long) pE);
         singletonList.receiver = EclipseHandlerUtil.createNameReference("java.util.Collections", ast);
         singletonList.selector = "singletonList".toCharArray();
         singletonList.arguments = new Expression[]{expr};

@@ -24,12 +24,12 @@ import kotlin.jvm.functions.Function1;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: SettingsGuildBoostSampleGuildAdapter.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: SettingsGuildBoostSampleGuildAdapter.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class SettingsGuildBoostSampleGuildAdapter extends MGRecyclerAdapterSimple<Item> {
     private Function1<? super Long, Unit> onGuildClickedListener;
 
-    /* compiled from: SettingsGuildBoostSampleGuildAdapter.kt */
+    /* JADX INFO: compiled from: SettingsGuildBoostSampleGuildAdapter.kt */
     public static final class GuildListItem extends MGRecyclerViewHolder<SettingsGuildBoostSampleGuildAdapter, Item> {
         private final ViewSettingsBoostedSampleGuildBinding binding;
 
@@ -70,7 +70,7 @@ public final class SettingsGuildBoostSampleGuildAdapter extends MGRecyclerAdapte
             onConfigure2(i, item);
         }
 
-        /* renamed from: onConfigure, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: onConfigure, reason: avoid collision after fix types in other method */
         public void onConfigure2(int position, Item data) {
             Intrinsics3.checkNotNullParameter(data, "data");
             super.onConfigure(position, data);
@@ -89,7 +89,7 @@ public final class SettingsGuildBoostSampleGuildAdapter extends MGRecyclerAdapte
         }
     }
 
-    /* compiled from: SettingsGuildBoostSampleGuildAdapter.kt */
+    /* JADX INFO: compiled from: SettingsGuildBoostSampleGuildAdapter.kt */
     public static final /* data */ class Item implements MGRecyclerDataPayload {
         public static final int TYPE_GUILD = 1;
         private final Guild guild;
@@ -110,7 +110,7 @@ public final class SettingsGuildBoostSampleGuildAdapter extends MGRecyclerAdapte
             return item.copy(guild);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final Guild getGuild() {
             return this.guild;
         }

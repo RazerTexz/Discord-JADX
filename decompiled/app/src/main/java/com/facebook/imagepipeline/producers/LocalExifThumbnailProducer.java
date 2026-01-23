@@ -37,26 +37,26 @@ import p007b.p109f.p161j.p181p.ThumbnailProducer;
 import p007b.p109f.p186k.BitmapUtil;
 import p007b.p109f.p190m.DoNotOptimize;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public class LocalExifThumbnailProducer implements ThumbnailProducer<EncodedImage2> {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final Executor f19577a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final PooledByteBufferFactory f19578b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final ContentResolver f19579c;
 
     @DoNotOptimize
     public class Api24Utils {
     }
 
-    /* renamed from: com.facebook.imagepipeline.producers.LocalExifThumbnailProducer$a */
+    /* JADX INFO: renamed from: com.facebook.imagepipeline.producers.LocalExifThumbnailProducer$a */
     public class C10663a extends StatefulProducerRunnable<EncodedImage2> {
 
-        /* renamed from: o */
+        /* JADX INFO: renamed from: o */
         public final /* synthetic */ ImageRequest f19580o;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -66,7 +66,7 @@ public class LocalExifThumbnailProducer implements ThumbnailProducer<EncodedImag
         }
 
         @Override // p007b.p109f.p161j.p181p.StatefulProducerRunnable
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public void mo1465b(EncodedImage2 encodedImage2) {
             EncodedImage2 encodedImage22 = encodedImage2;
             if (encodedImage22 != null) {
@@ -75,7 +75,7 @@ public class LocalExifThumbnailProducer implements ThumbnailProducer<EncodedImag
         }
 
         @Override // p007b.p109f.p161j.p181p.StatefulProducerRunnable
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public Map mo1466c(EncodedImage2 encodedImage2) {
             return ImmutableMap.m967of("createdThumbnail", Boolean.toString(encodedImage2 != null));
         }
@@ -83,7 +83,7 @@ public class LocalExifThumbnailProducer implements ThumbnailProducer<EncodedImag
         /* JADX WARN: Removed duplicated region for block: B:15:0x0031  */
         /* JADX WARN: Removed duplicated region for block: B:52:0x009b  */
         @Override // p007b.p109f.p161j.p181p.StatefulProducerRunnable
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         /*
             Code decompiled incorrectly, please refer to instructions dump.
         */
@@ -146,6 +146,7 @@ public class LocalExifThumbnailProducer implements ThumbnailProducer<EncodedImag
                         try {
                             assetFileDescriptorOpenAssetFileDescriptor = contentResolver2.openAssetFileDescriptor(uri, "r");
                         } catch (FileNotFoundException unused3) {
+                            assetFileDescriptorOpenAssetFileDescriptor = null;
                         }
                         if (assetFileDescriptorOpenAssetFileDescriptor == null && (i = Build.VERSION.SDK_INT) >= 24) {
                             ExifInterface exifInterface2 = i >= 24 ? new ExifInterface(assetFileDescriptorOpenAssetFileDescriptor.getFileDescriptor()) : null;
@@ -207,10 +208,10 @@ public class LocalExifThumbnailProducer implements ThumbnailProducer<EncodedImag
         }
     }
 
-    /* renamed from: com.facebook.imagepipeline.producers.LocalExifThumbnailProducer$b */
+    /* JADX INFO: renamed from: com.facebook.imagepipeline.producers.LocalExifThumbnailProducer$b */
     public class C10664b extends BaseProducerContextCallbacks {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final /* synthetic */ StatefulProducerRunnable f19582a;
 
         public C10664b(LocalExifThumbnailProducer localExifThumbnailProducer, StatefulProducerRunnable statefulProducerRunnable) {
@@ -218,7 +219,7 @@ public class LocalExifThumbnailProducer implements ThumbnailProducer<EncodedImag
         }
 
         @Override // p007b.p109f.p161j.p181p.ProducerContextCallbacks
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public void mo1438a() {
             this.f19582a.m1464a();
         }
@@ -231,13 +232,13 @@ public class LocalExifThumbnailProducer implements ThumbnailProducer<EncodedImag
     }
 
     @Override // p007b.p109f.p161j.p181p.ThumbnailProducer
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public boolean mo1474a(ResizeOptions resizeOptions) {
         return AnimatableValueParser.m472S0(512, 512, resizeOptions);
     }
 
     @Override // p007b.p109f.p161j.p181p.Producer2
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public void mo1417b(Consumer2<EncodedImage2> consumer2, ProducerContext producerContext) {
         ProducerListener2 producerListener2Mo1457o = producerContext.mo1457o();
         ImageRequest imageRequestMo1447e = producerContext.mo1447e();

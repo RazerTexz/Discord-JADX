@@ -4,21 +4,21 @@ import java.lang.reflect.InvocationTargetException;
 import p007b.p109f.p160i.ImageFormat;
 import p007b.p109f.p161j.p170e.NativeCodeSetup;
 
-/* compiled from: MultiImageTranscoderFactory.java */
-/* renamed from: b.f.j.s.e, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.f.j.s.e, reason: use source file name */
+/* JADX INFO: compiled from: MultiImageTranscoderFactory.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class MultiImageTranscoderFactory implements ImageTranscoderFactory {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final int f4269a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final ImageTranscoderFactory f4270b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final Integer f4271c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final boolean f4272d;
 
     public MultiImageTranscoderFactory(int i, boolean z2, ImageTranscoderFactory imageTranscoderFactory, Integer num, boolean z3) {
@@ -28,7 +28,7 @@ public class MultiImageTranscoderFactory implements ImageTranscoderFactory {
         this.f4272d = z3;
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final ImageTranscoder m1535a(ImageFormat imageFormat, boolean z2) {
         int i = this.f4269a;
         boolean z3 = this.f4272d;

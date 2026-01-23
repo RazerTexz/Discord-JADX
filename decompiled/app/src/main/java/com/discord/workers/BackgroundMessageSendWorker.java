@@ -10,15 +10,15 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p637j0.p641k.Func1;
 import p637j0.p650m.BlockingObservable;
 
-/* compiled from: BackgroundMessageSendWorker.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: BackgroundMessageSendWorker.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class BackgroundMessageSendWorker extends Worker {
 
-    /* compiled from: BackgroundMessageSendWorker.kt */
-    /* renamed from: com.discord.workers.BackgroundMessageSendWorker$a */
+    /* JADX INFO: renamed from: com.discord.workers.BackgroundMessageSendWorker$a */
+    /* JADX INFO: compiled from: BackgroundMessageSendWorker.kt */
     public static final class C10617a<T, R> implements Func1<Boolean, Boolean> {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public static final C10617a f19414j = new C10617a();
 
         @Override // p637j0.p641k.Func1

@@ -9,12 +9,12 @@ import java.util.Objects;
 import p007b.p085c.p086a.p087a0.AnimatableValueParser;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ApplicationType.kt */
-/* renamed from: com.discord.api.application.ApplicationTypeAdapter, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: com.discord.api.application.ApplicationTypeAdapter, reason: use source file name */
+/* JADX INFO: compiled from: ApplicationType.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class ApplicationType2 extends TypeAdapter<ApplicationType> {
 
-    /* renamed from: com.discord.api.application.ApplicationTypeAdapter$WhenMappings */
+    /* JADX INFO: renamed from: com.discord.api.application.ApplicationTypeAdapter$WhenMappings */
     public final /* synthetic */ class WhenMappings {
         public static final /* synthetic */ int[] $EnumSwitchMapping$0;
 

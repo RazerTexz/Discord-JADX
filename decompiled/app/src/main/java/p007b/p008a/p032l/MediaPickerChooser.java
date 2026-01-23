@@ -7,9 +7,9 @@ import kotlin.jvm.functions.Function1;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: MediaPickerChooser.kt */
-/* renamed from: b.a.l.a, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.a.l.a, reason: use source file name */
+/* JADX INFO: compiled from: MediaPickerChooser.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class MediaPickerChooser extends Lambda implements Function1<Intent, Unit> {
     public final /* synthetic */ Uri $captureFileURI;
 

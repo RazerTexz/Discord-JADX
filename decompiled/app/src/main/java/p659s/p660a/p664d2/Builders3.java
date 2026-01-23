@@ -5,12 +5,12 @@ import kotlin.coroutines.Continuation;
 import kotlin.jvm.functions.Function2;
 import p507d0.p584w.p585h.Intrinsics2;
 
-/* compiled from: Builders.kt */
-/* renamed from: s.a.d2.f, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: s.a.d2.f, reason: use source file name */
+/* JADX INFO: compiled from: Builders.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class Builders3<T> extends Flow2<T> {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final Function2<FlowCollector<? super T>, Continuation<? super Unit>, Object> f27783a;
 
     /* JADX WARN: Multi-variable type inference failed */
@@ -19,7 +19,7 @@ public final class Builders3<T> extends Flow2<T> {
     }
 
     @Override // p659s.p660a.p664d2.Flow2
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public Object mo11247b(FlowCollector<? super T> flowCollector, Continuation<? super Unit> continuation) {
         Object objInvoke = this.f27783a.invoke(flowCollector, continuation);
         return objInvoke == Intrinsics2.getCOROUTINE_SUSPENDED() ? objInvoke : Unit.f27425a;

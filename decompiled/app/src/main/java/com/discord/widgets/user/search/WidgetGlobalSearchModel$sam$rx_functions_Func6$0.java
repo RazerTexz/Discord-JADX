@@ -3,8 +3,8 @@ package com.discord.widgets.user.search;
 import kotlin.jvm.functions.Function6;
 import p658rx.functions.Func6;
 
-/* compiled from: WidgetGlobalSearchModel.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: WidgetGlobalSearchModel.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class WidgetGlobalSearchModel$sam$rx_functions_Func6$0 implements Func6 {
     private final /* synthetic */ Function6 function;
 

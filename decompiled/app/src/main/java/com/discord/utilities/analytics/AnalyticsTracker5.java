@@ -8,9 +8,9 @@ import kotlin.jvm.functions.Function0;
 import p507d0.p580t.Maps6;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: AnalyticsTracker.kt */
-/* renamed from: com.discord.utilities.analytics.AnalyticsTracker$searchStart$propertyProvider$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.utilities.analytics.AnalyticsTracker$searchStart$propertyProvider$1, reason: use source file name */
+/* JADX INFO: compiled from: AnalyticsTracker.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class AnalyticsTracker5 extends Lambda implements Function0<Map<String, ? extends Object>> {
     public final /* synthetic */ Traits.Location $locationTrait;
     public final /* synthetic */ Map $properties;
@@ -30,7 +30,7 @@ public final class AnalyticsTracker5 extends Lambda implements Function0<Map<Str
     }
 
     @Override // kotlin.jvm.functions.Function0
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final Map<String, ? extends Object> invoke2() {
         LinkedHashMap linkedHashMap = new LinkedHashMap();
         linkedHashMap.put("search_type", this.$searchType.name());

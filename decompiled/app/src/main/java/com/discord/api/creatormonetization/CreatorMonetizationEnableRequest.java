@@ -4,25 +4,25 @@ import com.discord.models.domain.ModelAuditLogEntry;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: CreatorMonetizationEnableRequest.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: CreatorMonetizationEnableRequest.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class CreatorMonetizationEnableRequest {
     private final long id;
     private final State state;
 
-    /* compiled from: CreatorMonetizationEnableRequest.kt */
+    /* JADX INFO: compiled from: CreatorMonetizationEnableRequest.kt */
     public enum State {
         OPEN,
         REJECTED,
         APPROVED
     }
 
-    /* renamed from: a, reason: from getter */
+    /* JADX INFO: renamed from: a, reason: from getter */
     public final long getId() {
         return this.id;
     }
 
-    /* renamed from: b, reason: from getter */
+    /* JADX INFO: renamed from: b, reason: from getter */
     public final State getState() {
         return this.state;
     }

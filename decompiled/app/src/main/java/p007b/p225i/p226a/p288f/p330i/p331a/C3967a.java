@@ -10,16 +10,16 @@ import p007b.p225i.p226a.p288f.p313h.p325l.C3578a0;
 import p007b.p225i.p226a.p288f.p313h.p325l.C3661g;
 import p007b.p225i.p226a.p288f.p330i.p332b.InterfaceC4258z5;
 
-/* compiled from: com.google.android.gms:play-services-measurement-sdk-api@@18.0.0 */
-/* renamed from: b.i.a.f.i.a.a */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.i.a.a */
+/* JADX INFO: compiled from: com.google.android.gms:play-services-measurement-sdk-api@@18.0.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public class C3967a {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final C3661g f10500a;
 
-    /* compiled from: com.google.android.gms:play-services-measurement-sdk-api@@18.0.0 */
-    /* renamed from: b.i.a.f.i.a.a$a */
+    /* JADX INFO: renamed from: b.i.a.f.i.a.a$a */
+    /* JADX INFO: compiled from: com.google.android.gms:play-services-measurement-sdk-api@@18.0.0 */
     public interface a extends InterfaceC4258z5 {
     }
 
@@ -27,7 +27,7 @@ public class C3967a {
         this.f10500a = c3661g;
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public void m5439a(a aVar) {
         C3661g c3661g = this.f10500a;
         Objects.requireNonNull(c3661g);

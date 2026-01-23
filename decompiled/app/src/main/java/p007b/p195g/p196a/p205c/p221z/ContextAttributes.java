@@ -4,24 +4,24 @@ import java.io.Serializable;
 import java.util.Collections;
 import java.util.Map;
 
-/* compiled from: ContextAttributes.java */
-/* renamed from: b.g.a.c.z.i, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.g.a.c.z.i, reason: use source file name */
+/* JADX INFO: compiled from: ContextAttributes.java */
+/* JADX INFO: loaded from: classes3.dex */
 public abstract class ContextAttributes {
 
-    /* compiled from: ContextAttributes.java */
-    /* renamed from: b.g.a.c.z.i$a */
+    /* JADX INFO: renamed from: b.g.a.c.z.i$a */
+    /* JADX INFO: compiled from: ContextAttributes.java */
     public static class a extends ContextAttributes implements Serializable {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public static final a f5087j = new a(Collections.emptyMap());
 
-        /* renamed from: k */
+        /* JADX INFO: renamed from: k */
         public static final Object f5088k = new Object();
         private static final long serialVersionUID = 1;
         public final Map<?, ?> _shared;
 
-        /* renamed from: l */
+        /* JADX INFO: renamed from: l */
         public transient Map<Object, Object> f5089l;
 
         public a(Map<?, ?> map) {

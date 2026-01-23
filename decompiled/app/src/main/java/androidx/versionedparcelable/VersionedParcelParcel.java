@@ -12,8 +12,8 @@ import androidx.collection.ArrayMap;
 import java.lang.reflect.Method;
 import p007b.p100d.p104b.p105a.outline;
 
+/* JADX INFO: loaded from: classes.dex */
 @RestrictTo({RestrictTo.Scope.LIBRARY})
-/* loaded from: classes.dex */
 public class VersionedParcelParcel extends VersionedParcel {
     private static final boolean DEBUG = false;
     private static final String TAG = "VersionedParcelParcel";

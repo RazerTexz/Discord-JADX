@@ -5,30 +5,30 @@ import java.util.Objects;
 import java.util.concurrent.TimeUnit;
 import p007b.p225i.p361c.p401u.Utils6;
 
-/* compiled from: RequestLimiter.java */
-/* renamed from: b.i.c.u.p.e, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.c.u.p.e, reason: use source file name */
+/* JADX INFO: compiled from: RequestLimiter.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class RequestLimiter {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final long f12998a = TimeUnit.HOURS.toMillis(24);
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static final long f12999b = TimeUnit.MINUTES.toMillis(30);
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final Utils6 f13000c = Utils6.m6770c();
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     @GuardedBy("this")
     public long f13001d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     @GuardedBy("this")
     public int f13002e;
 
     /* JADX WARN: Removed duplicated region for block: B:10:0x0014  */
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
@@ -40,7 +40,7 @@ public class RequestLimiter {
         return z2;
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public synchronized void m6812b(int i) {
         long jMin;
         boolean z2 = false;

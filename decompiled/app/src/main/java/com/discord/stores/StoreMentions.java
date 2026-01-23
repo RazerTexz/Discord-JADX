@@ -41,8 +41,8 @@ import p507d0.p592z.p594d.Lambda;
 import p637j0.p641k.Func1;
 import p658rx.Observable;
 
-/* compiled from: StoreMentions.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: StoreMentions.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class StoreMentions extends StoreV2 {
     private final HashMap<Long, Long> channelGuildIds;
     private final Persister<Map<Long, Integer>> countsCache;
@@ -62,8 +62,8 @@ public final class StoreMentions extends StoreV2 {
     private final StoreUserGuildSettings storeUserGuildSettings;
     private final StoreUserRelationships storeUserRelationships;
 
-    /* compiled from: StoreMentions.kt */
-    /* renamed from: com.discord.stores.StoreMentions$handleConnectionOpen$3 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreMentions$handleConnectionOpen$3 */
+    /* JADX INFO: compiled from: StoreMentions.kt */
     public static final class C61923 extends Lambda implements Function1<ModelReadState, Boolean> {
         public final /* synthetic */ HashSet $newReadStateChannelIds;
 
@@ -78,15 +78,15 @@ public final class StoreMentions extends StoreV2 {
             return Boolean.valueOf(invoke2(modelReadState));
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final boolean invoke2(ModelReadState modelReadState) {
             Intrinsics3.checkNotNullParameter(modelReadState, "readState");
             return this.$newReadStateChannelIds.contains(Long.valueOf(modelReadState.getChannelId()));
         }
     }
 
-    /* compiled from: StoreMentions.kt */
-    /* renamed from: com.discord.stores.StoreMentions$handleConnectionOpen$5 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreMentions$handleConnectionOpen$5 */
+    /* JADX INFO: compiled from: StoreMentions.kt */
     public static final class C61935 extends Lambda implements Function1<ModelReadState, Boolean> {
         public C61935() {
             super(1);
@@ -97,15 +97,15 @@ public final class StoreMentions extends StoreV2 {
             return Boolean.valueOf(invoke2(modelReadState));
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final boolean invoke2(ModelReadState modelReadState) {
             Intrinsics3.checkNotNullParameter(modelReadState, "readState");
             return !StoreMentions.access$getStoreChannels$p(StoreMentions.this).getChannelNamesInternal$app_productionGoogleRelease().containsKey(Long.valueOf(modelReadState.getChannelId()));
         }
     }
 
-    /* compiled from: StoreMentions.kt */
-    /* renamed from: com.discord.stores.StoreMentions$handleMessageAck$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreMentions$handleMessageAck$1 */
+    /* JADX INFO: compiled from: StoreMentions.kt */
     public static final class C61941 extends Lambda implements Function1<ModelReadState, Boolean> {
         public final /* synthetic */ ModelReadState $readState;
 
@@ -120,15 +120,15 @@ public final class StoreMentions extends StoreV2 {
             return Boolean.valueOf(invoke2(modelReadState));
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final boolean invoke2(ModelReadState modelReadState) {
             Intrinsics3.checkNotNullParameter(modelReadState, "it");
             return modelReadState.getChannelId() == this.$readState.getChannelId();
         }
     }
 
-    /* compiled from: StoreMentions.kt */
-    /* renamed from: com.discord.stores.StoreMentions$observeMentionCounts$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreMentions$observeMentionCounts$1 */
+    /* JADX INFO: compiled from: StoreMentions.kt */
     public static final class C61951 extends Lambda implements Function0<Map<Long, ? extends Integer>> {
         public C61951() {
             super(0);
@@ -140,14 +140,14 @@ public final class StoreMentions extends StoreV2 {
         }
 
         @Override // kotlin.jvm.functions.Function0
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final Map<Long, ? extends Integer> invoke2() {
             return StoreMentions.this.getMentionCounts();
         }
     }
 
-    /* compiled from: StoreMentions.kt */
-    /* renamed from: com.discord.stores.StoreMentions$observeTotalMentions$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreMentions$observeTotalMentions$1 */
+    /* JADX INFO: compiled from: StoreMentions.kt */
     public static final class C61961<T, R> implements Func1<Map<Long, ? extends Integer>, Integer> {
         public static final C61961 INSTANCE = new C61961();
 
@@ -156,7 +156,7 @@ public final class StoreMentions extends StoreV2 {
             return call2((Map<Long, Integer>) map);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final Integer call2(Map<Long, Integer> map) {
             return Integer.valueOf(_Collections.sumOfInt(map.values()));
         }

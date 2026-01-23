@@ -5,7 +5,6 @@ import android.animation.Animator;
 import android.animation.AnimatorInflater;
 import android.animation.AnimatorSet;
 import android.content.Context;
-import android.content.res.Resources;
 import android.graphics.Rect;
 import android.os.Build;
 import android.view.LayoutInflater;
@@ -20,34 +19,34 @@ import p007b.p008a.p036n.TrashEventListener;
 import p007b.p008a.p036n.p037g.TrashWrapBinding;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: OverlayTrashWrap.kt */
-/* renamed from: b.a.n.h.a, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.a.n.h.a, reason: use source file name */
+/* JADX INFO: compiled from: OverlayTrashWrap.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class OverlayTrashWrap extends FrameLayout implements TrashEventListener {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final TrashWrapBinding f1561j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public WindowManager.LayoutParams f1562k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final Animator f1563l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public final Animator f1564m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public final Rect f1565n;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public final int[] f1566o;
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public OverlayBubbleWrap f1567p;
 
-    /* compiled from: Animator.kt */
-    /* renamed from: b.a.n.h.a$a */
+    /* JADX INFO: renamed from: b.a.n.h.a$a */
+    /* JADX INFO: compiled from: Animator.kt */
     public static final class a implements Animator.AnimatorListener {
         public a() {
         }
@@ -74,8 +73,8 @@ public final class OverlayTrashWrap extends FrameLayout implements TrashEventLis
         }
     }
 
-    /* compiled from: Animator.kt */
-    /* renamed from: b.a.n.h.a$b */
+    /* JADX INFO: renamed from: b.a.n.h.a$b */
+    /* JADX INFO: compiled from: Animator.kt */
     public static final class b implements Animator.AnimatorListener {
         public b() {
         }
@@ -103,7 +102,7 @@ public final class OverlayTrashWrap extends FrameLayout implements TrashEventLis
     }
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-    public OverlayTrashWrap(Context context) throws Resources.NotFoundException {
+    public OverlayTrashWrap(Context context) {
         super(context);
         Intrinsics3.checkNotNullParameter(context, "context");
         LayoutInflater.from(getContext()).inflate(C5570R.e.trash_wrap, this);
@@ -153,7 +152,7 @@ public final class OverlayTrashWrap extends FrameLayout implements TrashEventLis
     }
 
     @Override // p007b.p008a.p036n.TrashEventListener
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public void mo227a(OverlayBubbleWrap overlayBubbleWrap) {
         if (overlayBubbleWrap != null) {
             FrameLayout frameLayout = this.f1561j.f1559c;
@@ -214,7 +213,7 @@ public final class OverlayTrashWrap extends FrameLayout implements TrashEventLis
     }
 
     @Override // p007b.p008a.p036n.TrashEventListener
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public void mo228b(OverlayBubbleWrap overlayBubbleWrap) {
         Intrinsics3.checkNotNullParameter(overlayBubbleWrap, "bubble");
         Intrinsics3.checkNotNullParameter(overlayBubbleWrap, "bubble");

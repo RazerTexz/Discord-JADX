@@ -3,9 +3,9 @@ package com.discord.stores;
 import kotlin.jvm.functions.Function2;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: StoreGuildSubscriptions.kt */
-/* renamed from: com.discord.stores.StoreGuildSubscriptions$RangeComputer$computeRanges$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.stores.StoreGuildSubscriptions$RangeComputer$computeRanges$1, reason: use source file name */
+/* JADX INFO: compiled from: StoreGuildSubscriptions.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class StoreGuildSubscriptions2 extends Lambda implements Function2<Integer, Integer, Integer> {
     public static final StoreGuildSubscriptions2 INSTANCE = new StoreGuildSubscriptions2();
 

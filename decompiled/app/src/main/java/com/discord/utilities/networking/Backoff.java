@@ -9,8 +9,8 @@ import kotlin.jvm.internal.DefaultConstructorMarker;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: Backoff.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: Backoff.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class Backoff {
     private long current;
     private int fails;
@@ -21,14 +21,14 @@ public final class Backoff {
     private final long minBackoffMs;
     private final Scheduler scheduler;
 
-    /* compiled from: Backoff.kt */
+    /* JADX INFO: compiled from: Backoff.kt */
     public interface Scheduler {
         void cancel();
 
         void schedule(Function0<Unit> action, long delayMs);
     }
 
-    /* compiled from: Backoff.kt */
+    /* JADX INFO: compiled from: Backoff.kt */
     public static final class TimerScheduler extends Timer implements Scheduler {
         private final ExecutorService delegateExecutor;
         private final String tag;
@@ -77,8 +77,8 @@ public final class Backoff {
         }
     }
 
-    /* compiled from: Backoff.kt */
-    /* renamed from: com.discord.utilities.networking.Backoff$fail$1 */
+    /* JADX INFO: renamed from: com.discord.utilities.networking.Backoff$fail$1 */
+    /* JADX INFO: compiled from: Backoff.kt */
     public static final class C68191 extends Lambda implements Function0<Unit> {
         public final /* synthetic */ Function0 $callback;
 
@@ -94,7 +94,7 @@ public final class Backoff {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             Backoff.access$executeFailureCallback(Backoff.this, this.$callback);
         }
@@ -139,7 +139,7 @@ public final class Backoff {
     public final synchronized long fail(Function0<Unit> callback) {
         this.fails++;
         double dRandom = this.jitter ? Math.random() : 1.0d;
-        this.current = Math.min(this.current + ((long) (2 * r4 * dRandom)), this.maxBackoffMs);
+        this.current = Math.min(this.current + ((long) (((long) 2) * r4 * dRandom)), this.maxBackoffMs);
         if (callback != null && !this.isPending) {
             this.isPending = true;
             this.scheduler.schedule(new C68191(callback), this.current);
@@ -151,7 +151,7 @@ public final class Backoff {
         return this.fails > this.failureThreshold;
     }
 
-    /* renamed from: isPending, reason: from getter */
+    /* JADX INFO: renamed from: isPending, reason: from getter */
     public final boolean getIsPending() {
         return this.isPending;
     }
@@ -165,6 +165,6 @@ public final class Backoff {
     /* JADX WARN: Illegal instructions before constructor call */
     public /* synthetic */ Backoff(long j, long j2, int i, boolean z2, Scheduler scheduler, int i2, DefaultConstructorMarker defaultConstructorMarker) {
         long j3 = (i2 & 1) != 0 ? 500L : j;
-        this(j3, (i2 & 2) != 0 ? 10 * j3 : j2, (i2 & 4) != 0 ? Integer.MAX_VALUE : i, (i2 & 8) != 0 ? true : z2, (i2 & 16) != 0 ? new TimerScheduler(null, null, 3, null) : scheduler);
+        this(j3, (i2 & 2) != 0 ? ((long) 10) * j3 : j2, (i2 & 4) != 0 ? Integer.MAX_VALUE : i, (i2 & 8) != 0 ? true : z2, (i2 & 16) != 0 ? new TimerScheduler(null, null, 3, null) : scheduler);
     }
 }

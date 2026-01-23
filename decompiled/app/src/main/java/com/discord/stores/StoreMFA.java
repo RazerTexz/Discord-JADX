@@ -9,22 +9,22 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 import p658rx.Observable;
 
-/* compiled from: StoreMFA.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: StoreMFA.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class StoreMFA extends StoreV2 {
     private final Dispatcher dispatcher;
     private final ObservationDeck observationDeck;
     private State state;
     private final StoreStream stream;
 
-    /* compiled from: StoreMFA.kt */
+    /* JADX INFO: compiled from: StoreMFA.kt */
     public enum MFAActivationState {
         PENDING_ENABLED,
         PENDING_DISABLED,
         NONE
     }
 
-    /* compiled from: StoreMFA.kt */
+    /* JADX INFO: compiled from: StoreMFA.kt */
     public static final /* data */ class State {
         private final MFAActivationState activationState;
         private final boolean isTogglingSMSBackup;
@@ -45,12 +45,12 @@ public final class StoreMFA extends StoreV2 {
             return state.copy(mFAActivationState, z2);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final MFAActivationState getActivationState() {
             return this.activationState;
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final boolean getIsTogglingSMSBackup() {
             return this.isTogglingSMSBackup;
         }
@@ -76,15 +76,18 @@ public final class StoreMFA extends StoreV2 {
         }
 
         /* JADX WARN: Multi-variable type inference failed */
+        /* JADX WARN: Type inference failed for: r1v1, types: [int] */
+        /* JADX WARN: Type inference failed for: r1v2 */
+        /* JADX WARN: Type inference failed for: r1v3 */
         public int hashCode() {
             MFAActivationState mFAActivationState = this.activationState;
             int iHashCode = (mFAActivationState != null ? mFAActivationState.hashCode() : 0) * 31;
             boolean z2 = this.isTogglingSMSBackup;
-            int i = z2;
-            if (z2 != 0) {
-                i = 1;
+            ?? r1 = z2;
+            if (z2) {
+                r1 = 1;
             }
-            return iHashCode + i;
+            return iHashCode + r1;
         }
 
         public final boolean isTogglingSMSBackup() {
@@ -99,8 +102,8 @@ public final class StoreMFA extends StoreV2 {
         }
     }
 
-    /* compiled from: StoreMFA.kt */
-    /* renamed from: com.discord.stores.StoreMFA$observeState$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreMFA$observeState$1 */
+    /* JADX INFO: compiled from: StoreMFA.kt */
     public static final class C61601 extends Lambda implements Function0<State> {
         public C61601() {
             super(0);
@@ -118,8 +121,8 @@ public final class StoreMFA extends StoreV2 {
         }
     }
 
-    /* compiled from: StoreMFA.kt */
-    /* renamed from: com.discord.stores.StoreMFA$togglingSMSBackup$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreMFA$togglingSMSBackup$1 */
+    /* JADX INFO: compiled from: StoreMFA.kt */
     public static final class C61611 extends Lambda implements Function0<Unit> {
         public C61611() {
             super(0);
@@ -131,7 +134,7 @@ public final class StoreMFA extends StoreV2 {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             StoreMFA storeMFA = StoreMFA.this;
             StoreMFA.access$setState$p(storeMFA, State.copy$default(StoreMFA.access$getState$p(storeMFA), null, true, 1, null));
@@ -139,8 +142,8 @@ public final class StoreMFA extends StoreV2 {
         }
     }
 
-    /* compiled from: StoreMFA.kt */
-    /* renamed from: com.discord.stores.StoreMFA$updatePendingMFAState$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreMFA$updatePendingMFAState$1 */
+    /* JADX INFO: compiled from: StoreMFA.kt */
     public static final class C61621 extends Lambda implements Function0<Unit> {
         public final /* synthetic */ MFAActivationState $newActivationState;
 
@@ -156,7 +159,7 @@ public final class StoreMFA extends StoreV2 {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             StoreMFA storeMFA = StoreMFA.this;
             StoreMFA.access$setState$p(storeMFA, State.copy$default(StoreMFA.access$getState$p(storeMFA), this.$newActivationState, false, 2, null));

@@ -6,8 +6,8 @@ import com.discord.api.botuikit.Component9;
 import com.discord.gsonutils.RuntimeTypeAdapterFactory;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ComponentRuntimeTypeAdapter.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: ComponentRuntimeTypeAdapter.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class ComponentRuntimeTypeAdapter {
     public static final ComponentRuntimeTypeAdapter INSTANCE = new ComponentRuntimeTypeAdapter();
     private static final RuntimeTypeAdapterFactory<Component> componentRuntimeTypeAdapterFactory;
@@ -32,7 +32,7 @@ public final class ComponentRuntimeTypeAdapter {
         componentRuntimeTypeAdapterFactory = runtimeTypeAdapterFactory;
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final RuntimeTypeAdapterFactory<Component> m7624a() {
         return componentRuntimeTypeAdapterFactory;
     }

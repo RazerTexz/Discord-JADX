@@ -3,7 +3,7 @@ package androidx.fragment.app;
 import android.util.Log;
 import java.io.Writer;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public final class LogWriter extends Writer {
     private StringBuilder mBuilder = new StringBuilder(128);
     private final String mTag;

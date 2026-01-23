@@ -19,15 +19,15 @@ import p507d0.p513e0.p514p.p515d.p517m0.p550i.MessageLite;
 import p507d0.p513e0.p514p.p515d.p517m0.p550i.MessageLiteOrBuilder;
 import p507d0.p513e0.p514p.p515d.p517m0.p550i.Parser2;
 
-/* compiled from: ProtoBuf.java */
-/* renamed from: d0.e0.p.d.m0.f.r */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.f.r */
+/* JADX INFO: compiled from: ProtoBuf.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class C11693r extends GeneratedMessageLite.d<C11693r> implements MessageLiteOrBuilder {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static final C11693r f23931j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public static Parser2<C11693r> f23932k = new a();
     private List<C11677b> annotation_;
     private int bitField0_;
@@ -43,8 +43,8 @@ public final class C11693r extends GeneratedMessageLite.d<C11693r> implements Me
     private final ByteString3 unknownFields;
     private List<Integer> versionRequirement_;
 
-    /* compiled from: ProtoBuf.java */
-    /* renamed from: d0.e0.p.d.m0.f.r$a */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.f.r$a */
+    /* JADX INFO: compiled from: ProtoBuf.java */
     public static class a extends AbstractParser<C11693r> {
         @Override // p507d0.p513e0.p514p.p515d.p517m0.p550i.Parser2
         public /* bridge */ /* synthetic */ Object parsePartialFrom(CodedInputStream codedInputStream, ExtensionRegistryLite extensionRegistryLite) throws InvalidProtocolBufferException {
@@ -57,38 +57,38 @@ public final class C11693r extends GeneratedMessageLite.d<C11693r> implements Me
         }
     }
 
-    /* compiled from: ProtoBuf.java */
-    /* renamed from: d0.e0.p.d.m0.f.r$b */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.f.r$b */
+    /* JADX INFO: compiled from: ProtoBuf.java */
     public static final class b extends GeneratedMessageLite.c<C11693r, b> implements MessageLiteOrBuilder {
 
-        /* renamed from: m */
+        /* JADX INFO: renamed from: m */
         public int f23933m;
 
-        /* renamed from: o */
+        /* JADX INFO: renamed from: o */
         public int f23935o;
 
-        /* renamed from: r */
+        /* JADX INFO: renamed from: r */
         public int f23938r;
 
-        /* renamed from: t */
+        /* JADX INFO: renamed from: t */
         public int f23940t;
 
-        /* renamed from: n */
+        /* JADX INFO: renamed from: n */
         public int f23934n = 6;
 
-        /* renamed from: p */
+        /* JADX INFO: renamed from: p */
         public List<C11694s> f23936p = Collections.emptyList();
 
-        /* renamed from: q */
+        /* JADX INFO: renamed from: q */
         public C11692q f23937q = C11692q.getDefaultInstance();
 
-        /* renamed from: s */
+        /* JADX INFO: renamed from: s */
         public C11692q f23939s = C11692q.getDefaultInstance();
 
-        /* renamed from: u */
+        /* JADX INFO: renamed from: u */
         public List<C11677b> f23941u = Collections.emptyList();
 
-        /* renamed from: v */
+        /* JADX INFO: renamed from: v */
         public List<Integer> f23942v = Collections.emptyList();
 
         @Override // p507d0.p513e0.p514p.p515d.p517m0.p550i.MessageLite.a
@@ -141,7 +141,7 @@ public final class C11693r extends GeneratedMessageLite.d<C11693r> implements Me
         }
 
         @Override // p507d0.p513e0.p514p.p515d.p517m0.p550i.GeneratedMessageLite.b
-        /* renamed from: clone */
+        /* JADX INFO: renamed from: clone */
         public /* bridge */ /* synthetic */ Object mo11465clone() throws CloneNotSupportedException {
             return clone();
         }
@@ -340,42 +340,42 @@ public final class C11693r extends GeneratedMessageLite.d<C11693r> implements Me
         return f23931j;
     }
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public static /* synthetic */ int m9762h(C11693r c11693r, int i) {
         c11693r.flags_ = i;
         return i;
     }
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public static /* synthetic */ int m9763i(C11693r c11693r, int i) {
         c11693r.name_ = i;
         return i;
     }
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static /* synthetic */ List m9764j(C11693r c11693r) {
         return c11693r.typeParameter_;
     }
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public static /* synthetic */ List m9765k(C11693r c11693r, List list) {
         c11693r.typeParameter_ = list;
         return list;
     }
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public static /* synthetic */ C11692q m9766l(C11693r c11693r, C11692q c11692q) {
         c11693r.underlyingType_ = c11692q;
         return c11692q;
     }
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public static /* synthetic */ int m9767m(C11693r c11693r, int i) {
         c11693r.underlyingTypeId_ = i;
         return i;
     }
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public static /* synthetic */ C11692q m9768n(C11693r c11693r, C11692q c11692q) {
         c11693r.expandedType_ = c11692q;
         return c11692q;
@@ -385,13 +385,13 @@ public final class C11693r extends GeneratedMessageLite.d<C11693r> implements Me
         return newBuilder().mergeFrom(c11693r);
     }
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public static /* synthetic */ int m9769o(C11693r c11693r, int i) {
         c11693r.expandedTypeId_ = i;
         return i;
     }
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public static /* synthetic */ List m9770p(C11693r c11693r) {
         return c11693r.annotation_;
     }
@@ -400,30 +400,30 @@ public final class C11693r extends GeneratedMessageLite.d<C11693r> implements Me
         return (C11693r) ((AbstractParser) f23932k).m11466parseDelimitedFrom(inputStream, extensionRegistryLite);
     }
 
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     public static /* synthetic */ List m9771q(C11693r c11693r, List list) {
         c11693r.annotation_ = list;
         return list;
     }
 
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     public static /* synthetic */ List m9772r(C11693r c11693r) {
         return c11693r.versionRequirement_;
     }
 
-    /* renamed from: s */
+    /* JADX INFO: renamed from: s */
     public static /* synthetic */ List m9773s(C11693r c11693r, List list) {
         c11693r.versionRequirement_ = list;
         return list;
     }
 
-    /* renamed from: t */
+    /* JADX INFO: renamed from: t */
     public static /* synthetic */ int m9774t(C11693r c11693r, int i) {
         c11693r.bitField0_ = i;
         return i;
     }
 
-    /* renamed from: u */
+    /* JADX INFO: renamed from: u */
     public static /* synthetic */ ByteString3 m9775u(C11693r c11693r) {
         return c11693r.unknownFields;
     }
@@ -597,7 +597,7 @@ public final class C11693r extends GeneratedMessageLite.d<C11693r> implements Me
         return toBuilder();
     }
 
-    /* renamed from: v */
+    /* JADX INFO: renamed from: v */
     public final void m9776v() {
         this.flags_ = 6;
         this.name_ = 0;

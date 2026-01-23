@@ -13,18 +13,18 @@ import p507d0.p579g0.CharJVM;
 import p507d0.p592z.p594d.Intrinsics3;
 import p615g0.p616z.Buffer5;
 
-/* compiled from: RealBufferedSource.kt */
-/* renamed from: g0.r, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: g0.r, reason: use source file name */
+/* JADX INFO: compiled from: RealBufferedSource.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class RealBufferedSource implements BufferedSource {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final Buffer3 f26114j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public boolean f26115k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final Source2 f26116l;
 
     public RealBufferedSource(Source2 source2) {
@@ -34,7 +34,7 @@ public final class RealBufferedSource implements BufferedSource {
     }
 
     @Override // p615g0.BufferedSource
-    /* renamed from: B */
+    /* JADX INFO: renamed from: B */
     public void mo10428B(Buffer3 buffer3, long j) throws IOException {
         Intrinsics3.checkParameterIsNotNull(buffer3, "sink");
         try {
@@ -49,7 +49,7 @@ public final class RealBufferedSource implements BufferedSource {
     }
 
     @Override // p615g0.BufferedSource
-    /* renamed from: E */
+    /* JADX INFO: renamed from: E */
     public long mo10430E(ByteString byteString) {
         Intrinsics3.checkParameterIsNotNull(byteString, "targetBytes");
         Intrinsics3.checkParameterIsNotNull(byteString, "targetBytes");
@@ -72,7 +72,7 @@ public final class RealBufferedSource implements BufferedSource {
     }
 
     @Override // p615g0.BufferedSource
-    /* renamed from: G */
+    /* JADX INFO: renamed from: G */
     public String mo10432G(long j) throws EOFException {
         if (!(j >= 0)) {
             throw new IllegalArgumentException(outline.m877t("limit < 0: ", j).toString());
@@ -93,7 +93,7 @@ public final class RealBufferedSource implements BufferedSource {
     }
 
     @Override // p615g0.BufferedSource
-    /* renamed from: M */
+    /* JADX INFO: renamed from: M */
     public String mo10437M(Charset charset) throws IOException {
         Intrinsics3.checkParameterIsNotNull(charset, "charset");
         this.f26114j.mo10440P(this.f26116l);
@@ -101,13 +101,13 @@ public final class RealBufferedSource implements BufferedSource {
     }
 
     @Override // p615g0.BufferedSource
-    /* renamed from: Y */
+    /* JADX INFO: renamed from: Y */
     public String mo10449Y() {
         return mo10432G(RecyclerView.FOREVER_NS);
     }
 
     @Override // p615g0.BufferedSource
-    /* renamed from: Z */
+    /* JADX INFO: renamed from: Z */
     public byte[] mo10450Z(long j) throws EOFException {
         if (mo10458j(j)) {
             return this.f26114j.mo10450Z(j);
@@ -115,7 +115,7 @@ public final class RealBufferedSource implements BufferedSource {
         throw new EOFException();
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public long m10492a(byte b2, long j, long j2) {
         if (!(!this.f26115k)) {
             throw new IllegalStateException("closed".toString());
@@ -138,7 +138,7 @@ public final class RealBufferedSource implements BufferedSource {
         return -1L;
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public int m10493b() throws EOFException {
         mo10463p0(4L);
         int i = this.f26114j.readInt();
@@ -157,13 +157,13 @@ public final class RealBufferedSource implements BufferedSource {
     }
 
     @Override // p615g0.BufferedSource, okio.BufferedSink
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public Buffer3 mo10457g() {
         return this.f26114j;
     }
 
     @Override // p615g0.Source2
-    /* renamed from: i0 */
+    /* JADX INFO: renamed from: i0 */
     public long mo10176i0(Buffer3 buffer3, long j) {
         Intrinsics3.checkParameterIsNotNull(buffer3, "sink");
         if (!(j >= 0)) {
@@ -185,7 +185,7 @@ public final class RealBufferedSource implements BufferedSource {
     }
 
     @Override // p615g0.BufferedSource
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public boolean mo10458j(long j) {
         Buffer3 buffer3;
         if (!(j >= 0)) {
@@ -204,7 +204,7 @@ public final class RealBufferedSource implements BufferedSource {
     }
 
     @Override // p615g0.BufferedSource
-    /* renamed from: k0 */
+    /* JADX INFO: renamed from: k0 */
     public long mo10459k0(Sink sink) throws IOException {
         Intrinsics3.checkParameterIsNotNull(sink, "sink");
         long j = 0;
@@ -226,7 +226,7 @@ public final class RealBufferedSource implements BufferedSource {
     }
 
     @Override // p615g0.BufferedSource
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public ByteString mo10461o(long j) throws EOFException {
         if (mo10458j(j)) {
             return this.f26114j.mo10461o(j);
@@ -235,7 +235,7 @@ public final class RealBufferedSource implements BufferedSource {
     }
 
     @Override // p615g0.BufferedSource
-    /* renamed from: p0 */
+    /* JADX INFO: renamed from: p0 */
     public void mo10463p0(long j) throws EOFException {
         if (!mo10458j(j)) {
             throw new EOFException();
@@ -300,7 +300,7 @@ public final class RealBufferedSource implements BufferedSource {
     }
 
     @Override // p615g0.BufferedSource
-    /* renamed from: s0 */
+    /* JADX INFO: renamed from: s0 */
     public long mo10467s0() throws EOFException {
         byte bM10464q;
         mo10463p0(1L);
@@ -355,13 +355,13 @@ public final class RealBufferedSource implements BufferedSource {
     }
 
     @Override // p615g0.BufferedSource
-    /* renamed from: u0 */
+    /* JADX INFO: renamed from: u0 */
     public InputStream mo10470u0() {
         return new a();
     }
 
     @Override // p615g0.BufferedSource
-    /* renamed from: v0 */
+    /* JADX INFO: renamed from: v0 */
     public int mo10471v0(Options2 options2) throws EOFException {
         Intrinsics3.checkParameterIsNotNull(options2, "options");
         if (!(!this.f26115k)) {
@@ -382,7 +382,7 @@ public final class RealBufferedSource implements BufferedSource {
     }
 
     @Override // p615g0.BufferedSource
-    /* renamed from: w */
+    /* JADX INFO: renamed from: w */
     public boolean mo10472w() {
         if (!this.f26115k) {
             return this.f26114j.mo10472w() && this.f26116l.mo10176i0(this.f26114j, (long) 8192) == -1;
@@ -390,8 +390,8 @@ public final class RealBufferedSource implements BufferedSource {
         throw new IllegalStateException("closed".toString());
     }
 
-    /* compiled from: RealBufferedSource.kt */
-    /* renamed from: g0.r$a */
+    /* JADX INFO: renamed from: g0.r$a */
+    /* JADX INFO: compiled from: RealBufferedSource.kt */
     public static final class a extends InputStream {
         public a() {
         }

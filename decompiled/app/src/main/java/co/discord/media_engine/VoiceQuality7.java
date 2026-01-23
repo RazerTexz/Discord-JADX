@@ -3,9 +3,9 @@ package co.discord.media_engine;
 import java.util.Map;
 import p007b.p100d.p104b.p105a.outline;
 
-/* compiled from: VoiceQuality.kt */
-/* renamed from: co.discord.media_engine.VoiceQualityKt, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: co.discord.media_engine.VoiceQualityKt, reason: use source file name */
+/* JADX INFO: compiled from: VoiceQuality.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class VoiceQuality7 {
     private static final double _calculateMos(double d, double d2) {
         double d_calculateR = _calculateR(d, d2);
@@ -16,13 +16,13 @@ public final class VoiceQuality7 {
         if (d_calculateR > d3) {
             return 4.5d;
         }
-        return ((d3 - d_calculateR) * (d_calculateR - 60) * 7.1E-6d * d_calculateR) + (0.035d * d_calculateR) + 1;
+        return ((d3 - d_calculateR) * (d_calculateR - ((double) 60)) * 7.1E-6d * d_calculateR) + (0.035d * d_calculateR) + ((double) 1);
     }
 
     private static final double _calculateR(double d, double d2) {
         double d3 = (0.024d * d) + (d > 177.3d ? (d - 177.3d) * 0.11d : 0.0d);
         double d4 = 10;
-        return (93.4d - d3) - (((122 * d2) / (d2 + d4)) + d4);
+        return (93.4d - d3) - (((((double) 122) * d2) / (d2 + d4)) + d4);
     }
 
     public static final /* synthetic */ double access$_calculateMos(double d, double d2) {

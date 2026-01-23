@@ -13,8 +13,8 @@ import java.util.Objects;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: WidgetChatListAdapterItemSearchResultCount.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetChatListAdapterItemSearchResultCount.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetChatListAdapterItemSearchResultCount extends WidgetChatListItem {
     private final WidgetChatListAdapterItemResultCountBinding binding;
 

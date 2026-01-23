@@ -10,15 +10,15 @@ import kotlin.jvm.internal.DefaultConstructorMarker;
 import p007b.p008a.p050t.p052b.p053a.TextNode;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: StyleNode.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: StyleNode.kt */
+/* JADX INFO: loaded from: classes.dex */
 public class StyleNode<RC, T> extends Node.C5655a<RC> {
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private final List<T> styles;
 
-    /* compiled from: StyleNode.kt */
+    /* JADX INFO: compiled from: StyleNode.kt */
     public static final class Companion {
         public Companion() {
         }
@@ -27,17 +27,17 @@ public class StyleNode<RC, T> extends Node.C5655a<RC> {
         }
     }
 
-    /* compiled from: StyleNode.kt */
-    /* renamed from: com.discord.simpleast.core.node.StyleNode$a */
+    /* JADX INFO: renamed from: com.discord.simpleast.core.node.StyleNode$a */
+    /* JADX INFO: compiled from: StyleNode.kt */
     public interface InterfaceC5656a<RC> {
         Iterable<?> get(RC rc);
     }
 
-    /* compiled from: StyleNode.kt */
-    /* renamed from: com.discord.simpleast.core.node.StyleNode$b */
+    /* JADX INFO: renamed from: com.discord.simpleast.core.node.StyleNode$b */
+    /* JADX INFO: compiled from: StyleNode.kt */
     public static final class C5657b<RC> extends TextNode<RC> {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final InterfaceC5656a<RC> f18952a;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */

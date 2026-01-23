@@ -13,9 +13,9 @@ import p007b.p100d.p104b.p105a.outline;
 import p507d0.p579g0.StringsJVM;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: FileUtils.kt */
-/* renamed from: com.discord.utilities.file.FileUtilsKt, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.utilities.file.FileUtilsKt, reason: use source file name */
+/* JADX INFO: compiled from: FileUtils.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class FileUtils2 {
     public static final Long getFileSizeBytes(Context context, Uri uri) {
         Intrinsics3.checkNotNullParameter(context, "context");

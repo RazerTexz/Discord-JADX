@@ -5,9 +5,9 @@ import com.airbnb.lottie.LottieAnimationView;
 import kotlin.ranges.Ranges2;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: LottieAnimationUtils.kt */
-/* renamed from: com.discord.utilities.animations.LoopAnimationListener, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.utilities.animations.LoopAnimationListener, reason: use source file name */
+/* JADX INFO: compiled from: LottieAnimationUtils.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class LottieAnimationUtils implements ValueAnimator.AnimatorUpdateListener {
     private final LottieAnimationView animationView;
     private final Ranges2 loopFrames;

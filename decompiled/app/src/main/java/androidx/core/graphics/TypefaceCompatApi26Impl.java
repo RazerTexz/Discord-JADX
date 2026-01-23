@@ -24,9 +24,9 @@ import java.nio.ByteBuffer;
 import java.util.Map;
 import p007b.p100d.p104b.p105a.outline;
 
+/* JADX INFO: loaded from: classes.dex */
 @RequiresApi(26)
 @RestrictTo({RestrictTo.Scope.LIBRARY_GROUP_PREFIX})
-/* loaded from: classes.dex */
 public class TypefaceCompatApi26Impl extends TypefaceCompatApi21Impl {
     private static final String ABORT_CREATION_METHOD = "abortCreation";
     private static final String ADD_FONT_FROM_ASSET_MANAGER_METHOD = "addFontFromAssetManager";
@@ -44,7 +44,7 @@ public class TypefaceCompatApi26Impl extends TypefaceCompatApi21Impl {
     public final Constructor<?> mFontFamilyCtor;
     public final Method mFreeze;
 
-    public TypefaceCompatApi26Impl() throws NoSuchMethodException, SecurityException {
+    public TypefaceCompatApi26Impl() throws NoSuchMethodException {
         Method methodObtainCreateFromFamiliesWithDefaultMethod;
         Constructor<?> constructorObtainFontFamilyCtor;
         Method methodObtainAddFontFromAssetManagerMethod;
@@ -248,7 +248,7 @@ public class TypefaceCompatApi26Impl extends TypefaceCompatApi21Impl {
         return cls.getMethod(ADD_FONT_FROM_BUFFER_METHOD, ByteBuffer.class, cls2, FontVariationAxis[].class, cls2, cls2);
     }
 
-    public Method obtainCreateFromFamiliesWithDefaultMethod(Class<?> cls) throws NoSuchMethodException, SecurityException {
+    public Method obtainCreateFromFamiliesWithDefaultMethod(Class<?> cls) throws NoSuchMethodException {
         Class cls2 = Integer.TYPE;
         Method declaredMethod = Typeface.class.getDeclaredMethod(CREATE_FROM_FAMILIES_WITH_DEFAULT_METHOD, Array.newInstance(cls, 1).getClass(), cls2, cls2);
         declaredMethod.setAccessible(true);

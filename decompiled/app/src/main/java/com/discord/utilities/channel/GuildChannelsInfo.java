@@ -26,11 +26,11 @@ import p507d0.p580t._Collections;
 import p507d0.p592z.p594d.Intrinsics3;
 import p658rx.Observable;
 
-/* compiled from: GuildChannelsInfo.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: GuildChannelsInfo.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final /* data */ class GuildChannelsInfo {
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private final boolean ableToInstantInvite;
     private final boolean canChangeNickname;
@@ -44,7 +44,7 @@ public final /* data */ class GuildChannelsInfo {
     private final ModelNotificationSettings notificationSettings;
     private final boolean unelevated;
 
-    /* compiled from: GuildChannelsInfo.kt */
+    /* JADX INFO: compiled from: GuildChannelsInfo.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -78,16 +78,17 @@ public final /* data */ class GuildChannelsInfo {
         this.guildRoles = map2;
     }
 
+    /* JADX WARN: Multi-variable type inference failed */
     public static /* synthetic */ GuildChannelsInfo copy$default(GuildChannelsInfo guildChannelsInfo, Guild guild, GuildRole guildRole, ModelNotificationSettings modelNotificationSettings, boolean z2, Map map, boolean z3, boolean z4, boolean z5, PermissionsContexts permissionsContexts, boolean z6, Map map2, int i, Object obj) {
         return guildChannelsInfo.copy((i & 1) != 0 ? guildChannelsInfo.guild : guild, (i & 2) != 0 ? guildChannelsInfo.everyoneRole : guildRole, (i & 4) != 0 ? guildChannelsInfo.notificationSettings : modelNotificationSettings, (i & 8) != 0 ? guildChannelsInfo.hideMutedChannels : z2, (i & 16) != 0 ? guildChannelsInfo.channelPermissions : map, (i & 32) != 0 ? guildChannelsInfo.ableToInstantInvite : z3, (i & 64) != 0 ? guildChannelsInfo.unelevated : z4, (i & 128) != 0 ? guildChannelsInfo.isVerifiedServer : z5, (i & 256) != 0 ? guildChannelsInfo.manageGuildContext : permissionsContexts, (i & 512) != 0 ? guildChannelsInfo.canChangeNickname : z6, (i & 1024) != 0 ? guildChannelsInfo.guildRoles : map2);
     }
 
-    /* renamed from: component1, reason: from getter */
+    /* JADX INFO: renamed from: component1, reason: from getter */
     public final Guild getGuild() {
         return this.guild;
     }
 
-    /* renamed from: component10, reason: from getter */
+    /* JADX INFO: renamed from: component10, reason: from getter */
     public final boolean getCanChangeNickname() {
         return this.canChangeNickname;
     }
@@ -96,17 +97,17 @@ public final /* data */ class GuildChannelsInfo {
         return this.guildRoles;
     }
 
-    /* renamed from: component2, reason: from getter */
+    /* JADX INFO: renamed from: component2, reason: from getter */
     public final GuildRole getEveryoneRole() {
         return this.everyoneRole;
     }
 
-    /* renamed from: component3, reason: from getter */
+    /* JADX INFO: renamed from: component3, reason: from getter */
     public final ModelNotificationSettings getNotificationSettings() {
         return this.notificationSettings;
     }
 
-    /* renamed from: component4, reason: from getter */
+    /* JADX INFO: renamed from: component4, reason: from getter */
     public final boolean getHideMutedChannels() {
         return this.hideMutedChannels;
     }
@@ -115,22 +116,22 @@ public final /* data */ class GuildChannelsInfo {
         return this.channelPermissions;
     }
 
-    /* renamed from: component6, reason: from getter */
+    /* JADX INFO: renamed from: component6, reason: from getter */
     public final boolean getAbleToInstantInvite() {
         return this.ableToInstantInvite;
     }
 
-    /* renamed from: component7, reason: from getter */
+    /* JADX INFO: renamed from: component7, reason: from getter */
     public final boolean getUnelevated() {
         return this.unelevated;
     }
 
-    /* renamed from: component8, reason: from getter */
+    /* JADX INFO: renamed from: component8, reason: from getter */
     public final boolean getIsVerifiedServer() {
         return this.isVerifiedServer;
     }
 
-    /* renamed from: component9, reason: from getter */
+    /* JADX INFO: renamed from: component9, reason: from getter */
     public final PermissionsContexts getManageGuildContext() {
         return this.manageGuildContext;
     }
@@ -231,6 +232,21 @@ public final /* data */ class GuildChannelsInfo {
     }
 
     /* JADX WARN: Multi-variable type inference failed */
+    /* JADX WARN: Type inference failed for: r2v12, types: [int] */
+    /* JADX WARN: Type inference failed for: r2v14, types: [int] */
+    /* JADX WARN: Type inference failed for: r2v16, types: [int] */
+    /* JADX WARN: Type inference failed for: r2v23 */
+    /* JADX WARN: Type inference failed for: r2v24 */
+    /* JADX WARN: Type inference failed for: r2v25 */
+    /* JADX WARN: Type inference failed for: r2v27 */
+    /* JADX WARN: Type inference failed for: r2v30 */
+    /* JADX WARN: Type inference failed for: r2v31 */
+    /* JADX WARN: Type inference failed for: r2v32 */
+    /* JADX WARN: Type inference failed for: r2v33 */
+    /* JADX WARN: Type inference failed for: r2v7, types: [int] */
+    /* JADX WARN: Type inference failed for: r3v0 */
+    /* JADX WARN: Type inference failed for: r3v1, types: [int] */
+    /* JADX WARN: Type inference failed for: r3v2 */
     public int hashCode() {
         Guild guild = this.guild;
         int iHashCode = (guild != null ? guild.hashCode() : 0) * 31;
@@ -239,37 +255,37 @@ public final /* data */ class GuildChannelsInfo {
         ModelNotificationSettings modelNotificationSettings = this.notificationSettings;
         int iHashCode3 = (iHashCode2 + (modelNotificationSettings != null ? modelNotificationSettings.hashCode() : 0)) * 31;
         boolean z2 = this.hideMutedChannels;
-        int i = z2;
-        if (z2 != 0) {
-            i = 1;
+        ?? r2 = z2;
+        if (z2) {
+            r2 = 1;
         }
-        int i2 = (iHashCode3 + i) * 31;
+        int i = (iHashCode3 + r2) * 31;
         Map<Long, Long> map = this.channelPermissions;
-        int iHashCode4 = (i2 + (map != null ? map.hashCode() : 0)) * 31;
+        int iHashCode4 = (i + (map != null ? map.hashCode() : 0)) * 31;
         boolean z3 = this.ableToInstantInvite;
-        int i3 = z3;
-        if (z3 != 0) {
-            i3 = 1;
+        ?? r22 = z3;
+        if (z3) {
+            r22 = 1;
         }
-        int i4 = (iHashCode4 + i3) * 31;
+        int i2 = (iHashCode4 + r22) * 31;
         boolean z4 = this.unelevated;
-        int i5 = z4;
-        if (z4 != 0) {
-            i5 = 1;
+        ?? r23 = z4;
+        if (z4) {
+            r23 = 1;
         }
-        int i6 = (i4 + i5) * 31;
+        int i3 = (i2 + r23) * 31;
         boolean z5 = this.isVerifiedServer;
-        int i7 = z5;
-        if (z5 != 0) {
-            i7 = 1;
+        ?? r24 = z5;
+        if (z5) {
+            r24 = 1;
         }
-        int i8 = (i6 + i7) * 31;
+        int i4 = (i3 + r24) * 31;
         PermissionsContexts permissionsContexts = this.manageGuildContext;
-        int iHashCode5 = (i8 + (permissionsContexts != null ? permissionsContexts.hashCode() : 0)) * 31;
+        int iHashCode5 = (i4 + (permissionsContexts != null ? permissionsContexts.hashCode() : 0)) * 31;
         boolean z6 = this.canChangeNickname;
-        int i9 = (iHashCode5 + (z6 ? 1 : z6 ? 1 : 0)) * 31;
+        int i5 = (iHashCode5 + (z6 ? 1 : z6)) * 31;
         Map<Long, GuildRole> map2 = this.guildRoles;
-        return i9 + (map2 != null ? map2.hashCode() : 0);
+        return i5 + (map2 != null ? map2.hashCode() : 0);
     }
 
     public final boolean isVerifiedServer() {

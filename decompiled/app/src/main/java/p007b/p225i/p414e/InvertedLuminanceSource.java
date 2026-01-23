@@ -1,11 +1,11 @@
 package p007b.p225i.p414e;
 
-/* compiled from: InvertedLuminanceSource.java */
-/* renamed from: b.i.e.e, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.e.e, reason: use source file name */
+/* JADX INFO: compiled from: InvertedLuminanceSource.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class InvertedLuminanceSource extends LuminanceSource {
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final LuminanceSource f13185c;
 
     public InvertedLuminanceSource(LuminanceSource luminanceSource) {
@@ -14,7 +14,7 @@ public final class InvertedLuminanceSource extends LuminanceSource {
     }
 
     @Override // p007b.p225i.p414e.LuminanceSource
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public byte[] mo6915a() {
         byte[] bArrMo6915a = this.f13185c.mo6915a();
         int i = this.f13186a * this.f13187b;
@@ -26,7 +26,7 @@ public final class InvertedLuminanceSource extends LuminanceSource {
     }
 
     @Override // p007b.p225i.p414e.LuminanceSource
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public byte[] mo6916b(int i, byte[] bArr) {
         byte[] bArrMo6916b = this.f13185c.mo6916b(i, bArr);
         int i2 = this.f13186a;
@@ -37,13 +37,13 @@ public final class InvertedLuminanceSource extends LuminanceSource {
     }
 
     @Override // p007b.p225i.p414e.LuminanceSource
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public boolean mo6917c() {
         return this.f13185c.mo6917c();
     }
 
     @Override // p007b.p225i.p414e.LuminanceSource
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public LuminanceSource mo6918d() {
         return new InvertedLuminanceSource(this.f13185c.mo6918d());
     }

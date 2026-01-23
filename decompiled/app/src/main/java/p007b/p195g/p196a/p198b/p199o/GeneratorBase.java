@@ -9,24 +9,24 @@ import p007b.p195g.p196a.p198b.ObjectCodec;
 import p007b.p195g.p196a.p198b.p201q.DupDetector;
 import p007b.p195g.p196a.p198b.p201q.JsonWriteContext;
 
-/* compiled from: GeneratorBase.java */
-/* renamed from: b.g.a.b.o.a, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.g.a.b.o.a, reason: use source file name */
+/* JADX INFO: compiled from: GeneratorBase.java */
+/* JADX INFO: loaded from: classes3.dex */
 public abstract class GeneratorBase extends JsonGenerator {
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public static final int f4527m = (JsonGenerator.a.WRITE_NUMBERS_AS_STRINGS.m1669h() | JsonGenerator.a.ESCAPE_NON_ASCII.m1669h()) | JsonGenerator.a.STRICT_DUPLICATE_DETECTION.m1669h();
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public ObjectCodec f4528n;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public int f4529o;
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public boolean f4530p;
 
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     public JsonWriteContext f4531q;
 
     public GeneratorBase(int i, ObjectCodec objectCodec) {
@@ -37,26 +37,26 @@ public abstract class GeneratorBase extends JsonGenerator {
     }
 
     @Override // p007b.p195g.p196a.p198b.JsonGenerator
-    /* renamed from: V */
+    /* JADX INFO: renamed from: V */
     public void mo1644V(String str) throws IOException {
         mo1693t0("write raw value");
         mo1642T(str);
     }
 
     @Override // p007b.p195g.p196a.p198b.JsonGenerator
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public JsonStreamContext mo1650c() {
         return this.f4531q;
     }
 
     @Override // p007b.p195g.p196a.p198b.JsonGenerator
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final boolean mo1652d(JsonGenerator.a aVar) {
         return (aVar.m1669h() & this.f4529o) != 0;
     }
 
     @Override // p007b.p195g.p196a.p198b.JsonGenerator
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public void mo1654e(Object obj) {
         JsonWriteContext jsonWriteContext = this.f4531q;
         if (jsonWriteContext != null) {
@@ -64,7 +64,7 @@ public abstract class GeneratorBase extends JsonGenerator {
         }
     }
 
-    /* renamed from: o0 */
+    /* JADX INFO: renamed from: o0 */
     public String m1691o0(BigDecimal bigDecimal) throws IOException {
         if (!JsonGenerator.a.WRITE_BIGDECIMAL_AS_PLAIN.m1668g(this.f4529o)) {
             return bigDecimal.toString();
@@ -76,13 +76,13 @@ public abstract class GeneratorBase extends JsonGenerator {
         return bigDecimal.toPlainString();
     }
 
-    /* renamed from: r0 */
+    /* JADX INFO: renamed from: r0 */
     public abstract void mo1692r0(int i, int i2);
 
-    /* renamed from: t0 */
+    /* JADX INFO: renamed from: t0 */
     public abstract void mo1693t0(String str) throws IOException;
 
-    /* renamed from: w0 */
+    /* JADX INFO: renamed from: w0 */
     public JsonGenerator m1694w0(int i, int i2) {
         int i3 = this.f4529o;
         int i4 = (i & i2) | ((~i2) & i3);

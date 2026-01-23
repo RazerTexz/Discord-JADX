@@ -3,24 +3,24 @@ package p007b.p109f.p161j.p181p;
 import java.util.Map;
 import java.util.concurrent.atomic.AtomicInteger;
 
-/* compiled from: StatefulProducerRunnable.java */
-/* renamed from: b.f.j.p.e1, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.f.j.p.e1, reason: use source file name */
+/* JADX INFO: compiled from: StatefulProducerRunnable.java */
+/* JADX INFO: loaded from: classes3.dex */
 public abstract class StatefulProducerRunnable<T> implements Runnable {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final AtomicInteger f4041j = new AtomicInteger(0);
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final Consumer2<T> f4042k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final ProducerListener2 f4043l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public final String f4044m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public final ProducerContext f4045n;
 
     public StatefulProducerRunnable(Consumer2<T> consumer2, ProducerListener2 producerListener2, ProducerContext producerContext, String str) {
@@ -31,25 +31,25 @@ public abstract class StatefulProducerRunnable<T> implements Runnable {
         producerListener2.mo1358e(producerContext, str);
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public void m1464a() {
         if (this.f4041j.compareAndSet(0, 2)) {
             mo1468e();
         }
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public abstract void mo1465b(T t);
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public Map<String, String> mo1466c(T t) {
         return null;
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public abstract T mo1467d() throws Exception;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public void mo1468e() {
         ProducerListener2 producerListener2 = this.f4043l;
         ProducerContext producerContext = this.f4045n;
@@ -59,7 +59,7 @@ public abstract class StatefulProducerRunnable<T> implements Runnable {
         this.f4042k.mo1426d();
     }
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public void mo1469f(Exception exc) {
         ProducerListener2 producerListener2 = this.f4043l;
         ProducerContext producerContext = this.f4045n;
@@ -69,7 +69,7 @@ public abstract class StatefulProducerRunnable<T> implements Runnable {
         this.f4042k.mo1425c(exc);
     }
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public void mo1470g(T t) {
         ProducerListener2 producerListener2 = this.f4043l;
         ProducerContext producerContext = this.f4045n;

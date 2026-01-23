@@ -10,8 +10,8 @@ import p007b.p100d.p104b.p105a.outline;
 import p507d0.p580t.CollectionsJVM;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: Autocompletable.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: Autocompletable.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final /* data */ class UserAutocompletable extends Autocompletable {
     private final List<String> autoTextMatchers;
     private final boolean canUserReadChannel;
@@ -47,27 +47,27 @@ public final /* data */ class UserAutocompletable extends Autocompletable {
         return userAutocompletable.copy(user, guildMember2, str2, presence2, z2);
     }
 
-    /* renamed from: component1, reason: from getter */
+    /* JADX INFO: renamed from: component1, reason: from getter */
     public final User getUser() {
         return this.user;
     }
 
-    /* renamed from: component2, reason: from getter */
+    /* JADX INFO: renamed from: component2, reason: from getter */
     public final GuildMember getGuildMember() {
         return this.guildMember;
     }
 
-    /* renamed from: component3, reason: from getter */
+    /* JADX INFO: renamed from: component3, reason: from getter */
     public final String getNickname() {
         return this.nickname;
     }
 
-    /* renamed from: component4, reason: from getter */
+    /* JADX INFO: renamed from: component4, reason: from getter */
     public final Presence getPresence() {
         return this.presence;
     }
 
-    /* renamed from: component5, reason: from getter */
+    /* JADX INFO: renamed from: component5, reason: from getter */
     public final boolean getCanUserReadChannel() {
         return this.canUserReadChannel;
     }
@@ -136,6 +136,9 @@ public final /* data */ class UserAutocompletable extends Autocompletable {
     }
 
     /* JADX WARN: Multi-variable type inference failed */
+    /* JADX WARN: Type inference failed for: r1v3, types: [int] */
+    /* JADX WARN: Type inference failed for: r1v4 */
+    /* JADX WARN: Type inference failed for: r1v6 */
     public int hashCode() {
         User user = this.user;
         int iHashCode = (user != null ? user.hashCode() : 0) * 31;
@@ -146,11 +149,11 @@ public final /* data */ class UserAutocompletable extends Autocompletable {
         Presence presence = this.presence;
         int iHashCode4 = (iHashCode3 + (presence != null ? presence.hashCode() : 0)) * 31;
         boolean z2 = this.canUserReadChannel;
-        int i = z2;
-        if (z2 != 0) {
-            i = 1;
+        ?? r1 = z2;
+        if (z2) {
+            r1 = 1;
         }
-        return iHashCode4 + i;
+        return iHashCode4 + r1;
     }
 
     @Override // com.discord.widgets.chat.input.autocomplete.Autocompletable

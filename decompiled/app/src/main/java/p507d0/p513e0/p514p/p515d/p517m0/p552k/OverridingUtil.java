@@ -52,30 +52,30 @@ import p507d0.p513e0.p514p.p515d.p517m0.p567n.p568l1.NewKotlinTypeChecker2;
 import p507d0.p513e0.p514p.p515d.p517m0.p576p.SmartSet;
 import p507d0.p580t._Collections;
 
-/* compiled from: OverridingUtil.java */
-/* renamed from: d0.e0.p.d.m0.k.k, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.k.k, reason: use source file name */
+/* JADX INFO: compiled from: OverridingUtil.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class OverridingUtil {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final List<ExternalOverridabilityCondition> f24410a = _Collections.toList(ServiceLoader.load(ExternalOverridabilityCondition.class, ExternalOverridabilityCondition.class.getClassLoader()));
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static final OverridingUtil f24411b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public static final KotlinTypeChecker.a f24412c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final KotlinTypeRefiner f24413d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final KotlinTypeChecker.a f24414e;
 
-    /* compiled from: OverridingUtil.java */
-    /* renamed from: d0.e0.p.d.m0.k.k$a */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.k.k$a */
+    /* JADX INFO: compiled from: OverridingUtil.java */
     public static class a implements KotlinTypeChecker.a {
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public static /* synthetic */ void m9938a(int i) {
             Object[] objArr = new Object[3];
             if (i != 1) {
@@ -103,8 +103,8 @@ public class OverridingUtil {
     }
 
     /* JADX INFO: Add missing generic type declarations: [D] */
-    /* compiled from: OverridingUtil.java */
-    /* renamed from: d0.e0.p.d.m0.k.k$b */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.k.k$b */
+    /* JADX INFO: compiled from: OverridingUtil.java */
     public static class b<D> implements Function2<D, D, Tuples2<CallableDescriptor, CallableDescriptor>> {
         @Override // kotlin.jvm.functions.Function2
         public /* bridge */ /* synthetic */ Tuples2<CallableDescriptor, CallableDescriptor> invoke(Object obj, Object obj2) {
@@ -117,10 +117,10 @@ public class OverridingUtil {
         }
     }
 
-    /* compiled from: OverridingUtil.java */
-    /* renamed from: d0.e0.p.d.m0.k.k$c */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.k.k$c */
+    /* JADX INFO: compiled from: OverridingUtil.java */
     public static class c implements Function1<CallableMemberDescriptor, CallableDescriptor> {
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public CallableMemberDescriptor invoke2(CallableMemberDescriptor callableMemberDescriptor) {
             return callableMemberDescriptor;
         }
@@ -131,18 +131,18 @@ public class OverridingUtil {
         }
     }
 
-    /* compiled from: OverridingUtil.java */
-    /* renamed from: d0.e0.p.d.m0.k.k$d */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.k.k$d */
+    /* JADX INFO: compiled from: OverridingUtil.java */
     public static class d {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public static final d f24415a = new d(a.OVERRIDABLE, "SUCCESS");
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final a f24416b;
 
-        /* compiled from: OverridingUtil.java */
-        /* renamed from: d0.e0.p.d.m0.k.k$d$a */
+        /* JADX INFO: renamed from: d0.e0.p.d.m0.k.k$d$a */
+        /* JADX INFO: compiled from: OverridingUtil.java */
         public enum a {
             OVERRIDABLE,
             INCOMPATIBLE,
@@ -163,7 +163,7 @@ public class OverridingUtil {
         }
 
         /* JADX WARN: Removed duplicated region for block: B:22:0x0031  */
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         /*
             Code decompiled incorrectly, please refer to instructions dump.
         */
@@ -243,11 +243,11 @@ public class OverridingUtil {
         }
     }
 
-    /* compiled from: OverridingUtil.java */
-    /* renamed from: d0.e0.p.d.m0.k.k$e */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.k.k$e */
+    /* JADX INFO: compiled from: OverridingUtil.java */
     public class e extends ClassicTypeCheckerContext {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public final Map<TypeConstructor, TypeConstructor> f24421j;
 
         public e(Map<TypeConstructor, TypeConstructor> map) {
@@ -255,7 +255,7 @@ public class OverridingUtil {
             this.f24421j = map;
         }
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public static /* synthetic */ void m9940a(int i) {
             Object[] objArr = new Object[3];
             if (i == 1 || i == 3) {
@@ -340,7 +340,7 @@ public class OverridingUtil {
     /* JADX WARN: Removed duplicated region for block: B:15:0x002d A[FALL_THROUGH] */
     /* JADX WARN: Removed duplicated region for block: B:29:0x004c A[FALL_THROUGH] */
     /* JADX WARN: Removed duplicated region for block: B:94:0x0184  */
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
@@ -919,7 +919,7 @@ public class OverridingUtil {
         throw new IllegalStateException(str2);
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public static void m9931c(CallableMemberDescriptor callableMemberDescriptor, Set<CallableMemberDescriptor> set) {
         if (callableMemberDescriptor == null) {
             m9930a(15);
@@ -962,7 +962,7 @@ public class OverridingUtil {
         throw null;
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public static List<KotlinType> m9932d(CallableDescriptor callableDescriptor) {
         ReceiverParameterDescriptor extensionReceiverParameter = callableDescriptor.getExtensionReceiverParameter();
         ArrayList arrayList = new ArrayList();
@@ -1002,7 +1002,7 @@ public class OverridingUtil {
     
         return;
      */
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
@@ -1224,7 +1224,7 @@ public class OverridingUtil {
         return descriptorVisibility2;
     }
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public static boolean m9934g(CallableDescriptor callableDescriptor, KotlinType kotlinType, CallableDescriptor callableDescriptor2, KotlinType kotlinType2, Tuples2<NewKotlinTypeChecker2, ClassicTypeCheckerContext> tuples2) {
         if (kotlinType == null) {
             m9930a(72);
@@ -1286,7 +1286,7 @@ public class OverridingUtil {
         return linkedHashSet;
     }
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public static boolean m9935h(DeclarationDescriptorWithVisibility declarationDescriptorWithVisibility, DeclarationDescriptorWithVisibility declarationDescriptorWithVisibility2) {
         Integer numCompare = DescriptorVisibilities.compare(declarationDescriptorWithVisibility.getVisibility(), declarationDescriptorWithVisibility2.getVisibility());
         return numCompare == null || numCompare.intValue() >= 0;
@@ -1504,7 +1504,7 @@ public class OverridingUtil {
         throw null;
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final boolean m9936b(KotlinType kotlinType, KotlinType kotlinType2, Tuples2<NewKotlinTypeChecker2, ClassicTypeCheckerContext> tuples2) {
         if (kotlinType == null) {
             m9930a(44);
@@ -1524,7 +1524,7 @@ public class OverridingUtil {
         return tuples2.getFirst().equalTypes(tuples2.getSecond(), kotlinType.unwrap(), kotlinType2.unwrap());
     }
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final Tuples2<NewKotlinTypeChecker2, ClassicTypeCheckerContext> m9937f(List<TypeParameterDescriptor> list, List<TypeParameterDescriptor> list2) {
         e eVar;
         if (list == null) {

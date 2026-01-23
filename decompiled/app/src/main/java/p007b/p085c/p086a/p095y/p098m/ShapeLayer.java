@@ -11,12 +11,12 @@ import p007b.p085c.p086a.p091w.p092b.ContentGroup;
 import p007b.p085c.p086a.p095y.KeyPath;
 import p007b.p085c.p086a.p095y.p097l.ShapeGroup;
 
-/* compiled from: ShapeLayer.java */
-/* renamed from: b.c.a.y.m.g, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.c.a.y.m.g, reason: use source file name */
+/* JADX INFO: compiled from: ShapeLayer.java */
+/* JADX INFO: loaded from: classes.dex */
 public class ShapeLayer extends BaseLayer2 {
 
-    /* renamed from: x */
+    /* JADX INFO: renamed from: x */
     public final ContentGroup f2898x;
 
     public ShapeLayer(LottieDrawable lottieDrawable, Layer2 layer2) {
@@ -27,20 +27,20 @@ public class ShapeLayer extends BaseLayer2 {
     }
 
     @Override // p007b.p085c.p086a.p095y.p098m.BaseLayer2, p007b.p085c.p086a.p091w.p092b.DrawingContent
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public void mo712d(RectF rectF, Matrix matrix, boolean z2) {
         super.mo712d(rectF, matrix, z2);
         this.f2898x.mo712d(rectF, this.f2848m, z2);
     }
 
     @Override // p007b.p085c.p086a.p095y.p098m.BaseLayer2
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public void mo780j(@NonNull Canvas canvas, Matrix matrix, int i) {
         this.f2898x.mo713f(canvas, matrix, i);
     }
 
     @Override // p007b.p085c.p086a.p095y.p098m.BaseLayer2
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public void mo784n(KeyPath keyPath, int i, List<KeyPath> list, KeyPath keyPath2) {
         this.f2898x.mo711c(keyPath, i, list, keyPath2);
     }

@@ -4,18 +4,18 @@ import bolts.ExecutorException;
 import java.util.concurrent.Executor;
 
 /* JADX INFO: Add missing generic type declarations: [TResult] */
-/* compiled from: Task.java */
-/* renamed from: z.d, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: z.d, reason: use source file name */
+/* JADX INFO: compiled from: Task.java */
+/* JADX INFO: loaded from: classes.dex */
 public class Task3<TResult> implements Continuation3<TResult, Void> {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final /* synthetic */ TaskCompletionSource2 f27969a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final /* synthetic */ Continuation3 f27970b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final /* synthetic */ Executor f27971c;
 
     public Task3(Task6 task6, TaskCompletionSource2 taskCompletionSource2, Continuation3 continuation3, Executor executor) {
@@ -25,7 +25,7 @@ public class Task3<TResult> implements Continuation3<TResult, Void> {
     }
 
     @Override // p686z.Continuation3
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public Void mo1510a(Task6 task6) throws Exception {
         TaskCompletionSource2 taskCompletionSource2 = this.f27969a;
         Continuation3 continuation3 = this.f27970b;

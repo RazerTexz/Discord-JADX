@@ -19,9 +19,9 @@ import p007b.p008a.p025i.ViewSettingsPremiumGuildNoGuildsBinding;
 import p507d0.p592z.p594d.FunctionReferenceImpl;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: WidgetSettingsGuildBoost.kt */
-/* renamed from: com.discord.widgets.settings.guildboost.WidgetSettingsGuildBoost$binding$2, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.settings.guildboost.WidgetSettingsGuildBoost$binding$2, reason: use source file name */
+/* JADX INFO: compiled from: WidgetSettingsGuildBoost.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final /* synthetic */ class WidgetSettingsGuildBoost2 extends FunctionReferenceImpl implements Function1<View, WidgetSettingsBoostBinding> {
     public static final WidgetSettingsGuildBoost2 INSTANCE = new WidgetSettingsGuildBoost2();
 
@@ -34,7 +34,7 @@ public final /* synthetic */ class WidgetSettingsGuildBoost2 extends FunctionRef
         return invoke2(view);
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final WidgetSettingsBoostBinding invoke2(View view) {
         Intrinsics3.checkNotNullParameter(view, "p1");
         int i = C5419R.id.no_guilds;

@@ -1,8 +1,8 @@
 package androidx.constraintlayout.motion.widget;
 
-/* compiled from: DesignTool.java */
-/* renamed from: androidx.constraintlayout.motion.widget.ProxyInterface, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: androidx.constraintlayout.motion.widget.ProxyInterface, reason: use source file name */
+/* JADX INFO: compiled from: DesignTool.java */
+/* JADX INFO: loaded from: classes.dex */
 public interface DesignTool2 {
     int designAccess(int i, String str, Object obj, float[] fArr, int i2, float[] fArr2, int i3);
 

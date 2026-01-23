@@ -10,13 +10,13 @@ import p007b.p100d.p104b.p105a.outline;
 import p507d0.LazyJVM;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: WidgetHubEmailViewModel.kt */
-/* renamed from: com.discord.widgets.hubs.HubEmailState, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.hubs.HubEmailState, reason: use source file name */
+/* JADX INFO: compiled from: WidgetHubEmailViewModel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final /* data */ class WidgetHubEmailViewModel4 {
     private final String email;
 
-    /* renamed from: hasMultipleDomains$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: hasMultipleDomains$delegate, reason: from kotlin metadata */
     private final Lazy hasMultipleDomains;
     private final Long selectedGuildId;
     private final RestCallState<EmailVerification> verifyEmailAsync;
@@ -52,17 +52,17 @@ public final /* data */ class WidgetHubEmailViewModel4 {
         return widgetHubEmailViewModel4.copy(str, l, widgetHubWaitlist2, restCallState);
     }
 
-    /* renamed from: component1, reason: from getter */
+    /* JADX INFO: renamed from: component1, reason: from getter */
     public final String getEmail() {
         return this.email;
     }
 
-    /* renamed from: component2, reason: from getter */
+    /* JADX INFO: renamed from: component2, reason: from getter */
     public final Long getSelectedGuildId() {
         return this.selectedGuildId;
     }
 
-    /* renamed from: component3, reason: from getter */
+    /* JADX INFO: renamed from: component3, reason: from getter */
     public final WidgetHubWaitlist2 getWaitlistResult() {
         return this.waitlistResult;
     }

@@ -5,8 +5,8 @@ import java.util.Map;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: InAppReportsMenu.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: InAppReportsMenu.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class MenuAPIResponse {
     private final String language;
     private final String name;
@@ -17,27 +17,27 @@ public final /* data */ class MenuAPIResponse {
     private final String variant;
     private final String version;
 
-    /* renamed from: a, reason: from getter */
+    /* JADX INFO: renamed from: a, reason: from getter */
     public final String getLanguage() {
         return this.language;
     }
 
-    /* renamed from: b, reason: from getter */
+    /* JADX INFO: renamed from: b, reason: from getter */
     public final String getName() {
         return this.name;
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final Map<Integer, ReportNode> m8161c() {
         return this.nodes;
     }
 
-    /* renamed from: d, reason: from getter */
+    /* JADX INFO: renamed from: d, reason: from getter */
     public final int getRoot_node_id() {
         return this.root_node_id;
     }
 
-    /* renamed from: e, reason: from getter */
+    /* JADX INFO: renamed from: e, reason: from getter */
     public final int getSuccess_node_id() {
         return this.success_node_id;
     }
@@ -53,12 +53,12 @@ public final /* data */ class MenuAPIResponse {
         return Intrinsics3.areEqual(this.name, menuAPIResponse.name) && Intrinsics3.areEqual(this.variant, menuAPIResponse.variant) && Intrinsics3.areEqual(this.version, menuAPIResponse.version) && Intrinsics3.areEqual(this.language, menuAPIResponse.language) && this.success_node_id == menuAPIResponse.success_node_id && this.root_node_id == menuAPIResponse.root_node_id && Intrinsics3.areEqual(this.postback_url, menuAPIResponse.postback_url) && Intrinsics3.areEqual(this.nodes, menuAPIResponse.nodes);
     }
 
-    /* renamed from: f, reason: from getter */
+    /* JADX INFO: renamed from: f, reason: from getter */
     public final String getVariant() {
         return this.variant;
     }
 
-    /* renamed from: g, reason: from getter */
+    /* JADX INFO: renamed from: g, reason: from getter */
     public final String getVersion() {
         return this.version;
     }

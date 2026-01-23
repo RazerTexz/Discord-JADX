@@ -24,8 +24,8 @@ import p658rx.Observable;
 import p658rx.Scheduler;
 import p658rx.Subscription;
 
-/* compiled from: GuildMemberSubscriptionsManager.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: GuildMemberSubscriptionsManager.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class GuildMemberSubscriptionsManager {
     private final Scheduler delayScheduler;
     private Subscription delayedFlushSubscription;
@@ -34,8 +34,8 @@ public final class GuildMemberSubscriptionsManager {
     private final Function1<Function0<Unit>, Unit> requestFlushUnsubscriptions;
     private final HashMap<Long, Map<Long, Integer>> subscriptions;
 
-    /* compiled from: GuildMemberSubscriptionsManager.kt */
-    /* renamed from: com.discord.utilities.lazy.subscriptions.GuildMemberSubscriptionsManager$triggerUnsubscribe$1 */
+    /* JADX INFO: renamed from: com.discord.utilities.lazy.subscriptions.GuildMemberSubscriptionsManager$triggerUnsubscribe$1 */
+    /* JADX INFO: compiled from: GuildMemberSubscriptionsManager.kt */
     public static final class C67911 extends Lambda implements Function1<Subscription, Unit> {
         public C67911() {
             super(1);
@@ -47,19 +47,19 @@ public final class GuildMemberSubscriptionsManager {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Subscription subscription) {
             Intrinsics3.checkNotNullParameter(subscription, Traits.Payment.Type.SUBSCRIPTION);
             GuildMemberSubscriptionsManager.access$setDelayedFlushSubscription$p(GuildMemberSubscriptionsManager.this, subscription);
         }
     }
 
-    /* compiled from: GuildMemberSubscriptionsManager.kt */
-    /* renamed from: com.discord.utilities.lazy.subscriptions.GuildMemberSubscriptionsManager$triggerUnsubscribe$2 */
+    /* JADX INFO: renamed from: com.discord.utilities.lazy.subscriptions.GuildMemberSubscriptionsManager$triggerUnsubscribe$2 */
+    /* JADX INFO: compiled from: GuildMemberSubscriptionsManager.kt */
     public static final class C67922 extends Lambda implements Function1<Long, Unit> {
 
-        /* compiled from: GuildMemberSubscriptionsManager.kt */
-        /* renamed from: com.discord.utilities.lazy.subscriptions.GuildMemberSubscriptionsManager$triggerUnsubscribe$2$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.utilities.lazy.subscriptions.GuildMemberSubscriptionsManager$triggerUnsubscribe$2$1, reason: invalid class name */
+        /* JADX INFO: compiled from: GuildMemberSubscriptionsManager.kt */
         public static final /* synthetic */ class AnonymousClass1 extends FunctionReferenceImpl implements Function0<Unit> {
             public AnonymousClass1(GuildMemberSubscriptionsManager guildMemberSubscriptionsManager) {
                 super(0, guildMemberSubscriptionsManager, GuildMemberSubscriptionsManager.class, "flushUnsubscriptions", "flushUnsubscriptions()V", 0);
@@ -71,7 +71,7 @@ public final class GuildMemberSubscriptionsManager {
                 return Unit.f27425a;
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2() {
                 GuildMemberSubscriptionsManager.access$flushUnsubscriptions((GuildMemberSubscriptionsManager) this.receiver);
             }
@@ -87,7 +87,7 @@ public final class GuildMemberSubscriptionsManager {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Long l) {
             GuildMemberSubscriptionsManager.access$getRequestFlushUnsubscriptions$p(GuildMemberSubscriptionsManager.this).invoke(new AnonymousClass1(GuildMemberSubscriptionsManager.this));
         }

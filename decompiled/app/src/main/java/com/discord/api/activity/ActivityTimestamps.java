@@ -3,8 +3,8 @@ package com.discord.api.activity;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ActivityTimestamps.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: ActivityTimestamps.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class ActivityTimestamps {
     private final String end;
     private final String start;
@@ -14,7 +14,7 @@ public final /* data */ class ActivityTimestamps {
         this.end = str2;
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final long m7560a(String number) {
         if (number == null || number.length() == 0) {
             return 0L;
@@ -22,7 +22,7 @@ public final /* data */ class ActivityTimestamps {
         try {
             long j = Long.parseLong(number);
             if (number.length() < 13) {
-                j *= 1000;
+                j *= (long) 1000;
             }
             return j;
         } catch (Exception unused) {
@@ -30,12 +30,12 @@ public final /* data */ class ActivityTimestamps {
         }
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final long m7561b() {
         return m7560a(this.end);
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final long m7562c() {
         return m7560a(this.start);
     }

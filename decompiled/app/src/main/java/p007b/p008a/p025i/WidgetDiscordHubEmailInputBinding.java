@@ -10,32 +10,32 @@ import com.discord.utilities.view.text.LinkifiedTextView;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
 
-/* compiled from: WidgetDiscordHubEmailInputBinding.java */
-/* renamed from: b.a.i.e5, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.a.i.e5, reason: use source file name */
+/* JADX INFO: compiled from: WidgetDiscordHubEmailInputBinding.java */
+/* JADX INFO: loaded from: classes.dex */
 public final class WidgetDiscordHubEmailInputBinding implements ViewBinding {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     @NonNull
     public final NestedScrollView f817a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     @NonNull
     public final LinkifiedTextView f818b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     @NonNull
     public final TextInputEditText f819c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     @NonNull
     public final TextInputLayout f820d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     @NonNull
     public final TextView f821e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     @NonNull
     public final TextView f822f;
 

@@ -11,13 +11,13 @@ import androidx.core.view.accessibility.AccessibilityNodeInfoCompat;
 import com.discord.stores.StoreStream;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: AccessibilityUtils.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: AccessibilityUtils.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class AccessibilityUtils {
     public static final AccessibilityUtils INSTANCE = new AccessibilityUtils();
 
-    /* compiled from: AccessibilityUtils.kt */
-    /* renamed from: com.discord.utilities.accessibility.AccessibilityUtils$setViewIsHeading$1 */
+    /* JADX INFO: renamed from: com.discord.utilities.accessibility.AccessibilityUtils$setViewIsHeading$1 */
+    /* JADX INFO: compiled from: AccessibilityUtils.kt */
     public static final class C66651 extends AccessibilityDelegateCompat {
         @Override // androidx.core.view.AccessibilityDelegateCompat
         public void onInitializeAccessibilityNodeInfo(View host, AccessibilityNodeInfoCompat info) {

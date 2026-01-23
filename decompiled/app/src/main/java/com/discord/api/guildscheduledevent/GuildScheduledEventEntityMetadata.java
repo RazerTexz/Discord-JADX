@@ -6,15 +6,15 @@ import kotlin.jvm.internal.DefaultConstructorMarker;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: GuildScheduledEventEntityMetadata.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: GuildScheduledEventEntityMetadata.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class GuildScheduledEventEntityMetadata implements Serializable {
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private final String location;
 
-    /* compiled from: GuildScheduledEventEntityMetadata.kt */
+    /* JADX INFO: compiled from: GuildScheduledEventEntityMetadata.kt */
     public static final class Companion {
 
         public final /* synthetic */ class WhenMappings {
@@ -31,7 +31,7 @@ public final /* data */ class GuildScheduledEventEntityMetadata implements Seria
         public Companion() {
         }
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final GuildScheduledEventEntityMetadata m7992a(GuildScheduledEventEntityType entityType, String location) {
             Intrinsics3.checkNotNullParameter(entityType, "entityType");
             return entityType.ordinal() != 3 ? new GuildScheduledEventEntityMetadata(null, 1) : new GuildScheduledEventEntityMetadata(location);
@@ -45,12 +45,12 @@ public final /* data */ class GuildScheduledEventEntityMetadata implements Seria
         this.location = null;
     }
 
-    /* renamed from: a, reason: from getter */
+    /* JADX INFO: renamed from: a, reason: from getter */
     public final String getLocation() {
         return this.location;
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final boolean m7991b() {
         return this.location == null;
     }

@@ -16,26 +16,26 @@ import p007b.p225i.p226a.p288f.p330i.p332b.InterfaceC4195t8;
 import p007b.p225i.p226a.p288f.p330i.p332b.RunnableC4184s8;
 import p007b.p225i.p226a.p288f.p330i.p332b.RunnableC4206u8;
 
-/* compiled from: com.google.android.gms:play-services-measurement@@18.0.0 */
-/* loaded from: classes3.dex */
+/* JADX INFO: compiled from: com.google.android.gms:play-services-measurement@@18.0.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public final class AppMeasurementService extends Service implements InterfaceC4195t8 {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public C4151p8<AppMeasurementService> f20658j;
 
     @Override // p007b.p225i.p226a.p288f.p330i.p332b.InterfaceC4195t8
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final void mo5868a(JobParameters jobParameters, boolean z2) {
         throw new UnsupportedOperationException();
     }
 
     @Override // p007b.p225i.p226a.p288f.p330i.p332b.InterfaceC4195t8
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final void mo5869b(Intent intent) {
         WakefulBroadcastReceiver.completeWakefulIntent(intent);
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final C4151p8<AppMeasurementService> m9110c() {
         if (this.f20658j == null) {
             this.f20658j = new C4151p8<>(this);
@@ -44,7 +44,7 @@ public final class AppMeasurementService extends Service implements InterfaceC41
     }
 
     @Override // p007b.p225i.p226a.p288f.p330i.p332b.InterfaceC4195t8
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final boolean mo5870f(int i) {
         return stopSelfResult(i);
     }
@@ -88,7 +88,7 @@ public final class AppMeasurementService extends Service implements InterfaceC41
 
     @Override // android.app.Service
     @MainThread
-    public final int onStartCommand(Intent intent, int i, int i2) throws IllegalStateException {
+    public final int onStartCommand(Intent intent, int i, int i2) {
         C4151p8<AppMeasurementService> c4151p8M9110c = m9110c();
         C4157q3 c4157q3Mo5726g = C4202u4.m5933b(c4151p8M9110c.f11131a, null, null).mo5726g();
         if (intent == null) {

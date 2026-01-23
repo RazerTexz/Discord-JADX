@@ -6,9 +6,9 @@ import com.discord.api.activity.Activity;
 import com.discord.models.user.User;
 import java.util.List;
 
-/* compiled from: ViewHolderUserRichPresence.kt */
-/* renamed from: com.discord.widgets.user.presence.ViewHolderUserRichPresence$configureCustomButtonsUi$$inlined$forEachIndexed$lambda$1, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: com.discord.widgets.user.presence.ViewHolderUserRichPresence$configureCustomButtonsUi$$inlined$forEachIndexed$lambda$1, reason: use source file name */
+/* JADX INFO: compiled from: ViewHolderUserRichPresence.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class ViewHolderUserRichPresence2 implements View.OnClickListener {
     public final /* synthetic */ Activity $activity$inlined;
     public final /* synthetic */ List $activityButtons$inlined;

@@ -6,27 +6,27 @@ import p007b.p085c.p086a.p087a0.AnimatableValueParser;
 import p007b.p225i.p226a.p242c.p259f3.ParsableByteArray;
 import p007b.p225i.p226a.p242c.p267x2.ExtractorInput;
 
-/* compiled from: OggPacket.java */
-/* renamed from: b.i.a.c.x2.j0.e, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.x2.j0.e, reason: use source file name */
+/* JADX INFO: compiled from: OggPacket.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class OggPacket {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final OggPageHeader f8525a = new OggPageHeader();
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final ParsableByteArray f8526b = new ParsableByteArray(new byte[65025], 0);
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public int f8527c = -1;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public int f8528d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public boolean f8529e;
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final int m3741a(int i) {
         int i2;
         int i3 = 0;
@@ -46,7 +46,7 @@ public final class OggPacket {
         return i3;
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public boolean m3742b(ExtractorInput extractorInput) throws IOException {
         boolean z2;
         int i;

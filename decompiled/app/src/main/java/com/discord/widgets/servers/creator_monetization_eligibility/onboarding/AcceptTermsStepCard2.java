@@ -11,9 +11,9 @@ import java.util.Objects;
 import kotlin.jvm.functions.Function0;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: AcceptTermsStepCard.kt */
-/* renamed from: com.discord.widgets.servers.creator_monetization_eligibility.onboarding.AcceptTermsStepCard$binding$2, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.servers.creator_monetization_eligibility.onboarding.AcceptTermsStepCard$binding$2, reason: use source file name */
+/* JADX INFO: compiled from: AcceptTermsStepCard.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class AcceptTermsStepCard2 extends Lambda implements Function0<ViewCreatorMonetizationAcceptTermsStepCardBinding> {
     public final /* synthetic */ Context $context;
     public final /* synthetic */ AcceptTermsStepCard this$0;

@@ -1,8 +1,8 @@
 package p007b.p109f.p111b.p113b;
 
-/* compiled from: EntryEvictionComparatorSupplier.java */
-/* renamed from: b.f.b.b.g, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.f.b.b.g, reason: use source file name */
+/* JADX INFO: compiled from: EntryEvictionComparatorSupplier.java */
+/* JADX INFO: loaded from: classes.dex */
 public interface EntryEvictionComparatorSupplier {
     EntryEvictionComparator get();
 }

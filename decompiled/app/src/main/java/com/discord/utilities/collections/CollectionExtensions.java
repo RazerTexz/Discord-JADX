@@ -11,9 +11,9 @@ import p507d0.p580t.Collections2;
 import p507d0.p580t._Collections;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: CollectionExtensions.kt */
-/* renamed from: com.discord.utilities.collections.CollectionExtensionsKt, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.utilities.collections.CollectionExtensionsKt, reason: use source file name */
+/* JADX INFO: compiled from: CollectionExtensions.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class CollectionExtensions {
     public static final <T> boolean equals(Collection<? extends T> collection, Collection<? extends T> collection2, Function2<? super T, ? super T, Boolean> function2) {
         Intrinsics3.checkNotNullParameter(collection, "$this$equals");

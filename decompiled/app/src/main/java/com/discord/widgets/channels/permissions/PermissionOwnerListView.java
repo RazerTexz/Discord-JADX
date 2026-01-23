@@ -19,12 +19,12 @@ import p007b.p100d.p104b.p105a.outline;
 import p507d0.p580t.Collections2;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: PermissionOwnerListView.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: PermissionOwnerListView.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class PermissionOwnerListView extends RecyclerView {
     private final Adapter adapter;
 
-    /* compiled from: PermissionOwnerListView.kt */
+    /* JADX INFO: compiled from: PermissionOwnerListView.kt */
     public static final class Adapter extends RecyclerView.Adapter<PermissionOwnerViewHolder> {
         private Function1<? super PermissionOwner, Unit> onRemoveClicked = PermissionOwnerListView3.INSTANCE;
         private List<Item> data = Collections2.emptyList();
@@ -73,7 +73,7 @@ public final class PermissionOwnerListView extends RecyclerView {
         }
     }
 
-    /* compiled from: PermissionOwnerListView.kt */
+    /* JADX INFO: compiled from: PermissionOwnerListView.kt */
     public static final /* data */ class Item {
         private final PermissionOwner permissionOwner;
         private final RemoveStatus removeStatus;
@@ -95,12 +95,12 @@ public final class PermissionOwnerListView extends RecyclerView {
             return item.copy(permissionOwner, removeStatus);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final PermissionOwner getPermissionOwner() {
             return this.permissionOwner;
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final RemoveStatus getRemoveStatus() {
             return this.removeStatus;
         }
@@ -147,7 +147,7 @@ public final class PermissionOwnerListView extends RecyclerView {
         }
     }
 
-    /* compiled from: PermissionOwnerListView.kt */
+    /* JADX INFO: compiled from: PermissionOwnerListView.kt */
     public static final class PermissionOwnerViewHolder extends RecyclerView.ViewHolder {
         private final RemovablePermissionOwnerViewBinding binding;
 
@@ -185,10 +185,10 @@ public final class PermissionOwnerListView extends RecyclerView {
         }
     }
 
-    /* compiled from: PermissionOwnerListView.kt */
+    /* JADX INFO: compiled from: PermissionOwnerListView.kt */
     public static abstract class RemoveStatus {
 
-        /* compiled from: PermissionOwnerListView.kt */
+        /* JADX INFO: compiled from: PermissionOwnerListView.kt */
         public static final class CanRemove extends RemoveStatus {
             public static final CanRemove INSTANCE = new CanRemove();
 
@@ -197,11 +197,11 @@ public final class PermissionOwnerListView extends RecyclerView {
             }
         }
 
-        /* compiled from: PermissionOwnerListView.kt */
+        /* JADX INFO: compiled from: PermissionOwnerListView.kt */
         public static final /* data */ class CannotRemove extends RemoveStatus {
             private final Reason reason;
 
-            /* compiled from: PermissionOwnerListView.kt */
+            /* JADX INFO: compiled from: PermissionOwnerListView.kt */
             public enum Reason {
                 IS_GUILD_OWNER,
                 IS_ADMINISTRATOR,
@@ -223,7 +223,7 @@ public final class PermissionOwnerListView extends RecyclerView {
                 return cannotRemove.copy(reason);
             }
 
-            /* renamed from: component1, reason: from getter */
+            /* JADX INFO: renamed from: component1, reason: from getter */
             public final Reason getReason() {
                 return this.reason;
             }
@@ -260,7 +260,7 @@ public final class PermissionOwnerListView extends RecyclerView {
             }
         }
 
-        /* compiled from: PermissionOwnerListView.kt */
+        /* JADX INFO: compiled from: PermissionOwnerListView.kt */
         public static final class IsRemoving extends RemoveStatus {
             public static final IsRemoving INSTANCE = new IsRemoving();
 

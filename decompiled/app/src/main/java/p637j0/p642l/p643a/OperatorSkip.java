@@ -4,18 +4,18 @@ import p658rx.Producer;
 import p658rx.Subscriber;
 
 /* JADX INFO: Add missing generic type declarations: [T] */
-/* compiled from: OperatorSkip.java */
-/* renamed from: j0.l.a.s1, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: j0.l.a.s1, reason: use source file name */
+/* JADX INFO: compiled from: OperatorSkip.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class OperatorSkip<T> extends Subscriber<T> {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public int f27039j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final /* synthetic */ Subscriber f27040k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final /* synthetic */ OperatorSkip2 f27041l;
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */

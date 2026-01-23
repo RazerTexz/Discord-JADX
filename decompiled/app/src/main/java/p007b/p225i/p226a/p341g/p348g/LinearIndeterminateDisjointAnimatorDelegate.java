@@ -3,12 +3,12 @@ package p007b.p225i.p226a.p341g.p348g;
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
 
-/* compiled from: LinearIndeterminateDisjointAnimatorDelegate.java */
-/* renamed from: b.i.a.g.g.k, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.g.g.k, reason: use source file name */
+/* JADX INFO: compiled from: LinearIndeterminateDisjointAnimatorDelegate.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class LinearIndeterminateDisjointAnimatorDelegate extends AnimatorListenerAdapter {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final /* synthetic */ LinearIndeterminateDisjointAnimatorDelegate2 f11750a;
 
     public LinearIndeterminateDisjointAnimatorDelegate(LinearIndeterminateDisjointAnimatorDelegate2 linearIndeterminateDisjointAnimatorDelegate2) {

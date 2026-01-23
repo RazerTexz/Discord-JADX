@@ -15,18 +15,18 @@ import p007b.p085c.p086a.p087a0.AnimatableValueParser;
 import p007b.p225i.p226a.p288f.p299e.p304k.AbstractC3345b;
 import p007b.p225i.p226a.p288f.p299e.p307n.C3398a;
 
-/* compiled from: com.google.android.gms:play-services-measurement-impl@@18.0.0 */
-/* renamed from: b.i.a.f.i.b.k8 */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.i.b.k8 */
+/* JADX INFO: compiled from: com.google.android.gms:play-services-measurement-impl@@18.0.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public final class ServiceConnectionC4096k8 implements ServiceConnection, AbstractC3345b.a, AbstractC3345b.b {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public volatile boolean f10892j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public volatile C4168r3 f10893k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final /* synthetic */ C4161q7 f10894l;
 
     public ServiceConnectionC4096k8(C4161q7 c4161q7) {
@@ -35,8 +35,8 @@ public final class ServiceConnectionC4096k8 implements ServiceConnection, Abstra
 
     @Override // p007b.p225i.p226a.p288f.p299e.p304k.AbstractC3345b.a
     @MainThread
-    /* renamed from: c */
-    public final void mo4144c(int i) throws IllegalStateException {
+    /* JADX INFO: renamed from: c */
+    public final void mo4144c(int i) {
         AnimatableValueParser.m575u("MeasurementServiceConnection.onConnectionSuspended");
         this.f10894l.mo5726g().f11148m.m5860a("Service connection suspended");
         this.f10894l.mo5725f().m5852v(new RunnableC4140o8(this));
@@ -44,8 +44,8 @@ public final class ServiceConnectionC4096k8 implements ServiceConnection, Abstra
 
     @Override // p007b.p225i.p226a.p288f.p299e.p304k.AbstractC3345b.b
     @MainThread
-    /* renamed from: g */
-    public final void mo4146g(@NonNull ConnectionResult connectionResult) throws IllegalStateException {
+    /* JADX INFO: renamed from: g */
+    public final void mo4146g(@NonNull ConnectionResult connectionResult) {
         AnimatableValueParser.m575u("MeasurementServiceConnection.onConnectionFailed");
         C4202u4 c4202u4 = this.f10894l.f11202a;
         C4157q3 c4157q3 = c4202u4.f11262j;
@@ -62,7 +62,7 @@ public final class ServiceConnectionC4096k8 implements ServiceConnection, Abstra
 
     @Override // p007b.p225i.p226a.p288f.p299e.p304k.AbstractC3345b.a
     @MainThread
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public final void mo4145i(@Nullable Bundle bundle) {
         AnimatableValueParser.m575u("MeasurementServiceConnection.onConnected");
         synchronized (this) {
@@ -114,7 +114,7 @@ public final class ServiceConnectionC4096k8 implements ServiceConnection, Abstra
 
     @Override // android.content.ServiceConnection
     @MainThread
-    public final void onServiceDisconnected(ComponentName componentName) throws IllegalStateException {
+    public final void onServiceDisconnected(ComponentName componentName) {
         AnimatableValueParser.m575u("MeasurementServiceConnection.onServiceDisconnected");
         this.f10894l.mo5726g().f11148m.m5860a("Service disconnected");
         this.f10894l.mo5725f().m5852v(new RunnableC4118m8(this, componentName));

@@ -4,8 +4,8 @@ import com.discord.widgets.channels.list.items.ChannelListItem;
 import p001a0.p002a.p003a.C0002b;
 import p007b.p100d.p104b.p105a.outline;
 
-/* compiled from: ChannelListItemInvite.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: ChannelListItemInvite.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final /* data */ class ChannelListItemInvite implements ChannelListItem {
     private final long guildId;
     private final boolean isHub;
@@ -27,12 +27,12 @@ public final /* data */ class ChannelListItemInvite implements ChannelListItem {
         return channelListItemInvite.copy(j, z2);
     }
 
-    /* renamed from: component1, reason: from getter */
+    /* JADX INFO: renamed from: component1, reason: from getter */
     public final long getGuildId() {
         return this.guildId;
     }
 
-    /* renamed from: component2, reason: from getter */
+    /* JADX INFO: renamed from: component2, reason: from getter */
     public final boolean getIsHub() {
         return this.isHub;
     }
@@ -67,14 +67,17 @@ public final /* data */ class ChannelListItemInvite implements ChannelListItem {
     }
 
     /* JADX WARN: Multi-variable type inference failed */
+    /* JADX WARN: Type inference failed for: r1v1, types: [int] */
+    /* JADX WARN: Type inference failed for: r1v2 */
+    /* JADX WARN: Type inference failed for: r1v3 */
     public int hashCode() {
         int iM3a = C0002b.m3a(this.guildId) * 31;
         boolean z2 = this.isHub;
-        int i = z2;
-        if (z2 != 0) {
-            i = 1;
+        ?? r1 = z2;
+        if (z2) {
+            r1 = 1;
         }
-        return iM3a + i;
+        return iM3a + r1;
     }
 
     public final boolean isHub() {

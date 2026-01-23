@@ -6,8 +6,8 @@ import com.discord.api.science.AnalyticsSchema;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: TrackUpdateConnectedAccount.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: TrackUpdateConnectedAccount.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class TrackUpdateConnectedAccount implements AnalyticsSchema, TrackBase2 {
     private TrackBase trackBase;
     private final CharSequence accountId = null;
@@ -21,7 +21,7 @@ public final /* data */ class TrackUpdateConnectedAccount implements AnalyticsSc
     private final transient String analyticsSchemaTypeName = "update_connected_account";
 
     @Override // com.discord.api.science.AnalyticsSchema
-    /* renamed from: d, reason: from getter */
+    /* JADX INFO: renamed from: d, reason: from getter */
     public String getAnalyticsSchemaTypeName() {
         return this.analyticsSchemaTypeName;
     }

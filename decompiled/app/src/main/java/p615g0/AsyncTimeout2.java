@@ -5,15 +5,15 @@ import p007b.p100d.p104b.p105a.outline;
 import p007b.p225i.p226a.p288f.p299e.p308o.C3404f;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: AsyncTimeout.kt */
-/* renamed from: g0.c, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: g0.c, reason: use source file name */
+/* JADX INFO: compiled from: AsyncTimeout.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class AsyncTimeout2 implements Sink {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final /* synthetic */ AsyncTimeout f26075j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final /* synthetic */ Sink f26076k;
 
     public AsyncTimeout2(AsyncTimeout asyncTimeout, Sink sink) {
@@ -88,7 +88,7 @@ public final class AsyncTimeout2 implements Sink {
                 if (j2 >= 65536) {
                     break;
                 }
-                j2 += segment2.f26120c - segment2.f26119b;
+                j2 += (long) (segment2.f26120c - segment2.f26119b);
                 if (j2 >= j) {
                     j2 = j;
                     break;

@@ -5,8 +5,8 @@ import androidx.activity.result.ActivityResultCallback;
 import kotlin.jvm.functions.Function0;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: WidgetGuildScheduledEventSettings.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetGuildScheduledEventSettings.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetGuildScheduledEventSettings$Companion$registerForResult$1<O> implements ActivityResultCallback<ActivityResult> {
     public final /* synthetic */ Function0 $onFinished;
     public final /* synthetic */ Function0 $onQuit;
@@ -21,7 +21,7 @@ public final class WidgetGuildScheduledEventSettings$Companion$registerForResult
         onActivityResult2(activityResult);
     }
 
-    /* renamed from: onActivityResult, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: onActivityResult, reason: avoid collision after fix types in other method */
     public final void onActivityResult2(ActivityResult activityResult) {
         Intrinsics3.checkNotNullExpressionValue(activityResult, "result");
         int resultCode = activityResult.getResultCode();

@@ -3,15 +3,15 @@ package p507d0.p513e0.p514p.p515d.p517m0.p552k.p557v;
 import p507d0.p513e0.p514p.p515d.p517m0.p548g.ClassId;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ClassLiteralValue.kt */
-/* renamed from: d0.e0.p.d.m0.k.v.f, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.k.v.f, reason: use source file name */
+/* JADX INFO: compiled from: ClassLiteralValue.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class ClassLiteralValue {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final ClassId f24436a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final int f24437b;
 
     public ClassLiteralValue(ClassId classId, int i) {

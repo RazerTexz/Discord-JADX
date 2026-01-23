@@ -3,9 +3,9 @@ package com.discord.utilities.premium;
 import com.discord.api.premium.PremiumTier;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: PremiumUtils.kt */
-/* renamed from: com.discord.utilities.premium.PremiumUtilsKt, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.utilities.premium.PremiumUtilsKt, reason: use source file name */
+/* JADX INFO: compiled from: PremiumUtils.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class PremiumUtils3 {
     public static final boolean grantsAccessToCustomTagAndAnimatedAvatarFeatures(PremiumTier premiumTier) {
         Intrinsics3.checkNotNullParameter(premiumTier, "$this$grantsAccessToCustomTagAndAnimatedAvatarFeatures");

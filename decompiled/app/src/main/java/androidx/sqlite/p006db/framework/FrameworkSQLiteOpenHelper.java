@@ -10,7 +10,7 @@ import androidx.sqlite.p006db.SupportSQLiteDatabase;
 import androidx.sqlite.p006db.SupportSQLiteOpenHelper;
 import java.io.File;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class FrameworkSQLiteOpenHelper implements SupportSQLiteOpenHelper {
     private final SupportSQLiteOpenHelper.Callback mCallback;
     private final Context mContext;
@@ -25,7 +25,7 @@ public class FrameworkSQLiteOpenHelper implements SupportSQLiteOpenHelper {
         public final FrameworkSQLiteDatabase[] mDbRef;
         private boolean mMigrated;
 
-        /* renamed from: androidx.sqlite.db.framework.FrameworkSQLiteOpenHelper$OpenHelper$1 */
+        /* JADX INFO: renamed from: androidx.sqlite.db.framework.FrameworkSQLiteOpenHelper$OpenHelper$1 */
         public class C06191 implements DatabaseErrorHandler {
             public final /* synthetic */ SupportSQLiteOpenHelper.Callback val$callback;
             public final /* synthetic */ FrameworkSQLiteDatabase[] val$dbRef;

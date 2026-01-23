@@ -4,8 +4,8 @@ import com.discord.models.domain.ModelAuditLogEntry;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ChannelRecipientNick.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: ChannelRecipientNick.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class ChannelRecipientNick {
     private final long id;
     private final String nick;
@@ -16,17 +16,17 @@ public final /* data */ class ChannelRecipientNick {
         this.nick = str;
     }
 
-    /* renamed from: a, reason: from getter */
+    /* JADX INFO: renamed from: a, reason: from getter */
     public final long getId() {
         return this.id;
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final long m7664b() {
         return this.id;
     }
 
-    /* renamed from: c, reason: from getter */
+    /* JADX INFO: renamed from: c, reason: from getter */
     public final String getNick() {
         return this.nick;
     }

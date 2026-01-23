@@ -6,9 +6,9 @@ import com.discord.stores.StoreUserSettings;
 import p507d0.p592z.p594d.Intrinsics3;
 import p658rx.functions.Action1;
 
-/* compiled from: WidgetSettingsBehavior.kt */
-/* renamed from: com.discord.widgets.settings.WidgetSettingsBehavior$onViewBound$$inlined$apply$lambda$2, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.settings.WidgetSettingsBehavior$onViewBound$$inlined$apply$lambda$2, reason: use source file name */
+/* JADX INFO: compiled from: WidgetSettingsBehavior.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetSettingsBehavior4<T> implements Action1<Boolean> {
     public final /* synthetic */ StoreUserSettings $userSettings$inlined;
     public final /* synthetic */ WidgetSettingsBehavior this$0;
@@ -23,7 +23,7 @@ public final class WidgetSettingsBehavior4<T> implements Action1<Boolean> {
         call2(bool);
     }
 
-    /* renamed from: call, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
     public final void call2(Boolean bool) {
         StoreUserSettings storeUserSettings = this.$userSettings$inlined;
         AppActivity appActivity = this.this$0.getAppActivity();

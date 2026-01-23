@@ -3,8 +3,8 @@ package com.discord.stores;
 import com.discord.rtcconnection.mediaengine.MediaEngine;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: StoreMediaEngine.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: StoreMediaEngine.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class StoreMediaEngine$init$echoCancellationCallback$1 implements MediaEngine.InterfaceC5641b {
     public final /* synthetic */ StoreMediaEngine this$0;
 

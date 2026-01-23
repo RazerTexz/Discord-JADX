@@ -7,31 +7,31 @@ import kotlin.jvm.internal.DefaultConstructorMarker;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: SpeakersItem.kt */
-/* renamed from: b.a.y.o0.d, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: b.a.y.o0.d, reason: use source file name */
+/* JADX INFO: compiled from: SpeakersItem.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public abstract class SpeakersItem implements MGRecyclerDataPayload {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final String f2055j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final int f2056k;
 
-    /* compiled from: SpeakersItem.kt */
-    /* renamed from: b.a.y.o0.d$a */
+    /* JADX INFO: renamed from: b.a.y.o0.d$a */
+    /* JADX INFO: compiled from: SpeakersItem.kt */
     public static final class a extends SpeakersItem {
 
-        /* renamed from: l */
+        /* JADX INFO: renamed from: l */
         public final User f2057l;
 
-        /* renamed from: m */
+        /* JADX INFO: renamed from: m */
         public final GuildMember f2058m;
 
-        /* renamed from: n */
+        /* JADX INFO: renamed from: n */
         public final String f2059n;
 
-        /* renamed from: o */
+        /* JADX INFO: renamed from: o */
         public final String f2060o;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -80,14 +80,14 @@ public abstract class SpeakersItem implements MGRecyclerDataPayload {
         }
     }
 
-    /* compiled from: SpeakersItem.kt */
-    /* renamed from: b.a.y.o0.d$b */
+    /* JADX INFO: renamed from: b.a.y.o0.d$b */
+    /* JADX INFO: compiled from: SpeakersItem.kt */
     public static final class b extends SpeakersItem {
 
-        /* renamed from: l */
+        /* JADX INFO: renamed from: l */
         public final int f2061l;
 
-        /* renamed from: m */
+        /* JADX INFO: renamed from: m */
         public final String f2062m;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */

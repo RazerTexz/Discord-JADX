@@ -9,8 +9,8 @@ import p507d0.p580t.Iterables2;
 import p507d0.p592z.p594d.Intrinsics3;
 import p637j0.p641k.Func1;
 
-/* compiled from: WidgetUserMentions.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: WidgetUserMentions.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class WidgetUserMentions$Model$MessageLoader$tryLoad$2<T, R> implements Func1<List<? extends Message>, List<? extends com.discord.models.message.Message>> {
     public static final WidgetUserMentions$Model$MessageLoader$tryLoad$2 INSTANCE = new WidgetUserMentions$Model$MessageLoader$tryLoad$2();
 
@@ -19,7 +19,7 @@ public final class WidgetUserMentions$Model$MessageLoader$tryLoad$2<T, R> implem
         return call2((List<Message>) list);
     }
 
-    /* renamed from: call, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
     public final List<com.discord.models.message.Message> call2(List<Message> list) {
         Intrinsics3.checkNotNullExpressionValue(list, "messages");
         ArrayList arrayList = new ArrayList(Iterables2.collectionSizeOrDefault(list, 10));

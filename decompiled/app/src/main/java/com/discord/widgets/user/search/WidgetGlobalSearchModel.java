@@ -48,11 +48,11 @@ import p658rx.functions.Func4;
 import p658rx.functions.Func7;
 import p658rx.functions.Func8;
 
-/* compiled from: WidgetGlobalSearchModel.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: WidgetGlobalSearchModel.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class WidgetGlobalSearchModel {
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private static final Function2<Channel, Map<Long, Long>, Boolean> DEFAULT_PERMISSIONS_PREDICATE;
     private static final Pattern DISCRIMINATOR_PATTERN;
@@ -71,7 +71,7 @@ public final /* data */ class WidgetGlobalSearchModel {
     private final List<WidgetGlobalSearchGuildsModel.Item> guildsList;
     private final int searchType;
 
-    /* compiled from: WidgetGlobalSearchModel.kt */
+    /* JADX INFO: compiled from: WidgetGlobalSearchModel.kt */
     public static final /* data */ class ChannelContext {
         private final Map<Long, Channel> activeJoinedThreads;
         private final Map<Long, Long> channelPerms;
@@ -110,6 +110,7 @@ public final /* data */ class WidgetGlobalSearchModel {
             this.smallGuildIds = linkedHashMap.keySet();
         }
 
+        /* JADX WARN: Multi-variable type inference failed */
         public static /* synthetic */ ChannelContext copy$default(ChannelContext channelContext, Map map, Map map2, Map map3, Map map4, Map map5, Map map6, Set set, Set set2, int i, Object obj) {
             return channelContext.copy((i & 1) != 0 ? channelContext.guilds : map, (i & 2) != 0 ? channelContext.channels : map2, (i & 4) != 0 ? channelContext.activeJoinedThreads : map3, (i & 8) != 0 ? channelContext.channelPerms : map4, (i & 16) != 0 ? channelContext.channelsPrivate : map5, (i & 32) != 0 ? channelContext.guildToChannels : map6, (i & 64) != 0 ? channelContext.unreadChannelIds : set, (i & 128) != 0 ? channelContext.unreadGuildIds : set2);
         }
@@ -244,11 +245,12 @@ public final /* data */ class WidgetGlobalSearchModel {
         }
     }
 
-    /* compiled from: WidgetGlobalSearchModel.kt */
+    /* JADX INFO: compiled from: WidgetGlobalSearchModel.kt */
     public static final class Companion {
         private Companion() {
         }
 
+        /* JADX WARN: Multi-variable type inference failed */
         public static /* synthetic */ WidgetGlobalSearchModel create$default(Companion companion, SearchContext searchContext, UsersContext usersContext, ChannelContext channelContext, WidgetGlobalSearchGuildsModel widgetGlobalSearchGuildsModel, Function1 function1, Function1 function12, int i, Object obj) {
             if ((i & 16) != 0) {
                 function1 = null;
@@ -260,9 +262,6 @@ public final /* data */ class WidgetGlobalSearchModel {
             return companion.create(searchContext, usersContext, channelContext, widgetGlobalSearchGuildsModel, function13, function12);
         }
 
-        /* JADX WARN: Multi-variable type inference failed */
-        /* JADX WARN: Type inference failed for: r3v17, types: [com.discord.widgets.user.search.WidgetGlobalSearchModel$sam$rx_functions_Func4$0] */
-        /* JADX WARN: Type inference failed for: r4v9, types: [com.discord.widgets.user.search.WidgetGlobalSearchModel$sam$rx_functions_Func8$0] */
         private final Observable<WidgetGlobalSearchModel> get(Observable<String> filterPublisher, Function2<? super Channel, ? super Map<Long, Long>, Boolean> permissionsPredicate, Function1<? super ItemDataPayload, Boolean> resultsFilter, Function1<? super SearchContext, Long> lastChannelIdProvider) {
             ScalarSynchronousObservable scalarSynchronousObservable = new ScalarSynchronousObservable("");
             StoreStream.Companion companion = StoreStream.INSTANCE;
@@ -287,9 +286,10 @@ public final /* data */ class WidgetGlobalSearchModel {
             Observable<Map<Long, Presence>> observableObserveAllPresences = companion.getPresences().observeAllPresences();
             Observable<Map<Long, Integer>> observableObserve = companion.getUserRelationships().observe();
             Observable<Map<Long, Map<Long, GuildMember>>> observableObserveComputed = companion.getGuilds().observeComputed();
-            WidgetGlobalSearchModel$Companion$get$usersContextObservable$1 widgetGlobalSearchModel$sam$rx_functions_Func4$0 = WidgetGlobalSearchModel$Companion$get$usersContextObservable$1.INSTANCE;
-            if (widgetGlobalSearchModel$sam$rx_functions_Func4$0 != null) {
-                widgetGlobalSearchModel$sam$rx_functions_Func4$0 = new WidgetGlobalSearchModel$sam$rx_functions_Func4$0(widgetGlobalSearchModel$sam$rx_functions_Func4$0);
+            WidgetGlobalSearchModel$Companion$get$usersContextObservable$1 widgetGlobalSearchModel$Companion$get$usersContextObservable$1 = WidgetGlobalSearchModel$Companion$get$usersContextObservable$1.INSTANCE;
+            Object widgetGlobalSearchModel$sam$rx_functions_Func4$0 = widgetGlobalSearchModel$Companion$get$usersContextObservable$1;
+            if (widgetGlobalSearchModel$Companion$get$usersContextObservable$1 != null) {
+                widgetGlobalSearchModel$sam$rx_functions_Func4$0 = new WidgetGlobalSearchModel$sam$rx_functions_Func4$0(widgetGlobalSearchModel$Companion$get$usersContextObservable$1);
             }
             Observable observableM11112r3 = ObservableWithLeadingEdgeThrottle.combineLatest(observableObserveAllUsers, observableObserveAllPresences, observableObserve, observableObserveComputed, (Func4) widgetGlobalSearchModel$sam$rx_functions_Func4$0, 10L, timeUnit).m11112r();
             Observable<Map<Long, Guild>> observableObserveGuilds = companion.getGuilds().observeGuilds();
@@ -300,9 +300,10 @@ public final /* data */ class WidgetGlobalSearchModel {
             Observable<Map<Long, List<Long>>> observableObserveIds = companion.getChannels().observeIds(true);
             Observable<Set<Long>> unreadChannelIds = companion.getReadStates().getUnreadChannelIds();
             Observable<Set<Long>> unreadGuildIds = companion.getReadStates().getUnreadGuildIds();
-            WidgetGlobalSearchModel$Companion$get$channelContextObservable$1 widgetGlobalSearchModel$sam$rx_functions_Func8$0 = WidgetGlobalSearchModel$Companion$get$channelContextObservable$1.INSTANCE;
-            if (widgetGlobalSearchModel$sam$rx_functions_Func8$0 != null) {
-                widgetGlobalSearchModel$sam$rx_functions_Func8$0 = new WidgetGlobalSearchModel$sam$rx_functions_Func8$0(widgetGlobalSearchModel$sam$rx_functions_Func8$0);
+            WidgetGlobalSearchModel$Companion$get$channelContextObservable$1 widgetGlobalSearchModel$Companion$get$channelContextObservable$1 = WidgetGlobalSearchModel$Companion$get$channelContextObservable$1.INSTANCE;
+            Object widgetGlobalSearchModel$sam$rx_functions_Func8$0 = widgetGlobalSearchModel$Companion$get$channelContextObservable$1;
+            if (widgetGlobalSearchModel$Companion$get$channelContextObservable$1 != null) {
+                widgetGlobalSearchModel$sam$rx_functions_Func8$0 = new WidgetGlobalSearchModel$sam$rx_functions_Func8$0(widgetGlobalSearchModel$Companion$get$channelContextObservable$1);
             }
             Observable observableM11112r4 = ObservableWithLeadingEdgeThrottle.combineLatest(observableObserveGuilds, observableObserveGuildAndPrivateChannels, observableObserveAllActiveJoinedThreadsChannelsById, observableObservePermissionsForAllChannels, observableObservePrivateChannels, observableObserveIds, unreadChannelIds, unreadGuildIds, (Func8) widgetGlobalSearchModel$sam$rx_functions_Func8$0, 3L, timeUnit).m11083G(new WidgetGlobalSearchModel$Companion$get$channelContextObservable$2(permissionsPredicate)).m11112r();
             Observable<WidgetGlobalSearchModel> observableM11112r5 = ObservableWithLeadingEdgeThrottle.combineLatest(observableM11112r2, observableM11112r3, observableM11112r4, ObservableWithLeadingEdgeThrottle.combineLatest(observableM11112r2, observableM11112r4, companion.getUserGuildSettings().observeGuildSettings(), companion.getGuildsSorted().observeOrderedGuilds(), WidgetGlobalSearchModel$Companion$get$guildsListObservable$1.INSTANCE, 5L, timeUnit).m11112r(), new ScalarSynchronousObservable(resultsFilter), new ScalarSynchronousObservable(lastChannelIdProvider), new WidgetGlobalSearchModel$sam$rx_functions_Func6$0(new WidgetGlobalSearchModel$Companion$get$1(this)), 200L, timeUnit2).m11112r();
@@ -432,7 +433,7 @@ public final /* data */ class WidgetGlobalSearchModel {
         }
     }
 
-    /* compiled from: WidgetGlobalSearchModel.kt */
+    /* JADX INFO: compiled from: WidgetGlobalSearchModel.kt */
     public interface ItemDataPayload extends MGRecyclerDataPayload {
         Channel getChannel();
 
@@ -443,7 +444,7 @@ public final /* data */ class WidgetGlobalSearchModel {
         boolean getUnread();
     }
 
-    /* compiled from: WidgetGlobalSearchModel.kt */
+    /* JADX INFO: compiled from: WidgetGlobalSearchModel.kt */
     public static final /* data */ class MatchedResult {
         private final int filterLength;
         private final int firstMatchIndex;
@@ -469,17 +470,17 @@ public final /* data */ class WidgetGlobalSearchModel {
             return matchedResult.copy(charSequence, i, i2);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final CharSequence getValue() {
             return this.value;
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final int getFirstMatchIndex() {
             return this.firstMatchIndex;
         }
 
-        /* renamed from: component3, reason: from getter */
+        /* JADX INFO: renamed from: component3, reason: from getter */
         public final int getFilterLength() {
             return this.filterLength;
         }
@@ -527,7 +528,7 @@ public final /* data */ class WidgetGlobalSearchModel {
         }
     }
 
-    /* compiled from: WidgetGlobalSearchModel.kt */
+    /* JADX INFO: compiled from: WidgetGlobalSearchModel.kt */
     public static final /* data */ class SearchContext {
         private final String filter;
         private final Collection<Long> frecencyChannels;
@@ -569,11 +570,12 @@ public final /* data */ class WidgetGlobalSearchModel {
             this.hasDiscriminator = (i == 0 || i == 1) ? WidgetGlobalSearchModel.access$getDISCRIMINATOR_PATTERN$cp().matcher(str).find() : false;
         }
 
+        /* JADX WARN: Multi-variable type inference failed */
         public static /* synthetic */ SearchContext copy$default(SearchContext searchContext, String str, List list, long j, long j2, long j3, Map map, Map map2, int i, Object obj) {
             return searchContext.copy((i & 1) != 0 ? searchContext.filter : str, (i & 2) != 0 ? searchContext.recentGuildIds : list, (i & 4) != 0 ? searchContext.selectedChannelId : j, (i & 8) != 0 ? searchContext.prevSelectedChannelId : j2, (i & 16) != 0 ? searchContext.selectedVoiceChannelId : j3, (i & 32) != 0 ? searchContext.mostRecent : map, (i & 64) != 0 ? searchContext.mentionCounts : map2);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final String getFilter() {
             return this.filter;
         }
@@ -582,17 +584,17 @@ public final /* data */ class WidgetGlobalSearchModel {
             return this.recentGuildIds;
         }
 
-        /* renamed from: component3, reason: from getter */
+        /* JADX INFO: renamed from: component3, reason: from getter */
         public final long getSelectedChannelId() {
             return this.selectedChannelId;
         }
 
-        /* renamed from: component4, reason: from getter */
+        /* JADX INFO: renamed from: component4, reason: from getter */
         public final long getPrevSelectedChannelId() {
             return this.prevSelectedChannelId;
         }
 
-        /* renamed from: component5, reason: from getter */
+        /* JADX INFO: renamed from: component5, reason: from getter */
         public final long getSelectedVoiceChannelId() {
             return this.selectedVoiceChannelId;
         }
@@ -697,7 +699,7 @@ public final /* data */ class WidgetGlobalSearchModel {
         }
     }
 
-    /* compiled from: WidgetGlobalSearchModel.kt */
+    /* JADX INFO: compiled from: WidgetGlobalSearchModel.kt */
     public static final /* data */ class UsersContext {
         private final Map<Long, Map<Long, GuildMember>> members;
         private final Map<Long, Presence> presences;
@@ -849,12 +851,12 @@ public final /* data */ class WidgetGlobalSearchModel {
         return widgetGlobalSearchModel.copy(str, i, list, list2);
     }
 
-    /* renamed from: component1, reason: from getter */
+    /* JADX INFO: renamed from: component1, reason: from getter */
     public final String getFilter() {
         return this.filter;
     }
 
-    /* renamed from: component2, reason: from getter */
+    /* JADX INFO: renamed from: component2, reason: from getter */
     public final int getSearchType() {
         return this.searchType;
     }
@@ -920,7 +922,7 @@ public final /* data */ class WidgetGlobalSearchModel {
         return outline.m824L(sbM833U, this.guildsList, ")");
     }
 
-    /* compiled from: WidgetGlobalSearchModel.kt */
+    /* JADX INFO: compiled from: WidgetGlobalSearchModel.kt */
     public static final /* data */ class ItemChannel implements ItemDataPayload {
         private final Channel channel;
         private final Guild guild;
@@ -977,12 +979,12 @@ public final /* data */ class WidgetGlobalSearchModel {
             return getChannel();
         }
 
-        /* renamed from: component3, reason: from getter */
+        /* JADX INFO: renamed from: component3, reason: from getter */
         public final Channel getParentChannel() {
             return this.parentChannel;
         }
 
-        /* renamed from: component4, reason: from getter */
+        /* JADX INFO: renamed from: component4, reason: from getter */
         public final Guild getGuild() {
             return this.guild;
         }
@@ -1050,6 +1052,10 @@ public final /* data */ class WidgetGlobalSearchModel {
             return this.unread;
         }
 
+        /* JADX WARN: Multi-variable type inference failed */
+        /* JADX WARN: Type inference failed for: r0v11, types: [int] */
+        /* JADX WARN: Type inference failed for: r0v12 */
+        /* JADX WARN: Type inference failed for: r0v14 */
         public int hashCode() {
             MatchedResult matchedResult = getMatchedResult();
             int iHashCode = (matchedResult != null ? matchedResult.hashCode() : 0) * 31;
@@ -1060,11 +1066,11 @@ public final /* data */ class WidgetGlobalSearchModel {
             Guild guild = this.guild;
             int mentions = (getMentions() + ((iHashCode3 + (guild != null ? guild.hashCode() : 0)) * 31)) * 31;
             boolean unread = getUnread();
-            int i = unread;
+            ?? r0 = unread;
             if (unread) {
-                i = 1;
+                r0 = 1;
             }
-            return mentions + i;
+            return mentions + r0;
         }
 
         public String toString() {
@@ -1080,7 +1086,7 @@ public final /* data */ class WidgetGlobalSearchModel {
         this(str, i, list, (i2 & 8) != 0 ? null : list2);
     }
 
-    /* compiled from: WidgetGlobalSearchModel.kt */
+    /* JADX INFO: compiled from: WidgetGlobalSearchModel.kt */
     public static final /* data */ class ItemGuild implements ItemDataPayload {
         private final Channel channel;
         private final Guild guild;
@@ -1128,7 +1134,7 @@ public final /* data */ class WidgetGlobalSearchModel {
             return getMatchedResult();
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final Guild getGuild() {
             return this.guild;
         }
@@ -1196,6 +1202,10 @@ public final /* data */ class WidgetGlobalSearchModel {
             return this.unread;
         }
 
+        /* JADX WARN: Multi-variable type inference failed */
+        /* JADX WARN: Type inference failed for: r0v10 */
+        /* JADX WARN: Type inference failed for: r0v12 */
+        /* JADX WARN: Type inference failed for: r0v9, types: [int] */
         public int hashCode() {
             MatchedResult matchedResult = getMatchedResult();
             int iHashCode = (matchedResult != null ? matchedResult.hashCode() : 0) * 31;
@@ -1204,11 +1214,11 @@ public final /* data */ class WidgetGlobalSearchModel {
             Channel channel = getChannel();
             int mentions = (getMentions() + ((iHashCode2 + (channel != null ? channel.hashCode() : 0)) * 31)) * 31;
             boolean unread = getUnread();
-            int i = unread;
+            ?? r0 = unread;
             if (unread) {
-                i = 1;
+                r0 = 1;
             }
-            return mentions + i;
+            return mentions + r0;
         }
 
         public String toString() {
@@ -1220,7 +1230,7 @@ public final /* data */ class WidgetGlobalSearchModel {
         }
     }
 
-    /* compiled from: WidgetGlobalSearchModel.kt */
+    /* JADX INFO: compiled from: WidgetGlobalSearchModel.kt */
     public static final /* data */ class ItemUser implements ItemDataPayload {
         private final List<CharSequence> aliases;
         private final Channel channel;
@@ -1250,6 +1260,7 @@ public final /* data */ class WidgetGlobalSearchModel {
             this.key = String.valueOf(user.getId());
         }
 
+        /* JADX WARN: Multi-variable type inference failed */
         public static /* synthetic */ ItemUser copy$default(ItemUser itemUser, MatchedResult matchedResult, User user, List list, boolean z2, Presence presence, Channel channel, int i, boolean z3, int i2, Object obj) {
             return itemUser.copy((i2 & 1) != 0 ? itemUser.getMatchedResult() : matchedResult, (i2 & 2) != 0 ? itemUser.user : user, (i2 & 4) != 0 ? itemUser.aliases : list, (i2 & 8) != 0 ? itemUser.isFriend : z2, (i2 & 16) != 0 ? itemUser.presence : presence, (i2 & 32) != 0 ? itemUser.getChannel() : channel, (i2 & 64) != 0 ? itemUser.getMentions() : i, (i2 & 128) != 0 ? itemUser.getUnread() : z3);
         }
@@ -1258,7 +1269,7 @@ public final /* data */ class WidgetGlobalSearchModel {
             return getMatchedResult();
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final User getUser() {
             return this.user;
         }
@@ -1267,12 +1278,12 @@ public final /* data */ class WidgetGlobalSearchModel {
             return this.aliases;
         }
 
-        /* renamed from: component4, reason: from getter */
+        /* JADX INFO: renamed from: component4, reason: from getter */
         public final boolean getIsFriend() {
             return this.isFriend;
         }
 
-        /* renamed from: component5, reason: from getter */
+        /* JADX INFO: renamed from: component5, reason: from getter */
         public final Presence getPresence() {
             return this.presence;
         }
@@ -1350,6 +1361,12 @@ public final /* data */ class WidgetGlobalSearchModel {
         }
 
         /* JADX WARN: Multi-variable type inference failed */
+        /* JADX WARN: Type inference failed for: r2v13 */
+        /* JADX WARN: Type inference failed for: r2v16 */
+        /* JADX WARN: Type inference failed for: r2v7, types: [int] */
+        /* JADX WARN: Type inference failed for: r3v0 */
+        /* JADX WARN: Type inference failed for: r3v1, types: [int] */
+        /* JADX WARN: Type inference failed for: r3v2 */
         public int hashCode() {
             MatchedResult matchedResult = getMatchedResult();
             int iHashCode = (matchedResult != null ? matchedResult.hashCode() : 0) * 31;
@@ -1358,13 +1375,13 @@ public final /* data */ class WidgetGlobalSearchModel {
             List<CharSequence> list = this.aliases;
             int iHashCode3 = (iHashCode2 + (list != null ? list.hashCode() : 0)) * 31;
             boolean z2 = this.isFriend;
-            int i = z2;
-            if (z2 != 0) {
-                i = 1;
+            ?? r2 = z2;
+            if (z2) {
+                r2 = 1;
             }
-            int i2 = (iHashCode3 + i) * 31;
+            int i = (iHashCode3 + r2) * 31;
             Presence presence = this.presence;
-            int iHashCode4 = (i2 + (presence != null ? presence.hashCode() : 0)) * 31;
+            int iHashCode4 = (i + (presence != null ? presence.hashCode() : 0)) * 31;
             Channel channel = getChannel();
             int mentions = (getMentions() + ((iHashCode4 + (channel != null ? channel.hashCode() : 0)) * 31)) * 31;
             boolean unread = getUnread();
@@ -1386,7 +1403,7 @@ public final /* data */ class WidgetGlobalSearchModel {
         }
     }
 
-    /* compiled from: WidgetGlobalSearchModel.kt */
+    /* JADX INFO: compiled from: WidgetGlobalSearchModel.kt */
     public static final /* data */ class ItemHeader implements ItemDataPayload {
         private final Channel channel;
         private final String key;
@@ -1418,7 +1435,7 @@ public final /* data */ class WidgetGlobalSearchModel {
             return itemHeader.copy(i, i2, z2);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final int getName() {
             return this.name;
         }
@@ -1480,14 +1497,18 @@ public final /* data */ class WidgetGlobalSearchModel {
             return this.unread;
         }
 
+        /* JADX WARN: Multi-variable type inference failed */
+        /* JADX WARN: Type inference failed for: r0v3, types: [int] */
+        /* JADX WARN: Type inference failed for: r0v4 */
+        /* JADX WARN: Type inference failed for: r0v5 */
         public int hashCode() {
             int mentions = (getMentions() + (this.name * 31)) * 31;
             boolean unread = getUnread();
-            int i = unread;
+            ?? r0 = unread;
             if (unread) {
-                i = 1;
+                r0 = 1;
             }
-            return mentions + i;
+            return mentions + r0;
         }
 
         public String toString() {

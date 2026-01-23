@@ -81,67 +81,67 @@ import p507d0.p592z.p594d.Lambda;
 import p507d0.p592z.p594d.PropertyReference1Impl;
 import p507d0.p592z.p594d.Reflection2;
 
-/* compiled from: LazyJavaScope.kt */
-/* renamed from: d0.e0.p.d.m0.e.a.i0.l.k, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.e.a.i0.l.k, reason: use source file name */
+/* JADX INFO: compiled from: LazyJavaScope.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public abstract class LazyJavaScope extends MemberScopeImpl {
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static final /* synthetic */ KProperty<Object>[] f23388b = {Reflection2.property1(new PropertyReference1Impl(Reflection2.getOrCreateKotlinClass(LazyJavaScope.class), "functionNamesLazy", "getFunctionNamesLazy()Ljava/util/Set;")), Reflection2.property1(new PropertyReference1Impl(Reflection2.getOrCreateKotlinClass(LazyJavaScope.class), "propertyNamesLazy", "getPropertyNamesLazy()Ljava/util/Set;")), Reflection2.property1(new PropertyReference1Impl(Reflection2.getOrCreateKotlinClass(LazyJavaScope.class), "classNamesLazy", "getClassNamesLazy()Ljava/util/Set;"))};
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final context4 f23389c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final LazyJavaScope f23390d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final storage5<Collection<DeclarationDescriptor>> f23391e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final storage5<DeclaredMemberIndex2> f23392f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public final storage3<Name, Collection<SimpleFunctionDescriptor>> f23393g;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public final storage4<Name, PropertyDescriptor> f23394h;
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public final storage3<Name, Collection<SimpleFunctionDescriptor>> f23395i;
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final storage5 f23396j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final storage5 f23397k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final storage5 f23398l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public final storage3<Name, List<PropertyDescriptor>> f23399m;
 
-    /* compiled from: LazyJavaScope.kt */
-    /* renamed from: d0.e0.p.d.m0.e.a.i0.l.k$a */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.e.a.i0.l.k$a */
+    /* JADX INFO: compiled from: LazyJavaScope.kt */
     public static final class a {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final KotlinType f23400a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final KotlinType f23401b;
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public final List<ValueParameterDescriptor> f23402c;
 
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         public final List<TypeParameterDescriptor> f23403d;
 
-        /* renamed from: e */
+        /* JADX INFO: renamed from: e */
         public final boolean f23404e;
 
-        /* renamed from: f */
+        /* JADX INFO: renamed from: f */
         public final List<String> f23405f;
 
         /* JADX WARN: Multi-variable type inference failed */
@@ -194,16 +194,19 @@ public abstract class LazyJavaScope extends MemberScopeImpl {
         }
 
         /* JADX WARN: Multi-variable type inference failed */
+        /* JADX WARN: Type inference failed for: r1v12 */
+        /* JADX WARN: Type inference failed for: r1v14 */
+        /* JADX WARN: Type inference failed for: r1v8, types: [int] */
         public int hashCode() {
             int iHashCode = this.f23400a.hashCode() * 31;
             KotlinType kotlinType = this.f23401b;
             int iHashCode2 = (this.f23403d.hashCode() + ((this.f23402c.hashCode() + ((iHashCode + (kotlinType == null ? 0 : kotlinType.hashCode())) * 31)) * 31)) * 31;
             boolean z2 = this.f23404e;
-            int i = z2;
-            if (z2 != 0) {
-                i = 1;
+            ?? r1 = z2;
+            if (z2) {
+                r1 = 1;
             }
-            return this.f23405f.hashCode() + ((iHashCode2 + i) * 31);
+            return this.f23405f.hashCode() + ((iHashCode2 + r1) * 31);
         }
 
         public String toString() {
@@ -224,14 +227,14 @@ public abstract class LazyJavaScope extends MemberScopeImpl {
         }
     }
 
-    /* compiled from: LazyJavaScope.kt */
-    /* renamed from: d0.e0.p.d.m0.e.a.i0.l.k$b */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.e.a.i0.l.k$b */
+    /* JADX INFO: compiled from: LazyJavaScope.kt */
     public static final class b {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final List<ValueParameterDescriptor> f23406a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final boolean f23407b;
 
         /* JADX WARN: Multi-variable type inference failed */
@@ -250,8 +253,8 @@ public abstract class LazyJavaScope extends MemberScopeImpl {
         }
     }
 
-    /* compiled from: LazyJavaScope.kt */
-    /* renamed from: d0.e0.p.d.m0.e.a.i0.l.k$c */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.e.a.i0.l.k$c */
+    /* JADX INFO: compiled from: LazyJavaScope.kt */
     public static final class c extends Lambda implements Function0<Collection<? extends DeclarationDescriptor>> {
         public c() {
             super(0);
@@ -263,7 +266,7 @@ public abstract class LazyJavaScope extends MemberScopeImpl {
         }
 
         @Override // kotlin.jvm.functions.Function0
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final Collection<? extends DeclarationDescriptor> invoke2() {
             LazyJavaScope lazyJavaScope = LazyJavaScope.this;
             MemberScope2 memberScope2 = MemberScope2.f24351m;
@@ -298,8 +301,8 @@ public abstract class LazyJavaScope extends MemberScopeImpl {
         }
     }
 
-    /* compiled from: LazyJavaScope.kt */
-    /* renamed from: d0.e0.p.d.m0.e.a.i0.l.k$d */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.e.a.i0.l.k$d */
+    /* JADX INFO: compiled from: LazyJavaScope.kt */
     public static final class d extends Lambda implements Function0<Set<? extends Name>> {
         public d() {
             super(0);
@@ -311,14 +314,14 @@ public abstract class LazyJavaScope extends MemberScopeImpl {
         }
 
         @Override // kotlin.jvm.functions.Function0
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final Set<? extends Name> invoke2() {
             return LazyJavaScope.this.mo9470a(MemberScope2.f24353o, null);
         }
     }
 
-    /* compiled from: LazyJavaScope.kt */
-    /* renamed from: d0.e0.p.d.m0.e.a.i0.l.k$e */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.e.a.i0.l.k$e */
+    /* JADX INFO: compiled from: LazyJavaScope.kt */
     public static final class e extends Lambda implements Function1<Name, PropertyDescriptor> {
         public e() {
             super(1);
@@ -329,7 +332,7 @@ public abstract class LazyJavaScope extends MemberScopeImpl {
             return invoke2(name);
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final PropertyDescriptor invoke2(Name name) {
             Intrinsics3.checkNotNullParameter(name, ModelAuditLogEntry.CHANGE_KEY_NAME);
             LazyJavaScope lazyJavaScope = LazyJavaScope.this;
@@ -345,8 +348,8 @@ public abstract class LazyJavaScope extends MemberScopeImpl {
         }
     }
 
-    /* compiled from: LazyJavaScope.kt */
-    /* renamed from: d0.e0.p.d.m0.e.a.i0.l.k$f */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.e.a.i0.l.k$f */
+    /* JADX INFO: compiled from: LazyJavaScope.kt */
     public static final class f extends Lambda implements Function1<Name, Collection<? extends SimpleFunctionDescriptor>> {
         public f() {
             super(1);
@@ -357,7 +360,7 @@ public abstract class LazyJavaScope extends MemberScopeImpl {
             return invoke2(name);
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final Collection<SimpleFunctionDescriptor> invoke2(Name name) {
             Intrinsics3.checkNotNullParameter(name, ModelAuditLogEntry.CHANGE_KEY_NAME);
             LazyJavaScope lazyJavaScope = LazyJavaScope.this.f23390d;
@@ -377,8 +380,8 @@ public abstract class LazyJavaScope extends MemberScopeImpl {
         }
     }
 
-    /* compiled from: LazyJavaScope.kt */
-    /* renamed from: d0.e0.p.d.m0.e.a.i0.l.k$g */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.e.a.i0.l.k$g */
+    /* JADX INFO: compiled from: LazyJavaScope.kt */
     public static final class g extends Lambda implements Function0<DeclaredMemberIndex2> {
         public g() {
             super(0);
@@ -396,8 +399,8 @@ public abstract class LazyJavaScope extends MemberScopeImpl {
         }
     }
 
-    /* compiled from: LazyJavaScope.kt */
-    /* renamed from: d0.e0.p.d.m0.e.a.i0.l.k$h */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.e.a.i0.l.k$h */
+    /* JADX INFO: compiled from: LazyJavaScope.kt */
     public static final class h extends Lambda implements Function0<Set<? extends Name>> {
         public h() {
             super(0);
@@ -409,14 +412,14 @@ public abstract class LazyJavaScope extends MemberScopeImpl {
         }
 
         @Override // kotlin.jvm.functions.Function0
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final Set<? extends Name> invoke2() {
             return LazyJavaScope.this.mo9471b(MemberScope2.f24354p, null);
         }
     }
 
-    /* compiled from: LazyJavaScope.kt */
-    /* renamed from: d0.e0.p.d.m0.e.a.i0.l.k$i */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.e.a.i0.l.k$i */
+    /* JADX INFO: compiled from: LazyJavaScope.kt */
     public static final class i extends Lambda implements Function1<Name, Collection<? extends SimpleFunctionDescriptor>> {
         public i() {
             super(1);
@@ -427,7 +430,7 @@ public abstract class LazyJavaScope extends MemberScopeImpl {
             return invoke2(name);
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final Collection<SimpleFunctionDescriptor> invoke2(Name name) {
             Intrinsics3.checkNotNullParameter(name, ModelAuditLogEntry.CHANGE_KEY_NAME);
             LinkedHashSet linkedHashSet = new LinkedHashSet((Collection) ((LockBasedStorageManager.m) LazyJavaScope.access$getDeclaredFunctions$p(LazyJavaScope.this)).invoke(name));
@@ -437,8 +440,8 @@ public abstract class LazyJavaScope extends MemberScopeImpl {
         }
     }
 
-    /* compiled from: LazyJavaScope.kt */
-    /* renamed from: d0.e0.p.d.m0.e.a.i0.l.k$j */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.e.a.i0.l.k$j */
+    /* JADX INFO: compiled from: LazyJavaScope.kt */
     public static final class j extends Lambda implements Function1<Name, List<? extends PropertyDescriptor>> {
         public j() {
             super(1);
@@ -449,7 +452,7 @@ public abstract class LazyJavaScope extends MemberScopeImpl {
             return invoke2(name);
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final List<PropertyDescriptor> invoke2(Name name) {
             Intrinsics3.checkNotNullParameter(name, ModelAuditLogEntry.CHANGE_KEY_NAME);
             ArrayList arrayList = new ArrayList();
@@ -459,8 +462,8 @@ public abstract class LazyJavaScope extends MemberScopeImpl {
         }
     }
 
-    /* compiled from: LazyJavaScope.kt */
-    /* renamed from: d0.e0.p.d.m0.e.a.i0.l.k$k */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.e.a.i0.l.k$k */
+    /* JADX INFO: compiled from: LazyJavaScope.kt */
     public static final class k extends Lambda implements Function0<Set<? extends Name>> {
         public k() {
             super(0);
@@ -472,7 +475,7 @@ public abstract class LazyJavaScope extends MemberScopeImpl {
         }
 
         @Override // kotlin.jvm.functions.Function0
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final Set<? extends Name> invoke2() {
             return LazyJavaScope.this.mo9476h(MemberScope2.f24355q, null);
         }
@@ -537,32 +540,32 @@ public abstract class LazyJavaScope extends MemberScopeImpl {
         }
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public abstract Set<Name> mo9470a(MemberScope2 memberScope2, Function1<? super Name, Boolean> function1);
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public abstract Set<Name> mo9471b(MemberScope2 memberScope2, Function1<? super Name, Boolean> function1);
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public void mo9472c(Collection<SimpleFunctionDescriptor> collection, Name name) {
         Intrinsics3.checkNotNullParameter(collection, "result");
         Intrinsics3.checkNotNullParameter(name, ModelAuditLogEntry.CHANGE_KEY_NAME);
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public abstract DeclaredMemberIndex2 mo9473d();
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final KotlinType m9494e(InterfaceC11585r interfaceC11585r, context4 context4Var) {
         Intrinsics3.checkNotNullParameter(interfaceC11585r, "method");
         Intrinsics3.checkNotNullParameter(context4Var, "c");
         return context4Var.getTypeResolver().transformJavaType(interfaceC11585r.getReturnType(), JavaTypeResolver5.toAttributes$default(TypeUsage.COMMON, interfaceC11585r.getContainingClass().isAnnotationType(), null, 2, null));
     }
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public abstract void mo9474f(Collection<SimpleFunctionDescriptor> collection, Name name);
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public abstract void mo9475g(Name name, Collection<PropertyDescriptor> collection);
 
     @Override // p507d0.p513e0.p514p.p515d.p517m0.p552k.p553a0.MemberScopeImpl, p507d0.p513e0.p514p.p515d.p517m0.p552k.p553a0.MemberScope3
@@ -601,25 +604,25 @@ public abstract class LazyJavaScope extends MemberScopeImpl {
         return (Set) storage7.getValue(this.f23397k, this, (KProperty<?>) f23388b[1]);
     }
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public abstract Set<Name> mo9476h(MemberScope2 memberScope2, Function1<? super Name, Boolean> function1);
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public abstract ReceiverParameterDescriptor mo9477i();
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public abstract DeclarationDescriptor mo9478j();
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public boolean mo9479k(JavaMethodDescriptor javaMethodDescriptor) {
         Intrinsics3.checkNotNullParameter(javaMethodDescriptor, "<this>");
         return true;
     }
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public abstract a mo9480l(InterfaceC11585r interfaceC11585r, List<? extends TypeParameterDescriptor> list, KotlinType kotlinType, List<? extends ValueParameterDescriptor> list2);
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public final JavaMethodDescriptor m9495m(InterfaceC11585r interfaceC11585r) {
         Intrinsics3.checkNotNullParameter(interfaceC11585r, "method");
         JavaMethodDescriptor javaMethodDescriptorCreateJavaMethod = JavaMethodDescriptor.createJavaMethod(mo9478j(), LazyJavaAnnotations2.resolveAnnotations(this.f23389c, interfaceC11585r), interfaceC11585r.getName(), this.f23389c.getComponents().getSourceElementFactory().source(interfaceC11585r), this.f23392f.invoke().findRecordComponentByName(interfaceC11585r.getName()) != null && interfaceC11585r.getValueParameters().isEmpty());
@@ -647,7 +650,7 @@ public abstract class LazyJavaScope extends MemberScopeImpl {
     /* JADX WARN: Multi-variable type inference failed */
     /* JADX WARN: Removed duplicated region for block: B:16:0x0070  */
     /* JADX WARN: Removed duplicated region for block: B:44:0x0119  */
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */

@@ -17,28 +17,28 @@ import p007b.p225i.p226a.p242c.p257e3.BaseDataSource;
 import p007b.p225i.p226a.p242c.p257e3.DataSpec;
 import p007b.p225i.p226a.p242c.p259f3.Util2;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public final class ContentDataSource extends BaseDataSource {
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final ContentResolver f20218e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     @Nullable
     public Uri f20219f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     @Nullable
     public AssetFileDescriptor f20220g;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     @Nullable
     public FileInputStream f20221h;
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public long f20222i;
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public boolean f20223j;
 
     public static class ContentDataSourceException extends DataSourceException {
@@ -47,11 +47,11 @@ public final class ContentDataSource extends BaseDataSource {
         }
     }
 
+    /* JADX INFO: renamed from: com.google.android.exoplayer2.upstream.ContentDataSource$a */
     @RequiresApi(31)
-    /* renamed from: com.google.android.exoplayer2.upstream.ContentDataSource$a */
     public static final class C10764a {
         @DoNotInline
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public static void m8934a(Bundle bundle) {
             bundle.putParcelable("android.provider.extra.MEDIA_CAPABILITIES", new ApplicationMediaCapabilities.Builder().addSupportedVideoMimeType("video/hevc").addSupportedHdrType("android.media.feature.hdr.dolby_vision").addSupportedHdrType("android.media.feature.hdr.hdr10").addSupportedHdrType("android.media.feature.hdr.hdr10_plus").addSupportedHdrType("android.media.feature.hdr.hlg").build());
         }
@@ -63,7 +63,7 @@ public final class ContentDataSource extends BaseDataSource {
     }
 
     @Override // p007b.p225i.p226a.p242c.p257e3.DataSource3
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public long mo2586a(DataSpec dataSpec) throws ContentDataSourceException {
         AssetFileDescriptor assetFileDescriptorOpenAssetFileDescriptor;
         try {
@@ -194,7 +194,7 @@ public final class ContentDataSource extends BaseDataSource {
 
     @Override // p007b.p225i.p226a.p242c.p257e3.DataSource3
     @Nullable
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public Uri mo2589n() {
         return this.f20219f;
     }
@@ -223,7 +223,7 @@ public final class ContentDataSource extends BaseDataSource {
         }
         long j2 = this.f20222i;
         if (j2 != -1) {
-            this.f20222i = j2 - i4;
+            this.f20222i = j2 - ((long) i4);
         }
         m2848p(i4);
         return i4;

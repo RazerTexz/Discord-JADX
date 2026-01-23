@@ -25,52 +25,52 @@ import p007b.p225i.p226a.p242c.p245b3.SubtitleInputBuffer;
 import p007b.p225i.p226a.p242c.p259f3.ParsableBitArray;
 import p007b.p225i.p226a.p242c.p259f3.ParsableByteArray;
 
-/* compiled from: Cea708Decoder.java */
-/* renamed from: b.i.a.c.b3.n.d, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.b3.n.d, reason: use source file name */
+/* JADX INFO: compiled from: Cea708Decoder.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class Cea708Decoder extends CeaDecoder {
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public final ParsableByteArray f5857g = new ParsableByteArray();
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public final ParsableBitArray f5858h = new ParsableBitArray();
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public int f5859i = -1;
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final int f5860j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final b[] f5861k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public b f5862l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     @Nullable
     public List<Cue> f5863m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     @Nullable
     public List<Cue> f5864n;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     @Nullable
     public c f5865o;
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public int f5866p;
 
-    /* compiled from: Cea708Decoder.java */
-    /* renamed from: b.i.a.c.b3.n.d$a */
+    /* JADX INFO: renamed from: b.i.a.c.b3.n.d$a */
+    /* JADX INFO: compiled from: Cea708Decoder.java */
     public static final class a {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final Cue f5867a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final int f5868b;
 
         public a(CharSequence charSequence, Layout.Alignment alignment, float f, int i, int i2, float f2, int i3, float f3, boolean z2, int i4, int i5) {
@@ -88,107 +88,107 @@ public final class Cea708Decoder extends CeaDecoder {
         }
     }
 
-    /* compiled from: Cea708Decoder.java */
-    /* renamed from: b.i.a.c.b3.n.d$b */
+    /* JADX INFO: renamed from: b.i.a.c.b3.n.d$b */
+    /* JADX INFO: compiled from: Cea708Decoder.java */
     public static final class b {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public static final int f5869a = m2651d(2, 2, 2, 0);
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public static final int f5870b;
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public static final int f5871c;
 
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         public static final int[] f5872d;
 
-        /* renamed from: e */
+        /* JADX INFO: renamed from: e */
         public static final int[] f5873e;
 
-        /* renamed from: f */
+        /* JADX INFO: renamed from: f */
         public static final int[] f5874f;
 
-        /* renamed from: g */
+        /* JADX INFO: renamed from: g */
         public static final boolean[] f5875g;
 
-        /* renamed from: h */
+        /* JADX INFO: renamed from: h */
         public static final int[] f5876h;
 
-        /* renamed from: i */
+        /* JADX INFO: renamed from: i */
         public static final int[] f5877i;
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public static final int[] f5878j;
 
-        /* renamed from: k */
+        /* JADX INFO: renamed from: k */
         public static final int[] f5879k;
 
-        /* renamed from: A */
+        /* JADX INFO: renamed from: A */
         public int f5880A;
 
-        /* renamed from: B */
+        /* JADX INFO: renamed from: B */
         public int f5881B;
 
-        /* renamed from: C */
+        /* JADX INFO: renamed from: C */
         public int f5882C;
 
-        /* renamed from: D */
+        /* JADX INFO: renamed from: D */
         public int f5883D;
 
-        /* renamed from: E */
+        /* JADX INFO: renamed from: E */
         public int f5884E;
 
-        /* renamed from: F */
+        /* JADX INFO: renamed from: F */
         public int f5885F;
 
-        /* renamed from: G */
+        /* JADX INFO: renamed from: G */
         public int f5886G;
 
-        /* renamed from: l */
+        /* JADX INFO: renamed from: l */
         public final List<SpannableString> f5887l = new ArrayList();
 
-        /* renamed from: m */
+        /* JADX INFO: renamed from: m */
         public final SpannableStringBuilder f5888m = new SpannableStringBuilder();
 
-        /* renamed from: n */
+        /* JADX INFO: renamed from: n */
         public boolean f5889n;
 
-        /* renamed from: o */
+        /* JADX INFO: renamed from: o */
         public boolean f5890o;
 
-        /* renamed from: p */
+        /* JADX INFO: renamed from: p */
         public int f5891p;
 
-        /* renamed from: q */
+        /* JADX INFO: renamed from: q */
         public boolean f5892q;
 
-        /* renamed from: r */
+        /* JADX INFO: renamed from: r */
         public int f5893r;
 
-        /* renamed from: s */
+        /* JADX INFO: renamed from: s */
         public int f5894s;
 
-        /* renamed from: t */
+        /* JADX INFO: renamed from: t */
         public int f5895t;
 
-        /* renamed from: u */
+        /* JADX INFO: renamed from: u */
         public int f5896u;
 
-        /* renamed from: v */
+        /* JADX INFO: renamed from: v */
         public boolean f5897v;
 
-        /* renamed from: w */
+        /* JADX INFO: renamed from: w */
         public int f5898w;
 
-        /* renamed from: x */
+        /* JADX INFO: renamed from: x */
         public int f5899x;
 
-        /* renamed from: y */
+        /* JADX INFO: renamed from: y */
         public int f5900y;
 
-        /* renamed from: z */
+        /* JADX INFO: renamed from: z */
         public int f5901z;
 
         static {
@@ -211,7 +211,7 @@ public final class Cea708Decoder extends CeaDecoder {
         }
 
         /* JADX WARN: Removed duplicated region for block: B:12:0x0021  */
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         /*
             Code decompiled incorrectly, please refer to instructions dump.
         */
@@ -231,7 +231,7 @@ public final class Cea708Decoder extends CeaDecoder {
             return Color.argb(i5, i > 1 ? 255 : 0, i2 > 1 ? 255 : 0, i3 > 1 ? 255 : 0);
         }
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public void m2652a(char c) {
             if (c != '\n') {
                 this.f5888m.append(c);
@@ -260,7 +260,7 @@ public final class Cea708Decoder extends CeaDecoder {
             }
         }
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public SpannableString m2653b() {
             SpannableStringBuilder spannableStringBuilder = new SpannableStringBuilder(this.f5888m);
             int length = spannableStringBuilder.length();
@@ -281,7 +281,7 @@ public final class Cea708Decoder extends CeaDecoder {
             return new SpannableString(spannableStringBuilder);
         }
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public void m2654c() {
             this.f5887l.clear();
             this.f5888m.clear();
@@ -292,12 +292,12 @@ public final class Cea708Decoder extends CeaDecoder {
             this.f5886G = 0;
         }
 
-        /* renamed from: e */
+        /* JADX INFO: renamed from: e */
         public boolean m2655e() {
             return !this.f5889n || (this.f5887l.isEmpty() && this.f5888m.length() == 0);
         }
 
-        /* renamed from: f */
+        /* JADX INFO: renamed from: f */
         public void m2656f() {
             m2654c();
             this.f5889n = false;
@@ -318,7 +318,7 @@ public final class Cea708Decoder extends CeaDecoder {
             this.f5885F = i;
         }
 
-        /* renamed from: g */
+        /* JADX INFO: renamed from: g */
         public void m2657g(boolean z2, boolean z3) {
             if (this.f5880A != -1) {
                 if (!z2) {
@@ -341,7 +341,7 @@ public final class Cea708Decoder extends CeaDecoder {
             }
         }
 
-        /* renamed from: h */
+        /* JADX INFO: renamed from: h */
         public void m2658h(int i, int i2) {
             if (this.f5882C != -1 && this.f5883D != i) {
                 this.f5888m.setSpan(new ForegroundColorSpan(this.f5883D), this.f5882C, this.f5888m.length(), 33);
@@ -360,20 +360,20 @@ public final class Cea708Decoder extends CeaDecoder {
         }
     }
 
-    /* compiled from: Cea708Decoder.java */
-    /* renamed from: b.i.a.c.b3.n.d$c */
+    /* JADX INFO: renamed from: b.i.a.c.b3.n.d$c */
+    /* JADX INFO: compiled from: Cea708Decoder.java */
     public static final class c {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final int f5902a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final int f5903b;
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public final byte[] f5904c;
 
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         public int f5905d = 0;
 
         public c(int i, int i2) {
@@ -395,7 +395,7 @@ public final class Cea708Decoder extends CeaDecoder {
     }
 
     @Override // p007b.p225i.p226a.p242c.p245b3.p246n.CeaDecoder
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public Subtitle mo2634e() {
         List<Cue> list = this.f5863m;
         this.f5864n = list;
@@ -404,7 +404,7 @@ public final class Cea708Decoder extends CeaDecoder {
     }
 
     @Override // p007b.p225i.p226a.p242c.p245b3.p246n.CeaDecoder
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public void mo2635f(SubtitleInputBuffer subtitleInputBuffer) {
         ByteBuffer byteBuffer = subtitleInputBuffer.f19778l;
         Objects.requireNonNull(byteBuffer);
@@ -471,12 +471,12 @@ public final class Cea708Decoder extends CeaDecoder {
     }
 
     @Override // p007b.p225i.p226a.p242c.p245b3.p246n.CeaDecoder
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public boolean mo2637h() {
         return this.f5863m != this.f5864n;
     }
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final void m2648j() {
         c cVar = this.f5865o;
         if (cVar == null) {
@@ -889,7 +889,7 @@ public final class Cea708Decoder extends CeaDecoder {
     /* JADX WARN: Removed duplicated region for block: B:41:0x00b7  */
     /* JADX WARN: Removed duplicated region for block: B:46:0x00c4  */
     /* JADX WARN: Removed duplicated region for block: B:47:0x00c7  */
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
@@ -968,7 +968,7 @@ public final class Cea708Decoder extends CeaDecoder {
         return Collections.unmodifiableList(arrayList2);
     }
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final void m2650l() {
         for (int i = 0; i < 8; i++) {
             this.f5861k[i].m2656f();

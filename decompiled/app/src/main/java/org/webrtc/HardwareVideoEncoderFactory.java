@@ -14,7 +14,7 @@ import org.webrtc.VideoEncoderFactory;
 import p007b.p008a.DiscordMediaCodec;
 import p617h0.p628c.VideoEncoderFactory2;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public class HardwareVideoEncoderFactory implements VideoEncoderFactory {
     private static final List<String> H264_HW_EXCEPTION_MODELS = Arrays.asList("SAMSUNG-SGH-I337", "Nexus 7", "Nexus 4");
     private static final int QCOM_VP8_KEY_FRAME_INTERVAL_ANDROID_L_MS = 15000;
@@ -30,7 +30,7 @@ public class HardwareVideoEncoderFactory implements VideoEncoderFactory {
     @Nullable
     private final EglBase14.Context sharedContext;
 
-    /* renamed from: org.webrtc.HardwareVideoEncoderFactory$1 */
+    /* JADX INFO: renamed from: org.webrtc.HardwareVideoEncoderFactory$1 */
     public static /* synthetic */ class C129701 {
         public static final /* synthetic */ int[] $SwitchMap$org$webrtc$VideoCodecMimeType;
 

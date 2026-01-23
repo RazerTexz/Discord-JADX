@@ -4,19 +4,19 @@ import kotlin.jvm.internal.DefaultConstructorMarker;
 import p507d0.p512d0.Progressions;
 import p507d0.p512d0.Range3;
 
-/* compiled from: Ranges.kt */
-/* renamed from: kotlin.ranges.LongRange, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: kotlin.ranges.LongRange, reason: use source file name */
+/* JADX INFO: compiled from: Ranges.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class Ranges3 extends Progressions implements Range3<Long> {
 
-    /* renamed from: n, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: n, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public static final Ranges3 f27438m = new Ranges3(1, 0);
 
-    /* compiled from: Ranges.kt */
-    /* renamed from: kotlin.ranges.LongRange$a, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: kotlin.ranges.LongRange$a, reason: from kotlin metadata */
+    /* JADX INFO: compiled from: Ranges.kt */
     public static final class Companion {
         public Companion(DefaultConstructorMarker defaultConstructorMarker) {
         }
@@ -66,7 +66,7 @@ public final class Ranges3 extends Progressions implements Range3<Long> {
         if (isEmpty()) {
             return -1;
         }
-        return (int) ((31 * (getFirst() ^ (getFirst() >>> 32))) + (getLast() ^ (getLast() >>> 32)));
+        return (int) ((((long) 31) * (getFirst() ^ (getFirst() >>> 32))) + (getLast() ^ (getLast() >>> 32)));
     }
 
     public boolean isEmpty() {

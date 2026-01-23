@@ -5,9 +5,9 @@ import kotlin.Unit;
 import kotlin.jvm.functions.Function1;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: ServerSettingsCreatorMonetizationOnboardingViewModel.kt */
-/* renamed from: com.discord.widgets.servers.creator_monetization_eligibility.onboarding.ServerSettingsCreatorMonetizationOnboardingViewModel$submitTermsAcceptance$1$2, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.servers.creator_monetization_eligibility.onboarding.ServerSettingsCreatorMonetizationOnboardingViewModel$submitTermsAcceptance$1$2, reason: use source file name */
+/* JADX INFO: compiled from: ServerSettingsCreatorMonetizationOnboardingViewModel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class ServerSettingsCreatorMonetizationOnboardingViewModel6 extends Lambda implements Function1<CreatorMonetizationEnableRequest, Unit> {
     public static final ServerSettingsCreatorMonetizationOnboardingViewModel6 INSTANCE = new ServerSettingsCreatorMonetizationOnboardingViewModel6();
 
@@ -21,7 +21,7 @@ public final class ServerSettingsCreatorMonetizationOnboardingViewModel6 extends
         return Unit.f27425a;
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final void invoke2(CreatorMonetizationEnableRequest creatorMonetizationEnableRequest) {
     }
 }

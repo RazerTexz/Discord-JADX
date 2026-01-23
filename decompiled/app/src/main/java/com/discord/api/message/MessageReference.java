@@ -3,8 +3,8 @@ package com.discord.api.message;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: MessageReference.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: MessageReference.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class MessageReference {
     private final Long channelId;
     private final Long guildId;
@@ -16,17 +16,17 @@ public final /* data */ class MessageReference {
         this.messageId = l3;
     }
 
-    /* renamed from: a, reason: from getter */
+    /* JADX INFO: renamed from: a, reason: from getter */
     public final Long getChannelId() {
         return this.channelId;
     }
 
-    /* renamed from: b, reason: from getter */
+    /* JADX INFO: renamed from: b, reason: from getter */
     public final Long getGuildId() {
         return this.guildId;
     }
 
-    /* renamed from: c, reason: from getter */
+    /* JADX INFO: renamed from: c, reason: from getter */
     public final Long getMessageId() {
         return this.messageId;
     }

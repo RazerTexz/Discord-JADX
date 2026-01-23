@@ -2,11 +2,11 @@ package p492b0.p493a.p494a;
 
 import android.graphics.Bitmap;
 
-/* renamed from: b0.a.a.c */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b0.a.a.c */
+/* JADX INFO: loaded from: classes3.dex */
 public final /* synthetic */ class C5312c {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final /* synthetic */ int[] f14503a;
 
     static {

@@ -11,22 +11,22 @@ import p507d0.p513e0.p514p.p515d.p517m0.p548g.ClassId;
 import p507d0.p579g0.StringsJVM;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ReflectKotlinClass.kt */
-/* renamed from: d0.e0.p.d.m0.c.k1.a.f, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.c.k1.a.f, reason: use source file name */
+/* JADX INFO: compiled from: ReflectKotlinClass.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class ReflectKotlinClass2 implements KotlinJvmBinaryClass {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final a f23015a = new a(null);
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final Class<?> f23016b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final KotlinClassHeader f23017c;
 
-    /* compiled from: ReflectKotlinClass.kt */
-    /* renamed from: d0.e0.p.d.m0.c.k1.a.f$a */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.c.k1.a.f$a */
+    /* JADX INFO: compiled from: ReflectKotlinClass.kt */
     public static final class a {
         public a(DefaultConstructorMarker defaultConstructorMarker) {
         }

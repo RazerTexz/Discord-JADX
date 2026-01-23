@@ -16,52 +16,52 @@ import p507d0.p513e0.p514p.p515d.p517m0.p548g.FqName;
 import p507d0.p513e0.p514p.p515d.p517m0.p548g.Name;
 import p507d0.p513e0.p514p.p515d.p517m0.p552k.p557v.ClassLiteralValue;
 
-/* compiled from: ReadKotlinClassHeaderAnnotationVisitor.java */
-/* renamed from: d0.e0.p.d.m0.e.b.b0.b, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.e.b.b0.b, reason: use source file name */
+/* JADX INFO: compiled from: ReadKotlinClassHeaderAnnotationVisitor.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class ReadKotlinClassHeaderAnnotationVisitor implements KotlinJvmBinaryClass.c {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final boolean f23567a = "true".equals(System.getProperty("kotlin.ignore.old.metadata"));
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static final Map<ClassId, KotlinClassHeader.a> f23568b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public int[] f23569c = null;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public JvmBytecodeBinaryVersion f23570d = null;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public String f23571e = null;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public int f23572f = 0;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public String f23573g = null;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public String[] f23574h = null;
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public String[] f23575i = null;
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public String[] f23576j = null;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public KotlinClassHeader.a f23577k = null;
 
-    /* compiled from: ReadKotlinClassHeaderAnnotationVisitor.java */
-    /* renamed from: d0.e0.p.d.m0.e.b.b0.b$b */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.e.b.b0.b$b */
+    /* JADX INFO: compiled from: ReadKotlinClassHeaderAnnotationVisitor.java */
     public static abstract class b implements KotlinJvmBinaryClass.b {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final List<String> f23578a = new ArrayList();
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public static /* synthetic */ void m9540a(int i) {
             Object[] objArr = new Object[3];
             if (i == 1) {
@@ -80,7 +80,7 @@ public class ReadKotlinClassHeaderAnnotationVisitor implements KotlinJvmBinaryCl
             throw new IllegalArgumentException(String.format("Argument for @NotNull parameter '%s' of %s.%s must not be null", objArr));
         }
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public abstract void mo9541b(String[] strArr);
 
         @Override // p507d0.p513e0.p514p.p515d.p517m0.p531e.p541b.KotlinJvmBinaryClass.b
@@ -118,13 +118,13 @@ public class ReadKotlinClassHeaderAnnotationVisitor implements KotlinJvmBinaryCl
         }
     }
 
-    /* compiled from: ReadKotlinClassHeaderAnnotationVisitor.java */
-    /* renamed from: d0.e0.p.d.m0.e.b.b0.b$c */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.e.b.b0.b$c */
+    /* JADX INFO: compiled from: ReadKotlinClassHeaderAnnotationVisitor.java */
     public class c implements KotlinJvmBinaryClass.a {
         public c(a aVar) {
         }
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public static /* synthetic */ void m9542a(int i) {
             Object[] objArr = new Object[3];
             if (i == 1) {
@@ -269,13 +269,13 @@ public class ReadKotlinClassHeaderAnnotationVisitor implements KotlinJvmBinaryCl
         }
     }
 
-    /* compiled from: ReadKotlinClassHeaderAnnotationVisitor.java */
-    /* renamed from: d0.e0.p.d.m0.e.b.b0.b$d */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.e.b.b0.b$d */
+    /* JADX INFO: compiled from: ReadKotlinClassHeaderAnnotationVisitor.java */
     public class d implements KotlinJvmBinaryClass.a {
         public d(a aVar) {
         }
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public static /* synthetic */ void m9543a(int i) {
             Object[] objArr = new Object[3];
             if (i == 1) {
@@ -407,7 +407,7 @@ public class ReadKotlinClassHeaderAnnotationVisitor implements KotlinJvmBinaryCl
         map.put(ClassId.topLevel(new FqName("kotlin.jvm.internal.KotlinSyntheticClass")), KotlinClassHeader.a.SYNTHETIC_CLASS);
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static /* synthetic */ void m9539a(int i) {
         Object[] objArr = new Object[3];
         if (i != 1) {

@@ -6,7 +6,7 @@ import java.lang.reflect.Constructor;
 import java.lang.reflect.Field;
 import java.util.List;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public interface FieldSerializerUnsafeUtil {
 
     public static class Factory {

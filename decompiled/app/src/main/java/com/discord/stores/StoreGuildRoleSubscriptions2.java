@@ -7,9 +7,9 @@ import java.util.List;
 import kotlin.Tuples2;
 import p658rx.functions.Func2;
 
-/* compiled from: StoreGuildRoleSubscriptions.kt */
-/* renamed from: com.discord.stores.StoreGuildRoleSubscriptions$fetchGuildRoleSubscriptionGroup$observable$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.stores.StoreGuildRoleSubscriptions$fetchGuildRoleSubscriptionGroup$observable$1, reason: use source file name */
+/* JADX INFO: compiled from: StoreGuildRoleSubscriptions.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class StoreGuildRoleSubscriptions2<T1, T2, R> implements Func2<GuildRoleSubscriptionGroupListing, List<? extends GuildRoleSubscriptionTierFreeTrial>, Tuples2<? extends GuildRoleSubscriptionGroupListing, ? extends List<? extends GuildRoleSubscriptionTierFreeTrial>>> {
     public static final StoreGuildRoleSubscriptions2 INSTANCE = new StoreGuildRoleSubscriptions2();
 
@@ -18,7 +18,7 @@ public final class StoreGuildRoleSubscriptions2<T1, T2, R> implements Func2<Guil
         return call2(guildRoleSubscriptionGroupListing, (List<GuildRoleSubscriptionTierFreeTrial>) list);
     }
 
-    /* renamed from: call, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
     public final Tuples2<GuildRoleSubscriptionGroupListing, List<GuildRoleSubscriptionTierFreeTrial>> call2(GuildRoleSubscriptionGroupListing guildRoleSubscriptionGroupListing, List<GuildRoleSubscriptionTierFreeTrial> list) {
         return new Tuples2<>(guildRoleSubscriptionGroupListing, list);
     }

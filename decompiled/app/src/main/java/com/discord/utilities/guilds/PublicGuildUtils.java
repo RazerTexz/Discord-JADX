@@ -5,8 +5,8 @@ import com.discord.api.user.User;
 import com.discord.models.message.Message;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: PublicGuildUtils.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: PublicGuildUtils.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class PublicGuildUtils {
     public static final PublicGuildUtils INSTANCE = new PublicGuildUtils();
     private static final long PUBLIC_GUILD_ANNOUNCEMENTS_GUILD_ID = 667560445975986187L;

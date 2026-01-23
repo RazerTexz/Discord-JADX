@@ -27,8 +27,8 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Set;
 
+/* JADX INFO: loaded from: classes.dex */
 @RestrictTo({RestrictTo.Scope.LIBRARY_GROUP})
-/* loaded from: classes.dex */
 public class GreedyScheduler implements Scheduler, WorkConstraintsCallback, ExecutionListener {
     private static final String TAG = Logger.tagWithPrefix("GreedyScheduler");
     private final Context mContext;

@@ -6,9 +6,9 @@ import com.google.android.material.tabs.TabLayoutMediator;
 import kotlin.jvm.functions.Function2;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ViewPager2Extensions.kt */
-/* renamed from: com.discord.utilities.view.recycler.ViewPager2ExtensionsKt$sam$com_google_android_material_tabs_TabLayoutMediator_TabConfigurationStrategy$0, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.utilities.view.recycler.ViewPager2ExtensionsKt$sam$com_google_android_material_tabs_TabLayoutMediator_TabConfigurationStrategy$0, reason: use source file name */
+/* JADX INFO: compiled from: ViewPager2Extensions.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class ViewPager2Extensions2 implements TabLayoutMediator.TabConfigurationStrategy {
     private final /* synthetic */ Function2 function;
 

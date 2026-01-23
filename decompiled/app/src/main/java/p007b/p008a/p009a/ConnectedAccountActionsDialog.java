@@ -21,32 +21,32 @@ import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.FunctionReferenceImpl;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ConnectedAccountActionsDialog.kt */
-/* renamed from: b.a.a.i, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.a.a.i, reason: use source file name */
+/* JADX INFO: compiled from: ConnectedAccountActionsDialog.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class ConnectedAccountActionsDialog extends AppDialog {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static final /* synthetic */ KProperty[] f384j = {outline.m846d0(ConnectedAccountActionsDialog.class, "binding", "getBinding()Lcom/discord/databinding/ConnectedAccountActionsDialogBinding;", 0)};
 
-    /* renamed from: k, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: k, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
 
-    /* renamed from: l, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: l, reason: from kotlin metadata */
     public final FragmentViewBindingDelegate binding;
 
-    /* compiled from: java-style lambda group */
-    /* renamed from: b.a.a.i$a */
-    /* loaded from: classes2.dex */
+    /* JADX INFO: renamed from: b.a.a.i$a */
+    /* JADX INFO: compiled from: java-style lambda group */
+    /* JADX INFO: loaded from: classes2.dex */
     public static final class a implements View.OnClickListener {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public final /* synthetic */ int f387j;
 
-        /* renamed from: k */
+        /* JADX INFO: renamed from: k */
         public final /* synthetic */ Object f388k;
 
-        /* renamed from: l */
+        /* JADX INFO: renamed from: l */
         public final /* synthetic */ Object f389l;
 
         public a(int i, Object obj, Object obj2) {
@@ -78,18 +78,18 @@ public final class ConnectedAccountActionsDialog extends AppDialog {
         }
     }
 
-    /* compiled from: ConnectedAccountActionsDialog.kt */
-    /* renamed from: b.a.a.i$b, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: b.a.a.i$b, reason: from kotlin metadata */
+    /* JADX INFO: compiled from: ConnectedAccountActionsDialog.kt */
     public static final class Companion {
         public Companion(DefaultConstructorMarker defaultConstructorMarker) {
         }
     }
 
-    /* compiled from: ConnectedAccountActionsDialog.kt */
-    /* renamed from: b.a.a.i$c */
+    /* JADX INFO: renamed from: b.a.a.i$c */
+    /* JADX INFO: compiled from: ConnectedAccountActionsDialog.kt */
     public static final /* synthetic */ class c extends FunctionReferenceImpl implements Function1<View, ConnectedAccountActionsDialogBinding> {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public static final c f390j = new c();
 
         public c() {
@@ -122,7 +122,7 @@ public final class ConnectedAccountActionsDialog extends AppDialog {
         this.binding = FragmentViewBindingDelegate3.viewBinding$default(this, c.f390j, null, 2, null);
     }
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public final ConnectedAccountActionsDialogBinding m136g() {
         return (ConnectedAccountActionsDialogBinding) this.binding.getValue((Fragment) this, f384j[0]);
     }

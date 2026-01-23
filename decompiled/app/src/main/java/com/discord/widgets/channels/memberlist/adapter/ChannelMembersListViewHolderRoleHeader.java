@@ -10,13 +10,13 @@ import com.discord.databinding.WidgetChannelMembersListItemHeaderBinding;
 import com.discord.widgets.channels.memberlist.adapter.ChannelMembersListAdapter;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ChannelMembersListViewHolderRoleHeader.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: ChannelMembersListViewHolderRoleHeader.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class ChannelMembersListViewHolderRoleHeader extends RecyclerView.ViewHolder {
     private final WidgetChannelMembersListItemHeaderBinding binding;
 
-    /* compiled from: ChannelMembersListViewHolderRoleHeader.kt */
-    /* renamed from: com.discord.widgets.channels.memberlist.adapter.ChannelMembersListViewHolderRoleHeader$bind$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.channels.memberlist.adapter.ChannelMembersListViewHolderRoleHeader$bind$1 */
+    /* JADX INFO: compiled from: ChannelMembersListViewHolderRoleHeader.kt */
     public static final class C75171 extends AccessibilityDelegateCompat {
         @Override // androidx.core.view.AccessibilityDelegateCompat
         public void onInitializeAccessibilityNodeInfo(View host, AccessibilityNodeInfoCompat info) {

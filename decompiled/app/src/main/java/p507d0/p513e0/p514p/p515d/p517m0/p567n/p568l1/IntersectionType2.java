@@ -19,37 +19,37 @@ import p507d0.p580t.Iterables2;
 import p507d0.p580t._Collections;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: IntersectionType.kt */
-/* renamed from: d0.e0.p.d.m0.n.l1.v, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.n.l1.v, reason: use source file name */
+/* JADX INFO: compiled from: IntersectionType.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class IntersectionType2 {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final IntersectionType2 f24831a = new IntersectionType2();
 
     /* JADX WARN: Failed to restore enum class, 'enum' modifier and super class removed */
     /* JADX WARN: Unknown enum class pattern. Please report as an issue! */
-    /* compiled from: IntersectionType.kt */
-    /* renamed from: d0.e0.p.d.m0.n.l1.v$a */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.n.l1.v$a */
+    /* JADX INFO: compiled from: IntersectionType.kt */
     public static final class a {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public static final a f24832j;
 
-        /* renamed from: k */
+        /* JADX INFO: renamed from: k */
         public static final a f24833k;
 
-        /* renamed from: l */
+        /* JADX INFO: renamed from: l */
         public static final a f24834l;
 
-        /* renamed from: m */
+        /* JADX INFO: renamed from: m */
         public static final a f24835m;
 
-        /* renamed from: n */
+        /* JADX INFO: renamed from: n */
         public static final /* synthetic */ a[] f24836n;
 
-        /* compiled from: IntersectionType.kt */
-        /* renamed from: d0.e0.p.d.m0.n.l1.v$a$a, reason: collision with other inner class name */
+        /* JADX INFO: renamed from: d0.e0.p.d.m0.n.l1.v$a$a, reason: collision with other inner class name */
+        /* JADX INFO: compiled from: IntersectionType.kt */
         public static final class C13338a extends a {
             public C13338a(String str, int i) {
                 super(str, i, null);
@@ -62,8 +62,8 @@ public final class IntersectionType2 {
             }
         }
 
-        /* compiled from: IntersectionType.kt */
-        /* renamed from: d0.e0.p.d.m0.n.l1.v$a$b */
+        /* JADX INFO: renamed from: d0.e0.p.d.m0.n.l1.v$a$b */
+        /* JADX INFO: compiled from: IntersectionType.kt */
         public static final class b extends a {
             public b(String str, int i) {
                 super(str, i, null);
@@ -81,8 +81,8 @@ public final class IntersectionType2 {
             }
         }
 
-        /* compiled from: IntersectionType.kt */
-        /* renamed from: d0.e0.p.d.m0.n.l1.v$a$c */
+        /* JADX INFO: renamed from: d0.e0.p.d.m0.n.l1.v$a$c */
+        /* JADX INFO: compiled from: IntersectionType.kt */
         public static final class c extends a {
             public c(String str, int i) {
                 super(str, i, null);
@@ -95,8 +95,8 @@ public final class IntersectionType2 {
             }
         }
 
-        /* compiled from: IntersectionType.kt */
-        /* renamed from: d0.e0.p.d.m0.n.l1.v$a$d */
+        /* JADX INFO: renamed from: d0.e0.p.d.m0.n.l1.v$a$d */
+        /* JADX INFO: compiled from: IntersectionType.kt */
         public static final class d extends a {
             public d(String str, int i) {
                 super(str, i, null);
@@ -139,7 +139,7 @@ public final class IntersectionType2 {
 
         public abstract a combine(KotlinType3 kotlinType3);
 
-        /* renamed from: f */
+        /* JADX INFO: renamed from: f */
         public final a m10016f(KotlinType3 kotlinType3) {
             Intrinsics3.checkNotNullParameter(kotlinType3, "<this>");
             return kotlinType3.isMarkedNullable() ? f24833k : NewKotlinTypeChecker3.f24825a.isSubtypeOfAny(kotlinType3) ? f24835m : f24834l;
@@ -153,7 +153,7 @@ public final class IntersectionType2 {
     }
 
     /* JADX WARN: Removed duplicated region for block: B:16:0x004d  */
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */

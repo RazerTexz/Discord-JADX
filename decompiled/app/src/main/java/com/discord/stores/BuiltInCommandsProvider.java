@@ -4,8 +4,8 @@ import com.discord.models.commands.Application;
 import com.discord.models.commands.ApplicationCommand;
 import java.util.List;
 
-/* compiled from: StoreApplicationCommands.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: StoreApplicationCommands.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public interface BuiltInCommandsProvider {
     Application getBuiltInApplication();
 

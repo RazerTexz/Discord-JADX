@@ -9,12 +9,12 @@ import p007b.p085c.p086a.p087a0.AnimatableValueParser;
 import p007b.p109f.p115d.p122g.PooledByteBufferFactory;
 import p007b.p109f.p161j.p175j.EncodedImage2;
 
-/* compiled from: QualifiedResourceFetchProducer.java */
-/* renamed from: b.f.j.p.b1, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.f.j.p.b1, reason: use source file name */
+/* JADX INFO: compiled from: QualifiedResourceFetchProducer.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class QualifiedResourceFetchProducer extends LocalFetchProducer {
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final ContentResolver f3998c;
 
     public QualifiedResourceFetchProducer(Executor executor, PooledByteBufferFactory pooledByteBufferFactory, ContentResolver contentResolver) {
@@ -23,7 +23,7 @@ public class QualifiedResourceFetchProducer extends LocalFetchProducer {
     }
 
     @Override // p007b.p109f.p161j.p181p.LocalFetchProducer
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public EncodedImage2 mo1428d(ImageRequest imageRequest) throws IOException {
         InputStream inputStreamOpenInputStream = this.f3998c.openInputStream(imageRequest.f19585c);
         AnimatableValueParser.m591y(inputStreamOpenInputStream, "ContentResolver returned null InputStream");
@@ -31,7 +31,7 @@ public class QualifiedResourceFetchProducer extends LocalFetchProducer {
     }
 
     @Override // p007b.p109f.p161j.p181p.LocalFetchProducer
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public String mo1429e() {
         return "QualifiedResourceFetchProducer";
     }

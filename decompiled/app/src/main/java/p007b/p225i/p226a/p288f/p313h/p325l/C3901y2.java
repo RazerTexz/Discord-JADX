@@ -3,9 +3,9 @@ package p007b.p225i.p226a.p288f.p313h.p325l;
 import org.checkerframework.checker.nullness.compatqual.NullableDecl;
 import p007b.p100d.p104b.p105a.outline;
 
-/* compiled from: com.google.android.gms:play-services-measurement-impl@@18.0.0 */
-/* renamed from: b.i.a.f.h.l.y2 */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.h.l.y2 */
+/* JADX INFO: compiled from: com.google.android.gms:play-services-measurement-impl@@18.0.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public final class C3901y2<T> extends AbstractC3888x2<T> {
     private final T zza;
 
@@ -14,13 +14,13 @@ public final class C3901y2<T> extends AbstractC3888x2<T> {
     }
 
     @Override // p007b.p225i.p226a.p288f.p313h.p325l.AbstractC3888x2
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final boolean mo5342b() {
         return true;
     }
 
     @Override // p007b.p225i.p226a.p288f.p313h.p325l.AbstractC3888x2
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final T mo5343c() {
         return this.zza;
     }

@@ -6,9 +6,9 @@ import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
 import com.google.android.gms.auth.api.signin.SignInAccount;
 import p007b.p085c.p086a.p087a0.AnimatableValueParser;
 
-/* compiled from: com.google.android.gms:play-services-auth@@19.0.0 */
-/* renamed from: b.i.a.f.c.a.f.g */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.c.a.f.g */
+/* JADX INFO: compiled from: com.google.android.gms:play-services-auth@@19.0.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public final class C3222g implements Parcelable.Creator<SignInAccount> {
     @Override // android.os.Parcelable.Creator
     public final SignInAccount createFromParcel(Parcel parcel) {

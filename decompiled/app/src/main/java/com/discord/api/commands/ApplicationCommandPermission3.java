@@ -6,12 +6,12 @@ import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ApplicationCommandPermission.kt */
-/* renamed from: com.discord.api.commands.ApplicationCommandPermissionTypeTypeAdapter, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: com.discord.api.commands.ApplicationCommandPermissionTypeTypeAdapter, reason: use source file name */
+/* JADX INFO: compiled from: ApplicationCommandPermission.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class ApplicationCommandPermission3 extends TypeAdapter<ApplicationCommandPermission2> {
 
-    /* renamed from: com.discord.api.commands.ApplicationCommandPermissionTypeTypeAdapter$WhenMappings */
+    /* JADX INFO: renamed from: com.discord.api.commands.ApplicationCommandPermissionTypeTypeAdapter$WhenMappings */
     public final /* synthetic */ class WhenMappings {
         public static final /* synthetic */ int[] $EnumSwitchMapping$0;
 

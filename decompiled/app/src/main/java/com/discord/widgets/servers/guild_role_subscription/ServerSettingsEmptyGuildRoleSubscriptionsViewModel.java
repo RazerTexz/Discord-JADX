@@ -17,13 +17,13 @@ import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: ServerSettingsEmptyGuildRoleSubscriptionsViewModel.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: ServerSettingsEmptyGuildRoleSubscriptionsViewModel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class ServerSettingsEmptyGuildRoleSubscriptionsViewModel extends AppViewModel<ViewState> {
     private final long guildId;
 
-    /* compiled from: ServerSettingsEmptyGuildRoleSubscriptionsViewModel.kt */
-    /* renamed from: com.discord.widgets.servers.guild_role_subscription.ServerSettingsEmptyGuildRoleSubscriptionsViewModel$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.guild_role_subscription.ServerSettingsEmptyGuildRoleSubscriptionsViewModel$1 */
+    /* JADX INFO: compiled from: ServerSettingsEmptyGuildRoleSubscriptionsViewModel.kt */
     public static final class C94391 extends Lambda implements Function1<List<? extends Application>, Unit> {
         public C94391() {
             super(1);
@@ -35,15 +35,15 @@ public final class ServerSettingsEmptyGuildRoleSubscriptionsViewModel extends Ap
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(List<Application> list) {
             Intrinsics3.checkNotNullParameter(list, "it");
             ServerSettingsEmptyGuildRoleSubscriptionsViewModel.access$handleMonetizationStatus(ServerSettingsEmptyGuildRoleSubscriptionsViewModel.this, list);
         }
     }
 
-    /* compiled from: ServerSettingsEmptyGuildRoleSubscriptionsViewModel.kt */
-    /* renamed from: com.discord.widgets.servers.guild_role_subscription.ServerSettingsEmptyGuildRoleSubscriptionsViewModel$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.guild_role_subscription.ServerSettingsEmptyGuildRoleSubscriptionsViewModel$2 */
+    /* JADX INFO: compiled from: ServerSettingsEmptyGuildRoleSubscriptionsViewModel.kt */
     public static final class C94402 extends Lambda implements Function1<Error, Unit> {
         public C94402() {
             super(1);
@@ -55,7 +55,7 @@ public final class ServerSettingsEmptyGuildRoleSubscriptionsViewModel extends Ap
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Error error) {
             Intrinsics3.checkNotNullParameter(error, "it");
             ServerSettingsEmptyGuildRoleSubscriptionsViewModel serverSettingsEmptyGuildRoleSubscriptionsViewModel = ServerSettingsEmptyGuildRoleSubscriptionsViewModel.this;
@@ -63,7 +63,7 @@ public final class ServerSettingsEmptyGuildRoleSubscriptionsViewModel extends Ap
         }
     }
 
-    /* compiled from: ServerSettingsEmptyGuildRoleSubscriptionsViewModel.kt */
+    /* JADX INFO: compiled from: ServerSettingsEmptyGuildRoleSubscriptionsViewModel.kt */
     public static final /* data */ class ViewState {
         private final boolean isLoading;
         private final Boolean isMonetizationEnabled;
@@ -87,12 +87,12 @@ public final class ServerSettingsEmptyGuildRoleSubscriptionsViewModel extends Ap
             return viewState.copy(z2, bool);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final boolean getIsLoading() {
             return this.isLoading;
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final Boolean getIsMonetizationEnabled() {
             return this.isMonetizationEnabled;
         }

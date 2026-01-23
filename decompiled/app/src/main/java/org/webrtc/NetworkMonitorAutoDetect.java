@@ -28,7 +28,7 @@ import org.webrtc.NetworkChangeDetector;
 import p007b.p100d.p104b.p105a.outline;
 import p617h0.p628c.C12482q;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public class NetworkMonitorAutoDetect extends BroadcastReceiver implements NetworkChangeDetector {
     private static final long INVALID_NET_ID = -1;
     private static final String TAG = "NetworkMonitorAutoDetect";
@@ -188,7 +188,7 @@ public class NetworkMonitorAutoDetect extends BroadcastReceiver implements Netwo
             }
         }
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public /* synthetic */ void m11034a(WifiP2pGroup wifiP2pGroup) {
             onWifiP2pGroupChange(wifiP2pGroup);
         }

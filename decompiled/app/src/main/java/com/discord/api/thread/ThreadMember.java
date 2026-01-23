@@ -4,8 +4,8 @@ import com.discord.api.utcdatetime.UtcDateTime;
 import com.discord.models.domain.ModelAuditLogEntry;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ThreadMember.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: ThreadMember.kt */
+/* JADX INFO: loaded from: classes.dex */
 public class ThreadMember {
     private final int flags;
     private final long id;
@@ -24,32 +24,32 @@ public class ThreadMember {
         this.muteConfig = muteConfig;
     }
 
-    /* renamed from: a, reason: from getter */
+    /* JADX INFO: renamed from: a, reason: from getter */
     public int getFlags() {
         return this.flags;
     }
 
-    /* renamed from: b, reason: from getter */
+    /* JADX INFO: renamed from: b, reason: from getter */
     public long getId() {
         return this.id;
     }
 
-    /* renamed from: c, reason: from getter */
+    /* JADX INFO: renamed from: c, reason: from getter */
     public UtcDateTime getJoinTimestamp() {
         return this.joinTimestamp;
     }
 
-    /* renamed from: d, reason: from getter */
+    /* JADX INFO: renamed from: d, reason: from getter */
     public final MuteConfig getMuteConfig() {
         return this.muteConfig;
     }
 
-    /* renamed from: e, reason: from getter */
+    /* JADX INFO: renamed from: e, reason: from getter */
     public final boolean getMuted() {
         return this.muted;
     }
 
-    /* renamed from: f, reason: from getter */
+    /* JADX INFO: renamed from: f, reason: from getter */
     public long getUserId() {
         return this.userId;
     }

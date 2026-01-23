@@ -13,7 +13,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import p007b.p100d.p104b.p105a.outline;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public final class NavUtils {
     public static final String PARENT_ACTIVITY = "android.support.PARENT_ACTIVITY";
     private static final String TAG = "NavUtils";

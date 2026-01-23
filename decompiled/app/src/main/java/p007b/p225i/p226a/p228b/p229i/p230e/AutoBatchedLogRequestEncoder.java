@@ -7,23 +7,23 @@ import p007b.p225i.p361c.p393p.p394g.Configurator;
 import p007b.p225i.p361c.p393p.p394g.EncoderConfig;
 import p007b.p225i.p361c.p393p.p395h.JsonDataEncoderBuilder5;
 
-/* compiled from: AutoBatchedLogRequestEncoder.java */
-/* renamed from: b.i.a.b.i.e.b, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.b.i.e.b, reason: use source file name */
+/* JADX INFO: compiled from: AutoBatchedLogRequestEncoder.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class AutoBatchedLogRequestEncoder implements Configurator {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final Configurator f5145a = new AutoBatchedLogRequestEncoder();
 
-    /* compiled from: AutoBatchedLogRequestEncoder.java */
-    /* renamed from: b.i.a.b.i.e.b$a */
+    /* JADX INFO: renamed from: b.i.a.b.i.e.b$a */
+    /* JADX INFO: compiled from: AutoBatchedLogRequestEncoder.java */
     public static final class a implements ObjectEncoder<AndroidClientInfo> {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public static final a f5146a = new a();
 
         @Override // p007b.p225i.p361c.p393p.Encoder
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public void mo2312a(Object obj, ObjectEncoderContext objectEncoderContext) throws IOException {
             AndroidClientInfo androidClientInfo = (AndroidClientInfo) obj;
             ObjectEncoderContext objectEncoderContext2 = objectEncoderContext;
@@ -42,29 +42,29 @@ public final class AutoBatchedLogRequestEncoder implements Configurator {
         }
     }
 
-    /* compiled from: AutoBatchedLogRequestEncoder.java */
-    /* renamed from: b.i.a.b.i.e.b$b */
+    /* JADX INFO: renamed from: b.i.a.b.i.e.b$b */
+    /* JADX INFO: compiled from: AutoBatchedLogRequestEncoder.java */
     public static final class b implements ObjectEncoder<BatchedLogRequest> {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public static final b f5147a = new b();
 
         @Override // p007b.p225i.p361c.p393p.Encoder
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public void mo2312a(Object obj, ObjectEncoderContext objectEncoderContext) throws IOException {
             objectEncoderContext.mo6708f("logRequest", ((BatchedLogRequest) obj).mo2313a());
         }
     }
 
-    /* compiled from: AutoBatchedLogRequestEncoder.java */
-    /* renamed from: b.i.a.b.i.e.b$c */
+    /* JADX INFO: renamed from: b.i.a.b.i.e.b$c */
+    /* JADX INFO: compiled from: AutoBatchedLogRequestEncoder.java */
     public static final class c implements ObjectEncoder<ClientInfo2> {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public static final c f5148a = new c();
 
         @Override // p007b.p225i.p361c.p393p.Encoder
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public void mo2312a(Object obj, ObjectEncoderContext objectEncoderContext) throws IOException {
             ClientInfo2 clientInfo2 = (ClientInfo2) obj;
             ObjectEncoderContext objectEncoderContext2 = objectEncoderContext;
@@ -73,15 +73,15 @@ public final class AutoBatchedLogRequestEncoder implements Configurator {
         }
     }
 
-    /* compiled from: AutoBatchedLogRequestEncoder.java */
-    /* renamed from: b.i.a.b.i.e.b$d */
+    /* JADX INFO: renamed from: b.i.a.b.i.e.b$d */
+    /* JADX INFO: compiled from: AutoBatchedLogRequestEncoder.java */
     public static final class d implements ObjectEncoder<LogEvent> {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public static final d f5149a = new d();
 
         @Override // p007b.p225i.p361c.p393p.Encoder
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public void mo2312a(Object obj, ObjectEncoderContext objectEncoderContext) throws IOException {
             LogEvent logEvent = (LogEvent) obj;
             ObjectEncoderContext objectEncoderContext2 = objectEncoderContext;
@@ -95,15 +95,15 @@ public final class AutoBatchedLogRequestEncoder implements Configurator {
         }
     }
 
-    /* compiled from: AutoBatchedLogRequestEncoder.java */
-    /* renamed from: b.i.a.b.i.e.b$e */
+    /* JADX INFO: renamed from: b.i.a.b.i.e.b$e */
+    /* JADX INFO: compiled from: AutoBatchedLogRequestEncoder.java */
     public static final class e implements ObjectEncoder<LogRequest> {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public static final e f5150a = new e();
 
         @Override // p007b.p225i.p361c.p393p.Encoder
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public void mo2312a(Object obj, ObjectEncoderContext objectEncoderContext) throws IOException {
             LogRequest logRequest = (LogRequest) obj;
             ObjectEncoderContext objectEncoderContext2 = objectEncoderContext;
@@ -117,15 +117,15 @@ public final class AutoBatchedLogRequestEncoder implements Configurator {
         }
     }
 
-    /* compiled from: AutoBatchedLogRequestEncoder.java */
-    /* renamed from: b.i.a.b.i.e.b$f */
+    /* JADX INFO: renamed from: b.i.a.b.i.e.b$f */
+    /* JADX INFO: compiled from: AutoBatchedLogRequestEncoder.java */
     public static final class f implements ObjectEncoder<NetworkConnectionInfo> {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public static final f f5151a = new f();
 
         @Override // p007b.p225i.p361c.p393p.Encoder
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public void mo2312a(Object obj, ObjectEncoderContext objectEncoderContext) throws IOException {
             NetworkConnectionInfo networkConnectionInfo = (NetworkConnectionInfo) obj;
             ObjectEncoderContext objectEncoderContext2 = objectEncoderContext;
@@ -134,7 +134,7 @@ public final class AutoBatchedLogRequestEncoder implements Configurator {
         }
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public void m2311a(EncoderConfig<?> encoderConfig) {
         b bVar = b.f5147a;
         JsonDataEncoderBuilder5 jsonDataEncoderBuilder5 = (JsonDataEncoderBuilder5) encoderConfig;

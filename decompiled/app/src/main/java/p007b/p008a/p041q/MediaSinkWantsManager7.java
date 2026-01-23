@@ -16,9 +16,9 @@ import p507d0.p580t.Iterables2;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: MediaSinkWantsManager.kt */
-/* renamed from: b.a.q.l, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.a.q.l, reason: use source file name */
+/* JADX INFO: compiled from: MediaSinkWantsManager.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class MediaSinkWantsManager7 extends Lambda implements Function0<Unit> {
     public final /* synthetic */ List $ssrcs;
     public final /* synthetic */ long $userId;

@@ -59,22 +59,22 @@ import p658rx.functions.Action1;
 import p658rx.functions.Action2;
 import p658rx.subjects.BehaviorSubject;
 
-/* compiled from: WidgetServerSettingsChannels.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetServerSettingsChannels.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetServerSettingsChannels extends AppFragment {
     public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetServerSettingsChannels.class, "binding", "getBinding()Lcom/discord/databinding/WidgetServerSettingsChannelsBinding;", 0)};
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     public static final String INTENT_EXTRA_GUILD_ID = "INTENT_EXTRA_GUILD_ID";
     private SettingsChannelListAdapter adapter;
 
-    /* renamed from: binding$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
     private final BehaviorSubject<Integer> channelSortTypeSubject;
     private final AppLogger2 loggingConfig;
 
-    /* compiled from: WidgetServerSettingsChannels.kt */
+    /* JADX INFO: compiled from: WidgetServerSettingsChannels.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -92,10 +92,10 @@ public final class WidgetServerSettingsChannels extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetServerSettingsChannels.kt */
+    /* JADX INFO: compiled from: WidgetServerSettingsChannels.kt */
     public static final /* data */ class Model {
 
-        /* renamed from: Companion, reason: from kotlin metadata */
+        /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
         public static final Companion INSTANCE = new Companion(null);
         private final Map<Long, Long> channelPermissions;
         private final Map<Long, Channel> channels;
@@ -103,7 +103,7 @@ public final class WidgetServerSettingsChannels extends AppFragment {
         private final boolean isSorting;
         private final List<CategoricalDragAndDropAdapter.Payload> items;
 
-        /* compiled from: WidgetServerSettingsChannels.kt */
+        /* JADX INFO: compiled from: WidgetServerSettingsChannels.kt */
         public static final class Companion {
             private Companion() {
             }
@@ -146,6 +146,7 @@ public final class WidgetServerSettingsChannels extends AppFragment {
             this.channelPermissions = map2;
         }
 
+        /* JADX WARN: Multi-variable type inference failed */
         public static /* synthetic */ Model copy$default(Model model, Guild guild, List list, boolean z2, Map map, Map map2, int i, Object obj) {
             if ((i & 1) != 0) {
                 guild = model.guild;
@@ -168,7 +169,7 @@ public final class WidgetServerSettingsChannels extends AppFragment {
             return model.copy(guild, list2, z3, map3, map2);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final Guild getGuild() {
             return this.guild;
         }
@@ -177,7 +178,7 @@ public final class WidgetServerSettingsChannels extends AppFragment {
             return this.items;
         }
 
-        /* renamed from: component3, reason: from getter */
+        /* JADX INFO: renamed from: component3, reason: from getter */
         public final boolean getIsSorting() {
             return this.isSorting;
         }
@@ -226,19 +227,22 @@ public final class WidgetServerSettingsChannels extends AppFragment {
         }
 
         /* JADX WARN: Multi-variable type inference failed */
+        /* JADX WARN: Type inference failed for: r2v10 */
+        /* JADX WARN: Type inference failed for: r2v12 */
+        /* JADX WARN: Type inference failed for: r2v4, types: [int] */
         public int hashCode() {
             Guild guild = this.guild;
             int iHashCode = (guild != null ? guild.hashCode() : 0) * 31;
             List<CategoricalDragAndDropAdapter.Payload> list = this.items;
             int iHashCode2 = (iHashCode + (list != null ? list.hashCode() : 0)) * 31;
             boolean z2 = this.isSorting;
-            int i = z2;
-            if (z2 != 0) {
-                i = 1;
+            ?? r2 = z2;
+            if (z2) {
+                r2 = 1;
             }
-            int i2 = (iHashCode2 + i) * 31;
+            int i = (iHashCode2 + r2) * 31;
             Map<Long, Channel> map = this.channels;
-            int iHashCode3 = (i2 + (map != null ? map.hashCode() : 0)) * 31;
+            int iHashCode3 = (i + (map != null ? map.hashCode() : 0)) * 31;
             Map<Long, Long> map2 = this.channelPermissions;
             return iHashCode3 + (map2 != null ? map2.hashCode() : 0);
         }
@@ -261,14 +265,14 @@ public final class WidgetServerSettingsChannels extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetServerSettingsChannels.kt */
-    /* renamed from: com.discord.widgets.servers.WidgetServerSettingsChannels$configureFabVisibility$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.WidgetServerSettingsChannels$configureFabVisibility$1 */
+    /* JADX INFO: compiled from: WidgetServerSettingsChannels.kt */
     public static final class ViewOnClickListenerC91981 implements View.OnClickListener {
         public final /* synthetic */ Model $model;
         public final /* synthetic */ Function0 $setFabVisibility;
 
-        /* compiled from: WidgetServerSettingsChannels.kt */
-        /* renamed from: com.discord.widgets.servers.WidgetServerSettingsChannels$configureFabVisibility$1$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.widgets.servers.WidgetServerSettingsChannels$configureFabVisibility$1$1, reason: invalid class name */
+        /* JADX INFO: compiled from: WidgetServerSettingsChannels.kt */
         public static final class AnonymousClass1 implements Action0 {
             public AnonymousClass1() {
             }
@@ -295,12 +299,12 @@ public final class WidgetServerSettingsChannels extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetServerSettingsChannels.kt */
-    /* renamed from: com.discord.widgets.servers.WidgetServerSettingsChannels$configureUI$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.WidgetServerSettingsChannels$configureUI$1 */
+    /* JADX INFO: compiled from: WidgetServerSettingsChannels.kt */
     public static final class C92001<T1, T2> implements Action2<MenuItem, Context> {
 
-        /* compiled from: WidgetServerSettingsChannels.kt */
-        /* renamed from: com.discord.widgets.servers.WidgetServerSettingsChannels$configureUI$1$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.widgets.servers.WidgetServerSettingsChannels$configureUI$1$1, reason: invalid class name */
+        /* JADX INFO: compiled from: WidgetServerSettingsChannels.kt */
         public static final class AnonymousClass1 extends Lambda implements Function1<Integer, Unit> {
             public AnonymousClass1() {
                 super(1);
@@ -325,7 +329,7 @@ public final class WidgetServerSettingsChannels extends AppFragment {
             call2(menuItem, context);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final void call2(MenuItem menuItem, Context context) {
             Intrinsics3.checkNotNullExpressionValue(menuItem, "menuItem");
             switch (menuItem.getItemId()) {
@@ -342,8 +346,8 @@ public final class WidgetServerSettingsChannels extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetServerSettingsChannels.kt */
-    /* renamed from: com.discord.widgets.servers.WidgetServerSettingsChannels$configureUI$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.WidgetServerSettingsChannels$configureUI$2 */
+    /* JADX INFO: compiled from: WidgetServerSettingsChannels.kt */
     public static final class C92012<T> implements Action1<Menu> {
         public final /* synthetic */ Model $model;
 
@@ -356,7 +360,7 @@ public final class WidgetServerSettingsChannels extends AppFragment {
             call2(menu);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final void call2(Menu menu) {
             MenuItem menuItemFindItem = menu.findItem(C5419R.id.menu_sort_channel);
             Intrinsics3.checkNotNullExpressionValue(menuItemFindItem, "menu.findItem(R.id.menu_sort_channel)");
@@ -367,8 +371,8 @@ public final class WidgetServerSettingsChannels extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetServerSettingsChannels.kt */
-    /* renamed from: com.discord.widgets.servers.WidgetServerSettingsChannels$configureUI$3 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.WidgetServerSettingsChannels$configureUI$3 */
+    /* JADX INFO: compiled from: WidgetServerSettingsChannels.kt */
     public static final class C92023<T> implements Action1<Map<Long, ? extends SettingsChannelListAdapter.UpdatedPosition>> {
         public final /* synthetic */ Model $model;
 
@@ -381,7 +385,7 @@ public final class WidgetServerSettingsChannels extends AppFragment {
             call2((Map<Long, SettingsChannelListAdapter.UpdatedPosition>) map);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final void call2(Map<Long, SettingsChannelListAdapter.UpdatedPosition> map) {
             WidgetServerSettingsChannels widgetServerSettingsChannels = WidgetServerSettingsChannels.this;
             Model model = this.$model;
@@ -390,8 +394,8 @@ public final class WidgetServerSettingsChannels extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetServerSettingsChannels.kt */
-    /* renamed from: com.discord.widgets.servers.WidgetServerSettingsChannels$onViewBoundOrOnResume$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.WidgetServerSettingsChannels$onViewBoundOrOnResume$1 */
+    /* JADX INFO: compiled from: WidgetServerSettingsChannels.kt */
     public static final /* synthetic */ class C92031 extends FunctionReferenceImpl implements Function1<Model, Unit> {
         public C92031(WidgetServerSettingsChannels widgetServerSettingsChannels) {
             super(1, widgetServerSettingsChannels, WidgetServerSettingsChannels.class, "configureUI", "configureUI(Lcom/discord/widgets/servers/WidgetServerSettingsChannels$Model;)V", 0);
@@ -403,14 +407,14 @@ public final class WidgetServerSettingsChannels extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Model model) throws Exception {
             WidgetServerSettingsChannels.access$configureUI((WidgetServerSettingsChannels) this.receiver, model);
         }
     }
 
-    /* compiled from: WidgetServerSettingsChannels.kt */
-    /* renamed from: com.discord.widgets.servers.WidgetServerSettingsChannels$reorderChannels$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.WidgetServerSettingsChannels$reorderChannels$1 */
+    /* JADX INFO: compiled from: WidgetServerSettingsChannels.kt */
     public static final class C92041 extends Lambda implements Function1<Void, Unit> {
         public C92041() {
             super(1);
@@ -422,14 +426,14 @@ public final class WidgetServerSettingsChannels extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Void r4) {
             AppToast.m171i(WidgetServerSettingsChannels.this, C5419R.string.channel_order_updated, 0, 4);
         }
     }
 
-    /* compiled from: WidgetServerSettingsChannels.kt */
-    /* renamed from: com.discord.widgets.servers.WidgetServerSettingsChannels$reorderChannels$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.WidgetServerSettingsChannels$reorderChannels$2 */
+    /* JADX INFO: compiled from: WidgetServerSettingsChannels.kt */
     public static final class C92052 extends Lambda implements Function1<Error, Unit> {
         public final /* synthetic */ Model $data;
 
@@ -445,15 +449,15 @@ public final class WidgetServerSettingsChannels extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Error error) throws Exception {
             Intrinsics3.checkNotNullParameter(error, "it");
             WidgetServerSettingsChannels.access$configureUI(WidgetServerSettingsChannels.this, this.$data);
         }
     }
 
-    /* compiled from: WidgetServerSettingsChannels.kt */
-    /* renamed from: com.discord.widgets.servers.WidgetServerSettingsChannels$setOnClickListener$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.WidgetServerSettingsChannels$setOnClickListener$1 */
+    /* JADX INFO: compiled from: WidgetServerSettingsChannels.kt */
     public static final class C92061 extends Lambda implements Function1<Long, Unit> {
         public static final C92061 INSTANCE = new C92061();
 
@@ -471,8 +475,8 @@ public final class WidgetServerSettingsChannels extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetServerSettingsChannels.kt */
-    /* renamed from: com.discord.widgets.servers.WidgetServerSettingsChannels$setOnClickListener$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.WidgetServerSettingsChannels$setOnClickListener$2 */
+    /* JADX INFO: compiled from: WidgetServerSettingsChannels.kt */
     public static final class C92072 extends Lambda implements Function1<Long, Unit> {
         public final /* synthetic */ Model $model;
 

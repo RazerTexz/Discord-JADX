@@ -2,9 +2,9 @@ package p007b.p195g.p196a.p205c.p218h0;
 
 import p007b.p195g.p196a.p205c.JavaType;
 
-/* compiled from: SimpleType.java */
-/* renamed from: b.g.a.c.h0.k, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.g.a.c.h0.k, reason: use source file name */
+/* JADX INFO: compiled from: SimpleType.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class SimpleType extends TypeBase {
     private static final long serialVersionUID = 1;
 
@@ -12,49 +12,49 @@ public class SimpleType extends TypeBase {
         super(cls, typeBindings, javaType, javaTypeArr, 0, obj, obj2, z2);
     }
 
-    /* renamed from: L */
+    /* JADX INFO: renamed from: L */
     public static SimpleType m2138L(Class<?> cls) {
         return new SimpleType(cls, null, null, null, null, null, false);
     }
 
     @Override // p007b.p195g.p196a.p205c.JavaType
-    /* renamed from: C */
+    /* JADX INFO: renamed from: C */
     public JavaType mo2093C(Class<?> cls, TypeBindings typeBindings, JavaType javaType, JavaType[] javaTypeArr) {
         return null;
     }
 
     @Override // p007b.p195g.p196a.p205c.JavaType
-    /* renamed from: D */
+    /* JADX INFO: renamed from: D */
     public JavaType mo2094D(JavaType javaType) {
         throw new IllegalArgumentException("Simple types have no content types; cannot call withContentType()");
     }
 
     @Override // p007b.p195g.p196a.p205c.JavaType
-    /* renamed from: E */
+    /* JADX INFO: renamed from: E */
     public JavaType mo2095E(Object obj) {
         throw new IllegalArgumentException("Simple types have no content types; cannot call withContenTypeHandler()");
     }
 
     @Override // p007b.p195g.p196a.p205c.JavaType
-    /* renamed from: G */
+    /* JADX INFO: renamed from: G */
     public /* bridge */ /* synthetic */ JavaType mo2096G() {
         return mo2129M();
     }
 
     @Override // p007b.p195g.p196a.p205c.JavaType
-    /* renamed from: H */
+    /* JADX INFO: renamed from: H */
     public /* bridge */ /* synthetic */ JavaType mo2097H(Object obj) {
         return mo2130N(obj);
     }
 
     @Override // p007b.p195g.p196a.p205c.JavaType
-    /* renamed from: I */
+    /* JADX INFO: renamed from: I */
     public /* bridge */ /* synthetic */ JavaType mo2098I(Object obj) {
         return mo2131O(obj);
     }
 
     @Override // p007b.p195g.p196a.p205c.p218h0.TypeBase
-    /* renamed from: K */
+    /* JADX INFO: renamed from: K */
     public String mo2106K() {
         StringBuilder sb = new StringBuilder();
         sb.append(this._class.getName());
@@ -73,17 +73,17 @@ public class SimpleType extends TypeBase {
         return sb.toString();
     }
 
-    /* renamed from: M */
+    /* JADX INFO: renamed from: M */
     public SimpleType mo2129M() {
         return this._asStatic ? this : new SimpleType(this._class, this._bindings, this._superClass, this._superInterfaces, this._valueHandler, this._typeHandler, true);
     }
 
-    /* renamed from: N */
+    /* JADX INFO: renamed from: N */
     public SimpleType mo2130N(Object obj) {
         return this._typeHandler == obj ? this : new SimpleType(this._class, this._bindings, this._superClass, this._superInterfaces, this._valueHandler, obj, this._asStatic);
     }
 
-    /* renamed from: O */
+    /* JADX INFO: renamed from: O */
     public SimpleType mo2131O(Object obj) {
         return obj == this._valueHandler ? this : new SimpleType(this._class, this._bindings, this._superClass, this._superInterfaces, obj, this._typeHandler, this._asStatic);
     }
@@ -104,14 +104,14 @@ public class SimpleType extends TypeBase {
     }
 
     @Override // p007b.p195g.p196a.p205c.JavaType
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public StringBuilder mo2100l(StringBuilder sb) {
         TypeBase.m2139J(this._class, sb, true);
         return sb;
     }
 
     @Override // p007b.p195g.p196a.p205c.JavaType
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public StringBuilder mo2101m(StringBuilder sb) {
         TypeBase.m2139J(this._class, sb, false);
         int iM2155j = this._bindings.m2155j();
@@ -135,7 +135,7 @@ public class SimpleType extends TypeBase {
     }
 
     @Override // p007b.p195g.p196a.p205c.JavaType
-    /* renamed from: v */
+    /* JADX INFO: renamed from: v */
     public boolean mo2104v() {
         return false;
     }

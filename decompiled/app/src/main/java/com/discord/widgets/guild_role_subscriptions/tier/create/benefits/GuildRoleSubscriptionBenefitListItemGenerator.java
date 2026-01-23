@@ -9,9 +9,9 @@ import java.util.Iterator;
 import java.util.List;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: GuildRoleSubscriptionBenefitListItemGenerator.kt */
-/* renamed from: com.discord.widgets.guild_role_subscriptions.tier.create.benefits.GuildRoleSubscriptionBenefitListItemGeneratorKt, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.guild_role_subscriptions.tier.create.benefits.GuildRoleSubscriptionBenefitListItemGeneratorKt, reason: use source file name */
+/* JADX INFO: compiled from: GuildRoleSubscriptionBenefitListItemGenerator.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class GuildRoleSubscriptionBenefitListItemGenerator {
     public static final List<GuildRoleSubscriptionBenefitAdapterItem> generateGuildRoleSubscriptionBenefitListItems(List<Benefit.ChannelBenefit> list, List<Benefit.IntangibleBenefit> list2, GuildRoleSubscriptionTierBenefitListType guildRoleSubscriptionTierBenefitListType, long j, String str, Boolean bool, boolean z2, SubscriptionTrialInterval subscriptionTrialInterval, Integer num) {
         Intrinsics3.checkNotNullParameter(list, "channelBenefits");

@@ -61,84 +61,84 @@ import p007b.p225i.p226a.p242c.p266w2.RunnableC2975f;
 import p007b.p225i.p355b.p357b.AbstractIndexedListIterator;
 import p007b.p225i.p355b.p357b.ImmutableList2;
 
+/* JADX INFO: loaded from: classes3.dex */
 @RequiresApi(18)
-/* loaded from: classes3.dex */
 public class DefaultDrmSession implements DrmSession {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     @Nullable
     public final List<DrmInitData.SchemeData> f19784a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final ExoMediaDrm f19785b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final InterfaceC10699a f19786c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final InterfaceC10700b f19787d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final int f19788e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final boolean f19789f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public final boolean f19790g;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public final HashMap<String, String> f19791h;
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public final CopyOnWriteMultiset<DrmSessionEventListener.a> f19792i;
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final LoadErrorHandlingPolicy f19793j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final MediaDrmCallback f19794k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final UUID f19795l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public final HandlerC10703e f19796m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public int f19797n;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public int f19798o;
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     @Nullable
     public HandlerThread f19799p;
 
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     @Nullable
     public HandlerC10701c f19800q;
 
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     @Nullable
     public CryptoConfig f19801r;
 
-    /* renamed from: s */
+    /* JADX INFO: renamed from: s */
     @Nullable
     public DrmSession.DrmSessionException f19802s;
 
-    /* renamed from: t */
+    /* JADX INFO: renamed from: t */
     @Nullable
     public byte[] f19803t;
 
-    /* renamed from: u */
+    /* JADX INFO: renamed from: u */
     public byte[] f19804u;
 
-    /* renamed from: v */
+    /* JADX INFO: renamed from: v */
     @Nullable
     public ExoMediaDrm.a f19805v;
 
-    /* renamed from: w */
+    /* JADX INFO: renamed from: w */
     @Nullable
     public ExoMediaDrm.d f19806w;
 
@@ -148,19 +148,19 @@ public class DefaultDrmSession implements DrmSession {
         }
     }
 
-    /* renamed from: com.google.android.exoplayer2.drm.DefaultDrmSession$a */
+    /* JADX INFO: renamed from: com.google.android.exoplayer2.drm.DefaultDrmSession$a */
     public interface InterfaceC10699a {
     }
 
-    /* renamed from: com.google.android.exoplayer2.drm.DefaultDrmSession$b */
+    /* JADX INFO: renamed from: com.google.android.exoplayer2.drm.DefaultDrmSession$b */
     public interface InterfaceC10700b {
     }
 
+    /* JADX INFO: renamed from: com.google.android.exoplayer2.drm.DefaultDrmSession$c */
     @SuppressLint({"HandlerLeak"})
-    /* renamed from: com.google.android.exoplayer2.drm.DefaultDrmSession$c */
     public class HandlerC10701c extends Handler {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         @GuardedBy("this")
         public boolean f19807a;
 
@@ -168,12 +168,11 @@ public class DefaultDrmSession implements DrmSession {
             super(looper);
         }
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public void m8824a(int i, Object obj, boolean z2) {
             obtainMessage(i, new C10702d(LoadEventInfo.f5703a.getAndIncrement(), z2, SystemClock.elapsedRealtime(), obj)).sendToTarget();
         }
 
-        /* JADX WARN: Multi-variable type inference failed */
         /* JADX WARN: Removed duplicated region for block: B:17:0x004a  */
         /* JADX WARN: Removed duplicated region for block: B:45:0x00c4  */
         /* JADX WARN: Removed duplicated region for block: B:49:0x00ca  */
@@ -186,20 +185,20 @@ public class DefaultDrmSession implements DrmSession {
         public void handleMessage(Message message) {
             long jMin;
             boolean z2;
-            Exception excM3585c;
+            Object objM3585c;
             C10702d c10702d = (C10702d) message.obj;
             boolean z3 = true;
             try {
                 int i = message.what;
                 if (i == 0) {
                     DefaultDrmSession defaultDrmSession = DefaultDrmSession.this;
-                    excM3585c = ((HttpMediaDrmCallback) defaultDrmSession.f19794k).m3585c(defaultDrmSession.f19795l, (ExoMediaDrm.d) c10702d.f19812d);
+                    objM3585c = ((HttpMediaDrmCallback) defaultDrmSession.f19794k).m3585c(defaultDrmSession.f19795l, (ExoMediaDrm.d) c10702d.f19812d);
                 } else {
                     if (i != 1) {
                         throw new RuntimeException();
                     }
                     DefaultDrmSession defaultDrmSession2 = DefaultDrmSession.this;
-                    excM3585c = ((HttpMediaDrmCallback) defaultDrmSession2.f19794k).m3584a(defaultDrmSession2.f19795l, (ExoMediaDrm.a) c10702d.f19812d);
+                    objM3585c = ((HttpMediaDrmCallback) defaultDrmSession2.f19794k).m3584a(defaultDrmSession2.f19795l, (ExoMediaDrm.a) c10702d.f19812d);
                 }
             } catch (MediaDrmCallbackException e) {
                 C10702d c10702d2 = (C10702d) message.obj;
@@ -253,40 +252,40 @@ public class DefaultDrmSession implements DrmSession {
                     if (z3) {
                         return;
                     } else {
-                        excM3585c = e;
+                        objM3585c = e;
                     }
                 }
             } catch (Exception e2) {
                 Log2.m3040c("DefaultDrmSession", "Key/provisioning request produced an unexpected exception. Not retrying.", e2);
-                excM3585c = e2;
+                objM3585c = e2;
             }
             LoadErrorHandlingPolicy loadErrorHandlingPolicy2 = DefaultDrmSession.this.f19793j;
             long j = c10702d.f19809a;
             Objects.requireNonNull(loadErrorHandlingPolicy2);
             synchronized (this) {
                 if (!this.f19807a) {
-                    DefaultDrmSession.this.f19796m.obtainMessage(message.what, Pair.create(c10702d.f19812d, excM3585c)).sendToTarget();
+                    DefaultDrmSession.this.f19796m.obtainMessage(message.what, Pair.create(c10702d.f19812d, objM3585c)).sendToTarget();
                 }
             }
         }
     }
 
-    /* renamed from: com.google.android.exoplayer2.drm.DefaultDrmSession$d */
+    /* JADX INFO: renamed from: com.google.android.exoplayer2.drm.DefaultDrmSession$d */
     public static final class C10702d {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final long f19809a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final boolean f19810b;
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public final long f19811c;
 
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         public final Object f19812d;
 
-        /* renamed from: e */
+        /* JADX INFO: renamed from: e */
         public int f19813e;
 
         public C10702d(long j, boolean z2, long j2, Object obj) {
@@ -297,8 +296,8 @@ public class DefaultDrmSession implements DrmSession {
         }
     }
 
+    /* JADX INFO: renamed from: com.google.android.exoplayer2.drm.DefaultDrmSession$e */
     @SuppressLint({"HandlerLeak"})
-    /* renamed from: com.google.android.exoplayer2.drm.DefaultDrmSession$e */
     public class HandlerC10703e extends Handler {
         public HandlerC10703e(Looper looper) {
             super(looper);
@@ -403,7 +402,7 @@ public class DefaultDrmSession implements DrmSession {
     }
 
     @Override // com.google.android.exoplayer2.drm.DrmSession
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public void mo3606a(@Nullable DrmSessionEventListener.a aVar) {
         int i = this.f19798o;
         if (i < 0) {
@@ -454,7 +453,7 @@ public class DefaultDrmSession implements DrmSession {
 
     /* JADX WARN: Removed duplicated region for block: B:43:0x00da  */
     @Override // com.google.android.exoplayer2.drm.DrmSession
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
@@ -553,19 +552,19 @@ public class DefaultDrmSession implements DrmSession {
     }
 
     @Override // com.google.android.exoplayer2.drm.DrmSession
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final UUID mo3608c() {
         return this.f19795l;
     }
 
     @Override // com.google.android.exoplayer2.drm.DrmSession
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public boolean mo3609d() {
         return this.f19789f;
     }
 
     @Override // com.google.android.exoplayer2.drm.DrmSession
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public boolean mo3610e(String str) {
         ExoMediaDrm exoMediaDrm = this.f19785b;
         byte[] bArr = this.f19803t;
@@ -575,7 +574,7 @@ public class DefaultDrmSession implements DrmSession {
 
     @Override // com.google.android.exoplayer2.drm.DrmSession
     @Nullable
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final DrmSession.DrmSessionException mo3611f() {
         if (this.f19797n == 1) {
             return this.f19802s;
@@ -585,7 +584,7 @@ public class DefaultDrmSession implements DrmSession {
 
     @Override // com.google.android.exoplayer2.drm.DrmSession
     @Nullable
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public final CryptoConfig mo3612g() {
         return this.f19801r;
     }
@@ -595,7 +594,7 @@ public class DefaultDrmSession implements DrmSession {
         return this.f19797n;
     }
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public final void m8815h(Consumer3<DrmSessionEventListener.a> consumer3) {
         Set<DrmSessionEventListener.a> set;
         CopyOnWriteMultiset<DrmSessionEventListener.a> copyOnWriteMultiset = this.f19792i;
@@ -609,7 +608,7 @@ public class DefaultDrmSession implements DrmSession {
     }
 
     @RequiresNonNull({"sessionId"})
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public final void m8816i(boolean z2) {
         Pair pair;
         String str;
@@ -706,14 +705,14 @@ public class DefaultDrmSession implements DrmSession {
     }
 
     @EnsuresNonNullIf(expression = {"sessionId"}, result = GoogleSmartLockManager.SET_DISCORD_ACCOUNT_DETAILS)
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final boolean m8817j() {
         int i = this.f19797n;
         return i == 3 || i == 4;
     }
 
     /* JADX WARN: Removed duplicated region for block: B:11:0x0020  */
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
@@ -752,7 +751,7 @@ public class DefaultDrmSession implements DrmSession {
         }
     }
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final void m8819l(Exception exc, boolean z2) {
         if (!(exc instanceof NotProvisionedException)) {
             m8818k(exc, z2 ? 1 : 2);
@@ -768,7 +767,7 @@ public class DefaultDrmSession implements DrmSession {
     }
 
     @EnsuresNonNullIf(expression = {"sessionId"}, result = GoogleSmartLockManager.SET_DISCORD_ACCOUNT_DETAILS)
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public final boolean m8820m() {
         if (m8817j()) {
             return true;
@@ -796,7 +795,7 @@ public class DefaultDrmSession implements DrmSession {
         }
     }
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public final void m8821n(byte[] bArr, int i, boolean z2) {
         try {
             ExoMediaDrm.a aVarMo3579k = this.f19785b.mo3579k(bArr, this.f19784a, i, this.f19791h);
@@ -810,7 +809,7 @@ public class DefaultDrmSession implements DrmSession {
         }
     }
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public void m8822o() {
         ExoMediaDrm.d dVarMo3570b = this.f19785b.mo3570b();
         this.f19806w = dVarMo3570b;
@@ -821,7 +820,7 @@ public class DefaultDrmSession implements DrmSession {
     }
 
     @Nullable
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public Map<String, String> m8823p() {
         byte[] bArr = this.f19803t;
         if (bArr == null) {

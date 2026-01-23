@@ -47,19 +47,19 @@ import org.eclipse.jdt.internal.compiler.lookup.ClassScope;
 import org.eclipse.jdt.internal.compiler.lookup.MethodScope;
 import org.eclipse.jdt.internal.compiler.lookup.TypeConstants;
 
-/* loaded from: discord-126021.apk:lombok/eclipse/handlers/EclipseSingularsRecipes.SCL.lombok */
+/* JADX INFO: loaded from: discord-126021.apk:lombok/eclipse/handlers/EclipseSingularsRecipes.SCL.lombok */
 public class EclipseSingularsRecipes {
     private static final EclipseSingularsRecipes INSTANCE = new EclipseSingularsRecipes();
     private final Map<String, EclipseSingularizer> singularizers = new HashMap();
     private final TypeLibrary singularizableTypes = new TypeLibrary();
 
-    /* loaded from: discord-126021.apk:lombok/eclipse/handlers/EclipseSingularsRecipes$StatementMaker.SCL.lombok */
+    /* JADX INFO: loaded from: discord-126021.apk:lombok/eclipse/handlers/EclipseSingularsRecipes$StatementMaker.SCL.lombok */
     public interface StatementMaker {
-        /* renamed from: make */
+        /* JADX INFO: renamed from: make */
         Statement mo11563make();
     }
 
-    /* loaded from: discord-126021.apk:lombok/eclipse/handlers/EclipseSingularsRecipes$TypeReferenceMaker.SCL.lombok */
+    /* JADX INFO: loaded from: discord-126021.apk:lombok/eclipse/handlers/EclipseSingularsRecipes$TypeReferenceMaker.SCL.lombok */
     public interface TypeReferenceMaker {
         TypeReference make();
     }
@@ -105,7 +105,7 @@ public class EclipseSingularsRecipes {
         return this.singularizers.get(fqn);
     }
 
-    /* loaded from: discord-126021.apk:lombok/eclipse/handlers/EclipseSingularsRecipes$SingularData.SCL.lombok */
+    /* JADX INFO: loaded from: discord-126021.apk:lombok/eclipse/handlers/EclipseSingularsRecipes$SingularData.SCL.lombok */
     public static final class SingularData {
         private final EclipseNode annotation;
         private final char[] singularName;
@@ -194,7 +194,7 @@ public class EclipseSingularsRecipes {
         }
     }
 
-    /* loaded from: discord-126021.apk:lombok/eclipse/handlers/EclipseSingularsRecipes$EclipseSingularizer.SCL.lombok */
+    /* JADX INFO: loaded from: discord-126021.apk:lombok/eclipse/handlers/EclipseSingularsRecipes$EclipseSingularizer.SCL.lombok */
     public static abstract class EclipseSingularizer {
         protected static final long[] NULL_POSS = new long[1];
         private static final char[] SIZE_TEXT = {'s', 'i', 'z', 'e'};
@@ -305,8 +305,8 @@ public class EclipseSingularsRecipes {
             return Arrays.equals(p, s2) ? Collections.singletonList(p) : Arrays.asList(new char[]{p, s2});
         }
 
-        /* renamed from: lombok.eclipse.handlers.EclipseSingularsRecipes$EclipseSingularizer$1 */
-        /* loaded from: discord-126021.apk:lombok/eclipse/handlers/EclipseSingularsRecipes$EclipseSingularizer$1.SCL.lombok */
+        /* JADX INFO: renamed from: lombok.eclipse.handlers.EclipseSingularsRecipes$EclipseSingularizer$1 */
+        /* JADX INFO: loaded from: discord-126021.apk:lombok/eclipse/handlers/EclipseSingularsRecipes$EclipseSingularizer$1.SCL.lombok */
         class C128641 implements TypeReferenceMaker {
             private final /* synthetic */ HandleBuilder.BuilderJob val$job;
 
@@ -326,13 +326,13 @@ public class EclipseSingularsRecipes {
             generateMethods(job.checkerFramework, data, deprecate, job.builderType, job.oldFluent, returnTypeMaker, returnStatementMaker, job.accessInners);
         }
 
-        /* renamed from: lombok.eclipse.handlers.EclipseSingularsRecipes$EclipseSingularizer$2 */
-        /* loaded from: discord-126021.apk:lombok/eclipse/handlers/EclipseSingularsRecipes$EclipseSingularizer$2.SCL.lombok */
+        /* JADX INFO: renamed from: lombok.eclipse.handlers.EclipseSingularsRecipes$EclipseSingularizer$2 */
+        /* JADX INFO: loaded from: discord-126021.apk:lombok/eclipse/handlers/EclipseSingularsRecipes$EclipseSingularizer$2.SCL.lombok */
         class C128652 implements StatementMaker {
             private final /* synthetic */ HandleBuilder.BuilderJob val$job;
 
             @Override // lombok.eclipse.handlers.EclipseSingularsRecipes.StatementMaker
-            /* renamed from: make, reason: collision with other method in class */
+            /* JADX INFO: renamed from: make, reason: collision with other method in class */
             public /* bridge */ /* synthetic */ Statement mo11563make() {
                 return make();
             }

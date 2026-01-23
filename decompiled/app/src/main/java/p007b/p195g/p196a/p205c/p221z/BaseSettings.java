@@ -13,12 +13,12 @@ import p007b.p195g.p196a.p205c.p212e0.PolymorphicTypeValidator;
 import p007b.p195g.p196a.p205c.p212e0.TypeResolverBuilder;
 import p007b.p195g.p196a.p205c.p218h0.TypeFactory;
 
-/* compiled from: BaseSettings.java */
-/* renamed from: b.g.a.c.z.a, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.g.a.c.z.a, reason: use source file name */
+/* JADX INFO: compiled from: BaseSettings.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class BaseSettings implements Serializable {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static final TimeZone f5074j = TimeZone.getTimeZone("UTC");
     private static final long serialVersionUID = 1;
     public final AccessorNamingStrategy.a _accessorNaming;

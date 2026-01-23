@@ -9,14 +9,14 @@ import kotlin.jvm.functions.Function2;
 import p507d0.p579g0.StringsJVM;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: Input.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: Input.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public class Input<T extends View> {
     private final String name;
     private final InputValidator<T>[] validators;
     private final T view;
 
-    /* compiled from: Input.kt */
+    /* JADX INFO: compiled from: Input.kt */
     public static final class EditTextInput extends Input<TextInputLayout> {
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
         public EditTextInput(String str, TextInputLayout textInputLayout, InputValidator<? super TextInputLayout>... inputValidatorArr) {
@@ -37,7 +37,7 @@ public class Input<T extends View> {
         }
     }
 
-    /* compiled from: Input.kt */
+    /* JADX INFO: compiled from: Input.kt */
     public static final class GenericInput<T extends View> extends Input<T> {
         private final Function2<T, CharSequence, Boolean> onError;
 
@@ -61,7 +61,7 @@ public class Input<T extends View> {
         }
     }
 
-    /* compiled from: Input.kt */
+    /* JADX INFO: compiled from: Input.kt */
     public static final class TextInputLayoutInput extends Input<TextInputLayout> {
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
         public TextInputLayoutInput(String str, TextInputLayout textInputLayout, InputValidator<? super TextInputLayout>... inputValidatorArr) {

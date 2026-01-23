@@ -5,12 +5,13 @@ import java.util.Map;
 import java.util.WeakHashMap;
 import org.eclipse.jdt.internal.compiler.ast.CompilationUnitDeclaration;
 
-/* loaded from: discord-126021.apk:lombok/core/debug/DebugSnapshotStore.SCL.lombok */
+/* JADX INFO: loaded from: discord-126021.apk:lombok/core/debug/DebugSnapshotStore.SCL.lombok */
 public class DebugSnapshotStore {
     public static final DebugSnapshotStore INSTANCE = new DebugSnapshotStore();
     public static final boolean GLOBAL_DSS_DISABLE_SWITCH = true;
     private final Map<CompilationUnitDeclaration, List<DebugSnapshot>> map = new WeakHashMap();
 
+    /* JADX WARN: Unreachable blocks removed: 15, instructions: 47 */
     /*  JADX ERROR: NullPointerException in pass: BlockProcessor
         java.lang.NullPointerException: Cannot invoke "jadx.core.dex.nodes.BlockNode.getPredecessors()" because "to" is null
         	at jadx.core.dex.visitors.blocks.BlockSplitter.removeConnection(BlockSplitter.java:166)
@@ -19,11 +20,10 @@ public class DebugSnapshotStore {
         	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
         	at jadx.core.dex.visitors.blocks.BlockExceptionHandler.prepareTryBlocks(BlockExceptionHandler.java:207)
         	at jadx.core.dex.visitors.blocks.BlockExceptionHandler.process(BlockExceptionHandler.java:60)
-        	at jadx.core.dex.visitors.blocks.BlockProcessor.independentBlockTreeMod(BlockProcessor.java:372)
-        	at jadx.core.dex.visitors.blocks.BlockProcessor.processBlocksTree(BlockProcessor.java:56)
-        	at jadx.core.dex.visitors.blocks.BlockProcessor.visit(BlockProcessor.java:49)
+        	at jadx.core.dex.visitors.blocks.BlockProcessor.independentBlockTreeMod(BlockProcessor.java:380)
+        	at jadx.core.dex.visitors.blocks.BlockProcessor.processBlocksTree(BlockProcessor.java:57)
+        	at jadx.core.dex.visitors.blocks.BlockProcessor.visit(BlockProcessor.java:50)
         */
-    /* JADX WARN: Unreachable blocks removed: 15, instructions: 47 */
     public void snapshot(org.eclipse.jdt.internal.compiler.ast.CompilationUnitDeclaration r8, java.lang.String r9, java.lang.Object... r10) {
         /*
             r7 = this;
@@ -83,6 +83,7 @@ public class DebugSnapshotStore {
         throw new UnsupportedOperationException("Method not decompiled: lombok.core.debug.DebugSnapshotStore.snapshot(org.eclipse.jdt.internal.compiler.ast.CompilationUnitDeclaration, java.lang.String, java.lang.Object[]):void");
     }
 
+    /* JADX WARN: Unreachable blocks removed: 15, instructions: 47 */
     /*  JADX ERROR: NullPointerException in pass: BlockProcessor
         java.lang.NullPointerException: Cannot invoke "jadx.core.dex.nodes.BlockNode.getPredecessors()" because "to" is null
         	at jadx.core.dex.visitors.blocks.BlockSplitter.removeConnection(BlockSplitter.java:166)
@@ -91,11 +92,10 @@ public class DebugSnapshotStore {
         	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
         	at jadx.core.dex.visitors.blocks.BlockExceptionHandler.prepareTryBlocks(BlockExceptionHandler.java:207)
         	at jadx.core.dex.visitors.blocks.BlockExceptionHandler.process(BlockExceptionHandler.java:60)
-        	at jadx.core.dex.visitors.blocks.BlockProcessor.independentBlockTreeMod(BlockProcessor.java:372)
-        	at jadx.core.dex.visitors.blocks.BlockProcessor.processBlocksTree(BlockProcessor.java:56)
-        	at jadx.core.dex.visitors.blocks.BlockProcessor.visit(BlockProcessor.java:49)
+        	at jadx.core.dex.visitors.blocks.BlockProcessor.independentBlockTreeMod(BlockProcessor.java:380)
+        	at jadx.core.dex.visitors.blocks.BlockProcessor.processBlocksTree(BlockProcessor.java:57)
+        	at jadx.core.dex.visitors.blocks.BlockProcessor.visit(BlockProcessor.java:50)
         */
-    /* JADX WARN: Unreachable blocks removed: 15, instructions: 47 */
     public void log(org.eclipse.jdt.internal.compiler.ast.CompilationUnitDeclaration r8, java.lang.String r9, java.lang.Object... r10) {
         /*
             r7 = this;
@@ -155,15 +155,15 @@ public class DebugSnapshotStore {
         throw new UnsupportedOperationException("Method not decompiled: lombok.core.debug.DebugSnapshotStore.log(org.eclipse.jdt.internal.compiler.ast.CompilationUnitDeclaration, java.lang.String, java.lang.Object[]):void");
     }
 
+    /* JADX WARN: Unreachable blocks removed: 19, instructions: 58 */
     /*  JADX ERROR: JadxRuntimeException in pass: BlockProcessor
         jadx.core.utils.exceptions.JadxRuntimeException: Found unreachable blocks
         	at jadx.core.dex.visitors.blocks.DominatorTree.sortBlocks(DominatorTree.java:34)
         	at jadx.core.dex.visitors.blocks.DominatorTree.compute(DominatorTree.java:24)
-        	at jadx.core.dex.visitors.blocks.BlockProcessor.computeDominators(BlockProcessor.java:252)
-        	at jadx.core.dex.visitors.blocks.BlockProcessor.processBlocksTree(BlockProcessor.java:55)
-        	at jadx.core.dex.visitors.blocks.BlockProcessor.visit(BlockProcessor.java:49)
+        	at jadx.core.dex.visitors.blocks.BlockProcessor.computeDominators(BlockProcessor.java:253)
+        	at jadx.core.dex.visitors.blocks.BlockProcessor.processBlocksTree(BlockProcessor.java:56)
+        	at jadx.core.dex.visitors.blocks.BlockProcessor.visit(BlockProcessor.java:50)
         */
-    /* JADX WARN: Unreachable blocks removed: 19, instructions: 58 */
     public java.lang.String print(org.eclipse.jdt.internal.compiler.ast.CompilationUnitDeclaration r11, java.lang.String r12, java.lang.Object... r13) {
         /*
             Method dump skipped, instruction units count: 367

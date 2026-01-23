@@ -3,7 +3,7 @@ package com.adjust.sdk;
 import android.content.Context;
 import java.util.Map;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class AdjustSigner {
     private static volatile Object signerInstance;
 

@@ -7,9 +7,9 @@ import com.discord.utilities.captcha.CaptchaHelper;
 import kotlin.jvm.functions.Function1;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: WidgetCaptcha.kt */
-/* renamed from: com.discord.widgets.captcha.WidgetCaptcha$Companion$registerForResult$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.captcha.WidgetCaptcha$Companion$registerForResult$1, reason: use source file name */
+/* JADX INFO: compiled from: WidgetCaptcha.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetCaptcha2<O> implements ActivityResultCallback<ActivityResult> {
     public final /* synthetic */ Function1 $callback;
 
@@ -22,7 +22,7 @@ public final class WidgetCaptcha2<O> implements ActivityResultCallback<ActivityR
         onActivityResult2(activityResult);
     }
 
-    /* renamed from: onActivityResult, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: onActivityResult, reason: avoid collision after fix types in other method */
     public final void onActivityResult2(ActivityResult activityResult) {
         Intrinsics3.checkNotNullExpressionValue(activityResult, "activityResult");
         if (activityResult.getResultCode() == -1) {

@@ -21,8 +21,8 @@ import p007b.p008a.p018d.AppToast;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: StoreUIEventHandler.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: StoreUIEventHandler.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class StoreUIEventHandler {
     private final StoreChannels channelsStore;
     private final Context context;
@@ -52,8 +52,8 @@ public final class StoreUIEventHandler {
         }
     }
 
-    /* compiled from: StoreUIEventHandler.kt */
-    /* renamed from: com.discord.utilities.StoreUIEventHandler$subscribeToStoreEvents$1 */
+    /* JADX INFO: renamed from: com.discord.utilities.StoreUIEventHandler$subscribeToStoreEvents$1 */
+    /* JADX INFO: compiled from: StoreUIEventHandler.kt */
     public static final class C66621 extends Lambda implements Function1<KrispOveruseDetector.Status, Unit> {
         public C66621() {
             super(1);
@@ -65,15 +65,15 @@ public final class StoreUIEventHandler {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(KrispOveruseDetector.Status status) {
             Intrinsics3.checkNotNullParameter(status, "it");
             StoreUIEventHandler.access$handleKrispStatusEvent(StoreUIEventHandler.this, status);
         }
     }
 
-    /* compiled from: StoreUIEventHandler.kt */
-    /* renamed from: com.discord.utilities.StoreUIEventHandler$subscribeToStoreEvents$2 */
+    /* JADX INFO: renamed from: com.discord.utilities.StoreUIEventHandler$subscribeToStoreEvents$2 */
+    /* JADX INFO: compiled from: StoreUIEventHandler.kt */
     public static final class C66632 extends Lambda implements Function1<StoreUserGuildSettings.Event, Unit> {
         public C66632() {
             super(1);
@@ -85,7 +85,7 @@ public final class StoreUIEventHandler {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(StoreUserGuildSettings.Event event) {
             Intrinsics3.checkNotNullParameter(event, "event");
             StoreUIEventHandler.access$handleUserGuildSettingsEvent(StoreUIEventHandler.this, event);

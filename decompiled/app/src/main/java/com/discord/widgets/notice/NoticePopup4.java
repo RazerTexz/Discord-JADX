@@ -3,9 +3,9 @@ package com.discord.widgets.notice;
 import android.view.View;
 import androidx.fragment.app.FragmentActivity;
 
-/* compiled from: NoticePopup.kt */
-/* renamed from: com.discord.widgets.notice.NoticePopup$enqueue$notice$1$$special$$inlined$also$lambda$2, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.notice.NoticePopup$enqueue$notice$1$$special$$inlined$also$lambda$2, reason: use source file name */
+/* JADX INFO: compiled from: NoticePopup.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class NoticePopup4 implements View.OnClickListener {
     public final /* synthetic */ FragmentActivity $activity$inlined;
     public final /* synthetic */ View $view;

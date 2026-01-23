@@ -9,9 +9,9 @@ import java.util.List;
 import p507d0.p592z.p594d.Intrinsics3;
 import p658rx.functions.Func2;
 
-/* compiled from: WidgetGuildFolderSettingsViewModel.kt */
-/* renamed from: com.discord.widgets.guilds.WidgetGuildFolderSettingsViewModel$Companion$observeStoreState$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.guilds.WidgetGuildFolderSettingsViewModel$Companion$observeStoreState$1, reason: use source file name */
+/* JADX INFO: compiled from: WidgetGuildFolderSettingsViewModel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetGuildFolderSettingsViewModel2<T1, T2, R> implements Func2<List<? extends ModelGuildFolder>, List<? extends StoreGuildsSorted.Entry>, WidgetGuildFolderSettingsViewModel.StoreState> {
     public final /* synthetic */ long $folderId;
 
@@ -24,7 +24,7 @@ public final class WidgetGuildFolderSettingsViewModel2<T1, T2, R> implements Fun
         return call2((List<ModelGuildFolder>) list, list2);
     }
 
-    /* renamed from: call, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
     public final WidgetGuildFolderSettingsViewModel.StoreState call2(List<ModelGuildFolder> list, List<? extends StoreGuildsSorted.Entry> list2) {
         Object next;
         Intrinsics3.checkNotNullExpressionValue(list, "guildFolders");

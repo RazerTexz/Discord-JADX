@@ -26,25 +26,25 @@ import p596e0.p597a.p598a.p599a.BarcodeScannerView;
 import p596e0.p597a.p598a.p599a.CameraPreview2;
 import p596e0.p597a.p598a.p599a.ViewFinderView;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public class ZXingScannerView extends BarcodeScannerView {
 
-    /* renamed from: D */
+    /* JADX INFO: renamed from: D */
     public static final List<BarcodeFormat> f27495D;
 
-    /* renamed from: E */
+    /* JADX INFO: renamed from: E */
     public MultiFormatReader f27496E;
 
-    /* renamed from: F */
+    /* JADX INFO: renamed from: F */
     public List<BarcodeFormat> f27497F;
 
-    /* renamed from: G */
+    /* JADX INFO: renamed from: G */
     public InterfaceC12927b f27498G;
 
-    /* renamed from: me.dm7.barcodescanner.zxing.ZXingScannerView$a */
+    /* JADX INFO: renamed from: me.dm7.barcodescanner.zxing.ZXingScannerView$a */
     public class RunnableC12926a implements Runnable {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public final /* synthetic */ Result f27499j;
 
         public RunnableC12926a(Result result) {
@@ -66,7 +66,7 @@ public class ZXingScannerView extends BarcodeScannerView {
         }
     }
 
-    /* renamed from: me.dm7.barcodescanner.zxing.ZXingScannerView$b */
+    /* JADX INFO: renamed from: me.dm7.barcodescanner.zxing.ZXingScannerView$b */
     public interface InterfaceC12927b {
         void handleResult(Result result);
     }
@@ -98,7 +98,7 @@ public class ZXingScannerView extends BarcodeScannerView {
         m10953c();
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public PlanarYUVLuminanceSource m10952b(byte[] bArr, int i, int i2) {
         Rect rect;
         synchronized (this) {
@@ -132,7 +132,7 @@ public class ZXingScannerView extends BarcodeScannerView {
         }
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final void m10953c() {
         EnumMap enumMap = new EnumMap(DecodeHintType.class);
         enumMap.put(DecodeHintType.POSSIBLE_FORMATS, getFormats());
@@ -225,6 +225,7 @@ public class ZXingScannerView extends BarcodeScannerView {
                         resultM6920b2 = multiFormatReader2.m6920b(binaryBitmap2);
                         this.f27496E.reset();
                     } catch (NotFoundException unused2) {
+                        resultM6920b2 = resultM6920b;
                     } finally {
                         this.f27496E.reset();
                     }

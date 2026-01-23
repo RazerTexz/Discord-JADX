@@ -24,31 +24,31 @@ import p507d0.p580t.Iterables2;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: DeserializedPackageFragmentImpl.kt */
-/* renamed from: d0.e0.p.d.m0.l.b.o, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.l.b.o, reason: use source file name */
+/* JADX INFO: compiled from: DeserializedPackageFragmentImpl.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public abstract class DeserializedPackageFragmentImpl extends DeserializedPackageFragment {
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public final BinaryVersion f24670p;
 
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     public final DeserializedContainerSource2 f24671q;
 
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     public final NameResolverImpl f24672r;
 
-    /* renamed from: s */
+    /* JADX INFO: renamed from: s */
     public final ProtoBasedClassDataFinder f24673s;
 
-    /* renamed from: t */
+    /* JADX INFO: renamed from: t */
     public C11688m f24674t;
 
-    /* renamed from: u */
+    /* JADX INFO: renamed from: u */
     public MemberScope3 f24675u;
 
-    /* compiled from: DeserializedPackageFragmentImpl.kt */
-    /* renamed from: d0.e0.p.d.m0.l.b.o$a */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.l.b.o$a */
+    /* JADX INFO: compiled from: DeserializedPackageFragmentImpl.kt */
     public static final class a extends Lambda implements Function1<ClassId, SourceElement> {
         public a() {
             super(1);
@@ -59,7 +59,7 @@ public abstract class DeserializedPackageFragmentImpl extends DeserializedPackag
             return invoke2(classId);
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final SourceElement invoke2(ClassId classId) {
             Intrinsics3.checkNotNullParameter(classId, "it");
             DeserializedContainerSource2 deserializedContainerSource2Access$getContainerSource$p = DeserializedPackageFragmentImpl.access$getContainerSource$p(DeserializedPackageFragmentImpl.this);
@@ -72,8 +72,8 @@ public abstract class DeserializedPackageFragmentImpl extends DeserializedPackag
         }
     }
 
-    /* compiled from: DeserializedPackageFragmentImpl.kt */
-    /* renamed from: d0.e0.p.d.m0.l.b.o$b */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.l.b.o$b */
+    /* JADX INFO: compiled from: DeserializedPackageFragmentImpl.kt */
     public static final class b extends Lambda implements Function0<Collection<? extends Name>> {
         public b() {
             super(0);
@@ -85,7 +85,7 @@ public abstract class DeserializedPackageFragmentImpl extends DeserializedPackag
         }
 
         @Override // kotlin.jvm.functions.Function0
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final Collection<? extends Name> invoke2() {
             Collection<ClassId> allClassIds = DeserializedPackageFragmentImpl.this.getClassDataFinder().getAllClassIds();
             ArrayList arrayList = new ArrayList();

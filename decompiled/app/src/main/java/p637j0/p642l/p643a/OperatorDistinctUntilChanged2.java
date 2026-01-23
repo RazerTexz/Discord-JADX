@@ -6,22 +6,22 @@ import p658rx.Observable;
 import p658rx.Subscriber;
 import p658rx.functions.Func2;
 
-/* compiled from: OperatorDistinctUntilChanged.java */
-/* renamed from: j0.l.a.u0, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: j0.l.a.u0, reason: use source file name */
+/* JADX INFO: compiled from: OperatorDistinctUntilChanged.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class OperatorDistinctUntilChanged2<T, U> implements Observable.InterfaceC13006b<T, T>, Func2<U, U, Boolean> {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final Func1<? super T, ? extends U> f27057j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final Func2<? super U, ? super U, Boolean> f27058k;
 
-    /* compiled from: OperatorDistinctUntilChanged.java */
-    /* renamed from: j0.l.a.u0$a */
+    /* JADX INFO: renamed from: j0.l.a.u0$a */
+    /* JADX INFO: compiled from: OperatorDistinctUntilChanged.java */
     public static final class a {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public static final OperatorDistinctUntilChanged2<?, ?> f27059a = new OperatorDistinctUntilChanged2<>(UtilityFunctions.a.INSTANCE);
     }
 

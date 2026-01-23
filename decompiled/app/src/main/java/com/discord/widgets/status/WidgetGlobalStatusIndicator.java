@@ -61,23 +61,23 @@ import p637j0.p641k.Func1;
 import p637j0.p642l.p647e.ScalarSynchronousObservable;
 import p658rx.Observable;
 
-/* compiled from: WidgetGlobalStatusIndicator.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetGlobalStatusIndicator.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetGlobalStatusIndicator extends AppFragment {
     public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetGlobalStatusIndicator.class, "binding", "getBinding()Lcom/discord/databinding/WidgetGlobalStatusIndicatorBinding;", 0)};
 
-    /* renamed from: binding$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
     private AnimatedVectorDrawableCompat connectingVector;
     private final WidgetGlobalStatusIndicator4 connectingVectorReplayCallback;
     private final WidgetGlobalStatusIndicatorState indicatorState;
     private WidgetGlobalStatusIndicatorState.State lastIndicatorState;
 
-    /* renamed from: viewModel$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: viewModel$delegate, reason: from kotlin metadata */
     private final Lazy viewModel;
 
-    /* compiled from: WidgetGlobalStatusIndicator.kt */
-    /* renamed from: com.discord.widgets.status.WidgetGlobalStatusIndicator$bindDelay$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.status.WidgetGlobalStatusIndicator$bindDelay$1 */
+    /* JADX INFO: compiled from: WidgetGlobalStatusIndicator.kt */
     public static final class C101001<T, R> implements Func1<WidgetGlobalStatusIndicatorViewModel.ViewState, Observable<? extends WidgetGlobalStatusIndicatorViewModel.ViewState>> {
         public final /* synthetic */ Observable $this_bindDelay;
 
@@ -90,7 +90,7 @@ public final class WidgetGlobalStatusIndicator extends AppFragment {
             return call2(viewState);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final Observable<? extends WidgetGlobalStatusIndicatorViewModel.ViewState> call2(WidgetGlobalStatusIndicatorViewModel.ViewState viewState) {
             Long lValueOf = viewState instanceof WidgetGlobalStatusIndicatorViewModel.ViewState.Offline ? Long.valueOf(((WidgetGlobalStatusIndicatorViewModel.ViewState.Offline) viewState).getDelay()) : viewState instanceof WidgetGlobalStatusIndicatorViewModel.ViewState.Connecting ? Long.valueOf(((WidgetGlobalStatusIndicatorViewModel.ViewState.Connecting) viewState).getDelay()) : null;
             if (lValueOf == null) {
@@ -101,8 +101,8 @@ public final class WidgetGlobalStatusIndicator extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetGlobalStatusIndicator.kt */
-    /* renamed from: com.discord.widgets.status.WidgetGlobalStatusIndicator$onViewBound$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.status.WidgetGlobalStatusIndicator$onViewBound$1 */
+    /* JADX INFO: compiled from: WidgetGlobalStatusIndicator.kt */
     public static final class C101011 implements OnApplyWindowInsetsListener {
         public static final C101011 INSTANCE = new C101011();
 
@@ -115,8 +115,8 @@ public final class WidgetGlobalStatusIndicator extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetGlobalStatusIndicator.kt */
-    /* renamed from: com.discord.widgets.status.WidgetGlobalStatusIndicator$onViewBoundOrOnResume$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.status.WidgetGlobalStatusIndicator$onViewBoundOrOnResume$1 */
+    /* JADX INFO: compiled from: WidgetGlobalStatusIndicator.kt */
     public static final /* synthetic */ class C101021 extends FunctionReferenceImpl implements Function1<WidgetGlobalStatusIndicatorState.State, Unit> {
         public C101021(WidgetGlobalStatusIndicator widgetGlobalStatusIndicator) {
             super(1, widgetGlobalStatusIndicator, WidgetGlobalStatusIndicator.class, "configureUIVisibility", "configureUIVisibility(Lcom/discord/widgets/status/WidgetGlobalStatusIndicatorState$State;)V", 0);
@@ -128,15 +128,15 @@ public final class WidgetGlobalStatusIndicator extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(WidgetGlobalStatusIndicatorState.State state) {
             Intrinsics3.checkNotNullParameter(state, "p1");
             WidgetGlobalStatusIndicator.access$configureUIVisibility((WidgetGlobalStatusIndicator) this.receiver, state);
         }
     }
 
-    /* compiled from: WidgetGlobalStatusIndicator.kt */
-    /* renamed from: com.discord.widgets.status.WidgetGlobalStatusIndicator$onViewBoundOrOnResume$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.status.WidgetGlobalStatusIndicator$onViewBoundOrOnResume$2 */
+    /* JADX INFO: compiled from: WidgetGlobalStatusIndicator.kt */
     public static final /* synthetic */ class C101032 extends FunctionReferenceImpl implements Function1<WidgetGlobalStatusIndicatorViewModel.ViewState, Unit> {
         public C101032(WidgetGlobalStatusIndicator widgetGlobalStatusIndicator) {
             super(1, widgetGlobalStatusIndicator, WidgetGlobalStatusIndicator.class, "configureUI", "configureUI(Lcom/discord/widgets/status/WidgetGlobalStatusIndicatorViewModel$ViewState;)V", 0);
@@ -148,15 +148,15 @@ public final class WidgetGlobalStatusIndicator extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(WidgetGlobalStatusIndicatorViewModel.ViewState viewState) {
             Intrinsics3.checkNotNullParameter(viewState, "p1");
             WidgetGlobalStatusIndicator.access$configureUI((WidgetGlobalStatusIndicator) this.receiver, viewState);
         }
     }
 
-    /* compiled from: WidgetGlobalStatusIndicator.kt */
-    /* renamed from: com.discord.widgets.status.WidgetGlobalStatusIndicator$setupContainerClicks$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.status.WidgetGlobalStatusIndicator$setupContainerClicks$1 */
+    /* JADX INFO: compiled from: WidgetGlobalStatusIndicator.kt */
     public static final class ViewOnClickListenerC101041 implements View.OnClickListener {
         public final /* synthetic */ WidgetGlobalStatusIndicatorViewModel.ViewState.CallOngoing $viewState;
 
@@ -197,8 +197,8 @@ public final class WidgetGlobalStatusIndicator extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetGlobalStatusIndicator.kt */
-    /* renamed from: com.discord.widgets.status.WidgetGlobalStatusIndicator$setupStageContainerClicks$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.status.WidgetGlobalStatusIndicator$setupStageContainerClicks$1 */
+    /* JADX INFO: compiled from: WidgetGlobalStatusIndicator.kt */
     public static final class ViewOnClickListenerC101051 implements View.OnClickListener {
         public final /* synthetic */ WidgetGlobalStatusIndicatorViewModel.ViewState.StageChannelOngoing $viewState;
 
@@ -212,12 +212,12 @@ public final class WidgetGlobalStatusIndicator extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetGlobalStatusIndicator.kt */
-    /* renamed from: com.discord.widgets.status.WidgetGlobalStatusIndicator$setupStageContainerClicks$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.status.WidgetGlobalStatusIndicator$setupStageContainerClicks$2 */
+    /* JADX INFO: compiled from: WidgetGlobalStatusIndicator.kt */
     public static final class ViewOnClickListenerC101062 implements View.OnClickListener {
 
-        /* compiled from: WidgetGlobalStatusIndicator.kt */
-        /* renamed from: com.discord.widgets.status.WidgetGlobalStatusIndicator$setupStageContainerClicks$2$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.widgets.status.WidgetGlobalStatusIndicator$setupStageContainerClicks$2$1, reason: invalid class name */
+        /* JADX INFO: compiled from: WidgetGlobalStatusIndicator.kt */
         public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
             public AnonymousClass1() {
                 super(0);
@@ -229,14 +229,14 @@ public final class WidgetGlobalStatusIndicator extends AppFragment {
                 return Unit.f27425a;
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2() {
                 AppToast.m169g(WidgetGlobalStatusIndicator.this.getContext(), C5419R.string.stage_channel_permission_microphone_denied, 0, null, 12);
             }
         }
 
-        /* compiled from: WidgetGlobalStatusIndicator.kt */
-        /* renamed from: com.discord.widgets.status.WidgetGlobalStatusIndicator$setupStageContainerClicks$2$2, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.widgets.status.WidgetGlobalStatusIndicator$setupStageContainerClicks$2$2, reason: invalid class name */
+        /* JADX INFO: compiled from: WidgetGlobalStatusIndicator.kt */
         public static final class AnonymousClass2 extends Lambda implements Function0<Unit> {
             public AnonymousClass2() {
                 super(0);
@@ -248,7 +248,7 @@ public final class WidgetGlobalStatusIndicator extends AppFragment {
                 return Unit.f27425a;
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2() {
                 WidgetGlobalStatusIndicator.access$getViewModel$p(WidgetGlobalStatusIndicator.this).ackStageInvitationToSpeak(true);
             }
@@ -263,8 +263,8 @@ public final class WidgetGlobalStatusIndicator extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetGlobalStatusIndicator.kt */
-    /* renamed from: com.discord.widgets.status.WidgetGlobalStatusIndicator$setupStageContainerClicks$3 */
+    /* JADX INFO: renamed from: com.discord.widgets.status.WidgetGlobalStatusIndicator$setupStageContainerClicks$3 */
+    /* JADX INFO: compiled from: WidgetGlobalStatusIndicator.kt */
     public static final class ViewOnClickListenerC101073 implements View.OnClickListener {
         public ViewOnClickListenerC101073() {
         }

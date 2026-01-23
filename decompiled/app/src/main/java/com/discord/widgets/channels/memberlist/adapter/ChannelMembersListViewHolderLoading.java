@@ -9,8 +9,8 @@ import p507d0.Tuples;
 import p507d0.p580t.Maps6;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ChannelMembersListViewHolderLoading.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: ChannelMembersListViewHolderLoading.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class ChannelMembersListViewHolderLoading extends RecyclerView.ViewHolder {
     private static final Map<Integer, Float> POSITION_PERCENT_MAP;
     private final WidgetChannelMembersListItemLoadingBinding binding;

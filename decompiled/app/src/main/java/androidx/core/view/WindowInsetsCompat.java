@@ -22,7 +22,7 @@ import java.lang.reflect.Method;
 import java.util.Objects;
 import p007b.p100d.p104b.p105a.outline;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class WindowInsetsCompat {
 
     @NonNull
@@ -61,7 +61,7 @@ public class WindowInsetsCompat {
         }
 
         @Nullable
-        public static WindowInsetsCompat getRootWindowInsets(@NonNull View view) throws IllegalArgumentException {
+        public static WindowInsetsCompat getRootWindowInsets(@NonNull View view) {
             if (sReflectionSucceeded && view.isAttachedToWindow()) {
                 try {
                     Object obj = sViewAttachInfoField.get(view.getRootView());
@@ -180,7 +180,7 @@ public class WindowInsetsCompat {
         }
 
         @Override // androidx.core.view.WindowInsetsCompat.BuilderImpl
-        public void setInsetsIgnoringVisibility(int i, @NonNull Insets insets) throws IllegalArgumentException {
+        public void setInsetsIgnoringVisibility(int i, @NonNull Insets insets) {
             this.mPlatBuilder.setInsetsIgnoringVisibility(TypeImpl30.toPlatformType(i), insets.toPlatformInsets());
         }
 
@@ -341,7 +341,7 @@ public class WindowInsetsCompat {
         }
 
         @Nullable
-        private Insets getVisibleInsets(@NonNull View view) throws IllegalArgumentException {
+        private Insets getVisibleInsets(@NonNull View view) {
             if (Build.VERSION.SDK_INT >= 30) {
                 throw new UnsupportedOperationException("getVisibleInsets() should not be called on API >= 30. Use WindowInsets.isVisible() instead.");
             }
@@ -390,7 +390,7 @@ public class WindowInsetsCompat {
         }
 
         @Override // androidx.core.view.WindowInsetsCompat.Impl
-        public void copyRootViewBounds(@NonNull View view) throws IllegalArgumentException {
+        public void copyRootViewBounds(@NonNull View view) {
             Insets visibleInsets = getVisibleInsets(view);
             if (visibleInsets == null) {
                 visibleInsets = Insets.NONE;

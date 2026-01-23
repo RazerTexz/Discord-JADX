@@ -4,24 +4,24 @@ import com.discord.models.domain.ModelAuditLogEntry;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ConnectedIntegrationGuild.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: ConnectedIntegrationGuild.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class ConnectedIntegrationGuild {
     private final String icon;
     private final long id;
     private final String name;
 
-    /* renamed from: a, reason: from getter */
+    /* JADX INFO: renamed from: a, reason: from getter */
     public final String getIcon() {
         return this.icon;
     }
 
-    /* renamed from: b, reason: from getter */
+    /* JADX INFO: renamed from: b, reason: from getter */
     public final long getId() {
         return this.id;
     }
 
-    /* renamed from: c, reason: from getter */
+    /* JADX INFO: renamed from: c, reason: from getter */
     public final String getName() {
         return this.name;
     }

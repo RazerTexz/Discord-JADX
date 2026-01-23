@@ -20,7 +20,7 @@ import com.google.android.material.internal.ThemeEnforcement;
 import java.util.ArrayList;
 import java.util.List;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public class RangeSlider extends BaseSlider<RangeSlider, OnChangeListener, OnSliderTouchListener> {
     private float minSeparation;
     private int separationUnit;
@@ -34,13 +34,13 @@ public class RangeSlider extends BaseSlider<RangeSlider, OnChangeListener, OnSli
     public static class RangeSliderState extends AbsSavedState {
         public static final Parcelable.Creator<RangeSliderState> CREATOR = new C10982a();
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public float f21121j;
 
-        /* renamed from: k */
+        /* JADX INFO: renamed from: k */
         public int f21122k;
 
-        /* renamed from: com.google.android.material.slider.RangeSlider$RangeSliderState$a */
+        /* JADX INFO: renamed from: com.google.android.material.slider.RangeSlider$RangeSliderState$a */
         public static class C10982a implements Parcelable.Creator<RangeSliderState> {
             @Override // android.os.Parcelable.Creator
             public RangeSliderState createFromParcel(Parcel parcel) {

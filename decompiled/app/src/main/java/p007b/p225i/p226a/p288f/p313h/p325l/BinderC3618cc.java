@@ -4,22 +4,22 @@ import android.os.Bundle;
 import android.util.Log;
 import java.util.concurrent.atomic.AtomicReference;
 
-/* compiled from: com.google.android.gms:play-services-measurement-base@@18.0.0 */
-/* renamed from: b.i.a.f.h.l.cc */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.h.l.cc */
+/* JADX INFO: compiled from: com.google.android.gms:play-services-measurement-base@@18.0.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public final class BinderC3618cc extends AbstractBinderC3702ic {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final AtomicReference<Bundle> f9888a = new AtomicReference<>();
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public boolean f9889b;
 
     /* JADX WARN: Code restructure failed: missing block: B:3:0x0002, code lost:
     
         r4 = r4.get("r");
      */
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
@@ -37,7 +37,7 @@ public final class BinderC3618cc extends AbstractBinderC3702ic {
     }
 
     @Override // p007b.p225i.p226a.p288f.p313h.p325l.InterfaceC3660fc
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final void mo4619f(Bundle bundle) {
         synchronized (this.f9888a) {
             try {
@@ -49,12 +49,12 @@ public final class BinderC3618cc extends AbstractBinderC3702ic {
         }
     }
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public final String m4620i(long j) {
         return (String) m4618g(m4621t0(j), String.class);
     }
 
-    /* renamed from: t0 */
+    /* JADX INFO: renamed from: t0 */
     public final Bundle m4621t0(long j) {
         Bundle bundle;
         synchronized (this.f9888a) {

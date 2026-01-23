@@ -5,9 +5,9 @@ import com.tapadoo.alerter.C11198R;
 import kotlin.jvm.functions.Function0;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: Alert.kt */
-/* renamed from: b.p.a.c, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.p.a.c, reason: use source file name */
+/* JADX INFO: compiled from: Alert.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class Alert3 extends Lambda implements Function0<View> {
     public final /* synthetic */ ViewOnClickListenerC5272b this$0;
 

@@ -25,7 +25,7 @@ import java.lang.annotation.RetentionPolicy;
 import java.nio.ByteBuffer;
 import java.util.Map;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class FontsContractCompat {
 
     @RestrictTo({RestrictTo.Scope.LIBRARY_GROUP_PREFIX})

@@ -9,44 +9,44 @@ import kotlin.text.Regex;
 import p507d0.p579g0.Regex5;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: TypeScript.kt */
-/* renamed from: b.a.t.a.r, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.a.t.a.r, reason: use source file name */
+/* JADX INFO: compiled from: TypeScript.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class TypeScript2 {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final String[] f1955a = {"import|from|export|default|package", "class|enum", "function|super|extends|implements|arguments", "var|let|const|static|get|set|new", "return|break|continue|yield|void", "if|else|for|while|do|switch|async|await|case|try|catch|finally|delete|throw|NaN|Infinity", "of|in|instanceof|typeof", "debugger|with", "true|false|null|undefined", "type|as|interface|public|private|protected|module|declare|namespace", "abstract|keyof|readonly|is|asserts|infer|override|intrinsic"};
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static final String[] f1956b = {"String|Boolean|RegExp|Number|Date|Math|JSON|Symbol|BigInt|Atomics|DataView", "Function|Promise|Generator|GeneratorFunction|AsyncFunction|AsyncGenerator|AsyncGeneratorFunction", "Array|Object|Map|Set|WeakMap|WeakSet|Int8Array|Int16Array|Int32Array|Uint8Array|Uint16Array", "Uint32Array|Uint8ClampedArray|Float32Array|Float64Array|BigInt64Array|BigUint64Array|Buffer", "ArrayBuffer|SharedArrayBuffer", "Reflect|Proxy|Intl|WebAssembly", "console|process|require|isNaN|parseInt|parseFloat|encodeURI|decodeURI|encodeURIComponent", "decodeURIComponent|this|global|globalThis|eval|isFinite|module", "setTimeout|setInterval|clearTimeout|clearInterval|setImmediate|clearImmediate", "queueMicrotask|document|window", "Error|SyntaxError|TypeError|RangeError|ReferenceError|EvalError|InternalError|URIError", "AggregateError|escape|unescape|URL|URLSearchParams|TextEncoder|TextDecoder", "AbortController|AbortSignal|EventTarget|Event|MessageChannel", "MessagePort|MessageEvent|FinalizationRegistry|WeakRef", "regeneratorRuntime|performance", "Iterable|Iterator|IterableIterator", "Partial|Required|Readonly|Record|Pick|Omit|Exclude|Extract", "NonNullable|Parameters|ConstructorParameters|ReturnType", "InstanceType|ThisParameterType|OmitThisParameter", "ThisType|Uppercase|Lowercase|Capitalize|Uncapitalize"};
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public static final String[] f1957c = {"string|number|boolean|object|symbol|any|unknown|bigint|never"};
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public static final Pattern f1958d = Pattern.compile("^/.+(?<!\\\\)/[dgimsuy]*");
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public static final Pattern f1959e = Pattern.compile("^(?:(?://.*?(?=\\n|$))|(/\\*.*?\\*/))", 32);
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public static final Pattern f1960f = Pattern.compile("^('.*?(?<!\\\\)'|\".*?(?<!\\\\)\"|`[\\s\\S]*?(?<!\\\\)`)(?=\\W|\\s|$)");
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public static final TypeScript2 f1961g = null;
 
-    /* compiled from: TypeScript.kt */
-    /* renamed from: b.a.t.a.r$a */
+    /* JADX INFO: renamed from: b.a.t.a.r$a */
+    /* JADX INFO: compiled from: TypeScript.kt */
     public static final class a<RC> extends Node.C5655a<RC> {
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public static final C13216a f1963b = new C13216a(null);
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public static final Pattern f1962a = Pattern.compile("^(@)(\\s*[a-zA-Z_$][a-zA-Z0-9_$]*)(<.*>)?", 32);
 
-        /* compiled from: TypeScript.kt */
-        /* renamed from: b.a.t.a.r$a$a, reason: collision with other inner class name */
+        /* JADX INFO: renamed from: b.a.t.a.r$a$a, reason: collision with other inner class name */
+        /* JADX INFO: compiled from: TypeScript.kt */
         public static final class C13216a {
             public C13216a(DefaultConstructorMarker defaultConstructorMarker) {
             }
@@ -65,18 +65,18 @@ public final class TypeScript2 {
         }
     }
 
-    /* compiled from: TypeScript.kt */
-    /* renamed from: b.a.t.a.r$b */
+    /* JADX INFO: renamed from: b.a.t.a.r$b */
+    /* JADX INFO: compiled from: TypeScript.kt */
     public static final class b<RC> extends Node.C5655a<RC> {
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public static final a f1965b = new a(null);
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public static final Pattern f1964a = Pattern.compile("^(var|let|const)(\\s+[a-zA-Z_$][a-zA-Z0-9_$]*)");
 
-        /* compiled from: TypeScript.kt */
-        /* renamed from: b.a.t.a.r$b$a */
+        /* JADX INFO: renamed from: b.a.t.a.r$b$a */
+        /* JADX INFO: compiled from: TypeScript.kt */
         public static final class a {
             public a(DefaultConstructorMarker defaultConstructorMarker) {
             }
@@ -91,18 +91,18 @@ public final class TypeScript2 {
         }
     }
 
-    /* compiled from: TypeScript.kt */
-    /* renamed from: b.a.t.a.r$c */
+    /* JADX INFO: renamed from: b.a.t.a.r$c */
+    /* JADX INFO: compiled from: TypeScript.kt */
     public static final class c<RC> extends Node.C5655a<RC> {
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public static final a f1967b = new a(null);
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public static final Pattern f1966a = new Regex("^((?:function\\*?|static|get|set|async)\\s)(\\s*[a-zA-Z_$][a-zA-Z0-9_$]*)?(\\s*<.*>)?", Regex5.DOT_MATCHES_ALL).getNativePattern();
 
-        /* compiled from: TypeScript.kt */
-        /* renamed from: b.a.t.a.r$c$a */
+        /* JADX INFO: renamed from: b.a.t.a.r$c$a */
+        /* JADX INFO: compiled from: TypeScript.kt */
         public static final class a {
             public a(DefaultConstructorMarker defaultConstructorMarker) {
             }
@@ -120,18 +120,18 @@ public final class TypeScript2 {
         }
     }
 
-    /* compiled from: TypeScript.kt */
-    /* renamed from: b.a.t.a.r$d */
+    /* JADX INFO: renamed from: b.a.t.a.r$d */
+    /* JADX INFO: compiled from: TypeScript.kt */
     public static final class d<RC> extends Node.C5655a<RC> {
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public static final a f1969b = new a(null);
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public static final Pattern f1968a = Pattern.compile("^([{\\[(,;](?:\\s*-)?)(\\s*(?:public|private|protected|readonly))?(\\s*[a-zA-Z0-9_$]+)((?:\\s*\\?)?\\s*:)");
 
-        /* compiled from: TypeScript.kt */
-        /* renamed from: b.a.t.a.r$d$a */
+        /* JADX INFO: renamed from: b.a.t.a.r$d$a */
+        /* JADX INFO: compiled from: TypeScript.kt */
         public static final class a {
             public a(DefaultConstructorMarker defaultConstructorMarker) {
             }

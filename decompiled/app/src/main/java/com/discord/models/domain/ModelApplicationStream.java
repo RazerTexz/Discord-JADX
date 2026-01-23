@@ -11,19 +11,19 @@ import p507d0.LazyJVM;
 import p507d0.p579g0.Strings4;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ModelApplicationStream.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: ModelApplicationStream.kt */
+/* JADX INFO: loaded from: classes.dex */
 public abstract class ModelApplicationStream implements Serializable {
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private final long channelId;
 
-    /* renamed from: encodedStreamKey$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: encodedStreamKey$delegate, reason: from kotlin metadata */
     private final Lazy encodedStreamKey;
     private final long ownerId;
 
-    /* compiled from: ModelApplicationStream.kt */
+    /* JADX INFO: compiled from: ModelApplicationStream.kt */
     public static final /* data */ class CallStream extends ModelApplicationStream {
         private final long channelId;
         private final long ownerId;
@@ -106,7 +106,7 @@ public abstract class ModelApplicationStream implements Serializable {
         }
     }
 
-    /* compiled from: ModelApplicationStream.kt */
+    /* JADX INFO: compiled from: ModelApplicationStream.kt */
     public static final class Companion {
 
         public final /* synthetic */ class WhenMappings {
@@ -142,7 +142,7 @@ public abstract class ModelApplicationStream implements Serializable {
         }
     }
 
-    /* compiled from: ModelApplicationStream.kt */
+    /* JADX INFO: compiled from: ModelApplicationStream.kt */
     public static final /* data */ class GuildStream extends ModelApplicationStream {
         private final long channelId;
         private final long guildId;
@@ -172,7 +172,7 @@ public abstract class ModelApplicationStream implements Serializable {
             return guildStream.copy(j4, j5, j3);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final long getGuildId() {
             return this.guildId;
         }

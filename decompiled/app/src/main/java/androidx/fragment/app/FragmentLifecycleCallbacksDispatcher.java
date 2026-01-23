@@ -8,7 +8,7 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.FragmentManager;
 import java.util.concurrent.CopyOnWriteArrayList;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class FragmentLifecycleCallbacksDispatcher {
 
     @NonNull

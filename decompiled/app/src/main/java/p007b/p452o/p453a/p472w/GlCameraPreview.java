@@ -6,22 +6,22 @@ import android.view.SurfaceHolder;
 import p007b.p452o.p453a.p467r.GlTextureDrawer;
 import p007b.p452o.p453a.p472w.GlCameraPreview2;
 
-/* compiled from: GlCameraPreview.java */
-/* renamed from: b.o.a.w.c, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.o.a.w.c, reason: use source file name */
+/* JADX INFO: compiled from: GlCameraPreview.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class GlCameraPreview implements SurfaceHolder.Callback {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final /* synthetic */ GLSurfaceView f14217j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final /* synthetic */ GlCameraPreview2.c f14218k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final /* synthetic */ GlCameraPreview2 f14219l;
 
-    /* compiled from: GlCameraPreview.java */
-    /* renamed from: b.o.a.w.c$a */
+    /* JADX INFO: renamed from: b.o.a.w.c$a */
+    /* JADX INFO: compiled from: GlCameraPreview.java */
     public class a implements Runnable {
         public a() {
         }

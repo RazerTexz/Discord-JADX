@@ -4,19 +4,19 @@ import java.io.IOException;
 import p007b.p195g.p196a.p198b.JsonGenerator;
 import p007b.p195g.p196a.p205c.p212e0.TypeSerializer;
 
-/* compiled from: JsonSerializable.java */
-/* renamed from: b.g.a.c.m, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.g.a.c.m, reason: use source file name */
+/* JADX INFO: compiled from: JsonSerializable.java */
+/* JADX INFO: loaded from: classes3.dex */
 public interface JsonSerializable {
 
-    /* compiled from: JsonSerializable.java */
-    /* renamed from: b.g.a.c.m$a */
+    /* JADX INFO: renamed from: b.g.a.c.m$a */
+    /* JADX INFO: compiled from: JsonSerializable.java */
     public static abstract class a implements JsonSerializable {
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     void mo2140c(JsonGenerator jsonGenerator, SerializerProvider serializerProvider) throws IOException;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     void mo2141d(JsonGenerator jsonGenerator, SerializerProvider serializerProvider, TypeSerializer typeSerializer) throws IOException;
 }

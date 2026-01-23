@@ -7,16 +7,16 @@ import com.discord.C5419R;
 import com.discord.views.CutoutView;
 import com.facebook.drawee.view.SimpleDraweeView;
 
-/* compiled from: ViewUserSummaryItemBinding.java */
-/* renamed from: b.a.i.f4, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.a.i.f4, reason: use source file name */
+/* JADX INFO: compiled from: ViewUserSummaryItemBinding.java */
+/* JADX INFO: loaded from: classes.dex */
 public final class ViewUserSummaryItemBinding implements ViewBinding {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     @NonNull
     public final CutoutView f845a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     @NonNull
     public final SimpleDraweeView f846b;
 
@@ -26,7 +26,7 @@ public final class ViewUserSummaryItemBinding implements ViewBinding {
     }
 
     @NonNull
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static ViewUserSummaryItemBinding m199a(@NonNull View view) {
         SimpleDraweeView simpleDraweeView = (SimpleDraweeView) view.findViewById(C5419R.id.avatar);
         if (simpleDraweeView != null) {

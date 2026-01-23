@@ -12,16 +12,15 @@ import java.util.List;
 import kotlin.jvm.functions.Function1;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: CustomTabsPackages.kt */
-/* renamed from: b.a.h.c, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.a.h.c, reason: use source file name */
+/* JADX INFO: compiled from: CustomTabsPackages.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class CustomTabsPackages2 {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final CustomTabsPackages2 f652a = new CustomTabsPackages2();
 
-    /* JADX WARN: Multi-variable type inference failed */
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final String m194a(Context context, Function1<? super String, Boolean> function1) {
         Object next;
         Object next2;

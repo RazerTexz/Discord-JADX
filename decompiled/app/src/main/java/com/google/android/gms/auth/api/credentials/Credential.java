@@ -14,57 +14,57 @@ import java.util.List;
 import p007b.p085c.p086a.p087a0.AnimatableValueParser;
 import p007b.p225i.p226a.p288f.p292c.p293a.p294d.C3190e;
 
-/* compiled from: com.google.android.gms:play-services-auth@@19.0.0 */
-/* loaded from: classes3.dex */
+/* JADX INFO: compiled from: com.google.android.gms:play-services-auth@@19.0.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public class Credential extends AbstractSafeParcelable implements ReflectedParcelable {
     public static final Parcelable.Creator<Credential> CREATOR = new C3190e();
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final String f20389j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     @Nullable
     public final String f20390k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     @Nullable
     public final Uri f20391l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public final List<IdToken> f20392m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     @Nullable
     public final String f20393n;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     @Nullable
     public final String f20394o;
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     @Nullable
     public final String f20395p;
 
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     @Nullable
     public final String f20396q;
 
-    /* compiled from: com.google.android.gms:play-services-auth@@19.0.0 */
-    /* renamed from: com.google.android.gms.auth.api.credentials.Credential$a */
+    /* JADX INFO: renamed from: com.google.android.gms.auth.api.credentials.Credential$a */
+    /* JADX INFO: compiled from: com.google.android.gms:play-services-auth@@19.0.0 */
     public static class C10792a {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final String f20397a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         @Nullable
         public String f20398b;
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         @Nullable
         public Uri f20399c;
 
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         @Nullable
         public String f20400d;
 
@@ -72,7 +72,7 @@ public class Credential extends AbstractSafeParcelable implements ReflectedParce
             this.f20397a = str;
         }
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public Credential m9009a() {
             return new Credential(this.f20397a, this.f20398b, this.f20399c, null, this.f20400d, null, null, null);
         }

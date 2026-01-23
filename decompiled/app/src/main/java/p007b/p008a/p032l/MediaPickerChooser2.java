@@ -18,11 +18,11 @@ import kotlin.Unit;
 import kotlin.jvm.functions.Function1;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: MediaPickerChooser.kt */
-/* renamed from: b.a.l.b, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.a.l.b, reason: use source file name */
+/* JADX INFO: compiled from: MediaPickerChooser.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class MediaPickerChooser2 {
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final void m225a(Map<String, Intent> map, PackageManager packageManager, Intent intent, Function1<? super Intent, Unit> function1) {
         for (ResolveInfo resolveInfo : packageManager.queryIntentActivities(intent, 0)) {
             ActivityInfo activityInfo = resolveInfo.activityInfo;
@@ -39,7 +39,7 @@ public final class MediaPickerChooser2 {
         }
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static final Intent m226b(PackageManager packageManager, CharSequence charSequence, Uri uri, String str) throws IOException {
         Intrinsics3.checkNotNullParameter(packageManager, "packageManager");
         Intrinsics3.checkNotNullParameter(uri, "captureFileURI");

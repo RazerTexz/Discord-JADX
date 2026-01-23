@@ -7,34 +7,34 @@ import java.io.IOException;
 import java.util.Arrays;
 import java.util.Objects;
 
-/* compiled from: com.google.android.gms:play-services-measurement-base@@18.0.0 */
-/* renamed from: b.i.a.f.h.l.c7 */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.h.l.c7 */
+/* JADX INFO: compiled from: com.google.android.gms:play-services-measurement-base@@18.0.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public final class C3613c7 {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final C3613c7 f9877a = new C3613c7(0, new int[0], new Object[0], false);
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public int f9878b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public int[] f9879c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public Object[] f9880d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public int f9881e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public boolean f9882f;
 
     public C3613c7() {
         this(0, new int[8], new Object[8], true);
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static void m4609b(int i, Object obj, InterfaceC3867v7 interfaceC3867v7) throws IOException {
         int i2 = i >>> 3;
         int i3 = i & 7;
@@ -64,12 +64,12 @@ public final class C3613c7 {
         ((C3666g4) interfaceC3867v7).f9967a.mo9082G(i2, ((Integer) obj).intValue());
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public static C3613c7 m4610c() {
         return new C3613c7(0, new int[8], new Object[8], true);
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final void m4611a(int i, Object obj) {
         if (!this.f9882f) {
             throw new UnsupportedOperationException();
@@ -88,7 +88,7 @@ public final class C3613c7 {
         this.f9878b = i4 + 1;
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final void m4612d(InterfaceC3867v7 interfaceC3867v7) throws IOException {
         if (this.f9878b == 0) {
             return;
@@ -99,7 +99,7 @@ public final class C3613c7 {
         }
     }
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final int m4613e() {
         int iM9053E;
         int i = this.f9881e;

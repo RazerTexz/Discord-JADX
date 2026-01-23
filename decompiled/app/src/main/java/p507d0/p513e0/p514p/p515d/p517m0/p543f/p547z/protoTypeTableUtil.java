@@ -12,9 +12,9 @@ import p507d0.p513e0.p514p.p515d.p517m0.p543f.C11696u;
 import p507d0.p580t.Iterables2;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: protoTypeTableUtil.kt */
-/* renamed from: d0.e0.p.d.m0.f.z.f, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.f.z.f, reason: use source file name */
+/* JADX INFO: compiled from: protoTypeTableUtil.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class protoTypeTableUtil {
     public static final C11692q abbreviatedType(C11692q c11692q, TypeTable typeTable) {
         Intrinsics3.checkNotNullParameter(c11692q, "<this>");

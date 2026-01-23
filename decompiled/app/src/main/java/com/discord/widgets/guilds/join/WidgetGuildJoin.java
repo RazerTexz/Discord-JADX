@@ -30,19 +30,19 @@ import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetGuildJoin.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetGuildJoin.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public class WidgetGuildJoin extends AppFragment {
     public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetGuildJoin.class, "binding", "getBinding()Lcom/discord/databinding/WidgetGuildJoinBinding;", 0)};
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
 
-    /* renamed from: binding$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
     private final AppLogger2 loggingConfig;
 
-    /* compiled from: WidgetGuildJoin.kt */
+    /* JADX INFO: compiled from: WidgetGuildJoin.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -59,7 +59,7 @@ public class WidgetGuildJoin extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetGuildJoin.kt */
+    /* JADX INFO: compiled from: WidgetGuildJoin.kt */
     public static final class ToolbarButton extends WidgetGuildJoin {
         public ToolbarButton() {
             super(0, 1, null);
@@ -79,8 +79,8 @@ public class WidgetGuildJoin extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetGuildJoin.kt */
-    /* renamed from: com.discord.widgets.guilds.join.WidgetGuildJoin$onViewBound$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.guilds.join.WidgetGuildJoin$onViewBound$1 */
+    /* JADX INFO: compiled from: WidgetGuildJoin.kt */
     public static final class C87171 extends Lambda implements Function1<TextView, Unit> {
         public C87171() {
             super(1);
@@ -92,15 +92,15 @@ public class WidgetGuildJoin extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(TextView textView) {
             Intrinsics3.checkNotNullParameter(textView, "it");
             WidgetGuildJoin.this.handleGuildJoin();
         }
     }
 
-    /* compiled from: WidgetGuildJoin.kt */
-    /* renamed from: com.discord.widgets.guilds.join.WidgetGuildJoin$onViewBound$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.guilds.join.WidgetGuildJoin$onViewBound$2 */
+    /* JADX INFO: compiled from: WidgetGuildJoin.kt */
     public static final class ViewOnClickListenerC87182 implements View.OnClickListener {
         public ViewOnClickListenerC87182() {
         }

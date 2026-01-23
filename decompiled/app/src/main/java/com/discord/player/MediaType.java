@@ -5,18 +5,18 @@ import android.os.Parcelable;
 import kotlin.jvm.internal.DefaultConstructorMarker;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: MediaType.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: MediaType.kt */
+/* JADX INFO: loaded from: classes.dex */
 public enum MediaType implements Parcelable {
     VIDEO,
     GIFV;
 
 
-    /* renamed from: CREATOR, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: CREATOR, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
 
-    /* compiled from: MediaType.kt */
-    /* renamed from: com.discord.player.MediaType$a, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: com.discord.player.MediaType$a, reason: from kotlin metadata */
+    /* JADX INFO: compiled from: MediaType.kt */
     public static final class Companion implements Parcelable.Creator<MediaType> {
         public Companion(DefaultConstructorMarker defaultConstructorMarker) {
         }

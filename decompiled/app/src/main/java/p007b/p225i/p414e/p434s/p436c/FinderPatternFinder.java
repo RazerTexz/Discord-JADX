@@ -8,28 +8,28 @@ import java.util.List;
 import p007b.p225i.p414e.ResultPointCallback;
 import p007b.p225i.p414e.p418n.BitMatrix;
 
-/* compiled from: FinderPatternFinder.java */
-/* renamed from: b.i.e.s.c.e, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.e.s.c.e, reason: use source file name */
+/* JADX INFO: compiled from: FinderPatternFinder.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class FinderPatternFinder {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final BitMatrix f13572a;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public boolean f13574c;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final ResultPointCallback f13576e;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final List<FinderPattern2> f13573b = new ArrayList();
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final int[] f13575d = new int[5];
 
-    /* compiled from: FinderPatternFinder.java */
-    /* renamed from: b.i.e.s.c.e$b */
+    /* JADX INFO: renamed from: b.i.e.s.c.e$b */
+    /* JADX INFO: compiled from: FinderPatternFinder.java */
     public static final class b implements Serializable, Comparator<FinderPattern2> {
         private final float average;
 
@@ -46,8 +46,8 @@ public class FinderPatternFinder {
         }
     }
 
-    /* compiled from: FinderPatternFinder.java */
-    /* renamed from: b.i.e.s.c.e$c */
+    /* JADX INFO: renamed from: b.i.e.s.c.e$c */
+    /* JADX INFO: compiled from: FinderPatternFinder.java */
     public static final class c implements Serializable, Comparator<FinderPattern2> {
         private final float average;
 
@@ -66,12 +66,12 @@ public class FinderPatternFinder {
         this.f13576e = resultPointCallback;
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static float m7113a(int[] iArr, int i) {
         return ((i - iArr[4]) - iArr[3]) - (iArr[2] / 2.0f);
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public static boolean m7114c(int[] iArr) {
         int i = 0;
         for (int i2 = 0; i2 < 5; i2++) {
@@ -89,14 +89,14 @@ public class FinderPatternFinder {
         return Math.abs(f - ((float) iArr[0])) < f2 && Math.abs(f - ((float) iArr[1])) < f2 && Math.abs((f * 3.0f) - ((float) iArr[2])) < 3.0f * f2 && Math.abs(f - ((float) iArr[3])) < f2 && Math.abs(f - ((float) iArr[4])) < f2;
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final void m7115b(int[] iArr) {
         for (int i = 0; i < iArr.length; i++) {
             iArr[i] = 0;
         }
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final int[] m7116d() {
         m7115b(this.f13575d);
         return this.f13575d;
@@ -108,7 +108,7 @@ public class FinderPatternFinder {
     /* JADX WARN: Removed duplicated region for block: B:215:0x0346 A[LOOP:19: B:201:0x02e1->B:215:0x0346, LOOP_END] */
     /* JADX WARN: Removed duplicated region for block: B:278:0x0322 A[SYNTHETIC] */
     /* JADX WARN: Removed duplicated region for block: B:61:0x00e3  */
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
@@ -342,7 +342,7 @@ public class FinderPatternFinder {
         return true;
     }
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final boolean m7118f() {
         int size = this.f13573b.size();
         float fAbs = 0.0f;
@@ -365,7 +365,7 @@ public class FinderPatternFinder {
         return fAbs <= f * 0.05f;
     }
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public final void m7119g(int[] iArr) {
         iArr[0] = iArr[2];
         iArr[1] = iArr[3];

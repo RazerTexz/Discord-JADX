@@ -22,8 +22,8 @@ import java.io.IOException;
 import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserException;
 
+/* JADX INFO: loaded from: classes.dex */
 @RestrictTo({RestrictTo.Scope.LIBRARY_GROUP_PREFIX})
-/* loaded from: classes.dex */
 public final class ColorStateListInflaterCompat {
     private static final ThreadLocal<TypedValue> sTempTypedValue = new ThreadLocal<>();
 
@@ -77,7 +77,7 @@ public final class ColorStateListInflaterCompat {
         }
     }
 
-    private static boolean isColorInt(@NonNull Resources resources, @ColorRes int i) throws Resources.NotFoundException {
+    private static boolean isColorInt(@NonNull Resources resources, @ColorRes int i) {
         TypedValue typedValue = getTypedValue();
         resources.getValue(i, typedValue, true);
         int i2 = typedValue.type;

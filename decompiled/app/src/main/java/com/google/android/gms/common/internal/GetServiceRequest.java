@@ -18,54 +18,54 @@ import p007b.p225i.p226a.p288f.p299e.p304k.BinderC3343a;
 import p007b.p225i.p226a.p288f.p299e.p304k.C3374p0;
 import p007b.p225i.p226a.p288f.p299e.p304k.InterfaceC3355g;
 
-/* compiled from: com.google.android.gms:play-services-basement@@17.6.0 */
-/* loaded from: classes3.dex */
+/* JADX INFO: compiled from: com.google.android.gms:play-services-basement@@17.6.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public class GetServiceRequest extends AbstractSafeParcelable {
 
     @RecentlyNonNull
     public static final Parcelable.Creator<GetServiceRequest> CREATOR = new C3374p0();
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final int f20527j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final int f20528k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public int f20529l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public String f20530m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public IBinder f20531n;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public Scope[] f20532o;
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public Bundle f20533p;
 
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     @Nullable
     public Account f20534q;
 
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     public Feature[] f20535r;
 
-    /* renamed from: s */
+    /* JADX INFO: renamed from: s */
     public Feature[] f20536s;
 
-    /* renamed from: t */
+    /* JADX INFO: renamed from: t */
     public boolean f20537t;
 
-    /* renamed from: u */
+    /* JADX INFO: renamed from: u */
     public int f20538u;
 
-    /* renamed from: v */
+    /* JADX INFO: renamed from: v */
     public boolean f20539v;
 
-    /* renamed from: w */
+    /* JADX INFO: renamed from: w */
     @Nullable
     public final String f20540w;
 

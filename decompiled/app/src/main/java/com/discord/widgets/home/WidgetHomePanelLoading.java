@@ -21,14 +21,14 @@ import p507d0.p508a0.MathJVM;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetHomePanelLoading.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetHomePanelLoading.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetHomePanelLoading {
     private static boolean panelInitialized;
     private final WidgetHomeBinding binding;
 
-    /* compiled from: WidgetHomePanelLoading.kt */
-    /* renamed from: com.discord.widgets.home.WidgetHomePanelLoading$configure$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.home.WidgetHomePanelLoading$configure$1 */
+    /* JADX INFO: compiled from: WidgetHomePanelLoading.kt */
     public static final class C89741 extends Lambda implements Function1<Boolean, Unit> {
         public C89741() {
             super(1);

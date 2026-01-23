@@ -5,16 +5,16 @@ import androidx.annotation.NonNull;
 import androidx.viewbinding.ViewBinding;
 import com.facebook.drawee.view.SimpleDraweeView;
 
-/* compiled from: OverlayVoiceBubbleBinding.java */
-/* renamed from: b.a.i.a1, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.a.i.a1, reason: use source file name */
+/* JADX INFO: compiled from: OverlayVoiceBubbleBinding.java */
+/* JADX INFO: loaded from: classes.dex */
 public final class OverlayVoiceBubbleBinding implements ViewBinding {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     @NonNull
     public final SimpleDraweeView f661a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     @NonNull
     public final SimpleDraweeView f662b;
 

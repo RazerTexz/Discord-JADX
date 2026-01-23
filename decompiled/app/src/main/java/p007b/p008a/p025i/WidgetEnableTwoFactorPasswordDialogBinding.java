@@ -9,24 +9,24 @@ import com.discord.views.LoadingButton;
 import com.google.android.material.button.MaterialButton;
 import com.google.android.material.textfield.TextInputLayout;
 
-/* compiled from: WidgetEnableTwoFactorPasswordDialogBinding.java */
-/* renamed from: b.a.i.h5, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.a.i.h5, reason: use source file name */
+/* JADX INFO: compiled from: WidgetEnableTwoFactorPasswordDialogBinding.java */
+/* JADX INFO: loaded from: classes.dex */
 public final class WidgetEnableTwoFactorPasswordDialogBinding implements ViewBinding {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     @NonNull
     public final LinearLayout f931a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     @NonNull
     public final MaterialButton f932b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     @NonNull
     public final LoadingButton f933c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     @NonNull
     public final TextInputLayout f934d;
 

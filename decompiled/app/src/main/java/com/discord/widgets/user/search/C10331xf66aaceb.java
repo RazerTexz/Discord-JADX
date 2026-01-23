@@ -6,9 +6,9 @@ import kotlin.jvm.functions.Function1;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetGlobalSearchModel.kt */
-/* renamed from: com.discord.widgets.user.search.WidgetGlobalSearchModel$Companion$create$filteredResults$channelResults$1 */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: com.discord.widgets.user.search.WidgetGlobalSearchModel$Companion$create$filteredResults$channelResults$1 */
+/* JADX INFO: compiled from: WidgetGlobalSearchModel.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class C10331xf66aaceb extends Lambda implements Function1<Channel, Boolean> {
     public static final C10331xf66aaceb INSTANCE = new C10331xf66aaceb();
 
@@ -21,7 +21,7 @@ public final class C10331xf66aaceb extends Lambda implements Function1<Channel, 
         return Boolean.valueOf(invoke2(channel));
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final boolean invoke2(Channel channel) {
         Intrinsics3.checkNotNullParameter(channel, "it");
         return ChannelUtils.m7672G(channel);

@@ -12,9 +12,9 @@ import java.util.Map;
 import p507d0.p592z.p594d.Intrinsics3;
 import p658rx.functions.Func8;
 
-/* compiled from: CallModel.kt */
-/* renamed from: com.discord.widgets.voice.model.CallModel$Companion$observeChunk$1, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: com.discord.widgets.voice.model.CallModel$Companion$observeChunk$1, reason: use source file name */
+/* JADX INFO: compiled from: CallModel.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class CallModel3<T1, T2, T3, T4, T5, T6, T7, T8, R> implements Func8<Long, Long, StoreMediaSettings.VoiceConfiguration, Map<Long, ? extends StoreVoiceParticipants.VoiceUser>, Long, List<? extends DeviceDescription4>, DeviceDescription4, StoreAudioManagerV2.State, CallModel.Companion.Chunk> {
     public final /* synthetic */ Channel $channel;
 
@@ -27,7 +27,7 @@ public final class CallModel3<T1, T2, T3, T4, T5, T6, T7, T8, R> implements Func
         return call2(l, l2, voiceConfiguration, (Map<Long, StoreVoiceParticipants.VoiceUser>) map, l3, (List<DeviceDescription4>) list, deviceDescription4, state);
     }
 
-    /* renamed from: call, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
     public final CallModel.Companion.Chunk call2(Long l, Long l2, StoreMediaSettings.VoiceConfiguration voiceConfiguration, Map<Long, StoreVoiceParticipants.VoiceUser> map, Long l3, List<DeviceDescription4> list, DeviceDescription4 deviceDescription4, StoreAudioManagerV2.State state) {
         Channel channel = this.$channel;
         Intrinsics3.checkNotNullExpressionValue(l, "myUserId");

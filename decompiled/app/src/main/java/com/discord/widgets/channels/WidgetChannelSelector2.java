@@ -3,9 +3,9 @@ package com.discord.widgets.channels;
 import android.view.View;
 import com.discord.widgets.channels.WidgetChannelSelector;
 
-/* compiled from: WidgetChannelSelector.kt */
-/* renamed from: com.discord.widgets.channels.WidgetChannelSelector$Adapter$ItemChannel$onConfigure$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.channels.WidgetChannelSelector$Adapter$ItemChannel$onConfigure$1, reason: use source file name */
+/* JADX INFO: compiled from: WidgetChannelSelector.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetChannelSelector2 implements View.OnClickListener {
     public final /* synthetic */ WidgetChannelSelector.Model.Item $data;
     public final /* synthetic */ WidgetChannelSelector.Adapter.ItemChannel this$0;

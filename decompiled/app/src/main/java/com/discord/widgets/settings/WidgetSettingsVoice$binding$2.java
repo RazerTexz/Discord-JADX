@@ -15,8 +15,8 @@ import kotlin.jvm.functions.Function1;
 import p507d0.p592z.p594d.FunctionReferenceImpl;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: WidgetSettingsVoice.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetSettingsVoice.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final /* synthetic */ class WidgetSettingsVoice$binding$2 extends FunctionReferenceImpl implements Function1<View, WidgetSettingsVoiceBinding> {
     public static final WidgetSettingsVoice$binding$2 INSTANCE = new WidgetSettingsVoice$binding$2();
 
@@ -29,7 +29,7 @@ public final /* synthetic */ class WidgetSettingsVoice$binding$2 extends Functio
         return invoke2(view);
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final WidgetSettingsVoiceBinding invoke2(View view) {
         Intrinsics3.checkNotNullParameter(view, "p1");
         int i = C5419R.id.settings_voice_auto_vad_toggle;

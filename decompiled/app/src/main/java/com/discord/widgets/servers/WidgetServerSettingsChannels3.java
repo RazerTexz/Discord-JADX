@@ -7,9 +7,9 @@ import kotlin.jvm.functions.Function1;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetServerSettingsChannels.kt */
-/* renamed from: com.discord.widgets.servers.WidgetServerSettingsChannels$Model$Companion$getSortedGuildChannels$$inlined$also$lambda$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.servers.WidgetServerSettingsChannels$Model$Companion$getSortedGuildChannels$$inlined$also$lambda$1, reason: use source file name */
+/* JADX INFO: compiled from: WidgetServerSettingsChannels.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetServerSettingsChannels3 extends Lambda implements Function1<Channel, Boolean> {
     public final /* synthetic */ int $channelType$inlined;
     public final /* synthetic */ Map $guildChannels$inlined;
@@ -26,7 +26,7 @@ public final class WidgetServerSettingsChannels3 extends Lambda implements Funct
         return Boolean.valueOf(invoke2(channel));
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final boolean invoke2(Channel channel) {
         Intrinsics3.checkNotNullParameter(channel, "channel");
         int i = this.$channelType$inlined;

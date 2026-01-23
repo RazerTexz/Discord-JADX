@@ -27,8 +27,8 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 import p658rx.Observable;
 
-/* compiled from: StoreThreadsActiveJoined.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: StoreThreadsActiveJoined.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class StoreThreadsActiveJoined extends StoreV2 {
     private final Map<Long, ActiveJoinedThread> activeJoinedThreads;
     private Map<Long, ActiveJoinedThread> activeJoinedThreadsByThreadIdSnapshot;
@@ -37,7 +37,7 @@ public final class StoreThreadsActiveJoined extends StoreV2 {
     private final StoreThreadsActive storeThreadsActive;
     private final StoreThreadsJoined storeThreadsJoined;
 
-    /* compiled from: StoreThreadsActiveJoined.kt */
+    /* JADX INFO: compiled from: StoreThreadsActiveJoined.kt */
     public static final /* data */ class ActiveJoinedThread {
         private final Channel channel;
         private final UtcDateTime joinTimestamp;
@@ -64,17 +64,17 @@ public final class StoreThreadsActiveJoined extends StoreV2 {
             return activeJoinedThread.copy(channel, utcDateTime, z2);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final Channel getChannel() {
             return this.channel;
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final UtcDateTime getJoinTimestamp() {
             return this.joinTimestamp;
         }
 
-        /* renamed from: component3, reason: from getter */
+        /* JADX INFO: renamed from: component3, reason: from getter */
         public final boolean getMuted() {
             return this.muted;
         }
@@ -109,17 +109,20 @@ public final class StoreThreadsActiveJoined extends StoreV2 {
         }
 
         /* JADX WARN: Multi-variable type inference failed */
+        /* JADX WARN: Type inference failed for: r1v3, types: [int] */
+        /* JADX WARN: Type inference failed for: r1v4 */
+        /* JADX WARN: Type inference failed for: r1v6 */
         public int hashCode() {
             Channel channel = this.channel;
             int iHashCode = (channel != null ? channel.hashCode() : 0) * 31;
             UtcDateTime utcDateTime = this.joinTimestamp;
             int iHashCode2 = (iHashCode + (utcDateTime != null ? utcDateTime.hashCode() : 0)) * 31;
             boolean z2 = this.muted;
-            int i = z2;
-            if (z2 != 0) {
-                i = 1;
+            ?? r1 = z2;
+            if (z2) {
+                r1 = 1;
             }
-            return iHashCode2 + i;
+            return iHashCode2 + r1;
         }
 
         public String toString() {
@@ -132,8 +135,8 @@ public final class StoreThreadsActiveJoined extends StoreV2 {
         }
     }
 
-    /* compiled from: StoreThreadsActiveJoined.kt */
-    /* renamed from: com.discord.stores.StoreThreadsActiveJoined$observeActiveJoinedThreadsChannelsForGuild$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreThreadsActiveJoined$observeActiveJoinedThreadsChannelsForGuild$1 */
+    /* JADX INFO: compiled from: StoreThreadsActiveJoined.kt */
     public static final class C65421 extends Lambda implements Function0<Map<Long, ? extends Channel>> {
         public final /* synthetic */ long $guildId;
 
@@ -149,7 +152,7 @@ public final class StoreThreadsActiveJoined extends StoreV2 {
         }
 
         @Override // kotlin.jvm.functions.Function0
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final Map<Long, ? extends Channel> invoke2() {
             Collection<Map> collectionValues;
             LinkedHashMap linkedHashMap = new LinkedHashMap();
@@ -167,8 +170,8 @@ public final class StoreThreadsActiveJoined extends StoreV2 {
         }
     }
 
-    /* compiled from: StoreThreadsActiveJoined.kt */
-    /* renamed from: com.discord.stores.StoreThreadsActiveJoined$observeActiveJoinedThreadsForChannel$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreThreadsActiveJoined$observeActiveJoinedThreadsForChannel$1 */
+    /* JADX INFO: compiled from: StoreThreadsActiveJoined.kt */
     public static final class C65431 extends Lambda implements Function0<Map<Long, ? extends ActiveJoinedThread>> {
         public final /* synthetic */ long $channelId;
         public final /* synthetic */ long $guildId;
@@ -186,7 +189,7 @@ public final class StoreThreadsActiveJoined extends StoreV2 {
         }
 
         @Override // kotlin.jvm.functions.Function0
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final Map<Long, ? extends ActiveJoinedThread> invoke2() {
             Map<Long, ? extends ActiveJoinedThread> map;
             Map map2 = (Map) StoreThreadsActiveJoined.access$getActiveJoinedThreadsHierarchicalSnapshot$p(StoreThreadsActiveJoined.this).get(Long.valueOf(this.$guildId));
@@ -194,8 +197,8 @@ public final class StoreThreadsActiveJoined extends StoreV2 {
         }
     }
 
-    /* compiled from: StoreThreadsActiveJoined.kt */
-    /* renamed from: com.discord.stores.StoreThreadsActiveJoined$observeActiveJoinedThreadsForGuild$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreThreadsActiveJoined$observeActiveJoinedThreadsForGuild$1 */
+    /* JADX INFO: compiled from: StoreThreadsActiveJoined.kt */
     public static final class C65441 extends Lambda implements Function0<Map<Long, ? extends Map<Long, ? extends ActiveJoinedThread>>> {
         public final /* synthetic */ long $guildId;
 
@@ -211,15 +214,15 @@ public final class StoreThreadsActiveJoined extends StoreV2 {
         }
 
         @Override // kotlin.jvm.functions.Function0
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final Map<Long, ? extends Map<Long, ? extends ActiveJoinedThread>> invoke2() {
             Map<Long, ? extends Map<Long, ? extends ActiveJoinedThread>> map = (Map) StoreThreadsActiveJoined.access$getActiveJoinedThreadsHierarchicalSnapshot$p(StoreThreadsActiveJoined.this).get(Long.valueOf(this.$guildId));
             return map != null ? map : Maps6.emptyMap();
         }
     }
 
-    /* compiled from: StoreThreadsActiveJoined.kt */
-    /* renamed from: com.discord.stores.StoreThreadsActiveJoined$observeAllActiveJoinedThreadsById$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreThreadsActiveJoined$observeAllActiveJoinedThreadsById$1 */
+    /* JADX INFO: compiled from: StoreThreadsActiveJoined.kt */
     public static final class C65451 extends Lambda implements Function0<Map<Long, ? extends ActiveJoinedThread>> {
         public C65451() {
             super(0);
@@ -231,14 +234,14 @@ public final class StoreThreadsActiveJoined extends StoreV2 {
         }
 
         @Override // kotlin.jvm.functions.Function0
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final Map<Long, ? extends ActiveJoinedThread> invoke2() {
             return StoreThreadsActiveJoined.access$getActiveJoinedThreadsByThreadIdSnapshot$p(StoreThreadsActiveJoined.this);
         }
     }
 
-    /* compiled from: StoreThreadsActiveJoined.kt */
-    /* renamed from: com.discord.stores.StoreThreadsActiveJoined$observeAllActiveJoinedThreadsChannelsById$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreThreadsActiveJoined$observeAllActiveJoinedThreadsChannelsById$1 */
+    /* JADX INFO: compiled from: StoreThreadsActiveJoined.kt */
     public static final class C65461 extends Lambda implements Function0<Map<Long, ? extends Channel>> {
         public C65461() {
             super(0);
@@ -250,7 +253,7 @@ public final class StoreThreadsActiveJoined extends StoreV2 {
         }
 
         @Override // kotlin.jvm.functions.Function0
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final Map<Long, ? extends Channel> invoke2() {
             Map mapAccess$getActiveJoinedThreadsByThreadIdSnapshot$p = StoreThreadsActiveJoined.access$getActiveJoinedThreadsByThreadIdSnapshot$p(StoreThreadsActiveJoined.this);
             LinkedHashMap linkedHashMap = new LinkedHashMap(MapsJVM.mapCapacity(mapAccess$getActiveJoinedThreadsByThreadIdSnapshot$p.size()));
@@ -318,7 +321,7 @@ public final class StoreThreadsActiveJoined extends StoreV2 {
     }
 
     @Store3
-    /* renamed from: getActiveJoinedThreadsForChannelInternal$app_productionGoogleRelease */
+    /* JADX INFO: renamed from: getActiveJoinedThreadsForChannelInternal$app_productionGoogleRelease */
     public final List<Channel> m8509xc825218e(long channelId) {
         Collection<ActiveJoinedThread> collectionValues = this.activeJoinedThreads.values();
         ArrayList arrayList = new ArrayList();

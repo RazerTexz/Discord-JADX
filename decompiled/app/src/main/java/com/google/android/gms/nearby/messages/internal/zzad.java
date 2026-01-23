@@ -9,18 +9,18 @@ import p007b.p085c.p086a.p087a0.AnimatableValueParser;
 import p007b.p100d.p104b.p105a.outline;
 import p007b.p225i.p226a.p288f.p333j.p334b.p335e.C4276d;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public final class zzad extends AbstractSafeParcelable {
     public static final Parcelable.Creator<zzad> CREATOR = new C4276d();
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final int f20774j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     @Nullable
     public final String f20775k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     @Nullable
     public final String f20776l;
 

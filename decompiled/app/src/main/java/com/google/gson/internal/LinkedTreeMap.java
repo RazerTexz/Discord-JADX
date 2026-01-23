@@ -13,10 +13,10 @@ import java.util.NoSuchElementException;
 import java.util.Objects;
 import java.util.Set;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public final class LinkedTreeMap<K, V> extends AbstractMap<K, V> implements Serializable {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static final Comparator<Comparable> f21495j = new C11101a();
     public Comparator<? super K> comparator;
     private LinkedTreeMap<K, V>.C11102b entrySet;
@@ -26,7 +26,7 @@ public final class LinkedTreeMap<K, V> extends AbstractMap<K, V> implements Seri
     public C11105e<K, V> root;
     public int size;
 
-    /* renamed from: com.google.gson.internal.LinkedTreeMap$a */
+    /* JADX INFO: renamed from: com.google.gson.internal.LinkedTreeMap$a */
     public class C11101a implements Comparator<Comparable> {
         @Override // java.util.Comparator
         public int compare(Comparable comparable, Comparable comparable2) {
@@ -34,10 +34,10 @@ public final class LinkedTreeMap<K, V> extends AbstractMap<K, V> implements Seri
         }
     }
 
-    /* renamed from: com.google.gson.internal.LinkedTreeMap$b */
+    /* JADX INFO: renamed from: com.google.gson.internal.LinkedTreeMap$b */
     public class C11102b extends AbstractSet<Map.Entry<K, V>> {
 
-        /* renamed from: com.google.gson.internal.LinkedTreeMap$b$a */
+        /* JADX INFO: renamed from: com.google.gson.internal.LinkedTreeMap$b$a */
         public class a extends LinkedTreeMap<K, V>.AbstractC11104d<Map.Entry<K, V>> {
             public a(C11102b c11102b) {
                 super();
@@ -83,10 +83,10 @@ public final class LinkedTreeMap<K, V> extends AbstractMap<K, V> implements Seri
         }
     }
 
-    /* renamed from: com.google.gson.internal.LinkedTreeMap$c */
+    /* JADX INFO: renamed from: com.google.gson.internal.LinkedTreeMap$c */
     public final class C11103c extends AbstractSet<K> {
 
-        /* renamed from: com.google.gson.internal.LinkedTreeMap$c$a */
+        /* JADX INFO: renamed from: com.google.gson.internal.LinkedTreeMap$c$a */
         public class a extends LinkedTreeMap<K, V>.AbstractC11104d<K> {
             public a(C11103c c11103c) {
                 super();
@@ -132,16 +132,16 @@ public final class LinkedTreeMap<K, V> extends AbstractMap<K, V> implements Seri
         }
     }
 
-    /* renamed from: com.google.gson.internal.LinkedTreeMap$d */
+    /* JADX INFO: renamed from: com.google.gson.internal.LinkedTreeMap$d */
     public abstract class AbstractC11104d<T> implements Iterator<T> {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public C11105e<K, V> f21498j;
 
-        /* renamed from: k */
+        /* JADX INFO: renamed from: k */
         public C11105e<K, V> f21499k = null;
 
-        /* renamed from: l */
+        /* JADX INFO: renamed from: l */
         public int f21500l;
 
         public AbstractC11104d() {
@@ -149,7 +149,7 @@ public final class LinkedTreeMap<K, V> extends AbstractMap<K, V> implements Seri
             this.f21500l = LinkedTreeMap.this.modCount;
         }
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final C11105e<K, V> m9231a() {
             C11105e<K, V> c11105e = this.f21498j;
             LinkedTreeMap linkedTreeMap = LinkedTreeMap.this;
@@ -193,7 +193,7 @@ public final class LinkedTreeMap<K, V> extends AbstractMap<K, V> implements Seri
         return new LinkedHashMap(this);
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public C11105e<K, V> m9223a(K k, boolean z2) {
         int iCompareTo;
         C11105e<K, V> c11105e;
@@ -240,7 +240,7 @@ public final class LinkedTreeMap<K, V> extends AbstractMap<K, V> implements Seri
     }
 
     /* JADX WARN: Removed duplicated region for block: B:14:0x0023  */
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
@@ -262,7 +262,7 @@ public final class LinkedTreeMap<K, V> extends AbstractMap<K, V> implements Seri
     }
 
     /* JADX WARN: Multi-variable type inference failed */
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public C11105e<K, V> m9225c(Object obj) {
         if (obj == 0) {
             return null;
@@ -289,7 +289,7 @@ public final class LinkedTreeMap<K, V> extends AbstractMap<K, V> implements Seri
         return m9225c(obj) != null;
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final void m9226d(C11105e<K, V> c11105e, boolean z2) {
         while (c11105e != null) {
             C11105e<K, V> c11105e2 = c11105e.f21503k;
@@ -338,7 +338,7 @@ public final class LinkedTreeMap<K, V> extends AbstractMap<K, V> implements Seri
         }
     }
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public void m9227e(C11105e<K, V> c11105e, boolean z2) {
         C11105e<K, V> c11105e2;
         C11105e<K, V> c11105e3;
@@ -424,7 +424,7 @@ public final class LinkedTreeMap<K, V> extends AbstractMap<K, V> implements Seri
         return c11102b2;
     }
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final void m9228f(C11105e<K, V> c11105e, C11105e<K, V> c11105e2) {
         C11105e<K, V> c11105e3 = c11105e.f21502j;
         c11105e.f21502j = null;
@@ -440,7 +440,7 @@ public final class LinkedTreeMap<K, V> extends AbstractMap<K, V> implements Seri
         }
     }
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public final void m9229g(C11105e<K, V> c11105e) {
         C11105e<K, V> c11105e2 = c11105e.f21503k;
         C11105e<K, V> c11105e3 = c11105e.f21504l;
@@ -467,7 +467,7 @@ public final class LinkedTreeMap<K, V> extends AbstractMap<K, V> implements Seri
         return null;
     }
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public final void m9230h(C11105e<K, V> c11105e) {
         C11105e<K, V> c11105e2 = c11105e.f21503k;
         C11105e<K, V> c11105e3 = c11105e.f21504l;
@@ -522,31 +522,31 @@ public final class LinkedTreeMap<K, V> extends AbstractMap<K, V> implements Seri
         return this.size;
     }
 
-    /* renamed from: com.google.gson.internal.LinkedTreeMap$e */
+    /* JADX INFO: renamed from: com.google.gson.internal.LinkedTreeMap$e */
     public static final class C11105e<K, V> implements Map.Entry<K, V> {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public C11105e<K, V> f21502j;
 
-        /* renamed from: k */
+        /* JADX INFO: renamed from: k */
         public C11105e<K, V> f21503k;
 
-        /* renamed from: l */
+        /* JADX INFO: renamed from: l */
         public C11105e<K, V> f21504l;
 
-        /* renamed from: m */
+        /* JADX INFO: renamed from: m */
         public C11105e<K, V> f21505m;
 
-        /* renamed from: n */
+        /* JADX INFO: renamed from: n */
         public C11105e<K, V> f21506n;
 
-        /* renamed from: o */
+        /* JADX INFO: renamed from: o */
         public final K f21507o;
 
-        /* renamed from: p */
+        /* JADX INFO: renamed from: p */
         public V f21508p;
 
-        /* renamed from: q */
+        /* JADX INFO: renamed from: q */
         public int f21509q;
 
         public C11105e() {

@@ -4,10 +4,10 @@ import com.google.gson.JsonElement;
 import com.google.gson.JsonParseException;
 import java.lang.reflect.Type;
 
-/* compiled from: JsonDeserializer.java */
-/* renamed from: b.i.d.i, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.d.i, reason: use source file name */
+/* JADX INFO: compiled from: JsonDeserializer.java */
+/* JADX INFO: loaded from: classes3.dex */
 public interface JsonDeserializer2<T> {
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     T m6856a(JsonElement jsonElement, Type type, JsonDeserializationContext jsonDeserializationContext) throws JsonParseException;
 }

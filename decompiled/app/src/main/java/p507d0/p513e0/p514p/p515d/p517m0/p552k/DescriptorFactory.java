@@ -26,13 +26,13 @@ import p507d0.p513e0.p514p.p515d.p517m0.p552k.p559x.DescriptorUtils2;
 import p507d0.p513e0.p514p.p515d.p517m0.p567n.KotlinType;
 import p507d0.p513e0.p514p.p515d.p517m0.p567n.Variance;
 
-/* compiled from: DescriptorFactory.java */
-/* renamed from: d0.e0.p.d.m0.k.d, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.k.d, reason: use source file name */
+/* JADX INFO: compiled from: DescriptorFactory.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class DescriptorFactory {
 
-    /* compiled from: DescriptorFactory.java */
-    /* renamed from: d0.e0.p.d.m0.k.d$a */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.k.d$a */
+    /* JADX INFO: compiled from: DescriptorFactory.java */
     public static class a extends ClassConstructorDescriptorImpl {
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
         public a(ClassDescriptor classDescriptor, SourceElement sourceElement, boolean z2) {
@@ -48,7 +48,7 @@ public class DescriptorFactory {
             initialize(Collections.emptyList(), DescriptorUtils.getDefaultConstructorVisibility(classDescriptor, z2));
         }
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public static /* synthetic */ void m9922a(int i) {
             Object[] objArr = new Object[3];
             if (i != 1) {
@@ -62,7 +62,7 @@ public class DescriptorFactory {
         }
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static /* synthetic */ void m9920a(int i) {
         String str = (i == 12 || i == 23 || i == 25) ? "@NotNull method %s.%s must not return null" : "Argument for @NotNull parameter '%s' of %s.%s must not be null";
         Object[] objArr = new Object[(i == 12 || i == 23 || i == 25) ? 2 : 3];
@@ -191,7 +191,7 @@ public class DescriptorFactory {
         throw new IllegalStateException(str2);
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static boolean m9921b(FunctionDescriptor functionDescriptor) {
         return functionDescriptor.getKind() == CallableMemberDescriptor.a.SYNTHESIZED && DescriptorUtils.isEnumClass(functionDescriptor.getContainingDeclaration());
     }

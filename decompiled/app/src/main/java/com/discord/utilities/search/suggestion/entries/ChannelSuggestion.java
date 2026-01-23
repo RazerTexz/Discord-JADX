@@ -8,17 +8,17 @@ import p507d0.p579g0.Strings4;
 import p507d0.p579g0._Strings;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ChannelSuggestion.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: ChannelSuggestion.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final /* data */ class ChannelSuggestion implements SearchSuggestion {
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private final SearchSuggestion.Category category;
     private final long channelId;
     private final String channelName;
 
-    /* compiled from: ChannelSuggestion.kt */
+    /* JADX INFO: compiled from: ChannelSuggestion.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -54,12 +54,12 @@ public final /* data */ class ChannelSuggestion implements SearchSuggestion {
         return channelSuggestion.copy(str, j);
     }
 
-    /* renamed from: component1, reason: from getter */
+    /* JADX INFO: renamed from: component1, reason: from getter */
     public final String getChannelName() {
         return this.channelName;
     }
 
-    /* renamed from: component2, reason: from getter */
+    /* JADX INFO: renamed from: component2, reason: from getter */
     public final long getChannelId() {
         return this.channelId;
     }

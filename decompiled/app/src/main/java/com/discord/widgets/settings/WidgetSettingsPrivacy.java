@@ -80,27 +80,27 @@ import p658rx.Observable;
 import p658rx.functions.Action1;
 import p658rx.functions.Func7;
 
-/* compiled from: WidgetSettingsPrivacy.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetSettingsPrivacy.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetSettingsPrivacy extends AppFragment {
     public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetSettingsPrivacy.class, "binding", "getBinding()Lcom/discord/databinding/WidgetSettingsPrivacyBinding;", 0)};
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
 
-    /* renamed from: binding$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
     private AlertDialog dialog;
 
-    /* renamed from: explicitContentRadios$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: explicitContentRadios$delegate, reason: from kotlin metadata */
     private final Lazy explicitContentRadios;
 
-    /* renamed from: friendSourceRadios$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: friendSourceRadios$delegate, reason: from kotlin metadata */
     private final Lazy friendSourceRadios;
     private RadioManager radioManagerExplicit;
     private final StoreUserSettings userSettings;
 
-    /* compiled from: WidgetSettingsPrivacy.kt */
+    /* JADX INFO: compiled from: WidgetSettingsPrivacy.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -115,7 +115,7 @@ public final class WidgetSettingsPrivacy extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetSettingsPrivacy.kt */
+    /* JADX INFO: compiled from: WidgetSettingsPrivacy.kt */
     public static final /* data */ class LocalState {
         private final ConnectedAccount contactSyncConnection;
         private final Experiment contactSyncExperiment;
@@ -166,37 +166,37 @@ public final class WidgetSettingsPrivacy extends AppFragment {
             return localState.copy(meUser, i4, z3, friendSourceFlags2, connectedAccount2, experiment2, i2);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final MeUser getMe() {
             return this.me;
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final int getExplicitContentFilter() {
             return this.explicitContentFilter;
         }
 
-        /* renamed from: component3, reason: from getter */
+        /* JADX INFO: renamed from: component3, reason: from getter */
         public final boolean getDefaultRestrictedGuilds() {
             return this.defaultRestrictedGuilds;
         }
 
-        /* renamed from: component4, reason: from getter */
+        /* JADX INFO: renamed from: component4, reason: from getter */
         public final ModelUserSettings.FriendSourceFlags getFriendSourceFlags() {
             return this.friendSourceFlags;
         }
 
-        /* renamed from: component5, reason: from getter */
+        /* JADX INFO: renamed from: component5, reason: from getter */
         public final ConnectedAccount getContactSyncConnection() {
             return this.contactSyncConnection;
         }
 
-        /* renamed from: component6, reason: from getter */
+        /* JADX INFO: renamed from: component6, reason: from getter */
         public final Experiment getContactSyncExperiment() {
             return this.contactSyncExperiment;
         }
 
-        /* renamed from: component7, reason: from getter */
+        /* JADX INFO: renamed from: component7, reason: from getter */
         public final int getUserDiscoveryFlags() {
             return this.userDiscoveryFlags;
         }
@@ -246,17 +246,20 @@ public final class WidgetSettingsPrivacy extends AppFragment {
         }
 
         /* JADX WARN: Multi-variable type inference failed */
+        /* JADX WARN: Type inference failed for: r2v12 */
+        /* JADX WARN: Type inference failed for: r2v13 */
+        /* JADX WARN: Type inference failed for: r2v2, types: [int] */
         public int hashCode() {
             MeUser meUser = this.me;
             int iHashCode = (((meUser != null ? meUser.hashCode() : 0) * 31) + this.explicitContentFilter) * 31;
             boolean z2 = this.defaultRestrictedGuilds;
-            int i = z2;
-            if (z2 != 0) {
-                i = 1;
+            ?? r2 = z2;
+            if (z2) {
+                r2 = 1;
             }
-            int i2 = (iHashCode + i) * 31;
+            int i = (iHashCode + r2) * 31;
             ModelUserSettings.FriendSourceFlags friendSourceFlags = this.friendSourceFlags;
-            int iHashCode2 = (i2 + (friendSourceFlags != null ? friendSourceFlags.hashCode() : 0)) * 31;
+            int iHashCode2 = (i + (friendSourceFlags != null ? friendSourceFlags.hashCode() : 0)) * 31;
             ConnectedAccount connectedAccount = this.contactSyncConnection;
             int iHashCode3 = (iHashCode2 + (connectedAccount != null ? connectedAccount.hashCode() : 0)) * 31;
             Experiment experiment = this.contactSyncExperiment;
@@ -281,10 +284,10 @@ public final class WidgetSettingsPrivacy extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetSettingsPrivacy.kt */
+    /* JADX INFO: compiled from: WidgetSettingsPrivacy.kt */
     public static final /* data */ class Model {
 
-        /* renamed from: Companion, reason: from kotlin metadata */
+        /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
         public static final Companion INSTANCE = new Companion(null);
         private final ModelUserConsents2 consents;
         private final ConnectedAccount contactSyncConnection;
@@ -296,25 +299,24 @@ public final class WidgetSettingsPrivacy extends AppFragment {
         private final boolean showContactSync;
         private final int userDiscoveryFlags;
 
-        /* compiled from: WidgetSettingsPrivacy.kt */
+        /* JADX INFO: compiled from: WidgetSettingsPrivacy.kt */
         public static final class Companion {
             private Companion() {
             }
 
-            /* JADX WARN: Multi-variable type inference failed */
-            /* JADX WARN: Type inference failed for: r1v10, types: [com.discord.widgets.settings.WidgetSettingsPrivacy$sam$rx_functions_Func7$0] */
             public final Observable<Model> get() {
                 StoreStream.Companion companion = StoreStream.INSTANCE;
                 Observable observableObserveMe$default = StoreUser.observeMe$default(companion.getUsers(), false, 1, null);
                 Observable<Integer> observableObserveExplicitContentFilter = companion.getUserSettings().observeExplicitContentFilter();
                 Observable<Boolean> observableObserveIsDefaultGuildsRestricted = companion.getUserSettings().observeIsDefaultGuildsRestricted();
                 Observable<ModelUserSettings.FriendSourceFlags> observableObserveFriendSourceFlags = companion.getUserSettings().observeFriendSourceFlags();
-                Observable observableM11083G = companion.getUserConnections().observeConnectedAccounts().m11083G(WidgetSettingsPrivacy$Model$Companion$get$1.INSTANCE);
+                Observable<R> observableM11083G = companion.getUserConnections().observeConnectedAccounts().m11083G(WidgetSettingsPrivacy$Model$Companion$get$1.INSTANCE);
                 Observable<Experiment> observableObserveUserExperiment = companion.getExperiments().observeUserExperiment("2021-04_contact_sync_android_main", true);
                 Observable<Integer> observableObserveFriendDiscoveryFlags = companion.getUserSettings().observeFriendDiscoveryFlags();
-                WidgetSettingsPrivacy$Model$Companion$get$2 widgetSettingsPrivacy$sam$rx_functions_Func7$0 = WidgetSettingsPrivacy$Model$Companion$get$2.INSTANCE;
-                if (widgetSettingsPrivacy$sam$rx_functions_Func7$0 != null) {
-                    widgetSettingsPrivacy$sam$rx_functions_Func7$0 = new WidgetSettingsPrivacy$sam$rx_functions_Func7$0(widgetSettingsPrivacy$sam$rx_functions_Func7$0);
+                WidgetSettingsPrivacy$Model$Companion$get$2 widgetSettingsPrivacy$Model$Companion$get$2 = WidgetSettingsPrivacy$Model$Companion$get$2.INSTANCE;
+                Object widgetSettingsPrivacy$sam$rx_functions_Func7$0 = widgetSettingsPrivacy$Model$Companion$get$2;
+                if (widgetSettingsPrivacy$Model$Companion$get$2 != null) {
+                    widgetSettingsPrivacy$sam$rx_functions_Func7$0 = new WidgetSettingsPrivacy$sam$rx_functions_Func7$0(widgetSettingsPrivacy$Model$Companion$get$2);
                 }
                 Observable observableM11099Y = Observable.m11069e(observableObserveMe$default, observableObserveExplicitContentFilter, observableObserveIsDefaultGuildsRestricted, observableObserveFriendSourceFlags, observableM11083G, observableObserveUserExperiment, observableObserveFriendDiscoveryFlags, (Func7) widgetSettingsPrivacy$sam$rx_functions_Func7$0).m11099Y(WidgetSettingsPrivacy$Model$Companion$get$3.INSTANCE);
                 Intrinsics3.checkNotNullExpressionValue(observableM11099Y, "Observable\n          .co…            }\n          }");
@@ -346,47 +348,47 @@ public final class WidgetSettingsPrivacy extends AppFragment {
             return model.copy((i3 & 1) != 0 ? model.me : meUser, (i3 & 2) != 0 ? model.explicitContentFilter : i, (i3 & 4) != 0 ? model.defaultRestrictedGuilds : z2, (i3 & 8) != 0 ? model.friendSourceFlags : friendSourceFlags, (i3 & 16) != 0 ? model.userDiscoveryFlags : i2, (i3 & 32) != 0 ? model.contactSyncConnection : connectedAccount, (i3 & 64) != 0 ? model.showContactSync : z3, (i3 & 128) != 0 ? model.consents : modelUserConsents2, (i3 & 256) != 0 ? model.harvestState : harvestState);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final MeUser getMe() {
             return this.me;
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final int getExplicitContentFilter() {
             return this.explicitContentFilter;
         }
 
-        /* renamed from: component3, reason: from getter */
+        /* JADX INFO: renamed from: component3, reason: from getter */
         public final boolean getDefaultRestrictedGuilds() {
             return this.defaultRestrictedGuilds;
         }
 
-        /* renamed from: component4, reason: from getter */
+        /* JADX INFO: renamed from: component4, reason: from getter */
         public final ModelUserSettings.FriendSourceFlags getFriendSourceFlags() {
             return this.friendSourceFlags;
         }
 
-        /* renamed from: component5, reason: from getter */
+        /* JADX INFO: renamed from: component5, reason: from getter */
         public final int getUserDiscoveryFlags() {
             return this.userDiscoveryFlags;
         }
 
-        /* renamed from: component6, reason: from getter */
+        /* JADX INFO: renamed from: component6, reason: from getter */
         public final ConnectedAccount getContactSyncConnection() {
             return this.contactSyncConnection;
         }
 
-        /* renamed from: component7, reason: from getter */
+        /* JADX INFO: renamed from: component7, reason: from getter */
         public final boolean getShowContactSync() {
             return this.showContactSync;
         }
 
-        /* renamed from: component8, reason: from getter */
+        /* JADX INFO: renamed from: component8, reason: from getter */
         public final ModelUserConsents2 getConsents() {
             return this.consents;
         }
 
-        /* renamed from: component9, reason: from getter */
+        /* JADX INFO: renamed from: component9, reason: from getter */
         public final RestAPI.HarvestState getHarvestState() {
             return this.harvestState;
         }
@@ -445,23 +447,29 @@ public final class WidgetSettingsPrivacy extends AppFragment {
         }
 
         /* JADX WARN: Multi-variable type inference failed */
+        /* JADX WARN: Type inference failed for: r2v18 */
+        /* JADX WARN: Type inference failed for: r2v19 */
+        /* JADX WARN: Type inference failed for: r2v2, types: [int] */
+        /* JADX WARN: Type inference failed for: r3v0 */
+        /* JADX WARN: Type inference failed for: r3v1, types: [int] */
+        /* JADX WARN: Type inference failed for: r3v2 */
         public int hashCode() {
             MeUser meUser = this.me;
             int iHashCode = (((meUser != null ? meUser.hashCode() : 0) * 31) + this.explicitContentFilter) * 31;
             boolean z2 = this.defaultRestrictedGuilds;
-            int i = z2;
-            if (z2 != 0) {
-                i = 1;
+            ?? r2 = z2;
+            if (z2) {
+                r2 = 1;
             }
-            int i2 = (iHashCode + i) * 31;
+            int i = (iHashCode + r2) * 31;
             ModelUserSettings.FriendSourceFlags friendSourceFlags = this.friendSourceFlags;
-            int iHashCode2 = (((i2 + (friendSourceFlags != null ? friendSourceFlags.hashCode() : 0)) * 31) + this.userDiscoveryFlags) * 31;
+            int iHashCode2 = (((i + (friendSourceFlags != null ? friendSourceFlags.hashCode() : 0)) * 31) + this.userDiscoveryFlags) * 31;
             ConnectedAccount connectedAccount = this.contactSyncConnection;
             int iHashCode3 = (iHashCode2 + (connectedAccount != null ? connectedAccount.hashCode() : 0)) * 31;
             boolean z3 = this.showContactSync;
-            int i3 = (iHashCode3 + (z3 ? 1 : z3 ? 1 : 0)) * 31;
+            int i2 = (iHashCode3 + (z3 ? 1 : z3)) * 31;
             ModelUserConsents2 modelUserConsents2 = this.consents;
-            int iHashCode4 = (i3 + (modelUserConsents2 != null ? modelUserConsents2.hashCode() : 0)) * 31;
+            int iHashCode4 = (i2 + (modelUserConsents2 != null ? modelUserConsents2.hashCode() : 0)) * 31;
             RestAPI.HarvestState harvestState = this.harvestState;
             return iHashCode4 + (harvestState != null ? harvestState.hashCode() : 0);
         }
@@ -490,8 +498,8 @@ public final class WidgetSettingsPrivacy extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetSettingsPrivacy.kt */
-    /* renamed from: com.discord.widgets.settings.WidgetSettingsPrivacy$configureContactSyncOptions$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.WidgetSettingsPrivacy$configureContactSyncOptions$1 */
+    /* JADX INFO: compiled from: WidgetSettingsPrivacy.kt */
     public static final class C96611 extends Lambda implements Function1<RenderContext, Unit> {
         public C96611() {
             super(1);
@@ -503,12 +511,12 @@ public final class WidgetSettingsPrivacy extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* compiled from: WidgetSettingsPrivacy.kt */
-        /* renamed from: com.discord.widgets.settings.WidgetSettingsPrivacy$configureContactSyncOptions$1$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.widgets.settings.WidgetSettingsPrivacy$configureContactSyncOptions$1$1, reason: invalid class name */
+        /* JADX INFO: compiled from: WidgetSettingsPrivacy.kt */
         public static final class AnonymousClass1 extends Lambda implements Function1<Hook, Unit> {
 
-            /* compiled from: WidgetSettingsPrivacy.kt */
-            /* renamed from: com.discord.widgets.settings.WidgetSettingsPrivacy$configureContactSyncOptions$1$1$1, reason: invalid class name and collision with other inner class name */
+            /* JADX INFO: renamed from: com.discord.widgets.settings.WidgetSettingsPrivacy$configureContactSyncOptions$1$1$1, reason: invalid class name and collision with other inner class name */
+            /* JADX INFO: compiled from: WidgetSettingsPrivacy.kt */
             public static final class C132901 extends Lambda implements Function1<View, Unit> {
                 public static final C132901 INSTANCE = new C132901();
 
@@ -522,7 +530,7 @@ public final class WidgetSettingsPrivacy extends AppFragment {
                     return Unit.f27425a;
                 }
 
-                /* renamed from: invoke, reason: avoid collision after fix types in other method */
+                /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
                 public final void invoke2(View view) {
                     Intrinsics3.checkNotNullParameter(view, "it");
                     UriHandler uriHandler = UriHandler.INSTANCE;
@@ -536,7 +544,7 @@ public final class WidgetSettingsPrivacy extends AppFragment {
                 super(1);
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2(Hook hook) {
                 Intrinsics3.checkNotNullParameter(hook, "$receiver");
                 hook.styles.add(new ClickableSpan(Integer.valueOf(ColorCompat.getColor(WidgetSettingsPrivacy.this.getContext(), C5419R.color.link)), false, null, C132901.INSTANCE, 4, null));
@@ -549,15 +557,15 @@ public final class WidgetSettingsPrivacy extends AppFragment {
             }
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(RenderContext renderContext) {
             Intrinsics3.checkNotNullParameter(renderContext, "$receiver");
             renderContext.m8422a("onClick", new AnonymousClass1());
         }
     }
 
-    /* compiled from: WidgetSettingsPrivacy.kt */
-    /* renamed from: com.discord.widgets.settings.WidgetSettingsPrivacy$configureContactSyncOptions$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.WidgetSettingsPrivacy$configureContactSyncOptions$2 */
+    /* JADX INFO: compiled from: WidgetSettingsPrivacy.kt */
     public static final class ViewOnClickListenerC96622 implements View.OnClickListener {
         public final /* synthetic */ Model $model;
 
@@ -590,8 +598,8 @@ public final class WidgetSettingsPrivacy extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetSettingsPrivacy.kt */
-    /* renamed from: com.discord.widgets.settings.WidgetSettingsPrivacy$configureContactSyncOptions$3 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.WidgetSettingsPrivacy$configureContactSyncOptions$3 */
+    /* JADX INFO: compiled from: WidgetSettingsPrivacy.kt */
     public static final class ViewOnClickListenerC96633 implements View.OnClickListener {
         public ViewOnClickListenerC96633() {
         }
@@ -615,8 +623,8 @@ public final class WidgetSettingsPrivacy extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetSettingsPrivacy.kt */
-    /* renamed from: com.discord.widgets.settings.WidgetSettingsPrivacy$configureContactSyncOptions$4 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.WidgetSettingsPrivacy$configureContactSyncOptions$4 */
+    /* JADX INFO: compiled from: WidgetSettingsPrivacy.kt */
     public static final class ViewOnClickListenerC96644 implements View.OnClickListener {
         public ViewOnClickListenerC96644() {
         }
@@ -640,8 +648,8 @@ public final class WidgetSettingsPrivacy extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetSettingsPrivacy.kt */
-    /* renamed from: com.discord.widgets.settings.WidgetSettingsPrivacy$configureContactSyncOptions$5 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.WidgetSettingsPrivacy$configureContactSyncOptions$5 */
+    /* JADX INFO: compiled from: WidgetSettingsPrivacy.kt */
     public static final class ViewOnClickListenerC96655 implements View.OnClickListener {
         public final /* synthetic */ Model $model;
 
@@ -657,8 +665,8 @@ public final class WidgetSettingsPrivacy extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetSettingsPrivacy.kt */
-    /* renamed from: com.discord.widgets.settings.WidgetSettingsPrivacy$configureDefaultGuildsRestricted$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.WidgetSettingsPrivacy$configureDefaultGuildsRestricted$1 */
+    /* JADX INFO: compiled from: WidgetSettingsPrivacy.kt */
     public static final class ViewOnClickListenerC96661 implements View.OnClickListener {
         public final /* synthetic */ Model $model;
 
@@ -672,8 +680,8 @@ public final class WidgetSettingsPrivacy extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetSettingsPrivacy.kt */
-    /* renamed from: com.discord.widgets.settings.WidgetSettingsPrivacy$configureExplicitContentRadio$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.WidgetSettingsPrivacy$configureExplicitContentRadio$1 */
+    /* JADX INFO: compiled from: WidgetSettingsPrivacy.kt */
     public static final class ViewOnClickListenerC96671 implements View.OnClickListener {
         public final /* synthetic */ int $explicitContentFilter;
 
@@ -687,8 +695,8 @@ public final class WidgetSettingsPrivacy extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetSettingsPrivacy.kt */
-    /* renamed from: com.discord.widgets.settings.WidgetSettingsPrivacy$configureFriendSourceRadio$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.WidgetSettingsPrivacy$configureFriendSourceRadio$1 */
+    /* JADX INFO: compiled from: WidgetSettingsPrivacy.kt */
     public static final class C96681<T> implements Action1<Boolean> {
         public C96681() {
         }
@@ -698,7 +706,7 @@ public final class WidgetSettingsPrivacy extends AppFragment {
             call2(bool);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final void call2(Boolean bool) {
             WidgetSettingsPrivacy widgetSettingsPrivacy = WidgetSettingsPrivacy.this;
             Intrinsics3.checkNotNullExpressionValue(bool, "checked");
@@ -706,8 +714,8 @@ public final class WidgetSettingsPrivacy extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetSettingsPrivacy.kt */
-    /* renamed from: com.discord.widgets.settings.WidgetSettingsPrivacy$configureFriendSourceRadio$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.WidgetSettingsPrivacy$configureFriendSourceRadio$2 */
+    /* JADX INFO: compiled from: WidgetSettingsPrivacy.kt */
     public static final class C96692<T> implements Action1<Boolean> {
         public C96692() {
         }
@@ -717,7 +725,7 @@ public final class WidgetSettingsPrivacy extends AppFragment {
             call2(bool);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final void call2(Boolean bool) {
             WidgetSettingsPrivacy widgetSettingsPrivacy = WidgetSettingsPrivacy.this;
             Intrinsics3.checkNotNullExpressionValue(bool, "checked");
@@ -725,8 +733,8 @@ public final class WidgetSettingsPrivacy extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetSettingsPrivacy.kt */
-    /* renamed from: com.discord.widgets.settings.WidgetSettingsPrivacy$configureFriendSourceRadio$3 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.WidgetSettingsPrivacy$configureFriendSourceRadio$3 */
+    /* JADX INFO: compiled from: WidgetSettingsPrivacy.kt */
     public static final class C96703<T> implements Action1<Boolean> {
         public C96703() {
         }
@@ -736,7 +744,7 @@ public final class WidgetSettingsPrivacy extends AppFragment {
             call2(bool);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final void call2(Boolean bool) {
             WidgetSettingsPrivacy widgetSettingsPrivacy = WidgetSettingsPrivacy.this;
             Intrinsics3.checkNotNullExpressionValue(bool, "checked");
@@ -744,18 +752,18 @@ public final class WidgetSettingsPrivacy extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetSettingsPrivacy.kt */
-    /* renamed from: com.discord.widgets.settings.WidgetSettingsPrivacy$configurePrivacyControls$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.WidgetSettingsPrivacy$configurePrivacyControls$1 */
+    /* JADX INFO: compiled from: WidgetSettingsPrivacy.kt */
     public static final class C96711<T> implements Action1<Boolean> {
         public final /* synthetic */ Context $context;
 
-        /* compiled from: WidgetSettingsPrivacy.kt */
-        /* renamed from: com.discord.widgets.settings.WidgetSettingsPrivacy$configurePrivacyControls$1$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.widgets.settings.WidgetSettingsPrivacy$configurePrivacyControls$1$1, reason: invalid class name */
+        /* JADX INFO: compiled from: WidgetSettingsPrivacy.kt */
         public static final class AnonymousClass1 extends Lambda implements Function5<AlertDialog, TextView, TextView, TextView, TextView, Unit> {
             public final /* synthetic */ Boolean $consented;
 
-            /* compiled from: WidgetSettingsPrivacy.kt */
-            /* renamed from: com.discord.widgets.settings.WidgetSettingsPrivacy$configurePrivacyControls$1$1$1, reason: invalid class name and collision with other inner class name */
+            /* JADX INFO: renamed from: com.discord.widgets.settings.WidgetSettingsPrivacy$configurePrivacyControls$1$1$1, reason: invalid class name and collision with other inner class name */
+            /* JADX INFO: compiled from: WidgetSettingsPrivacy.kt */
             public static final class ViewOnClickListenerC132911 implements View.OnClickListener {
                 public final /* synthetic */ AlertDialog $dialog;
 
@@ -775,8 +783,8 @@ public final class WidgetSettingsPrivacy extends AppFragment {
                 }
             }
 
-            /* compiled from: WidgetSettingsPrivacy.kt */
-            /* renamed from: com.discord.widgets.settings.WidgetSettingsPrivacy$configurePrivacyControls$1$1$2, reason: invalid class name */
+            /* JADX INFO: renamed from: com.discord.widgets.settings.WidgetSettingsPrivacy$configurePrivacyControls$1$1$2, reason: invalid class name */
+            /* JADX INFO: compiled from: WidgetSettingsPrivacy.kt */
             public static final class AnonymousClass2 implements View.OnClickListener {
                 public final /* synthetic */ AlertDialog $dialog;
 
@@ -810,7 +818,7 @@ public final class WidgetSettingsPrivacy extends AppFragment {
                 return Unit.f27425a;
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2(AlertDialog alertDialog, TextView textView, TextView textView2, TextView textView3, TextView textView4) {
                 Intrinsics3.checkNotNullParameter(alertDialog, "dialog");
                 Intrinsics3.checkNotNullParameter(textView, "dialogHeader");
@@ -835,7 +843,7 @@ public final class WidgetSettingsPrivacy extends AppFragment {
             call2(bool);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final void call2(Boolean bool) {
             CheckedSetting checkedSetting = WidgetSettingsPrivacy.access$getBinding$p(WidgetSettingsPrivacy.this).f18075z;
             Intrinsics3.checkNotNullExpressionValue(checkedSetting, "binding.settingsPrivacyStatistics");
@@ -853,18 +861,18 @@ public final class WidgetSettingsPrivacy extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetSettingsPrivacy.kt */
-    /* renamed from: com.discord.widgets.settings.WidgetSettingsPrivacy$configurePrivacyControls$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.WidgetSettingsPrivacy$configurePrivacyControls$2 */
+    /* JADX INFO: compiled from: WidgetSettingsPrivacy.kt */
     public static final class C96722<T> implements Action1<Boolean> {
         public final /* synthetic */ Context $context;
 
-        /* compiled from: WidgetSettingsPrivacy.kt */
-        /* renamed from: com.discord.widgets.settings.WidgetSettingsPrivacy$configurePrivacyControls$2$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.widgets.settings.WidgetSettingsPrivacy$configurePrivacyControls$2$1, reason: invalid class name */
+        /* JADX INFO: compiled from: WidgetSettingsPrivacy.kt */
         public static final class AnonymousClass1 extends Lambda implements Function5<AlertDialog, TextView, TextView, TextView, TextView, Unit> {
             public final /* synthetic */ Boolean $consented;
 
-            /* compiled from: WidgetSettingsPrivacy.kt */
-            /* renamed from: com.discord.widgets.settings.WidgetSettingsPrivacy$configurePrivacyControls$2$1$1, reason: invalid class name and collision with other inner class name */
+            /* JADX INFO: renamed from: com.discord.widgets.settings.WidgetSettingsPrivacy$configurePrivacyControls$2$1$1, reason: invalid class name and collision with other inner class name */
+            /* JADX INFO: compiled from: WidgetSettingsPrivacy.kt */
             public static final class ViewOnClickListenerC132921 implements View.OnClickListener {
                 public final /* synthetic */ AlertDialog $dialog;
 
@@ -884,8 +892,8 @@ public final class WidgetSettingsPrivacy extends AppFragment {
                 }
             }
 
-            /* compiled from: WidgetSettingsPrivacy.kt */
-            /* renamed from: com.discord.widgets.settings.WidgetSettingsPrivacy$configurePrivacyControls$2$1$2, reason: invalid class name */
+            /* JADX INFO: renamed from: com.discord.widgets.settings.WidgetSettingsPrivacy$configurePrivacyControls$2$1$2, reason: invalid class name */
+            /* JADX INFO: compiled from: WidgetSettingsPrivacy.kt */
             public static final class AnonymousClass2 implements View.OnClickListener {
                 public final /* synthetic */ AlertDialog $dialog;
 
@@ -919,7 +927,7 @@ public final class WidgetSettingsPrivacy extends AppFragment {
                 return Unit.f27425a;
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2(AlertDialog alertDialog, TextView textView, TextView textView2, TextView textView3, TextView textView4) {
                 Intrinsics3.checkNotNullParameter(alertDialog, "dialog");
                 Intrinsics3.checkNotNullParameter(textView, "dialogHeader");
@@ -944,7 +952,7 @@ public final class WidgetSettingsPrivacy extends AppFragment {
             call2(bool);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final void call2(Boolean bool) {
             CheckedSetting checkedSetting = WidgetSettingsPrivacy.access$getBinding$p(WidgetSettingsPrivacy.this).f18071v;
             Intrinsics3.checkNotNullExpressionValue(checkedSetting, "binding.settingsPrivacyPersonalization");
@@ -962,8 +970,8 @@ public final class WidgetSettingsPrivacy extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetSettingsPrivacy.kt */
-    /* renamed from: com.discord.widgets.settings.WidgetSettingsPrivacy$configureRequestDataButton$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.WidgetSettingsPrivacy$configureRequestDataButton$1 */
+    /* JADX INFO: compiled from: WidgetSettingsPrivacy.kt */
     public static final class ViewOnClickListenerC96731 implements View.OnClickListener {
         public final /* synthetic */ RestAPI.HarvestState $harvestState;
         public final /* synthetic */ boolean $isMeVerified;
@@ -988,8 +996,8 @@ public final class WidgetSettingsPrivacy extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetSettingsPrivacy.kt */
-    /* renamed from: com.discord.widgets.settings.WidgetSettingsPrivacy$onRequestDataClick$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.WidgetSettingsPrivacy$onRequestDataClick$1 */
+    /* JADX INFO: compiled from: WidgetSettingsPrivacy.kt */
     public static final class C96741 extends Lambda implements Function1<ModelUserConsents3, Unit> {
         public final /* synthetic */ Context $context;
 
@@ -1005,7 +1013,7 @@ public final class WidgetSettingsPrivacy extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(ModelUserConsents3 modelUserConsents3) {
             Intrinsics3.checkNotNullParameter(modelUserConsents3, "requestedHarvest");
             WidgetNoticeDialog.Builder positiveButton$default = WidgetNoticeDialog.Builder.setPositiveButton$default(new WidgetNoticeDialog.Builder(this.$context).setTitle(C5419R.string.data_privacy_controls_request_data_success_title).setMessage(C5419R.string.data_privacy_controls_request_data_success_body), C5419R.string.okay, (Function1) null, 2, (Object) null);
@@ -1016,8 +1024,8 @@ public final class WidgetSettingsPrivacy extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetSettingsPrivacy.kt */
-    /* renamed from: com.discord.widgets.settings.WidgetSettingsPrivacy$onRequestDataClick$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.WidgetSettingsPrivacy$onRequestDataClick$2 */
+    /* JADX INFO: compiled from: WidgetSettingsPrivacy.kt */
     public static final class C96752 extends Lambda implements Function1<String, Unit> {
         public final /* synthetic */ Context $context;
 
@@ -1040,31 +1048,29 @@ public final class WidgetSettingsPrivacy extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* JADX WARN: Multi-variable type inference failed */
-        /* JADX WARN: Type inference failed for: r6v5, types: [java.lang.CharSequence] */
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(String str) {
             WidgetNoticeDialog.Builder title = new WidgetNoticeDialog.Builder(this.$context).setTitle(C5419R.string.data_privacy_controls_request_data_failure_title);
-            String strM216h = str;
+            CharSequence charSequenceM216h = str;
             if (str == null) {
-                strM216h = FormatUtils.m216h(this.$context, C5419R.string.data_privacy_controls_request_data_failure_body, new Object[0], null, 4);
+                charSequenceM216h = FormatUtils.m216h(this.$context, C5419R.string.data_privacy_controls_request_data_failure_body, new Object[0], null, 4);
             }
-            WidgetNoticeDialog.Builder positiveButton$default = WidgetNoticeDialog.Builder.setPositiveButton$default(title.setMessage(strM216h), C5419R.string.okay, (Function1) null, 2, (Object) null);
+            WidgetNoticeDialog.Builder positiveButton$default = WidgetNoticeDialog.Builder.setPositiveButton$default(title.setMessage(charSequenceM216h), C5419R.string.okay, (Function1) null, 2, (Object) null);
             FragmentManager parentFragmentManager = WidgetSettingsPrivacy.this.getParentFragmentManager();
             Intrinsics3.checkNotNullExpressionValue(parentFragmentManager, "parentFragmentManager");
             positiveButton$default.show(parentFragmentManager);
         }
     }
 
-    /* compiled from: WidgetSettingsPrivacy.kt */
-    /* renamed from: com.discord.widgets.settings.WidgetSettingsPrivacy$onRequestDataClick$3 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.WidgetSettingsPrivacy$onRequestDataClick$3 */
+    /* JADX INFO: compiled from: WidgetSettingsPrivacy.kt */
     public static final class C96763 extends Lambda implements Function0<Unit> {
         public final /* synthetic */ Context $context;
         public final /* synthetic */ C96752 $handleRequestError$2;
         public final /* synthetic */ C96741 $handleRequestSuccess$1;
 
-        /* compiled from: WidgetSettingsPrivacy.kt */
-        /* renamed from: com.discord.widgets.settings.WidgetSettingsPrivacy$onRequestDataClick$3$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.widgets.settings.WidgetSettingsPrivacy$onRequestDataClick$3$1, reason: invalid class name */
+        /* JADX INFO: compiled from: WidgetSettingsPrivacy.kt */
         public static final class AnonymousClass1 extends Lambda implements Function1<Error, Unit> {
             public AnonymousClass1() {
                 super(1);
@@ -1076,7 +1082,7 @@ public final class WidgetSettingsPrivacy extends AppFragment {
                 return Unit.f27425a;
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2(Error error) {
                 Intrinsics3.checkNotNullParameter(error, "it");
                 C96752 c96752 = C96763.this.$handleRequestError$2;
@@ -1087,8 +1093,8 @@ public final class WidgetSettingsPrivacy extends AppFragment {
             }
         }
 
-        /* compiled from: WidgetSettingsPrivacy.kt */
-        /* renamed from: com.discord.widgets.settings.WidgetSettingsPrivacy$onRequestDataClick$3$2, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.widgets.settings.WidgetSettingsPrivacy$onRequestDataClick$3$2, reason: invalid class name */
+        /* JADX INFO: compiled from: WidgetSettingsPrivacy.kt */
         public static final class AnonymousClass2 extends Lambda implements Function1<ModelUserConsents3, Unit> {
             public AnonymousClass2() {
                 super(1);
@@ -1100,7 +1106,7 @@ public final class WidgetSettingsPrivacy extends AppFragment {
                 return Unit.f27425a;
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2(ModelUserConsents3 modelUserConsents3) {
                 if (modelUserConsents3 != null) {
                     C96763.this.$handleRequestSuccess$1.invoke2(modelUserConsents3);
@@ -1124,20 +1130,20 @@ public final class WidgetSettingsPrivacy extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.withDimmer(ObservableExtensionsKt.m8518ui(ObservableExtensionsKt.restSubscribeOn(RestAPI.INSTANCE.getApi().requestHarvest(), false)), WidgetSettingsPrivacy.access$getBinding$p(WidgetSettingsPrivacy.this).f18056g, 100L), WidgetSettingsPrivacy.this.getClass(), this.$context, (Function1) null, new AnonymousClass1(), (Function0) null, (Function0) null, new AnonymousClass2(), 52, (Object) null);
         }
     }
 
-    /* compiled from: WidgetSettingsPrivacy.kt */
-    /* renamed from: com.discord.widgets.settings.WidgetSettingsPrivacy$onRequestDataClick$4 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.WidgetSettingsPrivacy$onRequestDataClick$4 */
+    /* JADX INFO: compiled from: WidgetSettingsPrivacy.kt */
     public static final class C96774 extends Lambda implements Function0<Unit> {
         public final /* synthetic */ Context $context;
         public final /* synthetic */ C96763 $requestHarvest$3;
 
-        /* compiled from: WidgetSettingsPrivacy.kt */
-        /* renamed from: com.discord.widgets.settings.WidgetSettingsPrivacy$onRequestDataClick$4$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.widgets.settings.WidgetSettingsPrivacy$onRequestDataClick$4$1, reason: invalid class name */
+        /* JADX INFO: compiled from: WidgetSettingsPrivacy.kt */
         public static final class AnonymousClass1 extends Lambda implements Function1<View, Unit> {
             public AnonymousClass1() {
                 super(1);
@@ -1149,7 +1155,7 @@ public final class WidgetSettingsPrivacy extends AppFragment {
                 return Unit.f27425a;
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2(View view) {
                 Intrinsics3.checkNotNullParameter(view, "it");
                 C96774.this.$requestHarvest$3.invoke2();
@@ -1169,7 +1175,7 @@ public final class WidgetSettingsPrivacy extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             WidgetNoticeDialog.Builder negativeButton$default = WidgetNoticeDialog.Builder.setNegativeButton$default(new WidgetNoticeDialog.Builder(this.$context).setTitle(C5419R.string.data_privacy_controls_request_data_download).setMessage(C5419R.string.data_privacy_controls_request_data_modal_note).setPositiveButton(C5419R.string.okay, new AnonymousClass1()), C5419R.string.cancel, (Function1) null, 2, (Object) null);
             FragmentManager parentFragmentManager = WidgetSettingsPrivacy.this.getParentFragmentManager();
@@ -1178,13 +1184,13 @@ public final class WidgetSettingsPrivacy extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetSettingsPrivacy.kt */
-    /* renamed from: com.discord.widgets.settings.WidgetSettingsPrivacy$onViewBound$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.WidgetSettingsPrivacy$onViewBound$2 */
+    /* JADX INFO: compiled from: WidgetSettingsPrivacy.kt */
     public static final class C96782 extends Lambda implements Function1<RenderContext, Unit> {
         public static final C96782 INSTANCE = new C96782();
 
-        /* compiled from: WidgetSettingsPrivacy.kt */
-        /* renamed from: com.discord.widgets.settings.WidgetSettingsPrivacy$onViewBound$2$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.widgets.settings.WidgetSettingsPrivacy$onViewBound$2$1, reason: invalid class name */
+        /* JADX INFO: compiled from: WidgetSettingsPrivacy.kt */
         public static final class AnonymousClass1 extends Lambda implements Function1<View, Unit> {
             public static final AnonymousClass1 INSTANCE = new AnonymousClass1();
 
@@ -1198,7 +1204,7 @@ public final class WidgetSettingsPrivacy extends AppFragment {
                 return Unit.f27425a;
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2(View view) {
                 Intrinsics3.checkNotNullParameter(view, "it");
                 UriHandler uriHandler = UriHandler.INSTANCE;
@@ -1218,15 +1224,15 @@ public final class WidgetSettingsPrivacy extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(RenderContext renderContext) {
             Intrinsics3.checkNotNullParameter(renderContext, "$receiver");
             renderContext.m8423b("onClick", AnonymousClass1.INSTANCE);
         }
     }
 
-    /* compiled from: WidgetSettingsPrivacy.kt */
-    /* renamed from: com.discord.widgets.settings.WidgetSettingsPrivacy$onViewBound$3 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.WidgetSettingsPrivacy$onViewBound$3 */
+    /* JADX INFO: compiled from: WidgetSettingsPrivacy.kt */
     public static final class ViewOnClickListenerC96793 implements View.OnClickListener {
         public static final ViewOnClickListenerC96793 INSTANCE = new ViewOnClickListenerC96793();
 
@@ -1240,8 +1246,8 @@ public final class WidgetSettingsPrivacy extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetSettingsPrivacy.kt */
-    /* renamed from: com.discord.widgets.settings.WidgetSettingsPrivacy$onViewBound$4 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.WidgetSettingsPrivacy$onViewBound$4 */
+    /* JADX INFO: compiled from: WidgetSettingsPrivacy.kt */
     public static final class ViewOnClickListenerC96804 implements View.OnClickListener {
         public final /* synthetic */ String $dataRequestArticleUrl;
 
@@ -1255,8 +1261,8 @@ public final class WidgetSettingsPrivacy extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetSettingsPrivacy.kt */
-    /* renamed from: com.discord.widgets.settings.WidgetSettingsPrivacy$onViewBoundOrOnResume$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.WidgetSettingsPrivacy$onViewBoundOrOnResume$1 */
+    /* JADX INFO: compiled from: WidgetSettingsPrivacy.kt */
     public static final /* synthetic */ class C96811 extends FunctionReferenceImpl implements Function1<Model, Unit> {
         public C96811(WidgetSettingsPrivacy widgetSettingsPrivacy) {
             super(1, widgetSettingsPrivacy, WidgetSettingsPrivacy.class, "configureUI", "configureUI(Lcom/discord/widgets/settings/WidgetSettingsPrivacy$Model;)V", 0);
@@ -1268,15 +1274,15 @@ public final class WidgetSettingsPrivacy extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Model model) {
             Intrinsics3.checkNotNullParameter(model, "p1");
             WidgetSettingsPrivacy.access$configureUI((WidgetSettingsPrivacy) this.receiver, model);
         }
     }
 
-    /* compiled from: WidgetSettingsPrivacy.kt */
-    /* renamed from: com.discord.widgets.settings.WidgetSettingsPrivacy$onViewBoundOrOnResume$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.WidgetSettingsPrivacy$onViewBoundOrOnResume$2 */
+    /* JADX INFO: compiled from: WidgetSettingsPrivacy.kt */
     public static final class C96822 extends Lambda implements Function1<Boolean, Unit> {
         public C96822() {
             super(1);
@@ -1295,8 +1301,8 @@ public final class WidgetSettingsPrivacy extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetSettingsPrivacy.kt */
-    /* renamed from: com.discord.widgets.settings.WidgetSettingsPrivacy$toggleConsent$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.WidgetSettingsPrivacy$toggleConsent$1 */
+    /* JADX INFO: compiled from: WidgetSettingsPrivacy.kt */
     public static final class C96851 extends Lambda implements Function1<Void, Unit> {
         public final /* synthetic */ CheckedSetting $toggle;
 
@@ -1312,14 +1318,14 @@ public final class WidgetSettingsPrivacy extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Void r2) {
             this.$toggle.setEnabled(true);
         }
     }
 
-    /* compiled from: WidgetSettingsPrivacy.kt */
-    /* renamed from: com.discord.widgets.settings.WidgetSettingsPrivacy$toggleConsent$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.WidgetSettingsPrivacy$toggleConsent$2 */
+    /* JADX INFO: compiled from: WidgetSettingsPrivacy.kt */
     public static final class C96862<T> implements Action1<Error> {
         public final /* synthetic */ boolean $consented;
         public final /* synthetic */ CheckedSetting $toggle;
@@ -1334,15 +1340,15 @@ public final class WidgetSettingsPrivacy extends AppFragment {
             call2(error);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final void call2(Error error) {
             this.$toggle.setEnabled(true);
             this.$toggle.setChecked(true ^ this.$consented);
         }
     }
 
-    /* compiled from: WidgetSettingsPrivacy.kt */
-    /* renamed from: com.discord.widgets.settings.WidgetSettingsPrivacy$updateDefaultGuildsRestricted$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.WidgetSettingsPrivacy$updateDefaultGuildsRestricted$1 */
+    /* JADX INFO: compiled from: WidgetSettingsPrivacy.kt */
     public static final class C96871<T, R> implements Func1<Map<Long, ? extends Guild>, Set<? extends Long>> {
         public static final C96871 INSTANCE = new C96871();
 
@@ -1351,14 +1357,14 @@ public final class WidgetSettingsPrivacy extends AppFragment {
             return call2((Map<Long, Guild>) map);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final Set<Long> call2(Map<Long, Guild> map) {
             return map.keySet();
         }
     }
 
-    /* compiled from: WidgetSettingsPrivacy.kt */
-    /* renamed from: com.discord.widgets.settings.WidgetSettingsPrivacy$updateDefaultGuildsRestricted$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.WidgetSettingsPrivacy$updateDefaultGuildsRestricted$2 */
+    /* JADX INFO: compiled from: WidgetSettingsPrivacy.kt */
     public static final class C96882 extends Lambda implements Function1<Set<? extends Long>, Unit> {
         public final /* synthetic */ boolean $defaultGuildsRestricted;
 
@@ -1374,7 +1380,7 @@ public final class WidgetSettingsPrivacy extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Set<Long> set) {
             StoreStream.INSTANCE.getUserSettings().setDefaultGuildsRestricted(WidgetSettingsPrivacy.this.getAppActivity(), this.$defaultGuildsRestricted, set);
         }

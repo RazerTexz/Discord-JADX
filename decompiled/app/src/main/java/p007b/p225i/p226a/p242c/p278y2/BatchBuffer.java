@@ -4,18 +4,18 @@ import com.google.android.exoplayer2.decoder.DecoderInputBuffer;
 import java.nio.ByteBuffer;
 import p007b.p085c.p086a.p087a0.AnimatableValueParser;
 
-/* compiled from: BatchBuffer.java */
-/* renamed from: b.i.a.c.y2.p, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.y2.p, reason: use source file name */
+/* JADX INFO: compiled from: BatchBuffer.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class BatchBuffer extends DecoderInputBuffer {
 
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     public long f9096r;
 
-    /* renamed from: s */
+    /* JADX INFO: renamed from: s */
     public int f9097s;
 
-    /* renamed from: t */
+    /* JADX INFO: renamed from: t */
     public int f9098t;
 
     public BatchBuffer() {
@@ -24,13 +24,13 @@ public final class BatchBuffer extends DecoderInputBuffer {
     }
 
     @Override // com.google.android.exoplayer2.decoder.DecoderInputBuffer
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public void mo3856p() {
         super.mo3856p();
         this.f9097s = 0;
     }
 
-    /* renamed from: u */
+    /* JADX INFO: renamed from: u */
     public boolean m3857u(DecoderInputBuffer decoderInputBuffer) {
         ByteBuffer byteBuffer;
         boolean z2;
@@ -73,7 +73,7 @@ public final class BatchBuffer extends DecoderInputBuffer {
         return true;
     }
 
-    /* renamed from: v */
+    /* JADX INFO: renamed from: v */
     public boolean m3858v() {
         return this.f9097s > 0;
     }

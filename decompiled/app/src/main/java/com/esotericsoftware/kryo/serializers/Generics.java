@@ -3,7 +3,7 @@ package com.esotericsoftware.kryo.serializers;
 import java.util.HashMap;
 import java.util.Map;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public final class Generics {
     private Map<String, Class> typeVar2class;
 

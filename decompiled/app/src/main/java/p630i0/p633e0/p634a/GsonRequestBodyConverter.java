@@ -13,21 +13,21 @@ import p615g0.Buffer3;
 import p615g0.Buffer4;
 import p630i0.Converter2;
 
-/* compiled from: GsonRequestBodyConverter.java */
-/* renamed from: i0.e0.a.b, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: i0.e0.a.b, reason: use source file name */
+/* JADX INFO: compiled from: GsonRequestBodyConverter.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class GsonRequestBodyConverter<T> implements Converter2<T, RequestBody> {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final MediaType f26511a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static final Charset f26512b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final Gson f26513c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final TypeAdapter<T> f26514d;
 
     static {

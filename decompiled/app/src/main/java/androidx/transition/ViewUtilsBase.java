@@ -10,7 +10,7 @@ import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class ViewUtilsBase {
     private static final String TAG = "ViewUtilsBase";
     private static final int VISIBILITY_MASK = 12;
@@ -21,7 +21,7 @@ public class ViewUtilsBase {
     private float[] mMatrixValues;
 
     @SuppressLint({"PrivateApi"})
-    private void fetchSetFrame() throws SecurityException {
+    private void fetchSetFrame() {
         if (sSetFrameFetched) {
             return;
         }
@@ -87,7 +87,7 @@ public class ViewUtilsBase {
         view.setScaleY(f3);
     }
 
-    public void setLeftTopRightBottom(@NonNull View view, int i, int i2, int i3, int i4) throws SecurityException, IllegalArgumentException {
+    public void setLeftTopRightBottom(@NonNull View view, int i, int i2, int i3, int i4) {
         fetchSetFrame();
         Method method = sSetFrameMethod;
         if (method != null) {
@@ -109,7 +109,7 @@ public class ViewUtilsBase {
         }
     }
 
-    public void setTransitionVisibility(@NonNull View view, int i) throws IllegalArgumentException {
+    public void setTransitionVisibility(@NonNull View view, int i) {
         if (!sViewFlagsFieldFetched) {
             try {
                 Field declaredField = View.class.getDeclaredField("mViewFlags");

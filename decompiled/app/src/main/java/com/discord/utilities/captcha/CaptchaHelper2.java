@@ -10,9 +10,9 @@ import kotlin.jvm.functions.Function1;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: CaptchaHelper.kt */
-/* renamed from: com.discord.utilities.captcha.CaptchaHelper$showCaptchaHelpDialog$$inlined$let$lambda$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.utilities.captcha.CaptchaHelper$showCaptchaHelpDialog$$inlined$let$lambda$1, reason: use source file name */
+/* JADX INFO: compiled from: CaptchaHelper.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class CaptchaHelper2 extends Lambda implements Function1<View, Unit> {
     public final /* synthetic */ AppActivity $activity$inlined;
     public final /* synthetic */ Function0 $onOpenBrowser$inlined;
@@ -30,7 +30,7 @@ public final class CaptchaHelper2 extends Lambda implements Function1<View, Unit
         return Unit.f27425a;
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final void invoke2(View view) {
         Intrinsics3.checkNotNullParameter(view, "it");
         view.getContext().startActivity(new Intent("android.intent.action.VIEW", Uri.parse("https://discord.com/app")));

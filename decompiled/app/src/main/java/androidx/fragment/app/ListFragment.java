@@ -18,7 +18,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class ListFragment extends Fragment {
     public static final int INTERNAL_EMPTY_ID = 16711681;
     public static final int INTERNAL_LIST_CONTAINER_ID = 16711683;
@@ -35,7 +35,7 @@ public class ListFragment extends Fragment {
     private final Runnable mRequestFocus = new RunnableC04131();
     private final AdapterView.OnItemClickListener mOnClickListener = new C04142();
 
-    /* renamed from: androidx.fragment.app.ListFragment$1 */
+    /* JADX INFO: renamed from: androidx.fragment.app.ListFragment$1 */
     public class RunnableC04131 implements Runnable {
         public RunnableC04131() {
         }
@@ -47,7 +47,7 @@ public class ListFragment extends Fragment {
         }
     }
 
-    /* renamed from: androidx.fragment.app.ListFragment$2 */
+    /* JADX INFO: renamed from: androidx.fragment.app.ListFragment$2 */
     public class C04142 implements AdapterView.OnItemClickListener {
         public C04142() {
         }

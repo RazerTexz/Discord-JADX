@@ -19,14 +19,14 @@ import p507d0.p580t._Collections;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: SharedPreferenceExtensions.kt */
-/* renamed from: com.discord.utilities.cache.SharedPreferenceExtensionsKt, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.utilities.cache.SharedPreferenceExtensionsKt, reason: use source file name */
+/* JADX INFO: compiled from: SharedPreferenceExtensions.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class SharedPreferenceExtensions {
 
     /* JADX INFO: Add missing generic type declarations: [V] */
-    /* compiled from: SharedPreferenceExtensions.kt */
-    /* renamed from: com.discord.utilities.cache.SharedPreferenceExtensionsKt$putStringEntrySetAsMap$1 */
+    /* JADX INFO: renamed from: com.discord.utilities.cache.SharedPreferenceExtensionsKt$putStringEntrySetAsMap$1 */
+    /* JADX INFO: compiled from: SharedPreferenceExtensions.kt */
     public static final class C67121<V> extends Lambda implements Function1<V, String> {
         public static final C67121 INSTANCE = new C67121();
 
@@ -41,7 +41,7 @@ public final class SharedPreferenceExtensions {
         }
 
         @Override // kotlin.jvm.functions.Function1
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final String invoke2(V v) {
             return String.valueOf(v);
         }

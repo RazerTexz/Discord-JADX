@@ -5,14 +5,14 @@ import kotlinx.coroutines.CoroutineDispatcher;
 import p007b.p225i.p226a.p288f.p299e.p308o.C3404f;
 import p659s.p660a.p661a.MainDispatchers;
 
-/* compiled from: MainCoroutineDispatcher.kt */
-/* renamed from: s.a.l1, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: s.a.l1, reason: use source file name */
+/* JADX INFO: compiled from: MainCoroutineDispatcher.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public abstract class MainCoroutineDispatcher extends CoroutineDispatcher {
-    /* renamed from: H */
+    /* JADX INFO: renamed from: H */
     public abstract MainCoroutineDispatcher mo11194H();
 
-    /* renamed from: I */
+    /* JADX INFO: renamed from: I */
     public final String m11332I() {
         MainCoroutineDispatcher mainCoroutineDispatcherMo11194H;
         CoroutineDispatcher coroutineDispatcher = Dispatchers.f27866a;

@@ -10,18 +10,18 @@ import p507d0.p513e0.p514p.p515d.p517m0.p531e.p532a.p539k0.InterfaceC11581n;
 import p507d0.p513e0.p514p.p515d.p517m0.p531e.p532a.p539k0.InterfaceC11584q;
 import p507d0.p513e0.p514p.p515d.p517m0.p548g.FqName;
 
-/* compiled from: JavaResolverCache.java */
-/* renamed from: d0.e0.p.d.m0.e.a.g0.g, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.e.a.g0.g, reason: use source file name */
+/* JADX INFO: compiled from: JavaResolverCache.java */
+/* JADX INFO: loaded from: classes3.dex */
 public interface JavaResolverCache {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final JavaResolverCache f23244a = new a();
 
-    /* compiled from: JavaResolverCache.java */
-    /* renamed from: d0.e0.p.d.m0.e.a.g0.g$a */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.e.a.g0.g$a */
+    /* JADX INFO: compiled from: JavaResolverCache.java */
     public static class a implements JavaResolverCache {
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public static /* synthetic */ void m9453a(int i) {
             Object[] objArr = new Object[3];
             switch (i) {

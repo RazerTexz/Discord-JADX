@@ -9,24 +9,24 @@ import androidx.viewbinding.ViewBinding;
 import com.discord.C5419R;
 import com.google.android.material.button.MaterialButton;
 
-/* compiled from: ThreadBrowserEmptyBinding.java */
-/* renamed from: b.a.i.s1, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.a.i.s1, reason: use source file name */
+/* JADX INFO: compiled from: ThreadBrowserEmptyBinding.java */
+/* JADX INFO: loaded from: classes.dex */
 public final class ThreadBrowserEmptyBinding implements ViewBinding {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     @NonNull
     public final ConstraintLayout f1202a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     @NonNull
     public final ConstraintLayout f1203b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     @NonNull
     public final MaterialButton f1204c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     @NonNull
     public final TextView f1205d;
 
@@ -38,7 +38,7 @@ public final class ThreadBrowserEmptyBinding implements ViewBinding {
     }
 
     @NonNull
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static ThreadBrowserEmptyBinding m205a(@NonNull View view) {
         ConstraintLayout constraintLayout = (ConstraintLayout) view;
         int i = C5419R.id.thread_browser_empty_create_button;

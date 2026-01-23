@@ -5,7 +5,7 @@ import org.webrtc.VideoProcessor;
 import p617h0.p628c.C12467i0;
 import p617h0.p628c.VideoProcessor2;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public class VideoSource extends MediaSource {
     private final CapturerObserver capturerObserver;
     private boolean isCapturerRunning;
@@ -15,7 +15,7 @@ public class VideoSource extends MediaSource {
     private VideoProcessor videoProcessor;
     private final Object videoProcessorLock;
 
-    /* renamed from: org.webrtc.VideoSource$1 */
+    /* JADX INFO: renamed from: org.webrtc.VideoSource$1 */
     public class C129971 implements CapturerObserver {
         public C129971() {
         }
@@ -94,7 +94,7 @@ public class VideoSource extends MediaSource {
         return videoSource.videoProcessor;
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public /* synthetic */ void m11053a(VideoFrame videoFrame) {
         this.nativeAndroidVideoTrackSource.onFrameCaptured(videoFrame);
     }

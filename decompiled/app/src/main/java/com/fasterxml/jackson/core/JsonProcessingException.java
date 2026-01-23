@@ -2,7 +2,7 @@ package com.fasterxml.jackson.core;
 
 import p007b.p195g.p196a.p198b.JsonLocation;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public class JsonProcessingException extends JacksonException {
     private static final long serialVersionUID = 123;
     public JsonLocation _location;
@@ -12,17 +12,17 @@ public class JsonProcessingException extends JacksonException {
         this._location = null;
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public String mo8739a() {
         return null;
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public String m8740b() {
         return super.getMessage();
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public Object mo8737c() {
         return null;
     }

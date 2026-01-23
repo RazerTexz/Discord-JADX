@@ -17,14 +17,14 @@ import kotlin.jvm.internal.DefaultConstructorMarker;
 import kotlin.jvm.internal.Ref$BooleanRef;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: WidgetTosReportViolationReasonView.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: WidgetTosReportViolationReasonView.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class WidgetTosReportViolationReasonView extends RelativeLayout {
     private final WidgetTosReportViolationReasonBinding binding;
     private ReportReason reason;
 
-    /* compiled from: WidgetTosReportViolationReasonView.kt */
-    /* renamed from: com.discord.widgets.tos.WidgetTosReportViolationReasonView$setOnClickListener$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.tos.WidgetTosReportViolationReasonView$setOnClickListener$1 */
+    /* JADX INFO: compiled from: WidgetTosReportViolationReasonView.kt */
     public static final class ViewOnClickListenerC101771 implements View.OnClickListener {
         public final /* synthetic */ Ref$BooleanRef $onClickInvoked;
         public final /* synthetic */ View.OnClickListener $onClickListener;
@@ -45,8 +45,8 @@ public final class WidgetTosReportViolationReasonView extends RelativeLayout {
         }
     }
 
-    /* compiled from: WidgetTosReportViolationReasonView.kt */
-    /* renamed from: com.discord.widgets.tos.WidgetTosReportViolationReasonView$setOnClickListener$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.tos.WidgetTosReportViolationReasonView$setOnClickListener$2 */
+    /* JADX INFO: compiled from: WidgetTosReportViolationReasonView.kt */
     public static final class C101782 implements CompoundButton.OnCheckedChangeListener {
         public final /* synthetic */ Ref$BooleanRef $onClickInvoked;
         public final /* synthetic */ View.OnClickListener $onClickListener;

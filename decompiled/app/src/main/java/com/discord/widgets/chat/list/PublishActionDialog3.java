@@ -3,9 +3,9 @@ package com.discord.widgets.chat.list;
 import kotlin.jvm.functions.Function0;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: PublishActionDialog.kt */
-/* renamed from: com.discord.widgets.chat.list.PublishActionDialog$viewModel$2, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.chat.list.PublishActionDialog$viewModel$2, reason: use source file name */
+/* JADX INFO: compiled from: PublishActionDialog.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class PublishActionDialog3 extends Lambda implements Function0<PublishActionDialogViewModel> {
     public final /* synthetic */ PublishActionDialog this$0;
 

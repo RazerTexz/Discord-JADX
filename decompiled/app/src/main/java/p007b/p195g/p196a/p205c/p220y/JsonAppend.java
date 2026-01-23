@@ -7,15 +7,15 @@ import java.lang.annotation.Target;
 import p007b.p195g.p196a.p197a.JsonInclude;
 import p007b.p195g.p196a.p205c.p215g0.VirtualBeanPropertyWriter;
 
-/* compiled from: JsonAppend.java */
+/* JADX INFO: renamed from: b.g.a.c.y.b, reason: use source file name */
+/* JADX INFO: compiled from: JsonAppend.java */
+/* JADX INFO: loaded from: classes3.dex */
 @Target({ElementType.ANNOTATION_TYPE, ElementType.TYPE})
 @Retention(RetentionPolicy.RUNTIME)
-/* renamed from: b.g.a.c.y.b, reason: use source file name */
-/* loaded from: classes3.dex */
 public @interface JsonAppend {
 
-    /* compiled from: JsonAppend.java */
-    /* renamed from: b.g.a.c.y.b$a */
+    /* JADX INFO: renamed from: b.g.a.c.y.b$a */
+    /* JADX INFO: compiled from: JsonAppend.java */
     public @interface a {
         JsonInclude.a include() default JsonInclude.a.NON_NULL;
 
@@ -28,8 +28,8 @@ public @interface JsonAppend {
         String value();
     }
 
-    /* compiled from: JsonAppend.java */
-    /* renamed from: b.g.a.c.y.b$b */
+    /* JADX INFO: renamed from: b.g.a.c.y.b$b */
+    /* JADX INFO: compiled from: JsonAppend.java */
     public @interface b {
         JsonInclude.a include() default JsonInclude.a.NON_NULL;
 

@@ -25,67 +25,67 @@ import p007b.p195g.p196a.p205c.p218h0.TypeFactory;
 import p007b.p195g.p196a.p205c.p219i0.Annotations;
 import p007b.p195g.p196a.p205c.p219i0.ClassUtil;
 
-/* compiled from: AnnotatedClass.java */
-/* renamed from: b.g.a.c.c0.c, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.g.a.c.c0.c, reason: use source file name */
+/* JADX INFO: compiled from: AnnotatedClass.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class AnnotatedClass extends Annotated implements TypeResolutionContext {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static final a f4653j = new a(null, Collections.emptyList(), Collections.emptyList());
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final JavaType f4654k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final Class<?> f4655l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public final TypeBindings f4656m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public final List<JavaType> f4657n;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public final AnnotationIntrospector f4658o;
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public final TypeFactory f4659p;
 
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     public final ClassIntrospector.a f4660q;
 
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     public final Class<?> f4661r;
 
-    /* renamed from: s */
+    /* JADX INFO: renamed from: s */
     public final boolean f4662s;
 
-    /* renamed from: t */
+    /* JADX INFO: renamed from: t */
     public final Annotations f4663t;
 
-    /* renamed from: u */
+    /* JADX INFO: renamed from: u */
     public a f4664u;
 
-    /* renamed from: v */
+    /* JADX INFO: renamed from: v */
     public AnnotatedMethodMap f4665v;
 
-    /* renamed from: w */
+    /* JADX INFO: renamed from: w */
     public List<AnnotatedField> f4666w;
 
-    /* renamed from: x */
+    /* JADX INFO: renamed from: x */
     public transient Boolean f4667x;
 
-    /* compiled from: AnnotatedClass.java */
-    /* renamed from: b.g.a.c.c0.c$a */
+    /* JADX INFO: renamed from: b.g.a.c.c0.c$a */
+    /* JADX INFO: compiled from: AnnotatedClass.java */
     public static final class a {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final AnnotatedConstructor f4668a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final List<AnnotatedConstructor> f4669b;
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public final List<AnnotatedMethod> f4670c;
 
         public a(AnnotatedConstructor annotatedConstructor, List<AnnotatedConstructor> list, List<AnnotatedMethod> list2) {
@@ -109,31 +109,31 @@ public final class AnnotatedClass extends Annotated implements TypeResolutionCon
     }
 
     @Override // p007b.p195g.p196a.p205c.p210c0.TypeResolutionContext
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public JavaType mo1831a(Type type) {
         return this.f4659p.m2160b(null, type, this.f4656m);
     }
 
     @Override // p007b.p195g.p196a.p205c.p210c0.Annotated
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public <A extends Annotation> A mo1818b(Class<A> cls) {
         return (A) this.f4663t.mo1915a(cls);
     }
 
     @Override // p007b.p195g.p196a.p205c.p210c0.Annotated
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public String mo1819c() {
         return this.f4655l.getName();
     }
 
     @Override // p007b.p195g.p196a.p205c.p210c0.Annotated
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public Class<?> mo1820d() {
         return this.f4655l;
     }
 
     @Override // p007b.p195g.p196a.p205c.p210c0.Annotated
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public JavaType mo1821e() {
         return this.f4654k;
     }
@@ -154,22 +154,27 @@ public final class AnnotatedClass extends Annotated implements TypeResolutionCon
     /* JADX WARN: Removed duplicated region for block: B:67:0x0128  */
     /* JADX WARN: Removed duplicated region for block: B:75:0x0140  */
     /* JADX WARN: Removed duplicated region for block: B:76:0x0146  */
-    /* JADX WARN: Type inference failed for: r2v6, types: [java.util.List] */
-    /* renamed from: f */
+    /* JADX WARN: Type inference failed for: r2v10 */
+    /* JADX WARN: Type inference failed for: r2v3, types: [java.util.List] */
+    /* JADX WARN: Type inference failed for: r2v5 */
+    /* JADX WARN: Type inference failed for: r9v0, types: [java.util.ArrayList] */
+    /* JADX WARN: Type inference failed for: r9v3, types: [java.util.List] */
+    /* JADX WARN: Type inference failed for: r9v4 */
+    /* JADX INFO: renamed from: f */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
-    public final a m1832f() throws SecurityException, IllegalArgumentException {
+    public final a m1832f() {
         ClassUtil.a aVar;
         ArrayList arrayList;
         int size;
-        ArrayList arrayList2;
+        ?? arrayList2;
+        ?? r2;
         ArrayList arrayList3;
-        ArrayList arrayList4;
         List listEmptyList;
         JavaType javaType;
         int i;
-        ArrayList arrayList5;
+        ArrayList arrayList4;
         TypeBindings typeBindings;
         TypeVariable<Method>[] typeVariableArr;
         Type[] typeArr;
@@ -207,29 +212,29 @@ public final class AnnotatedClass extends Annotated implements TypeResolutionCon
                     }
                 }
                 if (arrayList == null) {
-                    ?? EmptyList = Collections.emptyList();
-                    arrayList3 = EmptyList;
+                    List listEmptyList2 = Collections.emptyList();
+                    r2 = listEmptyList2;
                     if (aVar != null) {
-                        arrayList2 = EmptyList;
+                        arrayList2 = listEmptyList2;
                         size = 0;
                     }
-                    arrayList4 = null;
+                    arrayList3 = null;
                     for (Method method : ClassUtil.m2179k(javaType2._class)) {
                         if (AnnotatedCreatorCollector.m1892f(method)) {
-                            if (arrayList4 == null) {
-                                arrayList4 = new ArrayList();
+                            if (arrayList3 == null) {
+                                arrayList3 = new ArrayList();
                             }
-                            arrayList4.add(method);
+                            arrayList3.add(method);
                         }
                     }
-                    if (arrayList4 != null) {
+                    if (arrayList3 != null) {
                         listEmptyList = Collections.emptyList();
                     } else {
                         TypeResolutionContext.b bVar = new TypeResolutionContext.b(typeFactory);
-                        int size2 = arrayList4.size();
-                        ArrayList arrayList6 = new ArrayList(size2);
+                        int size2 = arrayList3.size();
+                        ArrayList arrayList5 = new ArrayList(size2);
                         for (int i2 = 0; i2 < size2; i2++) {
-                            arrayList6.add(null);
+                            arrayList5.add(null);
                         }
                         if (cls != null) {
                             Method[] declaredMethods = cls.getDeclaredMethods();
@@ -243,7 +248,7 @@ public final class AnnotatedClass extends Annotated implements TypeResolutionCon
                                         memberKeyArr = new MemberKey[size2];
                                         int i4 = 0;
                                         while (i4 < size2) {
-                                            memberKeyArr[i4] = new MemberKey((Method) arrayList4.get(i4));
+                                            memberKeyArr[i4] = new MemberKey((Method) arrayList3.get(i4));
                                             i4++;
                                             declaredMethods = declaredMethods;
                                         }
@@ -256,7 +261,7 @@ public final class AnnotatedClass extends Annotated implements TypeResolutionCon
                                             break;
                                         }
                                         if (memberKey.equals(memberKeyArr[i5])) {
-                                            arrayList6.set(i5, annotatedCreatorCollector.m1896j((Method) arrayList4.get(i5), bVar, method2));
+                                            arrayList5.set(i5, annotatedCreatorCollector.m1896j((Method) arrayList3.get(i5), bVar, method2));
                                             break;
                                         }
                                         i5++;
@@ -270,23 +275,23 @@ public final class AnnotatedClass extends Annotated implements TypeResolutionCon
                         }
                         int i6 = 0;
                         while (i6 < size2) {
-                            if (((AnnotatedMethod) arrayList6.get(i6)) == null) {
-                                Method method3 = (Method) arrayList4.get(i6);
+                            if (((AnnotatedMethod) arrayList5.get(i6)) == null) {
+                                Method method3 = (Method) arrayList3.get(i6);
                                 TypeVariable<Method>[] typeParameters = method3.getTypeParameters();
                                 if (typeParameters.length == 0 || javaType2.mo2136j().m2154i()) {
                                     javaType = javaType2;
                                     i = size2;
-                                    arrayList5 = arrayList4;
+                                    arrayList4 = arrayList3;
                                     typeBindings = null;
-                                    arrayList6.set(i6, annotatedCreatorCollector.m1896j(method3, typeBindings == null ? bVar : new TypeResolutionContext.a(typeFactory, typeBindings), null));
+                                    arrayList5.set(i6, annotatedCreatorCollector.m1896j(method3, typeBindings == null ? bVar : new TypeResolutionContext.a(typeFactory, typeBindings), null));
                                 } else {
                                     Type genericReturnType = method3.getGenericReturnType();
                                     if (genericReturnType instanceof ParameterizedType) {
                                         ParameterizedType parameterizedType = (ParameterizedType) genericReturnType;
                                         if (Objects.equals(javaType2._class, parameterizedType.getRawType())) {
                                             Type[] actualTypeArguments = parameterizedType.getActualTypeArguments();
+                                            ArrayList arrayList6 = new ArrayList(typeParameters.length);
                                             ArrayList arrayList7 = new ArrayList(typeParameters.length);
-                                            ArrayList arrayList8 = new ArrayList(typeParameters.length);
                                             i = size2;
                                             int i7 = 0;
                                             while (true) {
@@ -298,7 +303,7 @@ public final class AnnotatedClass extends Annotated implements TypeResolutionCon
                                                             javaType = javaType2;
                                                             break;
                                                         }
-                                                        arrayList5 = arrayList4;
+                                                        arrayList4 = arrayList3;
                                                         JavaType javaTypeM2151f = javaType2.mo2136j().m2151f(i7);
                                                         if (javaTypeM2151f == null) {
                                                             javaType = javaType2;
@@ -342,9 +347,9 @@ public final class AnnotatedClass extends Annotated implements TypeResolutionCon
                                                             length3 = i11;
                                                         }
                                                         if (z2) {
-                                                            int iIndexOf = arrayList7.indexOf(name);
+                                                            int iIndexOf = arrayList6.indexOf(name);
                                                             if (iIndexOf != -1) {
-                                                                JavaType javaType3 = (JavaType) arrayList8.get(iIndexOf);
+                                                                JavaType javaType3 = (JavaType) arrayList7.get(iIndexOf);
                                                                 if (!javaTypeM2151f.equals(javaType3)) {
                                                                     boolean zM2216B = javaType3.m2216B(javaTypeM2151f._class);
                                                                     boolean zM2216B2 = javaTypeM2151f.m2216B(javaType3._class);
@@ -352,71 +357,71 @@ public final class AnnotatedClass extends Annotated implements TypeResolutionCon
                                                                         break;
                                                                     }
                                                                     if ((zM2216B ^ zM2216B2) && zM2216B2) {
-                                                                        arrayList8.set(iIndexOf, javaTypeM2151f);
+                                                                        arrayList7.set(iIndexOf, javaTypeM2151f);
                                                                     }
                                                                 } else {
                                                                     continue;
                                                                 }
                                                             } else {
-                                                                arrayList7.add(name);
-                                                                arrayList8.add(javaTypeM2151f);
+                                                                arrayList6.add(name);
+                                                                arrayList7.add(javaTypeM2151f);
                                                             }
                                                         } else {
                                                             continue;
                                                         }
                                                     } else {
                                                         javaType = javaType2;
-                                                        arrayList5 = arrayList4;
+                                                        arrayList4 = arrayList3;
                                                         typeVariableArr = typeParameters;
                                                         typeArr = actualTypeArguments;
                                                     }
                                                     i7++;
-                                                    arrayList4 = arrayList5;
+                                                    arrayList3 = arrayList4;
                                                     javaType2 = javaType;
                                                     actualTypeArguments = typeArr;
                                                     typeParameters = typeVariableArr;
                                                 } else {
                                                     javaType = javaType2;
-                                                    arrayList5 = arrayList4;
-                                                    if (arrayList7.isEmpty()) {
+                                                    arrayList4 = arrayList3;
+                                                    if (arrayList6.isEmpty()) {
                                                         break;
                                                     }
-                                                    typeBindings = (arrayList7.isEmpty() || arrayList8.isEmpty()) ? TypeBindings.f4908l : new TypeBindings((String[]) arrayList7.toArray(TypeBindings.f4906j), (JavaType[]) arrayList8.toArray(TypeBindings.f4907k), null);
+                                                    typeBindings = (arrayList6.isEmpty() || arrayList7.isEmpty()) ? TypeBindings.f4908l : new TypeBindings((String[]) arrayList6.toArray(TypeBindings.f4906j), (JavaType[]) arrayList7.toArray(TypeBindings.f4907k), null);
                                                 }
                                             }
                                             typeBindings = null;
-                                            arrayList6.set(i6, annotatedCreatorCollector.m1896j(method3, typeBindings == null ? bVar : new TypeResolutionContext.a(typeFactory, typeBindings), null));
+                                            arrayList5.set(i6, annotatedCreatorCollector.m1896j(method3, typeBindings == null ? bVar : new TypeResolutionContext.a(typeFactory, typeBindings), null));
                                         }
-                                        arrayList5 = arrayList4;
+                                        arrayList4 = arrayList3;
                                         typeBindings = null;
-                                        arrayList6.set(i6, annotatedCreatorCollector.m1896j(method3, typeBindings == null ? bVar : new TypeResolutionContext.a(typeFactory, typeBindings), null));
+                                        arrayList5.set(i6, annotatedCreatorCollector.m1896j(method3, typeBindings == null ? bVar : new TypeResolutionContext.a(typeFactory, typeBindings), null));
                                     }
                                 }
                             } else {
                                 javaType = javaType2;
                                 i = size2;
-                                arrayList5 = arrayList4;
+                                arrayList4 = arrayList3;
                             }
                             i6++;
                             size2 = i;
-                            arrayList4 = arrayList5;
+                            arrayList3 = arrayList4;
                             javaType2 = javaType;
                         }
-                        listEmptyList = arrayList6;
+                        listEmptyList = arrayList5;
                     }
                     if (annotatedCreatorCollector.f4706e) {
                         AnnotatedConstructor annotatedConstructor = annotatedCreatorCollector.f4707f;
                         if (annotatedConstructor != null && annotatedCreatorCollector.f4750c.mo1770Z(annotatedConstructor)) {
                             annotatedCreatorCollector.f4707f = null;
                         }
-                        int size3 = arrayList3.size();
+                        int size3 = r2.size();
                         while (true) {
                             size3--;
                             if (size3 < 0) {
                                 break;
                             }
-                            if (annotatedCreatorCollector.f4750c.mo1770Z((AnnotatedMember) arrayList3.get(size3))) {
-                                arrayList3.remove(size3);
+                            if (annotatedCreatorCollector.f4750c.mo1770Z((AnnotatedMember) r2.get(size3))) {
+                                r2.remove(size3);
                             }
                         }
                         int size4 = listEmptyList.size();
@@ -430,7 +435,7 @@ public final class AnnotatedClass extends Annotated implements TypeResolutionCon
                             }
                         }
                     }
-                    aVar2 = new a(annotatedCreatorCollector.f4707f, arrayList3, listEmptyList);
+                    aVar2 = new a(annotatedCreatorCollector.f4707f, r2, listEmptyList);
                 } else {
                     size = arrayList.size();
                     arrayList2 = new ArrayList(size);
@@ -487,22 +492,22 @@ public final class AnnotatedClass extends Annotated implements TypeResolutionCon
                         arrayList2.set(i16, annotatedCreatorCollector.m1897k((ClassUtil.a) arrayList.get(i16), null));
                     }
                 }
-                arrayList3 = arrayList2;
-                arrayList4 = null;
+                r2 = arrayList2;
+                arrayList3 = null;
                 while (i < r6) {
                 }
-                if (arrayList4 != null) {
+                if (arrayList3 != null) {
                 }
                 if (annotatedCreatorCollector.f4706e) {
                 }
-                aVar2 = new a(annotatedCreatorCollector.f4707f, arrayList3, listEmptyList);
+                aVar2 = new a(annotatedCreatorCollector.f4707f, r2, listEmptyList);
             }
             this.f4664u = aVar2;
         }
         return aVar2;
     }
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public Iterable<AnnotatedField> m1833g() {
         List<AnnotatedField> listEmptyList = this.f4666w;
         if (listEmptyList == null) {
@@ -526,7 +531,7 @@ public final class AnnotatedClass extends Annotated implements TypeResolutionCon
         return listEmptyList;
     }
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public Iterable<AnnotatedMethod> m1834h() {
         boolean z2;
         Class<?> clsMo1885a;

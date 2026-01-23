@@ -3,21 +3,21 @@ package p007b.p109f.p161j.p169d;
 import androidx.annotation.Nullable;
 import p007b.p085c.p086a.p087a0.AnimatableValueParser;
 
-/* compiled from: RotationOptions.java */
-/* renamed from: b.f.j.d.f, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.f.j.d.f, reason: use source file name */
+/* JADX INFO: compiled from: RotationOptions.java */
+/* JADX INFO: loaded from: classes.dex */
 public class RotationOptions {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final RotationOptions f3721a = new RotationOptions(-1, false);
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static final RotationOptions f3722b = new RotationOptions(-1, true);
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final int f3723c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final boolean f3724d;
 
     public RotationOptions(int i, boolean z2) {
@@ -25,7 +25,7 @@ public class RotationOptions {
         this.f3724d = z2;
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public int m1249a() {
         if (m1251c()) {
             throw new IllegalStateException("Rotation is set to use EXIF");
@@ -33,12 +33,12 @@ public class RotationOptions {
         return this.f3723c;
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public boolean m1250b() {
         return this.f3723c != -2;
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public boolean m1251c() {
         return this.f3723c == -1;
     }

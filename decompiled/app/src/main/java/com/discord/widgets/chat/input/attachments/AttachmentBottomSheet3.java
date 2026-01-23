@@ -11,9 +11,9 @@ import com.facebook.imagepipeline.image.ImageInfo;
 import java.util.Objects;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: AttachmentBottomSheet.kt */
-/* renamed from: com.discord.widgets.chat.input.attachments.AttachmentBottomSheet$draweeControllerListener$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.chat.input.attachments.AttachmentBottomSheet$draweeControllerListener$1, reason: use source file name */
+/* JADX INFO: compiled from: AttachmentBottomSheet.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class AttachmentBottomSheet3 implements ControllerListener<ImageInfo> {
     public final /* synthetic */ AttachmentBottomSheet this$0;
 
@@ -34,7 +34,7 @@ public final class AttachmentBottomSheet3 implements ControllerListener<ImageInf
     public void onIntermediateImageFailed(String id2, Throwable throwable) {
     }
 
-    /* renamed from: onIntermediateImageSet, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: onIntermediateImageSet, reason: avoid collision after fix types in other method */
     public void onIntermediateImageSet2(String id2, ImageInfo imageInfo) {
     }
 
@@ -51,7 +51,7 @@ public final class AttachmentBottomSheet3 implements ControllerListener<ImageInf
     public void onSubmit(String id2, Object callerContext) {
     }
 
-    /* renamed from: onFinalImageSet, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: onFinalImageSet, reason: avoid collision after fix types in other method */
     public void onFinalImageSet2(String id2, ImageInfo imageInfo, Animatable animatable) {
         String string;
         this.this$0.setAttachmentImageInfo(imageInfo);

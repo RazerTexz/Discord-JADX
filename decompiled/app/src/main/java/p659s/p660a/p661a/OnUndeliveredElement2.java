@@ -7,9 +7,9 @@ import kotlinx.coroutines.internal.OnUndeliveredElement;
 import p007b.p225i.p226a.p288f.p299e.p308o.C3404f;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: OnUndeliveredElement.kt */
-/* renamed from: s.a.a.o, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: s.a.a.o, reason: use source file name */
+/* JADX INFO: compiled from: OnUndeliveredElement.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class OnUndeliveredElement2 extends Lambda implements Function1<Throwable, Unit> {
     public final /* synthetic */ CoroutineContext $context;
     public final /* synthetic */ Object $element;

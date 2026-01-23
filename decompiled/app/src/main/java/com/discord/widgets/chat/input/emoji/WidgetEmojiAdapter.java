@@ -38,8 +38,8 @@ import p507d0.p512d0._Ranges;
 import p507d0.p580t._Collections;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: WidgetEmojiAdapter.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetEmojiAdapter.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetEmojiAdapter extends WidgetExpressionPickerAdapter {
     private static final int DEFAULT_NUM_COLUMNS = 8;
     private static final int ITEM_TYPE_EMOJI = 1;
@@ -53,8 +53,8 @@ public final class WidgetEmojiAdapter extends WidgetExpressionPickerAdapter {
     private final OnEmojiSelectedListener onEmojiSelectedListener;
     private final Function0<Unit> onGetPremiumCtaClicked;
 
-    /* compiled from: WidgetEmojiAdapter.kt */
-    /* renamed from: com.discord.widgets.chat.input.emoji.WidgetEmojiAdapter$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.input.emoji.WidgetEmojiAdapter$1 */
+    /* JADX INFO: compiled from: WidgetEmojiAdapter.kt */
     public static final class C78161 extends GridLayoutManager.SpanSizeLookup {
         public C78161() {
         }
@@ -69,7 +69,7 @@ public final class WidgetEmojiAdapter extends WidgetExpressionPickerAdapter {
         }
     }
 
-    /* compiled from: WidgetEmojiAdapter.kt */
+    /* JADX INFO: compiled from: WidgetEmojiAdapter.kt */
     public static final class EmojiViewHolder extends MGRecyclerViewHolder<WidgetEmojiAdapter, MGRecyclerDataPayload> {
         private final EmojiPickerEmojiItemBinding binding;
 
@@ -98,7 +98,7 @@ public final class WidgetEmojiAdapter extends WidgetExpressionPickerAdapter {
             onConfigure2(i, mGRecyclerDataPayload);
         }
 
-        /* renamed from: onConfigure, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: onConfigure, reason: avoid collision after fix types in other method */
         public void onConfigure2(int position, MGRecyclerDataPayload data) {
             Intrinsics3.checkNotNullParameter(data, "data");
             super.onConfigure(position, data);
@@ -133,11 +133,11 @@ public final class WidgetEmojiAdapter extends WidgetExpressionPickerAdapter {
         }
     }
 
-    /* compiled from: WidgetEmojiAdapter.kt */
+    /* JADX INFO: compiled from: WidgetEmojiAdapter.kt */
     public static abstract class HeaderItem implements MGRecyclerDataPayload {
         private final int type;
 
-        /* compiled from: WidgetEmojiAdapter.kt */
+        /* JADX INFO: compiled from: WidgetEmojiAdapter.kt */
         public static final /* data */ class GuildHeaderItem extends HeaderItem {
             private final String key;
             private final String text;
@@ -161,7 +161,7 @@ public final class WidgetEmojiAdapter extends WidgetExpressionPickerAdapter {
                 return guildHeaderItem.copy(str, str2);
             }
 
-            /* renamed from: component1, reason: from getter */
+            /* JADX INFO: renamed from: component1, reason: from getter */
             public final String getText() {
                 return this.text;
             }
@@ -219,7 +219,7 @@ public final class WidgetEmojiAdapter extends WidgetExpressionPickerAdapter {
             }
         }
 
-        /* compiled from: WidgetEmojiAdapter.kt */
+        /* JADX INFO: compiled from: WidgetEmojiAdapter.kt */
         public static final /* data */ class StandardHeaderItem extends HeaderItem {
             private final EmojiCategory emojiCategory;
             private final String key;
@@ -239,7 +239,7 @@ public final class WidgetEmojiAdapter extends WidgetExpressionPickerAdapter {
                 return standardHeaderItem.copy(emojiCategory);
             }
 
-            /* renamed from: component1, reason: from getter */
+            /* JADX INFO: renamed from: component1, reason: from getter */
             public final EmojiCategory getEmojiCategory() {
                 return this.emojiCategory;
             }
@@ -281,7 +281,7 @@ public final class WidgetEmojiAdapter extends WidgetExpressionPickerAdapter {
             }
         }
 
-        /* compiled from: WidgetEmojiAdapter.kt */
+        /* JADX INFO: compiled from: WidgetEmojiAdapter.kt */
         public static final /* data */ class StringHeaderItem extends HeaderItem {
             private final String key;
             private final int stringRes;
@@ -299,7 +299,7 @@ public final class WidgetEmojiAdapter extends WidgetExpressionPickerAdapter {
                 return stringHeaderItem.copy(i);
             }
 
-            /* renamed from: component1, reason: from getter */
+            /* JADX INFO: renamed from: component1, reason: from getter */
             public final int getStringRes() {
                 return this.stringRes;
             }
@@ -346,15 +346,15 @@ public final class WidgetEmojiAdapter extends WidgetExpressionPickerAdapter {
         }
     }
 
-    /* compiled from: WidgetEmojiAdapter.kt */
+    /* JADX INFO: compiled from: WidgetEmojiAdapter.kt */
     public static final class HeaderViewHolder extends MGRecyclerViewHolder<WidgetEmojiAdapter, MGRecyclerDataPayload> implements WidgetExpressionPickerAdapter.StickyHeaderViewHolder {
 
-        /* renamed from: Companion, reason: from kotlin metadata */
+        /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
         public static final Companion INSTANCE = new Companion(null);
         private final ExpressionPickerHeaderItemBinding binding;
         public HeaderItem boundItem;
 
-        /* compiled from: WidgetEmojiAdapter.kt */
+        /* JADX INFO: compiled from: WidgetEmojiAdapter.kt */
         public static final class Companion {
 
             public final /* synthetic */ class WhenMappings {
@@ -460,7 +460,7 @@ public final class WidgetEmojiAdapter extends WidgetExpressionPickerAdapter {
             this.boundItem = headerItem;
         }
 
-        /* renamed from: onConfigure, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: onConfigure, reason: avoid collision after fix types in other method */
         public void onConfigure2(int position, MGRecyclerDataPayload data) {
             Unit unit;
             Intrinsics3.checkNotNullParameter(data, "data");
@@ -495,12 +495,12 @@ public final class WidgetEmojiAdapter extends WidgetExpressionPickerAdapter {
         }
     }
 
-    /* compiled from: WidgetEmojiAdapter.kt */
+    /* JADX INFO: compiled from: WidgetEmojiAdapter.kt */
     public static final class PremiumEmojiUpsellViewHolder extends MGRecyclerViewHolder<WidgetEmojiAdapter, MGRecyclerDataPayload> {
         private final EmojiPickerPremiumUpsellBinding binding;
 
-        /* compiled from: WidgetEmojiAdapter.kt */
-        /* renamed from: com.discord.widgets.chat.input.emoji.WidgetEmojiAdapter$PremiumEmojiUpsellViewHolder$1 */
+        /* JADX INFO: renamed from: com.discord.widgets.chat.input.emoji.WidgetEmojiAdapter$PremiumEmojiUpsellViewHolder$1 */
+        /* JADX INFO: compiled from: WidgetEmojiAdapter.kt */
         public static final class ViewOnClickListenerC78171 implements View.OnClickListener {
             public final /* synthetic */ WidgetEmojiAdapter $adapter;
 
@@ -530,7 +530,7 @@ public final class WidgetEmojiAdapter extends WidgetExpressionPickerAdapter {
         }
     }
 
-    /* compiled from: WidgetEmojiAdapter.kt */
+    /* JADX INFO: compiled from: WidgetEmojiAdapter.kt */
     public static final class UpsellItem implements MGRecyclerDataPayload {
         private static final String key;
         public static final UpsellItem INSTANCE = new UpsellItem();
@@ -646,7 +646,7 @@ public final class WidgetEmojiAdapter extends WidgetExpressionPickerAdapter {
         throw invalidViewTypeException(viewType);
     }
 
-    /* compiled from: WidgetEmojiAdapter.kt */
+    /* JADX INFO: compiled from: WidgetEmojiAdapter.kt */
     public static final /* data */ class EmojiItem implements MGRecyclerDataPayload {
         private final boolean allowEmojisToAnimate;
         private final Emoji emoji;
@@ -684,22 +684,22 @@ public final class WidgetEmojiAdapter extends WidgetExpressionPickerAdapter {
             return emojiItem.copy(str, emoji, str2, z2);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final String getGuildName() {
             return this.guildName;
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final Emoji getEmoji() {
             return this.emoji;
         }
 
-        /* renamed from: component3, reason: from getter */
+        /* JADX INFO: renamed from: component3, reason: from getter */
         public final String getEmojiName() {
             return this.emojiName;
         }
 
-        /* renamed from: component4, reason: from getter */
+        /* JADX INFO: renamed from: component4, reason: from getter */
         public final boolean getAllowEmojisToAnimate() {
             return this.allowEmojisToAnimate;
         }
@@ -748,6 +748,9 @@ public final class WidgetEmojiAdapter extends WidgetExpressionPickerAdapter {
         }
 
         /* JADX WARN: Multi-variable type inference failed */
+        /* JADX WARN: Type inference failed for: r1v3, types: [int] */
+        /* JADX WARN: Type inference failed for: r1v4 */
+        /* JADX WARN: Type inference failed for: r1v6 */
         public int hashCode() {
             String str = this.guildName;
             int iHashCode = (str != null ? str.hashCode() : 0) * 31;
@@ -756,11 +759,11 @@ public final class WidgetEmojiAdapter extends WidgetExpressionPickerAdapter {
             String str2 = this.emojiName;
             int iHashCode3 = (iHashCode2 + (str2 != null ? str2.hashCode() : 0)) * 31;
             boolean z2 = this.allowEmojisToAnimate;
-            int i = z2;
-            if (z2 != 0) {
-                i = 1;
+            ?? r1 = z2;
+            if (z2) {
+                r1 = 1;
             }
-            return iHashCode3 + i;
+            return iHashCode3 + r1;
         }
 
         public String toString() {

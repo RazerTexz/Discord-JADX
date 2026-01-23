@@ -15,43 +15,43 @@ import p007b.p225i.p226a.p288f.p333j.p334b.p335e.C4309t0;
 import p007b.p225i.p226a.p288f.p333j.p334b.p335e.InterfaceC4299o0;
 import p007b.p225i.p226a.p288f.p333j.p334b.p335e.InterfaceC4305r0;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public final class zzcg extends AbstractSafeParcelable {
     public static final Parcelable.Creator<zzcg> CREATOR = new C4289j0();
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final int f20803j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     @Nullable
     public final InterfaceC4299o0 f20804k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final InterfaceC4305r0 f20805l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     @Nullable
     public final PendingIntent f20806m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     @Deprecated
     public final int f20807n;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     @Nullable
     @Deprecated
     public final String f20808o;
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     @Nullable
     @Deprecated
     public final String f20809p;
 
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     @Deprecated
     public final boolean f20810q;
 
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     @Nullable
     @Deprecated
     public final ClientAppContext f20811r;

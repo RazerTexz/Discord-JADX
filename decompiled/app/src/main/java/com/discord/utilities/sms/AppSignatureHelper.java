@@ -16,22 +16,22 @@ import p007b.p225i.p226a.p288f.p299e.p308o.C3404f;
 import p507d0.LazyJVM;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: AppSignatureHelper.kt */
+/* JADX INFO: compiled from: AppSignatureHelper.kt */
+/* JADX INFO: loaded from: classes2.dex */
 @SuppressLint({"PackageManagerGetSignatures"})
-/* loaded from: classes2.dex */
 public final class AppSignatureHelper extends ContextWrapper {
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private static final String HASH_TYPE = "SHA-256";
     private static final int NUM_BASE64_CHAR = 11;
     private static final int NUM_HASHED_BYTES = 9;
     private static final String TAG;
 
-    /* renamed from: appSignatures$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: appSignatures$delegate, reason: from kotlin metadata */
     private final Lazy appSignatures;
 
-    /* compiled from: AppSignatureHelper.kt */
+    /* JADX INFO: compiled from: AppSignatureHelper.kt */
     public static final class Companion {
         private Companion() {
         }

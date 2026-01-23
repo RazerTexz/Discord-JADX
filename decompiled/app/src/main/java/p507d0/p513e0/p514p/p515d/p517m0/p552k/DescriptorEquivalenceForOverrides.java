@@ -19,19 +19,19 @@ import p507d0.p580t._Collections;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: DescriptorEquivalenceForOverrides.kt */
-/* renamed from: d0.e0.p.d.m0.k.b, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.k.b, reason: use source file name */
+/* JADX INFO: compiled from: DescriptorEquivalenceForOverrides.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class DescriptorEquivalenceForOverrides {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final DescriptorEquivalenceForOverrides f24391a = new DescriptorEquivalenceForOverrides();
 
-    /* compiled from: DescriptorEquivalenceForOverrides.kt */
-    /* renamed from: d0.e0.p.d.m0.k.b$a */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.k.b$a */
+    /* JADX INFO: compiled from: DescriptorEquivalenceForOverrides.kt */
     public static final class a extends Lambda implements Function2<DeclarationDescriptor, DeclarationDescriptor, Boolean> {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public static final a f24392j = new a();
 
         public a() {
@@ -43,33 +43,33 @@ public final class DescriptorEquivalenceForOverrides {
             return Boolean.valueOf(invoke2(declarationDescriptor, declarationDescriptor2));
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final boolean invoke2(DeclarationDescriptor declarationDescriptor, DeclarationDescriptor declarationDescriptor2) {
             return false;
         }
     }
 
-    /* compiled from: DescriptorEquivalenceForOverrides.kt */
-    /* renamed from: d0.e0.p.d.m0.k.b$b */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.k.b$b */
+    /* JADX INFO: compiled from: DescriptorEquivalenceForOverrides.kt */
     public static final class b implements KotlinTypeChecker.a {
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final /* synthetic */ boolean f24394b;
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public final /* synthetic */ CallableDescriptor f24395c;
 
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         public final /* synthetic */ CallableDescriptor f24396d;
 
-        /* compiled from: DescriptorEquivalenceForOverrides.kt */
-        /* renamed from: d0.e0.p.d.m0.k.b$b$a */
+        /* JADX INFO: renamed from: d0.e0.p.d.m0.k.b$b$a */
+        /* JADX INFO: compiled from: DescriptorEquivalenceForOverrides.kt */
         public static final class a extends Lambda implements Function2<DeclarationDescriptor, DeclarationDescriptor, Boolean> {
 
-            /* renamed from: $a */
+            /* JADX INFO: renamed from: $a */
             public final /* synthetic */ CallableDescriptor f24397$a;
 
-            /* renamed from: $b */
+            /* JADX INFO: renamed from: $b */
             public final /* synthetic */ CallableDescriptor f24398$b;
 
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -84,7 +84,7 @@ public final class DescriptorEquivalenceForOverrides {
                 return Boolean.valueOf(invoke2(declarationDescriptor, declarationDescriptor2));
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final boolean invoke2(DeclarationDescriptor declarationDescriptor, DeclarationDescriptor declarationDescriptor2) {
                 return Intrinsics3.areEqual(declarationDescriptor, this.f24397$a) && Intrinsics3.areEqual(declarationDescriptor2, this.f24398$b);
             }
@@ -127,7 +127,7 @@ public final class DescriptorEquivalenceForOverrides {
         return descriptorEquivalenceForOverrides.areEquivalent(declarationDescriptor, declarationDescriptor2, z2, z3);
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final boolean m9917a(TypeParameterDescriptor typeParameterDescriptor, TypeParameterDescriptor typeParameterDescriptor2, boolean z2, Function2<? super DeclarationDescriptor, ? super DeclarationDescriptor, Boolean> function2) {
         if (Intrinsics3.areEqual(typeParameterDescriptor, typeParameterDescriptor2)) {
             return true;
@@ -162,14 +162,14 @@ public final class DescriptorEquivalenceForOverrides {
         return ((declarationDescriptor instanceof ClassDescriptor) && (declarationDescriptor2 instanceof ClassDescriptor)) ? Intrinsics3.areEqual(((ClassDescriptor) declarationDescriptor).getTypeConstructor(), ((ClassDescriptor) declarationDescriptor2).getTypeConstructor()) : ((declarationDescriptor instanceof TypeParameterDescriptor) && (declarationDescriptor2 instanceof TypeParameterDescriptor)) ? m9917a((TypeParameterDescriptor) declarationDescriptor, (TypeParameterDescriptor) declarationDescriptor2, z2, DescriptorEquivalenceForOverrides2.f24399j) : ((declarationDescriptor instanceof CallableDescriptor) && (declarationDescriptor2 instanceof CallableDescriptor)) ? areCallableDescriptorsEquivalent$default(this, (CallableDescriptor) declarationDescriptor, (CallableDescriptor) declarationDescriptor2, z2, z3, false, KotlinTypeRefiner.a.f24807a, 16, null) : ((declarationDescriptor instanceof PackageFragmentDescriptor) && (declarationDescriptor2 instanceof PackageFragmentDescriptor)) ? Intrinsics3.areEqual(((PackageFragmentDescriptor) declarationDescriptor).getFqName(), ((PackageFragmentDescriptor) declarationDescriptor2).getFqName()) : Intrinsics3.areEqual(declarationDescriptor, declarationDescriptor2);
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final boolean m9918b(DeclarationDescriptor declarationDescriptor, DeclarationDescriptor declarationDescriptor2, Function2<? super DeclarationDescriptor, ? super DeclarationDescriptor, Boolean> function2, boolean z2) {
         DeclarationDescriptor containingDeclaration = declarationDescriptor.getContainingDeclaration();
         DeclarationDescriptor containingDeclaration2 = declarationDescriptor2.getContainingDeclaration();
         return ((containingDeclaration instanceof CallableMemberDescriptor) || (containingDeclaration2 instanceof CallableMemberDescriptor)) ? function2.invoke(containingDeclaration, containingDeclaration2).booleanValue() : areEquivalent$default(this, containingDeclaration, containingDeclaration2, z2, false, 8, null);
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final SourceElement m9919c(CallableDescriptor callableDescriptor) {
         while (callableDescriptor instanceof CallableMemberDescriptor) {
             CallableMemberDescriptor callableMemberDescriptor = (CallableMemberDescriptor) callableDescriptor;

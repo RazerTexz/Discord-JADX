@@ -3,8 +3,8 @@ package com.discord.widgets.guilds.join;
 import kotlin.jvm.functions.Function0;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetGuildJoinCaptchaBottomSheet.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetGuildJoinCaptchaBottomSheet.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetGuildJoinCaptchaBottomSheet$requestCode$2 extends Lambda implements Function0<String> {
     public final /* synthetic */ WidgetGuildJoinCaptchaBottomSheet this$0;
 
@@ -20,7 +20,7 @@ public final class WidgetGuildJoinCaptchaBottomSheet$requestCode$2 extends Lambd
     }
 
     @Override // kotlin.jvm.functions.Function0
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final String invoke2() {
         return WidgetGuildJoinCaptchaBottomSheet.access$getArgumentsOrDefault$p(this.this$0).getString("INTENT_EXTRA_REQUEST_CODE", "");
     }

@@ -7,20 +7,20 @@ import androidx.annotation.NonNull;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.viewbinding.ViewBinding;
 
-/* compiled from: ViewCallEventsButtonBinding.java */
-/* renamed from: b.a.i.a2, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.a.i.a2, reason: use source file name */
+/* JADX INFO: compiled from: ViewCallEventsButtonBinding.java */
+/* JADX INFO: loaded from: classes.dex */
 public final class ViewCallEventsButtonBinding implements ViewBinding {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     @NonNull
     public final ConstraintLayout f663a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     @NonNull
     public final ImageView f664b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     @NonNull
     public final TextView f665c;
 

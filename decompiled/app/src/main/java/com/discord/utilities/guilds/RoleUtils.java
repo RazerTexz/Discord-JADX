@@ -18,8 +18,8 @@ import java.util.regex.Pattern;
 import p507d0.p579g0.StringsJVM;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: RoleUtils.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: RoleUtils.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class RoleUtils {
     public static final RoleUtils INSTANCE = new RoleUtils();
     private static final Pattern ROLE_MENTION_RE = Pattern.compile("<@&(\\d+)>");

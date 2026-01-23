@@ -8,7 +8,7 @@ import java.net.SocketTimeoutException;
 import p007b.p225i.p226a.p242c.p257e3.DataSpec;
 import p007b.p225i.p226a.p288f.p299e.p308o.C3404f;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public class HttpDataSource$HttpDataSourceException extends DataSourceException {
     public final DataSpec dataSpec;
     public final int type;
@@ -19,7 +19,7 @@ public class HttpDataSource$HttpDataSourceException extends DataSourceException 
         this.type = i2;
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static int m8937a(int i, int i2) {
         if (i == 2000 && i2 == 1) {
             return 2001;
@@ -27,7 +27,7 @@ public class HttpDataSource$HttpDataSourceException extends DataSourceException 
         return i;
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static HttpDataSource$HttpDataSourceException m8938b(IOException iOException, DataSpec dataSpec, int i) {
         String message = iOException.getMessage();
         int i2 = iOException instanceof SocketTimeoutException ? 2002 : iOException instanceof InterruptedIOException ? PointerIconCompat.TYPE_WAIT : (message == null || !C3404f.m4349u1(message).matches("cleartext.*not permitted.*")) ? 2001 : 2007;

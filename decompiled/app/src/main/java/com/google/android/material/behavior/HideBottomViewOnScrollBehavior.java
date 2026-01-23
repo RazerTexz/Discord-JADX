@@ -14,7 +14,7 @@ import androidx.annotation.Nullable;
 import androidx.coordinatorlayout.widget.CoordinatorLayout;
 import com.google.android.material.animation.AnimationUtils;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public class HideBottomViewOnScrollBehavior<V extends View> extends CoordinatorLayout.Behavior<V> {
     public static final int ENTER_ANIMATION_DURATION = 225;
     public static final int EXIT_ANIMATION_DURATION = 175;
@@ -27,7 +27,7 @@ public class HideBottomViewOnScrollBehavior<V extends View> extends CoordinatorL
     private int currentState;
     private int height;
 
-    /* renamed from: com.google.android.material.behavior.HideBottomViewOnScrollBehavior$a */
+    /* JADX INFO: renamed from: com.google.android.material.behavior.HideBottomViewOnScrollBehavior$a */
     public class C10830a extends AnimatorListenerAdapter {
         public C10830a() {
         }

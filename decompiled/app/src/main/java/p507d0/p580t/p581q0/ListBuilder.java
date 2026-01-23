@@ -4,9 +4,9 @@ import java.util.Arrays;
 import java.util.Objects;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ListBuilder.kt */
-/* renamed from: d0.t.q0.b, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.t.q0.b, reason: use source file name */
+/* JADX INFO: compiled from: ListBuilder.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class ListBuilder {
     public static final <E> E[] arrayOfUninitializedElements(int i) {
         if (i >= 0) {

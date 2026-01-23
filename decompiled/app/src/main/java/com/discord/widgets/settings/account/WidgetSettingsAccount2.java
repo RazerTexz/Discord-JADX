@@ -15,9 +15,9 @@ import java.util.Map;
 import p507d0.p592z.p594d.Intrinsics3;
 import p658rx.functions.Func5;
 
-/* compiled from: WidgetSettingsAccount.kt */
-/* renamed from: com.discord.widgets.settings.account.WidgetSettingsAccount$Model$Companion$get$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.settings.account.WidgetSettingsAccount$Model$Companion$get$1, reason: use source file name */
+/* JADX INFO: compiled from: WidgetSettingsAccount.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetSettingsAccount2<T1, T2, T3, T4, T5, R> implements Func5<MeUser, StoreMFA.State, Map<Long, ? extends Guild>, StoreUserConnections.State, Experiment, WidgetSettingsAccount.Model> {
     public static final WidgetSettingsAccount2 INSTANCE = new WidgetSettingsAccount2();
 
@@ -26,7 +26,7 @@ public final class WidgetSettingsAccount2<T1, T2, T3, T4, T5, R> implements Func
         return call2(meUser, state, (Map<Long, Guild>) map, state2, experiment);
     }
 
-    /* renamed from: call, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
     public final WidgetSettingsAccount.Model call2(MeUser meUser, StoreMFA.State state, Map<Long, Guild> map, StoreUserConnections.State state2, Experiment experiment) {
         ConnectedAccount connectedAccount;
         ConnectedAccount connectedAccountPrevious;

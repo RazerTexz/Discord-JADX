@@ -4,9 +4,9 @@ import kotlin.Unit;
 import kotlin.jvm.functions.Function1;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetHubAddServer.kt */
-/* renamed from: com.discord.widgets.hubs.WidgetHubAddServer$onViewBound$$inlined$apply$lambda$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.hubs.WidgetHubAddServer$onViewBound$$inlined$apply$lambda$1, reason: use source file name */
+/* JADX INFO: compiled from: WidgetHubAddServer.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetHubAddServer7 extends Lambda implements Function1<Integer, Unit> {
     public final /* synthetic */ WidgetHubAddServer this$0;
 

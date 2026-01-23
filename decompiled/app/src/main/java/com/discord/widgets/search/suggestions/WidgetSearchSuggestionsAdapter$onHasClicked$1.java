@@ -6,8 +6,8 @@ import kotlin.jvm.functions.Function1;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetSearchSuggestionsAdapter.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetSearchSuggestionsAdapter.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetSearchSuggestionsAdapter$onHasClicked$1 extends Lambda implements Function1<HasNode2, Unit> {
     public static final WidgetSearchSuggestionsAdapter$onHasClicked$1 INSTANCE = new WidgetSearchSuggestionsAdapter$onHasClicked$1();
 
@@ -21,7 +21,7 @@ public final class WidgetSearchSuggestionsAdapter$onHasClicked$1 extends Lambda 
         return Unit.f27425a;
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final void invoke2(HasNode2 hasNode2) {
         Intrinsics3.checkNotNullParameter(hasNode2, "it");
     }

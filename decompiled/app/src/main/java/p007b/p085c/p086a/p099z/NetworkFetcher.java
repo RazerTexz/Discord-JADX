@@ -19,18 +19,18 @@ import p007b.p085c.p086a.LottieResult;
 import p007b.p085c.p086a.p089b0.Logger2;
 import p007b.p100d.p104b.p105a.outline;
 
-/* compiled from: NetworkFetcher.java */
-/* renamed from: b.c.a.z.c, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.c.a.z.c, reason: use source file name */
+/* JADX INFO: compiled from: NetworkFetcher.java */
+/* JADX INFO: loaded from: classes.dex */
 public class NetworkFetcher {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final Context f2928a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final String f2929b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     @Nullable
     public final NetworkCache f2930c;
 
@@ -46,7 +46,7 @@ public class NetworkFetcher {
     }
 
     @WorkerThread
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final LottieResult<LottieComposition> m796a() throws IOException {
         StringBuilder sbM833U = outline.m833U("Fetching ");
         sbM833U.append(this.f2929b);
@@ -71,7 +71,7 @@ public class NetworkFetcher {
         }
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final String m797b(HttpURLConnection httpURLConnection) throws IOException {
         httpURLConnection.getResponseCode();
         BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(httpURLConnection.getErrorStream()));
@@ -103,7 +103,7 @@ public class NetworkFetcher {
     }
 
     @Nullable
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final LottieResult<LottieComposition> m798c(HttpURLConnection httpURLConnection) throws IOException {
         FileExtension fileExtension;
         LottieResult<LottieComposition> lottieResultM675b;

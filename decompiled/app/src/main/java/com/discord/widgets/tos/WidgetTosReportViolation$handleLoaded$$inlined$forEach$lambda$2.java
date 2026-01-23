@@ -8,15 +8,15 @@ import com.discord.views.LoadingButton;
 import java.util.Objects;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: View.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: View.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class WidgetTosReportViolation$handleLoaded$$inlined$forEach$lambda$2 implements View.OnLayoutChangeListener {
     public final /* synthetic */ ReportReason $reason$inlined;
     public final /* synthetic */ WidgetTosReportViolationReasonView $reasonView$inlined;
     public final /* synthetic */ WidgetTosReportViolation this$0;
 
-    /* compiled from: WidgetTosReportViolation.kt */
-    /* renamed from: com.discord.widgets.tos.WidgetTosReportViolation$handleLoaded$$inlined$forEach$lambda$2$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.tos.WidgetTosReportViolation$handleLoaded$$inlined$forEach$lambda$2$1 */
+    /* JADX INFO: compiled from: WidgetTosReportViolation.kt */
     public static final class ViewOnClickListenerC101731 implements View.OnClickListener {
         public ViewOnClickListenerC101731() {
         }

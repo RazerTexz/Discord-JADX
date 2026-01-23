@@ -5,8 +5,8 @@ import android.os.Parcelable;
 import com.google.android.gms.safetynet.zza;
 import p007b.p085c.p086a.p087a0.AnimatableValueParser;
 
-/* renamed from: b.i.a.f.k.b */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.k.b */
+/* JADX INFO: loaded from: classes3.dex */
 public final class C4328b implements Parcelable.Creator<zza> {
     @Override // android.os.Parcelable.Creator
     public final zza createFromParcel(Parcel parcel) {

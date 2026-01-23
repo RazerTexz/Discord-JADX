@@ -57,22 +57,22 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 import p658rx.Observable;
 
-/* compiled from: RouteHandlers.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: RouteHandlers.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class RouteHandlers {
     public static final RouteHandlers INSTANCE = new RouteHandlers();
 
-    /* compiled from: RouteHandlers.kt */
+    /* JADX INFO: compiled from: RouteHandlers.kt */
     public static final class AnalyticsMetadata {
 
-        /* renamed from: Companion, reason: from kotlin metadata */
+        /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
         public static final Companion INSTANCE = new Companion(null);
         private static final AnalyticsMetadata UNKNOWN = new AnalyticsMetadata(EnvironmentCompat.MEDIA_UNKNOWN, null, null, 6, null);
         private final Long channelId;
         private final Long guildId;
         private final String type;
 
-        /* compiled from: RouteHandlers.kt */
+        /* JADX INFO: compiled from: RouteHandlers.kt */
         public static final class Companion {
             private Companion() {
             }
@@ -125,8 +125,8 @@ public final class RouteHandlers {
         }
     }
 
-    /* compiled from: RouteHandlers.kt */
-    /* renamed from: com.discord.utilities.intent.RouteHandlers$handleQuery$1 */
+    /* JADX INFO: renamed from: com.discord.utilities.intent.RouteHandlers$handleQuery$1 */
+    /* JADX INFO: compiled from: RouteHandlers.kt */
     public static final class C67851 extends Lambda implements Function1<FragmentActivity, Boolean> {
         public final /* synthetic */ String $query;
         public final /* synthetic */ String $queryMessageText;
@@ -143,7 +143,7 @@ public final class RouteHandlers {
             return Boolean.valueOf(invoke2(fragmentActivity));
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final boolean invoke2(FragmentActivity fragmentActivity) {
             Intrinsics3.checkNotNullParameter(fragmentActivity, "ctx");
             if (this.$queryMessageText.length() > 0) {
@@ -158,8 +158,8 @@ public final class RouteHandlers {
         }
     }
 
-    /* compiled from: RouteHandlers.kt */
-    /* renamed from: com.discord.utilities.intent.RouteHandlers$selectFeature$1 */
+    /* JADX INFO: renamed from: com.discord.utilities.intent.RouteHandlers$selectFeature$1 */
+    /* JADX INFO: compiled from: RouteHandlers.kt */
     public static final class C67861 extends Lambda implements Function1<FragmentActivity, Boolean> {
         public final /* synthetic */ Map $settingMap;
         public final /* synthetic */ String $settingsSubPath;
@@ -176,7 +176,7 @@ public final class RouteHandlers {
             return Boolean.valueOf(invoke2(fragmentActivity));
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final boolean invoke2(FragmentActivity fragmentActivity) {
             Intrinsics3.checkNotNullParameter(fragmentActivity, "ctx");
             Function1 function1 = (Function1) this.$settingMap.get(this.$settingsSubPath);
@@ -187,8 +187,8 @@ public final class RouteHandlers {
         }
     }
 
-    /* compiled from: RouteHandlers.kt */
-    /* renamed from: com.discord.utilities.intent.RouteHandlers$voiceConnect$1 */
+    /* JADX INFO: renamed from: com.discord.utilities.intent.RouteHandlers$voiceConnect$1 */
+    /* JADX INFO: compiled from: RouteHandlers.kt */
     public static final class C67871 extends Lambda implements Function1<Channel, Unit> {
         public final /* synthetic */ long $channelId;
         public final /* synthetic */ boolean $isServicePermissionDeniedRedirect;
@@ -208,7 +208,7 @@ public final class RouteHandlers {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Channel channel) {
             Context context = (Context) this.$weakContext.get();
             if (context != null) {
@@ -223,13 +223,13 @@ public final class RouteHandlers {
         }
     }
 
-    /* compiled from: RouteHandlers.kt */
-    /* renamed from: com.discord.utilities.intent.RouteHandlers$wildCardMatcher$1 */
+    /* JADX INFO: renamed from: com.discord.utilities.intent.RouteHandlers$wildCardMatcher$1 */
+    /* JADX INFO: compiled from: RouteHandlers.kt */
     public static final class C67881 extends Lambda implements Function1<String, KFunction<? extends AnalyticsMetadata>> {
         public static final C67881 INSTANCE = new C67881();
 
-        /* compiled from: RouteHandlers.kt */
-        /* renamed from: com.discord.utilities.intent.RouteHandlers$wildCardMatcher$1$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.utilities.intent.RouteHandlers$wildCardMatcher$1$1, reason: invalid class name */
+        /* JADX INFO: compiled from: RouteHandlers.kt */
         public static final /* synthetic */ class AnonymousClass1 extends FunctionReferenceImpl implements Function3<Uri, MatchResult, Context, AnalyticsMetadata> {
             public AnonymousClass1(RouteHandlers routeHandlers) {
                 super(3, routeHandlers, RouteHandlers.class, "acceptGift", "acceptGift(Landroid/net/Uri;Lkotlin/text/MatchResult;Landroid/content/Context;)Lcom/discord/utilities/intent/RouteHandlers$AnalyticsMetadata;", 0);
@@ -240,7 +240,7 @@ public final class RouteHandlers {
                 return invoke2(uri, matchResult, context);
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final AnalyticsMetadata invoke2(Uri uri, MatchResult matchResult, Context context) {
                 Intrinsics3.checkNotNullParameter(uri, "p1");
                 Intrinsics3.checkNotNullParameter(context, "p3");
@@ -248,8 +248,8 @@ public final class RouteHandlers {
             }
         }
 
-        /* compiled from: RouteHandlers.kt */
-        /* renamed from: com.discord.utilities.intent.RouteHandlers$wildCardMatcher$1$2, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.utilities.intent.RouteHandlers$wildCardMatcher$1$2, reason: invalid class name */
+        /* JADX INFO: compiled from: RouteHandlers.kt */
         public static final /* synthetic */ class AnonymousClass2 extends FunctionReferenceImpl implements Function3<Uri, MatchResult, Context, AnalyticsMetadata> {
             public AnonymousClass2(RouteHandlers routeHandlers) {
                 super(3, routeHandlers, RouteHandlers.class, "useInvite", "useInvite(Landroid/net/Uri;Lkotlin/text/MatchResult;Landroid/content/Context;)Lcom/discord/utilities/intent/RouteHandlers$AnalyticsMetadata;", 0);
@@ -260,7 +260,7 @@ public final class RouteHandlers {
                 return invoke2(uri, matchResult, context);
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final AnalyticsMetadata invoke2(Uri uri, MatchResult matchResult, Context context) {
                 Intrinsics3.checkNotNullParameter(uri, "p1");
                 Intrinsics3.checkNotNullParameter(context, "p3");
@@ -268,8 +268,8 @@ public final class RouteHandlers {
             }
         }
 
-        /* compiled from: RouteHandlers.kt */
-        /* renamed from: com.discord.utilities.intent.RouteHandlers$wildCardMatcher$1$3, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.utilities.intent.RouteHandlers$wildCardMatcher$1$3, reason: invalid class name */
+        /* JADX INFO: compiled from: RouteHandlers.kt */
         public static final /* synthetic */ class AnonymousClass3 extends FunctionReferenceImpl implements Function3<Uri, MatchResult, Context, AnalyticsMetadata> {
             public AnonymousClass3(RouteHandlers routeHandlers) {
                 super(3, routeHandlers, RouteHandlers.class, "useGuildTemplate", "useGuildTemplate(Landroid/net/Uri;Lkotlin/text/MatchResult;Landroid/content/Context;)Lcom/discord/utilities/intent/RouteHandlers$AnalyticsMetadata;", 0);
@@ -280,7 +280,7 @@ public final class RouteHandlers {
                 return invoke2(uri, matchResult, context);
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final AnalyticsMetadata invoke2(Uri uri, MatchResult matchResult, Context context) {
                 Intrinsics3.checkNotNullParameter(uri, "p1");
                 Intrinsics3.checkNotNullParameter(context, "p3");
@@ -334,14 +334,8 @@ public final class RouteHandlers {
         
             if (r2.equals("discord.gift") != false) goto L15;
          */
-        /* JADX WARN: Failed to restore switch over string. Please report as a decompilation issue
-        java.lang.NullPointerException: Cannot invoke "java.util.List.iterator()" because the return value of "jadx.core.dex.visitors.regions.SwitchOverStringVisitor$SwitchData.getNewCases()" is null
-        	at jadx.core.dex.visitors.regions.SwitchOverStringVisitor.restoreSwitchOverString(SwitchOverStringVisitor.java:109)
-        	at jadx.core.dex.visitors.regions.SwitchOverStringVisitor.visitRegion(SwitchOverStringVisitor.java:66)
-        	at jadx.core.dex.visitors.regions.DepthRegionTraversal.traverseIterativeStepInternal(DepthRegionTraversal.java:77)
-        	at jadx.core.dex.visitors.regions.DepthRegionTraversal.traverseIterativeStepInternal(DepthRegionTraversal.java:82)
-         */
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX WARN: Failed to restore switch over string. Please report as a decompilation issue */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         /*
             Code decompiled incorrectly, please refer to instructions dump.
         */
@@ -532,7 +526,7 @@ public final class RouteHandlers {
         return new AnalyticsMetadata("friends", null, null, 6, null);
     }
 
-    public final AnalyticsMetadata openEventDetails(Uri uri, MatchResult matchResult, Context context) throws NumberFormatException {
+    public final AnalyticsMetadata openEventDetails(Uri uri, MatchResult matchResult, Context context) {
         List<String> groupValues;
         String str;
         List<String> groupValues2;

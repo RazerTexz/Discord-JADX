@@ -16,46 +16,46 @@ import java.util.concurrent.ScheduledThreadPoolExecutor;
 import p007b.p225i.p226a.p288f.p299e.p307n.C3398a;
 import p007b.p225i.p226a.p288f.p299e.p308o.p309j.ThreadFactoryC3408a;
 
-/* compiled from: com.google.firebase:firebase-iid@@21.0.0 */
-/* renamed from: b.i.c.s.d0 */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.c.s.d0 */
+/* JADX INFO: compiled from: com.google.firebase:firebase-iid@@21.0.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public class ServiceConnectionC4812d0 implements ServiceConnection {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final Context f12852j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final Intent f12853k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final ScheduledExecutorService f12854l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public final Queue<a> f12855m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     @Nullable
     public BinderC4806a0 f12856n;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     @GuardedBy("this")
     public boolean f12857o;
 
-    /* compiled from: com.google.firebase:firebase-iid@@21.0.0 */
-    /* renamed from: b.i.c.s.d0$a */
+    /* JADX INFO: renamed from: b.i.c.s.d0$a */
+    /* JADX INFO: compiled from: com.google.firebase:firebase-iid@@21.0.0 */
     public static class a {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final Intent f12858a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final TaskCompletionSource<Void> f12859b = new TaskCompletionSource<>();
 
         public a(Intent intent) {
             this.f12858a = intent;
         }
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public void m6723a() {
             this.f12859b.m9126b(null);
         }
@@ -72,14 +72,14 @@ public class ServiceConnectionC4812d0 implements ServiceConnection {
     }
 
     @GuardedBy("this")
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final void m6720a() {
         while (!this.f12855m.isEmpty()) {
             this.f12855m.poll().m6723a();
         }
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final synchronized void m6721b() {
         if (Log.isLoggable("FirebaseInstanceId", 3)) {
             Log.d("FirebaseInstanceId", "flush queue called");
@@ -101,7 +101,7 @@ public class ServiceConnectionC4812d0 implements ServiceConnection {
     }
 
     @GuardedBy("this")
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final void m6722c() {
         if (Log.isLoggable("FirebaseInstanceId", 3)) {
             boolean z2 = !this.f12857o;
@@ -115,13 +115,14 @@ public class ServiceConnectionC4812d0 implements ServiceConnection {
         }
         this.f12857o = true;
         try {
+            if (C3398a.m4181b().m4182a(this.f12852j, this.f12853k, this, 65)) {
+                return;
+            } else {
+                Log.e("FirebaseInstanceId", "binding to the service failed");
+            }
         } catch (SecurityException e) {
             Log.e("FirebaseInstanceId", "Exception while binding the service", e);
         }
-        if (C3398a.m4181b().m4182a(this.f12852j, this.f12853k, this, 65)) {
-            return;
-        }
-        Log.e("FirebaseInstanceId", "binding to the service failed");
         this.f12857o = false;
         m6720a();
     }

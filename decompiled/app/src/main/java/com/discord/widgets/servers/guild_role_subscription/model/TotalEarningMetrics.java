@@ -6,8 +6,8 @@ import p007b.p100d.p104b.p105a.outline;
 import p507d0.p580t.Collections2;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: TotalEarningMetrics.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: TotalEarningMetrics.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final /* data */ class TotalEarningMetrics {
     private final CurrentMonthEarningMetrics currentMonthEarningMetrics;
     private final TotalPayoutsForPeriod currentPeriod;
@@ -35,12 +35,12 @@ public final /* data */ class TotalEarningMetrics {
         return totalEarningMetrics.copy(currentMonthEarningMetrics, totalPayoutsForPeriod, list);
     }
 
-    /* renamed from: component1, reason: from getter */
+    /* JADX INFO: renamed from: component1, reason: from getter */
     public final CurrentMonthEarningMetrics getCurrentMonthEarningMetrics() {
         return this.currentMonthEarningMetrics;
     }
 
-    /* renamed from: component2, reason: from getter */
+    /* JADX INFO: renamed from: component2, reason: from getter */
     public final TotalPayoutsForPeriod getCurrentPeriod() {
         return this.currentPeriod;
     }

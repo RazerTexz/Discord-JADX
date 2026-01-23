@@ -10,12 +10,12 @@ import p637j0.p641k.Func1;
 import p637j0.p642l.p647e.ScalarSynchronousObservable;
 import p658rx.Observable;
 
-/* compiled from: OverlayMenuBubbleDialog.kt */
-/* renamed from: b.a.y.p, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: b.a.y.p, reason: use source file name */
+/* JADX INFO: compiled from: OverlayMenuBubbleDialog.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class OverlayMenuBubbleDialog4<T, R> implements Func1<Channel, Observable<? extends List<? extends StoreVoiceParticipants.VoiceUser>>> {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final /* synthetic */ Long f2063j;
 
     public OverlayMenuBubbleDialog4(Long l) {

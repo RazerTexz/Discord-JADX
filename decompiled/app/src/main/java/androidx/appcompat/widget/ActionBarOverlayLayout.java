@@ -35,9 +35,9 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 import p007b.p100d.p104b.p105a.outline;
 
+/* JADX INFO: loaded from: classes.dex */
 @SuppressLint({"UnknownNullness"})
 @RestrictTo({RestrictTo.Scope.LIBRARY_GROUP_PREFIX})
-/* loaded from: classes.dex */
 public class ActionBarOverlayLayout extends ViewGroup implements DecorContentParent, NestedScrollingParent, NestedScrollingParent2, NestedScrollingParent3 {
     private static final int ACTION_BAR_ANIMATE_DELAY = 600;
     public static final int[] ATTRS = {C0051R.attr.actionBarSize, R.attr.windowContentOverlay};
@@ -82,7 +82,7 @@ public class ActionBarOverlayLayout extends ViewGroup implements DecorContentPar
     private Drawable mWindowContentOverlay;
     private int mWindowVisibility;
 
-    /* renamed from: androidx.appcompat.widget.ActionBarOverlayLayout$1 */
+    /* JADX INFO: renamed from: androidx.appcompat.widget.ActionBarOverlayLayout$1 */
     public class C00911 extends AnimatorListenerAdapter {
         public C00911() {
         }
@@ -102,7 +102,7 @@ public class ActionBarOverlayLayout extends ViewGroup implements DecorContentPar
         }
     }
 
-    /* renamed from: androidx.appcompat.widget.ActionBarOverlayLayout$2 */
+    /* JADX INFO: renamed from: androidx.appcompat.widget.ActionBarOverlayLayout$2 */
     public class RunnableC00922 implements Runnable {
         public RunnableC00922() {
         }
@@ -115,7 +115,7 @@ public class ActionBarOverlayLayout extends ViewGroup implements DecorContentPar
         }
     }
 
-    /* renamed from: androidx.appcompat.widget.ActionBarOverlayLayout$3 */
+    /* JADX INFO: renamed from: androidx.appcompat.widget.ActionBarOverlayLayout$3 */
     public class RunnableC00933 implements Runnable {
         public RunnableC00933() {
         }

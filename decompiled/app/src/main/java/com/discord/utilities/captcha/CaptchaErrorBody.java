@@ -12,11 +12,11 @@ import p007b.p225i.p408d.FieldNamingPolicy;
 import p007b.p225i.p408d.GsonBuilder;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: CaptchaErrorBody.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: CaptchaErrorBody.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final /* data */ class CaptchaErrorBody implements Serializable {
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private final List<String> captchaKey;
     private final String captchaRqdata;
@@ -24,7 +24,7 @@ public final /* data */ class CaptchaErrorBody implements Serializable {
     private final CaptchaService captchaService;
     private final String captchaSitekey;
 
-    /* compiled from: CaptchaErrorBody.kt */
+    /* JADX INFO: compiled from: CaptchaErrorBody.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -70,6 +70,7 @@ public final /* data */ class CaptchaErrorBody implements Serializable {
         this.captchaRqtoken = str3;
     }
 
+    /* JADX WARN: Multi-variable type inference failed */
     public static /* synthetic */ CaptchaErrorBody copy$default(CaptchaErrorBody captchaErrorBody, List list, String str, CaptchaService captchaService, String str2, String str3, int i, Object obj) {
         if ((i & 1) != 0) {
             list = captchaErrorBody.captchaKey;
@@ -96,22 +97,22 @@ public final /* data */ class CaptchaErrorBody implements Serializable {
         return this.captchaKey;
     }
 
-    /* renamed from: component2, reason: from getter */
+    /* JADX INFO: renamed from: component2, reason: from getter */
     public final String getCaptchaSitekey() {
         return this.captchaSitekey;
     }
 
-    /* renamed from: component3, reason: from getter */
+    /* JADX INFO: renamed from: component3, reason: from getter */
     public final CaptchaService getCaptchaService() {
         return this.captchaService;
     }
 
-    /* renamed from: component4, reason: from getter */
+    /* JADX INFO: renamed from: component4, reason: from getter */
     public final String getCaptchaRqdata() {
         return this.captchaRqdata;
     }
 
-    /* renamed from: component5, reason: from getter */
+    /* JADX INFO: renamed from: component5, reason: from getter */
     public final String getCaptchaRqtoken() {
         return this.captchaRqtoken;
     }

@@ -3,45 +3,45 @@ package p007b.p225i.p226a.p242c.p243a3;
 import java.util.Arrays;
 import java.util.Random;
 
-/* compiled from: ShuffleOrder.java */
-/* renamed from: b.i.a.c.a3.k0, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.a3.k0, reason: use source file name */
+/* JADX INFO: compiled from: ShuffleOrder.java */
+/* JADX INFO: loaded from: classes3.dex */
 public interface ShuffleOrder {
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     ShuffleOrder mo2543a(int i, int i2);
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     int mo2544b();
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     int mo2545c();
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     int mo2546d(int i);
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     int mo2547e(int i);
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     ShuffleOrder mo2548f(int i, int i2);
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     int mo2549g();
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     ShuffleOrder mo2550h();
 
-    /* compiled from: ShuffleOrder.java */
-    /* renamed from: b.i.a.c.a3.k0$a */
+    /* JADX INFO: renamed from: b.i.a.c.a3.k0$a */
+    /* JADX INFO: compiled from: ShuffleOrder.java */
     public static class a implements ShuffleOrder {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final Random f5630a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final int[] f5631b;
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public final int[] f5632c;
 
         public a(int[] iArr, Random random) {
@@ -54,7 +54,7 @@ public interface ShuffleOrder {
         }
 
         @Override // p007b.p225i.p226a.p242c.p243a3.ShuffleOrder
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public ShuffleOrder mo2543a(int i, int i2) {
             int i3 = i2 - i;
             int[] iArr = new int[this.f5631b.length - i3];
@@ -75,13 +75,13 @@ public interface ShuffleOrder {
         }
 
         @Override // p007b.p225i.p226a.p242c.p243a3.ShuffleOrder
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public int mo2544b() {
             return this.f5631b.length;
         }
 
         @Override // p007b.p225i.p226a.p242c.p243a3.ShuffleOrder
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public int mo2545c() {
             int[] iArr = this.f5631b;
             if (iArr.length > 0) {
@@ -91,7 +91,7 @@ public interface ShuffleOrder {
         }
 
         @Override // p007b.p225i.p226a.p242c.p243a3.ShuffleOrder
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         public int mo2546d(int i) {
             int i2 = this.f5632c[i] - 1;
             if (i2 >= 0) {
@@ -101,7 +101,7 @@ public interface ShuffleOrder {
         }
 
         @Override // p007b.p225i.p226a.p242c.p243a3.ShuffleOrder
-        /* renamed from: e */
+        /* JADX INFO: renamed from: e */
         public int mo2547e(int i) {
             int i2 = this.f5632c[i] + 1;
             int[] iArr = this.f5631b;
@@ -112,7 +112,7 @@ public interface ShuffleOrder {
         }
 
         @Override // p007b.p225i.p226a.p242c.p243a3.ShuffleOrder
-        /* renamed from: f */
+        /* JADX INFO: renamed from: f */
         public ShuffleOrder mo2548f(int i, int i2) {
             int[] iArr = new int[i2];
             int[] iArr2 = new int[i2];
@@ -151,7 +151,7 @@ public interface ShuffleOrder {
         }
 
         @Override // p007b.p225i.p226a.p242c.p243a3.ShuffleOrder
-        /* renamed from: g */
+        /* JADX INFO: renamed from: g */
         public int mo2549g() {
             int[] iArr = this.f5631b;
             if (iArr.length > 0) {
@@ -161,7 +161,7 @@ public interface ShuffleOrder {
         }
 
         @Override // p007b.p225i.p226a.p242c.p243a3.ShuffleOrder
-        /* renamed from: h */
+        /* JADX INFO: renamed from: h */
         public ShuffleOrder mo2550h() {
             return new a(0, new Random(this.f5630a.nextLong()));
         }

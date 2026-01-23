@@ -11,22 +11,22 @@ import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 import p615g0.Buffer3;
 
-/* compiled from: ParameterHandler.java */
-/* renamed from: i0.t, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: i0.t, reason: use source file name */
+/* JADX INFO: compiled from: ParameterHandler.java */
+/* JADX INFO: loaded from: classes3.dex */
 public abstract class ParameterHandler3<T> {
 
-    /* compiled from: ParameterHandler.java */
-    /* renamed from: i0.t$a */
+    /* JADX INFO: renamed from: i0.t$a */
+    /* JADX INFO: compiled from: ParameterHandler.java */
     public static final class a<T> extends ParameterHandler3<T> {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final Method f26571a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final int f26572b;
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public final Converter2<T, RequestBody> f26573c;
 
         public a(Method method, int i, Converter2<T, RequestBody> converter2) {
@@ -36,7 +36,7 @@ public abstract class ParameterHandler3<T> {
         }
 
         @Override // p630i0.ParameterHandler3
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public void mo10715a(RequestBuilder requestBuilder, T t) {
             if (t == null) {
                 throw Utils8.m10692l(this.f26571a, this.f26572b, "Body parameter value must not be null.", new Object[0]);
@@ -49,17 +49,17 @@ public abstract class ParameterHandler3<T> {
         }
     }
 
-    /* compiled from: ParameterHandler.java */
-    /* renamed from: i0.t$b */
+    /* JADX INFO: renamed from: i0.t$b */
+    /* JADX INFO: compiled from: ParameterHandler.java */
     public static final class b<T> extends ParameterHandler3<T> {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final String f26574a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final Converter2<T, String> f26575b;
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public final boolean f26576c;
 
         public b(String str, Converter2<T, String> converter2, boolean z2) {
@@ -70,7 +70,7 @@ public abstract class ParameterHandler3<T> {
         }
 
         @Override // p630i0.ParameterHandler3
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public void mo10715a(RequestBuilder requestBuilder, T t) throws IOException {
             String strConvert;
             if (t == null || (strConvert = this.f26575b.convert(t)) == null) {
@@ -80,20 +80,20 @@ public abstract class ParameterHandler3<T> {
         }
     }
 
-    /* compiled from: ParameterHandler.java */
-    /* renamed from: i0.t$c */
+    /* JADX INFO: renamed from: i0.t$c */
+    /* JADX INFO: compiled from: ParameterHandler.java */
     public static final class c<T> extends ParameterHandler3<Map<String, T>> {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final Method f26577a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final int f26578b;
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public final Converter2<T, String> f26579c;
 
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         public final boolean f26580d;
 
         public c(Method method, int i, Converter2<T, String> converter2, boolean z2) {
@@ -104,7 +104,7 @@ public abstract class ParameterHandler3<T> {
         }
 
         @Override // p630i0.ParameterHandler3
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public void mo10715a(RequestBuilder requestBuilder, Object obj) throws IOException {
             Map map = (Map) obj;
             if (map == null) {
@@ -128,14 +128,14 @@ public abstract class ParameterHandler3<T> {
         }
     }
 
-    /* compiled from: ParameterHandler.java */
-    /* renamed from: i0.t$d */
+    /* JADX INFO: renamed from: i0.t$d */
+    /* JADX INFO: compiled from: ParameterHandler.java */
     public static final class d<T> extends ParameterHandler3<T> {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final String f26581a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final Converter2<T, String> f26582b;
 
         public d(String str, Converter2<T, String> converter2) {
@@ -145,7 +145,7 @@ public abstract class ParameterHandler3<T> {
         }
 
         @Override // p630i0.ParameterHandler3
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public void mo10715a(RequestBuilder requestBuilder, T t) throws IOException {
             String strConvert;
             if (t == null || (strConvert = this.f26582b.convert(t)) == null) {
@@ -155,17 +155,17 @@ public abstract class ParameterHandler3<T> {
         }
     }
 
-    /* compiled from: ParameterHandler.java */
-    /* renamed from: i0.t$e */
+    /* JADX INFO: renamed from: i0.t$e */
+    /* JADX INFO: compiled from: ParameterHandler.java */
     public static final class e<T> extends ParameterHandler3<Map<String, T>> {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final Method f26583a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final int f26584b;
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public final Converter2<T, String> f26585c;
 
         public e(Method method, int i, Converter2<T, String> converter2) {
@@ -175,7 +175,7 @@ public abstract class ParameterHandler3<T> {
         }
 
         @Override // p630i0.ParameterHandler3
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public void mo10715a(RequestBuilder requestBuilder, Object obj) throws IOException {
             Map map = (Map) obj;
             if (map == null) {
@@ -195,14 +195,14 @@ public abstract class ParameterHandler3<T> {
         }
     }
 
-    /* compiled from: ParameterHandler.java */
-    /* renamed from: i0.t$f */
+    /* JADX INFO: renamed from: i0.t$f */
+    /* JADX INFO: compiled from: ParameterHandler.java */
     public static final class f extends ParameterHandler3<Headers> {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final Method f26586a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final int f26587b;
 
         public f(Method method, int i) {
@@ -211,7 +211,7 @@ public abstract class ParameterHandler3<T> {
         }
 
         @Override // p630i0.ParameterHandler3
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public void mo10715a(RequestBuilder requestBuilder, Headers headers) throws IOException {
             Headers headers2 = headers;
             if (headers2 == null) {
@@ -227,20 +227,20 @@ public abstract class ParameterHandler3<T> {
         }
     }
 
-    /* compiled from: ParameterHandler.java */
-    /* renamed from: i0.t$g */
+    /* JADX INFO: renamed from: i0.t$g */
+    /* JADX INFO: compiled from: ParameterHandler.java */
     public static final class g<T> extends ParameterHandler3<T> {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final Method f26588a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final int f26589b;
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public final Headers f26590c;
 
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         public final Converter2<T, RequestBody> f26591d;
 
         public g(Method method, int i, Headers headers, Converter2<T, RequestBody> converter2) {
@@ -251,7 +251,7 @@ public abstract class ParameterHandler3<T> {
         }
 
         @Override // p630i0.ParameterHandler3
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public void mo10715a(RequestBuilder requestBuilder, T t) {
             if (t == null) {
                 return;
@@ -264,20 +264,20 @@ public abstract class ParameterHandler3<T> {
         }
     }
 
-    /* compiled from: ParameterHandler.java */
-    /* renamed from: i0.t$h */
+    /* JADX INFO: renamed from: i0.t$h */
+    /* JADX INFO: compiled from: ParameterHandler.java */
     public static final class h<T> extends ParameterHandler3<Map<String, T>> {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final Method f26592a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final int f26593b;
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public final Converter2<T, RequestBody> f26594c;
 
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         public final String f26595d;
 
         public h(Method method, int i, Converter2<T, RequestBody> converter2, String str) {
@@ -288,7 +288,7 @@ public abstract class ParameterHandler3<T> {
         }
 
         @Override // p630i0.ParameterHandler3
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public void mo10715a(RequestBuilder requestBuilder, Object obj) throws IOException {
             Map map = (Map) obj;
             if (map == null) {
@@ -308,23 +308,23 @@ public abstract class ParameterHandler3<T> {
         }
     }
 
-    /* compiled from: ParameterHandler.java */
-    /* renamed from: i0.t$i */
+    /* JADX INFO: renamed from: i0.t$i */
+    /* JADX INFO: compiled from: ParameterHandler.java */
     public static final class i<T> extends ParameterHandler3<T> {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final Method f26596a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final int f26597b;
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public final String f26598c;
 
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         public final Converter2<T, String> f26599d;
 
-        /* renamed from: e */
+        /* JADX INFO: renamed from: e */
         public final boolean f26600e;
 
         public i(Method method, int i, String str, Converter2<T, String> converter2, boolean z2) {
@@ -339,7 +339,7 @@ public abstract class ParameterHandler3<T> {
         /* JADX WARN: Removed duplicated region for block: B:52:0x00e7  */
         /* JADX WARN: Removed duplicated region for block: B:54:0x00ea  */
         @Override // p630i0.ParameterHandler3
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         /*
             Code decompiled incorrectly, please refer to instructions dump.
         */
@@ -405,17 +405,17 @@ public abstract class ParameterHandler3<T> {
         }
     }
 
-    /* compiled from: ParameterHandler.java */
-    /* renamed from: i0.t$j */
+    /* JADX INFO: renamed from: i0.t$j */
+    /* JADX INFO: compiled from: ParameterHandler.java */
     public static final class j<T> extends ParameterHandler3<T> {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final String f26601a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final Converter2<T, String> f26602b;
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public final boolean f26603c;
 
         public j(String str, Converter2<T, String> converter2, boolean z2) {
@@ -426,7 +426,7 @@ public abstract class ParameterHandler3<T> {
         }
 
         @Override // p630i0.ParameterHandler3
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public void mo10715a(RequestBuilder requestBuilder, T t) throws IOException {
             String strConvert;
             if (t == null || (strConvert = this.f26602b.convert(t)) == null) {
@@ -436,20 +436,20 @@ public abstract class ParameterHandler3<T> {
         }
     }
 
-    /* compiled from: ParameterHandler.java */
-    /* renamed from: i0.t$k */
+    /* JADX INFO: renamed from: i0.t$k */
+    /* JADX INFO: compiled from: ParameterHandler.java */
     public static final class k<T> extends ParameterHandler3<Map<String, T>> {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final Method f26604a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final int f26605b;
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public final Converter2<T, String> f26606c;
 
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         public final boolean f26607d;
 
         public k(Method method, int i, Converter2<T, String> converter2, boolean z2) {
@@ -460,7 +460,7 @@ public abstract class ParameterHandler3<T> {
         }
 
         @Override // p630i0.ParameterHandler3
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public void mo10715a(RequestBuilder requestBuilder, Object obj) throws IOException {
             Map map = (Map) obj;
             if (map == null) {
@@ -484,14 +484,14 @@ public abstract class ParameterHandler3<T> {
         }
     }
 
-    /* compiled from: ParameterHandler.java */
-    /* renamed from: i0.t$l */
+    /* JADX INFO: renamed from: i0.t$l */
+    /* JADX INFO: compiled from: ParameterHandler.java */
     public static final class l<T> extends ParameterHandler3<T> {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final Converter2<T, String> f26608a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final boolean f26609b;
 
         public l(Converter2<T, String> converter2, boolean z2) {
@@ -500,7 +500,7 @@ public abstract class ParameterHandler3<T> {
         }
 
         @Override // p630i0.ParameterHandler3
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public void mo10715a(RequestBuilder requestBuilder, T t) throws IOException {
             if (t == null) {
                 return;
@@ -509,15 +509,15 @@ public abstract class ParameterHandler3<T> {
         }
     }
 
-    /* compiled from: ParameterHandler.java */
-    /* renamed from: i0.t$m */
+    /* JADX INFO: renamed from: i0.t$m */
+    /* JADX INFO: compiled from: ParameterHandler.java */
     public static final class m extends ParameterHandler3<MultipartBody.Part> {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public static final m f26610a = new m();
 
         @Override // p630i0.ParameterHandler3
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public void mo10715a(RequestBuilder requestBuilder, MultipartBody.Part part) throws IOException {
             MultipartBody.Part part2 = part;
             if (part2 != null) {
@@ -526,14 +526,14 @@ public abstract class ParameterHandler3<T> {
         }
     }
 
-    /* compiled from: ParameterHandler.java */
-    /* renamed from: i0.t$n */
+    /* JADX INFO: renamed from: i0.t$n */
+    /* JADX INFO: compiled from: ParameterHandler.java */
     public static final class n extends ParameterHandler3<Object> {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final Method f26611a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final int f26612b;
 
         public n(Method method, int i) {
@@ -542,7 +542,7 @@ public abstract class ParameterHandler3<T> {
         }
 
         @Override // p630i0.ParameterHandler3
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public void mo10715a(RequestBuilder requestBuilder, Object obj) {
             if (obj == null) {
                 throw Utils8.m10692l(this.f26611a, this.f26612b, "@Url parameter is null.", new Object[0]);
@@ -552,11 +552,11 @@ public abstract class ParameterHandler3<T> {
         }
     }
 
-    /* compiled from: ParameterHandler.java */
-    /* renamed from: i0.t$o */
+    /* JADX INFO: renamed from: i0.t$o */
+    /* JADX INFO: compiled from: ParameterHandler.java */
     public static final class o<T> extends ParameterHandler3<T> {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final Class<T> f26613a;
 
         public o(Class<T> cls) {
@@ -564,12 +564,12 @@ public abstract class ParameterHandler3<T> {
         }
 
         @Override // p630i0.ParameterHandler3
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public void mo10715a(RequestBuilder requestBuilder, T t) {
             requestBuilder.f26624g.m10982e(this.f26613a, t);
         }
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public abstract void mo10715a(RequestBuilder requestBuilder, T t) throws IOException;
 }

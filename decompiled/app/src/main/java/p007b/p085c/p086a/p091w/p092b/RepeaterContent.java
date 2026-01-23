@@ -21,39 +21,39 @@ import p007b.p085c.p086a.p095y.p096k.AnimatableTransform;
 import p007b.p085c.p086a.p095y.p097l.Repeater;
 import p007b.p085c.p086a.p095y.p098m.BaseLayer2;
 
-/* compiled from: RepeaterContent.java */
-/* renamed from: b.c.a.w.b.p, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.c.a.w.b.p, reason: use source file name */
+/* JADX INFO: compiled from: RepeaterContent.java */
+/* JADX INFO: loaded from: classes.dex */
 public class RepeaterContent implements DrawingContent, PathContent, GreedyContent, BaseKeyframeAnimation.b, KeyPathElementContent {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final Matrix f2569a = new Matrix();
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final Path f2570b = new Path();
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final LottieDrawable f2571c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final BaseLayer2 f2572d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final String f2573e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final boolean f2574f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public final BaseKeyframeAnimation<Float, Float> f2575g;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public final BaseKeyframeAnimation<Float, Float> f2576h;
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public final TransformKeyframeAnimation f2577i;
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public ContentGroup f2578j;
 
     public RepeaterContent(LottieDrawable lottieDrawable, BaseLayer2 baseLayer2, Repeater repeater) {
@@ -78,31 +78,31 @@ public class RepeaterContent implements DrawingContent, PathContent, GreedyConte
     }
 
     @Override // p007b.p085c.p086a.p091w.p093c.BaseKeyframeAnimation.b
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public void mo709a() {
         this.f2571c.invalidateSelf();
     }
 
     @Override // p007b.p085c.p086a.p091w.p092b.Content2
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public void mo710b(List<Content2> list, List<Content2> list2) {
         this.f2578j.mo710b(list, list2);
     }
 
     @Override // p007b.p085c.p086a.p095y.KeyPathElement
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public void mo711c(KeyPath keyPath, int i, List<KeyPath> list, KeyPath keyPath2) {
         MiscUtils.m656f(keyPath, i, list, keyPath2, this);
     }
 
     @Override // p007b.p085c.p086a.p091w.p092b.DrawingContent
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public void mo712d(RectF rectF, Matrix matrix, boolean z2) {
         this.f2578j.mo712d(rectF, matrix, z2);
     }
 
     @Override // p007b.p085c.p086a.p091w.p092b.GreedyContent
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public void mo721e(ListIterator<Content2> listIterator) {
         if (this.f2578j != null) {
             return;
@@ -119,7 +119,7 @@ public class RepeaterContent implements DrawingContent, PathContent, GreedyConte
     }
 
     @Override // p007b.p085c.p086a.p091w.p092b.DrawingContent
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public void mo713f(Canvas canvas, Matrix matrix, int i) {
         float fFloatValue = this.f2575g.mo727e().floatValue();
         float fFloatValue2 = this.f2576h.mo727e().floatValue();
@@ -135,7 +135,7 @@ public class RepeaterContent implements DrawingContent, PathContent, GreedyConte
 
     /* JADX WARN: Multi-variable type inference failed */
     @Override // p007b.p085c.p086a.p095y.KeyPathElement
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public <T> void mo714g(T t, @Nullable LottieValueCallback<T> lottieValueCallback) {
         if (this.f2577i.m745c(t, lottieValueCallback)) {
             return;

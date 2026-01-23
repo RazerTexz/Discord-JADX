@@ -39,34 +39,34 @@ import p637j0.p641k.Func1;
 import p658rx.Observable;
 import p658rx.subjects.PublishSubject;
 
-/* compiled from: UserActionsDialog.kt */
-/* renamed from: b.a.a.d.a, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.a.a.d.a, reason: use source file name */
+/* JADX INFO: compiled from: UserActionsDialog.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class UserActionsDialog extends AppDialog {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static final /* synthetic */ KProperty[] f315j = {outline.m846d0(UserActionsDialog.class, "binding", "getBinding()Lcom/discord/databinding/UserActionsDialogBinding;", 0)};
 
-    /* renamed from: k, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: k, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
 
-    /* renamed from: l, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: l, reason: from kotlin metadata */
     public final FragmentViewBindingDelegate binding;
 
-    /* renamed from: m, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: m, reason: from kotlin metadata */
     public final Lazy viewModel;
 
-    /* renamed from: n, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: n, reason: from kotlin metadata */
     public final MGImages.DistinctChangeDetector imagesChangeDetector;
 
-    /* compiled from: java-style lambda group */
-    /* renamed from: b.a.a.d.a$a */
+    /* JADX INFO: renamed from: b.a.a.d.a$a */
+    /* JADX INFO: compiled from: java-style lambda group */
     public static final class a implements View.OnClickListener {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public final /* synthetic */ int f320j;
 
-        /* renamed from: k */
+        /* JADX INFO: renamed from: k */
         public final /* synthetic */ Object f321k;
 
         public a(int i, Object obj) {
@@ -99,18 +99,18 @@ public final class UserActionsDialog extends AppDialog {
         }
     }
 
-    /* compiled from: UserActionsDialog.kt */
-    /* renamed from: b.a.a.d.a$b, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: b.a.a.d.a$b, reason: from kotlin metadata */
+    /* JADX INFO: compiled from: UserActionsDialog.kt */
     public static final class Companion {
         public Companion(DefaultConstructorMarker defaultConstructorMarker) {
         }
     }
 
-    /* compiled from: UserActionsDialog.kt */
-    /* renamed from: b.a.a.d.a$c */
+    /* JADX INFO: renamed from: b.a.a.d.a$c */
+    /* JADX INFO: compiled from: UserActionsDialog.kt */
     public static final /* synthetic */ class c extends FunctionReferenceImpl implements Function1<View, UserActionsDialogBinding> {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public static final c f322j = new c();
 
         public c() {
@@ -146,11 +146,11 @@ public final class UserActionsDialog extends AppDialog {
         }
     }
 
-    /* compiled from: ObservableExtensions.kt */
-    /* renamed from: b.a.a.d.a$d */
+    /* JADX INFO: renamed from: b.a.a.d.a$d */
+    /* JADX INFO: compiled from: ObservableExtensions.kt */
     public static final class d<T, R> implements Func1<Object, Boolean> {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public static final d f323j = new d();
 
         @Override // p637j0.p641k.Func1
@@ -159,11 +159,11 @@ public final class UserActionsDialog extends AppDialog {
         }
     }
 
-    /* compiled from: ObservableExtensions.kt */
-    /* renamed from: b.a.a.d.a$e */
+    /* JADX INFO: renamed from: b.a.a.d.a$e */
+    /* JADX INFO: compiled from: ObservableExtensions.kt */
     public static final class e<T, R> implements Func1<Object, T> {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public static final e f324j = new e();
 
         @Override // p637j0.p641k.Func1
@@ -173,8 +173,8 @@ public final class UserActionsDialog extends AppDialog {
         }
     }
 
-    /* compiled from: UserActionsDialog.kt */
-    /* renamed from: b.a.a.d.a$f */
+    /* JADX INFO: renamed from: b.a.a.d.a$f */
+    /* JADX INFO: compiled from: UserActionsDialog.kt */
     public static final /* synthetic */ class f extends FunctionReferenceImpl implements Function1<UserActionsDialogViewModel5.d.a, Unit> {
         public f(UserActionsDialog userActionsDialog) {
             super(1, userActionsDialog, UserActionsDialog.class, "updateView", "updateView(Lcom/discord/dialogs/useractions/UserActionsDialogViewModel$ViewState$Loaded;)V", 0);
@@ -209,8 +209,8 @@ public final class UserActionsDialog extends AppDialog {
         }
     }
 
-    /* compiled from: UserActionsDialog.kt */
-    /* renamed from: b.a.a.d.a$g */
+    /* JADX INFO: renamed from: b.a.a.d.a$g */
+    /* JADX INFO: compiled from: UserActionsDialog.kt */
     public static final /* synthetic */ class g extends FunctionReferenceImpl implements Function1<UserActionsDialogViewModel5.b, Unit> {
         public g(UserActionsDialog userActionsDialog) {
             super(1, userActionsDialog, UserActionsDialog.class, "handleEvent", "handleEvent(Lcom/discord/dialogs/useractions/UserActionsDialogViewModel$Event;)V", 0);
@@ -234,8 +234,8 @@ public final class UserActionsDialog extends AppDialog {
         }
     }
 
-    /* compiled from: UserActionsDialog.kt */
-    /* renamed from: b.a.a.d.a$h */
+    /* JADX INFO: renamed from: b.a.a.d.a$h */
+    /* JADX INFO: compiled from: UserActionsDialog.kt */
     public static final class h extends Lambda implements Function0<UserActionsDialogViewModel5> {
         public h() {
             super(0);
@@ -258,12 +258,12 @@ public final class UserActionsDialog extends AppDialog {
         this.imagesChangeDetector = new MGImages.DistinctChangeDetector();
     }
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public final UserActionsDialogBinding m124g() {
         return (UserActionsDialogBinding) this.binding.getValue((Fragment) this, f315j[0]);
     }
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public final UserActionsDialogViewModel5 m125h() {
         return (UserActionsDialogViewModel5) this.viewModel.getValue();
     }

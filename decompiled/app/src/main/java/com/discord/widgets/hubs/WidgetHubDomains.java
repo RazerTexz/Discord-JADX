@@ -34,23 +34,23 @@ import p507d0.p592z.p594d.Reflection2;
 import p658rx.Observable;
 import p658rx.functions.Action2;
 
-/* compiled from: WidgetHubDomains.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetHubDomains.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetHubDomains extends AppFragment {
     public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetHubDomains.class, "binding", "getBinding()Lcom/discord/databinding/WidgetHubDomainsBinding;", 0)};
     private final SimpleRecyclerAdapter<WidgetHubDomains2, WidgetHubDomains4> adapter;
 
-    /* renamed from: args$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: args$delegate, reason: from kotlin metadata */
     private final Lazy args;
 
-    /* renamed from: binding$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
 
-    /* renamed from: viewModel$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: viewModel$delegate, reason: from kotlin metadata */
     private final Lazy viewModel;
 
-    /* compiled from: WidgetHubDomains.kt */
-    /* renamed from: com.discord.widgets.hubs.WidgetHubDomains$onViewBound$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.hubs.WidgetHubDomains$onViewBound$1 */
+    /* JADX INFO: compiled from: WidgetHubDomains.kt */
     public static final class C90291<T1, T2> implements Action2<MenuItem, Context> {
         public C90291() {
         }
@@ -60,7 +60,7 @@ public final class WidgetHubDomains extends AppFragment {
             call2(menuItem, context);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final void call2(MenuItem menuItem, Context context) {
             Intrinsics3.checkNotNullExpressionValue(menuItem, "item");
             if (menuItem.getItemId() == C5419R.id.search) {
@@ -72,8 +72,8 @@ public final class WidgetHubDomains extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetHubDomains.kt */
-    /* renamed from: com.discord.widgets.hubs.WidgetHubDomains$onViewBoundOrOnResume$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.hubs.WidgetHubDomains$onViewBoundOrOnResume$1 */
+    /* JADX INFO: compiled from: WidgetHubDomains.kt */
     public static final class C90301 extends Lambda implements Function1<WidgetHubDomainsViewModel2, Unit> {
         public C90301() {
             super(1);
@@ -85,7 +85,7 @@ public final class WidgetHubDomains extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(WidgetHubDomainsViewModel2 widgetHubDomainsViewModel2) {
             WidgetHubDomains widgetHubDomains = WidgetHubDomains.this;
             Intrinsics3.checkNotNullExpressionValue(widgetHubDomainsViewModel2, "viewState");
@@ -93,8 +93,8 @@ public final class WidgetHubDomains extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetHubDomains.kt */
-    /* renamed from: com.discord.widgets.hubs.WidgetHubDomains$updateView$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.hubs.WidgetHubDomains$updateView$1 */
+    /* JADX INFO: compiled from: WidgetHubDomains.kt */
     public static final class C90311 extends Lambda implements Function1<RestCallState6<? extends Object>, Unit> {
         public final /* synthetic */ Context $context;
         public final /* synthetic */ WidgetHubDomainsViewModel2 $state;
@@ -112,7 +112,7 @@ public final class WidgetHubDomains extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(RestCallState6<? extends Object> restCallState6) {
             Intrinsics3.checkNotNullParameter(restCallState6, "it");
             AppScreen2.m158g(AppScreen2.f524g, WidgetHubDomains.this.getParentFragmentManager(), this.$context, WidgetHubAuthentication.class, 0, true, null, new WidgetHubAuthenticationlViewModel2(WidgetHubDomains.this.getArgs().getEmail(), this.$state.getSelectedGuildId()), 40);

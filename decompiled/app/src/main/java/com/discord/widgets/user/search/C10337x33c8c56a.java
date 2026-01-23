@@ -7,9 +7,9 @@ import java.util.Set;
 import kotlin.jvm.functions.Function1;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetGlobalSearchModel.kt */
-/* renamed from: com.discord.widgets.user.search.WidgetGlobalSearchModel$Companion$getDefaultUserSearch$smallGuildUserIds$1 */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: com.discord.widgets.user.search.WidgetGlobalSearchModel$Companion$getDefaultUserSearch$smallGuildUserIds$1 */
+/* JADX INFO: compiled from: WidgetGlobalSearchModel.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class C10337x33c8c56a extends Lambda implements Function1<Long, Set<? extends Long>> {
     public final /* synthetic */ WidgetGlobalSearchModel.UsersContext $usersContext;
 

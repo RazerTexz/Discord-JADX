@@ -8,28 +8,28 @@ import androidx.fragment.app.FragmentContainerView;
 import androidx.viewbinding.ViewBinding;
 import com.google.android.material.appbar.AppBarLayout;
 
-/* compiled from: WidgetHomePanelCenterChatBinding.java */
-/* renamed from: b.a.i.j5, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.a.i.j5, reason: use source file name */
+/* JADX INFO: compiled from: WidgetHomePanelCenterChatBinding.java */
+/* JADX INFO: loaded from: classes.dex */
 public final class WidgetHomePanelCenterChatBinding implements ViewBinding {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     @NonNull
     public final ConstraintLayout f982a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     @NonNull
     public final ViewStub f983b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     @NonNull
     public final WidgetHomePanelCenterContentUnreadBinding f984c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     @NonNull
     public final FragmentContainerView f985d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     @NonNull
     public final FragmentContainerView f986e;
 

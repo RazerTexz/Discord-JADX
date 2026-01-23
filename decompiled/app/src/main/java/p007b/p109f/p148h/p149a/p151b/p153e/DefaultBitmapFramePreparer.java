@@ -11,40 +11,40 @@ import p007b.p109f.p148h.p149a.p151b.BitmapFrameCache;
 import p007b.p109f.p148h.p149a.p151b.BitmapFrameRenderer;
 import p007b.p109f.p148h.p149a.p151b.p154f.AnimatedDrawableBackendFrameRenderer;
 
-/* compiled from: DefaultBitmapFramePreparer.java */
-/* renamed from: b.f.h.a.b.e.c, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.f.h.a.b.e.c, reason: use source file name */
+/* JADX INFO: compiled from: DefaultBitmapFramePreparer.java */
+/* JADX INFO: loaded from: classes.dex */
 public class DefaultBitmapFramePreparer implements BitmapFramePreparer {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final PlatformBitmapFactory f3515a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final BitmapFrameRenderer f3516b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final Bitmap.Config f3517c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final ExecutorService f3518d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final SparseArray<Runnable> f3519e = new SparseArray<>();
 
-    /* compiled from: DefaultBitmapFramePreparer.java */
-    /* renamed from: b.f.h.a.b.e.c$a */
+    /* JADX INFO: renamed from: b.f.h.a.b.e.c$a */
+    /* JADX INFO: compiled from: DefaultBitmapFramePreparer.java */
     public class a implements Runnable {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public final BitmapFrameCache f3520j;
 
-        /* renamed from: k */
+        /* JADX INFO: renamed from: k */
         public final AnimationBackend f3521k;
 
-        /* renamed from: l */
+        /* JADX INFO: renamed from: l */
         public final int f3522l;
 
-        /* renamed from: m */
+        /* JADX INFO: renamed from: m */
         public final int f3523m;
 
         public a(AnimationBackend animationBackend, BitmapFrameCache bitmapFrameCache, int i, int i2) {
@@ -54,7 +54,7 @@ public class DefaultBitmapFramePreparer implements BitmapFramePreparer {
             this.f3523m = i2;
         }
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final boolean m1159a(int i, int i2) {
             CloseableReference closeableReferenceMo1151a;
             int i3 = 2;
@@ -90,7 +90,7 @@ public class DefaultBitmapFramePreparer implements BitmapFramePreparer {
             }
         }
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final boolean m1160b(int i, CloseableReference<Bitmap> closeableReference, int i2) {
             if (!CloseableReference.m8640y(closeableReference)) {
                 return false;

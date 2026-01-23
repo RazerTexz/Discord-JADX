@@ -7,9 +7,9 @@ import p507d0.Tuples;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: Strings.kt */
-/* renamed from: d0.g0.v, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.g0.v, reason: use source file name */
+/* JADX INFO: compiled from: Strings.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class Strings3 extends Lambda implements Function2<CharSequence, Integer, Tuples2<? extends Integer, ? extends Integer>> {
     public final /* synthetic */ List $delimitersList;
     public final /* synthetic */ boolean $ignoreCase;

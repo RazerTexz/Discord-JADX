@@ -3,8 +3,8 @@ package com.discord.models.experiments.dto;
 import com.discord.models.domain.Model;
 import kotlin.jvm.internal.Ref$ObjectRef;
 
-/* compiled from: GuildExperimentDto.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: GuildExperimentDto.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class GuildExperimentDto$Parser$parse$2 implements Runnable {
     public final /* synthetic */ Ref$ObjectRef $hashKey;
     public final /* synthetic */ Model.JsonReader $jsonReader;

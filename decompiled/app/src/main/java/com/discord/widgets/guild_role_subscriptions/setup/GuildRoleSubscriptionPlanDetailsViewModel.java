@@ -8,11 +8,11 @@ import p007b.p008a.p018d.AppViewModel;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: GuildRoleSubscriptionPlanDetailsViewModel.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: GuildRoleSubscriptionPlanDetailsViewModel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class GuildRoleSubscriptionPlanDetailsViewModel extends AppViewModel<ViewState> {
 
-    /* compiled from: GuildRoleSubscriptionPlanDetailsViewModel.kt */
+    /* JADX INFO: compiled from: GuildRoleSubscriptionPlanDetailsViewModel.kt */
     public static final /* data */ class ViewState {
         private final Long applicationId;
         private final String coverImage;
@@ -54,27 +54,27 @@ public final class GuildRoleSubscriptionPlanDetailsViewModel extends AppViewMode
             return viewState.copy(str, l3, l4, str3, z2);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final String getCoverImage() {
             return this.coverImage;
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final Long getApplicationId() {
             return this.applicationId;
         }
 
-        /* renamed from: component3, reason: from getter */
+        /* JADX INFO: renamed from: component3, reason: from getter */
         public final Long getCoverImageAssetId() {
             return this.coverImageAssetId;
         }
 
-        /* renamed from: component4, reason: from getter */
+        /* JADX INFO: renamed from: component4, reason: from getter */
         public final String getDescription() {
             return this.description;
         }
 
-        /* renamed from: component5, reason: from getter */
+        /* JADX INFO: renamed from: component5, reason: from getter */
         public final boolean getIsFullServerGate() {
             return this.isFullServerGate;
         }
@@ -111,6 +111,9 @@ public final class GuildRoleSubscriptionPlanDetailsViewModel extends AppViewMode
         }
 
         /* JADX WARN: Multi-variable type inference failed */
+        /* JADX WARN: Type inference failed for: r1v3, types: [int] */
+        /* JADX WARN: Type inference failed for: r1v4 */
+        /* JADX WARN: Type inference failed for: r1v6 */
         public int hashCode() {
             String str = this.coverImage;
             int iHashCode = (str != null ? str.hashCode() : 0) * 31;
@@ -121,11 +124,11 @@ public final class GuildRoleSubscriptionPlanDetailsViewModel extends AppViewMode
             String str2 = this.description;
             int iHashCode4 = (iHashCode3 + (str2 != null ? str2.hashCode() : 0)) * 31;
             boolean z2 = this.isFullServerGate;
-            int i = z2;
-            if (z2 != 0) {
-                i = 1;
+            ?? r1 = z2;
+            if (z2) {
+                r1 = 1;
             }
-            return iHashCode4 + i;
+            return iHashCode4 + r1;
         }
 
         public final boolean isFullServerGate() {

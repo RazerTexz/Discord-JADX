@@ -14,7 +14,7 @@ import p007b.p100d.p104b.p105a.outline;
 import p668x.p669a.p670a.p671d.ITrustedWebActivityCallback;
 import p668x.p669a.p670a.p671d.ITrustedWebActivityService;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public final class TrustedWebActivityServiceConnection {
     private static final String KEY_ACTIVE_NOTIFICATIONS = "android.support.customtabs.trusted.ACTIVE_NOTIFICATIONS";
     private static final String KEY_CHANNEL_NAME = "android.support.customtabs.trusted.CHANNEL_NAME";
@@ -25,7 +25,7 @@ public final class TrustedWebActivityServiceConnection {
     private final ComponentName mComponentName;
     private final ITrustedWebActivityService mService;
 
-    /* renamed from: androidx.browser.trusted.TrustedWebActivityServiceConnection$1 */
+    /* JADX INFO: renamed from: androidx.browser.trusted.TrustedWebActivityServiceConnection$1 */
     public class BinderC01581 extends ITrustedWebActivityCallback.a {
         public final /* synthetic */ TrustedWebActivityCallback val$callback;
 

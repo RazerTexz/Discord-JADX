@@ -41,12 +41,12 @@ import p007b.p195g.p196a.p205c.p219i0.Converter;
 import p007b.p195g.p196a.p205c.p219i0.EnumValues;
 import p007b.p195g.p196a.p205c.p219i0.NameTransformer4;
 
-/* compiled from: BeanSerializerBase.java */
-/* renamed from: b.g.a.c.g0.u.d, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.g.a.c.g0.u.d, reason: use source file name */
+/* JADX INFO: compiled from: BeanSerializerBase.java */
+/* JADX INFO: loaded from: classes3.dex */
 public abstract class BeanSerializerBase extends StdSerializer<Object> implements ContextualSerializer, ResolvableSerializer {
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public static final BeanPropertyWriter[] f4851k;
     public final AnyGetterWriter _anyGetterWriter;
     public final JavaType _beanType;
@@ -82,7 +82,7 @@ public abstract class BeanSerializerBase extends StdSerializer<Object> implement
         this._serializationShape = beanSerializerBuilder.f4797b.mo1812a(null).m1601e();
     }
 
-    /* renamed from: t */
+    /* JADX INFO: renamed from: t */
     public static final BeanPropertyWriter[] m2051t(BeanPropertyWriter[] beanPropertyWriterArr, NameTransformer4 nameTransformer4) {
         if (beanPropertyWriterArr == null || beanPropertyWriterArr.length == 0 || nameTransformer4 == null || nameTransformer4 == NameTransformer4.f4961j) {
             return beanPropertyWriterArr;
@@ -100,7 +100,7 @@ public abstract class BeanSerializerBase extends StdSerializer<Object> implement
 
     /* JADX WARN: Removed duplicated region for block: B:73:0x0171  */
     @Override // p007b.p195g.p196a.p205c.p215g0.ContextualSerializer
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
@@ -226,7 +226,7 @@ public abstract class BeanSerializerBase extends StdSerializer<Object> implement
 
     /* JADX WARN: Removed duplicated region for block: B:60:0x00b6  */
     @Override // p007b.p195g.p196a.p205c.p215g0.ResolvableSerializer
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
@@ -297,8 +297,8 @@ public abstract class BeanSerializerBase extends StdSerializer<Object> implement
     }
 
     @Override // p007b.p195g.p196a.p205c.JsonSerializer
-    /* renamed from: g */
-    public void mo1808g(Object obj, JsonGenerator jsonGenerator, SerializerProvider serializerProvider, TypeSerializer typeSerializer) throws UnsupportedOperationException, IOException, IllegalArgumentException {
+    /* JADX INFO: renamed from: g */
+    public void mo1808g(Object obj, JsonGenerator jsonGenerator, SerializerProvider serializerProvider, TypeSerializer typeSerializer) throws IOException {
         if (this._objectIdWriter != null) {
             jsonGenerator.mo1654e(obj);
             m2053p(obj, jsonGenerator, serializerProvider, typeSerializer);
@@ -321,12 +321,12 @@ public abstract class BeanSerializerBase extends StdSerializer<Object> implement
     }
 
     @Override // p007b.p195g.p196a.p205c.JsonSerializer
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public boolean mo2052i() {
         return this._objectIdWriter != null;
     }
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public final void m2053p(Object obj, JsonGenerator jsonGenerator, SerializerProvider serializerProvider, TypeSerializer typeSerializer) throws IOException {
         ObjectIdWriter objectIdWriter = this._objectIdWriter;
         WritableObjectId writableObjectIdMo2005p = serializerProvider.mo2005p(obj, objectIdWriter.f4820c);
@@ -360,7 +360,7 @@ public abstract class BeanSerializerBase extends StdSerializer<Object> implement
         typeSerializer.mo1960f(jsonGenerator, writableTypeIdM2055r);
     }
 
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     public final void m2054q(Object obj, JsonGenerator jsonGenerator, SerializerProvider serializerProvider, boolean z2) throws IOException {
         ObjectIdWriter objectIdWriter = this._objectIdWriter;
         WritableObjectId writableObjectIdMo2005p = serializerProvider.mo2005p(obj, objectIdWriter.f4820c);
@@ -395,8 +395,8 @@ public abstract class BeanSerializerBase extends StdSerializer<Object> implement
         }
     }
 
-    /* renamed from: r */
-    public final WritableTypeId m2055r(TypeSerializer typeSerializer, Object obj, JsonToken2 jsonToken2) throws UnsupportedOperationException, IllegalArgumentException {
+    /* JADX INFO: renamed from: r */
+    public final WritableTypeId m2055r(TypeSerializer typeSerializer, Object obj, JsonToken2 jsonToken2) {
         AnnotatedMember annotatedMember = this._typeId;
         if (annotatedMember == null) {
             return typeSerializer.m1958d(obj, jsonToken2);
@@ -410,10 +410,10 @@ public abstract class BeanSerializerBase extends StdSerializer<Object> implement
         return writableTypeIdM1958d;
     }
 
-    /* renamed from: s */
+    /* JADX INFO: renamed from: s */
     public abstract BeanSerializerBase mo1985s();
 
-    /* renamed from: u */
+    /* JADX INFO: renamed from: u */
     public void m2056u(Object obj, JsonGenerator jsonGenerator, SerializerProvider serializerProvider) throws IOException {
         BeanPropertyWriter[] beanPropertyWriterArr = this._filteredProps;
         if (beanPropertyWriterArr == null || serializerProvider._serializationView == null) {
@@ -443,16 +443,16 @@ public abstract class BeanSerializerBase extends StdSerializer<Object> implement
         }
     }
 
-    /* renamed from: v */
+    /* JADX INFO: renamed from: v */
     public abstract BeanSerializerBase mo1986v(Set<String> set, Set<String> set2);
 
-    /* renamed from: w */
+    /* JADX INFO: renamed from: w */
     public abstract BeanSerializerBase mo1987w(Object obj);
 
-    /* renamed from: x */
+    /* JADX INFO: renamed from: x */
     public abstract BeanSerializerBase mo1988x(ObjectIdWriter objectIdWriter);
 
-    /* renamed from: y */
+    /* JADX INFO: renamed from: y */
     public abstract BeanSerializerBase mo1989y(BeanPropertyWriter[] beanPropertyWriterArr, BeanPropertyWriter[] beanPropertyWriterArr2);
 
     public BeanSerializerBase(BeanSerializerBase beanSerializerBase, BeanPropertyWriter[] beanPropertyWriterArr, BeanPropertyWriter[] beanPropertyWriterArr2) {

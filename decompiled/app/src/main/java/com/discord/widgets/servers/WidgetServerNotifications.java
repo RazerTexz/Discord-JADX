@@ -57,20 +57,20 @@ import p507d0.p592z.p594d.Lambda;
 import p658rx.Observable;
 import p658rx.functions.Action1;
 
-/* compiled from: WidgetServerNotifications.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetServerNotifications.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetServerNotifications extends AppFragment {
     public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetServerNotifications.class, "binding", "getBinding()Lcom/discord/databinding/WidgetServerNotificationsBinding;", 0)};
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
 
-    /* renamed from: binding$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
     private RadioManager notificationSettingsRadioManager;
     private NotificationsOverridesAdapter overrideAdapter;
 
-    /* compiled from: WidgetServerNotifications.kt */
+    /* JADX INFO: compiled from: WidgetServerNotifications.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -96,10 +96,10 @@ public final class WidgetServerNotifications extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetServerNotifications.kt */
+    /* JADX INFO: compiled from: WidgetServerNotifications.kt */
     public static final /* data */ class Model {
 
-        /* renamed from: Companion, reason: from kotlin metadata */
+        /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
         public static final Companion INSTANCE = new Companion(null);
         private final Integer approximateMemberCount;
         private final Guild guild;
@@ -110,7 +110,7 @@ public final class WidgetServerNotifications extends AppFragment {
         private final boolean isAboveNotifyAllSize;
         private final int notificationsSetting;
 
-        /* compiled from: WidgetServerNotifications.kt */
+        /* JADX INFO: compiled from: WidgetServerNotifications.kt */
         public static final class Companion {
             private Companion() {
             }
@@ -162,17 +162,17 @@ public final class WidgetServerNotifications extends AppFragment {
             return model.copy(guild, modelNotificationSettings, guildProfileData);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final Guild getGuild() {
             return this.guild;
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final ModelNotificationSettings getGuildSettings() {
             return this.guildSettings;
         }
 
-        /* renamed from: component3, reason: from getter */
+        /* JADX INFO: renamed from: component3, reason: from getter */
         public final StoreGuildProfiles.GuildProfileData getGuildProfile() {
             return this.guildProfile;
         }
@@ -223,12 +223,12 @@ public final class WidgetServerNotifications extends AppFragment {
             return iHashCode2 + (guildProfileData != null ? guildProfileData.hashCode() : 0);
         }
 
-        /* renamed from: isAboveHighlightsSize, reason: from getter */
+        /* JADX INFO: renamed from: isAboveHighlightsSize, reason: from getter */
         public final boolean getIsAboveHighlightsSize() {
             return this.isAboveHighlightsSize;
         }
 
-        /* renamed from: isAboveNotifyAllSize, reason: from getter */
+        /* JADX INFO: renamed from: isAboveNotifyAllSize, reason: from getter */
         public final boolean getIsAboveNotifyAllSize() {
             return this.isAboveNotifyAllSize;
         }
@@ -245,8 +245,8 @@ public final class WidgetServerNotifications extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetServerNotifications.kt */
-    /* renamed from: com.discord.widgets.servers.WidgetServerNotifications$configureRadio$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.WidgetServerNotifications$configureRadio$1 */
+    /* JADX INFO: compiled from: WidgetServerNotifications.kt */
     public static final class ViewOnClickListenerC91571 implements View.OnClickListener {
         public final /* synthetic */ Model $model;
         public final /* synthetic */ int $type;
@@ -262,8 +262,8 @@ public final class WidgetServerNotifications extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetServerNotifications.kt */
-    /* renamed from: com.discord.widgets.servers.WidgetServerNotifications$configureUI$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.WidgetServerNotifications$configureUI$1 */
+    /* JADX INFO: compiled from: WidgetServerNotifications.kt */
     public static final class C91581 extends Lambda implements Function1<Integer, Unit> {
         public final /* synthetic */ Model $model;
 
@@ -289,8 +289,8 @@ public final class WidgetServerNotifications extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetServerNotifications.kt */
-    /* renamed from: com.discord.widgets.servers.WidgetServerNotifications$configureUI$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.WidgetServerNotifications$configureUI$2 */
+    /* JADX INFO: compiled from: WidgetServerNotifications.kt */
     public static final class C91592<T> implements Action1<Boolean> {
         public final /* synthetic */ Model $model;
 
@@ -303,7 +303,7 @@ public final class WidgetServerNotifications extends AppFragment {
             call2(bool);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final void call2(Boolean bool) {
             StoreUserGuildSettings userGuildSettings = StoreStream.INSTANCE.getUserGuildSettings();
             CheckedSetting checkedSetting = WidgetServerNotifications.access$getBinding$p(WidgetServerNotifications.this).f17492d;
@@ -314,8 +314,8 @@ public final class WidgetServerNotifications extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetServerNotifications.kt */
-    /* renamed from: com.discord.widgets.servers.WidgetServerNotifications$configureUI$3 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.WidgetServerNotifications$configureUI$3 */
+    /* JADX INFO: compiled from: WidgetServerNotifications.kt */
     public static final class C91603<T> implements Action1<Boolean> {
         public final /* synthetic */ Model $model;
 
@@ -328,7 +328,7 @@ public final class WidgetServerNotifications extends AppFragment {
             call2(bool);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final void call2(Boolean bool) {
             StoreUserGuildSettings userGuildSettings = StoreStream.INSTANCE.getUserGuildSettings();
             CheckedSetting checkedSetting = WidgetServerNotifications.access$getBinding$p(WidgetServerNotifications.this).f17505q;
@@ -339,8 +339,8 @@ public final class WidgetServerNotifications extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetServerNotifications.kt */
-    /* renamed from: com.discord.widgets.servers.WidgetServerNotifications$configureUI$4 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.WidgetServerNotifications$configureUI$4 */
+    /* JADX INFO: compiled from: WidgetServerNotifications.kt */
     public static final class ViewOnClickListenerC91614 implements View.OnClickListener {
         public final /* synthetic */ Model $model;
 
@@ -360,8 +360,8 @@ public final class WidgetServerNotifications extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetServerNotifications.kt */
-    /* renamed from: com.discord.widgets.servers.WidgetServerNotifications$createSwipeableItemTouchHelper$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.WidgetServerNotifications$createSwipeableItemTouchHelper$1 */
+    /* JADX INFO: compiled from: WidgetServerNotifications.kt */
     public static final class C91621 extends SwipeableItemTouchHelper {
         public final /* synthetic */ SwipeableItemTouchHelper.SwipeRevealConfiguration $deleteConfig;
 
@@ -385,8 +385,8 @@ public final class WidgetServerNotifications extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetServerNotifications.kt */
-    /* renamed from: com.discord.widgets.servers.WidgetServerNotifications$onViewBound$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.WidgetServerNotifications$onViewBound$1 */
+    /* JADX INFO: compiled from: WidgetServerNotifications.kt */
     public static final class C91631 extends Lambda implements Function2<View, NotificationsOverridesAdapter.Item, Unit> {
         public static final C91631 INSTANCE = new C91631();
 
@@ -400,7 +400,7 @@ public final class WidgetServerNotifications extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(View view, NotificationsOverridesAdapter.Item item) {
             Intrinsics3.checkNotNullParameter(view, "itemView");
             Intrinsics3.checkNotNullParameter(item, "item");
@@ -411,8 +411,8 @@ public final class WidgetServerNotifications extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetServerNotifications.kt */
-    /* renamed from: com.discord.widgets.servers.WidgetServerNotifications$onViewBound$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.WidgetServerNotifications$onViewBound$2 */
+    /* JADX INFO: compiled from: WidgetServerNotifications.kt */
     public static final class ViewOnClickListenerC91642 implements View.OnClickListener {
         public final /* synthetic */ long $guildId;
 
@@ -426,8 +426,8 @@ public final class WidgetServerNotifications extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetServerNotifications.kt */
-    /* renamed from: com.discord.widgets.servers.WidgetServerNotifications$onViewBoundOrOnResume$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.WidgetServerNotifications$onViewBoundOrOnResume$1 */
+    /* JADX INFO: compiled from: WidgetServerNotifications.kt */
     public static final class C91651 extends Lambda implements Function1<Model, Unit> {
         public C91651() {
             super(1);
@@ -439,14 +439,14 @@ public final class WidgetServerNotifications extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Model model) throws Exception {
             WidgetServerNotifications.access$configureUI(WidgetServerNotifications.this, model);
         }
     }
 
-    /* compiled from: WidgetServerNotifications.kt */
-    /* renamed from: com.discord.widgets.servers.WidgetServerNotifications$onViewBoundOrOnResume$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.WidgetServerNotifications$onViewBoundOrOnResume$2 */
+    /* JADX INFO: compiled from: WidgetServerNotifications.kt */
     public static final class C91662 extends Lambda implements Function1<List<? extends NotificationsOverridesAdapter.Item>, Unit> {
         public C91662() {
             super(1);
@@ -458,7 +458,7 @@ public final class WidgetServerNotifications extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(List<NotificationsOverridesAdapter.Item> list) {
             NotificationsOverridesAdapter notificationsOverridesAdapterAccess$getOverrideAdapter$p = WidgetServerNotifications.access$getOverrideAdapter$p(WidgetServerNotifications.this);
             Intrinsics3.checkNotNullExpressionValue(list, "it");

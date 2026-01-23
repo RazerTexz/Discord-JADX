@@ -16,20 +16,20 @@ import com.discord.models.presence.Presence;
 import com.discord.utilities.presence.PresenceUtils;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: StatusView.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: StatusView.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class StatusView extends AppCompatImageView {
 
-    /* renamed from: j, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: j, reason: from kotlin metadata */
     public float cornerRadius;
 
-    /* renamed from: k, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: k, reason: from kotlin metadata */
     public Paint backgroundPaint;
 
-    /* renamed from: l, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: l, reason: from kotlin metadata */
     public boolean showMobile;
 
-    /* renamed from: m, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: m, reason: from kotlin metadata */
     public boolean isCircle;
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */

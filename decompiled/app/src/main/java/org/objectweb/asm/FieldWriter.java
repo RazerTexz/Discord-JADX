@@ -2,7 +2,7 @@ package org.objectweb.asm;
 
 import org.objectweb.asm.Attribute;
 
-/* loaded from: discord-126021.apk:org/objectweb/asm/FieldWriter.SCL.lombok */
+/* JADX INFO: loaded from: discord-126021.apk:org/objectweb/asm/FieldWriter.SCL.lombok */
 final class FieldWriter extends FieldVisitor {
     private final SymbolTable symbolTable;
     private final int accessFlags;

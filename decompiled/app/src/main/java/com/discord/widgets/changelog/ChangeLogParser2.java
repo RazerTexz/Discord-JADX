@@ -7,9 +7,9 @@ import kotlin.Unit;
 import kotlin.jvm.functions.Function1;
 import kotlin.jvm.functions.Function3;
 
-/* compiled from: ChangeLogParser.kt */
-/* renamed from: com.discord.widgets.changelog.ChangeLogParser$parse$renderContext$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.changelog.ChangeLogParser$parse$renderContext$1, reason: use source file name */
+/* JADX INFO: compiled from: ChangeLogParser.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class ChangeLogParser2 implements UrlNode.RenderContext {
     public final /* synthetic */ Context $context;
     public final /* synthetic */ Function3 $onClickListener;

@@ -5,15 +5,15 @@ import okhttp3.MediaType;
 import okhttp3.RequestBody;
 import p630i0.Converter2;
 
-/* compiled from: ScalarRequestBodyConverter.java */
-/* renamed from: i0.e0.b.a, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: i0.e0.b.a, reason: use source file name */
+/* JADX INFO: compiled from: ScalarRequestBodyConverter.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class ScalarRequestBodyConverter<T> implements Converter2<T, RequestBody> {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final ScalarRequestBodyConverter<Object> f26517a = new ScalarRequestBodyConverter<>();
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static final MediaType f26518b;
 
     static {

@@ -13,7 +13,7 @@ import org.objectweb.asm.ClassWriter;
 import org.objectweb.asm.MethodVisitor;
 import org.objectweb.asm.Opcodes;
 
-/* loaded from: discord-126021.apk:lombok/patcher/scripts/WrapMethodCallScript.SCL.lombok */
+/* JADX INFO: loaded from: discord-126021.apk:lombok/patcher/scripts/WrapMethodCallScript.SCL.lombok */
 public class WrapMethodCallScript extends MethodLevelPatchScript {
     private final Hook wrapper;
     private final Hook callToWrap;
@@ -79,8 +79,8 @@ public class WrapMethodCallScript extends MethodLevelPatchScript {
         this.extraRequests = extraRequests;
     }
 
-    /* renamed from: lombok.patcher.scripts.WrapMethodCallScript$1 */
-    /* loaded from: discord-126021.apk:lombok/patcher/scripts/WrapMethodCallScript$1.SCL.lombok */
+    /* JADX INFO: renamed from: lombok.patcher.scripts.WrapMethodCallScript$1 */
+    /* JADX INFO: loaded from: discord-126021.apk:lombok/patcher/scripts/WrapMethodCallScript$1.SCL.lombok */
     class C129201 implements PatchScript.MethodPatcherFactory {
         private final /* synthetic */ String val$classSpec;
 
@@ -103,7 +103,7 @@ public class WrapMethodCallScript extends MethodLevelPatchScript {
         return patcher;
     }
 
-    /* loaded from: discord-126021.apk:lombok/patcher/scripts/WrapMethodCallScript$WrapMethodCall.SCL.lombok */
+    /* JADX INFO: loaded from: discord-126021.apk:lombok/patcher/scripts/WrapMethodCallScript$WrapMethodCall.SCL.lombok */
     private class WrapMethodCall extends MethodVisitor {
         private final String ownClassSpec;
         private final MethodLogistics logistics;

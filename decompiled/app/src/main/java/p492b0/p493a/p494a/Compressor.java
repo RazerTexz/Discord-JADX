@@ -9,12 +9,12 @@ import p492b0.p493a.p494a.p495e.DefaultConstraint;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: Compressor.kt */
-/* renamed from: b0.a.a.a, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b0.a.a.a, reason: use source file name */
+/* JADX INFO: compiled from: Compressor.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class Compressor extends Lambda implements Function1<Compression, Unit> {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static final Compressor f14501j = new Compressor();
 
     public Compressor() {

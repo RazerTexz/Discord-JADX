@@ -14,12 +14,12 @@ import p507d0.p513e0.p514p.p515d.p517m0.p552k.p559x.DescriptorUtils2;
 import p507d0.p513e0.p514p.p515d.p517m0.p566m.StorageManager;
 import p507d0.p513e0.p514p.p515d.p517m0.p576p.SmartList;
 
-/* compiled from: AbstractClassTypeConstructor.java */
-/* renamed from: d0.e0.p.d.m0.n.b, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.n.b, reason: use source file name */
+/* JADX INFO: compiled from: AbstractClassTypeConstructor.java */
+/* JADX INFO: loaded from: classes3.dex */
 public abstract class AbstractClassTypeConstructor extends AbstractTypeConstructor implements TypeConstructor {
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public int f24742b;
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -33,7 +33,7 @@ public abstract class AbstractClassTypeConstructor extends AbstractTypeConstruct
     }
 
     /* JADX WARN: Removed duplicated region for block: B:21:0x002f  */
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
@@ -68,7 +68,7 @@ public abstract class AbstractClassTypeConstructor extends AbstractTypeConstruct
         throw new IllegalStateException(str2);
     }
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public static boolean m9995h(ClassifierDescriptor classifierDescriptor) {
         if (classifierDescriptor != null) {
             return (ErrorUtils.isError(classifierDescriptor) || DescriptorUtils.isLocal(classifierDescriptor)) ? false : true;
@@ -78,7 +78,7 @@ public abstract class AbstractClassTypeConstructor extends AbstractTypeConstruct
     }
 
     @Override // p507d0.p513e0.p514p.p515d.p517m0.p567n.AbstractTypeConstructor
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public KotlinType mo9403b() {
         if (KotlinBuiltIns.isSpecialClassWithNoSupertypes(getDeclarationDescriptor())) {
             return null;
@@ -87,7 +87,7 @@ public abstract class AbstractClassTypeConstructor extends AbstractTypeConstruct
     }
 
     @Override // p507d0.p513e0.p514p.p515d.p517m0.p567n.AbstractTypeConstructor
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public Collection<KotlinType> mo9996c(boolean z2) {
         DeclarationDescriptor containingDeclaration = getDeclarationDescriptor().getContainingDeclaration();
         if (!(containingDeclaration instanceof ClassDescriptor)) {

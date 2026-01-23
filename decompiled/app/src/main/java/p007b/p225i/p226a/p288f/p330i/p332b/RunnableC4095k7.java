@@ -3,24 +3,24 @@ package p007b.p225i.p226a.p288f.p330i.p332b;
 import android.os.Bundle;
 import java.util.Objects;
 
-/* compiled from: com.google.android.gms:play-services-measurement-impl@@18.0.0 */
-/* renamed from: b.i.a.f.i.b.k7 */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.i.b.k7 */
+/* JADX INFO: compiled from: com.google.android.gms:play-services-measurement-impl@@18.0.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public final class RunnableC4095k7 implements Runnable {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final /* synthetic */ Bundle f10887j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final /* synthetic */ C4072i7 f10888k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final /* synthetic */ C4072i7 f10889l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public final /* synthetic */ long f10890m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public final /* synthetic */ C4060h7 f10891n;
 
     public RunnableC4095k7(C4060h7 c4060h7, Bundle bundle, C4072i7 c4072i7, C4072i7 c4072i72, long j) {
@@ -32,7 +32,7 @@ public final class RunnableC4095k7 implements Runnable {
     }
 
     @Override // java.lang.Runnable
-    public final void run() throws IllegalStateException {
+    public final void run() {
         C4060h7 c4060h7 = this.f10891n;
         Bundle bundle = this.f10887j;
         C4072i7 c4072i7 = this.f10888k;

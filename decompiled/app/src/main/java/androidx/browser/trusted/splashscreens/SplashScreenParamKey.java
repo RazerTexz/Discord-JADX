@@ -1,6 +1,6 @@
 package androidx.browser.trusted.splashscreens;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public final class SplashScreenParamKey {
     public static final String KEY_BACKGROUND_COLOR = "androidx.browser.trusted.trusted.KEY_SPLASH_SCREEN_BACKGROUND_COLOR";
     public static final String KEY_FADE_OUT_DURATION_MS = "androidx.browser.trusted.KEY_SPLASH_SCREEN_FADE_OUT_DURATION";

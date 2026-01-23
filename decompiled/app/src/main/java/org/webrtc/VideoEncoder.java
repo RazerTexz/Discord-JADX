@@ -4,7 +4,7 @@ import androidx.annotation.Nullable;
 import org.webrtc.EncodedImage;
 import p007b.p100d.p104b.p105a.outline;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public interface VideoEncoder {
 
     public static class BitrateAllocation {
@@ -158,7 +158,7 @@ public interface VideoEncoder {
         @Nullable
         public final Integer low;
 
-        /* renamed from: on */
+        /* JADX INFO: renamed from: on */
         public final boolean f27620on;
 
         public ScalingSettings(int i, int i2) {

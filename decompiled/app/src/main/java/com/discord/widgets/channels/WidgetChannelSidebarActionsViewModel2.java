@@ -14,9 +14,9 @@ import p637j0.p641k.Func1;
 import p637j0.p642l.p647e.ScalarSynchronousObservable;
 import p658rx.Observable;
 
-/* compiled from: WidgetChannelSidebarActionsViewModel.kt */
-/* renamed from: com.discord.widgets.channels.WidgetChannelSidebarActionsViewModel$Companion$observeStoreState$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.channels.WidgetChannelSidebarActionsViewModel$Companion$observeStoreState$1, reason: use source file name */
+/* JADX INFO: compiled from: WidgetChannelSidebarActionsViewModel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetChannelSidebarActionsViewModel2<T, R> implements Func1<PanelState, Observable<? extends WidgetChannelSidebarActionsViewModel.StoreState>> {
     public final /* synthetic */ StoreChannels $storeChannels;
     public final /* synthetic */ StoreChannelsSelected $storeChannelsSelected;
@@ -24,8 +24,8 @@ public final class WidgetChannelSidebarActionsViewModel2<T, R> implements Func1<
     public final /* synthetic */ StoreUser $storeUser;
     public final /* synthetic */ StoreUserGuildSettings $storeUserGuildSettings;
 
-    /* compiled from: WidgetChannelSidebarActionsViewModel.kt */
-    /* renamed from: com.discord.widgets.channels.WidgetChannelSidebarActionsViewModel$Companion$observeStoreState$1$1, reason: invalid class name */
+    /* JADX INFO: renamed from: com.discord.widgets.channels.WidgetChannelSidebarActionsViewModel$Companion$observeStoreState$1$1, reason: invalid class name */
+    /* JADX INFO: compiled from: WidgetChannelSidebarActionsViewModel.kt */
     public static final class AnonymousClass1<T, R> implements Func1<Channel, Observable<? extends WidgetChannelSidebarActionsViewModel.StoreState>> {
         public final /* synthetic */ PanelState $panelState;
 
@@ -38,7 +38,7 @@ public final class WidgetChannelSidebarActionsViewModel2<T, R> implements Func1<
             return call2(channel);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final Observable<? extends WidgetChannelSidebarActionsViewModel.StoreState> call2(Channel channel) {
             Observable<? extends WidgetChannelSidebarActionsViewModel.StoreState> scalarSynchronousObservable = channel == null ? new ScalarSynchronousObservable<>(WidgetChannelSidebarActionsViewModel.StoreState.ChannelNotFound.INSTANCE) : Observable.m11075i(WidgetChannelSidebarActionsViewModel2.this.$storeUserGuildSettings.observeGuildSettings(), StoreUser.observeMe$default(WidgetChannelSidebarActionsViewModel2.this.$storeUser, false, 1, null), WidgetChannelSidebarActionsViewModel2.this.$storeChannels.observeChannel(channel.getParentId()), new WidgetChannelSidebarActionsViewModel3(this, channel));
             return Intrinsics3.areEqual(this.$panelState, PanelState.C5580c.f18642a) ? scalarSynchronousObservable : scalarSynchronousObservable.m11100Z(1);
@@ -58,7 +58,7 @@ public final class WidgetChannelSidebarActionsViewModel2<T, R> implements Func1<
         return call2(panelState);
     }
 
-    /* renamed from: call, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
     public final Observable<? extends WidgetChannelSidebarActionsViewModel.StoreState> call2(PanelState panelState) {
         return this.$storeChannelsSelected.observeSelectedChannel().m11099Y(new AnonymousClass1(panelState));
     }

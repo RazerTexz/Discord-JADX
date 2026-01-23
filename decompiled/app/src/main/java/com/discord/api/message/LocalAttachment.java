@@ -4,8 +4,8 @@ import com.discord.models.domain.ModelAuditLogEntry;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: LocalAttachment.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: LocalAttachment.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class LocalAttachment {
     private final String displayName;
     private final long id;
@@ -19,17 +19,17 @@ public final /* data */ class LocalAttachment {
         this.displayName = str2;
     }
 
-    /* renamed from: a, reason: from getter */
+    /* JADX INFO: renamed from: a, reason: from getter */
     public final String getDisplayName() {
         return this.displayName;
     }
 
-    /* renamed from: b, reason: from getter */
+    /* JADX INFO: renamed from: b, reason: from getter */
     public final long getId() {
         return this.id;
     }
 
-    /* renamed from: c, reason: from getter */
+    /* JADX INFO: renamed from: c, reason: from getter */
     public final String getUriString() {
         return this.uriString;
     }

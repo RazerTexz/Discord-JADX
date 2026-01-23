@@ -10,9 +10,9 @@ import p007b.p008a.p018d.AppScreen2;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetGuildInviteShare.kt */
-/* renamed from: com.discord.widgets.guilds.invite.WidgetGuildInviteShare$Companion$launch$2, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.guilds.invite.WidgetGuildInviteShare$Companion$launch$2, reason: use source file name */
+/* JADX INFO: compiled from: WidgetGuildInviteShare.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetGuildInviteShare3 extends Lambda implements Function1<Error, Unit> {
     public final /* synthetic */ Intent $arguments;
     public final /* synthetic */ Context $context;
@@ -32,7 +32,7 @@ public final class WidgetGuildInviteShare3 extends Lambda implements Function1<E
         return Unit.f27425a;
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final void invoke2(Error error) {
         Intrinsics3.checkNotNullParameter(error, "it");
         AnalyticsTracker.openModal$default("Instant Invite Modal", this.$source, null, 4, null);

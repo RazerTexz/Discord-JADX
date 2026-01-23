@@ -6,9 +6,9 @@ import kotlin.jvm.functions.Function0;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: FragmentViewModelLazy.kt */
-/* renamed from: com.discord.widgets.guild_role_subscriptions.tier.create.WidgetGuildRoleSubscriptionReview$appViewModels$$inlined$viewModels$1 */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.guild_role_subscriptions.tier.create.WidgetGuildRoleSubscriptionReview$appViewModels$$inlined$viewModels$1 */
+/* JADX INFO: compiled from: FragmentViewModelLazy.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class C8495x384a615b extends Lambda implements Function0<ViewModelStore> {
     public final /* synthetic */ Function0 $ownerProducer;
 

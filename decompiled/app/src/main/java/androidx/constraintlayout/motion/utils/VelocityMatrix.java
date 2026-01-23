@@ -3,7 +3,7 @@ package androidx.constraintlayout.motion.utils;
 import androidx.constraintlayout.motion.widget.KeyCycleOscillator;
 import androidx.constraintlayout.motion.widget.SplineSet;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class VelocityMatrix {
     private static String TAG = "VelocityMatrix";
     public float mDRotate;
@@ -16,17 +16,18 @@ public class VelocityMatrix {
     public void applyTransform(float f, float f2, int i, int i2, float[] fArr) {
         float f3 = fArr[0];
         float f4 = fArr[1];
-        float f5 = (f2 - 0.5f) * 2.0f;
-        float f6 = f3 + this.mDTranslateX;
-        float f7 = f4 + this.mDTranslateY;
-        float f8 = (this.mDScaleX * (f - 0.5f) * 2.0f) + f6;
-        float f9 = (this.mDScaleY * f5) + f7;
+        float f5 = (f - 0.5f) * 2.0f;
+        float f6 = (f2 - 0.5f) * 2.0f;
+        float f7 = f3 + this.mDTranslateX;
+        float f8 = f4 + this.mDTranslateY;
+        float f9 = (this.mDScaleX * f5) + f7;
+        float f10 = (this.mDScaleY * f6) + f8;
         float radians = (float) Math.toRadians(this.mRotate);
         float radians2 = (float) Math.toRadians(this.mDRotate);
         double d = radians;
-        double d2 = i2 * f5;
-        float fSin = (((float) ((Math.sin(d) * ((-i) * r7)) - (Math.cos(d) * d2))) * radians2) + f8;
-        float fCos = (radians2 * ((float) ((Math.cos(d) * (i * r7)) - (Math.sin(d) * d2)))) + f9;
+        double d2 = i2 * f6;
+        float fSin = (((float) ((Math.sin(d) * ((double) ((-i) * f5))) - (Math.cos(d) * d2))) * radians2) + f9;
+        float fCos = (radians2 * ((float) ((Math.cos(d) * ((double) (i * f5))) - (Math.sin(d) * d2)))) + f10;
         fArr[0] = fSin;
         fArr[1] = fCos;
     }

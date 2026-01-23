@@ -7,7 +7,7 @@ import java.util.HashMap;
 import java.util.Map;
 import p007b.p100d.p104b.p105a.outline;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class TransitionValues {
     public View view;
     public final Map<String, Object> values = new HashMap();

@@ -4,9 +4,9 @@ import kotlin.Unit;
 import kotlin.jvm.functions.Function1;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetThreadStatusViewModel.kt */
-/* renamed from: com.discord.widgets.status.WidgetThreadStatusViewModel$onJoinTapped$1$2, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.status.WidgetThreadStatusViewModel$onJoinTapped$1$2, reason: use source file name */
+/* JADX INFO: compiled from: WidgetThreadStatusViewModel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetThreadStatusViewModel5 extends Lambda implements Function1<Void, Unit> {
     public static final WidgetThreadStatusViewModel5 INSTANCE = new WidgetThreadStatusViewModel5();
 
@@ -20,7 +20,7 @@ public final class WidgetThreadStatusViewModel5 extends Lambda implements Functi
         return Unit.f27425a;
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final void invoke2(Void r1) {
     }
 }

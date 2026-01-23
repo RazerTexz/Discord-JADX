@@ -4,13 +4,13 @@ import p637j0.p642l.p646d.SequentialSubscription;
 import p637j0.p642l.p646d.Unsubscribed;
 import p658rx.Subscription;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public final class SerialSubscription implements Subscription {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final SequentialSubscription f27657j = new SequentialSubscription();
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public void m11139a(Subscription subscription) {
         Subscription subscription2;
         if (subscription == null) {

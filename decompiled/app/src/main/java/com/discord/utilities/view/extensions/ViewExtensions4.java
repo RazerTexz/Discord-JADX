@@ -2,9 +2,9 @@ package com.discord.utilities.view.extensions;
 
 import kotlin.jvm.functions.Function0;
 
-/* compiled from: ViewExtensions.kt */
-/* renamed from: com.discord.utilities.view.extensions.ViewExtensions$fadeIn$viewPropertyAnimator$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.utilities.view.extensions.ViewExtensions$fadeIn$viewPropertyAnimator$1, reason: use source file name */
+/* JADX INFO: compiled from: ViewExtensions.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class ViewExtensions4 implements Runnable {
     public final /* synthetic */ Function0 $onAnimationEnd;
 

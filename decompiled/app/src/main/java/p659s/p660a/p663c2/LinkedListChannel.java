@@ -8,29 +8,29 @@ import p659s.p660a.p661a.LockFreeLinkedList3;
 import p659s.p660a.p661a.Symbol3;
 import p659s.p660a.p663c2.AbstractChannel3;
 
-/* compiled from: LinkedListChannel.kt */
-/* renamed from: s.a.c2.k, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: s.a.c2.k, reason: use source file name */
+/* JADX INFO: compiled from: LinkedListChannel.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public class LinkedListChannel<E> extends AbstractChannel<E> {
     public LinkedListChannel(Function1<? super E, Unit> function1) {
         super(function1);
     }
 
     @Override // p659s.p660a.p663c2.AbstractChannel3
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public final boolean mo11219h() {
         return false;
     }
 
     @Override // p659s.p660a.p663c2.AbstractChannel3
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public final boolean mo11220i() {
         return false;
     }
 
     /* JADX WARN: Multi-variable type inference failed */
     @Override // p659s.p660a.p663c2.AbstractChannel3
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public Object mo11222k(E e) {
         AbstractChannel6 abstractChannel6;
         do {
@@ -66,13 +66,13 @@ public class LinkedListChannel<E> extends AbstractChannel<E> {
     }
 
     @Override // p659s.p660a.p663c2.AbstractChannel
-    /* renamed from: s */
+    /* JADX INFO: renamed from: s */
     public final boolean mo11203s() {
         return true;
     }
 
     @Override // p659s.p660a.p663c2.AbstractChannel
-    /* renamed from: t */
+    /* JADX INFO: renamed from: t */
     public final boolean mo11204t() {
         return true;
     }

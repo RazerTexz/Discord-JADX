@@ -16,14 +16,14 @@ import p507d0.p592z.p594d.Lambda;
 import p658rx.Observable;
 import p658rx.Subscription;
 
-/* compiled from: UserRequestManager.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: UserRequestManager.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class UserRequestManager {
     private final Function1<User, Unit> onFlush;
     private final HashMap<Long, Subscription> userRequests;
 
-    /* compiled from: UserRequestManager.kt */
-    /* renamed from: com.discord.utilities.user.UserRequestManager$requestUser$1 */
+    /* JADX INFO: renamed from: com.discord.utilities.user.UserRequestManager$requestUser$1 */
+    /* JADX INFO: compiled from: UserRequestManager.kt */
     public static final class C69841 extends Lambda implements Function1<User, Unit> {
         public C69841() {
             super(1);
@@ -35,7 +35,7 @@ public final class UserRequestManager {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(User user) {
             if (user != null) {
                 UserRequestManager.access$getOnFlush$p(UserRequestManager.this).invoke(user);
@@ -43,8 +43,8 @@ public final class UserRequestManager {
         }
     }
 
-    /* compiled from: UserRequestManager.kt */
-    /* renamed from: com.discord.utilities.user.UserRequestManager$requestUser$2 */
+    /* JADX INFO: renamed from: com.discord.utilities.user.UserRequestManager$requestUser$2 */
+    /* JADX INFO: compiled from: UserRequestManager.kt */
     public static final class C69852 extends Lambda implements Function0<Unit> {
         public final /* synthetic */ long $userId;
 
@@ -60,14 +60,14 @@ public final class UserRequestManager {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             UserRequestManager.access$onRequestEnded(UserRequestManager.this, this.$userId);
         }
     }
 
-    /* compiled from: UserRequestManager.kt */
-    /* renamed from: com.discord.utilities.user.UserRequestManager$requestUser$3 */
+    /* JADX INFO: renamed from: com.discord.utilities.user.UserRequestManager$requestUser$3 */
+    /* JADX INFO: compiled from: UserRequestManager.kt */
     public static final class C69863 extends Lambda implements Function1<Subscription, Unit> {
         public final /* synthetic */ long $userId;
 
@@ -83,7 +83,7 @@ public final class UserRequestManager {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Subscription subscription) {
             Intrinsics3.checkNotNullParameter(subscription, "it");
             UserRequestManager.access$onRequestStarted(UserRequestManager.this, this.$userId, subscription);

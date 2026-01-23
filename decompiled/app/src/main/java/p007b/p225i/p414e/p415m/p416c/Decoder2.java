@@ -14,30 +14,30 @@ import p007b.p225i.p414e.p418n.DecoderResult;
 import p007b.p225i.p414e.p418n.p420l.GenericGF;
 import p007b.p225i.p414e.p418n.p420l.ReedSolomonDecoder;
 
-/* compiled from: Decoder.java */
-/* renamed from: b.i.e.m.c.a, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.e.m.c.a, reason: use source file name */
+/* JADX INFO: compiled from: Decoder.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class Decoder2 {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final String[] f13212a = {"CTRL_PS", " ", ExifInterface.GPS_MEASUREMENT_IN_PROGRESS, "B", "C", "D", ExifInterface.LONGITUDE_EAST, "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", ExifInterface.LATITUDE_SOUTH, ExifInterface.GPS_DIRECTION_TRUE, "U", ExifInterface.GPS_MEASUREMENT_INTERRUPTED, ExifInterface.LONGITUDE_WEST, "X", "Y", "Z", "CTRL_LL", "CTRL_ML", "CTRL_DL", "CTRL_BS"};
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static final String[] f13213b = {"CTRL_PS", " ", "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", "CTRL_US", "CTRL_ML", "CTRL_DL", "CTRL_BS"};
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public static final String[] f13214c = {"CTRL_PS", " ", "\u0001", "\u0002", "\u0003", "\u0004", "\u0005", "\u0006", "\u0007", "\b", "\t", "\n", "\u000b", "\f", "\r", "\u001b", "\u001c", "\u001d", "\u001e", "\u001f", "@", "\\", "^", "_", "`", "|", "~", "\u007f", "CTRL_LL", "CTRL_UL", "CTRL_PL", "CTRL_BS"};
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public static final String[] f13215d = {"", "\r", "\r\n", ". ", ", ", ": ", "!", "\"", "#", "$", "%", "&", "'", "(", ")", "*", BadgeDrawable.DEFAULT_EXCEED_MAX_BADGE_NUMBER_SUFFIX, ",", "-", ".", AutocompleteViewModel.COMMAND_DISCOVER_TOKEN, ":", ";", "<", "=", ">", "?", "[", "]", "{", "}", "CTRL_UL"};
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public static final String[] f13216e = {"CTRL_PS", " ", "0", "1", ExifInterface.GPS_MEASUREMENT_2D, ExifInterface.GPS_MEASUREMENT_3D, "4", "5", "6", "7", "8", "9", ",", ".", "CTRL_UL", "CTRL_US"};
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public AztecDetectorResult f13217f;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static int m6925b(boolean[] zArr, int i, int i2) {
         int i3 = 0;
         for (int i4 = i; i4 < i + i2; i4++) {
@@ -49,7 +49,7 @@ public final class Decoder2 {
         return i3;
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public DecoderResult m6926a(AztecDetectorResult aztecDetectorResult) throws FormatException {
         int i;
         GenericGF genericGF;

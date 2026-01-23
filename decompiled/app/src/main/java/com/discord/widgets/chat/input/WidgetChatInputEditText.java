@@ -18,11 +18,11 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p658rx.subjects.BehaviorSubject;
 import p658rx.subjects.Subject;
 
-/* compiled from: WidgetChatInputEditText.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetChatInputEditText.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetChatInputEditText {
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private long channelId;
     private final FlexEditText editText;
@@ -31,7 +31,7 @@ public final class WidgetChatInputEditText {
     private final MessageDraftsRepo messageDraftsRepo;
     private Function0<Unit> onSendListener;
 
-    /* compiled from: WidgetChatInputEditText.kt */
+    /* JADX INFO: compiled from: WidgetChatInputEditText.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -50,8 +50,8 @@ public final class WidgetChatInputEditText {
         }
     }
 
-    /* compiled from: WidgetChatInputEditText.kt */
-    /* renamed from: com.discord.widgets.chat.input.WidgetChatInputEditText$setHardwareKeyboardSendBehavior$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.input.WidgetChatInputEditText$setHardwareKeyboardSendBehavior$1 */
+    /* JADX INFO: compiled from: WidgetChatInputEditText.kt */
     public static final class ViewOnKeyListenerC77521 implements View.OnKeyListener {
         public ViewOnKeyListenerC77521() {
         }
@@ -75,8 +75,8 @@ public final class WidgetChatInputEditText {
         }
     }
 
-    /* compiled from: WidgetChatInputEditText.kt */
-    /* renamed from: com.discord.widgets.chat.input.WidgetChatInputEditText$setOnTextChangedListener$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.input.WidgetChatInputEditText$setOnTextChangedListener$1 */
+    /* JADX INFO: compiled from: WidgetChatInputEditText.kt */
     public static final class C77531 extends TextWatcher {
         private boolean empty;
 
@@ -104,8 +104,8 @@ public final class WidgetChatInputEditText {
         }
     }
 
-    /* compiled from: WidgetChatInputEditText.kt */
-    /* renamed from: com.discord.widgets.chat.input.WidgetChatInputEditText$setSoftwareKeyboardSendBehavior$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.input.WidgetChatInputEditText$setSoftwareKeyboardSendBehavior$1 */
+    /* JADX INFO: compiled from: WidgetChatInputEditText.kt */
     public static final class C77541 implements TextView.OnEditorActionListener {
         public C77541() {
         }

@@ -45,29 +45,29 @@ import p007b.p452o.p453a.p472w.CameraPreview;
 import p007b.p452o.p453a.p473x.Size3;
 import p007b.p452o.p453a.p473x.SizeSelector;
 
-/* compiled from: CameraEngine.java */
-/* renamed from: b.o.a.n.i, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.o.a.n.i, reason: use source file name */
+/* JADX INFO: compiled from: CameraEngine.java */
+/* JADX INFO: loaded from: classes3.dex */
 public abstract class CameraEngine implements CameraPreview.c, PictureRecorder.a {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static final CameraLogger f13918j = new CameraLogger(CameraEngine.class.getSimpleName());
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public WorkerHandler f13919k;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public final g f13921m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public final CameraStateOrchestrator f13922n = new CameraStateOrchestrator(new c());
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     @VisibleForTesting
     public Handler f13920l = new Handler(Looper.getMainLooper());
 
-    /* compiled from: CameraEngine.java */
-    /* renamed from: b.o.a.n.i$a */
+    /* JADX INFO: renamed from: b.o.a.n.i$a */
+    /* JADX INFO: compiled from: CameraEngine.java */
     public class a implements Callable<Task<Void>> {
         public a() {
         }
@@ -78,8 +78,8 @@ public abstract class CameraEngine implements CameraPreview.c, PictureRecorder.a
         }
     }
 
-    /* compiled from: CameraEngine.java */
-    /* renamed from: b.o.a.n.i$b */
+    /* JADX INFO: renamed from: b.o.a.n.i$b */
+    /* JADX INFO: compiled from: CameraEngine.java */
     public class b implements Callable<Task<Void>> {
         public b() {
         }
@@ -90,18 +90,18 @@ public abstract class CameraEngine implements CameraPreview.c, PictureRecorder.a
         }
     }
 
-    /* compiled from: CameraEngine.java */
-    /* renamed from: b.o.a.n.i$c */
+    /* JADX INFO: renamed from: b.o.a.n.i$c */
+    /* JADX INFO: compiled from: CameraEngine.java */
     public class c implements CameraOrchestrator.b {
         public c() {
         }
     }
 
-    /* compiled from: CameraEngine.java */
-    /* renamed from: b.o.a.n.i$d */
+    /* JADX INFO: renamed from: b.o.a.n.i$d */
+    /* JADX INFO: compiled from: CameraEngine.java */
     public class d implements InterfaceC4357c<Void> {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final /* synthetic */ CountDownLatch f13926a;
 
         public d(CameraEngine cameraEngine, CountDownLatch countDownLatch) {
@@ -114,8 +114,8 @@ public abstract class CameraEngine implements CameraPreview.c, PictureRecorder.a
         }
     }
 
-    /* compiled from: CameraEngine.java */
-    /* renamed from: b.o.a.n.i$e */
+    /* JADX INFO: renamed from: b.o.a.n.i$e */
+    /* JADX INFO: compiled from: CameraEngine.java */
     public class e implements Callable<Task<Void>> {
         public e() {
         }
@@ -131,8 +131,8 @@ public abstract class CameraEngine implements CameraPreview.c, PictureRecorder.a
         }
     }
 
-    /* compiled from: CameraEngine.java */
-    /* renamed from: b.o.a.n.i$f */
+    /* JADX INFO: renamed from: b.o.a.n.i$f */
+    /* JADX INFO: compiled from: CameraEngine.java */
     public class f implements Callable<Task<Void>> {
         public f() {
         }
@@ -143,13 +143,13 @@ public abstract class CameraEngine implements CameraPreview.c, PictureRecorder.a
         }
     }
 
-    /* compiled from: CameraEngine.java */
-    /* renamed from: b.o.a.n.i$g */
+    /* JADX INFO: renamed from: b.o.a.n.i$g */
+    /* JADX INFO: compiled from: CameraEngine.java */
     public interface g {
     }
 
-    /* compiled from: CameraEngine.java */
-    /* renamed from: b.o.a.n.i$h */
+    /* JADX INFO: renamed from: b.o.a.n.i$h */
+    /* JADX INFO: compiled from: CameraEngine.java */
     public class h implements Thread.UncaughtExceptionHandler {
         public h(c cVar) {
         }
@@ -160,8 +160,8 @@ public abstract class CameraEngine implements CameraPreview.c, PictureRecorder.a
         }
     }
 
-    /* compiled from: CameraEngine.java */
-    /* renamed from: b.o.a.n.i$i */
+    /* JADX INFO: renamed from: b.o.a.n.i$i */
+    /* JADX INFO: compiled from: CameraEngine.java */
     public static class i implements Thread.UncaughtExceptionHandler {
         public i(c cVar) {
         }
@@ -177,7 +177,7 @@ public abstract class CameraEngine implements CameraPreview.c, PictureRecorder.a
         m7326W(false);
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static void m7317b(CameraEngine cameraEngine, Throwable th, boolean z2) {
         Objects.requireNonNull(cameraEngine);
         if (z2) {
@@ -188,56 +188,56 @@ public abstract class CameraEngine implements CameraPreview.c, PictureRecorder.a
         cameraEngine.f13920l.post(new CameraEngine2(cameraEngine, th));
     }
 
-    /* renamed from: A */
+    /* JADX INFO: renamed from: A */
     public abstract float mo7250A();
 
-    /* renamed from: A0 */
+    /* JADX INFO: renamed from: A0 */
     public abstract void mo7251A0(int i2);
 
-    /* renamed from: B */
+    /* JADX INFO: renamed from: B */
     public abstract boolean mo7252B();
 
-    /* renamed from: B0 */
+    /* JADX INFO: renamed from: B0 */
     public abstract void mo7253B0(@NonNull VideoCodec videoCodec);
 
     @Nullable
-    /* renamed from: C */
+    /* JADX INFO: renamed from: C */
     public abstract Size3 mo7254C(@NonNull Reference2 reference2);
 
-    /* renamed from: C0 */
+    /* JADX INFO: renamed from: C0 */
     public abstract void mo7255C0(int i2);
 
-    /* renamed from: D */
+    /* JADX INFO: renamed from: D */
     public abstract int mo7256D();
 
-    /* renamed from: D0 */
+    /* JADX INFO: renamed from: D0 */
     public abstract void mo7257D0(long j);
 
-    /* renamed from: E */
+    /* JADX INFO: renamed from: E */
     public abstract int mo7258E();
 
-    /* renamed from: E0 */
+    /* JADX INFO: renamed from: E0 */
     public abstract void mo7259E0(@NonNull SizeSelector sizeSelector);
 
     @Nullable
-    /* renamed from: F */
+    /* JADX INFO: renamed from: F */
     public abstract Size3 mo7260F(@NonNull Reference2 reference2);
 
-    /* renamed from: F0 */
+    /* JADX INFO: renamed from: F0 */
     public abstract void mo7190F0(@NonNull WhiteBalance whiteBalance);
 
-    /* renamed from: G */
+    /* JADX INFO: renamed from: G */
     public abstract int mo7261G();
 
-    /* renamed from: G0 */
+    /* JADX INFO: renamed from: G0 */
     public abstract void mo7191G0(float f2, @Nullable PointF[] pointFArr, boolean z2);
 
     @NonNull
-    /* renamed from: H */
+    /* JADX INFO: renamed from: H */
     public abstract VideoCodec mo7262H();
 
     @NonNull
-    /* renamed from: H0 */
+    /* JADX INFO: renamed from: H0 */
     public Task<Void> m7318H0() {
         f13918j.m7159a(1, "START:", "scheduled. State:", this.f13922n.f14028f);
         Task<Void> taskMo6022q = this.f13922n.m7368f(CameraState2.OFF, CameraState2.ENGINE, true, new CameraEngine4(this)).mo6022q(new CameraEngine3(this));
@@ -246,37 +246,37 @@ public abstract class CameraEngine implements CameraPreview.c, PictureRecorder.a
         return taskMo6022q;
     }
 
-    /* renamed from: I */
+    /* JADX INFO: renamed from: I */
     public abstract int mo7263I();
 
-    /* renamed from: I0 */
+    /* JADX INFO: renamed from: I0 */
     public abstract void mo7192I0(@Nullable Gesture gesture, @NonNull MeteringRegions meteringRegions, @NonNull PointF pointF);
 
-    /* renamed from: J */
+    /* JADX INFO: renamed from: J */
     public abstract long mo7264J();
 
     @NonNull
-    /* renamed from: J0 */
+    /* JADX INFO: renamed from: J0 */
     public final Task<Void> m7319J0() {
         return this.f13922n.m7368f(CameraState2.ENGINE, CameraState2.BIND, true, new e());
     }
 
     @Nullable
-    /* renamed from: K */
+    /* JADX INFO: renamed from: K */
     public abstract Size3 mo7265K(@NonNull Reference2 reference2);
 
     @NonNull
-    /* renamed from: K0 */
+    /* JADX INFO: renamed from: K0 */
     public final Task<Void> m7320K0() {
         return this.f13922n.m7368f(CameraState2.BIND, CameraState2.PREVIEW, true, new a());
     }
 
     @NonNull
-    /* renamed from: L */
+    /* JADX INFO: renamed from: L */
     public abstract SizeSelector mo7266L();
 
     @NonNull
-    /* renamed from: L0 */
+    /* JADX INFO: renamed from: L0 */
     public Task<Void> m7321L0(boolean z2) {
         f13918j.m7159a(1, "STOP:", "scheduled. State:", this.f13922n.f14028f);
         m7323N0(z2);
@@ -290,25 +290,25 @@ public abstract class CameraEngine implements CameraPreview.c, PictureRecorder.a
     }
 
     @NonNull
-    /* renamed from: M */
+    /* JADX INFO: renamed from: M */
     public abstract WhiteBalance mo7267M();
 
     @NonNull
-    /* renamed from: M0 */
+    /* JADX INFO: renamed from: M0 */
     public final Task<Void> m7322M0(boolean z2) {
         return this.f13922n.m7368f(CameraState2.BIND, CameraState2.ENGINE, !z2, new f());
     }
 
-    /* renamed from: N */
+    /* JADX INFO: renamed from: N */
     public abstract float mo7268N();
 
     @NonNull
-    /* renamed from: N0 */
+    /* JADX INFO: renamed from: N0 */
     public final Task<Void> m7323N0(boolean z2) {
         return this.f13922n.m7368f(CameraState2.PREVIEW, CameraState2.BIND, !z2, new b());
     }
 
-    /* renamed from: O */
+    /* JADX INFO: renamed from: O */
     public final boolean m7324O() {
         boolean z2;
         CameraStateOrchestrator cameraStateOrchestrator = this.f13922n;
@@ -331,44 +331,44 @@ public abstract class CameraEngine implements CameraPreview.c, PictureRecorder.a
         return z2;
     }
 
-    /* renamed from: O0 */
+    /* JADX INFO: renamed from: O0 */
     public abstract void mo7269O0(@NonNull PictureResult.a aVar);
 
     @NonNull
-    /* renamed from: P */
+    /* JADX INFO: renamed from: P */
     public abstract Task<Void> mo7193P();
 
-    /* renamed from: P0 */
+    /* JADX INFO: renamed from: P0 */
     public abstract void mo7270P0(@NonNull PictureResult.a aVar);
 
     @NonNull
-    /* renamed from: Q */
+    /* JADX INFO: renamed from: Q */
     public abstract Task<CameraOptions> mo7194Q();
 
     @NonNull
-    /* renamed from: R */
+    /* JADX INFO: renamed from: R */
     public abstract Task<Void> mo7195R();
 
     @NonNull
-    /* renamed from: S */
+    /* JADX INFO: renamed from: S */
     public abstract Task<Void> mo7196S();
 
     @NonNull
-    /* renamed from: T */
+    /* JADX INFO: renamed from: T */
     public abstract Task<Void> mo7197T();
 
     @NonNull
-    /* renamed from: U */
+    /* JADX INFO: renamed from: U */
     public abstract Task<Void> mo7199U();
 
-    /* renamed from: V */
+    /* JADX INFO: renamed from: V */
     public final void m7325V() {
         f13918j.m7159a(1, "onSurfaceAvailable:", "Size is", mo7315z().m7432l());
         m7319J0();
         m7320K0();
     }
 
-    /* renamed from: W */
+    /* JADX INFO: renamed from: W */
     public final void m7326W(boolean z2) {
         WorkerHandler workerHandler = this.f13919k;
         if (workerHandler != null) {
@@ -398,7 +398,7 @@ public abstract class CameraEngine implements CameraPreview.c, PictureRecorder.a
         }
     }
 
-    /* renamed from: X */
+    /* JADX INFO: renamed from: X */
     public void m7327X() {
         f13918j.m7159a(1, "RESTART:", "scheduled. State:", this.f13922n.f14028f);
         m7321L0(false);
@@ -406,7 +406,7 @@ public abstract class CameraEngine implements CameraPreview.c, PictureRecorder.a
     }
 
     @NonNull
-    /* renamed from: Y */
+    /* JADX INFO: renamed from: Y */
     public Task<Void> m7328Y() {
         f13918j.m7159a(1, "RESTART BIND:", "scheduled. State:", this.f13922n.f14028f);
         m7323N0(false);
@@ -415,22 +415,22 @@ public abstract class CameraEngine implements CameraPreview.c, PictureRecorder.a
         return m7320K0();
     }
 
-    /* renamed from: Z */
+    /* JADX INFO: renamed from: Z */
     public abstract void mo7276Z(@NonNull Audio audio);
 
-    /* renamed from: a0 */
+    /* JADX INFO: renamed from: a0 */
     public abstract void mo7277a0(int i2);
 
-    /* renamed from: b0 */
+    /* JADX INFO: renamed from: b0 */
     public abstract void mo7279b0(@NonNull AudioCodec audioCodec);
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public abstract boolean mo7205c(@NonNull Facing facing);
 
-    /* renamed from: c0 */
+    /* JADX INFO: renamed from: c0 */
     public abstract void mo7280c0(long j);
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final void m7329d(boolean z2, int i2) {
         CameraLogger cameraLogger = f13918j;
         cameraLogger.m7159a(1, "DESTROY:", "state:", this.f13922n.f14028f, "thread:", Thread.currentThread(), "depth:", Integer.valueOf(i2), "unrecoverably:", Boolean.valueOf(z2));
@@ -455,151 +455,151 @@ public abstract class CameraEngine implements CameraPreview.c, PictureRecorder.a
         }
     }
 
-    /* renamed from: d0 */
+    /* JADX INFO: renamed from: d0 */
     public abstract void mo7207d0(float f2, @NonNull float[] fArr, @Nullable PointF[] pointFArr, boolean z2);
 
     @NonNull
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public abstract Angles mo7281e();
 
-    /* renamed from: e0 */
+    /* JADX INFO: renamed from: e0 */
     public abstract void mo7282e0(@NonNull Facing facing);
 
     @NonNull
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public abstract Audio mo7283f();
 
-    /* renamed from: f0 */
+    /* JADX INFO: renamed from: f0 */
     public abstract void mo7210f0(@NonNull Flash flash);
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public abstract int mo7284g();
 
-    /* renamed from: g0 */
+    /* JADX INFO: renamed from: g0 */
     public abstract void mo7212g0(int i2);
 
     @NonNull
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public abstract AudioCodec mo7285h();
 
-    /* renamed from: h0 */
+    /* JADX INFO: renamed from: h0 */
     public abstract void mo7286h0(int i2);
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public abstract long mo7287i();
 
-    /* renamed from: i0 */
+    /* JADX INFO: renamed from: i0 */
     public abstract void mo7288i0(int i2);
 
     @Nullable
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public abstract CameraOptions mo7289j();
 
-    /* renamed from: j0 */
+    /* JADX INFO: renamed from: j0 */
     public abstract void mo7290j0(int i2);
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public abstract float mo7291k();
 
-    /* renamed from: k0 */
+    /* JADX INFO: renamed from: k0 */
     public abstract void mo7217k0(boolean z2);
 
     @NonNull
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public abstract Facing mo7292l();
 
-    /* renamed from: l0 */
+    /* JADX INFO: renamed from: l0 */
     public abstract void mo7219l0(@NonNull Hdr hdr);
 
     @NonNull
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public abstract Flash mo7293m();
 
-    /* renamed from: m0 */
+    /* JADX INFO: renamed from: m0 */
     public abstract void mo7221m0(@Nullable Location location);
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public abstract int mo7294n();
 
-    /* renamed from: n0 */
+    /* JADX INFO: renamed from: n0 */
     public abstract void mo7295n0(@NonNull Mode3 mode3);
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public abstract int mo7296o();
 
-    /* renamed from: o0 */
+    /* JADX INFO: renamed from: o0 */
     public abstract void mo7297o0(@Nullable Overlay overlay);
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public abstract int mo7298p();
 
-    /* renamed from: p0 */
+    /* JADX INFO: renamed from: p0 */
     public abstract void mo7223p0(@NonNull PictureFormat pictureFormat);
 
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     public abstract int mo7299q();
 
-    /* renamed from: q0 */
+    /* JADX INFO: renamed from: q0 */
     public abstract void mo7300q0(boolean z2);
 
     @NonNull
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     public abstract Hdr mo7301r();
 
-    /* renamed from: r0 */
+    /* JADX INFO: renamed from: r0 */
     public abstract void mo7302r0(@NonNull SizeSelector sizeSelector);
 
     @Nullable
-    /* renamed from: s */
+    /* JADX INFO: renamed from: s */
     public abstract Location mo7303s();
 
-    /* renamed from: s0 */
+    /* JADX INFO: renamed from: s0 */
     public abstract void mo7304s0(boolean z2);
 
     @NonNull
-    /* renamed from: t */
+    /* JADX INFO: renamed from: t */
     public abstract Mode3 mo7305t();
 
-    /* renamed from: t0 */
+    /* JADX INFO: renamed from: t0 */
     public abstract void mo7224t0(boolean z2);
 
     @NonNull
-    /* renamed from: u */
+    /* JADX INFO: renamed from: u */
     public abstract PictureFormat mo7306u();
 
-    /* renamed from: u0 */
+    /* JADX INFO: renamed from: u0 */
     public abstract void mo7307u0(@NonNull CameraPreview cameraPreview);
 
-    /* renamed from: v */
+    /* JADX INFO: renamed from: v */
     public abstract boolean mo7308v();
 
-    /* renamed from: v0 */
+    /* JADX INFO: renamed from: v0 */
     public abstract void mo7225v0(float f2);
 
     @Nullable
-    /* renamed from: w */
+    /* JADX INFO: renamed from: w */
     public abstract Size3 mo7309w(@NonNull Reference2 reference2);
 
-    /* renamed from: w0 */
+    /* JADX INFO: renamed from: w0 */
     public abstract void mo7310w0(boolean z2);
 
     @NonNull
-    /* renamed from: x */
+    /* JADX INFO: renamed from: x */
     public abstract SizeSelector mo7311x();
 
-    /* renamed from: x0 */
+    /* JADX INFO: renamed from: x0 */
     public abstract void mo7312x0(@Nullable SizeSelector sizeSelector);
 
-    /* renamed from: y */
+    /* JADX INFO: renamed from: y */
     public abstract boolean mo7313y();
 
-    /* renamed from: y0 */
+    /* JADX INFO: renamed from: y0 */
     public abstract void mo7314y0(int i2);
 
     @Nullable
-    /* renamed from: z */
+    /* JADX INFO: renamed from: z */
     public abstract CameraPreview mo7315z();
 
-    /* renamed from: z0 */
+    /* JADX INFO: renamed from: z0 */
     public abstract void mo7316z0(int i2);
 }

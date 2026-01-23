@@ -15,8 +15,8 @@ import com.google.android.material.shape.MaterialShapeDrawable;
 import com.google.android.material.shape.ShapeAppearanceModel;
 import com.google.android.material.shape.Shapeable;
 
+/* JADX INFO: loaded from: classes3.dex */
 @RestrictTo({RestrictTo.Scope.LIBRARY_GROUP})
-/* loaded from: classes3.dex */
 public class RippleDrawableCompat extends Drawable implements Shapeable, TintAwareDrawable {
     private C10963b drawableState;
 
@@ -122,14 +122,14 @@ public class RippleDrawableCompat extends Drawable implements Shapeable, TintAwa
         return this;
     }
 
-    /* renamed from: com.google.android.material.ripple.RippleDrawableCompat$b */
+    /* JADX INFO: renamed from: com.google.android.material.ripple.RippleDrawableCompat$b */
     public static final class C10963b extends Drawable.ConstantState {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         @NonNull
         public MaterialShapeDrawable f21065a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public boolean f21066b;
 
         public C10963b(MaterialShapeDrawable materialShapeDrawable) {

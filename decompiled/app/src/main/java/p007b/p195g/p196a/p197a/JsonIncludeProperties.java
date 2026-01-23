@@ -7,18 +7,18 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 import java.util.Set;
 
-/* compiled from: JsonIncludeProperties.java */
+/* JADX INFO: renamed from: b.g.a.a.q, reason: use source file name */
+/* JADX INFO: compiled from: JsonIncludeProperties.java */
+/* JADX INFO: loaded from: classes3.dex */
 @Target({ElementType.ANNOTATION_TYPE, ElementType.TYPE, ElementType.METHOD, ElementType.CONSTRUCTOR, ElementType.FIELD})
 @Retention(RetentionPolicy.RUNTIME)
-/* renamed from: b.g.a.a.q, reason: use source file name */
-/* loaded from: classes3.dex */
 public @interface JsonIncludeProperties {
 
-    /* compiled from: JsonIncludeProperties.java */
-    /* renamed from: b.g.a.a.q$a */
+    /* JADX INFO: renamed from: b.g.a.a.q$a */
+    /* JADX INFO: compiled from: JsonIncludeProperties.java */
     public static class a implements Serializable {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public static final a f4437j = new a(null);
         private static final long serialVersionUID = 1;
         public final Set<String> _included;

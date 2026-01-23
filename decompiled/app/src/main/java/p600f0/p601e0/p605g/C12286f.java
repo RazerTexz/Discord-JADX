@@ -2,11 +2,11 @@ package p600f0.p601e0.p605g;
 
 import java.net.Proxy;
 
-/* renamed from: f0.e0.g.f */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: f0.e0.g.f */
+/* JADX INFO: loaded from: classes3.dex */
 public final /* synthetic */ class C12286f {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final /* synthetic */ int[] f25487a;
 
     static {

@@ -11,7 +11,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.transition.Transition;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class TranslationAnimationCreator {
 
     public static class TransitionPositionListener extends AnimatorListenerAdapter implements Transition.TransitionListener {

@@ -7,19 +7,19 @@ import android.view.inputmethod.InputConnection;
 import androidx.appcompat.widget.AppCompatEditText;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ChipsEditText.kt */
+/* JADX INFO: renamed from: b.a.f.d, reason: use source file name */
+/* JADX INFO: compiled from: ChipsEditText.kt */
+/* JADX INFO: loaded from: classes.dex */
 @SuppressLint({"ViewConstructor"})
-/* renamed from: b.a.f.d, reason: use source file name */
-/* loaded from: classes.dex */
 public final class ChipsEditText extends AppCompatEditText {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final a f617j;
 
-    /* compiled from: ChipsEditText.kt */
-    /* renamed from: b.a.f.d$a */
+    /* JADX INFO: renamed from: b.a.f.d$a */
+    /* JADX INFO: compiled from: ChipsEditText.kt */
     public interface a {
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         InputConnection mo187a(InputConnection inputConnection);
     }
 

@@ -7,9 +7,9 @@ import com.discord.widgets.voice.fullscreen.stage.StageCallItem;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: StageCallModel.kt */
-/* renamed from: com.discord.widgets.stage.model.StageMediaParticipant, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.stage.model.StageMediaParticipant, reason: use source file name */
+/* JADX INFO: compiled from: StageCallModel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final /* data */ class StageCallModel5 {
     private final Channel channel;
     private final String id;
@@ -57,32 +57,32 @@ public final /* data */ class StageCallModel5 {
         return stageCallModel5.copy(str, voiceUser2, channel2, z4, z5, mediaType);
     }
 
-    /* renamed from: component1, reason: from getter */
+    /* JADX INFO: renamed from: component1, reason: from getter */
     public final String getId() {
         return this.id;
     }
 
-    /* renamed from: component2, reason: from getter */
+    /* JADX INFO: renamed from: component2, reason: from getter */
     public final StoreVoiceParticipants.VoiceUser getVoiceUser() {
         return this.voiceUser;
     }
 
-    /* renamed from: component3, reason: from getter */
+    /* JADX INFO: renamed from: component3, reason: from getter */
     public final Channel getChannel() {
         return this.channel;
     }
 
-    /* renamed from: component4, reason: from getter */
+    /* JADX INFO: renamed from: component4, reason: from getter */
     public final boolean getIsModerator() {
         return this.isModerator;
     }
 
-    /* renamed from: component5, reason: from getter */
+    /* JADX INFO: renamed from: component5, reason: from getter */
     public final boolean getIsBlocked() {
         return this.isBlocked;
     }
 
-    /* renamed from: component6, reason: from getter */
+    /* JADX INFO: renamed from: component6, reason: from getter */
     public final StageCallItem.MediaType getMediaType() {
         return this.mediaType;
     }
@@ -123,6 +123,12 @@ public final /* data */ class StageCallModel5 {
     }
 
     /* JADX WARN: Multi-variable type inference failed */
+    /* JADX WARN: Type inference failed for: r2v10 */
+    /* JADX WARN: Type inference failed for: r2v13 */
+    /* JADX WARN: Type inference failed for: r2v7, types: [int] */
+    /* JADX WARN: Type inference failed for: r3v0 */
+    /* JADX WARN: Type inference failed for: r3v1, types: [int] */
+    /* JADX WARN: Type inference failed for: r3v2 */
     public int hashCode() {
         String str = this.id;
         int iHashCode = (str != null ? str.hashCode() : 0) * 31;
@@ -131,15 +137,15 @@ public final /* data */ class StageCallModel5 {
         Channel channel = this.channel;
         int iHashCode3 = (iHashCode2 + (channel != null ? channel.hashCode() : 0)) * 31;
         boolean z2 = this.isModerator;
-        int i = z2;
-        if (z2 != 0) {
-            i = 1;
+        ?? r2 = z2;
+        if (z2) {
+            r2 = 1;
         }
-        int i2 = (iHashCode3 + i) * 31;
+        int i = (iHashCode3 + r2) * 31;
         boolean z3 = this.isBlocked;
-        int i3 = (i2 + (z3 ? 1 : z3 ? 1 : 0)) * 31;
+        int i2 = (i + (z3 ? 1 : z3)) * 31;
         StageCallItem.MediaType mediaType = this.mediaType;
-        return i3 + (mediaType != null ? mediaType.hashCode() : 0);
+        return i2 + (mediaType != null ? mediaType.hashCode() : 0);
     }
 
     public final boolean isBlocked() {

@@ -5,8 +5,8 @@ import com.discord.models.domain.ModelNotificationSettings;
 import com.discord.models.guild.Guild;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ChannelNotificationSettingsUtils.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: ChannelNotificationSettingsUtils.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class ChannelNotificationSettingsUtils {
     public static final ChannelNotificationSettingsUtils INSTANCE = new ChannelNotificationSettingsUtils();
 

@@ -17,11 +17,11 @@ import p507d0.p513e0.p514p.p515d.p517m0.p567n.Variance;
 import p507d0.p513e0.p514p.p515d.p517m0.p567n.p572p1.CapturedTypeApproximation2;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: utils.kt */
-/* renamed from: d0.e0.p.d.m0.n.l1.z, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.n.l1.z, reason: use source file name */
+/* JADX INFO: compiled from: utils.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class utils8 {
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final String m10017a(TypeConstructor typeConstructor) {
         StringBuilder sb = new StringBuilder();
         m10018b(Intrinsics3.stringPlus("type: ", typeConstructor), sb);
@@ -36,7 +36,7 @@ public final class utils8 {
         return string;
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static final StringBuilder m10018b(String str, StringBuilder sb) {
         Intrinsics3.checkNotNullParameter(str, "<this>");
         Intrinsics3.checkNotNullParameter(sb, "$this_anonymous");

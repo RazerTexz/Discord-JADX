@@ -8,9 +8,9 @@ import java.nio.charset.Charset;
 import p507d0.p579g0.Charsets2;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: FileReadWrite.kt */
-/* renamed from: d0.y.f, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.y.f, reason: use source file name */
+/* JADX INFO: compiled from: FileReadWrite.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public class FileReadWrite {
     public static final String readText(File file, Charset charset) throws IOException {
         Intrinsics3.checkNotNullParameter(file, "$this$readText");

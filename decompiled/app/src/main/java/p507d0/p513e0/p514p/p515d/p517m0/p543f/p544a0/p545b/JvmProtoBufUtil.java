@@ -28,15 +28,15 @@ import p507d0.p580t.Iterables2;
 import p507d0.p580t._Collections;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: JvmProtoBufUtil.kt */
-/* renamed from: d0.e0.p.d.m0.f.a0.b.h, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.f.a0.b.h, reason: use source file name */
+/* JADX INFO: compiled from: JvmProtoBufUtil.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class JvmProtoBufUtil {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final JvmProtoBufUtil f23720a = new JvmProtoBufUtil();
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static final ExtensionRegistryLite f23721b;
 
     static {
@@ -88,7 +88,7 @@ public final class JvmProtoBufUtil {
         return readPackageDataFrom(bArrDecodeBytes, strArr2);
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final String m9586a(C11692q c11692q, NameResolver nameResolver) {
         if (!c11692q.hasClassName()) {
             return null;

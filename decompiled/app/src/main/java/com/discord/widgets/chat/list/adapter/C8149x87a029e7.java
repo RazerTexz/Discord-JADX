@@ -7,9 +7,9 @@ import p507d0.p580t._Collections;
 import p507d0.p592z.p594d.Intrinsics3;
 import p658rx.functions.FuncN;
 
-/* compiled from: WidgetChatListAdapterItemUploadProgress.kt */
-/* renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemUploadProgress$ModelProvider$getManyUploadsObservable$3 */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemUploadProgress$ModelProvider$getManyUploadsObservable$3 */
+/* JADX INFO: compiled from: WidgetChatListAdapterItemUploadProgress.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class C8149x87a029e7<R> implements FuncN<Long> {
     public static final C8149x87a029e7 INSTANCE = new C8149x87a029e7();
 

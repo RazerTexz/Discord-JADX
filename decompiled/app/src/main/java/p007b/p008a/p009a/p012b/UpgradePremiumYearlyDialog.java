@@ -25,43 +25,43 @@ import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.FunctionReferenceImpl;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: UpgradePremiumYearlyDialog.kt */
-/* renamed from: b.a.a.b.b, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.a.a.b.b, reason: use source file name */
+/* JADX INFO: compiled from: UpgradePremiumYearlyDialog.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class UpgradePremiumYearlyDialog extends AppDialog {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static final /* synthetic */ KProperty[] f252j = {outline.m846d0(UpgradePremiumYearlyDialog.class, "binding", "getBinding()Lcom/discord/databinding/PremiumUpgradeYearlyDialogBinding;", 0)};
 
-    /* renamed from: k, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: k, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
 
-    /* renamed from: l, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: l, reason: from kotlin metadata */
     public Function0<Unit> onMonthlyClickListener;
 
-    /* renamed from: m, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: m, reason: from kotlin metadata */
     public Function0<Unit> onYearlyClickListener;
 
-    /* renamed from: n, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: n, reason: from kotlin metadata */
     public Function0<Unit> onDismissCallback;
 
-    /* renamed from: o, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: o, reason: from kotlin metadata */
     public String upgradePrice;
 
-    /* renamed from: p, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: p, reason: from kotlin metadata */
     public boolean hasMonthlyPlan;
 
-    /* renamed from: q, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: q, reason: from kotlin metadata */
     public final FragmentViewBindingDelegate binding;
 
-    /* compiled from: java-style lambda group */
-    /* renamed from: b.a.a.b.b$a */
+    /* JADX INFO: renamed from: b.a.a.b.b$a */
+    /* JADX INFO: compiled from: java-style lambda group */
     public static final class a implements View.OnClickListener {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public final /* synthetic */ int f260j;
 
-        /* renamed from: k */
+        /* JADX INFO: renamed from: k */
         public final /* synthetic */ Object f261k;
 
         public a(int i, Object obj) {
@@ -91,18 +91,18 @@ public final class UpgradePremiumYearlyDialog extends AppDialog {
         }
     }
 
-    /* compiled from: UpgradePremiumYearlyDialog.kt */
-    /* renamed from: b.a.a.b.b$b, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: b.a.a.b.b$b, reason: from kotlin metadata */
+    /* JADX INFO: compiled from: UpgradePremiumYearlyDialog.kt */
     public static final class Companion {
         public Companion(DefaultConstructorMarker defaultConstructorMarker) {
         }
     }
 
-    /* compiled from: UpgradePremiumYearlyDialog.kt */
-    /* renamed from: b.a.a.b.b$c */
+    /* JADX INFO: renamed from: b.a.a.b.b$c */
+    /* JADX INFO: compiled from: UpgradePremiumYearlyDialog.kt */
     public static final /* synthetic */ class c extends FunctionReferenceImpl implements Function1<View, PremiumUpgradeYearlyDialogBinding> {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public static final c f262j = new c();
 
         public c() {
@@ -138,8 +138,8 @@ public final class UpgradePremiumYearlyDialog extends AppDialog {
         }
     }
 
-    /* compiled from: UpgradePremiumYearlyDialog.kt */
-    /* renamed from: b.a.a.b.b$d */
+    /* JADX INFO: renamed from: b.a.a.b.b$d */
+    /* JADX INFO: compiled from: UpgradePremiumYearlyDialog.kt */
     public static final class d implements DialogInterface.OnCancelListener {
         public d() {
         }
@@ -158,7 +158,7 @@ public final class UpgradePremiumYearlyDialog extends AppDialog {
         this.binding = FragmentViewBindingDelegate3.viewBinding$default(this, c.f262j, null, 2, null);
     }
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public final PremiumUpgradeYearlyDialogBinding m109g() {
         return (PremiumUpgradeYearlyDialogBinding) this.binding.getValue((Fragment) this, f252j[0]);
     }

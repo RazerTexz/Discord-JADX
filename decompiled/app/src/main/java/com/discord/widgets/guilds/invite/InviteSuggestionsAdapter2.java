@@ -3,9 +3,9 @@ package com.discord.widgets.guilds.invite;
 import android.view.View;
 import com.discord.widgets.guilds.invite.InviteSuggestionsAdapter;
 
-/* compiled from: InviteSuggestionsAdapter.kt */
-/* renamed from: com.discord.widgets.guilds.invite.InviteSuggestionsAdapter$InviteSuggestionViewHolder$onConfigure$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.guilds.invite.InviteSuggestionsAdapter$InviteSuggestionViewHolder$onConfigure$1, reason: use source file name */
+/* JADX INFO: compiled from: InviteSuggestionsAdapter.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class InviteSuggestionsAdapter2 implements View.OnClickListener {
     public final /* synthetic */ InviteSuggestionItemV2 $data;
     public final /* synthetic */ InviteSuggestionsAdapter.InviteSuggestionViewHolder this$0;

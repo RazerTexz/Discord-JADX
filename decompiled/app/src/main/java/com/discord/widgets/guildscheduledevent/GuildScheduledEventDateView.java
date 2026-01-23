@@ -21,8 +21,8 @@ import java.util.Objects;
 import p007b.p008a.p027k.FormatUtils;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: GuildScheduledEventDateView.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: GuildScheduledEventDateView.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class GuildScheduledEventDateView extends ConstraintLayout {
     private final GuildScheduledEventDateViewBinding binding;
 

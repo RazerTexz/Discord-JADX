@@ -11,7 +11,7 @@ import java.util.List;
 import java.util.Set;
 import java.util.concurrent.Executor;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class DatabaseConfiguration {
     public final boolean allowDestructiveMigrationOnDowngrade;
     public final boolean allowMainThreadQueries;

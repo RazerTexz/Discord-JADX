@@ -7,9 +7,9 @@ import java.util.Map;
 import p507d0.p580t.Maps6;
 import p637j0.p641k.Func1;
 
-/* compiled from: ManageReactionsModel.kt */
-/* renamed from: com.discord.widgets.chat.managereactions.ManageReactionsModelProvider$get$reactionsObs$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.chat.managereactions.ManageReactionsModelProvider$get$reactionsObs$1, reason: use source file name */
+/* JADX INFO: compiled from: ManageReactionsModel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class ManageReactionsModel4<T, R> implements Func1<Message, Map<String, ? extends MessageReaction>> {
     public static final ManageReactionsModel4 INSTANCE = new ManageReactionsModel4();
 
@@ -18,7 +18,7 @@ public final class ManageReactionsModel4<T, R> implements Func1<Message, Map<Str
         return call2(message);
     }
 
-    /* renamed from: call, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
     public final Map<String, MessageReaction> call2(Message message) {
         Map<String, MessageReaction> reactionsMap;
         return (message == null || (reactionsMap = message.getReactionsMap()) == null) ? Maps6.emptyMap() : reactionsMap;

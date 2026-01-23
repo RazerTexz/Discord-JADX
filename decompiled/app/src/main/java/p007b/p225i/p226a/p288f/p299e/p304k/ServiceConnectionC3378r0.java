@@ -14,31 +14,31 @@ import java.util.Iterator;
 import java.util.Map;
 import p007b.p225i.p226a.p288f.p299e.p307n.C3398a;
 
-/* compiled from: com.google.android.gms:play-services-basement@@17.6.0 */
-/* renamed from: b.i.a.f.e.k.r0 */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.e.k.r0 */
+/* JADX INFO: compiled from: com.google.android.gms:play-services-basement@@17.6.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public final class ServiceConnectionC3378r0 implements ServiceConnection {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final Map<ServiceConnection, ServiceConnection> f9553j = new HashMap();
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public int f9554k = 2;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public boolean f9555l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     @Nullable
     public IBinder f9556m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public final C3376q0 f9557n;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public ComponentName f9558o;
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public final /* synthetic */ C3382t0 f9559p;
 
     public ServiceConnectionC3378r0(C3382t0 c3382t0, C3376q0 c3376q0) {
@@ -48,7 +48,7 @@ public final class ServiceConnectionC3378r0 implements ServiceConnection {
 
     /* JADX WARN: Removed duplicated region for block: B:27:0x00a3  */
     /* JADX WARN: Removed duplicated region for block: B:29:0x00b8  */
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */

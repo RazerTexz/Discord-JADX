@@ -9,34 +9,34 @@ import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.Executor;
 import p007b.p452o.p453a.CameraLogger;
 
-/* compiled from: WorkerHandler.java */
-/* renamed from: b.o.a.r.g, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.o.a.r.g, reason: use source file name */
+/* JADX INFO: compiled from: WorkerHandler.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class WorkerHandler {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final CameraLogger f14127a = new CameraLogger(WorkerHandler.class.getSimpleName());
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static final ConcurrentHashMap<String, WeakReference<WorkerHandler>> f14128b = new ConcurrentHashMap<>(4);
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public static WorkerHandler f14129c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public String f14130d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public HandlerThread f14131e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public Handler f14132f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public Executor f14133g;
 
-    /* compiled from: WorkerHandler.java */
-    /* renamed from: b.o.a.r.g$a */
+    /* JADX INFO: renamed from: b.o.a.r.g$a */
+    /* JADX INFO: compiled from: WorkerHandler.java */
     public class a extends HandlerThread {
         public a(WorkerHandler workerHandler, String str) {
             super(str);
@@ -49,8 +49,8 @@ public class WorkerHandler {
         }
     }
 
-    /* compiled from: WorkerHandler.java */
-    /* renamed from: b.o.a.r.g$b */
+    /* JADX INFO: renamed from: b.o.a.r.g$b */
+    /* JADX INFO: compiled from: WorkerHandler.java */
     public class b implements Executor {
         public b() {
         }
@@ -61,11 +61,11 @@ public class WorkerHandler {
         }
     }
 
-    /* compiled from: WorkerHandler.java */
-    /* renamed from: b.o.a.r.g$c */
+    /* JADX INFO: renamed from: b.o.a.r.g$c */
+    /* JADX INFO: compiled from: WorkerHandler.java */
     public class c implements Runnable {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public final /* synthetic */ CountDownLatch f14135j;
 
         public c(WorkerHandler workerHandler, CountDownLatch countDownLatch) {
@@ -94,7 +94,7 @@ public class WorkerHandler {
         }
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static void m7402a(@NonNull Runnable runnable) {
         WorkerHandler workerHandlerM7403b = m7403b("FallbackCameraThread");
         f14129c = workerHandlerM7403b;
@@ -102,7 +102,7 @@ public class WorkerHandler {
     }
 
     @NonNull
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static WorkerHandler m7403b(@NonNull String str) {
         ConcurrentHashMap<String, WeakReference<WorkerHandler>> concurrentHashMap = f14128b;
         if (concurrentHashMap.containsKey(str)) {
@@ -131,7 +131,7 @@ public class WorkerHandler {
         return workerHandler2;
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public void m7404c(@NonNull Runnable runnable) {
         if (Thread.currentThread() == this.f14131e) {
             runnable.run();

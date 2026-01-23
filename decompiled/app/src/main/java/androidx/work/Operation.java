@@ -6,7 +6,7 @@ import androidx.annotation.RestrictTo;
 import androidx.view.LiveData;
 import p007b.p225i.p355b.p359d.p360a.ListenableFuture8;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public interface Operation {
 
     @SuppressLint({"SyntheticAccessor"})

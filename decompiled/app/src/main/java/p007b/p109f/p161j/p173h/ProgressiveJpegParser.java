@@ -10,33 +10,33 @@ import p007b.p109f.p115d.p122g.ByteArrayPool;
 import p007b.p109f.p115d.p122g.PooledByteArrayBufferedInputStream;
 import p007b.p109f.p161j.p175j.EncodedImage2;
 
-/* compiled from: ProgressiveJpegParser.java */
-/* renamed from: b.f.j.h.e, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.f.j.h.e, reason: use source file name */
+/* JADX INFO: compiled from: ProgressiveJpegParser.java */
+/* JADX INFO: loaded from: classes.dex */
 public class ProgressiveJpegParser {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public int f3873a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public int f3874b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public int f3875c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public int f3876d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public int f3877e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public int f3878f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public boolean f3879g;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public final ByteArrayPool f3880h;
 
     public ProgressiveJpegParser(ByteArrayPool byteArrayPool) {
@@ -70,7 +70,7 @@ public class ProgressiveJpegParser {
     
         return false;
      */
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
@@ -159,7 +159,7 @@ public class ProgressiveJpegParser {
         }
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public boolean m1327b(EncodedImage2 encodedImage2) {
         if (this.f3873a == 6 || encodedImage2.m1344n() <= this.f3875c) {
             return false;

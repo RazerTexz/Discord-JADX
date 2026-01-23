@@ -11,7 +11,7 @@ import org.objectweb.asm.Label;
 import org.objectweb.asm.MethodVisitor;
 import org.objectweb.asm.Opcodes;
 
-/* loaded from: discord-126021.apk:lombok/bytecode/SneakyThrowsRemover.SCL.lombok */
+/* JADX INFO: loaded from: discord-126021.apk:lombok/bytecode/SneakyThrowsRemover.SCL.lombok */
 public class SneakyThrowsRemover implements PostCompilerTransformation {
     @Override // lombok.core.PostCompilerTransformation
     public byte[] applyTransformations(byte[] original, String fileName, DiagnosticsReceiver diagnostics) {
@@ -29,8 +29,8 @@ public class SneakyThrowsRemover implements PostCompilerTransformation {
         return null;
     }
 
-    /* renamed from: lombok.bytecode.SneakyThrowsRemover$1SneakyThrowsRemoverVisitor, reason: invalid class name */
-    /* loaded from: discord-126021.apk:lombok/bytecode/SneakyThrowsRemover$1SneakyThrowsRemoverVisitor.SCL.lombok */
+    /* JADX INFO: renamed from: lombok.bytecode.SneakyThrowsRemover$1SneakyThrowsRemoverVisitor, reason: invalid class name */
+    /* JADX INFO: loaded from: discord-126021.apk:lombok/bytecode/SneakyThrowsRemover$1SneakyThrowsRemoverVisitor.SCL.lombok */
     class C1SneakyThrowsRemoverVisitor extends MethodVisitor {
         private boolean methodInsnQueued;
         private final /* synthetic */ DiagnosticsReceiver val$diagnostics;
@@ -179,8 +179,8 @@ public class SneakyThrowsRemover implements PostCompilerTransformation {
         }
     }
 
-    /* renamed from: lombok.bytecode.SneakyThrowsRemover$1 */
-    /* loaded from: discord-126021.apk:lombok/bytecode/SneakyThrowsRemover$1.SCL.lombok */
+    /* JADX INFO: renamed from: lombok.bytecode.SneakyThrowsRemover$1 */
+    /* JADX INFO: loaded from: discord-126021.apk:lombok/bytecode/SneakyThrowsRemover$1.SCL.lombok */
     class C128101 extends ClassVisitor {
         private final /* synthetic */ DiagnosticsReceiver val$diagnostics;
         private final /* synthetic */ AtomicBoolean val$changesMade;

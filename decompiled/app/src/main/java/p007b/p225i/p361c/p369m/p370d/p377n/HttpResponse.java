@@ -2,18 +2,18 @@ package p007b.p225i.p361c.p369m.p370d.p377n;
 
 import okhttp3.Headers;
 
-/* compiled from: HttpResponse.java */
-/* renamed from: b.i.c.m.d.n.c, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.c.m.d.n.c, reason: use source file name */
+/* JADX INFO: compiled from: HttpResponse.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class HttpResponse {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public int f12663a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public String f12664b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public Headers f12665c;
 
     public HttpResponse(int i, String str, Headers headers) {

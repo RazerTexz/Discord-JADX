@@ -6,14 +6,14 @@ import com.discord.models.hubs.DirectoryEntryCategory;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: WidgetDirectoryCategory.kt */
-/* renamed from: com.discord.widgets.directories.DirectoryCategoryArgs, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.directories.DirectoryCategoryArgs, reason: use source file name */
+/* JADX INFO: compiled from: WidgetDirectoryCategory.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final /* data */ class WidgetDirectoryCategory2 implements Parcelable {
     public static final Parcelable.Creator<WidgetDirectoryCategory2> CREATOR = new Creator();
     private final DirectoryEntryCategory directoryCategory;
 
-    /* renamed from: com.discord.widgets.directories.DirectoryCategoryArgs$Creator */
+    /* JADX INFO: renamed from: com.discord.widgets.directories.DirectoryCategoryArgs$Creator */
     public static class Creator implements Parcelable.Creator<WidgetDirectoryCategory2> {
         /* JADX WARN: Can't rename method to resolve collision */
         @Override // android.os.Parcelable.Creator
@@ -51,7 +51,7 @@ public final /* data */ class WidgetDirectoryCategory2 implements Parcelable {
         return widgetDirectoryCategory2.copy(directoryEntryCategory);
     }
 
-    /* renamed from: component1, reason: from getter */
+    /* JADX INFO: renamed from: component1, reason: from getter */
     public final DirectoryEntryCategory getDirectoryCategory() {
         return this.directoryCategory;
     }

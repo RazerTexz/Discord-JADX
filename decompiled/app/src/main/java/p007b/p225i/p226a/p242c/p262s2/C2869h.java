@@ -7,15 +7,15 @@ import p007b.p225i.p226a.p242c.p259f3.FlagSet;
 import p007b.p225i.p226a.p242c.p259f3.ListenerSet;
 import p007b.p225i.p226a.p242c.p262s2.AnalyticsListener;
 
-/* compiled from: lambda */
-/* renamed from: b.i.a.c.s2.h */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.s2.h */
+/* JADX INFO: compiled from: lambda */
+/* JADX INFO: loaded from: classes3.dex */
 public final /* synthetic */ class C2869h implements ListenerSet.b {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final /* synthetic */ AnalyticsCollector f7562a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final /* synthetic */ Player2 f7563b;
 
     public /* synthetic */ C2869h(AnalyticsCollector analyticsCollector, Player2 player2) {
@@ -24,7 +24,7 @@ public final /* synthetic */ class C2869h implements ListenerSet.b {
     }
 
     @Override // p007b.p225i.p226a.p242c.p259f3.ListenerSet.b
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final void mo3037a(Object obj, FlagSet flagSet) {
         AnalyticsListener analyticsListener = (AnalyticsListener) obj;
         SparseArray<AnalyticsListener.a> sparseArray = this.f7562a.f7551n;

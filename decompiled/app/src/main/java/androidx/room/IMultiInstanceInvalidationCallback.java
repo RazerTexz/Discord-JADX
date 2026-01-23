@@ -6,7 +6,7 @@ import android.os.IInterface;
 import android.os.Parcel;
 import android.os.RemoteException;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public interface IMultiInstanceInvalidationCallback extends IInterface {
 
     public static abstract class Stub extends Binder implements IMultiInstanceInvalidationCallback {

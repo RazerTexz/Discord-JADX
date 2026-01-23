@@ -20,22 +20,22 @@ import p507d0.p580t._Collections;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: IntersectionTypeConstructor.kt */
-/* renamed from: d0.e0.p.d.m0.n.a0, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.n.a0, reason: use source file name */
+/* JADX INFO: compiled from: IntersectionTypeConstructor.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class IntersectionTypeConstructor implements TypeConstructor, InterfaceC11978g {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public KotlinType f24739a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final LinkedHashSet<KotlinType> f24740b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final int f24741c;
 
-    /* compiled from: IntersectionTypeConstructor.kt */
-    /* renamed from: d0.e0.p.d.m0.n.a0$a */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.n.a0$a */
+    /* JADX INFO: compiled from: IntersectionTypeConstructor.kt */
     public static final class a extends Lambda implements Function1<KotlinTypeRefiner, KotlinType4> {
         public a() {
             super(1);
@@ -46,7 +46,7 @@ public final class IntersectionTypeConstructor implements TypeConstructor, Inter
             return invoke2(kotlinTypeRefiner);
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final KotlinType4 invoke2(KotlinTypeRefiner kotlinTypeRefiner) {
             Intrinsics3.checkNotNullParameter(kotlinTypeRefiner, "kotlinTypeRefiner");
             return IntersectionTypeConstructor.this.refine(kotlinTypeRefiner).createType();

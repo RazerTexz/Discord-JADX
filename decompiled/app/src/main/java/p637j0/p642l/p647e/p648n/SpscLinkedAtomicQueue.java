@@ -4,15 +4,15 @@ import java.util.Iterator;
 import java.util.Objects;
 import java.util.concurrent.atomic.AtomicReference;
 
-/* compiled from: SpscLinkedAtomicQueue.java */
-/* renamed from: j0.l.e.n.f, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: j0.l.e.n.f, reason: use source file name */
+/* JADX INFO: compiled from: SpscLinkedAtomicQueue.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class SpscLinkedAtomicQueue<E> {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final AtomicReference<LinkedQueueNode<E>> f27320j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final AtomicReference<LinkedQueueNode<E>> f27321k;
 
     public SpscLinkedAtomicQueue() {

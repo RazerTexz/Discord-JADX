@@ -15,13 +15,13 @@ import p507d0.p580t.Iterables2;
 import p507d0.p580t.Iterators4;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: SnowflakePartitionMap.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: SnowflakePartitionMap.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class SnowflakePartitionMap<V> extends ShallowPartitionMap<Long, V> {
     private static final int PARTITION_SIZE = 256;
     private static final Function1<Long, Integer> PARTITION_SNOWFLAKE_ID_STRATEGY = SnowflakePartitionMap2.INSTANCE;
 
-    /* compiled from: SnowflakePartitionMap.kt */
+    /* JADX INFO: compiled from: SnowflakePartitionMap.kt */
     public static final class CopiablePartitionMap<V> extends ShallowPartitionMap.CopiablePartitionMap<Long, V> {
         public CopiablePartitionMap() {
             this(0, 1, null);

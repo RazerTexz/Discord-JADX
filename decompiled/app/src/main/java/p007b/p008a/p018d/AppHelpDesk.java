@@ -7,15 +7,15 @@ import java.util.Objects;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: AppHelpDesk.kt */
-/* renamed from: b.a.d.f, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.a.d.f, reason: use source file name */
+/* JADX INFO: compiled from: AppHelpDesk.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class AppHelpDesk {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final AppHelpDesk f507a = new AppHelpDesk();
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public static final String m148c() {
         StringBuilder sbM836X = outline.m836X("https://support.discord.com", "/hc/");
         String locale = StoreStream.INSTANCE.getUserSettingsSystem().getLocale();
@@ -27,7 +27,7 @@ public final class AppHelpDesk {
         return sbM836X.toString();
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final String m149a(long j, String str) {
         if (str == null) {
             StringBuilder sbM836X = outline.m836X("https://support.discord.com", "/hc/");
@@ -46,7 +46,7 @@ public final class AppHelpDesk {
     }
 
     @SuppressLint({"DefaultLocale"})
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final String m150b() {
         String locale = StoreStream.INSTANCE.getUserSettingsSystem().getLocale();
         Objects.requireNonNull(locale, "null cannot be cast to non-null type java.lang.String");

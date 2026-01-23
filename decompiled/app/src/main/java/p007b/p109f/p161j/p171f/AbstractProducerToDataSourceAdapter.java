@@ -7,12 +7,12 @@ import p007b.p109f.p161j.p181p.BaseConsumer;
 import p007b.p109f.p161j.p181p.SettableProducerContext;
 
 /* JADX INFO: Add missing generic type declarations: [T] */
-/* compiled from: AbstractProducerToDataSourceAdapter.java */
-/* renamed from: b.f.j.f.a, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.f.j.f.a, reason: use source file name */
+/* JADX INFO: compiled from: AbstractProducerToDataSourceAdapter.java */
+/* JADX INFO: loaded from: classes.dex */
 public class AbstractProducerToDataSourceAdapter<T> extends BaseConsumer<T> {
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final /* synthetic */ AbstractProducerToDataSourceAdapter2 f3865b;
 
     public AbstractProducerToDataSourceAdapter(AbstractProducerToDataSourceAdapter2 abstractProducerToDataSourceAdapter2) {
@@ -20,7 +20,7 @@ public class AbstractProducerToDataSourceAdapter<T> extends BaseConsumer<T> {
     }
 
     @Override // p007b.p109f.p161j.p181p.BaseConsumer
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public void mo1318g() {
         AbstractProducerToDataSourceAdapter2 abstractProducerToDataSourceAdapter2 = this.f3865b;
         synchronized (abstractProducerToDataSourceAdapter2) {
@@ -29,7 +29,7 @@ public class AbstractProducerToDataSourceAdapter<T> extends BaseConsumer<T> {
     }
 
     @Override // p007b.p109f.p161j.p181p.BaseConsumer
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public void mo1319h(Throwable th) {
         AbstractProducerToDataSourceAdapter2 abstractProducerToDataSourceAdapter2 = this.f3865b;
         if (abstractProducerToDataSourceAdapter2.m1027k(th, abstractProducerToDataSourceAdapter2.f3866h.mo1443a())) {
@@ -39,7 +39,7 @@ public class AbstractProducerToDataSourceAdapter<T> extends BaseConsumer<T> {
 
     /* JADX WARN: Multi-variable type inference failed */
     @Override // p007b.p109f.p161j.p181p.BaseConsumer
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public void mo1320i(T t, int i) {
         AbstractProducerToDataSourceAdapter2 abstractProducerToDataSourceAdapter2 = this.f3865b;
         SettableProducerContext settableProducerContext = abstractProducerToDataSourceAdapter2.f3866h;
@@ -53,7 +53,7 @@ public class AbstractProducerToDataSourceAdapter<T> extends BaseConsumer<T> {
     }
 
     @Override // p007b.p109f.p161j.p181p.BaseConsumer
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public void mo1321j(float f) {
         this.f3865b.m1028l(f);
     }

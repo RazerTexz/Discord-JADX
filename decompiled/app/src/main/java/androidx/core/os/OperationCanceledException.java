@@ -3,7 +3,7 @@ package androidx.core.os;
 import androidx.annotation.Nullable;
 import androidx.core.util.ObjectsCompat;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class OperationCanceledException extends RuntimeException {
     public OperationCanceledException() {
         this(null);

@@ -8,12 +8,12 @@ import java.lang.ref.WeakReference;
 import java.util.ArrayList;
 import p007b.p100d.p104b.p105a.outline;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class WidgetGroup {
     private static final boolean DEBUG = false;
     public static int count;
 
-    /* renamed from: id */
+    /* JADX INFO: renamed from: id */
     public int f123id;
     public int orientation;
     public ArrayList<ConstraintWidget> widgets = new ArrayList<>();

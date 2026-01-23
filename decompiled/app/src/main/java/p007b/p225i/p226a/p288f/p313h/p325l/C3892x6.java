@@ -4,28 +4,28 @@ import java.util.Iterator;
 import java.util.Map;
 
 /* JADX INFO: Add missing generic type declarations: [V, K] */
-/* compiled from: com.google.android.gms:play-services-measurement-base@@18.0.0 */
-/* renamed from: b.i.a.f.h.l.x6 */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.h.l.x6 */
+/* JADX INFO: compiled from: com.google.android.gms:play-services-measurement-base@@18.0.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public final class C3892x6<K, V> implements Iterator<Map.Entry<K, V>> {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public int f10405j = -1;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public boolean f10406k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public Iterator<Map.Entry<K, V>> f10407l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public final /* synthetic */ C3814r6 f10408m;
 
     public C3892x6(C3814r6 c3814r6, C3840t6 c3840t6) {
         this.f10408m = c3814r6;
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final Iterator<Map.Entry<K, V>> m5361a() {
         if (this.f10407l == null) {
             this.f10407l = this.f10408m.f10291m.entrySet().iterator();

@@ -12,8 +12,8 @@ import java.util.concurrent.ThreadFactory;
 import java.util.concurrent.TimeUnit;
 import p007b.p100d.p104b.p105a.outline;
 
+/* JADX INFO: loaded from: classes.dex */
 @RestrictTo({RestrictTo.Scope.LIBRARY_GROUP})
-/* loaded from: classes.dex */
 public class WorkTimer {
     private static final String TAG = Logger.tagWithPrefix("WorkTimer");
     private final ThreadFactory mBackgroundThreadFactory;
@@ -22,7 +22,7 @@ public class WorkTimer {
     public final Object mLock;
     public final Map<String, WorkTimerRunnable> mTimerMap;
 
-    /* renamed from: androidx.work.impl.utils.WorkTimer$1 */
+    /* JADX INFO: renamed from: androidx.work.impl.utils.WorkTimer$1 */
     public class ThreadFactoryC07841 implements ThreadFactory {
         private int mThreadsCreated = 0;
 

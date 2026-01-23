@@ -2,11 +2,11 @@ package com.airbnb.lottie;
 
 import com.discord.C5419R;
 
-/* renamed from: com.airbnb.lottie.R */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: com.airbnb.lottie.R */
+/* JADX INFO: loaded from: classes.dex */
 public final class C5410R {
 
-    /* renamed from: com.airbnb.lottie.R$a */
+    /* JADX INFO: renamed from: com.airbnb.lottie.R$a */
     public static final class a {
         public static final int actionBarDivider = 2130968576;
         public static final int actionBarItemBackground = 2130968577;
@@ -302,7 +302,7 @@ public final class C5410R {
         }
     }
 
-    /* renamed from: com.airbnb.lottie.R$b */
+    /* JADX INFO: renamed from: com.airbnb.lottie.R$b */
     public static final class b {
         public static final int ActionBarLayout_android_layout_gravity = 0;
         public static final int ActionBar_background = 0;

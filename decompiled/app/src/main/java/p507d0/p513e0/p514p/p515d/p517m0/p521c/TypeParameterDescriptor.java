@@ -7,9 +7,9 @@ import p507d0.p513e0.p514p.p515d.p517m0.p567n.TypeConstructor;
 import p507d0.p513e0.p514p.p515d.p517m0.p567n.Variance;
 import p507d0.p513e0.p514p.p515d.p517m0.p567n.p570n1.InterfaceC11984m;
 
-/* compiled from: TypeParameterDescriptor.java */
-/* renamed from: d0.e0.p.d.m0.c.z0, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.c.z0, reason: use source file name */
+/* JADX INFO: compiled from: TypeParameterDescriptor.java */
+/* JADX INFO: loaded from: classes3.dex */
 public interface TypeParameterDescriptor extends ClassifierDescriptor, InterfaceC11984m {
     int getIndex();
 

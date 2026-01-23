@@ -5,57 +5,57 @@ import p007b.p085c.p086a.p087a0.AnimatableValueParser;
 import p007b.p109f.p115d.p128m.WebpSupportStatus;
 import p007b.p109f.p160i.ImageFormat;
 
-/* compiled from: DefaultImageFormatChecker.java */
-/* renamed from: b.f.i.a, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.f.i.a, reason: use source file name */
+/* JADX INFO: compiled from: DefaultImageFormatChecker.java */
+/* JADX INFO: loaded from: classes.dex */
 public class DefaultImageFormatChecker implements ImageFormat.a {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final byte[] f3569a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static final int f3570b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public static final byte[] f3571c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public static final int f3572d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public static final byte[] f3573e = AnimatableValueParser.m511e("GIF87a");
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public static final byte[] f3574f = AnimatableValueParser.m511e("GIF89a");
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public static final byte[] f3575g;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public static final int f3576h;
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public static final byte[] f3577i;
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static final int f3578j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public static final byte[] f3579k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public static final byte[][] f3580l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public static final byte[] f3581m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public static final byte[] f3582n;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public static final int f3583o;
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public final int f3584p;
 
     static {
@@ -91,7 +91,7 @@ public class DefaultImageFormatChecker implements ImageFormat.a {
         this.f3584p = i;
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public static ImageFormat m1169c(byte[] bArr, int i) {
         boolean z2 = false;
         AnimatableValueParser.m527i(Boolean.valueOf(WebpSupportStatus.m1014b(bArr, 0, i)));
@@ -117,13 +117,13 @@ public class DefaultImageFormatChecker implements ImageFormat.a {
     }
 
     @Override // p007b.p109f.p160i.ImageFormat.a
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public int mo1170a() {
         return this.f3584p;
     }
 
     @Override // p007b.p109f.p160i.ImageFormat.a
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final ImageFormat mo1171b(byte[] bArr, int i) {
         boolean z2;
         boolean z3 = false;

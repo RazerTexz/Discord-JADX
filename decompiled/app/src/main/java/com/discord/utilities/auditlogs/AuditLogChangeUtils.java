@@ -50,8 +50,8 @@ import p507d0.p580t._Collections;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: AuditLogChangeUtils.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: AuditLogChangeUtils.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class AuditLogChangeUtils {
     public static final AuditLogChangeUtils INSTANCE = new AuditLogChangeUtils();
     private static final List<Integer> RENDERABLE_DELETE_ACTION_TYPES = Collections2.listOf((Object[]) new Integer[]{22, 20, 21});
@@ -94,8 +94,8 @@ public final class AuditLogChangeUtils {
         }
     }
 
-    /* compiled from: AuditLogChangeUtils.kt */
-    /* renamed from: com.discord.utilities.auditlogs.AuditLogChangeUtils$renderPermissionList$1 */
+    /* JADX INFO: renamed from: com.discord.utilities.auditlogs.AuditLogChangeUtils$renderPermissionList$1 */
+    /* JADX INFO: compiled from: AuditLogChangeUtils.kt */
     public static final class C66911 extends Lambda implements Function1<Long, Integer> {
         public final /* synthetic */ ModelAuditLogEntry $auditLogEntry;
 
@@ -115,8 +115,8 @@ public final class AuditLogChangeUtils {
         }
     }
 
-    /* compiled from: AuditLogChangeUtils.kt */
-    /* renamed from: com.discord.utilities.auditlogs.AuditLogChangeUtils$renderPermissionList$2 */
+    /* JADX INFO: renamed from: com.discord.utilities.auditlogs.AuditLogChangeUtils$renderPermissionList$2 */
+    /* JADX INFO: compiled from: AuditLogChangeUtils.kt */
     public static final class C66922 extends Lambda implements Function1<Integer, Boolean> {
         public static final C66922 INSTANCE = new C66922();
 
@@ -134,8 +134,8 @@ public final class AuditLogChangeUtils {
         }
     }
 
-    /* compiled from: AuditLogChangeUtils.kt */
-    /* renamed from: com.discord.utilities.auditlogs.AuditLogChangeUtils$renderPermissionList$3 */
+    /* JADX INFO: renamed from: com.discord.utilities.auditlogs.AuditLogChangeUtils$renderPermissionList$3 */
+    /* JADX INFO: compiled from: AuditLogChangeUtils.kt */
     public static final class C66933 extends Lambda implements Function1<Integer, CharSequence> {
         public final /* synthetic */ Context $context;
 
@@ -155,8 +155,8 @@ public final class AuditLogChangeUtils {
         }
     }
 
-    /* compiled from: AuditLogChangeUtils.kt */
-    /* renamed from: com.discord.utilities.auditlogs.AuditLogChangeUtils$renderPermissionList$4 */
+    /* JADX INFO: renamed from: com.discord.utilities.auditlogs.AuditLogChangeUtils$renderPermissionList$4 */
+    /* JADX INFO: compiled from: AuditLogChangeUtils.kt */
     public static final class C66944 extends Lambda implements Function1<CharSequence, Boolean> {
         public static final C66944 INSTANCE = new C66944();
 
@@ -169,7 +169,7 @@ public final class AuditLogChangeUtils {
             return Boolean.valueOf(invoke2(charSequence));
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final boolean invoke2(CharSequence charSequence) {
             Intrinsics3.checkNotNullParameter(charSequence, "it");
             return charSequence.length() == 0;
@@ -298,7 +298,7 @@ public final class AuditLogChangeUtils {
                 if (newValue4 == null) {
                     throw new NullPointerException("null cannot be cast to non-null type kotlin.Long");
                 }
-                objArr5[0] = Long.valueOf(((Long) newValue4).longValue() / 1000);
+                objArr5[0] = Long.valueOf(((Long) newValue4).longValue() / ((long) 1000));
                 return FormatUtils.m216h(context, textId, objArr5, null, 4);
             }
             if (hasNewValue(change, ModelAuditLogEntry.CHANGE_KEY_OWNER_ID)) {
@@ -331,7 +331,7 @@ public final class AuditLogChangeUtils {
                 if (newValue7 == null) {
                     throw new NullPointerException("null cannot be cast to non-null type kotlin.Long");
                 }
-                objArr9[0] = Long.valueOf(((Long) newValue7).longValue() / 60);
+                objArr9[0] = Long.valueOf(((Long) newValue7).longValue() / ((long) 60));
                 return FormatUtils.m216h(context, textId, objArr9, null, 4);
             }
             if (hasNewValue(change, ModelAuditLogEntry.CHANGE_KEY_PRUNE_DELETE_DAYS)) {
@@ -529,6 +529,7 @@ public final class AuditLogChangeUtils {
         return 0;
     }
 
+    /* JADX WARN: Failed to restore switch over string. Please report as a decompilation issue */
     @StringRes
     private final int getGuildChangeString(ModelAuditLogEntry.Change change) {
         String key = change.getKey();
@@ -727,6 +728,7 @@ public final class AuditLogChangeUtils {
         }
     }
 
+    /* JADX WARN: Failed to restore switch over string. Please report as a decompilation issue */
     @StringRes
     private final int getGuildScheduledEventChangeString(ModelAuditLogEntry.Change change) {
         String key = change.getKey();
@@ -991,13 +993,7 @@ public final class AuditLogChangeUtils {
     }
 
     /* JADX WARN: Can't fix incorrect switch cases order, some code will duplicate */
-    /* JADX WARN: Failed to restore switch over string. Please report as a decompilation issue
-    java.lang.NullPointerException: Cannot invoke "java.util.List.iterator()" because the return value of "jadx.core.dex.visitors.regions.SwitchOverStringVisitor$SwitchData.getNewCases()" is null
-    	at jadx.core.dex.visitors.regions.SwitchOverStringVisitor.restoreSwitchOverString(SwitchOverStringVisitor.java:109)
-    	at jadx.core.dex.visitors.regions.SwitchOverStringVisitor.visitRegion(SwitchOverStringVisitor.java:66)
-    	at jadx.core.dex.visitors.regions.DepthRegionTraversal.traverseIterativeStepInternal(DepthRegionTraversal.java:77)
-    	at jadx.core.dex.visitors.regions.DepthRegionTraversal.traverseIterativeStepInternal(DepthRegionTraversal.java:82)
-     */
+    /* JADX WARN: Failed to restore switch over string. Please report as a decompilation issue */
     private final CharSequence getPluralString(Context context, ModelAuditLogEntry.Change change) {
         Object value = change.getValue();
         Objects.requireNonNull(value, "null cannot be cast to non-null type kotlin.collections.Collection<*>");
@@ -1508,6 +1504,7 @@ public final class AuditLogChangeUtils {
         return string;
     }
 
+    /* JADX WARN: Failed to restore switch over string. Please report as a decompilation issue */
     private final boolean shouldNotRenderChange(ModelAuditLogEntry auditLogEntry, ModelAuditLogEntry.Change change) {
         String key;
         if (auditLogEntry.getActionType() != ModelAuditLogEntry.ActionType.DELETE || RENDERABLE_DELETE_ACTION_TYPES.contains(Integer.valueOf(auditLogEntry.getActionTypeId()))) {
@@ -1785,8 +1782,8 @@ public final class AuditLogChangeUtils {
         return arrayList;
     }
 
-    /* compiled from: AuditLogChangeUtils.kt */
-    /* renamed from: com.discord.utilities.auditlogs.AuditLogChangeUtils$getChangeTextWithParams$1 */
+    /* JADX INFO: renamed from: com.discord.utilities.auditlogs.AuditLogChangeUtils$getChangeTextWithParams$1 */
+    /* JADX INFO: compiled from: AuditLogChangeUtils.kt */
     public static final class C66901 extends Lambda implements Function1<RenderContext, Unit> {
         public final /* synthetic */ ModelAuditLogEntry.Change $change;
 
@@ -1796,7 +1793,7 @@ public final class AuditLogChangeUtils {
             this.$change = change;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(RenderContext renderContext) {
             String string;
             String string2;

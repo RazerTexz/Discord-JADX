@@ -8,9 +8,9 @@ import p507d0.Tuples;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetPriceTierPickerBottomSheet.kt */
-/* renamed from: com.discord.widgets.guild_role_subscriptions.WidgetPriceTierPickerBottomSheet$itemClickListener$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.guild_role_subscriptions.WidgetPriceTierPickerBottomSheet$itemClickListener$1, reason: use source file name */
+/* JADX INFO: compiled from: WidgetPriceTierPickerBottomSheet.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetPriceTierPickerBottomSheet6 extends Lambda implements Function1<Integer, Unit> {
     public final /* synthetic */ WidgetPriceTierPickerBottomSheet this$0;
 

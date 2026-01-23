@@ -6,9 +6,9 @@ import kotlin.jvm.functions.Function1;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetServerSettingsCreatorMonetizationOnboarding.kt */
-/* renamed from: com.discord.widgets.servers.creator_monetization_eligibility.onboarding.WidgetServerSettingsCreatorMonetizationOnboarding$configureCreateRequestState$2$1 */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.servers.creator_monetization_eligibility.onboarding.WidgetServerSettingsCreatorMonetizationOnboarding$configureCreateRequestState$2$1 */
+/* JADX INFO: compiled from: WidgetServerSettingsCreatorMonetizationOnboarding.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class C9428x2d7e4c81 extends Lambda implements Function1<RenderContext, Unit> {
     public final /* synthetic */ CharSequence $rejectionCooldown;
 
@@ -18,7 +18,7 @@ public final class C9428x2d7e4c81 extends Lambda implements Function1<RenderCont
         this.$rejectionCooldown = charSequence;
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final void invoke2(RenderContext renderContext) {
         Intrinsics3.checkNotNullParameter(renderContext, "$receiver");
         renderContext.args.put("requestCooldownDuration", this.$rejectionCooldown.toString());

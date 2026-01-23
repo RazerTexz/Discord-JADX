@@ -32,46 +32,46 @@ import p007b.p225i.p355b.p357b.ImmutableSet2;
 import p007b.p225i.p355b.p357b.Sets2;
 import p007b.p225i.p355b.p357b.Sets4;
 
-/* compiled from: TtmlDecoder.java */
-/* renamed from: b.i.a.c.b3.t.c, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.b3.t.c, reason: use source file name */
+/* JADX INFO: compiled from: TtmlDecoder.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class TtmlDecoder extends SimpleSubtitleDecoder2 {
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public static final Pattern f6034n = Pattern.compile("^([0-9][0-9]+):([0-9][0-9]):([0-9][0-9])(?:(\\.[0-9]+)|:([0-9][0-9])(?:\\.([0-9]+))?)?$");
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public static final Pattern f6035o = Pattern.compile("^([0-9]+(?:\\.[0-9]+)?)(h|m|s|ms|f|t)$");
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public static final Pattern f6036p = Pattern.compile("^(([0-9]*.)?[0-9]+)(px|em|%)$");
 
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     public static final Pattern f6037q = Pattern.compile("^([-+]?\\d+\\.?\\d*?)%$");
 
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     public static final Pattern f6038r = Pattern.compile("^(\\d+\\.?\\d*?)% (\\d+\\.?\\d*?)%$");
 
-    /* renamed from: s */
+    /* JADX INFO: renamed from: s */
     public static final Pattern f6039s = Pattern.compile("^(\\d+\\.?\\d*?)px (\\d+\\.?\\d*?)px$");
 
-    /* renamed from: t */
+    /* JADX INFO: renamed from: t */
     public static final Pattern f6040t = Pattern.compile("^(\\d+) (\\d+)$");
 
-    /* renamed from: u */
+    /* JADX INFO: renamed from: u */
     public static final b f6041u = new b(30.0f, 1, 1);
 
-    /* renamed from: v */
+    /* JADX INFO: renamed from: v */
     public static final a f6042v = new a(32, 15);
 
-    /* renamed from: w */
+    /* JADX INFO: renamed from: w */
     public final XmlPullParserFactory f6043w;
 
-    /* compiled from: TtmlDecoder.java */
-    /* renamed from: b.i.a.c.b3.t.c$a */
+    /* JADX INFO: renamed from: b.i.a.c.b3.t.c$a */
+    /* JADX INFO: compiled from: TtmlDecoder.java */
     public static final class a {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final int f6044a;
 
         public a(int i, int i2) {
@@ -79,17 +79,17 @@ public final class TtmlDecoder extends SimpleSubtitleDecoder2 {
         }
     }
 
-    /* compiled from: TtmlDecoder.java */
-    /* renamed from: b.i.a.c.b3.t.c$b */
+    /* JADX INFO: renamed from: b.i.a.c.b3.t.c$b */
+    /* JADX INFO: compiled from: TtmlDecoder.java */
     public static final class b {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final float f6045a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final int f6046b;
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public final int f6047c;
 
         public b(float f, int i, int i2) {
@@ -99,14 +99,14 @@ public final class TtmlDecoder extends SimpleSubtitleDecoder2 {
         }
     }
 
-    /* compiled from: TtmlDecoder.java */
-    /* renamed from: b.i.a.c.b3.t.c$c */
+    /* JADX INFO: renamed from: b.i.a.c.b3.t.c$c */
+    /* JADX INFO: compiled from: TtmlDecoder.java */
     public static final class c {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final int f6048a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final int f6049b;
 
         public c(int i, int i2) {
@@ -126,18 +126,18 @@ public final class TtmlDecoder extends SimpleSubtitleDecoder2 {
         }
     }
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public static TtmlStyle m2679k(@Nullable TtmlStyle ttmlStyle) {
         return ttmlStyle == null ? new TtmlStyle() : ttmlStyle;
     }
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public static boolean m2680l(String str) {
         return str.equals("tt") || str.equals("head") || str.equals("body") || str.equals("div") || str.equals("p") || str.equals("span") || str.equals("br") || str.equals("style") || str.equals("styling") || str.equals("layout") || str.equals(ModelAuditLogEntry.CHANGE_KEY_REGION) || str.equals("metadata") || str.equals("image") || str.equals("data") || str.equals("information");
     }
 
     @Nullable
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public static Layout.Alignment m2681m(String str) {
         String strM4349u1 = C3404f.m4349u1(str);
         strM4349u1.hashCode();
@@ -155,7 +155,7 @@ public final class TtmlDecoder extends SimpleSubtitleDecoder2 {
         }
     }
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public static a m2682n(XmlPullParser xmlPullParser, a aVar) throws SubtitleDecoderException {
         String attributeValue = xmlPullParser.getAttributeValue("http://www.w3.org/ns/ttml#parameter", "cellResolution");
         if (attributeValue == null) {
@@ -188,7 +188,7 @@ public final class TtmlDecoder extends SimpleSubtitleDecoder2 {
         }
     }
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public static void m2683o(String str, TtmlStyle ttmlStyle) throws SubtitleDecoderException {
         Matcher matcher;
         String strGroup;
@@ -232,8 +232,8 @@ public final class TtmlDecoder extends SimpleSubtitleDecoder2 {
         ttmlStyle.f6083k = Float.parseFloat(strGroup2);
     }
 
-    /* renamed from: p */
-    public static b m2684p(XmlPullParser xmlPullParser) throws SubtitleDecoderException, NumberFormatException {
+    /* JADX INFO: renamed from: p */
+    public static b m2684p(XmlPullParser xmlPullParser) throws SubtitleDecoderException {
         String attributeValue = xmlPullParser.getAttributeValue("http://www.w3.org/ns/ttml#parameter", "frameRate");
         int i = attributeValue != null ? Integer.parseInt(attributeValue) : 30;
         float f = 1.0f;
@@ -268,7 +268,7 @@ public final class TtmlDecoder extends SimpleSubtitleDecoder2 {
     /* JADX WARN: Removed duplicated region for block: B:93:0x01ec A[ADDED_TO_REGION] */
     /* JADX WARN: Removed duplicated region for block: B:97:0x01f4  */
     /* JADX WARN: Removed duplicated region for block: B:98:0x01f7  */
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
@@ -283,7 +283,7 @@ public final class TtmlDecoder extends SimpleSubtitleDecoder2 {
         String strM564r03;
         float f5;
         int i;
-        char c2;
+        byte b2;
         do {
             xmlPullParser.next();
             if (AnimatableValueParser.m490Y0(xmlPullParser, "style")) {
@@ -353,19 +353,19 @@ public final class TtmlDecoder extends SimpleSubtitleDecoder2 {
                                                 int iHashCode = strM4349u12.hashCode();
                                                 if (iHashCode == 3694) {
                                                     if (strM4349u12.equals("tb")) {
-                                                        c2 = 0;
+                                                        b2 = 0;
                                                     }
-                                                    if (c2 == 0) {
+                                                    if (b2 == 0) {
                                                     }
                                                 } else if (iHashCode != 3553396) {
-                                                    c2 = (iHashCode == 3553576 && strM4349u12.equals("tbrl")) ? (char) 2 : (char) 65535;
-                                                    int i2 = (c2 == 0 || c2 == 1) ? 2 : c2 != 2 ? Integer.MIN_VALUE : 1;
+                                                    b2 = (iHashCode == 3553576 && strM4349u12.equals("tbrl")) ? (byte) 2 : (byte) -1;
+                                                    int i2 = (b2 == 0 || b2 == 1) ? 2 : b2 != 2 ? Integer.MIN_VALUE : 1;
                                                     ttmlRegion = new TtmlRegion(strM564r05, f, f5, 0, i, f4, f3, 1, f7, i2);
                                                 } else {
                                                     if (strM4349u12.equals("tblr")) {
-                                                        c2 = 1;
+                                                        b2 = 1;
                                                     }
-                                                    if (c2 == 0) {
+                                                    if (b2 == 0) {
                                                         ttmlRegion = new TtmlRegion(strM564r05, f, f5, 0, i, f4, f3, 1, f7, i2);
                                                     }
                                                 }
@@ -373,6 +373,7 @@ public final class TtmlDecoder extends SimpleSubtitleDecoder2 {
                                         }
                                     } catch (NumberFormatException unused2) {
                                         Log.w("TtmlDecoder", strM564r06.length() != 0 ? "Ignoring region with malformed extent: ".concat(strM564r06) : new String("Ignoring region with malformed extent: "));
+                                        ttmlRegion = null;
                                     }
                                 } else if (!matcher4.matches()) {
                                     Log.w("TtmlDecoder", strM564r06.length() != 0 ? "Ignoring region with unsupported extent: ".concat(strM564r06) : new String("Ignoring region with unsupported extent: "));
@@ -392,6 +393,7 @@ public final class TtmlDecoder extends SimpleSubtitleDecoder2 {
                                         }
                                     } catch (NumberFormatException unused3) {
                                         Log.w("TtmlDecoder", strM564r06.length() != 0 ? "Ignoring region with malformed extent: ".concat(strM564r06) : new String("Ignoring region with malformed extent: "));
+                                        ttmlRegion = null;
                                     }
                                 }
                                 if (ttmlRegion != null) {
@@ -449,14 +451,14 @@ public final class TtmlDecoder extends SimpleSubtitleDecoder2 {
     /* JADX WARN: Failed to restore switch over string. Please report as a decompilation issue */
     /* JADX WARN: Removed duplicated region for block: B:31:0x007c  */
     /* JADX WARN: Removed duplicated region for block: B:76:0x00fc  */
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
-    public static TtmlNode m2686r(XmlPullParser xmlPullParser, @Nullable TtmlNode ttmlNode, Map<String, TtmlRegion> map, b bVar) throws SubtitleDecoderException, NumberFormatException {
+    public static TtmlNode m2686r(XmlPullParser xmlPullParser, @Nullable TtmlNode ttmlNode, Map<String, TtmlRegion> map, b bVar) throws SubtitleDecoderException {
         long j;
         long j2;
-        char c2;
+        byte b2;
         XmlPullParser xmlPullParser2 = xmlPullParser;
         int attributeCount = xmlPullParser.getAttributeCount();
         TtmlStyle ttmlStyleM2687s = m2687s(xmlPullParser2, null);
@@ -473,52 +475,52 @@ public final class TtmlDecoder extends SimpleSubtitleDecoder2 {
             attributeName.hashCode();
             switch (attributeName.hashCode()) {
                 case -934795532:
-                    c2 = !attributeName.equals(ModelAuditLogEntry.CHANGE_KEY_REGION) ? (char) 65535 : (char) 0;
+                    b2 = !attributeName.equals(ModelAuditLogEntry.CHANGE_KEY_REGION) ? (byte) -1 : (byte) 0;
                     break;
                 case 99841:
                     if (attributeName.equals("dur")) {
-                        c2 = 1;
+                        b2 = 1;
                         break;
                     }
                     break;
                 case 100571:
                     if (attributeName.equals("end")) {
-                        c2 = 2;
+                        b2 = 2;
                         break;
                     }
                     break;
                 case 93616297:
                     if (attributeName.equals("begin")) {
-                        c2 = 3;
+                        b2 = 3;
                         break;
                     }
                     break;
                 case 109780401:
                     if (attributeName.equals("style")) {
-                        c2 = 4;
+                        b2 = 4;
                         break;
                     }
                     break;
                 case 1292595405:
                     if (attributeName.equals("backgroundImage")) {
-                        c2 = 5;
+                        b2 = 5;
                         break;
                     }
                     break;
             }
-            if (c2 != 0) {
-                if (c2 == 1) {
+            if (b2 != 0) {
+                if (b2 == 1) {
                     jM2689u3 = m2689u(attributeValue, bVar);
-                } else if (c2 == 2) {
+                } else if (b2 == 2) {
                     jM2689u2 = m2689u(attributeValue, bVar);
-                } else if (c2 == 3) {
+                } else if (b2 == 3) {
                     jM2689u = m2689u(attributeValue, bVar);
-                } else if (c2 == 4) {
+                } else if (b2 == 4) {
                     String[] strArrM2688t = m2688t(attributeValue);
                     if (strArrM2688t.length > 0) {
                         strArr = strArrM2688t;
                     }
-                } else if (c2 == 5 && attributeValue.startsWith("#")) {
+                } else if (b2 == 5 && attributeValue.startsWith("#")) {
                     strSubstring = attributeValue.substring(1);
                 }
             } else if (map.containsKey(attributeValue)) {
@@ -574,17 +576,17 @@ public final class TtmlDecoder extends SimpleSubtitleDecoder2 {
     /* JADX WARN: Removed duplicated region for block: B:251:0x03ce  */
     /* JADX WARN: Removed duplicated region for block: B:254:0x03e6  */
     /* JADX WARN: Removed duplicated region for block: B:67:0x00de  */
-    /* renamed from: s */
+    /* JADX INFO: renamed from: s */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
     public static TtmlStyle m2687s(XmlPullParser xmlPullParser, TtmlStyle ttmlStyle) {
         String attributeValue;
         int i;
-        char c2;
-        char c3;
+        byte b2;
+        byte b3;
         Collections2.a aVar;
-        char c4;
+        byte b4;
         int iHashCode;
         TextEmphasis textEmphasis;
         int attributeCount = xmlPullParser.getAttributeCount();
@@ -593,7 +595,7 @@ public final class TtmlDecoder extends SimpleSubtitleDecoder2 {
             attributeValue = xmlPullParser.getAttributeValue(i2);
             String attributeName = xmlPullParser.getAttributeName(i2);
             attributeName.hashCode();
-            c2 = 1;
+            b2 = 1;
             switch (attributeName) {
                 case "fontStyle":
                     ttmlStyleM2679k = m2679k(ttmlStyleM2679k);
@@ -791,17 +793,17 @@ public final class TtmlDecoder extends SimpleSubtitleDecoder2 {
                             int iHashCode2 = str.hashCode();
                             if (iHashCode2 == -1392885889) {
                                 if (str.equals("before")) {
-                                    c3 = 2;
+                                    b3 = 2;
                                 }
-                                if (c3 != 0) {
+                                if (b3 != 0) {
                                 }
                                 aVar = (Collections2.a) Collections2.m6239b(TextEmphasis.f6027b, immutableSet2M6282n);
                                 if (aVar.isEmpty()) {
                                 }
                                 textEmphasis2 = textEmphasis;
                             } else if (iHashCode2 != -1106037339) {
-                                c3 = (iHashCode2 == 92734940 && str.equals("after")) ? (char) 0 : (char) 65535;
-                                int i3 = c3 != 0 ? c3 != 1 ? 1 : -2 : 2;
+                                b3 = (iHashCode2 == 92734940 && str.equals("after")) ? (byte) 0 : (byte) -1;
+                                int i3 = b3 != 0 ? b3 != 1 ? 1 : -2 : 2;
                                 aVar = (Collections2.a) Collections2.m6239b(TextEmphasis.f6027b, immutableSet2M6282n);
                                 if (aVar.isEmpty()) {
                                     Sets4 sets4M6239b = Collections2.m6239b(TextEmphasis.f6029d, immutableSet2M6282n);
@@ -812,8 +814,8 @@ public final class TtmlDecoder extends SimpleSubtitleDecoder2 {
                                         String str2 = (String) C3404f.m4308k0(sets4M6239b, "filled");
                                         int iHashCode3 = str2.hashCode();
                                         if (iHashCode3 != -1274499742) {
-                                            c4 = (iHashCode3 == 3417674 && str2.equals("open")) ? (char) 0 : (char) 65535;
-                                            int i4 = c4 == 0 ? 1 : 2;
+                                            b4 = (iHashCode3 == 3417674 && str2.equals("open")) ? (byte) 0 : (byte) -1;
+                                            int i4 = b4 == 0 ? 1 : 2;
                                             String str3 = (String) C3404f.m4308k0(sets4M6239b2, "circle");
                                             iHashCode = str3.hashCode();
                                             if (iHashCode == -1360216880) {
@@ -830,9 +832,9 @@ public final class TtmlDecoder extends SimpleSubtitleDecoder2 {
                                             textEmphasis = new TextEmphasis(i == 0 ? i != 1 ? 1 : 3 : 2, i4, i3);
                                         } else {
                                             if (str2.equals("filled")) {
-                                                c4 = 1;
+                                                b4 = 1;
                                             }
-                                            if (c4 == 0) {
+                                            if (b4 == 0) {
                                             }
                                             String str32 = (String) C3404f.m4308k0(sets4M6239b2, "circle");
                                             iHashCode = str32.hashCode();
@@ -845,20 +847,20 @@ public final class TtmlDecoder extends SimpleSubtitleDecoder2 {
                                     String str4 = (String) new Sets2(aVar).next();
                                     int iHashCode4 = str4.hashCode();
                                     if (iHashCode4 != 3005871) {
-                                        c2 = (iHashCode4 == 3387192 && str4.equals("none")) ? (char) 0 : (char) 65535;
-                                        textEmphasis = new TextEmphasis(c2 == 0 ? 0 : -1, 0, i3);
+                                        b2 = (iHashCode4 == 3387192 && str4.equals("none")) ? (byte) 0 : (byte) -1;
+                                        textEmphasis = new TextEmphasis(b2 == 0 ? 0 : -1, 0, i3);
                                     } else {
                                         if (!str4.equals("auto")) {
                                         }
-                                        textEmphasis = new TextEmphasis(c2 == 0 ? 0 : -1, 0, i3);
+                                        textEmphasis = new TextEmphasis(b2 == 0 ? 0 : -1, 0, i3);
                                     }
                                 }
                                 textEmphasis2 = textEmphasis;
                             } else {
                                 if (str.equals("outside")) {
-                                    c3 = 1;
+                                    b3 = 1;
                                 }
-                                if (c3 != 0) {
+                                if (b3 != 0) {
                                 }
                                 aVar = (Collections2.a) Collections2.m6239b(TextEmphasis.f6027b, immutableSet2M6282n);
                                 if (aVar.isEmpty()) {
@@ -905,7 +907,7 @@ public final class TtmlDecoder extends SimpleSubtitleDecoder2 {
         return ttmlStyleM2679k;
     }
 
-    /* renamed from: t */
+    /* JADX INFO: renamed from: t */
     public static String[] m2688t(String str) {
         String strTrim = str.trim();
         if (strTrim.isEmpty()) {
@@ -916,26 +918,26 @@ public final class TtmlDecoder extends SimpleSubtitleDecoder2 {
     }
 
     /* JADX WARN: Can't fix incorrect switch cases order, some code will duplicate */
-    /* JADX WARN: Failed to restore switch over string. Please report as a decompilation issue */
     /* JADX WARN: Removed duplicated region for block: B:21:0x00a5  */
-    /* renamed from: u */
+    /* JADX INFO: renamed from: u */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
-    public static long m2689u(String str, b bVar) throws SubtitleDecoderException, NumberFormatException {
+    public static long m2689u(String str, b bVar) throws SubtitleDecoderException {
         double d;
         double d2;
+        double d3;
         Matcher matcher = f6034n.matcher(str);
-        char c2 = 4;
         if (matcher.matches()) {
             String strGroup = matcher.group(1);
             Objects.requireNonNull(strGroup);
-            double d3 = Long.parseLong(strGroup) * 3600;
+            double d4 = Long.parseLong(strGroup) * 3600;
             Objects.requireNonNull(matcher.group(2));
+            double d5 = d4 + (Long.parseLong(r13) * 60);
             Objects.requireNonNull(matcher.group(3));
-            double d4 = d3 + (Long.parseLong(r13) * 60) + Long.parseLong(r13);
+            double d6 = d5 + Long.parseLong(r13);
             String strGroup2 = matcher.group(4);
-            return (long) ((d4 + (strGroup2 != null ? Double.parseDouble(strGroup2) : 0.0d) + (matcher.group(5) != null ? Long.parseLong(r13) / bVar.f6045a : 0.0d) + (matcher.group(6) != null ? (Long.parseLong(r13) / bVar.f6046b) / bVar.f6045a : 0.0d)) * 1000000.0d);
+            return (long) ((d6 + (strGroup2 != null ? Double.parseDouble(strGroup2) : 0.0d) + (matcher.group(5) != null ? Long.parseLong(r13) / bVar.f6045a : 0.0d) + (matcher.group(6) != null ? (Long.parseLong(r13) / ((double) bVar.f6046b)) / ((double) bVar.f6045a) : 0.0d)) * 1000000.0d);
         }
         Matcher matcher2 = f6035o.matcher(str);
         if (!matcher2.matches()) {
@@ -944,64 +946,37 @@ public final class TtmlDecoder extends SimpleSubtitleDecoder2 {
         }
         String strGroup3 = matcher2.group(1);
         Objects.requireNonNull(strGroup3);
-        double d5 = Double.parseDouble(strGroup3);
+        d = Double.parseDouble(strGroup3);
         String strGroup4 = matcher2.group(2);
         Objects.requireNonNull(strGroup4);
-        switch (strGroup4.hashCode()) {
-            case 102:
-                c2 = !strGroup4.equals("f") ? (char) 65535 : (char) 0;
+        switch (strGroup4) {
+            case "f":
+                d2 = bVar.f6045a;
+                d /= d2;
+                return (long) (d * 1000000.0d);
+            case "h":
+                d3 = 3600.0d;
                 break;
-            case 104:
-                if (strGroup4.equals("h")) {
-                    c2 = 1;
-                    break;
-                }
+            case "m":
+                d3 = 60.0d;
                 break;
-            case 109:
-                if (strGroup4.equals("m")) {
-                    c2 = 2;
-                    break;
-                }
-                break;
-            case 116:
-                if (strGroup4.equals("t")) {
-                    c2 = 3;
-                    break;
-                }
-                break;
-            case 3494:
-                if (!strGroup4.equals("ms")) {
-                }
-                break;
-        }
-        switch (c2) {
-            case 0:
-                d = bVar.f6045a;
-                d5 /= d;
-                return (long) (d5 * 1000000.0d);
-            case 1:
-                d2 = 3600.0d;
-                break;
-            case 2:
-                d2 = 60.0d;
-                break;
-            case 3:
-                d = bVar.f6047c;
-                d5 /= d;
-                return (long) (d5 * 1000000.0d);
-            case 4:
-                d = 1000.0d;
-                d5 /= d;
-                return (long) (d5 * 1000000.0d);
+            case "t":
+                d2 = bVar.f6047c;
+                d /= d2;
+                return (long) (d * 1000000.0d);
+            case "ms":
+                d2 = 1000.0d;
+                d /= d2;
+                return (long) (d * 1000000.0d);
             default:
-                return (long) (d5 * 1000000.0d);
+                return (long) (d * 1000000.0d);
         }
-        d5 *= d2;
-        return (long) (d5 * 1000000.0d);
+        d *= d3;
+        return (long) (d * 1000000.0d);
     }
 
     @Nullable
-    /* renamed from: v */
+    /* JADX INFO: renamed from: v */
     public static c m2690v(XmlPullParser xmlPullParser) {
         String strM564r0 = AnimatableValueParser.m564r0(xmlPullParser, "extent");
         if (strM564r0 == null) {
@@ -1026,8 +1001,8 @@ public final class TtmlDecoder extends SimpleSubtitleDecoder2 {
     }
 
     @Override // p007b.p225i.p226a.p242c.p245b3.SimpleSubtitleDecoder2
-    /* renamed from: j */
-    public Subtitle mo2617j(byte[] bArr, int i, boolean z2) throws SubtitleDecoderException, NumberFormatException {
+    /* JADX INFO: renamed from: j */
+    public Subtitle mo2617j(byte[] bArr, int i, boolean z2) throws SubtitleDecoderException {
         b bVar;
         try {
             XmlPullParser xmlPullParserNewPullParser = this.f6043w.newPullParser();

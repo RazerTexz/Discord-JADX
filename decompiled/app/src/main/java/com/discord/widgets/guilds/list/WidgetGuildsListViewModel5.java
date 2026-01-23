@@ -5,9 +5,9 @@ import com.discord.panels.PanelState;
 import p507d0.p592z.p594d.Intrinsics3;
 import p637j0.p641k.Func1;
 
-/* compiled from: WidgetGuildsListViewModel.kt */
-/* renamed from: com.discord.widgets.guilds.list.WidgetGuildsListViewModel$Companion$observeStores$4, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.guilds.list.WidgetGuildsListViewModel$Companion$observeStores$4, reason: use source file name */
+/* JADX INFO: compiled from: WidgetGuildsListViewModel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetGuildsListViewModel5<T, R> implements Func1<PanelState, Boolean> {
     public static final WidgetGuildsListViewModel5 INSTANCE = new WidgetGuildsListViewModel5();
 
@@ -16,7 +16,7 @@ public final class WidgetGuildsListViewModel5<T, R> implements Func1<PanelState,
         return call2(panelState);
     }
 
-    /* renamed from: call, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
     public final Boolean call2(PanelState panelState) {
         return Boolean.valueOf(Intrinsics3.areEqual(panelState, PanelState.C5580c.f18642a));
     }

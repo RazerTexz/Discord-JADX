@@ -8,8 +8,8 @@ import com.discord.analytics.generated.traits.TrackLfgGroup;
 import com.discord.analytics.generated.traits.TrackLfgGroup2;
 import com.discord.api.science.AnalyticsSchema;
 
-/* compiled from: TrackLfgGroupReported.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: TrackLfgGroupReported.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class TrackLfgGroupReported implements AnalyticsSchema, TrackBase2, TrackChannel2, TrackLfgGroup2 {
     private final transient String analyticsSchemaTypeName = "lfg_group_reported";
     private TrackBase trackBase;
@@ -17,7 +17,7 @@ public final class TrackLfgGroupReported implements AnalyticsSchema, TrackBase2,
     private TrackLfgGroup trackLfgGroup;
 
     @Override // com.discord.api.science.AnalyticsSchema
-    /* renamed from: d, reason: from getter */
+    /* JADX INFO: renamed from: d, reason: from getter */
     public String getAnalyticsSchemaTypeName() {
         return this.analyticsSchemaTypeName;
     }

@@ -38,11 +38,11 @@ import p658rx.Observable;
 import p658rx.functions.Func5;
 import p658rx.subjects.PublishSubject;
 
-/* compiled from: GuildBoostViewModel.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: GuildBoostViewModel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class GuildBoostViewModel extends AppViewModel<ViewState> {
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private final Clock clock;
     private final PublishSubject<Event> eventSubject;
@@ -50,8 +50,8 @@ public final class GuildBoostViewModel extends AppViewModel<ViewState> {
     private final StoreGuildBoost storeGuildBoost;
     private final StoreSubscriptions storeSubscriptions;
 
-    /* compiled from: GuildBoostViewModel.kt */
-    /* renamed from: com.discord.widgets.servers.guildboost.GuildBoostViewModel$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.guildboost.GuildBoostViewModel$1 */
+    /* JADX INFO: compiled from: GuildBoostViewModel.kt */
     public static final class C95051 extends Lambda implements Function1<StoreState, Unit> {
         public C95051() {
             super(1);
@@ -63,14 +63,14 @@ public final class GuildBoostViewModel extends AppViewModel<ViewState> {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(StoreState storeState) {
             Intrinsics3.checkNotNullParameter(storeState, "storeState");
             GuildBoostViewModel.access$handleStoreState(GuildBoostViewModel.this, storeState);
         }
     }
 
-    /* compiled from: GuildBoostViewModel.kt */
+    /* JADX INFO: compiled from: GuildBoostViewModel.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -79,8 +79,6 @@ public final class GuildBoostViewModel extends AppViewModel<ViewState> {
             return companion.observeStores(j);
         }
 
-        /* JADX WARN: Multi-variable type inference failed */
-        /* JADX WARN: Type inference failed for: r12v1, types: [com.discord.widgets.servers.guildboost.GuildBoostViewModel$sam$rx_functions_Func5$0] */
         private final Observable<StoreState> observeStores(long guildId) {
             StoreStream.Companion companion = StoreStream.INSTANCE;
             Observable observableObserveGuildBoostState$default = StoreGuildBoost.observeGuildBoostState$default(companion.getGuildBoosts(), null, 1, null);
@@ -88,9 +86,10 @@ public final class GuildBoostViewModel extends AppViewModel<ViewState> {
             Observable observableObserveMe$default = StoreUser.observeMe$default(companion.getUsers(), false, 1, null);
             Observable<Guild> observableObserveGuild = companion.getGuilds().observeGuild(guildId);
             Observable<StoreGooglePlayPurchases.State> observableObserveState = companion.getGooglePlayPurchases().observeState();
-            GuildBoostViewModel2 guildBoostViewModel3 = GuildBoostViewModel2.INSTANCE;
-            if (guildBoostViewModel3 != null) {
-                guildBoostViewModel3 = new GuildBoostViewModel3(guildBoostViewModel3);
+            GuildBoostViewModel2 guildBoostViewModel2 = GuildBoostViewModel2.INSTANCE;
+            Object guildBoostViewModel3 = guildBoostViewModel2;
+            if (guildBoostViewModel2 != null) {
+                guildBoostViewModel3 = new GuildBoostViewModel3(guildBoostViewModel2);
             }
             Observable<StoreState> observableM11072g = Observable.m11072g(observableObserveGuildBoostState$default, observableObserveSubscriptions, observableObserveMe$default, observableObserveGuild, observableObserveState, (Func5) guildBoostViewModel3);
             Intrinsics3.checkNotNullExpressionValue(observableM11072g, "Observable.combineLatest…     ::StoreState\n      )");
@@ -102,10 +101,10 @@ public final class GuildBoostViewModel extends AppViewModel<ViewState> {
         }
     }
 
-    /* compiled from: GuildBoostViewModel.kt */
+    /* JADX INFO: compiled from: GuildBoostViewModel.kt */
     public static abstract class Event {
 
-        /* compiled from: GuildBoostViewModel.kt */
+        /* JADX INFO: compiled from: GuildBoostViewModel.kt */
         public static final /* data */ class LaunchPurchaseSubscription extends Event {
             private final long guildId;
             private final String oldSkuName;
@@ -128,17 +127,17 @@ public final class GuildBoostViewModel extends AppViewModel<ViewState> {
                 return launchPurchaseSubscription.copy(str, j, str2);
             }
 
-            /* renamed from: component1, reason: from getter */
+            /* JADX INFO: renamed from: component1, reason: from getter */
             public final String getSection() {
                 return this.section;
             }
 
-            /* renamed from: component2, reason: from getter */
+            /* JADX INFO: renamed from: component2, reason: from getter */
             public final long getGuildId() {
                 return this.guildId;
             }
 
-            /* renamed from: component3, reason: from getter */
+            /* JADX INFO: renamed from: component3, reason: from getter */
             public final String getOldSkuName() {
                 return this.oldSkuName;
             }
@@ -197,7 +196,7 @@ public final class GuildBoostViewModel extends AppViewModel<ViewState> {
             }
         }
 
-        /* compiled from: GuildBoostViewModel.kt */
+        /* JADX INFO: compiled from: GuildBoostViewModel.kt */
         public static final /* data */ class LaunchSubscriptionConfirmation extends Event {
             private final long guildId;
             private final long slotId;
@@ -218,12 +217,12 @@ public final class GuildBoostViewModel extends AppViewModel<ViewState> {
                 return launchSubscriptionConfirmation.copy(j, j2);
             }
 
-            /* renamed from: component1, reason: from getter */
+            /* JADX INFO: renamed from: component1, reason: from getter */
             public final long getGuildId() {
                 return this.guildId;
             }
 
-            /* renamed from: component2, reason: from getter */
+            /* JADX INFO: renamed from: component2, reason: from getter */
             public final long getSlotId() {
                 return this.slotId;
             }
@@ -263,7 +262,7 @@ public final class GuildBoostViewModel extends AppViewModel<ViewState> {
             }
         }
 
-        /* compiled from: GuildBoostViewModel.kt */
+        /* JADX INFO: compiled from: GuildBoostViewModel.kt */
         public static final /* data */ class ShowBlockedPlanSwitchAlertDialog extends Event {
             private final int bodyStringRes;
             private final int headerStringRes;
@@ -284,12 +283,12 @@ public final class GuildBoostViewModel extends AppViewModel<ViewState> {
                 return showBlockedPlanSwitchAlertDialog.copy(i, i2);
             }
 
-            /* renamed from: component1, reason: from getter */
+            /* JADX INFO: renamed from: component1, reason: from getter */
             public final int getHeaderStringRes() {
                 return this.headerStringRes;
             }
 
-            /* renamed from: component2, reason: from getter */
+            /* JADX INFO: renamed from: component2, reason: from getter */
             public final int getBodyStringRes() {
                 return this.bodyStringRes;
             }
@@ -329,7 +328,7 @@ public final class GuildBoostViewModel extends AppViewModel<ViewState> {
             }
         }
 
-        /* compiled from: GuildBoostViewModel.kt */
+        /* JADX INFO: compiled from: GuildBoostViewModel.kt */
         public static final class ShowDesktopAlertDialog extends Event {
             public static final ShowDesktopAlertDialog INSTANCE = new ShowDesktopAlertDialog();
 
@@ -338,7 +337,7 @@ public final class GuildBoostViewModel extends AppViewModel<ViewState> {
             }
         }
 
-        /* compiled from: GuildBoostViewModel.kt */
+        /* JADX INFO: compiled from: GuildBoostViewModel.kt */
         public static final class UnacknowledgedPurchase extends Event {
             public static final UnacknowledgedPurchase INSTANCE = new UnacknowledgedPurchase();
 
@@ -355,7 +354,7 @@ public final class GuildBoostViewModel extends AppViewModel<ViewState> {
         }
     }
 
-    /* compiled from: GuildBoostViewModel.kt */
+    /* JADX INFO: compiled from: GuildBoostViewModel.kt */
     public static final /* data */ class StoreState {
         private final Guild guild;
         private final StoreGuildBoost.State guildBoostState;
@@ -397,27 +396,27 @@ public final class GuildBoostViewModel extends AppViewModel<ViewState> {
             return storeState.copy(state, subscriptionsState2, meUser2, guild2, state2);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final StoreGuildBoost.State getGuildBoostState() {
             return this.guildBoostState;
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final StoreSubscriptions.SubscriptionsState getSubscriptionState() {
             return this.subscriptionState;
         }
 
-        /* renamed from: component3, reason: from getter */
+        /* JADX INFO: renamed from: component3, reason: from getter */
         public final MeUser getMeUser() {
             return this.meUser;
         }
 
-        /* renamed from: component4, reason: from getter */
+        /* JADX INFO: renamed from: component4, reason: from getter */
         public final Guild getGuild() {
             return this.guild;
         }
 
-        /* renamed from: component5, reason: from getter */
+        /* JADX INFO: renamed from: component5, reason: from getter */
         public final StoreGooglePlayPurchases.State getPurchasesState() {
             return this.purchasesState;
         }
@@ -490,10 +489,10 @@ public final class GuildBoostViewModel extends AppViewModel<ViewState> {
         }
     }
 
-    /* compiled from: GuildBoostViewModel.kt */
+    /* JADX INFO: compiled from: GuildBoostViewModel.kt */
     public static abstract class ViewState {
 
-        /* compiled from: GuildBoostViewModel.kt */
+        /* JADX INFO: compiled from: GuildBoostViewModel.kt */
         public static final class Failure extends ViewState {
             public static final Failure INSTANCE = new Failure();
 
@@ -502,7 +501,7 @@ public final class GuildBoostViewModel extends AppViewModel<ViewState> {
             }
         }
 
-        /* compiled from: GuildBoostViewModel.kt */
+        /* JADX INFO: compiled from: GuildBoostViewModel.kt */
         public static final /* data */ class Loaded extends ViewState {
             private final Map<Long, ModelGuildBoostSlot> boostSlotMap;
             private final Guild guild;
@@ -525,6 +524,7 @@ public final class GuildBoostViewModel extends AppViewModel<ViewState> {
                 this.guild = guild;
             }
 
+            /* JADX WARN: Multi-variable type inference failed */
             public static /* synthetic */ Loaded copy$default(Loaded loaded, Map map, ModelSubscription modelSubscription, List list, MeUser meUser, Guild guild, int i, Object obj) {
                 if ((i & 1) != 0) {
                     map = loaded.boostSlotMap;
@@ -551,7 +551,7 @@ public final class GuildBoostViewModel extends AppViewModel<ViewState> {
                 return this.boostSlotMap;
             }
 
-            /* renamed from: component2, reason: from getter */
+            /* JADX INFO: renamed from: component2, reason: from getter */
             public final ModelSubscription getPremiumSubscription() {
                 return this.premiumSubscription;
             }
@@ -560,12 +560,12 @@ public final class GuildBoostViewModel extends AppViewModel<ViewState> {
                 return this.purchases;
             }
 
-            /* renamed from: component4, reason: from getter */
+            /* JADX INFO: renamed from: component4, reason: from getter */
             public final MeUser getMeUser() {
                 return this.meUser;
             }
 
-            /* renamed from: component5, reason: from getter */
+            /* JADX INFO: renamed from: component5, reason: from getter */
             public final Guild getGuild() {
                 return this.guild;
             }
@@ -638,7 +638,7 @@ public final class GuildBoostViewModel extends AppViewModel<ViewState> {
             }
         }
 
-        /* compiled from: GuildBoostViewModel.kt */
+        /* JADX INFO: compiled from: GuildBoostViewModel.kt */
         public static final class Loading extends ViewState {
             public static final Loading INSTANCE = new Loading();
 

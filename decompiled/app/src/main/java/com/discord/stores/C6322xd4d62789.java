@@ -5,9 +5,9 @@ import com.discord.models.domain.ModelPaymentSource3;
 import java.util.Comparator;
 import p507d0.p582u.C12169a;
 
-/* compiled from: Comparisons.kt */
-/* renamed from: com.discord.stores.StorePaymentSources$ensureDefaultPaymentSource$$inlined$sortedBy$1 */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.stores.StorePaymentSources$ensureDefaultPaymentSource$$inlined$sortedBy$1 */
+/* JADX INFO: compiled from: Comparisons.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class C6322xd4d62789<T> implements Comparator {
     /* JADX WARN: Multi-variable type inference failed */
     @Override // java.util.Comparator

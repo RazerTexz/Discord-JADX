@@ -23,11 +23,11 @@ import p507d0.p592z.p594d.Lambda;
 import p658rx.Observable;
 import p658rx.subjects.PublishSubject;
 
-/* compiled from: WidgetAuthLandingViewModel.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetAuthLandingViewModel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetAuthLandingViewModel extends AppViewModel<ViewState> {
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private final PublishSubject<Event> eventSubject;
     private final GoogleSmartLockManager googleSmartLockManager;
@@ -35,8 +35,8 @@ public final class WidgetAuthLandingViewModel extends AppViewModel<ViewState> {
     private boolean smartLockCredentialRequestDisabled;
     private final StoreInstantInvites storeInstantInvites;
 
-    /* compiled from: WidgetAuthLandingViewModel.kt */
-    /* renamed from: com.discord.widgets.auth.WidgetAuthLandingViewModel$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.auth.WidgetAuthLandingViewModel$1 */
+    /* JADX INFO: compiled from: WidgetAuthLandingViewModel.kt */
     public static final class C71791 extends Lambda implements Function1<StoreState, Unit> {
         public C71791() {
             super(1);
@@ -48,15 +48,15 @@ public final class WidgetAuthLandingViewModel extends AppViewModel<ViewState> {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(StoreState storeState) {
             Intrinsics3.checkNotNullParameter(storeState, "it");
             WidgetAuthLandingViewModel.this.handleStoreState(storeState);
         }
     }
 
-    /* compiled from: WidgetAuthLandingViewModel.kt */
-    /* renamed from: com.discord.widgets.auth.WidgetAuthLandingViewModel$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.auth.WidgetAuthLandingViewModel$2 */
+    /* JADX INFO: compiled from: WidgetAuthLandingViewModel.kt */
     public static final class C71802 extends Lambda implements Function1<GoogleSmartLockManager.SmartLockCredentials, Unit> {
         public C71802() {
             super(1);
@@ -68,7 +68,7 @@ public final class WidgetAuthLandingViewModel extends AppViewModel<ViewState> {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(GoogleSmartLockManager.SmartLockCredentials smartLockCredentials) {
             Intrinsics3.checkNotNullParameter(smartLockCredentials, "it");
             PublishSubject publishSubjectAccess$getEventSubject$p = WidgetAuthLandingViewModel.access$getEventSubject$p(WidgetAuthLandingViewModel.this);
@@ -76,7 +76,7 @@ public final class WidgetAuthLandingViewModel extends AppViewModel<ViewState> {
         }
     }
 
-    /* compiled from: WidgetAuthLandingViewModel.kt */
+    /* JADX INFO: compiled from: WidgetAuthLandingViewModel.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -96,10 +96,10 @@ public final class WidgetAuthLandingViewModel extends AppViewModel<ViewState> {
         }
     }
 
-    /* compiled from: WidgetAuthLandingViewModel.kt */
+    /* JADX INFO: compiled from: WidgetAuthLandingViewModel.kt */
     public static abstract class Event {
 
-        /* compiled from: WidgetAuthLandingViewModel.kt */
+        /* JADX INFO: compiled from: WidgetAuthLandingViewModel.kt */
         public static final /* data */ class SmartLockLogin extends Event {
             private final GoogleSmartLockManager.SmartLockCredentials smartLockCredentials;
 
@@ -117,7 +117,7 @@ public final class WidgetAuthLandingViewModel extends AppViewModel<ViewState> {
                 return smartLockLogin.copy(smartLockCredentials);
             }
 
-            /* renamed from: component1, reason: from getter */
+            /* JADX INFO: renamed from: component1, reason: from getter */
             public final GoogleSmartLockManager.SmartLockCredentials getSmartLockCredentials() {
                 return this.smartLockCredentials;
             }
@@ -162,7 +162,7 @@ public final class WidgetAuthLandingViewModel extends AppViewModel<ViewState> {
         }
     }
 
-    /* compiled from: WidgetAuthLandingViewModel.kt */
+    /* JADX INFO: compiled from: WidgetAuthLandingViewModel.kt */
     public static final /* data */ class StoreState {
         private final String ageGateError;
         private final StoreGuildTemplates.GuildTemplateState guildTemplateState;
@@ -193,22 +193,22 @@ public final class WidgetAuthLandingViewModel extends AppViewModel<ViewState> {
             return storeState.copy(inviteCode, modelInvite, guildTemplateState, str);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final StoreInviteSettings.InviteCode getInviteCode() {
             return this.inviteCode;
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final ModelInvite getInvite() {
             return this.invite;
         }
 
-        /* renamed from: component3, reason: from getter */
+        /* JADX INFO: renamed from: component3, reason: from getter */
         public final StoreGuildTemplates.GuildTemplateState getGuildTemplateState() {
             return this.guildTemplateState;
         }
 
-        /* renamed from: component4, reason: from getter */
+        /* JADX INFO: renamed from: component4, reason: from getter */
         public final String getAgeGateError() {
             return this.ageGateError;
         }
@@ -268,11 +268,11 @@ public final class WidgetAuthLandingViewModel extends AppViewModel<ViewState> {
         }
     }
 
-    /* compiled from: WidgetAuthLandingViewModel.kt */
+    /* JADX INFO: compiled from: WidgetAuthLandingViewModel.kt */
     public static abstract class ViewState {
         private final String ageGateError;
 
-        /* compiled from: WidgetAuthLandingViewModel.kt */
+        /* JADX INFO: compiled from: WidgetAuthLandingViewModel.kt */
         public static final /* data */ class Empty extends ViewState {
             private final String ageGateError;
 
@@ -324,7 +324,7 @@ public final class WidgetAuthLandingViewModel extends AppViewModel<ViewState> {
             }
         }
 
-        /* compiled from: WidgetAuthLandingViewModel.kt */
+        /* JADX INFO: compiled from: WidgetAuthLandingViewModel.kt */
         public static final /* data */ class GuildTemplate extends ViewState {
             private final String ageGateError;
             private final ModelGuildTemplate guildTemplate;
@@ -347,7 +347,7 @@ public final class WidgetAuthLandingViewModel extends AppViewModel<ViewState> {
                 return guildTemplate.copy(modelGuildTemplate, str);
             }
 
-            /* renamed from: component1, reason: from getter */
+            /* JADX INFO: renamed from: component1, reason: from getter */
             public final ModelGuildTemplate getGuildTemplate() {
                 return this.guildTemplate;
             }
@@ -398,7 +398,7 @@ public final class WidgetAuthLandingViewModel extends AppViewModel<ViewState> {
             }
         }
 
-        /* compiled from: WidgetAuthLandingViewModel.kt */
+        /* JADX INFO: compiled from: WidgetAuthLandingViewModel.kt */
         public static final /* data */ class Invite extends ViewState {
             private final String ageGateError;
             private final ModelInvite invite;
@@ -421,7 +421,7 @@ public final class WidgetAuthLandingViewModel extends AppViewModel<ViewState> {
                 return invite.copy(modelInvite, str);
             }
 
-            /* renamed from: component1, reason: from getter */
+            /* JADX INFO: renamed from: component1, reason: from getter */
             public final ModelInvite getInvite() {
                 return this.invite;
             }

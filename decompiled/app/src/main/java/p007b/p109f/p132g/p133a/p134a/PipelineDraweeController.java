@@ -46,51 +46,51 @@ import p007b.p109f.p161j.p175j.ImmutableQualityInfo;
 import p007b.p109f.p161j.p176k.RequestListener;
 import p007b.p109f.p161j.p183r.FrescoSystrace;
 
-/* compiled from: PipelineDraweeController.java */
-/* renamed from: b.f.g.a.a.c, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.f.g.a.a.c, reason: use source file name */
+/* JADX INFO: compiled from: PipelineDraweeController.java */
+/* JADX INFO: loaded from: classes.dex */
 public class PipelineDraweeController extends AbstractDraweeController<CloseableReference<CloseableImage>, ImageInfo> {
 
-    /* renamed from: A */
+    /* JADX INFO: renamed from: A */
     public CacheKey f3170A;
 
-    /* renamed from: B */
+    /* JADX INFO: renamed from: B */
     public Supplier<DataSource<CloseableReference<CloseableImage>>> f3171B;
 
-    /* renamed from: C */
+    /* JADX INFO: renamed from: C */
     public boolean f3172C;
 
-    /* renamed from: D */
+    /* JADX INFO: renamed from: D */
     public ImmutableList<DrawableFactory> f3173D;
 
-    /* renamed from: E */
+    /* JADX INFO: renamed from: E */
     public ImagePerfMonitor f3174E;
 
-    /* renamed from: F */
+    /* JADX INFO: renamed from: F */
     public Set<RequestListener> f3175F;
 
-    /* renamed from: G */
+    /* JADX INFO: renamed from: G */
     public ImageOriginListener f3176G;
 
-    /* renamed from: H */
+    /* JADX INFO: renamed from: H */
     public DebugOverlayImageOriginListener f3177H;
 
-    /* renamed from: I */
+    /* JADX INFO: renamed from: I */
     public ImageRequest f3178I;
 
-    /* renamed from: J */
+    /* JADX INFO: renamed from: J */
     public ImageRequest[] f3179J;
 
-    /* renamed from: K */
+    /* JADX INFO: renamed from: K */
     public ImageRequest f3180K;
 
-    /* renamed from: x */
+    /* JADX INFO: renamed from: x */
     public final DrawableFactory f3181x;
 
-    /* renamed from: y */
+    /* JADX INFO: renamed from: y */
     public final ImmutableList<DrawableFactory> f3182y;
 
-    /* renamed from: z */
+    /* JADX INFO: renamed from: z */
     public final MemoryCache<CacheKey, CloseableImage> f3183z;
 
     public PipelineDraweeController(Resources resources, DeferredReleaser deferredReleaser, DrawableFactory drawableFactory, Executor executor, MemoryCache<CacheKey, CloseableImage> memoryCache, ImmutableList<DrawableFactory> immutableList) {
@@ -100,7 +100,7 @@ public class PipelineDraweeController extends AbstractDraweeController<Closeable
         this.f3183z = memoryCache;
     }
 
-    /* renamed from: F */
+    /* JADX INFO: renamed from: F */
     public synchronized void m1038F(ImageOriginListener imageOriginListener) {
         ImageOriginListener imageOriginListener2 = this.f3176G;
         if (imageOriginListener2 instanceof ForwardingImageOriginListener) {
@@ -115,7 +115,7 @@ public class PipelineDraweeController extends AbstractDraweeController<Closeable
         }
     }
 
-    /* renamed from: G */
+    /* JADX INFO: renamed from: G */
     public synchronized void m1039G(RequestListener requestListener) {
         if (this.f3175F == null) {
             this.f3175F = new HashSet();
@@ -123,7 +123,7 @@ public class PipelineDraweeController extends AbstractDraweeController<Closeable
         this.f3175F.add(requestListener);
     }
 
-    /* renamed from: H */
+    /* JADX INFO: renamed from: H */
     public void m1040H(Supplier<DataSource<CloseableReference<CloseableImage>>> supplier, String str, CacheKey cacheKey, Object obj, ImmutableList<DrawableFactory> immutableList, ImageOriginListener imageOriginListener) {
         FrescoSystrace.m1527b();
         m8658n(str, obj);
@@ -140,7 +140,7 @@ public class PipelineDraweeController extends AbstractDraweeController<Closeable
         FrescoSystrace.m1527b();
     }
 
-    /* renamed from: I */
+    /* JADX INFO: renamed from: I */
     public synchronized void m1041I(ImagePerfDataListener imagePerfDataListener, AbstractDraweeControllerBuilder<PipelineDraweeControllerBuilder, ImageRequest, CloseableReference<CloseableImage>, ImageInfo> abstractDraweeControllerBuilder, Supplier<Boolean> supplier) {
         ImagePerfMonitor imagePerfMonitor = this.f3174E;
         if (imagePerfMonitor != null) {
@@ -174,7 +174,7 @@ public class PipelineDraweeController extends AbstractDraweeController<Closeable
         this.f3180K = null;
     }
 
-    /* renamed from: J */
+    /* JADX INFO: renamed from: J */
     public final Drawable m1042J(ImmutableList<DrawableFactory> immutableList, CloseableImage closeableImage) {
         Drawable drawableMo1036b;
         if (immutableList == null) {
@@ -188,7 +188,7 @@ public class PipelineDraweeController extends AbstractDraweeController<Closeable
         return null;
     }
 
-    /* renamed from: K */
+    /* JADX INFO: renamed from: K */
     public final void m1043K(CloseableImage closeableImage) {
         String str;
         ScaleTypeDrawable scaleTypeDrawableM556p0;
@@ -264,7 +264,7 @@ public class PipelineDraweeController extends AbstractDraweeController<Closeable
         }
     }
 
-    /* renamed from: L */
+    /* JADX INFO: renamed from: L */
     public synchronized void m1044L(RequestListener requestListener) {
         Set<RequestListener> set = this.f3175F;
         if (set == null) {
@@ -274,14 +274,14 @@ public class PipelineDraweeController extends AbstractDraweeController<Closeable
     }
 
     @Override // com.facebook.drawee.controller.AbstractDraweeController, com.facebook.drawee.interfaces.DraweeController
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public void mo1045e(DraweeHierarchy draweeHierarchy) {
         super.mo1045e(draweeHierarchy);
         m1043K(null);
     }
 
     @Override // com.facebook.drawee.controller.AbstractDraweeController
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public Drawable mo1046g(CloseableReference<CloseableImage> closeableReference) {
         CloseableReference<CloseableImage> closeableReference2 = closeableReference;
         try {
@@ -300,7 +300,7 @@ public class PipelineDraweeController extends AbstractDraweeController<Closeable
     }
 
     @Override // com.facebook.drawee.controller.AbstractDraweeController
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public CloseableReference<CloseableImage> mo1047h() {
         CacheKey cacheKey;
         FrescoSystrace.m1527b();
@@ -320,7 +320,7 @@ public class PipelineDraweeController extends AbstractDraweeController<Closeable
     }
 
     @Override // com.facebook.drawee.controller.AbstractDraweeController
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public DataSource<CloseableReference<CloseableImage>> mo1048j() {
         FrescoSystrace.m1527b();
         if (FLog.m980h(2)) {
@@ -332,7 +332,7 @@ public class PipelineDraweeController extends AbstractDraweeController<Closeable
     }
 
     @Override // com.facebook.drawee.controller.AbstractDraweeController
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public int mo1049k(CloseableReference<CloseableImage> closeableReference) {
         CloseableReference<CloseableImage> closeableReference2 = closeableReference;
         if (closeableReference2 == null || !closeableReference2.m8643x()) {
@@ -342,7 +342,7 @@ public class PipelineDraweeController extends AbstractDraweeController<Closeable
     }
 
     @Override // com.facebook.drawee.controller.AbstractDraweeController
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public ImageInfo mo1050l(CloseableReference<CloseableImage> closeableReference) {
         CloseableReference<CloseableImage> closeableReference2 = closeableReference;
         AnimatableValueParser.m419B(CloseableReference.m8640y(closeableReference2));
@@ -354,7 +354,7 @@ public class PipelineDraweeController extends AbstractDraweeController<Closeable
         if (r0 != null) goto L6;
      */
     @Override // com.facebook.drawee.controller.AbstractDraweeController
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
@@ -377,7 +377,7 @@ public class PipelineDraweeController extends AbstractDraweeController<Closeable
     }
 
     @Override // com.facebook.drawee.controller.AbstractDraweeController
-    /* renamed from: t */
+    /* JADX INFO: renamed from: t */
     public Map mo1052t(ImageInfo imageInfo) {
         ImageInfo imageInfo2 = imageInfo;
         if (imageInfo2 == null) {
@@ -395,7 +395,7 @@ public class PipelineDraweeController extends AbstractDraweeController<Closeable
     }
 
     @Override // com.facebook.drawee.controller.AbstractDraweeController
-    /* renamed from: v */
+    /* JADX INFO: renamed from: v */
     public void mo1053v(String str, CloseableReference<CloseableImage> closeableReference) {
         synchronized (this) {
             ImageOriginListener imageOriginListener = this.f3176G;
@@ -407,7 +407,7 @@ public class PipelineDraweeController extends AbstractDraweeController<Closeable
 
     /* JADX WARN: Multi-variable type inference failed */
     @Override // com.facebook.drawee.controller.AbstractDraweeController
-    /* renamed from: x */
+    /* JADX INFO: renamed from: x */
     public void mo1054x(Drawable drawable) {
         if (drawable instanceof DrawableWithCaches) {
             ((DrawableWithCaches) drawable).mo1034a();
@@ -415,7 +415,7 @@ public class PipelineDraweeController extends AbstractDraweeController<Closeable
     }
 
     @Override // com.facebook.drawee.controller.AbstractDraweeController
-    /* renamed from: z */
+    /* JADX INFO: renamed from: z */
     public void mo1055z(CloseableReference<CloseableImage> closeableReference) {
         CloseableReference<CloseableImage> closeableReference2 = closeableReference;
         Class<CloseableReference> cls = CloseableReference.f19438j;

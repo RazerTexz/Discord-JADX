@@ -7,9 +7,9 @@ import com.discord.widgets.servers.member_verification.MemberVerificationRulesAd
 import java.util.List;
 import kotlin.jvm.functions.Function1;
 
-/* compiled from: MemberVerificationRulesAdapter.kt */
-/* renamed from: com.discord.widgets.servers.member_verification.MemberVerificationRulesAdapter$MultipleChoiceItemHolder$createMultipleChoiceButtons$$inlined$forEach$lambda$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.servers.member_verification.MemberVerificationRulesAdapter$MultipleChoiceItemHolder$createMultipleChoiceButtons$$inlined$forEach$lambda$1, reason: use source file name */
+/* JADX INFO: compiled from: MemberVerificationRulesAdapter.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class MemberVerificationRulesAdapter3 implements CompoundButton.OnCheckedChangeListener {
     public final /* synthetic */ Context $context$inlined;
     public final /* synthetic */ Function1 $onItemSelected$inlined;

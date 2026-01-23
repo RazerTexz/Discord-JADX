@@ -16,22 +16,22 @@ import p007b.p225i.p226a.p242c.p259f3.TimestampAdjuster;
 import p007b.p225i.p226a.p242c.p279z2.MetadataInputBuffer;
 import p007b.p225i.p226a.p242c.p279z2.SimpleMetadataDecoder;
 
-/* compiled from: SpliceInfoDecoder.java */
-/* renamed from: b.i.a.c.z2.l.a, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.z2.l.a, reason: use source file name */
+/* JADX INFO: compiled from: SpliceInfoDecoder.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class SpliceInfoDecoder extends SimpleMetadataDecoder {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final ParsableByteArray f9159a = new ParsableByteArray();
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final ParsableBitArray f9160b = new ParsableBitArray();
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public TimestampAdjuster f9161c;
 
     @Override // p007b.p225i.p226a.p242c.p279z2.SimpleMetadataDecoder
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public Metadata mo3899b(MetadataInputBuffer metadataInputBuffer, ByteBuffer byteBuffer) {
         int i;
         long j;
@@ -69,7 +69,7 @@ public final class SpliceInfoDecoder extends SimpleMetadataDecoder {
         this.f9159a.m3077C(bArrArray, iLimit);
         this.f9160b.m3070j(bArrArray, iLimit);
         this.f9160b.m3073m(39);
-        long jM3067g = (this.f9160b.m3067g(1) << 32) | this.f9160b.m3067g(32);
+        long jM3067g = (((long) this.f9160b.m3067g(1)) << 32) | ((long) this.f9160b.m3067g(32));
         this.f9160b.m3073m(20);
         int iM3067g = this.f9160b.m3067g(12);
         int iM3067g2 = this.f9160b.m3067g(8);

@@ -11,7 +11,7 @@ import java.lang.reflect.Method;
 import java.text.DecimalFormat;
 import p007b.p100d.p104b.p105a.outline;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public abstract class TimeCycleSplineSet {
     private static final int CURVE_OFFSET = 2;
     private static final int CURVE_PERIOD = 1;
@@ -68,7 +68,7 @@ public abstract class TimeCycleSplineSet {
                     this.last_cycle = 0.0f;
                 }
             }
-            float f4 = (float) ((((j2 * 1.0E-9d) * f2) + this.last_cycle) % 1.0d);
+            float f4 = (float) ((((j2 * 1.0E-9d) * ((double) f2)) + ((double) this.last_cycle)) % 1.0d);
             this.last_cycle = f4;
             this.last_time = j;
             float fCalcWave = calcWave(f4);
@@ -105,7 +105,7 @@ public abstract class TimeCycleSplineSet {
                 int iKeyAt = this.mConstraintAttributeList.keyAt(i3);
                 ConstraintAttribute constraintAttributeValueAt = this.mConstraintAttributeList.valueAt(i3);
                 float[] fArrValueAt = this.mWaveProperties.valueAt(i3);
-                dArr[i3] = iKeyAt * 0.01d;
+                dArr[i3] = ((double) iKeyAt) * 0.01d;
                 constraintAttributeValueAt.getValuesToInterpolate(this.mTempValues);
                 int i4 = 0;
                 while (true) {
@@ -151,7 +151,7 @@ public abstract class TimeCycleSplineSet {
         public boolean mNoMethod = false;
 
         @Override // androidx.constraintlayout.motion.widget.TimeCycleSplineSet
-        public boolean setProperty(View view, float f, long j, KeyCache keyCache) throws SecurityException, IllegalArgumentException {
+        public boolean setProperty(View view, float f, long j, KeyCache keyCache) {
             if (view instanceof MotionLayout) {
                 ((MotionLayout) view).setProgress(get(f, j, view, keyCache));
             } else {
@@ -386,7 +386,7 @@ public abstract class TimeCycleSplineSet {
                 this.last_cycle = 0.0f;
             }
         }
-        float f3 = (float) (((((j - this.last_time) * 1.0E-9d) * f2) + this.last_cycle) % 1.0d);
+        float f3 = (float) (((((j - this.last_time) * 1.0E-9d) * ((double) f2)) + ((double) this.last_cycle)) % 1.0d);
         this.last_cycle = f3;
         keyCache.setFloatValue(view, this.mType, 0, f3);
         this.last_time = j;
@@ -457,7 +457,7 @@ public abstract class TimeCycleSplineSet {
             if (i6 > 0) {
                 int[] iArr2 = this.mTimePoints;
                 if (iArr2[i6] != iArr2[i6 - 1]) {
-                    dArr[i5] = this.mTimePoints[i6] * 0.01d;
+                    dArr[i5] = ((double) this.mTimePoints[i6]) * 0.01d;
                     double[] dArr3 = dArr2[i5];
                     float[][] fArr = this.mValues;
                     dArr3[0] = fArr[i6][0];

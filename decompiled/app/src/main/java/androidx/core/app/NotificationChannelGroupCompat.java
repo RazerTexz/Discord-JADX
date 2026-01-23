@@ -11,7 +11,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class NotificationChannelGroupCompat {
     private boolean mBlocked;
     private List<NotificationChannelCompat> mChannels;

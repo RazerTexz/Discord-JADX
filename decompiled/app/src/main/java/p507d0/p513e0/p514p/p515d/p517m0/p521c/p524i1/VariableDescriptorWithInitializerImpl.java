@@ -9,15 +9,15 @@ import p507d0.p513e0.p514p.p515d.p517m0.p552k.p557v.AbstractC11815g;
 import p507d0.p513e0.p514p.p515d.p517m0.p566m.storage6;
 import p507d0.p513e0.p514p.p515d.p517m0.p567n.KotlinType;
 
-/* compiled from: VariableDescriptorWithInitializerImpl.java */
-/* renamed from: d0.e0.p.d.m0.c.i1.n0, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.c.i1.n0, reason: use source file name */
+/* JADX INFO: compiled from: VariableDescriptorWithInitializerImpl.java */
+/* JADX INFO: loaded from: classes3.dex */
 public abstract class VariableDescriptorWithInitializerImpl extends VariableDescriptorImpl {
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public final boolean f22907o;
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public storage6<AbstractC11815g<?>> f22908p;
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -42,7 +42,7 @@ public abstract class VariableDescriptorWithInitializerImpl extends VariableDesc
         this.f22907o = z2;
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static /* synthetic */ void m9418a(int i) {
         Object[] objArr = new Object[3];
         if (i == 1) {

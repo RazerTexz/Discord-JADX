@@ -6,8 +6,8 @@ import com.discord.widgets.directories.DirectoryEntryData;
 import java.util.Comparator;
 import p507d0.p582u.C12169a;
 
-/* compiled from: Comparisons.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: Comparisons.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class DirectoryUtilsKt$rank$$inlined$sortedBy$1<T> implements Comparator {
     public final /* synthetic */ Integer $idealSize$inlined;
 

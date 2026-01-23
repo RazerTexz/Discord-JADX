@@ -2,7 +2,6 @@ package com.discord.widgets.channels;
 
 import android.animation.ObjectAnimator;
 import android.content.Context;
-import android.content.res.Resources;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
@@ -66,19 +65,19 @@ import p507d0.p592z.p594d.Lambda;
 import p507d0.p592z.p594d.Reflection2;
 import p658rx.Observable;
 
-/* compiled from: WidgetChannelTopic.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetChannelTopic.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetChannelTopic extends AppFragment {
     public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetChannelTopic.class, "binding", "getBinding()Lcom/discord/databinding/WidgetChannelTopicBinding;", 0)};
 
-    /* renamed from: binding$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
     private boolean isDm;
 
-    /* renamed from: viewModel$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: viewModel$delegate, reason: from kotlin metadata */
     private final Lazy viewModel;
 
-    /* compiled from: WidgetChannelTopic.kt */
+    /* JADX INFO: compiled from: WidgetChannelTopic.kt */
     public static final /* data */ class RenderedTopic {
         public static final int MAX_LINES = 40;
         public static final int MIN_LINES = 2;
@@ -109,17 +108,17 @@ public final class WidgetChannelTopic extends AppFragment {
             return renderedTopic.copy(charSequence, charSequence2, i);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final CharSequence getChannelName() {
             return this.channelName;
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final CharSequence getTopic() {
             return this.topic;
         }
 
-        /* renamed from: component3, reason: from getter */
+        /* JADX INFO: renamed from: component3, reason: from getter */
         public final int getAutoLinkMask() {
             return this.autoLinkMask;
         }
@@ -172,8 +171,8 @@ public final class WidgetChannelTopic extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetChannelTopic.kt */
-    /* renamed from: com.discord.widgets.channels.WidgetChannelTopic$configureEllipsis$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.channels.WidgetChannelTopic$configureEllipsis$1 */
+    /* JADX INFO: compiled from: WidgetChannelTopic.kt */
     public static final class ViewOnClickListenerC73501 implements View.OnClickListener {
         public ViewOnClickListenerC73501() {
         }
@@ -184,8 +183,8 @@ public final class WidgetChannelTopic extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetChannelTopic.kt */
-    /* renamed from: com.discord.widgets.channels.WidgetChannelTopic$configureUI$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.channels.WidgetChannelTopic$configureUI$1 */
+    /* JADX INFO: compiled from: WidgetChannelTopic.kt */
     public static final class ViewOnClickListenerC73511 implements View.OnClickListener {
         public final /* synthetic */ WidgetChannelTopicViewModel.ViewState $viewState;
 
@@ -202,8 +201,8 @@ public final class WidgetChannelTopic extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetChannelTopic.kt */
-    /* renamed from: com.discord.widgets.channels.WidgetChannelTopic$configureUI$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.channels.WidgetChannelTopic$configureUI$2 */
+    /* JADX INFO: compiled from: WidgetChannelTopic.kt */
     public static final class ViewOnClickListenerC73522 implements View.OnClickListener {
         public final /* synthetic */ WidgetChannelTopicViewModel.ViewState $viewState;
 
@@ -217,8 +216,8 @@ public final class WidgetChannelTopic extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetChannelTopic.kt */
-    /* renamed from: com.discord.widgets.channels.WidgetChannelTopic$onToggleTopicExpansionState$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.channels.WidgetChannelTopic$onToggleTopicExpansionState$1 */
+    /* JADX INFO: compiled from: WidgetChannelTopic.kt */
     public static final class C73531 extends Lambda implements Function1<Integer, Unit> {
         public C73531() {
             super(1);
@@ -239,8 +238,8 @@ public final class WidgetChannelTopic extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetChannelTopic.kt */
-    /* renamed from: com.discord.widgets.channels.WidgetChannelTopic$onViewBound$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.channels.WidgetChannelTopic$onViewBound$1 */
+    /* JADX INFO: compiled from: WidgetChannelTopic.kt */
     public static final class ViewOnClickListenerC73551 implements View.OnClickListener {
         public ViewOnClickListenerC73551() {
         }
@@ -251,8 +250,8 @@ public final class WidgetChannelTopic extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetChannelTopic.kt */
-    /* renamed from: com.discord.widgets.channels.WidgetChannelTopic$onViewBoundOrOnResume$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.channels.WidgetChannelTopic$onViewBoundOrOnResume$1 */
+    /* JADX INFO: compiled from: WidgetChannelTopic.kt */
     public static final class C73561 extends Lambda implements Function1<WidgetChannelTopicViewModel.Event, Unit> {
         public C73561() {
             super(1);
@@ -264,36 +263,36 @@ public final class WidgetChannelTopic extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(WidgetChannelTopicViewModel.Event event) {
             Intrinsics3.checkNotNullParameter(event, "event");
             WidgetChannelTopic.access$handleEvent(WidgetChannelTopic.this, event);
         }
     }
 
-    /* compiled from: WidgetChannelTopic.kt */
-    /* renamed from: com.discord.widgets.channels.WidgetChannelTopic$onViewBoundOrOnResume$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.channels.WidgetChannelTopic$onViewBoundOrOnResume$2 */
+    /* JADX INFO: compiled from: WidgetChannelTopic.kt */
     public static final class C73572 extends Lambda implements Function1<WidgetChannelTopicViewModel.ViewState, Unit> {
         public C73572() {
             super(1);
         }
 
         @Override // kotlin.jvm.functions.Function1
-        public /* bridge */ /* synthetic */ Unit invoke(WidgetChannelTopicViewModel.ViewState viewState) throws Resources.NotFoundException {
+        public /* bridge */ /* synthetic */ Unit invoke(WidgetChannelTopicViewModel.ViewState viewState) {
             invoke2(viewState);
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
-        public final void invoke2(WidgetChannelTopicViewModel.ViewState viewState) throws Resources.NotFoundException {
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
+        public final void invoke2(WidgetChannelTopicViewModel.ViewState viewState) {
             WidgetChannelTopic widgetChannelTopic = WidgetChannelTopic.this;
             Intrinsics3.checkNotNullExpressionValue(viewState, "viewState");
             WidgetChannelTopic.access$configureUI(widgetChannelTopic, viewState);
         }
     }
 
-    /* compiled from: WidgetChannelTopic.kt */
-    /* renamed from: com.discord.widgets.channels.WidgetChannelTopic$showContextMenu$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.channels.WidgetChannelTopic$showContextMenu$1 */
+    /* JADX INFO: compiled from: WidgetChannelTopic.kt */
     public static final class MenuItemOnMenuItemClickListenerC73581 implements MenuItem.OnMenuItemClickListener {
         public final /* synthetic */ long $channelId;
 
@@ -308,8 +307,8 @@ public final class WidgetChannelTopic extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetChannelTopic.kt */
-    /* renamed from: com.discord.widgets.channels.WidgetChannelTopic$showContextMenu$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.channels.WidgetChannelTopic$showContextMenu$2 */
+    /* JADX INFO: compiled from: WidgetChannelTopic.kt */
     public static final class MenuItemOnMenuItemClickListenerC73592 implements MenuItem.OnMenuItemClickListener {
         public final /* synthetic */ long $channelId;
 
@@ -324,8 +323,8 @@ public final class WidgetChannelTopic extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetChannelTopic.kt */
-    /* renamed from: com.discord.widgets.channels.WidgetChannelTopic$showContextMenu$3 */
+    /* JADX INFO: renamed from: com.discord.widgets.channels.WidgetChannelTopic$showContextMenu$3 */
+    /* JADX INFO: compiled from: WidgetChannelTopic.kt */
     public static final class MenuItemOnMenuItemClickListenerC73603 implements MenuItem.OnMenuItemClickListener {
         public final /* synthetic */ long $channelId;
 
@@ -340,13 +339,13 @@ public final class WidgetChannelTopic extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetChannelTopic.kt */
-    /* renamed from: com.discord.widgets.channels.WidgetChannelTopic$showContextMenu$4 */
+    /* JADX INFO: renamed from: com.discord.widgets.channels.WidgetChannelTopic$showContextMenu$4 */
+    /* JADX INFO: compiled from: WidgetChannelTopic.kt */
     public static final class MenuItemOnMenuItemClickListenerC73614 implements MenuItem.OnMenuItemClickListener {
         public final /* synthetic */ CharSequence $channelTitle;
 
-        /* compiled from: WidgetChannelTopic.kt */
-        /* renamed from: com.discord.widgets.channels.WidgetChannelTopic$showContextMenu$4$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.widgets.channels.WidgetChannelTopic$showContextMenu$4$1, reason: invalid class name */
+        /* JADX INFO: compiled from: WidgetChannelTopic.kt */
         public static final class AnonymousClass1 extends Lambda implements Function1<View, Unit> {
             public AnonymousClass1() {
                 super(1);
@@ -358,7 +357,7 @@ public final class WidgetChannelTopic extends AppFragment {
                 return Unit.f27425a;
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2(View view) {
                 Intrinsics3.checkNotNullParameter(view, "v");
                 WidgetChannelTopicViewModel widgetChannelTopicViewModelAccess$getViewModel$p = WidgetChannelTopic.access$getViewModel$p(WidgetChannelTopic.this);
@@ -382,8 +381,8 @@ public final class WidgetChannelTopic extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetChannelTopic.kt */
-    /* renamed from: com.discord.widgets.channels.WidgetChannelTopic$showContextMenu$5 */
+    /* JADX INFO: renamed from: com.discord.widgets.channels.WidgetChannelTopic$showContextMenu$5 */
+    /* JADX INFO: compiled from: WidgetChannelTopic.kt */
     public static final class MenuItemOnMenuItemClickListenerC73625 implements MenuItem.OnMenuItemClickListener {
         public MenuItemOnMenuItemClickListenerC73625() {
         }
@@ -407,7 +406,7 @@ public final class WidgetChannelTopic extends AppFragment {
         widgetChannelTopic.configureEllipsis();
     }
 
-    public static final /* synthetic */ void access$configureUI(WidgetChannelTopic widgetChannelTopic, WidgetChannelTopicViewModel.ViewState viewState) throws Resources.NotFoundException {
+    public static final /* synthetic */ void access$configureUI(WidgetChannelTopic widgetChannelTopic, WidgetChannelTopicViewModel.ViewState viewState) {
         widgetChannelTopic.configureUI(viewState);
     }
 
@@ -492,7 +491,7 @@ public final class WidgetChannelTopic extends AppFragment {
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
-    private final void configureUI(WidgetChannelTopicViewModel.ViewState viewState) throws Resources.NotFoundException {
+    private final void configureUI(WidgetChannelTopicViewModel.ViewState viewState) {
         RenderedTopic renderedTopicForGDM;
         boolean z2;
         if (viewState instanceof WidgetChannelTopicViewModel.ViewState.NoChannel) {

@@ -6,9 +6,9 @@ import p507d0.p584w.p585h.Intrinsics2;
 import p659s.p660a.p664d2.FlowCollector;
 
 /* JADX INFO: Add missing generic type declarations: [T] */
-/* compiled from: Collect.kt */
-/* renamed from: androidx.lifecycle.FlowLiveDataConversions$asLiveData$1$invokeSuspend$$inlined$collect$1, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: androidx.lifecycle.FlowLiveDataConversions$asLiveData$1$invokeSuspend$$inlined$collect$1, reason: use source file name */
+/* JADX INFO: compiled from: Collect.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class Collect<T> implements FlowCollector<T> {
     public final /* synthetic */ CoroutineLiveData7 $this_liveData$inlined;
 

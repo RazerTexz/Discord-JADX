@@ -1,6 +1,6 @@
 package org.webrtc;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public interface RefCounted {
     @CalledByNative
     void release();

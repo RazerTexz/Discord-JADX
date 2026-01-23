@@ -4,12 +4,12 @@ import android.view.View;
 import com.yalantis.ucrop.UCropActivity;
 import com.yalantis.ucrop.view.GestureCropImageView;
 
-/* compiled from: UCropActivity.java */
-/* renamed from: b.q.a.d, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.q.a.d, reason: use source file name */
+/* JADX INFO: compiled from: UCropActivity.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class UCropActivity4 implements View.OnClickListener {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final /* synthetic */ UCropActivity f14391j;
 
     public UCropActivity4(UCropActivity uCropActivity) {

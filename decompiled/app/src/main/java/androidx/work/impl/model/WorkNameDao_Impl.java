@@ -9,12 +9,12 @@ import androidx.sqlite.p006db.SupportSQLiteStatement;
 import java.util.ArrayList;
 import java.util.List;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public final class WorkNameDao_Impl implements WorkNameDao {
     private final RoomDatabase __db;
     private final EntityInsertionAdapter<WorkName> __insertionAdapterOfWorkName;
 
-    /* renamed from: androidx.work.impl.model.WorkNameDao_Impl$1 */
+    /* JADX INFO: renamed from: androidx.work.impl.model.WorkNameDao_Impl$1 */
     public class C07521 extends EntityInsertionAdapter<WorkName> {
         public C07521(RoomDatabase roomDatabase) {
             super(roomDatabase);
@@ -30,7 +30,7 @@ public final class WorkNameDao_Impl implements WorkNameDao {
             return "INSERT OR IGNORE INTO `WorkName` (`name`,`work_spec_id`) VALUES (?,?)";
         }
 
-        /* renamed from: bind, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: bind, reason: avoid collision after fix types in other method */
         public void bind2(SupportSQLiteStatement supportSQLiteStatement, WorkName workName) {
             String str = workName.name;
             if (str == null) {

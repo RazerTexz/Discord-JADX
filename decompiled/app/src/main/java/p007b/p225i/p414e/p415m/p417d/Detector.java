@@ -14,40 +14,40 @@ import p007b.p225i.p414e.p418n.p419k.WhiteRectangleDetector;
 import p007b.p225i.p414e.p418n.p420l.GenericGF;
 import p007b.p225i.p414e.p418n.p420l.ReedSolomonDecoder;
 
-/* compiled from: Detector.java */
-/* renamed from: b.i.e.m.d.a, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.e.m.d.a, reason: use source file name */
+/* JADX INFO: compiled from: Detector.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class Detector {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final int[] f13218a = {3808, 476, 2107, 1799};
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final BitMatrix f13219b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public boolean f13220c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public int f13221d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public int f13222e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public int f13223f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public int f13224g;
 
-    /* compiled from: Detector.java */
-    /* renamed from: b.i.e.m.d.a$a */
+    /* JADX INFO: renamed from: b.i.e.m.d.a$a */
+    /* JADX INFO: compiled from: Detector.java */
     public static final class a {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final int f13225a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final int f13226b;
 
         public a(int i, int i2) {
@@ -67,7 +67,7 @@ public final class Detector {
         this.f13219b = bitMatrix;
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static ResultPoint[] m6927b(ResultPoint[] resultPointArr, int i, int i2) {
         float f = i2 / (i * 2.0f);
         float f2 = resultPointArr[0].f13207a - resultPointArr[2].f13207a;
@@ -87,7 +87,7 @@ public final class Detector {
         return new ResultPoint[]{resultPoint, new ResultPoint(f10 + f12, f11 + f13), resultPoint2, new ResultPoint(f10 - f12, f11 - f13)};
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public AztecDetectorResult m6928a(boolean z2) throws NotFoundException {
         ResultPoint resultPoint;
         ResultPoint resultPoint2;
@@ -358,7 +358,7 @@ public final class Detector {
                         j = j2 << 10;
                         i2 = ((i57 >> 1) & 31) + ((i57 >> 2) & 992);
                     }
-                    j2 = j + i2;
+                    j2 = j + ((long) i2);
                 }
                 int i58 = 7;
                 if (this.f13220c) {
@@ -411,7 +411,7 @@ public final class Detector {
         throw NotFoundException.f21665l;
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final int m6929c(a aVar, a aVar2) {
         float fM4240R = C3404f.m4240R(aVar.f13225a, aVar.f13226b, aVar2.f13225a, aVar2.f13226b);
         int i = aVar2.f13225a;
@@ -439,7 +439,7 @@ public final class Detector {
         return 0;
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final int m6930d() {
         if (this.f13220c) {
             return (this.f13221d * 4) + 11;
@@ -451,7 +451,7 @@ public final class Detector {
         return ((((i - 4) / 8) + 1) * 2) + (i * 4) + 15;
     }
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final a m6931e(a aVar, boolean z2, int i, int i2) {
         int i3 = aVar.f13225a + i;
         int i4 = aVar.f13226b;
@@ -474,7 +474,7 @@ public final class Detector {
         return new a(i7, i6 - i2);
     }
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final boolean m6932f(int i, int i2) {
         if (i < 0) {
             return false;
@@ -483,12 +483,12 @@ public final class Detector {
         return i < bitMatrix.f13229j && i2 > 0 && i2 < bitMatrix.f13230k;
     }
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public final boolean m6933g(ResultPoint resultPoint) {
         return m6932f(C3404f.m4265Z0(resultPoint.f13207a), C3404f.m4265Z0(resultPoint.f13208b));
     }
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public final int m6934h(ResultPoint resultPoint, ResultPoint resultPoint2, int i) {
         float fM4237Q = C3404f.m4237Q(resultPoint.f13207a, resultPoint.f13208b, resultPoint2.f13207a, resultPoint2.f13208b);
         float f = fM4237Q / i;

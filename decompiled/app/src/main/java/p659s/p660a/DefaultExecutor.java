@@ -7,17 +7,17 @@ import kotlin.coroutines.CoroutineContext;
 import p507d0.p512d0._Ranges;
 import p659s.p660a.AbstractC13145r0;
 
-/* compiled from: DefaultExecutor.kt */
-/* renamed from: s.a.d0, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: s.a.d0, reason: use source file name */
+/* JADX INFO: compiled from: DefaultExecutor.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class DefaultExecutor extends AbstractC13145r0 implements Runnable {
     public static volatile Thread _thread;
     public static volatile int debugStatus;
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public static final long f27778p;
 
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     public static final DefaultExecutor f27779q;
 
     static {
@@ -35,7 +35,7 @@ public final class DefaultExecutor extends AbstractC13145r0 implements Runnable 
     }
 
     @Override // p659s.p660a.EventLoop2
-    /* renamed from: S */
+    /* JADX INFO: renamed from: S */
     public Thread mo11243S() {
         Thread thread = _thread;
         if (thread == null) {
@@ -52,7 +52,7 @@ public final class DefaultExecutor extends AbstractC13145r0 implements Runnable 
         return thread;
     }
 
-    /* renamed from: X */
+    /* JADX INFO: renamed from: X */
     public final synchronized void m11244X() {
         if (m11245b0()) {
             debugStatus = 3;
@@ -62,7 +62,7 @@ public final class DefaultExecutor extends AbstractC13145r0 implements Runnable 
         }
     }
 
-    /* renamed from: b0 */
+    /* JADX INFO: renamed from: b0 */
     public final boolean m11245b0() {
         int i = debugStatus;
         return i == 2 || i == 3;
@@ -137,7 +137,7 @@ public final class DefaultExecutor extends AbstractC13145r0 implements Runnable 
     }
 
     @Override // p659s.p660a.AbstractC13145r0, p659s.p660a.Delay
-    /* renamed from: x */
+    /* JADX INFO: renamed from: x */
     public Job2 mo11196x(long j, Runnable runnable, CoroutineContext coroutineContext) {
         long jM11348a = C13151t0.m11348a(j);
         if (jM11348a >= 4611686018427387903L) {

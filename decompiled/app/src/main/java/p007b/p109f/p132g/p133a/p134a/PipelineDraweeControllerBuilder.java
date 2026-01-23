@@ -28,18 +28,18 @@ import p007b.p109f.p161j.p176k.ForwardingRequestListener;
 import p007b.p109f.p161j.p176k.RequestListener;
 import p007b.p109f.p161j.p183r.FrescoSystrace;
 
-/* compiled from: PipelineDraweeControllerBuilder.java */
-/* renamed from: b.f.g.a.a.d, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.f.g.a.a.d, reason: use source file name */
+/* JADX INFO: compiled from: PipelineDraweeControllerBuilder.java */
+/* JADX INFO: loaded from: classes.dex */
 public class PipelineDraweeControllerBuilder extends AbstractDraweeControllerBuilder<PipelineDraweeControllerBuilder, ImageRequest, CloseableReference<CloseableImage>, ImageInfo> {
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public final ImagePipeline2 f3184o;
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public final PipelineDraweeControllerFactory f3185p;
 
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     public ImagePerfDataListener f3186q;
 
     public PipelineDraweeControllerBuilder(Context context, PipelineDraweeControllerFactory pipelineDraweeControllerFactory, ImagePipeline2 imagePipeline2, Set<ControllerListener> set, Set<ControllerListener2> set2) {
@@ -48,12 +48,11 @@ public class PipelineDraweeControllerBuilder extends AbstractDraweeControllerBui
         this.f3185p = pipelineDraweeControllerFactory;
     }
 
-    /* JADX WARN: Multi-variable type inference failed */
     @Override // com.facebook.drawee.controller.AbstractDraweeControllerBuilder
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public DataSource<CloseableReference<CloseableImage>> mo1056b(DraweeController draweeController, String str, ImageRequest imageRequest, Object obj, AbstractDraweeControllerBuilder.EnumC10643b enumC10643b) {
         ImageRequest.EnumC10667c enumC10667c;
-        ImageOriginRequestListener imageOriginRequestListener;
+        RequestListener requestListener;
         ImageRequest imageRequest2 = imageRequest;
         ImagePipeline2 imagePipeline2 = this.f3184o;
         int iOrdinal = enumC10643b.ordinal();
@@ -79,20 +78,20 @@ public class PipelineDraweeControllerBuilder extends AbstractDraweeControllerBui
                     if (imageOriginRequestListener != null) {
                         forwardingRequestListener.f3913a.add(imageOriginRequestListener);
                     }
-                    imageOriginRequestListener = forwardingRequestListener;
+                    requestListener = forwardingRequestListener;
                 } else {
-                    imageOriginRequestListener = imageOriginRequestListener;
+                    requestListener = imageOriginRequestListener;
                 }
             }
         } else {
-            imageOriginRequestListener = imageOriginRequestListener;
+            requestListener = imageOriginRequestListener;
         }
-        return imagePipeline2.m1262a(imageRequest2, obj, enumC10667c2, imageOriginRequestListener, str);
+        return imagePipeline2.m1262a(imageRequest2, obj, enumC10667c2, requestListener, str);
     }
 
     /* JADX WARN: Multi-variable type inference failed */
     @Override // com.facebook.drawee.controller.AbstractDraweeControllerBuilder
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public AbstractDraweeController mo1057d() {
         PipelineDraweeController pipelineDraweeController;
         CacheKey cacheKey;
@@ -134,7 +133,7 @@ public class PipelineDraweeControllerBuilder extends AbstractDraweeControllerBui
     }
 
     /* JADX WARN: Type inference failed for: r2v2, types: [REQUEST, com.facebook.imagepipeline.request.ImageRequest] */
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public PipelineDraweeControllerBuilder m1058f(Uri uri) {
         if (uri == null) {
             this.f19484h = null;
@@ -147,7 +146,7 @@ public class PipelineDraweeControllerBuilder extends AbstractDraweeControllerBui
     }
 
     /* JADX WARN: Multi-variable type inference failed */
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public PipelineDraweeControllerBuilder m1059g(String str) {
         Uri uri;
         if (str != null && !str.isEmpty()) {

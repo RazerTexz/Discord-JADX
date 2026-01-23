@@ -36,7 +36,7 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public final class CascadingMenuPopup extends MenuPopup implements MenuPresenter, View.OnKeyListener, PopupWindow.OnDismissListener {
     public static final int HORIZ_POSITION_LEFT = 0;
     public static final int HORIZ_POSITION_RIGHT = 1;
@@ -69,13 +69,13 @@ public final class CascadingMenuPopup extends MenuPopup implements MenuPresenter
     private boolean mForceShowIcon = false;
     private int mLastPosition = getInitialMenuPosition();
 
-    /* renamed from: androidx.appcompat.view.menu.CascadingMenuPopup$1 */
+    /* JADX INFO: renamed from: androidx.appcompat.view.menu.CascadingMenuPopup$1 */
     public class ViewTreeObserverOnGlobalLayoutListenerC00821 implements ViewTreeObserver.OnGlobalLayoutListener {
         public ViewTreeObserverOnGlobalLayoutListenerC00821() {
         }
 
         @Override // android.view.ViewTreeObserver.OnGlobalLayoutListener
-        public void onGlobalLayout() throws IllegalArgumentException {
+        public void onGlobalLayout() {
             if (!CascadingMenuPopup.this.isShowing() || CascadingMenuPopup.this.mShowingMenus.size() <= 0 || CascadingMenuPopup.this.mShowingMenus.get(0).window.isModal()) {
                 return;
             }
@@ -91,7 +91,7 @@ public final class CascadingMenuPopup extends MenuPopup implements MenuPresenter
         }
     }
 
-    /* renamed from: androidx.appcompat.view.menu.CascadingMenuPopup$2 */
+    /* JADX INFO: renamed from: androidx.appcompat.view.menu.CascadingMenuPopup$2 */
     public class ViewOnAttachStateChangeListenerC00832 implements View.OnAttachStateChangeListener {
         public ViewOnAttachStateChangeListenerC00832() {
         }
@@ -114,10 +114,10 @@ public final class CascadingMenuPopup extends MenuPopup implements MenuPresenter
         }
     }
 
-    /* renamed from: androidx.appcompat.view.menu.CascadingMenuPopup$3 */
+    /* JADX INFO: renamed from: androidx.appcompat.view.menu.CascadingMenuPopup$3 */
     public class C00843 implements MenuItemHoverListener {
 
-        /* renamed from: androidx.appcompat.view.menu.CascadingMenuPopup$3$1, reason: invalid class name */
+        /* JADX INFO: renamed from: androidx.appcompat.view.menu.CascadingMenuPopup$3$1, reason: invalid class name */
         public class AnonymousClass1 implements Runnable {
             public final /* synthetic */ MenuItem val$item;
             public final /* synthetic */ MenuBuilder val$menu;
@@ -292,7 +292,7 @@ public final class CascadingMenuPopup extends MenuPopup implements MenuPresenter
         return iArr[0] - i < 0 ? 1 : 0;
     }
 
-    private void showMenu(@NonNull MenuBuilder menuBuilder) throws IllegalArgumentException {
+    private void showMenu(@NonNull MenuBuilder menuBuilder) {
         CascadingMenuInfo cascadingMenuInfo;
         View viewFindParentViewForSubmenu;
         int i;
@@ -381,7 +381,7 @@ public final class CascadingMenuPopup extends MenuPopup implements MenuPresenter
     }
 
     @Override // androidx.appcompat.view.menu.MenuPopup
-    public void addMenu(MenuBuilder menuBuilder) throws IllegalArgumentException {
+    public void addMenu(MenuBuilder menuBuilder) {
         menuBuilder.addMenuPresenter(this, this.mContext);
         if (isShowing()) {
             showMenu(menuBuilder);
@@ -514,7 +514,7 @@ public final class CascadingMenuPopup extends MenuPopup implements MenuPresenter
     }
 
     @Override // androidx.appcompat.view.menu.MenuPresenter
-    public boolean onSubMenuSelected(SubMenuBuilder subMenuBuilder) throws IllegalArgumentException {
+    public boolean onSubMenuSelected(SubMenuBuilder subMenuBuilder) {
         for (CascadingMenuInfo cascadingMenuInfo : this.mShowingMenus) {
             if (subMenuBuilder == cascadingMenuInfo.menu) {
                 cascadingMenuInfo.getListView().requestFocus();
@@ -581,7 +581,7 @@ public final class CascadingMenuPopup extends MenuPopup implements MenuPresenter
     }
 
     @Override // androidx.appcompat.view.menu.ShowableListMenu
-    public void show() throws IllegalArgumentException {
+    public void show() {
         if (isShowing()) {
             return;
         }

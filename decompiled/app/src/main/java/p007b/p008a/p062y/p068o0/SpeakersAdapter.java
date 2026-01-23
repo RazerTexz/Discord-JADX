@@ -7,16 +7,16 @@ import com.discord.utilities.mg_recycler.MGRecyclerAdapterSimple;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: SpeakersAdapter.kt */
-/* renamed from: b.a.y.o0.c, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: b.a.y.o0.c, reason: use source file name */
+/* JADX INFO: compiled from: SpeakersAdapter.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class SpeakersAdapter extends MGRecyclerAdapterSimple<SpeakersItem> {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final GridLayoutManager.SpanSizeLookup f2054a;
 
-    /* compiled from: SpeakersAdapter.kt */
-    /* renamed from: b.a.y.o0.c$a */
+    /* JADX INFO: renamed from: b.a.y.o0.c$a */
+    /* JADX INFO: compiled from: SpeakersAdapter.kt */
     public static final class a extends GridLayoutManager.SpanSizeLookup {
         @Override // androidx.recyclerview.widget.GridLayoutManager.SpanSizeLookup
         public int getSpanSize(int i) {

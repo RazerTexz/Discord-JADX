@@ -5,9 +5,9 @@ import kotlin.jvm.functions.Function0;
 import org.objectweb.asm.Opcodes;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: StickerUtils.kt */
-/* renamed from: com.discord.utilities.stickers.StickerUtils$DEFAULT_STICKER_SIZE_PX$2, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.utilities.stickers.StickerUtils$DEFAULT_STICKER_SIZE_PX$2, reason: use source file name */
+/* JADX INFO: compiled from: StickerUtils.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class StickerUtils2 extends Lambda implements Function0<Integer> {
     public static final StickerUtils2 INSTANCE = new StickerUtils2();
 
@@ -20,7 +20,7 @@ public final class StickerUtils2 extends Lambda implements Function0<Integer> {
         return Integer.valueOf(invoke2());
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final int invoke2() {
         return DimenUtils.dpToPixels(Opcodes.IF_ICMPNE);
     }

@@ -3,28 +3,28 @@ package p507d0;
 import kotlin.jvm.internal.DefaultConstructorMarker;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: KotlinVersion.kt */
-/* renamed from: d0.e, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e, reason: use source file name */
+/* JADX INFO: compiled from: KotlinVersion.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class KotlinVersion implements Comparable<KotlinVersion> {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static final KotlinVersion f22290j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final int f22291k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final int f22292l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public final int f22293m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public final int f22294n;
 
-    /* compiled from: KotlinVersion.kt */
-    /* renamed from: d0.e$a */
+    /* JADX INFO: renamed from: d0.e$a */
+    /* JADX INFO: compiled from: KotlinVersion.kt */
     public static final class a {
         public a(DefaultConstructorMarker defaultConstructorMarker) {
         }
@@ -76,7 +76,7 @@ public final class KotlinVersion implements Comparable<KotlinVersion> {
         return sb.toString();
     }
 
-    /* renamed from: compareTo, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: compareTo, reason: avoid collision after fix types in other method */
     public int compareTo2(KotlinVersion kotlinVersion) {
         Intrinsics3.checkNotNullParameter(kotlinVersion, "other");
         return this.f22291k - kotlinVersion.f22291k;

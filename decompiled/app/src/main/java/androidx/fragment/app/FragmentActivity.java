@@ -37,7 +37,7 @@ import androidx.view.ViewModelStoreOwner;
 import java.io.FileDescriptor;
 import java.io.PrintWriter;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class FragmentActivity extends ComponentActivity implements ActivityCompat.OnRequestPermissionsResultCallback, ActivityCompat.RequestPermissionsRequestCodeValidator {
     public static final String FRAGMENTS_TAG = "android:support:fragments";
     public boolean mCreated;
@@ -46,7 +46,7 @@ public class FragmentActivity extends ComponentActivity implements ActivityCompa
     public boolean mResumed;
     public boolean mStopped;
 
-    /* renamed from: androidx.fragment.app.FragmentActivity$1 */
+    /* JADX INFO: renamed from: androidx.fragment.app.FragmentActivity$1 */
     public class C03711 implements SavedStateRegistry.SavedStateProvider {
         public C03711() {
         }
@@ -65,7 +65,7 @@ public class FragmentActivity extends ComponentActivity implements ActivityCompa
         }
     }
 
-    /* renamed from: androidx.fragment.app.FragmentActivity$2 */
+    /* JADX INFO: renamed from: androidx.fragment.app.FragmentActivity$2 */
     public class C03722 implements OnContextAvailableListener {
         public C03722() {
         }

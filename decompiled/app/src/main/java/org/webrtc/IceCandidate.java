@@ -4,7 +4,7 @@ import androidx.annotation.Nullable;
 import java.util.Arrays;
 import org.webrtc.PeerConnection;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public class IceCandidate {
     public final PeerConnection.AdapterType adapterType;
     public final String sdp;

@@ -23,18 +23,18 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 import p658rx.Observable;
 
-/* compiled from: StoreGuildVoiceRegions.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: StoreGuildVoiceRegions.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class StoreGuildVoiceRegions extends StoreV2 {
     private final Dispatcher dispatcher;
     private Map<Long, ? extends List<? extends ModelVoiceRegion>> guildVoiceRegionsSnapshot;
     private final HashMap<Long, State> guildVoiceRegionsState;
     private final ObservationDeck observationDeck;
 
-    /* compiled from: StoreGuildVoiceRegions.kt */
+    /* JADX INFO: compiled from: StoreGuildVoiceRegions.kt */
     public static abstract class State {
 
-        /* compiled from: StoreGuildVoiceRegions.kt */
+        /* JADX INFO: compiled from: StoreGuildVoiceRegions.kt */
         public static final class Failure extends State {
             public static final Failure INSTANCE = new Failure();
 
@@ -43,7 +43,7 @@ public final class StoreGuildVoiceRegions extends StoreV2 {
             }
         }
 
-        /* compiled from: StoreGuildVoiceRegions.kt */
+        /* JADX INFO: compiled from: StoreGuildVoiceRegions.kt */
         public static final class Fetching extends State {
             public static final Fetching INSTANCE = new Fetching();
 
@@ -52,7 +52,7 @@ public final class StoreGuildVoiceRegions extends StoreV2 {
             }
         }
 
-        /* compiled from: StoreGuildVoiceRegions.kt */
+        /* JADX INFO: compiled from: StoreGuildVoiceRegions.kt */
         public static final /* data */ class Loaded extends State {
             private final List<ModelVoiceRegion> data;
 
@@ -113,17 +113,17 @@ public final class StoreGuildVoiceRegions extends StoreV2 {
         }
     }
 
-    /* compiled from: StoreGuildVoiceRegions.kt */
-    /* renamed from: com.discord.stores.StoreGuildVoiceRegions$fetchIfNonexisting$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreGuildVoiceRegions$fetchIfNonexisting$1 */
+    /* JADX INFO: compiled from: StoreGuildVoiceRegions.kt */
     public static final class C60891 extends Lambda implements Function0<Unit> {
         public final /* synthetic */ long $guildId;
 
-        /* compiled from: StoreGuildVoiceRegions.kt */
-        /* renamed from: com.discord.stores.StoreGuildVoiceRegions$fetchIfNonexisting$1$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.stores.StoreGuildVoiceRegions$fetchIfNonexisting$1$1, reason: invalid class name */
+        /* JADX INFO: compiled from: StoreGuildVoiceRegions.kt */
         public static final class AnonymousClass1 extends Lambda implements Function1<List<? extends ModelVoiceRegion>, Unit> {
 
-            /* compiled from: StoreGuildVoiceRegions.kt */
-            /* renamed from: com.discord.stores.StoreGuildVoiceRegions$fetchIfNonexisting$1$1$1, reason: invalid class name and collision with other inner class name */
+            /* JADX INFO: renamed from: com.discord.stores.StoreGuildVoiceRegions$fetchIfNonexisting$1$1$1, reason: invalid class name and collision with other inner class name */
+            /* JADX INFO: compiled from: StoreGuildVoiceRegions.kt */
             public static final class C132581 extends Lambda implements Function0<Unit> {
                 public final /* synthetic */ List $voiceRegions;
 
@@ -139,7 +139,7 @@ public final class StoreGuildVoiceRegions extends StoreV2 {
                     return Unit.f27425a;
                 }
 
-                /* renamed from: invoke, reason: avoid collision after fix types in other method */
+                /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
                 public final void invoke2() {
                     C60891 c60891 = C60891.this;
                     StoreGuildVoiceRegions.access$handleGuildVoiceRegions(StoreGuildVoiceRegions.this, c60891.$guildId, this.$voiceRegions);
@@ -156,19 +156,19 @@ public final class StoreGuildVoiceRegions extends StoreV2 {
                 return Unit.f27425a;
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2(List<? extends ModelVoiceRegion> list) {
                 Intrinsics3.checkNotNullParameter(list, "voiceRegions");
                 StoreGuildVoiceRegions.access$getDispatcher$p(StoreGuildVoiceRegions.this).schedule(new C132581(list));
             }
         }
 
-        /* compiled from: StoreGuildVoiceRegions.kt */
-        /* renamed from: com.discord.stores.StoreGuildVoiceRegions$fetchIfNonexisting$1$2, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.stores.StoreGuildVoiceRegions$fetchIfNonexisting$1$2, reason: invalid class name */
+        /* JADX INFO: compiled from: StoreGuildVoiceRegions.kt */
         public static final class AnonymousClass2 extends Lambda implements Function1<Error, Unit> {
 
-            /* compiled from: StoreGuildVoiceRegions.kt */
-            /* renamed from: com.discord.stores.StoreGuildVoiceRegions$fetchIfNonexisting$1$2$1, reason: invalid class name */
+            /* JADX INFO: renamed from: com.discord.stores.StoreGuildVoiceRegions$fetchIfNonexisting$1$2$1, reason: invalid class name */
+            /* JADX INFO: compiled from: StoreGuildVoiceRegions.kt */
             public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
                 public AnonymousClass1() {
                     super(0);
@@ -180,7 +180,7 @@ public final class StoreGuildVoiceRegions extends StoreV2 {
                     return Unit.f27425a;
                 }
 
-                /* renamed from: invoke, reason: avoid collision after fix types in other method */
+                /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
                 public final void invoke2() {
                     C60891 c60891 = C60891.this;
                     StoreGuildVoiceRegions.access$handleGuildVoiceRegionsFetchFailed(StoreGuildVoiceRegions.this, c60891.$guildId);
@@ -197,7 +197,7 @@ public final class StoreGuildVoiceRegions extends StoreV2 {
                 return Unit.f27425a;
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2(Error error) {
                 Intrinsics3.checkNotNullParameter(error, "it");
                 StoreGuildVoiceRegions.access$getDispatcher$p(StoreGuildVoiceRegions.this).schedule(new AnonymousClass1());
@@ -216,7 +216,7 @@ public final class StoreGuildVoiceRegions extends StoreV2 {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             State state = (State) StoreGuildVoiceRegions.access$getGuildVoiceRegionsState$p(StoreGuildVoiceRegions.this).get(Long.valueOf(this.$guildId));
             if ((state instanceof State.Loaded) || (state instanceof State.Fetching)) {
@@ -227,8 +227,8 @@ public final class StoreGuildVoiceRegions extends StoreV2 {
         }
     }
 
-    /* compiled from: StoreGuildVoiceRegions.kt */
-    /* renamed from: com.discord.stores.StoreGuildVoiceRegions$observeGuildVoiceRegions$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreGuildVoiceRegions$observeGuildVoiceRegions$1 */
+    /* JADX INFO: compiled from: StoreGuildVoiceRegions.kt */
     public static final class C60901 extends Lambda implements Function0<List<? extends ModelVoiceRegion>> {
         public final /* synthetic */ long $guildId;
 
@@ -244,7 +244,7 @@ public final class StoreGuildVoiceRegions extends StoreV2 {
         }
 
         @Override // kotlin.jvm.functions.Function0
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final List<? extends ModelVoiceRegion> invoke2() {
             return StoreGuildVoiceRegions.this.getGuildVoiceRegions(this.$guildId);
         }

@@ -9,7 +9,7 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 
-/* loaded from: discord-126021.apk:lombok/delombok/FormatPreferenceScanner.SCL.lombok */
+/* JADX INFO: loaded from: discord-126021.apk:lombok/delombok/FormatPreferenceScanner.SCL.lombok */
 public class FormatPreferenceScanner {
     private FormatPreferences tryEasy(FormatPreferences preferences, boolean force) {
         int count = 0;
@@ -36,8 +36,8 @@ public class FormatPreferenceScanner {
         }
     }
 
-    /* renamed from: lombok.delombok.FormatPreferenceScanner$1 */
-    /* loaded from: discord-126021.apk:lombok/delombok/FormatPreferenceScanner$1.SCL.lombok */
+    /* JADX INFO: renamed from: lombok.delombok.FormatPreferenceScanner$1 */
+    /* JADX INFO: loaded from: discord-126021.apk:lombok/delombok/FormatPreferenceScanner$1.SCL.lombok */
     class C128461 extends Reader {
         int pos = 0;
         int max;

@@ -3,15 +3,15 @@ package p007b.p225i.p226a.p288f.p330i.p332b;
 import p007b.p225i.p226a.p288f.p313h.p325l.C3756n0;
 import p007b.p225i.p226a.p288f.p313h.p325l.C3782p0;
 
-/* compiled from: com.google.android.gms:play-services-measurement@@18.0.0 */
-/* renamed from: b.i.a.f.i.b.aa */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.i.b.aa */
+/* JADX INFO: compiled from: com.google.android.gms:play-services-measurement@@18.0.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public final /* synthetic */ class C3979aa {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final /* synthetic */ int[] f10554a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static final /* synthetic */ int[] f10555b;
 
     static {

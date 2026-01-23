@@ -22,8 +22,8 @@ import java.lang.reflect.InvocationTargetException;
 import org.xmlpull.v1.XmlPullParserException;
 import p007b.p100d.p104b.p105a.outline;
 
+/* JADX INFO: loaded from: classes3.dex */
 @RestrictTo({RestrictTo.Scope.LIBRARY_GROUP})
-/* loaded from: classes3.dex */
 public final class DrawableUtils {
     private DrawableUtils() {
     }

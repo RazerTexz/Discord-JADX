@@ -5,7 +5,7 @@ import android.database.Cursor;
 import android.net.Uri;
 import java.util.concurrent.atomic.AtomicBoolean;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class InstallReferrerHuawei {
     private static final String REFERRER_PROVIDER_AUTHORITY = "com.huawei.appmarket.commondata";
     private static final String REFERRER_PROVIDER_URI = "content://com.huawei.appmarket.commondata/item/5";
@@ -19,6 +19,11 @@ public class InstallReferrerHuawei {
         this.referrerCallback = installReferrerReadListener;
     }
 
+    /* JADX WARN: Removed duplicated region for block: B:23:0x00a1 A[PHI: r3
+      0x00a1: PHI (r3v2 android.database.Cursor) = (r3v1 android.database.Cursor), (r3v3 android.database.Cursor) binds: [B:22:0x009f, B:16:0x008a] A[DONT_GENERATE, DONT_INLINE]] */
+    /*
+        Code decompiled incorrectly, please refer to instructions dump.
+    */
     public void readReferrer() {
         if (!this.shouldTryToRead.get()) {
             this.logger.debug("Should not try to read Install referrer Huawei", new Object[0]);

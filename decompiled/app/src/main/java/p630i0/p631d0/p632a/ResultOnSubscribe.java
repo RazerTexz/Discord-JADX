@@ -11,19 +11,19 @@ import p658rx.exceptions.OnErrorFailedException;
 import p658rx.exceptions.OnErrorNotImplementedException;
 import retrofit2.Response;
 
-/* compiled from: ResultOnSubscribe.java */
-/* renamed from: i0.d0.a.e, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: i0.d0.a.e, reason: use source file name */
+/* JADX INFO: compiled from: ResultOnSubscribe.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class ResultOnSubscribe<T> implements Observable.InterfaceC13005a<Result4<T>> {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final Observable.InterfaceC13005a<Response<T>> f26503j;
 
-    /* compiled from: ResultOnSubscribe.java */
-    /* renamed from: i0.d0.a.e$a */
+    /* JADX INFO: renamed from: i0.d0.a.e$a */
+    /* JADX INFO: compiled from: ResultOnSubscribe.java */
     public static class a<R> extends Subscriber<Response<R>> {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public final Subscriber<? super Result4<R>> f26504j;
 
         public a(Subscriber<? super Result4<R>> subscriber) {

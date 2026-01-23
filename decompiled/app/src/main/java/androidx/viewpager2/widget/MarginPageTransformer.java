@@ -8,7 +8,7 @@ import androidx.core.util.Preconditions;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager2.widget.ViewPager2;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public final class MarginPageTransformer implements ViewPager2.PageTransformer {
     private final int mMarginPx;
 

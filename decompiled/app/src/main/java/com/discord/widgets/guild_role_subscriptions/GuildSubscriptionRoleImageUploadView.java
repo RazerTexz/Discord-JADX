@@ -27,8 +27,8 @@ import p007b.p109f.p132g.p143f.RoundingParams;
 import p507d0.p579g0.StringsJVM;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: GuildSubscriptionRoleImageUploadView.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: GuildSubscriptionRoleImageUploadView.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class GuildSubscriptionRoleImageUploadView extends ConstraintLayout {
     private static final int CIRCLE_IMAGE_STYLE = 0;
     private static final int ROUNDED_IMAGE_STYLE = 1;
@@ -37,8 +37,8 @@ public final class GuildSubscriptionRoleImageUploadView extends ConstraintLayout
     private Function0<Unit> onImageChooserClickListener;
     private Function0<Unit> onImageRemovedListener;
 
-    /* compiled from: GuildSubscriptionRoleImageUploadView.kt */
-    /* renamed from: com.discord.widgets.guild_role_subscriptions.GuildSubscriptionRoleImageUploadView$initialize$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.guild_role_subscriptions.GuildSubscriptionRoleImageUploadView$initialize$2 */
+    /* JADX INFO: compiled from: GuildSubscriptionRoleImageUploadView.kt */
     public static final class ViewOnClickListenerC84352 implements View.OnClickListener {
         public ViewOnClickListenerC84352() {
         }
@@ -51,8 +51,8 @@ public final class GuildSubscriptionRoleImageUploadView extends ConstraintLayout
         }
     }
 
-    /* compiled from: GuildSubscriptionRoleImageUploadView.kt */
-    /* renamed from: com.discord.widgets.guild_role_subscriptions.GuildSubscriptionRoleImageUploadView$initialize$3 */
+    /* JADX INFO: renamed from: com.discord.widgets.guild_role_subscriptions.GuildSubscriptionRoleImageUploadView$initialize$3 */
+    /* JADX INFO: compiled from: GuildSubscriptionRoleImageUploadView.kt */
     public static final class ViewOnClickListenerC84363 implements View.OnClickListener {
         public ViewOnClickListenerC84363() {
         }
@@ -65,8 +65,8 @@ public final class GuildSubscriptionRoleImageUploadView extends ConstraintLayout
         }
     }
 
-    /* compiled from: GuildSubscriptionRoleImageUploadView.kt */
-    /* renamed from: com.discord.widgets.guild_role_subscriptions.GuildSubscriptionRoleImageUploadView$initialize$4 */
+    /* JADX INFO: renamed from: com.discord.widgets.guild_role_subscriptions.GuildSubscriptionRoleImageUploadView$initialize$4 */
+    /* JADX INFO: compiled from: GuildSubscriptionRoleImageUploadView.kt */
     public static final class ViewOnClickListenerC84374 implements View.OnClickListener {
         public ViewOnClickListenerC84374() {
         }

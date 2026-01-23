@@ -20,7 +20,7 @@ import p007b.p109f.p115d.p119d.Objects2;
 import p007b.p109f.p132g.p138b.DraweeEventTracker;
 import p007b.p109f.p161j.p183r.FrescoSystrace;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class DraweeView<DH extends DraweeHierarchy> extends ImageView {
     private static boolean sGlobalLegacyVisibilityHandlingEnabled = false;
     private float mAspectRatio;

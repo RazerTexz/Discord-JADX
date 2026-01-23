@@ -1,8 +1,8 @@
 package com.discord.api.guild.welcome;
 
 
-/* compiled from: GuildWelcomeChannelUtils.kt */
-/* renamed from: com.discord.api.guild.welcome.GuildWelcomeChannelUtilsKt, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: com.discord.api.guild.welcome.GuildWelcomeChannelUtilsKt, reason: use source file name */
+/* JADX INFO: compiled from: GuildWelcomeChannelUtils.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class GuildWelcomeChannelUtils {
 }

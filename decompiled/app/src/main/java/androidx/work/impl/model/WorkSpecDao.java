@@ -12,9 +12,9 @@ import androidx.work.WorkInfo;
 import androidx.work.impl.model.WorkSpec;
 import java.util.List;
 
+/* JADX INFO: loaded from: classes.dex */
 @Dao
 @SuppressLint({"UnknownNullness"})
-/* loaded from: classes.dex */
 public interface WorkSpecDao {
     @Query("DELETE FROM workspec WHERE id=:id")
     void delete(String str);

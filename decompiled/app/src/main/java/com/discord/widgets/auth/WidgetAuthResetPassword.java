@@ -16,20 +16,20 @@ import p007b.p008a.p018d.AppScreen2;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: WidgetAuthResetPassword.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetAuthResetPassword.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetAuthResetPassword extends AppFragment {
     public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetAuthResetPassword.class, "binding", "getBinding()Lcom/discord/databinding/WidgetAuthResetPasswordBinding;", 0)};
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private static final String INTENT_EXTRA_TOKEN = "INTENT_EXTRA_TOKEN";
 
-    /* renamed from: binding$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
     private String token;
 
-    /* compiled from: WidgetAuthResetPassword.kt */
+    /* JADX INFO: compiled from: WidgetAuthResetPassword.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -47,8 +47,8 @@ public final class WidgetAuthResetPassword extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetAuthResetPassword.kt */
-    /* renamed from: com.discord.widgets.auth.WidgetAuthResetPassword$onViewBound$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.auth.WidgetAuthResetPassword$onViewBound$1 */
+    /* JADX INFO: compiled from: WidgetAuthResetPassword.kt */
     public static final class ViewOnClickListenerC72371 implements View.OnClickListener {
         public ViewOnClickListenerC72371() {
         }
@@ -64,8 +64,8 @@ public final class WidgetAuthResetPassword extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetAuthResetPassword.kt */
-    /* renamed from: com.discord.widgets.auth.WidgetAuthResetPassword$onViewBound$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.auth.WidgetAuthResetPassword$onViewBound$2 */
+    /* JADX INFO: compiled from: WidgetAuthResetPassword.kt */
     public static final class ViewOnClickListenerC72382 implements View.OnClickListener {
         public ViewOnClickListenerC72382() {
         }

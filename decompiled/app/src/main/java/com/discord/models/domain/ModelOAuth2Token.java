@@ -6,8 +6,8 @@ import java.util.List;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ModelOAuth2Token.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: ModelOAuth2Token.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class ModelOAuth2Token {
     private final Application application;
     private final long id;
@@ -36,7 +36,7 @@ public final /* data */ class ModelOAuth2Token {
         return modelOAuth2Token.copy(j, list, application);
     }
 
-    /* renamed from: component1, reason: from getter */
+    /* JADX INFO: renamed from: component1, reason: from getter */
     public final long getId() {
         return this.id;
     }
@@ -45,7 +45,7 @@ public final /* data */ class ModelOAuth2Token {
         return this.scopes;
     }
 
-    /* renamed from: component3, reason: from getter */
+    /* JADX INFO: renamed from: component3, reason: from getter */
     public final Application getApplication() {
         return this.application;
     }

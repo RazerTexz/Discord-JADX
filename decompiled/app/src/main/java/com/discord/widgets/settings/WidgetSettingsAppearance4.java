@@ -7,9 +7,9 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 import p658rx.subjects.BehaviorSubject;
 
-/* compiled from: WidgetSettingsAppearance.kt */
-/* renamed from: com.discord.widgets.settings.WidgetSettingsAppearance$pureEvilEasterEggSubject$2, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.settings.WidgetSettingsAppearance$pureEvilEasterEggSubject$2, reason: use source file name */
+/* JADX INFO: compiled from: WidgetSettingsAppearance.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetSettingsAppearance4 extends Lambda implements Function0<BehaviorSubject<Boolean>> {
     public static final WidgetSettingsAppearance4 INSTANCE = new WidgetSettingsAppearance4();
 
@@ -23,7 +23,7 @@ public final class WidgetSettingsAppearance4 extends Lambda implements Function0
     }
 
     @Override // kotlin.jvm.functions.Function0
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final BehaviorSubject<Boolean> invoke2() {
         return BehaviorSubject.m11130l0(Boolean.valueOf(Intrinsics3.areEqual(StoreStream.INSTANCE.getUserSettingsSystem().getTheme(), ModelUserSettings.THEME_PURE_EVIL)));
     }

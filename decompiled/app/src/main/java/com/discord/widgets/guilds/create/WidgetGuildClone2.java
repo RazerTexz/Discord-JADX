@@ -17,9 +17,9 @@ import p007b.p008a.p025i.LayoutIconUploaderBinding;
 import p507d0.p592z.p594d.FunctionReferenceImpl;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: WidgetGuildClone.kt */
-/* renamed from: com.discord.widgets.guilds.create.WidgetGuildClone$binding$2, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.guilds.create.WidgetGuildClone$binding$2, reason: use source file name */
+/* JADX INFO: compiled from: WidgetGuildClone.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final /* synthetic */ class WidgetGuildClone2 extends FunctionReferenceImpl implements Function1<View, WidgetGuildCloneBinding> {
     public static final WidgetGuildClone2 INSTANCE = new WidgetGuildClone2();
 
@@ -32,7 +32,7 @@ public final /* synthetic */ class WidgetGuildClone2 extends FunctionReferenceIm
         return invoke2(view);
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final WidgetGuildCloneBinding invoke2(View view) {
         Intrinsics3.checkNotNullParameter(view, "p1");
         int i = C5419R.id.guild_create_button;

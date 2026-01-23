@@ -74,8 +74,8 @@ import p507d0.p592z.p594d.Lambda;
 import p507d0.p592z.p594d.Reflection2;
 import p658rx.Observable;
 
-/* compiled from: InputAutocomplete.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: InputAutocomplete.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class InputAutocomplete {
     private final ChatInputAutocompleteAdapter autocompleteAdapter;
     private final TextView autocompleteHeader;
@@ -96,11 +96,11 @@ public final class InputAutocomplete {
     private final View stickersContainer;
     private final RecyclerView stickersRecyclerView;
 
-    /* renamed from: viewModel$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: viewModel$delegate, reason: from kotlin metadata */
     private final Lazy viewModel;
 
-    /* compiled from: InputAutocomplete.kt */
-    /* renamed from: com.discord.widgets.chat.input.autocomplete.InputAutocomplete$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.input.autocomplete.InputAutocomplete$1 */
+    /* JADX INFO: compiled from: InputAutocomplete.kt */
     public static final class C77771 implements FlexInputListener2 {
         public C77771() {
         }
@@ -112,8 +112,8 @@ public final class InputAutocomplete {
         }
     }
 
-    /* compiled from: InputAutocomplete.kt */
-    /* renamed from: com.discord.widgets.chat.input.autocomplete.InputAutocomplete$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.input.autocomplete.InputAutocomplete$2 */
+    /* JADX INFO: compiled from: InputAutocomplete.kt */
     public static final class C77782 implements TextWatcher {
         private int before;
         private int count;
@@ -164,8 +164,8 @@ public final class InputAutocomplete {
         }
     }
 
-    /* compiled from: InputAutocomplete.kt */
-    /* renamed from: com.discord.widgets.chat.input.autocomplete.InputAutocomplete$3 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.input.autocomplete.InputAutocomplete$3 */
+    /* JADX INFO: compiled from: InputAutocomplete.kt */
     public static final class C77793 extends Lambda implements Function2<Integer, Integer, Unit> {
         public C77793() {
             super(2);
@@ -182,8 +182,8 @@ public final class InputAutocomplete {
         }
     }
 
-    /* compiled from: InputAutocomplete.kt */
-    /* renamed from: com.discord.widgets.chat.input.autocomplete.InputAutocomplete$4 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.input.autocomplete.InputAutocomplete$4 */
+    /* JADX INFO: compiled from: InputAutocomplete.kt */
     public static final class C77804 extends Lambda implements Function1<Application, Unit> {
         public C77804() {
             super(1);
@@ -195,7 +195,7 @@ public final class InputAutocomplete {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Application application) {
             Intrinsics3.checkNotNullParameter(application, "it");
             InputAutocomplete.access$getViewModel$p(InputAutocomplete.this).selectCommandBrowserApplication(application);
@@ -203,8 +203,8 @@ public final class InputAutocomplete {
         }
     }
 
-    /* compiled from: InputAutocomplete.kt */
-    /* renamed from: com.discord.widgets.chat.input.autocomplete.InputAutocomplete$5 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.input.autocomplete.InputAutocomplete$5 */
+    /* JADX INFO: compiled from: InputAutocomplete.kt */
     public static final class C77815 extends Lambda implements Function1<Autocompletable, Unit> {
         public C77815() {
             super(1);
@@ -216,15 +216,15 @@ public final class InputAutocomplete {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Autocompletable autocompletable) {
             Intrinsics3.checkNotNullParameter(autocompletable, "it");
             InputAutocomplete.access$getViewModel$p(InputAutocomplete.this).selectAutocompleteItem(autocompletable);
         }
     }
 
-    /* compiled from: InputAutocomplete.kt */
-    /* renamed from: com.discord.widgets.chat.input.autocomplete.InputAutocomplete$6 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.input.autocomplete.InputAutocomplete$6 */
+    /* JADX INFO: compiled from: InputAutocomplete.kt */
     public static final class C77826 extends Lambda implements Function1<Sticker, Unit> {
         public C77826() {
             super(1);
@@ -236,7 +236,7 @@ public final class InputAutocomplete {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Sticker sticker) {
             Intrinsics3.checkNotNullParameter(sticker, "sticker");
             InputAutocomplete.access$getViewModel$p(InputAutocomplete.this).selectStickerItem(sticker);
@@ -246,8 +246,8 @@ public final class InputAutocomplete {
         }
     }
 
-    /* compiled from: InputAutocomplete.kt */
-    /* renamed from: com.discord.widgets.chat.input.autocomplete.InputAutocomplete$7 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.input.autocomplete.InputAutocomplete$7 */
+    /* JADX INFO: compiled from: InputAutocomplete.kt */
     public static final class C77837 extends Lambda implements Function1<ApplicationCommandOption, Unit> {
         public C77837() {
             super(1);
@@ -259,15 +259,15 @@ public final class InputAutocomplete {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(ApplicationCommandOption applicationCommandOption) {
             Intrinsics3.checkNotNullParameter(applicationCommandOption, "it");
             InputAutocomplete.access$getViewModel$p(InputAutocomplete.this).selectCommandOption(applicationCommandOption);
         }
     }
 
-    /* compiled from: InputAutocomplete.kt */
-    /* renamed from: com.discord.widgets.chat.input.autocomplete.InputAutocomplete$configureAutocompleteBrowser$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.input.autocomplete.InputAutocomplete$configureAutocompleteBrowser$1 */
+    /* JADX INFO: compiled from: InputAutocomplete.kt */
     public static final class C77841 extends Lambda implements Function2<Integer, Integer, Unit> {
         public C77841() {
             super(2);
@@ -293,8 +293,8 @@ public final class InputAutocomplete {
         }
     }
 
-    /* compiled from: InputAutocomplete.kt */
-    /* renamed from: com.discord.widgets.chat.input.autocomplete.InputAutocomplete$configureCommandBrowser$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.input.autocomplete.InputAutocomplete$configureCommandBrowser$1 */
+    /* JADX INFO: compiled from: InputAutocomplete.kt */
     public static final class C77851 extends Lambda implements Function2<Integer, Integer, Unit> {
         public C77851() {
             super(2);
@@ -320,8 +320,8 @@ public final class InputAutocomplete {
         }
     }
 
-    /* compiled from: InputAutocomplete.kt */
-    /* renamed from: com.discord.widgets.chat.input.autocomplete.InputAutocomplete$handleEvent$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.input.autocomplete.InputAutocomplete$handleEvent$1 */
+    /* JADX INFO: compiled from: InputAutocomplete.kt */
     public static final class C77861 extends Lambda implements Function0<Unit> {
         public final /* synthetic */ AutocompleteViewModel5 $event;
 
@@ -337,14 +337,14 @@ public final class InputAutocomplete {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             InputAutocomplete.access$getViewModel$p(InputAutocomplete.this).onAttachmentRemoved(((AutocompleteViewModel5.PreviewAttachment) this.$event).getAttachment());
         }
     }
 
-    /* compiled from: InputAutocomplete.kt */
-    /* renamed from: com.discord.widgets.chat.input.autocomplete.InputAutocomplete$handleEvent$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.input.autocomplete.InputAutocomplete$handleEvent$2 */
+    /* JADX INFO: compiled from: InputAutocomplete.kt */
     public static final class C77872 extends Lambda implements Function1<Boolean, Unit> {
         public final /* synthetic */ AutocompleteViewModel5 $event;
 
@@ -365,8 +365,8 @@ public final class InputAutocomplete {
         }
     }
 
-    /* compiled from: InputAutocomplete.kt */
-    /* renamed from: com.discord.widgets.chat.input.autocomplete.InputAutocomplete$handleEvent$3 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.input.autocomplete.InputAutocomplete$handleEvent$3 */
+    /* JADX INFO: compiled from: InputAutocomplete.kt */
     public static final class C77883 extends Lambda implements Function0<Unit> {
         public C77883() {
             super(0);
@@ -378,14 +378,14 @@ public final class InputAutocomplete {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             InputAutocomplete.access$getFragment$p(InputAutocomplete.this).showKeyboard(InputAutocomplete.access$getEditText$p(InputAutocomplete.this));
         }
     }
 
-    /* compiled from: InputAutocomplete.kt */
-    /* renamed from: com.discord.widgets.chat.input.autocomplete.InputAutocomplete$onViewBoundOrOnResume$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.input.autocomplete.InputAutocomplete$onViewBoundOrOnResume$1 */
+    /* JADX INFO: compiled from: InputAutocomplete.kt */
     public static final /* synthetic */ class C77891 extends FunctionReferenceImpl implements Function1<AutocompleteViewModel7, Unit> {
         public C77891(InputAutocomplete inputAutocomplete) {
             super(1, inputAutocomplete, InputAutocomplete.class, "configureUI", "configureUI(Lcom/discord/widgets/chat/input/autocomplete/ViewState;)V", 0);
@@ -397,15 +397,15 @@ public final class InputAutocomplete {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(AutocompleteViewModel7 autocompleteViewModel7) {
             Intrinsics3.checkNotNullParameter(autocompleteViewModel7, "p1");
             InputAutocomplete.access$configureUI((InputAutocomplete) this.receiver, autocompleteViewModel7);
         }
     }
 
-    /* compiled from: InputAutocomplete.kt */
-    /* renamed from: com.discord.widgets.chat.input.autocomplete.InputAutocomplete$onViewBoundOrOnResume$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.input.autocomplete.InputAutocomplete$onViewBoundOrOnResume$2 */
+    /* JADX INFO: compiled from: InputAutocomplete.kt */
     public static final class C77902 extends Lambda implements Function1<InputEditTextAction, Unit> {
         public C77902() {
             super(1);
@@ -417,7 +417,7 @@ public final class InputAutocomplete {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(InputEditTextAction inputEditTextAction) {
             InputAutocomplete inputAutocomplete = InputAutocomplete.this;
             Intrinsics3.checkNotNullExpressionValue(inputEditTextAction, "it");
@@ -425,8 +425,8 @@ public final class InputAutocomplete {
         }
     }
 
-    /* compiled from: InputAutocomplete.kt */
-    /* renamed from: com.discord.widgets.chat.input.autocomplete.InputAutocomplete$onViewBoundOrOnResume$3 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.input.autocomplete.InputAutocomplete$onViewBoundOrOnResume$3 */
+    /* JADX INFO: compiled from: InputAutocomplete.kt */
     public static final /* synthetic */ class C77913 extends FunctionReferenceImpl implements Function1<AutocompleteViewModel5, Unit> {
         public C77913(InputAutocomplete inputAutocomplete) {
             super(1, inputAutocomplete, InputAutocomplete.class, "handleEvent", "handleEvent(Lcom/discord/widgets/chat/input/autocomplete/Event;)V", 0);
@@ -438,7 +438,7 @@ public final class InputAutocomplete {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(AutocompleteViewModel5 autocompleteViewModel5) {
             Intrinsics3.checkNotNullParameter(autocompleteViewModel5, "p1");
             InputAutocomplete.access$handleEvent((InputAutocomplete) this.receiver, autocompleteViewModel5);

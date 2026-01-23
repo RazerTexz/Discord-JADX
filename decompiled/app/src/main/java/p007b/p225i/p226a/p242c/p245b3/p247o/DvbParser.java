@@ -12,55 +12,55 @@ import org.objectweb.asm.Opcodes;
 import p007b.p225i.p226a.p242c.p259f3.ParsableBitArray;
 import p007b.p225i.p226a.p242c.p259f3.Util2;
 
-/* compiled from: DvbParser.java */
-/* renamed from: b.i.a.c.b3.o.b, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.b3.o.b, reason: use source file name */
+/* JADX INFO: compiled from: DvbParser.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class DvbParser {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final byte[] f5916a = {0, 7, 8, 15};
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static final byte[] f5917b = {0, 119, -120, -1};
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public static final byte[] f5918c = {0, 17, 34, 51, 68, 85, 102, 119, -120, -103, -86, -69, -52, -35, -18, -1};
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final Paint f5919d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final Paint f5920e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final Canvas f5921f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public final b f5922g;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public final a f5923h;
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public final h f5924i;
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public Bitmap f5925j;
 
-    /* compiled from: DvbParser.java */
-    /* renamed from: b.i.a.c.b3.o.b$a */
+    /* JADX INFO: renamed from: b.i.a.c.b3.o.b$a */
+    /* JADX INFO: compiled from: DvbParser.java */
     public static final class a {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final int f5926a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final int[] f5927b;
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public final int[] f5928c;
 
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         public final int[] f5929d;
 
         public a(int i, int[] iArr, int[] iArr2, int[] iArr3) {
@@ -71,26 +71,26 @@ public final class DvbParser {
         }
     }
 
-    /* compiled from: DvbParser.java */
-    /* renamed from: b.i.a.c.b3.o.b$b */
+    /* JADX INFO: renamed from: b.i.a.c.b3.o.b$b */
+    /* JADX INFO: compiled from: DvbParser.java */
     public static final class b {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final int f5930a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final int f5931b;
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public final int f5932c;
 
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         public final int f5933d;
 
-        /* renamed from: e */
+        /* JADX INFO: renamed from: e */
         public final int f5934e;
 
-        /* renamed from: f */
+        /* JADX INFO: renamed from: f */
         public final int f5935f;
 
         public b(int i, int i2, int i3, int i4, int i5, int i6) {
@@ -103,20 +103,20 @@ public final class DvbParser {
         }
     }
 
-    /* compiled from: DvbParser.java */
-    /* renamed from: b.i.a.c.b3.o.b$c */
+    /* JADX INFO: renamed from: b.i.a.c.b3.o.b$c */
+    /* JADX INFO: compiled from: DvbParser.java */
     public static final class c {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final int f5936a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final boolean f5937b;
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public final byte[] f5938c;
 
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         public final byte[] f5939d;
 
         public c(int i, boolean z2, byte[] bArr, byte[] bArr2) {
@@ -127,17 +127,17 @@ public final class DvbParser {
         }
     }
 
-    /* compiled from: DvbParser.java */
-    /* renamed from: b.i.a.c.b3.o.b$d */
+    /* JADX INFO: renamed from: b.i.a.c.b3.o.b$d */
+    /* JADX INFO: compiled from: DvbParser.java */
     public static final class d {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final int f5940a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final int f5941b;
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public final SparseArray<e> f5942c;
 
         public d(int i, int i2, int i3, SparseArray<e> sparseArray) {
@@ -147,14 +147,14 @@ public final class DvbParser {
         }
     }
 
-    /* compiled from: DvbParser.java */
-    /* renamed from: b.i.a.c.b3.o.b$e */
+    /* JADX INFO: renamed from: b.i.a.c.b3.o.b$e */
+    /* JADX INFO: compiled from: DvbParser.java */
     public static final class e {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final int f5943a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final int f5944b;
 
         public e(int i, int i2) {
@@ -163,38 +163,38 @@ public final class DvbParser {
         }
     }
 
-    /* compiled from: DvbParser.java */
-    /* renamed from: b.i.a.c.b3.o.b$f */
+    /* JADX INFO: renamed from: b.i.a.c.b3.o.b$f */
+    /* JADX INFO: compiled from: DvbParser.java */
     public static final class f {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final int f5945a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final boolean f5946b;
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public final int f5947c;
 
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         public final int f5948d;
 
-        /* renamed from: e */
+        /* JADX INFO: renamed from: e */
         public final int f5949e;
 
-        /* renamed from: f */
+        /* JADX INFO: renamed from: f */
         public final int f5950f;
 
-        /* renamed from: g */
+        /* JADX INFO: renamed from: g */
         public final int f5951g;
 
-        /* renamed from: h */
+        /* JADX INFO: renamed from: h */
         public final int f5952h;
 
-        /* renamed from: i */
+        /* JADX INFO: renamed from: i */
         public final int f5953i;
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public final SparseArray<g> f5954j;
 
         public f(int i, boolean z2, int i2, int i3, int i4, int i5, int i6, int i7, int i8, int i9, SparseArray<g> sparseArray) {
@@ -211,14 +211,14 @@ public final class DvbParser {
         }
     }
 
-    /* compiled from: DvbParser.java */
-    /* renamed from: b.i.a.c.b3.o.b$g */
+    /* JADX INFO: renamed from: b.i.a.c.b3.o.b$g */
+    /* JADX INFO: compiled from: DvbParser.java */
     public static final class g {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final int f5955a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final int f5956b;
 
         public g(int i, int i2, int i3, int i4, int i5, int i6) {
@@ -227,36 +227,36 @@ public final class DvbParser {
         }
     }
 
-    /* compiled from: DvbParser.java */
-    /* renamed from: b.i.a.c.b3.o.b$h */
+    /* JADX INFO: renamed from: b.i.a.c.b3.o.b$h */
+    /* JADX INFO: compiled from: DvbParser.java */
     public static final class h {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final int f5957a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final int f5958b;
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public final SparseArray<f> f5959c = new SparseArray<>();
 
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         public final SparseArray<a> f5960d = new SparseArray<>();
 
-        /* renamed from: e */
+        /* JADX INFO: renamed from: e */
         public final SparseArray<c> f5961e = new SparseArray<>();
 
-        /* renamed from: f */
+        /* JADX INFO: renamed from: f */
         public final SparseArray<a> f5962f = new SparseArray<>();
 
-        /* renamed from: g */
+        /* JADX INFO: renamed from: g */
         public final SparseArray<c> f5963g = new SparseArray<>();
 
-        /* renamed from: h */
+        /* JADX INFO: renamed from: h */
         @Nullable
         public b f5964h;
 
-        /* renamed from: i */
+        /* JADX INFO: renamed from: i */
         @Nullable
         public d f5965i;
 
@@ -283,7 +283,7 @@ public final class DvbParser {
         this.f5924i = new h(i, i2);
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static byte[] m2660a(int i, int i2, ParsableBitArray parsableBitArray) {
         byte[] bArr = new byte[i];
         for (int i3 = 0; i3 < i; i3++) {
@@ -292,7 +292,7 @@ public final class DvbParser {
         return bArr;
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static int[] m2661b() {
         int[] iArr = new int[16];
         iArr[0] = 0;
@@ -313,7 +313,7 @@ public final class DvbParser {
         return iArr;
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public static int[] m2662c() {
         int i;
         int[] iArr = new int[256];
@@ -350,7 +350,7 @@ public final class DvbParser {
         return iArr;
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public static int m2663d(int i, int i2, int i3, int i4) {
         return (i << 24) | (i2 << 16) | (i3 << 8) | i4;
     }
@@ -366,7 +366,7 @@ public final class DvbParser {
     /* JADX WARN: Removed duplicated region for block: B:90:0x016a  */
     /* JADX WARN: Removed duplicated region for block: B:96:0x0184 A[PHI: r1
       0x0184: PHI (r1v4 int) = (r1v3 int), (r1v22 int) binds: [B:88:0x0167, B:95:0x0183] A[DONT_GENERATE, DONT_INLINE]] */
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
@@ -637,7 +637,7 @@ public final class DvbParser {
         }
     }
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public static a m2665f(ParsableBitArray parsableBitArray, int i) {
         int iM3067g;
         int iM3067g2;
@@ -689,7 +689,7 @@ public final class DvbParser {
         return new a(iM3067g5, iArr, iArrM2661b, iArrM2662c);
     }
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public static c m2666g(ParsableBitArray parsableBitArray) {
         byte[] bArr;
         int iM3067g = parsableBitArray.m3067g(16);

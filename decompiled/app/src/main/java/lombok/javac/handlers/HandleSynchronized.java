@@ -17,8 +17,8 @@ import lombok.javac.JavacNode;
 import lombok.javac.JavacTreeMaker;
 import lombok.javac.handlers.JavacHandlerUtil;
 
+/* JADX INFO: loaded from: discord-126021.apk:lombok/javac/handlers/HandleSynchronized.SCL.lombok */
 @HandlerPriority(1024)
-/* loaded from: discord-126021.apk:lombok/javac/handlers/HandleSynchronized.SCL.lombok */
 public class HandleSynchronized extends JavacAnnotationHandler<Synchronized> {
     private static final String INSTANCE_LOCK_NAME = "$lock";
     private static final String STATIC_LOCK_NAME = "$LOCK";

@@ -30,15 +30,15 @@ import p007b.p225i.p414e.p434s.p436c.FinderPattern2;
 import p007b.p225i.p414e.p434s.p436c.FinderPatternFinder;
 import p007b.p225i.p414e.p434s.p436c.FinderPatternInfo;
 
-/* compiled from: QRCodeReader.java */
-/* renamed from: b.i.e.s.a, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.e.s.a, reason: use source file name */
+/* JADX INFO: compiled from: QRCodeReader.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class QRCodeReader implements Reader {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final ResultPoint[] f13508a = new ResultPoint[0];
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final Decoder5 f13509b = new Decoder5();
 
     /* JADX WARN: Removed duplicated region for block: B:116:0x019f  */
@@ -47,7 +47,7 @@ public class QRCodeReader implements Reader {
     /* JADX WARN: Removed duplicated region for block: B:189:0x03bb  */
     /* JADX WARN: Removed duplicated region for block: B:190:0x03c7  */
     @Override // p007b.p225i.p414e.Reader
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */

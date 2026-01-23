@@ -20,60 +20,60 @@ import p007b.p225i.p226a.p287e.FlexContainer;
 import p007b.p225i.p226a.p287e.FlexLine;
 import p007b.p225i.p226a.p287e.FlexboxHelper;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public class FlexboxLayout extends ViewGroup implements FlexContainer {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public int f20291j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public int f20292k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public int f20293l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public int f20294m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public int f20295n;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public int f20296o;
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     @Nullable
     public Drawable f20297p;
 
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     @Nullable
     public Drawable f20298q;
 
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     public int f20299r;
 
-    /* renamed from: s */
+    /* JADX INFO: renamed from: s */
     public int f20300s;
 
-    /* renamed from: t */
+    /* JADX INFO: renamed from: t */
     public int f20301t;
 
-    /* renamed from: u */
+    /* JADX INFO: renamed from: u */
     public int f20302u;
 
-    /* renamed from: v */
+    /* JADX INFO: renamed from: v */
     public int[] f20303v;
 
-    /* renamed from: w */
+    /* JADX INFO: renamed from: w */
     public SparseIntArray f20304w;
 
-    /* renamed from: x */
+    /* JADX INFO: renamed from: x */
     public FlexboxHelper f20305x;
 
-    /* renamed from: y */
+    /* JADX INFO: renamed from: y */
     public List<FlexLine> f20306y;
 
-    /* renamed from: z */
+    /* JADX INFO: renamed from: z */
     public FlexboxHelper.b f20307z;
 
     public FlexboxLayout(Context context, AttributeSet attributeSet) {
@@ -119,7 +119,7 @@ public class FlexboxLayout extends ViewGroup implements FlexContainer {
     }
 
     @Override // p007b.p225i.p226a.p287e.FlexContainer
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public void mo3924a(View view, int i, int i2, FlexLine flexLine) {
         if (m8975p(i, i2)) {
             if (mo3932i()) {
@@ -166,7 +166,7 @@ public class FlexboxLayout extends ViewGroup implements FlexContainer {
     }
 
     @Override // p007b.p225i.p226a.p287e.FlexContainer
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public void mo3925b(FlexLine flexLine) {
         if (mo3932i()) {
             if ((this.f20300s & 4) > 0) {
@@ -187,7 +187,7 @@ public class FlexboxLayout extends ViewGroup implements FlexContainer {
     }
 
     @Override // p007b.p225i.p226a.p287e.FlexContainer
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public View mo3926c(int i) {
         return m8974o(i);
     }
@@ -198,24 +198,24 @@ public class FlexboxLayout extends ViewGroup implements FlexContainer {
     }
 
     @Override // p007b.p225i.p226a.p287e.FlexContainer
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public int mo3927d(int i, int i2, int i3) {
         return ViewGroup.getChildMeasureSpec(i, i2, i3);
     }
 
     @Override // p007b.p225i.p226a.p287e.FlexContainer
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public void mo3928e(int i, View view) {
     }
 
     @Override // p007b.p225i.p226a.p287e.FlexContainer
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public View mo3929f(int i) {
         return getChildAt(i);
     }
 
     @Override // p007b.p225i.p226a.p287e.FlexContainer
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public int mo3930g(View view, int i, int i2) {
         int i3;
         int i4;
@@ -335,25 +335,25 @@ public class FlexboxLayout extends ViewGroup implements FlexContainer {
     }
 
     @Override // p007b.p225i.p226a.p287e.FlexContainer
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public int mo3931h(int i, int i2, int i3) {
         return ViewGroup.getChildMeasureSpec(i, i2, i3);
     }
 
     @Override // p007b.p225i.p226a.p287e.FlexContainer
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public boolean mo3932i() {
         int i = this.f20291j;
         return i == 0 || i == 1;
     }
 
     @Override // p007b.p225i.p226a.p287e.FlexContainer
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public int mo3933j(View view) {
         return 0;
     }
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final void m8970k(Canvas canvas, boolean z2, boolean z3) {
         int paddingLeft = getPaddingLeft();
         int iMax = Math.max(0, (getWidth() - getPaddingRight()) - paddingLeft);
@@ -382,7 +382,7 @@ public class FlexboxLayout extends ViewGroup implements FlexContainer {
         }
     }
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final void m8971l(Canvas canvas, boolean z2, boolean z3) {
         int paddingTop = getPaddingTop();
         int iMax = Math.max(0, (getHeight() - getPaddingBottom()) - paddingTop);
@@ -411,7 +411,7 @@ public class FlexboxLayout extends ViewGroup implements FlexContainer {
         }
     }
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public final void m8972m(Canvas canvas, int i, int i2, int i3) {
         Drawable drawable = this.f20297p;
         if (drawable == null) {
@@ -421,7 +421,7 @@ public class FlexboxLayout extends ViewGroup implements FlexContainer {
         this.f20297p.draw(canvas);
     }
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public final void m8973n(Canvas canvas, int i, int i2, int i3) {
         Drawable drawable = this.f20298q;
         if (drawable == null) {
@@ -431,7 +431,7 @@ public class FlexboxLayout extends ViewGroup implements FlexContainer {
         this.f20298q.draw(canvas);
     }
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public View m8974o(int i) {
         if (i < 0) {
             return null;
@@ -579,7 +579,7 @@ public class FlexboxLayout extends ViewGroup implements FlexContainer {
         m8980u(this.f20291j, i, i2, this.f20307z.f9187b);
     }
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public final boolean m8975p(int i, int i2) {
         boolean z2;
         int i3 = 1;
@@ -598,7 +598,7 @@ public class FlexboxLayout extends ViewGroup implements FlexContainer {
         return z2 ? mo3932i() ? (this.f20300s & 1) != 0 : (this.f20299r & 1) != 0 : mo3932i() ? (this.f20300s & 2) != 0 : (this.f20299r & 2) != 0;
     }
 
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     public final boolean m8976q(int i) {
         boolean z2;
         if (i < 0 || i >= this.f20306y.size()) {
@@ -619,7 +619,7 @@ public class FlexboxLayout extends ViewGroup implements FlexContainer {
         return z2 ? mo3932i() ? (this.f20299r & 1) != 0 : (this.f20300s & 1) != 0 : mo3932i() ? (this.f20299r & 2) != 0 : (this.f20300s & 2) != 0;
     }
 
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     public final boolean m8977r(int i) {
         if (i < 0 || i >= this.f20306y.size()) {
             return false;
@@ -633,7 +633,7 @@ public class FlexboxLayout extends ViewGroup implements FlexContainer {
     }
 
     /* JADX WARN: Removed duplicated region for block: B:41:0x00d9  */
-    /* renamed from: s */
+    /* JADX INFO: renamed from: s */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
@@ -883,7 +883,7 @@ public class FlexboxLayout extends ViewGroup implements FlexContainer {
     }
 
     /* JADX WARN: Removed duplicated region for block: B:42:0x00d7  */
-    /* renamed from: t */
+    /* JADX INFO: renamed from: t */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
@@ -1024,7 +1024,7 @@ public class FlexboxLayout extends ViewGroup implements FlexContainer {
         }
     }
 
-    /* renamed from: u */
+    /* JADX INFO: renamed from: u */
     public final void m8980u(int i, int i2, int i3, int i4) {
         int paddingBottom;
         int largestMainSize;
@@ -1091,37 +1091,37 @@ public class FlexboxLayout extends ViewGroup implements FlexContainer {
     public static class LayoutParams extends ViewGroup.MarginLayoutParams implements FlexItem {
         public static final Parcelable.Creator<LayoutParams> CREATOR = new C10779a();
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public int f20308j;
 
-        /* renamed from: k */
+        /* JADX INFO: renamed from: k */
         public float f20309k;
 
-        /* renamed from: l */
+        /* JADX INFO: renamed from: l */
         public float f20310l;
 
-        /* renamed from: m */
+        /* JADX INFO: renamed from: m */
         public int f20311m;
 
-        /* renamed from: n */
+        /* JADX INFO: renamed from: n */
         public float f20312n;
 
-        /* renamed from: o */
+        /* JADX INFO: renamed from: o */
         public int f20313o;
 
-        /* renamed from: p */
+        /* JADX INFO: renamed from: p */
         public int f20314p;
 
-        /* renamed from: q */
+        /* JADX INFO: renamed from: q */
         public int f20315q;
 
-        /* renamed from: r */
+        /* JADX INFO: renamed from: r */
         public int f20316r;
 
-        /* renamed from: s */
+        /* JADX INFO: renamed from: s */
         public boolean f20317s;
 
-        /* renamed from: com.google.android.flexbox.FlexboxLayout$LayoutParams$a */
+        /* JADX INFO: renamed from: com.google.android.flexbox.FlexboxLayout$LayoutParams$a */
         public static class C10779a implements Parcelable.Creator<LayoutParams> {
             @Override // android.os.Parcelable.Creator
             public LayoutParams createFromParcel(Parcel parcel) {
@@ -1160,55 +1160,55 @@ public class FlexboxLayout extends ViewGroup implements FlexContainer {
         }
 
         @Override // com.google.android.flexbox.FlexItem
-        /* renamed from: D */
+        /* JADX INFO: renamed from: D */
         public int mo8955D() {
             return this.f20313o;
         }
 
         @Override // com.google.android.flexbox.FlexItem
-        /* renamed from: H */
+        /* JADX INFO: renamed from: H */
         public void mo8956H(int i) {
             this.f20313o = i;
         }
 
         @Override // com.google.android.flexbox.FlexItem
-        /* renamed from: I */
+        /* JADX INFO: renamed from: I */
         public int mo8957I() {
             return ((ViewGroup.MarginLayoutParams) this).bottomMargin;
         }
 
         @Override // com.google.android.flexbox.FlexItem
-        /* renamed from: J */
+        /* JADX INFO: renamed from: J */
         public int mo8958J() {
             return ((ViewGroup.MarginLayoutParams) this).leftMargin;
         }
 
         @Override // com.google.android.flexbox.FlexItem
-        /* renamed from: N */
+        /* JADX INFO: renamed from: N */
         public int mo8959N() {
             return ((ViewGroup.MarginLayoutParams) this).topMargin;
         }
 
         @Override // com.google.android.flexbox.FlexItem
-        /* renamed from: O */
+        /* JADX INFO: renamed from: O */
         public void mo8960O(int i) {
             this.f20314p = i;
         }
 
         @Override // com.google.android.flexbox.FlexItem
-        /* renamed from: S */
+        /* JADX INFO: renamed from: S */
         public float mo8961S() {
             return this.f20309k;
         }
 
         @Override // com.google.android.flexbox.FlexItem
-        /* renamed from: W */
+        /* JADX INFO: renamed from: W */
         public float mo8962W() {
             return this.f20312n;
         }
 
         @Override // com.google.android.flexbox.FlexItem
-        /* renamed from: d0 */
+        /* JADX INFO: renamed from: d0 */
         public int mo8963d0() {
             return ((ViewGroup.MarginLayoutParams) this).rightMargin;
         }
@@ -1219,7 +1219,7 @@ public class FlexboxLayout extends ViewGroup implements FlexContainer {
         }
 
         @Override // com.google.android.flexbox.FlexItem
-        /* renamed from: f0 */
+        /* JADX INFO: renamed from: f0 */
         public int mo8964f0() {
             return this.f20314p;
         }
@@ -1240,25 +1240,25 @@ public class FlexboxLayout extends ViewGroup implements FlexContainer {
         }
 
         @Override // com.google.android.flexbox.FlexItem
-        /* renamed from: j0 */
+        /* JADX INFO: renamed from: j0 */
         public boolean mo8965j0() {
             return this.f20317s;
         }
 
         @Override // com.google.android.flexbox.FlexItem
-        /* renamed from: m0 */
+        /* JADX INFO: renamed from: m0 */
         public int mo8966m0() {
             return this.f20316r;
         }
 
         @Override // com.google.android.flexbox.FlexItem
-        /* renamed from: t0 */
+        /* JADX INFO: renamed from: t0 */
         public int mo8967t0() {
             return this.f20315q;
         }
 
         @Override // com.google.android.flexbox.FlexItem
-        /* renamed from: u */
+        /* JADX INFO: renamed from: u */
         public int mo8968u() {
             return this.f20311m;
         }
@@ -1284,7 +1284,7 @@ public class FlexboxLayout extends ViewGroup implements FlexContainer {
         }
 
         @Override // com.google.android.flexbox.FlexItem
-        /* renamed from: x */
+        /* JADX INFO: renamed from: x */
         public float mo8969x() {
             return this.f20310l;
         }

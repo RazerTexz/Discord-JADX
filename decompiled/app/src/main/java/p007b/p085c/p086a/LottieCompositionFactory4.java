@@ -5,18 +5,18 @@ import android.content.res.Resources;
 import java.lang.ref.WeakReference;
 import java.util.concurrent.Callable;
 
-/* compiled from: LottieCompositionFactory.java */
-/* renamed from: b.c.a.h, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.c.a.h, reason: use source file name */
+/* JADX INFO: compiled from: LottieCompositionFactory.java */
+/* JADX INFO: loaded from: classes.dex */
 public class LottieCompositionFactory4 implements Callable<LottieResult<LottieComposition>> {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final /* synthetic */ WeakReference f2361j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final /* synthetic */ Context f2362k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final /* synthetic */ int f2363l;
 
     public LottieCompositionFactory4(WeakReference weakReference, Context context, int i) {

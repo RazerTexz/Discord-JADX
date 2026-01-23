@@ -8,8 +8,8 @@ import com.discord.api.science.AnalyticsSchema;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: TrackRelationshipSyncFlow.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: TrackRelationshipSyncFlow.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class TrackRelationshipSyncFlow implements AnalyticsSchema, TrackBase2, TrackLocationMetadata2 {
     private TrackBase trackBase;
     private TrackLocationMetadata trackLocationMetadata;
@@ -26,7 +26,7 @@ public final /* data */ class TrackRelationshipSyncFlow implements AnalyticsSche
     private final transient String analyticsSchemaTypeName = "relationship_sync_flow";
 
     @Override // com.discord.api.science.AnalyticsSchema
-    /* renamed from: d, reason: from getter */
+    /* JADX INFO: renamed from: d, reason: from getter */
     public String getAnalyticsSchemaTypeName() {
         return this.analyticsSchemaTypeName;
     }

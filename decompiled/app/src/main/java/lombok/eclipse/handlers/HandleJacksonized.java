@@ -24,8 +24,8 @@ import org.eclipse.jdt.internal.compiler.ast.StringLiteral;
 import org.eclipse.jdt.internal.compiler.ast.TypeDeclaration;
 import org.eclipse.jdt.internal.compiler.ast.TypeReference;
 
+/* JADX INFO: loaded from: discord-126021.apk:lombok/eclipse/handlers/HandleJacksonized.SCL.lombok */
 @HandlerPriority(-512)
-/* loaded from: discord-126021.apk:lombok/eclipse/handlers/HandleJacksonized.SCL.lombok */
 public class HandleJacksonized extends EclipseAnnotationHandler<Jacksonized> {
     private static final char[][] JSON_POJO_BUILDER_ANNOTATION = Eclipse.fromQualifiedName("com.fasterxml.jackson.databind.annotation.JsonPOJOBuilder");
     private static final char[][] JSON_DESERIALIZE_ANNOTATION = Eclipse.fromQualifiedName("com.fasterxml.jackson.databind.annotation.JsonDeserialize");
@@ -86,7 +86,7 @@ public class HandleJacksonized extends EclipseAnnotationHandler<Jacksonized> {
             annotationNode.addError("@JsonDeserialize already exists on class. Either delete @JsonDeserialize, or remove @Jacksonized and manually configure Jackson.");
             return;
         }
-        long p = (ast.sourceStart << 32) | ast.sourceEnd;
+        long p = (((long) ast.sourceStart) << 32) | ((long) ast.sourceEnd);
         TypeReference builderClassExpression = EclipseHandlerUtil.namePlusTypeParamsToTypeReference(builderClassNode, null, p);
         ClassLiteralAccess builderClassLiteralAccess = new ClassLiteralAccess(td.sourceEnd, builderClassExpression);
         td.annotations = EclipseHandlerUtil.addAnnotation(td, td.annotations, JSON_DESERIALIZE_ANNOTATION, new MemberValuePair("builder".toCharArray(), td.sourceStart, td.sourceEnd, builderClassLiteralAccess));

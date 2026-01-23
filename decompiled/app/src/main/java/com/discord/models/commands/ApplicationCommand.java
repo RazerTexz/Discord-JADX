@@ -6,8 +6,8 @@ import java.util.Map;
 import kotlin.jvm.functions.Function1;
 import kotlin.jvm.internal.DefaultConstructorMarker;
 
-/* compiled from: ApplicationCommand.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: ApplicationCommand.kt */
+/* JADX INFO: loaded from: classes.dex */
 public abstract class ApplicationCommand {
     private final long applicationId;
     private final boolean builtIn;

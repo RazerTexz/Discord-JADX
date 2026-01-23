@@ -11,22 +11,22 @@ import p007b.p195g.p196a.p198b.p203s.WritableTypeId;
 import p007b.p195g.p196a.p205c.SerializerProvider;
 import p007b.p195g.p196a.p205c.p212e0.TypeSerializer;
 
-/* compiled from: InetSocketAddressSerializer.java */
-/* renamed from: b.g.a.c.g0.u.q, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.g.a.c.g0.u.q, reason: use source file name */
+/* JADX INFO: compiled from: InetSocketAddressSerializer.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class InetSocketAddressSerializer extends StdScalarSerializer<InetSocketAddress> {
     public InetSocketAddressSerializer() {
         super(InetSocketAddress.class);
     }
 
     @Override // p007b.p195g.p196a.p205c.JsonSerializer
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public /* bridge */ /* synthetic */ void mo1807f(Object obj, JsonGenerator jsonGenerator, SerializerProvider serializerProvider) throws IOException {
         m2071p((InetSocketAddress) obj, jsonGenerator);
     }
 
     @Override // p007b.p195g.p196a.p205c.p215g0.p217u.StdScalarSerializer, p007b.p195g.p196a.p205c.JsonSerializer
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public void mo1808g(Object obj, JsonGenerator jsonGenerator, SerializerProvider serializerProvider, TypeSerializer typeSerializer) throws IOException {
         InetSocketAddress inetSocketAddress = (InetSocketAddress) obj;
         WritableTypeId writableTypeIdM1958d = typeSerializer.m1958d(inetSocketAddress, JsonToken2.VALUE_STRING);
@@ -36,7 +36,7 @@ public class InetSocketAddressSerializer extends StdScalarSerializer<InetSocketA
         typeSerializer.mo1960f(jsonGenerator, writableTypeIdMo1959e);
     }
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public void m2071p(InetSocketAddress inetSocketAddress, JsonGenerator jsonGenerator) throws IOException {
         String strSubstring;
         InetAddress address = inetSocketAddress.getAddress();

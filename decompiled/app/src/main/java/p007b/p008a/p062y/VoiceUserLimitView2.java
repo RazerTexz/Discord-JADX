@@ -8,9 +8,9 @@ import com.discord.views.VoiceUserLimitView;
 import kotlin.jvm.functions.Function0;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: VoiceUserLimitView.kt */
-/* renamed from: b.a.y.f0, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: b.a.y.f0, reason: use source file name */
+/* JADX INFO: compiled from: VoiceUserLimitView.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class VoiceUserLimitView2 extends Lambda implements Function0<Drawable> {
     public final /* synthetic */ VoiceUserLimitView this$0;
 

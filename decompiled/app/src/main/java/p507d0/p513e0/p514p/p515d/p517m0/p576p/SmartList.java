@@ -9,22 +9,22 @@ import java.util.NoSuchElementException;
 import java.util.RandomAccess;
 import p007b.p100d.p104b.p105a.outline;
 
-/* compiled from: SmartList.java */
-/* renamed from: d0.e0.p.d.m0.p.i, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.p.i, reason: use source file name */
+/* JADX INFO: compiled from: SmartList.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class SmartList<E> extends AbstractList<E> implements RandomAccess {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public int f24997j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public Object f24998k;
 
-    /* compiled from: SmartList.java */
-    /* renamed from: d0.e0.p.d.m0.p.i$b */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.p.i$b */
+    /* JADX INFO: compiled from: SmartList.java */
     public static class b<T> implements Iterator<T> {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public static final b f24999j = new b();
 
         public static <T> b<T> getInstance() {
@@ -47,11 +47,11 @@ public class SmartList<E> extends AbstractList<E> implements RandomAccess {
         }
     }
 
-    /* compiled from: SmartList.java */
-    /* renamed from: d0.e0.p.d.m0.p.i$c */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.p.i$c */
+    /* JADX INFO: compiled from: SmartList.java */
     public class c extends d<E> {
 
-        /* renamed from: k */
+        /* JADX INFO: renamed from: k */
         public final int f25000k;
 
         public c() {
@@ -60,7 +60,7 @@ public class SmartList<E> extends AbstractList<E> implements RandomAccess {
         }
 
         @Override // p507d0.p513e0.p514p.p515d.p517m0.p576p.SmartList.d
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public void mo10048a() {
             if (SmartList.m10046e(SmartList.this) == this.f25000k) {
                 return;
@@ -79,17 +79,17 @@ public class SmartList<E> extends AbstractList<E> implements RandomAccess {
         }
     }
 
-    /* compiled from: SmartList.java */
-    /* renamed from: d0.e0.p.d.m0.p.i$d */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.p.i$d */
+    /* JADX INFO: compiled from: SmartList.java */
     public static abstract class d<T> implements Iterator<T> {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public boolean f25002j;
 
         public d(a aVar) {
         }
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public abstract void mo10048a();
 
         @Override // java.util.Iterator
@@ -108,7 +108,7 @@ public class SmartList<E> extends AbstractList<E> implements RandomAccess {
         }
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public static /* synthetic */ void m10044c(int i) {
         String str = (i == 2 || i == 3 || i == 5 || i == 6 || i == 7) ? "@NotNull method %s.%s must not return null" : "Argument for @NotNull parameter '%s' of %s.%s must not be null";
         Object[] objArr = new Object[(i == 2 || i == 3 || i == 5 || i == 6 || i == 7) ? 2 : 3];
@@ -155,17 +155,17 @@ public class SmartList<E> extends AbstractList<E> implements RandomAccess {
         throw new IllegalStateException(str2);
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public static /* synthetic */ int m10045d(SmartList smartList) {
         return ((AbstractList) smartList).modCount;
     }
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public static /* synthetic */ int m10046e(SmartList smartList) {
         return ((AbstractList) smartList).modCount;
     }
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public static /* synthetic */ int m10047g(SmartList smartList) {
         return ((AbstractList) smartList).modCount;
     }

@@ -2,8 +2,8 @@ package androidx.sharetarget;
 
 import androidx.annotation.RestrictTo;
 
+/* JADX INFO: loaded from: classes.dex */
 @RestrictTo({RestrictTo.Scope.LIBRARY_GROUP_PREFIX})
-/* loaded from: classes.dex */
 public class ShareTargetCompat {
     public final String[] mCategories;
     public final String mTargetClass;

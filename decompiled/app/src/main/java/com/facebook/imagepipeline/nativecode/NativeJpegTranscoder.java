@@ -18,17 +18,17 @@ import p007b.p109f.p161j.p184s.ImageTranscodeResult;
 import p007b.p109f.p161j.p184s.ImageTranscoder;
 import p007b.p109f.p161j.p184s.JpegTranscoderUtils;
 
+/* JADX INFO: loaded from: classes3.dex */
 @DoNotStrip
-/* loaded from: classes3.dex */
 public class NativeJpegTranscoder implements ImageTranscoder {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public boolean f19568a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public int f19569b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public boolean f19570c;
 
     public NativeJpegTranscoder(boolean z2, int i, boolean z3, boolean z4) {
@@ -41,7 +41,7 @@ public class NativeJpegTranscoder implements ImageTranscoder {
     }
 
     @VisibleForTesting
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public static void m8713e(InputStream inputStream, OutputStream outputStream, int i, int i2, int i3) throws IOException {
         AnimatableValueParser.m512e0();
         AnimatableValueParser.m527i(Boolean.valueOf(i2 >= 1));
@@ -56,7 +56,7 @@ public class NativeJpegTranscoder implements ImageTranscoder {
     }
 
     @VisibleForTesting
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public static void m8714f(InputStream inputStream, OutputStream outputStream, int i, int i2, int i3) throws IOException {
         boolean z2;
         AnimatableValueParser.m512e0();
@@ -93,13 +93,13 @@ public class NativeJpegTranscoder implements ImageTranscoder {
     private static native void nativeTranscodeJpegWithExifOrientation(InputStream inputStream, OutputStream outputStream, int i, int i2, int i3) throws IOException;
 
     @Override // p007b.p109f.p161j.p184s.ImageTranscoder
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public String mo1528a() {
         return "NativeJpegTranscoder";
     }
 
     @Override // p007b.p109f.p161j.p184s.ImageTranscoder
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public boolean mo1529b(EncodedImage2 encodedImage2, RotationOptions rotationOptions, ResizeOptions resizeOptions) {
         if (rotationOptions == null) {
             rotationOptions = RotationOptions.f3721a;
@@ -108,7 +108,7 @@ public class NativeJpegTranscoder implements ImageTranscoder {
     }
 
     @Override // p007b.p109f.p161j.p184s.ImageTranscoder
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public ImageTranscodeResult mo1530c(EncodedImage2 encodedImage2, OutputStream outputStream, RotationOptions rotationOptions, ResizeOptions resizeOptions, ImageFormat imageFormat, Integer num) throws IOException {
         if (num == null) {
             num = 85;
@@ -144,7 +144,7 @@ public class NativeJpegTranscoder implements ImageTranscoder {
     }
 
     @Override // p007b.p109f.p161j.p184s.ImageTranscoder
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public boolean mo1531d(ImageFormat imageFormat) {
         return imageFormat == DefaultImageFormats.f3585a;
     }

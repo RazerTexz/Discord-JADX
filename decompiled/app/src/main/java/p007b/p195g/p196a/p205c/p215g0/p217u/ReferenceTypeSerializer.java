@@ -20,9 +20,9 @@ import p007b.p195g.p196a.p205c.p218h0.ReferenceType;
 import p007b.p195g.p196a.p205c.p219i0.NameTransformer4;
 import p007b.p195g.p196a.p205c.p220y.JsonSerialize;
 
-/* compiled from: ReferenceTypeSerializer.java */
-/* renamed from: b.g.a.c.g0.u.f0, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.g.a.c.g0.u.f0, reason: use source file name */
+/* JADX INFO: compiled from: ReferenceTypeSerializer.java */
+/* JADX INFO: loaded from: classes3.dex */
 public abstract class ReferenceTypeSerializer<T> extends StdSerializer<T> implements ContextualSerializer {
     private static final long serialVersionUID = 1;
     public final BeanProperty _property;
@@ -33,7 +33,7 @@ public abstract class ReferenceTypeSerializer<T> extends StdSerializer<T> implem
     public final JsonSerializer<Object> _valueSerializer;
     public final TypeSerializer _valueTypeSerializer;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public transient PropertySerializerMap f4852k;
 
     public ReferenceTypeSerializer(ReferenceType referenceType, TypeSerializer typeSerializer, JsonSerializer jsonSerializer) {
@@ -53,7 +53,7 @@ public abstract class ReferenceTypeSerializer<T> extends StdSerializer<T> implem
     /* JADX WARN: Removed duplicated region for block: B:39:0x006a  */
     /* JADX WARN: Removed duplicated region for block: B:78:0x00de  */
     @Override // p007b.p195g.p196a.p205c.p215g0.ContextualSerializer
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
@@ -140,7 +140,7 @@ public abstract class ReferenceTypeSerializer<T> extends StdSerializer<T> implem
     }
 
     @Override // p007b.p195g.p196a.p205c.JsonSerializer
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public boolean mo2021d(SerializerProvider serializerProvider, T t) {
         if (!mo2048s(t)) {
             return true;
@@ -165,13 +165,13 @@ public abstract class ReferenceTypeSerializer<T> extends StdSerializer<T> implem
     }
 
     @Override // p007b.p195g.p196a.p205c.JsonSerializer
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public boolean mo2058e() {
         return this._unwrapper != null;
     }
 
     @Override // p007b.p195g.p196a.p205c.JsonSerializer
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public void mo1807f(T t, JsonGenerator jsonGenerator, SerializerProvider serializerProvider) throws IOException {
         Object objMo2047r = mo2047r(t);
         if (objMo2047r == null) {
@@ -194,7 +194,7 @@ public abstract class ReferenceTypeSerializer<T> extends StdSerializer<T> implem
     }
 
     @Override // p007b.p195g.p196a.p205c.JsonSerializer
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public void mo1808g(T t, JsonGenerator jsonGenerator, SerializerProvider serializerProvider, TypeSerializer typeSerializer) throws IOException {
         Object objMo2047r = mo2047r(t);
         if (objMo2047r == null) {
@@ -211,7 +211,7 @@ public abstract class ReferenceTypeSerializer<T> extends StdSerializer<T> implem
     }
 
     @Override // p007b.p195g.p196a.p205c.JsonSerializer
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public JsonSerializer<T> mo1984h(NameTransformer4 nameTransformer4) {
         JsonSerializer<?> jsonSerializerMo1984h = this._valueSerializer;
         if (jsonSerializerMo1984h != null && (jsonSerializerMo1984h = jsonSerializerMo1984h.mo1984h(nameTransformer4)) == this._valueSerializer) {
@@ -224,7 +224,7 @@ public abstract class ReferenceTypeSerializer<T> extends StdSerializer<T> implem
         return (this._valueSerializer == jsonSerializerMo1984h && nameTransformer42 == nameTransformer4) ? this : mo2050u(this._property, this._valueTypeSerializer, jsonSerializerMo1984h, nameTransformer4);
     }
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public final JsonSerializer<Object> m2059p(SerializerProvider serializerProvider, Class<?> cls) throws JsonMappingException {
         JsonSerializer<Object> jsonSerializerMo2034c = this.f4852k.mo2034c(cls);
         if (jsonSerializerMo2034c != null) {
@@ -240,19 +240,19 @@ public abstract class ReferenceTypeSerializer<T> extends StdSerializer<T> implem
         return jsonSerializer;
     }
 
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     public abstract Object mo2046q(T t);
 
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     public abstract Object mo2047r(T t);
 
-    /* renamed from: s */
+    /* JADX INFO: renamed from: s */
     public abstract boolean mo2048s(T t);
 
-    /* renamed from: t */
+    /* JADX INFO: renamed from: t */
     public abstract ReferenceTypeSerializer<T> mo2049t(Object obj, boolean z2);
 
-    /* renamed from: u */
+    /* JADX INFO: renamed from: u */
     public abstract ReferenceTypeSerializer<T> mo2050u(BeanProperty beanProperty, TypeSerializer typeSerializer, JsonSerializer<?> jsonSerializer, NameTransformer4 nameTransformer4);
 
     public ReferenceTypeSerializer(ReferenceTypeSerializer<?> referenceTypeSerializer, BeanProperty beanProperty, TypeSerializer typeSerializer, JsonSerializer<?> jsonSerializer, NameTransformer4 nameTransformer4, Object obj, boolean z2) {

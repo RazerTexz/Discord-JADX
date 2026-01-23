@@ -7,20 +7,20 @@ import androidx.annotation.MainThread;
 import com.discord.rtcconnection.enums.BluetoothHeadsetAudioState;
 import com.discord.rtcconnection.enums.BluetoothProfileConnectionState;
 
-/* compiled from: OnBluetoothBroadcastListener.kt */
+/* JADX INFO: renamed from: b.a.q.k0.i, reason: use source file name */
+/* JADX INFO: compiled from: OnBluetoothBroadcastListener.kt */
+/* JADX INFO: loaded from: classes.dex */
 @MainThread
-/* renamed from: b.a.q.k0.i, reason: use source file name */
-/* loaded from: classes.dex */
 public interface OnBluetoothBroadcastListener {
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     void mo286a(Context context, BluetoothHeadsetAudioState.C5633b c5633b);
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     void mo287b(BluetoothDevice bluetoothDevice);
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     void mo288c(BluetoothHeadset bluetoothHeadset);
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     void mo289d(Context context, BluetoothProfileConnectionState.C5635b c5635b);
 }

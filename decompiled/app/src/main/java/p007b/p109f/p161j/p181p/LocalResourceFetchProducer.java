@@ -10,12 +10,12 @@ import java.util.concurrent.Executor;
 import p007b.p109f.p115d.p122g.PooledByteBufferFactory;
 import p007b.p109f.p161j.p175j.EncodedImage2;
 
-/* compiled from: LocalResourceFetchProducer.java */
-/* renamed from: b.f.j.p.i0, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.f.j.p.i0, reason: use source file name */
+/* JADX INFO: compiled from: LocalResourceFetchProducer.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class LocalResourceFetchProducer extends LocalFetchProducer {
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final Resources f4081c;
 
     public LocalResourceFetchProducer(Executor executor, PooledByteBufferFactory pooledByteBufferFactory, Resources resources) {
@@ -23,9 +23,13 @@ public class LocalResourceFetchProducer extends LocalFetchProducer {
         this.f4081c = resources;
     }
 
+    /* JADX WARN: Can't wrap try/catch for region: R(8:0|2|(3:20|3|4)|16|11|12|13|(1:(0))) */
     @Override // p007b.p109f.p161j.p181p.LocalFetchProducer
-    /* renamed from: d */
-    public EncodedImage2 mo1428d(ImageRequest imageRequest) throws Resources.NotFoundException, IOException {
+    /* JADX INFO: renamed from: d */
+    /*
+        Code decompiled incorrectly, please refer to instructions dump.
+    */
+    public EncodedImage2 mo1428d(ImageRequest imageRequest) throws IOException {
         int length;
         Resources resources = this.f4081c;
         String path = imageRequest.f19585c.getPath();
@@ -42,6 +46,7 @@ public class LocalResourceFetchProducer extends LocalFetchProducer {
             length = -1;
             if (assetFileDescriptorOpenRawResourceFd != null) {
             }
+            return m1478c(inputStreamOpenRawResource, length);
         } catch (Throwable th) {
             if (assetFileDescriptorOpenRawResourceFd != null) {
                 try {
@@ -51,15 +56,12 @@ public class LocalResourceFetchProducer extends LocalFetchProducer {
             }
             throw th;
         }
-        try {
-            assetFileDescriptorOpenRawResourceFd.close();
-        } catch (IOException unused3) {
-        }
+        assetFileDescriptorOpenRawResourceFd.close();
         return m1478c(inputStreamOpenRawResource, length);
     }
 
     @Override // p007b.p109f.p161j.p181p.LocalFetchProducer
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public String mo1429e() {
         return "LocalResourceFetchProducer";
     }

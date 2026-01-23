@@ -9,53 +9,53 @@ import java.util.logging.Logger;
 import p007b.p100d.p104b.p105a.outline;
 import sun.misc.Unsafe;
 
-/* compiled from: com.google.android.gms:play-services-measurement-base@@18.0.0 */
-/* renamed from: b.i.a.f.h.l.j7 */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.h.l.j7 */
+/* JADX INFO: compiled from: com.google.android.gms:play-services-measurement-base@@18.0.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public final class C3711j7 {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final Unsafe f10032a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static final Class<?> f10033b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public static final boolean f10034c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public static final boolean f10035d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public static final c f10036e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public static final boolean f10037f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public static final boolean f10038g;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public static final long f10039h;
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public static final boolean f10040i;
 
-    /* compiled from: com.google.android.gms:play-services-measurement-base@@18.0.0 */
-    /* renamed from: b.i.a.f.h.l.j7$a */
+    /* JADX INFO: renamed from: b.i.a.f.h.l.j7$a */
+    /* JADX INFO: compiled from: com.google.android.gms:play-services-measurement-base@@18.0.0 */
     public static final class a extends c {
         public a(Unsafe unsafe) {
             super(unsafe);
         }
 
         @Override // p007b.p225i.p226a.p288f.p313h.p325l.C3711j7.c
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final byte mo4997a(Object obj, long j) {
             return C3711j7.f10040i ? C3711j7.m4995t(obj, j) : C3711j7.m4996u(obj, j);
         }
 
         @Override // p007b.p225i.p226a.p288f.p313h.p325l.C3711j7.c
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final void mo4998b(Object obj, long j, byte b2) {
             if (C3711j7.f10040i) {
                 C3711j7.m4987l(obj, j, b2);
@@ -65,19 +65,19 @@ public final class C3711j7 {
         }
 
         @Override // p007b.p225i.p226a.p288f.p313h.p325l.C3711j7.c
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public final void mo4999c(Object obj, long j, double d) {
             m5006f(obj, j, Double.doubleToLongBits(d));
         }
 
         @Override // p007b.p225i.p226a.p288f.p313h.p325l.C3711j7.c
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         public final void mo5000d(Object obj, long j, float f) {
             m5005e(obj, j, Float.floatToIntBits(f));
         }
 
         @Override // p007b.p225i.p226a.p288f.p313h.p325l.C3711j7.c
-        /* renamed from: g */
+        /* JADX INFO: renamed from: g */
         public final void mo5001g(Object obj, long j, boolean z2) {
             if (C3711j7.f10040i) {
                 C3711j7.m4987l(obj, j, z2 ? (byte) 1 : (byte) 0);
@@ -87,39 +87,39 @@ public final class C3711j7 {
         }
 
         @Override // p007b.p225i.p226a.p288f.p313h.p325l.C3711j7.c
-        /* renamed from: h */
+        /* JADX INFO: renamed from: h */
         public final boolean mo5002h(Object obj, long j) {
             return C3711j7.f10040i ? C3711j7.m4995t(obj, j) != 0 : C3711j7.m4996u(obj, j) != 0;
         }
 
         @Override // p007b.p225i.p226a.p288f.p313h.p325l.C3711j7.c
-        /* renamed from: i */
+        /* JADX INFO: renamed from: i */
         public final float mo5003i(Object obj, long j) {
             return Float.intBitsToFloat(m5007k(obj, j));
         }
 
         @Override // p007b.p225i.p226a.p288f.p313h.p325l.C3711j7.c
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public final double mo5004j(Object obj, long j) {
             return Double.longBitsToDouble(m5008l(obj, j));
         }
     }
 
-    /* compiled from: com.google.android.gms:play-services-measurement-base@@18.0.0 */
-    /* renamed from: b.i.a.f.h.l.j7$b */
+    /* JADX INFO: renamed from: b.i.a.f.h.l.j7$b */
+    /* JADX INFO: compiled from: com.google.android.gms:play-services-measurement-base@@18.0.0 */
     public static final class b extends c {
         public b(Unsafe unsafe) {
             super(unsafe);
         }
 
         @Override // p007b.p225i.p226a.p288f.p313h.p325l.C3711j7.c
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final byte mo4997a(Object obj, long j) {
             return C3711j7.f10040i ? C3711j7.m4995t(obj, j) : C3711j7.m4996u(obj, j);
         }
 
         @Override // p007b.p225i.p226a.p288f.p313h.p325l.C3711j7.c
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final void mo4998b(Object obj, long j, byte b2) {
             if (C3711j7.f10040i) {
                 C3711j7.m4987l(obj, j, b2);
@@ -129,19 +129,19 @@ public final class C3711j7 {
         }
 
         @Override // p007b.p225i.p226a.p288f.p313h.p325l.C3711j7.c
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public final void mo4999c(Object obj, long j, double d) {
             m5006f(obj, j, Double.doubleToLongBits(d));
         }
 
         @Override // p007b.p225i.p226a.p288f.p313h.p325l.C3711j7.c
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         public final void mo5000d(Object obj, long j, float f) {
             m5005e(obj, j, Float.floatToIntBits(f));
         }
 
         @Override // p007b.p225i.p226a.p288f.p313h.p325l.C3711j7.c
-        /* renamed from: g */
+        /* JADX INFO: renamed from: g */
         public final void mo5001g(Object obj, long j, boolean z2) {
             if (C3711j7.f10040i) {
                 C3711j7.m4987l(obj, j, z2 ? (byte) 1 : (byte) 0);
@@ -151,149 +151,143 @@ public final class C3711j7 {
         }
 
         @Override // p007b.p225i.p226a.p288f.p313h.p325l.C3711j7.c
-        /* renamed from: h */
+        /* JADX INFO: renamed from: h */
         public final boolean mo5002h(Object obj, long j) {
             return C3711j7.f10040i ? C3711j7.m4995t(obj, j) != 0 : C3711j7.m4996u(obj, j) != 0;
         }
 
         @Override // p007b.p225i.p226a.p288f.p313h.p325l.C3711j7.c
-        /* renamed from: i */
+        /* JADX INFO: renamed from: i */
         public final float mo5003i(Object obj, long j) {
             return Float.intBitsToFloat(m5007k(obj, j));
         }
 
         @Override // p007b.p225i.p226a.p288f.p313h.p325l.C3711j7.c
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public final double mo5004j(Object obj, long j) {
             return Double.longBitsToDouble(m5008l(obj, j));
         }
     }
 
-    /* compiled from: com.google.android.gms:play-services-measurement-base@@18.0.0 */
-    /* renamed from: b.i.a.f.h.l.j7$c */
+    /* JADX INFO: renamed from: b.i.a.f.h.l.j7$c */
+    /* JADX INFO: compiled from: com.google.android.gms:play-services-measurement-base@@18.0.0 */
     public static abstract class c {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public Unsafe f10041a;
 
         public c(Unsafe unsafe) {
             this.f10041a = unsafe;
         }
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public abstract byte mo4997a(Object obj, long j);
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public abstract void mo4998b(Object obj, long j, byte b2);
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public abstract void mo4999c(Object obj, long j, double d);
 
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         public abstract void mo5000d(Object obj, long j, float f);
 
-        /* renamed from: e */
+        /* JADX INFO: renamed from: e */
         public final void m5005e(Object obj, long j, int i) {
             this.f10041a.putInt(obj, j, i);
         }
 
-        /* renamed from: f */
+        /* JADX INFO: renamed from: f */
         public final void m5006f(Object obj, long j, long j2) {
             this.f10041a.putLong(obj, j, j2);
         }
 
-        /* renamed from: g */
+        /* JADX INFO: renamed from: g */
         public abstract void mo5001g(Object obj, long j, boolean z2);
 
-        /* renamed from: h */
+        /* JADX INFO: renamed from: h */
         public abstract boolean mo5002h(Object obj, long j);
 
-        /* renamed from: i */
+        /* JADX INFO: renamed from: i */
         public abstract float mo5003i(Object obj, long j);
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public abstract double mo5004j(Object obj, long j);
 
-        /* renamed from: k */
+        /* JADX INFO: renamed from: k */
         public final int m5007k(Object obj, long j) {
             return this.f10041a.getInt(obj, j);
         }
 
-        /* renamed from: l */
+        /* JADX INFO: renamed from: l */
         public final long m5008l(Object obj, long j) {
             return this.f10041a.getLong(obj, j);
         }
     }
 
-    /* compiled from: com.google.android.gms:play-services-measurement-base@@18.0.0 */
-    /* renamed from: b.i.a.f.h.l.j7$d */
+    /* JADX INFO: renamed from: b.i.a.f.h.l.j7$d */
+    /* JADX INFO: compiled from: com.google.android.gms:play-services-measurement-base@@18.0.0 */
     public static final class d extends c {
         public d(Unsafe unsafe) {
             super(unsafe);
         }
 
         @Override // p007b.p225i.p226a.p288f.p313h.p325l.C3711j7.c
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final byte mo4997a(Object obj, long j) {
             return this.f10041a.getByte(obj, j);
         }
 
         @Override // p007b.p225i.p226a.p288f.p313h.p325l.C3711j7.c
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final void mo4998b(Object obj, long j, byte b2) {
             this.f10041a.putByte(obj, j, b2);
         }
 
         @Override // p007b.p225i.p226a.p288f.p313h.p325l.C3711j7.c
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public final void mo4999c(Object obj, long j, double d) {
             this.f10041a.putDouble(obj, j, d);
         }
 
         @Override // p007b.p225i.p226a.p288f.p313h.p325l.C3711j7.c
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         public final void mo5000d(Object obj, long j, float f) {
             this.f10041a.putFloat(obj, j, f);
         }
 
         @Override // p007b.p225i.p226a.p288f.p313h.p325l.C3711j7.c
-        /* renamed from: g */
+        /* JADX INFO: renamed from: g */
         public final void mo5001g(Object obj, long j, boolean z2) {
             this.f10041a.putBoolean(obj, j, z2);
         }
 
         @Override // p007b.p225i.p226a.p288f.p313h.p325l.C3711j7.c
-        /* renamed from: h */
+        /* JADX INFO: renamed from: h */
         public final boolean mo5002h(Object obj, long j) {
             return this.f10041a.getBoolean(obj, j);
         }
 
         @Override // p007b.p225i.p226a.p288f.p313h.p325l.C3711j7.c
-        /* renamed from: i */
+        /* JADX INFO: renamed from: i */
         public final float mo5003i(Object obj, long j) {
             return this.f10041a.getFloat(obj, j);
         }
 
         @Override // p007b.p225i.p226a.p288f.p313h.p325l.C3711j7.c
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public final double mo5004j(Object obj, long j) {
             return this.f10041a.getDouble(obj, j);
         }
     }
 
-    /* JADX WARN: Removed duplicated region for block: B:33:0x0120  */
-    /* JADX WARN: Removed duplicated region for block: B:59:0x026f  */
-    /* JADX WARN: Removed duplicated region for block: B:66:0x0282  */
-    /* JADX WARN: Removed duplicated region for block: B:71:0x0122 A[EXC_TOP_SPLITTER, SYNTHETIC] */
     static {
         String str;
         Class<?> cls;
         boolean z2;
-        Unsafe unsafe;
         boolean z3;
         boolean z4;
         boolean z5;
-        Field fieldM4994s;
         c cVar;
         Unsafe unsafeM4986k = m4986k();
         f10032a = unsafeM4986k;
@@ -354,39 +348,19 @@ public final class C3711j7 {
                         String strValueOf = String.valueOf(th);
                         logger.logp(level, "com.google.protobuf.UnsafeUtil", "supportsUnsafeByteBufferOperations", outline.m857j(strValueOf.length() + 71, "platform method missing - proto runtime falling back to safer methods: ", strValueOf));
                         z2 = false;
-                        f10037f = z2;
-                        unsafe = f10032a;
-                        if (unsafe != null) {
-                        }
-                        z5 = true;
-                        f10038g = z4;
-                        f10039h = m4983h(byte[].class);
-                        m4983h(boolean[].class);
-                        m4985j(boolean[].class);
-                        m4983h(int[].class);
-                        m4985j(int[].class);
-                        m4983h(long[].class);
-                        m4985j(long[].class);
-                        m4983h(float[].class);
-                        m4985j(float[].class);
-                        m4983h(double[].class);
-                        m4985j(double[].class);
-                        m4983h(Object[].class);
-                        m4985j(Object[].class);
-                        fieldM4994s = m4994s();
-                        if (fieldM4994s != null) {
-                        }
-                        if (ByteOrder.nativeOrder() != ByteOrder.BIG_ENDIAN) {
-                        }
-                        f10040i = z5;
                     }
                 }
                 z2 = true;
             }
+            Logger logger2 = Logger.getLogger(C3711j7.class.getName());
+            Level level2 = Level.WARNING;
+            String strValueOf2 = String.valueOf(th);
+            logger2.logp(level2, "com.google.protobuf.UnsafeUtil", "supportsUnsafeByteBufferOperations", outline.m857j(strValueOf2.length() + 71, "platform method missing - proto runtime falling back to safer methods: ", strValueOf2));
+            z2 = false;
         }
         f10037f = z2;
-        unsafe = f10032a;
-        if (unsafe != null) {
+        Unsafe unsafe = f10032a;
+        if (unsafe == null) {
             z4 = false;
         } else {
             try {
@@ -442,33 +416,12 @@ public final class C3711j7 {
                 } catch (Throwable th3) {
                     th = th3;
                     z3 = z6;
-                    Logger logger2 = Logger.getLogger(C3711j7.class.getName());
-                    Level level2 = Level.WARNING;
-                    String strValueOf2 = String.valueOf(th);
-                    logger2.logp(level2, "com.google.protobuf.UnsafeUtil", "supportsUnsafeArrayOperations", outline.m857j(strValueOf2.length() + 71, "platform method missing - proto runtime falling back to safer methods: ", strValueOf2));
+                    Logger logger3 = Logger.getLogger(C3711j7.class.getName());
+                    Level level3 = Level.WARNING;
+                    String strValueOf3 = String.valueOf(th);
+                    logger3.logp(level3, "com.google.protobuf.UnsafeUtil", "supportsUnsafeArrayOperations", outline.m857j(strValueOf3.length() + 71, "platform method missing - proto runtime falling back to safer methods: ", strValueOf3));
                     z4 = false;
                     z5 = z3;
-                    f10038g = z4;
-                    f10039h = m4983h(byte[].class);
-                    m4983h(boolean[].class);
-                    m4985j(boolean[].class);
-                    m4983h(int[].class);
-                    m4985j(int[].class);
-                    m4983h(long[].class);
-                    m4985j(long[].class);
-                    m4983h(float[].class);
-                    m4985j(float[].class);
-                    m4983h(double[].class);
-                    m4985j(double[].class);
-                    m4983h(Object[].class);
-                    m4985j(Object[].class);
-                    fieldM4994s = m4994s();
-                    if (fieldM4994s != null) {
-                        cVar.f10041a.objectFieldOffset(fieldM4994s);
-                    }
-                    if (ByteOrder.nativeOrder() != ByteOrder.BIG_ENDIAN) {
-                    }
-                    f10040i = z5;
                 }
             } catch (Throwable th4) {
                 th = th4;
@@ -490,7 +443,7 @@ public final class C3711j7 {
         m4985j(double[].class);
         m4983h(Object[].class);
         m4985j(Object[].class);
-        fieldM4994s = m4994s();
+        Field fieldM4994s = m4994s();
         if (fieldM4994s != null && (cVar = f10036e) != null) {
             cVar.f10041a.objectFieldOffset(fieldM4994s);
         }
@@ -500,17 +453,17 @@ public final class C3711j7 {
         f10040i = z5;
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static byte m4976a(byte[] bArr, long j) {
         return f10036e.mo4997a(bArr, f10039h + j);
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static int m4977b(Object obj, long j) {
         return f10036e.m5007k(obj, j);
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public static <T> T m4978c(Class<T> cls) {
         try {
             return (T) f10032a.allocateInstance(cls);
@@ -519,27 +472,27 @@ public final class C3711j7 {
         }
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public static void m4979d(Object obj, long j, double d2) {
         f10036e.mo4999c(obj, j, d2);
     }
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public static void m4980e(Object obj, long j, long j2) {
         f10036e.m5006f(obj, j, j2);
     }
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public static void m4981f(Object obj, long j, Object obj2) {
         f10036e.f10041a.putObject(obj, j, obj2);
     }
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public static void m4982g(byte[] bArr, long j, byte b2) {
         f10036e.mo4998b(bArr, f10039h + j, b2);
     }
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public static int m4983h(Class<?> cls) {
         if (f10038g) {
             return f10036e.f10041a.arrayBaseOffset(cls);
@@ -547,12 +500,12 @@ public final class C3711j7 {
         return -1;
     }
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public static long m4984i(Object obj, long j) {
         return f10036e.m5008l(obj, j);
     }
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static int m4985j(Class<?> cls) {
         if (f10038g) {
             return f10036e.f10041a.arrayIndexScale(cls);
@@ -560,7 +513,7 @@ public final class C3711j7 {
         return -1;
     }
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public static Unsafe m4986k() {
         try {
             return (Unsafe) AccessController.doPrivileged(new C3697i7());
@@ -569,7 +522,7 @@ public final class C3711j7 {
         }
     }
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public static void m4987l(Object obj, long j, byte b2) {
         long j2 = (-4) & j;
         int iM4977b = m4977b(obj, j2);
@@ -577,24 +530,24 @@ public final class C3711j7 {
         f10036e.m5005e(obj, j2, ((255 & b2) << i) | (iM4977b & (~(255 << i))));
     }
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public static boolean m4988m(Object obj, long j) {
         return f10036e.mo5002h(obj, j);
     }
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public static float m4989n(Object obj, long j) {
         return f10036e.mo5003i(obj, j);
     }
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public static void m4990o(Object obj, long j, byte b2) {
         long j2 = (-4) & j;
         int i = (((int) j) & 3) << 3;
         f10036e.m5005e(obj, j2, ((255 & b2) << i) | (m4977b(obj, j2) & (~(255 << i))));
     }
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public static boolean m4991p(Class<?> cls) {
         if (!C3798q3.m5185a()) {
             return false;
@@ -617,17 +570,17 @@ public final class C3711j7 {
         }
     }
 
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     public static double m4992q(Object obj, long j) {
         return f10036e.mo5004j(obj, j);
     }
 
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     public static Object m4993r(Object obj, long j) {
         return f10036e.f10041a.getObject(obj, j);
     }
 
-    /* renamed from: s */
+    /* JADX INFO: renamed from: s */
     public static Field m4994s() {
         Field declaredField;
         Field declaredField2;
@@ -652,12 +605,12 @@ public final class C3711j7 {
         return declaredField;
     }
 
-    /* renamed from: t */
+    /* JADX INFO: renamed from: t */
     public static byte m4995t(Object obj, long j) {
         return (byte) (m4977b(obj, (-4) & j) >>> ((int) (((~j) & 3) << 3)));
     }
 
-    /* renamed from: u */
+    /* JADX INFO: renamed from: u */
     public static byte m4996u(Object obj, long j) {
         return (byte) (m4977b(obj, (-4) & j) >>> ((int) ((j & 3) << 3)));
     }

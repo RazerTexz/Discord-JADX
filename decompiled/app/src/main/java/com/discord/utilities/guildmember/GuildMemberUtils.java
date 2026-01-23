@@ -3,9 +3,9 @@ package com.discord.utilities.guildmember;
 import com.discord.models.member.GuildMember;
 import com.discord.utilities.time.ClockFactory;
 
-/* compiled from: GuildMemberUtils.kt */
-/* renamed from: com.discord.utilities.guildmember.GuildMemberUtilsKt, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.utilities.guildmember.GuildMemberUtilsKt, reason: use source file name */
+/* JADX INFO: compiled from: GuildMemberUtils.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class GuildMemberUtils {
     private static final long AGE_THRESHOLD = 600000;
 

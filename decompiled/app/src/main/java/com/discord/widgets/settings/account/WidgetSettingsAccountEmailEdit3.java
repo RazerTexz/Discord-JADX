@@ -6,9 +6,9 @@ import kotlin.Unit;
 import kotlin.jvm.functions.Function0;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetSettingsAccountEmailEdit.kt */
-/* renamed from: com.discord.widgets.settings.account.WidgetSettingsAccountEmailEdit$nextScreenLauncher$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.settings.account.WidgetSettingsAccountEmailEdit$nextScreenLauncher$1, reason: use source file name */
+/* JADX INFO: compiled from: WidgetSettingsAccountEmailEdit.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetSettingsAccountEmailEdit3 extends Lambda implements Function0<Unit> {
     public final /* synthetic */ WidgetSettingsAccountEmailEdit this$0;
 
@@ -24,7 +24,7 @@ public final class WidgetSettingsAccountEmailEdit3 extends Lambda implements Fun
         return Unit.f27425a;
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final void invoke2() {
         StatefulViews.clear$default(WidgetSettingsAccountEmailEdit.access$getState$p(this.this$0), false, 1, null);
         FragmentActivity activity = this.this$0.getActivity();

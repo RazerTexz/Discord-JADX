@@ -33,8 +33,8 @@ import lombok.javac.handlers.HandleBuilder;
 import lombok.javac.handlers.JavacHandlerUtil;
 import lombok.javac.handlers.JavacSingularsRecipes;
 
+/* JADX INFO: loaded from: discord-126021.apk:lombok/javac/handlers/HandleSuperBuilder.SCL.lombok */
 @HandlerPriority(-1024)
-/* loaded from: discord-126021.apk:lombok/javac/handlers/HandleSuperBuilder.SCL.lombok */
 public class HandleSuperBuilder extends JavacAnnotationHandler<SuperBuilder> {
     private static final String SELF_METHOD = "self";
     private static final String FILL_VALUES_METHOD_NAME = "$fillValuesFrom";
@@ -42,10 +42,10 @@ public class HandleSuperBuilder extends JavacAnnotationHandler<SuperBuilder> {
     private static final String INSTANCE_VARIABLE_NAME = "instance";
     private static final String BUILDER_VARIABLE_NAME = "b";
 
-    /* renamed from: $SWITCH_TABLE$lombok$javac$handlers$JavacHandlerUtil$MemberExistsResult */
+    /* JADX INFO: renamed from: $SWITCH_TABLE$lombok$javac$handlers$JavacHandlerUtil$MemberExistsResult */
     private static /* synthetic */ int[] f27488x2486df07;
 
-    /* renamed from: $SWITCH_TABLE$lombok$javac$handlers$JavacHandlerUtil$MemberExistsResult */
+    /* JADX INFO: renamed from: $SWITCH_TABLE$lombok$javac$handlers$JavacHandlerUtil$MemberExistsResult */
     static /* synthetic */ int[] m10946x2486df07() {
         int[] iArr = f27488x2486df07;
         if (iArr != null) {
@@ -68,7 +68,7 @@ public class HandleSuperBuilder extends JavacAnnotationHandler<SuperBuilder> {
         return iArr2;
     }
 
-    /* loaded from: discord-126021.apk:lombok/javac/handlers/HandleSuperBuilder$SuperBuilderJob.SCL.lombok */
+    /* JADX INFO: loaded from: discord-126021.apk:lombok/javac/handlers/HandleSuperBuilder$SuperBuilderJob.SCL.lombok */
     class SuperBuilderJob extends HandleBuilder.BuilderJob {
         JavacNode builderAbstractType;
         String builderAbstractClassName;
@@ -1031,8 +1031,8 @@ public class HandleSuperBuilder extends JavacAnnotationHandler<SuperBuilder> {
         }
     }
 
-    /* renamed from: lombok.javac.handlers.HandleSuperBuilder$1 */
-    /* loaded from: discord-126021.apk:lombok/javac/handlers/HandleSuperBuilder$1.SCL.lombok */
+    /* JADX INFO: renamed from: lombok.javac.handlers.HandleSuperBuilder$1 */
+    /* JADX INFO: loaded from: discord-126021.apk:lombok/javac/handlers/HandleSuperBuilder$1.SCL.lombok */
     class C128951 implements JavacSingularsRecipes.ExpressionMaker {
         private final /* synthetic */ JavacTreeMaker val$maker;
         private final /* synthetic */ SuperBuilderJob val$job;
@@ -1050,8 +1050,8 @@ public class HandleSuperBuilder extends JavacAnnotationHandler<SuperBuilder> {
         }
     }
 
-    /* renamed from: lombok.javac.handlers.HandleSuperBuilder$2 */
-    /* loaded from: discord-126021.apk:lombok/javac/handlers/HandleSuperBuilder$2.SCL.lombok */
+    /* JADX INFO: renamed from: lombok.javac.handlers.HandleSuperBuilder$2 */
+    /* JADX INFO: loaded from: discord-126021.apk:lombok/javac/handlers/HandleSuperBuilder$2.SCL.lombok */
     class C128962 implements JavacSingularsRecipes.StatementMaker {
         private final /* synthetic */ JavacTreeMaker val$maker;
         private final /* synthetic */ SuperBuilderJob val$job;

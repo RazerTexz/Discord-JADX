@@ -5,9 +5,9 @@ import com.discord.models.domain.ModelChannelFollowerStats;
 import com.discord.widgets.chat.list.PublishActionDialogViewModel;
 import p637j0.p641k.Func1;
 
-/* compiled from: PublishActionDialogViewModel.kt */
-/* renamed from: com.discord.widgets.chat.list.PublishActionDialogViewModel$Companion$observeChannelFollowerStatsStoreState$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.chat.list.PublishActionDialogViewModel$Companion$observeChannelFollowerStatsStoreState$1, reason: use source file name */
+/* JADX INFO: compiled from: PublishActionDialogViewModel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class PublishActionDialogViewModel2<T, R> implements Func1<ModelChannelFollowerStats, PublishActionDialogViewModel.StoreState> {
     public static final PublishActionDialogViewModel2 INSTANCE = new PublishActionDialogViewModel2();
 
@@ -16,7 +16,7 @@ public final class PublishActionDialogViewModel2<T, R> implements Func1<ModelCha
         return call2(modelChannelFollowerStats);
     }
 
-    /* renamed from: call, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
     public final PublishActionDialogViewModel.StoreState call2(ModelChannelFollowerStats modelChannelFollowerStats) {
         return new PublishActionDialogViewModel.StoreState(modelChannelFollowerStats);
     }

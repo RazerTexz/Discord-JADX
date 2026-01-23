@@ -3,8 +3,8 @@ package com.discord.widgets.user;
 import kotlin.jvm.functions.Function0;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetUserMentions.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: WidgetUserMentions.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class WidgetUserMentions$viewModel$2 extends Lambda implements Function0<WidgetUserMentionsViewModel> {
     public static final WidgetUserMentions$viewModel$2 INSTANCE = new WidgetUserMentions$viewModel$2();
 

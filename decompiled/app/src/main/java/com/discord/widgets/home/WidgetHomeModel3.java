@@ -23,14 +23,14 @@ import p637j0.p641k.Func1;
 import p658rx.Observable;
 import p658rx.functions.Func8;
 
-/* compiled from: WidgetHomeModel.kt */
-/* renamed from: com.discord.widgets.home.WidgetHomeModel$Companion$get$2, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.home.WidgetHomeModel$Companion$get$2, reason: use source file name */
+/* JADX INFO: compiled from: WidgetHomeModel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetHomeModel3<T, R> implements Func1<Tuples2<? extends Long, ? extends StoreChannelsSelected.ResolvedSelectedChannel>, Observable<? extends WidgetHomeModel>> {
     public static final WidgetHomeModel3 INSTANCE = new WidgetHomeModel3();
 
-    /* compiled from: WidgetHomeModel.kt */
-    /* renamed from: com.discord.widgets.home.WidgetHomeModel$Companion$get$2$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.home.WidgetHomeModel$Companion$get$2$1 */
+    /* JADX INFO: compiled from: WidgetHomeModel.kt */
     public static final class C89731<T1, T2, T3, T4, T5, T6, T7, T8, R> implements Func8<MeUser, Map<Long, ? extends Presence>, Channel, Integer, Map<Long, ? extends Integer>, Map<Long, ? extends Channel>, Channel, Boolean, WidgetHomeModel> {
         public final /* synthetic */ Channel $channel;
         public final /* synthetic */ StoreChannelsSelected.ResolvedSelectedChannel $selectedChannel;
@@ -46,7 +46,7 @@ public final class WidgetHomeModel3<T, R> implements Func1<Tuples2<? extends Lon
         }
 
         /* JADX WARN: Removed duplicated region for block: B:20:0x0038  */
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         /*
             Code decompiled incorrectly, please refer to instructions dump.
         */
@@ -85,7 +85,7 @@ public final class WidgetHomeModel3<T, R> implements Func1<Tuples2<? extends Lon
         return call2((Tuples2<Long, ? extends StoreChannelsSelected.ResolvedSelectedChannel>) tuples2);
     }
 
-    /* renamed from: call, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
     public final Observable<? extends WidgetHomeModel> call2(Tuples2<Long, ? extends StoreChannelsSelected.ResolvedSelectedChannel> tuples2) {
         Long lValueOf;
         long id2;

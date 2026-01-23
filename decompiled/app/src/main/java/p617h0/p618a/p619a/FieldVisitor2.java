@@ -1,11 +1,11 @@
 package p617h0.p618a.p619a;
 
-/* compiled from: FieldVisitor.java */
-/* renamed from: h0.a.a.k, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: h0.a.a.k, reason: use source file name */
+/* JADX INFO: compiled from: FieldVisitor.java */
+/* JADX INFO: loaded from: classes3.dex */
 public abstract class FieldVisitor2 {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public FieldVisitor2 f26216a;
 
     public FieldVisitor2(int i) {

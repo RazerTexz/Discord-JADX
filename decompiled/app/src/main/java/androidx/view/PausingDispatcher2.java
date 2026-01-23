@@ -18,15 +18,15 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p659s.p660a.Dispatchers;
 import p659s.p660a.p661a.MainDispatchers;
 
-/* compiled from: PausingDispatcher.kt */
-/* renamed from: androidx.lifecycle.PausingDispatcherKt, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: androidx.lifecycle.PausingDispatcherKt, reason: use source file name */
+/* JADX INFO: compiled from: PausingDispatcher.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class PausingDispatcher2 {
 
     /* JADX INFO: Add missing generic type declarations: [T] */
-    /* compiled from: PausingDispatcher.kt */
+    /* JADX INFO: renamed from: androidx.lifecycle.PausingDispatcherKt$whenStateAtLeast$2 */
+    /* JADX INFO: compiled from: PausingDispatcher.kt */
     @DebugMetadata(m10084c = "androidx.lifecycle.PausingDispatcherKt$whenStateAtLeast$2", m10085f = "PausingDispatcher.kt", m10086l = {Opcodes.IF_ICMPGE}, m10087m = "invokeSuspend")
-    /* renamed from: androidx.lifecycle.PausingDispatcherKt$whenStateAtLeast$2 */
     public static final class C04462<T> extends ContinuationImpl6 implements Function2<CoroutineScope, Continuation<? super T>, Object> {
         public final /* synthetic */ Function2 $block;
         public final /* synthetic */ Lifecycle.State $minState;

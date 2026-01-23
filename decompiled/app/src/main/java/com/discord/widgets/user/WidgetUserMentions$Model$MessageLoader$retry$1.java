@@ -8,8 +8,8 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 import p658rx.Subscription;
 
-/* compiled from: WidgetUserMentions.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: WidgetUserMentions.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class WidgetUserMentions$Model$MessageLoader$retry$1 extends Lambda implements Function1<Subscription, Unit> {
     public final /* synthetic */ WidgetUserMentions.Model.MessageLoader this$0;
 
@@ -25,7 +25,7 @@ public final class WidgetUserMentions$Model$MessageLoader$retry$1 extends Lambda
         return Unit.f27425a;
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final void invoke2(Subscription subscription) {
         Intrinsics3.checkNotNullParameter(subscription, Traits.Payment.Type.SUBSCRIPTION);
         WidgetUserMentions.Model.MessageLoader.access$setRetrySubscription$p(this.this$0, subscription);

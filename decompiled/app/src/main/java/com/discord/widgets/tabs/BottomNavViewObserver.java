@@ -8,16 +8,16 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p658rx.Observable;
 import p658rx.subjects.BehaviorSubject;
 
-/* compiled from: BottomNavViewObserver.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: BottomNavViewObserver.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class BottomNavViewObserver implements TabsHostBottomNavigationView.HeightChangedListener {
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private static final Lazy INSTANCE$delegate = LazyJVM.lazy(BottomNavViewObserver2.INSTANCE);
     private final BehaviorSubject<Integer> heightSubject = BehaviorSubject.m11130l0(0);
 
-    /* compiled from: BottomNavViewObserver.kt */
+    /* JADX INFO: compiled from: BottomNavViewObserver.kt */
     public static final class Companion {
         private Companion() {
         }

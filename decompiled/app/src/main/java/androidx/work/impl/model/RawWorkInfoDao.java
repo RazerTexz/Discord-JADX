@@ -8,8 +8,8 @@ import androidx.view.LiveData;
 import androidx.work.impl.model.WorkSpec;
 import java.util.List;
 
+/* JADX INFO: loaded from: classes.dex */
 @Dao
-/* loaded from: classes.dex */
 public interface RawWorkInfoDao {
     @NonNull
     @RawQuery

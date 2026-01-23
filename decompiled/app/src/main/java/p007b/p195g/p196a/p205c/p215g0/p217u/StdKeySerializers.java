@@ -12,16 +12,16 @@ import p007b.p195g.p196a.p205c.p215g0.p216t.PropertySerializerMap;
 import p007b.p195g.p196a.p205c.p218h0.TypeFactory;
 import p007b.p195g.p196a.p205c.p219i0.EnumValues;
 
-/* compiled from: StdKeySerializers.java */
-/* renamed from: b.g.a.c.g0.u.o0, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.g.a.c.g0.u.o0, reason: use source file name */
+/* JADX INFO: compiled from: StdKeySerializers.java */
+/* JADX INFO: loaded from: classes3.dex */
 public abstract class StdKeySerializers {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final JsonSerializer<Object> f4858a = new d();
 
-    /* compiled from: StdKeySerializers.java */
-    /* renamed from: b.g.a.c.g0.u.o0$a */
+    /* JADX INFO: renamed from: b.g.a.c.g0.u.o0$a */
+    /* JADX INFO: compiled from: StdKeySerializers.java */
     public static class a extends StdSerializer<Object> {
         public final int _typeId;
 
@@ -31,7 +31,7 @@ public abstract class StdKeySerializers {
         }
 
         @Override // p007b.p195g.p196a.p205c.JsonSerializer
-        /* renamed from: f */
+        /* JADX INFO: renamed from: f */
         public void mo1807f(Object obj, JsonGenerator jsonGenerator, SerializerProvider serializerProvider) throws IOException {
             String strValueOf;
             switch (this._typeId) {
@@ -81,11 +81,11 @@ public abstract class StdKeySerializers {
         }
     }
 
-    /* compiled from: StdKeySerializers.java */
-    /* renamed from: b.g.a.c.g0.u.o0$b */
+    /* JADX INFO: renamed from: b.g.a.c.g0.u.o0$b */
+    /* JADX INFO: compiled from: StdKeySerializers.java */
     public static class b extends StdSerializer<Object> {
 
-        /* renamed from: k */
+        /* JADX INFO: renamed from: k */
         public transient PropertySerializerMap f4859k;
 
         public b() {
@@ -94,7 +94,7 @@ public abstract class StdKeySerializers {
         }
 
         @Override // p007b.p195g.p196a.p205c.JsonSerializer
-        /* renamed from: f */
+        /* JADX INFO: renamed from: f */
         public void mo1807f(Object obj, JsonGenerator jsonGenerator, SerializerProvider serializerProvider) throws IOException {
             Class<?> cls = obj.getClass();
             PropertySerializerMap propertySerializerMap = this.f4859k;
@@ -120,8 +120,8 @@ public abstract class StdKeySerializers {
         }
     }
 
-    /* compiled from: StdKeySerializers.java */
-    /* renamed from: b.g.a.c.g0.u.o0$c */
+    /* JADX INFO: renamed from: b.g.a.c.g0.u.o0$c */
+    /* JADX INFO: compiled from: StdKeySerializers.java */
     public static class c extends StdSerializer<Object> {
         public final EnumValues _values;
 
@@ -131,7 +131,7 @@ public abstract class StdKeySerializers {
         }
 
         @Override // p007b.p195g.p196a.p205c.JsonSerializer
-        /* renamed from: f */
+        /* JADX INFO: renamed from: f */
         public void mo1807f(Object obj, JsonGenerator jsonGenerator, SerializerProvider serializerProvider) throws IOException {
             if (serializerProvider.m2240D(SerializationFeature.WRITE_ENUMS_USING_TO_STRING)) {
                 jsonGenerator.mo1666y(obj.toString());
@@ -146,15 +146,15 @@ public abstract class StdKeySerializers {
         }
     }
 
-    /* compiled from: StdKeySerializers.java */
-    /* renamed from: b.g.a.c.g0.u.o0$d */
+    /* JADX INFO: renamed from: b.g.a.c.g0.u.o0$d */
+    /* JADX INFO: compiled from: StdKeySerializers.java */
     public static class d extends StdSerializer<Object> {
         public d() {
             super(String.class, false);
         }
 
         @Override // p007b.p195g.p196a.p205c.JsonSerializer
-        /* renamed from: f */
+        /* JADX INFO: renamed from: f */
         public void mo1807f(Object obj, JsonGenerator jsonGenerator, SerializerProvider serializerProvider) throws IOException {
             jsonGenerator.mo1666y((String) obj);
         }

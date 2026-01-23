@@ -7,15 +7,15 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 import p658rx.Observable;
 
-/* compiled from: StoreAutocomplete.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: StoreAutocomplete.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class StoreAutocomplete extends StoreV2 {
     private boolean autocompleteVisible;
     private final Dispatcher dispatcher;
     private final ObservationDeck observationDeck;
 
-    /* compiled from: StoreAutocomplete.kt */
-    /* renamed from: com.discord.stores.StoreAutocomplete$observeAutocompleteVisibility$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreAutocomplete$observeAutocompleteVisibility$1 */
+    /* JADX INFO: compiled from: StoreAutocomplete.kt */
     public static final class C57921 extends Lambda implements Function0<Boolean> {
         public C57921() {
             super(0);
@@ -26,14 +26,14 @@ public final class StoreAutocomplete extends StoreV2 {
             return Boolean.valueOf(invoke2());
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final boolean invoke2() {
             return StoreAutocomplete.access$getAutocompleteVisible$p(StoreAutocomplete.this);
         }
     }
 
-    /* compiled from: StoreAutocomplete.kt */
-    /* renamed from: com.discord.stores.StoreAutocomplete$setAutocompleteVisible$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreAutocomplete$setAutocompleteVisible$1 */
+    /* JADX INFO: compiled from: StoreAutocomplete.kt */
     public static final class C57931 extends Lambda implements Function0<Unit> {
         public final /* synthetic */ boolean $visible;
 
@@ -49,7 +49,7 @@ public final class StoreAutocomplete extends StoreV2 {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             StoreAutocomplete.access$setAutocompleteVisible$p(StoreAutocomplete.this, this.$visible);
             StoreAutocomplete.this.markChanged();

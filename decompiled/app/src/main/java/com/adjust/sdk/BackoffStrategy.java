@@ -1,6 +1,6 @@
 package com.adjust.sdk;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public enum BackoffStrategy {
     LONG_WAIT(1, 120000, 86400000, 0.5d, 1.0d),
     SHORT_WAIT(1, 200, 3600000, 0.5d, 1.0d),

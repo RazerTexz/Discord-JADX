@@ -8,13 +8,13 @@ import p007b.p100d.p104b.p105a.outline;
 import p617h0.p618a.p619a.ClassWriter2;
 import p617h0.p618a.p619a.MethodVisitor2;
 
-/* compiled from: ConstructorAccess.java */
-/* renamed from: b.e.b.b, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.e.b.b, reason: use source file name */
+/* JADX INFO: compiled from: ConstructorAccess.java */
+/* JADX INFO: loaded from: classes.dex */
 public abstract class ConstructorAccess<T> {
     /* JADX WARN: Removed duplicated region for block: B:41:0x00c1  */
     /* JADX WARN: Removed duplicated region for block: B:42:0x00c4  */
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
@@ -123,7 +123,7 @@ public abstract class ConstructorAccess<T> {
         }
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static void m893b(ClassWriter2 classWriter2, String str, String str2) {
         MethodVisitor2 methodVisitor2M10567e = classWriter2.m10567e(1, "newInstance", "(Ljava/lang/Object;)Ljava/lang/Object;", null, null);
         if (str2 == null) {
@@ -147,6 +147,6 @@ public abstract class ConstructorAccess<T> {
         methodVisitor2M10567e.mo10606n(4, 2);
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public abstract T m894c();
 }

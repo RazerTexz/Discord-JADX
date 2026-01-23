@@ -15,17 +15,17 @@ import p637j0.p642l.p647e.ScalarSynchronousObservable;
 import p658rx.Observable;
 import p658rx.functions.Func2;
 
-/* compiled from: TextInVoiceFeatureFlag.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: TextInVoiceFeatureFlag.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class TextInVoiceFeatureFlag {
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private static final Lazy INSTANCE$delegate = LazyJVM.lazy(TextInVoiceFeatureFlag2.INSTANCE);
     private final StoreExperiments storeExperiments;
     private final StoreGuilds storeGuilds;
 
-    /* compiled from: TextInVoiceFeatureFlag.kt */
+    /* JADX INFO: compiled from: TextInVoiceFeatureFlag.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -41,8 +41,8 @@ public final class TextInVoiceFeatureFlag {
         }
     }
 
-    /* compiled from: TextInVoiceFeatureFlag.kt */
-    /* renamed from: com.discord.widgets.chat.list.TextInVoiceFeatureFlag$observeEnabled$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.list.TextInVoiceFeatureFlag$observeEnabled$1 */
+    /* JADX INFO: compiled from: TextInVoiceFeatureFlag.kt */
     public static final class C79501<T1, T2, R> implements Func2<Experiment, Guild, Boolean> {
         public C79501() {
         }
@@ -52,7 +52,7 @@ public final class TextInVoiceFeatureFlag {
             return call2(experiment, guild);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final Boolean call2(Experiment experiment, Guild guild) {
             return Boolean.valueOf(TextInVoiceFeatureFlag.access$isEnabled(TextInVoiceFeatureFlag.this, experiment, guild));
         }

@@ -9,9 +9,9 @@ import p507d0.p592z.p594d.Lambda;
 import p600f0.HttpUrl;
 import p600f0.p601e0.Util7;
 
-/* compiled from: RouteSelector.kt */
-/* renamed from: f0.e0.g.n, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: f0.e0.g.n, reason: use source file name */
+/* JADX INFO: compiled from: RouteSelector.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class RouteSelector2 extends Lambda implements Function0<List<? extends Proxy>> {
     public final /* synthetic */ Proxy $proxy;
     public final /* synthetic */ HttpUrl $url;
@@ -31,7 +31,7 @@ public final class RouteSelector2 extends Lambda implements Function0<List<? ext
     }
 
     @Override // kotlin.jvm.functions.Function0
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final List<? extends Proxy> invoke2() {
         Proxy proxy = this.$proxy;
         if (proxy != null) {

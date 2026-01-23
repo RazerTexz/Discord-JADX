@@ -23,28 +23,28 @@ import p507d0.p592z.p594d.Lambda;
 import p507d0.p592z.p594d.PropertyReference1Impl;
 import p507d0.p592z.p594d.Reflection2;
 
-/* compiled from: KParameterImpl.kt */
-/* renamed from: d0.e0.p.d.o, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.o, reason: use source file name */
+/* JADX INFO: compiled from: KParameterImpl.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class KParameterImpl implements KParameter {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static final /* synthetic */ KProperty[] f25034j = {Reflection2.property1(new PropertyReference1Impl(Reflection2.getOrCreateKotlinClass(KParameterImpl.class), "descriptor", "getDescriptor()Lorg/jetbrains/kotlin/descriptors/ParameterDescriptor;")), Reflection2.property1(new PropertyReference1Impl(Reflection2.getOrCreateKotlinClass(KParameterImpl.class), "annotations", "getAnnotations()Ljava/util/List;"))};
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final ReflectProperties.a f25035k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final KCallableImpl<?> f25036l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public final int f25037m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public final KParameter.a f25038n;
 
-    /* compiled from: KParameterImpl.kt */
-    /* renamed from: d0.e0.p.d.o$a */
+    /* JADX INFO: renamed from: d0.e0.p.d.o$a */
+    /* JADX INFO: compiled from: KParameterImpl.kt */
     public static final class a extends Lambda implements Function0<List<? extends Annotation>> {
         public a() {
             super(0);
@@ -56,14 +56,14 @@ public final class KParameterImpl implements KParameter {
         }
 
         @Override // kotlin.jvm.functions.Function0
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final List<? extends Annotation> invoke2() {
             return util2.computeAnnotations(KParameterImpl.access$getDescriptor$p(KParameterImpl.this));
         }
     }
 
-    /* compiled from: KParameterImpl.kt */
-    /* renamed from: d0.e0.p.d.o$b */
+    /* JADX INFO: renamed from: d0.e0.p.d.o$b */
+    /* JADX INFO: compiled from: KParameterImpl.kt */
     public static final class b extends Lambda implements Function0<Type> {
         public b() {
             super(0);
@@ -75,7 +75,7 @@ public final class KParameterImpl implements KParameter {
         }
 
         @Override // kotlin.jvm.functions.Function0
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final Type invoke2() {
             ParameterDescriptor parameterDescriptorAccess$getDescriptor$p = KParameterImpl.access$getDescriptor$p(KParameterImpl.this);
             if (!(parameterDescriptorAccess$getDescriptor$p instanceof ReceiverParameterDescriptor) || !Intrinsics3.areEqual(util2.getInstanceReceiverParameter(KParameterImpl.this.getCallable().getDescriptor()), parameterDescriptorAccess$getDescriptor$p) || KParameterImpl.this.getCallable().getDescriptor().getKind() != CallableMemberDescriptor.a.FAKE_OVERRIDE) {
@@ -106,7 +106,7 @@ public final class KParameterImpl implements KParameter {
         return kParameterImpl.m10055a();
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final ParameterDescriptor m10055a() {
         return (ParameterDescriptor) this.f25035k.getValue(this, f25034j[0]);
     }

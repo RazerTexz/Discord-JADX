@@ -19,8 +19,8 @@ import p507d0.p580t.Iterables2;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: StoreGuildMemberRequester.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: StoreGuildMemberRequester.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class StoreGuildMemberRequester extends Store {
     private final TreeMap<Long, Map<Long, Message>> channelPendingMessages;
     private final StoreStream collector;
@@ -28,8 +28,8 @@ public final class StoreGuildMemberRequester extends Store {
     private boolean isConnected;
     private final GuildMemberRequestManager requestManager;
 
-    /* compiled from: StoreGuildMemberRequester.kt */
-    /* renamed from: com.discord.stores.StoreGuildMemberRequester$performQueuedRequests$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreGuildMemberRequester$performQueuedRequests$1 */
+    /* JADX INFO: compiled from: StoreGuildMemberRequester.kt */
     public static final class C60331 extends Lambda implements Function0<Unit> {
         public C60331() {
             super(0);
@@ -41,14 +41,14 @@ public final class StoreGuildMemberRequester extends Store {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             StoreGuildMemberRequester.access$getRequestManager$p(StoreGuildMemberRequester.this).flush();
         }
     }
 
-    /* compiled from: StoreGuildMemberRequester.kt */
-    /* renamed from: com.discord.stores.StoreGuildMemberRequester$queueRequest$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreGuildMemberRequester$queueRequest$1 */
+    /* JADX INFO: compiled from: StoreGuildMemberRequester.kt */
     public static final class C60341 extends Lambda implements Function0<Unit> {
         public final /* synthetic */ long $guildId;
         public final /* synthetic */ long $userId;
@@ -66,7 +66,7 @@ public final class StoreGuildMemberRequester extends Store {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             StoreGuildMemberRequester.access$getRequestManager$p(StoreGuildMemberRequester.this).queueRequest(this.$guildId, this.$userId);
         }

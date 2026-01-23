@@ -7,14 +7,14 @@ import java.util.UUID;
 import p007b.p085c.p086a.p087a0.AnimatableValueParser;
 import p007b.p225i.p226a.p288f.p299e.p308o.C3401c;
 
-/* renamed from: b.i.a.f.h.j.r0 */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.h.j.r0 */
+/* JADX INFO: loaded from: classes3.dex */
 public final class C3539r0 {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final String f9793a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final /* synthetic */ C3535p0 f9794b;
 
     public C3539r0(C3535p0 c3535p0, String str, long j, C3537q0 c3537q0) {
@@ -24,7 +24,7 @@ public final class C3539r0 {
         this.f9793a = str;
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final void m4496a(String str) {
         if (this.f9794b.f9777l.getLong(String.valueOf(this.f9793a).concat(":start"), 0L) == 0) {
             Objects.requireNonNull((C3401c) this.f9794b.f9684j.f9724d);
@@ -58,12 +58,12 @@ public final class C3539r0 {
         }
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final String m4497b() {
         return String.valueOf(this.f9793a).concat(":count");
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final String m4498c() {
         return String.valueOf(this.f9793a).concat(":value");
     }

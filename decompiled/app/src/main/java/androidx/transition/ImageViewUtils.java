@@ -10,7 +10,7 @@ import androidx.annotation.Nullable;
 import androidx.annotation.RequiresApi;
 import java.lang.reflect.Field;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class ImageViewUtils {
     private static Field sDrawMatrixField = null;
     private static boolean sDrawMatrixFieldFetched = false;

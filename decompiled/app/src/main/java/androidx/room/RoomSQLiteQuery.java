@@ -9,8 +9,8 @@ import java.util.Iterator;
 import java.util.Map;
 import java.util.TreeMap;
 
+/* JADX INFO: loaded from: classes.dex */
 @RestrictTo({RestrictTo.Scope.LIBRARY_GROUP_PREFIX})
-/* loaded from: classes.dex */
 public class RoomSQLiteQuery implements SupportSQLiteQuery, SupportSQLiteProgram {
     private static final int BLOB = 5;
 
@@ -47,7 +47,7 @@ public class RoomSQLiteQuery implements SupportSQLiteQuery, SupportSQLiteProgram
     @VisibleForTesting
     public final String[] mStringBindings;
 
-    /* renamed from: androidx.room.RoomSQLiteQuery$1 */
+    /* JADX INFO: renamed from: androidx.room.RoomSQLiteQuery$1 */
     public static class C05931 implements SupportSQLiteProgram {
         public C05931() {
         }

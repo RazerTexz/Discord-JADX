@@ -3,12 +3,12 @@ package p007b.p225i.p226a.p341g.p352k;
 import android.text.InputFilter;
 import android.text.Spanned;
 
-/* compiled from: MaxInputValidator.java */
-/* renamed from: b.i.a.g.k.d, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.g.k.d, reason: use source file name */
+/* JADX INFO: compiled from: MaxInputValidator.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class MaxInputValidator implements InputFilter {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public int f11860a;
 
     public MaxInputValidator(int i) {

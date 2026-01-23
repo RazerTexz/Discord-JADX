@@ -114,8 +114,8 @@ import p507d0.p592z.p594d.Lambda;
 import p507d0.p592z.p594d.Reflection2;
 import p658rx.subscriptions.CompositeSubscription;
 
-/* compiled from: WidgetUserSheet.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: WidgetUserSheet.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class WidgetUserSheet extends AppBottomSheet {
     private static final String ARG_CHANNEL_ID = "ARG_CHANNEL_ID";
     private static final String ARG_FRIEND_TOKEN = "ARG_FRIEND_TOKEN";
@@ -126,21 +126,21 @@ public final class WidgetUserSheet extends AppBottomSheet {
     private static final String REQUEST_KEY_MOVE_USER = "REQUEST_KEY_MOVE_USER";
     private ViewHolderUserRichPresence activityViewHolder;
 
-    /* renamed from: binding$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
     private PrivateCallLauncher privateCallLauncher;
 
-    /* renamed from: viewModel$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: viewModel$delegate, reason: from kotlin metadata */
     private final Lazy viewModel;
 
-    /* renamed from: viewModelUserProfileHeader$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: viewModelUserProfileHeader$delegate, reason: from kotlin metadata */
     private final Lazy viewModelUserProfileHeader;
     public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetUserSheet.class, "binding", "getBinding()Lcom/discord/databinding/WidgetUserSheetBinding;", 0)};
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
 
-    /* compiled from: WidgetUserSheet.kt */
+    /* JADX INFO: compiled from: WidgetUserSheet.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -213,14 +213,14 @@ public final class WidgetUserSheet extends AppBottomSheet {
         }
     }
 
-    /* compiled from: WidgetUserSheet.kt */
+    /* JADX INFO: compiled from: WidgetUserSheet.kt */
     public enum StreamPreviewClickBehavior {
         TARGET_AND_LAUNCH_SPECTATE,
         TARGET_AND_DISMISS
     }
 
-    /* compiled from: WidgetUserSheet.kt */
-    /* renamed from: com.discord.widgets.user.usersheet.WidgetUserSheet$bindSubscriptions$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.user.usersheet.WidgetUserSheet$bindSubscriptions$1 */
+    /* JADX INFO: compiled from: WidgetUserSheet.kt */
     public static final /* synthetic */ class C103411 extends FunctionReferenceImpl implements Function1<WidgetUserSheetViewModel.ViewState, Unit> {
         public C103411(WidgetUserSheet widgetUserSheet) {
             super(1, widgetUserSheet, WidgetUserSheet.class, "configureUI", "configureUI(Lcom/discord/widgets/user/usersheet/WidgetUserSheetViewModel$ViewState;)V", 0);
@@ -232,15 +232,15 @@ public final class WidgetUserSheet extends AppBottomSheet {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(WidgetUserSheetViewModel.ViewState viewState) {
             Intrinsics3.checkNotNullParameter(viewState, "p1");
             WidgetUserSheet.access$configureUI((WidgetUserSheet) this.receiver, viewState);
         }
     }
 
-    /* compiled from: WidgetUserSheet.kt */
-    /* renamed from: com.discord.widgets.user.usersheet.WidgetUserSheet$bindSubscriptions$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.user.usersheet.WidgetUserSheet$bindSubscriptions$2 */
+    /* JADX INFO: compiled from: WidgetUserSheet.kt */
     public static final /* synthetic */ class C103422 extends FunctionReferenceImpl implements Function1<WidgetUserSheetViewModel.Event, Unit> {
         public C103422(WidgetUserSheet widgetUserSheet) {
             super(1, widgetUserSheet, WidgetUserSheet.class, "handleEvent", "handleEvent(Lcom/discord/widgets/user/usersheet/WidgetUserSheetViewModel$Event;)V", 0);
@@ -252,15 +252,15 @@ public final class WidgetUserSheet extends AppBottomSheet {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(WidgetUserSheetViewModel.Event event) {
             Intrinsics3.checkNotNullParameter(event, "p1");
             WidgetUserSheet.access$handleEvent((WidgetUserSheet) this.receiver, event);
         }
     }
 
-    /* compiled from: WidgetUserSheet.kt */
-    /* renamed from: com.discord.widgets.user.usersheet.WidgetUserSheet$configureAboutMe$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.user.usersheet.WidgetUserSheet$configureAboutMe$1 */
+    /* JADX INFO: compiled from: WidgetUserSheet.kt */
     public static final class ViewOnClickListenerC103431 implements View.OnClickListener {
         public final /* synthetic */ WidgetUserSheetViewModel.ViewState.Loaded $viewState;
 
@@ -277,8 +277,8 @@ public final class WidgetUserSheet extends AppBottomSheet {
         }
     }
 
-    /* compiled from: WidgetUserSheet.kt */
-    /* renamed from: com.discord.widgets.user.usersheet.WidgetUserSheet$configureIncomingFriendRequest$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.user.usersheet.WidgetUserSheet$configureIncomingFriendRequest$1 */
+    /* JADX INFO: compiled from: WidgetUserSheet.kt */
     public static final class ViewOnClickListenerC103481 implements View.OnClickListener {
         public final /* synthetic */ WidgetUserSheetViewModel.ViewState.Loaded $viewState;
 
@@ -292,8 +292,8 @@ public final class WidgetUserSheet extends AppBottomSheet {
         }
     }
 
-    /* compiled from: WidgetUserSheet.kt */
-    /* renamed from: com.discord.widgets.user.usersheet.WidgetUserSheet$configureIncomingFriendRequest$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.user.usersheet.WidgetUserSheet$configureIncomingFriendRequest$2 */
+    /* JADX INFO: compiled from: WidgetUserSheet.kt */
     public static final class ViewOnClickListenerC103492 implements View.OnClickListener {
         public ViewOnClickListenerC103492() {
         }
@@ -304,8 +304,8 @@ public final class WidgetUserSheet extends AppBottomSheet {
         }
     }
 
-    /* compiled from: WidgetUserSheet.kt */
-    /* renamed from: com.discord.widgets.user.usersheet.WidgetUserSheet$configureProfileActionButtons$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.user.usersheet.WidgetUserSheet$configureProfileActionButtons$1 */
+    /* JADX INFO: compiled from: WidgetUserSheet.kt */
     public static final class ViewOnClickListenerC103501 implements View.OnClickListener {
         public final /* synthetic */ UserProfile $userProfile;
 
@@ -327,8 +327,8 @@ public final class WidgetUserSheet extends AppBottomSheet {
         }
     }
 
-    /* compiled from: WidgetUserSheet.kt */
-    /* renamed from: com.discord.widgets.user.usersheet.WidgetUserSheet$configureProfileActionButtons$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.user.usersheet.WidgetUserSheet$configureProfileActionButtons$2 */
+    /* JADX INFO: compiled from: WidgetUserSheet.kt */
     public static final class ViewOnClickListenerC103512 implements View.OnClickListener {
         public ViewOnClickListenerC103512() {
         }
@@ -342,8 +342,8 @@ public final class WidgetUserSheet extends AppBottomSheet {
         }
     }
 
-    /* compiled from: WidgetUserSheet.kt */
-    /* renamed from: com.discord.widgets.user.usersheet.WidgetUserSheet$configureProfileActionButtons$3 */
+    /* JADX INFO: renamed from: com.discord.widgets.user.usersheet.WidgetUserSheet$configureProfileActionButtons$3 */
+    /* JADX INFO: compiled from: WidgetUserSheet.kt */
     public static final class ViewOnClickListenerC103523 implements View.OnClickListener {
         public final /* synthetic */ Long $guildId;
 
@@ -369,8 +369,8 @@ public final class WidgetUserSheet extends AppBottomSheet {
         }
     }
 
-    /* compiled from: WidgetUserSheet.kt */
-    /* renamed from: com.discord.widgets.user.usersheet.WidgetUserSheet$configureProfileActionButtons$4 */
+    /* JADX INFO: renamed from: com.discord.widgets.user.usersheet.WidgetUserSheet$configureProfileActionButtons$4 */
+    /* JADX INFO: compiled from: WidgetUserSheet.kt */
     public static final class ViewOnClickListenerC103534 implements View.OnClickListener {
         public final /* synthetic */ WidgetUserSheetViewModel.ViewState.Loaded $viewState;
 
@@ -393,8 +393,8 @@ public final class WidgetUserSheet extends AppBottomSheet {
         }
     }
 
-    /* compiled from: WidgetUserSheet.kt */
-    /* renamed from: com.discord.widgets.user.usersheet.WidgetUserSheet$configureProfileActionButtons$5 */
+    /* JADX INFO: renamed from: com.discord.widgets.user.usersheet.WidgetUserSheet$configureProfileActionButtons$5 */
+    /* JADX INFO: compiled from: WidgetUserSheet.kt */
     public static final class ViewOnClickListenerC103545 implements View.OnClickListener {
         public ViewOnClickListenerC103545() {
         }
@@ -405,8 +405,8 @@ public final class WidgetUserSheet extends AppBottomSheet {
         }
     }
 
-    /* compiled from: WidgetUserSheet.kt */
-    /* renamed from: com.discord.widgets.user.usersheet.WidgetUserSheet$configureProfileActionButtons$6 */
+    /* JADX INFO: renamed from: com.discord.widgets.user.usersheet.WidgetUserSheet$configureProfileActionButtons$6 */
+    /* JADX INFO: compiled from: WidgetUserSheet.kt */
     public static final class ViewOnClickListenerC103556 implements View.OnClickListener {
         public ViewOnClickListenerC103556() {
         }
@@ -417,8 +417,8 @@ public final class WidgetUserSheet extends AppBottomSheet {
         }
     }
 
-    /* compiled from: WidgetUserSheet.kt */
-    /* renamed from: com.discord.widgets.user.usersheet.WidgetUserSheet$configureProfileActionButtons$7 */
+    /* JADX INFO: renamed from: com.discord.widgets.user.usersheet.WidgetUserSheet$configureProfileActionButtons$7 */
+    /* JADX INFO: compiled from: WidgetUserSheet.kt */
     public static final class ViewOnClickListenerC103567 implements View.OnClickListener {
         public final /* synthetic */ WidgetUserSheetViewModel.ViewState.Loaded $viewState;
 
@@ -432,14 +432,14 @@ public final class WidgetUserSheet extends AppBottomSheet {
         }
     }
 
-    /* compiled from: WidgetUserSheet.kt */
-    /* renamed from: com.discord.widgets.user.usersheet.WidgetUserSheet$configureProfileActionButtons$8 */
+    /* JADX INFO: renamed from: com.discord.widgets.user.usersheet.WidgetUserSheet$configureProfileActionButtons$8 */
+    /* JADX INFO: compiled from: WidgetUserSheet.kt */
     public static final class ViewOnClickListenerC103578 implements View.OnClickListener {
         public final /* synthetic */ int $userRelationshipType;
         public final /* synthetic */ WidgetUserSheetViewModel.ViewState.Loaded $viewState;
 
-        /* compiled from: WidgetUserSheet.kt */
-        /* renamed from: com.discord.widgets.user.usersheet.WidgetUserSheet$configureProfileActionButtons$8$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.widgets.user.usersheet.WidgetUserSheet$configureProfileActionButtons$8$1, reason: invalid class name */
+        /* JADX INFO: compiled from: WidgetUserSheet.kt */
         public static final /* synthetic */ class AnonymousClass1 extends FunctionReferenceImpl implements Function1<Integer, Unit> {
             public AnonymousClass1(WidgetUserSheetViewModel widgetUserSheetViewModel) {
                 super(1, widgetUserSheetViewModel, WidgetUserSheetViewModel.class, "removeRelationship", "removeRelationship(I)V", 0);
@@ -456,8 +456,8 @@ public final class WidgetUserSheet extends AppBottomSheet {
             }
         }
 
-        /* compiled from: WidgetUserSheet.kt */
-        /* renamed from: com.discord.widgets.user.usersheet.WidgetUserSheet$configureProfileActionButtons$8$2, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.widgets.user.usersheet.WidgetUserSheet$configureProfileActionButtons$8$2, reason: invalid class name */
+        /* JADX INFO: compiled from: WidgetUserSheet.kt */
         public static final class AnonymousClass2 extends Lambda implements Function0<Unit> {
             public AnonymousClass2() {
                 super(0);
@@ -469,15 +469,15 @@ public final class WidgetUserSheet extends AppBottomSheet {
                 return Unit.f27425a;
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2() {
                 ViewOnClickListenerC103578 viewOnClickListenerC103578 = ViewOnClickListenerC103578.this;
                 WidgetUserSheet.access$acceptFriendRequest(WidgetUserSheet.this, viewOnClickListenerC103578.$viewState.getUser().getUsername());
             }
         }
 
-        /* compiled from: WidgetUserSheet.kt */
-        /* renamed from: com.discord.widgets.user.usersheet.WidgetUserSheet$configureProfileActionButtons$8$3, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.widgets.user.usersheet.WidgetUserSheet$configureProfileActionButtons$8$3, reason: invalid class name */
+        /* JADX INFO: compiled from: WidgetUserSheet.kt */
         public static final class AnonymousClass3 extends Lambda implements Function0<Unit> {
             public AnonymousClass3() {
                 super(0);
@@ -489,7 +489,7 @@ public final class WidgetUserSheet extends AppBottomSheet {
                 return Unit.f27425a;
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2() {
                 WidgetUserSheet.access$ignoreFriendRequest(WidgetUserSheet.this);
             }
@@ -535,8 +535,8 @@ public final class WidgetUserSheet extends AppBottomSheet {
         }
     }
 
-    /* compiled from: WidgetUserSheet.kt */
-    /* renamed from: com.discord.widgets.user.usersheet.WidgetUserSheet$configureUI$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.user.usersheet.WidgetUserSheet$configureUI$1 */
+    /* JADX INFO: compiled from: WidgetUserSheet.kt */
     public static final class C103581 extends Lambda implements Function0<Unit> {
         public C103581() {
             super(0);
@@ -548,14 +548,14 @@ public final class WidgetUserSheet extends AppBottomSheet {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             WidgetUserSheet.access$getViewModelUserProfileHeader$p(WidgetUserSheet.this).toggleAllowAnimationInReducedMotion();
         }
     }
 
-    /* compiled from: WidgetUserSheet.kt */
-    /* renamed from: com.discord.widgets.user.usersheet.WidgetUserSheet$configureUI$3 */
+    /* JADX INFO: renamed from: com.discord.widgets.user.usersheet.WidgetUserSheet$configureUI$3 */
+    /* JADX INFO: compiled from: WidgetUserSheet.kt */
     public static final class C103593 extends Lambda implements Function0<Unit> {
         public final /* synthetic */ WidgetUserSheetViewModel.ViewState $model;
 
@@ -571,14 +571,14 @@ public final class WidgetUserSheet extends AppBottomSheet {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             WidgetUserSheet.access$onStreamPreviewClicked(WidgetUserSheet.this, ((WidgetUserSheetViewModel.ViewState.Loaded) this.$model).getStreamContext());
         }
     }
 
-    /* compiled from: WidgetUserSheet.kt */
-    /* renamed from: com.discord.widgets.user.usersheet.WidgetUserSheet$configureUI$4 */
+    /* JADX INFO: renamed from: com.discord.widgets.user.usersheet.WidgetUserSheet$configureUI$4 */
+    /* JADX INFO: compiled from: WidgetUserSheet.kt */
     public static final /* synthetic */ class C103604 extends FunctionReferenceImpl implements Function5<Context, Long, String, Long, Integer, Unit> {
         public C103604(WidgetUserSheetViewModel widgetUserSheetViewModel) {
             super(5, widgetUserSheetViewModel, WidgetUserSheetViewModel.class, "onActivityCustomButtonClicked", "onActivityCustomButtonClicked(Landroid/content/Context;JLjava/lang/String;JI)V", 0);
@@ -597,8 +597,8 @@ public final class WidgetUserSheet extends AppBottomSheet {
         }
     }
 
-    /* compiled from: WidgetUserSheet.kt */
-    /* renamed from: com.discord.widgets.user.usersheet.WidgetUserSheet$handleRequestPermissionsForSpectateStream$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.user.usersheet.WidgetUserSheet$handleRequestPermissionsForSpectateStream$1 */
+    /* JADX INFO: compiled from: WidgetUserSheet.kt */
     public static final class C103611 extends Lambda implements Function0<Unit> {
         public final /* synthetic */ WidgetUserSheetViewModel.Event.RequestPermissionsForSpectateStream $event;
 
@@ -614,14 +614,14 @@ public final class WidgetUserSheet extends AppBottomSheet {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             WidgetUserSheet.access$getViewModel$p(WidgetUserSheet.this).onSpectatePermissionsGranted(this.$event.getStream());
         }
     }
 
-    /* compiled from: WidgetUserSheet.kt */
-    /* renamed from: com.discord.widgets.user.usersheet.WidgetUserSheet$onViewCreated$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.user.usersheet.WidgetUserSheet$onViewCreated$1 */
+    /* JADX INFO: compiled from: WidgetUserSheet.kt */
     public static final class ViewOnClickListenerC103621 implements View.OnClickListener {
         public final /* synthetic */ long $userId;
 
@@ -646,8 +646,8 @@ public final class WidgetUserSheet extends AppBottomSheet {
         }
     }
 
-    /* compiled from: WidgetUserSheet.kt */
-    /* renamed from: com.discord.widgets.user.usersheet.WidgetUserSheet$onViewCreated$10 */
+    /* JADX INFO: renamed from: com.discord.widgets.user.usersheet.WidgetUserSheet$onViewCreated$10 */
+    /* JADX INFO: compiled from: WidgetUserSheet.kt */
     public static final class C1036310 extends Lambda implements Function0<Unit> {
         public C1036310() {
             super(0);
@@ -659,14 +659,14 @@ public final class WidgetUserSheet extends AppBottomSheet {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             WidgetUserSheet.access$getViewModel$p(WidgetUserSheet.this).disableCommunication();
         }
     }
 
-    /* compiled from: WidgetUserSheet.kt */
-    /* renamed from: com.discord.widgets.user.usersheet.WidgetUserSheet$onViewCreated$11 */
+    /* JADX INFO: renamed from: com.discord.widgets.user.usersheet.WidgetUserSheet$onViewCreated$11 */
+    /* JADX INFO: compiled from: WidgetUserSheet.kt */
     public static final class C1036411 extends Lambda implements Function0<Unit> {
         public C1036411() {
             super(0);
@@ -678,14 +678,14 @@ public final class WidgetUserSheet extends AppBottomSheet {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             WidgetUserSheet.access$getViewModel$p(WidgetUserSheet.this).guildMuteUser();
         }
     }
 
-    /* compiled from: WidgetUserSheet.kt */
-    /* renamed from: com.discord.widgets.user.usersheet.WidgetUserSheet$onViewCreated$12 */
+    /* JADX INFO: renamed from: com.discord.widgets.user.usersheet.WidgetUserSheet$onViewCreated$12 */
+    /* JADX INFO: compiled from: WidgetUserSheet.kt */
     public static final class C1036512 extends Lambda implements Function0<Unit> {
         public C1036512() {
             super(0);
@@ -697,14 +697,14 @@ public final class WidgetUserSheet extends AppBottomSheet {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             WidgetUserSheet.access$getViewModel$p(WidgetUserSheet.this).guildDeafenUser();
         }
     }
 
-    /* compiled from: WidgetUserSheet.kt */
-    /* renamed from: com.discord.widgets.user.usersheet.WidgetUserSheet$onViewCreated$13 */
+    /* JADX INFO: renamed from: com.discord.widgets.user.usersheet.WidgetUserSheet$onViewCreated$13 */
+    /* JADX INFO: compiled from: WidgetUserSheet.kt */
     public static final class C1036613 extends Lambda implements Function0<Unit> {
         public C1036613() {
             super(0);
@@ -716,14 +716,14 @@ public final class WidgetUserSheet extends AppBottomSheet {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             WidgetUserSheet.access$getViewModel$p(WidgetUserSheet.this).guildMoveForUser();
         }
     }
 
-    /* compiled from: WidgetUserSheet.kt */
-    /* renamed from: com.discord.widgets.user.usersheet.WidgetUserSheet$onViewCreated$14 */
+    /* JADX INFO: renamed from: com.discord.widgets.user.usersheet.WidgetUserSheet$onViewCreated$14 */
+    /* JADX INFO: compiled from: WidgetUserSheet.kt */
     public static final class C1036714 extends Lambda implements Function0<Unit> {
         public C1036714() {
             super(0);
@@ -735,14 +735,14 @@ public final class WidgetUserSheet extends AppBottomSheet {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             WidgetUserSheetViewModel.disconnectUser$default(WidgetUserSheet.access$getViewModel$p(WidgetUserSheet.this), null, 1, null);
         }
     }
 
-    /* compiled from: WidgetUserSheet.kt */
-    /* renamed from: com.discord.widgets.user.usersheet.WidgetUserSheet$onViewCreated$15 */
+    /* JADX INFO: renamed from: com.discord.widgets.user.usersheet.WidgetUserSheet$onViewCreated$15 */
+    /* JADX INFO: compiled from: WidgetUserSheet.kt */
     public static final class ViewOnFocusChangeListenerC1036815 implements View.OnFocusChangeListener {
         public ViewOnFocusChangeListenerC1036815() {
         }
@@ -760,8 +760,8 @@ public final class WidgetUserSheet extends AppBottomSheet {
         }
     }
 
-    /* compiled from: WidgetUserSheet.kt */
-    /* renamed from: com.discord.widgets.user.usersheet.WidgetUserSheet$onViewCreated$16 */
+    /* JADX INFO: renamed from: com.discord.widgets.user.usersheet.WidgetUserSheet$onViewCreated$16 */
+    /* JADX INFO: compiled from: WidgetUserSheet.kt */
     public static final class C1036916 extends Lambda implements Function1<TextView, Unit> {
         public final /* synthetic */ View $view;
 
@@ -777,7 +777,7 @@ public final class WidgetUserSheet extends AppBottomSheet {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(TextView textView) {
             Intrinsics3.checkNotNullParameter(textView, "it");
             WidgetUserSheetViewModel widgetUserSheetViewModelAccess$getViewModel$p = WidgetUserSheet.access$getViewModel$p(WidgetUserSheet.this);
@@ -790,8 +790,8 @@ public final class WidgetUserSheet extends AppBottomSheet {
         }
     }
 
-    /* compiled from: WidgetUserSheet.kt */
-    /* renamed from: com.discord.widgets.user.usersheet.WidgetUserSheet$onViewCreated$17 */
+    /* JADX INFO: renamed from: com.discord.widgets.user.usersheet.WidgetUserSheet$onViewCreated$17 */
+    /* JADX INFO: compiled from: WidgetUserSheet.kt */
     public static final class C1037017 extends AccessibilityDelegateCompat {
         public C1037017() {
         }
@@ -805,8 +805,8 @@ public final class WidgetUserSheet extends AppBottomSheet {
         }
     }
 
-    /* compiled from: WidgetUserSheet.kt */
-    /* renamed from: com.discord.widgets.user.usersheet.WidgetUserSheet$onViewCreated$18 */
+    /* JADX INFO: renamed from: com.discord.widgets.user.usersheet.WidgetUserSheet$onViewCreated$18 */
+    /* JADX INFO: compiled from: WidgetUserSheet.kt */
     public static final class C1037118 extends Lambda implements Function2<Long, String, Unit> {
         public C1037118() {
             super(2);
@@ -824,13 +824,13 @@ public final class WidgetUserSheet extends AppBottomSheet {
         }
     }
 
-    /* compiled from: WidgetUserSheet.kt */
-    /* renamed from: com.discord.widgets.user.usersheet.WidgetUserSheet$onViewCreated$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.user.usersheet.WidgetUserSheet$onViewCreated$2 */
+    /* JADX INFO: compiled from: WidgetUserSheet.kt */
     public static final class C103722 extends Lambda implements Function0<Unit> {
         public final /* synthetic */ boolean $isMe;
 
-        /* compiled from: WidgetUserSheet.kt */
-        /* renamed from: com.discord.widgets.user.usersheet.WidgetUserSheet$onViewCreated$2$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.widgets.user.usersheet.WidgetUserSheet$onViewCreated$2$1, reason: invalid class name */
+        /* JADX INFO: compiled from: WidgetUserSheet.kt */
         public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
             public AnonymousClass1() {
                 super(0);
@@ -842,14 +842,14 @@ public final class WidgetUserSheet extends AppBottomSheet {
                 return Unit.f27425a;
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2() {
                 AppToast.m169g(WidgetUserSheet.this.getContext(), C5419R.string.stage_channel_permission_microphone_denied, 0, null, 12);
             }
         }
 
-        /* compiled from: WidgetUserSheet.kt */
-        /* renamed from: com.discord.widgets.user.usersheet.WidgetUserSheet$onViewCreated$2$2, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.widgets.user.usersheet.WidgetUserSheet$onViewCreated$2$2, reason: invalid class name */
+        /* JADX INFO: compiled from: WidgetUserSheet.kt */
         public static final class AnonymousClass2 extends Lambda implements Function0<Unit> {
             public AnonymousClass2() {
                 super(0);
@@ -861,7 +861,7 @@ public final class WidgetUserSheet extends AppBottomSheet {
                 return Unit.f27425a;
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2() {
                 WidgetUserSheet.access$getViewModel$p(WidgetUserSheet.this).setUserSuppressedInChannel(false);
             }
@@ -879,7 +879,7 @@ public final class WidgetUserSheet extends AppBottomSheet {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             if (this.$isMe) {
                 WidgetUserSheet.this.requestMicrophone(new AnonymousClass1(), new AnonymousClass2());
@@ -889,8 +889,8 @@ public final class WidgetUserSheet extends AppBottomSheet {
         }
     }
 
-    /* compiled from: WidgetUserSheet.kt */
-    /* renamed from: com.discord.widgets.user.usersheet.WidgetUserSheet$onViewCreated$3 */
+    /* JADX INFO: renamed from: com.discord.widgets.user.usersheet.WidgetUserSheet$onViewCreated$3 */
+    /* JADX INFO: compiled from: WidgetUserSheet.kt */
     public static final class C103733 extends Lambda implements Function0<Unit> {
         public C103733() {
             super(0);
@@ -902,14 +902,14 @@ public final class WidgetUserSheet extends AppBottomSheet {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             WidgetUserSheet.access$getViewModel$p(WidgetUserSheet.this).setUserSuppressedInChannel(true);
         }
     }
 
-    /* compiled from: WidgetUserSheet.kt */
-    /* renamed from: com.discord.widgets.user.usersheet.WidgetUserSheet$onViewCreated$4 */
+    /* JADX INFO: renamed from: com.discord.widgets.user.usersheet.WidgetUserSheet$onViewCreated$4 */
+    /* JADX INFO: compiled from: WidgetUserSheet.kt */
     public static final class C103744 extends Lambda implements Function1<Boolean, Unit> {
         public C103744() {
             super(1);
@@ -926,8 +926,8 @@ public final class WidgetUserSheet extends AppBottomSheet {
         }
     }
 
-    /* compiled from: WidgetUserSheet.kt */
-    /* renamed from: com.discord.widgets.user.usersheet.WidgetUserSheet$onViewCreated$5 */
+    /* JADX INFO: renamed from: com.discord.widgets.user.usersheet.WidgetUserSheet$onViewCreated$5 */
+    /* JADX INFO: compiled from: WidgetUserSheet.kt */
     public static final class C103755 extends Lambda implements Function1<Boolean, Unit> {
         public C103755() {
             super(1);
@@ -944,8 +944,8 @@ public final class WidgetUserSheet extends AppBottomSheet {
         }
     }
 
-    /* compiled from: WidgetUserSheet.kt */
-    /* renamed from: com.discord.widgets.user.usersheet.WidgetUserSheet$onViewCreated$6 */
+    /* JADX INFO: renamed from: com.discord.widgets.user.usersheet.WidgetUserSheet$onViewCreated$6 */
+    /* JADX INFO: compiled from: WidgetUserSheet.kt */
     public static final class C103766 extends Lambda implements Function2<Float, Boolean, Unit> {
         public C103766() {
             super(2);
@@ -964,8 +964,8 @@ public final class WidgetUserSheet extends AppBottomSheet {
         }
     }
 
-    /* compiled from: WidgetUserSheet.kt */
-    /* renamed from: com.discord.widgets.user.usersheet.WidgetUserSheet$onViewCreated$7 */
+    /* JADX INFO: renamed from: com.discord.widgets.user.usersheet.WidgetUserSheet$onViewCreated$7 */
+    /* JADX INFO: compiled from: WidgetUserSheet.kt */
     public static final class C103777 extends Lambda implements Function0<Unit> {
         public C103777() {
             super(0);
@@ -977,14 +977,14 @@ public final class WidgetUserSheet extends AppBottomSheet {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             WidgetUserSheet.access$getViewModel$p(WidgetUserSheet.this).editMember();
         }
     }
 
-    /* compiled from: WidgetUserSheet.kt */
-    /* renamed from: com.discord.widgets.user.usersheet.WidgetUserSheet$onViewCreated$8 */
+    /* JADX INFO: renamed from: com.discord.widgets.user.usersheet.WidgetUserSheet$onViewCreated$8 */
+    /* JADX INFO: compiled from: WidgetUserSheet.kt */
     public static final class C103788 extends Lambda implements Function0<Unit> {
         public C103788() {
             super(0);
@@ -996,14 +996,14 @@ public final class WidgetUserSheet extends AppBottomSheet {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             WidgetUserSheet.access$getViewModel$p(WidgetUserSheet.this).kickUser();
         }
     }
 
-    /* compiled from: WidgetUserSheet.kt */
-    /* renamed from: com.discord.widgets.user.usersheet.WidgetUserSheet$onViewCreated$9 */
+    /* JADX INFO: renamed from: com.discord.widgets.user.usersheet.WidgetUserSheet$onViewCreated$9 */
+    /* JADX INFO: compiled from: WidgetUserSheet.kt */
     public static final class C103799 extends Lambda implements Function0<Unit> {
         public C103799() {
             super(0);
@@ -1015,7 +1015,7 @@ public final class WidgetUserSheet extends AppBottomSheet {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             WidgetUserSheet.access$getViewModel$p(WidgetUserSheet.this).banUser();
         }

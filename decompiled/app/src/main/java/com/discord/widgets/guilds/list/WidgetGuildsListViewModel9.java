@@ -15,9 +15,9 @@ import kotlin.jvm.functions.Function1;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetGuildsListViewModel.kt */
-/* renamed from: com.discord.widgets.guilds.list.WidgetGuildsListViewModel$handleStoreState$lurkerGuildItems$2, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.guilds.list.WidgetGuildsListViewModel$handleStoreState$lurkerGuildItems$2, reason: use source file name */
+/* JADX INFO: compiled from: WidgetGuildsListViewModel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetGuildsListViewModel9 extends Lambda implements Function1<StoreGuildsSorted.Entry.SingletonGuild, GuildListItem.GuildItem> {
     public final /* synthetic */ HashMap $mentionCountsByGuild;
     public final /* synthetic */ WidgetGuildsListViewModel.StoreState $storeState;
@@ -36,7 +36,7 @@ public final class WidgetGuildsListViewModel9 extends Lambda implements Function
         return invoke2(singletonGuild);
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final GuildListItem.GuildItem invoke2(StoreGuildsSorted.Entry.SingletonGuild singletonGuild) {
         Intrinsics3.checkNotNullParameter(singletonGuild, "folder");
         WidgetGuildsListViewModel widgetGuildsListViewModel = this.this$0;

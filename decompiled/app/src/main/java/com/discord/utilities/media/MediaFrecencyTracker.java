@@ -6,8 +6,8 @@ import java.util.List;
 import kotlin.jvm.internal.DefaultConstructorMarker;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: MediaFrecencyTracker.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: MediaFrecencyTracker.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class MediaFrecencyTracker extends FrecencyTracker<String> {
     public MediaFrecencyTracker() {
         this(0, 0, 3, null);

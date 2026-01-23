@@ -9,103 +9,103 @@ import p007b.p225i.p226a.p242c.p267x2.ExtractorOutput;
 import p007b.p225i.p226a.p242c.p267x2.SeekMap;
 import p007b.p225i.p226a.p242c.p267x2.TrackOutput2;
 
-/* compiled from: StreamReader.java */
-/* renamed from: b.i.a.c.x2.j0.i, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.x2.j0.i, reason: use source file name */
+/* JADX INFO: compiled from: StreamReader.java */
+/* JADX INFO: loaded from: classes3.dex */
 public abstract class StreamReader {
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public TrackOutput2 f8541b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public ExtractorOutput f8542c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public OggSeeker f8543d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public long f8544e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public long f8545f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public long f8546g;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public int f8547h;
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public int f8548i;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public long f8550k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public boolean f8551l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public boolean f8552m;
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final OggPacket f8540a = new OggPacket();
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public b f8549j = new b();
 
-    /* compiled from: StreamReader.java */
-    /* renamed from: b.i.a.c.x2.j0.i$b */
+    /* JADX INFO: renamed from: b.i.a.c.x2.j0.i$b */
+    /* JADX INFO: compiled from: StreamReader.java */
     public static class b {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public Format2 f8553a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public OggSeeker f8554b;
     }
 
-    /* compiled from: StreamReader.java */
-    /* renamed from: b.i.a.c.x2.j0.i$c */
+    /* JADX INFO: renamed from: b.i.a.c.x2.j0.i$c */
+    /* JADX INFO: compiled from: StreamReader.java */
     public static final class c implements OggSeeker {
         public c(a aVar) {
         }
 
         @Override // p007b.p225i.p226a.p242c.p267x2.p275j0.OggSeeker
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public SeekMap mo3734a() {
             return new SeekMap.b(-9223372036854775807L, 0L);
         }
 
         @Override // p007b.p225i.p226a.p242c.p267x2.p275j0.OggSeeker
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public long mo3735b(ExtractorInput extractorInput) {
             return -1L;
         }
 
         @Override // p007b.p225i.p226a.p242c.p267x2.p275j0.OggSeeker
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public void mo3736c(long j) {
         }
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public long m3746a(long j) {
-        return (this.f8548i * j) / 1000000;
+        return (((long) this.f8548i) * j) / 1000000;
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public void mo3747b(long j) {
         this.f8546g = j;
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public abstract long mo3737c(ParsableByteArray parsableByteArray);
 
     @EnsuresNonNullIf(expression = {"#3.format"}, result = false)
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public abstract boolean mo3738d(ParsableByteArray parsableByteArray, long j, b bVar) throws IOException;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public void mo3739e(boolean z2) {
         if (z2) {
             this.f8549j = new b();

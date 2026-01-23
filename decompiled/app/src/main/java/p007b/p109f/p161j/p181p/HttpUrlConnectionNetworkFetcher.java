@@ -14,31 +14,31 @@ import p007b.p109f.p115d.p126k.MonotonicClock;
 import p007b.p109f.p115d.p127l.UriUtil;
 import p007b.p109f.p161j.p175j.EncodedImage2;
 
-/* compiled from: HttpUrlConnectionNetworkFetcher.java */
-/* renamed from: b.f.j.p.a0, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.f.j.p.a0, reason: use source file name */
+/* JADX INFO: compiled from: HttpUrlConnectionNetworkFetcher.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class HttpUrlConnectionNetworkFetcher extends BaseNetworkFetcher<a> {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public int f3987a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final ExecutorService f3988b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final MonotonicClock f3989c;
 
-    /* compiled from: HttpUrlConnectionNetworkFetcher.java */
-    /* renamed from: b.f.j.p.a0$a */
+    /* JADX INFO: renamed from: b.f.j.p.a0$a */
+    /* JADX INFO: compiled from: HttpUrlConnectionNetworkFetcher.java */
     public static class a extends FetchState2 {
 
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         public long f3990d;
 
-        /* renamed from: e */
+        /* JADX INFO: renamed from: e */
         public long f3991e;
 
-        /* renamed from: f */
+        /* JADX INFO: renamed from: f */
         public long f3992f;
 
         public a(Consumer2<EncodedImage2> consumer2, ProducerContext producerContext) {
@@ -54,7 +54,7 @@ public class HttpUrlConnectionNetworkFetcher extends BaseNetworkFetcher<a> {
     }
 
     /* JADX WARN: Removed duplicated region for block: B:20:0x003c  */
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */

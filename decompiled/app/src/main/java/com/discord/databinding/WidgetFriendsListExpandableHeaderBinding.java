@@ -7,18 +7,18 @@ import androidx.annotation.NonNull;
 import androidx.viewbinding.ViewBinding;
 import com.discord.C5419R;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public final class WidgetFriendsListExpandableHeaderBinding implements ViewBinding {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     @NonNull
     public final FrameLayout f16683a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     @NonNull
     public final TextView f16684b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     @NonNull
     public final TextView f16685c;
 
@@ -29,7 +29,7 @@ public final class WidgetFriendsListExpandableHeaderBinding implements ViewBindi
     }
 
     @NonNull
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static WidgetFriendsListExpandableHeaderBinding m8415a(@NonNull View view) {
         int i = C5419R.id.friends_list_expandable_header_button;
         TextView textView = (TextView) view.findViewById(C5419R.id.friends_list_expandable_header_button);

@@ -6,9 +6,9 @@ import p507d0.p513e0.p514p.p515d.p517m0.p531e.p532a.p539k0.InterfaceC11581n;
 import p507d0.p513e0.p514p.p515d.p517m0.p552k.p557v.AbstractC11815g;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: LazyJavaScope.kt */
-/* renamed from: d0.e0.p.d.m0.e.a.i0.l.l, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.e.a.i0.l.l, reason: use source file name */
+/* JADX INFO: compiled from: LazyJavaScope.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class LazyJavaScope2 extends Lambda implements Function0<AbstractC11815g<?>> {
     public final /* synthetic */ InterfaceC11581n $field;
     public final /* synthetic */ PropertyDescriptorImpl $propertyDescriptor;

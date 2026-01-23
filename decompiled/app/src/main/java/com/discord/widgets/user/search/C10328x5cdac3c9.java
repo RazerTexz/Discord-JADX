@@ -8,9 +8,9 @@ import kotlin.jvm.functions.Function2;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetGlobalSearchModel.kt */
-/* renamed from: com.discord.widgets.user.search.WidgetGlobalSearchModel$Companion$DEFAULT_PERMISSIONS_PREDICATE$1 */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: com.discord.widgets.user.search.WidgetGlobalSearchModel$Companion$DEFAULT_PERMISSIONS_PREDICATE$1 */
+/* JADX INFO: compiled from: WidgetGlobalSearchModel.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class C10328x5cdac3c9 extends Lambda implements Function2<Channel, Map<Long, ? extends Long>, Boolean> {
     public static final C10328x5cdac3c9 INSTANCE = new C10328x5cdac3c9();
 
@@ -23,7 +23,7 @@ public final class C10328x5cdac3c9 extends Lambda implements Function2<Channel, 
         return Boolean.valueOf(invoke2(channel, (Map<Long, Long>) map));
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final boolean invoke2(Channel channel, Map<Long, Long> map) {
         Intrinsics3.checkNotNullParameter(channel, "channel");
         Intrinsics3.checkNotNullParameter(map, ModelAuditLogEntry.CHANGE_KEY_PERMISSIONS);

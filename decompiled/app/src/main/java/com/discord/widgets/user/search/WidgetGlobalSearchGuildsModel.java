@@ -20,16 +20,16 @@ import p507d0.p578f0._Sequences2;
 import p507d0.p580t._Collections;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: WidgetGlobalSearchGuildsModel.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: WidgetGlobalSearchGuildsModel.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class WidgetGlobalSearchGuildsModel {
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private final boolean hasChannels;
     private final List<Item> items;
 
-    /* compiled from: WidgetGlobalSearchGuildsModel.kt */
+    /* JADX INFO: compiled from: WidgetGlobalSearchGuildsModel.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -80,7 +80,7 @@ public final /* data */ class WidgetGlobalSearchGuildsModel {
         return this.items;
     }
 
-    /* renamed from: component2, reason: from getter */
+    /* JADX INFO: renamed from: component2, reason: from getter */
     public final boolean getHasChannels() {
         return this.hasChannels;
     }
@@ -110,15 +110,18 @@ public final /* data */ class WidgetGlobalSearchGuildsModel {
     }
 
     /* JADX WARN: Multi-variable type inference failed */
+    /* JADX WARN: Type inference failed for: r1v1, types: [int] */
+    /* JADX WARN: Type inference failed for: r1v2 */
+    /* JADX WARN: Type inference failed for: r1v3 */
     public int hashCode() {
         List<Item> list = this.items;
         int iHashCode = (list != null ? list.hashCode() : 0) * 31;
         boolean z2 = this.hasChannels;
-        int i = z2;
-        if (z2 != 0) {
-            i = 1;
+        ?? r1 = z2;
+        if (z2) {
+            r1 = 1;
         }
-        return iHashCode + i;
+        return iHashCode + r1;
     }
 
     public String toString() {
@@ -132,10 +135,10 @@ public final /* data */ class WidgetGlobalSearchGuildsModel {
         this(list, (i & 2) != 0 ? true : z2);
     }
 
-    /* compiled from: WidgetGlobalSearchGuildsModel.kt */
+    /* JADX INFO: compiled from: WidgetGlobalSearchGuildsModel.kt */
     public static final /* data */ class Item implements MGRecyclerDataPayload {
 
-        /* renamed from: Companion, reason: from kotlin metadata */
+        /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
         public static final Companion INSTANCE = new Companion(null);
         public static final int TYPE_DIVIDER = 1;
         public static final int TYPE_DM = 2;
@@ -152,7 +155,7 @@ public final /* data */ class WidgetGlobalSearchGuildsModel {
         private final int type;
         private final int unavailableGuildCount;
 
-        /* compiled from: WidgetGlobalSearchGuildsModel.kt */
+        /* JADX INFO: compiled from: WidgetGlobalSearchGuildsModel.kt */
         public static final class Companion {
             private Companion() {
             }
@@ -198,7 +201,7 @@ public final /* data */ class WidgetGlobalSearchGuildsModel {
             this.key = sb.toString();
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         private final int get_type() {
             return this._type;
         }
@@ -207,42 +210,42 @@ public final /* data */ class WidgetGlobalSearchGuildsModel {
             return item.copy((i4 & 1) != 0 ? item._type : i, (i4 & 2) != 0 ? item.id : j, (i4 & 4) != 0 ? item.channel : channel, (i4 & 8) != 0 ? item.guild : guild, (i4 & 16) != 0 ? item.mentionCount : i2, (i4 & 32) != 0 ? item.isUnread : z2, (i4 & 64) != 0 ? item.isSelected : z3, (i4 & 128) != 0 ? item.connectedToVoice : z4, (i4 & 256) != 0 ? item.unavailableGuildCount : i3);
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final long getId() {
             return this.id;
         }
 
-        /* renamed from: component3, reason: from getter */
+        /* JADX INFO: renamed from: component3, reason: from getter */
         public final Channel getChannel() {
             return this.channel;
         }
 
-        /* renamed from: component4, reason: from getter */
+        /* JADX INFO: renamed from: component4, reason: from getter */
         public final Guild getGuild() {
             return this.guild;
         }
 
-        /* renamed from: component5, reason: from getter */
+        /* JADX INFO: renamed from: component5, reason: from getter */
         public final int getMentionCount() {
             return this.mentionCount;
         }
 
-        /* renamed from: component6, reason: from getter */
+        /* JADX INFO: renamed from: component6, reason: from getter */
         public final boolean getIsUnread() {
             return this.isUnread;
         }
 
-        /* renamed from: component7, reason: from getter */
+        /* JADX INFO: renamed from: component7, reason: from getter */
         public final boolean getIsSelected() {
             return this.isSelected;
         }
 
-        /* renamed from: component8, reason: from getter */
+        /* JADX INFO: renamed from: component8, reason: from getter */
         public final boolean getConnectedToVoice() {
             return this.connectedToVoice;
         }
 
-        /* renamed from: component9, reason: from getter */
+        /* JADX INFO: renamed from: component9, reason: from getter */
         public final int getUnavailableGuildCount() {
             return this.unavailableGuildCount;
         }
@@ -297,6 +300,15 @@ public final /* data */ class WidgetGlobalSearchGuildsModel {
         }
 
         /* JADX WARN: Multi-variable type inference failed */
+        /* JADX WARN: Type inference failed for: r0v10, types: [int] */
+        /* JADX WARN: Type inference failed for: r0v13 */
+        /* JADX WARN: Type inference failed for: r0v14 */
+        /* JADX WARN: Type inference failed for: r0v16 */
+        /* JADX WARN: Type inference failed for: r0v17 */
+        /* JADX WARN: Type inference failed for: r0v8, types: [int] */
+        /* JADX WARN: Type inference failed for: r2v2 */
+        /* JADX WARN: Type inference failed for: r2v3, types: [int] */
+        /* JADX WARN: Type inference failed for: r2v4 */
         public int hashCode() {
             int iM3a = (C0002b.m3a(this.id) + (this._type * 31)) * 31;
             Channel channel = this.channel;
@@ -304,19 +316,19 @@ public final /* data */ class WidgetGlobalSearchGuildsModel {
             Guild guild = this.guild;
             int iHashCode2 = (((iHashCode + (guild != null ? guild.hashCode() : 0)) * 31) + this.mentionCount) * 31;
             boolean z2 = this.isUnread;
-            int i = z2;
-            if (z2 != 0) {
-                i = 1;
+            ?? r0 = z2;
+            if (z2) {
+                r0 = 1;
             }
-            int i2 = (iHashCode2 + i) * 31;
+            int i = (iHashCode2 + r0) * 31;
             boolean z3 = this.isSelected;
-            int i3 = z3;
-            if (z3 != 0) {
-                i3 = 1;
+            ?? r02 = z3;
+            if (z3) {
+                r02 = 1;
             }
-            int i4 = (i2 + i3) * 31;
+            int i2 = (i + r02) * 31;
             boolean z4 = this.connectedToVoice;
-            return ((i4 + (z4 ? 1 : z4 ? 1 : 0)) * 31) + this.unavailableGuildCount;
+            return ((i2 + (z4 ? 1 : z4)) * 31) + this.unavailableGuildCount;
         }
 
         public final boolean isSelected() {

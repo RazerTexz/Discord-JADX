@@ -27,45 +27,45 @@ import p007b.p109f.p161j.p181p.SettableProducerContext;
 import p007b.p109f.p161j.p181p.ThreadHandoffProducerQueue;
 import p007b.p109f.p161j.p183r.FrescoSystrace;
 
-/* compiled from: ImagePipeline.java */
-/* renamed from: b.f.j.e.h, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.f.j.e.h, reason: use source file name */
+/* JADX INFO: compiled from: ImagePipeline.java */
+/* JADX INFO: loaded from: classes.dex */
 public class ImagePipeline2 {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final ProducerSequenceFactory f3733a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final RequestListener f3734b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final RequestListener2 f3735c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final Supplier<Boolean> f3736d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final MemoryCache<CacheKey, CloseableImage> f3737e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final MemoryCache<CacheKey, PooledByteBuffer> f3738f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public final CacheKeyFactory f3739g;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public final Supplier<Boolean> f3740h;
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public AtomicLong f3741i = new AtomicLong();
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final Supplier<Boolean> f3742j = null;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final CallerContextVerifier f3743k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final ImagePipelineConfigInterface f3744l;
 
     static {
@@ -85,7 +85,7 @@ public class ImagePipeline2 {
         this.f3744l = imagePipelineConfigInterface;
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public DataSource<CloseableReference<CloseableImage>> m1262a(ImageRequest imageRequest, Object obj, ImageRequest.EnumC10667c enumC10667c, RequestListener requestListener, String str) {
         try {
             return m1263b(this.f3733a.m1307c(imageRequest), imageRequest, enumC10667c, obj, requestListener, str);
@@ -94,7 +94,7 @@ public class ImagePipeline2 {
         }
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final <T> DataSource<CloseableReference<T>> m1263b(Producer2<CloseableReference<T>> producer2, ImageRequest imageRequest, ImageRequest.EnumC10667c enumC10667c, Object obj, RequestListener requestListener, String str) {
         ForwardingRequestListener forwardingRequestListener;
         RequestListener forwardingRequestListener2;

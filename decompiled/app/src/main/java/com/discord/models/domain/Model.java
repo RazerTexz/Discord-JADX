@@ -18,10 +18,10 @@ import p007b.p225i.p408d.TypeAdapterFactory2;
 import p658rx.functions.Action1;
 import p658rx.functions.Func0;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public interface Model {
 
-    /* renamed from: com.discord.models.domain.Model$1 */
+    /* JADX INFO: renamed from: com.discord.models.domain.Model$1 */
     public static /* synthetic */ class C55311 {
         public static final /* synthetic */ int[] $SwitchMap$com$google$gson$stream$JsonToken;
 
@@ -50,7 +50,7 @@ public interface Model {
 
     public static class JsonReader implements Closeable {
 
-        /* renamed from: in */
+        /* JADX INFO: renamed from: in */
         public final com.google.gson.stream.JsonReader f18559in;
 
         public interface ItemFactory<T> {
@@ -256,7 +256,7 @@ public interface Model {
     public static class TypeAdapterFactory implements TypeAdapterFactory2 {
 
         /* JADX INFO: Add missing generic type declarations: [T] */
-        /* renamed from: com.discord.models.domain.Model$TypeAdapterFactory$1 */
+        /* JADX INFO: renamed from: com.discord.models.domain.Model$TypeAdapterFactory$1 */
         public class C55321<T> extends TypeAdapter<T> {
             public final /* synthetic */ TypeToken val$type;
 

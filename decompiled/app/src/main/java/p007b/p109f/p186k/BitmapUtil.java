@@ -9,19 +9,19 @@ import java.io.InputStream;
 import java.nio.ByteBuffer;
 import java.util.Objects;
 
-/* compiled from: BitmapUtil.java */
-/* renamed from: b.f.k.a, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.f.k.a, reason: use source file name */
+/* JADX INFO: compiled from: BitmapUtil.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class BitmapUtil {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final Pools.SynchronizedPool<ByteBuffer> f4275a = new Pools.SynchronizedPool<>(12);
 
-    /* compiled from: BitmapUtil.java */
-    /* renamed from: b.f.k.a$a */
+    /* JADX INFO: renamed from: b.f.k.a$a */
+    /* JADX INFO: compiled from: BitmapUtil.java */
     public static /* synthetic */ class a {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public static final /* synthetic */ int[] f4276a;
 
         static {
@@ -54,7 +54,7 @@ public final class BitmapUtil {
         }
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static ImageMetaData m1538a(InputStream inputStream) {
         Objects.requireNonNull(inputStream);
         Pools.SynchronizedPool<ByteBuffer> synchronizedPool = f4275a;
@@ -76,7 +76,7 @@ public final class BitmapUtil {
         }
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static int m1539b(Bitmap.Config config) {
         switch (a.f4276a[config.ordinal()]) {
             case 1:
@@ -95,13 +95,13 @@ public final class BitmapUtil {
         }
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public static int m1540c(int i, int i2, Bitmap.Config config) {
         return m1539b(config) * i * i2;
     }
 
     @SuppressLint({"NewApi"})
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public static int m1541d(Bitmap bitmap) {
         if (bitmap == null) {
             return 0;

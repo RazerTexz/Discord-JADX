@@ -2,11 +2,11 @@ package com.discord.widgets.channels.list.items;
 
 import com.discord.utilities.mg_recycler.MGRecyclerDataPayload;
 
-/* compiled from: ChannelListItem.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: ChannelListItem.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public interface ChannelListItem extends MGRecyclerDataPayload {
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = Companion.$$INSTANCE;
     public static final int TYPE_ACTIVE_EVENT = 15;
     public static final int TYPE_ADD_SERVER = 18;
@@ -29,7 +29,7 @@ public interface ChannelListItem extends MGRecyclerDataPayload {
     public static final int TYPE_STAGE_EVENTS_SEPARATOR = 14;
     public static final int TYPE_THREAD = 12;
 
-    /* compiled from: ChannelListItem.kt */
+    /* JADX INFO: compiled from: ChannelListItem.kt */
     public static final class Companion {
         public static final /* synthetic */ Companion $$INSTANCE = new Companion();
         public static final int TYPE_ACTIVE_EVENT = 15;
@@ -57,7 +57,7 @@ public interface ChannelListItem extends MGRecyclerDataPayload {
         }
     }
 
-    /* compiled from: ChannelListItem.kt */
+    /* JADX INFO: compiled from: ChannelListItem.kt */
     public static final class DefaultImpls {
         public static String getKey(ChannelListItem channelListItem) {
             return String.valueOf(channelListItem.getType());

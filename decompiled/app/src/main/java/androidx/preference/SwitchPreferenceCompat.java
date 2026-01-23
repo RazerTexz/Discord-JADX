@@ -11,7 +11,7 @@ import androidx.annotation.RestrictTo;
 import androidx.appcompat.widget.SwitchCompat;
 import androidx.core.content.res.TypedArrayUtils;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class SwitchPreferenceCompat extends TwoStatePreference {
     private final Listener mListener;
     private CharSequence mSwitchOff;

@@ -19,19 +19,19 @@ import p507d0.p580t._ArraysJvm;
 import p507d0.p580t._Collections;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: SimplePager.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: SimplePager.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class SimplePager extends ViewPager {
     private boolean isScrollingEnabled;
     private boolean keepAllPagesLoaded;
     private boolean preserveSelectedPage;
     private boolean wrapHeight;
 
-    /* compiled from: SimplePager.kt */
+    /* JADX INFO: compiled from: SimplePager.kt */
     public static final class Adapter extends FragmentPagerAdapter {
         private final List<Item> items;
 
-        /* compiled from: SimplePager.kt */
+        /* JADX INFO: compiled from: SimplePager.kt */
         public static final class Item {
             private final Function0<Fragment> creator;
             private final String title;
@@ -48,7 +48,7 @@ public final class SimplePager extends ViewPager {
                 return this.creator;
             }
 
-            /* renamed from: getTitle$utils_release, reason: from getter */
+            /* JADX INFO: renamed from: getTitle$utils_release, reason: from getter */
             public final String getTitle() {
                 return this.title;
             }
@@ -112,7 +112,7 @@ public final class SimplePager extends ViewPager {
         return this.wrapHeight;
     }
 
-    /* renamed from: isScrollingEnabled, reason: from getter */
+    /* JADX INFO: renamed from: isScrollingEnabled, reason: from getter */
     public final boolean getIsScrollingEnabled() {
         return this.isScrollingEnabled;
     }

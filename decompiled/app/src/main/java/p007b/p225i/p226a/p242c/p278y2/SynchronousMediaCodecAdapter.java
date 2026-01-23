@@ -12,19 +12,19 @@ import p007b.p225i.p226a.p242c.p259f3.Util2;
 import p007b.p225i.p226a.p242c.p265v2.CryptoInfo;
 import p007b.p225i.p226a.p242c.p278y2.MediaCodecAdapter;
 
-/* compiled from: SynchronousMediaCodecAdapter.java */
-/* renamed from: b.i.a.c.y2.w, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.y2.w, reason: use source file name */
+/* JADX INFO: compiled from: SynchronousMediaCodecAdapter.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class SynchronousMediaCodecAdapter implements MediaCodecAdapter {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final MediaCodec f9120a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     @Nullable
     public ByteBuffer[] f9121b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     @Nullable
     public ByteBuffer[] f9122c;
 
@@ -37,32 +37,32 @@ public class SynchronousMediaCodecAdapter implements MediaCodecAdapter {
     }
 
     @Override // p007b.p225i.p226a.p242c.p278y2.MediaCodecAdapter
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public boolean mo3834a() {
         return false;
     }
 
     @Override // p007b.p225i.p226a.p242c.p278y2.MediaCodecAdapter
-    /* renamed from: b */
-    public void mo3835b(int i, int i2, CryptoInfo cryptoInfo, long j, int i3) throws MediaCodec.CryptoException {
+    /* JADX INFO: renamed from: b */
+    public void mo3835b(int i, int i2, CryptoInfo cryptoInfo, long j, int i3) {
         this.f9120a.queueSecureInputBuffer(i, i2, cryptoInfo.f7910i, j, i3);
     }
 
     @Override // p007b.p225i.p226a.p242c.p278y2.MediaCodecAdapter
     @RequiresApi(21)
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public void mo3836c(int i, long j) {
         this.f9120a.releaseOutputBuffer(i, j);
     }
 
     @Override // p007b.p225i.p226a.p242c.p278y2.MediaCodecAdapter
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public int mo3837d() {
         return this.f9120a.dequeueInputBuffer(0L);
     }
 
     @Override // p007b.p225i.p226a.p242c.p278y2.MediaCodecAdapter
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public int mo3838e(MediaCodec.BufferInfo bufferInfo) {
         int iDequeueOutputBuffer;
         do {
@@ -76,7 +76,7 @@ public class SynchronousMediaCodecAdapter implements MediaCodecAdapter {
 
     @Override // p007b.p225i.p226a.p242c.p278y2.MediaCodecAdapter
     @RequiresApi(23)
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public void mo3839f(MediaCodecAdapter.c cVar, Handler handler) {
         this.f9120a.setOnFrameRenderedListener(new C3137i(this, cVar), handler);
     }
@@ -87,7 +87,7 @@ public class SynchronousMediaCodecAdapter implements MediaCodecAdapter {
     }
 
     @Override // p007b.p225i.p226a.p242c.p278y2.MediaCodecAdapter
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public void mo3840g(int i) {
         this.f9120a.setVideoScalingMode(i);
     }
@@ -99,27 +99,27 @@ public class SynchronousMediaCodecAdapter implements MediaCodecAdapter {
 
     @Override // p007b.p225i.p226a.p242c.p278y2.MediaCodecAdapter
     @Nullable
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public ByteBuffer mo3841h(int i) {
         return Util2.f6708a >= 21 ? this.f9120a.getInputBuffer(i) : this.f9121b[i];
     }
 
     @Override // p007b.p225i.p226a.p242c.p278y2.MediaCodecAdapter
     @RequiresApi(23)
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public void mo3842i(Surface surface) {
         this.f9120a.setOutputSurface(surface);
     }
 
     @Override // p007b.p225i.p226a.p242c.p278y2.MediaCodecAdapter
     @Nullable
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public ByteBuffer mo3843j(int i) {
         return Util2.f6708a >= 21 ? this.f9120a.getOutputBuffer(i) : this.f9122c[i];
     }
 
     @Override // p007b.p225i.p226a.p242c.p278y2.MediaCodecAdapter
-    public void queueInputBuffer(int i, int i2, int i3, long j, int i4) throws MediaCodec.CryptoException {
+    public void queueInputBuffer(int i, int i2, int i3, long j, int i4) {
         this.f9120a.queueInputBuffer(i, i2, i3, j, i4);
     }
 

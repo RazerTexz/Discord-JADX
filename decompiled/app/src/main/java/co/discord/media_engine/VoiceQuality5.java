@@ -5,9 +5,9 @@ import com.adjust.sdk.Constants;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: VoiceQuality.kt */
-/* renamed from: co.discord.media_engine.InboundFrameOpStats, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: co.discord.media_engine.InboundFrameOpStats, reason: use source file name */
+/* JADX INFO: compiled from: VoiceQuality.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class VoiceQuality5 {
     private final Long accelerated;
     private final Long cng;
@@ -57,37 +57,37 @@ public final /* data */ class VoiceQuality5 {
         return voiceQuality5.copy(l, l8, l9, l10, l11, l12, l7);
     }
 
-    /* renamed from: component1, reason: from getter */
+    /* JADX INFO: renamed from: component1, reason: from getter */
     public final Long getSilent() {
         return this.silent;
     }
 
-    /* renamed from: component2, reason: from getter */
+    /* JADX INFO: renamed from: component2, reason: from getter */
     public final Long getNormal() {
         return this.normal;
     }
 
-    /* renamed from: component3, reason: from getter */
+    /* JADX INFO: renamed from: component3, reason: from getter */
     public final Long getMerged() {
         return this.merged;
     }
 
-    /* renamed from: component4, reason: from getter */
+    /* JADX INFO: renamed from: component4, reason: from getter */
     public final Long getExpanded() {
         return this.expanded;
     }
 
-    /* renamed from: component5, reason: from getter */
+    /* JADX INFO: renamed from: component5, reason: from getter */
     public final Long getAccelerated() {
         return this.accelerated;
     }
 
-    /* renamed from: component6, reason: from getter */
+    /* JADX INFO: renamed from: component6, reason: from getter */
     public final Long getPreemptiveExpanded() {
         return this.preemptiveExpanded;
     }
 
-    /* renamed from: component7, reason: from getter */
+    /* JADX INFO: renamed from: component7, reason: from getter */
     public final Long getCng() {
         return this.cng;
     }

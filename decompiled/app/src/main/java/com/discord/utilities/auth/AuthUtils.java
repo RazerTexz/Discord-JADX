@@ -29,8 +29,8 @@ import p507d0.p580t.Collections2;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: AuthUtils.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: AuthUtils.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class AuthUtils {
     public static final String AUTHY_PACKAGE = "com.authy.authy";
     public static final String GOOGLE_AUTHENTICATOR_PACKAGE = "com.google.android.apps.authenticator2";
@@ -41,8 +41,8 @@ public final class AuthUtils {
     public static final String URL_GOOGLE_AUTHENTICATOR = "https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator2";
     private static final String URL_PLAY_STORE = "https://play.google.com/store/apps/details";
 
-    /* compiled from: AuthUtils.kt */
-    /* renamed from: com.discord.utilities.auth.AuthUtils$createDiscriminatorInputValidator$1 */
+    /* JADX INFO: renamed from: com.discord.utilities.auth.AuthUtils$createDiscriminatorInputValidator$1 */
+    /* JADX INFO: compiled from: AuthUtils.kt */
     public static final class C66951 implements InputValidator<TextInputLayout> {
         public final /* synthetic */ int $invalidFormatResId;
         public final /* synthetic */ int $invalidValueResId;
@@ -57,7 +57,7 @@ public final class AuthUtils {
             return getErrorMessage2(textInputLayout);
         }
 
-        /* renamed from: getErrorMessage, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: getErrorMessage, reason: avoid collision after fix types in other method */
         public CharSequence getErrorMessage2(TextInputLayout view) {
             Intrinsics3.checkNotNullParameter(view, "view");
             String textOrEmpty = ViewExtensions.getTextOrEmpty(view);
@@ -72,8 +72,8 @@ public final class AuthUtils {
         }
     }
 
-    /* compiled from: AuthUtils.kt */
-    /* renamed from: com.discord.utilities.auth.AuthUtils$createEmailInputValidator$1 */
+    /* JADX INFO: renamed from: com.discord.utilities.auth.AuthUtils$createEmailInputValidator$1 */
+    /* JADX INFO: compiled from: AuthUtils.kt */
     public static final class C66961 extends Lambda implements Function1<String, Boolean> {
         public static final C66961 INSTANCE = new C66961();
 
@@ -86,15 +86,15 @@ public final class AuthUtils {
             return Boolean.valueOf(invoke2(str));
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final boolean invoke2(String str) {
             Intrinsics3.checkNotNullParameter(str, "it");
             return AuthUtils.access$isValidEmail(AuthUtils.INSTANCE, str);
         }
     }
 
-    /* compiled from: AuthUtils.kt */
-    /* renamed from: com.discord.utilities.auth.AuthUtils$createPasswordInputValidator$1 */
+    /* JADX INFO: renamed from: com.discord.utilities.auth.AuthUtils$createPasswordInputValidator$1 */
+    /* JADX INFO: compiled from: AuthUtils.kt */
     public static final class C66971 extends Lambda implements Function1<String, Boolean> {
         public static final C66971 INSTANCE = new C66971();
 
@@ -107,15 +107,15 @@ public final class AuthUtils {
             return Boolean.valueOf(invoke2(str));
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final boolean invoke2(String str) {
             Intrinsics3.checkNotNullParameter(str, "it");
             return AuthUtils.INSTANCE.isValidPasswordLength(str);
         }
     }
 
-    /* compiled from: AuthUtils.kt */
-    /* renamed from: com.discord.utilities.auth.AuthUtils$createPhoneInputValidator$1 */
+    /* JADX INFO: renamed from: com.discord.utilities.auth.AuthUtils$createPhoneInputValidator$1 */
+    /* JADX INFO: compiled from: AuthUtils.kt */
     public static final class C66981 extends Lambda implements Function1<String, Boolean> {
         public static final C66981 INSTANCE = new C66981();
 
@@ -128,7 +128,7 @@ public final class AuthUtils {
             return Boolean.valueOf(invoke2(str));
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final boolean invoke2(String str) {
             Intrinsics3.checkNotNullParameter(str, "it");
             return PhoneUtils.INSTANCE.isValidPhoneFragment(str);

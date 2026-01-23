@@ -4,9 +4,9 @@ import com.discord.models.guild.Guild;
 import kotlin.jvm.functions.Function1;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: EmojiPickerViewModel.kt */
-/* renamed from: com.discord.widgets.chat.input.emoji.EmojiPickerViewModel$Companion$buildGuildEmojiListItems$$inlined$let$lambda$1 */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.chat.input.emoji.EmojiPickerViewModel$Companion$buildGuildEmojiListItems$$inlined$let$lambda$1 */
+/* JADX INFO: compiled from: EmojiPickerViewModel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class C7813x8d1f8ac3 extends Lambda implements Function1<Long, Guild> {
     public final /* synthetic */ boolean $allowEmojisToAnimate$inlined;
     public final /* synthetic */ Guild $guild$inlined;

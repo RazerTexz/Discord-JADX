@@ -1,8 +1,8 @@
 package com.discord.utilities.textprocessing.node;
 
 
-/* compiled from: Spoilerable.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: Spoilerable.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public interface Spoilerable {
     boolean isRevealed();
 

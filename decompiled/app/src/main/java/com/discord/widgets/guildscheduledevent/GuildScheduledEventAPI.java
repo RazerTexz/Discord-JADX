@@ -6,8 +6,8 @@ import com.discord.utilities.rest.RestAPI;
 import kotlin.Unit;
 import p658rx.Observable;
 
-/* compiled from: GuildScheduledEventAPI.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: GuildScheduledEventAPI.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class GuildScheduledEventAPI {
     public static final GuildScheduledEventAPI INSTANCE = new GuildScheduledEventAPI();
 

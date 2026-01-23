@@ -50,14 +50,14 @@ import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: MemberVerificationRulesAdapter.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: MemberVerificationRulesAdapter.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class MemberVerificationRulesAdapter extends MGRecyclerAdapterSimple<MGRecyclerDataPayload> {
     private final AppFragment fragment;
     private Function1<? super Boolean, Unit> onUpdateRulesApproval;
     private Function2<? super Integer, Object, Unit> onUserInputDataEntered;
 
-    /* compiled from: MemberVerificationRulesAdapter.kt */
+    /* JADX INFO: compiled from: MemberVerificationRulesAdapter.kt */
     public static final class ApproveTermsItemHolder extends MGRecyclerViewHolder<MemberVerificationRulesAdapter, MGRecyclerDataPayload> {
         private final WidgetMemberVerificationApproveTermsItemBinding binding;
 
@@ -82,7 +82,7 @@ public final class MemberVerificationRulesAdapter extends MGRecyclerAdapterSimpl
             onConfigure2(i, mGRecyclerDataPayload);
         }
 
-        /* renamed from: onConfigure, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: onConfigure, reason: avoid collision after fix types in other method */
         public void onConfigure2(int position, MGRecyclerDataPayload data) {
             Intrinsics3.checkNotNullParameter(data, "data");
             super.onConfigure(position, data);
@@ -94,7 +94,7 @@ public final class MemberVerificationRulesAdapter extends MGRecyclerAdapterSimpl
         }
     }
 
-    /* compiled from: MemberVerificationRulesAdapter.kt */
+    /* JADX INFO: compiled from: MemberVerificationRulesAdapter.kt */
     public static final class ItemHolder extends MGRecyclerViewHolder<MemberVerificationRulesAdapter, MGRecyclerDataPayload> {
         private final WidgetMemberVerificationHeaderItemBinding binding;
 
@@ -115,7 +115,7 @@ public final class MemberVerificationRulesAdapter extends MGRecyclerAdapterSimpl
             onConfigure2(i, mGRecyclerDataPayload);
         }
 
-        /* renamed from: onConfigure, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: onConfigure, reason: avoid collision after fix types in other method */
         public void onConfigure2(int position, MGRecyclerDataPayload data) {
             Intrinsics3.checkNotNullParameter(data, "data");
             super.onConfigure(position, data);
@@ -125,7 +125,7 @@ public final class MemberVerificationRulesAdapter extends MGRecyclerAdapterSimpl
         }
     }
 
-    /* compiled from: MemberVerificationRulesAdapter.kt */
+    /* JADX INFO: compiled from: MemberVerificationRulesAdapter.kt */
     public static final class MultipleChoiceItemHolder extends MGRecyclerViewHolder<MemberVerificationRulesAdapter, MGRecyclerDataPayload> {
         private final WidgetMemberVerificationMultipleChoiceItemBinding binding;
 
@@ -178,7 +178,7 @@ public final class MemberVerificationRulesAdapter extends MGRecyclerAdapterSimpl
             onConfigure2(i, mGRecyclerDataPayload);
         }
 
-        /* renamed from: onConfigure, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: onConfigure, reason: avoid collision after fix types in other method */
         public void onConfigure2(int position, MGRecyclerDataPayload data) {
             Intrinsics3.checkNotNullParameter(data, "data");
             super.onConfigure(position, data);
@@ -196,13 +196,13 @@ public final class MemberVerificationRulesAdapter extends MGRecyclerAdapterSimpl
         }
     }
 
-    /* compiled from: MemberVerificationRulesAdapter.kt */
+    /* JADX INFO: compiled from: MemberVerificationRulesAdapter.kt */
     public static final class ParagraphItemHolder extends MGRecyclerViewHolder<MemberVerificationRulesAdapter, MGRecyclerDataPayload> {
         private final WidgetMemberVerificationParagraphItemBinding binding;
         private int fieldIndex;
 
-        /* compiled from: MemberVerificationRulesAdapter.kt */
-        /* renamed from: com.discord.widgets.servers.member_verification.MemberVerificationRulesAdapter$ParagraphItemHolder$1 */
+        /* JADX INFO: renamed from: com.discord.widgets.servers.member_verification.MemberVerificationRulesAdapter$ParagraphItemHolder$1 */
+        /* JADX INFO: compiled from: MemberVerificationRulesAdapter.kt */
         public static final class C95481 extends Lambda implements Function1<Editable, Unit> {
             public final /* synthetic */ MemberVerificationRulesAdapter $adapter;
 
@@ -218,7 +218,7 @@ public final class MemberVerificationRulesAdapter extends MGRecyclerAdapterSimpl
                 return Unit.f27425a;
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2(Editable editable) {
                 Intrinsics3.checkNotNullParameter(editable, "editable");
                 this.$adapter.getOnUserInputDataEntered().invoke(Integer.valueOf(ParagraphItemHolder.access$getFieldIndex$p(ParagraphItemHolder.this)), editable.toString());
@@ -254,7 +254,7 @@ public final class MemberVerificationRulesAdapter extends MGRecyclerAdapterSimpl
             onConfigure2(i, mGRecyclerDataPayload);
         }
 
-        /* renamed from: onConfigure, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: onConfigure, reason: avoid collision after fix types in other method */
         public void onConfigure2(int position, MGRecyclerDataPayload data) {
             Intrinsics3.checkNotNullParameter(data, "data");
             super.onConfigure(position, data);
@@ -267,7 +267,7 @@ public final class MemberVerificationRulesAdapter extends MGRecyclerAdapterSimpl
         }
     }
 
-    /* compiled from: MemberVerificationRulesAdapter.kt */
+    /* JADX INFO: compiled from: MemberVerificationRulesAdapter.kt */
     public static final class TermHeaderItemHolder extends MGRecyclerViewHolder<MemberVerificationRulesAdapter, MGRecyclerDataPayload> {
         private final WidgetMemberVerificationHeaderItemBinding binding;
 
@@ -288,7 +288,7 @@ public final class MemberVerificationRulesAdapter extends MGRecyclerAdapterSimpl
             onConfigure2(i, mGRecyclerDataPayload);
         }
 
-        /* renamed from: onConfigure, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: onConfigure, reason: avoid collision after fix types in other method */
         public void onConfigure2(int position, MGRecyclerDataPayload data) {
             Intrinsics3.checkNotNullParameter(data, "data");
             super.onConfigure(position, data);
@@ -300,7 +300,7 @@ public final class MemberVerificationRulesAdapter extends MGRecyclerAdapterSimpl
         }
     }
 
-    /* compiled from: MemberVerificationRulesAdapter.kt */
+    /* JADX INFO: compiled from: MemberVerificationRulesAdapter.kt */
     public static final class TermItemHolder extends MGRecyclerViewHolder<MemberVerificationRulesAdapter, MGRecyclerDataPayload> {
         private final WidgetMemberVerificationRuleItemBinding binding;
 
@@ -338,7 +338,7 @@ public final class MemberVerificationRulesAdapter extends MGRecyclerAdapterSimpl
             onConfigure2(i, mGRecyclerDataPayload);
         }
 
-        /* renamed from: onConfigure, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: onConfigure, reason: avoid collision after fix types in other method */
         public void onConfigure2(int position, MGRecyclerDataPayload data) {
             Intrinsics3.checkNotNullParameter(data, "data");
             super.onConfigure(position, data);
@@ -371,13 +371,13 @@ public final class MemberVerificationRulesAdapter extends MGRecyclerAdapterSimpl
         }
     }
 
-    /* compiled from: MemberVerificationRulesAdapter.kt */
+    /* JADX INFO: compiled from: MemberVerificationRulesAdapter.kt */
     public static final class TextInputItemHolder extends MGRecyclerViewHolder<MemberVerificationRulesAdapter, MGRecyclerDataPayload> {
         private final WidgetMemberVerificationTextInputItemBinding binding;
         private int fieldIndex;
 
-        /* compiled from: MemberVerificationRulesAdapter.kt */
-        /* renamed from: com.discord.widgets.servers.member_verification.MemberVerificationRulesAdapter$TextInputItemHolder$1 */
+        /* JADX INFO: renamed from: com.discord.widgets.servers.member_verification.MemberVerificationRulesAdapter$TextInputItemHolder$1 */
+        /* JADX INFO: compiled from: MemberVerificationRulesAdapter.kt */
         public static final class C95491 extends Lambda implements Function1<Editable, Unit> {
             public final /* synthetic */ MemberVerificationRulesAdapter $adapter;
 
@@ -393,7 +393,7 @@ public final class MemberVerificationRulesAdapter extends MGRecyclerAdapterSimpl
                 return Unit.f27425a;
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2(Editable editable) {
                 Intrinsics3.checkNotNullParameter(editable, "editable");
                 this.$adapter.getOnUserInputDataEntered().invoke(Integer.valueOf(TextInputItemHolder.access$getFieldIndex$p(TextInputItemHolder.this)), editable.toString());
@@ -429,7 +429,7 @@ public final class MemberVerificationRulesAdapter extends MGRecyclerAdapterSimpl
             onConfigure2(i, mGRecyclerDataPayload);
         }
 
-        /* renamed from: onConfigure, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: onConfigure, reason: avoid collision after fix types in other method */
         public void onConfigure2(int position, MGRecyclerDataPayload data) {
             Intrinsics3.checkNotNullParameter(data, "data");
             super.onConfigure(position, data);

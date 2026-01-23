@@ -36,31 +36,31 @@ import p507d0.p592z.p594d.Lambda;
 import p507d0.p592z.p594d.Reflection2;
 import p658rx.Observable;
 
-/* compiled from: WidgetServerSettingsGuildRoleSubscriptionTierList.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetServerSettingsGuildRoleSubscriptionTierList.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetServerSettingsGuildRoleSubscriptionTierList extends AppFragment {
     public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetServerSettingsGuildRoleSubscriptionTierList.class, "binding", "getBinding()Lcom/discord/databinding/WidgetServerSettingsGuildRoleSubscriptionTierListBinding;", 0)};
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
 
-    /* renamed from: SERVER_SETTINGS_GUILD_ROLE_SUBSCRIPTION_TIERS_VIEW_FLIPPER_LOADED_STATE */
+    /* JADX INFO: renamed from: SERVER_SETTINGS_GUILD_ROLE_SUBSCRIPTION_TIERS_VIEW_FLIPPER_LOADED_STATE */
     private static final int f19393x64833d6d = 1;
 
-    /* renamed from: SERVER_SETTINGS_GUILD_ROLE_SUBSCRIPTION_TIERS_VIEW_FLIPPER_LOADING_STATE */
+    /* JADX INFO: renamed from: SERVER_SETTINGS_GUILD_ROLE_SUBSCRIPTION_TIERS_VIEW_FLIPPER_LOADING_STATE */
     private static final int f19394xaaa0cc98 = 0;
     private ServerSettingsGuildRoleSubscriptionTierAdapter adapter;
 
-    /* renamed from: binding$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
 
-    /* renamed from: guildId$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: guildId$delegate, reason: from kotlin metadata */
     private final Lazy guildId;
 
-    /* renamed from: viewModel$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: viewModel$delegate, reason: from kotlin metadata */
     private final Lazy viewModel;
 
-    /* compiled from: WidgetServerSettingsGuildRoleSubscriptionTierList.kt */
+    /* JADX INFO: compiled from: WidgetServerSettingsGuildRoleSubscriptionTierList.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -77,8 +77,8 @@ public final class WidgetServerSettingsGuildRoleSubscriptionTierList extends App
         }
     }
 
-    /* compiled from: WidgetServerSettingsGuildRoleSubscriptionTierList.kt */
-    /* renamed from: com.discord.widgets.servers.guild_role_subscription.WidgetServerSettingsGuildRoleSubscriptionTierList$configureUI$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.guild_role_subscription.WidgetServerSettingsGuildRoleSubscriptionTierList$configureUI$1 */
+    /* JADX INFO: compiled from: WidgetServerSettingsGuildRoleSubscriptionTierList.kt */
     public static final class C94551 implements ServerSettingsGuildRoleSubscriptionTierAdapter.ItemClickListener {
         public final /* synthetic */ ServerSettingsGuildRoleSubscriptionTierListViewModel.ViewState.Loaded $loadedViewState;
 
@@ -97,8 +97,8 @@ public final class WidgetServerSettingsGuildRoleSubscriptionTierList extends App
         }
     }
 
-    /* compiled from: WidgetServerSettingsGuildRoleSubscriptionTierList.kt */
-    /* renamed from: com.discord.widgets.servers.guild_role_subscription.WidgetServerSettingsGuildRoleSubscriptionTierList$onViewBoundOrOnResume$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.guild_role_subscription.WidgetServerSettingsGuildRoleSubscriptionTierList$onViewBoundOrOnResume$1 */
+    /* JADX INFO: compiled from: WidgetServerSettingsGuildRoleSubscriptionTierList.kt */
     public static final class C94561 extends Lambda implements Function1<ServerSettingsGuildRoleSubscriptionTierListViewModel.ViewState, Unit> {
         public C94561() {
             super(1);
@@ -110,7 +110,7 @@ public final class WidgetServerSettingsGuildRoleSubscriptionTierList extends App
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(ServerSettingsGuildRoleSubscriptionTierListViewModel.ViewState viewState) {
             WidgetServerSettingsGuildRoleSubscriptionTierList widgetServerSettingsGuildRoleSubscriptionTierList = WidgetServerSettingsGuildRoleSubscriptionTierList.this;
             Intrinsics3.checkNotNullExpressionValue(viewState, "it");

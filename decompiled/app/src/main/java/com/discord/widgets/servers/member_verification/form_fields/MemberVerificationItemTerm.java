@@ -8,8 +8,8 @@ import java.util.Map;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: MemberVerificationItemTerm.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: MemberVerificationItemTerm.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final /* data */ class MemberVerificationItemTerm implements MemberVerificationItem {
     private final boolean allowAnimatedEmojis;
     private final List<Node<MessageRenderContext>> ast;
@@ -39,16 +39,17 @@ public final /* data */ class MemberVerificationItemTerm implements MemberVerifi
         this.key = getType() + i + str;
     }
 
+    /* JADX WARN: Multi-variable type inference failed */
     public static /* synthetic */ MemberVerificationItemTerm copy$default(MemberVerificationItemTerm memberVerificationItemTerm, int i, String str, List list, Map map, Map map2, boolean z2, boolean z3, boolean z4, int i2, Object obj) {
         return memberVerificationItemTerm.copy((i2 & 1) != 0 ? memberVerificationItemTerm.index : i, (i2 & 2) != 0 ? memberVerificationItemTerm.rule : str, (i2 & 4) != 0 ? memberVerificationItemTerm.ast : list, (i2 & 8) != 0 ? memberVerificationItemTerm.channelNames : map, (i2 & 16) != 0 ? memberVerificationItemTerm.roles : map2, (i2 & 32) != 0 ? memberVerificationItemTerm.allowAnimatedEmojis : z2, (i2 & 64) != 0 ? memberVerificationItemTerm.isFirstItem : z3, (i2 & 128) != 0 ? memberVerificationItemTerm.isLastItem : z4);
     }
 
-    /* renamed from: component1, reason: from getter */
+    /* JADX INFO: renamed from: component1, reason: from getter */
     public final int getIndex() {
         return this.index;
     }
 
-    /* renamed from: component2, reason: from getter */
+    /* JADX INFO: renamed from: component2, reason: from getter */
     public final String getRule() {
         return this.rule;
     }
@@ -65,17 +66,17 @@ public final /* data */ class MemberVerificationItemTerm implements MemberVerifi
         return this.roles;
     }
 
-    /* renamed from: component6, reason: from getter */
+    /* JADX INFO: renamed from: component6, reason: from getter */
     public final boolean getAllowAnimatedEmojis() {
         return this.allowAnimatedEmojis;
     }
 
-    /* renamed from: component7, reason: from getter */
+    /* JADX INFO: renamed from: component7, reason: from getter */
     public final boolean getIsFirstItem() {
         return this.isFirstItem;
     }
 
-    /* renamed from: component8, reason: from getter */
+    /* JADX INFO: renamed from: component8, reason: from getter */
     public final boolean getIsLastItem() {
         return this.isLastItem;
     }
@@ -134,6 +135,15 @@ public final /* data */ class MemberVerificationItemTerm implements MemberVerifi
     }
 
     /* JADX WARN: Multi-variable type inference failed */
+    /* JADX WARN: Type inference failed for: r1v11, types: [int] */
+    /* JADX WARN: Type inference failed for: r1v13, types: [int] */
+    /* JADX WARN: Type inference failed for: r1v15 */
+    /* JADX WARN: Type inference failed for: r1v16 */
+    /* JADX WARN: Type inference failed for: r1v20 */
+    /* JADX WARN: Type inference failed for: r1v21 */
+    /* JADX WARN: Type inference failed for: r2v2 */
+    /* JADX WARN: Type inference failed for: r2v3, types: [int] */
+    /* JADX WARN: Type inference failed for: r2v4 */
     public int hashCode() {
         int i = this.index * 31;
         String str = this.rule;
@@ -145,19 +155,19 @@ public final /* data */ class MemberVerificationItemTerm implements MemberVerifi
         Map<Long, GuildRole> map2 = this.roles;
         int iHashCode4 = (iHashCode3 + (map2 != null ? map2.hashCode() : 0)) * 31;
         boolean z2 = this.allowAnimatedEmojis;
-        int i2 = z2;
-        if (z2 != 0) {
-            i2 = 1;
+        ?? r1 = z2;
+        if (z2) {
+            r1 = 1;
         }
-        int i3 = (iHashCode4 + i2) * 31;
+        int i2 = (iHashCode4 + r1) * 31;
         boolean z3 = this.isFirstItem;
-        int i4 = z3;
-        if (z3 != 0) {
-            i4 = 1;
+        ?? r12 = z3;
+        if (z3) {
+            r12 = 1;
         }
-        int i5 = (i3 + i4) * 31;
+        int i3 = (i2 + r12) * 31;
         boolean z4 = this.isLastItem;
-        return i5 + (z4 ? 1 : z4 ? 1 : 0);
+        return i3 + (z4 ? 1 : z4);
     }
 
     public final boolean isFirstItem() {

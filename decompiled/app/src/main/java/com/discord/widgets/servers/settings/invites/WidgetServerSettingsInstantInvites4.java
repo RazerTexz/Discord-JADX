@@ -11,9 +11,9 @@ import kotlin.jvm.functions.Function0;
 import p507d0.p580t.Maps6;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetServerSettingsInstantInvites.kt */
-/* renamed from: com.discord.widgets.servers.settings.invites.WidgetServerSettingsInstantInvites$Model$Companion$get$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.servers.settings.invites.WidgetServerSettingsInstantInvites$Model$Companion$get$1, reason: use source file name */
+/* JADX INFO: compiled from: WidgetServerSettingsInstantInvites.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetServerSettingsInstantInvites4 extends Lambda implements Function0<WidgetServerSettingsInstantInvites.Model> {
     public final /* synthetic */ long $guildId;
     public final /* synthetic */ StoreGuilds $storeGuilds;

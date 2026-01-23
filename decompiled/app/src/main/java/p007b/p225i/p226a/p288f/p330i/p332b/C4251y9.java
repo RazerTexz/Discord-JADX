@@ -7,12 +7,12 @@ import androidx.annotation.WorkerThread;
 import java.util.Objects;
 import p007b.p225i.p226a.p288f.p299e.p308o.C3401c;
 
-/* compiled from: com.google.android.gms:play-services-measurement-impl@@18.0.0 */
-/* renamed from: b.i.a.f.i.b.y9 */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.i.b.y9 */
+/* JADX INFO: compiled from: com.google.android.gms:play-services-measurement-impl@@18.0.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public final class C4251y9 {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final C4202u4 f11386a;
 
     public C4251y9(C4202u4 c4202u4) {
@@ -20,7 +20,7 @@ public final class C4251y9 {
     }
 
     @WorkerThread
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final void m5965a(String str, Bundle bundle) {
         String string;
         this.f11386a.mo5725f().mo5848b();
@@ -49,7 +49,7 @@ public final class C4251y9 {
         c4057h4.m5649b(System.currentTimeMillis());
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final boolean m5966b() {
         if (!m5967c()) {
             return false;
@@ -58,7 +58,7 @@ public final class C4251y9 {
         return System.currentTimeMillis() - this.f11386a.m5946o().f10632C.m5648a() > this.f11386a.f11260h.m5525n(null, C4142p.f11029E0);
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final boolean m5967c() {
         return this.f11386a.m5946o().f10632C.m5648a() > 0;
     }

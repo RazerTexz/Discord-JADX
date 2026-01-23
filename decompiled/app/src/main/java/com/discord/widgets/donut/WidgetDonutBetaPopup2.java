@@ -13,9 +13,9 @@ import kotlin.jvm.functions.Function1;
 import p507d0.p592z.p594d.FunctionReferenceImpl;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: WidgetDonutBetaPopup.kt */
-/* renamed from: com.discord.widgets.donut.WidgetDonutBetaPopup$binding$2, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.donut.WidgetDonutBetaPopup$binding$2, reason: use source file name */
+/* JADX INFO: compiled from: WidgetDonutBetaPopup.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final /* synthetic */ class WidgetDonutBetaPopup2 extends FunctionReferenceImpl implements Function1<View, WidgetDonutBetaPopupBinding> {
     public static final WidgetDonutBetaPopup2 INSTANCE = new WidgetDonutBetaPopup2();
 
@@ -28,7 +28,7 @@ public final /* synthetic */ class WidgetDonutBetaPopup2 extends FunctionReferen
         return invoke2(view);
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final WidgetDonutBetaPopupBinding invoke2(View view) {
         Intrinsics3.checkNotNullParameter(view, "p1");
         int i = C5419R.id.donut_beta_actions;

@@ -2,9 +2,9 @@ package p007b.p109f.p115d.p119d;
 
 import java.util.ArrayList;
 
-/* compiled from: ImmutableList.java */
-/* renamed from: b.f.d.d.e, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.f.d.d.e, reason: use source file name */
+/* JADX INFO: compiled from: ImmutableList.java */
+/* JADX INFO: loaded from: classes.dex */
 public class ImmutableList<E> extends ArrayList<E> {
     public ImmutableList(int i) {
         super(i);

@@ -10,15 +10,15 @@ import java.util.concurrent.Semaphore;
 import java.util.concurrent.TimeUnit;
 import p007b.p225i.p226a.p288f.p299e.p300h.AbstractC3268c;
 
-/* compiled from: com.google.android.gms:play-services-auth@@19.0.0 */
-/* renamed from: b.i.a.f.c.a.f.b.d */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.c.a.f.b.d */
+/* JADX INFO: compiled from: com.google.android.gms:play-services-auth@@19.0.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public final class C3201d extends AsyncTaskLoader<Void> {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public Semaphore f9229a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public Set<AbstractC3268c> f9230b;
 
     public C3201d(Context context, Set<AbstractC3268c> set) {

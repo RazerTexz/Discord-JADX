@@ -23,7 +23,7 @@ import lombok.core.TypeResolver;
 import lombok.core.configuration.ConfigurationKeysLoader;
 import lombok.javac.handlers.JavacHandlerUtil;
 
-/* loaded from: discord-126021.apk:lombok/javac/HandlerLibrary.SCL.lombok */
+/* JADX INFO: loaded from: discord-126021.apk:lombok/javac/HandlerLibrary.SCL.lombok */
 public class HandlerLibrary {
     private final TypeLibrary typeLibrary = new TypeLibrary();
     private final Map<String, List<AnnotationHandlerContainer<?>>> annotationHandlers = new HashMap();
@@ -37,7 +37,7 @@ public class HandlerLibrary {
         this.messager = messager;
     }
 
-    /* loaded from: discord-126021.apk:lombok/javac/HandlerLibrary$VisitorContainer.SCL.lombok */
+    /* JADX INFO: loaded from: discord-126021.apk:lombok/javac/HandlerLibrary$VisitorContainer.SCL.lombok */
     private static class VisitorContainer {
         private final JavacASTVisitor visitor;
         private final long priority;
@@ -50,7 +50,7 @@ public class HandlerLibrary {
         VisitorContainer(JavacASTVisitor visitor) {
             this.visitor = visitor;
             HandlerPriority hp = (HandlerPriority) visitor.getClass().getAnnotation(HandlerPriority.class);
-            this.priority = hp == null ? 0L : (hp.value() << 32) + hp.subValue();
+            this.priority = hp == null ? 0L : (((long) hp.value()) << 32) + ((long) hp.subValue());
             this.resolutionResetNeeded = visitor.getClass().isAnnotationPresent(ResolutionResetNeeded.class);
         }
 
@@ -63,7 +63,7 @@ public class HandlerLibrary {
         }
     }
 
-    /* loaded from: discord-126021.apk:lombok/javac/HandlerLibrary$AnnotationHandlerContainer.SCL.lombok */
+    /* JADX INFO: loaded from: discord-126021.apk:lombok/javac/HandlerLibrary$AnnotationHandlerContainer.SCL.lombok */
     private static class AnnotationHandlerContainer<T extends Annotation> {
         private final JavacAnnotationHandler<T> handler;
         private final Class<T> annotationClass;
@@ -83,7 +83,7 @@ public class HandlerLibrary {
             this.handler = handler;
             this.annotationClass = annotationClass;
             HandlerPriority hp = (HandlerPriority) handler.getClass().getAnnotation(HandlerPriority.class);
-            this.priority = hp == null ? 0L : (hp.value() << 32) + hp.subValue();
+            this.priority = hp == null ? 0L : (((long) hp.value()) << 32) + ((long) hp.subValue());
             this.resolutionResetNeeded = handler.getClass().isAnnotationPresent(ResolutionResetNeeded.class);
             this.evenIfAlreadyHandled = handler.getClass().isAnnotationPresent(AlreadyHandledAnnotations.class);
         }

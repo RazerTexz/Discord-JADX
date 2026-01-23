@@ -38,8 +38,8 @@ import com.google.android.material.badge.BadgeDrawable;
 import com.google.android.material.internal.TextScale;
 import java.util.HashSet;
 
+/* JADX INFO: loaded from: classes3.dex */
 @RestrictTo({RestrictTo.Scope.LIBRARY_GROUP})
-/* loaded from: classes3.dex */
 public class BottomNavigationMenuView extends ViewGroup implements MenuView {
     private static final long ACTIVE_ANIMATION_DURATION_MS = 115;
     private static final int[] CHECKED_STATE_SET = {R.attr.state_checked};
@@ -90,7 +90,7 @@ public class BottomNavigationMenuView extends ViewGroup implements MenuView {
     private final TransitionSet set;
     private int[] tempChildWidths;
 
-    /* renamed from: com.google.android.material.bottomnavigation.BottomNavigationMenuView$a */
+    /* JADX INFO: renamed from: com.google.android.material.bottomnavigation.BottomNavigationMenuView$a */
     public class ViewOnClickListenerC10847a implements View.OnClickListener {
         public ViewOnClickListenerC10847a() {
         }
@@ -225,7 +225,7 @@ public class BottomNavigationMenuView extends ViewGroup implements MenuView {
     }
 
     @Nullable
-    public ColorStateList createDefaultColorStateList(int i) throws Resources.NotFoundException {
+    public ColorStateList createDefaultColorStateList(int i) {
         TypedValue typedValue = new TypedValue();
         if (!getContext().getTheme().resolveAttribute(i, typedValue, true)) {
             return null;

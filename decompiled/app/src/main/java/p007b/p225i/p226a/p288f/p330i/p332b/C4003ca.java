@@ -11,29 +11,29 @@ import p007b.p225i.p226a.p288f.p313h.p325l.AbstractC3851u4;
 import p007b.p225i.p226a.p288f.p313h.p325l.C3579a1;
 import p007b.p225i.p226a.p288f.p313h.p325l.C3607c1;
 
-/* compiled from: com.google.android.gms:play-services-measurement@@18.0.0 */
-/* renamed from: b.i.a.f.i.b.ca */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.i.b.ca */
+/* JADX INFO: compiled from: com.google.android.gms:play-services-measurement@@18.0.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public final class C4003ca {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public C3579a1 f10618a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public Long f10619b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public long f10620c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final /* synthetic */ C3991ba f10621d;
 
     public C4003ca(C3991ba c3991ba, C3979aa c3979aa) {
         this.f10621d = c3991ba;
     }
 
+    /* JADX WARN: Multi-variable type inference failed */
     /* JADX WARN: Removed duplicated region for block: B:23:0x006c  */
-    /* JADX WARN: Removed duplicated region for block: B:47:0x00f8  */
     /* JADX WARN: Removed duplicated region for block: B:53:0x0126  */
     /* JADX WARN: Removed duplicated region for block: B:58:0x0156  */
     /* JADX WARN: Removed duplicated region for block: B:62:0x017a  */
@@ -41,12 +41,15 @@ public final class C4003ca {
     /* JADX WARN: Removed duplicated region for block: B:68:0x019e  */
     /* JADX WARN: Removed duplicated region for block: B:75:0x01c0  */
     /* JADX WARN: Type inference failed for: r14v6, types: [long] */
-    /* renamed from: a */
+    /* JADX WARN: Type inference failed for: r6v3 */
+    /* JADX WARN: Type inference failed for: r6v4, types: [android.database.Cursor] */
+    /* JADX WARN: Type inference failed for: r6v5 */
+    /* JADX INFO: renamed from: a */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
     public final C3579a1 m5561a(String str, C3579a1 c3579a1) {
-        Cursor cursor;
+        ?? r6;
         Cursor cursorRawQuery;
         Pair pairCreate;
         Object obj;
@@ -81,10 +84,6 @@ public final class C4003ca {
                                     c4040gM5686q.mo5726g().f11141f.m5863d("Failed to merge main event. appId, eventId", C4157q3.m5788s(str), l, e);
                                     cursorRawQuery.close();
                                     pairCreate = null;
-                                    if (pairCreate != null) {
-                                    }
-                                    this.f10621d.mo5726g().f11142g.m5862c("Extra parameter without existing main event. eventName, eventId", str2, l);
-                                    return null;
                                 }
                             } else {
                                 c4040gM5686q.mo5726g().f11149n.m5860a("Main event not found");
@@ -105,9 +104,9 @@ public final class C4003ca {
                         }
                     } catch (Throwable th) {
                         th = th;
-                        cursor = LongValue;
-                        if (cursor != null) {
-                            cursor.close();
+                        r6 = LongValue;
+                        if (r6 != 0) {
+                            r6.close();
                         }
                         throw th;
                     }
@@ -116,8 +115,8 @@ public final class C4003ca {
                     cursorRawQuery = null;
                 } catch (Throwable th2) {
                     th = th2;
-                    cursor = null;
-                    if (cursor != null) {
+                    r6 = 0;
+                    if (r6 != 0) {
                     }
                     throw th;
                 }

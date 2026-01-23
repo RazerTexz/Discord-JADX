@@ -1,6 +1,5 @@
 package com.discord.widgets.guildscheduledevent;
 
-import android.content.res.Resources;
 import android.view.View;
 import android.view.ViewGroup;
 import androidx.recyclerview.widget.RecyclerView;
@@ -15,8 +14,8 @@ import kotlin.Unit;
 import kotlin.jvm.functions.Function1;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: GuildScheduledEventListAdapter.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: GuildScheduledEventListAdapter.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class GuildScheduledEventListAdapter extends MGRecyclerAdapterSimple<GuildScheduledEventListItem> {
     private final Function1<GuildScheduledEventListItem.Event, Unit> onCardClicked;
     private final Function1<GuildScheduledEventListItem.Event, Unit> onEventStartClicked;
@@ -24,7 +23,7 @@ public final class GuildScheduledEventListAdapter extends MGRecyclerAdapterSimpl
     private final Function1<GuildScheduledEventListItem.Event, Unit> onRsvpClicked;
     private final Function1<GuildScheduledEventListItem.Event, Unit> onShareClicked;
 
-    /* compiled from: GuildScheduledEventListAdapter.kt */
+    /* JADX INFO: compiled from: GuildScheduledEventListAdapter.kt */
     public final class EventViewHolder extends MGRecyclerViewHolder<GuildScheduledEventListAdapter, GuildScheduledEventListItem> {
         private final GuildScheduledEventListItemBinding binding;
 
@@ -47,12 +46,12 @@ public final class GuildScheduledEventListAdapter extends MGRecyclerAdapterSimpl
         }
 
         @Override // com.discord.utilities.mg_recycler.MGRecyclerViewHolder
-        public /* bridge */ /* synthetic */ void onConfigure(int i, GuildScheduledEventListItem guildScheduledEventListItem) throws Resources.NotFoundException {
+        public /* bridge */ /* synthetic */ void onConfigure(int i, GuildScheduledEventListItem guildScheduledEventListItem) {
             onConfigure2(i, guildScheduledEventListItem);
         }
 
-        /* renamed from: onConfigure, reason: avoid collision after fix types in other method */
-        public void onConfigure2(int position, GuildScheduledEventListItem data) throws Resources.NotFoundException {
+        /* JADX INFO: renamed from: onConfigure, reason: avoid collision after fix types in other method */
+        public void onConfigure2(int position, GuildScheduledEventListItem data) {
             Intrinsics3.checkNotNullParameter(data, "data");
             super.onConfigure(position, data);
             GuildScheduledEventListItem.Event event = (GuildScheduledEventListItem.Event) data;

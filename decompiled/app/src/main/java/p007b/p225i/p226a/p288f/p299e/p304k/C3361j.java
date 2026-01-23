@@ -6,15 +6,15 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
-/* compiled from: com.google.android.gms:play-services-basement@@17.6.0 */
-/* renamed from: b.i.a.f.e.k.j */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.e.k.j */
+/* JADX INFO: compiled from: com.google.android.gms:play-services-basement@@17.6.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public final class C3361j {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final List<String> f9527a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final Object f9528b;
 
     public C3361j(Object obj) {
@@ -24,7 +24,7 @@ public final class C3361j {
     }
 
     @RecentlyNonNull
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public C3361j m4162a(@RecentlyNonNull String str, @Nullable Object obj) {
         List<String> list = this.f9527a;
         String strValueOf = String.valueOf(obj);

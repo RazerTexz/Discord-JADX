@@ -14,8 +14,8 @@ import p001a0.p002a.p003a.C0002b;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: PostData.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: PostData.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final /* data */ class PostData {
     private final Channel channel;
     private final Map<Long, String> channelNames;
@@ -65,41 +65,42 @@ public final /* data */ class PostData {
         this.isMe = user != null && user.getId() == j;
     }
 
+    /* JADX WARN: Multi-variable type inference failed */
     public static /* synthetic */ PostData copy$default(PostData postData, Channel channel, User user, long j, Map map, Map map2, Map map3, Message message, boolean z2, Long l, Integer num, PostData2 postData2, MessageReaction messageReaction, boolean z3, ForumPostReadState forumPostReadState, Integer num2, List list, int i, Object obj) {
         return postData.copy((i & 1) != 0 ? postData.channel : channel, (i & 2) != 0 ? postData.owner : user, (i & 4) != 0 ? postData.myUserId : j, (i & 8) != 0 ? postData.guildMembers : map, (i & 16) != 0 ? postData.guildRoles : map2, (i & 32) != 0 ? postData.channelNames : map3, (i & 64) != 0 ? postData.firstMessage : message, (i & 128) != 0 ? postData.isFirstMessageBlocked : z2, (i & 256) != 0 ? postData.mostRecentMessageTimestamp : l, (i & 512) != 0 ? postData.messageCount : num, (i & 1024) != 0 ? postData.tag : postData2, (i & 2048) != 0 ? postData.mostCommonReaction : messageReaction, (i & 4096) != 0 ? postData.isDefaultReaction : z3, (i & 8192) != 0 ? postData.readState : forumPostReadState, (i & 16384) != 0 ? postData.unreadCount : num2, (i & 32768) != 0 ? postData.typingUsers : list);
     }
 
-    /* renamed from: component1, reason: from getter */
+    /* JADX INFO: renamed from: component1, reason: from getter */
     public final Channel getChannel() {
         return this.channel;
     }
 
-    /* renamed from: component10, reason: from getter */
+    /* JADX INFO: renamed from: component10, reason: from getter */
     public final Integer getMessageCount() {
         return this.messageCount;
     }
 
-    /* renamed from: component11, reason: from getter */
+    /* JADX INFO: renamed from: component11, reason: from getter */
     public final PostData2 getTag() {
         return this.tag;
     }
 
-    /* renamed from: component12, reason: from getter */
+    /* JADX INFO: renamed from: component12, reason: from getter */
     public final MessageReaction getMostCommonReaction() {
         return this.mostCommonReaction;
     }
 
-    /* renamed from: component13, reason: from getter */
+    /* JADX INFO: renamed from: component13, reason: from getter */
     public final boolean getIsDefaultReaction() {
         return this.isDefaultReaction;
     }
 
-    /* renamed from: component14, reason: from getter */
+    /* JADX INFO: renamed from: component14, reason: from getter */
     public final ForumPostReadState getReadState() {
         return this.readState;
     }
 
-    /* renamed from: component15, reason: from getter */
+    /* JADX INFO: renamed from: component15, reason: from getter */
     public final Integer getUnreadCount() {
         return this.unreadCount;
     }
@@ -108,12 +109,12 @@ public final /* data */ class PostData {
         return this.typingUsers;
     }
 
-    /* renamed from: component2, reason: from getter */
+    /* JADX INFO: renamed from: component2, reason: from getter */
     public final User getOwner() {
         return this.owner;
     }
 
-    /* renamed from: component3, reason: from getter */
+    /* JADX INFO: renamed from: component3, reason: from getter */
     public final long getMyUserId() {
         return this.myUserId;
     }
@@ -130,17 +131,17 @@ public final /* data */ class PostData {
         return this.channelNames;
     }
 
-    /* renamed from: component7, reason: from getter */
+    /* JADX INFO: renamed from: component7, reason: from getter */
     public final Message getFirstMessage() {
         return this.firstMessage;
     }
 
-    /* renamed from: component8, reason: from getter */
+    /* JADX INFO: renamed from: component8, reason: from getter */
     public final boolean getIsFirstMessageBlocked() {
         return this.isFirstMessageBlocked;
     }
 
-    /* renamed from: component9, reason: from getter */
+    /* JADX INFO: renamed from: component9, reason: from getter */
     public final Long getMostRecentMessageTimestamp() {
         return this.mostRecentMessageTimestamp;
     }
@@ -223,6 +224,12 @@ public final /* data */ class PostData {
     }
 
     /* JADX WARN: Multi-variable type inference failed */
+    /* JADX WARN: Type inference failed for: r0v19, types: [int] */
+    /* JADX WARN: Type inference failed for: r0v46 */
+    /* JADX WARN: Type inference failed for: r0v52 */
+    /* JADX WARN: Type inference failed for: r3v0 */
+    /* JADX WARN: Type inference failed for: r3v1, types: [int] */
+    /* JADX WARN: Type inference failed for: r3v2 */
     public int hashCode() {
         Channel channel = this.channel;
         int iHashCode = (channel != null ? channel.hashCode() : 0) * 31;
@@ -237,13 +244,13 @@ public final /* data */ class PostData {
         Message message = this.firstMessage;
         int iHashCode5 = (iHashCode4 + (message != null ? message.hashCode() : 0)) * 31;
         boolean z2 = this.isFirstMessageBlocked;
-        int i = z2;
-        if (z2 != 0) {
-            i = 1;
+        ?? r0 = z2;
+        if (z2) {
+            r0 = 1;
         }
-        int i2 = (iHashCode5 + i) * 31;
+        int i = (iHashCode5 + r0) * 31;
         Long l = this.mostRecentMessageTimestamp;
-        int iHashCode6 = (i2 + (l != null ? l.hashCode() : 0)) * 31;
+        int iHashCode6 = (i + (l != null ? l.hashCode() : 0)) * 31;
         Integer num = this.messageCount;
         int iHashCode7 = (iHashCode6 + (num != null ? num.hashCode() : 0)) * 31;
         PostData2 postData2 = this.tag;
@@ -251,16 +258,16 @@ public final /* data */ class PostData {
         MessageReaction messageReaction = this.mostCommonReaction;
         int iHashCode9 = (iHashCode8 + (messageReaction != null ? messageReaction.hashCode() : 0)) * 31;
         boolean z3 = this.isDefaultReaction;
-        int i3 = (iHashCode9 + (z3 ? 1 : z3 ? 1 : 0)) * 31;
+        int i2 = (iHashCode9 + (z3 ? 1 : z3)) * 31;
         ForumPostReadState forumPostReadState = this.readState;
-        int iHashCode10 = (i3 + (forumPostReadState != null ? forumPostReadState.hashCode() : 0)) * 31;
+        int iHashCode10 = (i2 + (forumPostReadState != null ? forumPostReadState.hashCode() : 0)) * 31;
         Integer num2 = this.unreadCount;
         int iHashCode11 = (iHashCode10 + (num2 != null ? num2.hashCode() : 0)) * 31;
         List<UserGuildMember> list = this.typingUsers;
         return iHashCode11 + (list != null ? list.hashCode() : 0);
     }
 
-    /* renamed from: isActivePost, reason: from getter */
+    /* JADX INFO: renamed from: isActivePost, reason: from getter */
     public final boolean getIsActivePost() {
         return this.isActivePost;
     }
@@ -273,12 +280,12 @@ public final /* data */ class PostData {
         return this.isFirstMessageBlocked;
     }
 
-    /* renamed from: isMe, reason: from getter */
+    /* JADX INFO: renamed from: isMe, reason: from getter */
     public final boolean getIsMe() {
         return this.isMe;
     }
 
-    /* renamed from: isPinned, reason: from getter */
+    /* JADX INFO: renamed from: isPinned, reason: from getter */
     public final boolean getIsPinned() {
         return this.isPinned;
     }

@@ -4,9 +4,9 @@ import java.util.AbstractCollection;
 import java.util.Collection;
 import p507d0.p592z.p594d.p595g0.KMarkers2;
 
-/* compiled from: AbstractMutableCollection.kt */
-/* renamed from: d0.t.d, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.t.d, reason: use source file name */
+/* JADX INFO: compiled from: AbstractMutableCollection.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public abstract class AbstractMutableCollection<E> extends AbstractCollection<E> implements Collection<E>, KMarkers2 {
     public abstract int getSize();
 

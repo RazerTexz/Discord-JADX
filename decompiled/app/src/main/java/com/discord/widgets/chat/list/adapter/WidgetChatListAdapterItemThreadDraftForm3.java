@@ -5,9 +5,9 @@ import android.widget.TextView;
 import com.discord.stores.StoreThreadDraft;
 import com.discord.widgets.chat.input.AppFlexInputViewModel;
 
-/* compiled from: WidgetChatListAdapterItemThreadDraftForm.kt */
-/* renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemThreadDraftForm$configureThreadNameInput$$inlined$apply$lambda$3, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemThreadDraftForm$configureThreadNameInput$$inlined$apply$lambda$3, reason: use source file name */
+/* JADX INFO: compiled from: WidgetChatListAdapterItemThreadDraftForm.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetChatListAdapterItemThreadDraftForm3 implements TextView.OnEditorActionListener {
     public final /* synthetic */ StoreThreadDraft.ThreadDraftState $draftState$inlined;
     public final /* synthetic */ StoreThreadDraft $storeThreadDraft$inlined;

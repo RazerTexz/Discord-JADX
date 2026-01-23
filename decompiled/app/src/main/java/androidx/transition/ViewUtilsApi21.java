@@ -7,8 +7,8 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.annotation.RequiresApi;
 
+/* JADX INFO: loaded from: classes.dex */
 @RequiresApi(21)
-/* loaded from: classes.dex */
 public class ViewUtilsApi21 extends ViewUtilsApi19 {
     private static boolean sTryHiddenSetAnimationMatrix = true;
     private static boolean sTryHiddenTransformMatrixToGlobal = true;

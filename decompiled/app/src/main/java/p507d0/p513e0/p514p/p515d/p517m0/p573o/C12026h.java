@@ -8,12 +8,12 @@ import p507d0.p513e0.p514p.p515d.p517m0.p552k.p559x.DescriptorUtils2;
 import p507d0.p513e0.p514p.p515d.p517m0.p573o.InterfaceC12020b;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: modifierChecks.kt */
-/* renamed from: d0.e0.p.d.m0.o.h */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.o.h */
+/* JADX INFO: compiled from: modifierChecks.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class C12026h implements InterfaceC12020b {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final C12026h f24916a = new C12026h();
 
     @Override // p507d0.p513e0.p514p.p515d.p517m0.p573o.InterfaceC12020b

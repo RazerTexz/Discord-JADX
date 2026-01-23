@@ -37,8 +37,8 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 import p658rx.Observable;
 
-/* compiled from: StoreForumPostMessages.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: StoreForumPostMessages.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class StoreForumPostMessages extends StoreV2 {
     public static final int MAX_REQUEST_BODY_POST_IDS = 10;
     private final Dispatcher dispatcher;
@@ -51,8 +51,8 @@ public final class StoreForumPostMessages extends StoreV2 {
     private Set<Long> shouldGetForumPostFirstMessageFromGateway;
     private final StoreUser storeUser;
 
-    /* compiled from: StoreForumPostMessages.kt */
-    /* renamed from: com.discord.stores.StoreForumPostMessages$enqueueForumPostFirstMessageFetch$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreForumPostMessages$enqueueForumPostFirstMessageFetch$1 */
+    /* JADX INFO: compiled from: StoreForumPostMessages.kt */
     public static final class C59311 extends Lambda implements Function0<Unit> {
         public final /* synthetic */ long $parentChannelId;
         public final /* synthetic */ long $postId;
@@ -70,7 +70,7 @@ public final class StoreForumPostMessages extends StoreV2 {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             if (StoreForumPostMessages.access$hasForumPostFirstMessage(StoreForumPostMessages.this, this.$postId) || StoreForumPostMessages.access$isFetchingForumPostFirstMessage(StoreForumPostMessages.this, this.$postId) || StoreForumPostMessages.access$expectForumPostFirstMessageFromGateway(StoreForumPostMessages.this, this.$postId)) {
                 return;
@@ -84,13 +84,13 @@ public final class StoreForumPostMessages extends StoreV2 {
         }
     }
 
-    /* compiled from: StoreForumPostMessages.kt */
-    /* renamed from: com.discord.stores.StoreForumPostMessages$fetchForumPosts$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreForumPostMessages$fetchForumPosts$1 */
+    /* JADX INFO: compiled from: StoreForumPostMessages.kt */
     public static final class C59321 extends Lambda implements Function0<Unit> {
         public final /* synthetic */ Function0 $onTerminated;
 
-        /* compiled from: StoreForumPostMessages.kt */
-        /* renamed from: com.discord.stores.StoreForumPostMessages$fetchForumPosts$1$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.stores.StoreForumPostMessages$fetchForumPosts$1$1, reason: invalid class name */
+        /* JADX INFO: compiled from: StoreForumPostMessages.kt */
         public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
             public AnonymousClass1() {
                 super(0);
@@ -102,7 +102,7 @@ public final class StoreForumPostMessages extends StoreV2 {
                 return Unit.f27425a;
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2() {
                 C59321.this.$onTerminated.invoke();
             }
@@ -120,18 +120,18 @@ public final class StoreForumPostMessages extends StoreV2 {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             StoreForumPostMessages.access$getDispatcher$p(StoreForumPostMessages.this).schedule(new AnonymousClass1());
         }
     }
 
-    /* compiled from: StoreForumPostMessages.kt */
-    /* renamed from: com.discord.stores.StoreForumPostMessages$fetchForumPosts$2 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreForumPostMessages$fetchForumPosts$2 */
+    /* JADX INFO: compiled from: StoreForumPostMessages.kt */
     public static final class C59332 extends Lambda implements Function1<ForumPostFirstMessages, Unit> {
 
-        /* compiled from: StoreForumPostMessages.kt */
-        /* renamed from: com.discord.stores.StoreForumPostMessages$fetchForumPosts$2$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.stores.StoreForumPostMessages$fetchForumPosts$2$1, reason: invalid class name */
+        /* JADX INFO: compiled from: StoreForumPostMessages.kt */
         public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
             public final /* synthetic */ ForumPostFirstMessages $response;
 
@@ -147,7 +147,7 @@ public final class StoreForumPostMessages extends StoreV2 {
                 return Unit.f27425a;
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2() {
                 StoreForumPostMessages.this.bulkCreateFirstMessage(_Sequences2.toList(_Sequences2.filterNotNull(_Sequences2.map(_Collections.asSequence(this.$response.m7821a().values()), StoreForumPostMessages2.INSTANCE))));
             }
@@ -163,15 +163,15 @@ public final class StoreForumPostMessages extends StoreV2 {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(ForumPostFirstMessages forumPostFirstMessages) {
             Intrinsics3.checkNotNullParameter(forumPostFirstMessages, "response");
             StoreForumPostMessages.access$getDispatcher$p(StoreForumPostMessages.this).schedule(new AnonymousClass1(forumPostFirstMessages));
         }
     }
 
-    /* compiled from: StoreForumPostMessages.kt */
-    /* renamed from: com.discord.stores.StoreForumPostMessages$flushForumPostFirstMessageQueue$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreForumPostMessages$flushForumPostFirstMessageQueue$1 */
+    /* JADX INFO: compiled from: StoreForumPostMessages.kt */
     public static final class C59341 extends Lambda implements Function0<Unit> {
         public final /* synthetic */ long $parentChannelId;
 
@@ -187,7 +187,7 @@ public final class StoreForumPostMessages extends StoreV2 {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             if (StoreForumPostMessages.access$getForumPostRequestQueueProcessing$p(StoreForumPostMessages.this)) {
                 return;
@@ -197,8 +197,8 @@ public final class StoreForumPostMessages extends StoreV2 {
         }
     }
 
-    /* compiled from: StoreForumPostMessages.kt */
-    /* renamed from: com.discord.stores.StoreForumPostMessages$flushForumPostFirstMessageQueueHelper$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreForumPostMessages$flushForumPostFirstMessageQueueHelper$1 */
+    /* JADX INFO: compiled from: StoreForumPostMessages.kt */
     public static final class C59351 extends Lambda implements Function0<Unit> {
         public final /* synthetic */ long $parentChannelId;
 
@@ -214,7 +214,7 @@ public final class StoreForumPostMessages extends StoreV2 {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             Collection collection = (Collection) StoreForumPostMessages.access$getForumPostFetchQueue$p(StoreForumPostMessages.this).get(Long.valueOf(this.$parentChannelId));
             if (collection == null || collection.isEmpty()) {
@@ -225,8 +225,8 @@ public final class StoreForumPostMessages extends StoreV2 {
         }
     }
 
-    /* compiled from: StoreForumPostMessages.kt */
-    /* renamed from: com.discord.stores.StoreForumPostMessages$observeForumPostFirstMessage$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreForumPostMessages$observeForumPostFirstMessage$1 */
+    /* JADX INFO: compiled from: StoreForumPostMessages.kt */
     public static final class C59361 extends Lambda implements Function0<Message> {
         public final /* synthetic */ long $postId;
 
@@ -248,8 +248,8 @@ public final class StoreForumPostMessages extends StoreV2 {
         }
     }
 
-    /* compiled from: StoreForumPostMessages.kt */
-    /* renamed from: com.discord.stores.StoreForumPostMessages$observeForumPostFirstMessages$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreForumPostMessages$observeForumPostFirstMessages$1 */
+    /* JADX INFO: compiled from: StoreForumPostMessages.kt */
     public static final class C59371 extends Lambda implements Function0<Map<Long, ? extends Message>> {
         public C59371() {
             super(0);
@@ -261,7 +261,7 @@ public final class StoreForumPostMessages extends StoreV2 {
         }
 
         @Override // kotlin.jvm.functions.Function0
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final Map<Long, ? extends Message> invoke2() {
             return StoreForumPostMessages.access$getForumPostFirstMessageSnapshot$p(StoreForumPostMessages.this);
         }
@@ -442,33 +442,30 @@ public final class StoreForumPostMessages extends StoreV2 {
         updateFirstMessage(message);
     }
 
-    /* JADX WARN: Multi-variable type inference failed */
-    /* JADX WARN: Type inference failed for: r2v5, types: [java.util.List] */
-    /* JADX WARN: Type inference failed for: r5v7, types: [java.lang.Object] */
     @Store3
     public final void handleReactionAdd(MessageReactionUpdate update) {
-        ArrayList list;
+        List list;
         List arrayList;
         Intrinsics3.checkNotNullParameter(update, "update");
         Message firstMessageForReactionUpdate = getFirstMessageForReactionUpdate(update);
         if (firstMessageForReactionUpdate != null) {
             List<MessageReaction> reactions = firstMessageForReactionUpdate.getReactions();
-            MessageReaction messageReaction = null;
+            Object obj = null;
             if (reactions != null) {
-                Iterator it = reactions.iterator();
+                Iterator<T> it = reactions.iterator();
                 while (true) {
                     if (!it.hasNext()) {
                         break;
                     }
-                    ?? next = it.next();
+                    Object next = it.next();
                     if (Intrinsics3.areEqual(((MessageReaction) next).getEmoji().m8116c(), update.getEmoji().m8116c())) {
-                        messageReaction = next;
+                        obj = next;
                         break;
                     }
                 }
-                messageReaction = messageReaction;
+                obj = (MessageReaction) obj;
             }
-            if (messageReaction == null) {
+            if (obj == null) {
                 boolean z2 = update.getUserId() == this.storeUser.getMeSnapshot().getId();
                 List<MessageReaction> reactions2 = firstMessageForReactionUpdate.getReactions();
                 if (reactions2 == null || (arrayList = _Collections.toMutableList((Collection) reactions2)) == null) {
@@ -479,11 +476,11 @@ public final class StoreForumPostMessages extends StoreV2 {
             } else {
                 List<MessageReaction> reactions3 = firstMessageForReactionUpdate.getReactions();
                 ArrayList arrayList2 = new ArrayList(Iterables2.collectionSizeOrDefault(reactions3, 10));
-                for (MessageReaction messageReaction2 : reactions3) {
-                    if (Intrinsics3.areEqual(messageReaction2.getEmoji().m8116c(), update.getEmoji().m8116c())) {
-                        messageReaction2 = new MessageReaction(messageReaction2.getCount() + 1, messageReaction2.getEmoji(), update.getUserId() == this.storeUser.getMeSnapshot().getId() ? true : messageReaction2.getMe());
+                for (MessageReaction messageReaction : reactions3) {
+                    if (Intrinsics3.areEqual(messageReaction.getEmoji().m8116c(), update.getEmoji().m8116c())) {
+                        messageReaction = new MessageReaction(messageReaction.getCount() + 1, messageReaction.getEmoji(), update.getUserId() == this.storeUser.getMeSnapshot().getId() ? true : messageReaction.getMe());
                     }
-                    arrayList2.add(messageReaction2);
+                    arrayList2.add(messageReaction);
                 }
                 list = arrayList2;
             }

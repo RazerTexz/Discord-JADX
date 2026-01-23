@@ -1,8 +1,8 @@
 package com.discord.analytics.utils.hubs;
 
 
-/* compiled from: HubGuildScheduledEventClickType.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: HubGuildScheduledEventClickType.kt */
+/* JADX INFO: loaded from: classes.dex */
 public enum HubGuildScheduledEventClickType {
     JoinServer("Join Server"),
     ListenIn("Listen In"),

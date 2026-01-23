@@ -15,9 +15,9 @@ import p507d0.p580t.Iterables2;
 import p507d0.p580t._Collections;
 import p637j0.p641k.Func1;
 
-/* compiled from: WidgetChannelSelector.kt */
-/* renamed from: com.discord.widgets.channels.WidgetChannelSelector$Model$Companion$get$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.channels.WidgetChannelSelector$Model$Companion$get$1, reason: use source file name */
+/* JADX INFO: compiled from: WidgetChannelSelector.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetChannelSelector4<T, R> implements Func1<Map<Long, ? extends Channel>, List<? extends WidgetChannelSelector.Model.Item>> {
     public final /* synthetic */ WidgetChannelSelector.FilterFunction $filterFunction;
     public final /* synthetic */ boolean $includeNoChannel;
@@ -32,7 +32,7 @@ public final class WidgetChannelSelector4<T, R> implements Func1<Map<Long, ? ext
         return call2((Map<Long, Channel>) map);
     }
 
-    /* renamed from: call, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
     public final List<WidgetChannelSelector.Model.Item> call2(Map<Long, Channel> map) {
         Collection<Channel> collectionValues = map.values();
         WidgetChannelSelector.FilterFunction filterFunction = this.$filterFunction;

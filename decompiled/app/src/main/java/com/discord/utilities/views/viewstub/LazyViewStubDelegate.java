@@ -9,19 +9,19 @@ import p507d0.Lazy5;
 import p507d0.LazyJVM;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: LazyViewStubDelegate.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: LazyViewStubDelegate.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class LazyViewStubDelegate {
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private View.OnClickListener listener;
 
-    /* renamed from: view$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: view$delegate, reason: from kotlin metadata */
     private final Lazy view;
     private final Lazy<View> viewField;
 
-    /* compiled from: LazyViewStubDelegate.kt */
+    /* JADX INFO: compiled from: LazyViewStubDelegate.kt */
     public static final class Companion {
         private Companion() {
         }

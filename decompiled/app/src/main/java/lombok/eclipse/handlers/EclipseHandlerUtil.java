@@ -101,7 +101,7 @@ import org.eclipse.jdt.internal.compiler.lookup.TypeConstants;
 import org.eclipse.jdt.internal.compiler.lookup.WildcardBinding;
 import org.eclipse.jdt.internal.core.CompilationUnit;
 
-/* loaded from: discord-126021.apk:lombok/eclipse/handlers/EclipseHandlerUtil.SCL.lombok */
+/* JADX INFO: loaded from: discord-126021.apk:lombok/eclipse/handlers/EclipseHandlerUtil.SCL.lombok */
 public class EclipseHandlerUtil {
     private static final int MODIFIERS_INDICATING_STATIC = 16904;
     private static final Constructor<CastExpression> castExpressionConstructor;
@@ -122,13 +122,13 @@ public class EclipseHandlerUtil {
     private static final char[][] LOMBOK_GENERATED = Eclipse.fromQualifiedName("lombok.Generated");
     private static final char[][] EDU_UMD_CS_FINDBUGS_ANNOTATIONS_SUPPRESSFBWARNINGS = Eclipse.fromQualifiedName("edu.umd.cs.findbugs.annotations.SuppressFBWarnings");
 
-    /* loaded from: discord-126021.apk:lombok/eclipse/handlers/EclipseHandlerUtil$MemberExistsResult.SCL.lombok */
+    /* JADX INFO: loaded from: discord-126021.apk:lombok/eclipse/handlers/EclipseHandlerUtil$MemberExistsResult.SCL.lombok */
     public enum MemberExistsResult {
         NOT_EXISTS,
         EXISTS_BY_LOMBOK,
         EXISTS_BY_USER;
 
-        /* renamed from: values, reason: to resolve conflict with enum method */
+        /* JADX INFO: renamed from: values, reason: to resolve conflict with enum method */
         public static MemberExistsResult[] valuesCustom() {
             MemberExistsResult[] memberExistsResultArrValuesCustom = values();
             int length = memberExistsResultArrValuesCustom.length;
@@ -400,7 +400,7 @@ public class EclipseHandlerUtil {
         return annotation;
     }
 
-    /* loaded from: discord-126021.apk:lombok/eclipse/handlers/EclipseHandlerUtil$EclipseReflectiveMembers.SCL.lombok */
+    /* JADX INFO: loaded from: discord-126021.apk:lombok/eclipse/handlers/EclipseHandlerUtil$EclipseReflectiveMembers.SCL.lombok */
     static class EclipseReflectiveMembers {
         public static final Field STRING_LITERAL__LINE_NUMBER = getField(StringLiteral.class, "lineNumber");
         public static final Field ANNOTATION__MEMBER_VALUE_PAIR_NAME = getField(Annotation.class, "memberValuePairName");
@@ -426,7 +426,7 @@ public class EclipseHandlerUtil {
             }
         }
 
-        public static void reflectSet(Field f, Object o, Object v) throws IllegalArgumentException {
+        public static void reflectSet(Field f, Object o, Object v) {
             try {
                 f.set(o, v);
             } catch (IllegalAccessException e) {
@@ -655,19 +655,18 @@ public class EclipseHandlerUtil {
     }
 
     /* JADX WARN: Multi-variable type inference failed */
-    /* JADX WARN: Type inference failed for: r0v100, types: [org.eclipse.jdt.internal.compiler.ast.TypeReference[]] */
-    public static TypeReference copyType(TypeReference ref, ASTNode source) throws IllegalArgumentException {
+    public static TypeReference copyType(TypeReference ref, ASTNode source) {
         if (ref instanceof ParameterizedQualifiedTypeReference) {
             ParameterizedQualifiedTypeReference iRef = (ParameterizedQualifiedTypeReference) ref;
-            TypeReference[][] args = null;
+            Object[] objArr = null;
             if (iRef.typeArguments != null) {
-                args = new TypeReference[iRef.typeArguments.length];
+                objArr = new TypeReference[iRef.typeArguments.length];
                 int idx = 0;
                 for (TypeReference[] inRefArray : iRef.typeArguments) {
                     if (inRefArray == null) {
                         int i = idx;
                         idx++;
-                        args[i] = null;
+                        objArr[i] = null;
                     } else {
                         TypeReference[] outRefArray = new TypeReference[inRefArray.length];
                         int idx2 = 0;
@@ -678,11 +677,11 @@ public class EclipseHandlerUtil {
                         }
                         int i3 = idx;
                         idx++;
-                        args[i3] = outRefArray;
+                        objArr[i3] = outRefArray;
                     }
                 }
             }
-            ParameterizedQualifiedTypeReference parameterizedQualifiedTypeReference = new ParameterizedQualifiedTypeReference(iRef.tokens, args, iRef.dimensions(), copy(iRef.sourcePositions));
+            ParameterizedQualifiedTypeReference parameterizedQualifiedTypeReference = new ParameterizedQualifiedTypeReference(iRef.tokens, objArr, iRef.dimensions(), copy(iRef.sourcePositions));
             copyTypeAnns(ref, parameterizedQualifiedTypeReference);
             if (source != null) {
                 setGeneratedBy(parameterizedQualifiedTypeReference, source);
@@ -709,23 +708,23 @@ public class EclipseHandlerUtil {
         }
         if (ref instanceof ParameterizedSingleTypeReference) {
             ParameterizedSingleTypeReference iRef4 = (ParameterizedSingleTypeReference) ref;
-            TypeReference[] args2 = null;
+            TypeReference[] args = null;
             if (iRef4.typeArguments != null) {
-                args2 = new TypeReference[iRef4.typeArguments.length];
+                args = new TypeReference[iRef4.typeArguments.length];
                 int idx3 = 0;
                 for (TypeReference inRef : iRef4.typeArguments) {
                     if (inRef == null) {
                         int i4 = idx3;
                         idx3++;
-                        args2[i4] = null;
+                        args[i4] = null;
                     } else {
                         int i5 = idx3;
                         idx3++;
-                        args2[i5] = copyType(inRef, source);
+                        args[i5] = copyType(inRef, source);
                     }
                 }
             }
-            ParameterizedSingleTypeReference parameterizedSingleTypeReference = new ParameterizedSingleTypeReference(iRef4.token, args2, iRef4.dimensions(), (iRef4.sourceStart << 32) | iRef4.sourceEnd);
+            ParameterizedSingleTypeReference parameterizedSingleTypeReference = new ParameterizedSingleTypeReference(iRef4.token, args, iRef4.dimensions(), (((long) iRef4.sourceStart) << 32) | ((long) iRef4.sourceEnd));
             copyTypeAnns(ref, parameterizedSingleTypeReference);
             if (source != null) {
                 setGeneratedBy(parameterizedSingleTypeReference, source);
@@ -734,7 +733,7 @@ public class EclipseHandlerUtil {
         }
         if (ref instanceof ArrayTypeReference) {
             ArrayTypeReference iRef5 = (ArrayTypeReference) ref;
-            ArrayTypeReference arrayTypeReference = new ArrayTypeReference(iRef5.token, iRef5.dimensions(), (iRef5.sourceStart << 32) | iRef5.sourceEnd);
+            ArrayTypeReference arrayTypeReference = new ArrayTypeReference(iRef5.token, iRef5.dimensions(), (((long) iRef5.sourceStart) << 32) | ((long) iRef5.sourceEnd));
             copyTypeAnns(ref, arrayTypeReference);
             if (source != null) {
                 setGeneratedBy(arrayTypeReference, source);
@@ -756,7 +755,8 @@ public class EclipseHandlerUtil {
             return wildcard;
         }
         if (ref instanceof SingleTypeReference) {
-            SingleTypeReference singleTypeReference = new SingleTypeReference(((SingleTypeReference) ref).token, (r0.sourceStart << 32) | r0.sourceEnd);
+            SingleTypeReference iRef6 = (SingleTypeReference) ref;
+            SingleTypeReference singleTypeReference = new SingleTypeReference(iRef6.token, (((long) iRef6.sourceStart) << 32) | ((long) iRef6.sourceEnd));
             copyTypeAnns(ref, singleTypeReference);
             if (source != null) {
                 setGeneratedBy(singleTypeReference, source);
@@ -767,7 +767,7 @@ public class EclipseHandlerUtil {
     }
 
     /* JADX WARN: Multi-variable type inference failed */
-    private static void copyTypeAnns(TypeReference in, TypeReference out) throws IllegalArgumentException {
+    private static void copyTypeAnns(TypeReference in, TypeReference out) {
         try {
             ASTNode[][] aSTNodeArr = (Annotation[][]) EclipseReflectiveMembers.reflect(EclipseReflectiveMembers.TYPE_REFERENCE__ANNOTATIONS, in);
             if (aSTNodeArr == null) {
@@ -1054,7 +1054,7 @@ public class EclipseHandlerUtil {
     public static TypeReference cloneSelfType(EclipseNode context, ASTNode source) {
         int pS = source == null ? 0 : source.sourceStart;
         int pE = source == null ? 0 : source.sourceEnd;
-        long p = (pS << 32) | pE;
+        long p = (((long) pS) << 32) | ((long) pE);
         EclipseNode type = context;
         TypeReference result = null;
         while (type != null && type.getKind() != AST.Kind.TYPE) {
@@ -1066,7 +1066,7 @@ public class EclipseHandlerUtil {
                 TypeReference[] refs = new TypeReference[typeDecl.typeParameters.length];
                 int idx = 0;
                 for (TypeParameter param : typeDecl.typeParameters) {
-                    SingleTypeReference singleTypeReference = new SingleTypeReference(param.name, (param.sourceStart << 32) | param.sourceEnd);
+                    SingleTypeReference singleTypeReference = new SingleTypeReference(param.name, (((long) param.sourceStart) << 32) | ((long) param.sourceEnd));
                     if (source != null) {
                         setGeneratedBy(singleTypeReference, source);
                     }
@@ -1282,43 +1282,61 @@ public class EclipseHandlerUtil {
 
     /* JADX WARN: Multi-variable type inference failed */
     /* JADX WARN: Type inference failed for: r0v105, types: [char[]] */
-    /* JADX WARN: Type inference failed for: r0v274, types: [java.lang.Object[]] */
     /* JADX WARN: Type inference failed for: r0v53, types: [char[]] */
-    /* JADX WARN: Type inference failed for: r0v7, types: [java.lang.Object[]] */
+    /* JADX WARN: Type inference failed for: r0v64 */
+    /* JADX WARN: Type inference failed for: r0v74 */
+    /* JADX WARN: Type inference failed for: r0v84 */
     /* JADX WARN: Type inference failed for: r15v0 */
+    /* JADX WARN: Type inference failed for: r15v1 */
+    /* JADX WARN: Type inference failed for: r15v15 */
+    /* JADX WARN: Type inference failed for: r15v2 */
+    /* JADX WARN: Type inference failed for: r15v3 */
+    /* JADX WARN: Type inference failed for: r1v20 */
+    /* JADX WARN: Type inference failed for: r2v13 */
+    /* JADX WARN: Type inference failed for: r2v14, types: [char[]] */
+    /* JADX WARN: Type inference failed for: r2v15, types: [char[][]] */
+    /* JADX WARN: Type inference failed for: r2v16 */
+    /* JADX WARN: Type inference failed for: r2v17, types: [char[]] */
+    /* JADX WARN: Type inference failed for: r2v18, types: [char[][]] */
+    /* JADX WARN: Type inference failed for: r2v19 */
+    /* JADX WARN: Type inference failed for: r2v20, types: [char[]] */
+    /* JADX WARN: Type inference failed for: r2v21, types: [char[][]] */
+    /* JADX WARN: Type inference failed for: r4v2 */
+    /* JADX WARN: Type inference failed for: r5v0 */
+    /* JADX WARN: Type inference failed for: r6v0 */
     public static TypeReference makeType(TypeBinding typeBinding, ASTNode aSTNode, boolean z2) {
-        char[][] cArr;
+        ?? r15;
         char c;
-        TypeBinding[] typeBindingArr = null;
+        Object[] objArr = null;
         if (typeBinding.getClass() == EclipseReflectiveMembers.INTERSECTION_BINDING1) {
-            typeBindingArr = (Object[]) EclipseReflectiveMembers.reflect(EclipseReflectiveMembers.INTERSECTION_BINDING_TYPES1, typeBinding);
+            objArr = (Object[]) EclipseReflectiveMembers.reflect(EclipseReflectiveMembers.INTERSECTION_BINDING_TYPES1, typeBinding);
         } else if (typeBinding.getClass() == EclipseReflectiveMembers.INTERSECTION_BINDING2) {
-            typeBindingArr = (Object[]) EclipseReflectiveMembers.reflect(EclipseReflectiveMembers.INTERSECTION_BINDING_TYPES2, typeBinding);
+            objArr = (Object[]) EclipseReflectiveMembers.reflect(EclipseReflectiveMembers.INTERSECTION_BINDING_TYPES2, typeBinding);
         }
-        if (typeBindingArr != null) {
+        if (objArr != null) {
             TypeBinding typeBinding2 = null;
             char c2 = 0;
-            for (TypeBinding typeBinding3 : typeBindingArr) {
-                if (typeBinding3 instanceof TypeBinding) {
-                    TypeBinding typeBinding4 = typeBinding3;
-                    if (typeBinding4.isArrayType()) {
+            for (Object obj : objArr) {
+                if (obj instanceof TypeBinding) {
+                    TypeBinding typeBinding3 = (TypeBinding) obj;
+                    if (typeBinding3.isArrayType()) {
                         c = 'd';
-                    } else if (typeBinding4.isClass()) {
+                    } else if (typeBinding3.isClass()) {
                         c = '2';
-                    } else if (typeBinding4.isTypeVariable()) {
+                    } else if (typeBinding3.isTypeVariable()) {
                         c = 20;
                     } else {
-                        c = typeBinding4.isWildcard() ? (char) 15 : '\n';
+                        c = typeBinding3.isWildcard() ? (char) 15 : '\n';
                     }
-                    if (c == '2' && compare(typeBinding4.signature(), OBJECT_SIG) == 0) {
+                    if (c == '2' && compare(typeBinding3.signature(), OBJECT_SIG) == 0) {
                         c = 1;
                     }
                     if (c2 <= c) {
                         if (c2 < c) {
-                            typeBinding2 = typeBinding4;
+                            typeBinding2 = typeBinding3;
                             c2 = c;
-                        } else if (compare(typeBinding2.signature(), typeBinding4.signature()) > 0) {
-                            typeBinding2 = typeBinding4;
+                        } else if (compare(typeBinding2.signature(), typeBinding3.signature()) > 0) {
+                            typeBinding2 = typeBinding3;
                         }
                     }
                 }
@@ -1327,45 +1345,45 @@ public class EclipseHandlerUtil {
         }
         int iDimensions = typeBinding.dimensions();
         ReferenceBinding referenceBindingLeafComponentType = typeBinding.leafComponentType();
-        char[] cArr2 = null;
+        char[] cArr = null;
         switch (((TypeBinding) referenceBindingLeafComponentType).id) {
             case 2:
-                cArr2 = TypeConstants.CHAR;
+                cArr = TypeConstants.CHAR;
                 break;
             case 3:
-                cArr2 = TypeConstants.BYTE;
+                cArr = TypeConstants.BYTE;
                 break;
             case 4:
-                cArr2 = TypeConstants.SHORT;
+                cArr = TypeConstants.SHORT;
                 break;
             case 5:
-                cArr2 = TypeConstants.BOOLEAN;
+                cArr = TypeConstants.BOOLEAN;
                 break;
             case 6:
-                cArr2 = TypeConstants.VOID;
+                cArr = TypeConstants.VOID;
                 break;
             case 7:
-                cArr2 = TypeConstants.LONG;
+                cArr = TypeConstants.LONG;
                 break;
             case 8:
-                cArr2 = TypeConstants.DOUBLE;
+                cArr = TypeConstants.DOUBLE;
                 break;
             case 9:
-                cArr2 = TypeConstants.FLOAT;
+                cArr = TypeConstants.FLOAT;
                 break;
             case 10:
-                cArr2 = TypeConstants.INT;
+                cArr = TypeConstants.INT;
                 break;
             case 12:
                 return null;
         }
-        if (cArr2 != null) {
+        if (cArr != null) {
             if (iDimensions > 0) {
-                ArrayTypeReference arrayTypeReference = new ArrayTypeReference(cArr2, iDimensions, Eclipse.pos(aSTNode));
+                ArrayTypeReference arrayTypeReference = new ArrayTypeReference(cArr, iDimensions, Eclipse.pos(aSTNode));
                 setGeneratedBy(arrayTypeReference, aSTNode);
                 return arrayTypeReference;
             }
-            SingleTypeReference singleTypeReference = new SingleTypeReference(cArr2, Eclipse.pos(aSTNode));
+            SingleTypeReference singleTypeReference = new SingleTypeReference(cArr, Eclipse.pos(aSTNode));
             setGeneratedBy(singleTypeReference, aSTNode);
             return singleTypeReference;
         }
@@ -1401,13 +1419,13 @@ public class EclipseHandlerUtil {
             WildcardBinding wildcardBinding = (WildcardBinding) referenceBindingLeafComponentType;
             if (wildcardBinding.boundKind == 1) {
                 if (!z2) {
-                    TypeBinding typeBinding5 = wildcardBinding.bound;
-                    boolean z3 = typeBinding5.id == 1;
-                    TypeBinding[] typeBindingArr2 = wildcardBinding.otherBounds;
-                    if (z3 && typeBindingArr2 != null && typeBindingArr2.length > 0) {
-                        return makeType(typeBindingArr2[0], aSTNode, false);
+                    TypeBinding typeBinding4 = wildcardBinding.bound;
+                    boolean z3 = typeBinding4.id == 1;
+                    TypeBinding[] typeBindingArr = wildcardBinding.otherBounds;
+                    if (z3 && typeBindingArr != null && typeBindingArr.length > 0) {
+                        return makeType(typeBindingArr[0], aSTNode, false);
                     }
-                    return makeType(typeBinding5, aSTNode, false);
+                    return makeType(typeBinding4, aSTNode, false);
                 }
                 Wildcard wildcard2 = new Wildcard(1);
                 setGeneratedBy(wildcard2, aSTNode);
@@ -1451,30 +1469,30 @@ public class EclipseHandlerUtil {
             }
         }
         if (referenceBindingLeafComponentType.isTypeVariable()) {
-            cArr = new char[]{referenceBindingLeafComponentType.shortReadableName()};
+            r15 = new char[]{referenceBindingLeafComponentType.shortReadableName()};
         } else if (referenceBindingLeafComponentType.isLocalType()) {
-            cArr = new char[]{referenceBindingLeafComponentType.sourceName()};
+            r15 = new char[]{referenceBindingLeafComponentType.sourceName()};
         } else {
             String[] strArrSplit = new String(referenceBindingLeafComponentType.qualifiedPackageName()).split("\\.");
             String[] strArrSplit2 = new String(referenceBindingLeafComponentType.qualifiedSourceName()).split("\\.");
             if (strArrSplit.length == 1 && strArrSplit[0].isEmpty()) {
                 strArrSplit = new String[0];
             }
-            ?? r15 = new char[strArrSplit.length + strArrSplit2.length];
+            ?? r152 = new char[strArrSplit.length + strArrSplit2.length];
             int i2 = 0;
             while (i2 < strArrSplit.length) {
-                r15[i2] = strArrSplit[i2].toCharArray();
+                r152[i2] = strArrSplit[i2].toCharArray();
                 i2++;
             }
             while (true) {
-                cArr = r15;
+                r15 = r152;
                 if (i2 < strArrSplit.length + strArrSplit2.length) {
-                    r15[i2] = strArrSplit2[i2 - strArrSplit.length].toCharArray();
+                    r152[i2] = strArrSplit2[i2 - strArrSplit.length].toCharArray();
                     i2++;
                 }
             }
         }
-        while (arrayList.size() < cArr.length) {
+        while (arrayList.size() < r15.length) {
             arrayList.add(null);
         }
         Collections.reverse(arrayList);
@@ -1488,36 +1506,36 @@ public class EclipseHandlerUtil {
             }
         }
         if (z5) {
-            if (cArr.length > 1) {
-                ParameterizedQualifiedTypeReference parameterizedQualifiedTypeReference = new ParameterizedQualifiedTypeReference(cArr, (TypeReference[][]) arrayList.toArray(new TypeReference[0]), iDimensions, Eclipse.poss(aSTNode, cArr.length));
+            if (r15.length > 1) {
+                ParameterizedQualifiedTypeReference parameterizedQualifiedTypeReference = new ParameterizedQualifiedTypeReference((char[][]) r15, (TypeReference[][]) arrayList.toArray(new TypeReference[0]), iDimensions, Eclipse.poss(aSTNode, r15.length));
                 setGeneratedBy(parameterizedQualifiedTypeReference, aSTNode);
                 return parameterizedQualifiedTypeReference;
             }
-            ParameterizedSingleTypeReference parameterizedSingleTypeReference = new ParameterizedSingleTypeReference(cArr[0], (TypeReference[]) arrayList.get(0), iDimensions, Eclipse.pos(aSTNode));
+            ParameterizedSingleTypeReference parameterizedSingleTypeReference = new ParameterizedSingleTypeReference((char[]) r15[0], (TypeReference[]) arrayList.get(0), iDimensions, Eclipse.pos(aSTNode));
             setGeneratedBy(parameterizedSingleTypeReference, aSTNode);
             return parameterizedSingleTypeReference;
         }
         if (iDimensions > 0) {
-            if (cArr.length > 1) {
-                ArrayQualifiedTypeReference arrayQualifiedTypeReference = new ArrayQualifiedTypeReference(cArr, iDimensions, Eclipse.poss(aSTNode, cArr.length));
+            if (r15.length > 1) {
+                ArrayQualifiedTypeReference arrayQualifiedTypeReference = new ArrayQualifiedTypeReference((char[][]) r15, iDimensions, Eclipse.poss(aSTNode, r15.length));
                 setGeneratedBy(arrayQualifiedTypeReference, aSTNode);
                 return arrayQualifiedTypeReference;
             }
-            ArrayTypeReference arrayTypeReference2 = new ArrayTypeReference(cArr[0], iDimensions, Eclipse.pos(aSTNode));
+            ArrayTypeReference arrayTypeReference2 = new ArrayTypeReference((char[]) r15[0], iDimensions, Eclipse.pos(aSTNode));
             setGeneratedBy(arrayTypeReference2, aSTNode);
             return arrayTypeReference2;
         }
-        if (cArr.length > 1) {
-            QualifiedTypeReference qualifiedTypeReference4 = new QualifiedTypeReference(cArr, Eclipse.poss(aSTNode, cArr.length));
+        if (r15.length > 1) {
+            QualifiedTypeReference qualifiedTypeReference4 = new QualifiedTypeReference((char[][]) r15, Eclipse.poss(aSTNode, r15.length));
             setGeneratedBy(qualifiedTypeReference4, aSTNode);
             return qualifiedTypeReference4;
         }
-        SingleTypeReference singleTypeReference2 = new SingleTypeReference(cArr[0], Eclipse.pos(aSTNode));
+        SingleTypeReference singleTypeReference2 = new SingleTypeReference((char[]) r15[0], Eclipse.pos(aSTNode));
         setGeneratedBy(singleTypeReference2, aSTNode);
         return singleTypeReference2;
     }
 
-    public static <A extends java.lang.annotation.Annotation> AnnotationValues<A> createAnnotation(Class<A> type, EclipseNode annotationNode) throws SecurityException {
+    public static <A extends java.lang.annotation.Annotation> AnnotationValues<A> createAnnotation(Class<A> type, EclipseNode annotationNode) {
         Annotation annotation = annotationNode.get();
         Map<String, AnnotationValues.AnnotationValue> values = new HashMap<>();
         MemberValuePair[] memberValuePairs = annotation.memberValuePairs();
@@ -1559,8 +1577,8 @@ public class EclipseHandlerUtil {
         return new AnnotationValues<>(type, values, annotationNode);
     }
 
-    /* renamed from: lombok.eclipse.handlers.EclipseHandlerUtil$1 */
-    /* loaded from: discord-126021.apk:lombok/eclipse/handlers/EclipseHandlerUtil$1.SCL.lombok */
+    /* JADX INFO: renamed from: lombok.eclipse.handlers.EclipseHandlerUtil$1 */
+    /* JADX INFO: loaded from: discord-126021.apk:lombok/eclipse/handlers/EclipseHandlerUtil$1.SCL.lombok */
     class C128571 extends AnnotationValues.AnnotationValue {
         private final /* synthetic */ Expression val$rhs;
         private final /* synthetic */ Expression[] val$exprs;
@@ -1609,8 +1627,8 @@ public class EclipseHandlerUtil {
         }
     }
 
-    /* renamed from: lombok.eclipse.handlers.EclipseHandlerUtil$2 */
-    /* loaded from: discord-126021.apk:lombok/eclipse/handlers/EclipseHandlerUtil$2.SCL.lombok */
+    /* JADX INFO: renamed from: lombok.eclipse.handlers.EclipseHandlerUtil$2 */
+    /* JADX INFO: loaded from: discord-126021.apk:lombok/eclipse/handlers/EclipseHandlerUtil$2.SCL.lombok */
     class C128582 extends AnnotationValues.AnnotationValue {
         private final /* synthetic */ EclipseNode val$annotationNode;
 
@@ -1647,7 +1665,7 @@ public class EclipseHandlerUtil {
         }
     }
 
-    /* loaded from: discord-126021.apk:lombok/eclipse/handlers/EclipseHandlerUtil$GetterMethod.SCL.lombok */
+    /* JADX INFO: loaded from: discord-126021.apk:lombok/eclipse/handlers/EclipseHandlerUtil$GetterMethod.SCL.lombok */
     private static class GetterMethod {
         private final char[] name;
         private final TypeReference type;
@@ -1676,7 +1694,7 @@ public class EclipseHandlerUtil {
         return Eclipse.nameEquals(typeReference.getTypeName(), "boolean") && typeReference.dimensions() == 0;
     }
 
-    private static GetterMethod findGetter(EclipseNode field) throws SecurityException {
+    private static GetterMethod findGetter(EclipseNode field) {
         String getterName;
         EclipseNode containingType;
         FieldDeclaration fieldDeclaration = field.get();
@@ -1724,7 +1742,7 @@ public class EclipseHandlerUtil {
         return new GetterMethod(getterName.toCharArray(), fieldType);
     }
 
-    static boolean lookForGetter(EclipseNode field, HandlerUtil.FieldAccess fieldAccess) throws SecurityException {
+    static boolean lookForGetter(EclipseNode field, HandlerUtil.FieldAccess fieldAccess) {
         if (fieldAccess == HandlerUtil.FieldAccess.GETTER) {
             return true;
         }
@@ -1742,7 +1760,7 @@ public class EclipseHandlerUtil {
         return false;
     }
 
-    static TypeReference getFieldType(EclipseNode field, HandlerUtil.FieldAccess fieldAccess) throws SecurityException {
+    static TypeReference getFieldType(EclipseNode field, HandlerUtil.FieldAccess fieldAccess) {
         if (field.get() instanceof MethodDeclaration) {
             return field.get().returnType;
         }
@@ -1754,10 +1772,10 @@ public class EclipseHandlerUtil {
         return GetterMethod.access$0(getter);
     }
 
-    static Expression createFieldAccessor(EclipseNode field, HandlerUtil.FieldAccess fieldAccess, ASTNode source) throws SecurityException {
+    static Expression createFieldAccessor(EclipseNode field, HandlerUtil.FieldAccess fieldAccess, ASTNode source) {
         int pS = source == null ? 0 : source.sourceStart;
         int pE = source == null ? 0 : source.sourceEnd;
-        long p = (pS << 32) | pE;
+        long p = (((long) pS) << 32) | ((long) pE);
         boolean lookForGetter = lookForGetter(field, fieldAccess);
         GetterMethod getter = lookForGetter ? findGetter(field) : null;
         if (getter == null) {
@@ -1795,10 +1813,10 @@ public class EclipseHandlerUtil {
     }
 
     /* JADX WARN: Type inference failed for: r0v26, types: [char[], char[][]] */
-    static Expression createFieldAccessor(EclipseNode field, HandlerUtil.FieldAccess fieldAccess, ASTNode source, char[] receiver) throws SecurityException {
+    static Expression createFieldAccessor(EclipseNode field, HandlerUtil.FieldAccess fieldAccess, ASTNode source, char[] receiver) {
         int pS = source.sourceStart;
         int pE = source.sourceEnd;
-        long p = (pS << 32) | pE;
+        long p = (((long) pS) << 32) | ((long) pE);
         boolean lookForGetter = lookForGetter(field, fieldAccess);
         GetterMethod getter = lookForGetter ? findGetter(field) : null;
         if (getter == null) {
@@ -1821,7 +1839,7 @@ public class EclipseHandlerUtil {
     static Expression createMethodAccessor(EclipseNode method, ASTNode source) {
         int pS = source == null ? 0 : source.sourceStart;
         int pE = source == null ? 0 : source.sourceEnd;
-        long p = (pS << 32) | pE;
+        long p = (((long) pS) << 32) | ((long) pE);
         MethodDeclaration methodDecl = method.get();
         MessageSend call = new MessageSend();
         setGeneratedBy(call, source);
@@ -1845,7 +1863,7 @@ public class EclipseHandlerUtil {
     static Expression createMethodAccessor(EclipseNode method, ASTNode source, char[] receiver) {
         int pS = source == null ? 0 : source.sourceStart;
         int pE = source == null ? 0 : source.sourceEnd;
-        long p = (pS << 32) | pE;
+        long p = (((long) pS) << 32) | ((long) pE);
         MethodDeclaration methodDecl = method.get();
         MessageSend call = new MessageSend();
         setGeneratedBy(call, source);
@@ -1912,7 +1930,7 @@ public class EclipseHandlerUtil {
         return false;
     }
 
-    public static char[] removePrefixFromField(EclipseNode field) throws SecurityException {
+    public static char[] removePrefixFromField(EclipseNode field) {
         CharSequence newName;
         List<String> prefixes = null;
         Iterator<EclipseNode> it = field.down().iterator();
@@ -2214,7 +2232,7 @@ public class EclipseHandlerUtil {
         }
         int pS = source.sourceStart;
         int pE = source.sourceEnd;
-        long p = (pS << 32) | pE;
+        long p = (((long) pS) << 32) | ((long) pE);
         long[] poss = new long[annotationTypeFqn.length];
         Arrays.fill(poss, p);
         QualifiedTypeReference qualifiedType = new QualifiedTypeReference(annotationTypeFqn, poss);
@@ -2274,7 +2292,7 @@ public class EclipseHandlerUtil {
         ASTNode source = sourceNode.get();
         int pS = source.sourceStart;
         int pE = source.sourceEnd;
-        long p = (pS << 32) | pE;
+        long p = (((long) pS) << 32) | ((long) pE);
         if (type != null && Eclipse.isPrimitive(type)) {
             return null;
         }
@@ -2342,7 +2360,7 @@ public class EclipseHandlerUtil {
     }
 
     public static MarkerAnnotation makeMarkerAnnotation(char[][] name, ASTNode source) {
-        long pos = (source.sourceStart << 32) | source.sourceEnd;
+        long pos = (((long) source.sourceStart) << 32) | ((long) source.sourceEnd);
         long[] poss = new long[name.length];
         Arrays.fill(poss, pos);
         QualifiedTypeReference qualifiedTypeReference = new QualifiedTypeReference(name, poss);
@@ -2380,7 +2398,7 @@ public class EclipseHandlerUtil {
         return problematic;
     }
 
-    public static CastExpression makeCastExpression(Expression ref, TypeReference castTo, ASTNode source) throws IllegalArgumentException {
+    public static CastExpression makeCastExpression(Expression ref, TypeReference castTo, ASTNode source) {
         CastExpression result;
         try {
             if (castExpressionConstructorIsTypeRefBased) {
@@ -2733,7 +2751,7 @@ public class EclipseHandlerUtil {
     public static NameReference generateQualifiedNameRef(ASTNode source, char[]... varNames) {
         int pS = source.sourceStart;
         int pE = source.sourceEnd;
-        long p = (pS << 32) | pE;
+        long p = (((long) pS) << 32) | ((long) pE);
         QualifiedNameReference qualifiedNameReference = varNames.length > 1 ? new QualifiedNameReference(varNames, new long[varNames.length], pS, pE) : new SingleNameReference(varNames[0], p);
         setGeneratedBy(qualifiedNameReference, source);
         return qualifiedNameReference;
@@ -2742,7 +2760,7 @@ public class EclipseHandlerUtil {
     public static TypeReference generateQualifiedTypeRef(ASTNode source, char[]... varNames) {
         int pS = source.sourceStart;
         int pE = source.sourceEnd;
-        long p = (pS << 32) | pE;
+        long p = (((long) pS) << 32) | ((long) pE);
         long[] poss = Eclipse.poss(source, varNames.length);
         QualifiedTypeReference qualifiedTypeReference = varNames.length > 1 ? new QualifiedTypeReference(varNames, poss) : new SingleTypeReference(varNames[0], p);
         setGeneratedBy(qualifiedTypeReference, source);
@@ -2769,7 +2787,7 @@ public class EclipseHandlerUtil {
         return null;
     }
 
-    /* loaded from: discord-126021.apk:lombok/eclipse/handlers/EclipseHandlerUtil$EclipseOnlyUtil.SCL.lombok */
+    /* JADX INFO: loaded from: discord-126021.apk:lombok/eclipse/handlers/EclipseHandlerUtil$EclipseOnlyUtil.SCL.lombok */
     private static class EclipseOnlyUtil {
         private EclipseOnlyUtil() {
         }
@@ -2831,7 +2849,7 @@ public class EclipseHandlerUtil {
 
     /* JADX WARN: Failed to restore enum class, 'enum' modifier and super class removed */
     /* JADX WARN: Unknown enum class pattern. Please report as an issue! */
-    /* loaded from: discord-126021.apk:lombok/eclipse/handlers/EclipseHandlerUtil$CopyJavadoc.SCL.lombok */
+    /* JADX INFO: loaded from: discord-126021.apk:lombok/eclipse/handlers/EclipseHandlerUtil$CopyJavadoc.SCL.lombok */
     public static abstract class CopyJavadoc {
         public static final CopyJavadoc VERBATIM = new C128591("VERBATIM", 0);
         public static final CopyJavadoc GETTER = new C128602("GETTER", 1);
@@ -2854,8 +2872,8 @@ public class EclipseHandlerUtil {
             return (CopyJavadoc) Enum.valueOf(CopyJavadoc.class, str);
         }
 
-        /* renamed from: lombok.eclipse.handlers.EclipseHandlerUtil$CopyJavadoc$1 */
-        /* loaded from: discord-126021.apk:lombok/eclipse/handlers/EclipseHandlerUtil$CopyJavadoc$1.SCL.lombok */
+        /* JADX INFO: renamed from: lombok.eclipse.handlers.EclipseHandlerUtil$CopyJavadoc$1 */
+        /* JADX INFO: loaded from: discord-126021.apk:lombok/eclipse/handlers/EclipseHandlerUtil$CopyJavadoc$1.SCL.lombok */
         enum C128591 extends CopyJavadoc {
             C128591(String str, int i) {
                 super(str, i, null);
@@ -2874,8 +2892,8 @@ public class EclipseHandlerUtil {
             this(str, i);
         }
 
-        /* renamed from: lombok.eclipse.handlers.EclipseHandlerUtil$CopyJavadoc$2 */
-        /* loaded from: discord-126021.apk:lombok/eclipse/handlers/EclipseHandlerUtil$CopyJavadoc$2.SCL.lombok */
+        /* JADX INFO: renamed from: lombok.eclipse.handlers.EclipseHandlerUtil$CopyJavadoc$2 */
+        /* JADX INFO: loaded from: discord-126021.apk:lombok/eclipse/handlers/EclipseHandlerUtil$CopyJavadoc$2.SCL.lombok */
         enum C128602 extends CopyJavadoc {
             C128602(String str, int i) {
                 super(str, i, null);
@@ -2894,8 +2912,8 @@ public class EclipseHandlerUtil {
             }
         }
 
-        /* renamed from: lombok.eclipse.handlers.EclipseHandlerUtil$CopyJavadoc$3 */
-        /* loaded from: discord-126021.apk:lombok/eclipse/handlers/EclipseHandlerUtil$CopyJavadoc$3.SCL.lombok */
+        /* JADX INFO: renamed from: lombok.eclipse.handlers.EclipseHandlerUtil$CopyJavadoc$3 */
+        /* JADX INFO: loaded from: discord-126021.apk:lombok/eclipse/handlers/EclipseHandlerUtil$CopyJavadoc$3.SCL.lombok */
         enum C128613 extends CopyJavadoc {
             C128613(String str, int i) {
                 super(str, i, null);
@@ -2907,8 +2925,8 @@ public class EclipseHandlerUtil {
             }
         }
 
-        /* renamed from: lombok.eclipse.handlers.EclipseHandlerUtil$CopyJavadoc$4 */
-        /* loaded from: discord-126021.apk:lombok/eclipse/handlers/EclipseHandlerUtil$CopyJavadoc$4.SCL.lombok */
+        /* JADX INFO: renamed from: lombok.eclipse.handlers.EclipseHandlerUtil$CopyJavadoc$4 */
+        /* JADX INFO: loaded from: discord-126021.apk:lombok/eclipse/handlers/EclipseHandlerUtil$CopyJavadoc$4.SCL.lombok */
         enum C128624 extends CopyJavadoc {
             C128624(String str, int i) {
                 super(str, i, null);
@@ -2920,8 +2938,8 @@ public class EclipseHandlerUtil {
             }
         }
 
-        /* renamed from: lombok.eclipse.handlers.EclipseHandlerUtil$CopyJavadoc$5 */
-        /* loaded from: discord-126021.apk:lombok/eclipse/handlers/EclipseHandlerUtil$CopyJavadoc$5.SCL.lombok */
+        /* JADX INFO: renamed from: lombok.eclipse.handlers.EclipseHandlerUtil$CopyJavadoc$5 */
+        /* JADX INFO: loaded from: discord-126021.apk:lombok/eclipse/handlers/EclipseHandlerUtil$CopyJavadoc$5.SCL.lombok */
         enum C128635 extends CopyJavadoc {
             C128635(String str, int i) {
                 super(str, i, null);

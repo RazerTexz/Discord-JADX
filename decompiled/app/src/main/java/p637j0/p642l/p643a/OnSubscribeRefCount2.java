@@ -4,15 +4,15 @@ import p658rx.Subscription;
 import p658rx.functions.Action0;
 import p658rx.subscriptions.CompositeSubscription;
 
-/* compiled from: OnSubscribeRefCount.java */
-/* renamed from: j0.l.a.b0, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: j0.l.a.b0, reason: use source file name */
+/* JADX INFO: compiled from: OnSubscribeRefCount.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class OnSubscribeRefCount2 implements Action0 {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final /* synthetic */ CompositeSubscription f26738j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final /* synthetic */ OnSubscribeRefCount3 f26739k;
 
     public OnSubscribeRefCount2(OnSubscribeRefCount3 onSubscribeRefCount3, CompositeSubscription compositeSubscription) {

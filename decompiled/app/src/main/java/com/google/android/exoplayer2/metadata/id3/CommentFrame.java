@@ -6,20 +6,20 @@ import androidx.annotation.Nullable;
 import p007b.p100d.p104b.p105a.outline;
 import p007b.p225i.p226a.p242c.p259f3.Util2;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public final class CommentFrame extends Id3Frame {
     public static final Parcelable.Creator<CommentFrame> CREATOR = new C10730a();
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final String f19982k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final String f19983l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public final String f19984m;
 
-    /* renamed from: com.google.android.exoplayer2.metadata.id3.CommentFrame$a */
+    /* JADX INFO: renamed from: com.google.android.exoplayer2.metadata.id3.CommentFrame$a */
     public class C10730a implements Parcelable.Creator<CommentFrame> {
         @Override // android.os.Parcelable.Creator
         public CommentFrame createFromParcel(Parcel parcel) {

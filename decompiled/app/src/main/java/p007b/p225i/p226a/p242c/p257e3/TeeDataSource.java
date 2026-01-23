@@ -7,21 +7,21 @@ import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 
-/* compiled from: TeeDataSource.java */
-/* renamed from: b.i.a.c.e3.z, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.e3.z, reason: use source file name */
+/* JADX INFO: compiled from: TeeDataSource.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class TeeDataSource implements DataSource3 {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final DataSource3 f6645a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final DataSink f6646b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public boolean f6647c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public long f6648d;
 
     public TeeDataSource(DataSource3 dataSource3, DataSink dataSink) {
@@ -30,7 +30,7 @@ public final class TeeDataSource implements DataSource3 {
     }
 
     @Override // p007b.p225i.p226a.p242c.p257e3.DataSource3
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public long mo2586a(DataSpec dataSpec) throws IOException {
         DataSpec dataSpec2 = dataSpec;
         long jMo2586a = this.f6645a.mo2586a(dataSpec2);
@@ -60,21 +60,21 @@ public final class TeeDataSource implements DataSource3 {
     }
 
     @Override // p007b.p225i.p226a.p242c.p257e3.DataSource3
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public void mo2587d(TransferListener transferListener) {
         Objects.requireNonNull(transferListener);
         this.f6645a.mo2587d(transferListener);
     }
 
     @Override // p007b.p225i.p226a.p242c.p257e3.DataSource3
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public Map<String, List<String>> mo2588j() {
         return this.f6645a.mo2588j();
     }
 
     @Override // p007b.p225i.p226a.p242c.p257e3.DataSource3
     @Nullable
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public Uri mo2589n() {
         return this.f6645a.mo2589n();
     }
@@ -89,7 +89,7 @@ public final class TeeDataSource implements DataSource3 {
             this.f6646b.write(bArr, i, i3);
             long j = this.f6648d;
             if (j != -1) {
-                this.f6648d = j - i3;
+                this.f6648d = j - ((long) i3);
             }
         }
         return i3;

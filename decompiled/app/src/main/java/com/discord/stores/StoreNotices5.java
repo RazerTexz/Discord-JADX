@@ -4,9 +4,9 @@ import com.discord.stores.StoreNotices;
 import kotlin.jvm.functions.Function1;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: StoreNotices.kt */
-/* renamed from: com.discord.stores.StoreNotices$noticeQueue$2, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.stores.StoreNotices$noticeQueue$2, reason: use source file name */
+/* JADX INFO: compiled from: StoreNotices.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class StoreNotices5 extends Lambda implements Function1<StoreNotices.Notice, Comparable<?>> {
     public static final StoreNotices5 INSTANCE = new StoreNotices5();
 
@@ -19,7 +19,7 @@ public final class StoreNotices5 extends Lambda implements Function1<StoreNotice
         return invoke2(notice);
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final Comparable<?> invoke2(StoreNotices.Notice notice) {
         return Integer.valueOf(-notice.getPriority());
     }

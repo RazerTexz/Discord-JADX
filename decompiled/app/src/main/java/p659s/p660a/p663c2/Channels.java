@@ -9,17 +9,17 @@ import p507d0.p584w.p585h.Intrinsics2;
 import p507d0.p584w.p586i.p587a.ContinuationImpl6;
 import p507d0.p584w.p586i.p587a.DebugMetadata;
 
-/* compiled from: Channels.kt */
+/* JADX INFO: renamed from: s.a.c2.h, reason: use source file name */
+/* JADX INFO: compiled from: Channels.kt */
+/* JADX INFO: loaded from: classes3.dex */
 @DebugMetadata(m10084c = "kotlinx.coroutines.channels.ChannelsKt__ChannelsKt$sendBlocking$1", m10085f = "Channels.kt", m10086l = {25}, m10087m = "invokeSuspend")
-/* renamed from: s.a.c2.h, reason: use source file name */
-/* loaded from: classes3.dex */
 public final class Channels extends ContinuationImpl6 implements Function2<CoroutineScope, Continuation<? super Unit>, Object> {
     public final /* synthetic */ Object $element;
     public final /* synthetic */ Channel7 $this_sendBlocking;
     public Object L$0;
     public int label;
 
-    /* renamed from: p$ */
+    /* JADX INFO: renamed from: p$ */
     private CoroutineScope f27762p$;
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */

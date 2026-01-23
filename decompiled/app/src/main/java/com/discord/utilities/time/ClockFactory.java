@@ -6,8 +6,8 @@ import p007b.p445m.p446a.AndroidClockFactory;
 import p007b.p445m.p446a.p447g.KronosClockImpl;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ClockFactory.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: ClockFactory.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class ClockFactory {
     public static final ClockFactory INSTANCE = new ClockFactory();
     private static NtpClock ntpClock;

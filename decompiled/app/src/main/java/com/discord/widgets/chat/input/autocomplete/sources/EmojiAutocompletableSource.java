@@ -24,14 +24,14 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p658rx.Observable;
 import p658rx.functions.Func2;
 
-/* compiled from: EmojiAutocompletableSource.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: EmojiAutocompletableSource.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class EmojiAutocompletableSource {
     private final StoreEmoji emojiStore;
     private final StoreUserSettings userSettingsStore;
 
-    /* compiled from: EmojiAutocompletableSource.kt */
-    /* renamed from: com.discord.widgets.chat.input.autocomplete.sources.EmojiAutocompletableSource$observeEmojiAutocompletables$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.input.autocomplete.sources.EmojiAutocompletableSource$observeEmojiAutocompletables$1 */
+    /* JADX INFO: compiled from: EmojiAutocompletableSource.kt */
     public static final class C78041<T1, T2, R> implements Func2<EmojiSet, Boolean, Map<LeadingIdentifier, ? extends TreeSet<Autocompletable>>> {
         public C78041() {
         }
@@ -41,7 +41,7 @@ public final class EmojiAutocompletableSource {
             return call2(emojiSet, bool);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final Map<LeadingIdentifier, TreeSet<Autocompletable>> call2(EmojiSet emojiSet, Boolean bool) {
             EmojiAutocompletableSource emojiAutocompletableSource = EmojiAutocompletableSource.this;
             Intrinsics3.checkNotNullExpressionValue(emojiSet, "emojiSet");

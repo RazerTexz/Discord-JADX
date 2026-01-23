@@ -8,8 +8,8 @@ import kotlin.jvm.functions.Function1;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetChannelsListAdapter.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetChannelsListAdapter.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetChannelsListAdapter$ItemChannelStageVoice$onConfigure$4 extends Lambda implements Function1<View, Unit> {
     public final /* synthetic */ Channel $channel;
     public final /* synthetic */ WidgetChannelsListAdapter.ItemChannelStageVoice this$0;
@@ -27,7 +27,7 @@ public final class WidgetChannelsListAdapter$ItemChannelStageVoice$onConfigure$4
         return Unit.f27425a;
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final void invoke2(View view) {
         Intrinsics3.checkNotNullParameter(view, "it");
         WidgetChannelsListAdapter.ItemChannelStageVoice.access$getAdapter$p(this.this$0).getOnSelectChannelOptions().invoke(this.$channel);

@@ -4,8 +4,8 @@ import android.util.Log;
 import androidx.annotation.NonNull;
 import androidx.annotation.RestrictTo;
 
+/* JADX INFO: loaded from: classes.dex */
 @RestrictTo({RestrictTo.Scope.LIBRARY_GROUP})
-/* loaded from: classes.dex */
 public abstract class Logger {
     private static final int MAX_PREFIXED_TAG_LENGTH = 20;
     private static final int MAX_TAG_LENGTH = 23;

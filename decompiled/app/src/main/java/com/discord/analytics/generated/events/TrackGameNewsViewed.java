@@ -10,8 +10,8 @@ import com.discord.api.science.AnalyticsSchema;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: TrackGameNewsViewed.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: TrackGameNewsViewed.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class TrackGameNewsViewed implements AnalyticsSchema, TrackBase2, TrackAfCard2, TrackAfGame2 {
     private TrackAfCard trackAfCard;
     private TrackAfGame trackAfGame;
@@ -21,7 +21,7 @@ public final /* data */ class TrackGameNewsViewed implements AnalyticsSchema, Tr
     private final transient String analyticsSchemaTypeName = "game_news_viewed";
 
     @Override // com.discord.api.science.AnalyticsSchema
-    /* renamed from: d, reason: from getter */
+    /* JADX INFO: renamed from: d, reason: from getter */
     public String getAnalyticsSchemaTypeName() {
         return this.analyticsSchemaTypeName;
     }

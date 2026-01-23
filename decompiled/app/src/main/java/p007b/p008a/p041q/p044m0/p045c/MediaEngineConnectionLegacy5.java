@@ -38,64 +38,64 @@ import p507d0.p592z.p594d.FunctionReferenceImpl;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: MediaEngineConnectionLegacy.kt */
-/* renamed from: b.a.q.m0.c.e, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.a.q.m0.c.e, reason: use source file name */
+/* JADX INFO: compiled from: MediaEngineConnectionLegacy.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class MediaEngineConnectionLegacy5 implements MediaEngineConnection {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final CopyOnWriteArrayList<MediaEngineConnection.InterfaceC5648d> f1698a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public MediaEngineConnection.ConnectionState f1699b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public boolean f1700c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final Map<Long, Integer> f1701d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final Map<Long, Long> f1702e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final Set<Long> f1703f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public final Set<Long> f1704g;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public final Set<Long> f1705h;
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public final List<Codec2> f1706i;
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final Connection f1707j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final MediaEngineExecutorService f1708k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final Logger f1709l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public final NoiseCancellationConfig f1710m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public final Discord f1711n;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public final List<Codec2> f1712o;
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public final MediaEngineConnection.Type f1713p;
 
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     public final long f1714q;
 
-    /* compiled from: MediaEngineConnectionLegacy.kt */
-    /* renamed from: b.a.q.m0.c.e$a */
+    /* JADX INFO: renamed from: b.a.q.m0.c.e$a */
+    /* JADX INFO: compiled from: MediaEngineConnectionLegacy.kt */
     public static final class a extends Lambda implements Function1<Connection, Unit> {
         public final /* synthetic */ int $audioSsrc;
         public final /* synthetic */ boolean $isMuted;
@@ -126,11 +126,11 @@ public final class MediaEngineConnectionLegacy5 implements MediaEngineConnection
         }
     }
 
-    /* compiled from: MediaEngineConnectionLegacy.kt */
-    /* renamed from: b.a.q.m0.c.e$b */
+    /* JADX INFO: renamed from: b.a.q.m0.c.e$b */
+    /* JADX INFO: compiled from: MediaEngineConnectionLegacy.kt */
     public static final /* synthetic */ class b extends FunctionReferenceImpl implements Function1<Connection, Unit> {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public static final b f1715j = new b();
 
         public b() {
@@ -146,8 +146,8 @@ public final class MediaEngineConnectionLegacy5 implements MediaEngineConnection
         }
     }
 
-    /* compiled from: MediaEngineConnectionLegacy.kt */
-    /* renamed from: b.a.q.m0.c.e$c */
+    /* JADX INFO: renamed from: b.a.q.m0.c.e$c */
+    /* JADX INFO: compiled from: MediaEngineConnectionLegacy.kt */
     public static final class c extends Lambda implements Function1<MediaEngineConnection.InterfaceC5648d, Unit> {
         public c() {
             super(1);
@@ -163,8 +163,8 @@ public final class MediaEngineConnectionLegacy5 implements MediaEngineConnection
         }
     }
 
-    /* compiled from: MediaEngineConnectionLegacy.kt */
-    /* renamed from: b.a.q.m0.c.e$d */
+    /* JADX INFO: renamed from: b.a.q.m0.c.e$d */
+    /* JADX INFO: compiled from: MediaEngineConnectionLegacy.kt */
     public static final class d extends Lambda implements Function1<Connection, Unit> {
         public final /* synthetic */ boolean $disabled;
         public final /* synthetic */ long $userId;
@@ -185,8 +185,8 @@ public final class MediaEngineConnectionLegacy5 implements MediaEngineConnection
         }
     }
 
-    /* compiled from: MediaEngineConnectionLegacy.kt */
-    /* renamed from: b.a.q.m0.c.e$e */
+    /* JADX INFO: renamed from: b.a.q.m0.c.e$e */
+    /* JADX INFO: compiled from: MediaEngineConnectionLegacy.kt */
     public static final class e extends Lambda implements Function1<MediaEngineConnection.InterfaceC5648d, Unit> {
         public final /* synthetic */ KrispOveruseDetector.Status $status;
 
@@ -205,8 +205,8 @@ public final class MediaEngineConnectionLegacy5 implements MediaEngineConnection
         }
     }
 
-    /* compiled from: MediaEngineConnectionLegacy.kt */
-    /* renamed from: b.a.q.m0.c.e$f */
+    /* JADX INFO: renamed from: b.a.q.m0.c.e$f */
+    /* JADX INFO: compiled from: MediaEngineConnectionLegacy.kt */
     public static final class f extends Lambda implements Function1<Connection, Unit> {
         public final /* synthetic */ Function1 $onStats;
 
@@ -225,11 +225,11 @@ public final class MediaEngineConnectionLegacy5 implements MediaEngineConnection
         }
     }
 
-    /* compiled from: MediaEngineConnectionLegacy.kt */
-    /* renamed from: b.a.q.m0.c.e$g */
+    /* JADX INFO: renamed from: b.a.q.m0.c.e$g */
+    /* JADX INFO: compiled from: MediaEngineConnectionLegacy.kt */
     public static final class g extends Lambda implements Function1<MediaEngineConnection.InterfaceC5648d, Unit> {
 
-        /* renamed from: $e */
+        /* JADX INFO: renamed from: $e */
         public final /* synthetic */ MediaEngineConnection.FailedConnectionException f1716$e;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -247,8 +247,8 @@ public final class MediaEngineConnectionLegacy5 implements MediaEngineConnection
         }
     }
 
-    /* compiled from: MediaEngineConnectionLegacy.kt */
-    /* renamed from: b.a.q.m0.c.e$h */
+    /* JADX INFO: renamed from: b.a.q.m0.c.e$h */
+    /* JADX INFO: compiled from: MediaEngineConnectionLegacy.kt */
     public static final class h extends Lambda implements Function1<Connection, Unit> {
         public final /* synthetic */ Codecs2 $audioDecoder;
         public final /* synthetic */ Codecs3 $audioEncoder;
@@ -273,8 +273,8 @@ public final class MediaEngineConnectionLegacy5 implements MediaEngineConnection
         }
     }
 
-    /* compiled from: MediaEngineConnectionLegacy.kt */
-    /* renamed from: b.a.q.m0.c.e$i */
+    /* JADX INFO: renamed from: b.a.q.m0.c.e$i */
+    /* JADX INFO: compiled from: MediaEngineConnectionLegacy.kt */
     public static final class i extends Lambda implements Function1<Connection, Unit> {
         public final /* synthetic */ EncryptionSettings $encryptionSettings;
 
@@ -293,8 +293,8 @@ public final class MediaEngineConnectionLegacy5 implements MediaEngineConnection
         }
     }
 
-    /* compiled from: MediaEngineConnectionLegacy.kt */
-    /* renamed from: b.a.q.m0.c.e$j */
+    /* JADX INFO: renamed from: b.a.q.m0.c.e$j */
+    /* JADX INFO: compiled from: MediaEngineConnectionLegacy.kt */
     public static final class j extends Lambda implements Function1<Connection, Unit> {
         public final /* synthetic */ MediaEngineConnection.InputMode $inputMode;
         public final /* synthetic */ MediaEngineConnection.C5647c $inputModeOptions;
@@ -322,8 +322,8 @@ public final class MediaEngineConnectionLegacy5 implements MediaEngineConnection
         }
     }
 
-    /* compiled from: MediaEngineConnectionLegacy.kt */
-    /* renamed from: b.a.q.m0.c.e$k */
+    /* JADX INFO: renamed from: b.a.q.m0.c.e$k */
+    /* JADX INFO: compiled from: MediaEngineConnectionLegacy.kt */
     public static final class k extends Lambda implements Function1<Connection, Unit> {
         public final /* synthetic */ boolean $mute;
         public final /* synthetic */ long $userId;
@@ -344,8 +344,8 @@ public final class MediaEngineConnectionLegacy5 implements MediaEngineConnection
         }
     }
 
-    /* compiled from: MediaEngineConnectionLegacy.kt */
-    /* renamed from: b.a.q.m0.c.e$l */
+    /* JADX INFO: renamed from: b.a.q.m0.c.e$l */
+    /* JADX INFO: compiled from: MediaEngineConnectionLegacy.kt */
     public static final class l extends Lambda implements Function1<MediaEngineConnection.InterfaceC5648d, Unit> {
         public final /* synthetic */ boolean $mute;
         public final /* synthetic */ long $userId;
@@ -366,8 +366,8 @@ public final class MediaEngineConnectionLegacy5 implements MediaEngineConnection
         }
     }
 
-    /* compiled from: MediaEngineConnectionLegacy.kt */
-    /* renamed from: b.a.q.m0.c.e$m */
+    /* JADX INFO: renamed from: b.a.q.m0.c.e$m */
+    /* JADX INFO: compiled from: MediaEngineConnectionLegacy.kt */
     public static final class m extends Lambda implements Function1<MediaEngineConnection.InterfaceC5648d, Unit> {
         public final /* synthetic */ boolean $offScreen;
         public final /* synthetic */ long $userId;
@@ -388,8 +388,8 @@ public final class MediaEngineConnectionLegacy5 implements MediaEngineConnection
         }
     }
 
-    /* compiled from: MediaEngineConnectionLegacy.kt */
-    /* renamed from: b.a.q.m0.c.e$n */
+    /* JADX INFO: renamed from: b.a.q.m0.c.e$n */
+    /* JADX INFO: compiled from: MediaEngineConnectionLegacy.kt */
     public static final class n extends Lambda implements Function1<Connection, Unit> {
         public final /* synthetic */ long $userId;
         public final /* synthetic */ float $volume;
@@ -410,8 +410,8 @@ public final class MediaEngineConnectionLegacy5 implements MediaEngineConnection
         }
     }
 
-    /* compiled from: MediaEngineConnectionLegacy.kt */
-    /* renamed from: b.a.q.m0.c.e$o */
+    /* JADX INFO: renamed from: b.a.q.m0.c.e$o */
+    /* JADX INFO: compiled from: MediaEngineConnectionLegacy.kt */
     public static final class o extends Lambda implements Function1<Connection, Unit> {
         public final /* synthetic */ boolean $active;
 
@@ -430,8 +430,8 @@ public final class MediaEngineConnectionLegacy5 implements MediaEngineConnection
         }
     }
 
-    /* compiled from: MediaEngineConnectionLegacy.kt */
-    /* renamed from: b.a.q.m0.c.e$p */
+    /* JADX INFO: renamed from: b.a.q.m0.c.e$p */
+    /* JADX INFO: compiled from: MediaEngineConnectionLegacy.kt */
     public static final class p extends Lambda implements Function1<MediaEngineConnection.InterfaceC5648d, Unit> {
         public final /* synthetic */ int $frameRate;
 
@@ -450,8 +450,8 @@ public final class MediaEngineConnectionLegacy5 implements MediaEngineConnection
         }
     }
 
-    /* compiled from: MediaEngineConnectionLegacy.kt */
-    /* renamed from: b.a.q.m0.c.e$q */
+    /* JADX INFO: renamed from: b.a.q.m0.c.e$q */
+    /* JADX INFO: compiled from: MediaEngineConnectionLegacy.kt */
     public static final class q extends Lambda implements Function1<MediaEngineConnection.InterfaceC5648d, Unit> {
         public final /* synthetic */ MediaEngineConnection.C5646b $quality;
 
@@ -470,8 +470,8 @@ public final class MediaEngineConnectionLegacy5 implements MediaEngineConnection
         }
     }
 
-    /* compiled from: MediaEngineConnectionLegacy.kt */
-    /* renamed from: b.a.q.m0.c.e$r */
+    /* JADX INFO: renamed from: b.a.q.m0.c.e$r */
+    /* JADX INFO: compiled from: MediaEngineConnectionLegacy.kt */
     public static final class r extends Lambda implements Function1<Connection, Unit> {
         public final /* synthetic */ int $frameRate;
         public final /* synthetic */ MediaEngineConnection.C5646b $quality;
@@ -493,8 +493,8 @@ public final class MediaEngineConnectionLegacy5 implements MediaEngineConnection
         }
     }
 
-    /* compiled from: MediaEngineConnectionLegacy.kt */
-    /* renamed from: b.a.q.m0.c.e$s */
+    /* JADX INFO: renamed from: b.a.q.m0.c.e$s */
+    /* JADX INFO: compiled from: MediaEngineConnectionLegacy.kt */
     public static final class s extends Lambda implements Function1<Connection, Unit> {
         public final /* synthetic */ boolean $selfDeaf;
 
@@ -513,8 +513,8 @@ public final class MediaEngineConnectionLegacy5 implements MediaEngineConnection
         }
     }
 
-    /* compiled from: MediaEngineConnectionLegacy.kt */
-    /* renamed from: b.a.q.m0.c.e$t */
+    /* JADX INFO: renamed from: b.a.q.m0.c.e$t */
+    /* JADX INFO: compiled from: MediaEngineConnectionLegacy.kt */
     public static final class t extends Lambda implements Function1<Connection, Unit> {
         public final /* synthetic */ boolean $selfMute;
 
@@ -533,8 +533,8 @@ public final class MediaEngineConnectionLegacy5 implements MediaEngineConnection
         }
     }
 
-    /* compiled from: MediaEngineConnectionLegacy.kt */
-    /* renamed from: b.a.q.m0.c.e$u */
+    /* JADX INFO: renamed from: b.a.q.m0.c.e$u */
+    /* JADX INFO: compiled from: MediaEngineConnectionLegacy.kt */
     public static final class u extends Lambda implements Function1<Connection, Unit> {
         public final /* synthetic */ boolean $isVideoBroadcast;
 
@@ -553,8 +553,8 @@ public final class MediaEngineConnectionLegacy5 implements MediaEngineConnection
         }
     }
 
-    /* compiled from: MediaEngineConnectionLegacy.kt */
-    /* renamed from: b.a.q.m0.c.e$v */
+    /* JADX INFO: renamed from: b.a.q.m0.c.e$v */
+    /* JADX INFO: compiled from: MediaEngineConnectionLegacy.kt */
     public static final class v extends Lambda implements Function1<Connection, Unit> {
         public final /* synthetic */ ScreenCapturer $screenCapturer;
 
@@ -574,19 +574,19 @@ public final class MediaEngineConnectionLegacy5 implements MediaEngineConnection
         }
     }
 
-    /* compiled from: MediaEngineConnectionLegacy.kt */
-    /* renamed from: b.a.q.m0.c.e$w */
+    /* JADX INFO: renamed from: b.a.q.m0.c.e$w */
+    /* JADX INFO: compiled from: MediaEngineConnectionLegacy.kt */
     public static final class w extends MediaProjection.Callback {
         @Override // android.media.projection.MediaProjection.Callback
         public void onStop() {
         }
     }
 
-    /* compiled from: MediaEngineConnectionLegacy.kt */
-    /* renamed from: b.a.q.m0.c.e$x */
+    /* JADX INFO: renamed from: b.a.q.m0.c.e$x */
+    /* JADX INFO: compiled from: MediaEngineConnectionLegacy.kt */
     public static final class x extends Lambda implements Function1<Connection, Unit> {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public static final x f1717j = new x();
 
         public x() {
@@ -641,34 +641,34 @@ public final class MediaEngineConnectionLegacy5 implements MediaEngineConnection
         m318y(new MediaEngineConnectionLegacy(this, connectionState));
     }
 
-    /* renamed from: x */
+    /* JADX INFO: renamed from: x */
     public static final void m294x(MediaEngineConnectionLegacy5 mediaEngineConnectionLegacy5, Function0 function0) {
         MediaEngineExecutorService mediaEngineExecutorService = mediaEngineConnectionLegacy5.f1708k;
         mediaEngineExecutorService.f1609l.execute(new MediaEngineConnectionLegacy9(function0));
     }
 
     @Override // com.discord.rtcconnection.mediaengine.MediaEngineConnection
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public synchronized void mo295a(Intent intent, ThumbnailEmitter thumbnailEmitter) {
         Intrinsics3.checkNotNullParameter(intent, "permission");
         m319z(new v(new ScreenCapturer(intent, new w(), this.f1709l, thumbnailEmitter)));
     }
 
     @Override // com.discord.rtcconnection.mediaengine.MediaEngineConnection
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public boolean mo296b() {
         return this.f1710m.f1757a;
     }
 
     @Override // com.discord.rtcconnection.mediaengine.MediaEngineConnection
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public void mo297c(boolean z2) {
         this.f1700c = z2;
         m319z(new t(z2));
     }
 
     @Override // com.discord.rtcconnection.mediaengine.MediaEngineConnection
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public void mo298d(long j2, boolean z2) {
         if (z2) {
             this.f1705h.add(Long.valueOf(j2));
@@ -686,20 +686,20 @@ public final class MediaEngineConnectionLegacy5 implements MediaEngineConnection
     }
 
     @Override // com.discord.rtcconnection.mediaengine.MediaEngineConnection
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public void mo299e(long j2, float f2) {
         m319z(new n(j2, f2));
     }
 
     @Override // com.discord.rtcconnection.mediaengine.MediaEngineConnection
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public void mo300f(KrispOveruseDetector.Status status) {
         Intrinsics3.checkNotNullParameter(status, "status");
         m318y(new e(status));
     }
 
     @Override // com.discord.rtcconnection.mediaengine.MediaEngineConnection
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public boolean mo301g(long j2) {
         return this.f1704g.contains(Long.valueOf(j2));
     }
@@ -710,25 +710,25 @@ public final class MediaEngineConnectionLegacy5 implements MediaEngineConnection
     }
 
     @Override // com.discord.rtcconnection.mediaengine.MediaEngineConnection
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public synchronized void mo302h() {
         m319z(x.f1717j);
     }
 
     @Override // com.discord.rtcconnection.mediaengine.MediaEngineConnection
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public void mo303i(long j2, boolean z2) {
         m319z(new d(j2, z2));
     }
 
     @Override // com.discord.rtcconnection.mediaengine.MediaEngineConnection
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public void mo304j(boolean z2) {
         m319z(new u(z2));
     }
 
     @Override // com.discord.rtcconnection.mediaengine.MediaEngineConnection
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public void mo305k(MediaEngineConnection.InputMode inputMode, MediaEngineConnection.C5647c c5647c) {
         Intrinsics3.checkNotNullParameter(inputMode, "inputMode");
         Intrinsics3.checkNotNullParameter(c5647c, "inputModeOptions");
@@ -741,7 +741,7 @@ public final class MediaEngineConnectionLegacy5 implements MediaEngineConnection
     }
 
     @Override // com.discord.rtcconnection.mediaengine.MediaEngineConnection
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public void mo306l(MediaEngineConnection.InterfaceC5648d interfaceC5648d) {
         Intrinsics3.checkNotNullParameter(interfaceC5648d, "listener");
         this.f1698a.add(interfaceC5648d);
@@ -749,7 +749,7 @@ public final class MediaEngineConnectionLegacy5 implements MediaEngineConnection
     }
 
     @Override // com.discord.rtcconnection.mediaengine.MediaEngineConnection
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public void mo307m(MediaEngineConnection.C5646b c5646b) {
         Intrinsics3.checkNotNullParameter(c5646b, "quality");
         int i2 = this.f1700c ? c5646b.f18909e : c5646b.f18910f;
@@ -759,33 +759,33 @@ public final class MediaEngineConnectionLegacy5 implements MediaEngineConnection
     }
 
     @Override // com.discord.rtcconnection.mediaengine.MediaEngineConnection
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public void mo308n(Function1<? super Stats, Unit> function1) {
         Intrinsics3.checkNotNullParameter(function1, "onStats");
         m319z(new f(function1));
     }
 
     @Override // com.discord.rtcconnection.mediaengine.MediaEngineConnection
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public void mo309o(MediaEngineConnection.InterfaceC5648d interfaceC5648d) {
         Intrinsics3.checkNotNullParameter(interfaceC5648d, "listener");
         this.f1698a.remove(interfaceC5648d);
     }
 
     @Override // com.discord.rtcconnection.mediaengine.MediaEngineConnection
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public boolean mo310p(long j2) {
         return this.f1705h.contains(Long.valueOf(j2));
     }
 
     @Override // com.discord.rtcconnection.mediaengine.MediaEngineConnection
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     public void mo311q(boolean z2) {
         m319z(new o(z2));
     }
 
     @Override // com.discord.rtcconnection.mediaengine.MediaEngineConnection
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     public void mo312r(String str, String str2) {
         Object obj;
         Object next;
@@ -839,7 +839,7 @@ public final class MediaEngineConnectionLegacy5 implements MediaEngineConnection
     }
 
     @Override // com.discord.rtcconnection.mediaengine.MediaEngineConnection
-    /* renamed from: s */
+    /* JADX INFO: renamed from: s */
     public void mo313s(long j2, int i2, Integer num, boolean z2, float f2) {
         if (i2 == 0) {
             Logger.w$default(this.f1709l, "MediaEngineConnectionLegacy", "Attempting to create user " + j2 + " with 0 audio SSRC", null, 4, null);
@@ -865,7 +865,7 @@ public final class MediaEngineConnectionLegacy5 implements MediaEngineConnection
     }
 
     @Override // com.discord.rtcconnection.mediaengine.MediaEngineConnection
-    /* renamed from: t */
+    /* JADX INFO: renamed from: t */
     public void mo314t(String str, int[] iArr) {
         Intrinsics3.checkNotNullParameter(str, "mode");
         Intrinsics3.checkNotNullParameter(iArr, "secretKey");
@@ -873,19 +873,19 @@ public final class MediaEngineConnectionLegacy5 implements MediaEngineConnection
     }
 
     @Override // com.discord.rtcconnection.mediaengine.MediaEngineConnection
-    /* renamed from: u */
+    /* JADX INFO: renamed from: u */
     public boolean mo315u(long j2) {
         return this.f1703f.contains(Long.valueOf(j2));
     }
 
     @Override // com.discord.rtcconnection.mediaengine.MediaEngineConnection
-    /* renamed from: v */
+    /* JADX INFO: renamed from: v */
     public void mo316v(boolean z2) {
         m319z(new s(z2));
     }
 
     @Override // com.discord.rtcconnection.mediaengine.MediaEngineConnection
-    /* renamed from: w */
+    /* JADX INFO: renamed from: w */
     public void mo317w(long j2, boolean z2) {
         m319z(new k(j2, z2));
         if (z2) {
@@ -896,7 +896,7 @@ public final class MediaEngineConnectionLegacy5 implements MediaEngineConnection
         m318y(new l(j2, z2));
     }
 
-    /* renamed from: y */
+    /* JADX INFO: renamed from: y */
     public final void m318y(Function1<? super MediaEngineConnection.InterfaceC5648d, Unit> function1) {
         for (MediaEngineConnection.InterfaceC5648d interfaceC5648d : this.f1698a) {
             try {
@@ -908,7 +908,7 @@ public final class MediaEngineConnectionLegacy5 implements MediaEngineConnection
         }
     }
 
-    /* renamed from: z */
+    /* JADX INFO: renamed from: z */
     public final synchronized void m319z(Function1<? super Connection, Unit> function1) {
         function1.invoke(this.f1707j);
     }

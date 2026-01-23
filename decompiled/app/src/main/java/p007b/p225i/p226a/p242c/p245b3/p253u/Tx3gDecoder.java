@@ -18,30 +18,30 @@ import p007b.p225i.p226a.p242c.p259f3.ParsableByteArray;
 import p007b.p225i.p226a.p242c.p259f3.Util2;
 import p007b.p225i.p355b.p356a.Charsets;
 
-/* compiled from: Tx3gDecoder.java */
-/* renamed from: b.i.a.c.b3.u.a, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.b3.u.a, reason: use source file name */
+/* JADX INFO: compiled from: Tx3gDecoder.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class Tx3gDecoder extends SimpleSubtitleDecoder2 {
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public final ParsableByteArray f6097n;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public final boolean f6098o;
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public final int f6099p;
 
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     public final int f6100q;
 
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     public final String f6101r;
 
-    /* renamed from: s */
+    /* JADX INFO: renamed from: s */
     public final float f6102s;
 
-    /* renamed from: t */
+    /* JADX INFO: renamed from: t */
     public final int f6103t;
 
     public Tx3gDecoder(List<byte[]> list) {
@@ -71,14 +71,14 @@ public final class Tx3gDecoder extends SimpleSubtitleDecoder2 {
         }
     }
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public static void m2703k(boolean z2) throws SubtitleDecoderException {
         if (!z2) {
             throw new SubtitleDecoderException("Unexpected subtitle format.");
         }
     }
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public static void m2704l(SpannableStringBuilder spannableStringBuilder, int i, int i2, int i3, int i4, int i5) {
         if (i != i2) {
             int i6 = i5 | 33;
@@ -106,7 +106,7 @@ public final class Tx3gDecoder extends SimpleSubtitleDecoder2 {
 
     /* JADX WARN: Removed duplicated region for block: B:16:0x004f  */
     @Override // p007b.p225i.p226a.p242c.p245b3.SimpleSubtitleDecoder2
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */

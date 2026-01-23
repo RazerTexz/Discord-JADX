@@ -21,12 +21,12 @@ import kotlin.Unit;
 import kotlin.jvm.functions.Function1;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: GuildScheduledEventRsvpUserListAdapter.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: GuildScheduledEventRsvpUserListAdapter.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class GuildScheduledEventRsvpUserListAdapter extends MGRecyclerAdapterSimple<GuildScheduledEventRsvpUserListItem> {
     private final Function1<Long, Unit> onItemClick;
 
-    /* compiled from: GuildScheduledEventRsvpUserListAdapter.kt */
+    /* JADX INFO: compiled from: GuildScheduledEventRsvpUserListAdapter.kt */
     public final class UserViewHolder extends MGRecyclerViewHolder<GuildScheduledEventRsvpUserListAdapter, GuildScheduledEventRsvpUserListItem> {
         private final GuildScheduledEventRsvpUserListAdapterItemBinding binding;
 
@@ -66,7 +66,7 @@ public final class GuildScheduledEventRsvpUserListAdapter extends MGRecyclerAdap
         }
 
         @SuppressLint({"SetTextI18n"})
-        /* renamed from: onConfigure, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: onConfigure, reason: avoid collision after fix types in other method */
         public void onConfigure2(int position, GuildScheduledEventRsvpUserListItem data) {
             Intrinsics3.checkNotNullParameter(data, "data");
             super.onConfigure(position, data);

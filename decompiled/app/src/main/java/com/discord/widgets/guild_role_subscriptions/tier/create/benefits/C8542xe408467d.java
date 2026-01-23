@@ -4,9 +4,9 @@ import android.widget.RadioGroup;
 import com.google.android.material.radiobutton.MaterialRadioButton;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: WidgetGuildRoleSubscriptionTierBenefits.kt */
-/* renamed from: com.discord.widgets.guild_role_subscriptions.tier.create.benefits.WidgetGuildRoleSubscriptionTierBenefits$channelBenefitSettingsCheckedChangeListener$1 */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.guild_role_subscriptions.tier.create.benefits.WidgetGuildRoleSubscriptionTierBenefits$channelBenefitSettingsCheckedChangeListener$1 */
+/* JADX INFO: compiled from: WidgetGuildRoleSubscriptionTierBenefits.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class C8542xe408467d implements RadioGroup.OnCheckedChangeListener {
     public final /* synthetic */ WidgetGuildRoleSubscriptionTierBenefits this$0;
 

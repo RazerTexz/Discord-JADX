@@ -1,7 +1,7 @@
 package kotlin;
 
-/* compiled from: TypeCastException.kt */
-/* loaded from: classes3.dex */
+/* JADX INFO: compiled from: TypeCastException.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public class TypeCastException extends ClassCastException {
     public TypeCastException() {
     }

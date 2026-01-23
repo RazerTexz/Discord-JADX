@@ -39,25 +39,25 @@ import p507d0.p580t.Collections2;
 import p507d0.p580t.Iterables2;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: WidgetSettingsLanguageSelect.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetSettingsLanguageSelect.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetSettingsLanguageSelect extends AppDialog {
     public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetSettingsLanguageSelect.class, "binding", "getBinding()Lcom/discord/databinding/WidgetSettingsLanguageSelectBinding;", 0)};
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private static final String REQUEST_KEY_USER_LOCALE = "REQUEST_KEY_USER_LOCALE";
     private static final String RESULT_KEY_USE_LOCALE = "INTENT_EXTRA_LOCALE";
     private Adapter adapter;
 
-    /* renamed from: binding$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
 
-    /* compiled from: WidgetSettingsLanguageSelect.kt */
+    /* JADX INFO: compiled from: WidgetSettingsLanguageSelect.kt */
     public static final class Adapter extends MGRecyclerAdapterSimple<Model.Item> {
         private final WidgetSettingsLanguageSelect dialog;
 
-        /* compiled from: WidgetSettingsLanguageSelect.kt */
+        /* JADX INFO: compiled from: WidgetSettingsLanguageSelect.kt */
         public static final class AdapterItemLocale extends MGRecyclerViewHolder<Adapter, Model.Item> {
             private final WidgetSettingsLanguageSelectItemBinding binding;
 
@@ -98,7 +98,7 @@ public final class WidgetSettingsLanguageSelect extends AppDialog {
                 onConfigure2(i, item);
             }
 
-            /* renamed from: onConfigure, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: onConfigure, reason: avoid collision after fix types in other method */
             public void onConfigure2(int position, Model.Item data) {
                 Intrinsics3.checkNotNullParameter(data, "data");
                 super.onConfigure(position, data);
@@ -141,7 +141,7 @@ public final class WidgetSettingsLanguageSelect extends AppDialog {
         }
     }
 
-    /* compiled from: WidgetSettingsLanguageSelect.kt */
+    /* JADX INFO: compiled from: WidgetSettingsLanguageSelect.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -166,11 +166,11 @@ public final class WidgetSettingsLanguageSelect extends AppDialog {
         }
     }
 
-    /* compiled from: WidgetSettingsLanguageSelect.kt */
+    /* JADX INFO: compiled from: WidgetSettingsLanguageSelect.kt */
     public static final class Model {
         public static final Model INSTANCE = new Model();
 
-        /* compiled from: WidgetSettingsLanguageSelect.kt */
+        /* JADX INFO: compiled from: WidgetSettingsLanguageSelect.kt */
         public static final /* data */ class Item implements MGRecyclerDataPayload {
             private final String key;
             private final String locale;
@@ -189,7 +189,7 @@ public final class WidgetSettingsLanguageSelect extends AppDialog {
                 return item.copy(str);
             }
 
-            /* renamed from: component1, reason: from getter */
+            /* JADX INFO: renamed from: component1, reason: from getter */
             public final String getLocale() {
                 return this.locale;
             }

@@ -29,13 +29,13 @@ import p007b.p085c.p086a.p087a0.AnimatableValueParser;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: VoiceUtils.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: VoiceUtils.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class VoiceUtils {
     public static final VoiceUtils INSTANCE = new VoiceUtils();
 
-    /* compiled from: VoiceUtils.kt */
-    /* renamed from: com.discord.widgets.voice.VoiceUtils$handleCallChannel$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.voice.VoiceUtils$handleCallChannel$1 */
+    /* JADX INFO: compiled from: VoiceUtils.kt */
     public static final class C104031 extends Lambda implements Function0<Unit> {
         public final /* synthetic */ AppComponent $appComponent;
         public final /* synthetic */ AppPermissions2 $appPermissionsRequests;
@@ -65,7 +65,7 @@ public final class VoiceUtils {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             if (ChannelUtils.m7667B(this.$channel)) {
                 new PrivateCallLauncher(this.$appPermissionsRequests, this.$appComponent, this.$context, this.$fragmentManager).launchVoiceCall(this.$channel.getId());
@@ -92,8 +92,8 @@ public final class VoiceUtils {
         }
     }
 
-    /* compiled from: VoiceUtils.kt */
-    /* renamed from: com.discord.widgets.voice.VoiceUtils$handleConnectToEventChannel$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.voice.VoiceUtils$handleConnectToEventChannel$1 */
+    /* JADX INFO: compiled from: VoiceUtils.kt */
     public static final class C104041 extends Lambda implements Function0<Unit> {
         public static final C104041 INSTANCE = new C104041();
 
@@ -107,13 +107,13 @@ public final class VoiceUtils {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
         }
     }
 
-    /* compiled from: VoiceUtils.kt */
-    /* renamed from: com.discord.widgets.voice.VoiceUtils$handleConnectToEventChannel$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.voice.VoiceUtils$handleConnectToEventChannel$2 */
+    /* JADX INFO: compiled from: VoiceUtils.kt */
     public static final class C104052 extends Lambda implements Function0<Unit> {
         public static final C104052 INSTANCE = new C104052();
 
@@ -127,24 +127,24 @@ public final class VoiceUtils {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
         }
     }
 
-    /* compiled from: VoiceUtils.kt */
-    /* renamed from: com.discord.widgets.voice.VoiceUtils$handleConnectToEventChannel$3 */
+    /* JADX INFO: renamed from: com.discord.widgets.voice.VoiceUtils$handleConnectToEventChannel$3 */
+    /* JADX INFO: compiled from: VoiceUtils.kt */
     public static final class C104063 extends Lambda implements Function0<Unit> {
         public final /* synthetic */ AppPermissions2 $appPermissionsRequests;
         public final /* synthetic */ Channel $channel;
         public final /* synthetic */ Function0 $onEventStarted;
 
-        /* compiled from: VoiceUtils.kt */
-        /* renamed from: com.discord.widgets.voice.VoiceUtils$handleConnectToEventChannel$3$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.widgets.voice.VoiceUtils$handleConnectToEventChannel$3$1, reason: invalid class name */
+        /* JADX INFO: compiled from: VoiceUtils.kt */
         public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
 
-            /* compiled from: VoiceUtils.kt */
-            /* renamed from: com.discord.widgets.voice.VoiceUtils$handleConnectToEventChannel$3$1$1, reason: invalid class name and collision with other inner class name */
+            /* JADX INFO: renamed from: com.discord.widgets.voice.VoiceUtils$handleConnectToEventChannel$3$1$1, reason: invalid class name and collision with other inner class name */
+            /* JADX INFO: compiled from: VoiceUtils.kt */
             public static final class C132961 extends Lambda implements Function1<Void, Unit> {
                 public static final C132961 INSTANCE = new C132961();
 
@@ -158,7 +158,7 @@ public final class VoiceUtils {
                     return Unit.f27425a;
                 }
 
-                /* renamed from: invoke, reason: avoid collision after fix types in other method */
+                /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
                 public final void invoke2(Void r1) {
                 }
             }
@@ -173,7 +173,7 @@ public final class VoiceUtils {
                 return Unit.f27425a;
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2() {
                 ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.restSubscribeOn$default(StageChannelAPI.setUserSuppressedInChannel$default(StageChannelAPI.INSTANCE, C104063.this.$channel, StoreStream.INSTANCE.getUsers().getMeSnapshot().getId(), false, 0L, 8, null), false, 1, null), VoiceUtils.INSTANCE.getClass(), (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, C132961.INSTANCE, 62, (Object) null);
                 C104063.this.$onEventStarted.invoke();
@@ -194,14 +194,14 @@ public final class VoiceUtils {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             AnimatableValueParser.m473S1(this.$appPermissionsRequests, null, new AnonymousClass1(), 1, null);
         }
     }
 
-    /* compiled from: VoiceUtils.kt */
-    /* renamed from: com.discord.widgets.voice.VoiceUtils$handleConnectToEventChannel$4 */
+    /* JADX INFO: renamed from: com.discord.widgets.voice.VoiceUtils$handleConnectToEventChannel$4 */
+    /* JADX INFO: compiled from: VoiceUtils.kt */
     public static final class C104074 extends Lambda implements Function0<Unit> {
         public final /* synthetic */ Channel $channel;
         public final /* synthetic */ Context $context;
@@ -223,7 +223,7 @@ public final class VoiceUtils {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             StoreStream.INSTANCE.getVoiceChannelSelected().selectVoiceChannel(this.$channel.getId());
             if (TextInVoiceFeatureFlag.INSTANCE.getINSTANCE().isEnabled(Long.valueOf(this.$channel.getGuildId()))) {

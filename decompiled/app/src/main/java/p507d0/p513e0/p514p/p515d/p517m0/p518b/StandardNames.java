@@ -16,265 +16,265 @@ import p507d0.p580t.Collections2;
 import p507d0.p580t.Sets5;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: StandardNames.kt */
-/* renamed from: d0.e0.p.d.m0.b.k, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.b.k, reason: use source file name */
+/* JADX INFO: compiled from: StandardNames.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class StandardNames {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final StandardNames f22488a = new StandardNames();
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static final Name f22489b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public static final Name f22490c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public static final FqName f22491d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public static final FqName f22492e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public static final FqName f22493f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public static final FqName f22494g;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public static final FqName f22495h;
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public static final FqName f22496i;
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static final List<String> f22497j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public static final Name f22498k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public static final FqName f22499l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public static final FqName f22500m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public static final FqName f22501n;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public static final FqName f22502o;
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public static final Set<FqName> f22503p;
 
-    /* compiled from: StandardNames.kt */
-    /* renamed from: d0.e0.p.d.m0.b.k$a */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.b.k$a */
+    /* JADX INFO: compiled from: StandardNames.kt */
     public static final class a {
 
-        /* renamed from: A */
+        /* JADX INFO: renamed from: A */
         public static final FqName f22504A;
 
-        /* renamed from: B */
+        /* JADX INFO: renamed from: B */
         public static final FqName f22505B;
 
-        /* renamed from: C */
+        /* JADX INFO: renamed from: C */
         public static final FqName f22506C;
 
-        /* renamed from: D */
+        /* JADX INFO: renamed from: D */
         public static final FqName f22507D;
 
-        /* renamed from: E */
+        /* JADX INFO: renamed from: E */
         public static final FqName f22508E;
 
-        /* renamed from: F */
+        /* JADX INFO: renamed from: F */
         public static final FqName f22509F;
 
-        /* renamed from: G */
+        /* JADX INFO: renamed from: G */
         public static final FqName f22510G;
 
-        /* renamed from: H */
+        /* JADX INFO: renamed from: H */
         public static final FqName f22511H;
 
-        /* renamed from: I */
+        /* JADX INFO: renamed from: I */
         public static final FqName f22512I;
 
-        /* renamed from: J */
+        /* JADX INFO: renamed from: J */
         public static final FqName f22513J;
 
-        /* renamed from: K */
+        /* JADX INFO: renamed from: K */
         public static final FqName f22514K;
 
-        /* renamed from: L */
+        /* JADX INFO: renamed from: L */
         public static final FqName f22515L;
 
-        /* renamed from: M */
+        /* JADX INFO: renamed from: M */
         public static final FqName f22516M;
 
-        /* renamed from: N */
+        /* JADX INFO: renamed from: N */
         public static final FqName f22517N;
 
-        /* renamed from: O */
+        /* JADX INFO: renamed from: O */
         public static final FqName f22518O;
 
-        /* renamed from: P */
+        /* JADX INFO: renamed from: P */
         public static final FqName f22519P;
 
-        /* renamed from: Q */
+        /* JADX INFO: renamed from: Q */
         public static final FqName f22520Q;
 
-        /* renamed from: R */
+        /* JADX INFO: renamed from: R */
         public static final FqName f22521R;
 
-        /* renamed from: S */
+        /* JADX INFO: renamed from: S */
         public static final FqName f22522S;
 
-        /* renamed from: T */
+        /* JADX INFO: renamed from: T */
         public static final FqName f22523T;
 
-        /* renamed from: U */
+        /* JADX INFO: renamed from: U */
         public static final FqName f22524U;
 
-        /* renamed from: V */
+        /* JADX INFO: renamed from: V */
         public static final FqName f22525V;
 
-        /* renamed from: W */
+        /* JADX INFO: renamed from: W */
         public static final FqName f22526W;
 
-        /* renamed from: X */
+        /* JADX INFO: renamed from: X */
         public static final FqNameUnsafe f22527X;
 
-        /* renamed from: Y */
+        /* JADX INFO: renamed from: Y */
         public static final FqNameUnsafe f22528Y;
 
-        /* renamed from: Z */
+        /* JADX INFO: renamed from: Z */
         public static final ClassId f22529Z;
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public static final a f22530a;
 
-        /* renamed from: a0 */
+        /* JADX INFO: renamed from: a0 */
         public static final FqName f22531a0;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public static final FqNameUnsafe f22532b;
 
-        /* renamed from: b0 */
+        /* JADX INFO: renamed from: b0 */
         public static final FqName f22533b0;
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public static final FqNameUnsafe f22534c;
 
-        /* renamed from: c0 */
+        /* JADX INFO: renamed from: c0 */
         public static final FqName f22535c0;
 
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         public static final FqNameUnsafe f22536d;
 
-        /* renamed from: d0 */
+        /* JADX INFO: renamed from: d0 */
         public static final FqName f22537d0;
 
-        /* renamed from: e */
+        /* JADX INFO: renamed from: e */
         public static final FqNameUnsafe f22538e;
 
-        /* renamed from: e0 */
+        /* JADX INFO: renamed from: e0 */
         public static final ClassId f22539e0;
 
-        /* renamed from: f */
+        /* JADX INFO: renamed from: f */
         public static final FqNameUnsafe f22540f;
 
-        /* renamed from: f0 */
+        /* JADX INFO: renamed from: f0 */
         public static final ClassId f22541f0;
 
-        /* renamed from: g */
+        /* JADX INFO: renamed from: g */
         public static final FqNameUnsafe f22542g;
 
-        /* renamed from: g0 */
+        /* JADX INFO: renamed from: g0 */
         public static final ClassId f22543g0;
 
-        /* renamed from: h */
+        /* JADX INFO: renamed from: h */
         public static final FqNameUnsafe f22544h;
 
-        /* renamed from: h0 */
+        /* JADX INFO: renamed from: h0 */
         public static final ClassId f22545h0;
 
-        /* renamed from: i */
+        /* JADX INFO: renamed from: i */
         public static final FqNameUnsafe f22546i;
 
-        /* renamed from: i0 */
+        /* JADX INFO: renamed from: i0 */
         public static final FqName f22547i0;
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public static final FqNameUnsafe f22548j;
 
-        /* renamed from: j0 */
+        /* JADX INFO: renamed from: j0 */
         public static final FqName f22549j0;
 
-        /* renamed from: k */
+        /* JADX INFO: renamed from: k */
         public static final FqNameUnsafe f22550k;
 
-        /* renamed from: k0 */
+        /* JADX INFO: renamed from: k0 */
         public static final FqName f22551k0;
 
-        /* renamed from: l */
+        /* JADX INFO: renamed from: l */
         public static final FqNameUnsafe f22552l;
 
-        /* renamed from: l0 */
+        /* JADX INFO: renamed from: l0 */
         public static final FqName f22553l0;
 
-        /* renamed from: m */
+        /* JADX INFO: renamed from: m */
         public static final FqNameUnsafe f22554m;
 
-        /* renamed from: m0 */
+        /* JADX INFO: renamed from: m0 */
         public static final Set<Name> f22555m0;
 
-        /* renamed from: n */
+        /* JADX INFO: renamed from: n */
         public static final FqNameUnsafe f22556n;
 
-        /* renamed from: n0 */
+        /* JADX INFO: renamed from: n0 */
         public static final Set<Name> f22557n0;
 
-        /* renamed from: o */
+        /* JADX INFO: renamed from: o */
         public static final FqNameUnsafe f22558o;
 
-        /* renamed from: o0 */
+        /* JADX INFO: renamed from: o0 */
         public static final Map<FqNameUnsafe, PrimitiveType> f22559o0;
 
-        /* renamed from: p */
+        /* JADX INFO: renamed from: p */
         public static final FqNameUnsafe f22560p;
 
-        /* renamed from: p0 */
+        /* JADX INFO: renamed from: p0 */
         public static final Map<FqNameUnsafe, PrimitiveType> f22561p0;
 
-        /* renamed from: q */
+        /* JADX INFO: renamed from: q */
         public static final FqNameUnsafe f22562q;
 
-        /* renamed from: r */
+        /* JADX INFO: renamed from: r */
         public static final FqNameUnsafe f22563r;
 
-        /* renamed from: s */
+        /* JADX INFO: renamed from: s */
         public static final FqName f22564s;
 
-        /* renamed from: t */
+        /* JADX INFO: renamed from: t */
         public static final FqName f22565t;
 
-        /* renamed from: u */
+        /* JADX INFO: renamed from: u */
         public static final FqName f22566u;
 
-        /* renamed from: v */
+        /* JADX INFO: renamed from: v */
         public static final FqName f22567v;
 
-        /* renamed from: w */
+        /* JADX INFO: renamed from: w */
         public static final FqName f22568w;
 
-        /* renamed from: x */
+        /* JADX INFO: renamed from: x */
         public static final FqName f22569x;
 
-        /* renamed from: y */
+        /* JADX INFO: renamed from: y */
         public static final FqName f22570y;
 
-        /* renamed from: z */
+        /* JADX INFO: renamed from: z */
         public static final FqName f22571z;
 
         static {
@@ -470,21 +470,21 @@ public final class StandardNames {
             return unsafe;
         }
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final FqName m9366a(String str) {
             FqName fqNameChild = StandardNames.f22500m.child(Name.identifier(str));
             Intrinsics3.checkNotNullExpressionValue(fqNameChild, "ANNOTATION_PACKAGE_FQ_NAME.child(Name.identifier(simpleName))");
             return fqNameChild;
         }
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final FqName m9367b(String str) {
             FqName fqNameChild = StandardNames.f22501n.child(Name.identifier(str));
             Intrinsics3.checkNotNullExpressionValue(fqNameChild, "COLLECTIONS_PACKAGE_FQ_NAME.child(Name.identifier(simpleName))");
             return fqNameChild;
         }
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public final FqName m9368c(String str) {
             FqName fqNameChild = StandardNames.f22499l.child(Name.identifier(str));
             Intrinsics3.checkNotNullExpressionValue(fqNameChild, "BUILT_INS_PACKAGE_FQ_NAME.child(Name.identifier(simpleName))");

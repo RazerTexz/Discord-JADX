@@ -3,9 +3,9 @@ package com.discord.widgets.chat.input.applicationcommands;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import com.discord.models.commands.ApplicationCommandOption;
 
-/* compiled from: SelectedApplicationCommandAdapter.kt */
-/* renamed from: com.discord.widgets.chat.input.applicationcommands.SelectedApplicationCommandAdapter$highlightOption$$inlined$let$lambda$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.chat.input.applicationcommands.SelectedApplicationCommandAdapter$highlightOption$$inlined$let$lambda$1, reason: use source file name */
+/* JADX INFO: compiled from: SelectedApplicationCommandAdapter.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class SelectedApplicationCommandAdapter6 implements Runnable {
     public final /* synthetic */ ApplicationCommandOption $commandOption$inlined;
     public final /* synthetic */ int $position;

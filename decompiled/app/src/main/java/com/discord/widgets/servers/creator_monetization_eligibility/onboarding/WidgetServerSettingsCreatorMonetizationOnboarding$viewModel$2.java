@@ -3,8 +3,8 @@ package com.discord.widgets.servers.creator_monetization_eligibility.onboarding;
 import kotlin.jvm.functions.Function0;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetServerSettingsCreatorMonetizationOnboarding.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetServerSettingsCreatorMonetizationOnboarding.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetServerSettingsCreatorMonetizationOnboarding$viewModel$2 extends Lambda implements Function0<ServerSettingsCreatorMonetizationOnboardingViewModel> {
     public final /* synthetic */ WidgetServerSettingsCreatorMonetizationOnboarding this$0;
 

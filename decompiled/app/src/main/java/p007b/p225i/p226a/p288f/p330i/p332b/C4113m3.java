@@ -10,15 +10,15 @@ import android.os.SystemClock;
 import androidx.annotation.WorkerThread;
 import androidx.exifinterface.media.ExifInterface;
 
-/* compiled from: com.google.android.gms:play-services-measurement-impl@@18.0.0 */
-/* renamed from: b.i.a.f.i.b.m3 */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.i.b.m3 */
+/* JADX INFO: compiled from: com.google.android.gms:play-services-measurement-impl@@18.0.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public final class C4113m3 extends AbstractC3974a5 {
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final C4146p3 f10961c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public boolean f10962d;
 
     public C4113m3(C4202u4 c4202u4) {
@@ -26,7 +26,7 @@ public final class C4113m3 extends AbstractC3974a5 {
         this.f10961c = new C4146p3(this, this.f11202a.f11254b, "google_app_measurement_local.db");
     }
 
-    /* renamed from: w */
+    /* JADX INFO: renamed from: w */
     public static long m5753w(SQLiteDatabase sQLiteDatabase) {
         Cursor cursorQuery = null;
         try {
@@ -47,7 +47,7 @@ public final class C4113m3 extends AbstractC3974a5 {
     }
 
     @WorkerThread
-    /* renamed from: A */
+    /* JADX INFO: renamed from: A */
     public final SQLiteDatabase m5754A() throws SQLiteException {
         if (this.f10962d) {
             return null;
@@ -61,7 +61,7 @@ public final class C4113m3 extends AbstractC3974a5 {
     }
 
     @Override // p007b.p225i.p226a.p288f.p330i.p332b.AbstractC3974a5
-    /* renamed from: v */
+    /* JADX INFO: renamed from: v */
     public final boolean mo5499v() {
         return false;
     }
@@ -69,19 +69,38 @@ public final class C4113m3 extends AbstractC3974a5 {
     /* JADX WARN: Multi-variable type inference failed */
     /* JADX WARN: Removed duplicated region for block: B:78:0x011c  */
     /* JADX WARN: Removed duplicated region for block: B:80:0x0121  */
+    /* JADX WARN: Type inference failed for: r12v0, types: [android.database.Cursor] */
     /* JADX WARN: Type inference failed for: r2v0 */
     /* JADX WARN: Type inference failed for: r2v1, types: [boolean, int] */
+    /* JADX WARN: Type inference failed for: r2v10 */
+    /* JADX WARN: Type inference failed for: r2v4 */
+    /* JADX WARN: Type inference failed for: r2v5, types: [android.database.Cursor] */
     /* JADX WARN: Type inference failed for: r2v9 */
+    /* JADX WARN: Type inference failed for: r7v0 */
+    /* JADX WARN: Type inference failed for: r7v10 */
+    /* JADX WARN: Type inference failed for: r7v11 */
+    /* JADX WARN: Type inference failed for: r7v13 */
+    /* JADX WARN: Type inference failed for: r7v14 */
+    /* JADX WARN: Type inference failed for: r7v15 */
+    /* JADX WARN: Type inference failed for: r7v16 */
+    /* JADX WARN: Type inference failed for: r7v17 */
+    /* JADX WARN: Type inference failed for: r7v2 */
+    /* JADX WARN: Type inference failed for: r7v3, types: [android.database.Cursor] */
+    /* JADX WARN: Type inference failed for: r7v4, types: [android.database.Cursor] */
+    /* JADX WARN: Type inference failed for: r7v5, types: [android.database.Cursor] */
+    /* JADX WARN: Type inference failed for: r7v6 */
+    /* JADX WARN: Type inference failed for: r7v8 */
+    /* JADX WARN: Type inference failed for: r7v9 */
     @WorkerThread
-    /* renamed from: x */
+    /* JADX INFO: renamed from: x */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
     public final boolean m5755x(int i, byte[] bArr) {
         SQLiteDatabase sQLiteDatabaseM5754A;
-        Cursor cursor;
+        ?? r2;
         mo5848b();
-        ?? r2 = 0;
+        ?? r22 = 0;
         if (this.f10962d) {
             return false;
         }
@@ -91,12 +110,12 @@ public final class C4113m3 extends AbstractC3974a5 {
         int i2 = 0;
         int i3 = 5;
         for (int i4 = 5; i2 < i4; i4 = 5) {
-            Cursor cursor2 = null;
-            cursor = null;
-            cursor2 = null;
-            Cursor cursor3 = null;
-            Cursor cursor4 = null;
-            cursor2 = null;
+            ?? r7 = 0;
+             = 0;
+            r7 = 0;
+            ?? r72 = 0;
+            ?? r73 = 0;
+            r7 = 0;
             SQLiteDatabase sQLiteDatabase = null;
             try {
                 sQLiteDatabaseM5754A = m5754A();
@@ -106,45 +125,45 @@ public final class C4113m3 extends AbstractC3974a5 {
                         if (sQLiteDatabaseM5754A != null) {
                             sQLiteDatabaseM5754A.close();
                         }
-                        return r2;
+                        return r22;
                     }
                     sQLiteDatabaseM5754A.beginTransaction();
                     long j = 0;
-                    Cursor cursorRawQuery = sQLiteDatabaseM5754A.rawQuery("select count(1) from messages", null);
-                    if (cursorRawQuery != 0) {
+                    ?? RawQuery = sQLiteDatabaseM5754A.rawQuery("select count(1) from messages", null);
+                    if (RawQuery != 0) {
                         try {
-                            if (cursorRawQuery.moveToFirst()) {
-                                j = cursorRawQuery.getLong(r2);
+                            if (RawQuery.moveToFirst()) {
+                                j = RawQuery.getLong(r22);
                             }
                         } catch (SQLiteDatabaseLockedException unused) {
-                            cursor4 = cursorRawQuery;
+                            r73 = RawQuery;
                             SystemClock.sleep(i3);
                             i3 += 20;
-                            if (cursor4 != null) {
-                                cursor4.close();
+                            if (r73 != 0) {
+                                r73.close();
                             }
                             if (sQLiteDatabaseM5754A != null) {
                                 sQLiteDatabaseM5754A.close();
                             }
                             i2++;
-                            r2 = 0;
+                            r22 = 0;
                         } catch (SQLiteFullException e) {
                             e = e;
-                            cursor2 = cursorRawQuery;
+                            r7 = RawQuery;
                             try {
                                 mo5726g().f11141f.m5861b("Error writing entry; local database full", e);
                                 this.f10962d = true;
-                                if (cursor2 != null) {
-                                    cursor2.close();
+                                if (r7 != 0) {
+                                    r7.close();
                                 }
                                 if (sQLiteDatabaseM5754A != null) {
                                     sQLiteDatabaseM5754A.close();
                                 }
                                 i2++;
-                                r2 = 0;
+                                r22 = 0;
                             } catch (Throwable th) {
                                 th = th;
-                                if (cursor2 != null) {
+                                if (r7 != 0) {
                                 }
                                 if (sQLiteDatabaseM5754A != null) {
                                 }
@@ -152,8 +171,8 @@ public final class C4113m3 extends AbstractC3974a5 {
                             }
                         } catch (SQLiteException e2) {
                             e = e2;
-                            cursor3 = cursorRawQuery;
-                            cursor = cursor3;
+                            r72 = RawQuery;
+                            r2 = r72;
                             sQLiteDatabase = sQLiteDatabaseM5754A;
                             if (sQLiteDatabase != null) {
                                 try {
@@ -163,9 +182,9 @@ public final class C4113m3 extends AbstractC3974a5 {
                                 } catch (Throwable th2) {
                                     th = th2;
                                     sQLiteDatabaseM5754A = sQLiteDatabase;
-                                    cursor2 = cursor;
-                                    if (cursor2 != null) {
-                                        cursor2.close();
+                                    r7 = r2;
+                                    if (r7 != 0) {
+                                        r7.close();
                                     }
                                     if (sQLiteDatabaseM5754A != null) {
                                         sQLiteDatabaseM5754A.close();
@@ -175,18 +194,18 @@ public final class C4113m3 extends AbstractC3974a5 {
                             }
                             mo5726g().f11141f.m5861b("Error writing entry to local database", e);
                             this.f10962d = true;
-                            if (cursor != null) {
-                                cursor.close();
+                            if (r2 != 0) {
+                                r2.close();
                             }
                             if (sQLiteDatabase != null) {
                                 sQLiteDatabase.close();
                             }
                             i2++;
-                            r2 = 0;
+                            r22 = 0;
                         } catch (Throwable th3) {
                             th = th3;
-                            cursor2 = cursorRawQuery;
-                            if (cursor2 != null) {
+                            r7 = RawQuery;
+                            if (r7 != 0) {
                             }
                             if (sQLiteDatabaseM5754A != null) {
                             }
@@ -197,7 +216,7 @@ public final class C4113m3 extends AbstractC3974a5 {
                         mo5726g().f11141f.m5860a("Data loss, local db full");
                         long j2 = (100000 - j) + 1;
                         String[] strArr = new String[1];
-                        strArr[r2] = Long.toString(j2);
+                        strArr[r22] = Long.toString(j2);
                         long jDelete = sQLiteDatabaseM5754A.delete("messages", "rowid in (select rowid from messages order by rowid asc limit ?)", strArr);
                         if (jDelete != j2) {
                             mo5726g().f11141f.m5863d("Different delete count than expected in local db. expected, received, difference", Long.valueOf(j2), Long.valueOf(jDelete), Long.valueOf(j2 - jDelete));
@@ -206,8 +225,8 @@ public final class C4113m3 extends AbstractC3974a5 {
                     sQLiteDatabaseM5754A.insertOrThrow("messages", null, contentValues);
                     sQLiteDatabaseM5754A.setTransactionSuccessful();
                     sQLiteDatabaseM5754A.endTransaction();
-                    if (cursorRawQuery != 0) {
-                        cursorRawQuery.close();
+                    if (RawQuery != 0) {
+                        RawQuery.close();
                     }
                     sQLiteDatabaseM5754A.close();
                     return true;
@@ -224,7 +243,7 @@ public final class C4113m3 extends AbstractC3974a5 {
                 sQLiteDatabaseM5754A = null;
             } catch (SQLiteException e6) {
                 e = e6;
-                cursor = null;
+                r2 = 0;
             } catch (Throwable th4) {
                 th = th4;
                 sQLiteDatabaseM5754A = null;
@@ -235,7 +254,7 @@ public final class C4113m3 extends AbstractC3974a5 {
     }
 
     @WorkerThread
-    /* renamed from: y */
+    /* JADX INFO: renamed from: y */
     public final void m5756y() {
         mo5848b();
         try {
@@ -249,7 +268,7 @@ public final class C4113m3 extends AbstractC3974a5 {
     }
 
     @WorkerThread
-    /* renamed from: z */
+    /* JADX INFO: renamed from: z */
     public final boolean m5757z() {
         mo5848b();
         if (this.f10962d || !this.f11202a.f11254b.getDatabasePath("google_app_measurement_local.db").exists()) {

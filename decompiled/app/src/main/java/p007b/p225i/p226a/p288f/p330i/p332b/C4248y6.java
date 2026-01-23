@@ -13,14 +13,14 @@ import com.discord.models.domain.ModelAuditLogEntry;
 import java.util.Objects;
 import p007b.p225i.p226a.p288f.p299e.p308o.C3401c;
 
-/* compiled from: com.google.android.gms:play-services-measurement-impl@@18.0.0 */
+/* JADX INFO: renamed from: b.i.a.f.i.b.y6 */
+/* JADX INFO: compiled from: com.google.android.gms:play-services-measurement-impl@@18.0.0 */
+/* JADX INFO: loaded from: classes3.dex */
 @TargetApi(14)
 @MainThread
-/* renamed from: b.i.a.f.i.b.y6 */
-/* loaded from: classes3.dex */
 public final class C4248y6 implements Application.ActivityLifecycleCallbacks {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final /* synthetic */ C3999c6 f11379j;
 
     public C4248y6(C3999c6 c3999c6, RunnableC4011d6 runnableC4011d6) {
@@ -39,12 +39,16 @@ public final class C4248y6 implements Application.ActivityLifecycleCallbacks {
             if (data != null && data.isHierarchical()) {
                 this.f11379j.m5866e();
                 this.f11379j.mo5725f().m5852v(new RunnableC4000c7(this, bundle == null, data, C4196t9.m5875V(intent) ? "gs" : "auto", data.getQueryParameter(Constants.REFERRER)));
+                return;
             }
+            return;
         } catch (Exception e) {
             this.f11379j.mo5726g().f11141f.m5861b("Throwable caught in onActivityCreated", e);
+            return;
         } finally {
             this.f11379j.m5972q().m5657y(activity, bundle);
         }
+        this.f11379j.m5972q().m5657y(activity, bundle);
     }
 
     @Override // android.app.Application.ActivityLifecycleCallbacks
@@ -62,7 +66,7 @@ public final class C4248y6 implements Application.ActivityLifecycleCallbacks {
 
     @Override // android.app.Application.ActivityLifecycleCallbacks
     @MainThread
-    public final void onActivityPaused(Activity activity) throws IllegalStateException {
+    public final void onActivityPaused(Activity activity) {
         C4060h7 c4060h7M5972q = this.f11379j.m5972q();
         if (c4060h7M5972q.f11202a.f11260h.m5526o(C4142p.f11104v0)) {
             synchronized (c4060h7M5972q.f10784l) {
@@ -88,7 +92,7 @@ public final class C4248y6 implements Application.ActivityLifecycleCallbacks {
 
     @Override // android.app.Application.ActivityLifecycleCallbacks
     @MainThread
-    public final void onActivityResumed(Activity activity) throws IllegalStateException {
+    public final void onActivityResumed(Activity activity) {
         C4228w8 c4228w8M5974s = this.f11379j.m5974s();
         Objects.requireNonNull((C3401c) c4228w8M5974s.f11202a.f11267o);
         c4228w8M5974s.mo5725f().m5852v(new RunnableC4217v8(c4228w8M5974s, SystemClock.elapsedRealtime()));

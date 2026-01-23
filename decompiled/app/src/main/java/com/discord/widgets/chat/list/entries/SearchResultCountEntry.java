@@ -2,8 +2,8 @@ package com.discord.widgets.chat.list.entries;
 
 import p007b.p100d.p104b.p105a.outline;
 
-/* compiled from: SearchResultCountEntry.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: SearchResultCountEntry.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final /* data */ class SearchResultCountEntry extends ChatListEntry {
     private final int totalResults;
     private final int type = 11;
@@ -20,7 +20,7 @@ public final /* data */ class SearchResultCountEntry extends ChatListEntry {
         return searchResultCountEntry.copy(i);
     }
 
-    /* renamed from: component1, reason: from getter */
+    /* JADX INFO: renamed from: component1, reason: from getter */
     public final int getTotalResults() {
         return this.totalResults;
     }

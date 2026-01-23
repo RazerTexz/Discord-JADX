@@ -13,14 +13,14 @@ import p007b.p008a.p018d.AppViewModel;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetHubWaitlistViewModel.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetHubWaitlistViewModel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetHubWaitlistViewModel extends AppViewModel<WidgetHubWaitlistViewModel3> {
     private final String email;
     private final RestAPI restAPI;
 
-    /* compiled from: WidgetHubWaitlistViewModel.kt */
-    /* renamed from: com.discord.widgets.hubs.WidgetHubWaitlistViewModel$joinWaitlist$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.hubs.WidgetHubWaitlistViewModel$joinWaitlist$1 */
+    /* JADX INFO: compiled from: WidgetHubWaitlistViewModel.kt */
     public static final class C90471 extends Lambda implements Function1<RestCallState<? extends WaitlistSignup>, Unit> {
         public C90471() {
             super(1);
@@ -32,7 +32,7 @@ public final class WidgetHubWaitlistViewModel extends AppViewModel<WidgetHubWait
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(RestCallState<WaitlistSignup> restCallState) {
             Intrinsics3.checkNotNullParameter(restCallState, "async");
             WidgetHubWaitlistViewModel3 widgetHubWaitlistViewModel3Access$getViewState$p = WidgetHubWaitlistViewModel.access$getViewState$p(WidgetHubWaitlistViewModel.this);

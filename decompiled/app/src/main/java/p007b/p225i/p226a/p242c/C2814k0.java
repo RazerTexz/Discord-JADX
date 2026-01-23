@@ -5,16 +5,16 @@ import java.util.Objects;
 import p007b.p225i.p226a.p242c.Bundleable;
 import p007b.p225i.p226a.p242c.MediaItem2;
 
-/* compiled from: lambda */
-/* renamed from: b.i.a.c.k0 */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.k0 */
+/* JADX INFO: compiled from: lambda */
+/* JADX INFO: loaded from: classes3.dex */
 public final /* synthetic */ class C2814k0 implements Bundleable.a {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final /* synthetic */ C2814k0 f7194a = new C2814k0();
 
     @Override // p007b.p225i.p226a.p242c.Bundleable.a
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final Bundleable mo2576a(Bundle bundle) {
         String string = bundle.getString(MediaItem2.m3319a(0), "");
         Objects.requireNonNull(string);

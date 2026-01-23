@@ -5,12 +5,12 @@ import androidx.annotation.Nullable;
 import java.util.Objects;
 import p007b.p100d.p104b.p105a.outline;
 
-/* compiled from: Encoding.java */
-/* renamed from: b.i.a.b.b, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.b.b, reason: use source file name */
+/* JADX INFO: compiled from: Encoding.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class Encoding2 {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final String f5118a;
 
     public Encoding2(@NonNull String str) {

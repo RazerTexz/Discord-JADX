@@ -17,31 +17,31 @@ import p007b.p109f.p161j.p175j.ImmutableQualityInfo;
 import p007b.p109f.p161j.p175j.QualityInfo;
 import p007b.p109f.p161j.p179n.PlatformDecoder;
 
-/* compiled from: DefaultImageDecoder.java */
-/* renamed from: b.f.j.h.a, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.f.j.h.a, reason: use source file name */
+/* JADX INFO: compiled from: DefaultImageDecoder.java */
+/* JADX INFO: loaded from: classes.dex */
 public class DefaultImageDecoder implements ImageDecoder2 {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final ImageDecoder2 f3868a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final ImageDecoder2 f3869b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final PlatformDecoder f3870c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final ImageDecoder2 f3871d = new a();
 
-    /* compiled from: DefaultImageDecoder.java */
-    /* renamed from: b.f.j.h.a$a */
+    /* JADX INFO: renamed from: b.f.j.h.a$a */
+    /* JADX INFO: compiled from: DefaultImageDecoder.java */
     public class a implements ImageDecoder2 {
         public a() {
         }
 
         @Override // p007b.p109f.p161j.p173h.ImageDecoder2
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public CloseableImage mo1322a(EncodedImage2 encodedImage2, int i, QualityInfo qualityInfo, ImageDecodeOptions imageDecodeOptions) {
             encodedImage2.m1347x();
             ImageFormat imageFormat = encodedImage2.f3893l;
@@ -97,7 +97,7 @@ public class DefaultImageDecoder implements ImageDecoder2 {
     }
 
     @Override // p007b.p109f.p161j.p173h.ImageDecoder2
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public CloseableImage mo1322a(EncodedImage2 encodedImage2, int i, QualityInfo qualityInfo, ImageDecodeOptions imageDecodeOptions) {
         InputStream inputStreamM1342e;
         Objects.requireNonNull(imageDecodeOptions);
@@ -109,7 +109,7 @@ public class DefaultImageDecoder implements ImageDecoder2 {
         return this.f3871d.mo1322a(encodedImage2, i, qualityInfo, imageDecodeOptions);
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public CloseableStaticBitmap m1323b(EncodedImage2 encodedImage2, ImageDecodeOptions imageDecodeOptions) {
         CloseableReference<Bitmap> closeableReferenceMo1414a = this.f3870c.mo1414a(encodedImage2, imageDecodeOptions.f3709d, null, null);
         try {

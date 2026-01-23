@@ -61,28 +61,28 @@ import p507d0.p592z.p594d.Lambda;
 import p507d0.p592z.p594d.PropertyReference1Impl;
 import p507d0.p592z.p594d.Reflection2;
 
-/* compiled from: DeserializedMemberScope.kt */
-/* renamed from: d0.e0.p.d.m0.l.b.e0.h, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.l.b.e0.h, reason: use source file name */
+/* JADX INFO: compiled from: DeserializedMemberScope.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public abstract class DeserializedMemberScope extends MemberScopeImpl {
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static final /* synthetic */ KProperty<Object>[] f24567b = {Reflection2.property1(new PropertyReference1Impl(Reflection2.getOrCreateKotlinClass(DeserializedMemberScope.class), "classNames", "getClassNames$deserialization()Ljava/util/Set;")), Reflection2.property1(new PropertyReference1Impl(Reflection2.getOrCreateKotlinClass(DeserializedMemberScope.class), "classifierNamesLazy", "getClassifierNamesLazy()Ljava/util/Set;"))};
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final context6 f24568c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final a f24569d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final storage5 f24570e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final storage6 f24571f;
 
-    /* compiled from: DeserializedMemberScope.kt */
-    /* renamed from: d0.e0.p.d.m0.l.b.e0.h$a */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.l.b.e0.h$a */
+    /* JADX INFO: compiled from: DeserializedMemberScope.kt */
     public interface a {
         void addFunctionsAndPropertiesTo(Collection<DeclarationDescriptor> collection, MemberScope2 memberScope2, Function1<? super Name, Boolean> function1, LookupLocation2 lookupLocation2);
 
@@ -99,57 +99,57 @@ public abstract class DeserializedMemberScope extends MemberScopeImpl {
         Set<Name> getVariableNames();
     }
 
-    /* compiled from: DeserializedMemberScope.kt */
-    /* renamed from: d0.e0.p.d.m0.l.b.e0.h$b */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.l.b.e0.h$b */
+    /* JADX INFO: compiled from: DeserializedMemberScope.kt */
     public final class b implements a {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public static final /* synthetic */ KProperty<Object>[] f24572a = {Reflection2.property1(new PropertyReference1Impl(Reflection2.getOrCreateKotlinClass(b.class), "declaredFunctions", "getDeclaredFunctions()Ljava/util/List;")), Reflection2.property1(new PropertyReference1Impl(Reflection2.getOrCreateKotlinClass(b.class), "declaredProperties", "getDeclaredProperties()Ljava/util/List;")), Reflection2.property1(new PropertyReference1Impl(Reflection2.getOrCreateKotlinClass(b.class), "allTypeAliases", "getAllTypeAliases()Ljava/util/List;")), Reflection2.property1(new PropertyReference1Impl(Reflection2.getOrCreateKotlinClass(b.class), "allFunctions", "getAllFunctions()Ljava/util/List;")), Reflection2.property1(new PropertyReference1Impl(Reflection2.getOrCreateKotlinClass(b.class), "allProperties", "getAllProperties()Ljava/util/List;")), Reflection2.property1(new PropertyReference1Impl(Reflection2.getOrCreateKotlinClass(b.class), "typeAliasesByName", "getTypeAliasesByName()Ljava/util/Map;")), Reflection2.property1(new PropertyReference1Impl(Reflection2.getOrCreateKotlinClass(b.class), "functionsByName", "getFunctionsByName()Ljava/util/Map;")), Reflection2.property1(new PropertyReference1Impl(Reflection2.getOrCreateKotlinClass(b.class), "propertiesByName", "getPropertiesByName()Ljava/util/Map;")), Reflection2.property1(new PropertyReference1Impl(Reflection2.getOrCreateKotlinClass(b.class), "functionNames", "getFunctionNames()Ljava/util/Set;")), Reflection2.property1(new PropertyReference1Impl(Reflection2.getOrCreateKotlinClass(b.class), "variableNames", "getVariableNames()Ljava/util/Set;"))};
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final List<C11684i> f24573b;
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public final List<C11689n> f24574c;
 
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         public final List<C11693r> f24575d;
 
-        /* renamed from: e */
+        /* JADX INFO: renamed from: e */
         public final storage5 f24576e;
 
-        /* renamed from: f */
+        /* JADX INFO: renamed from: f */
         public final storage5 f24577f;
 
-        /* renamed from: g */
+        /* JADX INFO: renamed from: g */
         public final storage5 f24578g;
 
-        /* renamed from: h */
+        /* JADX INFO: renamed from: h */
         public final storage5 f24579h;
 
-        /* renamed from: i */
+        /* JADX INFO: renamed from: i */
         public final storage5 f24580i;
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public final storage5 f24581j;
 
-        /* renamed from: k */
+        /* JADX INFO: renamed from: k */
         public final storage5 f24582k;
 
-        /* renamed from: l */
+        /* JADX INFO: renamed from: l */
         public final storage5 f24583l;
 
-        /* renamed from: m */
+        /* JADX INFO: renamed from: m */
         public final storage5 f24584m;
 
-        /* renamed from: n */
+        /* JADX INFO: renamed from: n */
         public final storage5 f24585n;
 
-        /* renamed from: o */
+        /* JADX INFO: renamed from: o */
         public final /* synthetic */ DeserializedMemberScope f24586o;
 
-        /* compiled from: DeserializedMemberScope.kt */
-        /* renamed from: d0.e0.p.d.m0.l.b.e0.h$b$a */
+        /* JADX INFO: renamed from: d0.e0.p.d.m0.l.b.e0.h$b$a */
+        /* JADX INFO: compiled from: DeserializedMemberScope.kt */
         public static final class a extends Lambda implements Function0<List<? extends SimpleFunctionDescriptor>> {
             public a() {
                 super(0);
@@ -161,14 +161,14 @@ public abstract class DeserializedMemberScope extends MemberScopeImpl {
             }
 
             @Override // kotlin.jvm.functions.Function0
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final List<? extends SimpleFunctionDescriptor> invoke2() {
                 return _Collections.plus((Collection) b.access$getDeclaredFunctions(b.this), (Iterable) b.access$computeAllNonDeclaredFunctions(b.this));
             }
         }
 
-        /* compiled from: DeserializedMemberScope.kt */
-        /* renamed from: d0.e0.p.d.m0.l.b.e0.h$b$b, reason: collision with other inner class name */
+        /* JADX INFO: renamed from: d0.e0.p.d.m0.l.b.e0.h$b$b, reason: collision with other inner class name */
+        /* JADX INFO: compiled from: DeserializedMemberScope.kt */
         public static final class C13332b extends Lambda implements Function0<List<? extends PropertyDescriptor>> {
             public C13332b() {
                 super(0);
@@ -180,14 +180,14 @@ public abstract class DeserializedMemberScope extends MemberScopeImpl {
             }
 
             @Override // kotlin.jvm.functions.Function0
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final List<? extends PropertyDescriptor> invoke2() {
                 return _Collections.plus((Collection) b.access$getDeclaredProperties(b.this), (Iterable) b.access$computeAllNonDeclaredProperties(b.this));
             }
         }
 
-        /* compiled from: DeserializedMemberScope.kt */
-        /* renamed from: d0.e0.p.d.m0.l.b.e0.h$b$c */
+        /* JADX INFO: renamed from: d0.e0.p.d.m0.l.b.e0.h$b$c */
+        /* JADX INFO: compiled from: DeserializedMemberScope.kt */
         public static final class c extends Lambda implements Function0<List<? extends TypeAliasDescriptor>> {
             public c() {
                 super(0);
@@ -199,14 +199,14 @@ public abstract class DeserializedMemberScope extends MemberScopeImpl {
             }
 
             @Override // kotlin.jvm.functions.Function0
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final List<? extends TypeAliasDescriptor> invoke2() {
                 return b.access$computeTypeAliases(b.this);
             }
         }
 
-        /* compiled from: DeserializedMemberScope.kt */
-        /* renamed from: d0.e0.p.d.m0.l.b.e0.h$b$d */
+        /* JADX INFO: renamed from: d0.e0.p.d.m0.l.b.e0.h$b$d */
+        /* JADX INFO: compiled from: DeserializedMemberScope.kt */
         public static final class d extends Lambda implements Function0<List<? extends SimpleFunctionDescriptor>> {
             public d() {
                 super(0);
@@ -218,14 +218,14 @@ public abstract class DeserializedMemberScope extends MemberScopeImpl {
             }
 
             @Override // kotlin.jvm.functions.Function0
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final List<? extends SimpleFunctionDescriptor> invoke2() {
                 return b.access$computeFunctions(b.this);
             }
         }
 
-        /* compiled from: DeserializedMemberScope.kt */
-        /* renamed from: d0.e0.p.d.m0.l.b.e0.h$b$e */
+        /* JADX INFO: renamed from: d0.e0.p.d.m0.l.b.e0.h$b$e */
+        /* JADX INFO: compiled from: DeserializedMemberScope.kt */
         public static final class e extends Lambda implements Function0<List<? extends PropertyDescriptor>> {
             public e() {
                 super(0);
@@ -237,14 +237,14 @@ public abstract class DeserializedMemberScope extends MemberScopeImpl {
             }
 
             @Override // kotlin.jvm.functions.Function0
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final List<? extends PropertyDescriptor> invoke2() {
                 return b.access$computeProperties(b.this);
             }
         }
 
-        /* compiled from: DeserializedMemberScope.kt */
-        /* renamed from: d0.e0.p.d.m0.l.b.e0.h$b$f */
+        /* JADX INFO: renamed from: d0.e0.p.d.m0.l.b.e0.h$b$f */
+        /* JADX INFO: compiled from: DeserializedMemberScope.kt */
         public static final class f extends Lambda implements Function0<Set<? extends Name>> {
             public final /* synthetic */ DeserializedMemberScope this$1;
 
@@ -260,7 +260,7 @@ public abstract class DeserializedMemberScope extends MemberScopeImpl {
             }
 
             @Override // kotlin.jvm.functions.Function0
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final Set<? extends Name> invoke2() {
                 b bVar = b.this;
                 List listAccess$getFunctionList$p = b.access$getFunctionList$p(bVar);
@@ -274,8 +274,8 @@ public abstract class DeserializedMemberScope extends MemberScopeImpl {
             }
         }
 
-        /* compiled from: DeserializedMemberScope.kt */
-        /* renamed from: d0.e0.p.d.m0.l.b.e0.h$b$g */
+        /* JADX INFO: renamed from: d0.e0.p.d.m0.l.b.e0.h$b$g */
+        /* JADX INFO: compiled from: DeserializedMemberScope.kt */
         public static final class g extends Lambda implements Function0<Map<Name, ? extends List<? extends SimpleFunctionDescriptor>>> {
             public g() {
                 super(0);
@@ -287,7 +287,7 @@ public abstract class DeserializedMemberScope extends MemberScopeImpl {
             }
 
             @Override // kotlin.jvm.functions.Function0
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final Map<Name, ? extends List<? extends SimpleFunctionDescriptor>> invoke2() {
                 List listAccess$getAllFunctions = b.access$getAllFunctions(b.this);
                 LinkedHashMap linkedHashMap = new LinkedHashMap();
@@ -305,8 +305,8 @@ public abstract class DeserializedMemberScope extends MemberScopeImpl {
             }
         }
 
-        /* compiled from: DeserializedMemberScope.kt */
-        /* renamed from: d0.e0.p.d.m0.l.b.e0.h$b$h */
+        /* JADX INFO: renamed from: d0.e0.p.d.m0.l.b.e0.h$b$h */
+        /* JADX INFO: compiled from: DeserializedMemberScope.kt */
         public static final class h extends Lambda implements Function0<Map<Name, ? extends List<? extends PropertyDescriptor>>> {
             public h() {
                 super(0);
@@ -318,7 +318,7 @@ public abstract class DeserializedMemberScope extends MemberScopeImpl {
             }
 
             @Override // kotlin.jvm.functions.Function0
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final Map<Name, ? extends List<? extends PropertyDescriptor>> invoke2() {
                 List listAccess$getAllProperties = b.access$getAllProperties(b.this);
                 LinkedHashMap linkedHashMap = new LinkedHashMap();
@@ -336,8 +336,8 @@ public abstract class DeserializedMemberScope extends MemberScopeImpl {
             }
         }
 
-        /* compiled from: DeserializedMemberScope.kt */
-        /* renamed from: d0.e0.p.d.m0.l.b.e0.h$b$i */
+        /* JADX INFO: renamed from: d0.e0.p.d.m0.l.b.e0.h$b$i */
+        /* JADX INFO: compiled from: DeserializedMemberScope.kt */
         public static final class i extends Lambda implements Function0<Map<Name, ? extends TypeAliasDescriptor>> {
             public i() {
                 super(0);
@@ -349,7 +349,7 @@ public abstract class DeserializedMemberScope extends MemberScopeImpl {
             }
 
             @Override // kotlin.jvm.functions.Function0
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final Map<Name, ? extends TypeAliasDescriptor> invoke2() {
                 List listAccess$getAllTypeAliases = b.access$getAllTypeAliases(b.this);
                 LinkedHashMap linkedHashMap = new LinkedHashMap(_Ranges.coerceAtLeast(MapsJVM.mapCapacity(Iterables2.collectionSizeOrDefault(listAccess$getAllTypeAliases, 10)), 16));
@@ -362,8 +362,8 @@ public abstract class DeserializedMemberScope extends MemberScopeImpl {
             }
         }
 
-        /* compiled from: DeserializedMemberScope.kt */
-        /* renamed from: d0.e0.p.d.m0.l.b.e0.h$b$j */
+        /* JADX INFO: renamed from: d0.e0.p.d.m0.l.b.e0.h$b$j */
+        /* JADX INFO: compiled from: DeserializedMemberScope.kt */
         public static final class j extends Lambda implements Function0<Set<? extends Name>> {
             public final /* synthetic */ DeserializedMemberScope this$1;
 
@@ -379,7 +379,7 @@ public abstract class DeserializedMemberScope extends MemberScopeImpl {
             }
 
             @Override // kotlin.jvm.functions.Function0
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final Set<? extends Name> invoke2() {
                 b bVar = b.this;
                 List listAccess$getPropertyList$p = b.access$getPropertyList$p(bVar);
@@ -597,43 +597,43 @@ public abstract class DeserializedMemberScope extends MemberScopeImpl {
         }
     }
 
-    /* compiled from: DeserializedMemberScope.kt */
-    /* renamed from: d0.e0.p.d.m0.l.b.e0.h$c */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.l.b.e0.h$c */
+    /* JADX INFO: compiled from: DeserializedMemberScope.kt */
     public final class c implements a {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public static final /* synthetic */ KProperty<Object>[] f24587a = {Reflection2.property1(new PropertyReference1Impl(Reflection2.getOrCreateKotlinClass(c.class), "functionNames", "getFunctionNames()Ljava/util/Set;")), Reflection2.property1(new PropertyReference1Impl(Reflection2.getOrCreateKotlinClass(c.class), "variableNames", "getVariableNames()Ljava/util/Set;"))};
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final Map<Name, byte[]> f24588b;
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public final Map<Name, byte[]> f24589c;
 
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         public final Map<Name, byte[]> f24590d;
 
-        /* renamed from: e */
+        /* JADX INFO: renamed from: e */
         public final storage3<Name, Collection<SimpleFunctionDescriptor>> f24591e;
 
-        /* renamed from: f */
+        /* JADX INFO: renamed from: f */
         public final storage3<Name, Collection<PropertyDescriptor>> f24592f;
 
-        /* renamed from: g */
+        /* JADX INFO: renamed from: g */
         public final storage4<Name, TypeAliasDescriptor> f24593g;
 
-        /* renamed from: h */
+        /* JADX INFO: renamed from: h */
         public final storage5 f24594h;
 
-        /* renamed from: i */
+        /* JADX INFO: renamed from: i */
         public final storage5 f24595i;
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public final /* synthetic */ DeserializedMemberScope f24596j;
 
         /* JADX INFO: Add missing generic type declarations: [M] */
-        /* compiled from: DeserializedMemberScope.kt */
-        /* renamed from: d0.e0.p.d.m0.l.b.e0.h$c$a */
+        /* JADX INFO: renamed from: d0.e0.p.d.m0.l.b.e0.h$c$a */
+        /* JADX INFO: compiled from: DeserializedMemberScope.kt */
         public static final class a<M> extends Lambda implements Function0<M> {
             public final /* synthetic */ ByteArrayInputStream $inputStream;
             public final /* synthetic */ Parser2<M> $parser;
@@ -659,8 +659,8 @@ public abstract class DeserializedMemberScope extends MemberScopeImpl {
             }
         }
 
-        /* compiled from: DeserializedMemberScope.kt */
-        /* renamed from: d0.e0.p.d.m0.l.b.e0.h$c$b */
+        /* JADX INFO: renamed from: d0.e0.p.d.m0.l.b.e0.h$c$b */
+        /* JADX INFO: compiled from: DeserializedMemberScope.kt */
         public static final class b extends Lambda implements Function0<Set<? extends Name>> {
             public final /* synthetic */ DeserializedMemberScope this$1;
 
@@ -676,14 +676,14 @@ public abstract class DeserializedMemberScope extends MemberScopeImpl {
             }
 
             @Override // kotlin.jvm.functions.Function0
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final Set<? extends Name> invoke2() {
                 return _Sets.plus(c.access$getFunctionProtosBytes$p(c.this).keySet(), (Iterable) this.this$1.mo9960g());
             }
         }
 
-        /* compiled from: DeserializedMemberScope.kt */
-        /* renamed from: d0.e0.p.d.m0.l.b.e0.h$c$c, reason: collision with other inner class name */
+        /* JADX INFO: renamed from: d0.e0.p.d.m0.l.b.e0.h$c$c, reason: collision with other inner class name */
+        /* JADX INFO: compiled from: DeserializedMemberScope.kt */
         public static final class C13333c extends Lambda implements Function1<Name, Collection<? extends SimpleFunctionDescriptor>> {
             public C13333c() {
                 super(1);
@@ -694,15 +694,15 @@ public abstract class DeserializedMemberScope extends MemberScopeImpl {
                 return invoke2(name);
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final Collection<SimpleFunctionDescriptor> invoke2(Name name) {
                 Intrinsics3.checkNotNullParameter(name, "it");
                 return c.access$computeFunctions(c.this, name);
             }
         }
 
-        /* compiled from: DeserializedMemberScope.kt */
-        /* renamed from: d0.e0.p.d.m0.l.b.e0.h$c$d */
+        /* JADX INFO: renamed from: d0.e0.p.d.m0.l.b.e0.h$c$d */
+        /* JADX INFO: compiled from: DeserializedMemberScope.kt */
         public static final class d extends Lambda implements Function1<Name, Collection<? extends PropertyDescriptor>> {
             public d() {
                 super(1);
@@ -713,15 +713,15 @@ public abstract class DeserializedMemberScope extends MemberScopeImpl {
                 return invoke2(name);
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final Collection<PropertyDescriptor> invoke2(Name name) {
                 Intrinsics3.checkNotNullParameter(name, "it");
                 return c.access$computeProperties(c.this, name);
             }
         }
 
-        /* compiled from: DeserializedMemberScope.kt */
-        /* renamed from: d0.e0.p.d.m0.l.b.e0.h$c$e */
+        /* JADX INFO: renamed from: d0.e0.p.d.m0.l.b.e0.h$c$e */
+        /* JADX INFO: compiled from: DeserializedMemberScope.kt */
         public static final class e extends Lambda implements Function1<Name, TypeAliasDescriptor> {
             public e() {
                 super(1);
@@ -732,15 +732,15 @@ public abstract class DeserializedMemberScope extends MemberScopeImpl {
                 return invoke2(name);
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final TypeAliasDescriptor invoke2(Name name) {
                 Intrinsics3.checkNotNullParameter(name, "it");
                 return c.access$createTypeAlias(c.this, name);
             }
         }
 
-        /* compiled from: DeserializedMemberScope.kt */
-        /* renamed from: d0.e0.p.d.m0.l.b.e0.h$c$f */
+        /* JADX INFO: renamed from: d0.e0.p.d.m0.l.b.e0.h$c$f */
+        /* JADX INFO: compiled from: DeserializedMemberScope.kt */
         public static final class f extends Lambda implements Function0<Set<? extends Name>> {
             public final /* synthetic */ DeserializedMemberScope this$1;
 
@@ -756,7 +756,7 @@ public abstract class DeserializedMemberScope extends MemberScopeImpl {
             }
 
             @Override // kotlin.jvm.functions.Function0
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final Set<? extends Name> invoke2() {
                 return _Sets.plus(c.access$getPropertyProtosBytes$p(c.this).keySet(), (Iterable) this.this$1.mo9961h());
             }
@@ -882,7 +882,7 @@ public abstract class DeserializedMemberScope extends MemberScopeImpl {
             return cVar.f24589c;
         }
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final Map<Name, byte[]> m9966a(Map<Name, ? extends Collection<? extends AbstractMessageLite>> map) throws IOException {
             LinkedHashMap linkedHashMap = new LinkedHashMap(MapsJVM.mapCapacity(map.size()));
             Iterator<T> it = map.entrySet().iterator();
@@ -972,8 +972,8 @@ public abstract class DeserializedMemberScope extends MemberScopeImpl {
         }
     }
 
-    /* compiled from: DeserializedMemberScope.kt */
-    /* renamed from: d0.e0.p.d.m0.l.b.e0.h$d */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.l.b.e0.h$d */
+    /* JADX INFO: compiled from: DeserializedMemberScope.kt */
     public static final class d extends Lambda implements Function0<Set<? extends Name>> {
         public final /* synthetic */ Function0<Collection<Name>> $classNames;
 
@@ -990,14 +990,14 @@ public abstract class DeserializedMemberScope extends MemberScopeImpl {
         }
 
         @Override // kotlin.jvm.functions.Function0
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final Set<? extends Name> invoke2() {
             return _Collections.toSet(this.$classNames.invoke());
         }
     }
 
-    /* compiled from: DeserializedMemberScope.kt */
-    /* renamed from: d0.e0.p.d.m0.l.b.e0.h$e */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.l.b.e0.h$e */
+    /* JADX INFO: compiled from: DeserializedMemberScope.kt */
     public static final class e extends Lambda implements Function0<Set<? extends Name>> {
         public e() {
             super(0);
@@ -1009,7 +1009,7 @@ public abstract class DeserializedMemberScope extends MemberScopeImpl {
         }
 
         @Override // kotlin.jvm.functions.Function0
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final Set<? extends Name> invoke2() {
             Set<Name> setMo9959f = DeserializedMemberScope.this.mo9959f();
             if (setMo9959f == null) {
@@ -1039,10 +1039,10 @@ public abstract class DeserializedMemberScope extends MemberScopeImpl {
         return deserializedMemberScope.f24569d;
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public abstract void mo9955a(Collection<DeclarationDescriptor> collection, Function1<? super Name, Boolean> function1);
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final Collection<DeclarationDescriptor> m9964b(MemberScope2 memberScope2, Function1<? super Name, Boolean> function1, LookupLocation2 lookupLocation2) {
         Intrinsics3.checkNotNullParameter(memberScope2, "kindFilter");
         Intrinsics3.checkNotNullParameter(function1, "nameFilter");
@@ -1070,25 +1070,25 @@ public abstract class DeserializedMemberScope extends MemberScopeImpl {
         return collections.compact(arrayList);
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public void mo9956c(Name name, List<SimpleFunctionDescriptor> list) {
         Intrinsics3.checkNotNullParameter(name, ModelAuditLogEntry.CHANGE_KEY_NAME);
         Intrinsics3.checkNotNullParameter(list, "functions");
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public void mo9957d(Name name, List<PropertyDescriptor> list) {
         Intrinsics3.checkNotNullParameter(name, ModelAuditLogEntry.CHANGE_KEY_NAME);
         Intrinsics3.checkNotNullParameter(list, "descriptors");
     }
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public abstract ClassId mo9958e(Name name);
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public abstract Set<Name> mo9959f();
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public abstract Set<Name> mo9960g();
 
     public final Set<Name> getClassNames$deserialization() {
@@ -1137,16 +1137,16 @@ public abstract class DeserializedMemberScope extends MemberScopeImpl {
         return this.f24569d.getVariableNames();
     }
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public abstract Set<Name> mo9961h();
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public boolean mo9965i(Name name) {
         Intrinsics3.checkNotNullParameter(name, ModelAuditLogEntry.CHANGE_KEY_NAME);
         return getClassNames$deserialization().contains(name);
     }
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public boolean mo9962j(SimpleFunctionDescriptor simpleFunctionDescriptor) {
         Intrinsics3.checkNotNullParameter(simpleFunctionDescriptor, "function");
         return true;

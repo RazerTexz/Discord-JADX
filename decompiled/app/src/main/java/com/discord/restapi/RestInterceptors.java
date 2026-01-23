@@ -7,9 +7,9 @@ import okhttp3.Response;
 import p507d0.p592z.p594d.Intrinsics3;
 import p600f0.HttpUrl;
 
-/* compiled from: RestInterceptors.kt */
-/* renamed from: com.discord.restapi.BreadcrumbInterceptor, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: com.discord.restapi.BreadcrumbInterceptor, reason: use source file name */
+/* JADX INFO: compiled from: RestInterceptors.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class RestInterceptors implements Interceptor {
     private final Logger logger;
 

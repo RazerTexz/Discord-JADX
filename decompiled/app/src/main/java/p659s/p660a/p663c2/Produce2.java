@@ -17,14 +17,14 @@ import p507d0.p584w.p586i.p587a.DebugProbes;
 import p507d0.p592z.p594d.Lambda;
 import p659s.p660a.CancellableContinuationImpl5;
 
-/* compiled from: Produce.kt */
-/* renamed from: s.a.c2.l, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: s.a.c2.l, reason: use source file name */
+/* JADX INFO: compiled from: Produce.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class Produce2 {
 
-    /* compiled from: Produce.kt */
+    /* JADX INFO: renamed from: s.a.c2.l$a */
+    /* JADX INFO: compiled from: Produce.kt */
     @DebugMetadata(m10084c = "kotlinx.coroutines.channels.ProduceKt", m10085f = "Produce.kt", m10086l = {157}, m10087m = "awaitClose")
-    /* renamed from: s.a.c2.l$a */
     public static final class a extends ContinuationImpl3 {
         public Object L$0;
         public Object L$1;
@@ -43,8 +43,8 @@ public final class Produce2 {
         }
     }
 
-    /* compiled from: Produce.kt */
-    /* renamed from: s.a.c2.l$b */
+    /* JADX INFO: renamed from: s.a.c2.l$b */
+    /* JADX INFO: compiled from: Produce.kt */
     public static final class b extends Lambda implements Function1<Throwable, Unit> {
         public final /* synthetic */ CancellableContinuation $cont;
 
@@ -65,7 +65,7 @@ public final class Produce2 {
     }
 
     /* JADX WARN: Removed duplicated region for block: B:7:0x0013  */
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */

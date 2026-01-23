@@ -45,173 +45,173 @@ import p007b.p225i.p408d.TypeAdapterFactory2;
 import p007b.p225i.p408d.p409p.SerializedName;
 import p007b.p225i.p408d.p410q.LazilyParsedNumber;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public final class TypeAdapters {
 
-    /* renamed from: A */
+    /* JADX INFO: renamed from: A */
     public static final TypeAdapter<String> f21556A;
 
-    /* renamed from: B */
+    /* JADX INFO: renamed from: B */
     public static final TypeAdapter<BigDecimal> f21557B;
 
-    /* renamed from: C */
+    /* JADX INFO: renamed from: C */
     public static final TypeAdapter<BigInteger> f21558C;
 
-    /* renamed from: D */
+    /* JADX INFO: renamed from: D */
     public static final TypeAdapterFactory2 f21559D;
 
-    /* renamed from: E */
+    /* JADX INFO: renamed from: E */
     public static final TypeAdapter<StringBuilder> f21560E;
 
-    /* renamed from: F */
+    /* JADX INFO: renamed from: F */
     public static final TypeAdapterFactory2 f21561F;
 
-    /* renamed from: G */
+    /* JADX INFO: renamed from: G */
     public static final TypeAdapter<StringBuffer> f21562G;
 
-    /* renamed from: H */
+    /* JADX INFO: renamed from: H */
     public static final TypeAdapterFactory2 f21563H;
 
-    /* renamed from: I */
+    /* JADX INFO: renamed from: I */
     public static final TypeAdapter<URL> f21564I;
 
-    /* renamed from: J */
+    /* JADX INFO: renamed from: J */
     public static final TypeAdapterFactory2 f21565J;
 
-    /* renamed from: K */
+    /* JADX INFO: renamed from: K */
     public static final TypeAdapter<URI> f21566K;
 
-    /* renamed from: L */
+    /* JADX INFO: renamed from: L */
     public static final TypeAdapterFactory2 f21567L;
 
-    /* renamed from: M */
+    /* JADX INFO: renamed from: M */
     public static final TypeAdapter<InetAddress> f21568M;
 
-    /* renamed from: N */
+    /* JADX INFO: renamed from: N */
     public static final TypeAdapterFactory2 f21569N;
 
-    /* renamed from: O */
+    /* JADX INFO: renamed from: O */
     public static final TypeAdapter<UUID> f21570O;
 
-    /* renamed from: P */
+    /* JADX INFO: renamed from: P */
     public static final TypeAdapterFactory2 f21571P;
 
-    /* renamed from: Q */
+    /* JADX INFO: renamed from: Q */
     public static final TypeAdapter<Currency> f21572Q;
 
-    /* renamed from: R */
+    /* JADX INFO: renamed from: R */
     public static final TypeAdapterFactory2 f21573R;
 
-    /* renamed from: S */
+    /* JADX INFO: renamed from: S */
     public static final TypeAdapterFactory2 f21574S;
 
-    /* renamed from: T */
+    /* JADX INFO: renamed from: T */
     public static final TypeAdapter<Calendar> f21575T;
 
-    /* renamed from: U */
+    /* JADX INFO: renamed from: U */
     public static final TypeAdapterFactory2 f21576U;
 
-    /* renamed from: V */
+    /* JADX INFO: renamed from: V */
     public static final TypeAdapter<Locale> f21577V;
 
-    /* renamed from: W */
+    /* JADX INFO: renamed from: W */
     public static final TypeAdapterFactory2 f21578W;
 
-    /* renamed from: X */
+    /* JADX INFO: renamed from: X */
     public static final TypeAdapter<JsonElement> f21579X;
 
-    /* renamed from: Y */
+    /* JADX INFO: renamed from: Y */
     public static final TypeAdapterFactory2 f21580Y;
 
-    /* renamed from: Z */
+    /* JADX INFO: renamed from: Z */
     public static final TypeAdapterFactory2 f21581Z;
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final TypeAdapter<Class> f21582a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static final TypeAdapterFactory2 f21583b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public static final TypeAdapter<BitSet> f21584c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public static final TypeAdapterFactory2 f21585d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public static final TypeAdapter<Boolean> f21586e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public static final TypeAdapter<Boolean> f21587f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public static final TypeAdapterFactory2 f21588g;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public static final TypeAdapter<Number> f21589h;
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public static final TypeAdapterFactory2 f21590i;
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static final TypeAdapter<Number> f21591j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public static final TypeAdapterFactory2 f21592k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public static final TypeAdapter<Number> f21593l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public static final TypeAdapterFactory2 f21594m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public static final TypeAdapter<AtomicInteger> f21595n;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public static final TypeAdapterFactory2 f21596o;
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public static final TypeAdapter<AtomicBoolean> f21597p;
 
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     public static final TypeAdapterFactory2 f21598q;
 
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     public static final TypeAdapter<AtomicIntegerArray> f21599r;
 
-    /* renamed from: s */
+    /* JADX INFO: renamed from: s */
     public static final TypeAdapterFactory2 f21600s;
 
-    /* renamed from: t */
+    /* JADX INFO: renamed from: t */
     public static final TypeAdapter<Number> f21601t;
 
-    /* renamed from: u */
+    /* JADX INFO: renamed from: u */
     public static final TypeAdapter<Number> f21602u;
 
-    /* renamed from: v */
+    /* JADX INFO: renamed from: v */
     public static final TypeAdapter<Number> f21603v;
 
-    /* renamed from: w */
+    /* JADX INFO: renamed from: w */
     public static final TypeAdapter<Number> f21604w;
 
-    /* renamed from: x */
+    /* JADX INFO: renamed from: x */
     public static final TypeAdapterFactory2 f21605x;
 
-    /* renamed from: y */
+    /* JADX INFO: renamed from: y */
     public static final TypeAdapter<Character> f21606y;
 
-    /* renamed from: z */
+    /* JADX INFO: renamed from: z */
     public static final TypeAdapterFactory2 f21607z;
 
-    /* renamed from: com.google.gson.internal.bind.TypeAdapters$1 */
+    /* JADX INFO: renamed from: com.google.gson.internal.bind.TypeAdapters$1 */
     public class C111141 extends TypeAdapter<Class> {
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public Class m9234a() throws IOException {
             throw new UnsupportedOperationException("Attempted to deserialize a java.lang.Class. Forgot to register a type adapter?");
         }
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public void m9235b(Class cls) throws IOException {
             throw new UnsupportedOperationException(outline.m867o(cls, outline.m833U("Attempted to serialize java.lang.Class: "), ". Forgot to register a type adapter?"));
         }
@@ -227,7 +227,7 @@ public final class TypeAdapters {
         }
     }
 
-    /* renamed from: com.google.gson.internal.bind.TypeAdapters$10 */
+    /* JADX INFO: renamed from: com.google.gson.internal.bind.TypeAdapters$10 */
     public class C1111510 extends TypeAdapter<AtomicIntegerArray> {
         @Override // com.google.gson.TypeAdapter
         public AtomicIntegerArray read(JsonReader jsonReader) throws IOException {
@@ -260,7 +260,7 @@ public final class TypeAdapters {
         }
     }
 
-    /* renamed from: com.google.gson.internal.bind.TypeAdapters$11 */
+    /* JADX INFO: renamed from: com.google.gson.internal.bind.TypeAdapters$11 */
     public class C1111611 extends TypeAdapter<Number> {
         @Override // com.google.gson.TypeAdapter
         public Number read(JsonReader jsonReader) throws IOException {
@@ -281,7 +281,7 @@ public final class TypeAdapters {
         }
     }
 
-    /* renamed from: com.google.gson.internal.bind.TypeAdapters$12 */
+    /* JADX INFO: renamed from: com.google.gson.internal.bind.TypeAdapters$12 */
     public class C1111712 extends TypeAdapter<Number> {
         @Override // com.google.gson.TypeAdapter
         public Number read(JsonReader jsonReader) throws IOException {
@@ -298,7 +298,7 @@ public final class TypeAdapters {
         }
     }
 
-    /* renamed from: com.google.gson.internal.bind.TypeAdapters$13 */
+    /* JADX INFO: renamed from: com.google.gson.internal.bind.TypeAdapters$13 */
     public class C1111813 extends TypeAdapter<Number> {
         @Override // com.google.gson.TypeAdapter
         public Number read(JsonReader jsonReader) throws IOException {
@@ -315,7 +315,7 @@ public final class TypeAdapters {
         }
     }
 
-    /* renamed from: com.google.gson.internal.bind.TypeAdapters$14 */
+    /* JADX INFO: renamed from: com.google.gson.internal.bind.TypeAdapters$14 */
     public class C1111914 extends TypeAdapter<Number> {
         @Override // com.google.gson.TypeAdapter
         public Number read(JsonReader jsonReader) throws IOException {
@@ -337,7 +337,7 @@ public final class TypeAdapters {
         }
     }
 
-    /* renamed from: com.google.gson.internal.bind.TypeAdapters$15 */
+    /* JADX INFO: renamed from: com.google.gson.internal.bind.TypeAdapters$15 */
     public class C1112015 extends TypeAdapter<Character> {
         @Override // com.google.gson.TypeAdapter
         public Character read(JsonReader jsonReader) throws IOException {
@@ -359,7 +359,7 @@ public final class TypeAdapters {
         }
     }
 
-    /* renamed from: com.google.gson.internal.bind.TypeAdapters$16 */
+    /* JADX INFO: renamed from: com.google.gson.internal.bind.TypeAdapters$16 */
     public class C1112116 extends TypeAdapter<String> {
         @Override // com.google.gson.TypeAdapter
         public String read(JsonReader jsonReader) throws IOException {
@@ -377,7 +377,7 @@ public final class TypeAdapters {
         }
     }
 
-    /* renamed from: com.google.gson.internal.bind.TypeAdapters$17 */
+    /* JADX INFO: renamed from: com.google.gson.internal.bind.TypeAdapters$17 */
     public class C1112217 extends TypeAdapter<BigDecimal> {
         @Override // com.google.gson.TypeAdapter
         public BigDecimal read(JsonReader jsonReader) throws IOException {
@@ -398,7 +398,7 @@ public final class TypeAdapters {
         }
     }
 
-    /* renamed from: com.google.gson.internal.bind.TypeAdapters$18 */
+    /* JADX INFO: renamed from: com.google.gson.internal.bind.TypeAdapters$18 */
     public class C1112318 extends TypeAdapter<BigInteger> {
         @Override // com.google.gson.TypeAdapter
         public BigInteger read(JsonReader jsonReader) throws IOException {
@@ -419,7 +419,7 @@ public final class TypeAdapters {
         }
     }
 
-    /* renamed from: com.google.gson.internal.bind.TypeAdapters$19 */
+    /* JADX INFO: renamed from: com.google.gson.internal.bind.TypeAdapters$19 */
     public class C1112419 extends TypeAdapter<StringBuilder> {
         @Override // com.google.gson.TypeAdapter
         public StringBuilder read(JsonReader jsonReader) throws IOException {
@@ -437,7 +437,7 @@ public final class TypeAdapters {
         }
     }
 
-    /* renamed from: com.google.gson.internal.bind.TypeAdapters$2 */
+    /* JADX INFO: renamed from: com.google.gson.internal.bind.TypeAdapters$2 */
     public class C111252 extends TypeAdapter<BitSet> {
         /* JADX WARN: Removed duplicated region for block: B:20:0x004b  */
         /* JADX WARN: Removed duplicated region for block: B:21:0x004d  */
@@ -491,7 +491,7 @@ public final class TypeAdapters {
         }
     }
 
-    /* renamed from: com.google.gson.internal.bind.TypeAdapters$20 */
+    /* JADX INFO: renamed from: com.google.gson.internal.bind.TypeAdapters$20 */
     public class C1112620 extends TypeAdapter<StringBuffer> {
         @Override // com.google.gson.TypeAdapter
         public StringBuffer read(JsonReader jsonReader) throws IOException {
@@ -509,7 +509,7 @@ public final class TypeAdapters {
         }
     }
 
-    /* renamed from: com.google.gson.internal.bind.TypeAdapters$21 */
+    /* JADX INFO: renamed from: com.google.gson.internal.bind.TypeAdapters$21 */
     public class C1112721 extends TypeAdapter<URL> {
         @Override // com.google.gson.TypeAdapter
         public URL read(JsonReader jsonReader) throws IOException {
@@ -531,7 +531,7 @@ public final class TypeAdapters {
         }
     }
 
-    /* renamed from: com.google.gson.internal.bind.TypeAdapters$22 */
+    /* JADX INFO: renamed from: com.google.gson.internal.bind.TypeAdapters$22 */
     public class C1112822 extends TypeAdapter<URI> {
         @Override // com.google.gson.TypeAdapter
         public URI read(JsonReader jsonReader) throws IOException {
@@ -557,7 +557,7 @@ public final class TypeAdapters {
         }
     }
 
-    /* renamed from: com.google.gson.internal.bind.TypeAdapters$23 */
+    /* JADX INFO: renamed from: com.google.gson.internal.bind.TypeAdapters$23 */
     public class C1112923 extends TypeAdapter<InetAddress> {
         @Override // com.google.gson.TypeAdapter
         public InetAddress read(JsonReader jsonReader) throws IOException {
@@ -575,7 +575,7 @@ public final class TypeAdapters {
         }
     }
 
-    /* renamed from: com.google.gson.internal.bind.TypeAdapters$24 */
+    /* JADX INFO: renamed from: com.google.gson.internal.bind.TypeAdapters$24 */
     public class C1113024 extends TypeAdapter<UUID> {
         @Override // com.google.gson.TypeAdapter
         public UUID read(JsonReader jsonReader) throws IOException {
@@ -593,7 +593,7 @@ public final class TypeAdapters {
         }
     }
 
-    /* renamed from: com.google.gson.internal.bind.TypeAdapters$25 */
+    /* JADX INFO: renamed from: com.google.gson.internal.bind.TypeAdapters$25 */
     public class C1113125 extends TypeAdapter<Currency> {
         @Override // com.google.gson.TypeAdapter
         public Currency read(JsonReader jsonReader) throws IOException {
@@ -606,13 +606,13 @@ public final class TypeAdapters {
         }
     }
 
-    /* renamed from: com.google.gson.internal.bind.TypeAdapters$26 */
+    /* JADX INFO: renamed from: com.google.gson.internal.bind.TypeAdapters$26 */
     public class C1113226 implements TypeAdapterFactory2 {
 
-        /* renamed from: com.google.gson.internal.bind.TypeAdapters$26$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.google.gson.internal.bind.TypeAdapters$26$1, reason: invalid class name */
         public class AnonymousClass1 extends TypeAdapter<Timestamp> {
 
-            /* renamed from: a */
+            /* JADX INFO: renamed from: a */
             public final /* synthetic */ TypeAdapter f21608a;
 
             public AnonymousClass1(C1113226 c1113226, TypeAdapter typeAdapter) {
@@ -643,7 +643,7 @@ public final class TypeAdapters {
         }
     }
 
-    /* renamed from: com.google.gson.internal.bind.TypeAdapters$27 */
+    /* JADX INFO: renamed from: com.google.gson.internal.bind.TypeAdapters$27 */
     public class C1113327 extends TypeAdapter<Calendar> {
         @Override // com.google.gson.TypeAdapter
         public Calendar read(JsonReader jsonReader) throws IOException {
@@ -702,7 +702,7 @@ public final class TypeAdapters {
         }
     }
 
-    /* renamed from: com.google.gson.internal.bind.TypeAdapters$28 */
+    /* JADX INFO: renamed from: com.google.gson.internal.bind.TypeAdapters$28 */
     public class C1113428 extends TypeAdapter<Locale> {
         @Override // com.google.gson.TypeAdapter
         public Locale read(JsonReader jsonReader) throws IOException {
@@ -724,9 +724,9 @@ public final class TypeAdapters {
         }
     }
 
-    /* renamed from: com.google.gson.internal.bind.TypeAdapters$29 */
+    /* JADX INFO: renamed from: com.google.gson.internal.bind.TypeAdapters$29 */
     public class C1113529 extends TypeAdapter<JsonElement> {
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public JsonElement m9236a(JsonReader jsonReader) throws IOException {
             int iOrdinal = jsonReader.mo6878N().ordinal();
             if (iOrdinal == 0) {
@@ -764,7 +764,7 @@ public final class TypeAdapters {
         }
 
         /* JADX WARN: Multi-variable type inference failed */
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public void m9237b(JsonWriter jsonWriter, JsonElement jsonElement) throws IOException {
             if (jsonElement == null || (jsonElement instanceof JsonNull)) {
                 jsonWriter.mo6905s();
@@ -835,7 +835,7 @@ public final class TypeAdapters {
         }
     }
 
-    /* renamed from: com.google.gson.internal.bind.TypeAdapters$3 */
+    /* JADX INFO: renamed from: com.google.gson.internal.bind.TypeAdapters$3 */
     public class C111363 extends TypeAdapter<Boolean> {
         @Override // com.google.gson.TypeAdapter
         public Boolean read(JsonReader jsonReader) throws IOException {
@@ -853,7 +853,7 @@ public final class TypeAdapters {
         }
     }
 
-    /* renamed from: com.google.gson.internal.bind.TypeAdapters$30 */
+    /* JADX INFO: renamed from: com.google.gson.internal.bind.TypeAdapters$30 */
     public class C1113730 implements TypeAdapterFactory2 {
         @Override // p007b.p225i.p408d.TypeAdapterFactory2
         public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> typeToken) {
@@ -868,13 +868,13 @@ public final class TypeAdapters {
         }
     }
 
-    /* renamed from: com.google.gson.internal.bind.TypeAdapters$31 */
+    /* JADX INFO: renamed from: com.google.gson.internal.bind.TypeAdapters$31 */
     public class C1113831 implements TypeAdapterFactory2 {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public final /* synthetic */ TypeToken f21609j;
 
-        /* renamed from: k */
+        /* JADX INFO: renamed from: k */
         public final /* synthetic */ TypeAdapter f21610k;
 
         public C1113831(TypeToken typeToken, TypeAdapter typeAdapter) {
@@ -891,13 +891,13 @@ public final class TypeAdapters {
         }
     }
 
-    /* renamed from: com.google.gson.internal.bind.TypeAdapters$32 */
+    /* JADX INFO: renamed from: com.google.gson.internal.bind.TypeAdapters$32 */
     public class C1113932 implements TypeAdapterFactory2 {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public final /* synthetic */ Class f21611j;
 
-        /* renamed from: k */
+        /* JADX INFO: renamed from: k */
         public final /* synthetic */ TypeAdapter f21612k;
 
         public C1113932(Class cls, TypeAdapter typeAdapter) {
@@ -922,16 +922,16 @@ public final class TypeAdapters {
         }
     }
 
-    /* renamed from: com.google.gson.internal.bind.TypeAdapters$33 */
+    /* JADX INFO: renamed from: com.google.gson.internal.bind.TypeAdapters$33 */
     public class C1114033 implements TypeAdapterFactory2 {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public final /* synthetic */ Class f21613j;
 
-        /* renamed from: k */
+        /* JADX INFO: renamed from: k */
         public final /* synthetic */ Class f21614k;
 
-        /* renamed from: l */
+        /* JADX INFO: renamed from: l */
         public final /* synthetic */ TypeAdapter f21615l;
 
         public C1114033(Class cls, Class cls2, TypeAdapter typeAdapter) {
@@ -959,16 +959,16 @@ public final class TypeAdapters {
         }
     }
 
-    /* renamed from: com.google.gson.internal.bind.TypeAdapters$34 */
+    /* JADX INFO: renamed from: com.google.gson.internal.bind.TypeAdapters$34 */
     public class C1114134 implements TypeAdapterFactory2 {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public final /* synthetic */ Class f21616j;
 
-        /* renamed from: k */
+        /* JADX INFO: renamed from: k */
         public final /* synthetic */ Class f21617k;
 
-        /* renamed from: l */
+        /* JADX INFO: renamed from: l */
         public final /* synthetic */ TypeAdapter f21618l;
 
         public C1114134(Class cls, Class cls2, TypeAdapter typeAdapter) {
@@ -996,20 +996,20 @@ public final class TypeAdapters {
         }
     }
 
-    /* renamed from: com.google.gson.internal.bind.TypeAdapters$35 */
+    /* JADX INFO: renamed from: com.google.gson.internal.bind.TypeAdapters$35 */
     public class C1114235 implements TypeAdapterFactory2 {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public final /* synthetic */ Class f21619j;
 
-        /* renamed from: k */
+        /* JADX INFO: renamed from: k */
         public final /* synthetic */ TypeAdapter f21620k;
 
         /* JADX INFO: Add missing generic type declarations: [T1] */
-        /* renamed from: com.google.gson.internal.bind.TypeAdapters$35$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.google.gson.internal.bind.TypeAdapters$35$1, reason: invalid class name */
         public class AnonymousClass1<T1> extends TypeAdapter<T1> {
 
-            /* renamed from: a */
+            /* JADX INFO: renamed from: a */
             public final /* synthetic */ Class f21621a;
 
             public AnonymousClass1(Class cls) {
@@ -1058,7 +1058,7 @@ public final class TypeAdapters {
         }
     }
 
-    /* renamed from: com.google.gson.internal.bind.TypeAdapters$4 */
+    /* JADX INFO: renamed from: com.google.gson.internal.bind.TypeAdapters$4 */
     public class C111434 extends TypeAdapter<Boolean> {
         @Override // com.google.gson.TypeAdapter
         public Boolean read(JsonReader jsonReader) throws IOException {
@@ -1076,7 +1076,7 @@ public final class TypeAdapters {
         }
     }
 
-    /* renamed from: com.google.gson.internal.bind.TypeAdapters$5 */
+    /* JADX INFO: renamed from: com.google.gson.internal.bind.TypeAdapters$5 */
     public class C111445 extends TypeAdapter<Number> {
         @Override // com.google.gson.TypeAdapter
         public Number read(JsonReader jsonReader) throws IOException {
@@ -1097,7 +1097,7 @@ public final class TypeAdapters {
         }
     }
 
-    /* renamed from: com.google.gson.internal.bind.TypeAdapters$6 */
+    /* JADX INFO: renamed from: com.google.gson.internal.bind.TypeAdapters$6 */
     public class C111456 extends TypeAdapter<Number> {
         @Override // com.google.gson.TypeAdapter
         public Number read(JsonReader jsonReader) throws IOException {
@@ -1118,7 +1118,7 @@ public final class TypeAdapters {
         }
     }
 
-    /* renamed from: com.google.gson.internal.bind.TypeAdapters$7 */
+    /* JADX INFO: renamed from: com.google.gson.internal.bind.TypeAdapters$7 */
     public class C111467 extends TypeAdapter<Number> {
         @Override // com.google.gson.TypeAdapter
         public Number read(JsonReader jsonReader) throws IOException {
@@ -1139,7 +1139,7 @@ public final class TypeAdapters {
         }
     }
 
-    /* renamed from: com.google.gson.internal.bind.TypeAdapters$8 */
+    /* JADX INFO: renamed from: com.google.gson.internal.bind.TypeAdapters$8 */
     public class C111478 extends TypeAdapter<AtomicInteger> {
         @Override // com.google.gson.TypeAdapter
         public AtomicInteger read(JsonReader jsonReader) throws IOException {
@@ -1156,7 +1156,7 @@ public final class TypeAdapters {
         }
     }
 
-    /* renamed from: com.google.gson.internal.bind.TypeAdapters$9 */
+    /* JADX INFO: renamed from: com.google.gson.internal.bind.TypeAdapters$9 */
     public class C111489 extends TypeAdapter<AtomicBoolean> {
         @Override // com.google.gson.TypeAdapter
         public AtomicBoolean read(JsonReader jsonReader) throws IOException {
@@ -1171,10 +1171,10 @@ public final class TypeAdapters {
 
     public static final class EnumTypeAdapter<T extends Enum<T>> extends TypeAdapter<T> {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final Map<String, T> f21623a = new HashMap();
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final Map<T, String> f21624b = new HashMap();
 
         public EnumTypeAdapter(Class<T> cls) {

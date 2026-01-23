@@ -4,8 +4,8 @@ import com.discord.api.directory.DirectoryEntryGuild;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: WidgetDirectoryEntryViewHolder.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetDirectoryEntryViewHolder.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final /* data */ class DirectoryEntryData {
     private final DirectoryEntryGuild entry;
     private final boolean hasEditPermissions;
@@ -31,17 +31,17 @@ public final /* data */ class DirectoryEntryData {
         return directoryEntryData.copy(directoryEntryGuild, z2, z3);
     }
 
-    /* renamed from: component1, reason: from getter */
+    /* JADX INFO: renamed from: component1, reason: from getter */
     public final DirectoryEntryGuild getEntry() {
         return this.entry;
     }
 
-    /* renamed from: component2, reason: from getter */
+    /* JADX INFO: renamed from: component2, reason: from getter */
     public final boolean getHasJoinedGuild() {
         return this.hasJoinedGuild;
     }
 
-    /* renamed from: component3, reason: from getter */
+    /* JADX INFO: renamed from: component3, reason: from getter */
     public final boolean getHasEditPermissions() {
         return this.hasEditPermissions;
     }
@@ -75,17 +75,23 @@ public final /* data */ class DirectoryEntryData {
     }
 
     /* JADX WARN: Multi-variable type inference failed */
+    /* JADX WARN: Type inference failed for: r1v1, types: [int] */
+    /* JADX WARN: Type inference failed for: r1v3 */
+    /* JADX WARN: Type inference failed for: r1v4 */
+    /* JADX WARN: Type inference failed for: r2v0 */
+    /* JADX WARN: Type inference failed for: r2v1, types: [int] */
+    /* JADX WARN: Type inference failed for: r2v2 */
     public int hashCode() {
         DirectoryEntryGuild directoryEntryGuild = this.entry;
         int iHashCode = (directoryEntryGuild != null ? directoryEntryGuild.hashCode() : 0) * 31;
         boolean z2 = this.hasJoinedGuild;
-        int i = z2;
-        if (z2 != 0) {
-            i = 1;
+        ?? r1 = z2;
+        if (z2) {
+            r1 = 1;
         }
-        int i2 = (iHashCode + i) * 31;
+        int i = (iHashCode + r1) * 31;
         boolean z3 = this.hasEditPermissions;
-        return i2 + (z3 ? 1 : z3 ? 1 : 0);
+        return i + (z3 ? 1 : z3);
     }
 
     public String toString() {

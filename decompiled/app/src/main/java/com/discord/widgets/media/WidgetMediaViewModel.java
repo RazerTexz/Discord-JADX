@@ -3,8 +3,8 @@ package com.discord.widgets.media;
 import kotlin.Unit;
 import p007b.p008a.p018d.AppViewModel;
 
-/* compiled from: WidgetMediaViewModel.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetMediaViewModel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetMediaViewModel extends AppViewModel<Unit> {
     private long currentPlayerPositionMs;
     private boolean isPlaying;
@@ -24,7 +24,7 @@ public final class WidgetMediaViewModel extends AppViewModel<Unit> {
         return this.showCoverFrame;
     }
 
-    /* renamed from: isPlaying, reason: from getter */
+    /* JADX INFO: renamed from: isPlaying, reason: from getter */
     public final boolean getIsPlaying() {
         return this.isPlaying;
     }

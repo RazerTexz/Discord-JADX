@@ -43,20 +43,20 @@ import p507d0.p592z.p594d.Reflection2;
 import p637j0.p641k.Func1;
 import p658rx.Observable;
 
-/* compiled from: WidgetDirectoryCategory.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetDirectoryCategory.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetDirectoryCategory extends AppFragment {
     public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetDirectoryCategory.class, "binding", "getBinding()Lcom/discord/databinding/WidgetDirectoryCategoryBinding;", 0)};
     private final ActivityResultLauncher<Intent> activityResult;
     private final WidgetDirectoryChannelAdapter adapter;
 
-    /* renamed from: args$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: args$delegate, reason: from kotlin metadata */
     private final Lazy args;
 
-    /* renamed from: binding$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
 
-    /* renamed from: viewModel$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: viewModel$delegate, reason: from kotlin metadata */
     private final Lazy viewModel;
 
     public final /* synthetic */ class WhenMappings {
@@ -70,8 +70,8 @@ public final class WidgetDirectoryCategory extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetDirectoryCategory.kt */
-    /* renamed from: com.discord.widgets.directories.WidgetDirectoryCategory$onViewBoundOrOnResume$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.directories.WidgetDirectoryCategory$onViewBoundOrOnResume$1 */
+    /* JADX INFO: compiled from: WidgetDirectoryCategory.kt */
     public static final class C82891<T, R> implements Func1<WidgetDirectoriesViewModel.ViewState, Boolean> {
         public static final C82891 INSTANCE = new C82891();
 
@@ -80,14 +80,14 @@ public final class WidgetDirectoryCategory extends AppFragment {
             return call2(viewState);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final Boolean call2(WidgetDirectoriesViewModel.ViewState viewState) {
             return Boolean.valueOf(viewState != null);
         }
     }
 
-    /* compiled from: WidgetDirectoryCategory.kt */
-    /* renamed from: com.discord.widgets.directories.WidgetDirectoryCategory$onViewBoundOrOnResume$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.directories.WidgetDirectoryCategory$onViewBoundOrOnResume$2 */
+    /* JADX INFO: compiled from: WidgetDirectoryCategory.kt */
     public static final class C82902 extends Lambda implements Function1<WidgetDirectoriesViewModel.ViewState, Unit> {
         public C82902() {
             super(1);
@@ -99,7 +99,7 @@ public final class WidgetDirectoryCategory extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(WidgetDirectoriesViewModel.ViewState viewState) {
             WidgetDirectoryCategory widgetDirectoryCategory = WidgetDirectoryCategory.this;
             Intrinsics3.checkNotNullExpressionValue(viewState, "it");
@@ -171,8 +171,8 @@ public final class WidgetDirectoryCategory extends AppFragment {
                     arrayList2.add(obj);
                 }
             }
-            ArrayList arrayList3 = arrayList2.isEmpty() ^ true ? arrayList2 : null;
-            if (arrayList3 != null && (directoryItems = toDirectoryItems(arrayList3)) != null) {
+            List<DirectoryEntryData> list = arrayList2.isEmpty() ^ true ? arrayList2 : null;
+            if (list != null && (directoryItems = toDirectoryItems(list)) != null) {
                 arrayList.add(new DirectoryChannelItem.SectionHeader(C5419R.string.all_servers));
                 arrayList.addAll(directoryItems);
             }

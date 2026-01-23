@@ -8,15 +8,15 @@ import kotlin.jvm.internal.Ref$ObjectRef;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ModelGuildFolder.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: ModelGuildFolder.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class ModelGuildFolder {
     private final Integer color;
     private final List<Long> guildIds;
     private final Long id;
     private final String name;
 
-    /* compiled from: ModelGuildFolder.kt */
+    /* JADX INFO: compiled from: ModelGuildFolder.kt */
     public static final class Parser implements Model.Parser<ModelGuildFolder> {
         public static final Parser INSTANCE = new Parser();
 
@@ -73,7 +73,7 @@ public final /* data */ class ModelGuildFolder {
         return modelGuildFolder.copy(l, list, num, str);
     }
 
-    /* renamed from: component1, reason: from getter */
+    /* JADX INFO: renamed from: component1, reason: from getter */
     public final Long getId() {
         return this.id;
     }
@@ -82,12 +82,12 @@ public final /* data */ class ModelGuildFolder {
         return this.guildIds;
     }
 
-    /* renamed from: component3, reason: from getter */
+    /* JADX INFO: renamed from: component3, reason: from getter */
     public final Integer getColor() {
         return this.color;
     }
 
-    /* renamed from: component4, reason: from getter */
+    /* JADX INFO: renamed from: component4, reason: from getter */
     public final String getName() {
         return this.name;
     }

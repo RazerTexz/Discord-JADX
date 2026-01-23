@@ -10,12 +10,12 @@ import java.util.Objects;
 import org.checkerframework.checker.nullness.compatqual.NullableDecl;
 import p007b.p225i.p226a.p288f.p299e.p308o.C3404f;
 
-/* compiled from: Maps.java */
-/* renamed from: b.i.b.b.z, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.b.b.z, reason: use source file name */
+/* JADX INFO: compiled from: Maps.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class Maps5<K, V> extends AbstractCollection<V> {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     @Weak
     public final Map<K, V> f12112j;
 

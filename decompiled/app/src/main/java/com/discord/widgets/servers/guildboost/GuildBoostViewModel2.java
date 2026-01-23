@@ -10,9 +10,9 @@ import kotlin.jvm.functions.Function5;
 import p507d0.p592z.p594d.FunctionReferenceImpl;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: GuildBoostViewModel.kt */
-/* renamed from: com.discord.widgets.servers.guildboost.GuildBoostViewModel$Companion$observeStores$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.servers.guildboost.GuildBoostViewModel$Companion$observeStores$1, reason: use source file name */
+/* JADX INFO: compiled from: GuildBoostViewModel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final /* synthetic */ class GuildBoostViewModel2 extends FunctionReferenceImpl implements Function5<StoreGuildBoost.State, StoreSubscriptions.SubscriptionsState, MeUser, Guild, StoreGooglePlayPurchases.State, GuildBoostViewModel.StoreState> {
     public static final GuildBoostViewModel2 INSTANCE = new GuildBoostViewModel2();
 
@@ -25,7 +25,7 @@ public final /* synthetic */ class GuildBoostViewModel2 extends FunctionReferenc
         return invoke2(state, subscriptionsState, meUser, guild, state2);
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final GuildBoostViewModel.StoreState invoke2(StoreGuildBoost.State state, StoreSubscriptions.SubscriptionsState subscriptionsState, MeUser meUser, Guild guild, StoreGooglePlayPurchases.State state2) {
         Intrinsics3.checkNotNullParameter(state, "p1");
         Intrinsics3.checkNotNullParameter(subscriptionsState, "p2");

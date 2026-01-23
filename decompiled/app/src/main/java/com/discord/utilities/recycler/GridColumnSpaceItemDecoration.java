@@ -5,8 +5,8 @@ import android.view.View;
 import androidx.recyclerview.widget.RecyclerView;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: GridColumnSpaceItemDecoration.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: GridColumnSpaceItemDecoration.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class GridColumnSpaceItemDecoration extends RecyclerView.ItemDecoration {
     private final int columnCount;
     private final int columnSpacePx;

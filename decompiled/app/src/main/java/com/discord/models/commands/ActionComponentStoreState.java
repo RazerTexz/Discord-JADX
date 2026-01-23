@@ -4,8 +4,8 @@ import com.discord.stores.StoreApplicationInteractions;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ActionComponentStoreState.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: ActionComponentStoreState.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class ActionComponentStoreState extends ActionComponentStoreState2 {
     private final boolean disabled;
     private final StoreApplicationInteractions.InteractionSendState.Failed failed;
@@ -31,17 +31,17 @@ public final /* data */ class ActionComponentStoreState extends ActionComponentS
         return actionComponentStoreState.copy(z2, failed, z3);
     }
 
-    /* renamed from: component1, reason: from getter */
+    /* JADX INFO: renamed from: component1, reason: from getter */
     public final boolean getLoading() {
         return this.loading;
     }
 
-    /* renamed from: component2, reason: from getter */
+    /* JADX INFO: renamed from: component2, reason: from getter */
     public final StoreApplicationInteractions.InteractionSendState.Failed getFailed() {
         return this.failed;
     }
 
-    /* renamed from: component3, reason: from getter */
+    /* JADX INFO: renamed from: component3, reason: from getter */
     public final boolean getDisabled() {
         return this.disabled;
     }
@@ -77,6 +77,9 @@ public final /* data */ class ActionComponentStoreState extends ActionComponentS
     /* JADX WARN: Type inference failed for: r0v1, types: [int] */
     /* JADX WARN: Type inference failed for: r0v6 */
     /* JADX WARN: Type inference failed for: r0v7 */
+    /* JADX WARN: Type inference failed for: r1v0 */
+    /* JADX WARN: Type inference failed for: r1v1, types: [int] */
+    /* JADX WARN: Type inference failed for: r1v2 */
     public int hashCode() {
         boolean z2 = this.loading;
         ?? r0 = z2;
@@ -87,7 +90,7 @@ public final /* data */ class ActionComponentStoreState extends ActionComponentS
         StoreApplicationInteractions.InteractionSendState.Failed failed = this.failed;
         int iHashCode = (i + (failed != null ? failed.hashCode() : 0)) * 31;
         boolean z3 = this.disabled;
-        return iHashCode + (z3 ? 1 : z3 ? 1 : 0);
+        return iHashCode + (z3 ? 1 : z3);
     }
 
     public String toString() {

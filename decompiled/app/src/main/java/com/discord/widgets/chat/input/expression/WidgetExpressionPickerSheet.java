@@ -8,8 +8,8 @@ import kotlin.Unit;
 import kotlin.jvm.functions.Function0;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: WidgetExpressionPickerSheet.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetExpressionPickerSheet.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public abstract class WidgetExpressionPickerSheet extends AppBottomSheet {
     private Function0<Unit> onCancel;
 

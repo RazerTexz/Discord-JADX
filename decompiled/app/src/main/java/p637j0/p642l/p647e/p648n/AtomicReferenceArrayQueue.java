@@ -5,15 +5,15 @@ import java.util.Iterator;
 import java.util.concurrent.atomic.AtomicReferenceArray;
 import p637j0.p642l.p647e.UtilityFunctions;
 
-/* compiled from: AtomicReferenceArrayQueue.java */
-/* renamed from: j0.l.e.n.a, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: j0.l.e.n.a, reason: use source file name */
+/* JADX INFO: compiled from: AtomicReferenceArrayQueue.java */
+/* JADX INFO: loaded from: classes3.dex */
 public abstract class AtomicReferenceArrayQueue<E> extends AbstractQueue<E> {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final AtomicReferenceArray<E> f27303j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final int f27304k;
 
     public AtomicReferenceArrayQueue(int i) {

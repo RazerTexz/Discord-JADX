@@ -10,8 +10,8 @@ import androidx.interpolator.view.animation.FastOutSlowInInterpolator;
 import androidx.interpolator.view.animation.LinearOutSlowInInterpolator;
 import p007b.p100d.p104b.p105a.outline;
 
+/* JADX INFO: loaded from: classes3.dex */
 @RestrictTo({RestrictTo.Scope.LIBRARY_GROUP})
-/* loaded from: classes3.dex */
 public class AnimationUtils {
     public static final TimeInterpolator LINEAR_INTERPOLATOR = new LinearInterpolator();
     public static final TimeInterpolator FAST_OUT_SLOW_IN_INTERPOLATOR = new FastOutSlowInInterpolator();

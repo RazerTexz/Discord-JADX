@@ -8,15 +8,15 @@ import p507d0.p513e0.p514p.p515d.p517m0.p518b.StandardNames;
 import p507d0.p513e0.p514p.p515d.p517m0.p548g.FqName;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: FakePureImplementationsProvider.kt */
-/* renamed from: d0.e0.p.d.m0.e.a.q, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.e.a.q, reason: use source file name */
+/* JADX INFO: compiled from: FakePureImplementationsProvider.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class FakePureImplementationsProvider {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final FakePureImplementationsProvider f23516a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static final HashMap<FqName, FqName> f23517b;
 
     static {
@@ -30,7 +30,7 @@ public final class FakePureImplementationsProvider {
         fakePureImplementationsProvider.m9519b(new FqName("java.util.function.BiFunction"), fakePureImplementationsProvider.m9518a("java.util.function.BinaryOperator"));
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final List<FqName> m9518a(String... strArr) {
         ArrayList arrayList = new ArrayList(strArr.length);
         for (String str : strArr) {
@@ -39,7 +39,7 @@ public final class FakePureImplementationsProvider {
         return arrayList;
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final void m9519b(FqName fqName, List<FqName> list) {
         AbstractMap abstractMap = f23517b;
         for (Object obj : list) {

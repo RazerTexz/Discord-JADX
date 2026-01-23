@@ -31,8 +31,8 @@ import p658rx.Observable;
 import p658rx.functions.Func2;
 import p658rx.subjects.BehaviorSubject;
 
-/* compiled from: StoreInviteSettings.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: StoreInviteSettings.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class StoreInviteSettings extends Store {
     public static final String LOCATION_DEEPLINK = "Deeplink";
     public static final String LOCATION_JOIN = "Join Guild Modal";
@@ -40,7 +40,7 @@ public final class StoreInviteSettings extends Store {
     private final BehaviorSubject<InviteCode> pendingInviteCodeSubject = BehaviorSubject.m11130l0(null);
     private final BehaviorSubject<ModelInvite.Settings> inviteSettingsSubject = BehaviorSubject.m11130l0(this.inviteSettings);
 
-    /* compiled from: StoreInviteSettings.kt */
+    /* JADX INFO: compiled from: StoreInviteSettings.kt */
     public static final /* data */ class InviteCode implements Parcelable {
         public static final Parcelable.Creator<InviteCode> CREATOR = new Creator();
         private final Long eventId;
@@ -93,17 +93,17 @@ public final class StoreInviteSettings extends Store {
             return inviteCode.copy(str, str2, l);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final String getInviteCode() {
             return this.inviteCode;
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final String getSource() {
             return this.source;
         }
 
-        /* renamed from: component3, reason: from getter */
+        /* JADX INFO: renamed from: component3, reason: from getter */
         public final Long getEventId() {
             return this.eventId;
         }
@@ -175,8 +175,8 @@ public final class StoreInviteSettings extends Store {
         }
     }
 
-    /* compiled from: StoreInviteSettings.kt */
-    /* renamed from: com.discord.stores.StoreInviteSettings$generateInviteDefaultChannel$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreInviteSettings$generateInviteDefaultChannel$1 */
+    /* JADX INFO: compiled from: StoreInviteSettings.kt */
     public static final class C61331<T, R> implements Func1<Map<Long, ? extends Channel>, Collection<? extends Channel>> {
         public static final C61331 INSTANCE = new C61331();
 
@@ -185,14 +185,14 @@ public final class StoreInviteSettings extends Store {
             return call2((Map<Long, Channel>) map);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final Collection<Channel> call2(Map<Long, Channel> map) {
             return map.values();
         }
     }
 
-    /* compiled from: StoreInviteSettings.kt */
-    /* renamed from: com.discord.stores.StoreInviteSettings$generateInviteDefaultChannel$2 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreInviteSettings$generateInviteDefaultChannel$2 */
+    /* JADX INFO: compiled from: StoreInviteSettings.kt */
     public static final class C61342<T, R> implements Func1<Collection<? extends Channel>, List<? extends Channel>> {
         public static final C61342 INSTANCE = new C61342();
 
@@ -201,15 +201,15 @@ public final class StoreInviteSettings extends Store {
             return call2((Collection<Channel>) collection);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final List<Channel> call2(Collection<Channel> collection) {
             Intrinsics3.checkNotNullExpressionValue(collection, "it");
             return _Collections.sortedWith(collection, ChannelUtils.m7684h(Channel.INSTANCE));
         }
     }
 
-    /* compiled from: StoreInviteSettings.kt */
-    /* renamed from: com.discord.stores.StoreInviteSettings$generateInviteDefaultChannel$3 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreInviteSettings$generateInviteDefaultChannel$3 */
+    /* JADX INFO: compiled from: StoreInviteSettings.kt */
     public static final class C61353<T, R> implements Func1<List<? extends Channel>, Long> {
         public static final C61353 INSTANCE = new C61353();
 
@@ -218,7 +218,7 @@ public final class StoreInviteSettings extends Store {
             return call2((List<Channel>) list);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final Long call2(List<Channel> list) {
             Intrinsics3.checkNotNullExpressionValue(list, "it");
             Channel channel = (Channel) _Collections.firstOrNull((List) list);
@@ -229,8 +229,8 @@ public final class StoreInviteSettings extends Store {
         }
     }
 
-    /* compiled from: StoreInviteSettings.kt */
-    /* renamed from: com.discord.stores.StoreInviteSettings$generateInviteDefaultChannel$4 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreInviteSettings$generateInviteDefaultChannel$4 */
+    /* JADX INFO: compiled from: StoreInviteSettings.kt */
     public static final class C61364<T, R> implements Func1<Long, Observable<? extends ModelInvite>> {
         public final /* synthetic */ long $guildId;
 
@@ -243,7 +243,7 @@ public final class StoreInviteSettings extends Store {
             return call2(l);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final Observable<? extends ModelInvite> call2(Long l) {
             if (l != null) {
                 long jLongValue = l.longValue();
@@ -257,8 +257,8 @@ public final class StoreInviteSettings extends Store {
         }
     }
 
-    /* compiled from: StoreInviteSettings.kt */
-    /* renamed from: com.discord.stores.StoreInviteSettings$getInvitableChannels$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreInviteSettings$getInvitableChannels$1 */
+    /* JADX INFO: compiled from: StoreInviteSettings.kt */
     public static final class C61371<T1, T2, R> implements Func2<Map<Long, ? extends Channel>, Map<Long, ? extends Map<Long, ? extends Long>>, Map<Long, ? extends Channel>> {
         public final /* synthetic */ long $guildId;
 
@@ -271,7 +271,7 @@ public final class StoreInviteSettings extends Store {
             return call2((Map<Long, Channel>) map, (Map<Long, ? extends Map<Long, Long>>) map2);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final Map<Long, Channel> call2(Map<Long, Channel> map, Map<Long, ? extends Map<Long, Long>> map2) {
             HashMap map3 = new HashMap();
             Map<Long, Long> map4 = map2.get(Long.valueOf(this.$guildId));
@@ -292,8 +292,8 @@ public final class StoreInviteSettings extends Store {
         }
     }
 
-    /* compiled from: StoreInviteSettings.kt */
-    /* renamed from: com.discord.stores.StoreInviteSettings$getInvite$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreInviteSettings$getInvite$1 */
+    /* JADX INFO: compiled from: StoreInviteSettings.kt */
     public static final class C61381<T, R> implements Func1<InviteCode, Observable<? extends StoreInstantInvites.InviteState>> {
         public static final C61381 INSTANCE = new C61381();
 
@@ -302,14 +302,14 @@ public final class StoreInviteSettings extends Store {
             return call2(inviteCode);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final Observable<? extends StoreInstantInvites.InviteState> call2(InviteCode inviteCode) {
             return inviteCode == null ? new ScalarSynchronousObservable(null) : StoreStream.INSTANCE.getInstantInvites().observeInvite(ModelInvite.getInviteStoreKey(inviteCode.getInviteCode(), inviteCode.getEventId()));
         }
     }
 
-    /* compiled from: StoreInviteSettings.kt */
-    /* renamed from: com.discord.stores.StoreInviteSettings$getInvite$2 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreInviteSettings$getInvite$2 */
+    /* JADX INFO: compiled from: StoreInviteSettings.kt */
     public static final class C61392<T, R> implements Func1<StoreInstantInvites.InviteState, ModelInvite> {
         public static final C61392 INSTANCE = new C61392();
 
@@ -318,7 +318,7 @@ public final class StoreInviteSettings extends Store {
             return call2(inviteState);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final ModelInvite call2(StoreInstantInvites.InviteState inviteState) {
             if (inviteState instanceof StoreInstantInvites.InviteState.Resolved) {
                 return ((StoreInstantInvites.InviteState.Resolved) inviteState).getInvite();

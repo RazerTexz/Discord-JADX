@@ -2,12 +2,12 @@ package p617h0.p628c;
 
 import org.webrtc.SurfaceTextureHelper;
 
-/* compiled from: lambda */
-/* renamed from: h0.c.x */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: h0.c.x */
+/* JADX INFO: compiled from: lambda */
+/* JADX INFO: loaded from: classes3.dex */
 public final /* synthetic */ class RunnableC12494x implements Runnable {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final /* synthetic */ SurfaceTextureHelper f26468j;
 
     public /* synthetic */ RunnableC12494x(SurfaceTextureHelper surfaceTextureHelper) {

@@ -7,25 +7,25 @@ import java.io.FilenameFilter;
 import java.io.IOException;
 import p007b.p100d.p104b.p105a.outline;
 
-/* compiled from: ClsFileOutputStream.java */
-/* renamed from: b.i.c.m.d.p.b, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.c.m.d.p.b, reason: use source file name */
+/* JADX INFO: compiled from: ClsFileOutputStream.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class ClsFileOutputStream extends FileOutputStream {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static final FilenameFilter f12686j = new a();
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final String f12687k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public File f12688l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public boolean f12689m;
 
-    /* compiled from: ClsFileOutputStream.java */
-    /* renamed from: b.i.c.m.d.p.b$a */
+    /* JADX INFO: renamed from: b.i.c.m.d.p.b$a */
+    /* JADX INFO: compiled from: ClsFileOutputStream.java */
     public class a implements FilenameFilter {
         @Override // java.io.FilenameFilter
         public boolean accept(File file, String str) {
@@ -43,7 +43,7 @@ public class ClsFileOutputStream extends FileOutputStream {
         this.f12688l = new File(outline.m883w(strM822J, ".cls_temp"));
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public void m6638a() throws IOException {
         if (this.f12689m) {
             return;

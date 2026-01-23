@@ -4,16 +4,16 @@ import android.net.Uri;
 import androidx.annotation.GuardedBy;
 import androidx.collection.ArrayMap;
 
-/* compiled from: com.google.android.gms:play-services-measurement-impl@@18.0.0 */
-/* renamed from: b.i.a.f.h.l.i2 */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.h.l.i2 */
+/* JADX INFO: compiled from: com.google.android.gms:play-services-measurement-impl@@18.0.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public final class C3692i2 {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     @GuardedBy("PhenotypeConstants.class")
     public static final ArrayMap<String, Uri> f10006a = new ArrayMap<>();
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static synchronized Uri m4961a(String str) {
         Uri uri;
         ArrayMap<String, Uri> arrayMap = f10006a;

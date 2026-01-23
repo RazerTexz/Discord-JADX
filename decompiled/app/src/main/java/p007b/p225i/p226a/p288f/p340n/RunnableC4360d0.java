@@ -2,15 +2,15 @@ package p007b.p225i.p226a.p288f.p340n;
 
 import java.util.concurrent.Callable;
 
-/* compiled from: com.google.android.gms:play-services-tasks@@17.2.1 */
-/* renamed from: b.i.a.f.n.d0 */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.n.d0 */
+/* JADX INFO: compiled from: com.google.android.gms:play-services-tasks@@17.2.1 */
+/* JADX INFO: loaded from: classes3.dex */
 public final class RunnableC4360d0 implements Runnable {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final /* synthetic */ C4358c0 f11477j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final /* synthetic */ Callable f11478k;
 
     public RunnableC4360d0(C4358c0 c4358c0, Callable callable) {

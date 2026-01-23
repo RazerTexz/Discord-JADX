@@ -16,7 +16,7 @@ import java.util.Set;
 import java.util.concurrent.Executor;
 import java.util.concurrent.atomic.AtomicBoolean;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class MultiInstanceInvalidationClient {
     public final Context mAppContext;
     public int mClientId;
@@ -34,10 +34,10 @@ public class MultiInstanceInvalidationClient {
     public final IMultiInstanceInvalidationCallback mCallback = new BinderC05841();
     public final AtomicBoolean mStopped = new AtomicBoolean(false);
 
-    /* renamed from: androidx.room.MultiInstanceInvalidationClient$1 */
+    /* JADX INFO: renamed from: androidx.room.MultiInstanceInvalidationClient$1 */
     public class BinderC05841 extends IMultiInstanceInvalidationCallback.Stub {
 
-        /* renamed from: androidx.room.MultiInstanceInvalidationClient$1$1, reason: invalid class name */
+        /* JADX INFO: renamed from: androidx.room.MultiInstanceInvalidationClient$1$1, reason: invalid class name */
         public class AnonymousClass1 implements Runnable {
             public final /* synthetic */ String[] val$tables;
 
@@ -60,7 +60,7 @@ public class MultiInstanceInvalidationClient {
         }
     }
 
-    /* renamed from: androidx.room.MultiInstanceInvalidationClient$2 */
+    /* JADX INFO: renamed from: androidx.room.MultiInstanceInvalidationClient$2 */
     public class ServiceConnectionC05852 implements ServiceConnection {
         public ServiceConnectionC05852() {
         }
@@ -80,7 +80,7 @@ public class MultiInstanceInvalidationClient {
         }
     }
 
-    /* renamed from: androidx.room.MultiInstanceInvalidationClient$3 */
+    /* JADX INFO: renamed from: androidx.room.MultiInstanceInvalidationClient$3 */
     public class RunnableC05863 implements Runnable {
         public RunnableC05863() {
         }
@@ -101,7 +101,7 @@ public class MultiInstanceInvalidationClient {
         }
     }
 
-    /* renamed from: androidx.room.MultiInstanceInvalidationClient$4 */
+    /* JADX INFO: renamed from: androidx.room.MultiInstanceInvalidationClient$4 */
     public class RunnableC05874 implements Runnable {
         public RunnableC05874() {
         }
@@ -113,7 +113,7 @@ public class MultiInstanceInvalidationClient {
         }
     }
 
-    /* renamed from: androidx.room.MultiInstanceInvalidationClient$5 */
+    /* JADX INFO: renamed from: androidx.room.MultiInstanceInvalidationClient$5 */
     public class RunnableC05885 implements Runnable {
         public RunnableC05885() {
         }
@@ -136,7 +136,7 @@ public class MultiInstanceInvalidationClient {
         }
     }
 
-    /* renamed from: androidx.room.MultiInstanceInvalidationClient$6 */
+    /* JADX INFO: renamed from: androidx.room.MultiInstanceInvalidationClient$6 */
     public class C05896 extends InvalidationTracker.Observer {
         public C05896(String[] strArr) {
             super(strArr);

@@ -3,9 +3,9 @@ package com.discord.widgets.stage.sheet;
 import kotlin.jvm.functions.Function0;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetStageRaisedHandsBottomSheet.kt */
-/* renamed from: com.discord.widgets.stage.sheet.WidgetStageRaisedHandsBottomSheet$viewModel$2, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.stage.sheet.WidgetStageRaisedHandsBottomSheet$viewModel$2, reason: use source file name */
+/* JADX INFO: compiled from: WidgetStageRaisedHandsBottomSheet.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetStageRaisedHandsBottomSheet6 extends Lambda implements Function0<WidgetStageRaisedHandsBottomSheetViewModel> {
     public final /* synthetic */ WidgetStageRaisedHandsBottomSheet this$0;
 

@@ -4,12 +4,12 @@ import com.otaliastudios.cameraview.CameraView;
 import p007b.p225i.p226a.p288f.p340n.InterfaceC4361e;
 import p007b.p452o.p453a.CameraView3;
 
-/* compiled from: CameraEngine.java */
-/* renamed from: b.o.a.n.m, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.o.a.n.m, reason: use source file name */
+/* JADX INFO: compiled from: CameraEngine.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class CameraEngine5 implements InterfaceC4361e<Void> {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final /* synthetic */ CameraEngine f13934a;
 
     public CameraEngine5(CameraEngine cameraEngine) {

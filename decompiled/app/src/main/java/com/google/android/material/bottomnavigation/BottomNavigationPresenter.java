@@ -15,11 +15,11 @@ import androidx.appcompat.view.menu.SubMenuBuilder;
 import com.google.android.material.badge.BadgeUtils;
 import com.google.android.material.internal.ParcelableSparseArray;
 
+/* JADX INFO: loaded from: classes3.dex */
 @RestrictTo({RestrictTo.Scope.LIBRARY_GROUP})
-/* loaded from: classes3.dex */
 public class BottomNavigationPresenter implements MenuPresenter {
 
-    /* renamed from: id */
+    /* JADX INFO: renamed from: id */
     private int f20919id;
     private MenuBuilder menu;
     private BottomNavigationMenuView menuView;
@@ -28,14 +28,14 @@ public class BottomNavigationPresenter implements MenuPresenter {
     public static class SavedState implements Parcelable {
         public static final Parcelable.Creator<SavedState> CREATOR = new C10848a();
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public int f20920j;
 
-        /* renamed from: k */
+        /* JADX INFO: renamed from: k */
         @Nullable
         public ParcelableSparseArray f20921k;
 
-        /* renamed from: com.google.android.material.bottomnavigation.BottomNavigationPresenter$SavedState$a */
+        /* JADX INFO: renamed from: com.google.android.material.bottomnavigation.BottomNavigationPresenter$SavedState$a */
         public static class C10848a implements Parcelable.Creator<SavedState> {
             @Override // android.os.Parcelable.Creator
             @NonNull

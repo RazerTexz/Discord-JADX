@@ -4,15 +4,15 @@ import kotlin.jvm.internal.DefaultConstructorMarker;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: NullabilityQualifierWithMigrationStatus.kt */
-/* renamed from: d0.e0.p.d.m0.e.a.l0.i, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.e.a.l0.i, reason: use source file name */
+/* JADX INFO: compiled from: NullabilityQualifierWithMigrationStatus.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class NullabilityQualifierWithMigrationStatus {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final typeQualifiers3 f23464a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final boolean f23465b;
 
     public NullabilityQualifierWithMigrationStatus(typeQualifiers3 typequalifiers3, boolean z2) {
@@ -52,14 +52,17 @@ public final class NullabilityQualifierWithMigrationStatus {
     }
 
     /* JADX WARN: Multi-variable type inference failed */
+    /* JADX WARN: Type inference failed for: r1v1, types: [int] */
+    /* JADX WARN: Type inference failed for: r1v2 */
+    /* JADX WARN: Type inference failed for: r1v3 */
     public int hashCode() {
         int iHashCode = this.f23464a.hashCode() * 31;
         boolean z2 = this.f23465b;
-        int i = z2;
-        if (z2 != 0) {
-            i = 1;
+        ?? r1 = z2;
+        if (z2) {
+            r1 = 1;
         }
-        return iHashCode + i;
+        return iHashCode + r1;
     }
 
     public final boolean isForWarningOnly() {

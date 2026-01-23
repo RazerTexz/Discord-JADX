@@ -12,27 +12,27 @@ jadx.core.utils.exceptions.JadxRuntimeException: Init of enum field 'j' uses ext
 	at jadx.core.dex.visitors.EnumVisitor.visit(EnumVisitor.java:100)
  */
 /* JADX WARN: Failed to restore enum class, 'enum' modifier and super class removed */
-/* compiled from: Gesture.java */
-/* renamed from: b.o.a.q.a, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.o.a.q.a, reason: use source file name */
+/* JADX INFO: compiled from: Gesture.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class Gesture {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static final Gesture f14066j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public static final Gesture f14067k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public static final Gesture f14068l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public static final Gesture f14069m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public static final Gesture f14070n;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public static final /* synthetic */ Gesture[] f14071o;
     private GestureType type;
 
@@ -64,7 +64,7 @@ public final class Gesture {
         return (Gesture[]) f14071o.clone();
     }
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public boolean m7388f(@NonNull GestureAction gestureAction) {
         return gestureAction == GestureAction.f14072j || gestureAction.m7390g() == this.type;
     }

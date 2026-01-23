@@ -3,12 +3,12 @@ package p007b.p225i.p226a.p242c.p256d3;
 import java.util.Comparator;
 import p007b.p225i.p226a.p242c.p256d3.SpannedToHtmlConverter;
 
-/* compiled from: lambda */
-/* renamed from: b.i.a.c.d3.f */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.d3.f */
+/* JADX INFO: compiled from: lambda */
+/* JADX INFO: loaded from: classes3.dex */
 public final /* synthetic */ class C2662f implements Comparator {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static final /* synthetic */ C2662f f6340j = new C2662f();
 
     @Override // java.util.Comparator

@@ -5,9 +5,9 @@ import kotlin.Unit;
 import kotlin.jvm.functions.Function0;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetCreateGuildRoleSubscriptionTier.kt */
-/* renamed from: com.discord.widgets.guild_role_subscriptions.tier.create.WidgetCreateGuildRoleSubscriptionTier$onViewBound$$inlined$apply$lambda$1 */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.guild_role_subscriptions.tier.create.WidgetCreateGuildRoleSubscriptionTier$onViewBound$$inlined$apply$lambda$1 */
+/* JADX INFO: compiled from: WidgetCreateGuildRoleSubscriptionTier.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class C8486x4ace8fa1 extends Lambda implements Function0<Unit> {
     public final /* synthetic */ List $steps$inlined;
     public final /* synthetic */ WidgetCreateGuildRoleSubscriptionTier this$0;
@@ -25,7 +25,7 @@ public final class C8486x4ace8fa1 extends Lambda implements Function0<Unit> {
         return Unit.f27425a;
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final void invoke2() {
         this.this$0.requireActivity().finish();
     }

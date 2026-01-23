@@ -1,6 +1,5 @@
 package p007b.p008a.p062y.p068o0;
 
-import android.content.res.Resources;
 import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -12,12 +11,12 @@ import p007b.p008a.p025i.WidgetDiscoveryStageCardSpeakerBinding;
 import p007b.p008a.p062y.p068o0.SpeakersItem;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: SpeakersViewHolder.kt */
-/* renamed from: b.a.y.o0.a, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: b.a.y.o0.a, reason: use source file name */
+/* JADX INFO: compiled from: SpeakersViewHolder.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class SpeakersViewHolder extends MGRecyclerViewHolder<SpeakersAdapter, SpeakersItem> {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final WidgetDiscoveryStageCardSpeakerBinding f2052a;
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -41,7 +40,7 @@ public final class SpeakersViewHolder extends MGRecyclerViewHolder<SpeakersAdapt
     }
 
     @Override // com.discord.utilities.mg_recycler.MGRecyclerViewHolder
-    public void onConfigure(int i, SpeakersItem speakersItem) throws Resources.NotFoundException {
+    public void onConfigure(int i, SpeakersItem speakersItem) {
         SpeakersItem speakersItem2 = speakersItem;
         Intrinsics3.checkNotNullParameter(speakersItem2, "data");
         super.onConfigure(i, speakersItem2);

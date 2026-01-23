@@ -12,14 +12,14 @@ import p507d0.p580t._Collections;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: overridingUtils.kt */
-/* renamed from: d0.e0.p.d.m0.k.p, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.k.p, reason: use source file name */
+/* JADX INFO: compiled from: overridingUtils.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class overridingUtils {
 
     /* JADX INFO: Add missing generic type declarations: [H] */
-    /* compiled from: overridingUtils.kt */
-    /* renamed from: d0.e0.p.d.m0.k.p$a */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.k.p$a */
+    /* JADX INFO: compiled from: overridingUtils.kt */
     public static final class a<H> extends Lambda implements Function1<H, Unit> {
         public final /* synthetic */ SmartSet<H> $conflictedHandles;
 
@@ -36,7 +36,7 @@ public final class overridingUtils {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(H h) {
             SmartSet<H> smartSet = this.$conflictedHandles;
             Intrinsics3.checkNotNullExpressionValue(h, "it");

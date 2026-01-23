@@ -2,9 +2,9 @@ package com.discord.widgets.emoji;
 
 import android.view.View;
 
-/* compiled from: WidgetEmojiSheet.kt */
-/* renamed from: com.discord.widgets.emoji.WidgetEmojiSheet$configureFavorite$$inlined$apply$lambda$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.emoji.WidgetEmojiSheet$configureFavorite$$inlined$apply$lambda$1, reason: use source file name */
+/* JADX INFO: compiled from: WidgetEmojiSheet.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetEmojiSheet6 implements View.OnClickListener {
     public final /* synthetic */ boolean $isFavorite$inlined;
     public final /* synthetic */ WidgetEmojiSheet this$0;

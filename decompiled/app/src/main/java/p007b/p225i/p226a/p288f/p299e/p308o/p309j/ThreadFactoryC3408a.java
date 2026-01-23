@@ -5,15 +5,15 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.ThreadFactory;
 import p007b.p085c.p086a.p087a0.AnimatableValueParser;
 
-/* compiled from: com.google.android.gms:play-services-basement@@17.6.0 */
-/* renamed from: b.i.a.f.e.o.j.a */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.e.o.j.a */
+/* JADX INFO: compiled from: com.google.android.gms:play-services-basement@@17.6.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public class ThreadFactoryC3408a implements ThreadFactory {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final String f9602j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final ThreadFactory f9603k = Executors.defaultThreadFactory();
 
     public ThreadFactoryC3408a(@RecentlyNonNull String str) {

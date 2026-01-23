@@ -6,9 +6,9 @@ import kotlin.jvm.functions.Function1;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetServerSettingsRolesAdapter.kt */
-/* renamed from: com.discord.widgets.servers.WidgetServerSettingsRolesAdapter$roleSelectedListener$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.servers.WidgetServerSettingsRolesAdapter$roleSelectedListener$1, reason: use source file name */
+/* JADX INFO: compiled from: WidgetServerSettingsRolesAdapter.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetServerSettingsRolesAdapter8 extends Lambda implements Function1<GuildRole, Unit> {
     public static final WidgetServerSettingsRolesAdapter8 INSTANCE = new WidgetServerSettingsRolesAdapter8();
 
@@ -22,7 +22,7 @@ public final class WidgetServerSettingsRolesAdapter8 extends Lambda implements F
         return Unit.f27425a;
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final void invoke2(GuildRole guildRole) {
         Intrinsics3.checkNotNullParameter(guildRole, "it");
     }

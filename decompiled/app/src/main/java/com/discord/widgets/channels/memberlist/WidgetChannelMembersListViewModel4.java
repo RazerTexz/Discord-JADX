@@ -3,9 +3,9 @@ package com.discord.widgets.channels.memberlist;
 import com.discord.widgets.channels.memberlist.WidgetChannelMembersListViewModel;
 import com.discord.widgets.channels.memberlist.adapter.ChannelMembersListAdapter;
 
-/* compiled from: WidgetChannelMembersListViewModel.kt */
-/* renamed from: com.discord.widgets.channels.memberlist.WidgetChannelMembersListViewModel$MemberList$Companion$EMPTY$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.channels.memberlist.WidgetChannelMembersListViewModel$MemberList$Companion$EMPTY$1, reason: use source file name */
+/* JADX INFO: compiled from: WidgetChannelMembersListViewModel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetChannelMembersListViewModel4 implements WidgetChannelMembersListViewModel.MemberList {
     private final String listId = "";
     private final int size;

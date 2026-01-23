@@ -9,19 +9,19 @@ import okhttp3.ResponseBody;
 import p630i0.Converter2;
 import p630i0.p636f0.Streaming;
 
-/* compiled from: BuiltInConverters.java */
-/* renamed from: i0.c, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: i0.c, reason: use source file name */
+/* JADX INFO: compiled from: BuiltInConverters.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class BuiltInConverters extends Converter2.a {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public boolean f26483a = true;
 
-    /* compiled from: BuiltInConverters.java */
-    /* renamed from: i0.c$a */
+    /* JADX INFO: renamed from: i0.c$a */
+    /* JADX INFO: compiled from: BuiltInConverters.java */
     public static final class a implements Converter2<ResponseBody, ResponseBody> {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public static final a f26484a = new a();
 
         @Override // p630i0.Converter2
@@ -35,11 +35,11 @@ public final class BuiltInConverters extends Converter2.a {
         }
     }
 
-    /* compiled from: BuiltInConverters.java */
-    /* renamed from: i0.c$b */
+    /* JADX INFO: renamed from: i0.c$b */
+    /* JADX INFO: compiled from: BuiltInConverters.java */
     public static final class b implements Converter2<RequestBody, RequestBody> {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public static final b f26485a = new b();
 
         @Override // p630i0.Converter2
@@ -48,11 +48,11 @@ public final class BuiltInConverters extends Converter2.a {
         }
     }
 
-    /* compiled from: BuiltInConverters.java */
-    /* renamed from: i0.c$c */
+    /* JADX INFO: renamed from: i0.c$c */
+    /* JADX INFO: compiled from: BuiltInConverters.java */
     public static final class c implements Converter2<ResponseBody, ResponseBody> {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public static final c f26486a = new c();
 
         @Override // p630i0.Converter2
@@ -61,11 +61,11 @@ public final class BuiltInConverters extends Converter2.a {
         }
     }
 
-    /* compiled from: BuiltInConverters.java */
-    /* renamed from: i0.c$d */
+    /* JADX INFO: renamed from: i0.c$d */
+    /* JADX INFO: compiled from: BuiltInConverters.java */
     public static final class d implements Converter2<Object, String> {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public static final d f26487a = new d();
 
         @Override // p630i0.Converter2
@@ -74,11 +74,11 @@ public final class BuiltInConverters extends Converter2.a {
         }
     }
 
-    /* compiled from: BuiltInConverters.java */
-    /* renamed from: i0.c$e */
+    /* JADX INFO: renamed from: i0.c$e */
+    /* JADX INFO: compiled from: BuiltInConverters.java */
     public static final class e implements Converter2<ResponseBody, Unit> {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public static final e f26488a = new e();
 
         @Override // p630i0.Converter2
@@ -88,11 +88,11 @@ public final class BuiltInConverters extends Converter2.a {
         }
     }
 
-    /* compiled from: BuiltInConverters.java */
-    /* renamed from: i0.c$f */
+    /* JADX INFO: renamed from: i0.c$f */
+    /* JADX INFO: compiled from: BuiltInConverters.java */
     public static final class f implements Converter2<ResponseBody, Void> {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public static final f f26489a = new f();
 
         @Override // p630i0.Converter2

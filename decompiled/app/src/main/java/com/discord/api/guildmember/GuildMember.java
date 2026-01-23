@@ -9,8 +9,8 @@ import java.util.Objects;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: GuildMember.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: GuildMember.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class GuildMember {
     private final String avatar;
     private final String banner;
@@ -44,7 +44,7 @@ public final /* data */ class GuildMember {
         this.communicationDisabledUntil = utcDateTime2;
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static GuildMember m7915a(GuildMember guildMember, long j, User user, List list, String str, String str2, UtcDateTime utcDateTime, boolean z2, Presence presence, Long l, String str3, String str4, String str5, UtcDateTime utcDateTime2, int i) {
         long j2 = (i & 1) != 0 ? guildMember.guildId : j;
         User user2 = (i & 2) != 0 ? guildMember.user : user;
@@ -65,22 +65,22 @@ public final /* data */ class GuildMember {
         return new GuildMember(j2, user2, list2, str6, str7, utcDateTime3, z3, presence2, l2, str8, str9, str10, utcDateTime4);
     }
 
-    /* renamed from: b, reason: from getter */
+    /* JADX INFO: renamed from: b, reason: from getter */
     public final String getAvatar() {
         return this.avatar;
     }
 
-    /* renamed from: c, reason: from getter */
+    /* JADX INFO: renamed from: c, reason: from getter */
     public final String getBanner() {
         return this.banner;
     }
 
-    /* renamed from: d, reason: from getter */
+    /* JADX INFO: renamed from: d, reason: from getter */
     public final String getBio() {
         return this.bio;
     }
 
-    /* renamed from: e, reason: from getter */
+    /* JADX INFO: renamed from: e, reason: from getter */
     public final UtcDateTime getCommunicationDisabledUntil() {
         return this.communicationDisabledUntil;
     }
@@ -96,22 +96,25 @@ public final /* data */ class GuildMember {
         return this.guildId == guildMember.guildId && Intrinsics3.areEqual(this.user, guildMember.user) && Intrinsics3.areEqual(this.roles, guildMember.roles) && Intrinsics3.areEqual(this.nick, guildMember.nick) && Intrinsics3.areEqual(this.premiumSince, guildMember.premiumSince) && Intrinsics3.areEqual(this.joinedAt, guildMember.joinedAt) && this.pending == guildMember.pending && Intrinsics3.areEqual(this.presence, guildMember.presence) && Intrinsics3.areEqual(this.userId, guildMember.userId) && Intrinsics3.areEqual(this.avatar, guildMember.avatar) && Intrinsics3.areEqual(this.bio, guildMember.bio) && Intrinsics3.areEqual(this.banner, guildMember.banner) && Intrinsics3.areEqual(this.communicationDisabledUntil, guildMember.communicationDisabledUntil);
     }
 
-    /* renamed from: f, reason: from getter */
+    /* JADX INFO: renamed from: f, reason: from getter */
     public final long getGuildId() {
         return this.guildId;
     }
 
-    /* renamed from: g, reason: from getter */
+    /* JADX INFO: renamed from: g, reason: from getter */
     public final UtcDateTime getJoinedAt() {
         return this.joinedAt;
     }
 
-    /* renamed from: h, reason: from getter */
+    /* JADX INFO: renamed from: h, reason: from getter */
     public final String getNick() {
         return this.nick;
     }
 
     /* JADX WARN: Multi-variable type inference failed */
+    /* JADX WARN: Type inference failed for: r0v18, types: [int] */
+    /* JADX WARN: Type inference failed for: r0v40 */
+    /* JADX WARN: Type inference failed for: r0v46 */
     public int hashCode() {
         long j = this.guildId;
         int i = ((int) (j ^ (j >>> 32))) * 31;
@@ -126,13 +129,13 @@ public final /* data */ class GuildMember {
         UtcDateTime utcDateTime = this.joinedAt;
         int iHashCode5 = (iHashCode4 + (utcDateTime != null ? utcDateTime.hashCode() : 0)) * 31;
         boolean z2 = this.pending;
-        int i2 = z2;
-        if (z2 != 0) {
-            i2 = 1;
+        ?? r0 = z2;
+        if (z2) {
+            r0 = 1;
         }
-        int i3 = (iHashCode5 + i2) * 31;
+        int i2 = (iHashCode5 + r0) * 31;
         Presence presence = this.presence;
-        int iHashCode6 = (i3 + (presence != null ? presence.hashCode() : 0)) * 31;
+        int iHashCode6 = (i2 + (presence != null ? presence.hashCode() : 0)) * 31;
         Long l = this.userId;
         int iHashCode7 = (iHashCode6 + (l != null ? l.hashCode() : 0)) * 31;
         String str3 = this.avatar;
@@ -145,32 +148,32 @@ public final /* data */ class GuildMember {
         return iHashCode10 + (utcDateTime2 != null ? utcDateTime2.hashCode() : 0);
     }
 
-    /* renamed from: i, reason: from getter */
+    /* JADX INFO: renamed from: i, reason: from getter */
     public final boolean getPending() {
         return this.pending;
     }
 
-    /* renamed from: j, reason: from getter */
+    /* JADX INFO: renamed from: j, reason: from getter */
     public final String getPremiumSince() {
         return this.premiumSince;
     }
 
-    /* renamed from: k, reason: from getter */
+    /* JADX INFO: renamed from: k, reason: from getter */
     public final Presence getPresence() {
         return this.presence;
     }
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final List<Long> m7926l() {
         return this.roles;
     }
 
-    /* renamed from: m, reason: from getter */
+    /* JADX INFO: renamed from: m, reason: from getter */
     public final User getUser() {
         return this.user;
     }
 
-    /* renamed from: n, reason: from getter */
+    /* JADX INFO: renamed from: n, reason: from getter */
     public final Long getUserId() {
         return this.userId;
     }

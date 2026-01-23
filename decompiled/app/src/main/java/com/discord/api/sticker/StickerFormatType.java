@@ -2,8 +2,8 @@ package com.discord.api.sticker;
 
 import kotlin.jvm.internal.DefaultConstructorMarker;
 
-/* compiled from: StickerFormatType.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: StickerFormatType.kt */
+/* JADX INFO: loaded from: classes.dex */
 public enum StickerFormatType {
     UNKNOWN(-1),
     PNG(1),
@@ -11,16 +11,16 @@ public enum StickerFormatType {
     LOTTIE(3);
 
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private final int apiValue;
 
-    /* compiled from: StickerFormatType.kt */
+    /* JADX INFO: compiled from: StickerFormatType.kt */
     public static final class Companion {
         public Companion() {
         }
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final StickerFormatType m8242a(int i) {
             StickerFormatType stickerFormatType;
             StickerFormatType[] stickerFormatTypeArrValues = StickerFormatType.values();

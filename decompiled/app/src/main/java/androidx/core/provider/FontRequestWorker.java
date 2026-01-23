@@ -17,7 +17,7 @@ import java.util.concurrent.Callable;
 import java.util.concurrent.Executor;
 import java.util.concurrent.ExecutorService;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class FontRequestWorker {
     public static final LruCache<String, Typeface> sTypefaceCache = new LruCache<>(16);
     private static final ExecutorService DEFAULT_EXECUTOR_SERVICE = RequestExecutor.createDefaultExecutor("fonts-androidx", 10, 10000);
@@ -26,7 +26,7 @@ public class FontRequestWorker {
     @GuardedBy("LOCK")
     public static final SimpleArrayMap<String, ArrayList<Consumer<TypefaceResult>>> PENDING_REPLIES = new SimpleArrayMap<>();
 
-    /* renamed from: androidx.core.provider.FontRequestWorker$1 */
+    /* JADX INFO: renamed from: androidx.core.provider.FontRequestWorker$1 */
     public class CallableC02481 implements Callable<TypefaceResult> {
         public final /* synthetic */ Context val$context;
         public final /* synthetic */ String val$id;
@@ -52,7 +52,7 @@ public class FontRequestWorker {
         }
     }
 
-    /* renamed from: androidx.core.provider.FontRequestWorker$2 */
+    /* JADX INFO: renamed from: androidx.core.provider.FontRequestWorker$2 */
     public class C02492 implements Consumer<TypefaceResult> {
         public final /* synthetic */ CallbackWithHandler val$callback;
 
@@ -65,13 +65,13 @@ public class FontRequestWorker {
             accept2(typefaceResult);
         }
 
-        /* renamed from: accept, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: accept, reason: avoid collision after fix types in other method */
         public void accept2(TypefaceResult typefaceResult) {
             this.val$callback.onTypefaceResult(typefaceResult);
         }
     }
 
-    /* renamed from: androidx.core.provider.FontRequestWorker$3 */
+    /* JADX INFO: renamed from: androidx.core.provider.FontRequestWorker$3 */
     public class CallableC02503 implements Callable<TypefaceResult> {
         public final /* synthetic */ Context val$context;
         public final /* synthetic */ String val$id;
@@ -97,7 +97,7 @@ public class FontRequestWorker {
         }
     }
 
-    /* renamed from: androidx.core.provider.FontRequestWorker$4 */
+    /* JADX INFO: renamed from: androidx.core.provider.FontRequestWorker$4 */
     public class C02514 implements Consumer<TypefaceResult> {
         public final /* synthetic */ String val$id;
 
@@ -110,7 +110,7 @@ public class FontRequestWorker {
             accept2(typefaceResult);
         }
 
-        /* renamed from: accept, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: accept, reason: avoid collision after fix types in other method */
         public void accept2(TypefaceResult typefaceResult) {
             synchronized (FontRequestWorker.LOCK) {
                 SimpleArrayMap<String, ArrayList<Consumer<TypefaceResult>>> simpleArrayMap = FontRequestWorker.PENDING_REPLIES;

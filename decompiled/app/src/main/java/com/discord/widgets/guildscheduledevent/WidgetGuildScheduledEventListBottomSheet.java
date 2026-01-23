@@ -44,29 +44,29 @@ import p507d0.p592z.p594d.FunctionReferenceImpl;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Reflection2;
 
-/* compiled from: WidgetGuildScheduledEventListBottomSheet.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetGuildScheduledEventListBottomSheet.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetGuildScheduledEventListBottomSheet extends AppBottomSheet {
     public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetGuildScheduledEventListBottomSheet.class, "binding", "getBinding()Lcom/discord/databinding/WidgetGuildScheduledEventListBottomSheetBinding;", 0)};
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private GuildScheduledEventListAdapter adapter;
 
-    /* renamed from: binding$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
 
-    /* renamed from: channelId$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: channelId$delegate, reason: from kotlin metadata */
     private final Lazy channelId;
 
-    /* renamed from: guildId$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: guildId$delegate, reason: from kotlin metadata */
     private final Lazy guildId;
     private final ActivityResultLauncher<Intent> previewLauncher;
 
-    /* renamed from: viewModel$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: viewModel$delegate, reason: from kotlin metadata */
     private final Lazy viewModel;
 
-    /* compiled from: WidgetGuildScheduledEventListBottomSheet.kt */
+    /* JADX INFO: compiled from: WidgetGuildScheduledEventListBottomSheet.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -94,8 +94,8 @@ public final class WidgetGuildScheduledEventListBottomSheet extends AppBottomShe
         }
     }
 
-    /* compiled from: WidgetGuildScheduledEventListBottomSheet.kt */
-    /* renamed from: com.discord.widgets.guildscheduledevent.WidgetGuildScheduledEventListBottomSheet$onResume$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.guildscheduledevent.WidgetGuildScheduledEventListBottomSheet$onResume$1 */
+    /* JADX INFO: compiled from: WidgetGuildScheduledEventListBottomSheet.kt */
     public static final /* synthetic */ class C88861 extends FunctionReferenceImpl implements Function1<GuildScheduledEventListViewModel.ViewState, Unit> {
         public C88861(WidgetGuildScheduledEventListBottomSheet widgetGuildScheduledEventListBottomSheet) {
             super(1, widgetGuildScheduledEventListBottomSheet, WidgetGuildScheduledEventListBottomSheet.class, "configureUi", "configureUi(Lcom/discord/widgets/guildscheduledevent/GuildScheduledEventListViewModel$ViewState;)V", 0);
@@ -107,15 +107,15 @@ public final class WidgetGuildScheduledEventListBottomSheet extends AppBottomShe
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(GuildScheduledEventListViewModel.ViewState viewState) {
             Intrinsics3.checkNotNullParameter(viewState, "p1");
             WidgetGuildScheduledEventListBottomSheet.access$configureUi((WidgetGuildScheduledEventListBottomSheet) this.receiver, viewState);
         }
     }
 
-    /* compiled from: WidgetGuildScheduledEventListBottomSheet.kt */
-    /* renamed from: com.discord.widgets.guildscheduledevent.WidgetGuildScheduledEventListBottomSheet$onViewCreated$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.guildscheduledevent.WidgetGuildScheduledEventListBottomSheet$onViewCreated$1 */
+    /* JADX INFO: compiled from: WidgetGuildScheduledEventListBottomSheet.kt */
     public static final /* synthetic */ class C88871 extends FunctionReferenceImpl implements Function1<GuildScheduledEventListItem.Event, Unit> {
         public C88871(WidgetGuildScheduledEventListBottomSheet widgetGuildScheduledEventListBottomSheet) {
             super(1, widgetGuildScheduledEventListBottomSheet, WidgetGuildScheduledEventListBottomSheet.class, "onEventCardClicked", "onEventCardClicked(Lcom/discord/widgets/guildscheduledevent/GuildScheduledEventListItem$Event;)V", 0);
@@ -127,15 +127,15 @@ public final class WidgetGuildScheduledEventListBottomSheet extends AppBottomShe
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(GuildScheduledEventListItem.Event event) {
             Intrinsics3.checkNotNullParameter(event, "p1");
             WidgetGuildScheduledEventListBottomSheet.access$onEventCardClicked((WidgetGuildScheduledEventListBottomSheet) this.receiver, event);
         }
     }
 
-    /* compiled from: WidgetGuildScheduledEventListBottomSheet.kt */
-    /* renamed from: com.discord.widgets.guildscheduledevent.WidgetGuildScheduledEventListBottomSheet$onViewCreated$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.guildscheduledevent.WidgetGuildScheduledEventListBottomSheet$onViewCreated$2 */
+    /* JADX INFO: compiled from: WidgetGuildScheduledEventListBottomSheet.kt */
     public static final /* synthetic */ class C88882 extends FunctionReferenceImpl implements Function1<GuildScheduledEventListItem.Event, Unit> {
         public C88882(WidgetGuildScheduledEventListBottomSheet widgetGuildScheduledEventListBottomSheet) {
             super(1, widgetGuildScheduledEventListBottomSheet, WidgetGuildScheduledEventListBottomSheet.class, "onRsvpClicked", "onRsvpClicked(Lcom/discord/widgets/guildscheduledevent/GuildScheduledEventListItem$Event;)V", 0);
@@ -147,15 +147,15 @@ public final class WidgetGuildScheduledEventListBottomSheet extends AppBottomShe
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(GuildScheduledEventListItem.Event event) {
             Intrinsics3.checkNotNullParameter(event, "p1");
             WidgetGuildScheduledEventListBottomSheet.access$onRsvpClicked((WidgetGuildScheduledEventListBottomSheet) this.receiver, event);
         }
     }
 
-    /* compiled from: WidgetGuildScheduledEventListBottomSheet.kt */
-    /* renamed from: com.discord.widgets.guildscheduledevent.WidgetGuildScheduledEventListBottomSheet$onViewCreated$3 */
+    /* JADX INFO: renamed from: com.discord.widgets.guildscheduledevent.WidgetGuildScheduledEventListBottomSheet$onViewCreated$3 */
+    /* JADX INFO: compiled from: WidgetGuildScheduledEventListBottomSheet.kt */
     public static final /* synthetic */ class C88893 extends FunctionReferenceImpl implements Function1<GuildScheduledEventListItem.Event, Unit> {
         public C88893(WidgetGuildScheduledEventListBottomSheet widgetGuildScheduledEventListBottomSheet) {
             super(1, widgetGuildScheduledEventListBottomSheet, WidgetGuildScheduledEventListBottomSheet.class, "onEventStartClicked", "onEventStartClicked(Lcom/discord/widgets/guildscheduledevent/GuildScheduledEventListItem$Event;)V", 0);
@@ -167,15 +167,15 @@ public final class WidgetGuildScheduledEventListBottomSheet extends AppBottomShe
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(GuildScheduledEventListItem.Event event) {
             Intrinsics3.checkNotNullParameter(event, "p1");
             WidgetGuildScheduledEventListBottomSheet.access$onEventStartClicked((WidgetGuildScheduledEventListBottomSheet) this.receiver, event);
         }
     }
 
-    /* compiled from: WidgetGuildScheduledEventListBottomSheet.kt */
-    /* renamed from: com.discord.widgets.guildscheduledevent.WidgetGuildScheduledEventListBottomSheet$onViewCreated$4 */
+    /* JADX INFO: renamed from: com.discord.widgets.guildscheduledevent.WidgetGuildScheduledEventListBottomSheet$onViewCreated$4 */
+    /* JADX INFO: compiled from: WidgetGuildScheduledEventListBottomSheet.kt */
     public static final /* synthetic */ class C88904 extends FunctionReferenceImpl implements Function1<GuildScheduledEventListItem.Event, Unit> {
         public C88904(WidgetGuildScheduledEventListBottomSheet widgetGuildScheduledEventListBottomSheet) {
             super(1, widgetGuildScheduledEventListBottomSheet, WidgetGuildScheduledEventListBottomSheet.class, "onJoinClicked", "onJoinClicked(Lcom/discord/widgets/guildscheduledevent/GuildScheduledEventListItem$Event;)V", 0);
@@ -187,15 +187,15 @@ public final class WidgetGuildScheduledEventListBottomSheet extends AppBottomShe
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(GuildScheduledEventListItem.Event event) {
             Intrinsics3.checkNotNullParameter(event, "p1");
             WidgetGuildScheduledEventListBottomSheet.access$onJoinClicked((WidgetGuildScheduledEventListBottomSheet) this.receiver, event);
         }
     }
 
-    /* compiled from: WidgetGuildScheduledEventListBottomSheet.kt */
-    /* renamed from: com.discord.widgets.guildscheduledevent.WidgetGuildScheduledEventListBottomSheet$onViewCreated$5 */
+    /* JADX INFO: renamed from: com.discord.widgets.guildscheduledevent.WidgetGuildScheduledEventListBottomSheet$onViewCreated$5 */
+    /* JADX INFO: compiled from: WidgetGuildScheduledEventListBottomSheet.kt */
     public static final /* synthetic */ class C88915 extends FunctionReferenceImpl implements Function1<GuildScheduledEventListItem.Event, Unit> {
         public C88915(WidgetGuildScheduledEventListBottomSheet widgetGuildScheduledEventListBottomSheet) {
             super(1, widgetGuildScheduledEventListBottomSheet, WidgetGuildScheduledEventListBottomSheet.class, "onShareClicked", "onShareClicked(Lcom/discord/widgets/guildscheduledevent/GuildScheduledEventListItem$Event;)V", 0);
@@ -207,15 +207,15 @@ public final class WidgetGuildScheduledEventListBottomSheet extends AppBottomShe
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(GuildScheduledEventListItem.Event event) {
             Intrinsics3.checkNotNullParameter(event, "p1");
             WidgetGuildScheduledEventListBottomSheet.access$onShareClicked((WidgetGuildScheduledEventListBottomSheet) this.receiver, event);
         }
     }
 
-    /* compiled from: WidgetGuildScheduledEventListBottomSheet.kt */
-    /* renamed from: com.discord.widgets.guildscheduledevent.WidgetGuildScheduledEventListBottomSheet$onViewCreated$7 */
+    /* JADX INFO: renamed from: com.discord.widgets.guildscheduledevent.WidgetGuildScheduledEventListBottomSheet$onViewCreated$7 */
+    /* JADX INFO: compiled from: WidgetGuildScheduledEventListBottomSheet.kt */
     public static final class ViewOnClickListenerC88927 implements View.OnClickListener {
         public ViewOnClickListenerC88927() {
         }

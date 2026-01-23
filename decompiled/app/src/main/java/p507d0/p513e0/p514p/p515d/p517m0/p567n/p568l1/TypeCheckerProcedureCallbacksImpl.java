@@ -2,11 +2,11 @@ package p507d0.p513e0.p514p.p515d.p517m0.p567n.p568l1;
 
 import p507d0.p513e0.p514p.p515d.p517m0.p567n.TypeConstructor;
 
-/* compiled from: TypeCheckerProcedureCallbacksImpl.java */
-/* renamed from: d0.e0.p.d.m0.n.l1.s, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.n.l1.s, reason: use source file name */
+/* JADX INFO: compiled from: TypeCheckerProcedureCallbacksImpl.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class TypeCheckerProcedureCallbacksImpl implements TypeCheckingProcedureCallbacks {
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static /* synthetic */ void m10013a(int i) {
         Object[] objArr = new Object[3];
         switch (i) {

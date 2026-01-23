@@ -4,33 +4,33 @@ import com.discord.simpleast.core.node.StyleNode;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: CodeStyleProviders.kt */
-/* renamed from: b.a.t.a.f, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.a.t.a.f, reason: use source file name */
+/* JADX INFO: compiled from: CodeStyleProviders.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class CodeStyleProviders<R> {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final StyleNode.InterfaceC5656a<R> f1906a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final StyleNode.InterfaceC5656a<R> f1907b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final StyleNode.InterfaceC5656a<R> f1908c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final StyleNode.InterfaceC5656a<R> f1909d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final StyleNode.InterfaceC5656a<R> f1910e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final StyleNode.InterfaceC5656a<R> f1911f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public final StyleNode.InterfaceC5656a<R> f1912g;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public final StyleNode.InterfaceC5656a<R> f1913h;
 
     public CodeStyleProviders(StyleNode.InterfaceC5656a<R> interfaceC5656a, StyleNode.InterfaceC5656a<R> interfaceC5656a2, StyleNode.InterfaceC5656a<R> interfaceC5656a3, StyleNode.InterfaceC5656a<R> interfaceC5656a4, StyleNode.InterfaceC5656a<R> interfaceC5656a5, StyleNode.InterfaceC5656a<R> interfaceC5656a6, StyleNode.InterfaceC5656a<R> interfaceC5656a7, StyleNode.InterfaceC5656a<R> interfaceC5656a8) {

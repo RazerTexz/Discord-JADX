@@ -3,9 +3,9 @@ package com.discord.widgets.guilds.contextmenu;
 import android.view.View;
 import androidx.fragment.app.FragmentActivity;
 
-/* compiled from: WidgetGuildContextMenu.kt */
-/* renamed from: com.discord.widgets.guilds.contextmenu.WidgetGuildContextMenu$Companion$show$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.guilds.contextmenu.WidgetGuildContextMenu$Companion$show$1, reason: use source file name */
+/* JADX INFO: compiled from: WidgetGuildContextMenu.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetGuildContextMenu2 implements View.OnClickListener {
     public final /* synthetic */ FragmentActivity $activity;
 

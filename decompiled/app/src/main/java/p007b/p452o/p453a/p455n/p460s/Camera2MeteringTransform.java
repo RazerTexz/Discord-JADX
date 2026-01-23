@@ -16,31 +16,31 @@ import p007b.p452o.p453a.p469t.MeteringTransform;
 import p007b.p452o.p453a.p473x.AspectRatio2;
 import p007b.p452o.p453a.p473x.Size3;
 
-/* compiled from: Camera2MeteringTransform.java */
+/* JADX INFO: renamed from: b.o.a.n.s.b, reason: use source file name */
+/* JADX INFO: compiled from: Camera2MeteringTransform.java */
+/* JADX INFO: loaded from: classes3.dex */
 @RequiresApi(21)
-/* renamed from: b.o.a.n.s.b, reason: use source file name */
-/* loaded from: classes3.dex */
 public class Camera2MeteringTransform implements MeteringTransform<MeteringRectangle> {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final CameraLogger f13988a = new CameraLogger(Camera2MeteringTransform.class.getSimpleName());
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final Angles f13989b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final Size3 f13990c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final Size3 f13991d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final boolean f13992e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final CameraCharacteristics f13993f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public final CaptureRequest.Builder f13994g;
 
     public Camera2MeteringTransform(@NonNull Angles angles, @NonNull Size3 size3, @NonNull Size3 size32, boolean z2, @NonNull CameraCharacteristics cameraCharacteristics, @NonNull CaptureRequest.Builder builder) {
@@ -54,7 +54,7 @@ public class Camera2MeteringTransform implements MeteringTransform<MeteringRecta
 
     @Override // p007b.p452o.p453a.p469t.MeteringTransform
     @NonNull
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public MeteringRectangle mo7354a(@NonNull RectF rectF, int i) {
         Rect rect = new Rect();
         rectF.round(rect);
@@ -63,7 +63,7 @@ public class Camera2MeteringTransform implements MeteringTransform<MeteringRecta
 
     @Override // p007b.p452o.p453a.p469t.MeteringTransform
     @NonNull
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public PointF mo7355b(@NonNull PointF pointF) {
         PointF pointF2 = new PointF(pointF.x, pointF.y);
         Size3 size3 = this.f13990c;

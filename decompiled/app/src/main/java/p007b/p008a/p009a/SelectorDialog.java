@@ -1,6 +1,5 @@
 package p007b.p008a.p009a;
 
-import android.content.res.Resources;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -31,30 +30,30 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 import p507d0.p592z.p594d.Reflection2;
 
-/* compiled from: SelectorDialog.kt */
-/* renamed from: b.a.a.n, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.a.a.n, reason: use source file name */
+/* JADX INFO: compiled from: SelectorDialog.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class SelectorDialog extends AppDialog {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static final /* synthetic */ KProperty[] f410j = {outline.m846d0(SelectorDialog.class, "binding", "getBinding()Lcom/discord/databinding/DialogSimpleSelectorBinding;", 0)};
 
-    /* renamed from: k, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: k, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
 
-    /* renamed from: l, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: l, reason: from kotlin metadata */
     public Function1<? super Integer, Unit> onSelectedListener;
 
-    /* renamed from: m, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: m, reason: from kotlin metadata */
     public final FragmentViewBindingDelegate binding;
 
-    /* compiled from: SelectorDialog.kt */
-    /* renamed from: b.a.a.n$a, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: b.a.a.n$a, reason: from kotlin metadata */
+    /* JADX INFO: compiled from: SelectorDialog.kt */
     public static final class Companion {
         public Companion(DefaultConstructorMarker defaultConstructorMarker) {
         }
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final SelectorDialog m142a(FragmentManager fragmentManager, CharSequence charSequence, CharSequence[] charSequenceArr, Function1<? super Integer, Unit> function1) {
             Intrinsics3.checkNotNullParameter(fragmentManager, "fragmentManager");
             Intrinsics3.checkNotNullParameter(charSequence, "title");
@@ -71,14 +70,14 @@ public final class SelectorDialog extends AppDialog {
         }
     }
 
-    /* compiled from: SelectorDialog.kt */
-    /* renamed from: b.a.a.n$b */
+    /* JADX INFO: renamed from: b.a.a.n$b */
+    /* JADX INFO: compiled from: SelectorDialog.kt */
     public final class b extends SimpleRecyclerAdapter.ViewHolder<CharSequence> {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final DialogSimpleSelectorItemBinding f414a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final /* synthetic */ SelectorDialog f415b;
 
         /* JADX WARN: Illegal instructions before constructor call */
@@ -102,11 +101,11 @@ public final class SelectorDialog extends AppDialog {
         }
     }
 
-    /* compiled from: SelectorDialog.kt */
-    /* renamed from: b.a.a.n$c */
+    /* JADX INFO: renamed from: b.a.a.n$c */
+    /* JADX INFO: compiled from: SelectorDialog.kt */
     public static final /* synthetic */ class c extends FunctionReferenceImpl implements Function1<View, DialogSimpleSelectorBinding> {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public static final c f416j = new c();
 
         public c() {
@@ -134,8 +133,8 @@ public final class SelectorDialog extends AppDialog {
         }
     }
 
-    /* compiled from: SelectorDialog.kt */
-    /* renamed from: b.a.a.n$d */
+    /* JADX INFO: renamed from: b.a.a.n$d */
+    /* JADX INFO: compiled from: SelectorDialog.kt */
     public static final class d implements View.OnClickListener {
         public d() {
         }
@@ -146,8 +145,8 @@ public final class SelectorDialog extends AppDialog {
         }
     }
 
-    /* compiled from: SelectorDialog.kt */
-    /* renamed from: b.a.a.n$e */
+    /* JADX INFO: renamed from: b.a.a.n$e */
+    /* JADX INFO: compiled from: SelectorDialog.kt */
     public static final class e extends Lambda implements Function2<LayoutInflater, ViewGroup, b> {
         public e() {
             super(2);
@@ -170,7 +169,7 @@ public final class SelectorDialog extends AppDialog {
         this.binding = FragmentViewBindingDelegate3.viewBinding$default(this, c.f416j, null, 2, null);
     }
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public final DialogSimpleSelectorBinding m141g() {
         return (DialogSimpleSelectorBinding) this.binding.getValue((Fragment) this, f410j[0]);
     }
@@ -182,7 +181,7 @@ public final class SelectorDialog extends AppDialog {
     }
 
     @Override // com.discord.app.AppDialog
-    public void onViewBound(View view) throws Resources.NotFoundException {
+    public void onViewBound(View view) {
         Intrinsics3.checkNotNullParameter(view, "view");
         super.onViewBound(view);
         TextView textView = m141g().f1011d;

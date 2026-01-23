@@ -7,23 +7,23 @@ import com.google.android.gms.common.data.DataHolder;
 import com.google.android.gms.common.internal.safeparcel.AbstractSafeParcelable;
 import p007b.p225i.p226a.p288f.p336k.C4333g;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public class SafeBrowsingData extends AbstractSafeParcelable {
     public static final Parcelable.Creator<SafeBrowsingData> CREATOR = new C4333g();
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public String f20821j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public DataHolder f20822k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public ParcelFileDescriptor f20823l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public long f20824m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public byte[] f20825n;
 
     public SafeBrowsingData() {

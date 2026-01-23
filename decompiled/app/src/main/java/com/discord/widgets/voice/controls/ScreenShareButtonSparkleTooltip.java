@@ -2,8 +2,8 @@ package com.discord.widgets.voice.controls;
 
 import com.discord.tooltips.TooltipManager;
 
-/* compiled from: ScreenShareButtonSparkleTooltip.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: ScreenShareButtonSparkleTooltip.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class ScreenShareButtonSparkleTooltip extends TooltipManager.C6648b {
     public static final ScreenShareButtonSparkleTooltip INSTANCE = new ScreenShareButtonSparkleTooltip();
 

@@ -22,7 +22,7 @@ import org.eclipse.jdt.internal.compiler.ast.TypeDeclaration;
 import org.eclipse.jdt.internal.compiler.ast.TypeReference;
 import org.eclipse.jdt.internal.compiler.parser.Parser;
 
-/* loaded from: discord-126021.apk:lombok/eclipse/TransformEclipseAST.SCL.lombok */
+/* JADX INFO: loaded from: discord-126021.apk:lombok/eclipse/TransformEclipseAST.SCL.lombok */
 public class TransformEclipseAST {
     private final EclipseAST ast;
     private static final Field astCacheField;
@@ -31,12 +31,12 @@ public class TransformEclipseAST {
     private static final HistogramTracker lombokTracker;
     private static Map<CompilationUnitDeclaration, State> transformationStates = Collections.synchronizedMap(new WeakHashMap());
 
-    /* loaded from: discord-126021.apk:lombok/eclipse/TransformEclipseAST$State.SCL.lombok */
+    /* JADX INFO: loaded from: discord-126021.apk:lombok/eclipse/TransformEclipseAST$State.SCL.lombok */
     private enum State {
         DIET,
         FULL;
 
-        /* renamed from: values, reason: to resolve conflict with enum method */
+        /* JADX INFO: renamed from: values, reason: to resolve conflict with enum method */
         public static State[] valuesCustom() {
             State[] stateArrValuesCustom = values();
             int length = stateArrValuesCustom.length;
@@ -162,7 +162,7 @@ public class TransformEclipseAST {
         this.ast = ast;
     }
 
-    /* renamed from: go */
+    /* JADX INFO: renamed from: go */
     public void m10927go() {
         long nextPriority = Long.MIN_VALUE;
         for (Long d : handlers.getPriorities()) {
@@ -175,7 +175,7 @@ public class TransformEclipseAST {
         }
     }
 
-    /* loaded from: discord-126021.apk:lombok/eclipse/TransformEclipseAST$AnnotationVisitor.SCL.lombok */
+    /* JADX INFO: loaded from: discord-126021.apk:lombok/eclipse/TransformEclipseAST$AnnotationVisitor.SCL.lombok */
     private static class AnnotationVisitor extends EclipseASTAdapter {
         private final long priority;
         private long nextPriority = RecyclerView.FOREVER_NS;

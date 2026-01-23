@@ -2,7 +2,7 @@ package com.google.android.material.shape;
 
 import androidx.annotation.NonNull;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public class RoundedCornerTreatment extends CornerTreatment {
     public float radius;
 

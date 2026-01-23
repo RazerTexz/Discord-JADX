@@ -4,8 +4,8 @@ import android.os.Handler;
 import android.os.Looper;
 import android.os.Message;
 
-/* renamed from: b.i.a.f.h.j.e1 */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.h.j.e1 */
+/* JADX INFO: loaded from: classes3.dex */
 public class HandlerC3511e1 extends Handler {
     public HandlerC3511e1() {
     }

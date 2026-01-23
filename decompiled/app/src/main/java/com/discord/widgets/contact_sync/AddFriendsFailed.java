@@ -18,19 +18,19 @@ import p007b.p008a.p027k.FormatUtils;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: AddFriendsFailed.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: AddFriendsFailed.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class AddFriendsFailed extends AppDialog {
     public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(AddFriendsFailed.class, "binding", "getBinding()Lcom/discord/databinding/ViewDialogConfirmationBinding;", 0)};
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
 
-    /* renamed from: binding$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
     private Function0<Unit> onClose;
 
-    /* compiled from: AddFriendsFailed.kt */
+    /* JADX INFO: compiled from: AddFriendsFailed.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -47,8 +47,8 @@ public final class AddFriendsFailed extends AppDialog {
         }
     }
 
-    /* compiled from: AddFriendsFailed.kt */
-    /* renamed from: com.discord.widgets.contact_sync.AddFriendsFailed$onViewBound$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.contact_sync.AddFriendsFailed$onViewBound$1 */
+    /* JADX INFO: compiled from: AddFriendsFailed.kt */
     public static final class ViewOnClickListenerC82051 implements View.OnClickListener {
         public ViewOnClickListenerC82051() {
         }

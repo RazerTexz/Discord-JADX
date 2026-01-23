@@ -4,8 +4,8 @@ import com.discord.api.channel.Channel;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ChannelListItemDirectory.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: ChannelListItemDirectory.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final /* data */ class ChannelListItemDirectory implements ChannelListItem {
     private final Channel channel;
     private final String key;
@@ -38,17 +38,17 @@ public final /* data */ class ChannelListItemDirectory implements ChannelListIte
         return channelListItemDirectory.copy(channel, z2, i);
     }
 
-    /* renamed from: component1, reason: from getter */
+    /* JADX INFO: renamed from: component1, reason: from getter */
     public final Channel getChannel() {
         return this.channel;
     }
 
-    /* renamed from: component2, reason: from getter */
+    /* JADX INFO: renamed from: component2, reason: from getter */
     public final boolean getSelected() {
         return this.selected;
     }
 
-    /* renamed from: component3, reason: from getter */
+    /* JADX INFO: renamed from: component3, reason: from getter */
     public final int getUnreadCount() {
         return this.unreadCount;
     }
@@ -92,15 +92,18 @@ public final /* data */ class ChannelListItemDirectory implements ChannelListIte
     }
 
     /* JADX WARN: Multi-variable type inference failed */
+    /* JADX WARN: Type inference failed for: r1v1, types: [int] */
+    /* JADX WARN: Type inference failed for: r1v3 */
+    /* JADX WARN: Type inference failed for: r1v4 */
     public int hashCode() {
         Channel channel = this.channel;
         int iHashCode = (channel != null ? channel.hashCode() : 0) * 31;
         boolean z2 = this.selected;
-        int i = z2;
-        if (z2 != 0) {
-            i = 1;
+        ?? r1 = z2;
+        if (z2) {
+            r1 = 1;
         }
-        return ((iHashCode + i) * 31) + this.unreadCount;
+        return ((iHashCode + r1) * 31) + this.unreadCount;
     }
 
     public String toString() {

@@ -35,11 +35,11 @@ import p507d0.p592z.p594d.Lambda;
 import p637j0.p641k.Func1;
 import p658rx.Observable;
 
-/* compiled from: StoreGifPicker.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: StoreGifPicker.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class StoreGifPicker extends StoreV2 {
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private static final List<ModelGif> searchResultsLoadingList = Collections2.emptyList();
     private static final List<String> searchTermsLoadingList = Collections2.emptyList();
@@ -62,7 +62,7 @@ public final class StoreGifPicker extends StoreV2 {
     private List<ModelGif> trendingCategoryGifsSnapshot;
     private String trendingGifCategoryPreviewUrl;
 
-    /* compiled from: StoreGifPicker.kt */
+    /* JADX INFO: compiled from: StoreGifPicker.kt */
     public static final class CacheHistory<K, V> extends LinkedHashMap<K, V> {
         @Override // java.util.LinkedHashMap, java.util.HashMap, java.util.AbstractMap, java.util.Map
         public final /* bridge */ Set<Map.Entry<K, V>> entrySet() {
@@ -106,7 +106,7 @@ public final class StoreGifPicker extends StoreV2 {
         }
     }
 
-    /* compiled from: StoreGifPicker.kt */
+    /* JADX INFO: compiled from: StoreGifPicker.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -124,8 +124,8 @@ public final class StoreGifPicker extends StoreV2 {
         }
     }
 
-    /* compiled from: StoreGifPicker.kt */
-    /* renamed from: com.discord.stores.StoreGifPicker$fetchGifCategories$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreGifPicker$fetchGifCategories$1 */
+    /* JADX INFO: compiled from: StoreGifPicker.kt */
     public static final class C59561 extends Lambda implements Function1<Error, Unit> {
         public C59561() {
             super(1);
@@ -137,15 +137,15 @@ public final class StoreGifPicker extends StoreV2 {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Error error) {
             Intrinsics3.checkNotNullParameter(error, "it");
             StoreGifPicker.access$handleFetchGifCategoriesError(StoreGifPicker.this);
         }
     }
 
-    /* compiled from: StoreGifPicker.kt */
-    /* renamed from: com.discord.stores.StoreGifPicker$fetchGifCategories$2 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreGifPicker$fetchGifCategories$2 */
+    /* JADX INFO: compiled from: StoreGifPicker.kt */
     public static final /* synthetic */ class C59572 extends FunctionReferenceImpl implements Function1<TrendingGifCategoriesResponseDto, Unit> {
         public C59572(StoreGifPicker storeGifPicker) {
             super(1, storeGifPicker, StoreGifPicker.class, "handleFetchGifCategoriesOnNext", "handleFetchGifCategoriesOnNext(Lcom/discord/models/gifpicker/dto/TrendingGifCategoriesResponseDto;)V", 0);
@@ -157,15 +157,15 @@ public final class StoreGifPicker extends StoreV2 {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(TrendingGifCategoriesResponseDto trendingGifCategoriesResponseDto) {
             Intrinsics3.checkNotNullParameter(trendingGifCategoriesResponseDto, "p1");
             StoreGifPicker.access$handleFetchGifCategoriesOnNext((StoreGifPicker) this.receiver, trendingGifCategoriesResponseDto);
         }
     }
 
-    /* compiled from: StoreGifPicker.kt */
-    /* renamed from: com.discord.stores.StoreGifPicker$fetchGifTrendingSearchTerms$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreGifPicker$fetchGifTrendingSearchTerms$1 */
+    /* JADX INFO: compiled from: StoreGifPicker.kt */
     public static final class C59581 extends Lambda implements Function1<Error, Unit> {
         public C59581() {
             super(1);
@@ -177,15 +177,15 @@ public final class StoreGifPicker extends StoreV2 {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Error error) {
             Intrinsics3.checkNotNullParameter(error, "it");
             StoreGifPicker.access$handleFetchTrendingSearchTermsError(StoreGifPicker.this);
         }
     }
 
-    /* compiled from: StoreGifPicker.kt */
-    /* renamed from: com.discord.stores.StoreGifPicker$fetchGifTrendingSearchTerms$2 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreGifPicker$fetchGifTrendingSearchTerms$2 */
+    /* JADX INFO: compiled from: StoreGifPicker.kt */
     public static final /* synthetic */ class C59592 extends FunctionReferenceImpl implements Function1<List<? extends String>, Unit> {
         public C59592(StoreGifPicker storeGifPicker) {
             super(1, storeGifPicker, StoreGifPicker.class, "handleFetchTrendingSearchTermsOnNext", "handleFetchTrendingSearchTermsOnNext(Ljava/util/List;)V", 0);
@@ -197,15 +197,15 @@ public final class StoreGifPicker extends StoreV2 {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(List<String> list) {
             Intrinsics3.checkNotNullParameter(list, "p1");
             StoreGifPicker.access$handleFetchTrendingSearchTermsOnNext((StoreGifPicker) this.receiver, list);
         }
     }
 
-    /* compiled from: StoreGifPicker.kt */
-    /* renamed from: com.discord.stores.StoreGifPicker$fetchGifsForSearchQuery$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreGifPicker$fetchGifsForSearchQuery$1 */
+    /* JADX INFO: compiled from: StoreGifPicker.kt */
     public static final class C59601<T, R> implements Func1<List<? extends GifDto>, List<? extends ModelGif>> {
         public static final C59601 INSTANCE = new C59601();
 
@@ -214,7 +214,7 @@ public final class StoreGifPicker extends StoreV2 {
             return call2((List<GifDto>) list);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final List<ModelGif> call2(List<GifDto> list) {
             Intrinsics3.checkNotNullExpressionValue(list, "gifDtos");
             ArrayList arrayList = new ArrayList(Iterables2.collectionSizeOrDefault(list, 10));
@@ -226,13 +226,13 @@ public final class StoreGifPicker extends StoreV2 {
         }
     }
 
-    /* compiled from: StoreGifPicker.kt */
-    /* renamed from: com.discord.stores.StoreGifPicker$fetchGifsForSearchQuery$2 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreGifPicker$fetchGifsForSearchQuery$2 */
+    /* JADX INFO: compiled from: StoreGifPicker.kt */
     public static final class C59612 extends Lambda implements Function1<Error, Unit> {
         public final /* synthetic */ String $query;
 
-        /* compiled from: StoreGifPicker.kt */
-        /* renamed from: com.discord.stores.StoreGifPicker$fetchGifsForSearchQuery$2$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.stores.StoreGifPicker$fetchGifsForSearchQuery$2$1, reason: invalid class name */
+        /* JADX INFO: compiled from: StoreGifPicker.kt */
         public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
             public AnonymousClass1() {
                 super(0);
@@ -244,7 +244,7 @@ public final class StoreGifPicker extends StoreV2 {
                 return Unit.f27425a;
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2() {
                 C59612 c59612 = C59612.this;
                 StoreGifPicker.access$handleGifSearchResults(StoreGifPicker.this, c59612.$query, Collections2.emptyList());
@@ -263,20 +263,20 @@ public final class StoreGifPicker extends StoreV2 {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Error error) {
             Intrinsics3.checkNotNullParameter(error, "it");
             StoreGifPicker.access$getDispatcher$p(StoreGifPicker.this).schedule(new AnonymousClass1());
         }
     }
 
-    /* compiled from: StoreGifPicker.kt */
-    /* renamed from: com.discord.stores.StoreGifPicker$fetchGifsForSearchQuery$3 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreGifPicker$fetchGifsForSearchQuery$3 */
+    /* JADX INFO: compiled from: StoreGifPicker.kt */
     public static final class C59623 extends Lambda implements Function1<List<? extends ModelGif>, Unit> {
         public final /* synthetic */ String $query;
 
-        /* compiled from: StoreGifPicker.kt */
-        /* renamed from: com.discord.stores.StoreGifPicker$fetchGifsForSearchQuery$3$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.stores.StoreGifPicker$fetchGifsForSearchQuery$3$1, reason: invalid class name */
+        /* JADX INFO: compiled from: StoreGifPicker.kt */
         public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
             public final /* synthetic */ List $gifs;
 
@@ -292,7 +292,7 @@ public final class StoreGifPicker extends StoreV2 {
                 return Unit.f27425a;
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2() {
                 C59623 c59623 = C59623.this;
                 StoreGifPicker storeGifPicker = StoreGifPicker.this;
@@ -315,19 +315,19 @@ public final class StoreGifPicker extends StoreV2 {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(List<ModelGif> list) {
             StoreGifPicker.access$getDispatcher$p(StoreGifPicker.this).schedule(new AnonymousClass1(list));
         }
     }
 
-    /* compiled from: StoreGifPicker.kt */
-    /* renamed from: com.discord.stores.StoreGifPicker$fetchSuggestedSearchTerms$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreGifPicker$fetchSuggestedSearchTerms$1 */
+    /* JADX INFO: compiled from: StoreGifPicker.kt */
     public static final class C59631 extends Lambda implements Function1<Error, Unit> {
         public final /* synthetic */ String $query;
 
-        /* compiled from: StoreGifPicker.kt */
-        /* renamed from: com.discord.stores.StoreGifPicker$fetchSuggestedSearchTerms$1$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.stores.StoreGifPicker$fetchSuggestedSearchTerms$1$1, reason: invalid class name */
+        /* JADX INFO: compiled from: StoreGifPicker.kt */
         public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
             public AnonymousClass1() {
                 super(0);
@@ -339,7 +339,7 @@ public final class StoreGifPicker extends StoreV2 {
                 return Unit.f27425a;
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2() {
                 C59631 c59631 = C59631.this;
                 StoreGifPicker.access$handleSuggestedSearchTerms(StoreGifPicker.this, c59631.$query, Collections2.emptyList());
@@ -358,20 +358,20 @@ public final class StoreGifPicker extends StoreV2 {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Error error) {
             Intrinsics3.checkNotNullParameter(error, "it");
             StoreGifPicker.access$getDispatcher$p(StoreGifPicker.this).schedule(new AnonymousClass1());
         }
     }
 
-    /* compiled from: StoreGifPicker.kt */
-    /* renamed from: com.discord.stores.StoreGifPicker$fetchSuggestedSearchTerms$2 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreGifPicker$fetchSuggestedSearchTerms$2 */
+    /* JADX INFO: compiled from: StoreGifPicker.kt */
     public static final class C59642 extends Lambda implements Function1<List<? extends String>, Unit> {
         public final /* synthetic */ String $query;
 
-        /* compiled from: StoreGifPicker.kt */
-        /* renamed from: com.discord.stores.StoreGifPicker$fetchSuggestedSearchTerms$2$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.stores.StoreGifPicker$fetchSuggestedSearchTerms$2$1, reason: invalid class name */
+        /* JADX INFO: compiled from: StoreGifPicker.kt */
         public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
             public final /* synthetic */ List $suggestedSearchTerms;
 
@@ -387,7 +387,7 @@ public final class StoreGifPicker extends StoreV2 {
                 return Unit.f27425a;
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2() {
                 C59642 c59642 = C59642.this;
                 StoreGifPicker.access$handleSuggestedSearchTerms(StoreGifPicker.this, c59642.$query, this.$suggestedSearchTerms);
@@ -406,15 +406,15 @@ public final class StoreGifPicker extends StoreV2 {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(List<String> list) {
             Intrinsics3.checkNotNullParameter(list, "suggestedSearchTerms");
             StoreGifPicker.access$getDispatcher$p(StoreGifPicker.this).schedule(new AnonymousClass1(list));
         }
     }
 
-    /* compiled from: StoreGifPicker.kt */
-    /* renamed from: com.discord.stores.StoreGifPicker$fetchTrendingCategoryGifs$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreGifPicker$fetchTrendingCategoryGifs$1 */
+    /* JADX INFO: compiled from: StoreGifPicker.kt */
     public static final class C59651<T, R> implements Func1<List<? extends GifDto>, List<? extends ModelGif>> {
         public static final C59651 INSTANCE = new C59651();
 
@@ -423,7 +423,7 @@ public final class StoreGifPicker extends StoreV2 {
             return call2((List<GifDto>) list);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final List<ModelGif> call2(List<GifDto> list) {
             Intrinsics3.checkNotNullExpressionValue(list, "gifDtos");
             ArrayList arrayList = new ArrayList(Iterables2.collectionSizeOrDefault(list, 10));
@@ -435,8 +435,8 @@ public final class StoreGifPicker extends StoreV2 {
         }
     }
 
-    /* compiled from: StoreGifPicker.kt */
-    /* renamed from: com.discord.stores.StoreGifPicker$fetchTrendingCategoryGifs$2 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreGifPicker$fetchTrendingCategoryGifs$2 */
+    /* JADX INFO: compiled from: StoreGifPicker.kt */
     public static final class C59662 extends Lambda implements Function1<Error, Unit> {
         public C59662() {
             super(1);
@@ -448,15 +448,15 @@ public final class StoreGifPicker extends StoreV2 {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Error error) {
             Intrinsics3.checkNotNullParameter(error, "it");
             StoreGifPicker.access$handleFetchTrendingGifsError(StoreGifPicker.this);
         }
     }
 
-    /* compiled from: StoreGifPicker.kt */
-    /* renamed from: com.discord.stores.StoreGifPicker$fetchTrendingCategoryGifs$3 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreGifPicker$fetchTrendingCategoryGifs$3 */
+    /* JADX INFO: compiled from: StoreGifPicker.kt */
     public static final /* synthetic */ class C59673 extends FunctionReferenceImpl implements Function1<List<? extends ModelGif>, Unit> {
         public C59673(StoreGifPicker storeGifPicker) {
             super(1, storeGifPicker, StoreGifPicker.class, "handleFetchTrendingGifsOnNext", "handleFetchTrendingGifsOnNext(Ljava/util/List;)V", 0);
@@ -468,15 +468,15 @@ public final class StoreGifPicker extends StoreV2 {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(List<ModelGif> list) {
             Intrinsics3.checkNotNullParameter(list, "p1");
             StoreGifPicker.access$handleFetchTrendingGifsOnNext((StoreGifPicker) this.receiver, list);
         }
     }
 
-    /* compiled from: StoreGifPicker.kt */
-    /* renamed from: com.discord.stores.StoreGifPicker$handleFetchGifCategoriesError$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreGifPicker$handleFetchGifCategoriesError$1 */
+    /* JADX INFO: compiled from: StoreGifPicker.kt */
     public static final class C59681 extends Lambda implements Function0<Unit> {
         public C59681() {
             super(0);
@@ -488,14 +488,14 @@ public final class StoreGifPicker extends StoreV2 {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             StoreGifPicker.access$setFetchingGifCategories$p(StoreGifPicker.this, false);
         }
     }
 
-    /* compiled from: StoreGifPicker.kt */
-    /* renamed from: com.discord.stores.StoreGifPicker$handleFetchGifCategoriesOnNext$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreGifPicker$handleFetchGifCategoriesOnNext$1 */
+    /* JADX INFO: compiled from: StoreGifPicker.kt */
     public static final class C59691 extends Lambda implements Function0<Unit> {
         public final /* synthetic */ TrendingGifCategoriesResponseDto $trendingGifsResponseRaw;
 
@@ -511,15 +511,15 @@ public final class StoreGifPicker extends StoreV2 {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             StoreGifPicker.access$handleTrendingCategoriesResponse(StoreGifPicker.this, this.$trendingGifsResponseRaw);
             StoreGifPicker.access$setFetchingGifCategories$p(StoreGifPicker.this, false);
         }
     }
 
-    /* compiled from: StoreGifPicker.kt */
-    /* renamed from: com.discord.stores.StoreGifPicker$handleFetchTrendingGifsError$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreGifPicker$handleFetchTrendingGifsError$1 */
+    /* JADX INFO: compiled from: StoreGifPicker.kt */
     public static final class C59701 extends Lambda implements Function0<Unit> {
         public C59701() {
             super(0);
@@ -531,14 +531,14 @@ public final class StoreGifPicker extends StoreV2 {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             StoreGifPicker.access$setFetchingTrendingCategoryGifs$p(StoreGifPicker.this, false);
         }
     }
 
-    /* compiled from: StoreGifPicker.kt */
-    /* renamed from: com.discord.stores.StoreGifPicker$handleFetchTrendingGifsOnNext$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreGifPicker$handleFetchTrendingGifsOnNext$1 */
+    /* JADX INFO: compiled from: StoreGifPicker.kt */
     public static final class C59711 extends Lambda implements Function0<Unit> {
         public final /* synthetic */ List $gifs;
 
@@ -554,15 +554,15 @@ public final class StoreGifPicker extends StoreV2 {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             StoreGifPicker.access$updateTrendingCategoryGifs(StoreGifPicker.this, this.$gifs);
             StoreGifPicker.access$setFetchingTrendingCategoryGifs$p(StoreGifPicker.this, false);
         }
     }
 
-    /* compiled from: StoreGifPicker.kt */
-    /* renamed from: com.discord.stores.StoreGifPicker$handleFetchTrendingSearchTermsError$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreGifPicker$handleFetchTrendingSearchTermsError$1 */
+    /* JADX INFO: compiled from: StoreGifPicker.kt */
     public static final class C59721 extends Lambda implements Function0<Unit> {
         public C59721() {
             super(0);
@@ -574,14 +574,14 @@ public final class StoreGifPicker extends StoreV2 {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             StoreGifPicker.access$setFetchingTrendingSearchTerms$p(StoreGifPicker.this, false);
         }
     }
 
-    /* compiled from: StoreGifPicker.kt */
-    /* renamed from: com.discord.stores.StoreGifPicker$handleFetchTrendingSearchTermsOnNext$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreGifPicker$handleFetchTrendingSearchTermsOnNext$1 */
+    /* JADX INFO: compiled from: StoreGifPicker.kt */
     public static final class C59731 extends Lambda implements Function0<Unit> {
         public final /* synthetic */ List $trendingSearchTerms;
 
@@ -597,15 +597,15 @@ public final class StoreGifPicker extends StoreV2 {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             StoreGifPicker.access$updateTrendingSearchTerms(StoreGifPicker.this, this.$trendingSearchTerms);
             StoreGifPicker.access$setFetchingTrendingSearchTerms$p(StoreGifPicker.this, false);
         }
     }
 
-    /* compiled from: StoreGifPicker.kt */
-    /* renamed from: com.discord.stores.StoreGifPicker$observeGifCategories$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreGifPicker$observeGifCategories$1 */
+    /* JADX INFO: compiled from: StoreGifPicker.kt */
     public static final class C59741 extends Lambda implements Function0<Unit> {
         public C59741() {
             super(0);
@@ -617,7 +617,7 @@ public final class StoreGifPicker extends StoreV2 {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             if (!StoreGifPicker.access$getGifCategories$p(StoreGifPicker.this).isEmpty() || StoreGifPicker.access$isFetchingGifCategories$p(StoreGifPicker.this)) {
                 return;
@@ -626,8 +626,8 @@ public final class StoreGifPicker extends StoreV2 {
         }
     }
 
-    /* compiled from: StoreGifPicker.kt */
-    /* renamed from: com.discord.stores.StoreGifPicker$observeGifCategories$2 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreGifPicker$observeGifCategories$2 */
+    /* JADX INFO: compiled from: StoreGifPicker.kt */
     public static final class C59752 extends Lambda implements Function0<List<? extends ModelGifCategory>> {
         public C59752() {
             super(0);
@@ -639,14 +639,14 @@ public final class StoreGifPicker extends StoreV2 {
         }
 
         @Override // kotlin.jvm.functions.Function0
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final List<? extends ModelGifCategory> invoke2() {
             return StoreGifPicker.access$getGifCategories(StoreGifPicker.this);
         }
     }
 
-    /* compiled from: StoreGifPicker.kt */
-    /* renamed from: com.discord.stores.StoreGifPicker$observeGifTrendingSearchTerms$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreGifPicker$observeGifTrendingSearchTerms$1 */
+    /* JADX INFO: compiled from: StoreGifPicker.kt */
     public static final class C59761 extends Lambda implements Function0<Unit> {
         public C59761() {
             super(0);
@@ -658,7 +658,7 @@ public final class StoreGifPicker extends StoreV2 {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             if (!StoreGifPicker.access$getGifTrendingSearchTerms$p(StoreGifPicker.this).isEmpty() || StoreGifPicker.access$isFetchingTrendingSearchTerms$p(StoreGifPicker.this)) {
                 return;
@@ -667,8 +667,8 @@ public final class StoreGifPicker extends StoreV2 {
         }
     }
 
-    /* compiled from: StoreGifPicker.kt */
-    /* renamed from: com.discord.stores.StoreGifPicker$observeGifTrendingSearchTerms$2 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreGifPicker$observeGifTrendingSearchTerms$2 */
+    /* JADX INFO: compiled from: StoreGifPicker.kt */
     public static final class C59772 extends Lambda implements Function0<List<? extends String>> {
         public C59772() {
             super(0);
@@ -680,14 +680,14 @@ public final class StoreGifPicker extends StoreV2 {
         }
 
         @Override // kotlin.jvm.functions.Function0
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final List<? extends String> invoke2() {
             return StoreGifPicker.access$getGifTrendingSearchTerms(StoreGifPicker.this);
         }
     }
 
-    /* compiled from: StoreGifPicker.kt */
-    /* renamed from: com.discord.stores.StoreGifPicker$observeGifsForSearchQuery$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreGifPicker$observeGifsForSearchQuery$1 */
+    /* JADX INFO: compiled from: StoreGifPicker.kt */
     public static final class C59781 extends Lambda implements Function0<Unit> {
         public final /* synthetic */ String $query;
 
@@ -703,7 +703,7 @@ public final class StoreGifPicker extends StoreV2 {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             if (StoreGifPicker.access$getGifSearchHistory$p(StoreGifPicker.this).containsKey(this.$query)) {
                 return;
@@ -713,8 +713,8 @@ public final class StoreGifPicker extends StoreV2 {
         }
     }
 
-    /* compiled from: StoreGifPicker.kt */
-    /* renamed from: com.discord.stores.StoreGifPicker$observeGifsForSearchQuery$2 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreGifPicker$observeGifsForSearchQuery$2 */
+    /* JADX INFO: compiled from: StoreGifPicker.kt */
     public static final class C59792<T, R> implements Func1<Map<String, ? extends List<? extends ModelGif>>, List<? extends ModelGif>> {
         public final /* synthetic */ String $query;
 
@@ -727,14 +727,14 @@ public final class StoreGifPicker extends StoreV2 {
             return call2((Map<String, ? extends List<ModelGif>>) map);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final List<ModelGif> call2(Map<String, ? extends List<ModelGif>> map) {
             return map.get(this.$query);
         }
     }
 
-    /* compiled from: StoreGifPicker.kt */
-    /* renamed from: com.discord.stores.StoreGifPicker$observeSearchHistory$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreGifPicker$observeSearchHistory$1 */
+    /* JADX INFO: compiled from: StoreGifPicker.kt */
     public static final class C59801 extends Lambda implements Function0<Map<String, ? extends List<? extends ModelGif>>> {
         public C59801() {
             super(0);
@@ -746,14 +746,14 @@ public final class StoreGifPicker extends StoreV2 {
         }
 
         @Override // kotlin.jvm.functions.Function0
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final Map<String, ? extends List<? extends ModelGif>> invoke2() {
             return StoreGifPicker.access$getSearchHistory(StoreGifPicker.this);
         }
     }
 
-    /* compiled from: StoreGifPicker.kt */
-    /* renamed from: com.discord.stores.StoreGifPicker$observeSuggestedSearchTerms$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreGifPicker$observeSuggestedSearchTerms$1 */
+    /* JADX INFO: compiled from: StoreGifPicker.kt */
     public static final class C59811 extends Lambda implements Function0<Map<String, ? extends List<? extends String>>> {
         public C59811() {
             super(0);
@@ -765,14 +765,14 @@ public final class StoreGifPicker extends StoreV2 {
         }
 
         @Override // kotlin.jvm.functions.Function0
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final Map<String, ? extends List<? extends String>> invoke2() {
             return StoreGifPicker.access$getSuggestedSearchTermsHistory(StoreGifPicker.this);
         }
     }
 
-    /* compiled from: StoreGifPicker.kt */
-    /* renamed from: com.discord.stores.StoreGifPicker$observeSuggestedSearchTerms$2 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreGifPicker$observeSuggestedSearchTerms$2 */
+    /* JADX INFO: compiled from: StoreGifPicker.kt */
     public static final class C59822 extends Lambda implements Function0<Unit> {
         public final /* synthetic */ String $query;
 
@@ -788,7 +788,7 @@ public final class StoreGifPicker extends StoreV2 {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             if (StoreGifPicker.access$getGifSuggestedSearchTermsHistory$p(StoreGifPicker.this).containsKey(this.$query)) {
                 return;
@@ -798,8 +798,8 @@ public final class StoreGifPicker extends StoreV2 {
         }
     }
 
-    /* compiled from: StoreGifPicker.kt */
-    /* renamed from: com.discord.stores.StoreGifPicker$observeSuggestedSearchTerms$3 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreGifPicker$observeSuggestedSearchTerms$3 */
+    /* JADX INFO: compiled from: StoreGifPicker.kt */
     public static final class C59833<T, R> implements Func1<Map<String, ? extends List<? extends String>>, List<? extends String>> {
         public final /* synthetic */ String $query;
 
@@ -812,14 +812,14 @@ public final class StoreGifPicker extends StoreV2 {
             return call2((Map<String, ? extends List<String>>) map);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final List<String> call2(Map<String, ? extends List<String>> map) {
             return map.get(this.$query);
         }
     }
 
-    /* compiled from: StoreGifPicker.kt */
-    /* renamed from: com.discord.stores.StoreGifPicker$observeTrendingCategoryGifs$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreGifPicker$observeTrendingCategoryGifs$1 */
+    /* JADX INFO: compiled from: StoreGifPicker.kt */
     public static final class C59841 extends Lambda implements Function0<Unit> {
         public C59841() {
             super(0);
@@ -831,7 +831,7 @@ public final class StoreGifPicker extends StoreV2 {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             if (!StoreGifPicker.access$getTrendingCategoryGifs$p(StoreGifPicker.this).isEmpty() || StoreGifPicker.access$isFetchingTrendingCategoryGifs$p(StoreGifPicker.this)) {
                 return;
@@ -840,8 +840,8 @@ public final class StoreGifPicker extends StoreV2 {
         }
     }
 
-    /* compiled from: StoreGifPicker.kt */
-    /* renamed from: com.discord.stores.StoreGifPicker$observeTrendingCategoryGifs$2 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreGifPicker$observeTrendingCategoryGifs$2 */
+    /* JADX INFO: compiled from: StoreGifPicker.kt */
     public static final class C59852 extends Lambda implements Function0<List<? extends ModelGif>> {
         public C59852() {
             super(0);
@@ -853,14 +853,14 @@ public final class StoreGifPicker extends StoreV2 {
         }
 
         @Override // kotlin.jvm.functions.Function0
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final List<? extends ModelGif> invoke2() {
             return StoreGifPicker.access$getTrendingCategoryGifs(StoreGifPicker.this);
         }
     }
 
-    /* compiled from: StoreGifPicker.kt */
-    /* renamed from: com.discord.stores.StoreGifPicker$observeTrendingGifCategoryPreviewUrl$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreGifPicker$observeTrendingGifCategoryPreviewUrl$1 */
+    /* JADX INFO: compiled from: StoreGifPicker.kt */
     public static final class C59861 extends Lambda implements Function0<String> {
         public C59861() {
             super(0);
@@ -872,7 +872,7 @@ public final class StoreGifPicker extends StoreV2 {
         }
 
         @Override // kotlin.jvm.functions.Function0
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final String invoke2() {
             return StoreGifPicker.access$getTrendingGifCategoryPreviewUrl(StoreGifPicker.this);
         }

@@ -49,12 +49,12 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 import p658rx.functions.Action1;
 
-/* compiled from: WidgetUserPasswordVerify.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: WidgetUserPasswordVerify.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class WidgetUserPasswordVerify extends AppFragment {
     public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetUserPasswordVerify.class, "binding", "getBinding()Lcom/discord/databinding/WidgetUserPasswordVerifyBinding;", 0)};
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private static final String INTENT_EXTRA_ACTION = "INTENT_EXTRA_ACTION";
     private static final String INTENT_EXTRA_DISCRIMINATOR = "INTENT_EXTRA_DISCRIMINATOR";
@@ -64,17 +64,17 @@ public final class WidgetUserPasswordVerify extends AppFragment {
     private static final String INTENT_EXTRA_SOURCE_TYPE = "INTENT_EXTRA_SOURCE_TYPE";
     private static final String INTENT_EXTRA_USERNAME = "INTENT_EXTRA_USERNAME";
 
-    /* renamed from: binding$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
     private final StatefulViews state;
 
-    /* renamed from: validationManager$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: validationManager$delegate, reason: from kotlin metadata */
     private final Lazy validationManager;
 
-    /* compiled from: WidgetUserPasswordVerify.kt */
+    /* JADX INFO: compiled from: WidgetUserPasswordVerify.kt */
     public static final class Companion {
 
-        /* compiled from: WidgetUserPasswordVerify.kt */
+        /* JADX INFO: compiled from: WidgetUserPasswordVerify.kt */
         public enum Action {
             UpdateAccountInfo,
             RemovePhoneNumber,
@@ -151,8 +151,8 @@ public final class WidgetUserPasswordVerify extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetUserPasswordVerify.kt */
-    /* renamed from: com.discord.widgets.user.WidgetUserPasswordVerify$onViewBound$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.user.WidgetUserPasswordVerify$onViewBound$1 */
+    /* JADX INFO: compiled from: WidgetUserPasswordVerify.kt */
     public static final class C102201 extends Lambda implements Function1<TextView, Unit> {
         public C102201() {
             super(1);
@@ -164,15 +164,15 @@ public final class WidgetUserPasswordVerify extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(TextView textView) {
             Intrinsics3.checkNotNullParameter(textView, "it");
             WidgetUserPasswordVerify.access$saveInfo(WidgetUserPasswordVerify.this);
         }
     }
 
-    /* compiled from: WidgetUserPasswordVerify.kt */
-    /* renamed from: com.discord.widgets.user.WidgetUserPasswordVerify$onViewBound$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.user.WidgetUserPasswordVerify$onViewBound$2 */
+    /* JADX INFO: compiled from: WidgetUserPasswordVerify.kt */
     public static final class ViewOnClickListenerC102212 implements View.OnClickListener {
         public ViewOnClickListenerC102212() {
         }
@@ -183,8 +183,8 @@ public final class WidgetUserPasswordVerify extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetUserPasswordVerify.kt */
-    /* renamed from: com.discord.widgets.user.WidgetUserPasswordVerify$removePhoneNumber$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.user.WidgetUserPasswordVerify$removePhoneNumber$1 */
+    /* JADX INFO: compiled from: WidgetUserPasswordVerify.kt */
     public static final class C102221<T> implements Action1<Void> {
         public C102221() {
         }
@@ -194,14 +194,14 @@ public final class WidgetUserPasswordVerify extends AppFragment {
             call2(r1);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final void call2(Void r1) {
             WidgetUserPasswordVerify.access$finishWithSuccess(WidgetUserPasswordVerify.this);
         }
     }
 
-    /* compiled from: WidgetUserPasswordVerify.kt */
-    /* renamed from: com.discord.widgets.user.WidgetUserPasswordVerify$removePhoneNumber$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.user.WidgetUserPasswordVerify$removePhoneNumber$2 */
+    /* JADX INFO: compiled from: WidgetUserPasswordVerify.kt */
     public static final class C102232<T> implements Action1<Error> {
         public C102232() {
         }
@@ -211,7 +211,7 @@ public final class WidgetUserPasswordVerify extends AppFragment {
             call2(error);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final void call2(Error error) {
             WidgetUserPasswordVerify widgetUserPasswordVerify = WidgetUserPasswordVerify.this;
             Intrinsics3.checkNotNullExpressionValue(error, "it");
@@ -219,8 +219,8 @@ public final class WidgetUserPasswordVerify extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetUserPasswordVerify.kt */
-    /* renamed from: com.discord.widgets.user.WidgetUserPasswordVerify$updateAccountInfo$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.user.WidgetUserPasswordVerify$updateAccountInfo$1 */
+    /* JADX INFO: compiled from: WidgetUserPasswordVerify.kt */
     public static final class C102241<T> implements Action1<User> {
         public final /* synthetic */ String $newEmail;
         public final /* synthetic */ String $password;
@@ -235,7 +235,7 @@ public final class WidgetUserPasswordVerify extends AppFragment {
             call2(user);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final void call2(User user) {
             GoogleSmartLockManager googleSmartLockManager;
             StoreStream.INSTANCE.getAuthentication().setAuthed(user.getToken());
@@ -247,8 +247,8 @@ public final class WidgetUserPasswordVerify extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetUserPasswordVerify.kt */
-    /* renamed from: com.discord.widgets.user.WidgetUserPasswordVerify$updateAccountInfo$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.user.WidgetUserPasswordVerify$updateAccountInfo$2 */
+    /* JADX INFO: compiled from: WidgetUserPasswordVerify.kt */
     public static final class C102252<T> implements Action1<Error> {
         public C102252() {
         }
@@ -258,7 +258,7 @@ public final class WidgetUserPasswordVerify extends AppFragment {
             call2(error);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final void call2(Error error) {
             WidgetUserPasswordVerify widgetUserPasswordVerify = WidgetUserPasswordVerify.this;
             Intrinsics3.checkNotNullExpressionValue(error, "it");
@@ -266,8 +266,8 @@ public final class WidgetUserPasswordVerify extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetUserPasswordVerify.kt */
-    /* renamed from: com.discord.widgets.user.WidgetUserPasswordVerify$updatePhoneNumber$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.user.WidgetUserPasswordVerify$updatePhoneNumber$1 */
+    /* JADX INFO: compiled from: WidgetUserPasswordVerify.kt */
     public static final class C102261<T> implements Action1<Void> {
         public C102261() {
         }
@@ -277,14 +277,14 @@ public final class WidgetUserPasswordVerify extends AppFragment {
             call2(r1);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final void call2(Void r1) {
             WidgetUserPasswordVerify.access$finishWithSuccess(WidgetUserPasswordVerify.this);
         }
     }
 
-    /* compiled from: WidgetUserPasswordVerify.kt */
-    /* renamed from: com.discord.widgets.user.WidgetUserPasswordVerify$updatePhoneNumber$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.user.WidgetUserPasswordVerify$updatePhoneNumber$2 */
+    /* JADX INFO: compiled from: WidgetUserPasswordVerify.kt */
     public static final class C102272<T> implements Action1<Error> {
         public C102272() {
         }
@@ -294,7 +294,7 @@ public final class WidgetUserPasswordVerify extends AppFragment {
             call2(error);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final void call2(Error error) {
             WidgetUserPasswordVerify widgetUserPasswordVerify = WidgetUserPasswordVerify.this;
             Intrinsics3.checkNotNullExpressionValue(error, "it");

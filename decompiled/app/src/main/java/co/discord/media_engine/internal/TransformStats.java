@@ -13,8 +13,8 @@ import p007b.p225i.p226a.p288f.p299e.p308o.C3404f;
 import p507d0.p580t._Arrays;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: TransformStats.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: TransformStats.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class TransformStats {
     public static final TransformStats INSTANCE = new TransformStats();
     private static final Gson gson = new Gson();

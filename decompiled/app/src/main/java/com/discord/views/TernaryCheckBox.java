@@ -20,46 +20,46 @@ import p007b.p008a.p025i.ViewTernaryCheckboxBinding;
 import p007b.p008a.p027k.FormatUtils;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: TernaryCheckBox.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: TernaryCheckBox.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class TernaryCheckBox extends RelativeLayout {
 
-    /* renamed from: j, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: j, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
 
-    /* renamed from: k, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: k, reason: from kotlin metadata */
     public final ViewTernaryCheckboxBinding binding;
 
-    /* renamed from: l, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: l, reason: from kotlin metadata */
     public String labelText;
 
-    /* renamed from: m, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: m, reason: from kotlin metadata */
     public CharSequence subtextText;
 
-    /* renamed from: n, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: n, reason: from kotlin metadata */
     public InterfaceC7094b onSwitchStatusChangedListener;
 
-    /* renamed from: o, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: o, reason: from kotlin metadata */
     public int switchStatus;
 
-    /* compiled from: TernaryCheckBox.kt */
-    /* renamed from: com.discord.views.TernaryCheckBox$a, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: com.discord.views.TernaryCheckBox$a, reason: from kotlin metadata */
+    /* JADX INFO: compiled from: TernaryCheckBox.kt */
     public static final class Companion {
         public Companion(DefaultConstructorMarker defaultConstructorMarker) {
         }
     }
 
-    /* compiled from: TernaryCheckBox.kt */
-    /* renamed from: com.discord.views.TernaryCheckBox$b */
+    /* JADX INFO: renamed from: com.discord.views.TernaryCheckBox$b */
+    /* JADX INFO: compiled from: TernaryCheckBox.kt */
     public interface InterfaceC7094b {
         void onSwitchStatusChanged(int i);
     }
 
-    /* compiled from: TernaryCheckBox.kt */
-    /* renamed from: com.discord.views.TernaryCheckBox$c */
+    /* JADX INFO: renamed from: com.discord.views.TernaryCheckBox$c */
+    /* JADX INFO: compiled from: TernaryCheckBox.kt */
     public static final class ViewOnClickListenerC7095c implements View.OnClickListener {
 
-        /* renamed from: k */
+        /* JADX INFO: renamed from: k */
         public final /* synthetic */ String f19162k;
 
         public ViewOnClickListenerC7095c(String str) {
@@ -72,11 +72,11 @@ public final class TernaryCheckBox extends RelativeLayout {
         }
     }
 
-    /* compiled from: TernaryCheckBox.kt */
-    /* renamed from: com.discord.views.TernaryCheckBox$d */
+    /* JADX INFO: renamed from: com.discord.views.TernaryCheckBox$d */
+    /* JADX INFO: compiled from: TernaryCheckBox.kt */
     public static final class ViewOnClickListenerC7096d implements View.OnClickListener {
 
-        /* renamed from: k */
+        /* JADX INFO: renamed from: k */
         public final /* synthetic */ String f19164k;
 
         public ViewOnClickListenerC7096d(String str) {
@@ -161,7 +161,7 @@ public final class TernaryCheckBox extends RelativeLayout {
         throw new NullPointerException("Missing required view with ID: ".concat(viewInflate.getResources().getResourceName(i)));
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final /* synthetic */ void m8558a(TernaryCheckBox ternaryCheckBox, int i) {
         ternaryCheckBox.setSwitchStatus(i);
     }
@@ -209,12 +209,12 @@ public final class TernaryCheckBox extends RelativeLayout {
         }
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final boolean m8559b() {
         return this.switchStatus == 1;
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final void m8560c() {
         CheckableImageView checkableImageView = this.binding.f677h;
         Intrinsics3.checkNotNullExpressionValue(checkableImageView, "binding.ternaryCheckOff");
@@ -227,17 +227,17 @@ public final class TernaryCheckBox extends RelativeLayout {
         view2.setVisibility(8);
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final void m8561d() {
         setSwitchStatus(0);
     }
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final void m8562e() {
         setSwitchStatus(-1);
     }
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final void m8563f() {
         setSwitchStatus(1);
     }

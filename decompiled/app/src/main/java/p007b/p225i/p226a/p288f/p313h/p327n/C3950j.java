@@ -3,15 +3,15 @@ package p007b.p225i.p226a.p288f.p313h.p327n;
 import java.util.List;
 import p007b.p225i.p226a.p288f.p299e.p308o.C3404f;
 
-/* compiled from: com.android.billingclient:billing@@4.0.0 */
-/* renamed from: b.i.a.f.h.n.j */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.h.n.j */
+/* JADX INFO: compiled from: com.android.billingclient:billing@@4.0.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public final class C3950j extends AbstractC3951k {
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final transient int f10487l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public final transient int f10488m;
     public final /* synthetic */ AbstractC3951k zzc;
 
@@ -22,19 +22,19 @@ public final class C3950j extends AbstractC3951k {
     }
 
     @Override // p007b.p225i.p226a.p288f.p313h.p327n.AbstractC3948h
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final int mo5431d() {
         return this.zzc.mo5432e() + this.f10487l + this.f10488m;
     }
 
     @Override // p007b.p225i.p226a.p288f.p313h.p327n.AbstractC3948h
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final int mo5432e() {
         return this.zzc.mo5432e() + this.f10487l;
     }
 
     @Override // p007b.p225i.p226a.p288f.p313h.p327n.AbstractC3948h
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public final Object[] mo5433g() {
         return this.zzc.mo5433g();
     }
@@ -46,7 +46,7 @@ public final class C3950j extends AbstractC3951k {
     }
 
     @Override // p007b.p225i.p226a.p288f.p313h.p327n.AbstractC3951k
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public final AbstractC3951k mo5434h(int i, int i2) {
         C3404f.m4342s2(i, i2, this.f10488m);
         AbstractC3951k abstractC3951k = this.zzc;

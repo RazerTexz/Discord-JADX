@@ -15,24 +15,24 @@ import p007b.p225i.p226a.p228b.p231j.p236t.p237h.WorkInitializer;
 import p007b.p225i.p226a.p228b.p231j.p236t.p237h.WorkInitializer3;
 import p007b.p225i.p226a.p228b.p231j.p240v.Clock3;
 
-/* compiled from: TransportRuntime.java */
-/* renamed from: b.i.a.b.j.n, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.b.j.n, reason: use source file name */
+/* JADX INFO: compiled from: TransportRuntime.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class TransportRuntime implements TransportInternal {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static volatile TransportRuntimeComponent f5290a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final Clock3 f5291b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final Clock3 f5292c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final Scheduler2 f5293d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final Uploader6 f5294e;
 
     public TransportRuntime(Clock3 clock3, Clock3 clock32, Scheduler2 scheduler2, Uploader6 uploader6, WorkInitializer3 workInitializer3) {
@@ -43,7 +43,7 @@ public class TransportRuntime implements TransportInternal {
         workInitializer3.f5401a.execute(new WorkInitializer(workInitializer3));
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static TransportRuntime m2359a() {
         TransportRuntimeComponent transportRuntimeComponent = f5290a;
         if (transportRuntimeComponent != null) {
@@ -52,7 +52,7 @@ public class TransportRuntime implements TransportInternal {
         throw new IllegalStateException("Not initialized!");
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static void m2360b(Context context) {
         if (f5290a == null) {
             synchronized (TransportRuntime.class) {
@@ -64,7 +64,7 @@ public class TransportRuntime implements TransportInternal {
         }
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public TransportFactory m2361c(EncodedDestination encodedDestination) {
         Set setSingleton;
         if (encodedDestination instanceof EncodedDestination) {

@@ -3,8 +3,8 @@ package androidx.core.view;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function0;
 
-/* compiled from: View.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: View.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class ViewKt$postOnAnimationDelayed$runnable$1 implements Runnable {
     public final /* synthetic */ Function0<Unit> $action;
 

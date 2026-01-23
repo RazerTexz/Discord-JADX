@@ -23,11 +23,11 @@ import kotlin.jvm.functions.Function1;
 import p007b.p008a.p025i.ChannelPermissionOwnerViewBinding;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ChannelPermissionOwnerView.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: ChannelPermissionOwnerView.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class ChannelPermissionOwnerView extends ConstraintLayout {
 
-    /* renamed from: j, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: j, reason: from kotlin metadata */
     public final ChannelPermissionOwnerViewBinding binding;
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -59,7 +59,7 @@ public final class ChannelPermissionOwnerView extends ConstraintLayout {
         throw new NullPointerException("Missing required view with ID: ".concat(getResources().getResourceName(i)));
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final void m8598a(PermissionOwner permissionOwner) {
         Intrinsics3.checkNotNullParameter(permissionOwner, "permissionOwner");
         if (!(permissionOwner instanceof PermissionOwner.Role)) {

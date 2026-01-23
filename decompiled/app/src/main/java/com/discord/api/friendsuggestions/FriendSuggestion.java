@@ -5,18 +5,18 @@ import java.util.List;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: FriendSuggestion.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: FriendSuggestion.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class FriendSuggestion {
     private final List<FriendSuggestionReason> reasons;
     private final User suggestedUser;
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final List<FriendSuggestionReason> m7830a() {
         return this.reasons;
     }
 
-    /* renamed from: b, reason: from getter */
+    /* JADX INFO: renamed from: b, reason: from getter */
     public final User getSuggestedUser() {
         return this.suggestedUser;
     }

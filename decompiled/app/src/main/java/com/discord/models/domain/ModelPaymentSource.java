@@ -6,11 +6,11 @@ import kotlin.jvm.internal.DefaultConstructorMarker;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ModelPaymentSource.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: ModelPaymentSource.kt */
+/* JADX INFO: loaded from: classes.dex */
 public abstract class ModelPaymentSource {
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private static final int PAYMENT_SOURCE_TYPE_CARD = 1;
     private static final int PAYMENT_SOURCE_TYPE_PAYPAL = 2;
@@ -19,7 +19,7 @@ public abstract class ModelPaymentSource {
     private final String id;
     private final boolean invalid;
 
-    /* compiled from: ModelPaymentSource.kt */
+    /* JADX INFO: compiled from: ModelPaymentSource.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -51,7 +51,7 @@ public abstract class ModelPaymentSource {
         }
     }
 
-    /* compiled from: ModelPaymentSource.kt */
+    /* JADX INFO: compiled from: ModelPaymentSource.kt */
     public static final /* data */ class ModelPaymentSourceCard extends ModelPaymentSource {
         private final ModelBillingAddress billingAddress;
         private final String brand;
@@ -83,22 +83,22 @@ public abstract class ModelPaymentSource {
             return modelPaymentSourceCard.copy((i3 & 1) != 0 ? modelPaymentSourceCard.brand : str, (i3 & 2) != 0 ? modelPaymentSourceCard.last4 : str2, (i3 & 4) != 0 ? modelPaymentSourceCard.expiresMonth : i, (i3 & 8) != 0 ? modelPaymentSourceCard.expiresYear : i2, (i3 & 16) != 0 ? modelPaymentSourceCard.getId() : str3, (i3 & 32) != 0 ? modelPaymentSourceCard.getInvalid() : z2, (i3 & 64) != 0 ? modelPaymentSourceCard.getBillingAddress() : modelBillingAddress, (i3 & 128) != 0 ? modelPaymentSourceCard.getDefault() : z3);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final String getBrand() {
             return this.brand;
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final String getLast4() {
             return this.last4;
         }
 
-        /* renamed from: component3, reason: from getter */
+        /* JADX INFO: renamed from: component3, reason: from getter */
         public final int getExpiresMonth() {
             return this.expiresMonth;
         }
 
-        /* renamed from: component4, reason: from getter */
+        /* JADX INFO: renamed from: component4, reason: from getter */
         public final int getExpiresYear() {
             return this.expiresYear;
         }
@@ -174,6 +174,13 @@ public abstract class ModelPaymentSource {
             return this.last4;
         }
 
+        /* JADX WARN: Multi-variable type inference failed */
+        /* JADX WARN: Type inference failed for: r2v11 */
+        /* JADX WARN: Type inference failed for: r2v14 */
+        /* JADX WARN: Type inference failed for: r2v9, types: [int] */
+        /* JADX WARN: Type inference failed for: r3v0 */
+        /* JADX WARN: Type inference failed for: r3v1, types: [int] */
+        /* JADX WARN: Type inference failed for: r3v2 */
         public int hashCode() {
             String str = this.brand;
             int iHashCode = (str != null ? str.hashCode() : 0) * 31;
@@ -182,13 +189,13 @@ public abstract class ModelPaymentSource {
             String id2 = getId();
             int iHashCode3 = (iHashCode2 + (id2 != null ? id2.hashCode() : 0)) * 31;
             boolean invalid = getInvalid();
-            int i = invalid;
+            ?? r2 = invalid;
             if (invalid) {
-                i = 1;
+                r2 = 1;
             }
-            int i2 = (iHashCode3 + i) * 31;
+            int i = (iHashCode3 + r2) * 31;
             ModelBillingAddress billingAddress = getBillingAddress();
-            int iHashCode4 = (i2 + (billingAddress != null ? billingAddress.hashCode() : 0)) * 31;
+            int iHashCode4 = (i + (billingAddress != null ? billingAddress.hashCode() : 0)) * 31;
             boolean z2 = getDefault();
             return iHashCode4 + (z2 ? 1 : z2);
         }
@@ -215,7 +222,7 @@ public abstract class ModelPaymentSource {
         }
     }
 
-    /* compiled from: ModelPaymentSource.kt */
+    /* JADX INFO: compiled from: ModelPaymentSource.kt */
     public static final /* data */ class ModelPaymentSourcePaypal extends ModelPaymentSource {
         private final ModelBillingAddress billingAddress;
         private final boolean default;
@@ -258,7 +265,7 @@ public abstract class ModelPaymentSource {
             return modelPaymentSourcePaypal.copy(str, str3, z4, modelBillingAddress2, z3);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final String getEmail() {
             return this.email;
         }
@@ -321,19 +328,26 @@ public abstract class ModelPaymentSource {
             return this.invalid;
         }
 
+        /* JADX WARN: Multi-variable type inference failed */
+        /* JADX WARN: Type inference failed for: r2v4, types: [int] */
+        /* JADX WARN: Type inference failed for: r2v6 */
+        /* JADX WARN: Type inference failed for: r2v8 */
+        /* JADX WARN: Type inference failed for: r3v0 */
+        /* JADX WARN: Type inference failed for: r3v1, types: [int] */
+        /* JADX WARN: Type inference failed for: r3v2 */
         public int hashCode() {
             String str = this.email;
             int iHashCode = (str != null ? str.hashCode() : 0) * 31;
             String id2 = getId();
             int iHashCode2 = (iHashCode + (id2 != null ? id2.hashCode() : 0)) * 31;
             boolean invalid = getInvalid();
-            int i = invalid;
+            ?? r2 = invalid;
             if (invalid) {
-                i = 1;
+                r2 = 1;
             }
-            int i2 = (iHashCode2 + i) * 31;
+            int i = (iHashCode2 + r2) * 31;
             ModelBillingAddress billingAddress = getBillingAddress();
-            int iHashCode3 = (i2 + (billingAddress != null ? billingAddress.hashCode() : 0)) * 31;
+            int iHashCode3 = (i + (billingAddress != null ? billingAddress.hashCode() : 0)) * 31;
             boolean z2 = getDefault();
             return iHashCode3 + (z2 ? 1 : z2);
         }
@@ -354,7 +368,7 @@ public abstract class ModelPaymentSource {
         }
     }
 
-    /* compiled from: ModelPaymentSource.kt */
+    /* JADX INFO: compiled from: ModelPaymentSource.kt */
     public static final class UnableToWrapException extends Exception {
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
         public UnableToWrapException(Throwable th) {

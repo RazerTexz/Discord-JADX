@@ -4,9 +4,9 @@ import kotlin.jvm.functions.Function2;
 import p507d0.p592z.p594d.FunctionReferenceImpl;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: PrivateChannelMemberListItemGenerator.kt */
-/* renamed from: com.discord.widgets.channels.memberlist.PrivateChannelMemberListItemGeneratorKt$generateGroupDmMemberListItems$memberItems$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.channels.memberlist.PrivateChannelMemberListItemGeneratorKt$generateGroupDmMemberListItems$memberItems$1, reason: use source file name */
+/* JADX INFO: compiled from: PrivateChannelMemberListItemGenerator.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final /* synthetic */ class PrivateChannelMemberListItemGenerator2 extends FunctionReferenceImpl implements Function2<String, String, Integer> {
     public static final PrivateChannelMemberListItemGenerator2 INSTANCE = new PrivateChannelMemberListItemGenerator2();
 
@@ -14,7 +14,7 @@ public final /* synthetic */ class PrivateChannelMemberListItemGenerator2 extend
         super(2, String.class, "compareTo", "compareTo(Ljava/lang/String;)I", 0);
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final int invoke2(String str, String str2) {
         Intrinsics3.checkNotNullParameter(str, "p1");
         Intrinsics3.checkNotNullParameter(str2, "p2");

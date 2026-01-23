@@ -92,22 +92,22 @@ import p507d0.p580t._Sets;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: DescriptorRendererImpl.kt */
-/* renamed from: d0.e0.p.d.m0.j.d, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.j.d, reason: use source file name */
+/* JADX INFO: compiled from: DescriptorRendererImpl.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class DescriptorRendererImpl extends DescriptorRenderer2 implements DescriptorRenderer4 {
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final DescriptorRendererOptionsImpl f24239d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final Lazy f24240e;
 
-    /* compiled from: DescriptorRendererImpl.kt */
-    /* renamed from: d0.e0.p.d.m0.j.d$a */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.j.d$a */
+    /* JADX INFO: compiled from: DescriptorRendererImpl.kt */
     public final class a implements DeclarationDescriptorVisitor<Unit, StringBuilder> {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final /* synthetic */ DescriptorRendererImpl f24241a;
 
         public a(DescriptorRendererImpl descriptorRendererImpl) {
@@ -115,7 +115,7 @@ public final class DescriptorRendererImpl extends DescriptorRenderer2 implements
             this.f24241a = descriptorRendererImpl;
         }
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final void m9908a(PropertyAccessorDescriptor propertyAccessorDescriptor, StringBuilder sb, String str) {
             int iOrdinal = this.f24241a.getPropertyAccessorRenderingPolicy().ordinal();
             if (iOrdinal != 0) {
@@ -211,91 +211,91 @@ public final class DescriptorRendererImpl extends DescriptorRenderer2 implements
             return Unit.f27425a;
         }
 
-        /* renamed from: visitClassDescriptor, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: visitClassDescriptor, reason: avoid collision after fix types in other method */
         public void visitClassDescriptor2(ClassDescriptor classDescriptor, StringBuilder sb) {
             Intrinsics3.checkNotNullParameter(classDescriptor, "descriptor");
             Intrinsics3.checkNotNullParameter(sb, "builder");
             DescriptorRendererImpl.access$renderClass(this.f24241a, classDescriptor, sb);
         }
 
-        /* renamed from: visitConstructorDescriptor, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: visitConstructorDescriptor, reason: avoid collision after fix types in other method */
         public void visitConstructorDescriptor2(ConstructorDescriptor constructorDescriptor, StringBuilder sb) {
             Intrinsics3.checkNotNullParameter(constructorDescriptor, "constructorDescriptor");
             Intrinsics3.checkNotNullParameter(sb, "builder");
             DescriptorRendererImpl.access$renderConstructor(this.f24241a, constructorDescriptor, sb);
         }
 
-        /* renamed from: visitFunctionDescriptor, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: visitFunctionDescriptor, reason: avoid collision after fix types in other method */
         public void visitFunctionDescriptor2(FunctionDescriptor functionDescriptor, StringBuilder sb) {
             Intrinsics3.checkNotNullParameter(functionDescriptor, "descriptor");
             Intrinsics3.checkNotNullParameter(sb, "builder");
             DescriptorRendererImpl.access$renderFunction(this.f24241a, functionDescriptor, sb);
         }
 
-        /* renamed from: visitModuleDeclaration, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: visitModuleDeclaration, reason: avoid collision after fix types in other method */
         public void visitModuleDeclaration2(ModuleDescriptor2 moduleDescriptor2, StringBuilder sb) {
             Intrinsics3.checkNotNullParameter(moduleDescriptor2, "descriptor");
             Intrinsics3.checkNotNullParameter(sb, "builder");
             DescriptorRendererImpl.access$renderName(this.f24241a, moduleDescriptor2, sb, true);
         }
 
-        /* renamed from: visitPackageFragmentDescriptor, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: visitPackageFragmentDescriptor, reason: avoid collision after fix types in other method */
         public void visitPackageFragmentDescriptor2(PackageFragmentDescriptor packageFragmentDescriptor, StringBuilder sb) {
             Intrinsics3.checkNotNullParameter(packageFragmentDescriptor, "descriptor");
             Intrinsics3.checkNotNullParameter(sb, "builder");
             DescriptorRendererImpl.access$renderPackageFragment(this.f24241a, packageFragmentDescriptor, sb);
         }
 
-        /* renamed from: visitPackageViewDescriptor, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: visitPackageViewDescriptor, reason: avoid collision after fix types in other method */
         public void visitPackageViewDescriptor2(PackageViewDescriptor packageViewDescriptor, StringBuilder sb) {
             Intrinsics3.checkNotNullParameter(packageViewDescriptor, "descriptor");
             Intrinsics3.checkNotNullParameter(sb, "builder");
             DescriptorRendererImpl.access$renderPackageView(this.f24241a, packageViewDescriptor, sb);
         }
 
-        /* renamed from: visitPropertyDescriptor, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: visitPropertyDescriptor, reason: avoid collision after fix types in other method */
         public void visitPropertyDescriptor2(PropertyDescriptor propertyDescriptor, StringBuilder sb) {
             Intrinsics3.checkNotNullParameter(propertyDescriptor, "descriptor");
             Intrinsics3.checkNotNullParameter(sb, "builder");
             DescriptorRendererImpl.access$renderProperty(this.f24241a, propertyDescriptor, sb);
         }
 
-        /* renamed from: visitPropertyGetterDescriptor, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: visitPropertyGetterDescriptor, reason: avoid collision after fix types in other method */
         public void visitPropertyGetterDescriptor2(PropertyGetterDescriptor propertyGetterDescriptor, StringBuilder sb) {
             Intrinsics3.checkNotNullParameter(propertyGetterDescriptor, "descriptor");
             Intrinsics3.checkNotNullParameter(sb, "builder");
             m9908a(propertyGetterDescriptor, sb, "getter");
         }
 
-        /* renamed from: visitPropertySetterDescriptor, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: visitPropertySetterDescriptor, reason: avoid collision after fix types in other method */
         public void visitPropertySetterDescriptor2(PropertySetterDescriptor propertySetterDescriptor, StringBuilder sb) {
             Intrinsics3.checkNotNullParameter(propertySetterDescriptor, "descriptor");
             Intrinsics3.checkNotNullParameter(sb, "builder");
             m9908a(propertySetterDescriptor, sb, "setter");
         }
 
-        /* renamed from: visitReceiverParameterDescriptor, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: visitReceiverParameterDescriptor, reason: avoid collision after fix types in other method */
         public void visitReceiverParameterDescriptor2(ReceiverParameterDescriptor receiverParameterDescriptor, StringBuilder sb) {
             Intrinsics3.checkNotNullParameter(receiverParameterDescriptor, "descriptor");
             Intrinsics3.checkNotNullParameter(sb, "builder");
             sb.append(receiverParameterDescriptor.getName());
         }
 
-        /* renamed from: visitTypeAliasDescriptor, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: visitTypeAliasDescriptor, reason: avoid collision after fix types in other method */
         public void visitTypeAliasDescriptor2(TypeAliasDescriptor typeAliasDescriptor, StringBuilder sb) {
             Intrinsics3.checkNotNullParameter(typeAliasDescriptor, "descriptor");
             Intrinsics3.checkNotNullParameter(sb, "builder");
             DescriptorRendererImpl.access$renderTypeAlias(this.f24241a, typeAliasDescriptor, sb);
         }
 
-        /* renamed from: visitTypeParameterDescriptor, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: visitTypeParameterDescriptor, reason: avoid collision after fix types in other method */
         public void visitTypeParameterDescriptor2(TypeParameterDescriptor typeParameterDescriptor, StringBuilder sb) {
             Intrinsics3.checkNotNullParameter(typeParameterDescriptor, "descriptor");
             Intrinsics3.checkNotNullParameter(sb, "builder");
             DescriptorRendererImpl.access$renderTypeParameter(this.f24241a, typeParameterDescriptor, sb, true);
         }
 
-        /* renamed from: visitValueParameterDescriptor, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: visitValueParameterDescriptor, reason: avoid collision after fix types in other method */
         public void visitValueParameterDescriptor2(ValueParameterDescriptor valueParameterDescriptor, StringBuilder sb) {
             Intrinsics3.checkNotNullParameter(valueParameterDescriptor, "descriptor");
             Intrinsics3.checkNotNullParameter(sb, "builder");
@@ -303,8 +303,8 @@ public final class DescriptorRendererImpl extends DescriptorRenderer2 implements
         }
     }
 
-    /* compiled from: DescriptorRendererImpl.kt */
-    /* renamed from: d0.e0.p.d.m0.j.d$b */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.j.d$b */
+    /* JADX INFO: compiled from: DescriptorRendererImpl.kt */
     public static final class b extends Lambda implements Function1<TypeProjection, CharSequence> {
         public b() {
             super(1);
@@ -315,7 +315,7 @@ public final class DescriptorRendererImpl extends DescriptorRenderer2 implements
             return invoke2(typeProjection);
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final CharSequence invoke2(TypeProjection typeProjection) {
             Intrinsics3.checkNotNullParameter(typeProjection, "it");
             if (typeProjection.isStarProjection()) {
@@ -332,15 +332,15 @@ public final class DescriptorRendererImpl extends DescriptorRenderer2 implements
         }
     }
 
-    /* compiled from: DescriptorRendererImpl.kt */
-    /* renamed from: d0.e0.p.d.m0.j.d$c */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.j.d$c */
+    /* JADX INFO: compiled from: DescriptorRendererImpl.kt */
     public static final class c extends Lambda implements Function0<DescriptorRendererImpl> {
 
-        /* compiled from: DescriptorRendererImpl.kt */
-        /* renamed from: d0.e0.p.d.m0.j.d$c$a */
+        /* JADX INFO: renamed from: d0.e0.p.d.m0.j.d$c$a */
+        /* JADX INFO: compiled from: DescriptorRendererImpl.kt */
         public static final class a extends Lambda implements Function1<DescriptorRenderer4, Unit> {
 
-            /* renamed from: j */
+            /* JADX INFO: renamed from: j */
             public static final a f24242j = new a();
 
             public a() {
@@ -353,7 +353,7 @@ public final class DescriptorRendererImpl extends DescriptorRenderer2 implements
                 return Unit.f27425a;
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2(DescriptorRenderer4 descriptorRenderer4) {
                 Intrinsics3.checkNotNullParameter(descriptorRenderer4, "<this>");
                 descriptorRenderer4.setExcludedTypeAnnotationClasses(_Sets.plus((Set) descriptorRenderer4.getExcludedTypeAnnotationClasses(), (Iterable) CollectionsJVM.listOf(StandardNames.a.f22569x)));
@@ -377,14 +377,14 @@ public final class DescriptorRendererImpl extends DescriptorRenderer2 implements
         }
     }
 
-    /* compiled from: DescriptorRendererImpl.kt */
-    /* renamed from: d0.e0.p.d.m0.j.d$d */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.j.d$d */
+    /* JADX INFO: compiled from: DescriptorRendererImpl.kt */
     public static final class d extends Lambda implements Function1<AbstractC11815g<?>, CharSequence> {
         public d() {
             super(1);
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final CharSequence invoke2(AbstractC11815g<?> abstractC11815g) {
             Intrinsics3.checkNotNullParameter(abstractC11815g, "it");
             return DescriptorRendererImpl.access$renderConstant(DescriptorRendererImpl.this, abstractC11815g);
@@ -761,13 +761,13 @@ public final class DescriptorRendererImpl extends DescriptorRenderer2 implements
         descriptorRendererImpl.m9877G(valueParameterDescriptor, z2, sb, z3);
     }
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public static /* synthetic */ void m9870i(DescriptorRendererImpl descriptorRendererImpl, StringBuilder sb, Annotations3 annotations3, AnnotationUseSiteTarget annotationUseSiteTarget, int i) {
         int i2 = i & 2;
         descriptorRendererImpl.m9890h(sb, annotations3, null);
     }
 
-    /* renamed from: A */
+    /* JADX INFO: renamed from: A */
     public final void m9871A(CallableDescriptor callableDescriptor, StringBuilder sb) {
         ReceiverParameterDescriptor extensionReceiverParameter;
         if (getReceiverAfterName() && (extensionReceiverParameter = callableDescriptor.getExtensionReceiverParameter()) != null) {
@@ -778,7 +778,7 @@ public final class DescriptorRendererImpl extends DescriptorRenderer2 implements
         }
     }
 
-    /* renamed from: B */
+    /* JADX INFO: renamed from: B */
     public final void m9872B(StringBuilder sb) {
         int length = sb.length();
         if (length == 0 || sb.charAt(length - 1) != ' ') {
@@ -786,7 +786,7 @@ public final class DescriptorRendererImpl extends DescriptorRenderer2 implements
         }
     }
 
-    /* renamed from: C */
+    /* JADX INFO: renamed from: C */
     public final void m9873C(TypeParameterDescriptor typeParameterDescriptor, StringBuilder sb, boolean z2) {
         if (z2) {
             sb.append(m9888f());
@@ -829,7 +829,7 @@ public final class DescriptorRendererImpl extends DescriptorRenderer2 implements
         }
     }
 
-    /* renamed from: D */
+    /* JADX INFO: renamed from: D */
     public final void m9874D(StringBuilder sb, List<? extends TypeParameterDescriptor> list) {
         Iterator<? extends TypeParameterDescriptor> it = list.iterator();
         while (it.hasNext()) {
@@ -840,7 +840,7 @@ public final class DescriptorRendererImpl extends DescriptorRenderer2 implements
         }
     }
 
-    /* renamed from: E */
+    /* JADX INFO: renamed from: E */
     public final void m9875E(List<? extends TypeParameterDescriptor> list, StringBuilder sb, boolean z2) {
         if (!getWithoutTypeParameters() && (!list.isEmpty())) {
             sb.append(m9888f());
@@ -852,7 +852,7 @@ public final class DescriptorRendererImpl extends DescriptorRenderer2 implements
         }
     }
 
-    /* renamed from: F */
+    /* JADX INFO: renamed from: F */
     public final void m9876F(VariableDescriptor variableDescriptor, StringBuilder sb, boolean z2) {
         if (z2 || !(variableDescriptor instanceof ValueParameterDescriptor)) {
             sb.append(m9895n(variableDescriptor.isVar() ? "var" : "val"));
@@ -862,7 +862,7 @@ public final class DescriptorRendererImpl extends DescriptorRenderer2 implements
 
     /* JADX WARN: Removed duplicated region for block: B:19:0x0067  */
     /* JADX WARN: Removed duplicated region for block: B:52:0x00e4  */
-    /* renamed from: G */
+    /* JADX INFO: renamed from: G */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
@@ -921,7 +921,7 @@ public final class DescriptorRendererImpl extends DescriptorRenderer2 implements
         }
     }
 
-    /* renamed from: H */
+    /* JADX INFO: renamed from: H */
     public final void m9878H(Collection<? extends ValueParameterDescriptor> collection, boolean z2, StringBuilder sb) {
         int iOrdinal = getParameterNameRenderingPolicy().ordinal();
         boolean z3 = true;
@@ -946,7 +946,7 @@ public final class DescriptorRendererImpl extends DescriptorRenderer2 implements
         getValueParametersHandler().appendAfterValueParameters(size, sb);
     }
 
-    /* renamed from: I */
+    /* JADX INFO: renamed from: I */
     public final boolean m9879I(DescriptorVisibility2 descriptorVisibility2, StringBuilder sb) {
         if (!getModifiers().contains(DescriptorRenderer3.VISIBILITY)) {
             return false;
@@ -962,7 +962,7 @@ public final class DescriptorRendererImpl extends DescriptorRenderer2 implements
         return true;
     }
 
-    /* renamed from: J */
+    /* JADX INFO: renamed from: J */
     public final void m9880J(List<? extends TypeParameterDescriptor> list, StringBuilder sb) {
         if (getWithoutTypeParameters()) {
             return;
@@ -990,7 +990,7 @@ public final class DescriptorRendererImpl extends DescriptorRenderer2 implements
         }
     }
 
-    /* renamed from: K */
+    /* JADX INFO: renamed from: K */
     public final String m9881K(String str, String str2, String str3, String str4, String str5) {
         if (StringsJVM.startsWith$default(str, str2, false, 2, null) && StringsJVM.startsWith$default(str3, str4, false, 2, null)) {
             int length = str2.length();
@@ -1012,7 +1012,7 @@ public final class DescriptorRendererImpl extends DescriptorRenderer2 implements
         return null;
     }
 
-    /* renamed from: L */
+    /* JADX INFO: renamed from: L */
     public final boolean m9882L(KotlinType kotlinType) {
         boolean z2;
         if (!functionTypes.isBuiltinFunctionalType(kotlinType)) {
@@ -1034,12 +1034,12 @@ public final class DescriptorRendererImpl extends DescriptorRenderer2 implements
         return z2;
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final void m9883a(StringBuilder sb, List<? extends TypeProjection> list) {
         _Collections.joinTo$default(list, sb, ", ", null, null, 0, null, new b(), 60, null);
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final boolean m9884b(String str, String str2) {
         if (!Intrinsics3.areEqual(str, StringsJVM.replace$default(str2, "?", "", false, 4, (Object) null)) && (!StringsJVM.endsWith$default(str2, "?", false, 2, null) || !Intrinsics3.areEqual(Intrinsics3.stringPlus(str, "?"), str2))) {
             if (!Intrinsics3.areEqual('(' + str + ")?", str2)) {
@@ -1049,17 +1049,17 @@ public final class DescriptorRendererImpl extends DescriptorRenderer2 implements
         return true;
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final String m9885c(String str) {
         return getTextFormat().escape(str);
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final String m9886d() {
         return getTextFormat().escape(">");
     }
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final Modality m9887e(MemberDescriptor memberDescriptor) {
         ClassKind classKind = ClassKind.INTERFACE;
         if (memberDescriptor instanceof ClassDescriptor) {
@@ -1083,12 +1083,12 @@ public final class DescriptorRendererImpl extends DescriptorRenderer2 implements
         return Modality.FINAL;
     }
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final String m9888f() {
         return getTextFormat().escape("<");
     }
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public final void m9889g(StringBuilder sb, SpecialTypes specialTypes) {
         DescriptorRenderer9 textFormat = getTextFormat();
         DescriptorRenderer9 descriptorRenderer9 = DescriptorRenderer9.f24330k;
@@ -1307,7 +1307,7 @@ public final class DescriptorRendererImpl extends DescriptorRenderer2 implements
         return this.f24239d.getWithoutTypeParameters();
     }
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public final void m9890h(StringBuilder sb, Annotations3 annotations3, AnnotationUseSiteTarget annotationUseSiteTarget) {
         if (getModifiers().contains(DescriptorRenderer3.ANNOTATIONS)) {
             Set<FqName> excludedTypeAnnotationClasses = annotations3 instanceof KotlinType ? getExcludedTypeAnnotationClasses() : getExcludedAnnotationClasses();
@@ -1326,7 +1326,7 @@ public final class DescriptorRendererImpl extends DescriptorRenderer2 implements
         }
     }
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final void m9891j(ClassifierDescriptorWithTypeParameters classifierDescriptorWithTypeParameters, StringBuilder sb) {
         List<TypeParameterDescriptor> declaredTypeParameters = classifierDescriptorWithTypeParameters.getDeclaredTypeParameters();
         Intrinsics3.checkNotNullExpressionValue(declaredTypeParameters, "classifier.declaredTypeParameters");
@@ -1339,7 +1339,7 @@ public final class DescriptorRendererImpl extends DescriptorRenderer2 implements
         }
     }
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final String m9892k(AbstractC11815g<?> abstractC11815g) {
         if (abstractC11815g instanceof C11809b) {
             return _Collections.joinToString$default(((C11809b) abstractC11815g).getValue(), ", ", "{", "}", 0, null, new d(), 24, null);
@@ -1366,7 +1366,7 @@ public final class DescriptorRendererImpl extends DescriptorRenderer2 implements
         return Intrinsics3.stringPlus(strAsString, "::class");
     }
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final void m9893l(StringBuilder sb, KotlinType kotlinType) {
         m9890h(sb, kotlinType, null);
         if (KotlinType2.isError(kotlinType)) {
@@ -1396,7 +1396,7 @@ public final class DescriptorRendererImpl extends DescriptorRenderer2 implements
         }
     }
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public final void m9894m(VariableDescriptor variableDescriptor, StringBuilder sb) {
         AbstractC11815g<?> compileTimeInitializer;
         if (!getIncludePropertyConstant() || (compileTimeInitializer = variableDescriptor.getCompileTimeInitializer()) == null) {
@@ -1406,7 +1406,7 @@ public final class DescriptorRendererImpl extends DescriptorRenderer2 implements
         sb.append(m9885c(m9892k(compileTimeInitializer)));
     }
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public final String m9895n(String str) {
         int iOrdinal = getTextFormat().ordinal();
         if (iOrdinal == 0) {
@@ -1418,7 +1418,7 @@ public final class DescriptorRendererImpl extends DescriptorRenderer2 implements
         throw new NoWhenBranchMatchedException();
     }
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public final void m9896o(CallableMemberDescriptor callableMemberDescriptor, StringBuilder sb) {
         if (getModifiers().contains(DescriptorRenderer3.MEMBER_KIND) && getVerbose() && callableMemberDescriptor.getKind() != CallableMemberDescriptor.a.DECLARATION) {
             sb.append("/*");
@@ -1431,7 +1431,7 @@ public final class DescriptorRendererImpl extends DescriptorRenderer2 implements
         }
     }
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public final void m9897p(MemberDescriptor memberDescriptor, StringBuilder sb) {
         m9900s(sb, memberDescriptor.isExternal(), "external");
         boolean z2 = false;
@@ -1442,7 +1442,7 @@ public final class DescriptorRendererImpl extends DescriptorRenderer2 implements
         m9900s(sb, z2, "actual");
     }
 
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     public final void m9898q(Modality modality, StringBuilder sb, Modality modality2) {
         if (getRenderDefaultModality() || modality != modality2) {
             boolean zContains = getModifiers().contains(DescriptorRenderer3.MODALITY);
@@ -1454,7 +1454,7 @@ public final class DescriptorRendererImpl extends DescriptorRenderer2 implements
         }
     }
 
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     public final void m9899r(CallableMemberDescriptor callableMemberDescriptor, StringBuilder sb) {
         if (DescriptorUtils.isTopLevelDeclaration(callableMemberDescriptor) && callableMemberDescriptor.getModality() == Modality.FINAL) {
             return;
@@ -1682,7 +1682,7 @@ public final class DescriptorRendererImpl extends DescriptorRenderer2 implements
         return string;
     }
 
-    /* renamed from: s */
+    /* JADX INFO: renamed from: s */
     public final void m9900s(StringBuilder sb, boolean z2, String str) {
         if (z2) {
             sb.append(m9895n(str));
@@ -1761,14 +1761,14 @@ public final class DescriptorRendererImpl extends DescriptorRenderer2 implements
         this.f24239d.setWithoutTypeParameters(z2);
     }
 
-    /* renamed from: t */
+    /* JADX INFO: renamed from: t */
     public final void m9901t(DeclarationDescriptor declarationDescriptor, StringBuilder sb, boolean z2) {
         Name name = declarationDescriptor.getName();
         Intrinsics3.checkNotNullExpressionValue(name, "descriptor.name");
         sb.append(renderName(name, z2));
     }
 
-    /* renamed from: u */
+    /* JADX INFO: renamed from: u */
     public final void m9902u(StringBuilder sb, KotlinType kotlinType) {
         KotlinType3 kotlinType3Unwrap = kotlinType.unwrap();
         SpecialTypes specialTypes = kotlinType3Unwrap instanceof SpecialTypes ? (SpecialTypes) kotlinType3Unwrap : null;
@@ -1787,7 +1787,7 @@ public final class DescriptorRendererImpl extends DescriptorRenderer2 implements
     }
 
     /* JADX WARN: Removed duplicated region for block: B:71:0x0124  */
-    /* renamed from: v */
+    /* JADX INFO: renamed from: v */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
@@ -1911,7 +1911,7 @@ public final class DescriptorRendererImpl extends DescriptorRenderer2 implements
         }
     }
 
-    /* renamed from: w */
+    /* JADX INFO: renamed from: w */
     public final void m9904w(CallableMemberDescriptor callableMemberDescriptor, StringBuilder sb) {
         if (getModifiers().contains(DescriptorRenderer3.OVERRIDE) && (!callableMemberDescriptor.getOverriddenDescriptors().isEmpty()) && getOverrideRenderingPolicy() != DescriptorRenderer6.RENDER_OPEN) {
             m9900s(sb, true, "override");
@@ -1923,7 +1923,7 @@ public final class DescriptorRendererImpl extends DescriptorRenderer2 implements
         }
     }
 
-    /* renamed from: x */
+    /* JADX INFO: renamed from: x */
     public final void m9905x(FqName fqName, String str, StringBuilder sb) {
         sb.append(m9895n(str));
         FqNameUnsafe unsafe = fqName.toUnsafe();
@@ -1935,7 +1935,7 @@ public final class DescriptorRendererImpl extends DescriptorRenderer2 implements
         }
     }
 
-    /* renamed from: y */
+    /* JADX INFO: renamed from: y */
     public final void m9906y(StringBuilder sb, typeParameterUtils3 typeparameterutils3) {
         StringBuilder sb2;
         typeParameterUtils3 outerType = typeparameterutils3.getOuterType();
@@ -1957,7 +1957,7 @@ public final class DescriptorRendererImpl extends DescriptorRenderer2 implements
         sb.append(renderTypeArguments(typeparameterutils3.getArguments()));
     }
 
-    /* renamed from: z */
+    /* JADX INFO: renamed from: z */
     public final void m9907z(CallableDescriptor callableDescriptor, StringBuilder sb) {
         ReceiverParameterDescriptor extensionReceiverParameter = callableDescriptor.getExtensionReceiverParameter();
         if (extensionReceiverParameter != null) {

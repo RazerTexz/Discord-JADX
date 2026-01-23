@@ -20,8 +20,8 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 import p658rx.Observable;
 
-/* compiled from: StoreChannelFollowerStats.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: StoreChannelFollowerStats.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class StoreChannelFollowerStats extends StoreV2 {
     private static final int STALE_TIME_DIFF_MS = 3600000;
     private final Map<Long, ChannelFollowerStatData> channelFollowerStatsState;
@@ -29,7 +29,7 @@ public final class StoreChannelFollowerStats extends StoreV2 {
     private final Dispatcher dispatcher;
     private final ObservationDeck observationDeck;
 
-    /* compiled from: StoreChannelFollowerStats.kt */
+    /* JADX INFO: compiled from: StoreChannelFollowerStats.kt */
     public static final /* data */ class ChannelFollowerStatData {
         private final ModelChannelFollowerStats data;
         private final FetchState fetchState;
@@ -51,12 +51,12 @@ public final class StoreChannelFollowerStats extends StoreV2 {
             return channelFollowerStatData.copy(fetchState, modelChannelFollowerStats);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final FetchState getFetchState() {
             return this.fetchState;
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final ModelChannelFollowerStats getData() {
             return this.data;
         }
@@ -107,24 +107,24 @@ public final class StoreChannelFollowerStats extends StoreV2 {
         }
     }
 
-    /* compiled from: StoreChannelFollowerStats.kt */
+    /* JADX INFO: compiled from: StoreChannelFollowerStats.kt */
     public enum FetchState {
         FETCHING,
         FAILED,
         SUCCEEDED
     }
 
-    /* compiled from: StoreChannelFollowerStats.kt */
-    /* renamed from: com.discord.stores.StoreChannelFollowerStats$fetchIfNonexistingOrStale$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreChannelFollowerStats$fetchIfNonexistingOrStale$1 */
+    /* JADX INFO: compiled from: StoreChannelFollowerStats.kt */
     public static final class C58101 extends Lambda implements Function0<Unit> {
         public final /* synthetic */ long $channelId;
 
-        /* compiled from: StoreChannelFollowerStats.kt */
-        /* renamed from: com.discord.stores.StoreChannelFollowerStats$fetchIfNonexistingOrStale$1$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.stores.StoreChannelFollowerStats$fetchIfNonexistingOrStale$1$1, reason: invalid class name */
+        /* JADX INFO: compiled from: StoreChannelFollowerStats.kt */
         public static final class AnonymousClass1 extends Lambda implements Function1<ModelChannelFollowerStatsDto, Unit> {
 
-            /* compiled from: StoreChannelFollowerStats.kt */
-            /* renamed from: com.discord.stores.StoreChannelFollowerStats$fetchIfNonexistingOrStale$1$1$1, reason: invalid class name and collision with other inner class name */
+            /* JADX INFO: renamed from: com.discord.stores.StoreChannelFollowerStats$fetchIfNonexistingOrStale$1$1$1, reason: invalid class name and collision with other inner class name */
+            /* JADX INFO: compiled from: StoreChannelFollowerStats.kt */
             public static final class C132511 extends Lambda implements Function0<Unit> {
                 public final /* synthetic */ ModelChannelFollowerStatsDto $channelFollowerStats;
 
@@ -140,7 +140,7 @@ public final class StoreChannelFollowerStats extends StoreV2 {
                     return Unit.f27425a;
                 }
 
-                /* renamed from: invoke, reason: avoid collision after fix types in other method */
+                /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
                 public final void invoke2() {
                     C58101 c58101 = C58101.this;
                     StoreChannelFollowerStats.access$handleChannelFollowerStatsFetchSuccess(StoreChannelFollowerStats.this, c58101.$channelId, ModelChannelFollowerStats.INSTANCE.fromResponse(this.$channelFollowerStats));
@@ -157,18 +157,18 @@ public final class StoreChannelFollowerStats extends StoreV2 {
                 return Unit.f27425a;
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2(ModelChannelFollowerStatsDto modelChannelFollowerStatsDto) {
                 StoreChannelFollowerStats.access$getDispatcher$p(StoreChannelFollowerStats.this).schedule(new C132511(modelChannelFollowerStatsDto));
             }
         }
 
-        /* compiled from: StoreChannelFollowerStats.kt */
-        /* renamed from: com.discord.stores.StoreChannelFollowerStats$fetchIfNonexistingOrStale$1$2, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.stores.StoreChannelFollowerStats$fetchIfNonexistingOrStale$1$2, reason: invalid class name */
+        /* JADX INFO: compiled from: StoreChannelFollowerStats.kt */
         public static final class AnonymousClass2 extends Lambda implements Function1<Error, Unit> {
 
-            /* compiled from: StoreChannelFollowerStats.kt */
-            /* renamed from: com.discord.stores.StoreChannelFollowerStats$fetchIfNonexistingOrStale$1$2$1, reason: invalid class name */
+            /* JADX INFO: renamed from: com.discord.stores.StoreChannelFollowerStats$fetchIfNonexistingOrStale$1$2$1, reason: invalid class name */
+            /* JADX INFO: compiled from: StoreChannelFollowerStats.kt */
             public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
                 public AnonymousClass1() {
                     super(0);
@@ -180,7 +180,7 @@ public final class StoreChannelFollowerStats extends StoreV2 {
                     return Unit.f27425a;
                 }
 
-                /* renamed from: invoke, reason: avoid collision after fix types in other method */
+                /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
                 public final void invoke2() {
                     C58101 c58101 = C58101.this;
                     StoreChannelFollowerStats.access$handleChannelFollowerStatsFetchFailed(StoreChannelFollowerStats.this, c58101.$channelId);
@@ -197,7 +197,7 @@ public final class StoreChannelFollowerStats extends StoreV2 {
                 return Unit.f27425a;
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2(Error error) {
                 Intrinsics3.checkNotNullParameter(error, "it");
                 StoreChannelFollowerStats.access$getDispatcher$p(StoreChannelFollowerStats.this).schedule(new AnonymousClass1());
@@ -216,7 +216,7 @@ public final class StoreChannelFollowerStats extends StoreV2 {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             boolean z2 = StoreChannelFollowerStats.access$isExisting(StoreChannelFollowerStats.this, this.$channelId) && !StoreChannelFollowerStats.access$isStale(StoreChannelFollowerStats.this, this.$channelId);
             ChannelFollowerStatData channelFollowerStatData = (ChannelFollowerStatData) StoreChannelFollowerStats.access$getChannelFollowerStatsState$p(StoreChannelFollowerStats.this).get(Long.valueOf(this.$channelId));
@@ -229,8 +229,8 @@ public final class StoreChannelFollowerStats extends StoreV2 {
         }
     }
 
-    /* compiled from: StoreChannelFollowerStats.kt */
-    /* renamed from: com.discord.stores.StoreChannelFollowerStats$observeChannelFollowerStats$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreChannelFollowerStats$observeChannelFollowerStats$1 */
+    /* JADX INFO: compiled from: StoreChannelFollowerStats.kt */
     public static final class C58111 extends Lambda implements Function0<ModelChannelFollowerStats> {
         public final /* synthetic */ long $channelId;
 

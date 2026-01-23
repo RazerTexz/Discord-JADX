@@ -8,9 +8,9 @@ import java.util.Objects;
 import p507d0.p582u.C12169a;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: Comparisons.kt */
-/* renamed from: com.discord.stores.StoreEmoji$buildUsableEmojiSet$5$processGuildEmojis$$inlined$sortedByDescending$1 */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.stores.StoreEmoji$buildUsableEmojiSet$5$processGuildEmojis$$inlined$sortedByDescending$1 */
+/* JADX INFO: compiled from: Comparisons.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class C5892x909b83d3<T> implements Comparator {
     /* JADX WARN: Multi-variable type inference failed */
     @Override // java.util.Comparator

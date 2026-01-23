@@ -6,12 +6,12 @@ import p637j0.p641k.Func1;
 import p637j0.p642l.p647e.ScalarSynchronousObservable;
 import p658rx.Observable;
 
-/* compiled from: lambda */
-/* renamed from: b.a.z.a.a.q */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: b.a.z.a.a.q */
+/* JADX INFO: compiled from: lambda */
+/* JADX INFO: loaded from: classes2.dex */
 public final /* synthetic */ class C1407q implements Func1 {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final /* synthetic */ long f2106j;
 
     public /* synthetic */ C1407q(long j) {

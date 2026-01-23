@@ -8,9 +8,9 @@ import com.google.android.gms.common.api.Scope;
 import java.util.ArrayList;
 import p007b.p085c.p086a.p087a0.AnimatableValueParser;
 
-/* compiled from: com.google.android.gms:play-services-base@@17.3.0 */
-/* renamed from: b.i.a.f.c.a.f.d */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.c.a.f.d */
+/* JADX INFO: compiled from: com.google.android.gms:play-services-base@@17.3.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public final class C3219d implements Parcelable.Creator<GoogleSignInAccount> {
     @Override // android.os.Parcelable.Creator
     public final GoogleSignInAccount createFromParcel(Parcel parcel) {

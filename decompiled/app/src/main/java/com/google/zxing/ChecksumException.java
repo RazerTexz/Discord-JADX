@@ -1,9 +1,9 @@
 package com.google.zxing;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public final class ChecksumException extends ReaderException {
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public static final ChecksumException f21663l;
 
     static {
@@ -15,7 +15,7 @@ public final class ChecksumException extends ReaderException {
     private ChecksumException() {
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static ChecksumException m9259a() {
         return ReaderException.f21666j ? new ChecksumException() : f21663l;
     }

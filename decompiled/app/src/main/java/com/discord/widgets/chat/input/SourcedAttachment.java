@@ -11,8 +11,8 @@ import com.lytefast.flexinput.model.Attachment;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: SourcedAttachment.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: SourcedAttachment.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class SourcedAttachment<T> extends Attachment<T> {
     private final String source;
 

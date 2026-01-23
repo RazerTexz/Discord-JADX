@@ -5,9 +5,9 @@ import kotlin.jvm.functions.Function0;
 import kotlin.jvm.internal.Ref$IntRef;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: StoreApplicationCommands.kt */
-/* renamed from: com.discord.stores.StoreApplicationCommands$requestInitialApplicationCommands$$inlined$let$lambda$1 */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.stores.StoreApplicationCommands$requestInitialApplicationCommands$$inlined$let$lambda$1 */
+/* JADX INFO: compiled from: StoreApplicationCommands.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class C5720xe407722c extends Lambda implements Function0<Unit> {
     public final /* synthetic */ Ref$IntRef $offset$inlined;
     public final /* synthetic */ StoreApplicationCommands this$0;
@@ -25,7 +25,7 @@ public final class C5720xe407722c extends Lambda implements Function0<Unit> {
         return Unit.f27425a;
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final void invoke2() {
         StoreApplicationCommands storeApplicationCommands = this.this$0;
         StoreApplicationCommands.access$handleDiscoverCommandsUpdate(storeApplicationCommands, StoreApplicationCommands.access$getBuiltInCommandsProvider$p(storeApplicationCommands).getBuiltInCommands());

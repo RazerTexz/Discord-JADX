@@ -4,17 +4,17 @@ import android.os.Parcel;
 import android.os.Parcelable;
 import p007b.p225i.p226a.p242c.p259f3.ParsableByteArray;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public final class TimeSignalCommand extends SpliceCommand {
     public static final Parcelable.Creator<TimeSignalCommand> CREATOR = new C10749a();
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final long f20052j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final long f20053k;
 
-    /* renamed from: com.google.android.exoplayer2.metadata.scte35.TimeSignalCommand$a */
+    /* JADX INFO: renamed from: com.google.android.exoplayer2.metadata.scte35.TimeSignalCommand$a */
     public class C10749a implements Parcelable.Creator<TimeSignalCommand> {
         @Override // android.os.Parcelable.Creator
         public TimeSignalCommand createFromParcel(Parcel parcel) {
@@ -32,7 +32,7 @@ public final class TimeSignalCommand extends SpliceCommand {
         this.f20053k = j2;
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static long m8883a(ParsableByteArray parsableByteArray, long j) {
         long jM3100t = parsableByteArray.m3100t();
         if ((128 & jM3100t) != 0) {

@@ -5,9 +5,9 @@ import androidx.annotation.RequiresApi;
 import java.util.Collection;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: Path.kt */
-/* renamed from: androidx.core.graphics.PathKt, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: androidx.core.graphics.PathKt, reason: use source file name */
+/* JADX INFO: compiled from: Path.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class Path {
     @RequiresApi(19)
     public static final android.graphics.Path and(android.graphics.Path path, android.graphics.Path path2) {
@@ -43,7 +43,7 @@ public final class Path {
     }
 
     @RequiresApi(19)
-    /* renamed from: or */
+    /* JADX INFO: renamed from: or */
     public static final android.graphics.Path m84or(android.graphics.Path path, android.graphics.Path path2) {
         Intrinsics3.checkNotNullParameter(path, "<this>");
         Intrinsics3.checkNotNullParameter(path2, "p");

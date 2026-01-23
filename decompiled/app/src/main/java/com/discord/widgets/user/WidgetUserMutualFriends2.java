@@ -24,14 +24,14 @@ import p637j0.p641k.Func1;
 import p658rx.Observable;
 import p658rx.functions.Func6;
 
-/* compiled from: WidgetUserMutualFriends.kt */
-/* renamed from: com.discord.widgets.user.WidgetUserMutualFriends$Model$Companion$get$1, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: com.discord.widgets.user.WidgetUserMutualFriends$Model$Companion$get$1, reason: use source file name */
+/* JADX INFO: compiled from: WidgetUserMutualFriends.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class WidgetUserMutualFriends2<T, R> implements Func1<List<? extends ModelUserRelationship>, Observable<? extends WidgetUserMutualFriends.Model>> {
     public final /* synthetic */ long $userId;
 
-    /* compiled from: WidgetUserMutualFriends.kt */
-    /* renamed from: com.discord.widgets.user.WidgetUserMutualFriends$Model$Companion$get$1$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.user.WidgetUserMutualFriends$Model$Companion$get$1$1 */
+    /* JADX INFO: compiled from: WidgetUserMutualFriends.kt */
     public static final class C102151<T1, T2, T3, T4, T5, T6, R> implements Func6<Map<Long, ? extends List<? extends Guild>>, Map<Long, ? extends User>, Map<Long, ? extends Presence>, Map<Long, ? extends Integer>, Map<Long, ? extends ModelApplicationStream>, User, WidgetUserMutualFriends.Model> {
         public static final C102151 INSTANCE = new C102151();
 
@@ -40,7 +40,7 @@ public final class WidgetUserMutualFriends2<T, R> implements Func1<List<? extend
             return call2((Map<Long, ? extends List<Guild>>) map, map2, (Map<Long, Presence>) map3, (Map<Long, Integer>) map4, map5, user);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final WidgetUserMutualFriends.Model call2(Map<Long, ? extends List<Guild>> map, Map<Long, ? extends User> map2, Map<Long, Presence> map3, Map<Long, Integer> map4, Map<Long, ? extends ModelApplicationStream> map5, User user) {
             Intrinsics3.checkNotNullExpressionValue(map2, "users");
             LinkedHashMap linkedHashMap = new LinkedHashMap();
@@ -73,7 +73,7 @@ public final class WidgetUserMutualFriends2<T, R> implements Func1<List<? extend
         return call2(list);
     }
 
-    /* renamed from: call, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
     public final Observable<? extends WidgetUserMutualFriends.Model> call2(List<? extends ModelUserRelationship> list) {
         Intrinsics3.checkNotNullExpressionValue(list, "relationshipsApiResponse");
         ArrayList arrayList = new ArrayList(Iterables2.collectionSizeOrDefault(list, 10));

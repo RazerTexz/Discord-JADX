@@ -29,14 +29,14 @@ import com.google.android.material.shape.MaterialShapeDrawable;
 import com.google.android.material.shape.ShapeAppearanceModel;
 import java.util.ArrayList;
 
-/* compiled from: FloatingActionButtonImplLollipop.java */
+/* JADX INFO: renamed from: b.i.a.g.e.i, reason: use source file name */
+/* JADX INFO: compiled from: FloatingActionButtonImplLollipop.java */
+/* JADX INFO: loaded from: classes3.dex */
 @RequiresApi(21)
-/* renamed from: b.i.a.g.e.i, reason: use source file name */
-/* loaded from: classes3.dex */
 public class FloatingActionButtonImplLollipop extends FloatingActionButtonImpl3 {
 
-    /* compiled from: FloatingActionButtonImplLollipop.java */
-    /* renamed from: b.i.a.g.e.i$a */
+    /* JADX INFO: renamed from: b.i.a.g.e.i$a */
+    /* JADX INFO: compiled from: FloatingActionButtonImplLollipop.java */
     public static class a extends MaterialShapeDrawable {
         public a(ShapeAppearanceModel shapeAppearanceModel) {
             super(shapeAppearanceModel);
@@ -53,13 +53,13 @@ public class FloatingActionButtonImplLollipop extends FloatingActionButtonImpl3 
     }
 
     @Override // p007b.p225i.p226a.p341g.p346e.FloatingActionButtonImpl3
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public float mo6088d() {
         return this.f11664F.getElevation();
     }
 
     @Override // p007b.p225i.p226a.p341g.p346e.FloatingActionButtonImpl3
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public void mo6089e(@NonNull Rect rect) {
         if (this.f11665G.isCompatPaddingEnabled()) {
             super.mo6089e(rect);
@@ -72,7 +72,7 @@ public class FloatingActionButtonImplLollipop extends FloatingActionButtonImpl3 
     }
 
     @Override // p007b.p225i.p226a.p341g.p346e.FloatingActionButtonImpl3
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public void mo6090f(ColorStateList colorStateList, @Nullable PorterDuff.Mode mode, ColorStateList colorStateList2, int i) {
         Drawable layerDrawable;
         a aVar = new a((ShapeAppearanceModel) Preconditions.checkNotNull(this.f11671h));
@@ -113,18 +113,18 @@ public class FloatingActionButtonImplLollipop extends FloatingActionButtonImpl3 
     }
 
     @Override // p007b.p225i.p226a.p341g.p346e.FloatingActionButtonImpl3
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public void mo6093i() {
     }
 
     @Override // p007b.p225i.p226a.p341g.p346e.FloatingActionButtonImpl3
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public void mo6094j() {
         m6106v();
     }
 
     @Override // p007b.p225i.p226a.p341g.p346e.FloatingActionButtonImpl3
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public void mo6095k(int[] iArr) {
         if (Build.VERSION.SDK_INT == 21) {
             if (!this.f11664F.isEnabled()) {
@@ -144,7 +144,7 @@ public class FloatingActionButtonImplLollipop extends FloatingActionButtonImpl3 
     }
 
     @Override // p007b.p225i.p226a.p341g.p346e.FloatingActionButtonImpl3
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public void mo6096l(float f, float f2, float f3) {
         int i = Build.VERSION.SDK_INT;
         if (i == 21) {
@@ -175,7 +175,7 @@ public class FloatingActionButtonImplLollipop extends FloatingActionButtonImpl3 
     }
 
     @Override // p007b.p225i.p226a.p341g.p346e.FloatingActionButtonImpl3
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public void mo6100p(@Nullable ColorStateList colorStateList) {
         Drawable drawable = this.f11673j;
         if (drawable instanceof RippleDrawable) {
@@ -186,18 +186,18 @@ public class FloatingActionButtonImplLollipop extends FloatingActionButtonImpl3 
     }
 
     @Override // p007b.p225i.p226a.p341g.p346e.FloatingActionButtonImpl3
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     public boolean mo6102r() {
         return this.f11665G.isCompatPaddingEnabled() || !m6104t();
     }
 
     @Override // p007b.p225i.p226a.p341g.p346e.FloatingActionButtonImpl3
-    /* renamed from: u */
+    /* JADX INFO: renamed from: u */
     public void mo6105u() {
     }
 
     @NonNull
-    /* renamed from: x */
+    /* JADX INFO: renamed from: x */
     public final Animator m6111x(float f, float f2) {
         AnimatorSet animatorSet = new AnimatorSet();
         animatorSet.play(ObjectAnimator.ofFloat(this.f11664F, Key.ELEVATION, f).setDuration(0L)).with(ObjectAnimator.ofFloat(this.f11664F, (Property<FloatingActionButton, Float>) View.TRANSLATION_Z, f2).setDuration(100L));

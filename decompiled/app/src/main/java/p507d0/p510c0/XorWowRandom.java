@@ -3,32 +3,32 @@ package p507d0.p510c0;
 import java.io.Serializable;
 import kotlin.jvm.internal.DefaultConstructorMarker;
 
-/* compiled from: XorWowRandom.kt */
-/* renamed from: d0.c0.e, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.c0.e, reason: use source file name */
+/* JADX INFO: compiled from: XorWowRandom.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class XorWowRandom extends Random implements Serializable {
 
     @Deprecated
     private static final long serialVersionUID = 0;
     private int addend;
 
-    /* renamed from: v */
+    /* JADX INFO: renamed from: v */
     private int f22274v;
 
-    /* renamed from: w */
+    /* JADX INFO: renamed from: w */
     private int f22275w;
 
-    /* renamed from: x */
+    /* JADX INFO: renamed from: x */
     private int f22276x;
 
-    /* renamed from: y */
+    /* JADX INFO: renamed from: y */
     private int f22277y;
 
-    /* renamed from: z */
+    /* JADX INFO: renamed from: z */
     private int f22278z;
 
-    /* compiled from: XorWowRandom.kt */
-    /* renamed from: d0.c0.e$a */
+    /* JADX INFO: renamed from: d0.c0.e$a */
+    /* JADX INFO: compiled from: XorWowRandom.kt */
     public static final class a {
         public a(DefaultConstructorMarker defaultConstructorMarker) {
         }

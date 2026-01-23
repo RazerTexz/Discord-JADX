@@ -7,24 +7,24 @@ import java.util.regex.Pattern;
 import p007b.p225i.p361c.p369m.p370d.p377n.HttpRequest;
 import p007b.p225i.p361c.p369m.p370d.p377n.HttpRequestFactory;
 
-/* compiled from: AbstractSpiCall.java */
-/* renamed from: b.i.c.m.d.k.a, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.c.m.d.k.a, reason: use source file name */
+/* JADX INFO: compiled from: AbstractSpiCall.java */
+/* JADX INFO: loaded from: classes3.dex */
 public abstract class AbstractSpiCall {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final Pattern f12252a = Pattern.compile("http(s?)://[^\\/]+", 2);
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final String f12253b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final HttpRequestFactory f12254c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final int f12255d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final String f12256e;
 
     public AbstractSpiCall(String str, String str2, HttpRequestFactory httpRequestFactory, int i) {
@@ -40,12 +40,12 @@ public abstract class AbstractSpiCall {
         this.f12255d = i;
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public HttpRequest m6390b() {
         return m6391c(Collections.emptyMap());
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public HttpRequest m6391c(Map<String, String> map) {
         HttpRequestFactory httpRequestFactory = this.f12254c;
         int i = this.f12255d;

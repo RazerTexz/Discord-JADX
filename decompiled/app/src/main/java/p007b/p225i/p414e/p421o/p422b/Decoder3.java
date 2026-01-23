@@ -13,12 +13,12 @@ import p007b.p225i.p414e.p418n.p420l.GenericGF;
 import p007b.p225i.p414e.p418n.p420l.ReedSolomonDecoder;
 import p007b.p225i.p414e.p421o.p422b.Version2;
 
-/* compiled from: Decoder.java */
-/* renamed from: b.i.e.o.b.d, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.e.o.b.d, reason: use source file name */
+/* JADX INFO: compiled from: Decoder.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class Decoder3 {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final ReedSolomonDecoder f13329a = new ReedSolomonDecoder(GenericGF.f13304f);
 
     /* JADX WARN: Code restructure failed: missing block: B:234:0x03ae, code lost:
@@ -34,7 +34,7 @@ public final class Decoder3 {
     /* JADX WARN: Removed duplicated region for block: B:494:0x0666 A[ADDED_TO_REGION, REMOVE, SYNTHETIC] */
     /* JADX WARN: Removed duplicated region for block: B:503:0x04fe A[SYNTHETIC] */
     /* JADX WARN: Removed duplicated region for block: B:504:? A[LOOP:15: B:201:0x0348->B:504:?, LOOP_END, SYNTHETIC] */
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */

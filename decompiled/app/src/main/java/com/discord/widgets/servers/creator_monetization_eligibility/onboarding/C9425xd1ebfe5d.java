@@ -6,9 +6,9 @@ import com.discord.utilities.view.extensions.ScrollViewExtensions;
 import com.discord.widgets.servers.creator_monetization_eligibility.onboarding.ServerSettingsCreatorMonetizationOnboardingViewModel;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: WidgetServerSettingsCreatorMonetizationOnboarding.kt */
-/* renamed from: com.discord.widgets.servers.creator_monetization_eligibility.onboarding.WidgetServerSettingsCreatorMonetizationOnboarding$configureAcceptTermsState$$inlined$apply$lambda$1 */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.servers.creator_monetization_eligibility.onboarding.WidgetServerSettingsCreatorMonetizationOnboarding$configureAcceptTermsState$$inlined$apply$lambda$1 */
+/* JADX INFO: compiled from: WidgetServerSettingsCreatorMonetizationOnboarding.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class C9425xd1ebfe5d implements CompoundButton.OnCheckedChangeListener {
     public final /* synthetic */ ServerSettingsCreatorMonetizationOnboardingViewModel.ViewState.AcceptTerms $viewState$inlined;
     public final /* synthetic */ WidgetServerSettingsCreatorMonetizationOnboarding this$0;

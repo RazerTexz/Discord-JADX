@@ -6,9 +6,9 @@ import com.discord.widgets.guilds.leave.LeaveGuildDialogViewModel;
 import p507d0.p592z.p594d.Intrinsics3;
 import p658rx.functions.Func2;
 
-/* compiled from: LeaveGuildDialogViewModel.kt */
-/* renamed from: com.discord.widgets.guilds.leave.LeaveGuildDialogViewModel$Companion$observeStoreState$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.guilds.leave.LeaveGuildDialogViewModel$Companion$observeStoreState$1, reason: use source file name */
+/* JADX INFO: compiled from: LeaveGuildDialogViewModel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class LeaveGuildDialogViewModel2<T1, T2, R> implements Func2<Guild, Boolean, LeaveGuildDialogViewModel.StoreState> {
     public static final LeaveGuildDialogViewModel2 INSTANCE = new LeaveGuildDialogViewModel2();
 
@@ -17,7 +17,7 @@ public final class LeaveGuildDialogViewModel2<T1, T2, R> implements Func2<Guild,
         return call2(guild, bool);
     }
 
-    /* renamed from: call, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
     public final LeaveGuildDialogViewModel.StoreState call2(Guild guild, Boolean bool) {
         if (guild == null) {
             return LeaveGuildDialogViewModel.StoreState.Invalid.INSTANCE;

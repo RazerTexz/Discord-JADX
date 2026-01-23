@@ -30,12 +30,12 @@ import kotlin.jvm.internal.DefaultConstructorMarker;
 import p007b.p008a.p027k.FormatUtils;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ModeratorStartStageAdapter.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: ModeratorStartStageAdapter.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class ModeratorStartStageAdapter extends MGRecyclerAdapterSimple<ModeratorStartStageItem> {
     private final Function1<ModeratorStartStageItem, Unit> onItemClicked;
 
-    /* compiled from: ModeratorStartStageAdapter.kt */
+    /* JADX INFO: compiled from: ModeratorStartStageAdapter.kt */
     public abstract class CreateStageEventViewHolder extends MGRecyclerViewHolder<ModeratorStartStageAdapter, ModeratorStartStageItem> {
         private final View rootView;
         public final /* synthetic */ ModeratorStartStageAdapter this$0;
@@ -57,7 +57,7 @@ public final class ModeratorStartStageAdapter extends MGRecyclerAdapterSimple<Mo
             onConfigure2(i, moderatorStartStageItem);
         }
 
-        /* renamed from: onConfigure, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: onConfigure, reason: avoid collision after fix types in other method */
         public void onConfigure2(int position, ModeratorStartStageItem data) {
             Intrinsics3.checkNotNullParameter(data, "data");
             super.onConfigure(position, data);
@@ -65,7 +65,7 @@ public final class ModeratorStartStageAdapter extends MGRecyclerAdapterSimple<Mo
         }
     }
 
-    /* compiled from: ModeratorStartStageAdapter.kt */
+    /* JADX INFO: compiled from: ModeratorStartStageAdapter.kt */
     public final class ListItemViewHolder extends CreateStageEventViewHolder {
         private final ModeratorStartStageListItemBinding binding;
         public final /* synthetic */ ModeratorStartStageAdapter this$0;
@@ -121,7 +121,7 @@ public final class ModeratorStartStageAdapter extends MGRecyclerAdapterSimple<Mo
         }
     }
 
-    /* compiled from: ModeratorStartStageAdapter.kt */
+    /* JADX INFO: compiled from: ModeratorStartStageAdapter.kt */
     public final class WaitingViewHolder extends CreateStageEventViewHolder {
         private final ModeratorStartStageWaitingItemBinding binding;
         public final /* synthetic */ ModeratorStartStageAdapter this$0;
@@ -222,7 +222,7 @@ public final class ModeratorStartStageAdapter extends MGRecyclerAdapterSimple<Mo
         throw invalidViewTypeException(viewType);
     }
 
-    /* compiled from: ModeratorStartStageAdapter.kt */
+    /* JADX INFO: compiled from: ModeratorStartStageAdapter.kt */
     public final class ContinueViewHolder extends CreateStageEventViewHolder {
         private final ModeratorStartStageContinueItemBinding binding;
         public final /* synthetic */ ModeratorStartStageAdapter this$0;
@@ -253,7 +253,7 @@ public final class ModeratorStartStageAdapter extends MGRecyclerAdapterSimple<Mo
         }
     }
 
-    /* compiled from: ModeratorStartStageAdapter.kt */
+    /* JADX INFO: compiled from: ModeratorStartStageAdapter.kt */
     public final class HeaderViewHolder extends CreateStageEventViewHolder {
         private final ModeratorStartStageHeaderItemBinding binding;
         public final /* synthetic */ ModeratorStartStageAdapter this$0;

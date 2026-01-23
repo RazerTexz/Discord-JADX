@@ -7,8 +7,8 @@ import com.discord.models.user.User;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ChannelListItemVoiceUser.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: ChannelListItemVoiceUser.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final /* data */ class ChannelListItemVoiceUser implements ChannelListItem {
     private final Channel channel;
     private final GuildMember computed;
@@ -64,32 +64,32 @@ public final /* data */ class ChannelListItemVoiceUser implements ChannelListIte
         return channelListItemVoiceUser.copy(channel, voiceState2, user2, guildMember2, z4, z3);
     }
 
-    /* renamed from: component1, reason: from getter */
+    /* JADX INFO: renamed from: component1, reason: from getter */
     public final Channel getChannel() {
         return this.channel;
     }
 
-    /* renamed from: component2, reason: from getter */
+    /* JADX INFO: renamed from: component2, reason: from getter */
     public final VoiceState getVoiceState() {
         return this.voiceState;
     }
 
-    /* renamed from: component3, reason: from getter */
+    /* JADX INFO: renamed from: component3, reason: from getter */
     public final User getUser() {
         return this.user;
     }
 
-    /* renamed from: component4, reason: from getter */
+    /* JADX INFO: renamed from: component4, reason: from getter */
     public final GuildMember getComputed() {
         return this.computed;
     }
 
-    /* renamed from: component5, reason: from getter */
+    /* JADX INFO: renamed from: component5, reason: from getter */
     public final boolean getIsApplicationStreaming() {
         return this.isApplicationStreaming;
     }
 
-    /* renamed from: component6, reason: from getter */
+    /* JADX INFO: renamed from: component6, reason: from getter */
     public final boolean getHasChannelConnectPermission() {
         return this.hasChannelConnectPermission;
     }
@@ -144,6 +144,12 @@ public final /* data */ class ChannelListItemVoiceUser implements ChannelListIte
     }
 
     /* JADX WARN: Multi-variable type inference failed */
+    /* JADX WARN: Type inference failed for: r1v3, types: [int] */
+    /* JADX WARN: Type inference failed for: r1v5 */
+    /* JADX WARN: Type inference failed for: r1v7 */
+    /* JADX WARN: Type inference failed for: r2v7 */
+    /* JADX WARN: Type inference failed for: r2v8, types: [int] */
+    /* JADX WARN: Type inference failed for: r2v9 */
     public int hashCode() {
         Channel channel = this.channel;
         int iHashCode = (channel != null ? channel.hashCode() : 0) * 31;
@@ -154,13 +160,13 @@ public final /* data */ class ChannelListItemVoiceUser implements ChannelListIte
         GuildMember guildMember = this.computed;
         int iHashCode4 = (iHashCode3 + (guildMember != null ? guildMember.hashCode() : 0)) * 31;
         boolean z2 = this.isApplicationStreaming;
-        int i = z2;
-        if (z2 != 0) {
-            i = 1;
+        ?? r1 = z2;
+        if (z2) {
+            r1 = 1;
         }
-        int i2 = (iHashCode4 + i) * 31;
+        int i = (iHashCode4 + r1) * 31;
         boolean z3 = this.hasChannelConnectPermission;
-        return i2 + (z3 ? 1 : z3 ? 1 : 0);
+        return i + (z3 ? 1 : z3);
     }
 
     public final boolean isApplicationStreaming() {

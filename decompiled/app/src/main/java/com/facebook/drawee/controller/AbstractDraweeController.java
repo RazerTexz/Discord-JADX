@@ -34,85 +34,85 @@ import p007b.p109f.p148h.p158b.p159a.ControllerListener2;
 import p007b.p109f.p148h.p158b.p159a.ForwardingControllerListener2;
 import p007b.p109f.p161j.p183r.FrescoSystrace;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public abstract class AbstractDraweeController<T, INFO> implements DraweeController, DeferredReleaser.a, GestureDetector.a {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final Map<String, Object> f19451a = ImmutableMap.m967of("component_tag", "drawee");
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static final Map<String, Object> f19452b = ImmutableMap.m968of("origin", "memory_bitmap", "origin_sub", "shortcut");
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public static final Class<?> f19453c = AbstractDraweeController.class;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final DraweeEventTracker f19454d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final DeferredReleaser f19455e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final Executor f19456f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public RetryManager f19457g;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public GestureDetector f19458h;
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public ControllerListener<INFO> f19459i;
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public ForwardingControllerListener2<INFO> f19460j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public SettableDraweeHierarchy f19461k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public Drawable f19462l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public String f19463m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public Object f19464n;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public boolean f19465o;
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public boolean f19466p;
 
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     public boolean f19467q;
 
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     public boolean f19468r;
 
-    /* renamed from: s */
+    /* JADX INFO: renamed from: s */
     public String f19469s;
 
-    /* renamed from: t */
+    /* JADX INFO: renamed from: t */
     public DataSource<T> f19470t;
 
-    /* renamed from: u */
+    /* JADX INFO: renamed from: u */
     public T f19471u;
 
-    /* renamed from: v */
+    /* JADX INFO: renamed from: v */
     public boolean f19472v;
 
-    /* renamed from: w */
+    /* JADX INFO: renamed from: w */
     public Drawable f19473w;
 
-    /* renamed from: com.facebook.drawee.controller.AbstractDraweeController$a */
+    /* JADX INFO: renamed from: com.facebook.drawee.controller.AbstractDraweeController$a */
     public class C10640a extends BaseDataSubscriber<T> {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final /* synthetic */ String f19474a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final /* synthetic */ boolean f19475b;
 
         public C10640a(String str, boolean z2) {
@@ -172,7 +172,7 @@ public abstract class AbstractDraweeController<T, INFO> implements DraweeControl
         }
     }
 
-    /* renamed from: com.facebook.drawee.controller.AbstractDraweeController$b */
+    /* JADX INFO: renamed from: com.facebook.drawee.controller.AbstractDraweeController$b */
     public static class C10641b<INFO> extends ForwardingControllerListener<INFO> {
     }
 
@@ -185,7 +185,7 @@ public abstract class AbstractDraweeController<T, INFO> implements DraweeControl
         m8658n(null, null);
     }
 
-    /* renamed from: A */
+    /* JADX INFO: renamed from: A */
     public void m8647A(ControllerListener<? super INFO> controllerListener) {
         Objects.requireNonNull(controllerListener);
         ControllerListener<INFO> controllerListener2 = this.f19459i;
@@ -204,20 +204,20 @@ public abstract class AbstractDraweeController<T, INFO> implements DraweeControl
         }
     }
 
-    /* renamed from: B */
+    /* JADX INFO: renamed from: B */
     public void m8648B(DataSource<T> dataSource, INFO info) {
         m8657i().onSubmit(this.f19463m, this.f19464n);
         this.f19460j.mo1071a(this.f19463m, this.f19464n, m8662r(dataSource, info, mo1051m()));
     }
 
-    /* renamed from: C */
+    /* JADX INFO: renamed from: C */
     public final void m8649C(String str, T t, DataSource<T> dataSource) {
         INFO infoMo1050l = mo1050l(t);
         m8657i().onFinalImageSet(str, infoMo1050l, mo8654c());
         this.f19460j.mo1074d(str, infoMo1050l, m8662r(dataSource, infoMo1050l, null));
     }
 
-    /* renamed from: D */
+    /* JADX INFO: renamed from: D */
     public final boolean m8650D() {
         RetryManager retryManager;
         if (this.f19467q && (retryManager = this.f19457g) != null) {
@@ -228,7 +228,7 @@ public abstract class AbstractDraweeController<T, INFO> implements DraweeControl
         return false;
     }
 
-    /* renamed from: E */
+    /* JADX INFO: renamed from: E */
     public void m8651E() {
         FrescoSystrace.m1527b();
         T tMo1047h = mo1047h();
@@ -260,7 +260,7 @@ public abstract class AbstractDraweeController<T, INFO> implements DraweeControl
     }
 
     @Override // com.facebook.drawee.interfaces.DraweeController
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public void mo8652a() {
         FrescoSystrace.m1527b();
         if (FLog.m980h(2)) {
@@ -287,13 +287,13 @@ public abstract class AbstractDraweeController<T, INFO> implements DraweeControl
     }
 
     @Override // com.facebook.drawee.interfaces.DraweeController
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public DraweeHierarchy mo8653b() {
         return this.f19461k;
     }
 
     @Override // com.facebook.drawee.interfaces.DraweeController
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public Animatable mo8654c() {
         Object obj = this.f19473w;
         if (obj instanceof Animatable) {
@@ -303,7 +303,7 @@ public abstract class AbstractDraweeController<T, INFO> implements DraweeControl
     }
 
     @Override // com.facebook.drawee.interfaces.DraweeController
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public void mo8655d() {
         FrescoSystrace.m1527b();
         if (FLog.m980h(2)) {
@@ -320,7 +320,7 @@ public abstract class AbstractDraweeController<T, INFO> implements DraweeControl
     }
 
     @Override // com.facebook.drawee.interfaces.DraweeController
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public void mo1045e(DraweeHierarchy draweeHierarchy) {
         if (FLog.m980h(2)) {
             FLog.m982j(f19453c, "controller %x %s: setHierarchy: %s", Integer.valueOf(System.identityHashCode(this)), this.f19463m, draweeHierarchy);
@@ -344,7 +344,7 @@ public abstract class AbstractDraweeController<T, INFO> implements DraweeControl
     }
 
     /* JADX WARN: Multi-variable type inference failed */
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public void m8656f(ControllerListener<? super INFO> controllerListener) {
         Objects.requireNonNull(controllerListener);
         ControllerListener<INFO> controllerListener2 = this.f19459i;
@@ -364,37 +364,37 @@ public abstract class AbstractDraweeController<T, INFO> implements DraweeControl
         this.f19459i = c10641b;
     }
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public abstract Drawable mo1046g(T t);
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public T mo1047h() {
         return null;
     }
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public ControllerListener<INFO> m8657i() {
         ControllerListener<INFO> controllerListener = this.f19459i;
         return controllerListener == null ? BaseControllerListener.getNoOpListener() : controllerListener;
     }
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public abstract DataSource<T> mo1048j();
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public int mo1049k(T t) {
         return System.identityHashCode(t);
     }
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public abstract INFO mo1050l(T t);
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public Uri mo1051m() {
         return null;
     }
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public final synchronized void m8658n(String str, Object obj) {
         DeferredReleaser deferredReleaser;
         FrescoSystrace.m1527b();
@@ -442,7 +442,7 @@ public abstract class AbstractDraweeController<T, INFO> implements DraweeControl
         FrescoSystrace.m1527b();
     }
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public final boolean m8659o(String str, DataSource<T> dataSource) {
         if (dataSource == null && this.f19470t == null) {
             return true;
@@ -501,14 +501,14 @@ public abstract class AbstractDraweeController<T, INFO> implements DraweeControl
         return true;
     }
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public final void m8660p(String str, Throwable th) {
         if (FLog.m980h(2)) {
             System.identityHashCode(this);
         }
     }
 
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     public final void m8661q(String str, T t) {
         if (FLog.m980h(2)) {
             System.identityHashCode(this);
@@ -519,7 +519,7 @@ public abstract class AbstractDraweeController<T, INFO> implements DraweeControl
         }
     }
 
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     public final ControllerListener2.a m8662r(DataSource<T> dataSource, INFO info, Uri uri) {
         return m8663s(dataSource == null ? null : dataSource.mo1017a(), mo1052t(info), uri);
     }
@@ -543,7 +543,7 @@ public abstract class AbstractDraweeController<T, INFO> implements DraweeControl
         m8666y();
     }
 
-    /* renamed from: s */
+    /* JADX INFO: renamed from: s */
     public final ControllerListener2.a m8663s(Map<String, Object> map, Map<String, Object> map2, Uri uri) {
         SettableDraweeHierarchy settableDraweeHierarchy = this.f19461k;
         if (settableDraweeHierarchy instanceof GenericDraweeHierarchy) {
@@ -571,7 +571,7 @@ public abstract class AbstractDraweeController<T, INFO> implements DraweeControl
         return aVar;
     }
 
-    /* renamed from: t */
+    /* JADX INFO: renamed from: t */
     public abstract Map<String, Object> mo1052t(INFO info);
 
     public String toString() {
@@ -584,7 +584,7 @@ public abstract class AbstractDraweeController<T, INFO> implements DraweeControl
         return objects2M526h2.toString();
     }
 
-    /* renamed from: u */
+    /* JADX INFO: renamed from: u */
     public final void m8664u(String str, DataSource<T> dataSource, Throwable th, boolean z2) {
         Drawable drawable;
         FrescoSystrace.m1527b();
@@ -620,11 +620,11 @@ public abstract class AbstractDraweeController<T, INFO> implements DraweeControl
         FrescoSystrace.m1527b();
     }
 
-    /* renamed from: v */
+    /* JADX INFO: renamed from: v */
     public void mo1053v(String str, T t) {
     }
 
-    /* renamed from: w */
+    /* JADX INFO: renamed from: w */
     public final void m8665w(String str, DataSource<T> dataSource, T t, float f, boolean z2, boolean z3, boolean z4) {
         try {
             FrescoSystrace.m1527b();
@@ -688,10 +688,10 @@ public abstract class AbstractDraweeController<T, INFO> implements DraweeControl
         }
     }
 
-    /* renamed from: x */
+    /* JADX INFO: renamed from: x */
     public abstract void mo1054x(Drawable drawable);
 
-    /* renamed from: y */
+    /* JADX INFO: renamed from: y */
     public final void m8666y() {
         Map<String, Object> mapMo1017a;
         Map<String, Object> mapMo1052t;
@@ -729,6 +729,6 @@ public abstract class AbstractDraweeController<T, INFO> implements DraweeControl
         }
     }
 
-    /* renamed from: z */
+    /* JADX INFO: renamed from: z */
     public abstract void mo1055z(T t);
 }

@@ -14,7 +14,7 @@ import org.webrtc.MediaStreamTrack;
 import org.webrtc.RtpTransceiver;
 import p007b.p100d.p104b.p105a.outline;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public class PeerConnection {
     private final List<MediaStream> localStreams;
     private final long nativePeerConnection;

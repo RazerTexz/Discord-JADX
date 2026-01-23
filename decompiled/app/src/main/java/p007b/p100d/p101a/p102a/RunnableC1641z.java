@@ -1,11 +1,11 @@
 package p007b.p100d.p101a.p102a;
 
-/* compiled from: com.android.billingclient:billing@@4.0.0 */
-/* renamed from: b.d.a.a.z */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.d.a.a.z */
+/* JADX INFO: compiled from: com.android.billingclient:billing@@4.0.0 */
+/* JADX INFO: loaded from: classes.dex */
 public final /* synthetic */ class RunnableC1641z implements Runnable {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final /* synthetic */ InterfaceC1624i f3006j;
 
     public /* synthetic */ RunnableC1641z(InterfaceC1624i interfaceC1624i) {

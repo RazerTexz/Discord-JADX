@@ -28,12 +28,12 @@ import p507d0.p592z.p594d.Lambda;
 import p637j0.p650m.BlockingObservable;
 import p658rx.Observable;
 
-/* compiled from: MessageSendWorker.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: MessageSendWorker.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class MessageSendWorker extends Worker {
 
-    /* compiled from: MessageSendWorker.kt */
-    /* renamed from: com.discord.workers.MessageSendWorker$b */
+    /* JADX INFO: renamed from: com.discord.workers.MessageSendWorker$b */
+    /* JADX INFO: compiled from: MessageSendWorker.kt */
     public static final class C10619b extends Lambda implements Function1<Integer, Unit> {
         public final /* synthetic */ long $channelId;
         public final /* synthetic */ String $channelName;
@@ -148,18 +148,18 @@ public final class MessageSendWorker extends Worker {
                 return resultSuccess2;
             } catch (Throwable th) {
                 th = th;
-                AppLog appLog2 = AppLog.f14950g;
-                String simpleName4 = MessageSendWorker.class.getSimpleName();
-                Intrinsics3.checkNotNullExpressionValue(simpleName4, "javaClass.simpleName");
-                appLog2.mo8369w(simpleName4, "Direct reply failure: " + j, th);
-                NotificationCache.INSTANCE.remove(j, zRestSubscribeOn, new C10619b(j, str));
-                ListenableWorker.Result resultFailure5 = ListenableWorker.Result.failure();
-                Intrinsics3.checkNotNullExpressionValue(resultFailure5, "Result.failure()");
-                return resultFailure5;
             }
         } catch (Throwable th2) {
             th = th2;
             zRestSubscribeOn = 0;
         }
+        AppLog appLog2 = AppLog.f14950g;
+        String simpleName4 = MessageSendWorker.class.getSimpleName();
+        Intrinsics3.checkNotNullExpressionValue(simpleName4, "javaClass.simpleName");
+        appLog2.mo8369w(simpleName4, "Direct reply failure: " + j, th);
+        NotificationCache.INSTANCE.remove(j, zRestSubscribeOn, new C10619b(j, str));
+        ListenableWorker.Result resultFailure5 = ListenableWorker.Result.failure();
+        Intrinsics3.checkNotNullExpressionValue(resultFailure5, "Result.failure()");
+        return resultFailure5;
     }
 }

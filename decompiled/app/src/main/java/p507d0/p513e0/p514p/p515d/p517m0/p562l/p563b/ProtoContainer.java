@@ -10,37 +10,37 @@ import p507d0.p513e0.p514p.p515d.p517m0.p548g.ClassId;
 import p507d0.p513e0.p514p.p515d.p517m0.p548g.FqName;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ProtoContainer.kt */
-/* renamed from: d0.e0.p.d.m0.l.b.y, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.l.b.y, reason: use source file name */
+/* JADX INFO: compiled from: ProtoContainer.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public abstract class ProtoContainer {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final NameResolver f24691a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final TypeTable f24692b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final SourceElement f24693c;
 
-    /* compiled from: ProtoContainer.kt */
-    /* renamed from: d0.e0.p.d.m0.l.b.y$a */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.l.b.y$a */
+    /* JADX INFO: compiled from: ProtoContainer.kt */
     public static final class a extends ProtoContainer {
 
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         public final C11678c f24694d;
 
-        /* renamed from: e */
+        /* JADX INFO: renamed from: e */
         public final a f24695e;
 
-        /* renamed from: f */
+        /* JADX INFO: renamed from: f */
         public final ClassId f24696f;
 
-        /* renamed from: g */
+        /* JADX INFO: renamed from: g */
         public final C11678c.c f24697g;
 
-        /* renamed from: h */
+        /* JADX INFO: renamed from: h */
         public final boolean f24698h;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -87,11 +87,11 @@ public abstract class ProtoContainer {
         }
     }
 
-    /* compiled from: ProtoContainer.kt */
-    /* renamed from: d0.e0.p.d.m0.l.b.y$b */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.l.b.y$b */
+    /* JADX INFO: compiled from: ProtoContainer.kt */
     public static final class b extends ProtoContainer {
 
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         public final FqName f24699d;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */

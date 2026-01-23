@@ -23,41 +23,41 @@ import p007b.p195g.p196a.p205c.JavaType;
 import p007b.p195g.p196a.p205c.p220y.JacksonStdImpl;
 import p007b.p195g.p196a.p205c.p220y.NoClass;
 
-/* compiled from: ClassUtil.java */
-/* renamed from: b.g.a.c.i0.d, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.g.a.c.i0.d, reason: use source file name */
+/* JADX INFO: compiled from: ClassUtil.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class ClassUtil {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final Annotation[] f4944a = new Annotation[0];
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static final a[] f4945b = new a[0];
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public static final Iterator<?> f4946c = Collections.emptyIterator();
 
-    /* compiled from: ClassUtil.java */
-    /* renamed from: b.g.a.c.i0.d$a */
+    /* JADX INFO: renamed from: b.g.a.c.i0.d$a */
+    /* JADX INFO: compiled from: ClassUtil.java */
     public static final class a {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final Constructor<?> f4947a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public transient Annotation[] f4948b;
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public transient Annotation[][] f4949c;
 
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         public int f4950d = -1;
 
         public a(Constructor<?> constructor) {
             this.f4947a = constructor;
         }
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public int m2195a() {
             int i = this.f4950d;
             if (i >= 0) {
@@ -69,20 +69,20 @@ public final class ClassUtil {
         }
     }
 
-    /* compiled from: ClassUtil.java */
-    /* renamed from: b.g.a.c.i0.d$b */
+    /* JADX INFO: renamed from: b.g.a.c.i0.d$b */
+    /* JADX INFO: compiled from: ClassUtil.java */
     public static class b {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public static final b f4951a = new b();
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final Field f4952b = m2196a(EnumSet.class, "elementType", Class.class);
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public final Field f4953c = m2196a(EnumMap.class, "elementType", Class.class);
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public static Field m2196a(Class<?> cls, String str, Class<?> cls2) {
             Field field;
             Field[] declaredFields = cls.getDeclaredFields();
@@ -119,7 +119,7 @@ public final class ClassUtil {
         }
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static void m2169a(Class<?> cls, Class<?> cls2, Collection<Class<?>> collection, boolean z2) {
         if (cls == cls2 || cls == null || cls == Object.class) {
             return;
@@ -137,12 +137,12 @@ public final class ClassUtil {
         m2169a(cls.getSuperclass(), cls2, collection, true);
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static Method[] m2170b(Class<?> cls, Throwable th) throws IllegalArgumentException {
         throw new IllegalArgumentException(String.format("Failed on call to `getDeclaredMethods()` on class `%s`, problem: (%s) %s", cls.getName(), th.getClass().getName(), th.getMessage()), th);
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public static String m2171c(String str) {
         if (str == null) {
             return "[null]";
@@ -155,7 +155,7 @@ public final class ClassUtil {
     }
 
     /* JADX WARN: Multi-variable type inference failed */
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public static void m2172d(Member member, boolean z2) {
         AccessibleObject accessibleObject = (AccessibleObject) member;
         if (!z2) {
@@ -173,7 +173,7 @@ public final class ClassUtil {
         accessibleObject.setAccessible(true);
     }
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public static String m2173e(Object obj) {
         if (obj == null) {
             return "[null]";
@@ -181,7 +181,7 @@ public final class ClassUtil {
         return m2189u(obj instanceof Class ? (Class) obj : obj.getClass());
     }
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public static void m2174f(JsonGenerator jsonGenerator, Closeable closeable, Exception exc) throws IOException {
         if (jsonGenerator != null) {
             jsonGenerator.mo1648b(JsonGenerator.a.AUTO_CLOSE_JSON_CONTENT);
@@ -205,7 +205,7 @@ public final class ClassUtil {
         throw new RuntimeException(exc);
     }
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public static <T> T m2175g(Class<T> cls, boolean z2) throws IllegalArgumentException {
         Constructor<T> declaredConstructor;
         try {
@@ -240,17 +240,17 @@ public final class ClassUtil {
         }
     }
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public static String m2176h(Throwable th) {
         return th instanceof JsonProcessingException ? ((JsonProcessingException) th).m8740b() : th.getMessage();
     }
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public static Annotation[] m2177i(Class<?> cls) {
         return m2188t(cls) ? f4944a : cls.getDeclaredAnnotations();
     }
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static List<Class<?>> m2178j(Class<?> cls, Class<?> cls2, boolean z2) {
         ArrayList arrayList = new ArrayList(8);
         if (cls != null && cls != cls2) {
@@ -268,8 +268,8 @@ public final class ClassUtil {
         return arrayList;
     }
 
-    /* renamed from: k */
-    public static Method[] m2179k(Class<?> cls) throws IllegalArgumentException {
+    /* JADX INFO: renamed from: k */
+    public static Method[] m2179k(Class<?> cls) {
         try {
             return cls.getDeclaredMethods();
         } catch (NoClassDefFoundError e) {
@@ -290,8 +290,8 @@ public final class ClassUtil {
         }
     }
 
-    /* renamed from: l */
-    public static a[] m2180l(Class<?> cls) throws SecurityException {
+    /* JADX INFO: renamed from: l */
+    public static a[] m2180l(Class<?> cls) {
         if (cls.isInterface() || m2188t(cls)) {
             return f4945b;
         }
@@ -304,7 +304,7 @@ public final class ClassUtil {
         return aVarArr;
     }
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public static Class<?> m2181m(Class<?> cls) {
         if (Modifier.isStatic(cls.getModifiers())) {
             return null;
@@ -319,7 +319,7 @@ public final class ClassUtil {
         }
     }
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public static String m2182n(JavaType javaType) {
         if (javaType == null) {
             return "[null]";
@@ -331,28 +331,28 @@ public final class ClassUtil {
         return sb.toString();
     }
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public static boolean m2183o(Object obj, Class<?> cls) {
         return obj != null && obj.getClass() == cls;
     }
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public static boolean m2184p(Class<?> cls) {
         return cls == Void.class || cls == Void.TYPE || cls == NoClass.class;
     }
 
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     public static boolean m2185q(Class<?> cls) {
         return Enum.class.isAssignableFrom(cls);
     }
 
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     public static boolean m2186r(Class<?> cls) {
         String name = cls.getName();
         return name.startsWith("java.") || name.startsWith("javax.");
     }
 
-    /* renamed from: s */
+    /* JADX INFO: renamed from: s */
     public static boolean m2187s(Object obj) {
         if (obj != null) {
             return obj.getClass().getAnnotation(JacksonStdImpl.class) != null;
@@ -360,12 +360,12 @@ public final class ClassUtil {
         return true;
     }
 
-    /* renamed from: t */
+    /* JADX INFO: renamed from: t */
     public static boolean m2188t(Class<?> cls) {
         return cls == Object.class || cls.isPrimitive();
     }
 
-    /* renamed from: u */
+    /* JADX INFO: renamed from: u */
     public static String m2189u(Class<?> cls) {
         if (cls == null) {
             return "[null]";
@@ -394,7 +394,7 @@ public final class ClassUtil {
         return sb2.toString();
     }
 
-    /* renamed from: v */
+    /* JADX INFO: renamed from: v */
     public static Class<?> m2190v(Class<?> cls) {
         if (cls.isPrimitive()) {
             return cls;
@@ -426,7 +426,7 @@ public final class ClassUtil {
         return null;
     }
 
-    /* renamed from: w */
+    /* JADX INFO: renamed from: w */
     public static Throwable m2191w(Throwable th) {
         if (th instanceof Error) {
             throw ((Error) th);
@@ -434,7 +434,7 @@ public final class ClassUtil {
         return th;
     }
 
-    /* renamed from: x */
+    /* JADX INFO: renamed from: x */
     public static Throwable m2192x(Throwable th) {
         if (th instanceof RuntimeException) {
             throw ((RuntimeException) th);
@@ -442,7 +442,7 @@ public final class ClassUtil {
         return th;
     }
 
-    /* renamed from: y */
+    /* JADX INFO: renamed from: y */
     public static void m2193y(Throwable th, String str) {
         while (th.getCause() != null) {
             th = th.getCause();
@@ -452,7 +452,7 @@ public final class ClassUtil {
         throw new IllegalArgumentException(str, th);
     }
 
-    /* renamed from: z */
+    /* JADX INFO: renamed from: z */
     public static void m2194z(Class<?> cls, Object obj, String str) {
         if (obj.getClass() != cls) {
             throw new IllegalStateException(String.format("Sub-class %s (of class %s) must override method '%s'", obj.getClass().getName(), cls.getName(), str));

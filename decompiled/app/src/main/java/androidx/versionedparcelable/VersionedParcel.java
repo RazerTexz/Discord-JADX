@@ -33,8 +33,8 @@ import java.util.Map;
 import java.util.Set;
 import p007b.p100d.p104b.p105a.outline;
 
+/* JADX INFO: loaded from: classes.dex */
 @RestrictTo({RestrictTo.Scope.LIBRARY_GROUP_PREFIX})
-/* loaded from: classes.dex */
 public abstract class VersionedParcel {
     private static final int EX_BAD_PARCELABLE = -2;
     private static final int EX_ILLEGAL_ARGUMENT = -3;
@@ -56,7 +56,7 @@ public abstract class VersionedParcel {
     public final ArrayMap<String, Method> mReadCache;
     public final ArrayMap<String, Method> mWriteCache;
 
-    /* renamed from: androidx.versionedparcelable.VersionedParcel$1 */
+    /* JADX INFO: renamed from: androidx.versionedparcelable.VersionedParcel$1 */
     public class C06821 extends ObjectInputStream {
         public C06821(InputStream inputStream) {
             super(inputStream);
@@ -115,7 +115,7 @@ public abstract class VersionedParcel {
         return cls3;
     }
 
-    private Method getReadMethod(String str) throws IllegalAccessException, NoSuchMethodException, SecurityException, ClassNotFoundException {
+    private Method getReadMethod(String str) throws IllegalAccessException, NoSuchMethodException, ClassNotFoundException {
         Method method = this.mReadCache.get(str);
         if (method != null) {
             return method;
@@ -160,7 +160,7 @@ public abstract class VersionedParcel {
     }
 
     /* JADX WARN: Multi-variable type inference failed */
-    private Method getWriteMethod(Class cls) throws IllegalAccessException, NoSuchMethodException, ClassNotFoundException, SecurityException {
+    private Method getWriteMethod(Class cls) throws IllegalAccessException, NoSuchMethodException, ClassNotFoundException {
         Method method = this.mWriteCache.get(cls.getName());
         if (method != null) {
             return method;
@@ -216,7 +216,7 @@ public abstract class VersionedParcel {
         return readInt();
     }
 
-    private <T> void writeCollection(Collection<T> collection, int i) throws IllegalArgumentException {
+    private <T> void writeCollection(Collection<T> collection, int i) {
         setOutputField(i);
         writeCollection(collection);
     }
@@ -462,7 +462,7 @@ public abstract class VersionedParcel {
     public void setSerializationFlags(boolean z2, boolean z3) {
     }
 
-    public <T> void writeArray(T[] tArr, int i) throws IllegalArgumentException {
+    public <T> void writeArray(T[] tArr, int i) {
         setOutputField(i);
         writeArray(tArr);
     }
@@ -594,7 +594,7 @@ public abstract class VersionedParcel {
         writeIntArray(iArr);
     }
 
-    public <T> void writeList(List<T> list, int i) throws IllegalArgumentException {
+    public <T> void writeList(List<T> list, int i) {
         writeCollection(list, i);
     }
 
@@ -610,7 +610,7 @@ public abstract class VersionedParcel {
         writeLongArray(jArr);
     }
 
-    public <K, V> void writeMap(Map<K, V> map, int i) throws IllegalArgumentException {
+    public <K, V> void writeMap(Map<K, V> map, int i) {
         setOutputField(i);
         if (map == null) {
             writeInt(-1);
@@ -647,7 +647,7 @@ public abstract class VersionedParcel {
         writeSerializable(serializable);
     }
 
-    public <T> void writeSet(Set<T> set, int i) throws IllegalArgumentException {
+    public <T> void writeSet(Set<T> set, int i) {
         writeCollection(set, i);
     }
 
@@ -706,7 +706,7 @@ public abstract class VersionedParcel {
         writeStrongInterface(iInterface);
     }
 
-    public <T extends VersionedParcelable> void writeToParcel(T t, VersionedParcel versionedParcel) throws IllegalArgumentException {
+    public <T extends VersionedParcelable> void writeToParcel(T t, VersionedParcel versionedParcel) {
         try {
             getWriteMethod(t.getClass()).invoke(null, t, versionedParcel);
         } catch (ClassNotFoundException e) {
@@ -723,12 +723,12 @@ public abstract class VersionedParcel {
         }
     }
 
-    public void writeVersionedParcelable(VersionedParcelable versionedParcelable, int i) throws IllegalArgumentException {
+    public void writeVersionedParcelable(VersionedParcelable versionedParcelable, int i) {
         setOutputField(i);
         writeVersionedParcelable(versionedParcelable);
     }
 
-    private <T> void writeCollection(Collection<T> collection) throws IllegalArgumentException {
+    private <T> void writeCollection(Collection<T> collection) {
         if (collection == null) {
             writeInt(-1);
         }
@@ -912,7 +912,7 @@ public abstract class VersionedParcel {
     }
 
     /* JADX WARN: Multi-variable type inference failed */
-    public <T> void writeArray(T[] tArr) throws IllegalArgumentException {
+    public <T> void writeArray(T[] tArr) {
         if (tArr == 0) {
             writeInt(-1);
             return;
@@ -1019,7 +1019,7 @@ public abstract class VersionedParcel {
         writeInt(-1);
     }
 
-    public void writeVersionedParcelable(VersionedParcelable versionedParcelable) throws IllegalArgumentException {
+    public void writeVersionedParcelable(VersionedParcelable versionedParcelable) {
         if (versionedParcelable == null) {
             writeString(null);
             return;

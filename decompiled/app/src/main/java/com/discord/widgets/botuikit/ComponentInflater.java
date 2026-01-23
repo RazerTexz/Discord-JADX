@@ -12,15 +12,15 @@ import kotlin.NoWhenBranchMatchedException;
 import kotlin.jvm.internal.DefaultConstructorMarker;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ComponentInflater.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: ComponentInflater.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class ComponentInflater {
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private final Context context;
 
-    /* compiled from: ComponentInflater.kt */
+    /* JADX INFO: compiled from: ComponentInflater.kt */
     public static final class Companion {
         private Companion() {
         }

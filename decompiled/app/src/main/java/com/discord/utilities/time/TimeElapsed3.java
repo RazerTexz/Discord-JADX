@@ -3,9 +3,9 @@ package com.discord.utilities.time;
 import kotlin.jvm.functions.Function0;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: TimeElapsed.kt */
-/* renamed from: com.discord.utilities.time.TimeElapsed$seconds$2, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.utilities.time.TimeElapsed$seconds$2, reason: use source file name */
+/* JADX INFO: compiled from: TimeElapsed.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class TimeElapsed3 extends Lambda implements Function0<Float> {
     public final /* synthetic */ TimeElapsed this$0;
 
@@ -20,7 +20,7 @@ public final class TimeElapsed3 extends Lambda implements Function0<Float> {
         return Float.valueOf(invoke2());
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final float invoke2() {
         return this.this$0.getMilliseconds() / 1000.0f;
     }

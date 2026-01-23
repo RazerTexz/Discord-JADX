@@ -28,8 +28,8 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 import p658rx.Observable;
 
-/* compiled from: StoreGameParty.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: StoreGameParty.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class StoreGameParty extends StoreV2 {
     private final ObservationDeck observationDeck;
     private final HashMap<String, HashSet<Long>> parties;
@@ -38,8 +38,8 @@ public final class StoreGameParty extends StoreV2 {
     private final StoreUserPresence storeUserPresence;
     private final HashMap<Long, HashMap<Long, String>> userParties;
 
-    /* compiled from: StoreGameParty.kt */
-    /* renamed from: com.discord.stores.StoreGameParty$observeUsersForPartyId$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreGameParty$observeUsersForPartyId$1 */
+    /* JADX INFO: compiled from: StoreGameParty.kt */
     public static final class C59421 extends Lambda implements Function0<Map<Long, ? extends User>> {
         public final /* synthetic */ String $partyId;
 
@@ -55,7 +55,7 @@ public final class StoreGameParty extends StoreV2 {
         }
 
         @Override // kotlin.jvm.functions.Function0
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final Map<Long, ? extends User> invoke2() {
             List listEmptyList;
             HashSet hashSet = (HashSet) StoreGameParty.access$getPartiesSnapshot$p(StoreGameParty.this).get(this.$partyId);

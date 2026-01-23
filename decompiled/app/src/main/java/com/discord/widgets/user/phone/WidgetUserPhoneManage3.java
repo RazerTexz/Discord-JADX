@@ -6,9 +6,9 @@ import kotlin.jvm.functions.Function1;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetUserPhoneManage.kt */
-/* renamed from: com.discord.widgets.user.phone.WidgetUserPhoneManage$captchaLauncher$1, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: com.discord.widgets.user.phone.WidgetUserPhoneManage$captchaLauncher$1, reason: use source file name */
+/* JADX INFO: compiled from: WidgetUserPhoneManage.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class WidgetUserPhoneManage3 extends Lambda implements Function1<CaptchaHelper.CaptchaPayload, Unit> {
     public final /* synthetic */ WidgetUserPhoneManage this$0;
 
@@ -24,7 +24,7 @@ public final class WidgetUserPhoneManage3 extends Lambda implements Function1<Ca
         return Unit.f27425a;
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final void invoke2(CaptchaHelper.CaptchaPayload captchaPayload) {
         Intrinsics3.checkNotNullParameter(captchaPayload, "captchaPayload");
         WidgetUserPhoneManage.access$updatePhoneNumber(this.this$0, captchaPayload);

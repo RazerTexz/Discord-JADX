@@ -3,8 +3,8 @@ package com.discord.stores;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: StoreApplicationCommands.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: StoreApplicationCommands.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final /* data */ class CommandOptionAutocompleteQuery {
     private final String commandOptionName;
     private final String queryString;
@@ -26,12 +26,12 @@ public final /* data */ class CommandOptionAutocompleteQuery {
         return commandOptionAutocompleteQuery.copy(str, str2);
     }
 
-    /* renamed from: component1, reason: from getter */
+    /* JADX INFO: renamed from: component1, reason: from getter */
     public final String getQueryString() {
         return this.queryString;
     }
 
-    /* renamed from: component2, reason: from getter */
+    /* JADX INFO: renamed from: component2, reason: from getter */
     public final String getCommandOptionName() {
         return this.commandOptionName;
     }

@@ -26,7 +26,7 @@ import org.xmlpull.v1.XmlPullParserException;
 import org.xmlpull.v1.XmlSerializer;
 import p007b.p100d.p104b.p105a.outline;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class ActivityChooserModel extends DataSetObservable {
     public static final String ATTRIBUTE_ACTIVITY = "activity";
     public static final String ATTRIBUTE_TIME = "time";
@@ -94,7 +94,7 @@ public class ActivityChooserModel extends DataSetObservable {
             return sbM836X.toString();
         }
 
-        /* renamed from: compareTo, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: compareTo, reason: avoid collision after fix types in other method */
         public int compareTo2(ActivityResolveInfo activityResolveInfo) {
             return Float.floatToIntBits(activityResolveInfo.weight) - Float.floatToIntBits(this.weight);
         }
@@ -198,8 +198,12 @@ public class ActivityChooserModel extends DataSetObservable {
             return doInBackground2(objArr);
         }
 
+        /* JADX WARN: Removed duplicated region for block: B:43:0x006f A[EXC_TOP_SPLITTER, SYNTHETIC] */
         @Override // android.os.AsyncTask
-        /* renamed from: doInBackground, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: doInBackground, reason: avoid collision after fix types in other method */
+        /*
+            Code decompiled incorrectly, please refer to instructions dump.
+        */
         public Void doInBackground2(Object... objArr) {
             List list = (List) objArr[0];
             String str = (String) objArr[1];

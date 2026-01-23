@@ -7,9 +7,9 @@ import kotlin.jvm.functions.Function3;
 import p507d0.p592z.p594d.FunctionReferenceImpl;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: WidgetChatStatus.kt */
-/* renamed from: com.discord.widgets.status.WidgetChatStatus$Model$Companion$get$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.status.WidgetChatStatus$Model$Companion$get$1, reason: use source file name */
+/* JADX INFO: compiled from: WidgetChatStatus.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final /* synthetic */ class WidgetChatStatus2 extends FunctionReferenceImpl implements Function3<Boolean, Set<? extends Long>, Unread, WidgetChatStatus.Model> {
     public WidgetChatStatus2(WidgetChatStatus.Model.Companion companion) {
         super(3, companion, WidgetChatStatus.Model.Companion.class, "createModel", "createModel(ZLjava/util/Set;Lcom/discord/models/application/Unread;)Lcom/discord/widgets/status/WidgetChatStatus$Model;", 0);

@@ -4,9 +4,9 @@ import kotlin.Unit;
 import kotlin.jvm.functions.Function1;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: FragmentManager.kt */
-/* renamed from: androidx.fragment.app.FragmentManagerKt, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: androidx.fragment.app.FragmentManagerKt, reason: use source file name */
+/* JADX INFO: compiled from: FragmentManager.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class FragmentManager2 {
     public static final void commit(FragmentManager fragmentManager, boolean z2, Function1<? super FragmentTransaction, Unit> function1) {
         Intrinsics3.checkNotNullParameter(fragmentManager, "$this$commit");

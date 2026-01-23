@@ -50,9 +50,9 @@ import kotlin.jvm.functions.Function1;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: Incoming.kt */
-/* renamed from: com.discord.gateway.io.IncomingParser, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: com.discord.gateway.io.IncomingParser, reason: use source file name */
+/* JADX INFO: compiled from: Incoming.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class Incoming2 implements Model {
     private Object data;
     private final Function1<String, Unit> log;
@@ -60,7 +60,7 @@ public final class Incoming2 implements Model {
     private Integer seq;
     private String type;
 
-    /* renamed from: com.discord.gateway.io.IncomingParser$WhenMappings */
+    /* JADX INFO: renamed from: com.discord.gateway.io.IncomingParser$WhenMappings */
     public final /* synthetic */ class WhenMappings {
         public static final /* synthetic */ int[] $EnumSwitchMapping$0;
 
@@ -74,8 +74,8 @@ public final class Incoming2 implements Model {
         }
     }
 
-    /* compiled from: Incoming.kt */
-    /* renamed from: com.discord.gateway.io.IncomingParser$assignField$1 */
+    /* JADX INFO: renamed from: com.discord.gateway.io.IncomingParser$assignField$1 */
+    /* JADX INFO: compiled from: Incoming.kt */
     public static final class C55201<T> implements Model.JsonReader.ItemFactory<Presence> {
         public final /* synthetic */ Model.JsonReader $reader;
 
@@ -95,8 +95,8 @@ public final class Incoming2 implements Model {
         }
     }
 
-    /* compiled from: Incoming.kt */
-    /* renamed from: com.discord.gateway.io.IncomingParser$assignField$2 */
+    /* JADX INFO: renamed from: com.discord.gateway.io.IncomingParser$assignField$2 */
+    /* JADX INFO: compiled from: Incoming.kt */
     public static final class C55212<T> implements Model.JsonReader.ItemFactory<ModelSession> {
         public final /* synthetic */ Model.JsonReader $reader;
 
@@ -336,13 +336,7 @@ public final class Incoming2 implements Model {
     
         if (r3.equals("THREAD_DELETE") != false) goto L108;
      */
-    /* JADX WARN: Failed to restore switch over string. Please report as a decompilation issue
-    java.lang.NullPointerException: Cannot invoke "java.util.List.iterator()" because the return value of "jadx.core.dex.visitors.regions.SwitchOverStringVisitor$SwitchData.getNewCases()" is null
-    	at jadx.core.dex.visitors.regions.SwitchOverStringVisitor.restoreSwitchOverString(SwitchOverStringVisitor.java:109)
-    	at jadx.core.dex.visitors.regions.SwitchOverStringVisitor.visitRegion(SwitchOverStringVisitor.java:66)
-    	at jadx.core.dex.visitors.regions.DepthRegionTraversal.traverseIterativeStepInternal(DepthRegionTraversal.java:77)
-    	at jadx.core.dex.visitors.regions.DepthRegionTraversal.traverseIterativeStepInternal(DepthRegionTraversal.java:82)
-     */
+    /* JADX WARN: Failed to restore switch over string. Please report as a decompilation issue */
     @Override // com.discord.models.domain.Model
     /*
         Code decompiled incorrectly, please refer to instructions dump.

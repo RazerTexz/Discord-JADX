@@ -6,7 +6,7 @@ import co.discord.media_engine.CameraEnumeratorProvider;
 import java.util.Locale;
 import org.webrtc.CameraEnumerator;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public final class DeviceInfo {
     private static CameraEnumerator enumerator() {
         return CameraEnumeratorProvider.get();

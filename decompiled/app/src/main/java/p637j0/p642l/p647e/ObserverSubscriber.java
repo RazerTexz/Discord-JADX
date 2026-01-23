@@ -3,12 +3,12 @@ package p637j0.p642l.p647e;
 import p637j0.Observer2;
 import p658rx.Subscriber;
 
-/* compiled from: ObserverSubscriber.java */
-/* renamed from: j0.l.e.f, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: j0.l.e.f, reason: use source file name */
+/* JADX INFO: compiled from: ObserverSubscriber.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class ObserverSubscriber<T> extends Subscriber<T> {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final Observer2<? super T> f27276j;
 
     public ObserverSubscriber(Observer2<? super T> observer2) {

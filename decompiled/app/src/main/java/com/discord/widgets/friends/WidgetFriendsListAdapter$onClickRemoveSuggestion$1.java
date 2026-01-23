@@ -4,8 +4,8 @@ import kotlin.Unit;
 import kotlin.jvm.functions.Function1;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetFriendsListAdapter.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetFriendsListAdapter.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetFriendsListAdapter$onClickRemoveSuggestion$1 extends Lambda implements Function1<Long, Unit> {
     public static final WidgetFriendsListAdapter$onClickRemoveSuggestion$1 INSTANCE = new WidgetFriendsListAdapter$onClickRemoveSuggestion$1();
 

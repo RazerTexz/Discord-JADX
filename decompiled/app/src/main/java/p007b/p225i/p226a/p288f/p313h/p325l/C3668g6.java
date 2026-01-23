@@ -7,21 +7,21 @@ import java.util.Map;
 import p007b.p225i.p226a.p288f.p299e.p308o.C3404f;
 import p007b.p225i.p226a.p288f.p313h.p325l.AbstractC3851u4;
 
-/* compiled from: com.google.android.gms:play-services-measurement-base@@18.0.0 */
-/* renamed from: b.i.a.f.h.l.g6 */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.h.l.g6 */
+/* JADX INFO: compiled from: com.google.android.gms:play-services-measurement-base@@18.0.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public final class C3668g6<T> implements InterfaceC3801q6<T> {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final InterfaceC3612c6 f9968a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final AbstractC3627d7<?, ?> f9969b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final boolean f9970c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final AbstractC3708j4<?> f9971d;
 
     public C3668g6(AbstractC3627d7<?, ?> abstractC3627d7, AbstractC3708j4<?> abstractC3708j4, InterfaceC3612c6 interfaceC3612c6) {
@@ -32,33 +32,33 @@ public final class C3668g6<T> implements InterfaceC3801q6<T> {
     }
 
     @Override // p007b.p225i.p226a.p288f.p313h.p325l.InterfaceC3801q6
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final T mo4843a() {
         return (T) ((AbstractC3851u4.b) this.f9968a.mo4607h()).m5319o();
     }
 
     @Override // p007b.p225i.p226a.p288f.p313h.p325l.InterfaceC3801q6
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final int mo4844b(T t) {
         int iHashCode = this.f9969b.mo4638e(t).hashCode();
         return this.f9970c ? (iHashCode * 53) + this.f9971d.mo4970b(t).hashCode() : iHashCode;
     }
 
     @Override // p007b.p225i.p226a.p288f.p313h.p325l.InterfaceC3801q6
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final boolean mo4845c(T t) {
         return this.f9971d.mo4970b(t).m5136m();
     }
 
     @Override // p007b.p225i.p226a.p288f.p313h.p325l.InterfaceC3801q6
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final void mo4846d(T t) {
         this.f9969b.mo4641h(t);
         this.f9971d.mo4975g(t);
     }
 
     @Override // p007b.p225i.p226a.p288f.p313h.p325l.InterfaceC3801q6
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final int mo4847e(T t) {
         AbstractC3627d7<?, ?> abstractC3627d7 = this.f9969b;
         int iMo4642i = abstractC3627d7.mo4642i(abstractC3627d7.mo4638e(t)) + 0;
@@ -78,7 +78,7 @@ public final class C3668g6<T> implements InterfaceC3801q6<T> {
     }
 
     @Override // p007b.p225i.p226a.p288f.p313h.p325l.InterfaceC3801q6
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final boolean mo4848f(T t, T t2) {
         if (!this.f9969b.mo4638e(t).equals(this.f9969b.mo4638e(t2))) {
             return false;
@@ -90,7 +90,7 @@ public final class C3668g6<T> implements InterfaceC3801q6<T> {
     }
 
     @Override // p007b.p225i.p226a.p288f.p313h.p325l.InterfaceC3801q6
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public final void mo4849g(T t, InterfaceC3867v7 interfaceC3867v7) throws IOException {
         Iterator itM5135l = this.f9971d.mo4970b(t).m5135l();
         while (itM5135l.hasNext()) {
@@ -113,7 +113,7 @@ public final class C3668g6<T> implements InterfaceC3801q6<T> {
     /* JADX WARN: Removed duplicated region for block: B:33:0x0090  */
     /* JADX WARN: Removed duplicated region for block: B:56:0x0095 A[EDGE_INSN: B:56:0x0095->B:34:0x0095 BREAK  A[LOOP:1: B:18:0x0050->B:61:0x0050], SYNTHETIC] */
     @Override // p007b.p225i.p226a.p288f.p313h.p325l.InterfaceC3801q6
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
@@ -181,7 +181,7 @@ public final class C3668g6<T> implements InterfaceC3801q6<T> {
     }
 
     @Override // p007b.p225i.p226a.p288f.p313h.p325l.InterfaceC3801q6
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public final void mo4851i(T t, T t2) {
         AbstractC3627d7<?, ?> abstractC3627d7 = this.f9969b;
         Class<?> cls = C3827s6.f10313a;

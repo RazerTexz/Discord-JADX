@@ -20,14 +20,14 @@ import p637j0.p642l.p647e.ScalarSynchronousObservable;
 import p658rx.Observable;
 import p658rx.functions.Func2;
 
-/* compiled from: WidgetGroupInviteFriends.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetGroupInviteFriends.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetGroupInviteFriends$Model$Companion$getForAdd$1<T, R> implements Func1<Channel, Observable<? extends WidgetGroupInviteFriends.Model>> {
     public final /* synthetic */ Observable $addedUsersPublisher;
     public final /* synthetic */ Observable $filterPublisher;
 
-    /* compiled from: WidgetGroupInviteFriends.kt */
-    /* renamed from: com.discord.widgets.channels.WidgetGroupInviteFriends$Model$Companion$getForAdd$1$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.channels.WidgetGroupInviteFriends$Model$Companion$getForAdd$1$1 */
+    /* JADX INFO: compiled from: WidgetGroupInviteFriends.kt */
     public static final /* synthetic */ class C73801 extends FunctionReferenceImpl implements Function2<Collection<? extends User>, String, WidgetGroupInviteFriends.Model.Companion.AddedUsersInput> {
         public static final C73801 INSTANCE = new C73801();
 
@@ -40,7 +40,7 @@ public final class WidgetGroupInviteFriends$Model$Companion$getForAdd$1<T, R> im
             return invoke2(collection, str);
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final WidgetGroupInviteFriends.Model.Companion.AddedUsersInput invoke2(Collection<? extends User> collection, String str) {
             Intrinsics3.checkNotNullParameter(collection, "p1");
             Intrinsics3.checkNotNullParameter(str, "p2");
@@ -48,13 +48,13 @@ public final class WidgetGroupInviteFriends$Model$Companion$getForAdd$1<T, R> im
         }
     }
 
-    /* compiled from: WidgetGroupInviteFriends.kt */
-    /* renamed from: com.discord.widgets.channels.WidgetGroupInviteFriends$Model$Companion$getForAdd$1$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.channels.WidgetGroupInviteFriends$Model$Companion$getForAdd$1$2 */
+    /* JADX INFO: compiled from: WidgetGroupInviteFriends.kt */
     public static final class C73812<T, R> implements Func1<WidgetGroupInviteFriends.Model.Companion.AddedUsersInput, Observable<? extends WidgetGroupInviteFriends.Model>> {
         public final /* synthetic */ Channel $channel;
 
-        /* compiled from: WidgetGroupInviteFriends.kt */
-        /* renamed from: com.discord.widgets.channels.WidgetGroupInviteFriends$Model$Companion$getForAdd$1$2$2, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.widgets.channels.WidgetGroupInviteFriends$Model$Companion$getForAdd$1$2$2, reason: invalid class name */
+        /* JADX INFO: compiled from: WidgetGroupInviteFriends.kt */
         public static final class AnonymousClass2<T, R> implements Func1<WidgetGroupInviteFriends.Model.ModelAppUserRelationship, List<? extends WidgetGroupInviteFriends.Model.FriendItem>> {
             public final /* synthetic */ WidgetGroupInviteFriends.Model.Companion.AddedUsersInput $usersFilter;
 
@@ -67,7 +67,7 @@ public final class WidgetGroupInviteFriends$Model$Companion$getForAdd$1<T, R> im
                 return call2(modelAppUserRelationship);
             }
 
-            /* renamed from: call, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
             public final List<WidgetGroupInviteFriends.Model.FriendItem> call2(WidgetGroupInviteFriends.Model.ModelAppUserRelationship modelAppUserRelationship) {
                 WidgetGroupInviteFriends.Model.FriendItem.Companion companion = WidgetGroupInviteFriends.Model.FriendItem.INSTANCE;
                 Intrinsics3.checkNotNullExpressionValue(modelAppUserRelationship, "friends");
@@ -75,8 +75,8 @@ public final class WidgetGroupInviteFriends$Model$Companion$getForAdd$1<T, R> im
             }
         }
 
-        /* compiled from: WidgetGroupInviteFriends.kt */
-        /* renamed from: com.discord.widgets.channels.WidgetGroupInviteFriends$Model$Companion$getForAdd$1$2$3, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.widgets.channels.WidgetGroupInviteFriends$Model$Companion$getForAdd$1$2$3, reason: invalid class name */
+        /* JADX INFO: compiled from: WidgetGroupInviteFriends.kt */
         public static final class AnonymousClass3<T, R> implements Func1<List<? extends WidgetGroupInviteFriends.Model.FriendItem>, Observable<? extends WidgetGroupInviteFriends.Model>> {
             public final /* synthetic */ WidgetGroupInviteFriends.Model.Companion.AddedUsersInput $usersFilter;
 
@@ -89,7 +89,7 @@ public final class WidgetGroupInviteFriends$Model$Companion$getForAdd$1<T, R> im
                 return call2((List<WidgetGroupInviteFriends.Model.FriendItem>) list);
             }
 
-            /* renamed from: call, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
             public final Observable<? extends WidgetGroupInviteFriends.Model> call2(List<WidgetGroupInviteFriends.Model.FriendItem> list) {
                 Channel channel = C73812.this.$channel;
                 String filter = this.$usersFilter.getFilter();
@@ -108,7 +108,7 @@ public final class WidgetGroupInviteFriends$Model$Companion$getForAdd$1<T, R> im
             return call2(addedUsersInput);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final Observable<? extends WidgetGroupInviteFriends.Model> call2(WidgetGroupInviteFriends.Model.Companion.AddedUsersInput addedUsersInput) {
             ArrayList arrayList;
             WidgetGroupInviteFriends.Model.Companion companion = WidgetGroupInviteFriends.Model.INSTANCE;
@@ -131,7 +131,7 @@ public final class WidgetGroupInviteFriends$Model$Companion$getForAdd$1<T, R> im
         this.$filterPublisher = observable2;
     }
 
-    /* renamed from: call, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
     public final Observable<? extends WidgetGroupInviteFriends.Model> call2(Channel channel) {
         if (channel == null) {
             return new ScalarSynchronousObservable(null);

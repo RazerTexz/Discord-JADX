@@ -3,7 +3,6 @@ package com.google.android.material.switchmaterial;
 import android.R;
 import android.content.Context;
 import android.content.res.ColorStateList;
-import android.content.res.Resources;
 import android.content.res.TypedArray;
 import android.util.AttributeSet;
 import androidx.annotation.NonNull;
@@ -16,7 +15,7 @@ import com.google.android.material.internal.ThemeEnforcement;
 import com.google.android.material.internal.ViewUtils;
 import com.google.android.material.theme.overlay.MaterialThemeOverlay;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public class SwitchMaterial extends SwitchCompat {
     private static final int DEF_STYLE_RES = C10817R.style.Widget_MaterialComponents_CompoundButton_Switch;
     private static final int[][] ENABLED_CHECKED_STATES = {new int[]{R.attr.state_enabled, R.attr.state_checked}, new int[]{R.attr.state_enabled, -16842912}, new int[]{-16842910, R.attr.state_checked}, new int[]{-16842910, -16842912}};
@@ -35,7 +34,7 @@ public class SwitchMaterial extends SwitchCompat {
         this(context, null);
     }
 
-    private ColorStateList getMaterialThemeColorsThumbTintList() throws Resources.NotFoundException {
+    private ColorStateList getMaterialThemeColorsThumbTintList() {
         if (this.materialThemeColorsThumbTintList == null) {
             int color = MaterialColors.getColor(this, C10817R.attr.colorSurface);
             int color2 = MaterialColors.getColor(this, C10817R.attr.colorControlActivated);

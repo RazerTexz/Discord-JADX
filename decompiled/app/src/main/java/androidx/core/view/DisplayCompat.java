@@ -12,7 +12,7 @@ import androidx.annotation.Nullable;
 import androidx.annotation.RequiresApi;
 import androidx.core.util.Preconditions;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public final class DisplayCompat {
     private static final int DISPLAY_SIZE_4K_HEIGHT = 2160;
     private static final int DISPLAY_SIZE_4K_WIDTH = 3840;

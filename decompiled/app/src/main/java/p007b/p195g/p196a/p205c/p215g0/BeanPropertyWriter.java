@@ -28,13 +28,13 @@ import p007b.p195g.p196a.p205c.p219i0.ClassUtil;
 import p007b.p195g.p196a.p205c.p219i0.NameTransformer4;
 import p007b.p195g.p196a.p205c.p220y.JacksonStdImpl;
 
-/* compiled from: BeanPropertyWriter.java */
+/* JADX INFO: renamed from: b.g.a.c.g0.c, reason: use source file name */
+/* JADX INFO: compiled from: BeanPropertyWriter.java */
+/* JADX INFO: loaded from: classes3.dex */
 @JacksonStdImpl
-/* renamed from: b.g.a.c.g0.c, reason: use source file name */
-/* loaded from: classes3.dex */
 public class BeanPropertyWriter extends PropertyWriter implements Serializable {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static final /* synthetic */ int f4790j = 0;
     private static final long serialVersionUID = 1;
     public final JavaType _cfgSerializationType;
@@ -50,19 +50,19 @@ public class BeanPropertyWriter extends PropertyWriter implements Serializable {
     public TypeSerializer _typeSerializer;
     public final PropertyName _wrapperName;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final transient Annotations f4791k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public transient Method f4792l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public transient Field f4793m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public transient PropertySerializerMap f4794n;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public transient HashMap<Object, Object> f4795o;
 
     public BeanPropertyWriter(BeanPropertyDefinition beanPropertyDefinition, AnnotatedMember annotatedMember, Annotations annotations, JavaType javaType, JsonSerializer<?> jsonSerializer, TypeSerializer typeSerializer, JavaType javaType2, boolean z2, Object obj, Class<?>[] clsArr) {
@@ -92,8 +92,8 @@ public class BeanPropertyWriter extends PropertyWriter implements Serializable {
         this._includeInViews = clsArr;
     }
 
-    /* renamed from: c */
-    public JsonSerializer<Object> mo1977c(PropertySerializerMap propertySerializerMap, Class<?> cls, SerializerProvider serializerProvider) throws JsonMappingException, IllegalArgumentException {
+    /* JADX INFO: renamed from: c */
+    public JsonSerializer<Object> mo1977c(PropertySerializerMap propertySerializerMap, Class<?> cls, SerializerProvider serializerProvider) throws JsonMappingException {
         PropertySerializerMap.d dVar;
         JavaType javaType = this._nonTrivialBaseType;
         if (javaType != null) {
@@ -111,7 +111,7 @@ public class BeanPropertyWriter extends PropertyWriter implements Serializable {
         return dVar.f4830a;
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public boolean m1978d(JsonGenerator jsonGenerator, SerializerProvider serializerProvider, JsonSerializer jsonSerializer) throws IOException {
         if (jsonSerializer.mo2052i()) {
             return false;
@@ -136,7 +136,7 @@ public class BeanPropertyWriter extends PropertyWriter implements Serializable {
         return true;
     }
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public void mo1979e(JsonSerializer<Object> jsonSerializer) {
         JsonSerializer<Object> jsonSerializer2 = this._nullSerializer;
         if (jsonSerializer2 != null && jsonSerializer2 != jsonSerializer) {
@@ -145,7 +145,7 @@ public class BeanPropertyWriter extends PropertyWriter implements Serializable {
         this._nullSerializer = jsonSerializer;
     }
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public void mo1980f(JsonSerializer<Object> jsonSerializer) {
         JsonSerializer<Object> jsonSerializer2 = this._serializer;
         if (jsonSerializer2 != null && jsonSerializer2 != jsonSerializer) {
@@ -154,7 +154,7 @@ public class BeanPropertyWriter extends PropertyWriter implements Serializable {
         this._serializer = jsonSerializer;
     }
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public BeanPropertyWriter mo1981g(NameTransformer4 nameTransformer4) {
         String strMo2202a = nameTransformer4.mo2202a(this._name._value);
         return strMo2202a.equals(this._name._value) ? this : new BeanPropertyWriter(this, PropertyName.m2227a(strMo2202a));
@@ -170,7 +170,7 @@ public class BeanPropertyWriter extends PropertyWriter implements Serializable {
         return this._declaredType;
     }
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public void mo1982h(Object obj, JsonGenerator jsonGenerator, SerializerProvider serializerProvider) throws Exception {
         Method method = this.f4792l;
         Object objInvoke = method == null ? this.f4793m.get(obj) : method.invoke(obj, null);
@@ -226,7 +226,7 @@ public class BeanPropertyWriter extends PropertyWriter implements Serializable {
         }
     }
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public void mo1983i(Object obj, JsonGenerator jsonGenerator, SerializerProvider serializerProvider) throws Exception {
         Method method = this.f4792l;
         Object objInvoke = method == null ? this.f4793m.get(obj) : method.invoke(obj, null);

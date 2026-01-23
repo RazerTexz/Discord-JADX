@@ -1,6 +1,7 @@
 package com.discord.widgets.chat.input.gifpicker;
 
 import android.content.DialogInterface;
+import android.content.res.Resources;
 import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,18 +15,18 @@ import kotlin.jvm.internal.DefaultConstructorMarker;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetGifPickerSheet.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetGifPickerSheet.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetGifPickerSheet extends AppBottomSheet {
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private View container;
     private WidgetGifPickerSearch gifPickerFragment;
     private Function0<Unit> onCancel;
     private Function0<Unit> onGifSelected;
 
-    /* compiled from: WidgetGifPickerSheet.kt */
+    /* JADX INFO: compiled from: WidgetGifPickerSheet.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -54,8 +55,8 @@ public final class WidgetGifPickerSheet extends AppBottomSheet {
         }
     }
 
-    /* compiled from: WidgetGifPickerSheet.kt */
-    /* renamed from: com.discord.widgets.chat.input.gifpicker.WidgetGifPickerSheet$onViewCreated$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.input.gifpicker.WidgetGifPickerSheet$onViewCreated$1 */
+    /* JADX INFO: compiled from: WidgetGifPickerSheet.kt */
     public static final class C78901 extends Lambda implements Function0<Unit> {
         public C78901() {
             super(0);
@@ -67,7 +68,7 @@ public final class WidgetGifPickerSheet extends AppBottomSheet {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             Function0 function0Access$getOnGifSelected$p = WidgetGifPickerSheet.access$getOnGifSelected$p(WidgetGifPickerSheet.this);
             if (function0Access$getOnGifSelected$p != null) {
@@ -76,8 +77,8 @@ public final class WidgetGifPickerSheet extends AppBottomSheet {
         }
     }
 
-    /* compiled from: WidgetGifPickerSheet.kt */
-    /* renamed from: com.discord.widgets.chat.input.gifpicker.WidgetGifPickerSheet$onViewCreated$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.input.gifpicker.WidgetGifPickerSheet$onViewCreated$2 */
+    /* JADX INFO: compiled from: WidgetGifPickerSheet.kt */
     public static final class RunnableC78912 implements Runnable {
         public RunnableC78912() {
         }
@@ -86,8 +87,9 @@ public final class WidgetGifPickerSheet extends AppBottomSheet {
         public final void run() {
             ViewGroup.LayoutParams layoutParams = WidgetGifPickerSheet.access$getContainer$p(WidgetGifPickerSheet.this).getLayoutParams();
             if (layoutParams != null) {
-                Intrinsics3.checkNotNullExpressionValue(WidgetGifPickerSheet.this.getResources(), "resources");
-                layoutParams.height = (int) (r1.getDisplayMetrics().heightPixels * 0.9d);
+                Resources resources = WidgetGifPickerSheet.this.getResources();
+                Intrinsics3.checkNotNullExpressionValue(resources, "resources");
+                layoutParams.height = (int) (((double) resources.getDisplayMetrics().heightPixels) * 0.9d);
             }
         }
     }

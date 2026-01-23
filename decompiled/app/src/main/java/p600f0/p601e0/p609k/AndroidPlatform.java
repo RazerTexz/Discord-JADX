@@ -33,38 +33,38 @@ import p600f0.p601e0.p609k.p610i.StandardAndroidSocketAdapter;
 import p600f0.p601e0.p612m.CertificateChainCleaner;
 import p600f0.p601e0.p612m.TrustRootIndex;
 
-/* compiled from: AndroidPlatform.kt */
-/* renamed from: f0.e0.k.b, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: f0.e0.k.b, reason: use source file name */
+/* JADX INFO: compiled from: AndroidPlatform.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class AndroidPlatform extends Platform2 {
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public static final boolean f25757d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public static final a f25758e = new a(null);
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final List<SocketAdapter> f25759f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public final CloseGuard f25760g;
 
-    /* compiled from: AndroidPlatform.kt */
-    /* renamed from: f0.e0.k.b$a */
+    /* JADX INFO: renamed from: f0.e0.k.b$a */
+    /* JADX INFO: compiled from: AndroidPlatform.kt */
     public static final class a {
         public a(DefaultConstructorMarker defaultConstructorMarker) {
         }
     }
 
-    /* compiled from: AndroidPlatform.kt */
-    /* renamed from: f0.e0.k.b$b */
+    /* JADX INFO: renamed from: f0.e0.k.b$b */
+    /* JADX INFO: compiled from: AndroidPlatform.kt */
     public static final class b implements TrustRootIndex {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final X509TrustManager f25761a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final Method f25762b;
 
         public b(X509TrustManager x509TrustManager, Method method) {
@@ -75,8 +75,8 @@ public final class AndroidPlatform extends Platform2 {
         }
 
         @Override // p600f0.p601e0.p612m.TrustRootIndex
-        /* renamed from: a */
-        public X509Certificate mo10323a(X509Certificate x509Certificate) throws IllegalArgumentException {
+        /* JADX INFO: renamed from: a */
+        public X509Certificate mo10323a(X509Certificate x509Certificate) {
             Intrinsics3.checkParameterIsNotNull(x509Certificate, "cert");
             try {
                 Object objInvoke = this.f25762b.invoke(this.f25761a, x509Certificate);
@@ -127,7 +127,7 @@ public final class AndroidPlatform extends Platform2 {
         f25757d = z2;
     }
 
-    public AndroidPlatform() throws NoSuchMethodException, SecurityException {
+    public AndroidPlatform() throws NoSuchMethodException {
         StandardAndroidSocketAdapter standardAndroidSocketAdapter;
         Method method;
         Method method2;
@@ -172,7 +172,7 @@ public final class AndroidPlatform extends Platform2 {
     }
 
     @Override // p600f0.p601e0.p609k.Platform2
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public CertificateChainCleaner mo10315b(X509TrustManager x509TrustManager) {
         X509TrustManagerExtensions x509TrustManagerExtensions;
         Intrinsics3.checkParameterIsNotNull(x509TrustManager, "trustManager");
@@ -187,8 +187,8 @@ public final class AndroidPlatform extends Platform2 {
     }
 
     @Override // p600f0.p601e0.p609k.Platform2
-    /* renamed from: c */
-    public TrustRootIndex mo10319c(X509TrustManager x509TrustManager) throws SecurityException {
+    /* JADX INFO: renamed from: c */
+    public TrustRootIndex mo10319c(X509TrustManager x509TrustManager) {
         Intrinsics3.checkParameterIsNotNull(x509TrustManager, "trustManager");
         try {
             Method declaredMethod = x509TrustManager.getClass().getDeclaredMethod("findTrustAnchorByIssuerAndSignature", X509Certificate.class);
@@ -201,7 +201,7 @@ public final class AndroidPlatform extends Platform2 {
     }
 
     @Override // p600f0.p601e0.p609k.Platform2
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public void mo10316d(SSLSocket sSLSocket, String str, List<Protocol2> list) {
         Object next;
         Intrinsics3.checkParameterIsNotNull(sSLSocket, "sslSocket");
@@ -225,7 +225,7 @@ public final class AndroidPlatform extends Platform2 {
     }
 
     @Override // p600f0.p601e0.p609k.Platform2
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public void mo10320e(Socket socket, InetSocketAddress inetSocketAddress, int i) throws IOException {
         Intrinsics3.checkParameterIsNotNull(socket, "socket");
         Intrinsics3.checkParameterIsNotNull(inetSocketAddress, "address");
@@ -240,7 +240,7 @@ public final class AndroidPlatform extends Platform2 {
     }
 
     @Override // p600f0.p601e0.p609k.Platform2
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public String mo10317f(SSLSocket sSLSocket) {
         Object next;
         Intrinsics3.checkParameterIsNotNull(sSLSocket, "sslSocket");
@@ -263,7 +263,7 @@ public final class AndroidPlatform extends Platform2 {
     }
 
     @Override // p600f0.p601e0.p609k.Platform2
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public Object mo10321g(String str) {
         Intrinsics3.checkParameterIsNotNull(str, "closer");
         CloseGuard closeGuard = this.f25760g;
@@ -287,7 +287,7 @@ public final class AndroidPlatform extends Platform2 {
     }
 
     @Override // p600f0.p601e0.p609k.Platform2
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public boolean mo10318h(String str) {
         Intrinsics3.checkParameterIsNotNull(str, "hostname");
         int i = Build.VERSION.SDK_INT;
@@ -303,7 +303,7 @@ public final class AndroidPlatform extends Platform2 {
     }
 
     @Override // p600f0.p601e0.p609k.Platform2
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public void mo10322k(String str, Object obj) {
         Intrinsics3.checkParameterIsNotNull(str, "message");
         CloseGuard closeGuard = this.f25760g;

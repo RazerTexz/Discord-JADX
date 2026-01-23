@@ -6,9 +6,9 @@ import kotlin.jvm.functions.Function1;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetGuildsListViewModel.kt */
-/* renamed from: com.discord.widgets.guilds.list.WidgetGuildsListViewModel$handleStoreState$lurkerGuildItems$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.guilds.list.WidgetGuildsListViewModel$handleStoreState$lurkerGuildItems$1, reason: use source file name */
+/* JADX INFO: compiled from: WidgetGuildsListViewModel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetGuildsListViewModel8 extends Lambda implements Function1<StoreGuildsSorted.Entry.SingletonGuild, Boolean> {
     public final /* synthetic */ WidgetGuildsListViewModel.StoreState $storeState;
 
@@ -23,7 +23,7 @@ public final class WidgetGuildsListViewModel8 extends Lambda implements Function
         return Boolean.valueOf(invoke2(singletonGuild));
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final boolean invoke2(StoreGuildsSorted.Entry.SingletonGuild singletonGuild) {
         Intrinsics3.checkNotNullParameter(singletonGuild, "it");
         return this.$storeState.getLurkingGuildIds().contains(Long.valueOf(singletonGuild.getGuild().getId()));

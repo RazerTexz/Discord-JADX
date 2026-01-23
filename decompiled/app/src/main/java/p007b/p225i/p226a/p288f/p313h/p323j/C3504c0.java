@@ -11,20 +11,20 @@ import android.content.pm.PackageManager;
 import android.os.Build;
 import androidx.core.app.NotificationCompat;
 
-/* renamed from: b.i.a.f.h.j.c0 */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.h.j.c0 */
+/* JADX INFO: loaded from: classes3.dex */
 public final class C3504c0 extends AbstractC3509e {
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public boolean f9679l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public boolean f9680m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public final AlarmManager f9681n;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public Integer f9682o;
 
     public C3504c0(C3515g c3515g) {
@@ -33,7 +33,7 @@ public final class C3504c0 extends AbstractC3509e {
     }
 
     @Override // p007b.p225i.p226a.p288f.p313h.p323j.AbstractC3509e
-    /* renamed from: L */
+    /* JADX INFO: renamed from: L */
     public final void mo4414L() {
         try {
             m4421O();
@@ -50,7 +50,7 @@ public final class C3504c0 extends AbstractC3509e {
         }
     }
 
-    /* renamed from: O */
+    /* JADX INFO: renamed from: O */
     public final void m4421O() {
         this.f9680m = false;
         this.f9681n.cancel(m4423S());
@@ -62,7 +62,7 @@ public final class C3504c0 extends AbstractC3509e {
         }
     }
 
-    /* renamed from: R */
+    /* JADX INFO: renamed from: R */
     public final int m4422R() {
         if (this.f9682o == null) {
             String strValueOf = String.valueOf(this.f9684j.f9722b.getPackageName());
@@ -71,7 +71,7 @@ public final class C3504c0 extends AbstractC3509e {
         return this.f9682o.intValue();
     }
 
-    /* renamed from: S */
+    /* JADX INFO: renamed from: S */
     public final PendingIntent m4423S() {
         Context context = this.f9684j.f9722b;
         return PendingIntent.getBroadcast(context, 0, new Intent("com.google.android.gms.analytics.ANALYTICS_DISPATCH").setComponent(new ComponentName(context, "com.google.android.gms.analytics.AnalyticsReceiver")), 0);

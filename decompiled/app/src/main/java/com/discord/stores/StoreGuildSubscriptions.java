@@ -13,14 +13,14 @@ import p507d0.p580t.Collections2;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: StoreGuildSubscriptions.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: StoreGuildSubscriptions.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class StoreGuildSubscriptions extends StoreV2 {
     private final Dispatcher dispatcher;
     private final StoreStream storeStream;
     private final GuildSubscriptionsManager subscriptionsManager;
 
-    /* compiled from: StoreGuildSubscriptions.kt */
+    /* JADX INFO: compiled from: StoreGuildSubscriptions.kt */
     @VisibleForTesting
     public static final class RangeComputer {
         private static final int DEFAULT_CHUNK_SIZE = 100;
@@ -60,8 +60,8 @@ public final class StoreGuildSubscriptions extends StoreV2 {
         }
     }
 
-    /* compiled from: StoreGuildSubscriptions.kt */
-    /* renamed from: com.discord.stores.StoreGuildSubscriptions$subscribeChannelRange$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreGuildSubscriptions$subscribeChannelRange$1 */
+    /* JADX INFO: compiled from: StoreGuildSubscriptions.kt */
     public static final class C60791 extends Lambda implements Function0<Unit> {
         public final /* synthetic */ long $channelId;
         public final /* synthetic */ long $guildId;
@@ -81,15 +81,15 @@ public final class StoreGuildSubscriptions extends StoreV2 {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             StoreGuildSubscriptions.access$getSubscriptionsManager$p(StoreGuildSubscriptions.this).subscribeChannel(this.$guildId, this.$channelId, RangeComputer.computeRanges$default(RangeComputer.INSTANCE, this.$range, 0, 2, null));
             StoreGuildSubscriptions.this.markChanged();
         }
     }
 
-    /* compiled from: StoreGuildSubscriptions.kt */
-    /* renamed from: com.discord.stores.StoreGuildSubscriptions$subscribeThread$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreGuildSubscriptions$subscribeThread$1 */
+    /* JADX INFO: compiled from: StoreGuildSubscriptions.kt */
     public static final class C60801 extends Lambda implements Function0<Unit> {
         public final /* synthetic */ long $channelId;
         public final /* synthetic */ long $guildId;
@@ -107,15 +107,15 @@ public final class StoreGuildSubscriptions extends StoreV2 {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             StoreGuildSubscriptions.access$getSubscriptionsManager$p(StoreGuildSubscriptions.this).subscribeThread(this.$guildId, this.$channelId);
             StoreGuildSubscriptions.this.markChanged();
         }
     }
 
-    /* compiled from: StoreGuildSubscriptions.kt */
-    /* renamed from: com.discord.stores.StoreGuildSubscriptions$subscribeUser$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreGuildSubscriptions$subscribeUser$1 */
+    /* JADX INFO: compiled from: StoreGuildSubscriptions.kt */
     public static final class C60811 extends Lambda implements Function0<Unit> {
         public final /* synthetic */ long $guildId;
         public final /* synthetic */ long $userId;
@@ -133,14 +133,14 @@ public final class StoreGuildSubscriptions extends StoreV2 {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             StoreGuildSubscriptions.this.handleSubscribeMember(this.$guildId, this.$userId);
         }
     }
 
-    /* compiled from: StoreGuildSubscriptions.kt */
-    /* renamed from: com.discord.stores.StoreGuildSubscriptions$unsubscribeUser$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreGuildSubscriptions$unsubscribeUser$1 */
+    /* JADX INFO: compiled from: StoreGuildSubscriptions.kt */
     public static final class C60821 extends Lambda implements Function0<Unit> {
         public final /* synthetic */ long $guildId;
         public final /* synthetic */ long $userId;
@@ -158,7 +158,7 @@ public final class StoreGuildSubscriptions extends StoreV2 {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             StoreGuildSubscriptions.this.handleUnsubscribeMember(this.$guildId, this.$userId);
         }

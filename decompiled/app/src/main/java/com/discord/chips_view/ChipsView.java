@@ -45,90 +45,90 @@ import p007b.p008a.p021f.p022h.ViewChipDefaultBinding;
 import p507d0.p580t._Collections;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ChipsView.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: ChipsView.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class ChipsView<K, V extends InterfaceC5465a> extends ScrollView implements ChipsEditText.a {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static final /* synthetic */ int f14975j = 0;
 
-    /* renamed from: A, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: A, reason: from kotlin metadata */
     public final ChipsEditText mEditText;
 
-    /* renamed from: B, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: B, reason: from kotlin metadata */
     public ChipsVerticalLinearLayout mRootChipsLayout;
 
-    /* renamed from: C, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: C, reason: from kotlin metadata */
     public final LinkedHashMap<K, ViewOnClickListenerC0895a<K, V>> mChipList;
 
-    /* renamed from: D, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: D, reason: from kotlin metadata */
     public Object mCurrentEditTextSpan;
 
-    /* renamed from: E, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: E, reason: from kotlin metadata */
     public Function1<? super V, Unit> chipAddedListener;
 
-    /* renamed from: F, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: F, reason: from kotlin metadata */
     public Function1<? super V, Unit> chipDeletedListener;
 
-    /* renamed from: G, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: G, reason: from kotlin metadata */
     public Function1<? super CharSequence, Unit> textChangedListener;
 
-    /* renamed from: k, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: k, reason: from kotlin metadata */
     public int mChipsBgResId;
 
-    /* renamed from: l, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: l, reason: from kotlin metadata */
     public int mMaxHeight;
 
-    /* renamed from: m, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: m, reason: from kotlin metadata */
     public int mVerticalSpacingPx;
 
-    /* renamed from: n, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: n, reason: from kotlin metadata */
     public int mChipHeightPx;
 
-    /* renamed from: o, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: o, reason: from kotlin metadata */
     public int mChipsColor;
 
-    /* renamed from: p, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: p, reason: from kotlin metadata */
     public int mChipsColorClicked;
 
-    /* renamed from: q, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: q, reason: from kotlin metadata */
     public int mChipsBgColor;
 
-    /* renamed from: r, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: r, reason: from kotlin metadata */
     public int mChipsBgColorClicked;
 
-    /* renamed from: s, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: s, reason: from kotlin metadata */
     public int mChipsTextColor;
 
-    /* renamed from: t, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: t, reason: from kotlin metadata */
     public int mChipsTextColorClicked;
 
-    /* renamed from: u, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: u, reason: from kotlin metadata */
     public int mChipsSearchTextColor;
 
-    /* renamed from: v, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: v, reason: from kotlin metadata */
     public float mChipsSearchTextSize;
 
-    /* renamed from: w, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: w, reason: from kotlin metadata */
     public int mChipsHintRes;
 
-    /* renamed from: x, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: x, reason: from kotlin metadata */
     public int mChipLayout;
 
-    /* renamed from: y, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: y, reason: from kotlin metadata */
     public float mDensity;
 
-    /* renamed from: z, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: z, reason: from kotlin metadata */
     public final RelativeLayout mChipsContainer;
 
-    /* compiled from: ChipsView.kt */
-    /* renamed from: com.discord.chips_view.ChipsView$a */
+    /* JADX INFO: renamed from: com.discord.chips_view.ChipsView$a */
+    /* JADX INFO: compiled from: ChipsView.kt */
     public interface InterfaceC5465a {
         String getDisplayString();
     }
 
-    /* compiled from: ChipsView.kt */
-    /* renamed from: com.discord.chips_view.ChipsView$b */
+    /* JADX INFO: renamed from: com.discord.chips_view.ChipsView$b */
+    /* JADX INFO: compiled from: ChipsView.kt */
     public final class C5466b implements TextWatcher {
         public C5466b() {
         }
@@ -153,8 +153,8 @@ public final class ChipsView<K, V extends InterfaceC5465a> extends ScrollView im
         }
     }
 
-    /* compiled from: ChipsView.kt */
-    /* renamed from: com.discord.chips_view.ChipsView$c */
+    /* JADX INFO: renamed from: com.discord.chips_view.ChipsView$c */
+    /* JADX INFO: compiled from: ChipsView.kt */
     public final class C5467c extends InputConnectionWrapper {
         public C5467c(InputConnection inputConnection) {
             super(inputConnection, true);
@@ -203,8 +203,8 @@ public final class ChipsView<K, V extends InterfaceC5465a> extends ScrollView im
         }
     }
 
-    /* compiled from: ChipsView.kt */
-    /* renamed from: com.discord.chips_view.ChipsView$d */
+    /* JADX INFO: renamed from: com.discord.chips_view.ChipsView$d */
+    /* JADX INFO: compiled from: ChipsView.kt */
     public static final class RunnableC5468d implements Runnable {
         public RunnableC5468d() {
         }
@@ -215,11 +215,11 @@ public final class ChipsView<K, V extends InterfaceC5465a> extends ScrollView im
         }
     }
 
-    /* compiled from: ChipsView.kt */
-    /* renamed from: com.discord.chips_view.ChipsView$e */
+    /* JADX INFO: renamed from: com.discord.chips_view.ChipsView$e */
+    /* JADX INFO: compiled from: ChipsView.kt */
     public static final class RunnableC5469e implements Runnable {
 
-        /* renamed from: k */
+        /* JADX INFO: renamed from: k */
         public final /* synthetic */ boolean f15003k;
 
         public RunnableC5469e(boolean z2) {
@@ -307,12 +307,12 @@ public final class ChipsView<K, V extends InterfaceC5465a> extends ScrollView im
     }
 
     @Override // p007b.p008a.p021f.ChipsEditText.a
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public InputConnection mo187a(InputConnection target) {
         return new C5467c(target);
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final void m8376b(String displayName, String imageContentDescription, K key, V data) {
         if (this.mChipList.containsKey(key)) {
             return;
@@ -337,7 +337,7 @@ public final class ChipsView<K, V extends InterfaceC5465a> extends ScrollView im
         post(new RunnableC5468d());
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final void m8377c(boolean moveCursor) {
         TextView textView;
         RelativeLayout relativeLayout;
@@ -478,7 +478,7 @@ public final class ChipsView<K, V extends InterfaceC5465a> extends ScrollView im
         }
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final void m8378d(Collection<?> pruneData) {
         Intrinsics3.checkNotNullParameter(pruneData, "pruneData");
         Iterator<Map.Entry<K, ViewOnClickListenerC0895a<K, V>>> it = this.mChipList.entrySet().iterator();
@@ -494,7 +494,7 @@ public final class ChipsView<K, V extends InterfaceC5465a> extends ScrollView im
         }
     }
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final void m8379e(ViewOnClickListenerC0895a<K, V> chip) {
         this.mChipList.remove(chip.f605n);
         Function1<? super V, Unit> function1 = this.chipDeletedListener;
@@ -504,7 +504,7 @@ public final class ChipsView<K, V extends InterfaceC5465a> extends ScrollView im
         m8377c(true);
     }
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final void m8380f(ViewOnClickListenerC0895a<?, ?> rootChip) {
         for (ViewOnClickListenerC0895a<K, V> viewOnClickListenerC0895a : this.mChipList.values()) {
             if (viewOnClickListenerC0895a != rootChip) {

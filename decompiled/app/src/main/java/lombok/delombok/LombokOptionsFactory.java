@@ -8,12 +8,12 @@ import lombok.javac.Javac8BasedLombokOptions;
 import lombok.javac.Javac9BasedLombokOptions;
 import lombok.javac.LombokOptions;
 
-/* loaded from: discord-126021.apk:lombok/delombok/LombokOptionsFactory.SCL.lombok */
+/* JADX INFO: loaded from: discord-126021.apk:lombok/delombok/LombokOptionsFactory.SCL.lombok */
 public class LombokOptionsFactory {
 
     /* JADX WARN: Failed to restore enum class, 'enum' modifier and super class removed */
     /* JADX WARN: Unknown enum class pattern. Please report as an issue! */
-    /* loaded from: discord-126021.apk:lombok/delombok/LombokOptionsFactory$LombokOptionCompilerVersion.SCL.lombok */
+    /* JADX INFO: loaded from: discord-126021.apk:lombok/delombok/LombokOptionsFactory$LombokOptionCompilerVersion.SCL.lombok */
     static abstract class LombokOptionCompilerVersion {
         public static final LombokOptionCompilerVersion JDK7_AND_LOWER = new C128471("JDK7_AND_LOWER", 0);
         public static final LombokOptionCompilerVersion JDK8 = new C128482("JDK8", 1);
@@ -34,8 +34,8 @@ public class LombokOptionsFactory {
             return (LombokOptionCompilerVersion) Enum.valueOf(LombokOptionCompilerVersion.class, str);
         }
 
-        /* renamed from: lombok.delombok.LombokOptionsFactory$LombokOptionCompilerVersion$1 */
-        /* loaded from: discord-126021.apk:lombok/delombok/LombokOptionsFactory$LombokOptionCompilerVersion$1.SCL.lombok */
+        /* JADX INFO: renamed from: lombok.delombok.LombokOptionsFactory$LombokOptionCompilerVersion$1 */
+        /* JADX INFO: loaded from: discord-126021.apk:lombok/delombok/LombokOptionsFactory$LombokOptionCompilerVersion$1.SCL.lombok */
         enum C128471 extends LombokOptionCompilerVersion {
             C128471(String str, int i) {
                 super(str, i, null);
@@ -54,8 +54,8 @@ public class LombokOptionsFactory {
             this(str, i);
         }
 
-        /* renamed from: lombok.delombok.LombokOptionsFactory$LombokOptionCompilerVersion$2 */
-        /* loaded from: discord-126021.apk:lombok/delombok/LombokOptionsFactory$LombokOptionCompilerVersion$2.SCL.lombok */
+        /* JADX INFO: renamed from: lombok.delombok.LombokOptionsFactory$LombokOptionCompilerVersion$2 */
+        /* JADX INFO: loaded from: discord-126021.apk:lombok/delombok/LombokOptionsFactory$LombokOptionCompilerVersion$2.SCL.lombok */
         enum C128482 extends LombokOptionCompilerVersion {
             C128482(String str, int i) {
                 super(str, i, null);
@@ -67,8 +67,8 @@ public class LombokOptionsFactory {
             }
         }
 
-        /* renamed from: lombok.delombok.LombokOptionsFactory$LombokOptionCompilerVersion$3 */
-        /* loaded from: discord-126021.apk:lombok/delombok/LombokOptionsFactory$LombokOptionCompilerVersion$3.SCL.lombok */
+        /* JADX INFO: renamed from: lombok.delombok.LombokOptionsFactory$LombokOptionCompilerVersion$3 */
+        /* JADX INFO: loaded from: discord-126021.apk:lombok/delombok/LombokOptionsFactory$LombokOptionCompilerVersion$3.SCL.lombok */
         enum C128493 extends LombokOptionCompilerVersion {
             C128493(String str, int i) {
                 super(str, i, null);

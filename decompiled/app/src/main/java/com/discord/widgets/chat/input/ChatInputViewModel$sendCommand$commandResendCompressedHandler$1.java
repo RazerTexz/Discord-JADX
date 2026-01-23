@@ -18,8 +18,8 @@ import kotlin.jvm.functions.Function1;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: ChatInputViewModel.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: ChatInputViewModel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class ChatInputViewModel$sendCommand$commandResendCompressedHandler$1 extends Lambda implements Function0<Unit> {
     public final /* synthetic */ ApplicationCommandData $applicationCommandData;
     public final /* synthetic */ Map $attachments;
@@ -29,8 +29,8 @@ public final class ChatInputViewModel$sendCommand$commandResendCompressedHandler
     public final /* synthetic */ MessageManager $messageManager;
     public final /* synthetic */ ChatInputViewModel this$0;
 
-    /* compiled from: ChatInputViewModel.kt */
-    /* renamed from: com.discord.widgets.chat.input.ChatInputViewModel$sendCommand$commandResendCompressedHandler$1$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.input.ChatInputViewModel$sendCommand$commandResendCompressedHandler$1$1 */
+    /* JADX INFO: compiled from: ChatInputViewModel.kt */
     public static final class C76941 extends Lambda implements Function1<List<? extends Attachment<?>>, Unit> {
         public C76941() {
             super(1);
@@ -46,7 +46,7 @@ public final class ChatInputViewModel$sendCommand$commandResendCompressedHandler
         
             r11.put(r4, r6);
          */
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         /*
             Code decompiled incorrectly, please refer to instructions dump.
         */
@@ -97,7 +97,7 @@ public final class ChatInputViewModel$sendCommand$commandResendCompressedHandler
         return Unit.f27425a;
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final void invoke2() {
         SendUtils.INSTANCE.compressImageAttachments(this.$context, this.$attachmentsContext.getAttachments(), new C76941());
     }

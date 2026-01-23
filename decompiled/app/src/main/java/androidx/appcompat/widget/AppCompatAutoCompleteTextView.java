@@ -19,7 +19,7 @@ import androidx.appcompat.content.res.AppCompatResources;
 import androidx.core.view.TintableBackgroundView;
 import androidx.core.widget.TextViewCompat;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class AppCompatAutoCompleteTextView extends AutoCompleteTextView implements TintableBackgroundView {
     private static final int[] TINT_ATTRS = {R.attr.popupBackground};
     private final AppCompatBackgroundHelper mBackgroundTintHelper;

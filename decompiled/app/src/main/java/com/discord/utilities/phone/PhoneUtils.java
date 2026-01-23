@@ -8,8 +8,8 @@ import kotlin.text.Regex;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: PhoneUtils.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: PhoneUtils.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class PhoneUtils {
     public static final PhoneUtils INSTANCE = new PhoneUtils();
     private static final Regex PARTIAL_PHONE_RE = new Regex("^[-() \\d]+$");

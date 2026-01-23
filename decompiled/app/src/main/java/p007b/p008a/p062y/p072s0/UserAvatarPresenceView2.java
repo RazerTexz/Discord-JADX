@@ -7,12 +7,12 @@ import kotlin.jvm.functions.Function2;
 import p007b.p109f.p161j.p182q.BasePostprocessor;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: UserAvatarPresenceView.kt */
-/* renamed from: b.a.y.s0.a, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: b.a.y.s0.a, reason: use source file name */
+/* JADX INFO: compiled from: UserAvatarPresenceView.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class UserAvatarPresenceView2 extends BasePostprocessor {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final /* synthetic */ UserAvatarPresenceView.C7133c f2069a;
 
     public UserAvatarPresenceView2(UserAvatarPresenceView.C7133c c7133c) {

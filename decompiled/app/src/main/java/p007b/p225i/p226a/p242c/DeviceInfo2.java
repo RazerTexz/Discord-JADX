@@ -2,18 +2,18 @@ package p007b.p225i.p226a.p242c;
 
 import androidx.annotation.Nullable;
 
-/* compiled from: DeviceInfo.java */
-/* renamed from: b.i.a.c.c1, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.c1, reason: use source file name */
+/* JADX INFO: compiled from: DeviceInfo.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class DeviceInfo2 implements Bundleable {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final int f6167j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final int f6168k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final int f6169l;
 
     public DeviceInfo2(int i, int i2, int i3) {

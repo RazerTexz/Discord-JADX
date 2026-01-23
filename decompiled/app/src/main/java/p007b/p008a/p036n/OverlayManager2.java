@@ -2,7 +2,6 @@ package p007b.p008a.p036n;
 
 import android.animation.Animator;
 import android.animation.AnimatorInflater;
-import android.content.res.Resources;
 import android.graphics.Point;
 import android.util.Log;
 import android.view.MotionEvent;
@@ -15,12 +14,12 @@ import p007b.p008a.p036n.p038h.OverlayTrashWrap;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: OverlayManager.kt */
-/* renamed from: b.a.n.a, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.a.n.a, reason: use source file name */
+/* JADX INFO: compiled from: OverlayManager.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class OverlayManager2 implements View.OnTouchListener {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final /* synthetic */ OverlayManager f1547j;
 
     public OverlayManager2(OverlayManager overlayManager) {
@@ -32,7 +31,7 @@ public final class OverlayManager2 implements View.OnTouchListener {
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
-    public final boolean onTouch(View view, MotionEvent motionEvent) throws Resources.NotFoundException {
+    public final boolean onTouch(View view, MotionEvent motionEvent) {
         Intrinsics3.checkNotNullExpressionValue(motionEvent, "event");
         int action = motionEvent.getAction();
         if (action == 1 || action == 2) {

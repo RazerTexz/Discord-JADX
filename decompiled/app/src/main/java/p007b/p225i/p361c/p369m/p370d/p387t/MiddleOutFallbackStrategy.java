@@ -1,14 +1,14 @@
 package p007b.p225i.p361c.p369m.p370d.p387t;
 
-/* compiled from: MiddleOutFallbackStrategy.java */
-/* renamed from: b.i.c.m.d.t.a, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.c.m.d.t.a, reason: use source file name */
+/* JADX INFO: compiled from: MiddleOutFallbackStrategy.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class MiddleOutFallbackStrategy implements StackTraceTrimmingStrategy {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final StackTraceTrimmingStrategy[] f12774a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final MiddleOutStrategy f12775b;
 
     public MiddleOutFallbackStrategy(int i, StackTraceTrimmingStrategy... stackTraceTrimmingStrategyArr) {
@@ -17,7 +17,7 @@ public class MiddleOutFallbackStrategy implements StackTraceTrimmingStrategy {
     }
 
     @Override // p007b.p225i.p361c.p369m.p370d.p387t.StackTraceTrimmingStrategy
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public StackTraceElement[] mo6696a(StackTraceElement[] stackTraceElementArr) {
         if (stackTraceElementArr.length <= 1024) {
             return stackTraceElementArr;

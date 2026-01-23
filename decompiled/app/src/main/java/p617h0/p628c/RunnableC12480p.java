@@ -2,12 +2,12 @@ package p617h0.p628c;
 
 import org.webrtc.JniCommon;
 
-/* compiled from: lambda */
-/* renamed from: h0.c.p */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: h0.c.p */
+/* JADX INFO: compiled from: lambda */
+/* JADX INFO: loaded from: classes3.dex */
 public final /* synthetic */ class RunnableC12480p implements Runnable {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final /* synthetic */ long f26455j;
 
     public /* synthetic */ RunnableC12480p(long j) {

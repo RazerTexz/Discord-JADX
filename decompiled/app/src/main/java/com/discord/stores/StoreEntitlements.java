@@ -22,8 +22,8 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 import p658rx.Observable;
 
-/* compiled from: StoreEntitlements.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: StoreEntitlements.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class StoreEntitlements extends StoreV2 {
     private final Dispatcher dispatcher;
     private Map<Long, List<ModelEntitlement>> entitlementMap;
@@ -33,10 +33,10 @@ public final class StoreEntitlements extends StoreV2 {
     private State state;
     private State stateSnapshot;
 
-    /* compiled from: StoreEntitlements.kt */
+    /* JADX INFO: compiled from: StoreEntitlements.kt */
     public static abstract class State {
 
-        /* compiled from: StoreEntitlements.kt */
+        /* JADX INFO: compiled from: StoreEntitlements.kt */
         public static final class Failure extends State {
             public static final Failure INSTANCE = new Failure();
 
@@ -45,7 +45,7 @@ public final class StoreEntitlements extends StoreV2 {
             }
         }
 
-        /* compiled from: StoreEntitlements.kt */
+        /* JADX INFO: compiled from: StoreEntitlements.kt */
         public static final /* data */ class Loaded extends State {
             private final Map<Long, List<ModelEntitlement>> giftableEntitlements;
             private final Map<Long, List<ModelEntitlement>> ownedEntitlements;
@@ -129,7 +129,7 @@ public final class StoreEntitlements extends StoreV2 {
             }
         }
 
-        /* compiled from: StoreEntitlements.kt */
+        /* JADX INFO: compiled from: StoreEntitlements.kt */
         public static final class Loading extends State {
             public static final Loading INSTANCE = new Loading();
 
@@ -150,8 +150,8 @@ public final class StoreEntitlements extends StoreV2 {
         }
     }
 
-    /* compiled from: StoreEntitlements.kt */
-    /* renamed from: com.discord.stores.StoreEntitlements$fetchMyEntitlementsForApplication$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreEntitlements$fetchMyEntitlementsForApplication$1 */
+    /* JADX INFO: compiled from: StoreEntitlements.kt */
     public static final class C59051 extends Lambda implements Function0<Unit> {
         public C59051() {
             super(0);
@@ -163,18 +163,18 @@ public final class StoreEntitlements extends StoreV2 {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             StoreEntitlements.this.handleFetchingState();
         }
     }
 
-    /* compiled from: StoreEntitlements.kt */
-    /* renamed from: com.discord.stores.StoreEntitlements$fetchMyEntitlementsForApplication$2 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreEntitlements$fetchMyEntitlementsForApplication$2 */
+    /* JADX INFO: compiled from: StoreEntitlements.kt */
     public static final class C59062 extends Lambda implements Function1<Error, Unit> {
 
-        /* compiled from: StoreEntitlements.kt */
-        /* renamed from: com.discord.stores.StoreEntitlements$fetchMyEntitlementsForApplication$2$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.stores.StoreEntitlements$fetchMyEntitlementsForApplication$2$1, reason: invalid class name */
+        /* JADX INFO: compiled from: StoreEntitlements.kt */
         public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
             public AnonymousClass1() {
                 super(0);
@@ -186,7 +186,7 @@ public final class StoreEntitlements extends StoreV2 {
                 return Unit.f27425a;
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2() {
                 StoreEntitlements.this.handleFetchError();
             }
@@ -202,20 +202,20 @@ public final class StoreEntitlements extends StoreV2 {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Error error) {
             Intrinsics3.checkNotNullParameter(error, "it");
             StoreEntitlements.access$getDispatcher$p(StoreEntitlements.this).schedule(new AnonymousClass1());
         }
     }
 
-    /* compiled from: StoreEntitlements.kt */
-    /* renamed from: com.discord.stores.StoreEntitlements$fetchMyEntitlementsForApplication$3 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreEntitlements$fetchMyEntitlementsForApplication$3 */
+    /* JADX INFO: compiled from: StoreEntitlements.kt */
     public static final class C59073 extends Lambda implements Function1<List<? extends ModelEntitlement>, Unit> {
         public final /* synthetic */ long $applicationId;
 
-        /* compiled from: StoreEntitlements.kt */
-        /* renamed from: com.discord.stores.StoreEntitlements$fetchMyEntitlementsForApplication$3$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.stores.StoreEntitlements$fetchMyEntitlementsForApplication$3$1, reason: invalid class name */
+        /* JADX INFO: compiled from: StoreEntitlements.kt */
         public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
             public final /* synthetic */ List $entitlements;
 
@@ -231,7 +231,7 @@ public final class StoreEntitlements extends StoreV2 {
                 return Unit.f27425a;
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2() {
                 C59073 c59073 = C59073.this;
                 StoreEntitlements.this.handleFetchEntitlementsSuccess(c59073.$applicationId, this.$entitlements);
@@ -250,15 +250,15 @@ public final class StoreEntitlements extends StoreV2 {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(List<ModelEntitlement> list) {
             Intrinsics3.checkNotNullParameter(list, "entitlements");
             StoreEntitlements.access$getDispatcher$p(StoreEntitlements.this).schedule(new AnonymousClass1(list));
         }
     }
 
-    /* compiled from: StoreEntitlements.kt */
-    /* renamed from: com.discord.stores.StoreEntitlements$fetchMyGiftEntitlements$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreEntitlements$fetchMyGiftEntitlements$1 */
+    /* JADX INFO: compiled from: StoreEntitlements.kt */
     public static final class C59081 extends Lambda implements Function0<Unit> {
         public C59081() {
             super(0);
@@ -270,18 +270,18 @@ public final class StoreEntitlements extends StoreV2 {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             StoreEntitlements.this.handleFetchingState();
         }
     }
 
-    /* compiled from: StoreEntitlements.kt */
-    /* renamed from: com.discord.stores.StoreEntitlements$fetchMyGiftEntitlements$2 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreEntitlements$fetchMyGiftEntitlements$2 */
+    /* JADX INFO: compiled from: StoreEntitlements.kt */
     public static final class C59092 extends Lambda implements Function1<Error, Unit> {
 
-        /* compiled from: StoreEntitlements.kt */
-        /* renamed from: com.discord.stores.StoreEntitlements$fetchMyGiftEntitlements$2$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.stores.StoreEntitlements$fetchMyGiftEntitlements$2$1, reason: invalid class name */
+        /* JADX INFO: compiled from: StoreEntitlements.kt */
         public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
             public AnonymousClass1() {
                 super(0);
@@ -293,7 +293,7 @@ public final class StoreEntitlements extends StoreV2 {
                 return Unit.f27425a;
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2() {
                 StoreEntitlements.this.handleFetchError();
             }
@@ -309,19 +309,19 @@ public final class StoreEntitlements extends StoreV2 {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Error error) {
             Intrinsics3.checkNotNullParameter(error, "it");
             StoreEntitlements.access$getDispatcher$p(StoreEntitlements.this).schedule(new AnonymousClass1());
         }
     }
 
-    /* compiled from: StoreEntitlements.kt */
-    /* renamed from: com.discord.stores.StoreEntitlements$fetchMyGiftEntitlements$3 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreEntitlements$fetchMyGiftEntitlements$3 */
+    /* JADX INFO: compiled from: StoreEntitlements.kt */
     public static final class C59103 extends Lambda implements Function1<List<? extends ModelEntitlement>, Unit> {
 
-        /* compiled from: StoreEntitlements.kt */
-        /* renamed from: com.discord.stores.StoreEntitlements$fetchMyGiftEntitlements$3$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.stores.StoreEntitlements$fetchMyGiftEntitlements$3$1, reason: invalid class name */
+        /* JADX INFO: compiled from: StoreEntitlements.kt */
         public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
             public final /* synthetic */ List $entitlements;
 
@@ -337,7 +337,7 @@ public final class StoreEntitlements extends StoreV2 {
                 return Unit.f27425a;
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2() {
                 StoreEntitlements.this.handleFetchGiftsSuccess(this.$entitlements);
             }
@@ -353,15 +353,15 @@ public final class StoreEntitlements extends StoreV2 {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(List<ModelEntitlement> list) {
             Intrinsics3.checkNotNullParameter(list, "entitlements");
             StoreEntitlements.access$getDispatcher$p(StoreEntitlements.this).schedule(new AnonymousClass1(list));
         }
     }
 
-    /* compiled from: StoreEntitlements.kt */
-    /* renamed from: com.discord.stores.StoreEntitlements$observeEntitlementState$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreEntitlements$observeEntitlementState$1 */
+    /* JADX INFO: compiled from: StoreEntitlements.kt */
     public static final class C59111 extends Lambda implements Function0<State> {
         public C59111() {
             super(0);
@@ -405,7 +405,7 @@ public final class StoreEntitlements extends StoreV2 {
         ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.restSubscribeOn$default(this.restAPI.getGifts(), false, 1, null), StoreEntitlements.class, (Context) null, (Function1) null, new C59092(), (Function0) null, (Function0) null, new C59103(), 54, (Object) null);
     }
 
-    /* renamed from: getEntitlementState, reason: from getter */
+    /* JADX INFO: renamed from: getEntitlementState, reason: from getter */
     public final State getStateSnapshot() {
         return this.stateSnapshot;
     }

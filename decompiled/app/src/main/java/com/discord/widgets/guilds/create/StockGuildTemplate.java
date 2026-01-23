@@ -13,8 +13,8 @@ import p507d0.p580t.Collections2;
 import p507d0.p580t._Collections;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: StockGuildTemplate.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: StockGuildTemplate.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public enum StockGuildTemplate {
     FRIEND_GROUP,
     STUDY_GROUP,
@@ -53,7 +53,7 @@ public enum StockGuildTemplate {
         }
     }
 
-    public final List<RestAPIParams.CreateGuildChannel> getChannels(Resources resources) throws Resources.NotFoundException {
+    public final List<RestAPIParams.CreateGuildChannel> getChannels(Resources resources) {
         Intrinsics3.checkNotNullParameter(resources, "resources");
         switch (this) {
             case FRIEND_GROUP:

@@ -10,22 +10,22 @@ import p007b.p225i.p226a.p242c.Format2;
 import p007b.p225i.p226a.p242c.MediaMetadata;
 import p007b.p225i.p226a.p242c.p279z2.Metadata2;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public final class IcyInfo implements Metadata.Entry {
     public static final Parcelable.Creator<IcyInfo> CREATOR = new C10725a();
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final byte[] f19963j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     @Nullable
     public final String f19964k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     @Nullable
     public final String f19965l;
 
-    /* renamed from: com.google.android.exoplayer2.metadata.icy.IcyInfo$a */
+    /* JADX INFO: renamed from: com.google.android.exoplayer2.metadata.icy.IcyInfo$a */
     public class C10725a implements Parcelable.Creator<IcyInfo> {
         @Override // android.os.Parcelable.Creator
         public IcyInfo createFromParcel(Parcel parcel) {
@@ -64,7 +64,7 @@ public final class IcyInfo implements Metadata.Entry {
     }
 
     @Override // com.google.android.exoplayer2.metadata.Metadata.Entry
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public void mo8878n(MediaMetadata.b bVar) {
         String str = this.f19964k;
         if (str != null) {
@@ -73,7 +73,7 @@ public final class IcyInfo implements Metadata.Entry {
     }
 
     @Override // com.google.android.exoplayer2.metadata.Metadata.Entry
-    /* renamed from: o0 */
+    /* JADX INFO: renamed from: o0 */
     public /* synthetic */ byte[] mo8879o0() {
         return Metadata2.m3892a(this);
     }
@@ -90,7 +90,7 @@ public final class IcyInfo implements Metadata.Entry {
     }
 
     @Override // com.google.android.exoplayer2.metadata.Metadata.Entry
-    /* renamed from: y */
+    /* JADX INFO: renamed from: y */
     public /* synthetic */ Format2 mo8880y() {
         return Metadata2.m3893b(this);
     }

@@ -13,50 +13,50 @@ import p507d0.p580t.Maps6;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: JavaTypeEnhancementState.kt */
-/* renamed from: d0.e0.p.d.m0.p.e, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.p.e, reason: use source file name */
+/* JADX INFO: compiled from: JavaTypeEnhancementState.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class JavaTypeEnhancementState {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final JavaTypeEnhancementState2 f24981a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static final JavaTypeEnhancementState f24982b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final JavaTypeEnhancementState2 f24983c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final JavaTypeEnhancementState2 f24984d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final Map<String, JavaTypeEnhancementState2> f24985e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final boolean f24986f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public final JavaTypeEnhancementState2 f24987g;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public final Lazy f24988h;
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public final boolean f24989i;
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final boolean f24990j;
 
-    /* compiled from: JavaTypeEnhancementState.kt */
-    /* renamed from: d0.e0.p.d.m0.p.e$a */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.p.e$a */
+    /* JADX INFO: compiled from: JavaTypeEnhancementState.kt */
     public static final class a {
         public a(DefaultConstructorMarker defaultConstructorMarker) {
         }
     }
 
-    /* compiled from: JavaTypeEnhancementState.kt */
-    /* renamed from: d0.e0.p.d.m0.p.e$b */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.p.e$b */
+    /* JADX INFO: compiled from: JavaTypeEnhancementState.kt */
     public static final class b extends Lambda implements Function0<String[]> {
         public b() {
             super(0);
@@ -68,7 +68,7 @@ public final class JavaTypeEnhancementState {
         }
 
         @Override // kotlin.jvm.functions.Function0
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final String[] invoke2() {
             ArrayList arrayList = new ArrayList();
             arrayList.add(JavaTypeEnhancementState.this.getGlobalJsr305Level().getDescription());

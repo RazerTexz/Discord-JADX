@@ -9,9 +9,9 @@ import kotlin.jvm.internal.DefaultConstructorMarker;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: WidgetGuildTemplates.kt */
-/* renamed from: com.discord.widgets.nux.GuildTemplateArgs, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.nux.GuildTemplateArgs, reason: use source file name */
+/* JADX INFO: compiled from: WidgetGuildTemplates.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final /* data */ class WidgetGuildTemplates3 implements Parcelable {
     public static final Parcelable.Creator<WidgetGuildTemplates3> CREATOR = new Creator();
     private final boolean showInvitePrompt;
@@ -20,7 +20,7 @@ public final /* data */ class WidgetGuildTemplates3 implements Parcelable {
     private final List<GuildTemplates> templates;
     private final String title;
 
-    /* renamed from: com.discord.widgets.nux.GuildTemplateArgs$Creator */
+    /* JADX INFO: renamed from: com.discord.widgets.nux.GuildTemplateArgs$Creator */
     public static class Creator implements Parcelable.Creator<WidgetGuildTemplates3> {
         /* JADX WARN: Can't rename method to resolve collision */
         @Override // android.os.Parcelable.Creator
@@ -66,6 +66,7 @@ public final /* data */ class WidgetGuildTemplates3 implements Parcelable {
         this.skipCreationIntent = z3;
     }
 
+    /* JADX WARN: Multi-variable type inference failed */
     public static /* synthetic */ WidgetGuildTemplates3 copy$default(WidgetGuildTemplates3 widgetGuildTemplates3, String str, String str2, List list, boolean z2, boolean z3, int i, Object obj) {
         if ((i & 1) != 0) {
             str = widgetGuildTemplates3.title;
@@ -88,12 +89,12 @@ public final /* data */ class WidgetGuildTemplates3 implements Parcelable {
         return widgetGuildTemplates3.copy(str, str3, list2, z4, z3);
     }
 
-    /* renamed from: component1, reason: from getter */
+    /* JADX INFO: renamed from: component1, reason: from getter */
     public final String getTitle() {
         return this.title;
     }
 
-    /* renamed from: component2, reason: from getter */
+    /* JADX INFO: renamed from: component2, reason: from getter */
     public final String getSubtitle() {
         return this.subtitle;
     }
@@ -102,12 +103,12 @@ public final /* data */ class WidgetGuildTemplates3 implements Parcelable {
         return this.templates;
     }
 
-    /* renamed from: component4, reason: from getter */
+    /* JADX INFO: renamed from: component4, reason: from getter */
     public final boolean getShowInvitePrompt() {
         return this.showInvitePrompt;
     }
 
-    /* renamed from: component5, reason: from getter */
+    /* JADX INFO: renamed from: component5, reason: from getter */
     public final boolean getSkipCreationIntent() {
         return this.skipCreationIntent;
     }
@@ -156,6 +157,12 @@ public final /* data */ class WidgetGuildTemplates3 implements Parcelable {
     }
 
     /* JADX WARN: Multi-variable type inference failed */
+    /* JADX WARN: Type inference failed for: r1v3, types: [int] */
+    /* JADX WARN: Type inference failed for: r1v5 */
+    /* JADX WARN: Type inference failed for: r1v7 */
+    /* JADX WARN: Type inference failed for: r2v4 */
+    /* JADX WARN: Type inference failed for: r2v5, types: [int] */
+    /* JADX WARN: Type inference failed for: r2v6 */
     public int hashCode() {
         String str = this.title;
         int iHashCode = (str != null ? str.hashCode() : 0) * 31;
@@ -164,13 +171,13 @@ public final /* data */ class WidgetGuildTemplates3 implements Parcelable {
         List<GuildTemplates> list = this.templates;
         int iHashCode3 = (iHashCode2 + (list != null ? list.hashCode() : 0)) * 31;
         boolean z2 = this.showInvitePrompt;
-        int i = z2;
-        if (z2 != 0) {
-            i = 1;
+        ?? r1 = z2;
+        if (z2) {
+            r1 = 1;
         }
-        int i2 = (iHashCode3 + i) * 31;
+        int i = (iHashCode3 + r1) * 31;
         boolean z3 = this.skipCreationIntent;
-        return i2 + (z3 ? 1 : z3 ? 1 : 0);
+        return i + (z3 ? 1 : z3);
     }
 
     public String toString() {

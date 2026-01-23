@@ -7,7 +7,7 @@ import androidx.annotation.RequiresOptIn;
 import androidx.annotation.RestrictTo;
 import androidx.exifinterface.media.ExifInterface;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class BuildCompat {
 
     @RequiresOptIn

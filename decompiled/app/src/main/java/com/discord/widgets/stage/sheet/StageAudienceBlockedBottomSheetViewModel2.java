@@ -9,9 +9,9 @@ import java.util.Set;
 import p507d0.p580t.Maps6;
 import p658rx.functions.Func3;
 
-/* compiled from: StageAudienceBlockedBottomSheetViewModel.kt */
-/* renamed from: com.discord.widgets.stage.sheet.StageAudienceBlockedBottomSheetViewModel$Companion$observeStores$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.stage.sheet.StageAudienceBlockedBottomSheetViewModel$Companion$observeStores$1, reason: use source file name */
+/* JADX INFO: compiled from: StageAudienceBlockedBottomSheetViewModel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class StageAudienceBlockedBottomSheetViewModel2<T1, T2, T3, R> implements Func3<CallModel, Map<Long, ? extends Integer>, Map<Long, ? extends StageRoles>, StageAudienceBlockedBottomSheetViewModel.StoreState> {
     public final /* synthetic */ long $channelId;
 
@@ -24,7 +24,7 @@ public final class StageAudienceBlockedBottomSheetViewModel2<T1, T2, T3, R> impl
         return call2(callModel, (Map<Long, Integer>) map, (Map<Long, StageRoles>) map2);
     }
 
-    /* renamed from: call, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
     public final StageAudienceBlockedBottomSheetViewModel.StoreState call2(CallModel callModel, Map<Long, Integer> map, Map<Long, StageRoles> map2) {
         long j = this.$channelId;
         Set<Long> setKeySet = map.keySet();

@@ -5,14 +5,14 @@ import com.discord.api.user.User;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ApiGuildScheduledEventUser.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: ApiGuildScheduledEventUser.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class ApiGuildScheduledEventUser {
     private final long guildScheduledEventId;
     private final ApiGuildScheduledEventUser2 member;
     private final User user;
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final GuildMember m7967a(long guildId) {
         ApiGuildScheduledEventUser2 apiGuildScheduledEventUser2;
         User user = this.user;
@@ -22,12 +22,12 @@ public final /* data */ class ApiGuildScheduledEventUser {
         return apiGuildScheduledEventUser2.m7970a(user, guildId);
     }
 
-    /* renamed from: b, reason: from getter */
+    /* JADX INFO: renamed from: b, reason: from getter */
     public final long getGuildScheduledEventId() {
         return this.guildScheduledEventId;
     }
 
-    /* renamed from: c, reason: from getter */
+    /* JADX INFO: renamed from: c, reason: from getter */
     public final User getUser() {
         return this.user;
     }

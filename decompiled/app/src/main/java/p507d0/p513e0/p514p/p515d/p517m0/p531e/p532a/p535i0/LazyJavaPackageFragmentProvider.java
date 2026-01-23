@@ -19,19 +19,19 @@ import p507d0.p580t.Collections2;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: LazyJavaPackageFragmentProvider.kt */
-/* renamed from: d0.e0.p.d.m0.e.a.i0.f, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.e.a.i0.f, reason: use source file name */
+/* JADX INFO: compiled from: LazyJavaPackageFragmentProvider.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class LazyJavaPackageFragmentProvider implements PackageFragmentProvider3 {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final context4 f23308a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final storage<FqName, LazyJavaPackageFragment> f23309b;
 
-    /* compiled from: LazyJavaPackageFragmentProvider.kt */
-    /* renamed from: d0.e0.p.d.m0.e.a.i0.f$a */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.e.a.i0.f$a */
+    /* JADX INFO: compiled from: LazyJavaPackageFragmentProvider.kt */
     public static final class a extends Lambda implements Function0<LazyJavaPackageFragment> {
         public final /* synthetic */ InterfaceC11588u $jPackage;
 
@@ -64,7 +64,7 @@ public final class LazyJavaPackageFragmentProvider implements PackageFragmentPro
         return lazyJavaPackageFragmentProvider.f23308a;
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final LazyJavaPackageFragment m9461a(FqName fqName) {
         InterfaceC11588u interfaceC11588uFindPackage = this.f23308a.getComponents().getFinder().findPackage(fqName);
         if (interfaceC11588uFindPackage == null) {

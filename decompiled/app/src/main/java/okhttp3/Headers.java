@@ -19,24 +19,24 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.p595g0.KMarkers;
 import p600f0.p601e0.Util7;
 
-/* compiled from: Headers.kt */
-/* loaded from: classes3.dex */
+/* JADX INFO: compiled from: Headers.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class Headers implements Iterable<Tuples2<? extends String, ? extends String>>, KMarkers {
 
-    /* renamed from: j, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: j, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
 
-    /* renamed from: k, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: k, reason: from kotlin metadata */
     public final String[] namesAndValues;
 
-    /* compiled from: Headers.kt */
-    /* renamed from: okhttp3.Headers$a */
+    /* JADX INFO: renamed from: okhttp3.Headers$a */
+    /* JADX INFO: compiled from: Headers.kt */
     public static final class C12930a {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final List<String> f27512a = new ArrayList(20);
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final C12930a m10958a(String str, String str2) {
             Intrinsics3.checkParameterIsNotNull(str, ModelAuditLogEntry.CHANGE_KEY_NAME);
             Intrinsics3.checkParameterIsNotNull(str2, "value");
@@ -47,7 +47,7 @@ public final class Headers implements Iterable<Tuples2<? extends String, ? exten
             return this;
         }
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final C12930a m10959b(String str, String str2) {
             Intrinsics3.checkParameterIsNotNull(str, ModelAuditLogEntry.CHANGE_KEY_NAME);
             Intrinsics3.checkParameterIsNotNull(str2, "value");
@@ -56,7 +56,7 @@ public final class Headers implements Iterable<Tuples2<? extends String, ? exten
             return this;
         }
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public final Headers m10960c() {
             Object[] array = this.f27512a.toArray(new String[0]);
             if (array != null) {
@@ -65,7 +65,7 @@ public final class Headers implements Iterable<Tuples2<? extends String, ? exten
             throw new TypeCastException("null cannot be cast to non-null type kotlin.Array<T>");
         }
 
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         public final C12930a m10961d(String str) {
             Intrinsics3.checkParameterIsNotNull(str, ModelAuditLogEntry.CHANGE_KEY_NAME);
             int i = 0;
@@ -81,13 +81,13 @@ public final class Headers implements Iterable<Tuples2<? extends String, ? exten
         }
     }
 
-    /* compiled from: Headers.kt */
-    /* renamed from: okhttp3.Headers$b, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: okhttp3.Headers$b, reason: from kotlin metadata */
+    /* JADX INFO: compiled from: Headers.kt */
     public static final class Companion {
         public Companion(DefaultConstructorMarker defaultConstructorMarker) {
         }
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final void m10962a(String str) {
             if (!(str.length() > 0)) {
                 throw new IllegalArgumentException("name is empty".toString());
@@ -101,7 +101,7 @@ public final class Headers implements Iterable<Tuples2<? extends String, ? exten
             }
         }
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final void m10963b(String str, String str2) {
             int length = str.length();
             for (int i = 0; i < length; i++) {
@@ -112,7 +112,7 @@ public final class Headers implements Iterable<Tuples2<? extends String, ? exten
             }
         }
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public final Headers m10964c(String... strArr) throws CloneNotSupportedException {
             Intrinsics3.checkParameterIsNotNull(strArr, "namesAndValues");
             if (!(strArr.length % 2 == 0)) {
@@ -158,7 +158,7 @@ public final class Headers implements Iterable<Tuples2<? extends String, ? exten
         this.namesAndValues = strArr;
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final String m10954c(String name) {
         Intrinsics3.checkParameterIsNotNull(name, ModelAuditLogEntry.CHANGE_KEY_NAME);
         String[] strArr = this.namesAndValues;
@@ -177,12 +177,12 @@ public final class Headers implements Iterable<Tuples2<? extends String, ? exten
         return null;
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final String m10955d(int index) {
         return this.namesAndValues[index * 2];
     }
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final C12930a m10956e() {
         C12930a c12930a = new C12930a();
         MutableCollections.addAll(c12930a.f27512a, this.namesAndValues);
@@ -193,7 +193,7 @@ public final class Headers implements Iterable<Tuples2<? extends String, ? exten
         return (other instanceof Headers) && Arrays.equals(this.namesAndValues, ((Headers) other).namesAndValues);
     }
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public final String m10957g(int index) {
         return this.namesAndValues[(index * 2) + 1];
     }

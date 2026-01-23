@@ -5,7 +5,7 @@ import android.graphics.Canvas;
 import android.widget.EdgeEffect;
 import androidx.annotation.NonNull;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public final class EdgeEffectCompat {
     private EdgeEffect mEdgeEffect;
 

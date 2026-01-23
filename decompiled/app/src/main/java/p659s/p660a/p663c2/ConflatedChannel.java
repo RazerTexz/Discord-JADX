@@ -9,15 +9,15 @@ import p007b.p225i.p226a.p288f.p299e.p308o.C3404f;
 import p507d0.p592z.p594d.Intrinsics3;
 import p659s.p660a.p661a.Symbol3;
 
-/* compiled from: ConflatedChannel.kt */
-/* renamed from: s.a.c2.j, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: s.a.c2.j, reason: use source file name */
+/* JADX INFO: compiled from: ConflatedChannel.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public class ConflatedChannel<E> extends AbstractChannel<E> {
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public final ReentrantLock f27764m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public Object f27765n;
 
     public ConflatedChannel(Function1<? super E, Unit> function1) {
@@ -27,7 +27,7 @@ public class ConflatedChannel<E> extends AbstractChannel<E> {
     }
 
     @Override // p659s.p660a.p663c2.AbstractChannel3
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public String mo11215d() {
         StringBuilder sbM833U = outline.m833U("(value=");
         sbM833U.append(this.f27765n);
@@ -36,19 +36,19 @@ public class ConflatedChannel<E> extends AbstractChannel<E> {
     }
 
     @Override // p659s.p660a.p663c2.AbstractChannel3
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public final boolean mo11219h() {
         return false;
     }
 
     @Override // p659s.p660a.p663c2.AbstractChannel3
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public final boolean mo11220i() {
         return false;
     }
 
     @Override // p659s.p660a.p663c2.AbstractChannel3
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public Object mo11222k(E e) {
         AbstractChannel6<E> abstractChannel6Mo11201n;
         ReentrantLock reentrantLock = this.f27764m;
@@ -86,7 +86,7 @@ public class ConflatedChannel<E> extends AbstractChannel<E> {
     }
 
     @Override // p659s.p660a.p663c2.AbstractChannel
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     public boolean mo11202r(AbstractChannel5<? super E> abstractChannel5) {
         ReentrantLock reentrantLock = this.f27764m;
         reentrantLock.lock();
@@ -98,19 +98,19 @@ public class ConflatedChannel<E> extends AbstractChannel<E> {
     }
 
     @Override // p659s.p660a.p663c2.AbstractChannel
-    /* renamed from: s */
+    /* JADX INFO: renamed from: s */
     public final boolean mo11203s() {
         return false;
     }
 
     @Override // p659s.p660a.p663c2.AbstractChannel
-    /* renamed from: t */
+    /* JADX INFO: renamed from: t */
     public final boolean mo11204t() {
         return this.f27765n == AbstractChannel2.f27739a;
     }
 
     @Override // p659s.p660a.p663c2.AbstractChannel
-    /* renamed from: u */
+    /* JADX INFO: renamed from: u */
     public void mo11205u(boolean z2) {
         ReentrantLock reentrantLock = this.f27764m;
         reentrantLock.lock();
@@ -128,7 +128,7 @@ public class ConflatedChannel<E> extends AbstractChannel<E> {
     }
 
     @Override // p659s.p660a.p663c2.AbstractChannel
-    /* renamed from: v */
+    /* JADX INFO: renamed from: v */
     public Object mo11206v() {
         ReentrantLock reentrantLock = this.f27764m;
         reentrantLock.lock();
@@ -149,7 +149,7 @@ public class ConflatedChannel<E> extends AbstractChannel<E> {
         }
     }
 
-    /* renamed from: w */
+    /* JADX INFO: renamed from: w */
     public final OnUndeliveredElement m11235w(Object obj) {
         Function1<E, Unit> function1;
         Object obj2 = this.f27765n;

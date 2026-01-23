@@ -3,22 +3,22 @@ package p007b.p109f.p132g.p138b;
 import java.util.Queue;
 import java.util.concurrent.ArrayBlockingQueue;
 
-/* compiled from: DraweeEventTracker.java */
-/* renamed from: b.f.g.b.c, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.f.g.b.c, reason: use source file name */
+/* JADX INFO: compiled from: DraweeEventTracker.java */
+/* JADX INFO: loaded from: classes.dex */
 public class DraweeEventTracker {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final DraweeEventTracker f3260a = new DraweeEventTracker();
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static boolean f3261b = true;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final Queue<a> f3262c = new ArrayBlockingQueue(20);
 
-    /* compiled from: DraweeEventTracker.java */
-    /* renamed from: b.f.g.b.c$a */
+    /* JADX INFO: renamed from: b.f.g.b.c$a */
+    /* JADX INFO: compiled from: DraweeEventTracker.java */
     public enum a {
         ON_SET_HIERARCHY,
         ON_CLEAR_HIERARCHY,
@@ -46,7 +46,7 @@ public class DraweeEventTracker {
         ON_SUBMIT_CACHE_HIT
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public void m1084a(a aVar) {
         if (f3261b) {
             if (this.f3262c.size() + 1 > 20) {

@@ -11,8 +11,8 @@ import org.objectweb.asm.Opcodes;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: GuildDeleteFeedbackSheetNavigator.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: GuildDeleteFeedbackSheetNavigator.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class GuildDeleteFeedbackSheetNavigator {
     public static final GuildDeleteFeedbackSheetNavigator INSTANCE = new GuildDeleteFeedbackSheetNavigator();
     private static final Clock clock = ClockFactory.get();

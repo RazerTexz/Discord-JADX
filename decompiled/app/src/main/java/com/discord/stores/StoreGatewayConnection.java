@@ -111,8 +111,8 @@ import p658rx.subjects.PublishSubject;
 import p658rx.subjects.SerializedSubject;
 import p659s.p660a.Executors6;
 
-/* compiled from: StoreGatewayConnection.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: StoreGatewayConnection.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class StoreGatewayConnection implements GatewayEventHandler {
     private final SerializedSubject<ApplicationCommandAutocompleteResult, ApplicationCommandAutocompleteResult> applicationCommandAutocompleteResult;
     private final BatchManager batches;
@@ -203,16 +203,16 @@ public final class StoreGatewayConnection implements GatewayEventHandler {
     private final SerializedSubject<VoiceServer, VoiceServer> voiceServerUpdate;
     private final Batched<VoiceState> voiceStateUpdate;
 
-    /* compiled from: StoreGatewayConnection.kt */
+    /* JADX INFO: compiled from: StoreGatewayConnection.kt */
     public static final /* data */ class ClientState {
 
-        /* renamed from: Companion, reason: from kotlin metadata */
+        /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
         public static final Companion INSTANCE = new Companion(null);
         private final boolean authed;
         private final StoreClientDataState.ClientDataState clientDataState;
         private final String tokenIfAvailable;
 
-        /* compiled from: StoreGatewayConnection.kt */
+        /* JADX INFO: compiled from: StoreGatewayConnection.kt */
         public static final class Companion {
             private Companion() {
             }
@@ -271,17 +271,17 @@ public final class StoreGatewayConnection implements GatewayEventHandler {
             return clientState.copy(str, z2, clientDataState);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final String getTokenIfAvailable() {
             return this.tokenIfAvailable;
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final boolean getAuthed() {
             return this.authed;
         }
 
-        /* renamed from: component3, reason: from getter */
+        /* JADX INFO: renamed from: component3, reason: from getter */
         public final StoreClientDataState.ClientDataState getClientDataState() {
             return this.clientDataState;
         }
@@ -323,17 +323,20 @@ public final class StoreGatewayConnection implements GatewayEventHandler {
         }
 
         /* JADX WARN: Multi-variable type inference failed */
+        /* JADX WARN: Type inference failed for: r2v1, types: [int] */
+        /* JADX WARN: Type inference failed for: r2v3 */
+        /* JADX WARN: Type inference failed for: r2v4 */
         public int hashCode() {
             String str = this.tokenIfAvailable;
             int iHashCode = (str != null ? str.hashCode() : 0) * 31;
             boolean z2 = this.authed;
-            int i = z2;
-            if (z2 != 0) {
-                i = 1;
+            ?? r2 = z2;
+            if (z2) {
+                r2 = 1;
             }
-            int i2 = (iHashCode + i) * 31;
+            int i = (iHashCode + r2) * 31;
             StoreClientDataState.ClientDataState clientDataState = this.clientDataState;
-            return i2 + (clientDataState != null ? clientDataState.hashCode() : 0);
+            return i + (clientDataState != null ? clientDataState.hashCode() : 0);
         }
 
         public String toString() {
@@ -348,8 +351,8 @@ public final class StoreGatewayConnection implements GatewayEventHandler {
         }
     }
 
-    /* compiled from: StoreGatewayConnection.kt */
-    /* renamed from: com.discord.stores.StoreGatewayConnection$callConnect$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreGatewayConnection$callConnect$1 */
+    /* JADX INFO: compiled from: StoreGatewayConnection.kt */
     public static final class C59431 extends Lambda implements Function1<GatewaySocket, Unit> {
         public final /* synthetic */ long $channelId;
 
@@ -365,15 +368,15 @@ public final class StoreGatewayConnection implements GatewayEventHandler {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(GatewaySocket gatewaySocket) {
             Intrinsics3.checkNotNullParameter(gatewaySocket, "it");
             gatewaySocket.callConnect(this.$channelId);
         }
     }
 
-    /* compiled from: StoreGatewayConnection.kt */
-    /* renamed from: com.discord.stores.StoreGatewayConnection$init$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreGatewayConnection$init$1 */
+    /* JADX INFO: compiled from: StoreGatewayConnection.kt */
     public static final class C59441 extends Lambda implements Function1<ClientState, Unit> {
         public C59441() {
             super(1);
@@ -385,15 +388,15 @@ public final class StoreGatewayConnection implements GatewayEventHandler {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(ClientState clientState) {
             Intrinsics3.checkNotNullParameter(clientState, "it");
             StoreGatewayConnection.access$handleClientStateUpdate(StoreGatewayConnection.this, clientState);
         }
     }
 
-    /* compiled from: StoreGatewayConnection.kt */
-    /* renamed from: com.discord.stores.StoreGatewayConnection$presenceUpdate$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreGatewayConnection$presenceUpdate$1 */
+    /* JADX INFO: compiled from: StoreGatewayConnection.kt */
     public static final class C59451 extends Lambda implements Function1<GatewaySocket, Unit> {
         public final /* synthetic */ List $activities;
         public final /* synthetic */ Boolean $afk;
@@ -415,15 +418,15 @@ public final class StoreGatewayConnection implements GatewayEventHandler {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(GatewaySocket gatewaySocket) {
             Intrinsics3.checkNotNullParameter(gatewaySocket, "it");
             gatewaySocket.presenceUpdate(this.$status, this.$since, this.$activities, this.$afk);
         }
     }
 
-    /* compiled from: StoreGatewayConnection.kt */
-    /* renamed from: com.discord.stores.StoreGatewayConnection$requestApplicationCommands$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreGatewayConnection$requestApplicationCommands$1 */
+    /* JADX INFO: compiled from: StoreGatewayConnection.kt */
     public static final class C59461 extends Lambda implements Function1<GatewaySocket, Unit> {
         public final /* synthetic */ boolean $applications;
         public final /* synthetic */ List $commandIds;
@@ -451,7 +454,7 @@ public final class StoreGatewayConnection implements GatewayEventHandler {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(GatewaySocket gatewaySocket) {
             Intrinsics3.checkNotNullParameter(gatewaySocket, "it");
             long j = this.$guildId;
@@ -461,8 +464,8 @@ public final class StoreGatewayConnection implements GatewayEventHandler {
         }
     }
 
-    /* compiled from: StoreGatewayConnection.kt */
-    /* renamed from: com.discord.stores.StoreGatewayConnection$requestForumUnreads$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreGatewayConnection$requestForumUnreads$1 */
+    /* JADX INFO: compiled from: StoreGatewayConnection.kt */
     public static final class C59471 extends Lambda implements Function1<GatewaySocket, Unit> {
         public final /* synthetic */ long $channelId;
         public final /* synthetic */ long $guildId;
@@ -482,7 +485,7 @@ public final class StoreGatewayConnection implements GatewayEventHandler {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(GatewaySocket gatewaySocket) {
             Intrinsics3.checkNotNullParameter(gatewaySocket, "it");
             long j = this.$guildId;
@@ -496,8 +499,8 @@ public final class StoreGatewayConnection implements GatewayEventHandler {
         }
     }
 
-    /* compiled from: StoreGatewayConnection.kt */
-    /* renamed from: com.discord.stores.StoreGatewayConnection$requestGuildMembers$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreGatewayConnection$requestGuildMembers$1 */
+    /* JADX INFO: compiled from: StoreGatewayConnection.kt */
     public static final class C59481 extends Lambda implements Function1<GatewaySocket, Unit> {
         public final /* synthetic */ long $guildId;
         public final /* synthetic */ Integer $limit;
@@ -519,15 +522,15 @@ public final class StoreGatewayConnection implements GatewayEventHandler {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(GatewaySocket gatewaySocket) {
             Intrinsics3.checkNotNullParameter(gatewaySocket, "it");
             gatewaySocket.requestGuildMembers(CollectionsJVM.listOf(Long.valueOf(this.$guildId)), this.$query, this.$userIds, this.$limit);
         }
     }
 
-    /* compiled from: StoreGatewayConnection.kt */
-    /* renamed from: com.discord.stores.StoreGatewayConnection$streamCreate$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreGatewayConnection$streamCreate$1 */
+    /* JADX INFO: compiled from: StoreGatewayConnection.kt */
     public static final class C59491 extends Lambda implements Function1<GatewaySocket, Unit> {
         public final /* synthetic */ ModelApplicationStream $newStream;
         public final /* synthetic */ String $preferredRegion;
@@ -547,7 +550,7 @@ public final class StoreGatewayConnection implements GatewayEventHandler {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(GatewaySocket gatewaySocket) {
             Intrinsics3.checkNotNullParameter(gatewaySocket, "gatewaySocket");
             String strM8507xb25617db = StoreGatewayConnection.access$getStream$p(StoreGatewayConnection.this).getApplicationStreaming().m8507xb25617db();
@@ -559,8 +562,8 @@ public final class StoreGatewayConnection implements GatewayEventHandler {
         }
     }
 
-    /* compiled from: StoreGatewayConnection.kt */
-    /* renamed from: com.discord.stores.StoreGatewayConnection$streamDelete$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreGatewayConnection$streamDelete$1 */
+    /* JADX INFO: compiled from: StoreGatewayConnection.kt */
     public static final class C59501 extends Lambda implements Function1<GatewaySocket, Unit> {
         public final /* synthetic */ String $streamKey;
 
@@ -576,15 +579,15 @@ public final class StoreGatewayConnection implements GatewayEventHandler {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(GatewaySocket gatewaySocket) {
             Intrinsics3.checkNotNullParameter(gatewaySocket, "it");
             gatewaySocket.streamDelete(this.$streamKey);
         }
     }
 
-    /* compiled from: StoreGatewayConnection.kt */
-    /* renamed from: com.discord.stores.StoreGatewayConnection$streamPing$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreGatewayConnection$streamPing$1 */
+    /* JADX INFO: compiled from: StoreGatewayConnection.kt */
     public static final class C59511 extends Lambda implements Function1<GatewaySocket, Unit> {
         public final /* synthetic */ String $streamKey;
 
@@ -600,15 +603,15 @@ public final class StoreGatewayConnection implements GatewayEventHandler {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(GatewaySocket gatewaySocket) {
             Intrinsics3.checkNotNullParameter(gatewaySocket, "it");
             gatewaySocket.streamPing(this.$streamKey);
         }
     }
 
-    /* compiled from: StoreGatewayConnection.kt */
-    /* renamed from: com.discord.stores.StoreGatewayConnection$streamWatch$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreGatewayConnection$streamWatch$1 */
+    /* JADX INFO: compiled from: StoreGatewayConnection.kt */
     public static final class C59521 extends Lambda implements Function1<GatewaySocket, Unit> {
         public final /* synthetic */ String $streamKey;
 
@@ -624,7 +627,7 @@ public final class StoreGatewayConnection implements GatewayEventHandler {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(GatewaySocket gatewaySocket) {
             Intrinsics3.checkNotNullParameter(gatewaySocket, "it");
             String strM8507xb25617db = StoreGatewayConnection.access$getStream$p(StoreGatewayConnection.this).getApplicationStreaming().m8507xb25617db();
@@ -635,8 +638,8 @@ public final class StoreGatewayConnection implements GatewayEventHandler {
         }
     }
 
-    /* compiled from: StoreGatewayConnection.kt */
-    /* renamed from: com.discord.stores.StoreGatewayConnection$updateGuildSubscriptions$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreGatewayConnection$updateGuildSubscriptions$1 */
+    /* JADX INFO: compiled from: StoreGatewayConnection.kt */
     public static final class C59531 extends Lambda implements Function1<GatewaySocket, Unit> {
         public final /* synthetic */ long $guildId;
         public final /* synthetic */ Outgoing2.GuildSubscriptions $payload;
@@ -654,15 +657,15 @@ public final class StoreGatewayConnection implements GatewayEventHandler {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(GatewaySocket gatewaySocket) {
             Intrinsics3.checkNotNullParameter(gatewaySocket, "it");
             gatewaySocket.updateGuildSubscriptions(this.$guildId, this.$payload);
         }
     }
 
-    /* compiled from: StoreGatewayConnection.kt */
-    /* renamed from: com.discord.stores.StoreGatewayConnection$voiceServerPing$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreGatewayConnection$voiceServerPing$1 */
+    /* JADX INFO: compiled from: StoreGatewayConnection.kt */
     public static final class C59541 extends Lambda implements Function1<GatewaySocket, Unit> {
         public static final C59541 INSTANCE = new C59541();
 
@@ -676,15 +679,15 @@ public final class StoreGatewayConnection implements GatewayEventHandler {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(GatewaySocket gatewaySocket) {
             Intrinsics3.checkNotNullParameter(gatewaySocket, "it");
             gatewaySocket.voiceServerPing();
         }
     }
 
-    /* compiled from: StoreGatewayConnection.kt */
-    /* renamed from: com.discord.stores.StoreGatewayConnection$voiceStateUpdate$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreGatewayConnection$voiceStateUpdate$1 */
+    /* JADX INFO: compiled from: StoreGatewayConnection.kt */
     public static final class C59551 extends Lambda implements Function1<GatewaySocket, Unit> {
         public final /* synthetic */ Long $channelId;
         public final /* synthetic */ Long $guildId;
@@ -712,7 +715,7 @@ public final class StoreGatewayConnection implements GatewayEventHandler {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(GatewaySocket gatewaySocket) {
             Intrinsics3.checkNotNullParameter(gatewaySocket, "it");
             gatewaySocket.voiceStateUpdate(this.$guildId, this.$channelId, this.$selfMute, this.$selfDeaf, this.$selfVideo, this.$preferredRegion, this.$shouldIncludePreferredRegion);
@@ -890,10 +893,12 @@ public final class StoreGatewayConnection implements GatewayEventHandler {
         return storeGatewayConnection.presenceUpdate(clientStatus, l, list, bool);
     }
 
+    /* JADX WARN: Multi-variable type inference failed */
     public static /* synthetic */ boolean requestApplicationCommands$default(StoreGatewayConnection storeGatewayConnection, long j, String str, boolean z2, String str2, Integer num, int i, List list, int i2, Object obj) {
         return storeGatewayConnection.requestApplicationCommands(j, str, z2, (i2 & 8) != 0 ? null : str2, (i2 & 16) != 0 ? null : num, i, (i2 & 64) != 0 ? null : list);
     }
 
+    /* JADX WARN: Multi-variable type inference failed */
     public static /* synthetic */ boolean requestGuildMembers$default(StoreGatewayConnection storeGatewayConnection, long j, String str, List list, Integer num, int i, Object obj) {
         String str2 = (i & 2) != 0 ? null : str;
         List list2 = (i & 4) != 0 ? null : list;
@@ -1274,13 +1279,7 @@ public final class StoreGatewayConnection implements GatewayEventHandler {
         }
     }
 
-    /* JADX WARN: Failed to restore switch over string. Please report as a decompilation issue
-    java.lang.NullPointerException: Cannot invoke "java.util.List.iterator()" because the return value of "jadx.core.dex.visitors.regions.SwitchOverStringVisitor$SwitchData.getNewCases()" is null
-    	at jadx.core.dex.visitors.regions.SwitchOverStringVisitor.restoreSwitchOverString(SwitchOverStringVisitor.java:109)
-    	at jadx.core.dex.visitors.regions.SwitchOverStringVisitor.visitRegion(SwitchOverStringVisitor.java:66)
-    	at jadx.core.dex.visitors.regions.DepthRegionTraversal.traverseIterativeStepInternal(DepthRegionTraversal.java:77)
-    	at jadx.core.dex.visitors.regions.DepthRegionTraversal.traverseIterativeStepInternal(DepthRegionTraversal.java:82)
-     */
+    /* JADX WARN: Failed to restore switch over string. Please report as a decompilation issue */
     @Override // com.discord.gateway.GatewayEventHandler
     public void handleDispatch(String type, Object data) {
         Intrinsics3.checkNotNullParameter(data, "data");

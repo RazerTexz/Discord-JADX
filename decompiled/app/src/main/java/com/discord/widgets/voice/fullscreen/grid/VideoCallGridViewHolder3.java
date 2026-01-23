@@ -4,9 +4,9 @@ import android.view.View;
 import com.discord.widgets.voice.fullscreen.CallParticipant;
 import kotlin.jvm.functions.Function1;
 
-/* compiled from: VideoCallGridViewHolder.kt */
-/* renamed from: com.discord.widgets.voice.fullscreen.grid.VideoCallGridViewHolder$UserOrStream$configure$1, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: com.discord.widgets.voice.fullscreen.grid.VideoCallGridViewHolder$UserOrStream$configure$1, reason: use source file name */
+/* JADX INFO: compiled from: VideoCallGridViewHolder.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class VideoCallGridViewHolder3 implements View.OnClickListener {
     public final /* synthetic */ CallParticipant.UserOrStreamParticipant $callParticipant;
     public final /* synthetic */ Function1 $onTapped;

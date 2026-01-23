@@ -6,7 +6,7 @@ import android.view.ViewGroup;
 import androidx.constraintlayout.widget.ConstraintSet;
 import java.util.HashMap;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class DesignTool implements DesignTool2 {
     private static final boolean DEBUG = false;
     private static final String TAG = "DesignTool";

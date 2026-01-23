@@ -30,19 +30,19 @@ import p658rx.functions.Func2;
 import p658rx.subjects.BehaviorSubject;
 import p658rx.subjects.PublishSubject;
 
-/* compiled from: ServerSettingsCreatorMonetizationOnboardingViewModel.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: ServerSettingsCreatorMonetizationOnboardingViewModel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class ServerSettingsCreatorMonetizationOnboardingViewModel extends AppViewModel<ViewState> {
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private final PublishSubject<Event> eventSubject;
     private final long guildId;
     private final BehaviorSubject<RequirementsState> requirementsSubject;
     private final RestAPI restApi;
 
-    /* compiled from: ServerSettingsCreatorMonetizationOnboardingViewModel.kt */
-    /* renamed from: com.discord.widgets.servers.creator_monetization_eligibility.onboarding.ServerSettingsCreatorMonetizationOnboardingViewModel$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.creator_monetization_eligibility.onboarding.ServerSettingsCreatorMonetizationOnboardingViewModel$1 */
+    /* JADX INFO: compiled from: ServerSettingsCreatorMonetizationOnboardingViewModel.kt */
     public static final class C94121<T1, T2, R> implements Func2<StoreState, RequirementsState, Tuples2<? extends StoreState, ? extends RequirementsState>> {
         public static final C94121 INSTANCE = new C94121();
 
@@ -51,14 +51,14 @@ public final class ServerSettingsCreatorMonetizationOnboardingViewModel extends 
             return call2(storeState, requirementsState);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final Tuples2<StoreState, RequirementsState> call2(StoreState storeState, RequirementsState requirementsState) {
             return Tuples.m10073to(storeState, requirementsState);
         }
     }
 
-    /* compiled from: ServerSettingsCreatorMonetizationOnboardingViewModel.kt */
-    /* renamed from: com.discord.widgets.servers.creator_monetization_eligibility.onboarding.ServerSettingsCreatorMonetizationOnboardingViewModel$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.creator_monetization_eligibility.onboarding.ServerSettingsCreatorMonetizationOnboardingViewModel$2 */
+    /* JADX INFO: compiled from: ServerSettingsCreatorMonetizationOnboardingViewModel.kt */
     public static final class C94132 extends Lambda implements Function1<Tuples2<? extends StoreState, ? extends RequirementsState>, Unit> {
         public C94132() {
             super(1);
@@ -70,7 +70,7 @@ public final class ServerSettingsCreatorMonetizationOnboardingViewModel extends 
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Tuples2<StoreState, ? extends RequirementsState> tuples2) {
             StoreState storeStateComponent1 = tuples2.component1();
             RequirementsState requirementsStateComponent2 = tuples2.component2();
@@ -81,7 +81,7 @@ public final class ServerSettingsCreatorMonetizationOnboardingViewModel extends 
         }
     }
 
-    /* compiled from: ServerSettingsCreatorMonetizationOnboardingViewModel.kt */
+    /* JADX INFO: compiled from: ServerSettingsCreatorMonetizationOnboardingViewModel.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -99,10 +99,10 @@ public final class ServerSettingsCreatorMonetizationOnboardingViewModel extends 
         }
     }
 
-    /* compiled from: ServerSettingsCreatorMonetizationOnboardingViewModel.kt */
+    /* JADX INFO: compiled from: ServerSettingsCreatorMonetizationOnboardingViewModel.kt */
     public static abstract class Event {
 
-        /* compiled from: ServerSettingsCreatorMonetizationOnboardingViewModel.kt */
+        /* JADX INFO: compiled from: ServerSettingsCreatorMonetizationOnboardingViewModel.kt */
         public static final /* data */ class ShowErrorToast extends Event {
             private final Throwable error;
 
@@ -120,7 +120,7 @@ public final class ServerSettingsCreatorMonetizationOnboardingViewModel extends 
                 return showErrorToast.copy(th);
             }
 
-            /* renamed from: component1, reason: from getter */
+            /* JADX INFO: renamed from: component1, reason: from getter */
             public final Throwable getError() {
                 return this.error;
             }
@@ -165,10 +165,10 @@ public final class ServerSettingsCreatorMonetizationOnboardingViewModel extends 
         }
     }
 
-    /* compiled from: ServerSettingsCreatorMonetizationOnboardingViewModel.kt */
+    /* JADX INFO: compiled from: ServerSettingsCreatorMonetizationOnboardingViewModel.kt */
     public static abstract class RequirementsState {
 
-        /* compiled from: ServerSettingsCreatorMonetizationOnboardingViewModel.kt */
+        /* JADX INFO: compiled from: ServerSettingsCreatorMonetizationOnboardingViewModel.kt */
         public static final /* data */ class Error extends RequirementsState {
             private final com.discord.utilities.error.Error error;
 
@@ -186,7 +186,7 @@ public final class ServerSettingsCreatorMonetizationOnboardingViewModel extends 
                 return error.copy(error2);
             }
 
-            /* renamed from: component1, reason: from getter */
+            /* JADX INFO: renamed from: component1, reason: from getter */
             public final com.discord.utilities.error.Error getError() {
                 return this.error;
             }
@@ -223,7 +223,7 @@ public final class ServerSettingsCreatorMonetizationOnboardingViewModel extends 
             }
         }
 
-        /* compiled from: ServerSettingsCreatorMonetizationOnboardingViewModel.kt */
+        /* JADX INFO: compiled from: ServerSettingsCreatorMonetizationOnboardingViewModel.kt */
         public static final /* data */ class Loaded extends RequirementsState {
             private final CreatorMonetizationEligibilityRequirements requirements;
 
@@ -241,7 +241,7 @@ public final class ServerSettingsCreatorMonetizationOnboardingViewModel extends 
                 return loaded.copy(creatorMonetizationEligibilityRequirements);
             }
 
-            /* renamed from: component1, reason: from getter */
+            /* JADX INFO: renamed from: component1, reason: from getter */
             public final CreatorMonetizationEligibilityRequirements getRequirements() {
                 return this.requirements;
             }
@@ -278,7 +278,7 @@ public final class ServerSettingsCreatorMonetizationOnboardingViewModel extends 
             }
         }
 
-        /* compiled from: ServerSettingsCreatorMonetizationOnboardingViewModel.kt */
+        /* JADX INFO: compiled from: ServerSettingsCreatorMonetizationOnboardingViewModel.kt */
         public static final class Loading extends RequirementsState {
             public static final Loading INSTANCE = new Loading();
 
@@ -295,7 +295,7 @@ public final class ServerSettingsCreatorMonetizationOnboardingViewModel extends 
         }
     }
 
-    /* compiled from: ServerSettingsCreatorMonetizationOnboardingViewModel.kt */
+    /* JADX INFO: compiled from: ServerSettingsCreatorMonetizationOnboardingViewModel.kt */
     public static final /* data */ class StoreState {
         private final Guild guild;
         private final boolean isGuildOwner;
@@ -315,12 +315,12 @@ public final class ServerSettingsCreatorMonetizationOnboardingViewModel extends 
             return storeState.copy(guild, z2);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final Guild getGuild() {
             return this.guild;
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final boolean getIsGuildOwner() {
             return this.isGuildOwner;
         }
@@ -345,15 +345,18 @@ public final class ServerSettingsCreatorMonetizationOnboardingViewModel extends 
         }
 
         /* JADX WARN: Multi-variable type inference failed */
+        /* JADX WARN: Type inference failed for: r1v1, types: [int] */
+        /* JADX WARN: Type inference failed for: r1v2 */
+        /* JADX WARN: Type inference failed for: r1v3 */
         public int hashCode() {
             Guild guild = this.guild;
             int iHashCode = (guild != null ? guild.hashCode() : 0) * 31;
             boolean z2 = this.isGuildOwner;
-            int i = z2;
-            if (z2 != 0) {
-                i = 1;
+            ?? r1 = z2;
+            if (z2) {
+                r1 = 1;
             }
-            return iHashCode + i;
+            return iHashCode + r1;
         }
 
         public final boolean isGuildOwner() {
@@ -368,10 +371,10 @@ public final class ServerSettingsCreatorMonetizationOnboardingViewModel extends 
         }
     }
 
-    /* compiled from: ServerSettingsCreatorMonetizationOnboardingViewModel.kt */
+    /* JADX INFO: compiled from: ServerSettingsCreatorMonetizationOnboardingViewModel.kt */
     public static abstract class ViewState {
 
-        /* compiled from: ServerSettingsCreatorMonetizationOnboardingViewModel.kt */
+        /* JADX INFO: compiled from: ServerSettingsCreatorMonetizationOnboardingViewModel.kt */
         public static final /* data */ class AcceptTerms extends ViewState {
             private final Guild guild;
             private final boolean hasAcceptedTerms;
@@ -405,27 +408,27 @@ public final class ServerSettingsCreatorMonetizationOnboardingViewModel extends 
                 return acceptTerms.copy(guild, z5, creatorMonetizationEnableRequest2, z6, z4);
             }
 
-            /* renamed from: component1, reason: from getter */
+            /* JADX INFO: renamed from: component1, reason: from getter */
             public final Guild getGuild() {
                 return this.guild;
             }
 
-            /* renamed from: component2, reason: from getter */
+            /* JADX INFO: renamed from: component2, reason: from getter */
             public final boolean getIsGuildOwner() {
                 return this.isGuildOwner;
             }
 
-            /* renamed from: component3, reason: from getter */
+            /* JADX INFO: renamed from: component3, reason: from getter */
             public final CreatorMonetizationEnableRequest getLatestRequest() {
                 return this.latestRequest;
             }
 
-            /* renamed from: component4, reason: from getter */
+            /* JADX INFO: renamed from: component4, reason: from getter */
             public final boolean getHasAcceptedTerms() {
                 return this.hasAcceptedTerms;
             }
 
-            /* renamed from: component5, reason: from getter */
+            /* JADX INFO: renamed from: component5, reason: from getter */
             public final boolean getIsSubmitting() {
                 return this.isSubmitting;
             }
@@ -460,25 +463,34 @@ public final class ServerSettingsCreatorMonetizationOnboardingViewModel extends 
             }
 
             /* JADX WARN: Multi-variable type inference failed */
+            /* JADX WARN: Type inference failed for: r1v3, types: [int] */
+            /* JADX WARN: Type inference failed for: r1v5 */
+            /* JADX WARN: Type inference failed for: r1v7 */
+            /* JADX WARN: Type inference failed for: r2v1, types: [int] */
+            /* JADX WARN: Type inference failed for: r2v3 */
+            /* JADX WARN: Type inference failed for: r2v4 */
+            /* JADX WARN: Type inference failed for: r3v0 */
+            /* JADX WARN: Type inference failed for: r3v1, types: [int] */
+            /* JADX WARN: Type inference failed for: r3v2 */
             public int hashCode() {
                 Guild guild = this.guild;
                 int iHashCode = (guild != null ? guild.hashCode() : 0) * 31;
                 boolean z2 = this.isGuildOwner;
-                int i = z2;
-                if (z2 != 0) {
-                    i = 1;
+                ?? r2 = z2;
+                if (z2) {
+                    r2 = 1;
                 }
-                int i2 = (iHashCode + i) * 31;
+                int i = (iHashCode + r2) * 31;
                 CreatorMonetizationEnableRequest creatorMonetizationEnableRequest = this.latestRequest;
-                int iHashCode2 = (i2 + (creatorMonetizationEnableRequest != null ? creatorMonetizationEnableRequest.hashCode() : 0)) * 31;
+                int iHashCode2 = (i + (creatorMonetizationEnableRequest != null ? creatorMonetizationEnableRequest.hashCode() : 0)) * 31;
                 boolean z3 = this.hasAcceptedTerms;
-                int i3 = z3;
-                if (z3 != 0) {
-                    i3 = 1;
+                ?? r1 = z3;
+                if (z3) {
+                    r1 = 1;
                 }
-                int i4 = (iHashCode2 + i3) * 31;
+                int i2 = (iHashCode2 + r1) * 31;
                 boolean z4 = this.isSubmitting;
-                return i4 + (z4 ? 1 : z4 ? 1 : 0);
+                return i2 + (z4 ? 1 : z4);
             }
 
             public final boolean isGuildOwner() {
@@ -515,7 +527,7 @@ public final class ServerSettingsCreatorMonetizationOnboardingViewModel extends 
             }
         }
 
-        /* compiled from: ServerSettingsCreatorMonetizationOnboardingViewModel.kt */
+        /* JADX INFO: compiled from: ServerSettingsCreatorMonetizationOnboardingViewModel.kt */
         public static final /* data */ class CreateRequest extends ViewState {
             private final boolean isGuildOwner;
             private final boolean isSubmitting;
@@ -538,17 +550,17 @@ public final class ServerSettingsCreatorMonetizationOnboardingViewModel extends 
                 return createRequest.copy(creatorMonetizationEligibilityRequirements, z2, z3);
             }
 
-            /* renamed from: component1, reason: from getter */
+            /* JADX INFO: renamed from: component1, reason: from getter */
             public final CreatorMonetizationEligibilityRequirements getRequirements() {
                 return this.requirements;
             }
 
-            /* renamed from: component2, reason: from getter */
+            /* JADX INFO: renamed from: component2, reason: from getter */
             public final boolean getIsGuildOwner() {
                 return this.isGuildOwner;
             }
 
-            /* renamed from: component3, reason: from getter */
+            /* JADX INFO: renamed from: component3, reason: from getter */
             public final boolean getIsSubmitting() {
                 return this.isSubmitting;
             }
@@ -574,17 +586,23 @@ public final class ServerSettingsCreatorMonetizationOnboardingViewModel extends 
             }
 
             /* JADX WARN: Multi-variable type inference failed */
+            /* JADX WARN: Type inference failed for: r1v1, types: [int] */
+            /* JADX WARN: Type inference failed for: r1v3 */
+            /* JADX WARN: Type inference failed for: r1v4 */
+            /* JADX WARN: Type inference failed for: r2v0 */
+            /* JADX WARN: Type inference failed for: r2v1, types: [int] */
+            /* JADX WARN: Type inference failed for: r2v2 */
             public int hashCode() {
                 CreatorMonetizationEligibilityRequirements creatorMonetizationEligibilityRequirements = this.requirements;
                 int iHashCode = (creatorMonetizationEligibilityRequirements != null ? creatorMonetizationEligibilityRequirements.hashCode() : 0) * 31;
                 boolean z2 = this.isGuildOwner;
-                int i = z2;
-                if (z2 != 0) {
-                    i = 1;
+                ?? r1 = z2;
+                if (z2) {
+                    r1 = 1;
                 }
-                int i2 = (iHashCode + i) * 31;
+                int i = (iHashCode + r1) * 31;
                 boolean z3 = this.isSubmitting;
-                return i2 + (z3 ? 1 : z3 ? 1 : 0);
+                return i + (z3 ? 1 : z3);
             }
 
             public final boolean isApplicationPending() {
@@ -619,7 +637,7 @@ public final class ServerSettingsCreatorMonetizationOnboardingViewModel extends 
             }
         }
 
-        /* compiled from: ServerSettingsCreatorMonetizationOnboardingViewModel.kt */
+        /* JADX INFO: compiled from: ServerSettingsCreatorMonetizationOnboardingViewModel.kt */
         public static final /* data */ class Error extends ViewState {
             private final com.discord.utilities.error.Error error;
 
@@ -637,7 +655,7 @@ public final class ServerSettingsCreatorMonetizationOnboardingViewModel extends 
                 return error.copy(error2);
             }
 
-            /* renamed from: component1, reason: from getter */
+            /* JADX INFO: renamed from: component1, reason: from getter */
             public final com.discord.utilities.error.Error getError() {
                 return this.error;
             }
@@ -674,7 +692,7 @@ public final class ServerSettingsCreatorMonetizationOnboardingViewModel extends 
             }
         }
 
-        /* compiled from: ServerSettingsCreatorMonetizationOnboardingViewModel.kt */
+        /* JADX INFO: compiled from: ServerSettingsCreatorMonetizationOnboardingViewModel.kt */
         public static final class Loading extends ViewState {
             public static final Loading INSTANCE = new Loading();
 
@@ -691,8 +709,8 @@ public final class ServerSettingsCreatorMonetizationOnboardingViewModel extends 
         }
     }
 
-    /* compiled from: ServerSettingsCreatorMonetizationOnboardingViewModel.kt */
-    /* renamed from: com.discord.widgets.servers.creator_monetization_eligibility.onboarding.ServerSettingsCreatorMonetizationOnboardingViewModel$dispatchErrorsToUI$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.creator_monetization_eligibility.onboarding.ServerSettingsCreatorMonetizationOnboardingViewModel$dispatchErrorsToUI$1 */
+    /* JADX INFO: compiled from: ServerSettingsCreatorMonetizationOnboardingViewModel.kt */
     public static final class C94171<T> implements Action1<Throwable> {
         public C94171() {
         }
@@ -702,7 +720,7 @@ public final class ServerSettingsCreatorMonetizationOnboardingViewModel extends 
             call2(th);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final void call2(Throwable th) {
             PublishSubject publishSubjectAccess$getEventSubject$p = ServerSettingsCreatorMonetizationOnboardingViewModel.access$getEventSubject$p(ServerSettingsCreatorMonetizationOnboardingViewModel.this);
             Intrinsics3.checkNotNullExpressionValue(th, "e");
@@ -710,8 +728,8 @@ public final class ServerSettingsCreatorMonetizationOnboardingViewModel extends 
         }
     }
 
-    /* compiled from: ServerSettingsCreatorMonetizationOnboardingViewModel.kt */
-    /* renamed from: com.discord.widgets.servers.creator_monetization_eligibility.onboarding.ServerSettingsCreatorMonetizationOnboardingViewModel$refreshRequirements$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.creator_monetization_eligibility.onboarding.ServerSettingsCreatorMonetizationOnboardingViewModel$refreshRequirements$1 */
+    /* JADX INFO: compiled from: ServerSettingsCreatorMonetizationOnboardingViewModel.kt */
     public static final class C94181 extends Lambda implements Function1<Error, Unit> {
         public C94181() {
             super(1);
@@ -723,7 +741,7 @@ public final class ServerSettingsCreatorMonetizationOnboardingViewModel extends 
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Error error) {
             Intrinsics3.checkNotNullParameter(error, "error");
             error.setShowErrorToasts(false);
@@ -731,8 +749,8 @@ public final class ServerSettingsCreatorMonetizationOnboardingViewModel extends 
         }
     }
 
-    /* compiled from: ServerSettingsCreatorMonetizationOnboardingViewModel.kt */
-    /* renamed from: com.discord.widgets.servers.creator_monetization_eligibility.onboarding.ServerSettingsCreatorMonetizationOnboardingViewModel$refreshRequirements$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.creator_monetization_eligibility.onboarding.ServerSettingsCreatorMonetizationOnboardingViewModel$refreshRequirements$2 */
+    /* JADX INFO: compiled from: ServerSettingsCreatorMonetizationOnboardingViewModel.kt */
     public static final class C94192 extends Lambda implements Function1<CreatorMonetizationEligibilityRequirements, Unit> {
         public C94192() {
             super(1);
@@ -744,7 +762,7 @@ public final class ServerSettingsCreatorMonetizationOnboardingViewModel extends 
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(CreatorMonetizationEligibilityRequirements creatorMonetizationEligibilityRequirements) {
             Intrinsics3.checkNotNullParameter(creatorMonetizationEligibilityRequirements, "requirements");
             ServerSettingsCreatorMonetizationOnboardingViewModel.access$getRequirementsSubject$p(ServerSettingsCreatorMonetizationOnboardingViewModel.this).onNext(new RequirementsState.Loaded(creatorMonetizationEligibilityRequirements));

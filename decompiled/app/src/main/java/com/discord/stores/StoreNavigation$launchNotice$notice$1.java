@@ -5,8 +5,8 @@ import kotlin.jvm.functions.Function1;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: StoreNavigation.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: StoreNavigation.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class StoreNavigation$launchNotice$notice$1 extends Lambda implements Function1<FragmentActivity, Boolean> {
     public final /* synthetic */ String $noticeName;
     public final /* synthetic */ Function1 $showAction;
@@ -23,7 +23,7 @@ public final class StoreNavigation$launchNotice$notice$1 extends Lambda implemen
         return Boolean.valueOf(invoke2(fragmentActivity));
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final boolean invoke2(FragmentActivity fragmentActivity) {
         Intrinsics3.checkNotNullParameter(fragmentActivity, "it");
         StoreNotices.markSeen$default(StoreStream.INSTANCE.getNotices(), this.$noticeName, 0L, 2, null);

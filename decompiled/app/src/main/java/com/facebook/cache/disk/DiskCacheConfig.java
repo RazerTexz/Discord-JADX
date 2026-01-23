@@ -15,43 +15,43 @@ import p007b.p109f.p111b.p113b.EntryEvictionComparatorSupplier;
 import p007b.p109f.p115d.p116a.DiskTrimmableRegistry;
 import p007b.p109f.p115d.p116a.NoOpDiskTrimmableRegistry;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class DiskCacheConfig {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final int f19421a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final String f19422b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final Supplier<File> f19423c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final long f19424d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final long f19425e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final long f19426f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public final EntryEvictionComparatorSupplier f19427g;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public final CacheErrorLogger f19428h;
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public final CacheEventListener f19429i;
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final DiskTrimmableRegistry f19430j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final Context f19431k;
 
-    /* renamed from: com.facebook.cache.disk.DiskCacheConfig$a */
+    /* JADX INFO: renamed from: com.facebook.cache.disk.DiskCacheConfig$a */
     public class C10633a implements Supplier<File> {
         public C10633a() {
         }
@@ -63,22 +63,22 @@ public class DiskCacheConfig {
         }
     }
 
-    /* renamed from: com.facebook.cache.disk.DiskCacheConfig$b */
+    /* JADX INFO: renamed from: com.facebook.cache.disk.DiskCacheConfig$b */
     public static class C10634b {
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public Supplier<File> f19434b;
 
-        /* renamed from: e */
+        /* JADX INFO: renamed from: e */
         public final Context f19437e;
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public String f19433a = "image_cache";
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public long f19435c = 41943040;
 
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         public EntryEvictionComparatorSupplier f19436d = new DefaultEntryEvictionComparatorSupplier();
 
         public C10634b(Context context, C10633a c10633a) {

@@ -6,11 +6,11 @@ import kotlin.jvm.internal.DefaultConstructorMarker;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: InviteSuggestion.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: InviteSuggestion.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public abstract class InviteSuggestion {
 
-    /* compiled from: InviteSuggestion.kt */
+    /* JADX INFO: compiled from: InviteSuggestion.kt */
     public static final /* data */ class ChannelItem extends InviteSuggestion {
         private final Channel channel;
 
@@ -28,7 +28,7 @@ public abstract class InviteSuggestion {
             return channelItem.copy(channel);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final Channel getChannel() {
             return this.channel;
         }
@@ -65,7 +65,7 @@ public abstract class InviteSuggestion {
         }
     }
 
-    /* compiled from: InviteSuggestion.kt */
+    /* JADX INFO: compiled from: InviteSuggestion.kt */
     public static final /* data */ class UserSuggestion extends InviteSuggestion {
         private final User user;
 
@@ -83,7 +83,7 @@ public abstract class InviteSuggestion {
             return userSuggestion.copy(user);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final User getUser() {
             return this.user;
         }

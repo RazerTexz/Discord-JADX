@@ -35,8 +35,8 @@ import p507d0.p592z.p594d.Lambda;
 import p658rx.Observable;
 import p658rx.Subscription;
 
-/* compiled from: CallSoundManager.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: CallSoundManager.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class CallSoundManager {
     private static final int JOIN_LEAVE_USER_LIMIT = 25;
     private String activeStreamKey;
@@ -50,12 +50,12 @@ public final class CallSoundManager {
     private List<Long> streamingUserIds;
     private Long voiceChannelId;
 
-    /* compiled from: CallSoundManager.kt */
+    /* JADX INFO: compiled from: CallSoundManager.kt */
     public interface IStoreStateGenerator {
         Observable<StoreState> observeStoreState(long voiceChannelId);
     }
 
-    /* compiled from: CallSoundManager.kt */
+    /* JADX INFO: compiled from: CallSoundManager.kt */
     public static final /* data */ class StoreState {
         private final StoreApplicationStreaming.ActiveApplicationStream activeApplicationStream;
         private final MeUser me;
@@ -81,6 +81,7 @@ public final class CallSoundManager {
             this.selectedVoiceChannel = channel;
         }
 
+        /* JADX WARN: Multi-variable type inference failed */
         public static /* synthetic */ StoreState copy$default(StoreState storeState, Map map, RtcConnection.State state, Map map2, Map map3, StoreApplicationStreaming.ActiveApplicationStream activeApplicationStream, MeUser meUser, Channel channel, int i, Object obj) {
             if ((i & 1) != 0) {
                 map = storeState.voiceParticipants;
@@ -115,7 +116,7 @@ public final class CallSoundManager {
             return this.voiceParticipants;
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final RtcConnection.State getRtcConnectionState() {
             return this.rtcConnectionState;
         }
@@ -128,17 +129,17 @@ public final class CallSoundManager {
             return this.streamSpectators;
         }
 
-        /* renamed from: component5, reason: from getter */
+        /* JADX INFO: renamed from: component5, reason: from getter */
         public final StoreApplicationStreaming.ActiveApplicationStream getActiveApplicationStream() {
             return this.activeApplicationStream;
         }
 
-        /* renamed from: component6, reason: from getter */
+        /* JADX INFO: renamed from: component6, reason: from getter */
         public final MeUser getMe() {
             return this.me;
         }
 
-        /* renamed from: component7, reason: from getter */
+        /* JADX INFO: renamed from: component7, reason: from getter */
         public final Channel getSelectedVoiceChannel() {
             return this.selectedVoiceChannel;
         }
@@ -228,7 +229,7 @@ public final class CallSoundManager {
         }
     }
 
-    /* compiled from: CallSoundManager.kt */
+    /* JADX INFO: compiled from: CallSoundManager.kt */
     public static final class StoreStateGenerator implements IStoreStateGenerator {
         private final StoreApplicationStreaming storeApplicationStreaming;
         private final StoreChannels storeChannels;
@@ -265,8 +266,8 @@ public final class CallSoundManager {
         }
     }
 
-    /* compiled from: CallSoundManager.kt */
-    /* renamed from: com.discord.utilities.voice.CallSoundManager$subscribeToStoreState$1 */
+    /* JADX INFO: renamed from: com.discord.utilities.voice.CallSoundManager$subscribeToStoreState$1 */
+    /* JADX INFO: compiled from: CallSoundManager.kt */
     public static final class C70281 extends Lambda implements Function1<Subscription, Unit> {
         public C70281() {
             super(1);
@@ -278,15 +279,15 @@ public final class CallSoundManager {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Subscription subscription) {
             Intrinsics3.checkNotNullParameter(subscription, Traits.Payment.Type.SUBSCRIPTION);
             CallSoundManager.access$setStoreStateSubscription$p(CallSoundManager.this, subscription);
         }
     }
 
-    /* compiled from: CallSoundManager.kt */
-    /* renamed from: com.discord.utilities.voice.CallSoundManager$subscribeToStoreState$2 */
+    /* JADX INFO: renamed from: com.discord.utilities.voice.CallSoundManager$subscribeToStoreState$2 */
+    /* JADX INFO: compiled from: CallSoundManager.kt */
     public static final class C70292 extends Lambda implements Function0<Unit> {
         public C70292() {
             super(0);
@@ -298,14 +299,14 @@ public final class CallSoundManager {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             CallSoundManager.access$getAppSoundManager$p(CallSoundManager.this).stop(AppSound.INSTANCE.getSOUND_CALL_CALLING());
         }
     }
 
-    /* compiled from: CallSoundManager.kt */
-    /* renamed from: com.discord.utilities.voice.CallSoundManager$subscribeToStoreState$3 */
+    /* JADX INFO: renamed from: com.discord.utilities.voice.CallSoundManager$subscribeToStoreState$3 */
+    /* JADX INFO: compiled from: CallSoundManager.kt */
     public static final class C70303 extends Lambda implements Function1<StoreState, Unit> {
         public final /* synthetic */ long $voiceChannelId;
 
@@ -321,7 +322,7 @@ public final class CallSoundManager {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(StoreState storeState) {
             CallSoundManager callSoundManager = CallSoundManager.this;
             long j = this.$voiceChannelId;

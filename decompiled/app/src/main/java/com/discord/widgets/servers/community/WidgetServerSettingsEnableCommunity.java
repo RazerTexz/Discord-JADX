@@ -15,20 +15,20 @@ import p007b.p008a.p018d.AppViewModelDelegates2;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Reflection2;
 
-/* compiled from: WidgetServerSettingsEnableCommunity.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetServerSettingsEnableCommunity.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetServerSettingsEnableCommunity extends AppFragment {
     public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetServerSettingsEnableCommunity.class, "binding", "getBinding()Lcom/discord/databinding/WidgetServerSettingsEnableCommunityBinding;", 0)};
 
-    /* renamed from: binding$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
     private final AppLogger2 loggingConfig;
 
-    /* renamed from: viewModel$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: viewModel$delegate, reason: from kotlin metadata */
     private final Lazy viewModel;
 
-    /* compiled from: WidgetServerSettingsEnableCommunity.kt */
-    /* renamed from: com.discord.widgets.servers.community.WidgetServerSettingsEnableCommunity$onViewBoundOrOnResume$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.community.WidgetServerSettingsEnableCommunity$onViewBoundOrOnResume$1 */
+    /* JADX INFO: compiled from: WidgetServerSettingsEnableCommunity.kt */
     public static final class ViewOnClickListenerC93941 implements View.OnClickListener {
         public ViewOnClickListenerC93941() {
         }

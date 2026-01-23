@@ -14,13 +14,13 @@ import p007b.p195g.p196a.p205c.p212e0.TypeSerializer;
 import p007b.p195g.p196a.p205c.p215g0.p217u.StaticListSerializerBase;
 import p007b.p195g.p196a.p205c.p220y.JacksonStdImpl;
 
-/* compiled from: IndexedStringListSerializer.java */
+/* JADX INFO: renamed from: b.g.a.c.g0.t.g, reason: use source file name */
+/* JADX INFO: compiled from: IndexedStringListSerializer.java */
+/* JADX INFO: loaded from: classes3.dex */
 @JacksonStdImpl
-/* renamed from: b.g.a.c.g0.t.g, reason: use source file name */
-/* loaded from: classes3.dex */
 public final class IndexedStringListSerializer extends StaticListSerializerBase<List<String>> {
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public static final IndexedStringListSerializer f4817k = new IndexedStringListSerializer();
     private static final long serialVersionUID = 1;
 
@@ -29,7 +29,7 @@ public final class IndexedStringListSerializer extends StaticListSerializerBase<
     }
 
     @Override // p007b.p195g.p196a.p205c.JsonSerializer
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public void mo1807f(Object obj, JsonGenerator jsonGenerator, SerializerProvider serializerProvider) throws IOException {
         List<String> list = (List) obj;
         int size = list.size();
@@ -43,24 +43,24 @@ public final class IndexedStringListSerializer extends StaticListSerializerBase<
     }
 
     @Override // p007b.p195g.p196a.p205c.p215g0.p217u.StaticListSerializerBase, p007b.p195g.p196a.p205c.JsonSerializer
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public /* bridge */ /* synthetic */ void mo1808g(Object obj, JsonGenerator jsonGenerator, SerializerProvider serializerProvider, TypeSerializer typeSerializer) throws IOException {
         m2028s((List) obj, jsonGenerator, serializerProvider, typeSerializer);
     }
 
     @Override // p007b.p195g.p196a.p205c.p215g0.p217u.StaticListSerializerBase
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public JsonSerializer<?> mo2025p(BeanProperty beanProperty, Boolean bool) {
         return new IndexedStringListSerializer(this, bool);
     }
 
     @Override // p007b.p195g.p196a.p205c.p215g0.p217u.StaticListSerializerBase
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     public /* bridge */ /* synthetic */ void mo2026q(Collection collection, JsonGenerator jsonGenerator, SerializerProvider serializerProvider, TypeSerializer typeSerializer) throws IOException {
         m2028s((List) collection, jsonGenerator, serializerProvider, typeSerializer);
     }
 
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     public final void m2027r(List<String> list, JsonGenerator jsonGenerator, SerializerProvider serializerProvider, int i) throws IOException {
         for (int i2 = 0; i2 < i; i2++) {
             try {
@@ -77,7 +77,7 @@ public final class IndexedStringListSerializer extends StaticListSerializerBase<
         }
     }
 
-    /* renamed from: s */
+    /* JADX INFO: renamed from: s */
     public void m2028s(List<String> list, JsonGenerator jsonGenerator, SerializerProvider serializerProvider, TypeSerializer typeSerializer) throws IOException {
         WritableTypeId writableTypeIdMo1959e = typeSerializer.mo1959e(jsonGenerator, typeSerializer.m1958d(list, JsonToken2.START_ARRAY));
         jsonGenerator.mo1654e(list);

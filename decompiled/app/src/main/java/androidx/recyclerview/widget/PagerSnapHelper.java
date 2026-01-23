@@ -8,7 +8,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.recyclerview.widget.RecyclerView;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class PagerSnapHelper extends SnapHelper {
     private static final int MAX_SCROLL_ON_FLING_DURATION = 100;
 
@@ -18,7 +18,7 @@ public class PagerSnapHelper extends SnapHelper {
     @Nullable
     private OrientationHelper mVerticalHelper;
 
-    /* renamed from: androidx.recyclerview.widget.PagerSnapHelper$1 */
+    /* JADX INFO: renamed from: androidx.recyclerview.widget.PagerSnapHelper$1 */
     public class C05651 extends LinearSmoothScroller {
         public C05651(Context context) {
             super(context);

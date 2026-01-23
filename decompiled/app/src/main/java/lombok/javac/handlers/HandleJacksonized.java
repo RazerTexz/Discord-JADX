@@ -18,8 +18,8 @@ import lombok.javac.JavacAnnotationHandler;
 import lombok.javac.JavacNode;
 import lombok.javac.JavacTreeMaker;
 
+/* JADX INFO: loaded from: discord-126021.apk:lombok/javac/handlers/HandleJacksonized.SCL.lombok */
 @HandlerPriority(-512)
-/* loaded from: discord-126021.apk:lombok/javac/handlers/HandleJacksonized.SCL.lombok */
 public class HandleJacksonized extends JavacAnnotationHandler<Jacksonized> {
     @Override // lombok.javac.JavacAnnotationHandler
     public void handle(AnnotationValues<Jacksonized> annotation, JCTree.JCAnnotation ast, JavacNode annotationNode) {

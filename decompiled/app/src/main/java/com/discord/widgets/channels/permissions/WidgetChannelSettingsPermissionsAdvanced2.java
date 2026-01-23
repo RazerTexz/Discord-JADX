@@ -25,9 +25,9 @@ import p507d0.p580t._Collections;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetChannelSettingsPermissionsAdvanced.kt */
-/* renamed from: com.discord.widgets.channels.permissions.WidgetChannelSettingsPermissionsAdvanced$Model$Companion$get$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.channels.permissions.WidgetChannelSettingsPermissionsAdvanced$Model$Companion$get$1, reason: use source file name */
+/* JADX INFO: compiled from: WidgetChannelSettingsPermissionsAdvanced.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetChannelSettingsPermissionsAdvanced2 extends Lambda implements Function0<WidgetChannelSettingsPermissionsAdvanced.Model> {
     public final /* synthetic */ long $channelId;
     public final /* synthetic */ StoreChannels $storeChannels;

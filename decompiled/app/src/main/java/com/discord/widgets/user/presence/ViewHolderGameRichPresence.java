@@ -23,8 +23,8 @@ import p007b.p008a.p027k.FormatUtils;
 import p507d0.p579g0.Strings4;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ViewHolderGameRichPresence.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: ViewHolderGameRichPresence.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class ViewHolderGameRichPresence extends ViewHolderUserRichPresence {
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public ViewHolderGameRichPresence(View view, SimpleDraweeView simpleDraweeView, SimpleDraweeView simpleDraweeView2, TextView textView, TextView textView2, TextView textView3, TextView textView4, TextView textView5, View view2, Button button, Button button2) {

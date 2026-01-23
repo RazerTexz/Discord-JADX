@@ -10,20 +10,20 @@ import androidx.viewbinding.ViewBinding;
 import com.discord.C5419R;
 import com.facebook.drawee.view.SimpleDraweeView;
 
-/* compiled from: LayoutIconUploaderBinding.java */
-/* renamed from: b.a.i.r0, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.a.i.r0, reason: use source file name */
+/* JADX INFO: compiled from: LayoutIconUploaderBinding.java */
+/* JADX INFO: loaded from: classes.dex */
 public final class LayoutIconUploaderBinding implements ViewBinding {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     @NonNull
     public final ConstraintLayout f1173a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     @NonNull
     public final SimpleDraweeView f1174b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     @NonNull
     public final Group f1175c;
 
@@ -34,7 +34,7 @@ public final class LayoutIconUploaderBinding implements ViewBinding {
     }
 
     @NonNull
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static LayoutIconUploaderBinding m204a(@NonNull View view) {
         int i = C5419R.id.icon_uploader_image;
         SimpleDraweeView simpleDraweeView = (SimpleDraweeView) view.findViewById(C5419R.id.icon_uploader_image);

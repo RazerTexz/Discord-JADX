@@ -6,9 +6,9 @@ import kotlin.jvm.functions.Function0;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: ArgUtils.kt */
-/* renamed from: com.discord.widgets.guildscheduledevent.WidgetGuildScheduledEventDetailsBottomSheet$$special$$inlined$args$1 */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.guildscheduledevent.WidgetGuildScheduledEventDetailsBottomSheet$$special$$inlined$args$1 */
+/* JADX INFO: compiled from: ArgUtils.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class C8856x82cb5b4e extends Lambda implements Function0<WidgetGuildScheduledEventDetailsBottomSheet2> {
     public final /* synthetic */ String $argsKey;
     public final /* synthetic */ AppBottomSheet $this_args;

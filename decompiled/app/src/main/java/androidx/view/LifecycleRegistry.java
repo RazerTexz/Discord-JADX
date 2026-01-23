@@ -15,7 +15,7 @@ import java.util.Iterator;
 import java.util.Map;
 import p007b.p100d.p104b.p105a.outline;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class LifecycleRegistry extends Lifecycle {
     private int mAddingObserverCounter;
     private final boolean mEnforceMainThread;

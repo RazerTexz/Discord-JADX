@@ -4,9 +4,9 @@ import android.view.View;
 import androidx.recyclerview.widget.RecyclerView;
 import com.discord.widgets.guild_role_subscriptions.tier.create.benefits.GuildRoleSubscriptionBenefitAdapter;
 
-/* compiled from: GuildRoleSubscriptionBenefitAdapter.kt */
-/* renamed from: com.discord.widgets.guild_role_subscriptions.tier.create.benefits.GuildRoleSubscriptionBenefitAdapter$onAttachedToRecyclerView$$inlined$also$lambda$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.guild_role_subscriptions.tier.create.benefits.GuildRoleSubscriptionBenefitAdapter$onAttachedToRecyclerView$$inlined$also$lambda$1, reason: use source file name */
+/* JADX INFO: compiled from: GuildRoleSubscriptionBenefitAdapter.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class GuildRoleSubscriptionBenefitAdapter2 implements View.OnLayoutChangeListener {
     public final /* synthetic */ GuildRoleSubscriptionBenefitAdapter.StickyHeadersManager $it;
     public final /* synthetic */ RecyclerView $recyclerView$inlined;

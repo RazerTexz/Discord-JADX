@@ -2,8 +2,8 @@ package com.discord.utilities.accessibility;
 
 import com.discord.api.permission.Permission;
 
-/* compiled from: AccessibilityFeatureFlags.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: AccessibilityFeatureFlags.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public enum AccessibilityFeatureFlags {
     NONE(0),
     SCREENREADER(1),

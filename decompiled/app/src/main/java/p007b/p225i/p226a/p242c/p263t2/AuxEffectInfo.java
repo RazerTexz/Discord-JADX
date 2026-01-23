@@ -2,15 +2,15 @@ package p007b.p225i.p226a.p242c.p263t2;
 
 import androidx.annotation.Nullable;
 
-/* compiled from: AuxEffectInfo.java */
-/* renamed from: b.i.a.c.t2.u, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.t2.u, reason: use source file name */
+/* JADX INFO: compiled from: AuxEffectInfo.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class AuxEffectInfo {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final int f7835a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final float f7836b;
 
     public AuxEffectInfo(int i, float f) {

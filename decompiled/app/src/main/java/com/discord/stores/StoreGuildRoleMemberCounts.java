@@ -15,8 +15,8 @@ import p507d0.p580t.Maps6;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: StoreGuildRoleMemberCounts.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: StoreGuildRoleMemberCounts.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class StoreGuildRoleMemberCounts extends StoreV2 {
     private static final int CACHE_TIME_MS = 120000;
     private final Clock clock;
@@ -26,8 +26,8 @@ public final class StoreGuildRoleMemberCounts extends StoreV2 {
     private final HashMap<Long, Map<Long, Integer>> guildRoleMemberCounts;
     private final RestAPI restApi;
 
-    /* compiled from: StoreGuildRoleMemberCounts.kt */
-    /* renamed from: com.discord.stores.StoreGuildRoleMemberCounts$fetchGuildRoleMemberCounts$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreGuildRoleMemberCounts$fetchGuildRoleMemberCounts$1 */
+    /* JADX INFO: compiled from: StoreGuildRoleMemberCounts.kt */
     public static final class C60401 extends Lambda implements Function0<Unit> {
         public final /* synthetic */ long $guildId;
 
@@ -43,14 +43,14 @@ public final class StoreGuildRoleMemberCounts extends StoreV2 {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             StoreGuildRoleMemberCounts.access$fetchGuildRoleMemberCountsIfNecessary(StoreGuildRoleMemberCounts.this, this.$guildId);
         }
     }
 
-    /* compiled from: StoreGuildRoleMemberCounts.kt */
-    /* renamed from: com.discord.stores.StoreGuildRoleMemberCounts$fetchGuildRoleMemberCountsIfNecessary$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreGuildRoleMemberCounts$fetchGuildRoleMemberCountsIfNecessary$1 */
+    /* JADX INFO: compiled from: StoreGuildRoleMemberCounts.kt */
     public static final class C60411 extends Lambda implements Function1<Map<Long, ? extends Integer>, Unit> {
         public final /* synthetic */ long $guildId;
 
@@ -66,7 +66,7 @@ public final class StoreGuildRoleMemberCounts extends StoreV2 {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Map<Long, Integer> map) {
             if (map != null) {
                 StoreGuildRoleMemberCounts.access$getDispatcher$p(StoreGuildRoleMemberCounts.this).schedule(new StoreGuildRoleMemberCounts2(map, this));
@@ -74,13 +74,13 @@ public final class StoreGuildRoleMemberCounts extends StoreV2 {
         }
     }
 
-    /* compiled from: StoreGuildRoleMemberCounts.kt */
-    /* renamed from: com.discord.stores.StoreGuildRoleMemberCounts$fetchGuildRoleMemberCountsIfNecessary$2 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreGuildRoleMemberCounts$fetchGuildRoleMemberCountsIfNecessary$2 */
+    /* JADX INFO: compiled from: StoreGuildRoleMemberCounts.kt */
     public static final class C60432 extends Lambda implements Function1<Error, Unit> {
         public final /* synthetic */ long $guildId;
 
-        /* compiled from: StoreGuildRoleMemberCounts.kt */
-        /* renamed from: com.discord.stores.StoreGuildRoleMemberCounts$fetchGuildRoleMemberCountsIfNecessary$2$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.stores.StoreGuildRoleMemberCounts$fetchGuildRoleMemberCountsIfNecessary$2$1, reason: invalid class name */
+        /* JADX INFO: compiled from: StoreGuildRoleMemberCounts.kt */
         public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
             public AnonymousClass1() {
                 super(0);
@@ -92,7 +92,7 @@ public final class StoreGuildRoleMemberCounts extends StoreV2 {
                 return Unit.f27425a;
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2() {
                 StoreGuildRoleMemberCounts.access$getGuildRoleMemberCountFetchTimes$p(StoreGuildRoleMemberCounts.this).remove(Long.valueOf(C60432.this.$guildId));
             }
@@ -110,7 +110,7 @@ public final class StoreGuildRoleMemberCounts extends StoreV2 {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Error error) {
             Intrinsics3.checkNotNullParameter(error, "it");
             StoreGuildRoleMemberCounts.access$getDispatcher$p(StoreGuildRoleMemberCounts.this).schedule(new AnonymousClass1());

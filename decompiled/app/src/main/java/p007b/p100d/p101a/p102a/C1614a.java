@@ -40,60 +40,60 @@ import p007b.p225i.p226a.p288f.p313h.p327n.C3941a;
 import p007b.p225i.p226a.p288f.p313h.p327n.C3952l;
 import p007b.p225i.p226a.p288f.p313h.p327n.InterfaceC3944d;
 
-/* compiled from: com.android.billingclient:billing@@4.0.0 */
-/* renamed from: b.d.a.a.a */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.d.a.a.a */
+/* JADX INFO: compiled from: com.android.billingclient:billing@@4.0.0 */
+/* JADX INFO: loaded from: classes.dex */
 public class C1614a extends BillingClient {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public volatile int f2931a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final String f2932b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final Handler f2933c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public volatile C1634s f2934d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public Context f2935e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public volatile InterfaceC3944d f2936f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public volatile ServiceConnectionC1629n f2937g;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public boolean f2938h;
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public int f2939i;
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public boolean f2940j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public boolean f2941k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public boolean f2942l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public boolean f2943m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public boolean f2944n;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public boolean f2945o;
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public boolean f2946p;
 
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     public ExecutorService f2947q;
 
     @AnyThread
@@ -115,7 +115,7 @@ public class C1614a extends BillingClient {
     }
 
     @Override // com.android.billingclient.api.BillingClient
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final void mo799a(C1619d c1619d, InterfaceC1620e interfaceC1620e) {
         if (!mo802d()) {
             interfaceC1620e.onConsumeResponse(C1631p.f2981j, c1619d.f2958a);
@@ -125,7 +125,7 @@ public class C1614a extends BillingClient {
     }
 
     @Override // com.android.billingclient.api.BillingClient
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final void mo800b() {
         try {
             this.f2934d.m812a();
@@ -159,19 +159,19 @@ public class C1614a extends BillingClient {
     }
 
     @Override // com.android.billingclient.api.BillingClient
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final int mo801c() {
         return this.f2931a;
     }
 
     @Override // com.android.billingclient.api.BillingClient
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final boolean mo802d() {
         return (this.f2931a != 2 || this.f2936f == null || this.f2937g == null) ? false : true;
     }
 
     @Override // com.android.billingclient.api.BillingClient
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final BillingResult mo803e(Activity activity, BillingFlowParams billingFlowParams) {
         String str;
         String str2;
@@ -432,7 +432,7 @@ public class C1614a extends BillingClient {
     }
 
     @Override // com.android.billingclient.api.BillingClient
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public void mo804f(String str, InterfaceC1621f interfaceC1621f) {
         if (!mo802d()) {
             BillingResult billingResult = C1631p.f2981j;
@@ -455,7 +455,7 @@ public class C1614a extends BillingClient {
     }
 
     @Override // com.android.billingclient.api.BillingClient
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public final void mo805g(C1623h c1623h, InterfaceC1624i interfaceC1624i) {
         if (!mo802d()) {
             interfaceC1624i.onSkuDetailsResponse(C1631p.f2981j, null);
@@ -486,7 +486,7 @@ public class C1614a extends BillingClient {
     }
 
     @Override // com.android.billingclient.api.BillingClient
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public final void mo806h(InterfaceC1616b interfaceC1616b) {
         ServiceInfo serviceInfo;
         if (mo802d()) {
@@ -540,12 +540,12 @@ public class C1614a extends BillingClient {
         interfaceC1616b.onBillingSetupFinished(C1631p.f2973b);
     }
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public final Handler m807i() {
         return Looper.myLooper() == null ? this.f2933c : new Handler(Looper.myLooper());
     }
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final BillingResult m808j(BillingResult billingResult) {
         if (Thread.interrupted()) {
             return billingResult;
@@ -554,13 +554,13 @@ public class C1614a extends BillingClient {
         return billingResult;
     }
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final BillingResult m809k() {
         return (this.f2931a == 0 || this.f2931a == 3) ? C1631p.f2981j : C1631p.f2979h;
     }
 
     @Nullable
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final <T> Future<T> m810l(Callable<T> callable, long j, @Nullable Runnable runnable, Handler handler) {
         long j2 = (long) (j * 0.95d);
         if (this.f2947q == null) {

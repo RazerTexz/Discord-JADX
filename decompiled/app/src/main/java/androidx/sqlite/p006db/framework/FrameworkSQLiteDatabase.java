@@ -21,13 +21,13 @@ import java.util.List;
 import java.util.Locale;
 import p007b.p100d.p104b.p105a.outline;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class FrameworkSQLiteDatabase implements SupportSQLiteDatabase {
     private static final String[] CONFLICT_VALUES = {"", " OR ROLLBACK ", " OR ABORT ", " OR FAIL ", " OR IGNORE ", " OR REPLACE "};
     private static final String[] EMPTY_STRING_ARRAY = new String[0];
     private final SQLiteDatabase mDelegate;
 
-    /* renamed from: androidx.sqlite.db.framework.FrameworkSQLiteDatabase$1 */
+    /* JADX INFO: renamed from: androidx.sqlite.db.framework.FrameworkSQLiteDatabase$1 */
     public class C06171 implements SQLiteDatabase.CursorFactory {
         public final /* synthetic */ SupportSQLiteQuery val$supportQuery;
 
@@ -42,7 +42,7 @@ public class FrameworkSQLiteDatabase implements SupportSQLiteDatabase {
         }
     }
 
-    /* renamed from: androidx.sqlite.db.framework.FrameworkSQLiteDatabase$2 */
+    /* JADX INFO: renamed from: androidx.sqlite.db.framework.FrameworkSQLiteDatabase$2 */
     public class C06182 implements SQLiteDatabase.CursorFactory {
         public final /* synthetic */ SupportSQLiteQuery val$supportQuery;
 

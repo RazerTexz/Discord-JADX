@@ -1,8 +1,8 @@
 package p507d0.p579g0;
 
-/* compiled from: Regex.kt */
-/* renamed from: d0.g0.i, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.g0.i, reason: use source file name */
+/* JADX INFO: compiled from: Regex.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public enum Regex5 {
     IGNORE_CASE(2, 0, 2),
     MULTILINE(8, 0, 2),

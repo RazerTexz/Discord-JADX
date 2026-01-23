@@ -8,9 +8,9 @@ import kotlin.jvm.functions.Function0;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetUserSheet.kt */
-/* renamed from: com.discord.widgets.user.usersheet.WidgetUserSheet$configureConnectionsSection$onMutualGuildsItemClick$1 */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: com.discord.widgets.user.usersheet.WidgetUserSheet$configureConnectionsSection$onMutualGuildsItemClick$1 */
+/* JADX INFO: compiled from: WidgetUserSheet.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class C10346xf08aeacd extends Lambda implements Function0<Unit> {
     public final /* synthetic */ User $user;
     public final /* synthetic */ WidgetUserSheet this$0;
@@ -28,7 +28,7 @@ public final class C10346xf08aeacd extends Lambda implements Function0<Unit> {
         return Unit.f27425a;
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final void invoke2() {
         WidgetUserMutualGuilds.Companion companion = WidgetUserMutualGuilds.INSTANCE;
         Context contextRequireContext = this.this$0.requireContext();

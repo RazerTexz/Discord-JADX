@@ -21,8 +21,8 @@ import p507d0.p592z.p594d.Lambda;
 import p507d0.p592z.p594d.Reflection2;
 import p658rx.Observable;
 
-/* compiled from: StoreMediaFavorites.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: StoreMediaFavorites.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class StoreMediaFavorites extends StoreV2 {
     public static final String FAVORITES_CACHE_KEY = "STORE_FAVORITES";
     private final Dispatcher dispatcher;
@@ -31,15 +31,15 @@ public final class StoreMediaFavorites extends StoreV2 {
     private final ObservationDeck observationDeck;
     private final Persister<Set<Favorite>> persister;
 
-    /* compiled from: StoreMediaFavorites.kt */
+    /* JADX INFO: compiled from: StoreMediaFavorites.kt */
     public static abstract class Favorite {
 
-        /* renamed from: Companion, reason: from kotlin metadata */
+        /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
         public static final Companion INSTANCE = new Companion(null);
         private static final Lazy AllTypes$delegate = LazyJVM.lazy(StoreMediaFavorites2.INSTANCE);
         private static final Set<KClass<? extends Favorite>> EmojiTypes = Sets5.setOf((Object[]) new KClass[]{Reflection2.getOrCreateKotlinClass(FavCustomEmoji.class), Reflection2.getOrCreateKotlinClass(FavUnicodeEmoji.class)});
 
-        /* compiled from: StoreMediaFavorites.kt */
+        /* JADX INFO: compiled from: StoreMediaFavorites.kt */
         public static final class Companion {
             private Companion() {
             }
@@ -59,7 +59,7 @@ public final class StoreMediaFavorites extends StoreV2 {
             }
         }
 
-        /* compiled from: StoreMediaFavorites.kt */
+        /* JADX INFO: compiled from: StoreMediaFavorites.kt */
         public static final /* data */ class FavCustomEmoji extends Favorite implements FavoriteEmoji {
             private final String emojiUniqueId;
 
@@ -120,7 +120,7 @@ public final class StoreMediaFavorites extends StoreV2 {
             }
         }
 
-        /* compiled from: StoreMediaFavorites.kt */
+        /* JADX INFO: compiled from: StoreMediaFavorites.kt */
         public static final /* data */ class FavUnicodeEmoji extends Favorite implements FavoriteEmoji {
             private final String emojiUniqueId;
 
@@ -199,13 +199,13 @@ public final class StoreMediaFavorites extends StoreV2 {
         }
     }
 
-    /* compiled from: StoreMediaFavorites.kt */
+    /* JADX INFO: compiled from: StoreMediaFavorites.kt */
     public interface FavoriteEmoji {
         String getEmojiUniqueId();
     }
 
-    /* compiled from: StoreMediaFavorites.kt */
-    /* renamed from: com.discord.stores.StoreMediaFavorites$addFavorite$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreMediaFavorites$addFavorite$1 */
+    /* JADX INFO: compiled from: StoreMediaFavorites.kt */
     public static final class C61811 extends Lambda implements Function0<Unit> {
         public final /* synthetic */ Favorite $favorite;
 
@@ -221,7 +221,7 @@ public final class StoreMediaFavorites extends StoreV2 {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             if (StoreMediaFavorites.access$getFavorites$p(StoreMediaFavorites.this).add(this.$favorite)) {
                 StoreMediaFavorites.this.markChanged();
@@ -229,8 +229,8 @@ public final class StoreMediaFavorites extends StoreV2 {
         }
     }
 
-    /* compiled from: StoreMediaFavorites.kt */
-    /* renamed from: com.discord.stores.StoreMediaFavorites$observeFavorites$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreMediaFavorites$observeFavorites$1 */
+    /* JADX INFO: compiled from: StoreMediaFavorites.kt */
     public static final class C61821 extends Lambda implements Function0<Set<? extends Favorite>> {
         public final /* synthetic */ Set $types;
 
@@ -246,14 +246,14 @@ public final class StoreMediaFavorites extends StoreV2 {
         }
 
         @Override // kotlin.jvm.functions.Function0
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final Set<? extends Favorite> invoke2() {
             return StoreMediaFavorites.this.getFavorites(this.$types);
         }
     }
 
-    /* compiled from: StoreMediaFavorites.kt */
-    /* renamed from: com.discord.stores.StoreMediaFavorites$removeFavorite$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreMediaFavorites$removeFavorite$1 */
+    /* JADX INFO: compiled from: StoreMediaFavorites.kt */
     public static final class C61831 extends Lambda implements Function0<Unit> {
         public final /* synthetic */ Favorite $favorite;
 
@@ -269,7 +269,7 @@ public final class StoreMediaFavorites extends StoreV2 {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             if (StoreMediaFavorites.access$getFavorites$p(StoreMediaFavorites.this).remove(this.$favorite)) {
                 StoreMediaFavorites.this.markChanged();

@@ -32,109 +32,109 @@ import p600f0.p601e0.p609k.Platform2;
 import p615g0.Buffer3;
 import p615g0.BufferedSource;
 
-/* compiled from: Http2Connection.kt */
-/* renamed from: f0.e0.j.e, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: f0.e0.j.e, reason: use source file name */
+/* JADX INFO: compiled from: Http2Connection.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class Http2Connection implements Closeable {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static final Settings3 f25615j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public static final Http2Connection f25616k = null;
 
-    /* renamed from: A */
+    /* JADX INFO: renamed from: A */
     public long f25617A;
 
-    /* renamed from: B */
+    /* JADX INFO: renamed from: B */
     public long f25618B;
 
-    /* renamed from: C */
+    /* JADX INFO: renamed from: C */
     public long f25619C;
 
-    /* renamed from: D */
+    /* JADX INFO: renamed from: D */
     public final Settings3 f25620D;
 
-    /* renamed from: E */
+    /* JADX INFO: renamed from: E */
     public Settings3 f25621E;
 
-    /* renamed from: F */
+    /* JADX INFO: renamed from: F */
     public long f25622F;
 
-    /* renamed from: G */
+    /* JADX INFO: renamed from: G */
     public long f25623G;
 
-    /* renamed from: H */
+    /* JADX INFO: renamed from: H */
     public long f25624H;
 
-    /* renamed from: I */
+    /* JADX INFO: renamed from: I */
     public long f25625I;
 
-    /* renamed from: J */
+    /* JADX INFO: renamed from: J */
     public final Socket f25626J;
 
-    /* renamed from: K */
+    /* JADX INFO: renamed from: K */
     public final Http2Writer f25627K;
 
-    /* renamed from: L */
+    /* JADX INFO: renamed from: L */
     public final d f25628L;
 
-    /* renamed from: M */
+    /* JADX INFO: renamed from: M */
     public final Set<Integer> f25629M;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final boolean f25630l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public final c f25631m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public final Map<Integer, Http2Stream> f25632n;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public final String f25633o;
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public int f25634p;
 
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     public int f25635q;
 
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     public boolean f25636r;
 
-    /* renamed from: s */
+    /* JADX INFO: renamed from: s */
     public final TaskRunner f25637s;
 
-    /* renamed from: t */
+    /* JADX INFO: renamed from: t */
     public final TaskQueue2 f25638t;
 
-    /* renamed from: u */
+    /* JADX INFO: renamed from: u */
     public final TaskQueue2 f25639u;
 
-    /* renamed from: v */
+    /* JADX INFO: renamed from: v */
     public final TaskQueue2 f25640v;
 
-    /* renamed from: w */
+    /* JADX INFO: renamed from: w */
     public final PushObserver2 f25641w;
 
-    /* renamed from: x */
+    /* JADX INFO: renamed from: x */
     public long f25642x;
 
-    /* renamed from: y */
+    /* JADX INFO: renamed from: y */
     public long f25643y;
 
-    /* renamed from: z */
+    /* JADX INFO: renamed from: z */
     public long f25644z;
 
-    /* compiled from: TaskQueue.kt */
-    /* renamed from: f0.e0.j.e$a */
+    /* JADX INFO: renamed from: f0.e0.j.e$a */
+    /* JADX INFO: compiled from: TaskQueue.kt */
     public static final class a extends Task2 {
 
-        /* renamed from: e */
+        /* JADX INFO: renamed from: e */
         public final /* synthetic */ Http2Connection f25645e;
 
-        /* renamed from: f */
+        /* JADX INFO: renamed from: f */
         public final /* synthetic */ long f25646f;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -145,7 +145,7 @@ public final class Http2Connection implements Closeable {
         }
 
         @Override // p600f0.p601e0.p604f.Task2
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public long mo10150a() {
             Http2Connection http2Connection;
             boolean z2;
@@ -170,35 +170,35 @@ public final class Http2Connection implements Closeable {
         }
     }
 
-    /* compiled from: Http2Connection.kt */
-    /* renamed from: f0.e0.j.e$b */
+    /* JADX INFO: renamed from: f0.e0.j.e$b */
+    /* JADX INFO: compiled from: Http2Connection.kt */
     public static final class b {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public Socket f25647a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public String f25648b;
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public BufferedSource f25649c;
 
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         public BufferedSink f25650d;
 
-        /* renamed from: e */
+        /* JADX INFO: renamed from: e */
         public c f25651e;
 
-        /* renamed from: f */
+        /* JADX INFO: renamed from: f */
         public PushObserver2 f25652f;
 
-        /* renamed from: g */
+        /* JADX INFO: renamed from: g */
         public int f25653g;
 
-        /* renamed from: h */
+        /* JADX INFO: renamed from: h */
         public boolean f25654h;
 
-        /* renamed from: i */
+        /* JADX INFO: renamed from: i */
         public final TaskRunner f25655i;
 
         public b(boolean z2, TaskRunner taskRunner) {
@@ -210,55 +210,55 @@ public final class Http2Connection implements Closeable {
         }
     }
 
-    /* compiled from: Http2Connection.kt */
-    /* renamed from: f0.e0.j.e$c */
+    /* JADX INFO: renamed from: f0.e0.j.e$c */
+    /* JADX INFO: compiled from: Http2Connection.kt */
     public static abstract class c {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public static final c f25656a = new a();
 
-        /* compiled from: Http2Connection.kt */
-        /* renamed from: f0.e0.j.e$c$a */
+        /* JADX INFO: renamed from: f0.e0.j.e$c$a */
+        /* JADX INFO: compiled from: Http2Connection.kt */
         public static final class a extends c {
             @Override // p600f0.p601e0.p608j.Http2Connection.c
-            /* renamed from: b */
+            /* JADX INFO: renamed from: b */
             public void mo10193b(Http2Stream http2Stream) throws IOException {
                 Intrinsics3.checkParameterIsNotNull(http2Stream, "stream");
                 http2Stream.m10284c(ErrorCode2.REFUSED_STREAM, null);
             }
         }
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public void mo10192a(Http2Connection http2Connection, Settings3 settings3) {
             Intrinsics3.checkParameterIsNotNull(http2Connection, "connection");
             Intrinsics3.checkParameterIsNotNull(settings3, "settings");
         }
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public abstract void mo10193b(Http2Stream http2Stream) throws IOException;
     }
 
-    /* compiled from: Http2Connection.kt */
-    /* renamed from: f0.e0.j.e$d */
+    /* JADX INFO: renamed from: f0.e0.j.e$d */
+    /* JADX INFO: compiled from: Http2Connection.kt */
     public final class d implements Http2Reader.b, Function0<Unit> {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public final Http2Reader f25657j;
 
-        /* renamed from: k */
+        /* JADX INFO: renamed from: k */
         public final /* synthetic */ Http2Connection f25658k;
 
-        /* compiled from: TaskQueue.kt */
-        /* renamed from: f0.e0.j.e$d$a */
+        /* JADX INFO: renamed from: f0.e0.j.e$d$a */
+        /* JADX INFO: compiled from: TaskQueue.kt */
         public static final class a extends Task2 {
 
-            /* renamed from: e */
+            /* JADX INFO: renamed from: e */
             public final /* synthetic */ Http2Stream f25659e;
 
-            /* renamed from: f */
+            /* JADX INFO: renamed from: f */
             public final /* synthetic */ d f25660f;
 
-            /* renamed from: g */
+            /* JADX INFO: renamed from: g */
             public final /* synthetic */ List f25661g;
 
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -270,7 +270,7 @@ public final class Http2Connection implements Closeable {
             }
 
             @Override // p600f0.p601e0.p604f.Task2
-            /* renamed from: a */
+            /* JADX INFO: renamed from: a */
             public long mo10150a() {
                 try {
                     this.f25660f.f25658k.f25631m.mo10193b(this.f25659e);
@@ -291,17 +291,17 @@ public final class Http2Connection implements Closeable {
             }
         }
 
-        /* compiled from: TaskQueue.kt */
-        /* renamed from: f0.e0.j.e$d$b */
+        /* JADX INFO: renamed from: f0.e0.j.e$d$b */
+        /* JADX INFO: compiled from: TaskQueue.kt */
         public static final class b extends Task2 {
 
-            /* renamed from: e */
+            /* JADX INFO: renamed from: e */
             public final /* synthetic */ d f25662e;
 
-            /* renamed from: f */
+            /* JADX INFO: renamed from: f */
             public final /* synthetic */ int f25663f;
 
-            /* renamed from: g */
+            /* JADX INFO: renamed from: g */
             public final /* synthetic */ int f25664g;
 
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -313,24 +313,24 @@ public final class Http2Connection implements Closeable {
             }
 
             @Override // p600f0.p601e0.p604f.Task2
-            /* renamed from: a */
+            /* JADX INFO: renamed from: a */
             public long mo10150a() {
                 this.f25662e.f25658k.m10265q(true, this.f25663f, this.f25664g);
                 return -1L;
             }
         }
 
-        /* compiled from: TaskQueue.kt */
-        /* renamed from: f0.e0.j.e$d$c */
+        /* JADX INFO: renamed from: f0.e0.j.e$d$c */
+        /* JADX INFO: compiled from: TaskQueue.kt */
         public static final class c extends Task2 {
 
-            /* renamed from: e */
+            /* JADX INFO: renamed from: e */
             public final /* synthetic */ d f25665e;
 
-            /* renamed from: f */
+            /* JADX INFO: renamed from: f */
             public final /* synthetic */ boolean f25666f;
 
-            /* renamed from: g */
+            /* JADX INFO: renamed from: g */
             public final /* synthetic */ Settings3 f25667g;
 
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -345,7 +345,7 @@ public final class Http2Connection implements Closeable {
             /* JADX WARN: Type inference failed for: r10v0, types: [T, f0.e0.j.s, java.lang.Object] */
             /* JADX WARN: Type inference failed for: r3v0, types: [T, f0.e0.j.s] */
             @Override // p600f0.p601e0.p604f.Task2
-            /* renamed from: a */
+            /* JADX INFO: renamed from: a */
             public long mo10150a() throws Throwable {
                 Http2Writer http2Writer;
                 Http2Connection http2Connection;
@@ -376,7 +376,7 @@ public final class Http2Connection implements Closeable {
                                         settings32.m10313b(r10);
                                         ref$ObjectRef2.element = settings32;
                                     }
-                                    long jM10312a = ((Settings3) ref$ObjectRef2.element).m10312a() - settings3.m10312a();
+                                    long jM10312a = ((long) ((Settings3) ref$ObjectRef2.element).m10312a()) - ((long) settings3.m10312a());
                                     ref$LongRef.element = jM10312a;
                                     if (jM10312a == 0 || dVar.f25658k.f25632n.isEmpty()) {
                                         t = 0;
@@ -451,12 +451,12 @@ public final class Http2Connection implements Closeable {
         }
 
         @Override // p600f0.p601e0.p608j.Http2Reader.b
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public void mo10268a() {
         }
 
         @Override // p600f0.p601e0.p608j.Http2Reader.b
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public void mo10269b(boolean z2, Settings3 settings3) {
             Intrinsics3.checkParameterIsNotNull(settings3, "settings");
             TaskQueue2 taskQueue2 = this.f25658k.f25638t;
@@ -465,7 +465,7 @@ public final class Http2Connection implements Closeable {
         }
 
         @Override // p600f0.p601e0.p608j.Http2Reader.b
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public void mo10270c(boolean z2, int i, int i2, List<Header2> list) {
             Intrinsics3.checkParameterIsNotNull(list, "headerBlock");
             if (this.f25658k.m10260c(i)) {
@@ -504,7 +504,7 @@ public final class Http2Connection implements Closeable {
         }
 
         @Override // p600f0.p601e0.p608j.Http2Reader.b
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         public void mo10271d(int i, long j) {
             if (i == 0) {
                 synchronized (this.f25658k) {
@@ -546,7 +546,7 @@ public final class Http2Connection implements Closeable {
             return;
          */
         @Override // p600f0.p601e0.p608j.Http2Reader.b
-        /* renamed from: e */
+        /* JADX INFO: renamed from: e */
         /*
             Code decompiled incorrectly, please refer to instructions dump.
         */
@@ -634,7 +634,7 @@ public final class Http2Connection implements Closeable {
         }
 
         @Override // p600f0.p601e0.p608j.Http2Reader.b
-        /* renamed from: f */
+        /* JADX INFO: renamed from: f */
         public void mo10273f(boolean z2, int i, int i2) {
             if (!z2) {
                 TaskQueue2 taskQueue2 = this.f25658k.f25638t;
@@ -656,12 +656,12 @@ public final class Http2Connection implements Closeable {
         }
 
         @Override // p600f0.p601e0.p608j.Http2Reader.b
-        /* renamed from: g */
+        /* JADX INFO: renamed from: g */
         public void mo10274g(int i, int i2, int i3, boolean z2) {
         }
 
         @Override // p600f0.p601e0.p608j.Http2Reader.b
-        /* renamed from: h */
+        /* JADX INFO: renamed from: h */
         public void mo10275h(int i, ErrorCode2 errorCode2) {
             Intrinsics3.checkParameterIsNotNull(errorCode2, "errorCode");
             if (!this.f25658k.m10260c(i)) {
@@ -681,7 +681,7 @@ public final class Http2Connection implements Closeable {
         }
 
         @Override // p600f0.p601e0.p608j.Http2Reader.b
-        /* renamed from: i */
+        /* JADX INFO: renamed from: i */
         public void mo10276i(int i, int i2, List<Header2> list) {
             Intrinsics3.checkParameterIsNotNull(list, "requestHeaders");
             Http2Connection http2Connection = this.f25658k;
@@ -724,9 +724,6 @@ public final class Http2Connection implements Closeable {
                         Http2Connection http2Connection = this.f25658k;
                         http2Connection.m10258a(errorCode24, errorCode24, e);
                         errorCode2 = http2Connection;
-                        Util7.m10123d(this.f25657j);
-                        errorCode22 = Unit.f27425a;
-                        return errorCode22;
                     }
                 } catch (Throwable th2) {
                     th = th2;
@@ -749,7 +746,7 @@ public final class Http2Connection implements Closeable {
         }
 
         @Override // p600f0.p601e0.p608j.Http2Reader.b
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public void mo10277j(int i, ErrorCode2 errorCode2, ByteString byteString) {
             int i2;
             Http2Stream[] http2StreamArr;
@@ -773,17 +770,17 @@ public final class Http2Connection implements Closeable {
         }
     }
 
-    /* compiled from: TaskQueue.kt */
-    /* renamed from: f0.e0.j.e$e */
+    /* JADX INFO: renamed from: f0.e0.j.e$e */
+    /* JADX INFO: compiled from: TaskQueue.kt */
     public static final class e extends Task2 {
 
-        /* renamed from: e */
+        /* JADX INFO: renamed from: e */
         public final /* synthetic */ Http2Connection f25668e;
 
-        /* renamed from: f */
+        /* JADX INFO: renamed from: f */
         public final /* synthetic */ int f25669f;
 
-        /* renamed from: g */
+        /* JADX INFO: renamed from: g */
         public final /* synthetic */ ErrorCode2 f25670g;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -795,7 +792,7 @@ public final class Http2Connection implements Closeable {
         }
 
         @Override // p600f0.p601e0.p604f.Task2
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public long mo10150a() {
             try {
                 Http2Connection http2Connection = this.f25668e;
@@ -814,17 +811,17 @@ public final class Http2Connection implements Closeable {
         }
     }
 
-    /* compiled from: TaskQueue.kt */
-    /* renamed from: f0.e0.j.e$f */
+    /* JADX INFO: renamed from: f0.e0.j.e$f */
+    /* JADX INFO: compiled from: TaskQueue.kt */
     public static final class f extends Task2 {
 
-        /* renamed from: e */
+        /* JADX INFO: renamed from: e */
         public final /* synthetic */ Http2Connection f25671e;
 
-        /* renamed from: f */
+        /* JADX INFO: renamed from: f */
         public final /* synthetic */ int f25672f;
 
-        /* renamed from: g */
+        /* JADX INFO: renamed from: g */
         public final /* synthetic */ long f25673g;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -836,7 +833,7 @@ public final class Http2Connection implements Closeable {
         }
 
         @Override // p600f0.p601e0.p604f.Task2
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public long mo10150a() {
             try {
                 this.f25671e.f25627K.m10305q(this.f25672f, this.f25673g);
@@ -907,7 +904,7 @@ public final class Http2Connection implements Closeable {
         }
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final void m10258a(ErrorCode2 errorCode2, ErrorCode2 errorCode22, IOException iOException) {
         int i;
         Intrinsics3.checkParameterIsNotNull(errorCode2, "connectionCode");
@@ -949,12 +946,12 @@ public final class Http2Connection implements Closeable {
         this.f25640v.m10156f();
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final synchronized Http2Stream m10259b(int i) {
         return this.f25632n.get(Integer.valueOf(i));
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final boolean m10260c(int i) {
         return i != 0 && (i & 1) == 0;
     }
@@ -964,7 +961,7 @@ public final class Http2Connection implements Closeable {
         m10258a(ErrorCode2.NO_ERROR, ErrorCode2.CANCEL, null);
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final synchronized Http2Stream m10261d(int i) {
         Http2Stream http2StreamRemove;
         http2StreamRemove = this.f25632n.remove(Integer.valueOf(i));
@@ -972,7 +969,7 @@ public final class Http2Connection implements Closeable {
         return http2StreamRemove;
     }
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final void m10262e(ErrorCode2 errorCode2) throws IOException {
         Intrinsics3.checkParameterIsNotNull(errorCode2, "statusCode");
         synchronized (this.f25627K) {
@@ -986,7 +983,7 @@ public final class Http2Connection implements Closeable {
         }
     }
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final synchronized void m10263f(long j) {
         long j2 = this.f25622F + j;
         this.f25622F = j2;
@@ -1003,9 +1000,9 @@ public final class Http2Connection implements Closeable {
         r3.element = r5;
         r4 = java.lang.Math.min(r5, r9.f25627K.f25739l);
         r3.element = r4;
-        r9.f25624H += r4;
+        r9.f25624H += (long) r4;
      */
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
@@ -1036,12 +1033,12 @@ public final class Http2Connection implements Closeable {
                     }
                 }
             }
-            j -= iMin;
+            j -= (long) iMin;
             this.f25627K.m10299b(z2 && j == 0, i, buffer3, iMin);
         }
     }
 
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     public final void m10265q(boolean z2, int i, int i2) {
         try {
             this.f25627K.m10303f(z2, i, i2);
@@ -1051,7 +1048,7 @@ public final class Http2Connection implements Closeable {
         }
     }
 
-    /* renamed from: s */
+    /* JADX INFO: renamed from: s */
     public final void m10266s(int i, ErrorCode2 errorCode2) {
         Intrinsics3.checkParameterIsNotNull(errorCode2, "errorCode");
         TaskQueue2 taskQueue2 = this.f25638t;
@@ -1059,7 +1056,7 @@ public final class Http2Connection implements Closeable {
         taskQueue2.m10154c(new e(str, true, str, true, this, i, errorCode2), 0L);
     }
 
-    /* renamed from: t */
+    /* JADX INFO: renamed from: t */
     public final void m10267t(int i, long j) {
         TaskQueue2 taskQueue2 = this.f25638t;
         String str = this.f25633o + '[' + i + "] windowUpdate";

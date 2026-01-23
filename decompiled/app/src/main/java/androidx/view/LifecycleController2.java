@@ -5,9 +5,9 @@ import kotlinx.coroutines.Job;
 import p007b.p225i.p226a.p288f.p299e.p308o.C3404f;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: LifecycleController.kt */
-/* renamed from: androidx.lifecycle.LifecycleController$observer$1, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: androidx.lifecycle.LifecycleController$observer$1, reason: use source file name */
+/* JADX INFO: compiled from: LifecycleController.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class LifecycleController2 implements LifecycleEventObserver {
     public final /* synthetic */ Job $parentJob;
     public final /* synthetic */ LifecycleController this$0;

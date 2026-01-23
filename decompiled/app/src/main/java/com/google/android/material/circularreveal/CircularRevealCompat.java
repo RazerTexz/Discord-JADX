@@ -11,13 +11,13 @@ import android.view.ViewAnimationUtils;
 import androidx.annotation.NonNull;
 import com.google.android.material.circularreveal.CircularRevealWidget;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public final class CircularRevealCompat {
 
-    /* renamed from: com.google.android.material.circularreveal.CircularRevealCompat$a */
+    /* JADX INFO: renamed from: com.google.android.material.circularreveal.CircularRevealCompat$a */
     public static class C10876a extends AnimatorListenerAdapter {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final /* synthetic */ CircularRevealWidget f20956a;
 
         public C10876a(CircularRevealWidget circularRevealWidget) {

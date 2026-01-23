@@ -1,14 +1,14 @@
 package p007b.p085c.p086a.p095y.p097l;
 
-/* compiled from: GradientColor.java */
-/* renamed from: b.c.a.y.l.c, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.c.a.y.l.c, reason: use source file name */
+/* JADX INFO: compiled from: GradientColor.java */
+/* JADX INFO: loaded from: classes.dex */
 public class GradientColor {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final float[] f2744a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final int[] f2745b;
 
     public GradientColor(float[] fArr, int[] iArr) {

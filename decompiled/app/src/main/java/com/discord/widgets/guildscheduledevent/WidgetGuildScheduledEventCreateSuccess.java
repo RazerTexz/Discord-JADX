@@ -37,30 +37,30 @@ import p507d0.p592z.p594d.Lambda;
 import p507d0.p592z.p594d.Reflection2;
 import p658rx.Observable;
 
-/* compiled from: WidgetGuildScheduledEventCreateSuccess.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetGuildScheduledEventCreateSuccess.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetGuildScheduledEventCreateSuccess extends AppFragment {
     public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetGuildScheduledEventCreateSuccess.class, "binding", "getBinding()Lcom/discord/databinding/WidgetGuildScheduledEventCreateSuccessBinding;", 0)};
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
 
-    /* renamed from: binding$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
 
-    /* renamed from: channelId$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: channelId$delegate, reason: from kotlin metadata */
     private final Lazy channelId;
 
-    /* renamed from: guildId$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: guildId$delegate, reason: from kotlin metadata */
     private final Lazy guildId;
 
-    /* renamed from: guildScheduledEventId$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: guildScheduledEventId$delegate, reason: from kotlin metadata */
     private final Lazy guildScheduledEventId;
 
-    /* renamed from: viewModel$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: viewModel$delegate, reason: from kotlin metadata */
     private final Lazy viewModel;
 
-    /* compiled from: WidgetGuildScheduledEventCreateSuccess.kt */
+    /* JADX INFO: compiled from: WidgetGuildScheduledEventCreateSuccess.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -79,8 +79,8 @@ public final class WidgetGuildScheduledEventCreateSuccess extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetGuildScheduledEventCreateSuccess.kt */
-    /* renamed from: com.discord.widgets.guildscheduledevent.WidgetGuildScheduledEventCreateSuccess$configureUI$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.guildscheduledevent.WidgetGuildScheduledEventCreateSuccess$configureUI$1 */
+    /* JADX INFO: compiled from: WidgetGuildScheduledEventCreateSuccess.kt */
     public static final class ViewOnClickListenerC88451 implements View.OnClickListener {
         public final /* synthetic */ ModelInvite $invite;
 
@@ -94,8 +94,8 @@ public final class WidgetGuildScheduledEventCreateSuccess extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetGuildScheduledEventCreateSuccess.kt */
-    /* renamed from: com.discord.widgets.guildscheduledevent.WidgetGuildScheduledEventCreateSuccess$configureUI$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.guildscheduledevent.WidgetGuildScheduledEventCreateSuccess$configureUI$2 */
+    /* JADX INFO: compiled from: WidgetGuildScheduledEventCreateSuccess.kt */
     public static final class ViewOnClickListenerC88462 implements View.OnClickListener {
         public final /* synthetic */ Experiment $inviteExperiment;
         public final /* synthetic */ WidgetInviteModel $widgetInviteModel;
@@ -131,8 +131,8 @@ public final class WidgetGuildScheduledEventCreateSuccess extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetGuildScheduledEventCreateSuccess.kt */
-    /* renamed from: com.discord.widgets.guildscheduledevent.WidgetGuildScheduledEventCreateSuccess$configureUI$3 */
+    /* JADX INFO: renamed from: com.discord.widgets.guildscheduledevent.WidgetGuildScheduledEventCreateSuccess$configureUI$3 */
+    /* JADX INFO: compiled from: WidgetGuildScheduledEventCreateSuccess.kt */
     public static final class ViewOnClickListenerC88473 implements View.OnClickListener {
         public ViewOnClickListenerC88473() {
         }
@@ -146,8 +146,8 @@ public final class WidgetGuildScheduledEventCreateSuccess extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetGuildScheduledEventCreateSuccess.kt */
-    /* renamed from: com.discord.widgets.guildscheduledevent.WidgetGuildScheduledEventCreateSuccess$configureUI$4 */
+    /* JADX INFO: renamed from: com.discord.widgets.guildscheduledevent.WidgetGuildScheduledEventCreateSuccess$configureUI$4 */
+    /* JADX INFO: compiled from: WidgetGuildScheduledEventCreateSuccess.kt */
     public static final class ViewOnClickListenerC88484 implements View.OnClickListener {
         public final /* synthetic */ ModelInvite $invite;
 
@@ -164,8 +164,8 @@ public final class WidgetGuildScheduledEventCreateSuccess extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetGuildScheduledEventCreateSuccess.kt */
-    /* renamed from: com.discord.widgets.guildscheduledevent.WidgetGuildScheduledEventCreateSuccess$onResume$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.guildscheduledevent.WidgetGuildScheduledEventCreateSuccess$onResume$1 */
+    /* JADX INFO: compiled from: WidgetGuildScheduledEventCreateSuccess.kt */
     public static final class C88511 extends Lambda implements Function1<WidgetGuildScheduledEventCreateSuccessViewModel.ViewState.Loaded, Unit> {
         public C88511() {
             super(1);
@@ -177,7 +177,7 @@ public final class WidgetGuildScheduledEventCreateSuccess extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(WidgetGuildScheduledEventCreateSuccessViewModel.ViewState.Loaded loaded) {
             Intrinsics3.checkNotNullParameter(loaded, "viewState");
             WidgetGuildScheduledEventCreateSuccess.access$configureUI(WidgetGuildScheduledEventCreateSuccess.this, loaded);

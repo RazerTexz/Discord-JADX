@@ -13,25 +13,25 @@ import p507d0.p513e0.p514p.p515d.p517m0.p550i.LazyField;
 import p507d0.p513e0.p514p.p515d.p517m0.p550i.MessageLite;
 import p507d0.p513e0.p514p.p515d.p517m0.p550i.WireFormat;
 
-/* compiled from: FieldSet.java */
-/* renamed from: d0.e0.p.d.m0.i.f, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.i.f, reason: use source file name */
+/* JADX INFO: compiled from: FieldSet.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class FieldSet<FieldDescriptorType extends a<FieldDescriptorType>> {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final FieldSet f24121a = new FieldSet(true);
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final SmallSortedMap2<FieldDescriptorType, Object> f24122b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public boolean f24123c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public boolean f24124d = false;
 
-    /* compiled from: FieldSet.java */
-    /* renamed from: d0.e0.p.d.m0.i.f$a */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.i.f$a */
+    /* JADX INFO: compiled from: FieldSet.java */
     public interface a<T extends a<T>> extends Comparable<T> {
         WireFormat.c getLiteJavaType();
 
@@ -51,7 +51,7 @@ public final class FieldSet<FieldDescriptorType extends a<FieldDescriptorType>> 
         this.f24122b = new SmallSortedMap(16);
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static int m9838b(WireFormat.b bVar, Object obj) {
         switch (bVar.ordinal()) {
             case 0:
@@ -95,7 +95,7 @@ public final class FieldSet<FieldDescriptorType extends a<FieldDescriptorType>> 
         }
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public static int m9839c(WireFormat.b bVar, boolean z2) {
         if (z2) {
             return 2;
@@ -141,7 +141,7 @@ public final class FieldSet<FieldDescriptorType extends a<FieldDescriptorType>> 
     }
 
     /* JADX WARN: Removed duplicated region for block: B:20:0x002c  */
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
@@ -190,7 +190,7 @@ public final class FieldSet<FieldDescriptorType extends a<FieldDescriptorType>> 
         }
     }
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public static void m9841g(CodedOutputStream codedOutputStream, WireFormat.b bVar, int i, Object obj) throws IOException {
         if (bVar == WireFormat.b.f24200s) {
             codedOutputStream.writeGroup(i, (MessageLite) obj);
@@ -200,7 +200,7 @@ public final class FieldSet<FieldDescriptorType extends a<FieldDescriptorType>> 
         }
     }
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public static void m9842h(CodedOutputStream codedOutputStream, WireFormat.b bVar, Object obj) throws IOException {
         switch (bVar.ordinal()) {
             case 0:
@@ -348,7 +348,7 @@ public final class FieldSet<FieldDescriptorType extends a<FieldDescriptorType>> 
         }
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final Object m9843a(Object obj) {
         if (!(obj instanceof byte[])) {
             return obj;
@@ -375,12 +375,12 @@ public final class FieldSet<FieldDescriptorType extends a<FieldDescriptorType>> 
         arrayList.add(obj);
     }
 
-    /* renamed from: clone, reason: collision with other method in class */
+    /* JADX INFO: renamed from: clone, reason: collision with other method in class */
     public /* bridge */ /* synthetic */ Object m11468clone() throws CloneNotSupportedException {
         return clone();
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final boolean m9844d(Map.Entry<FieldDescriptorType, Object> entry) {
         FieldDescriptorType key = entry.getKey();
         if (key.getLiteJavaType() == WireFormat.c.MESSAGE) {
@@ -407,7 +407,7 @@ public final class FieldSet<FieldDescriptorType extends a<FieldDescriptorType>> 
         return true;
     }
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final void m9845e(Map.Entry<FieldDescriptorType, Object> entry) {
         FieldDescriptorType key = entry.getKey();
         Object value = entry.getValue();

@@ -7,8 +7,8 @@ import kotlin.jvm.internal.DefaultConstructorMarker;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ApplicationCommandData.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: ApplicationCommandData.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final /* data */ class ApplicationCommandData {
     private final Application application;
     private final ApplicationCommand applicationCommand;
@@ -42,12 +42,12 @@ public final /* data */ class ApplicationCommandData {
         return applicationCommandData.copy(application, applicationCommand, list, z2);
     }
 
-    /* renamed from: component1, reason: from getter */
+    /* JADX INFO: renamed from: component1, reason: from getter */
     public final Application getApplication() {
         return this.application;
     }
 
-    /* renamed from: component2, reason: from getter */
+    /* JADX INFO: renamed from: component2, reason: from getter */
     public final ApplicationCommand getApplicationCommand() {
         return this.applicationCommand;
     }
@@ -56,7 +56,7 @@ public final /* data */ class ApplicationCommandData {
         return this.values;
     }
 
-    /* renamed from: component4, reason: from getter */
+    /* JADX INFO: renamed from: component4, reason: from getter */
     public final boolean getValidInputs() {
         return this.validInputs;
     }
@@ -96,6 +96,9 @@ public final /* data */ class ApplicationCommandData {
     }
 
     /* JADX WARN: Multi-variable type inference failed */
+    /* JADX WARN: Type inference failed for: r1v3, types: [int] */
+    /* JADX WARN: Type inference failed for: r1v4 */
+    /* JADX WARN: Type inference failed for: r1v6 */
     public int hashCode() {
         Application application = this.application;
         int iHashCode = (application != null ? application.hashCode() : 0) * 31;
@@ -104,11 +107,11 @@ public final /* data */ class ApplicationCommandData {
         List<ApplicationCommandValue> list = this.values;
         int iHashCode3 = (iHashCode2 + (list != null ? list.hashCode() : 0)) * 31;
         boolean z2 = this.validInputs;
-        int i = z2;
-        if (z2 != 0) {
-            i = 1;
+        ?? r1 = z2;
+        if (z2) {
+            r1 = 1;
         }
-        return iHashCode3 + i;
+        return iHashCode3 + r1;
     }
 
     public String toString() {

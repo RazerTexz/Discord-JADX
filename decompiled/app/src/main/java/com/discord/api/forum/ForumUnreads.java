@@ -4,19 +4,19 @@ import java.util.List;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ForumUnreads.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: ForumUnreads.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class ForumUnreads {
     private final long channelId;
     private final boolean permissionDenied;
     private final List<ForumUnread> threads;
 
-    /* renamed from: a, reason: from getter */
+    /* JADX INFO: renamed from: a, reason: from getter */
     public final boolean getPermissionDenied() {
         return this.permissionDenied;
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final List<ForumUnread> m7825b() {
         return this.threads;
     }
@@ -33,17 +33,20 @@ public final /* data */ class ForumUnreads {
     }
 
     /* JADX WARN: Multi-variable type inference failed */
+    /* JADX WARN: Type inference failed for: r0v3, types: [int] */
+    /* JADX WARN: Type inference failed for: r0v8 */
+    /* JADX WARN: Type inference failed for: r0v9 */
     public int hashCode() {
         long j = this.channelId;
         int i = ((int) (j ^ (j >>> 32))) * 31;
         boolean z2 = this.permissionDenied;
-        int i2 = z2;
-        if (z2 != 0) {
-            i2 = 1;
+        ?? r0 = z2;
+        if (z2) {
+            r0 = 1;
         }
-        int i3 = (i + i2) * 31;
+        int i2 = (i + r0) * 31;
         List<ForumUnread> list = this.threads;
-        return i3 + (list != null ? list.hashCode() : 0);
+        return i2 + (list != null ? list.hashCode() : 0);
     }
 
     public String toString() {

@@ -10,14 +10,14 @@ import androidx.annotation.CallSuper;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
+/* JADX INFO: loaded from: classes3.dex */
 @Deprecated
-/* loaded from: classes3.dex */
 public abstract class ExpandableTransformationBehavior extends ExpandableBehavior {
 
     @Nullable
     private AnimatorSet currentAnimation;
 
-    /* renamed from: com.google.android.material.transformation.ExpandableTransformationBehavior$a */
+    /* JADX INFO: renamed from: com.google.android.material.transformation.ExpandableTransformationBehavior$a */
     public class C11034a extends AnimatorListenerAdapter {
         public C11034a() {
         }

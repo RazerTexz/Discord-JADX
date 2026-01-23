@@ -60,27 +60,27 @@ import p507d0.p592z.p594d.Reflection2;
 import p658rx.Observable;
 import p658rx.functions.Func0;
 
-/* compiled from: WidgetGuildInviteShare.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetGuildInviteShare.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetGuildInviteShare extends AppFragment {
     public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetGuildInviteShare.class, "binding", "getBinding()Lcom/discord/databinding/WidgetGuildInviteShareBinding;", 0)};
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     public static final String INTENT_INVITE_STORE_KEY = "INTENT_INVITE_STORE_KEY";
     public static final String INTENT_IS_NUX_FLOW = "INTENT_IS_NUX_FLOW";
     private PrivateChannelAdapter adapter;
 
-    /* renamed from: binding$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
     private BottomSheetBehavior<ViewInviteSettingsSheet> bottomSheetBehavior;
     private boolean hasTrackedSuggestionsViewed;
     private final AppLogger2 loggingConfig;
 
-    /* renamed from: viewModel$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: viewModel$delegate, reason: from kotlin metadata */
     private final Lazy viewModel;
 
-    /* compiled from: WidgetGuildInviteShare.kt */
+    /* JADX INFO: compiled from: WidgetGuildInviteShare.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -114,8 +114,8 @@ public final class WidgetGuildInviteShare extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetGuildInviteShare.kt */
-    /* renamed from: com.discord.widgets.guilds.invite.WidgetGuildInviteShare$configureUI$3 */
+    /* JADX INFO: renamed from: com.discord.widgets.guilds.invite.WidgetGuildInviteShare$configureUI$3 */
+    /* JADX INFO: compiled from: WidgetGuildInviteShare.kt */
     public static final class C86593 extends Lambda implements Function1<InviteSuggestionItem, Unit> {
         public final /* synthetic */ ModelInvite $invite;
         public final /* synthetic */ WidgetGuildInviteShareViewModel.ViewState.Loaded $viewState;
@@ -133,7 +133,7 @@ public final class WidgetGuildInviteShare extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(InviteSuggestionItem inviteSuggestionItem) {
             Intrinsics3.checkNotNullParameter(inviteSuggestionItem, "item");
             WidgetGuildInviteShare.access$sendInvite(WidgetGuildInviteShare.this, inviteSuggestionItem, this.$viewState, this.$invite);
@@ -145,8 +145,8 @@ public final class WidgetGuildInviteShare extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetGuildInviteShare.kt */
-    /* renamed from: com.discord.widgets.guilds.invite.WidgetGuildInviteShare$configureUI$4 */
+    /* JADX INFO: renamed from: com.discord.widgets.guilds.invite.WidgetGuildInviteShare$configureUI$4 */
+    /* JADX INFO: compiled from: WidgetGuildInviteShare.kt */
     public static final class ViewOnClickListenerC86604 implements View.OnClickListener {
         public final /* synthetic */ ModelInvite $invite;
 
@@ -160,8 +160,8 @@ public final class WidgetGuildInviteShare extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetGuildInviteShare.kt */
-    /* renamed from: com.discord.widgets.guilds.invite.WidgetGuildInviteShare$configureUI$5 */
+    /* JADX INFO: renamed from: com.discord.widgets.guilds.invite.WidgetGuildInviteShare$configureUI$5 */
+    /* JADX INFO: compiled from: WidgetGuildInviteShare.kt */
     public static final class ViewOnClickListenerC86615 implements View.OnClickListener {
         public final /* synthetic */ Experiment $inviteExperiment;
         public final /* synthetic */ WidgetInviteModel $widgetInviteModel;
@@ -197,8 +197,8 @@ public final class WidgetGuildInviteShare extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetGuildInviteShare.kt */
-    /* renamed from: com.discord.widgets.guilds.invite.WidgetGuildInviteShare$configureUI$6 */
+    /* JADX INFO: renamed from: com.discord.widgets.guilds.invite.WidgetGuildInviteShare$configureUI$6 */
+    /* JADX INFO: compiled from: WidgetGuildInviteShare.kt */
     public static final class ViewOnClickListenerC86626 implements View.OnClickListener {
         public final /* synthetic */ ModelInvite $invite;
 
@@ -215,8 +215,8 @@ public final class WidgetGuildInviteShare extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetGuildInviteShare.kt */
-    /* renamed from: com.discord.widgets.guilds.invite.WidgetGuildInviteShare$initBottomSheet$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.guilds.invite.WidgetGuildInviteShare$initBottomSheet$1 */
+    /* JADX INFO: compiled from: WidgetGuildInviteShare.kt */
     public static final class C86631 extends Lambda implements Function0<Unit> {
         public C86631() {
             super(0);
@@ -228,14 +228,14 @@ public final class WidgetGuildInviteShare extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             WidgetGuildInviteShare.access$getBottomSheetBehavior$p(WidgetGuildInviteShare.this).setState(5);
         }
     }
 
-    /* compiled from: WidgetGuildInviteShare.kt */
-    /* renamed from: com.discord.widgets.guilds.invite.WidgetGuildInviteShare$initBottomSheetBehavior$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.guilds.invite.WidgetGuildInviteShare$initBottomSheetBehavior$1 */
+    /* JADX INFO: compiled from: WidgetGuildInviteShare.kt */
     public static final class C86641 extends BottomSheetBehavior.BottomSheetCallback {
         public C86641() {
         }
@@ -259,8 +259,8 @@ public final class WidgetGuildInviteShare extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetGuildInviteShare.kt */
-    /* renamed from: com.discord.widgets.guilds.invite.WidgetGuildInviteShare$onViewBound$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.guilds.invite.WidgetGuildInviteShare$onViewBound$1 */
+    /* JADX INFO: compiled from: WidgetGuildInviteShare.kt */
     public static final class C86651<R> implements Func0<Boolean> {
         public final /* synthetic */ boolean $isNuxFlow;
 
@@ -287,8 +287,8 @@ public final class WidgetGuildInviteShare extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetGuildInviteShare.kt */
-    /* renamed from: com.discord.widgets.guilds.invite.WidgetGuildInviteShare$onViewBound$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.guilds.invite.WidgetGuildInviteShare$onViewBound$2 */
+    /* JADX INFO: compiled from: WidgetGuildInviteShare.kt */
     public static final class C86662 extends Lambda implements Function1<Editable, Unit> {
         public C86662() {
             super(1);
@@ -300,15 +300,15 @@ public final class WidgetGuildInviteShare extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Editable editable) {
             Intrinsics3.checkNotNullParameter(editable, "editable");
             WidgetGuildInviteShare.access$getViewModel$p(WidgetGuildInviteShare.this).updateSearchQuery(editable.toString());
         }
     }
 
-    /* compiled from: WidgetGuildInviteShare.kt */
-    /* renamed from: com.discord.widgets.guilds.invite.WidgetGuildInviteShare$onViewBound$3 */
+    /* JADX INFO: renamed from: com.discord.widgets.guilds.invite.WidgetGuildInviteShare$onViewBound$3 */
+    /* JADX INFO: compiled from: WidgetGuildInviteShare.kt */
     public static final class ViewOnClickListenerC86673 implements View.OnClickListener {
         public ViewOnClickListenerC86673() {
         }
@@ -319,8 +319,8 @@ public final class WidgetGuildInviteShare extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetGuildInviteShare.kt */
-    /* renamed from: com.discord.widgets.guilds.invite.WidgetGuildInviteShare$onViewBound$4 */
+    /* JADX INFO: renamed from: com.discord.widgets.guilds.invite.WidgetGuildInviteShare$onViewBound$4 */
+    /* JADX INFO: compiled from: WidgetGuildInviteShare.kt */
     public static final class ViewOnClickListenerC86684 implements View.OnClickListener {
         public ViewOnClickListenerC86684() {
         }
@@ -331,8 +331,8 @@ public final class WidgetGuildInviteShare extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetGuildInviteShare.kt */
-    /* renamed from: com.discord.widgets.guilds.invite.WidgetGuildInviteShare$onViewBoundOrOnResume$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.guilds.invite.WidgetGuildInviteShare$onViewBoundOrOnResume$1 */
+    /* JADX INFO: compiled from: WidgetGuildInviteShare.kt */
     public static final /* synthetic */ class C86691 extends FunctionReferenceImpl implements Function1<WidgetGuildInviteShareViewModel.ViewState.Loaded, Unit> {
         public C86691(WidgetGuildInviteShare widgetGuildInviteShare) {
             super(1, widgetGuildInviteShare, WidgetGuildInviteShare.class, "configureUI", "configureUI(Lcom/discord/widgets/guilds/invite/WidgetGuildInviteShareViewModel$ViewState$Loaded;)V", 0);
@@ -344,7 +344,7 @@ public final class WidgetGuildInviteShare extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(WidgetGuildInviteShareViewModel.ViewState.Loaded loaded) {
             Intrinsics3.checkNotNullParameter(loaded, "p1");
             WidgetGuildInviteShare.access$configureUI((WidgetGuildInviteShare) this.receiver, loaded);

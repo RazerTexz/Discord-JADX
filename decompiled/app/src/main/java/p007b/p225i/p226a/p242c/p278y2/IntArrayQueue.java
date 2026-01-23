@@ -2,31 +2,31 @@ package p007b.p225i.p226a.p242c.p278y2;
 
 import java.util.NoSuchElementException;
 
-/* compiled from: IntArrayQueue.java */
-/* renamed from: b.i.a.c.y2.s, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.y2.s, reason: use source file name */
+/* JADX INFO: compiled from: IntArrayQueue.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class IntArrayQueue {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public int f9102a = 0;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public int f9103b = -1;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public int f9104c = 0;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public int[] f9105d = new int[16];
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public int f9106e;
 
     public IntArrayQueue() {
         this.f9106e = r0.length - 1;
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public void m3860a(int i) {
         int i2 = this.f9104c;
         int[] iArr = this.f9105d;
@@ -52,7 +52,7 @@ public final class IntArrayQueue {
         this.f9104c++;
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public int m3861b() {
         int i = this.f9104c;
         if (i == 0) {

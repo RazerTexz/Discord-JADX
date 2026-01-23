@@ -3,7 +3,7 @@ package androidx.view;
 import androidx.annotation.NonNull;
 import androidx.view.Lifecycle;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class SingleGeneratedAdapterObserver implements LifecycleEventObserver {
     private final GeneratedAdapter mGeneratedAdapter;
 

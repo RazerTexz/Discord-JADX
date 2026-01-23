@@ -41,11 +41,11 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 import p658rx.Observable;
 
-/* compiled from: WidgetThreadBrowserActiveViewModel.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetThreadBrowserActiveViewModel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetThreadBrowserActiveViewModel extends AppViewModel<ViewState> {
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private final long channelId;
     private final long guildId;
@@ -58,8 +58,8 @@ public final class WidgetThreadBrowserActiveViewModel extends AppViewModel<ViewS
     private final StoreThreadsActiveJoined storeThreadsActiveJoined;
     private final StoreUser storeUser;
 
-    /* compiled from: WidgetThreadBrowserActiveViewModel.kt */
-    /* renamed from: com.discord.widgets.channels.threads.browser.WidgetThreadBrowserActiveViewModel$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.channels.threads.browser.WidgetThreadBrowserActiveViewModel$1 */
+    /* JADX INFO: compiled from: WidgetThreadBrowserActiveViewModel.kt */
     public static final class C76481 extends Lambda implements Function1<StoreState, Unit> {
         public C76481() {
             super(1);
@@ -71,14 +71,14 @@ public final class WidgetThreadBrowserActiveViewModel extends AppViewModel<ViewS
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(StoreState storeState) {
             Intrinsics3.checkNotNullParameter(storeState, "storeState");
             WidgetThreadBrowserActiveViewModel.access$handleStoreState(WidgetThreadBrowserActiveViewModel.this, storeState);
         }
     }
 
-    /* compiled from: WidgetThreadBrowserActiveViewModel.kt */
+    /* JADX INFO: compiled from: WidgetThreadBrowserActiveViewModel.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -98,7 +98,7 @@ public final class WidgetThreadBrowserActiveViewModel extends AppViewModel<ViewS
         }
     }
 
-    /* compiled from: WidgetThreadBrowserActiveViewModel.kt */
+    /* JADX INFO: compiled from: WidgetThreadBrowserActiveViewModel.kt */
     public static final /* data */ class StoreState {
         private final Map<Long, Channel> activeJoinedThreads;
         private final Map<Long, Channel> activeThreads;
@@ -138,11 +138,12 @@ public final class WidgetThreadBrowserActiveViewModel extends AppViewModel<ViewS
             this.guild = guild;
         }
 
+        /* JADX WARN: Multi-variable type inference failed */
         public static /* synthetic */ StoreState copy$default(StoreState storeState, MeUser meUser, Map map, Map map2, Map map3, Map map4, Map map5, Map map6, Map map7, Long l, Map map8, Channel channel, Guild guild, int i, Object obj) {
             return storeState.copy((i & 1) != 0 ? storeState.meUser : meUser, (i & 2) != 0 ? storeState.activeJoinedThreads : map, (i & 4) != 0 ? storeState.activeThreads : map2, (i & 8) != 0 ? storeState.threadStates : map3, (i & 16) != 0 ? storeState.guildMembers : map4, (i & 32) != 0 ? storeState.users : map5, (i & 64) != 0 ? storeState.guildRoles : map6, (i & 128) != 0 ? storeState.channelNames : map7, (i & 256) != 0 ? storeState.permissions : l, (i & 512) != 0 ? storeState.blockedUsers : map8, (i & 1024) != 0 ? storeState.channel : channel, (i & 2048) != 0 ? storeState.guild : guild);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final MeUser getMeUser() {
             return this.meUser;
         }
@@ -151,12 +152,12 @@ public final class WidgetThreadBrowserActiveViewModel extends AppViewModel<ViewS
             return this.blockedUsers;
         }
 
-        /* renamed from: component11, reason: from getter */
+        /* JADX INFO: renamed from: component11, reason: from getter */
         public final Channel getChannel() {
             return this.channel;
         }
 
-        /* renamed from: component12, reason: from getter */
+        /* JADX INFO: renamed from: component12, reason: from getter */
         public final Guild getGuild() {
             return this.guild;
         }
@@ -189,7 +190,7 @@ public final class WidgetThreadBrowserActiveViewModel extends AppViewModel<ViewS
             return this.channelNames;
         }
 
-        /* renamed from: component9, reason: from getter */
+        /* JADX INFO: renamed from: component9, reason: from getter */
         public final Long getPermissions() {
             return this.permissions;
         }
@@ -323,7 +324,7 @@ public final class WidgetThreadBrowserActiveViewModel extends AppViewModel<ViewS
         }
     }
 
-    /* compiled from: WidgetThreadBrowserActiveViewModel.kt */
+    /* JADX INFO: compiled from: WidgetThreadBrowserActiveViewModel.kt */
     public static final /* data */ class ViewState {
         private final boolean canCreateThread;
         private final List<WidgetThreadBrowserAdapter.Item> listItems;
@@ -350,7 +351,7 @@ public final class WidgetThreadBrowserActiveViewModel extends AppViewModel<ViewS
             return this.listItems;
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final boolean getCanCreateThread() {
             return this.canCreateThread;
         }
@@ -380,15 +381,18 @@ public final class WidgetThreadBrowserActiveViewModel extends AppViewModel<ViewS
         }
 
         /* JADX WARN: Multi-variable type inference failed */
+        /* JADX WARN: Type inference failed for: r1v1, types: [int] */
+        /* JADX WARN: Type inference failed for: r1v2 */
+        /* JADX WARN: Type inference failed for: r1v3 */
         public int hashCode() {
             List<WidgetThreadBrowserAdapter.Item> list = this.listItems;
             int iHashCode = (list != null ? list.hashCode() : 0) * 31;
             boolean z2 = this.canCreateThread;
-            int i = z2;
-            if (z2 != 0) {
-                i = 1;
+            ?? r1 = z2;
+            if (z2) {
+                r1 = 1;
             }
-            return iHashCode + i;
+            return iHashCode + r1;
         }
 
         public String toString() {

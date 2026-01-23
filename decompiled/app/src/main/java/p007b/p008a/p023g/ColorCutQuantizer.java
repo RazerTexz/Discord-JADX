@@ -11,31 +11,31 @@ import java.util.PriorityQueue;
 import kotlin.jvm.internal.DefaultConstructorMarker;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ColorCutQuantizer.kt */
-/* renamed from: b.a.g.a, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.a.g.a, reason: use source file name */
+/* JADX INFO: compiled from: ColorCutQuantizer.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class ColorCutQuantizer {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final b f626a = new b(null);
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final float[] f627b = new float[3];
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final int[] f628c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final SparseIntArray f629d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final List<Swatch> f630e;
 
-    /* compiled from: ColorCutQuantizer.kt */
-    /* renamed from: b.a.g.a$a */
+    /* JADX INFO: renamed from: b.a.g.a$a */
+    /* JADX INFO: compiled from: ColorCutQuantizer.kt */
     public static final class a<T> implements Comparator<c> {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public static final a f631j = new a();
 
         @Override // java.util.Comparator
@@ -44,39 +44,39 @@ public final class ColorCutQuantizer {
         }
     }
 
-    /* compiled from: ColorCutQuantizer.kt */
-    /* renamed from: b.a.g.a$b */
+    /* JADX INFO: renamed from: b.a.g.a$b */
+    /* JADX INFO: compiled from: ColorCutQuantizer.kt */
     public static final class b {
         public b(DefaultConstructorMarker defaultConstructorMarker) {
         }
     }
 
-    /* compiled from: ColorCutQuantizer.kt */
-    /* renamed from: b.a.g.a$c */
+    /* JADX INFO: renamed from: b.a.g.a$c */
+    /* JADX INFO: compiled from: ColorCutQuantizer.kt */
     public final class c {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public int f632a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public int f633b;
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public int f634c;
 
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         public int f635d;
 
-        /* renamed from: e */
+        /* JADX INFO: renamed from: e */
         public int f636e;
 
-        /* renamed from: f */
+        /* JADX INFO: renamed from: f */
         public int f637f;
 
-        /* renamed from: g */
+        /* JADX INFO: renamed from: g */
         public final int f638g;
 
-        /* renamed from: h */
+        /* JADX INFO: renamed from: h */
         public int f639h;
 
         public c(int i, int i2) {
@@ -85,7 +85,7 @@ public final class ColorCutQuantizer {
             m190a();
         }
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final void m190a() {
             this.f636e = 255;
             this.f634c = 255;
@@ -129,7 +129,7 @@ public final class ColorCutQuantizer {
             }
         }
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final int m191b() {
             return ((this.f637f - this.f636e) + 1) * ((this.f635d - this.f634c) + 1) * ((this.f633b - this.f632a) + 1);
         }
@@ -302,7 +302,7 @@ public final class ColorCutQuantizer {
         this.f630e = arrayList;
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final void m189a(ColorCutQuantizer colorCutQuantizer, int i, int i2, int i3) {
         Objects.requireNonNull(colorCutQuantizer);
         if (i == -2) {

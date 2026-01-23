@@ -9,7 +9,7 @@ import androidx.view.Lifecycle;
 import java.util.Map;
 import p007b.p100d.p104b.p105a.outline;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public abstract class LiveData<T> {
     public static final Object NOT_SET = new Object();
     public static final int START_VERSION = -1;
@@ -24,7 +24,7 @@ public abstract class LiveData<T> {
     private final Runnable mPostValueRunnable;
     private int mVersion;
 
-    /* renamed from: androidx.lifecycle.LiveData$1 */
+    /* JADX INFO: renamed from: androidx.lifecycle.LiveData$1 */
     public class RunnableC04431 implements Runnable {
         public RunnableC04431() {
         }

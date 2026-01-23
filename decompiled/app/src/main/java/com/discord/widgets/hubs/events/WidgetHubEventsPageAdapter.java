@@ -2,7 +2,6 @@ package com.discord.widgets.hubs.events;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
-import android.content.res.Resources;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -25,8 +24,8 @@ import p007b.p100d.p104b.p105a.outline;
 import p507d0.p580t.Collections2;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: WidgetHubEventsPageAdapter.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetHubEventsPageAdapter.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetHubEventsPageAdapter extends RecyclerView.Adapter<WidgetHubEventsPageViewHolder> {
     private final Context context;
     private final WidgetHubEventsPage3 eventListener;
@@ -41,7 +40,7 @@ public final class WidgetHubEventsPageAdapter extends RecyclerView.Adapter<Widge
     }
 
     @Override // androidx.recyclerview.widget.RecyclerView.Adapter
-    /* renamed from: getItemCount */
+    /* JADX INFO: renamed from: getItemCount */
     public int getPageSize() {
         return this.items.size();
     }
@@ -56,7 +55,7 @@ public final class WidgetHubEventsPageAdapter extends RecyclerView.Adapter<Widge
     }
 
     @Override // androidx.recyclerview.widget.RecyclerView.Adapter
-    public /* bridge */ /* synthetic */ void onBindViewHolder(RecyclerView.ViewHolder viewHolder, int i) throws Resources.NotFoundException {
+    public /* bridge */ /* synthetic */ void onBindViewHolder(RecyclerView.ViewHolder viewHolder, int i) {
         onBindViewHolder((WidgetHubEventsPageViewHolder) viewHolder, i);
     }
 
@@ -72,7 +71,7 @@ public final class WidgetHubEventsPageAdapter extends RecyclerView.Adapter<Widge
         notifyDataSetChanged();
     }
 
-    public void onBindViewHolder(WidgetHubEventsPageViewHolder holder, int position) throws Resources.NotFoundException {
+    public void onBindViewHolder(WidgetHubEventsPageViewHolder holder, int position) {
         Intrinsics3.checkNotNullParameter(holder, "holder");
         if (holder instanceof WidgetHubEventsPageViewHolder5) {
             ((WidgetHubEventsPageViewHolder5) holder).bind();

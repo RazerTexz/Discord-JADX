@@ -32,17 +32,17 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 import p658rx.Observable;
 
-/* compiled from: SettingsViewModel.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: SettingsViewModel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class SettingsViewModel extends AppViewModel<ViewState> {
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private static final String MANAGE_SUBSCRIPTIONS_URL = "/settings/subscriptions/role-subscriptions";
     private final StoreSubscriptions subscriptionsStore;
 
-    /* compiled from: SettingsViewModel.kt */
-    /* renamed from: com.discord.widgets.settings.SettingsViewModel$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.SettingsViewModel$1 */
+    /* JADX INFO: compiled from: SettingsViewModel.kt */
     public static final class C95981 extends Lambda implements Function1<StoreState, Unit> {
         public C95981() {
             super(1);
@@ -54,7 +54,7 @@ public final class SettingsViewModel extends AppViewModel<ViewState> {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(StoreState storeState) {
             SettingsViewModel settingsViewModel = SettingsViewModel.this;
             Intrinsics3.checkNotNullExpressionValue(storeState, "storeState");
@@ -62,7 +62,7 @@ public final class SettingsViewModel extends AppViewModel<ViewState> {
         }
     }
 
-    /* compiled from: SettingsViewModel.kt */
+    /* JADX INFO: compiled from: SettingsViewModel.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -88,7 +88,7 @@ public final class SettingsViewModel extends AppViewModel<ViewState> {
         }
     }
 
-    /* compiled from: SettingsViewModel.kt */
+    /* JADX INFO: compiled from: SettingsViewModel.kt */
     public static final /* data */ class StoreState {
         private final boolean isEligibleForMobileWebSubscriptions;
         private final boolean isStaffOrAlpha;
@@ -110,6 +110,7 @@ public final class SettingsViewModel extends AppViewModel<ViewState> {
             this.subscriptions = list;
         }
 
+        /* JADX WARN: Multi-variable type inference failed */
         public static /* synthetic */ StoreState copy$default(StoreState storeState, MeUser meUser, boolean z2, Presence presence, int i, boolean z3, boolean z4, List list, int i2, Object obj) {
             if ((i2 & 1) != 0) {
                 meUser = storeState.meUser;
@@ -140,32 +141,32 @@ public final class SettingsViewModel extends AppViewModel<ViewState> {
             return storeState.copy(meUser, z5, presence2, i3, z6, z7, list);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final MeUser getMeUser() {
             return this.meUser;
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final boolean getIsStaffOrAlpha() {
             return this.isStaffOrAlpha;
         }
 
-        /* renamed from: component3, reason: from getter */
+        /* JADX INFO: renamed from: component3, reason: from getter */
         public final Presence getPresence() {
             return this.presence;
         }
 
-        /* renamed from: component4, reason: from getter */
+        /* JADX INFO: renamed from: component4, reason: from getter */
         public final int getPromoCount() {
             return this.promoCount;
         }
 
-        /* renamed from: component5, reason: from getter */
+        /* JADX INFO: renamed from: component5, reason: from getter */
         public final boolean getPushNotificationUpsellDismissed() {
             return this.pushNotificationUpsellDismissed;
         }
 
-        /* renamed from: component6, reason: from getter */
+        /* JADX INFO: renamed from: component6, reason: from getter */
         public final boolean getIsEligibleForMobileWebSubscriptions() {
             return this.isEligibleForMobileWebSubscriptions;
         }
@@ -212,27 +213,36 @@ public final class SettingsViewModel extends AppViewModel<ViewState> {
         }
 
         /* JADX WARN: Multi-variable type inference failed */
+        /* JADX WARN: Type inference failed for: r2v1, types: [int] */
+        /* JADX WARN: Type inference failed for: r2v10 */
+        /* JADX WARN: Type inference failed for: r2v12 */
+        /* JADX WARN: Type inference failed for: r2v13 */
+        /* JADX WARN: Type inference failed for: r2v14 */
+        /* JADX WARN: Type inference failed for: r2v7, types: [int] */
+        /* JADX WARN: Type inference failed for: r3v0 */
+        /* JADX WARN: Type inference failed for: r3v1, types: [int] */
+        /* JADX WARN: Type inference failed for: r3v2 */
         public int hashCode() {
             MeUser meUser = this.meUser;
             int iHashCode = (meUser != null ? meUser.hashCode() : 0) * 31;
             boolean z2 = this.isStaffOrAlpha;
-            int i = z2;
-            if (z2 != 0) {
-                i = 1;
+            ?? r2 = z2;
+            if (z2) {
+                r2 = 1;
             }
-            int i2 = (iHashCode + i) * 31;
+            int i = (iHashCode + r2) * 31;
             Presence presence = this.presence;
-            int iHashCode2 = (((i2 + (presence != null ? presence.hashCode() : 0)) * 31) + this.promoCount) * 31;
+            int iHashCode2 = (((i + (presence != null ? presence.hashCode() : 0)) * 31) + this.promoCount) * 31;
             boolean z3 = this.pushNotificationUpsellDismissed;
-            int i3 = z3;
-            if (z3 != 0) {
-                i3 = 1;
+            ?? r22 = z3;
+            if (z3) {
+                r22 = 1;
             }
-            int i4 = (iHashCode2 + i3) * 31;
+            int i2 = (iHashCode2 + r22) * 31;
             boolean z4 = this.isEligibleForMobileWebSubscriptions;
-            int i5 = (i4 + (z4 ? 1 : z4 ? 1 : 0)) * 31;
+            int i3 = (i2 + (z4 ? 1 : z4)) * 31;
             List<ModelSubscription> list = this.subscriptions;
-            return i5 + (list != null ? list.hashCode() : 0);
+            return i3 + (list != null ? list.hashCode() : 0);
         }
 
         public final boolean isEligibleForMobileWebSubscriptions() {
@@ -261,10 +271,10 @@ public final class SettingsViewModel extends AppViewModel<ViewState> {
         }
     }
 
-    /* compiled from: SettingsViewModel.kt */
+    /* JADX INFO: compiled from: SettingsViewModel.kt */
     public static abstract class ViewState {
 
-        /* compiled from: SettingsViewModel.kt */
+        /* JADX INFO: compiled from: SettingsViewModel.kt */
         public static final /* data */ class Loaded extends ViewState {
             private final boolean isStaffOrAlpha;
             private final MeUser meUser;
@@ -312,32 +322,32 @@ public final class SettingsViewModel extends AppViewModel<ViewState> {
                 return loaded.copy(meUser, z5, presence2, i3, z6, z4);
             }
 
-            /* renamed from: component1, reason: from getter */
+            /* JADX INFO: renamed from: component1, reason: from getter */
             public final MeUser getMeUser() {
                 return this.meUser;
             }
 
-            /* renamed from: component2, reason: from getter */
+            /* JADX INFO: renamed from: component2, reason: from getter */
             public final boolean getIsStaffOrAlpha() {
                 return this.isStaffOrAlpha;
             }
 
-            /* renamed from: component3, reason: from getter */
+            /* JADX INFO: renamed from: component3, reason: from getter */
             public final Presence getPresence() {
                 return this.presence;
             }
 
-            /* renamed from: component4, reason: from getter */
+            /* JADX INFO: renamed from: component4, reason: from getter */
             public final int getPromoCount() {
                 return this.promoCount;
             }
 
-            /* renamed from: component5, reason: from getter */
+            /* JADX INFO: renamed from: component5, reason: from getter */
             public final boolean getPushNotificationUpsellDismissed() {
                 return this.pushNotificationUpsellDismissed;
             }
 
-            /* renamed from: component6, reason: from getter */
+            /* JADX INFO: renamed from: component6, reason: from getter */
             public final boolean getShowRoleSubscriptionsButton() {
                 return this.showRoleSubscriptionsButton;
             }
@@ -380,25 +390,34 @@ public final class SettingsViewModel extends AppViewModel<ViewState> {
             }
 
             /* JADX WARN: Multi-variable type inference failed */
+            /* JADX WARN: Type inference failed for: r1v4, types: [int] */
+            /* JADX WARN: Type inference failed for: r1v6 */
+            /* JADX WARN: Type inference failed for: r1v8 */
+            /* JADX WARN: Type inference failed for: r2v1, types: [int] */
+            /* JADX WARN: Type inference failed for: r2v3 */
+            /* JADX WARN: Type inference failed for: r2v4 */
+            /* JADX WARN: Type inference failed for: r3v0 */
+            /* JADX WARN: Type inference failed for: r3v1, types: [int] */
+            /* JADX WARN: Type inference failed for: r3v2 */
             public int hashCode() {
                 MeUser meUser = this.meUser;
                 int iHashCode = (meUser != null ? meUser.hashCode() : 0) * 31;
                 boolean z2 = this.isStaffOrAlpha;
-                int i = z2;
-                if (z2 != 0) {
-                    i = 1;
+                ?? r2 = z2;
+                if (z2) {
+                    r2 = 1;
                 }
-                int i2 = (iHashCode + i) * 31;
+                int i = (iHashCode + r2) * 31;
                 Presence presence = this.presence;
-                int iHashCode2 = (((i2 + (presence != null ? presence.hashCode() : 0)) * 31) + this.promoCount) * 31;
+                int iHashCode2 = (((i + (presence != null ? presence.hashCode() : 0)) * 31) + this.promoCount) * 31;
                 boolean z3 = this.pushNotificationUpsellDismissed;
-                int i3 = z3;
-                if (z3 != 0) {
-                    i3 = 1;
+                ?? r1 = z3;
+                if (z3) {
+                    r1 = 1;
                 }
-                int i4 = (iHashCode2 + i3) * 31;
+                int i2 = (iHashCode2 + r1) * 31;
                 boolean z4 = this.showRoleSubscriptionsButton;
-                return i4 + (z4 ? 1 : z4 ? 1 : 0);
+                return i2 + (z4 ? 1 : z4);
             }
 
             public final boolean isStaffOrAlpha() {
@@ -421,7 +440,7 @@ public final class SettingsViewModel extends AppViewModel<ViewState> {
             }
         }
 
-        /* compiled from: SettingsViewModel.kt */
+        /* JADX INFO: compiled from: SettingsViewModel.kt */
         public static final class Uninitialized extends ViewState {
             public static final Uninitialized INSTANCE = new Uninitialized();
 

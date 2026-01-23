@@ -1,14 +1,14 @@
 package p007b.p225i.p226a.p288f.p313h.p325l;
 
-/* compiled from: com.google.android.gms:play-services-measurement-base@@18.0.0 */
-/* renamed from: b.i.a.f.h.l.k6 */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.h.l.k6 */
+/* JADX INFO: compiled from: com.google.android.gms:play-services-measurement-base@@18.0.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public final class C3723k6 {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final InterfaceC3696i6 f10056a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static final InterfaceC3696i6 f10057b;
 
     static {

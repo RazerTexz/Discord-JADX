@@ -2,8 +2,8 @@ package com.discord.rtcconnection.enums;
 
 import android.os.Build;
 
-/* compiled from: AudioFocusMode.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: AudioFocusMode.kt */
+/* JADX INFO: loaded from: classes.dex */
 public enum AudioFocusMode {
     Gain(1),
     GainTransient(2),

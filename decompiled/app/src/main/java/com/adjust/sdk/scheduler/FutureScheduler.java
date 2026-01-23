@@ -3,7 +3,7 @@ package com.adjust.sdk.scheduler;
 import java.util.concurrent.Callable;
 import java.util.concurrent.ScheduledFuture;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public interface FutureScheduler {
     ScheduledFuture<?> scheduleFuture(Runnable runnable, long j);
 

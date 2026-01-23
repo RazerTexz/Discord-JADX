@@ -21,8 +21,8 @@ import androidx.work.impl.model.WorkTagDao;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
+/* JADX INFO: loaded from: classes.dex */
 @RestrictTo({RestrictTo.Scope.LIBRARY_GROUP})
-/* loaded from: classes.dex */
 public class DiagnosticsWorker extends Worker {
     private static final String TAG = Logger.tagWithPrefix("DiagnosticsWrkr");
 

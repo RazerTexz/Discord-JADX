@@ -9,8 +9,8 @@ import lombok.eclipse.EclipseNode;
 import lombok.experimental.SuperBuilder;
 import org.eclipse.jdt.internal.compiler.ast.Annotation;
 
+/* JADX INFO: loaded from: discord-126021.apk:lombok/eclipse/handlers/HandleBuilderDefault.SCL.lombok */
 @HandlerPriority(-1025)
-/* loaded from: discord-126021.apk:lombok/eclipse/handlers/HandleBuilderDefault.SCL.lombok */
 public class HandleBuilderDefault extends EclipseAnnotationHandler<Builder.Default> {
     @Override // lombok.eclipse.EclipseAnnotationHandler
     public void handle(AnnotationValues<Builder.Default> annotation, Annotation ast, EclipseNode annotationNode) {

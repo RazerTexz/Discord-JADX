@@ -9,8 +9,8 @@ import com.discord.models.domain.ModelAuditLogEntry;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: TrackGuildScheduledEventReported.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: TrackGuildScheduledEventReported.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class TrackGuildScheduledEventReported implements AnalyticsSchema, TrackBase2, TrackGuild2 {
     private TrackBase trackBase;
     private TrackGuild trackGuild;
@@ -23,19 +23,19 @@ public final /* data */ class TrackGuildScheduledEventReported implements Analyt
     private final transient String analyticsSchemaTypeName = "guild_scheduled_event_reported";
 
     @Override // com.discord.analytics.generated.traits.TrackGuild2
-    /* renamed from: a, reason: from getter */
+    /* JADX INFO: renamed from: a, reason: from getter */
     public TrackGuild getTrackGuild() {
         return this.trackGuild;
     }
 
     @Override // com.discord.analytics.generated.traits.TrackGuild2
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public void mo7508c(TrackGuild trackGuild) {
         this.trackGuild = trackGuild;
     }
 
     @Override // com.discord.api.science.AnalyticsSchema
-    /* renamed from: d, reason: from getter */
+    /* JADX INFO: renamed from: d, reason: from getter */
     public String getAnalyticsSchemaTypeName() {
         return this.analyticsSchemaTypeName;
     }

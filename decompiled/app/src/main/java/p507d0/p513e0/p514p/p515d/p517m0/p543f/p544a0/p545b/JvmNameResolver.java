@@ -17,34 +17,34 @@ import p507d0.p580t.Sets5;
 import p507d0.p580t._Collections;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: JvmNameResolver.kt */
-/* renamed from: d0.e0.p.d.m0.f.a0.b.g, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.f.a0.b.g, reason: use source file name */
+/* JADX INFO: compiled from: JvmNameResolver.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class JvmNameResolver implements NameResolver {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final a f23713a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static final String f23714b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public static final List<String> f23715c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final JvmProtoBuf.e f23716d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final String[] f23717e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final Set<Integer> f23718f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public final List<JvmProtoBuf.e.c> f23719g;
 
-    /* compiled from: JvmNameResolver.kt */
-    /* renamed from: d0.e0.p.d.m0.f.a0.b.g$a */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.f.a0.b.g$a */
+    /* JADX INFO: compiled from: JvmNameResolver.kt */
     public static final class a {
         public a(DefaultConstructorMarker defaultConstructorMarker) {
         }

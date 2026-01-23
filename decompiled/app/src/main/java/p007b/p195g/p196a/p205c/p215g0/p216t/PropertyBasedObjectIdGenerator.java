@@ -7,9 +7,9 @@ import p007b.p195g.p196a.p197a.ObjectIdGenerators3;
 import p007b.p195g.p196a.p205c.p210c0.ObjectIdInfo;
 import p007b.p195g.p196a.p205c.p215g0.BeanPropertyWriter;
 
-/* compiled from: PropertyBasedObjectIdGenerator.java */
-/* renamed from: b.g.a.c.g0.t.k, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.g.a.c.g0.t.k, reason: use source file name */
+/* JADX INFO: compiled from: PropertyBasedObjectIdGenerator.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class PropertyBasedObjectIdGenerator extends ObjectIdGenerators3 {
     private static final long serialVersionUID = 1;
     public final BeanPropertyWriter _property;
@@ -20,7 +20,7 @@ public class PropertyBasedObjectIdGenerator extends ObjectIdGenerators3 {
     }
 
     @Override // p007b.p195g.p196a.p197a.ObjectIdGenerators, p007b.p195g.p196a.p197a.ObjectIdGenerator
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public boolean mo1608a(ObjectIdGenerator<?> objectIdGenerator) {
         if (objectIdGenerator.getClass() != PropertyBasedObjectIdGenerator.class) {
             return false;
@@ -30,13 +30,13 @@ public class PropertyBasedObjectIdGenerator extends ObjectIdGenerators3 {
     }
 
     @Override // p007b.p195g.p196a.p197a.ObjectIdGenerator
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public ObjectIdGenerator<Object> mo1609b(Class<?> cls) {
         return cls == this._scope ? this : new PropertyBasedObjectIdGenerator(cls, this._property);
     }
 
     @Override // p007b.p195g.p196a.p197a.ObjectIdGenerator
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public Object mo1610c(Object obj) {
         try {
             BeanPropertyWriter beanPropertyWriter = this._property;
@@ -54,7 +54,7 @@ public class PropertyBasedObjectIdGenerator extends ObjectIdGenerators3 {
     }
 
     @Override // p007b.p195g.p196a.p197a.ObjectIdGenerator
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public ObjectIdGenerator<Object> mo1612e(Object obj) {
         return this;
     }

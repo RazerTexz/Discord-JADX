@@ -20,17 +20,17 @@ import p507d0.p592z.p594d.FunctionReferenceImpl;
 import p507d0.p592z.p594d.Intrinsics3;
 import p658rx.Observable;
 
-/* compiled from: ReportIssueWithAutoModViewModel.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: ReportIssueWithAutoModViewModel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class ReportIssueWithAutoModViewModel extends AppViewModel<ViewState> {
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private final long channelId;
     private final long messageId;
 
-    /* compiled from: ReportIssueWithAutoModViewModel.kt */
-    /* renamed from: com.discord.widgets.guild_automod.ReportIssueWithAutoModViewModel$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.guild_automod.ReportIssueWithAutoModViewModel$1 */
+    /* JADX INFO: compiled from: ReportIssueWithAutoModViewModel.kt */
     public static final /* synthetic */ class C84141 extends FunctionReferenceImpl implements Function1<StoreState, Unit> {
         public C84141(ReportIssueWithAutoModViewModel reportIssueWithAutoModViewModel) {
             super(1, reportIssueWithAutoModViewModel, ReportIssueWithAutoModViewModel.class, "handleStoreState", "handleStoreState(Lcom/discord/widgets/guild_automod/ReportIssueWithAutoModViewModel$StoreState;)V", 0);
@@ -42,14 +42,14 @@ public final class ReportIssueWithAutoModViewModel extends AppViewModel<ViewStat
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(StoreState storeState) {
             Intrinsics3.checkNotNullParameter(storeState, "p1");
             ReportIssueWithAutoModViewModel.access$handleStoreState((ReportIssueWithAutoModViewModel) this.receiver, storeState);
         }
     }
 
-    /* compiled from: ReportIssueWithAutoModViewModel.kt */
+    /* JADX INFO: compiled from: ReportIssueWithAutoModViewModel.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -69,7 +69,7 @@ public final class ReportIssueWithAutoModViewModel extends AppViewModel<ViewStat
         }
     }
 
-    /* compiled from: ReportIssueWithAutoModViewModel.kt */
+    /* JADX INFO: compiled from: ReportIssueWithAutoModViewModel.kt */
     public static final /* data */ class StoreState {
         private final Message message;
 
@@ -84,7 +84,7 @@ public final class ReportIssueWithAutoModViewModel extends AppViewModel<ViewStat
             return storeState.copy(message);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final Message getMessage() {
             return this.message;
         }
@@ -120,10 +120,10 @@ public final class ReportIssueWithAutoModViewModel extends AppViewModel<ViewStat
         }
     }
 
-    /* compiled from: ReportIssueWithAutoModViewModel.kt */
+    /* JADX INFO: compiled from: ReportIssueWithAutoModViewModel.kt */
     public static abstract class ViewState {
 
-        /* compiled from: ReportIssueWithAutoModViewModel.kt */
+        /* JADX INFO: compiled from: ReportIssueWithAutoModViewModel.kt */
         public static final class Invalid extends ViewState {
             public static final Invalid INSTANCE = new Invalid();
 
@@ -132,7 +132,7 @@ public final class ReportIssueWithAutoModViewModel extends AppViewModel<ViewStat
             }
         }
 
-        /* compiled from: ReportIssueWithAutoModViewModel.kt */
+        /* JADX INFO: compiled from: ReportIssueWithAutoModViewModel.kt */
         public static final /* data */ class Valid extends ViewState {
             private final Message message;
             private final String selectedOption;
@@ -156,12 +156,12 @@ public final class ReportIssueWithAutoModViewModel extends AppViewModel<ViewStat
                 return valid.copy(message, str);
             }
 
-            /* renamed from: component1, reason: from getter */
+            /* JADX INFO: renamed from: component1, reason: from getter */
             public final Message getMessage() {
                 return this.message;
             }
 
-            /* renamed from: component2, reason: from getter */
+            /* JADX INFO: renamed from: component2, reason: from getter */
             public final String getSelectedOption() {
                 return this.selectedOption;
             }

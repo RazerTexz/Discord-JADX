@@ -4,15 +4,15 @@ import androidx.annotation.NonNull;
 import p007b.p100d.p104b.p105a.outline;
 import p007b.p225i.p361c.p369m.p370d.p375m.CrashlyticsReport;
 
-/* compiled from: AutoValue_CrashlyticsReport_CustomAttribute.java */
-/* renamed from: b.i.c.m.d.m.c, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.c.m.d.m.c, reason: use source file name */
+/* JADX INFO: compiled from: AutoValue_CrashlyticsReport_CustomAttribute.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class AutoValue_CrashlyticsReport_CustomAttribute extends CrashlyticsReport.b {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final String f12534a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final String f12535b;
 
     public AutoValue_CrashlyticsReport_CustomAttribute(String str, String str2, a aVar) {
@@ -22,14 +22,14 @@ public final class AutoValue_CrashlyticsReport_CustomAttribute extends Crashlyti
 
     @Override // p007b.p225i.p361c.p369m.p370d.p375m.CrashlyticsReport.b
     @NonNull
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public String mo6525a() {
         return this.f12534a;
     }
 
     @Override // p007b.p225i.p361c.p369m.p370d.p375m.CrashlyticsReport.b
     @NonNull
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public String mo6526b() {
         return this.f12535b;
     }

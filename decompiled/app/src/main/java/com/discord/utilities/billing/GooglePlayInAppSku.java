@@ -5,8 +5,8 @@ import kotlin.jvm.internal.DefaultConstructorMarker;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: GooglePlayInAppSku.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: GooglePlayInAppSku.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final /* data */ class GooglePlayInAppSku {
     private final String paymentGatewaySkuId;
     private SkuDetails skuDetails;
@@ -38,22 +38,22 @@ public final /* data */ class GooglePlayInAppSku {
         return googlePlayInAppSku.copy(str, googlePlayInAppSku4, skuDetails, l);
     }
 
-    /* renamed from: component1, reason: from getter */
+    /* JADX INFO: renamed from: component1, reason: from getter */
     public final String getPaymentGatewaySkuId() {
         return this.paymentGatewaySkuId;
     }
 
-    /* renamed from: component2, reason: from getter */
+    /* JADX INFO: renamed from: component2, reason: from getter */
     public final GooglePlayInAppSku4 getType() {
         return this.type;
     }
 
-    /* renamed from: component3, reason: from getter */
+    /* JADX INFO: renamed from: component3, reason: from getter */
     public final SkuDetails getSkuDetails() {
         return this.skuDetails;
     }
 
-    /* renamed from: component4, reason: from getter */
+    /* JADX INFO: renamed from: component4, reason: from getter */
     public final Long getSkuId() {
         return this.skuId;
     }

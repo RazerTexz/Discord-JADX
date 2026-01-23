@@ -6,20 +6,20 @@ import androidx.annotation.NonNull;
 import androidx.viewbinding.ViewBinding;
 import com.facebook.drawee.span.SimpleDraweeSpanTextView;
 
-/* compiled from: ViewUsernameBinding.java */
-/* renamed from: b.a.i.g4, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.a.i.g4, reason: use source file name */
+/* JADX INFO: compiled from: ViewUsernameBinding.java */
+/* JADX INFO: loaded from: classes.dex */
 public final class ViewUsernameBinding implements ViewBinding {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     @NonNull
     public final View f874a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     @NonNull
     public final TextView f875b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     @NonNull
     public final SimpleDraweeSpanTextView f876c;
 

@@ -5,27 +5,27 @@ import com.android.billingclient.api.BillingFlowParams;
 import com.android.billingclient.api.SkuDetails;
 import java.util.concurrent.Callable;
 
-/* compiled from: com.android.billingclient:billing@@4.0.0 */
-/* renamed from: b.d.a.a.b0 */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.d.a.a.b0 */
+/* JADX INFO: compiled from: com.android.billingclient:billing@@4.0.0 */
+/* JADX INFO: loaded from: classes.dex */
 public final /* synthetic */ class CallableC1617b0 implements Callable {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final /* synthetic */ C1614a f2950j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final /* synthetic */ int f2951k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final /* synthetic */ SkuDetails f2952l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public final /* synthetic */ String f2953m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public final /* synthetic */ BillingFlowParams f2954n;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public final /* synthetic */ Bundle f2955o;
 
     public /* synthetic */ CallableC1617b0(C1614a c1614a, int i, SkuDetails skuDetails, String str, BillingFlowParams billingFlowParams, Bundle bundle) {

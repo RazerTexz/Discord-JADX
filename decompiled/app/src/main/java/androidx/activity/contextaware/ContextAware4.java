@@ -4,9 +4,9 @@ import kotlin.Unit;
 import kotlin.jvm.functions.Function1;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: ContextAware.kt */
-/* renamed from: androidx.activity.contextaware.ContextAwareKt$withContextAvailable$$inlined$suspendCancellableCoroutine$lambda$2, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: androidx.activity.contextaware.ContextAwareKt$withContextAvailable$$inlined$suspendCancellableCoroutine$lambda$2, reason: use source file name */
+/* JADX INFO: compiled from: ContextAware.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class ContextAware4 extends Lambda implements Function1<Throwable, Unit> {
     public final /* synthetic */ ContextAware3 $listener;
     public final /* synthetic */ Function1 $onContextAvailable$inlined;
@@ -26,7 +26,7 @@ public final class ContextAware4 extends Lambda implements Function1<Throwable, 
         return Unit.f27425a;
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final void invoke2(Throwable th) {
         this.$this_withContextAvailable$inlined.removeOnContextAvailableListener(this.$listener);
     }

@@ -14,19 +14,19 @@ import java.security.spec.InvalidKeySpecException;
 import java.security.spec.X509EncodedKeySpec;
 import p007b.p225i.p361c.FirebaseApp2;
 
-/* compiled from: IidStore.java */
-/* renamed from: b.i.c.u.o.b, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.c.u.o.b, reason: use source file name */
+/* JADX INFO: compiled from: IidStore.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class IidStore {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final String[] f12966a = {"*", "FCM", "GCM", ""};
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     @GuardedBy("iidPrefs")
     public final SharedPreferences f12967b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final String f12968c;
 
     /* JADX WARN: Removed duplicated region for block: B:15:0x0048  */
@@ -56,7 +56,7 @@ public class IidStore {
     }
 
     @Nullable
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final String m6786a() {
         PublicKey publicKeyGeneratePublic;
         synchronized (this.f12967b) {

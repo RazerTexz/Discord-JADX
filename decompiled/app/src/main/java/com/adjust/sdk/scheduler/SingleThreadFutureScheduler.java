@@ -8,11 +8,11 @@ import java.util.concurrent.ScheduledThreadPoolExecutor;
 import java.util.concurrent.ThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class SingleThreadFutureScheduler implements FutureScheduler {
     private ScheduledThreadPoolExecutor scheduledThreadPoolExecutor;
 
-    /* renamed from: com.adjust.sdk.scheduler.SingleThreadFutureScheduler$1 */
+    /* JADX INFO: renamed from: com.adjust.sdk.scheduler.SingleThreadFutureScheduler$1 */
     public class RejectedExecutionHandlerC54011 implements RejectedExecutionHandler {
         public final /* synthetic */ String val$source;
 
@@ -27,7 +27,7 @@ public class SingleThreadFutureScheduler implements FutureScheduler {
     }
 
     /* JADX INFO: Add missing generic type declarations: [V] */
-    /* renamed from: com.adjust.sdk.scheduler.SingleThreadFutureScheduler$2 */
+    /* JADX INFO: renamed from: com.adjust.sdk.scheduler.SingleThreadFutureScheduler$2 */
     public class CallableC54022<V> implements Callable<V> {
         public final /* synthetic */ Callable val$callable;
 

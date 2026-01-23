@@ -8,33 +8,33 @@ import p007b.p109f.p161j.p169d.ImageDecodeOptions;
 import p007b.p109f.p161j.p169d.ResizeOptions;
 import p007b.p109f.p161j.p169d.RotationOptions;
 
-/* compiled from: BitmapMemoryCacheKey.java */
-/* renamed from: b.f.j.c.b, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.f.j.c.b, reason: use source file name */
+/* JADX INFO: compiled from: BitmapMemoryCacheKey.java */
+/* JADX INFO: loaded from: classes.dex */
 public class BitmapMemoryCacheKey implements CacheKey {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final String f3648a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final ResizeOptions f3649b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final RotationOptions f3650c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final ImageDecodeOptions f3651d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final CacheKey f3652e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final String f3653f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public final int f3654g;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public final Object f3655h;
 
     public BitmapMemoryCacheKey(String str, ResizeOptions resizeOptions, RotationOptions rotationOptions, ImageDecodeOptions imageDecodeOptions, CacheKey cacheKey, String str2, Object obj) {
@@ -58,13 +58,13 @@ public class BitmapMemoryCacheKey implements CacheKey {
     }
 
     @Override // com.facebook.cache.common.CacheKey
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public boolean mo929a() {
         return false;
     }
 
     @Override // com.facebook.cache.common.CacheKey
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public String mo930b() {
         return this.f3648a;
     }

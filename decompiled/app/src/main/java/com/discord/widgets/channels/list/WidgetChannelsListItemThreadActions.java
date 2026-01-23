@@ -1,7 +1,6 @@
 package com.discord.widgets.channels.list;
 
 import android.content.Context;
-import android.content.res.Resources;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
@@ -52,19 +51,19 @@ import p507d0.p592z.p594d.Lambda;
 import p658rx.Observable;
 import p658rx.subscriptions.CompositeSubscription;
 
-/* compiled from: WidgetChannelsListItemThreadActions.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetChannelsListItemThreadActions.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetChannelsListItemThreadActions extends AppBottomSheet {
     public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetChannelsListItemThreadActions.class, "binding", "getBinding()Lcom/discord/databinding/WidgetChannelsListItemThreadActionsBinding;", 0)};
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private static final String INTENT_EXTRA_CHANNEL_ID = "INTENT_EXTRA_CHANNEL_ID";
 
-    /* renamed from: binding$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
 
-    /* compiled from: WidgetChannelsListItemThreadActions.kt */
+    /* JADX INFO: compiled from: WidgetChannelsListItemThreadActions.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -83,10 +82,10 @@ public final class WidgetChannelsListItemThreadActions extends AppBottomSheet {
         }
     }
 
-    /* compiled from: WidgetChannelsListItemThreadActions.kt */
+    /* JADX INFO: compiled from: WidgetChannelsListItemThreadActions.kt */
     public static final /* data */ class Model {
 
-        /* renamed from: Companion, reason: from kotlin metadata */
+        /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
         public static final Companion INSTANCE = new Companion(null);
         private final boolean canManageThread;
         private final boolean canUnarchiveThread;
@@ -101,7 +100,7 @@ public final class WidgetChannelsListItemThreadActions extends AppBottomSheet {
         private final int notificationSetting;
         private final Channel parentChannel;
 
-        /* compiled from: WidgetChannelsListItemThreadActions.kt */
+        /* JADX INFO: compiled from: WidgetChannelsListItemThreadActions.kt */
         public static final class Companion {
             private Companion() {
             }
@@ -140,57 +139,57 @@ public final class WidgetChannelsListItemThreadActions extends AppBottomSheet {
             return model.copy((i2 & 1) != 0 ? model.meUser : meUser, (i2 & 2) != 0 ? model.channel : channel, (i2 & 4) != 0 ? model.guild : guild, (i2 & 8) != 0 ? model.parentChannel : channel2, (i2 & 16) != 0 ? model.notificationSetting : i, (i2 & 32) != 0 ? model.joinedThread : joinedThread, (i2 & 64) != 0 ? model.isActiveThread : z2, (i2 & 128) != 0 ? model.isModerator : z3, (i2 & 256) != 0 ? model.canManageThread : z4, (i2 & 512) != 0 ? model.canUnarchiveThread : z5, (i2 & 1024) != 0 ? model.isMuted : z6);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final MeUser getMeUser() {
             return this.meUser;
         }
 
-        /* renamed from: component10, reason: from getter */
+        /* JADX INFO: renamed from: component10, reason: from getter */
         public final boolean getCanUnarchiveThread() {
             return this.canUnarchiveThread;
         }
 
-        /* renamed from: component11, reason: from getter */
+        /* JADX INFO: renamed from: component11, reason: from getter */
         public final boolean getIsMuted() {
             return this.isMuted;
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final Channel getChannel() {
             return this.channel;
         }
 
-        /* renamed from: component3, reason: from getter */
+        /* JADX INFO: renamed from: component3, reason: from getter */
         public final Guild getGuild() {
             return this.guild;
         }
 
-        /* renamed from: component4, reason: from getter */
+        /* JADX INFO: renamed from: component4, reason: from getter */
         public final Channel getParentChannel() {
             return this.parentChannel;
         }
 
-        /* renamed from: component5, reason: from getter */
+        /* JADX INFO: renamed from: component5, reason: from getter */
         public final int getNotificationSetting() {
             return this.notificationSetting;
         }
 
-        /* renamed from: component6, reason: from getter */
+        /* JADX INFO: renamed from: component6, reason: from getter */
         public final StoreThreadsJoined.JoinedThread getJoinedThread() {
             return this.joinedThread;
         }
 
-        /* renamed from: component7, reason: from getter */
+        /* JADX INFO: renamed from: component7, reason: from getter */
         public final boolean getIsActiveThread() {
             return this.isActiveThread;
         }
 
-        /* renamed from: component8, reason: from getter */
+        /* JADX INFO: renamed from: component8, reason: from getter */
         public final boolean getIsModerator() {
             return this.isModerator;
         }
 
-        /* renamed from: component9, reason: from getter */
+        /* JADX INFO: renamed from: component9, reason: from getter */
         public final boolean getCanManageThread() {
             return this.canManageThread;
         }
@@ -245,6 +244,21 @@ public final class WidgetChannelsListItemThreadActions extends AppBottomSheet {
         }
 
         /* JADX WARN: Multi-variable type inference failed */
+        /* JADX WARN: Type inference failed for: r1v11 */
+        /* JADX WARN: Type inference failed for: r1v12 */
+        /* JADX WARN: Type inference failed for: r1v13 */
+        /* JADX WARN: Type inference failed for: r1v14 */
+        /* JADX WARN: Type inference failed for: r1v16 */
+        /* JADX WARN: Type inference failed for: r1v17 */
+        /* JADX WARN: Type inference failed for: r1v18 */
+        /* JADX WARN: Type inference failed for: r1v19 */
+        /* JADX WARN: Type inference failed for: r1v3, types: [int] */
+        /* JADX WARN: Type inference failed for: r1v5, types: [int] */
+        /* JADX WARN: Type inference failed for: r1v7, types: [int] */
+        /* JADX WARN: Type inference failed for: r1v9, types: [int] */
+        /* JADX WARN: Type inference failed for: r2v11 */
+        /* JADX WARN: Type inference failed for: r2v12, types: [int] */
+        /* JADX WARN: Type inference failed for: r2v13 */
         public int hashCode() {
             MeUser meUser = this.meUser;
             int iHashCode = (meUser != null ? meUser.hashCode() : 0) * 31;
@@ -257,38 +271,38 @@ public final class WidgetChannelsListItemThreadActions extends AppBottomSheet {
             StoreThreadsJoined.JoinedThread joinedThread = this.joinedThread;
             int iHashCode5 = (iHashCode4 + (joinedThread != null ? joinedThread.hashCode() : 0)) * 31;
             boolean z2 = this.isActiveThread;
-            int i = z2;
-            if (z2 != 0) {
-                i = 1;
+            ?? r1 = z2;
+            if (z2) {
+                r1 = 1;
             }
-            int i2 = (iHashCode5 + i) * 31;
+            int i = (iHashCode5 + r1) * 31;
             boolean z3 = this.isModerator;
-            int i3 = z3;
-            if (z3 != 0) {
-                i3 = 1;
+            ?? r12 = z3;
+            if (z3) {
+                r12 = 1;
             }
-            int i4 = (i2 + i3) * 31;
+            int i2 = (i + r12) * 31;
             boolean z4 = this.canManageThread;
-            int i5 = z4;
-            if (z4 != 0) {
-                i5 = 1;
+            ?? r13 = z4;
+            if (z4) {
+                r13 = 1;
             }
-            int i6 = (i4 + i5) * 31;
+            int i3 = (i2 + r13) * 31;
             boolean z5 = this.canUnarchiveThread;
-            int i7 = z5;
-            if (z5 != 0) {
-                i7 = 1;
+            ?? r14 = z5;
+            if (z5) {
+                r14 = 1;
             }
-            int i8 = (i6 + i7) * 31;
+            int i4 = (i3 + r14) * 31;
             boolean z6 = this.isMuted;
-            return i8 + (z6 ? 1 : z6 ? 1 : 0);
+            return i4 + (z6 ? 1 : z6);
         }
 
         public final boolean isActiveThread() {
             return this.isActiveThread;
         }
 
-        /* renamed from: isDeveloper, reason: from getter */
+        /* JADX INFO: renamed from: isDeveloper, reason: from getter */
         public final boolean getIsDeveloper() {
             return this.isDeveloper;
         }
@@ -327,27 +341,27 @@ public final class WidgetChannelsListItemThreadActions extends AppBottomSheet {
         }
     }
 
-    /* compiled from: WidgetChannelsListItemThreadActions.kt */
-    /* renamed from: com.discord.widgets.channels.list.WidgetChannelsListItemThreadActions$bindSubscriptions$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.channels.list.WidgetChannelsListItemThreadActions$bindSubscriptions$1 */
+    /* JADX INFO: compiled from: WidgetChannelsListItemThreadActions.kt */
     public static final class C74631 extends Lambda implements Function1<Model, Unit> {
         public C74631() {
             super(1);
         }
 
         @Override // kotlin.jvm.functions.Function1
-        public /* bridge */ /* synthetic */ Unit invoke(Model model) throws Resources.NotFoundException {
+        public /* bridge */ /* synthetic */ Unit invoke(Model model) {
             invoke2(model);
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
-        public final void invoke2(Model model) throws Resources.NotFoundException {
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
+        public final void invoke2(Model model) {
             WidgetChannelsListItemThreadActions.access$configureUI(WidgetChannelsListItemThreadActions.this, model);
         }
     }
 
-    /* compiled from: WidgetChannelsListItemThreadActions.kt */
-    /* renamed from: com.discord.widgets.channels.list.WidgetChannelsListItemThreadActions$configureUI$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.channels.list.WidgetChannelsListItemThreadActions$configureUI$1 */
+    /* JADX INFO: compiled from: WidgetChannelsListItemThreadActions.kt */
     public static final class C74641 extends Lambda implements Function1<View, Unit> {
         public final /* synthetic */ Model $this_configureUI;
 
@@ -363,15 +377,15 @@ public final class WidgetChannelsListItemThreadActions extends AppBottomSheet {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(View view) {
             Intrinsics3.checkNotNullParameter(view, "it");
             StoreStream.INSTANCE.getMessageAck().ack(this.$this_configureUI.getChannel().getId(), false, true);
         }
     }
 
-    /* compiled from: WidgetChannelsListItemThreadActions.kt */
-    /* renamed from: com.discord.widgets.channels.list.WidgetChannelsListItemThreadActions$configureUI$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.channels.list.WidgetChannelsListItemThreadActions$configureUI$2 */
+    /* JADX INFO: compiled from: WidgetChannelsListItemThreadActions.kt */
     public static final class C74652 extends Lambda implements Function1<View, Unit> {
         public final /* synthetic */ Model $this_configureUI;
 
@@ -387,7 +401,7 @@ public final class WidgetChannelsListItemThreadActions extends AppBottomSheet {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(View view) {
             Intrinsics3.checkNotNullParameter(view, "it");
             if (this.$this_configureUI.isMuted()) {
@@ -405,8 +419,8 @@ public final class WidgetChannelsListItemThreadActions extends AppBottomSheet {
         }
     }
 
-    /* compiled from: WidgetChannelsListItemThreadActions.kt */
-    /* renamed from: com.discord.widgets.channels.list.WidgetChannelsListItemThreadActions$configureUI$3 */
+    /* JADX INFO: renamed from: com.discord.widgets.channels.list.WidgetChannelsListItemThreadActions$configureUI$3 */
+    /* JADX INFO: compiled from: WidgetChannelsListItemThreadActions.kt */
     public static final class ViewOnClickListenerC74663 implements View.OnClickListener {
         public final /* synthetic */ Model $this_configureUI;
 
@@ -423,8 +437,8 @@ public final class WidgetChannelsListItemThreadActions extends AppBottomSheet {
         }
     }
 
-    /* compiled from: WidgetChannelsListItemThreadActions.kt */
-    /* renamed from: com.discord.widgets.channels.list.WidgetChannelsListItemThreadActions$configureUI$4 */
+    /* JADX INFO: renamed from: com.discord.widgets.channels.list.WidgetChannelsListItemThreadActions$configureUI$4 */
+    /* JADX INFO: compiled from: WidgetChannelsListItemThreadActions.kt */
     public static final class C74674 extends Lambda implements Function1<View, Unit> {
         public final /* synthetic */ Model $this_configureUI;
 
@@ -440,7 +454,7 @@ public final class WidgetChannelsListItemThreadActions extends AppBottomSheet {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(View view) {
             Intrinsics3.checkNotNullParameter(view, "it");
             WidgetThreadSettings.Companion companion = WidgetThreadSettings.INSTANCE;
@@ -451,8 +465,8 @@ public final class WidgetChannelsListItemThreadActions extends AppBottomSheet {
         }
     }
 
-    /* compiled from: WidgetChannelsListItemThreadActions.kt */
-    /* renamed from: com.discord.widgets.channels.list.WidgetChannelsListItemThreadActions$configureUI$5 */
+    /* JADX INFO: renamed from: com.discord.widgets.channels.list.WidgetChannelsListItemThreadActions$configureUI$5 */
+    /* JADX INFO: compiled from: WidgetChannelsListItemThreadActions.kt */
     public static final class C74685 extends Lambda implements Function1<View, Unit> {
         public final /* synthetic */ Model $this_configureUI;
 
@@ -468,7 +482,7 @@ public final class WidgetChannelsListItemThreadActions extends AppBottomSheet {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(View view) {
             Intrinsics3.checkNotNullParameter(view, "it");
             WidgetThreadArchiveActions.Companion companion = WidgetThreadArchiveActions.INSTANCE;
@@ -478,8 +492,8 @@ public final class WidgetChannelsListItemThreadActions extends AppBottomSheet {
         }
     }
 
-    /* compiled from: WidgetChannelsListItemThreadActions.kt */
-    /* renamed from: com.discord.widgets.channels.list.WidgetChannelsListItemThreadActions$configureUI$6 */
+    /* JADX INFO: renamed from: com.discord.widgets.channels.list.WidgetChannelsListItemThreadActions$configureUI$6 */
+    /* JADX INFO: compiled from: WidgetChannelsListItemThreadActions.kt */
     public static final class ViewOnClickListenerC74696 implements View.OnClickListener {
         public final /* synthetic */ Model $this_configureUI;
 
@@ -493,8 +507,8 @@ public final class WidgetChannelsListItemThreadActions extends AppBottomSheet {
         }
     }
 
-    /* compiled from: WidgetChannelsListItemThreadActions.kt */
-    /* renamed from: com.discord.widgets.channels.list.WidgetChannelsListItemThreadActions$configureUI$7 */
+    /* JADX INFO: renamed from: com.discord.widgets.channels.list.WidgetChannelsListItemThreadActions$configureUI$7 */
+    /* JADX INFO: compiled from: WidgetChannelsListItemThreadActions.kt */
     public static final class ViewOnClickListenerC74707 implements View.OnClickListener {
         public final /* synthetic */ Model $this_configureUI;
 
@@ -508,8 +522,8 @@ public final class WidgetChannelsListItemThreadActions extends AppBottomSheet {
         }
     }
 
-    /* compiled from: WidgetChannelsListItemThreadActions.kt */
-    /* renamed from: com.discord.widgets.channels.list.WidgetChannelsListItemThreadActions$configureUI$8 */
+    /* JADX INFO: renamed from: com.discord.widgets.channels.list.WidgetChannelsListItemThreadActions$configureUI$8 */
+    /* JADX INFO: compiled from: WidgetChannelsListItemThreadActions.kt */
     public static final class C74718 extends Lambda implements Function1<View, Unit> {
         public final /* synthetic */ Model $this_configureUI;
 
@@ -525,7 +539,7 @@ public final class WidgetChannelsListItemThreadActions extends AppBottomSheet {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(View view) {
             Intrinsics3.checkNotNullParameter(view, "it");
             Context context = view.getContext();
@@ -534,8 +548,8 @@ public final class WidgetChannelsListItemThreadActions extends AppBottomSheet {
         }
     }
 
-    /* compiled from: WidgetChannelsListItemThreadActions.kt */
-    /* renamed from: com.discord.widgets.channels.list.WidgetChannelsListItemThreadActions$leaveThread$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.channels.list.WidgetChannelsListItemThreadActions$leaveThread$1 */
+    /* JADX INFO: compiled from: WidgetChannelsListItemThreadActions.kt */
     public static final class C74721 extends Lambda implements Function1<Void, Unit> {
         public C74721() {
             super(1);
@@ -547,14 +561,14 @@ public final class WidgetChannelsListItemThreadActions extends AppBottomSheet {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Void r1) {
             WidgetChannelsListItemThreadActions.this.dismiss();
         }
     }
 
-    /* compiled from: WidgetChannelsListItemThreadActions.kt */
-    /* renamed from: com.discord.widgets.channels.list.WidgetChannelsListItemThreadActions$unarchiveThread$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.channels.list.WidgetChannelsListItemThreadActions$unarchiveThread$1 */
+    /* JADX INFO: compiled from: WidgetChannelsListItemThreadActions.kt */
     public static final class C74731 extends Lambda implements Function1<Error, Unit> {
         public C74731() {
             super(1);
@@ -566,7 +580,7 @@ public final class WidgetChannelsListItemThreadActions extends AppBottomSheet {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Error error) {
             Intrinsics3.checkNotNullParameter(error, "error");
             Error.Response response = error.getResponse();
@@ -576,8 +590,8 @@ public final class WidgetChannelsListItemThreadActions extends AppBottomSheet {
         }
     }
 
-    /* compiled from: WidgetChannelsListItemThreadActions.kt */
-    /* renamed from: com.discord.widgets.channels.list.WidgetChannelsListItemThreadActions$unarchiveThread$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.channels.list.WidgetChannelsListItemThreadActions$unarchiveThread$2 */
+    /* JADX INFO: compiled from: WidgetChannelsListItemThreadActions.kt */
     public static final class C74742 extends Lambda implements Function1<Channel, Unit> {
         public C74742() {
             super(1);
@@ -589,7 +603,7 @@ public final class WidgetChannelsListItemThreadActions extends AppBottomSheet {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Channel channel) {
             Intrinsics3.checkNotNullParameter(channel, "it");
             WidgetChannelsListItemThreadActions.this.dismiss();
@@ -601,7 +615,7 @@ public final class WidgetChannelsListItemThreadActions extends AppBottomSheet {
         this.binding = FragmentViewBindingDelegate3.viewBinding$default(this, WidgetChannelsListItemThreadActions3.INSTANCE, null, 2, null);
     }
 
-    public static final /* synthetic */ void access$configureUI(WidgetChannelsListItemThreadActions widgetChannelsListItemThreadActions, Model model) throws Resources.NotFoundException {
+    public static final /* synthetic */ void access$configureUI(WidgetChannelsListItemThreadActions widgetChannelsListItemThreadActions, Model model) {
         widgetChannelsListItemThreadActions.configureUI(model);
     }
 
@@ -613,7 +627,7 @@ public final class WidgetChannelsListItemThreadActions extends AppBottomSheet {
         widgetChannelsListItemThreadActions.unarchiveThread(channel, z2);
     }
 
-    private final void configureUI(Model model) throws Resources.NotFoundException {
+    private final void configureUI(Model model) {
         ThreadMetadata threadMetadata;
         ThreadMetadata threadMetadata2;
         if (model == null) {

@@ -2,7 +2,7 @@ package androidx.work.impl.constraints;
 
 import androidx.annotation.NonNull;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class NetworkState {
     private boolean mIsConnected;
     private boolean mIsMetered;

@@ -13,7 +13,7 @@ import java.util.Collections;
 import java.util.HashSet;
 import java.util.Set;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class MultiSelectListPreference extends DialogPreference {
     private CharSequence[] mEntries;
     private CharSequence[] mEntryValues;
@@ -128,7 +128,7 @@ public class MultiSelectListPreference extends DialogPreference {
         public static final Parcelable.Creator<SavedState> CREATOR = new C05071();
         public Set<String> mValues;
 
-        /* renamed from: androidx.preference.MultiSelectListPreference$SavedState$1 */
+        /* JADX INFO: renamed from: androidx.preference.MultiSelectListPreference$SavedState$1 */
         public static class C05071 implements Parcelable.Creator<SavedState> {
             @Override // android.os.Parcelable.Creator
             public /* bridge */ /* synthetic */ SavedState createFromParcel(Parcel parcel) {

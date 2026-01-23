@@ -12,57 +12,57 @@ import java.util.concurrent.atomic.AtomicReference;
 import p007b.p225i.p226a.p242c.p259f3.ConditionVariable;
 import p007b.p225i.p226a.p242c.p259f3.Util2;
 
-/* compiled from: AsynchronousMediaCodecBufferEnqueuer.java */
+/* JADX INFO: renamed from: b.i.a.c.y2.n, reason: use source file name */
+/* JADX INFO: compiled from: AsynchronousMediaCodecBufferEnqueuer.java */
+/* JADX INFO: loaded from: classes3.dex */
 @RequiresApi(23)
-/* renamed from: b.i.a.c.y2.n, reason: use source file name */
-/* loaded from: classes3.dex */
 public class AsynchronousMediaCodecBufferEnqueuer2 {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     @GuardedBy("MESSAGE_PARAMS_INSTANCE_POOL")
     public static final ArrayDeque<a> f9069a = new ArrayDeque<>();
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static final Object f9070b = new Object();
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final MediaCodec f9071c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final HandlerThread f9072d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public Handler f9073e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final AtomicReference<RuntimeException> f9074f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public final ConditionVariable f9075g;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public boolean f9076h;
 
-    /* compiled from: AsynchronousMediaCodecBufferEnqueuer.java */
-    /* renamed from: b.i.a.c.y2.n$a */
+    /* JADX INFO: renamed from: b.i.a.c.y2.n$a */
+    /* JADX INFO: compiled from: AsynchronousMediaCodecBufferEnqueuer.java */
     public static class a {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public int f9077a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public int f9078b;
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public int f9079c;
 
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         public final MediaCodec.CryptoInfo f9080d = new MediaCodec.CryptoInfo();
 
-        /* renamed from: e */
+        /* JADX INFO: renamed from: e */
         public long f9081e;
 
-        /* renamed from: f */
+        /* JADX INFO: renamed from: f */
         public int f9082f;
     }
 
@@ -75,7 +75,7 @@ public class AsynchronousMediaCodecBufferEnqueuer2 {
     }
 
     @Nullable
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static byte[] m3847b(@Nullable byte[] bArr, @Nullable byte[] bArr2) {
         if (bArr == null) {
             return bArr2;
@@ -88,7 +88,7 @@ public class AsynchronousMediaCodecBufferEnqueuer2 {
     }
 
     @Nullable
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public static int[] m3848c(@Nullable int[] iArr, @Nullable int[] iArr2) {
         if (iArr == null) {
             return iArr2;
@@ -100,7 +100,7 @@ public class AsynchronousMediaCodecBufferEnqueuer2 {
         return iArr2;
     }
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public static a m3849e() {
         ArrayDeque<a> arrayDeque = f9069a;
         synchronized (arrayDeque) {
@@ -111,7 +111,7 @@ public class AsynchronousMediaCodecBufferEnqueuer2 {
         }
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final void m3850a() throws InterruptedException {
         this.f9075g.m3025a();
         Handler handler = this.f9073e;
@@ -125,7 +125,7 @@ public class AsynchronousMediaCodecBufferEnqueuer2 {
         }
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public void m3851d() {
         if (this.f9076h) {
             try {
@@ -141,7 +141,7 @@ public class AsynchronousMediaCodecBufferEnqueuer2 {
         }
     }
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final void m3852f() {
         RuntimeException andSet = this.f9074f.getAndSet(null);
         if (andSet != null) {

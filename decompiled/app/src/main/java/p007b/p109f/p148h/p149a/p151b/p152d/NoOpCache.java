@@ -4,23 +4,23 @@ import android.graphics.Bitmap;
 import com.facebook.common.references.CloseableReference;
 import p007b.p109f.p148h.p149a.p151b.BitmapFrameCache;
 
-/* compiled from: NoOpCache.java */
-/* renamed from: b.f.h.a.b.d.d, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.f.h.a.b.d.d, reason: use source file name */
+/* JADX INFO: compiled from: NoOpCache.java */
+/* JADX INFO: loaded from: classes.dex */
 public class NoOpCache implements BitmapFrameCache {
     @Override // p007b.p109f.p148h.p149a.p151b.BitmapFrameCache
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public CloseableReference<Bitmap> mo1151a(int i, int i2, int i3) {
         return null;
     }
 
     @Override // p007b.p109f.p148h.p149a.p151b.BitmapFrameCache
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public void mo1152b(int i, CloseableReference<Bitmap> closeableReference, int i2) {
     }
 
     @Override // p007b.p109f.p148h.p149a.p151b.BitmapFrameCache
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public boolean mo1153c(int i) {
         return false;
     }
@@ -30,18 +30,18 @@ public class NoOpCache implements BitmapFrameCache {
     }
 
     @Override // p007b.p109f.p148h.p149a.p151b.BitmapFrameCache
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public CloseableReference<Bitmap> mo1154d(int i) {
         return null;
     }
 
     @Override // p007b.p109f.p148h.p149a.p151b.BitmapFrameCache
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public void mo1155e(int i, CloseableReference<Bitmap> closeableReference, int i2) {
     }
 
     @Override // p007b.p109f.p148h.p149a.p151b.BitmapFrameCache
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public CloseableReference<Bitmap> mo1156f(int i) {
         return null;
     }

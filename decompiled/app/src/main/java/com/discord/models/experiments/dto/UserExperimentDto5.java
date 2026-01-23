@@ -3,9 +3,9 @@ package com.discord.models.experiments.dto;
 import com.discord.models.domain.Model;
 import kotlin.jvm.internal.Ref$ObjectRef;
 
-/* compiled from: UserExperimentDto.kt */
-/* renamed from: com.discord.models.experiments.dto.UserExperimentDto$Parser$parse$4, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: com.discord.models.experiments.dto.UserExperimentDto$Parser$parse$4, reason: use source file name */
+/* JADX INFO: compiled from: UserExperimentDto.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class UserExperimentDto5 implements Runnable {
     public final /* synthetic */ Ref$ObjectRef $population;
     public final /* synthetic */ Model.JsonReader $reader;

@@ -14,56 +14,56 @@ import p007b.p109f.p161j.p182q.Postprocessor;
 import p007b.p109f.p161j.p182q.RepeatedPostprocessor;
 import p007b.p109f.p161j.p182q.RepeatedPostprocessorRunner;
 
-/* compiled from: PostprocessorProducer.java */
-/* renamed from: b.f.j.p.t0, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.f.j.p.t0, reason: use source file name */
+/* JADX INFO: compiled from: PostprocessorProducer.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class PostprocessorProducer implements Producer2<CloseableReference<CloseableImage>> {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final Producer2<CloseableReference<CloseableImage>> f4221a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final PlatformBitmapFactory f4222b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final Executor f4223c;
 
-    /* compiled from: PostprocessorProducer.java */
-    /* renamed from: b.f.j.p.t0$b */
+    /* JADX INFO: renamed from: b.f.j.p.t0$b */
+    /* JADX INFO: compiled from: PostprocessorProducer.java */
     public class b extends DelegatingConsumer<CloseableReference<CloseableImage>, CloseableReference<CloseableImage>> {
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public final ProducerListener2 f4224c;
 
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         public final ProducerContext f4225d;
 
-        /* renamed from: e */
+        /* JADX INFO: renamed from: e */
         public final Postprocessor f4226e;
 
-        /* renamed from: f */
+        /* JADX INFO: renamed from: f */
         public boolean f4227f;
 
-        /* renamed from: g */
+        /* JADX INFO: renamed from: g */
         public CloseableReference<CloseableImage> f4228g;
 
-        /* renamed from: h */
+        /* JADX INFO: renamed from: h */
         public int f4229h;
 
-        /* renamed from: i */
+        /* JADX INFO: renamed from: i */
         public boolean f4230i;
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public boolean f4231j;
 
-        /* compiled from: PostprocessorProducer.java */
-        /* renamed from: b.f.j.p.t0$b$a */
+        /* JADX INFO: renamed from: b.f.j.p.t0$b$a */
+        /* JADX INFO: compiled from: PostprocessorProducer.java */
         public class a extends BaseProducerContextCallbacks {
             public a(PostprocessorProducer postprocessorProducer) {
             }
 
             @Override // p007b.p109f.p161j.p181p.ProducerContextCallbacks
-            /* renamed from: a */
+            /* JADX INFO: renamed from: a */
             public void mo1438a() {
                 b bVar = b.this;
                 if (bVar.m1518o()) {
@@ -84,7 +84,7 @@ public class PostprocessorProducer implements Producer2<CloseableReference<Close
             producerContext.mo1448f(new a(PostprocessorProducer.this));
         }
 
-        /* renamed from: n */
+        /* JADX INFO: renamed from: n */
         public static void m1517n(b bVar, CloseableReference closeableReference, int i) {
             Objects.requireNonNull(bVar);
             AnimatableValueParser.m527i(Boolean.valueOf(CloseableReference.m8640y(closeableReference)));
@@ -117,7 +117,7 @@ public class PostprocessorProducer implements Producer2<CloseableReference<Close
         }
 
         @Override // p007b.p109f.p161j.p181p.DelegatingConsumer, p007b.p109f.p161j.p181p.BaseConsumer
-        /* renamed from: g */
+        /* JADX INFO: renamed from: g */
         public void mo1318g() {
             if (m1518o()) {
                 this.f4179b.mo1426d();
@@ -125,7 +125,7 @@ public class PostprocessorProducer implements Producer2<CloseableReference<Close
         }
 
         @Override // p007b.p109f.p161j.p181p.DelegatingConsumer, p007b.p109f.p161j.p181p.BaseConsumer
-        /* renamed from: h */
+        /* JADX INFO: renamed from: h */
         public void mo1319h(Throwable th) {
             if (m1518o()) {
                 this.f4179b.mo1425c(th);
@@ -133,7 +133,7 @@ public class PostprocessorProducer implements Producer2<CloseableReference<Close
         }
 
         @Override // p007b.p109f.p161j.p181p.BaseConsumer
-        /* renamed from: i */
+        /* JADX INFO: renamed from: i */
         public void mo1320i(Object obj, int i) {
             CloseableReference closeableReference = (CloseableReference) obj;
             if (!CloseableReference.m8640y(closeableReference)) {
@@ -160,7 +160,7 @@ public class PostprocessorProducer implements Producer2<CloseableReference<Close
             }
         }
 
-        /* renamed from: o */
+        /* JADX INFO: renamed from: o */
         public final boolean m1518o() {
             synchronized (this) {
                 if (this.f4227f) {
@@ -177,7 +177,7 @@ public class PostprocessorProducer implements Producer2<CloseableReference<Close
             }
         }
 
-        /* renamed from: p */
+        /* JADX INFO: renamed from: p */
         public final Map<String, String> m1519p(ProducerListener2 producerListener2, ProducerContext producerContext, Postprocessor postprocessor) {
             if (producerListener2.mo1360g(producerContext, "PostprocessorProducer")) {
                 return ImmutableMap.m967of("Postprocessor", postprocessor.getName());
@@ -186,7 +186,7 @@ public class PostprocessorProducer implements Producer2<CloseableReference<Close
         }
 
         /* JADX WARN: Removed duplicated region for block: B:12:0x0010  */
-        /* renamed from: q */
+        /* JADX INFO: renamed from: q */
         /*
             Code decompiled incorrectly, please refer to instructions dump.
         */
@@ -206,7 +206,7 @@ public class PostprocessorProducer implements Producer2<CloseableReference<Close
             this.f4179b.mo1424b(closeableReference, i);
         }
 
-        /* renamed from: r */
+        /* JADX INFO: renamed from: r */
         public final CloseableReference<CloseableImage> m1521r(CloseableImage closeableImage) {
             CloseableStaticBitmap closeableStaticBitmap = (CloseableStaticBitmap) closeableImage;
             CloseableReference<Bitmap> closeableReferenceProcess = this.f4226e.process(closeableStaticBitmap.f3887m, PostprocessorProducer.this.f4222b);
@@ -227,7 +227,7 @@ public class PostprocessorProducer implements Producer2<CloseableReference<Close
             }
         }
 
-        /* renamed from: s */
+        /* JADX INFO: renamed from: s */
         public final synchronized boolean m1522s() {
             if (this.f4227f || !this.f4230i || this.f4231j || !CloseableReference.m8640y(this.f4228g)) {
                 return false;
@@ -237,14 +237,14 @@ public class PostprocessorProducer implements Producer2<CloseableReference<Close
         }
     }
 
-    /* compiled from: PostprocessorProducer.java */
-    /* renamed from: b.f.j.p.t0$c */
+    /* JADX INFO: renamed from: b.f.j.p.t0$c */
+    /* JADX INFO: compiled from: PostprocessorProducer.java */
     public class c extends DelegatingConsumer<CloseableReference<CloseableImage>, CloseableReference<CloseableImage>> implements RepeatedPostprocessorRunner {
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public boolean f4234c;
 
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         public CloseableReference<CloseableImage> f4235d;
 
         public c(PostprocessorProducer postprocessorProducer, b bVar, RepeatedPostprocessor repeatedPostprocessor, ProducerContext producerContext, a aVar) {
@@ -256,7 +256,7 @@ public class PostprocessorProducer implements Producer2<CloseableReference<Close
         }
 
         @Override // p007b.p109f.p161j.p181p.DelegatingConsumer, p007b.p109f.p161j.p181p.BaseConsumer
-        /* renamed from: g */
+        /* JADX INFO: renamed from: g */
         public void mo1318g() {
             if (m1523n()) {
                 this.f4179b.mo1426d();
@@ -264,7 +264,7 @@ public class PostprocessorProducer implements Producer2<CloseableReference<Close
         }
 
         @Override // p007b.p109f.p161j.p181p.DelegatingConsumer, p007b.p109f.p161j.p181p.BaseConsumer
-        /* renamed from: h */
+        /* JADX INFO: renamed from: h */
         public void mo1319h(Throwable th) {
             if (m1523n()) {
                 this.f4179b.mo1425c(th);
@@ -272,7 +272,7 @@ public class PostprocessorProducer implements Producer2<CloseableReference<Close
         }
 
         @Override // p007b.p109f.p161j.p181p.BaseConsumer
-        /* renamed from: i */
+        /* JADX INFO: renamed from: i */
         public void mo1320i(Object obj, int i) {
             CloseableReference closeableReference = (CloseableReference) obj;
             if (BaseConsumer.m1420f(i)) {
@@ -301,7 +301,7 @@ public class PostprocessorProducer implements Producer2<CloseableReference<Close
             }
         }
 
-        /* renamed from: n */
+        /* JADX INFO: renamed from: n */
         public final boolean m1523n() {
             synchronized (this) {
                 if (this.f4234c) {
@@ -319,15 +319,15 @@ public class PostprocessorProducer implements Producer2<CloseableReference<Close
         }
     }
 
-    /* compiled from: PostprocessorProducer.java */
-    /* renamed from: b.f.j.p.t0$d */
+    /* JADX INFO: renamed from: b.f.j.p.t0$d */
+    /* JADX INFO: compiled from: PostprocessorProducer.java */
     public class d extends DelegatingConsumer<CloseableReference<CloseableImage>, CloseableReference<CloseableImage>> {
         public d(PostprocessorProducer postprocessorProducer, b bVar, a aVar) {
             super(bVar);
         }
 
         @Override // p007b.p109f.p161j.p181p.BaseConsumer
-        /* renamed from: i */
+        /* JADX INFO: renamed from: i */
         public void mo1320i(Object obj, int i) {
             CloseableReference closeableReference = (CloseableReference) obj;
             if (BaseConsumer.m1420f(i)) {
@@ -346,7 +346,7 @@ public class PostprocessorProducer implements Producer2<CloseableReference<Close
     }
 
     @Override // p007b.p109f.p161j.p181p.Producer2
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public void mo1417b(Consumer2<CloseableReference<CloseableImage>> consumer2, ProducerContext producerContext) {
         ProducerListener2 producerListener2Mo1457o = producerContext.mo1457o();
         Postprocessor postprocessor = producerContext.mo1447e().f19601s;

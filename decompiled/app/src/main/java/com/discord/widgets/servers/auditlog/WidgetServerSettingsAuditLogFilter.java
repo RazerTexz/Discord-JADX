@@ -41,14 +41,14 @@ import p637j0.p642l.p647e.ScalarSynchronousObservable;
 import p658rx.Observable;
 import p658rx.subjects.BehaviorSubject;
 
-/* compiled from: WidgetServerSettingsAuditLogFilter.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetServerSettingsAuditLogFilter.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetServerSettingsAuditLogFilter extends AppFragment {
     private static final String ARG_FILTER_TYPE = "ARG_FILTER_TYPE";
     private static final String ARG_GUILD_ID = "ARG_GUILD_ID";
     private WidgetServerSettingsAuditLogFilterAdapter adapter;
 
-    /* renamed from: binding$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
     private final BehaviorSubject<String> filterPublisher;
     private Integer filterType;
@@ -56,10 +56,10 @@ public final class WidgetServerSettingsAuditLogFilter extends AppFragment {
     private final Function0<Unit> onFilterSelectedCallback;
     public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetServerSettingsAuditLogFilter.class, "binding", "getBinding()Lcom/discord/databinding/WidgetAuditLogFilterBinding;", 0)};
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
 
-    /* compiled from: WidgetServerSettingsAuditLogFilter.kt */
+    /* JADX INFO: compiled from: WidgetServerSettingsAuditLogFilter.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -76,14 +76,14 @@ public final class WidgetServerSettingsAuditLogFilter extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetServerSettingsAuditLogFilter.kt */
+    /* JADX INFO: compiled from: WidgetServerSettingsAuditLogFilter.kt */
     public static final class Model {
 
-        /* renamed from: Companion, reason: from kotlin metadata */
+        /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
         public static final Companion INSTANCE = new Companion(null);
         private final List<MGRecyclerDataPayload> listItems;
 
-        /* compiled from: WidgetServerSettingsAuditLogFilter.kt */
+        /* JADX INFO: compiled from: WidgetServerSettingsAuditLogFilter.kt */
         public static final class Companion {
             private Companion() {
             }
@@ -121,8 +121,8 @@ public final class WidgetServerSettingsAuditLogFilter extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetServerSettingsAuditLogFilter.kt */
-    /* renamed from: com.discord.widgets.servers.auditlog.WidgetServerSettingsAuditLogFilter$onViewBoundOrOnResume$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.auditlog.WidgetServerSettingsAuditLogFilter$onViewBoundOrOnResume$1 */
+    /* JADX INFO: compiled from: WidgetServerSettingsAuditLogFilter.kt */
     public static final class C93381 extends Lambda implements Function1<Error, Unit> {
         public C93381() {
             super(1);
@@ -134,7 +134,7 @@ public final class WidgetServerSettingsAuditLogFilter extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Error error) {
             Intrinsics3.checkNotNullParameter(error, "it");
             FragmentActivity activity = WidgetServerSettingsAuditLogFilter.this.getActivity();
@@ -144,8 +144,8 @@ public final class WidgetServerSettingsAuditLogFilter extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetServerSettingsAuditLogFilter.kt */
-    /* renamed from: com.discord.widgets.servers.auditlog.WidgetServerSettingsAuditLogFilter$onViewBoundOrOnResume$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.auditlog.WidgetServerSettingsAuditLogFilter$onViewBoundOrOnResume$2 */
+    /* JADX INFO: compiled from: WidgetServerSettingsAuditLogFilter.kt */
     public static final /* synthetic */ class C93392 extends FunctionReferenceImpl implements Function1<Model, Unit> {
         public C93392(WidgetServerSettingsAuditLogFilter widgetServerSettingsAuditLogFilter) {
             super(1, widgetServerSettingsAuditLogFilter, WidgetServerSettingsAuditLogFilter.class, "configureUI", "configureUI(Lcom/discord/widgets/servers/auditlog/WidgetServerSettingsAuditLogFilter$Model;)V", 0);
@@ -157,15 +157,15 @@ public final class WidgetServerSettingsAuditLogFilter extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Model model) {
             Intrinsics3.checkNotNullParameter(model, "p1");
             WidgetServerSettingsAuditLogFilter.access$configureUI((WidgetServerSettingsAuditLogFilter) this.receiver, model);
         }
     }
 
-    /* compiled from: WidgetServerSettingsAuditLogFilter.kt */
-    /* renamed from: com.discord.widgets.servers.auditlog.WidgetServerSettingsAuditLogFilter$onViewCreated$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.auditlog.WidgetServerSettingsAuditLogFilter$onViewCreated$2 */
+    /* JADX INFO: compiled from: WidgetServerSettingsAuditLogFilter.kt */
     public static final class C93412 extends Lambda implements Function1<Editable, Unit> {
         public C93412() {
             super(1);
@@ -177,7 +177,7 @@ public final class WidgetServerSettingsAuditLogFilter extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Editable editable) {
             Intrinsics3.checkNotNullParameter(editable, "it");
             WidgetServerSettingsAuditLogFilter.access$getFilterPublisher$p(WidgetServerSettingsAuditLogFilter.this).onNext(editable.toString());

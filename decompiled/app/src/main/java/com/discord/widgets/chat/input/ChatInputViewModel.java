@@ -96,11 +96,11 @@ import p658rx.Observable;
 import p658rx.functions.Func2;
 import p658rx.subjects.PublishSubject;
 
-/* compiled from: ChatInputViewModel.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: ChatInputViewModel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class ChatInputViewModel extends AppViewModel<ViewState> {
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private final PublishSubject<Event> eventSubject;
     private final boolean isEmojiAutocompleteUpsellEnabled;
@@ -119,8 +119,8 @@ public final class ChatInputViewModel extends AppViewModel<ViewState> {
     private final StoreUserSettings storeUserSettings;
     private boolean useTimeoutUpdateInterval;
 
-    /* compiled from: ChatInputViewModel.kt */
-    /* renamed from: com.discord.widgets.chat.input.ChatInputViewModel$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.input.ChatInputViewModel$1 */
+    /* JADX INFO: compiled from: ChatInputViewModel.kt */
     public static final /* synthetic */ class C76831 extends FunctionReferenceImpl implements Function1<StoreState, Unit> {
         public C76831(ChatInputViewModel chatInputViewModel) {
             super(1, chatInputViewModel, ChatInputViewModel.class, "handleStoreState", "handleStoreState(Lcom/discord/widgets/chat/input/ChatInputViewModel$StoreState;)V", 0);
@@ -132,15 +132,15 @@ public final class ChatInputViewModel extends AppViewModel<ViewState> {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(StoreState storeState) {
             Intrinsics3.checkNotNullParameter(storeState, "p1");
             ChatInputViewModel.access$handleStoreState((ChatInputViewModel) this.receiver, storeState);
         }
     }
 
-    /* compiled from: ChatInputViewModel.kt */
-    /* renamed from: com.discord.widgets.chat.input.ChatInputViewModel$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.input.ChatInputViewModel$2 */
+    /* JADX INFO: compiled from: ChatInputViewModel.kt */
     public static final /* synthetic */ class C76842 extends FunctionReferenceImpl implements Function1<StoreChat.Event, Unit> {
         public C76842(ChatInputViewModel chatInputViewModel) {
             super(1, chatInputViewModel, ChatInputViewModel.class, "handleStoreChatEvent", "handleStoreChatEvent(Lcom/discord/stores/StoreChat$Event;)V", 0);
@@ -152,14 +152,14 @@ public final class ChatInputViewModel extends AppViewModel<ViewState> {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(StoreChat.Event event) {
             Intrinsics3.checkNotNullParameter(event, "p1");
             ChatInputViewModel.access$handleStoreChatEvent((ChatInputViewModel) this.receiver, event);
         }
     }
 
-    /* compiled from: ChatInputViewModel.kt */
+    /* JADX INFO: compiled from: ChatInputViewModel.kt */
     public static final /* data */ class AttachmentContext {
         private final List<Float> attachmentSizes;
         private final ArrayList<Attachment<?>> attachments;
@@ -181,6 +181,7 @@ public final class ChatInputViewModel extends AppViewModel<ViewState> {
             this.maxAttachmentSizeMB = f2;
         }
 
+        /* JADX WARN: Multi-variable type inference failed */
         public static /* synthetic */ AttachmentContext copy$default(AttachmentContext attachmentContext, ArrayList arrayList, boolean z2, boolean z3, boolean z4, List list, float f, float f2, int i, Object obj) {
             if ((i & 1) != 0) {
                 arrayList = attachmentContext.attachments;
@@ -215,17 +216,17 @@ public final class ChatInputViewModel extends AppViewModel<ViewState> {
             return this.attachments;
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final boolean getHasImage() {
             return this.hasImage;
         }
 
-        /* renamed from: component3, reason: from getter */
+        /* JADX INFO: renamed from: component3, reason: from getter */
         public final boolean getHasVideo() {
             return this.hasVideo;
         }
 
-        /* renamed from: component4, reason: from getter */
+        /* JADX INFO: renamed from: component4, reason: from getter */
         public final boolean getHasGif() {
             return this.hasGif;
         }
@@ -234,12 +235,12 @@ public final class ChatInputViewModel extends AppViewModel<ViewState> {
             return this.attachmentSizes;
         }
 
-        /* renamed from: component6, reason: from getter */
+        /* JADX INFO: renamed from: component6, reason: from getter */
         public final float getCurrentFileSizeMB() {
             return this.currentFileSizeMB;
         }
 
-        /* renamed from: component7, reason: from getter */
+        /* JADX INFO: renamed from: component7, reason: from getter */
         public final float getMaxAttachmentSizeMB() {
             return this.maxAttachmentSizeMB;
         }
@@ -290,25 +291,34 @@ public final class ChatInputViewModel extends AppViewModel<ViewState> {
         }
 
         /* JADX WARN: Multi-variable type inference failed */
+        /* JADX WARN: Type inference failed for: r2v1, types: [int] */
+        /* JADX WARN: Type inference failed for: r2v3, types: [int] */
+        /* JADX WARN: Type inference failed for: r2v6 */
+        /* JADX WARN: Type inference failed for: r2v7 */
+        /* JADX WARN: Type inference failed for: r2v8 */
+        /* JADX WARN: Type inference failed for: r2v9 */
+        /* JADX WARN: Type inference failed for: r3v0 */
+        /* JADX WARN: Type inference failed for: r3v1, types: [int] */
+        /* JADX WARN: Type inference failed for: r3v2 */
         public int hashCode() {
             ArrayList<Attachment<?>> arrayList = this.attachments;
             int iHashCode = (arrayList != null ? arrayList.hashCode() : 0) * 31;
             boolean z2 = this.hasImage;
-            int i = z2;
-            if (z2 != 0) {
-                i = 1;
+            ?? r2 = z2;
+            if (z2) {
+                r2 = 1;
             }
-            int i2 = (iHashCode + i) * 31;
+            int i = (iHashCode + r2) * 31;
             boolean z3 = this.hasVideo;
-            int i3 = z3;
-            if (z3 != 0) {
-                i3 = 1;
+            ?? r22 = z3;
+            if (z3) {
+                r22 = 1;
             }
-            int i4 = (i2 + i3) * 31;
+            int i2 = (i + r22) * 31;
             boolean z4 = this.hasGif;
-            int i5 = (i4 + (z4 ? 1 : z4 ? 1 : 0)) * 31;
+            int i3 = (i2 + (z4 ? 1 : z4)) * 31;
             List<Float> list = this.attachmentSizes;
-            return Float.floatToIntBits(this.maxAttachmentSizeMB) + ((Float.floatToIntBits(this.currentFileSizeMB) + ((i5 + (list != null ? list.hashCode() : 0)) * 31)) * 31);
+            return Float.floatToIntBits(this.maxAttachmentSizeMB) + ((Float.floatToIntBits(this.currentFileSizeMB) + ((i3 + (list != null ? list.hashCode() : 0)) * 31)) * 31);
         }
 
         public String toString() {
@@ -331,7 +341,7 @@ public final class ChatInputViewModel extends AppViewModel<ViewState> {
         }
     }
 
-    /* compiled from: ChatInputViewModel.kt */
+    /* JADX INFO: compiled from: ChatInputViewModel.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -377,10 +387,10 @@ public final class ChatInputViewModel extends AppViewModel<ViewState> {
         }
     }
 
-    /* compiled from: ChatInputViewModel.kt */
+    /* JADX INFO: compiled from: ChatInputViewModel.kt */
     public static abstract class Event {
 
-        /* compiled from: ChatInputViewModel.kt */
+        /* JADX INFO: compiled from: ChatInputViewModel.kt */
         public static final /* data */ class AppendChatText extends Event {
             private final String text;
 
@@ -398,7 +408,7 @@ public final class ChatInputViewModel extends AppViewModel<ViewState> {
                 return appendChatText.copy(str);
             }
 
-            /* renamed from: component1, reason: from getter */
+            /* JADX INFO: renamed from: component1, reason: from getter */
             public final String getText() {
                 return this.text;
             }
@@ -432,7 +442,7 @@ public final class ChatInputViewModel extends AppViewModel<ViewState> {
             }
         }
 
-        /* compiled from: ChatInputViewModel.kt */
+        /* JADX INFO: compiled from: ChatInputViewModel.kt */
         public static final class CommandInputsInvalid extends Event {
             public static final CommandInputsInvalid INSTANCE = new CommandInputsInvalid();
 
@@ -441,7 +451,7 @@ public final class ChatInputViewModel extends AppViewModel<ViewState> {
             }
         }
 
-        /* compiled from: ChatInputViewModel.kt */
+        /* JADX INFO: compiled from: ChatInputViewModel.kt */
         public static final class EmptyThreadName extends Event {
             public static final EmptyThreadName INSTANCE = new EmptyThreadName();
 
@@ -450,7 +460,7 @@ public final class ChatInputViewModel extends AppViewModel<ViewState> {
             }
         }
 
-        /* compiled from: ChatInputViewModel.kt */
+        /* JADX INFO: compiled from: ChatInputViewModel.kt */
         public static final class FailedDeliveryToRecipient extends Event {
             public static final FailedDeliveryToRecipient INSTANCE = new FailedDeliveryToRecipient();
 
@@ -459,7 +469,7 @@ public final class ChatInputViewModel extends AppViewModel<ViewState> {
             }
         }
 
-        /* compiled from: ChatInputViewModel.kt */
+        /* JADX INFO: compiled from: ChatInputViewModel.kt */
         public static final /* data */ class FilesTooLarge extends Event {
             private final List<Attachment<?>> attachments;
             private final float currentFileSizeMB;
@@ -487,26 +497,27 @@ public final class ChatInputViewModel extends AppViewModel<ViewState> {
                 this.onResendCompressed = function0;
             }
 
+            /* JADX WARN: Multi-variable type inference failed */
             public static /* synthetic */ FilesTooLarge copy$default(FilesTooLarge filesTooLarge, int i, float f, float f2, boolean z2, List list, boolean z3, boolean z4, boolean z5, Function0 function0, int i2, Object obj) {
                 return filesTooLarge.copy((i2 & 1) != 0 ? filesTooLarge.maxFileSizeMB : i, (i2 & 2) != 0 ? filesTooLarge.currentFileSizeMB : f, (i2 & 4) != 0 ? filesTooLarge.maxAttachmentSizeMB : f2, (i2 & 8) != 0 ? filesTooLarge.isUserPremium : z2, (i2 & 16) != 0 ? filesTooLarge.attachments : list, (i2 & 32) != 0 ? filesTooLarge.hasImage : z3, (i2 & 64) != 0 ? filesTooLarge.hasVideo : z4, (i2 & 128) != 0 ? filesTooLarge.hasGif : z5, (i2 & 256) != 0 ? filesTooLarge.onResendCompressed : function0);
             }
 
-            /* renamed from: component1, reason: from getter */
+            /* JADX INFO: renamed from: component1, reason: from getter */
             public final int getMaxFileSizeMB() {
                 return this.maxFileSizeMB;
             }
 
-            /* renamed from: component2, reason: from getter */
+            /* JADX INFO: renamed from: component2, reason: from getter */
             public final float getCurrentFileSizeMB() {
                 return this.currentFileSizeMB;
             }
 
-            /* renamed from: component3, reason: from getter */
+            /* JADX INFO: renamed from: component3, reason: from getter */
             public final float getMaxAttachmentSizeMB() {
                 return this.maxAttachmentSizeMB;
             }
 
-            /* renamed from: component4, reason: from getter */
+            /* JADX INFO: renamed from: component4, reason: from getter */
             public final boolean getIsUserPremium() {
                 return this.isUserPremium;
             }
@@ -515,17 +526,17 @@ public final class ChatInputViewModel extends AppViewModel<ViewState> {
                 return this.attachments;
             }
 
-            /* renamed from: component6, reason: from getter */
+            /* JADX INFO: renamed from: component6, reason: from getter */
             public final boolean getHasImage() {
                 return this.hasImage;
             }
 
-            /* renamed from: component7, reason: from getter */
+            /* JADX INFO: renamed from: component7, reason: from getter */
             public final boolean getHasVideo() {
                 return this.hasVideo;
             }
 
-            /* renamed from: component8, reason: from getter */
+            /* JADX INFO: renamed from: component8, reason: from getter */
             public final boolean getHasGif() {
                 return this.hasGif;
             }
@@ -583,32 +594,44 @@ public final class ChatInputViewModel extends AppViewModel<ViewState> {
             }
 
             /* JADX WARN: Multi-variable type inference failed */
+            /* JADX WARN: Type inference failed for: r1v10, types: [int] */
+            /* JADX WARN: Type inference failed for: r1v12, types: [int] */
+            /* JADX WARN: Type inference failed for: r1v15 */
+            /* JADX WARN: Type inference failed for: r1v16 */
+            /* JADX WARN: Type inference failed for: r1v18 */
+            /* JADX WARN: Type inference failed for: r1v19 */
+            /* JADX WARN: Type inference failed for: r1v20 */
+            /* JADX WARN: Type inference failed for: r1v21 */
+            /* JADX WARN: Type inference failed for: r1v5, types: [int] */
+            /* JADX WARN: Type inference failed for: r2v0 */
+            /* JADX WARN: Type inference failed for: r2v1, types: [int] */
+            /* JADX WARN: Type inference failed for: r2v2 */
             public int hashCode() {
                 int iFloatToIntBits = (Float.floatToIntBits(this.maxAttachmentSizeMB) + ((Float.floatToIntBits(this.currentFileSizeMB) + (this.maxFileSizeMB * 31)) * 31)) * 31;
                 boolean z2 = this.isUserPremium;
-                int i = z2;
-                if (z2 != 0) {
-                    i = 1;
+                ?? r1 = z2;
+                if (z2) {
+                    r1 = 1;
                 }
-                int i2 = (iFloatToIntBits + i) * 31;
+                int i = (iFloatToIntBits + r1) * 31;
                 List<Attachment<?>> list = this.attachments;
-                int iHashCode = (i2 + (list != null ? list.hashCode() : 0)) * 31;
+                int iHashCode = (i + (list != null ? list.hashCode() : 0)) * 31;
                 boolean z3 = this.hasImage;
-                int i3 = z3;
-                if (z3 != 0) {
-                    i3 = 1;
+                ?? r12 = z3;
+                if (z3) {
+                    r12 = 1;
                 }
-                int i4 = (iHashCode + i3) * 31;
+                int i2 = (iHashCode + r12) * 31;
                 boolean z4 = this.hasVideo;
-                int i5 = z4;
-                if (z4 != 0) {
-                    i5 = 1;
+                ?? r13 = z4;
+                if (z4) {
+                    r13 = 1;
                 }
-                int i6 = (i4 + i5) * 31;
+                int i3 = (i2 + r13) * 31;
                 boolean z5 = this.hasGif;
-                int i7 = (i6 + (z5 ? 1 : z5 ? 1 : 0)) * 31;
+                int i4 = (i3 + (z5 ? 1 : z5)) * 31;
                 Function0<Unit> function0 = this.onResendCompressed;
-                return i7 + (function0 != null ? function0.hashCode() : 0);
+                return i4 + (function0 != null ? function0.hashCode() : 0);
             }
 
             public final boolean isUserPremium() {
@@ -639,7 +662,7 @@ public final class ChatInputViewModel extends AppViewModel<ViewState> {
             }
         }
 
-        /* compiled from: ChatInputViewModel.kt */
+        /* JADX INFO: compiled from: ChatInputViewModel.kt */
         public static final /* data */ class MessageTooLong extends Event {
             private final int currentCharacterCount;
             private final int maxCharacterCount;
@@ -660,12 +683,12 @@ public final class ChatInputViewModel extends AppViewModel<ViewState> {
                 return messageTooLong.copy(i, i2);
             }
 
-            /* renamed from: component1, reason: from getter */
+            /* JADX INFO: renamed from: component1, reason: from getter */
             public final int getCurrentCharacterCount() {
                 return this.currentCharacterCount;
             }
 
-            /* renamed from: component2, reason: from getter */
+            /* JADX INFO: renamed from: component2, reason: from getter */
             public final int getMaxCharacterCount() {
                 return this.maxCharacterCount;
             }
@@ -705,7 +728,7 @@ public final class ChatInputViewModel extends AppViewModel<ViewState> {
             }
         }
 
-        /* compiled from: ChatInputViewModel.kt */
+        /* JADX INFO: compiled from: ChatInputViewModel.kt */
         public static final /* data */ class SetChatText extends Event {
             private final String text;
 
@@ -723,7 +746,7 @@ public final class ChatInputViewModel extends AppViewModel<ViewState> {
                 return setChatText.copy(str);
             }
 
-            /* renamed from: component1, reason: from getter */
+            /* JADX INFO: renamed from: component1, reason: from getter */
             public final String getText() {
                 return this.text;
             }
@@ -757,7 +780,7 @@ public final class ChatInputViewModel extends AppViewModel<ViewState> {
             }
         }
 
-        /* compiled from: ChatInputViewModel.kt */
+        /* JADX INFO: compiled from: ChatInputViewModel.kt */
         public static final /* data */ class ShowPremiumUpsell extends Event {
             private final int bodyResId;
             private final int headerResId;
@@ -791,27 +814,27 @@ public final class ChatInputViewModel extends AppViewModel<ViewState> {
                 return showPremiumUpsell.copy(i, i5, i6, z4, z3);
             }
 
-            /* renamed from: component1, reason: from getter */
+            /* JADX INFO: renamed from: component1, reason: from getter */
             public final int getPage() {
                 return this.page;
             }
 
-            /* renamed from: component2, reason: from getter */
+            /* JADX INFO: renamed from: component2, reason: from getter */
             public final int getHeaderResId() {
                 return this.headerResId;
             }
 
-            /* renamed from: component3, reason: from getter */
+            /* JADX INFO: renamed from: component3, reason: from getter */
             public final int getBodyResId() {
                 return this.bodyResId;
             }
 
-            /* renamed from: component4, reason: from getter */
+            /* JADX INFO: renamed from: component4, reason: from getter */
             public final boolean getShowOtherPages() {
                 return this.showOtherPages;
             }
 
-            /* renamed from: component5, reason: from getter */
+            /* JADX INFO: renamed from: component5, reason: from getter */
             public final boolean getShowLearnMore() {
                 return this.showLearnMore;
             }
@@ -852,16 +875,22 @@ public final class ChatInputViewModel extends AppViewModel<ViewState> {
             }
 
             /* JADX WARN: Multi-variable type inference failed */
+            /* JADX WARN: Type inference failed for: r1v3, types: [int] */
+            /* JADX WARN: Type inference failed for: r1v5 */
+            /* JADX WARN: Type inference failed for: r1v6 */
+            /* JADX WARN: Type inference failed for: r2v0 */
+            /* JADX WARN: Type inference failed for: r2v1, types: [int] */
+            /* JADX WARN: Type inference failed for: r2v2 */
             public int hashCode() {
                 int i = ((((this.page * 31) + this.headerResId) * 31) + this.bodyResId) * 31;
                 boolean z2 = this.showOtherPages;
-                int i2 = z2;
-                if (z2 != 0) {
-                    i2 = 1;
+                ?? r1 = z2;
+                if (z2) {
+                    r1 = 1;
                 }
-                int i3 = (i + i2) * 31;
+                int i2 = (i + r1) * 31;
                 boolean z3 = this.showLearnMore;
-                return i3 + (z3 ? 1 : z3 ? 1 : 0);
+                return i2 + (z3 ? 1 : z3);
             }
 
             public String toString() {
@@ -887,7 +916,7 @@ public final class ChatInputViewModel extends AppViewModel<ViewState> {
             }
         }
 
-        /* compiled from: ChatInputViewModel.kt */
+        /* JADX INFO: compiled from: ChatInputViewModel.kt */
         public static final class ThreadDraftClosed extends Event {
             public static final ThreadDraftClosed INSTANCE = new ThreadDraftClosed();
 
@@ -904,10 +933,10 @@ public final class ChatInputViewModel extends AppViewModel<ViewState> {
         }
     }
 
-    /* compiled from: ChatInputViewModel.kt */
+    /* JADX INFO: compiled from: ChatInputViewModel.kt */
     public static abstract class StoreState {
 
-        /* compiled from: ChatInputViewModel.kt */
+        /* JADX INFO: compiled from: ChatInputViewModel.kt */
         public static final /* data */ class Loaded extends StoreState {
             private final Channel channel;
             private final Long channelPermissions;
@@ -925,7 +954,7 @@ public final class ChatInputViewModel extends AppViewModel<ViewState> {
             private final StoreThreadDraft.ThreadDraftState threadDraftState;
             private final GuildVerificationLevel verificationLevelTriggered;
 
-            /* compiled from: ChatInputViewModel.kt */
+            /* JADX INFO: compiled from: ChatInputViewModel.kt */
             public static final /* data */ class PendingReply {
                 private final StorePendingReplies.PendingReply pendingReply;
                 private final User repliedAuthor;
@@ -951,17 +980,17 @@ public final class ChatInputViewModel extends AppViewModel<ViewState> {
                     return pendingReply.copy(pendingReply2, user, guildMember);
                 }
 
-                /* renamed from: component1, reason: from getter */
+                /* JADX INFO: renamed from: component1, reason: from getter */
                 public final StorePendingReplies.PendingReply getPendingReply() {
                     return this.pendingReply;
                 }
 
-                /* renamed from: component2, reason: from getter */
+                /* JADX INFO: renamed from: component2, reason: from getter */
                 public final User getRepliedAuthor() {
                     return this.repliedAuthor;
                 }
 
-                /* renamed from: component3, reason: from getter */
+                /* JADX INFO: renamed from: component3, reason: from getter */
                 public final GuildMember getRepliedAuthorGuildMember() {
                     return this.repliedAuthorGuildMember;
                 }
@@ -1043,77 +1072,77 @@ public final class ChatInputViewModel extends AppViewModel<ViewState> {
                 return loaded.copy((i & 1) != 0 ? loaded.channel : channel, (i & 2) != 0 ? loaded.me : meUser, (i & 4) != 0 ? loaded.editingMessage : editingMessage, (i & 8) != 0 ? loaded.relationshipType : num, (i & 16) != 0 ? loaded.channelPermissions : l, (i & 32) != 0 ? loaded.verificationLevelTriggered : guildVerificationLevel, (i & 64) != 0 ? loaded.isLurking : z2, (i & 128) != 0 ? loaded.isOnCooldown : z3, (i & 256) != 0 ? loaded.guild : guild, (i & 512) != 0 ? loaded.pendingReply : pendingReply, (i & 1024) != 0 ? loaded.selectedThreadDraft : threadDraft, (i & 2048) != 0 ? loaded.meGuildMember : guildMember, (i & 4096) != 0 ? loaded.guildJoinRequest : guildJoinRequest, (i & 8192) != 0 ? loaded.threadDraftState : threadDraftState, (i & 16384) != 0 ? loaded.isForumPostCreateInProgress : z4);
             }
 
-            /* renamed from: component1, reason: from getter */
+            /* JADX INFO: renamed from: component1, reason: from getter */
             public final Channel getChannel() {
                 return this.channel;
             }
 
-            /* renamed from: component10, reason: from getter */
+            /* JADX INFO: renamed from: component10, reason: from getter */
             public final PendingReply getPendingReply() {
                 return this.pendingReply;
             }
 
-            /* renamed from: component11, reason: from getter */
+            /* JADX INFO: renamed from: component11, reason: from getter */
             public final StoreChannelsSelected.ResolvedSelectedChannel.ThreadDraft getSelectedThreadDraft() {
                 return this.selectedThreadDraft;
             }
 
-            /* renamed from: component12, reason: from getter */
+            /* JADX INFO: renamed from: component12, reason: from getter */
             public final GuildMember getMeGuildMember() {
                 return this.meGuildMember;
             }
 
-            /* renamed from: component13, reason: from getter */
+            /* JADX INFO: renamed from: component13, reason: from getter */
             public final GuildJoinRequest getGuildJoinRequest() {
                 return this.guildJoinRequest;
             }
 
-            /* renamed from: component14, reason: from getter */
+            /* JADX INFO: renamed from: component14, reason: from getter */
             public final StoreThreadDraft.ThreadDraftState getThreadDraftState() {
                 return this.threadDraftState;
             }
 
-            /* renamed from: component15, reason: from getter */
+            /* JADX INFO: renamed from: component15, reason: from getter */
             public final boolean getIsForumPostCreateInProgress() {
                 return this.isForumPostCreateInProgress;
             }
 
-            /* renamed from: component2, reason: from getter */
+            /* JADX INFO: renamed from: component2, reason: from getter */
             public final MeUser getMe() {
                 return this.me;
             }
 
-            /* renamed from: component3, reason: from getter */
+            /* JADX INFO: renamed from: component3, reason: from getter */
             public final StoreChat.EditingMessage getEditingMessage() {
                 return this.editingMessage;
             }
 
-            /* renamed from: component4, reason: from getter */
+            /* JADX INFO: renamed from: component4, reason: from getter */
             public final Integer getRelationshipType() {
                 return this.relationshipType;
             }
 
-            /* renamed from: component5, reason: from getter */
+            /* JADX INFO: renamed from: component5, reason: from getter */
             public final Long getChannelPermissions() {
                 return this.channelPermissions;
             }
 
-            /* renamed from: component6, reason: from getter */
+            /* JADX INFO: renamed from: component6, reason: from getter */
             public final GuildVerificationLevel getVerificationLevelTriggered() {
                 return this.verificationLevelTriggered;
             }
 
-            /* renamed from: component7, reason: from getter */
+            /* JADX INFO: renamed from: component7, reason: from getter */
             public final boolean getIsLurking() {
                 return this.isLurking;
             }
 
-            /* renamed from: component8, reason: from getter */
+            /* JADX INFO: renamed from: component8, reason: from getter */
             public final boolean getIsOnCooldown() {
                 return this.isOnCooldown;
             }
 
-            /* renamed from: component9, reason: from getter */
+            /* JADX INFO: renamed from: component9, reason: from getter */
             public final Guild getGuild() {
                 return this.guild;
             }
@@ -1186,6 +1215,15 @@ public final class ChatInputViewModel extends AppViewModel<ViewState> {
             }
 
             /* JADX WARN: Multi-variable type inference failed */
+            /* JADX WARN: Type inference failed for: r2v16, types: [int] */
+            /* JADX WARN: Type inference failed for: r2v18, types: [int] */
+            /* JADX WARN: Type inference failed for: r2v40 */
+            /* JADX WARN: Type inference failed for: r2v41 */
+            /* JADX WARN: Type inference failed for: r2v47 */
+            /* JADX WARN: Type inference failed for: r2v48 */
+            /* JADX WARN: Type inference failed for: r3v0 */
+            /* JADX WARN: Type inference failed for: r3v1, types: [int] */
+            /* JADX WARN: Type inference failed for: r3v2 */
             public int hashCode() {
                 Channel channel = this.channel;
                 int iHashCode = (channel != null ? channel.hashCode() : 0) * 31;
@@ -1200,19 +1238,19 @@ public final class ChatInputViewModel extends AppViewModel<ViewState> {
                 GuildVerificationLevel guildVerificationLevel = this.verificationLevelTriggered;
                 int iHashCode6 = (iHashCode5 + (guildVerificationLevel != null ? guildVerificationLevel.hashCode() : 0)) * 31;
                 boolean z2 = this.isLurking;
-                int i = z2;
-                if (z2 != 0) {
-                    i = 1;
+                ?? r2 = z2;
+                if (z2) {
+                    r2 = 1;
                 }
-                int i2 = (iHashCode6 + i) * 31;
+                int i = (iHashCode6 + r2) * 31;
                 boolean z3 = this.isOnCooldown;
-                int i3 = z3;
-                if (z3 != 0) {
-                    i3 = 1;
+                ?? r22 = z3;
+                if (z3) {
+                    r22 = 1;
                 }
-                int i4 = (i2 + i3) * 31;
+                int i2 = (i + r22) * 31;
                 Guild guild = this.guild;
-                int iHashCode7 = (i4 + (guild != null ? guild.hashCode() : 0)) * 31;
+                int iHashCode7 = (i2 + (guild != null ? guild.hashCode() : 0)) * 31;
                 PendingReply pendingReply = this.pendingReply;
                 int iHashCode8 = (iHashCode7 + (pendingReply != null ? pendingReply.hashCode() : 0)) * 31;
                 StoreChannelsSelected.ResolvedSelectedChannel.ThreadDraft threadDraft = this.selectedThreadDraft;
@@ -1224,7 +1262,7 @@ public final class ChatInputViewModel extends AppViewModel<ViewState> {
                 StoreThreadDraft.ThreadDraftState threadDraftState = this.threadDraftState;
                 int iHashCode12 = (iHashCode11 + (threadDraftState != null ? threadDraftState.hashCode() : 0)) * 31;
                 boolean z4 = this.isForumPostCreateInProgress;
-                return iHashCode12 + (z4 ? 1 : z4 ? 1 : 0);
+                return iHashCode12 + (z4 ? 1 : z4);
             }
 
             public final boolean isForumPostCreateInProgress() {
@@ -1273,7 +1311,7 @@ public final class ChatInputViewModel extends AppViewModel<ViewState> {
             }
         }
 
-        /* compiled from: ChatInputViewModel.kt */
+        /* JADX INFO: compiled from: ChatInputViewModel.kt */
         public static final class Loading extends StoreState {
             public static final Loading INSTANCE = new Loading();
 
@@ -1290,10 +1328,10 @@ public final class ChatInputViewModel extends AppViewModel<ViewState> {
         }
     }
 
-    /* compiled from: ChatInputViewModel.kt */
+    /* JADX INFO: compiled from: ChatInputViewModel.kt */
     public static abstract class ViewState {
 
-        /* compiled from: ChatInputViewModel.kt */
+        /* JADX INFO: compiled from: ChatInputViewModel.kt */
         public static final /* data */ class Loaded extends ViewState {
             private final boolean ableToSendMessage;
             private final Channel channel;
@@ -1322,10 +1360,10 @@ public final class ChatInputViewModel extends AppViewModel<ViewState> {
             private final long timeoutLeftMs;
             private final GuildVerificationLevel verificationLevelTriggered;
 
-            /* compiled from: ChatInputViewModel.kt */
+            /* JADX INFO: compiled from: ChatInputViewModel.kt */
             public static abstract class PendingReplyState {
 
-                /* compiled from: ChatInputViewModel.kt */
+                /* JADX INFO: compiled from: ChatInputViewModel.kt */
                 public static final class Hide extends PendingReplyState {
                     public static final Hide INSTANCE = new Hide();
 
@@ -1334,7 +1372,7 @@ public final class ChatInputViewModel extends AppViewModel<ViewState> {
                     }
                 }
 
-                /* compiled from: ChatInputViewModel.kt */
+                /* JADX INFO: compiled from: ChatInputViewModel.kt */
                 public static final /* data */ class Replying extends PendingReplyState {
                     private final MessageReference messageReference;
                     private final User repliedAuthor;
@@ -1376,27 +1414,27 @@ public final class ChatInputViewModel extends AppViewModel<ViewState> {
                         return replying.copy(messageReference, z4, z5, user2, guildMember);
                     }
 
-                    /* renamed from: component1, reason: from getter */
+                    /* JADX INFO: renamed from: component1, reason: from getter */
                     public final MessageReference getMessageReference() {
                         return this.messageReference;
                     }
 
-                    /* renamed from: component2, reason: from getter */
+                    /* JADX INFO: renamed from: component2, reason: from getter */
                     public final boolean getShouldMention() {
                         return this.shouldMention;
                     }
 
-                    /* renamed from: component3, reason: from getter */
+                    /* JADX INFO: renamed from: component3, reason: from getter */
                     public final boolean getShowMentionToggle() {
                         return this.showMentionToggle;
                     }
 
-                    /* renamed from: component4, reason: from getter */
+                    /* JADX INFO: renamed from: component4, reason: from getter */
                     public final User getRepliedAuthor() {
                         return this.repliedAuthor;
                     }
 
-                    /* renamed from: component5, reason: from getter */
+                    /* JADX INFO: renamed from: component5, reason: from getter */
                     public final GuildMember getRepliedAuthorGuildMember() {
                         return this.repliedAuthorGuildMember;
                     }
@@ -1439,19 +1477,25 @@ public final class ChatInputViewModel extends AppViewModel<ViewState> {
                     }
 
                     /* JADX WARN: Multi-variable type inference failed */
+                    /* JADX WARN: Type inference failed for: r2v1, types: [int] */
+                    /* JADX WARN: Type inference failed for: r2v8 */
+                    /* JADX WARN: Type inference failed for: r2v9 */
+                    /* JADX WARN: Type inference failed for: r3v0 */
+                    /* JADX WARN: Type inference failed for: r3v1, types: [int] */
+                    /* JADX WARN: Type inference failed for: r3v2 */
                     public int hashCode() {
                         MessageReference messageReference = this.messageReference;
                         int iHashCode = (messageReference != null ? messageReference.hashCode() : 0) * 31;
                         boolean z2 = this.shouldMention;
-                        int i = z2;
-                        if (z2 != 0) {
-                            i = 1;
+                        ?? r2 = z2;
+                        if (z2) {
+                            r2 = 1;
                         }
-                        int i2 = (iHashCode + i) * 31;
+                        int i = (iHashCode + r2) * 31;
                         boolean z3 = this.showMentionToggle;
-                        int i3 = (i2 + (z3 ? 1 : z3 ? 1 : 0)) * 31;
+                        int i2 = (i + (z3 ? 1 : z3)) * 31;
                         User user = this.repliedAuthor;
-                        int iHashCode2 = (i3 + (user != null ? user.hashCode() : 0)) * 31;
+                        int iHashCode2 = (i2 + (user != null ? user.hashCode() : 0)) * 31;
                         GuildMember guildMember = this.repliedAuthorGuildMember;
                         return iHashCode2 + (guildMember != null ? guildMember.hashCode() : 0);
                     }
@@ -1519,132 +1563,132 @@ public final class ChatInputViewModel extends AppViewModel<ViewState> {
                 return loaded.copy((i2 & 1) != 0 ? loaded.channel : channel, (i2 & 2) != 0 ? loaded.channelId : j, (i2 & 4) != 0 ? loaded.me : meUser, (i2 & 8) != 0 ? loaded.meGuildMember : guildMember, (i2 & 16) != 0 ? loaded.editingMessage : editingMessage, (i2 & 32) != 0 ? loaded.ableToSendMessage : z2, (i2 & 64) != 0 ? loaded.verificationLevelTriggered : guildVerificationLevel, (i2 & 128) != 0 ? loaded.isLurking : z3, (i2 & 256) != 0 ? loaded.isSystemDM : z4, (i2 & 512) != 0 ? loaded.isOnCooldown : z5, (i2 & 1024) != 0 ? loaded.maxFileSizeMB : i, (i2 & 2048) != 0 ? loaded.shouldShowFollow : z6, (i2 & 4096) != 0 ? loaded.pendingReplyState : pendingReplyState, (i2 & 8192) != 0 ? loaded.shouldBadgeChatInput : z7, (i2 & 16384) != 0 ? loaded.isBlocked : z8, (i2 & 32768) != 0 ? loaded.isInputShowing : z9, (i2 & 65536) != 0 ? loaded.isVerificationLevelTriggered : z10, (i2 & 131072) != 0 ? loaded.isEditing : z11, (i2 & 262144) != 0 ? loaded.isReplying : z12, (i2 & 524288) != 0 ? loaded.isCommunicationDisabled : z13, (i2 & 1048576) != 0 ? loaded.timeoutLeftMs : j2, (i2 & 2097152) != 0 ? loaded.selectedThreadDraft : threadDraft, (4194304 & i2) != 0 ? loaded.shouldShowVerificationGate : z14, (i2 & 8388608) != 0 ? loaded.joinRequestStatus : applicationStatus, (i2 & 16777216) != 0 ? loaded.threadDraftState : threadDraftState, (i2 & 33554432) != 0 ? loaded.showCreateThreadOption : z15);
             }
 
-            /* renamed from: component1, reason: from getter */
+            /* JADX INFO: renamed from: component1, reason: from getter */
             public final Channel getChannel() {
                 return this.channel;
             }
 
-            /* renamed from: component10, reason: from getter */
+            /* JADX INFO: renamed from: component10, reason: from getter */
             public final boolean getIsOnCooldown() {
                 return this.isOnCooldown;
             }
 
-            /* renamed from: component11, reason: from getter */
+            /* JADX INFO: renamed from: component11, reason: from getter */
             public final int getMaxFileSizeMB() {
                 return this.maxFileSizeMB;
             }
 
-            /* renamed from: component12, reason: from getter */
+            /* JADX INFO: renamed from: component12, reason: from getter */
             public final boolean getShouldShowFollow() {
                 return this.shouldShowFollow;
             }
 
-            /* renamed from: component13, reason: from getter */
+            /* JADX INFO: renamed from: component13, reason: from getter */
             public final PendingReplyState getPendingReplyState() {
                 return this.pendingReplyState;
             }
 
-            /* renamed from: component14, reason: from getter */
+            /* JADX INFO: renamed from: component14, reason: from getter */
             public final boolean getShouldBadgeChatInput() {
                 return this.shouldBadgeChatInput;
             }
 
-            /* renamed from: component15, reason: from getter */
+            /* JADX INFO: renamed from: component15, reason: from getter */
             public final boolean getIsBlocked() {
                 return this.isBlocked;
             }
 
-            /* renamed from: component16, reason: from getter */
+            /* JADX INFO: renamed from: component16, reason: from getter */
             public final boolean getIsInputShowing() {
                 return this.isInputShowing;
             }
 
-            /* renamed from: component17, reason: from getter */
+            /* JADX INFO: renamed from: component17, reason: from getter */
             public final boolean getIsVerificationLevelTriggered() {
                 return this.isVerificationLevelTriggered;
             }
 
-            /* renamed from: component18, reason: from getter */
+            /* JADX INFO: renamed from: component18, reason: from getter */
             public final boolean getIsEditing() {
                 return this.isEditing;
             }
 
-            /* renamed from: component19, reason: from getter */
+            /* JADX INFO: renamed from: component19, reason: from getter */
             public final boolean getIsReplying() {
                 return this.isReplying;
             }
 
-            /* renamed from: component2, reason: from getter */
+            /* JADX INFO: renamed from: component2, reason: from getter */
             public final long getChannelId() {
                 return this.channelId;
             }
 
-            /* renamed from: component20, reason: from getter */
+            /* JADX INFO: renamed from: component20, reason: from getter */
             public final boolean getIsCommunicationDisabled() {
                 return this.isCommunicationDisabled;
             }
 
-            /* renamed from: component21, reason: from getter */
+            /* JADX INFO: renamed from: component21, reason: from getter */
             public final long getTimeoutLeftMs() {
                 return this.timeoutLeftMs;
             }
 
-            /* renamed from: component22, reason: from getter */
+            /* JADX INFO: renamed from: component22, reason: from getter */
             public final StoreChannelsSelected.ResolvedSelectedChannel.ThreadDraft getSelectedThreadDraft() {
                 return this.selectedThreadDraft;
             }
 
-            /* renamed from: component23, reason: from getter */
+            /* JADX INFO: renamed from: component23, reason: from getter */
             public final boolean getShouldShowVerificationGate() {
                 return this.shouldShowVerificationGate;
             }
 
-            /* renamed from: component24, reason: from getter */
+            /* JADX INFO: renamed from: component24, reason: from getter */
             public final ApplicationStatus getJoinRequestStatus() {
                 return this.joinRequestStatus;
             }
 
-            /* renamed from: component25, reason: from getter */
+            /* JADX INFO: renamed from: component25, reason: from getter */
             public final StoreThreadDraft.ThreadDraftState getThreadDraftState() {
                 return this.threadDraftState;
             }
 
-            /* renamed from: component26, reason: from getter */
+            /* JADX INFO: renamed from: component26, reason: from getter */
             public final boolean getShowCreateThreadOption() {
                 return this.showCreateThreadOption;
             }
 
-            /* renamed from: component3, reason: from getter */
+            /* JADX INFO: renamed from: component3, reason: from getter */
             public final MeUser getMe() {
                 return this.me;
             }
 
-            /* renamed from: component4, reason: from getter */
+            /* JADX INFO: renamed from: component4, reason: from getter */
             public final GuildMember getMeGuildMember() {
                 return this.meGuildMember;
             }
 
-            /* renamed from: component5, reason: from getter */
+            /* JADX INFO: renamed from: component5, reason: from getter */
             public final StoreChat.EditingMessage getEditingMessage() {
                 return this.editingMessage;
             }
 
-            /* renamed from: component6, reason: from getter */
+            /* JADX INFO: renamed from: component6, reason: from getter */
             public final boolean getAbleToSendMessage() {
                 return this.ableToSendMessage;
             }
 
-            /* renamed from: component7, reason: from getter */
+            /* JADX INFO: renamed from: component7, reason: from getter */
             public final GuildVerificationLevel getVerificationLevelTriggered() {
                 return this.verificationLevelTriggered;
             }
 
-            /* renamed from: component8, reason: from getter */
+            /* JADX INFO: renamed from: component8, reason: from getter */
             public final boolean getIsLurking() {
                 return this.isLurking;
             }
 
-            /* renamed from: component9, reason: from getter */
+            /* JADX INFO: renamed from: component9, reason: from getter */
             public final boolean getIsSystemDM() {
                 return this.isSystemDM;
             }
@@ -1737,6 +1781,48 @@ public final class ChatInputViewModel extends AppViewModel<ViewState> {
             }
 
             /* JADX WARN: Multi-variable type inference failed */
+            /* JADX WARN: Type inference failed for: r0v14, types: [int] */
+            /* JADX WARN: Type inference failed for: r0v19, types: [int] */
+            /* JADX WARN: Type inference failed for: r0v21, types: [int] */
+            /* JADX WARN: Type inference failed for: r0v23, types: [int] */
+            /* JADX WARN: Type inference failed for: r0v26, types: [int] */
+            /* JADX WARN: Type inference failed for: r0v31, types: [int] */
+            /* JADX WARN: Type inference failed for: r0v33, types: [int] */
+            /* JADX WARN: Type inference failed for: r0v35, types: [int] */
+            /* JADX WARN: Type inference failed for: r0v37, types: [int] */
+            /* JADX WARN: Type inference failed for: r0v39, types: [int] */
+            /* JADX WARN: Type inference failed for: r0v41, types: [int] */
+            /* JADX WARN: Type inference failed for: r0v43, types: [int] */
+            /* JADX WARN: Type inference failed for: r0v56 */
+            /* JADX WARN: Type inference failed for: r0v57 */
+            /* JADX WARN: Type inference failed for: r0v58 */
+            /* JADX WARN: Type inference failed for: r0v59 */
+            /* JADX WARN: Type inference failed for: r0v60 */
+            /* JADX WARN: Type inference failed for: r0v61 */
+            /* JADX WARN: Type inference failed for: r0v62 */
+            /* JADX WARN: Type inference failed for: r0v64 */
+            /* JADX WARN: Type inference failed for: r0v65 */
+            /* JADX WARN: Type inference failed for: r0v66 */
+            /* JADX WARN: Type inference failed for: r0v67 */
+            /* JADX WARN: Type inference failed for: r0v69 */
+            /* JADX WARN: Type inference failed for: r0v74 */
+            /* JADX WARN: Type inference failed for: r0v75 */
+            /* JADX WARN: Type inference failed for: r0v76 */
+            /* JADX WARN: Type inference failed for: r0v77 */
+            /* JADX WARN: Type inference failed for: r0v78 */
+            /* JADX WARN: Type inference failed for: r0v79 */
+            /* JADX WARN: Type inference failed for: r0v80 */
+            /* JADX WARN: Type inference failed for: r0v81 */
+            /* JADX WARN: Type inference failed for: r0v82 */
+            /* JADX WARN: Type inference failed for: r0v83 */
+            /* JADX WARN: Type inference failed for: r0v84 */
+            /* JADX WARN: Type inference failed for: r0v85 */
+            /* JADX WARN: Type inference failed for: r2v44, types: [int] */
+            /* JADX WARN: Type inference failed for: r2v50 */
+            /* JADX WARN: Type inference failed for: r2v52 */
+            /* JADX WARN: Type inference failed for: r3v0 */
+            /* JADX WARN: Type inference failed for: r3v1, types: [int] */
+            /* JADX WARN: Type inference failed for: r3v2 */
             public int hashCode() {
                 Channel channel = this.channel;
                 int iM3a = (C0002b.m3a(this.channelId) + ((channel != null ? channel.hashCode() : 0) * 31)) * 31;
@@ -1747,95 +1833,95 @@ public final class ChatInputViewModel extends AppViewModel<ViewState> {
                 StoreChat.EditingMessage editingMessage = this.editingMessage;
                 int iHashCode3 = (iHashCode2 + (editingMessage != null ? editingMessage.hashCode() : 0)) * 31;
                 boolean z2 = this.ableToSendMessage;
-                int i = z2;
-                if (z2 != 0) {
-                    i = 1;
+                ?? r0 = z2;
+                if (z2) {
+                    r0 = 1;
                 }
-                int i2 = (iHashCode3 + i) * 31;
+                int i = (iHashCode3 + r0) * 31;
                 GuildVerificationLevel guildVerificationLevel = this.verificationLevelTriggered;
-                int iHashCode4 = (i2 + (guildVerificationLevel != null ? guildVerificationLevel.hashCode() : 0)) * 31;
+                int iHashCode4 = (i + (guildVerificationLevel != null ? guildVerificationLevel.hashCode() : 0)) * 31;
                 boolean z3 = this.isLurking;
-                int i3 = z3;
-                if (z3 != 0) {
-                    i3 = 1;
+                ?? r02 = z3;
+                if (z3) {
+                    r02 = 1;
                 }
-                int i4 = (iHashCode4 + i3) * 31;
+                int i2 = (iHashCode4 + r02) * 31;
                 boolean z4 = this.isSystemDM;
-                int i5 = z4;
-                if (z4 != 0) {
-                    i5 = 1;
+                ?? r03 = z4;
+                if (z4) {
+                    r03 = 1;
                 }
-                int i6 = (i4 + i5) * 31;
+                int i3 = (i2 + r03) * 31;
                 boolean z5 = this.isOnCooldown;
-                int i7 = z5;
-                if (z5 != 0) {
-                    i7 = 1;
+                ?? r04 = z5;
+                if (z5) {
+                    r04 = 1;
                 }
-                int i8 = (((i6 + i7) * 31) + this.maxFileSizeMB) * 31;
+                int i4 = (((i3 + r04) * 31) + this.maxFileSizeMB) * 31;
                 boolean z6 = this.shouldShowFollow;
-                int i9 = z6;
-                if (z6 != 0) {
-                    i9 = 1;
+                ?? r05 = z6;
+                if (z6) {
+                    r05 = 1;
                 }
-                int i10 = (i8 + i9) * 31;
+                int i5 = (i4 + r05) * 31;
                 PendingReplyState pendingReplyState = this.pendingReplyState;
-                int iHashCode5 = (i10 + (pendingReplyState != null ? pendingReplyState.hashCode() : 0)) * 31;
+                int iHashCode5 = (i5 + (pendingReplyState != null ? pendingReplyState.hashCode() : 0)) * 31;
                 boolean z7 = this.shouldBadgeChatInput;
-                int i11 = z7;
-                if (z7 != 0) {
-                    i11 = 1;
+                ?? r06 = z7;
+                if (z7) {
+                    r06 = 1;
                 }
-                int i12 = (iHashCode5 + i11) * 31;
+                int i6 = (iHashCode5 + r06) * 31;
                 boolean z8 = this.isBlocked;
-                int i13 = z8;
-                if (z8 != 0) {
-                    i13 = 1;
+                ?? r07 = z8;
+                if (z8) {
+                    r07 = 1;
                 }
-                int i14 = (i12 + i13) * 31;
+                int i7 = (i6 + r07) * 31;
                 boolean z9 = this.isInputShowing;
-                int i15 = z9;
-                if (z9 != 0) {
-                    i15 = 1;
+                ?? r08 = z9;
+                if (z9) {
+                    r08 = 1;
                 }
-                int i16 = (i14 + i15) * 31;
+                int i8 = (i7 + r08) * 31;
                 boolean z10 = this.isVerificationLevelTriggered;
-                int i17 = z10;
-                if (z10 != 0) {
-                    i17 = 1;
+                ?? r09 = z10;
+                if (z10) {
+                    r09 = 1;
                 }
-                int i18 = (i16 + i17) * 31;
+                int i9 = (i8 + r09) * 31;
                 boolean z11 = this.isEditing;
-                int i19 = z11;
-                if (z11 != 0) {
-                    i19 = 1;
+                ?? r010 = z11;
+                if (z11) {
+                    r010 = 1;
                 }
-                int i20 = (i18 + i19) * 31;
+                int i10 = (i9 + r010) * 31;
                 boolean z12 = this.isReplying;
-                int i21 = z12;
-                if (z12 != 0) {
-                    i21 = 1;
+                ?? r011 = z12;
+                if (z12) {
+                    r011 = 1;
                 }
-                int i22 = (i20 + i21) * 31;
+                int i11 = (i10 + r011) * 31;
                 boolean z13 = this.isCommunicationDisabled;
-                int i23 = z13;
-                if (z13 != 0) {
-                    i23 = 1;
+                ?? r012 = z13;
+                if (z13) {
+                    r012 = 1;
                 }
-                int iM3a2 = (C0002b.m3a(this.timeoutLeftMs) + ((i22 + i23) * 31)) * 31;
+                int iM3a2 = (C0002b.m3a(this.timeoutLeftMs) + ((i11 + r012) * 31)) * 31;
                 StoreChannelsSelected.ResolvedSelectedChannel.ThreadDraft threadDraft = this.selectedThreadDraft;
                 int iHashCode6 = (iM3a2 + (threadDraft != null ? threadDraft.hashCode() : 0)) * 31;
                 boolean z14 = this.shouldShowVerificationGate;
-                int i24 = z14;
-                if (z14 != 0) {
-                    i24 = 1;
+                ?? r2 = z14;
+                if (z14) {
+                    r2 = 1;
                 }
-                int i25 = (iHashCode6 + i24) * 31;
+                int i12 = (iHashCode6 + r2) * 31;
                 ApplicationStatus applicationStatus = this.joinRequestStatus;
-                int iHashCode7 = (i25 + (applicationStatus != null ? applicationStatus.hashCode() : 0)) * 31;
+                int iHashCode7 = (i12 + (applicationStatus != null ? applicationStatus.hashCode() : 0)) * 31;
                 StoreThreadDraft.ThreadDraftState threadDraftState = this.threadDraftState;
                 int iHashCode8 = (iHashCode7 + (threadDraftState != null ? threadDraftState.hashCode() : 0)) * 31;
                 boolean z15 = this.showCreateThreadOption;
-                return iHashCode8 + (z15 ? 1 : z15 ? 1 : 0);
+                return iHashCode8 + (z15 ? 1 : z15);
             }
 
             public final boolean isBlocked() {
@@ -1930,7 +2016,7 @@ public final class ChatInputViewModel extends AppViewModel<ViewState> {
             }
         }
 
-        /* compiled from: ChatInputViewModel.kt */
+        /* JADX INFO: compiled from: ChatInputViewModel.kt */
         public static final class Loading extends ViewState {
             public static final Loading INSTANCE = new Loading();
 
@@ -1962,8 +2048,8 @@ public final class ChatInputViewModel extends AppViewModel<ViewState> {
         }
     }
 
-    /* compiled from: ChatInputViewModel.kt */
-    /* renamed from: com.discord.widgets.chat.input.ChatInputViewModel$createAndGotoThread$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.input.ChatInputViewModel$createAndGotoThread$1 */
+    /* JADX INFO: compiled from: ChatInputViewModel.kt */
     public static final class C76881<T, R> implements Func1<Channel, Observable<? extends Channel>> {
         public C76881() {
         }
@@ -1973,7 +2059,7 @@ public final class ChatInputViewModel extends AppViewModel<ViewState> {
             return call2(channel);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final Observable<? extends Channel> call2(Channel channel) {
             Observable<R> observableM11083G = ChatInputViewModel.access$getStoreChannels$p(ChatInputViewModel.this).observeChannel(channel.getId()).m11118y(ObservableExtensionsKt.C68871.INSTANCE).m11083G(ObservableExtensionsKt.C68882.INSTANCE);
             Intrinsics3.checkNotNullExpressionValue(observableM11083G, "filter { it != null }.map { it!! }");
@@ -1981,8 +2067,8 @@ public final class ChatInputViewModel extends AppViewModel<ViewState> {
         }
     }
 
-    /* compiled from: ChatInputViewModel.kt */
-    /* renamed from: com.discord.widgets.chat.input.ChatInputViewModel$createAndGotoThread$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.input.ChatInputViewModel$createAndGotoThread$2 */
+    /* JADX INFO: compiled from: ChatInputViewModel.kt */
     public static final class C76892 extends Lambda implements Function1<Channel, Unit> {
         public final /* synthetic */ ViewState.Loaded $loadedViewState;
         public final /* synthetic */ Function1 $onThreadCreated;
@@ -2000,7 +2086,7 @@ public final class ChatInputViewModel extends AppViewModel<ViewState> {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Channel channel) {
             if (channel != null) {
                 StoreStream.INSTANCE.getSlowMode().onThreadCreated(this.$loadedViewState.getChannelId());
@@ -2013,8 +2099,8 @@ public final class ChatInputViewModel extends AppViewModel<ViewState> {
         }
     }
 
-    /* compiled from: ChatInputViewModel.kt */
-    /* renamed from: com.discord.widgets.chat.input.ChatInputViewModel$createAndGotoThread$3 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.input.ChatInputViewModel$createAndGotoThread$3 */
+    /* JADX INFO: compiled from: ChatInputViewModel.kt */
     public static final class C76903 extends Lambda implements Function1<Error, Unit> {
         public final /* synthetic */ Context $context;
         public final /* synthetic */ ViewState.Loaded $loadedViewState;
@@ -2032,15 +2118,15 @@ public final class ChatInputViewModel extends AppViewModel<ViewState> {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Error error) {
             Intrinsics3.checkNotNullParameter(error, "error");
             ThreadUtils.INSTANCE.handleThreadCreateError(this.$context, error, this.$loadedViewState.getChannelId());
         }
     }
 
-    /* compiled from: ChatInputViewModel.kt */
-    /* renamed from: com.discord.widgets.chat.input.ChatInputViewModel$observeChatInputViewState$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.input.ChatInputViewModel$observeChatInputViewState$1 */
+    /* JADX INFO: compiled from: ChatInputViewModel.kt */
     public static final class C76911<T, R> implements Func1<Long, Long> {
         public C76911() {
         }
@@ -2050,7 +2136,7 @@ public final class ChatInputViewModel extends AppViewModel<ViewState> {
             return call2(l);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final Long call2(Long l) {
             if (ChatInputViewModel.access$getUseTimeoutUpdateInterval$p(ChatInputViewModel.this)) {
                 return l;
@@ -2059,8 +2145,8 @@ public final class ChatInputViewModel extends AppViewModel<ViewState> {
         }
     }
 
-    /* compiled from: ChatInputViewModel.kt */
-    /* renamed from: com.discord.widgets.chat.input.ChatInputViewModel$observeChatInputViewState$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.input.ChatInputViewModel$observeChatInputViewState$2 */
+    /* JADX INFO: compiled from: ChatInputViewModel.kt */
     public static final class C76922<T1, T2, R> implements Func2<Long, ViewState, ViewState> {
         public C76922() {
         }
@@ -2070,7 +2156,7 @@ public final class ChatInputViewModel extends AppViewModel<ViewState> {
             return call2(l, viewState);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final ViewState call2(Long l, ViewState viewState) {
             ViewState.Loaded loaded = (ViewState.Loaded) (!(viewState instanceof ViewState.Loaded) ? null : viewState);
             if (loaded == null) {
@@ -2089,8 +2175,8 @@ public final class ChatInputViewModel extends AppViewModel<ViewState> {
         }
     }
 
-    /* compiled from: ChatInputViewModel.kt */
-    /* renamed from: com.discord.widgets.chat.input.ChatInputViewModel$sendCommand$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.input.ChatInputViewModel$sendCommand$1 */
+    /* JADX INFO: compiled from: ChatInputViewModel.kt */
     public static final class C76931 extends Lambda implements Function1<Boolean, Unit> {
         public static final C76931 INSTANCE = new C76931();
 
@@ -2108,8 +2194,8 @@ public final class ChatInputViewModel extends AppViewModel<ViewState> {
         }
     }
 
-    /* compiled from: ChatInputViewModel.kt */
-    /* renamed from: com.discord.widgets.chat.input.ChatInputViewModel$sendMessage$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.input.ChatInputViewModel$sendMessage$1 */
+    /* JADX INFO: compiled from: ChatInputViewModel.kt */
     public static final class C76951 extends Lambda implements Function1<Channel, Unit> {
         public final /* synthetic */ Function1 $sendMessage;
 
@@ -2125,7 +2211,7 @@ public final class ChatInputViewModel extends AppViewModel<ViewState> {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Channel channel) {
             Intrinsics3.checkNotNullParameter(channel, "thread");
             this.$sendMessage.invoke(Long.valueOf(channel.getId()));
@@ -2220,6 +2306,7 @@ public final class ChatInputViewModel extends AppViewModel<ViewState> {
         ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.ui$default(observableM11082A, this, null, 2, null), ChatInputViewModel.class, (Context) null, (Function1) null, new C76903(context, loadedViewState), (Function0) null, (Function0) null, new C76892(loadedViewState, onThreadCreated), 54, (Object) null);
     }
 
+    /* JADX WARN: Multi-variable type inference failed */
     public static /* synthetic */ void createAndGotoThread$default(ChatInputViewModel chatInputViewModel, Context context, Long l, String str, ViewState.Loaded loaded, Function1 function1, int i, Object obj) {
         if ((i & 16) != 0) {
             function1 = null;
@@ -2344,6 +2431,7 @@ public final class ChatInputViewModel extends AppViewModel<ViewState> {
         }
     }
 
+    /* JADX WARN: Multi-variable type inference failed */
     public static /* synthetic */ void sendCommand$default(ChatInputViewModel chatInputViewModel, Context context, MessageManager messageManager, ApplicationCommandData applicationCommandData, Map map, boolean z2, boolean z3, Function1 function1, int i, Object obj) {
         chatInputViewModel.sendCommand(context, messageManager, applicationCommandData, map, (i & 16) != 0 ? false : z2, (i & 32) != 0 ? false : z3, (i & 64) != 0 ? C76931.INSTANCE : function1);
     }
@@ -2474,7 +2562,7 @@ public final class ChatInputViewModel extends AppViewModel<ViewState> {
         Intrinsics3.checkNotNullParameter(messageContent, "messageContent");
         Intrinsics3.checkNotNullParameter(attachmentsRaw, "attachmentsRaw");
         Intrinsics3.checkNotNullParameter(onValidationResult, "onValidationResult");
-        Object viewState = getViewState();
+        ViewState viewState = getViewState();
         if (!(viewState instanceof ViewState.Loaded)) {
             viewState = null;
         }

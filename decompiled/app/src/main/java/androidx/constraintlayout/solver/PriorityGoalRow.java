@@ -5,7 +5,7 @@ import java.util.Arrays;
 import java.util.Comparator;
 import p007b.p100d.p104b.p105a.outline;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class PriorityGoalRow extends ArrayRow {
     private static final boolean DEBUG = false;
     public static final int NOT_FOUND = -1;
@@ -17,7 +17,7 @@ public class PriorityGoalRow extends ArrayRow {
     private int numGoals;
     private SolverVariable[] sortArray;
 
-    /* renamed from: androidx.constraintlayout.solver.PriorityGoalRow$1 */
+    /* JADX INFO: renamed from: androidx.constraintlayout.solver.PriorityGoalRow$1 */
     public class C01821 implements Comparator<SolverVariable> {
         public C01821() {
         }
@@ -27,7 +27,7 @@ public class PriorityGoalRow extends ArrayRow {
             return compare2(solverVariable, solverVariable2);
         }
 
-        /* renamed from: compare, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: compare, reason: avoid collision after fix types in other method */
         public int compare2(SolverVariable solverVariable, SolverVariable solverVariable2) {
             return solverVariable.f110id - solverVariable2.f110id;
         }

@@ -10,9 +10,9 @@ import com.discord.databinding.WidgetFriendsListAdapterItemLoadingBinding;
 import com.discord.models.domain.ModelAuditLogEntry;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: WidgetFriendsList.kt */
-/* renamed from: com.discord.widgets.friends.WidgetFriendsListLoadingAdapter, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.friends.WidgetFriendsListLoadingAdapter, reason: use source file name */
+/* JADX INFO: compiled from: WidgetFriendsList.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetFriendsList5 extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
     private static final int LOADING_CELLS_COUNT = 15;
 

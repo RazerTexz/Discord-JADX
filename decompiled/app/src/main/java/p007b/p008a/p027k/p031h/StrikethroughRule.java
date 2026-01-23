@@ -11,9 +11,9 @@ import p007b.p008a.p027k.p029f.StrikethroughNode;
 import p007b.p008a.p027k.p030g.ParseState;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: StrikethroughRule.kt */
-/* renamed from: b.a.k.h.i, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.a.k.h.i, reason: use source file name */
+/* JADX INFO: compiled from: StrikethroughRule.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class StrikethroughRule extends Rule<RenderContext, Node<RenderContext>, ParseState> {
     public StrikethroughRule(Pattern pattern) {
         super(pattern);

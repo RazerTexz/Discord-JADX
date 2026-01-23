@@ -5,8 +5,8 @@ import p001a0.p002a.p003a.C0002b;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: TimeSpan.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: TimeSpan.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final /* data */ class TimeSpan {
     private final long amount;
     private final TimeUnit unit;
@@ -27,12 +27,12 @@ public final /* data */ class TimeSpan {
         return timeSpan.copy(j, timeUnit);
     }
 
-    /* renamed from: component1, reason: from getter */
+    /* JADX INFO: renamed from: component1, reason: from getter */
     public final long getAmount() {
         return this.amount;
     }
 
-    /* renamed from: component2, reason: from getter */
+    /* JADX INFO: renamed from: component2, reason: from getter */
     public final TimeUnit getUnit() {
         return this.unit;
     }

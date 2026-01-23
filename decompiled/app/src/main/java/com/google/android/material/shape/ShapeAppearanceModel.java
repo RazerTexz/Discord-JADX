@@ -1,7 +1,6 @@
 package com.google.android.material.shape;
 
 import android.content.Context;
-import android.content.res.Resources;
 import android.content.res.TypedArray;
 import android.graphics.RectF;
 import android.util.AttributeSet;
@@ -14,7 +13,7 @@ import androidx.annotation.RestrictTo;
 import androidx.annotation.StyleRes;
 import com.google.android.material.C10817R;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public class ShapeAppearanceModel {
     public static final CornerSize PILL = new RelativeCornerSize(0.5f);
     public EdgeTreatment bottomEdge;
@@ -509,7 +508,7 @@ public class ShapeAppearanceModel {
     }
 
     @NonNull
-    private static Builder builder(Context context, @StyleRes int i, @StyleRes int i2, @NonNull CornerSize cornerSize) throws Resources.NotFoundException {
+    private static Builder builder(Context context, @StyleRes int i, @StyleRes int i2, @NonNull CornerSize cornerSize) {
         if (i2 != 0) {
             ContextThemeWrapper contextThemeWrapper = new ContextThemeWrapper(context, i);
             i = i2;

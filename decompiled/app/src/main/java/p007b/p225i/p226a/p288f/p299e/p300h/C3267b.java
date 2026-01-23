@@ -40,50 +40,50 @@ import p007b.p225i.p226a.p288f.p299e.p300h.p301j.C3329y;
 import p007b.p225i.p226a.p288f.p299e.p300h.p301j.InterfaceC3307n;
 import p007b.p225i.p226a.p288f.p299e.p304k.C3347c;
 
-/* compiled from: com.google.android.gms:play-services-base@@17.3.0 */
-/* renamed from: b.i.a.f.e.h.b */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.e.h.b */
+/* JADX INFO: compiled from: com.google.android.gms:play-services-base@@17.3.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public class C3267b<O extends C3266a.d> {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final Context f9326a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final C3266a<O> f9327b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final O f9328c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final C3278b<O> f9329d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final Looper f9330e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final int f9331f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     @NotOnlyInitialized
     public final AbstractC3268c f9332g;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public final InterfaceC3307n f9333h;
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public final C3293g f9334i;
 
-    /* compiled from: com.google.android.gms:play-services-base@@17.3.0 */
-    /* renamed from: b.i.a.f.e.h.b$a */
+    /* JADX INFO: renamed from: b.i.a.f.e.h.b$a */
+    /* JADX INFO: compiled from: com.google.android.gms:play-services-base@@17.3.0 */
     public static class a {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public static final a f9335a = new a(new C3275a(), null, Looper.getMainLooper());
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final InterfaceC3307n f9336b;
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public final Looper f9337c;
 
         public a(InterfaceC3307n interfaceC3307n, Account account, Looper looper) {
@@ -100,7 +100,7 @@ public class C3267b<O extends C3266a.d> {
     }
 
     @Nullable
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public static String m4043e(Object obj) {
         if (!(Build.VERSION.SDK_INT >= 30)) {
             return null;
@@ -112,7 +112,7 @@ public class C3267b<O extends C3266a.d> {
         }
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public C3347c.a mo4044a() {
         GoogleSignInAccount googleSignInAccountM4029L;
         GoogleSignInAccount googleSignInAccountM4029L2;
@@ -139,7 +139,7 @@ public class C3267b<O extends C3266a.d> {
         return aVar;
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public Task<Boolean> m4045b(@NonNull C3301k.a<?> aVar) {
         AnimatableValueParser.m595z(aVar, "Listener key cannot be null.");
         C3293g c3293g = this.f9334i;
@@ -151,7 +151,7 @@ public class C3267b<O extends C3266a.d> {
         return taskCompletionSource.f20845a;
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public <TResult, A extends C3266a.b> Task<TResult> m4046c(AbstractC3311p<A, TResult> abstractC3311p) {
         TaskCompletionSource taskCompletionSource = new TaskCompletionSource();
         C3293g c3293g = this.f9334i;
@@ -163,7 +163,7 @@ public class C3267b<O extends C3266a.d> {
         return taskCompletionSource.f20845a;
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final <A extends C3266a.b, T extends AbstractC3284d<? extends InterfaceC3273h, A>> T m4047d(int i, @NonNull T t) {
         t.f20509k = t.f20509k || BasePendingResult.f20499a.get().booleanValue();
         C3293g c3293g = this.f9334i;

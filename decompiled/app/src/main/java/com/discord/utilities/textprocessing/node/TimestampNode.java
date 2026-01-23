@@ -16,16 +16,16 @@ import java.util.List;
 import p507d0.p580t.Collections2;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: TimestampNode.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: TimestampNode.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class TimestampNode<T extends RenderContext> extends Node<T> {
     private final CharSequence formatted;
     private final CharSequence full;
 
-    /* compiled from: TimestampNode.kt */
+    /* JADX INFO: compiled from: TimestampNode.kt */
     public interface RenderContext extends BasicRenderContext {
 
-        /* compiled from: TimestampNode.kt */
+        /* JADX INFO: compiled from: TimestampNode.kt */
         public static final class DefaultImpls {
             public static void onTimestampClicked(RenderContext renderContext, CharSequence charSequence) {
                 Intrinsics3.checkNotNullParameter(charSequence, "full");
@@ -45,7 +45,7 @@ public final class TimestampNode<T extends RenderContext> extends Node<T> {
         CharSequence relativeTimeSpanString;
         super(null, 1, null);
         Intrinsics3.checkNotNullParameter(str, "timestampString");
-        Date date = new Date(Long.parseLong(str) * 1000);
+        Date date = new Date(Long.parseLong(str) * ((long) 1000));
         String str3 = DateFormat.getDateTimeInstance(0, 3).format(date);
         Intrinsics3.checkNotNullExpressionValue(str3, "DateFormat.getDateTimeIn…ormat.SHORT).format(date)");
         this.full = str3;

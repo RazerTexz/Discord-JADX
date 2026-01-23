@@ -5,24 +5,24 @@ import androidx.annotation.NonNull;
 import androidx.viewbinding.ViewBinding;
 import com.discord.views.typing.TypingDot;
 
-/* compiled from: TypingDotsViewBinding.java */
-/* renamed from: b.a.i.t1, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.a.i.t1, reason: use source file name */
+/* JADX INFO: compiled from: TypingDotsViewBinding.java */
+/* JADX INFO: loaded from: classes.dex */
 public final class TypingDotsViewBinding implements ViewBinding {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     @NonNull
     public final View f1239a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     @NonNull
     public final TypingDot f1240b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     @NonNull
     public final TypingDot f1241c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     @NonNull
     public final TypingDot f1242d;
 

@@ -8,25 +8,25 @@ import androidx.annotation.WorkerThread;
 import java.util.ArrayDeque;
 import java.util.concurrent.Executor;
 
-/* compiled from: com.google.firebase:firebase-messaging@@21.0.0 */
-/* renamed from: b.i.c.w.u */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.c.w.u */
+/* JADX INFO: compiled from: com.google.firebase:firebase-messaging@@21.0.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public final class C4883u {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final SharedPreferences f13041a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final String f13042b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final String f13043c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     @GuardedBy("internalQueue")
     public final ArrayDeque<String> f13044d = new ArrayDeque<>();
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final Executor f13045e;
 
     public C4883u(SharedPreferences sharedPreferences, String str, String str2, Executor executor) {
@@ -37,7 +37,7 @@ public final class C4883u {
     }
 
     @WorkerThread
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static C4883u m6828a(SharedPreferences sharedPreferences, String str, String str2, Executor executor) {
         C4883u c4883u = new C4883u(sharedPreferences, str, str2, executor);
         synchronized (c4883u.f13044d) {

@@ -18,9 +18,9 @@ import p007b.p452o.p453a.p467r.CamcorderProfiles;
 import p007b.p452o.p453a.p473x.AspectRatio2;
 import p007b.p452o.p453a.p473x.Size3;
 
-/* compiled from: Camera1Options.java */
-/* renamed from: b.o.a.n.u.a, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.o.a.n.u.a, reason: use source file name */
+/* JADX INFO: compiled from: Camera1Options.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class Camera1Options extends CameraOptions {
     public Camera1Options(@NonNull Camera.Parameters parameters, int i, boolean z2) {
         CamcorderProfile camcorderProfile;
@@ -81,7 +81,7 @@ public class Camera1Options extends CameraOptions {
             this.f13688g.add(AspectRatio2.m7447f(i5, i6));
         }
         ArrayList arrayList = new ArrayList(CamcorderProfiles.f14101b.keySet());
-        Collections.sort(arrayList, new CamcorderProfiles.a(Integer.MAX_VALUE * Integer.MAX_VALUE));
+        Collections.sort(arrayList, new CamcorderProfiles.a(((long) Integer.MAX_VALUE) * ((long) Integer.MAX_VALUE)));
         while (true) {
             if (arrayList.size() <= 0) {
                 camcorderProfile = CamcorderProfile.get(i, 0);

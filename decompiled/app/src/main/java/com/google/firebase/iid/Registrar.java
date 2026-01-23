@@ -16,13 +16,13 @@ import p007b.p225i.p361c.p398s.p399e0.InterfaceC4814a;
 import p007b.p225i.p361c.p401u.InterfaceC4843g;
 import p007b.p225i.p361c.p407x.UserAgentPublisher;
 
-/* compiled from: com.google.firebase:firebase-iid@@21.0.0 */
+/* JADX INFO: compiled from: com.google.firebase:firebase-iid@@21.0.0 */
+/* JADX INFO: loaded from: classes3.dex */
 @Keep
-/* loaded from: classes3.dex */
 public final class Registrar implements ComponentRegistrar {
 
-    /* compiled from: com.google.firebase:firebase-iid@@21.0.0 */
-    /* renamed from: com.google.firebase.iid.Registrar$a */
+    /* JADX INFO: renamed from: com.google.firebase.iid.Registrar$a */
+    /* JADX INFO: compiled from: com.google.firebase:firebase-iid@@21.0.0 */
     public static class C11079a implements InterfaceC4814a {
         public C11079a(FirebaseInstanceId firebaseInstanceId) {
         }

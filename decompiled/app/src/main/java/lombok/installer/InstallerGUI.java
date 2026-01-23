@@ -53,7 +53,7 @@ import lombok.core.Version;
 import lombok.installer.OsUtils;
 import org.objectweb.asm.Opcodes;
 
-/* loaded from: discord-126021.apk:lombok/installer/InstallerGUI.SCL.lombok */
+/* JADX INFO: loaded from: discord-126021.apk:lombok/installer/InstallerGUI.SCL.lombok */
 public class InstallerGUI {
     private static final int INSTALLER_WINDOW_WIDTH = 662;
     static final AtomicReference<Integer> exitMarker = new AtomicReference<>();
@@ -142,8 +142,8 @@ public class InstallerGUI {
         }
     }
 
-    /* renamed from: lombok.installer.InstallerGUI$1 */
-    /* loaded from: discord-126021.apk:lombok/installer/InstallerGUI$1.SCL.lombok */
+    /* JADX INFO: renamed from: lombok.installer.InstallerGUI$1 */
+    /* JADX INFO: loaded from: discord-126021.apk:lombok/installer/InstallerGUI$1.SCL.lombok */
     class RunnableC128701 implements Runnable {
         private final /* synthetic */ Throwable val$t;
 
@@ -188,8 +188,8 @@ public class InstallerGUI {
         return container;
     }
 
-    /* renamed from: lombok.installer.InstallerGUI$2 */
-    /* loaded from: discord-126021.apk:lombok/installer/InstallerGUI$2.SCL.lombok */
+    /* JADX INFO: renamed from: lombok.installer.InstallerGUI$2 */
+    /* JADX INFO: loaded from: discord-126021.apk:lombok/installer/InstallerGUI$2.SCL.lombok */
     class C128752 implements ActionListener {
         C128752() {
         }
@@ -320,8 +320,8 @@ public class InstallerGUI {
         return container;
     }
 
-    /* renamed from: lombok.installer.InstallerGUI$3 */
-    /* loaded from: discord-126021.apk:lombok/installer/InstallerGUI$3.SCL.lombok */
+    /* JADX INFO: renamed from: lombok.installer.InstallerGUI$3 */
+    /* JADX INFO: loaded from: discord-126021.apk:lombok/installer/InstallerGUI$3.SCL.lombok */
     class C128763 implements ActionListener {
         C128763() {
         }
@@ -334,8 +334,8 @@ public class InstallerGUI {
         }
     }
 
-    /* renamed from: lombok.installer.InstallerGUI$4 */
-    /* loaded from: discord-126021.apk:lombok/installer/InstallerGUI$4.SCL.lombok */
+    /* JADX INFO: renamed from: lombok.installer.InstallerGUI$4 */
+    /* JADX INFO: loaded from: discord-126021.apk:lombok/installer/InstallerGUI$4.SCL.lombok */
     class C128774 implements ActionListener {
         C128774() {
         }
@@ -416,8 +416,8 @@ public class InstallerGUI {
         return container;
     }
 
-    /* renamed from: lombok.installer.InstallerGUI$5 */
-    /* loaded from: discord-126021.apk:lombok/installer/InstallerGUI$5.SCL.lombok */
+    /* JADX INFO: renamed from: lombok.installer.InstallerGUI$5 */
+    /* JADX INFO: loaded from: discord-126021.apk:lombok/installer/InstallerGUI$5.SCL.lombok */
     class C128785 extends Thread {
         C128785() {
         }
@@ -438,8 +438,8 @@ public class InstallerGUI {
             }
         }
 
-        /* renamed from: lombok.installer.InstallerGUI$5$1, reason: invalid class name */
-        /* loaded from: discord-126021.apk:lombok/installer/InstallerGUI$5$1.SCL.lombok */
+        /* JADX INFO: renamed from: lombok.installer.InstallerGUI$5$1, reason: invalid class name */
+        /* JADX INFO: loaded from: discord-126021.apk:lombok/installer/InstallerGUI$5$1.SCL.lombok */
         class AnonymousClass1 implements Runnable {
             private final /* synthetic */ List val$locations;
             private final /* synthetic */ List val$problems;
@@ -469,8 +469,8 @@ public class InstallerGUI {
         }
     }
 
-    /* renamed from: lombok.installer.InstallerGUI$6 */
-    /* loaded from: discord-126021.apk:lombok/installer/InstallerGUI$6.SCL.lombok */
+    /* JADX INFO: renamed from: lombok.installer.InstallerGUI$6 */
+    /* JADX INFO: loaded from: discord-126021.apk:lombok/installer/InstallerGUI$6.SCL.lombok */
     class C128796 implements ActionListener {
         C128796() {
         }
@@ -513,8 +513,8 @@ public class InstallerGUI {
             }
         }
 
-        /* renamed from: lombok.installer.InstallerGUI$6$1, reason: invalid class name */
-        /* loaded from: discord-126021.apk:lombok/installer/InstallerGUI$6$1.SCL.lombok */
+        /* JADX INFO: renamed from: lombok.installer.InstallerGUI$6$1, reason: invalid class name */
+        /* JADX INFO: loaded from: discord-126021.apk:lombok/installer/InstallerGUI$6$1.SCL.lombok */
         class AnonymousClass1 implements FilenameFilter {
             private final /* synthetic */ List val$exeNames;
 
@@ -533,8 +533,8 @@ public class InstallerGUI {
             }
         }
 
-        /* renamed from: lombok.installer.InstallerGUI$6$2, reason: invalid class name */
-        /* loaded from: discord-126021.apk:lombok/installer/InstallerGUI$6$2.SCL.lombok */
+        /* JADX INFO: renamed from: lombok.installer.InstallerGUI$6$2, reason: invalid class name */
+        /* JADX INFO: loaded from: discord-126021.apk:lombok/installer/InstallerGUI$6$2.SCL.lombok */
         class AnonymousClass2 extends FileFilter {
             private final /* synthetic */ List val$exeNames;
 
@@ -560,8 +560,8 @@ public class InstallerGUI {
         }
     }
 
-    /* renamed from: lombok.installer.InstallerGUI$7 */
-    /* loaded from: discord-126021.apk:lombok/installer/InstallerGUI$7.SCL.lombok */
+    /* JADX INFO: renamed from: lombok.installer.InstallerGUI$7 */
+    /* JADX INFO: loaded from: discord-126021.apk:lombok/installer/InstallerGUI$7.SCL.lombok */
     class C128807 implements ActionListener {
         C128807() {
         }
@@ -576,8 +576,8 @@ public class InstallerGUI {
         }
     }
 
-    /* renamed from: lombok.installer.InstallerGUI$8 */
-    /* loaded from: discord-126021.apk:lombok/installer/InstallerGUI$8.SCL.lombok */
+    /* JADX INFO: renamed from: lombok.installer.InstallerGUI$8 */
+    /* JADX INFO: loaded from: discord-126021.apk:lombok/installer/InstallerGUI$8.SCL.lombok */
     class C128818 implements ActionListener {
         C128818() {
         }
@@ -587,8 +587,8 @@ public class InstallerGUI {
         }
     }
 
-    /* renamed from: lombok.installer.InstallerGUI$9 */
-    /* loaded from: discord-126021.apk:lombok/installer/InstallerGUI$9.SCL.lombok */
+    /* JADX INFO: renamed from: lombok.installer.InstallerGUI$9 */
+    /* JADX INFO: loaded from: discord-126021.apk:lombok/installer/InstallerGUI$9.SCL.lombok */
     class C128829 implements ActionListener {
         C128829() {
         }
@@ -656,8 +656,8 @@ public class InstallerGUI {
         new C1287110(toInstall, successes, failure, appWindowContent).start();
     }
 
-    /* renamed from: lombok.installer.InstallerGUI$10 */
-    /* loaded from: discord-126021.apk:lombok/installer/InstallerGUI$10.SCL.lombok */
+    /* JADX INFO: renamed from: lombok.installer.InstallerGUI$10 */
+    /* JADX INFO: loaded from: discord-126021.apk:lombok/installer/InstallerGUI$10.SCL.lombok */
     class C1287110 extends Thread {
         private final /* synthetic */ List val$toInstall;
         private final /* synthetic */ AtomicInteger val$successes;
@@ -711,8 +711,8 @@ public class InstallerGUI {
             SwingUtilities.invokeLater(new AnonymousClass4(this.val$failure));
         }
 
-        /* renamed from: lombok.installer.InstallerGUI$10$1, reason: invalid class name */
-        /* loaded from: discord-126021.apk:lombok/installer/InstallerGUI$10$1.SCL.lombok */
+        /* JADX INFO: renamed from: lombok.installer.InstallerGUI$10$1, reason: invalid class name */
+        /* JADX INFO: loaded from: discord-126021.apk:lombok/installer/InstallerGUI$10$1.SCL.lombok */
         class AnonymousClass1 implements Runnable {
             private final /* synthetic */ InstallException val$e;
 
@@ -726,8 +726,8 @@ public class InstallerGUI {
             }
         }
 
-        /* renamed from: lombok.installer.InstallerGUI$10$2, reason: invalid class name */
-        /* loaded from: discord-126021.apk:lombok/installer/InstallerGUI$10$2.SCL.lombok */
+        /* JADX INFO: renamed from: lombok.installer.InstallerGUI$10$2, reason: invalid class name */
+        /* JADX INFO: loaded from: discord-126021.apk:lombok/installer/InstallerGUI$10$2.SCL.lombok */
         class AnonymousClass2 implements Runnable {
             private final /* synthetic */ InstallException val$e;
 
@@ -741,8 +741,8 @@ public class InstallerGUI {
             }
         }
 
-        /* renamed from: lombok.installer.InstallerGUI$10$3, reason: invalid class name */
-        /* loaded from: discord-126021.apk:lombok/installer/InstallerGUI$10$3.SCL.lombok */
+        /* JADX INFO: renamed from: lombok.installer.InstallerGUI$10$3, reason: invalid class name */
+        /* JADX INFO: loaded from: discord-126021.apk:lombok/installer/InstallerGUI$10$3.SCL.lombok */
         class AnonymousClass3 implements Runnable {
             private final /* synthetic */ Container val$appWindowContent;
 
@@ -762,8 +762,8 @@ public class InstallerGUI {
             }
         }
 
-        /* renamed from: lombok.installer.InstallerGUI$10$4, reason: invalid class name */
-        /* loaded from: discord-126021.apk:lombok/installer/InstallerGUI$10$4.SCL.lombok */
+        /* JADX INFO: renamed from: lombok.installer.InstallerGUI$10$4, reason: invalid class name */
+        /* JADX INFO: loaded from: discord-126021.apk:lombok/installer/InstallerGUI$10$4.SCL.lombok */
         class AnonymousClass4 implements Runnable {
             private final /* synthetic */ AtomicBoolean val$failure;
 
@@ -802,8 +802,8 @@ public class InstallerGUI {
         new Thread(new RunnableC1287211(successes, originalContentPane)).start();
     }
 
-    /* renamed from: lombok.installer.InstallerGUI$11 */
-    /* loaded from: discord-126021.apk:lombok/installer/InstallerGUI$11.SCL.lombok */
+    /* JADX INFO: renamed from: lombok.installer.InstallerGUI$11 */
+    /* JADX INFO: loaded from: discord-126021.apk:lombok/installer/InstallerGUI$11.SCL.lombok */
     class RunnableC1287211 implements Runnable {
         private final /* synthetic */ AtomicInteger val$successes;
         private final /* synthetic */ Container val$originalContentPane;
@@ -844,8 +844,8 @@ public class InstallerGUI {
             SwingUtilities.invokeLater(new AnonymousClass3(this.val$successes, this.val$originalContentPane));
         }
 
-        /* renamed from: lombok.installer.InstallerGUI$11$1, reason: invalid class name */
-        /* loaded from: discord-126021.apk:lombok/installer/InstallerGUI$11$1.SCL.lombok */
+        /* JADX INFO: renamed from: lombok.installer.InstallerGUI$11$1, reason: invalid class name */
+        /* JADX INFO: loaded from: discord-126021.apk:lombok/installer/InstallerGUI$11$1.SCL.lombok */
         class AnonymousClass1 implements Runnable {
             private final /* synthetic */ UninstallException val$e;
 
@@ -859,8 +859,8 @@ public class InstallerGUI {
             }
         }
 
-        /* renamed from: lombok.installer.InstallerGUI$11$2, reason: invalid class name */
-        /* loaded from: discord-126021.apk:lombok/installer/InstallerGUI$11$2.SCL.lombok */
+        /* JADX INFO: renamed from: lombok.installer.InstallerGUI$11$2, reason: invalid class name */
+        /* JADX INFO: loaded from: discord-126021.apk:lombok/installer/InstallerGUI$11$2.SCL.lombok */
         class AnonymousClass2 implements Runnable {
             private final /* synthetic */ UninstallException val$e;
 
@@ -874,8 +874,8 @@ public class InstallerGUI {
             }
         }
 
-        /* renamed from: lombok.installer.InstallerGUI$11$3, reason: invalid class name */
-        /* loaded from: discord-126021.apk:lombok/installer/InstallerGUI$11$3.SCL.lombok */
+        /* JADX INFO: renamed from: lombok.installer.InstallerGUI$11$3, reason: invalid class name */
+        /* JADX INFO: loaded from: discord-126021.apk:lombok/installer/InstallerGUI$11$3.SCL.lombok */
         class AnonymousClass3 implements Runnable {
             private final /* synthetic */ AtomicInteger val$successes;
             private final /* synthetic */ Container val$originalContentPane;
@@ -916,7 +916,7 @@ public class InstallerGUI {
         this.installButton.setEnabled(installAvailable);
     }
 
-    /* loaded from: discord-126021.apk:lombok/installer/InstallerGUI$IdesList.SCL.lombok */
+    /* JADX INFO: loaded from: discord-126021.apk:lombok/installer/InstallerGUI$IdesList.SCL.lombok */
     private class IdesList extends JPanel implements Scrollable {
         private static final long serialVersionUID = 1;
         List<IdeLocation> locations = new ArrayList();
@@ -962,8 +962,8 @@ public class InstallerGUI {
             fireSelectionChange();
         }
 
-        /* renamed from: lombok.installer.InstallerGUI$IdesList$1 */
-        /* loaded from: discord-126021.apk:lombok/installer/InstallerGUI$IdesList$1.SCL.lombok */
+        /* JADX INFO: renamed from: lombok.installer.InstallerGUI$IdesList$1 */
+        /* JADX INFO: loaded from: discord-126021.apk:lombok/installer/InstallerGUI$IdesList$1.SCL.lombok */
         class C128831 implements ActionListener {
             private final /* synthetic */ IdeLocation val$location;
             private final /* synthetic */ JCheckBox val$checkbox;
@@ -1056,8 +1056,8 @@ public class InstallerGUI {
         return buttonBar;
     }
 
-    /* renamed from: lombok.installer.InstallerGUI$12 */
-    /* loaded from: discord-126021.apk:lombok/installer/InstallerGUI$12.SCL.lombok */
+    /* JADX INFO: renamed from: lombok.installer.InstallerGUI$12 */
+    /* JADX INFO: loaded from: discord-126021.apk:lombok/installer/InstallerGUI$12.SCL.lombok */
     class C1287312 implements ActionListener {
         C1287312() {
         }
@@ -1068,8 +1068,8 @@ public class InstallerGUI {
         }
     }
 
-    /* renamed from: lombok.installer.InstallerGUI$13 */
-    /* loaded from: discord-126021.apk:lombok/installer/InstallerGUI$13.SCL.lombok */
+    /* JADX INFO: renamed from: lombok.installer.InstallerGUI$13 */
+    /* JADX INFO: loaded from: discord-126021.apk:lombok/installer/InstallerGUI$13.SCL.lombok */
     class C1287413 implements ActionListener {
         private final /* synthetic */ JHyperLink val$hyperlink;
         private final /* synthetic */ URI val$location;
@@ -1144,7 +1144,7 @@ public class InstallerGUI {
         }
     }
 
-    /* loaded from: discord-126021.apk:lombok/installer/InstallerGUI$JHyperLink.SCL.lombok */
+    /* JADX INFO: loaded from: discord-126021.apk:lombok/installer/InstallerGUI$JHyperLink.SCL.lombok */
     private static class JHyperLink extends JButton {
         private static final long serialVersionUID = 1;
 

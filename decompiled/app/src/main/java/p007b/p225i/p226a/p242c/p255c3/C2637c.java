@@ -2,12 +2,12 @@ package p007b.p225i.p226a.p242c.p255c3;
 
 import java.util.Comparator;
 
-/* compiled from: lambda */
-/* renamed from: b.i.a.c.c3.c */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.c3.c */
+/* JADX INFO: compiled from: lambda */
+/* JADX INFO: loaded from: classes3.dex */
 public final /* synthetic */ class C2637c implements Comparator {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static final /* synthetic */ C2637c f6179j = new C2637c();
 
     @Override // java.util.Comparator

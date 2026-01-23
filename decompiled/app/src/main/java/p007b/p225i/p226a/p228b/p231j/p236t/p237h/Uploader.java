@@ -7,21 +7,21 @@ import p007b.p225i.p226a.p228b.p231j.TransportContext;
 import p007b.p225i.p226a.p228b.p231j.p236t.p238i.EventStore;
 import p007b.p225i.p226a.p228b.p231j.p239u.SynchronizationGuard;
 
-/* compiled from: Uploader.java */
-/* renamed from: b.i.a.b.j.t.h.g, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.b.j.t.h.g, reason: use source file name */
+/* JADX INFO: compiled from: Uploader.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final /* synthetic */ class Uploader implements Runnable {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final Uploader6 f5370j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final TransportContext f5371k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final int f5372l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public final Runnable f5373m;
 
     public Uploader(Uploader6 uploader6, TransportContext transportContext, int i, Runnable runnable) {

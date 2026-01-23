@@ -3,8 +3,8 @@ package com.discord.api.utcdatetime;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: UtcDateTime.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: UtcDateTime.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class UtcDateTime implements Comparable<UtcDateTime> {
     private final long dateTimeMillis;
 
@@ -24,13 +24,13 @@ public final /* data */ class UtcDateTime implements Comparable<UtcDateTime> {
         return true;
     }
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public int m8322f(UtcDateTime other) {
         Intrinsics3.checkNotNullParameter(other, "other");
         return (this.dateTimeMillis > other.dateTimeMillis ? 1 : (this.dateTimeMillis == other.dateTimeMillis ? 0 : -1));
     }
 
-    /* renamed from: g, reason: from getter */
+    /* JADX INFO: renamed from: g, reason: from getter */
     public final long getDateTimeMillis() {
         return this.dateTimeMillis;
     }

@@ -12,36 +12,36 @@ import p007b.p085c.p086a.p087a0.AnimatableValueParser;
 import p007b.p100d.p104b.p105a.outline;
 import p007b.p109f.p190m.UnpackingSoSource;
 
-/* compiled from: ExoSoSource.java */
-/* renamed from: b.f.m.e, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.f.m.e, reason: use source file name */
+/* JADX INFO: compiled from: ExoSoSource.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class ExoSoSource extends UnpackingSoSource {
 
-    /* compiled from: ExoSoSource.java */
-    /* renamed from: b.f.m.e$b */
+    /* JADX INFO: renamed from: b.f.m.e$b */
+    /* JADX INFO: compiled from: ExoSoSource.java */
     public final class b extends UnpackingSoSource.f {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public final c[] f4321j;
 
-        /* compiled from: ExoSoSource.java */
-        /* renamed from: b.f.m.e$b$a */
+        /* JADX INFO: renamed from: b.f.m.e$b$a */
+        /* JADX INFO: compiled from: ExoSoSource.java */
         public final class a extends UnpackingSoSource.e {
 
-            /* renamed from: j */
+            /* JADX INFO: renamed from: j */
             public int f4322j;
 
             public a(a aVar) {
             }
 
             @Override // p007b.p109f.p190m.UnpackingSoSource.e
-            /* renamed from: a */
+            /* JADX INFO: renamed from: a */
             public boolean mo1575a() {
                 return this.f4322j < b.this.f4321j.length;
             }
 
             @Override // p007b.p109f.p190m.UnpackingSoSource.e
-            /* renamed from: b */
+            /* JADX INFO: renamed from: b */
             public UnpackingSoSource.d mo1576b() throws IOException {
                 c[] cVarArr = b.this.f4321j;
                 int i = this.f4322j;
@@ -65,6 +65,7 @@ public final class ExoSoSource extends UnpackingSoSource {
             Code decompiled incorrectly, please refer to instructions dump.
         */
         public b(ExoSoSource exoSoSource, UnpackingSoSource unpackingSoSource) throws IOException {
+            BufferedReader bufferedReader;
             boolean z2;
             Context context = exoSoSource.f4344c;
             StringBuilder sbM833U = outline.m833U("/data/local/tmp/exopackage/");
@@ -81,44 +82,44 @@ public final class ExoSoSource extends UnpackingSoSource {
                     if (file3.isFile()) {
                         FileReader fileReader = new FileReader(file3);
                         try {
-                            BufferedReader bufferedReader = new BufferedReader(fileReader);
-                            while (true) {
-                                try {
-                                    String line = bufferedReader.readLine();
-                                    if (line == null) {
-                                        bufferedReader.close();
-                                        fileReader.close();
-                                        break;
-                                    }
-                                    if (line.length() != 0) {
-                                        int iIndexOf = line.indexOf(32);
-                                        if (iIndexOf == -1) {
-                                            break loop0;
-                                        }
-                                        String str2 = line.substring(0, iIndexOf) + ".so";
-                                        int size = arrayList.size();
-                                        int i = 0;
-                                        while (true) {
-                                            if (i >= size) {
-                                                z2 = false;
-                                                break;
-                                            } else {
-                                                if (((c) arrayList.get(i)).f4353j.equals(str2)) {
-                                                    z2 = true;
-                                                    break;
-                                                }
-                                                i++;
-                                            }
-                                        }
-                                        if (!z2) {
-                                            String strSubstring = line.substring(iIndexOf + 1);
-                                            arrayList.add(new c(str2, strSubstring, new File(file2, strSubstring)));
-                                        }
-                                    }
-                                } finally {
-                                }
-                            }
+                            bufferedReader = new BufferedReader(fileReader);
                         } finally {
+                        }
+                        while (true) {
+                            try {
+                                String line = bufferedReader.readLine();
+                                if (line == null) {
+                                    bufferedReader.close();
+                                    fileReader.close();
+                                    break;
+                                }
+                                if (line.length() != 0) {
+                                    int iIndexOf = line.indexOf(32);
+                                    if (iIndexOf == -1) {
+                                        break loop0;
+                                    }
+                                    String str2 = line.substring(0, iIndexOf) + ".so";
+                                    int size = arrayList.size();
+                                    int i = 0;
+                                    while (true) {
+                                        if (i >= size) {
+                                            z2 = false;
+                                            break;
+                                        } else {
+                                            if (((c) arrayList.get(i)).f4353j.equals(str2)) {
+                                                z2 = true;
+                                                break;
+                                            }
+                                            i++;
+                                        }
+                                    }
+                                    if (!z2) {
+                                        String strSubstring = line.substring(iIndexOf + 1);
+                                        arrayList.add(new c(str2, strSubstring, new File(file2, strSubstring)));
+                                    }
+                                }
+                            } finally {
+                            }
                         }
                     } else {
                         continue;
@@ -129,23 +130,23 @@ public final class ExoSoSource extends UnpackingSoSource {
         }
 
         @Override // p007b.p109f.p190m.UnpackingSoSource.f
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public UnpackingSoSource.c mo1573a() throws IOException {
             return new UnpackingSoSource.c(this.f4321j);
         }
 
         @Override // p007b.p109f.p190m.UnpackingSoSource.f
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public UnpackingSoSource.e mo1574b() throws IOException {
             return new a(null);
         }
     }
 
-    /* compiled from: ExoSoSource.java */
-    /* renamed from: b.f.m.e$c */
+    /* JADX INFO: renamed from: b.f.m.e$c */
+    /* JADX INFO: compiled from: ExoSoSource.java */
     public static final class c extends UnpackingSoSource.b {
 
-        /* renamed from: l */
+        /* JADX INFO: renamed from: l */
         public final File f4324l;
 
         public c(String str, String str2, File file) {
@@ -159,7 +160,7 @@ public final class ExoSoSource extends UnpackingSoSource {
     }
 
     @Override // p007b.p109f.p190m.UnpackingSoSource
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public UnpackingSoSource.f mo1566i() throws IOException {
         return new b(this, this);
     }

@@ -16,8 +16,8 @@ import p507d0.p580t._Collections;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: StoreFriendSuggestions.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: StoreFriendSuggestions.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class StoreFriendSuggestions extends StoreV2 {
     private final Dispatcher dispatcher;
     private final FriendSuggestionsFetcher friendSuggestionsFetcher;
@@ -25,8 +25,8 @@ public final class StoreFriendSuggestions extends StoreV2 {
     private final Map<Long, FriendSuggestion> suggestions;
     private Map<Long, FriendSuggestion> suggestionsSnapshot;
 
-    /* compiled from: StoreFriendSuggestions.kt */
-    /* renamed from: com.discord.stores.StoreFriendSuggestions$updateFriendSuggestions$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreFriendSuggestions$updateFriendSuggestions$1 */
+    /* JADX INFO: compiled from: StoreFriendSuggestions.kt */
     public static final class C59411 extends Lambda implements Function0<Unit> {
         public final /* synthetic */ List $suggestions;
 
@@ -42,7 +42,7 @@ public final class StoreFriendSuggestions extends StoreV2 {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             StoreFriendSuggestions.access$getStoreStream$p(StoreFriendSuggestions.this).handleFriendSuggestionsLoaded(this.$suggestions);
         }

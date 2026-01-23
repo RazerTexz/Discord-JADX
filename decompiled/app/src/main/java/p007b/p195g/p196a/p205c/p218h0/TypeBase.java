@@ -14,12 +14,12 @@ import p007b.p195g.p196a.p205c.JsonSerializable;
 import p007b.p195g.p196a.p205c.SerializerProvider;
 import p007b.p195g.p196a.p205c.p212e0.TypeSerializer;
 
-/* compiled from: TypeBase.java */
-/* renamed from: b.g.a.c.h0.l, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.g.a.c.h0.l, reason: use source file name */
+/* JADX INFO: compiled from: TypeBase.java */
+/* JADX INFO: loaded from: classes3.dex */
 public abstract class TypeBase extends JavaType implements JsonSerializable {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static final TypeBindings f4905j = TypeBindings.f4908l;
     private static final long serialVersionUID = 1;
     public final TypeBindings _bindings;
@@ -33,7 +33,7 @@ public abstract class TypeBase extends JavaType implements JsonSerializable {
         this._superInterfaces = javaTypeArr;
     }
 
-    /* renamed from: J */
+    /* JADX INFO: renamed from: J */
     public static StringBuilder m2139J(Class<?> cls, StringBuilder sb, boolean z2) {
         if (!cls.isPrimitive()) {
             sb.append('L');
@@ -76,19 +76,19 @@ public abstract class TypeBase extends JavaType implements JsonSerializable {
         return sb;
     }
 
-    /* renamed from: K */
+    /* JADX INFO: renamed from: K */
     public String mo2106K() {
         return this._class.getName();
     }
 
     @Override // p007b.p195g.p196a.p205c.JsonSerializable
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public void mo2140c(JsonGenerator jsonGenerator, SerializerProvider serializerProvider) throws IOException {
         jsonGenerator.mo1658j0(mo2106K());
     }
 
     @Override // p007b.p195g.p196a.p205c.JsonSerializable
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public void mo2141d(JsonGenerator jsonGenerator, SerializerProvider serializerProvider, TypeSerializer typeSerializer) throws IOException {
         WritableTypeId writableTypeId = new WritableTypeId(this, JsonToken2.VALUE_STRING);
         typeSerializer.mo1959e(jsonGenerator, writableTypeId);
@@ -97,25 +97,25 @@ public abstract class TypeBase extends JavaType implements JsonSerializable {
     }
 
     @Override // p007b.p195g.p196a.p198b.p203s.ResolvedType
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public String mo1729e() {
         return mo2106K();
     }
 
     @Override // p007b.p195g.p196a.p205c.JavaType
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public JavaType mo2142f(int i) {
         return this._bindings.m2151f(i);
     }
 
     @Override // p007b.p195g.p196a.p205c.JavaType
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public int mo2143g() {
         return this._bindings.m2155j();
     }
 
     @Override // p007b.p195g.p196a.p205c.JavaType
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public final JavaType mo2144i(Class<?> cls) {
         JavaType javaTypeMo2144i;
         JavaType[] javaTypeArr;
@@ -139,13 +139,13 @@ public abstract class TypeBase extends JavaType implements JsonSerializable {
     }
 
     @Override // p007b.p195g.p196a.p205c.JavaType
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public TypeBindings mo2136j() {
         return this._bindings;
     }
 
     @Override // p007b.p195g.p196a.p205c.JavaType
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public List<JavaType> mo2145n() {
         JavaType[] javaTypeArr = this._superInterfaces;
         if (javaTypeArr == null) {
@@ -156,7 +156,7 @@ public abstract class TypeBase extends JavaType implements JsonSerializable {
     }
 
     @Override // p007b.p195g.p196a.p205c.JavaType
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     public JavaType mo2137q() {
         return this._superClass;
     }

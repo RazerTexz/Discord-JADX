@@ -1,8 +1,8 @@
 package p637j0;
 
-/* compiled from: Observer.java */
-/* renamed from: j0.g, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: j0.g, reason: use source file name */
+/* JADX INFO: compiled from: Observer.java */
+/* JADX INFO: loaded from: classes3.dex */
 public interface Observer2<T> {
     void onCompleted();
 

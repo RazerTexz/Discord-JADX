@@ -6,19 +6,19 @@ import java.nio.ByteBuffer;
 import java.nio.charset.Charset;
 import java.util.UUID;
 
-/* compiled from: RandomFidGenerator.java */
-/* renamed from: b.i.c.u.l, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.c.u.l, reason: use source file name */
+/* JADX INFO: compiled from: RandomFidGenerator.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class RandomFidGenerator {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final byte f12946a = Byte.parseByte("01110000", 2);
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static final byte f12947b = Byte.parseByte("00001111", 2);
 
     @NonNull
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public String m6769a() {
         UUID uuidRandomUUID = UUID.randomUUID();
         ByteBuffer byteBufferWrap = ByteBuffer.wrap(new byte[17]);

@@ -11,37 +11,37 @@ import java.util.Set;
 import java.util.SortedMap;
 import java.util.TreeMap;
 
-/* compiled from: com.google.android.gms:play-services-measurement-base@@18.0.0 */
-/* renamed from: b.i.a.f.h.l.r6 */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.h.l.r6 */
+/* JADX INFO: compiled from: com.google.android.gms:play-services-measurement-base@@18.0.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public class C3814r6<K extends Comparable<K>, V> extends AbstractMap<K, V> {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static final /* synthetic */ int f10288j = 0;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final int f10289k;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public boolean f10292n;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public volatile C3585a7 f10293o;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public List<C3905y6> f10290l = Collections.emptyList();
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public Map<K, V> f10291m = Collections.emptyMap();
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public Map<K, V> f10294p = Collections.emptyMap();
 
     public C3814r6(int i, C3840t6 c3840t6) {
         this.f10289k = i;
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final int m5203a(K k) {
         int size = this.f10290l.size() - 1;
         if (size >= 0) {
@@ -69,7 +69,7 @@ public class C3814r6<K extends Comparable<K>, V> extends AbstractMap<K, V> {
         return -(i + 1);
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final V m5204b(K k, V v) {
         m5210h();
         int iM5203a = m5203a(k);
@@ -98,7 +98,7 @@ public class C3814r6<K extends Comparable<K>, V> extends AbstractMap<K, V> {
         return null;
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public void mo5205c() {
         if (this.f10292n) {
             return;
@@ -126,12 +126,12 @@ public class C3814r6<K extends Comparable<K>, V> extends AbstractMap<K, V> {
         return m5203a(comparable) >= 0 || this.f10291m.containsKey(comparable);
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final Map.Entry<K, V> m5206d(int i) {
         return this.f10290l.get(i);
     }
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final int m5207e() {
         return this.f10290l.size();
     }
@@ -172,7 +172,7 @@ public class C3814r6<K extends Comparable<K>, V> extends AbstractMap<K, V> {
         return true;
     }
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final V m5208f(int i) {
         m5210h();
         V v = this.f10290l.remove(i).f10426k;
@@ -184,7 +184,7 @@ public class C3814r6<K extends Comparable<K>, V> extends AbstractMap<K, V> {
         return v;
     }
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public final Iterable<Map.Entry<K, V>> m5209g() {
         return this.f10291m.isEmpty() ? (Iterable<Map.Entry<K, V>>) C3853u6.f10351b : this.f10291m.entrySet();
     }
@@ -196,7 +196,7 @@ public class C3814r6<K extends Comparable<K>, V> extends AbstractMap<K, V> {
         return iM5203a >= 0 ? this.f10290l.get(iM5203a).f10426k : this.f10291m.get(comparable);
     }
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public final void m5210h() {
         if (this.f10292n) {
             throw new UnsupportedOperationException();
@@ -213,7 +213,7 @@ public class C3814r6<K extends Comparable<K>, V> extends AbstractMap<K, V> {
         return this.f10291m.size() > 0 ? iHashCode + this.f10291m.hashCode() : iHashCode;
     }
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public final SortedMap<K, V> m5211i() {
         m5210h();
         if (this.f10291m.isEmpty() && !(this.f10291m instanceof TreeMap)) {

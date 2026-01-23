@@ -4,8 +4,8 @@ import androidx.annotation.RestrictTo;
 import androidx.sqlite.p006db.SupportSQLiteStatement;
 import java.util.Iterator;
 
+/* JADX INFO: loaded from: classes.dex */
 @RestrictTo({RestrictTo.Scope.LIBRARY_GROUP_PREFIX})
-/* loaded from: classes.dex */
 public abstract class EntityDeletionOrUpdateAdapter<T> extends SharedSQLiteStatement {
     public EntityDeletionOrUpdateAdapter(RoomDatabase roomDatabase) {
         super(roomDatabase);

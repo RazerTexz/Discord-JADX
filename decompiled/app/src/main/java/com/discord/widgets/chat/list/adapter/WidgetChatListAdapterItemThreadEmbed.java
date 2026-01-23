@@ -2,7 +2,6 @@ package com.discord.widgets.chat.list.adapter;
 
 import android.content.Context;
 import android.content.res.ColorStateList;
-import android.content.res.Resources;
 import android.graphics.drawable.Drawable;
 import android.text.SpannableString;
 import android.text.style.LeadingMarginSpan;
@@ -36,14 +35,14 @@ import java.util.Map;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: WidgetChatListAdapterItemThreadEmbed.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetChatListAdapterItemThreadEmbed.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetChatListAdapterItemThreadEmbed extends WidgetChatListItem {
     public static final int MAX_THREAD_MESSAGE_AST_NODES = 50;
     private final WidgetChatListAdapterItemThreadEmbedBinding binding;
 
-    /* compiled from: WidgetChatListAdapterItemThreadEmbed.kt */
-    /* renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemThreadEmbed$onConfigure$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemThreadEmbed$onConfigure$1 */
+    /* JADX INFO: compiled from: WidgetChatListAdapterItemThreadEmbed.kt */
     public static final class ViewOnClickListenerC81461 implements View.OnClickListener {
         public final /* synthetic */ ChatListEntry $data;
 
@@ -57,8 +56,8 @@ public final class WidgetChatListAdapterItemThreadEmbed extends WidgetChatListIt
         }
     }
 
-    /* compiled from: WidgetChatListAdapterItemThreadEmbed.kt */
-    /* renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemThreadEmbed$onConfigure$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemThreadEmbed$onConfigure$2 */
+    /* JADX INFO: compiled from: WidgetChatListAdapterItemThreadEmbed.kt */
     public static final class ViewOnLongClickListenerC81472 implements View.OnLongClickListener {
         public final /* synthetic */ ChatListEntry $data;
 
@@ -158,7 +157,7 @@ public final class WidgetChatListAdapterItemThreadEmbed extends WidgetChatListIt
         imageView.setImageTintList(count == 0 ? ColorStateList.valueOf(ColorCompat.getThemedColor(imageView.getContext(), C5419R.attr.colorInteractiveNormal)) : ColorStateList.valueOf(ColorCompat.getThemedColor(imageView.getContext(), C5419R.attr.colorTextLink)));
     }
 
-    private final void configureMostRecentMessageText(ThreadEmbedEntry data) throws Resources.NotFoundException {
+    private final void configureMostRecentMessageText(ThreadEmbedEntry data) {
         ConstraintLayout constraintLayout = this.binding.f16339d;
         Intrinsics3.checkNotNullExpressionValue(constraintLayout, "binding.threadEmbedContainer");
         Context context = constraintLayout.getContext();
@@ -304,13 +303,13 @@ public final class WidgetChatListAdapterItemThreadEmbed extends WidgetChatListIt
     }
 
     @Override // com.discord.widgets.chat.list.adapter.WidgetChatListItem, com.discord.utilities.mg_recycler.MGRecyclerViewHolder
-    public /* bridge */ /* synthetic */ void onConfigure(int i, ChatListEntry chatListEntry) throws Resources.NotFoundException {
+    public /* bridge */ /* synthetic */ void onConfigure(int i, ChatListEntry chatListEntry) {
         onConfigure(i, chatListEntry);
     }
 
     /* JADX WARN: Can't rename method to resolve collision */
     @Override // com.discord.widgets.chat.list.adapter.WidgetChatListItem
-    public void onConfigure(int position, ChatListEntry data) throws Resources.NotFoundException {
+    public void onConfigure(int position, ChatListEntry data) {
         Intrinsics3.checkNotNullParameter(data, "data");
         super.onConfigure(position, data);
         if (data instanceof ThreadEmbedEntry) {

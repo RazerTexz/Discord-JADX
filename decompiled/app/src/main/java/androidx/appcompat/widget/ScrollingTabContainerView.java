@@ -32,8 +32,8 @@ import androidx.appcompat.view.ActionBarPolicy;
 import androidx.appcompat.widget.LinearLayoutCompat;
 import androidx.constraintlayout.solver.widgets.analyzer.BasicMeasure;
 
+/* JADX INFO: loaded from: classes.dex */
 @RestrictTo({RestrictTo.Scope.LIBRARY_GROUP_PREFIX})
-/* loaded from: classes.dex */
 public class ScrollingTabContainerView extends HorizontalScrollView implements AdapterView.OnItemSelectedListener {
     private static final int FADE_DURATION = 200;
     private static final String TAG = "ScrollingTabContainerView";
@@ -50,7 +50,7 @@ public class ScrollingTabContainerView extends HorizontalScrollView implements A
     public final VisibilityAnimListener mVisAnimListener;
     public ViewPropertyAnimator mVisibilityAnim;
 
-    /* renamed from: androidx.appcompat.widget.ScrollingTabContainerView$1 */
+    /* JADX INFO: renamed from: androidx.appcompat.widget.ScrollingTabContainerView$1 */
     public class RunnableC01151 implements Runnable {
         public final /* synthetic */ View val$tabView;
 

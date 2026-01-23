@@ -3,15 +3,15 @@ package p007b.p225i.p226a.p288f.p313h.p324k;
 import java.util.HashMap;
 import java.util.Map;
 
-/* compiled from: com.google.firebase:firebase-appindexing@@19.1.0 */
-/* renamed from: b.i.a.f.h.k.q */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.h.k.q */
+/* JADX INFO: compiled from: com.google.firebase:firebase-appindexing@@19.1.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public final class C3572q {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final String[] f9837a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static final Map<String, Integer> f9838b;
 
     static {

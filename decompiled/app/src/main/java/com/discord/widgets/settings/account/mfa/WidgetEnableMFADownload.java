@@ -15,12 +15,12 @@ import p007b.p008a.p027k.FormatUtils;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: WidgetEnableMFADownload.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetEnableMFADownload.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetEnableMFADownload extends AppFragment {
     public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetEnableMFADownload.class, "binding", "getBinding()Lcom/discord/databinding/WidgetSettingsEnableMfaDownloadBinding;", 0)};
 
-    /* renamed from: binding$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
 
     public WidgetEnableMFADownload() {

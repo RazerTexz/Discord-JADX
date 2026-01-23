@@ -2,15 +2,15 @@ package p007b.p225i.p414e.p418n;
 
 import p007b.p225i.p414e.ResultPoint;
 
-/* compiled from: DetectorResult.java */
-/* renamed from: b.i.e.n.g, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.e.n.g, reason: use source file name */
+/* JADX INFO: compiled from: DetectorResult.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class DetectorResult {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final BitMatrix f13275a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final ResultPoint[] f13276b;
 
     public DetectorResult(BitMatrix bitMatrix, ResultPoint[] resultPointArr) {

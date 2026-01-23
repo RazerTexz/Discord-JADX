@@ -11,12 +11,12 @@ import p007b.p225i.p226a.p242c.p245b3.p254v.WebvttCueParser;
 import p007b.p225i.p226a.p242c.p259f3.ParsableByteArray;
 import p007b.p225i.p226a.p242c.p259f3.Util2;
 
-/* compiled from: Mp4WebvttDecoder.java */
-/* renamed from: b.i.a.c.b3.v.c, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.b3.v.c, reason: use source file name */
+/* JADX INFO: compiled from: Mp4WebvttDecoder.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class Mp4WebvttDecoder extends SimpleSubtitleDecoder2 {
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public final ParsableByteArray f6108n;
 
     public Mp4WebvttDecoder() {
@@ -25,7 +25,7 @@ public final class Mp4WebvttDecoder extends SimpleSubtitleDecoder2 {
     }
 
     @Override // p007b.p225i.p226a.p242c.p245b3.SimpleSubtitleDecoder2
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public Subtitle mo2617j(byte[] bArr, int i, boolean z2) throws SubtitleDecoderException {
         Cue cueM2606a;
         ParsableByteArray parsableByteArray = this.f6108n;

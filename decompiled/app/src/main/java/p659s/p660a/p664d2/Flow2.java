@@ -8,14 +8,14 @@ import p507d0.p584w.p586i.p587a.ContinuationImpl3;
 import p507d0.p584w.p586i.p587a.DebugMetadata;
 import p659s.p660a.p664d2.p665g.SafeCollector3;
 
-/* compiled from: Flow.kt */
-/* renamed from: s.a.d2.a, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: s.a.d2.a, reason: use source file name */
+/* JADX INFO: compiled from: Flow.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public abstract class Flow2<T> implements Flow3<T> {
 
-    /* compiled from: Flow.kt */
+    /* JADX INFO: renamed from: s.a.d2.a$a */
+    /* JADX INFO: compiled from: Flow.kt */
     @DebugMetadata(m10084c = "kotlinx.coroutines.flow.AbstractFlow", m10085f = "Flow.kt", m10086l = {212}, m10087m = "collect")
-    /* renamed from: s.a.d2.a$a */
     public static final class a extends ContinuationImpl3 {
         public Object L$0;
         public Object L$1;
@@ -37,7 +37,7 @@ public abstract class Flow2<T> implements Flow3<T> {
 
     /* JADX WARN: Removed duplicated region for block: B:7:0x0013  */
     @Override // p659s.p660a.p664d2.Flow3
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
@@ -93,6 +93,6 @@ public abstract class Flow2<T> implements Flow3<T> {
         }
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public abstract Object mo11247b(FlowCollector<? super T> flowCollector, Continuation<? super Unit> continuation);
 }

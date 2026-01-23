@@ -30,13 +30,13 @@ import p007b.p008a.p027k.FormatUtils;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: StageAudienceBlockedBottomSheetAdapter.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: StageAudienceBlockedBottomSheetAdapter.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class StageAudienceBlockedBottomSheetAdapter extends MGRecyclerAdapterSimple<MGRecyclerDataPayload> {
     private static final int TYPE_HEADER = 0;
     private static final int TYPE_PARTICIPANT = 1;
 
-    /* compiled from: StageAudienceBlockedBottomSheetAdapter.kt */
+    /* JADX INFO: compiled from: StageAudienceBlockedBottomSheetAdapter.kt */
     public static final class HeaderViewHolder extends MGRecyclerViewHolder<StageAudienceBlockedBottomSheetAdapter, MGRecyclerDataPayload> {
         private final StageAudienceBlockedBottomSheetHeaderItemBinding binding;
 
@@ -65,7 +65,7 @@ public final class StageAudienceBlockedBottomSheetAdapter extends MGRecyclerAdap
             onConfigure2(i, mGRecyclerDataPayload);
         }
 
-        /* renamed from: onConfigure, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: onConfigure, reason: avoid collision after fix types in other method */
         public void onConfigure2(int position, MGRecyclerDataPayload data) {
             Intrinsics3.checkNotNullParameter(data, "data");
             super.onConfigure(position, data);
@@ -81,10 +81,10 @@ public final class StageAudienceBlockedBottomSheetAdapter extends MGRecyclerAdap
         }
     }
 
-    /* compiled from: StageAudienceBlockedBottomSheetAdapter.kt */
+    /* JADX INFO: compiled from: StageAudienceBlockedBottomSheetAdapter.kt */
     public static abstract class ListItem implements MGRecyclerDataPayload {
 
-        /* compiled from: StageAudienceBlockedBottomSheetAdapter.kt */
+        /* JADX INFO: compiled from: StageAudienceBlockedBottomSheetAdapter.kt */
         public static final /* data */ class Header extends ListItem {
             private final String key;
             private final int numBlockedUsers;
@@ -103,7 +103,7 @@ public final class StageAudienceBlockedBottomSheetAdapter extends MGRecyclerAdap
                 return header.copy(i);
             }
 
-            /* renamed from: component1, reason: from getter */
+            /* JADX INFO: renamed from: component1, reason: from getter */
             public final int getNumBlockedUsers() {
                 return this.numBlockedUsers;
             }
@@ -142,7 +142,7 @@ public final class StageAudienceBlockedBottomSheetAdapter extends MGRecyclerAdap
             }
         }
 
-        /* compiled from: StageAudienceBlockedBottomSheetAdapter.kt */
+        /* JADX INFO: compiled from: StageAudienceBlockedBottomSheetAdapter.kt */
         public static final /* data */ class Participant extends ListItem {
             private final boolean isSpeaker;
             private final String key;
@@ -169,12 +169,12 @@ public final class StageAudienceBlockedBottomSheetAdapter extends MGRecyclerAdap
                 return participant.copy(voiceUser, z2);
             }
 
-            /* renamed from: component1, reason: from getter */
+            /* JADX INFO: renamed from: component1, reason: from getter */
             public final StoreVoiceParticipants.VoiceUser getParticipant() {
                 return this.participant;
             }
 
-            /* renamed from: component2, reason: from getter */
+            /* JADX INFO: renamed from: component2, reason: from getter */
             public final boolean getIsSpeaker() {
                 return this.isSpeaker;
             }
@@ -210,15 +210,18 @@ public final class StageAudienceBlockedBottomSheetAdapter extends MGRecyclerAdap
             }
 
             /* JADX WARN: Multi-variable type inference failed */
+            /* JADX WARN: Type inference failed for: r1v1, types: [int] */
+            /* JADX WARN: Type inference failed for: r1v2 */
+            /* JADX WARN: Type inference failed for: r1v3 */
             public int hashCode() {
                 StoreVoiceParticipants.VoiceUser voiceUser = this.participant;
                 int iHashCode = (voiceUser != null ? voiceUser.hashCode() : 0) * 31;
                 boolean z2 = this.isSpeaker;
-                int i = z2;
-                if (z2 != 0) {
-                    i = 1;
+                ?? r1 = z2;
+                if (z2) {
+                    r1 = 1;
                 }
-                return iHashCode + i;
+                return iHashCode + r1;
             }
 
             public final boolean isSpeaker() {
@@ -241,7 +244,7 @@ public final class StageAudienceBlockedBottomSheetAdapter extends MGRecyclerAdap
         }
     }
 
-    /* compiled from: StageAudienceBlockedBottomSheetAdapter.kt */
+    /* JADX INFO: compiled from: StageAudienceBlockedBottomSheetAdapter.kt */
     public static final class ParticipantViewHolder extends MGRecyclerViewHolder<StageAudienceBlockedBottomSheetAdapter, MGRecyclerDataPayload> {
         private final StageAudienceBlockedBottomSheetItemBinding binding;
 
@@ -291,7 +294,7 @@ public final class StageAudienceBlockedBottomSheetAdapter extends MGRecyclerAdap
             onConfigure2(i, mGRecyclerDataPayload);
         }
 
-        /* renamed from: onConfigure, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: onConfigure, reason: avoid collision after fix types in other method */
         public void onConfigure2(int position, MGRecyclerDataPayload data) {
             Intrinsics3.checkNotNullParameter(data, "data");
             super.onConfigure(position, data);

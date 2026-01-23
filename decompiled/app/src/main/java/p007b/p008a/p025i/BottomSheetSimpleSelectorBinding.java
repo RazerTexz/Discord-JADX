@@ -7,24 +7,24 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.viewbinding.ViewBinding;
 import com.discord.utilities.view.recycler.MaxHeightRecyclerView;
 
-/* compiled from: BottomSheetSimpleSelectorBinding.java */
-/* renamed from: b.a.i.c, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.a.i.c, reason: use source file name */
+/* JADX INFO: compiled from: BottomSheetSimpleSelectorBinding.java */
+/* JADX INFO: loaded from: classes.dex */
 public final class BottomSheetSimpleSelectorBinding implements ViewBinding {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     @NonNull
     public final ConstraintLayout f722a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     @NonNull
     public final ConstraintLayout f723b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     @NonNull
     public final TextView f724c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     @NonNull
     public final MaxHeightRecyclerView f725d;
 

@@ -1,6 +1,6 @@
 package org.webrtc;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public final class CryptoOptions {
     private final SFrame sframe;
     private final Srtp srtp;

@@ -27,22 +27,22 @@ import p615g0.Buffer3;
 import p615g0.BufferedSource;
 import p615g0.GzipSource;
 
-/* compiled from: HttpLoggingInterceptor.kt */
-/* renamed from: f0.f0.a, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: f0.f0.a, reason: use source file name */
+/* JADX INFO: compiled from: HttpLoggingInterceptor.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class HttpLoggingInterceptor implements Interceptor {
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public volatile Set<String> f25895b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public volatile a f25896c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final b f25897d;
 
-    /* compiled from: HttpLoggingInterceptor.kt */
-    /* renamed from: f0.f0.a$a */
+    /* JADX INFO: renamed from: f0.f0.a$a */
+    /* JADX INFO: compiled from: HttpLoggingInterceptor.kt */
     public enum a {
         NONE,
         BASIC,
@@ -50,8 +50,8 @@ public final class HttpLoggingInterceptor implements Interceptor {
         BODY
     }
 
-    /* compiled from: HttpLoggingInterceptor.kt */
-    /* renamed from: f0.f0.a$b */
+    /* JADX INFO: renamed from: f0.f0.a$b */
+    /* JADX INFO: compiled from: HttpLoggingInterceptor.kt */
     public interface b {
         void log(String str);
     }
@@ -63,13 +63,13 @@ public final class HttpLoggingInterceptor implements Interceptor {
         this.f25896c = a.NONE;
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final boolean m10366a(Headers headers) {
         String strM10954c = headers.m10954c("Content-Encoding");
         return (strM10954c == null || StringsJVM.equals(strM10954c, RegistrationSteps.IDENTITY, true) || StringsJVM.equals(strM10954c, "gzip", true)) ? false : true;
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final void m10367b(Headers headers, int i) {
         int i2 = i * 2;
         String str = this.f25895b.contains(headers.namesAndValues[i2]) ? "██" : headers.namesAndValues[i2 + 1];

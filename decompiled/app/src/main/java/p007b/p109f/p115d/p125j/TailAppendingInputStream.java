@@ -4,18 +4,18 @@ import java.io.FilterInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 
-/* compiled from: TailAppendingInputStream.java */
-/* renamed from: b.f.d.j.b, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.f.d.j.b, reason: use source file name */
+/* JADX INFO: compiled from: TailAppendingInputStream.java */
+/* JADX INFO: loaded from: classes.dex */
 public class TailAppendingInputStream extends FilterInputStream {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final byte[] f3130j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public int f3131k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public int f3132l;
 
     public TailAppendingInputStream(InputStream inputStream, byte[] bArr) {
@@ -23,7 +23,7 @@ public class TailAppendingInputStream extends FilterInputStream {
         this.f3130j = bArr;
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final int m1003a() {
         int i = this.f3131k;
         byte[] bArr = this.f3130j;

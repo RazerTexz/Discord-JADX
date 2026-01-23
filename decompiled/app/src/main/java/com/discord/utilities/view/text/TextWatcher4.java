@@ -10,14 +10,14 @@ import kotlin.jvm.functions.Function1;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: TextWatcher.kt */
-/* renamed from: com.discord.utilities.view.text.TextWatcherKt, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.utilities.view.text.TextWatcherKt, reason: use source file name */
+/* JADX INFO: compiled from: TextWatcher.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class TextWatcher4 {
     private static final HashMap<Fragment, HashMap<TextView, ArrayList<android.text.TextWatcher>>> bindedTextWatchers = new HashMap<>();
 
-    /* compiled from: TextWatcher.kt */
-    /* renamed from: com.discord.utilities.view.text.TextWatcherKt$addLifecycleAwareTextWatcher$1 */
+    /* JADX INFO: renamed from: com.discord.utilities.view.text.TextWatcherKt$addLifecycleAwareTextWatcher$1 */
+    /* JADX INFO: compiled from: TextWatcher.kt */
     public static final class C70131 extends Lambda implements Function1<Editable, Unit> {
         public final /* synthetic */ Function1 $afterTextChanged;
 
@@ -33,7 +33,7 @@ public final class TextWatcher4 {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Editable editable) {
             Intrinsics3.checkNotNullParameter(editable, "editable");
             this.$afterTextChanged.invoke(editable.toString());

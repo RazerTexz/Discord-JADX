@@ -15,9 +15,9 @@ import java.util.Iterator;
 import p507d0.p580t._Arrays;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ColorCompat.kt */
-/* renamed from: com.discord.utilities.color.ColorCompatKt, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.utilities.color.ColorCompatKt, reason: use source file name */
+/* JADX INFO: compiled from: ColorCompat.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class ColorCompat2 {
     @ColorInt
     public static final int getColor(Fragment fragment, @ColorRes int i) {

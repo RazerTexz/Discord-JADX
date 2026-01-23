@@ -6,18 +6,18 @@ import p007b.p225i.p226a.p242c.Timeline;
 import p007b.p225i.p226a.p242c.p243a3.ShuffleOrder;
 import p007b.p225i.p226a.p242c.p259f3.Util2;
 
-/* compiled from: AbstractConcatenatedTimeline.java */
-/* renamed from: b.i.a.c.r0, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.r0, reason: use source file name */
+/* JADX INFO: compiled from: AbstractConcatenatedTimeline.java */
+/* JADX INFO: loaded from: classes3.dex */
 public abstract class AbstractConcatenatedTimeline extends Timeline {
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final int f7462k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final ShuffleOrder f7463l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public final boolean f7464m;
 
     public AbstractConcatenatedTimeline(boolean z2, ShuffleOrder shuffleOrder) {
@@ -27,7 +27,7 @@ public abstract class AbstractConcatenatedTimeline extends Timeline {
     }
 
     @Override // p007b.p225i.p226a.p242c.Timeline
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public int mo2582a(boolean z2) {
         if (this.f7462k == 0) {
             return -1;
@@ -47,7 +47,7 @@ public abstract class AbstractConcatenatedTimeline extends Timeline {
     }
 
     @Override // p007b.p225i.p226a.p242c.Timeline
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final int mo2554b(Object obj) {
         int iMo2554b;
         if (!(obj instanceof Pair)) {
@@ -66,7 +66,7 @@ public abstract class AbstractConcatenatedTimeline extends Timeline {
     }
 
     @Override // p007b.p225i.p226a.p242c.Timeline
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public int mo2583c(boolean z2) {
         int i = this.f7462k;
         if (i == 0) {
@@ -87,7 +87,7 @@ public abstract class AbstractConcatenatedTimeline extends Timeline {
     }
 
     @Override // p007b.p225i.p226a.p242c.Timeline
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public int mo2584e(int i, int i2, boolean z2) {
         if (this.f7464m) {
             if (i2 == 1) {
@@ -116,7 +116,7 @@ public abstract class AbstractConcatenatedTimeline extends Timeline {
     }
 
     @Override // p007b.p225i.p226a.p242c.Timeline
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public final Timeline.b mo2513g(int i, Timeline.b bVar, boolean z2) {
         PlaylistTimeline playlistTimeline = (PlaylistTimeline) this;
         int iM2996d = Util2.m2996d(playlistTimeline.f6172p, i + 1, false, false);
@@ -133,7 +133,7 @@ public abstract class AbstractConcatenatedTimeline extends Timeline {
     }
 
     @Override // p007b.p225i.p226a.p242c.Timeline
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public final Timeline.b mo3327h(Object obj, Timeline.b bVar) {
         Pair pair = (Pair) obj;
         Object obj2 = pair.first;
@@ -149,7 +149,7 @@ public abstract class AbstractConcatenatedTimeline extends Timeline {
     }
 
     @Override // p007b.p225i.p226a.p242c.Timeline
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public int mo2585l(int i, int i2, boolean z2) {
         if (this.f7464m) {
             if (i2 == 1) {
@@ -178,7 +178,7 @@ public abstract class AbstractConcatenatedTimeline extends Timeline {
     }
 
     @Override // p007b.p225i.p226a.p242c.Timeline
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public final Object mo2556m(int i) {
         PlaylistTimeline playlistTimeline = (PlaylistTimeline) this;
         int iM2996d = Util2.m2996d(playlistTimeline.f6172p, i + 1, false, false);
@@ -186,7 +186,7 @@ public abstract class AbstractConcatenatedTimeline extends Timeline {
     }
 
     @Override // p007b.p225i.p226a.p242c.Timeline
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public final Timeline.c mo2514o(int i, Timeline.c cVar, long j) {
         PlaylistTimeline playlistTimeline = (PlaylistTimeline) this;
         int iM2996d = Util2.m2996d(playlistTimeline.f6173q, i + 1, false, false);
@@ -203,7 +203,7 @@ public abstract class AbstractConcatenatedTimeline extends Timeline {
         return cVar;
     }
 
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     public final int m3358r(int i, boolean z2) {
         if (z2) {
             return this.f7463l.mo2547e(i);
@@ -214,7 +214,7 @@ public abstract class AbstractConcatenatedTimeline extends Timeline {
         return -1;
     }
 
-    /* renamed from: s */
+    /* JADX INFO: renamed from: s */
     public final int m3359s(int i, boolean z2) {
         if (z2) {
             return this.f7463l.mo2546d(i);

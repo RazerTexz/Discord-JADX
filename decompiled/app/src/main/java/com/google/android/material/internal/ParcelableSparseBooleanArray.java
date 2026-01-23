@@ -6,12 +6,12 @@ import android.util.SparseBooleanArray;
 import androidx.annotation.NonNull;
 import androidx.annotation.RestrictTo;
 
+/* JADX INFO: loaded from: classes3.dex */
 @RestrictTo({RestrictTo.Scope.LIBRARY_GROUP})
-/* loaded from: classes3.dex */
 public class ParcelableSparseBooleanArray extends SparseBooleanArray implements Parcelable {
     public static final Parcelable.Creator<ParcelableSparseBooleanArray> CREATOR = new C10941a();
 
-    /* renamed from: com.google.android.material.internal.ParcelableSparseBooleanArray$a */
+    /* JADX INFO: renamed from: com.google.android.material.internal.ParcelableSparseBooleanArray$a */
     public static class C10941a implements Parcelable.Creator<ParcelableSparseBooleanArray> {
         @Override // android.os.Parcelable.Creator
         @NonNull

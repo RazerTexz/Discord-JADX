@@ -7,7 +7,7 @@ import java.util.Iterator;
 import java.util.Set;
 import java.util.concurrent.CopyOnWriteArraySet;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public final class ContextAwareHelper {
     private volatile Context mContext;
     private final Set<OnContextAvailableListener> mListeners = new CopyOnWriteArraySet();

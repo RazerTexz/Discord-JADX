@@ -8,17 +8,17 @@ import kotlin.jvm.internal.DefaultConstructorMarker;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: WidgetHubEventsPageAdapter.kt */
-/* renamed from: com.discord.widgets.hubs.events.HubEventsPage, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.hubs.events.HubEventsPage, reason: use source file name */
+/* JADX INFO: compiled from: WidgetHubEventsPageAdapter.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public abstract class WidgetHubEventsPageAdapter2 {
     public static final int ENTRY = 2;
     public static final int FOOTER = 1;
     public static final int HEADER = 0;
     private final int viewType;
 
-    /* compiled from: WidgetHubEventsPageAdapter.kt */
-    /* renamed from: com.discord.widgets.hubs.events.HubEventsPage$Event */
+    /* JADX INFO: renamed from: com.discord.widgets.hubs.events.HubEventsPage$Event */
+    /* JADX INFO: compiled from: WidgetHubEventsPageAdapter.kt */
     public static final /* data */ class Event extends WidgetHubEventsPageAdapter2 {
         private final WidgetHubEventsViewModel2 guildScheduledEventData;
 
@@ -36,7 +36,7 @@ public abstract class WidgetHubEventsPageAdapter2 {
             return event.copy(widgetHubEventsViewModel2);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final WidgetHubEventsViewModel2 getGuildScheduledEventData() {
             return this.guildScheduledEventData;
         }
@@ -73,8 +73,8 @@ public abstract class WidgetHubEventsPageAdapter2 {
         }
     }
 
-    /* compiled from: WidgetHubEventsPageAdapter.kt */
-    /* renamed from: com.discord.widgets.hubs.events.HubEventsPage$Footer */
+    /* JADX INFO: renamed from: com.discord.widgets.hubs.events.HubEventsPage$Footer */
+    /* JADX INFO: compiled from: WidgetHubEventsPageAdapter.kt */
     public static final /* data */ class Footer extends WidgetHubEventsPageAdapter2 {
         private final RestCallState<List<DirectoryEntryGuild2>> eventsAsync;
 
@@ -130,8 +130,8 @@ public abstract class WidgetHubEventsPageAdapter2 {
         }
     }
 
-    /* compiled from: WidgetHubEventsPageAdapter.kt */
-    /* renamed from: com.discord.widgets.hubs.events.HubEventsPage$Header */
+    /* JADX INFO: renamed from: com.discord.widgets.hubs.events.HubEventsPage$Header */
+    /* JADX INFO: compiled from: WidgetHubEventsPageAdapter.kt */
     public static final class Header extends WidgetHubEventsPageAdapter2 {
         public static final Header INSTANCE = new Header();
 

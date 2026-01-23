@@ -37,8 +37,8 @@ import p658rx.functions.Action0;
 import p658rx.functions.Func2;
 import p658rx.subjects.PublishSubject;
 
-/* compiled from: WidgetGuildCreateViewModel.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetGuildCreateViewModel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetGuildCreateViewModel extends AppViewModel<ViewState> {
     private final String analyticLocation;
     private final boolean closeWithResult;
@@ -52,8 +52,8 @@ public final class WidgetGuildCreateViewModel extends AppViewModel<ViewState> {
     private final boolean showChannelPrompt;
     private final StockGuildTemplate stockGuildTemplate;
 
-    /* compiled from: WidgetGuildCreateViewModel.kt */
-    /* renamed from: com.discord.widgets.guilds.create.WidgetGuildCreateViewModel$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.guilds.create.WidgetGuildCreateViewModel$1 */
+    /* JADX INFO: compiled from: WidgetGuildCreateViewModel.kt */
     public static final class C86111 implements Action0 {
         public final /* synthetic */ String $guildTemplateCode;
 
@@ -67,8 +67,8 @@ public final class WidgetGuildCreateViewModel extends AppViewModel<ViewState> {
         }
     }
 
-    /* compiled from: WidgetGuildCreateViewModel.kt */
-    /* renamed from: com.discord.widgets.guilds.create.WidgetGuildCreateViewModel$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.guilds.create.WidgetGuildCreateViewModel$2 */
+    /* JADX INFO: compiled from: WidgetGuildCreateViewModel.kt */
     public static final /* synthetic */ class C86122 extends FunctionReferenceImpl implements Function2<User, StoreGuildTemplates.GuildTemplateState, StoreState> {
         public static final C86122 INSTANCE = new C86122();
 
@@ -81,7 +81,7 @@ public final class WidgetGuildCreateViewModel extends AppViewModel<ViewState> {
             return invoke2(user, guildTemplateState);
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final StoreState invoke2(User user, StoreGuildTemplates.GuildTemplateState guildTemplateState) {
             Intrinsics3.checkNotNullParameter(user, "p1");
             Intrinsics3.checkNotNullParameter(guildTemplateState, "p2");
@@ -89,8 +89,8 @@ public final class WidgetGuildCreateViewModel extends AppViewModel<ViewState> {
         }
     }
 
-    /* compiled from: WidgetGuildCreateViewModel.kt */
-    /* renamed from: com.discord.widgets.guilds.create.WidgetGuildCreateViewModel$3 */
+    /* JADX INFO: renamed from: com.discord.widgets.guilds.create.WidgetGuildCreateViewModel$3 */
+    /* JADX INFO: compiled from: WidgetGuildCreateViewModel.kt */
     public static final class C86133 extends Lambda implements Function1<StoreState, Unit> {
         public C86133() {
             super(1);
@@ -102,17 +102,17 @@ public final class WidgetGuildCreateViewModel extends AppViewModel<ViewState> {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(StoreState storeState) {
             Intrinsics3.checkNotNullParameter(storeState, "it");
             WidgetGuildCreateViewModel.this.handleStoreState(storeState);
         }
     }
 
-    /* compiled from: WidgetGuildCreateViewModel.kt */
+    /* JADX INFO: compiled from: WidgetGuildCreateViewModel.kt */
     public static abstract class Event {
 
-        /* compiled from: WidgetGuildCreateViewModel.kt */
+        /* JADX INFO: compiled from: WidgetGuildCreateViewModel.kt */
         public static final /* data */ class CloseWithResult extends Event {
             private final long guildId;
 
@@ -128,7 +128,7 @@ public final class WidgetGuildCreateViewModel extends AppViewModel<ViewState> {
                 return closeWithResult.copy(j);
             }
 
-            /* renamed from: component1, reason: from getter */
+            /* JADX INFO: renamed from: component1, reason: from getter */
             public final long getGuildId() {
                 return this.guildId;
             }
@@ -157,7 +157,7 @@ public final class WidgetGuildCreateViewModel extends AppViewModel<ViewState> {
             }
         }
 
-        /* compiled from: WidgetGuildCreateViewModel.kt */
+        /* JADX INFO: compiled from: WidgetGuildCreateViewModel.kt */
         public static final /* data */ class LaunchChannelPrompt extends Event {
             private final long guildId;
 
@@ -173,7 +173,7 @@ public final class WidgetGuildCreateViewModel extends AppViewModel<ViewState> {
                 return launchChannelPrompt.copy(j);
             }
 
-            /* renamed from: component1, reason: from getter */
+            /* JADX INFO: renamed from: component1, reason: from getter */
             public final long getGuildId() {
                 return this.guildId;
             }
@@ -202,7 +202,7 @@ public final class WidgetGuildCreateViewModel extends AppViewModel<ViewState> {
             }
         }
 
-        /* compiled from: WidgetGuildCreateViewModel.kt */
+        /* JADX INFO: compiled from: WidgetGuildCreateViewModel.kt */
         public static final /* data */ class LaunchInviteShareScreen extends Event {
             private final long guildId;
 
@@ -218,7 +218,7 @@ public final class WidgetGuildCreateViewModel extends AppViewModel<ViewState> {
                 return launchInviteShareScreen.copy(j);
             }
 
-            /* renamed from: component1, reason: from getter */
+            /* JADX INFO: renamed from: component1, reason: from getter */
             public final long getGuildId() {
                 return this.guildId;
             }
@@ -247,7 +247,7 @@ public final class WidgetGuildCreateViewModel extends AppViewModel<ViewState> {
             }
         }
 
-        /* compiled from: WidgetGuildCreateViewModel.kt */
+        /* JADX INFO: compiled from: WidgetGuildCreateViewModel.kt */
         public static final /* data */ class ShowToast extends Event {
             private final int stringResId;
 
@@ -263,7 +263,7 @@ public final class WidgetGuildCreateViewModel extends AppViewModel<ViewState> {
                 return showToast.copy(i);
             }
 
-            /* renamed from: component1, reason: from getter */
+            /* JADX INFO: renamed from: component1, reason: from getter */
             public final int getStringResId() {
                 return this.stringResId;
             }
@@ -300,7 +300,7 @@ public final class WidgetGuildCreateViewModel extends AppViewModel<ViewState> {
         }
     }
 
-    /* compiled from: WidgetGuildCreateViewModel.kt */
+    /* JADX INFO: compiled from: WidgetGuildCreateViewModel.kt */
     public static final /* data */ class StoreState {
         private final StoreGuildTemplates.GuildTemplateState guildTemplate;
         private final User meUser;
@@ -322,12 +322,12 @@ public final class WidgetGuildCreateViewModel extends AppViewModel<ViewState> {
             return storeState.copy(user, guildTemplateState);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final User getMeUser() {
             return this.meUser;
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final StoreGuildTemplates.GuildTemplateState getGuildTemplate() {
             return this.guildTemplate;
         }
@@ -374,10 +374,10 @@ public final class WidgetGuildCreateViewModel extends AppViewModel<ViewState> {
         }
     }
 
-    /* compiled from: WidgetGuildCreateViewModel.kt */
+    /* JADX INFO: compiled from: WidgetGuildCreateViewModel.kt */
     public static abstract class ViewState {
 
-        /* compiled from: WidgetGuildCreateViewModel.kt */
+        /* JADX INFO: compiled from: WidgetGuildCreateViewModel.kt */
         public static final /* data */ class Initialized extends ViewState {
             private final String customTitle;
             private final int defaultGuildNameFormatRes;
@@ -401,17 +401,17 @@ public final class WidgetGuildCreateViewModel extends AppViewModel<ViewState> {
                 this.customTitle = str4;
             }
 
-            /* renamed from: component2, reason: from getter */
+            /* JADX INFO: renamed from: component2, reason: from getter */
             private final int getDefaultGuildNameFormatRes() {
                 return this.defaultGuildNameFormatRes;
             }
 
-            /* renamed from: component3, reason: from getter */
+            /* JADX INFO: renamed from: component3, reason: from getter */
             private final String getUsername() {
                 return this.username;
             }
 
-            /* renamed from: component4, reason: from getter */
+            /* JADX INFO: renamed from: component4, reason: from getter */
             private final String getGuildName() {
                 return this.guildName;
             }
@@ -446,22 +446,22 @@ public final class WidgetGuildCreateViewModel extends AppViewModel<ViewState> {
                 return initialized.copy(guildTemplateState, i3, str5, str6, str7, z3, str4);
             }
 
-            /* renamed from: component1, reason: from getter */
+            /* JADX INFO: renamed from: component1, reason: from getter */
             public final StoreGuildTemplates.GuildTemplateState getGuildTemplate() {
                 return this.guildTemplate;
             }
 
-            /* renamed from: component5, reason: from getter */
+            /* JADX INFO: renamed from: component5, reason: from getter */
             public final String getGuildIconUri() {
                 return this.guildIconUri;
             }
 
-            /* renamed from: component6, reason: from getter */
+            /* JADX INFO: renamed from: component6, reason: from getter */
             public final boolean getIsBusy() {
                 return this.isBusy;
             }
 
-            /* renamed from: component7, reason: from getter */
+            /* JADX INFO: renamed from: component7, reason: from getter */
             public final String getCustomTitle() {
                 return this.customTitle;
             }
@@ -502,6 +502,9 @@ public final class WidgetGuildCreateViewModel extends AppViewModel<ViewState> {
             }
 
             /* JADX WARN: Multi-variable type inference failed */
+            /* JADX WARN: Type inference failed for: r2v11, types: [int] */
+            /* JADX WARN: Type inference failed for: r2v13 */
+            /* JADX WARN: Type inference failed for: r2v17 */
             public int hashCode() {
                 StoreGuildTemplates.GuildTemplateState guildTemplateState = this.guildTemplate;
                 int iHashCode = (((guildTemplateState != null ? guildTemplateState.hashCode() : 0) * 31) + this.defaultGuildNameFormatRes) * 31;
@@ -512,13 +515,13 @@ public final class WidgetGuildCreateViewModel extends AppViewModel<ViewState> {
                 String str3 = this.guildIconUri;
                 int iHashCode4 = (iHashCode3 + (str3 != null ? str3.hashCode() : 0)) * 31;
                 boolean z2 = this.isBusy;
-                int i = z2;
-                if (z2 != 0) {
-                    i = 1;
+                ?? r2 = z2;
+                if (z2) {
+                    r2 = 1;
                 }
-                int i2 = (iHashCode4 + i) * 31;
+                int i = (iHashCode4 + r2) * 31;
                 String str4 = this.customTitle;
-                return i2 + (str4 != null ? str4.hashCode() : 0);
+                return i + (str4 != null ? str4.hashCode() : 0);
             }
 
             public final boolean isBusy() {
@@ -543,7 +546,7 @@ public final class WidgetGuildCreateViewModel extends AppViewModel<ViewState> {
             }
         }
 
-        /* compiled from: WidgetGuildCreateViewModel.kt */
+        /* JADX INFO: compiled from: WidgetGuildCreateViewModel.kt */
         public static final class Uninitialized extends ViewState {
             public static final Uninitialized INSTANCE = new Uninitialized();
 
@@ -560,8 +563,8 @@ public final class WidgetGuildCreateViewModel extends AppViewModel<ViewState> {
         }
     }
 
-    /* compiled from: WidgetGuildCreateViewModel.kt */
-    /* renamed from: com.discord.widgets.guilds.create.WidgetGuildCreateViewModel$createGuild$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.guilds.create.WidgetGuildCreateViewModel$createGuild$1 */
+    /* JADX INFO: compiled from: WidgetGuildCreateViewModel.kt */
     public static final class C86141 extends Lambda implements Function1<Guild, Unit> {
         public C86141() {
             super(1);
@@ -573,15 +576,15 @@ public final class WidgetGuildCreateViewModel extends AppViewModel<ViewState> {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Guild guild) {
             Intrinsics3.checkNotNullParameter(guild, "createdGuild");
             WidgetGuildCreateViewModel.access$handleGuildCreateSuccess(WidgetGuildCreateViewModel.this, new com.discord.models.guild.Guild(guild));
         }
     }
 
-    /* compiled from: WidgetGuildCreateViewModel.kt */
-    /* renamed from: com.discord.widgets.guilds.create.WidgetGuildCreateViewModel$createGuild$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.guilds.create.WidgetGuildCreateViewModel$createGuild$2 */
+    /* JADX INFO: compiled from: WidgetGuildCreateViewModel.kt */
     public static final class C86152 extends Lambda implements Function1<Error, Unit> {
         public C86152() {
             super(1);
@@ -593,7 +596,7 @@ public final class WidgetGuildCreateViewModel extends AppViewModel<ViewState> {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Error error) {
             Intrinsics3.checkNotNullParameter(error, "it");
             WidgetGuildCreateViewModel.access$handleGuildCreateFailure(WidgetGuildCreateViewModel.this);

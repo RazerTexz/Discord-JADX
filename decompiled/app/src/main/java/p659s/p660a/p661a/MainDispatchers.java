@@ -9,15 +9,15 @@ import p507d0.p578f0.C12075n;
 import p507d0.p578f0._Sequences2;
 import p659s.p660a.MainCoroutineDispatcher;
 
-/* compiled from: MainDispatchers.kt */
-/* renamed from: s.a.a.n, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: s.a.a.n, reason: use source file name */
+/* JADX INFO: compiled from: MainDispatchers.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class MainDispatchers {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final boolean f27699a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static final MainCoroutineDispatcher f27700b;
 
     static {
@@ -27,7 +27,7 @@ public final class MainDispatchers {
         f27700b = mainDispatchers.m11170a();
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final MainCoroutineDispatcher m11170a() {
         Object obj;
         List<? extends MainDispatcherFactory> list = _Sequences2.toList(C12075n.asSequence(ServiceLoader.m1b()));

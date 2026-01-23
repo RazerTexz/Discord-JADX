@@ -15,11 +15,11 @@ import p007b.p008a.p025i.ViewServerMemberCountBinding;
 import p007b.p008a.p027k.FormatUtils;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ServerMemberCount.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: ServerMemberCount.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class ServerMemberCount extends FrameLayout {
 
-    /* renamed from: j, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: j, reason: from kotlin metadata */
     public final ViewServerMemberCountBinding binding;
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */

@@ -34,106 +34,106 @@ import p007b.p225i.p226a.p242c.p267x2.TrueHdSampleRechunker;
 import p007b.p225i.p226a.p242c.p267x2.p274i0.Atom;
 import p007b.p225i.p226a.p242c.p267x2.p274i0.SefReader;
 
-/* compiled from: Mp4Extractor.java */
-/* renamed from: b.i.a.c.x2.i0.i, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.x2.i0.i, reason: use source file name */
+/* JADX INFO: compiled from: Mp4Extractor.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class Mp4Extractor implements Extractor, SeekMap {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final /* synthetic */ int f8419a = 0;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final int f8420b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final ParsableByteArray f8421c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final ParsableByteArray f8422d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final ParsableByteArray f8423e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final ParsableByteArray f8424f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public final ArrayDeque<Atom.a> f8425g;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public final SefReader f8426h;
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public final List<Metadata.Entry> f8427i;
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public int f8428j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public int f8429k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public long f8430l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public int f8431m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     @Nullable
     public ParsableByteArray f8432n;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public int f8433o;
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public int f8434p;
 
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     public int f8435q;
 
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     public int f8436r;
 
-    /* renamed from: s */
+    /* JADX INFO: renamed from: s */
     public ExtractorOutput f8437s;
 
-    /* renamed from: t */
+    /* JADX INFO: renamed from: t */
     public a[] f8438t;
 
-    /* renamed from: u */
+    /* JADX INFO: renamed from: u */
     public long[][] f8439u;
 
-    /* renamed from: v */
+    /* JADX INFO: renamed from: v */
     public int f8440v;
 
-    /* renamed from: w */
+    /* JADX INFO: renamed from: w */
     public long f8441w;
 
-    /* renamed from: x */
+    /* JADX INFO: renamed from: x */
     public int f8442x;
 
-    /* renamed from: y */
+    /* JADX INFO: renamed from: y */
     @Nullable
     public MotionPhotoMetadata f8443y;
 
-    /* compiled from: Mp4Extractor.java */
-    /* renamed from: b.i.a.c.x2.i0.i$a */
+    /* JADX INFO: renamed from: b.i.a.c.x2.i0.i$a */
+    /* JADX INFO: compiled from: Mp4Extractor.java */
     public static final class a {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final Track f8444a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final TrackSampleTable f8445b;
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public final TrackOutput2 f8446c;
 
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         @Nullable
         public final TrueHdSampleRechunker f8447d;
 
-        /* renamed from: e */
+        /* JADX INFO: renamed from: e */
         public int f8448e;
 
         public a(Track track, TrackSampleTable trackSampleTable, TrackOutput2 trackOutput2) {
@@ -161,7 +161,7 @@ public final class Mp4Extractor implements Extractor, SeekMap {
         this.f8433o = -1;
     }
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public static long m3727k(TrackSampleTable trackSampleTable, long j, long j2) {
         int iM3732a = trackSampleTable.m3732a(j);
         if (iM3732a == -1) {
@@ -171,13 +171,13 @@ public final class Mp4Extractor implements Extractor, SeekMap {
     }
 
     @Override // p007b.p225i.p226a.p242c.p267x2.Extractor
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public boolean mo3633b(ExtractorInput extractorInput) throws IOException {
         return Sniffer2.m3730a(extractorInput, false, (this.f8420b & 2) != 0);
     }
 
     @Override // p007b.p225i.p226a.p242c.p267x2.SeekMap
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public boolean mo3619c() {
         return true;
     }
@@ -195,7 +195,7 @@ public final class Mp4Extractor implements Extractor, SeekMap {
     /* JADX WARN: Removed duplicated region for block: B:367:0x0006 A[SYNTHETIC] */
     /* JADX WARN: Removed duplicated region for block: B:43:0x00b1  */
     @Override // p007b.p225i.p226a.p242c.p267x2.Extractor
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
@@ -237,7 +237,7 @@ public final class Mp4Extractor implements Extractor, SeekMap {
                                     parsableByteArray.m3080F(i5);
                                     short sM3089i = parsableByteArray.m3089i();
                                     if (sM3089i == 2192 || sM3089i == 2816 || sM3089i == 2817 || sM3089i == s2 || sM3089i == 2820) {
-                                        sefReader.f8454c.add(new SefReader.a(sM3089i, (jMo3642b2 - sefReader.f8456e) - parsableByteArray.m3088h(), parsableByteArray.m3088h()));
+                                        sefReader.f8454c.add(new SefReader.a(sM3089i, (jMo3642b2 - ((long) sefReader.f8456e)) - ((long) parsableByteArray.m3088h()), parsableByteArray.m3088h()));
                                     } else {
                                         parsableByteArray.m3080F(8);
                                     }
@@ -256,7 +256,7 @@ public final class Mp4Extractor implements Extractor, SeekMap {
                                     throw new IllegalStateException();
                                 }
                                 long position = extractorInput.getPosition();
-                                int iMo3642b = (int) ((extractorInput.mo3642b() - extractorInput.getPosition()) - sefReader.f8456e);
+                                int iMo3642b = (int) ((extractorInput.mo3642b() - extractorInput.getPosition()) - ((long) sefReader.f8456e));
                                 ParsableByteArray parsableByteArray2 = new ParsableByteArray(iMo3642b);
                                 extractorInput.readFully(parsableByteArray2.f6793a, 0, iMo3642b);
                                 int i9 = 0;
@@ -342,7 +342,7 @@ public final class Mp4Extractor implements Extractor, SeekMap {
                             if (((bArr[7] & 255) | ((bArr[5] & 255) << 16) | ((bArr[4] & 255) << 24) | ((bArr[6] & 255) << 8)) != 1397048916) {
                                 positionHolder.f8992a = 0L;
                             } else {
-                                positionHolder.f8992a = extractorInput.getPosition() - (sefReader.f8456e - 12);
+                                positionHolder.f8992a = extractorInput.getPosition() - ((long) (sefReader.f8456e - 12));
                                 sefReader.f8455d = 2;
                             }
                         }
@@ -406,7 +406,7 @@ public final class Mp4Extractor implements Extractor, SeekMap {
                     long j9 = trackSampleTable2.f8495c[i18];
                     int i19 = trackSampleTable2.f8496d[i18];
                     TrueHdSampleRechunker trueHdSampleRechunker = aVar3.f8447d;
-                    long j10 = (j9 - position2) + this.f8434p;
+                    long j10 = (j9 - position2) + ((long) this.f8434p);
                     if (j10 < 0 || j10 >= Permission.USE_EXTERNAL_EMOJIS) {
                         positionHolder.f8992a = j9;
                         return 1;
@@ -487,7 +487,7 @@ public final class Mp4Extractor implements Extractor, SeekMap {
                     this.f8436r = 0;
                     return 0;
                 }
-                long j12 = this.f8430l - this.f8431m;
+                long j12 = this.f8430l - ((long) this.f8431m);
                 long position3 = extractorInput.getPosition() + j12;
                 ParsableByteArray parsableByteArray3 = this.f8432n;
                 if (parsableByteArray3 != null) {
@@ -542,7 +542,7 @@ public final class Mp4Extractor implements Extractor, SeekMap {
                         jMo3642b3 = aVarPeek.f8350b;
                     }
                     if (jMo3642b3 != -1) {
-                        this.f8430l = (jMo3642b3 - extractorInput.getPosition()) + this.f8431m;
+                        this.f8430l = (jMo3642b3 - extractorInput.getPosition()) + ((long) this.f8431m);
                     }
                 }
                 j2 = this.f8430l;
@@ -630,13 +630,13 @@ public final class Mp4Extractor implements Extractor, SeekMap {
     }
 
     @Override // p007b.p225i.p226a.p242c.p267x2.Extractor
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public void mo3636f(ExtractorOutput extractorOutput) {
         this.f8437s = extractorOutput;
     }
 
     @Override // p007b.p225i.p226a.p242c.p267x2.Extractor
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public void mo3637g(long j, long j2) {
         this.f8425g.clear();
         this.f8431m = 0;
@@ -674,7 +674,7 @@ public final class Mp4Extractor implements Extractor, SeekMap {
     }
 
     @Override // p007b.p225i.p226a.p242c.p267x2.SeekMap
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public SeekMap.a mo3620h(long j) {
         long j2;
         long jM3727k;
@@ -737,12 +737,12 @@ public final class Mp4Extractor implements Extractor, SeekMap {
     }
 
     @Override // p007b.p225i.p226a.p242c.p267x2.SeekMap
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public long mo3621i() {
         return this.f8441w;
     }
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final void m3728j() {
         this.f8428j = 0;
         this.f8431m = 0;
@@ -1196,7 +1196,7 @@ public final class Mp4Extractor implements Extractor, SeekMap {
     /* JADX WARN: Removed duplicated region for block: B:311:0x05e1  */
     /* JADX WARN: Removed duplicated region for block: B:318:0x061e A[LOOP:12: B:316:0x061b->B:318:0x061e, LOOP_END] */
     /* JADX WARN: Removed duplicated region for block: B:322:0x063a  */
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
@@ -1494,7 +1494,7 @@ public final class Mp4Extractor implements Extractor, SeekMap {
                             }
                             int i30 = iArr[i28];
                             jArr[i28][i30] = j4;
-                            j4 += aVarArr[i28].f8445b.f8496d[i30];
+                            j4 += (long) aVarArr[i28].f8445b.f8496d[i30];
                             int i31 = i30 + 1;
                             iArr[i28] = i31;
                             if (i31 < jArr[i28].length) {

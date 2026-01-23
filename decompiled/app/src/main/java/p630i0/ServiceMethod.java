@@ -47,11 +47,11 @@ import p630i0.p636f0.Tag2;
 import p630i0.p636f0.Url;
 import retrofit2.Response;
 
-/* compiled from: ServiceMethod.java */
-/* renamed from: i0.z, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: i0.z, reason: use source file name */
+/* JADX INFO: compiled from: ServiceMethod.java */
+/* JADX INFO: loaded from: classes3.dex */
 public abstract class ServiceMethod<T> {
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static <T> ServiceMethod<T> m10730b(Retrofit2 retrofit22, Method method) throws CloneNotSupportedException {
         Type genericReturnType;
         boolean z2;
@@ -578,6 +578,6 @@ public abstract class ServiceMethod<T> {
         }
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public abstract T mo10710a(Object[] objArr);
 }

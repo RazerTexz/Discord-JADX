@@ -12,8 +12,8 @@ import androidx.annotation.StyleableRes;
 import androidx.appcompat.content.res.AppCompatResources;
 import androidx.appcompat.widget.TintTypedArray;
 
+/* JADX INFO: loaded from: classes3.dex */
 @RestrictTo({RestrictTo.Scope.LIBRARY_GROUP})
-/* loaded from: classes3.dex */
 public class MaterialResources {
     private static final float FONT_SCALE_1_3 = 1.3f;
     private static final float FONT_SCALE_2_0 = 2.0f;

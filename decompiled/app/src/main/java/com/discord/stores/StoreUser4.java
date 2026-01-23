@@ -7,14 +7,14 @@ import kotlin.jvm.functions.Function1;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: StoreUser.kt */
-/* renamed from: com.discord.stores.StoreUser$userRequestManager$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.stores.StoreUser$userRequestManager$1, reason: use source file name */
+/* JADX INFO: compiled from: StoreUser.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class StoreUser4 extends Lambda implements Function1<User, Unit> {
     public final /* synthetic */ StoreUser this$0;
 
-    /* compiled from: StoreUser.kt */
-    /* renamed from: com.discord.stores.StoreUser$userRequestManager$1$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreUser$userRequestManager$1$1 */
+    /* JADX INFO: compiled from: StoreUser.kt */
     public static final class C65571 extends Lambda implements Function0<Unit> {
         public final /* synthetic */ User $user;
 
@@ -30,7 +30,7 @@ public final class StoreUser4 extends Lambda implements Function1<User, Unit> {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             StoreUser.access$getNotifyUserUpdated$p(StoreUser4.this.this$0).invoke(this.$user);
         }
@@ -48,7 +48,7 @@ public final class StoreUser4 extends Lambda implements Function1<User, Unit> {
         return Unit.f27425a;
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final void invoke2(User user) {
         Intrinsics3.checkNotNullParameter(user, "user");
         StoreUser.access$getDispatcher$p(this.this$0).schedule(new C65571(user));

@@ -20,8 +20,8 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 import p658rx.Observable;
 
-/* compiled from: StoreGuildTemplates.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: StoreGuildTemplates.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class StoreGuildTemplates extends StoreV2 {
     private final Dispatcher dispatcher;
     private String dynamicLinkGuildTemplateCode;
@@ -30,10 +30,10 @@ public final class StoreGuildTemplates extends StoreV2 {
     private final ObservationDeck observationDeck;
     private final RestAPI restAPI;
 
-    /* compiled from: StoreGuildTemplates.kt */
+    /* JADX INFO: compiled from: StoreGuildTemplates.kt */
     public static abstract class GuildTemplateState {
 
-        /* compiled from: StoreGuildTemplates.kt */
+        /* JADX INFO: compiled from: StoreGuildTemplates.kt */
         public static final class Invalid extends GuildTemplateState {
             public static final Invalid INSTANCE = new Invalid();
 
@@ -42,7 +42,7 @@ public final class StoreGuildTemplates extends StoreV2 {
             }
         }
 
-        /* compiled from: StoreGuildTemplates.kt */
+        /* JADX INFO: compiled from: StoreGuildTemplates.kt */
         public static final class LoadFailed extends GuildTemplateState {
             public static final LoadFailed INSTANCE = new LoadFailed();
 
@@ -51,7 +51,7 @@ public final class StoreGuildTemplates extends StoreV2 {
             }
         }
 
-        /* compiled from: StoreGuildTemplates.kt */
+        /* JADX INFO: compiled from: StoreGuildTemplates.kt */
         public static final class Loading extends GuildTemplateState {
             public static final Loading INSTANCE = new Loading();
 
@@ -60,7 +60,7 @@ public final class StoreGuildTemplates extends StoreV2 {
             }
         }
 
-        /* compiled from: StoreGuildTemplates.kt */
+        /* JADX INFO: compiled from: StoreGuildTemplates.kt */
         public static final class None extends GuildTemplateState {
             public static final None INSTANCE = new None();
 
@@ -69,7 +69,7 @@ public final class StoreGuildTemplates extends StoreV2 {
             }
         }
 
-        /* compiled from: StoreGuildTemplates.kt */
+        /* JADX INFO: compiled from: StoreGuildTemplates.kt */
         public static final /* data */ class Resolved extends GuildTemplateState {
             private final ModelGuildTemplate guildTemplate;
 
@@ -87,7 +87,7 @@ public final class StoreGuildTemplates extends StoreV2 {
                 return resolved.copy(modelGuildTemplate);
             }
 
-            /* renamed from: component1, reason: from getter */
+            /* JADX INFO: renamed from: component1, reason: from getter */
             public final ModelGuildTemplate getGuildTemplate() {
                 return this.guildTemplate;
             }
@@ -144,8 +144,8 @@ public final class StoreGuildTemplates extends StoreV2 {
         }
     }
 
-    /* compiled from: StoreGuildTemplates.kt */
-    /* renamed from: com.discord.stores.StoreGuildTemplates$maybeInitTemplateState$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreGuildTemplates$maybeInitTemplateState$1 */
+    /* JADX INFO: compiled from: StoreGuildTemplates.kt */
     public static final class C60831 extends Lambda implements Function0<Unit> {
         public final /* synthetic */ String $guildTemplateCode;
 
@@ -161,7 +161,7 @@ public final class StoreGuildTemplates extends StoreV2 {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             if (!StoreGuildTemplates.access$getGuildTemplatesByCode$p(StoreGuildTemplates.this).containsKey(this.$guildTemplateCode) || (StoreGuildTemplates.access$getGuildTemplatesByCode$p(StoreGuildTemplates.this).get(this.$guildTemplateCode) instanceof GuildTemplateState.LoadFailed)) {
                 StoreGuildTemplates.access$getGuildTemplatesByCode$p(StoreGuildTemplates.this).put(this.$guildTemplateCode, GuildTemplateState.Loading.INSTANCE);
@@ -171,8 +171,8 @@ public final class StoreGuildTemplates extends StoreV2 {
         }
     }
 
-    /* compiled from: StoreGuildTemplates.kt */
-    /* renamed from: com.discord.stores.StoreGuildTemplates$observeDynamicLinkGuildTemplateCode$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreGuildTemplates$observeDynamicLinkGuildTemplateCode$1 */
+    /* JADX INFO: compiled from: StoreGuildTemplates.kt */
     public static final class C60841 extends Lambda implements Function0<String> {
         public C60841() {
             super(0);
@@ -184,14 +184,14 @@ public final class StoreGuildTemplates extends StoreV2 {
         }
 
         @Override // kotlin.jvm.functions.Function0
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final String invoke2() {
             return StoreGuildTemplates.access$getDynamicLinkGuildTemplateCode$p(StoreGuildTemplates.this);
         }
     }
 
-    /* compiled from: StoreGuildTemplates.kt */
-    /* renamed from: com.discord.stores.StoreGuildTemplates$observeGuildTemplate$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreGuildTemplates$observeGuildTemplate$1 */
+    /* JADX INFO: compiled from: StoreGuildTemplates.kt */
     public static final class C60851 extends Lambda implements Function0<GuildTemplateState> {
         public final /* synthetic */ String $guildTemplateCode;
 
@@ -214,12 +214,12 @@ public final class StoreGuildTemplates extends StoreV2 {
         }
     }
 
-    /* compiled from: StoreGuildTemplates.kt */
-    /* renamed from: com.discord.stores.StoreGuildTemplates$requestGuildTemplate$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreGuildTemplates$requestGuildTemplate$1 */
+    /* JADX INFO: compiled from: StoreGuildTemplates.kt */
     public static final class C60861 extends Lambda implements Function1<ModelGuildTemplate, Unit> {
 
-        /* compiled from: StoreGuildTemplates.kt */
-        /* renamed from: com.discord.stores.StoreGuildTemplates$requestGuildTemplate$1$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.stores.StoreGuildTemplates$requestGuildTemplate$1$1, reason: invalid class name */
+        /* JADX INFO: compiled from: StoreGuildTemplates.kt */
         public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
             public final /* synthetic */ ModelGuildTemplate $guildTemplate;
 
@@ -235,7 +235,7 @@ public final class StoreGuildTemplates extends StoreV2 {
                 return Unit.f27425a;
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2() {
                 StoreGuildTemplates.access$handleRequestGuildTemplateSuccess(StoreGuildTemplates.this, this.$guildTemplate);
             }
@@ -251,20 +251,20 @@ public final class StoreGuildTemplates extends StoreV2 {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(ModelGuildTemplate modelGuildTemplate) {
             Intrinsics3.checkNotNullParameter(modelGuildTemplate, "guildTemplate");
             StoreGuildTemplates.access$getDispatcher$p(StoreGuildTemplates.this).schedule(new AnonymousClass1(modelGuildTemplate));
         }
     }
 
-    /* compiled from: StoreGuildTemplates.kt */
-    /* renamed from: com.discord.stores.StoreGuildTemplates$requestGuildTemplate$2 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreGuildTemplates$requestGuildTemplate$2 */
+    /* JADX INFO: compiled from: StoreGuildTemplates.kt */
     public static final class C60872 extends Lambda implements Function1<Error, Unit> {
         public final /* synthetic */ String $guildTemplateCode;
 
-        /* compiled from: StoreGuildTemplates.kt */
-        /* renamed from: com.discord.stores.StoreGuildTemplates$requestGuildTemplate$2$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.stores.StoreGuildTemplates$requestGuildTemplate$2$1, reason: invalid class name */
+        /* JADX INFO: compiled from: StoreGuildTemplates.kt */
         public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
             public final /* synthetic */ Error $error;
 
@@ -280,7 +280,7 @@ public final class StoreGuildTemplates extends StoreV2 {
                 return Unit.f27425a;
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2() {
                 C60872 c60872 = C60872.this;
                 StoreGuildTemplates storeGuildTemplates = StoreGuildTemplates.this;
@@ -303,15 +303,15 @@ public final class StoreGuildTemplates extends StoreV2 {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Error error) {
             Intrinsics3.checkNotNullParameter(error, "error");
             StoreGuildTemplates.access$getDispatcher$p(StoreGuildTemplates.this).schedule(new AnonymousClass1(error));
         }
     }
 
-    /* compiled from: StoreGuildTemplates.kt */
-    /* renamed from: com.discord.stores.StoreGuildTemplates$setDynamicLinkGuildTemplateCode$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreGuildTemplates$setDynamicLinkGuildTemplateCode$1 */
+    /* JADX INFO: compiled from: StoreGuildTemplates.kt */
     public static final class C60881 extends Lambda implements Function0<Unit> {
         public final /* synthetic */ String $guildTemplateCode;
 
@@ -327,7 +327,7 @@ public final class StoreGuildTemplates extends StoreV2 {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             StoreGuildTemplates.access$setDynamicLinkGuildTemplateCode$p(StoreGuildTemplates.this, this.$guildTemplateCode);
             StoreGuildTemplates.this.markChanged();

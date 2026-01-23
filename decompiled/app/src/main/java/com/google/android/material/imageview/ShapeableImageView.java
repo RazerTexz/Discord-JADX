@@ -31,7 +31,7 @@ import com.google.android.material.shape.ShapeAppearancePathProvider;
 import com.google.android.material.shape.Shapeable;
 import com.google.android.material.theme.overlay.MaterialThemeOverlay;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public class ShapeableImageView extends AppCompatImageView implements Shapeable {
     private static final int DEF_STYLE_RES = C10817R.style.Widget_MaterialComponents_ShapeableImageView;
     private static final int UNDEFINED_PADDING = Integer.MIN_VALUE;
@@ -72,11 +72,11 @@ public class ShapeableImageView extends AppCompatImageView implements Shapeable 
     @Dimension
     private int topContentPadding;
 
+    /* JADX INFO: renamed from: com.google.android.material.imageview.ShapeableImageView$a */
     @TargetApi(21)
-    /* renamed from: com.google.android.material.imageview.ShapeableImageView$a */
     public class C10922a extends ViewOutlineProvider {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final Rect f21023a = new Rect();
 
         public C10922a() {

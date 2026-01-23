@@ -7,9 +7,9 @@ import kotlin.jvm.functions.Function3;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetOutboundPromoTerms.kt */
-/* renamed from: com.discord.widgets.settings.premium.WidgetOutboundPromoTerms$renderContext$1$onClickUrl$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.settings.premium.WidgetOutboundPromoTerms$renderContext$1$onClickUrl$1, reason: use source file name */
+/* JADX INFO: compiled from: WidgetOutboundPromoTerms.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetOutboundPromoTerms4 extends Lambda implements Function3<Context, String, String, Unit> {
     public static final WidgetOutboundPromoTerms4 INSTANCE = new WidgetOutboundPromoTerms4();
 
@@ -23,7 +23,7 @@ public final class WidgetOutboundPromoTerms4 extends Lambda implements Function3
         return Unit.f27425a;
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final void invoke2(Context context, String str, String str2) {
         Intrinsics3.checkNotNullParameter(context, "context");
         Intrinsics3.checkNotNullParameter(str, "url");

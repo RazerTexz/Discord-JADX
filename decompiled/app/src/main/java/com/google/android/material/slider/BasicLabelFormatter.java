@@ -3,7 +3,7 @@ package com.google.android.material.slider;
 import androidx.annotation.NonNull;
 import java.util.Locale;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public final class BasicLabelFormatter implements LabelFormatter {
     private static final int BILLION = 1000000000;
     private static final int MILLION = 1000000;

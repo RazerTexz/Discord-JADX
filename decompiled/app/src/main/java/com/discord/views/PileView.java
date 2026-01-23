@@ -30,66 +30,66 @@ import p507d0.p580t._Collections;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: PileView.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: PileView.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class PileView extends FrameLayout {
 
-    /* renamed from: j, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: j, reason: from kotlin metadata */
     public int maxItems;
 
-    /* renamed from: k, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: k, reason: from kotlin metadata */
     public boolean doRoundItem;
 
-    /* renamed from: l, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: l, reason: from kotlin metadata */
     public boolean doRoundBg;
 
-    /* renamed from: m, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: m, reason: from kotlin metadata */
     public int itemSizePx;
 
-    /* renamed from: n, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: n, reason: from kotlin metadata */
     public int overlapPx;
 
-    /* renamed from: o, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: o, reason: from kotlin metadata */
     @ColorInt
     public int itemBackgroundColor;
 
-    /* renamed from: p, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: p, reason: from kotlin metadata */
     public int itemPaddingPx;
 
-    /* renamed from: q, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: q, reason: from kotlin metadata */
     @ColorInt
     public int itemTextColor;
 
-    /* renamed from: r, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: r, reason: from kotlin metadata */
     public int cutoutThicknessPx;
 
-    /* renamed from: s, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: s, reason: from kotlin metadata */
     public final CutoutView.InterfaceC7075a cutoutStyle;
 
-    /* renamed from: t, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: t, reason: from kotlin metadata */
     public int overflowTextSizePx;
 
-    /* renamed from: u, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: u, reason: from kotlin metadata */
     public boolean showOverFlowItem;
 
-    /* renamed from: v, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: v, reason: from kotlin metadata */
     @ColorInt
     public int overflowBackgroundColor;
 
-    /* compiled from: kotlin-style lambda group */
-    /* renamed from: com.discord.views.PileView$a */
+    /* JADX INFO: renamed from: com.discord.views.PileView$a */
+    /* JADX INFO: compiled from: kotlin-style lambda group */
     public static final class C7087a extends Lambda implements Function1<Integer, String> {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public static final C7087a f19119j = new C7087a(0);
 
-        /* renamed from: k */
+        /* JADX INFO: renamed from: k */
         public static final C7087a f19120k = new C7087a(1);
 
-        /* renamed from: l */
+        /* JADX INFO: renamed from: l */
         public static final C7087a f19121l = new C7087a(2);
 
-        /* renamed from: m */
+        /* JADX INFO: renamed from: m */
         public final /* synthetic */ int f19122m;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -117,20 +117,20 @@ public final class PileView extends FrameLayout {
         }
     }
 
-    /* compiled from: kotlin-style lambda group */
-    /* renamed from: com.discord.views.PileView$b */
+    /* JADX INFO: renamed from: com.discord.views.PileView$b */
+    /* JADX INFO: compiled from: kotlin-style lambda group */
     public static final class C7088b extends Lambda implements Function0<String> {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public static final C7088b f19123j = new C7088b(0);
 
-        /* renamed from: k */
+        /* JADX INFO: renamed from: k */
         public static final C7088b f19124k = new C7088b(1);
 
-        /* renamed from: l */
+        /* JADX INFO: renamed from: l */
         public static final C7088b f19125l = new C7088b(2);
 
-        /* renamed from: m */
+        /* JADX INFO: renamed from: m */
         public final /* synthetic */ int f19126m;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -149,14 +149,14 @@ public final class PileView extends FrameLayout {
         }
     }
 
-    /* compiled from: PileView.kt */
-    /* renamed from: com.discord.views.PileView$c */
+    /* JADX INFO: renamed from: com.discord.views.PileView$c */
+    /* JADX INFO: compiled from: PileView.kt */
     public static final class C7089c {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final Function1<Integer, String> f19127a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final Function0<String> f19128b;
 
         /* JADX WARN: Multi-variable type inference failed */

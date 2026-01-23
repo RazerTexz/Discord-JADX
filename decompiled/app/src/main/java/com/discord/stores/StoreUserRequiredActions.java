@@ -9,14 +9,14 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 import p658rx.Observable;
 
-/* compiled from: StoreUserRequiredActions.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: StoreUserRequiredActions.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class StoreUserRequiredActions extends StoreV2 {
     private final ObservationDeck observationDeck;
     private RequiredAction userRequiredAction;
 
-    /* compiled from: StoreUserRequiredActions.kt */
-    /* renamed from: com.discord.stores.StoreUserRequiredActions$observeUserRequiredAction$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreUserRequiredActions$observeUserRequiredAction$1 */
+    /* JADX INFO: compiled from: StoreUserRequiredActions.kt */
     public static final class C65961 extends Lambda implements Function0<RequiredAction> {
         public C65961() {
             super(0);

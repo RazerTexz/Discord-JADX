@@ -1,7 +1,6 @@
 package androidx.core.content;
 
 import android.content.Context;
-import android.content.res.Resources;
 import android.content.res.TypedArray;
 import android.util.AttributeSet;
 import androidx.annotation.AttrRes;
@@ -11,9 +10,9 @@ import kotlin.Unit;
 import kotlin.jvm.functions.Function1;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: Context.kt */
-/* renamed from: androidx.core.content.ContextKt, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: androidx.core.content.ContextKt, reason: use source file name */
+/* JADX INFO: compiled from: Context.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class Context2 {
     public static final /* synthetic */ <T> T getSystemService(Context context) {
         Intrinsics3.checkNotNullParameter(context, "<this>");
@@ -50,7 +49,7 @@ public final class Context2 {
         typedArrayObtainStyledAttributes.recycle();
     }
 
-    public static final void withStyledAttributes(Context context, @StyleRes int i, int[] iArr, Function1<? super TypedArray, Unit> function1) throws Resources.NotFoundException {
+    public static final void withStyledAttributes(Context context, @StyleRes int i, int[] iArr, Function1<? super TypedArray, Unit> function1) {
         Intrinsics3.checkNotNullParameter(context, "<this>");
         Intrinsics3.checkNotNullParameter(iArr, "attrs");
         Intrinsics3.checkNotNullParameter(function1, "block");

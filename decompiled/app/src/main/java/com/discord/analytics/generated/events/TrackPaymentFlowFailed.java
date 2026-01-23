@@ -16,8 +16,8 @@ import com.discord.api.science.AnalyticsSchema;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: TrackPaymentFlowFailed.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: TrackPaymentFlowFailed.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class TrackPaymentFlowFailed implements AnalyticsSchema, TrackBase2, TrackLocationMetadata2, TrackStoreSkuMetadata2, TrackSubscriptionMetadata2, TrackPaymentMetadata2, TrackSourceMetadata2 {
     private TrackBase trackBase;
     private TrackLocationMetadata trackLocationMetadata;
@@ -34,7 +34,7 @@ public final /* data */ class TrackPaymentFlowFailed implements AnalyticsSchema,
     private final transient String analyticsSchemaTypeName = "payment_flow_failed";
 
     @Override // com.discord.api.science.AnalyticsSchema
-    /* renamed from: d, reason: from getter */
+    /* JADX INFO: renamed from: d, reason: from getter */
     public String getAnalyticsSchemaTypeName() {
         return this.analyticsSchemaTypeName;
     }

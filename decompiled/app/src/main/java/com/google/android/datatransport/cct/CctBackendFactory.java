@@ -6,8 +6,8 @@ import p007b.p225i.p226a.p228b.p231j.p232q.BackendFactory;
 import p007b.p225i.p226a.p228b.p231j.p232q.CreationContext;
 import p007b.p225i.p226a.p228b.p231j.p232q.TransportBackend;
 
+/* JADX INFO: loaded from: classes3.dex */
 @Keep
-/* loaded from: classes3.dex */
 public class CctBackendFactory implements BackendFactory {
     @Override // p007b.p225i.p226a.p228b.p231j.p232q.BackendFactory
     public TransportBackend create(CreationContext creationContext) {

@@ -6,7 +6,7 @@ import androidx.annotation.IdRes;
 import androidx.annotation.RestrictTo;
 import androidx.recyclerview.widget.RecyclerView;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class PreferenceViewHolder extends RecyclerView.ViewHolder {
     private final SparseArray<View> mCachedViews;
     private boolean mDividerAllowedAbove;

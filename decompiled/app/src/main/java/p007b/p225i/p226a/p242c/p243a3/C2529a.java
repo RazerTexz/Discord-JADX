@@ -6,15 +6,15 @@ import p007b.p225i.p226a.p242c.Timeline;
 import p007b.p225i.p226a.p242c.p243a3.MaskingMediaSource;
 import p007b.p225i.p226a.p242c.p243a3.MediaSource2;
 
-/* compiled from: lambda */
-/* renamed from: b.i.a.c.a3.a */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.a3.a */
+/* JADX INFO: compiled from: lambda */
+/* JADX INFO: loaded from: classes3.dex */
 public final /* synthetic */ class C2529a implements MediaSource2.b {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final /* synthetic */ CompositeMediaSource f5473a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final /* synthetic */ Object f5474b;
 
     public /* synthetic */ C2529a(CompositeMediaSource compositeMediaSource, Object obj) {
@@ -26,7 +26,7 @@ public final /* synthetic */ class C2529a implements MediaSource2.b {
     /* JADX WARN: Removed duplicated region for block: B:35:0x00da  */
     /* JADX WARN: Removed duplicated region for block: B:37:? A[RETURN, SYNTHETIC] */
     @Override // p007b.p225i.p226a.p242c.p243a3.MediaSource2.b
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */

@@ -7,8 +7,8 @@ import java.util.List;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: TrackStopRingingCall.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: TrackStopRingingCall.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class TrackStopRingingCall implements AnalyticsSchema, TrackBase2 {
     private TrackBase trackBase;
     private final Long channelId = null;
@@ -19,7 +19,7 @@ public final /* data */ class TrackStopRingingCall implements AnalyticsSchema, T
     private final transient String analyticsSchemaTypeName = "stop_ringing_call";
 
     @Override // com.discord.api.science.AnalyticsSchema
-    /* renamed from: d, reason: from getter */
+    /* JADX INFO: renamed from: d, reason: from getter */
     public String getAnalyticsSchemaTypeName() {
         return this.analyticsSchemaTypeName;
     }

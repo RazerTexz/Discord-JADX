@@ -13,8 +13,8 @@ import androidx.annotation.RestrictTo;
 import androidx.constraintlayout.solver.widgets.analyzer.BasicMeasure;
 import androidx.core.view.ViewCompat;
 
+/* JADX INFO: loaded from: classes.dex */
 @RestrictTo({RestrictTo.Scope.LIBRARY})
-/* loaded from: classes.dex */
 public class ContentFrameLayout extends FrameLayout {
     private OnAttachListener mAttachListener;
     private final Rect mDecorPadding;

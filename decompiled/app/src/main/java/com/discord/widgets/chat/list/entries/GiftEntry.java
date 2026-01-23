@@ -4,8 +4,8 @@ import p001a0.p002a.p003a.C0002b;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: GiftEntry.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: GiftEntry.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final /* data */ class GiftEntry extends ChatListEntry {
     private final long channelId;
     private final String giftCode;
@@ -28,22 +28,22 @@ public final /* data */ class GiftEntry extends ChatListEntry {
         return giftEntry.copy((i & 1) != 0 ? giftEntry.userId : j, (i & 2) != 0 ? giftEntry.messageId : j2, (i & 4) != 0 ? giftEntry.channelId : j3, (i & 8) != 0 ? giftEntry.giftCode : str);
     }
 
-    /* renamed from: component1, reason: from getter */
+    /* JADX INFO: renamed from: component1, reason: from getter */
     public final long getUserId() {
         return this.userId;
     }
 
-    /* renamed from: component2, reason: from getter */
+    /* JADX INFO: renamed from: component2, reason: from getter */
     public final long getMessageId() {
         return this.messageId;
     }
 
-    /* renamed from: component3, reason: from getter */
+    /* JADX INFO: renamed from: component3, reason: from getter */
     public final long getChannelId() {
         return this.channelId;
     }
 
-    /* renamed from: component4, reason: from getter */
+    /* JADX INFO: renamed from: component4, reason: from getter */
     public final String getGiftCode() {
         return this.giftCode;
     }

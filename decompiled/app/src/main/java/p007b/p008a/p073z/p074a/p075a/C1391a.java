@@ -3,12 +3,12 @@ package p007b.p008a.p073z.p074a.p075a;
 import com.discord.widgets.channels.permissions.WidgetChannelSettingsPermissionsAddMember;
 import p658rx.functions.Action1;
 
-/* compiled from: lambda */
-/* renamed from: b.a.z.a.a.a */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: b.a.z.a.a.a */
+/* JADX INFO: compiled from: lambda */
+/* JADX INFO: loaded from: classes2.dex */
 public final /* synthetic */ class C1391a implements Action1 {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final /* synthetic */ WidgetChannelSettingsPermissionsAddMember f2083j;
 
     public /* synthetic */ C1391a(WidgetChannelSettingsPermissionsAddMember widgetChannelSettingsPermissionsAddMember) {

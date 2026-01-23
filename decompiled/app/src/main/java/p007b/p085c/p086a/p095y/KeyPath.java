@@ -8,18 +8,18 @@ import java.util.Arrays;
 import java.util.List;
 import p007b.p100d.p104b.p105a.outline;
 
-/* compiled from: KeyPath.java */
-/* renamed from: b.c.a.y.f, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.c.a.y.f, reason: use source file name */
+/* JADX INFO: compiled from: KeyPath.java */
+/* JADX INFO: loaded from: classes.dex */
 public class KeyPath {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final KeyPath f2712a = new KeyPath("COMPOSITION");
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final List<String> f2713b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     @Nullable
     public KeyPathElement f2714c;
 
@@ -29,20 +29,20 @@ public class KeyPath {
 
     @CheckResult
     @RestrictTo({RestrictTo.Scope.LIBRARY})
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public KeyPath m766a(String str) {
         KeyPath keyPath = new KeyPath(this);
         keyPath.f2713b.add(str);
         return keyPath;
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final boolean m767b() {
         return this.f2713b.get(r0.size() - 1).equals("**");
     }
 
     @RestrictTo({RestrictTo.Scope.LIBRARY})
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public boolean m768c(String str, int i) {
         if (i >= this.f2713b.size()) {
             return false;
@@ -66,7 +66,7 @@ public class KeyPath {
     }
 
     @RestrictTo({RestrictTo.Scope.LIBRARY})
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public int m769d(String str, int i) {
         if ("__container".equals(str)) {
             return 0;
@@ -78,7 +78,7 @@ public class KeyPath {
     }
 
     @RestrictTo({RestrictTo.Scope.LIBRARY})
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public boolean m770e(String str, int i) {
         if ("__container".equals(str)) {
             return true;
@@ -90,13 +90,13 @@ public class KeyPath {
     }
 
     @RestrictTo({RestrictTo.Scope.LIBRARY})
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public boolean m771f(String str, int i) {
         return "__container".equals(str) || i < this.f2713b.size() - 1 || this.f2713b.get(i).equals("**");
     }
 
     @RestrictTo({RestrictTo.Scope.LIBRARY})
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public KeyPath m772g(KeyPathElement keyPathElement) {
         KeyPath keyPath = new KeyPath(this);
         keyPath.f2714c = keyPathElement;

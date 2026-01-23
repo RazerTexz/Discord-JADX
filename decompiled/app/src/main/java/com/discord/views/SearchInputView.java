@@ -2,7 +2,6 @@ package com.discord.views;
 
 import android.content.Context;
 import android.content.res.ColorStateList;
-import android.content.res.Resources;
 import android.content.res.TypedArray;
 import android.graphics.drawable.Drawable;
 import android.util.AttributeSet;
@@ -24,27 +23,27 @@ import p007b.p008a.p025i.SearchInputViewBinding;
 import p507d0.p592z.p594d.Intrinsics3;
 import p658rx.functions.Action1;
 
-/* compiled from: SearchInputView.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: SearchInputView.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class SearchInputView extends ConstraintLayout {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static final /* synthetic */ int f19137j = 0;
 
-    /* renamed from: k, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: k, reason: from kotlin metadata */
     public final SearchInputViewBinding binding;
 
-    /* renamed from: l, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: l, reason: from kotlin metadata */
     public String searchIconContentDescription;
 
-    /* renamed from: m, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: m, reason: from kotlin metadata */
     public Function0<Unit> onClearClicked;
 
-    /* compiled from: SearchInputView.kt */
-    /* renamed from: com.discord.views.SearchInputView$a */
+    /* JADX INFO: renamed from: com.discord.views.SearchInputView$a */
+    /* JADX INFO: compiled from: SearchInputView.kt */
     public static final class C7090a<T> implements Action1<String> {
 
-        /* renamed from: k */
+        /* JADX INFO: renamed from: k */
         public final /* synthetic */ Function1 f19142k;
 
         public C7090a(Function1 function1) {
@@ -63,11 +62,11 @@ public final class SearchInputView extends ConstraintLayout {
         }
     }
 
-    /* compiled from: SearchInputView.kt */
-    /* renamed from: com.discord.views.SearchInputView$b */
+    /* JADX INFO: renamed from: com.discord.views.SearchInputView$b */
+    /* JADX INFO: compiled from: SearchInputView.kt */
     public static final class ViewOnClickListenerC7091b implements View.OnClickListener {
 
-        /* renamed from: k */
+        /* JADX INFO: renamed from: k */
         public final /* synthetic */ String f19144k;
 
         public ViewOnClickListenerC7091b(boolean z2, String str) {
@@ -83,7 +82,7 @@ public final class SearchInputView extends ConstraintLayout {
     }
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-    public SearchInputView(Context context, AttributeSet attributeSet) throws Resources.NotFoundException {
+    public SearchInputView(Context context, AttributeSet attributeSet) {
         super(context, attributeSet);
         Intrinsics3.checkNotNullParameter(context, "context");
         LayoutInflater.from(getContext()).inflate(C5419R.layout.search_input_view, this);
@@ -120,7 +119,7 @@ public final class SearchInputView extends ConstraintLayout {
         throw new NullPointerException("Missing required view with ID: ".concat(getResources().getResourceName(i)));
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final void m8553a(Fragment fragment, Function1<? super String, Unit> onAfterTextChanged) {
         Intrinsics3.checkNotNullParameter(fragment, "fragment");
         Intrinsics3.checkNotNullParameter(onAfterTextChanged, "onAfterTextChanged");
@@ -130,7 +129,7 @@ public final class SearchInputView extends ConstraintLayout {
         companion.addBindedTextWatcher(fragment, textInputEditText, new C7090a(onAfterTextChanged));
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final void m8554b(String searchQuery) {
         boolean z2 = searchQuery.length() == 0;
         SearchInputViewBinding searchInputViewBinding = this.binding;

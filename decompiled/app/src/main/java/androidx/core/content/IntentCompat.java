@@ -4,7 +4,7 @@ import android.annotation.SuppressLint;
 import android.content.Intent;
 import androidx.annotation.NonNull;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public final class IntentCompat {
 
     @SuppressLint({"ActionValue"})

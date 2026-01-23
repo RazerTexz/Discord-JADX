@@ -19,16 +19,16 @@ import p507d0.p580t._Collections;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: typeParameterUtils.kt */
-/* renamed from: d0.e0.p.d.m0.c.a1, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.c.a1, reason: use source file name */
+/* JADX INFO: compiled from: typeParameterUtils.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class typeParameterUtils {
 
-    /* compiled from: typeParameterUtils.kt */
-    /* renamed from: d0.e0.p.d.m0.c.a1$a */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.c.a1$a */
+    /* JADX INFO: compiled from: typeParameterUtils.kt */
     public static final class a extends Lambda implements Function1<DeclarationDescriptor, Boolean> {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public static final a f22673j = new a();
 
         public a() {
@@ -40,18 +40,18 @@ public final class typeParameterUtils {
             return Boolean.valueOf(invoke2(declarationDescriptor));
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final boolean invoke2(DeclarationDescriptor declarationDescriptor) {
             Intrinsics3.checkNotNullParameter(declarationDescriptor, "it");
             return declarationDescriptor instanceof CallableDescriptor;
         }
     }
 
-    /* compiled from: typeParameterUtils.kt */
-    /* renamed from: d0.e0.p.d.m0.c.a1$b */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.c.a1$b */
+    /* JADX INFO: compiled from: typeParameterUtils.kt */
     public static final class b extends Lambda implements Function1<DeclarationDescriptor, Boolean> {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public static final b f22674j = new b();
 
         public b() {
@@ -63,18 +63,18 @@ public final class typeParameterUtils {
             return Boolean.valueOf(invoke2(declarationDescriptor));
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final boolean invoke2(DeclarationDescriptor declarationDescriptor) {
             Intrinsics3.checkNotNullParameter(declarationDescriptor, "it");
             return !(declarationDescriptor instanceof ConstructorDescriptor);
         }
     }
 
-    /* compiled from: typeParameterUtils.kt */
-    /* renamed from: d0.e0.p.d.m0.c.a1$c */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.c.a1$c */
+    /* JADX INFO: compiled from: typeParameterUtils.kt */
     public static final class c extends Lambda implements Function1<DeclarationDescriptor, Sequence<? extends TypeParameterDescriptor>> {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public static final c f22675j = new c();
 
         public c() {
@@ -86,7 +86,7 @@ public final class typeParameterUtils {
             return invoke2(declarationDescriptor);
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final Sequence<TypeParameterDescriptor> invoke2(DeclarationDescriptor declarationDescriptor) {
             Intrinsics3.checkNotNullParameter(declarationDescriptor, "it");
             List<TypeParameterDescriptor> typeParameters = ((CallableDescriptor) declarationDescriptor).getTypeParameters();
@@ -95,7 +95,7 @@ public final class typeParameterUtils {
         }
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final typeParameterUtils3 m9383a(KotlinType kotlinType, ClassifierDescriptorWithTypeParameters classifierDescriptorWithTypeParameters, int i) {
         if (classifierDescriptorWithTypeParameters == null || ErrorUtils.isError(classifierDescriptorWithTypeParameters)) {
             return null;

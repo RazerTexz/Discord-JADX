@@ -3,8 +3,8 @@ package com.discord.models.domain;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ModelApplicationStreamPreview.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: ModelApplicationStreamPreview.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class ModelApplicationStreamPreview {
     private final String url;
 
@@ -20,7 +20,7 @@ public final /* data */ class ModelApplicationStreamPreview {
         return modelApplicationStreamPreview.copy(str);
     }
 
-    /* renamed from: component1, reason: from getter */
+    /* JADX INFO: renamed from: component1, reason: from getter */
     public final String getUrl() {
         return this.url;
     }

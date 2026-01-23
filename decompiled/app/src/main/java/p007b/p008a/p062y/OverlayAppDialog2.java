@@ -13,19 +13,19 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p658rx.subjects.PublishSubject;
 import p658rx.subjects.Subject;
 
-/* compiled from: OverlayAppDialog.kt */
-/* renamed from: b.a.y.l, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: b.a.y.l, reason: use source file name */
+/* JADX INFO: compiled from: OverlayAppDialog.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public abstract class OverlayAppDialog2 extends OverlayDialog implements AppComponent {
 
-    /* renamed from: x */
+    /* JADX INFO: renamed from: x */
     public final Subject<Void, Void> f2042x;
 
-    /* renamed from: y */
+    /* JADX INFO: renamed from: y */
     public Function1<? super OverlayDialog, Unit> f2043y;
 
-    /* compiled from: Animator.kt */
-    /* renamed from: b.a.y.l$a */
+    /* JADX INFO: renamed from: b.a.y.l$a */
+    /* JADX INFO: compiled from: Animator.kt */
     public static final class a implements Animator.AnimatorListener {
         public a() {
         }
@@ -52,11 +52,11 @@ public abstract class OverlayAppDialog2 extends OverlayDialog implements AppComp
         }
     }
 
-    /* compiled from: OverlayAppDialog.kt */
-    /* renamed from: b.a.y.l$b */
+    /* JADX INFO: renamed from: b.a.y.l$b */
+    /* JADX INFO: compiled from: OverlayAppDialog.kt */
     public static final class b implements View.OnAttachStateChangeListener {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public final /* synthetic */ Animator f2045j;
 
         public b(Animator animator) {
@@ -84,7 +84,7 @@ public abstract class OverlayAppDialog2 extends OverlayDialog implements AppComp
         this.f2043y = OverlayAppDialog3.f2048j;
     }
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public final void m387g() {
         getUnsubscribeSignal().onNext(null);
         Log.i(getClass().getSimpleName(), "closing");

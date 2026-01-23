@@ -6,21 +6,21 @@ import java.util.Arrays;
 import java.util.regex.Pattern;
 import p007b.p100d.p104b.p105a.outline;
 
-/* compiled from: com.google.firebase:firebase-messaging@@21.0.0 */
-/* renamed from: b.i.c.w.v */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.c.w.v */
+/* JADX INFO: compiled from: com.google.firebase:firebase-messaging@@21.0.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public final class C4884v {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final Pattern f13046a = Pattern.compile("[a-zA-Z0-9-_.~%]{1,900}");
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final String f13047b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final String f13048c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final String f13049d;
 
     public C4884v(String str, String str2) {

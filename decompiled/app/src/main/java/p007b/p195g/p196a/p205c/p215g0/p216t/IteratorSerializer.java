@@ -13,23 +13,23 @@ import p007b.p195g.p196a.p205c.p215g0.p216t.PropertySerializerMap;
 import p007b.p195g.p196a.p205c.p215g0.p217u.AsArraySerializerBase;
 import p007b.p195g.p196a.p205c.p220y.JacksonStdImpl;
 
-/* compiled from: IteratorSerializer.java */
+/* JADX INFO: renamed from: b.g.a.c.g0.t.h, reason: use source file name */
+/* JADX INFO: compiled from: IteratorSerializer.java */
+/* JADX INFO: loaded from: classes3.dex */
 @JacksonStdImpl
-/* renamed from: b.g.a.c.g0.t.h, reason: use source file name */
-/* loaded from: classes3.dex */
 public class IteratorSerializer extends AsArraySerializerBase<Iterator<?>> {
     public IteratorSerializer(JavaType javaType, boolean z2, TypeSerializer typeSerializer) {
         super((Class<?>) Iterator.class, javaType, z2, typeSerializer, (JsonSerializer<Object>) null);
     }
 
     @Override // p007b.p195g.p196a.p205c.JsonSerializer
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public boolean mo2021d(SerializerProvider serializerProvider, Object obj) {
         return !((Iterator) obj).hasNext();
     }
 
     @Override // p007b.p195g.p196a.p205c.p215g0.p217u.AsArraySerializerBase, p007b.p195g.p196a.p205c.JsonSerializer
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public void mo1807f(Object obj, JsonGenerator jsonGenerator, SerializerProvider serializerProvider) throws IOException {
         Iterator<?> it = (Iterator) obj;
         jsonGenerator.mo1646X(it);
@@ -38,30 +38,30 @@ public class IteratorSerializer extends AsArraySerializerBase<Iterator<?>> {
     }
 
     @Override // p007b.p195g.p196a.p205c.p215g0.ContainerSerializer
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public ContainerSerializer<?> mo1995p(TypeSerializer typeSerializer) {
         return new IteratorSerializer(this, this._property, typeSerializer, this._elementSerializer, this._unwrapSingle);
     }
 
     @Override // p007b.p195g.p196a.p205c.p215g0.ContainerSerializer
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     public /* bridge */ /* synthetic */ boolean mo1996q(Object obj) {
         return false;
     }
 
     @Override // p007b.p195g.p196a.p205c.p215g0.p217u.AsArraySerializerBase
-    /* renamed from: s */
+    /* JADX INFO: renamed from: s */
     public /* bridge */ /* synthetic */ void mo2022s(Iterator<?> it, JsonGenerator jsonGenerator, SerializerProvider serializerProvider) throws IOException {
         m2029u(it, jsonGenerator, serializerProvider);
     }
 
     @Override // p007b.p195g.p196a.p205c.p215g0.p217u.AsArraySerializerBase
-    /* renamed from: t */
+    /* JADX INFO: renamed from: t */
     public AsArraySerializerBase<Iterator<?>> mo2023t(BeanProperty beanProperty, TypeSerializer typeSerializer, JsonSerializer jsonSerializer, Boolean bool) {
         return new IteratorSerializer(this, beanProperty, typeSerializer, jsonSerializer, bool);
     }
 
-    /* renamed from: u */
+    /* JADX INFO: renamed from: u */
     public void m2029u(Iterator<?> it, JsonGenerator jsonGenerator, SerializerProvider serializerProvider) throws IOException {
         JsonSerializer<Object> jsonSerializerM2045r;
         if (it.hasNext()) {

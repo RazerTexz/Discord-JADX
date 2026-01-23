@@ -29,23 +29,23 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 import p507d0.p592z.p594d.Reflection2;
 
-/* compiled from: WidgetGuildRoleSubscriptionPlanFormat.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetGuildRoleSubscriptionPlanFormat.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetGuildRoleSubscriptionPlanFormat extends AppFragment {
     public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetGuildRoleSubscriptionPlanFormat.class, "binding", "getBinding()Lcom/discord/databinding/WidgetGuildRoleSubscriptionPlanFormatBinding;", 0)};
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private static final String INTENT_EXTRA_HIDE_HEADER = "INTENT_EXTRA_HIDE_HEADER";
 
-    /* renamed from: binding$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
     private RadioManager radioManager;
 
-    /* renamed from: viewModel$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: viewModel$delegate, reason: from kotlin metadata */
     private final Lazy viewModel;
 
-    /* compiled from: WidgetGuildRoleSubscriptionPlanFormat.kt */
+    /* JADX INFO: compiled from: WidgetGuildRoleSubscriptionPlanFormat.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -68,8 +68,8 @@ public final class WidgetGuildRoleSubscriptionPlanFormat extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetGuildRoleSubscriptionPlanFormat.kt */
-    /* renamed from: com.discord.widgets.guild_role_subscriptions.setup.WidgetGuildRoleSubscriptionPlanFormat$onViewBound$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.guild_role_subscriptions.setup.WidgetGuildRoleSubscriptionPlanFormat$onViewBound$1 */
+    /* JADX INFO: compiled from: WidgetGuildRoleSubscriptionPlanFormat.kt */
     public static final class ViewOnClickListenerC84591 implements View.OnClickListener {
         public ViewOnClickListenerC84591() {
         }
@@ -80,8 +80,8 @@ public final class WidgetGuildRoleSubscriptionPlanFormat extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetGuildRoleSubscriptionPlanFormat.kt */
-    /* renamed from: com.discord.widgets.guild_role_subscriptions.setup.WidgetGuildRoleSubscriptionPlanFormat$onViewBound$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.guild_role_subscriptions.setup.WidgetGuildRoleSubscriptionPlanFormat$onViewBound$2 */
+    /* JADX INFO: compiled from: WidgetGuildRoleSubscriptionPlanFormat.kt */
     public static final class ViewOnClickListenerC84602 implements View.OnClickListener {
         public ViewOnClickListenerC84602() {
         }
@@ -92,8 +92,8 @@ public final class WidgetGuildRoleSubscriptionPlanFormat extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetGuildRoleSubscriptionPlanFormat.kt */
-    /* renamed from: com.discord.widgets.guild_role_subscriptions.setup.WidgetGuildRoleSubscriptionPlanFormat$onViewBoundOrOnResume$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.guild_role_subscriptions.setup.WidgetGuildRoleSubscriptionPlanFormat$onViewBoundOrOnResume$1 */
+    /* JADX INFO: compiled from: WidgetGuildRoleSubscriptionPlanFormat.kt */
     public static final class C84611 extends Lambda implements Function1<GuildRoleSubscriptionPlanDetailsViewModel.ViewState, Unit> {
         public C84611() {
             super(1);
@@ -105,7 +105,7 @@ public final class WidgetGuildRoleSubscriptionPlanFormat extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(GuildRoleSubscriptionPlanDetailsViewModel.ViewState viewState) {
             Intrinsics3.checkNotNullParameter(viewState, "it");
             WidgetGuildRoleSubscriptionPlanFormat.access$configureUI(WidgetGuildRoleSubscriptionPlanFormat.this, viewState);

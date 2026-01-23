@@ -3,16 +3,16 @@ package p507d0.p592z.p594d;
 import kotlin.jvm.internal.DefaultConstructorMarker;
 import p507d0.p513e0.KTypeParameter;
 
-/* compiled from: TypeParameterReference.kt */
-/* renamed from: d0.z.d.f0, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.z.d.f0, reason: use source file name */
+/* JADX INFO: compiled from: TypeParameterReference.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class TypeParameterReference implements KTypeParameter {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static final a f25289j = new a(null);
 
-    /* compiled from: TypeParameterReference.kt */
-    /* renamed from: d0.z.d.f0$a */
+    /* JADX INFO: renamed from: d0.z.d.f0$a */
+    /* JADX INFO: compiled from: TypeParameterReference.kt */
     public static final class a {
         public a(DefaultConstructorMarker defaultConstructorMarker) {
         }

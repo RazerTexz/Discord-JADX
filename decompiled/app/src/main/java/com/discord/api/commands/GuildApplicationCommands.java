@@ -2,8 +2,8 @@ package com.discord.api.commands;
 
 import java.util.List;
 
-/* compiled from: GuildApplicationCommands.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: GuildApplicationCommands.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class GuildApplicationCommands {
     private final List<ApplicationCommand> applicationCommands;
     private final List<Application> applications;
@@ -11,17 +11,17 @@ public final class GuildApplicationCommands {
     private final String nonce;
     private final long updatedAt;
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final List<ApplicationCommand> m7746a() {
         return this.applicationCommands;
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final List<Application> m7747b() {
         return this.applications;
     }
 
-    /* renamed from: c, reason: from getter */
+    /* JADX INFO: renamed from: c, reason: from getter */
     public final String getNonce() {
         return this.nonce;
     }

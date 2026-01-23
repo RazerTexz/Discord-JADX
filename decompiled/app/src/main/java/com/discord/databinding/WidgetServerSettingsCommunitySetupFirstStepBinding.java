@@ -8,18 +8,18 @@ import androidx.viewbinding.ViewBinding;
 import com.discord.views.CheckedSetting;
 import com.discord.views.ScreenTitleView;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public final class WidgetServerSettingsCommunitySetupFirstStepBinding implements ViewBinding {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     @NonNull
     public final ScrollView f17581a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     @NonNull
     public final CheckedSetting f17582b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     @NonNull
     public final CheckedSetting f17583c;
 

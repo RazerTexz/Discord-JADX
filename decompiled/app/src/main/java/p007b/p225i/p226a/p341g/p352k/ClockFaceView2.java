@@ -4,12 +4,12 @@ import android.view.ViewTreeObserver;
 import com.google.android.material.timepicker.ClockFaceView;
 import com.google.android.material.timepicker.ClockHandView;
 
-/* compiled from: ClockFaceView.java */
-/* renamed from: b.i.a.g.k.b, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.g.k.b, reason: use source file name */
+/* JADX INFO: compiled from: ClockFaceView.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class ClockFaceView2 implements ViewTreeObserver.OnPreDrawListener {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final /* synthetic */ ClockFaceView f11858j;
 
     public ClockFaceView2(ClockFaceView clockFaceView) {

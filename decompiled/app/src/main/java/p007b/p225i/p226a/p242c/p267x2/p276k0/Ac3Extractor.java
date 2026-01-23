@@ -10,18 +10,18 @@ import p007b.p225i.p226a.p242c.p267x2.PositionHolder;
 import p007b.p225i.p226a.p242c.p267x2.SeekMap;
 import p007b.p225i.p226a.p242c.p267x2.p276k0.TsPayloadReader;
 
-/* compiled from: Ac3Extractor.java */
-/* renamed from: b.i.a.c.x2.k0.f, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.x2.k0.f, reason: use source file name */
+/* JADX INFO: compiled from: Ac3Extractor.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class Ac3Extractor implements Extractor {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final Ac3Reader f8604a = new Ac3Reader(null);
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final ParsableByteArray f8605b = new ParsableByteArray(2786);
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public boolean f8606c;
 
     static {
@@ -42,7 +42,7 @@ public final class Ac3Extractor implements Extractor {
         r5 = r5 + 1;
      */
     @Override // p007b.p225i.p226a.p242c.p267x2.Extractor
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
@@ -92,7 +92,7 @@ public final class Ac3Extractor implements Extractor {
     }
 
     @Override // p007b.p225i.p226a.p242c.p267x2.Extractor
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public int mo3635e(ExtractorInput extractorInput, PositionHolder positionHolder) throws IOException {
         int i = extractorInput.read(this.f8605b.f6793a, 0, 2786);
         if (i == -1) {
@@ -109,7 +109,7 @@ public final class Ac3Extractor implements Extractor {
     }
 
     @Override // p007b.p225i.p226a.p242c.p267x2.Extractor
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public void mo3636f(ExtractorOutput extractorOutput) {
         this.f8604a.mo3761e(extractorOutput, new TsPayloadReader.d(Integer.MIN_VALUE, 0, 1));
         extractorOutput.mo2486j();
@@ -117,7 +117,7 @@ public final class Ac3Extractor implements Extractor {
     }
 
     @Override // p007b.p225i.p226a.p242c.p267x2.Extractor
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public void mo3637g(long j, long j2) {
         this.f8606c = false;
         this.f8604a.mo3759c();

@@ -7,20 +7,20 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.viewbinding.ViewBinding;
 import com.facebook.drawee.view.SimpleDraweeView;
 
-/* compiled from: ViewStageChannelVisitCommunityBinding.java */
-/* renamed from: b.a.i.x3, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.a.i.x3, reason: use source file name */
+/* JADX INFO: compiled from: ViewStageChannelVisitCommunityBinding.java */
+/* JADX INFO: loaded from: classes.dex */
 public final class ViewStageChannelVisitCommunityBinding implements ViewBinding {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     @NonNull
     public final ConstraintLayout f1377a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     @NonNull
     public final SimpleDraweeView f1378b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     @NonNull
     public final TextView f1379c;
 

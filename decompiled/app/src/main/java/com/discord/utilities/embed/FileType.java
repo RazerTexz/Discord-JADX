@@ -18,21 +18,21 @@ jadx.core.utils.exceptions.JadxRuntimeException: Init of enum field 'VIDEO' uses
 	at jadx.core.dex.visitors.EnumVisitor.visit(EnumVisitor.java:100)
  */
 /* JADX WARN: Failed to restore enum class, 'enum' modifier and super class removed */
-/* compiled from: FileType.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: FileType.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class FileType {
     private static final /* synthetic */ FileType[] $VALUES;
     public static final FileType ACROBAT;
 
-    /* renamed from: AE */
+    /* JADX INFO: renamed from: AE */
     public static final FileType f18981AE;
 
-    /* renamed from: AI */
+    /* JADX INFO: renamed from: AI */
     public static final FileType f18982AI;
     public static final FileType ARCHIVE;
     public static final FileType CODE;
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE;
     public static final FileType DOCUMENT;
     public static final FileType SKETCH;
@@ -41,7 +41,7 @@ public final class FileType {
     public static final FileType WEBCODE;
     private final ThreadLocal<Matcher> threadLocalMatcher;
 
-    /* compiled from: FileType.kt */
+    /* JADX INFO: compiled from: FileType.kt */
     public static final class Companion {
         private Companion() {
         }

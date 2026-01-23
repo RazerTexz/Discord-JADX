@@ -4,14 +4,14 @@ import java.lang.ref.ReferenceQueue;
 import java.util.List;
 import java.util.concurrent.ConcurrentHashMap;
 
-/* compiled from: com.google.firebase:firebase-messaging@@21.0.0 */
-/* renamed from: b.i.a.f.h.i.f */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.h.i.f */
+/* JADX INFO: compiled from: com.google.firebase:firebase-messaging@@21.0.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public final class C3492f {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final ConcurrentHashMap<C3495i, List<Throwable>> f9657a = new ConcurrentHashMap<>(16, 0.75f, 10);
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final ReferenceQueue<Throwable> f9658b = new ReferenceQueue<>();
 }

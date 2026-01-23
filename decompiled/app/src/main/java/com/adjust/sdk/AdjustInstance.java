@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 import org.json.JSONObject;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class AdjustInstance {
     private IActivityHandler activityHandler;
     private String basePath;
@@ -17,7 +17,7 @@ public class AdjustInstance {
     private boolean startOffline = false;
     private String subscriptionPath;
 
-    /* renamed from: com.adjust.sdk.AdjustInstance$1 */
+    /* JADX INFO: renamed from: com.adjust.sdk.AdjustInstance$1 */
     public class C53621 implements IRunActivityHandler {
         public final /* synthetic */ String val$key;
         public final /* synthetic */ String val$value;
@@ -33,7 +33,7 @@ public class AdjustInstance {
         }
     }
 
-    /* renamed from: com.adjust.sdk.AdjustInstance$10 */
+    /* JADX INFO: renamed from: com.adjust.sdk.AdjustInstance$10 */
     public class RunnableC536310 implements Runnable {
         public final /* synthetic */ Context val$context;
 
@@ -47,7 +47,7 @@ public class AdjustInstance {
         }
     }
 
-    /* renamed from: com.adjust.sdk.AdjustInstance$11 */
+    /* JADX INFO: renamed from: com.adjust.sdk.AdjustInstance$11 */
     public class RunnableC536411 implements Runnable {
         public final /* synthetic */ Context val$context;
 
@@ -61,7 +61,7 @@ public class AdjustInstance {
         }
     }
 
-    /* renamed from: com.adjust.sdk.AdjustInstance$2 */
+    /* JADX INFO: renamed from: com.adjust.sdk.AdjustInstance$2 */
     public class C53652 implements IRunActivityHandler {
         public final /* synthetic */ String val$key;
         public final /* synthetic */ String val$value;
@@ -77,7 +77,7 @@ public class AdjustInstance {
         }
     }
 
-    /* renamed from: com.adjust.sdk.AdjustInstance$3 */
+    /* JADX INFO: renamed from: com.adjust.sdk.AdjustInstance$3 */
     public class C53663 implements IRunActivityHandler {
         public final /* synthetic */ String val$key;
 
@@ -91,7 +91,7 @@ public class AdjustInstance {
         }
     }
 
-    /* renamed from: com.adjust.sdk.AdjustInstance$4 */
+    /* JADX INFO: renamed from: com.adjust.sdk.AdjustInstance$4 */
     public class C53674 implements IRunActivityHandler {
         public final /* synthetic */ String val$key;
 
@@ -105,7 +105,7 @@ public class AdjustInstance {
         }
     }
 
-    /* renamed from: com.adjust.sdk.AdjustInstance$5 */
+    /* JADX INFO: renamed from: com.adjust.sdk.AdjustInstance$5 */
     public class C53685 implements IRunActivityHandler {
         public C53685() {
         }
@@ -116,7 +116,7 @@ public class AdjustInstance {
         }
     }
 
-    /* renamed from: com.adjust.sdk.AdjustInstance$6 */
+    /* JADX INFO: renamed from: com.adjust.sdk.AdjustInstance$6 */
     public class C53696 implements IRunActivityHandler {
         public C53696() {
         }
@@ -127,7 +127,7 @@ public class AdjustInstance {
         }
     }
 
-    /* renamed from: com.adjust.sdk.AdjustInstance$7 */
+    /* JADX INFO: renamed from: com.adjust.sdk.AdjustInstance$7 */
     public class RunnableC53707 implements Runnable {
         public final /* synthetic */ long val$clickTime;
         public final /* synthetic */ Context val$context;
@@ -145,7 +145,7 @@ public class AdjustInstance {
         }
     }
 
-    /* renamed from: com.adjust.sdk.AdjustInstance$8 */
+    /* JADX INFO: renamed from: com.adjust.sdk.AdjustInstance$8 */
     public class RunnableC53718 implements Runnable {
         public final /* synthetic */ Context val$context;
         public final /* synthetic */ String val$pushToken;
@@ -161,7 +161,7 @@ public class AdjustInstance {
         }
     }
 
-    /* renamed from: com.adjust.sdk.AdjustInstance$9 */
+    /* JADX INFO: renamed from: com.adjust.sdk.AdjustInstance$9 */
     public class RunnableC53729 implements Runnable {
         public final /* synthetic */ Context val$context;
 

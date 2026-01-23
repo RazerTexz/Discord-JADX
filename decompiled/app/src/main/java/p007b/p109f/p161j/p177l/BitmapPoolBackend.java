@@ -5,12 +5,12 @@ import p007b.p109f.p115d.p120e.FLog;
 import p007b.p109f.p161j.p177l.BucketMap;
 import p007b.p109f.p186k.BitmapUtil;
 
-/* compiled from: BitmapPoolBackend.java */
-/* renamed from: b.f.j.l.e, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.f.j.l.e, reason: use source file name */
+/* JADX INFO: compiled from: BitmapPoolBackend.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class BitmapPoolBackend extends LruBucketsPoolBackend<Bitmap> {
     @Override // p007b.p109f.p161j.p177l.LruBucketsPoolBackend
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public Bitmap mo1373a(int i) {
         Object objPollFirst;
         BucketMap<T> bucketMap = this.f3951b;
@@ -37,12 +37,12 @@ public class BitmapPoolBackend extends LruBucketsPoolBackend<Bitmap> {
     }
 
     @Override // p007b.p109f.p161j.p177l.LruBucketsPoolBackend
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public int mo1374b(Bitmap bitmap) {
         return BitmapUtil.m1541d(bitmap);
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public boolean m1375d(Bitmap bitmap) {
         if (bitmap == null) {
             return false;

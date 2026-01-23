@@ -3,15 +3,15 @@ package p007b.p109f.p161j.p169d;
 import android.graphics.Bitmap;
 import p007b.p109f.p161j.p169d.ImageDecodeOptionsBuilder;
 
-/* compiled from: ImageDecodeOptionsBuilder.java */
-/* renamed from: b.f.j.d.c, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.f.j.d.c, reason: use source file name */
+/* JADX INFO: compiled from: ImageDecodeOptionsBuilder.java */
+/* JADX INFO: loaded from: classes.dex */
 public class ImageDecodeOptionsBuilder<T extends ImageDecodeOptionsBuilder> {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public Bitmap.Config f3711a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public Bitmap.Config f3712b;
 
     public ImageDecodeOptionsBuilder() {

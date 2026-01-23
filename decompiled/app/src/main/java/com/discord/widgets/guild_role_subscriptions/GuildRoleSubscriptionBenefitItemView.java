@@ -1,7 +1,6 @@
 package com.discord.widgets.guild_role_subscriptions;
 
 import android.content.Context;
-import android.content.res.Resources;
 import android.content.res.TypedArray;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
@@ -26,15 +25,15 @@ import p507d0.p512d0._Ranges;
 import p507d0.p579g0.StringsJVM;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: GuildRoleSubscriptionBenefitItemView.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: GuildRoleSubscriptionBenefitItemView.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class GuildRoleSubscriptionBenefitItemView extends ConstraintLayout {
     private static final int MAX_EMOJI_SIZE = 64;
     private final ViewGuildRoleSubscriptionBenefitItemBinding binding;
     private final int emojiSizePx;
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-    public GuildRoleSubscriptionBenefitItemView(Context context) throws Resources.NotFoundException {
+    public GuildRoleSubscriptionBenefitItemView(Context context) {
         super(context);
         Intrinsics3.checkNotNullParameter(context, "context");
         ViewGuildRoleSubscriptionBenefitItemBinding viewGuildRoleSubscriptionBenefitItemBindingM8396a = ViewGuildRoleSubscriptionBenefitItemBinding.m8396a(LayoutInflater.from(getContext()), this);
@@ -63,7 +62,7 @@ public final class GuildRoleSubscriptionBenefitItemView extends ConstraintLayout
         ViewExtensions.setTextAndVisibilityBy(textView2, description);
     }
 
-    private final void initialize(AttributeSet attrs) throws Resources.NotFoundException {
+    private final void initialize(AttributeSet attrs) {
         int dimensionPixelSize = getResources().getDimensionPixelSize(C5419R.dimen.guild_role_subscription_setup_default_padding);
         setPadding(dimensionPixelSize, dimensionPixelSize, dimensionPixelSize, dimensionPixelSize);
         setBackground(ContextCompat.getDrawable(getContext(), C5419R.drawable.ripple_rounded_bg_secondary));
@@ -83,7 +82,7 @@ public final class GuildRoleSubscriptionBenefitItemView extends ConstraintLayout
         typedArrayObtainStyledAttributes.recycle();
     }
 
-    public static /* synthetic */ void initialize$default(GuildRoleSubscriptionBenefitItemView guildRoleSubscriptionBenefitItemView, AttributeSet attributeSet, int i, Object obj) throws Resources.NotFoundException {
+    public static /* synthetic */ void initialize$default(GuildRoleSubscriptionBenefitItemView guildRoleSubscriptionBenefitItemView, AttributeSet attributeSet, int i, Object obj) {
         if ((i & 1) != 0) {
             attributeSet = null;
         }
@@ -111,7 +110,7 @@ public final class GuildRoleSubscriptionBenefitItemView extends ConstraintLayout
     }
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-    public GuildRoleSubscriptionBenefitItemView(Context context, AttributeSet attributeSet) throws Resources.NotFoundException {
+    public GuildRoleSubscriptionBenefitItemView(Context context, AttributeSet attributeSet) {
         super(context, attributeSet);
         Intrinsics3.checkNotNullParameter(context, "context");
         ViewGuildRoleSubscriptionBenefitItemBinding viewGuildRoleSubscriptionBenefitItemBindingM8396a = ViewGuildRoleSubscriptionBenefitItemBinding.m8396a(LayoutInflater.from(getContext()), this);
@@ -138,7 +137,7 @@ public final class GuildRoleSubscriptionBenefitItemView extends ConstraintLayout
     }
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-    public GuildRoleSubscriptionBenefitItemView(Context context, AttributeSet attributeSet, int i) throws Resources.NotFoundException {
+    public GuildRoleSubscriptionBenefitItemView(Context context, AttributeSet attributeSet, int i) {
         super(context, attributeSet, i);
         Intrinsics3.checkNotNullParameter(context, "context");
         ViewGuildRoleSubscriptionBenefitItemBinding viewGuildRoleSubscriptionBenefitItemBindingM8396a = ViewGuildRoleSubscriptionBenefitItemBinding.m8396a(LayoutInflater.from(getContext()), this);

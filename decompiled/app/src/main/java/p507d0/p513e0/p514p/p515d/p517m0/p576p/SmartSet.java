@@ -17,25 +17,25 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.TypeIntrinsics;
 import p507d0.p592z.p594d.p595g0.KMarkers;
 
-/* compiled from: SmartSet.kt */
-/* renamed from: d0.e0.p.d.m0.p.j, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.p.j, reason: use source file name */
+/* JADX INFO: compiled from: SmartSet.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class SmartSet<T> extends AbstractSet<T> {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static final b f25003j = new b(null);
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public Object f25004k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public int f25005l;
 
-    /* compiled from: SmartSet.kt */
-    /* renamed from: d0.e0.p.d.m0.p.j$a */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.p.j$a */
+    /* JADX INFO: compiled from: SmartSet.kt */
     public static final class a<T> implements Iterator<T>, KMarkers {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public final Iterator<T> f25006j;
 
         public a(T[] tArr) {
@@ -64,8 +64,8 @@ public final class SmartSet<T> extends AbstractSet<T> {
         }
     }
 
-    /* compiled from: SmartSet.kt */
-    /* renamed from: d0.e0.p.d.m0.p.j$b */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.p.j$b */
+    /* JADX INFO: compiled from: SmartSet.kt */
     public static final class b {
         public b(DefaultConstructorMarker defaultConstructorMarker) {
         }
@@ -82,14 +82,14 @@ public final class SmartSet<T> extends AbstractSet<T> {
         }
     }
 
-    /* compiled from: SmartSet.kt */
-    /* renamed from: d0.e0.p.d.m0.p.j$c */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.p.j$c */
+    /* JADX INFO: compiled from: SmartSet.kt */
     public static final class c<T> implements Iterator<T>, KMarkers {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public final T f25007j;
 
-        /* renamed from: k */
+        /* JADX INFO: renamed from: k */
         public boolean f25008k = true;
 
         public c(T t) {
@@ -128,10 +128,9 @@ public final class SmartSet<T> extends AbstractSet<T> {
         return f25003j.create();
     }
 
-    /* JADX WARN: Multi-variable type inference failed */
     @Override // java.util.AbstractCollection, java.util.Collection, java.util.Set
     public boolean add(T t) {
-        Object[] objArr;
+        Object obj;
         if (size() == 0) {
             this.f25004k = t;
         } else if (size() == 1) {
@@ -140,29 +139,29 @@ public final class SmartSet<T> extends AbstractSet<T> {
             }
             this.f25004k = new Object[]{this.f25004k, t};
         } else if (size() < 5) {
-            Object obj = this.f25004k;
-            Objects.requireNonNull(obj, "null cannot be cast to non-null type kotlin.Array<T of org.jetbrains.kotlin.utils.SmartSet>");
-            Object[] objArr2 = (Object[]) obj;
-            if (_Arrays.contains(objArr2, t)) {
+            Object obj2 = this.f25004k;
+            Objects.requireNonNull(obj2, "null cannot be cast to non-null type kotlin.Array<T of org.jetbrains.kotlin.utils.SmartSet>");
+            Object[] objArr = (Object[]) obj2;
+            if (_Arrays.contains(objArr, t)) {
                 return false;
             }
             if (size() == 4) {
-                Object[] objArr3 = new Object[objArr2.length];
-                System.arraycopy(objArr2, 0, objArr3, 0, objArr2.length);
-                LinkedHashSet linkedHashSetLinkedSetOf = Sets5.linkedSetOf(objArr3);
+                Object[] objArr2 = new Object[objArr.length];
+                System.arraycopy(objArr, 0, objArr2, 0, objArr.length);
+                LinkedHashSet linkedHashSetLinkedSetOf = Sets5.linkedSetOf(objArr2);
                 linkedHashSetLinkedSetOf.add(t);
-                objArr = linkedHashSetLinkedSetOf;
+                obj = linkedHashSetLinkedSetOf;
             } else {
-                Object[] objArrCopyOf = Arrays.copyOf(objArr2, size() + 1);
+                Object[] objArrCopyOf = Arrays.copyOf(objArr, size() + 1);
                 Intrinsics3.checkNotNullExpressionValue(objArrCopyOf, "java.util.Arrays.copyOf(this, newSize)");
                 objArrCopyOf[objArrCopyOf.length - 1] = t;
-                objArr = objArrCopyOf;
+                obj = objArrCopyOf;
             }
-            this.f25004k = objArr;
+            this.f25004k = obj;
         } else {
-            Object obj2 = this.f25004k;
-            Objects.requireNonNull(obj2, "null cannot be cast to non-null type kotlin.collections.MutableSet<T of org.jetbrains.kotlin.utils.SmartSet>");
-            if (!TypeIntrinsics.asMutableSet(obj2).add(t)) {
+            Object obj3 = this.f25004k;
+            Objects.requireNonNull(obj3, "null cannot be cast to non-null type kotlin.collections.MutableSet<T of org.jetbrains.kotlin.utils.SmartSet>");
+            if (!TypeIntrinsics.asMutableSet(obj3).add(t)) {
                 return false;
             }
         }

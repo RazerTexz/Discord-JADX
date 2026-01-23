@@ -5,9 +5,9 @@ import java.util.concurrent.ThreadLocalRandom;
 import p507d0.p510c0.PlatformRandom;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: PlatformThreadLocalRandom.kt */
-/* renamed from: d0.c0.f.a, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.c0.f.a, reason: use source file name */
+/* JADX INFO: compiled from: PlatformThreadLocalRandom.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class PlatformThreadLocalRandom extends PlatformRandom {
     @Override // p507d0.p510c0.PlatformRandom
     public Random getImpl() {

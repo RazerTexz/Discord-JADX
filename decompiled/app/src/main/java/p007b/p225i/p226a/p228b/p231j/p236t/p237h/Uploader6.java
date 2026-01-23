@@ -16,30 +16,30 @@ import p007b.p225i.p226a.p228b.p231j.p236t.p238i.PersistedEvent;
 import p007b.p225i.p226a.p228b.p231j.p239u.SynchronizationGuard;
 import p007b.p225i.p226a.p228b.p231j.p240v.Clock3;
 
-/* compiled from: Uploader.java */
-/* renamed from: b.i.a.b.j.t.h.l, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.b.j.t.h.l, reason: use source file name */
+/* JADX INFO: compiled from: Uploader.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class Uploader6 {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final Context f5385a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final BackendRegistry f5386b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final EventStore f5387c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final WorkScheduler f5388d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final Executor f5389e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final SynchronizationGuard f5390f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public final Clock3 f5391g;
 
     public Uploader6(Context context, BackendRegistry backendRegistry, EventStore eventStore, WorkScheduler workScheduler, Executor executor, SynchronizationGuard synchronizationGuard, Clock3 clock3) {
@@ -52,7 +52,7 @@ public class Uploader6 {
         this.f5391g = clock3;
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public void m2385a(TransportContext transportContext, int i) {
         BackendResponse backendResponseMo2297a;
         TransportBackend transportBackend = this.f5386b.get(transportContext.mo2348b());

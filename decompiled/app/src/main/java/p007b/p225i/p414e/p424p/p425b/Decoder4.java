@@ -5,15 +5,15 @@ import com.google.zxing.common.reedsolomon.ReedSolomonException;
 import p007b.p225i.p414e.p418n.p420l.GenericGF;
 import p007b.p225i.p414e.p418n.p420l.ReedSolomonDecoder;
 
-/* compiled from: Decoder.java */
-/* renamed from: b.i.e.p.b.c, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.e.p.b.c, reason: use source file name */
+/* JADX INFO: compiled from: Decoder.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class Decoder4 {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final ReedSolomonDecoder f13351a = new ReedSolomonDecoder(GenericGF.f13306h);
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final void m6981a(byte[] bArr, int i, int i2, int i3, int i4) throws ChecksumException {
         int i5 = i2 + i3;
         int i6 = i4 == 0 ? 1 : 2;

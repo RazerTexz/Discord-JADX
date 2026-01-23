@@ -14,17 +14,17 @@ import p007b.p225i.p361c.p369m.p370d.p373k.CallableC4643n;
 import p007b.p225i.p361c.p369m.p370d.p373k.CrashlyticsCore;
 import p007b.p225i.p361c.p369m.p370d.p373k.CrashlyticsCore3;
 
-/* compiled from: BreadcrumbAnalyticsEventReceiver.java */
-/* renamed from: b.i.c.m.d.i.d, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.c.m.d.i.d, reason: use source file name */
+/* JADX INFO: compiled from: BreadcrumbAnalyticsEventReceiver.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class BreadcrumbAnalyticsEventReceiver implements AnalyticsEventReceiver, BreadcrumbSource {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     @Nullable
     public CrashlyticsCore f12250a;
 
     @NonNull
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public static String m6388c(@NonNull String str, @NonNull Bundle bundle) throws JSONException {
         JSONObject jSONObject = new JSONObject();
         JSONObject jSONObject2 = new JSONObject();
@@ -37,14 +37,14 @@ public class BreadcrumbAnalyticsEventReceiver implements AnalyticsEventReceiver,
     }
 
     @Override // p007b.p225i.p361c.p369m.p370d.p372j.BreadcrumbSource
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public void mo6389a(@Nullable CrashlyticsCore crashlyticsCore) {
         this.f12250a = crashlyticsCore;
         Logger3.f12227a.m6371b("Registered Firebase Analytics event receiver for breadcrumbs");
     }
 
     @Override // p007b.p225i.p361c.p369m.p370d.p371i.AnalyticsEventReceiver
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public void mo6387b(@NonNull String str, @NonNull Bundle bundle) {
         CrashlyticsCore crashlyticsCore = this.f12250a;
         if (crashlyticsCore != null) {

@@ -20,28 +20,28 @@ import p507d0.p580t.Sets5;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: AbstractDeserializedPackageFragmentProvider.kt */
-/* renamed from: d0.e0.p.d.m0.l.b.a, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.l.b.a, reason: use source file name */
+/* JADX INFO: compiled from: AbstractDeserializedPackageFragmentProvider.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public abstract class AbstractDeserializedPackageFragmentProvider implements PackageFragmentProvider3 {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final StorageManager f24490a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final KotlinMetadataFinder f24491b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final ModuleDescriptor2 f24492c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public context5 f24493d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final storage4<FqName, PackageFragmentDescriptor> f24494e;
 
-    /* compiled from: AbstractDeserializedPackageFragmentProvider.kt */
-    /* renamed from: d0.e0.p.d.m0.l.b.a$a */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.l.b.a$a */
+    /* JADX INFO: compiled from: AbstractDeserializedPackageFragmentProvider.kt */
     public static final class a extends Lambda implements Function1<FqName, PackageFragmentDescriptor> {
         public a() {
             super(1);
@@ -52,7 +52,7 @@ public abstract class AbstractDeserializedPackageFragmentProvider implements Pac
             return invoke2(fqName);
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final PackageFragmentDescriptor invoke2(FqName fqName) {
             Intrinsics3.checkNotNullParameter(fqName, "fqName");
             JvmBuiltInsPackageFragmentProvider jvmBuiltInsPackageFragmentProvider = (JvmBuiltInsPackageFragmentProvider) AbstractDeserializedPackageFragmentProvider.this;

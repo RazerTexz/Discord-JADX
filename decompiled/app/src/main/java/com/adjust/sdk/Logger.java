@@ -4,7 +4,7 @@ import android.util.Log;
 import java.util.Arrays;
 import java.util.Locale;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class Logger implements ILogger {
     private static String formatErrorMessage = "Error formating log message: %s, with params: %s";
     private LogLevel logLevel;

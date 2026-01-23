@@ -8,15 +8,15 @@ import p007b.p225i.p226a.p242c.p267x2.ExtractorOutput;
 import p007b.p225i.p226a.p242c.p267x2.TrackOutput2;
 import p007b.p225i.p226a.p242c.p267x2.p276k0.TsPayloadReader;
 
-/* compiled from: UserDataReader.java */
-/* renamed from: b.i.a.c.x2.k0.j0, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.x2.k0.j0, reason: use source file name */
+/* JADX INFO: compiled from: UserDataReader.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class UserDataReader {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final List<Format2> f8697a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final TrackOutput2[] f8698b;
 
     public UserDataReader(List<Format2> list) {
@@ -24,7 +24,7 @@ public final class UserDataReader {
         this.f8698b = new TrackOutput2[list.size()];
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public void m3769a(long j, ParsableByteArray parsableByteArray) {
         if (parsableByteArray.m3081a() < 9) {
             return;
@@ -37,7 +37,7 @@ public final class UserDataReader {
         }
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public void m3770b(ExtractorOutput extractorOutput, TsPayloadReader.d dVar) {
         for (int i = 0; i < this.f8698b.length; i++) {
             dVar.m3765a();

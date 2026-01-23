@@ -24,39 +24,39 @@ import p507d0.p592z.p594d.Lambda;
 import p658rx.Observable;
 import p658rx.subjects.PublishSubject;
 
-/* compiled from: UserActionsDialogViewModel.kt */
-/* renamed from: b.a.a.d.f, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.a.a.d.f, reason: use source file name */
+/* JADX INFO: compiled from: UserActionsDialogViewModel.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class UserActionsDialogViewModel5 extends AppViewModel<d> {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static final a f329j = new a(null);
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final PublishSubject<b> f330k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final long f331l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public final RestAPI f332m;
 
-    /* compiled from: UserActionsDialogViewModel.kt */
-    /* renamed from: b.a.a.d.f$a */
+    /* JADX INFO: renamed from: b.a.a.d.f$a */
+    /* JADX INFO: compiled from: UserActionsDialogViewModel.kt */
     public static final class a {
         public a(DefaultConstructorMarker defaultConstructorMarker) {
         }
     }
 
-    /* compiled from: UserActionsDialogViewModel.kt */
-    /* renamed from: b.a.a.d.f$b */
+    /* JADX INFO: renamed from: b.a.a.d.f$b */
+    /* JADX INFO: compiled from: UserActionsDialogViewModel.kt */
     public static abstract class b {
 
-        /* compiled from: UserActionsDialogViewModel.kt */
-        /* renamed from: b.a.a.d.f$b$a */
+        /* JADX INFO: renamed from: b.a.a.d.f$b$a */
+        /* JADX INFO: compiled from: UserActionsDialogViewModel.kt */
         public static final class a extends b {
 
-            /* renamed from: a */
+            /* JADX INFO: renamed from: a */
             public final int f333a;
 
             public a(int i) {
@@ -80,11 +80,11 @@ public final class UserActionsDialogViewModel5 extends AppViewModel<d> {
             }
         }
 
-        /* compiled from: UserActionsDialogViewModel.kt */
-        /* renamed from: b.a.a.d.f$b$b, reason: collision with other inner class name */
+        /* JADX INFO: renamed from: b.a.a.d.f$b$b, reason: collision with other inner class name */
+        /* JADX INFO: compiled from: UserActionsDialogViewModel.kt */
         public static final class C13207b extends b {
 
-            /* renamed from: a */
+            /* JADX INFO: renamed from: a */
             public final int f334a;
 
             public C13207b(int i) {
@@ -115,17 +115,17 @@ public final class UserActionsDialogViewModel5 extends AppViewModel<d> {
         }
     }
 
-    /* compiled from: UserActionsDialogViewModel.kt */
-    /* renamed from: b.a.a.d.f$c */
+    /* JADX INFO: renamed from: b.a.a.d.f$c */
+    /* JADX INFO: compiled from: UserActionsDialogViewModel.kt */
     public static final class c {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final User f335a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final Integer f336b;
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public final GuildMember f337c;
 
         public c(User user, Integer num, GuildMember guildMember) {
@@ -135,27 +135,27 @@ public final class UserActionsDialogViewModel5 extends AppViewModel<d> {
         }
     }
 
-    /* compiled from: UserActionsDialogViewModel.kt */
-    /* renamed from: b.a.a.d.f$d */
+    /* JADX INFO: renamed from: b.a.a.d.f$d */
+    /* JADX INFO: compiled from: UserActionsDialogViewModel.kt */
     public static abstract class d {
 
-        /* compiled from: UserActionsDialogViewModel.kt */
-        /* renamed from: b.a.a.d.f$d$a */
+        /* JADX INFO: renamed from: b.a.a.d.f$d$a */
+        /* JADX INFO: compiled from: UserActionsDialogViewModel.kt */
         public static final class a extends d {
 
-            /* renamed from: a */
+            /* JADX INFO: renamed from: a */
             public final User f338a;
 
-            /* renamed from: b */
+            /* JADX INFO: renamed from: b */
             public final String f339b;
 
-            /* renamed from: c */
+            /* JADX INFO: renamed from: c */
             public final boolean f340c;
 
-            /* renamed from: d */
+            /* JADX INFO: renamed from: d */
             public final boolean f341d;
 
-            /* renamed from: e */
+            /* JADX INFO: renamed from: e */
             public final boolean f342e;
 
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -181,25 +181,34 @@ public final class UserActionsDialogViewModel5 extends AppViewModel<d> {
             }
 
             /* JADX WARN: Multi-variable type inference failed */
+            /* JADX WARN: Type inference failed for: r1v10 */
+            /* JADX WARN: Type inference failed for: r1v11 */
+            /* JADX WARN: Type inference failed for: r1v3, types: [int] */
+            /* JADX WARN: Type inference failed for: r1v5, types: [int] */
+            /* JADX WARN: Type inference failed for: r1v7 */
+            /* JADX WARN: Type inference failed for: r1v8 */
+            /* JADX WARN: Type inference failed for: r2v1 */
+            /* JADX WARN: Type inference failed for: r2v2, types: [int] */
+            /* JADX WARN: Type inference failed for: r2v3 */
             public int hashCode() {
                 User user = this.f338a;
                 int iHashCode = (user != null ? user.hashCode() : 0) * 31;
                 String str = this.f339b;
                 int iHashCode2 = (iHashCode + (str != null ? str.hashCode() : 0)) * 31;
                 boolean z2 = this.f340c;
-                int i = z2;
-                if (z2 != 0) {
-                    i = 1;
+                ?? r1 = z2;
+                if (z2) {
+                    r1 = 1;
                 }
-                int i2 = (iHashCode2 + i) * 31;
+                int i = (iHashCode2 + r1) * 31;
                 boolean z3 = this.f341d;
-                int i3 = z3;
-                if (z3 != 0) {
-                    i3 = 1;
+                ?? r12 = z3;
+                if (z3) {
+                    r12 = 1;
                 }
-                int i4 = (i2 + i3) * 31;
+                int i2 = (i + r12) * 31;
                 boolean z4 = this.f342e;
-                return i4 + (z4 ? 1 : z4 ? 1 : 0);
+                return i2 + (z4 ? 1 : z4);
             }
 
             public String toString() {
@@ -216,11 +225,11 @@ public final class UserActionsDialogViewModel5 extends AppViewModel<d> {
             }
         }
 
-        /* compiled from: UserActionsDialogViewModel.kt */
-        /* renamed from: b.a.a.d.f$d$b */
+        /* JADX INFO: renamed from: b.a.a.d.f$d$b */
+        /* JADX INFO: compiled from: UserActionsDialogViewModel.kt */
         public static final class b extends d {
 
-            /* renamed from: a */
+            /* JADX INFO: renamed from: a */
             public static final b f343a = new b();
 
             public b() {
@@ -232,8 +241,8 @@ public final class UserActionsDialogViewModel5 extends AppViewModel<d> {
         }
     }
 
-    /* compiled from: UserActionsDialogViewModel.kt */
-    /* renamed from: b.a.a.d.f$e */
+    /* JADX INFO: renamed from: b.a.a.d.f$e */
+    /* JADX INFO: compiled from: UserActionsDialogViewModel.kt */
     public static final class e extends Lambda implements Function1<Void, Unit> {
         public final /* synthetic */ int $successMessageStringRes;
 
@@ -253,8 +262,8 @@ public final class UserActionsDialogViewModel5 extends AppViewModel<d> {
         }
     }
 
-    /* compiled from: UserActionsDialogViewModel.kt */
-    /* renamed from: b.a.a.d.f$f */
+    /* JADX INFO: renamed from: b.a.a.d.f$f */
+    /* JADX INFO: compiled from: UserActionsDialogViewModel.kt */
     public static final class f extends Lambda implements Function1<Error, Unit> {
         public f() {
             super(1);

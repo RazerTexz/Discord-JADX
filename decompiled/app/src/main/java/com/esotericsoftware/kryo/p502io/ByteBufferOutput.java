@@ -9,7 +9,7 @@ import java.nio.ByteOrder;
 import org.objectweb.asm.Opcodes;
 import p007b.p100d.p104b.p105a.outline;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class ByteBufferOutput extends Output {
     public static final ByteOrder nativeOrder = ByteOrder.nativeOrder();
     public ByteOrder byteOrder;
@@ -43,7 +43,7 @@ public class ByteBufferOutput extends Output {
         }
     }
 
-    private void writeString_slow(CharSequence charSequence, int i, int i2) throws KryoException {
+    private void writeString_slow(CharSequence charSequence, int i, int i2) {
         while (i2 < i) {
             int i3 = this.position;
             int i4 = this.capacity;
@@ -85,7 +85,7 @@ public class ByteBufferOutput extends Output {
         }
     }
 
-    private void writeUtf8Length(int i) throws KryoException {
+    private void writeUtf8Length(int i) {
         int i2 = i >>> 6;
         if (i2 == 0) {
             require(1);
@@ -159,7 +159,7 @@ public class ByteBufferOutput extends Output {
             this.niobuffer.get(bArr);
             this.niobuffer.position(0);
             this.outputStream.write(bArr, 0, this.position);
-            this.total += this.position;
+            this.total += (long) this.position;
             this.position = 0;
         } catch (IOException e) {
             throw new KryoException(e);
@@ -629,7 +629,7 @@ public class ByteBufferOutput extends Output {
             return 4;
         }
         this.niobuffer.order(ByteOrder.LITTLE_ENDIAN);
-        writeLong((i11 << 32) | ((i10 | Integer.MIN_VALUE) & 4294967295L));
+        writeLong((((long) i11) << 32) | (((long) (i10 | Integer.MIN_VALUE)) & 4294967295L));
         this.niobuffer.order(this.byteOrder);
         int i12 = this.position - 3;
         this.position = i12;
@@ -646,7 +646,7 @@ public class ByteBufferOutput extends Output {
             writeByte(i);
             return 1;
         }
-        int i2 = (int) (i | 128 | ((j3 & 127) << 8));
+        int i2 = (int) (((long) (i | 128)) | ((j3 & 127) << 8));
         long j4 = j3 >>> 7;
         if (j4 == 0) {
             this.niobuffer.order(ByteOrder.LITTLE_ENDIAN);
@@ -657,7 +657,7 @@ public class ByteBufferOutput extends Output {
             this.niobuffer.position(i3);
             return 2;
         }
-        int i4 = (int) (i2 | 32768 | ((j4 & 127) << 16));
+        int i4 = (int) (((long) (i2 | 32768)) | ((j4 & 127) << 16));
         long j5 = j4 >>> 7;
         if (j5 == 0) {
             this.niobuffer.order(ByteOrder.LITTLE_ENDIAN);
@@ -668,7 +668,7 @@ public class ByteBufferOutput extends Output {
             this.niobuffer.position(i5);
             return 3;
         }
-        int i6 = (int) (i4 | 8388608 | ((j5 & 127) << 24));
+        int i6 = (int) (((long) (i4 | 8388608)) | ((j5 & 127) << 24));
         long j6 = j5 >>> 7;
         if (j6 == 0) {
             this.niobuffer.order(ByteOrder.LITTLE_ENDIAN);
@@ -677,7 +677,7 @@ public class ByteBufferOutput extends Output {
             this.position += 0;
             return 4;
         }
-        long j7 = ((Integer.MIN_VALUE | i6) & 4294967295L) | ((j6 & 127) << 32);
+        long j7 = (((long) (Integer.MIN_VALUE | i6)) & 4294967295L) | ((j6 & 127) << 32);
         long j8 = j6 >>> 7;
         if (j8 == 0) {
             this.niobuffer.order(ByteOrder.LITTLE_ENDIAN);

@@ -17,9 +17,9 @@ import com.facebook.drawee.view.SimpleDraweeView;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: SelectedApplicationCommandAdapter.kt */
-/* renamed from: com.discord.widgets.chat.input.applicationcommands.SelectedAppCommandTitleAdapterItem, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.chat.input.applicationcommands.SelectedAppCommandTitleAdapterItem, reason: use source file name */
+/* JADX INFO: compiled from: SelectedApplicationCommandAdapter.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class SelectedApplicationCommandAdapter5 extends MGRecyclerViewHolder<SelectedApplicationCommandAdapter, SelectedApplicationCommandAdapter8> {
     private final ViewAppcommandsOptiontitleListitemBinding binding;
 
@@ -48,7 +48,7 @@ public final class SelectedApplicationCommandAdapter5 extends MGRecyclerViewHold
         onConfigure2(i, selectedApplicationCommandAdapter8);
     }
 
-    /* renamed from: onConfigure, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: onConfigure, reason: avoid collision after fix types in other method */
     public void onConfigure2(int position, SelectedApplicationCommandAdapter8 data) {
         Intrinsics3.checkNotNullParameter(data, "data");
         super.onConfigure(position, data);

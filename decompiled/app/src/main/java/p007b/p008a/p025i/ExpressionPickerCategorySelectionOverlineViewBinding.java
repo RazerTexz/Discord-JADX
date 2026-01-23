@@ -4,16 +4,16 @@ import android.view.View;
 import androidx.annotation.NonNull;
 import androidx.viewbinding.ViewBinding;
 
-/* compiled from: ExpressionPickerCategorySelectionOverlineViewBinding.java */
-/* renamed from: b.a.i.n, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.a.i.n, reason: use source file name */
+/* JADX INFO: compiled from: ExpressionPickerCategorySelectionOverlineViewBinding.java */
+/* JADX INFO: loaded from: classes.dex */
 public final class ExpressionPickerCategorySelectionOverlineViewBinding implements ViewBinding {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     @NonNull
     public final View f1065a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     @NonNull
     public final View f1066b;
 

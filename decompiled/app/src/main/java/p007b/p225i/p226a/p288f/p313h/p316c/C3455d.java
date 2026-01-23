@@ -4,15 +4,15 @@ import android.os.IInterface;
 import android.os.Parcel;
 import android.os.Parcelable;
 
-/* compiled from: com.google.android.gms:play-services-auth@@19.0.0 */
-/* renamed from: b.i.a.f.h.c.d */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.h.c.d */
+/* JADX INFO: compiled from: com.google.android.gms:play-services-auth@@19.0.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public class C3455d {
     static {
         C3455d.class.getClassLoader();
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static <T extends Parcelable> T m4396a(Parcel parcel, Parcelable.Creator<T> creator) {
         if (parcel.readInt() == 0) {
             return null;
@@ -20,7 +20,7 @@ public class C3455d {
         return creator.createFromParcel(parcel);
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static void m4397b(Parcel parcel, IInterface iInterface) {
         if (iInterface == null) {
             parcel.writeStrongBinder(null);
@@ -29,7 +29,7 @@ public class C3455d {
         }
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public static void m4398c(Parcel parcel, Parcelable parcelable) {
         if (parcelable == null) {
             parcel.writeInt(0);

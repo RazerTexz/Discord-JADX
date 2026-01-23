@@ -18,16 +18,16 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 import p507d0.p592z.p594d.Reflection2;
 
-/* compiled from: findClassInModule.kt */
-/* renamed from: d0.e0.p.d.m0.c.w, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.c.w, reason: use source file name */
+/* JADX INFO: compiled from: findClassInModule.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class findClassInModule {
 
-    /* compiled from: findClassInModule.kt */
-    /* renamed from: d0.e0.p.d.m0.c.w$a */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.c.w$a */
+    /* JADX INFO: compiled from: findClassInModule.kt */
     public /* synthetic */ class a extends FunctionReference implements Function1<ClassId, ClassId> {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public static final a f23101j = new a();
 
         public a() {
@@ -54,25 +54,25 @@ public final class findClassInModule {
             return invoke2(classId);
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final ClassId invoke2(ClassId classId) {
             Intrinsics3.checkNotNullParameter(classId, "p0");
             return classId.getOuterClassId();
         }
     }
 
-    /* compiled from: findClassInModule.kt */
-    /* renamed from: d0.e0.p.d.m0.c.w$b */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.c.w$b */
+    /* JADX INFO: compiled from: findClassInModule.kt */
     public static final class b extends Lambda implements Function1<ClassId, Integer> {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public static final b f23102j = new b();
 
         public b() {
             super(1);
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final int invoke2(ClassId classId) {
             Intrinsics3.checkNotNullParameter(classId, "it");
             return 0;

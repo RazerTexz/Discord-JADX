@@ -10,30 +10,30 @@ import p007b.p008a.p025i.WidgetDiscordHubEmailInputBinding;
 import p007b.p008a.p025i.WidgetHubEmailFlowConfirmationBinding;
 import p007b.p008a.p025i.WidgetHubEmailFlowWaitlistBinding;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public final class WidgetHubEmailFlowBinding implements ViewBinding {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     @NonNull
     public final LinearLayout f17173a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     @NonNull
     public final WidgetHubEmailFlowConfirmationBinding f17174b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     @NonNull
     public final WidgetDiscordHubEmailInputBinding f17175c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     @NonNull
     public final MaterialButton f17176d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     @NonNull
     public final LoadingButton f17177e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     @NonNull
     public final WidgetHubEmailFlowWaitlistBinding f17178f;
 

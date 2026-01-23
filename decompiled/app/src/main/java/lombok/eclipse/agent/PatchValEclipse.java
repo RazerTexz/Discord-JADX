@@ -28,7 +28,7 @@ import org.eclipse.jdt.internal.compiler.ast.SingleTypeReference;
 import org.eclipse.jdt.internal.compiler.ast.TypeReference;
 import org.eclipse.jdt.internal.compiler.parser.Parser;
 
-/* loaded from: discord-126021.apk:lombok/eclipse/agent/PatchValEclipse.SCL.lombok */
+/* JADX INFO: loaded from: discord-126021.apk:lombok/eclipse/agent/PatchValEclipse.SCL.lombok */
 public class PatchValEclipse {
     private static final Field FIELD_NAME_INDEX;
 
@@ -91,17 +91,17 @@ public class PatchValEclipse {
         return PatchVal.couldBe(imports, "lombok.experimental.var", type) || PatchVal.couldBe(imports, "lombok.var", type);
     }
 
-    public static void addFinalAndValAnnotationToSingleVariableDeclaration(Object converter, SingleVariableDeclaration out, LocalDeclaration in) throws IllegalArgumentException {
+    public static void addFinalAndValAnnotationToSingleVariableDeclaration(Object converter, SingleVariableDeclaration out, LocalDeclaration in) {
         List<IExtendedModifier> modifiers = out.modifiers();
         addFinalAndValAnnotationToModifierList(converter, modifiers, out.getAST(), in);
     }
 
-    public static void addFinalAndValAnnotationToVariableDeclarationStatement(Object converter, VariableDeclarationStatement out, LocalDeclaration in) throws IllegalArgumentException {
+    public static void addFinalAndValAnnotationToVariableDeclarationStatement(Object converter, VariableDeclarationStatement out, LocalDeclaration in) {
         List<IExtendedModifier> modifiers = out.modifiers();
         addFinalAndValAnnotationToModifierList(converter, modifiers, out.getAST(), in);
     }
 
-    public static void addFinalAndValAnnotationToModifierList(Object converter, List<IExtendedModifier> modifiers, AST ast, LocalDeclaration in) throws IllegalArgumentException {
+    public static void addFinalAndValAnnotationToModifierList(Object converter, List<IExtendedModifier> modifiers, AST ast, LocalDeclaration in) {
         Name typeName;
         if (in.annotations == null) {
             return;
@@ -190,52 +190,60 @@ public class PatchValEclipse {
     }
 
     /* JADX WARN: Multi-variable type inference failed */
-    /* JADX WARN: Type inference failed for: r0v62, types: [char[]] */
-    public static MarkerAnnotation createValVarAnnotation(AST ast, Annotation original, int start, int end) {
-        char[][] tokens;
+    /* JADX WARN: Type inference failed for: r0v26 */
+    /* JADX WARN: Type inference failed for: r0v28 */
+    /* JADX WARN: Type inference failed for: r12v3 */
+    /* JADX WARN: Type inference failed for: r12v4 */
+    /* JADX WARN: Type inference failed for: r12v5 */
+    /* JADX WARN: Type inference failed for: r12v6 */
+    /* JADX WARN: Type inference failed for: r3v1 */
+    /* JADX WARN: Type inference failed for: r3v2, types: [char[]] */
+    /* JADX WARN: Type inference failed for: r4v1 */
+    public static MarkerAnnotation createValVarAnnotation(AST ast, Annotation annotation, int i, int i2) {
+        ?? r12;
         try {
-            MarkerAnnotation out = (MarkerAnnotation) Reflection.access$6().newInstance(ast);
-            if (original.type instanceof SingleTypeReference) {
-                tokens = new char[]{original.type.token};
-            } else if (original.type instanceof QualifiedTypeReference) {
-                tokens = original.type.tokens;
+            MarkerAnnotation markerAnnotation = (MarkerAnnotation) Reflection.access$6().newInstance(ast);
+            if (annotation.type instanceof SingleTypeReference) {
+                r12 = new char[]{annotation.type.token};
+            } else if (annotation.type instanceof QualifiedTypeReference) {
+                r12 = annotation.type.tokens;
             } else {
                 return null;
             }
-            if (out != null) {
-                SimpleName valName = ast.newSimpleName(new String(tokens[tokens.length - 1]));
-                valName.setSourceRange(start, (end - start) + 1);
-                if (tokens.length == 1) {
-                    out.setTypeName(valName);
-                    setIndex(valName, 1);
-                } else if (tokens.length == 2) {
-                    SimpleName lombokName = ast.newSimpleName("lombok");
-                    lombokName.setSourceRange(start, (end - start) + 1);
-                    setIndex(lombokName, 1);
-                    setIndex(valName, 2);
-                    QualifiedName fullName = ast.newQualifiedName(lombokName, valName);
-                    setIndex(fullName, 1);
-                    fullName.setSourceRange(start, (end - start) + 1);
-                    out.setTypeName(fullName);
+            if (markerAnnotation != null) {
+                SimpleName simpleNameNewSimpleName = ast.newSimpleName(new String((char[]) r12[r12.length - 1]));
+                simpleNameNewSimpleName.setSourceRange(i, (i2 - i) + 1);
+                if (r12.length == 1) {
+                    markerAnnotation.setTypeName(simpleNameNewSimpleName);
+                    setIndex(simpleNameNewSimpleName, 1);
+                } else if (r12.length == 2) {
+                    SimpleName simpleNameNewSimpleName2 = ast.newSimpleName("lombok");
+                    simpleNameNewSimpleName2.setSourceRange(i, (i2 - i) + 1);
+                    setIndex(simpleNameNewSimpleName2, 1);
+                    setIndex(simpleNameNewSimpleName, 2);
+                    QualifiedName qualifiedNameNewQualifiedName = ast.newQualifiedName(simpleNameNewSimpleName2, simpleNameNewSimpleName);
+                    setIndex(qualifiedNameNewQualifiedName, 1);
+                    qualifiedNameNewQualifiedName.setSourceRange(i, (i2 - i) + 1);
+                    markerAnnotation.setTypeName(qualifiedNameNewQualifiedName);
                 } else {
-                    SimpleName lombokName2 = ast.newSimpleName("lombok");
-                    lombokName2.setSourceRange(start, (end - start) + 1);
-                    SimpleName experimentalName = ast.newSimpleName("experimental");
-                    lombokName2.setSourceRange(start, (end - start) + 1);
-                    setIndex(lombokName2, 1);
-                    setIndex(experimentalName, 2);
-                    setIndex(valName, 3);
-                    QualifiedName lombokExperimentalName = ast.newQualifiedName(lombokName2, experimentalName);
-                    lombokExperimentalName.setSourceRange(start, (end - start) + 1);
-                    setIndex(lombokExperimentalName, 1);
-                    QualifiedName fullName2 = ast.newQualifiedName(lombokExperimentalName, valName);
-                    setIndex(fullName2, 1);
-                    fullName2.setSourceRange(start, (end - start) + 1);
-                    out.setTypeName(fullName2);
+                    SimpleName simpleNameNewSimpleName3 = ast.newSimpleName("lombok");
+                    simpleNameNewSimpleName3.setSourceRange(i, (i2 - i) + 1);
+                    SimpleName simpleNameNewSimpleName4 = ast.newSimpleName("experimental");
+                    simpleNameNewSimpleName3.setSourceRange(i, (i2 - i) + 1);
+                    setIndex(simpleNameNewSimpleName3, 1);
+                    setIndex(simpleNameNewSimpleName4, 2);
+                    setIndex(simpleNameNewSimpleName, 3);
+                    QualifiedName qualifiedNameNewQualifiedName2 = ast.newQualifiedName(simpleNameNewSimpleName3, simpleNameNewSimpleName4);
+                    qualifiedNameNewQualifiedName2.setSourceRange(i, (i2 - i) + 1);
+                    setIndex(qualifiedNameNewQualifiedName2, 1);
+                    QualifiedName qualifiedNameNewQualifiedName3 = ast.newQualifiedName(qualifiedNameNewQualifiedName2, simpleNameNewSimpleName);
+                    setIndex(qualifiedNameNewQualifiedName3, 1);
+                    qualifiedNameNewQualifiedName3.setSourceRange(i, (i2 - i) + 1);
+                    markerAnnotation.setTypeName(qualifiedNameNewQualifiedName3);
                 }
-                out.setSourceRange(start, (end - start) + 1);
+                markerAnnotation.setSourceRange(i, (i2 - i) + 1);
             }
-            return out;
+            return markerAnnotation;
         } catch (IllegalAccessException e) {
             throw Lombok.sneakyThrow(e);
         } catch (InstantiationException e2) {
@@ -263,7 +271,7 @@ public class PatchValEclipse {
         }
     }
 
-    /* loaded from: discord-126021.apk:lombok/eclipse/agent/PatchValEclipse$Reflection.SCL.lombok */
+    /* JADX INFO: loaded from: discord-126021.apk:lombok/eclipse/agent/PatchValEclipse$Reflection.SCL.lombok */
     public static final class Reflection {
         private static final Field initCopyField;
         private static final Field iterableCopyField;

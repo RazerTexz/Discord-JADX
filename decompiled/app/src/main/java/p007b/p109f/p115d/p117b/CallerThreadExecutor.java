@@ -5,12 +5,12 @@ import java.util.List;
 import java.util.concurrent.AbstractExecutorService;
 import java.util.concurrent.TimeUnit;
 
-/* compiled from: CallerThreadExecutor.java */
-/* renamed from: b.f.d.b.a, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.f.d.b.a, reason: use source file name */
+/* JADX INFO: compiled from: CallerThreadExecutor.java */
+/* JADX INFO: loaded from: classes.dex */
 public class CallerThreadExecutor extends AbstractExecutorService {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static final CallerThreadExecutor f3078j = new CallerThreadExecutor();
 
     @Override // java.util.concurrent.ExecutorService

@@ -4,8 +4,8 @@ import android.view.View;
 import com.discord.utilities.mg_recycler.MGRecyclerDataPayload;
 import com.discord.widgets.voice.sheet.CallParticipantsAdapter;
 
-/* compiled from: CallParticipantsAdapter.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: CallParticipantsAdapter.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class CallParticipantsAdapter$ViewHolderEvent$onConfigure$1 implements View.OnClickListener {
     public final /* synthetic */ MGRecyclerDataPayload $data;
     public final /* synthetic */ CallParticipantsAdapter.ViewHolderEvent this$0;

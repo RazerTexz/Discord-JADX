@@ -4,27 +4,27 @@ import android.view.View;
 import android.view.ViewTreeObserver;
 import com.discord.floating_view_manager.FloatingViewGravity;
 
-/* compiled from: FloatingViewManager.kt */
-/* renamed from: b.a.j.f, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.a.j.f, reason: use source file name */
+/* JADX INFO: compiled from: FloatingViewManager.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class FloatingViewManager4 implements ViewTreeObserver.OnPreDrawListener {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final /* synthetic */ FloatingViewManager f1477j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final /* synthetic */ View f1478k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final /* synthetic */ View f1479l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public final /* synthetic */ FloatingViewGravity f1480m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public final /* synthetic */ int f1481n;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public final /* synthetic */ int f1482o;
 
     public FloatingViewManager4(FloatingViewManager floatingViewManager, View view, View view2, FloatingViewGravity floatingViewGravity, int i, int i2) {

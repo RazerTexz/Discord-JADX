@@ -5,8 +5,8 @@ import com.discord.models.domain.ModelAuditLogEntry;
 import p507d0.p592z.p594d.Intrinsics3;
 import p637j0.p642l.p647e.UtilityFunctions;
 
-/* compiled from: ExperimentHash.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: ExperimentHash.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class ExperimentHash {
     public static final ExperimentHash INSTANCE = new ExperimentHash();
 
@@ -16,6 +16,6 @@ public final class ExperimentHash {
     public final long from(CharSequence name) {
         Intrinsics3.checkNotNullParameter(name, ModelAuditLogEntry.CHANGE_KEY_NAME);
         int iM10822a = UtilityFunctions.m10822a(name, 0, name.length(), 0);
-        return iM10822a < 0 ? iM10822a + Permission.REQUEST_TO_SPEAK : iM10822a;
+        return iM10822a < 0 ? ((long) iM10822a) + Permission.REQUEST_TO_SPEAK : iM10822a;
     }
 }

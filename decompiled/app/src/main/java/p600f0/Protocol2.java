@@ -5,9 +5,9 @@ import kotlin.jvm.internal.DefaultConstructorMarker;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: Protocol.kt */
-/* renamed from: f0.y, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: f0.y, reason: use source file name */
+/* JADX INFO: compiled from: Protocol.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public enum Protocol2 {
     HTTP_1_0("http/1.0"),
     HTTP_1_1("http/1.1"),
@@ -17,17 +17,17 @@ public enum Protocol2 {
     QUIC("quic");
 
 
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     public static final a f26062q = new a(null);
     private final String protocol;
 
-    /* compiled from: Protocol.kt */
-    /* renamed from: f0.y$a */
+    /* JADX INFO: renamed from: f0.y$a */
+    /* JADX INFO: compiled from: Protocol.kt */
     public static final class a {
         public a(DefaultConstructorMarker defaultConstructorMarker) {
         }
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final Protocol2 m10423a(String str) throws IOException {
             Intrinsics3.checkParameterIsNotNull(str, "protocol");
             Protocol2 protocol2 = Protocol2.HTTP_1_0;
@@ -57,7 +57,7 @@ public enum Protocol2 {
         this.protocol = str;
     }
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public static final /* synthetic */ String m10422f(Protocol2 protocol2) {
         return protocol2.protocol;
     }

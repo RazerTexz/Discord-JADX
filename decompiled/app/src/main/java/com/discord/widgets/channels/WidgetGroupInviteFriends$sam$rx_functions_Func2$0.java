@@ -3,8 +3,8 @@ package com.discord.widgets.channels;
 import kotlin.jvm.functions.Function2;
 import p658rx.functions.Func2;
 
-/* compiled from: WidgetGroupInviteFriends.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetGroupInviteFriends.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetGroupInviteFriends$sam$rx_functions_Func2$0 implements Func2 {
     private final /* synthetic */ Function2 function;
 

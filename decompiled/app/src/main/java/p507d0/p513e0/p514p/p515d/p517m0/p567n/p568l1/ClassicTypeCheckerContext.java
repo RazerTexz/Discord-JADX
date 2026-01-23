@@ -30,38 +30,38 @@ import p507d0.p513e0.p514p.p515d.p517m0.p567n.p570n1.InterfaceC11983l;
 import p507d0.p513e0.p514p.p515d.p517m0.p567n.p570n1.InterfaceC11984m;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ClassicTypeCheckerContext.kt */
-/* renamed from: d0.e0.p.d.m0.n.l1.a, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.n.l1.a, reason: use source file name */
+/* JADX INFO: compiled from: ClassicTypeCheckerContext.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public class ClassicTypeCheckerContext extends AbstractTypeChecker3 implements ClassicTypeSystemContext {
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public static final a f24799e = new a(null);
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final boolean f24800f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public final boolean f24801g;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public final boolean f24802h;
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public final KotlinTypeRefiner f24803i;
 
-    /* compiled from: ClassicTypeCheckerContext.kt */
-    /* renamed from: d0.e0.p.d.m0.n.l1.a$a */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.n.l1.a$a */
+    /* JADX INFO: compiled from: ClassicTypeCheckerContext.kt */
     public static final class a {
 
-        /* compiled from: ClassicTypeCheckerContext.kt */
-        /* renamed from: d0.e0.p.d.m0.n.l1.a$a$a, reason: collision with other inner class name */
+        /* JADX INFO: renamed from: d0.e0.p.d.m0.n.l1.a$a$a, reason: collision with other inner class name */
+        /* JADX INFO: compiled from: ClassicTypeCheckerContext.kt */
         public static final class C13337a extends AbstractTypeChecker3.b.a {
 
-            /* renamed from: a */
+            /* JADX INFO: renamed from: a */
             public final /* synthetic */ ClassicTypeSystemContext f24804a;
 
-            /* renamed from: b */
+            /* JADX INFO: renamed from: b */
             public final /* synthetic */ TypeSubstitutor2 f24805b;
 
             public C13337a(ClassicTypeSystemContext classicTypeSystemContext, TypeSubstitutor2 typeSubstitutor2) {

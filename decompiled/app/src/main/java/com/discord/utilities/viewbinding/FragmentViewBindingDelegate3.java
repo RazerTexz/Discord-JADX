@@ -9,14 +9,14 @@ import kotlin.jvm.functions.Function1;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: FragmentViewBindingDelegate.kt */
-/* renamed from: com.discord.utilities.viewbinding.FragmentViewBindingDelegateKt, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.utilities.viewbinding.FragmentViewBindingDelegateKt, reason: use source file name */
+/* JADX INFO: compiled from: FragmentViewBindingDelegate.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class FragmentViewBindingDelegate3 {
 
     /* JADX INFO: Add missing generic type declarations: [T] */
-    /* compiled from: FragmentViewBindingDelegate.kt */
-    /* renamed from: com.discord.utilities.viewbinding.FragmentViewBindingDelegateKt$viewBinding$1 */
+    /* JADX INFO: renamed from: com.discord.utilities.viewbinding.FragmentViewBindingDelegateKt$viewBinding$1 */
+    /* JADX INFO: compiled from: FragmentViewBindingDelegate.kt */
     public static final class C70161<T> extends Lambda implements Function1<T, Unit> {
         public static final C70161 INSTANCE = new C70161();
 

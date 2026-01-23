@@ -6,8 +6,8 @@ import kotlin.jvm.functions.Function0;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: FragmentViewModelLazy.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: FragmentViewModelLazy.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class WidgetGlobalSearchDialog$$special$$inlined$activityViewModels$1 extends Lambda implements Function0<ViewModelStore> {
     public final /* synthetic */ Fragment $this_activityViewModels;
 

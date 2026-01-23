@@ -9,7 +9,7 @@ import android.view.animation.DecelerateInterpolator;
 import android.view.animation.LinearInterpolator;
 import androidx.recyclerview.widget.RecyclerView;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class LinearSmoothScroller extends RecyclerView.SmoothScroller {
     private static final boolean DEBUG = false;
     private static final float MILLISECONDS_PER_INCH = 25.0f;
@@ -91,7 +91,7 @@ public class LinearSmoothScroller extends RecyclerView.SmoothScroller {
     }
 
     public int calculateTimeForDeceleration(int i) {
-        return (int) Math.ceil(calculateTimeForScrolling(i) / 0.3356d);
+        return (int) Math.ceil(((double) calculateTimeForScrolling(i)) / 0.3356d);
     }
 
     public int calculateTimeForScrolling(int i) {

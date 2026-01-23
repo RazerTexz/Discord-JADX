@@ -2,7 +2,7 @@ package androidx.core.view;
 
 import android.view.ViewGroup;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public final class MarginLayoutParamsCompat {
     private MarginLayoutParamsCompat() {
     }

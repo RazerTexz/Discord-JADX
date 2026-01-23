@@ -20,20 +20,20 @@ import p507d0.p510c0.Random;
 import p507d0.p580t._Arrays;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: WidgetChannelFollowSuccessDialog.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetChannelFollowSuccessDialog.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetChannelFollowSuccessDialog extends AppDialog {
     public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetChannelFollowSuccessDialog.class, "binding", "getBinding()Lcom/discord/databinding/WidgetChannelFollowSuccessDialogBinding;", 0)};
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
 
-    /* renamed from: binding$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
     private final Integer[] successImageOptions;
     private final Integer[] successTextOptions;
 
-    /* compiled from: WidgetChannelFollowSuccessDialog.kt */
+    /* JADX INFO: compiled from: WidgetChannelFollowSuccessDialog.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -48,8 +48,8 @@ public final class WidgetChannelFollowSuccessDialog extends AppDialog {
         }
     }
 
-    /* compiled from: WidgetChannelFollowSuccessDialog.kt */
-    /* renamed from: com.discord.widgets.announcements.WidgetChannelFollowSuccessDialog$onViewBound$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.announcements.WidgetChannelFollowSuccessDialog$onViewBound$1 */
+    /* JADX INFO: compiled from: WidgetChannelFollowSuccessDialog.kt */
     public static final class ViewOnClickListenerC71521 implements View.OnClickListener {
         public ViewOnClickListenerC71521() {
         }

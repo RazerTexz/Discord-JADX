@@ -5,7 +5,7 @@ import java.util.GregorianCalendar;
 import java.util.concurrent.atomic.AtomicBoolean;
 import java.util.concurrent.atomic.AtomicStampedReference;
 
-/* loaded from: discord-126021.apk:lombok/core/debug/HistogramTracker.SCL.lombok */
+/* JADX INFO: loaded from: discord-126021.apk:lombok/core/debug/HistogramTracker.SCL.lombok */
 public class HistogramTracker {
     private static final long[] RANGES = {250001, 500001, 1000001, 2000001, 4000001, 8000001, 16000001, 32000001, 64000001, 128000001, 256000001, 512000001, 1024000001, 2048000001, 10000000001L};
     private static final long REPORT_WINDOW = 60000;
@@ -55,8 +55,8 @@ public class HistogramTracker {
         return System.nanoTime();
     }
 
-    /* renamed from: lombok.core.debug.HistogramTracker$1 */
-    /* loaded from: discord-126021.apk:lombok/core/debug/HistogramTracker$1.SCL.lombok */
+    /* JADX INFO: renamed from: lombok.core.debug.HistogramTracker$1 */
+    /* JADX INFO: loaded from: discord-126021.apk:lombok/core/debug/HistogramTracker$1.SCL.lombok */
     class C128401 extends Thread {
         C128401(String $anonymous0) {
             super($anonymous0);
@@ -120,7 +120,7 @@ public class HistogramTracker {
         }
         sb.append("[");
         GregorianCalendar gc = new GregorianCalendar();
-        gc.setTimeInMillis(interval * 60000);
+        gc.setTimeInMillis(((long) interval) * 60000);
         int hour = gc.get(11);
         int minute = gc.get(12);
         if (hour < 10) {

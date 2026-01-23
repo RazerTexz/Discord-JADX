@@ -20,18 +20,18 @@ import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetFriendsAdd.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetFriendsAdd.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetFriendsAdd extends AppFragment {
     public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetFriendsAdd.class, "binding", "getBinding()Lcom/discord/databinding/WidgetFriendsAddBinding;", 0)};
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
 
-    /* renamed from: binding$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
 
-    /* compiled from: WidgetFriendsAdd.kt */
+    /* JADX INFO: compiled from: WidgetFriendsAdd.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -61,8 +61,8 @@ public final class WidgetFriendsAdd extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetFriendsAdd.kt */
-    /* renamed from: com.discord.widgets.friends.WidgetFriendsAdd$onViewBound$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.friends.WidgetFriendsAdd$onViewBound$1 */
+    /* JADX INFO: compiled from: WidgetFriendsAdd.kt */
     public static final class C83781 extends Lambda implements Function0<Fragment> {
         public static final C83781 INSTANCE = new C83781();
 
@@ -82,8 +82,8 @@ public final class WidgetFriendsAdd extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetFriendsAdd.kt */
-    /* renamed from: com.discord.widgets.friends.WidgetFriendsAdd$onViewBound$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.friends.WidgetFriendsAdd$onViewBound$2 */
+    /* JADX INFO: compiled from: WidgetFriendsAdd.kt */
     public static final class C83792 extends Lambda implements Function0<Fragment> {
         public static final C83792 INSTANCE = new C83792();
 

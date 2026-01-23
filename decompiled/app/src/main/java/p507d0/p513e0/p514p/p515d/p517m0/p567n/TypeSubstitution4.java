@@ -7,18 +7,18 @@ import p507d0.p513e0.p514p.p515d.p517m0.p521c.ClassifierDescriptor;
 import p507d0.p513e0.p514p.p515d.p517m0.p521c.TypeParameterDescriptor;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: TypeSubstitution.kt */
-/* renamed from: d0.e0.p.d.m0.n.z, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.n.z, reason: use source file name */
+/* JADX INFO: compiled from: TypeSubstitution.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class TypeSubstitution4 extends TypeSubstitution5 {
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final TypeParameterDescriptor[] f24896b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final TypeProjection[] f24897c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final boolean f24898d;
 
     public /* synthetic */ TypeSubstitution4(TypeParameterDescriptor[] typeParameterDescriptorArr, TypeProjection[] typeProjectionArr, boolean z2, int i, DefaultConstructorMarker defaultConstructorMarker) {

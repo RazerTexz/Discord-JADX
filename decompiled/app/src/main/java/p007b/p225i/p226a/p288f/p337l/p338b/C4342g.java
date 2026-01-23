@@ -8,15 +8,15 @@ import com.google.android.gms.signin.internal.zak;
 import p007b.p225i.p226a.p288f.p313h.p318e.BinderC3477a;
 import p007b.p225i.p226a.p288f.p313h.p318e.C3478b;
 
-/* compiled from: com.google.android.gms:play-services-base@@17.3.0 */
-/* renamed from: b.i.a.f.l.b.g */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.l.b.g */
+/* JADX INFO: compiled from: com.google.android.gms:play-services-base@@17.3.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public final class C4342g implements InterfaceC4340e, IInterface {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final IBinder f11452a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final String f11453b = "com.google.android.gms.signin.internal.ISignInService";
 
     public C4342g(IBinder iBinder) {
@@ -30,7 +30,7 @@ public final class C4342g implements InterfaceC4340e, IInterface {
 
     /* JADX WARN: Multi-variable type inference failed */
     @Override // p007b.p225i.p226a.p288f.p337l.p338b.InterfaceC4340e
-    /* renamed from: f0 */
+    /* JADX INFO: renamed from: f0 */
     public final void mo6000f0(zak zakVar, InterfaceC4338c interfaceC4338c) throws RemoteException {
         Parcel parcelObtain = Parcel.obtain();
         parcelObtain.writeInterfaceToken(this.f11453b);

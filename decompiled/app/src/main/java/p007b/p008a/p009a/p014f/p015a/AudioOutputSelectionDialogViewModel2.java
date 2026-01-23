@@ -13,38 +13,38 @@ import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 import p658rx.Observable;
 
-/* compiled from: AudioOutputSelectionDialogViewModel.kt */
-/* renamed from: b.a.a.f.a.d, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.a.a.f.a.d, reason: use source file name */
+/* JADX INFO: compiled from: AudioOutputSelectionDialogViewModel.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class AudioOutputSelectionDialogViewModel2 extends AppViewModel<a> {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final StoreAudioManagerV2 f360j;
 
-    /* compiled from: AudioOutputSelectionDialogViewModel.kt */
-    /* renamed from: b.a.a.f.a.d$a */
+    /* JADX INFO: renamed from: b.a.a.f.a.d$a */
+    /* JADX INFO: compiled from: AudioOutputSelectionDialogViewModel.kt */
     public static abstract class a {
 
-        /* compiled from: AudioOutputSelectionDialogViewModel.kt */
-        /* renamed from: b.a.a.f.a.d$a$a, reason: collision with other inner class name */
+        /* JADX INFO: renamed from: b.a.a.f.a.d$a$a, reason: collision with other inner class name */
+        /* JADX INFO: compiled from: AudioOutputSelectionDialogViewModel.kt */
         public static final class C13208a extends a {
 
-            /* renamed from: a */
+            /* JADX INFO: renamed from: a */
             public final DiscordAudioManager.DeviceTypes f361a;
 
-            /* renamed from: b */
+            /* JADX INFO: renamed from: b */
             public final boolean f362b;
 
-            /* renamed from: c */
+            /* JADX INFO: renamed from: c */
             public final String f363c;
 
-            /* renamed from: d */
+            /* JADX INFO: renamed from: d */
             public final boolean f364d;
 
-            /* renamed from: e */
+            /* JADX INFO: renamed from: e */
             public final boolean f365e;
 
-            /* renamed from: f */
+            /* JADX INFO: renamed from: f */
             public final boolean f366f;
 
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -71,31 +71,43 @@ public final class AudioOutputSelectionDialogViewModel2 extends AppViewModel<a> 
             }
 
             /* JADX WARN: Multi-variable type inference failed */
+            /* JADX WARN: Type inference failed for: r1v10 */
+            /* JADX WARN: Type inference failed for: r1v11 */
+            /* JADX WARN: Type inference failed for: r1v3, types: [int] */
+            /* JADX WARN: Type inference failed for: r1v5, types: [int] */
+            /* JADX WARN: Type inference failed for: r1v7 */
+            /* JADX WARN: Type inference failed for: r1v8 */
+            /* JADX WARN: Type inference failed for: r2v1, types: [int] */
+            /* JADX WARN: Type inference failed for: r2v3 */
+            /* JADX WARN: Type inference failed for: r2v4 */
+            /* JADX WARN: Type inference failed for: r3v0 */
+            /* JADX WARN: Type inference failed for: r3v1, types: [int] */
+            /* JADX WARN: Type inference failed for: r3v2 */
             public int hashCode() {
                 DiscordAudioManager.DeviceTypes deviceTypes = this.f361a;
                 int iHashCode = (deviceTypes != null ? deviceTypes.hashCode() : 0) * 31;
                 boolean z2 = this.f362b;
-                int i = z2;
-                if (z2 != 0) {
-                    i = 1;
+                ?? r2 = z2;
+                if (z2) {
+                    r2 = 1;
                 }
-                int i2 = (iHashCode + i) * 31;
+                int i = (iHashCode + r2) * 31;
                 String str = this.f363c;
-                int iHashCode2 = (i2 + (str != null ? str.hashCode() : 0)) * 31;
+                int iHashCode2 = (i + (str != null ? str.hashCode() : 0)) * 31;
                 boolean z3 = this.f364d;
-                int i3 = z3;
-                if (z3 != 0) {
-                    i3 = 1;
+                ?? r1 = z3;
+                if (z3) {
+                    r1 = 1;
                 }
-                int i4 = (iHashCode2 + i3) * 31;
+                int i2 = (iHashCode2 + r1) * 31;
                 boolean z4 = this.f365e;
-                int i5 = z4;
-                if (z4 != 0) {
-                    i5 = 1;
+                ?? r12 = z4;
+                if (z4) {
+                    r12 = 1;
                 }
-                int i6 = (i4 + i5) * 31;
+                int i3 = (i2 + r12) * 31;
                 boolean z5 = this.f366f;
-                return i6 + (z5 ? 1 : z5 ? 1 : 0);
+                return i3 + (z5 ? 1 : z5);
             }
 
             public String toString() {
@@ -114,11 +126,11 @@ public final class AudioOutputSelectionDialogViewModel2 extends AppViewModel<a> 
             }
         }
 
-        /* compiled from: AudioOutputSelectionDialogViewModel.kt */
-        /* renamed from: b.a.a.f.a.d$a$b */
+        /* JADX INFO: renamed from: b.a.a.f.a.d$a$b */
+        /* JADX INFO: compiled from: AudioOutputSelectionDialogViewModel.kt */
         public static final class b extends a {
 
-            /* renamed from: a */
+            /* JADX INFO: renamed from: a */
             public static final b f367a = new b();
 
             public b() {

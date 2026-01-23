@@ -6,8 +6,8 @@ import androidx.annotation.WorkerThread;
 import java.util.ArrayList;
 import java.util.List;
 
+/* JADX INFO: loaded from: classes.dex */
 @RestrictTo({RestrictTo.Scope.LIBRARY_GROUP_PREFIX})
-/* loaded from: classes.dex */
 public abstract class ShortcutInfoCompatSaver<T> {
 
     @RestrictTo({RestrictTo.Scope.LIBRARY})
@@ -18,7 +18,7 @@ public abstract class ShortcutInfoCompatSaver<T> {
         }
 
         @Override // androidx.core.content.p004pm.ShortcutInfoCompatSaver
-        /* renamed from: addShortcuts, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: addShortcuts, reason: avoid collision after fix types in other method */
         public Void addShortcuts2(List<ShortcutInfoCompat> list) {
             return null;
         }
@@ -29,7 +29,7 @@ public abstract class ShortcutInfoCompatSaver<T> {
         }
 
         @Override // androidx.core.content.p004pm.ShortcutInfoCompatSaver
-        /* renamed from: removeAllShortcuts, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: removeAllShortcuts, reason: avoid collision after fix types in other method */
         public Void removeAllShortcuts2() {
             return null;
         }
@@ -40,7 +40,7 @@ public abstract class ShortcutInfoCompatSaver<T> {
         }
 
         @Override // androidx.core.content.p004pm.ShortcutInfoCompatSaver
-        /* renamed from: removeShortcuts, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: removeShortcuts, reason: avoid collision after fix types in other method */
         public Void removeShortcuts2(List<String> list) {
             return null;
         }

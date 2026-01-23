@@ -28,14 +28,14 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 import p507d0.p592z.p594d.Reflection2;
 
-/* compiled from: NoticePopup.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: NoticePopup.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class NoticePopup {
     private static final int DEFAULT_AUTO_DISMISS_PERIOD_SECONDS = 5;
     public static final NoticePopup INSTANCE = new NoticePopup();
 
-    /* compiled from: NoticePopup.kt */
-    /* renamed from: com.discord.widgets.notice.NoticePopup$enqueue$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.notice.NoticePopup$enqueue$1 */
+    /* JADX INFO: compiled from: NoticePopup.kt */
     public static final class C90901 extends Lambda implements Function1<View, Unit> {
         public static final C90901 INSTANCE = new C90901();
 
@@ -49,7 +49,7 @@ public final class NoticePopup {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(View view) {
             Intrinsics3.checkNotNullParameter(view, "it");
         }
@@ -110,6 +110,7 @@ public final class NoticePopup {
         StoreNotices.markSeen$default(StoreStream.INSTANCE.getNotices(), name, 0L, 2, null);
     }
 
+    /* JADX WARN: Multi-variable type inference failed */
     public static /* synthetic */ void enqueue$default(NoticePopup noticePopup, String str, CharSequence charSequence, CharSequence charSequence2, CharSequence charSequence3, Drawable drawable, String str2, Drawable drawable2, List list, String str3, Integer num, Drawable drawable3, Integer num2, List list2, Function1 function1, Function1 function12, int i, Object obj) {
         noticePopup.enqueue(str, charSequence, (i & 4) != 0 ? null : charSequence2, charSequence3, (i & 16) != 0 ? null : drawable, (i & 32) != 0 ? null : str2, (i & 64) != 0 ? null : drawable2, (i & 128) != 0 ? null : list, (i & 256) != 0 ? null : str3, (i & 512) != 0 ? null : num, (i & 1024) != 0 ? null : drawable3, (i & 2048) != 0 ? 5 : num2, (i & 4096) != 0 ? CollectionsJVM.listOf(Reflection2.getOrCreateKotlinClass(WidgetHome.class)) : list2, (i & 8192) != 0 ? C90901.INSTANCE : function1, function12);
     }
@@ -122,7 +123,7 @@ public final class NoticePopup {
         NoticePopup7 noticePopup7 = new NoticePopup7(onEnd);
         Intrinsics3.checkNotNullExpressionValue(valueAnimatorOfInt, "animator");
         valueAnimatorOfInt.setInterpolator(new LinearInterpolator());
-        valueAnimatorOfInt.setDuration(autoDismissPeriodSecs.intValue() * 1000);
+        valueAnimatorOfInt.setDuration(((long) autoDismissPeriodSecs.intValue()) * 1000);
         valueAnimatorOfInt.addListener(noticePopup7);
         valueAnimatorOfInt.start();
         return valueAnimatorOfInt;

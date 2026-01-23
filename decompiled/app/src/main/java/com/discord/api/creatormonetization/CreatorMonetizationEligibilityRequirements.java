@@ -6,8 +6,8 @@ import java.util.Objects;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: CreatorMonetizationEligibilityRequirements.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: CreatorMonetizationEligibilityRequirements.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class CreatorMonetizationEligibilityRequirements {
     private final boolean age;
     private final boolean canApply;
@@ -25,7 +25,7 @@ public final /* data */ class CreatorMonetizationEligibilityRequirements {
     private final boolean size;
     private final boolean sufficient;
 
-    /* compiled from: CreatorMonetizationEligibilityRequirements.kt */
+    /* JADX INFO: compiled from: CreatorMonetizationEligibilityRequirements.kt */
     public static final /* data */ class HealthScore {
         private final Integer avgNonnewCommunicators;
         private final Integer avgNonnewParticipators;
@@ -35,17 +35,17 @@ public final /* data */ class CreatorMonetizationEligibilityRequirements {
         private final Double percRetW1;
         private final Double percRetW1Intentful;
 
-        /* renamed from: a, reason: from getter */
+        /* JADX INFO: renamed from: a, reason: from getter */
         public final Integer getCommunicators() {
             return this.communicators;
         }
 
-        /* renamed from: b, reason: from getter */
+        /* JADX INFO: renamed from: b, reason: from getter */
         public final Integer getGuildSize() {
             return this.guildSize;
         }
 
-        /* renamed from: c, reason: from getter */
+        /* JADX INFO: renamed from: c, reason: from getter */
         public final Double getPercRetW1() {
             return this.percRetW1;
         }
@@ -98,11 +98,11 @@ public final /* data */ class CreatorMonetizationEligibilityRequirements {
         }
     }
 
-    /* compiled from: CreatorMonetizationEligibilityRequirements.kt */
+    /* JADX INFO: compiled from: CreatorMonetizationEligibilityRequirements.kt */
     public static final /* data */ class Rejection {
         private final Date canReapplyAt;
 
-        /* renamed from: a, reason: from getter */
+        /* JADX INFO: renamed from: a, reason: from getter */
         public final Date getCanReapplyAt() {
             return this.canReapplyAt;
         }
@@ -149,7 +149,7 @@ public final /* data */ class CreatorMonetizationEligibilityRequirements {
         this.minimumSize = i2;
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static CreatorMonetizationEligibilityRequirements m7766a(CreatorMonetizationEligibilityRequirements creatorMonetizationEligibilityRequirements, long j, CreatorMonetizationEnableRequest creatorMonetizationEnableRequest, boolean z2, boolean z3, boolean z4, boolean z5, Map map, boolean z6, boolean z7, boolean z8, HealthScore healthScore, boolean z9, Rejection rejection, int i, int i2, int i3) {
         long j2 = (i3 & 1) != 0 ? creatorMonetizationEligibilityRequirements.guildId : j;
         CreatorMonetizationEnableRequest creatorMonetizationEnableRequest2 = (i3 & 2) != 0 ? creatorMonetizationEligibilityRequirements.latestRequest : creatorMonetizationEnableRequest;
@@ -171,22 +171,22 @@ public final /* data */ class CreatorMonetizationEligibilityRequirements {
         return new CreatorMonetizationEligibilityRequirements(j2, creatorMonetizationEnableRequest2, z10, z11, z12, z13, map2, z14, z15, z16, healthScore2, z17, rejection2, i4, i5);
     }
 
-    /* renamed from: b, reason: from getter */
+    /* JADX INFO: renamed from: b, reason: from getter */
     public final boolean getAge() {
         return this.age;
     }
 
-    /* renamed from: c, reason: from getter */
+    /* JADX INFO: renamed from: c, reason: from getter */
     public final boolean getCanApply() {
         return this.canApply;
     }
 
-    /* renamed from: d, reason: from getter */
+    /* JADX INFO: renamed from: d, reason: from getter */
     public final boolean getEngagementHealthy() {
         return this.engagementHealthy;
     }
 
-    /* renamed from: e, reason: from getter */
+    /* JADX INFO: renamed from: e, reason: from getter */
     public final HealthScore getHealthScore() {
         return this.healthScore;
     }
@@ -202,105 +202,129 @@ public final /* data */ class CreatorMonetizationEligibilityRequirements {
         return this.guildId == creatorMonetizationEligibilityRequirements.guildId && Intrinsics3.areEqual(this.latestRequest, creatorMonetizationEligibilityRequirements.latestRequest) && this.canApply == creatorMonetizationEligibilityRequirements.canApply && this.sufficient == creatorMonetizationEligibilityRequirements.sufficient && this.age == creatorMonetizationEligibilityRequirements.age && this.engagementHealthy == creatorMonetizationEligibilityRequirements.engagementHealthy && Intrinsics3.areEqual(this.nsfwProperties, creatorMonetizationEligibilityRequirements.nsfwProperties) && this.retentionHealthy == creatorMonetizationEligibilityRequirements.retentionHealthy && this.safeEnvironment == creatorMonetizationEligibilityRequirements.safeEnvironment && this.size == creatorMonetizationEligibilityRequirements.size && Intrinsics3.areEqual(this.healthScore, creatorMonetizationEligibilityRequirements.healthScore) && this.healthScorePending == creatorMonetizationEligibilityRequirements.healthScorePending && Intrinsics3.areEqual(this.rejection, creatorMonetizationEligibilityRequirements.rejection) && this.minimumAgeInDays == creatorMonetizationEligibilityRequirements.minimumAgeInDays && this.minimumSize == creatorMonetizationEligibilityRequirements.minimumSize;
     }
 
-    /* renamed from: f, reason: from getter */
+    /* JADX INFO: renamed from: f, reason: from getter */
     public final CreatorMonetizationEnableRequest getLatestRequest() {
         return this.latestRequest;
     }
 
-    /* renamed from: g, reason: from getter */
+    /* JADX INFO: renamed from: g, reason: from getter */
     public final int getMinimumAgeInDays() {
         return this.minimumAgeInDays;
     }
 
-    /* renamed from: h, reason: from getter */
+    /* JADX INFO: renamed from: h, reason: from getter */
     public final int getMinimumSize() {
         return this.minimumSize;
     }
 
     /* JADX WARN: Multi-variable type inference failed */
+    /* JADX WARN: Type inference failed for: r0v10, types: [int] */
+    /* JADX WARN: Type inference failed for: r0v12, types: [int] */
+    /* JADX WARN: Type inference failed for: r0v17, types: [int] */
+    /* JADX WARN: Type inference failed for: r0v19, types: [int] */
+    /* JADX WARN: Type inference failed for: r0v21, types: [int] */
+    /* JADX WARN: Type inference failed for: r0v30 */
+    /* JADX WARN: Type inference failed for: r0v31 */
+    /* JADX WARN: Type inference failed for: r0v32 */
+    /* JADX WARN: Type inference failed for: r0v34 */
+    /* JADX WARN: Type inference failed for: r0v35 */
+    /* JADX WARN: Type inference failed for: r0v36 */
+    /* JADX WARN: Type inference failed for: r0v37 */
+    /* JADX WARN: Type inference failed for: r0v39 */
+    /* JADX WARN: Type inference failed for: r0v40 */
+    /* JADX WARN: Type inference failed for: r0v41 */
+    /* JADX WARN: Type inference failed for: r0v42 */
+    /* JADX WARN: Type inference failed for: r0v43 */
+    /* JADX WARN: Type inference failed for: r0v44 */
+    /* JADX WARN: Type inference failed for: r0v45 */
+    /* JADX WARN: Type inference failed for: r0v6, types: [int] */
+    /* JADX WARN: Type inference failed for: r0v8, types: [int] */
+    /* JADX WARN: Type inference failed for: r3v0 */
+    /* JADX WARN: Type inference failed for: r3v1, types: [int] */
+    /* JADX WARN: Type inference failed for: r3v2 */
     public int hashCode() {
         long j = this.guildId;
         int i = ((int) (j ^ (j >>> 32))) * 31;
         CreatorMonetizationEnableRequest creatorMonetizationEnableRequest = this.latestRequest;
         int iHashCode = (i + (creatorMonetizationEnableRequest != null ? creatorMonetizationEnableRequest.hashCode() : 0)) * 31;
         boolean z2 = this.canApply;
-        int i2 = z2;
-        if (z2 != 0) {
-            i2 = 1;
+        ?? r0 = z2;
+        if (z2) {
+            r0 = 1;
         }
-        int i3 = (iHashCode + i2) * 31;
+        int i2 = (iHashCode + r0) * 31;
         boolean z3 = this.sufficient;
-        int i4 = z3;
-        if (z3 != 0) {
-            i4 = 1;
+        ?? r02 = z3;
+        if (z3) {
+            r02 = 1;
         }
-        int i5 = (i3 + i4) * 31;
+        int i3 = (i2 + r02) * 31;
         boolean z4 = this.age;
-        int i6 = z4;
-        if (z4 != 0) {
-            i6 = 1;
+        ?? r03 = z4;
+        if (z4) {
+            r03 = 1;
         }
-        int i7 = (i5 + i6) * 31;
+        int i4 = (i3 + r03) * 31;
         boolean z5 = this.engagementHealthy;
-        int i8 = z5;
-        if (z5 != 0) {
-            i8 = 1;
+        ?? r04 = z5;
+        if (z5) {
+            r04 = 1;
         }
-        int i9 = (i7 + i8) * 31;
+        int i5 = (i4 + r04) * 31;
         Map<String, Object> map = this.nsfwProperties;
-        int iHashCode2 = (i9 + (map != null ? map.hashCode() : 0)) * 31;
+        int iHashCode2 = (i5 + (map != null ? map.hashCode() : 0)) * 31;
         boolean z6 = this.retentionHealthy;
-        int i10 = z6;
-        if (z6 != 0) {
-            i10 = 1;
+        ?? r05 = z6;
+        if (z6) {
+            r05 = 1;
         }
-        int i11 = (iHashCode2 + i10) * 31;
+        int i6 = (iHashCode2 + r05) * 31;
         boolean z7 = this.safeEnvironment;
-        int i12 = z7;
-        if (z7 != 0) {
-            i12 = 1;
+        ?? r06 = z7;
+        if (z7) {
+            r06 = 1;
         }
-        int i13 = (i11 + i12) * 31;
+        int i7 = (i6 + r06) * 31;
         boolean z8 = this.size;
-        int i14 = z8;
-        if (z8 != 0) {
-            i14 = 1;
+        ?? r07 = z8;
+        if (z8) {
+            r07 = 1;
         }
-        int i15 = (i13 + i14) * 31;
+        int i8 = (i7 + r07) * 31;
         HealthScore healthScore = this.healthScore;
-        int iHashCode3 = (i15 + (healthScore != null ? healthScore.hashCode() : 0)) * 31;
+        int iHashCode3 = (i8 + (healthScore != null ? healthScore.hashCode() : 0)) * 31;
         boolean z9 = this.healthScorePending;
-        int i16 = (iHashCode3 + (z9 ? 1 : z9 ? 1 : 0)) * 31;
+        int i9 = (iHashCode3 + (z9 ? 1 : z9)) * 31;
         Rejection rejection = this.rejection;
-        return ((((i16 + (rejection != null ? rejection.hashCode() : 0)) * 31) + this.minimumAgeInDays) * 31) + this.minimumSize;
+        return ((((i9 + (rejection != null ? rejection.hashCode() : 0)) * 31) + this.minimumAgeInDays) * 31) + this.minimumSize;
     }
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public final Map<String, Object> m7774i() {
         return this.nsfwProperties;
     }
 
-    /* renamed from: j, reason: from getter */
+    /* JADX INFO: renamed from: j, reason: from getter */
     public final Rejection getRejection() {
         return this.rejection;
     }
 
-    /* renamed from: k, reason: from getter */
+    /* JADX INFO: renamed from: k, reason: from getter */
     public final boolean getRetentionHealthy() {
         return this.retentionHealthy;
     }
 
-    /* renamed from: l, reason: from getter */
+    /* JADX INFO: renamed from: l, reason: from getter */
     public final boolean getSafeEnvironment() {
         return this.safeEnvironment;
     }
 
-    /* renamed from: m, reason: from getter */
+    /* JADX INFO: renamed from: m, reason: from getter */
     public final boolean getSize() {
         return this.size;
     }
 
-    /* renamed from: n, reason: from getter */
+    /* JADX INFO: renamed from: n, reason: from getter */
     public final boolean getSufficient() {
         return this.sufficient;
     }

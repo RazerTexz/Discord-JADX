@@ -12,7 +12,7 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.C0051R;
 import androidx.core.view.ViewCompat;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class AppCompatBackgroundHelper {
     private TintInfo mBackgroundTint;
     private TintInfo mInternalBackgroundTint;

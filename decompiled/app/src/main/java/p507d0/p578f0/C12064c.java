@@ -5,15 +5,15 @@ import kotlin.jvm.functions.Function1;
 import kotlin.sequences.Sequence;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: Sequences.kt */
-/* renamed from: d0.f0.c */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.f0.c */
+/* JADX INFO: compiled from: Sequences.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class C12064c<T, K> implements Sequence<T> {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final Sequence<T> f25075a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final Function1<T, K> f25076b;
 
     /* JADX WARN: Multi-variable type inference failed */

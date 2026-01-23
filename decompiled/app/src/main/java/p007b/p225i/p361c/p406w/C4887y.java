@@ -25,40 +25,40 @@ import p007b.p225i.p361c.p398s.C4823n;
 import p007b.p225i.p361c.p398s.C4826q;
 import p007b.p225i.p361c.p398s.InterfaceC4824o;
 
-/* compiled from: com.google.firebase:firebase-messaging@@21.0.0 */
-/* renamed from: b.i.c.w.y */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.c.w.y */
+/* JADX INFO: compiled from: com.google.firebase:firebase-messaging@@21.0.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public class C4887y {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final long f13059a = TimeUnit.HOURS.toSeconds(8);
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static final /* synthetic */ int f13060b = 0;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final FirebaseInstanceId f13061c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final Context f13062d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final C4826q f13063e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final C4823n f13064f;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public final ScheduledExecutorService f13066h;
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final C4885w f13068j;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     @GuardedBy("pendingOperations")
     public final Map<String, ArrayDeque<TaskCompletionSource<Void>>> f13065g = new ArrayMap();
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     @GuardedBy("this")
     public boolean f13067i = false;
 
@@ -72,7 +72,7 @@ public class C4887y {
     }
 
     @WorkerThread
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static <T> T m6830a(Task<T> task) throws IOException {
         try {
             return (T) C3404f.m4307k(task, 30L, TimeUnit.SECONDS);
@@ -94,7 +94,7 @@ public class C4887y {
         }
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public static boolean m6831d() {
         if (Log.isLoggable("FirebaseMessaging", 3)) {
             return true;
@@ -103,7 +103,7 @@ public class C4887y {
     }
 
     @WorkerThread
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final void m6832b(String str) throws IOException {
         InterfaceC4824o interfaceC4824o = (InterfaceC4824o) m6830a(this.f13061c.m9183f());
         C4823n c4823n = this.f13064f;
@@ -118,7 +118,7 @@ public class C4887y {
     }
 
     @WorkerThread
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final void m6833c(String str) throws IOException {
         InterfaceC4824o interfaceC4824o = (InterfaceC4824o) m6830a(this.f13061c.m9183f());
         C4823n c4823n = this.f13064f;
@@ -133,7 +133,7 @@ public class C4887y {
         m6830a(c4823n.m6727a(c4823n.m6728b(id2, strMo6729a, strValueOf2.length() != 0 ? "/topics/".concat(strValueOf2) : new String("/topics/"), bundle)));
     }
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public synchronized void m6834e(boolean z2) {
         this.f13067i = z2;
     }
@@ -151,7 +151,7 @@ public class C4887y {
         return true;
      */
     @WorkerThread
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
@@ -165,16 +165,16 @@ public class C4887y {
                 }
                 try {
                     String str = c4884vM6829a.f13048c;
-                    char c = 65535;
+                    byte b2 = -1;
                     int iHashCode = str.hashCode();
                     if (iHashCode != 83) {
                         if (iHashCode == 85 && str.equals("U")) {
-                            c = 1;
+                            b2 = 1;
                         }
                     } else if (str.equals(ExifInterface.LATITUDE_SOUTH)) {
-                        c = 0;
+                        b2 = 0;
                     }
-                    if (c == 0) {
+                    if (b2 == 0) {
                         m6832b(c4884vM6829a.f13047b);
                         if (m6831d()) {
                             String str2 = c4884vM6829a.f13047b;
@@ -184,7 +184,7 @@ public class C4887y {
                             sb.append(" succeeded.");
                             Log.d("FirebaseMessaging", sb.toString());
                         }
-                    } else if (c == 1) {
+                    } else if (b2 == 1) {
                         m6833c(c4884vM6829a.f13047b);
                         if (m6831d()) {
                             String str3 = c4884vM6829a.f13047b;
@@ -248,7 +248,7 @@ public class C4887y {
         }
     }
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public void m6836g(long j) {
         this.f13066h.schedule(new RunnableC4888z(this, this.f13062d, this.f13063e, Math.min(Math.max(30L, j << 1), f13059a)), j, TimeUnit.SECONDS);
         m6834e(true);

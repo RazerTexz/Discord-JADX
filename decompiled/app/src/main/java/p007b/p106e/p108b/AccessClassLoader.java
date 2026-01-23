@@ -5,21 +5,21 @@ import java.lang.reflect.Method;
 import java.security.ProtectionDomain;
 import java.util.WeakHashMap;
 
-/* compiled from: AccessClassLoader.java */
-/* renamed from: b.e.b.a, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.e.b.a, reason: use source file name */
+/* JADX INFO: compiled from: AccessClassLoader.java */
+/* JADX INFO: loaded from: classes.dex */
 public class AccessClassLoader extends ClassLoader {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final WeakHashMap<ClassLoader, WeakReference<AccessClassLoader>> f3009a = new WeakHashMap<>();
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static final ClassLoader f3010b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public static volatile AccessClassLoader f3011c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public static volatile Method f3012d;
 
     static {
@@ -35,7 +35,7 @@ public class AccessClassLoader extends ClassLoader {
         super(classLoader);
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static AccessClassLoader m889b(Class cls) {
         ClassLoader classLoader = cls.getClassLoader();
         if (classLoader == null) {
@@ -68,7 +68,7 @@ public class AccessClassLoader extends ClassLoader {
         }
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public static Method m890c() throws Exception {
         if (f3012d == null) {
             synchronized (f3009a) {
@@ -83,7 +83,7 @@ public class AccessClassLoader extends ClassLoader {
         return f3012d;
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public Class<?> m891a(String str, byte[] bArr) throws ClassFormatError {
         try {
             return (Class) m890c().invoke(getParent(), str, bArr, 0, Integer.valueOf(bArr.length), getClass().getProtectionDomain());

@@ -22,13 +22,13 @@ import p507d0.p513e0.p514p.p515d.p517m0.p576p.JavaTypeEnhancementState2;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: context.kt */
-/* renamed from: d0.e0.p.d.m0.e.a.i0.a, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.e.a.i0.a, reason: use source file name */
+/* JADX INFO: compiled from: context.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class context {
 
-    /* compiled from: context.kt */
-    /* renamed from: d0.e0.p.d.m0.e.a.i0.a$a */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.e.a.i0.a$a */
+    /* JADX INFO: compiled from: context.kt */
     public static final class a extends Lambda implements Function0<JavaTypeQualifiersByElementType> {
         public final /* synthetic */ ClassOrPackageFragmentDescriptor $containingDeclaration;
         public final /* synthetic */ context4 $this_childForClassOrPackage;
@@ -52,8 +52,8 @@ public final class context {
         }
     }
 
-    /* compiled from: context.kt */
-    /* renamed from: d0.e0.p.d.m0.e.a.i0.a$b */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.e.a.i0.a$b */
+    /* JADX INFO: compiled from: context.kt */
     public static final class b extends Lambda implements Function0<JavaTypeQualifiersByElementType> {
         public final /* synthetic */ Annotations4 $additionalAnnotations;
         public final /* synthetic */ context4 $this_copyWithNewDefaultTypeQualifiers;
@@ -77,7 +77,7 @@ public final class context {
         }
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final context4 m9460a(context4 context4Var, DeclarationDescriptor declarationDescriptor, InterfaceC11593z interfaceC11593z, int i, Lazy<JavaTypeQualifiersByElementType> lazy) {
         context2 components = context4Var.getComponents();
         resolvers2 resolversVar = interfaceC11593z == null ? null : new resolvers(context4Var, declarationDescriptor, interfaceC11593z, i);

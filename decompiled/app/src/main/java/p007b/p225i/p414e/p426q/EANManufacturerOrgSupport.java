@@ -4,24 +4,24 @@ import java.util.ArrayList;
 import java.util.List;
 import org.objectweb.asm.Opcodes;
 
-/* compiled from: EANManufacturerOrgSupport.java */
-/* renamed from: b.i.e.q.g, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.e.q.g, reason: use source file name */
+/* JADX INFO: compiled from: EANManufacturerOrgSupport.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class EANManufacturerOrgSupport {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final List<int[]> f13371a = new ArrayList();
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final List<String> f13372b = new ArrayList();
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final void m6991a(int[] iArr, String str) {
         this.f13371a.add(iArr);
         this.f13372b.add(str);
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final synchronized void m6992b() {
         if (this.f13371a.isEmpty()) {
             m6991a(new int[]{0, 19}, "US/CA");

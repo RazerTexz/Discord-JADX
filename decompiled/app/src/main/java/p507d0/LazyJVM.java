@@ -5,9 +5,9 @@ import kotlin.NoWhenBranchMatchedException;
 import kotlin.jvm.functions.Function0;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: LazyJVM.kt */
-/* renamed from: d0.g, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.g, reason: use source file name */
+/* JADX INFO: compiled from: LazyJVM.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public class LazyJVM {
     public static final <T> Lazy<T> lazy(Function0<? extends T> function0) {
         Intrinsics3.checkNotNullParameter(function0, "initializer");

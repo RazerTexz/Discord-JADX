@@ -6,7 +6,7 @@ import java.io.OutputStream;
 import org.objectweb.asm.Opcodes;
 import p007b.p106e.p107a.Log;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class OutputChunked extends Output {
     public OutputChunked() {
         super(2048);
@@ -42,7 +42,7 @@ public class OutputChunked extends Output {
         }
     }
 
-    public void endChunks() throws KryoException {
+    public void endChunks() {
         flush();
         Log.a aVar = Log.f3007a;
         try {

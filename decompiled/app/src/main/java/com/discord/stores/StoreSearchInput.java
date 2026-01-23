@@ -40,8 +40,8 @@ import p658rx.subjects.BehaviorSubject;
 import p658rx.subjects.PublishSubject;
 import p658rx.subjects.SerializedSubject;
 
-/* compiled from: StoreSearchInput.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: StoreSearchInput.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class StoreSearchInput {
     private final SerializedSubject<List<QueryNode>, List<QueryNode>> astSubject;
     private final Observable<List<QueryNode>> currentParsedInput;
@@ -52,8 +52,8 @@ public final class StoreSearchInput {
     private final Observable<Boolean> isInputValid;
     private final SerializedSubject<Boolean, Boolean> isInputValidSubject;
 
-    /* compiled from: StoreSearchInput.kt */
-    /* renamed from: com.discord.stores.StoreSearchInput$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreSearchInput$1 */
+    /* JADX INFO: compiled from: StoreSearchInput.kt */
     public static final class C63881<T, R> implements Func1<List<? extends QueryNode>, Boolean> {
         public static final C63881 INSTANCE = new C63881();
 
@@ -62,7 +62,7 @@ public final class StoreSearchInput {
             return call2(list);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final Boolean call2(List<? extends QueryNode> list) {
             Intrinsics3.checkNotNullExpressionValue(list, "it");
             boolean z2 = true;
@@ -81,8 +81,8 @@ public final class StoreSearchInput {
         }
     }
 
-    /* compiled from: StoreSearchInput.kt */
-    /* renamed from: com.discord.stores.StoreSearchInput$2 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreSearchInput$2 */
+    /* JADX INFO: compiled from: StoreSearchInput.kt */
     public static final class C63892 extends Lambda implements Function1<Boolean, Unit> {
         public C63892() {
             super(1);
@@ -94,7 +94,7 @@ public final class StoreSearchInput {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Boolean bool) {
             StoreSearchInput.access$isInputValidSubject$p(StoreSearchInput.this).f27653k.onNext(bool);
         }
@@ -114,8 +114,8 @@ public final class StoreSearchInput {
         }
     }
 
-    /* compiled from: StoreSearchInput.kt */
-    /* renamed from: com.discord.stores.StoreSearchInput$init$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreSearchInput$init$1 */
+    /* JADX INFO: compiled from: StoreSearchInput.kt */
     public static final class C63901<T, R> implements Func1<String, List<QueryNode>> {
         public final /* synthetic */ QueryParser $queryParser;
 
@@ -128,7 +128,7 @@ public final class StoreSearchInput {
             return call2(str);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final List<QueryNode> call2(String str) {
             QueryParser queryParser = this.$queryParser;
             Intrinsics3.checkNotNullExpressionValue(str, "it");
@@ -136,8 +136,8 @@ public final class StoreSearchInput {
         }
     }
 
-    /* compiled from: StoreSearchInput.kt */
-    /* renamed from: com.discord.stores.StoreSearchInput$init$2 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreSearchInput$init$2 */
+    /* JADX INFO: compiled from: StoreSearchInput.kt */
     public static final /* synthetic */ class C63912 extends FunctionReferenceImpl implements Function1<Subscription, Unit> {
         public C63912(StoreSearchInput storeSearchInput) {
             super(1, storeSearchInput, StoreSearchInput.class, "handleInputSubscription", "handleInputSubscription(Lrx/Subscription;)V", 0);
@@ -149,14 +149,14 @@ public final class StoreSearchInput {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Subscription subscription) {
             StoreSearchInput.access$handleInputSubscription((StoreSearchInput) this.receiver, subscription);
         }
     }
 
-    /* compiled from: StoreSearchInput.kt */
-    /* renamed from: com.discord.stores.StoreSearchInput$init$3 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreSearchInput$init$3 */
+    /* JADX INFO: compiled from: StoreSearchInput.kt */
     public static final /* synthetic */ class C63923 extends FunctionReferenceImpl implements Function1<List<? extends QueryNode>, Unit> {
         public C63923(SerializedSubject serializedSubject) {
             super(1, serializedSubject, SerializedSubject.class, "onNext", "onNext(Ljava/lang/Object;)V", 0);
@@ -168,7 +168,7 @@ public final class StoreSearchInput {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(List<? extends QueryNode> list) {
             ((SerializedSubject) this.receiver).f27653k.onNext(list);
         }

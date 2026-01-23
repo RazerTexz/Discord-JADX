@@ -3,8 +3,8 @@ package com.discord.models.gifpicker.dto;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: TrendingGifPreviewDto.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: TrendingGifPreviewDto.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class TrendingGifPreviewDto {
     private final String src;
 
@@ -20,7 +20,7 @@ public final /* data */ class TrendingGifPreviewDto {
         return trendingGifPreviewDto.copy(str);
     }
 
-    /* renamed from: component1, reason: from getter */
+    /* JADX INFO: renamed from: component1, reason: from getter */
     public final String getSrc() {
         return this.src;
     }

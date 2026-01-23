@@ -7,7 +7,7 @@ import androidx.annotation.Nullable;
 import java.util.HashMap;
 import java.util.Map;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public class MediaCodecUtils {
     public static final String EXYNOS_PREFIX = "OMX.Exynos.";
     public static final String INTEL_PREFIX = "OMX.Intel.";
@@ -23,7 +23,7 @@ public class MediaCodecUtils {
     public static final int[] ENCODER_COLOR_FORMATS = {19, 21, 2141391872, COLOR_QCOM_FORMATYUV420PackedSemiPlanar32m};
     public static final int[] TEXTURE_COLOR_FORMATS = getTextureColorFormats();
 
-    /* renamed from: org.webrtc.MediaCodecUtils$1 */
+    /* JADX INFO: renamed from: org.webrtc.MediaCodecUtils$1 */
     public static /* synthetic */ class C129721 {
         public static final /* synthetic */ int[] $SwitchMap$org$webrtc$VideoCodecMimeType;
 

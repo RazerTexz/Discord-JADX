@@ -8,8 +8,8 @@ import androidx.annotation.RestrictTo;
 import androidx.core.util.Preconditions;
 import java.util.Iterator;
 
+/* JADX INFO: loaded from: classes.dex */
 @RestrictTo({RestrictTo.Scope.LIBRARY})
-/* loaded from: classes.dex */
 public class GpsStatusWrapper extends GnssStatusCompat {
     private static final int BEIDOU_PRN_COUNT = 35;
     private static final int BEIDOU_PRN_OFFSET = 200;

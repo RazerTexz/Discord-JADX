@@ -20,11 +20,11 @@ import kotlin.jvm.functions.Function1;
 import p007b.p008a.p025i.ViewGuildBoostConfirmationBinding;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: GuildBoostConfirmationView.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: GuildBoostConfirmationView.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class GuildBoostConfirmationView extends CardView {
 
-    /* renamed from: j, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: j, reason: from kotlin metadata */
     public final ViewGuildBoostConfirmationBinding binding;
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -59,7 +59,7 @@ public final class GuildBoostConfirmationView extends CardView {
         throw new NullPointerException("Missing required view with ID: ".concat(getResources().getResourceName(i)));
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final void m8592b(Guild guild, int netNewSubscriptions) {
         Intrinsics3.checkNotNullParameter(guild, "guild");
         int boostTier$default = GuildBoostUtils.getBoostTier$default(GuildBoostUtils.INSTANCE, guild.getId(), guild.getPremiumSubscriptionCount() + netNewSubscriptions, null, null, 12, null);
@@ -97,7 +97,7 @@ public final class GuildBoostConfirmationView extends CardView {
         chip5.setText(m8594d(boostTier$default));
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final int m8593c(int boostTier) {
         if (boostTier == 0) {
             return C5419R.drawable.ic_guild_nitro_progress_banner;
@@ -120,7 +120,7 @@ public final class GuildBoostConfirmationView extends CardView {
         return DrawableCompat.getThemedDrawableRes$default(context3, C5419R.attr.guild_boost_badge_tier_3, 0, 2, (Object) null);
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final String m8594d(int boostTier) {
         String string = boostTier != 0 ? boostTier != 1 ? boostTier != 2 ? boostTier != 3 ? "" : getContext().getString(C5419R.string.premium_guild_tier_3) : getContext().getString(C5419R.string.premium_guild_tier_2) : getContext().getString(C5419R.string.premium_guild_tier_1) : getContext().getString(C5419R.string.premium_guild_header_badge_no_tier);
         Intrinsics3.checkNotNullExpressionValue(string, "when (boostTier) {\n     …       else -> \"\"\n      }");

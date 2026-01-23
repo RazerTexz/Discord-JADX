@@ -17,54 +17,54 @@ import java.util.Collections;
 import java.util.List;
 import p007b.p100d.p104b.p105a.outline;
 
-/* compiled from: FlexboxHelper.java */
-/* renamed from: b.i.a.e.c, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.e.c, reason: use source file name */
+/* JADX INFO: compiled from: FlexboxHelper.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class FlexboxHelper {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final FlexContainer f9181a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public boolean[] f9182b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     @Nullable
     public int[] f9183c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     @Nullable
     public long[] f9184d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     @Nullable
     public long[] f9185e;
 
-    /* compiled from: FlexboxHelper.java */
-    /* renamed from: b.i.a.e.c$b */
+    /* JADX INFO: renamed from: b.i.a.e.c$b */
+    /* JADX INFO: compiled from: FlexboxHelper.java */
     public static class b {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public List<FlexLine> f9186a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public int f9187b;
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public void m3964a() {
             this.f9186a = null;
             this.f9187b = 0;
         }
     }
 
-    /* compiled from: FlexboxHelper.java */
-    /* renamed from: b.i.a.e.c$c */
+    /* JADX INFO: renamed from: b.i.a.e.c$c */
+    /* JADX INFO: compiled from: FlexboxHelper.java */
     public static class c implements Comparable<c> {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public int f9188j;
 
-        /* renamed from: k */
+        /* JADX INFO: renamed from: k */
         public int f9189k;
 
         public c() {
@@ -94,7 +94,7 @@ public class FlexboxHelper {
         this.f9181a = flexContainer;
     }
 
-    /* renamed from: A */
+    /* JADX INFO: renamed from: A */
     public void m3936A(int i) {
         View viewMo3926c;
         if (i >= this.f9181a.getFlexItemCount()) {
@@ -142,19 +142,19 @@ public class FlexboxHelper {
         }
     }
 
-    /* renamed from: B */
+    /* JADX INFO: renamed from: B */
     public final void m3937B(int i, int i2, int i3, View view) {
         long[] jArr = this.f9184d;
         if (jArr != null) {
-            jArr[i] = (i2 & 4294967295L) | (i3 << 32);
+            jArr[i] = (((long) i2) & 4294967295L) | (((long) i3) << 32);
         }
         long[] jArr2 = this.f9185e;
         if (jArr2 != null) {
-            jArr2[i] = (view.getMeasuredWidth() & 4294967295L) | (view.getMeasuredHeight() << 32);
+            jArr2[i] = (((long) view.getMeasuredWidth()) & 4294967295L) | (((long) view.getMeasuredHeight()) << 32);
         }
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final void m3938a(List<FlexLine> list, FlexLine flexLine, int i, int i2) {
         flexLine.f9175m = i2;
         this.f9181a.mo3925b(flexLine);
@@ -177,7 +177,7 @@ public class FlexboxHelper {
     /* JADX WARN: Removed duplicated region for block: B:137:0x039f  */
     /* JADX WARN: Removed duplicated region for block: B:146:0x03c5 A[ADDED_TO_REGION] */
     /* JADX WARN: Removed duplicated region for block: B:91:0x0233  */
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
@@ -578,7 +578,7 @@ public class FlexboxHelper {
     /* JADX WARN: Removed duplicated region for block: B:13:0x0032  */
     /* JADX WARN: Removed duplicated region for block: B:18:0x0040  */
     /* JADX WARN: Removed duplicated region for block: B:20:? A[RETURN, SYNTHETIC] */
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
@@ -619,7 +619,7 @@ public class FlexboxHelper {
         }
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public void m3941d(List<FlexLine> list, int i) {
         int i2 = this.f9183c[i];
         if (i2 == -1) {
@@ -644,7 +644,7 @@ public class FlexboxHelper {
         }
     }
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final List<FlexLine> m3942e(List<FlexLine> list, int i, int i2) {
         int i3 = (i - i2) / 2;
         ArrayList arrayList = new ArrayList();
@@ -664,7 +664,7 @@ public class FlexboxHelper {
     }
 
     @NonNull
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final List<c> m3943f(int i) {
         ArrayList arrayList = new ArrayList(i);
         for (int i2 = 0; i2 < i; i2++) {
@@ -677,7 +677,7 @@ public class FlexboxHelper {
         return arrayList;
     }
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public void m3944g(int i, int i2, int i3) {
         int mode;
         int size;
@@ -796,7 +796,7 @@ public class FlexboxHelper {
         }
     }
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public void m3945h(int i, int i2, int i3) {
         int size;
         int paddingLeft;
@@ -858,7 +858,7 @@ public class FlexboxHelper {
         }
     }
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public void m3946i(int i) {
         int[] iArr = this.f9183c;
         if (iArr == null) {
@@ -875,7 +875,7 @@ public class FlexboxHelper {
         }
     }
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public void m3947j(int i) {
         long[] jArr = this.f9184d;
         if (jArr == null) {
@@ -892,7 +892,7 @@ public class FlexboxHelper {
         }
     }
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public void m3948k(int i) {
         long[] jArr = this.f9185e;
         if (jArr == null) {
@@ -909,7 +909,7 @@ public class FlexboxHelper {
         }
     }
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final void m3949l(int i, int i2, FlexLine flexLine, int i3, int i4, boolean z2) {
         int i5;
         int i6;
@@ -1061,12 +1061,12 @@ public class FlexboxHelper {
         m3949l(i, i2, flexLine, i3, i4, true);
     }
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public int m3950m(long j) {
         return (int) (j >> 32);
     }
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public final int m3951n(int i, FlexItem flexItem, int i2) {
         FlexContainer flexContainer = this.f9181a;
         int iMo3931h = flexContainer.mo3931h(i, flexItem.mo8957I() + flexItem.mo8959N() + this.f9181a.getPaddingBottom() + flexContainer.getPaddingTop() + i2, flexItem.getHeight());
@@ -1074,7 +1074,7 @@ public class FlexboxHelper {
         return size > flexItem.mo8966m0() ? View.MeasureSpec.makeMeasureSpec(flexItem.mo8966m0(), View.MeasureSpec.getMode(iMo3931h)) : size < flexItem.mo8964f0() ? View.MeasureSpec.makeMeasureSpec(flexItem.mo8964f0(), View.MeasureSpec.getMode(iMo3931h)) : iMo3931h;
     }
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public final int m3952o(int i, FlexItem flexItem, int i2) {
         FlexContainer flexContainer = this.f9181a;
         int iMo3927d = flexContainer.mo3927d(i, flexItem.mo8963d0() + flexItem.mo8958J() + this.f9181a.getPaddingRight() + flexContainer.getPaddingLeft() + i2, flexItem.getWidth());
@@ -1082,32 +1082,32 @@ public class FlexboxHelper {
         return size > flexItem.mo8967t0() ? View.MeasureSpec.makeMeasureSpec(flexItem.mo8967t0(), View.MeasureSpec.getMode(iMo3927d)) : size < flexItem.mo8955D() ? View.MeasureSpec.makeMeasureSpec(flexItem.mo8955D(), View.MeasureSpec.getMode(iMo3927d)) : iMo3927d;
     }
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public final int m3953p(FlexItem flexItem, boolean z2) {
         return z2 ? flexItem.mo8957I() : flexItem.mo8963d0();
     }
 
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     public final int m3954q(FlexItem flexItem, boolean z2) {
         return z2 ? flexItem.mo8963d0() : flexItem.mo8957I();
     }
 
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     public final int m3955r(FlexItem flexItem, boolean z2) {
         return z2 ? flexItem.mo8959N() : flexItem.mo8958J();
     }
 
-    /* renamed from: s */
+    /* JADX INFO: renamed from: s */
     public final int m3956s(FlexItem flexItem, boolean z2) {
         return z2 ? flexItem.mo8958J() : flexItem.mo8959N();
     }
 
-    /* renamed from: t */
+    /* JADX INFO: renamed from: t */
     public final boolean m3957t(int i, int i2, FlexLine flexLine) {
         return i == i2 - 1 && flexLine.m3934a() != 0;
     }
 
-    /* renamed from: u */
+    /* JADX INFO: renamed from: u */
     public void m3958u(View view, FlexLine flexLine, int i, int i2, int i3, int i4) {
         FlexItem flexItem = (FlexItem) view.getLayoutParams();
         int alignItems = this.f9181a.getAlignItems();
@@ -1159,7 +1159,7 @@ public class FlexboxHelper {
         }
     }
 
-    /* renamed from: v */
+    /* JADX INFO: renamed from: v */
     public void m3959v(View view, FlexLine flexLine, boolean z2, int i, int i2, int i3, int i4) {
         FlexItem flexItem = (FlexItem) view.getLayoutParams();
         int alignItems = this.f9181a.getAlignItems();
@@ -1198,7 +1198,7 @@ public class FlexboxHelper {
         }
     }
 
-    /* renamed from: w */
+    /* JADX INFO: renamed from: w */
     public final void m3960w(int i, int i2, FlexLine flexLine, int i3, int i4, boolean z2) {
         int i5;
         int i6;
@@ -1351,7 +1351,7 @@ public class FlexboxHelper {
         m3960w(i, i2, flexLine, i3, i4, true);
     }
 
-    /* renamed from: x */
+    /* JADX INFO: renamed from: x */
     public final int[] m3961x(int i, List<c> list, SparseIntArray sparseIntArray) {
         Collections.sort(list);
         sparseIntArray.clear();
@@ -1366,7 +1366,7 @@ public class FlexboxHelper {
         return iArr;
     }
 
-    /* renamed from: y */
+    /* JADX INFO: renamed from: y */
     public final void m3962y(View view, int i, int i2) {
         FlexItem flexItem = (FlexItem) view.getLayoutParams();
         int iMin = Math.min(Math.max(((i - flexItem.mo8958J()) - flexItem.mo8963d0()) - this.f9181a.mo3933j(view), flexItem.mo8955D()), flexItem.mo8967t0());
@@ -1378,7 +1378,7 @@ public class FlexboxHelper {
         this.f9181a.mo3928e(i2, view);
     }
 
-    /* renamed from: z */
+    /* JADX INFO: renamed from: z */
     public final void m3963z(View view, int i, int i2) {
         FlexItem flexItem = (FlexItem) view.getLayoutParams();
         int iMin = Math.min(Math.max(((i - flexItem.mo8959N()) - flexItem.mo8957I()) - this.f9181a.mo3933j(view), flexItem.mo8964f0()), flexItem.mo8966m0());

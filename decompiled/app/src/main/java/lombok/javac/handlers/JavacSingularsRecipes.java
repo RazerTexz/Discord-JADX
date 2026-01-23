@@ -27,18 +27,18 @@ import lombok.javac.JavacNode;
 import lombok.javac.JavacTreeMaker;
 import lombok.javac.handlers.HandleBuilder;
 
-/* loaded from: discord-126021.apk:lombok/javac/handlers/JavacSingularsRecipes.SCL.lombok */
+/* JADX INFO: loaded from: discord-126021.apk:lombok/javac/handlers/JavacSingularsRecipes.SCL.lombok */
 public class JavacSingularsRecipes {
     private static final JavacSingularsRecipes INSTANCE = new JavacSingularsRecipes();
     private final Map<String, JavacSingularizer> singularizers = new HashMap();
     private final TypeLibrary singularizableTypes = new TypeLibrary();
 
-    /* loaded from: discord-126021.apk:lombok/javac/handlers/JavacSingularsRecipes$ExpressionMaker.SCL.lombok */
+    /* JADX INFO: loaded from: discord-126021.apk:lombok/javac/handlers/JavacSingularsRecipes$ExpressionMaker.SCL.lombok */
     public interface ExpressionMaker {
         JCTree.JCExpression make();
     }
 
-    /* loaded from: discord-126021.apk:lombok/javac/handlers/JavacSingularsRecipes$StatementMaker.SCL.lombok */
+    /* JADX INFO: loaded from: discord-126021.apk:lombok/javac/handlers/JavacSingularsRecipes$StatementMaker.SCL.lombok */
     public interface StatementMaker {
         JCTree.JCStatement make();
     }
@@ -86,7 +86,7 @@ public class JavacSingularsRecipes {
         return useGuavaInstead ? singularizer.getGuavaInstead(node) : singularizer;
     }
 
-    /* loaded from: discord-126021.apk:lombok/javac/handlers/JavacSingularsRecipes$SingularData.SCL.lombok */
+    /* JADX INFO: loaded from: discord-126021.apk:lombok/javac/handlers/JavacSingularsRecipes$SingularData.SCL.lombok */
     public static final class SingularData {
         private final JavacNode annotation;
         private final Name singularName;
@@ -162,7 +162,7 @@ public class JavacSingularsRecipes {
         }
     }
 
-    /* loaded from: discord-126021.apk:lombok/javac/handlers/JavacSingularsRecipes$JavacSingularizer.SCL.lombok */
+    /* JADX INFO: loaded from: discord-126021.apk:lombok/javac/handlers/JavacSingularsRecipes$JavacSingularizer.SCL.lombok */
     public static abstract class JavacSingularizer {
         private static /* synthetic */ int[] $SWITCH_TABLE$lombok$core$AST$Kind;
 
@@ -300,8 +300,8 @@ public class JavacSingularsRecipes {
             generateMethods(job.checkerFramework, data, deprecate, job.builderType, job.source, job.oldFluent, returnTypeMaker, returnStatementMaker, job.accessInners);
         }
 
-        /* renamed from: lombok.javac.handlers.JavacSingularsRecipes$JavacSingularizer$1 */
-        /* loaded from: discord-126021.apk:lombok/javac/handlers/JavacSingularsRecipes$JavacSingularizer$1.SCL.lombok */
+        /* JADX INFO: renamed from: lombok.javac.handlers.JavacSingularsRecipes$JavacSingularizer$1 */
+        /* JADX INFO: loaded from: discord-126021.apk:lombok/javac/handlers/JavacSingularsRecipes$JavacSingularizer$1.SCL.lombok */
         class C129081 implements ExpressionMaker {
             private final /* synthetic */ HandleBuilder.BuilderJob val$job;
             private final /* synthetic */ JavacTreeMaker val$maker;
@@ -320,8 +320,8 @@ public class JavacSingularsRecipes {
             }
         }
 
-        /* renamed from: lombok.javac.handlers.JavacSingularsRecipes$JavacSingularizer$2 */
-        /* loaded from: discord-126021.apk:lombok/javac/handlers/JavacSingularsRecipes$JavacSingularizer$2.SCL.lombok */
+        /* JADX INFO: renamed from: lombok.javac.handlers.JavacSingularsRecipes$JavacSingularizer$2 */
+        /* JADX INFO: loaded from: discord-126021.apk:lombok/javac/handlers/JavacSingularsRecipes$JavacSingularizer$2.SCL.lombok */
         class C129092 implements StatementMaker {
             private final /* synthetic */ HandleBuilder.BuilderJob val$job;
             private final /* synthetic */ JavacTreeMaker val$maker;

@@ -6,19 +6,19 @@ import android.content.pm.ActivityInfo;
 import android.content.pm.PackageManager;
 import java.util.Objects;
 
-/* compiled from: com.google.android.gms:play-services-measurement-impl@@18.0.0 */
-/* renamed from: b.i.a.f.i.b.n4 */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.i.b.n4 */
+/* JADX INFO: compiled from: com.google.android.gms:play-services-measurement-impl@@18.0.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public final class C4125n4 {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final InterfaceC4158q4 f10990a;
 
     public C4125n4(InterfaceC4158q4 interfaceC4158q4) {
         this.f10990a = interfaceC4158q4;
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static boolean m5761a(Context context) {
         ActivityInfo receiverInfo;
         Objects.requireNonNull(context, "null reference");

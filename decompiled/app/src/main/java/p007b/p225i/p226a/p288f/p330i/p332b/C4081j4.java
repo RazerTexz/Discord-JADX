@@ -4,21 +4,21 @@ import android.content.SharedPreferences;
 import androidx.annotation.WorkerThread;
 import p007b.p085c.p086a.p087a0.AnimatableValueParser;
 
-/* compiled from: com.google.android.gms:play-services-measurement-impl@@18.0.0 */
-/* renamed from: b.i.a.f.i.b.j4 */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.i.b.j4 */
+/* JADX INFO: compiled from: com.google.android.gms:play-services-measurement-impl@@18.0.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public final class C4081j4 {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final String f10845a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public boolean f10846b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public String f10847c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final /* synthetic */ C4009d4 f10848d;
 
     public C4081j4(C4009d4 c4009d4, String str) {
@@ -28,7 +28,7 @@ public final class C4081j4 {
     }
 
     @WorkerThread
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final String m5694a() {
         if (!this.f10846b) {
             this.f10846b = true;
@@ -38,7 +38,7 @@ public final class C4081j4 {
     }
 
     @WorkerThread
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final void m5695b(String str) {
         SharedPreferences.Editor editorEdit = this.f10848d.m5579w().edit();
         editorEdit.putString(this.f10845a, str);

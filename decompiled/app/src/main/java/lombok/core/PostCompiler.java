@@ -9,7 +9,7 @@ import java.io.Writer;
 import java.util.Collections;
 import java.util.List;
 
-/* loaded from: discord-126021.apk:lombok/core/PostCompiler.SCL.lombok */
+/* JADX INFO: loaded from: discord-126021.apk:lombok/core/PostCompiler.SCL.lombok */
 public final class PostCompiler {
     private static List<PostCompilerTransformation> transformations;
 
@@ -51,8 +51,8 @@ public final class PostCompiler {
         }
     }
 
-    /* renamed from: lombok.core.PostCompiler$1 */
-    /* loaded from: discord-126021.apk:lombok/core/PostCompiler$1.SCL.lombok */
+    /* JADX INFO: renamed from: lombok.core.PostCompiler$1 */
+    /* JADX INFO: loaded from: discord-126021.apk:lombok/core/PostCompiler$1.SCL.lombok */
     class C128171 extends ByteArrayOutputStream {
         private final /* synthetic */ String val$fileName;
         private final /* synthetic */ DiagnosticsReceiver val$diagnostics;

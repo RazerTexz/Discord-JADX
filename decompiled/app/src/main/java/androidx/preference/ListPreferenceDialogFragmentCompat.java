@@ -5,7 +5,7 @@ import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class ListPreferenceDialogFragmentCompat extends PreferenceDialogFragmentCompat {
     private static final String SAVE_STATE_ENTRIES = "ListPreferenceDialogFragment.entries";
     private static final String SAVE_STATE_ENTRY_VALUES = "ListPreferenceDialogFragment.entryValues";
@@ -14,7 +14,7 @@ public class ListPreferenceDialogFragmentCompat extends PreferenceDialogFragment
     private CharSequence[] mEntries;
     private CharSequence[] mEntryValues;
 
-    /* renamed from: androidx.preference.ListPreferenceDialogFragmentCompat$1 */
+    /* JADX INFO: renamed from: androidx.preference.ListPreferenceDialogFragmentCompat$1 */
     public class DialogInterfaceOnClickListenerC05061 implements DialogInterface.OnClickListener {
         public DialogInterfaceOnClickListenerC05061() {
         }

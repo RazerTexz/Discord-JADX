@@ -4,9 +4,9 @@ import kotlin.Unit;
 import kotlin.jvm.functions.Function0;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: ObservationDeck.kt */
-/* renamed from: com.discord.stores.updates.ObservationDeck$Companion$ON_UPDATE_EMPTY$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.stores.updates.ObservationDeck$Companion$ON_UPDATE_EMPTY$1, reason: use source file name */
+/* JADX INFO: compiled from: ObservationDeck.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class ObservationDeck2 extends Lambda implements Function0<Unit> {
     public static final ObservationDeck2 INSTANCE = new ObservationDeck2();
 
@@ -20,7 +20,7 @@ public final class ObservationDeck2 extends Lambda implements Function0<Unit> {
         return Unit.f27425a;
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final void invoke2() {
     }
 }

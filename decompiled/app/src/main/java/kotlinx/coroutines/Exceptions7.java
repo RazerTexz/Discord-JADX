@@ -3,9 +3,9 @@ package kotlinx.coroutines;
 import java.util.concurrent.CancellationException;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: Exceptions.kt */
-/* renamed from: kotlinx.coroutines.JobCancellationException, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: kotlinx.coroutines.JobCancellationException, reason: use source file name */
+/* JADX INFO: compiled from: Exceptions.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class Exceptions7 extends CancellationException {
     public final Job job;
 

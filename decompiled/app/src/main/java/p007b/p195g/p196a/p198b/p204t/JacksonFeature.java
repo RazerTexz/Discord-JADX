@@ -1,12 +1,12 @@
 package p007b.p195g.p196a.p198b.p204t;
 
-/* compiled from: JacksonFeature.java */
-/* renamed from: b.g.a.b.t.g, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.g.a.b.t.g, reason: use source file name */
+/* JADX INFO: compiled from: JacksonFeature.java */
+/* JADX INFO: loaded from: classes3.dex */
 public interface JacksonFeature {
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     boolean mo1629f();
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     int mo1630g();
 }

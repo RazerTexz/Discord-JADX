@@ -4,9 +4,9 @@ import android.view.View;
 import com.discord.widgets.user.Badge;
 import com.discord.widgets.user.profile.UserProfileHeaderView;
 
-/* compiled from: UserProfileHeaderView.kt */
-/* renamed from: com.discord.widgets.user.profile.UserProfileHeaderView$BadgeViewHolder$bind$1, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: com.discord.widgets.user.profile.UserProfileHeaderView$BadgeViewHolder$bind$1, reason: use source file name */
+/* JADX INFO: compiled from: UserProfileHeaderView.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class UserProfileHeaderView2 implements View.OnClickListener {
     public final /* synthetic */ Badge $data;
     public final /* synthetic */ UserProfileHeaderView.BadgeViewHolder this$0;

@@ -3,8 +3,8 @@ package co.discord.media_engine.internal;
 import p001a0.p002a.p003a.C0002b;
 import p007b.p100d.p104b.p105a.outline;
 
-/* compiled from: NativeStatistics.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: NativeStatistics.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class InboundRtcpStats {
     private final long firPackets;
     private final long nackPackets;
@@ -24,27 +24,27 @@ public final /* data */ class InboundRtcpStats {
         return inboundRtcpStats.copy((i & 1) != 0 ? inboundRtcpStats.firPackets : j, (i & 2) != 0 ? inboundRtcpStats.nackPackets : j2, (i & 4) != 0 ? inboundRtcpStats.nackRequests : j3, (i & 8) != 0 ? inboundRtcpStats.pliPackets : j4, (i & 16) != 0 ? inboundRtcpStats.uniqueNackRequests : j5);
     }
 
-    /* renamed from: component1, reason: from getter */
+    /* JADX INFO: renamed from: component1, reason: from getter */
     public final long getFirPackets() {
         return this.firPackets;
     }
 
-    /* renamed from: component2, reason: from getter */
+    /* JADX INFO: renamed from: component2, reason: from getter */
     public final long getNackPackets() {
         return this.nackPackets;
     }
 
-    /* renamed from: component3, reason: from getter */
+    /* JADX INFO: renamed from: component3, reason: from getter */
     public final long getNackRequests() {
         return this.nackRequests;
     }
 
-    /* renamed from: component4, reason: from getter */
+    /* JADX INFO: renamed from: component4, reason: from getter */
     public final long getPliPackets() {
         return this.pliPackets;
     }
 
-    /* renamed from: component5, reason: from getter */
+    /* JADX INFO: renamed from: component5, reason: from getter */
     public final long getUniqueNackRequests() {
         return this.uniqueNackRequests;
     }

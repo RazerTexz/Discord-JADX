@@ -10,15 +10,15 @@ import p007b.p085c.p086a.p095y.CubicCurveData;
 import p007b.p085c.p086a.p095y.p097l.ShapeData;
 import p007b.p100d.p104b.p105a.outline;
 
-/* compiled from: ShapeKeyframeAnimation.java */
-/* renamed from: b.c.a.w.c.l, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.c.a.w.c.l, reason: use source file name */
+/* JADX INFO: compiled from: ShapeKeyframeAnimation.java */
+/* JADX INFO: loaded from: classes.dex */
 public class ShapeKeyframeAnimation extends BaseKeyframeAnimation<ShapeData, Path> {
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public final ShapeData f2622i;
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final Path f2623j;
 
     public ShapeKeyframeAnimation(List<Keyframe<ShapeData>> list) {
@@ -28,7 +28,7 @@ public class ShapeKeyframeAnimation extends BaseKeyframeAnimation<ShapeData, Pat
     }
 
     @Override // p007b.p085c.p086a.p091w.p093c.BaseKeyframeAnimation
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public Path mo728f(Keyframe<ShapeData> keyframe, float f) {
         ShapeData shapeData = keyframe.f2317b;
         ShapeData shapeData2 = keyframe.f2318c;

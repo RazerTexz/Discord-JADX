@@ -8,9 +8,9 @@ import p007b.p008a.p009a.p011a0.GiftPurchasedDialog;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: GiftPurchasedDialog.kt */
-/* renamed from: b.a.a.a0.b, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.a.a.a0.b, reason: use source file name */
+/* JADX INFO: compiled from: GiftPurchasedDialog.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class GiftPurchasedDialog2 extends Lambda implements Function1<View, Unit> {
     public final /* synthetic */ GiftPurchasedDialog.d this$0;
 

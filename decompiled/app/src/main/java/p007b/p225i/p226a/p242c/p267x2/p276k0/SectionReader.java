@@ -7,27 +7,27 @@ import p007b.p225i.p226a.p242c.p259f3.Util2;
 import p007b.p225i.p226a.p242c.p267x2.ExtractorOutput;
 import p007b.p225i.p226a.p242c.p267x2.p276k0.TsPayloadReader;
 
-/* compiled from: SectionReader.java */
-/* renamed from: b.i.a.c.x2.k0.d0, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.x2.k0.d0, reason: use source file name */
+/* JADX INFO: compiled from: SectionReader.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class SectionReader implements TsPayloadReader {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final SectionPayloadReader f8595a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final ParsableByteArray f8596b = new ParsableByteArray(32);
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public int f8597c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public int f8598d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public boolean f8599e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public boolean f8600f;
 
     public SectionReader(SectionPayloadReader sectionPayloadReader) {
@@ -35,14 +35,14 @@ public final class SectionReader implements TsPayloadReader {
     }
 
     @Override // p007b.p225i.p226a.p242c.p267x2.p276k0.TsPayloadReader
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public void mo3754a(TimestampAdjuster timestampAdjuster, ExtractorOutput extractorOutput, TsPayloadReader.d dVar) {
         this.f8595a.mo3752a(timestampAdjuster, extractorOutput, dVar);
         this.f8600f = true;
     }
 
     @Override // p007b.p225i.p226a.p242c.p267x2.p276k0.TsPayloadReader
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public void mo3755b(ParsableByteArray parsableByteArray, int i) {
         boolean z2 = (i & 1) != 0;
         int iM3100t = z2 ? parsableByteArray.f6794b + parsableByteArray.m3100t() : -1;
@@ -116,7 +116,7 @@ public final class SectionReader implements TsPayloadReader {
     }
 
     @Override // p007b.p225i.p226a.p242c.p267x2.p276k0.TsPayloadReader
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public void mo3756c() {
         this.f8600f = true;
     }

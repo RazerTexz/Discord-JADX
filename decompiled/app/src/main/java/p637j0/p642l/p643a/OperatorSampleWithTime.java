@@ -10,38 +10,38 @@ import p658rx.Subscriber;
 import p658rx.functions.Action0;
 import p658rx.observers.SerializedSubscriber;
 
-/* compiled from: OperatorSampleWithTime.java */
-/* renamed from: j0.l.a.n1, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: j0.l.a.n1, reason: use source file name */
+/* JADX INFO: compiled from: OperatorSampleWithTime.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class OperatorSampleWithTime<T> implements Observable.InterfaceC13006b<T, T> {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final long f26948j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final TimeUnit f26949k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final Scheduler f26950l;
 
-    /* compiled from: OperatorSampleWithTime.java */
-    /* renamed from: j0.l.a.n1$a */
+    /* JADX INFO: renamed from: j0.l.a.n1$a */
+    /* JADX INFO: compiled from: OperatorSampleWithTime.java */
     public static final class a<T> extends Subscriber<T> implements Action0 {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public static final Object f26951j = new Object();
 
-        /* renamed from: k */
+        /* JADX INFO: renamed from: k */
         public final Subscriber<? super T> f26952k;
 
-        /* renamed from: l */
+        /* JADX INFO: renamed from: l */
         public final AtomicReference<Object> f26953l = new AtomicReference<>(f26951j);
 
         public a(Subscriber<? super T> subscriber) {
             this.f26952k = subscriber;
         }
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final void m10775a() {
             AtomicReference<Object> atomicReference = this.f26953l;
             Object obj = f26951j;

@@ -6,9 +6,9 @@ import kotlin.jvm.functions.Function0;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: FragmentViewModelLazy.kt */
-/* renamed from: com.discord.widgets.chat.input.sticker.WidgetStickerPicker$appActivityViewModels$$inlined$activityViewModels$4 */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.chat.input.sticker.WidgetStickerPicker$appActivityViewModels$$inlined$activityViewModels$4 */
+/* JADX INFO: compiled from: FragmentViewModelLazy.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class C7909xc1478b29 extends Lambda implements Function0<ViewModelProvider.Factory> {
     public final /* synthetic */ Fragment $this_activityViewModels;
 

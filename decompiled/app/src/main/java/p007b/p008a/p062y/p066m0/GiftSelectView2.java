@@ -6,12 +6,12 @@ import com.discord.views.premium.GiftSelectView;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function1;
 
-/* compiled from: GiftSelectView.kt */
-/* renamed from: b.a.y.m0.a, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: b.a.y.m0.a, reason: use source file name */
+/* JADX INFO: compiled from: GiftSelectView.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class GiftSelectView2 implements View.OnClickListener {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final /* synthetic */ GiftSelectView f2049j;
 
     public GiftSelectView2(GiftSelectView giftSelectView) {

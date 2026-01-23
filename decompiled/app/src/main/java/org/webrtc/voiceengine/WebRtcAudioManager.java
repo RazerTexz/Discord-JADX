@@ -12,7 +12,7 @@ import org.webrtc.Logging;
 import org.webrtc.MediaStreamTrack;
 import p007b.p100d.p104b.p105a.outline;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public class WebRtcAudioManager {
     private static final int BITS_PER_SAMPLE = 16;
     private static final boolean DEBUG = false;

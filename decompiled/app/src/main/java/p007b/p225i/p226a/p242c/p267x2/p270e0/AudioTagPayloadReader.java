@@ -10,21 +10,21 @@ import p007b.p225i.p226a.p242c.p259f3.ParsableByteArray;
 import p007b.p225i.p226a.p242c.p263t2.AacUtil;
 import p007b.p225i.p226a.p242c.p267x2.TrackOutput2;
 
-/* compiled from: AudioTagPayloadReader.java */
-/* renamed from: b.i.a.c.x2.e0.b, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.x2.e0.b, reason: use source file name */
+/* JADX INFO: compiled from: AudioTagPayloadReader.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class AudioTagPayloadReader extends TagPayloadReader {
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static final int[] f8122b = {5512, 11025, 22050, 44100};
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public boolean f8123c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public boolean f8124d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public int f8125e;
 
     public AudioTagPayloadReader(TrackOutput2 trackOutput2) {
@@ -32,7 +32,7 @@ public final class AudioTagPayloadReader extends TagPayloadReader {
     }
 
     @Override // com.google.android.exoplayer2.extractor.flv.TagPayloadReader
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public boolean mo3657b(ParsableByteArray parsableByteArray) throws TagPayloadReader.UnsupportedFormatException {
         if (this.f8123c) {
             parsableByteArray.m3080F(1);
@@ -65,7 +65,7 @@ public final class AudioTagPayloadReader extends TagPayloadReader {
     }
 
     @Override // com.google.android.exoplayer2.extractor.flv.TagPayloadReader
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public boolean mo3658c(ParsableByteArray parsableByteArray, long j) throws ParserException {
         if (this.f8125e == 2) {
             int iM3081a = parsableByteArray.m3081a();

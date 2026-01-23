@@ -36,19 +36,19 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p658rx.Observable;
 import p658rx.functions.Action1;
 
-/* compiled from: WidgetSettingsAccessibility.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetSettingsAccessibility.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetSettingsAccessibility extends AppFragment {
     public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetSettingsAccessibility.class, "binding", "getBinding()Lcom/discord/databinding/WidgetSettingsAccessibilityBinding;", 0)};
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
 
-    /* renamed from: binding$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
     private RadioManager stickersAnimationRadioManager;
 
-    /* compiled from: WidgetSettingsAccessibility.kt */
+    /* JADX INFO: compiled from: WidgetSettingsAccessibility.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -63,17 +63,17 @@ public final class WidgetSettingsAccessibility extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetSettingsAccessibility.kt */
+    /* JADX INFO: compiled from: WidgetSettingsAccessibility.kt */
     public static final /* data */ class Model {
 
-        /* renamed from: Companion, reason: from kotlin metadata */
+        /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
         public static final Companion INSTANCE = new Companion(null);
         private final boolean allowAnimatedEmoji;
         private final boolean autoPlayGifs;
         private final int currentStickerAnimationSettings;
         private final boolean reducedMotionEnabled;
 
-        /* compiled from: WidgetSettingsAccessibility.kt */
+        /* JADX INFO: compiled from: WidgetSettingsAccessibility.kt */
         public static final class Companion {
             private Companion() {
             }
@@ -113,22 +113,22 @@ public final class WidgetSettingsAccessibility extends AppFragment {
             return model.copy(z2, z3, z4, i);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final boolean getReducedMotionEnabled() {
             return this.reducedMotionEnabled;
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final boolean getAllowAnimatedEmoji() {
             return this.allowAnimatedEmoji;
         }
 
-        /* renamed from: component3, reason: from getter */
+        /* JADX INFO: renamed from: component3, reason: from getter */
         public final boolean getAutoPlayGifs() {
             return this.autoPlayGifs;
         }
 
-        /* renamed from: component4, reason: from getter */
+        /* JADX INFO: renamed from: component4, reason: from getter */
         public final int getCurrentStickerAnimationSettings() {
             return this.currentStickerAnimationSettings;
         }
@@ -168,7 +168,12 @@ public final class WidgetSettingsAccessibility extends AppFragment {
         /* JADX WARN: Type inference failed for: r0v1, types: [int] */
         /* JADX WARN: Type inference failed for: r0v8 */
         /* JADX WARN: Type inference failed for: r0v9 */
-        /* JADX WARN: Type inference failed for: r2v0, types: [boolean] */
+        /* JADX WARN: Type inference failed for: r1v0 */
+        /* JADX WARN: Type inference failed for: r1v1, types: [int] */
+        /* JADX WARN: Type inference failed for: r1v3 */
+        /* JADX WARN: Type inference failed for: r2v1, types: [int] */
+        /* JADX WARN: Type inference failed for: r2v3 */
+        /* JADX WARN: Type inference failed for: r2v4 */
         public int hashCode() {
             boolean z2 = this.reducedMotionEnabled;
             ?? r0 = z2;
@@ -176,14 +181,14 @@ public final class WidgetSettingsAccessibility extends AppFragment {
                 r0 = 1;
             }
             int i = r0 * 31;
-            ?? r2 = this.allowAnimatedEmoji;
-            int i2 = r2;
-            if (r2 != 0) {
-                i2 = 1;
+            boolean z3 = this.allowAnimatedEmoji;
+            ?? r2 = z3;
+            if (z3) {
+                r2 = 1;
             }
-            int i3 = (i + i2) * 31;
-            boolean z3 = this.autoPlayGifs;
-            return ((i3 + (z3 ? 1 : z3 ? 1 : 0)) * 31) + this.currentStickerAnimationSettings;
+            int i2 = (i + r2) * 31;
+            boolean z4 = this.autoPlayGifs;
+            return ((i2 + (z4 ? 1 : z4)) * 31) + this.currentStickerAnimationSettings;
         }
 
         public String toString() {
@@ -198,8 +203,8 @@ public final class WidgetSettingsAccessibility extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetSettingsAccessibility.kt */
-    /* renamed from: com.discord.widgets.settings.WidgetSettingsAccessibility$configureStickerAnimationRadio$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.WidgetSettingsAccessibility$configureStickerAnimationRadio$1 */
+    /* JADX INFO: compiled from: WidgetSettingsAccessibility.kt */
     public static final class ViewOnClickListenerC96181 implements View.OnClickListener {
         public final /* synthetic */ int $stickerAnimationSetting;
 
@@ -213,8 +218,8 @@ public final class WidgetSettingsAccessibility extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetSettingsAccessibility.kt */
-    /* renamed from: com.discord.widgets.settings.WidgetSettingsAccessibility$configureUI$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.WidgetSettingsAccessibility$configureUI$1 */
+    /* JADX INFO: compiled from: WidgetSettingsAccessibility.kt */
     public static final class ViewOnClickListenerC96191 implements View.OnClickListener {
         public ViewOnClickListenerC96191() {
         }
@@ -227,8 +232,8 @@ public final class WidgetSettingsAccessibility extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetSettingsAccessibility.kt */
-    /* renamed from: com.discord.widgets.settings.WidgetSettingsAccessibility$configureUI$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.WidgetSettingsAccessibility$configureUI$2 */
+    /* JADX INFO: compiled from: WidgetSettingsAccessibility.kt */
     public static final class ViewOnClickListenerC96202 implements View.OnClickListener {
         public ViewOnClickListenerC96202() {
         }
@@ -241,8 +246,8 @@ public final class WidgetSettingsAccessibility extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetSettingsAccessibility.kt */
-    /* renamed from: com.discord.widgets.settings.WidgetSettingsAccessibility$onViewBoundOrOnResume$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.WidgetSettingsAccessibility$onViewBoundOrOnResume$1 */
+    /* JADX INFO: compiled from: WidgetSettingsAccessibility.kt */
     public static final /* synthetic */ class C96211 extends FunctionReferenceImpl implements Function1<Model, Unit> {
         public C96211(WidgetSettingsAccessibility widgetSettingsAccessibility) {
             super(1, widgetSettingsAccessibility, WidgetSettingsAccessibility.class, "configureUI", "configureUI(Lcom/discord/widgets/settings/WidgetSettingsAccessibility$Model;)V", 0);
@@ -254,15 +259,15 @@ public final class WidgetSettingsAccessibility extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Model model) {
             Intrinsics3.checkNotNullParameter(model, "p1");
             WidgetSettingsAccessibility.access$configureUI((WidgetSettingsAccessibility) this.receiver, model);
         }
     }
 
-    /* compiled from: WidgetSettingsAccessibility.kt */
-    /* renamed from: com.discord.widgets.settings.WidgetSettingsAccessibility$onViewBoundOrOnResume$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.WidgetSettingsAccessibility$onViewBoundOrOnResume$2 */
+    /* JADX INFO: compiled from: WidgetSettingsAccessibility.kt */
     public static final class C96222<T> implements Action1<Boolean> {
         public static final C96222 INSTANCE = new C96222();
 
@@ -271,7 +276,7 @@ public final class WidgetSettingsAccessibility extends AppFragment {
             call2(bool);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final void call2(Boolean bool) {
             StoreAccessibility accessibility = StoreStream.INSTANCE.getAccessibility();
             Intrinsics3.checkNotNullExpressionValue(bool, "it");
@@ -279,8 +284,8 @@ public final class WidgetSettingsAccessibility extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetSettingsAccessibility.kt */
-    /* renamed from: com.discord.widgets.settings.WidgetSettingsAccessibility$onViewBoundOrOnResume$3 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.WidgetSettingsAccessibility$onViewBoundOrOnResume$3 */
+    /* JADX INFO: compiled from: WidgetSettingsAccessibility.kt */
     public static final class C96233<T> implements Action1<Boolean> {
         public C96233() {
         }
@@ -290,7 +295,7 @@ public final class WidgetSettingsAccessibility extends AppFragment {
             call2(bool);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final void call2(Boolean bool) {
             StoreUserSettings userSettings = StoreStream.INSTANCE.getUserSettings();
             AppActivity appActivity = WidgetSettingsAccessibility.this.getAppActivity();
@@ -299,8 +304,8 @@ public final class WidgetSettingsAccessibility extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetSettingsAccessibility.kt */
-    /* renamed from: com.discord.widgets.settings.WidgetSettingsAccessibility$onViewBoundOrOnResume$4 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.WidgetSettingsAccessibility$onViewBoundOrOnResume$4 */
+    /* JADX INFO: compiled from: WidgetSettingsAccessibility.kt */
     public static final class C96244<T> implements Action1<Boolean> {
         public static final C96244 INSTANCE = new C96244();
 
@@ -309,7 +314,7 @@ public final class WidgetSettingsAccessibility extends AppFragment {
             call2(bool);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final void call2(Boolean bool) {
             StoreUserSettings userSettings = StoreStream.INSTANCE.getUserSettings();
             Intrinsics3.checkNotNullExpressionValue(bool, "checked");

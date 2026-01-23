@@ -9,9 +9,9 @@ import kotlin.jvm.functions.Function1;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: SendUtils.kt */
-/* renamed from: com.discord.utilities.rest.SendUtils$getSendCommandPayload$attachmentCorrectedMessage$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.utilities.rest.SendUtils$getSendCommandPayload$attachmentCorrectedMessage$1, reason: use source file name */
+/* JADX INFO: compiled from: SendUtils.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class SendUtils4 extends Lambda implements Function1<ApplicationCommandValue, ApplicationCommandValue> {
     public final /* synthetic */ List $fileAttachments;
 
@@ -26,7 +26,7 @@ public final class SendUtils4 extends Lambda implements Function1<ApplicationCom
         return invoke2(applicationCommandValue);
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final ApplicationCommandValue invoke2(ApplicationCommandValue applicationCommandValue) {
         Intrinsics3.checkNotNullParameter(applicationCommandValue, "value");
         if (applicationCommandValue.getType() != ApplicationCommandType.ATTACHMENT.getType()) {

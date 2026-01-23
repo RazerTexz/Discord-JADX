@@ -5,21 +5,21 @@ import com.google.android.gms.tasks.Task;
 import java.util.ArrayDeque;
 import java.util.Queue;
 
-/* compiled from: com.google.android.gms:play-services-tasks@@17.2.1 */
-/* renamed from: b.i.a.f.n.z */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.n.z */
+/* JADX INFO: compiled from: com.google.android.gms:play-services-tasks@@17.2.1 */
+/* JADX INFO: loaded from: classes3.dex */
 public final class C4382z<TResult> {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final Object f11524a = new Object();
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public Queue<InterfaceC4381y<TResult>> f11525b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public boolean f11526c;
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final void m6031a(@NonNull InterfaceC4381y<TResult> interfaceC4381y) {
         synchronized (this.f11524a) {
             if (this.f11525b == null) {
@@ -29,7 +29,7 @@ public final class C4382z<TResult> {
         }
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final void m6032b(@NonNull Task<TResult> task) {
         InterfaceC4381y<TResult> interfaceC4381yPoll;
         synchronized (this.f11524a) {

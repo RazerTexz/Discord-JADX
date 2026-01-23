@@ -9,13 +9,13 @@ import androidx.annotation.RestrictTo;
 import androidx.work.Logger;
 import androidx.work.impl.utils.taskexecutor.TaskExecutor;
 
+/* JADX INFO: loaded from: classes.dex */
 @RestrictTo({RestrictTo.Scope.LIBRARY_GROUP})
-/* loaded from: classes.dex */
 public abstract class BroadcastReceiverConstraintTracker<T> extends ConstraintTracker<T> {
     private static final String TAG = Logger.tagWithPrefix("BrdcstRcvrCnstrntTrckr");
     private final BroadcastReceiver mBroadcastReceiver;
 
-    /* renamed from: androidx.work.impl.constraints.trackers.BroadcastReceiverConstraintTracker$1 */
+    /* JADX INFO: renamed from: androidx.work.impl.constraints.trackers.BroadcastReceiverConstraintTracker$1 */
     public class C07391 extends BroadcastReceiver {
         public C07391() {
         }

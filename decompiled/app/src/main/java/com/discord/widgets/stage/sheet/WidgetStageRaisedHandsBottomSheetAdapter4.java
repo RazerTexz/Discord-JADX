@@ -4,9 +4,9 @@ import android.view.View;
 import com.discord.stores.StoreVoiceParticipants;
 import com.discord.widgets.stage.sheet.WidgetStageRaisedHandsBottomSheetAdapter;
 
-/* compiled from: WidgetStageRaisedHandsBottomSheetAdapter.kt */
-/* renamed from: com.discord.widgets.stage.sheet.WidgetStageRaisedHandsBottomSheetAdapter$ViewHolderParticipant$onConfigure$3, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.stage.sheet.WidgetStageRaisedHandsBottomSheetAdapter$ViewHolderParticipant$onConfigure$3, reason: use source file name */
+/* JADX INFO: compiled from: WidgetStageRaisedHandsBottomSheetAdapter.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetStageRaisedHandsBottomSheetAdapter4 implements View.OnClickListener {
     public final /* synthetic */ StoreVoiceParticipants.VoiceUser $participant;
     public final /* synthetic */ WidgetStageRaisedHandsBottomSheetAdapter.ViewHolderParticipant this$0;

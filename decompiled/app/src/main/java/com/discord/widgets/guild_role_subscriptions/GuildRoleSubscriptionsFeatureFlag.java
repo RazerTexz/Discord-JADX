@@ -21,11 +21,11 @@ import p507d0.p592z.p594d.Lambda;
 import p637j0.p642l.p647e.ScalarSynchronousObservable;
 import p658rx.Observable;
 
-/* compiled from: GuildRoleSubscriptionsFeatureFlag.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: GuildRoleSubscriptionsFeatureFlag.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class GuildRoleSubscriptionsFeatureFlag {
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private static final Lazy INSTANCE$delegate = LazyJVM.lazy(GuildRoleSubscriptionsFeatureFlag2.INSTANCE);
     private final ObservationDeck observationDeck;
@@ -34,7 +34,7 @@ public final class GuildRoleSubscriptionsFeatureFlag {
     private final StorePermissions storePermissions;
     private final StoreUser storeUser;
 
-    /* compiled from: GuildRoleSubscriptionsFeatureFlag.kt */
+    /* JADX INFO: compiled from: GuildRoleSubscriptionsFeatureFlag.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -58,8 +58,8 @@ public final class GuildRoleSubscriptionsFeatureFlag {
         }
     }
 
-    /* compiled from: GuildRoleSubscriptionsFeatureFlag.kt */
-    /* renamed from: com.discord.widgets.guild_role_subscriptions.GuildRoleSubscriptionsFeatureFlag$observeCanGuildSeeGuildRoleSubscriptions$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.guild_role_subscriptions.GuildRoleSubscriptionsFeatureFlag$observeCanGuildSeeGuildRoleSubscriptions$1 */
+    /* JADX INFO: compiled from: GuildRoleSubscriptionsFeatureFlag.kt */
     public static final class C84311 extends Lambda implements Function0<Boolean> {
         public final /* synthetic */ long $guildId;
 
@@ -74,14 +74,14 @@ public final class GuildRoleSubscriptionsFeatureFlag {
             return Boolean.valueOf(invoke2());
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final boolean invoke2() {
             return GuildRoleSubscriptionsFeatureFlag.this.canGuildSeePremiumMemberships(this.$guildId);
         }
     }
 
-    /* compiled from: GuildRoleSubscriptionsFeatureFlag.kt */
-    /* renamed from: com.discord.widgets.guild_role_subscriptions.GuildRoleSubscriptionsFeatureFlag$observeCanGuildSeeGuildRoleSubscriptionsSettings$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.guild_role_subscriptions.GuildRoleSubscriptionsFeatureFlag$observeCanGuildSeeGuildRoleSubscriptionsSettings$1 */
+    /* JADX INFO: compiled from: GuildRoleSubscriptionsFeatureFlag.kt */
     public static final class C84321 extends Lambda implements Function0<Boolean> {
         public final /* synthetic */ long $guildId;
 
@@ -96,14 +96,14 @@ public final class GuildRoleSubscriptionsFeatureFlag {
             return Boolean.valueOf(invoke2());
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final boolean invoke2() {
             return GuildRoleSubscriptionsFeatureFlag.canGuildSeeGuildRoleSubscriptionSettings$default(GuildRoleSubscriptionsFeatureFlag.this, this.$guildId, null, 2, null);
         }
     }
 
-    /* compiled from: GuildRoleSubscriptionsFeatureFlag.kt */
-    /* renamed from: com.discord.widgets.guild_role_subscriptions.GuildRoleSubscriptionsFeatureFlag$observeCanGuildSeePurchaseFeedbackLoopSystemMessages$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.guild_role_subscriptions.GuildRoleSubscriptionsFeatureFlag$observeCanGuildSeePurchaseFeedbackLoopSystemMessages$1 */
+    /* JADX INFO: compiled from: GuildRoleSubscriptionsFeatureFlag.kt */
     public static final class C84331 extends Lambda implements Function0<Boolean> {
         public final /* synthetic */ Long $guildId;
 
@@ -118,14 +118,14 @@ public final class GuildRoleSubscriptionsFeatureFlag {
             return Boolean.valueOf(invoke2());
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final boolean invoke2() {
             return GuildRoleSubscriptionsFeatureFlag.this.canGuildSeePurchaseFeedbackLoopMessages(this.$guildId.longValue());
         }
     }
 
-    /* compiled from: GuildRoleSubscriptionsFeatureFlag.kt */
-    /* renamed from: com.discord.widgets.guild_role_subscriptions.GuildRoleSubscriptionsFeatureFlag$observeIsGuildEligibleForGuildRoleSubscriptionFreeTrials$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.guild_role_subscriptions.GuildRoleSubscriptionsFeatureFlag$observeIsGuildEligibleForGuildRoleSubscriptionFreeTrials$1 */
+    /* JADX INFO: compiled from: GuildRoleSubscriptionsFeatureFlag.kt */
     public static final class C84341 extends Lambda implements Function0<Boolean> {
         public final /* synthetic */ long $guildId;
 
@@ -140,7 +140,7 @@ public final class GuildRoleSubscriptionsFeatureFlag {
             return Boolean.valueOf(invoke2());
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final boolean invoke2() {
             return GuildRoleSubscriptionsFeatureFlag.this.isGuildEligibleForGuildRoleSubscriptionTrials(this.$guildId);
         }

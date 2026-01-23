@@ -5,8 +5,8 @@ import com.discord.widgets.channels.list.WidgetChannelListUnreads;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ChannelListItemTextChannel.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: ChannelListItemTextChannel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final /* data */ class ChannelListItemTextChannel implements ChannelListItem, WidgetChannelListUnreads.UnreadItem {
     private final Channel channel;
     private final boolean hasActiveThreads;
@@ -41,12 +41,12 @@ public final /* data */ class ChannelListItemTextChannel implements ChannelListI
         return channelListItemTextChannel.copy((i2 & 1) != 0 ? channelListItemTextChannel.channel : channel, (i2 & 2) != 0 ? channelListItemTextChannel.selected : z2, (i2 & 4) != 0 ? channelListItemTextChannel.getMentionCount() : i, (i2 & 8) != 0 ? channelListItemTextChannel.getIsUnread() : z3, (i2 & 16) != 0 ? channelListItemTextChannel.muted : z4, (i2 & 32) != 0 ? channelListItemTextChannel.isLocked : z5, (i2 & 64) != 0 ? channelListItemTextChannel.hasActiveThreads : z6, (i2 & 128) != 0 ? channelListItemTextChannel.isGuildRoleSubscriptionLockedChannel : z7, (i2 & 256) != 0 ? channelListItemTextChannel.isGuildRoleSubscriptionChannel : z8);
     }
 
-    /* renamed from: component1, reason: from getter */
+    /* JADX INFO: renamed from: component1, reason: from getter */
     public final Channel getChannel() {
         return this.channel;
     }
 
-    /* renamed from: component2, reason: from getter */
+    /* JADX INFO: renamed from: component2, reason: from getter */
     public final boolean getSelected() {
         return this.selected;
     }
@@ -59,27 +59,27 @@ public final /* data */ class ChannelListItemTextChannel implements ChannelListI
         return getIsUnread();
     }
 
-    /* renamed from: component5, reason: from getter */
+    /* JADX INFO: renamed from: component5, reason: from getter */
     public final boolean getMuted() {
         return this.muted;
     }
 
-    /* renamed from: component6, reason: from getter */
+    /* JADX INFO: renamed from: component6, reason: from getter */
     public final boolean getIsLocked() {
         return this.isLocked;
     }
 
-    /* renamed from: component7, reason: from getter */
+    /* JADX INFO: renamed from: component7, reason: from getter */
     public final boolean getHasActiveThreads() {
         return this.hasActiveThreads;
     }
 
-    /* renamed from: component8, reason: from getter */
+    /* JADX INFO: renamed from: component8, reason: from getter */
     public final boolean getIsGuildRoleSubscriptionLockedChannel() {
         return this.isGuildRoleSubscriptionLockedChannel;
     }
 
-    /* renamed from: component9, reason: from getter */
+    /* JADX INFO: renamed from: component9, reason: from getter */
     public final boolean getIsGuildRoleSubscriptionChannel() {
         return this.isGuildRoleSubscriptionChannel;
     }
@@ -132,47 +132,68 @@ public final /* data */ class ChannelListItemTextChannel implements ChannelListI
     }
 
     /* JADX WARN: Multi-variable type inference failed */
+    /* JADX WARN: Type inference failed for: r0v11, types: [int] */
+    /* JADX WARN: Type inference failed for: r0v13, types: [int] */
+    /* JADX WARN: Type inference failed for: r0v15, types: [int] */
+    /* JADX WARN: Type inference failed for: r0v17 */
+    /* JADX WARN: Type inference failed for: r0v18 */
+    /* JADX WARN: Type inference failed for: r0v19 */
+    /* JADX WARN: Type inference failed for: r0v20 */
+    /* JADX WARN: Type inference failed for: r0v21 */
+    /* JADX WARN: Type inference failed for: r0v23 */
+    /* JADX WARN: Type inference failed for: r0v24 */
+    /* JADX WARN: Type inference failed for: r0v25 */
+    /* JADX WARN: Type inference failed for: r0v26 */
+    /* JADX WARN: Type inference failed for: r0v27 */
+    /* JADX WARN: Type inference failed for: r0v7, types: [int] */
+    /* JADX WARN: Type inference failed for: r0v9, types: [int] */
+    /* JADX WARN: Type inference failed for: r1v1, types: [int] */
+    /* JADX WARN: Type inference failed for: r1v16 */
+    /* JADX WARN: Type inference failed for: r1v17 */
+    /* JADX WARN: Type inference failed for: r2v0 */
+    /* JADX WARN: Type inference failed for: r2v1, types: [int] */
+    /* JADX WARN: Type inference failed for: r2v2 */
     public int hashCode() {
         Channel channel = this.channel;
         int iHashCode = (channel != null ? channel.hashCode() : 0) * 31;
         boolean z2 = this.selected;
-        int i = z2;
-        if (z2 != 0) {
-            i = 1;
+        ?? r1 = z2;
+        if (z2) {
+            r1 = 1;
         }
-        int mentionCount = (getMentionCount() + ((iHashCode + i) * 31)) * 31;
+        int mentionCount = (getMentionCount() + ((iHashCode + r1) * 31)) * 31;
         boolean isUnread = getIsUnread();
-        int i2 = isUnread;
+        ?? r0 = isUnread;
         if (isUnread) {
-            i2 = 1;
+            r0 = 1;
         }
-        int i3 = (mentionCount + i2) * 31;
+        int i = (mentionCount + r0) * 31;
         boolean z3 = this.muted;
-        int i4 = z3;
-        if (z3 != 0) {
-            i4 = 1;
+        ?? r02 = z3;
+        if (z3) {
+            r02 = 1;
         }
-        int i5 = (i3 + i4) * 31;
+        int i2 = (i + r02) * 31;
         boolean z4 = this.isLocked;
-        int i6 = z4;
-        if (z4 != 0) {
-            i6 = 1;
+        ?? r03 = z4;
+        if (z4) {
+            r03 = 1;
         }
-        int i7 = (i5 + i6) * 31;
+        int i3 = (i2 + r03) * 31;
         boolean z5 = this.hasActiveThreads;
-        int i8 = z5;
-        if (z5 != 0) {
-            i8 = 1;
+        ?? r04 = z5;
+        if (z5) {
+            r04 = 1;
         }
-        int i9 = (i7 + i8) * 31;
+        int i4 = (i3 + r04) * 31;
         boolean z6 = this.isGuildRoleSubscriptionLockedChannel;
-        int i10 = z6;
-        if (z6 != 0) {
-            i10 = 1;
+        ?? r05 = z6;
+        if (z6) {
+            r05 = 1;
         }
-        int i11 = (i9 + i10) * 31;
+        int i5 = (i4 + r05) * 31;
         boolean z7 = this.isGuildRoleSubscriptionChannel;
-        return i11 + (z7 ? 1 : z7 ? 1 : 0);
+        return i5 + (z7 ? 1 : z7);
     }
 
     public final boolean isGuildRoleSubscriptionChannel() {
@@ -188,7 +209,7 @@ public final /* data */ class ChannelListItemTextChannel implements ChannelListI
     }
 
     @Override // com.discord.widgets.channels.list.WidgetChannelListUnreads.UnreadItem
-    /* renamed from: isUnread, reason: from getter */
+    /* JADX INFO: renamed from: isUnread, reason: from getter */
     public boolean getIsUnread() {
         return this.isUnread;
     }

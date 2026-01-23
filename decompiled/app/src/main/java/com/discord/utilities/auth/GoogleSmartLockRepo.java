@@ -19,11 +19,11 @@ import p507d0.p592z.p594d.Lambda;
 import p658rx.Observable;
 import p658rx.subjects.PublishSubject;
 
-/* compiled from: GoogleSmartLockRepo.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: GoogleSmartLockRepo.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class GoogleSmartLockRepo {
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private static final Lazy INSTANCE$delegate = LazyJVM.lazy(GoogleSmartLockRepo2.INSTANCE);
     private boolean disableAutoLogin;
@@ -31,8 +31,8 @@ public final class GoogleSmartLockRepo {
     private PublishSubject<GoogleSmartLockManager.SmartLockCredentials> smartLockLogin;
     private GoogleSmartLockRepo3 smartLockLoginAttempt;
 
-    /* compiled from: GoogleSmartLockRepo.kt */
-    /* renamed from: com.discord.utilities.auth.GoogleSmartLockRepo$1 */
+    /* JADX INFO: renamed from: com.discord.utilities.auth.GoogleSmartLockRepo$1 */
+    /* JADX INFO: compiled from: GoogleSmartLockRepo.kt */
     public static final class C67011 extends Lambda implements Function1<Boolean, Unit> {
         public C67011() {
             super(1);
@@ -52,7 +52,7 @@ public final class GoogleSmartLockRepo {
         }
     }
 
-    /* compiled from: GoogleSmartLockRepo.kt */
+    /* JADX INFO: compiled from: GoogleSmartLockRepo.kt */
     public static final class Companion {
         private Companion() {
         }

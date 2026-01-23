@@ -20,15 +20,15 @@ import p507d0.p580t._Arrays;
 import p507d0.p592z.JvmClassMapping;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ReflectKotlinClass.kt */
-/* renamed from: d0.e0.p.d.m0.c.k1.a.c, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.c.k1.a.c, reason: use source file name */
+/* JADX INFO: compiled from: ReflectKotlinClass.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class ReflectKotlinClass {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final ReflectKotlinClass f23013a = new ReflectKotlinClass();
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final ClassLiteralValue m9432a(Class<?> cls) {
         int i = 0;
         while (cls.isArray()) {
@@ -64,8 +64,8 @@ public final class ReflectKotlinClass {
         return new ClassLiteralValue(classId4, i);
     }
 
-    /* renamed from: b */
-    public final void m9433b(KotlinJvmBinaryClass.c cVar, Annotation annotation) throws SecurityException, IllegalArgumentException, InvocationTargetException {
+    /* JADX INFO: renamed from: b */
+    public final void m9433b(KotlinJvmBinaryClass.c cVar, Annotation annotation) throws InvocationTargetException {
         Class<?> javaClass = JvmClassMapping.getJavaClass(JvmClassMapping.getAnnotationClass(annotation));
         KotlinJvmBinaryClass.a aVarVisitAnnotation = cVar.visitAnnotation(reflectClassUtil.getClassId(javaClass), new ReflectAnnotationSource(annotation));
         if (aVarVisitAnnotation == null) {
@@ -74,8 +74,8 @@ public final class ReflectKotlinClass {
         m9434c(aVarVisitAnnotation, annotation, javaClass);
     }
 
-    /* renamed from: c */
-    public final void m9434c(KotlinJvmBinaryClass.a aVar, Annotation annotation, Class<?> cls) throws SecurityException, IllegalArgumentException, InvocationTargetException {
+    /* JADX INFO: renamed from: c */
+    public final void m9434c(KotlinJvmBinaryClass.a aVar, Annotation annotation, Class<?> cls) throws InvocationTargetException {
         Method[] declaredMethods = cls.getDeclaredMethods();
         Intrinsics3.checkNotNullExpressionValue(declaredMethods, "annotationType.declaredMethods");
         int length = declaredMethods.length;

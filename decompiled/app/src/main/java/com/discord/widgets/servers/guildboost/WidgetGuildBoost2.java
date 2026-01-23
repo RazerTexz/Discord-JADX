@@ -21,9 +21,9 @@ import p007b.p008a.p025i.ViewPremiumGuildProgressBarBinding;
 import p507d0.p592z.p594d.FunctionReferenceImpl;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: WidgetGuildBoost.kt */
-/* renamed from: com.discord.widgets.servers.guildboost.WidgetGuildBoost$binding$2, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.servers.guildboost.WidgetGuildBoost$binding$2, reason: use source file name */
+/* JADX INFO: compiled from: WidgetGuildBoost.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final /* synthetic */ class WidgetGuildBoost2 extends FunctionReferenceImpl implements Function1<View, WidgetServerBoostStatusBinding> {
     public static final WidgetGuildBoost2 INSTANCE = new WidgetGuildBoost2();
 
@@ -36,7 +36,7 @@ public final /* synthetic */ class WidgetGuildBoost2 extends FunctionReferenceIm
         return invoke2(view);
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final WidgetServerBoostStatusBinding invoke2(View view) {
         Intrinsics3.checkNotNullParameter(view, "p1");
         int i = C5419R.id.boost_status_flipper;

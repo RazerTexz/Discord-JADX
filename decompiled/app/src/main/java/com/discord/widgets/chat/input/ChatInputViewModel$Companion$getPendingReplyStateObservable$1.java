@@ -13,13 +13,13 @@ import p637j0.p642l.p647e.ScalarSynchronousObservable;
 import p658rx.Observable;
 import p658rx.functions.Func2;
 
-/* compiled from: ChatInputViewModel.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: ChatInputViewModel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class ChatInputViewModel$Companion$getPendingReplyStateObservable$1<T, R> implements Func1<StorePendingReplies.PendingReply, Observable<? extends ChatInputViewModel.StoreState.Loaded.PendingReply>> {
     public static final ChatInputViewModel$Companion$getPendingReplyStateObservable$1 INSTANCE = new ChatInputViewModel$Companion$getPendingReplyStateObservable$1();
 
-    /* compiled from: ChatInputViewModel.kt */
-    /* renamed from: com.discord.widgets.chat.input.ChatInputViewModel$Companion$getPendingReplyStateObservable$1$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.input.ChatInputViewModel$Companion$getPendingReplyStateObservable$1$1 */
+    /* JADX INFO: compiled from: ChatInputViewModel.kt */
     public static final class C76861<T1, T2, R> implements Func2<User, GuildMember, ChatInputViewModel.StoreState.Loaded.PendingReply> {
         public final /* synthetic */ StorePendingReplies.PendingReply $pendingReply;
 
@@ -32,13 +32,13 @@ public final class ChatInputViewModel$Companion$getPendingReplyStateObservable$1
             return call2(user, guildMember);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final ChatInputViewModel.StoreState.Loaded.PendingReply call2(User user, GuildMember guildMember) {
             return new ChatInputViewModel.StoreState.Loaded.PendingReply(this.$pendingReply, user, guildMember);
         }
     }
 
-    /* renamed from: call, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
     public final Observable<? extends ChatInputViewModel.StoreState.Loaded.PendingReply> call2(StorePendingReplies.PendingReply pendingReply) {
         Observable<R> scalarSynchronousObservable;
         if (pendingReply == null) {

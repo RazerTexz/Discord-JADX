@@ -14,38 +14,38 @@ import p007b.p225i.p226a.p242c.p255c3.ExoTrackSelection2;
 import p007b.p225i.p226a.p242c.p259f3.MimeTypes;
 import p007b.p225i.p226a.p242c.p259f3.Util2;
 
-/* compiled from: ClippingMediaPeriod.java */
-/* renamed from: b.i.a.c.a3.n, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.a3.n, reason: use source file name */
+/* JADX INFO: compiled from: ClippingMediaPeriod.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class ClippingMediaPeriod implements MediaPeriod, MediaPeriod.a {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final MediaPeriod f5651j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     @Nullable
     public MediaPeriod.a f5652k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public a[] f5653l = new a[0];
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public long f5654m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public long f5655n;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public long f5656o;
 
-    /* compiled from: ClippingMediaPeriod.java */
-    /* renamed from: b.i.a.c.a3.n$a */
+    /* JADX INFO: renamed from: b.i.a.c.a3.n$a */
+    /* JADX INFO: compiled from: ClippingMediaPeriod.java */
     public final class a implements SampleStream {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final SampleStream f5657a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public boolean f5658b;
 
         public a(SampleStream sampleStream) {
@@ -53,7 +53,7 @@ public final class ClippingMediaPeriod implements MediaPeriod, MediaPeriod.a {
         }
 
         @Override // p007b.p225i.p226a.p242c.p243a3.SampleStream
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public int mo2505a(FormatHolder formatHolder, DecoderInputBuffer decoderInputBuffer, int i) {
             if (ClippingMediaPeriod.this.m2564d()) {
                 return -3;
@@ -92,13 +92,13 @@ public final class ClippingMediaPeriod implements MediaPeriod, MediaPeriod.a {
         }
 
         @Override // p007b.p225i.p226a.p242c.p243a3.SampleStream
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public void mo2506b() throws IOException {
             this.f5657a.mo2506b();
         }
 
         @Override // p007b.p225i.p226a.p242c.p243a3.SampleStream
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public int mo2507c(long j) {
             if (ClippingMediaPeriod.this.m2564d()) {
                 return -3;
@@ -107,7 +107,7 @@ public final class ClippingMediaPeriod implements MediaPeriod, MediaPeriod.a {
         }
 
         @Override // p007b.p225i.p226a.p242c.p243a3.SampleStream
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         public boolean mo2508d() {
             return !ClippingMediaPeriod.this.m2564d() && this.f5657a.mo2508d();
         }
@@ -121,7 +121,7 @@ public final class ClippingMediaPeriod implements MediaPeriod, MediaPeriod.a {
     }
 
     @Override // p007b.p225i.p226a.p242c.p243a3.SequenceableLoader.a
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public void mo2542a(SequenceableLoader sequenceableLoader) {
         MediaPeriod.a aVar = this.f5652k;
         Objects.requireNonNull(aVar);
@@ -129,7 +129,7 @@ public final class ClippingMediaPeriod implements MediaPeriod, MediaPeriod.a {
     }
 
     @Override // p007b.p225i.p226a.p242c.p243a3.MediaPeriod.a
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public void mo2563b(MediaPeriod mediaPeriod) {
         MediaPeriod.a aVar = this.f5652k;
         Objects.requireNonNull(aVar);
@@ -137,7 +137,7 @@ public final class ClippingMediaPeriod implements MediaPeriod, MediaPeriod.a {
     }
 
     @Override // p007b.p225i.p226a.p242c.p243a3.MediaPeriod
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public long mo2479c() {
         long jMo2479c = this.f5651j.mo2479c();
         if (jMo2479c != Long.MIN_VALUE) {
@@ -149,20 +149,20 @@ public final class ClippingMediaPeriod implements MediaPeriod, MediaPeriod.a {
         return Long.MIN_VALUE;
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public boolean m2564d() {
         return this.f5654m != -9223372036854775807L;
     }
 
     @Override // p007b.p225i.p226a.p242c.p243a3.MediaPeriod
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public void mo2481e() throws IOException {
         this.f5651j.mo2481e();
     }
 
     /* JADX WARN: Removed duplicated region for block: B:16:0x0033  */
     @Override // p007b.p225i.p226a.p242c.p243a3.MediaPeriod
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
@@ -187,19 +187,19 @@ public final class ClippingMediaPeriod implements MediaPeriod, MediaPeriod.a {
     }
 
     @Override // p007b.p225i.p226a.p242c.p243a3.MediaPeriod
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public boolean mo2483g(long j) {
         return this.f5651j.mo2483g(j);
     }
 
     @Override // p007b.p225i.p226a.p242c.p243a3.MediaPeriod
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public boolean mo2484h() {
         return this.f5651j.mo2484h();
     }
 
     @Override // p007b.p225i.p226a.p242c.p243a3.MediaPeriod
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public long mo2485i(long j, SeekParameters seekParameters) {
         long j2 = this.f5655n;
         if (j == j2) {
@@ -216,7 +216,7 @@ public final class ClippingMediaPeriod implements MediaPeriod, MediaPeriod.a {
     }
 
     @Override // p007b.p225i.p226a.p242c.p243a3.MediaPeriod
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public long mo2487k() {
         if (m2564d()) {
             long j = this.f5654m;
@@ -239,7 +239,7 @@ public final class ClippingMediaPeriod implements MediaPeriod, MediaPeriod.a {
     }
 
     @Override // p007b.p225i.p226a.p242c.p243a3.MediaPeriod
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public void mo2488l(MediaPeriod.a aVar, long j) {
         this.f5652k = aVar;
         this.f5651j.mo2488l(this, j);
@@ -249,7 +249,7 @@ public final class ClippingMediaPeriod implements MediaPeriod, MediaPeriod.a {
     /* JADX WARN: Removed duplicated region for block: B:26:0x006a  */
     /* JADX WARN: Removed duplicated region for block: B:36:0x0088  */
     @Override // p007b.p225i.p226a.p242c.p243a3.MediaPeriod
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
@@ -323,13 +323,13 @@ public final class ClippingMediaPeriod implements MediaPeriod, MediaPeriod.a {
     }
 
     @Override // p007b.p225i.p226a.p242c.p243a3.MediaPeriod
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public TrackGroupArray mo2490n() {
         return this.f5651j.mo2490n();
     }
 
     @Override // p007b.p225i.p226a.p242c.p243a3.MediaPeriod
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     public long mo2493q() {
         long jMo2493q = this.f5651j.mo2493q();
         if (jMo2493q != Long.MIN_VALUE) {
@@ -342,13 +342,13 @@ public final class ClippingMediaPeriod implements MediaPeriod, MediaPeriod.a {
     }
 
     @Override // p007b.p225i.p226a.p242c.p243a3.MediaPeriod
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     public void mo2494r(long j, boolean z2) {
         this.f5651j.mo2494r(j, z2);
     }
 
     @Override // p007b.p225i.p226a.p242c.p243a3.MediaPeriod
-    /* renamed from: s */
+    /* JADX INFO: renamed from: s */
     public void mo2495s(long j) {
         this.f5651j.mo2495s(j);
     }

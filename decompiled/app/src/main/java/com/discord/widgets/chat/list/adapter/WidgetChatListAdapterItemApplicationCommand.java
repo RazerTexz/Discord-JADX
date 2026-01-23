@@ -34,18 +34,18 @@ import p507d0.p579g0.StringsJVM;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetChatListAdapterItemApplicationCommand.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetChatListAdapterItemApplicationCommand.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetChatListAdapterItemApplicationCommand extends WidgetChatListItem {
     private final WidgetChatListAdapterItemApplicationCommandBinding binding;
 
-    /* compiled from: WidgetChatListAdapterItemApplicationCommand.kt */
-    /* renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemApplicationCommand$onConfigure$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemApplicationCommand$onConfigure$1 */
+    /* JADX INFO: compiled from: WidgetChatListAdapterItemApplicationCommand.kt */
     public static final class C80081 extends Lambda implements Function1<TextView, Unit> {
         public static final C80081 INSTANCE = new C80081();
 
-        /* compiled from: WidgetChatListAdapterItemApplicationCommand.kt */
-        /* renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemApplicationCommand$onConfigure$1$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemApplicationCommand$onConfigure$1$1, reason: invalid class name */
+        /* JADX INFO: compiled from: WidgetChatListAdapterItemApplicationCommand.kt */
         public static final class AnonymousClass1 implements View.OnLongClickListener {
             public final /* synthetic */ TextView $this_copyTextOnLongPress;
 
@@ -74,15 +74,15 @@ public final class WidgetChatListAdapterItemApplicationCommand extends WidgetCha
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(TextView textView) {
             Intrinsics3.checkNotNullParameter(textView, "$this$copyTextOnLongPress");
             textView.setOnLongClickListener(new AnonymousClass1(textView));
         }
     }
 
-    /* compiled from: WidgetChatListAdapterItemApplicationCommand.kt */
-    /* renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemApplicationCommand$onConfigure$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemApplicationCommand$onConfigure$2 */
+    /* JADX INFO: compiled from: WidgetChatListAdapterItemApplicationCommand.kt */
     public static final class ViewOnClickListenerC80092 implements View.OnClickListener {
         public ViewOnClickListenerC80092() {
         }

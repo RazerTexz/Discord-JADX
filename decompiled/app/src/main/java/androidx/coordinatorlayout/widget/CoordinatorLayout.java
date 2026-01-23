@@ -56,7 +56,7 @@ import java.util.List;
 import java.util.Map;
 import p007b.p100d.p104b.p105a.outline;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class CoordinatorLayout extends ViewGroup implements NestedScrollingParent2, NestedScrollingParent3 {
     public static final Class<?>[] CONSTRUCTOR_PARAMS;
     public static final int EVENT_NESTED_SCROLL = 1;
@@ -90,7 +90,7 @@ public class CoordinatorLayout extends ViewGroup implements NestedScrollingParen
     private final List<View> mTempDependenciesList;
     private final List<View> mTempList1;
 
-    /* renamed from: androidx.coordinatorlayout.widget.CoordinatorLayout$1 */
+    /* JADX INFO: renamed from: androidx.coordinatorlayout.widget.CoordinatorLayout$1 */
     public class C02031 implements OnApplyWindowInsetsListener {
         public C02031() {
         }
@@ -308,7 +308,7 @@ public class CoordinatorLayout extends ViewGroup implements NestedScrollingParen
             return compare2(view, view2);
         }
 
-        /* renamed from: compare, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: compare, reason: avoid collision after fix types in other method */
         public int compare2(View view, View view2) {
             float z2 = ViewCompat.getZ(view);
             float z3 = ViewCompat.getZ(view2);
@@ -1488,7 +1488,7 @@ public class CoordinatorLayout extends ViewGroup implements NestedScrollingParen
         this.mOnHierarchyChangeListener = onHierarchyChangeListener;
     }
 
-    public void setStatusBarBackground(@Nullable Drawable drawable) throws SecurityException {
+    public void setStatusBarBackground(@Nullable Drawable drawable) {
         Drawable drawable2 = this.mStatusBarBackground;
         if (drawable2 != drawable) {
             if (drawable2 != null) {
@@ -1508,11 +1508,11 @@ public class CoordinatorLayout extends ViewGroup implements NestedScrollingParen
         }
     }
 
-    public void setStatusBarBackgroundColor(@ColorInt int i) throws SecurityException {
+    public void setStatusBarBackgroundColor(@ColorInt int i) {
         setStatusBarBackground(new ColorDrawable(i));
     }
 
-    public void setStatusBarBackgroundResource(@DrawableRes int i) throws SecurityException {
+    public void setStatusBarBackgroundResource(@DrawableRes int i) {
         setStatusBarBackground(i != 0 ? ContextCompat.getDrawable(getContext(), i) : null);
     }
 
@@ -1747,7 +1747,7 @@ public class CoordinatorLayout extends ViewGroup implements NestedScrollingParen
         public static final Parcelable.Creator<SavedState> CREATOR = new C02041();
         public SparseArray<Parcelable> behaviorStates;
 
-        /* renamed from: androidx.coordinatorlayout.widget.CoordinatorLayout$SavedState$1 */
+        /* JADX INFO: renamed from: androidx.coordinatorlayout.widget.CoordinatorLayout$SavedState$1 */
         public static class C02041 implements Parcelable.ClassLoaderCreator<SavedState> {
             @Override // android.os.Parcelable.Creator
             public /* bridge */ /* synthetic */ Object createFromParcel(Parcel parcel) {

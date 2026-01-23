@@ -11,13 +11,13 @@ import p507d0.p580t._Collections;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetApplicationCommandBottomSheet.kt */
-/* renamed from: com.discord.widgets.chat.list.sheet.WidgetApplicationCommandBottomSheetKt, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.chat.list.sheet.WidgetApplicationCommandBottomSheetKt, reason: use source file name */
+/* JADX INFO: compiled from: WidgetApplicationCommandBottomSheet.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetApplicationCommandBottomSheet5 {
 
-    /* compiled from: WidgetApplicationCommandBottomSheet.kt */
-    /* renamed from: com.discord.widgets.chat.list.sheet.WidgetApplicationCommandBottomSheetKt$toSlashCommandCopyString$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.list.sheet.WidgetApplicationCommandBottomSheetKt$toSlashCommandCopyString$1 */
+    /* JADX INFO: compiled from: WidgetApplicationCommandBottomSheet.kt */
     public static final class C81671 extends Lambda implements Function1<ApplicationCommandData3, CharSequence> {
         public final /* synthetic */ Map $commandValues;
 
@@ -27,7 +27,7 @@ public final class WidgetApplicationCommandBottomSheet5 {
             this.$commandValues = map;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final CharSequence invoke2(ApplicationCommandData3 applicationCommandData3) {
             Intrinsics3.checkNotNullParameter(applicationCommandData3, "it");
             return WidgetApplicationCommandBottomSheet5.toSlashCommandCopyString(applicationCommandData3, (Map<String, WidgetApplicationCommandBottomSheetViewModel.SlashCommandParam>) this.$commandValues);
@@ -39,8 +39,8 @@ public final class WidgetApplicationCommandBottomSheet5 {
         }
     }
 
-    /* compiled from: WidgetApplicationCommandBottomSheet.kt */
-    /* renamed from: com.discord.widgets.chat.list.sheet.WidgetApplicationCommandBottomSheetKt$toSlashCommandCopyString$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.list.sheet.WidgetApplicationCommandBottomSheetKt$toSlashCommandCopyString$2 */
+    /* JADX INFO: compiled from: WidgetApplicationCommandBottomSheet.kt */
     public static final class C81682 extends Lambda implements Function1<ApplicationCommandData3, CharSequence> {
         public final /* synthetic */ Map $commandValues;
 
@@ -50,7 +50,7 @@ public final class WidgetApplicationCommandBottomSheet5 {
             this.$commandValues = map;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final CharSequence invoke2(ApplicationCommandData3 applicationCommandData3) {
             Intrinsics3.checkNotNullParameter(applicationCommandData3, "it");
             return WidgetApplicationCommandBottomSheet5.toSlashCommandCopyString(applicationCommandData3, (Map<String, WidgetApplicationCommandBottomSheetViewModel.SlashCommandParam>) this.$commandValues);

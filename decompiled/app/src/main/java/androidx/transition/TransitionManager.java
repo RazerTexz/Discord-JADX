@@ -11,7 +11,7 @@ import java.lang.ref.WeakReference;
 import java.util.ArrayList;
 import java.util.Iterator;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class TransitionManager {
     private static final String LOG_TAG = "TransitionManager";
     private static Transition sDefaultTransition = new AutoTransition();
@@ -24,7 +24,7 @@ public class TransitionManager {
         public ViewGroup mSceneRoot;
         public Transition mTransition;
 
-        /* renamed from: androidx.transition.TransitionManager$MultiListener$1 */
+        /* JADX INFO: renamed from: androidx.transition.TransitionManager$MultiListener$1 */
         public class C06681 extends TransitionListenerAdapter {
             public final /* synthetic */ ArrayMap val$runningTransitions;
 
@@ -160,7 +160,7 @@ public class TransitionManager {
         return transition2 != null ? transition2 : sDefaultTransition;
     }
 
-    /* renamed from: go */
+    /* JADX INFO: renamed from: go */
     public static void m96go(@NonNull Scene scene) {
         changeScene(scene, sDefaultTransition);
     }
@@ -213,7 +213,7 @@ public class TransitionManager {
         sceneChangeRunTransition(viewGroup, transitionClone);
     }
 
-    /* renamed from: go */
+    /* JADX INFO: renamed from: go */
     public static void m97go(@NonNull Scene scene, @Nullable Transition transition) {
         changeScene(scene, transition);
     }

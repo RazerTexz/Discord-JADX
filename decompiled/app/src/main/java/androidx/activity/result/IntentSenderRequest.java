@@ -9,8 +9,8 @@ import android.os.Parcelable;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
+/* JADX INFO: loaded from: classes.dex */
 @SuppressLint({"BanParcelableUsage"})
-/* loaded from: classes.dex */
 public final class IntentSenderRequest implements Parcelable {
 
     @NonNull
@@ -24,7 +24,7 @@ public final class IntentSenderRequest implements Parcelable {
     @NonNull
     private final IntentSender mIntentSender;
 
-    /* renamed from: androidx.activity.result.IntentSenderRequest$1 */
+    /* JADX INFO: renamed from: androidx.activity.result.IntentSenderRequest$1 */
     public class C00491 implements Parcelable.Creator<IntentSenderRequest> {
         @Override // android.os.Parcelable.Creator
         public /* bridge */ /* synthetic */ IntentSenderRequest createFromParcel(Parcel parcel) {

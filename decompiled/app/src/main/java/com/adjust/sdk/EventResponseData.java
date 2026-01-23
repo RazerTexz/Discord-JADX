@@ -2,7 +2,7 @@ package com.adjust.sdk;
 
 import org.json.JSONObject;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class EventResponseData extends ResponseData {
     private String callbackId;
     private String eventToken;

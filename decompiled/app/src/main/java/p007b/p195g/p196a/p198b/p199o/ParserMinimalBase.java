@@ -5,21 +5,21 @@ import java.math.BigDecimal;
 import java.math.BigInteger;
 import p007b.p195g.p196a.p198b.JsonParser;
 
-/* compiled from: ParserMinimalBase.java */
-/* renamed from: b.g.a.b.o.b, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.g.a.b.o.b, reason: use source file name */
+/* JADX INFO: compiled from: ParserMinimalBase.java */
+/* JADX INFO: loaded from: classes3.dex */
 public abstract class ParserMinimalBase extends JsonParser {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static final BigInteger f4532j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public static final BigInteger f4533k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public static final BigInteger f4534l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public static final BigInteger f4535m;
 
     static {

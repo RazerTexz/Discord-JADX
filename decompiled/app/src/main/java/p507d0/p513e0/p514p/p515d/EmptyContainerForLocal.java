@@ -8,12 +8,12 @@ import p507d0.p513e0.p514p.p515d.p517m0.p521c.PropertyDescriptor;
 import p507d0.p513e0.p514p.p515d.p517m0.p548g.Name;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: EmptyContainerForLocal.kt */
-/* renamed from: d0.e0.p.d.b, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.b, reason: use source file name */
+/* JADX INFO: compiled from: EmptyContainerForLocal.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class EmptyContainerForLocal extends KDeclarationContainerImpl {
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public static final EmptyContainerForLocal f22320m = new EmptyContainerForLocal();
 
     @Override // p507d0.p513e0.p514p.p515d.KDeclarationContainerImpl
@@ -47,7 +47,7 @@ public final class EmptyContainerForLocal extends KDeclarationContainerImpl {
         throw null;
     }
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final Void m9331j() {
         throw new KotlinReflectionInternalError("Introspecting local functions, lambdas, anonymous functions, local variables and typealiases is not yet fully supported in Kotlin reflection");
     }

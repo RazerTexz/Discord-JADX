@@ -9,18 +9,18 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.WeakHashMap;
 
-/* compiled from: com.google.android.gms:play-services-base@@17.3.0 */
-/* renamed from: b.i.a.f.e.h.j.x0 */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.e.h.j.x0 */
+/* JADX INFO: compiled from: com.google.android.gms:play-services-base@@17.3.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public final class C3328x0 {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final Map<BasePendingResult<?>, Boolean> f9464a = Collections.synchronizedMap(new WeakHashMap());
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final Map<TaskCompletionSource<?>, Boolean> f9465b = Collections.synchronizedMap(new WeakHashMap());
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final void m4120a(boolean z2, Status status) {
         HashMap map;
         HashMap map2;

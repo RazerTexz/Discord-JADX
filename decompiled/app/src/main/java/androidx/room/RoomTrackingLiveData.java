@@ -12,7 +12,7 @@ import java.util.concurrent.Callable;
 import java.util.concurrent.Executor;
 import java.util.concurrent.atomic.AtomicBoolean;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class RoomTrackingLiveData<T> extends LiveData<T> {
     public final Callable<T> mComputeFunction;
     private final InvalidationLiveDataContainer mContainer;
@@ -25,7 +25,7 @@ public class RoomTrackingLiveData<T> extends LiveData<T> {
     public final Runnable mRefreshRunnable = new RunnableC05941();
     public final Runnable mInvalidationRunnable = new RunnableC05952();
 
-    /* renamed from: androidx.room.RoomTrackingLiveData$1 */
+    /* JADX INFO: renamed from: androidx.room.RoomTrackingLiveData$1 */
     public class RunnableC05941 implements Runnable {
         public RunnableC05941() {
         }
@@ -66,7 +66,7 @@ public class RoomTrackingLiveData<T> extends LiveData<T> {
         }
     }
 
-    /* renamed from: androidx.room.RoomTrackingLiveData$2 */
+    /* JADX INFO: renamed from: androidx.room.RoomTrackingLiveData$2 */
     public class RunnableC05952 implements Runnable {
         public RunnableC05952() {
         }
@@ -81,7 +81,7 @@ public class RoomTrackingLiveData<T> extends LiveData<T> {
         }
     }
 
-    /* renamed from: androidx.room.RoomTrackingLiveData$3 */
+    /* JADX INFO: renamed from: androidx.room.RoomTrackingLiveData$3 */
     public class C05963 extends InvalidationTracker.Observer {
         public C05963(String[] strArr) {
             super(strArr);

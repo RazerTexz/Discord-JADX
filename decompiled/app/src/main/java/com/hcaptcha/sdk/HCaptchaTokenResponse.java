@@ -3,10 +3,10 @@ package com.hcaptcha.sdk;
 import java.util.Objects;
 import p007b.p100d.p104b.p105a.outline;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public class HCaptchaTokenResponse {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final String f21692a;
 
     public HCaptchaTokenResponse(String str) {

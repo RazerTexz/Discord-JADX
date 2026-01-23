@@ -12,15 +12,15 @@ import androidx.work.impl.WorkDatabase;
 import androidx.work.impl.WorkDatabaseMigrations;
 import androidx.work.impl.model.Preference;
 
+/* JADX INFO: loaded from: classes.dex */
 @RestrictTo({RestrictTo.Scope.LIBRARY_GROUP})
-/* loaded from: classes.dex */
 public class PreferenceUtils {
     public static final String KEY_LAST_CANCEL_ALL_TIME_MS = "last_cancel_all_time_ms";
     public static final String KEY_RESCHEDULE_NEEDED = "reschedule_needed";
     public static final String PREFERENCES_FILE_NAME = "androidx.work.util.preferences";
     private final WorkDatabase mWorkDatabase;
 
-    /* renamed from: androidx.work.impl.utils.PreferenceUtils$1 */
+    /* JADX INFO: renamed from: androidx.work.impl.utils.PreferenceUtils$1 */
     public class C07761 implements Function<Long, Long> {
         public C07761() {
         }
@@ -30,7 +30,7 @@ public class PreferenceUtils {
             return apply2(l);
         }
 
-        /* renamed from: apply, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: apply, reason: avoid collision after fix types in other method */
         public Long apply2(Long l) {
             return Long.valueOf(l != null ? l.longValue() : 0L);
         }

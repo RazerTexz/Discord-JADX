@@ -5,7 +5,6 @@ import android.animation.Animator;
 import android.animation.ValueAnimator;
 import android.content.Context;
 import android.content.res.ColorStateList;
-import android.content.res.Resources;
 import android.content.res.TypedArray;
 import android.graphics.Canvas;
 import android.graphics.ColorFilter;
@@ -62,8 +61,8 @@ import p007b.p225i.p226a.p341g.p353l.p354l.TransitionListenerAdapter3;
 import p007b.p225i.p226a.p341g.p353l.p354l.TransitionUtils4;
 import p007b.p225i.p226a.p341g.p353l.p354l.TransitionUtils5;
 
+/* JADX INFO: loaded from: classes3.dex */
 @RequiresApi(21)
-/* loaded from: classes3.dex */
 public final class MaterialContainerTransform extends Transition {
     private static final float ELEVATION_NOT_SET = -1.0f;
     public static final int FADE_MODE_CROSS = 2;
@@ -185,10 +184,10 @@ public final class MaterialContainerTransform extends Transition {
     public @interface TransitionDirection {
     }
 
-    /* renamed from: com.google.android.material.transition.platform.MaterialContainerTransform$a */
+    /* JADX INFO: renamed from: com.google.android.material.transition.platform.MaterialContainerTransform$a */
     public class C11055a implements ValueAnimator.AnimatorUpdateListener {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final /* synthetic */ C11058d f21340a;
 
         public C11055a(MaterialContainerTransform materialContainerTransform, C11058d c11058d) {
@@ -205,19 +204,19 @@ public final class MaterialContainerTransform extends Transition {
         }
     }
 
-    /* renamed from: com.google.android.material.transition.platform.MaterialContainerTransform$b */
+    /* JADX INFO: renamed from: com.google.android.material.transition.platform.MaterialContainerTransform$b */
     public class C11056b extends TransitionListenerAdapter3 {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final /* synthetic */ View f21341a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final /* synthetic */ C11058d f21342b;
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public final /* synthetic */ View f21343c;
 
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         public final /* synthetic */ View f21344d;
 
         public C11056b(View view, C11058d c11058d, View view2, View view3) {
@@ -246,22 +245,22 @@ public final class MaterialContainerTransform extends Transition {
         }
     }
 
-    /* renamed from: com.google.android.material.transition.platform.MaterialContainerTransform$c */
+    /* JADX INFO: renamed from: com.google.android.material.transition.platform.MaterialContainerTransform$c */
     public static class C11057c {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         @NonNull
         public final ProgressThresholds f21346a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         @NonNull
         public final ProgressThresholds f21347b;
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         @NonNull
         public final ProgressThresholds f21348c;
 
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         @NonNull
         public final ProgressThresholds f21349d;
 
@@ -273,142 +272,142 @@ public final class MaterialContainerTransform extends Transition {
         }
     }
 
-    /* renamed from: com.google.android.material.transition.platform.MaterialContainerTransform$d */
+    /* JADX INFO: renamed from: com.google.android.material.transition.platform.MaterialContainerTransform$d */
     public static final class C11058d extends Drawable {
 
-        /* renamed from: A */
+        /* JADX INFO: renamed from: A */
         public final C11057c f21350A;
 
-        /* renamed from: B */
+        /* JADX INFO: renamed from: B */
         public final FadeModeEvaluator2 f21351B;
 
-        /* renamed from: C */
+        /* JADX INFO: renamed from: C */
         public final FitModeEvaluator2 f21352C;
 
-        /* renamed from: D */
+        /* JADX INFO: renamed from: D */
         public final boolean f21353D;
 
-        /* renamed from: E */
+        /* JADX INFO: renamed from: E */
         public final Paint f21354E;
 
-        /* renamed from: F */
+        /* JADX INFO: renamed from: F */
         public final Path f21355F;
 
-        /* renamed from: G */
+        /* JADX INFO: renamed from: G */
         public FadeModeResult2 f21356G;
 
-        /* renamed from: H */
+        /* JADX INFO: renamed from: H */
         public FitModeResult2 f21357H;
 
-        /* renamed from: I */
+        /* JADX INFO: renamed from: I */
         public RectF f21358I;
 
-        /* renamed from: J */
+        /* JADX INFO: renamed from: J */
         public float f21359J;
 
-        /* renamed from: K */
+        /* JADX INFO: renamed from: K */
         public float f21360K;
 
-        /* renamed from: L */
+        /* JADX INFO: renamed from: L */
         public float f21361L;
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final View f21362a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final RectF f21363b;
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public final ShapeAppearanceModel f21364c;
 
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         public final float f21365d;
 
-        /* renamed from: e */
+        /* JADX INFO: renamed from: e */
         public final View f21366e;
 
-        /* renamed from: f */
+        /* JADX INFO: renamed from: f */
         public final RectF f21367f;
 
-        /* renamed from: g */
+        /* JADX INFO: renamed from: g */
         public final ShapeAppearanceModel f21368g;
 
-        /* renamed from: h */
+        /* JADX INFO: renamed from: h */
         public final float f21369h;
 
-        /* renamed from: i */
+        /* JADX INFO: renamed from: i */
         public final Paint f21370i;
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public final Paint f21371j;
 
-        /* renamed from: k */
+        /* JADX INFO: renamed from: k */
         public final Paint f21372k;
 
-        /* renamed from: l */
+        /* JADX INFO: renamed from: l */
         public final Paint f21373l;
 
-        /* renamed from: m */
+        /* JADX INFO: renamed from: m */
         public final Paint f21374m;
 
-        /* renamed from: n */
+        /* JADX INFO: renamed from: n */
         public final MaskEvaluator2 f21375n;
 
-        /* renamed from: o */
+        /* JADX INFO: renamed from: o */
         public final PathMeasure f21376o;
 
-        /* renamed from: p */
+        /* JADX INFO: renamed from: p */
         public final float f21377p;
 
-        /* renamed from: q */
+        /* JADX INFO: renamed from: q */
         public final float[] f21378q;
 
-        /* renamed from: r */
+        /* JADX INFO: renamed from: r */
         public final boolean f21379r;
 
-        /* renamed from: s */
+        /* JADX INFO: renamed from: s */
         public final float f21380s;
 
-        /* renamed from: t */
+        /* JADX INFO: renamed from: t */
         public final float f21381t;
 
-        /* renamed from: u */
+        /* JADX INFO: renamed from: u */
         public final boolean f21382u;
 
-        /* renamed from: v */
+        /* JADX INFO: renamed from: v */
         public final MaterialShapeDrawable f21383v;
 
-        /* renamed from: w */
+        /* JADX INFO: renamed from: w */
         public final RectF f21384w;
 
-        /* renamed from: x */
+        /* JADX INFO: renamed from: x */
         public final RectF f21385x;
 
-        /* renamed from: y */
+        /* JADX INFO: renamed from: y */
         public final RectF f21386y;
 
-        /* renamed from: z */
+        /* JADX INFO: renamed from: z */
         public final RectF f21387z;
 
-        /* renamed from: com.google.android.material.transition.platform.MaterialContainerTransform$d$a */
+        /* JADX INFO: renamed from: com.google.android.material.transition.platform.MaterialContainerTransform$d$a */
         public class a implements TransitionUtils5.a {
             public a() {
             }
 
             @Override // p007b.p225i.p226a.p341g.p353l.p354l.TransitionUtils5.a
-            /* renamed from: a */
+            /* JADX INFO: renamed from: a */
             public void mo6208a(Canvas canvas) {
                 C11058d.this.f21362a.draw(canvas);
             }
         }
 
-        /* renamed from: com.google.android.material.transition.platform.MaterialContainerTransform$d$b */
+        /* JADX INFO: renamed from: com.google.android.material.transition.platform.MaterialContainerTransform$d$b */
         public class b implements TransitionUtils5.a {
             public b() {
             }
 
             @Override // p007b.p225i.p226a.p341g.p353l.p354l.TransitionUtils5.a
-            /* renamed from: a */
+            /* JADX INFO: renamed from: a */
             public void mo6208a(Canvas canvas) {
                 C11058d.this.f21366e.draw(canvas);
             }
@@ -475,12 +474,12 @@ public final class MaterialContainerTransform extends Transition {
             m9174e(0.0f);
         }
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public static PointF m9170c(RectF rectF) {
             return new PointF(rectF.centerX(), rectF.top);
         }
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final void m9171a(Canvas canvas) {
             m9173d(canvas, this.f21372k);
             Rect bounds = getBounds();
@@ -488,7 +487,7 @@ public final class MaterialContainerTransform extends Transition {
             TransitionUtils5.m6207h(canvas, bounds, rectF.left, rectF.top, this.f21357H.f11926b, this.f21356G.f11921b, new b());
         }
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final void m9172b(Canvas canvas) {
             m9173d(canvas, this.f21371j);
             Rect bounds = getBounds();
@@ -496,7 +495,7 @@ public final class MaterialContainerTransform extends Transition {
             TransitionUtils5.m6207h(canvas, bounds, rectF.left, rectF.top, this.f21357H.f11925a, this.f21356G.f11920a, new a());
         }
 
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         public final void m9173d(Canvas canvas, Paint paint) {
             if (paint.getColor() == 0 || paint.getAlpha() <= 0) {
                 return;
@@ -575,7 +574,7 @@ public final class MaterialContainerTransform extends Transition {
             }
         }
 
-        /* renamed from: e */
+        /* JADX INFO: renamed from: e */
         public final void m9174e(float f) {
             float f2;
             float f3;
@@ -711,7 +710,7 @@ public final class MaterialContainerTransform extends Transition {
         return shapeAppearance.withTransformedCornerSizes(new TransitionUtils4(rectF));
     }
 
-    private static void captureValues(@NonNull TransitionValues transitionValues, @Nullable View view, @IdRes int i, @Nullable ShapeAppearanceModel shapeAppearanceModel) throws Resources.NotFoundException {
+    private static void captureValues(@NonNull TransitionValues transitionValues, @Nullable View view, @IdRes int i, @Nullable ShapeAppearanceModel shapeAppearanceModel) {
         RectF rectFM6202c;
         if (i != -1) {
             View view2 = transitionValues.view;
@@ -797,18 +796,18 @@ public final class MaterialContainerTransform extends Transition {
     }
 
     @Override // android.transition.Transition
-    public void captureEndValues(@NonNull TransitionValues transitionValues) throws Resources.NotFoundException {
+    public void captureEndValues(@NonNull TransitionValues transitionValues) {
         captureValues(transitionValues, this.endView, this.endViewId, this.endShapeAppearanceModel);
     }
 
     @Override // android.transition.Transition
-    public void captureStartValues(@NonNull TransitionValues transitionValues) throws Resources.NotFoundException {
+    public void captureStartValues(@NonNull TransitionValues transitionValues) {
         captureValues(transitionValues, this.startView, this.startViewId, this.startShapeAppearanceModel);
     }
 
     @Override // android.transition.Transition
     @Nullable
-    public Animator createAnimator(@NonNull ViewGroup viewGroup, @Nullable TransitionValues transitionValues, @Nullable TransitionValues transitionValues2) throws Resources.NotFoundException {
+    public Animator createAnimator(@NonNull ViewGroup viewGroup, @Nullable TransitionValues transitionValues, @Nullable TransitionValues transitionValues2) {
         View viewM6201b;
         FadeModeEvaluator2 fadeModeEvaluator2;
         FitModeEvaluator2 fitModeEvaluator2;

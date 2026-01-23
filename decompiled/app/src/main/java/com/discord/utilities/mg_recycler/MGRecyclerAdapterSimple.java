@@ -28,8 +28,8 @@ import p637j0.p653p.Schedulers2;
 import p658rx.Observable;
 import p658rx.Subscription;
 
-/* compiled from: MGRecyclerAdapterSimple.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: MGRecyclerAdapterSimple.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public abstract class MGRecyclerAdapterSimple<D extends MGRecyclerDataPayload> extends MGRecyclerAdapter<D> {
     private final boolean deferredDiffs;
     private final DiffCreator<List<D>, MGRecyclerViewHolder<MGRecyclerAdapterSimple<D>, D>> diffCreator;
@@ -37,8 +37,8 @@ public abstract class MGRecyclerAdapterSimple<D extends MGRecyclerDataPayload> e
     private List<? extends D> internalData;
     private Function2<? super List<? extends D>, ? super List<? extends D>, Unit> onUpdated;
 
-    /* compiled from: MGRecyclerAdapterSimple.kt */
-    /* renamed from: com.discord.utilities.mg_recycler.MGRecyclerAdapterSimple$setData$1 */
+    /* JADX INFO: renamed from: com.discord.utilities.mg_recycler.MGRecyclerAdapterSimple$setData$1 */
+    /* JADX INFO: compiled from: MGRecyclerAdapterSimple.kt */
     public static final class CallableC68151<V> implements Callable<DiffUtil.DiffResult> {
         public final /* synthetic */ List $newData;
         public final /* synthetic */ List $oldData;
@@ -60,8 +60,8 @@ public abstract class MGRecyclerAdapterSimple<D extends MGRecyclerDataPayload> e
         }
     }
 
-    /* compiled from: MGRecyclerAdapterSimple.kt */
-    /* renamed from: com.discord.utilities.mg_recycler.MGRecyclerAdapterSimple$setData$2 */
+    /* JADX INFO: renamed from: com.discord.utilities.mg_recycler.MGRecyclerAdapterSimple$setData$2 */
+    /* JADX INFO: compiled from: MGRecyclerAdapterSimple.kt */
     public static final class C68162 extends Lambda implements Function1<DiffUtil.DiffResult, Unit> {
         public final /* synthetic */ List $newData;
         public final /* synthetic */ List $oldData;
@@ -79,14 +79,14 @@ public abstract class MGRecyclerAdapterSimple<D extends MGRecyclerDataPayload> e
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(DiffUtil.DiffResult diffResult) {
             MGRecyclerAdapterSimple.access$dispatchUpdates(MGRecyclerAdapterSimple.this, diffResult, this.$oldData, this.$newData);
         }
     }
 
-    /* compiled from: MGRecyclerAdapterSimple.kt */
-    /* renamed from: com.discord.utilities.mg_recycler.MGRecyclerAdapterSimple$setData$3 */
+    /* JADX INFO: renamed from: com.discord.utilities.mg_recycler.MGRecyclerAdapterSimple$setData$3 */
+    /* JADX INFO: compiled from: MGRecyclerAdapterSimple.kt */
     public static final class C68173 extends Lambda implements Function1<Error, Unit> {
         public C68173() {
             super(1);
@@ -98,7 +98,7 @@ public abstract class MGRecyclerAdapterSimple<D extends MGRecyclerDataPayload> e
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Error error) {
             Intrinsics3.checkNotNullParameter(error, "error");
             MGRecyclerAdapterSimple mGRecyclerAdapterSimple = MGRecyclerAdapterSimple.this;
@@ -108,8 +108,8 @@ public abstract class MGRecyclerAdapterSimple<D extends MGRecyclerDataPayload> e
         }
     }
 
-    /* compiled from: MGRecyclerAdapterSimple.kt */
-    /* renamed from: com.discord.utilities.mg_recycler.MGRecyclerAdapterSimple$setData$4 */
+    /* JADX INFO: renamed from: com.discord.utilities.mg_recycler.MGRecyclerAdapterSimple$setData$4 */
+    /* JADX INFO: compiled from: MGRecyclerAdapterSimple.kt */
     public static final class C68184 extends Lambda implements Function1<Subscription, Unit> {
         public C68184() {
             super(1);
@@ -121,7 +121,7 @@ public abstract class MGRecyclerAdapterSimple<D extends MGRecyclerDataPayload> e
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Subscription subscription) {
             Intrinsics3.checkNotNullParameter(subscription, Traits.Payment.Type.SUBSCRIPTION);
             MGRecyclerAdapterSimple.access$setDiffingSubscription$p(MGRecyclerAdapterSimple.this, subscription);

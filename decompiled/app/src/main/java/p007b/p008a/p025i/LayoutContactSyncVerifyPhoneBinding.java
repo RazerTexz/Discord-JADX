@@ -7,16 +7,16 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.viewbinding.ViewBinding;
 import com.discord.views.CodeVerificationView;
 
-/* compiled from: LayoutContactSyncVerifyPhoneBinding.java */
-/* renamed from: b.a.i.p0, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.a.i.p0, reason: use source file name */
+/* JADX INFO: compiled from: LayoutContactSyncVerifyPhoneBinding.java */
+/* JADX INFO: loaded from: classes.dex */
 public final class LayoutContactSyncVerifyPhoneBinding implements ViewBinding {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     @NonNull
     public final ConstraintLayout f1122a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     @NonNull
     public final CodeVerificationView f1123b;
 

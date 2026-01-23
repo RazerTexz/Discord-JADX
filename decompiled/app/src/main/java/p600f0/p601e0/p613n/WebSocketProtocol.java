@@ -3,11 +3,11 @@ package p600f0.p601e0.p613n;
 import p507d0.p592z.p594d.Intrinsics3;
 import p615g0.Buffer3;
 
-/* compiled from: WebSocketProtocol.kt */
-/* renamed from: f0.e0.n.g, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: f0.e0.n.g, reason: use source file name */
+/* JADX INFO: compiled from: WebSocketProtocol.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class WebSocketProtocol {
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final void m10360a(Buffer3.a aVar, byte[] bArr) {
         long j;
         Intrinsics3.checkParameterIsNotNull(aVar, "cursor");
@@ -35,6 +35,6 @@ public final class WebSocketProtocol {
                 throw new IllegalStateException("no more bytes".toString());
             }
             j = aVar.f26084m;
-        } while (aVar.m10476b(j == -1 ? 0L : j + (aVar.f26087p - aVar.f26086o)) != -1);
+        } while (aVar.m10476b(j == -1 ? 0L : j + ((long) (aVar.f26087p - aVar.f26086o))) != -1);
     }
 }

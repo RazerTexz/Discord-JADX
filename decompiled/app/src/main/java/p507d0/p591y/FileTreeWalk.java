@@ -12,31 +12,31 @@ import kotlin.sequences.Sequence;
 import p507d0.p580t.AbstractIterator3;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: FileTreeWalk.kt */
-/* renamed from: d0.y.d, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.y.d, reason: use source file name */
+/* JADX INFO: compiled from: FileTreeWalk.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class FileTreeWalk implements Sequence<File> {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final File f25253a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final FileTreeWalk2 f25254b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final Function1<File, Boolean> f25255c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final Function1<File, Unit> f25256d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final Function2<File, IOException, Unit> f25257e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final int f25258f;
 
-    /* compiled from: FileTreeWalk.kt */
-    /* renamed from: d0.y.d$a */
+    /* JADX INFO: renamed from: d0.y.d$a */
+    /* JADX INFO: compiled from: FileTreeWalk.kt */
     public static abstract class a extends c {
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
         public a(File file) {
@@ -45,30 +45,30 @@ public final class FileTreeWalk implements Sequence<File> {
         }
     }
 
-    /* compiled from: FileTreeWalk.kt */
-    /* renamed from: d0.y.d$b */
+    /* JADX INFO: renamed from: d0.y.d$b */
+    /* JADX INFO: compiled from: FileTreeWalk.kt */
     public final class b extends AbstractIterator3<File> {
 
-        /* renamed from: l */
+        /* JADX INFO: renamed from: l */
         public final ArrayDeque<c> f25259l;
 
-        /* compiled from: FileTreeWalk.kt */
-        /* renamed from: d0.y.d$b$a */
+        /* JADX INFO: renamed from: d0.y.d$b$a */
+        /* JADX INFO: compiled from: FileTreeWalk.kt */
         public final class a extends a {
 
-            /* renamed from: b */
+            /* JADX INFO: renamed from: b */
             public boolean f25261b;
 
-            /* renamed from: c */
+            /* JADX INFO: renamed from: c */
             public File[] f25262c;
 
-            /* renamed from: d */
+            /* JADX INFO: renamed from: d */
             public int f25263d;
 
-            /* renamed from: e */
+            /* JADX INFO: renamed from: e */
             public boolean f25264e;
 
-            /* renamed from: f */
+            /* JADX INFO: renamed from: f */
             public final /* synthetic */ b f25265f;
 
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -117,11 +117,11 @@ public final class FileTreeWalk implements Sequence<File> {
             }
         }
 
-        /* compiled from: FileTreeWalk.kt */
-        /* renamed from: d0.y.d$b$b, reason: collision with other inner class name */
+        /* JADX INFO: renamed from: d0.y.d$b$b, reason: collision with other inner class name */
+        /* JADX INFO: compiled from: FileTreeWalk.kt */
         public final class C13344b extends c {
 
-            /* renamed from: b */
+            /* JADX INFO: renamed from: b */
             public boolean f25266b;
 
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -140,20 +140,20 @@ public final class FileTreeWalk implements Sequence<File> {
             }
         }
 
-        /* compiled from: FileTreeWalk.kt */
-        /* renamed from: d0.y.d$b$c */
+        /* JADX INFO: renamed from: d0.y.d$b$c */
+        /* JADX INFO: compiled from: FileTreeWalk.kt */
         public final class c extends a {
 
-            /* renamed from: b */
+            /* JADX INFO: renamed from: b */
             public boolean f25267b;
 
-            /* renamed from: c */
+            /* JADX INFO: renamed from: c */
             public File[] f25268c;
 
-            /* renamed from: d */
+            /* JADX INFO: renamed from: d */
             public int f25269d;
 
-            /* renamed from: e */
+            /* JADX INFO: renamed from: e */
             public final /* synthetic */ b f25270e;
 
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -230,7 +230,7 @@ public final class FileTreeWalk implements Sequence<File> {
         /* JADX WARN: Type inference failed for: r1v0 */
         /* JADX WARN: Type inference failed for: r1v2, types: [java.io.File, java.lang.Object] */
         @Override // p507d0.p580t.AbstractIterator3
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public void mo10059a() {
             T tStep;
             while (true) {
@@ -256,7 +256,7 @@ public final class FileTreeWalk implements Sequence<File> {
             }
         }
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public final a m10091c(File file) {
             int iOrdinal = FileTreeWalk.access$getDirection$p(FileTreeWalk.this).ordinal();
             if (iOrdinal == 0) {
@@ -269,11 +269,11 @@ public final class FileTreeWalk implements Sequence<File> {
         }
     }
 
-    /* compiled from: FileTreeWalk.kt */
-    /* renamed from: d0.y.d$c */
+    /* JADX INFO: renamed from: d0.y.d$c */
+    /* JADX INFO: compiled from: FileTreeWalk.kt */
     public static abstract class c {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final File f25271a;
 
         public c(File file) {

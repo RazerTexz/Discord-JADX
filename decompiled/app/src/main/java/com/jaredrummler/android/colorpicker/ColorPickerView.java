@@ -1,7 +1,6 @@
 package com.jaredrummler.android.colorpicker;
 
 import android.content.Context;
-import android.content.res.Resources;
 import android.content.res.TypedArray;
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
@@ -25,126 +24,126 @@ import androidx.core.view.ViewCompat;
 import p007b.p225i.p226a.p288f.p299e.p308o.C3404f;
 import p007b.p440k.p441a.p442a.AlphaPatternDrawable;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public class ColorPickerView extends View {
 
-    /* renamed from: A */
+    /* JADX INFO: renamed from: A */
     public int f21773A;
 
-    /* renamed from: B */
+    /* JADX INFO: renamed from: B */
     public float f21774B;
 
-    /* renamed from: C */
+    /* JADX INFO: renamed from: C */
     public float f21775C;
 
-    /* renamed from: D */
+    /* JADX INFO: renamed from: D */
     public float f21776D;
 
-    /* renamed from: E */
+    /* JADX INFO: renamed from: E */
     public boolean f21777E;
 
-    /* renamed from: F */
+    /* JADX INFO: renamed from: F */
     public String f21778F;
 
-    /* renamed from: G */
+    /* JADX INFO: renamed from: G */
     public int f21779G;
 
-    /* renamed from: H */
+    /* JADX INFO: renamed from: H */
     public int f21780H;
 
-    /* renamed from: I */
+    /* JADX INFO: renamed from: I */
     public Rect f21781I;
 
-    /* renamed from: J */
+    /* JADX INFO: renamed from: J */
     public Rect f21782J;
 
-    /* renamed from: K */
+    /* JADX INFO: renamed from: K */
     public Rect f21783K;
 
-    /* renamed from: L */
+    /* JADX INFO: renamed from: L */
     public Rect f21784L;
 
-    /* renamed from: M */
+    /* JADX INFO: renamed from: M */
     public Point f21785M;
 
-    /* renamed from: N */
+    /* JADX INFO: renamed from: N */
     public AlphaPatternDrawable f21786N;
 
-    /* renamed from: O */
+    /* JADX INFO: renamed from: O */
     public InterfaceC11166c f21787O;
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public int f21788j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public int f21789k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public int f21790l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public int f21791m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public int f21792n;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public int f21793o;
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public Paint f21794p;
 
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     public Paint f21795q;
 
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     public Paint f21796r;
 
-    /* renamed from: s */
+    /* JADX INFO: renamed from: s */
     public Paint f21797s;
 
-    /* renamed from: t */
+    /* JADX INFO: renamed from: t */
     public Paint f21798t;
 
-    /* renamed from: u */
+    /* JADX INFO: renamed from: u */
     public Paint f21799u;
 
-    /* renamed from: v */
+    /* JADX INFO: renamed from: v */
     public Shader f21800v;
 
-    /* renamed from: w */
+    /* JADX INFO: renamed from: w */
     public Shader f21801w;
 
-    /* renamed from: x */
+    /* JADX INFO: renamed from: x */
     public Shader f21802x;
 
-    /* renamed from: y */
+    /* JADX INFO: renamed from: y */
     public C11165b f21803y;
 
-    /* renamed from: z */
+    /* JADX INFO: renamed from: z */
     public C11165b f21804z;
 
-    /* renamed from: com.jaredrummler.android.colorpicker.ColorPickerView$b */
+    /* JADX INFO: renamed from: com.jaredrummler.android.colorpicker.ColorPickerView$b */
     public class C11165b {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public Canvas f21805a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public Bitmap f21806b;
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public float f21807c;
 
         public C11165b(ColorPickerView colorPickerView, C11164a c11164a) {
         }
     }
 
-    /* renamed from: com.jaredrummler.android.colorpicker.ColorPickerView$c */
+    /* JADX INFO: renamed from: com.jaredrummler.android.colorpicker.ColorPickerView$c */
     public interface InterfaceC11166c {
     }
 
-    public ColorPickerView(Context context, AttributeSet attributeSet) throws Resources.NotFoundException {
+    public ColorPickerView(Context context, AttributeSet attributeSet) {
         super(context, attributeSet, 0);
         this.f21773A = 255;
         this.f21774B = 360.0f;
@@ -206,7 +205,7 @@ public class ColorPickerView extends View {
         return C3404f.m4243S(getContext(), 200.0f) + this.f21788j + this.f21790l;
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final boolean m9276a(MotionEvent motionEvent) {
         Point point = this.f21785M;
         if (point == null) {
@@ -249,7 +248,7 @@ public class ColorPickerView extends View {
         return true;
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public void m9277b(int i, boolean z2) {
         InterfaceC11166c interfaceC11166c;
         int iAlpha = Color.alpha(i);

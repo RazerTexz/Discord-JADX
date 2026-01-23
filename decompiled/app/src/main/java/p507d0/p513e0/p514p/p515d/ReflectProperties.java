@@ -3,19 +3,19 @@ package p507d0.p513e0.p514p.p515d;
 import java.lang.ref.SoftReference;
 import kotlin.jvm.functions.Function0;
 
-/* compiled from: ReflectProperties.java */
-/* renamed from: d0.e0.p.d.c0, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.c0, reason: use source file name */
+/* JADX INFO: compiled from: ReflectProperties.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class ReflectProperties {
 
-    /* compiled from: ReflectProperties.java */
-    /* renamed from: d0.e0.p.d.c0$a */
+    /* JADX INFO: renamed from: d0.e0.p.d.c0$a */
+    /* JADX INFO: compiled from: ReflectProperties.java */
     public static class a<T> extends c<T> implements Function0<T> {
 
-        /* renamed from: k */
+        /* JADX INFO: renamed from: k */
         public final Function0<T> f22322k;
 
-        /* renamed from: l */
+        /* JADX INFO: renamed from: l */
         public volatile SoftReference<Object> f22323l;
 
         public a(T t, Function0<T> function0) {
@@ -45,14 +45,14 @@ public class ReflectProperties {
         }
     }
 
-    /* compiled from: ReflectProperties.java */
-    /* renamed from: d0.e0.p.d.c0$b */
+    /* JADX INFO: renamed from: d0.e0.p.d.c0$b */
+    /* JADX INFO: compiled from: ReflectProperties.java */
     public static class b<T> extends c<T> {
 
-        /* renamed from: k */
+        /* JADX INFO: renamed from: k */
         public final Function0<T> f22324k;
 
-        /* renamed from: l */
+        /* JADX INFO: renamed from: l */
         public volatile Object f22325l;
 
         public b(Function0<T> function0) {
@@ -78,15 +78,15 @@ public class ReflectProperties {
         }
     }
 
-    /* compiled from: ReflectProperties.java */
-    /* renamed from: d0.e0.p.d.c0$c */
+    /* JADX INFO: renamed from: d0.e0.p.d.c0$c */
+    /* JADX INFO: compiled from: ReflectProperties.java */
     public static abstract class c<T> {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public static final Object f22326j = new a();
 
-        /* compiled from: ReflectProperties.java */
-        /* renamed from: d0.e0.p.d.c0$c$a */
+        /* JADX INFO: renamed from: d0.e0.p.d.c0$c$a */
+        /* JADX INFO: compiled from: ReflectProperties.java */
         public static class a {
         }
 
@@ -97,7 +97,7 @@ public class ReflectProperties {
         public abstract T invoke();
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static /* synthetic */ void m9332a(int i) {
         Object[] objArr = new Object[3];
         objArr[0] = "initializer";

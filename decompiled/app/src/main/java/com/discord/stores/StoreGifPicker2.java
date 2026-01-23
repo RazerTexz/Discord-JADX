@@ -1,9 +1,9 @@
 package com.discord.stores;
 
 
-/* compiled from: StoreGifPicker.kt */
-/* renamed from: com.discord.stores.StoreGifPickerKt, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.stores.StoreGifPickerKt, reason: use source file name */
+/* JADX INFO: compiled from: StoreGifPicker.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class StoreGifPicker2 {
     private static final int DEFAULT_GIF_SEARCH_PAGE_SIZE = 50;
     private static final int DEFAULT_TRENDING_SEARCH_TERM_LIMIT = 5;

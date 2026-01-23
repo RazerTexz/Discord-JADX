@@ -42,27 +42,27 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 import p658rx.Observable;
 
-/* compiled from: WidgetServerSettingsModeration.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetServerSettingsModeration.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetServerSettingsModeration extends AppFragment {
     public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetServerSettingsModeration.class, "binding", "getBinding()Lcom/discord/databinding/WidgetServerSettingsModerationBinding;", 0)};
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private static final String INTENT_EXTRA_GUILD_ID = "INTENT_EXTRA_GUILD_ID";
     private static final String VERIFICATION_LEVEL_HIGH_MINUTES = "10";
     private static final String VERIFICATION_LEVEL_MEDIUM_MINUTES = "5";
 
-    /* renamed from: binding$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
 
-    /* renamed from: guildId$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: guildId$delegate, reason: from kotlin metadata */
     private final Lazy guildId;
     private final AppLogger2 loggingConfig;
     private RadioManager radioManagerExplicit;
     private RadioManager radioManagerVerification;
 
-    /* compiled from: WidgetServerSettingsModeration.kt */
+    /* JADX INFO: compiled from: WidgetServerSettingsModeration.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -80,14 +80,14 @@ public final class WidgetServerSettingsModeration extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetServerSettingsModeration.kt */
+    /* JADX INFO: compiled from: WidgetServerSettingsModeration.kt */
     public static final /* data */ class Model {
 
-        /* renamed from: Companion, reason: from kotlin metadata */
+        /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
         public static final Companion INSTANCE = new Companion(null);
         private final Guild guild;
 
-        /* compiled from: WidgetServerSettingsModeration.kt */
+        /* JADX INFO: compiled from: WidgetServerSettingsModeration.kt */
         public static final class Companion {
             private Companion() {
             }
@@ -118,7 +118,7 @@ public final class WidgetServerSettingsModeration extends AppFragment {
             return model.copy(guild);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final Guild getGuild() {
             return this.guild;
         }
@@ -155,8 +155,8 @@ public final class WidgetServerSettingsModeration extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetServerSettingsModeration.kt */
-    /* renamed from: com.discord.widgets.servers.WidgetServerSettingsModeration$configureExplicitContentRadio$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.WidgetServerSettingsModeration$configureExplicitContentRadio$1 */
+    /* JADX INFO: compiled from: WidgetServerSettingsModeration.kt */
     public static final class ViewOnClickListenerC92691 implements View.OnClickListener {
         public final /* synthetic */ GuildExplicitContentFilter $explicitContentLevel;
         public final /* synthetic */ Model $model;
@@ -172,8 +172,8 @@ public final class WidgetServerSettingsModeration extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetServerSettingsModeration.kt */
-    /* renamed from: com.discord.widgets.servers.WidgetServerSettingsModeration$configureVerificationLevelRadio$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.WidgetServerSettingsModeration$configureVerificationLevelRadio$1 */
+    /* JADX INFO: compiled from: WidgetServerSettingsModeration.kt */
     public static final class ViewOnClickListenerC92701 implements View.OnClickListener {
         public final /* synthetic */ Model $model;
         public final /* synthetic */ GuildVerificationLevel $verificationLevel;
@@ -189,8 +189,8 @@ public final class WidgetServerSettingsModeration extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetServerSettingsModeration.kt */
-    /* renamed from: com.discord.widgets.servers.WidgetServerSettingsModeration$onViewBoundOrOnResume$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.WidgetServerSettingsModeration$onViewBoundOrOnResume$1 */
+    /* JADX INFO: compiled from: WidgetServerSettingsModeration.kt */
     public static final /* synthetic */ class C92711 extends FunctionReferenceImpl implements Function1<Model, Unit> {
         public C92711(WidgetServerSettingsModeration widgetServerSettingsModeration) {
             super(1, widgetServerSettingsModeration, WidgetServerSettingsModeration.class, "configureUI", "configureUI(Lcom/discord/widgets/servers/WidgetServerSettingsModeration$Model;)V", 0);
@@ -202,14 +202,14 @@ public final class WidgetServerSettingsModeration extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Model model) {
             WidgetServerSettingsModeration.access$configureUI((WidgetServerSettingsModeration) this.receiver, model);
         }
     }
 
-    /* compiled from: WidgetServerSettingsModeration.kt */
-    /* renamed from: com.discord.widgets.servers.WidgetServerSettingsModeration$updateGuild$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.WidgetServerSettingsModeration$updateGuild$1 */
+    /* JADX INFO: compiled from: WidgetServerSettingsModeration.kt */
     public static final class C92721 extends Lambda implements Function1<com.discord.api.guild.Guild, Unit> {
         public C92721() {
             super(1);
@@ -221,7 +221,7 @@ public final class WidgetServerSettingsModeration extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(com.discord.api.guild.Guild guild) {
             Intrinsics3.checkNotNullParameter(guild, "it");
             AppToast.m171i(WidgetServerSettingsModeration.this, C5419R.string.server_settings_updated, 0, 4);

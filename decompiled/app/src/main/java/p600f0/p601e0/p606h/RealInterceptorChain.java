@@ -12,36 +12,36 @@ import p600f0.Connection2;
 import p600f0.p601e0.p605g.Exchange;
 import p600f0.p601e0.p605g.RealCall;
 
-/* compiled from: RealInterceptorChain.kt */
-/* renamed from: f0.e0.h.g, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: f0.e0.h.g, reason: use source file name */
+/* JADX INFO: compiled from: RealInterceptorChain.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class RealInterceptorChain implements Interceptor.Chain {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public int f25531a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final RealCall f25532b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final List<Interceptor> f25533c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final int f25534d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final Exchange f25535e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final Request f25536f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public final int f25537g;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public final int f25538h;
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public final int f25539i;
 
     /* JADX WARN: Multi-variable type inference failed */
@@ -59,7 +59,7 @@ public final class RealInterceptorChain implements Interceptor.Chain {
         this.f25539i = i4;
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public static RealInterceptorChain m10227d(RealInterceptorChain realInterceptorChain, int i, Exchange exchange, Request request, int i2, int i3, int i4, int i5) {
         int i6 = (i5 & 1) != 0 ? realInterceptorChain.f25534d : i;
         Exchange exchange2 = (i5 & 2) != 0 ? realInterceptorChain.f25535e : exchange;
@@ -72,7 +72,7 @@ public final class RealInterceptorChain implements Interceptor.Chain {
     }
 
     @Override // okhttp3.Interceptor.Chain
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public Response mo10228a(Request request) throws IOException {
         Intrinsics3.checkParameterIsNotNull(request, "request");
         if (!(this.f25534d < this.f25533c.size())) {
@@ -111,7 +111,7 @@ public final class RealInterceptorChain implements Interceptor.Chain {
         throw new IllegalStateException(("interceptor " + interceptor + " returned a response with no body").toString());
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public Connection2 m10229b() {
         Exchange exchange = this.f25535e;
         if (exchange != null) {
@@ -121,7 +121,7 @@ public final class RealInterceptorChain implements Interceptor.Chain {
     }
 
     @Override // okhttp3.Interceptor.Chain
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public Request mo10230c() {
         return this.f25536f;
     }

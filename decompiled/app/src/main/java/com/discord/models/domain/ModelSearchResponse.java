@@ -11,14 +11,14 @@ import p007b.p100d.p104b.p105a.outline;
 import p507d0.LazyJVM;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ModelSearchResponse.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: ModelSearchResponse.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class ModelSearchResponse {
     private final String analyticsId;
     private final Integer documentIndexed;
     private final Integer errorCode;
 
-    /* renamed from: hits$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: hits$delegate, reason: from kotlin metadata */
     private final Lazy hits;
     private final List<ThreadMember> members;
     private final String message;
@@ -43,20 +43,21 @@ public final /* data */ class ModelSearchResponse {
         this.errorCode = num;
         this.documentIndexed = num2;
         this.retryAfter = num3;
-        this.retryMillis = (num3 != null ? num3.intValue() : 0L) * 1000;
+        this.retryMillis = (num3 != null ? num3.intValue() : 0L) * ((long) 1000);
         this.hits = LazyJVM.lazy(new ModelSearchResponse2(this));
     }
 
-    /* renamed from: component9, reason: from getter */
+    /* JADX INFO: renamed from: component9, reason: from getter */
     private final Integer getRetryAfter() {
         return this.retryAfter;
     }
 
+    /* JADX WARN: Multi-variable type inference failed */
     public static /* synthetic */ ModelSearchResponse copy$default(ModelSearchResponse modelSearchResponse, int i, List list, List list2, List list3, String str, String str2, Integer num, Integer num2, Integer num3, int i2, Object obj) {
         return modelSearchResponse.copy((i2 & 1) != 0 ? modelSearchResponse.totalResults : i, (i2 & 2) != 0 ? modelSearchResponse.messages : list, (i2 & 4) != 0 ? modelSearchResponse.threads : list2, (i2 & 8) != 0 ? modelSearchResponse.members : list3, (i2 & 16) != 0 ? modelSearchResponse.analyticsId : str, (i2 & 32) != 0 ? modelSearchResponse.message : str2, (i2 & 64) != 0 ? modelSearchResponse.errorCode : num, (i2 & 128) != 0 ? modelSearchResponse.documentIndexed : num2, (i2 & 256) != 0 ? modelSearchResponse.retryAfter : num3);
     }
 
-    /* renamed from: component1, reason: from getter */
+    /* JADX INFO: renamed from: component1, reason: from getter */
     public final int getTotalResults() {
         return this.totalResults;
     }
@@ -73,22 +74,22 @@ public final /* data */ class ModelSearchResponse {
         return this.members;
     }
 
-    /* renamed from: component5, reason: from getter */
+    /* JADX INFO: renamed from: component5, reason: from getter */
     public final String getAnalyticsId() {
         return this.analyticsId;
     }
 
-    /* renamed from: component6, reason: from getter */
+    /* JADX INFO: renamed from: component6, reason: from getter */
     public final String getMessage() {
         return this.message;
     }
 
-    /* renamed from: component7, reason: from getter */
+    /* JADX INFO: renamed from: component7, reason: from getter */
     public final Integer getErrorCode() {
         return this.errorCode;
     }
 
-    /* renamed from: component8, reason: from getter */
+    /* JADX INFO: renamed from: component8, reason: from getter */
     public final Integer getDocumentIndexed() {
         return this.documentIndexed;
     }

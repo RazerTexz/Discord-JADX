@@ -2,15 +2,15 @@ package p007b.p225i.p414e;
 
 import com.discord.widgets.chat.input.MentionUtils;
 
-/* compiled from: LuminanceSource.java */
-/* renamed from: b.i.e.f, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.e.f, reason: use source file name */
+/* JADX INFO: compiled from: LuminanceSource.java */
+/* JADX INFO: loaded from: classes3.dex */
 public abstract class LuminanceSource {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final int f13186a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final int f13187b;
 
     public LuminanceSource(int i, int i2) {
@@ -18,18 +18,18 @@ public abstract class LuminanceSource {
         this.f13187b = i2;
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public abstract byte[] mo6915a();
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public abstract byte[] mo6916b(int i, byte[] bArr);
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public boolean mo6917c() {
         return false;
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public LuminanceSource mo6918d() {
         throw new UnsupportedOperationException("This luminance source does not support rotation by 90 degrees.");
     }

@@ -21,7 +21,7 @@ import androidx.view.Lifecycle;
 import androidx.view.ViewModelStoreOwner;
 import p007b.p100d.p104b.p105a.outline;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class FragmentStateManager {
     private static final String TAG = "FragmentManager";
     private static final String TARGET_REQUEST_CODE_STATE_TAG = "android:target_req_state";
@@ -37,7 +37,7 @@ public class FragmentStateManager {
     private boolean mMovingToState = false;
     private int mFragmentManagerState = -1;
 
-    /* renamed from: androidx.fragment.app.FragmentStateManager$1 */
+    /* JADX INFO: renamed from: androidx.fragment.app.FragmentStateManager$1 */
     public class ViewOnAttachStateChangeListenerC03911 implements View.OnAttachStateChangeListener {
         public final /* synthetic */ View val$fragmentView;
 
@@ -56,7 +56,7 @@ public class FragmentStateManager {
         }
     }
 
-    /* renamed from: androidx.fragment.app.FragmentStateManager$2 */
+    /* JADX INFO: renamed from: androidx.fragment.app.FragmentStateManager$2 */
     public static /* synthetic */ class C03922 {
         public static final /* synthetic */ int[] $SwitchMap$androidx$lifecycle$Lifecycle$State;
 

@@ -19,8 +19,8 @@ import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import p007b.p100d.p104b.p105a.outline;
 
+/* JADX INFO: loaded from: classes3.dex */
 @RequiresApi(21)
-/* loaded from: classes3.dex */
 public final class SlideDistanceProvider implements VisibilityAnimatorProvider {
     private static final int DEFAULT_DISTANCE = -1;
 
@@ -33,13 +33,13 @@ public final class SlideDistanceProvider implements VisibilityAnimatorProvider {
     public @interface GravityFlag {
     }
 
-    /* renamed from: com.google.android.material.transition.platform.SlideDistanceProvider$a */
+    /* JADX INFO: renamed from: com.google.android.material.transition.platform.SlideDistanceProvider$a */
     public static class C11063a extends AnimatorListenerAdapter {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final /* synthetic */ View f21399a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final /* synthetic */ float f21400b;
 
         public C11063a(View view, float f) {
@@ -53,13 +53,13 @@ public final class SlideDistanceProvider implements VisibilityAnimatorProvider {
         }
     }
 
-    /* renamed from: com.google.android.material.transition.platform.SlideDistanceProvider$b */
+    /* JADX INFO: renamed from: com.google.android.material.transition.platform.SlideDistanceProvider$b */
     public static class C11064b extends AnimatorListenerAdapter {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final /* synthetic */ View f21401a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final /* synthetic */ float f21402b;
 
         public C11064b(View view, float f) {

@@ -15,7 +15,7 @@ import androidx.media.AudioAttributesCompat;
 import java.util.Objects;
 import p007b.p100d.p104b.p105a.outline;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class AudioFocusRequestCompat {
     public static final AudioAttributesCompat FOCUS_DEFAULT_ATTR = new AudioAttributesCompat.Builder().setUsage(1).build();
     private final AudioAttributesCompat mAudioAttributesCompat;

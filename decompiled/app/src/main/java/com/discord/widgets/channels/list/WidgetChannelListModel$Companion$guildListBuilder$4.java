@@ -7,8 +7,8 @@ import java.util.Map;
 import kotlin.jvm.functions.Function1;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetChannelListModel.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetChannelListModel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetChannelListModel$Companion$guildListBuilder$4 extends Lambda implements Function1<Long, Boolean> {
     public final /* synthetic */ WidgetChannelListModel$Companion$guildListBuilder$3 $isThreadUnread$3;
     public final /* synthetic */ Map $threadParentMap;

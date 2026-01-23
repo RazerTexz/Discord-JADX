@@ -8,9 +8,9 @@ import com.discord.utilities.views.ViewCoroutineScope;
 import com.discord.widgets.stage.StageChannelJoinHelper;
 import p007b.p100d.p104b.p105a.outline;
 
-/* compiled from: ViewHolderStageChannelRichPresence.kt */
-/* renamed from: com.discord.widgets.user.presence.ViewHolderStageChannelRichPresence$configureButtonUi$$inlined$apply$lambda$1, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: com.discord.widgets.user.presence.ViewHolderStageChannelRichPresence$configureButtonUi$$inlined$apply$lambda$1, reason: use source file name */
+/* JADX INFO: compiled from: ViewHolderStageChannelRichPresence.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class ViewHolderStageChannelRichPresence2 implements View.OnClickListener {
     public final /* synthetic */ FragmentManager $fragmentManager$inlined;
     public final /* synthetic */ boolean $isMe$inlined;

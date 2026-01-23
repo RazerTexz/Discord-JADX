@@ -9,8 +9,8 @@ import androidx.annotation.Nullable;
 import androidx.annotation.RequiresApi;
 import p007b.p225i.p226a.p341g.p353l.p354l.MaterialVisibility2;
 
+/* JADX INFO: loaded from: classes3.dex */
 @RequiresApi(21)
-/* loaded from: classes3.dex */
 public final class MaterialFadeThrough extends MaterialVisibility2<FadeThroughProvider> {
     private static final float DEFAULT_START_SCALE = 0.92f;
 

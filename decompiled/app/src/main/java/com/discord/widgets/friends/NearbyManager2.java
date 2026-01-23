@@ -5,9 +5,9 @@ import com.discord.widgets.friends.NearbyManager;
 import java.util.HashSet;
 import p007b.p225i.p226a.p288f.p333j.p334b.C4266c;
 
-/* compiled from: NearbyManager.kt */
-/* renamed from: com.discord.widgets.friends.NearbyManager$buildClient$$inlined$also$lambda$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.friends.NearbyManager$buildClient$$inlined$also$lambda$1, reason: use source file name */
+/* JADX INFO: compiled from: NearbyManager.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class NearbyManager2 extends C4266c {
     public final /* synthetic */ NearbyManager this$0;
 

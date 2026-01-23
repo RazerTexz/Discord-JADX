@@ -9,9 +9,9 @@ import android.os.RemoteException;
 import com.google.android.gms.common.api.Status;
 import p007b.p085c.p086a.p087a0.AnimatableValueParser;
 
-/* compiled from: com.google.android.gms:play-services-auth-api-phone@@17.4.0 */
-/* renamed from: b.i.a.f.h.b.a */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.h.b.a */
+/* JADX INFO: compiled from: com.google.android.gms:play-services-auth-api-phone@@17.4.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public class BinderC3441a extends Binder implements IInterface {
     public BinderC3441a(String str) {
         attachInterface(this, str);

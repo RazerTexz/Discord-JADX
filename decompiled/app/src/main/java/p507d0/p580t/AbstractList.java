@@ -11,16 +11,16 @@ import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.p595g0.KMarkers;
 
-/* compiled from: AbstractList.kt */
-/* renamed from: d0.t.c, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.t.c, reason: use source file name */
+/* JADX INFO: compiled from: AbstractList.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public abstract class AbstractList<E> extends AbstractCollection<E> implements List<E>, KMarkers {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static final a f25177j = new a(null);
 
-    /* compiled from: AbstractList.kt */
-    /* renamed from: d0.t.c$a */
+    /* JADX INFO: renamed from: d0.t.c$a */
+    /* JADX INFO: compiled from: AbstractList.kt */
     public static final class a {
         public a(DefaultConstructorMarker defaultConstructorMarker) {
         }
@@ -76,11 +76,11 @@ public abstract class AbstractList<E> extends AbstractCollection<E> implements L
         }
     }
 
-    /* compiled from: AbstractList.kt */
-    /* renamed from: d0.t.c$b */
+    /* JADX INFO: renamed from: d0.t.c$b */
+    /* JADX INFO: compiled from: AbstractList.kt */
     public class b implements Iterator<E>, KMarkers {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public int f25178j;
 
         public b() {
@@ -108,8 +108,8 @@ public abstract class AbstractList<E> extends AbstractCollection<E> implements L
         }
     }
 
-    /* compiled from: AbstractList.kt */
-    /* renamed from: d0.t.c$c */
+    /* JADX INFO: renamed from: d0.t.c$c */
+    /* JADX INFO: compiled from: AbstractList.kt */
     public class c extends AbstractList<E>.b implements ListIterator<E>, KMarkers {
         public c(int i) {
             super();
@@ -154,17 +154,17 @@ public abstract class AbstractList<E> extends AbstractCollection<E> implements L
         }
     }
 
-    /* compiled from: AbstractList.kt */
-    /* renamed from: d0.t.c$d */
+    /* JADX INFO: renamed from: d0.t.c$d */
+    /* JADX INFO: compiled from: AbstractList.kt */
     public static final class d<E> extends AbstractList<E> implements RandomAccess {
 
-        /* renamed from: k */
+        /* JADX INFO: renamed from: k */
         public int f25181k;
 
-        /* renamed from: l */
+        /* JADX INFO: renamed from: l */
         public final AbstractList<E> f25182l;
 
-        /* renamed from: m */
+        /* JADX INFO: renamed from: m */
         public final int f25183m;
 
         /* JADX WARN: Multi-variable type inference failed */

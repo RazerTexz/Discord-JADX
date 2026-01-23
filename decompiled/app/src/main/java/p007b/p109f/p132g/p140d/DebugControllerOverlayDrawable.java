@@ -15,84 +15,84 @@ import java.util.Map;
 import p007b.p100d.p104b.p105a.outline;
 import p007b.p109f.p132g.p140d.p141b.ImageLoadingTimeListener;
 
-/* compiled from: DebugControllerOverlayDrawable.java */
-/* renamed from: b.f.g.d.a, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.f.g.d.a, reason: use source file name */
+/* JADX INFO: compiled from: DebugControllerOverlayDrawable.java */
+/* JADX INFO: loaded from: classes.dex */
 public class DebugControllerOverlayDrawable extends Drawable implements ImageLoadingTimeListener {
 
-    /* renamed from: A */
+    /* JADX INFO: renamed from: A */
     public int f3299A;
 
-    /* renamed from: B */
+    /* JADX INFO: renamed from: B */
     public long f3300B;
 
-    /* renamed from: C */
+    /* JADX INFO: renamed from: C */
     public String f3301C;
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public String f3303j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public int f3304k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public int f3305l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public int f3306m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public ScalingUtils$ScaleType f3307n;
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public int f3309p;
 
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     public int f3310q;
 
-    /* renamed from: w */
+    /* JADX INFO: renamed from: w */
     public int f3316w;
 
-    /* renamed from: x */
+    /* JADX INFO: renamed from: x */
     public int f3317x;
 
-    /* renamed from: y */
+    /* JADX INFO: renamed from: y */
     public int f3318y;
 
-    /* renamed from: z */
+    /* JADX INFO: renamed from: z */
     public int f3319z;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public HashMap<String, String> f3308o = new HashMap<>();
 
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     public int f3311r = 80;
 
-    /* renamed from: s */
+    /* JADX INFO: renamed from: s */
     public final Paint f3312s = new Paint(1);
 
-    /* renamed from: t */
+    /* JADX INFO: renamed from: t */
     public final Matrix f3313t = new Matrix();
 
-    /* renamed from: u */
+    /* JADX INFO: renamed from: u */
     public final Rect f3314u = new Rect();
 
-    /* renamed from: v */
+    /* JADX INFO: renamed from: v */
     public final RectF f3315v = new RectF();
 
-    /* renamed from: D */
+    /* JADX INFO: renamed from: D */
     public int f3302D = -1;
 
     public DebugControllerOverlayDrawable() {
         m1089c();
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static String m1087b(String str, Object... objArr) {
         return String.format(Locale.US, str, objArr);
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final void m1088a(Canvas canvas, String str, String str2, int i) {
         String strM883w = outline.m883w(str, ": ");
         float fMeasureText = this.f3312s.measureText(strM883w);
@@ -108,7 +108,7 @@ public class DebugControllerOverlayDrawable extends Drawable implements ImageLoa
         this.f3299A += this.f3318y;
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public void m1089c() {
         this.f3304k = -1;
         this.f3305l = -1;

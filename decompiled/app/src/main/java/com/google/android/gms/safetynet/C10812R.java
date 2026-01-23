@@ -1,7 +1,7 @@
 package com.google.android.gms.safetynet;
 
-/* renamed from: com.google.android.gms.safetynet.R */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: com.google.android.gms.safetynet.R */
+/* JADX INFO: loaded from: classes3.dex */
 public final class C10812R {
     private C10812R() {
     }

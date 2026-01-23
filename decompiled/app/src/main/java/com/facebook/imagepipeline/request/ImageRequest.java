@@ -22,83 +22,83 @@ import p007b.p109f.p161j.p169d.RotationOptions;
 import p007b.p109f.p161j.p176k.RequestListener;
 import p007b.p109f.p161j.p182q.Postprocessor;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public class ImageRequest {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final Fn<ImageRequest, Uri> f19583a = new C10665a();
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final EnumC10666b f19584b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final Uri f19585c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final int f19586d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public File f19587e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final boolean f19588f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public final boolean f19589g;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public final boolean f19590h;
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public final ImageDecodeOptions f19591i;
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final ResizeOptions f19592j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final RotationOptions f19593k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final BytesRange f19594l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public final Priority2 f19595m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public final EnumC10667c f19596n;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public final int f19597o;
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public final boolean f19598p;
 
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     public final boolean f19599q;
 
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     public final Boolean f19600r;
 
-    /* renamed from: s */
+    /* JADX INFO: renamed from: s */
     public final Postprocessor f19601s;
 
-    /* renamed from: t */
+    /* JADX INFO: renamed from: t */
     public final RequestListener f19602t;
 
-    /* renamed from: u */
+    /* JADX INFO: renamed from: u */
     public final int f19603u;
 
-    /* renamed from: com.facebook.imagepipeline.request.ImageRequest$a */
+    /* JADX INFO: renamed from: com.facebook.imagepipeline.request.ImageRequest$a */
     public static class C10665a implements Fn<ImageRequest, Uri> {
     }
 
-    /* renamed from: com.facebook.imagepipeline.request.ImageRequest$b */
+    /* JADX INFO: renamed from: com.facebook.imagepipeline.request.ImageRequest$b */
     public enum EnumC10666b {
         SMALL,
         DEFAULT
     }
 
-    /* renamed from: com.facebook.imagepipeline.request.ImageRequest$c */
+    /* JADX INFO: renamed from: com.facebook.imagepipeline.request.ImageRequest$c */
     public enum EnumC10667c {
         FULL_FETCH(1),
         DISK_CACHE(2),
@@ -111,12 +111,12 @@ public class ImageRequest {
             this.mValue = i;
         }
 
-        /* renamed from: f */
+        /* JADX INFO: renamed from: f */
         public static EnumC10667c m8721f(EnumC10667c enumC10667c, EnumC10667c enumC10667c2) {
             return enumC10667c.mValue > enumC10667c2.mValue ? enumC10667c : enumC10667c2;
         }
 
-        /* renamed from: g */
+        /* JADX INFO: renamed from: g */
         public int m8722g() {
             return this.mValue;
         }
@@ -178,7 +178,7 @@ public class ImageRequest {
         this.f19603u = imageRequestBuilder.f19627p;
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public synchronized File m8719a() {
         if (this.f19587e == null) {
             this.f19587e = new File(this.f19585c.getPath());
@@ -186,7 +186,7 @@ public class ImageRequest {
         return this.f19587e;
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public boolean m8720b(int i) {
         return (i & this.f19597o) == 0;
     }

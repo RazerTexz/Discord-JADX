@@ -13,7 +13,7 @@ import java.util.Collections;
 import java.util.Iterator;
 import java.util.List;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public final class ShareTarget {
     public static final String ENCODING_TYPE_MULTIPART = "multipart/form-data";
     public static final String ENCODING_TYPE_URL_ENCODED = "application/x-www-form-urlencoded";

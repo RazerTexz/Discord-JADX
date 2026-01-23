@@ -21,19 +21,19 @@ import p507d0.p592z.p594d.Lambda;
 import p658rx.Observable;
 import p658rx.subjects.PublishSubject;
 
-/* compiled from: LeaveGuildDialogViewModel.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: LeaveGuildDialogViewModel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class LeaveGuildDialogViewModel extends AppViewModel<ViewState> {
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private final PublishSubject<Event> eventSubject;
     private final long guildId;
     private final StoreLurking lurkingStore;
     private final RestAPI restAPI;
 
-    /* compiled from: LeaveGuildDialogViewModel.kt */
-    /* renamed from: com.discord.widgets.guilds.leave.LeaveGuildDialogViewModel$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.guilds.leave.LeaveGuildDialogViewModel$1 */
+    /* JADX INFO: compiled from: LeaveGuildDialogViewModel.kt */
     public static final /* synthetic */ class C87251 extends FunctionReferenceImpl implements Function1<StoreState, Unit> {
         public C87251(LeaveGuildDialogViewModel leaveGuildDialogViewModel) {
             super(1, leaveGuildDialogViewModel, LeaveGuildDialogViewModel.class, "handleStoreState", "handleStoreState(Lcom/discord/widgets/guilds/leave/LeaveGuildDialogViewModel$StoreState;)V", 0);
@@ -45,14 +45,14 @@ public final class LeaveGuildDialogViewModel extends AppViewModel<ViewState> {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(StoreState storeState) {
             Intrinsics3.checkNotNullParameter(storeState, "p1");
             LeaveGuildDialogViewModel.access$handleStoreState((LeaveGuildDialogViewModel) this.receiver, storeState);
         }
     }
 
-    /* compiled from: LeaveGuildDialogViewModel.kt */
+    /* JADX INFO: compiled from: LeaveGuildDialogViewModel.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -72,10 +72,10 @@ public final class LeaveGuildDialogViewModel extends AppViewModel<ViewState> {
         }
     }
 
-    /* compiled from: LeaveGuildDialogViewModel.kt */
+    /* JADX INFO: compiled from: LeaveGuildDialogViewModel.kt */
     public static abstract class Event {
 
-        /* compiled from: LeaveGuildDialogViewModel.kt */
+        /* JADX INFO: compiled from: LeaveGuildDialogViewModel.kt */
         public static final class Dismiss extends Event {
             public static final Dismiss INSTANCE = new Dismiss();
 
@@ -92,10 +92,10 @@ public final class LeaveGuildDialogViewModel extends AppViewModel<ViewState> {
         }
     }
 
-    /* compiled from: LeaveGuildDialogViewModel.kt */
+    /* JADX INFO: compiled from: LeaveGuildDialogViewModel.kt */
     public static abstract class StoreState {
 
-        /* compiled from: LeaveGuildDialogViewModel.kt */
+        /* JADX INFO: compiled from: LeaveGuildDialogViewModel.kt */
         public static final class Invalid extends StoreState {
             public static final Invalid INSTANCE = new Invalid();
 
@@ -104,7 +104,7 @@ public final class LeaveGuildDialogViewModel extends AppViewModel<ViewState> {
             }
         }
 
-        /* compiled from: LeaveGuildDialogViewModel.kt */
+        /* JADX INFO: compiled from: LeaveGuildDialogViewModel.kt */
         public static final /* data */ class Valid extends StoreState {
             private final Guild guild;
             private final boolean isLurking;
@@ -127,12 +127,12 @@ public final class LeaveGuildDialogViewModel extends AppViewModel<ViewState> {
                 return valid.copy(guild, z2);
             }
 
-            /* renamed from: component1, reason: from getter */
+            /* JADX INFO: renamed from: component1, reason: from getter */
             public final Guild getGuild() {
                 return this.guild;
             }
 
-            /* renamed from: component2, reason: from getter */
+            /* JADX INFO: renamed from: component2, reason: from getter */
             public final boolean getIsLurking() {
                 return this.isLurking;
             }
@@ -158,15 +158,18 @@ public final class LeaveGuildDialogViewModel extends AppViewModel<ViewState> {
             }
 
             /* JADX WARN: Multi-variable type inference failed */
+            /* JADX WARN: Type inference failed for: r1v1, types: [int] */
+            /* JADX WARN: Type inference failed for: r1v2 */
+            /* JADX WARN: Type inference failed for: r1v3 */
             public int hashCode() {
                 Guild guild = this.guild;
                 int iHashCode = (guild != null ? guild.hashCode() : 0) * 31;
                 boolean z2 = this.isLurking;
-                int i = z2;
-                if (z2 != 0) {
-                    i = 1;
+                ?? r1 = z2;
+                if (z2) {
+                    r1 = 1;
                 }
-                return iHashCode + i;
+                return iHashCode + r1;
             }
 
             public final boolean isLurking() {
@@ -189,10 +192,10 @@ public final class LeaveGuildDialogViewModel extends AppViewModel<ViewState> {
         }
     }
 
-    /* compiled from: LeaveGuildDialogViewModel.kt */
+    /* JADX INFO: compiled from: LeaveGuildDialogViewModel.kt */
     public static abstract class ViewState {
 
-        /* compiled from: LeaveGuildDialogViewModel.kt */
+        /* JADX INFO: compiled from: LeaveGuildDialogViewModel.kt */
         public static final class Invalid extends ViewState {
             public static final Invalid INSTANCE = new Invalid();
 
@@ -201,7 +204,7 @@ public final class LeaveGuildDialogViewModel extends AppViewModel<ViewState> {
             }
         }
 
-        /* compiled from: LeaveGuildDialogViewModel.kt */
+        /* JADX INFO: compiled from: LeaveGuildDialogViewModel.kt */
         public static final /* data */ class Valid extends ViewState {
             private final Guild guild;
             private final boolean isLoading;
@@ -229,17 +232,17 @@ public final class LeaveGuildDialogViewModel extends AppViewModel<ViewState> {
                 return valid.copy(guild, z2, z3);
             }
 
-            /* renamed from: component1, reason: from getter */
+            /* JADX INFO: renamed from: component1, reason: from getter */
             public final Guild getGuild() {
                 return this.guild;
             }
 
-            /* renamed from: component2, reason: from getter */
+            /* JADX INFO: renamed from: component2, reason: from getter */
             public final boolean getIsLoading() {
                 return this.isLoading;
             }
 
-            /* renamed from: component3, reason: from getter */
+            /* JADX INFO: renamed from: component3, reason: from getter */
             public final boolean getIsLurking() {
                 return this.isLurking;
             }
@@ -265,17 +268,23 @@ public final class LeaveGuildDialogViewModel extends AppViewModel<ViewState> {
             }
 
             /* JADX WARN: Multi-variable type inference failed */
+            /* JADX WARN: Type inference failed for: r1v1, types: [int] */
+            /* JADX WARN: Type inference failed for: r1v3 */
+            /* JADX WARN: Type inference failed for: r1v4 */
+            /* JADX WARN: Type inference failed for: r2v0 */
+            /* JADX WARN: Type inference failed for: r2v1, types: [int] */
+            /* JADX WARN: Type inference failed for: r2v2 */
             public int hashCode() {
                 Guild guild = this.guild;
                 int iHashCode = (guild != null ? guild.hashCode() : 0) * 31;
                 boolean z2 = this.isLoading;
-                int i = z2;
-                if (z2 != 0) {
-                    i = 1;
+                ?? r1 = z2;
+                if (z2) {
+                    r1 = 1;
                 }
-                int i2 = (iHashCode + i) * 31;
+                int i = (iHashCode + r1) * 31;
                 boolean z3 = this.isLurking;
-                return i2 + (z3 ? 1 : z3 ? 1 : 0);
+                return i + (z3 ? 1 : z3);
             }
 
             public final boolean isLoading() {
@@ -304,8 +313,8 @@ public final class LeaveGuildDialogViewModel extends AppViewModel<ViewState> {
         }
     }
 
-    /* compiled from: LeaveGuildDialogViewModel.kt */
-    /* renamed from: com.discord.widgets.guilds.leave.LeaveGuildDialogViewModel$leaveGuild$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.guilds.leave.LeaveGuildDialogViewModel$leaveGuild$1 */
+    /* JADX INFO: compiled from: LeaveGuildDialogViewModel.kt */
     public static final class C87261 extends Lambda implements Function0<Unit> {
         public C87261() {
             super(0);
@@ -317,14 +326,14 @@ public final class LeaveGuildDialogViewModel extends AppViewModel<ViewState> {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             LeaveGuildDialogViewModel.access$onLeaveSucceeded(LeaveGuildDialogViewModel.this);
         }
     }
 
-    /* compiled from: LeaveGuildDialogViewModel.kt */
-    /* renamed from: com.discord.widgets.guilds.leave.LeaveGuildDialogViewModel$leaveGuild$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.guilds.leave.LeaveGuildDialogViewModel$leaveGuild$2 */
+    /* JADX INFO: compiled from: LeaveGuildDialogViewModel.kt */
     public static final class C87272 extends Lambda implements Function0<Unit> {
         public C87272() {
             super(0);
@@ -336,14 +345,14 @@ public final class LeaveGuildDialogViewModel extends AppViewModel<ViewState> {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             LeaveGuildDialogViewModel.access$onLeaveFailed(LeaveGuildDialogViewModel.this);
         }
     }
 
-    /* compiled from: LeaveGuildDialogViewModel.kt */
-    /* renamed from: com.discord.widgets.guilds.leave.LeaveGuildDialogViewModel$leaveGuild$3 */
+    /* JADX INFO: renamed from: com.discord.widgets.guilds.leave.LeaveGuildDialogViewModel$leaveGuild$3 */
+    /* JADX INFO: compiled from: LeaveGuildDialogViewModel.kt */
     public static final class C87283 extends Lambda implements Function1<Void, Unit> {
         public C87283() {
             super(1);
@@ -355,14 +364,14 @@ public final class LeaveGuildDialogViewModel extends AppViewModel<ViewState> {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Void r1) {
             LeaveGuildDialogViewModel.access$onLeaveSucceeded(LeaveGuildDialogViewModel.this);
         }
     }
 
-    /* compiled from: LeaveGuildDialogViewModel.kt */
-    /* renamed from: com.discord.widgets.guilds.leave.LeaveGuildDialogViewModel$leaveGuild$4 */
+    /* JADX INFO: renamed from: com.discord.widgets.guilds.leave.LeaveGuildDialogViewModel$leaveGuild$4 */
+    /* JADX INFO: compiled from: LeaveGuildDialogViewModel.kt */
     public static final class C87294 extends Lambda implements Function1<Error, Unit> {
         public C87294() {
             super(1);
@@ -374,7 +383,7 @@ public final class LeaveGuildDialogViewModel extends AppViewModel<ViewState> {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Error error) {
             Intrinsics3.checkNotNullParameter(error, "it");
             LeaveGuildDialogViewModel.access$onLeaveFailed(LeaveGuildDialogViewModel.this);

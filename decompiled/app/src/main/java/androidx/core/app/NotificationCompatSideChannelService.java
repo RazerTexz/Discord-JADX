@@ -8,7 +8,7 @@ import android.os.IBinder;
 import android.os.RemoteException;
 import p668x.p669a.p672b.p673a.INotificationSideChannel;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public abstract class NotificationCompatSideChannelService extends Service {
 
     public class NotificationSideChannelStub extends INotificationSideChannel.a {

@@ -3,9 +3,9 @@ package com.discord.widgets.home;
 import android.view.View;
 import com.discord.databinding.WidgetHomeBinding;
 
-/* compiled from: WidgetHomeHeaderManager.kt */
-/* renamed from: com.discord.widgets.home.WidgetHomeHeaderManager$configure$$inlined$apply$lambda$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.home.WidgetHomeHeaderManager$configure$$inlined$apply$lambda$1, reason: use source file name */
+/* JADX INFO: compiled from: WidgetHomeHeaderManager.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetHomeHeaderManager2 implements View.OnClickListener {
     public final /* synthetic */ WidgetHomeBinding $binding$inlined;
     public final /* synthetic */ WidgetHomeModel $model$inlined;

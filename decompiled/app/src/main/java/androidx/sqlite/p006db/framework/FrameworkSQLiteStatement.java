@@ -3,7 +3,7 @@ package androidx.sqlite.p006db.framework;
 import android.database.sqlite.SQLiteStatement;
 import androidx.sqlite.p006db.SupportSQLiteStatement;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class FrameworkSQLiteStatement extends FrameworkSQLiteProgram implements SupportSQLiteStatement {
     private final SQLiteStatement mDelegate;
 

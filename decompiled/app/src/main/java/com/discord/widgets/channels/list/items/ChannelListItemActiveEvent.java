@@ -2,8 +2,8 @@ package com.discord.widgets.channels.list.items;
 
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ChannelListItemActiveEvent.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: ChannelListItemActiveEvent.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class ChannelListItemActiveEvent implements ChannelListItem {
     private final ChannelListItemActiveEvent2 data;
     private final String key;

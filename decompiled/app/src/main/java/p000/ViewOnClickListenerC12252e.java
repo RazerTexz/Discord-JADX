@@ -4,18 +4,18 @@ import android.view.View;
 import com.lytefast.flexinput.adapters.AttachmentPreviewAdapter;
 import com.lytefast.flexinput.model.Attachment;
 
-/* compiled from: java-style lambda group */
-/* renamed from: e */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: e */
+/* JADX INFO: compiled from: java-style lambda group */
+/* JADX INFO: loaded from: classes.dex */
 public final class ViewOnClickListenerC12252e implements View.OnClickListener {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final /* synthetic */ int f25293j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final /* synthetic */ Object f25294k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final /* synthetic */ Object f25295l;
 
     public ViewOnClickListenerC12252e(int i, Object obj, Object obj2) {

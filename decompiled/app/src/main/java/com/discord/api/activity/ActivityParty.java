@@ -5,8 +5,8 @@ import java.util.List;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ActivityParty.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: ActivityParty.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class ActivityParty {
     private final String id;
     private final List<Long> size;
@@ -16,12 +16,12 @@ public final /* data */ class ActivityParty {
         this.size = list;
     }
 
-    /* renamed from: a, reason: from getter */
+    /* JADX INFO: renamed from: a, reason: from getter */
     public final String getId() {
         return this.id;
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final List<Long> m7559b() {
         return this.size;
     }

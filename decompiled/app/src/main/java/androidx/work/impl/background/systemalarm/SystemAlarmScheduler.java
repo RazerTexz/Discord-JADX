@@ -7,8 +7,8 @@ import androidx.work.Logger;
 import androidx.work.impl.Scheduler;
 import androidx.work.impl.model.WorkSpec;
 
+/* JADX INFO: loaded from: classes.dex */
 @RestrictTo({RestrictTo.Scope.LIBRARY_GROUP})
-/* loaded from: classes.dex */
 public class SystemAlarmScheduler implements Scheduler {
     private static final String TAG = Logger.tagWithPrefix("SystemAlarmScheduler");
     private final Context mContext;

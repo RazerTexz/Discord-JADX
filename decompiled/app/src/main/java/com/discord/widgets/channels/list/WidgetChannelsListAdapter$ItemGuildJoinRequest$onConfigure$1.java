@@ -9,14 +9,14 @@ import kotlin.jvm.functions.Function0;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetChannelsListAdapter.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetChannelsListAdapter.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetChannelsListAdapter$ItemGuildJoinRequest$onConfigure$1 implements View.OnClickListener {
     public final /* synthetic */ Context $context;
     public final /* synthetic */ WidgetChannelsListAdapter.ItemGuildJoinRequest this$0;
 
-    /* compiled from: WidgetChannelsListAdapter.kt */
-    /* renamed from: com.discord.widgets.channels.list.WidgetChannelsListAdapter$ItemGuildJoinRequest$onConfigure$1$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.channels.list.WidgetChannelsListAdapter$ItemGuildJoinRequest$onConfigure$1$1 */
+    /* JADX INFO: compiled from: WidgetChannelsListAdapter.kt */
     public static final class C74461 extends Lambda implements Function0<Unit> {
         public static final C74461 INSTANCE = new C74461();
 
@@ -30,7 +30,7 @@ public final class WidgetChannelsListAdapter$ItemGuildJoinRequest$onConfigure$1 
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
         }
     }

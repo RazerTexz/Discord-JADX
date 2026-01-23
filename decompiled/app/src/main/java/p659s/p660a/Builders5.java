@@ -13,14 +13,14 @@ import p507d0.p584w.p586i.p587a.DebugMetadata;
 import p507d0.p584w.p586i.p587a.DebugProbes;
 import p507d0.p592z.p594d.TypeIntrinsics;
 
-/* compiled from: Builders.kt */
-/* renamed from: s.a.h, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: s.a.h, reason: use source file name */
+/* JADX INFO: compiled from: Builders.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final /* synthetic */ class Builders5 {
 
-    /* compiled from: Timeout.kt */
+    /* JADX INFO: renamed from: s.a.h$a */
+    /* JADX INFO: compiled from: Timeout.kt */
     @DebugMetadata(m10084c = "kotlinx.coroutines.TimeoutKt", m10085f = "Timeout.kt", m10086l = {101}, m10087m = "withTimeoutOrNull")
-    /* renamed from: s.a.h$a */
     public static final class a extends ContinuationImpl3 {
         public long J$0;
         public Object L$0;
@@ -40,7 +40,7 @@ public final /* synthetic */ class Builders5 {
         }
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final <U, T extends U> Object m11282a(Timeout4<U, ? super T> timeout4, Function2<? super CoroutineScope, ? super Continuation<? super T>, ? extends Object> function2) throws Throwable {
         Object completionState2;
         Object objM11295R;
@@ -72,7 +72,7 @@ public final /* synthetic */ class Builders5 {
 
     /* JADX WARN: Removed duplicated region for block: B:7:0x0013  */
     /* JADX WARN: Type inference failed for: r2v1, types: [T, s.a.x1] */
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */

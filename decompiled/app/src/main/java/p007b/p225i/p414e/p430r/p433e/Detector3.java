@@ -6,21 +6,21 @@ import java.util.List;
 import p007b.p225i.p414e.ResultPoint;
 import p007b.p225i.p414e.p418n.BitMatrix;
 
-/* compiled from: Detector.java */
-/* renamed from: b.i.e.r.e.a, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.e.r.e.a, reason: use source file name */
+/* JADX INFO: compiled from: Detector.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class Detector3 {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final int[] f13504a = {0, 4, 1, 5};
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static final int[] f13505b = {6, 2, 7, 3};
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public static final int[] f13506c = {8, 1, 1, 1, 1, 1, 1, 3};
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public static final int[] f13507d = {7, 1, 1, 3, 1, 1, 1, 2, 1};
 
     /* JADX WARN: Code restructure failed: missing block: B:22:0x0068, code lost:
@@ -55,7 +55,7 @@ public final class Detector3 {
     
         r10 = java.lang.Math.max(r10, (int) r2[3].f13208b);
      */
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
@@ -114,7 +114,7 @@ public final class Detector3 {
         return arrayList;
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static int[] m7081b(BitMatrix bitMatrix, int i, int i2, int i3, boolean z2, int[] iArr, int[] iArr2) {
         Arrays.fill(iArr2, 0, iArr2.length, 0);
         int i4 = 0;
@@ -158,7 +158,7 @@ public final class Detector3 {
         return new int[]{i7, i - 1};
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public static ResultPoint[] m7082c(BitMatrix bitMatrix, int i, int i2, int i3, int i4, int[] iArr) {
         boolean z2;
         int i5;
@@ -236,7 +236,7 @@ public final class Detector3 {
         return resultPointArr;
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public static float m7083d(int[] iArr, int[] iArr2, float f) {
         int length = iArr.length;
         int i = 0;

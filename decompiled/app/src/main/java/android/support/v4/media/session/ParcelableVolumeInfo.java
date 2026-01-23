@@ -4,27 +4,27 @@ import android.annotation.SuppressLint;
 import android.os.Parcel;
 import android.os.Parcelable;
 
+/* JADX INFO: loaded from: classes.dex */
 @SuppressLint({"BanParcelableUsage"})
-/* loaded from: classes.dex */
 public class ParcelableVolumeInfo implements Parcelable {
     public static final Parcelable.Creator<ParcelableVolumeInfo> CREATOR = new C0025a();
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public int f54j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public int f55k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public int f56l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public int f57m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public int f58n;
 
-    /* renamed from: android.support.v4.media.session.ParcelableVolumeInfo$a */
+    /* JADX INFO: renamed from: android.support.v4.media.session.ParcelableVolumeInfo$a */
     public class C0025a implements Parcelable.Creator<ParcelableVolumeInfo> {
         @Override // android.os.Parcelable.Creator
         public ParcelableVolumeInfo createFromParcel(Parcel parcel) {

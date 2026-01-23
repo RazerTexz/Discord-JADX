@@ -29,31 +29,31 @@ import p007b.p225i.p226a.p242c.p259f3.ParsableByteArray;
 import p007b.p225i.p226a.p242c.p259f3.Util2;
 import p007b.p225i.p226a.p288f.p299e.p308o.C3404f;
 
-/* compiled from: SsaDecoder.java */
-/* renamed from: b.i.a.c.b3.r.a, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.b3.r.a, reason: use source file name */
+/* JADX INFO: compiled from: SsaDecoder.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class SsaDecoder extends SimpleSubtitleDecoder2 {
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public static final Pattern f5986n = Pattern.compile("(?:(\\d+):)?(\\d+):(\\d+)[:.](\\d+)");
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public final boolean f5987o;
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     @Nullable
     public final SsaDialogueFormat f5988p;
 
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     public Map<String, SsaStyle> f5989q;
 
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     public float f5990r;
 
-    /* renamed from: s */
+    /* JADX INFO: renamed from: s */
     public float f5991s;
 
-    public SsaDecoder(@Nullable List<byte[]> list) throws NumberFormatException {
+    public SsaDecoder(@Nullable List<byte[]> list) {
         super("SsaDecoder");
         this.f5990r = -3.4028235E38f;
         this.f5991s = -3.4028235E38f;
@@ -71,7 +71,7 @@ public final class SsaDecoder extends SimpleSubtitleDecoder2 {
         m2671m(new ParsableByteArray(list.get(1)));
     }
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public static int m2668k(long j, List<Long> list, List<List<Cue>> list2) {
         int i;
         int size = list.size() - 1;
@@ -94,7 +94,7 @@ public final class SsaDecoder extends SimpleSubtitleDecoder2 {
         return i;
     }
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public static float m2669l(int i) {
         if (i == 0) {
             return 0.05f;
@@ -105,7 +105,7 @@ public final class SsaDecoder extends SimpleSubtitleDecoder2 {
         return 0.5f;
     }
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public static long m2670n(String str) {
         Matcher matcher = f5986n.matcher(str.trim());
         if (!matcher.matches()) {
@@ -117,8 +117,8 @@ public final class SsaDecoder extends SimpleSubtitleDecoder2 {
     }
 
     @Override // p007b.p225i.p226a.p242c.p245b3.SimpleSubtitleDecoder2
-    /* renamed from: j */
-    public Subtitle mo2617j(byte[] bArr, int i, boolean z2) throws NumberFormatException {
+    /* JADX INFO: renamed from: j */
+    public Subtitle mo2617j(byte[] bArr, int i, boolean z2) {
         ParsableByteArray parsableByteArray;
         SsaDialogueFormat ssaDialogueFormat;
         long j;
@@ -372,11 +372,11 @@ public final class SsaDecoder extends SimpleSubtitleDecoder2 {
     /* JADX WARN: Removed duplicated region for block: B:140:0x0277  */
     /* JADX WARN: Removed duplicated region for block: B:147:0x0293  */
     /* JADX WARN: Removed duplicated region for block: B:75:0x012f  */
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
-    public final void m2671m(ParsableByteArray parsableByteArray) throws NumberFormatException {
+    public final void m2671m(ParsableByteArray parsableByteArray) {
         SsaStyle ssaStyle;
         String strTrim;
         int iM2673a;
@@ -486,6 +486,7 @@ public final class SsaDecoder extends SimpleSubtitleDecoder2 {
                                                 i = aVar.f6008d;
                                             } catch (RuntimeException e) {
                                                 Log2.m3040c("SsaStyle", outline.m859k(strM3087g3.length() + 36, "Skipping malformed 'Style:' line: '", strM3087g3, "'"), e);
+                                                ssaStyle = null;
                                             }
                                             if (i != -1) {
                                                 String strTrim2 = strArrSplit3[i].trim();
@@ -497,6 +498,7 @@ public final class SsaDecoder extends SimpleSubtitleDecoder2 {
                                                     sb.append(strTrim2);
                                                     sb.append("'");
                                                     Log2.m3040c("SsaStyle", sb.toString(), e2);
+                                                    f = -3.4028235E38f;
                                                 }
                                                 int i15 = aVar.f6009e;
                                                 boolean z2 = i15 == -1 && SsaStyle.m2674b(strArrSplit3[i15].trim());

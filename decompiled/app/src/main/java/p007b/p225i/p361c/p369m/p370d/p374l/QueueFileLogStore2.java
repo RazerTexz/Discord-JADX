@@ -10,31 +10,31 @@ import p007b.p100d.p104b.p105a.outline;
 import p007b.p225i.p361c.p369m.p370d.Logger3;
 import p007b.p225i.p361c.p369m.p370d.p373k.CommonUtils;
 
-/* compiled from: QueueFileLogStore.java */
-/* renamed from: b.i.c.m.d.l.e, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.c.m.d.l.e, reason: use source file name */
+/* JADX INFO: compiled from: QueueFileLogStore.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class QueueFileLogStore2 implements FileLogStore {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final Charset f12491a = Charset.forName(Constants.ENCODING);
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final File f12492b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final int f12493c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public QueueFile f12494d;
 
-    /* compiled from: QueueFileLogStore.java */
-    /* renamed from: b.i.c.m.d.l.e$a */
+    /* JADX INFO: renamed from: b.i.c.m.d.l.e$a */
+    /* JADX INFO: compiled from: QueueFileLogStore.java */
     public class a {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final byte[] f12495a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final int f12496b;
 
         public a(QueueFileLogStore2 queueFileLogStore2, byte[] bArr, int i) {
@@ -49,14 +49,14 @@ public class QueueFileLogStore2 implements FileLogStore {
     }
 
     @Override // p007b.p225i.p361c.p369m.p370d.p374l.FileLogStore
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public void mo6491a() {
         CommonUtils.m6409c(this.f12494d, "There was a problem closing the Crashlytics log file.");
         this.f12494d = null;
     }
 
     @Override // p007b.p225i.p361c.p369m.p370d.p374l.FileLogStore
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public String mo6492b() {
         byte[] bArrMo6493c = mo6493c();
         if (bArrMo6493c != null) {
@@ -67,7 +67,7 @@ public class QueueFileLogStore2 implements FileLogStore {
 
     /* JADX WARN: Removed duplicated region for block: B:4:0x000a  */
     @Override // p007b.p225i.p361c.p369m.p370d.p374l.FileLogStore
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
@@ -101,7 +101,7 @@ public class QueueFileLogStore2 implements FileLogStore {
     }
 
     @Override // p007b.p225i.p361c.p369m.p370d.p374l.FileLogStore
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public void mo6494d() {
         CommonUtils.m6409c(this.f12494d, "There was a problem closing the Crashlytics log file.");
         this.f12494d = null;
@@ -109,7 +109,7 @@ public class QueueFileLogStore2 implements FileLogStore {
     }
 
     @Override // p007b.p225i.p361c.p369m.p370d.p374l.FileLogStore
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public void mo6495e(long j, String str) {
         m6513f();
         if (this.f12494d == null) {
@@ -134,7 +134,7 @@ public class QueueFileLogStore2 implements FileLogStore {
         }
     }
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final void m6513f() {
         if (this.f12494d == null) {
             try {

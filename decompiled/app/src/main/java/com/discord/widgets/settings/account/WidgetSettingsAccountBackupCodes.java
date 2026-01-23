@@ -49,26 +49,26 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 import p658rx.functions.Action1;
 
-/* compiled from: WidgetSettingsAccountBackupCodes.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetSettingsAccountBackupCodes.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetSettingsAccountBackupCodes extends AppFragment {
     public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetSettingsAccountBackupCodes.class, "binding", "getBinding()Lcom/discord/databinding/WidgetSettingsAccountBackupCodesBinding;", 0)};
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private Adapter backupCodesAdapter;
 
-    /* renamed from: binding$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
     private String nonce;
     private String password;
     private String regenerateNonce;
     private String verificationKey;
 
-    /* compiled from: WidgetSettingsAccountBackupCodes.kt */
+    /* JADX INFO: compiled from: WidgetSettingsAccountBackupCodes.kt */
     public static final class Adapter extends MGRecyclerAdapterSimple<MGRecyclerDataPayload> {
 
-        /* compiled from: WidgetSettingsAccountBackupCodes.kt */
+        /* JADX INFO: compiled from: WidgetSettingsAccountBackupCodes.kt */
         public static final class BackupCodeHeaderViewHolder extends MGRecyclerViewHolder<Adapter, MGRecyclerDataPayload> {
             private final WidgetSettingsItemBackupCodeHeaderBinding binding;
 
@@ -89,7 +89,7 @@ public final class WidgetSettingsAccountBackupCodes extends AppFragment {
                 onConfigure2(i, mGRecyclerDataPayload);
             }
 
-            /* renamed from: onConfigure, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: onConfigure, reason: avoid collision after fix types in other method */
             public void onConfigure2(int position, MGRecyclerDataPayload data) {
                 Intrinsics3.checkNotNullParameter(data, "data");
                 super.onConfigure(position, data);
@@ -99,7 +99,7 @@ public final class WidgetSettingsAccountBackupCodes extends AppFragment {
             }
         }
 
-        /* compiled from: WidgetSettingsAccountBackupCodes.kt */
+        /* JADX INFO: compiled from: WidgetSettingsAccountBackupCodes.kt */
         public static final class BackupCodeViewHolder extends MGRecyclerViewHolder<Adapter, MGRecyclerDataPayload> {
             private final WidgetSettingsItemBackupCodeBinding binding;
 
@@ -120,7 +120,7 @@ public final class WidgetSettingsAccountBackupCodes extends AppFragment {
                 onConfigure2(i, mGRecyclerDataPayload);
             }
 
-            /* renamed from: onConfigure, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: onConfigure, reason: avoid collision after fix types in other method */
             public void onConfigure2(int position, MGRecyclerDataPayload data) {
                 Intrinsics3.checkNotNullParameter(data, "data");
                 super.onConfigure(position, data);
@@ -164,7 +164,7 @@ public final class WidgetSettingsAccountBackupCodes extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetSettingsAccountBackupCodes.kt */
+    /* JADX INFO: compiled from: WidgetSettingsAccountBackupCodes.kt */
     public static final /* data */ class BackupCodeItem implements MGRecyclerDataPayload {
         private final BackupCode backupCode;
         private final String key;
@@ -184,7 +184,7 @@ public final class WidgetSettingsAccountBackupCodes extends AppFragment {
             return backupCodeItem.copy(backupCode);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final BackupCode getBackupCode() {
             return this.backupCode;
         }
@@ -231,7 +231,7 @@ public final class WidgetSettingsAccountBackupCodes extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetSettingsAccountBackupCodes.kt */
+    /* JADX INFO: compiled from: WidgetSettingsAccountBackupCodes.kt */
     public static final /* data */ class BackupCodeItemHeader implements MGRecyclerDataPayload {
         private final CharSequence headerText;
         private final String key;
@@ -250,7 +250,7 @@ public final class WidgetSettingsAccountBackupCodes extends AppFragment {
             return backupCodeItemHeader.copy(charSequence);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final CharSequence getHeaderText() {
             return this.headerText;
         }
@@ -294,7 +294,7 @@ public final class WidgetSettingsAccountBackupCodes extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetSettingsAccountBackupCodes.kt */
+    /* JADX INFO: compiled from: WidgetSettingsAccountBackupCodes.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -309,8 +309,8 @@ public final class WidgetSettingsAccountBackupCodes extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetSettingsAccountBackupCodes.kt */
-    /* renamed from: com.discord.widgets.settings.account.WidgetSettingsAccountBackupCodes$getBackupCodes$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.account.WidgetSettingsAccountBackupCodes$getBackupCodes$1 */
+    /* JADX INFO: compiled from: WidgetSettingsAccountBackupCodes.kt */
     public static final class C97341 extends Lambda implements Function1<GetBackupCodesResponse, Unit> {
         public C97341() {
             super(1);
@@ -322,7 +322,7 @@ public final class WidgetSettingsAccountBackupCodes extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(GetBackupCodesResponse getBackupCodesResponse) {
             List<BackupCode> listM7590a = getBackupCodesResponse.m7590a();
             ArrayList arrayList = new ArrayList();
@@ -360,8 +360,8 @@ public final class WidgetSettingsAccountBackupCodes extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetSettingsAccountBackupCodes.kt */
-    /* renamed from: com.discord.widgets.settings.account.WidgetSettingsAccountBackupCodes$onViewBound$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.account.WidgetSettingsAccountBackupCodes$onViewBound$2 */
+    /* JADX INFO: compiled from: WidgetSettingsAccountBackupCodes.kt */
     public static final class ViewOnClickListenerC97352 implements View.OnClickListener {
         public ViewOnClickListenerC97352() {
         }
@@ -372,8 +372,8 @@ public final class WidgetSettingsAccountBackupCodes extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetSettingsAccountBackupCodes.kt */
-    /* renamed from: com.discord.widgets.settings.account.WidgetSettingsAccountBackupCodes$sendVerificationKey$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.account.WidgetSettingsAccountBackupCodes$sendVerificationKey$1 */
+    /* JADX INFO: compiled from: WidgetSettingsAccountBackupCodes.kt */
     public static final class C97361 extends Lambda implements Function1<GetBackupCodesSendVerificationKeyResponse, Unit> {
         public C97361() {
             super(1);
@@ -385,7 +385,7 @@ public final class WidgetSettingsAccountBackupCodes extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(GetBackupCodesSendVerificationKeyResponse getBackupCodesSendVerificationKeyResponse) {
             WidgetSettingsAccountBackupCodes.access$setNonce$p(WidgetSettingsAccountBackupCodes.this, getBackupCodesSendVerificationKeyResponse.getNonce());
             WidgetSettingsAccountBackupCodes.access$setRegenerateNonce$p(WidgetSettingsAccountBackupCodes.this, getBackupCodesSendVerificationKeyResponse.getRegenerateNonce());
@@ -393,8 +393,8 @@ public final class WidgetSettingsAccountBackupCodes extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetSettingsAccountBackupCodes.kt */
-    /* renamed from: com.discord.widgets.settings.account.WidgetSettingsAccountBackupCodes$sendVerificationKey$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.account.WidgetSettingsAccountBackupCodes$sendVerificationKey$2 */
+    /* JADX INFO: compiled from: WidgetSettingsAccountBackupCodes.kt */
     public static final class C97372<T> implements Action1<Error> {
         public C97372() {
         }
@@ -404,7 +404,7 @@ public final class WidgetSettingsAccountBackupCodes extends AppFragment {
             call2(error);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final void call2(Error error) {
             WidgetSettingsAccountBackupCodes.access$showPasswordModal(WidgetSettingsAccountBackupCodes.this);
         }

@@ -6,9 +6,9 @@ import com.discord.models.domain.ModelAuditLogEntry;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: DirectoryEntryGuild.kt */
-/* renamed from: com.discord.api.directory.DirectoryEntryEvent, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: com.discord.api.directory.DirectoryEntryEvent, reason: use source file name */
+/* JADX INFO: compiled from: DirectoryEntryGuild.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class DirectoryEntryGuild2 {
     private final long authorId;
     private final UtcDateTime createdAt;
@@ -18,7 +18,7 @@ public final /* data */ class DirectoryEntryGuild2 {
     private final GuildScheduledEvent guildScheduledEvent;
     private final int primaryCategoryId;
 
-    /* renamed from: a, reason: from getter */
+    /* JADX INFO: renamed from: a, reason: from getter */
     public final GuildScheduledEvent getGuildScheduledEvent() {
         return this.guildScheduledEvent;
     }

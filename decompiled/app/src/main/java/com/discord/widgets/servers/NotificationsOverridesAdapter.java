@@ -29,13 +29,13 @@ import p507d0.Standard2;
 import p507d0.p580t.Collections2;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: NotificationsOverridesAdapter.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: NotificationsOverridesAdapter.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class NotificationsOverridesAdapter extends RecyclerView.Adapter<ViewHolder> {
     private List<Item> data;
     private final Function2<View, Item, Unit> onClick;
 
-    /* compiled from: NotificationsOverridesAdapter.kt */
+    /* JADX INFO: compiled from: NotificationsOverridesAdapter.kt */
     public static final class DiffCallback extends DiffUtil.Callback {
         private final List<Item> newItems;
         private final List<Item> oldItems;
@@ -68,7 +68,7 @@ public final class NotificationsOverridesAdapter extends RecyclerView.Adapter<Vi
         }
     }
 
-    /* compiled from: NotificationsOverridesAdapter.kt */
+    /* JADX INFO: compiled from: NotificationsOverridesAdapter.kt */
     public static final class Item {
         private final Channel channel;
         private final ModelNotificationSettings.ChannelOverride overrideSettings;
@@ -95,11 +95,11 @@ public final class NotificationsOverridesAdapter extends RecyclerView.Adapter<Vi
         }
     }
 
-    /* compiled from: NotificationsOverridesAdapter.kt */
+    /* JADX INFO: compiled from: NotificationsOverridesAdapter.kt */
     public static abstract class ViewHolder extends RecyclerView.ViewHolder {
         private final Function2<View, Item, Unit> onClick;
 
-        /* compiled from: NotificationsOverridesAdapter.kt */
+        /* JADX INFO: compiled from: NotificationsOverridesAdapter.kt */
         public static final class CategoryOverridesViewHolder extends ViewHolder {
             private final ViewCategoryOverrideItemBinding binding;
 
@@ -127,7 +127,7 @@ public final class NotificationsOverridesAdapter extends RecyclerView.Adapter<Vi
             }
         }
 
-        /* compiled from: NotificationsOverridesAdapter.kt */
+        /* JADX INFO: compiled from: NotificationsOverridesAdapter.kt */
         public static final class ChannelOverridesViewHolder extends ViewHolder {
             private final ViewChannelOverrideItemBinding binding;
 

@@ -1,7 +1,6 @@
 package com.discord.utilities.textprocessing;
 
 import android.content.Context;
-import android.content.res.Resources;
 import android.text.style.CharacterStyle;
 import android.text.style.ParagraphStyle;
 import android.text.style.StyleSpan;
@@ -16,14 +15,14 @@ import p507d0.p580t.CollectionsJVM;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: ChangelogSpans.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: ChangelogSpans.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class ChangelogSpans {
     public static final ChangelogSpans INSTANCE = new ChangelogSpans();
     private static final int MARKDOWN_BULLET_RADIUS = 8;
 
-    /* compiled from: ChangelogSpans.kt */
-    /* renamed from: com.discord.utilities.textprocessing.ChangelogSpans$createChangelogSpecialHeaderPaddingSpansProvider$1 */
+    /* JADX INFO: renamed from: com.discord.utilities.textprocessing.ChangelogSpans$createChangelogSpecialHeaderPaddingSpansProvider$1 */
+    /* JADX INFO: compiled from: ChangelogSpans.kt */
     public static final class C69391 extends Lambda implements Function0<List<? extends VerticalPaddingSpan>> {
         public final /* synthetic */ int $headerBottomPx;
         public final /* synthetic */ int $headerTopPx;
@@ -41,14 +40,14 @@ public final class ChangelogSpans {
         }
 
         @Override // kotlin.jvm.functions.Function0
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final List<? extends VerticalPaddingSpan> invoke2() {
             return CollectionsJVM.listOf(new VerticalPaddingSpan(this.$headerTopPx, this.$headerBottomPx));
         }
     }
 
-    /* compiled from: ChangelogSpans.kt */
-    /* renamed from: com.discord.utilities.textprocessing.ChangelogSpans$createHeaderClassSpanProvider$1 */
+    /* JADX INFO: renamed from: com.discord.utilities.textprocessing.ChangelogSpans$createHeaderClassSpanProvider$1 */
+    /* JADX INFO: compiled from: ChangelogSpans.kt */
     public static final class C69401 extends Lambda implements Function1<String, Object> {
         public final /* synthetic */ Context $context;
         public final /* synthetic */ int $marginTopPx;
@@ -66,7 +65,8 @@ public final class ChangelogSpans {
         }
 
         /* JADX WARN: Can't fix incorrect switch cases order, some code will duplicate */
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX WARN: Failed to restore switch over string. Please report as a decompilation issue */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final Object invoke2(String str) {
             Intrinsics3.checkNotNullParameter(str, "className");
             switch (str.hashCode()) {
@@ -106,8 +106,8 @@ public final class ChangelogSpans {
         }
     }
 
-    /* compiled from: ChangelogSpans.kt */
-    /* renamed from: com.discord.utilities.textprocessing.ChangelogSpans$createHeaderPaddingSpansProvider$1 */
+    /* JADX INFO: renamed from: com.discord.utilities.textprocessing.ChangelogSpans$createHeaderPaddingSpansProvider$1 */
+    /* JADX INFO: compiled from: ChangelogSpans.kt */
     public static final class C69411 extends Lambda implements Function0<List<? extends VerticalPaddingSpan>> {
         public final /* synthetic */ int $headerBottomPx;
         public final /* synthetic */ int $headerTopPx;
@@ -125,14 +125,14 @@ public final class ChangelogSpans {
         }
 
         @Override // kotlin.jvm.functions.Function0
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final List<? extends VerticalPaddingSpan> invoke2() {
             return CollectionsJVM.listOf(new VerticalPaddingSpan(this.$headerTopPx, this.$headerBottomPx));
         }
     }
 
-    /* compiled from: ChangelogSpans.kt */
-    /* renamed from: com.discord.utilities.textprocessing.ChangelogSpans$createHeaderStyleSpanProvider$1 */
+    /* JADX INFO: renamed from: com.discord.utilities.textprocessing.ChangelogSpans$createHeaderStyleSpanProvider$1 */
+    /* JADX INFO: compiled from: ChangelogSpans.kt */
     public static final class C69421 extends Lambda implements Function1<Integer, CharacterStyle> {
         public final /* synthetic */ Context $context;
 
@@ -152,8 +152,8 @@ public final class ChangelogSpans {
         }
     }
 
-    /* compiled from: ChangelogSpans.kt */
-    /* renamed from: com.discord.utilities.textprocessing.ChangelogSpans$createSpecialHeaderStyleSpanProvider$1 */
+    /* JADX INFO: renamed from: com.discord.utilities.textprocessing.ChangelogSpans$createSpecialHeaderStyleSpanProvider$1 */
+    /* JADX INFO: compiled from: ChangelogSpans.kt */
     public static final class C69431 extends Lambda implements Function1<Integer, CharacterStyle> {
         public final /* synthetic */ Context $context;
 
@@ -196,7 +196,7 @@ public final class ChangelogSpans {
         return new C69421(context);
     }
 
-    public final Function0<List<ParagraphStyle>> createMarkdownBulletSpansProvider(Context context) throws Resources.NotFoundException {
+    public final Function0<List<ParagraphStyle>> createMarkdownBulletSpansProvider(Context context) {
         Intrinsics3.checkNotNullParameter(context, "context");
         return new ChangelogSpans2(context.getResources().getDimensionPixelSize(C5419R.dimen.markdown_bullet_vertical_padding), context.getResources().getDimensionPixelSize(C5419R.dimen.markdown_bullet_gap), ColorCompat.getThemedColor(context, C5419R.attr.color_brand_500));
     }

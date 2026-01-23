@@ -11,8 +11,8 @@ import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetSettingsGiftingAdapter.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetSettingsGiftingAdapter.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetSettingsGiftingAdapter$SkuListItem$onConfigure$1 extends Lambda implements Function1<RenderContext, Unit> {
     public final /* synthetic */ WidgetSettingsGiftingAdapter.GiftItem $data;
     public final /* synthetic */ int $numMonthsOrYears;
@@ -28,7 +28,7 @@ public final class WidgetSettingsGiftingAdapter$SkuListItem$onConfigure$1 extend
         this.$numMonthsOrYears = i2;
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final void invoke2(RenderContext renderContext) {
         Intrinsics3.checkNotNullParameter(renderContext, "$receiver");
         renderContext.args.put("skuName", this.$data.getSku().getName());

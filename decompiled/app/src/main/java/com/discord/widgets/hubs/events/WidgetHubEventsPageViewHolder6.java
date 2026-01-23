@@ -2,9 +2,9 @@ package com.discord.widgets.hubs.events;
 
 import android.view.View;
 
-/* compiled from: WidgetHubEventsPageViewHolder.kt */
-/* renamed from: com.discord.widgets.hubs.events.WidgetHubEventsPageHeaderViewHolder$bind$$inlined$apply$lambda$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.hubs.events.WidgetHubEventsPageHeaderViewHolder$bind$$inlined$apply$lambda$1, reason: use source file name */
+/* JADX INFO: compiled from: WidgetHubEventsPageViewHolder.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetHubEventsPageViewHolder6 implements View.OnClickListener {
     public final /* synthetic */ WidgetHubEventsPageViewHolder5 this$0;
 

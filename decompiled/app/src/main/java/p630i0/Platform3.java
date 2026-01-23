@@ -9,29 +9,29 @@ import java.lang.reflect.Method;
 import java.util.concurrent.Executor;
 import org.codehaus.mojo.animal_sniffer.IgnoreJRERequirement;
 
-/* compiled from: Platform.java */
-/* renamed from: i0.u, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: i0.u, reason: use source file name */
+/* JADX INFO: compiled from: Platform.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class Platform3 {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final Platform3 f26614a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final boolean f26615b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final Constructor<MethodHandles.Lookup> f26616c;
 
-    /* compiled from: Platform.java */
-    /* renamed from: i0.u$a */
+    /* JADX INFO: renamed from: i0.u$a */
+    /* JADX INFO: compiled from: Platform.java */
     public static final class a extends Platform3 {
 
-        /* compiled from: Platform.java */
-        /* renamed from: i0.u$a$a, reason: collision with other inner class name */
+        /* JADX INFO: renamed from: i0.u$a$a, reason: collision with other inner class name */
+        /* JADX INFO: compiled from: Platform.java */
         public static final class ExecutorC13347a implements Executor {
 
-            /* renamed from: j */
+            /* JADX INFO: renamed from: j */
             public final Handler f26617j = new Handler(Looper.getMainLooper());
 
             @Override // java.util.concurrent.Executor
@@ -45,13 +45,13 @@ public class Platform3 {
         }
 
         @Override // p630i0.Platform3
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public Executor mo10716a() {
             return new ExecutorC13347a();
         }
 
         @Override // p630i0.Platform3
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public Object mo10717b(Method method, Class<?> cls, Object obj, Object... objArr) throws Throwable {
             if (Build.VERSION.SDK_INT >= 26) {
                 return super.mo10717b(method, cls, obj, objArr);
@@ -77,13 +77,13 @@ public class Platform3 {
         this.f26616c = declaredConstructor;
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public Executor mo10716a() {
         return null;
     }
 
     @IgnoreJRERequirement
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public Object mo10717b(Method method, Class<?> cls, Object obj, Object... objArr) throws Throwable {
         Constructor<MethodHandles.Lookup> constructor = this.f26616c;
         return (constructor != null ? constructor.newInstance(cls, -1) : MethodHandles.lookup()).unreflectSpecial(method, cls).bindTo(obj).invokeWithArguments(objArr);

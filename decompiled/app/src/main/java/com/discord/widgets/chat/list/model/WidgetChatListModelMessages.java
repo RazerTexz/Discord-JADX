@@ -45,11 +45,11 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p637j0.p642l.p647e.ScalarSynchronousObservable;
 import p658rx.Observable;
 
-/* compiled from: WidgetChatListModelMessages.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetChatListModelMessages.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final /* data */ class WidgetChatListModelMessages {
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private static final int MAX_CONCAT_COUNT = 5;
     private static final long MESSAGE_CONCAT_TIMESTAMP_DELTA_THRESHOLD = 420000;
@@ -60,7 +60,7 @@ public final /* data */ class WidgetChatListModelMessages {
     private final Long newestSentByUserMessageId;
     private final long oldestMessageId;
 
-    /* compiled from: WidgetChatListModelMessages.kt */
+    /* JADX INFO: compiled from: WidgetChatListModelMessages.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -336,7 +336,7 @@ public final /* data */ class WidgetChatListModelMessages {
         }
     }
 
-    /* compiled from: WidgetChatListModelMessages.kt */
+    /* JADX INFO: compiled from: WidgetChatListModelMessages.kt */
     public static final class Items {
         private static final Companion Companion = new Companion(null);
 
@@ -346,7 +346,7 @@ public final /* data */ class WidgetChatListModelMessages {
         private List<ChatListEntry> items;
         private MGRecyclerDataPayload listItemMostRecentlyAdded;
 
-        /* compiled from: WidgetChatListModelMessages.kt */
+        /* JADX INFO: compiled from: WidgetChatListModelMessages.kt */
         public static final class Companion {
             private Companion() {
             }
@@ -401,10 +401,10 @@ public final /* data */ class WidgetChatListModelMessages {
         }
     }
 
-    /* compiled from: WidgetChatListModelMessages.kt */
+    /* JADX INFO: compiled from: WidgetChatListModelMessages.kt */
     public static final /* data */ class MessagesWithMetadata {
 
-        /* renamed from: Companion, reason: from kotlin metadata */
+        /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
         public static final Companion INSTANCE = new Companion(null);
         private final Map<Long, StoreMessageReplies.MessageState> messageReplyState;
         private final Map<Long, StoreMessageState.State> messageState;
@@ -413,7 +413,7 @@ public final /* data */ class WidgetChatListModelMessages {
         private final Map<Long, StoreMessageReplies.MessageState> parentChannelMessageReplyState;
         private final Map<Long, StoreThreadMessages.ThreadState> threadCountsAndLatestMessages;
 
-        /* compiled from: WidgetChatListModelMessages.kt */
+        /* JADX INFO: compiled from: WidgetChatListModelMessages.kt */
         public static final class Companion {
             private Companion() {
             }
@@ -454,6 +454,7 @@ public final /* data */ class WidgetChatListModelMessages {
             this.parentChannelMessageReplyState = map5;
         }
 
+        /* JADX WARN: Multi-variable type inference failed */
         public static /* synthetic */ MessagesWithMetadata copy$default(MessagesWithMetadata messagesWithMetadata, List list, Map map, Map map2, Map map3, Map map4, Map map5, int i, Object obj) {
             if ((i & 1) != 0) {
                 list = messagesWithMetadata.messages;
@@ -591,6 +592,7 @@ public final /* data */ class WidgetChatListModelMessages {
         this.newestSentByUserMessageId = l;
     }
 
+    /* JADX WARN: Multi-variable type inference failed */
     public static /* synthetic */ WidgetChatListModelMessages copy$default(WidgetChatListModelMessages widgetChatListModelMessages, List list, long j, long j2, Map map, long j3, Long l, int i, Object obj) {
         return widgetChatListModelMessages.copy((i & 1) != 0 ? widgetChatListModelMessages.items : list, (i & 2) != 0 ? widgetChatListModelMessages.oldestMessageId : j, (i & 4) != 0 ? widgetChatListModelMessages.newestKnownMessageId : j2, (i & 8) != 0 ? widgetChatListModelMessages.guildMembers : map, (i & 16) != 0 ? widgetChatListModelMessages.newMessagesMarkerMessageId : j3, (i & 32) != 0 ? widgetChatListModelMessages.newestSentByUserMessageId : l);
     }
@@ -599,12 +601,12 @@ public final /* data */ class WidgetChatListModelMessages {
         return this.items;
     }
 
-    /* renamed from: component2, reason: from getter */
+    /* JADX INFO: renamed from: component2, reason: from getter */
     public final long getOldestMessageId() {
         return this.oldestMessageId;
     }
 
-    /* renamed from: component3, reason: from getter */
+    /* JADX INFO: renamed from: component3, reason: from getter */
     public final long getNewestKnownMessageId() {
         return this.newestKnownMessageId;
     }
@@ -613,12 +615,12 @@ public final /* data */ class WidgetChatListModelMessages {
         return this.guildMembers;
     }
 
-    /* renamed from: component5, reason: from getter */
+    /* JADX INFO: renamed from: component5, reason: from getter */
     public final long getNewMessagesMarkerMessageId() {
         return this.newMessagesMarkerMessageId;
     }
 
-    /* renamed from: component6, reason: from getter */
+    /* JADX INFO: renamed from: component6, reason: from getter */
     public final Long getNewestSentByUserMessageId() {
         return this.newestSentByUserMessageId;
     }

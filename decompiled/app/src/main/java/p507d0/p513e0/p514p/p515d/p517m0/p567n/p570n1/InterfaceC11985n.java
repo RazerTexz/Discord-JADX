@@ -5,13 +5,13 @@ import java.util.List;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Reflection2;
 
-/* compiled from: TypeSystemContext.kt */
-/* renamed from: d0.e0.p.d.m0.n.n1.n */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.n.n1.n */
+/* JADX INFO: compiled from: TypeSystemContext.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public interface InterfaceC11985n extends InterfaceC11988q {
 
-    /* compiled from: TypeSystemContext.kt */
-    /* renamed from: d0.e0.p.d.m0.n.n1.n$a */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.n.n1.n$a */
+    /* JADX INFO: compiled from: TypeSystemContext.kt */
     public static final class a {
         public static List<InterfaceC11980i> fastCorrespondingSupertypes(InterfaceC11985n interfaceC11985n, InterfaceC11980i interfaceC11980i, InterfaceC11983l interfaceC11983l) {
             Intrinsics3.checkNotNullParameter(interfaceC11985n, "this");

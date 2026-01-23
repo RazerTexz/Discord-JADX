@@ -3,9 +3,9 @@ package com.discord.utilities.stateful;
 import kotlin.jvm.functions.Function0;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: StatefulViews.kt */
-/* renamed from: com.discord.utilities.stateful.StatefulViews$setupUnsavedChangesConfirmation$$inlined$let$lambda$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.utilities.stateful.StatefulViews$setupUnsavedChangesConfirmation$$inlined$let$lambda$1, reason: use source file name */
+/* JADX INFO: compiled from: StatefulViews.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class StatefulViews7 extends Lambda implements Function0<Boolean> {
     public final /* synthetic */ StatefulViews this$0;
 
@@ -20,7 +20,7 @@ public final class StatefulViews7 extends Lambda implements Function0<Boolean> {
         return Boolean.valueOf(invoke2());
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final boolean invoke2() {
         return StatefulViews.access$hasAnythingChanged(this.this$0);
     }

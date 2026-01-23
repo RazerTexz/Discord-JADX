@@ -24,22 +24,22 @@ import p507d0.p580t.Iterables2;
 import p507d0.p592z.p594d.Intrinsics3;
 import p600f0.Protocol2;
 
-/* compiled from: BouncyCastlePlatform.kt */
-/* renamed from: f0.e0.k.c, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: f0.e0.k.c, reason: use source file name */
+/* JADX INFO: compiled from: BouncyCastlePlatform.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class BouncyCastlePlatform extends Platform2 {
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public static final boolean f25763d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public static final a f25764e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final Provider f25765f = new BouncyCastleJsseProvider();
 
-    /* compiled from: BouncyCastlePlatform.kt */
-    /* renamed from: f0.e0.k.c$a */
+    /* JADX INFO: renamed from: f0.e0.k.c$a */
+    /* JADX INFO: compiled from: BouncyCastlePlatform.kt */
     public static final class a {
         public a(DefaultConstructorMarker defaultConstructorMarker) {
         }
@@ -58,7 +58,7 @@ public final class BouncyCastlePlatform extends Platform2 {
     }
 
     @Override // p600f0.p601e0.p609k.Platform2
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public void mo10316d(SSLSocket sSLSocket, String str, List<Protocol2> list) {
         Intrinsics3.checkParameterIsNotNull(sSLSocket, "sslSocket");
         Intrinsics3.checkParameterIsNotNull(list, "protocols");
@@ -96,7 +96,7 @@ public final class BouncyCastlePlatform extends Platform2 {
     }
 
     @Override // p600f0.p601e0.p609k.Platform2
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public String mo10317f(SSLSocket sSLSocket) {
         Intrinsics3.checkParameterIsNotNull(sSLSocket, "sslSocket");
         if (sSLSocket instanceof BCSSLSocket) {
@@ -111,7 +111,7 @@ public final class BouncyCastlePlatform extends Platform2 {
     }
 
     @Override // p600f0.p601e0.p609k.Platform2
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public SSLContext mo10324l() throws NoSuchAlgorithmException {
         SSLContext sSLContext = SSLContext.getInstance("TLS", this.f25765f);
         Intrinsics3.checkExpressionValueIsNotNull(sSLContext, "SSLContext.getInstance(\"TLS\", provider)");
@@ -119,7 +119,7 @@ public final class BouncyCastlePlatform extends Platform2 {
     }
 
     @Override // p600f0.p601e0.p609k.Platform2
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public X509TrustManager mo10325n() throws NoSuchAlgorithmException, KeyStoreException, NoSuchProviderException {
         TrustManagerFactory trustManagerFactory = TrustManagerFactory.getInstance("PKIX", "BCJSSE");
         trustManagerFactory.init((KeyStore) null);

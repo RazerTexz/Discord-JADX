@@ -4,9 +4,9 @@ import java.util.Set;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: TagsBuilder.kt */
-/* renamed from: com.discord.utilities.textprocessing.Tags, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.utilities.textprocessing.Tags, reason: use source file name */
+/* JADX INFO: compiled from: TagsBuilder.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final /* data */ class TagsBuilder2 {
     private final Set<Long> channels;
     private final boolean isEmpty;
@@ -88,7 +88,7 @@ public final /* data */ class TagsBuilder2 {
         return iHashCode2 + (set3 != null ? set3.hashCode() : 0);
     }
 
-    /* renamed from: isEmpty, reason: from getter */
+    /* JADX INFO: renamed from: isEmpty, reason: from getter */
     public final boolean getIsEmpty() {
         return this.isEmpty;
     }

@@ -24,9 +24,9 @@ import p637j0.p641k.Func1;
 import p658rx.Observable;
 import p658rx.functions.Func4;
 
-/* compiled from: WidgetStageRaisedHandsBottomSheetViewModel.kt */
-/* renamed from: com.discord.widgets.stage.sheet.WidgetStageRaisedHandsBottomSheetViewModel$Companion$observeStoreState$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.stage.sheet.WidgetStageRaisedHandsBottomSheetViewModel$Companion$observeStoreState$1, reason: use source file name */
+/* JADX INFO: compiled from: WidgetStageRaisedHandsBottomSheetViewModel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetStageRaisedHandsBottomSheetViewModel2<T, R> implements Func1<Channel, Observable<? extends WidgetStageRaisedHandsBottomSheetViewModel.StoreState>> {
     public final /* synthetic */ long $channelId;
     public final /* synthetic */ Clock $clock;
@@ -34,13 +34,13 @@ public final class WidgetStageRaisedHandsBottomSheetViewModel2<T, R> implements 
     public final /* synthetic */ StoreStageChannels $stageChannels;
     public final /* synthetic */ StoreVoiceParticipants $voiceParticipants;
 
-    /* compiled from: WidgetStageRaisedHandsBottomSheetViewModel.kt */
-    /* renamed from: com.discord.widgets.stage.sheet.WidgetStageRaisedHandsBottomSheetViewModel$Companion$observeStoreState$1$1, reason: invalid class name */
+    /* JADX INFO: renamed from: com.discord.widgets.stage.sheet.WidgetStageRaisedHandsBottomSheetViewModel$Companion$observeStoreState$1$1, reason: invalid class name */
+    /* JADX INFO: compiled from: WidgetStageRaisedHandsBottomSheetViewModel.kt */
     public static final class AnonymousClass1<T1, T2, T3, T4, R> implements Func4<Map<Long, ? extends GuildRole>, Map<Long, ? extends GuildMember>, Map<Long, ? extends StoreVoiceParticipants.VoiceUser>, StageRoles, WidgetStageRaisedHandsBottomSheetViewModel.StoreState> {
         public final /* synthetic */ Channel $channel;
 
-        /* compiled from: WidgetStageRaisedHandsBottomSheetViewModel.kt */
-        /* renamed from: com.discord.widgets.stage.sheet.WidgetStageRaisedHandsBottomSheetViewModel$Companion$observeStoreState$1$1$1, reason: invalid class name and collision with other inner class name */
+        /* JADX INFO: renamed from: com.discord.widgets.stage.sheet.WidgetStageRaisedHandsBottomSheetViewModel$Companion$observeStoreState$1$1$1, reason: invalid class name and collision with other inner class name */
+        /* JADX INFO: compiled from: WidgetStageRaisedHandsBottomSheetViewModel.kt */
         public static final class C132941 extends Lambda implements Function1<StoreVoiceParticipants.VoiceUser, Boolean> {
             public static final C132941 INSTANCE = new C132941();
 
@@ -53,15 +53,15 @@ public final class WidgetStageRaisedHandsBottomSheetViewModel2<T, R> implements 
                 return Boolean.valueOf(invoke2(voiceUser));
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final boolean invoke2(StoreVoiceParticipants.VoiceUser voiceUser) {
                 Intrinsics3.checkNotNullParameter(voiceUser, "voiceUser");
                 return voiceUser.getIsRequestingToSpeak();
             }
         }
 
-        /* compiled from: WidgetStageRaisedHandsBottomSheetViewModel.kt */
-        /* renamed from: com.discord.widgets.stage.sheet.WidgetStageRaisedHandsBottomSheetViewModel$Companion$observeStoreState$1$1$2, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.widgets.stage.sheet.WidgetStageRaisedHandsBottomSheetViewModel$Companion$observeStoreState$1$1$2, reason: invalid class name */
+        /* JADX INFO: compiled from: WidgetStageRaisedHandsBottomSheetViewModel.kt */
         public static final class AnonymousClass2 extends Lambda implements Function1<StoreVoiceParticipants.VoiceUser, WidgetStageRaisedHandsBottomSheetAdapter.ListItem.Participant> {
             public final /* synthetic */ Map $members;
             public final /* synthetic */ Map $roles;
@@ -78,7 +78,7 @@ public final class WidgetStageRaisedHandsBottomSheetViewModel2<T, R> implements 
                 return invoke2(voiceUser);
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final WidgetStageRaisedHandsBottomSheetAdapter.ListItem.Participant invoke2(StoreVoiceParticipants.VoiceUser voiceUser) {
                 UtcDateTime utcDateTime;
                 Intrinsics3.checkNotNullParameter(voiceUser, "voiceUser");
@@ -102,7 +102,7 @@ public final class WidgetStageRaisedHandsBottomSheetViewModel2<T, R> implements 
             return call2((Map<Long, GuildRole>) map, (Map<Long, GuildMember>) map2, (Map<Long, StoreVoiceParticipants.VoiceUser>) map3, stageRoles);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final WidgetStageRaisedHandsBottomSheetViewModel.StoreState call2(Map<Long, GuildRole> map, Map<Long, GuildMember> map2, Map<Long, StoreVoiceParticipants.VoiceUser> map3, StageRoles stageRoles) {
             Channel channel = this.$channel;
             Intrinsics3.checkNotNullExpressionValue(channel, "channel");
@@ -124,7 +124,7 @@ public final class WidgetStageRaisedHandsBottomSheetViewModel2<T, R> implements 
         return call2(channel);
     }
 
-    /* renamed from: call, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
     public final Observable<? extends WidgetStageRaisedHandsBottomSheetViewModel.StoreState> call2(Channel channel) {
         return Observable.m11073h(this.$guildsStore.observeRoles(channel.getGuildId()), this.$guildsStore.observeComputed(channel.getGuildId()), this.$voiceParticipants.get(this.$channelId), this.$stageChannels.observeMyRoles(this.$channelId), new AnonymousClass1(channel));
     }

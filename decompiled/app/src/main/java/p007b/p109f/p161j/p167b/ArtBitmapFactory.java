@@ -9,16 +9,16 @@ import p007b.p109f.p161j.p170e.CloseableReferenceFactory;
 import p007b.p109f.p161j.p177l.BitmapPool;
 import p007b.p109f.p186k.BitmapUtil;
 
-/* compiled from: ArtBitmapFactory.java */
+/* JADX INFO: renamed from: b.f.j.b.a, reason: use source file name */
+/* JADX INFO: compiled from: ArtBitmapFactory.java */
+/* JADX INFO: loaded from: classes2.dex */
 @TargetApi(21)
-/* renamed from: b.f.j.b.a, reason: use source file name */
-/* loaded from: classes2.dex */
 public class ArtBitmapFactory extends PlatformBitmapFactory {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final BitmapPool f3644a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final CloseableReferenceFactory f3645b;
 
     public ArtBitmapFactory(BitmapPool bitmapPool, CloseableReferenceFactory closeableReferenceFactory) {
@@ -27,7 +27,7 @@ public class ArtBitmapFactory extends PlatformBitmapFactory {
     }
 
     @Override // com.facebook.imagepipeline.bitmaps.PlatformBitmapFactory
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public CloseableReference<Bitmap> mo1206b(int i, int i2, Bitmap.Config config) {
         Bitmap bitmap = this.f3644a.get(BitmapUtil.m1540c(i, i2, config));
         AnimatableValueParser.m527i(Boolean.valueOf(bitmap.getAllocationByteCount() >= BitmapUtil.m1539b(config) * (i * i2)));

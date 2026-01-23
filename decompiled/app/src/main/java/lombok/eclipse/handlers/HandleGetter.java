@@ -49,11 +49,11 @@ import org.eclipse.jdt.internal.compiler.ast.TypeDeclaration;
 import org.eclipse.jdt.internal.compiler.ast.TypeReference;
 import org.eclipse.jdt.internal.compiler.lookup.TypeConstants;
 
-/* loaded from: discord-126021.apk:lombok/eclipse/handlers/HandleGetter.SCL.lombok */
+/* JADX INFO: loaded from: discord-126021.apk:lombok/eclipse/handlers/HandleGetter.SCL.lombok */
 public class HandleGetter extends EclipseAnnotationHandler<Getter> {
     private static final Annotation[] EMPTY_ANNOTATIONS_ARRAY = new Annotation[0];
 
-    /* renamed from: AR */
+    /* JADX INFO: renamed from: AR */
     private static final char[][] f27470AR = Eclipse.fromQualifiedName("java.util.concurrent.atomic.AtomicReference");
     public static final Map<String, char[][]> TYPE_MAP;
     private static char[] valueName;
@@ -61,7 +61,7 @@ public class HandleGetter extends EclipseAnnotationHandler<Getter> {
     private static final int PARENTHESIZED = 2097152;
     private static /* synthetic */ int[] $SWITCH_TABLE$lombok$core$AST$Kind;
 
-    /* renamed from: $SWITCH_TABLE$lombok$eclipse$handlers$EclipseHandlerUtil$MemberExistsResult */
+    /* JADX INFO: renamed from: $SWITCH_TABLE$lombok$eclipse$handlers$EclipseHandlerUtil$MemberExistsResult */
     private static /* synthetic */ int[] f27471xb87c1847;
 
     static /* synthetic */ int[] $SWITCH_TABLE$lombok$core$AST$Kind() {
@@ -114,7 +114,7 @@ public class HandleGetter extends EclipseAnnotationHandler<Getter> {
         return iArr2;
     }
 
-    /* renamed from: $SWITCH_TABLE$lombok$eclipse$handlers$EclipseHandlerUtil$MemberExistsResult */
+    /* JADX INFO: renamed from: $SWITCH_TABLE$lombok$eclipse$handlers$EclipseHandlerUtil$MemberExistsResult */
     static /* synthetic */ int[] m10931xb87c1847() {
         int[] iArr = f27471xb87c1847;
         if (iArr != null) {
@@ -152,7 +152,7 @@ public class HandleGetter extends EclipseAnnotationHandler<Getter> {
         actualValueName = "actualValue".toCharArray();
     }
 
-    public boolean generateGetterForType(EclipseNode typeNode, EclipseNode pos, AccessLevel level, boolean checkForTypeLevelGetter, List<Annotation> onMethod) throws SecurityException, IllegalArgumentException {
+    public boolean generateGetterForType(EclipseNode typeNode, EclipseNode pos, AccessLevel level, boolean checkForTypeLevelGetter, List<Annotation> onMethod) {
         if (checkForTypeLevelGetter && EclipseHandlerUtil.hasAnnotation((Class<? extends java.lang.annotation.Annotation>) Getter.class, typeNode)) {
             return true;
         }
@@ -179,7 +179,7 @@ public class HandleGetter extends EclipseAnnotationHandler<Getter> {
         return EclipseHandlerUtil.filterField(fieldDecl);
     }
 
-    public void generateGetterForField(EclipseNode fieldNode, ASTNode pos, AccessLevel level, boolean lazy, List<Annotation> onMethod) throws SecurityException, IllegalArgumentException {
+    public void generateGetterForField(EclipseNode fieldNode, ASTNode pos, AccessLevel level, boolean lazy, List<Annotation> onMethod) {
         if (EclipseHandlerUtil.hasAnnotation((Class<? extends java.lang.annotation.Annotation>) Getter.class, fieldNode)) {
             return;
         }
@@ -187,7 +187,7 @@ public class HandleGetter extends EclipseAnnotationHandler<Getter> {
     }
 
     @Override // lombok.eclipse.EclipseAnnotationHandler
-    public void handle(AnnotationValues<Getter> annotation, Annotation ast, EclipseNode annotationNode) throws SecurityException, IllegalArgumentException {
+    public void handle(AnnotationValues<Getter> annotation, Annotation ast, EclipseNode annotationNode) {
         HandlerUtil.handleFlagUsage(annotationNode, ConfigurationKeys.GETTER_FLAG_USAGE, "@Getter");
         EclipseNode node = annotationNode.m10925up();
         Getter annotationInstance = annotation.getInstance();
@@ -219,13 +219,13 @@ public class HandleGetter extends EclipseAnnotationHandler<Getter> {
         }
     }
 
-    public void createGetterForFields(AccessLevel level, Collection<EclipseNode> fieldNodes, EclipseNode errorNode, ASTNode source, boolean whineIfExists, boolean lazy, List<Annotation> onMethod) throws SecurityException, IllegalArgumentException {
+    public void createGetterForFields(AccessLevel level, Collection<EclipseNode> fieldNodes, EclipseNode errorNode, ASTNode source, boolean whineIfExists, boolean lazy, List<Annotation> onMethod) {
         for (EclipseNode fieldNode : fieldNodes) {
             createGetterForField(level, fieldNode, errorNode, source, whineIfExists, lazy, onMethod);
         }
     }
 
-    public void createGetterForField(AccessLevel level, EclipseNode fieldNode, EclipseNode errorNode, ASTNode source, boolean whineIfExists, boolean lazy, List<Annotation> onMethod) throws SecurityException, IllegalArgumentException {
+    public void createGetterForField(AccessLevel level, EclipseNode fieldNode, EclipseNode errorNode, ASTNode source, boolean whineIfExists, boolean lazy, List<Annotation> onMethod) {
         if (fieldNode.getKind() != AST.Kind.FIELD) {
             errorNode.addError("@Getter is only supported on a class or a field.");
             return;
@@ -281,7 +281,7 @@ public class HandleGetter extends EclipseAnnotationHandler<Getter> {
     }
 
     /* JADX WARN: Type inference failed for: r2v13, types: [org.eclipse.jdt.internal.compiler.ast.Annotation[], org.eclipse.jdt.internal.compiler.ast.Annotation[][]] */
-    public MethodDeclaration createGetter(TypeDeclaration parent, EclipseNode fieldNode, String name, int modifier, ASTNode source, boolean lazy, List<Annotation> onMethod) throws SecurityException, IllegalArgumentException {
+    public MethodDeclaration createGetter(TypeDeclaration parent, EclipseNode fieldNode, String name, int modifier, ASTNode source, boolean lazy, List<Annotation> onMethod) {
         Statement[] statements;
         TypeReference returnType = EclipseHandlerUtil.copyType(fieldNode.get().type, source);
         boolean addSuppressWarningsUnchecked = false;
@@ -339,7 +339,7 @@ public class HandleGetter extends EclipseAnnotationHandler<Getter> {
         return method;
     }
 
-    public Statement[] createSimpleGetterBody(ASTNode source, EclipseNode fieldNode) throws SecurityException {
+    public Statement[] createSimpleGetterBody(ASTNode source, EclipseNode fieldNode) {
         FieldDeclaration field = fieldNode.get();
         Expression fieldRef = EclipseHandlerUtil.createFieldAccessor(fieldNode, HandlerUtil.FieldAccess.ALWAYS_FIELD, source);
         Statement returnStatement = new ReturnStatement(fieldRef, field.sourceStart, field.sourceEnd);
@@ -347,12 +347,12 @@ public class HandleGetter extends EclipseAnnotationHandler<Getter> {
     }
 
     /* JADX WARN: Type inference failed for: r0v89, types: [org.eclipse.jdt.internal.compiler.ast.TypeReference[], org.eclipse.jdt.internal.compiler.ast.TypeReference[][]] */
-    public Statement[] createLazyGetterBody(ASTNode source, EclipseNode fieldNode) throws SecurityException, IllegalArgumentException {
+    public Statement[] createLazyGetterBody(ASTNode source, EclipseNode fieldNode) {
         char[][] newType;
         FieldDeclaration field = fieldNode.get();
         int pS = source.sourceStart;
         int pE = source.sourceEnd;
-        long p = (pS << 32) | pE;
+        long p = (((long) pS) << 32) | ((long) pE);
         TypeReference rawComponentType = EclipseHandlerUtil.copyType(field.type, source);
         QualifiedTypeReference qualifiedTypeReferenceCopyType = null;
         boolean isPrimitive = false;

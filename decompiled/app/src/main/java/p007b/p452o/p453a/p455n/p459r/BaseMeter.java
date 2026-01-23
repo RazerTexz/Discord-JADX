@@ -8,22 +8,22 @@ import p007b.p452o.p453a.CameraLogger;
 import p007b.p452o.p453a.p455n.p456o.ActionHolder;
 import p007b.p452o.p453a.p455n.p456o.BaseAction;
 
-/* compiled from: BaseMeter.java */
+/* JADX INFO: renamed from: b.o.a.n.r.a, reason: use source file name */
+/* JADX INFO: compiled from: BaseMeter.java */
+/* JADX INFO: loaded from: classes3.dex */
 @RequiresApi(21)
-/* renamed from: b.o.a.n.r.a, reason: use source file name */
-/* loaded from: classes3.dex */
 public abstract class BaseMeter extends BaseAction {
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public static final CameraLogger f13965e = new CameraLogger(BaseMeter.class.getSimpleName());
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final List<MeteringRectangle> f13966f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public boolean f13967g;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public boolean f13968h;
 
     public BaseMeter(@NonNull List<MeteringRectangle> list, boolean z2) {
@@ -32,7 +32,7 @@ public abstract class BaseMeter extends BaseAction {
     }
 
     @Override // p007b.p452o.p453a.p455n.p456o.BaseAction
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final void mo7249j(@NonNull ActionHolder actionHolder) {
         this.f13939c = actionHolder;
         boolean z2 = this.f13968h && mo7350n(actionHolder);
@@ -46,12 +46,12 @@ public abstract class BaseMeter extends BaseAction {
         }
     }
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public abstract boolean mo7349m(@NonNull ActionHolder actionHolder);
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public abstract boolean mo7350n(@NonNull ActionHolder actionHolder);
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public abstract void mo7351o(@NonNull ActionHolder actionHolder, @NonNull List<MeteringRectangle> list);
 }

@@ -15,8 +15,8 @@ import androidx.annotation.RestrictTo;
 import java.io.IOException;
 import org.xmlpull.v1.XmlPullParserException;
 
+/* JADX INFO: loaded from: classes.dex */
 @RestrictTo({RestrictTo.Scope.LIBRARY_GROUP_PREFIX})
-/* loaded from: classes.dex */
 public final class ComplexColorCompat {
     private static final String LOG_TAG = "ComplexColorCompat";
     private int mColor;
@@ -30,7 +30,7 @@ public final class ComplexColorCompat {
     }
 
     @NonNull
-    private static ComplexColorCompat createFromXml(@NonNull Resources resources, @ColorRes int i, @Nullable Resources.Theme theme) throws XmlPullParserException, Resources.NotFoundException, IOException {
+    private static ComplexColorCompat createFromXml(@NonNull Resources resources, @ColorRes int i, @Nullable Resources.Theme theme) throws XmlPullParserException, IOException {
         int next;
         XmlResourceParser xml = resources.getXml(i);
         AttributeSet attributeSetAsAttributeSet = Xml.asAttributeSet(xml);

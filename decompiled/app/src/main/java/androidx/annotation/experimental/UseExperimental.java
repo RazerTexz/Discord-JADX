@@ -6,10 +6,10 @@ import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
-/* compiled from: UseExperimental.kt */
+/* JADX INFO: compiled from: UseExperimental.kt */
+/* JADX INFO: loaded from: classes.dex */
 @Target({ElementType.TYPE, ElementType.METHOD, ElementType.PARAMETER, ElementType.CONSTRUCTOR, ElementType.LOCAL_VARIABLE})
 @Retention(RetentionPolicy.CLASS)
-/* loaded from: classes.dex */
 public @interface UseExperimental {
     Class<? extends Annotation>[] markerClass();
 }

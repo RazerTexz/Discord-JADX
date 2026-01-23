@@ -30,33 +30,33 @@ import p600f0.p601e0.p608j.Http2Stream;
 import p615g0.Sink;
 import p615g0.Source2;
 
-/* compiled from: Http2ExchangeCodec.kt */
-/* renamed from: f0.e0.j.l, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: f0.e0.j.l, reason: use source file name */
+/* JADX INFO: compiled from: Http2ExchangeCodec.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class Http2ExchangeCodec implements ExchangeCodec {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final List<String> f25692a = Util7.m10132m("connection", "host", "keep-alive", "proxy-connection", "te", "transfer-encoding", "encoding", "upgrade", ":method", ":path", ":scheme", ":authority");
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static final List<String> f25693b = Util7.m10132m("connection", "host", "keep-alive", "proxy-connection", "te", "transfer-encoding", "encoding", "upgrade");
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public volatile Http2Stream f25694c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final Protocol2 f25695d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public volatile boolean f25696e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final RealConnection4 f25697f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public final RealInterceptorChain f25698g;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public final Http2Connection f25699h;
 
     public Http2ExchangeCodec(OkHttpClient okHttpClient, RealConnection4 realConnection4, RealInterceptorChain realInterceptorChain, Http2Connection http2Connection) {
@@ -73,7 +73,7 @@ public final class Http2ExchangeCodec implements ExchangeCodec {
     }
 
     @Override // p600f0.p601e0.p606h.ExchangeCodec
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public void mo10213a() throws IOException {
         Http2Stream http2Stream = this.f25694c;
         if (http2Stream == null) {
@@ -83,7 +83,7 @@ public final class Http2ExchangeCodec implements ExchangeCodec {
     }
 
     @Override // p600f0.p601e0.p606h.ExchangeCodec
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public void mo10214b(Request request) throws IOException {
         int i;
         Http2Stream http2Stream;
@@ -175,7 +175,7 @@ public final class Http2ExchangeCodec implements ExchangeCodec {
     }
 
     @Override // p600f0.p601e0.p606h.ExchangeCodec
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public Source2 mo10215c(Response response) {
         Intrinsics3.checkParameterIsNotNull(response, "response");
         Http2Stream http2Stream = this.f25694c;
@@ -195,7 +195,7 @@ public final class Http2ExchangeCodec implements ExchangeCodec {
     }
 
     @Override // p600f0.p601e0.p606h.ExchangeCodec
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public Response.C12937a mo10216d(boolean z2) throws IOException {
         Headers headers;
         Http2Stream http2Stream = this.f25694c;
@@ -265,19 +265,19 @@ public final class Http2ExchangeCodec implements ExchangeCodec {
     }
 
     @Override // p600f0.p601e0.p606h.ExchangeCodec
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public RealConnection4 mo10217e() {
         return this.f25697f;
     }
 
     @Override // p600f0.p601e0.p606h.ExchangeCodec
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public void mo10218f() throws IOException {
         this.f25699h.f25627K.flush();
     }
 
     @Override // p600f0.p601e0.p606h.ExchangeCodec
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public long mo10219g(Response response) {
         Intrinsics3.checkParameterIsNotNull(response, "response");
         if (HttpHeaders.m10221a(response)) {
@@ -287,7 +287,7 @@ public final class Http2ExchangeCodec implements ExchangeCodec {
     }
 
     @Override // p600f0.p601e0.p606h.ExchangeCodec
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public Sink mo10220h(Request request, long j) {
         Intrinsics3.checkParameterIsNotNull(request, "request");
         Http2Stream http2Stream = this.f25694c;

@@ -5,8 +5,8 @@ import android.content.Context;
 import android.content.Intent;
 import com.discord.stores.StoreStream;
 
-/* compiled from: SpotifyPlayingStateReceiver.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: SpotifyPlayingStateReceiver.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class SpotifyPlayingStateReceiver extends BroadcastReceiver {
     @Override // android.content.BroadcastReceiver
     public void onReceive(Context context, Intent intent) {

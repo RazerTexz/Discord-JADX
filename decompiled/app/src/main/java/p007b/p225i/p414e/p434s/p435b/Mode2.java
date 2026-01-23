@@ -1,8 +1,8 @@
 package p007b.p225i.p414e.p434s.p435b;
 
-/* compiled from: Mode.java */
-/* renamed from: b.i.e.s.b.h, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.e.s.b.h, reason: use source file name */
+/* JADX INFO: compiled from: Mode.java */
+/* JADX INFO: loaded from: classes3.dex */
 public enum Mode2 {
     TERMINATOR(new int[]{0, 0, 0}, 0),
     NUMERIC(new int[]{10, 12, 14}, 1),
@@ -23,7 +23,7 @@ public enum Mode2 {
         this.bits = i;
     }
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public int m7101f(Version3 version3) {
         int i = version3.f13550c;
         return this.characterCountBitsForVersions[i <= 9 ? (char) 0 : i <= 26 ? (char) 1 : (char) 2];

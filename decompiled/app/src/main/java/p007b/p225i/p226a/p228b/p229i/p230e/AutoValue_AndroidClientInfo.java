@@ -3,45 +3,45 @@ package p007b.p225i.p226a.p228b.p229i.p230e;
 import androidx.annotation.Nullable;
 import p007b.p100d.p104b.p105a.outline;
 
-/* compiled from: AutoValue_AndroidClientInfo.java */
-/* renamed from: b.i.a.b.i.e.c, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.b.i.e.c, reason: use source file name */
+/* JADX INFO: compiled from: AutoValue_AndroidClientInfo.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class AutoValue_AndroidClientInfo extends AndroidClientInfo {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final Integer f5152a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final String f5153b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final String f5154c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final String f5155d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final String f5156e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final String f5157f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public final String f5158g;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public final String f5159h;
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public final String f5160i;
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final String f5161j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final String f5162k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final String f5163l;
 
     public AutoValue_AndroidClientInfo(Integer num, String str, String str2, String str3, String str4, String str5, String str6, String str7, String str8, String str9, String str10, String str11, a aVar) {
@@ -61,35 +61,35 @@ public final class AutoValue_AndroidClientInfo extends AndroidClientInfo {
 
     @Override // p007b.p225i.p226a.p228b.p229i.p230e.AndroidClientInfo
     @Nullable
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public String mo2299a() {
         return this.f5163l;
     }
 
     @Override // p007b.p225i.p226a.p228b.p229i.p230e.AndroidClientInfo
     @Nullable
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public String mo2300b() {
         return this.f5161j;
     }
 
     @Override // p007b.p225i.p226a.p228b.p229i.p230e.AndroidClientInfo
     @Nullable
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public String mo2301c() {
         return this.f5155d;
     }
 
     @Override // p007b.p225i.p226a.p228b.p229i.p230e.AndroidClientInfo
     @Nullable
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public String mo2302d() {
         return this.f5159h;
     }
 
     @Override // p007b.p225i.p226a.p228b.p229i.p230e.AndroidClientInfo
     @Nullable
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public String mo2303e() {
         return this.f5154c;
     }
@@ -148,21 +148,21 @@ public final class AutoValue_AndroidClientInfo extends AndroidClientInfo {
 
     @Override // p007b.p225i.p226a.p228b.p229i.p230e.AndroidClientInfo
     @Nullable
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public String mo2304f() {
         return this.f5160i;
     }
 
     @Override // p007b.p225i.p226a.p228b.p229i.p230e.AndroidClientInfo
     @Nullable
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public String mo2305g() {
         return this.f5158g;
     }
 
     @Override // p007b.p225i.p226a.p228b.p229i.p230e.AndroidClientInfo
     @Nullable
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public String mo2306h() {
         return this.f5162k;
     }
@@ -196,28 +196,28 @@ public final class AutoValue_AndroidClientInfo extends AndroidClientInfo {
 
     @Override // p007b.p225i.p226a.p228b.p229i.p230e.AndroidClientInfo
     @Nullable
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public String mo2307i() {
         return this.f5153b;
     }
 
     @Override // p007b.p225i.p226a.p228b.p229i.p230e.AndroidClientInfo
     @Nullable
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public String mo2308j() {
         return this.f5157f;
     }
 
     @Override // p007b.p225i.p226a.p228b.p229i.p230e.AndroidClientInfo
     @Nullable
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public String mo2309k() {
         return this.f5156e;
     }
 
     @Override // p007b.p225i.p226a.p228b.p229i.p230e.AndroidClientInfo
     @Nullable
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public Integer mo2310l() {
         return this.f5152a;
     }

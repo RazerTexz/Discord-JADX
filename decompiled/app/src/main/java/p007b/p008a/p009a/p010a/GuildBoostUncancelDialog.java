@@ -39,34 +39,34 @@ import p507d0.p592z.p594d.Lambda;
 import p507d0.p592z.p594d.Reflection2;
 import p658rx.Observable;
 
-/* compiled from: GuildBoostUncancelDialog.kt */
-/* renamed from: b.a.a.a.a, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.a.a.a.a, reason: use source file name */
+/* JADX INFO: compiled from: GuildBoostUncancelDialog.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class GuildBoostUncancelDialog extends AppDialog {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static final /* synthetic */ KProperty[] f167j = {outline.m846d0(GuildBoostUncancelDialog.class, "binding", "getBinding()Lcom/discord/databinding/GuildBoostUncancelDialogBinding;", 0)};
 
-    /* renamed from: k, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: k, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
 
-    /* renamed from: l, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: l, reason: from kotlin metadata */
     public final FragmentViewBindingDelegate binding;
 
-    /* renamed from: m, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: m, reason: from kotlin metadata */
     public final Lazy viewModel;
 
-    /* renamed from: n, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: n, reason: from kotlin metadata */
     public final Lazy slotId;
 
-    /* compiled from: java-style lambda group */
-    /* renamed from: b.a.a.a.a$a */
+    /* JADX INFO: renamed from: b.a.a.a.a$a */
+    /* JADX INFO: compiled from: java-style lambda group */
     public static final class a implements View.OnClickListener {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public final /* synthetic */ int f172j;
 
-        /* renamed from: k */
+        /* JADX INFO: renamed from: k */
         public final /* synthetic */ Object f173k;
 
         public a(int i, Object obj) {
@@ -121,18 +121,18 @@ public final class GuildBoostUncancelDialog extends AppDialog {
         }
     }
 
-    /* compiled from: GuildBoostUncancelDialog.kt */
-    /* renamed from: b.a.a.a.a$b, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: b.a.a.a.a$b, reason: from kotlin metadata */
+    /* JADX INFO: compiled from: GuildBoostUncancelDialog.kt */
     public static final class Companion {
         public Companion(DefaultConstructorMarker defaultConstructorMarker) {
         }
     }
 
-    /* compiled from: GuildBoostUncancelDialog.kt */
-    /* renamed from: b.a.a.a.a$c */
+    /* JADX INFO: renamed from: b.a.a.a.a$c */
+    /* JADX INFO: compiled from: GuildBoostUncancelDialog.kt */
     public static final /* synthetic */ class c extends FunctionReferenceImpl implements Function1<View, GuildBoostUncancelDialogBinding> {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public static final c f174j = new c();
 
         public c() {
@@ -180,8 +180,8 @@ public final class GuildBoostUncancelDialog extends AppDialog {
         }
     }
 
-    /* compiled from: GuildBoostUncancelDialog.kt */
-    /* renamed from: b.a.a.a.a$d */
+    /* JADX INFO: renamed from: b.a.a.a.a$d */
+    /* JADX INFO: compiled from: GuildBoostUncancelDialog.kt */
     public static final class d extends Lambda implements Function1<GuildBoostUncancelViewModel3.c, Unit> {
         public d() {
             super(1);
@@ -240,8 +240,8 @@ public final class GuildBoostUncancelDialog extends AppDialog {
         }
     }
 
-    /* compiled from: GuildBoostUncancelDialog.kt */
-    /* renamed from: b.a.a.a.a$e */
+    /* JADX INFO: renamed from: b.a.a.a.a$e */
+    /* JADX INFO: compiled from: GuildBoostUncancelDialog.kt */
     public static final class e extends Lambda implements Function0<Long> {
         public e() {
             super(0);
@@ -256,8 +256,8 @@ public final class GuildBoostUncancelDialog extends AppDialog {
         }
     }
 
-    /* compiled from: GuildBoostUncancelDialog.kt */
-    /* renamed from: b.a.a.a.a$f */
+    /* JADX INFO: renamed from: b.a.a.a.a$f */
+    /* JADX INFO: compiled from: GuildBoostUncancelDialog.kt */
     public static final class f extends Lambda implements Function0<GuildBoostUncancelViewModel3> {
         public f() {
             super(0);
@@ -278,7 +278,7 @@ public final class GuildBoostUncancelDialog extends AppDialog {
         this.slotId = LazyJVM.lazy(new e());
     }
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public final GuildBoostUncancelDialogBinding m98g() {
         return (GuildBoostUncancelDialogBinding) this.binding.getValue((Fragment) this, f167j[0]);
     }

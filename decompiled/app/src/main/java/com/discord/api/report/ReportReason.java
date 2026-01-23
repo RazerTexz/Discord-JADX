@@ -4,24 +4,24 @@ import com.discord.models.domain.ModelAuditLogEntry;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ReportReason.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: ReportReason.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class ReportReason {
     private final String description;
     private final String label;
     private final int reason;
 
-    /* renamed from: a, reason: from getter */
+    /* JADX INFO: renamed from: a, reason: from getter */
     public final String getDescription() {
         return this.description;
     }
 
-    /* renamed from: b, reason: from getter */
+    /* JADX INFO: renamed from: b, reason: from getter */
     public final String getLabel() {
         return this.label;
     }
 
-    /* renamed from: c, reason: from getter */
+    /* JADX INFO: renamed from: c, reason: from getter */
     public final int getReason() {
         return this.reason;
     }

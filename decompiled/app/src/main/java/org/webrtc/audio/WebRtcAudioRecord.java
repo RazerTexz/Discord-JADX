@@ -28,7 +28,7 @@ import org.webrtc.audio.JavaAudioDeviceModule;
 import p007b.p100d.p104b.p105a.outline;
 import p617h0.p628c.p629u0.CallableC12491a;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public class WebRtcAudioRecord {
     private static final int AUDIO_RECORD_START = 0;
     private static final int AUDIO_RECORD_STOP = 1;
@@ -78,7 +78,7 @@ public class WebRtcAudioRecord {
     @Nullable
     private final JavaAudioDeviceModule.AudioRecordStateCallback stateCallback;
 
-    /* renamed from: org.webrtc.audio.WebRtcAudioRecord$1 */
+    /* JADX INFO: renamed from: org.webrtc.audio.WebRtcAudioRecord$1 */
     public class ThreadFactoryC130001 implements ThreadFactory {
         public final /* synthetic */ AtomicInteger val$nextThreadId;
 
@@ -103,7 +103,7 @@ public class WebRtcAudioRecord {
         }
 
         @Override // java.lang.Thread, java.lang.Runnable
-        public void run() throws SecurityException, IllegalArgumentException {
+        public void run() {
             Process.setThreadPriority(-19);
             Logging.m11027d(WebRtcAudioRecord.TAG, "AudioRecordThread" + WebRtcAudioUtils.getThreadInfo());
             WebRtcAudioRecord.access$100(WebRtcAudioRecord.access$000(WebRtcAudioRecord.this).getRecordingState() == 3);
@@ -555,7 +555,7 @@ public class WebRtcAudioRecord {
         return false;
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public /* synthetic */ String m11054a(AudioRecord audioRecord) {
         if (this.audioRecord == audioRecord) {
             logRecordingConfigurations(audioRecord, true);

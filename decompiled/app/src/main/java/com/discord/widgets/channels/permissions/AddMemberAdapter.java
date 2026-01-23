@@ -27,12 +27,12 @@ import kotlin.jvm.internal.DefaultConstructorMarker;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: AddMemberAdapter.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: AddMemberAdapter.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class AddMemberAdapter extends MGRecyclerAdapterSimple<Item> {
     private Function2<? super Long, ? super PermissionOverwrite.Type, Unit> onClickListener;
 
-    /* compiled from: AddMemberAdapter.kt */
+    /* JADX INFO: compiled from: AddMemberAdapter.kt */
     public static final class AddMemberAdapterCategoryItem extends MGRecyclerViewHolder<AddMemberAdapter, Item> {
         private final WidgetChannelSettingsAddMemberCategoryBinding binding;
 
@@ -67,7 +67,7 @@ public final class AddMemberAdapter extends MGRecyclerAdapterSimple<Item> {
             onConfigure2(i, item);
         }
 
-        /* renamed from: onConfigure, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: onConfigure, reason: avoid collision after fix types in other method */
         public void onConfigure2(int position, Item data) {
             String string;
             Intrinsics3.checkNotNullParameter(data, "data");
@@ -87,7 +87,7 @@ public final class AddMemberAdapter extends MGRecyclerAdapterSimple<Item> {
         }
     }
 
-    /* compiled from: AddMemberAdapter.kt */
+    /* JADX INFO: compiled from: AddMemberAdapter.kt */
     public static final class AddMemberAdapterItemItem extends MGRecyclerViewHolder<AddMemberAdapter, Item> {
         private final WidgetChannelSettingsAddMemberItemBinding binding;
 
@@ -158,7 +158,7 @@ public final class AddMemberAdapter extends MGRecyclerAdapterSimple<Item> {
             onConfigure2(i, item);
         }
 
-        /* renamed from: onConfigure, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: onConfigure, reason: avoid collision after fix types in other method */
         public void onConfigure2(int position, Item data) {
             Intrinsics3.checkNotNullParameter(data, "data");
             super.onConfigure(position, data);
@@ -175,12 +175,12 @@ public final class AddMemberAdapter extends MGRecyclerAdapterSimple<Item> {
         }
     }
 
-    /* compiled from: AddMemberAdapter.kt */
+    /* JADX INFO: compiled from: AddMemberAdapter.kt */
     public static abstract class Item implements MGRecyclerDataPayload {
         public static final int TYPE_CATEGORY = 0;
         public static final int TYPE_PERMISSION_OWNER = 1;
 
-        /* compiled from: AddMemberAdapter.kt */
+        /* JADX INFO: compiled from: AddMemberAdapter.kt */
         public static final /* data */ class CategoryItem extends Item {
             private final Companion.CategoryType categoryType;
             private final String key;
@@ -201,7 +201,7 @@ public final class AddMemberAdapter extends MGRecyclerAdapterSimple<Item> {
                 return categoryItem.copy(categoryType);
             }
 
-            /* renamed from: component1, reason: from getter */
+            /* JADX INFO: renamed from: component1, reason: from getter */
             public final Companion.CategoryType getCategoryType() {
                 return this.categoryType;
             }
@@ -248,7 +248,7 @@ public final class AddMemberAdapter extends MGRecyclerAdapterSimple<Item> {
             }
         }
 
-        /* compiled from: AddMemberAdapter.kt */
+        /* JADX INFO: compiled from: AddMemberAdapter.kt */
         public static final /* data */ class PermissionOwnerItem extends Item {
             private final Companion.AddStatus addStatus;
             private final boolean checked;
@@ -290,17 +290,17 @@ public final class AddMemberAdapter extends MGRecyclerAdapterSimple<Item> {
                 return permissionOwnerItem.copy(permissionOwner, z2, addStatus);
             }
 
-            /* renamed from: component1, reason: from getter */
+            /* JADX INFO: renamed from: component1, reason: from getter */
             public final PermissionOwner getPermissionOwner() {
                 return this.permissionOwner;
             }
 
-            /* renamed from: component2, reason: from getter */
+            /* JADX INFO: renamed from: component2, reason: from getter */
             public final boolean getChecked() {
                 return this.checked;
             }
 
-            /* renamed from: component3, reason: from getter */
+            /* JADX INFO: renamed from: component3, reason: from getter */
             public final Companion.AddStatus getAddStatus() {
                 return this.addStatus;
             }
@@ -345,17 +345,20 @@ public final class AddMemberAdapter extends MGRecyclerAdapterSimple<Item> {
             }
 
             /* JADX WARN: Multi-variable type inference failed */
+            /* JADX WARN: Type inference failed for: r2v1, types: [int] */
+            /* JADX WARN: Type inference failed for: r2v3 */
+            /* JADX WARN: Type inference failed for: r2v4 */
             public int hashCode() {
                 PermissionOwner permissionOwner = this.permissionOwner;
                 int iHashCode = (permissionOwner != null ? permissionOwner.hashCode() : 0) * 31;
                 boolean z2 = this.checked;
-                int i = z2;
-                if (z2 != 0) {
-                    i = 1;
+                ?? r2 = z2;
+                if (z2) {
+                    r2 = 1;
                 }
-                int i2 = (iHashCode + i) * 31;
+                int i = (iHashCode + r2) * 31;
                 Companion.AddStatus addStatus = this.addStatus;
-                return i2 + (addStatus != null ? addStatus.hashCode() : 0);
+                return i + (addStatus != null ? addStatus.hashCode() : 0);
             }
 
             public String toString() {

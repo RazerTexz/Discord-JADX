@@ -3,9 +3,9 @@ package com.discord.widgets.contact_sync;
 import android.widget.CompoundButton;
 import com.discord.widgets.contact_sync.ContactSyncFriendSuggestionListAdapter;
 
-/* compiled from: ContactSyncFriendSuggestionListAdapter.kt */
-/* renamed from: com.discord.widgets.contact_sync.ContactSyncFriendSuggestionListAdapter$ItemFriendSuggestion$onConfigure$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.contact_sync.ContactSyncFriendSuggestionListAdapter$ItemFriendSuggestion$onConfigure$1, reason: use source file name */
+/* JADX INFO: compiled from: ContactSyncFriendSuggestionListAdapter.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class ContactSyncFriendSuggestionListAdapter2 implements CompoundButton.OnCheckedChangeListener {
     public final /* synthetic */ long $id;
     public final /* synthetic */ ContactSyncFriendSuggestionListAdapter.ItemFriendSuggestion this$0;

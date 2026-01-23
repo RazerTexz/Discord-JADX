@@ -10,13 +10,13 @@ import java.util.Objects;
 import p007b.p225i.p226a.p288f.p299e.p308o.C3404f;
 import p007b.p225i.p355b.p356a.Supplier2;
 
-/* compiled from: Multimaps.java */
-/* renamed from: b.i.b.b.d0, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.b.b.d0, reason: use source file name */
+/* JADX INFO: compiled from: Multimaps.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class Multimaps<K, V> extends AbstractListMultimap<K, V> {
     private static final long serialVersionUID = 0;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public transient Supplier2<? extends List<V>> f11972o;
 
     public Multimaps(Map<K, Collection<V>> map, Supplier2<? extends List<V>> supplier2) {
@@ -44,7 +44,7 @@ public class Multimaps<K, V> extends AbstractListMultimap<K, V> {
     }
 
     @Override // p007b.p225i.p355b.p357b.AbstractMapBasedMultimap2
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public Collection mo6217e() {
         return this.f11972o.get();
     }

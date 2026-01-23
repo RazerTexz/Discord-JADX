@@ -24,15 +24,15 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 import p658rx.functions.Func5;
 
-/* compiled from: WidgetServerSettingsAuditLogFilter.kt */
-/* renamed from: com.discord.widgets.servers.auditlog.WidgetServerSettingsAuditLogFilter$Model$Companion$get$2, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.servers.auditlog.WidgetServerSettingsAuditLogFilter$Model$Companion$get$2, reason: use source file name */
+/* JADX INFO: compiled from: WidgetServerSettingsAuditLogFilter.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetServerSettingsAuditLogFilter3<T1, T2, T3, T4, T5, R> implements Func5<StoreAuditLog.AuditLogState, Map<Long, ? extends User>, Map<Long, ? extends GuildMember>, List<? extends Integer>, String, WidgetServerSettingsAuditLogFilter.Model> {
     public final /* synthetic */ Context $context;
     public final /* synthetic */ int $filterType;
 
-    /* compiled from: WidgetServerSettingsAuditLogFilter.kt */
-    /* renamed from: com.discord.widgets.servers.auditlog.WidgetServerSettingsAuditLogFilter$Model$Companion$get$2$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.auditlog.WidgetServerSettingsAuditLogFilter$Model$Companion$get$2$1 */
+    /* JADX INFO: compiled from: WidgetServerSettingsAuditLogFilter.kt */
     public static final class C93331 extends Lambda implements Function1<Integer, Boolean> {
         public final /* synthetic */ String $filterText;
 
@@ -63,8 +63,8 @@ public final class WidgetServerSettingsAuditLogFilter3<T1, T2, T3, T4, T5, R> im
         }
     }
 
-    /* compiled from: WidgetServerSettingsAuditLogFilter.kt */
-    /* renamed from: com.discord.widgets.servers.auditlog.WidgetServerSettingsAuditLogFilter$Model$Companion$get$2$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.auditlog.WidgetServerSettingsAuditLogFilter$Model$Companion$get$2$2 */
+    /* JADX INFO: compiled from: WidgetServerSettingsAuditLogFilter.kt */
     public static final class C93342 extends Lambda implements Function1<Integer, WidgetServerSettingsAuditLogFilterAdapter.AuditLogActionFilterItem> {
         public final /* synthetic */ StoreAuditLog.AuditLogState $auditLogState;
 
@@ -96,7 +96,7 @@ public final class WidgetServerSettingsAuditLogFilter3<T1, T2, T3, T4, T5, R> im
         return call2(auditLogState, map, (Map<Long, GuildMember>) map2, (List<Integer>) list, str);
     }
 
-    /* renamed from: call, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
     public final WidgetServerSettingsAuditLogFilter.Model call2(StoreAuditLog.AuditLogState auditLogState, Map<Long, ? extends User> map, Map<Long, GuildMember> map2, List<Integer> list, String str) {
         Sequence sequenceEmptySequence;
         if (this.$filterType != 0) {

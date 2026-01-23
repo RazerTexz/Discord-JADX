@@ -7,7 +7,7 @@ import java.io.IOException;
 import java.util.Map;
 import p007b.p100d.p104b.p105a.outline;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class ModelUserRelationship implements Model {
     public static final int TYPE_BLOCKED = 2;
     public static final int TYPE_FRIEND = 1;
@@ -15,7 +15,7 @@ public class ModelUserRelationship implements Model {
     public static final int TYPE_INVITE_OUTGOING = 4;
     public static final int TYPE_NONE = 0;
 
-    /* renamed from: id */
+    /* JADX INFO: renamed from: id */
     private long f18584id;
     private int type;
     private User user;

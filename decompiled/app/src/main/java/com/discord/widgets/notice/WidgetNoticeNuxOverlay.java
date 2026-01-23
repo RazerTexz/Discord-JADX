@@ -15,19 +15,19 @@ import kotlin.reflect.KProperty;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: WidgetNoticeNuxOverlay.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetNoticeNuxOverlay.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetNoticeNuxOverlay extends AppDialog {
     public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetNoticeNuxOverlay.class, "binding", "getBinding()Lcom/discord/databinding/WidgetNoticeNuxOverlayBinding;", 0)};
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private static final String NOTICE_NAME = "NUX/Overlay";
 
-    /* renamed from: binding$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
 
-    /* compiled from: WidgetNoticeNuxOverlay.kt */
+    /* JADX INFO: compiled from: WidgetNoticeNuxOverlay.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -41,8 +41,8 @@ public final class WidgetNoticeNuxOverlay extends AppDialog {
         }
     }
 
-    /* compiled from: WidgetNoticeNuxOverlay.kt */
-    /* renamed from: com.discord.widgets.notice.WidgetNoticeNuxOverlay$onViewBound$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.notice.WidgetNoticeNuxOverlay$onViewBound$1 */
+    /* JADX INFO: compiled from: WidgetNoticeNuxOverlay.kt */
     public static final class ViewOnClickListenerC90981 implements View.OnClickListener {
         public ViewOnClickListenerC90981() {
         }
@@ -54,8 +54,8 @@ public final class WidgetNoticeNuxOverlay extends AppDialog {
         }
     }
 
-    /* compiled from: WidgetNoticeNuxOverlay.kt */
-    /* renamed from: com.discord.widgets.notice.WidgetNoticeNuxOverlay$onViewBound$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.notice.WidgetNoticeNuxOverlay$onViewBound$2 */
+    /* JADX INFO: compiled from: WidgetNoticeNuxOverlay.kt */
     public static final class ViewOnClickListenerC90992 implements View.OnClickListener {
         public ViewOnClickListenerC90992() {
         }

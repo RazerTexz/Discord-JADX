@@ -9,16 +9,16 @@ import p007b.p225i.p361c.p369m.p370d.p375m.ImmutableList3;
 import p007b.p225i.p361c.p369m.p370d.p375m.p376x.CrashlyticsReportJsonTransform8;
 import p007b.p225i.p361c.p393p.DataEncoder;
 
-/* compiled from: CrashlyticsReportJsonTransform.java */
-/* renamed from: b.i.c.m.d.m.x.d, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.c.m.d.m.x.d, reason: use source file name */
+/* JADX INFO: compiled from: CrashlyticsReportJsonTransform.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final /* synthetic */ class CrashlyticsReportJsonTransform4 implements CrashlyticsReportJsonTransform8.a {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final CrashlyticsReportJsonTransform4 f12652a = new CrashlyticsReportJsonTransform4();
 
     @Override // p007b.p225i.p361c.p369m.p370d.p375m.p376x.CrashlyticsReportJsonTransform8.a
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public Object mo6613a(JsonReader jsonReader) throws IOException {
         DataEncoder dataEncoder = CrashlyticsReportJsonTransform8.f12656a;
         jsonReader.beginObject();

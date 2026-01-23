@@ -37,82 +37,82 @@ import p007b.p085c.p086a.p095y.p098m.CompositionLayer;
 import p007b.p085c.p086a.p095y.p098m.Layer2;
 import p007b.p100d.p104b.p105a.outline;
 
-/* compiled from: LottieDrawable.java */
-/* renamed from: b.c.a.j, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.c.a.j, reason: use source file name */
+/* JADX INFO: compiled from: LottieDrawable.java */
+/* JADX INFO: loaded from: classes.dex */
 public class LottieDrawable extends Drawable implements Drawable.Callback, Animatable {
 
-    /* renamed from: A */
+    /* JADX INFO: renamed from: A */
     public boolean f2366A;
 
-    /* renamed from: B */
+    /* JADX INFO: renamed from: B */
     public boolean f2367B;
 
-    /* renamed from: C */
+    /* JADX INFO: renamed from: C */
     public boolean f2368C;
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final Matrix f2369j = new Matrix();
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public LottieComposition f2370k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final LottieValueAnimator f2371l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public float f2372m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public boolean f2373n;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public boolean f2374o;
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public final ArrayList<o> f2375p;
 
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     public final ValueAnimator.AnimatorUpdateListener f2376q;
 
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     @Nullable
     public ImageView.ScaleType f2377r;
 
-    /* renamed from: s */
+    /* JADX INFO: renamed from: s */
     @Nullable
     public ImageAssetManager f2378s;
 
-    /* renamed from: t */
+    /* JADX INFO: renamed from: t */
     @Nullable
     public String f2379t;
 
-    /* renamed from: u */
+    /* JADX INFO: renamed from: u */
     @Nullable
     public ImageAssetDelegate f2380u;
 
-    /* renamed from: v */
+    /* JADX INFO: renamed from: v */
     @Nullable
     public FontAssetManager f2381v;
 
-    /* renamed from: w */
+    /* JADX INFO: renamed from: w */
     public boolean f2382w;
 
-    /* renamed from: x */
+    /* JADX INFO: renamed from: x */
     @Nullable
     public CompositionLayer f2383x;
 
-    /* renamed from: y */
+    /* JADX INFO: renamed from: y */
     public int f2384y;
 
-    /* renamed from: z */
+    /* JADX INFO: renamed from: z */
     public boolean f2385z;
 
-    /* compiled from: LottieDrawable.java */
-    /* renamed from: b.c.a.j$a */
+    /* JADX INFO: renamed from: b.c.a.j$a */
+    /* JADX INFO: compiled from: LottieDrawable.java */
     public class a implements o {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final /* synthetic */ String f2386a;
 
         public a(String str) {
@@ -120,20 +120,20 @@ public class LottieDrawable extends Drawable implements Drawable.Callback, Anima
         }
 
         @Override // p007b.p085c.p086a.LottieDrawable.o
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public void mo703a(LottieComposition lottieComposition) {
             LottieDrawable.this.m697q(this.f2386a);
         }
     }
 
-    /* compiled from: LottieDrawable.java */
-    /* renamed from: b.c.a.j$b */
+    /* JADX INFO: renamed from: b.c.a.j$b */
+    /* JADX INFO: compiled from: LottieDrawable.java */
     public class b implements o {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final /* synthetic */ int f2388a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final /* synthetic */ int f2389b;
 
         public b(int i, int i2) {
@@ -142,17 +142,17 @@ public class LottieDrawable extends Drawable implements Drawable.Callback, Anima
         }
 
         @Override // p007b.p085c.p086a.LottieDrawable.o
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public void mo703a(LottieComposition lottieComposition) {
             LottieDrawable.this.m696p(this.f2388a, this.f2389b);
         }
     }
 
-    /* compiled from: LottieDrawable.java */
-    /* renamed from: b.c.a.j$c */
+    /* JADX INFO: renamed from: b.c.a.j$c */
+    /* JADX INFO: compiled from: LottieDrawable.java */
     public class c implements o {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final /* synthetic */ int f2391a;
 
         public c(int i) {
@@ -160,17 +160,17 @@ public class LottieDrawable extends Drawable implements Drawable.Callback, Anima
         }
 
         @Override // p007b.p085c.p086a.LottieDrawable.o
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public void mo703a(LottieComposition lottieComposition) {
             LottieDrawable.this.m692l(this.f2391a);
         }
     }
 
-    /* compiled from: LottieDrawable.java */
-    /* renamed from: b.c.a.j$d */
+    /* JADX INFO: renamed from: b.c.a.j$d */
+    /* JADX INFO: compiled from: LottieDrawable.java */
     public class d implements o {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final /* synthetic */ float f2393a;
 
         public d(float f) {
@@ -178,23 +178,23 @@ public class LottieDrawable extends Drawable implements Drawable.Callback, Anima
         }
 
         @Override // p007b.p085c.p086a.LottieDrawable.o
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public void mo703a(LottieComposition lottieComposition) {
             LottieDrawable.this.m701u(this.f2393a);
         }
     }
 
-    /* compiled from: LottieDrawable.java */
-    /* renamed from: b.c.a.j$e */
+    /* JADX INFO: renamed from: b.c.a.j$e */
+    /* JADX INFO: compiled from: LottieDrawable.java */
     public class e implements o {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final /* synthetic */ KeyPath f2395a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final /* synthetic */ Object f2396b;
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public final /* synthetic */ LottieValueCallback f2397c;
 
         public e(KeyPath keyPath, Object obj, LottieValueCallback lottieValueCallback) {
@@ -204,14 +204,14 @@ public class LottieDrawable extends Drawable implements Drawable.Callback, Anima
         }
 
         @Override // p007b.p085c.p086a.LottieDrawable.o
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public void mo703a(LottieComposition lottieComposition) {
             LottieDrawable.this.m681a(this.f2395a, this.f2396b, this.f2397c);
         }
     }
 
-    /* compiled from: LottieDrawable.java */
-    /* renamed from: b.c.a.j$f */
+    /* JADX INFO: renamed from: b.c.a.j$f */
+    /* JADX INFO: compiled from: LottieDrawable.java */
     public class f implements ValueAnimator.AnimatorUpdateListener {
         public f() {
         }
@@ -226,37 +226,37 @@ public class LottieDrawable extends Drawable implements Drawable.Callback, Anima
         }
     }
 
-    /* compiled from: LottieDrawable.java */
-    /* renamed from: b.c.a.j$g */
+    /* JADX INFO: renamed from: b.c.a.j$g */
+    /* JADX INFO: compiled from: LottieDrawable.java */
     public class g implements o {
         public g() {
         }
 
         @Override // p007b.p085c.p086a.LottieDrawable.o
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public void mo703a(LottieComposition lottieComposition) {
             LottieDrawable.this.m690j();
         }
     }
 
-    /* compiled from: LottieDrawable.java */
-    /* renamed from: b.c.a.j$h */
+    /* JADX INFO: renamed from: b.c.a.j$h */
+    /* JADX INFO: compiled from: LottieDrawable.java */
     public class h implements o {
         public h() {
         }
 
         @Override // p007b.p085c.p086a.LottieDrawable.o
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public void mo703a(LottieComposition lottieComposition) {
             LottieDrawable.this.m691k();
         }
     }
 
-    /* compiled from: LottieDrawable.java */
-    /* renamed from: b.c.a.j$i */
+    /* JADX INFO: renamed from: b.c.a.j$i */
+    /* JADX INFO: compiled from: LottieDrawable.java */
     public class i implements o {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final /* synthetic */ int f2402a;
 
         public i(int i) {
@@ -264,17 +264,17 @@ public class LottieDrawable extends Drawable implements Drawable.Callback, Anima
         }
 
         @Override // p007b.p085c.p086a.LottieDrawable.o
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public void mo703a(LottieComposition lottieComposition) {
             LottieDrawable.this.m698r(this.f2402a);
         }
     }
 
-    /* compiled from: LottieDrawable.java */
-    /* renamed from: b.c.a.j$j */
+    /* JADX INFO: renamed from: b.c.a.j$j */
+    /* JADX INFO: compiled from: LottieDrawable.java */
     public class j implements o {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final /* synthetic */ float f2404a;
 
         public j(float f) {
@@ -282,17 +282,17 @@ public class LottieDrawable extends Drawable implements Drawable.Callback, Anima
         }
 
         @Override // p007b.p085c.p086a.LottieDrawable.o
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public void mo703a(LottieComposition lottieComposition) {
             LottieDrawable.this.m700t(this.f2404a);
         }
     }
 
-    /* compiled from: LottieDrawable.java */
-    /* renamed from: b.c.a.j$k */
+    /* JADX INFO: renamed from: b.c.a.j$k */
+    /* JADX INFO: compiled from: LottieDrawable.java */
     public class k implements o {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final /* synthetic */ int f2406a;
 
         public k(int i) {
@@ -300,17 +300,17 @@ public class LottieDrawable extends Drawable implements Drawable.Callback, Anima
         }
 
         @Override // p007b.p085c.p086a.LottieDrawable.o
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public void mo703a(LottieComposition lottieComposition) {
             LottieDrawable.this.m693m(this.f2406a);
         }
     }
 
-    /* compiled from: LottieDrawable.java */
-    /* renamed from: b.c.a.j$l */
+    /* JADX INFO: renamed from: b.c.a.j$l */
+    /* JADX INFO: compiled from: LottieDrawable.java */
     public class l implements o {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final /* synthetic */ float f2408a;
 
         public l(float f) {
@@ -318,17 +318,17 @@ public class LottieDrawable extends Drawable implements Drawable.Callback, Anima
         }
 
         @Override // p007b.p085c.p086a.LottieDrawable.o
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public void mo703a(LottieComposition lottieComposition) {
             LottieDrawable.this.m695o(this.f2408a);
         }
     }
 
-    /* compiled from: LottieDrawable.java */
-    /* renamed from: b.c.a.j$m */
+    /* JADX INFO: renamed from: b.c.a.j$m */
+    /* JADX INFO: compiled from: LottieDrawable.java */
     public class m implements o {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final /* synthetic */ String f2410a;
 
         public m(String str) {
@@ -336,17 +336,17 @@ public class LottieDrawable extends Drawable implements Drawable.Callback, Anima
         }
 
         @Override // p007b.p085c.p086a.LottieDrawable.o
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public void mo703a(LottieComposition lottieComposition) {
             LottieDrawable.this.m699s(this.f2410a);
         }
     }
 
-    /* compiled from: LottieDrawable.java */
-    /* renamed from: b.c.a.j$n */
+    /* JADX INFO: renamed from: b.c.a.j$n */
+    /* JADX INFO: compiled from: LottieDrawable.java */
     public class n implements o {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final /* synthetic */ String f2412a;
 
         public n(String str) {
@@ -354,16 +354,16 @@ public class LottieDrawable extends Drawable implements Drawable.Callback, Anima
         }
 
         @Override // p007b.p085c.p086a.LottieDrawable.o
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public void mo703a(LottieComposition lottieComposition) {
             LottieDrawable.this.m694n(this.f2412a);
         }
     }
 
-    /* compiled from: LottieDrawable.java */
-    /* renamed from: b.c.a.j$o */
+    /* JADX INFO: renamed from: b.c.a.j$o */
+    /* JADX INFO: compiled from: LottieDrawable.java */
     public interface o {
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         void mo703a(LottieComposition lottieComposition);
     }
 
@@ -383,7 +383,7 @@ public class LottieDrawable extends Drawable implements Drawable.Callback, Anima
         lottieValueAnimator.f2293j.add(fVar);
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public <T> void m681a(KeyPath keyPath, T t, LottieValueCallback<T> lottieValueCallback) {
         List listEmptyList;
         CompositionLayer compositionLayer = this.f2383x;
@@ -421,7 +421,7 @@ public class LottieDrawable extends Drawable implements Drawable.Callback, Anima
         }
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final void m682b() {
         LottieComposition lottieComposition = this.f2370k;
         JsonReader2.a aVar = LayerParser.f2280a;
@@ -431,7 +431,7 @@ public class LottieDrawable extends Drawable implements Drawable.Callback, Anima
         this.f2383x = new CompositionLayer(this, layer2, lottieComposition2.f2344i, lottieComposition2);
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public void m683c() {
         LottieValueAnimator lottieValueAnimator = this.f2371l;
         if (lottieValueAnimator.f2305t) {
@@ -447,7 +447,7 @@ public class LottieDrawable extends Drawable implements Drawable.Callback, Anima
         invalidateSelf();
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final void m684d(@NonNull Canvas canvas) {
         float f2;
         float f3;
@@ -531,18 +531,18 @@ public class LottieDrawable extends Drawable implements Drawable.Callback, Anima
         L.m663a("Drawable#draw");
     }
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public float m685e() {
         return this.f2371l.m644i();
     }
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public float m686f() {
         return this.f2371l.m645j();
     }
 
     @FloatRange(from = 0.0d, m75to = 1.0d)
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public float m687g() {
         return this.f2371l.m643h();
     }
@@ -573,12 +573,12 @@ public class LottieDrawable extends Drawable implements Drawable.Callback, Anima
         return -3;
     }
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public int m688h() {
         return this.f2371l.getRepeatCount();
     }
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public boolean m689i() {
         LottieValueAnimator lottieValueAnimator = this.f2371l;
         if (lottieValueAnimator == null) {
@@ -614,7 +614,7 @@ public class LottieDrawable extends Drawable implements Drawable.Callback, Anima
     }
 
     @MainThread
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public void m690j() {
         if (this.f2383x == null) {
             this.f2375p.add(new g());
@@ -644,7 +644,7 @@ public class LottieDrawable extends Drawable implements Drawable.Callback, Anima
     }
 
     @MainThread
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public void m691k() {
         if (this.f2383x == null) {
             this.f2375p.add(new h());
@@ -668,7 +668,7 @@ public class LottieDrawable extends Drawable implements Drawable.Callback, Anima
         this.f2371l.m642g();
     }
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public void m692l(int i2) {
         if (this.f2370k == null) {
             this.f2375p.add(new c(i2));
@@ -677,7 +677,7 @@ public class LottieDrawable extends Drawable implements Drawable.Callback, Anima
         }
     }
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public void m693m(int i2) {
         if (this.f2370k == null) {
             this.f2375p.add(new k(i2));
@@ -687,7 +687,7 @@ public class LottieDrawable extends Drawable implements Drawable.Callback, Anima
         lottieValueAnimator.m650o(lottieValueAnimator.f2302q, i2 + 0.99f);
     }
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public void m694n(String str) {
         LottieComposition lottieComposition = this.f2370k;
         if (lottieComposition == null) {
@@ -701,7 +701,7 @@ public class LottieDrawable extends Drawable implements Drawable.Callback, Anima
         m693m((int) (marker2M672d.f2718b + marker2M672d.f2719c));
     }
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public void m695o(@FloatRange(from = 0.0d, m75to = 1.0d) float f2) {
         LottieComposition lottieComposition = this.f2370k;
         if (lottieComposition == null) {
@@ -711,7 +711,7 @@ public class LottieDrawable extends Drawable implements Drawable.Callback, Anima
         }
     }
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public void m696p(int i2, int i3) {
         if (this.f2370k == null) {
             this.f2375p.add(new b(i2, i3));
@@ -720,7 +720,7 @@ public class LottieDrawable extends Drawable implements Drawable.Callback, Anima
         }
     }
 
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     public void m697q(String str) {
         LottieComposition lottieComposition = this.f2370k;
         if (lottieComposition == null) {
@@ -735,7 +735,7 @@ public class LottieDrawable extends Drawable implements Drawable.Callback, Anima
         m696p(i2, ((int) marker2M672d.f2719c) + i2);
     }
 
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     public void m698r(int i2) {
         if (this.f2370k == null) {
             this.f2375p.add(new i(i2));
@@ -744,7 +744,7 @@ public class LottieDrawable extends Drawable implements Drawable.Callback, Anima
         }
     }
 
-    /* renamed from: s */
+    /* JADX INFO: renamed from: s */
     public void m699s(String str) {
         LottieComposition lottieComposition = this.f2370k;
         if (lottieComposition == null) {
@@ -791,7 +791,7 @@ public class LottieDrawable extends Drawable implements Drawable.Callback, Anima
         this.f2371l.m642g();
     }
 
-    /* renamed from: t */
+    /* JADX INFO: renamed from: t */
     public void m700t(float f2) {
         LottieComposition lottieComposition = this.f2370k;
         if (lottieComposition == null) {
@@ -801,7 +801,7 @@ public class LottieDrawable extends Drawable implements Drawable.Callback, Anima
         }
     }
 
-    /* renamed from: u */
+    /* JADX INFO: renamed from: u */
     public void m701u(@FloatRange(from = 0.0d, m75to = 1.0d) float f2) {
         LottieComposition lottieComposition = this.f2370k;
         if (lottieComposition == null) {
@@ -821,7 +821,7 @@ public class LottieDrawable extends Drawable implements Drawable.Callback, Anima
         callback.unscheduleDrawable(this, runnable);
     }
 
-    /* renamed from: v */
+    /* JADX INFO: renamed from: v */
     public final void m702v() {
         if (this.f2370k == null) {
             return;

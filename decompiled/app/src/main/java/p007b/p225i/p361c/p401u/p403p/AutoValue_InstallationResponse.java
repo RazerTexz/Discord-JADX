@@ -4,24 +4,24 @@ import androidx.annotation.Nullable;
 import p007b.p100d.p104b.p105a.outline;
 import p007b.p225i.p361c.p401u.p403p.InstallationResponse;
 
-/* compiled from: AutoValue_InstallationResponse.java */
-/* renamed from: b.i.c.u.p.a, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.c.u.p.a, reason: use source file name */
+/* JADX INFO: compiled from: AutoValue_InstallationResponse.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class AutoValue_InstallationResponse extends InstallationResponse {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final String f12978a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final String f12979b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final String f12980c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final TokenResult f12981d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final InstallationResponse.a f12982e;
 
     public AutoValue_InstallationResponse(String str, String str2, String str3, TokenResult tokenResult, InstallationResponse.a aVar, a aVar2) {
@@ -34,35 +34,35 @@ public final class AutoValue_InstallationResponse extends InstallationResponse {
 
     @Override // p007b.p225i.p361c.p401u.p403p.InstallationResponse
     @Nullable
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public TokenResult mo6792a() {
         return this.f12981d;
     }
 
     @Override // p007b.p225i.p361c.p401u.p403p.InstallationResponse
     @Nullable
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public String mo6793b() {
         return this.f12979b;
     }
 
     @Override // p007b.p225i.p361c.p401u.p403p.InstallationResponse
     @Nullable
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public String mo6794c() {
         return this.f12980c;
     }
 
     @Override // p007b.p225i.p361c.p401u.p403p.InstallationResponse
     @Nullable
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public InstallationResponse.a mo6795d() {
         return this.f12982e;
     }
 
     @Override // p007b.p225i.p361c.p401u.p403p.InstallationResponse
     @Nullable
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public String mo6796e() {
         return this.f12978a;
     }

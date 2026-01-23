@@ -5,12 +5,12 @@ import java.util.Iterator;
 import java.util.Map;
 
 /* JADX INFO: Add missing generic type declarations: [V, K] */
-/* compiled from: com.google.android.gms:play-services-measurement-base@@18.0.0 */
-/* renamed from: b.i.a.f.h.l.a7 */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.h.l.a7 */
+/* JADX INFO: compiled from: com.google.android.gms:play-services-measurement-base@@18.0.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public class C3585a7<K, V> extends AbstractSet<Map.Entry<K, V>> {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final /* synthetic */ C3814r6 f9848j;
 
     public C3585a7(C3814r6 c3814r6, C3840t6 c3840t6) {

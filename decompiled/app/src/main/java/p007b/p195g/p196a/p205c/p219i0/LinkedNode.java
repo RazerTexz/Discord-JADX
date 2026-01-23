@@ -1,7 +1,7 @@
 package p007b.p195g.p196a.p205c.p219i0;
 
-/* compiled from: LinkedNode.java */
-/* renamed from: b.g.a.c.i0.i, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.g.a.c.i0.i, reason: use source file name */
+/* JADX INFO: compiled from: LinkedNode.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class LinkedNode<T> {
 }

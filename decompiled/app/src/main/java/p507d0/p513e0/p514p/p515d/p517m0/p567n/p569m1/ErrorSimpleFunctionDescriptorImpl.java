@@ -23,20 +23,20 @@ import p507d0.p513e0.p514p.p515d.p517m0.p567n.ErrorUtils;
 import p507d0.p513e0.p514p.p515d.p517m0.p567n.KotlinType;
 import p507d0.p513e0.p514p.p515d.p517m0.p567n.TypeSubstitution5;
 
-/* compiled from: ErrorSimpleFunctionDescriptorImpl.java */
-/* renamed from: d0.e0.p.d.m0.n.m1.a, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.n.m1.a, reason: use source file name */
+/* JADX INFO: compiled from: ErrorSimpleFunctionDescriptorImpl.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class ErrorSimpleFunctionDescriptorImpl extends SimpleFunctionDescriptorImpl {
 
-    /* compiled from: ErrorSimpleFunctionDescriptorImpl.java */
-    /* renamed from: d0.e0.p.d.m0.n.m1.a$a */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.n.m1.a$a */
+    /* JADX INFO: compiled from: ErrorSimpleFunctionDescriptorImpl.java */
     public class a implements FunctionDescriptor.a<SimpleFunctionDescriptor> {
         public a() {
         }
 
         /* JADX WARN: Removed duplicated region for block: B:16:0x0030  */
         /* JADX WARN: Removed duplicated region for block: B:31:0x004e  */
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         /*
             Code decompiled incorrectly, please refer to instructions dump.
         */
@@ -429,7 +429,7 @@ public class ErrorSimpleFunctionDescriptorImpl extends SimpleFunctionDescriptorI
         }
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static /* synthetic */ void m10020a(int i) {
         String str = (i == 6 || i == 7) ? "@NotNull method %s.%s must not return null" : "Argument for @NotNull parameter '%s' of %s.%s must not be null";
         Object[] objArr = new Object[(i == 6 || i == 7) ? 2 : 3];
@@ -492,7 +492,7 @@ public class ErrorSimpleFunctionDescriptorImpl extends SimpleFunctionDescriptorI
     }
 
     @Override // p507d0.p513e0.p514p.p515d.p517m0.p521c.p524i1.SimpleFunctionDescriptorImpl, p507d0.p513e0.p514p.p515d.p517m0.p521c.p524i1.FunctionDescriptorImpl
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public FunctionDescriptorImpl mo9373b(DeclarationDescriptor declarationDescriptor, FunctionDescriptor functionDescriptor, CallableMemberDescriptor.a aVar, Name name, Annotations4 annotations4, SourceElement sourceElement) {
         if (declarationDescriptor == null) {
             m10020a(2);

@@ -4,22 +4,22 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.ThreadFactory;
 import java.util.concurrent.atomic.AtomicLong;
 
-/* compiled from: ExecutorUtils.java */
-/* renamed from: b.i.c.m.d.k.s0, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.c.m.d.k.s0, reason: use source file name */
+/* JADX INFO: compiled from: ExecutorUtils.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class ExecutorUtils implements ThreadFactory {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final /* synthetic */ String f12387j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final /* synthetic */ AtomicLong f12388k;
 
-    /* compiled from: ExecutorUtils.java */
-    /* renamed from: b.i.c.m.d.k.s0$a */
+    /* JADX INFO: renamed from: b.i.c.m.d.k.s0$a */
+    /* JADX INFO: compiled from: ExecutorUtils.java */
     public class a extends BackgroundPriorityRunnable {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public final /* synthetic */ Runnable f12389j;
 
         public a(ExecutorUtils executorUtils, Runnable runnable) {
@@ -27,7 +27,7 @@ public class ExecutorUtils implements ThreadFactory {
         }
 
         @Override // p007b.p225i.p361c.p369m.p370d.p373k.BackgroundPriorityRunnable
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public void mo6398a() {
             this.f12389j.run();
         }

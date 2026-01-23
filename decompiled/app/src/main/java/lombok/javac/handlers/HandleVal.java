@@ -14,11 +14,11 @@ import lombok.javac.ResolutionResetNeeded;
 import lombok.val;
 import lombok.var;
 
+/* JADX INFO: loaded from: discord-126021.apk:lombok/javac/handlers/HandleVal.SCL.lombok */
 @HandlerPriority(65636)
 @ResolutionResetNeeded
-/* loaded from: discord-126021.apk:lombok/javac/handlers/HandleVal.SCL.lombok */
 public class HandleVal extends JavacASTAdapter {
-    /* renamed from: eq */
+    /* JADX INFO: renamed from: eq */
     private static boolean m10948eq(String typeTreeToString, String key) {
         return typeTreeToString.equals(key) || typeTreeToString.equals(new StringBuilder("lombok.").append(key).toString()) || typeTreeToString.equals(new StringBuilder("lombok.experimental.").append(key).toString());
     }

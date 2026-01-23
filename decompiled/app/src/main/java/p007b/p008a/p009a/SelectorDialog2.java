@@ -5,12 +5,12 @@ import kotlin.Unit;
 import kotlin.jvm.functions.Function1;
 import p007b.p008a.p009a.SelectorDialog;
 
-/* compiled from: SelectorDialog.kt */
-/* renamed from: b.a.a.o, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.a.a.o, reason: use source file name */
+/* JADX INFO: compiled from: SelectorDialog.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class SelectorDialog2 implements View.OnClickListener {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final /* synthetic */ SelectorDialog.b f418j;
 
     public SelectorDialog2(SelectorDialog.b bVar) {

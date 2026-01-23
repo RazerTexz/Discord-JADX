@@ -10,9 +10,9 @@ import p659s.p660a.C13116h1;
 import p659s.p660a.Dispatchers;
 import p659s.p660a.p661a.MainDispatchers;
 
-/* compiled from: ViewModel.kt */
-/* renamed from: androidx.lifecycle.ViewModelKt, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: androidx.lifecycle.ViewModelKt, reason: use source file name */
+/* JADX INFO: compiled from: ViewModel.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class ViewModel3 {
     private static final String JOB_KEY = "androidx.lifecycle.ViewModelCoroutineScope.JOB_KEY";
 

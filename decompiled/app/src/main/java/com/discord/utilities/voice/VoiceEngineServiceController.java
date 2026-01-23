@@ -26,11 +26,11 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 import p658rx.Observable;
 
-/* compiled from: VoiceEngineServiceController.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: VoiceEngineServiceController.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class VoiceEngineServiceController {
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private static final Lazy INSTANCE$delegate = LazyJVM.lazy(VoiceEngineServiceController2.INSTANCE);
     private static final NotificationData NOTIFICATION_DATA_DISCONNECTED = new NotificationData(new RtcConnection.State.C5610d(false), "", false, false, false, false, -1, null, false, false);
@@ -40,7 +40,7 @@ public final class VoiceEngineServiceController {
     private VoiceEngineForegroundService.Connection serviceBinding;
     private final StoreVoiceChannelSelected voiceChannelSelectedStore;
 
-    /* compiled from: VoiceEngineServiceController.kt */
+    /* JADX INFO: compiled from: VoiceEngineServiceController.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -56,7 +56,7 @@ public final class VoiceEngineServiceController {
         }
     }
 
-    /* compiled from: VoiceEngineServiceController.kt */
+    /* JADX INFO: compiled from: VoiceEngineServiceController.kt */
     public static final /* data */ class NotificationData {
         private final boolean canSpeak;
         private final long channelId;
@@ -113,52 +113,52 @@ public final class VoiceEngineServiceController {
             return notificationData.copy((i & 1) != 0 ? notificationData.rtcConnectionState : state, (i & 2) != 0 ? notificationData.channelName : str, (i & 4) != 0 ? notificationData.isSelfMuted : z2, (i & 8) != 0 ? notificationData.isSelfDeafened : z3, (i & 16) != 0 ? notificationData.isSelfStreaming : z4, (i & 32) != 0 ? notificationData.isVideo : z5, (i & 64) != 0 ? notificationData.channelId : j, (i & 128) != 0 ? notificationData.guildId : l, (i & 256) != 0 ? notificationData.proximityLockEnabled : z6, (i & 512) != 0 ? notificationData.canSpeak : z7);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final RtcConnection.State getRtcConnectionState() {
             return this.rtcConnectionState;
         }
 
-        /* renamed from: component10, reason: from getter */
+        /* JADX INFO: renamed from: component10, reason: from getter */
         public final boolean getCanSpeak() {
             return this.canSpeak;
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final String getChannelName() {
             return this.channelName;
         }
 
-        /* renamed from: component3, reason: from getter */
+        /* JADX INFO: renamed from: component3, reason: from getter */
         public final boolean getIsSelfMuted() {
             return this.isSelfMuted;
         }
 
-        /* renamed from: component4, reason: from getter */
+        /* JADX INFO: renamed from: component4, reason: from getter */
         public final boolean getIsSelfDeafened() {
             return this.isSelfDeafened;
         }
 
-        /* renamed from: component5, reason: from getter */
+        /* JADX INFO: renamed from: component5, reason: from getter */
         public final boolean getIsSelfStreaming() {
             return this.isSelfStreaming;
         }
 
-        /* renamed from: component6, reason: from getter */
+        /* JADX INFO: renamed from: component6, reason: from getter */
         public final boolean getIsVideo() {
             return this.isVideo;
         }
 
-        /* renamed from: component7, reason: from getter */
+        /* JADX INFO: renamed from: component7, reason: from getter */
         public final long getChannelId() {
             return this.channelId;
         }
 
-        /* renamed from: component8, reason: from getter */
+        /* JADX INFO: renamed from: component8, reason: from getter */
         public final Long getGuildId() {
             return this.guildId;
         }
 
-        /* renamed from: component9, reason: from getter */
+        /* JADX INFO: renamed from: component9, reason: from getter */
         public final boolean getProximityLockEnabled() {
             return this.proximityLockEnabled;
         }
@@ -209,45 +209,63 @@ public final class VoiceEngineServiceController {
         }
 
         /* JADX WARN: Multi-variable type inference failed */
+        /* JADX WARN: Type inference failed for: r0v16, types: [int] */
+        /* JADX WARN: Type inference failed for: r0v18 */
+        /* JADX WARN: Type inference failed for: r0v20 */
+        /* JADX WARN: Type inference failed for: r2v10, types: [int] */
+        /* JADX WARN: Type inference failed for: r2v19 */
+        /* JADX WARN: Type inference failed for: r2v20 */
+        /* JADX WARN: Type inference failed for: r2v21 */
+        /* JADX WARN: Type inference failed for: r2v22 */
+        /* JADX WARN: Type inference failed for: r2v24 */
+        /* JADX WARN: Type inference failed for: r2v25 */
+        /* JADX WARN: Type inference failed for: r2v26 */
+        /* JADX WARN: Type inference failed for: r2v27 */
+        /* JADX WARN: Type inference failed for: r2v4, types: [int] */
+        /* JADX WARN: Type inference failed for: r2v6, types: [int] */
+        /* JADX WARN: Type inference failed for: r2v8, types: [int] */
+        /* JADX WARN: Type inference failed for: r3v0 */
+        /* JADX WARN: Type inference failed for: r3v1, types: [int] */
+        /* JADX WARN: Type inference failed for: r3v2 */
         public int hashCode() {
             RtcConnection.State state = this.rtcConnectionState;
             int iHashCode = (state != null ? state.hashCode() : 0) * 31;
             String str = this.channelName;
             int iHashCode2 = (iHashCode + (str != null ? str.hashCode() : 0)) * 31;
             boolean z2 = this.isSelfMuted;
-            int i = z2;
-            if (z2 != 0) {
-                i = 1;
+            ?? r2 = z2;
+            if (z2) {
+                r2 = 1;
             }
-            int i2 = (iHashCode2 + i) * 31;
+            int i = (iHashCode2 + r2) * 31;
             boolean z3 = this.isSelfDeafened;
-            int i3 = z3;
-            if (z3 != 0) {
-                i3 = 1;
+            ?? r22 = z3;
+            if (z3) {
+                r22 = 1;
             }
-            int i4 = (i2 + i3) * 31;
+            int i2 = (i + r22) * 31;
             boolean z4 = this.isSelfStreaming;
-            int i5 = z4;
-            if (z4 != 0) {
-                i5 = 1;
+            ?? r23 = z4;
+            if (z4) {
+                r23 = 1;
             }
-            int i6 = (i4 + i5) * 31;
+            int i3 = (i2 + r23) * 31;
             boolean z5 = this.isVideo;
-            int i7 = z5;
-            if (z5 != 0) {
-                i7 = 1;
+            ?? r24 = z5;
+            if (z5) {
+                r24 = 1;
             }
-            int iM3a = (C0002b.m3a(this.channelId) + ((i6 + i7) * 31)) * 31;
+            int iM3a = (C0002b.m3a(this.channelId) + ((i3 + r24) * 31)) * 31;
             Long l = this.guildId;
             int iHashCode3 = (iM3a + (l != null ? l.hashCode() : 0)) * 31;
             boolean z6 = this.proximityLockEnabled;
-            int i8 = z6;
-            if (z6 != 0) {
-                i8 = 1;
+            ?? r0 = z6;
+            if (z6) {
+                r0 = 1;
             }
-            int i9 = (iHashCode3 + i8) * 31;
+            int i4 = (iHashCode3 + r0) * 31;
             boolean z7 = this.canSpeak;
-            return i9 + (z7 ? 1 : z7 ? 1 : 0);
+            return i4 + (z7 ? 1 : z7);
         }
 
         public final boolean isSelfDeafened() {
@@ -301,8 +319,8 @@ public final class VoiceEngineServiceController {
         }
     }
 
-    /* compiled from: VoiceEngineServiceController.kt */
-    /* renamed from: com.discord.utilities.voice.VoiceEngineServiceController$init$1 */
+    /* JADX INFO: renamed from: com.discord.utilities.voice.VoiceEngineServiceController$init$1 */
+    /* JADX INFO: compiled from: VoiceEngineServiceController.kt */
     public static final class C70511 extends Lambda implements Function0<Unit> {
         public C70511() {
             super(0);
@@ -314,14 +332,14 @@ public final class VoiceEngineServiceController {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             VoiceEngineServiceController.access$getVoiceChannelSelectedStore$p(VoiceEngineServiceController.this).clear();
         }
     }
 
-    /* compiled from: VoiceEngineServiceController.kt */
-    /* renamed from: com.discord.utilities.voice.VoiceEngineServiceController$init$2 */
+    /* JADX INFO: renamed from: com.discord.utilities.voice.VoiceEngineServiceController$init$2 */
+    /* JADX INFO: compiled from: VoiceEngineServiceController.kt */
     public static final class C70522 extends Lambda implements Function0<Unit> {
         public C70522() {
             super(0);
@@ -333,14 +351,14 @@ public final class VoiceEngineServiceController {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             VoiceEngineServiceController.access$getMediaSettingsStore$p(VoiceEngineServiceController.this).toggleSelfDeafened();
         }
     }
 
-    /* compiled from: VoiceEngineServiceController.kt */
-    /* renamed from: com.discord.utilities.voice.VoiceEngineServiceController$init$3 */
+    /* JADX INFO: renamed from: com.discord.utilities.voice.VoiceEngineServiceController$init$3 */
+    /* JADX INFO: compiled from: VoiceEngineServiceController.kt */
     public static final class C70533 extends Lambda implements Function0<Unit> {
         public final /* synthetic */ Context $context;
 
@@ -356,7 +374,7 @@ public final class VoiceEngineServiceController {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             StoreMediaSettings.SelfMuteFailure selfMuteFailure = VoiceEngineServiceController.access$getMediaSettingsStore$p(VoiceEngineServiceController.this).toggleSelfMuted();
             if (selfMuteFailure == null || selfMuteFailure.ordinal() != 0) {
@@ -366,8 +384,8 @@ public final class VoiceEngineServiceController {
         }
     }
 
-    /* compiled from: VoiceEngineServiceController.kt */
-    /* renamed from: com.discord.utilities.voice.VoiceEngineServiceController$init$4 */
+    /* JADX INFO: renamed from: com.discord.utilities.voice.VoiceEngineServiceController$init$4 */
+    /* JADX INFO: compiled from: VoiceEngineServiceController.kt */
     public static final class C70544 extends Lambda implements Function1<NotificationData, Unit> {
         public final /* synthetic */ Context $context;
 
@@ -383,7 +401,7 @@ public final class VoiceEngineServiceController {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(NotificationData notificationData) {
             if (notificationData.getRtcConnectionState() instanceof RtcConnection.State.C5610d) {
                 DiscordOverlayService.INSTANCE.launchForClose(this.$context);

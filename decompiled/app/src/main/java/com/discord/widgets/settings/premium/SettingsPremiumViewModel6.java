@@ -11,9 +11,9 @@ import com.discord.widgets.settings.premium.SettingsPremiumViewModel;
 import p507d0.p592z.p594d.Intrinsics3;
 import p658rx.functions.Func7;
 
-/* compiled from: SettingsPremiumViewModel.kt */
-/* renamed from: com.discord.widgets.settings.premium.SettingsPremiumViewModel$Companion$observeStores$3, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.settings.premium.SettingsPremiumViewModel$Companion$observeStores$3, reason: use source file name */
+/* JADX INFO: compiled from: SettingsPremiumViewModel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class SettingsPremiumViewModel6<T1, T2, T3, T4, T5, T6, T7, R> implements Func7<StorePaymentSources.PaymentSourcesState, SettingsPremiumViewModel.SubscriptionAndInvoice, SettingsPremiumViewModel.SubscriptionAndInvoice, StoreEntitlements.State, StoreGuildBoost.State, StoreGooglePlaySkuDetails.State, StoreGooglePlayPurchases.State, SettingsPremiumViewModel.StoreState> {
     public static final SettingsPremiumViewModel6 INSTANCE = new SettingsPremiumViewModel6();
 
@@ -22,7 +22,7 @@ public final class SettingsPremiumViewModel6<T1, T2, T3, T4, T5, T6, T7, R> impl
         return call2(paymentSourcesState, subscriptionAndInvoice, subscriptionAndInvoice2, state, state2, state3, state4);
     }
 
-    /* renamed from: call, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
     public final SettingsPremiumViewModel.StoreState call2(StorePaymentSources.PaymentSourcesState paymentSourcesState, SettingsPremiumViewModel.SubscriptionAndInvoice subscriptionAndInvoice, SettingsPremiumViewModel.SubscriptionAndInvoice subscriptionAndInvoice2, StoreEntitlements.State state, StoreGuildBoost.State state2, StoreGooglePlaySkuDetails.State state3, StoreGooglePlayPurchases.State state4) {
         Intrinsics3.checkNotNullExpressionValue(paymentSourcesState, "paymentSourcesState");
         StoreSubscriptions.SubscriptionsState subscriptionsState = subscriptionAndInvoice.getSubscriptionsState();

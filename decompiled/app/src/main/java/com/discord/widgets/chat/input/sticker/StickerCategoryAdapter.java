@@ -29,8 +29,8 @@ import p507d0.p580t.Collections2;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: StickerCategoryAdapter.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: StickerCategoryAdapter.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class StickerCategoryAdapter extends RecyclerView.Adapter<StickerCategoryViewHolder> {
     private final DiffCreator<List<StickerCategoryItem>, StickerCategoryViewHolder> diffCreator;
     private List<? extends StickerCategoryItem> items;
@@ -39,8 +39,8 @@ public final class StickerCategoryAdapter extends RecyclerView.Adapter<StickerCa
     private final Function0<Unit> onRecentClicked;
     private final Function1<Integer, Unit> onSelectedItemAdapterPositionUpdated;
 
-    /* compiled from: StickerCategoryAdapter.kt */
-    /* renamed from: com.discord.widgets.chat.input.sticker.StickerCategoryAdapter$setItems$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.input.sticker.StickerCategoryAdapter$setItems$1 */
+    /* JADX INFO: compiled from: StickerCategoryAdapter.kt */
     public static final class C78921 extends Lambda implements Function1<List<? extends StickerCategoryItem>, Unit> {
         public C78921() {
             super(1);
@@ -52,7 +52,7 @@ public final class StickerCategoryAdapter extends RecyclerView.Adapter<StickerCa
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(List<? extends StickerCategoryItem> list) {
             Intrinsics3.checkNotNullParameter(list, "items");
             StickerCategoryAdapter.access$setItems$p(StickerCategoryAdapter.this, list);
@@ -91,7 +91,7 @@ public final class StickerCategoryAdapter extends RecyclerView.Adapter<StickerCa
     }
 
     @Override // androidx.recyclerview.widget.RecyclerView.Adapter
-    /* renamed from: getItemCount */
+    /* JADX INFO: renamed from: getItemCount */
     public int getPageSize() {
         return this.items.size();
     }

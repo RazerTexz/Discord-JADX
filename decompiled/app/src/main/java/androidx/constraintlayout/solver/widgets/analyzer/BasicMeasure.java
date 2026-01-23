@@ -12,7 +12,7 @@ import androidx.constraintlayout.solver.widgets.Optimizer;
 import androidx.constraintlayout.solver.widgets.VirtualLayout;
 import java.util.ArrayList;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class BasicMeasure {
     public static final int AT_MOST = Integer.MIN_VALUE;
     private static final boolean DEBUG = false;

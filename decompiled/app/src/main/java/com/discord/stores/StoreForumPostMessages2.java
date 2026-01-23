@@ -6,9 +6,9 @@ import kotlin.jvm.functions.Function1;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: StoreForumPostMessages.kt */
-/* renamed from: com.discord.stores.StoreForumPostMessages$fetchForumPosts$2$1$firstMessages$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.stores.StoreForumPostMessages$fetchForumPosts$2$1$firstMessages$1, reason: use source file name */
+/* JADX INFO: compiled from: StoreForumPostMessages.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class StoreForumPostMessages2 extends Lambda implements Function1<ForumPostFirstMessages2, Message> {
     public static final StoreForumPostMessages2 INSTANCE = new StoreForumPostMessages2();
 
@@ -21,7 +21,7 @@ public final class StoreForumPostMessages2 extends Lambda implements Function1<F
         return invoke2(forumPostFirstMessages2);
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final Message invoke2(ForumPostFirstMessages2 forumPostFirstMessages2) {
         Intrinsics3.checkNotNullParameter(forumPostFirstMessages2, "it");
         return forumPostFirstMessages2.getFirstMessage();

@@ -2,15 +2,15 @@ package p007b.p225i.p414e.p426q.p427r.p428f.p429d;
 
 import com.google.zxing.FormatException;
 
-/* compiled from: DecodedNumeric.java */
-/* renamed from: b.i.e.q.r.f.d.p, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.e.q.r.f.d.p, reason: use source file name */
+/* JADX INFO: compiled from: DecodedNumeric.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class DecodedNumeric extends DecodedObject {
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final int f13449b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final int f13450c;
 
     public DecodedNumeric(int i, int i2, int i3) throws FormatException {

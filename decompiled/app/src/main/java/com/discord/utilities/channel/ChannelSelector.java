@@ -30,18 +30,18 @@ import p637j0.p641k.Func1;
 import p637j0.p642l.p647e.ScalarSynchronousObservable;
 import p658rx.Observable;
 
-/* compiled from: ChannelSelector.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: ChannelSelector.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class ChannelSelector {
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private static ChannelSelector INSTANCE;
     private final Dispatcher dispatcher;
     private final ObservationDeck observationDeck;
     private final StoreStream stream;
 
-    /* compiled from: ChannelSelector.kt */
+    /* JADX INFO: compiled from: ChannelSelector.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -66,8 +66,8 @@ public final class ChannelSelector {
         }
     }
 
-    /* compiled from: ChannelSelector.kt */
-    /* renamed from: com.discord.utilities.channel.ChannelSelector$dismissCreateThread$1 */
+    /* JADX INFO: renamed from: com.discord.utilities.channel.ChannelSelector$dismissCreateThread$1 */
+    /* JADX INFO: compiled from: ChannelSelector.kt */
     public static final class C67181 extends Lambda implements Function0<Unit> {
         public C67181() {
             super(0);
@@ -79,14 +79,14 @@ public final class ChannelSelector {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             ChannelSelector.this.getStream().getChannelsSelected().dismissCreateThread();
         }
     }
 
-    /* compiled from: ChannelSelector.kt */
-    /* renamed from: com.discord.utilities.channel.ChannelSelector$findAndSet$1 */
+    /* JADX INFO: renamed from: com.discord.utilities.channel.ChannelSelector$findAndSet$1 */
+    /* JADX INFO: compiled from: ChannelSelector.kt */
     public static final class C67191 extends Lambda implements Function0<Channel> {
         public final /* synthetic */ long $channelId;
         public final /* synthetic */ Context $context;
@@ -121,8 +121,8 @@ public final class ChannelSelector {
         }
     }
 
-    /* compiled from: ChannelSelector.kt */
-    /* renamed from: com.discord.utilities.channel.ChannelSelector$findAndSet$2 */
+    /* JADX INFO: renamed from: com.discord.utilities.channel.ChannelSelector$findAndSet$2 */
+    /* JADX INFO: compiled from: ChannelSelector.kt */
     public static final class C67202<T, R> implements Func1<Channel, Boolean> {
         public static final C67202 INSTANCE = new C67202();
 
@@ -131,14 +131,14 @@ public final class ChannelSelector {
             return call2(channel);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final Boolean call2(Channel channel) {
             return Boolean.valueOf(channel != null);
         }
     }
 
-    /* compiled from: ChannelSelector.kt */
-    /* renamed from: com.discord.utilities.channel.ChannelSelector$findAndSet$3 */
+    /* JADX INFO: renamed from: com.discord.utilities.channel.ChannelSelector$findAndSet$3 */
+    /* JADX INFO: compiled from: ChannelSelector.kt */
     public static final class C67213 extends Lambda implements Function1<Channel, Unit> {
         public C67213() {
             super(1);
@@ -150,14 +150,14 @@ public final class ChannelSelector {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Channel channel) {
             ChannelSelector.selectChannel$default(ChannelSelector.this, channel, null, null, 6, null);
         }
     }
 
-    /* compiled from: ChannelSelector.kt */
-    /* renamed from: com.discord.utilities.channel.ChannelSelector$findAndSetDirectMessage$1 */
+    /* JADX INFO: renamed from: com.discord.utilities.channel.ChannelSelector$findAndSetDirectMessage$1 */
+    /* JADX INFO: compiled from: ChannelSelector.kt */
     public static final class C67221 extends Lambda implements Function1<Channel, Unit> {
         public final /* synthetic */ Context $context;
 
@@ -173,21 +173,21 @@ public final class ChannelSelector {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Channel channel) {
             Intrinsics3.checkNotNullParameter(channel, "channel");
             ChannelSelector.this.findAndSet(this.$context, channel.getId());
         }
     }
 
-    /* compiled from: ChannelSelector.kt */
-    /* renamed from: com.discord.utilities.channel.ChannelSelector$findAndSetThread$1 */
+    /* JADX INFO: renamed from: com.discord.utilities.channel.ChannelSelector$findAndSetThread$1 */
+    /* JADX INFO: compiled from: ChannelSelector.kt */
     public static final class C67231 extends Lambda implements Function1<Channel, Unit> {
         public final /* synthetic */ long $channelId;
         public final /* synthetic */ Context $context;
 
-        /* compiled from: ChannelSelector.kt */
-        /* renamed from: com.discord.utilities.channel.ChannelSelector$findAndSetThread$1$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.utilities.channel.ChannelSelector$findAndSetThread$1$1, reason: invalid class name */
+        /* JADX INFO: compiled from: ChannelSelector.kt */
         public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
             public final /* synthetic */ Channel $channel;
 
@@ -203,7 +203,7 @@ public final class ChannelSelector {
                 return Unit.f27425a;
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2() {
                 ChannelSelector.this.getStream().handleThreadCreateOrUpdate(this.$channel);
             }
@@ -222,7 +222,7 @@ public final class ChannelSelector {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Channel channel) {
             Intrinsics3.checkNotNullParameter(channel, "channel");
             ChannelSelector.this.getDispatcher().schedule(new AnonymousClass1(channel));
@@ -230,8 +230,8 @@ public final class ChannelSelector {
         }
     }
 
-    /* compiled from: ChannelSelector.kt */
-    /* renamed from: com.discord.utilities.channel.ChannelSelector$gotoChannel$1 */
+    /* JADX INFO: renamed from: com.discord.utilities.channel.ChannelSelector$gotoChannel$1 */
+    /* JADX INFO: compiled from: ChannelSelector.kt */
     public static final class C67241 extends Lambda implements Function0<Unit> {
         public final /* synthetic */ StoreChannelsSelected3 $analyticsLocation;
         public final /* synthetic */ long $channelId;
@@ -253,15 +253,15 @@ public final class ChannelSelector {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             ChannelSelector.this.getStream().handleGuildSelected(this.$guildId);
             ChannelSelector.this.getStream().getChannelsSelected().trySelectChannel(this.$guildId, this.$channelId, this.$peekParent, this.$analyticsLocation);
         }
     }
 
-    /* compiled from: ChannelSelector.kt */
-    /* renamed from: com.discord.utilities.channel.ChannelSelector$openCreateThread$1 */
+    /* JADX INFO: renamed from: com.discord.utilities.channel.ChannelSelector$openCreateThread$1 */
+    /* JADX INFO: compiled from: ChannelSelector.kt */
     public static final class C67251 extends Lambda implements Function0<Unit> {
         public final /* synthetic */ long $channelId;
         public final /* synthetic */ long $guildId;
@@ -283,7 +283,7 @@ public final class ChannelSelector {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             ChannelSelector.this.getStream().getThreadDraft().clearDraftState();
             ChannelSelector.this.getStream().getChannelsSelected().openCreateThread(this.$guildId, this.$channelId, this.$parentMessageId, this.$startThreadLocation);
@@ -291,8 +291,8 @@ public final class ChannelSelector {
         }
     }
 
-    /* compiled from: ChannelSelector.kt */
-    /* renamed from: com.discord.utilities.channel.ChannelSelector$previewVoiceChannel$1 */
+    /* JADX INFO: renamed from: com.discord.utilities.channel.ChannelSelector$previewVoiceChannel$1 */
+    /* JADX INFO: compiled from: ChannelSelector.kt */
     public static final class C67261 extends Lambda implements Function0<Channel> {
         public final /* synthetic */ long $channelId;
 
@@ -318,8 +318,8 @@ public final class ChannelSelector {
         }
     }
 
-    /* compiled from: ChannelSelector.kt */
-    /* renamed from: com.discord.utilities.channel.ChannelSelector$previewVoiceChannel$2 */
+    /* JADX INFO: renamed from: com.discord.utilities.channel.ChannelSelector$previewVoiceChannel$2 */
+    /* JADX INFO: compiled from: ChannelSelector.kt */
     public static final class C67272 extends Lambda implements Function1<Channel, Unit> {
         public final /* synthetic */ long $channelId;
         public final /* synthetic */ WeakReference $fragmentManagerRef;
@@ -337,7 +337,7 @@ public final class ChannelSelector {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Channel channel) {
             FragmentManager fragmentManager = (FragmentManager) this.$fragmentManagerRef.get();
             if (fragmentManager != null) {
@@ -348,8 +348,8 @@ public final class ChannelSelector {
         }
     }
 
-    /* compiled from: ChannelSelector.kt */
-    /* renamed from: com.discord.utilities.channel.ChannelSelector$selectChannel$1 */
+    /* JADX INFO: renamed from: com.discord.utilities.channel.ChannelSelector$selectChannel$1 */
+    /* JADX INFO: compiled from: ChannelSelector.kt */
     public static final class C67281 extends Lambda implements Function1 {
         public final /* synthetic */ StoreChannelsSelected3 $analyticsLocation;
         public final /* synthetic */ long $channelId;
@@ -376,8 +376,8 @@ public final class ChannelSelector {
         }
     }
 
-    /* compiled from: ChannelSelector.kt */
-    /* renamed from: com.discord.utilities.channel.ChannelSelector$selectChannel$2 */
+    /* JADX INFO: renamed from: com.discord.utilities.channel.ChannelSelector$selectChannel$2 */
+    /* JADX INFO: compiled from: ChannelSelector.kt */
     public static final class C67292 extends Lambda implements Function1<Channel, Unit> {
         public final /* synthetic */ StoreChannelsSelected3 $analyticsLocation;
         public final /* synthetic */ long $channelId;
@@ -401,7 +401,7 @@ public final class ChannelSelector {
 
         /* JADX WARN: Removed duplicated region for block: B:6:0x001f  */
         /* JADX WARN: Removed duplicated region for block: B:8:0x0028  */
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         /*
             Code decompiled incorrectly, please refer to instructions dump.
         */
@@ -421,8 +421,8 @@ public final class ChannelSelector {
         }
     }
 
-    /* compiled from: ChannelSelector.kt */
-    /* renamed from: com.discord.utilities.channel.ChannelSelector$selectPreviousChannel$1 */
+    /* JADX INFO: renamed from: com.discord.utilities.channel.ChannelSelector$selectPreviousChannel$1 */
+    /* JADX INFO: compiled from: ChannelSelector.kt */
     public static final class C67301<T, R> implements Func1<Long, Observable<? extends Channel>> {
         public C67301() {
         }
@@ -432,7 +432,7 @@ public final class ChannelSelector {
             return call2(l);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final Observable<? extends Channel> call2(Long l) {
             StoreChannels channels = ChannelSelector.this.getStream().getChannels();
             Intrinsics3.checkNotNullExpressionValue(l, "previousChannelId");
@@ -440,8 +440,8 @@ public final class ChannelSelector {
         }
     }
 
-    /* compiled from: ChannelSelector.kt */
-    /* renamed from: com.discord.utilities.channel.ChannelSelector$selectPreviousChannel$2 */
+    /* JADX INFO: renamed from: com.discord.utilities.channel.ChannelSelector$selectPreviousChannel$2 */
+    /* JADX INFO: compiled from: ChannelSelector.kt */
     public static final class C67312 extends Lambda implements Function1<Channel, Unit> {
         public final /* synthetic */ long $guildId;
 
@@ -457,7 +457,7 @@ public final class ChannelSelector {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Channel channel) {
             long id2 = 0;
             if (channel != null && !ChannelUtils.m7675J(channel) && channel.getId() >= 0) {

@@ -15,82 +15,82 @@ import p007b.p225i.p226a.p242c.p259f3.Util2;
 import p007b.p225i.p355b.p357b.ImmutableList2;
 import p007b.p225i.p355b.p357b.RegularImmutableList;
 
-/* compiled from: Timeline.java */
-/* renamed from: b.i.a.c.o2, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.o2, reason: use source file name */
+/* JADX INFO: compiled from: Timeline.java */
+/* JADX INFO: loaded from: classes3.dex */
 public abstract class Timeline implements Bundleable {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static final Timeline f7337j = new a();
 
-    /* compiled from: Timeline.java */
-    /* renamed from: b.i.a.c.o2$a */
+    /* JADX INFO: renamed from: b.i.a.c.o2$a */
+    /* JADX INFO: compiled from: Timeline.java */
     public class a extends Timeline {
         @Override // p007b.p225i.p226a.p242c.Timeline
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public int mo2554b(Object obj) {
             return -1;
         }
 
         @Override // p007b.p225i.p226a.p242c.Timeline
-        /* renamed from: g */
+        /* JADX INFO: renamed from: g */
         public b mo2513g(int i, b bVar, boolean z2) {
             throw new IndexOutOfBoundsException();
         }
 
         @Override // p007b.p225i.p226a.p242c.Timeline
-        /* renamed from: i */
+        /* JADX INFO: renamed from: i */
         public int mo2555i() {
             return 0;
         }
 
         @Override // p007b.p225i.p226a.p242c.Timeline
-        /* renamed from: m */
+        /* JADX INFO: renamed from: m */
         public Object mo2556m(int i) {
             throw new IndexOutOfBoundsException();
         }
 
         @Override // p007b.p225i.p226a.p242c.Timeline
-        /* renamed from: o */
+        /* JADX INFO: renamed from: o */
         public c mo2514o(int i, c cVar, long j) {
             throw new IndexOutOfBoundsException();
         }
 
         @Override // p007b.p225i.p226a.p242c.Timeline
-        /* renamed from: p */
+        /* JADX INFO: renamed from: p */
         public int mo2557p() {
             return 0;
         }
     }
 
-    /* compiled from: Timeline.java */
-    /* renamed from: b.i.a.c.o2$b */
+    /* JADX INFO: renamed from: b.i.a.c.o2$b */
+    /* JADX INFO: compiled from: Timeline.java */
     public static final class b implements Bundleable {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         @Nullable
         public Object f7338j;
 
-        /* renamed from: k */
+        /* JADX INFO: renamed from: k */
         @Nullable
         public Object f7339k;
 
-        /* renamed from: l */
+        /* JADX INFO: renamed from: l */
         public int f7340l;
 
-        /* renamed from: m */
+        /* JADX INFO: renamed from: m */
         public long f7341m;
 
-        /* renamed from: n */
+        /* JADX INFO: renamed from: n */
         public long f7342n;
 
-        /* renamed from: o */
+        /* JADX INFO: renamed from: o */
         public boolean f7343o;
 
-        /* renamed from: p */
+        /* JADX INFO: renamed from: p */
         public AdPlaybackState f7344p = AdPlaybackState.f5680j;
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public long m3332a(int i, int i2) {
             AdPlaybackState.a aVarM2578a = this.f7344p.m2578a(i);
             if (aVarM2578a.f5691l != -1) {
@@ -99,7 +99,7 @@ public abstract class Timeline implements Bundleable {
             return -9223372036854775807L;
         }
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public int m3333b(long j) {
             AdPlaybackState adPlaybackState = this.f7344p;
             long j2 = this.f7341m;
@@ -126,17 +126,17 @@ public abstract class Timeline implements Bundleable {
             return -1;
         }
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public long m3334c(int i) {
             return this.f7344p.m2578a(i).f5690k;
         }
 
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         public int m3335d(int i) {
             return this.f7344p.m2578a(i).m2580a(-1);
         }
 
-        /* renamed from: e */
+        /* JADX INFO: renamed from: e */
         public boolean m3336e(int i) {
             return this.f7344p.m2578a(i).f5696q;
         }
@@ -152,7 +152,7 @@ public abstract class Timeline implements Bundleable {
             return Util2.m2993a(this.f7338j, bVar.f7338j) && Util2.m2993a(this.f7339k, bVar.f7339k) && this.f7340l == bVar.f7340l && this.f7341m == bVar.f7341m && this.f7342n == bVar.f7342n && this.f7343o == bVar.f7343o && Util2.m2993a(this.f7344p, bVar.f7344p);
         }
 
-        /* renamed from: f */
+        /* JADX INFO: renamed from: f */
         public b m3337f(@Nullable Object obj, @Nullable Object obj2, int i, long j, long j2, AdPlaybackState adPlaybackState, boolean z2) {
             this.f7338j = obj;
             this.f7339k = obj2;
@@ -176,76 +176,76 @@ public abstract class Timeline implements Bundleable {
         }
     }
 
-    /* compiled from: Timeline.java */
-    /* renamed from: b.i.a.c.o2$c */
+    /* JADX INFO: renamed from: b.i.a.c.o2$c */
+    /* JADX INFO: compiled from: Timeline.java */
     public static final class c implements Bundleable {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public static final Object f7345j = new Object();
 
-        /* renamed from: k */
+        /* JADX INFO: renamed from: k */
         public static final Object f7346k = new Object();
 
-        /* renamed from: l */
+        /* JADX INFO: renamed from: l */
         public static final MediaItem2 f7347l;
 
-        /* renamed from: m */
+        /* JADX INFO: renamed from: m */
         public static final Bundleable.a<c> f7348m;
 
-        /* renamed from: A */
+        /* JADX INFO: renamed from: A */
         public long f7349A;
 
-        /* renamed from: B */
+        /* JADX INFO: renamed from: B */
         public int f7350B;
 
-        /* renamed from: C */
+        /* JADX INFO: renamed from: C */
         public int f7351C;
 
-        /* renamed from: D */
+        /* JADX INFO: renamed from: D */
         public long f7352D;
 
-        /* renamed from: o */
+        /* JADX INFO: renamed from: o */
         @Nullable
         @Deprecated
         public Object f7354o;
 
-        /* renamed from: q */
+        /* JADX INFO: renamed from: q */
         @Nullable
         public Object f7356q;
 
-        /* renamed from: r */
+        /* JADX INFO: renamed from: r */
         public long f7357r;
 
-        /* renamed from: s */
+        /* JADX INFO: renamed from: s */
         public long f7358s;
 
-        /* renamed from: t */
+        /* JADX INFO: renamed from: t */
         public long f7359t;
 
-        /* renamed from: u */
+        /* JADX INFO: renamed from: u */
         public boolean f7360u;
 
-        /* renamed from: v */
+        /* JADX INFO: renamed from: v */
         public boolean f7361v;
 
-        /* renamed from: w */
+        /* JADX INFO: renamed from: w */
         @Deprecated
         public boolean f7362w;
 
-        /* renamed from: x */
+        /* JADX INFO: renamed from: x */
         @Nullable
         public MediaItem2.g f7363x;
 
-        /* renamed from: y */
+        /* JADX INFO: renamed from: y */
         public boolean f7364y;
 
-        /* renamed from: z */
+        /* JADX INFO: renamed from: z */
         public long f7365z;
 
-        /* renamed from: n */
+        /* JADX INFO: renamed from: n */
         public Object f7353n = f7345j;
 
-        /* renamed from: p */
+        /* JADX INFO: renamed from: p */
         public MediaItem2 f7355p = f7347l;
 
         static {
@@ -266,28 +266,28 @@ public abstract class Timeline implements Bundleable {
             f7348m = C2838q0.f7441a;
         }
 
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         public static String m3338d(int i) {
             return Integer.toString(i, 36);
         }
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public long m3339a() {
             return Util2.m2992M(this.f7365z);
         }
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public long m3340b() {
             return Util2.m2992M(this.f7349A);
         }
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public boolean m3341c() {
             AnimatableValueParser.m426D(this.f7362w == (this.f7363x != null));
             return this.f7363x != null;
         }
 
-        /* renamed from: e */
+        /* JADX INFO: renamed from: e */
         public c m3342e(Object obj, @Nullable MediaItem2 mediaItem2, @Nullable Object obj2, long j, long j2, long j3, boolean z2, boolean z3, @Nullable MediaItem2.g gVar, long j4, long j5, int i, int i2, long j6) {
             MediaItem2.h hVar;
             this.f7353n = obj;
@@ -342,15 +342,15 @@ public abstract class Timeline implements Bundleable {
         }
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public int mo2582a(boolean z2) {
         return m3331q() ? -1 : 0;
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public abstract int mo2554b(Object obj);
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public int mo2583c(boolean z2) {
         if (m3331q()) {
             return -1;
@@ -358,7 +358,7 @@ public abstract class Timeline implements Bundleable {
         return mo2557p() - 1;
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final int m3325d(int i, b bVar, c cVar, int i2, boolean z2) {
         int i3 = mo2513g(i, bVar, false).f7340l;
         if (m3330n(i3, cVar).f7351C != i) {
@@ -371,7 +371,7 @@ public abstract class Timeline implements Bundleable {
         return m3330n(iMo2584e, cVar).f7350B;
     }
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public int mo2584e(int i, int i2, boolean z2) {
         if (i2 == 0) {
             if (i == mo2583c(z2)) {
@@ -416,15 +416,15 @@ public abstract class Timeline implements Bundleable {
         return true;
     }
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final b m3326f(int i, b bVar) {
         return mo2513g(i, bVar, false);
     }
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public abstract b mo2513g(int i, b bVar, boolean z2);
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public b mo3327h(Object obj, b bVar) {
         return mo2513g(mo2554b(obj), bVar, true);
     }
@@ -443,12 +443,12 @@ public abstract class Timeline implements Bundleable {
         return iMo2555i;
     }
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public abstract int mo2555i();
 
     @InlineMe(replacement = "this.getPeriodPositionUs(window, period, windowIndex, windowPositionUs)")
     @Deprecated
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final Pair<Object, Long> m3328j(c cVar, b bVar, int i, long j) {
         Pair<Object, Long> pairM3329k = m3329k(cVar, bVar, i, j, 0L);
         Objects.requireNonNull(pairM3329k);
@@ -458,7 +458,7 @@ public abstract class Timeline implements Bundleable {
     @Nullable
     @InlineMe(replacement = "this.getPeriodPositionUs(window, period, windowIndex, windowPositionUs, defaultPositionProjectionUs)")
     @Deprecated
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final Pair<Object, Long> m3329k(c cVar, b bVar, int i, long j, long j2) {
         AnimatableValueParser.m571t(i, 0, mo2557p());
         mo2514o(i, cVar, j2);
@@ -489,7 +489,7 @@ public abstract class Timeline implements Bundleable {
         return Pair.create(obj, Long.valueOf(jMax));
     }
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public int mo2585l(int i, int i2, boolean z2) {
         if (i2 == 0) {
             if (i == mo2582a(z2)) {
@@ -506,21 +506,21 @@ public abstract class Timeline implements Bundleable {
         throw new IllegalStateException();
     }
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public abstract Object mo2556m(int i);
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public final c m3330n(int i, c cVar) {
         return mo2514o(i, cVar, 0L);
     }
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public abstract c mo2514o(int i, c cVar, long j);
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public abstract int mo2557p();
 
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     public final boolean m3331q() {
         return mo2557p() == 0;
     }

@@ -8,14 +8,14 @@ import kotlin.jvm.functions.Function1;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetSettingsGiftingAdapter.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetSettingsGiftingAdapter.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetSettingsGiftingAdapter$EntitlementListItem$onConfigure$4 extends Lambda implements Function1<RenderContext, Unit> {
     public final /* synthetic */ WidgetSettingsGiftingAdapter.GiftItem $data;
     public final /* synthetic */ WidgetSettingsGiftingAdapter.EntitlementListItem this$0;
 
-    /* compiled from: WidgetSettingsGiftingAdapter.kt */
-    /* renamed from: com.discord.widgets.settings.premium.WidgetSettingsGiftingAdapter$EntitlementListItem$onConfigure$4$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.premium.WidgetSettingsGiftingAdapter$EntitlementListItem$onConfigure$4$1 */
+    /* JADX INFO: compiled from: WidgetSettingsGiftingAdapter.kt */
     public static final class C99191 extends Lambda implements Function1<View, Unit> {
         public C99191() {
             super(1);
@@ -27,7 +27,7 @@ public final class WidgetSettingsGiftingAdapter$EntitlementListItem$onConfigure$
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(View view) {
             Intrinsics3.checkNotNullParameter(view, "it");
             WidgetSettingsGiftingAdapter.access$getOnRevokeClickListener$p(WidgetSettingsGiftingAdapter.EntitlementListItem.access$getAdapter$p(WidgetSettingsGiftingAdapter$EntitlementListItem$onConfigure$4.this.this$0)).invoke(WidgetSettingsGiftingAdapter$EntitlementListItem$onConfigure$4.this.$data.getGift());
@@ -47,7 +47,7 @@ public final class WidgetSettingsGiftingAdapter$EntitlementListItem$onConfigure$
         return Unit.f27425a;
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final void invoke2(RenderContext renderContext) {
         Intrinsics3.checkNotNullParameter(renderContext, "$receiver");
         renderContext.m8423b("revokeHook", new C99191());

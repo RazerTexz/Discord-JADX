@@ -6,9 +6,9 @@ import com.discord.widgets.servers.WidgetServerSettingsBans;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function1;
 
-/* compiled from: WidgetServerSettingsBans.kt */
-/* renamed from: com.discord.widgets.servers.WidgetServerSettingsBans$Adapter$BanListItem$onConfigure$2, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.servers.WidgetServerSettingsBans$Adapter$BanListItem$onConfigure$2, reason: use source file name */
+/* JADX INFO: compiled from: WidgetServerSettingsBans.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetServerSettingsBans2 implements View.OnClickListener {
     public final /* synthetic */ WidgetServerSettingsBans.Model.BanItem $data;
     public final /* synthetic */ WidgetServerSettingsBans.Adapter.BanListItem this$0;

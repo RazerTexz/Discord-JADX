@@ -16,19 +16,19 @@ import kotlin.reflect.KProperty;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: WidgetServerSettingsChannelsSortActions.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetServerSettingsChannelsSortActions.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetServerSettingsChannelsSortActions extends AppBottomSheet {
     public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetServerSettingsChannelsSortActions.class, "binding", "getBinding()Lcom/discord/databinding/WidgetServerSettingsChannelsSortActionsBinding;", 0)};
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
 
-    /* renamed from: binding$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
     private Function1<? super Integer, Unit> sortTypeSelectedListener;
 
-    /* compiled from: WidgetServerSettingsChannelsSortActions.kt */
+    /* JADX INFO: compiled from: WidgetServerSettingsChannelsSortActions.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -46,8 +46,8 @@ public final class WidgetServerSettingsChannelsSortActions extends AppBottomShee
         }
     }
 
-    /* compiled from: WidgetServerSettingsChannelsSortActions.kt */
-    /* renamed from: com.discord.widgets.servers.WidgetServerSettingsChannelsSortActions$configureUI$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.WidgetServerSettingsChannelsSortActions$configureUI$1 */
+    /* JADX INFO: compiled from: WidgetServerSettingsChannelsSortActions.kt */
     public static final class ViewOnClickListenerC92151 implements View.OnClickListener {
         public ViewOnClickListenerC92151() {
         }
@@ -62,8 +62,8 @@ public final class WidgetServerSettingsChannelsSortActions extends AppBottomShee
         }
     }
 
-    /* compiled from: WidgetServerSettingsChannelsSortActions.kt */
-    /* renamed from: com.discord.widgets.servers.WidgetServerSettingsChannelsSortActions$configureUI$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.WidgetServerSettingsChannelsSortActions$configureUI$2 */
+    /* JADX INFO: compiled from: WidgetServerSettingsChannelsSortActions.kt */
     public static final class ViewOnClickListenerC92162 implements View.OnClickListener {
         public ViewOnClickListenerC92162() {
         }
@@ -78,8 +78,8 @@ public final class WidgetServerSettingsChannelsSortActions extends AppBottomShee
         }
     }
 
-    /* compiled from: WidgetServerSettingsChannelsSortActions.kt */
-    /* renamed from: com.discord.widgets.servers.WidgetServerSettingsChannelsSortActions$configureUI$3 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.WidgetServerSettingsChannelsSortActions$configureUI$3 */
+    /* JADX INFO: compiled from: WidgetServerSettingsChannelsSortActions.kt */
     public static final class ViewOnClickListenerC92173 implements View.OnClickListener {
         public ViewOnClickListenerC92173() {
         }

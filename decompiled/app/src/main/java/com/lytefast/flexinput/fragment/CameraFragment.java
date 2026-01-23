@@ -46,49 +46,49 @@ import p507d0.p580t.Collections2;
 import p507d0.p580t._Collections;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: CameraFragment.kt */
-/* loaded from: classes3.dex */
+/* JADX INFO: compiled from: CameraFragment.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public class CameraFragment extends Fragment {
 
-    /* renamed from: j, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: j, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
 
-    /* renamed from: k, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: k, reason: from kotlin metadata */
     public View cameraContainer;
 
-    /* renamed from: l, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: l, reason: from kotlin metadata */
     public CameraView cameraView;
 
-    /* renamed from: m, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: m, reason: from kotlin metadata */
     public ViewStub permissionsViewStub;
 
-    /* renamed from: n, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: n, reason: from kotlin metadata */
     public ImageView cameraFacingBtn;
 
-    /* renamed from: o, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: o, reason: from kotlin metadata */
     public ImageView cameraFlashBtn;
 
-    /* renamed from: p, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: p, reason: from kotlin metadata */
     public ImageView takePhotoBtn;
 
-    /* renamed from: q, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: q, reason: from kotlin metadata */
     public ImageView launchCameraBtn;
 
-    /* renamed from: r, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: r, reason: from kotlin metadata */
     public File photoFile;
 
-    /* renamed from: s, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: s, reason: from kotlin metadata */
     public boolean photoFilePending;
 
-    /* compiled from: java-style lambda group */
-    /* renamed from: com.lytefast.flexinput.fragment.CameraFragment$a */
-    /* loaded from: classes.dex */
+    /* JADX INFO: renamed from: com.lytefast.flexinput.fragment.CameraFragment$a */
+    /* JADX INFO: compiled from: java-style lambda group */
+    /* JADX INFO: loaded from: classes.dex */
     public static final class ViewOnClickListenerC11175a implements View.OnClickListener {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public final /* synthetic */ int f22045j;
 
-        /* renamed from: k */
+        /* JADX INFO: renamed from: k */
         public final /* synthetic */ Object f22046k;
 
         public ViewOnClickListenerC11175a(int i, Object obj) {
@@ -217,15 +217,15 @@ public class CameraFragment extends Fragment {
         }
     }
 
-    /* compiled from: CameraFragment.kt */
-    /* renamed from: com.lytefast.flexinput.fragment.CameraFragment$b, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: com.lytefast.flexinput.fragment.CameraFragment$b, reason: from kotlin metadata */
+    /* JADX INFO: compiled from: CameraFragment.kt */
     public static final class Companion {
         public Companion(DefaultConstructorMarker defaultConstructorMarker) {
         }
     }
 
-    /* compiled from: CameraFragment.kt */
-    /* renamed from: com.lytefast.flexinput.fragment.CameraFragment$c */
+    /* JADX INFO: renamed from: com.lytefast.flexinput.fragment.CameraFragment$c */
+    /* JADX INFO: compiled from: CameraFragment.kt */
     public static final class ViewOnClickListenerC11177c implements View.OnClickListener {
         public ViewOnClickListenerC11177c() {
         }
@@ -241,21 +241,21 @@ public class CameraFragment extends Fragment {
         }
     }
 
-    /* compiled from: CameraFragment.kt */
-    /* renamed from: com.lytefast.flexinput.fragment.CameraFragment$d */
+    /* JADX INFO: renamed from: com.lytefast.flexinput.fragment.CameraFragment$d */
+    /* JADX INFO: compiled from: CameraFragment.kt */
     public static final class C11178d extends CameraListener {
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final /* synthetic */ View f22049b;
 
-        /* compiled from: CameraFragment.kt */
-        /* renamed from: com.lytefast.flexinput.fragment.CameraFragment$d$a */
+        /* JADX INFO: renamed from: com.lytefast.flexinput.fragment.CameraFragment$d$a */
+        /* JADX INFO: compiled from: CameraFragment.kt */
         public static final class a implements FileCallback {
             public a() {
             }
 
             @Override // p007b.p452o.p453a.FileCallback
-            /* renamed from: a */
+            /* JADX INFO: renamed from: a */
             public final void mo7165a(File file) {
                 if (file != null) {
                     Companion companion = CameraFragment.INSTANCE;
@@ -275,7 +275,7 @@ public class CameraFragment extends Fragment {
         }
 
         @Override // p007b.p452o.p453a.CameraListener
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public void mo7155a() {
             CameraFragment cameraFragment = CameraFragment.this;
             if (cameraFragment.photoFilePending) {
@@ -310,7 +310,7 @@ public class CameraFragment extends Fragment {
         }
 
         @Override // p007b.p452o.p453a.CameraListener
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public void mo7156b(CameraException cameraException) {
             Intrinsics3.checkNotNullParameter(cameraException, "exception");
             CameraFragment cameraFragment = CameraFragment.this;
@@ -320,7 +320,7 @@ public class CameraFragment extends Fragment {
         }
 
         @Override // p007b.p452o.p453a.CameraListener
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public void mo7157c(CameraOptions cameraOptions) {
             Intrinsics3.checkNotNullParameter(cameraOptions, "cameraOptions");
             CameraFragment cameraFragment = CameraFragment.this;
@@ -340,7 +340,7 @@ public class CameraFragment extends Fragment {
         }
 
         @Override // p007b.p452o.p453a.CameraListener
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         public void mo7158d(PictureResult pictureResult) {
             FileManager fileManager;
             File fileMo409b;
@@ -358,7 +358,7 @@ public class CameraFragment extends Fragment {
         }
     }
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static /* synthetic */ void m9282j(CameraFragment cameraFragment, int i, int i2, int i3, Object obj) {
         if ((i3 & 1) != 0) {
             i = 0;
@@ -369,7 +369,7 @@ public class CameraFragment extends Fragment {
         cameraFragment.m9286i(i, i2);
     }
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public static void m9283l(CameraFragment cameraFragment, String str, Exception exc, boolean z2, String str2, int i, Object obj) {
         if ((i & 2) != 0) {
             exc = null;
@@ -385,7 +385,7 @@ public class CameraFragment extends Fragment {
         }
     }
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public final void m9284g() {
         ImageView imageView = this.cameraFacingBtn;
         if (imageView == null) {
@@ -400,7 +400,7 @@ public class CameraFragment extends Fragment {
         imageView.setImageResource(i);
     }
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public final void m9285h() {
         ImageView imageView = this.cameraFlashBtn;
         if (imageView == null) {
@@ -425,7 +425,7 @@ public class CameraFragment extends Fragment {
         imageView2.setContentDescription(string);
     }
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public final void m9286i(int resultCode, int requestCode) {
         File file;
         if (requestCode != 4567) {
@@ -457,7 +457,7 @@ public class CameraFragment extends Fragment {
         this.photoFilePending = false;
     }
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final FlexInputCoordinator<Object> m9287k() {
         Fragment parentFragment = getParentFragment();
         Fragment parentFragment2 = parentFragment != null ? parentFragment.getParentFragment() : null;

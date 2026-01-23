@@ -43,15 +43,15 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 import p658rx.Observable;
 
-/* compiled from: WidgetGlobalStatusIndicatorViewModel.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetGlobalStatusIndicatorViewModel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetGlobalStatusIndicatorViewModel extends AppViewModel<ViewState> {
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
 
-    /* compiled from: WidgetGlobalStatusIndicatorViewModel.kt */
-    /* renamed from: com.discord.widgets.status.WidgetGlobalStatusIndicatorViewModel$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.status.WidgetGlobalStatusIndicatorViewModel$1 */
+    /* JADX INFO: compiled from: WidgetGlobalStatusIndicatorViewModel.kt */
     public static final /* synthetic */ class C101081 extends FunctionReferenceImpl implements Function1<StoreState, Unit> {
         public C101081(WidgetGlobalStatusIndicatorViewModel widgetGlobalStatusIndicatorViewModel) {
             super(1, widgetGlobalStatusIndicatorViewModel, WidgetGlobalStatusIndicatorViewModel.class, "handleStoreState", "handleStoreState(Lcom/discord/widgets/status/WidgetGlobalStatusIndicatorViewModel$StoreState;)V", 0);
@@ -63,14 +63,14 @@ public final class WidgetGlobalStatusIndicatorViewModel extends AppViewModel<Vie
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(StoreState storeState) {
             Intrinsics3.checkNotNullParameter(storeState, "p1");
             WidgetGlobalStatusIndicatorViewModel.access$handleStoreState((WidgetGlobalStatusIndicatorViewModel) this.receiver, storeState);
         }
     }
 
-    /* compiled from: WidgetGlobalStatusIndicatorViewModel.kt */
+    /* JADX INFO: compiled from: WidgetGlobalStatusIndicatorViewModel.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -88,10 +88,10 @@ public final class WidgetGlobalStatusIndicatorViewModel extends AppViewModel<Vie
         }
     }
 
-    /* compiled from: WidgetGlobalStatusIndicatorViewModel.kt */
+    /* JADX INFO: compiled from: WidgetGlobalStatusIndicatorViewModel.kt */
     public static abstract class StoreState {
 
-        /* compiled from: WidgetGlobalStatusIndicatorViewModel.kt */
+        /* JADX INFO: compiled from: WidgetGlobalStatusIndicatorViewModel.kt */
         public static final /* data */ class CallOngoing extends StoreState {
             private final int blockedUsersOnStage;
             private final RtcConnection.Quality connectionQuality;
@@ -124,36 +124,37 @@ public final class WidgetGlobalStatusIndicatorViewModel extends AppViewModel<Vie
                 this.stageInstance = stageInstance;
             }
 
+            /* JADX WARN: Multi-variable type inference failed */
             public static /* synthetic */ CallOngoing copy$default(CallOngoing callOngoing, Channel channel, Channel channel2, RtcConnection.StateChange stateChange, RtcConnection.Quality quality, Guild guild, Map map, StreamContext streamContext, StageRequestToSpeakState stageRequestToSpeakState, int i, StageInstance stageInstance, int i2, Object obj) {
                 return callOngoing.copy((i2 & 1) != 0 ? callOngoing.selectedVoiceChannel : channel, (i2 & 2) != 0 ? callOngoing.selectedTextChannel : channel2, (i2 & 4) != 0 ? callOngoing.connectionStateChange : stateChange, (i2 & 8) != 0 ? callOngoing.connectionQuality : quality, (i2 & 16) != 0 ? callOngoing.guild : guild, (i2 & 32) != 0 ? callOngoing.participants : map, (i2 & 64) != 0 ? callOngoing.streamContext : streamContext, (i2 & 128) != 0 ? callOngoing.requestToSpeakState : stageRequestToSpeakState, (i2 & 256) != 0 ? callOngoing.blockedUsersOnStage : i, (i2 & 512) != 0 ? callOngoing.stageInstance : stageInstance);
             }
 
-            /* renamed from: component1, reason: from getter */
+            /* JADX INFO: renamed from: component1, reason: from getter */
             public final Channel getSelectedVoiceChannel() {
                 return this.selectedVoiceChannel;
             }
 
-            /* renamed from: component10, reason: from getter */
+            /* JADX INFO: renamed from: component10, reason: from getter */
             public final StageInstance getStageInstance() {
                 return this.stageInstance;
             }
 
-            /* renamed from: component2, reason: from getter */
+            /* JADX INFO: renamed from: component2, reason: from getter */
             public final Channel getSelectedTextChannel() {
                 return this.selectedTextChannel;
             }
 
-            /* renamed from: component3, reason: from getter */
+            /* JADX INFO: renamed from: component3, reason: from getter */
             public final RtcConnection.StateChange getConnectionStateChange() {
                 return this.connectionStateChange;
             }
 
-            /* renamed from: component4, reason: from getter */
+            /* JADX INFO: renamed from: component4, reason: from getter */
             public final RtcConnection.Quality getConnectionQuality() {
                 return this.connectionQuality;
             }
 
-            /* renamed from: component5, reason: from getter */
+            /* JADX INFO: renamed from: component5, reason: from getter */
             public final Guild getGuild() {
                 return this.guild;
             }
@@ -162,17 +163,17 @@ public final class WidgetGlobalStatusIndicatorViewModel extends AppViewModel<Vie
                 return this.participants;
             }
 
-            /* renamed from: component7, reason: from getter */
+            /* JADX INFO: renamed from: component7, reason: from getter */
             public final StreamContext getStreamContext() {
                 return this.streamContext;
             }
 
-            /* renamed from: component8, reason: from getter */
+            /* JADX INFO: renamed from: component8, reason: from getter */
             public final StageRequestToSpeakState getRequestToSpeakState() {
                 return this.requestToSpeakState;
             }
 
-            /* renamed from: component9, reason: from getter */
+            /* JADX INFO: renamed from: component9, reason: from getter */
             public final int getBlockedUsersOnStage() {
                 return this.blockedUsersOnStage;
             }
@@ -284,7 +285,7 @@ public final class WidgetGlobalStatusIndicatorViewModel extends AppViewModel<Vie
             }
         }
 
-        /* compiled from: WidgetGlobalStatusIndicatorViewModel.kt */
+        /* JADX INFO: compiled from: WidgetGlobalStatusIndicatorViewModel.kt */
         public static final /* data */ class ConnectivityState extends StoreState {
             private final StoreConnectivity.DelayedState connectivityState;
 
@@ -302,7 +303,7 @@ public final class WidgetGlobalStatusIndicatorViewModel extends AppViewModel<Vie
                 return connectivityState.copy(delayedState);
             }
 
-            /* renamed from: component1, reason: from getter */
+            /* JADX INFO: renamed from: component1, reason: from getter */
             public final StoreConnectivity.DelayedState getConnectivityState() {
                 return this.connectivityState;
             }
@@ -347,11 +348,11 @@ public final class WidgetGlobalStatusIndicatorViewModel extends AppViewModel<Vie
         }
     }
 
-    /* compiled from: WidgetGlobalStatusIndicatorViewModel.kt */
+    /* JADX INFO: compiled from: WidgetGlobalStatusIndicatorViewModel.kt */
     public static abstract class ViewState {
         private final boolean isSpeakingInOngoingCall;
 
-        /* compiled from: WidgetGlobalStatusIndicatorViewModel.kt */
+        /* JADX INFO: compiled from: WidgetGlobalStatusIndicatorViewModel.kt */
         public static final /* data */ class CallOngoing extends ViewState {
             private final RtcConnection.Quality connectionQuality;
             private final RtcConnection.State connectionState;
@@ -384,42 +385,42 @@ public final class WidgetGlobalStatusIndicatorViewModel extends AppViewModel<Vie
                 return callOngoing.copy((i2 & 1) != 0 ? callOngoing.selectedVoiceChannel : channel, (i2 & 2) != 0 ? callOngoing.selectedTextChannel : channel2, (i2 & 4) != 0 ? callOngoing.connectionState : state, (i2 & 8) != 0 ? callOngoing.connectionQuality : quality, (i2 & 16) != 0 ? callOngoing.guild : guild, (i2 & 32) != 0 ? callOngoing.participants : i, (i2 & 64) != 0 ? callOngoing.hasVideo : z2, (i2 & 128) != 0 ? callOngoing.streamContext : streamContext);
             }
 
-            /* renamed from: component1, reason: from getter */
+            /* JADX INFO: renamed from: component1, reason: from getter */
             public final Channel getSelectedVoiceChannel() {
                 return this.selectedVoiceChannel;
             }
 
-            /* renamed from: component2, reason: from getter */
+            /* JADX INFO: renamed from: component2, reason: from getter */
             public final Channel getSelectedTextChannel() {
                 return this.selectedTextChannel;
             }
 
-            /* renamed from: component3, reason: from getter */
+            /* JADX INFO: renamed from: component3, reason: from getter */
             public final RtcConnection.State getConnectionState() {
                 return this.connectionState;
             }
 
-            /* renamed from: component4, reason: from getter */
+            /* JADX INFO: renamed from: component4, reason: from getter */
             public final RtcConnection.Quality getConnectionQuality() {
                 return this.connectionQuality;
             }
 
-            /* renamed from: component5, reason: from getter */
+            /* JADX INFO: renamed from: component5, reason: from getter */
             public final Guild getGuild() {
                 return this.guild;
             }
 
-            /* renamed from: component6, reason: from getter */
+            /* JADX INFO: renamed from: component6, reason: from getter */
             public final int getParticipants() {
                 return this.participants;
             }
 
-            /* renamed from: component7, reason: from getter */
+            /* JADX INFO: renamed from: component7, reason: from getter */
             public final boolean getHasVideo() {
                 return this.hasVideo;
             }
 
-            /* renamed from: component8, reason: from getter */
+            /* JADX INFO: renamed from: component8, reason: from getter */
             public final StreamContext getStreamContext() {
                 return this.streamContext;
             }
@@ -475,6 +476,9 @@ public final class WidgetGlobalStatusIndicatorViewModel extends AppViewModel<Vie
             }
 
             /* JADX WARN: Multi-variable type inference failed */
+            /* JADX WARN: Type inference failed for: r2v14, types: [int] */
+            /* JADX WARN: Type inference failed for: r2v16 */
+            /* JADX WARN: Type inference failed for: r2v21 */
             public int hashCode() {
                 Channel channel = this.selectedVoiceChannel;
                 int iHashCode = (channel != null ? channel.hashCode() : 0) * 31;
@@ -487,17 +491,17 @@ public final class WidgetGlobalStatusIndicatorViewModel extends AppViewModel<Vie
                 Guild guild = this.guild;
                 int iHashCode5 = (((iHashCode4 + (guild != null ? guild.hashCode() : 0)) * 31) + this.participants) * 31;
                 boolean z2 = this.hasVideo;
-                int i = z2;
-                if (z2 != 0) {
-                    i = 1;
+                ?? r2 = z2;
+                if (z2) {
+                    r2 = 1;
                 }
-                int i2 = (iHashCode5 + i) * 31;
+                int i = (iHashCode5 + r2) * 31;
                 StreamContext streamContext = this.streamContext;
-                return i2 + (streamContext != null ? streamContext.hashCode() : 0);
+                return i + (streamContext != null ? streamContext.hashCode() : 0);
             }
 
             @Override // com.discord.widgets.status.WidgetGlobalStatusIndicatorViewModel.ViewState
-            /* renamed from: isSpeakingInOngoingCall, reason: from getter */
+            /* JADX INFO: renamed from: isSpeakingInOngoingCall, reason: from getter */
             public boolean getIsSpeakingInOngoingCall() {
                 return this.isSpeakingInOngoingCall;
             }
@@ -524,7 +528,7 @@ public final class WidgetGlobalStatusIndicatorViewModel extends AppViewModel<Vie
             }
         }
 
-        /* compiled from: WidgetGlobalStatusIndicatorViewModel.kt */
+        /* JADX INFO: compiled from: WidgetGlobalStatusIndicatorViewModel.kt */
         public static final /* data */ class Connecting extends ViewState {
             private final long delay;
 
@@ -540,7 +544,7 @@ public final class WidgetGlobalStatusIndicatorViewModel extends AppViewModel<Vie
                 return connecting.copy(j);
             }
 
-            /* renamed from: component1, reason: from getter */
+            /* JADX INFO: renamed from: component1, reason: from getter */
             public final long getDelay() {
                 return this.delay;
             }
@@ -569,7 +573,7 @@ public final class WidgetGlobalStatusIndicatorViewModel extends AppViewModel<Vie
             }
         }
 
-        /* compiled from: WidgetGlobalStatusIndicatorViewModel.kt */
+        /* JADX INFO: compiled from: WidgetGlobalStatusIndicatorViewModel.kt */
         public static final class Inactive extends ViewState {
             public static final Inactive INSTANCE = new Inactive();
 
@@ -578,7 +582,7 @@ public final class WidgetGlobalStatusIndicatorViewModel extends AppViewModel<Vie
             }
         }
 
-        /* compiled from: WidgetGlobalStatusIndicatorViewModel.kt */
+        /* JADX INFO: compiled from: WidgetGlobalStatusIndicatorViewModel.kt */
         public static final /* data */ class Offline extends ViewState {
             private final boolean airplaneMode;
             private final long delay;
@@ -599,12 +603,12 @@ public final class WidgetGlobalStatusIndicatorViewModel extends AppViewModel<Vie
                 return offline.copy(j, z2);
             }
 
-            /* renamed from: component1, reason: from getter */
+            /* JADX INFO: renamed from: component1, reason: from getter */
             public final long getDelay() {
                 return this.delay;
             }
 
-            /* renamed from: component2, reason: from getter */
+            /* JADX INFO: renamed from: component2, reason: from getter */
             public final boolean getAirplaneMode() {
                 return this.airplaneMode;
             }
@@ -633,14 +637,17 @@ public final class WidgetGlobalStatusIndicatorViewModel extends AppViewModel<Vie
             }
 
             /* JADX WARN: Multi-variable type inference failed */
+            /* JADX WARN: Type inference failed for: r1v1, types: [int] */
+            /* JADX WARN: Type inference failed for: r1v2 */
+            /* JADX WARN: Type inference failed for: r1v3 */
             public int hashCode() {
                 int iM3a = C0002b.m3a(this.delay) * 31;
                 boolean z2 = this.airplaneMode;
-                int i = z2;
-                if (z2 != 0) {
-                    i = 1;
+                ?? r1 = z2;
+                if (z2) {
+                    r1 = 1;
                 }
-                return iM3a + i;
+                return iM3a + r1;
             }
 
             public String toString() {
@@ -651,7 +658,7 @@ public final class WidgetGlobalStatusIndicatorViewModel extends AppViewModel<Vie
             }
         }
 
-        /* compiled from: WidgetGlobalStatusIndicatorViewModel.kt */
+        /* JADX INFO: compiled from: WidgetGlobalStatusIndicatorViewModel.kt */
         public static final /* data */ class StageChannelOngoing extends ViewState {
             private final int blockedUsersOnStage;
             private final RtcConnection.Quality connectionQuality;
@@ -673,52 +680,52 @@ public final class WidgetGlobalStatusIndicatorViewModel extends AppViewModel<Vie
                 return stageChannelOngoing.copy((i2 & 1) != 0 ? stageChannelOngoing.selectedVoiceChannel : channel, (i2 & 2) != 0 ? stageChannelOngoing.connectionState : state, (i2 & 4) != 0 ? stageChannelOngoing.connectionQuality : quality, (i2 & 8) != 0 ? stageChannelOngoing.guild : guild, (i2 & 16) != 0 ? stageChannelOngoing.streamContext : streamContext, (i2 & 32) != 0 ? stageChannelOngoing.isSpeaking : z2, (i2 & 64) != 0 ? stageChannelOngoing.stageInstance : stageInstance, (i2 & 128) != 0 ? stageChannelOngoing.isInvitedToSpeak : z3, (i2 & 256) != 0 ? stageChannelOngoing.isAckingInvitation : z4, (i2 & 512) != 0 ? stageChannelOngoing.blockedUsersOnStage : i);
             }
 
-            /* renamed from: component1, reason: from getter */
+            /* JADX INFO: renamed from: component1, reason: from getter */
             public final Channel getSelectedVoiceChannel() {
                 return this.selectedVoiceChannel;
             }
 
-            /* renamed from: component10, reason: from getter */
+            /* JADX INFO: renamed from: component10, reason: from getter */
             public final int getBlockedUsersOnStage() {
                 return this.blockedUsersOnStage;
             }
 
-            /* renamed from: component2, reason: from getter */
+            /* JADX INFO: renamed from: component2, reason: from getter */
             public final RtcConnection.State getConnectionState() {
                 return this.connectionState;
             }
 
-            /* renamed from: component3, reason: from getter */
+            /* JADX INFO: renamed from: component3, reason: from getter */
             public final RtcConnection.Quality getConnectionQuality() {
                 return this.connectionQuality;
             }
 
-            /* renamed from: component4, reason: from getter */
+            /* JADX INFO: renamed from: component4, reason: from getter */
             public final Guild getGuild() {
                 return this.guild;
             }
 
-            /* renamed from: component5, reason: from getter */
+            /* JADX INFO: renamed from: component5, reason: from getter */
             public final StreamContext getStreamContext() {
                 return this.streamContext;
             }
 
-            /* renamed from: component6, reason: from getter */
+            /* JADX INFO: renamed from: component6, reason: from getter */
             public final boolean getIsSpeaking() {
                 return this.isSpeaking;
             }
 
-            /* renamed from: component7, reason: from getter */
+            /* JADX INFO: renamed from: component7, reason: from getter */
             public final StageInstance getStageInstance() {
                 return this.stageInstance;
             }
 
-            /* renamed from: component8, reason: from getter */
+            /* JADX INFO: renamed from: component8, reason: from getter */
             public final boolean getIsInvitedToSpeak() {
                 return this.isInvitedToSpeak;
             }
 
-            /* renamed from: component9, reason: from getter */
+            /* JADX INFO: renamed from: component9, reason: from getter */
             public final boolean getIsAckingInvitation() {
                 return this.isAckingInvitation;
             }
@@ -770,6 +777,15 @@ public final class WidgetGlobalStatusIndicatorViewModel extends AppViewModel<Vie
             }
 
             /* JADX WARN: Multi-variable type inference failed */
+            /* JADX WARN: Type inference failed for: r1v3, types: [int] */
+            /* JADX WARN: Type inference failed for: r1v6 */
+            /* JADX WARN: Type inference failed for: r1v8 */
+            /* JADX WARN: Type inference failed for: r2v13, types: [int] */
+            /* JADX WARN: Type inference failed for: r2v15 */
+            /* JADX WARN: Type inference failed for: r2v20 */
+            /* JADX WARN: Type inference failed for: r3v0 */
+            /* JADX WARN: Type inference failed for: r3v1, types: [int] */
+            /* JADX WARN: Type inference failed for: r3v2 */
             public int hashCode() {
                 Channel channel = this.selectedVoiceChannel;
                 int iHashCode = (channel != null ? channel.hashCode() : 0) * 31;
@@ -782,21 +798,21 @@ public final class WidgetGlobalStatusIndicatorViewModel extends AppViewModel<Vie
                 StreamContext streamContext = this.streamContext;
                 int iHashCode5 = (iHashCode4 + (streamContext != null ? streamContext.hashCode() : 0)) * 31;
                 boolean z2 = this.isSpeaking;
-                int i = z2;
-                if (z2 != 0) {
-                    i = 1;
+                ?? r2 = z2;
+                if (z2) {
+                    r2 = 1;
                 }
-                int i2 = (iHashCode5 + i) * 31;
+                int i = (iHashCode5 + r2) * 31;
                 StageInstance stageInstance = this.stageInstance;
-                int iHashCode6 = (i2 + (stageInstance != null ? stageInstance.hashCode() : 0)) * 31;
+                int iHashCode6 = (i + (stageInstance != null ? stageInstance.hashCode() : 0)) * 31;
                 boolean z3 = this.isInvitedToSpeak;
-                int i3 = z3;
-                if (z3 != 0) {
-                    i3 = 1;
+                ?? r1 = z3;
+                if (z3) {
+                    r1 = 1;
                 }
-                int i4 = (iHashCode6 + i3) * 31;
+                int i2 = (iHashCode6 + r1) * 31;
                 boolean z4 = this.isAckingInvitation;
-                return ((i4 + (z4 ? 1 : z4 ? 1 : 0)) * 31) + this.blockedUsersOnStage;
+                return ((i2 + (z4 ? 1 : z4)) * 31) + this.blockedUsersOnStage;
             }
 
             public final boolean isAckingInvitation() {
@@ -812,7 +828,7 @@ public final class WidgetGlobalStatusIndicatorViewModel extends AppViewModel<Vie
             }
 
             @Override // com.discord.widgets.status.WidgetGlobalStatusIndicatorViewModel.ViewState
-            /* renamed from: isSpeakingInOngoingCall, reason: from getter */
+            /* JADX INFO: renamed from: isSpeakingInOngoingCall, reason: from getter */
             public boolean getIsSpeakingInOngoingCall() {
                 return this.isSpeakingInOngoingCall;
             }
@@ -863,7 +879,7 @@ public final class WidgetGlobalStatusIndicatorViewModel extends AppViewModel<Vie
         private ViewState() {
         }
 
-        /* renamed from: isSpeakingInOngoingCall, reason: from getter */
+        /* JADX INFO: renamed from: isSpeakingInOngoingCall, reason: from getter */
         public boolean getIsSpeakingInOngoingCall() {
             return this.isSpeakingInOngoingCall;
         }
@@ -887,8 +903,8 @@ public final class WidgetGlobalStatusIndicatorViewModel extends AppViewModel<Vie
         }
     }
 
-    /* compiled from: WidgetGlobalStatusIndicatorViewModel.kt */
-    /* renamed from: com.discord.widgets.status.WidgetGlobalStatusIndicatorViewModel$ackStageInvitationToSpeak$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.status.WidgetGlobalStatusIndicatorViewModel$ackStageInvitationToSpeak$1 */
+    /* JADX INFO: compiled from: WidgetGlobalStatusIndicatorViewModel.kt */
     public static final class C101101 extends Lambda implements Function1<Void, Unit> {
         public final /* synthetic */ boolean $accept;
         public final /* synthetic */ ViewState.StageChannelOngoing $stageState;
@@ -906,7 +922,7 @@ public final class WidgetGlobalStatusIndicatorViewModel extends AppViewModel<Vie
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Void r14) {
             if (this.$accept) {
                 AnalyticsTracker.INSTANCE.promotedToSpeaker(this.$stageState.getSelectedVoiceChannel().getId());

@@ -4,21 +4,21 @@ import android.os.Parcel;
 import android.os.Parcelable;
 import androidx.annotation.Nullable;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public class AspectRatio implements Parcelable {
     public static final Parcelable.Creator<AspectRatio> CREATOR = new C11202a();
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     @Nullable
     public final String f22200j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final float f22201k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final float f22202l;
 
-    /* renamed from: com.yalantis.ucrop.model.AspectRatio$a */
+    /* JADX INFO: renamed from: com.yalantis.ucrop.model.AspectRatio$a */
     public static class C11202a implements Parcelable.Creator<AspectRatio> {
         @Override // android.os.Parcelable.Creator
         public AspectRatio createFromParcel(Parcel parcel) {

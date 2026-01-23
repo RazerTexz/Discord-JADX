@@ -7,8 +7,8 @@ import com.google.android.gms.common.ConnectionResult;
 import java.util.ArrayList;
 import p007b.p225i.p226a.p288f.p299e.p300h.p301j.C3278b;
 
-/* compiled from: com.google.android.gms:play-services-base@@17.3.0 */
-/* loaded from: classes3.dex */
+/* JADX INFO: compiled from: com.google.android.gms:play-services-base@@17.3.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public class AvailabilityException extends Exception {
     private final ArrayMap<C3278b<?>, ConnectionResult> zaa;
 

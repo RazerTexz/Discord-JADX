@@ -3,9 +3,9 @@ package androidx.preference;
 import java.util.Iterator;
 import kotlin.sequences.Sequence;
 
-/* compiled from: PreferenceGroup.kt */
-/* renamed from: androidx.preference.PreferenceGroupKt$children$1, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: androidx.preference.PreferenceGroupKt$children$1, reason: use source file name */
+/* JADX INFO: compiled from: PreferenceGroup.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class PreferenceGroup3 implements Sequence<Preference> {
     public final /* synthetic */ PreferenceGroup $this_children;
 

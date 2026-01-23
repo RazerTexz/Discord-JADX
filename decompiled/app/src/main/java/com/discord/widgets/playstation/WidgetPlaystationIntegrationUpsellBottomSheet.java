@@ -28,18 +28,18 @@ import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetPlaystationIntegrationUpsellBottomSheet.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetPlaystationIntegrationUpsellBottomSheet.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetPlaystationIntegrationUpsellBottomSheet extends AppBottomSheet {
     public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetPlaystationIntegrationUpsellBottomSheet.class, "binding", "getBinding()Lcom/discord/databinding/WidgetPlaystationUpsellBottomSheetBinding;", 0)};
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
 
-    /* renamed from: binding$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
 
-    /* compiled from: WidgetPlaystationIntegrationUpsellBottomSheet.kt */
+    /* JADX INFO: compiled from: WidgetPlaystationIntegrationUpsellBottomSheet.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -54,8 +54,8 @@ public final class WidgetPlaystationIntegrationUpsellBottomSheet extends AppBott
         }
     }
 
-    /* compiled from: WidgetPlaystationIntegrationUpsellBottomSheet.kt */
-    /* renamed from: com.discord.widgets.playstation.WidgetPlaystationIntegrationUpsellBottomSheet$onViewCreated$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.playstation.WidgetPlaystationIntegrationUpsellBottomSheet$onViewCreated$2 */
+    /* JADX INFO: compiled from: WidgetPlaystationIntegrationUpsellBottomSheet.kt */
     public static final class ViewOnClickListenerC91202 implements View.OnClickListener {
         public ViewOnClickListenerC91202() {
         }
@@ -72,8 +72,8 @@ public final class WidgetPlaystationIntegrationUpsellBottomSheet extends AppBott
         }
     }
 
-    /* compiled from: WidgetPlaystationIntegrationUpsellBottomSheet.kt */
-    /* renamed from: com.discord.widgets.playstation.WidgetPlaystationIntegrationUpsellBottomSheet$onViewCreated$3 */
+    /* JADX INFO: renamed from: com.discord.widgets.playstation.WidgetPlaystationIntegrationUpsellBottomSheet$onViewCreated$3 */
+    /* JADX INFO: compiled from: WidgetPlaystationIntegrationUpsellBottomSheet.kt */
     public static final class ViewOnClickListenerC91213 implements View.OnClickListener {
         public ViewOnClickListenerC91213() {
         }
@@ -138,8 +138,8 @@ public final class WidgetPlaystationIntegrationUpsellBottomSheet extends AppBott
         getBinding().f17371b.setOnClickListener(new ViewOnClickListenerC91213());
     }
 
-    /* compiled from: WidgetPlaystationIntegrationUpsellBottomSheet.kt */
-    /* renamed from: com.discord.widgets.playstation.WidgetPlaystationIntegrationUpsellBottomSheet$onViewCreated$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.playstation.WidgetPlaystationIntegrationUpsellBottomSheet$onViewCreated$1 */
+    /* JADX INFO: compiled from: WidgetPlaystationIntegrationUpsellBottomSheet.kt */
     public static final class C91191 extends Lambda implements Function1<RenderContext, Unit> {
         public static final C91191 INSTANCE = new C91191();
 
@@ -147,7 +147,7 @@ public final class WidgetPlaystationIntegrationUpsellBottomSheet extends AppBott
             super(1);
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(RenderContext renderContext) {
             Intrinsics3.checkNotNullParameter(renderContext, "$receiver");
             renderContext.args.put("platform", Platform.PLAYSTATION.getProperName());

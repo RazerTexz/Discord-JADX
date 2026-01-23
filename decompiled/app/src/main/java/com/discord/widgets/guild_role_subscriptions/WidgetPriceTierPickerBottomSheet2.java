@@ -11,9 +11,9 @@ import kotlin.jvm.functions.Function1;
 import p507d0.p580t.Collections2;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: WidgetPriceTierPickerBottomSheet.kt */
-/* renamed from: com.discord.widgets.guild_role_subscriptions.PriceTierPickerAdapter, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.guild_role_subscriptions.PriceTierPickerAdapter, reason: use source file name */
+/* JADX INFO: compiled from: WidgetPriceTierPickerBottomSheet.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetPriceTierPickerBottomSheet2 extends RecyclerView.Adapter<WidgetPriceTierPickerBottomSheet3> {
     private final Function1<Integer, Unit> itemClickListener;
     private List<Integer> items;

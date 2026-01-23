@@ -7,9 +7,9 @@ import java.util.Set;
 import p007b.p085c.p086a.p087a0.AnimatableValueParser;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: StoreRtcConnection.kt */
-/* renamed from: com.discord.stores.VoicePropsTracker, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.stores.VoicePropsTracker, reason: use source file name */
+/* JADX INFO: compiled from: StoreRtcConnection.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class StoreRtcConnection2 {
     private final long channelId;
     private final long guildId;

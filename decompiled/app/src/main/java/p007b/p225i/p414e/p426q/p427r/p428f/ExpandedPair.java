@@ -3,18 +3,18 @@ package p007b.p225i.p414e.p426q.p427r.p428f;
 import p007b.p225i.p414e.p426q.p427r.DataCharacter;
 import p007b.p225i.p414e.p426q.p427r.FinderPattern;
 
-/* compiled from: ExpandedPair.java */
-/* renamed from: b.i.e.q.r.f.a, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.e.q.r.f.a, reason: use source file name */
+/* JADX INFO: compiled from: ExpandedPair.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class ExpandedPair {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final DataCharacter f13421a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final DataCharacter f13422b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final FinderPattern f13423c;
 
     public ExpandedPair(DataCharacter dataCharacter, DataCharacter dataCharacter2, FinderPattern finderPattern, boolean z2) {
@@ -23,12 +23,12 @@ public final class ExpandedPair {
         this.f13423c = finderPattern;
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static boolean m7018a(Object obj, Object obj2) {
         return obj == null ? obj2 == null : obj.equals(obj2);
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static int m7019b(Object obj) {
         if (obj == null) {
             return 0;

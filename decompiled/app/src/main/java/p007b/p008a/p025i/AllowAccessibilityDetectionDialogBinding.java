@@ -7,24 +7,24 @@ import androidx.annotation.NonNull;
 import androidx.viewbinding.ViewBinding;
 import com.google.android.material.button.MaterialButton;
 
-/* compiled from: AllowAccessibilityDetectionDialogBinding.java */
-/* renamed from: b.a.i.a, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.a.i.a, reason: use source file name */
+/* JADX INFO: compiled from: AllowAccessibilityDetectionDialogBinding.java */
+/* JADX INFO: loaded from: classes.dex */
 public final class AllowAccessibilityDetectionDialogBinding implements ViewBinding {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     @NonNull
     public final LinearLayout f654a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     @NonNull
     public final TextView f655b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     @NonNull
     public final MaterialButton f656c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     @NonNull
     public final MaterialButton f657d;
 

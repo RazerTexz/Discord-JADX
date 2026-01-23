@@ -9,8 +9,8 @@ import androidx.arch.core.executor.ArchTaskExecutor;
 import java.util.concurrent.Executor;
 import java.util.concurrent.atomic.AtomicBoolean;
 
+/* JADX INFO: loaded from: classes.dex */
 @RestrictTo({RestrictTo.Scope.LIBRARY_GROUP_PREFIX})
-/* loaded from: classes.dex */
 public abstract class ComputableLiveData<T> {
     public final AtomicBoolean mComputing;
     public final Executor mExecutor;
@@ -23,7 +23,7 @@ public abstract class ComputableLiveData<T> {
     @VisibleForTesting
     public final Runnable mRefreshRunnable;
 
-    /* renamed from: androidx.lifecycle.ComputableLiveData$1 */
+    /* JADX INFO: renamed from: androidx.lifecycle.ComputableLiveData$1 */
     public class C04261 extends LiveData<T> {
         public C04261() {
         }
@@ -35,7 +35,7 @@ public abstract class ComputableLiveData<T> {
         }
     }
 
-    /* renamed from: androidx.lifecycle.ComputableLiveData$2 */
+    /* JADX INFO: renamed from: androidx.lifecycle.ComputableLiveData$2 */
     public class RunnableC04272 implements Runnable {
         public RunnableC04272() {
         }
@@ -71,7 +71,7 @@ public abstract class ComputableLiveData<T> {
         }
     }
 
-    /* renamed from: androidx.lifecycle.ComputableLiveData$3 */
+    /* JADX INFO: renamed from: androidx.lifecycle.ComputableLiveData$3 */
     public class RunnableC04283 implements Runnable {
         public RunnableC04283() {
         }

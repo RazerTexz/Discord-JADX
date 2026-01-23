@@ -15,15 +15,15 @@ import p007b.p008a.p027k.FormatUtils;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: WidgetChatInputCategoriesAdapter.kt */
-/* renamed from: com.discord.widgets.chat.input.ApplicationCategoryViewHolder, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.chat.input.ApplicationCategoryViewHolder, reason: use source file name */
+/* JADX INFO: compiled from: WidgetChatInputCategoriesAdapter.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetChatInputCategoriesAdapter extends RecyclerView.ViewHolder {
     private final CommandCategoryItemBinding binding;
     private final Function1<Application, Unit> onItemSelected;
 
-    /* compiled from: WidgetChatInputCategoriesAdapter.kt */
-    /* renamed from: com.discord.widgets.chat.input.ApplicationCategoryViewHolder$bind$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.input.ApplicationCategoryViewHolder$bind$1 */
+    /* JADX INFO: compiled from: WidgetChatInputCategoriesAdapter.kt */
     public static final class ViewOnClickListenerC76821 implements View.OnClickListener {
         public final /* synthetic */ Application $application;
 

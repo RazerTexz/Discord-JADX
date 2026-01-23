@@ -10,19 +10,19 @@ import java.util.concurrent.TimeUnit;
 import java.util.concurrent.TimeoutException;
 import p007b.p085c.p086a.p087a0.AnimatableValueParser;
 
-/* compiled from: com.google.android.gms:play-services-basement@@17.6.0 */
-/* renamed from: b.i.a.f.e.a */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.e.a */
+/* JADX INFO: compiled from: com.google.android.gms:play-services-basement@@17.6.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public class ServiceConnectionC3252a implements ServiceConnection {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public boolean f9296j = false;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final BlockingQueue<IBinder> f9297k = new LinkedBlockingQueue();
 
     @RecentlyNonNull
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public IBinder m4014a(long j, @RecentlyNonNull TimeUnit timeUnit) throws InterruptedException, TimeoutException {
         AnimatableValueParser.m587x("BlockingServiceConnection.getServiceWithTimeout() called on main thread");
         if (this.f9296j) {

@@ -8,18 +8,18 @@ import java.lang.annotation.Target;
 import java.util.Collections;
 import java.util.Set;
 
-/* compiled from: JsonIgnoreProperties.java */
+/* JADX INFO: renamed from: b.g.a.a.n, reason: use source file name */
+/* JADX INFO: compiled from: JsonIgnoreProperties.java */
+/* JADX INFO: loaded from: classes3.dex */
 @Target({ElementType.ANNOTATION_TYPE, ElementType.TYPE, ElementType.METHOD, ElementType.CONSTRUCTOR, ElementType.FIELD})
 @Retention(RetentionPolicy.RUNTIME)
-/* renamed from: b.g.a.a.n, reason: use source file name */
-/* loaded from: classes3.dex */
 public @interface JsonIgnoreProperties {
 
-    /* compiled from: JsonIgnoreProperties.java */
-    /* renamed from: b.g.a.a.n$a */
+    /* JADX INFO: renamed from: b.g.a.a.n$a */
+    /* JADX INFO: compiled from: JsonIgnoreProperties.java */
     public static class a implements Serializable {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public static final a f4427j = new a(Collections.emptySet(), false, false, false, true);
         private static final long serialVersionUID = 1;
         public final boolean _allowGetters;
@@ -40,7 +40,7 @@ public @interface JsonIgnoreProperties {
             this._merge = z5;
         }
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public static boolean m1614a(Set<String> set, boolean z2, boolean z3, boolean z4, boolean z5) {
             a aVar = f4427j;
             if (z2 == aVar._ignoreUnknown && z3 == aVar._allowGetters && z4 == aVar._allowSetters && z5 == aVar._merge) {
@@ -49,17 +49,17 @@ public @interface JsonIgnoreProperties {
             return false;
         }
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public static boolean m1615b(a aVar, a aVar2) {
             return aVar._ignoreUnknown == aVar2._ignoreUnknown && aVar._merge == aVar2._merge && aVar._allowGetters == aVar2._allowGetters && aVar._allowSetters == aVar2._allowSetters && aVar._ignored.equals(aVar2._ignored);
         }
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public static a m1616c(Set<String> set, boolean z2, boolean z3, boolean z4, boolean z5) {
             return m1614a(set, z2, z3, z4, z5) ? f4427j : new a(set, z2, z3, z4, z5);
         }
 
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         public Set<String> m1617d() {
             return this._allowGetters ? Collections.emptySet() : this._ignored;
         }

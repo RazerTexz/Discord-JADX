@@ -7,18 +7,18 @@ import kotlin.jvm.functions.Function1;
 import p507d0.p513e0.p514p.p515d.p517m0.p548g.FqName;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: Annotations.kt */
-/* renamed from: d0.e0.p.d.m0.c.g1.l, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.c.g1.l, reason: use source file name */
+/* JADX INFO: compiled from: Annotations.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class Annotations7 implements Annotations4 {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final Annotations4 f22745j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final boolean f22746k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final Function1<FqName, Boolean> f22747l;
 
     /* JADX WARN: Multi-variable type inference failed */
@@ -30,7 +30,7 @@ public final class Annotations7 implements Annotations4 {
         this.f22747l = function1;
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final boolean m9386c(AnnotationDescriptor annotationDescriptor) {
         FqName fqName = annotationDescriptor.getFqName();
         return fqName != null && this.f22747l.invoke(fqName).booleanValue();

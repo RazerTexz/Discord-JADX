@@ -6,8 +6,8 @@ import com.discord.models.domain.ModelAuditLogEntry;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: VoiceState.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: VoiceState.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class VoiceState {
     private final Long channelId;
     private final boolean deaf;
@@ -23,27 +23,27 @@ public final /* data */ class VoiceState {
     private final boolean suppress;
     private final long userId;
 
-    /* renamed from: a, reason: from getter */
+    /* JADX INFO: renamed from: a, reason: from getter */
     public final Long getChannelId() {
         return this.channelId;
     }
 
-    /* renamed from: b, reason: from getter */
+    /* JADX INFO: renamed from: b, reason: from getter */
     public final boolean getDeaf() {
         return this.deaf;
     }
 
-    /* renamed from: c, reason: from getter */
+    /* JADX INFO: renamed from: c, reason: from getter */
     public final long getGuildId() {
         return this.guildId;
     }
 
-    /* renamed from: d, reason: from getter */
+    /* JADX INFO: renamed from: d, reason: from getter */
     public final GuildMember getMember() {
         return this.member;
     }
 
-    /* renamed from: e, reason: from getter */
+    /* JADX INFO: renamed from: e, reason: from getter */
     public final boolean getMute() {
         return this.mute;
     }
@@ -59,95 +59,116 @@ public final /* data */ class VoiceState {
         return this.userId == voiceState.userId && this.suppress == voiceState.suppress && Intrinsics3.areEqual(this.sessionId, voiceState.sessionId) && this.selfMute == voiceState.selfMute && this.selfDeaf == voiceState.selfDeaf && this.selfVideo == voiceState.selfVideo && this.selfStream == voiceState.selfStream && this.mute == voiceState.mute && this.guildId == voiceState.guildId && this.deaf == voiceState.deaf && Intrinsics3.areEqual(this.member, voiceState.member) && Intrinsics3.areEqual(this.requestToSpeakTimestamp, voiceState.requestToSpeakTimestamp) && Intrinsics3.areEqual(this.channelId, voiceState.channelId);
     }
 
-    /* renamed from: f, reason: from getter */
+    /* JADX INFO: renamed from: f, reason: from getter */
     public final UtcDateTime getRequestToSpeakTimestamp() {
         return this.requestToSpeakTimestamp;
     }
 
-    /* renamed from: g, reason: from getter */
+    /* JADX INFO: renamed from: g, reason: from getter */
     public final boolean getSelfDeaf() {
         return this.selfDeaf;
     }
 
-    /* renamed from: h, reason: from getter */
+    /* JADX INFO: renamed from: h, reason: from getter */
     public final boolean getSelfMute() {
         return this.selfMute;
     }
 
     /* JADX WARN: Multi-variable type inference failed */
+    /* JADX WARN: Type inference failed for: r0v10, types: [int] */
+    /* JADX WARN: Type inference failed for: r0v12, types: [int] */
+    /* JADX WARN: Type inference failed for: r0v14, types: [int] */
+    /* JADX WARN: Type inference failed for: r0v16, types: [int] */
+    /* JADX WARN: Type inference failed for: r0v28 */
+    /* JADX WARN: Type inference failed for: r0v29 */
+    /* JADX WARN: Type inference failed for: r0v3, types: [int] */
+    /* JADX WARN: Type inference failed for: r0v30 */
+    /* JADX WARN: Type inference failed for: r0v31 */
+    /* JADX WARN: Type inference failed for: r0v32 */
+    /* JADX WARN: Type inference failed for: r0v34 */
+    /* JADX WARN: Type inference failed for: r0v35 */
+    /* JADX WARN: Type inference failed for: r0v36 */
+    /* JADX WARN: Type inference failed for: r0v37 */
+    /* JADX WARN: Type inference failed for: r0v38 */
+    /* JADX WARN: Type inference failed for: r0v39 */
+    /* JADX WARN: Type inference failed for: r0v40 */
+    /* JADX WARN: Type inference failed for: r0v8, types: [int] */
+    /* JADX WARN: Type inference failed for: r3v1 */
+    /* JADX WARN: Type inference failed for: r3v2, types: [int] */
+    /* JADX WARN: Type inference failed for: r3v3 */
     public int hashCode() {
         long j = this.userId;
         int i = ((int) (j ^ (j >>> 32))) * 31;
         boolean z2 = this.suppress;
-        int i2 = z2;
-        if (z2 != 0) {
-            i2 = 1;
+        ?? r0 = z2;
+        if (z2) {
+            r0 = 1;
         }
-        int i3 = (i + i2) * 31;
+        int i2 = (i + r0) * 31;
         String str = this.sessionId;
-        int iHashCode = (i3 + (str != null ? str.hashCode() : 0)) * 31;
+        int iHashCode = (i2 + (str != null ? str.hashCode() : 0)) * 31;
         boolean z3 = this.selfMute;
-        int i4 = z3;
-        if (z3 != 0) {
-            i4 = 1;
+        ?? r02 = z3;
+        if (z3) {
+            r02 = 1;
         }
-        int i5 = (iHashCode + i4) * 31;
+        int i3 = (iHashCode + r02) * 31;
         boolean z4 = this.selfDeaf;
-        int i6 = z4;
-        if (z4 != 0) {
-            i6 = 1;
+        ?? r03 = z4;
+        if (z4) {
+            r03 = 1;
         }
-        int i7 = (i5 + i6) * 31;
+        int i4 = (i3 + r03) * 31;
         boolean z5 = this.selfVideo;
-        int i8 = z5;
-        if (z5 != 0) {
-            i8 = 1;
+        ?? r04 = z5;
+        if (z5) {
+            r04 = 1;
         }
-        int i9 = (i7 + i8) * 31;
+        int i5 = (i4 + r04) * 31;
         boolean z6 = this.selfStream;
-        int i10 = z6;
-        if (z6 != 0) {
-            i10 = 1;
+        ?? r05 = z6;
+        if (z6) {
+            r05 = 1;
         }
-        int i11 = (i9 + i10) * 31;
+        int i6 = (i5 + r05) * 31;
         boolean z7 = this.mute;
-        int i12 = z7;
-        if (z7 != 0) {
-            i12 = 1;
+        ?? r06 = z7;
+        if (z7) {
+            r06 = 1;
         }
         long j2 = this.guildId;
-        int i13 = (((i11 + i12) * 31) + ((int) (j2 ^ (j2 >>> 32)))) * 31;
+        int i7 = (((i6 + r06) * 31) + ((int) (j2 ^ (j2 >>> 32)))) * 31;
         boolean z8 = this.deaf;
-        int i14 = (i13 + (z8 ? 1 : z8 ? 1 : 0)) * 31;
+        int i8 = (i7 + (z8 ? 1 : z8)) * 31;
         GuildMember guildMember = this.member;
-        int iHashCode2 = (i14 + (guildMember != null ? guildMember.hashCode() : 0)) * 31;
+        int iHashCode2 = (i8 + (guildMember != null ? guildMember.hashCode() : 0)) * 31;
         UtcDateTime utcDateTime = this.requestToSpeakTimestamp;
         int iHashCode3 = (iHashCode2 + (utcDateTime != null ? utcDateTime.hashCode() : 0)) * 31;
         Long l = this.channelId;
         return iHashCode3 + (l != null ? l.hashCode() : 0);
     }
 
-    /* renamed from: i, reason: from getter */
+    /* JADX INFO: renamed from: i, reason: from getter */
     public final boolean getSelfStream() {
         return this.selfStream;
     }
 
-    /* renamed from: j, reason: from getter */
+    /* JADX INFO: renamed from: j, reason: from getter */
     public final boolean getSelfVideo() {
         return this.selfVideo;
     }
 
-    /* renamed from: k, reason: from getter */
+    /* JADX INFO: renamed from: k, reason: from getter */
     public final String getSessionId() {
         return this.sessionId;
     }
 
-    /* renamed from: l, reason: from getter */
+    /* JADX INFO: renamed from: l, reason: from getter */
     public final boolean getSuppress() {
         return this.suppress;
     }
 
-    /* renamed from: m, reason: from getter */
+    /* JADX INFO: renamed from: m, reason: from getter */
     public final long getUserId() {
         return this.userId;
     }

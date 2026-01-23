@@ -7,18 +7,18 @@ import p007b.p100d.p104b.p105a.outline;
 import p007b.p195g.p196a.p205c.JavaType;
 import p007b.p195g.p196a.p205c.p219i0.ClassUtil;
 
-/* compiled from: AnnotatedField.java */
-/* renamed from: b.g.a.c.c0.g, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.g.a.c.c0.g, reason: use source file name */
+/* JADX INFO: compiled from: AnnotatedField.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class AnnotatedField extends AnnotatedMember implements Serializable {
     private static final long serialVersionUID = 1;
     public a _serialization;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final transient Field f4708l;
 
-    /* compiled from: AnnotatedField.java */
-    /* renamed from: b.g.a.c.c0.g$a */
+    /* JADX INFO: renamed from: b.g.a.c.c0.g$a */
+    /* JADX INFO: compiled from: AnnotatedField.java */
     public static final class a implements Serializable {
         private static final long serialVersionUID = 1;
         public Class<?> clazz;
@@ -36,19 +36,19 @@ public final class AnnotatedField extends AnnotatedMember implements Serializabl
     }
 
     @Override // p007b.p195g.p196a.p205c.p210c0.Annotated
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public String mo1819c() {
         return this.f4708l.getName();
     }
 
     @Override // p007b.p195g.p196a.p205c.p210c0.Annotated
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public Class<?> mo1820d() {
         return this.f4708l.getType();
     }
 
     @Override // p007b.p195g.p196a.p205c.p210c0.Annotated
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public JavaType mo1821e() {
         return this.f4716j.mo1831a(this.f4708l.getGenericType());
     }
@@ -62,7 +62,7 @@ public final class AnnotatedField extends AnnotatedMember implements Serializabl
     }
 
     @Override // p007b.p195g.p196a.p205c.p210c0.AnnotatedMember
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public Class<?> mo1887g() {
         return this.f4708l.getDeclaringClass();
     }
@@ -73,13 +73,13 @@ public final class AnnotatedField extends AnnotatedMember implements Serializabl
     }
 
     @Override // p007b.p195g.p196a.p205c.p210c0.AnnotatedMember
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public Member mo1888i() {
         return this.f4708l;
     }
 
     @Override // p007b.p195g.p196a.p205c.p210c0.AnnotatedMember
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public Object mo1889j(Object obj) throws IllegalArgumentException {
         try {
             return this.f4708l.get(obj);
@@ -93,7 +93,7 @@ public final class AnnotatedField extends AnnotatedMember implements Serializabl
     }
 
     @Override // p007b.p195g.p196a.p205c.p210c0.AnnotatedMember
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public Annotated mo1890l(AnnotationMap annotationMap) {
         return new AnnotatedField(this.f4716j, this.f4708l, annotationMap);
     }

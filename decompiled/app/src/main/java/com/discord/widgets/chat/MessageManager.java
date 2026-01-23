@@ -48,8 +48,8 @@ import p507d0.p592z.p594d.Lambda;
 import p658rx.Observable;
 import p658rx.functions.Func2;
 
-/* compiled from: MessageManager.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: MessageManager.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class MessageManager {
     private final Context context;
     private final Function1<MessageSendResult, Unit> defaultMessageResultHandler;
@@ -62,10 +62,10 @@ public final class MessageManager {
     private final StoreSlowMode storeSlowMode;
     private final StoreUser storeUser;
 
-    /* compiled from: MessageManager.kt */
+    /* JADX INFO: compiled from: MessageManager.kt */
     public static abstract class AttachmentValidationResult {
 
-        /* compiled from: MessageManager.kt */
+        /* JADX INFO: compiled from: MessageManager.kt */
         public static final class EmptyAttachments extends AttachmentValidationResult {
             public static final EmptyAttachments INSTANCE = new EmptyAttachments();
 
@@ -74,7 +74,7 @@ public final class MessageManager {
             }
         }
 
-        /* compiled from: MessageManager.kt */
+        /* JADX INFO: compiled from: MessageManager.kt */
         public static final /* data */ class FilesTooLarge extends AttachmentValidationResult {
             private final AttachmentsRequest attachmentsRequest;
 
@@ -92,7 +92,7 @@ public final class MessageManager {
                 return filesTooLarge.copy(attachmentsRequest);
             }
 
-            /* renamed from: component1, reason: from getter */
+            /* JADX INFO: renamed from: component1, reason: from getter */
             public final AttachmentsRequest getAttachmentsRequest() {
                 return this.attachmentsRequest;
             }
@@ -129,7 +129,7 @@ public final class MessageManager {
             }
         }
 
-        /* compiled from: MessageManager.kt */
+        /* JADX INFO: compiled from: MessageManager.kt */
         public static final class Success extends AttachmentValidationResult {
             public static final Success INSTANCE = new Success();
 
@@ -146,7 +146,7 @@ public final class MessageManager {
         }
     }
 
-    /* compiled from: MessageManager.kt */
+    /* JADX INFO: compiled from: MessageManager.kt */
     public static final class AttachmentsRequest {
         private final List<Attachment<?>> attachments;
         private final float currentFileSizeMB;
@@ -176,10 +176,10 @@ public final class MessageManager {
         }
     }
 
-    /* compiled from: MessageManager.kt */
+    /* JADX INFO: compiled from: MessageManager.kt */
     public static abstract class ContentValidationResult {
 
-        /* compiled from: MessageManager.kt */
+        /* JADX INFO: compiled from: MessageManager.kt */
         public static final class EmptyContent extends ContentValidationResult {
             public static final EmptyContent INSTANCE = new EmptyContent();
 
@@ -188,7 +188,7 @@ public final class MessageManager {
             }
         }
 
-        /* compiled from: MessageManager.kt */
+        /* JADX INFO: compiled from: MessageManager.kt */
         public static final /* data */ class MessageTooLong extends ContentValidationResult {
             private final int maxMessageLength;
 
@@ -204,7 +204,7 @@ public final class MessageManager {
                 return messageTooLong.copy(i);
             }
 
-            /* renamed from: component1, reason: from getter */
+            /* JADX INFO: renamed from: component1, reason: from getter */
             public final int getMaxMessageLength() {
                 return this.maxMessageLength;
             }
@@ -233,7 +233,7 @@ public final class MessageManager {
             }
         }
 
-        /* compiled from: MessageManager.kt */
+        /* JADX INFO: compiled from: MessageManager.kt */
         public static final class Success extends ContentValidationResult {
             public static final Success INSTANCE = new Success();
 
@@ -250,7 +250,7 @@ public final class MessageManager {
         }
     }
 
-    /* compiled from: MessageManager.kt */
+    /* JADX INFO: compiled from: MessageManager.kt */
     public static final /* data */ class MessageSendResult {
         private final Guild guild;
         private final MessageQueue4 messageResult;
@@ -271,12 +271,12 @@ public final class MessageManager {
             return messageSendResult.copy(messageQueue4, guild);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final MessageQueue4 getMessageResult() {
             return this.messageResult;
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final Guild getGuild() {
             return this.guild;
         }
@@ -322,8 +322,8 @@ public final class MessageManager {
         }
     }
 
-    /* compiled from: MessageManager.kt */
-    /* renamed from: com.discord.widgets.chat.MessageManager$sendCommand$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.MessageManager$sendCommand$1 */
+    /* JADX INFO: compiled from: MessageManager.kt */
     public static final class C76701 extends Lambda implements Function0<Unit> {
         public static final C76701 INSTANCE = new C76701();
 
@@ -337,13 +337,13 @@ public final class MessageManager {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
         }
     }
 
-    /* compiled from: MessageManager.kt */
-    /* renamed from: com.discord.widgets.chat.MessageManager$sendCommand$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.MessageManager$sendCommand$2 */
+    /* JADX INFO: compiled from: MessageManager.kt */
     public static final class C76712 extends Lambda implements Function1<Error, Unit> {
         public static final C76712 INSTANCE = new C76712();
 
@@ -357,14 +357,14 @@ public final class MessageManager {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Error error) {
             Intrinsics3.checkNotNullParameter(error, "it");
         }
     }
 
-    /* compiled from: MessageManager.kt */
-    /* renamed from: com.discord.widgets.chat.MessageManager$sendMessage$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.MessageManager$sendMessage$1 */
+    /* JADX INFO: compiled from: MessageManager.kt */
     public static final class C76721<T1, T2, R> implements Func2<MessageQueue4, Guild, MessageSendResult> {
         public static final C76721 INSTANCE = new C76721();
 
@@ -373,15 +373,15 @@ public final class MessageManager {
             return call2(messageQueue4, guild);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final MessageSendResult call2(MessageQueue4 messageQueue4, Guild guild) {
             Intrinsics3.checkNotNullExpressionValue(messageQueue4, "messageResult");
             return new MessageSendResult(messageQueue4, guild);
         }
     }
 
-    /* compiled from: MessageManager.kt */
-    /* renamed from: com.discord.widgets.chat.MessageManager$sendMessage$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.MessageManager$sendMessage$2 */
+    /* JADX INFO: compiled from: MessageManager.kt */
     public static final class C76732 extends Lambda implements Function1<MessageSendResult, Unit> {
         public final /* synthetic */ Function1 $messageSendResultHandler;
 
@@ -397,7 +397,7 @@ public final class MessageManager {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(MessageSendResult messageSendResult) {
             Function1 function1 = this.$messageSendResultHandler;
             Intrinsics3.checkNotNullExpressionValue(messageSendResult, "messageSendResult");
@@ -439,6 +439,7 @@ public final class MessageManager {
         return messageManager.storePendingReplies;
     }
 
+    /* JADX WARN: Multi-variable type inference failed */
     public static /* synthetic */ boolean editMessage$default(MessageManager messageManager, long j, long j2, String str, Function2 function2, Integer num, int i, Object obj) {
         return messageManager.editMessage(j, j2, str, (i & 8) != 0 ? null : function2, (i & 16) != 0 ? null : num);
     }
@@ -486,10 +487,12 @@ public final class MessageManager {
         return messageManager.isValidForumPostFirstMessage(str, attachmentsRequest, function2, function22);
     }
 
+    /* JADX WARN: Multi-variable type inference failed */
     public static /* synthetic */ boolean sendCommand$default(MessageManager messageManager, long j, Long l, String str, ApplicationCommandData applicationCommandData, AttachmentsRequest attachmentsRequest, Function0 function0, Function1 function1, Function2 function2, int i, Object obj) {
         return messageManager.sendCommand(j, l, str, applicationCommandData, (i & 16) != 0 ? null : attachmentsRequest, function0, function1, (i & 128) != 0 ? null : function2);
     }
 
+    /* JADX WARN: Multi-variable type inference failed */
     public static /* synthetic */ boolean sendMessage$default(MessageManager messageManager, String str, List list, AttachmentsRequest attachmentsRequest, Long l, List list2, boolean z2, Function2 function2, Function2 function22, Function1 function1, int i, Object obj) {
         return messageManager.sendMessage((i & 1) != 0 ? "" : str, (i & 2) != 0 ? null : list, (i & 4) != 0 ? null : attachmentsRequest, (i & 8) != 0 ? null : l, (i & 16) != 0 ? Collections2.emptyList() : list2, (i & 32) != 0 ? true : z2, (i & 64) != 0 ? null : function2, (i & 128) == 0 ? function22 : null, (i & 256) != 0 ? messageManager.defaultMessageResultHandler : function1);
     }

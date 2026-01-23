@@ -6,9 +6,9 @@ import android.os.Parcelable;
 import com.google.android.gms.cloudmessaging.CloudMessage;
 import p007b.p085c.p086a.p087a0.AnimatableValueParser;
 
-/* compiled from: com.google.android.gms:play-services-cloud-messaging@@16.0.0 */
-/* renamed from: b.i.a.f.d.c */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.d.c */
+/* JADX INFO: compiled from: com.google.android.gms:play-services-cloud-messaging@@16.0.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public final class C3228c implements Parcelable.Creator<CloudMessage> {
     @Override // android.os.Parcelable.Creator
     public final CloudMessage createFromParcel(Parcel parcel) {

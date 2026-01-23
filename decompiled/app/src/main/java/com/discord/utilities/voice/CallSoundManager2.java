@@ -13,9 +13,9 @@ import java.util.Map;
 import p507d0.p592z.p594d.Intrinsics3;
 import p658rx.functions.Func7;
 
-/* compiled from: CallSoundManager.kt */
-/* renamed from: com.discord.utilities.voice.CallSoundManager$StoreStateGenerator$observeStoreState$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.utilities.voice.CallSoundManager$StoreStateGenerator$observeStoreState$1, reason: use source file name */
+/* JADX INFO: compiled from: CallSoundManager.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class CallSoundManager2<T1, T2, T3, T4, T5, T6, T7, R> implements Func7<Map<Long, ? extends StoreVoiceParticipants.VoiceUser>, RtcConnection.StateChange, Map<Long, ? extends ModelApplicationStream>, Map<String, ? extends List<? extends Long>>, StoreApplicationStreaming.ActiveApplicationStream, MeUser, Channel, CallSoundManager.StoreState> {
     public static final CallSoundManager2 INSTANCE = new CallSoundManager2();
 
@@ -24,7 +24,7 @@ public final class CallSoundManager2<T1, T2, T3, T4, T5, T6, T7, R> implements F
         return call2((Map<Long, StoreVoiceParticipants.VoiceUser>) map, stateChange, map2, (Map<String, ? extends List<Long>>) map3, activeApplicationStream, meUser, channel);
     }
 
-    /* renamed from: call, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
     public final CallSoundManager.StoreState call2(Map<Long, StoreVoiceParticipants.VoiceUser> map, RtcConnection.StateChange stateChange, Map<Long, ? extends ModelApplicationStream> map2, Map<String, ? extends List<Long>> map3, StoreApplicationStreaming.ActiveApplicationStream activeApplicationStream, MeUser meUser, Channel channel) {
         Intrinsics3.checkNotNullExpressionValue(map, "voiceParticipants");
         RtcConnection.State state = stateChange.state;

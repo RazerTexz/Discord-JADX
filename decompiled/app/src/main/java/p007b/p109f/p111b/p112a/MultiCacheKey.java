@@ -3,18 +3,18 @@ package p007b.p109f.p111b.p112a;
 import com.facebook.cache.common.CacheKey;
 import java.util.Objects;
 
-/* compiled from: MultiCacheKey.java */
-/* renamed from: b.f.b.a.c, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.f.b.a.c, reason: use source file name */
+/* JADX INFO: compiled from: MultiCacheKey.java */
+/* JADX INFO: loaded from: classes.dex */
 public class MultiCacheKey implements CacheKey {
     @Override // com.facebook.cache.common.CacheKey
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public boolean mo929a() {
         return false;
     }
 
     @Override // com.facebook.cache.common.CacheKey
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public String mo930b() {
         throw null;
     }

@@ -5,10 +5,10 @@ import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
-/* compiled from: JacksonStdImpl.java */
+/* JADX INFO: renamed from: b.g.a.c.y.a, reason: use source file name */
+/* JADX INFO: compiled from: JacksonStdImpl.java */
+/* JADX INFO: loaded from: classes3.dex */
 @Target({ElementType.TYPE})
 @Retention(RetentionPolicy.RUNTIME)
-/* renamed from: b.g.a.c.y.a, reason: use source file name */
-/* loaded from: classes3.dex */
 public @interface JacksonStdImpl {
 }

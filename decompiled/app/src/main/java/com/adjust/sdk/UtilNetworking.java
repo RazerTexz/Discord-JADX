@@ -17,7 +17,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 import p007b.p100d.p104b.p105a.outline;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class UtilNetworking {
     private static String userAgent;
 

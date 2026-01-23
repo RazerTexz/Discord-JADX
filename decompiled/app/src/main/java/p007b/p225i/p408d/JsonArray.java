@@ -5,16 +5,16 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
-/* compiled from: JsonArray.java */
-/* renamed from: b.i.d.g, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.d.g, reason: use source file name */
+/* JADX INFO: compiled from: JsonArray.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class JsonArray extends JsonElement implements Iterable<JsonElement> {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final List<JsonElement> f13105j = new ArrayList();
 
     @Override // com.google.gson.JsonElement
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public int mo6854c() {
         if (this.f13105j.size() == 1) {
             return this.f13105j.get(0).mo6854c();
@@ -27,7 +27,7 @@ public final class JsonArray extends JsonElement implements Iterable<JsonElement
     }
 
     @Override // com.google.gson.JsonElement
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public String mo6855g() {
         if (this.f13105j.size() == 1) {
             return this.f13105j.get(0).mo6855g();

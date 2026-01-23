@@ -53,179 +53,179 @@ import p007b.p225i.p226a.p242c.p267x2.SeekMap;
 import p007b.p225i.p226a.p242c.p267x2.TrackOutput2;
 import p007b.p225i.p226a.p242c.p267x2.p273h0.Mp3Extractor;
 
-/* compiled from: ProgressiveMediaPeriod.java */
-/* renamed from: b.i.a.c.a3.e0, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.a3.e0, reason: use source file name */
+/* JADX INFO: compiled from: ProgressiveMediaPeriod.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class ProgressiveMediaPeriod implements MediaPeriod, ExtractorOutput, Loader.InterfaceC10767b<a>, Loader.InterfaceC10771f, SampleQueue.d {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static final Map<String, String> f5498j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public static final Format2 f5499k;
 
-    /* renamed from: B */
+    /* JADX INFO: renamed from: B */
     @Nullable
     public MediaPeriod.a f5501B;
 
-    /* renamed from: C */
+    /* JADX INFO: renamed from: C */
     @Nullable
     public IcyHeaders f5502C;
 
-    /* renamed from: F */
+    /* JADX INFO: renamed from: F */
     public boolean f5505F;
 
-    /* renamed from: G */
+    /* JADX INFO: renamed from: G */
     public boolean f5506G;
 
-    /* renamed from: H */
+    /* JADX INFO: renamed from: H */
     public boolean f5507H;
 
-    /* renamed from: I */
+    /* JADX INFO: renamed from: I */
     public e f5508I;
 
-    /* renamed from: J */
+    /* JADX INFO: renamed from: J */
     public SeekMap f5509J;
 
-    /* renamed from: L */
+    /* JADX INFO: renamed from: L */
     public boolean f5511L;
 
-    /* renamed from: N */
+    /* JADX INFO: renamed from: N */
     public boolean f5513N;
 
-    /* renamed from: O */
+    /* JADX INFO: renamed from: O */
     public boolean f5514O;
 
-    /* renamed from: P */
+    /* JADX INFO: renamed from: P */
     public int f5515P;
 
-    /* renamed from: R */
+    /* JADX INFO: renamed from: R */
     public long f5517R;
 
-    /* renamed from: T */
+    /* JADX INFO: renamed from: T */
     public boolean f5519T;
 
-    /* renamed from: U */
+    /* JADX INFO: renamed from: U */
     public int f5520U;
 
-    /* renamed from: V */
+    /* JADX INFO: renamed from: V */
     public boolean f5521V;
 
-    /* renamed from: W */
+    /* JADX INFO: renamed from: W */
     public boolean f5522W;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final Uri f5523l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public final DataSource3 f5524m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public final DrmSessionManager2 f5525n;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public final LoadErrorHandlingPolicy f5526o;
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public final MediaSourceEventListener.a f5527p;
 
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     public final DrmSessionEventListener.a f5528q;
 
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     public final b f5529r;
 
-    /* renamed from: s */
+    /* JADX INFO: renamed from: s */
     public final DefaultAllocator f5530s;
 
-    /* renamed from: t */
+    /* JADX INFO: renamed from: t */
     @Nullable
     public final String f5531t;
 
-    /* renamed from: u */
+    /* JADX INFO: renamed from: u */
     public final long f5532u;
 
-    /* renamed from: w */
+    /* JADX INFO: renamed from: w */
     public final ProgressiveMediaExtractor f5534w;
 
-    /* renamed from: v */
+    /* JADX INFO: renamed from: v */
     public final Loader f5533v = new Loader("ProgressiveMediaPeriod");
 
-    /* renamed from: x */
+    /* JADX INFO: renamed from: x */
     public final ConditionVariable f5535x = new ConditionVariable();
 
-    /* renamed from: y */
+    /* JADX INFO: renamed from: y */
     public final Runnable f5536y = new RunnableC2541g(this);
 
-    /* renamed from: z */
+    /* JADX INFO: renamed from: z */
     public final Runnable f5537z = new RunnableC2545i(this);
 
-    /* renamed from: A */
+    /* JADX INFO: renamed from: A */
     public final Handler f5500A = Util2.m3002j();
 
-    /* renamed from: E */
+    /* JADX INFO: renamed from: E */
     public d[] f5504E = new d[0];
 
-    /* renamed from: D */
+    /* JADX INFO: renamed from: D */
     public SampleQueue[] f5503D = new SampleQueue[0];
 
-    /* renamed from: S */
+    /* JADX INFO: renamed from: S */
     public long f5518S = -9223372036854775807L;
 
-    /* renamed from: Q */
+    /* JADX INFO: renamed from: Q */
     public long f5516Q = -1;
 
-    /* renamed from: K */
+    /* JADX INFO: renamed from: K */
     public long f5510K = -9223372036854775807L;
 
-    /* renamed from: M */
+    /* JADX INFO: renamed from: M */
     public int f5512M = 1;
 
-    /* compiled from: ProgressiveMediaPeriod.java */
-    /* renamed from: b.i.a.c.a3.e0$a */
+    /* JADX INFO: renamed from: b.i.a.c.a3.e0$a */
+    /* JADX INFO: compiled from: ProgressiveMediaPeriod.java */
     public final class a implements Loader.InterfaceC10770e, IcyDataSource.a {
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final Uri f5539b;
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public final StatsDataSource f5540c;
 
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         public final ProgressiveMediaExtractor f5541d;
 
-        /* renamed from: e */
+        /* JADX INFO: renamed from: e */
         public final ExtractorOutput f5542e;
 
-        /* renamed from: f */
+        /* JADX INFO: renamed from: f */
         public final ConditionVariable f5543f;
 
-        /* renamed from: h */
+        /* JADX INFO: renamed from: h */
         public volatile boolean f5545h;
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public long f5547j;
 
-        /* renamed from: m */
+        /* JADX INFO: renamed from: m */
         @Nullable
         public TrackOutput2 f5550m;
 
-        /* renamed from: n */
+        /* JADX INFO: renamed from: n */
         public boolean f5551n;
 
-        /* renamed from: g */
+        /* JADX INFO: renamed from: g */
         public final PositionHolder f5544g = new PositionHolder();
 
-        /* renamed from: i */
+        /* JADX INFO: renamed from: i */
         public boolean f5546i = true;
 
-        /* renamed from: l */
+        /* JADX INFO: renamed from: l */
         public long f5549l = -1;
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final long f5538a = LoadEventInfo.f5703a.getAndIncrement();
 
-        /* renamed from: k */
+        /* JADX INFO: renamed from: k */
         public DataSpec f5548k = m2503a(0);
 
         public a(Uri uri, DataSource3 dataSource3, ProgressiveMediaExtractor progressiveMediaExtractor, ExtractorOutput extractorOutput, ConditionVariable conditionVariable) {
@@ -236,7 +236,7 @@ public final class ProgressiveMediaPeriod implements MediaPeriod, ExtractorOutpu
             this.f5543f = conditionVariable;
         }
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final DataSpec m2503a(long j) {
             Collections.emptyMap();
             Uri uri = this.f5539b;
@@ -248,7 +248,7 @@ public final class ProgressiveMediaPeriod implements MediaPeriod, ExtractorOutpu
             throw new IllegalStateException("The uri must be set.");
         }
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public void m2504b() throws IOException {
             DataReader icyDataSource;
             int i;
@@ -349,16 +349,16 @@ public final class ProgressiveMediaPeriod implements MediaPeriod, ExtractorOutpu
         }
     }
 
-    /* compiled from: ProgressiveMediaPeriod.java */
-    /* renamed from: b.i.a.c.a3.e0$b */
+    /* JADX INFO: renamed from: b.i.a.c.a3.e0$b */
+    /* JADX INFO: compiled from: ProgressiveMediaPeriod.java */
     public interface b {
     }
 
-    /* compiled from: ProgressiveMediaPeriod.java */
-    /* renamed from: b.i.a.c.a3.e0$c */
+    /* JADX INFO: renamed from: b.i.a.c.a3.e0$c */
+    /* JADX INFO: compiled from: ProgressiveMediaPeriod.java */
     public final class c implements SampleStream {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final int f5553a;
 
         public c(int i) {
@@ -366,7 +366,7 @@ public final class ProgressiveMediaPeriod implements MediaPeriod, ExtractorOutpu
         }
 
         @Override // p007b.p225i.p226a.p242c.p243a3.SampleStream
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public int mo2505a(FormatHolder formatHolder, DecoderInputBuffer decoderInputBuffer, int i) {
             int i2;
             ProgressiveMediaPeriod progressiveMediaPeriod = ProgressiveMediaPeriod.this;
@@ -438,7 +438,7 @@ public final class ProgressiveMediaPeriod implements MediaPeriod, ExtractorOutpu
         }
 
         @Override // p007b.p225i.p226a.p242c.p243a3.SampleStream
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public void mo2506b() throws IOException {
             ProgressiveMediaPeriod progressiveMediaPeriod = ProgressiveMediaPeriod.this;
             SampleQueue sampleQueue = progressiveMediaPeriod.f5503D[this.f5553a];
@@ -453,7 +453,7 @@ public final class ProgressiveMediaPeriod implements MediaPeriod, ExtractorOutpu
         }
 
         @Override // p007b.p225i.p226a.p242c.p243a3.SampleStream
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public int mo2507c(long j) {
             int iM2530i;
             ProgressiveMediaPeriod progressiveMediaPeriod = ProgressiveMediaPeriod.this;
@@ -497,21 +497,21 @@ public final class ProgressiveMediaPeriod implements MediaPeriod, ExtractorOutpu
         }
 
         @Override // p007b.p225i.p226a.p242c.p243a3.SampleStream
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         public boolean mo2508d() {
             ProgressiveMediaPeriod progressiveMediaPeriod = ProgressiveMediaPeriod.this;
             return !progressiveMediaPeriod.m2476D() && progressiveMediaPeriod.f5503D[this.f5553a].m2537p(progressiveMediaPeriod.f5521V);
         }
     }
 
-    /* compiled from: ProgressiveMediaPeriod.java */
-    /* renamed from: b.i.a.c.a3.e0$d */
+    /* JADX INFO: renamed from: b.i.a.c.a3.e0$d */
+    /* JADX INFO: compiled from: ProgressiveMediaPeriod.java */
     public static final class d {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final int f5555a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final boolean f5556b;
 
         public d(int i, boolean z2) {
@@ -535,20 +535,20 @@ public final class ProgressiveMediaPeriod implements MediaPeriod, ExtractorOutpu
         }
     }
 
-    /* compiled from: ProgressiveMediaPeriod.java */
-    /* renamed from: b.i.a.c.a3.e0$e */
+    /* JADX INFO: renamed from: b.i.a.c.a3.e0$e */
+    /* JADX INFO: compiled from: ProgressiveMediaPeriod.java */
     public static final class e {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final TrackGroupArray f5557a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final boolean[] f5558b;
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public final boolean[] f5559c;
 
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         public final boolean[] f5560d;
 
         public e(TrackGroupArray trackGroupArray, boolean[] zArr) {
@@ -584,7 +584,7 @@ public final class ProgressiveMediaPeriod implements MediaPeriod, ExtractorOutpu
         this.f5534w = progressiveMediaExtractor;
     }
 
-    /* renamed from: A */
+    /* JADX INFO: renamed from: A */
     public void m2473A() throws IOException {
         Loader loader = this.f5533v;
         int iM2873a = ((DefaultLoadErrorHandlingPolicy) this.f5526o).m2873a(this.f5512M);
@@ -604,7 +604,7 @@ public final class ProgressiveMediaPeriod implements MediaPeriod, ExtractorOutpu
         }
     }
 
-    /* renamed from: B */
+    /* JADX INFO: renamed from: B */
     public final TrackOutput2 m2474B(d dVar) {
         int length = this.f5503D.length;
         for (int i = 0; i < length; i++) {
@@ -632,7 +632,7 @@ public final class ProgressiveMediaPeriod implements MediaPeriod, ExtractorOutpu
         return sampleQueue;
     }
 
-    /* renamed from: C */
+    /* JADX INFO: renamed from: C */
     public final void m2475C() {
         a aVar = new a(this.f5523l, this.f5524m, this.f5534w, this, this.f5535x);
         if (this.f5506G) {
@@ -670,19 +670,19 @@ public final class ProgressiveMediaPeriod implements MediaPeriod, ExtractorOutpu
         aVar2.m2471f(new LoadEventInfo(aVar.f5538a, dataSpec, jElapsedRealtime), new MediaLoadData(1, -1, null, 0, null, aVar2.m2466a(aVar.f5547j), aVar2.m2466a(this.f5510K)));
     }
 
-    /* renamed from: D */
+    /* JADX INFO: renamed from: D */
     public final boolean m2476D() {
         return this.f5514O || m2499w();
     }
 
     @Override // p007b.p225i.p226a.p242c.p267x2.ExtractorOutput
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public void mo2477a(SeekMap seekMap) {
         this.f5500A.post(new RunnableC2543h(this, seekMap));
     }
 
     @Override // com.google.android.exoplayer2.upstream.Loader.InterfaceC10767b
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public void mo2478b(Loader.InterfaceC10770e interfaceC10770e, long j, long j2, boolean z2) {
         a aVar = (a) interfaceC10770e;
         StatsDataSource statsDataSource = aVar.f5540c;
@@ -707,7 +707,7 @@ public final class ProgressiveMediaPeriod implements MediaPeriod, ExtractorOutpu
     }
 
     @Override // p007b.p225i.p226a.p242c.p243a3.MediaPeriod
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public long mo2479c() {
         if (this.f5515P == 0) {
             return Long.MIN_VALUE;
@@ -716,7 +716,7 @@ public final class ProgressiveMediaPeriod implements MediaPeriod, ExtractorOutpu
     }
 
     @Override // com.google.android.exoplayer2.upstream.Loader.InterfaceC10767b
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public void mo2480d(Loader.InterfaceC10770e interfaceC10770e, long j, long j2) {
         SeekMap seekMap;
         a aVar = (a) interfaceC10770e;
@@ -742,7 +742,7 @@ public final class ProgressiveMediaPeriod implements MediaPeriod, ExtractorOutpu
     }
 
     @Override // p007b.p225i.p226a.p242c.p243a3.MediaPeriod
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public void mo2481e() throws IOException {
         m2473A();
         if (this.f5521V && !this.f5506G) {
@@ -751,7 +751,7 @@ public final class ProgressiveMediaPeriod implements MediaPeriod, ExtractorOutpu
     }
 
     @Override // p007b.p225i.p226a.p242c.p243a3.MediaPeriod
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public long mo2482f(long j) {
         boolean z2;
         m2496t();
@@ -798,7 +798,7 @@ public final class ProgressiveMediaPeriod implements MediaPeriod, ExtractorOutpu
     }
 
     @Override // p007b.p225i.p226a.p242c.p243a3.MediaPeriod
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public boolean mo2483g(long j) {
         if (!this.f5521V) {
             if (!(this.f5533v.f20233e != null) && !this.f5519T && (!this.f5506G || this.f5515P != 0)) {
@@ -814,7 +814,7 @@ public final class ProgressiveMediaPeriod implements MediaPeriod, ExtractorOutpu
     }
 
     @Override // p007b.p225i.p226a.p242c.p243a3.MediaPeriod
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public boolean mo2484h() {
         boolean z2;
         if (this.f5533v.m8940b()) {
@@ -830,7 +830,7 @@ public final class ProgressiveMediaPeriod implements MediaPeriod, ExtractorOutpu
     }
 
     @Override // p007b.p225i.p226a.p242c.p243a3.MediaPeriod
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public long mo2485i(long j, SeekParameters seekParameters) {
         m2496t();
         if (!this.f5509J.mo3619c()) {
@@ -873,14 +873,14 @@ public final class ProgressiveMediaPeriod implements MediaPeriod, ExtractorOutpu
     }
 
     @Override // p007b.p225i.p226a.p242c.p267x2.ExtractorOutput
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public void mo2486j() {
         this.f5505F = true;
         this.f5500A.post(this.f5536y);
     }
 
     @Override // p007b.p225i.p226a.p242c.p243a3.MediaPeriod
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public long mo2487k() {
         if (!this.f5514O) {
             return -9223372036854775807L;
@@ -893,7 +893,7 @@ public final class ProgressiveMediaPeriod implements MediaPeriod, ExtractorOutpu
     }
 
     @Override // p007b.p225i.p226a.p242c.p243a3.MediaPeriod
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public void mo2488l(MediaPeriod.a aVar, long j) {
         this.f5501B = aVar;
         this.f5535x.m3026b();
@@ -901,7 +901,7 @@ public final class ProgressiveMediaPeriod implements MediaPeriod, ExtractorOutpu
     }
 
     @Override // p007b.p225i.p226a.p242c.p243a3.MediaPeriod
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public long mo2489m(ExoTrackSelection2[] exoTrackSelection2Arr, boolean[] zArr, SampleStream[] sampleStreamArr, boolean[] zArr2, long j) {
         m2496t();
         e eVar = this.f5508I;
@@ -963,7 +963,7 @@ public final class ProgressiveMediaPeriod implements MediaPeriod, ExtractorOutpu
     }
 
     @Override // p007b.p225i.p226a.p242c.p243a3.MediaPeriod
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public TrackGroupArray mo2490n() {
         m2496t();
         return this.f5508I.f5557a;
@@ -973,7 +973,7 @@ public final class ProgressiveMediaPeriod implements MediaPeriod, ExtractorOutpu
     /* JADX WARN: Removed duplicated region for block: B:52:0x00d6  */
     /* JADX WARN: Removed duplicated region for block: B:53:0x00db  */
     @Override // com.google.android.exoplayer2.upstream.Loader.InterfaceC10767b
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
@@ -1049,13 +1049,13 @@ public final class ProgressiveMediaPeriod implements MediaPeriod, ExtractorOutpu
     }
 
     @Override // p007b.p225i.p226a.p242c.p267x2.ExtractorOutput
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public TrackOutput2 mo2492p(int i, int i2) {
         return m2474B(new d(i, false));
     }
 
     @Override // p007b.p225i.p226a.p242c.p243a3.MediaPeriod
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     public long mo2493q() {
         long jM2498v;
         boolean z2;
@@ -1098,7 +1098,7 @@ public final class ProgressiveMediaPeriod implements MediaPeriod, ExtractorOutpu
     }
 
     @Override // p007b.p225i.p226a.p242c.p243a3.MediaPeriod
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     public void mo2494r(long j, boolean z2) {
         long jM2528g;
         int i;
@@ -1131,19 +1131,19 @@ public final class ProgressiveMediaPeriod implements MediaPeriod, ExtractorOutpu
     }
 
     @Override // p007b.p225i.p226a.p242c.p243a3.MediaPeriod
-    /* renamed from: s */
+    /* JADX INFO: renamed from: s */
     public void mo2495s(long j) {
     }
 
     @EnsuresNonNull({"trackState", "seekMap"})
-    /* renamed from: t */
+    /* JADX INFO: renamed from: t */
     public final void m2496t() {
         AnimatableValueParser.m426D(this.f5506G);
         Objects.requireNonNull(this.f5508I);
         Objects.requireNonNull(this.f5509J);
     }
 
-    /* renamed from: u */
+    /* JADX INFO: renamed from: u */
     public final int m2497u() {
         int iM2535n = 0;
         for (SampleQueue sampleQueue : this.f5503D) {
@@ -1152,7 +1152,7 @@ public final class ProgressiveMediaPeriod implements MediaPeriod, ExtractorOutpu
         return iM2535n;
     }
 
-    /* renamed from: v */
+    /* JADX INFO: renamed from: v */
     public final long m2498v() {
         long j;
         long jMax = Long.MIN_VALUE;
@@ -1165,12 +1165,12 @@ public final class ProgressiveMediaPeriod implements MediaPeriod, ExtractorOutpu
         return jMax;
     }
 
-    /* renamed from: w */
+    /* JADX INFO: renamed from: w */
     public final boolean m2499w() {
         return this.f5518S != -9223372036854775807L;
     }
 
-    /* renamed from: x */
+    /* JADX INFO: renamed from: x */
     public final void m2500x() {
         if (this.f5522W || this.f5506G || !this.f5505F || this.f5509J == null) {
             return;
@@ -1219,7 +1219,7 @@ public final class ProgressiveMediaPeriod implements MediaPeriod, ExtractorOutpu
         aVar.mo2563b(this);
     }
 
-    /* renamed from: y */
+    /* JADX INFO: renamed from: y */
     public final void m2501y(int i) {
         m2496t();
         e eVar = this.f5508I;
@@ -1233,7 +1233,7 @@ public final class ProgressiveMediaPeriod implements MediaPeriod, ExtractorOutpu
         zArr[i] = true;
     }
 
-    /* renamed from: z */
+    /* JADX INFO: renamed from: z */
     public final void m2502z(int i) {
         m2496t();
         boolean[] zArr = this.f5508I.f5558b;

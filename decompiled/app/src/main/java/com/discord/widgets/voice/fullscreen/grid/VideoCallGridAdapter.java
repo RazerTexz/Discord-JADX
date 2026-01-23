@@ -30,8 +30,8 @@ import p007b.p100d.p104b.p105a.outline;
 import p507d0.p580t.Collections2;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: VideoCallGridAdapter.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: VideoCallGridAdapter.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class VideoCallGridAdapter extends RecyclerView.Adapter<VideoCallGridViewHolder> {
     private static final int EMBEDDED_ACTIVITY_VIEW_TYPE = 1;
     private static final int USER_OR_STREAM_VIEW_TYPE = 0;
@@ -48,7 +48,7 @@ public final class VideoCallGridAdapter extends RecyclerView.Adapter<VideoCallGr
     private final int spanCount;
     private final GridLayoutManager.SpanSizeLookup spanSizeLookup;
 
-    /* compiled from: VideoCallGridAdapter.kt */
+    /* JADX INFO: compiled from: VideoCallGridAdapter.kt */
     public static final /* data */ class CallUiInsets {
         private final int bottom;
         private final int left;
@@ -78,22 +78,22 @@ public final class VideoCallGridAdapter extends RecyclerView.Adapter<VideoCallGr
             return callUiInsets.copy(i, i2, i3, i4);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final int getTop() {
             return this.top;
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final int getBottom() {
             return this.bottom;
         }
 
-        /* renamed from: component3, reason: from getter */
+        /* JADX INFO: renamed from: component3, reason: from getter */
         public final int getLeft() {
             return this.left;
         }
 
-        /* renamed from: component4, reason: from getter */
+        /* JADX INFO: renamed from: component4, reason: from getter */
         public final int getRight() {
             return this.right;
         }
@@ -157,8 +157,8 @@ public final class VideoCallGridAdapter extends RecyclerView.Adapter<VideoCallGr
         }
     }
 
-    /* compiled from: VideoCallGridAdapter.kt */
-    /* renamed from: com.discord.widgets.voice.fullscreen.grid.VideoCallGridAdapter$getDiffUtilCallback$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.voice.fullscreen.grid.VideoCallGridAdapter$getDiffUtilCallback$1 */
+    /* JADX INFO: compiled from: VideoCallGridAdapter.kt */
     public static final class C105551 extends DiffUtil.Callback {
         public final /* synthetic */ List $newData;
         public final /* synthetic */ List $oldData;

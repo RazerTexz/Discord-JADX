@@ -11,9 +11,9 @@ import com.discord.widgets.channels.WidgetChannelPickerBottomSheet;
 import p507d0.Tuples;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: WidgetChannelPickerBottomSheet.kt */
-/* renamed from: com.discord.widgets.channels.WidgetChannelPickerBottomSheet$itemClickListener$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.channels.WidgetChannelPickerBottomSheet$itemClickListener$1, reason: use source file name */
+/* JADX INFO: compiled from: WidgetChannelPickerBottomSheet.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetChannelPickerBottomSheet6 implements WidgetChannelPickerAdapter3.OnItemClickListener {
     public final /* synthetic */ WidgetChannelPickerBottomSheet this$0;
 

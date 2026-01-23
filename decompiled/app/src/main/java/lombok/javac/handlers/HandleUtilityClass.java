@@ -16,8 +16,8 @@ import lombok.javac.JavacAnnotationHandler;
 import lombok.javac.JavacNode;
 import lombok.javac.JavacTreeMaker;
 
+/* JADX INFO: loaded from: discord-126021.apk:lombok/javac/handlers/HandleUtilityClass.SCL.lombok */
 @HandlerPriority(-4096)
-/* loaded from: discord-126021.apk:lombok/javac/handlers/HandleUtilityClass.SCL.lombok */
 public class HandleUtilityClass extends JavacAnnotationHandler<UtilityClass> {
     private static /* synthetic */ int[] $SWITCH_TABLE$lombok$core$AST$Kind;
 
@@ -90,7 +90,7 @@ public class HandleUtilityClass extends JavacAnnotationHandler<UtilityClass> {
         	at jadx.core.dex.visitors.regions.maker.LoopRegionMaker.process(LoopRegionMaker.java:104)
         	at jadx.core.dex.visitors.regions.maker.RegionMaker.traverse(RegionMaker.java:89)
         	at jadx.core.dex.visitors.regions.maker.RegionMaker.makeRegion(RegionMaker.java:66)
-        	at jadx.core.dex.visitors.regions.maker.IfRegionMaker.process(IfRegionMaker.java:101)
+        	at jadx.core.dex.visitors.regions.maker.IfRegionMaker.process(IfRegionMaker.java:102)
         	at jadx.core.dex.visitors.regions.maker.RegionMaker.traverse(RegionMaker.java:106)
         	at jadx.core.dex.visitors.regions.maker.RegionMaker.makeRegion(RegionMaker.java:66)
         	at jadx.core.dex.visitors.regions.maker.RegionMaker.makeMthRegion(RegionMaker.java:48)

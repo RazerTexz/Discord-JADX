@@ -4,30 +4,30 @@ import androidx.annotation.GuardedBy;
 import androidx.annotation.Nullable;
 import p007b.p225i.p226a.p288f.p299e.p308o.C3404f;
 
-/* compiled from: com.google.android.gms:play-services-measurement-impl@@18.0.0 */
-/* renamed from: b.i.a.f.i.b.j3 */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.i.b.j3 */
+/* JADX INFO: compiled from: com.google.android.gms:play-services-measurement-impl@@18.0.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public final class C4080j3<V> {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final Object f10838a = new Object();
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final String f10839b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final InterfaceC4056h3<V> f10840c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final V f10841d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final V f10842e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final Object f10843f = new Object();
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     @GuardedBy("cachingLock")
     public volatile V f10844g = null;
 
@@ -39,8 +39,14 @@ public final class C4080j3<V> {
         this.f10840c = interfaceC4056h3;
     }
 
-    /* renamed from: a */
+    /* JADX WARN: Removed duplicated region for block: B:44:0x005b  */
+    /* JADX WARN: Removed duplicated region for block: B:67:0x005e A[EXC_TOP_SPLITTER, SYNTHETIC] */
+    /* JADX INFO: renamed from: a */
+    /*
+        Code decompiled incorrectly, please refer to instructions dump.
+    */
     public final V m5693a(@Nullable V v) {
+        InterfaceC4056h3<V> interfaceC4056h3;
         synchronized (this.f10843f) {
         }
         if (v != null) {
@@ -54,34 +60,37 @@ public final class C4080j3<V> {
                 return this.f10844g == null ? this.f10841d : this.f10844g;
             }
             try {
-                for (C4080j3<?> c4080j3 : C4142p.f11061a) {
-                    if (C4051ga.m5647a()) {
-                        throw new IllegalStateException("Refreshing flag cache must be done on a worker thread.");
-                    }
-                    V v2 = null;
-                    try {
-                        InterfaceC4056h3<?> interfaceC4056h3 = c4080j3.f10840c;
-                        if (interfaceC4056h3 != null) {
-                            v2 = (V) interfaceC4056h3.mo5446a();
-                        }
-                    } catch (IllegalStateException unused) {
-                    }
-                    synchronized (f10838a) {
-                        c4080j3.f10844g = v2;
-                    }
+            } catch (SecurityException unused) {
+            }
+            for (C4080j3<?> c4080j3 : C4142p.f11061a) {
+                if (C4051ga.m5647a()) {
+                    throw new IllegalStateException("Refreshing flag cache must be done on a worker thread.");
                 }
-            } catch (SecurityException unused2) {
+                V v2 = null;
+                try {
+                    InterfaceC4056h3<?> interfaceC4056h32 = c4080j3.f10840c;
+                    if (interfaceC4056h32 != null) {
+                        v2 = (V) interfaceC4056h32.mo5446a();
+                    }
+                } catch (IllegalStateException unused2) {
+                }
+                synchronized (f10838a) {
+                    c4080j3.f10844g = v2;
+                }
+                interfaceC4056h3 = this.f10840c;
+                if (interfaceC4056h3 != null) {
+                    return this.f10841d;
+                }
+                try {
+                    return interfaceC4056h3.mo5446a();
+                } catch (IllegalStateException unused3) {
+                    return this.f10841d;
+                } catch (SecurityException unused4) {
+                    return this.f10841d;
+                }
             }
-            InterfaceC4056h3<V> interfaceC4056h32 = this.f10840c;
-            if (interfaceC4056h32 == null) {
-                return this.f10841d;
-            }
-            try {
-                return interfaceC4056h32.mo5446a();
-            } catch (IllegalStateException unused3) {
-                return this.f10841d;
-            } catch (SecurityException unused4) {
-                return this.f10841d;
+            interfaceC4056h3 = this.f10840c;
+            if (interfaceC4056h3 != null) {
             }
         }
     }

@@ -6,20 +6,20 @@ import com.facebook.drawee.controller.ControllerListener;
 import java.util.ArrayList;
 import java.util.List;
 
-/* compiled from: ForwardingControllerListener.java */
-/* renamed from: b.f.g.c.d, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.f.g.c.d, reason: use source file name */
+/* JADX INFO: compiled from: ForwardingControllerListener.java */
+/* JADX INFO: loaded from: classes.dex */
 public class ForwardingControllerListener<INFO> implements ControllerListener<INFO> {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final List<ControllerListener<? super INFO>> f3298a = new ArrayList(2);
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public synchronized void m1085a(ControllerListener<? super INFO> controllerListener) {
         this.f3298a.add(controllerListener);
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final synchronized void m1086b(String str, Throwable th) {
         Log.e("FdingControllerListener", str, th);
     }

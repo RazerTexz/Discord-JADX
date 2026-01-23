@@ -1,7 +1,6 @@
 package androidx.sharetarget;
 
 import android.content.Context;
-import android.content.res.Resources;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.text.TextUtils;
@@ -33,9 +32,9 @@ import java.util.concurrent.TimeUnit;
 import p007b.p100d.p104b.p105a.outline;
 import p007b.p225i.p355b.p359d.p360a.ListenableFuture8;
 
+/* JADX INFO: loaded from: classes.dex */
 @RequiresApi(19)
 @RestrictTo({RestrictTo.Scope.LIBRARY_GROUP_PREFIX})
-/* loaded from: classes.dex */
 public class ShortcutInfoCompatSaverImpl extends ShortcutInfoCompatSaver<ListenableFuture8<Void>> {
     private static final String DIRECTORY_BITMAPS = "ShortcutInfoCompatSaver_share_targets_bitmaps";
     private static final String DIRECTORY_TARGETS = "ShortcutInfoCompatSaver_share_targets";
@@ -52,7 +51,7 @@ public class ShortcutInfoCompatSaverImpl extends ShortcutInfoCompatSaver<Listena
     public final Map<String, ShortcutsInfoSerialization.ShortcutContainer> mShortcutsMap = new ArrayMap();
     public final Map<String, ListenableFuture8<?>> mScheduledBitmapTasks = new ArrayMap();
 
-    /* renamed from: androidx.sharetarget.ShortcutInfoCompatSaverImpl$1 */
+    /* JADX INFO: renamed from: androidx.sharetarget.ShortcutInfoCompatSaverImpl$1 */
     public class RunnableC06031 implements Runnable {
         public final /* synthetic */ File val$workingDirectory;
 
@@ -74,7 +73,7 @@ public class ShortcutInfoCompatSaverImpl extends ShortcutInfoCompatSaver<Listena
         }
     }
 
-    /* renamed from: androidx.sharetarget.ShortcutInfoCompatSaverImpl$10 */
+    /* JADX INFO: renamed from: androidx.sharetarget.ShortcutInfoCompatSaverImpl$10 */
     public class RunnableC060410 implements Runnable {
         public final /* synthetic */ List val$containers;
 
@@ -89,7 +88,7 @@ public class ShortcutInfoCompatSaverImpl extends ShortcutInfoCompatSaver<Listena
         }
     }
 
-    /* renamed from: androidx.sharetarget.ShortcutInfoCompatSaverImpl$11 */
+    /* JADX INFO: renamed from: androidx.sharetarget.ShortcutInfoCompatSaverImpl$11 */
     public class RunnableC060511 implements Runnable {
         public final /* synthetic */ ListenableFuture8 val$future;
         public final /* synthetic */ ResolvableFuture val$output;
@@ -110,7 +109,7 @@ public class ShortcutInfoCompatSaverImpl extends ShortcutInfoCompatSaver<Listena
         }
     }
 
-    /* renamed from: androidx.sharetarget.ShortcutInfoCompatSaverImpl$2 */
+    /* JADX INFO: renamed from: androidx.sharetarget.ShortcutInfoCompatSaverImpl$2 */
     public class RunnableC06062 implements Runnable {
         public final /* synthetic */ List val$idList;
         public final /* synthetic */ ResolvableFuture val$result;
@@ -133,7 +132,7 @@ public class ShortcutInfoCompatSaverImpl extends ShortcutInfoCompatSaver<Listena
         }
     }
 
-    /* renamed from: androidx.sharetarget.ShortcutInfoCompatSaverImpl$3 */
+    /* JADX INFO: renamed from: androidx.sharetarget.ShortcutInfoCompatSaverImpl$3 */
     public class RunnableC06073 implements Runnable {
         public final /* synthetic */ ResolvableFuture val$result;
 
@@ -153,7 +152,7 @@ public class ShortcutInfoCompatSaverImpl extends ShortcutInfoCompatSaver<Listena
         }
     }
 
-    /* renamed from: androidx.sharetarget.ShortcutInfoCompatSaverImpl$4 */
+    /* JADX INFO: renamed from: androidx.sharetarget.ShortcutInfoCompatSaverImpl$4 */
     public class CallableC06084 implements Callable<ArrayList<ShortcutInfoCompat>> {
         public CallableC06084() {
         }
@@ -164,7 +163,7 @@ public class ShortcutInfoCompatSaverImpl extends ShortcutInfoCompatSaver<Listena
         }
 
         @Override // java.util.concurrent.Callable
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public ArrayList<ShortcutInfoCompat> call2() {
             ArrayList<ShortcutInfoCompat> arrayList = new ArrayList<>();
             Iterator<ShortcutsInfoSerialization.ShortcutContainer> it = ShortcutInfoCompatSaverImpl.this.mShortcutsMap.values().iterator();
@@ -175,7 +174,7 @@ public class ShortcutInfoCompatSaverImpl extends ShortcutInfoCompatSaver<Listena
         }
     }
 
-    /* renamed from: androidx.sharetarget.ShortcutInfoCompatSaverImpl$5 */
+    /* JADX INFO: renamed from: androidx.sharetarget.ShortcutInfoCompatSaverImpl$5 */
     public class CallableC06095 implements Callable<ShortcutsInfoSerialization.ShortcutContainer> {
         public final /* synthetic */ String val$shortcutId;
 
@@ -195,7 +194,7 @@ public class ShortcutInfoCompatSaverImpl extends ShortcutInfoCompatSaver<Listena
         }
     }
 
-    /* renamed from: androidx.sharetarget.ShortcutInfoCompatSaverImpl$6 */
+    /* JADX INFO: renamed from: androidx.sharetarget.ShortcutInfoCompatSaverImpl$6 */
     public class CallableC06106 implements Callable<Bitmap> {
         public final /* synthetic */ ShortcutsInfoSerialization.ShortcutContainer val$container;
 
@@ -215,12 +214,12 @@ public class ShortcutInfoCompatSaverImpl extends ShortcutInfoCompatSaver<Listena
         }
     }
 
-    /* renamed from: androidx.sharetarget.ShortcutInfoCompatSaverImpl$7 */
+    /* JADX INFO: renamed from: androidx.sharetarget.ShortcutInfoCompatSaverImpl$7 */
     public class RunnableC06117 implements Runnable {
         public final /* synthetic */ List val$copy;
         public final /* synthetic */ ResolvableFuture val$result;
 
-        /* renamed from: androidx.sharetarget.ShortcutInfoCompatSaverImpl$7$1, reason: invalid class name */
+        /* JADX INFO: renamed from: androidx.sharetarget.ShortcutInfoCompatSaverImpl$7$1, reason: invalid class name */
         public class AnonymousClass1 implements Runnable {
             public final /* synthetic */ ListenableFuture8 val$future;
             public final /* synthetic */ String val$id;
@@ -250,7 +249,7 @@ public class ShortcutInfoCompatSaverImpl extends ShortcutInfoCompatSaver<Listena
         }
 
         @Override // java.lang.Runnable
-        public void run() throws Resources.NotFoundException {
+        public void run() {
             for (ShortcutInfoCompat shortcutInfoCompat : this.val$copy) {
                 Set<String> categories = shortcutInfoCompat.getCategories();
                 if (categories != null && !categories.isEmpty()) {
@@ -272,7 +271,7 @@ public class ShortcutInfoCompatSaverImpl extends ShortcutInfoCompatSaver<Listena
         }
     }
 
-    /* renamed from: androidx.sharetarget.ShortcutInfoCompatSaverImpl$8 */
+    /* JADX INFO: renamed from: androidx.sharetarget.ShortcutInfoCompatSaverImpl$8 */
     public class RunnableC06128 implements Runnable {
         public final /* synthetic */ Bitmap val$bitmap;
         public final /* synthetic */ String val$path;
@@ -288,7 +287,7 @@ public class ShortcutInfoCompatSaverImpl extends ShortcutInfoCompatSaver<Listena
         }
     }
 
-    /* renamed from: androidx.sharetarget.ShortcutInfoCompatSaverImpl$9 */
+    /* JADX INFO: renamed from: androidx.sharetarget.ShortcutInfoCompatSaverImpl$9 */
     public class RunnableC06139 implements Runnable {
         public final /* synthetic */ ResolvableFuture val$result;
         public final /* synthetic */ Runnable val$runnable;
@@ -367,7 +366,7 @@ public class ShortcutInfoCompatSaverImpl extends ShortcutInfoCompatSaver<Listena
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
-    public ShortcutsInfoSerialization.ShortcutContainer containerFrom(ShortcutInfoCompat shortcutInfoCompat) throws Resources.NotFoundException {
+    public ShortcutsInfoSerialization.ShortcutContainer containerFrom(ShortcutInfoCompat shortcutInfoCompat) {
         String resourceName;
         String absolutePath;
         IconCompat icon = shortcutInfoCompat.getIcon();

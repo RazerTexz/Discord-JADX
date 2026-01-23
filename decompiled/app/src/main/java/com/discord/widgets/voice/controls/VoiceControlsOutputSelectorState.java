@@ -3,8 +3,8 @@ package com.discord.widgets.voice.controls;
 import androidx.annotation.DrawableRes;
 import com.discord.C5419R;
 
-/* compiled from: VoiceControlsOutputSelectorState.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: VoiceControlsOutputSelectorState.kt */
+/* JADX INFO: loaded from: classes.dex */
 public enum VoiceControlsOutputSelectorState {
     SPEAKER_ON(C5419R.drawable.ic_sound_24dp, true, false),
     SPEAKER_OFF(C5419R.drawable.ic_sound_quiet_24dp, false, false),
@@ -30,7 +30,7 @@ public enum VoiceControlsOutputSelectorState {
         return this.showMoreOptions;
     }
 
-    /* renamed from: isButtonActive, reason: from getter */
+    /* JADX INFO: renamed from: isButtonActive, reason: from getter */
     public final boolean getIsButtonActive() {
         return this.isButtonActive;
     }

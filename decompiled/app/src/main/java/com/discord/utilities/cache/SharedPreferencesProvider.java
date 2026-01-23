@@ -6,8 +6,8 @@ import androidx.annotation.VisibleForTesting;
 import androidx.preference.PreferenceManager;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: SharedPreferencesProvider.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: SharedPreferencesProvider.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class SharedPreferencesProvider {
     public static final SharedPreferencesProvider INSTANCE = new SharedPreferencesProvider();
     private static SharedPreferences prefsSessionDurable;

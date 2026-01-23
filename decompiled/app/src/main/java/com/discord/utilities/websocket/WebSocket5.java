@@ -6,9 +6,9 @@ import kotlin.jvm.functions.Function1;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WebSocket.kt */
-/* renamed from: com.discord.utilities.websocket.WebSocket$onClosed$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.utilities.websocket.WebSocket$onClosed$1, reason: use source file name */
+/* JADX INFO: compiled from: WebSocket.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WebSocket5 extends Lambda implements Function1<WebSocket.Closed, Unit> {
     public static final WebSocket5 INSTANCE = new WebSocket5();
 
@@ -22,7 +22,7 @@ public final class WebSocket5 extends Lambda implements Function1<WebSocket.Clos
         return Unit.f27425a;
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final void invoke2(WebSocket.Closed closed) {
         Intrinsics3.checkNotNullParameter(closed, "it");
     }

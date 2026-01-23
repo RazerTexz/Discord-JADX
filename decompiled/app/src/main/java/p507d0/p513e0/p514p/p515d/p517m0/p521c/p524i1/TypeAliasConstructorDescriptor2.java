@@ -36,28 +36,28 @@ import p507d0.p592z.p594d.Lambda;
 import p507d0.p592z.p594d.PropertyReference1Impl;
 import p507d0.p592z.p594d.Reflection2;
 
-/* compiled from: TypeAliasConstructorDescriptor.kt */
-/* renamed from: d0.e0.p.d.m0.c.i1.j0, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.c.i1.j0, reason: use source file name */
+/* JADX INFO: compiled from: TypeAliasConstructorDescriptor.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class TypeAliasConstructorDescriptor2 extends FunctionDescriptorImpl implements TypeAliasConstructorDescriptor {
 
-    /* renamed from: M */
+    /* JADX INFO: renamed from: M */
     public static final a f22887M = new a(null);
 
-    /* renamed from: N */
+    /* JADX INFO: renamed from: N */
     public static final /* synthetic */ KProperty<Object>[] f22888N = {Reflection2.property1(new PropertyReference1Impl(Reflection2.getOrCreateKotlinClass(TypeAliasConstructorDescriptor2.class), "withDispatchReceiver", "getWithDispatchReceiver()Lorg/jetbrains/kotlin/descriptors/impl/TypeAliasConstructorDescriptor;"))};
 
-    /* renamed from: O */
+    /* JADX INFO: renamed from: O */
     public final StorageManager f22889O;
 
-    /* renamed from: P */
+    /* JADX INFO: renamed from: P */
     public final TypeAliasDescriptor f22890P;
 
-    /* renamed from: Q */
+    /* JADX INFO: renamed from: Q */
     public ClassConstructorDescriptor f22891Q;
 
-    /* compiled from: TypeAliasConstructorDescriptor.kt */
-    /* renamed from: d0.e0.p.d.m0.c.i1.j0$a */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.c.i1.j0$a */
+    /* JADX INFO: compiled from: TypeAliasConstructorDescriptor.kt */
     public static final class a {
         public a(DefaultConstructorMarker defaultConstructorMarker) {
         }
@@ -99,8 +99,8 @@ public final class TypeAliasConstructorDescriptor2 extends FunctionDescriptorImp
         }
     }
 
-    /* compiled from: TypeAliasConstructorDescriptor.kt */
-    /* renamed from: d0.e0.p.d.m0.c.i1.j0$b */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.c.i1.j0$b */
+    /* JADX INFO: compiled from: TypeAliasConstructorDescriptor.kt */
     public static final class b extends Lambda implements Function0<TypeAliasConstructorDescriptor2> {
         public final /* synthetic */ ClassConstructorDescriptor $underlyingConstructorDescriptor;
 
@@ -154,7 +154,7 @@ public final class TypeAliasConstructorDescriptor2 extends FunctionDescriptorImp
     }
 
     @Override // p507d0.p513e0.p514p.p515d.p517m0.p521c.p524i1.FunctionDescriptorImpl
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public FunctionDescriptorImpl mo9373b(DeclarationDescriptor declarationDescriptor, FunctionDescriptor functionDescriptor, CallableMemberDescriptor.a aVar, Name name, Annotations4 annotations4, SourceElement sourceElement) {
         Intrinsics3.checkNotNullParameter(declarationDescriptor, "newOwner");
         Intrinsics3.checkNotNullParameter(aVar, "kind");

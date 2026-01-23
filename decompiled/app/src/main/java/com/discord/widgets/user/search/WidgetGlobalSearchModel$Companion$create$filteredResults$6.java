@@ -9,8 +9,8 @@ import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetGlobalSearchModel.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: WidgetGlobalSearchModel.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class WidgetGlobalSearchModel$Companion$create$filteredResults$6 extends Lambda implements Function1<Channel, Boolean> {
     public final /* synthetic */ WidgetGlobalSearchModel.ChannelContext $channelContext;
 
@@ -25,7 +25,7 @@ public final class WidgetGlobalSearchModel$Companion$create$filteredResults$6 ex
         return Boolean.valueOf(invoke2(channel));
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final boolean invoke2(Channel channel) {
         Intrinsics3.checkNotNullParameter(channel, "it");
         Object objM845d = outline.m845d(channel, this.$channelContext.getChannelPerms());

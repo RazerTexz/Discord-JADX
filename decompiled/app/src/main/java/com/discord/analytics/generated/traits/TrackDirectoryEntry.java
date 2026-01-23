@@ -3,8 +3,8 @@ package com.discord.analytics.generated.traits;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: TrackDirectoryEntry.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: TrackDirectoryEntry.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class TrackDirectoryEntry {
     private final Long directoryChannelId = null;
     private final Long directoryGuildId = null;

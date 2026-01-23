@@ -7,7 +7,7 @@ import org.objectweb.asm.MethodVisitor;
 import org.objectweb.asm.Opcodes;
 import org.objectweb.asm.TypePath;
 
-/* loaded from: discord-126021.apk:org/objectweb/asm/commons/MethodRemapper.SCL.lombok */
+/* JADX INFO: loaded from: discord-126021.apk:org/objectweb/asm/commons/MethodRemapper.SCL.lombok */
 public class MethodRemapper extends MethodVisitor {
     protected final Remapper remapper;
 

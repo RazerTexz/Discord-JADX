@@ -4,15 +4,15 @@ import p507d0.p513e0.p514p.p515d.p517m0.p521c.DeclarationDescriptor;
 import p507d0.p513e0.p514p.p515d.p517m0.p521c.p522g1.Annotations4;
 import p507d0.p513e0.p514p.p515d.p517m0.p552k.p553a0.p554p.ReceiverValue;
 
-/* compiled from: ReceiverParameterDescriptorImpl.java */
-/* renamed from: d0.e0.p.d.m0.c.i1.f0, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.c.i1.f0, reason: use source file name */
+/* JADX INFO: compiled from: ReceiverParameterDescriptorImpl.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class ReceiverParameterDescriptorImpl extends AbstractReceiverParameterDescriptor {
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public final DeclarationDescriptor f22871m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public final ReceiverValue f22872n;
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -34,7 +34,7 @@ public class ReceiverParameterDescriptorImpl extends AbstractReceiverParameterDe
         this.f22872n = receiverValue;
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static /* synthetic */ void m9406a(int i) {
         String str = (i == 3 || i == 4) ? "@NotNull method %s.%s must not return null" : "Argument for @NotNull parameter '%s' of %s.%s must not be null";
         Object[] objArr = new Object[(i == 3 || i == 4) ? 2 : 3];

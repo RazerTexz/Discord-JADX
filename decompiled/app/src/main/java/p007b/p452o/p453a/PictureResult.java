@@ -6,37 +6,37 @@ import p007b.p452o.p453a.p454m.Facing;
 import p007b.p452o.p453a.p454m.PictureFormat;
 import p007b.p452o.p453a.p473x.Size3;
 
-/* compiled from: PictureResult.java */
-/* renamed from: b.o.a.l, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.o.a.l, reason: use source file name */
+/* JADX INFO: compiled from: PictureResult.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class PictureResult {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final byte[] f13714a;
 
-    /* compiled from: PictureResult.java */
-    /* renamed from: b.o.a.l$a */
+    /* JADX INFO: renamed from: b.o.a.l$a */
+    /* JADX INFO: compiled from: PictureResult.java */
     public static class a {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public boolean f13715a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public Location f13716b;
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public int f13717c;
 
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         public Size3 f13718d;
 
-        /* renamed from: e */
+        /* JADX INFO: renamed from: e */
         public Facing f13719e;
 
-        /* renamed from: f */
+        /* JADX INFO: renamed from: f */
         public byte[] f13720f;
 
-        /* renamed from: g */
+        /* JADX INFO: renamed from: g */
         public PictureFormat f13721g;
     }
 

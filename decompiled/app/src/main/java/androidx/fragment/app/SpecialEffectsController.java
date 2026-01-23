@@ -15,7 +15,7 @@ import java.util.Iterator;
 import java.util.List;
 import p007b.p100d.p104b.p105a.outline;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public abstract class SpecialEffectsController {
     private final ViewGroup mContainer;
     public final ArrayList<Operation> mPendingOperations = new ArrayList<>();
@@ -23,7 +23,7 @@ public abstract class SpecialEffectsController {
     public boolean mOperationDirectionIsPop = false;
     public boolean mIsContainerPostponed = false;
 
-    /* renamed from: androidx.fragment.app.SpecialEffectsController$1 */
+    /* JADX INFO: renamed from: androidx.fragment.app.SpecialEffectsController$1 */
     public class RunnableC04151 implements Runnable {
         public final /* synthetic */ FragmentStateManagerOperation val$operation;
 
@@ -39,7 +39,7 @@ public abstract class SpecialEffectsController {
         }
     }
 
-    /* renamed from: androidx.fragment.app.SpecialEffectsController$2 */
+    /* JADX INFO: renamed from: androidx.fragment.app.SpecialEffectsController$2 */
     public class RunnableC04162 implements Runnable {
         public final /* synthetic */ FragmentStateManagerOperation val$operation;
 
@@ -54,13 +54,13 @@ public abstract class SpecialEffectsController {
         }
     }
 
-    /* renamed from: androidx.fragment.app.SpecialEffectsController$3 */
+    /* JADX INFO: renamed from: androidx.fragment.app.SpecialEffectsController$3 */
     public static /* synthetic */ class C04173 {
 
-        /* renamed from: $SwitchMap$androidx$fragment$app$SpecialEffectsController$Operation$LifecycleImpact */
+        /* JADX INFO: renamed from: $SwitchMap$androidx$fragment$app$SpecialEffectsController$Operation$LifecycleImpact */
         public static final /* synthetic */ int[] f143xb9e640f0;
 
-        /* renamed from: $SwitchMap$androidx$fragment$app$SpecialEffectsController$Operation$State */
+        /* JADX INFO: renamed from: $SwitchMap$androidx$fragment$app$SpecialEffectsController$Operation$State */
         public static final /* synthetic */ int[] f144xe493b431;
 
         static {
@@ -370,7 +370,7 @@ public abstract class SpecialEffectsController {
         private boolean mIsCanceled = false;
         private boolean mIsComplete = false;
 
-        /* renamed from: androidx.fragment.app.SpecialEffectsController$Operation$1 */
+        /* JADX INFO: renamed from: androidx.fragment.app.SpecialEffectsController$Operation$1 */
         public class C04181 implements CancellationSignal.OnCancelListener {
             public C04181() {
             }

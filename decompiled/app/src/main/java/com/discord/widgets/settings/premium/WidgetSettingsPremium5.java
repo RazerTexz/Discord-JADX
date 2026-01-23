@@ -5,9 +5,9 @@ import kotlin.Unit;
 import kotlin.jvm.functions.Function0;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetSettingsPremium.kt */
-/* renamed from: com.discord.widgets.settings.premium.WidgetSettingsPremium$getPremiumSubscriptionViewCallbacks$manageBundledGuildBoostCallback$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.settings.premium.WidgetSettingsPremium$getPremiumSubscriptionViewCallbacks$manageBundledGuildBoostCallback$1, reason: use source file name */
+/* JADX INFO: compiled from: WidgetSettingsPremium.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetSettingsPremium5 extends Lambda implements Function0<Unit> {
     public final /* synthetic */ WidgetSettingsPremium this$0;
 
@@ -23,7 +23,7 @@ public final class WidgetSettingsPremium5 extends Lambda implements Function0<Un
         return Unit.f27425a;
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final void invoke2() {
         WidgetSettingsGuildBoost.INSTANCE.launch(this.this$0.requireContext());
     }

@@ -29,22 +29,22 @@ import p007b.p085c.p086a.p091w.p093c.BaseKeyframeAnimation;
 import p007b.p085c.p086a.p091w.p093c.ValueCallbackKeyframeAnimation;
 import p007b.p085c.p086a.p094x.ImageAssetManager;
 
-/* compiled from: ImageLayer.java */
-/* renamed from: b.c.a.y.m.d, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.c.a.y.m.d, reason: use source file name */
+/* JADX INFO: compiled from: ImageLayer.java */
+/* JADX INFO: loaded from: classes.dex */
 public class ImageLayer extends BaseLayer2 {
 
-    /* renamed from: A */
+    /* JADX INFO: renamed from: A */
     @Nullable
     public BaseKeyframeAnimation<ColorFilter, ColorFilter> f2864A;
 
-    /* renamed from: x */
+    /* JADX INFO: renamed from: x */
     public final Paint f2865x;
 
-    /* renamed from: y */
+    /* JADX INFO: renamed from: y */
     public final Rect f2866y;
 
-    /* renamed from: z */
+    /* JADX INFO: renamed from: z */
     public final Rect f2867z;
 
     public ImageLayer(LottieDrawable lottieDrawable, Layer2 layer2) {
@@ -55,7 +55,7 @@ public class ImageLayer extends BaseLayer2 {
     }
 
     @Override // p007b.p085c.p086a.p095y.p098m.BaseLayer2, p007b.p085c.p086a.p091w.p092b.DrawingContent
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public void mo712d(RectF rectF, Matrix matrix, boolean z2) {
         super.mo712d(rectF, matrix, z2);
         if (m787q() != null) {
@@ -65,7 +65,7 @@ public class ImageLayer extends BaseLayer2 {
     }
 
     @Override // p007b.p085c.p086a.p095y.p098m.BaseLayer2, p007b.p085c.p086a.p095y.KeyPathElement
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public <T> void mo714g(T t, @Nullable LottieValueCallback<T> lottieValueCallback) {
         this.f2857v.m745c(t, lottieValueCallback);
         if (t == LottieProperty.f2421C) {
@@ -78,7 +78,7 @@ public class ImageLayer extends BaseLayer2 {
     }
 
     @Override // p007b.p085c.p086a.p095y.p098m.BaseLayer2
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public void mo780j(@NonNull Canvas canvas, Matrix matrix, int i) {
         Bitmap bitmapM787q = m787q();
         if (bitmapM787q == null || bitmapM787q.isRecycled()) {
@@ -99,7 +99,7 @@ public class ImageLayer extends BaseLayer2 {
     }
 
     @Nullable
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     public final Bitmap m787q() {
         ImageAssetManager imageAssetManager;
         LottieImageAsset lottieImageAsset;

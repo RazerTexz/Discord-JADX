@@ -3,7 +3,7 @@ package com.esotericsoftware.kryo.pool;
 import com.esotericsoftware.kryo.Kryo;
 import java.util.Queue;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class KryoPoolQueueImpl implements KryoPool {
     private final KryoFactory factory;
     private final Queue<Kryo> queue;

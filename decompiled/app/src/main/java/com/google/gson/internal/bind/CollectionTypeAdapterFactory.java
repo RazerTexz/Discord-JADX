@@ -17,18 +17,18 @@ import p007b.p225i.p408d.p410q.C$Gson$Types;
 import p007b.p225i.p408d.p410q.C4922g;
 import p007b.p225i.p408d.p410q.ObjectConstructor;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public final class CollectionTypeAdapterFactory implements TypeAdapterFactory2 {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final C4922g f21513j;
 
     public static final class Adapter<E> extends TypeAdapter<Collection<E>> {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final TypeAdapter<E> f21514a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final ObjectConstructor<? extends Collection<E>> f21515b;
 
         public Adapter(Gson gson, Type type, TypeAdapter<E> typeAdapter, ObjectConstructor<? extends Collection<E>> objectConstructor) {

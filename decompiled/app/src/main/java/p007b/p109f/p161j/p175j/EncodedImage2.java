@@ -23,45 +23,45 @@ import p007b.p109f.p186k.BitmapUtil;
 import p007b.p109f.p186k.ImageMetaData;
 import p007b.p109f.p186k.TiffUtil;
 
-/* compiled from: EncodedImage.java */
-/* renamed from: b.f.j.j.e, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.f.j.j.e, reason: use source file name */
+/* JADX INFO: compiled from: EncodedImage.java */
+/* JADX INFO: loaded from: classes.dex */
 public class EncodedImage2 implements Closeable {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final CloseableReference<PooledByteBuffer> f3891j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final Supplier<FileInputStream> f3892k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public ImageFormat f3893l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public int f3894m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public int f3895n;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public int f3896o;
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public int f3897p;
 
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     public int f3898q;
 
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     public int f3899r;
 
-    /* renamed from: s */
+    /* JADX INFO: renamed from: s */
     public BytesRange f3900s;
 
-    /* renamed from: t */
+    /* JADX INFO: renamed from: t */
     public ColorSpace f3901t;
 
-    /* renamed from: u */
+    /* JADX INFO: renamed from: u */
     public boolean f3902u;
 
     public EncodedImage2(CloseableReference<PooledByteBuffer> closeableReference) {
@@ -77,7 +77,7 @@ public class EncodedImage2 implements Closeable {
         this.f3892k = null;
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static EncodedImage2 m1336a(EncodedImage2 encodedImage2) {
         EncodedImage2 encodedImage22 = null;
         if (encodedImage2 != null) {
@@ -103,17 +103,17 @@ public class EncodedImage2 implements Closeable {
         return encodedImage22;
     }
 
-    /* renamed from: s */
+    /* JADX INFO: renamed from: s */
     public static boolean m1337s(EncodedImage2 encodedImage2) {
         return encodedImage2.f3894m >= 0 && encodedImage2.f3896o >= 0 && encodedImage2.f3897p >= 0;
     }
 
-    /* renamed from: u */
+    /* JADX INFO: renamed from: u */
     public static boolean m1338u(EncodedImage2 encodedImage2) {
         return encodedImage2 != null && encodedImage2.m1346t();
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public void m1339b(EncodedImage2 encodedImage2) {
         encodedImage2.m1347x();
         this.f3893l = encodedImage2.f3893l;
@@ -133,7 +133,7 @@ public class EncodedImage2 implements Closeable {
         this.f3902u = encodedImage2.f3902u;
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public CloseableReference<PooledByteBuffer> m1340c() {
         return CloseableReference.m8636n(this.f3891j);
     }
@@ -147,7 +147,7 @@ public class EncodedImage2 implements Closeable {
         }
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public String m1341d(int i) {
         CloseableReference<PooledByteBuffer> closeableReferenceM1340c = m1340c();
         if (closeableReferenceM1340c == null) {
@@ -169,7 +169,7 @@ public class EncodedImage2 implements Closeable {
         }
     }
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public InputStream m1342e() {
         Supplier<FileInputStream> supplier = this.f3892k;
         if (supplier != null) {
@@ -186,14 +186,14 @@ public class EncodedImage2 implements Closeable {
         }
     }
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public InputStream m1343f() {
         InputStream inputStreamM1342e = m1342e();
         Objects.requireNonNull(inputStreamM1342e);
         return inputStreamM1342e;
     }
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public int m1344n() {
         CloseableReference<PooledByteBuffer> closeableReference = this.f3891j;
         if (closeableReference == null) {
@@ -220,7 +220,7 @@ public class EncodedImage2 implements Closeable {
     /* JADX WARN: Removed duplicated region for block: B:90:0x015e  */
     /* JADX WARN: Removed duplicated region for block: B:92:0x0161  */
     /* JADX WARN: Removed duplicated region for block: B:93:0x0163  */
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
@@ -262,6 +262,8 @@ public class EncodedImage2 implements Closeable {
             } catch (IOException e2) {
                 e2.printStackTrace();
                 if (inputStreamM1342e2 != null) {
+                }
+                if (pairM433F0 != null) {
                 }
             }
             if (AnimatableValueParser.m441I(bArr, "RIFF")) {
@@ -445,7 +447,7 @@ public class EncodedImage2 implements Closeable {
     }
 
     /* JADX WARN: Removed duplicated region for block: B:9:0x0010  */
-    /* renamed from: t */
+    /* JADX INFO: renamed from: t */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
@@ -457,7 +459,7 @@ public class EncodedImage2 implements Closeable {
         return z2;
     }
 
-    /* renamed from: x */
+    /* JADX INFO: renamed from: x */
     public final void m1347x() {
         if (this.f3896o < 0 || this.f3897p < 0) {
             m1345q();

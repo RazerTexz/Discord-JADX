@@ -3,8 +3,8 @@ package com.discord.utilities.email;
 import kotlin.text.Regex;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: EmailUtils.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: EmailUtils.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class EmailUtils {
     public static final EmailUtils INSTANCE = new EmailUtils();
     private static final Regex EMAIL_REGEX = new Regex("/^([\\w-+]+(?:\\.[\\w-+]+)*)@((?:[\\w-]+\\.)*\\w[\\w-]{0,66})\\.([a-z]{2,63}(?:\\.[a-z]{2})?)$/i");

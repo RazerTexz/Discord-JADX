@@ -8,12 +8,12 @@ import java.util.Collection;
 import java.util.Objects;
 import org.checkerframework.checker.nullness.compatqual.NullableDecl;
 
-/* compiled from: com.android.billingclient:billing@@4.0.0 */
-/* renamed from: b.i.a.f.h.n.h */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.h.n.h */
+/* JADX INFO: compiled from: com.android.billingclient:billing@@4.0.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public abstract class AbstractC3948h<E> extends AbstractCollection<E> implements Serializable {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static final Object[] f10483j = new Object[0];
 
     @Override // java.util.AbstractCollection, java.util.Collection
@@ -28,7 +28,7 @@ public abstract class AbstractC3948h<E> extends AbstractCollection<E> implements
         throw new UnsupportedOperationException();
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public abstract int mo5430c(Object[] objArr, int i);
 
     @Override // java.util.AbstractCollection, java.util.Collection
@@ -37,14 +37,14 @@ public abstract class AbstractC3948h<E> extends AbstractCollection<E> implements
         throw new UnsupportedOperationException();
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public abstract int mo5431d();
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public abstract int mo5432e();
 
     @NullableDecl
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public abstract Object[] mo5433g();
 
     @Override // java.util.AbstractCollection, java.util.Collection

@@ -2,7 +2,6 @@ package p007b.p008a.p062y;
 
 import android.app.Dialog;
 import android.content.DialogInterface;
-import android.content.res.Resources;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -38,32 +37,32 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 import p507d0.p592z.p594d.Reflection2;
 
-/* compiled from: SelectorBottomSheet.kt */
-/* renamed from: b.a.y.b0, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: b.a.y.b0, reason: use source file name */
+/* JADX INFO: compiled from: SelectorBottomSheet.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class SelectorBottomSheet extends AppBottomSheet implements SelectorBottomSheet5 {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static final /* synthetic */ KProperty[] f2008j = {outline.m846d0(SelectorBottomSheet.class, "binding", "getBinding()Lcom/discord/databinding/BottomSheetSimpleSelectorBinding;", 0)};
 
-    /* renamed from: k, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: k, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
 
-    /* renamed from: l, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: l, reason: from kotlin metadata */
     public Function1<? super Integer, Unit> onSelectedListener;
 
-    /* renamed from: m, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: m, reason: from kotlin metadata */
     public final FragmentViewBindingDelegate binding;
 
-    /* compiled from: SelectorBottomSheet.kt */
-    /* renamed from: b.a.y.b0$a, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: b.a.y.b0$a, reason: from kotlin metadata */
+    /* JADX INFO: compiled from: SelectorBottomSheet.kt */
     public static final class Companion {
 
-        /* compiled from: SelectorBottomSheet.kt */
-        /* renamed from: b.a.y.b0$a$a, reason: collision with other inner class name */
+        /* JADX INFO: renamed from: b.a.y.b0$a$a, reason: collision with other inner class name */
+        /* JADX INFO: compiled from: SelectorBottomSheet.kt */
         public static final class C13218a extends Lambda implements Function1<Integer, Unit> {
 
-            /* renamed from: j */
+            /* JADX INFO: renamed from: j */
             public static final C13218a f2012j = new C13218a();
 
             public C13218a() {
@@ -80,7 +79,8 @@ public final class SelectorBottomSheet extends AppBottomSheet implements Selecto
         public Companion(DefaultConstructorMarker defaultConstructorMarker) {
         }
 
-        /* renamed from: b */
+        /* JADX WARN: Multi-variable type inference failed */
+        /* JADX INFO: renamed from: b */
         public static /* synthetic */ SelectorBottomSheet m378b(Companion companion, FragmentManager fragmentManager, String str, List list, boolean z2, Function1 function1, int i) {
             boolean z3 = (i & 8) != 0 ? true : z2;
             if ((i & 16) != 0) {
@@ -89,7 +89,7 @@ public final class SelectorBottomSheet extends AppBottomSheet implements Selecto
             return companion.m379a(fragmentManager, str, list, z3, function1);
         }
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final SelectorBottomSheet m379a(FragmentManager fragmentManager, String str, List<SelectorBottomSheet2> list, boolean z2, Function1<? super Integer, Unit> function1) {
             Intrinsics3.checkNotNullParameter(fragmentManager, "fragmentManager");
             Intrinsics3.checkNotNullParameter(str, "title");
@@ -103,11 +103,11 @@ public final class SelectorBottomSheet extends AppBottomSheet implements Selecto
         }
     }
 
-    /* compiled from: SelectorBottomSheet.kt */
-    /* renamed from: b.a.y.b0$b */
+    /* JADX INFO: renamed from: b.a.y.b0$b */
+    /* JADX INFO: compiled from: SelectorBottomSheet.kt */
     public static final /* synthetic */ class b extends FunctionReferenceImpl implements Function1<View, BottomSheetSimpleSelectorBinding> {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public static final b f2013j = new b();
 
         public b() {
@@ -135,8 +135,8 @@ public final class SelectorBottomSheet extends AppBottomSheet implements Selecto
         }
     }
 
-    /* compiled from: SelectorBottomSheet.kt */
-    /* renamed from: b.a.y.b0$c */
+    /* JADX INFO: renamed from: b.a.y.b0$c */
+    /* JADX INFO: compiled from: SelectorBottomSheet.kt */
     public static final class c extends Lambda implements Function2<LayoutInflater, ViewGroup, SelectorBottomSheet4> {
         public c() {
             super(2);
@@ -177,7 +177,7 @@ public final class SelectorBottomSheet extends AppBottomSheet implements Selecto
     }
 
     @Override // p007b.p008a.p062y.SelectorBottomSheet5
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public void mo376c(int position) {
         Function1<? super Integer, Unit> function1 = this.onSelectedListener;
         if (function1 != null) {
@@ -185,7 +185,7 @@ public final class SelectorBottomSheet extends AppBottomSheet implements Selecto
         }
     }
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public final BottomSheetSimpleSelectorBinding m377g() {
         return (BottomSheetSimpleSelectorBinding) this.binding.getValue((Fragment) this, f2008j[0]);
     }
@@ -209,7 +209,7 @@ public final class SelectorBottomSheet extends AppBottomSheet implements Selecto
     }
 
     @Override // com.discord.app.AppBottomSheet, androidx.fragment.app.Fragment
-    public void onViewCreated(View view, Bundle savedInstanceState) throws Resources.NotFoundException {
+    public void onViewCreated(View view, Bundle savedInstanceState) {
         Intrinsics3.checkNotNullParameter(view, "view");
         super.onViewCreated(view, savedInstanceState);
         setBottomSheetCollapsedStateDisabled();

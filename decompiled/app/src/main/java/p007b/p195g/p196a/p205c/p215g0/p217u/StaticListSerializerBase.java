@@ -15,9 +15,9 @@ import p007b.p195g.p196a.p205c.p212e0.TypeSerializer;
 import p007b.p195g.p196a.p205c.p215g0.ContextualSerializer;
 import p007b.p195g.p196a.p205c.p219i0.ClassUtil;
 
-/* compiled from: StaticListSerializerBase.java */
-/* renamed from: b.g.a.c.g0.u.h0, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.g.a.c.g0.u.h0, reason: use source file name */
+/* JADX INFO: compiled from: StaticListSerializerBase.java */
+/* JADX INFO: loaded from: classes3.dex */
 public abstract class StaticListSerializerBase<T extends Collection<?>> extends StdSerializer<T> implements ContextualSerializer {
     public final Boolean _unwrapSingle;
 
@@ -28,7 +28,7 @@ public abstract class StaticListSerializerBase<T extends Collection<?>> extends 
 
     /* JADX WARN: Removed duplicated region for block: B:9:0x001a  */
     @Override // p007b.p195g.p196a.p205c.p215g0.ContextualSerializer
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
@@ -50,22 +50,22 @@ public abstract class StaticListSerializerBase<T extends Collection<?>> extends 
     }
 
     @Override // p007b.p195g.p196a.p205c.JsonSerializer
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public boolean mo2021d(SerializerProvider serializerProvider, Object obj) {
         Collection collection = (Collection) obj;
         return collection == null || collection.size() == 0;
     }
 
     @Override // p007b.p195g.p196a.p205c.JsonSerializer
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public /* bridge */ /* synthetic */ void mo1808g(Object obj, JsonGenerator jsonGenerator, SerializerProvider serializerProvider, TypeSerializer typeSerializer) throws IOException {
         mo2026q((Collection) obj, jsonGenerator, serializerProvider, typeSerializer);
     }
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public abstract JsonSerializer<?> mo2025p(BeanProperty beanProperty, Boolean bool);
 
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     public abstract void mo2026q(T t, JsonGenerator jsonGenerator, SerializerProvider serializerProvider, TypeSerializer typeSerializer) throws IOException;
 
     public StaticListSerializerBase(StaticListSerializerBase<?> staticListSerializerBase, Boolean bool) {

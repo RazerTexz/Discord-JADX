@@ -15,18 +15,18 @@ import kotlin.jvm.functions.Function2;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetRadioSelectorBottomSheet.kt */
-/* renamed from: com.discord.widgets.hubs.WidgetRadioSelectorBottomSheet$adapter$2, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.hubs.WidgetRadioSelectorBottomSheet$adapter$2, reason: use source file name */
+/* JADX INFO: compiled from: WidgetRadioSelectorBottomSheet.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetRadioSelectorBottomSheet5 extends Lambda implements Function0<SimpleRecyclerAdapter<WidgetRadioSelectorBottomSheet2, WidgetRadioSelectorBottomSheet4>> {
     public final /* synthetic */ WidgetRadioSelectorBottomSheet this$0;
 
-    /* compiled from: WidgetRadioSelectorBottomSheet.kt */
-    /* renamed from: com.discord.widgets.hubs.WidgetRadioSelectorBottomSheet$adapter$2$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.hubs.WidgetRadioSelectorBottomSheet$adapter$2$1 */
+    /* JADX INFO: compiled from: WidgetRadioSelectorBottomSheet.kt */
     public static final class C90481 extends Lambda implements Function2<LayoutInflater, ViewGroup, WidgetRadioSelectorBottomSheet4> {
 
-        /* compiled from: WidgetRadioSelectorBottomSheet.kt */
-        /* renamed from: com.discord.widgets.hubs.WidgetRadioSelectorBottomSheet$adapter$2$1$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.widgets.hubs.WidgetRadioSelectorBottomSheet$adapter$2$1$1, reason: invalid class name */
+        /* JADX INFO: compiled from: WidgetRadioSelectorBottomSheet.kt */
         public static final class AnonymousClass1 extends Lambda implements Function1<Integer, Unit> {
             public AnonymousClass1() {
                 super(1);
@@ -56,7 +56,7 @@ public final class WidgetRadioSelectorBottomSheet5 extends Lambda implements Fun
             return invoke2(layoutInflater, viewGroup);
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final WidgetRadioSelectorBottomSheet4 invoke2(LayoutInflater layoutInflater, ViewGroup viewGroup) {
             Intrinsics3.checkNotNullParameter(layoutInflater, "inflater");
             Intrinsics3.checkNotNullParameter(viewGroup, "parent");

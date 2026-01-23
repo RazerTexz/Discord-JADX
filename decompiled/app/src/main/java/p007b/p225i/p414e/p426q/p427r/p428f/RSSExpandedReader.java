@@ -28,42 +28,42 @@ import p007b.p225i.p414e.p426q.p427r.p428f.p429d.AbstractExpandedDecoder;
 import p007b.p225i.p414e.p426q.p427r.p428f.p429d.AnyAIDecoder;
 import p007b.p225i.p414e.p426q.p427r.p428f.p429d.GeneralAppIdDecoder;
 
-/* compiled from: RSSExpandedReader.java */
-/* renamed from: b.i.e.q.r.f.c, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.e.q.r.f.c, reason: use source file name */
+/* JADX INFO: compiled from: RSSExpandedReader.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class RSSExpandedReader extends AbstractRSSReader {
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public static final int[] f13427g = {7, 5, 4, 3, 1};
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public static final int[] f13428h = {4, 20, 52, 104, 204};
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public static final int[] f13429i = {0, 348, 1388, 2948, 3988};
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static final int[][] f13430j = {new int[]{1, 8, 4, 1}, new int[]{3, 6, 4, 1}, new int[]{3, 4, 6, 1}, new int[]{3, 2, 8, 1}, new int[]{2, 6, 5, 1}, new int[]{2, 2, 9, 1}};
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public static final int[][] f13431k = {new int[]{1, 3, 9, 27, 81, 32, 96, 77}, new int[]{20, 60, 180, 118, Opcodes.D2L, 7, 21, 63}, new int[]{Opcodes.ANEWARRAY, Opcodes.I2B, 13, 39, 117, Opcodes.F2L, 209, 205}, new int[]{Opcodes.INSTANCEOF, 157, 49, Opcodes.I2S, 19, 57, Opcodes.LOOKUPSWITCH, 91}, new int[]{62, Opcodes.INVOKEDYNAMIC, Opcodes.L2I, Opcodes.MULTIANEWARRAY, Opcodes.RET, 85, 44, Opcodes.IINC}, new int[]{Opcodes.INVOKEINTERFACE, Opcodes.I2L, Opcodes.NEWARRAY, Opcodes.D2I, 4, 12, 36, 108}, new int[]{113, 128, Opcodes.LRETURN, 97, 80, 29, 87, 50}, new int[]{150, 28, 84, 41, 123, 158, 52, 156}, new int[]{46, Opcodes.L2D, 203, Opcodes.NEW, Opcodes.F2I, 206, 196, Opcodes.IF_ACMPNE}, new int[]{76, 17, 51, 153, 37, 111, 122, 155}, new int[]{43, Opcodes.LOR, Opcodes.ARETURN, 106, 107, 110, 119, Opcodes.I2C}, new int[]{16, 48, Opcodes.D2F, 10, 30, 90, 59, Opcodes.RETURN}, new int[]{109, 116, Opcodes.L2F, 200, Opcodes.GETSTATIC, 112, Opcodes.LUSHR, Opcodes.IF_ICMPLE}, new int[]{70, 210, 208, 202, Opcodes.INVOKESTATIC, 130, Opcodes.PUTSTATIC, 115}, new int[]{Opcodes.I2F, Opcodes.ATHROW, Opcodes.DCMPL, 31, 93, 68, 204, Opcodes.ARRAYLENGTH}, new int[]{Opcodes.LCMP, 22, 66, Opcodes.IFNULL, Opcodes.IRETURN, 94, 71, 2}, new int[]{6, 18, 54, Opcodes.IF_ICMPGE, 64, Opcodes.CHECKCAST, 154, 40}, new int[]{120, Opcodes.FCMPL, 25, 75, 14, 42, 126, Opcodes.GOTO}, new int[]{79, 26, 78, 23, 69, 207, Opcodes.IFNONNULL, 175}, new int[]{103, 98, 83, 38, 114, Opcodes.LXOR, Opcodes.INVOKEVIRTUAL, 124}, new int[]{Opcodes.IF_ICMPLT, 61, Opcodes.INVOKESPECIAL, Opcodes.LAND, Opcodes.TABLESWITCH, 88, 53, Opcodes.IF_ICMPEQ}, new int[]{55, Opcodes.IF_ACMPEQ, 73, 8, 24, 72, 5, 15}, new int[]{45, Opcodes.I2D, Opcodes.MONITORENTER, Opcodes.IF_ICMPNE, 58, Opcodes.FRETURN, 100, 89}};
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public static final int[][] f13432l = {new int[]{0, 0}, new int[]{0, 1, 1}, new int[]{0, 2, 1, 3}, new int[]{0, 4, 1, 3, 2}, new int[]{0, 4, 1, 3, 3, 5}, new int[]{0, 4, 1, 3, 4, 5, 5}, new int[]{0, 0, 1, 1, 2, 2, 3, 3}, new int[]{0, 0, 1, 1, 2, 2, 3, 4, 4}, new int[]{0, 0, 1, 1, 2, 2, 3, 4, 5, 5}, new int[]{0, 0, 1, 1, 2, 3, 3, 4, 4, 5, 5}};
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public final List<ExpandedPair> f13433m = new ArrayList(11);
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public final List<ExpandedRow> f13434n = new ArrayList();
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public final int[] f13435o = new int[2];
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public boolean f13436p;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public static Result m7020n(List<ExpandedPair> list) throws NotFoundException, FormatException {
         AbstractExpandedDecoder aI013103decoder;
         int size = (list.size() << 1) - 1;
@@ -153,7 +153,7 @@ public final class RSSExpandedReader extends AbstractRSSReader {
         return new Result(strMo7030a, null, new ResultPoint[]{resultPointArr[0], resultPointArr[1], resultPointArr2[0], resultPointArr2[1]}, BarcodeFormat.RSS_EXPANDED);
     }
 
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     public static void m7021r(int[] iArr) {
         int length = iArr.length;
         for (int i = 0; i < length / 2; i++) {
@@ -165,7 +165,7 @@ public final class RSSExpandedReader extends AbstractRSSReader {
     }
 
     @Override // p007b.p225i.p414e.p426q.OneDReader
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public Result mo6983b(int i, BitArray bitArray, Map<DecodeHintType, ?> map) throws NotFoundException, FormatException {
         this.f13433m.clear();
         this.f13436p = false;
@@ -178,7 +178,7 @@ public final class RSSExpandedReader extends AbstractRSSReader {
         }
     }
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final boolean m7022k() {
         ExpandedPair expandedPair = this.f13433m.get(0);
         DataCharacter dataCharacter = expandedPair.f13421a;
@@ -201,7 +201,7 @@ public final class RSSExpandedReader extends AbstractRSSReader {
         return ((i2 + (-4)) * 211) + (i % 211) == dataCharacter.f13405a;
     }
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final List<ExpandedPair> m7023l(List<ExpandedRow> list, int i) throws NotFoundException {
         boolean z2;
         while (i < this.f13434n.size()) {
@@ -259,7 +259,7 @@ public final class RSSExpandedReader extends AbstractRSSReader {
         throw NotFoundException.f21665l;
     }
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public final List<ExpandedPair> m7024m(boolean z2) {
         List<ExpandedPair> listM7023l = null;
         if (this.f13434n.size() > 25) {
@@ -280,7 +280,7 @@ public final class RSSExpandedReader extends AbstractRSSReader {
         return listM7023l;
     }
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public DataCharacter m7025o(BitArray bitArray, FinderPattern finderPattern, boolean z2, boolean z3) throws NotFoundException {
         boolean z4;
         boolean z5;
@@ -437,7 +437,7 @@ public final class RSSExpandedReader extends AbstractRSSReader {
         return new DataCharacter((C3404f.m4328p0(iArr3, i14, true) * f13428h[i13]) + C3404f.m4328p0(iArr4, 9 - i14, false) + f13429i[i13], i12);
     }
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public List<ExpandedPair> m7026p(int i, BitArray bitArray) throws NotFoundException {
         boolean zEquals;
         boolean z2;
@@ -563,7 +563,7 @@ public final class RSSExpandedReader extends AbstractRSSReader {
         throw NotFoundException.f21665l;
     }
 
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     public ExpandedPair m7027q(BitArray bitArray, List<ExpandedPair> list, int i) throws NotFoundException {
         int i2;
         int i3;

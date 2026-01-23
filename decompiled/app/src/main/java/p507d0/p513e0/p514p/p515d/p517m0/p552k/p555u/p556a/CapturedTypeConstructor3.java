@@ -16,15 +16,15 @@ import p507d0.p580t.Collections2;
 import p507d0.p580t.CollectionsJVM;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: CapturedTypeConstructor.kt */
-/* renamed from: d0.e0.p.d.m0.k.u.a.c, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.k.u.a.c, reason: use source file name */
+/* JADX INFO: compiled from: CapturedTypeConstructor.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class CapturedTypeConstructor3 implements CapturedTypeConstructor2 {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final TypeProjection f24432a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public NewCapturedType2 f24433b;
 
     public CapturedTypeConstructor3(TypeProjection typeProjection) {
@@ -46,7 +46,7 @@ public final class CapturedTypeConstructor3 implements CapturedTypeConstructor2 
         return (ClassifierDescriptor) m11470getDeclarationDescriptor();
     }
 
-    /* renamed from: getDeclarationDescriptor, reason: collision with other method in class */
+    /* JADX INFO: renamed from: getDeclarationDescriptor, reason: collision with other method in class */
     public Void m11470getDeclarationDescriptor() {
         return null;
     }

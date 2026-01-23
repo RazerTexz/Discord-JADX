@@ -10,14 +10,14 @@ import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import p007b.p109f.p161j.p170e.NativeCodeSetup;
 
-/* compiled from: BasePostprocessor.java */
-/* renamed from: b.f.j.q.a, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.f.j.q.a, reason: use source file name */
+/* JADX INFO: compiled from: BasePostprocessor.java */
+/* JADX INFO: loaded from: classes3.dex */
 public abstract class BasePostprocessor implements Postprocessor {
     public static final Bitmap.Config FALLBACK_BITMAP_CONFIGURATION = Bitmap.Config.ARGB_8888;
     private static Method sCopyBitmap;
 
-    private static void internalCopyBitmap(Bitmap bitmap, Bitmap bitmap2) throws IllegalArgumentException {
+    private static void internalCopyBitmap(Bitmap bitmap, Bitmap bitmap2) {
         if (!NativeCodeSetup.f3808a || bitmap.getConfig() != bitmap2.getConfig()) {
             new Canvas(bitmap).drawBitmap(bitmap2, 0.0f, 0.0f, (Paint) null);
             return;
@@ -74,7 +74,7 @@ public abstract class BasePostprocessor implements Postprocessor {
     public void process(Bitmap bitmap) {
     }
 
-    public void process(Bitmap bitmap, Bitmap bitmap2) throws IllegalArgumentException {
+    public void process(Bitmap bitmap, Bitmap bitmap2) {
         internalCopyBitmap(bitmap, bitmap2);
         process(bitmap);
     }

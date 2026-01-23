@@ -2,21 +2,21 @@ package p007b.p225i.p414e.p418n;
 
 import java.util.Arrays;
 
-/* compiled from: BitMatrix.java */
-/* renamed from: b.i.e.n.b, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.e.n.b, reason: use source file name */
+/* JADX INFO: compiled from: BitMatrix.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class BitMatrix implements Cloneable {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final int f13229j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final int f13230k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final int f13231l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public final int[] f13232m;
 
     public BitMatrix(int i, int i2) {
@@ -30,7 +30,7 @@ public final class BitMatrix implements Cloneable {
         this.f13232m = new int[i3 * i2];
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public void m6941b(int i, int i2) {
         int i3 = (i / 32) + (i2 * this.f13231l);
         int[] iArr = this.f13232m;
@@ -49,12 +49,12 @@ public final class BitMatrix implements Cloneable {
         return this.f13229j == bitMatrix.f13229j && this.f13230k == bitMatrix.f13230k && this.f13231l == bitMatrix.f13231l && Arrays.equals(this.f13232m, bitMatrix.f13232m);
     }
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public boolean m6942f(int i, int i2) {
         return ((this.f13232m[(i / 32) + (i2 * this.f13231l)] >>> (i & 31)) & 1) != 0;
     }
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public int[] m6943g() {
         int length = this.f13232m.length - 1;
         while (length >= 0 && this.f13232m[length] == 0) {
@@ -73,7 +73,7 @@ public final class BitMatrix implements Cloneable {
         return new int[]{i3 + i4, i2};
     }
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public BitArray m6944h(int i, BitArray bitArray) {
         int i2 = bitArray.f13228k;
         int i3 = this.f13229j;
@@ -97,7 +97,7 @@ public final class BitMatrix implements Cloneable {
         return Arrays.hashCode(this.f13232m) + (((((((i * 31) + i) * 31) + this.f13230k) * 31) + this.f13231l) * 31);
     }
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public int[] m6945i() {
         int[] iArr;
         int i = 0;
@@ -122,14 +122,14 @@ public final class BitMatrix implements Cloneable {
         return new int[]{i4 + i6, i3};
     }
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public void m6946j(int i, int i2) {
         int i3 = (i / 32) + (i2 * this.f13231l);
         int[] iArr = this.f13232m;
         iArr[i3] = (1 << (i & 31)) | iArr[i3];
     }
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public void m6947k(int i, int i2, int i3, int i4) {
         if (i2 < 0 || i < 0) {
             throw new IllegalArgumentException("Left and top must be nonnegative");

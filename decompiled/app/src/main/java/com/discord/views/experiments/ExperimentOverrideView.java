@@ -19,18 +19,18 @@ import p007b.p008a.p025i.ViewSimpleSpinnerDropdownItemBinding;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ExperimentOverrideView.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: ExperimentOverrideView.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class ExperimentOverrideView extends ConstraintLayout {
 
-    /* renamed from: j, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: j, reason: from kotlin metadata */
     public final ViewExperimentOverrideBinding binding;
 
-    /* compiled from: ExperimentOverrideView.kt */
-    /* renamed from: com.discord.views.experiments.ExperimentOverrideView$a */
+    /* JADX INFO: renamed from: com.discord.views.experiments.ExperimentOverrideView$a */
+    /* JADX INFO: compiled from: ExperimentOverrideView.kt */
     public static final class C7112a extends ArrayAdapter<C7113b> {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public final List<C7113b> f19266j;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -41,7 +41,7 @@ public final class ExperimentOverrideView extends ConstraintLayout {
             this.f19266j = list;
         }
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final View m8591a(int i, View view) {
             View view2 = view;
             if (view == null) {
@@ -87,14 +87,14 @@ public final class ExperimentOverrideView extends ConstraintLayout {
         }
     }
 
-    /* compiled from: ExperimentOverrideView.kt */
-    /* renamed from: com.discord.views.experiments.ExperimentOverrideView$b */
+    /* JADX INFO: renamed from: com.discord.views.experiments.ExperimentOverrideView$b */
+    /* JADX INFO: compiled from: ExperimentOverrideView.kt */
     public static final class C7113b {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final Integer f19267a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final String f19268b;
 
         public C7113b(Integer num, String str) {

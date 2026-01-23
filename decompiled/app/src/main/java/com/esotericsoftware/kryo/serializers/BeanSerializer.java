@@ -17,13 +17,13 @@ import p007b.p100d.p104b.p105a.outline;
 import p007b.p106e.p107a.Log;
 import p007b.p106e.p108b.MethodAccess;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class BeanSerializer<T> extends Serializer<T> {
     public static final Object[] noArgs = new Object[0];
     public Object access;
     private CachedProperty[] properties;
 
-    /* renamed from: com.esotericsoftware.kryo.serializers.BeanSerializer$1 */
+    /* JADX INFO: renamed from: com.esotericsoftware.kryo.serializers.BeanSerializer$1 */
     public class C106221 implements Comparator<PropertyDescriptor> {
         public C106221() {
         }
@@ -33,7 +33,7 @@ public class BeanSerializer<T> extends Serializer<T> {
             return compare2(propertyDescriptor, propertyDescriptor2);
         }
 
-        /* renamed from: compare, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: compare, reason: avoid collision after fix types in other method */
         public int compare2(PropertyDescriptor propertyDescriptor, PropertyDescriptor propertyDescriptor2) {
             return propertyDescriptor.getName().compareTo(propertyDescriptor2.getName());
         }
@@ -56,7 +56,7 @@ public class BeanSerializer<T> extends Serializer<T> {
             return obj2 != null ? ((MethodAccess) obj2).m927d(obj, this.getterAccessIndex, new Object[0]) : this.getMethod.invoke(obj, BeanSerializer.noArgs);
         }
 
-        public void set(Object obj, Object obj2) throws IllegalAccessException, IllegalArgumentException, InvocationTargetException {
+        public void set(Object obj, Object obj2) throws IllegalAccessException, InvocationTargetException {
             Object obj3 = BeanSerializer.this.access;
             if (obj3 != null) {
                 ((MethodAccess) obj3).m927d(obj, this.setterAccessIndex, obj2);

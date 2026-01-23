@@ -81,12 +81,12 @@ import p658rx.functions.Func2;
 import p658rx.functions.Func3;
 import p658rx.subjects.BehaviorSubject;
 
-/* compiled from: StoreMessages.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: StoreMessages.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class StoreMessages extends Store {
     private static final long BACKGROUND_SENDING_DELAY_MS = 120000;
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private final Clock clock;
     private Context context;
@@ -98,7 +98,7 @@ public final class StoreMessages extends Store {
     private final ExecutorService queueExecutor;
     private final StoreStream stream;
 
-    /* compiled from: StoreMessages.kt */
+    /* JADX INFO: compiled from: StoreMessages.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -118,8 +118,8 @@ public final class StoreMessages extends Store {
         }
     }
 
-    /* compiled from: StoreMessages.kt */
-    /* renamed from: com.discord.stores.StoreMessages$deleteMessage$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreMessages$deleteMessage$1 */
+    /* JADX INFO: compiled from: StoreMessages.kt */
     public static final class C62241 extends Lambda implements Function1<Void, Unit> {
         public static final C62241 INSTANCE = new C62241();
 
@@ -133,13 +133,13 @@ public final class StoreMessages extends Store {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Void r1) {
         }
     }
 
-    /* compiled from: StoreMessages.kt */
-    /* renamed from: com.discord.stores.StoreMessages$deleteMessage$2 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreMessages$deleteMessage$2 */
+    /* JADX INFO: compiled from: StoreMessages.kt */
     public static final class C62252 extends Lambda implements Function0<Unit> {
         public final /* synthetic */ long $channelId;
         public final /* synthetic */ Message $message;
@@ -159,7 +159,7 @@ public final class StoreMessages extends Store {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             if (this.$message.isLocal()) {
                 String nonce = this.$message.getNonce();
@@ -178,8 +178,8 @@ public final class StoreMessages extends Store {
         }
     }
 
-    /* compiled from: StoreMessages.kt */
-    /* renamed from: com.discord.stores.StoreMessages$editMessage$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreMessages$editMessage$1 */
+    /* JADX INFO: compiled from: StoreMessages.kt */
     public static final class C62261 extends Lambda implements Function2<MessageQueue4, Boolean, Unit> {
         public final /* synthetic */ MessageAllowedMentions $allowedMentions;
         public final /* synthetic */ long $attemptTimestamp;
@@ -187,8 +187,8 @@ public final class StoreMessages extends Store {
         public final /* synthetic */ String $content;
         public final /* synthetic */ long $messageId;
 
-        /* compiled from: StoreMessages.kt */
-        /* renamed from: com.discord.stores.StoreMessages$editMessage$1$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.stores.StoreMessages$editMessage$1$1, reason: invalid class name */
+        /* JADX INFO: compiled from: StoreMessages.kt */
         public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
             public final /* synthetic */ MessageQueue4 $result;
 
@@ -204,7 +204,7 @@ public final class StoreMessages extends Store {
                 return Unit.f27425a;
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2() {
                 Message messageCreateLocalMessage$default;
                 User author;
@@ -260,8 +260,8 @@ public final class StoreMessages extends Store {
         }
     }
 
-    /* compiled from: StoreMessages.kt */
-    /* renamed from: com.discord.stores.StoreMessages$enqueueRequest$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreMessages$enqueueRequest$1 */
+    /* JADX INFO: compiled from: StoreMessages.kt */
     public static final class C62271<T> implements Action1<Emitter<MessageQueue4>> {
         public final /* synthetic */ long $channelId;
         public final /* synthetic */ Function1 $createRequest;
@@ -276,7 +276,7 @@ public final class StoreMessages extends Store {
             call2(emitter);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final void call2(Emitter<MessageQueue4> emitter) {
             MessageQueue messageQueueAccess$getOrCreateMessageQueue = StoreMessages.access$getOrCreateMessageQueue(StoreMessages.this, this.$channelId);
             Function1 function1 = this.$createRequest;
@@ -285,8 +285,8 @@ public final class StoreMessages extends Store {
         }
     }
 
-    /* compiled from: StoreMessages.kt */
-    /* renamed from: com.discord.stores.StoreMessages$markMessageFailed$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreMessages$markMessageFailed$1 */
+    /* JADX INFO: compiled from: StoreMessages.kt */
     public static final class C62281 extends Lambda implements Function0<Unit> {
         public final /* synthetic */ Message $localMessage;
 
@@ -302,14 +302,14 @@ public final class StoreMessages extends Store {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             StoreMessages.access$handleSendMessageFailure(StoreMessages.this, this.$localMessage);
         }
     }
 
-    /* compiled from: StoreMessages.kt */
-    /* renamed from: com.discord.stores.StoreMessages$observeIsDetached$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreMessages$observeIsDetached$1 */
+    /* JADX INFO: compiled from: StoreMessages.kt */
     public static final class C62291<T, R> implements Func1<Set<? extends Long>, Boolean> {
         public final /* synthetic */ long $channelId;
 
@@ -322,14 +322,14 @@ public final class StoreMessages extends Store {
             return call2((Set<Long>) set);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final Boolean call2(Set<Long> set) {
             return Boolean.valueOf(set.contains(Long.valueOf(this.$channelId)));
         }
     }
 
-    /* compiled from: StoreMessages.kt */
-    /* renamed from: com.discord.stores.StoreMessages$observeLocalMessagesForChannel$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreMessages$observeLocalMessagesForChannel$1 */
+    /* JADX INFO: compiled from: StoreMessages.kt */
     public static final class C62301<T, R> implements Func1<Map<Long, ? extends List<? extends Message>>, List<? extends Message>> {
         public final /* synthetic */ long $channelId;
 
@@ -342,15 +342,15 @@ public final class StoreMessages extends Store {
             return call2((Map<Long, ? extends List<Message>>) map);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final List<Message> call2(Map<Long, ? extends List<Message>> map) {
             List<Message> list = map.get(Long.valueOf(this.$channelId));
             return list != null ? list : Collections2.emptyList();
         }
     }
 
-    /* compiled from: StoreMessages.kt */
-    /* renamed from: com.discord.stores.StoreMessages$observeLocalMessagesForChannel$2 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreMessages$observeLocalMessagesForChannel$2 */
+    /* JADX INFO: compiled from: StoreMessages.kt */
     public static final class C62312<T1, T2, R> implements Func2<List<? extends Message>, List<? extends Message>, Boolean> {
         public static final C62312 INSTANCE = new C62312();
 
@@ -359,14 +359,14 @@ public final class StoreMessages extends Store {
             return call2((List<Message>) list, (List<Message>) list2);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final Boolean call2(List<Message> list, List<Message> list2) {
             return Boolean.valueOf(list == list2);
         }
     }
 
-    /* compiled from: StoreMessages.kt */
-    /* renamed from: com.discord.stores.StoreMessages$observeMessagesForChannel$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreMessages$observeMessagesForChannel$1 */
+    /* JADX INFO: compiled from: StoreMessages.kt */
     public static final class C62321<T1, T2, T3, R> implements Func3<List<? extends Message>, List<? extends Message>, Boolean, List<? extends Message>> {
         public static final C62321 INSTANCE = new C62321();
 
@@ -375,7 +375,7 @@ public final class StoreMessages extends Store {
             return call2((List<Message>) list, (List<Message>) list2, bool);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final List<Message> call2(List<Message> list, List<Message> list2, Boolean bool) {
             Intrinsics3.checkNotNullExpressionValue(bool, "isDetached");
             if (bool.booleanValue()) {
@@ -387,8 +387,8 @@ public final class StoreMessages extends Store {
         }
     }
 
-    /* compiled from: StoreMessages.kt */
-    /* renamed from: com.discord.stores.StoreMessages$observeMessagesForChannel$2 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreMessages$observeMessagesForChannel$2 */
+    /* JADX INFO: compiled from: StoreMessages.kt */
     public static final class C62332<T, R> implements Func1<List<? extends Message>, Message> {
         public final /* synthetic */ long $messageId;
 
@@ -401,7 +401,7 @@ public final class StoreMessages extends Store {
             return call2((List<Message>) list);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final Message call2(List<Message> list) {
             T next;
             Intrinsics3.checkNotNullExpressionValue(list, "messages");
@@ -420,8 +420,8 @@ public final class StoreMessages extends Store {
         }
     }
 
-    /* compiled from: StoreMessages.kt */
-    /* renamed from: com.discord.stores.StoreMessages$observeSyncedMessagesForChannel$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreMessages$observeSyncedMessagesForChannel$1 */
+    /* JADX INFO: compiled from: StoreMessages.kt */
     public static final class C62341<T, R> implements Func1<Map<Long, List<Message>>, List<? extends Message>> {
         public final /* synthetic */ long $channelId;
 
@@ -434,15 +434,15 @@ public final class StoreMessages extends Store {
             return call2(map);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final List<Message> call2(Map<Long, List<Message>> map) {
             List<Message> list = map.get(Long.valueOf(this.$channelId));
             return list != null ? list : Collections2.emptyList();
         }
     }
 
-    /* compiled from: StoreMessages.kt */
-    /* renamed from: com.discord.stores.StoreMessages$observeSyncedMessagesForChannel$2 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreMessages$observeSyncedMessagesForChannel$2 */
+    /* JADX INFO: compiled from: StoreMessages.kt */
     public static final class C62352<T1, T2, R> implements Func2<List<? extends Message>, List<? extends Message>, Boolean> {
         public static final C62352 INSTANCE = new C62352();
 
@@ -451,14 +451,14 @@ public final class StoreMessages extends Store {
             return call2((List<Message>) list, (List<Message>) list2);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final Boolean call2(List<Message> list, List<Message> list2) {
             return Boolean.valueOf(list == list2);
         }
     }
 
-    /* compiled from: StoreMessages.kt */
-    /* renamed from: com.discord.stores.StoreMessages$resendAllLocalMessages$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreMessages$resendAllLocalMessages$1 */
+    /* JADX INFO: compiled from: StoreMessages.kt */
     public static final class C62361 extends Lambda implements Function0<Unit> {
         public C62361() {
             super(0);
@@ -470,14 +470,14 @@ public final class StoreMessages extends Store {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             StoreMessages.access$getInitResendFinished$p(StoreMessages.this).onNext(Boolean.TRUE);
         }
     }
 
-    /* compiled from: StoreMessages.kt */
-    /* renamed from: com.discord.stores.StoreMessages$resendAllLocalMessages$2 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreMessages$resendAllLocalMessages$2 */
+    /* JADX INFO: compiled from: StoreMessages.kt */
     public static final class C62372 extends Lambda implements Function1<MessageQueue4, Unit> {
         public static final C62372 INSTANCE = new C62372();
 
@@ -491,13 +491,13 @@ public final class StoreMessages extends Store {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(MessageQueue4 messageQueue4) {
         }
     }
 
-    /* compiled from: StoreMessages.kt */
-    /* renamed from: com.discord.stores.StoreMessages$resendMessage$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreMessages$resendMessage$1 */
+    /* JADX INFO: compiled from: StoreMessages.kt */
     public static final class C62381 extends Lambda implements Function0<Unit> {
         public final /* synthetic */ Message $message;
 
@@ -513,14 +513,14 @@ public final class StoreMessages extends Store {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             StoreMessages.access$handleLocalMessageDelete(StoreMessages.this, this.$message);
         }
     }
 
-    /* compiled from: StoreMessages.kt */
-    /* renamed from: com.discord.stores.StoreMessages$resendMessageWithCaptcha$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreMessages$resendMessageWithCaptcha$1 */
+    /* JADX INFO: compiled from: StoreMessages.kt */
     public static final class C62391 extends Lambda implements Function1<MessageQueue4, Unit> {
         public static final C62391 INSTANCE = new C62391();
 
@@ -534,14 +534,14 @@ public final class StoreMessages extends Store {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(MessageQueue4 messageQueue4) {
             Intrinsics3.checkNotNullParameter(messageQueue4, "it");
         }
     }
 
-    /* compiled from: StoreMessages.kt */
-    /* renamed from: com.discord.stores.StoreMessages$sendMessage$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreMessages$sendMessage$1 */
+    /* JADX INFO: compiled from: StoreMessages.kt */
     public static final class C62401 extends Lambda implements Function0<Unit> {
         public final /* synthetic */ Message $invalidAttachmentsMessage;
 
@@ -557,14 +557,14 @@ public final class StoreMessages extends Store {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             StoreMessages.access$handleLocalMessageCreate(StoreMessages.this, this.$invalidAttachmentsMessage);
         }
     }
 
-    /* compiled from: StoreMessages.kt */
-    /* renamed from: com.discord.stores.StoreMessages$sendMessage$2 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreMessages$sendMessage$2 */
+    /* JADX INFO: compiled from: StoreMessages.kt */
     public static final class C62412<T> implements Action1<Emitter<MessageQueue4>> {
         public static final C62412 INSTANCE = new C62412();
 
@@ -573,15 +573,15 @@ public final class StoreMessages extends Store {
             call2(emitter);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final void call2(Emitter<MessageQueue4> emitter) {
             emitter.onNext(MessageQueue4.NoValidContent.INSTANCE);
             emitter.onCompleted();
         }
     }
 
-    /* compiled from: StoreMessages.kt */
-    /* renamed from: com.discord.stores.StoreMessages$sendMessage$3 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreMessages$sendMessage$3 */
+    /* JADX INFO: compiled from: StoreMessages.kt */
     public static final class C62423 extends Lambda implements Function0<Unit> {
         public final /* synthetic */ Message $localMessage;
 
@@ -597,14 +597,14 @@ public final class StoreMessages extends Store {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             StoreMessages.access$handleLocalMessageCreate(StoreMessages.this, this.$localMessage);
         }
     }
 
-    /* compiled from: StoreMessages.kt */
-    /* renamed from: com.discord.stores.StoreMessages$sendMessage$4 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreMessages$sendMessage$4 */
+    /* JADX INFO: compiled from: StoreMessages.kt */
     public static final class C62434 extends Lambda implements Function0<Unit> {
         public C62434() {
             super(0);
@@ -616,7 +616,7 @@ public final class StoreMessages extends Store {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             Context contextAccess$getContext$p = StoreMessages.access$getContext$p(StoreMessages.this);
             Intrinsics3.checkNotNullParameter(contextAccess$getContext$p, "context");
@@ -626,8 +626,8 @@ public final class StoreMessages extends Store {
         }
     }
 
-    /* compiled from: StoreMessages.kt */
-    /* renamed from: com.discord.stores.StoreMessages$sendMessage$5 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreMessages$sendMessage$5 */
+    /* JADX INFO: compiled from: StoreMessages.kt */
     public static final class C62445 extends Lambda implements Function0<Unit> {
         public final /* synthetic */ Message $message;
 
@@ -643,7 +643,7 @@ public final class StoreMessages extends Store {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             StoreMessages.access$handleLocalMessageCreate(StoreMessages.this, this.$message);
             Context contextAccess$getContext$p = StoreMessages.access$getContext$p(StoreMessages.this);
@@ -879,6 +879,7 @@ public final class StoreMessages extends Store {
         return storeMessages.resendMessage(message, z2, captchaPayload);
     }
 
+    /* JADX WARN: Multi-variable type inference failed */
     public static /* synthetic */ Observable sendMessage$default(StoreMessages storeMessages, long j, com.discord.models.user.User user, String str, List list, List list2, List list3, MessageReference messageReference, MessageAllowedMentions messageAllowedMentions, Application application, Activity activity, MessageActivity messageActivity, Long l, Long l2, Integer num, CaptchaHelper.CaptchaPayload captchaPayload, int i, Object obj) {
         return storeMessages.sendMessage(j, user, str, list, list2, (i & 32) != 0 ? null : list3, (i & 64) != 0 ? null : messageReference, (i & 128) != 0 ? null : messageAllowedMentions, (i & 256) != 0 ? null : application, (i & 512) != 0 ? null : activity, (i & 1024) != 0 ? null : messageActivity, (i & 2048) != 0 ? null : l, (i & 4096) != 0 ? null : l2, (i & 8192) != 0 ? null : num, (i & 16384) != 0 ? null : captchaPayload);
     }

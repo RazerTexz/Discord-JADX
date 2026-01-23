@@ -10,15 +10,15 @@ import java.io.IOException;
 import java.util.Objects;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: NullSerializable.kt */
-/* renamed from: com.discord.nullserializable.NullSerializableTypeAdapter, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: com.discord.nullserializable.NullSerializableTypeAdapter, reason: use source file name */
+/* JADX INFO: compiled from: NullSerializable.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class NullSerializable2<T> extends TypeAdapter<NullSerializable<? super T>> {
 
-    /* renamed from: a, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: a, reason: from kotlin metadata */
     public final Gson gsonInstance;
 
-    /* renamed from: b, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: b, reason: from kotlin metadata */
     public final TypeAdapter<T> delegateTypeAdapter;
 
     public NullSerializable2(Gson gson, TypeAdapter<T> typeAdapter) {

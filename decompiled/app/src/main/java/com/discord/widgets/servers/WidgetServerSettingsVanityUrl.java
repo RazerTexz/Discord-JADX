@@ -44,25 +44,25 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 import p658rx.Observable;
 
-/* compiled from: WidgetServerSettingsVanityUrl.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetServerSettingsVanityUrl.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetServerSettingsVanityUrl extends AppFragment {
     private static final long ANIMATION_DURATION = 250;
     private static final String INTENT_EXTRA_GUILD_ID = "INTENT_EXTRA_GUILD_ID";
 
-    /* renamed from: binding$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
 
-    /* renamed from: guildId$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: guildId$delegate, reason: from kotlin metadata */
     private final Lazy guildId;
     private final AppLogger2 loggingConfig;
     private final StatefulViews state;
     public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetServerSettingsVanityUrl.class, "binding", "getBinding()Lcom/discord/databinding/WidgetServerSettingsVanityUrlBinding;", 0)};
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
 
-    /* compiled from: WidgetServerSettingsVanityUrl.kt */
+    /* JADX INFO: compiled from: WidgetServerSettingsVanityUrl.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -96,17 +96,17 @@ public final class WidgetServerSettingsVanityUrl extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetServerSettingsVanityUrl.kt */
+    /* JADX INFO: compiled from: WidgetServerSettingsVanityUrl.kt */
     public static final /* data */ class Model {
 
-        /* renamed from: Companion, reason: from kotlin metadata */
+        /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
         public static final Companion INSTANCE = new Companion(null);
         private final long guildId;
         private final String guildName;
         private final String vanityUrl;
         private final int vanityUrlUses;
 
-        /* compiled from: WidgetServerSettingsVanityUrl.kt */
+        /* JADX INFO: compiled from: WidgetServerSettingsVanityUrl.kt */
         public static final class Companion {
             private Companion() {
             }
@@ -149,22 +149,22 @@ public final class WidgetServerSettingsVanityUrl extends AppFragment {
             return model.copy(j2, str3, str4, i);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final long getGuildId() {
             return this.guildId;
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final String getGuildName() {
             return this.guildName;
         }
 
-        /* renamed from: component3, reason: from getter */
+        /* JADX INFO: renamed from: component3, reason: from getter */
         public final String getVanityUrl() {
             return this.vanityUrl;
         }
 
-        /* renamed from: component4, reason: from getter */
+        /* JADX INFO: renamed from: component4, reason: from getter */
         public final int getVanityUrlUses() {
             return this.vanityUrlUses;
         }
@@ -220,8 +220,8 @@ public final class WidgetServerSettingsVanityUrl extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetServerSettingsVanityUrl.kt */
-    /* renamed from: com.discord.widgets.servers.WidgetServerSettingsVanityUrl$configureUI$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.WidgetServerSettingsVanityUrl$configureUI$1 */
+    /* JADX INFO: compiled from: WidgetServerSettingsVanityUrl.kt */
     public static final class ViewOnClickListenerC93161 implements View.OnClickListener {
         public final /* synthetic */ Model $model;
 
@@ -257,8 +257,8 @@ public final class WidgetServerSettingsVanityUrl extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetServerSettingsVanityUrl.kt */
-    /* renamed from: com.discord.widgets.servers.WidgetServerSettingsVanityUrl$configureUI$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.WidgetServerSettingsVanityUrl$configureUI$2 */
+    /* JADX INFO: compiled from: WidgetServerSettingsVanityUrl.kt */
     public static final class ViewOnClickListenerC93172 implements View.OnClickListener {
         public final /* synthetic */ Model $model;
 
@@ -272,8 +272,8 @@ public final class WidgetServerSettingsVanityUrl extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetServerSettingsVanityUrl.kt */
-    /* renamed from: com.discord.widgets.servers.WidgetServerSettingsVanityUrl$onResume$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.WidgetServerSettingsVanityUrl$onResume$1 */
+    /* JADX INFO: compiled from: WidgetServerSettingsVanityUrl.kt */
     public static final /* synthetic */ class C93181 extends FunctionReferenceImpl implements Function1<Model, Unit> {
         public C93181(WidgetServerSettingsVanityUrl widgetServerSettingsVanityUrl) {
             super(1, widgetServerSettingsVanityUrl, WidgetServerSettingsVanityUrl.class, "configureUI", "configureUI(Lcom/discord/widgets/servers/WidgetServerSettingsVanityUrl$Model;)V", 0);
@@ -285,14 +285,14 @@ public final class WidgetServerSettingsVanityUrl extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Model model) {
             WidgetServerSettingsVanityUrl.access$configureUI((WidgetServerSettingsVanityUrl) this.receiver, model);
         }
     }
 
-    /* compiled from: WidgetServerSettingsVanityUrl.kt */
-    /* renamed from: com.discord.widgets.servers.WidgetServerSettingsVanityUrl$onViewBound$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.WidgetServerSettingsVanityUrl$onViewBound$1 */
+    /* JADX INFO: compiled from: WidgetServerSettingsVanityUrl.kt */
     public static final class ViewOnFocusChangeListenerC93191 implements View.OnFocusChangeListener {
         public ViewOnFocusChangeListenerC93191() {
         }
@@ -322,8 +322,8 @@ public final class WidgetServerSettingsVanityUrl extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetServerSettingsVanityUrl.kt */
-    /* renamed from: com.discord.widgets.servers.WidgetServerSettingsVanityUrl$onViewBound$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.WidgetServerSettingsVanityUrl$onViewBound$2 */
+    /* JADX INFO: compiled from: WidgetServerSettingsVanityUrl.kt */
     public static final class ViewOnClickListenerC93202 implements View.OnClickListener {
         public ViewOnClickListenerC93202() {
         }
@@ -337,8 +337,8 @@ public final class WidgetServerSettingsVanityUrl extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetServerSettingsVanityUrl.kt */
-    /* renamed from: com.discord.widgets.servers.WidgetServerSettingsVanityUrl$updateVanityUrl$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.WidgetServerSettingsVanityUrl$updateVanityUrl$1 */
+    /* JADX INFO: compiled from: WidgetServerSettingsVanityUrl.kt */
     public static final class C93211 extends Lambda implements Function1<VanityUrlResponse, Unit> {
         public C93211() {
             super(1);
@@ -350,7 +350,7 @@ public final class WidgetServerSettingsVanityUrl extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(VanityUrlResponse vanityUrlResponse) {
             Intrinsics3.checkNotNullParameter(vanityUrlResponse, "<name for destructuring parameter 0>");
             String code = vanityUrlResponse.getCode();
@@ -362,8 +362,8 @@ public final class WidgetServerSettingsVanityUrl extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetServerSettingsVanityUrl.kt */
-    /* renamed from: com.discord.widgets.servers.WidgetServerSettingsVanityUrl$updateVanityUrl$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.WidgetServerSettingsVanityUrl$updateVanityUrl$2 */
+    /* JADX INFO: compiled from: WidgetServerSettingsVanityUrl.kt */
     public static final class C93222 extends Lambda implements Function1<Error, Unit> {
         public C93222() {
             super(1);
@@ -375,7 +375,7 @@ public final class WidgetServerSettingsVanityUrl extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Error error) {
             Intrinsics3.checkNotNullParameter(error, "error");
             WidgetServerSettingsVanityUrl.access$showLoadingUI(WidgetServerSettingsVanityUrl.this, false);

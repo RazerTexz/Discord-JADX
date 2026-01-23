@@ -71,33 +71,33 @@ import p507d0.p592z.p594d.Reflection2;
 import p658rx.Observable;
 import p658rx.functions.Action2;
 
-/* compiled from: WidgetGuildBoost.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetGuildBoost.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetGuildBoost extends AppFragment {
     public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetGuildBoost.class, "binding", "getBinding()Lcom/discord/databinding/WidgetServerBoostStatusBinding;", 0)};
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private static final String INTENT_EXTRA_GUILD_ID = "GUILD_ID";
     private static final int VIEW_INDEX_LOADED = 2;
     private static final int VIEW_INDEX_LOADING = 0;
     private static final int VIEW_INDEX_LOAD_FAILED = 1;
 
-    /* renamed from: binding$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
     private final ActivityResultLauncher<Intent> choosePlanLauncher;
 
-    /* renamed from: guildId$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: guildId$delegate, reason: from kotlin metadata */
     private final Lazy guildId;
     private List<? extends ImageView> levelBackgrounds;
     private List<? extends TextView> levelText;
     private PerksPagerAdapter pagerAdapter;
 
-    /* renamed from: viewModel$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: viewModel$delegate, reason: from kotlin metadata */
     private final Lazy viewModel;
     private boolean wasPagerPageSet;
 
-    /* compiled from: WidgetGuildBoost.kt */
+    /* JADX INFO: compiled from: WidgetGuildBoost.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -114,7 +114,7 @@ public final class WidgetGuildBoost extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetGuildBoost.kt */
+    /* JADX INFO: compiled from: WidgetGuildBoost.kt */
     public static final class PerksPagerAdapter extends PagerAdapter {
         private long guildId;
         private int premiumTier;
@@ -208,8 +208,8 @@ public final class WidgetGuildBoost extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetGuildBoost.kt */
-    /* renamed from: com.discord.widgets.servers.guildboost.WidgetGuildBoost$configureUI$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.guildboost.WidgetGuildBoost$configureUI$1 */
+    /* JADX INFO: compiled from: WidgetGuildBoost.kt */
     public static final class ViewOnClickListenerC95061 implements View.OnClickListener {
         public ViewOnClickListenerC95061() {
         }
@@ -220,8 +220,8 @@ public final class WidgetGuildBoost extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetGuildBoost.kt */
-    /* renamed from: com.discord.widgets.servers.guildboost.WidgetGuildBoost$configureUI$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.guildboost.WidgetGuildBoost$configureUI$2 */
+    /* JADX INFO: compiled from: WidgetGuildBoost.kt */
     public static final class C95072 extends Lambda implements Function0<Unit> {
         public C95072() {
             super(0);
@@ -233,14 +233,14 @@ public final class WidgetGuildBoost extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             WidgetSettingsPremium.Companion.launch$default(WidgetSettingsPremium.INSTANCE, WidgetGuildBoost.this.requireContext(), null, null, 6, null);
         }
     }
 
-    /* compiled from: WidgetGuildBoost.kt */
-    /* renamed from: com.discord.widgets.servers.guildboost.WidgetGuildBoost$handleEvent$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.guildboost.WidgetGuildBoost$handleEvent$1 */
+    /* JADX INFO: compiled from: WidgetGuildBoost.kt */
     public static final class C95081 extends Lambda implements Function1<View, Unit> {
         public C95081() {
             super(1);
@@ -252,15 +252,15 @@ public final class WidgetGuildBoost extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(View view) {
             Intrinsics3.checkNotNullParameter(view, "it");
             WidgetSettingsPremium.Companion.launch$default(WidgetSettingsPremium.INSTANCE, WidgetGuildBoost.this.requireContext(), null, null, 6, null);
         }
     }
 
-    /* compiled from: WidgetGuildBoost.kt */
-    /* renamed from: com.discord.widgets.servers.guildboost.WidgetGuildBoost$onViewBound$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.guildboost.WidgetGuildBoost$onViewBound$1 */
+    /* JADX INFO: compiled from: WidgetGuildBoost.kt */
     public static final class C95091 implements ViewPager.OnPageChangeListener {
         public C95091() {
         }
@@ -279,8 +279,8 @@ public final class WidgetGuildBoost extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetGuildBoost.kt */
-    /* renamed from: com.discord.widgets.servers.guildboost.WidgetGuildBoost$onViewBound$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.guildboost.WidgetGuildBoost$onViewBound$2 */
+    /* JADX INFO: compiled from: WidgetGuildBoost.kt */
     public static final class C95102<T1, T2> implements Action2<MenuItem, Context> {
         public static final C95102 INSTANCE = new C95102();
 
@@ -289,7 +289,7 @@ public final class WidgetGuildBoost extends AppFragment {
             call2(menuItem, context);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final void call2(MenuItem menuItem, Context context) {
             Intrinsics3.checkNotNullExpressionValue(menuItem, "menuItem");
             if (menuItem.getItemId() != C5419R.id.menu_premium_guild) {
@@ -301,13 +301,13 @@ public final class WidgetGuildBoost extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetGuildBoost.kt */
-    /* renamed from: com.discord.widgets.servers.guildboost.WidgetGuildBoost$onViewBound$3 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.guildboost.WidgetGuildBoost$onViewBound$3 */
+    /* JADX INFO: compiled from: WidgetGuildBoost.kt */
     public static final class C95113 extends Lambda implements Function1<RenderContext, Unit> {
         public static final C95113 INSTANCE = new C95113();
 
-        /* compiled from: WidgetGuildBoost.kt */
-        /* renamed from: com.discord.widgets.servers.guildboost.WidgetGuildBoost$onViewBound$3$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.widgets.servers.guildboost.WidgetGuildBoost$onViewBound$3$1, reason: invalid class name */
+        /* JADX INFO: compiled from: WidgetGuildBoost.kt */
         public static final class AnonymousClass1 extends Lambda implements Function1<View, Unit> {
             public static final AnonymousClass1 INSTANCE = new AnonymousClass1();
 
@@ -321,7 +321,7 @@ public final class WidgetGuildBoost extends AppFragment {
                 return Unit.f27425a;
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2(View view) {
                 Intrinsics3.checkNotNullParameter(view, "view");
                 WidgetSettingsGuildBoost.Companion companion = WidgetSettingsGuildBoost.INSTANCE;
@@ -341,19 +341,19 @@ public final class WidgetGuildBoost extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(RenderContext renderContext) {
             Intrinsics3.checkNotNullParameter(renderContext, "$receiver");
             renderContext.m8423b("learnMore", AnonymousClass1.INSTANCE);
         }
     }
 
-    /* compiled from: WidgetGuildBoost.kt */
-    /* renamed from: com.discord.widgets.servers.guildboost.WidgetGuildBoost$onViewBound$4 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.guildboost.WidgetGuildBoost$onViewBound$4 */
+    /* JADX INFO: compiled from: WidgetGuildBoost.kt */
     public static final class C95124 extends Lambda implements Function1<RenderContext, Unit> {
 
-        /* compiled from: WidgetGuildBoost.kt */
-        /* renamed from: com.discord.widgets.servers.guildboost.WidgetGuildBoost$onViewBound$4$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.widgets.servers.guildboost.WidgetGuildBoost$onViewBound$4$1, reason: invalid class name */
+        /* JADX INFO: compiled from: WidgetGuildBoost.kt */
         public static final class AnonymousClass1 extends Lambda implements Function1<View, Unit> {
             public static final AnonymousClass1 INSTANCE = new AnonymousClass1();
 
@@ -367,7 +367,7 @@ public final class WidgetGuildBoost extends AppFragment {
                 return Unit.f27425a;
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2(View view) {
                 Intrinsics3.checkNotNullParameter(view, "view");
                 WidgetSettingsPremium.Companion companion = WidgetSettingsPremium.INSTANCE;
@@ -387,7 +387,7 @@ public final class WidgetGuildBoost extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(RenderContext renderContext) {
             Intrinsics3.checkNotNullParameter(renderContext, "$receiver");
             renderContext.boldColor = Integer.valueOf(ColorCompat.getColor(WidgetGuildBoost.this.requireContext(), C5419R.color.status_green_600));
@@ -395,8 +395,8 @@ public final class WidgetGuildBoost extends AppFragment {
             renderContext.m8422a("protipHook", AnonymousClass2.INSTANCE);
         }
 
-        /* compiled from: WidgetGuildBoost.kt */
-        /* renamed from: com.discord.widgets.servers.guildboost.WidgetGuildBoost$onViewBound$4$2, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.widgets.servers.guildboost.WidgetGuildBoost$onViewBound$4$2, reason: invalid class name */
+        /* JADX INFO: compiled from: WidgetGuildBoost.kt */
         public static final class AnonymousClass2 extends Lambda implements Function1<Hook, Unit> {
             public static final AnonymousClass2 INSTANCE = new AnonymousClass2();
 
@@ -404,7 +404,7 @@ public final class WidgetGuildBoost extends AppFragment {
                 super(1);
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2(Hook hook) {
                 Intrinsics3.checkNotNullParameter(hook, "$receiver");
                 hook.styles.add(new StyleSpan(1));
@@ -419,8 +419,8 @@ public final class WidgetGuildBoost extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetGuildBoost.kt */
-    /* renamed from: com.discord.widgets.servers.guildboost.WidgetGuildBoost$onViewBound$5 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.guildboost.WidgetGuildBoost$onViewBound$5 */
+    /* JADX INFO: compiled from: WidgetGuildBoost.kt */
     public static final class ViewOnClickListenerC95135 implements View.OnClickListener {
         public ViewOnClickListenerC95135() {
         }
@@ -431,8 +431,8 @@ public final class WidgetGuildBoost extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetGuildBoost.kt */
-    /* renamed from: com.discord.widgets.servers.guildboost.WidgetGuildBoost$onViewBound$6 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.guildboost.WidgetGuildBoost$onViewBound$6 */
+    /* JADX INFO: compiled from: WidgetGuildBoost.kt */
     public static final class ViewOnClickListenerC95146 implements View.OnClickListener {
         public ViewOnClickListenerC95146() {
         }
@@ -443,8 +443,8 @@ public final class WidgetGuildBoost extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetGuildBoost.kt */
-    /* renamed from: com.discord.widgets.servers.guildboost.WidgetGuildBoost$onViewBoundOrOnResume$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.guildboost.WidgetGuildBoost$onViewBoundOrOnResume$1 */
+    /* JADX INFO: compiled from: WidgetGuildBoost.kt */
     public static final /* synthetic */ class C95151 extends FunctionReferenceImpl implements Function1<GuildBoostViewModel.ViewState, Unit> {
         public C95151(WidgetGuildBoost widgetGuildBoost) {
             super(1, widgetGuildBoost, WidgetGuildBoost.class, "configureUI", "configureUI(Lcom/discord/widgets/servers/guildboost/GuildBoostViewModel$ViewState;)V", 0);
@@ -456,15 +456,15 @@ public final class WidgetGuildBoost extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(GuildBoostViewModel.ViewState viewState) {
             Intrinsics3.checkNotNullParameter(viewState, "p1");
             WidgetGuildBoost.access$configureUI((WidgetGuildBoost) this.receiver, viewState);
         }
     }
 
-    /* compiled from: WidgetGuildBoost.kt */
-    /* renamed from: com.discord.widgets.servers.guildboost.WidgetGuildBoost$onViewBoundOrOnResume$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.guildboost.WidgetGuildBoost$onViewBoundOrOnResume$2 */
+    /* JADX INFO: compiled from: WidgetGuildBoost.kt */
     public static final /* synthetic */ class C95162 extends FunctionReferenceImpl implements Function1<GuildBoostViewModel.Event, Unit> {
         public C95162(WidgetGuildBoost widgetGuildBoost) {
             super(1, widgetGuildBoost, WidgetGuildBoost.class, "handleEvent", "handleEvent(Lcom/discord/widgets/servers/guildboost/GuildBoostViewModel$Event;)V", 0);
@@ -476,7 +476,7 @@ public final class WidgetGuildBoost extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(GuildBoostViewModel.Event event) {
             Intrinsics3.checkNotNullParameter(event, "p1");
             WidgetGuildBoost.access$handleEvent((WidgetGuildBoost) this.receiver, event);

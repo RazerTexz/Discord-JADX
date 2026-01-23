@@ -19,18 +19,18 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 import p658rx.Observable;
 
-/* compiled from: GuildIdsWithActiveEventsModel.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: GuildIdsWithActiveEventsModel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class GuildIdsWithActiveEventsModel {
     public static final GuildIdsWithActiveEventsModel INSTANCE = new GuildIdsWithActiveEventsModel();
 
-    /* compiled from: GuildIdsWithActiveEventsModel.kt */
-    /* renamed from: com.discord.widgets.guildscheduledevent.GuildIdsWithActiveEventsModel$observe$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.guildscheduledevent.GuildIdsWithActiveEventsModel$observe$1 */
+    /* JADX INFO: compiled from: GuildIdsWithActiveEventsModel.kt */
     public static final class C88091 extends Lambda implements Function0<Set<? extends Long>> {
         public final /* synthetic */ StoreGuildScheduledEvents $storeGuildScheduledEvents;
 
-        /* compiled from: GuildIdsWithActiveEventsModel.kt */
-        /* renamed from: com.discord.widgets.guildscheduledevent.GuildIdsWithActiveEventsModel$observe$1$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.widgets.guildscheduledevent.GuildIdsWithActiveEventsModel$observe$1$1, reason: invalid class name */
+        /* JADX INFO: compiled from: GuildIdsWithActiveEventsModel.kt */
         public static final class AnonymousClass1 extends Lambda implements Function1<Map.Entry<? extends Long, ? extends List<? extends GuildScheduledEvent>>, Boolean> {
             public static final AnonymousClass1 INSTANCE = new AnonymousClass1();
 
@@ -43,7 +43,7 @@ public final class GuildIdsWithActiveEventsModel {
                 return Boolean.valueOf(invoke2((Map.Entry<Long, ? extends List<GuildScheduledEvent>>) entry));
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final boolean invoke2(Map.Entry<Long, ? extends List<GuildScheduledEvent>> entry) {
                 Intrinsics3.checkNotNullParameter(entry, "<name for destructuring parameter 0>");
                 List<GuildScheduledEvent> value = entry.getValue();
@@ -59,8 +59,8 @@ public final class GuildIdsWithActiveEventsModel {
             }
         }
 
-        /* compiled from: GuildIdsWithActiveEventsModel.kt */
-        /* renamed from: com.discord.widgets.guildscheduledevent.GuildIdsWithActiveEventsModel$observe$1$2, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.widgets.guildscheduledevent.GuildIdsWithActiveEventsModel$observe$1$2, reason: invalid class name */
+        /* JADX INFO: compiled from: GuildIdsWithActiveEventsModel.kt */
         public static final class AnonymousClass2 extends Lambda implements Function1<Map.Entry<? extends Long, ? extends List<? extends GuildScheduledEvent>>, Long> {
             public static final AnonymousClass2 INSTANCE = new AnonymousClass2();
 
@@ -73,7 +73,7 @@ public final class GuildIdsWithActiveEventsModel {
                 return Long.valueOf(invoke2((Map.Entry<Long, ? extends List<GuildScheduledEvent>>) entry));
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final long invoke2(Map.Entry<Long, ? extends List<GuildScheduledEvent>> entry) {
                 Intrinsics3.checkNotNullParameter(entry, "entry");
                 return entry.getKey().longValue();
@@ -92,7 +92,7 @@ public final class GuildIdsWithActiveEventsModel {
         }
 
         @Override // kotlin.jvm.functions.Function0
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final Set<? extends Long> invoke2() {
             return _Sequences2.toSet(_Sequences2.map(_Sequences2.filter(_Maps.asSequence(this.$storeGuildScheduledEvents.getAllGuildScheduledEvents()), AnonymousClass1.INSTANCE), AnonymousClass2.INSTANCE));
         }

@@ -2,9 +2,9 @@ package co.discord.media_engine;
 
 import p007b.p100d.p104b.p105a.outline;
 
-/* compiled from: VoiceQuality.kt */
-/* renamed from: co.discord.media_engine.Duration, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: co.discord.media_engine.Duration, reason: use source file name */
+/* JADX INFO: compiled from: VoiceQuality.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class VoiceQuality2 {
     private int connected;
     private int listening;
@@ -34,22 +34,22 @@ public final /* data */ class VoiceQuality2 {
         return voiceQuality2.copy(i, i2, i3, i4);
     }
 
-    /* renamed from: component1, reason: from getter */
+    /* JADX INFO: renamed from: component1, reason: from getter */
     public final int getListening() {
         return this.listening;
     }
 
-    /* renamed from: component2, reason: from getter */
+    /* JADX INFO: renamed from: component2, reason: from getter */
     public final int getSpeaking() {
         return this.speaking;
     }
 
-    /* renamed from: component3, reason: from getter */
+    /* JADX INFO: renamed from: component3, reason: from getter */
     public final int getParticipation() {
         return this.participation;
     }
 
-    /* renamed from: component4, reason: from getter */
+    /* JADX INFO: renamed from: component4, reason: from getter */
     public final int getConnected() {
         return this.connected;
     }

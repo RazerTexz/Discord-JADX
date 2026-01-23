@@ -40,19 +40,19 @@ import p658rx.Observable;
 import p658rx.functions.Action1;
 import p658rx.functions.Func2;
 
-/* compiled from: WidgetServerDeleteDialog.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetServerDeleteDialog.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetServerDeleteDialog extends AppDialog {
     public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetServerDeleteDialog.class, "binding", "getBinding()Lcom/discord/databinding/WidgetServerDeleteDialogBinding;", 0)};
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private static final String INTENT_GUILD_ID = "INTENT_GUILD_ID";
 
-    /* renamed from: binding$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
 
-    /* compiled from: WidgetServerDeleteDialog.kt */
+    /* JADX INFO: compiled from: WidgetServerDeleteDialog.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -71,15 +71,15 @@ public final class WidgetServerDeleteDialog extends AppDialog {
         }
     }
 
-    /* compiled from: WidgetServerDeleteDialog.kt */
+    /* JADX INFO: compiled from: WidgetServerDeleteDialog.kt */
     public static final class Model {
 
-        /* renamed from: Companion, reason: from kotlin metadata */
+        /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
         public static final Companion INSTANCE = new Companion(null);
         private final Guild guild;
         private final MeUser me;
 
-        /* compiled from: WidgetServerDeleteDialog.kt */
+        /* JADX INFO: compiled from: WidgetServerDeleteDialog.kt */
         public static final class Companion {
             private Companion() {
             }
@@ -118,8 +118,8 @@ public final class WidgetServerDeleteDialog extends AppDialog {
         }
     }
 
-    /* compiled from: WidgetServerDeleteDialog.kt */
-    /* renamed from: com.discord.widgets.servers.WidgetServerDeleteDialog$configureUI$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.WidgetServerDeleteDialog$configureUI$1 */
+    /* JADX INFO: compiled from: WidgetServerDeleteDialog.kt */
     public static final class ViewOnClickListenerC91541 implements View.OnClickListener {
         public ViewOnClickListenerC91541() {
         }
@@ -130,13 +130,13 @@ public final class WidgetServerDeleteDialog extends AppDialog {
         }
     }
 
-    /* compiled from: WidgetServerDeleteDialog.kt */
-    /* renamed from: com.discord.widgets.servers.WidgetServerDeleteDialog$configureUI$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.WidgetServerDeleteDialog$configureUI$2 */
+    /* JADX INFO: compiled from: WidgetServerDeleteDialog.kt */
     public static final class ViewOnClickListenerC91552 implements View.OnClickListener {
         public final /* synthetic */ Model $this_configureUI;
 
-        /* compiled from: WidgetServerDeleteDialog.kt */
-        /* renamed from: com.discord.widgets.servers.WidgetServerDeleteDialog$configureUI$2$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.widgets.servers.WidgetServerDeleteDialog$configureUI$2$1, reason: invalid class name */
+        /* JADX INFO: compiled from: WidgetServerDeleteDialog.kt */
         public static final class AnonymousClass1<T> implements Action1<Void> {
             public AnonymousClass1() {
             }
@@ -146,7 +146,7 @@ public final class WidgetServerDeleteDialog extends AppDialog {
                 call2(r1);
             }
 
-            /* renamed from: call, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
             public final void call2(Void r4) {
                 ViewOnClickListenerC91552 viewOnClickListenerC91552 = ViewOnClickListenerC91552.this;
                 WidgetServerDeleteDialog.access$afterDeleteGuild(WidgetServerDeleteDialog.this, viewOnClickListenerC91552.$this_configureUI.getGuild().getId());
@@ -167,8 +167,8 @@ public final class WidgetServerDeleteDialog extends AppDialog {
         }
     }
 
-    /* compiled from: WidgetServerDeleteDialog.kt */
-    /* renamed from: com.discord.widgets.servers.WidgetServerDeleteDialog$onViewBoundOrOnResume$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.WidgetServerDeleteDialog$onViewBoundOrOnResume$1 */
+    /* JADX INFO: compiled from: WidgetServerDeleteDialog.kt */
     public static final class C91561 extends Lambda implements Function1<Model, Unit> {
         public C91561() {
             super(1);
@@ -180,7 +180,7 @@ public final class WidgetServerDeleteDialog extends AppDialog {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Model model) {
             WidgetServerDeleteDialog widgetServerDeleteDialog = WidgetServerDeleteDialog.this;
             Intrinsics3.checkNotNullExpressionValue(model, "it");

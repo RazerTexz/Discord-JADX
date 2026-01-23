@@ -3,9 +3,9 @@ package com.discord.widgets.status;
 import kotlin.jvm.functions.Function3;
 import p658rx.functions.Func3;
 
-/* compiled from: WidgetChatStatus.kt */
-/* renamed from: com.discord.widgets.status.WidgetChatStatus$sam$rx_functions_Func3$0, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.status.WidgetChatStatus$sam$rx_functions_Func3$0, reason: use source file name */
+/* JADX INFO: compiled from: WidgetChatStatus.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetChatStatus7 implements Func3 {
     private final /* synthetic */ Function3 function;
 

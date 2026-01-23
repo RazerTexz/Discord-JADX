@@ -4,7 +4,7 @@ import androidx.annotation.FloatRange;
 import androidx.annotation.RestrictTo;
 import androidx.dynamicanimation.animation.DynamicAnimation;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public final class SpringForce implements Force {
     public static final float DAMPING_RATIO_HIGH_BOUNCY = 0.2f;
     public static final float DAMPING_RATIO_LOW_BOUNCY = 0.75f;
@@ -60,7 +60,7 @@ public final class SpringForce implements Force {
     public float getAcceleration(float f, float f2) {
         float finalPosition = f - getFinalPosition();
         double d = this.mNaturalFreq;
-        return (float) (((-(d * d)) * finalPosition) - (((d * 2.0d) * this.mDampingRatio) * f2));
+        return (float) (((-(d * d)) * ((double) finalPosition)) - (((d * 2.0d) * this.mDampingRatio) * ((double) f2)));
     }
 
     public float getDampingRatio() {

@@ -3,7 +3,7 @@ package com.google.android.exoplayer2.text;
 import androidx.annotation.Nullable;
 import com.google.android.exoplayer2.decoder.DecoderException;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public class SubtitleDecoderException extends DecoderException {
     public SubtitleDecoderException(String str) {
         super(str);

@@ -40,11 +40,11 @@ import p507d0.p592z.p594d.Lambda;
 import p658rx.Observable;
 import p658rx.subjects.PublishSubject;
 
-/* compiled from: WidgetHomeViewModel.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetHomeViewModel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetHomeViewModel extends AppViewModel<ViewState> {
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private final ChannelOnboardingManager channelOnboardingManager;
     private final Clock clock;
@@ -60,8 +60,8 @@ public final class WidgetHomeViewModel extends AppViewModel<ViewState> {
     private boolean wasThreadPeek;
     private WidgetHomeModel widgetHomeModel;
 
-    /* compiled from: WidgetHomeViewModel.kt */
-    /* renamed from: com.discord.widgets.home.WidgetHomeViewModel$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.home.WidgetHomeViewModel$1 */
+    /* JADX INFO: compiled from: WidgetHomeViewModel.kt */
     public static final class C89791 extends Lambda implements Function1<StoreState, Unit> {
         public C89791() {
             super(1);
@@ -73,7 +73,7 @@ public final class WidgetHomeViewModel extends AppViewModel<ViewState> {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(StoreState storeState) {
             WidgetHomeViewModel widgetHomeViewModel = WidgetHomeViewModel.this;
             Intrinsics3.checkNotNullExpressionValue(storeState, "storeState");
@@ -81,8 +81,8 @@ public final class WidgetHomeViewModel extends AppViewModel<ViewState> {
         }
     }
 
-    /* compiled from: WidgetHomeViewModel.kt */
-    /* renamed from: com.discord.widgets.home.WidgetHomeViewModel$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.home.WidgetHomeViewModel$2 */
+    /* JADX INFO: compiled from: WidgetHomeViewModel.kt */
     public static final class C89802 extends Lambda implements Function1<StoreNavigation.PanelAction, Unit> {
         public C89802() {
             super(1);
@@ -94,14 +94,14 @@ public final class WidgetHomeViewModel extends AppViewModel<ViewState> {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(StoreNavigation.PanelAction panelAction) {
             Intrinsics3.checkNotNullParameter(panelAction, "panelAction");
             WidgetHomeViewModel.access$handleNavDrawerAction(WidgetHomeViewModel.this, panelAction);
         }
     }
 
-    /* compiled from: WidgetHomeViewModel.kt */
+    /* JADX INFO: compiled from: WidgetHomeViewModel.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -121,10 +121,10 @@ public final class WidgetHomeViewModel extends AppViewModel<ViewState> {
         }
     }
 
-    /* compiled from: WidgetHomeViewModel.kt */
+    /* JADX INFO: compiled from: WidgetHomeViewModel.kt */
     public static abstract class Event {
 
-        /* compiled from: WidgetHomeViewModel.kt */
+        /* JADX INFO: compiled from: WidgetHomeViewModel.kt */
         public static final class AnimatePeekIn extends Event {
             public static final AnimatePeekIn INSTANCE = new AnimatePeekIn();
 
@@ -133,7 +133,7 @@ public final class WidgetHomeViewModel extends AppViewModel<ViewState> {
             }
         }
 
-        /* compiled from: WidgetHomeViewModel.kt */
+        /* JADX INFO: compiled from: WidgetHomeViewModel.kt */
         public static final class AnimatePeekOut extends Event {
             public static final AnimatePeekOut INSTANCE = new AnimatePeekOut();
 
@@ -142,7 +142,7 @@ public final class WidgetHomeViewModel extends AppViewModel<ViewState> {
             }
         }
 
-        /* compiled from: WidgetHomeViewModel.kt */
+        /* JADX INFO: compiled from: WidgetHomeViewModel.kt */
         public static final class ClosePanels extends Event {
             public static final ClosePanels INSTANCE = new ClosePanels();
 
@@ -151,7 +151,7 @@ public final class WidgetHomeViewModel extends AppViewModel<ViewState> {
             }
         }
 
-        /* compiled from: WidgetHomeViewModel.kt */
+        /* JADX INFO: compiled from: WidgetHomeViewModel.kt */
         public static final class OpenLeftPanel extends Event {
             public static final OpenLeftPanel INSTANCE = new OpenLeftPanel();
 
@@ -160,7 +160,7 @@ public final class WidgetHomeViewModel extends AppViewModel<ViewState> {
             }
         }
 
-        /* compiled from: WidgetHomeViewModel.kt */
+        /* JADX INFO: compiled from: WidgetHomeViewModel.kt */
         public static final class ShowChannelOnboardingSheet extends Event {
             public static final ShowChannelOnboardingSheet INSTANCE = new ShowChannelOnboardingSheet();
 
@@ -169,7 +169,7 @@ public final class WidgetHomeViewModel extends AppViewModel<ViewState> {
             }
         }
 
-        /* compiled from: WidgetHomeViewModel.kt */
+        /* JADX INFO: compiled from: WidgetHomeViewModel.kt */
         public static final /* data */ class ShowGuildEventUpsell extends Event {
             private final long guildId;
 
@@ -185,7 +185,7 @@ public final class WidgetHomeViewModel extends AppViewModel<ViewState> {
                 return showGuildEventUpsell.copy(j);
             }
 
-            /* renamed from: component1, reason: from getter */
+            /* JADX INFO: renamed from: component1, reason: from getter */
             public final long getGuildId() {
                 return this.guildId;
             }
@@ -214,7 +214,7 @@ public final class WidgetHomeViewModel extends AppViewModel<ViewState> {
             }
         }
 
-        /* compiled from: WidgetHomeViewModel.kt */
+        /* JADX INFO: compiled from: WidgetHomeViewModel.kt */
         public static final /* data */ class ShowGuildRoleSubscriptionUpsell extends Event {
             private final long guildId;
 
@@ -230,7 +230,7 @@ public final class WidgetHomeViewModel extends AppViewModel<ViewState> {
                 return showGuildRoleSubscriptionUpsell.copy(j);
             }
 
-            /* renamed from: component1, reason: from getter */
+            /* JADX INFO: renamed from: component1, reason: from getter */
             public final long getGuildId() {
                 return this.guildId;
             }
@@ -259,7 +259,7 @@ public final class WidgetHomeViewModel extends AppViewModel<ViewState> {
             }
         }
 
-        /* compiled from: WidgetHomeViewModel.kt */
+        /* JADX INFO: compiled from: WidgetHomeViewModel.kt */
         public static final /* data */ class ShowGuildWelcomeSheet extends Event {
             private final long guildId;
 
@@ -275,7 +275,7 @@ public final class WidgetHomeViewModel extends AppViewModel<ViewState> {
                 return showGuildWelcomeSheet.copy(j);
             }
 
-            /* renamed from: component1, reason: from getter */
+            /* JADX INFO: renamed from: component1, reason: from getter */
             public final long getGuildId() {
                 return this.guildId;
             }
@@ -304,7 +304,7 @@ public final class WidgetHomeViewModel extends AppViewModel<ViewState> {
             }
         }
 
-        /* compiled from: WidgetHomeViewModel.kt */
+        /* JADX INFO: compiled from: WidgetHomeViewModel.kt */
         public static final class ShowPlaystationUpsell extends Event {
             public static final ShowPlaystationUpsell INSTANCE = new ShowPlaystationUpsell();
 
@@ -313,7 +313,7 @@ public final class WidgetHomeViewModel extends AppViewModel<ViewState> {
             }
         }
 
-        /* compiled from: WidgetHomeViewModel.kt */
+        /* JADX INFO: compiled from: WidgetHomeViewModel.kt */
         public static final class UnlockLeftPanel extends Event {
             public static final UnlockLeftPanel INSTANCE = new UnlockLeftPanel();
 
@@ -330,7 +330,7 @@ public final class WidgetHomeViewModel extends AppViewModel<ViewState> {
         }
     }
 
-    /* compiled from: WidgetHomeViewModel.kt */
+    /* JADX INFO: compiled from: WidgetHomeViewModel.kt */
     public static final /* data */ class GuildInfo {
         private final boolean canManageEvents;
         private final Guild guild;
@@ -352,32 +352,32 @@ public final class WidgetHomeViewModel extends AppViewModel<ViewState> {
             return guildInfo.copy((i & 1) != 0 ? guildInfo.guildId : j, (i & 2) != 0 ? guildInfo.guild : guild, (i & 4) != 0 ? guildInfo.isLurking : z2, (i & 8) != 0 ? guildInfo.welcomeScreenState : state, (i & 16) != 0 ? guildInfo.isNsfwUnconsented : z3, (i & 32) != 0 ? guildInfo.canManageEvents : z4);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final long getGuildId() {
             return this.guildId;
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final Guild getGuild() {
             return this.guild;
         }
 
-        /* renamed from: component3, reason: from getter */
+        /* JADX INFO: renamed from: component3, reason: from getter */
         public final boolean getIsLurking() {
             return this.isLurking;
         }
 
-        /* renamed from: component4, reason: from getter */
+        /* JADX INFO: renamed from: component4, reason: from getter */
         public final StoreGuildWelcomeScreens.State getWelcomeScreenState() {
             return this.welcomeScreenState;
         }
 
-        /* renamed from: component5, reason: from getter */
+        /* JADX INFO: renamed from: component5, reason: from getter */
         public final boolean getIsNsfwUnconsented() {
             return this.isNsfwUnconsented;
         }
 
-        /* renamed from: component6, reason: from getter */
+        /* JADX INFO: renamed from: component6, reason: from getter */
         public final boolean getCanManageEvents() {
             return this.canManageEvents;
         }
@@ -414,26 +414,35 @@ public final class WidgetHomeViewModel extends AppViewModel<ViewState> {
         }
 
         /* JADX WARN: Multi-variable type inference failed */
+        /* JADX WARN: Type inference failed for: r1v10 */
+        /* JADX WARN: Type inference failed for: r1v12 */
+        /* JADX WARN: Type inference failed for: r1v13 */
+        /* JADX WARN: Type inference failed for: r1v4, types: [int] */
+        /* JADX WARN: Type inference failed for: r1v7, types: [int] */
+        /* JADX WARN: Type inference failed for: r1v9 */
+        /* JADX WARN: Type inference failed for: r3v0 */
+        /* JADX WARN: Type inference failed for: r3v1, types: [int] */
+        /* JADX WARN: Type inference failed for: r3v2 */
         public int hashCode() {
             int iM3a = C0002b.m3a(this.guildId) * 31;
             Guild guild = this.guild;
             int iHashCode = (iM3a + (guild != null ? guild.hashCode() : 0)) * 31;
             boolean z2 = this.isLurking;
-            int i = z2;
-            if (z2 != 0) {
-                i = 1;
+            ?? r1 = z2;
+            if (z2) {
+                r1 = 1;
             }
-            int i2 = (iHashCode + i) * 31;
+            int i = (iHashCode + r1) * 31;
             StoreGuildWelcomeScreens.State state = this.welcomeScreenState;
-            int iHashCode2 = (i2 + (state != null ? state.hashCode() : 0)) * 31;
+            int iHashCode2 = (i + (state != null ? state.hashCode() : 0)) * 31;
             boolean z3 = this.isNsfwUnconsented;
-            int i3 = z3;
-            if (z3 != 0) {
-                i3 = 1;
+            ?? r12 = z3;
+            if (z3) {
+                r12 = 1;
             }
-            int i4 = (iHashCode2 + i3) * 31;
+            int i2 = (iHashCode2 + r12) * 31;
             boolean z4 = this.canManageEvents;
-            return i4 + (z4 ? 1 : z4 ? 1 : 0);
+            return i2 + (z4 ? 1 : z4);
         }
 
         public final boolean isLurking() {
@@ -460,7 +469,7 @@ public final class WidgetHomeViewModel extends AppViewModel<ViewState> {
         }
     }
 
-    /* compiled from: WidgetHomeViewModel.kt */
+    /* JADX INFO: compiled from: WidgetHomeViewModel.kt */
     public static final /* data */ class StoreState {
         private final StoreUserConnections.State connectedAccountsState;
         private final long guildId;
@@ -495,52 +504,52 @@ public final class WidgetHomeViewModel extends AppViewModel<ViewState> {
             return storeState.copy((i & 1) != 0 ? storeState.leftPanelState : panelState, (i & 2) != 0 ? storeState.rightPanelState : panelState2, (i & 4) != 0 ? storeState.guildInfo : guildInfo, (i & 8) != 0 ? storeState.me : meUser, (i & 16) != 0 ? storeState.isThreadPeek : z2, (i & 32) != 0 ? storeState.isInEventsUpsellExperiment : z3, (i & 64) != 0 ? storeState.isChannelNsfw : z4, (i & 128) != 0 ? storeState.nsfwAllowed : nsfwAllowance, (i & 256) != 0 ? storeState.guildId : j, (i & 512) != 0 ? storeState.connectedAccountsState : state);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final PanelState getLeftPanelState() {
             return this.leftPanelState;
         }
 
-        /* renamed from: component10, reason: from getter */
+        /* JADX INFO: renamed from: component10, reason: from getter */
         public final StoreUserConnections.State getConnectedAccountsState() {
             return this.connectedAccountsState;
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final PanelState getRightPanelState() {
             return this.rightPanelState;
         }
 
-        /* renamed from: component3, reason: from getter */
+        /* JADX INFO: renamed from: component3, reason: from getter */
         public final GuildInfo getGuildInfo() {
             return this.guildInfo;
         }
 
-        /* renamed from: component4, reason: from getter */
+        /* JADX INFO: renamed from: component4, reason: from getter */
         public final MeUser getMe() {
             return this.me;
         }
 
-        /* renamed from: component5, reason: from getter */
+        /* JADX INFO: renamed from: component5, reason: from getter */
         public final boolean getIsThreadPeek() {
             return this.isThreadPeek;
         }
 
-        /* renamed from: component6, reason: from getter */
+        /* JADX INFO: renamed from: component6, reason: from getter */
         public final boolean getIsInEventsUpsellExperiment() {
             return this.isInEventsUpsellExperiment;
         }
 
-        /* renamed from: component7, reason: from getter */
+        /* JADX INFO: renamed from: component7, reason: from getter */
         public final boolean getIsChannelNsfw() {
             return this.isChannelNsfw;
         }
 
-        /* renamed from: component8, reason: from getter */
+        /* JADX INFO: renamed from: component8, reason: from getter */
         public final NsfwAllowance getNsfwAllowed() {
             return this.nsfwAllowed;
         }
 
-        /* renamed from: component9, reason: from getter */
+        /* JADX INFO: renamed from: component9, reason: from getter */
         public final long getGuildId() {
             return this.guildId;
         }
@@ -594,6 +603,15 @@ public final class WidgetHomeViewModel extends AppViewModel<ViewState> {
         }
 
         /* JADX WARN: Multi-variable type inference failed */
+        /* JADX WARN: Type inference failed for: r2v10, types: [int] */
+        /* JADX WARN: Type inference failed for: r2v12, types: [int] */
+        /* JADX WARN: Type inference failed for: r2v23 */
+        /* JADX WARN: Type inference failed for: r2v24 */
+        /* JADX WARN: Type inference failed for: r2v28 */
+        /* JADX WARN: Type inference failed for: r2v29 */
+        /* JADX WARN: Type inference failed for: r3v0 */
+        /* JADX WARN: Type inference failed for: r3v1, types: [int] */
+        /* JADX WARN: Type inference failed for: r3v2 */
         public int hashCode() {
             PanelState panelState = this.leftPanelState;
             int iHashCode = (panelState != null ? panelState.hashCode() : 0) * 31;
@@ -604,21 +622,21 @@ public final class WidgetHomeViewModel extends AppViewModel<ViewState> {
             MeUser meUser = this.me;
             int iHashCode4 = (iHashCode3 + (meUser != null ? meUser.hashCode() : 0)) * 31;
             boolean z2 = this.isThreadPeek;
-            int i = z2;
-            if (z2 != 0) {
-                i = 1;
+            ?? r2 = z2;
+            if (z2) {
+                r2 = 1;
             }
-            int i2 = (iHashCode4 + i) * 31;
+            int i = (iHashCode4 + r2) * 31;
             boolean z3 = this.isInEventsUpsellExperiment;
-            int i3 = z3;
-            if (z3 != 0) {
-                i3 = 1;
+            ?? r22 = z3;
+            if (z3) {
+                r22 = 1;
             }
-            int i4 = (i2 + i3) * 31;
+            int i2 = (i + r22) * 31;
             boolean z4 = this.isChannelNsfw;
-            int i5 = (i4 + (z4 ? 1 : z4 ? 1 : 0)) * 31;
+            int i3 = (i2 + (z4 ? 1 : z4)) * 31;
             NsfwAllowance nsfwAllowance = this.nsfwAllowed;
-            int iM3a = (C0002b.m3a(this.guildId) + ((i5 + (nsfwAllowance != null ? nsfwAllowance.hashCode() : 0)) * 31)) * 31;
+            int iM3a = (C0002b.m3a(this.guildId) + ((i3 + (nsfwAllowance != null ? nsfwAllowance.hashCode() : 0)) * 31)) * 31;
             StoreUserConnections.State state = this.connectedAccountsState;
             return iM3a + (state != null ? state.hashCode() : 0);
         }
@@ -661,7 +679,7 @@ public final class WidgetHomeViewModel extends AppViewModel<ViewState> {
         }
     }
 
-    /* compiled from: WidgetHomeViewModel.kt */
+    /* JADX INFO: compiled from: WidgetHomeViewModel.kt */
     public static final /* data */ class ViewState {
         private final long guildId;
         private final boolean isChannelNsfw;
@@ -707,32 +725,32 @@ public final class WidgetHomeViewModel extends AppViewModel<ViewState> {
             return viewState.copy(panelState, panelState3, z4, z5, nsfwAllowance2, j);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final PanelState getLeftPanelState() {
             return this.leftPanelState;
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final PanelState getRightPanelState() {
             return this.rightPanelState;
         }
 
-        /* renamed from: component3, reason: from getter */
+        /* JADX INFO: renamed from: component3, reason: from getter */
         public final boolean getIsNsfwUnconsented() {
             return this.isNsfwUnconsented;
         }
 
-        /* renamed from: component4, reason: from getter */
+        /* JADX INFO: renamed from: component4, reason: from getter */
         public final boolean getIsChannelNsfw() {
             return this.isChannelNsfw;
         }
 
-        /* renamed from: component5, reason: from getter */
+        /* JADX INFO: renamed from: component5, reason: from getter */
         public final NsfwAllowance getNsfwAllowed() {
             return this.nsfwAllowed;
         }
 
-        /* renamed from: component6, reason: from getter */
+        /* JADX INFO: renamed from: component6, reason: from getter */
         public final long getGuildId() {
             return this.guildId;
         }
@@ -771,21 +789,27 @@ public final class WidgetHomeViewModel extends AppViewModel<ViewState> {
         }
 
         /* JADX WARN: Multi-variable type inference failed */
+        /* JADX WARN: Type inference failed for: r2v4, types: [int] */
+        /* JADX WARN: Type inference failed for: r2v7 */
+        /* JADX WARN: Type inference failed for: r2v9 */
+        /* JADX WARN: Type inference failed for: r3v0 */
+        /* JADX WARN: Type inference failed for: r3v1, types: [int] */
+        /* JADX WARN: Type inference failed for: r3v2 */
         public int hashCode() {
             PanelState panelState = this.leftPanelState;
             int iHashCode = (panelState != null ? panelState.hashCode() : 0) * 31;
             PanelState panelState2 = this.rightPanelState;
             int iHashCode2 = (iHashCode + (panelState2 != null ? panelState2.hashCode() : 0)) * 31;
             boolean z2 = this.isNsfwUnconsented;
-            int i = z2;
-            if (z2 != 0) {
-                i = 1;
+            ?? r2 = z2;
+            if (z2) {
+                r2 = 1;
             }
-            int i2 = (iHashCode2 + i) * 31;
+            int i = (iHashCode2 + r2) * 31;
             boolean z3 = this.isChannelNsfw;
-            int i3 = (i2 + (z3 ? 1 : z3 ? 1 : 0)) * 31;
+            int i2 = (i + (z3 ? 1 : z3)) * 31;
             NsfwAllowance nsfwAllowance = this.nsfwAllowed;
-            return C0002b.m3a(this.guildId) + ((i3 + (nsfwAllowance != null ? nsfwAllowance.hashCode() : 0)) * 31);
+            return C0002b.m3a(this.guildId) + ((i2 + (nsfwAllowance != null ? nsfwAllowance.hashCode() : 0)) * 31);
         }
 
         public final boolean isChannelNsfw() {
@@ -981,7 +1005,7 @@ public final class WidgetHomeViewModel extends AppViewModel<ViewState> {
         publishSubject.f27650k.onNext(Event.OpenLeftPanel.INSTANCE);
     }
 
-    /* renamed from: getWidgetHomeModel$app_productionGoogleRelease, reason: from getter */
+    /* JADX INFO: renamed from: getWidgetHomeModel$app_productionGoogleRelease, reason: from getter */
     public final WidgetHomeModel getWidgetHomeModel() {
         return this.widgetHomeModel;
     }

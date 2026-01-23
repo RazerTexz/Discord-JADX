@@ -28,7 +28,7 @@ import org.eclipse.jdt.internal.compiler.ast.ThisReference;
 import org.eclipse.jdt.internal.compiler.ast.TypeDeclaration;
 import org.eclipse.jdt.internal.compiler.lookup.BlockScope;
 
-/* loaded from: discord-126021.apk:lombok/eclipse/handlers/HandleHelper.SCL.lombok */
+/* JADX INFO: loaded from: discord-126021.apk:lombok/eclipse/handlers/HandleHelper.SCL.lombok */
 public class HandleHelper extends EclipseAnnotationHandler<Helper> {
     private Statement[] getStatementsFromAstNode(ASTNode node) {
         if (node instanceof Block) {
@@ -118,8 +118,8 @@ public class HandleHelper extends EclipseAnnotationHandler<Helper> {
         setStatementsOfAstNode(containingBlock.get(), newStatements);
     }
 
-    /* renamed from: lombok.eclipse.handlers.HandleHelper$1 */
-    /* loaded from: discord-126021.apk:lombok/eclipse/handlers/HandleHelper$1.SCL.lombok */
+    /* JADX INFO: renamed from: lombok.eclipse.handlers.HandleHelper$1 */
+    /* JADX INFO: loaded from: discord-126021.apk:lombok/eclipse/handlers/HandleHelper$1.SCL.lombok */
     class C128661 extends ASTVisitor {
         private final /* synthetic */ String[] val$knownMethodNames_;
         private final /* synthetic */ char[] val$helperName;

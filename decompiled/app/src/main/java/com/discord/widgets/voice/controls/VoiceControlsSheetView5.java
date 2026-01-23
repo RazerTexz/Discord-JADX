@@ -3,9 +3,9 @@ package com.discord.widgets.voice.controls;
 import android.view.View;
 import kotlin.jvm.functions.Function0;
 
-/* compiled from: VoiceControlsSheetView.kt */
-/* renamed from: com.discord.widgets.voice.controls.VoiceControlsSheetView$configureUI$$inlined$apply$lambda$1, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: com.discord.widgets.voice.controls.VoiceControlsSheetView$configureUI$$inlined$apply$lambda$1, reason: use source file name */
+/* JADX INFO: compiled from: VoiceControlsSheetView.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class VoiceControlsSheetView5 implements View.OnClickListener {
     public final /* synthetic */ Function0 $onDisconnectClick$inlined;
     public final /* synthetic */ boolean $showDisconnect$inlined;

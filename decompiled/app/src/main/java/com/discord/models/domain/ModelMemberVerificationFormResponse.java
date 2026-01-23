@@ -6,8 +6,8 @@ import java.util.List;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ModelMemberVerificationFormResponse.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: ModelMemberVerificationFormResponse.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class ModelMemberVerificationFormResponse {
     private final ApplicationStatus applicationStatus;
     private final List<ModelMemberVerificationForm.FormField> formResponses;
@@ -39,12 +39,12 @@ public final /* data */ class ModelMemberVerificationFormResponse {
         return modelMemberVerificationFormResponse.copy(str, applicationStatus, list, l);
     }
 
-    /* renamed from: component1, reason: from getter */
+    /* JADX INFO: renamed from: component1, reason: from getter */
     public final String getLastSeen() {
         return this.lastSeen;
     }
 
-    /* renamed from: component2, reason: from getter */
+    /* JADX INFO: renamed from: component2, reason: from getter */
     public final ApplicationStatus getApplicationStatus() {
         return this.applicationStatus;
     }
@@ -53,7 +53,7 @@ public final /* data */ class ModelMemberVerificationFormResponse {
         return this.formResponses;
     }
 
-    /* renamed from: component4, reason: from getter */
+    /* JADX INFO: renamed from: component4, reason: from getter */
     public final Long getGuildId() {
         return this.guildId;
     }

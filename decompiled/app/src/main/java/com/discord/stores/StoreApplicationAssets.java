@@ -22,8 +22,8 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 import p658rx.Observable;
 
-/* compiled from: StoreApplicationAssets.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: StoreApplicationAssets.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class StoreApplicationAssets extends StoreV2 {
     private final Dispatcher dispatcher;
     private final Map<Long, ApplicationAsset> embeddedAppBackgrounds;
@@ -32,17 +32,17 @@ public final class StoreApplicationAssets extends StoreV2 {
     private final ObservationDeck observationDeck;
     private final RestAPI restApi;
 
-    /* compiled from: StoreApplicationAssets.kt */
-    /* renamed from: com.discord.stores.StoreApplicationAssets$fetchIfNonExisting$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreApplicationAssets$fetchIfNonExisting$1 */
+    /* JADX INFO: compiled from: StoreApplicationAssets.kt */
     public static final class C56971 extends Lambda implements Function0<Unit> {
         public final /* synthetic */ long $appId;
 
-        /* compiled from: StoreApplicationAssets.kt */
-        /* renamed from: com.discord.stores.StoreApplicationAssets$fetchIfNonExisting$1$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.stores.StoreApplicationAssets$fetchIfNonExisting$1$1, reason: invalid class name */
+        /* JADX INFO: compiled from: StoreApplicationAssets.kt */
         public static final class AnonymousClass1 extends Lambda implements Function1<List<? extends ApplicationAsset>, Unit> {
 
-            /* compiled from: StoreApplicationAssets.kt */
-            /* renamed from: com.discord.stores.StoreApplicationAssets$fetchIfNonExisting$1$1$1, reason: invalid class name and collision with other inner class name */
+            /* JADX INFO: renamed from: com.discord.stores.StoreApplicationAssets$fetchIfNonExisting$1$1$1, reason: invalid class name and collision with other inner class name */
+            /* JADX INFO: compiled from: StoreApplicationAssets.kt */
             public static final class C132471 extends Lambda implements Function0<Unit> {
                 public final /* synthetic */ List $applicationAssets;
 
@@ -58,7 +58,7 @@ public final class StoreApplicationAssets extends StoreV2 {
                     return Unit.f27425a;
                 }
 
-                /* renamed from: invoke, reason: avoid collision after fix types in other method */
+                /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
                 public final void invoke2() {
                     StoreApplicationAssets.access$getEmbeddedAppBackgroundsLoading$p(StoreApplicationAssets.this).remove(Long.valueOf(C56971.this.$appId));
                     C56971 c56971 = C56971.this;
@@ -76,19 +76,19 @@ public final class StoreApplicationAssets extends StoreV2 {
                 return Unit.f27425a;
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2(List<ApplicationAsset> list) {
                 Intrinsics3.checkNotNullParameter(list, "applicationAssets");
                 StoreApplicationAssets.access$getDispatcher$p(StoreApplicationAssets.this).schedule(new C132471(list));
             }
         }
 
-        /* compiled from: StoreApplicationAssets.kt */
-        /* renamed from: com.discord.stores.StoreApplicationAssets$fetchIfNonExisting$1$2, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.stores.StoreApplicationAssets$fetchIfNonExisting$1$2, reason: invalid class name */
+        /* JADX INFO: compiled from: StoreApplicationAssets.kt */
         public static final class AnonymousClass2 extends Lambda implements Function1<Error, Unit> {
 
-            /* compiled from: StoreApplicationAssets.kt */
-            /* renamed from: com.discord.stores.StoreApplicationAssets$fetchIfNonExisting$1$2$1, reason: invalid class name */
+            /* JADX INFO: renamed from: com.discord.stores.StoreApplicationAssets$fetchIfNonExisting$1$2$1, reason: invalid class name */
+            /* JADX INFO: compiled from: StoreApplicationAssets.kt */
             public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
                 public AnonymousClass1() {
                     super(0);
@@ -100,7 +100,7 @@ public final class StoreApplicationAssets extends StoreV2 {
                     return Unit.f27425a;
                 }
 
-                /* renamed from: invoke, reason: avoid collision after fix types in other method */
+                /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
                 public final void invoke2() {
                     StoreApplicationAssets.access$getEmbeddedAppBackgroundsLoading$p(StoreApplicationAssets.this).remove(Long.valueOf(C56971.this.$appId));
                 }
@@ -116,7 +116,7 @@ public final class StoreApplicationAssets extends StoreV2 {
                 return Unit.f27425a;
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2(Error error) {
                 Intrinsics3.checkNotNullParameter(error, "it");
                 StoreApplicationAssets.access$getDispatcher$p(StoreApplicationAssets.this).schedule(new AnonymousClass1());
@@ -135,7 +135,7 @@ public final class StoreApplicationAssets extends StoreV2 {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             if (StoreApplicationAssets.access$getEmbeddedAppBackgrounds$p(StoreApplicationAssets.this).containsKey(Long.valueOf(this.$appId)) || StoreApplicationAssets.access$getEmbeddedAppBackgroundsLoading$p(StoreApplicationAssets.this).contains(Long.valueOf(this.$appId))) {
                 return;
@@ -144,8 +144,8 @@ public final class StoreApplicationAssets extends StoreV2 {
         }
     }
 
-    /* compiled from: StoreApplicationAssets.kt */
-    /* renamed from: com.discord.stores.StoreApplicationAssets$observeEmbeddedAppBackgrounds$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreApplicationAssets$observeEmbeddedAppBackgrounds$1 */
+    /* JADX INFO: compiled from: StoreApplicationAssets.kt */
     public static final class C56981 extends Lambda implements Function0<Map<Long, ? extends ApplicationAsset>> {
         public C56981() {
             super(0);
@@ -157,7 +157,7 @@ public final class StoreApplicationAssets extends StoreV2 {
         }
 
         @Override // kotlin.jvm.functions.Function0
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final Map<Long, ? extends ApplicationAsset> invoke2() {
             return StoreApplicationAssets.this.getEmbeddedAppBackgrounds();
         }

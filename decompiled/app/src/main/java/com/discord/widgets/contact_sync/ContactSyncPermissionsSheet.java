@@ -33,21 +33,21 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 import p507d0.p592z.p594d.Reflection2;
 
-/* compiled from: ContactSyncPermissionsSheet.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: ContactSyncPermissionsSheet.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class ContactSyncPermissionsSheet extends AppBottomSheet {
     public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(ContactSyncPermissionsSheet.class, "binding", "getBinding()Lcom/discord/databinding/ContactSyncPermissionsSheetBinding;", 0)};
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
 
-    /* renamed from: binding$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
 
-    /* renamed from: viewModel$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: viewModel$delegate, reason: from kotlin metadata */
     private final Lazy viewModel;
 
-    /* compiled from: ContactSyncPermissionsSheet.kt */
+    /* JADX INFO: compiled from: ContactSyncPermissionsSheet.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -64,8 +64,8 @@ public final class ContactSyncPermissionsSheet extends AppBottomSheet {
         }
     }
 
-    /* compiled from: ContactSyncPermissionsSheet.kt */
-    /* renamed from: com.discord.widgets.contact_sync.ContactSyncPermissionsSheet$configureUI$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.contact_sync.ContactSyncPermissionsSheet$configureUI$1 */
+    /* JADX INFO: compiled from: ContactSyncPermissionsSheet.kt */
     public static final class C82091 extends Lambda implements Function1<RenderContext, Unit> {
         public C82091() {
             super(1);
@@ -77,12 +77,12 @@ public final class ContactSyncPermissionsSheet extends AppBottomSheet {
             return Unit.f27425a;
         }
 
-        /* compiled from: ContactSyncPermissionsSheet.kt */
-        /* renamed from: com.discord.widgets.contact_sync.ContactSyncPermissionsSheet$configureUI$1$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.widgets.contact_sync.ContactSyncPermissionsSheet$configureUI$1$1, reason: invalid class name */
+        /* JADX INFO: compiled from: ContactSyncPermissionsSheet.kt */
         public static final class AnonymousClass1 extends Lambda implements Function1<Hook, Unit> {
 
-            /* compiled from: ContactSyncPermissionsSheet.kt */
-            /* renamed from: com.discord.widgets.contact_sync.ContactSyncPermissionsSheet$configureUI$1$1$1, reason: invalid class name and collision with other inner class name */
+            /* JADX INFO: renamed from: com.discord.widgets.contact_sync.ContactSyncPermissionsSheet$configureUI$1$1$1, reason: invalid class name and collision with other inner class name */
+            /* JADX INFO: compiled from: ContactSyncPermissionsSheet.kt */
             public static final class C132831 extends Lambda implements Function1<View, Unit> {
                 public static final C132831 INSTANCE = new C132831();
 
@@ -96,7 +96,7 @@ public final class ContactSyncPermissionsSheet extends AppBottomSheet {
                     return Unit.f27425a;
                 }
 
-                /* renamed from: invoke, reason: avoid collision after fix types in other method */
+                /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
                 public final void invoke2(View view) {
                     Intrinsics3.checkNotNullParameter(view, "it");
                     UriHandler uriHandler = UriHandler.INSTANCE;
@@ -110,7 +110,7 @@ public final class ContactSyncPermissionsSheet extends AppBottomSheet {
                 super(1);
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2(Hook hook) {
                 Intrinsics3.checkNotNullParameter(hook, "$receiver");
                 hook.styles.add(new ClickableSpan(Integer.valueOf(ColorCompat.getColor(ContactSyncPermissionsSheet.this.getContext(), C5419R.color.link)), false, null, C132831.INSTANCE, 4, null));
@@ -123,15 +123,15 @@ public final class ContactSyncPermissionsSheet extends AppBottomSheet {
             }
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(RenderContext renderContext) {
             Intrinsics3.checkNotNullParameter(renderContext, "$receiver");
             renderContext.m8422a("learnMoreHook", new AnonymousClass1());
         }
     }
 
-    /* compiled from: ContactSyncPermissionsSheet.kt */
-    /* renamed from: com.discord.widgets.contact_sync.ContactSyncPermissionsSheet$configureUI$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.contact_sync.ContactSyncPermissionsSheet$configureUI$2 */
+    /* JADX INFO: compiled from: ContactSyncPermissionsSheet.kt */
     public static final class ViewOnClickListenerC82102 implements View.OnClickListener {
         public final /* synthetic */ boolean $discoverable;
 
@@ -147,8 +147,8 @@ public final class ContactSyncPermissionsSheet extends AppBottomSheet {
         }
     }
 
-    /* compiled from: ContactSyncPermissionsSheet.kt */
-    /* renamed from: com.discord.widgets.contact_sync.ContactSyncPermissionsSheet$configureUI$3 */
+    /* JADX INFO: renamed from: com.discord.widgets.contact_sync.ContactSyncPermissionsSheet$configureUI$3 */
+    /* JADX INFO: compiled from: ContactSyncPermissionsSheet.kt */
     public static final class ViewOnClickListenerC82113 implements View.OnClickListener {
         public final /* synthetic */ WidgetContactSyncViewModel.ViewState $viewState;
 
@@ -162,8 +162,8 @@ public final class ContactSyncPermissionsSheet extends AppBottomSheet {
         }
     }
 
-    /* compiled from: ContactSyncPermissionsSheet.kt */
-    /* renamed from: com.discord.widgets.contact_sync.ContactSyncPermissionsSheet$configureUI$4 */
+    /* JADX INFO: renamed from: com.discord.widgets.contact_sync.ContactSyncPermissionsSheet$configureUI$4 */
+    /* JADX INFO: compiled from: ContactSyncPermissionsSheet.kt */
     public static final class ViewOnClickListenerC82124 implements View.OnClickListener {
         public final /* synthetic */ WidgetContactSyncViewModel.ViewState $viewState;
 
@@ -177,8 +177,8 @@ public final class ContactSyncPermissionsSheet extends AppBottomSheet {
         }
     }
 
-    /* compiled from: ContactSyncPermissionsSheet.kt */
-    /* renamed from: com.discord.widgets.contact_sync.ContactSyncPermissionsSheet$onResume$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.contact_sync.ContactSyncPermissionsSheet$onResume$1 */
+    /* JADX INFO: compiled from: ContactSyncPermissionsSheet.kt */
     public static final class C82131 extends Lambda implements Function1<WidgetContactSyncViewModel.ViewState, Unit> {
         public C82131() {
             super(1);
@@ -190,7 +190,7 @@ public final class ContactSyncPermissionsSheet extends AppBottomSheet {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(WidgetContactSyncViewModel.ViewState viewState) {
             Intrinsics3.checkNotNullParameter(viewState, "it");
             ContactSyncPermissionsSheet.access$configureUI(ContactSyncPermissionsSheet.this, viewState);

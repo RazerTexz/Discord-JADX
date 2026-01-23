@@ -13,7 +13,7 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.content.res.AppCompatResources;
 import androidx.core.widget.TextViewCompat;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class AppCompatCheckedTextView extends CheckedTextView {
     private static final int[] TINT_ATTRS = {R.attr.checkMark};
     private final AppCompatTextHelper mTextHelper;

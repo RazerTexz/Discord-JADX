@@ -2,7 +2,7 @@ package com.adjust.sdk;
 
 import android.content.Context;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public interface IPackageHandler {
     void addPackage(ActivityPackage activityPackage);
 

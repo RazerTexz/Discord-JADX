@@ -56,27 +56,27 @@ import p007b.p225i.p226a.p288f.p313h.p325l.C3684h8;
 import p007b.p225i.p226a.p288f.p313h.p325l.InterfaceC3660fc;
 import p007b.p225i.p226a.p288f.p313h.p325l.InterfaceC3670g8;
 
-/* compiled from: com.google.android.gms:play-services-measurement-impl@@18.0.0 */
-/* renamed from: b.i.a.f.i.b.t9 */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.i.b.t9 */
+/* JADX INFO: compiled from: com.google.android.gms:play-services-measurement-impl@@18.0.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public final class C4196t9 extends AbstractC4170r5 {
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public static final String[] f11231c = {"firebase_", "google_", "ga_"};
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public static final String[] f11232d = {"_err"};
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public SecureRandom f11233e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final AtomicLong f11234f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public int f11235g;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public Integer f11236h;
 
     public C4196t9(C4202u4 c4202u4) {
@@ -85,7 +85,7 @@ public final class C4196t9 extends AbstractC4170r5 {
         this.f11234f = new AtomicLong(0L);
     }
 
-    /* renamed from: A */
+    /* JADX INFO: renamed from: A */
     public static Bundle m5871A(List<zzku> list) {
         Bundle bundle = new Bundle();
         if (list == null) {
@@ -110,7 +110,7 @@ public final class C4196t9 extends AbstractC4170r5 {
         return bundle;
     }
 
-    /* renamed from: E */
+    /* JADX INFO: renamed from: E */
     public static String m5872E(String str, int i, boolean z2) {
         if (str == null) {
             return null;
@@ -124,7 +124,7 @@ public final class C4196t9 extends AbstractC4170r5 {
         return null;
     }
 
-    /* renamed from: F */
+    /* JADX INFO: renamed from: F */
     public static void m5873F(Bundle bundle, int i, String str, Object obj) {
         if (m5883l0(bundle, i)) {
             bundle.putString("_ev", m5872E(str, 40, true));
@@ -136,30 +136,30 @@ public final class C4196t9 extends AbstractC4170r5 {
         }
     }
 
-    /* renamed from: U */
+    /* JADX INFO: renamed from: U */
     public static boolean m5874U(Context context) {
         Objects.requireNonNull(context, "null reference");
         return Build.VERSION.SDK_INT >= 24 ? m5882k0(context, "com.google.android.gms.measurement.AppMeasurementJobService") : m5882k0(context, "com.google.android.gms.measurement.AppMeasurementService");
     }
 
-    /* renamed from: V */
+    /* JADX INFO: renamed from: V */
     public static boolean m5875V(Intent intent) {
         String stringExtra = intent.getStringExtra("android.intent.extra.REFERRER_NAME");
         return "android-app://com.google.android.googlequicksearchbox/https/www.google.com".equals(stringExtra) || "https://www.google.com".equals(stringExtra) || "android-app://com.google.appcrawler".equals(stringExtra);
     }
 
-    /* renamed from: W */
+    /* JADX INFO: renamed from: W */
     public static boolean m5876W(Object obj) {
         return (obj instanceof Parcelable[]) || (obj instanceof ArrayList) || (obj instanceof Bundle);
     }
 
-    /* renamed from: X */
+    /* JADX INFO: renamed from: X */
     public static boolean m5877X(String str) {
         AnimatableValueParser.m583w(str);
         return str.charAt(0) != '_' || str.equals("_ep");
     }
 
-    /* renamed from: d0 */
+    /* JADX INFO: renamed from: d0 */
     public static boolean m5878d0(String str, String str2, String str3, String str4) {
         boolean zIsEmpty = TextUtils.isEmpty(str);
         boolean zIsEmpty2 = TextUtils.isEmpty(str2);
@@ -178,7 +178,7 @@ public final class C4196t9 extends AbstractC4170r5 {
         return TextUtils.isEmpty(str3) || !str3.equals(str4);
     }
 
-    /* renamed from: e0 */
+    /* JADX INFO: renamed from: e0 */
     public static boolean m5879e0(String str, String[] strArr) {
         for (String str2 : strArr) {
             if (m5884q0(str, str2)) {
@@ -188,7 +188,7 @@ public final class C4196t9 extends AbstractC4170r5 {
         return false;
     }
 
-    /* renamed from: g0 */
+    /* JADX INFO: renamed from: g0 */
     public static byte[] m5880g0(Parcelable parcelable) {
         if (parcelable == null) {
             return null;
@@ -202,7 +202,7 @@ public final class C4196t9 extends AbstractC4170r5 {
         }
     }
 
-    /* renamed from: j0 */
+    /* JADX INFO: renamed from: j0 */
     public static ArrayList<Bundle> m5881j0(List<zzz> list) {
         if (list == null) {
             return new ArrayList<>(0);
@@ -252,7 +252,7 @@ public final class C4196t9 extends AbstractC4170r5 {
         return arrayList;
     }
 
-    /* renamed from: k0 */
+    /* JADX INFO: renamed from: k0 */
     public static boolean m5882k0(Context context, String str) {
         ServiceInfo serviceInfo;
         try {
@@ -267,7 +267,7 @@ public final class C4196t9 extends AbstractC4170r5 {
         return false;
     }
 
-    /* renamed from: l0 */
+    /* JADX INFO: renamed from: l0 */
     public static boolean m5883l0(Bundle bundle, int i) {
         if (bundle == null || bundle.getLong("_err") != 0) {
             return false;
@@ -276,7 +276,7 @@ public final class C4196t9 extends AbstractC4170r5 {
         return true;
     }
 
-    /* renamed from: q0 */
+    /* JADX INFO: renamed from: q0 */
     public static boolean m5884q0(String str, String str2) {
         if (str == null && str2 == null) {
             return true;
@@ -287,17 +287,17 @@ public final class C4196t9 extends AbstractC4170r5 {
         return str.equals(str2);
     }
 
-    /* renamed from: r0 */
+    /* JADX INFO: renamed from: r0 */
     public static boolean m5885r0(String str) {
         return !TextUtils.isEmpty(str) && str.startsWith("_");
     }
 
-    /* renamed from: u */
+    /* JADX INFO: renamed from: u */
     public static long m5886u(long j, long j2) {
         return ((j2 * 60000) + j) / 86400000;
     }
 
-    /* renamed from: v */
+    /* JADX INFO: renamed from: v */
     public static long m5887v(zzap zzapVar) {
         long length = 0;
         if (zzapVar == null) {
@@ -305,27 +305,28 @@ public final class C4196t9 extends AbstractC4170r5 {
         }
         Iterator<String> it = zzapVar.f20665j.keySet().iterator();
         while (it.hasNext()) {
-            if (zzapVar.m9113w0(it.next()) instanceof Parcelable[]) {
-                length += ((Parcelable[]) r3).length;
+            Object objM9113w0 = zzapVar.m9113w0(it.next());
+            if (objM9113w0 instanceof Parcelable[]) {
+                length += (long) ((Parcelable[]) objM9113w0).length;
             }
         }
         return length;
     }
 
-    /* renamed from: w */
+    /* JADX INFO: renamed from: w */
     public static long m5888w(byte[] bArr) {
         Objects.requireNonNull(bArr, "null reference");
         int i = 0;
         AnimatableValueParser.m432F(bArr.length > 0);
         long j = 0;
         for (int length = bArr.length - 1; length >= 0 && length >= bArr.length - 8; length--) {
-            j += (bArr[length] & 255) << i;
+            j += (((long) bArr[length]) & 255) << i;
             i += 8;
         }
         return j;
     }
 
-    /* renamed from: x0 */
+    /* JADX INFO: renamed from: x0 */
     public static MessageDigest m5889x0() {
         MessageDigest messageDigest;
         for (int i = 0; i < 2; i++) {
@@ -340,7 +341,7 @@ public final class C4196t9 extends AbstractC4170r5 {
         return null;
     }
 
-    /* renamed from: B */
+    /* JADX INFO: renamed from: B */
     public final zzaq m5890B(String str, String str2, Bundle bundle, String str3, long j, boolean z2, boolean z3) {
         if (TextUtils.isEmpty(str2)) {
             return null;
@@ -358,7 +359,7 @@ public final class C4196t9 extends AbstractC4170r5 {
         return new zzaq(str2, new zzap(bundleM5929z), str3, j);
     }
 
-    /* renamed from: C */
+    /* JADX INFO: renamed from: C */
     public final Object m5891C(int i, Object obj, boolean z2, boolean z3) {
         if (obj == null) {
             return null;
@@ -399,7 +400,7 @@ public final class C4196t9 extends AbstractC4170r5 {
         return arrayList.toArray(new Bundle[arrayList.size()]);
     }
 
-    /* renamed from: D */
+    /* JADX INFO: renamed from: D */
     public final Object m5892D(String str, Object obj) {
         if ("_ev".equals(str)) {
             return m5891C(256, obj, true, true);
@@ -408,7 +409,7 @@ public final class C4196t9 extends AbstractC4170r5 {
     }
 
     @WorkerThread
-    /* renamed from: G */
+    /* JADX INFO: renamed from: G */
     public final void m5893G(Bundle bundle, long j) {
         long j2 = bundle.getLong("_et");
         if (j2 != 0) {
@@ -417,7 +418,7 @@ public final class C4196t9 extends AbstractC4170r5 {
         bundle.putLong("_et", j + j2);
     }
 
-    /* renamed from: H */
+    /* JADX INFO: renamed from: H */
     public final void m5894H(Bundle bundle, Bundle bundle2) {
         if (bundle2 == null) {
             return;
@@ -429,7 +430,7 @@ public final class C4196t9 extends AbstractC4170r5 {
         }
     }
 
-    /* renamed from: I */
+    /* JADX INFO: renamed from: I */
     public final void m5895I(Bundle bundle, String str, Object obj) {
         if (bundle == null) {
             return;
@@ -451,7 +452,7 @@ public final class C4196t9 extends AbstractC4170r5 {
         }
     }
 
-    /* renamed from: J */
+    /* JADX INFO: renamed from: J */
     public final void m5896J(InterfaceC3660fc interfaceC3660fc, int i) {
         Bundle bundle = new Bundle();
         bundle.putInt("r", i);
@@ -462,7 +463,7 @@ public final class C4196t9 extends AbstractC4170r5 {
         }
     }
 
-    /* renamed from: K */
+    /* JADX INFO: renamed from: K */
     public final void m5897K(InterfaceC3660fc interfaceC3660fc, long j) {
         try {
             interfaceC3660fc.mo4619f(outline.m832T("r", j));
@@ -471,7 +472,7 @@ public final class C4196t9 extends AbstractC4170r5 {
         }
     }
 
-    /* renamed from: L */
+    /* JADX INFO: renamed from: L */
     public final void m5898L(InterfaceC3660fc interfaceC3660fc, Bundle bundle) {
         try {
             interfaceC3660fc.mo4619f(bundle);
@@ -480,7 +481,7 @@ public final class C4196t9 extends AbstractC4170r5 {
         }
     }
 
-    /* renamed from: M */
+    /* JADX INFO: renamed from: M */
     public final void m5899M(InterfaceC3660fc interfaceC3660fc, String str) {
         Bundle bundle = new Bundle();
         bundle.putString("r", str);
@@ -491,7 +492,7 @@ public final class C4196t9 extends AbstractC4170r5 {
         }
     }
 
-    /* renamed from: N */
+    /* JADX INFO: renamed from: N */
     public final void m5900N(InterfaceC3660fc interfaceC3660fc, ArrayList<Bundle> arrayList) {
         Bundle bundle = new Bundle();
         bundle.putParcelableArrayList("r", arrayList);
@@ -502,7 +503,7 @@ public final class C4196t9 extends AbstractC4170r5 {
         }
     }
 
-    /* renamed from: O */
+    /* JADX INFO: renamed from: O */
     public final void m5901O(InterfaceC3660fc interfaceC3660fc, boolean z2) {
         Bundle bundle = new Bundle();
         bundle.putBoolean("r", z2);
@@ -513,7 +514,7 @@ public final class C4196t9 extends AbstractC4170r5 {
         }
     }
 
-    /* renamed from: P */
+    /* JADX INFO: renamed from: P */
     public final void m5902P(InterfaceC3660fc interfaceC3660fc, byte[] bArr) {
         Bundle bundle = new Bundle();
         bundle.putByteArray("r", bArr);
@@ -524,7 +525,7 @@ public final class C4196t9 extends AbstractC4170r5 {
         }
     }
 
-    /* renamed from: Q */
+    /* JADX INFO: renamed from: Q */
     public final void m5903Q(C4201u3 c4201u3, int i) {
         int i2 = 0;
         for (String str : new TreeSet(c4201u3.f11244d.keySet())) {
@@ -540,12 +541,12 @@ public final class C4196t9 extends AbstractC4170r5 {
         }
     }
 
-    /* renamed from: R */
+    /* JADX INFO: renamed from: R */
     public final void m5904R(InterfaceC4218v9 interfaceC4218v9, int i, String str, String str2, int i2) {
         m5905S(interfaceC4218v9, null, i, str, str2, i2);
     }
 
-    /* renamed from: S */
+    /* JADX INFO: renamed from: S */
     public final void m5905S(InterfaceC4218v9 interfaceC4218v9, String str, int i, String str2, String str3, int i2) {
         Bundle bundle = new Bundle();
         m5883l0(bundle, i);
@@ -562,8 +563,8 @@ public final class C4196t9 extends AbstractC4170r5 {
         }
     }
 
-    /* renamed from: T */
-    public final void m5906T(String str, String str2, String str3, Bundle bundle, @Nullable List<String> list, boolean z2) throws IllegalStateException {
+    /* JADX INFO: renamed from: T */
+    public final void m5906T(String str, String str2, String str3, Bundle bundle, @Nullable List<String> list, boolean z2) {
         int iM5923u0;
         String str4;
         int iM5919s;
@@ -605,7 +606,7 @@ public final class C4196t9 extends AbstractC4170r5 {
     }
 
     @SuppressLint({"ApplySharedPref"})
-    /* renamed from: Y */
+    /* JADX INFO: renamed from: Y */
     public final boolean m5907Y(String str, double d) {
         try {
             SharedPreferences.Editor editorEdit = this.f11202a.f11254b.getSharedPreferences("google.analytics.deferred.deeplink.prefs", 0).edit();
@@ -618,8 +619,8 @@ public final class C4196t9 extends AbstractC4170r5 {
         }
     }
 
-    /* renamed from: Z */
-    public final boolean m5908Z(String str, int i, String str2) throws IllegalStateException {
+    /* JADX INFO: renamed from: Z */
+    public final boolean m5908Z(String str, int i, String str2) {
         if (str2 == null) {
             mo5726g().f11143h.m5861b("Name is required and can't be null. Type", str);
             return false;
@@ -631,7 +632,7 @@ public final class C4196t9 extends AbstractC4170r5 {
         return false;
     }
 
-    /* renamed from: a0 */
+    /* JADX INFO: renamed from: a0 */
     public final boolean m5909a0(String str, String str2) {
         if (str2 == null) {
             mo5726g().f11143h.m5861b("Name is required and can't be null. Type", str);
@@ -659,8 +660,8 @@ public final class C4196t9 extends AbstractC4170r5 {
         return true;
     }
 
-    /* renamed from: b0 */
-    public final boolean m5910b0(String str, String str2, int i, Object obj) throws IllegalStateException {
+    /* JADX INFO: renamed from: b0 */
+    public final boolean m5910b0(String str, String str2, int i, Object obj) {
         if (obj != null && !(obj instanceof Long) && !(obj instanceof Float) && !(obj instanceof Integer) && !(obj instanceof Byte) && !(obj instanceof Short) && !(obj instanceof Boolean) && !(obj instanceof Double)) {
             if (!(obj instanceof String) && !(obj instanceof Character) && !(obj instanceof CharSequence)) {
                 return false;
@@ -674,7 +675,7 @@ public final class C4196t9 extends AbstractC4170r5 {
         return true;
     }
 
-    /* renamed from: c0 */
+    /* JADX INFO: renamed from: c0 */
     public final boolean m5911c0(String str, String str2, String str3) {
         if (!TextUtils.isEmpty(str)) {
             Objects.requireNonNull(str, "null reference");
@@ -703,7 +704,7 @@ public final class C4196t9 extends AbstractC4170r5 {
         return false;
     }
 
-    /* renamed from: f0 */
+    /* JADX INFO: renamed from: f0 */
     public final boolean m5912f0(String str, String[] strArr, String[] strArr2, String str2) {
         boolean z2;
         if (str2 == null) {
@@ -735,7 +736,7 @@ public final class C4196t9 extends AbstractC4170r5 {
         return false;
     }
 
-    /* renamed from: h0 */
+    /* JADX INFO: renamed from: h0 */
     public final int m5913h0(String str) {
         if (!m5915m0("user property", str)) {
             return 6;
@@ -746,14 +747,14 @@ public final class C4196t9 extends AbstractC4170r5 {
         return 15;
     }
 
-    /* renamed from: i0 */
+    /* JADX INFO: renamed from: i0 */
     public final int m5914i0(String str, Object obj) {
         return "_ldl".equals(str) ? m5910b0("user property referrer", str, m5930z0(str), obj) : m5910b0("user property", str, m5930z0(str), obj) ? 0 : 7;
     }
 
     @Override // p007b.p225i.p226a.p288f.p330i.p332b.AbstractC4170r5
     @WorkerThread
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public final void mo5573m() {
         mo5848b();
         SecureRandom secureRandom = new SecureRandom();
@@ -767,7 +768,7 @@ public final class C4196t9 extends AbstractC4170r5 {
         this.f11234f.set(jNextLong);
     }
 
-    /* renamed from: m0 */
+    /* JADX INFO: renamed from: m0 */
     public final boolean m5915m0(String str, String str2) {
         if (str2 == null) {
             mo5726g().f11143h.m5861b("Name is required and can't be null. Type", str);
@@ -795,12 +796,12 @@ public final class C4196t9 extends AbstractC4170r5 {
         return true;
     }
 
-    /* renamed from: n0 */
+    /* JADX INFO: renamed from: n0 */
     public final Object m5916n0(String str, Object obj) {
         return "_ldl".equals(str) ? m5891C(m5930z0(str), obj, true, false) : m5891C(m5930z0(str), obj, false, false);
     }
 
-    /* renamed from: o0 */
+    /* JADX INFO: renamed from: o0 */
     public final boolean m5917o0(Context context, String str) {
         Signature[] signatureArr;
         X500Principal x500Principal = new X500Principal("CN=Android Debug,O=Android,C=US");
@@ -820,7 +821,7 @@ public final class C4196t9 extends AbstractC4170r5 {
     }
 
     @WorkerThread
-    /* renamed from: p0 */
+    /* JADX INFO: renamed from: p0 */
     public final boolean m5918p0(String str) {
         mo5848b();
         if (C3411b.m4376a(this.f11202a.f11254b).f9605a.checkCallingOrSelfPermission(str) == 0) {
@@ -831,7 +832,7 @@ public final class C4196t9 extends AbstractC4170r5 {
     }
 
     @Override // p007b.p225i.p226a.p288f.p330i.p332b.AbstractC4170r5
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     public final boolean mo5574r() {
         return true;
     }
@@ -839,11 +840,11 @@ public final class C4196t9 extends AbstractC4170r5 {
     /* JADX WARN: Removed duplicated region for block: B:29:0x0076  */
     /* JADX WARN: Removed duplicated region for block: B:41:0x00a9  */
     @WorkerThread
-    /* renamed from: s */
+    /* JADX INFO: renamed from: s */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
-    public final int m5919s(String str, String str2, String str3, Object obj, Bundle bundle, @Nullable List<String> list, boolean z2, boolean z3) throws IllegalStateException {
+    public final int m5919s(String str, String str2, String str3, Object obj, Bundle bundle, @Nullable List<String> list, boolean z2, boolean z3) {
         int i;
         int size;
         boolean z4;
@@ -939,7 +940,7 @@ public final class C4196t9 extends AbstractC4170r5 {
         return 4;
     }
 
-    /* renamed from: s0 */
+    /* JADX INFO: renamed from: s0 */
     public final boolean m5920s0(String str) {
         if (TextUtils.isEmpty(str)) {
             return false;
@@ -947,7 +948,7 @@ public final class C4196t9 extends AbstractC4170r5 {
         return this.f11202a.f11260h.m5523h("debug.firebase.analytics.app", "").equals(str);
     }
 
-    /* renamed from: t */
+    /* JADX INFO: renamed from: t */
     public final int m5921t(String str, boolean z2) {
         if (!m5915m0("event", str)) {
             return 2;
@@ -962,7 +963,7 @@ public final class C4196t9 extends AbstractC4170r5 {
         return !m5908Z("event", 40, str) ? 2 : 0;
     }
 
-    /* renamed from: t0 */
+    /* JADX INFO: renamed from: t0 */
     public final long m5922t0() {
         long andIncrement;
         long j;
@@ -979,12 +980,12 @@ public final class C4196t9 extends AbstractC4170r5 {
             long jNextLong = new Random(jNanoTime ^ System.currentTimeMillis()).nextLong();
             int i = this.f11235g + 1;
             this.f11235g = i;
-            j = jNextLong + i;
+            j = jNextLong + ((long) i);
         }
         return j;
     }
 
-    /* renamed from: u0 */
+    /* JADX INFO: renamed from: u0 */
     public final int m5923u0(String str) {
         if (!m5909a0("event param", str)) {
             return 3;
@@ -996,7 +997,7 @@ public final class C4196t9 extends AbstractC4170r5 {
     }
 
     @WorkerThread
-    /* renamed from: v0 */
+    /* JADX INFO: renamed from: v0 */
     public final SecureRandom m5924v0() {
         mo5848b();
         if (this.f11233e == null) {
@@ -1005,7 +1006,7 @@ public final class C4196t9 extends AbstractC4170r5 {
         return this.f11233e;
     }
 
-    /* renamed from: w0 */
+    /* JADX INFO: renamed from: w0 */
     public final int m5925w0(String str) {
         if (!m5915m0("event param", str)) {
             return 3;
@@ -1016,7 +1017,7 @@ public final class C4196t9 extends AbstractC4170r5 {
         return 14;
     }
 
-    /* renamed from: x */
+    /* JADX INFO: renamed from: x */
     public final Bundle m5926x(@NonNull Uri uri) {
         String queryParameter;
         String queryParameter2;
@@ -1080,7 +1081,7 @@ public final class C4196t9 extends AbstractC4170r5 {
         }
     }
 
-    /* renamed from: y */
+    /* JADX INFO: renamed from: y */
     public final Bundle m5927y(Bundle bundle) {
         Bundle bundle2 = new Bundle();
         if (bundle != null) {
@@ -1096,7 +1097,7 @@ public final class C4196t9 extends AbstractC4170r5 {
         return bundle2;
     }
 
-    /* renamed from: y0 */
+    /* JADX INFO: renamed from: y0 */
     public final int m5928y0() {
         if (this.f11236h == null) {
             C3256c c3256c = C3256c.f9307b;
@@ -1114,7 +1115,7 @@ public final class C4196t9 extends AbstractC4170r5 {
         return this.f11236h.intValue();
     }
 
-    /* renamed from: z */
+    /* JADX INFO: renamed from: z */
     public final Bundle m5929z(String str, String str2, Bundle bundle, @Nullable List list, boolean z2) {
         int iM5923u0;
         int i;
@@ -1172,7 +1173,7 @@ public final class C4196t9 extends AbstractC4170r5 {
         return bundle2;
     }
 
-    /* renamed from: z0 */
+    /* JADX INFO: renamed from: z0 */
     public final int m5930z0(String str) {
         if ("_ldl".equals(str)) {
             return 2048;

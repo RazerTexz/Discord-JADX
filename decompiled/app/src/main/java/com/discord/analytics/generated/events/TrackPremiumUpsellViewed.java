@@ -10,8 +10,8 @@ import com.discord.api.science.AnalyticsSchema;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: TrackPremiumUpsellViewed.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: TrackPremiumUpsellViewed.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class TrackPremiumUpsellViewed implements AnalyticsSchema, TrackBase2, TrackLocationMetadata2, TrackSourceMetadata2 {
     private TrackBase trackBase;
     private TrackLocationMetadata trackLocationMetadata;
@@ -26,7 +26,7 @@ public final /* data */ class TrackPremiumUpsellViewed implements AnalyticsSchem
     private final transient String analyticsSchemaTypeName = "premium_upsell_viewed";
 
     @Override // com.discord.api.science.AnalyticsSchema
-    /* renamed from: d, reason: from getter */
+    /* JADX INFO: renamed from: d, reason: from getter */
     public String getAnalyticsSchemaTypeName() {
         return this.analyticsSchemaTypeName;
     }

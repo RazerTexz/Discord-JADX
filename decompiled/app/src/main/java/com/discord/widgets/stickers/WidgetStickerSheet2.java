@@ -14,9 +14,9 @@ import kotlin.jvm.functions.Function1;
 import p507d0.p592z.p594d.FunctionReferenceImpl;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: WidgetStickerSheet.kt */
-/* renamed from: com.discord.widgets.stickers.WidgetStickerSheet$binding$2, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: com.discord.widgets.stickers.WidgetStickerSheet$binding$2, reason: use source file name */
+/* JADX INFO: compiled from: WidgetStickerSheet.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* synthetic */ class WidgetStickerSheet2 extends FunctionReferenceImpl implements Function1<View, WidgetStickerSheetBinding> {
     public static final WidgetStickerSheet2 INSTANCE = new WidgetStickerSheet2();
 
@@ -29,7 +29,7 @@ public final /* synthetic */ class WidgetStickerSheet2 extends FunctionReference
         return invoke2(view);
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final WidgetStickerSheetBinding invoke2(View view) {
         Intrinsics3.checkNotNullParameter(view, "p1");
         int i = C5419R.id.sticker_sheet_buy_button;

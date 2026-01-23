@@ -12,12 +12,12 @@ import p007b.p225i.p226a.p288f.p299e.p307n.C3398a;
 import p007b.p225i.p226a.p288f.p299e.p310p.C3410a;
 import p007b.p225i.p226a.p288f.p299e.p310p.C3411b;
 
-/* compiled from: com.google.android.gms:play-services-measurement-impl@@18.0.0 */
-/* renamed from: b.i.a.f.i.b.m4 */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.i.b.m4 */
+/* JADX INFO: compiled from: com.google.android.gms:play-services-measurement-impl@@18.0.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public final class C4114m4 {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final C4202u4 f10963a;
 
     public C4114m4(C4202u4 c4202u4) {
@@ -25,7 +25,7 @@ public final class C4114m4 {
     }
 
     @WorkerThread
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final void m5758a(String str) {
         if (str == null || str.isEmpty()) {
             this.f10963a.mo5726g().f11145j.m5860a("Install Referrer Reporter was called with invalid app package name");
@@ -65,7 +65,7 @@ public final class C4114m4 {
         }
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final boolean m5759b() {
         try {
             C3410a c3410aM4376a = C3411b.m4376a(this.f10963a.f11254b);

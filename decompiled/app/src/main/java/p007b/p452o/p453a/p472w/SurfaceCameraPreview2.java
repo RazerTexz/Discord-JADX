@@ -10,18 +10,18 @@ import androidx.annotation.NonNull;
 import com.otaliastudios.cameraview.C11196R;
 import p007b.p452o.p453a.CameraLogger;
 
-/* compiled from: SurfaceCameraPreview.java */
-/* renamed from: b.o.a.w.h, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.o.a.w.h, reason: use source file name */
+/* JADX INFO: compiled from: SurfaceCameraPreview.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class SurfaceCameraPreview2 extends CameraPreview<SurfaceView, SurfaceHolder> {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static final CameraLogger f14238j = new CameraLogger(SurfaceCameraPreview2.class.getSimpleName());
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public boolean f14239k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public View f14240l;
 
     public SurfaceCameraPreview2(@NonNull Context context, @NonNull ViewGroup viewGroup) {
@@ -30,28 +30,28 @@ public class SurfaceCameraPreview2 extends CameraPreview<SurfaceView, SurfaceHol
 
     @Override // p007b.p452o.p453a.p472w.CameraPreview
     @NonNull
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public SurfaceHolder mo7429i() {
         return ((SurfaceView) this.f14208c).getHolder();
     }
 
     @Override // p007b.p452o.p453a.p472w.CameraPreview
     @NonNull
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public Class<SurfaceHolder> mo7430j() {
         return SurfaceHolder.class;
     }
 
     @Override // p007b.p452o.p453a.p472w.CameraPreview
     @NonNull
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public View mo7431k() {
         return this.f14240l;
     }
 
     @Override // p007b.p452o.p453a.p472w.CameraPreview
     @NonNull
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public View mo7434n(@NonNull Context context, @NonNull ViewGroup viewGroup) {
         View viewInflate = LayoutInflater.from(context).inflate(C11196R.b.cameraview_surface_view, viewGroup, false);
         viewGroup.addView(viewInflate, 0);

@@ -5,18 +5,18 @@ import p007b.p225i.p226a.p288f.p299e.p308o.C3404f;
 import p658rx.Scheduler;
 import p658rx.functions.Action0;
 
-/* compiled from: SleepingAction.java */
-/* renamed from: j0.l.c.l, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: j0.l.c.l, reason: use source file name */
+/* JADX INFO: compiled from: SleepingAction.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class SleepingAction implements Action0 {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final Action0 f27247j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final Scheduler.Worker f27248k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final long f27249l;
 
     public SleepingAction(Action0 action0, Scheduler.Worker worker, long j) {

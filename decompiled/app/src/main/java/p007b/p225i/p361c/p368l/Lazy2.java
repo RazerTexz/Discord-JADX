@@ -2,18 +2,18 @@ package p007b.p225i.p361c.p368l;
 
 import p007b.p225i.p361c.p400t.Provider2;
 
-/* compiled from: Lazy.java */
-/* renamed from: b.i.c.l.r, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.c.l.r, reason: use source file name */
+/* JADX INFO: compiled from: Lazy.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class Lazy2<T> implements Provider2<T> {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final Object f12209a = new Object();
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public volatile Object f12210b = f12209a;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public volatile Provider2<T> f12211c;
 
     public Lazy2(Provider2<T> provider2) {

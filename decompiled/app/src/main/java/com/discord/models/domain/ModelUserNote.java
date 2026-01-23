@@ -7,18 +7,18 @@ import kotlin.jvm.internal.Ref$ObjectRef;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ModelUserNote.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: ModelUserNote.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class ModelUserNote {
     private final String note;
     private final long noteUserId;
 
-    /* compiled from: ModelUserNote.kt */
+    /* JADX INFO: compiled from: ModelUserNote.kt */
     public static final /* data */ class Update {
         private final long id;
         private final String note;
 
-        /* compiled from: ModelUserNote.kt */
+        /* JADX INFO: compiled from: ModelUserNote.kt */
         public static final class Parser implements Model.Parser<Update> {
             public static final Parser INSTANCE = new Parser();
 
@@ -60,12 +60,12 @@ public final /* data */ class ModelUserNote {
             return update.copy(j, str);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final long getId() {
             return this.id;
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final String getNote() {
             return this.note;
         }
@@ -124,12 +124,12 @@ public final /* data */ class ModelUserNote {
         return modelUserNote.copy(j, str);
     }
 
-    /* renamed from: component1, reason: from getter */
+    /* JADX INFO: renamed from: component1, reason: from getter */
     public final long getNoteUserId() {
         return this.noteUserId;
     }
 
-    /* renamed from: component2, reason: from getter */
+    /* JADX INFO: renamed from: component2, reason: from getter */
     public final String getNote() {
         return this.note;
     }

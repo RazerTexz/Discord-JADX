@@ -12,12 +12,12 @@ import java.util.Map;
 import p007b.p085c.p086a.p087a0.AnimatableValueParser;
 import p637j0.p641k.Func1;
 
-/* compiled from: OverlayMenuBubbleDialog.kt */
-/* renamed from: b.a.y.o, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: b.a.y.o, reason: use source file name */
+/* JADX INFO: compiled from: OverlayMenuBubbleDialog.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class OverlayMenuBubbleDialog3<T, R> implements Func1<Map<Long, ? extends StoreVoiceParticipants.VoiceUser>, List<? extends StoreVoiceParticipants.VoiceUser>> {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final /* synthetic */ Channel f2051j;
 
     public OverlayMenuBubbleDialog3(Channel channel) {

@@ -4,9 +4,9 @@ import android.graphics.Canvas;
 import android.graphics.drawable.NinePatchDrawable;
 import p007b.p109f.p161j.p183r.FrescoSystrace;
 
-/* compiled from: RoundedNinePatchDrawable.java */
-/* renamed from: b.f.g.e.o, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.f.g.e.o, reason: use source file name */
+/* JADX INFO: compiled from: RoundedNinePatchDrawable.java */
+/* JADX INFO: loaded from: classes.dex */
 public class RoundedNinePatchDrawable extends RoundedDrawable {
     public RoundedNinePatchDrawable(NinePatchDrawable ninePatchDrawable) {
         super(ninePatchDrawable);

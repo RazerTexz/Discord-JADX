@@ -20,7 +20,7 @@ import lombok.javac.JavacAnnotationHandler;
 import lombok.javac.JavacNode;
 import lombok.javac.JavacTreeMaker;
 
-/* loaded from: discord-126021.apk:lombok/javac/handlers/HandleHelper.SCL.lombok */
+/* JADX INFO: loaded from: discord-126021.apk:lombok/javac/handlers/HandleHelper.SCL.lombok */
 public class HandleHelper extends JavacAnnotationHandler<Helper> {
     private List<JCTree.JCStatement> getStatementsFromJcNode(JCTree tree) {
         if (tree instanceof JCTree.JCBlock) {
@@ -91,8 +91,8 @@ public class HandleHelper extends JavacAnnotationHandler<Helper> {
         setStatementsOfJcNode(containingBlock.get(), newStatements.toList());
     }
 
-    /* renamed from: lombok.javac.handlers.HandleHelper$1 */
-    /* loaded from: discord-126021.apk:lombok/javac/handlers/HandleHelper$1.SCL.lombok */
+    /* JADX INFO: renamed from: lombok.javac.handlers.HandleHelper$1 */
+    /* JADX INFO: loaded from: discord-126021.apk:lombok/javac/handlers/HandleHelper$1.SCL.lombok */
     class C128941 extends TreeScanner<Void, Void> {
         private final /* synthetic */ String[] val$knownMethodNames_;
         private final /* synthetic */ JavacTreeMaker val$maker;

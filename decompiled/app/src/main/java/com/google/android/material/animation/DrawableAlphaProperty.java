@@ -6,7 +6,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import java.util.WeakHashMap;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public class DrawableAlphaProperty extends Property<Drawable, Integer> {
     public static final Property<Drawable, Integer> DRAWABLE_ALPHA_COMPAT = new DrawableAlphaProperty();
     private final WeakHashMap<Drawable, Integer> alphaCache;
@@ -28,12 +28,12 @@ public class DrawableAlphaProperty extends Property<Drawable, Integer> {
     }
 
     @Nullable
-    /* renamed from: get, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: get, reason: avoid collision after fix types in other method */
     public Integer get2(@NonNull Drawable drawable) {
         return Integer.valueOf(drawable.getAlpha());
     }
 
-    /* renamed from: set, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: set, reason: avoid collision after fix types in other method */
     public void set2(@NonNull Drawable drawable, @NonNull Integer num) {
         drawable.setAlpha(num.intValue());
     }

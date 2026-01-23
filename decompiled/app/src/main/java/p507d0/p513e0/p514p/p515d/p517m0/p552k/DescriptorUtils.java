@@ -36,15 +36,15 @@ import p507d0.p513e0.p514p.p515d.p517m0.p567n.TypeConstructor;
 import p507d0.p513e0.p514p.p515d.p517m0.p567n.TypeUtils;
 import p507d0.p513e0.p514p.p515d.p517m0.p567n.p568l1.KotlinTypeChecker;
 
-/* compiled from: DescriptorUtils.java */
-/* renamed from: d0.e0.p.d.m0.k.e, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.k.e, reason: use source file name */
+/* JADX INFO: compiled from: DescriptorUtils.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class DescriptorUtils {
     static {
         new FqName("kotlin.jvm.JvmName");
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static /* synthetic */ void m9923a(int i) {
         String str;
         int i2;
@@ -570,7 +570,7 @@ public class DescriptorUtils {
     }
 
     /* JADX WARN: Multi-variable type inference failed */
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static <D extends CallableDescriptor> void m9924b(D d, Set<D> set) {
         if (d == null) {
             m9923a(68);
@@ -587,7 +587,7 @@ public class DescriptorUtils {
         }
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public static FqName m9925c(DeclarationDescriptor declarationDescriptor) {
         if (declarationDescriptor == null) {
             m9923a(5);
@@ -605,7 +605,7 @@ public class DescriptorUtils {
         return null;
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public static FqNameUnsafe m9926d(DeclarationDescriptor declarationDescriptor) {
         FqNameUnsafe fqNameUnsafeChild = getFqName(declarationDescriptor.getContainingDeclaration()).child(declarationDescriptor.getName());
         if (fqNameUnsafeChild != null) {
@@ -615,12 +615,12 @@ public class DescriptorUtils {
         throw null;
     }
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public static boolean m9927e(DeclarationDescriptor declarationDescriptor, ClassKind classKind) {
         return (declarationDescriptor instanceof ClassDescriptor) && ((ClassDescriptor) declarationDescriptor).getKind() == classKind;
     }
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public static boolean m9928f(KotlinType kotlinType, DeclarationDescriptor declarationDescriptor) {
         if (kotlinType == null) {
             m9923a(28);

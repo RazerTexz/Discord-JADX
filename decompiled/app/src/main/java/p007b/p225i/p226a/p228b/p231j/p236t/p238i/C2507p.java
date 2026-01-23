@@ -9,12 +9,12 @@ import p007b.p225i.p226a.p228b.p231j.TransportContext;
 import p007b.p225i.p226a.p228b.p231j.p236t.p238i.C2511t;
 import p007b.p225i.p226a.p228b.p231j.p241w.PriorityMapping;
 
-/* compiled from: SQLiteEventStore.java */
-/* renamed from: b.i.a.b.j.t.i.p */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.b.j.t.i.p */
+/* JADX INFO: compiled from: SQLiteEventStore.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final /* synthetic */ class C2507p implements C2511t.b {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final C2507p f5435a = new C2507p();
 
     @Override // p007b.p225i.p226a.p228b.p231j.p236t.p238i.C2511t.b

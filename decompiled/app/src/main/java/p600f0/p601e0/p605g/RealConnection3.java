@@ -4,18 +4,18 @@ import okio.BufferedSink;
 import p600f0.p601e0.p613n.RealWebSocket;
 import p615g0.BufferedSource;
 
-/* compiled from: RealConnection.kt */
-/* renamed from: f0.e0.g.i, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: f0.e0.g.i, reason: use source file name */
+/* JADX INFO: compiled from: RealConnection.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class RealConnection3 extends RealWebSocket.c {
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public final /* synthetic */ Exchange f25488m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public final /* synthetic */ BufferedSource f25489n;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public final /* synthetic */ BufferedSink f25490o;
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */

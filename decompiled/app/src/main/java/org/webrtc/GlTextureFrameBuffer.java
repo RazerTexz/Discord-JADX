@@ -3,7 +3,7 @@ package org.webrtc;
 import android.opengl.GLES20;
 import p007b.p100d.p104b.p105a.outline;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public class GlTextureFrameBuffer {
     private int frameBufferId;
     private int height;

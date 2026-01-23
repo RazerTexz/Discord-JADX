@@ -1,8 +1,8 @@
 package p507d0.p579g0;
 
-/* compiled from: Char.kt */
-/* renamed from: d0.g0.b, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.g0.b, reason: use source file name */
+/* JADX INFO: compiled from: Char.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public class Char extends CharJVM {
     public static final boolean equals(char c, char c2, boolean z2) {
         if (c == c2) {

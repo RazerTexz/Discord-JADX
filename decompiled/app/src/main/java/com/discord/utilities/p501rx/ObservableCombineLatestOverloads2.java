@@ -21,14 +21,14 @@ import p658rx.functions.Func7;
 import p658rx.functions.Func8;
 import p658rx.functions.Func9;
 
-/* compiled from: ObservableCombineLatestOverloads.kt */
-/* renamed from: com.discord.utilities.rx.ObservableCombineLatestOverloadsKt, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.utilities.rx.ObservableCombineLatestOverloadsKt, reason: use source file name */
+/* JADX INFO: compiled from: ObservableCombineLatestOverloads.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class ObservableCombineLatestOverloads2 {
 
     /* JADX INFO: Add missing generic type declarations: [T4, T5, T6, T10, T7, T8, T9, T3] */
-    /* compiled from: ObservableCombineLatestOverloads.kt */
-    /* renamed from: com.discord.utilities.rx.ObservableCombineLatestOverloadsKt$combineLatest$1 */
+    /* JADX INFO: renamed from: com.discord.utilities.rx.ObservableCombineLatestOverloadsKt$combineLatest$1 */
+    /* JADX INFO: compiled from: ObservableCombineLatestOverloads.kt */
     public static final class C68691<T1, T2, R, T10, T3, T4, T5, T6, T7, T8, T9> implements Func2<ObservableCombineLatestOverloads<T1, T2, T3, T4, T5, T6, T7, T8, T9>, T10, R> {
         public final /* synthetic */ Function10 $combineFunction;
 
@@ -48,8 +48,8 @@ public final class ObservableCombineLatestOverloads2 {
     }
 
     /* JADX INFO: Add missing generic type declarations: [T4, T5, T6, T10, T7, T8, T9, T11] */
-    /* compiled from: ObservableCombineLatestOverloads.kt */
-    /* renamed from: com.discord.utilities.rx.ObservableCombineLatestOverloadsKt$combineLatest$2 */
+    /* JADX INFO: renamed from: com.discord.utilities.rx.ObservableCombineLatestOverloadsKt$combineLatest$2 */
+    /* JADX INFO: compiled from: ObservableCombineLatestOverloads.kt */
     public static final class C68702<T1, T2, T3, R, T10, T11, T4, T5, T6, T7, T8, T9> implements Func3<ObservableCombineLatestOverloads<T1, T2, T3, T4, T5, T6, T7, T8, T9>, T10, T11, R> {
         public final /* synthetic */ Function11 $combineFunction;
 
@@ -69,8 +69,8 @@ public final class ObservableCombineLatestOverloads2 {
     }
 
     /* JADX INFO: Add missing generic type declarations: [T5, T6, T7, T8, T9, T10, T12, T11] */
-    /* compiled from: ObservableCombineLatestOverloads.kt */
-    /* renamed from: com.discord.utilities.rx.ObservableCombineLatestOverloadsKt$combineLatest$3 */
+    /* JADX INFO: renamed from: com.discord.utilities.rx.ObservableCombineLatestOverloadsKt$combineLatest$3 */
+    /* JADX INFO: compiled from: ObservableCombineLatestOverloads.kt */
     public static final class C68713<T1, T2, T3, T4, R, T10, T11, T12, T5, T6, T7, T8, T9> implements Func4<ObservableCombineLatestOverloads<T1, T2, T3, T4, T5, T6, T7, T8, T9>, T10, T11, T12, R> {
         public final /* synthetic */ Function12 $combineFunction;
 
@@ -90,8 +90,8 @@ public final class ObservableCombineLatestOverloads2 {
     }
 
     /* JADX INFO: Add missing generic type declarations: [T6, T7, T8, T9, T10, T12, T11, T13] */
-    /* compiled from: ObservableCombineLatestOverloads.kt */
-    /* renamed from: com.discord.utilities.rx.ObservableCombineLatestOverloadsKt$combineLatest$4 */
+    /* JADX INFO: renamed from: com.discord.utilities.rx.ObservableCombineLatestOverloadsKt$combineLatest$4 */
+    /* JADX INFO: compiled from: ObservableCombineLatestOverloads.kt */
     public static final class C68724<T1, T2, T3, T4, T5, R, T10, T11, T12, T13, T6, T7, T8, T9> implements Func5<ObservableCombineLatestOverloads<T1, T2, T3, T4, T5, T6, T7, T8, T9>, T10, T11, T12, T13, R> {
         public final /* synthetic */ Function13 $combineFunction;
 
@@ -111,8 +111,8 @@ public final class ObservableCombineLatestOverloads2 {
     }
 
     /* JADX INFO: Add missing generic type declarations: [T7, T8, T9, T10, T12, T11, T14, T13] */
-    /* compiled from: ObservableCombineLatestOverloads.kt */
-    /* renamed from: com.discord.utilities.rx.ObservableCombineLatestOverloadsKt$combineLatest$5 */
+    /* JADX INFO: renamed from: com.discord.utilities.rx.ObservableCombineLatestOverloadsKt$combineLatest$5 */
+    /* JADX INFO: compiled from: ObservableCombineLatestOverloads.kt */
     public static final class C68735<T1, T2, T3, T4, T5, T6, R, T10, T11, T12, T13, T14, T7, T8, T9> implements Func6<ObservableCombineLatestOverloads<T1, T2, T3, T4, T5, T6, T7, T8, T9>, T10, T11, T12, T13, T14, R> {
         public final /* synthetic */ Function14 $combineFunction;
 
@@ -132,8 +132,8 @@ public final class ObservableCombineLatestOverloads2 {
     }
 
     /* JADX INFO: Add missing generic type declarations: [T8, T9, T10, T12, T11, T14, T13, T15] */
-    /* compiled from: ObservableCombineLatestOverloads.kt */
-    /* renamed from: com.discord.utilities.rx.ObservableCombineLatestOverloadsKt$combineLatest$6 */
+    /* JADX INFO: renamed from: com.discord.utilities.rx.ObservableCombineLatestOverloadsKt$combineLatest$6 */
+    /* JADX INFO: compiled from: ObservableCombineLatestOverloads.kt */
     public static final class C68746<T1, T2, T3, T4, T5, T6, T7, R, T10, T11, T12, T13, T14, T15, T8, T9> implements Func7<ObservableCombineLatestOverloads<T1, T2, T3, T4, T5, T6, T7, T8, T9>, T10, T11, T12, T13, T14, T15, R> {
         public final /* synthetic */ Function15 $combineFunction;
 
@@ -153,8 +153,8 @@ public final class ObservableCombineLatestOverloads2 {
     }
 
     /* JADX INFO: Add missing generic type declarations: [T9, T10, T12, T11, T14, T13, T16, T15] */
-    /* compiled from: ObservableCombineLatestOverloads.kt */
-    /* renamed from: com.discord.utilities.rx.ObservableCombineLatestOverloadsKt$combineLatest$7 */
+    /* JADX INFO: renamed from: com.discord.utilities.rx.ObservableCombineLatestOverloadsKt$combineLatest$7 */
+    /* JADX INFO: compiled from: ObservableCombineLatestOverloads.kt */
     public static final class C68757<T1, T2, T3, T4, T5, T6, T7, T8, R, T10, T11, T12, T13, T14, T15, T16, T9> implements Func8<ObservableCombineLatestOverloads<T1, T2, T3, T4, T5, T6, T7, T8, T9>, T10, T11, T12, T13, T14, T15, T16, R> {
         public final /* synthetic */ Function16 $combineFunction;
 
@@ -174,8 +174,8 @@ public final class ObservableCombineLatestOverloads2 {
     }
 
     /* JADX INFO: Add missing generic type declarations: [T10, T12, T11, T14, T13, T16, T15, T17] */
-    /* compiled from: ObservableCombineLatestOverloads.kt */
-    /* renamed from: com.discord.utilities.rx.ObservableCombineLatestOverloadsKt$combineLatest$8 */
+    /* JADX INFO: renamed from: com.discord.utilities.rx.ObservableCombineLatestOverloadsKt$combineLatest$8 */
+    /* JADX INFO: compiled from: ObservableCombineLatestOverloads.kt */
     public static final class C68768<T1, T2, T3, T4, T5, T6, T7, T8, T9, R, T10, T11, T12, T13, T14, T15, T16, T17> implements Func9<ObservableCombineLatestOverloads<T1, T2, T3, T4, T5, T6, T7, T8, T9>, T10, T11, T12, T13, T14, T15, T16, T17, R> {
         public final /* synthetic */ Function17 $combineFunction;
 
@@ -195,8 +195,8 @@ public final class ObservableCombineLatestOverloads2 {
     }
 
     /* JADX INFO: Add missing generic type declarations: [T7, T8, T9, T10, T21, T20, T12, T11, T22, T14, T13, T16, T15, T18, T17, T19] */
-    /* compiled from: ObservableCombineLatestOverloads.kt */
-    /* renamed from: com.discord.utilities.rx.ObservableCombineLatestOverloadsKt$combineLatest$9 */
+    /* JADX INFO: renamed from: com.discord.utilities.rx.ObservableCombineLatestOverloadsKt$combineLatest$9 */
+    /* JADX INFO: compiled from: ObservableCombineLatestOverloads.kt */
     public static final class C68779<T1, T2, T3, T4, T5, T6, R, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T7, T8, T9> implements Func6<ObservableCombineLatestOverloads<T1, T2, T3, T4, T5, T6, T7, T8, T9>, ObservableCombineLatestOverloads<T10, T11, T12, T13, T14, T15, T16, T17, T18>, T19, T20, T21, T22, R> {
         public final /* synthetic */ Function22 $combineFunction;
 
@@ -215,8 +215,8 @@ public final class ObservableCombineLatestOverloads2 {
         }
     }
 
-    /* compiled from: ObservableCombineLatestOverloads.kt */
-    /* renamed from: com.discord.utilities.rx.ObservableCombineLatestOverloadsKt$createHolderObservable$1 */
+    /* JADX INFO: renamed from: com.discord.utilities.rx.ObservableCombineLatestOverloadsKt$createHolderObservable$1 */
+    /* JADX INFO: compiled from: ObservableCombineLatestOverloads.kt */
     public static final class C68781<T1, T2, T3, T4, T5, T6, T7, T8, T9, R> implements Func9<T1, T2, T3, T4, T5, T6, T7, T8, T9, ObservableCombineLatestOverloads<T1, T2, T3, T4, T5, T6, T7, T8, T9>> {
         public static final C68781 INSTANCE = new C68781();
 

@@ -5,8 +5,8 @@ import android.os.Parcelable;
 import com.google.android.gms.internal.nearby.zzgs;
 import p007b.p085c.p086a.p087a0.AnimatableValueParser;
 
-/* renamed from: b.i.a.f.h.m.f */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.h.m.f */
+/* JADX INFO: loaded from: classes3.dex */
 public final class C3929f implements Parcelable.Creator<zzgs> {
     @Override // android.os.Parcelable.Creator
     public final zzgs createFromParcel(Parcel parcel) {

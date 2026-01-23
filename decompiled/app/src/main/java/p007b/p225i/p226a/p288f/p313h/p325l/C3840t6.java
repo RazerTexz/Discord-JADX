@@ -5,16 +5,16 @@ import java.util.List;
 import java.util.Map;
 
 /* JADX INFO: Add missing generic type declarations: [FieldDescriptorType] */
-/* compiled from: com.google.android.gms:play-services-measurement-base@@18.0.0 */
-/* renamed from: b.i.a.f.h.l.t6 */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.h.l.t6 */
+/* JADX INFO: compiled from: com.google.android.gms:play-services-measurement-base@@18.0.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public final class C3840t6<FieldDescriptorType> extends C3814r6<FieldDescriptorType, Object> {
     public C3840t6(int i) {
         super(i, null);
     }
 
     @Override // p007b.p225i.p226a.p288f.p313h.p325l.C3814r6
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final void mo5205c() {
         if (!this.f10292n) {
             for (int i = 0; i < m5207e(); i++) {

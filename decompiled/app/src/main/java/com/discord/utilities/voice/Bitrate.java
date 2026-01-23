@@ -1,8 +1,8 @@
 package com.discord.utilities.voice;
 
 
-/* compiled from: Bitrate.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: Bitrate.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public enum Bitrate {
     MIN(8),
     DEFAULT(64),

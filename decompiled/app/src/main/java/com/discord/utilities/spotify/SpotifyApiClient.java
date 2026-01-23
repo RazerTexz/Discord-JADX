@@ -21,8 +21,8 @@ import p658rx.Observable;
 import p658rx.Subscription;
 import p658rx.subjects.BehaviorSubject;
 
-/* compiled from: SpotifyApiClient.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: SpotifyApiClient.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class SpotifyApiClient {
     private final Clock clock;
     private String spotifyAccountId;
@@ -32,8 +32,8 @@ public final class SpotifyApiClient {
     private Subscription tokenSubscription;
     private String trackIdToFetch;
 
-    /* compiled from: SpotifyApiClient.kt */
-    /* renamed from: com.discord.utilities.spotify.SpotifyApiClient$fetchSpotifyTrack$1 */
+    /* JADX INFO: renamed from: com.discord.utilities.spotify.SpotifyApiClient$fetchSpotifyTrack$1 */
+    /* JADX INFO: compiled from: SpotifyApiClient.kt */
     public static final class C69131 extends Lambda implements Function1<Error, Unit> {
         public final /* synthetic */ String $trackId;
 
@@ -49,7 +49,7 @@ public final class SpotifyApiClient {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Error error) {
             Intrinsics3.checkNotNullParameter(error, "it");
             Error.Response response = error.getResponse();
@@ -61,8 +61,8 @@ public final class SpotifyApiClient {
         }
     }
 
-    /* compiled from: SpotifyApiClient.kt */
-    /* renamed from: com.discord.utilities.spotify.SpotifyApiClient$fetchSpotifyTrack$2 */
+    /* JADX INFO: renamed from: com.discord.utilities.spotify.SpotifyApiClient$fetchSpotifyTrack$2 */
+    /* JADX INFO: compiled from: SpotifyApiClient.kt */
     public static final class C69142 extends Lambda implements Function1<ModelSpotifyTrack, Unit> {
         public final /* synthetic */ String $trackId;
 
@@ -78,7 +78,7 @@ public final class SpotifyApiClient {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(ModelSpotifyTrack modelSpotifyTrack) {
             Intrinsics3.checkNotNullParameter(modelSpotifyTrack, "track");
             SpotifyApiClient.access$setCachedTrack(SpotifyApiClient.this, modelSpotifyTrack);
@@ -86,12 +86,12 @@ public final class SpotifyApiClient {
         }
     }
 
-    /* compiled from: SpotifyApiClient.kt */
-    /* renamed from: com.discord.utilities.spotify.SpotifyApiClient$refreshSpotifyToken$1 */
+    /* JADX INFO: renamed from: com.discord.utilities.spotify.SpotifyApiClient$refreshSpotifyToken$1 */
+    /* JADX INFO: compiled from: SpotifyApiClient.kt */
     public static final class C69151 extends Lambda implements Function1<ModelConnectionAccessToken, Unit> {
 
-        /* compiled from: SpotifyApiClient.kt */
-        /* renamed from: com.discord.utilities.spotify.SpotifyApiClient$refreshSpotifyToken$1$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.utilities.spotify.SpotifyApiClient$refreshSpotifyToken$1$1, reason: invalid class name */
+        /* JADX INFO: compiled from: SpotifyApiClient.kt */
         public static final class AnonymousClass1 extends Lambda implements Function0<String> {
             public final /* synthetic */ ModelConnectionAccessToken $spotifyToken;
 
@@ -107,7 +107,7 @@ public final class SpotifyApiClient {
             }
 
             @Override // kotlin.jvm.functions.Function0
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final String invoke2() {
                 return this.$spotifyToken.getAccessToken();
             }
@@ -123,7 +123,7 @@ public final class SpotifyApiClient {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(ModelConnectionAccessToken modelConnectionAccessToken) {
             Intrinsics3.checkNotNullParameter(modelConnectionAccessToken, "spotifyToken");
             RestAPI.AppHeadersProvider.spotifyTokenProvider = new AnonymousClass1(modelConnectionAccessToken);
@@ -137,8 +137,8 @@ public final class SpotifyApiClient {
         }
     }
 
-    /* compiled from: SpotifyApiClient.kt */
-    /* renamed from: com.discord.utilities.spotify.SpotifyApiClient$refreshSpotifyToken$2 */
+    /* JADX INFO: renamed from: com.discord.utilities.spotify.SpotifyApiClient$refreshSpotifyToken$2 */
+    /* JADX INFO: compiled from: SpotifyApiClient.kt */
     public static final class C69162 extends Lambda implements Function1<Subscription, Unit> {
         public C69162() {
             super(1);
@@ -150,7 +150,7 @@ public final class SpotifyApiClient {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Subscription subscription) {
             Intrinsics3.checkNotNullParameter(subscription, "it");
             SpotifyApiClient.access$setTokenSubscription$p(SpotifyApiClient.this, subscription);

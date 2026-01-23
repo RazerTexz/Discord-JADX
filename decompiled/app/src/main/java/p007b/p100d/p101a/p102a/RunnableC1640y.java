@@ -5,12 +5,12 @@ import p007b.p225i.p226a.p288f.p313h.p327n.AbstractC3951k;
 import p007b.p225i.p226a.p288f.p313h.p327n.AbstractC3953m;
 import p007b.p225i.p226a.p288f.p313h.p327n.C3952l;
 
-/* compiled from: com.android.billingclient:billing@@4.0.0 */
-/* renamed from: b.d.a.a.y */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.d.a.a.y */
+/* JADX INFO: compiled from: com.android.billingclient:billing@@4.0.0 */
+/* JADX INFO: loaded from: classes.dex */
 public final /* synthetic */ class RunnableC1640y implements Runnable {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final /* synthetic */ InterfaceC1621f f3005j;
 
     public /* synthetic */ RunnableC1640y(InterfaceC1621f interfaceC1621f) {

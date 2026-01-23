@@ -40,13 +40,13 @@ import p007b.p008a.p027k.FormatUtils;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetChatListAdapterItemAutoModBlocked.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetChatListAdapterItemAutoModBlocked.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetChatListAdapterItemAutoModBlocked extends WidgetChatListItem {
     private final WidgetChatListAdapterItemAutoModBlockedBinding binding;
 
-    /* compiled from: WidgetChatListAdapterItemAutoModBlocked.kt */
-    /* renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemAutoModBlocked$getMessageRenderContext$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemAutoModBlocked$getMessageRenderContext$1 */
+    /* JADX INFO: compiled from: WidgetChatListAdapterItemAutoModBlocked.kt */
     public static final class C80201 extends Lambda implements Function3<Context, String, String, Unit> {
         public static final C80201 INSTANCE = new C80201();
 
@@ -60,7 +60,7 @@ public final class WidgetChatListAdapterItemAutoModBlocked extends WidgetChatLis
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Context context, String str, String str2) {
             Intrinsics3.checkNotNullParameter(context, "clickContext");
             Intrinsics3.checkNotNullParameter(str, "url");
@@ -68,8 +68,8 @@ public final class WidgetChatListAdapterItemAutoModBlocked extends WidgetChatLis
         }
     }
 
-    /* compiled from: WidgetChatListAdapterItemAutoModBlocked.kt */
-    /* renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemAutoModBlocked$getMessageRenderContext$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemAutoModBlocked$getMessageRenderContext$2 */
+    /* JADX INFO: compiled from: WidgetChatListAdapterItemAutoModBlocked.kt */
     public static final class C80212 extends Lambda implements Function1<String, Unit> {
         public C80212() {
             super(1);
@@ -81,15 +81,15 @@ public final class WidgetChatListAdapterItemAutoModBlocked extends WidgetChatLis
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(String str) {
             Intrinsics3.checkNotNullParameter(str, "url");
             WidgetChatListAdapterItemAutoModBlocked.access$getAdapter$p(WidgetChatListAdapterItemAutoModBlocked.this).getEventHandler().onUrlLongClicked(str);
         }
     }
 
-    /* compiled from: WidgetChatListAdapterItemAutoModBlocked.kt */
-    /* renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemAutoModBlocked$getMessageRenderContext$3 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemAutoModBlocked$getMessageRenderContext$3 */
+    /* JADX INFO: compiled from: WidgetChatListAdapterItemAutoModBlocked.kt */
     public static final class C80223 extends Lambda implements Function1<SpoilerNode<?>, Unit> {
         public static final C80223 INSTANCE = new C80223();
 
@@ -103,14 +103,14 @@ public final class WidgetChatListAdapterItemAutoModBlocked extends WidgetChatLis
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(SpoilerNode<?> spoilerNode) {
             Intrinsics3.checkNotNullParameter(spoilerNode, "it");
         }
     }
 
-    /* compiled from: WidgetChatListAdapterItemAutoModBlocked.kt */
-    /* renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemAutoModBlocked$getMessageRenderContext$4 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemAutoModBlocked$getMessageRenderContext$4 */
+    /* JADX INFO: compiled from: WidgetChatListAdapterItemAutoModBlocked.kt */
     public static final class C80234 extends Lambda implements Function1<Long, Unit> {
         public C80234() {
             super(1);
@@ -128,8 +128,8 @@ public final class WidgetChatListAdapterItemAutoModBlocked extends WidgetChatLis
         }
     }
 
-    /* compiled from: WidgetChatListAdapterItemAutoModBlocked.kt */
-    /* renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemAutoModBlocked$getMessageRenderContext$5 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemAutoModBlocked$getMessageRenderContext$5 */
+    /* JADX INFO: compiled from: WidgetChatListAdapterItemAutoModBlocked.kt */
     public static final class C80245 extends Lambda implements Function1<Long, Unit> {
         public final /* synthetic */ Context $context;
 
@@ -150,13 +150,13 @@ public final class WidgetChatListAdapterItemAutoModBlocked extends WidgetChatLis
         }
     }
 
-    /* compiled from: WidgetChatListAdapterItemAutoModBlocked.kt */
-    /* renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemAutoModBlocked$onConfigure$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemAutoModBlocked$onConfigure$1 */
+    /* JADX INFO: compiled from: WidgetChatListAdapterItemAutoModBlocked.kt */
     public static final class C80251 extends Lambda implements Function1<RenderContext, Unit> {
         public final /* synthetic */ MessageEntry $messageEntry;
 
-        /* compiled from: WidgetChatListAdapterItemAutoModBlocked.kt */
-        /* renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemAutoModBlocked$onConfigure$1$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemAutoModBlocked$onConfigure$1$1, reason: invalid class name */
+        /* JADX INFO: compiled from: WidgetChatListAdapterItemAutoModBlocked.kt */
         public static final class AnonymousClass1 extends Lambda implements Function1<View, Unit> {
             public AnonymousClass1() {
                 super(1);
@@ -168,7 +168,7 @@ public final class WidgetChatListAdapterItemAutoModBlocked extends WidgetChatLis
                 return Unit.f27425a;
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2(View view) {
                 Intrinsics3.checkNotNullParameter(view, "<anonymous parameter 0>");
                 WidgetChatListAdapterItemAutoModBlocked.access$getAdapter$p(WidgetChatListAdapterItemAutoModBlocked.this).getEventHandler().onDismissLocalMessageClicked(C80251.this.$messageEntry.getMessage());
@@ -187,7 +187,7 @@ public final class WidgetChatListAdapterItemAutoModBlocked extends WidgetChatLis
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(RenderContext renderContext) {
             Intrinsics3.checkNotNullParameter(renderContext, "$receiver");
             renderContext.m8423b("onClick", new AnonymousClass1());

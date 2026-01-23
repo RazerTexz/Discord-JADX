@@ -11,9 +11,9 @@ import kotlin.jvm.functions.Function1;
 import p507d0.p592z.p594d.FunctionReferenceImpl;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: WidgetHubAddServerConfirmationDialog.kt */
-/* renamed from: com.discord.widgets.hubs.WidgetHubAddServerConfirmationDialog$binding$2, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.hubs.WidgetHubAddServerConfirmationDialog$binding$2, reason: use source file name */
+/* JADX INFO: compiled from: WidgetHubAddServerConfirmationDialog.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final /* synthetic */ class WidgetHubAddServerConfirmationDialog3 extends FunctionReferenceImpl implements Function1<View, HubAddServerConfirmationDialogBinding> {
     public static final WidgetHubAddServerConfirmationDialog3 INSTANCE = new WidgetHubAddServerConfirmationDialog3();
 
@@ -26,7 +26,7 @@ public final /* synthetic */ class WidgetHubAddServerConfirmationDialog3 extends
         return invoke2(view);
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final HubAddServerConfirmationDialogBinding invoke2(View view) {
         Intrinsics3.checkNotNullParameter(view, "p1");
         int i = C5419R.id.add_server_confirmation_dialog_description;

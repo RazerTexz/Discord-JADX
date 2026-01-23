@@ -42,8 +42,8 @@ import com.google.android.material.math.MathUtils;
 import java.util.ArrayList;
 import java.util.List;
 
+/* JADX INFO: loaded from: classes3.dex */
 @Deprecated
-/* loaded from: classes3.dex */
 public abstract class FabTransformationBehavior extends ExpandableTransformationBehavior {
     private float dependencyOriginalTranslationX;
     private float dependencyOriginalTranslationY;
@@ -59,16 +59,16 @@ public abstract class FabTransformationBehavior extends ExpandableTransformation
         public MotionSpec timings;
     }
 
-    /* renamed from: com.google.android.material.transformation.FabTransformationBehavior$a */
+    /* JADX INFO: renamed from: com.google.android.material.transformation.FabTransformationBehavior$a */
     public class C11035a extends AnimatorListenerAdapter {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final /* synthetic */ boolean f21243a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final /* synthetic */ View f21244b;
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public final /* synthetic */ View f21245c;
 
         public C11035a(FabTransformationBehavior fabTransformationBehavior, boolean z2, View view, View view2) {
@@ -97,10 +97,10 @@ public abstract class FabTransformationBehavior extends ExpandableTransformation
         }
     }
 
-    /* renamed from: com.google.android.material.transformation.FabTransformationBehavior$b */
+    /* JADX INFO: renamed from: com.google.android.material.transformation.FabTransformationBehavior$b */
     public class C11036b implements ValueAnimator.AnimatorUpdateListener {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final /* synthetic */ View f21246a;
 
         public C11036b(FabTransformationBehavior fabTransformationBehavior, View view) {
@@ -113,13 +113,13 @@ public abstract class FabTransformationBehavior extends ExpandableTransformation
         }
     }
 
-    /* renamed from: com.google.android.material.transformation.FabTransformationBehavior$c */
+    /* JADX INFO: renamed from: com.google.android.material.transformation.FabTransformationBehavior$c */
     public class C11037c extends AnimatorListenerAdapter {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final /* synthetic */ CircularRevealWidget f21247a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final /* synthetic */ Drawable f21248b;
 
         public C11037c(FabTransformationBehavior fabTransformationBehavior, CircularRevealWidget circularRevealWidget, Drawable drawable) {
@@ -138,10 +138,10 @@ public abstract class FabTransformationBehavior extends ExpandableTransformation
         }
     }
 
-    /* renamed from: com.google.android.material.transformation.FabTransformationBehavior$d */
+    /* JADX INFO: renamed from: com.google.android.material.transformation.FabTransformationBehavior$d */
     public class C11038d extends AnimatorListenerAdapter {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final /* synthetic */ CircularRevealWidget f21249a;
 
         public C11038d(FabTransformationBehavior fabTransformationBehavior, CircularRevealWidget circularRevealWidget) {

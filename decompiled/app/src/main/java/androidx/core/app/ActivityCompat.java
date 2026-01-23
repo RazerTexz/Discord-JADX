@@ -32,11 +32,11 @@ import java.util.List;
 import java.util.Map;
 import p007b.p100d.p104b.p105a.outline;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class ActivityCompat extends ContextCompat {
     private static PermissionCompatDelegate sDelegate;
 
-    /* renamed from: androidx.core.app.ActivityCompat$1 */
+    /* JADX INFO: renamed from: androidx.core.app.ActivityCompat$1 */
     public class RunnableC02121 implements Runnable {
         public final /* synthetic */ Activity val$activity;
         public final /* synthetic */ String[] val$permissions;
@@ -61,7 +61,7 @@ public class ActivityCompat extends ContextCompat {
         }
     }
 
-    /* renamed from: androidx.core.app.ActivityCompat$2 */
+    /* JADX INFO: renamed from: androidx.core.app.ActivityCompat$2 */
     public class RunnableC02132 implements Runnable {
         public final /* synthetic */ Activity val$activity;
 
@@ -107,7 +107,7 @@ public class ActivityCompat extends ContextCompat {
     public static class SharedElementCallback21Impl extends android.app.SharedElementCallback {
         private final SharedElementCallback mCallback;
 
-        /* renamed from: androidx.core.app.ActivityCompat$SharedElementCallback21Impl$1 */
+        /* JADX INFO: renamed from: androidx.core.app.ActivityCompat$SharedElementCallback21Impl$1 */
         public class C02141 implements SharedElementCallback.OnSharedElementsReadyListener {
             public final /* synthetic */ SharedElementCallback.OnSharedElementsReadyListener val$listener;
 

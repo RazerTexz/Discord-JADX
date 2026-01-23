@@ -25,13 +25,13 @@ import p507d0.p580t.Collections2;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: UserMentionNode.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: UserMentionNode.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class UserMentionNode<T extends RenderContext> extends Node<T> {
     private final Type type;
     private final long userId;
 
-    /* compiled from: UserMentionNode.kt */
+    /* JADX INFO: compiled from: UserMentionNode.kt */
     public interface RenderContext {
         Context getContext();
 
@@ -42,15 +42,15 @@ public final class UserMentionNode<T extends RenderContext> extends Node<T> {
         Map<Long, String> getUserNames();
     }
 
-    /* compiled from: UserMentionNode.kt */
+    /* JADX INFO: compiled from: UserMentionNode.kt */
     public enum Type {
         USER,
         HERE,
         EVERYONE
     }
 
-    /* compiled from: UserMentionNode.kt */
-    /* renamed from: com.discord.utilities.textprocessing.node.UserMentionNode$renderUserMention$1 */
+    /* JADX INFO: renamed from: com.discord.utilities.textprocessing.node.UserMentionNode$renderUserMention$1 */
+    /* JADX INFO: compiled from: UserMentionNode.kt */
     public static final class C69761 extends Lambda implements Function1<View, Unit> {
         public final /* synthetic */ Function1 $onClick;
 
@@ -66,7 +66,7 @@ public final class UserMentionNode<T extends RenderContext> extends Node<T> {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(View view) {
             Intrinsics3.checkNotNullParameter(view, "it");
             this.$onClick.invoke(Long.valueOf(UserMentionNode.this.getUserId()));

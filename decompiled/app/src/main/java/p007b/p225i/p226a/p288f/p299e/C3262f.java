@@ -16,18 +16,18 @@ import java.util.Objects;
 import p007b.p225i.p226a.p288f.p299e.p308o.C3404f;
 import p007b.p225i.p226a.p288f.p311f.BinderC3423b;
 
-/* compiled from: com.google.android.gms:play-services-basement@@17.6.0 */
-/* renamed from: b.i.a.f.e.f */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.e.f */
+/* JADX INFO: compiled from: com.google.android.gms:play-services-basement@@17.6.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public class C3262f {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static C3262f f9313a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final Context f9314b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public volatile String f9315c;
 
     public C3262f(@RecentlyNonNull Context context) {
@@ -35,7 +35,7 @@ public class C3262f {
     }
 
     @RecentlyNonNull
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static C3262f m4021a(@RecentlyNonNull Context context) {
         Objects.requireNonNull(context, "null reference");
         synchronized (C3262f.class) {
@@ -54,7 +54,7 @@ public class C3262f {
         return f9313a;
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public static final AbstractBinderC3419x m4022c(PackageInfo packageInfo, AbstractBinderC3419x... abstractBinderC3419xArr) {
         Signature[] signatureArr = packageInfo.signatures;
         if (signatureArr == null) {
@@ -73,7 +73,7 @@ public class C3262f {
         return null;
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public static final boolean m4023d(@RecentlyNonNull PackageInfo packageInfo, boolean z2) {
         if (packageInfo != null && packageInfo.signatures != null) {
             if ((z2 ? m4022c(packageInfo, C3253a0.f9298a) : m4022c(packageInfo, C3253a0.f9298a[0])) != null) {
@@ -84,7 +84,7 @@ public class C3262f {
     }
 
     /* JADX WARN: Removed duplicated region for block: B:78:0x013d  */
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */

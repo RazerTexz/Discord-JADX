@@ -7,28 +7,28 @@ import androidx.annotation.GuardedBy;
 import androidx.collection.ArrayMap;
 import java.util.Map;
 
-/* compiled from: com.google.android.gms:play-services-measurement-impl@@18.0.0 */
-/* renamed from: b.i.a.f.h.l.s2 */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.h.l.s2 */
+/* JADX INFO: compiled from: com.google.android.gms:play-services-measurement-impl@@18.0.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public final class C3823s2 implements InterfaceC3594b2 {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     @GuardedBy("SharedPreferencesLoader.class")
     public static final Map<String, C3823s2> f10302a = new ArrayMap();
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final SharedPreferences f10303b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final SharedPreferences.OnSharedPreferenceChangeListener f10304c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final Object f10305d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public volatile Map<String, ?> f10306e;
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static C3823s2 m5213a(Context context) {
         C3823s2 c3823s2;
         if (C3874w1.m5341a()) {
@@ -49,7 +49,7 @@ public final class C3823s2 implements InterfaceC3594b2 {
         return c3823s2;
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static synchronized void m5214b() {
         for (C3823s2 c3823s2 : f10302a.values()) {
             c3823s2.f10303b.unregisterOnSharedPreferenceChangeListener(c3823s2.f10304c);
@@ -58,7 +58,7 @@ public final class C3823s2 implements InterfaceC3594b2 {
     }
 
     @Override // p007b.p225i.p226a.p288f.p313h.p325l.InterfaceC3594b2
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public final Object mo4567g(String str) {
         Map<String, ?> map = this.f10306e;
         if (map == null) {

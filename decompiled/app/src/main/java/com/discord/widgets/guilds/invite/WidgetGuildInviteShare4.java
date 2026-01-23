@@ -11,9 +11,9 @@ import kotlin.jvm.functions.Function1;
 import p007b.p008a.p018d.AppScreen2;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetGuildInviteShare.kt */
-/* renamed from: com.discord.widgets.guilds.invite.WidgetGuildInviteShare$Companion$launch$3, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.guilds.invite.WidgetGuildInviteShare$Companion$launch$3, reason: use source file name */
+/* JADX INFO: compiled from: WidgetGuildInviteShare.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetGuildInviteShare4 extends Lambda implements Function1<Tuples2<? extends Experiment, ? extends List<? extends InviteSuggestion>>, Unit> {
     public final /* synthetic */ Intent $arguments;
     public final /* synthetic */ Context $context;
@@ -33,7 +33,7 @@ public final class WidgetGuildInviteShare4 extends Lambda implements Function1<T
         return Unit.f27425a;
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final void invoke2(Tuples2<Experiment, ? extends List<? extends InviteSuggestion>> tuples2) {
         Experiment experimentComponent1 = tuples2.component1();
         List<? extends InviteSuggestion> listComponent2 = tuples2.component2();

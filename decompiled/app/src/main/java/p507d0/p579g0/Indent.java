@@ -12,16 +12,16 @@ import p507d0.p580t._Collections;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: Indent.kt */
-/* renamed from: d0.g0.m, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.g0.m, reason: use source file name */
+/* JADX INFO: compiled from: Indent.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public class Indent extends Appendable {
 
-    /* compiled from: Indent.kt */
-    /* renamed from: d0.g0.m$a */
+    /* JADX INFO: renamed from: d0.g0.m$a */
+    /* JADX INFO: compiled from: Indent.kt */
     public static final class a extends Lambda implements Function1<String, String> {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public static final a f25163j = new a();
 
         public a() {
@@ -33,15 +33,15 @@ public class Indent extends Appendable {
             return invoke2(str);
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final String invoke2(String str) {
             Intrinsics3.checkNotNullParameter(str, "line");
             return str;
         }
     }
 
-    /* compiled from: Indent.kt */
-    /* renamed from: d0.g0.m$b */
+    /* JADX INFO: renamed from: d0.g0.m$b */
+    /* JADX INFO: compiled from: Indent.kt */
     public static final class b extends Lambda implements Function1<String, String> {
         public final /* synthetic */ String $indent;
 
@@ -56,14 +56,14 @@ public class Indent extends Appendable {
             return invoke2(str);
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final String invoke2(String str) {
             Intrinsics3.checkNotNullParameter(str, "line");
             return outline.m822J(new StringBuilder(), this.$indent, str);
         }
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final Function1<String, String> m10068a(String str) {
         return str.length() == 0 ? a.f25163j : new b(str);
     }

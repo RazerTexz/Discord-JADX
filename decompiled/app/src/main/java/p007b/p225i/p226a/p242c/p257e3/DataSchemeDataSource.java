@@ -12,23 +12,23 @@ import p007b.p100d.p104b.p105a.outline;
 import p007b.p225i.p226a.p242c.p259f3.Util2;
 import p007b.p225i.p355b.p356a.Charsets;
 
-/* compiled from: DataSchemeDataSource.java */
-/* renamed from: b.i.a.c.e3.i, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.e3.i, reason: use source file name */
+/* JADX INFO: compiled from: DataSchemeDataSource.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class DataSchemeDataSource extends BaseDataSource {
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     @Nullable
     public DataSpec f6532e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     @Nullable
     public byte[] f6533f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public int f6534g;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public int f6535h;
 
     public DataSchemeDataSource() {
@@ -36,7 +36,7 @@ public final class DataSchemeDataSource extends BaseDataSource {
     }
 
     @Override // p007b.p225i.p226a.p242c.p257e3.DataSource3
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public long mo2586a(DataSpec dataSpec) throws IOException {
         m2850r(dataSpec);
         this.f6532e = dataSpec;
@@ -91,7 +91,7 @@ public final class DataSchemeDataSource extends BaseDataSource {
 
     @Override // p007b.p225i.p226a.p242c.p257e3.DataSource3
     @Nullable
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public Uri mo2589n() {
         DataSpec dataSpec = this.f6532e;
         if (dataSpec != null) {

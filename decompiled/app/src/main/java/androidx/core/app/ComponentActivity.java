@@ -16,8 +16,8 @@ import androidx.view.LifecycleOwner;
 import androidx.view.LifecycleRegistry;
 import androidx.view.ReportFragment;
 
+/* JADX INFO: loaded from: classes.dex */
 @RestrictTo({RestrictTo.Scope.LIBRARY_GROUP_PREFIX})
-/* loaded from: classes.dex */
 public class ComponentActivity extends Activity implements LifecycleOwner, KeyEventDispatcher.Component {
     private SimpleArrayMap<Class<? extends ExtraData>, ExtraData> mExtraDataMap = new SimpleArrayMap<>();
     private LifecycleRegistry mLifecycleRegistry = new LifecycleRegistry(this);

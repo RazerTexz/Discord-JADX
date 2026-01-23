@@ -19,8 +19,8 @@ import java.util.List;
 import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserException;
 
+/* JADX INFO: loaded from: classes.dex */
 @RestrictTo({RestrictTo.Scope.LIBRARY_GROUP_PREFIX})
-/* loaded from: classes.dex */
 public class FontResourcesParserCompat {
     private static final int DEFAULT_TIMEOUT_MILLIS = 500;
     public static final int FETCH_STRATEGY_ASYNC = 1;
@@ -119,7 +119,7 @@ public class FontResourcesParserCompat {
         throw new XmlPullParserException("No start tag found");
     }
 
-    public static List<List<byte[]>> readCerts(Resources resources, @ArrayRes int i) throws Resources.NotFoundException {
+    public static List<List<byte[]>> readCerts(Resources resources, @ArrayRes int i) {
         if (i == 0) {
             return Collections.emptyList();
         }

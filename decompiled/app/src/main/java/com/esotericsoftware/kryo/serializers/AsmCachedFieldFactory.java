@@ -4,7 +4,7 @@ import com.esotericsoftware.kryo.serializers.AsmCacheFields;
 import com.esotericsoftware.kryo.serializers.FieldSerializer;
 import java.lang.reflect.Field;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class AsmCachedFieldFactory implements FieldSerializer.CachedFieldFactory {
     @Override // com.esotericsoftware.kryo.serializers.FieldSerializer.CachedFieldFactory
     public FieldSerializer.CachedField createCachedField(Class cls, Field field, FieldSerializer fieldSerializer) {

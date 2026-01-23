@@ -31,8 +31,8 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 import p658rx.Observable;
 
-/* compiled from: StoreForumPostReadStates.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: StoreForumPostReadStates.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class StoreForumPostReadStates extends StoreV2 {
     private final Dispatcher dispatcher;
     private final ObservationDeck observationDeck;
@@ -47,8 +47,8 @@ public final class StoreForumPostReadStates extends StoreV2 {
     private final Map<Long, Integer> threadUnreadCounts;
     private Map<Long, Integer> threadUnreadCountsSnapshot;
 
-    /* compiled from: StoreForumPostReadStates.kt */
-    /* renamed from: com.discord.stores.StoreForumPostReadStates$observeThreadIdsWithPersistedReadStates$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreForumPostReadStates$observeThreadIdsWithPersistedReadStates$1 */
+    /* JADX INFO: compiled from: StoreForumPostReadStates.kt */
     public static final class C59381 extends Lambda implements Function0<Set<? extends Long>> {
         public C59381() {
             super(0);
@@ -60,14 +60,14 @@ public final class StoreForumPostReadStates extends StoreV2 {
         }
 
         @Override // kotlin.jvm.functions.Function0
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final Set<? extends Long> invoke2() {
             return StoreForumPostReadStates.access$getThreadIdsWithPersistedAcksSnapshot$p(StoreForumPostReadStates.this);
         }
     }
 
-    /* compiled from: StoreForumPostReadStates.kt */
-    /* renamed from: com.discord.stores.StoreForumPostReadStates$observeThreadUnreadCounts$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreForumPostReadStates$observeThreadUnreadCounts$1 */
+    /* JADX INFO: compiled from: StoreForumPostReadStates.kt */
     public static final class C59391 extends Lambda implements Function0<Map<Long, ? extends Integer>> {
         public C59391() {
             super(0);
@@ -79,14 +79,14 @@ public final class StoreForumPostReadStates extends StoreV2 {
         }
 
         @Override // kotlin.jvm.functions.Function0
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final Map<Long, ? extends Integer> invoke2() {
             return StoreForumPostReadStates.access$getThreadUnreadCountsSnapshot$p(StoreForumPostReadStates.this);
         }
     }
 
-    /* compiled from: StoreForumPostReadStates.kt */
-    /* renamed from: com.discord.stores.StoreForumPostReadStates$requestForumUnreads$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreForumPostReadStates$requestForumUnreads$1 */
+    /* JADX INFO: compiled from: StoreForumPostReadStates.kt */
     public static final class C59401 extends Lambda implements Function0<Unit> {
         public final /* synthetic */ long $channelId;
         public final /* synthetic */ long $guildId;
@@ -104,7 +104,7 @@ public final class StoreForumPostReadStates extends StoreV2 {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             if (!ForumUtils.canAccessRedesignedForumChannels$default(ForumUtils.INSTANCE, this.$guildId, null, 2, null) || StoreForumPostReadStates.access$getProcessedForumUnreadRequests$p(StoreForumPostReadStates.this).contains(Long.valueOf(this.$channelId))) {
                 return;

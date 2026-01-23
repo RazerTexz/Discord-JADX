@@ -11,14 +11,14 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p658rx.Observable;
 import p658rx.functions.Func2;
 
-/* compiled from: LeftPanelManager.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: LeftPanelManager.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class LeftPanelManager {
     private final StoreChannelsSelected storeChannelsSelected;
     private final StoreGuildSelected storeGuildSelected;
 
-    /* compiled from: LeftPanelManager.kt */
-    /* renamed from: com.discord.widgets.home.LeftPanelManager$observeLockState$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.home.LeftPanelManager$observeLockState$1 */
+    /* JADX INFO: compiled from: LeftPanelManager.kt */
     public static final class C89381<T1, T2, R> implements Func2<StoreChannelsSelected.ResolvedSelectedChannel, Long, OverlappingPanelsLayout.LockState> {
         public static final C89381 INSTANCE = new C89381();
 
@@ -28,7 +28,7 @@ public final class LeftPanelManager {
         }
 
         /* JADX WARN: Removed duplicated region for block: B:16:0x0028  */
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         /*
             Code decompiled incorrectly, please refer to instructions dump.
         */

@@ -4,15 +4,15 @@ import java.util.Map;
 import p007b.p225i.p361c.p396q.Event3;
 import p007b.p225i.p361c.p396q.EventHandler2;
 
-/* compiled from: EventBus.java */
-/* renamed from: b.i.c.l.p, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.c.l.p, reason: use source file name */
+/* JADX INFO: compiled from: EventBus.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final /* synthetic */ class EventBus implements Runnable {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final Map.Entry f12204j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final Event3 f12205k;
 
     public EventBus(Map.Entry entry, Event3 event3) {

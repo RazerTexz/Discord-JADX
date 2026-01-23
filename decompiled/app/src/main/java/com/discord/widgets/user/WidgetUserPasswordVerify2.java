@@ -5,9 +5,9 @@ import androidx.activity.result.ActivityResultCallback;
 import kotlin.jvm.functions.Function0;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: WidgetUserPasswordVerify.kt */
-/* renamed from: com.discord.widgets.user.WidgetUserPasswordVerify$Companion$registerForResult$1, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: com.discord.widgets.user.WidgetUserPasswordVerify$Companion$registerForResult$1, reason: use source file name */
+/* JADX INFO: compiled from: WidgetUserPasswordVerify.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class WidgetUserPasswordVerify2<O> implements ActivityResultCallback<ActivityResult> {
     public final /* synthetic */ Function0 $callback;
 
@@ -20,7 +20,7 @@ public final class WidgetUserPasswordVerify2<O> implements ActivityResultCallbac
         onActivityResult2(activityResult);
     }
 
-    /* renamed from: onActivityResult, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: onActivityResult, reason: avoid collision after fix types in other method */
     public final void onActivityResult2(ActivityResult activityResult) {
         Intrinsics3.checkNotNullExpressionValue(activityResult, "activityResult");
         if (activityResult.getResultCode() == -1) {

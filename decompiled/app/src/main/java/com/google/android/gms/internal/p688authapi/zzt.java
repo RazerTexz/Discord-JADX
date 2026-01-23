@@ -7,12 +7,12 @@ import com.google.android.gms.common.internal.safeparcel.AbstractSafeParcelable;
 import p007b.p085c.p086a.p087a0.AnimatableValueParser;
 import p007b.p225i.p226a.p288f.p313h.p316c.C3467p;
 
-/* compiled from: com.google.android.gms:play-services-auth@@19.0.0 */
-/* loaded from: classes3.dex */
+/* JADX INFO: compiled from: com.google.android.gms:play-services-auth@@19.0.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public final class zzt extends AbstractSafeParcelable {
     public static final Parcelable.Creator<zzt> CREATOR = new C3467p();
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final Credential f20583j;
 
     public zzt(Credential credential) {

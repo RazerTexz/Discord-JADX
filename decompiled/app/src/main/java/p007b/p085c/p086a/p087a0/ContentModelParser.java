@@ -33,12 +33,12 @@ import p007b.p085c.p086a.p095y.p097l.ShapeStroke;
 import p007b.p085c.p086a.p095y.p097l.ShapeTrimPath;
 import p007b.p100d.p104b.p105a.outline;
 
-/* compiled from: ContentModelParser.java */
-/* renamed from: b.c.a.a0.g, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.c.a.a0.g, reason: use source file name */
+/* JADX INFO: compiled from: ContentModelParser.java */
+/* JADX INFO: loaded from: classes.dex */
 public class ContentModelParser {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static JsonReader2.a f2231a = JsonReader2.a.m616a("ty", "d");
 
     /* JADX WARN: Can't fix incorrect switch cases order, some code will duplicate */
@@ -46,7 +46,7 @@ public class ContentModelParser {
     /* JADX WARN: Removed duplicated region for block: B:388:0x069f A[LOOP:1: B:386:0x0699->B:388:0x069f, LOOP_END] */
     /* JADX WARN: Removed duplicated region for block: B:69:0x00e3  */
     @Nullable
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
@@ -60,7 +60,7 @@ public class ContentModelParser {
         String strMo612t3;
         int iMo610q;
         String strMo612t4;
-        char c;
+        byte b2;
         jsonReader2.mo604b();
         int iMo610q2 = 2;
         while (true) {
@@ -577,17 +577,17 @@ public class ContentModelParser {
                                 int iHashCode = strMo612t14.hashCode();
                                 if (iHashCode != 100) {
                                     if (iHashCode != 103) {
-                                        c = (iHashCode == 111 && strMo612t14.equals("o")) ? (char) 2 : (char) 65535;
+                                        b2 = (iHashCode == 111 && strMo612t14.equals("o")) ? (byte) 2 : (byte) -1;
                                     } else if (strMo612t14.equals("g")) {
-                                        c = 1;
+                                        b2 = 1;
                                     }
                                 } else if (strMo612t14.equals("d")) {
-                                    c = 0;
+                                    b2 = 0;
                                 }
-                                if (c == 0 || c == 1) {
+                                if (b2 == 0 || b2 == 1) {
                                     lottieComposition.f2349n = true;
                                     arrayList3.add(animatableFloatValueM561q17);
-                                } else if (c == 2) {
+                                } else if (b2 == 2) {
                                     animatableFloatValue2 = animatableFloatValueM561q17;
                                 }
                             }

@@ -1,8 +1,8 @@
 package com.discord.api.user;
 
 
-/* compiled from: NsfwAllowance.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: NsfwAllowance.kt */
+/* JADX INFO: loaded from: classes.dex */
 public enum NsfwAllowance {
     UNKNOWN,
     ALLOWED,

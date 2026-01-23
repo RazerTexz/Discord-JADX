@@ -9,26 +9,26 @@ import p007b.p452o.p453a.CameraView4;
 import p007b.p452o.p453a.PictureResult;
 import p007b.p452o.p453a.p455n.CameraBaseEngine;
 
-/* compiled from: PictureRecorder.java */
-/* renamed from: b.o.a.v.d, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.o.a.v.d, reason: use source file name */
+/* JADX INFO: compiled from: PictureRecorder.java */
+/* JADX INFO: loaded from: classes3.dex */
 public abstract class PictureRecorder {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     @VisibleForTesting(otherwise = 4)
     public PictureResult.a f14172j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     @VisibleForTesting
     public a f14173k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public Exception f14174l;
 
-    /* compiled from: PictureRecorder.java */
-    /* renamed from: b.o.a.v.d$a */
+    /* JADX INFO: renamed from: b.o.a.v.d$a */
+    /* JADX INFO: compiled from: PictureRecorder.java */
     public interface a {
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         void mo7227a(@Nullable PictureResult.a aVar, @Nullable Exception exc);
     }
 
@@ -37,7 +37,7 @@ public abstract class PictureRecorder {
         this.f14173k = aVar2;
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public void m7420a(boolean z2) {
         CameraView cameraView;
         boolean z3;
@@ -55,7 +55,7 @@ public abstract class PictureRecorder {
         }
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public void mo7416b() {
         a aVar = this.f14173k;
         if (aVar != null) {
@@ -65,6 +65,6 @@ public abstract class PictureRecorder {
         }
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public abstract void mo7417c();
 }

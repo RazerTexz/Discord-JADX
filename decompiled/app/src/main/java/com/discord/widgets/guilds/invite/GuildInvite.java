@@ -13,11 +13,11 @@ import p001a0.p002a.p003a.C0002b;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: GuildInvite.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: GuildInvite.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final /* data */ class GuildInvite implements Serializable {
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private final Long channelId;
     private final long expirationTimeMs;
@@ -27,7 +27,7 @@ public final /* data */ class GuildInvite implements Serializable {
     private final Long inviterId;
     private final boolean isStaticInvite;
 
-    /* compiled from: GuildInvite.kt */
+    /* JADX INFO: compiled from: GuildInvite.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -86,37 +86,37 @@ public final /* data */ class GuildInvite implements Serializable {
         return guildInvite.copy((i & 1) != 0 ? guildInvite.inviteCode : str, (i & 2) != 0 ? guildInvite.guildId : l, (i & 4) != 0 ? guildInvite.channelId : l2, (i & 8) != 0 ? guildInvite.inviterId : l3, (i & 16) != 0 ? guildInvite.isStaticInvite : z2, (i & 32) != 0 ? guildInvite.expirationTimeMs : j, (i & 64) != 0 ? guildInvite.guildScheduledEventId : l4);
     }
 
-    /* renamed from: component1, reason: from getter */
+    /* JADX INFO: renamed from: component1, reason: from getter */
     public final String getInviteCode() {
         return this.inviteCode;
     }
 
-    /* renamed from: component2, reason: from getter */
+    /* JADX INFO: renamed from: component2, reason: from getter */
     public final Long getGuildId() {
         return this.guildId;
     }
 
-    /* renamed from: component3, reason: from getter */
+    /* JADX INFO: renamed from: component3, reason: from getter */
     public final Long getChannelId() {
         return this.channelId;
     }
 
-    /* renamed from: component4, reason: from getter */
+    /* JADX INFO: renamed from: component4, reason: from getter */
     public final Long getInviterId() {
         return this.inviterId;
     }
 
-    /* renamed from: component5, reason: from getter */
+    /* JADX INFO: renamed from: component5, reason: from getter */
     public final boolean getIsStaticInvite() {
         return this.isStaticInvite;
     }
 
-    /* renamed from: component6, reason: from getter */
+    /* JADX INFO: renamed from: component6, reason: from getter */
     public final long getExpirationTimeMs() {
         return this.expirationTimeMs;
     }
 
-    /* renamed from: component7, reason: from getter */
+    /* JADX INFO: renamed from: component7, reason: from getter */
     public final Long getGuildScheduledEventId() {
         return this.guildScheduledEventId;
     }
@@ -162,6 +162,9 @@ public final /* data */ class GuildInvite implements Serializable {
     }
 
     /* JADX WARN: Multi-variable type inference failed */
+    /* JADX WARN: Type inference failed for: r2v10, types: [int] */
+    /* JADX WARN: Type inference failed for: r2v16 */
+    /* JADX WARN: Type inference failed for: r2v20 */
     public int hashCode() {
         String str = this.inviteCode;
         int iHashCode = (str != null ? str.hashCode() : 0) * 31;
@@ -172,11 +175,11 @@ public final /* data */ class GuildInvite implements Serializable {
         Long l3 = this.inviterId;
         int iHashCode4 = (iHashCode3 + (l3 != null ? l3.hashCode() : 0)) * 31;
         boolean z2 = this.isStaticInvite;
-        int i = z2;
-        if (z2 != 0) {
-            i = 1;
+        ?? r2 = z2;
+        if (z2) {
+            r2 = 1;
         }
-        int iM3a = (C0002b.m3a(this.expirationTimeMs) + ((iHashCode4 + i) * 31)) * 31;
+        int iM3a = (C0002b.m3a(this.expirationTimeMs) + ((iHashCode4 + r2) * 31)) * 31;
         Long l4 = this.guildScheduledEventId;
         return iM3a + (l4 != null ? l4.hashCode() : 0);
     }

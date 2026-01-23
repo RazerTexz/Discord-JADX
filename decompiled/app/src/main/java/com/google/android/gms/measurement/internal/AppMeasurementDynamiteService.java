@@ -46,23 +46,23 @@ import p007b.p225i.p226a.p288f.p330i.p332b.RunnableC4240x9;
 import p007b.p225i.p226a.p288f.p330i.p332b.RunnableC4249y7;
 import p007b.p225i.p226a.p288f.p330i.p332b.RunnableC4261z8;
 
-/* compiled from: com.google.android.gms:play-services-measurement-sdk@@18.0.0 */
+/* JADX INFO: compiled from: com.google.android.gms:play-services-measurement-sdk@@18.0.0 */
+/* JADX INFO: loaded from: classes3.dex */
 @DynamiteApi
-/* loaded from: classes3.dex */
 public class AppMeasurementDynamiteService extends AbstractBinderC3632dc {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public C4202u4 f20659a = null;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     @GuardedBy("listenerMap")
     public final Map<Integer, InterfaceC4258z5> f20660b = new ArrayMap();
 
-    /* compiled from: com.google.android.gms:play-services-measurement-sdk@@18.0.0 */
-    /* renamed from: com.google.android.gms.measurement.internal.AppMeasurementDynamiteService$a */
+    /* JADX INFO: renamed from: com.google.android.gms.measurement.internal.AppMeasurementDynamiteService$a */
+    /* JADX INFO: compiled from: com.google.android.gms:play-services-measurement-sdk@@18.0.0 */
     public class C10806a implements InterfaceC4225w5 {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public InterfaceC3605c f20661a;
 
         public C10806a(InterfaceC3605c interfaceC3605c) {
@@ -70,11 +70,11 @@ public class AppMeasurementDynamiteService extends AbstractBinderC3632dc {
         }
     }
 
-    /* compiled from: com.google.android.gms:play-services-measurement-sdk@@18.0.0 */
-    /* renamed from: com.google.android.gms.measurement.internal.AppMeasurementDynamiteService$b */
+    /* JADX INFO: renamed from: com.google.android.gms.measurement.internal.AppMeasurementDynamiteService$b */
+    /* JADX INFO: compiled from: com.google.android.gms:play-services-measurement-sdk@@18.0.0 */
     public class C10807b implements InterfaceC4258z5 {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public InterfaceC3605c f20663a;
 
         public C10807b(InterfaceC3605c interfaceC3605c) {
@@ -82,7 +82,7 @@ public class AppMeasurementDynamiteService extends AbstractBinderC3632dc {
         }
 
         @Override // p007b.p225i.p226a.p288f.p330i.p332b.InterfaceC4258z5
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final void mo5979a(String str, String str2, Bundle bundle, long j) {
             try {
                 this.f20663a.mo4572Z(str, str2, bundle, j);
@@ -93,19 +93,19 @@ public class AppMeasurementDynamiteService extends AbstractBinderC3632dc {
     }
 
     @Override // p007b.p225i.p226a.p288f.p313h.p325l.InterfaceC3646ec
-    public void beginAdUnitExposure(String str, long j) throws IllegalStateException, RemoteException {
+    public void beginAdUnitExposure(String str, long j) throws RemoteException {
         m9111g();
         this.f20659a.m5937A().m5442v(str, j);
     }
 
     @Override // p007b.p225i.p226a.p288f.p313h.p325l.InterfaceC3646ec
-    public void clearConditionalUserProperty(String str, String str2, Bundle bundle) throws IllegalStateException, RemoteException {
+    public void clearConditionalUserProperty(String str, String str2, Bundle bundle) throws RemoteException {
         m9111g();
         this.f20659a.m5948s().m5555R(str, str2, bundle);
     }
 
     @Override // p007b.p225i.p226a.p288f.p313h.p325l.InterfaceC3646ec
-    public void clearMeasurementEnabled(long j) throws IllegalStateException, RemoteException {
+    public void clearMeasurementEnabled(long j) throws RemoteException {
         m9111g();
         C3999c6 c3999c6M5948s = this.f20659a.m5948s();
         c3999c6M5948s.m5497t();
@@ -113,12 +113,12 @@ public class AppMeasurementDynamiteService extends AbstractBinderC3632dc {
     }
 
     @Override // p007b.p225i.p226a.p288f.p313h.p325l.InterfaceC3646ec
-    public void endAdUnitExposure(String str, long j) throws IllegalStateException, RemoteException {
+    public void endAdUnitExposure(String str, long j) throws RemoteException {
         m9111g();
         this.f20659a.m5937A().m5445y(str, j);
     }
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public final void m9111g() {
         if (this.f20659a == null) {
             throw new IllegalStateException("Attempting to perform action before initialize.");
@@ -132,7 +132,7 @@ public class AppMeasurementDynamiteService extends AbstractBinderC3632dc {
     }
 
     @Override // p007b.p225i.p226a.p288f.p313h.p325l.InterfaceC3646ec
-    public void getAppInstanceId(InterfaceC3660fc interfaceC3660fc) throws IllegalStateException, RemoteException {
+    public void getAppInstanceId(InterfaceC3660fc interfaceC3660fc) throws RemoteException {
         m9111g();
         this.f20659a.mo5725f().m5852v(new RunnableC3975a6(this, interfaceC3660fc));
     }
@@ -144,7 +144,7 @@ public class AppMeasurementDynamiteService extends AbstractBinderC3632dc {
     }
 
     @Override // p007b.p225i.p226a.p288f.p313h.p325l.InterfaceC3646ec
-    public void getConditionalUserProperties(String str, String str2, InterfaceC3660fc interfaceC3660fc) throws IllegalStateException, RemoteException {
+    public void getConditionalUserProperties(String str, String str2, InterfaceC3660fc interfaceC3660fc) throws RemoteException {
         m9111g();
         this.f20659a.mo5725f().m5852v(new RunnableC4261z8(this, interfaceC3660fc, str, str2));
     }
@@ -231,7 +231,7 @@ public class AppMeasurementDynamiteService extends AbstractBinderC3632dc {
     }
 
     @Override // p007b.p225i.p226a.p288f.p313h.p325l.InterfaceC3646ec
-    public void getUserProperties(String str, String str2, boolean z2, InterfaceC3660fc interfaceC3660fc) throws IllegalStateException, RemoteException {
+    public void getUserProperties(String str, String str2, boolean z2, InterfaceC3660fc interfaceC3660fc) throws RemoteException {
         m9111g();
         this.f20659a.mo5725f().m5852v(new RunnableC3976a7(this, interfaceC3660fc, str, str2, z2));
     }
@@ -253,19 +253,19 @@ public class AppMeasurementDynamiteService extends AbstractBinderC3632dc {
     }
 
     @Override // p007b.p225i.p226a.p288f.p313h.p325l.InterfaceC3646ec
-    public void isDataCollectionEnabled(InterfaceC3660fc interfaceC3660fc) throws IllegalStateException, RemoteException {
+    public void isDataCollectionEnabled(InterfaceC3660fc interfaceC3660fc) throws RemoteException {
         m9111g();
         this.f20659a.mo5725f().m5852v(new RunnableC4240x9(this, interfaceC3660fc));
     }
 
     @Override // p007b.p225i.p226a.p288f.p313h.p325l.InterfaceC3646ec
-    public void logEvent(String str, String str2, Bundle bundle, boolean z2, boolean z3, long j) throws IllegalStateException, RemoteException {
+    public void logEvent(String str, String str2, Bundle bundle, boolean z2, boolean z3, long j) throws RemoteException {
         m9111g();
         this.f20659a.m5948s().m5546I(str, str2, bundle, z2, z3, j);
     }
 
     @Override // p007b.p225i.p226a.p288f.p313h.p325l.InterfaceC3646ec
-    public void logEventAndBundle(String str, String str2, Bundle bundle, InterfaceC3660fc interfaceC3660fc, long j) throws IllegalStateException, RemoteException {
+    public void logEventAndBundle(String str, String str2, Bundle bundle, InterfaceC3660fc interfaceC3660fc, long j) throws RemoteException {
         m9111g();
         AnimatableValueParser.m583w(str2);
         (bundle != null ? new Bundle(bundle) : new Bundle()).putString("_o", "app");
@@ -273,7 +273,7 @@ public class AppMeasurementDynamiteService extends AbstractBinderC3632dc {
     }
 
     @Override // p007b.p225i.p226a.p288f.p313h.p325l.InterfaceC3646ec
-    public void logHealthData(int i, String str, InterfaceC3422a interfaceC3422a, InterfaceC3422a interfaceC3422a2, InterfaceC3422a interfaceC3422a3) throws IllegalStateException, RemoteException {
+    public void logHealthData(int i, String str, InterfaceC3422a interfaceC3422a, InterfaceC3422a interfaceC3422a2, InterfaceC3422a interfaceC3422a3) throws RemoteException {
         m9111g();
         this.f20659a.mo5726g().m5799w(i, true, false, str, interfaceC3422a == null ? null : BinderC3423b.m4381i(interfaceC3422a), interfaceC3422a2 == null ? null : BinderC3423b.m4381i(interfaceC3422a2), interfaceC3422a3 != null ? BinderC3423b.m4381i(interfaceC3422a3) : null);
     }
@@ -299,7 +299,7 @@ public class AppMeasurementDynamiteService extends AbstractBinderC3632dc {
     }
 
     @Override // p007b.p225i.p226a.p288f.p313h.p325l.InterfaceC3646ec
-    public void onActivityPaused(InterfaceC3422a interfaceC3422a, long j) throws IllegalStateException, RemoteException {
+    public void onActivityPaused(InterfaceC3422a interfaceC3422a, long j) throws RemoteException {
         m9111g();
         C4248y6 c4248y6 = this.f20659a.m5948s().f10594c;
         if (c4248y6 != null) {
@@ -309,7 +309,7 @@ public class AppMeasurementDynamiteService extends AbstractBinderC3632dc {
     }
 
     @Override // p007b.p225i.p226a.p288f.p313h.p325l.InterfaceC3646ec
-    public void onActivityResumed(InterfaceC3422a interfaceC3422a, long j) throws IllegalStateException, RemoteException {
+    public void onActivityResumed(InterfaceC3422a interfaceC3422a, long j) throws RemoteException {
         m9111g();
         C4248y6 c4248y6 = this.f20659a.m5948s().f10594c;
         if (c4248y6 != null) {
@@ -376,7 +376,7 @@ public class AppMeasurementDynamiteService extends AbstractBinderC3632dc {
     }
 
     @Override // p007b.p225i.p226a.p288f.p313h.p325l.InterfaceC3646ec
-    public void resetAnalyticsData(long j) throws IllegalStateException, RemoteException {
+    public void resetAnalyticsData(long j) throws RemoteException {
         m9111g();
         C3999c6 c3999c6M5948s = this.f20659a.m5948s();
         c3999c6M5948s.f10598g.set(null);
@@ -384,7 +384,7 @@ public class AppMeasurementDynamiteService extends AbstractBinderC3632dc {
     }
 
     @Override // p007b.p225i.p226a.p288f.p313h.p325l.InterfaceC3646ec
-    public void setConditionalUserProperty(Bundle bundle, long j) throws IllegalStateException, RemoteException {
+    public void setConditionalUserProperty(Bundle bundle, long j) throws RemoteException {
         m9111g();
         if (bundle == null) {
             this.f20659a.mo5726g().f11141f.m5860a("Conditional user property must not be null");
@@ -394,7 +394,7 @@ public class AppMeasurementDynamiteService extends AbstractBinderC3632dc {
     }
 
     @Override // p007b.p225i.p226a.p288f.p313h.p325l.InterfaceC3646ec
-    public void setConsent(Bundle bundle, long j) throws IllegalStateException, RemoteException {
+    public void setConsent(Bundle bundle, long j) throws RemoteException {
         m9111g();
         C3999c6 c3999c6M5948s = this.f20659a.m5948s();
         if (C3842t8.m5293b() && c3999c6M5948s.f11202a.f11260h.m5532u(null, C4142p.f11035H0)) {
@@ -403,7 +403,7 @@ public class AppMeasurementDynamiteService extends AbstractBinderC3632dc {
     }
 
     @Override // p007b.p225i.p226a.p288f.p313h.p325l.InterfaceC3646ec
-    public void setConsentThirdParty(Bundle bundle, long j) throws IllegalStateException, RemoteException {
+    public void setConsentThirdParty(Bundle bundle, long j) throws RemoteException {
         m9111g();
         C3999c6 c3999c6M5948s = this.f20659a.m5948s();
         if (C3842t8.m5293b() && c3999c6M5948s.f11202a.f11260h.m5532u(null, C4142p.f11037I0)) {
@@ -412,7 +412,7 @@ public class AppMeasurementDynamiteService extends AbstractBinderC3632dc {
     }
 
     @Override // p007b.p225i.p226a.p288f.p313h.p325l.InterfaceC3646ec
-    public void setCurrentScreen(InterfaceC3422a interfaceC3422a, String str, String str2, long j) throws IllegalStateException, RemoteException {
+    public void setCurrentScreen(InterfaceC3422a interfaceC3422a, String str, String str2, long j) throws RemoteException {
         m9111g();
         C4060h7 c4060h7M5952w = this.f20659a.m5952w();
         Activity activity = (Activity) BinderC3423b.m4381i(interfaceC3422a);
@@ -452,7 +452,7 @@ public class AppMeasurementDynamiteService extends AbstractBinderC3632dc {
     }
 
     @Override // p007b.p225i.p226a.p288f.p313h.p325l.InterfaceC3646ec
-    public void setDataCollectionEnabled(boolean z2) throws IllegalStateException, RemoteException {
+    public void setDataCollectionEnabled(boolean z2) throws RemoteException {
         m9111g();
         C3999c6 c3999c6M5948s = this.f20659a.m5948s();
         c3999c6M5948s.m5497t();
@@ -460,14 +460,14 @@ public class AppMeasurementDynamiteService extends AbstractBinderC3632dc {
     }
 
     @Override // p007b.p225i.p226a.p288f.p313h.p325l.InterfaceC3646ec
-    public void setDefaultEventParameters(Bundle bundle) throws IllegalStateException {
+    public void setDefaultEventParameters(Bundle bundle) {
         m9111g();
         C3999c6 c3999c6M5948s = this.f20659a.m5948s();
         c3999c6M5948s.mo5725f().m5852v(new RunnableC3987b6(c3999c6M5948s, bundle == null ? null : new Bundle(bundle)));
     }
 
     @Override // p007b.p225i.p226a.p288f.p313h.p325l.InterfaceC3646ec
-    public void setEventInterceptor(InterfaceC3605c interfaceC3605c) throws IllegalStateException, RemoteException {
+    public void setEventInterceptor(InterfaceC3605c interfaceC3605c) throws RemoteException {
         m9111g();
         C10806a c10806a = new C10806a(interfaceC3605c);
         if (this.f20659a.mo5725f().m5855y()) {
@@ -483,7 +483,7 @@ public class AppMeasurementDynamiteService extends AbstractBinderC3632dc {
     }
 
     @Override // p007b.p225i.p226a.p288f.p313h.p325l.InterfaceC3646ec
-    public void setMeasurementEnabled(boolean z2, long j) throws IllegalStateException, RemoteException {
+    public void setMeasurementEnabled(boolean z2, long j) throws RemoteException {
         m9111g();
         C3999c6 c3999c6M5948s = this.f20659a.m5948s();
         Boolean boolValueOf = Boolean.valueOf(z2);
@@ -492,27 +492,27 @@ public class AppMeasurementDynamiteService extends AbstractBinderC3632dc {
     }
 
     @Override // p007b.p225i.p226a.p288f.p313h.p325l.InterfaceC3646ec
-    public void setMinimumSessionDuration(long j) throws IllegalStateException, RemoteException {
+    public void setMinimumSessionDuration(long j) throws RemoteException {
         m9111g();
         C3999c6 c3999c6M5948s = this.f20659a.m5948s();
         c3999c6M5948s.mo5725f().m5852v(new RunnableC4071i6(c3999c6M5948s, j));
     }
 
     @Override // p007b.p225i.p226a.p288f.p313h.p325l.InterfaceC3646ec
-    public void setSessionTimeoutDuration(long j) throws IllegalStateException, RemoteException {
+    public void setSessionTimeoutDuration(long j) throws RemoteException {
         m9111g();
         C3999c6 c3999c6M5948s = this.f20659a.m5948s();
         c3999c6M5948s.mo5725f().m5852v(new RunnableC4059h6(c3999c6M5948s, j));
     }
 
     @Override // p007b.p225i.p226a.p288f.p313h.p325l.InterfaceC3646ec
-    public void setUserId(String str, long j) throws IllegalStateException, RemoteException {
+    public void setUserId(String str, long j) throws RemoteException {
         m9111g();
         this.f20659a.m5948s().m5549L(null, "_id", str, true, j);
     }
 
     @Override // p007b.p225i.p226a.p288f.p313h.p325l.InterfaceC3646ec
-    public void setUserProperty(String str, String str2, InterfaceC3422a interfaceC3422a, boolean z2, long j) throws IllegalStateException, RemoteException {
+    public void setUserProperty(String str, String str2, InterfaceC3422a interfaceC3422a, boolean z2, long j) throws RemoteException {
         m9111g();
         this.f20659a.m5948s().m5549L(str, str2, BinderC3423b.m4381i(interfaceC3422a), z2, j);
     }

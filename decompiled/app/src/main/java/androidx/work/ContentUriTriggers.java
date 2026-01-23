@@ -6,8 +6,8 @@ import androidx.annotation.RestrictTo;
 import java.util.HashSet;
 import java.util.Set;
 
+/* JADX INFO: loaded from: classes.dex */
 @RestrictTo({RestrictTo.Scope.LIBRARY_GROUP})
-/* loaded from: classes.dex */
 public final class ContentUriTriggers {
     private final Set<Trigger> mTriggers = new HashSet();
 

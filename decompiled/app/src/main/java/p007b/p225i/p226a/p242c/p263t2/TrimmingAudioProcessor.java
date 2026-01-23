@@ -4,40 +4,40 @@ import com.google.android.exoplayer2.audio.AudioProcessor;
 import java.nio.ByteBuffer;
 import p007b.p225i.p226a.p242c.p259f3.Util2;
 
-/* compiled from: TrimmingAudioProcessor.java */
-/* renamed from: b.i.a.c.t2.f0, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.t2.f0, reason: use source file name */
+/* JADX INFO: compiled from: TrimmingAudioProcessor.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class TrimmingAudioProcessor extends BaseAudioProcessor {
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public int f7746i;
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public int f7747j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public boolean f7748k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public int f7749l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public byte[] f7750m = Util2.f6713f;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public int f7751n;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public long f7752o;
 
     @Override // p007b.p225i.p226a.p242c.p263t2.BaseAudioProcessor, com.google.android.exoplayer2.audio.AudioProcessor
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public boolean mo3485b() {
         return super.mo3485b() && this.f7751n == 0;
     }
 
     @Override // com.google.android.exoplayer2.audio.AudioProcessor
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public void mo3470c(ByteBuffer byteBuffer) {
         int iPosition = byteBuffer.position();
         int iLimit = byteBuffer.limit();
@@ -46,7 +46,7 @@ public final class TrimmingAudioProcessor extends BaseAudioProcessor {
             return;
         }
         int iMin = Math.min(i, this.f7749l);
-        this.f7752o += iMin / this.f7837b.f19699e;
+        this.f7752o += (long) (iMin / this.f7837b.f19699e);
         this.f7749l -= iMin;
         byteBuffer.position(iPosition + iMin);
         if (this.f7749l > 0) {
@@ -72,7 +72,7 @@ public final class TrimmingAudioProcessor extends BaseAudioProcessor {
     }
 
     @Override // p007b.p225i.p226a.p242c.p263t2.BaseAudioProcessor
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public AudioProcessor.C10685a mo3471f(AudioProcessor.C10685a c10685a) throws AudioProcessor.UnhandledAudioFormatException {
         if (c10685a.f19698d != 2) {
             throw new AudioProcessor.UnhandledAudioFormatException(c10685a);
@@ -82,7 +82,7 @@ public final class TrimmingAudioProcessor extends BaseAudioProcessor {
     }
 
     @Override // p007b.p225i.p226a.p242c.p263t2.BaseAudioProcessor
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public void mo3473g() {
         if (this.f7748k) {
             this.f7748k = false;
@@ -105,18 +105,19 @@ public final class TrimmingAudioProcessor extends BaseAudioProcessor {
     }
 
     @Override // p007b.p225i.p226a.p242c.p263t2.BaseAudioProcessor
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public void mo3474h() {
         if (this.f7748k) {
-            if (this.f7751n > 0) {
-                this.f7752o += r0 / this.f7837b.f19699e;
+            int i = this.f7751n;
+            if (i > 0) {
+                this.f7752o += (long) (i / this.f7837b.f19699e);
             }
             this.f7751n = 0;
         }
     }
 
     @Override // p007b.p225i.p226a.p242c.p263t2.BaseAudioProcessor
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public void mo3475i() {
         this.f7750m = Util2.f6713f;
     }

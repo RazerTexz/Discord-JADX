@@ -25,41 +25,41 @@ import p615g0.JvmOkio;
 import p615g0.RealBufferedSource;
 import p615g0.Timeout2;
 
-/* compiled from: PublicSuffixDatabase.kt */
-/* loaded from: classes3.dex */
+/* JADX INFO: compiled from: PublicSuffixDatabase.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class PublicSuffixDatabase {
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final AtomicBoolean f27588e = new AtomicBoolean(false);
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final CountDownLatch f27589f = new CountDownLatch(1);
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public byte[] f27590g;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public byte[] f27591h;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public static final C12940a f27587d = new C12940a(null);
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final byte[] f27584a = {(byte) 42};
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static final List<String> f27585b = CollectionsJVM.listOf("*");
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public static final PublicSuffixDatabase f27586c = new PublicSuffixDatabase();
 
-    /* compiled from: PublicSuffixDatabase.kt */
-    /* renamed from: okhttp3.internal.publicsuffix.PublicSuffixDatabase$a */
+    /* JADX INFO: renamed from: okhttp3.internal.publicsuffix.PublicSuffixDatabase$a */
+    /* JADX INFO: compiled from: PublicSuffixDatabase.kt */
     public static final class C12940a {
         public C12940a(DefaultConstructorMarker defaultConstructorMarker) {
         }
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public static final String m11005a(C12940a c12940a, byte[] bArr, byte[][] bArr2, int i) {
             int i2;
             boolean z2;
@@ -143,7 +143,7 @@ public final class PublicSuffixDatabase {
         }
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final String m11002a(String str) {
         String strM11005a;
         String str2;
@@ -290,7 +290,7 @@ public final class PublicSuffixDatabase {
     }
 
     /* JADX WARN: Removed duplicated region for block: B:12:0x0048 A[Catch: all -> 0x0054, TryCatch #0 {, blocks: (B:9:0x0041, B:10:0x0044, B:12:0x0048, B:13:0x004b), top: B:26:0x0041 }] */
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
@@ -327,7 +327,7 @@ public final class PublicSuffixDatabase {
         }
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final List<String> m11004c(String str) {
         List<String> listSplit$default = Strings4.split$default((CharSequence) str, new char[]{'.'}, false, 0, 6, (Object) null);
         return Intrinsics3.areEqual((String) _Collections.last((List) listSplit$default), "") ? _Collections.dropLast(listSplit$default, 1) : listSplit$default;

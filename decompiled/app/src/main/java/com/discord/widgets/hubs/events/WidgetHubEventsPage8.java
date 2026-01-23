@@ -11,9 +11,9 @@ import kotlin.jvm.functions.Function0;
 import p507d0.p580t.Collections2;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetHubEventsPage.kt */
-/* renamed from: com.discord.widgets.hubs.events.WidgetHubEventsPage$loggingConfig$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.hubs.events.WidgetHubEventsPage$loggingConfig$1, reason: use source file name */
+/* JADX INFO: compiled from: WidgetHubEventsPage.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetHubEventsPage8 extends Lambda implements Function0<AnalyticsSchema> {
     public final /* synthetic */ WidgetHubEventsPage this$0;
 

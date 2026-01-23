@@ -7,8 +7,8 @@ import p007b.p085c.p086a.p087a0.AnimatableValueParser;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: BluetoothProfileConnectionState.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: BluetoothProfileConnectionState.kt */
+/* JADX INFO: loaded from: classes.dex */
 public enum BluetoothProfileConnectionState {
     Disconnected(0),
     Connecting(1),
@@ -16,17 +16,17 @@ public enum BluetoothProfileConnectionState {
     Disconnecting(3);
 
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private final int value;
 
-    /* compiled from: BluetoothProfileConnectionState.kt */
-    /* renamed from: com.discord.rtcconnection.enums.BluetoothProfileConnectionState$a, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: com.discord.rtcconnection.enums.BluetoothProfileConnectionState$a, reason: from kotlin metadata */
+    /* JADX INFO: compiled from: BluetoothProfileConnectionState.kt */
     public static final class Companion {
         public Companion(DefaultConstructorMarker defaultConstructorMarker) {
         }
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final BluetoothProfileConnectionState m8496a(int i) {
             BluetoothProfileConnectionState[] bluetoothProfileConnectionStateArrValues = BluetoothProfileConnectionState.values();
             for (int i2 = 0; i2 < 4; i2++) {
@@ -38,7 +38,7 @@ public enum BluetoothProfileConnectionState {
             return null;
         }
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final C5635b m8497b(Intent intent) {
             Intrinsics3.checkNotNullParameter(intent, "intent");
             if (!Intrinsics3.areEqual(intent.getAction(), "android.bluetooth.headset.profile.action.CONNECTION_STATE_CHANGED")) {
@@ -51,17 +51,17 @@ public enum BluetoothProfileConnectionState {
         }
     }
 
-    /* compiled from: BluetoothProfileConnectionState.kt */
-    /* renamed from: com.discord.rtcconnection.enums.BluetoothProfileConnectionState$b */
+    /* JADX INFO: renamed from: com.discord.rtcconnection.enums.BluetoothProfileConnectionState$b */
+    /* JADX INFO: compiled from: BluetoothProfileConnectionState.kt */
     public static final class C5635b {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final BluetoothProfileConnectionState f18871a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final BluetoothProfileConnectionState f18872b;
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public final BluetoothDevice f18873c;
 
         public C5635b(BluetoothProfileConnectionState bluetoothProfileConnectionState, BluetoothProfileConnectionState bluetoothProfileConnectionState2, BluetoothDevice bluetoothDevice) {

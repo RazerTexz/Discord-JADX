@@ -8,24 +8,24 @@ import androidx.viewbinding.ViewBinding;
 import com.discord.utilities.view.recycler.MaxHeightRecyclerView;
 import com.google.android.material.button.MaterialButton;
 
-/* compiled from: DialogSimpleSelectorBinding.java */
-/* renamed from: b.a.i.l, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.a.i.l, reason: use source file name */
+/* JADX INFO: compiled from: DialogSimpleSelectorBinding.java */
+/* JADX INFO: loaded from: classes.dex */
 public final class DialogSimpleSelectorBinding implements ViewBinding {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     @NonNull
     public final LinearLayout f1008a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     @NonNull
     public final MaterialButton f1009b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     @NonNull
     public final MaxHeightRecyclerView f1010c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     @NonNull
     public final TextView f1011d;
 

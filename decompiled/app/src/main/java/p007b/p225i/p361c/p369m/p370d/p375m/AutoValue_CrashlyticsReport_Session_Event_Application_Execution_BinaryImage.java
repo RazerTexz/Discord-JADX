@@ -5,21 +5,21 @@ import androidx.annotation.Nullable;
 import p007b.p100d.p104b.p105a.outline;
 import p007b.p225i.p361c.p369m.p370d.p375m.CrashlyticsReport;
 
-/* compiled from: AutoValue_CrashlyticsReport_Session_Event_Application_Execution_BinaryImage.java */
-/* renamed from: b.i.c.m.d.m.m, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.c.m.d.m.m, reason: use source file name */
+/* JADX INFO: compiled from: AutoValue_CrashlyticsReport_Session_Event_Application_Execution_BinaryImage.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class AutoValue_CrashlyticsReport_Session_Event_Application_Execution_BinaryImage extends CrashlyticsReport.d.AbstractC13233d.a.b.AbstractC13235a {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final long f12604a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final long f12605b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final String f12606c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final String f12607d;
 
     public AutoValue_CrashlyticsReport_Session_Event_Application_Execution_BinaryImage(long j, long j2, String str, String str2, a aVar) {
@@ -31,27 +31,27 @@ public final class AutoValue_CrashlyticsReport_Session_Event_Application_Executi
 
     @Override // p007b.p225i.p361c.p369m.p370d.p375m.CrashlyticsReport.d.AbstractC13233d.a.b.AbstractC13235a
     @NonNull
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public long mo6578a() {
         return this.f12604a;
     }
 
     @Override // p007b.p225i.p361c.p369m.p370d.p375m.CrashlyticsReport.d.AbstractC13233d.a.b.AbstractC13235a
     @NonNull
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public String mo6579b() {
         return this.f12606c;
     }
 
     @Override // p007b.p225i.p361c.p369m.p370d.p375m.CrashlyticsReport.d.AbstractC13233d.a.b.AbstractC13235a
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public long mo6580c() {
         return this.f12605b;
     }
 
     @Override // p007b.p225i.p361c.p369m.p370d.p375m.CrashlyticsReport.d.AbstractC13233d.a.b.AbstractC13235a
     @Nullable
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public String mo6581d() {
         return this.f12607d;
     }

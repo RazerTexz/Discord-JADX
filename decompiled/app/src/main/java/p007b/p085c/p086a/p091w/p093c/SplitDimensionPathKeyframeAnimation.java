@@ -4,18 +4,18 @@ import android.graphics.PointF;
 import java.util.Collections;
 import p007b.p085c.p086a.p090c0.Keyframe;
 
-/* compiled from: SplitDimensionPathKeyframeAnimation.java */
-/* renamed from: b.c.a.w.c.m, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.c.a.w.c.m, reason: use source file name */
+/* JADX INFO: compiled from: SplitDimensionPathKeyframeAnimation.java */
+/* JADX INFO: loaded from: classes.dex */
 public class SplitDimensionPathKeyframeAnimation extends BaseKeyframeAnimation<PointF, PointF> {
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public final PointF f2624i;
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final BaseKeyframeAnimation<Float, Float> f2625j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final BaseKeyframeAnimation<Float, Float> f2626k;
 
     public SplitDimensionPathKeyframeAnimation(BaseKeyframeAnimation<Float, Float> baseKeyframeAnimation, BaseKeyframeAnimation<Float, Float> baseKeyframeAnimation2) {
@@ -27,19 +27,19 @@ public class SplitDimensionPathKeyframeAnimation extends BaseKeyframeAnimation<P
     }
 
     @Override // p007b.p085c.p086a.p091w.p093c.BaseKeyframeAnimation
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public PointF mo727e() {
         return this.f2624i;
     }
 
     @Override // p007b.p085c.p086a.p091w.p093c.BaseKeyframeAnimation
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public PointF mo728f(Keyframe<PointF> keyframe, float f) {
         return this.f2624i;
     }
 
     @Override // p007b.p085c.p086a.p091w.p093c.BaseKeyframeAnimation
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public void mo730h(float f) {
         this.f2625j.mo730h(f);
         this.f2626k.mo730h(f);

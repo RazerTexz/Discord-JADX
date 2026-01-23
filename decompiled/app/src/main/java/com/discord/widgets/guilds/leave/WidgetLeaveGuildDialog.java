@@ -28,21 +28,21 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 import p507d0.p592z.p594d.Reflection2;
 
-/* compiled from: WidgetLeaveGuildDialog.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetLeaveGuildDialog.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetLeaveGuildDialog extends AppDialog {
     public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetLeaveGuildDialog.class, "binding", "getBinding()Lcom/discord/databinding/LeaveGuildDialogBinding;", 0)};
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
 
-    /* renamed from: binding$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
 
-    /* renamed from: viewModel$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: viewModel$delegate, reason: from kotlin metadata */
     private final Lazy viewModel;
 
-    /* compiled from: WidgetLeaveGuildDialog.kt */
+    /* JADX INFO: compiled from: WidgetLeaveGuildDialog.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -61,8 +61,8 @@ public final class WidgetLeaveGuildDialog extends AppDialog {
         }
     }
 
-    /* compiled from: WidgetLeaveGuildDialog.kt */
-    /* renamed from: com.discord.widgets.guilds.leave.WidgetLeaveGuildDialog$onResume$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.guilds.leave.WidgetLeaveGuildDialog$onResume$1 */
+    /* JADX INFO: compiled from: WidgetLeaveGuildDialog.kt */
     public static final class ViewOnClickListenerC87301 implements View.OnClickListener {
         public ViewOnClickListenerC87301() {
         }
@@ -73,8 +73,8 @@ public final class WidgetLeaveGuildDialog extends AppDialog {
         }
     }
 
-    /* compiled from: WidgetLeaveGuildDialog.kt */
-    /* renamed from: com.discord.widgets.guilds.leave.WidgetLeaveGuildDialog$onResume$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.guilds.leave.WidgetLeaveGuildDialog$onResume$2 */
+    /* JADX INFO: compiled from: WidgetLeaveGuildDialog.kt */
     public static final class ViewOnClickListenerC87312 implements View.OnClickListener {
         public ViewOnClickListenerC87312() {
         }
@@ -85,8 +85,8 @@ public final class WidgetLeaveGuildDialog extends AppDialog {
         }
     }
 
-    /* compiled from: WidgetLeaveGuildDialog.kt */
-    /* renamed from: com.discord.widgets.guilds.leave.WidgetLeaveGuildDialog$onResume$3 */
+    /* JADX INFO: renamed from: com.discord.widgets.guilds.leave.WidgetLeaveGuildDialog$onResume$3 */
+    /* JADX INFO: compiled from: WidgetLeaveGuildDialog.kt */
     public static final class C87323 extends Lambda implements Function1<LeaveGuildDialogViewModel.ViewState, Unit> {
         public C87323() {
             super(1);
@@ -98,15 +98,15 @@ public final class WidgetLeaveGuildDialog extends AppDialog {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(LeaveGuildDialogViewModel.ViewState viewState) {
             Intrinsics3.checkNotNullParameter(viewState, "viewState");
             WidgetLeaveGuildDialog.access$configureUI(WidgetLeaveGuildDialog.this, viewState);
         }
     }
 
-    /* compiled from: WidgetLeaveGuildDialog.kt */
-    /* renamed from: com.discord.widgets.guilds.leave.WidgetLeaveGuildDialog$onResume$4 */
+    /* JADX INFO: renamed from: com.discord.widgets.guilds.leave.WidgetLeaveGuildDialog$onResume$4 */
+    /* JADX INFO: compiled from: WidgetLeaveGuildDialog.kt */
     public static final class C87334 extends Lambda implements Function1<LeaveGuildDialogViewModel.Event, Unit> {
         public C87334() {
             super(1);
@@ -118,7 +118,7 @@ public final class WidgetLeaveGuildDialog extends AppDialog {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(LeaveGuildDialogViewModel.Event event) {
             Intrinsics3.checkNotNullParameter(event, "event");
             WidgetLeaveGuildDialog.access$handleEvent(WidgetLeaveGuildDialog.this, event);

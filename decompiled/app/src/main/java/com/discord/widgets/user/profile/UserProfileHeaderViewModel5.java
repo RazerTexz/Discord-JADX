@@ -5,9 +5,9 @@ import com.discord.widgets.user.profile.UserProfileHeaderViewModel;
 import kotlin.jvm.functions.Function0;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: UserProfileHeaderViewModel.kt */
-/* renamed from: com.discord.widgets.user.profile.UserProfileHeaderViewModel$ViewState$Loaded$avatarColorId$2, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: com.discord.widgets.user.profile.UserProfileHeaderViewModel$ViewState$Loaded$avatarColorId$2, reason: use source file name */
+/* JADX INFO: compiled from: UserProfileHeaderViewModel.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class UserProfileHeaderViewModel5 extends Lambda implements Function0<String> {
     public final /* synthetic */ UserProfileHeaderViewModel.ViewState.Loaded this$0;
 
@@ -23,7 +23,7 @@ public final class UserProfileHeaderViewModel5 extends Lambda implements Functio
     }
 
     @Override // kotlin.jvm.functions.Function0
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final String invoke2() {
         return RepresentativeColors2.getColorId(this.this$0.getUser());
     }

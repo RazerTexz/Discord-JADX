@@ -10,27 +10,27 @@ import kotlin.jvm.functions.Function0;
 import p507d0.p513e0.KProperty3;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: AppLogger.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: AppLogger.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class AppLogger {
 
-    /* renamed from: a, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: a, reason: from kotlin metadata */
     public boolean hasLoggedImpression;
 
-    /* renamed from: b, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: b, reason: from kotlin metadata */
     public AnalyticsSchema previousAnalyticsSchema;
 
-    /* renamed from: c, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: c, reason: from kotlin metadata */
     public final InterfaceC5455a provider;
 
-    /* renamed from: d, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: d, reason: from kotlin metadata */
     public final AnalyticsUtils.Tracker tracker;
 
-    /* renamed from: e, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: e, reason: from kotlin metadata */
     public final boolean isImpressionLoggingEnabled;
 
-    /* compiled from: AppLogger.kt */
-    /* renamed from: com.discord.app.AppLogger$a */
+    /* JADX INFO: renamed from: com.discord.app.AppLogger$a */
+    /* JADX INFO: compiled from: AppLogger.kt */
     public interface InterfaceC5455a {
         AppLogger2 getLoggingConfig();
     }
@@ -45,7 +45,7 @@ public final class AppLogger {
         this.isImpressionLoggingEnabled = z2;
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final void m8371a(AnalyticsSchema analyticsSchema) {
         Function0<AnalyticsSchema> function0;
         AnalyticsSchema analyticsSchemaInvoke;
@@ -61,7 +61,7 @@ public final class AppLogger {
     }
 
     /* JADX WARN: Removed duplicated region for block: B:40:0x0070  */
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */

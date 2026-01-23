@@ -6,9 +6,9 @@ import com.discord.utilities.auth.GoogleSmartLockManager;
 import com.discord.widgets.auth.WidgetAuthLogin;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: GoogleSmartLockManager.kt */
-/* renamed from: com.discord.utilities.auth.GoogleSmartLockManagerKt, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.utilities.auth.GoogleSmartLockManagerKt, reason: use source file name */
+/* JADX INFO: compiled from: GoogleSmartLockManager.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class GoogleSmartLockManager3 {
     public static final void clearSmartLockCredentials(Intent intent) {
         Intrinsics3.checkNotNullParameter(intent, "$this$clearSmartLockCredentials");

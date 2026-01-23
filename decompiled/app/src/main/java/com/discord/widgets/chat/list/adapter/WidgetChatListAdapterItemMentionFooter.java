@@ -14,8 +14,8 @@ import com.discord.widgets.chat.list.entries.ChatListEntry;
 import java.util.Objects;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: WidgetChatListAdapterItemMentionFooter.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetChatListAdapterItemMentionFooter.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetChatListAdapterItemMentionFooter extends WidgetChatListItem {
     private final WidgetChatListAdapterItemMentionFooterBinding binding;
 

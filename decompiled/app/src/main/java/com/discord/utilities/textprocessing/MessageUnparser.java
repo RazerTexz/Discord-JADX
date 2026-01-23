@@ -26,8 +26,8 @@ import p507d0.p579g0.StringNumberConversions;
 import p507d0.p580t.Collections2;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: MessageUnparser.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: MessageUnparser.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class MessageUnparser {
     public static final MessageUnparser INSTANCE = new MessageUnparser();
     private static final Pattern PATTERN_USER_MENTION = Pattern.compile("^<@!?(\\d+)>");
@@ -36,8 +36,8 @@ public final class MessageUnparser {
     private static final Pattern PATTERN_CUSTOM_EMOJI = Pattern.compile("^<(a)?:(\\w+):(\\d+)>");
 
     /* JADX INFO: Add missing generic type declarations: [S, T] */
-    /* compiled from: MessageUnparser.kt */
-    /* renamed from: com.discord.utilities.textprocessing.MessageUnparser$getChannelMentionRule$1 */
+    /* JADX INFO: renamed from: com.discord.utilities.textprocessing.MessageUnparser$getChannelMentionRule$1 */
+    /* JADX INFO: compiled from: MessageUnparser.kt */
     public static final class C69481<S, T> extends Rule<T, Node<T>, S> {
         public final /* synthetic */ Map $channels;
 
@@ -70,8 +70,8 @@ public final class MessageUnparser {
     }
 
     /* JADX INFO: Add missing generic type declarations: [S, T] */
-    /* compiled from: MessageUnparser.kt */
-    /* renamed from: com.discord.utilities.textprocessing.MessageUnparser$getCustomEmojiRule$1 */
+    /* JADX INFO: renamed from: com.discord.utilities.textprocessing.MessageUnparser$getCustomEmojiRule$1 */
+    /* JADX INFO: compiled from: MessageUnparser.kt */
     public static final class C69491<S, T> extends Rule<T, Node<T>, S> {
         public final /* synthetic */ EmojiSet $emojiSet;
 
@@ -93,8 +93,8 @@ public final class MessageUnparser {
     }
 
     /* JADX INFO: Add missing generic type declarations: [S, T] */
-    /* compiled from: MessageUnparser.kt */
-    /* renamed from: com.discord.utilities.textprocessing.MessageUnparser$getRoleMentionRule$1 */
+    /* JADX INFO: renamed from: com.discord.utilities.textprocessing.MessageUnparser$getRoleMentionRule$1 */
+    /* JADX INFO: compiled from: MessageUnparser.kt */
     public static final class C69501<S, T> extends Rule<T, Node<T>, S> {
         public final /* synthetic */ List $guildRoles;
 
@@ -140,8 +140,8 @@ public final class MessageUnparser {
     }
 
     /* JADX INFO: Add missing generic type declarations: [S, T] */
-    /* compiled from: MessageUnparser.kt */
-    /* renamed from: com.discord.utilities.textprocessing.MessageUnparser$getUserMentionRule$1 */
+    /* JADX INFO: renamed from: com.discord.utilities.textprocessing.MessageUnparser$getUserMentionRule$1 */
+    /* JADX INFO: compiled from: MessageUnparser.kt */
     public static final class C69511<S, T> extends Rule<T, Node<T>, S> {
         public final /* synthetic */ Map $users;
 

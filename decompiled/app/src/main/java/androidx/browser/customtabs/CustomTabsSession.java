@@ -17,7 +17,7 @@ import java.util.List;
 import p668x.p669a.p670a.ICustomTabsCallback;
 import p668x.p669a.p670a.ICustomTabsService;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public final class CustomTabsSession {
     private static final String TAG = "CustomTabsSession";
     private final ICustomTabsCallback mCallback;

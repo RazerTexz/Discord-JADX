@@ -18,12 +18,12 @@ import p007b.p008a.p027k.FormatUtils;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: NotificationMuteSettingsView.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: NotificationMuteSettingsView.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class NotificationMuteSettingsView extends LinearLayout {
     private final NotificationMuteSettingsViewBinding binding;
 
-    /* compiled from: NotificationMuteSettingsView.kt */
+    /* JADX INFO: compiled from: NotificationMuteSettingsView.kt */
     public static final /* data */ class ViewState {
         private final boolean isMuted;
         private final CharSequence muteDescriptionText;
@@ -75,37 +75,37 @@ public final class NotificationMuteSettingsView extends LinearLayout {
             return viewState.copy(z2, str2, charSequence5, charSequence6, charSequence7, i3, charSequence4);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final boolean getIsMuted() {
             return this.isMuted;
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final String getMuteEndTime() {
             return this.muteEndTime;
         }
 
-        /* renamed from: component3, reason: from getter */
+        /* JADX INFO: renamed from: component3, reason: from getter */
         public final CharSequence getRawMuteText() {
             return this.rawMuteText;
         }
 
-        /* renamed from: component4, reason: from getter */
+        /* JADX INFO: renamed from: component4, reason: from getter */
         public final CharSequence getRawUnmuteText() {
             return this.rawUnmuteText;
         }
 
-        /* renamed from: component5, reason: from getter */
+        /* JADX INFO: renamed from: component5, reason: from getter */
         public final CharSequence getRawMutedStatusText() {
             return this.rawMutedStatusText;
         }
 
-        /* renamed from: component6, reason: from getter */
+        /* JADX INFO: renamed from: component6, reason: from getter */
         public final int getRawMutedUntilStatusResId() {
             return this.rawMutedUntilStatusResId;
         }
 
-        /* renamed from: component7, reason: from getter */
+        /* JADX INFO: renamed from: component7, reason: from getter */
         public final CharSequence getMuteDescriptionText() {
             return this.muteDescriptionText;
         }
@@ -200,8 +200,8 @@ public final class NotificationMuteSettingsView extends LinearLayout {
         }
     }
 
-    /* compiled from: NotificationMuteSettingsView.kt */
-    /* renamed from: com.discord.widgets.servers.NotificationMuteSettingsView$updateView$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.NotificationMuteSettingsView$updateView$1 */
+    /* JADX INFO: compiled from: NotificationMuteSettingsView.kt */
     public static final class ViewOnClickListenerC91471 implements View.OnClickListener {
         public final /* synthetic */ boolean $isMuted;
         public final /* synthetic */ Function0 $onMute;

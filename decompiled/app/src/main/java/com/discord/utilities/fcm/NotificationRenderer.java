@@ -71,8 +71,8 @@ import p658rx.Observable;
 import p658rx.Subscription;
 import p658rx.subscriptions.CompositeSubscription;
 
-/* compiled from: NotificationRenderer.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: NotificationRenderer.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class NotificationRenderer {
     public static final NotificationRenderer INSTANCE = new NotificationRenderer();
     private static final String NON_ADAPTIVE_NOTIFICATION_ICON = "com.discord.utilities.NON_ADAPTIVE_NOTIFICATION_ICON ";
@@ -80,7 +80,7 @@ public final class NotificationRenderer {
     private static final long NOTIFICATION_ICON_FETCH_DELAY_MS = 250;
     private static final int NOTIFICATION_LIGHT_PERIOD = 1500;
 
-    /* compiled from: NotificationRenderer.kt */
+    /* JADX INFO: compiled from: NotificationRenderer.kt */
     public static final class NotificationDisplaySubscriptionManager {
         public static final NotificationDisplaySubscriptionManager INSTANCE = new NotificationDisplaySubscriptionManager();
         private static final HashMap<Integer, Subscription> notificationDisplaySubscriptions = new HashMap<>();
@@ -108,8 +108,8 @@ public final class NotificationRenderer {
         }
     }
 
-    /* compiled from: NotificationRenderer.kt */
-    /* renamed from: com.discord.utilities.fcm.NotificationRenderer$clear$1 */
+    /* JADX INFO: renamed from: com.discord.utilities.fcm.NotificationRenderer$clear$1 */
+    /* JADX INFO: compiled from: NotificationRenderer.kt */
     public static final class C67481 extends Lambda implements Function1<Integer, Unit> {
         public final /* synthetic */ Context $context;
 
@@ -133,8 +133,8 @@ public final class NotificationRenderer {
         }
     }
 
-    /* compiled from: NotificationRenderer.kt */
-    /* renamed from: com.discord.utilities.fcm.NotificationRenderer$displayAndUpdateCache$4 */
+    /* JADX INFO: renamed from: com.discord.utilities.fcm.NotificationRenderer$displayAndUpdateCache$4 */
+    /* JADX INFO: compiled from: NotificationRenderer.kt */
     public static final /* synthetic */ class C67494 extends FunctionReferenceImpl implements Function1<Subscription, Unit> {
         public C67494(CompositeSubscription compositeSubscription) {
             super(1, compositeSubscription, CompositeSubscription.class, "add", "add(Lrx/Subscription;)V", 0);
@@ -146,14 +146,14 @@ public final class NotificationRenderer {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Subscription subscription) {
             ((CompositeSubscription) this.receiver).m11136a(subscription);
         }
     }
 
-    /* compiled from: NotificationRenderer.kt */
-    /* renamed from: com.discord.utilities.fcm.NotificationRenderer$displayAndUpdateCache$5 */
+    /* JADX INFO: renamed from: com.discord.utilities.fcm.NotificationRenderer$displayAndUpdateCache$5 */
+    /* JADX INFO: compiled from: NotificationRenderer.kt */
     public static final class C67505 extends Lambda implements Function1<Long, Unit> {
         public final /* synthetic */ Context $context;
         public final /* synthetic */ NotificationData.DisplayPayload $displayPayload;
@@ -175,7 +175,7 @@ public final class NotificationRenderer {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Long l) {
             NotificationRenderer notificationRenderer = NotificationRenderer.INSTANCE;
             NotificationRenderer.access$displayNotification(notificationRenderer, this.$context, this.$displayPayload.getId(), this.$notificationBuilder);
@@ -183,8 +183,8 @@ public final class NotificationRenderer {
         }
     }
 
-    /* compiled from: NotificationRenderer.kt */
-    /* renamed from: com.discord.utilities.fcm.NotificationRenderer$displayAndUpdateCache$6 */
+    /* JADX INFO: renamed from: com.discord.utilities.fcm.NotificationRenderer$displayAndUpdateCache$6 */
+    /* JADX INFO: compiled from: NotificationRenderer.kt */
     public static final /* synthetic */ class C67516 extends FunctionReferenceImpl implements Function1<Subscription, Unit> {
         public C67516(CompositeSubscription compositeSubscription) {
             super(1, compositeSubscription, CompositeSubscription.class, "add", "add(Lrx/Subscription;)V", 0);
@@ -196,14 +196,14 @@ public final class NotificationRenderer {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Subscription subscription) {
             ((CompositeSubscription) this.receiver).m11136a(subscription);
         }
     }
 
-    /* compiled from: NotificationRenderer.kt */
-    /* renamed from: com.discord.utilities.fcm.NotificationRenderer$displayAndUpdateCache$7 */
+    /* JADX INFO: renamed from: com.discord.utilities.fcm.NotificationRenderer$displayAndUpdateCache$7 */
+    /* JADX INFO: compiled from: NotificationRenderer.kt */
     public static final class C67527 extends Lambda implements Function1<MGImagesBitmap.CloseableBitmaps, Unit> {
         public final /* synthetic */ Context $context;
         public final /* synthetic */ NotificationData.DisplayPayload $displayPayload;
@@ -227,7 +227,7 @@ public final class NotificationRenderer {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(MGImagesBitmap.CloseableBitmaps closeableBitmaps) throws IOException {
             IconCompat iconCompatCreateWithBitmap;
             Intrinsics3.checkNotNullParameter(closeableBitmaps, "bitmapsForIconUris");
@@ -258,8 +258,8 @@ public final class NotificationRenderer {
         }
     }
 
-    /* compiled from: NotificationRenderer.kt */
-    /* renamed from: com.discord.utilities.fcm.NotificationRenderer$displayInApp$1 */
+    /* JADX INFO: renamed from: com.discord.utilities.fcm.NotificationRenderer$displayInApp$1 */
+    /* JADX INFO: compiled from: NotificationRenderer.kt */
     public static final class C67531 extends Lambda implements Function1<View, Unit> {
         public final /* synthetic */ Context $context;
         public final /* synthetic */ NotificationData $notificationData;
@@ -277,20 +277,20 @@ public final class NotificationRenderer {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(View view) throws PendingIntent.CanceledException {
             Intrinsics3.checkNotNullParameter(view, "it");
             this.$notificationData.getContentIntentInApp(this.$context).send();
         }
     }
 
-    /* compiled from: NotificationRenderer.kt */
-    /* renamed from: com.discord.utilities.fcm.NotificationRenderer$loadNotificationBitmaps$1 */
+    /* JADX INFO: renamed from: com.discord.utilities.fcm.NotificationRenderer$loadNotificationBitmaps$1 */
+    /* JADX INFO: compiled from: NotificationRenderer.kt */
     public static final class C67541<T, R> implements Func1<MGImagesBitmap.CloseableBitmaps, Observable<? extends MGImagesBitmap.CloseableBitmaps>> {
         public final /* synthetic */ NotificationData $notification;
 
-        /* compiled from: NotificationRenderer.kt */
-        /* renamed from: com.discord.utilities.fcm.NotificationRenderer$loadNotificationBitmaps$1$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.utilities.fcm.NotificationRenderer$loadNotificationBitmaps$1$1, reason: invalid class name */
+        /* JADX INFO: compiled from: NotificationRenderer.kt */
         public static final class AnonymousClass1<T, R> implements Func1<Bitmap, MGImagesBitmap.CloseableBitmaps> {
             public final /* synthetic */ MGImagesBitmap.CloseableBitmaps $adaptive;
 
@@ -303,7 +303,7 @@ public final class NotificationRenderer {
                 return call2(bitmap);
             }
 
-            /* renamed from: call, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
             public final MGImagesBitmap.CloseableBitmaps call2(Bitmap bitmap) {
                 return this.$adaptive.plus(new MGImagesBitmap.CloseableBitmaps(MapsJVM.mapOf(Tuples.m10073to(NotificationRenderer.NON_ADAPTIVE_NOTIFICATION_ICON, bitmap)), false, 2, null));
             }
@@ -318,7 +318,7 @@ public final class NotificationRenderer {
             return call2(closeableBitmaps);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final Observable<? extends MGImagesBitmap.CloseableBitmaps> call2(MGImagesBitmap.CloseableBitmaps closeableBitmaps) {
             if (Intrinsics3.areEqual(this.$notification.getType(), NotificationData.TYPE_GENERIC_PUSH_NOTIFICATION_SENT)) {
                 if (this.$notification.getIconUrl().length() == 0) {
@@ -421,7 +421,7 @@ public final class NotificationRenderer {
             IconCompat iconCompatCreateWithAdaptiveBitmap = bitmap != null ? IconCompat.createWithAdaptiveBitmap(bitmap) : null;
             Person personBuild2 = notificationData.getSender(context).toBuilder().setIcon(iconCompatCreateWithAdaptiveBitmap).build();
             Intrinsics3.checkNotNullExpressionValue(personBuild2, "person.toBuilder()\n     …(icon)\n          .build()");
-            groupConversation.addMessage(notificationData.getContent(context), notificationData.getMessageIdTimestamp() + (iconCompatCreateWithAdaptiveBitmap == null ? 0 : 1), personBuild2);
+            groupConversation.addMessage(notificationData.getContent(context), notificationData.getMessageIdTimestamp() + ((long) (iconCompatCreateWithAdaptiveBitmap == null ? 0 : 1)), personBuild2);
         }
         return groupConversation;
     }

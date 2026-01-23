@@ -13,18 +13,18 @@ import p007b.p195g.p196a.p205c.p215g0.Serializers;
 import p007b.p195g.p196a.p205c.p215g0.p217u.DateSerializer2;
 import p007b.p195g.p196a.p205c.p219i0.ClassUtil;
 
-/* compiled from: OptionalHandlerFactory.java */
-/* renamed from: b.g.a.c.b0.f, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.g.a.c.b0.f, reason: use source file name */
+/* JADX INFO: compiled from: OptionalHandlerFactory.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class OptionalHandlerFactory implements Serializable {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static final Class<?> f4623j = Node.class;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public static final Java7Handlers f4624k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public static final OptionalHandlerFactory f4625l;
     private static final long serialVersionUID = 1;
     private final Map<String, String> _sqlDeserializers;
@@ -55,7 +55,7 @@ public class OptionalHandlerFactory implements Serializable {
         map2.put("javax.sql.rowset.serial.SerialBlob", "com.fasterxml.jackson.databind.ext.SqlBlobSerializer");
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public JsonSerializer<?> m1809a(SerializationConfig serializationConfig, JavaType javaType, BeanDescription beanDescription) {
         JsonSerializer<?> jsonSerializerMo1803a;
         Class<?> superclass = javaType._class;
@@ -92,7 +92,7 @@ public class OptionalHandlerFactory implements Serializable {
         return ((Serializers) objM1811c).m2011b(serializationConfig, javaType, beanDescription);
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final Object m1810b(Class<?> cls, JavaType javaType) {
         try {
             return ClassUtil.m2175g(cls, false);
@@ -109,7 +109,7 @@ public class OptionalHandlerFactory implements Serializable {
         }
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final Object m1811c(String str, JavaType javaType) {
         try {
             return m1810b(Class.forName(str), javaType);

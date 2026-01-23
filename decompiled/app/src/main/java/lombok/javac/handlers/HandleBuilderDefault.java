@@ -10,8 +10,8 @@ import lombok.experimental.SuperBuilder;
 import lombok.javac.JavacAnnotationHandler;
 import lombok.javac.JavacNode;
 
+/* JADX INFO: loaded from: discord-126021.apk:lombok/javac/handlers/HandleBuilderDefault.SCL.lombok */
 @HandlerPriority(-1025)
-/* loaded from: discord-126021.apk:lombok/javac/handlers/HandleBuilderDefault.SCL.lombok */
 public class HandleBuilderDefault extends JavacAnnotationHandler<Builder.Default> {
     @Override // lombok.javac.JavacAnnotationHandler
     public void handle(AnnotationValues<Builder.Default> annotation, JCTree.JCAnnotation ast, JavacNode annotationNode) {

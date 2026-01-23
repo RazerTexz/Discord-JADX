@@ -16,12 +16,12 @@ import p007b.p109f.p115d.p122g.PooledByteBufferFactory;
 import p007b.p109f.p115d.p127l.UriUtil;
 import p007b.p109f.p161j.p175j.EncodedImage2;
 
-/* compiled from: LocalContentUriFetchProducer.java */
-/* renamed from: b.f.j.p.e0, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.f.j.p.e0, reason: use source file name */
+/* JADX INFO: compiled from: LocalContentUriFetchProducer.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class LocalContentUriFetchProducer extends LocalFetchProducer {
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final ContentResolver f4040c;
 
     public LocalContentUriFetchProducer(Executor executor, PooledByteBufferFactory pooledByteBufferFactory, ContentResolver contentResolver) {
@@ -30,7 +30,7 @@ public class LocalContentUriFetchProducer extends LocalFetchProducer {
     }
 
     @Override // p007b.p109f.p161j.p181p.LocalFetchProducer
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public EncodedImage2 mo1428d(ImageRequest imageRequest) throws IOException {
         EncodedImage2 encodedImage2M1478c;
         InputStream inputStreamCreateInputStream;
@@ -79,7 +79,7 @@ public class LocalContentUriFetchProducer extends LocalFetchProducer {
     }
 
     @Override // p007b.p109f.p161j.p181p.LocalFetchProducer
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public String mo1429e() {
         return "LocalContentUriFetchProducer";
     }

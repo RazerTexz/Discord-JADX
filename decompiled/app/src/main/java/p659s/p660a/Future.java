@@ -3,12 +3,12 @@ package p659s.p660a;
 import kotlin.Unit;
 import p007b.p100d.p104b.p105a.outline;
 
-/* compiled from: Future.kt */
-/* renamed from: s.a.i, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: s.a.i, reason: use source file name */
+/* JADX INFO: compiled from: Future.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class Future extends CancellableContinuationImpl4 {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final java.util.concurrent.Future<?> f27855j;
 
     public Future(java.util.concurrent.Future<?> future) {
@@ -16,7 +16,7 @@ public final class Future extends CancellableContinuationImpl4 {
     }
 
     @Override // p659s.p660a.CompletionHandler
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public void mo11193a(Throwable th) {
         this.f27855j.cancel(false);
     }

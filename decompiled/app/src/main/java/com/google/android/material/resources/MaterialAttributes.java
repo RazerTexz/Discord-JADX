@@ -11,8 +11,8 @@ import androidx.annotation.Px;
 import androidx.annotation.RestrictTo;
 import com.google.android.material.C10817R;
 
+/* JADX INFO: loaded from: classes3.dex */
 @RestrictTo({RestrictTo.Scope.LIBRARY_GROUP})
-/* loaded from: classes3.dex */
 public class MaterialAttributes {
     @Nullable
     public static TypedValue resolve(@NonNull Context context, @AttrRes int i) {

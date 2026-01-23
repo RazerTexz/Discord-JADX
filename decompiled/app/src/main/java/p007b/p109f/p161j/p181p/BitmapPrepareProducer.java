@@ -7,31 +7,31 @@ import p007b.p085c.p086a.p087a0.AnimatableValueParser;
 import p007b.p109f.p161j.p175j.CloseableImage;
 import p007b.p109f.p161j.p175j.CloseableStaticBitmap;
 
-/* compiled from: BitmapPrepareProducer.java */
-/* renamed from: b.f.j.p.i, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.f.j.p.i, reason: use source file name */
+/* JADX INFO: compiled from: BitmapPrepareProducer.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class BitmapPrepareProducer implements Producer2<CloseableReference<CloseableImage>> {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final Producer2<CloseableReference<CloseableImage>> f4075a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final int f4076b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final int f4077c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final boolean f4078d;
 
-    /* compiled from: BitmapPrepareProducer.java */
-    /* renamed from: b.f.j.p.i$a */
+    /* JADX INFO: renamed from: b.f.j.p.i$a */
+    /* JADX INFO: compiled from: BitmapPrepareProducer.java */
     public static class a extends DelegatingConsumer<CloseableReference<CloseableImage>, CloseableReference<CloseableImage>> {
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public final int f4079c;
 
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         public final int f4080d;
 
         public a(Consumer2<CloseableReference<CloseableImage>> consumer2, int i, int i2) {
@@ -41,7 +41,7 @@ public class BitmapPrepareProducer implements Producer2<CloseableReference<Close
         }
 
         @Override // p007b.p109f.p161j.p181p.BaseConsumer
-        /* renamed from: i */
+        /* JADX INFO: renamed from: i */
         public void mo1320i(Object obj, int i) {
             Bitmap bitmap;
             CloseableReference closeableReference = (CloseableReference) obj;
@@ -68,7 +68,7 @@ public class BitmapPrepareProducer implements Producer2<CloseableReference<Close
     }
 
     @Override // p007b.p109f.p161j.p181p.Producer2
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public void mo1417b(Consumer2<CloseableReference<CloseableImage>> consumer2, ProducerContext producerContext) {
         if (!producerContext.mo1453k() || this.f4078d) {
             this.f4075a.mo1417b(new a(consumer2, this.f4076b, this.f4077c), producerContext);

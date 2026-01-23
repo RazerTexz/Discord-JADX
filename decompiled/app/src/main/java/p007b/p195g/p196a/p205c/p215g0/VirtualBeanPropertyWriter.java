@@ -14,9 +14,9 @@ import p007b.p195g.p196a.p205c.p215g0.p216t.PropertySerializerMap;
 import p007b.p195g.p196a.p205c.p219i0.Annotations;
 import p007b.p195g.p196a.p205c.p221z.MapperConfig;
 
-/* compiled from: VirtualBeanPropertyWriter.java */
-/* renamed from: b.g.a.c.g0.s, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.g.a.c.g0.s, reason: use source file name */
+/* JADX INFO: compiled from: VirtualBeanPropertyWriter.java */
+/* JADX INFO: loaded from: classes3.dex */
 public abstract class VirtualBeanPropertyWriter extends BeanPropertyWriter implements Serializable {
     private static final long serialVersionUID = 1;
 
@@ -24,7 +24,7 @@ public abstract class VirtualBeanPropertyWriter extends BeanPropertyWriter imple
     }
 
     @Override // p007b.p195g.p196a.p205c.p215g0.BeanPropertyWriter
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public void mo1982h(Object obj, JsonGenerator jsonGenerator, SerializerProvider serializerProvider) throws Exception {
         Object objMo2017j = mo2017j(obj, jsonGenerator, serializerProvider);
         if (objMo2017j == null) {
@@ -80,7 +80,7 @@ public abstract class VirtualBeanPropertyWriter extends BeanPropertyWriter imple
     }
 
     @Override // p007b.p195g.p196a.p205c.p215g0.BeanPropertyWriter
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public void mo1983i(Object obj, JsonGenerator jsonGenerator, SerializerProvider serializerProvider) throws Exception {
         Object objMo2017j = mo2017j(obj, jsonGenerator, serializerProvider);
         if (objMo2017j == null) {
@@ -120,10 +120,10 @@ public abstract class VirtualBeanPropertyWriter extends BeanPropertyWriter imple
         }
     }
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public abstract Object mo2017j(Object obj, JsonGenerator jsonGenerator, SerializerProvider serializerProvider) throws Exception;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public abstract VirtualBeanPropertyWriter mo2018k(MapperConfig<?> mapperConfig, AnnotatedClass annotatedClass, BeanPropertyDefinition beanPropertyDefinition, JavaType javaType);
 
     /* JADX WARN: Illegal instructions before constructor call */

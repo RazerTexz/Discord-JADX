@@ -46,30 +46,30 @@ import p615g0.BufferedSource;
 import p615g0.Options2;
 import p615g0.Source2;
 
-/* compiled from: Util.kt */
-/* renamed from: f0.e0.c, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: f0.e0.c, reason: use source file name */
+/* JADX INFO: compiled from: Util.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class Util7 {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final byte[] f25397a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static final Headers f25398b = Headers.INSTANCE.m10964c(new String[0]);
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public static final ResponseBody f25399c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public static final Options2 f25400d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public static final TimeZone f25401e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public static final Regex f25402f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public static final String f25403g;
 
     static {
@@ -95,7 +95,7 @@ public final class Util7 {
         f25403g = Strings4.removeSuffix(Strings4.removePrefix(name, "okhttp3."), "Client");
     }
 
-    /* renamed from: A */
+    /* JADX INFO: renamed from: A */
     public static final <K, V> Map<K, V> m10116A(Map<K, ? extends V> map) {
         Intrinsics3.checkParameterIsNotNull(map, "$this$toImmutableMap");
         if (map.isEmpty()) {
@@ -106,7 +106,7 @@ public final class Util7 {
         return mapUnmodifiableMap;
     }
 
-    /* renamed from: B */
+    /* JADX INFO: renamed from: B */
     public static final int m10117B(String str, int i) {
         if (str != null) {
             try {
@@ -124,7 +124,7 @@ public final class Util7 {
         return i;
     }
 
-    /* renamed from: C */
+    /* JADX INFO: renamed from: C */
     public static final String m10118C(String str, int i, int i2) {
         Intrinsics3.checkParameterIsNotNull(str, "$this$trimSubstring");
         int iM10134o = m10134o(str, i, i2);
@@ -133,7 +133,7 @@ public final class Util7 {
         return strSubstring;
     }
 
-    /* renamed from: D */
+    /* JADX INFO: renamed from: D */
     public static final Throwable m10119D(Exception exc, List<? extends Exception> list) {
         Intrinsics3.checkParameterIsNotNull(exc, "$this$withSuppressed");
         Intrinsics3.checkParameterIsNotNull(list, "suppressed");
@@ -147,14 +147,14 @@ public final class Util7 {
         return exc;
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final boolean m10120a(HttpUrl httpUrl, HttpUrl httpUrl2) {
         Intrinsics3.checkParameterIsNotNull(httpUrl, "$this$canReuseConnectionFor");
         Intrinsics3.checkParameterIsNotNull(httpUrl2, "other");
         return Intrinsics3.areEqual(httpUrl.f25979g, httpUrl2.f25979g) && httpUrl.f25980h == httpUrl2.f25980h && Intrinsics3.areEqual(httpUrl.f25976d, httpUrl2.f25976d);
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static final int m10121b(String str, long j, TimeUnit timeUnit) {
         Intrinsics3.checkParameterIsNotNull(str, ModelAuditLogEntry.CHANGE_KEY_NAME);
         if (!(j >= 0)) {
@@ -173,14 +173,14 @@ public final class Util7 {
         throw new IllegalArgumentException(outline.m883w(str, " too small.").toString());
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public static final void m10122c(long j, long j2, long j3) {
         if ((j2 | j3) < 0 || j2 > j || j - j2 < j3) {
             throw new ArrayIndexOutOfBoundsException();
         }
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public static final void m10123d(Closeable closeable) {
         Intrinsics3.checkParameterIsNotNull(closeable, "$this$closeQuietly");
         try {
@@ -191,7 +191,7 @@ public final class Util7 {
         }
     }
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public static final void m10124e(Socket socket) {
         Intrinsics3.checkParameterIsNotNull(socket, "$this$closeQuietly");
         try {
@@ -204,7 +204,7 @@ public final class Util7 {
         }
     }
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public static final int m10125f(String str, char c, int i, int i2) {
         Intrinsics3.checkParameterIsNotNull(str, "$this$delimiterOffset");
         while (i < i2) {
@@ -216,7 +216,7 @@ public final class Util7 {
         return i2;
     }
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public static final int m10126g(String str, String str2, int i, int i2) {
         Intrinsics3.checkParameterIsNotNull(str, "$this$delimiterOffset");
         Intrinsics3.checkParameterIsNotNull(str2, "delimiters");
@@ -229,7 +229,7 @@ public final class Util7 {
         return i2;
     }
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public static /* synthetic */ int m10127h(String str, char c, int i, int i2, int i3) {
         if ((i3 & 2) != 0) {
             i = 0;
@@ -240,7 +240,7 @@ public final class Util7 {
         return m10125f(str, c, i, i2);
     }
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public static final boolean m10128i(Source2 source2, int i, TimeUnit timeUnit) {
         Intrinsics3.checkParameterIsNotNull(source2, "$this$discard");
         Intrinsics3.checkParameterIsNotNull(timeUnit, "timeUnit");
@@ -251,7 +251,7 @@ public final class Util7 {
         }
     }
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static final String m10129j(String str, Object... objArr) {
         Intrinsics3.checkParameterIsNotNull(str, "format");
         Intrinsics3.checkParameterIsNotNull(objArr, "args");
@@ -263,7 +263,7 @@ public final class Util7 {
         return str2;
     }
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public static final boolean m10130k(String[] strArr, String[] strArr2, Comparator<? super String> comparator) {
         Intrinsics3.checkParameterIsNotNull(strArr, "$this$hasIntersection");
         Intrinsics3.checkParameterIsNotNull(comparator, "comparator");
@@ -281,7 +281,7 @@ public final class Util7 {
         return false;
     }
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public static final long m10131l(Response response) {
         Intrinsics3.checkParameterIsNotNull(response, "$this$headersContentLength");
         String strM10954c = response.headers.m10954c("Content-Length");
@@ -296,7 +296,7 @@ public final class Util7 {
     }
 
     @SafeVarargs
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public static final <T> List<T> m10132m(T... tArr) {
         Intrinsics3.checkParameterIsNotNull(tArr, "elements");
         Object[] objArr = (Object[]) tArr.clone();
@@ -305,7 +305,7 @@ public final class Util7 {
         return listUnmodifiableList;
     }
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public static final int m10133n(String str) {
         Intrinsics3.checkParameterIsNotNull(str, "$this$indexOfControlOrNonAscii");
         int length = str.length();
@@ -318,7 +318,7 @@ public final class Util7 {
         return -1;
     }
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public static final int m10134o(String str, int i, int i2) {
         Intrinsics3.checkParameterIsNotNull(str, "$this$indexOfFirstNonAsciiWhitespace");
         while (i < i2) {
@@ -331,7 +331,7 @@ public final class Util7 {
         return i2;
     }
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public static final int m10135p(String str, int i, int i2) {
         Intrinsics3.checkParameterIsNotNull(str, "$this$indexOfLastNonAsciiWhitespace");
         int i3 = i2 - 1;
@@ -350,7 +350,7 @@ public final class Util7 {
         return i;
     }
 
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     public static final String[] m10136q(String[] strArr, String[] strArr2, Comparator<? super String> comparator) {
         Intrinsics3.checkParameterIsNotNull(strArr, "$this$intersect");
         Intrinsics3.checkParameterIsNotNull(strArr2, "other");
@@ -377,7 +377,7 @@ public final class Util7 {
         throw new TypeCastException("null cannot be cast to non-null type kotlin.Array<T>");
     }
 
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     public static final int m10137r(char c) {
         if ('0' <= c && '9' >= c) {
             return c - '0';
@@ -392,7 +392,7 @@ public final class Util7 {
         return (c - c2) + 10;
     }
 
-    /* renamed from: s */
+    /* JADX INFO: renamed from: s */
     public static final Charset m10138s(BufferedSource bufferedSource, Charset charset) throws IOException {
         Intrinsics3.checkParameterIsNotNull(bufferedSource, "$this$readBomAsCharset");
         Intrinsics3.checkParameterIsNotNull(charset, "default");
@@ -424,13 +424,13 @@ public final class Util7 {
         throw new AssertionError();
     }
 
-    /* renamed from: t */
+    /* JADX INFO: renamed from: t */
     public static final int m10139t(BufferedSource bufferedSource) throws IOException {
         Intrinsics3.checkParameterIsNotNull(bufferedSource, "$this$readMedium");
         return (bufferedSource.readByte() & 255) | ((bufferedSource.readByte() & 255) << 16) | ((bufferedSource.readByte() & 255) << 8);
     }
 
-    /* renamed from: u */
+    /* JADX INFO: renamed from: u */
     public static final int m10140u(Buffer3 buffer3, byte b2) throws EOFException {
         Intrinsics3.checkParameterIsNotNull(buffer3, "$this$skipAll");
         int i = 0;
@@ -441,7 +441,12 @@ public final class Util7 {
         return i;
     }
 
-    /* renamed from: v */
+    /* JADX WARN: Removed duplicated region for block: B:15:0x005d A[PHI: r12
+      0x005d: PHI (r12v6 boolean) = (r12v5 boolean), (r12v10 boolean) binds: [B:23:0x0080, B:13:0x0053] A[DONT_GENERATE, DONT_INLINE]] */
+    /* JADX INFO: renamed from: v */
+    /*
+        Code decompiled incorrectly, please refer to instructions dump.
+    */
     public static final boolean m10141v(Source2 source2, int i, TimeUnit timeUnit) throws IOException {
         boolean z2;
         Intrinsics3.checkParameterIsNotNull(source2, "$this$skipAll");
@@ -475,7 +480,7 @@ public final class Util7 {
         return z2;
     }
 
-    /* renamed from: w */
+    /* JADX INFO: renamed from: w */
     public static final Headers m10142w(List<Header2> list) {
         Intrinsics3.checkParameterIsNotNull(list, "$this$toHeaders");
         ArrayList arrayList = new ArrayList(20);
@@ -496,7 +501,7 @@ public final class Util7 {
         throw new TypeCastException("null cannot be cast to non-null type kotlin.Array<T>");
     }
 
-    /* renamed from: x */
+    /* JADX INFO: renamed from: x */
     public static final String m10143x(int i) {
         String hexString = Integer.toHexString(i);
         Intrinsics3.checkExpressionValueIsNotNull(hexString, "Integer.toHexString(this)");
@@ -505,7 +510,7 @@ public final class Util7 {
 
     /* JADX WARN: Removed duplicated region for block: B:18:0x0053  */
     /* JADX WARN: Removed duplicated region for block: B:22:? A[RETURN, SYNTHETIC] */
-    /* renamed from: y */
+    /* JADX INFO: renamed from: y */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
@@ -534,7 +539,7 @@ public final class Util7 {
         return strM820H + MentionUtils.EMOJIS_AND_STICKERS_CHAR + httpUrl.f25980h;
     }
 
-    /* renamed from: z */
+    /* JADX INFO: renamed from: z */
     public static final <T> List<T> m10145z(List<? extends T> list) {
         Intrinsics3.checkParameterIsNotNull(list, "$this$toImmutableList");
         List<T> listUnmodifiableList = Collections.unmodifiableList(_Collections.toMutableList((Collection) list));

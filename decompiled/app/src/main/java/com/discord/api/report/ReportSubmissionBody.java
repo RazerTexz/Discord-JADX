@@ -13,11 +13,11 @@ import p507d0.p580t.Iterables2;
 import p507d0.p580t.Maps6;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: InAppReportsMenu.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: InAppReportsMenu.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class ReportSubmissionBody {
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private final List<Integer> breadcrumbs;
     private final Long channelId;
@@ -32,12 +32,12 @@ public final /* data */ class ReportSubmissionBody {
     private final String variant;
     private final String version;
 
-    /* compiled from: InAppReportsMenu.kt */
+    /* JADX INFO: compiled from: InAppReportsMenu.kt */
     public static final class Companion {
         public Companion() {
         }
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final Tuples2<List<Integer>, Map<String, List<String>>> m8190a(List<NodeResult> results) {
             Tuples2 tuples2M10073to;
             Intrinsics3.checkNotNullParameter(results, "results");

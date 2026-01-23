@@ -17,7 +17,7 @@ import java.util.concurrent.ThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.TimeoutException;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class RequestExecutor {
 
     public static class DefaultThreadFactory implements ThreadFactory {
@@ -33,7 +33,7 @@ public class RequestExecutor {
             }
 
             @Override // java.lang.Thread, java.lang.Runnable
-            public void run() throws SecurityException, IllegalArgumentException {
+            public void run() {
                 Process.setThreadPriority(this.mPriority);
                 super.run();
             }
@@ -77,7 +77,7 @@ public class RequestExecutor {
         @NonNull
         private Handler mHandler;
 
-        /* renamed from: androidx.core.provider.RequestExecutor$ReplyRunnable$1 */
+        /* JADX INFO: renamed from: androidx.core.provider.RequestExecutor$ReplyRunnable$1 */
         public class RunnableC02521 implements Runnable {
             public final /* synthetic */ Consumer val$consumer;
             public final /* synthetic */ Object val$result;

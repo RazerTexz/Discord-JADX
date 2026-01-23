@@ -5,9 +5,9 @@ import kotlin.Unit;
 import kotlin.jvm.functions.Function0;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetForumBrowser.kt */
-/* renamed from: com.discord.widgets.forums.WidgetForumBrowser$configureListState$$inlined$apply$lambda$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.forums.WidgetForumBrowser$configureListState$$inlined$apply$lambda$1, reason: use source file name */
+/* JADX INFO: compiled from: WidgetForumBrowser.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetForumBrowser5 extends Lambda implements Function0<Unit> {
     public final /* synthetic */ WidgetForumBrowserViewModel.ViewState.Loaded $viewState$inlined;
     public final /* synthetic */ WidgetForumBrowser this$0;
@@ -25,7 +25,7 @@ public final class WidgetForumBrowser5 extends Lambda implements Function0<Unit>
         return Unit.f27425a;
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final void invoke2() {
         WidgetForumBrowser.access$onLayoutCompleted(this.this$0, this.$viewState$inlined.getChannelId(), this.$viewState$inlined.getGuildId());
     }

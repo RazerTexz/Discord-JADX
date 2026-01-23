@@ -6,9 +6,9 @@ import android.view.View;
 import androidx.annotation.NonNull;
 import androidx.coordinatorlayout.widget.CoordinatorLayout;
 
-/* compiled from: ViewOffsetBehavior.java */
-/* renamed from: b.i.a.g.a.c, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.g.a.c, reason: use source file name */
+/* JADX INFO: compiled from: ViewOffsetBehavior.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class ViewOffsetBehavior<V extends View> extends CoordinatorLayout.Behavior<V> {
     private int tempLeftRightOffset;
     private int tempTopBottomOffset;

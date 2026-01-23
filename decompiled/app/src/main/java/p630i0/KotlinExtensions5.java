@@ -8,12 +8,12 @@ import p507d0.p592z.p594d.Intrinsics3;
 import retrofit2.Response;
 
 /* JADX INFO: Add missing generic type declarations: [T] */
-/* compiled from: KotlinExtensions.kt */
-/* renamed from: i0.o, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: i0.o, reason: use source file name */
+/* JADX INFO: compiled from: KotlinExtensions.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class KotlinExtensions5<T> implements Callback3<T> {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final /* synthetic */ CancellableContinuation f26550a;
 
     public KotlinExtensions5(CancellableContinuation cancellableContinuation) {
@@ -21,7 +21,7 @@ public final class KotlinExtensions5<T> implements Callback3<T> {
     }
 
     @Override // p630i0.Callback3
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public void mo10708a(Call3<T> call3, Throwable th) {
         Intrinsics3.checkParameterIsNotNull(call3, NotificationCompat.CATEGORY_CALL);
         Intrinsics3.checkParameterIsNotNull(th, "t");
@@ -31,7 +31,7 @@ public final class KotlinExtensions5<T> implements Callback3<T> {
     }
 
     @Override // p630i0.Callback3
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public void mo10709b(Call3<T> call3, Response<T> response) {
         Intrinsics3.checkParameterIsNotNull(call3, NotificationCompat.CATEGORY_CALL);
         Intrinsics3.checkParameterIsNotNull(response, "response");

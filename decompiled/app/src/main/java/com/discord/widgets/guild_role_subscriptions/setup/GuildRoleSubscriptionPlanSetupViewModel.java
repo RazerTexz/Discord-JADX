@@ -25,8 +25,8 @@ import p507d0.p592z.p594d.Lambda;
 import p658rx.Observable;
 import p658rx.subjects.PublishSubject;
 
-/* compiled from: GuildRoleSubscriptionPlanSetupViewModel.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: GuildRoleSubscriptionPlanSetupViewModel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class GuildRoleSubscriptionPlanSetupViewModel extends AppViewModel<ViewState> {
     private static final int DETAILS_STEP = 1;
     private static final int FORMAT_TYPE_STEP = 0;
@@ -39,10 +39,10 @@ public final class GuildRoleSubscriptionPlanSetupViewModel extends AppViewModel<
     private final RestAPI restApi;
     private final StoreGuildRoleSubscriptions storeGuildRoleSubscriptions;
 
-    /* compiled from: GuildRoleSubscriptionPlanSetupViewModel.kt */
+    /* JADX INFO: compiled from: GuildRoleSubscriptionPlanSetupViewModel.kt */
     public static abstract class Event {
 
-        /* compiled from: GuildRoleSubscriptionPlanSetupViewModel.kt */
+        /* JADX INFO: compiled from: GuildRoleSubscriptionPlanSetupViewModel.kt */
         public static final /* data */ class SubmitFailure extends Event {
             private final Error error;
 
@@ -60,7 +60,7 @@ public final class GuildRoleSubscriptionPlanSetupViewModel extends AppViewModel<
                 return submitFailure.copy(error);
             }
 
-            /* renamed from: component1, reason: from getter */
+            /* JADX INFO: renamed from: component1, reason: from getter */
             public final Error getError() {
                 return this.error;
             }
@@ -97,7 +97,7 @@ public final class GuildRoleSubscriptionPlanSetupViewModel extends AppViewModel<
             }
         }
 
-        /* compiled from: GuildRoleSubscriptionPlanSetupViewModel.kt */
+        /* JADX INFO: compiled from: GuildRoleSubscriptionPlanSetupViewModel.kt */
         public static final class SubmitSuccess extends Event {
             public static final SubmitSuccess INSTANCE = new SubmitSuccess();
 
@@ -114,7 +114,7 @@ public final class GuildRoleSubscriptionPlanSetupViewModel extends AppViewModel<
         }
     }
 
-    /* compiled from: GuildRoleSubscriptionPlanSetupViewModel.kt */
+    /* JADX INFO: compiled from: GuildRoleSubscriptionPlanSetupViewModel.kt */
     public static final /* data */ class ViewState {
         private final boolean canProceedToNextStep;
         private final String coverImage;
@@ -169,37 +169,37 @@ public final class GuildRoleSubscriptionPlanSetupViewModel extends AppViewModel<
             return viewState.copy(i, z4, z5, str3, str4, bool2, guildRoleSubscriptionTier);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final int getCurrentStep() {
             return this.currentStep;
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final boolean getIsSubmitting() {
             return this.isSubmitting;
         }
 
-        /* renamed from: component3, reason: from getter */
+        /* JADX INFO: renamed from: component3, reason: from getter */
         public final boolean getCanProceedToNextStep() {
             return this.canProceedToNextStep;
         }
 
-        /* renamed from: component4, reason: from getter */
+        /* JADX INFO: renamed from: component4, reason: from getter */
         public final String getCoverImage() {
             return this.coverImage;
         }
 
-        /* renamed from: component5, reason: from getter */
+        /* JADX INFO: renamed from: component5, reason: from getter */
         public final String getPlanDescription() {
             return this.planDescription;
         }
 
-        /* renamed from: component6, reason: from getter */
+        /* JADX INFO: renamed from: component6, reason: from getter */
         public final Boolean getIsFullServerGating() {
             return this.isFullServerGating;
         }
 
-        /* renamed from: component7, reason: from getter */
+        /* JADX INFO: renamed from: component7, reason: from getter */
         public final GuildRoleSubscriptionTier getGuildRoleSubscriptionTier() {
             return this.guildRoleSubscriptionTier;
         }
@@ -241,18 +241,24 @@ public final class GuildRoleSubscriptionPlanSetupViewModel extends AppViewModel<
         }
 
         /* JADX WARN: Multi-variable type inference failed */
+        /* JADX WARN: Type inference failed for: r1v1, types: [int] */
+        /* JADX WARN: Type inference failed for: r1v16 */
+        /* JADX WARN: Type inference failed for: r1v17 */
+        /* JADX WARN: Type inference failed for: r2v0 */
+        /* JADX WARN: Type inference failed for: r2v1, types: [int] */
+        /* JADX WARN: Type inference failed for: r2v5 */
         public int hashCode() {
             int i = this.currentStep * 31;
             boolean z2 = this.isSubmitting;
-            int i2 = z2;
-            if (z2 != 0) {
-                i2 = 1;
+            ?? r1 = z2;
+            if (z2) {
+                r1 = 1;
             }
-            int i3 = (i + i2) * 31;
+            int i2 = (i + r1) * 31;
             boolean z3 = this.canProceedToNextStep;
-            int i4 = (i3 + (z3 ? 1 : z3 ? 1 : 0)) * 31;
+            int i3 = (i2 + (z3 ? 1 : z3)) * 31;
             String str = this.coverImage;
-            int iHashCode = (i4 + (str != null ? str.hashCode() : 0)) * 31;
+            int iHashCode = (i3 + (str != null ? str.hashCode() : 0)) * 31;
             String str2 = this.planDescription;
             int iHashCode2 = (iHashCode + (str2 != null ? str2.hashCode() : 0)) * 31;
             Boolean bool = this.isFullServerGating;
@@ -293,8 +299,8 @@ public final class GuildRoleSubscriptionPlanSetupViewModel extends AppViewModel<
         }
     }
 
-    /* compiled from: GuildRoleSubscriptionPlanSetupViewModel.kt */
-    /* renamed from: com.discord.widgets.guild_role_subscriptions.setup.GuildRoleSubscriptionPlanSetupViewModel$submit$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.guild_role_subscriptions.setup.GuildRoleSubscriptionPlanSetupViewModel$submit$1 */
+    /* JADX INFO: compiled from: GuildRoleSubscriptionPlanSetupViewModel.kt */
     public static final class C84491 extends Lambda implements Function1<GuildRoleSubscriptionTierListing, Unit> {
         public C84491() {
             super(1);
@@ -306,7 +312,7 @@ public final class GuildRoleSubscriptionPlanSetupViewModel extends AppViewModel<
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(GuildRoleSubscriptionTierListing guildRoleSubscriptionTierListing) {
             Intrinsics3.checkNotNullParameter(guildRoleSubscriptionTierListing, "it");
             GuildRoleSubscriptionPlanSetupViewModel guildRoleSubscriptionPlanSetupViewModel = GuildRoleSubscriptionPlanSetupViewModel.this;
@@ -315,8 +321,8 @@ public final class GuildRoleSubscriptionPlanSetupViewModel extends AppViewModel<
         }
     }
 
-    /* compiled from: GuildRoleSubscriptionPlanSetupViewModel.kt */
-    /* renamed from: com.discord.widgets.guild_role_subscriptions.setup.GuildRoleSubscriptionPlanSetupViewModel$submit$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.guild_role_subscriptions.setup.GuildRoleSubscriptionPlanSetupViewModel$submit$2 */
+    /* JADX INFO: compiled from: GuildRoleSubscriptionPlanSetupViewModel.kt */
     public static final class C84502 extends Lambda implements Function1<Error, Unit> {
         public C84502() {
             super(1);
@@ -328,7 +334,7 @@ public final class GuildRoleSubscriptionPlanSetupViewModel extends AppViewModel<
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Error error) {
             Intrinsics3.checkNotNullParameter(error, "error");
             GuildRoleSubscriptionPlanSetupViewModel guildRoleSubscriptionPlanSetupViewModel = GuildRoleSubscriptionPlanSetupViewModel.this;
@@ -423,7 +429,7 @@ public final class GuildRoleSubscriptionPlanSetupViewModel extends AppViewModel<
         updateViewState2(viewState);
     }
 
-    /* renamed from: updateViewState, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: updateViewState, reason: avoid collision after fix types in other method */
     public void updateViewState2(ViewState viewState) {
         Intrinsics3.checkNotNullParameter(viewState, "viewState");
         super.updateViewState(ViewState.copy$default(viewState, 0, false, computeCanProceedToNextStep(viewState), null, null, null, null, 123, null));

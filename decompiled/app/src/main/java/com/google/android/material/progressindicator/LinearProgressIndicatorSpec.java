@@ -10,7 +10,7 @@ import androidx.annotation.StyleRes;
 import com.google.android.material.C10817R;
 import com.google.android.material.internal.ThemeEnforcement;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public final class LinearProgressIndicatorSpec extends BaseProgressIndicatorSpec {
     public boolean drawHorizontallyInverse;
     public int indeterminateAnimationType;

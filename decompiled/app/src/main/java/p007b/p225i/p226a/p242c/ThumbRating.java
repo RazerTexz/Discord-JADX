@@ -3,15 +3,15 @@ package p007b.p225i.p226a.p242c;
 import androidx.annotation.Nullable;
 import java.util.Arrays;
 
-/* compiled from: ThumbRating.java */
-/* renamed from: b.i.a.c.n2, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.n2, reason: use source file name */
+/* JADX INFO: compiled from: ThumbRating.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class ThumbRating extends Rating {
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final boolean f7257k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final boolean f7258l;
 
     public ThumbRating() {
@@ -19,7 +19,7 @@ public final class ThumbRating extends Rating {
         this.f7258l = false;
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static String m3318a(int i) {
         return Integer.toString(i, 36);
     }

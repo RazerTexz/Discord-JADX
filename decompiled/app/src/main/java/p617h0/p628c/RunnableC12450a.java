@@ -2,15 +2,15 @@ package p617h0.p628c;
 
 import org.webrtc.Camera1Session;
 
-/* compiled from: lambda */
-/* renamed from: h0.c.a */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: h0.c.a */
+/* JADX INFO: compiled from: lambda */
+/* JADX INFO: loaded from: classes3.dex */
 public final /* synthetic */ class RunnableC12450a implements Runnable {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final /* synthetic */ Camera1Session.C129462 f26406j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final /* synthetic */ byte[] f26407k;
 
     public /* synthetic */ RunnableC12450a(Camera1Session.C129462 c129462, byte[] bArr) {

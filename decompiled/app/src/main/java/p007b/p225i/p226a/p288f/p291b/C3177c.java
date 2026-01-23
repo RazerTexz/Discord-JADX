@@ -6,11 +6,11 @@ import java.util.Objects;
 import p007b.p225i.p226a.p288f.p299e.p308o.InterfaceC3400b;
 import p007b.p225i.p226a.p288f.p313h.p323j.C3515g;
 
-/* renamed from: b.i.a.f.b.c */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.b.c */
+/* JADX INFO: loaded from: classes3.dex */
 public class C3177c {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final C3515g f9194a;
 
     public C3177c(C3515g c3515g) {

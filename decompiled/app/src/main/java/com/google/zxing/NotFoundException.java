@@ -1,9 +1,9 @@
 package com.google.zxing;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public final class NotFoundException extends ReaderException {
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public static final NotFoundException f21665l;
 
     static {

@@ -6,8 +6,8 @@ import android.text.style.LineHeightSpan;
 import androidx.core.app.NotificationCompat;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: VerticalPaddingSpan.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: VerticalPaddingSpan.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class VerticalPaddingSpan implements LineHeightSpan {
     private boolean initialized;
     private final int paddingBottom;

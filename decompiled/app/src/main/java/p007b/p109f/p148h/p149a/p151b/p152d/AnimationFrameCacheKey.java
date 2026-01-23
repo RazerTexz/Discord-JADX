@@ -3,15 +3,15 @@ package p007b.p109f.p148h.p149a.p151b.p152d;
 import com.facebook.cache.common.CacheKey;
 import p007b.p100d.p104b.p105a.outline;
 
-/* compiled from: AnimationFrameCacheKey.java */
-/* renamed from: b.f.h.a.b.d.a, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.f.h.a.b.d.a, reason: use source file name */
+/* JADX INFO: compiled from: AnimationFrameCacheKey.java */
+/* JADX INFO: loaded from: classes.dex */
 public class AnimationFrameCacheKey implements CacheKey {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final String f3507a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final boolean f3508b;
 
     public AnimationFrameCacheKey(int i, boolean z2) {
@@ -20,13 +20,13 @@ public class AnimationFrameCacheKey implements CacheKey {
     }
 
     @Override // com.facebook.cache.common.CacheKey
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public boolean mo929a() {
         return false;
     }
 
     @Override // com.facebook.cache.common.CacheKey
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public String mo930b() {
         return this.f3507a;
     }

@@ -11,45 +11,45 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p615g0.Buffer3;
 import p615g0.Segment2;
 
-/* compiled from: WebSocketWriter.kt */
-/* renamed from: f0.e0.n.i, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: f0.e0.n.i, reason: use source file name */
+/* JADX INFO: compiled from: WebSocketWriter.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class WebSocketWriter implements Closeable {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final Buffer3 f25883j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final Buffer3 f25884k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public boolean f25885l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public MessageDeflater f25886m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public final byte[] f25887n;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public final Buffer3.a f25888o;
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public final boolean f25889p;
 
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     public final BufferedSink f25890q;
 
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     public final Random f25891r;
 
-    /* renamed from: s */
+    /* JADX INFO: renamed from: s */
     public final boolean f25892s;
 
-    /* renamed from: t */
+    /* JADX INFO: renamed from: t */
     public final boolean f25893t;
 
-    /* renamed from: u */
+    /* JADX INFO: renamed from: u */
     public final long f25894u;
 
     public WebSocketWriter(boolean z2, BufferedSink bufferedSink, Random random, boolean z3, boolean z4, long j) {
@@ -67,7 +67,7 @@ public final class WebSocketWriter implements Closeable {
         this.f25888o = z2 ? new Buffer3.a() : null;
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final void m10363a(int i, ByteString byteString) throws IOException {
         ByteString byteStringM10473x = ByteString.f27592j;
         if (i != 0 || byteString != null) {
@@ -94,7 +94,7 @@ public final class WebSocketWriter implements Closeable {
         }
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final void m10364b(int i, ByteString byteString) throws IOException {
         if (this.f25885l) {
             throw new IOException("closed");
@@ -136,7 +136,7 @@ public final class WebSocketWriter implements Closeable {
 
     /* JADX WARN: Removed duplicated region for block: B:36:0x00a0  */
     /* JADX WARN: Removed duplicated region for block: B:44:0x00be  */
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
@@ -166,7 +166,7 @@ public final class WebSocketWriter implements Closeable {
             messageDeflater.f25814l.flush();
             Buffer3 buffer32 = messageDeflater.f25812j;
             ByteString byteString2 = MessageDeflater2.f25816a;
-            long jMo10502j = buffer32.f26080k - byteString2.mo10502j();
+            long jMo10502j = buffer32.f26080k - ((long) byteString2.mo10502j());
             Intrinsics3.checkParameterIsNotNull(byteString2, "bytes");
             int iMo10502j = byteString2.mo10502j();
             Intrinsics3.checkParameterIsNotNull(byteString2, "bytes");
@@ -176,7 +176,7 @@ public final class WebSocketWriter implements Closeable {
                     messageDeflater.f25812j.m10444T(0);
                 } else {
                     Buffer3 buffer33 = messageDeflater.f25812j;
-                    long j = buffer33.f26080k - 4;
+                    long j = buffer33.f26080k - ((long) 4);
                     Buffer3.a aVar = new Buffer3.a();
                     buffer33.m10469u(aVar);
                     try {
@@ -190,7 +190,7 @@ public final class WebSocketWriter implements Closeable {
                 i2 |= 64;
             } else {
                 for (int i3 = 0; i3 < iMo10502j; i3++) {
-                    if (buffer32.m10464q(i3 + jMo10502j) != byteString2.mo10505m(0 + i3)) {
+                    if (buffer32.m10464q(((long) i3) + jMo10502j) != byteString2.mo10505m(0 + i3)) {
                         z2 = false;
                         break;
                     }

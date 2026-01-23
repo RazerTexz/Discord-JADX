@@ -103,8 +103,8 @@ import org.webrtc.MediaStreamTrack;
 import org.xmlpull.v1.XmlPullParser;
 import p007b.p100d.p104b.p105a.outline;
 
+/* JADX INFO: loaded from: classes.dex */
 @RestrictTo({RestrictTo.Scope.LIBRARY})
-/* loaded from: classes.dex */
 public class AppCompatDelegateImpl extends AppCompatDelegate implements MenuBuilder.Callback, LayoutInflater.Factory2 {
     public static final String EXCEPTION_HANDLER_MESSAGE_SUFFIX = ". If the resource you are trying to use is a vector resource, you may be referencing it in an unsupported way. See AppCompatDelegate.setCompatVectorFromResourcesEnabled() for more info.";
     private static boolean sInstalledExceptionHandler;
@@ -163,7 +163,7 @@ public class AppCompatDelegateImpl extends AppCompatDelegate implements MenuBuil
     private static final boolean sCanReturnDifferentContext = !"robolectric".equals(Build.FINGERPRINT);
     private static final boolean sCanApplyOverrideConfiguration = true;
 
-    /* renamed from: androidx.appcompat.app.AppCompatDelegateImpl$1 */
+    /* JADX INFO: renamed from: androidx.appcompat.app.AppCompatDelegateImpl$1 */
     public class C00621 implements Thread.UncaughtExceptionHandler {
         public final /* synthetic */ Thread.UncaughtExceptionHandler val$defHandler;
 
@@ -192,7 +192,7 @@ public class AppCompatDelegateImpl extends AppCompatDelegate implements MenuBuil
         }
     }
 
-    /* renamed from: androidx.appcompat.app.AppCompatDelegateImpl$2 */
+    /* JADX INFO: renamed from: androidx.appcompat.app.AppCompatDelegateImpl$2 */
     public class RunnableC00632 implements Runnable {
         public RunnableC00632() {
         }
@@ -213,7 +213,7 @@ public class AppCompatDelegateImpl extends AppCompatDelegate implements MenuBuil
         }
     }
 
-    /* renamed from: androidx.appcompat.app.AppCompatDelegateImpl$3 */
+    /* JADX INFO: renamed from: androidx.appcompat.app.AppCompatDelegateImpl$3 */
     public class C00643 implements OnApplyWindowInsetsListener {
         public C00643() {
         }
@@ -229,7 +229,7 @@ public class AppCompatDelegateImpl extends AppCompatDelegate implements MenuBuil
         }
     }
 
-    /* renamed from: androidx.appcompat.app.AppCompatDelegateImpl$4 */
+    /* JADX INFO: renamed from: androidx.appcompat.app.AppCompatDelegateImpl$4 */
     public class C00654 implements FitWindowsViewGroup.OnFitSystemWindowsListener {
         public C00654() {
         }
@@ -240,7 +240,7 @@ public class AppCompatDelegateImpl extends AppCompatDelegate implements MenuBuil
         }
     }
 
-    /* renamed from: androidx.appcompat.app.AppCompatDelegateImpl$5 */
+    /* JADX INFO: renamed from: androidx.appcompat.app.AppCompatDelegateImpl$5 */
     public class C00665 implements ContentFrameLayout.OnAttachListener {
         public C00665() {
         }
@@ -255,10 +255,10 @@ public class AppCompatDelegateImpl extends AppCompatDelegate implements MenuBuil
         }
     }
 
-    /* renamed from: androidx.appcompat.app.AppCompatDelegateImpl$6 */
+    /* JADX INFO: renamed from: androidx.appcompat.app.AppCompatDelegateImpl$6 */
     public class RunnableC00676 implements Runnable {
 
-        /* renamed from: androidx.appcompat.app.AppCompatDelegateImpl$6$1, reason: invalid class name */
+        /* JADX INFO: renamed from: androidx.appcompat.app.AppCompatDelegateImpl$6$1, reason: invalid class name */
         public class AnonymousClass1 extends ViewPropertyAnimatorListenerAdapter {
             public AnonymousClass1() {
             }
@@ -296,7 +296,7 @@ public class AppCompatDelegateImpl extends AppCompatDelegate implements MenuBuil
         }
     }
 
-    /* renamed from: androidx.appcompat.app.AppCompatDelegateImpl$7 */
+    /* JADX INFO: renamed from: androidx.appcompat.app.AppCompatDelegateImpl$7 */
     public class C00687 extends ViewPropertyAnimatorListenerAdapter {
         public C00687() {
         }
@@ -382,7 +382,7 @@ public class AppCompatDelegateImpl extends AppCompatDelegate implements MenuBuil
     public class ActionModeCallbackWrapperV9 implements ActionMode.Callback {
         private ActionMode.Callback mWrapped;
 
-        /* renamed from: androidx.appcompat.app.AppCompatDelegateImpl$ActionModeCallbackWrapperV9$1 */
+        /* JADX INFO: renamed from: androidx.appcompat.app.AppCompatDelegateImpl$ActionModeCallbackWrapperV9$1 */
         public class C00691 extends ViewPropertyAnimatorListenerAdapter {
             public C00691() {
             }
@@ -481,7 +481,7 @@ public class AppCompatDelegateImpl extends AppCompatDelegate implements MenuBuil
     public abstract class AutoNightModeManager {
         private BroadcastReceiver mReceiver;
 
-        /* renamed from: androidx.appcompat.app.AppCompatDelegateImpl$AutoNightModeManager$1 */
+        /* JADX INFO: renamed from: androidx.appcompat.app.AppCompatDelegateImpl$AutoNightModeManager$1 */
         public class C00701 extends BroadcastReceiver {
             public C00701() {
             }
@@ -667,10 +667,10 @@ public class AppCompatDelegateImpl extends AppCompatDelegate implements MenuBuil
         public boolean wasLastOpen;
         public int windowAnimations;
 
-        /* renamed from: x */
+        /* JADX INFO: renamed from: x */
         public int f82x;
 
-        /* renamed from: y */
+        /* JADX INFO: renamed from: y */
         public int f83y;
 
         @SuppressLint({"BanParcelableUsage"})
@@ -680,7 +680,7 @@ public class AppCompatDelegateImpl extends AppCompatDelegate implements MenuBuil
             public boolean isOpen;
             public Bundle menuState;
 
-            /* renamed from: androidx.appcompat.app.AppCompatDelegateImpl$PanelFeatureState$SavedState$1 */
+            /* JADX INFO: renamed from: androidx.appcompat.app.AppCompatDelegateImpl$PanelFeatureState$SavedState$1 */
             public class C00711 implements Parcelable.ClassLoaderCreator<SavedState> {
                 @Override // android.os.Parcelable.Creator
                 public /* bridge */ /* synthetic */ Object createFromParcel(Parcel parcel) {
@@ -962,7 +962,7 @@ public class AppCompatDelegateImpl extends AppCompatDelegate implements MenuBuil
         return configuration2;
     }
 
-    private ViewGroup createSubDecor() throws SecurityException, IllegalArgumentException {
+    private ViewGroup createSubDecor() {
         ViewGroup viewGroup;
         TypedArray typedArrayObtainStyledAttributes = this.mContext.obtainStyledAttributes(C0051R.styleable.AppCompatTheme);
         int i = C0051R.styleable.AppCompatTheme_windowActionBar;
@@ -1598,7 +1598,7 @@ public class AppCompatDelegateImpl extends AppCompatDelegate implements MenuBuil
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
-    private boolean updateForNightMode(int i, boolean z2) throws IllegalArgumentException {
+    private boolean updateForNightMode(int i, boolean z2) {
         boolean z3;
         Configuration configurationCreateOverrideConfigurationForDayNight = createOverrideConfigurationForDayNight(this.mContext, i, null);
         boolean zIsActivityManifestHandlingUiMode = isActivityManifestHandlingUiMode();
@@ -1629,7 +1629,7 @@ public class AppCompatDelegateImpl extends AppCompatDelegate implements MenuBuil
     }
 
     /* JADX WARN: Multi-variable type inference failed */
-    private void updateResourcesConfigurationForNightMode(int i, boolean z2, @Nullable Configuration configuration) throws IllegalArgumentException {
+    private void updateResourcesConfigurationForNightMode(int i, boolean z2, @Nullable Configuration configuration) {
         Resources resources = this.mContext.getResources();
         Configuration configuration2 = new Configuration(resources.getConfiguration());
         if (configuration != null) {
@@ -2007,7 +2007,7 @@ public class AppCompatDelegateImpl extends AppCompatDelegate implements MenuBuil
     }
 
     @Override // androidx.appcompat.app.AppCompatDelegate
-    public void onConfigurationChanged(Configuration configuration) throws IllegalArgumentException {
+    public void onConfigurationChanged(Configuration configuration) {
         ActionBar supportActionBar;
         if (this.mHasActionBar && this.mSubDecorInstalled && (supportActionBar = getSupportActionBar()) != null) {
             supportActionBar.onConfigurationChanged(configuration);
@@ -2017,7 +2017,7 @@ public class AppCompatDelegateImpl extends AppCompatDelegate implements MenuBuil
     }
 
     @Override // androidx.appcompat.app.AppCompatDelegate
-    public void onCreate(Bundle bundle) throws IllegalArgumentException {
+    public void onCreate(Bundle bundle) {
         this.mBaseContextAttached = true;
         applyDayNight(false);
         ensureWindow();
@@ -2372,6 +2372,7 @@ public class AppCompatDelegateImpl extends AppCompatDelegate implements MenuBuil
             try {
                 actionModeOnWindowStartingSupportActionMode = appCompatCallback2.onWindowStartingSupportActionMode(callback);
             } catch (AbstractMethodError unused) {
+                actionModeOnWindowStartingSupportActionMode = null;
             }
         }
         if (actionModeOnWindowStartingSupportActionMode != null) {
@@ -2535,7 +2536,7 @@ public class AppCompatDelegateImpl extends AppCompatDelegate implements MenuBuil
         this(dialog.getContext(), dialog.getWindow(), appCompatCallback, dialog);
     }
 
-    private boolean applyDayNight(boolean z2) throws IllegalArgumentException {
+    private boolean applyDayNight(boolean z2) {
         if (this.mIsDestroyed) {
             return false;
         }

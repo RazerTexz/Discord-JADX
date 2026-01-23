@@ -12,12 +12,12 @@ import p007b.p225i.p414e.p418n.BitArray;
 import p007b.p225i.p414e.p426q.p427r.RSS14Reader;
 import p007b.p225i.p414e.p426q.p427r.p428f.RSSExpandedReader;
 
-/* compiled from: MultiFormatOneDReader.java */
-/* renamed from: b.i.e.q.i, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.e.q.i, reason: use source file name */
+/* JADX INFO: compiled from: MultiFormatOneDReader.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class MultiFormatOneDReader extends OneDReader {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final OneDReader[] f13378a;
 
     public MultiFormatOneDReader(Map<DecodeHintType, ?> map) {
@@ -64,7 +64,7 @@ public final class MultiFormatOneDReader extends OneDReader {
     }
 
     @Override // p007b.p225i.p414e.p426q.OneDReader
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public Result mo6983b(int i, BitArray bitArray, Map<DecodeHintType, ?> map) throws NotFoundException {
         for (OneDReader oneDReader : this.f13378a) {
             try {

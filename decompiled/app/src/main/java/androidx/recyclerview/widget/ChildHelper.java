@@ -6,7 +6,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.ArrayList;
 import java.util.List;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class ChildHelper {
     private static final boolean DEBUG = false;
     private static final String TAG = "ChildrenHelper";

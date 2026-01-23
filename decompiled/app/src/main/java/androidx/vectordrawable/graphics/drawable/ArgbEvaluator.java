@@ -4,8 +4,8 @@ import android.animation.TypeEvaluator;
 import androidx.annotation.RestrictTo;
 import p007b.p100d.p104b.p105a.outline;
 
+/* JADX INFO: loaded from: classes.dex */
 @RestrictTo({RestrictTo.Scope.LIBRARY_GROUP_PREFIX})
-/* loaded from: classes.dex */
 public class ArgbEvaluator implements TypeEvaluator {
     private static final ArgbEvaluator sInstance = new ArgbEvaluator();
 

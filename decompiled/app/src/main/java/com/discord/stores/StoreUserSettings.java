@@ -37,11 +37,11 @@ import p658rx.functions.Action1;
 import p658rx.subjects.BehaviorSubject;
 import p658rx.subjects.SerializedSubject;
 
-/* compiled from: StoreUserSettings.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: StoreUserSettings.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class StoreUserSettings extends Store {
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private final StoreAccessibility accessibilityStore;
     private final Persister<Boolean> allowAccessibilityDetectionPublisher;
@@ -62,7 +62,7 @@ public final class StoreUserSettings extends Store {
     private final Persister<Integer> stickerAnimationSettingsPublisher;
     private final Persister<Boolean> stickerSuggestionsPublisher;
 
-    /* compiled from: StoreUserSettings.kt */
+    /* JADX INFO: compiled from: StoreUserSettings.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -87,8 +87,8 @@ public final class StoreUserSettings extends Store {
         }
     }
 
-    /* compiled from: StoreUserSettings.kt */
-    /* renamed from: com.discord.stores.StoreUserSettings$expireCustomStatus$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreUserSettings$expireCustomStatus$1 */
+    /* JADX INFO: compiled from: StoreUserSettings.kt */
     public static final class C65971 extends Lambda implements Function1<ModelUserSettings, Unit> {
         public static final C65971 INSTANCE = new C65971();
 
@@ -102,14 +102,14 @@ public final class StoreUserSettings extends Store {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(ModelUserSettings modelUserSettings) {
             Intrinsics3.checkNotNullParameter(modelUserSettings, "it");
         }
     }
 
-    /* compiled from: StoreUserSettings.kt */
-    /* renamed from: com.discord.stores.StoreUserSettings$observeConsents$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreUserSettings$observeConsents$1 */
+    /* JADX INFO: compiled from: StoreUserSettings.kt */
     public static final class C65981<T, R> implements Func1<Throwable, ModelUserConsents2> {
         public static final C65981 INSTANCE = new C65981();
 
@@ -118,14 +118,14 @@ public final class StoreUserSettings extends Store {
             return call2(th);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final ModelUserConsents2 call2(Throwable th) {
             return ModelUserConsents2.INSTANCE.getDEFAULT();
         }
     }
 
-    /* compiled from: StoreUserSettings.kt */
-    /* renamed from: com.discord.stores.StoreUserSettings$setIsAccessibilityDetectionAllowed$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreUserSettings$setIsAccessibilityDetectionAllowed$1 */
+    /* JADX INFO: compiled from: StoreUserSettings.kt */
     public static final class C65991<T> implements Action1<ModelUserSettings> {
         public final /* synthetic */ boolean $allowAccessibilityDetection;
 
@@ -138,14 +138,14 @@ public final class StoreUserSettings extends Store {
             call2(modelUserSettings);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final void call2(ModelUserSettings modelUserSettings) {
             StoreUserSettings.access$updateAllowAccessibilityDetectionInternal(StoreUserSettings.this, this.$allowAccessibilityDetection);
         }
     }
 
-    /* compiled from: StoreUserSettings.kt */
-    /* renamed from: com.discord.stores.StoreUserSettings$updateAllowAccessibilityDetectionInternal$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreUserSettings$updateAllowAccessibilityDetectionInternal$1 */
+    /* JADX INFO: compiled from: StoreUserSettings.kt */
     public static final class C66001 extends Lambda implements Function0<Unit> {
         public final /* synthetic */ boolean $allowAccessibilityDetection;
 
@@ -161,14 +161,14 @@ public final class StoreUserSettings extends Store {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             StoreUserSettings.access$getAccessibilityStore$p(StoreUserSettings.this).updateDetectionAllowed(this.$allowAccessibilityDetection);
         }
     }
 
-    /* compiled from: StoreUserSettings.kt */
-    /* renamed from: com.discord.stores.StoreUserSettings$updateContactSyncShown$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreUserSettings$updateContactSyncShown$1 */
+    /* JADX INFO: compiled from: StoreUserSettings.kt */
     public static final class C66011 extends Lambda implements Function1<ModelUserSettings, Unit> {
         public static final C66011 INSTANCE = new C66011();
 
@@ -182,14 +182,14 @@ public final class StoreUserSettings extends Store {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(ModelUserSettings modelUserSettings) {
             Intrinsics3.checkNotNullParameter(modelUserSettings, "it");
         }
     }
 
-    /* compiled from: StoreUserSettings.kt */
-    /* renamed from: com.discord.stores.StoreUserSettings$updateLocalCustomStatus$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreUserSettings$updateLocalCustomStatus$1 */
+    /* JADX INFO: compiled from: StoreUserSettings.kt */
     public static final class C66021 extends Lambda implements Function1<Subscription, Unit> {
         public C66021() {
             super(1);
@@ -201,15 +201,15 @@ public final class StoreUserSettings extends Store {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Subscription subscription) {
             Intrinsics3.checkNotNullParameter(subscription, Traits.Payment.Type.SUBSCRIPTION);
             StoreUserSettings.access$setExpireCustomStatusSubscription$p(StoreUserSettings.this, subscription);
         }
     }
 
-    /* compiled from: StoreUserSettings.kt */
-    /* renamed from: com.discord.stores.StoreUserSettings$updateLocalCustomStatus$2 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreUserSettings$updateLocalCustomStatus$2 */
+    /* JADX INFO: compiled from: StoreUserSettings.kt */
     public static final class C66032 extends Lambda implements Function1<Long, Unit> {
         public C66032() {
             super(1);
@@ -221,7 +221,7 @@ public final class StoreUserSettings extends Store {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Long l) {
             StoreUserSettings.access$expireCustomStatus(StoreUserSettings.this);
         }

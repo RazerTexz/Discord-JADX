@@ -1,8 +1,8 @@
 package com.discord.api.thread;
 
 
-/* compiled from: ThreadMemberFlags.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: ThreadMemberFlags.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class ThreadMemberFlags {
     public static final int ALL_MESSAGES = 2;
     public static final int HAS_INTERACTED = 1;

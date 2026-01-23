@@ -3,12 +3,12 @@ package p007b.p109f.p110a;
 import java.io.File;
 import java.util.Objects;
 
-/* compiled from: FileBinaryResource.java */
-/* renamed from: b.f.a.a, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.f.a.a, reason: use source file name */
+/* JADX INFO: compiled from: FileBinaryResource.java */
+/* JADX INFO: loaded from: classes.dex */
 public class FileBinaryResource {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final File f3016a;
 
     public FileBinaryResource(File file) {
@@ -16,7 +16,7 @@ public class FileBinaryResource {
         this.f3016a = file;
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public long m928a() {
         return this.f3016a.length();
     }

@@ -2,19 +2,19 @@ package p007b.p225i.p226a.p288f.p299e.p308o;
 
 import androidx.annotation.RecentlyNonNull;
 
-/* compiled from: com.google.android.gms:play-services-basement@@17.6.0 */
-/* renamed from: b.i.a.f.e.o.d */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.e.o.d */
+/* JADX INFO: compiled from: com.google.android.gms:play-services-basement@@17.6.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public class C3402d {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final char[] f9585a = {'0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D', 'E', 'F'};
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static final char[] f9586b = {'0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'a', 'b', 'c', 'd', 'e', 'f'};
 
     @RecentlyNonNull
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static String m4187a(@RecentlyNonNull byte[] bArr, boolean z2) {
         int length = bArr.length;
         StringBuilder sb = new StringBuilder(length + length);

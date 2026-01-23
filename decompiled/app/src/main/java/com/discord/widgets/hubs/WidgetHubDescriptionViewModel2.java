@@ -8,9 +8,9 @@ import p001a0.p002a.p003a.C0002b;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: WidgetHubDescriptionViewModel.kt */
-/* renamed from: com.discord.widgets.hubs.HubDescriptionArgs, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.hubs.HubDescriptionArgs, reason: use source file name */
+/* JADX INFO: compiled from: WidgetHubDescriptionViewModel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final /* data */ class WidgetHubDescriptionViewModel2 implements Parcelable {
     public static final Parcelable.Creator<WidgetHubDescriptionViewModel2> CREATOR = new Creator();
     private final long channelId;
@@ -21,7 +21,7 @@ public final /* data */ class WidgetHubDescriptionViewModel2 implements Parcelab
     private final boolean isNewGuild;
     private final Integer primaryCategoryId;
 
-    /* renamed from: com.discord.widgets.hubs.HubDescriptionArgs$Creator */
+    /* JADX INFO: renamed from: com.discord.widgets.hubs.HubDescriptionArgs$Creator */
     public static class Creator implements Parcelable.Creator<WidgetHubDescriptionViewModel2> {
         /* JADX WARN: Can't rename method to resolve collision */
         @Override // android.os.Parcelable.Creator
@@ -62,37 +62,37 @@ public final /* data */ class WidgetHubDescriptionViewModel2 implements Parcelab
         return widgetHubDescriptionViewModel2.copy((i & 1) != 0 ? widgetHubDescriptionViewModel2.guildId : j, (i & 2) != 0 ? widgetHubDescriptionViewModel2.channelId : j2, (i & 4) != 0 ? widgetHubDescriptionViewModel2.isEditing : z2, (i & 8) != 0 ? widgetHubDescriptionViewModel2.hubName : str, (i & 16) != 0 ? widgetHubDescriptionViewModel2.isNewGuild : z3, (i & 32) != 0 ? widgetHubDescriptionViewModel2.description : str2, (i & 64) != 0 ? widgetHubDescriptionViewModel2.primaryCategoryId : num);
     }
 
-    /* renamed from: component1, reason: from getter */
+    /* JADX INFO: renamed from: component1, reason: from getter */
     public final long getGuildId() {
         return this.guildId;
     }
 
-    /* renamed from: component2, reason: from getter */
+    /* JADX INFO: renamed from: component2, reason: from getter */
     public final long getChannelId() {
         return this.channelId;
     }
 
-    /* renamed from: component3, reason: from getter */
+    /* JADX INFO: renamed from: component3, reason: from getter */
     public final boolean getIsEditing() {
         return this.isEditing;
     }
 
-    /* renamed from: component4, reason: from getter */
+    /* JADX INFO: renamed from: component4, reason: from getter */
     public final String getHubName() {
         return this.hubName;
     }
 
-    /* renamed from: component5, reason: from getter */
+    /* JADX INFO: renamed from: component5, reason: from getter */
     public final boolean getIsNewGuild() {
         return this.isNewGuild;
     }
 
-    /* renamed from: component6, reason: from getter */
+    /* JADX INFO: renamed from: component6, reason: from getter */
     public final String getDescription() {
         return this.description;
     }
 
-    /* renamed from: component7, reason: from getter */
+    /* JADX INFO: renamed from: component7, reason: from getter */
     public final Integer getPrimaryCategoryId() {
         return this.primaryCategoryId;
     }
@@ -139,20 +139,26 @@ public final /* data */ class WidgetHubDescriptionViewModel2 implements Parcelab
     }
 
     /* JADX WARN: Multi-variable type inference failed */
+    /* JADX WARN: Type inference failed for: r0v15 */
+    /* JADX WARN: Type inference failed for: r0v16 */
+    /* JADX WARN: Type inference failed for: r0v4, types: [int] */
+    /* JADX WARN: Type inference failed for: r2v0 */
+    /* JADX WARN: Type inference failed for: r2v1, types: [int] */
+    /* JADX WARN: Type inference failed for: r2v2 */
     public int hashCode() {
         int iM3a = (C0002b.m3a(this.channelId) + (C0002b.m3a(this.guildId) * 31)) * 31;
         boolean z2 = this.isEditing;
-        int i = z2;
-        if (z2 != 0) {
-            i = 1;
+        ?? r0 = z2;
+        if (z2) {
+            r0 = 1;
         }
-        int i2 = (iM3a + i) * 31;
+        int i = (iM3a + r0) * 31;
         String str = this.hubName;
-        int iHashCode = (i2 + (str != null ? str.hashCode() : 0)) * 31;
+        int iHashCode = (i + (str != null ? str.hashCode() : 0)) * 31;
         boolean z3 = this.isNewGuild;
-        int i3 = (iHashCode + (z3 ? 1 : z3 ? 1 : 0)) * 31;
+        int i2 = (iHashCode + (z3 ? 1 : z3)) * 31;
         String str2 = this.description;
-        int iHashCode2 = (i3 + (str2 != null ? str2.hashCode() : 0)) * 31;
+        int iHashCode2 = (i2 + (str2 != null ? str2.hashCode() : 0)) * 31;
         Integer num = this.primaryCategoryId;
         return iHashCode2 + (num != null ? num.hashCode() : 0);
     }

@@ -14,23 +14,23 @@ import java.util.concurrent.ConcurrentHashMap;
 import p007b.p225i.p226a.p288f.p299e.p304k.ServiceConnectionC3378r0;
 import p007b.p225i.p226a.p288f.p299e.p310p.C3411b;
 
-/* compiled from: com.google.android.gms:play-services-basement@@17.6.0 */
-/* renamed from: b.i.a.f.e.n.a */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.e.n.a */
+/* JADX INFO: compiled from: com.google.android.gms:play-services-basement@@17.6.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public class C3398a {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final Object f9581a = new Object();
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static volatile C3398a f9582b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     @RecentlyNonNull
     public ConcurrentHashMap<ServiceConnection, ServiceConnection> f9583c = new ConcurrentHashMap<>();
 
     @RecentlyNonNull
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static C3398a m4181b() {
         if (f9582b == null) {
             synchronized (f9581a) {
@@ -44,13 +44,13 @@ public class C3398a {
         return c3398a;
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public boolean m4182a(@RecentlyNonNull Context context, @RecentlyNonNull Intent intent, @RecentlyNonNull ServiceConnection serviceConnection, int i) {
         return m4184d(context, context.getClass().getName(), intent, serviceConnection, i, true);
     }
 
     @SuppressLint({"UntrackedBindService"})
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public void m4183c(@RecentlyNonNull Context context, @RecentlyNonNull ServiceConnection serviceConnection) {
         if (!(!(serviceConnection instanceof ServiceConnectionC3378r0)) || !this.f9583c.containsKey(serviceConnection)) {
             try {
@@ -70,7 +70,7 @@ public class C3398a {
     }
 
     @SuppressLint({"UntrackedBindService"})
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final boolean m4184d(Context context, String str, Intent intent, ServiceConnection serviceConnection, int i, boolean z2) {
         ComponentName component = intent.getComponent();
         if (component != null) {

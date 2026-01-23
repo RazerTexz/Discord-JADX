@@ -4,7 +4,7 @@ import com.discord.models.domain.Model;
 import java.io.IOException;
 import p007b.p100d.p104b.p105a.outline;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class ModelConnectionState implements Model {
     private String code;
     private String providerId;

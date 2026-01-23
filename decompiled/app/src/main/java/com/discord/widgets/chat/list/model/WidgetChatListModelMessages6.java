@@ -19,14 +19,14 @@ import p637j0.p642l.p647e.ScalarSynchronousObservable;
 import p658rx.Observable;
 import p658rx.functions.Func6;
 
-/* compiled from: WidgetChatListModelMessages.kt */
-/* renamed from: com.discord.widgets.chat.list.model.WidgetChatListModelMessages$MessagesWithMetadata$Companion$get$2, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.chat.list.model.WidgetChatListModelMessages$MessagesWithMetadata$Companion$get$2, reason: use source file name */
+/* JADX INFO: compiled from: WidgetChatListModelMessages.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetChatListModelMessages6<T, R> implements Func1<List<? extends Message>, Observable<? extends WidgetChatListModelMessages.MessagesWithMetadata>> {
     public final /* synthetic */ Channel $channel;
 
-    /* compiled from: WidgetChatListModelMessages.kt */
-    /* renamed from: com.discord.widgets.chat.list.model.WidgetChatListModelMessages$MessagesWithMetadata$Companion$get$2$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.list.model.WidgetChatListModelMessages$MessagesWithMetadata$Companion$get$2$1 */
+    /* JADX INFO: compiled from: WidgetChatListModelMessages.kt */
     public static final /* synthetic */ class C81611 extends FunctionReferenceImpl implements Function6<List<? extends Message>, Map<Long, ? extends StoreMessageState.State>, Map<Long, ? extends Channel>, Map<Long, ? extends StoreThreadMessages.ThreadState>, Map<Long, ? extends StoreMessageReplies.MessageState>, Map<Long, ? extends StoreMessageReplies.MessageState>, WidgetChatListModelMessages.MessagesWithMetadata> {
         public static final C81611 INSTANCE = new C81611();
 
@@ -39,7 +39,7 @@ public final class WidgetChatListModelMessages6<T, R> implements Func1<List<? ex
             return invoke2((List<Message>) list, (Map<Long, StoreMessageState.State>) map, (Map<Long, Channel>) map2, (Map<Long, StoreThreadMessages.ThreadState>) map3, map4, map5);
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final WidgetChatListModelMessages.MessagesWithMetadata invoke2(List<Message> list, Map<Long, StoreMessageState.State> map, Map<Long, Channel> map2, Map<Long, StoreThreadMessages.ThreadState> map3, Map<Long, ? extends StoreMessageReplies.MessageState> map4, Map<Long, ? extends StoreMessageReplies.MessageState> map5) {
             Intrinsics3.checkNotNullParameter(list, "p1");
             Intrinsics3.checkNotNullParameter(map, "p2");
@@ -55,9 +55,7 @@ public final class WidgetChatListModelMessages6<T, R> implements Func1<List<? ex
         this.$channel = channel;
     }
 
-    /* JADX WARN: Multi-variable type inference failed */
-    /* JADX WARN: Type inference failed for: r6v2, types: [com.discord.widgets.chat.list.model.WidgetChatListModelMessages$sam$rx_functions_Func6$0] */
-    /* renamed from: call, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
     public final Observable<? extends WidgetChatListModelMessages.MessagesWithMetadata> call2(List<Message> list) {
         ScalarSynchronousObservable scalarSynchronousObservable = new ScalarSynchronousObservable(list);
         StoreStream.Companion companion = StoreStream.INSTANCE;
@@ -68,9 +66,10 @@ public final class WidgetChatListModelMessages6<T, R> implements Func1<List<? ex
         Observable<Map<Long, StoreThreadMessages.ThreadState>> observableObserveThreadCountAndLatestMessage = companion.getThreadMessages().observeThreadCountAndLatestMessage();
         Observable<Map<Long, StoreMessageReplies.MessageState>> observableObserveMessageReferencesForChannel = companion.getRepliedMessages().observeMessageReferencesForChannel(this.$channel.getId());
         Observable<Map<Long, StoreMessageReplies.MessageState>> observableObserveMessageReferencesForChannel2 = companion.getRepliedMessages().observeMessageReferencesForChannel(this.$channel.getParentId());
-        C81611 widgetChatListModelMessages7 = C81611.INSTANCE;
-        if (widgetChatListModelMessages7 != null) {
-            widgetChatListModelMessages7 = new WidgetChatListModelMessages7(widgetChatListModelMessages7);
+        C81611 c81611 = C81611.INSTANCE;
+        Object widgetChatListModelMessages7 = c81611;
+        if (c81611 != null) {
+            widgetChatListModelMessages7 = new WidgetChatListModelMessages7(c81611);
         }
         return Observable.m11071f(scalarSynchronousObservable, messageState, observableObserveThreadsFromMessages, observableObserveThreadCountAndLatestMessage, observableObserveMessageReferencesForChannel, observableObserveMessageReferencesForChannel2, (Func6) widgetChatListModelMessages7);
     }

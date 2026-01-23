@@ -3,8 +3,8 @@ package com.discord.models.domain;
 import com.discord.utilities.time.Clock;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: NotificationSettingsModelUtils.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: NotificationSettingsModelUtils.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class NotificationSettingsModelUtils {
     public static final NotificationSettingsModelUtils INSTANCE = new NotificationSettingsModelUtils();
 

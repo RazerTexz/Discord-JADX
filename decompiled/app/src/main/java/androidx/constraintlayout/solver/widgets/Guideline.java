@@ -6,7 +6,7 @@ import androidx.constraintlayout.solver.widgets.ConstraintAnchor;
 import androidx.constraintlayout.solver.widgets.ConstraintWidget;
 import java.util.HashMap;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class Guideline extends ConstraintWidget {
     public static final int HORIZONTAL = 0;
     public static final int RELATIVE_BEGIN = 1;
@@ -22,10 +22,10 @@ public class Guideline extends ConstraintWidget {
     private int mOrientation = 0;
     private int mMinimumPosition = 0;
 
-    /* renamed from: androidx.constraintlayout.solver.widgets.Guideline$1 */
+    /* JADX INFO: renamed from: androidx.constraintlayout.solver.widgets.Guideline$1 */
     public static /* synthetic */ class C01911 {
 
-        /* renamed from: $SwitchMap$androidx$constraintlayout$solver$widgets$ConstraintAnchor$Type */
+        /* JADX INFO: renamed from: $SwitchMap$androidx$constraintlayout$solver$widgets$ConstraintAnchor$Type */
         public static final /* synthetic */ int[] f118x4c44d048;
 
         static {

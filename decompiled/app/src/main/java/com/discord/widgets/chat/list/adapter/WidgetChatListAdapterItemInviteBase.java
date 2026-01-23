@@ -17,13 +17,13 @@ import p507d0.p584w.p586i.p587a.ContinuationImpl6;
 import p507d0.p584w.p586i.p587a.DebugMetadata;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: WidgetChatListAdapterItemInviteBase.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetChatListAdapterItemInviteBase.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public abstract class WidgetChatListAdapterItemInviteBase extends WidgetChatListItem {
 
-    /* compiled from: WidgetChatListAdapterItemInviteBase.kt */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemInviteBase$joinServerOrDM$1 */
+    /* JADX INFO: compiled from: WidgetChatListAdapterItemInviteBase.kt */
     @DebugMetadata(m10084c = "com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemInviteBase$joinServerOrDM$1", m10085f = "WidgetChatListAdapterItemInviteBase.kt", m10086l = {}, m10087m = "invokeSuspend")
-    /* renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemInviteBase$joinServerOrDM$1 */
     public static final class C80961 extends ContinuationImpl6 implements Function2<ModelInvite, Continuation<? super Unit>, Object> {
         public int label;
 
@@ -53,9 +53,9 @@ public abstract class WidgetChatListAdapterItemInviteBase extends WidgetChatList
         }
     }
 
-    /* compiled from: WidgetChatListAdapterItemInviteBase.kt */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemInviteBase$joinServerOrDM$2 */
+    /* JADX INFO: compiled from: WidgetChatListAdapterItemInviteBase.kt */
     @DebugMetadata(m10084c = "com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemInviteBase$joinServerOrDM$2", m10085f = "WidgetChatListAdapterItemInviteBase.kt", m10086l = {}, m10087m = "invokeSuspend")
-    /* renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemInviteBase$joinServerOrDM$2 */
     public static final class C80972 extends ContinuationImpl6 implements Function2<ModelInvite, Continuation<? super Unit>, Object> {
         public int label;
 

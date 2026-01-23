@@ -16,8 +16,8 @@ import org.webrtc.EglBase14;
 import p007b.p100d.p104b.p105a.outline;
 import p617h0.p628c.EglBase2;
 
+/* JADX INFO: loaded from: classes3.dex */
 @TargetApi(18)
-/* loaded from: classes3.dex */
 public class EglBase14Impl implements EglBase14 {
     private static final int CURRENT_SDK_VERSION = Build.VERSION.SDK_INT;
     private static final int EGLExt_SDK_VERSION = 18;

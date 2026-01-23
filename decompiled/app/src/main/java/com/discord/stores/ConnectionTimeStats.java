@@ -18,8 +18,8 @@ import p507d0.p580t.MapsJVM;
 import p507d0.p580t._Collections;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ConnectionTimeStats.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: ConnectionTimeStats.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class ConnectionTimeStats {
     private final Stat connectionStreamFirstFrame;
     private final Stat connectionVideoFirstFrame;
@@ -33,7 +33,7 @@ public final class ConnectionTimeStats {
     private final Stat videoFirstFrame;
     private final Stat voiceConnection;
 
-    /* compiled from: ConnectionTimeStats.kt */
+    /* JADX INFO: compiled from: ConnectionTimeStats.kt */
     public static final class Stat {
         private final Clock clock;
         private Long endTime;
@@ -154,7 +154,7 @@ public final class ConnectionTimeStats {
         }
     }
 
-    /* compiled from: ConnectionTimeStats.kt */
+    /* JADX INFO: compiled from: ConnectionTimeStats.kt */
     public enum StatType {
         GatewayConnection,
         GatewayHello,
@@ -168,8 +168,8 @@ public final class ConnectionTimeStats {
         ConnectionVideoFirstFrame
     }
 
-    /* compiled from: ConnectionTimeStats.kt */
-    /* renamed from: com.discord.stores.ConnectionTimeStats$addListener$1 */
+    /* JADX INFO: renamed from: com.discord.stores.ConnectionTimeStats$addListener$1 */
+    /* JADX INFO: compiled from: ConnectionTimeStats.kt */
     public static final class C56641 extends GatewaySocket.DefaultListener {
         public C56641() {
         }
@@ -201,8 +201,8 @@ public final class ConnectionTimeStats {
         }
     }
 
-    /* compiled from: ConnectionTimeStats.kt */
-    /* renamed from: com.discord.stores.ConnectionTimeStats$addListener$2 */
+    /* JADX INFO: renamed from: com.discord.stores.ConnectionTimeStats$addListener$2 */
+    /* JADX INFO: compiled from: ConnectionTimeStats.kt */
     public static final class C56652 extends StoreRtcConnection.DefaultListener {
         public C56652() {
         }
@@ -226,8 +226,8 @@ public final class ConnectionTimeStats {
         }
     }
 
-    /* compiled from: ConnectionTimeStats.kt */
-    /* renamed from: com.discord.stores.ConnectionTimeStats$addListener$3 */
+    /* JADX INFO: renamed from: com.discord.stores.ConnectionTimeStats$addListener$3 */
+    /* JADX INFO: compiled from: ConnectionTimeStats.kt */
     public static final class C56663 extends StoreStreamRtcConnection.DefaultListener {
         public C56663() {
         }
@@ -251,8 +251,8 @@ public final class ConnectionTimeStats {
         }
     }
 
-    /* compiled from: ConnectionTimeStats.kt */
-    /* renamed from: com.discord.stores.ConnectionTimeStats$addListener$4 */
+    /* JADX INFO: renamed from: com.discord.stores.ConnectionTimeStats$addListener$4 */
+    /* JADX INFO: compiled from: ConnectionTimeStats.kt */
     public static final class C56674 extends StoreMediaEngine.DefaultListener {
         public C56674() {
         }

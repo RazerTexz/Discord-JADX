@@ -16,26 +16,26 @@ import java.util.concurrent.ConcurrentNavigableMap;
 import p007b.p225i.p408d.InstanceCreator;
 import p007b.p225i.p408d.p410q.p413y.ReflectionAccessor;
 
-/* compiled from: ConstructorConstructor.java */
-/* renamed from: b.i.d.q.g */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.d.q.g */
+/* JADX INFO: compiled from: ConstructorConstructor.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class C4922g {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final Map<Type, InstanceCreator<?>> f13115a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final ReflectionAccessor f13116b = ReflectionAccessor.f13148a;
 
     /* JADX INFO: Add missing generic type declarations: [T] */
-    /* compiled from: ConstructorConstructor.java */
-    /* renamed from: b.i.d.q.g$a */
+    /* JADX INFO: renamed from: b.i.d.q.g$a */
+    /* JADX INFO: compiled from: ConstructorConstructor.java */
     public class a<T> implements ObjectConstructor<T> {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final /* synthetic */ InstanceCreator f13117a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final /* synthetic */ Type f13118b;
 
         public a(C4922g c4922g, InstanceCreator instanceCreator, Type type) {
@@ -44,21 +44,21 @@ public final class C4922g {
         }
 
         @Override // p007b.p225i.p408d.p410q.ObjectConstructor
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public T mo6869a() {
             return (T) this.f13117a.m6853a(this.f13118b);
         }
     }
 
     /* JADX INFO: Add missing generic type declarations: [T] */
-    /* compiled from: ConstructorConstructor.java */
-    /* renamed from: b.i.d.q.g$b */
+    /* JADX INFO: renamed from: b.i.d.q.g$b */
+    /* JADX INFO: compiled from: ConstructorConstructor.java */
     public class b<T> implements ObjectConstructor<T> {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final /* synthetic */ InstanceCreator f13119a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final /* synthetic */ Type f13120b;
 
         public b(C4922g c4922g, InstanceCreator instanceCreator, Type type) {
@@ -67,7 +67,7 @@ public final class C4922g {
         }
 
         @Override // p007b.p225i.p408d.p410q.ObjectConstructor
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public T mo6869a() {
             return (T) this.f13119a.m6853a(this.f13120b);
         }
@@ -77,8 +77,8 @@ public final class C4922g {
         this.f13115a = map;
     }
 
-    /* renamed from: a */
-    public <T> ObjectConstructor<T> m6870a(TypeToken<T> typeToken) throws SecurityException {
+    /* JADX INFO: renamed from: a */
+    public <T> ObjectConstructor<T> m6870a(TypeToken<T> typeToken) {
         C4923h c4923h;
         Type type = typeToken.getType();
         Class<? super T> rawType = typeToken.getRawType();

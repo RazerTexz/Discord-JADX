@@ -4,7 +4,7 @@ import java.net.URL;
 import java.util.List;
 import java.util.regex.Pattern;
 
-/* loaded from: discord-126021.apk:lombok/installer/eclipse/EclipseProductDescriptor.SCL.lombok */
+/* JADX INFO: loaded from: discord-126021.apk:lombok/installer/eclipse/EclipseProductDescriptor.SCL.lombok */
 public interface EclipseProductDescriptor {
     String getProductName();
 

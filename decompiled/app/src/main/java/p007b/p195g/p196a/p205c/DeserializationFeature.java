@@ -2,9 +2,9 @@ package p007b.p195g.p196a.p205c;
 
 import p007b.p195g.p196a.p205c.p221z.ConfigFeature;
 
-/* compiled from: DeserializationFeature.java */
-/* renamed from: b.g.a.c.h, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.g.a.c.h, reason: use source file name */
+/* JADX INFO: compiled from: DeserializationFeature.java */
+/* JADX INFO: loaded from: classes3.dex */
 public enum DeserializationFeature implements ConfigFeature {
     USE_BIG_DECIMAL_FOR_FLOATS(false),
     USE_BIG_INTEGER_FOR_INTS(false),
@@ -43,13 +43,13 @@ public enum DeserializationFeature implements ConfigFeature {
     }
 
     @Override // p007b.p195g.p196a.p205c.p221z.ConfigFeature
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public boolean mo2090f() {
         return this._defaultState;
     }
 
     @Override // p007b.p195g.p196a.p205c.p221z.ConfigFeature
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public int mo2091g() {
         return this._mask;
     }

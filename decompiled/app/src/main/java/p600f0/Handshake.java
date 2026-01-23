@@ -19,25 +19,25 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 import p600f0.p601e0.Util7;
 
-/* compiled from: Handshake.kt */
-/* renamed from: f0.v, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: f0.v, reason: use source file name */
+/* JADX INFO: compiled from: Handshake.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class Handshake {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final Lazy f25969a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final TlsVersion f25970b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final CipherSuite f25971c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final List<Certificate> f25972d;
 
-    /* compiled from: Handshake.kt */
-    /* renamed from: f0.v$a */
+    /* JADX INFO: renamed from: f0.v$a */
+    /* JADX INFO: compiled from: Handshake.kt */
     public static final class a extends Lambda implements Function0<List<? extends Certificate>> {
         public final /* synthetic */ List $peerCertificatesCopy;
 
@@ -53,8 +53,8 @@ public final class Handshake {
         }
     }
 
-    /* compiled from: Handshake.kt */
-    /* renamed from: f0.v$b */
+    /* JADX INFO: renamed from: f0.v$b */
+    /* JADX INFO: compiled from: Handshake.kt */
     public static final class b extends Lambda implements Function0<List<? extends Certificate>> {
         public final /* synthetic */ Function0 $peerCertificatesFn;
 
@@ -86,7 +86,7 @@ public final class Handshake {
         this.f25969a = LazyJVM.lazy(new b(function0));
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final Handshake m10395a(SSLSession sSLSession) throws IOException {
         List<Certificate> listEmptyList;
         Intrinsics3.checkParameterIsNotNull(sSLSession, "$this$handshake");
@@ -115,12 +115,12 @@ public final class Handshake {
         return new Handshake(tlsVersionM10110a, cipherSuiteM10373b, m10396d(sSLSession.getLocalCertificates()), new a(listEmptyList));
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public static final List<Certificate> m10396d(Certificate[] certificateArr) {
         return certificateArr != null ? Util7.m10132m((Certificate[]) Arrays.copyOf(certificateArr, certificateArr.length)) : Collections2.emptyList();
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final String m10397b(Certificate certificate) {
         if (certificate instanceof X509Certificate) {
             return ((X509Certificate) certificate).getSubjectDN().toString();
@@ -130,7 +130,7 @@ public final class Handshake {
         return type;
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final List<Certificate> m10398c() {
         return (List) this.f25969a.getValue();
     }

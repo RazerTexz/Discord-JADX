@@ -5,18 +5,18 @@ import java.util.List;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: MessageCall.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: MessageCall.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class MessageCall {
     private final UtcDateTime endedTimestamp;
     private final List<Long> participants;
 
-    /* renamed from: a, reason: from getter */
+    /* JADX INFO: renamed from: a, reason: from getter */
     public final UtcDateTime getEndedTimestamp() {
         return this.endedTimestamp;
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final List<Long> m8075b() {
         return this.participants;
     }

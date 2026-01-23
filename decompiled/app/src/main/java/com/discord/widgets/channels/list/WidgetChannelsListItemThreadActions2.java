@@ -19,14 +19,14 @@ import p637j0.p642l.p647e.ScalarSynchronousObservable;
 import p658rx.Observable;
 import p658rx.functions.Func7;
 
-/* compiled from: WidgetChannelsListItemThreadActions.kt */
-/* renamed from: com.discord.widgets.channels.list.WidgetChannelsListItemThreadActions$Model$Companion$get$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.channels.list.WidgetChannelsListItemThreadActions$Model$Companion$get$1, reason: use source file name */
+/* JADX INFO: compiled from: WidgetChannelsListItemThreadActions.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetChannelsListItemThreadActions2<T, R> implements Func1<Channel, Observable<? extends WidgetChannelsListItemThreadActions.Model>> {
     public static final WidgetChannelsListItemThreadActions2 INSTANCE = new WidgetChannelsListItemThreadActions2();
 
-    /* compiled from: WidgetChannelsListItemThreadActions.kt */
-    /* renamed from: com.discord.widgets.channels.list.WidgetChannelsListItemThreadActions$Model$Companion$get$1$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.channels.list.WidgetChannelsListItemThreadActions$Model$Companion$get$1$1 */
+    /* JADX INFO: compiled from: WidgetChannelsListItemThreadActions.kt */
     public static final class C74611<T, R> implements Func1<Map<Long, ? extends Channel>, Boolean> {
         public final /* synthetic */ Channel $channel;
 
@@ -39,14 +39,14 @@ public final class WidgetChannelsListItemThreadActions2<T, R> implements Func1<C
             return call2((Map<Long, Channel>) map);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final Boolean call2(Map<Long, Channel> map) {
             return Boolean.valueOf(outline.m845d(this.$channel, map) != null);
         }
     }
 
-    /* compiled from: WidgetChannelsListItemThreadActions.kt */
-    /* renamed from: com.discord.widgets.channels.list.WidgetChannelsListItemThreadActions$Model$Companion$get$1$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.channels.list.WidgetChannelsListItemThreadActions$Model$Companion$get$1$2 */
+    /* JADX INFO: compiled from: WidgetChannelsListItemThreadActions.kt */
     public static final class C74622<T1, T2, T3, T4, T5, T6, T7, R> implements Func7<MeUser, Channel, Guild, Long, Map<Long, ? extends ModelNotificationSettings>, StoreThreadsJoined.JoinedThread, Boolean, WidgetChannelsListItemThreadActions.Model> {
         public final /* synthetic */ Channel $channel;
 
@@ -59,7 +59,7 @@ public final class WidgetChannelsListItemThreadActions2<T, R> implements Func1<C
             return call2(meUser, channel, guild, l, map, joinedThread, bool);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final WidgetChannelsListItemThreadActions.Model call2(MeUser meUser, Channel channel, Guild guild, Long l, Map<Long, ? extends ModelNotificationSettings> map, StoreThreadsJoined.JoinedThread joinedThread, Boolean bool) {
             NotificationTextUtils notificationTextUtils = NotificationTextUtils.INSTANCE;
             boolean zIsGuildOrCategoryOrChannelMuted = notificationTextUtils.isGuildOrCategoryOrChannelMuted((ModelNotificationSettings) outline.m843c(this.$channel, map), channel);
@@ -77,7 +77,7 @@ public final class WidgetChannelsListItemThreadActions2<T, R> implements Func1<C
         }
     }
 
-    /* renamed from: call, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
     public final Observable<? extends WidgetChannelsListItemThreadActions.Model> call2(Channel channel) {
         if (channel == null) {
             return new ScalarSynchronousObservable(null);

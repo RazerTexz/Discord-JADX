@@ -3,18 +3,18 @@ package p007b.p195g.p196a.p205c.p218h0;
 import java.util.ArrayList;
 import p007b.p100d.p104b.p105a.outline;
 
-/* compiled from: ClassStack.java */
-/* renamed from: b.g.a.c.h0.c, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.g.a.c.h0.c, reason: use source file name */
+/* JADX INFO: compiled from: ClassStack.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class ClassStack {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final ClassStack f4902a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final Class<?> f4903b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public ArrayList<ResolvedRecursiveType> f4904c;
 
     public ClassStack(ClassStack classStack, Class<?> cls) {

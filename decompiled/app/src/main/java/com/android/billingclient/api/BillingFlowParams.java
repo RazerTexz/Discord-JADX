@@ -4,49 +4,49 @@ import androidx.annotation.NonNull;
 import java.util.ArrayList;
 import p007b.p100d.p101a.p102a.C1630o;
 
-/* compiled from: com.android.billingclient:billing@@4.0.0 */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: com.android.billingclient:billing@@4.0.0 */
+/* JADX INFO: loaded from: classes.dex */
 public class BillingFlowParams {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public boolean f14546a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public String f14547b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public String f14548c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public String f14549d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public int f14550e = 0;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public ArrayList<SkuDetails> f14551f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public boolean f14552g;
 
-    /* compiled from: com.android.billingclient:billing@@4.0.0 */
-    /* renamed from: com.android.billingclient.api.BillingFlowParams$a */
+    /* JADX INFO: renamed from: com.android.billingclient.api.BillingFlowParams$a */
+    /* JADX INFO: compiled from: com.android.billingclient:billing@@4.0.0 */
     public static class C5412a {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public String f14553a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public String f14554b;
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public int f14555c = 0;
 
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         public ArrayList<SkuDetails> f14556d;
 
         @NonNull
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public BillingFlowParams m7495a() {
             ArrayList<SkuDetails> arrayList = this.f14556d;
             if (arrayList == null || arrayList.isEmpty()) {

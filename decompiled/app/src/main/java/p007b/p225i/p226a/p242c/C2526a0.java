@@ -3,18 +3,18 @@ package p007b.p225i.p226a.p242c;
 import p007b.p225i.p226a.p242c.Player2;
 import p007b.p225i.p226a.p242c.p259f3.ListenerSet;
 
-/* compiled from: lambda */
-/* renamed from: b.i.a.c.a0 */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.a0 */
+/* JADX INFO: compiled from: lambda */
+/* JADX INFO: loaded from: classes3.dex */
 public final /* synthetic */ class C2526a0 implements ListenerSet.a {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final /* synthetic */ int f5464a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final /* synthetic */ Player2.f f5465b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final /* synthetic */ Player2.f f5466c;
 
     public /* synthetic */ C2526a0(int i, Player2.f fVar, Player2.f fVar2) {

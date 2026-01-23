@@ -2,16 +2,16 @@ package p659s.p660a;
 
 import java.util.concurrent.atomic.AtomicIntegerFieldUpdater;
 
-/* compiled from: CompletionState.kt */
-/* renamed from: s.a.w, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: s.a.w, reason: use source file name */
+/* JADX INFO: compiled from: CompletionState.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public class CompletionState2 {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final AtomicIntegerFieldUpdater f27912a = AtomicIntegerFieldUpdater.newUpdater(CompletionState2.class, "_handled");
     public volatile int _handled;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final Throwable f27913b;
 
     public CompletionState2(Throwable th, boolean z2) {

@@ -11,8 +11,8 @@ import androidx.annotation.RestrictTo;
 import androidx.appcompat.C0051R;
 import androidx.core.view.ViewCompat;
 
+/* JADX INFO: loaded from: classes.dex */
 @RestrictTo({RestrictTo.Scope.LIBRARY_GROUP_PREFIX})
-/* loaded from: classes.dex */
 public class ButtonBarLayout extends LinearLayout {
     private static final int PEEK_BUTTON_DP = 16;
     private boolean mAllowStacking;

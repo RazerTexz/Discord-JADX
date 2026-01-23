@@ -17,88 +17,88 @@ import p007b.p225i.p226a.p288f.p299e.p308o.C3404f;
 import p007b.p485q.p486a.p487h.OverlayViewChangeListener;
 import p007b.p485q.p486a.p491l.UCropView3;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public class OverlayView extends View {
 
-    /* renamed from: A */
+    /* JADX INFO: renamed from: A */
     public Paint f22214A;
 
-    /* renamed from: B */
+    /* JADX INFO: renamed from: B */
     public int f22215B;
 
-    /* renamed from: C */
+    /* JADX INFO: renamed from: C */
     public float f22216C;
 
-    /* renamed from: D */
+    /* JADX INFO: renamed from: D */
     public float f22217D;
 
-    /* renamed from: E */
+    /* JADX INFO: renamed from: E */
     public int f22218E;
 
-    /* renamed from: F */
+    /* JADX INFO: renamed from: F */
     public int f22219F;
 
-    /* renamed from: G */
+    /* JADX INFO: renamed from: G */
     public int f22220G;
 
-    /* renamed from: H */
+    /* JADX INFO: renamed from: H */
     public int f22221H;
 
-    /* renamed from: I */
+    /* JADX INFO: renamed from: I */
     public OverlayViewChangeListener f22222I;
 
-    /* renamed from: J */
+    /* JADX INFO: renamed from: J */
     public boolean f22223J;
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final RectF f22224j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final RectF f22225k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public int f22226l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public int f22227m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public float[] f22228n;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public int f22229o;
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public int f22230p;
 
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     public float f22231q;
 
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     public float[] f22232r;
 
-    /* renamed from: s */
+    /* JADX INFO: renamed from: s */
     public boolean f22233s;
 
-    /* renamed from: t */
+    /* JADX INFO: renamed from: t */
     public boolean f22234t;
 
-    /* renamed from: u */
+    /* JADX INFO: renamed from: u */
     public boolean f22235u;
 
-    /* renamed from: v */
+    /* JADX INFO: renamed from: v */
     public int f22236v;
 
-    /* renamed from: w */
+    /* JADX INFO: renamed from: w */
     public Path f22237w;
 
-    /* renamed from: x */
+    /* JADX INFO: renamed from: x */
     public Paint f22238x;
 
-    /* renamed from: y */
+    /* JADX INFO: renamed from: y */
     public Paint f22239y;
 
-    /* renamed from: z */
+    /* JADX INFO: renamed from: z */
     public Paint f22240z;
 
     public OverlayView(Context context, AttributeSet attributeSet) {
@@ -120,7 +120,7 @@ public class OverlayView extends View {
         this.f22221H = getResources().getDimensionPixelSize(C11199R.b.ucrop_default_crop_rect_corner_touch_area_line_length);
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final void m9324a() {
         this.f22228n = C3404f.m4288f0(this.f22224j);
         C3404f.m4280d0(this.f22224j);

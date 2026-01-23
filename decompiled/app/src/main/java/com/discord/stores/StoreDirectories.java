@@ -44,8 +44,8 @@ import p507d0.p592z.p594d.Lambda;
 import p637j0.p641k.Func1;
 import p658rx.Observable;
 
-/* compiled from: StoreDirectories.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: StoreDirectories.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class StoreDirectories extends StoreV2 {
     private static final String DISCORD_HUB_VERIFICATION_CLICKED_KEY = "hub_verification_clicked_key";
     private static final String GUILD_SCHEDULED_EVENTS_HEADER_DISMISSED = "guild_scheduled_events_header_dismissed";
@@ -65,8 +65,8 @@ public final class StoreDirectories extends StoreV2 {
     private final ObservationDeck observationDeck;
     private final RestAPI restApi;
 
-    /* compiled from: StoreDirectories.kt */
-    /* renamed from: com.discord.stores.StoreDirectories$addServerToDirectory$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreDirectories$addServerToDirectory$1 */
+    /* JADX INFO: compiled from: StoreDirectories.kt */
     public static final class C58651 extends Lambda implements Function0<Unit> {
         public final /* synthetic */ long $channelId;
         public final /* synthetic */ DirectoryEntryGuild $directoryEntry;
@@ -84,7 +84,7 @@ public final class StoreDirectories extends StoreV2 {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             Map mapAccess$getDirectoriesMap$p = StoreDirectories.access$getDirectoriesMap$p(StoreDirectories.this);
             Long lValueOf = Long.valueOf(this.$channelId);
@@ -107,8 +107,8 @@ public final class StoreDirectories extends StoreV2 {
         }
     }
 
-    /* compiled from: StoreDirectories.kt */
-    /* renamed from: com.discord.stores.StoreDirectories$fetchDirectoriesForChannel$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreDirectories$fetchDirectoriesForChannel$1 */
+    /* JADX INFO: compiled from: StoreDirectories.kt */
     public static final class C58661<T, R> implements Func1<List<? extends DirectoryEntryGuild>, List<? extends DirectoryEntryGuild>> {
         public static final C58661 INSTANCE = new C58661();
 
@@ -117,20 +117,20 @@ public final class StoreDirectories extends StoreV2 {
             return call2((List<DirectoryEntryGuild>) list);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final List<DirectoryEntryGuild> call2(List<DirectoryEntryGuild> list) {
             Intrinsics3.checkNotNullExpressionValue(list, "entries");
             return _Collections.sortedWith(list, new C5867x1dbdc8f9());
         }
     }
 
-    /* compiled from: StoreDirectories.kt */
-    /* renamed from: com.discord.stores.StoreDirectories$fetchDirectoriesForChannel$2 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreDirectories$fetchDirectoriesForChannel$2 */
+    /* JADX INFO: compiled from: StoreDirectories.kt */
     public static final class C58682 extends Lambda implements Function1<RestCallState<? extends List<? extends DirectoryEntryGuild>>, Unit> {
         public final /* synthetic */ long $channelId;
 
-        /* compiled from: StoreDirectories.kt */
-        /* renamed from: com.discord.stores.StoreDirectories$fetchDirectoriesForChannel$2$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.stores.StoreDirectories$fetchDirectoriesForChannel$2$1, reason: invalid class name */
+        /* JADX INFO: compiled from: StoreDirectories.kt */
         public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
             public final /* synthetic */ RestCallState $entriesResponse;
 
@@ -146,7 +146,7 @@ public final class StoreDirectories extends StoreV2 {
                 return Unit.f27425a;
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2() {
                 StoreDirectories.access$getDirectoriesMap$p(StoreDirectories.this).put(Long.valueOf(C58682.this.$channelId), this.$entriesResponse);
                 StoreDirectories.this.markChanged();
@@ -165,20 +165,20 @@ public final class StoreDirectories extends StoreV2 {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(RestCallState<? extends List<DirectoryEntryGuild>> restCallState) {
             Intrinsics3.checkNotNullParameter(restCallState, "entriesResponse");
             StoreDirectories.access$getDispatcher$p(StoreDirectories.this).schedule(new AnonymousClass1(restCallState));
         }
     }
 
-    /* compiled from: StoreDirectories.kt */
-    /* renamed from: com.discord.stores.StoreDirectories$fetchEntryCountsForChannel$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreDirectories$fetchEntryCountsForChannel$1 */
+    /* JADX INFO: compiled from: StoreDirectories.kt */
     public static final class C58691 extends Lambda implements Function1<RestCallState<? extends Map<Integer, ? extends Integer>>, Unit> {
         public final /* synthetic */ long $channelId;
 
-        /* compiled from: StoreDirectories.kt */
-        /* renamed from: com.discord.stores.StoreDirectories$fetchEntryCountsForChannel$1$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.stores.StoreDirectories$fetchEntryCountsForChannel$1$1, reason: invalid class name */
+        /* JADX INFO: compiled from: StoreDirectories.kt */
         public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
             public final /* synthetic */ RestCallState $response;
 
@@ -194,7 +194,7 @@ public final class StoreDirectories extends StoreV2 {
                 return Unit.f27425a;
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2() {
                 StoreDirectories.access$getEntryCountMap$p(StoreDirectories.this).put(Long.valueOf(C58691.this.$channelId), this.$response);
                 StoreDirectories.this.markChanged();
@@ -213,20 +213,20 @@ public final class StoreDirectories extends StoreV2 {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(RestCallState<? extends Map<Integer, Integer>> restCallState) {
             Intrinsics3.checkNotNullParameter(restCallState, "response");
             StoreDirectories.access$getDispatcher$p(StoreDirectories.this).schedule(new AnonymousClass1(restCallState));
         }
     }
 
-    /* compiled from: StoreDirectories.kt */
-    /* renamed from: com.discord.stores.StoreDirectories$fetchGuildScheduledEventsForChannel$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreDirectories$fetchGuildScheduledEventsForChannel$1 */
+    /* JADX INFO: compiled from: StoreDirectories.kt */
     public static final class C58701 extends Lambda implements Function1<RestCallState<? extends List<? extends DirectoryEntryGuild2>>, Unit> {
         public final /* synthetic */ long $channelId;
 
-        /* compiled from: StoreDirectories.kt */
-        /* renamed from: com.discord.stores.StoreDirectories$fetchGuildScheduledEventsForChannel$1$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.stores.StoreDirectories$fetchGuildScheduledEventsForChannel$1$1, reason: invalid class name */
+        /* JADX INFO: compiled from: StoreDirectories.kt */
         public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
             public final /* synthetic */ RestCallState $response;
 
@@ -242,7 +242,7 @@ public final class StoreDirectories extends StoreV2 {
                 return Unit.f27425a;
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2() {
                 StoreDirectories.access$getDirectoryGuildScheduledEventsMap$p(StoreDirectories.this).put(Long.valueOf(C58701.this.$channelId), this.$response);
                 RestCallState restCallState = this.$response;
@@ -278,15 +278,15 @@ public final class StoreDirectories extends StoreV2 {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(RestCallState<? extends List<DirectoryEntryGuild2>> restCallState) {
             Intrinsics3.checkNotNullParameter(restCallState, "response");
             StoreDirectories.access$getDispatcher$p(StoreDirectories.this).schedule(new AnonymousClass1(restCallState));
         }
     }
 
-    /* compiled from: StoreDirectories.kt */
-    /* renamed from: com.discord.stores.StoreDirectories$init$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreDirectories$init$1 */
+    /* JADX INFO: compiled from: StoreDirectories.kt */
     public static final class C58711<T, R> implements Func1<Map<Long, ? extends Guild>, Set<? extends Long>> {
         public static final C58711 INSTANCE = new C58711();
 
@@ -295,7 +295,7 @@ public final class StoreDirectories extends StoreV2 {
             return call2((Map<Long, Guild>) map);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final Set<Long> call2(Map<Long, Guild> map) {
             Collection<Guild> collectionValues = map.values();
             ArrayList arrayList = new ArrayList();
@@ -313,8 +313,8 @@ public final class StoreDirectories extends StoreV2 {
         }
     }
 
-    /* compiled from: StoreDirectories.kt */
-    /* renamed from: com.discord.stores.StoreDirectories$init$2 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreDirectories$init$2 */
+    /* JADX INFO: compiled from: StoreDirectories.kt */
     public static final class C58722 extends Lambda implements Function1<Set<? extends Long>, Unit> {
         public C58722() {
             super(1);
@@ -326,7 +326,7 @@ public final class StoreDirectories extends StoreV2 {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Set<Long> set) {
             Set set2 = (Set) StoreDirectories.access$getHubNamePromptPersister$p(StoreDirectories.this).get();
             Persister persisterAccess$getHubNamePromptPersister$p = StoreDirectories.access$getHubNamePromptPersister$p(StoreDirectories.this);
@@ -340,8 +340,8 @@ public final class StoreDirectories extends StoreV2 {
         }
     }
 
-    /* compiled from: StoreDirectories.kt */
-    /* renamed from: com.discord.stores.StoreDirectories$observeDirectories$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreDirectories$observeDirectories$1 */
+    /* JADX INFO: compiled from: StoreDirectories.kt */
     public static final class C58731 extends Lambda implements Function0<Map<Long, ? extends RestCallState<? extends List<? extends DirectoryEntryGuild>>>> {
         public C58731() {
             super(0);
@@ -353,14 +353,14 @@ public final class StoreDirectories extends StoreV2 {
         }
 
         @Override // kotlin.jvm.functions.Function0
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final Map<Long, ? extends RestCallState<? extends List<? extends DirectoryEntryGuild>>> invoke2() {
             return StoreDirectories.access$getDirectoriesMapSnapshot$p(StoreDirectories.this);
         }
     }
 
-    /* compiled from: StoreDirectories.kt */
-    /* renamed from: com.discord.stores.StoreDirectories$observeDirectoriesForChannel$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreDirectories$observeDirectoriesForChannel$1 */
+    /* JADX INFO: compiled from: StoreDirectories.kt */
     public static final class C58741 extends Lambda implements Function0<RestCallState<? extends List<? extends DirectoryEntryGuild>>> {
         public final /* synthetic */ long $channelId;
 
@@ -371,7 +371,7 @@ public final class StoreDirectories extends StoreV2 {
         }
 
         @Override // kotlin.jvm.functions.Function0
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public /* bridge */ /* synthetic */ RestCallState<? extends List<? extends DirectoryEntryGuild>> invoke2() {
             return invoke();
         }
@@ -382,8 +382,8 @@ public final class StoreDirectories extends StoreV2 {
         }
     }
 
-    /* compiled from: StoreDirectories.kt */
-    /* renamed from: com.discord.stores.StoreDirectories$observeDirectoryGuildScheduledEvents$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreDirectories$observeDirectoryGuildScheduledEvents$1 */
+    /* JADX INFO: compiled from: StoreDirectories.kt */
     public static final class C58751 extends Lambda implements Function0<Map<Long, ? extends RestCallState<? extends List<? extends DirectoryEntryGuild2>>>> {
         public C58751() {
             super(0);
@@ -395,14 +395,14 @@ public final class StoreDirectories extends StoreV2 {
         }
 
         @Override // kotlin.jvm.functions.Function0
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final Map<Long, ? extends RestCallState<? extends List<? extends DirectoryEntryGuild2>>> invoke2() {
             return StoreDirectories.access$getDirectoryGuildScheduledEventsMapSnapshot$p(StoreDirectories.this);
         }
     }
 
-    /* compiled from: StoreDirectories.kt */
-    /* renamed from: com.discord.stores.StoreDirectories$removeServerFromDirectory$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreDirectories$removeServerFromDirectory$1 */
+    /* JADX INFO: compiled from: StoreDirectories.kt */
     public static final class C58761 extends Lambda implements Function1<DirectoryEntryGuild, TrackNetworkMetadata2> {
         public final /* synthetic */ long $channelId;
         public final /* synthetic */ long $guildId;
@@ -419,20 +419,20 @@ public final class StoreDirectories extends StoreV2 {
             return invoke2(directoryEntryGuild);
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final TrackNetworkMetadata2 invoke2(DirectoryEntryGuild directoryEntryGuild) {
             return new TrackNetworkActionDirectoryGuildEntryDelete(Long.valueOf(this.$channelId), Long.valueOf(this.$guildId));
         }
     }
 
-    /* compiled from: StoreDirectories.kt */
-    /* renamed from: com.discord.stores.StoreDirectories$removeServerFromDirectory$2 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreDirectories$removeServerFromDirectory$2 */
+    /* JADX INFO: compiled from: StoreDirectories.kt */
     public static final class C58772 extends Lambda implements Function1<RestCallState<? extends DirectoryEntryGuild>, Unit> {
         public final /* synthetic */ long $channelId;
         public final /* synthetic */ long $guildId;
 
-        /* compiled from: StoreDirectories.kt */
-        /* renamed from: com.discord.stores.StoreDirectories$removeServerFromDirectory$2$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.stores.StoreDirectories$removeServerFromDirectory$2$1, reason: invalid class name */
+        /* JADX INFO: compiled from: StoreDirectories.kt */
         public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
             public AnonymousClass1() {
                 super(0);
@@ -444,7 +444,7 @@ public final class StoreDirectories extends StoreV2 {
                 return Unit.f27425a;
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2() {
                 Map mapAccess$getDirectoriesMap$p = StoreDirectories.access$getDirectoriesMap$p(StoreDirectories.this);
                 Long lValueOf = Long.valueOf(C58772.this.$channelId);
@@ -478,7 +478,7 @@ public final class StoreDirectories extends StoreV2 {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(RestCallState<DirectoryEntryGuild> restCallState) {
             Intrinsics3.checkNotNullParameter(restCallState, "request");
             if (restCallState instanceof RestCallState6) {

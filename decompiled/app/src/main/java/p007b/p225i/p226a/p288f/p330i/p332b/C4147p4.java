@@ -25,27 +25,27 @@ import p007b.p225i.p226a.p288f.p313h.p325l.C3847u0;
 import p007b.p225i.p226a.p288f.p313h.p325l.C3860v0;
 import p007b.p225i.p226a.p288f.p313h.p325l.C3893x7;
 
-/* compiled from: com.google.android.gms:play-services-measurement@@18.0.0 */
-/* renamed from: b.i.a.f.i.b.p4 */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.i.b.p4 */
+/* JADX INFO: compiled from: com.google.android.gms:play-services-measurement@@18.0.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public final class C4147p4 extends AbstractC4074i9 implements InterfaceC4016e {
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final Map<String, Map<String, String>> f11117d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final Map<String, Map<String, Boolean>> f11118e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final Map<String, Map<String, Boolean>> f11119f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public final Map<String, C3847u0> f11120g;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public final Map<String, Map<String, Integer>> f11121h;
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public final Map<String, String> f11122i;
 
     public C4147p4(C4097k9 c4097k9) {
@@ -58,7 +58,7 @@ public final class C4147p4 extends AbstractC4074i9 implements InterfaceC4016e {
         this.f11121h = new ArrayMap();
     }
 
-    /* renamed from: u */
+    /* JADX INFO: renamed from: u */
     public static Map<String, String> m5772u(C3847u0 c3847u0) {
         ArrayMap arrayMap = new ArrayMap();
         for (C3860v0 c3860v0 : c3847u0.m5300B()) {
@@ -68,7 +68,7 @@ public final class C4147p4 extends AbstractC4074i9 implements InterfaceC4016e {
     }
 
     @WorkerThread
-    /* renamed from: A */
+    /* JADX INFO: renamed from: A */
     public final boolean m5773A(String str) {
         mo5848b();
         C3847u0 c3847u0M5778s = m5778s(str);
@@ -79,7 +79,7 @@ public final class C4147p4 extends AbstractC4074i9 implements InterfaceC4016e {
     }
 
     @WorkerThread
-    /* renamed from: B */
+    /* JADX INFO: renamed from: B */
     public final long m5774B(String str) throws Throwable {
         String strMo5500h = mo5500h(str, "measurement.account.time_zone_offset_minutes");
         if (TextUtils.isEmpty(strMo5500h)) {
@@ -93,12 +93,12 @@ public final class C4147p4 extends AbstractC4074i9 implements InterfaceC4016e {
         }
     }
 
-    /* renamed from: C */
+    /* JADX INFO: renamed from: C */
     public final boolean m5775C(String str) {
         return "1".equals(mo5500h(str, "measurement.upload.blacklist_internal"));
     }
 
-    /* renamed from: D */
+    /* JADX INFO: renamed from: D */
     public final boolean m5776D(String str) {
         return "1".equals(mo5500h(str, "measurement.upload.blacklist_public"));
     }
@@ -108,7 +108,7 @@ public final class C4147p4 extends AbstractC4074i9 implements InterfaceC4016e {
     /* JADX WARN: Removed duplicated region for block: B:26:0x00a1  */
     /* JADX WARN: Removed duplicated region for block: B:30:0x00d6  */
     @WorkerThread
-    /* renamed from: E */
+    /* JADX INFO: renamed from: E */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
@@ -139,9 +139,6 @@ public final class C4147p4 extends AbstractC4074i9 implements InterfaceC4016e {
                     if (cursorQuery != null) {
                         cursorQuery.close();
                     }
-                    blob = null;
-                    if (blob != null) {
-                    }
                 }
             } catch (Throwable th) {
                 th = th;
@@ -160,10 +157,13 @@ public final class C4147p4 extends AbstractC4074i9 implements InterfaceC4016e {
             }
             throw th;
         }
-        if (!cursorQuery.moveToFirst()) {
+        if (cursorQuery.moveToFirst()) {
+            blob = cursorQuery.getBlob(0);
+            if (cursorQuery.moveToNext()) {
+                c4040gM5686q.mo5726g().f11141f.m5861b("Got multiple records for app config, expected one. appId", C4157q3.m5788s(str));
+            }
             cursorQuery.close();
-            blob = null;
-            if (blob != null) {
+            if (blob == null) {
                 C3847u0.a aVarM5315t = m5779t(str, blob).m5315t();
                 m5780v(str, aVarM5315t);
                 this.f11117d.put(str, m5772u((C3847u0) ((AbstractC3851u4) aVarM5315t.m5320p())));
@@ -179,18 +179,15 @@ public final class C4147p4 extends AbstractC4074i9 implements InterfaceC4016e {
             this.f11121h.put(str, null);
             return;
         }
-        blob = cursorQuery.getBlob(0);
-        if (cursorQuery.moveToNext()) {
-            c4040gM5686q.mo5726g().f11141f.m5861b("Got multiple records for app config, expected one. appId", C4157q3.m5788s(str));
-        }
         cursorQuery.close();
-        if (blob != null) {
+        blob = null;
+        if (blob == null) {
         }
     }
 
     @Override // p007b.p225i.p226a.p288f.p330i.p332b.InterfaceC4016e
     @WorkerThread
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public final String mo5500h(String str, String str2) throws Throwable {
         mo5848b();
         m5777E(str);
@@ -202,13 +199,13 @@ public final class C4147p4 extends AbstractC4074i9 implements InterfaceC4016e {
     }
 
     @Override // p007b.p225i.p226a.p288f.p330i.p332b.AbstractC4074i9
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public final boolean mo5515p() {
         return false;
     }
 
     @WorkerThread
-    /* renamed from: s */
+    /* JADX INFO: renamed from: s */
     public final C3847u0 m5778s(String str) {
         m5684n();
         mo5848b();
@@ -218,7 +215,7 @@ public final class C4147p4 extends AbstractC4074i9 implements InterfaceC4016e {
     }
 
     @WorkerThread
-    /* renamed from: t */
+    /* JADX INFO: renamed from: t */
     public final C3847u0 m5779t(String str, byte[] bArr) {
         if (bArr == null) {
             return C3847u0.m5295G();
@@ -236,7 +233,7 @@ public final class C4147p4 extends AbstractC4074i9 implements InterfaceC4016e {
         }
     }
 
-    /* renamed from: v */
+    /* JADX INFO: renamed from: v */
     public final void m5780v(String str, C3847u0.a aVar) {
         ArrayMap arrayMap = new ArrayMap();
         ArrayMap arrayMap2 = new ArrayMap();
@@ -281,7 +278,7 @@ public final class C4147p4 extends AbstractC4074i9 implements InterfaceC4016e {
     }
 
     @WorkerThread
-    /* renamed from: w */
+    /* JADX INFO: renamed from: w */
     public final boolean m5781w(String str, byte[] bArr, String str2) {
         byte[] bArrM5052d;
         boolean z2;
@@ -512,7 +509,7 @@ public final class C4147p4 extends AbstractC4074i9 implements InterfaceC4016e {
     }
 
     @WorkerThread
-    /* renamed from: x */
+    /* JADX INFO: renamed from: x */
     public final boolean m5782x(String str, String str2) throws Throwable {
         Boolean bool;
         mo5848b();
@@ -531,7 +528,7 @@ public final class C4147p4 extends AbstractC4074i9 implements InterfaceC4016e {
     }
 
     @WorkerThread
-    /* renamed from: y */
+    /* JADX INFO: renamed from: y */
     public final boolean m5783y(String str, String str2) throws Throwable {
         Boolean bool;
         mo5848b();
@@ -547,7 +544,7 @@ public final class C4147p4 extends AbstractC4074i9 implements InterfaceC4016e {
     }
 
     @WorkerThread
-    /* renamed from: z */
+    /* JADX INFO: renamed from: z */
     public final int m5784z(String str, String str2) throws Throwable {
         Integer num;
         mo5848b();

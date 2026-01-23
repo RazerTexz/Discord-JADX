@@ -14,17 +14,17 @@ import androidx.core.graphics.PathParser;
 import org.xmlpull.v1.XmlPullParser;
 import p007b.p100d.p104b.p105a.outline;
 
+/* JADX INFO: loaded from: classes.dex */
 @RestrictTo({RestrictTo.Scope.LIBRARY_GROUP_PREFIX})
-/* loaded from: classes.dex */
 public class PathInterpolatorCompat implements Interpolator {
     public static final double EPSILON = 1.0E-5d;
     public static final int MAX_NUM_POINTS = 3000;
     private static final float PRECISION = 0.002f;
 
-    /* renamed from: mX */
+    /* JADX INFO: renamed from: mX */
     private float[] f160mX;
 
-    /* renamed from: mY */
+    /* JADX INFO: renamed from: mY */
     private float[] f161mY;
 
     public PathInterpolatorCompat(Context context, AttributeSet attributeSet, XmlPullParser xmlPullParser) {

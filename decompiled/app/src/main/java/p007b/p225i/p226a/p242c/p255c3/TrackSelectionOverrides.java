@@ -14,18 +14,18 @@ import p007b.p225i.p355b.p357b.ImmutableList2;
 import p007b.p225i.p355b.p357b.ImmutableMap2;
 import p007b.p225i.p355b.p357b.RegularImmutableMap;
 
-/* compiled from: TrackSelectionOverrides.java */
-/* renamed from: b.i.a.c.c3.o, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.c3.o, reason: use source file name */
+/* JADX INFO: compiled from: TrackSelectionOverrides.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class TrackSelectionOverrides implements Bundleable {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static final TrackSelectionOverrides f6270j = new TrackSelectionOverrides(RegularImmutableMap.f12015m);
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public static final Bundleable.a<TrackSelectionOverrides> f6271k = C2638d.f6180a;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final ImmutableMap2<TrackGroup, a> f6272l;
 
     public TrackSelectionOverrides(Map<TrackGroup, a> map) {
@@ -46,17 +46,17 @@ public final class TrackSelectionOverrides implements Bundleable {
         return this.f6272l.hashCode();
     }
 
-    /* compiled from: TrackSelectionOverrides.java */
-    /* renamed from: b.i.a.c.c3.o$a */
+    /* JADX INFO: renamed from: b.i.a.c.c3.o$a */
+    /* JADX INFO: compiled from: TrackSelectionOverrides.java */
     public static final class a implements Bundleable {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public static final /* synthetic */ int f6273j = 0;
 
-        /* renamed from: k */
+        /* JADX INFO: renamed from: k */
         public final TrackGroup f6274k;
 
-        /* renamed from: l */
+        /* JADX INFO: renamed from: l */
         public final ImmutableList2<Integer> f6275l;
 
         public a(TrackGroup trackGroup) {

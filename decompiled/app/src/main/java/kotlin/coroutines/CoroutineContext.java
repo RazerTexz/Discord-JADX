@@ -8,15 +8,15 @@ import p507d0.p584w.CoroutineContextImpl4;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: CoroutineContext.kt */
-/* loaded from: classes3.dex */
+/* JADX INFO: compiled from: CoroutineContext.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public interface CoroutineContext {
 
-    /* compiled from: CoroutineContext.kt */
+    /* JADX INFO: compiled from: CoroutineContext.kt */
     public interface Element extends CoroutineContext {
 
-        /* compiled from: CoroutineContext.kt */
-        /* renamed from: kotlin.coroutines.CoroutineContext$Element$a */
+        /* JADX INFO: renamed from: kotlin.coroutines.CoroutineContext$Element$a */
+        /* JADX INFO: compiled from: CoroutineContext.kt */
         public static final class C12790a {
             public static <R> R fold(Element element, R r, Function2<? super R, ? super Element, ? extends R> function2) {
                 Intrinsics3.checkNotNullParameter(function2, "operation");
@@ -49,19 +49,19 @@ public interface CoroutineContext {
         Key<?> getKey();
     }
 
-    /* compiled from: CoroutineContext.kt */
+    /* JADX INFO: compiled from: CoroutineContext.kt */
     public interface Key<E extends Element> {
     }
 
-    /* compiled from: CoroutineContext.kt */
-    /* renamed from: kotlin.coroutines.CoroutineContext$a */
+    /* JADX INFO: renamed from: kotlin.coroutines.CoroutineContext$a */
+    /* JADX INFO: compiled from: CoroutineContext.kt */
     public static final class C12791a {
 
-        /* compiled from: CoroutineContext.kt */
-        /* renamed from: kotlin.coroutines.CoroutineContext$a$a */
+        /* JADX INFO: renamed from: kotlin.coroutines.CoroutineContext$a$a */
+        /* JADX INFO: compiled from: CoroutineContext.kt */
         public static final class a extends Lambda implements Function2<CoroutineContext, Element, CoroutineContext> {
 
-            /* renamed from: j */
+            /* JADX INFO: renamed from: j */
             public static final a f27431j = new a();
 
             public a() {
@@ -73,7 +73,7 @@ public interface CoroutineContext {
                 return invoke2(coroutineContext, element);
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final CoroutineContext invoke2(CoroutineContext coroutineContext, Element element) {
                 CoroutineContextImpl3 coroutineContextImpl3;
                 Intrinsics3.checkNotNullParameter(coroutineContext, "acc");

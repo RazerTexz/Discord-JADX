@@ -9,20 +9,20 @@ import java.util.Objects;
 import p007b.p225i.p226a.p288f.p299e.p300h.p301j.C3301k;
 import p007b.p225i.p226a.p288f.p313h.p326m.BinderC3933j;
 
-/* renamed from: b.i.a.f.j.b.e.j */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.j.b.e.j */
+/* JADX INFO: loaded from: classes3.dex */
 public final /* synthetic */ class C4288j implements InterfaceC4269a0 {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final C4286i f11417a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final Message f11418b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final BinderC4272b0 f11419c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final PublishOptions f11420d;
 
     public C4288j(C4286i c4286i, Message message, BinderC4272b0 binderC4272b0, PublishOptions publishOptions) {
@@ -33,7 +33,7 @@ public final /* synthetic */ class C4288j implements InterfaceC4269a0 {
     }
 
     @Override // p007b.p225i.p226a.p288f.p333j.p334b.p335e.InterfaceC4269a0
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final void mo5981a(C4280f c4280f, C3301k c3301k) throws RemoteException {
         C4286i c4286i = this.f11417a;
         Message message = this.f11418b;

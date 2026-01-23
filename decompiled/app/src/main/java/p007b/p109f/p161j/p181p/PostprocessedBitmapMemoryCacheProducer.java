@@ -11,34 +11,34 @@ import p007b.p109f.p161j.p175j.CloseableImage;
 import p007b.p109f.p161j.p182q.Postprocessor;
 import p007b.p109f.p161j.p182q.RepeatedPostprocessor;
 
-/* compiled from: PostprocessedBitmapMemoryCacheProducer.java */
-/* renamed from: b.f.j.p.s0, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.f.j.p.s0, reason: use source file name */
+/* JADX INFO: compiled from: PostprocessedBitmapMemoryCacheProducer.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class PostprocessedBitmapMemoryCacheProducer implements Producer2<CloseableReference<CloseableImage>> {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final MemoryCache<CacheKey, CloseableImage> f4206a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final CacheKeyFactory f4207b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final Producer2<CloseableReference<CloseableImage>> f4208c;
 
-    /* compiled from: PostprocessedBitmapMemoryCacheProducer.java */
-    /* renamed from: b.f.j.p.s0$a */
+    /* JADX INFO: renamed from: b.f.j.p.s0$a */
+    /* JADX INFO: compiled from: PostprocessedBitmapMemoryCacheProducer.java */
     public static class a extends DelegatingConsumer<CloseableReference<CloseableImage>, CloseableReference<CloseableImage>> {
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public final CacheKey f4209c;
 
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         public final boolean f4210d;
 
-        /* renamed from: e */
+        /* JADX INFO: renamed from: e */
         public final MemoryCache<CacheKey, CloseableImage> f4211e;
 
-        /* renamed from: f */
+        /* JADX INFO: renamed from: f */
         public final boolean f4212f;
 
         public a(Consumer2<CloseableReference<CloseableImage>> consumer2, CacheKey cacheKey, boolean z2, MemoryCache<CacheKey, CloseableImage> memoryCache, boolean z3) {
@@ -50,7 +50,7 @@ public class PostprocessedBitmapMemoryCacheProducer implements Producer2<Closeab
         }
 
         @Override // p007b.p109f.p161j.p181p.BaseConsumer
-        /* renamed from: i */
+        /* JADX INFO: renamed from: i */
         public void mo1320i(Object obj, int i) {
             CloseableReference<CloseableImage> closeableReference = (CloseableReference) obj;
             if (closeableReference == null) {
@@ -83,7 +83,7 @@ public class PostprocessedBitmapMemoryCacheProducer implements Producer2<Closeab
     }
 
     @Override // p007b.p109f.p161j.p181p.Producer2
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public void mo1417b(Consumer2<CloseableReference<CloseableImage>> consumer2, ProducerContext producerContext) {
         ProducerListener2 producerListener2Mo1457o = producerContext.mo1457o();
         ImageRequest imageRequestMo1447e = producerContext.mo1447e();

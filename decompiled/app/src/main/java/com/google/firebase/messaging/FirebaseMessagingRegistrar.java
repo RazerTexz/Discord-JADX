@@ -26,35 +26,35 @@ import p007b.p225i.p361c.p401u.InterfaceC4843g;
 import p007b.p225i.p361c.p406w.C4874l;
 import p007b.p225i.p361c.p407x.UserAgentPublisher;
 
-/* compiled from: com.google.firebase:firebase-messaging@@21.0.0 */
+/* JADX INFO: compiled from: com.google.firebase:firebase-messaging@@21.0.0 */
+/* JADX INFO: loaded from: classes3.dex */
 @Keep
-/* loaded from: classes3.dex */
 public class FirebaseMessagingRegistrar implements ComponentRegistrar {
 
-    /* compiled from: com.google.firebase:firebase-messaging@@21.0.0 */
-    /* renamed from: com.google.firebase.messaging.FirebaseMessagingRegistrar$b */
+    /* JADX INFO: renamed from: com.google.firebase.messaging.FirebaseMessagingRegistrar$b */
+    /* JADX INFO: compiled from: com.google.firebase:firebase-messaging@@21.0.0 */
     public static class C11090b<T> implements Transport2<T> {
         public C11090b(C11089a c11089a) {
         }
 
         @Override // p007b.p225i.p226a.p228b.Transport2
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public void mo2289a(Event2<T> event2) {
         }
 
         @Override // p007b.p225i.p226a.p228b.Transport2
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public void mo2290b(Event2<T> event2, TransportScheduleCallback transportScheduleCallback) {
             ((DataTransportCrashlyticsReportSender) transportScheduleCallback).mo2292a(null);
         }
     }
 
-    /* compiled from: com.google.firebase:firebase-messaging@@21.0.0 */
+    /* JADX INFO: renamed from: com.google.firebase.messaging.FirebaseMessagingRegistrar$c */
+    /* JADX INFO: compiled from: com.google.firebase:firebase-messaging@@21.0.0 */
     @VisibleForTesting
-    /* renamed from: com.google.firebase.messaging.FirebaseMessagingRegistrar$c */
     public static class C11091c implements TransportFactory {
         @Override // p007b.p225i.p226a.p228b.TransportFactory
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public <T> Transport2<T> mo2291a(String str, Class<T> cls, Encoding2 encoding2, Transformer<T, byte[]> transformer) {
             return new C11090b(null);
         }

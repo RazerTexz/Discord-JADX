@@ -21,16 +21,16 @@ import p507d0.p580t._Collections;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: ErasedOverridabilityCondition.kt */
-/* renamed from: d0.e0.p.d.m0.e.a.p, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.e.a.p, reason: use source file name */
+/* JADX INFO: compiled from: ErasedOverridabilityCondition.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class ErasedOverridabilityCondition implements ExternalOverridabilityCondition {
 
-    /* compiled from: ErasedOverridabilityCondition.kt */
-    /* renamed from: d0.e0.p.d.m0.e.a.p$a */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.e.a.p$a */
+    /* JADX INFO: compiled from: ErasedOverridabilityCondition.kt */
     public /* synthetic */ class a {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public static final /* synthetic */ int[] f23514a;
 
         static {
@@ -39,11 +39,11 @@ public final class ErasedOverridabilityCondition implements ExternalOverridabili
         }
     }
 
-    /* compiled from: ErasedOverridabilityCondition.kt */
-    /* renamed from: d0.e0.p.d.m0.e.a.p$b */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.e.a.p$b */
+    /* JADX INFO: compiled from: ErasedOverridabilityCondition.kt */
     public static final class b extends Lambda implements Function1<ValueParameterDescriptor, KotlinType> {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public static final b f23515j = new b();
 
         public b() {
@@ -55,7 +55,7 @@ public final class ErasedOverridabilityCondition implements ExternalOverridabili
             return invoke2(valueParameterDescriptor);
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final KotlinType invoke2(ValueParameterDescriptor valueParameterDescriptor) {
             return valueParameterDescriptor.getType();
         }

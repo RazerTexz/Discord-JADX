@@ -6,24 +6,24 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.viewbinding.ViewBinding;
 
-/* compiled from: ViewPremiumUpsellInfoBinding.java */
-/* renamed from: b.a.i.c3, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.a.i.c3, reason: use source file name */
+/* JADX INFO: compiled from: ViewPremiumUpsellInfoBinding.java */
+/* JADX INFO: loaded from: classes.dex */
 public final class ViewPremiumUpsellInfoBinding implements ViewBinding {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     @NonNull
     public final LinearLayout f742a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     @NonNull
     public final TextView f743b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     @NonNull
     public final TextView f744c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     @NonNull
     public final TextView f745d;
 

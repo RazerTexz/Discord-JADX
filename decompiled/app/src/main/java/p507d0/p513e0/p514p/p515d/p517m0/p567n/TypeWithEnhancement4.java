@@ -6,15 +6,15 @@ import p507d0.p513e0.p514p.p515d.p517m0.p551j.DescriptorRenderer4;
 import p507d0.p513e0.p514p.p515d.p517m0.p567n.p568l1.KotlinTypeRefiner;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: TypeWithEnhancement.kt */
-/* renamed from: d0.e0.p.d.m0.n.x, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.n.x, reason: use source file name */
+/* JADX INFO: compiled from: TypeWithEnhancement.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class TypeWithEnhancement4 extends KotlinType6 implements TypeWithEnhancement {
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public final KotlinType6 f24892m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public final KotlinType f24893n;
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */

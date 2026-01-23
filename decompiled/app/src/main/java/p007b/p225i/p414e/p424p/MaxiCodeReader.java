@@ -20,19 +20,19 @@ import p007b.p225i.p414e.p424p.p425b.BitMatrixParser2;
 import p007b.p225i.p414e.p424p.p425b.DecodedBitStreamParser2;
 import p007b.p225i.p414e.p424p.p425b.Decoder4;
 
-/* compiled from: MaxiCodeReader.java */
-/* renamed from: b.i.e.p.a, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.e.p.a, reason: use source file name */
+/* JADX INFO: compiled from: MaxiCodeReader.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class MaxiCodeReader implements Reader {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final ResultPoint[] f13347a = new ResultPoint[0];
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final Decoder4 f13348b = new Decoder4();
 
     @Override // p007b.p225i.p414e.Reader
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public Result mo6919a(BinaryBitmap binaryBitmap, Map<DecodeHintType, ?> map) throws NotFoundException, ChecksumException, FormatException {
         byte[] bArr;
         String strValueOf;

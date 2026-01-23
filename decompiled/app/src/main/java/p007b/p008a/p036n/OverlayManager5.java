@@ -8,32 +8,32 @@ import com.discord.overlay.views.OverlayBubbleWrap;
 import kotlin.jvm.functions.Function1;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: OverlayManager.kt */
-/* renamed from: b.a.n.d, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.a.n.d, reason: use source file name */
+/* JADX INFO: compiled from: OverlayManager.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class OverlayManager5 implements View.OnClickListener {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final /* synthetic */ OverlayManager f1548j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final /* synthetic */ Function1 f1549k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final /* synthetic */ OverlayBubbleWrap f1550l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public final /* synthetic */ Object f1551m;
 
-    /* compiled from: OverlayManager.kt */
-    /* renamed from: b.a.n.d$a */
+    /* JADX INFO: renamed from: b.a.n.d$a */
+    /* JADX INFO: compiled from: OverlayManager.kt */
     public static final class a implements View.OnAttachStateChangeListener {
 
-        /* compiled from: View.kt */
-        /* renamed from: b.a.n.d$a$a, reason: collision with other inner class name */
+        /* JADX INFO: renamed from: b.a.n.d$a$a, reason: collision with other inner class name */
+        /* JADX INFO: compiled from: View.kt */
         public static final class ViewOnLayoutChangeListenerC13211a implements View.OnLayoutChangeListener {
 
-            /* renamed from: k */
+            /* JADX INFO: renamed from: k */
             public final /* synthetic */ View f1554k;
 
             public ViewOnLayoutChangeListenerC13211a(View view) {

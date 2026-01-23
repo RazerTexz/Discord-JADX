@@ -2,7 +2,7 @@ package com.discord.models.domain;
 
 import p007b.p100d.p104b.p105a.outline;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class ModelUrl {
     private final String url;
 

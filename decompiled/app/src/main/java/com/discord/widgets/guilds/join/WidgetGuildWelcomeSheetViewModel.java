@@ -22,16 +22,16 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 import p658rx.Observable;
 
-/* compiled from: WidgetGuildWelcomeSheetViewModel.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetGuildWelcomeSheetViewModel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetGuildWelcomeSheetViewModel extends AppViewModel<ViewState> {
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private final long guildId;
 
-    /* compiled from: WidgetGuildWelcomeSheetViewModel.kt */
-    /* renamed from: com.discord.widgets.guilds.join.WidgetGuildWelcomeSheetViewModel$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.guilds.join.WidgetGuildWelcomeSheetViewModel$1 */
+    /* JADX INFO: compiled from: WidgetGuildWelcomeSheetViewModel.kt */
     public static final class C87241 extends Lambda implements Function1<StoreState, Unit> {
         public C87241() {
             super(1);
@@ -43,14 +43,14 @@ public final class WidgetGuildWelcomeSheetViewModel extends AppViewModel<ViewSta
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(StoreState storeState) {
             Intrinsics3.checkNotNullParameter(storeState, "storeState");
             WidgetGuildWelcomeSheetViewModel.access$handleStoreState(WidgetGuildWelcomeSheetViewModel.this, storeState);
         }
     }
 
-    /* compiled from: WidgetGuildWelcomeSheetViewModel.kt */
+    /* JADX INFO: compiled from: WidgetGuildWelcomeSheetViewModel.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -67,7 +67,7 @@ public final class WidgetGuildWelcomeSheetViewModel extends AppViewModel<ViewSta
         }
     }
 
-    /* compiled from: WidgetGuildWelcomeSheetViewModel.kt */
+    /* JADX INFO: compiled from: WidgetGuildWelcomeSheetViewModel.kt */
     public static final /* data */ class StoreState {
         private final Guild guild;
         private final StoreGuildWelcomeScreens.State guildWelcomeScreen;
@@ -87,12 +87,12 @@ public final class WidgetGuildWelcomeSheetViewModel extends AppViewModel<ViewSta
             return storeState.copy(guild, state);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final Guild getGuild() {
             return this.guild;
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final StoreGuildWelcomeScreens.State getGuildWelcomeScreen() {
             return this.guildWelcomeScreen;
         }
@@ -137,10 +137,10 @@ public final class WidgetGuildWelcomeSheetViewModel extends AppViewModel<ViewSta
         }
     }
 
-    /* compiled from: WidgetGuildWelcomeSheetViewModel.kt */
+    /* JADX INFO: compiled from: WidgetGuildWelcomeSheetViewModel.kt */
     public static abstract class ViewState {
 
-        /* compiled from: WidgetGuildWelcomeSheetViewModel.kt */
+        /* JADX INFO: compiled from: WidgetGuildWelcomeSheetViewModel.kt */
         public static final class Invalid extends ViewState {
             public static final Invalid INSTANCE = new Invalid();
 
@@ -149,7 +149,7 @@ public final class WidgetGuildWelcomeSheetViewModel extends AppViewModel<ViewSta
             }
         }
 
-        /* compiled from: WidgetGuildWelcomeSheetViewModel.kt */
+        /* JADX INFO: compiled from: WidgetGuildWelcomeSheetViewModel.kt */
         public static final /* data */ class Loaded extends ViewState {
             private final String guildDescription;
             private final String guildIcon;
@@ -171,31 +171,32 @@ public final class WidgetGuildWelcomeSheetViewModel extends AppViewModel<ViewSta
                 this.welcomeChannelsData = list;
             }
 
+            /* JADX WARN: Multi-variable type inference failed */
             public static /* synthetic */ Loaded copy$default(Loaded loaded, long j, String str, String str2, String str3, String str4, List list, int i, Object obj) {
                 return loaded.copy((i & 1) != 0 ? loaded.guildId : j, (i & 2) != 0 ? loaded.guildName : str, (i & 4) != 0 ? loaded.guildShortName : str2, (i & 8) != 0 ? loaded.guildIcon : str3, (i & 16) != 0 ? loaded.guildDescription : str4, (i & 32) != 0 ? loaded.welcomeChannelsData : list);
             }
 
-            /* renamed from: component1, reason: from getter */
+            /* JADX INFO: renamed from: component1, reason: from getter */
             public final long getGuildId() {
                 return this.guildId;
             }
 
-            /* renamed from: component2, reason: from getter */
+            /* JADX INFO: renamed from: component2, reason: from getter */
             public final String getGuildName() {
                 return this.guildName;
             }
 
-            /* renamed from: component3, reason: from getter */
+            /* JADX INFO: renamed from: component3, reason: from getter */
             public final String getGuildShortName() {
                 return this.guildShortName;
             }
 
-            /* renamed from: component4, reason: from getter */
+            /* JADX INFO: renamed from: component4, reason: from getter */
             public final String getGuildIcon() {
                 return this.guildIcon;
             }
 
-            /* renamed from: component5, reason: from getter */
+            /* JADX INFO: renamed from: component5, reason: from getter */
             public final String getGuildDescription() {
                 return this.guildDescription;
             }
@@ -275,7 +276,7 @@ public final class WidgetGuildWelcomeSheetViewModel extends AppViewModel<ViewSta
             }
         }
 
-        /* compiled from: WidgetGuildWelcomeSheetViewModel.kt */
+        /* JADX INFO: compiled from: WidgetGuildWelcomeSheetViewModel.kt */
         public static final class Loading extends ViewState {
             public static final Loading INSTANCE = new Loading();
 

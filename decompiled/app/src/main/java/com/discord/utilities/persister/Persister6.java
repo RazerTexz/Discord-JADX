@@ -6,9 +6,9 @@ import kotlin.jvm.functions.Function3;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: Persister.kt */
-/* renamed from: com.discord.utilities.persister.Persister$Companion$logger$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.utilities.persister.Persister$Companion$logger$1, reason: use source file name */
+/* JADX INFO: compiled from: Persister.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class Persister6 extends Lambda implements Function3<Integer, String, Exception, Unit> {
     public static final Persister6 INSTANCE = new Persister6();
 

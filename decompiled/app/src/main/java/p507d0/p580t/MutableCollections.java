@@ -11,11 +11,11 @@ import kotlin.sequences.Sequence;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.TypeIntrinsics;
 
-/* compiled from: MutableCollections.kt */
-/* renamed from: d0.t.r, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.t.r, reason: use source file name */
+/* JADX INFO: compiled from: MutableCollections.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public class MutableCollections extends MutableCollectionsJVM {
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final <T> boolean m10082a(Iterable<? extends T> iterable, Function1<? super T, Boolean> function1, boolean z2) {
         Iterator<? extends T> it = iterable.iterator();
         boolean z3 = false;

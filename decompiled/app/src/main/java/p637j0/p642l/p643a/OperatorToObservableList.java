@@ -9,21 +9,21 @@ import p637j0.p642l.p644b.SingleDelayedProducer;
 import p658rx.Subscriber;
 
 /* JADX INFO: Add missing generic type declarations: [T] */
-/* compiled from: OperatorToObservableList.java */
-/* renamed from: j0.l.a.m2, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: j0.l.a.m2, reason: use source file name */
+/* JADX INFO: compiled from: OperatorToObservableList.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class OperatorToObservableList<T> extends Subscriber<T> {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public boolean f26912j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public List<T> f26913k = new LinkedList();
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final /* synthetic */ SingleDelayedProducer f26914l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public final /* synthetic */ Subscriber f26915m;
 
     public OperatorToObservableList(OperatorToObservableList2 operatorToObservableList2, SingleDelayedProducer singleDelayedProducer, Subscriber subscriber) {

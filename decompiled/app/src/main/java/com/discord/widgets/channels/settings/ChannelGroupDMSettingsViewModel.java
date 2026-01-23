@@ -25,19 +25,19 @@ import p507d0.p592z.p594d.Lambda;
 import p658rx.Observable;
 import p658rx.subjects.PublishSubject;
 
-/* compiled from: ChannelGroupDMSettingsViewModel.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: ChannelGroupDMSettingsViewModel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class ChannelGroupDMSettingsViewModel extends AppViewModel<ViewState> {
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private final long channelId;
     private final PublishSubject<Event> eventSubject;
     private final RestAPI restApi;
     private final StoreUserGuildSettings storeUserGuildSettings;
 
-    /* compiled from: ChannelGroupDMSettingsViewModel.kt */
-    /* renamed from: com.discord.widgets.channels.settings.ChannelGroupDMSettingsViewModel$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.channels.settings.ChannelGroupDMSettingsViewModel$1 */
+    /* JADX INFO: compiled from: ChannelGroupDMSettingsViewModel.kt */
     public static final class C75711 extends Lambda implements Function1<StoreState, Unit> {
         public C75711() {
             super(1);
@@ -49,14 +49,14 @@ public final class ChannelGroupDMSettingsViewModel extends AppViewModel<ViewStat
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(StoreState storeState) {
             Intrinsics3.checkNotNullParameter(storeState, "storeState");
             ChannelGroupDMSettingsViewModel.access$handleStoreState(ChannelGroupDMSettingsViewModel.this, storeState);
         }
     }
 
-    /* compiled from: ChannelGroupDMSettingsViewModel.kt */
+    /* JADX INFO: compiled from: ChannelGroupDMSettingsViewModel.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -82,10 +82,10 @@ public final class ChannelGroupDMSettingsViewModel extends AppViewModel<ViewStat
         }
     }
 
-    /* compiled from: ChannelGroupDMSettingsViewModel.kt */
+    /* JADX INFO: compiled from: ChannelGroupDMSettingsViewModel.kt */
     public static abstract class Event {
 
-        /* compiled from: ChannelGroupDMSettingsViewModel.kt */
+        /* JADX INFO: compiled from: ChannelGroupDMSettingsViewModel.kt */
         public static final class LeaveGroupSuccess extends Event {
             public static final LeaveGroupSuccess INSTANCE = new LeaveGroupSuccess();
 
@@ -94,7 +94,7 @@ public final class ChannelGroupDMSettingsViewModel extends AppViewModel<ViewStat
             }
         }
 
-        /* compiled from: ChannelGroupDMSettingsViewModel.kt */
+        /* JADX INFO: compiled from: ChannelGroupDMSettingsViewModel.kt */
         public static final class SettingsSaved extends Event {
             public static final SettingsSaved INSTANCE = new SettingsSaved();
 
@@ -111,10 +111,10 @@ public final class ChannelGroupDMSettingsViewModel extends AppViewModel<ViewStat
         }
     }
 
-    /* compiled from: ChannelGroupDMSettingsViewModel.kt */
+    /* JADX INFO: compiled from: ChannelGroupDMSettingsViewModel.kt */
     public static abstract class StoreState {
 
-        /* compiled from: ChannelGroupDMSettingsViewModel.kt */
+        /* JADX INFO: compiled from: ChannelGroupDMSettingsViewModel.kt */
         public static final class Invalid extends StoreState {
             public static final Invalid INSTANCE = new Invalid();
 
@@ -123,7 +123,7 @@ public final class ChannelGroupDMSettingsViewModel extends AppViewModel<ViewStat
             }
         }
 
-        /* compiled from: ChannelGroupDMSettingsViewModel.kt */
+        /* JADX INFO: compiled from: ChannelGroupDMSettingsViewModel.kt */
         public static final /* data */ class Valid extends StoreState {
             private final Channel channel;
             private final ModelNotificationSettings notificationSettings;
@@ -147,12 +147,12 @@ public final class ChannelGroupDMSettingsViewModel extends AppViewModel<ViewStat
                 return valid.copy(channel, modelNotificationSettings);
             }
 
-            /* renamed from: component1, reason: from getter */
+            /* JADX INFO: renamed from: component1, reason: from getter */
             public final Channel getChannel() {
                 return this.channel;
             }
 
-            /* renamed from: component2, reason: from getter */
+            /* JADX INFO: renamed from: component2, reason: from getter */
             public final ModelNotificationSettings getNotificationSettings() {
                 return this.notificationSettings;
             }
@@ -207,10 +207,10 @@ public final class ChannelGroupDMSettingsViewModel extends AppViewModel<ViewStat
         }
     }
 
-    /* compiled from: ChannelGroupDMSettingsViewModel.kt */
+    /* JADX INFO: compiled from: ChannelGroupDMSettingsViewModel.kt */
     public static abstract class ViewState {
 
-        /* compiled from: ChannelGroupDMSettingsViewModel.kt */
+        /* JADX INFO: compiled from: ChannelGroupDMSettingsViewModel.kt */
         public static final class Invalid extends ViewState {
             public static final Invalid INSTANCE = new Invalid();
 
@@ -219,13 +219,13 @@ public final class ChannelGroupDMSettingsViewModel extends AppViewModel<ViewStat
             }
         }
 
-        /* compiled from: ChannelGroupDMSettingsViewModel.kt */
+        /* JADX INFO: compiled from: ChannelGroupDMSettingsViewModel.kt */
         public static final /* data */ class Valid extends ViewState {
             private final ChannelSettings channelSettings;
             private final String editedIconUrl;
             private final boolean hasUnsavedIconChange;
 
-            /* renamed from: isDefaultPhoto$delegate, reason: from kotlin metadata */
+            /* JADX INFO: renamed from: isDefaultPhoto$delegate, reason: from kotlin metadata */
             private final Lazy isDefaultPhoto;
             private final String originalIconUrl;
 
@@ -253,17 +253,17 @@ public final class ChannelGroupDMSettingsViewModel extends AppViewModel<ViewStat
                 return valid.copy(channelSettings, str, str2);
             }
 
-            /* renamed from: component1, reason: from getter */
+            /* JADX INFO: renamed from: component1, reason: from getter */
             public final ChannelSettings getChannelSettings() {
                 return this.channelSettings;
             }
 
-            /* renamed from: component2, reason: from getter */
+            /* JADX INFO: renamed from: component2, reason: from getter */
             public final String getOriginalIconUrl() {
                 return this.originalIconUrl;
             }
 
-            /* renamed from: component3, reason: from getter */
+            /* JADX INFO: renamed from: component3, reason: from getter */
             public final String getEditedIconUrl() {
                 return this.editedIconUrl;
             }
@@ -339,8 +339,8 @@ public final class ChannelGroupDMSettingsViewModel extends AppViewModel<ViewStat
         }
     }
 
-    /* compiled from: ChannelGroupDMSettingsViewModel.kt */
-    /* renamed from: com.discord.widgets.channels.settings.ChannelGroupDMSettingsViewModel$editGroup$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.channels.settings.ChannelGroupDMSettingsViewModel$editGroup$1 */
+    /* JADX INFO: compiled from: ChannelGroupDMSettingsViewModel.kt */
     public static final class C75731 extends Lambda implements Function1<Channel, Unit> {
         public final /* synthetic */ ViewState.Valid $viewState;
 
@@ -356,7 +356,7 @@ public final class ChannelGroupDMSettingsViewModel extends AppViewModel<ViewStat
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Channel channel) {
             Intrinsics3.checkNotNullParameter(channel, "it");
             PublishSubject publishSubjectAccess$getEventSubject$p = ChannelGroupDMSettingsViewModel.access$getEventSubject$p(ChannelGroupDMSettingsViewModel.this);
@@ -367,8 +367,8 @@ public final class ChannelGroupDMSettingsViewModel extends AppViewModel<ViewStat
         }
     }
 
-    /* compiled from: ChannelGroupDMSettingsViewModel.kt */
-    /* renamed from: com.discord.widgets.channels.settings.ChannelGroupDMSettingsViewModel$leaveGroup$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.channels.settings.ChannelGroupDMSettingsViewModel$leaveGroup$1 */
+    /* JADX INFO: compiled from: ChannelGroupDMSettingsViewModel.kt */
     public static final class C75741 extends Lambda implements Function1<Channel, Unit> {
         public C75741() {
             super(1);
@@ -380,7 +380,7 @@ public final class ChannelGroupDMSettingsViewModel extends AppViewModel<ViewStat
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Channel channel) {
             Intrinsics3.checkNotNullParameter(channel, "it");
             PublishSubject publishSubjectAccess$getEventSubject$p = ChannelGroupDMSettingsViewModel.access$getEventSubject$p(ChannelGroupDMSettingsViewModel.this);

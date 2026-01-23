@@ -10,8 +10,8 @@ import p507d0.p579g0.Strings4;
 import p507d0.p580t.SetsJVM;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: DeviceUtils.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: DeviceUtils.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class DeviceUtils {
     public static final DeviceUtils INSTANCE = new DeviceUtils();
     private static final int SMALL_SCREEN_WIDTH_DP = 360;

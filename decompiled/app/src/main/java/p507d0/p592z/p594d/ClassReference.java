@@ -46,34 +46,34 @@ import p507d0.p592z.p593c.InterfaceC12212b;
 import p507d0.p592z.p593c.InterfaceC12213c;
 import p507d0.p592z.p593c.InterfaceC12214d;
 
-/* compiled from: ClassReference.kt */
-/* renamed from: d0.z.d.f, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.z.d.f, reason: use source file name */
+/* JADX INFO: compiled from: ClassReference.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class ClassReference implements KClass<Object>, ClassBasedDeclarationContainer {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static final Map<Class<? extends Function3<?>>, Integer> f25282j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public static final HashMap<String, String> f25283k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public static final HashMap<String, String> f25284l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public static final HashMap<String, String> f25285m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public static final Map<String, String> f25286n;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public static final a f25287o = new a(null);
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public final Class<?> f25288p;
 
-    /* compiled from: ClassReference.kt */
-    /* renamed from: d0.z.d.f$a */
+    /* JADX INFO: renamed from: d0.z.d.f$a */
+    /* JADX INFO: compiled from: ClassReference.kt */
     public static final class a {
         public a(DefaultConstructorMarker defaultConstructorMarker) {
         }

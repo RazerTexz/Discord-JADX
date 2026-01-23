@@ -27,14 +27,14 @@ import p507d0.p592z.p594d.Lambda;
 import p658rx.Observable;
 import p658rx.subjects.PublishSubject;
 
-/* compiled from: WidgetThreadSettingsViewModel.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetThreadSettingsViewModel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetThreadSettingsViewModel extends AppViewModel<ViewState> {
     private final long channelId;
     private final PublishSubject<Event> eventSubject;
 
-    /* compiled from: WidgetThreadSettingsViewModel.kt */
-    /* renamed from: com.discord.widgets.channels.settings.WidgetThreadSettingsViewModel$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.channels.settings.WidgetThreadSettingsViewModel$1 */
+    /* JADX INFO: compiled from: WidgetThreadSettingsViewModel.kt */
     public static final class C76201 extends Lambda implements Function0<StoreState> {
         public final /* synthetic */ StoreChannels $channelStore;
         public final /* synthetic */ StorePermissions $permissionStore;
@@ -61,8 +61,8 @@ public final class WidgetThreadSettingsViewModel extends AppViewModel<ViewState>
         }
     }
 
-    /* compiled from: WidgetThreadSettingsViewModel.kt */
-    /* renamed from: com.discord.widgets.channels.settings.WidgetThreadSettingsViewModel$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.channels.settings.WidgetThreadSettingsViewModel$2 */
+    /* JADX INFO: compiled from: WidgetThreadSettingsViewModel.kt */
     public static final class C76212 extends Lambda implements Function1<StoreState, Unit> {
         public C76212() {
             super(1);
@@ -74,7 +74,7 @@ public final class WidgetThreadSettingsViewModel extends AppViewModel<ViewState>
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(StoreState storeState) {
             WidgetThreadSettingsViewModel widgetThreadSettingsViewModel = WidgetThreadSettingsViewModel.this;
             Intrinsics3.checkNotNullExpressionValue(storeState, "storeState");
@@ -82,10 +82,10 @@ public final class WidgetThreadSettingsViewModel extends AppViewModel<ViewState>
         }
     }
 
-    /* compiled from: WidgetThreadSettingsViewModel.kt */
+    /* JADX INFO: compiled from: WidgetThreadSettingsViewModel.kt */
     public static abstract class Event {
 
-        /* compiled from: WidgetThreadSettingsViewModel.kt */
+        /* JADX INFO: compiled from: WidgetThreadSettingsViewModel.kt */
         public static final /* data */ class ShowToast extends Event {
             private final int messageStringRes;
 
@@ -101,7 +101,7 @@ public final class WidgetThreadSettingsViewModel extends AppViewModel<ViewState>
                 return showToast.copy(i);
             }
 
-            /* renamed from: component1, reason: from getter */
+            /* JADX INFO: renamed from: component1, reason: from getter */
             public final int getMessageStringRes() {
                 return this.messageStringRes;
             }
@@ -138,7 +138,7 @@ public final class WidgetThreadSettingsViewModel extends AppViewModel<ViewState>
         }
     }
 
-    /* compiled from: WidgetThreadSettingsViewModel.kt */
+    /* JADX INFO: compiled from: WidgetThreadSettingsViewModel.kt */
     public static final /* data */ class StoreState {
         private final boolean canManageThread;
         private final Channel channel;
@@ -158,12 +158,12 @@ public final class WidgetThreadSettingsViewModel extends AppViewModel<ViewState>
             return storeState.copy(channel, z2);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final Channel getChannel() {
             return this.channel;
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final boolean getCanManageThread() {
             return this.canManageThread;
         }
@@ -192,15 +192,18 @@ public final class WidgetThreadSettingsViewModel extends AppViewModel<ViewState>
         }
 
         /* JADX WARN: Multi-variable type inference failed */
+        /* JADX WARN: Type inference failed for: r1v1, types: [int] */
+        /* JADX WARN: Type inference failed for: r1v2 */
+        /* JADX WARN: Type inference failed for: r1v3 */
         public int hashCode() {
             Channel channel = this.channel;
             int iHashCode = (channel != null ? channel.hashCode() : 0) * 31;
             boolean z2 = this.canManageThread;
-            int i = z2;
-            if (z2 != 0) {
-                i = 1;
+            ?? r1 = z2;
+            if (z2) {
+                r1 = 1;
             }
-            return iHashCode + i;
+            return iHashCode + r1;
         }
 
         public String toString() {
@@ -211,10 +214,10 @@ public final class WidgetThreadSettingsViewModel extends AppViewModel<ViewState>
         }
     }
 
-    /* compiled from: WidgetThreadSettingsViewModel.kt */
+    /* JADX INFO: compiled from: WidgetThreadSettingsViewModel.kt */
     public static abstract class ViewState {
 
-        /* compiled from: WidgetThreadSettingsViewModel.kt */
+        /* JADX INFO: compiled from: WidgetThreadSettingsViewModel.kt */
         public static final class Invalid extends ViewState {
             public static final Invalid INSTANCE = new Invalid();
 
@@ -223,7 +226,7 @@ public final class WidgetThreadSettingsViewModel extends AppViewModel<ViewState>
             }
         }
 
-        /* compiled from: WidgetThreadSettingsViewModel.kt */
+        /* JADX INFO: compiled from: WidgetThreadSettingsViewModel.kt */
         public static final /* data */ class Valid extends ViewState {
             private final boolean canManageThread;
             private final Channel channel;
@@ -270,32 +273,32 @@ public final class WidgetThreadSettingsViewModel extends AppViewModel<ViewState>
                 return valid.copy(channel, str2, i3, z5, z6, z4);
             }
 
-            /* renamed from: component1, reason: from getter */
+            /* JADX INFO: renamed from: component1, reason: from getter */
             public final Channel getChannel() {
                 return this.channel;
             }
 
-            /* renamed from: component2, reason: from getter */
+            /* JADX INFO: renamed from: component2, reason: from getter */
             public final String getChannelNameDraft() {
                 return this.channelNameDraft;
             }
 
-            /* renamed from: component3, reason: from getter */
+            /* JADX INFO: renamed from: component3, reason: from getter */
             public final int getSlowModeCooldownDraft() {
                 return this.slowModeCooldownDraft;
             }
 
-            /* renamed from: component4, reason: from getter */
+            /* JADX INFO: renamed from: component4, reason: from getter */
             public final boolean getHasUnsavedChanges() {
                 return this.hasUnsavedChanges;
             }
 
-            /* renamed from: component5, reason: from getter */
+            /* JADX INFO: renamed from: component5, reason: from getter */
             public final boolean getCanManageThread() {
                 return this.canManageThread;
             }
 
-            /* renamed from: component6, reason: from getter */
+            /* JADX INFO: renamed from: component6, reason: from getter */
             public final boolean getIsPinsEnabled() {
                 return this.isPinsEnabled;
             }
@@ -337,25 +340,34 @@ public final class WidgetThreadSettingsViewModel extends AppViewModel<ViewState>
             }
 
             /* JADX WARN: Multi-variable type inference failed */
+            /* JADX WARN: Type inference failed for: r1v11 */
+            /* JADX WARN: Type inference failed for: r1v12 */
+            /* JADX WARN: Type inference failed for: r1v4, types: [int] */
+            /* JADX WARN: Type inference failed for: r1v6, types: [int] */
+            /* JADX WARN: Type inference failed for: r1v8 */
+            /* JADX WARN: Type inference failed for: r1v9 */
+            /* JADX WARN: Type inference failed for: r2v1 */
+            /* JADX WARN: Type inference failed for: r2v2, types: [int] */
+            /* JADX WARN: Type inference failed for: r2v3 */
             public int hashCode() {
                 Channel channel = this.channel;
                 int iHashCode = (channel != null ? channel.hashCode() : 0) * 31;
                 String str = this.channelNameDraft;
                 int iHashCode2 = (((iHashCode + (str != null ? str.hashCode() : 0)) * 31) + this.slowModeCooldownDraft) * 31;
                 boolean z2 = this.hasUnsavedChanges;
-                int i = z2;
-                if (z2 != 0) {
-                    i = 1;
+                ?? r1 = z2;
+                if (z2) {
+                    r1 = 1;
                 }
-                int i2 = (iHashCode2 + i) * 31;
+                int i = (iHashCode2 + r1) * 31;
                 boolean z3 = this.canManageThread;
-                int i3 = z3;
-                if (z3 != 0) {
-                    i3 = 1;
+                ?? r12 = z3;
+                if (z3) {
+                    r12 = 1;
                 }
-                int i4 = (i2 + i3) * 31;
+                int i2 = (i + r12) * 31;
                 boolean z4 = this.isPinsEnabled;
-                return i4 + (z4 ? 1 : z4 ? 1 : 0);
+                return i2 + (z4 ? 1 : z4);
             }
 
             public final boolean isPinsEnabled() {
@@ -386,8 +398,8 @@ public final class WidgetThreadSettingsViewModel extends AppViewModel<ViewState>
         }
     }
 
-    /* compiled from: WidgetThreadSettingsViewModel.kt */
-    /* renamed from: com.discord.widgets.channels.settings.WidgetThreadSettingsViewModel$onThreadDeleted$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.channels.settings.WidgetThreadSettingsViewModel$onThreadDeleted$1 */
+    /* JADX INFO: compiled from: WidgetThreadSettingsViewModel.kt */
     public static final class C76221 extends Lambda implements Function1<Channel, Unit> {
         public C76221() {
             super(1);
@@ -399,7 +411,7 @@ public final class WidgetThreadSettingsViewModel extends AppViewModel<ViewState>
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Channel channel) {
             Intrinsics3.checkNotNullParameter(channel, "channel");
             Integer numM7678b = ChannelUtils.m7678b(channel);
@@ -410,8 +422,8 @@ public final class WidgetThreadSettingsViewModel extends AppViewModel<ViewState>
         }
     }
 
-    /* compiled from: WidgetThreadSettingsViewModel.kt */
-    /* renamed from: com.discord.widgets.channels.settings.WidgetThreadSettingsViewModel$onThreadDeleted$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.channels.settings.WidgetThreadSettingsViewModel$onThreadDeleted$2 */
+    /* JADX INFO: compiled from: WidgetThreadSettingsViewModel.kt */
     public static final class C76232 extends Lambda implements Function1<Error, Unit> {
         public C76232() {
             super(1);
@@ -423,7 +435,7 @@ public final class WidgetThreadSettingsViewModel extends AppViewModel<ViewState>
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Error error) {
             Intrinsics3.checkNotNullParameter(error, "it");
             PublishSubject publishSubjectAccess$getEventSubject$p = WidgetThreadSettingsViewModel.access$getEventSubject$p(WidgetThreadSettingsViewModel.this);
@@ -431,8 +443,8 @@ public final class WidgetThreadSettingsViewModel extends AppViewModel<ViewState>
         }
     }
 
-    /* compiled from: WidgetThreadSettingsViewModel.kt */
-    /* renamed from: com.discord.widgets.channels.settings.WidgetThreadSettingsViewModel$saveThread$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.channels.settings.WidgetThreadSettingsViewModel$saveThread$1 */
+    /* JADX INFO: compiled from: WidgetThreadSettingsViewModel.kt */
     public static final class C76241 extends Lambda implements Function1<Channel, Unit> {
         public C76241() {
             super(1);
@@ -444,7 +456,7 @@ public final class WidgetThreadSettingsViewModel extends AppViewModel<ViewState>
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Channel channel) {
             Intrinsics3.checkNotNullParameter(channel, "it");
             PublishSubject publishSubjectAccess$getEventSubject$p = WidgetThreadSettingsViewModel.access$getEventSubject$p(WidgetThreadSettingsViewModel.this);
@@ -452,8 +464,8 @@ public final class WidgetThreadSettingsViewModel extends AppViewModel<ViewState>
         }
     }
 
-    /* compiled from: WidgetThreadSettingsViewModel.kt */
-    /* renamed from: com.discord.widgets.channels.settings.WidgetThreadSettingsViewModel$saveThread$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.channels.settings.WidgetThreadSettingsViewModel$saveThread$2 */
+    /* JADX INFO: compiled from: WidgetThreadSettingsViewModel.kt */
     public static final class C76252 extends Lambda implements Function1<Error, Unit> {
         public C76252() {
             super(1);
@@ -465,7 +477,7 @@ public final class WidgetThreadSettingsViewModel extends AppViewModel<ViewState>
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Error error) {
             Intrinsics3.checkNotNullParameter(error, "it");
             PublishSubject publishSubjectAccess$getEventSubject$p = WidgetThreadSettingsViewModel.access$getEventSubject$p(WidgetThreadSettingsViewModel.this);

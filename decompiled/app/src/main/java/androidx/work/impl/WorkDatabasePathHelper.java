@@ -11,8 +11,8 @@ import java.io.File;
 import java.util.HashMap;
 import java.util.Map;
 
+/* JADX INFO: loaded from: classes.dex */
 @RestrictTo({RestrictTo.Scope.LIBRARY_GROUP})
-/* loaded from: classes.dex */
 public class WorkDatabasePathHelper {
     private static final String WORK_DATABASE_NAME = "androidx.work.workdb";
     private static final String TAG = Logger.tagWithPrefix("WrkDbPathHelper");

@@ -22,8 +22,8 @@ import p658rx.Observable;
 import p658rx.subjects.BehaviorSubject;
 import p658rx.subjects.SerializedSubject;
 
-/* compiled from: Batched.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: Batched.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class Batched<T> {
     public static final long DEFAULT_DEBOUNCE_DELAY_MS = 100;
     public static final long DEFAULT_MAX_DEBOUNCE_DELAY_MS = 300;
@@ -38,9 +38,9 @@ public final class Batched<T> {
     private final SerializedSubject<List<T>, List<T>> subject;
     private final String type;
 
-    /* compiled from: Batched.kt */
+    /* JADX INFO: renamed from: com.discord.stores.utilities.Batched$onNext$1 */
+    /* JADX INFO: compiled from: Batched.kt */
     @DebugMetadata(m10084c = "com.discord.stores.utilities.Batched$onNext$1", m10085f = "Batched.kt", m10086l = {82}, m10087m = "invokeSuspend")
-    /* renamed from: com.discord.stores.utilities.Batched$onNext$1 */
     public static final class C66361 extends ContinuationImpl6 implements Function2<CoroutineScope, Continuation<? super Unit>, Object> {
         public int label;
 

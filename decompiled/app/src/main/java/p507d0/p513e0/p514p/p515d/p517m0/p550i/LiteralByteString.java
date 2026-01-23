@@ -8,25 +8,25 @@ import java.util.NoSuchElementException;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p513e0.p514p.p515d.p517m0.p550i.ByteString3;
 
-/* compiled from: LiteralByteString.java */
-/* renamed from: d0.e0.p.d.m0.i.m, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.i.m, reason: use source file name */
+/* JADX INFO: compiled from: LiteralByteString.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class LiteralByteString extends ByteString3 {
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final byte[] f24149k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public int f24150l = 0;
 
-    /* compiled from: LiteralByteString.java */
-    /* renamed from: d0.e0.p.d.m0.i.m$b */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.i.m$b */
+    /* JADX INFO: compiled from: LiteralByteString.java */
     public class b implements ByteString3.a {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public int f24151j = 0;
 
-        /* renamed from: k */
+        /* JADX INFO: renamed from: k */
         public final int f24152k;
 
         public b(a aVar) {
@@ -72,13 +72,13 @@ public class LiteralByteString extends ByteString3 {
     }
 
     @Override // p507d0.p513e0.p514p.p515d.p517m0.p550i.ByteString3
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public void mo9824d(byte[] bArr, int i, int i2, int i3) {
         System.arraycopy(this.f24149k, i, bArr, i2, i3);
     }
 
     @Override // p507d0.p513e0.p514p.p515d.p517m0.p550i.ByteString3
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public int mo9825e() {
         return 0;
     }
@@ -104,13 +104,13 @@ public class LiteralByteString extends ByteString3 {
     }
 
     @Override // p507d0.p513e0.p514p.p515d.p517m0.p550i.ByteString3
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public boolean mo9826g() {
         return true;
     }
 
     @Override // p507d0.p513e0.p514p.p515d.p517m0.p550i.ByteString3
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public int mo9827h(int i, int i2, int i3) {
         byte[] bArr = this.f24149k;
         int iM9858m = m9858m() + i2;
@@ -134,7 +134,7 @@ public class LiteralByteString extends ByteString3 {
     }
 
     @Override // p507d0.p513e0.p514p.p515d.p517m0.p550i.ByteString3
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public int mo9828i(int i, int i2, int i3) {
         int iM9858m = m9858m() + i2;
         return Utf8.partialIsValidUtf8(i, this.f24149k, iM9858m, i3 + iM9858m);
@@ -147,24 +147,24 @@ public class LiteralByteString extends ByteString3 {
     }
 
     @Override // p507d0.p513e0.p514p.p515d.p517m0.p550i.ByteString3, java.lang.Iterable
-    /* renamed from: iterator, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: iterator, reason: avoid collision after fix types in other method */
     public /* bridge */ /* synthetic */ Iterator<Byte> iterator2() {
         return iterator();
     }
 
     @Override // p507d0.p513e0.p514p.p515d.p517m0.p550i.ByteString3
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public int mo9829j() {
         return this.f24150l;
     }
 
     @Override // p507d0.p513e0.p514p.p515d.p517m0.p550i.ByteString3
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public void mo9830k(OutputStream outputStream, int i, int i2) throws IOException {
         outputStream.write(this.f24149k, m9858m() + i, i2);
     }
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public boolean m9857l(LiteralByteString literalByteString, int i, int i2) {
         if (i2 > literalByteString.size()) {
             int size = size();
@@ -200,7 +200,7 @@ public class LiteralByteString extends ByteString3 {
         return true;
     }
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public int m9858m() {
         return 0;
     }

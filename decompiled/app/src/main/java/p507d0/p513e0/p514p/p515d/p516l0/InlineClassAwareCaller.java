@@ -26,31 +26,31 @@ import p507d0.p513e0.p514p.p515d.p517m0.p567n.KotlinType;
 import p507d0.p513e0.p514p.p515d.util2;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: InlineClassAwareCaller.kt */
-/* renamed from: d0.e0.p.d.l0.g, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.l0.g, reason: use source file name */
+/* JADX INFO: compiled from: InlineClassAwareCaller.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class InlineClassAwareCaller<M extends Member> implements Caller2<M> {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final a f22436a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final Caller2<M> f22437b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final boolean f22438c;
 
-    /* compiled from: InlineClassAwareCaller.kt */
-    /* renamed from: d0.e0.p.d.l0.g$a */
+    /* JADX INFO: renamed from: d0.e0.p.d.l0.g$a */
+    /* JADX INFO: compiled from: InlineClassAwareCaller.kt */
     public static final class a {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final Ranges2 f22439a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final Method[] f22440b;
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public final Method f22441c;
 
         public a(Ranges2 ranges2, Method[] methodArr, Method method) {
@@ -163,7 +163,7 @@ public final class InlineClassAwareCaller<M extends Member> implements Caller2<M
     }
 
     @Override // p507d0.p513e0.p514p.p515d.p516l0.Caller2
-    public Object call(Object[] objArr) throws IllegalAccessException, IllegalArgumentException, InvocationTargetException {
+    public Object call(Object[] objArr) throws IllegalAccessException, InvocationTargetException {
         Object objInvoke;
         Intrinsics3.checkNotNullParameter(objArr, "args");
         a aVar = this.f22436a;
@@ -200,7 +200,7 @@ public final class InlineClassAwareCaller<M extends Member> implements Caller2<M
     }
 
     @Override // p507d0.p513e0.p514p.p515d.p516l0.Caller2
-    /* renamed from: getMember */
+    /* JADX INFO: renamed from: getMember */
     public M mo11457getMember() {
         return (M) this.f22437b.mo11457getMember();
     }

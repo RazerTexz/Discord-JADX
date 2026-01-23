@@ -8,7 +8,7 @@ import java.util.Iterator;
 import java.util.List;
 import org.webrtc.NetworkChangeDetector;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public class NetworkMonitor {
     private static final String TAG = "NetworkMonitor";
     private volatile NetworkChangeDetector.ConnectionType currentConnectionType;
@@ -21,7 +21,7 @@ public class NetworkMonitor {
     private final ArrayList<NetworkObserver> networkObservers;
     private int numObservers;
 
-    /* renamed from: org.webrtc.NetworkMonitor$1 */
+    /* JADX INFO: renamed from: org.webrtc.NetworkMonitor$1 */
     public class C129731 implements NetworkChangeDetectorFactory {
         public C129731() {
         }
@@ -32,7 +32,7 @@ public class NetworkMonitor {
         }
     }
 
-    /* renamed from: org.webrtc.NetworkMonitor$2 */
+    /* JADX INFO: renamed from: org.webrtc.NetworkMonitor$2 */
     public class C129742 implements NetworkChangeDetector.Observer {
         public C129742() {
         }

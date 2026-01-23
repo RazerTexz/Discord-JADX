@@ -7,9 +7,9 @@ import java.io.IOException;
 import kotlin.jvm.internal.Ref$ObjectRef;
 import p658rx.functions.Action1;
 
-/* compiled from: ModelGuildMemberListUpdate.kt */
-/* renamed from: com.discord.models.domain.ModelGuildMemberListUpdate$Parser$parse$1, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: com.discord.models.domain.ModelGuildMemberListUpdate$Parser$parse$1, reason: use source file name */
+/* JADX INFO: compiled from: ModelGuildMemberListUpdate.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class ModelGuildMemberListUpdate5<T> implements Action1<String> {
     public final /* synthetic */ Ref$ObjectRef $groups;
     public final /* synthetic */ Ref$ObjectRef $guildId;
@@ -17,8 +17,8 @@ public final class ModelGuildMemberListUpdate5<T> implements Action1<String> {
     public final /* synthetic */ Ref$ObjectRef $operations;
     public final /* synthetic */ Model.JsonReader $reader;
 
-    /* compiled from: ModelGuildMemberListUpdate.kt */
-    /* renamed from: com.discord.models.domain.ModelGuildMemberListUpdate$Parser$parse$1$1 */
+    /* JADX INFO: renamed from: com.discord.models.domain.ModelGuildMemberListUpdate$Parser$parse$1$1 */
+    /* JADX INFO: compiled from: ModelGuildMemberListUpdate.kt */
     public static final class C55381<T> implements Model.JsonReader.ItemFactory<ModelGuildMemberListUpdate.Operation> {
         public C55381() {
         }
@@ -35,8 +35,8 @@ public final class ModelGuildMemberListUpdate5<T> implements Action1<String> {
         }
     }
 
-    /* compiled from: ModelGuildMemberListUpdate.kt */
-    /* renamed from: com.discord.models.domain.ModelGuildMemberListUpdate$Parser$parse$1$2 */
+    /* JADX INFO: renamed from: com.discord.models.domain.ModelGuildMemberListUpdate$Parser$parse$1$2 */
+    /* JADX INFO: compiled from: ModelGuildMemberListUpdate.kt */
     public static final class C55392<T> implements Model.JsonReader.ItemFactory<ModelGuildMemberListUpdate.Group> {
         public C55392() {
         }
@@ -66,7 +66,7 @@ public final class ModelGuildMemberListUpdate5<T> implements Action1<String> {
         call2(str);
     }
 
-    /* renamed from: call, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
     public final void call2(String str) throws IOException {
         if (str != null) {
             int iHashCode = str.hashCode();

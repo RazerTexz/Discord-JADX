@@ -6,9 +6,9 @@ import kotlin.jvm.functions.Function1;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: UserMentionableSource.kt */
-/* renamed from: com.discord.widgets.chat.input.autocomplete.sources.UserAutocompletableSource$createAutocompletablesForUsers$mentions$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.chat.input.autocomplete.sources.UserAutocompletableSource$createAutocompletablesForUsers$mentions$1, reason: use source file name */
+/* JADX INFO: compiled from: UserMentionableSource.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class UserMentionableSource2 extends Lambda implements Function1<Autocompletable, Integer> {
     public final /* synthetic */ int $numPartitions;
 
@@ -23,11 +23,11 @@ public final class UserMentionableSource2 extends Lambda implements Function1<Au
         return Integer.valueOf(invoke2(autocompletable));
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final int invoke2(Autocompletable autocompletable) {
         Intrinsics3.checkNotNullParameter(autocompletable, "e");
         if (autocompletable instanceof UserAutocompletable) {
-            return (int) ((((UserAutocompletable) autocompletable).getUser().getId() >> 22) % this.$numPartitions);
+            return (int) ((((UserAutocompletable) autocompletable).getUser().getId() >> 22) % ((long) this.$numPartitions));
         }
         return 0;
     }

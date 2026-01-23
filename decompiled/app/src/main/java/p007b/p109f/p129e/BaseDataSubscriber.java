@@ -2,9 +2,9 @@ package p007b.p109f.p129e;
 
 import com.facebook.datasource.DataSource;
 
-/* compiled from: BaseDataSubscriber.java */
-/* renamed from: b.f.e.d, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.f.e.d, reason: use source file name */
+/* JADX INFO: compiled from: BaseDataSubscriber.java */
+/* JADX INFO: loaded from: classes.dex */
 public abstract class BaseDataSubscriber<T> implements DataSubscriber<T> {
     @Override // p007b.p109f.p129e.DataSubscriber
     public void onCancellation(DataSource<T> dataSource) {

@@ -10,20 +10,20 @@ import p007b.p085c.p086a.p087a0.AnimatableValueParser;
 import p007b.p100d.p104b.p105a.outline;
 import p007b.p225i.p226a.p288f.p313h.p326m.C3929f;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public final class zzgs extends AbstractSafeParcelable {
     public static final Parcelable.Creator<zzgs> CREATOR = new C3929f();
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static final zzgs f20644j = new zzgs(1, "", null);
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final int f20645k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final String f20646l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     @Nullable
     public final String f20647m;
 

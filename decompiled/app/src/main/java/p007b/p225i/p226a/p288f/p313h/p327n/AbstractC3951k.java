@@ -8,12 +8,12 @@ import java.util.RandomAccess;
 import org.checkerframework.checker.nullness.compatqual.NullableDecl;
 import p007b.p225i.p226a.p288f.p299e.p308o.C3404f;
 
-/* compiled from: com.android.billingclient:billing@@4.0.0 */
-/* renamed from: b.i.a.f.h.n.k */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.h.n.k */
+/* JADX INFO: compiled from: com.android.billingclient:billing@@4.0.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public abstract class AbstractC3951k<E> extends AbstractC3948h<E> implements List<E>, RandomAccess {
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public static final AbstractC3953m<Object> f10489k = new C3949i(C3952l.f10490l, 0);
 
     @Override // java.util.List
@@ -29,7 +29,7 @@ public abstract class AbstractC3951k<E> extends AbstractC3948h<E> implements Lis
     }
 
     @Override // p007b.p225i.p226a.p288f.p313h.p327n.AbstractC3948h
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public int mo5430c(Object[] objArr, int i) {
         int size = size();
         for (int i2 = 0; i2 < size; i2++) {
@@ -75,7 +75,7 @@ public abstract class AbstractC3951k<E> extends AbstractC3948h<E> implements Lis
         return false;
     }
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public AbstractC3951k<E> mo5434h(int i, int i2) {
         C3404f.m4342s2(i, i2, size());
         int i3 = i2 - i;
@@ -92,7 +92,7 @@ public abstract class AbstractC3951k<E> extends AbstractC3948h<E> implements Lis
         return iHashCode;
     }
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public final AbstractC3953m<E> m5435i(int i) {
         int size = size();
         if (i < 0 || i > size) {

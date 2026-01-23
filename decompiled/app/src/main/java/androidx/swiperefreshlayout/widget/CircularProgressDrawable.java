@@ -22,7 +22,7 @@ import androidx.interpolator.view.animation.FastOutSlowInInterpolator;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class CircularProgressDrawable extends Drawable implements Animatable {
     private static final int ANIMATION_DURATION = 1332;
     private static final int ARROW_HEIGHT = 5;
@@ -51,7 +51,7 @@ public class CircularProgressDrawable extends Drawable implements Animatable {
     private static final Interpolator MATERIAL_INTERPOLATOR = new FastOutSlowInInterpolator();
     private static final int[] COLORS = {ViewCompat.MEASURED_STATE_MASK};
 
-    /* renamed from: androidx.swiperefreshlayout.widget.CircularProgressDrawable$1 */
+    /* JADX INFO: renamed from: androidx.swiperefreshlayout.widget.CircularProgressDrawable$1 */
     public class C06221 implements ValueAnimator.AnimatorUpdateListener {
         public final /* synthetic */ Ring val$ring;
 
@@ -68,7 +68,7 @@ public class CircularProgressDrawable extends Drawable implements Animatable {
         }
     }
 
-    /* renamed from: androidx.swiperefreshlayout.widget.CircularProgressDrawable$2 */
+    /* JADX INFO: renamed from: androidx.swiperefreshlayout.widget.CircularProgressDrawable$2 */
     public class C06232 implements Animator.AnimatorListener {
         public final /* synthetic */ Ring val$ring;
 

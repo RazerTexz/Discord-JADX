@@ -4,11 +4,11 @@ import android.graphics.Matrix;
 import android.graphics.Point;
 import android.view.View;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public class RendererCommon {
     private static float BALANCED_VISIBLE_FRACTION = 0.5625f;
 
-    /* renamed from: org.webrtc.RendererCommon$1 */
+    /* JADX INFO: renamed from: org.webrtc.RendererCommon$1 */
     public static /* synthetic */ class C129831 {
         public static final /* synthetic */ int[] $SwitchMap$org$webrtc$RendererCommon$ScalingType;
 

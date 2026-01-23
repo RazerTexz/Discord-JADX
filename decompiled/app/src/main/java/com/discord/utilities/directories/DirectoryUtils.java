@@ -43,15 +43,15 @@ import p507d0.p580t._Collections;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: DirectoryUtils.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: DirectoryUtils.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class DirectoryUtils {
     public static final String JOIN_GUILD_SOURCE = "Directory Channel Entry";
     public static final DirectoryUtils INSTANCE = new DirectoryUtils();
     private static final List<DirectoryServerMenuOptions> SERVER_OWNER_MENU_OPTIONS = Collections2.listOf((Object[]) new DirectoryServerMenuOptions[]{DirectoryServerMenuOptions.Edit, DirectoryServerMenuOptions.Remove});
     private static final List<DirectoryServerMenuOptions> NON_SERVER_OWNER_MENU_OPTIONS = CollectionsJVM.listOf(DirectoryServerMenuOptions.Report);
 
-    /* compiled from: DirectoryUtils.kt */
+    /* JADX INFO: compiled from: DirectoryUtils.kt */
     public enum DirectoryServerMenuOptions {
         Edit(C5419R.string.hub_entry_update, C5419R.drawable.ic_edit_24dp),
         Remove(C5419R.string.hub_entry_remove, C5419R.drawable.ic_delete_24dp),
@@ -87,8 +87,8 @@ public final class DirectoryUtils {
         }
     }
 
-    /* compiled from: DirectoryUtils.kt */
-    /* renamed from: com.discord.utilities.directories.DirectoryUtils$maybeJoinAndGoToGuild$1 */
+    /* JADX INFO: renamed from: com.discord.utilities.directories.DirectoryUtils$maybeJoinAndGoToGuild$1 */
+    /* JADX INFO: compiled from: DirectoryUtils.kt */
     public static final class C67421 extends Lambda implements Function1<Guild, Unit> {
         public final /* synthetic */ AppBottomSheet $bottomSheet;
         public final /* synthetic */ GuildScheduledEvent $guildScheduledEvent;
@@ -110,7 +110,7 @@ public final class DirectoryUtils {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Guild guild) {
             Intrinsics3.checkNotNullParameter(guild, "it");
             if (this.$shouldToggleRsvp) {
@@ -129,8 +129,8 @@ public final class DirectoryUtils {
         }
     }
 
-    /* compiled from: DirectoryUtils.kt */
-    /* renamed from: com.discord.utilities.directories.DirectoryUtils$showServerOptions$2 */
+    /* JADX INFO: renamed from: com.discord.utilities.directories.DirectoryUtils$showServerOptions$2 */
+    /* JADX INFO: compiled from: DirectoryUtils.kt */
     public static final class C67432 extends Lambda implements Function1<Integer, Unit> {
         public final /* synthetic */ Context $context;
         public final /* synthetic */ DirectoryEntryGuild $directoryEntry;
@@ -139,8 +139,8 @@ public final class DirectoryUtils {
         public final /* synthetic */ List $options;
         public final /* synthetic */ Function0 $removeGuildListener;
 
-        /* compiled from: DirectoryUtils.kt */
-        /* renamed from: com.discord.utilities.directories.DirectoryUtils$showServerOptions$2$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.utilities.directories.DirectoryUtils$showServerOptions$2$1, reason: invalid class name */
+        /* JADX INFO: compiled from: DirectoryUtils.kt */
         public static final class AnonymousClass1 implements View.OnClickListener {
             public AnonymousClass1() {
             }

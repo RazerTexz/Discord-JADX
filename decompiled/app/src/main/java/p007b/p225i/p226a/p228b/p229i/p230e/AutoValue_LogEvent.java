@@ -5,55 +5,55 @@ import java.util.Arrays;
 import p007b.p100d.p104b.p105a.outline;
 import p007b.p225i.p226a.p228b.p229i.p230e.LogEvent;
 
-/* compiled from: AutoValue_LogEvent.java */
-/* renamed from: b.i.a.b.i.e.f, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.b.i.e.f, reason: use source file name */
+/* JADX INFO: compiled from: AutoValue_LogEvent.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class AutoValue_LogEvent extends LogEvent {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final long f5167a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final Integer f5168b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final long f5169c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final byte[] f5170d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final String f5171e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final long f5172f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public final NetworkConnectionInfo f5173g;
 
-    /* compiled from: AutoValue_LogEvent.java */
-    /* renamed from: b.i.a.b.i.e.f$b */
+    /* JADX INFO: renamed from: b.i.a.b.i.e.f$b */
+    /* JADX INFO: compiled from: AutoValue_LogEvent.java */
     public static final class b extends LogEvent.a {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public Long f5174a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public Integer f5175b;
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public Long f5176c;
 
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         public byte[] f5177d;
 
-        /* renamed from: e */
+        /* JADX INFO: renamed from: e */
         public String f5178e;
 
-        /* renamed from: f */
+        /* JADX INFO: renamed from: f */
         public Long f5179f;
 
-        /* renamed from: g */
+        /* JADX INFO: renamed from: g */
         public NetworkConnectionInfo f5180g;
     }
 
@@ -69,33 +69,33 @@ public final class AutoValue_LogEvent extends LogEvent {
 
     @Override // p007b.p225i.p226a.p228b.p229i.p230e.LogEvent
     @Nullable
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public Integer mo2316a() {
         return this.f5168b;
     }
 
     @Override // p007b.p225i.p226a.p228b.p229i.p230e.LogEvent
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public long mo2317b() {
         return this.f5167a;
     }
 
     @Override // p007b.p225i.p226a.p228b.p229i.p230e.LogEvent
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public long mo2318c() {
         return this.f5169c;
     }
 
     @Override // p007b.p225i.p226a.p228b.p229i.p230e.LogEvent
     @Nullable
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public NetworkConnectionInfo mo2319d() {
         return this.f5173g;
     }
 
     @Override // p007b.p225i.p226a.p228b.p229i.p230e.LogEvent
     @Nullable
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public byte[] mo2320e() {
         return this.f5170d;
     }
@@ -127,13 +127,13 @@ public final class AutoValue_LogEvent extends LogEvent {
 
     @Override // p007b.p225i.p226a.p228b.p229i.p230e.LogEvent
     @Nullable
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public String mo2321f() {
         return this.f5171e;
     }
 
     @Override // p007b.p225i.p226a.p228b.p229i.p230e.LogEvent
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public long mo2322g() {
         return this.f5172f;
     }

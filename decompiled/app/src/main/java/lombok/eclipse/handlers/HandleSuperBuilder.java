@@ -63,8 +63,8 @@ import org.eclipse.jdt.internal.compiler.lookup.ClassScope;
 import org.eclipse.jdt.internal.compiler.lookup.MethodScope;
 import org.eclipse.jdt.internal.compiler.lookup.TypeConstants;
 
+/* JADX INFO: loaded from: discord-126021.apk:lombok/eclipse/handlers/HandleSuperBuilder.SCL.lombok */
 @HandlerPriority(-1024)
-/* loaded from: discord-126021.apk:lombok/eclipse/handlers/HandleSuperBuilder.SCL.lombok */
 public class HandleSuperBuilder extends EclipseAnnotationHandler<SuperBuilder> {
     private static final char[] SELF_METHOD_NAME = "self".toCharArray();
     private static final char[] FILL_VALUES_METHOD_NAME = "$fillValuesFrom".toCharArray();
@@ -73,10 +73,10 @@ public class HandleSuperBuilder extends EclipseAnnotationHandler<SuperBuilder> {
     private static final String BUILDER_VARIABLE_NAME_STRING = "b";
     private static final char[] BUILDER_VARIABLE_NAME = BUILDER_VARIABLE_NAME_STRING.toCharArray();
 
-    /* renamed from: $SWITCH_TABLE$lombok$eclipse$handlers$EclipseHandlerUtil$MemberExistsResult */
+    /* JADX INFO: renamed from: $SWITCH_TABLE$lombok$eclipse$handlers$EclipseHandlerUtil$MemberExistsResult */
     private static /* synthetic */ int[] f27474xb87c1847;
 
-    /* renamed from: $SWITCH_TABLE$lombok$eclipse$handlers$EclipseHandlerUtil$MemberExistsResult */
+    /* JADX INFO: renamed from: $SWITCH_TABLE$lombok$eclipse$handlers$EclipseHandlerUtil$MemberExistsResult */
     static /* synthetic */ int[] m10934xb87c1847() {
         int[] iArr = f27474xb87c1847;
         if (iArr != null) {
@@ -103,7 +103,7 @@ public class HandleSuperBuilder extends EclipseAnnotationHandler<SuperBuilder> {
         return SELF_METHOD_NAME;
     }
 
-    /* loaded from: discord-126021.apk:lombok/eclipse/handlers/HandleSuperBuilder$SuperBuilderJob.SCL.lombok */
+    /* JADX INFO: loaded from: discord-126021.apk:lombok/eclipse/handlers/HandleSuperBuilder$SuperBuilderJob.SCL.lombok */
     class SuperBuilderJob extends HandleBuilder.BuilderJob {
         EclipseNode builderAbstractType;
         String builderAbstractClassName;
@@ -158,7 +158,7 @@ public class HandleSuperBuilder extends EclipseAnnotationHandler<SuperBuilder> {
     /* JADX WARN: Type inference failed for: r0v93, types: [org.eclipse.jdt.internal.compiler.ast.TypeReference[], org.eclipse.jdt.internal.compiler.ast.TypeReference[][]] */
     /* JADX WARN: Type inference failed for: r2v77, types: [org.eclipse.jdt.internal.compiler.ast.Annotation[], org.eclipse.jdt.internal.compiler.ast.Annotation[][]] */
     @Override // lombok.eclipse.EclipseAnnotationHandler
-    public void handle(AnnotationValues<SuperBuilder> annotation, Annotation ast, EclipseNode annotationNode) throws SecurityException {
+    public void handle(AnnotationValues<SuperBuilder> annotation, Annotation ast, EclipseNode annotationNode) {
         boolean generateBuilderMethod;
         EclipseSingularsRecipes.EclipseSingularizer singularizer;
         MethodDeclaration md;
@@ -526,7 +526,7 @@ public class HandleSuperBuilder extends EclipseAnnotationHandler<SuperBuilder> {
     private MethodDeclaration generateBuilderMethod(SuperBuilderJob job) {
         int pS = job.source.sourceStart;
         int pE = job.source.sourceEnd;
-        long p = (pS << 32) | pE;
+        long p = (((long) pS) << 32) | ((long) pE);
         MethodDeclaration out = job.createNewMethodDeclaration();
         out.selector = job.builderMethodName.toCharArray();
         out.modifiers = 9;
@@ -553,7 +553,7 @@ public class HandleSuperBuilder extends EclipseAnnotationHandler<SuperBuilder> {
     private MethodDeclaration generateToBuilderMethod(SuperBuilderJob job) {
         int pS = job.source.sourceStart;
         int pE = job.source.sourceEnd;
-        long p = (pS << 32) | pE;
+        long p = (((long) pS) << 32) | ((long) pE);
         MethodDeclaration out = job.createNewMethodDeclaration();
         out.selector = HandleBuilder.TO_BUILDER_METHOD_NAME;
         out.modifiers = 1;
@@ -837,7 +837,7 @@ public class HandleSuperBuilder extends EclipseAnnotationHandler<SuperBuilder> {
         }
     }
 
-    private void generateSetterMethodsForBuilder(HandleBuilder.BuilderJob job, HandleBuilder.BuilderFieldData bfd, String builderGenericName, String setterPrefix) throws SecurityException {
+    private void generateSetterMethodsForBuilder(HandleBuilder.BuilderJob job, HandleBuilder.BuilderFieldData bfd, String builderGenericName, String setterPrefix) {
         boolean deprecate = EclipseHandlerUtil.isFieldDeprecated(bfd.originalFieldNode);
         EclipseSingularsRecipes.TypeReferenceMaker returnTypeMaker = new C128671(builderGenericName);
         EclipseSingularsRecipes.StatementMaker returnStatementMaker = new C128682();
@@ -848,8 +848,8 @@ public class HandleSuperBuilder extends EclipseAnnotationHandler<SuperBuilder> {
         }
     }
 
-    /* renamed from: lombok.eclipse.handlers.HandleSuperBuilder$1 */
-    /* loaded from: discord-126021.apk:lombok/eclipse/handlers/HandleSuperBuilder$1.SCL.lombok */
+    /* JADX INFO: renamed from: lombok.eclipse.handlers.HandleSuperBuilder$1 */
+    /* JADX INFO: loaded from: discord-126021.apk:lombok/eclipse/handlers/HandleSuperBuilder$1.SCL.lombok */
     class C128671 implements EclipseSingularsRecipes.TypeReferenceMaker {
         private final /* synthetic */ String val$builderGenericName;
 
@@ -863,11 +863,11 @@ public class HandleSuperBuilder extends EclipseAnnotationHandler<SuperBuilder> {
         }
     }
 
-    /* renamed from: lombok.eclipse.handlers.HandleSuperBuilder$2 */
-    /* loaded from: discord-126021.apk:lombok/eclipse/handlers/HandleSuperBuilder$2.SCL.lombok */
+    /* JADX INFO: renamed from: lombok.eclipse.handlers.HandleSuperBuilder$2 */
+    /* JADX INFO: loaded from: discord-126021.apk:lombok/eclipse/handlers/HandleSuperBuilder$2.SCL.lombok */
     class C128682 implements EclipseSingularsRecipes.StatementMaker {
         @Override // lombok.eclipse.handlers.EclipseSingularsRecipes.StatementMaker
-        /* renamed from: make */
+        /* JADX INFO: renamed from: make */
         public /* bridge */ /* synthetic */ Statement mo11563make() {
             return make();
         }
@@ -884,7 +884,7 @@ public class HandleSuperBuilder extends EclipseAnnotationHandler<SuperBuilder> {
     }
 
     /* JADX WARN: Type inference failed for: r12v1, types: [org.eclipse.jdt.internal.compiler.ast.Annotation[], org.eclipse.jdt.internal.compiler.ast.Annotation[][]] */
-    private void generateSimpleSetterMethodForBuilder(HandleBuilder.BuilderJob job, boolean deprecate, EclipseNode fieldNode, char[] paramName, char[] nameOfSetFlag, TypeReference returnType, Statement returnStatement, Annotation[] annosOnParam, EclipseNode originalFieldNode, String setterPrefix) throws SecurityException {
+    private void generateSimpleSetterMethodForBuilder(HandleBuilder.BuilderJob job, boolean deprecate, EclipseNode fieldNode, char[] paramName, char[] nameOfSetFlag, TypeReference returnType, Statement returnStatement, Annotation[] annosOnParam, EclipseNode originalFieldNode, String setterPrefix) {
         TypeDeclaration td = job.builderType.get();
         AbstractMethodDeclaration[] existing = td.methods;
         if (existing == null) {
@@ -912,7 +912,7 @@ public class HandleSuperBuilder extends EclipseAnnotationHandler<SuperBuilder> {
         EclipseHandlerUtil.injectMethod(job.builderType, setter);
     }
 
-    private void addObtainVia(HandleBuilder.BuilderFieldData bfd, EclipseNode node) throws SecurityException {
+    private void addObtainVia(HandleBuilder.BuilderFieldData bfd, EclipseNode node) {
         for (EclipseNode child : node.down()) {
             if (EclipseHandlerUtil.annotationTypeMatches((Class<? extends java.lang.annotation.Annotation>) Builder.ObtainVia.class, child)) {
                 AnnotationValues<Builder.ObtainVia> ann = EclipseHandlerUtil.createAnnotation(Builder.ObtainVia.class, child);
@@ -923,7 +923,7 @@ public class HandleSuperBuilder extends EclipseAnnotationHandler<SuperBuilder> {
         }
     }
 
-    private EclipseSingularsRecipes.SingularData getSingularData(EclipseNode node, ASTNode source, String setterPrefix) throws SecurityException {
+    private EclipseSingularsRecipes.SingularData getSingularData(EclipseNode node, ASTNode source, String setterPrefix) {
         String typeName;
         for (EclipseNode child : node.down()) {
             if (EclipseHandlerUtil.annotationTypeMatches((Class<? extends java.lang.annotation.Annotation>) Singular.class, child)) {
@@ -1011,19 +1011,18 @@ public class HandleSuperBuilder extends EclipseAnnotationHandler<SuperBuilder> {
     }
 
     /* JADX WARN: Multi-variable type inference failed */
-    /* JADX WARN: Type inference failed for: r0v6, types: [org.eclipse.jdt.internal.compiler.ast.TypeReference[]] */
     private TypeReference[] getTypeParametersFrom(TypeReference typeRef) {
-        TypeReference[][] typeArgss = null;
+        Object[] objArr = null;
         if (typeRef instanceof ParameterizedQualifiedTypeReference) {
-            typeArgss = ((ParameterizedQualifiedTypeReference) typeRef).typeArguments;
+            objArr = ((ParameterizedQualifiedTypeReference) typeRef).typeArguments;
         } else if (typeRef instanceof ParameterizedSingleTypeReference) {
-            typeArgss = new TypeReference[]{((ParameterizedSingleTypeReference) typeRef).typeArguments};
+            objArr = new TypeReference[]{((ParameterizedSingleTypeReference) typeRef).typeArguments};
         }
-        TypeReference[] typeArgs = new TypeReference[0];
-        if (typeArgss != null && typeArgss.length > 0) {
-            typeArgs = typeArgss[typeArgss.length - 1];
+        Object obj = new TypeReference[0];
+        if (objArr != null && objArr.length > 0) {
+            obj = objArr[objArr.length - 1];
         }
-        return typeArgs;
+        return obj;
     }
 
     private static TypeReference createTypeReferenceWithTypeParameters(EclipseNode parent, String referenceName, TypeParameter[] typeParams) {

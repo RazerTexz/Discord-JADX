@@ -3,16 +3,16 @@ package p007b.p085c.p086a;
 import androidx.annotation.Nullable;
 import java.util.Arrays;
 
-/* compiled from: LottieResult.java */
-/* renamed from: b.c.a.p, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.c.a.p, reason: use source file name */
+/* JADX INFO: compiled from: LottieResult.java */
+/* JADX INFO: loaded from: classes.dex */
 public final class LottieResult<V> {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     @Nullable
     public final V f2449a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     @Nullable
     public final Throwable f2450b;
 

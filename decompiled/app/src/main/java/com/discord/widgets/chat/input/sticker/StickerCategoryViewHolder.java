@@ -17,11 +17,11 @@ import kotlin.jvm.functions.Function1;
 import kotlin.jvm.internal.DefaultConstructorMarker;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: StickerCategoryViewHolder.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: StickerCategoryViewHolder.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public abstract class StickerCategoryViewHolder extends RecyclerView.ViewHolder {
 
-    /* compiled from: StickerCategoryViewHolder.kt */
+    /* JADX INFO: compiled from: StickerCategoryViewHolder.kt */
     public static final class Guild extends StickerCategoryViewHolder {
         private final StickerCategoryItemGuildBinding binding;
 
@@ -48,7 +48,7 @@ public abstract class StickerCategoryViewHolder extends RecyclerView.ViewHolder 
         }
     }
 
-    /* compiled from: StickerCategoryViewHolder.kt */
+    /* JADX INFO: compiled from: StickerCategoryViewHolder.kt */
     public static final class Pack extends StickerCategoryViewHolder {
         private final StickerCategoryItemPackBinding binding;
 
@@ -85,7 +85,7 @@ public abstract class StickerCategoryViewHolder extends RecyclerView.ViewHolder 
         }
     }
 
-    /* compiled from: StickerCategoryViewHolder.kt */
+    /* JADX INFO: compiled from: StickerCategoryViewHolder.kt */
     public static final class Recent extends StickerCategoryViewHolder {
         private final StickerCategoryItemRecentBinding binding;
 

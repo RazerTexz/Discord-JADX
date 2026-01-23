@@ -42,20 +42,20 @@ import p507d0.p592z.p594d.Lambda;
 import p637j0.p642l.p647e.ScalarSynchronousObservable;
 import p658rx.Observable;
 
-/* compiled from: DiscordConnectService.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: DiscordConnectService.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class DiscordConnectService extends Service {
 
-    /* renamed from: j, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: j, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
 
-    /* compiled from: DiscordConnectService.kt */
-    /* renamed from: com.discord.app.DiscordConnectService$a, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: com.discord.app.DiscordConnectService$a, reason: from kotlin metadata */
+    /* JADX INFO: compiled from: DiscordConnectService.kt */
     public static final class Companion {
         public Companion(DefaultConstructorMarker defaultConstructorMarker) {
         }
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public static final void m8374a(Companion companion, String str) {
             AppLog appLog = AppLog.f14950g;
             String simpleName = DiscordConnectService.class.getSimpleName();
@@ -63,7 +63,7 @@ public final class DiscordConnectService extends Service {
             Logger.i$default(appLog, simpleName, str, null, 4, null);
         }
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final void m8375b(Context context, long j) {
             Intrinsics3.checkNotNullParameter(context, "context");
             Intent intent = IntentUtils.RouteBuilders.INSTANCE.connectVoice(j).setPackage(context.getPackageName());
@@ -76,11 +76,11 @@ public final class DiscordConnectService extends Service {
         }
     }
 
-    /* compiled from: DiscordConnectService.kt */
-    /* renamed from: com.discord.app.DiscordConnectService$b */
+    /* JADX INFO: renamed from: com.discord.app.DiscordConnectService$b */
+    /* JADX INFO: compiled from: DiscordConnectService.kt */
     public static final class C5459b extends Lambda implements Function1<Object, Unit> {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public static final C5459b f14971j = new C5459b();
 
         public C5459b() {
@@ -93,8 +93,8 @@ public final class DiscordConnectService extends Service {
         }
     }
 
-    /* compiled from: DiscordConnectService.kt */
-    /* renamed from: com.discord.app.DiscordConnectService$c */
+    /* JADX INFO: renamed from: com.discord.app.DiscordConnectService$c */
+    /* JADX INFO: compiled from: DiscordConnectService.kt */
     public static final class C5460c extends Lambda implements Function0<Unit> {
         public final /* synthetic */ int $startId;
 
@@ -119,8 +119,8 @@ public final class DiscordConnectService extends Service {
         }
     }
 
-    /* compiled from: DiscordConnectService.kt */
-    /* renamed from: com.discord.app.DiscordConnectService$d */
+    /* JADX INFO: renamed from: com.discord.app.DiscordConnectService$d */
+    /* JADX INFO: compiled from: DiscordConnectService.kt */
     public static final class C5461d extends Lambda implements Function1<Error, Unit> {
         public final /* synthetic */ int $startId;
 

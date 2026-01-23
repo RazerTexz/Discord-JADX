@@ -14,14 +14,14 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
 /* JADX INFO: Add missing generic type declarations: [T] */
-/* compiled from: WidgetChatInputAttachments.kt */
-/* renamed from: com.discord.widgets.chat.input.WidgetChatInputAttachments$createPreviewAdapter$onAttachmentSelected$1 */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.chat.input.WidgetChatInputAttachments$createPreviewAdapter$onAttachmentSelected$1 */
+/* JADX INFO: compiled from: WidgetChatInputAttachments.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class C7751xc61f589<T> extends Lambda implements Function2<SelectionAggregator<T>, T, Unit> {
     public final /* synthetic */ WidgetChatInputAttachments this$0;
 
-    /* compiled from: WidgetChatInputAttachments.kt */
-    /* renamed from: com.discord.widgets.chat.input.WidgetChatInputAttachments$createPreviewAdapter$onAttachmentSelected$1$1, reason: invalid class name */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.input.WidgetChatInputAttachments$createPreviewAdapter$onAttachmentSelected$1$1, reason: invalid class name */
+    /* JADX INFO: compiled from: WidgetChatInputAttachments.kt */
     public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
         public final /* synthetic */ SelectionAggregator $aggregator;
         public final /* synthetic */ Attachment $attachment;
@@ -39,14 +39,14 @@ public final class C7751xc61f589<T> extends Lambda implements Function2<Selectio
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             this.$aggregator.unselectItem(this.$attachment);
         }
     }
 
-    /* compiled from: WidgetChatInputAttachments.kt */
-    /* renamed from: com.discord.widgets.chat.input.WidgetChatInputAttachments$createPreviewAdapter$onAttachmentSelected$1$2, reason: invalid class name */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.input.WidgetChatInputAttachments$createPreviewAdapter$onAttachmentSelected$1$2, reason: invalid class name */
+    /* JADX INFO: compiled from: WidgetChatInputAttachments.kt */
     public static final class AnonymousClass2 extends Lambda implements Function1<Boolean, Unit> {
         public final /* synthetic */ SelectionAggregator $aggregator;
         public final /* synthetic */ Attachment $attachment;

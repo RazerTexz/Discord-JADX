@@ -1,8 +1,8 @@
 package com.discord.api.report;
 
 
-/* compiled from: InAppReportsMenu.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: InAppReportsMenu.kt */
+/* JADX INFO: loaded from: classes.dex */
 public enum ReportType {
     Message("message"),
     StageChannel("stage_channel"),

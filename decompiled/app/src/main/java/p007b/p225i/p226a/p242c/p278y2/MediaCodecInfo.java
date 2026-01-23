@@ -15,31 +15,31 @@ import p007b.p225i.p226a.p242c.p259f3.MimeTypes;
 import p007b.p225i.p226a.p242c.p259f3.Util2;
 import p007b.p225i.p226a.p242c.p265v2.DecoderReuseEvaluation;
 
-/* compiled from: MediaCodecInfo.java */
-/* renamed from: b.i.a.c.y2.u, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.y2.u, reason: use source file name */
+/* JADX INFO: compiled from: MediaCodecInfo.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class MediaCodecInfo {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final String f9112a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final String f9113b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final String f9114c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     @Nullable
     public final MediaCodecInfo.CodecCapabilities f9115d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final boolean f9116e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final boolean f9117f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public final boolean f9118g;
 
     @VisibleForTesting
@@ -55,7 +55,7 @@ public final class MediaCodecInfo {
     }
 
     @RequiresApi(21)
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static Point m3862a(MediaCodecInfo.VideoCapabilities videoCapabilities, int i, int i2) {
         int widthAlignment = videoCapabilities.getWidthAlignment();
         int heightAlignment = videoCapabilities.getHeightAlignment();
@@ -63,7 +63,7 @@ public final class MediaCodecInfo {
     }
 
     @RequiresApi(21)
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static boolean m3863b(MediaCodecInfo.VideoCapabilities videoCapabilities, int i, int i2, double d) {
         Point pointM3862a = m3862a(videoCapabilities, i, i2);
         int i3 = pointM3862a.x;
@@ -75,7 +75,7 @@ public final class MediaCodecInfo {
     /* JADX WARN: Removed duplicated region for block: B:26:0x004a  */
     /* JADX WARN: Removed duplicated region for block: B:37:0x0062  */
     /* JADX WARN: Removed duplicated region for block: B:49:0x007b  */
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
@@ -116,7 +116,7 @@ public final class MediaCodecInfo {
         return new MediaCodecInfo(str, str2, str3, codecCapabilities, z2, z3, z4, z7, z8, z9);
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public DecoderReuseEvaluation m3865c(Format2 format2, Format2 format22) {
         boolean z2 = false;
         int i = !Util2.m2993a(format2.f7155w, format22.f7155w) ? 8 : 0;
@@ -174,7 +174,7 @@ public final class MediaCodecInfo {
         return new DecoderReuseEvaluation(this.f9112a, format2, format22, 0, i);
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public MediaCodecInfo.CodecProfileLevel[] m3866d() {
         MediaCodecInfo.CodecProfileLevel[] codecProfileLevelArr;
         MediaCodecInfo.CodecCapabilities codecCapabilities = this.f9115d;
@@ -183,7 +183,7 @@ public final class MediaCodecInfo {
 
     /* JADX WARN: Removed duplicated region for block: B:168:? A[RETURN, SYNTHETIC] */
     /* JADX WARN: Removed duplicated region for block: B:169:? A[RETURN, SYNTHETIC] */
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
@@ -326,7 +326,7 @@ public final class MediaCodecInfo {
         return true;
     }
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public boolean m3868f(Format2 format2) {
         if (this.f9118g) {
             return this.f9116e;
@@ -336,7 +336,7 @@ public final class MediaCodecInfo {
     }
 
     @RequiresApi(21)
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public boolean m3869g(int i, int i2, double d) {
         MediaCodecInfo.CodecCapabilities codecCapabilities = this.f9115d;
         if (codecCapabilities == null) {
@@ -381,7 +381,7 @@ public final class MediaCodecInfo {
         return true;
     }
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public final void m3870h(String str) {
         String str2 = this.f9112a;
         String str3 = this.f9113b;

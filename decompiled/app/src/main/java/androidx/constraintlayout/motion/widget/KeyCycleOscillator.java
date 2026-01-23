@@ -16,7 +16,7 @@ import java.util.Comparator;
 import java.util.HashMap;
 import p007b.p100d.p104b.p105a.outline;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public abstract class KeyCycleOscillator {
     private static final String TAG = "KeyCycleOscillator";
     private CurveFit mCurveFit;
@@ -27,7 +27,7 @@ public abstract class KeyCycleOscillator {
     public int mVariesBy = 0;
     public ArrayList<WavePoint> mWavePoints = new ArrayList<>();
 
-    /* renamed from: androidx.constraintlayout.motion.widget.KeyCycleOscillator$1 */
+    /* JADX INFO: renamed from: androidx.constraintlayout.motion.widget.KeyCycleOscillator$1 */
     public class C01761 implements Comparator<WavePoint> {
         public C01761() {
         }
@@ -37,7 +37,7 @@ public abstract class KeyCycleOscillator {
             return compare2(wavePoint, wavePoint2);
         }
 
-        /* renamed from: compare, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: compare, reason: avoid collision after fix types in other method */
         public int compare2(WavePoint wavePoint, WavePoint wavePoint2) {
             return Integer.compare(wavePoint.mPosition, wavePoint2.mPosition);
         }
@@ -134,7 +134,7 @@ public abstract class KeyCycleOscillator {
         }
 
         public void setPoint(int i, int i2, float f, float f2, float f3) {
-            this.mPosition[i] = i2 / 100.0d;
+            this.mPosition[i] = ((double) i2) / 100.0d;
             this.mPeriod[i] = f;
             this.mOffset[i] = f2;
             this.mValues[i] = f3;
@@ -303,7 +303,7 @@ public abstract class KeyCycleOscillator {
         public boolean mNoMethod = false;
 
         @Override // androidx.constraintlayout.motion.widget.KeyCycleOscillator
-        public void setProperty(View view, float f) throws SecurityException, IllegalArgumentException {
+        public void setProperty(View view, float f) {
             if (view instanceof MotionLayout) {
                 ((MotionLayout) view).setProgress(get(f));
                 return;
@@ -477,7 +477,7 @@ public abstract class KeyCycleOscillator {
         int i = 0;
         for (WavePoint wavePoint : this.mWavePoints) {
             float f2 = wavePoint.mPeriod;
-            dArr[i] = f2 * 0.01d;
+            dArr[i] = ((double) f2) * 0.01d;
             double[] dArr3 = dArr2[i];
             float f3 = wavePoint.mValue;
             dArr3[0] = f3;

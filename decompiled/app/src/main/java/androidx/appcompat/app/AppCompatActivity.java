@@ -29,7 +29,7 @@ import androidx.core.app.NavUtils;
 import androidx.core.app.TaskStackBuilder;
 import androidx.fragment.app.FragmentActivity;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class AppCompatActivity extends FragmentActivity implements AppCompatCallback, TaskStackBuilder.SupportParentable, ActionBarDrawerToggle.DelegateProvider {
     private AppCompatDelegate mDelegate;
     private Resources mResources;

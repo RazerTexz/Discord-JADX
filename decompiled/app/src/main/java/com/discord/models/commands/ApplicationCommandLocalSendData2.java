@@ -6,9 +6,9 @@ import kotlin.jvm.internal.Ref$IntRef;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: ApplicationCommandLocalSendData.kt */
-/* renamed from: com.discord.models.commands.ApplicationCommandLocalSendData$toRestApiApplicationCommandDataParam$attachmentConvertedOptions$1, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: com.discord.models.commands.ApplicationCommandLocalSendData$toRestApiApplicationCommandDataParam$attachmentConvertedOptions$1, reason: use source file name */
+/* JADX INFO: compiled from: ApplicationCommandLocalSendData.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class ApplicationCommandLocalSendData2 extends Lambda implements Function1<ApplicationCommandData3, ApplicationCommandData3> {
     public final /* synthetic */ Ref$IntRef $attachmentCounter;
 
@@ -23,7 +23,7 @@ public final class ApplicationCommandLocalSendData2 extends Lambda implements Fu
         return invoke2(applicationCommandData3);
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final ApplicationCommandData3 invoke2(ApplicationCommandData3 applicationCommandData3) {
         Intrinsics3.checkNotNullParameter(applicationCommandData3, "it");
         if (applicationCommandData3.getType() != 11) {

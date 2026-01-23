@@ -4,8 +4,8 @@ import java.util.List;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: InAppReportsMenu.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: InAppReportsMenu.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class NodeElementResult {
     private final List<ReportNodeElementData> data;
     private final String key;
@@ -17,12 +17,12 @@ public final /* data */ class NodeElementResult {
         this.data = list;
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final List<ReportNodeElementData> m8166a() {
         return this.data;
     }
 
-    /* renamed from: b, reason: from getter */
+    /* JADX INFO: renamed from: b, reason: from getter */
     public final String getKey() {
         return this.key;
     }

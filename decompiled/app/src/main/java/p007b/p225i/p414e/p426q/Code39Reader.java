@@ -12,28 +12,28 @@ import p007b.p225i.p414e.DecodeHintType;
 import p007b.p225i.p414e.ResultPoint;
 import p007b.p225i.p414e.p418n.BitArray;
 
-/* compiled from: Code39Reader.java */
-/* renamed from: b.i.e.q.c, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.e.q.c, reason: use source file name */
+/* JADX INFO: compiled from: Code39Reader.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class Code39Reader extends OneDReader {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final int[] f13359a = {52, 289, 97, 352, 49, 304, 112, 37, 292, 100, 265, 73, 328, 25, 280, 88, 13, 268, 76, 28, 259, 67, 322, 19, 274, 82, 7, 262, 70, 22, 385, Opcodes.INSTANCEOF, 448, Opcodes.I2B, 400, 208, Opcodes.I2L, 388, 196, Opcodes.JSR, Opcodes.IF_ICMPGE, Opcodes.L2D, 42};
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final boolean f13360b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final StringBuilder f13361c = new StringBuilder(20);
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final int[] f13362d = new int[9];
 
     public Code39Reader(boolean z2) {
         this.f13360b = z2;
     }
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public static int m6986g(int[] iArr) {
         int length = iArr.length;
         int i = 0;
@@ -75,7 +75,7 @@ public final class Code39Reader extends OneDReader {
     }
 
     @Override // p007b.p225i.p414e.p426q.OneDReader
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public Result mo6983b(int i, BitArray bitArray, Map<DecodeHintType, ?> map) throws NotFoundException, ChecksumException, FormatException {
         char cCharAt;
         int[] iArr = this.f13362d;

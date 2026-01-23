@@ -18,17 +18,17 @@ import p007b.p109f.p115d.p128m.WebpBitmapFactory;
 import p007b.p109f.p115d.p128m.WebpSupportStatus;
 import p007b.p109f.p161j.p178m.StaticWebpNativeLoader;
 
+/* JADX INFO: loaded from: classes3.dex */
 @DoNotStrip
-/* loaded from: classes3.dex */
 public class WebpBitmapFactoryImpl implements WebpBitmapFactory {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static WebpBitmapFactory.a f19658a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static BitmapCreator f19659b;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static byte[] m8735b(InputStream inputStream, BitmapFactory.Options options) {
         byte[] bArr;
         inputStream.mark(20);
@@ -44,7 +44,7 @@ public class WebpBitmapFactoryImpl implements WebpBitmapFactory {
         }
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public static void m8736c(String str) {
         WebpBitmapFactory.a aVar = f19658a;
         if (aVar != null) {
@@ -271,7 +271,7 @@ public class WebpBitmapFactoryImpl implements WebpBitmapFactory {
     }
 
     @Override // p007b.p109f.p115d.p128m.WebpBitmapFactory
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public Bitmap mo1011a(FileDescriptor fileDescriptor, Rect rect, BitmapFactory.Options options) {
         return hookDecodeFileDescriptor(fileDescriptor, null, options);
     }

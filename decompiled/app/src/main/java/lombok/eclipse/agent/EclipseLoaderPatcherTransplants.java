@@ -13,7 +13,7 @@ import java.util.zip.ZipEntry;
   discord-126021.apk:Class50/lombok/eclipse/agent/EclipseLoaderPatcherTransplants.SCL.lombok
   discord-126021.apk:lombok/eclipse/agent/EclipseLoaderPatcherTransplants.SCL.lombok
  */
-/* loaded from: discord-126021.apk:Class50/lombok/eclipse/agent/EclipseLoaderPatcherTransplants.SCL.lombok */
+/* JADX INFO: loaded from: discord-126021.apk:Class50/lombok/eclipse/agent/EclipseLoaderPatcherTransplants.SCL.lombok */
 public class EclipseLoaderPatcherTransplants {
     public static boolean overrideLoadDecide(ClassLoader original, String name, boolean resolve) {
         return name.startsWith("lombok.");

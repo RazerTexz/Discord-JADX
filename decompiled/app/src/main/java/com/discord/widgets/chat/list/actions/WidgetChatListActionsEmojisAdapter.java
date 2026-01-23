@@ -18,8 +18,8 @@ import p507d0.p580t.Iterables2;
 import p507d0.p580t._Collections;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: WidgetChatListActionsEmojisAdapter.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetChatListActionsEmojisAdapter.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetChatListActionsEmojisAdapter extends MGRecyclerAdapterSimple<WidgetChatListActionsEmojisAdapter2> {
     private Function1<? super Emoji, Unit> onClickEmoji;
     private Function0<Unit> onClickMoreEmojis;

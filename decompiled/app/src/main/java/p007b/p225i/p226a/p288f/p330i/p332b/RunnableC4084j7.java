@@ -1,23 +1,23 @@
 package p007b.p225i.p226a.p288f.p330i.p332b;
 
-/* compiled from: com.google.android.gms:play-services-measurement-impl@@18.0.0 */
-/* renamed from: b.i.a.f.i.b.j7 */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.i.b.j7 */
+/* JADX INFO: compiled from: com.google.android.gms:play-services-measurement-impl@@18.0.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public final class RunnableC4084j7 implements Runnable {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final /* synthetic */ C4072i7 f10857j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final /* synthetic */ C4072i7 f10858k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final /* synthetic */ long f10859l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public final /* synthetic */ boolean f10860m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public final /* synthetic */ C4060h7 f10861n;
 
     public RunnableC4084j7(C4060h7 c4060h7, C4072i7 c4072i7, C4072i7 c4072i72, long j, boolean z2) {
@@ -29,7 +29,7 @@ public final class RunnableC4084j7 implements Runnable {
     }
 
     @Override // java.lang.Runnable
-    public final void run() throws IllegalStateException {
+    public final void run() {
         this.f10861n.m5652B(this.f10857j, this.f10858k, this.f10859l, this.f10860m, null);
     }
 }

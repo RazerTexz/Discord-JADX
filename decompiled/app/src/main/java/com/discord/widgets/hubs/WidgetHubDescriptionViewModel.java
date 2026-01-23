@@ -26,19 +26,19 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 import p658rx.Observable;
 
-/* compiled from: WidgetHubDescriptionViewModel.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetHubDescriptionViewModel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetHubDescriptionViewModel extends AppViewModel<WidgetHubDescriptionViewModel3> {
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private final long channelId;
     private final long guildId;
     private final boolean isEditing;
     private final RestAPI restAPI;
 
-    /* compiled from: WidgetHubDescriptionViewModel.kt */
-    /* renamed from: com.discord.widgets.hubs.WidgetHubDescriptionViewModel$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.hubs.WidgetHubDescriptionViewModel$1 */
+    /* JADX INFO: compiled from: WidgetHubDescriptionViewModel.kt */
     public static final /* synthetic */ class C90141 extends AdaptedFunctionReference implements Function1<WidgetHubDescriptionViewModel3, Unit> {
         public C90141(WidgetHubDescriptionViewModel widgetHubDescriptionViewModel) {
             super(1, widgetHubDescriptionViewModel, WidgetHubDescriptionViewModel.class, "handleStoreUpdate", "handleStoreUpdate(Lcom/discord/widgets/hubs/HubDescriptionState;)Lkotlin/Unit;", 8);
@@ -50,14 +50,14 @@ public final class WidgetHubDescriptionViewModel extends AppViewModel<WidgetHubD
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(WidgetHubDescriptionViewModel3 widgetHubDescriptionViewModel3) {
             Intrinsics3.checkNotNullParameter(widgetHubDescriptionViewModel3, "p1");
             WidgetHubDescriptionViewModel.access$handleStoreUpdate((WidgetHubDescriptionViewModel) this.receiver, widgetHubDescriptionViewModel3);
         }
     }
 
-    /* compiled from: WidgetHubDescriptionViewModel.kt */
+    /* JADX INFO: compiled from: WidgetHubDescriptionViewModel.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -74,8 +74,8 @@ public final class WidgetHubDescriptionViewModel extends AppViewModel<WidgetHubD
         }
     }
 
-    /* compiled from: WidgetHubDescriptionViewModel.kt */
-    /* renamed from: com.discord.widgets.hubs.WidgetHubDescriptionViewModel$addServer$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.hubs.WidgetHubDescriptionViewModel$addServer$1 */
+    /* JADX INFO: compiled from: WidgetHubDescriptionViewModel.kt */
     public static final class C90151 extends Lambda implements Function1<DirectoryEntryGuild, TrackNetworkMetadata2> {
         public final /* synthetic */ DirectoryEntryCategory $category;
         public final /* synthetic */ long $channelId;
@@ -94,14 +94,14 @@ public final class WidgetHubDescriptionViewModel extends AppViewModel<WidgetHubD
             return invoke2(directoryEntryGuild);
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final TrackNetworkMetadata2 invoke2(DirectoryEntryGuild directoryEntryGuild) {
             return new TrackNetworkActionDirectoryGuildEntryCreate(Long.valueOf(this.$channelId), Long.valueOf(this.$guildId), Long.valueOf(this.$category.getKey()));
         }
     }
 
-    /* compiled from: WidgetHubDescriptionViewModel.kt */
-    /* renamed from: com.discord.widgets.hubs.WidgetHubDescriptionViewModel$addServer$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.hubs.WidgetHubDescriptionViewModel$addServer$2 */
+    /* JADX INFO: compiled from: WidgetHubDescriptionViewModel.kt */
     public static final class C90162 extends Lambda implements Function1<RestCallState<? extends DirectoryEntryGuild>, Unit> {
         public final /* synthetic */ WidgetHubDescriptionViewModel3 $state;
 
@@ -117,7 +117,7 @@ public final class WidgetHubDescriptionViewModel extends AppViewModel<WidgetHubD
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(RestCallState<DirectoryEntryGuild> restCallState) {
             Intrinsics3.checkNotNullParameter(restCallState, "it");
             WidgetHubDescriptionViewModel.access$updateViewState(WidgetHubDescriptionViewModel.this, WidgetHubDescriptionViewModel3.copy$default(this.$state, null, null, null, restCallState, 7, null));
@@ -186,7 +186,7 @@ public final class WidgetHubDescriptionViewModel extends AppViewModel<WidgetHubD
         return this.restAPI;
     }
 
-    /* renamed from: isEditing, reason: from getter */
+    /* JADX INFO: renamed from: isEditing, reason: from getter */
     public final boolean getIsEditing() {
         return this.isEditing;
     }

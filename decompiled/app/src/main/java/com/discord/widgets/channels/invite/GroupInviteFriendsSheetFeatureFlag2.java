@@ -3,9 +3,9 @@ package com.discord.widgets.channels.invite;
 import kotlin.jvm.functions.Function0;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: GroupInviteFriendsSheetFeatureFlag.kt */
-/* renamed from: com.discord.widgets.channels.invite.GroupInviteFriendsSheetFeatureFlag$Companion$INSTANCE$2, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.channels.invite.GroupInviteFriendsSheetFeatureFlag$Companion$INSTANCE$2, reason: use source file name */
+/* JADX INFO: compiled from: GroupInviteFriendsSheetFeatureFlag.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class GroupInviteFriendsSheetFeatureFlag2 extends Lambda implements Function0<GroupInviteFriendsSheetFeatureFlag> {
     public static final GroupInviteFriendsSheetFeatureFlag2 INSTANCE = new GroupInviteFriendsSheetFeatureFlag2();
 

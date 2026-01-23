@@ -5,8 +5,8 @@ import androidx.exifinterface.media.ExifInterface;
 import com.discord.widgets.settings.billing.SettingsBillingViewModel;
 import p637j0.p641k.Func1;
 
-/* compiled from: ObservableExtensions.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: ObservableExtensions.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetPaymentSourceEditDialog$onViewBound$$inlined$filterIs$1<T, R> implements Func1<Object, Boolean> {
     public static final WidgetPaymentSourceEditDialog$onViewBound$$inlined$filterIs$1 INSTANCE = new WidgetPaymentSourceEditDialog$onViewBound$$inlined$filterIs$1();
 

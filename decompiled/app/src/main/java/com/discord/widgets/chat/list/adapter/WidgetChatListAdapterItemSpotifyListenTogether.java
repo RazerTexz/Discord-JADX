@@ -53,28 +53,28 @@ import p507d0.p592z.p594d.Lambda;
 import p658rx.Observable;
 import p658rx.Subscription;
 
-/* compiled from: WidgetChatListAdapterItemSpotifyListenTogether.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetChatListAdapterItemSpotifyListenTogether.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetChatListAdapterItemSpotifyListenTogether extends WidgetChatListItem {
     private static final long EMBED_LIFETIME_MILLIS = 7200000;
     private static final long MAX_USERS_SHOWN = 6;
     private final WidgetChatListAdapterItemSpotifyListenTogetherBinding binding;
     private Subscription subscription;
 
-    /* renamed from: userAdapter$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: userAdapter$delegate, reason: from kotlin metadata */
     private final Lazy userAdapter;
 
-    /* compiled from: WidgetChatListAdapterItemSpotifyListenTogether.kt */
+    /* JADX INFO: compiled from: WidgetChatListAdapterItemSpotifyListenTogether.kt */
     public static final /* data */ class Model {
 
-        /* renamed from: Companion, reason: from kotlin metadata */
+        /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
         public static final Companion INSTANCE = new Companion(null);
         private final boolean isMe;
         private final SpotifyListenTogetherEntry item;
         private final Presence presence;
         private final List<CollapsedUser> users;
 
-        /* compiled from: WidgetChatListAdapterItemSpotifyListenTogether.kt */
+        /* JADX INFO: compiled from: WidgetChatListAdapterItemSpotifyListenTogether.kt */
         public static final class Companion {
             private Companion() {
             }
@@ -146,7 +146,7 @@ public final class WidgetChatListAdapterItemSpotifyListenTogether extends Widget
             return model.copy(presence, list, spotifyListenTogetherEntry, z2);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final Presence getPresence() {
             return this.presence;
         }
@@ -155,12 +155,12 @@ public final class WidgetChatListAdapterItemSpotifyListenTogether extends Widget
             return this.users;
         }
 
-        /* renamed from: component3, reason: from getter */
+        /* JADX INFO: renamed from: component3, reason: from getter */
         public final SpotifyListenTogetherEntry getItem() {
             return this.item;
         }
 
-        /* renamed from: component4, reason: from getter */
+        /* JADX INFO: renamed from: component4, reason: from getter */
         public final boolean getIsMe() {
             return this.isMe;
         }
@@ -195,6 +195,9 @@ public final class WidgetChatListAdapterItemSpotifyListenTogether extends Widget
         }
 
         /* JADX WARN: Multi-variable type inference failed */
+        /* JADX WARN: Type inference failed for: r1v3, types: [int] */
+        /* JADX WARN: Type inference failed for: r1v4 */
+        /* JADX WARN: Type inference failed for: r1v6 */
         public int hashCode() {
             Presence presence = this.presence;
             int iHashCode = (presence != null ? presence.hashCode() : 0) * 31;
@@ -203,11 +206,11 @@ public final class WidgetChatListAdapterItemSpotifyListenTogether extends Widget
             SpotifyListenTogetherEntry spotifyListenTogetherEntry = this.item;
             int iHashCode3 = (iHashCode2 + (spotifyListenTogetherEntry != null ? spotifyListenTogetherEntry.hashCode() : 0)) * 31;
             boolean z2 = this.isMe;
-            int i = z2;
-            if (z2 != 0) {
-                i = 1;
+            ?? r1 = z2;
+            if (z2) {
+                r1 = 1;
             }
-            return iHashCode3 + i;
+            return iHashCode3 + r1;
         }
 
         public final boolean isMe() {
@@ -226,8 +229,8 @@ public final class WidgetChatListAdapterItemSpotifyListenTogether extends Widget
         }
     }
 
-    /* compiled from: WidgetChatListAdapterItemSpotifyListenTogether.kt */
-    /* renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemSpotifyListenTogether$configureUI$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemSpotifyListenTogether$configureUI$2 */
+    /* JADX INFO: compiled from: WidgetChatListAdapterItemSpotifyListenTogether.kt */
     public static final class ViewOnClickListenerC81162 implements View.OnClickListener {
         public final /* synthetic */ Activity $listeningActivity;
 
@@ -241,8 +244,8 @@ public final class WidgetChatListAdapterItemSpotifyListenTogether extends Widget
         }
     }
 
-    /* compiled from: WidgetChatListAdapterItemSpotifyListenTogether.kt */
-    /* renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemSpotifyListenTogether$configureUI$3 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemSpotifyListenTogether$configureUI$3 */
+    /* JADX INFO: compiled from: WidgetChatListAdapterItemSpotifyListenTogether.kt */
     public static final class ViewOnClickListenerC81173 implements View.OnClickListener {
         public final /* synthetic */ Activity $listeningActivity;
         public final /* synthetic */ Model $this_configureUI;
@@ -258,8 +261,8 @@ public final class WidgetChatListAdapterItemSpotifyListenTogether extends Widget
         }
     }
 
-    /* compiled from: WidgetChatListAdapterItemSpotifyListenTogether.kt */
-    /* renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemSpotifyListenTogether$onConfigure$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemSpotifyListenTogether$onConfigure$1 */
+    /* JADX INFO: compiled from: WidgetChatListAdapterItemSpotifyListenTogether.kt */
     public static final class C81181 extends Lambda implements Function1<Subscription, Unit> {
         public C81181() {
             super(1);
@@ -271,15 +274,15 @@ public final class WidgetChatListAdapterItemSpotifyListenTogether extends Widget
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Subscription subscription) {
             Intrinsics3.checkNotNullParameter(subscription, "it");
             WidgetChatListAdapterItemSpotifyListenTogether.access$setSubscription$p(WidgetChatListAdapterItemSpotifyListenTogether.this, subscription);
         }
     }
 
-    /* compiled from: WidgetChatListAdapterItemSpotifyListenTogether.kt */
-    /* renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemSpotifyListenTogether$onConfigure$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemSpotifyListenTogether$onConfigure$2 */
+    /* JADX INFO: compiled from: WidgetChatListAdapterItemSpotifyListenTogether.kt */
     public static final class C81192 extends Lambda implements Function1<Model, Unit> {
         public C81192() {
             super(1);
@@ -291,7 +294,7 @@ public final class WidgetChatListAdapterItemSpotifyListenTogether extends Widget
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Model model) {
             Intrinsics3.checkNotNullParameter(model, "it");
             WidgetChatListAdapterItemSpotifyListenTogether.access$configureUI(WidgetChatListAdapterItemSpotifyListenTogether.this, model);

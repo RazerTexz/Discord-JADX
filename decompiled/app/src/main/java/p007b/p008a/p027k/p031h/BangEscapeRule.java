@@ -10,9 +10,9 @@ import p007b.p008a.p027k.p030g.ParseState;
 import p507d0.p592z.p594d.Intrinsics3;
 
 /* JADX INFO: Add missing generic type declarations: [T] */
-/* compiled from: BangEscapeRule.kt */
-/* renamed from: b.a.k.h.a, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.a.k.h.a, reason: use source file name */
+/* JADX INFO: compiled from: BangEscapeRule.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class BangEscapeRule<T> extends Rule<T, Node<T>, ParseState> {
     public BangEscapeRule(Pattern pattern) {
         super(pattern);

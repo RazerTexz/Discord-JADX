@@ -4,8 +4,8 @@ import com.discord.models.domain.Model;
 import com.discord.models.experiments.dto.GuildExperimentFilter;
 import kotlin.jvm.internal.Ref$ObjectRef;
 
-/* compiled from: GuildExperimentDto.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: GuildExperimentDto.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class GuildExperimentPopulationDto$Parser$parse$2 implements Runnable {
     public final /* synthetic */ Ref$ObjectRef $filters;
     public final /* synthetic */ Model.JsonReader $jsonReader;

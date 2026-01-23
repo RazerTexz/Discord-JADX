@@ -10,9 +10,9 @@ import kotlin.Tuples2;
 import kotlin.jvm.functions.Function0;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: ServerSettingsGuildRoleSubscriptionEditTierViewModel.kt */
-/* renamed from: com.discord.widgets.servers.guild_role_subscription.edit_tier.ServerSettingsGuildRoleSubscriptionEditTierViewModel$Companion$observeStoreState$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.servers.guild_role_subscription.edit_tier.ServerSettingsGuildRoleSubscriptionEditTierViewModel$Companion$observeStoreState$1, reason: use source file name */
+/* JADX INFO: compiled from: ServerSettingsGuildRoleSubscriptionEditTierViewModel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class ServerSettingsGuildRoleSubscriptionEditTierViewModel2 extends Lambda implements Function0<Tuples2<? extends ServerSettingsGuildRoleSubscriptionEditTierViewModel.GuildRoleSubscriptionStoreData, ? extends Map<Long, ? extends Channel>>> {
     public final /* synthetic */ long $guildId;
     public final /* synthetic */ long $guildRoleSubscriptionTierListingId;
@@ -36,7 +36,7 @@ public final class ServerSettingsGuildRoleSubscriptionEditTierViewModel2 extends
     }
 
     @Override // kotlin.jvm.functions.Function0
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final Tuples2<? extends ServerSettingsGuildRoleSubscriptionEditTierViewModel.GuildRoleSubscriptionStoreData, ? extends Map<Long, ? extends Channel>> invoke2() {
         StoreGuildRoleSubscriptions.GuildRoleSubscriptionGroupState guildRoleSubscriptionState = this.$storeGuildRoleSubscriptions.getGuildRoleSubscriptionState(this.$guildId);
         return new Tuples2<>(new ServerSettingsGuildRoleSubscriptionEditTierViewModel.GuildRoleSubscriptionStoreData(guildRoleSubscriptionState, this.$storeGuilds.getRoles().get(Long.valueOf(this.$guildId)), this.$storeGuildRoleSubscriptions.getGuildRoleSubscriptionFreeTrialForListing(this.$guildId, this.$guildRoleSubscriptionTierListingId)), this.$storeChannels.getChannelsForGuild(this.$guildId));

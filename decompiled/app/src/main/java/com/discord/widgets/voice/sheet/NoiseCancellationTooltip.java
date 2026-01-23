@@ -2,8 +2,8 @@ package com.discord.widgets.voice.sheet;
 
 import com.discord.tooltips.TooltipManager;
 
-/* compiled from: NoiseCancellationTooltip.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: NoiseCancellationTooltip.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class NoiseCancellationTooltip extends TooltipManager.C6648b {
     public static final NoiseCancellationTooltip INSTANCE = new NoiseCancellationTooltip();
 

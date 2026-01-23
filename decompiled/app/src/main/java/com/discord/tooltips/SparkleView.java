@@ -14,17 +14,17 @@ import p007b.p008a.p058v.SparkleView3;
 import p507d0.LazyJVM;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: SparkleView.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: SparkleView.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class SparkleView extends FrameLayout {
 
-    /* renamed from: j, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: j, reason: from kotlin metadata */
     public final SparkleViewBinding binding;
 
-    /* renamed from: k, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: k, reason: from kotlin metadata */
     public int sparkleAnimationResId;
 
-    /* renamed from: l, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: l, reason: from kotlin metadata */
     public final Lazy sparkleDrawable;
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -53,7 +53,7 @@ public final class SparkleView extends FrameLayout {
         }
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final /* synthetic */ AnimatedVectorDrawableCompat m8510a(SparkleView sparkleView) {
         return sparkleView.getSparkleDrawable();
     }
@@ -62,7 +62,7 @@ public final class SparkleView extends FrameLayout {
         return (AnimatedVectorDrawableCompat) this.sparkleDrawable.getValue();
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final void m8511b() {
         AnimatedVectorDrawableCompat sparkleDrawable = getSparkleDrawable();
         if (sparkleDrawable != null) {

@@ -8,39 +8,39 @@ import java.util.concurrent.atomic.AtomicInteger;
 import java.util.concurrent.atomic.AtomicReference;
 import p007b.p225i.p226a.p288f.p299e.p308o.C3404f;
 
-/* compiled from: com.google.android.gms:play-services-measurement-impl@@18.0.0 */
-/* renamed from: b.i.a.f.h.l.l2 */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.h.l.l2 */
+/* JADX INFO: compiled from: com.google.android.gms:play-services-measurement-impl@@18.0.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public abstract class AbstractC3732l2<T> {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final Object f10069a = new Object();
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static volatile AbstractC3836t2 f10070b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public static C3849u2 f10071c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public static final AtomicInteger f10072d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final C3797q2 f10073e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final String f10074f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public final T f10075g;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public volatile int f10076h = -1;
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public volatile T f10077i;
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final boolean f10078j;
 
     static {
@@ -60,10 +60,10 @@ public abstract class AbstractC3732l2<T> {
         this.f10078j = z2;
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public abstract T mo5047a(Object obj);
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final String m5048b(String str) {
         if (str != null && str.isEmpty()) {
             return this.f10074f;
@@ -73,7 +73,7 @@ public abstract class AbstractC3732l2<T> {
         return strValueOf2.length() != 0 ? strValueOf.concat(strValueOf2) : new String(strValueOf);
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final String m5049c() {
         Objects.requireNonNull(this.f10073e);
         return m5048b("");
@@ -82,7 +82,7 @@ public abstract class AbstractC3732l2<T> {
     /* JADX WARN: Removed duplicated region for block: B:42:0x00c1  */
     /* JADX WARN: Removed duplicated region for block: B:43:0x00c2 A[Catch: all -> 0x0146, TryCatch #0 {, blocks: (B:8:0x0021, B:10:0x0025, B:14:0x002d, B:16:0x0044, B:22:0x0055, B:24:0x005b, B:26:0x0069, B:30:0x0086, B:32:0x0090, B:50:0x00e6, B:52:0x00f6, B:54:0x010c, B:57:0x011b, B:59:0x0125, B:61:0x0130, B:60:0x012a, B:63:0x0139, B:64:0x013c, B:65:0x0140, B:43:0x00c2, B:45:0x00db, B:49:0x00e4, B:28:0x007c, B:33:0x0095, B:35:0x009e, B:37:0x00b0, B:39:0x00bb, B:38:0x00b5, B:66:0x0144), top: B:73:0x0021 }] */
     /* JADX WARN: Removed duplicated region for block: B:52:0x00f6 A[Catch: all -> 0x0146, TryCatch #0 {, blocks: (B:8:0x0021, B:10:0x0025, B:14:0x002d, B:16:0x0044, B:22:0x0055, B:24:0x005b, B:26:0x0069, B:30:0x0086, B:32:0x0090, B:50:0x00e6, B:52:0x00f6, B:54:0x010c, B:57:0x011b, B:59:0x0125, B:61:0x0130, B:60:0x012a, B:63:0x0139, B:64:0x013c, B:65:0x0140, B:43:0x00c2, B:45:0x00db, B:49:0x00e4, B:28:0x007c, B:33:0x0095, B:35:0x009e, B:37:0x00b0, B:39:0x00bb, B:38:0x00b5, B:66:0x0144), top: B:73:0x0021 }] */
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */

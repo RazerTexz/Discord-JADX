@@ -11,12 +11,12 @@ import javax.tools.JavaFileObject;
 import lombok.core.DiagnosticsReceiver;
 import lombok.permit.Permit;
 
-/* loaded from: discord-126021.apk:lombok/javac/apt/LombokFileObjects.SCL.lombok */
+/* JADX INFO: loaded from: discord-126021.apk:lombok/javac/apt/LombokFileObjects.SCL.lombok */
 final class LombokFileObjects {
     private static final List<String> KNOWN_JAVA9_FILE_MANAGERS = Arrays.asList("com.google.errorprone.MaskedClassLoader$MaskedFileManager", "com.google.devtools.build.buildjar.javac.BlazeJavacMain$ClassloaderMaskingFileManager", "com.google.devtools.build.java.turbine.javac.JavacTurbineCompiler$ClassloaderMaskingFileManager", "org.netbeans.modules.java.source.parsing.ProxyFileManager", "com.sun.tools.javac.api.ClientCodeWrapper$WrappedStandardJavaFileManager", "com.sun.tools.javac.main.DelegatingJavaFileManager$DelegatingSJFM");
     private static Constructor<?> j9CompilerConstructor = null;
 
-    /* loaded from: discord-126021.apk:lombok/javac/apt/LombokFileObjects$Compiler.SCL.lombok */
+    /* JADX INFO: loaded from: discord-126021.apk:lombok/javac/apt/LombokFileObjects$Compiler.SCL.lombok */
     interface Compiler {
         public static final Compiler JAVAC6 = new C128891();
         public static final Compiler JAVAC7 = new C128902();
@@ -25,8 +25,8 @@ final class LombokFileObjects {
 
         Method getDecoderMethod();
 
-        /* renamed from: lombok.javac.apt.LombokFileObjects$Compiler$1 */
-        /* loaded from: discord-126021.apk:lombok/javac/apt/LombokFileObjects$Compiler$1.SCL.lombok */
+        /* JADX INFO: renamed from: lombok.javac.apt.LombokFileObjects$Compiler$1 */
+        /* JADX INFO: loaded from: discord-126021.apk:lombok/javac/apt/LombokFileObjects$Compiler$1.SCL.lombok */
         class C128891 implements Compiler {
             private Method decoderMethod = null;
             private final AtomicBoolean decoderIsSet = new AtomicBoolean();
@@ -53,8 +53,8 @@ final class LombokFileObjects {
             }
         }
 
-        /* renamed from: lombok.javac.apt.LombokFileObjects$Compiler$2 */
-        /* loaded from: discord-126021.apk:lombok/javac/apt/LombokFileObjects$Compiler$2.SCL.lombok */
+        /* JADX INFO: renamed from: lombok.javac.apt.LombokFileObjects$Compiler$2 */
+        /* JADX INFO: loaded from: discord-126021.apk:lombok/javac/apt/LombokFileObjects$Compiler$2.SCL.lombok */
         class C128902 implements Compiler {
             private Method decoderMethod = null;
             private final AtomicBoolean decoderIsSet = new AtomicBoolean();

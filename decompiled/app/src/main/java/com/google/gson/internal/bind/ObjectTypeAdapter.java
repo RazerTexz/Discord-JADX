@@ -10,16 +10,16 @@ import java.io.IOException;
 import java.util.ArrayList;
 import p007b.p225i.p408d.TypeAdapterFactory2;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public final class ObjectTypeAdapter extends TypeAdapter<Object> {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final TypeAdapterFactory2 f21525a = new C111081();
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final Gson f21526b;
 
-    /* renamed from: com.google.gson.internal.bind.ObjectTypeAdapter$1 */
+    /* JADX INFO: renamed from: com.google.gson.internal.bind.ObjectTypeAdapter$1 */
     public class C111081 implements TypeAdapterFactory2 {
         @Override // p007b.p225i.p408d.TypeAdapterFactory2
         public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> typeToken) {

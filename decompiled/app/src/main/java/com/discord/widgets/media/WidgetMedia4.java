@@ -6,9 +6,9 @@ import com.google.android.material.appbar.AppBarLayout;
 import java.util.Objects;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: WidgetMedia.kt */
-/* renamed from: com.discord.widgets.media.WidgetMedia$configureAndStartControlsAnimation$$inlined$apply$lambda$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.media.WidgetMedia$configureAndStartControlsAnimation$$inlined$apply$lambda$1, reason: use source file name */
+/* JADX INFO: compiled from: WidgetMedia.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetMedia4 implements ValueAnimator.AnimatorUpdateListener {
     public final /* synthetic */ WidgetMedia this$0;
 

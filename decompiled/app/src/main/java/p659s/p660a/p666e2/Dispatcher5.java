@@ -9,27 +9,27 @@ import kotlin.coroutines.CoroutineContext;
 import kotlinx.coroutines.Executors;
 import p659s.p660a.DefaultExecutor;
 
-/* compiled from: Dispatcher.kt */
-/* renamed from: s.a.e2.e, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: s.a.e2.e, reason: use source file name */
+/* JADX INFO: compiled from: Dispatcher.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class Dispatcher5 extends Executors implements Tasks5, Executor {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static final AtomicIntegerFieldUpdater f27820j = AtomicIntegerFieldUpdater.newUpdater(Dispatcher5.class, "inFlightTasks");
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final Dispatcher4 f27822l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public final int f27823m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public final String f27824n;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public final int f27825o;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final ConcurrentLinkedQueue<Runnable> f27821k = new ConcurrentLinkedQueue<>();
     public volatile int inFlightTasks = 0;
 
@@ -40,7 +40,7 @@ public final class Dispatcher5 extends Executors implements Tasks5, Executor {
         this.f27825o = i2;
     }
 
-    /* renamed from: I */
+    /* JADX INFO: renamed from: I */
     public final void m11267I(Runnable runnable, boolean z2) {
         do {
             AtomicIntegerFieldUpdater atomicIntegerFieldUpdater = f27820j;
@@ -85,7 +85,7 @@ public final class Dispatcher5 extends Executors implements Tasks5, Executor {
     }
 
     @Override // p659s.p660a.p666e2.Tasks5
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public void mo11268f() {
         Runnable runnablePoll = this.f27821k.poll();
         if (runnablePoll != null) {
@@ -107,7 +107,7 @@ public final class Dispatcher5 extends Executors implements Tasks5, Executor {
     }
 
     @Override // p659s.p660a.p666e2.Tasks5
-    /* renamed from: t */
+    /* JADX INFO: renamed from: t */
     public int mo11269t() {
         return this.f27825o;
     }

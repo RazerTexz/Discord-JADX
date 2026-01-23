@@ -2,13 +2,13 @@ package p007b.p225i.p226a.p242c.p257e3.p258b0;
 
 import com.google.android.exoplayer2.upstream.cache.Cache;
 
-/* compiled from: CacheEvictor.java */
-/* renamed from: b.i.a.c.e3.b0.d, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.e3.b0.d, reason: use source file name */
+/* JADX INFO: compiled from: CacheEvictor.java */
+/* JADX INFO: loaded from: classes3.dex */
 public interface CacheEvictor extends Cache.InterfaceC10774a {
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     void mo2785a(Cache cache, String str, long j, long j2);
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     void mo2786e();
 }

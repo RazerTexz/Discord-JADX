@@ -4,9 +4,9 @@ import kotlin.Unit;
 import kotlin.jvm.functions.Function0;
 import kotlin.jvm.functions.Function1;
 
-/* compiled from: StorageManager.kt */
-/* renamed from: d0.e0.p.d.m0.m.o, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.m.o, reason: use source file name */
+/* JADX INFO: compiled from: StorageManager.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public interface StorageManager {
     <T> T compute(Function0<? extends T> function0);
 

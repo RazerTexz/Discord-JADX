@@ -2,12 +2,12 @@ package p677y.p681b.p684b;
 
 import androidx.core.widget.ContentLoadingProgressBar;
 
-/* compiled from: lambda */
-/* renamed from: y.b.b.c */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: y.b.b.c */
+/* JADX INFO: compiled from: lambda */
+/* JADX INFO: loaded from: classes.dex */
 public final /* synthetic */ class RunnableC13193c implements Runnable {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final /* synthetic */ ContentLoadingProgressBar f27958j;
 
     public /* synthetic */ RunnableC13193c(ContentLoadingProgressBar contentLoadingProgressBar) {

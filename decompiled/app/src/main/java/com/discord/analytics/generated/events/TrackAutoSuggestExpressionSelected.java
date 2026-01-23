@@ -8,8 +8,8 @@ import com.discord.api.science.AnalyticsSchema;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: TrackAutoSuggestExpressionSelected.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: TrackAutoSuggestExpressionSelected.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class TrackAutoSuggestExpressionSelected implements AnalyticsSchema, TrackBase2, TrackLocationMetadata2 {
     private TrackBase trackBase;
     private TrackLocationMetadata trackLocationMetadata;
@@ -19,7 +19,7 @@ public final /* data */ class TrackAutoSuggestExpressionSelected implements Anal
     private final transient String analyticsSchemaTypeName = "auto_suggest_expression_selected";
 
     @Override // com.discord.api.science.AnalyticsSchema
-    /* renamed from: d, reason: from getter */
+    /* JADX INFO: renamed from: d, reason: from getter */
     public String getAnalyticsSchemaTypeName() {
         return this.analyticsSchemaTypeName;
     }

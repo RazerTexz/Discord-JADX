@@ -5,18 +5,18 @@ import p658rx.Scheduler;
 import p658rx.Subscriber;
 import p658rx.functions.Action0;
 
-/* compiled from: OnSubscribeTimerPeriodically.java */
-/* renamed from: j0.l.a.j0, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: j0.l.a.j0, reason: use source file name */
+/* JADX INFO: compiled from: OnSubscribeTimerPeriodically.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class OnSubscribeTimerPeriodically implements Action0 {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public long f26854j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final /* synthetic */ Subscriber f26855k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final /* synthetic */ Scheduler.Worker f26856l;
 
     public OnSubscribeTimerPeriodically(OnSubscribeTimerPeriodically2 onSubscribeTimerPeriodically2, Subscriber subscriber, Scheduler.Worker worker) {

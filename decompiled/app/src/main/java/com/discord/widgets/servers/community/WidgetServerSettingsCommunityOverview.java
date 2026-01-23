@@ -42,28 +42,28 @@ import p507d0.p592z.p594d.Lambda;
 import p507d0.p592z.p594d.Reflection2;
 import p658rx.Observable;
 
-/* compiled from: WidgetServerSettingsCommunityOverview.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetServerSettingsCommunityOverview.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetServerSettingsCommunityOverview extends AppFragment {
     public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetServerSettingsCommunityOverview.class, "binding", "getBinding()Lcom/discord/databinding/WidgetServerSettingsCommunityOverviewBinding;", 0)};
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private static final String INTENT_EXTRA_GUILD_ID = "INTENT_EXTRA_GUILD_ID";
     private static final String REQUEST_KEY_RULES_CHANNEL = "REQUEST_KEY_RULES_CHANNEL";
     private static final String REQUEST_KEY_UPDATES_CHANNEL = "REQUEST_KEY_UPDATES_CHANNEL";
 
-    /* renamed from: binding$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
 
-    /* renamed from: guildId$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: guildId$delegate, reason: from kotlin metadata */
     private final Lazy guildId;
     private final AppLogger2 loggingConfig;
 
-    /* renamed from: viewModel$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: viewModel$delegate, reason: from kotlin metadata */
     private final Lazy viewModel;
 
-    /* compiled from: WidgetServerSettingsCommunityOverview.kt */
+    /* JADX INFO: compiled from: WidgetServerSettingsCommunityOverview.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -81,8 +81,8 @@ public final class WidgetServerSettingsCommunityOverview extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetServerSettingsCommunityOverview.kt */
-    /* renamed from: com.discord.widgets.servers.community.WidgetServerSettingsCommunityOverview$configureValidUI$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.community.WidgetServerSettingsCommunityOverview$configureValidUI$1 */
+    /* JADX INFO: compiled from: WidgetServerSettingsCommunityOverview.kt */
     public static final class ViewOnClickListenerC93601 implements View.OnClickListener {
         public final /* synthetic */ WidgetServerSettingsCommunityOverviewViewModel.ViewState.Loaded $viewState;
 
@@ -96,8 +96,8 @@ public final class WidgetServerSettingsCommunityOverview extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetServerSettingsCommunityOverview.kt */
-    /* renamed from: com.discord.widgets.servers.community.WidgetServerSettingsCommunityOverview$configureValidUI$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.community.WidgetServerSettingsCommunityOverview$configureValidUI$2 */
+    /* JADX INFO: compiled from: WidgetServerSettingsCommunityOverview.kt */
     public static final class ViewOnClickListenerC93612 implements View.OnClickListener {
         public final /* synthetic */ WidgetServerSettingsCommunityOverviewViewModel.ViewState.Loaded $viewState;
 
@@ -111,8 +111,8 @@ public final class WidgetServerSettingsCommunityOverview extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetServerSettingsCommunityOverview.kt */
-    /* renamed from: com.discord.widgets.servers.community.WidgetServerSettingsCommunityOverview$configureValidUI$3 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.community.WidgetServerSettingsCommunityOverview$configureValidUI$3 */
+    /* JADX INFO: compiled from: WidgetServerSettingsCommunityOverview.kt */
     public static final class ViewOnClickListenerC93623 implements View.OnClickListener {
         public ViewOnClickListenerC93623() {
         }
@@ -123,8 +123,8 @@ public final class WidgetServerSettingsCommunityOverview extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetServerSettingsCommunityOverview.kt */
-    /* renamed from: com.discord.widgets.servers.community.WidgetServerSettingsCommunityOverview$configureValidUI$4 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.community.WidgetServerSettingsCommunityOverview$configureValidUI$4 */
+    /* JADX INFO: compiled from: WidgetServerSettingsCommunityOverview.kt */
     public static final class ViewOnClickListenerC93634 implements View.OnClickListener {
         public final /* synthetic */ WidgetServerSettingsCommunityOverviewViewModel.ViewState.Loaded $viewState;
 
@@ -144,8 +144,8 @@ public final class WidgetServerSettingsCommunityOverview extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetServerSettingsCommunityOverview.kt */
-    /* renamed from: com.discord.widgets.servers.community.WidgetServerSettingsCommunityOverview$onViewBound$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.community.WidgetServerSettingsCommunityOverview$onViewBound$1 */
+    /* JADX INFO: compiled from: WidgetServerSettingsCommunityOverview.kt */
     public static final class C93641 extends Lambda implements Function1<String, Unit> {
         public C93641() {
             super(1);
@@ -157,15 +157,15 @@ public final class WidgetServerSettingsCommunityOverview extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(String str) {
             Intrinsics3.checkNotNullParameter(str, "locale");
             WidgetServerSettingsCommunityOverview.access$getViewModel$p(WidgetServerSettingsCommunityOverview.this).saveLocale(str);
         }
     }
 
-    /* compiled from: WidgetServerSettingsCommunityOverview.kt */
-    /* renamed from: com.discord.widgets.servers.community.WidgetServerSettingsCommunityOverview$onViewBound$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.community.WidgetServerSettingsCommunityOverview$onViewBound$2 */
+    /* JADX INFO: compiled from: WidgetServerSettingsCommunityOverview.kt */
     public static final class C93652 extends Lambda implements Function2<Long, String, Unit> {
         public C93652() {
             super(2);
@@ -183,8 +183,8 @@ public final class WidgetServerSettingsCommunityOverview extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetServerSettingsCommunityOverview.kt */
-    /* renamed from: com.discord.widgets.servers.community.WidgetServerSettingsCommunityOverview$onViewBound$3 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.community.WidgetServerSettingsCommunityOverview$onViewBound$3 */
+    /* JADX INFO: compiled from: WidgetServerSettingsCommunityOverview.kt */
     public static final class C93663 extends Lambda implements Function2<Long, String, Unit> {
         public C93663() {
             super(2);
@@ -202,8 +202,8 @@ public final class WidgetServerSettingsCommunityOverview extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetServerSettingsCommunityOverview.kt */
-    /* renamed from: com.discord.widgets.servers.community.WidgetServerSettingsCommunityOverview$onViewBoundOrOnResume$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.community.WidgetServerSettingsCommunityOverview$onViewBoundOrOnResume$1 */
+    /* JADX INFO: compiled from: WidgetServerSettingsCommunityOverview.kt */
     public static final /* synthetic */ class C93671 extends FunctionReferenceImpl implements Function1<WidgetServerSettingsCommunityOverviewViewModel.ViewState, Unit> {
         public C93671(WidgetServerSettingsCommunityOverview widgetServerSettingsCommunityOverview) {
             super(1, widgetServerSettingsCommunityOverview, WidgetServerSettingsCommunityOverview.class, "configureUI", "configureUI(Lcom/discord/widgets/servers/community/WidgetServerSettingsCommunityOverviewViewModel$ViewState;)V", 0);
@@ -215,15 +215,15 @@ public final class WidgetServerSettingsCommunityOverview extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(WidgetServerSettingsCommunityOverviewViewModel.ViewState viewState) {
             Intrinsics3.checkNotNullParameter(viewState, "p1");
             WidgetServerSettingsCommunityOverview.access$configureUI((WidgetServerSettingsCommunityOverview) this.receiver, viewState);
         }
     }
 
-    /* compiled from: WidgetServerSettingsCommunityOverview.kt */
-    /* renamed from: com.discord.widgets.servers.community.WidgetServerSettingsCommunityOverview$onViewBoundOrOnResume$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.community.WidgetServerSettingsCommunityOverview$onViewBoundOrOnResume$2 */
+    /* JADX INFO: compiled from: WidgetServerSettingsCommunityOverview.kt */
     public static final class C93682 extends Lambda implements Function1<WidgetServerSettingsCommunityOverviewViewModel.Event, Unit> {
         public C93682() {
             super(1);
@@ -235,7 +235,7 @@ public final class WidgetServerSettingsCommunityOverview extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(WidgetServerSettingsCommunityOverviewViewModel.Event event) {
             Intrinsics3.checkNotNullParameter(event, "event");
             if (Intrinsics3.areEqual(event, WidgetServerSettingsCommunityOverviewViewModel.Event.DisableCommunitySuccess.INSTANCE)) {

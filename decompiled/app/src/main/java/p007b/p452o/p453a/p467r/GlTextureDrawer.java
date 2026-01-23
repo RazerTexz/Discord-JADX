@@ -11,32 +11,32 @@ import p007b.p452o.p475b.p481f.GlTexture2;
 import p507d0.UInt;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: GlTextureDrawer.java */
-/* renamed from: b.o.a.r.c, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.o.a.r.c, reason: use source file name */
+/* JADX INFO: compiled from: GlTextureDrawer.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class GlTextureDrawer {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final GlTexture2 f14105a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public float[] f14106b = (float[]) Egloo.f14263a.clone();
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     @NonNull
     public Filter2 f14107c = new NoFilter();
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public Filter2 f14108d = null;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public int f14109e = -1;
 
     public GlTextureDrawer(@NonNull GlTexture2 glTexture2) {
         this.f14105a = glTexture2;
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public void m7399a(long j) {
         if (this.f14108d != null) {
             m7400b();
@@ -82,7 +82,7 @@ public class GlTextureDrawer {
         Egloo.m7457b("glUseProgram(0)");
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public void m7400b() {
         if (this.f14109e == -1) {
             return;

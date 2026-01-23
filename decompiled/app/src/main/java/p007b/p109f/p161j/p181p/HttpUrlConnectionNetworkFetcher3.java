@@ -5,15 +5,15 @@ import java.util.concurrent.Future;
 import p007b.p109f.p161j.p181p.NetworkFetchProducer;
 import p007b.p109f.p161j.p181p.NetworkFetcher2;
 
-/* compiled from: HttpUrlConnectionNetworkFetcher.java */
-/* renamed from: b.f.j.p.z, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.f.j.p.z, reason: use source file name */
+/* JADX INFO: compiled from: HttpUrlConnectionNetworkFetcher.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class HttpUrlConnectionNetworkFetcher3 extends BaseProducerContextCallbacks {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final /* synthetic */ Future f4264a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final /* synthetic */ NetworkFetcher2.a f4265b;
 
     public HttpUrlConnectionNetworkFetcher3(HttpUrlConnectionNetworkFetcher httpUrlConnectionNetworkFetcher, Future future, NetworkFetcher2.a aVar) {
@@ -22,7 +22,7 @@ public class HttpUrlConnectionNetworkFetcher3 extends BaseProducerContextCallbac
     }
 
     @Override // p007b.p109f.p161j.p181p.ProducerContextCallbacks
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public void mo1438a() {
         if (this.f4264a.cancel(false)) {
             NetworkFetchProducer.a aVar = (NetworkFetchProducer.a) this.f4265b;

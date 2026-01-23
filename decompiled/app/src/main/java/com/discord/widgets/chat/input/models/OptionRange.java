@@ -4,8 +4,8 @@ import kotlin.ranges.Ranges2;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: OptionRange.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: OptionRange.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final /* data */ class OptionRange {
     private final Ranges2 param;
     private final Ranges2 value;
@@ -27,12 +27,12 @@ public final /* data */ class OptionRange {
         return optionRange.copy(ranges2, ranges22);
     }
 
-    /* renamed from: component1, reason: from getter */
+    /* JADX INFO: renamed from: component1, reason: from getter */
     public final Ranges2 getParam() {
         return this.param;
     }
 
-    /* renamed from: component2, reason: from getter */
+    /* JADX INFO: renamed from: component2, reason: from getter */
     public final Ranges2 getValue() {
         return this.value;
     }

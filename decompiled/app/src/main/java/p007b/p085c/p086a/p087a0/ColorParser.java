@@ -4,16 +4,16 @@ import android.graphics.Color;
 import java.io.IOException;
 import p007b.p085c.p086a.p087a0.p088i0.JsonReader2;
 
-/* compiled from: ColorParser.java */
-/* renamed from: b.c.a.a0.f, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.c.a.a0.f, reason: use source file name */
+/* JADX INFO: compiled from: ColorParser.java */
+/* JADX INFO: loaded from: classes.dex */
 public class ColorParser implements ValueParser<Integer> {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final ColorParser f2228a = new ColorParser();
 
     @Override // p007b.p085c.p086a.p087a0.ValueParser
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public Integer mo413a(JsonReader2 jsonReader2, float f) throws IOException {
         boolean z2 = jsonReader2.mo613u() == JsonReader2.b.BEGIN_ARRAY;
         if (z2) {

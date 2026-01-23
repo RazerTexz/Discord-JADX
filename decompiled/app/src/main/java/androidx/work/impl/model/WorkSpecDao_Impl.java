@@ -21,7 +21,7 @@ import java.util.List;
 import java.util.Set;
 import java.util.concurrent.Callable;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public final class WorkSpecDao_Impl implements WorkSpecDao {
     private final RoomDatabase __db;
     private final EntityInsertionAdapter<WorkSpec> __insertionAdapterOfWorkSpec;
@@ -29,14 +29,14 @@ public final class WorkSpecDao_Impl implements WorkSpecDao {
     private final SharedSQLiteStatement __preparedStmtOfIncrementWorkSpecRunAttemptCount;
     private final SharedSQLiteStatement __preparedStmtOfMarkWorkSpecScheduled;
 
-    /* renamed from: __preparedStmtOfPruneFinishedWorkWithZeroDependentsIgnoringKeepForAtLeast */
+    /* JADX INFO: renamed from: __preparedStmtOfPruneFinishedWorkWithZeroDependentsIgnoringKeepForAtLeast */
     private final SharedSQLiteStatement f166xd91a9514;
     private final SharedSQLiteStatement __preparedStmtOfResetScheduledState;
     private final SharedSQLiteStatement __preparedStmtOfResetWorkSpecRunAttemptCount;
     private final SharedSQLiteStatement __preparedStmtOfSetOutput;
     private final SharedSQLiteStatement __preparedStmtOfSetPeriodStartTime;
 
-    /* renamed from: androidx.work.impl.model.WorkSpecDao_Impl$1 */
+    /* JADX INFO: renamed from: androidx.work.impl.model.WorkSpecDao_Impl$1 */
     public class C07571 extends EntityInsertionAdapter<WorkSpec> {
         public C07571(RoomDatabase roomDatabase) {
             super(roomDatabase);
@@ -52,7 +52,7 @@ public final class WorkSpecDao_Impl implements WorkSpecDao {
             return "INSERT OR IGNORE INTO `WorkSpec` (`id`,`state`,`worker_class_name`,`input_merger_class_name`,`input`,`output`,`initial_delay`,`interval_duration`,`flex_duration`,`run_attempt_count`,`backoff_policy`,`backoff_delay_duration`,`period_start_time`,`minimum_retention_duration`,`schedule_requested_at`,`run_in_foreground`,`required_network_type`,`requires_charging`,`requires_device_idle`,`requires_battery_not_low`,`requires_storage_not_low`,`trigger_content_update_delay`,`trigger_max_content_delay`,`content_uri_triggers`) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
         }
 
-        /* renamed from: bind, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: bind, reason: avoid collision after fix types in other method */
         public void bind2(SupportSQLiteStatement supportSQLiteStatement, WorkSpec workSpec) throws Throwable {
             String str = workSpec.f163id;
             if (str == null) {
@@ -123,7 +123,7 @@ public final class WorkSpecDao_Impl implements WorkSpecDao {
         }
     }
 
-    /* renamed from: androidx.work.impl.model.WorkSpecDao_Impl$10 */
+    /* JADX INFO: renamed from: androidx.work.impl.model.WorkSpecDao_Impl$10 */
     public class CallableC075810 implements Callable<List<WorkSpec.WorkInfoPojo>> {
         public final /* synthetic */ RoomSQLiteQuery val$_statement;
 
@@ -142,7 +142,7 @@ public final class WorkSpecDao_Impl implements WorkSpecDao {
 
         /* JADX WARN: Multi-variable type inference failed */
         @Override // java.util.concurrent.Callable
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public List<WorkSpec.WorkInfoPojo> call2() throws Exception {
             WorkSpecDao_Impl.access$000(WorkSpecDao_Impl.this).beginTransaction();
             try {
@@ -201,7 +201,7 @@ public final class WorkSpecDao_Impl implements WorkSpecDao {
         }
     }
 
-    /* renamed from: androidx.work.impl.model.WorkSpecDao_Impl$11 */
+    /* JADX INFO: renamed from: androidx.work.impl.model.WorkSpecDao_Impl$11 */
     public class CallableC075911 implements Callable<List<WorkSpec.WorkInfoPojo>> {
         public final /* synthetic */ RoomSQLiteQuery val$_statement;
 
@@ -220,7 +220,7 @@ public final class WorkSpecDao_Impl implements WorkSpecDao {
 
         /* JADX WARN: Multi-variable type inference failed */
         @Override // java.util.concurrent.Callable
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public List<WorkSpec.WorkInfoPojo> call2() throws Exception {
             WorkSpecDao_Impl.access$000(WorkSpecDao_Impl.this).beginTransaction();
             try {
@@ -279,7 +279,7 @@ public final class WorkSpecDao_Impl implements WorkSpecDao {
         }
     }
 
-    /* renamed from: androidx.work.impl.model.WorkSpecDao_Impl$12 */
+    /* JADX INFO: renamed from: androidx.work.impl.model.WorkSpecDao_Impl$12 */
     public class CallableC076012 implements Callable<List<WorkSpec.WorkInfoPojo>> {
         public final /* synthetic */ RoomSQLiteQuery val$_statement;
 
@@ -298,7 +298,7 @@ public final class WorkSpecDao_Impl implements WorkSpecDao {
 
         /* JADX WARN: Multi-variable type inference failed */
         @Override // java.util.concurrent.Callable
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public List<WorkSpec.WorkInfoPojo> call2() throws Exception {
             WorkSpecDao_Impl.access$000(WorkSpecDao_Impl.this).beginTransaction();
             try {
@@ -357,7 +357,7 @@ public final class WorkSpecDao_Impl implements WorkSpecDao {
         }
     }
 
-    /* renamed from: androidx.work.impl.model.WorkSpecDao_Impl$2 */
+    /* JADX INFO: renamed from: androidx.work.impl.model.WorkSpecDao_Impl$2 */
     public class C07612 extends SharedSQLiteStatement {
         public C07612(RoomDatabase roomDatabase) {
             super(roomDatabase);
@@ -369,7 +369,7 @@ public final class WorkSpecDao_Impl implements WorkSpecDao {
         }
     }
 
-    /* renamed from: androidx.work.impl.model.WorkSpecDao_Impl$3 */
+    /* JADX INFO: renamed from: androidx.work.impl.model.WorkSpecDao_Impl$3 */
     public class C07623 extends SharedSQLiteStatement {
         public C07623(RoomDatabase roomDatabase) {
             super(roomDatabase);
@@ -381,7 +381,7 @@ public final class WorkSpecDao_Impl implements WorkSpecDao {
         }
     }
 
-    /* renamed from: androidx.work.impl.model.WorkSpecDao_Impl$4 */
+    /* JADX INFO: renamed from: androidx.work.impl.model.WorkSpecDao_Impl$4 */
     public class C07634 extends SharedSQLiteStatement {
         public C07634(RoomDatabase roomDatabase) {
             super(roomDatabase);
@@ -393,7 +393,7 @@ public final class WorkSpecDao_Impl implements WorkSpecDao {
         }
     }
 
-    /* renamed from: androidx.work.impl.model.WorkSpecDao_Impl$5 */
+    /* JADX INFO: renamed from: androidx.work.impl.model.WorkSpecDao_Impl$5 */
     public class C07645 extends SharedSQLiteStatement {
         public C07645(RoomDatabase roomDatabase) {
             super(roomDatabase);
@@ -405,7 +405,7 @@ public final class WorkSpecDao_Impl implements WorkSpecDao {
         }
     }
 
-    /* renamed from: androidx.work.impl.model.WorkSpecDao_Impl$6 */
+    /* JADX INFO: renamed from: androidx.work.impl.model.WorkSpecDao_Impl$6 */
     public class C07656 extends SharedSQLiteStatement {
         public C07656(RoomDatabase roomDatabase) {
             super(roomDatabase);
@@ -417,7 +417,7 @@ public final class WorkSpecDao_Impl implements WorkSpecDao {
         }
     }
 
-    /* renamed from: androidx.work.impl.model.WorkSpecDao_Impl$7 */
+    /* JADX INFO: renamed from: androidx.work.impl.model.WorkSpecDao_Impl$7 */
     public class C07667 extends SharedSQLiteStatement {
         public C07667(RoomDatabase roomDatabase) {
             super(roomDatabase);
@@ -429,7 +429,7 @@ public final class WorkSpecDao_Impl implements WorkSpecDao {
         }
     }
 
-    /* renamed from: androidx.work.impl.model.WorkSpecDao_Impl$8 */
+    /* JADX INFO: renamed from: androidx.work.impl.model.WorkSpecDao_Impl$8 */
     public class C07678 extends SharedSQLiteStatement {
         public C07678(RoomDatabase roomDatabase) {
             super(roomDatabase);
@@ -441,7 +441,7 @@ public final class WorkSpecDao_Impl implements WorkSpecDao {
         }
     }
 
-    /* renamed from: androidx.work.impl.model.WorkSpecDao_Impl$9 */
+    /* JADX INFO: renamed from: androidx.work.impl.model.WorkSpecDao_Impl$9 */
     public class C07689 extends SharedSQLiteStatement {
         public C07689(RoomDatabase roomDatabase) {
             super(roomDatabase);

@@ -3,21 +3,21 @@ package p630i0;
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
 
-/* compiled from: Retrofit.java */
-/* renamed from: i0.x, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: i0.x, reason: use source file name */
+/* JADX INFO: compiled from: Retrofit.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class Retrofit implements InvocationHandler {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final Platform3 f26669a = Platform3.f26614a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final Object[] f26670b = new Object[0];
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final /* synthetic */ Class f26671c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final /* synthetic */ Retrofit2 f26672d;
 
     public Retrofit(Retrofit2 retrofit22, Class cls) {

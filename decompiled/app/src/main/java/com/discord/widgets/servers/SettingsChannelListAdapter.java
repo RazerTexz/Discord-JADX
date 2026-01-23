@@ -31,15 +31,15 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 import p658rx.functions.Action1;
 
-/* compiled from: SettingsChannelListAdapter.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: SettingsChannelListAdapter.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class SettingsChannelListAdapter extends CategoricalDragAndDropAdapter<CategoricalDragAndDropAdapter.Payload> {
     public static final int TYPE_CATEGORY = 1;
     public static final int TYPE_CHANNEL = 0;
     private Function1<? super Long, Unit> onClickListener;
     private Function1<? super Map<Long, UpdatedPosition>, Unit> onPositionUpdateListener;
 
-    /* compiled from: SettingsChannelListAdapter.kt */
+    /* JADX INFO: compiled from: SettingsChannelListAdapter.kt */
     public static final /* data */ class CategoryItem implements CategoricalDragAndDropAdapter.Payload {
         private final boolean canManageCategory;
         private final boolean canManageChannelsOfCategory;
@@ -60,7 +60,7 @@ public final class SettingsChannelListAdapter extends CategoricalDragAndDropAdap
             this.key = String.valueOf(j);
         }
 
-        /* renamed from: component3, reason: from getter */
+        /* JADX INFO: renamed from: component3, reason: from getter */
         private final int getPos() {
             return this.pos;
         }
@@ -91,27 +91,27 @@ public final class SettingsChannelListAdapter extends CategoricalDragAndDropAdap
             return categoryItem.copy(str, j2, i3, z5, z6, z4);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final String getName() {
             return this.name;
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final long getId() {
             return this.id;
         }
 
-        /* renamed from: component4, reason: from getter */
+        /* JADX INFO: renamed from: component4, reason: from getter */
         public final boolean getIsDraggable() {
             return this.isDraggable;
         }
 
-        /* renamed from: component5, reason: from getter */
+        /* JADX INFO: renamed from: component5, reason: from getter */
         public final boolean getCanManageCategory() {
             return this.canManageCategory;
         }
 
-        /* renamed from: component6, reason: from getter */
+        /* JADX INFO: renamed from: component6, reason: from getter */
         public final boolean getCanManageChannelsOfCategory() {
             return this.canManageChannelsOfCategory;
         }
@@ -168,23 +168,32 @@ public final class SettingsChannelListAdapter extends CategoricalDragAndDropAdap
         }
 
         /* JADX WARN: Multi-variable type inference failed */
+        /* JADX WARN: Type inference failed for: r0v10 */
+        /* JADX WARN: Type inference failed for: r0v11 */
+        /* JADX WARN: Type inference failed for: r0v13 */
+        /* JADX WARN: Type inference failed for: r0v14 */
+        /* JADX WARN: Type inference failed for: r0v6, types: [int] */
+        /* JADX WARN: Type inference failed for: r0v8, types: [int] */
+        /* JADX WARN: Type inference failed for: r2v0 */
+        /* JADX WARN: Type inference failed for: r2v1, types: [int] */
+        /* JADX WARN: Type inference failed for: r2v2 */
         public int hashCode() {
             String str = this.name;
             int iM3a = (((C0002b.m3a(this.id) + ((str != null ? str.hashCode() : 0) * 31)) * 31) + this.pos) * 31;
             boolean z2 = this.isDraggable;
-            int i = z2;
-            if (z2 != 0) {
-                i = 1;
+            ?? r0 = z2;
+            if (z2) {
+                r0 = 1;
             }
-            int i2 = (iM3a + i) * 31;
+            int i = (iM3a + r0) * 31;
             boolean z3 = this.canManageCategory;
-            int i3 = z3;
-            if (z3 != 0) {
-                i3 = 1;
+            ?? r02 = z3;
+            if (z3) {
+                r02 = 1;
             }
-            int i4 = (i2 + i3) * 31;
+            int i2 = (i + r02) * 31;
             boolean z4 = this.canManageChannelsOfCategory;
-            return i4 + (z4 ? 1 : z4 ? 1 : 0);
+            return i2 + (z4 ? 1 : z4);
         }
 
         public final boolean isDraggable() {
@@ -207,7 +216,7 @@ public final class SettingsChannelListAdapter extends CategoricalDragAndDropAdap
         }
     }
 
-    /* compiled from: SettingsChannelListAdapter.kt */
+    /* JADX INFO: compiled from: SettingsChannelListAdapter.kt */
     public static final class CategoryListItem extends MGRecyclerViewHolder<SettingsChannelListAdapter, CategoricalDragAndDropAdapter.Payload> implements DragAndDropHelper.DraggableViewHolder {
         private final SettingsChannelListCategoryItemBinding binding;
         private CategoryItem categoryItem;
@@ -247,7 +256,7 @@ public final class SettingsChannelListAdapter extends CategoricalDragAndDropAdap
         public void onDragStateChanged(boolean dragging) {
         }
 
-        /* renamed from: onConfigure, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: onConfigure, reason: avoid collision after fix types in other method */
         public void onConfigure2(int position, CategoricalDragAndDropAdapter.Payload data) {
             Intrinsics3.checkNotNullParameter(data, "data");
             super.onConfigure(position, data);
@@ -274,7 +283,7 @@ public final class SettingsChannelListAdapter extends CategoricalDragAndDropAdap
         }
     }
 
-    /* compiled from: SettingsChannelListAdapter.kt */
+    /* JADX INFO: compiled from: SettingsChannelListAdapter.kt */
     public static final /* data */ class ChannelItem implements CategoricalDragAndDropAdapter.Payload {
         private final boolean canManageCategoryOfChannel;
         private final Channel channel;
@@ -310,22 +319,22 @@ public final class SettingsChannelListAdapter extends CategoricalDragAndDropAdap
             return channelItem.copy(channel, z4, j2, z3);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final Channel getChannel() {
             return this.channel;
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final boolean getIsDraggable() {
             return this.isDraggable;
         }
 
-        /* renamed from: component3, reason: from getter */
+        /* JADX INFO: renamed from: component3, reason: from getter */
         public final long getParentId() {
             return this.parentId;
         }
 
-        /* renamed from: component4, reason: from getter */
+        /* JADX INFO: renamed from: component4, reason: from getter */
         public final boolean getCanManageCategoryOfChannel() {
             return this.canManageCategoryOfChannel;
         }
@@ -379,17 +388,23 @@ public final class SettingsChannelListAdapter extends CategoricalDragAndDropAdap
         }
 
         /* JADX WARN: Multi-variable type inference failed */
+        /* JADX WARN: Type inference failed for: r1v1, types: [int] */
+        /* JADX WARN: Type inference failed for: r1v6 */
+        /* JADX WARN: Type inference failed for: r1v7 */
+        /* JADX WARN: Type inference failed for: r2v0 */
+        /* JADX WARN: Type inference failed for: r2v1, types: [int] */
+        /* JADX WARN: Type inference failed for: r2v2 */
         public int hashCode() {
             Channel channel = this.channel;
             int iHashCode = (channel != null ? channel.hashCode() : 0) * 31;
             boolean z2 = this.isDraggable;
-            int i = z2;
-            if (z2 != 0) {
-                i = 1;
+            ?? r1 = z2;
+            if (z2) {
+                r1 = 1;
             }
-            int iM3a = (C0002b.m3a(this.parentId) + ((iHashCode + i) * 31)) * 31;
+            int iM3a = (C0002b.m3a(this.parentId) + ((iHashCode + r1) * 31)) * 31;
             boolean z3 = this.canManageCategoryOfChannel;
-            return iM3a + (z3 ? 1 : z3 ? 1 : 0);
+            return iM3a + (z3 ? 1 : z3);
         }
 
         public final boolean isDraggable() {
@@ -408,7 +423,7 @@ public final class SettingsChannelListAdapter extends CategoricalDragAndDropAdap
         }
     }
 
-    /* compiled from: SettingsChannelListAdapter.kt */
+    /* JADX INFO: compiled from: SettingsChannelListAdapter.kt */
     public static final class ChannelListItem extends MGRecyclerViewHolder<SettingsChannelListAdapter, CategoricalDragAndDropAdapter.Payload> implements DragAndDropHelper.DraggableViewHolder {
         private final SettingsChannelListItemBinding binding;
         private ChannelItem channelItem;
@@ -459,7 +474,7 @@ public final class SettingsChannelListAdapter extends CategoricalDragAndDropAdap
             view.setVisibility(dragging ? 0 : 8);
         }
 
-        /* renamed from: onConfigure, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: onConfigure, reason: avoid collision after fix types in other method */
         public void onConfigure2(int position, CategoricalDragAndDropAdapter.Payload data) {
             Intrinsics3.checkNotNullParameter(data, "data");
             super.onConfigure(position, data);
@@ -484,7 +499,7 @@ public final class SettingsChannelListAdapter extends CategoricalDragAndDropAdap
         }
     }
 
-    /* compiled from: SettingsChannelListAdapter.kt */
+    /* JADX INFO: compiled from: SettingsChannelListAdapter.kt */
     public static final /* data */ class UpdatedPosition {
         private final Long parentId;
         private final int position;
@@ -504,12 +519,12 @@ public final class SettingsChannelListAdapter extends CategoricalDragAndDropAdap
             return updatedPosition.copy(i, l);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final int getPosition() {
             return this.position;
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final Long getParentId() {
             return this.parentId;
         }
@@ -551,8 +566,8 @@ public final class SettingsChannelListAdapter extends CategoricalDragAndDropAdap
         }
     }
 
-    /* compiled from: SettingsChannelListAdapter.kt */
-    /* renamed from: com.discord.widgets.servers.SettingsChannelListAdapter$computeChangedPositions$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.SettingsChannelListAdapter$computeChangedPositions$1 */
+    /* JADX INFO: compiled from: SettingsChannelListAdapter.kt */
     public static final class C91501 extends Lambda implements Function1<CategoricalDragAndDropAdapter.Payload, Long> {
         public static final C91501 INSTANCE = new C91501();
 
@@ -565,7 +580,7 @@ public final class SettingsChannelListAdapter extends CategoricalDragAndDropAdap
             return invoke2(payload);
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final Long invoke2(CategoricalDragAndDropAdapter.Payload payload) {
             Intrinsics3.checkNotNullParameter(payload, "item");
             int type = payload.getType();
@@ -583,8 +598,8 @@ public final class SettingsChannelListAdapter extends CategoricalDragAndDropAdap
         }
     }
 
-    /* compiled from: SettingsChannelListAdapter.kt */
-    /* renamed from: com.discord.widgets.servers.SettingsChannelListAdapter$computeChangedPositions$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.SettingsChannelListAdapter$computeChangedPositions$2 */
+    /* JADX INFO: compiled from: SettingsChannelListAdapter.kt */
     public static final class C91512 extends Lambda implements Function1<Long, Long> {
         public static final C91512 INSTANCE = new C91512();
 
@@ -605,8 +620,8 @@ public final class SettingsChannelListAdapter extends CategoricalDragAndDropAdap
         }
     }
 
-    /* compiled from: SettingsChannelListAdapter.kt */
-    /* renamed from: com.discord.widgets.servers.SettingsChannelListAdapter$computeChangedPositions$3 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.SettingsChannelListAdapter$computeChangedPositions$3 */
+    /* JADX INFO: compiled from: SettingsChannelListAdapter.kt */
     public static final class C91523 extends Lambda implements Function1<CategoricalDragAndDropAdapter.Payload, Boolean> {
         public static final C91523 INSTANCE = new C91523();
 
@@ -619,7 +634,7 @@ public final class SettingsChannelListAdapter extends CategoricalDragAndDropAdap
             return Boolean.valueOf(invoke2(payload));
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final boolean invoke2(CategoricalDragAndDropAdapter.Payload payload) {
             Intrinsics3.checkNotNullParameter(payload, "item");
             int type = payload.getType();
@@ -633,8 +648,8 @@ public final class SettingsChannelListAdapter extends CategoricalDragAndDropAdap
         }
     }
 
-    /* compiled from: SettingsChannelListAdapter.kt */
-    /* renamed from: com.discord.widgets.servers.SettingsChannelListAdapter$setPositionUpdateListener$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.SettingsChannelListAdapter$setPositionUpdateListener$1 */
+    /* JADX INFO: compiled from: SettingsChannelListAdapter.kt */
     public static final class C91531 extends Lambda implements Function1<Map<Long, ? extends UpdatedPosition>, Unit> {
         public final /* synthetic */ Action1 $onPositionUpdateListener;
 
@@ -650,7 +665,7 @@ public final class SettingsChannelListAdapter extends CategoricalDragAndDropAdap
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Map<Long, UpdatedPosition> map) {
             Intrinsics3.checkNotNullParameter(map, "map");
             this.$onPositionUpdateListener.call(map);

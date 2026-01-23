@@ -5,8 +5,8 @@ import androidx.annotation.Nullable;
 import androidx.annotation.RestrictTo;
 import java.util.concurrent.Executor;
 
+/* JADX INFO: loaded from: classes.dex */
 @RestrictTo({RestrictTo.Scope.LIBRARY_GROUP_PREFIX})
-/* loaded from: classes.dex */
 public class ArchTaskExecutor extends TaskExecutor {
     private static volatile ArchTaskExecutor sInstance;
 
@@ -22,7 +22,7 @@ public class ArchTaskExecutor extends TaskExecutor {
     @NonNull
     private static final Executor sIOThreadExecutor = new ExecutorC01392();
 
-    /* renamed from: androidx.arch.core.executor.ArchTaskExecutor$1 */
+    /* JADX INFO: renamed from: androidx.arch.core.executor.ArchTaskExecutor$1 */
     public static class ExecutorC01381 implements Executor {
         @Override // java.util.concurrent.Executor
         public void execute(Runnable runnable) {
@@ -30,7 +30,7 @@ public class ArchTaskExecutor extends TaskExecutor {
         }
     }
 
-    /* renamed from: androidx.arch.core.executor.ArchTaskExecutor$2 */
+    /* JADX INFO: renamed from: androidx.arch.core.executor.ArchTaskExecutor$2 */
     public static class ExecutorC01392 implements Executor {
         @Override // java.util.concurrent.Executor
         public void execute(Runnable runnable) {

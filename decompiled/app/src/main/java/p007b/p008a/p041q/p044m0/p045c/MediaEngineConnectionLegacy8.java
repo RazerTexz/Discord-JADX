@@ -9,9 +9,9 @@ import p507d0.p579g0.StringNumberConversions;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: MediaEngineConnectionLegacy.kt */
-/* renamed from: b.a.q.m0.c.h, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.a.q.m0.c.h, reason: use source file name */
+/* JADX INFO: compiled from: MediaEngineConnectionLegacy.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class MediaEngineConnectionLegacy8 extends Lambda implements Function1<MediaEngineConnection.InterfaceC5648d, Unit> {
     public final /* synthetic */ String $streamId;
     public final /* synthetic */ StreamParameters[] $streams;

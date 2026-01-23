@@ -25,17 +25,17 @@ import p637j0.p641k.Func1;
 import p658rx.Observable;
 import p658rx.functions.Func3;
 
-/* compiled from: ModeratorStartStageViewModel.kt */
-/* renamed from: com.discord.widgets.stage.start.ModeratorStartStageViewModel$Companion$observeStores$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.stage.start.ModeratorStartStageViewModel$Companion$observeStores$1, reason: use source file name */
+/* JADX INFO: compiled from: ModeratorStartStageViewModel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class ModeratorStartStageViewModel2<T, R> implements Func1<Channel, Observable<? extends ModeratorStartStageViewModel.StoreState>> {
     public final /* synthetic */ long $channelId;
     public final /* synthetic */ StoreGuildScheduledEvents $guildScheduledEventsStore;
     public final /* synthetic */ StorePermissions $permissionsStore;
     public final /* synthetic */ StoreVoiceParticipants $voiceParticipantsStore;
 
-    /* compiled from: ModeratorStartStageViewModel.kt */
-    /* renamed from: com.discord.widgets.stage.start.ModeratorStartStageViewModel$Companion$observeStores$1$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.stage.start.ModeratorStartStageViewModel$Companion$observeStores$1$1 */
+    /* JADX INFO: compiled from: ModeratorStartStageViewModel.kt */
     public static final class C100691<T1, T2, T3, R> implements Func3<Map<Long, ? extends StoreVoiceParticipants.VoiceUser>, List<? extends GuildScheduledEvent>, Long, ModeratorStartStageViewModel.StoreState> {
         public C100691() {
         }
@@ -45,7 +45,7 @@ public final class ModeratorStartStageViewModel2<T, R> implements Func1<Channel,
             return call2((Map<Long, StoreVoiceParticipants.VoiceUser>) map, (List<GuildScheduledEvent>) list, l);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final ModeratorStartStageViewModel.StoreState call2(Map<Long, StoreVoiceParticipants.VoiceUser> map, List<GuildScheduledEvent> list, Long l) {
             ArrayList arrayListM840a0 = outline.m840a0(list, "guildScheduledEvents");
             Iterator<T> it = list.iterator();
@@ -87,7 +87,7 @@ public final class ModeratorStartStageViewModel2<T, R> implements Func1<Channel,
         return call2(channel);
     }
 
-    /* renamed from: call, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
     public final Observable<? extends ModeratorStartStageViewModel.StoreState> call2(Channel channel) {
         return Observable.m11075i(ObservableExtensionsKt.leadingEdgeThrottle(this.$voiceParticipantsStore.get(channel.getId()), 250L, TimeUnit.MILLISECONDS), StoreGuildScheduledEvents.observeGuildScheduledEvents$default(this.$guildScheduledEventsStore, channel.getGuildId(), false, 2, null), this.$permissionsStore.observePermissionsForChannel(channel.getId()), new C100691());
     }

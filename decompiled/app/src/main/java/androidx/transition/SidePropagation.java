@@ -5,7 +5,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import androidx.core.view.ViewCompat;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class SidePropagation extends VisibilityPropagation {
     private float mPropagationSpeed = 3.0f;
     private int mSide = 80;
@@ -79,7 +79,7 @@ public class SidePropagation extends VisibilityPropagation {
         if (duration < 0) {
             duration = 300;
         }
-        return Math.round(((duration * i) / this.mPropagationSpeed) * fDistance);
+        return Math.round(((duration * ((long) i)) / this.mPropagationSpeed) * fDistance);
     }
 
     public void setPropagationSpeed(float f) {

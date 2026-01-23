@@ -5,7 +5,7 @@ import androidx.annotation.Nullable;
 import androidx.sqlite.p006db.SupportSQLiteOpenHelper;
 import java.io.File;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class SQLiteCopyOpenHelperFactory implements SupportSQLiteOpenHelper.Factory {
 
     @Nullable

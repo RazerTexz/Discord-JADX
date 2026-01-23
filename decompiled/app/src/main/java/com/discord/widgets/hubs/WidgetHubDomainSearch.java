@@ -44,23 +44,23 @@ import p507d0.p592z.p594d.Lambda;
 import p507d0.p592z.p594d.Reflection2;
 import p658rx.Observable;
 
-/* compiled from: WidgetHubDomainSearch.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetHubDomainSearch.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetHubDomainSearch extends AppFragment {
     public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetHubDomainSearch.class, "binding", "getBinding()Lcom/discord/databinding/WidgetHubDomainSearchBinding;", 0)};
     private final SimpleRecyclerAdapter<WidgetHubDomains2, WidgetHubDomains4> adapter;
 
-    /* renamed from: args$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: args$delegate, reason: from kotlin metadata */
     private final Lazy args;
 
-    /* renamed from: binding$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
 
-    /* renamed from: viewModel$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: viewModel$delegate, reason: from kotlin metadata */
     private final Lazy viewModel;
 
-    /* compiled from: WidgetHubDomainSearch.kt */
-    /* renamed from: com.discord.widgets.hubs.WidgetHubDomainSearch$onViewBound$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.hubs.WidgetHubDomainSearch$onViewBound$2 */
+    /* JADX INFO: compiled from: WidgetHubDomainSearch.kt */
     public static final class ViewOnClickListenerC90202 implements View.OnClickListener {
         public ViewOnClickListenerC90202() {
         }
@@ -76,8 +76,8 @@ public final class WidgetHubDomainSearch extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetHubDomainSearch.kt */
-    /* renamed from: com.discord.widgets.hubs.WidgetHubDomainSearch$onViewBound$3 */
+    /* JADX INFO: renamed from: com.discord.widgets.hubs.WidgetHubDomainSearch$onViewBound$3 */
+    /* JADX INFO: compiled from: WidgetHubDomainSearch.kt */
     public static final class ViewOnClickListenerC90213 implements View.OnClickListener {
         public ViewOnClickListenerC90213() {
         }
@@ -88,8 +88,8 @@ public final class WidgetHubDomainSearch extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetHubDomainSearch.kt */
-    /* renamed from: com.discord.widgets.hubs.WidgetHubDomainSearch$onViewBound$4 */
+    /* JADX INFO: renamed from: com.discord.widgets.hubs.WidgetHubDomainSearch$onViewBound$4 */
+    /* JADX INFO: compiled from: WidgetHubDomainSearch.kt */
     public static final class C90224 extends Lambda implements Function1<TextView, Unit> {
         public C90224() {
             super(1);
@@ -101,19 +101,19 @@ public final class WidgetHubDomainSearch extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(TextView textView) {
             Intrinsics3.checkNotNullParameter(textView, "it");
             WidgetHubDomainSearch.access$searchForGuild(WidgetHubDomainSearch.this);
         }
     }
 
-    /* compiled from: WidgetHubDomainSearch.kt */
-    /* renamed from: com.discord.widgets.hubs.WidgetHubDomainSearch$onViewBound$5 */
+    /* JADX INFO: renamed from: com.discord.widgets.hubs.WidgetHubDomainSearch$onViewBound$5 */
+    /* JADX INFO: compiled from: WidgetHubDomainSearch.kt */
     public static final class C90235 extends Lambda implements Function1<RenderContext, Unit> {
 
-        /* compiled from: WidgetHubDomainSearch.kt */
-        /* renamed from: com.discord.widgets.hubs.WidgetHubDomainSearch$onViewBound$5$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.widgets.hubs.WidgetHubDomainSearch$onViewBound$5$1, reason: invalid class name */
+        /* JADX INFO: compiled from: WidgetHubDomainSearch.kt */
         public static final class AnonymousClass1 extends Lambda implements Function1<View, Unit> {
             public AnonymousClass1() {
                 super(1);
@@ -125,7 +125,7 @@ public final class WidgetHubDomainSearch extends AppFragment {
                 return Unit.f27425a;
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2(View view) {
                 Intrinsics3.checkNotNullParameter(view, "it");
                 AppScreen2 appScreen2 = AppScreen2.f524g;
@@ -146,15 +146,15 @@ public final class WidgetHubDomainSearch extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(RenderContext renderContext) {
             Intrinsics3.checkNotNullParameter(renderContext, "$receiver");
             renderContext.m8423b("onJoinWaitlist", new AnonymousClass1());
         }
     }
 
-    /* compiled from: WidgetHubDomainSearch.kt */
-    /* renamed from: com.discord.widgets.hubs.WidgetHubDomainSearch$onViewBoundOrOnResume$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.hubs.WidgetHubDomainSearch$onViewBoundOrOnResume$1 */
+    /* JADX INFO: compiled from: WidgetHubDomainSearch.kt */
     public static final class C90241 extends Lambda implements Function1<WidgetHubDomainsViewModel2, Unit> {
         public C90241() {
             super(1);
@@ -166,7 +166,7 @@ public final class WidgetHubDomainSearch extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(WidgetHubDomainsViewModel2 widgetHubDomainsViewModel2) {
             WidgetHubDomainSearch widgetHubDomainSearch = WidgetHubDomainSearch.this;
             Intrinsics3.checkNotNullExpressionValue(widgetHubDomainsViewModel2, "viewState");
@@ -174,8 +174,8 @@ public final class WidgetHubDomainSearch extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetHubDomainSearch.kt */
-    /* renamed from: com.discord.widgets.hubs.WidgetHubDomainSearch$updateView$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.hubs.WidgetHubDomainSearch$updateView$1 */
+    /* JADX INFO: compiled from: WidgetHubDomainSearch.kt */
     public static final class C90251 extends Lambda implements Function1<RestCallState6<? extends Object>, Unit> {
         public final /* synthetic */ Context $context;
         public final /* synthetic */ WidgetHubDomainsViewModel2 $state;
@@ -193,7 +193,7 @@ public final class WidgetHubDomainSearch extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(RestCallState6<? extends Object> restCallState6) {
             Intrinsics3.checkNotNullParameter(restCallState6, "it");
             AppScreen2.m158g(AppScreen2.f524g, WidgetHubDomainSearch.this.getParentFragmentManager(), this.$context, WidgetHubAuthentication.class, 0, true, null, new WidgetHubAuthenticationlViewModel2(WidgetHubDomainSearch.this.getArgs().getEmail(), this.$state.getSelectedGuildId()), 40);

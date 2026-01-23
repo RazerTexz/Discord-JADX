@@ -6,26 +6,26 @@ import androidx.annotation.Nullable;
 import java.util.Arrays;
 import p007b.p225i.p226a.p242c.p259f3.Util2;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public final class ChapterTocFrame extends Id3Frame {
     public static final Parcelable.Creator<ChapterTocFrame> CREATOR = new C10729a();
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final String f19977k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final boolean f19978l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public final boolean f19979m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public final String[] f19980n;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public final Id3Frame[] f19981o;
 
-    /* renamed from: com.google.android.exoplayer2.metadata.id3.ChapterTocFrame$a */
+    /* JADX INFO: renamed from: com.google.android.exoplayer2.metadata.id3.ChapterTocFrame$a */
     public class C10729a implements Parcelable.Creator<ChapterTocFrame> {
         @Override // android.os.Parcelable.Creator
         public ChapterTocFrame createFromParcel(Parcel parcel) {

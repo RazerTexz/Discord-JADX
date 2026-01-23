@@ -20,8 +20,8 @@ import p007b.p008a.p025i.GuildRoleChipBinding;
 import p507d0.p580t.Collections2;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: RolesListView.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: RolesListView.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class RolesListView extends ChipGroup {
     private List<GuildRole> roles;
 

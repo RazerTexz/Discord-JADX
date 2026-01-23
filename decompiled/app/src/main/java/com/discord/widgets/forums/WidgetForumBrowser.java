@@ -56,14 +56,14 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 import p507d0.p592z.p594d.Reflection2;
 
-/* compiled from: WidgetForumBrowser.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetForumBrowser.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetForumBrowser extends AppFragment {
     private static final String CLOSE_FORUM_GUIDELINES_NOOP_REQUEST_KEY = "CLOSE_FORUM_GUIDELINES_NOOP_REQUEST_KEY";
     private static final String CLOSE_FORUM_GUIDELINES_REQUEST_KEY = "CLOSE_FORUM_GUIDELINES_REQUEST_KEY";
     private final List<ForumBrowserItem> adapterDataReference;
 
-    /* renamed from: binding$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
     private WidgetForumBrowserAdapter forumBrowserAdapter;
     private ForumBrowserLayoutManager forumBrowserLayoutManager;
@@ -71,14 +71,14 @@ public final class WidgetForumBrowser extends AppFragment {
     private WidgetHomePanelNsfw panelNsfw;
     private boolean panelNsfwHidden;
 
-    /* renamed from: viewModel$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: viewModel$delegate, reason: from kotlin metadata */
     private final Lazy viewModel;
     public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetForumBrowser.class, "binding", "getBinding()Lcom/discord/databinding/WidgetForumBrowserBinding;", 0)};
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
 
-    /* compiled from: WidgetForumBrowser.kt */
+    /* JADX INFO: compiled from: WidgetForumBrowser.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -94,8 +94,8 @@ public final class WidgetForumBrowser extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetForumBrowser.kt */
-    /* renamed from: com.discord.widgets.forums.WidgetForumBrowser$configureCreatePostButton$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.forums.WidgetForumBrowser$configureCreatePostButton$2 */
+    /* JADX INFO: compiled from: WidgetForumBrowser.kt */
     public static final class C83392 extends Lambda implements Function2<Long, Long, Unit> {
         public C83392() {
             super(2);
@@ -112,8 +112,8 @@ public final class WidgetForumBrowser extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetForumBrowser.kt */
-    /* renamed from: com.discord.widgets.forums.WidgetForumBrowser$handleViewState$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.forums.WidgetForumBrowser$handleViewState$1 */
+    /* JADX INFO: compiled from: WidgetForumBrowser.kt */
     public static final class C83411 extends Lambda implements Function1<Boolean, Unit> {
         public final /* synthetic */ WidgetForumBrowserViewModel.ViewState $viewState;
 
@@ -139,8 +139,8 @@ public final class WidgetForumBrowser extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetForumBrowser.kt */
-    /* renamed from: com.discord.widgets.forums.WidgetForumBrowser$onResume$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.forums.WidgetForumBrowser$onResume$1 */
+    /* JADX INFO: compiled from: WidgetForumBrowser.kt */
     public static final class C83421 extends Lambda implements Function1<WidgetForumBrowserViewModel.Event, Unit> {
         public C83421() {
             super(1);
@@ -152,15 +152,15 @@ public final class WidgetForumBrowser extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(WidgetForumBrowserViewModel.Event event) {
             Intrinsics3.checkNotNullParameter(event, "event");
             WidgetForumBrowser.access$handleEvent(WidgetForumBrowser.this, event);
         }
     }
 
-    /* compiled from: WidgetForumBrowser.kt */
-    /* renamed from: com.discord.widgets.forums.WidgetForumBrowser$onResume$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.forums.WidgetForumBrowser$onResume$2 */
+    /* JADX INFO: compiled from: WidgetForumBrowser.kt */
     public static final class C83432 extends Lambda implements Function1<WidgetForumBrowserViewModel.ViewState, Unit> {
         public C83432() {
             super(1);
@@ -172,15 +172,15 @@ public final class WidgetForumBrowser extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(WidgetForumBrowserViewModel.ViewState viewState) {
             Intrinsics3.checkNotNullParameter(viewState, "viewState");
             WidgetForumBrowser.access$handleViewState(WidgetForumBrowser.this, viewState);
         }
     }
 
-    /* compiled from: WidgetForumBrowser.kt */
-    /* renamed from: com.discord.widgets.forums.WidgetForumBrowser$onViewBound$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.forums.WidgetForumBrowser$onViewBound$1 */
+    /* JADX INFO: compiled from: WidgetForumBrowser.kt */
     public static final /* synthetic */ class C83441 extends FunctionReferenceImpl implements Function1<Channel, Unit> {
         public C83441(WidgetForumBrowser widgetForumBrowser) {
             super(1, widgetForumBrowser, WidgetForumBrowser.class, "openForumPost", "openForumPost(Lcom/discord/api/channel/Channel;)V", 0);
@@ -192,15 +192,15 @@ public final class WidgetForumBrowser extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Channel channel) {
             Intrinsics3.checkNotNullParameter(channel, "p1");
             WidgetForumBrowser.access$openForumPost((WidgetForumBrowser) this.receiver, channel);
         }
     }
 
-    /* compiled from: WidgetForumBrowser.kt */
-    /* renamed from: com.discord.widgets.forums.WidgetForumBrowser$onViewBound$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.forums.WidgetForumBrowser$onViewBound$2 */
+    /* JADX INFO: compiled from: WidgetForumBrowser.kt */
     public static final /* synthetic */ class C83452 extends FunctionReferenceImpl implements Function1<Channel, Unit> {
         public C83452(WidgetForumBrowser widgetForumBrowser) {
             super(1, widgetForumBrowser, WidgetForumBrowser.class, "openForumPostOptions", "openForumPostOptions(Lcom/discord/api/channel/Channel;)V", 0);
@@ -212,15 +212,15 @@ public final class WidgetForumBrowser extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Channel channel) {
             Intrinsics3.checkNotNullParameter(channel, "p1");
             WidgetForumBrowser.access$openForumPostOptions((WidgetForumBrowser) this.receiver, channel);
         }
     }
 
-    /* compiled from: WidgetForumBrowser.kt */
-    /* renamed from: com.discord.widgets.forums.WidgetForumBrowser$setWindowInsetListener$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.forums.WidgetForumBrowser$setWindowInsetListener$1 */
+    /* JADX INFO: compiled from: WidgetForumBrowser.kt */
     public static final class C83461 implements OnApplyWindowInsetsListener {
         public static final C83461 INSTANCE = new C83461();
 

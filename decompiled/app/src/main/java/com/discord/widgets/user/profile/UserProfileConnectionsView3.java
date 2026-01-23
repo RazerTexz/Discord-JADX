@@ -5,9 +5,9 @@ import com.discord.utilities.analytics.AnalyticsTracker;
 import com.discord.utilities.platform.Platform;
 import com.discord.widgets.user.profile.UserProfileConnectionsView;
 
-/* compiled from: UserProfileConnectionsView.kt */
-/* renamed from: com.discord.widgets.user.profile.UserProfileConnectionsView$ViewHolder$onConfigure$1, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: com.discord.widgets.user.profile.UserProfileConnectionsView$ViewHolder$onConfigure$1, reason: use source file name */
+/* JADX INFO: compiled from: UserProfileConnectionsView.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class UserProfileConnectionsView3 implements View.OnClickListener {
     public final /* synthetic */ Platform $platform;
     public final /* synthetic */ String $profileUrl;

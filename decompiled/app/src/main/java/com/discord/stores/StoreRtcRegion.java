@@ -22,8 +22,8 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 import p658rx.Observable;
 
-/* compiled from: StoreRtcRegion.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: StoreRtcRegion.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class StoreRtcRegion {
     private static final int LATENCY_TEST_CACHE_TTL_MS = 86400000;
     private static final int MAX_LATENCY_TEST_CONN_OPEN_JITTER_MS = 30000;
@@ -36,8 +36,8 @@ public final class StoreRtcRegion {
     private final StoreExperiments storeExperiments;
     private final StoreMediaEngine storeMediaEngine;
 
-    /* compiled from: StoreRtcRegion.kt */
-    /* renamed from: com.discord.stores.StoreRtcRegion$fetchRtcLatencyTestRegionsIps$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreRtcRegion$fetchRtcLatencyTestRegionsIps$1 */
+    /* JADX INFO: compiled from: StoreRtcRegion.kt */
     public static final class C63741 extends Lambda implements Function1<List<? extends ModelRtcLatencyRegion>, Unit> {
         public C63741() {
             super(1);
@@ -49,20 +49,20 @@ public final class StoreRtcRegion {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(List<ModelRtcLatencyRegion> list) {
             Intrinsics3.checkNotNullParameter(list, "it");
             StoreRtcRegion.access$maybePerformLatencyTest(StoreRtcRegion.this, list);
         }
     }
 
-    /* compiled from: StoreRtcRegion.kt */
-    /* renamed from: com.discord.stores.StoreRtcRegion$maybePerformLatencyTest$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreRtcRegion$maybePerformLatencyTest$1 */
+    /* JADX INFO: compiled from: StoreRtcRegion.kt */
     public static final class C63751 extends Lambda implements Function0<Unit> {
         public final /* synthetic */ List $regionsWithIps;
 
-        /* compiled from: StoreRtcRegion.kt */
-        /* renamed from: com.discord.stores.StoreRtcRegion$maybePerformLatencyTest$1$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.stores.StoreRtcRegion$maybePerformLatencyTest$1$1, reason: invalid class name */
+        /* JADX INFO: compiled from: StoreRtcRegion.kt */
         public static final class AnonymousClass1 extends Lambda implements Function1<List<? extends String>, Unit> {
             public final /* synthetic */ List $newGeoRankedRegions;
             public final /* synthetic */ long $timeNowMs;
@@ -80,7 +80,7 @@ public final class StoreRtcRegion {
                 return Unit.f27425a;
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2(List<String> list) {
                 Intrinsics3.checkNotNullParameter(list, "latencyRankedRegions");
                 AppLog.m8358i("RTC region latency test ranking is " + list);
@@ -100,7 +100,7 @@ public final class StoreRtcRegion {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             List list = this.$regionsWithIps;
             ArrayList arrayList = new ArrayList(Iterables2.collectionSizeOrDefault(list, 10));

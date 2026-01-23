@@ -12,13 +12,13 @@ import kotlin.jvm.internal.DefaultConstructorMarker;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: RoundedCoordinatorLayout.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: RoundedCoordinatorLayout.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class RoundedCoordinatorLayout extends CoordinatorLayout {
     private final RoundedCornerViewCoordinator roundedViewCoordinator;
 
-    /* compiled from: RoundedCoordinatorLayout.kt */
-    /* renamed from: com.discord.utilities.view.rounded.RoundedCoordinatorLayout$draw$1 */
+    /* JADX INFO: renamed from: com.discord.utilities.view.rounded.RoundedCoordinatorLayout$draw$1 */
+    /* JADX INFO: compiled from: RoundedCoordinatorLayout.kt */
     public static final class C70091 extends Lambda implements Function1<Canvas, Unit> {
         public C70091() {
             super(1);
@@ -30,7 +30,7 @@ public final class RoundedCoordinatorLayout extends CoordinatorLayout {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Canvas canvas) {
             Intrinsics3.checkNotNullParameter(canvas, "it");
             RoundedCoordinatorLayout.m11399access$draw$s747643027(RoundedCoordinatorLayout.this, canvas);
@@ -44,7 +44,7 @@ public final class RoundedCoordinatorLayout extends CoordinatorLayout {
         this.roundedViewCoordinator = new RoundedCornerViewCoordinator();
     }
 
-    /* renamed from: access$draw$s-747643027, reason: not valid java name */
+    /* JADX INFO: renamed from: access$draw$s-747643027, reason: not valid java name */
     public static final /* synthetic */ void m11399access$draw$s747643027(RoundedCoordinatorLayout roundedCoordinatorLayout, Canvas canvas) {
         super.draw(canvas);
     }

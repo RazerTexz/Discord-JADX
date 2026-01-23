@@ -11,9 +11,9 @@ import p507d0.p580t.Iterables2;
 import p507d0.p580t.Maps6;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ApplicationCommand.kt */
-/* renamed from: com.discord.models.commands.ApplicationSubCommand, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: com.discord.models.commands.ApplicationSubCommand, reason: use source file name */
+/* JADX INFO: compiled from: ApplicationCommand.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class ApplicationCommand3 extends ApplicationCommand {
     private final String parentGroupName;
     private final ApplicationCommand rootCommand;

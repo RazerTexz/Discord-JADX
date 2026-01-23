@@ -3,12 +3,12 @@ package p007b.p109f.p132g.p133a.p134a.p135g;
 import android.util.SparseIntArray;
 import androidx.core.view.InputDeviceCompat;
 
-/* compiled from: DebugOverlayImageOriginColor.java */
-/* renamed from: b.f.g.a.a.g.a, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.f.g.a.a.g.a, reason: use source file name */
+/* JADX INFO: compiled from: DebugOverlayImageOriginColor.java */
+/* JADX INFO: loaded from: classes.dex */
 public class DebugOverlayImageOriginColor {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final SparseIntArray f3197a;
 
     static {

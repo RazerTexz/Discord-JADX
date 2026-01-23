@@ -75,15 +75,15 @@ import p007b.p195g.p196a.p205c.p219i0.TokenBuffer;
 import p007b.p195g.p196a.p205c.p220y.JsonSerialize;
 import p007b.p195g.p196a.p205c.p221z.SerializerFactoryConfig;
 
-/* compiled from: BasicSerializerFactory.java */
-/* renamed from: b.g.a.c.g0.b, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.g.a.c.g0.b, reason: use source file name */
+/* JADX INFO: compiled from: BasicSerializerFactory.java */
+/* JADX INFO: loaded from: classes3.dex */
 public abstract class BasicSerializerFactory extends SerializerFactory2 implements Serializable {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static final HashMap<String, JsonSerializer<?>> f4788j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public static final HashMap<String, Class<? extends JsonSerializer<?>>> f4789k;
     public final SerializerFactoryConfig _factoryConfig;
 
@@ -159,7 +159,7 @@ public abstract class BasicSerializerFactory extends SerializerFactory2 implemen
     /* JADX WARN: Removed duplicated region for block: B:117:0x01a8 A[PHI: r3
       0x01a8: PHI (r3v6 b.g.a.c.n<java.lang.Object>) = (r3v5 b.g.a.c.n<java.lang.Object>), (r3v9 b.g.a.c.n<java.lang.Object>) binds: [B:20:0x0046, B:86:0x0121] A[DONT_GENERATE, DONT_INLINE]] */
     @Override // p007b.p195g.p196a.p205c.p215g0.SerializerFactory2
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
@@ -288,7 +288,7 @@ public abstract class BasicSerializerFactory extends SerializerFactory2 implemen
     }
 
     @Override // p007b.p195g.p196a.p205c.p215g0.SerializerFactory2
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public TypeSerializer mo1972c(SerializationConfig serializationConfig, JavaType javaType) {
         ArrayList arrayList;
         AnnotatedClass annotatedClass = ((BasicBeanDescription) serializationConfig.m2277o(javaType._class)).f4736f;
@@ -319,7 +319,7 @@ public abstract class BasicSerializerFactory extends SerializerFactory2 implemen
         return typeResolverBuilderMo1760P.mo1953e(serializationConfig, javaType, arrayList);
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public JsonInclude.b m1973d(SerializerProvider serializerProvider, BeanDescription beanDescription, JavaType javaType, Class<?> cls) throws JsonMappingException {
         SerializationConfig serializationConfig = serializerProvider._config;
         JsonInclude.b bVarMo1814c = beanDescription.mo1814c(serializationConfig._configOverrides._defaultInclusion);
@@ -328,7 +328,7 @@ public abstract class BasicSerializerFactory extends SerializerFactory2 implemen
         return bVarMo1814c;
     }
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final JsonSerializer<?> m1974e(SerializerProvider serializerProvider, JavaType javaType, BeanDescription beanDescription) throws JsonMappingException {
         if (JsonSerializable.class.isAssignableFrom(javaType._class)) {
             return SerializableSerializer.f4853k;
@@ -352,7 +352,7 @@ public abstract class BasicSerializerFactory extends SerializerFactory2 implemen
         return new JsonValueSerializer(annotatedMemberMo1813b, typeSerializerMo1972c, jsonSerializerM1975f);
     }
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public JsonSerializer<Object> m1975f(SerializerProvider serializerProvider, Annotated annotated) throws JsonMappingException {
         Object objMo1756L = serializerProvider.m2257v().mo1756L(annotated);
         if (objMo1756L == null) {
@@ -364,7 +364,7 @@ public abstract class BasicSerializerFactory extends SerializerFactory2 implemen
         return converterM1939c == null ? jsonSerializerMo2000H : new StdDelegatingSerializer(converterM1939c, converterM1939c.m2197a(serializerProvider.mo1940d()), jsonSerializerMo2000H);
     }
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public boolean m1976g(SerializationConfig serializationConfig, BeanDescription beanDescription, TypeSerializer typeSerializer) {
         JsonSerialize.b bVarMo1755K = serializationConfig.m2267e().mo1755K(((BasicBeanDescription) beanDescription).f4736f);
         return (bVarMo1755K == null || bVarMo1755K == JsonSerialize.b.DEFAULT_TYPING) ? serializationConfig.m2279q(MapperFeature.USE_STATIC_TYPING) : bVarMo1755K == JsonSerialize.b.STATIC;

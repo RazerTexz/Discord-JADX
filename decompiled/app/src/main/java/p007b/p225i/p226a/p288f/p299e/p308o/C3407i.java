@@ -10,24 +10,24 @@ import androidx.annotation.RecentlyNonNull;
 import java.lang.reflect.Method;
 import p007b.p225i.p226a.p288f.p299e.p310p.C3411b;
 
-/* compiled from: com.google.android.gms:play-services-basement@@17.6.0 */
-/* renamed from: b.i.a.f.e.o.i */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.e.o.i */
+/* JADX INFO: compiled from: com.google.android.gms:play-services-basement@@17.6.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public class C3407i {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     @Nullable
     public static final Method f9598a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     @Nullable
     public static final Method f9599b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     @Nullable
     public static final Method f9600c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     @Nullable
     public static final Method f9601d;
 
@@ -80,7 +80,7 @@ public class C3407i {
         }
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static boolean m4372a(@RecentlyNonNull Context context) {
         if (context == null || context.getPackageManager() == null) {
             return false;

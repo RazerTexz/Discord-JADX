@@ -18,18 +18,18 @@ import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 import p658rx.functions.Func0;
 
-/* compiled from: WidgetClientOutdated.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetClientOutdated.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetClientOutdated extends AppFragment {
     public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetClientOutdated.class, "binding", "getBinding()Lcom/discord/databinding/WidgetClientOutdatedBinding;", 0)};
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
 
-    /* renamed from: binding$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
 
-    /* compiled from: WidgetClientOutdated.kt */
+    /* JADX INFO: compiled from: WidgetClientOutdated.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -44,8 +44,8 @@ public final class WidgetClientOutdated extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetClientOutdated.kt */
-    /* renamed from: com.discord.widgets.client.WidgetClientOutdated$onViewCreated$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.client.WidgetClientOutdated$onViewCreated$1 */
+    /* JADX INFO: compiled from: WidgetClientOutdated.kt */
     public static final class ViewOnClickListenerC82031 implements View.OnClickListener {
         public static final ViewOnClickListenerC82031 INSTANCE = new ViewOnClickListenerC82031();
 
@@ -58,8 +58,8 @@ public final class WidgetClientOutdated extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetClientOutdated.kt */
-    /* renamed from: com.discord.widgets.client.WidgetClientOutdated$onViewCreated$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.client.WidgetClientOutdated$onViewCreated$2 */
+    /* JADX INFO: compiled from: WidgetClientOutdated.kt */
     public static final class C82042<R> implements Func0<Boolean> {
         public static final C82042 INSTANCE = new C82042();
 

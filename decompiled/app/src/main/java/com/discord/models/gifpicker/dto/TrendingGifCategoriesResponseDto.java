@@ -4,8 +4,8 @@ import java.util.List;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: TrendingGifCategoriesResponseDto.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: TrendingGifCategoriesResponseDto.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class TrendingGifCategoriesResponseDto {
     private final List<GifCategoryDto> categories;
     private final List<TrendingGifPreviewDto> gifs;

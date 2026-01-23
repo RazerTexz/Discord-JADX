@@ -6,9 +6,9 @@ import java.util.Objects;
 import kotlin.jvm.functions.Function0;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetChannelMembersList.kt */
-/* renamed from: com.discord.widgets.channels.memberlist.WidgetChannelMembersList$recycler$2, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.channels.memberlist.WidgetChannelMembersList$recycler$2, reason: use source file name */
+/* JADX INFO: compiled from: WidgetChannelMembersList.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetChannelMembersList2 extends Lambda implements Function0<RecyclerView> {
     public final /* synthetic */ WidgetChannelMembersList this$0;
 

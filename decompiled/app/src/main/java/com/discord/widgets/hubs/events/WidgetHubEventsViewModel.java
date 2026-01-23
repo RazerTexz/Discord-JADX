@@ -34,16 +34,16 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 import p658rx.Observable;
 
-/* compiled from: WidgetHubEventsViewModel.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetHubEventsViewModel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetHubEventsViewModel extends AppViewModel<WidgetHubEventsViewModel3> {
     private final StoreDirectories directoriesStore;
     private final long directoryChannelId;
     private final long guildId;
     private final StoreGuildScheduledEvents guildScheduledEventsStore;
 
-    /* compiled from: WidgetHubEventsViewModel.kt */
-    /* renamed from: com.discord.widgets.hubs.events.WidgetHubEventsViewModel$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.hubs.events.WidgetHubEventsViewModel$1 */
+    /* JADX INFO: compiled from: WidgetHubEventsViewModel.kt */
     public static final /* synthetic */ class C90551 extends FunctionReferenceImpl implements Function1<WidgetHubEventsViewModel3, Unit> {
         public C90551(WidgetHubEventsViewModel widgetHubEventsViewModel) {
             super(1, widgetHubEventsViewModel, WidgetHubEventsViewModel.class, "updateViewState", "updateViewState(Ljava/lang/Object;)V", 0);
@@ -55,15 +55,15 @@ public final class WidgetHubEventsViewModel extends AppViewModel<WidgetHubEvents
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(WidgetHubEventsViewModel3 widgetHubEventsViewModel3) {
             Intrinsics3.checkNotNullParameter(widgetHubEventsViewModel3, "p1");
             WidgetHubEventsViewModel.access$updateViewState((WidgetHubEventsViewModel) this.receiver, widgetHubEventsViewModel3);
         }
     }
 
-    /* compiled from: WidgetHubEventsViewModel.kt */
-    /* renamed from: com.discord.widgets.hubs.events.WidgetHubEventsViewModel$getObservableFromStores$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.hubs.events.WidgetHubEventsViewModel$getObservableFromStores$1 */
+    /* JADX INFO: compiled from: WidgetHubEventsViewModel.kt */
     public static final class C90561 extends Lambda implements Function0<WidgetHubEventsViewModel3> {
         public final /* synthetic */ StoreChannels $channelsStore;
         public final /* synthetic */ StoreDirectories $directoriesStore;

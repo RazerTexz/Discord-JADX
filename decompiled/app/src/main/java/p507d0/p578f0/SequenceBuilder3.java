@@ -8,17 +8,17 @@ import kotlin.sequences.Sequence;
 import p507d0.p584w.p585h.IntrinsicsJvm;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: SequenceBuilder.kt */
-/* renamed from: d0.f0.l, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.f0.l, reason: use source file name */
+/* JADX INFO: compiled from: SequenceBuilder.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public class SequenceBuilder3 {
 
     /* JADX INFO: Add missing generic type declarations: [T] */
-    /* compiled from: Sequences.kt */
-    /* renamed from: d0.f0.l$a */
+    /* JADX INFO: renamed from: d0.f0.l$a */
+    /* JADX INFO: compiled from: Sequences.kt */
     public static final class a<T> implements Sequence<T> {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final /* synthetic */ Function2 f25104a;
 
         public a(Function2 function2) {

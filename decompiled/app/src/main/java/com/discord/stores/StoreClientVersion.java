@@ -17,16 +17,16 @@ import p658rx.Observable;
 import p658rx.subjects.BehaviorSubject;
 import p658rx.subjects.SerializedSubject;
 
-/* compiled from: StoreClientVersion.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: StoreClientVersion.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class StoreClientVersion extends Store {
     private int clientMinVersion;
     private final int clientVersion = BuildConfig.VERSION_CODE;
     private final String clientMinVersionKey = "CLIENT_OUTDATED_KEY";
     private final SerializedSubject<Boolean, Boolean> clientOutdatedSubject = new SerializedSubject<>(BehaviorSubject.m11130l0(Boolean.FALSE));
 
-    /* compiled from: StoreClientVersion.kt */
-    /* renamed from: com.discord.stores.StoreClientVersion$init$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreClientVersion$init$1 */
+    /* JADX INFO: compiled from: StoreClientVersion.kt */
     public static final class C58471<T, R> implements Func1<Long, Observable<? extends Integer>> {
         public static final C58471 INSTANCE = new C58471();
 
@@ -35,14 +35,14 @@ public final class StoreClientVersion extends Store {
             return call2(l);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final Observable<? extends Integer> call2(Long l) {
             return RestAPI.INSTANCE.getApi().getClientVersion();
         }
     }
 
-    /* compiled from: StoreClientVersion.kt */
-    /* renamed from: com.discord.stores.StoreClientVersion$init$2 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreClientVersion$init$2 */
+    /* JADX INFO: compiled from: StoreClientVersion.kt */
     public static final /* synthetic */ class C58482 extends FunctionReferenceImpl implements Function1<Integer, Unit> {
         public C58482(StoreClientVersion storeClientVersion) {
             super(1, storeClientVersion, StoreClientVersion.class, "setClientMinVersion", "setClientMinVersion(I)V", 0);

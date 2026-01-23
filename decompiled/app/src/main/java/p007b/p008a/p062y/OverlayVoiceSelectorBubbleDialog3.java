@@ -4,7 +4,6 @@ import android.animation.Animator;
 import android.animation.AnimatorInflater;
 import android.content.Context;
 import android.content.res.Configuration;
-import android.content.res.Resources;
 import android.text.Editable;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -34,25 +33,25 @@ import p637j0.p641k.Func1;
 import p658rx.Observable;
 import p658rx.subjects.BehaviorSubject;
 
-/* compiled from: OverlayVoiceSelectorBubbleDialog.kt */
-/* renamed from: b.a.y.z, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: b.a.y.z, reason: use source file name */
+/* JADX INFO: compiled from: OverlayVoiceSelectorBubbleDialog.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class OverlayVoiceSelectorBubbleDialog3 extends OverlayAppDialog2 implements AppComponent {
 
-    /* renamed from: A */
+    /* JADX INFO: renamed from: A */
     public final WidgetGlobalSearchAdapter f2077A;
 
-    /* renamed from: B */
+    /* JADX INFO: renamed from: B */
     public final BehaviorSubject<String> f2078B;
 
-    /* renamed from: C */
+    /* JADX INFO: renamed from: C */
     public String f2079C;
 
-    /* renamed from: z */
+    /* JADX INFO: renamed from: z */
     public OverlayVoiceChannelSelectorBinding f2080z;
 
-    /* compiled from: OverlayVoiceSelectorBubbleDialog.kt */
-    /* renamed from: b.a.y.z$a */
+    /* JADX INFO: renamed from: b.a.y.z$a */
+    /* JADX INFO: compiled from: OverlayVoiceSelectorBubbleDialog.kt */
     public static final class a implements View.OnClickListener {
         public a() {
         }
@@ -63,8 +62,8 @@ public final class OverlayVoiceSelectorBubbleDialog3 extends OverlayAppDialog2 i
         }
     }
 
-    /* compiled from: OverlayVoiceSelectorBubbleDialog.kt */
-    /* renamed from: b.a.y.z$b */
+    /* JADX INFO: renamed from: b.a.y.z$b */
+    /* JADX INFO: compiled from: OverlayVoiceSelectorBubbleDialog.kt */
     public static final class b extends Lambda implements Function1<Editable, Unit> {
         public b() {
             super(1);
@@ -79,11 +78,11 @@ public final class OverlayVoiceSelectorBubbleDialog3 extends OverlayAppDialog2 i
         }
     }
 
-    /* compiled from: OverlayVoiceSelectorBubbleDialog.kt */
-    /* renamed from: b.a.y.z$c */
+    /* JADX INFO: renamed from: b.a.y.z$c */
+    /* JADX INFO: compiled from: OverlayVoiceSelectorBubbleDialog.kt */
     public static final class c<T, R> implements Func1<String, String> {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public static final c f2082j = new c();
 
         @Override // p637j0.p641k.Func1
@@ -92,8 +91,8 @@ public final class OverlayVoiceSelectorBubbleDialog3 extends OverlayAppDialog2 i
         }
     }
 
-    /* compiled from: OverlayVoiceSelectorBubbleDialog.kt */
-    /* renamed from: b.a.y.z$d */
+    /* JADX INFO: renamed from: b.a.y.z$d */
+    /* JADX INFO: compiled from: OverlayVoiceSelectorBubbleDialog.kt */
     public static final class d extends Lambda implements Function1<WidgetGlobalSearchModel, Unit> {
         public d() {
             super(1);
@@ -141,14 +140,14 @@ public final class OverlayVoiceSelectorBubbleDialog3 extends OverlayAppDialog2 i
     }
 
     @Override // p007b.p008a.p062y.OverlayAppDialog2
-    public Animator getClosingAnimator() throws Resources.NotFoundException {
+    public Animator getClosingAnimator() {
         Animator animatorLoadAnimator = AnimatorInflater.loadAnimator(getContext(), C5419R.animator.overlay_slide_down_fade_out);
         animatorLoadAnimator.setTarget(this.f2080z.f698c);
         Intrinsics3.checkNotNullExpressionValue(animatorLoadAnimator, "AnimatorInflater.loadAni…binding.dialogCard)\n    }");
         return animatorLoadAnimator;
     }
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public final void m393h() {
         this.f2080z.f697b.setOnClickListener(new a());
         TextInputLayout textInputLayout = this.f2080z.f700e;
@@ -172,7 +171,7 @@ public final class OverlayVoiceSelectorBubbleDialog3 extends OverlayAppDialog2 i
     }
 
     @Override // android.view.ViewGroup, android.view.View
-    public void onAttachedToWindow() throws Resources.NotFoundException {
+    public void onAttachedToWindow() {
         super.onAttachedToWindow();
         m393h();
         Animator animatorLoadAnimator = AnimatorInflater.loadAnimator(getContext(), C5419R.animator.overlay_slide_up_fade_in);

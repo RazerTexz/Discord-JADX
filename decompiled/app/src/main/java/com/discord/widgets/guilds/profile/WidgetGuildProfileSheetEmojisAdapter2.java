@@ -4,9 +4,9 @@ import android.view.View;
 import androidx.recyclerview.widget.RecyclerView;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: WidgetGuildProfileSheetEmojisAdapter.kt */
-/* renamed from: com.discord.widgets.guilds.profile.BaseEmojiViewHolder, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.guilds.profile.BaseEmojiViewHolder, reason: use source file name */
+/* JADX INFO: compiled from: WidgetGuildProfileSheetEmojisAdapter.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public class WidgetGuildProfileSheetEmojisAdapter2 extends RecyclerView.ViewHolder {
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public WidgetGuildProfileSheetEmojisAdapter2(View view) {

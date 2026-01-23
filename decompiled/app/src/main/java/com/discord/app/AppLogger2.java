@@ -8,18 +8,18 @@ import p507d0.p513e0.KProperty3;
 import p507d0.p580t.Collections2;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: AppLogger.kt */
-/* renamed from: com.discord.app.LoggingConfig, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: com.discord.app.LoggingConfig, reason: use source file name */
+/* JADX INFO: compiled from: AppLogger.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class AppLogger2 {
 
-    /* renamed from: a, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: a, reason: from kotlin metadata */
     public final boolean autoLogImpressionOnChanged;
 
-    /* renamed from: b, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: b, reason: from kotlin metadata */
     public final List<KProperty3<?, ?>> autoLogImpressionProperties;
 
-    /* renamed from: c, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: c, reason: from kotlin metadata */
     public final Function0<AnalyticsSchema> impressionSchemaProvider;
 
     public AppLogger2() {

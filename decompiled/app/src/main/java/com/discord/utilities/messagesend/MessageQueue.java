@@ -43,8 +43,8 @@ import p658rx.Observable;
 import p658rx.Subscription;
 import p658rx.functions.Action1;
 
-/* compiled from: MessageQueue.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: MessageQueue.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class MessageQueue {
     private static final Companion Companion = new Companion(null);
 
@@ -65,7 +65,7 @@ public final class MessageQueue {
     private final ArrayDeque<MessageQueue3> queue;
     private Subscription retrySubscription;
 
-    /* compiled from: MessageQueue.kt */
+    /* JADX INFO: compiled from: MessageQueue.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -75,7 +75,7 @@ public final class MessageQueue {
         }
     }
 
-    /* compiled from: MessageQueue.kt */
+    /* JADX INFO: compiled from: MessageQueue.kt */
     public static final class DrainListener {
         private AtomicBoolean isCompleted;
         private final Function1<MessageQueue4, Unit> onCompleted;
@@ -95,7 +95,7 @@ public final class MessageQueue {
         }
     }
 
-    /* compiled from: MessageQueue.kt */
+    /* JADX INFO: compiled from: MessageQueue.kt */
     public static final class InflightRequest {
         private final MessageQueue3 baseRequest;
         private final DrainListener drainListener;
@@ -123,8 +123,8 @@ public final class MessageQueue {
         }
     }
 
-    /* compiled from: MessageQueue.kt */
-    /* renamed from: com.discord.utilities.messagesend.MessageQueue$cancel$1 */
+    /* JADX INFO: renamed from: com.discord.utilities.messagesend.MessageQueue$cancel$1 */
+    /* JADX INFO: compiled from: MessageQueue.kt */
     public static final class RunnableC67951 implements Runnable {
         public final /* synthetic */ String $requestId;
 
@@ -161,8 +161,8 @@ public final class MessageQueue {
         }
     }
 
-    /* compiled from: MessageQueue.kt */
-    /* renamed from: com.discord.utilities.messagesend.MessageQueue$doEdit$2 */
+    /* JADX INFO: renamed from: com.discord.utilities.messagesend.MessageQueue$doEdit$2 */
+    /* JADX INFO: compiled from: MessageQueue.kt */
     public static final class C67962 extends Lambda implements Function1<Message, Unit> {
         public final /* synthetic */ DrainListener $drainListener;
 
@@ -178,15 +178,15 @@ public final class MessageQueue {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Message message) {
             Intrinsics3.checkNotNullParameter(message, "message");
             MessageQueue.access$handleSuccess(MessageQueue.this, message, this.$drainListener);
         }
     }
 
-    /* compiled from: MessageQueue.kt */
-    /* renamed from: com.discord.utilities.messagesend.MessageQueue$doEdit$3 */
+    /* JADX INFO: renamed from: com.discord.utilities.messagesend.MessageQueue$doEdit$3 */
+    /* JADX INFO: compiled from: MessageQueue.kt */
     public static final class C67973 extends Lambda implements Function1<Error, Unit> {
         public final /* synthetic */ DrainListener $drainListener;
 
@@ -202,15 +202,15 @@ public final class MessageQueue {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Error error) {
             Intrinsics3.checkNotNullParameter(error, "it");
             MessageQueue.handleError$default(MessageQueue.this, error, this.$drainListener, null, 4, null);
         }
     }
 
-    /* compiled from: MessageQueue.kt */
-    /* renamed from: com.discord.utilities.messagesend.MessageQueue$doEdit$4 */
+    /* JADX INFO: renamed from: com.discord.utilities.messagesend.MessageQueue$doEdit$4 */
+    /* JADX INFO: compiled from: MessageQueue.kt */
     public static final class C67984 extends Lambda implements Function1<Subscription, Unit> {
         public final /* synthetic */ DrainListener $drainListener;
         public final /* synthetic */ MessageQueue3.Edit $editRequest;
@@ -228,15 +228,15 @@ public final class MessageQueue {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Subscription subscription) {
             Intrinsics3.checkNotNullParameter(subscription, Traits.Payment.Type.SUBSCRIPTION);
             MessageQueue.access$setInFlightRequest$p(MessageQueue.this, new InflightRequest(this.$editRequest, subscription, this.$drainListener));
         }
     }
 
-    /* compiled from: MessageQueue.kt */
-    /* renamed from: com.discord.utilities.messagesend.MessageQueue$doSend$1 */
+    /* JADX INFO: renamed from: com.discord.utilities.messagesend.MessageQueue$doSend$1 */
+    /* JADX INFO: compiled from: MessageQueue.kt */
     public static final class C67991<T> implements Action1<SendUtils.SendPayload> {
         public final /* synthetic */ MessageQueue3.Send $request;
 
@@ -249,7 +249,7 @@ public final class MessageQueue {
             call2(sendPayload);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final void call2(SendUtils.SendPayload sendPayload) {
             if (sendPayload instanceof SendUtils.SendPayload.Preprocessing) {
                 this.$request.getOnPreprocessing().invoke(sendPayload);
@@ -262,8 +262,8 @@ public final class MessageQueue {
         }
     }
 
-    /* compiled from: MessageQueue.kt */
-    /* renamed from: com.discord.utilities.messagesend.MessageQueue$doSend$2 */
+    /* JADX INFO: renamed from: com.discord.utilities.messagesend.MessageQueue$doSend$2 */
+    /* JADX INFO: compiled from: MessageQueue.kt */
     public static final class C68002<T, R> implements Func1<SendUtils.SendPayload.ReadyToSend, Observable<? extends Message>> {
         public final /* synthetic */ com.discord.models.message.Message $message;
 
@@ -276,7 +276,7 @@ public final class MessageQueue {
             return call2(readyToSend);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final Observable<? extends Message> call2(SendUtils.SendPayload.ReadyToSend readyToSend) {
             List<SendUtils.FileUpload> uploads = readyToSend.getUploads();
             ArrayList arrayList = new ArrayList(Iterables2.collectionSizeOrDefault(uploads, 10));
@@ -296,8 +296,8 @@ public final class MessageQueue {
         }
     }
 
-    /* compiled from: MessageQueue.kt */
-    /* renamed from: com.discord.utilities.messagesend.MessageQueue$doSend$3 */
+    /* JADX INFO: renamed from: com.discord.utilities.messagesend.MessageQueue$doSend$3 */
+    /* JADX INFO: compiled from: MessageQueue.kt */
     public static final class C68013 extends Lambda implements Function1<Message, Unit> {
         public final /* synthetic */ DrainListener $drainListener;
 
@@ -313,7 +313,7 @@ public final class MessageQueue {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Message message) {
             MessageQueue messageQueue = MessageQueue.this;
             Intrinsics3.checkNotNullExpressionValue(message, "resultMessage");
@@ -321,8 +321,8 @@ public final class MessageQueue {
         }
     }
 
-    /* compiled from: MessageQueue.kt */
-    /* renamed from: com.discord.utilities.messagesend.MessageQueue$doSend$4 */
+    /* JADX INFO: renamed from: com.discord.utilities.messagesend.MessageQueue$doSend$4 */
+    /* JADX INFO: compiled from: MessageQueue.kt */
     public static final class C68024 extends Lambda implements Function1<Error, Unit> {
         public final /* synthetic */ DrainListener $drainListener;
         public final /* synthetic */ com.discord.models.message.Message $message;
@@ -340,15 +340,15 @@ public final class MessageQueue {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Error error) {
             Intrinsics3.checkNotNullParameter(error, "it");
             MessageQueue.access$handleError(MessageQueue.this, error, this.$drainListener, this.$message);
         }
     }
 
-    /* compiled from: MessageQueue.kt */
-    /* renamed from: com.discord.utilities.messagesend.MessageQueue$doSend$5 */
+    /* JADX INFO: renamed from: com.discord.utilities.messagesend.MessageQueue$doSend$5 */
+    /* JADX INFO: compiled from: MessageQueue.kt */
     public static final class C68035 extends Lambda implements Function1<Subscription, Unit> {
         public final /* synthetic */ DrainListener $drainListener;
         public final /* synthetic */ MessageQueue3.Send $request;
@@ -366,15 +366,15 @@ public final class MessageQueue {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Subscription subscription) {
             Intrinsics3.checkNotNullParameter(subscription, Traits.Payment.Type.SUBSCRIPTION);
             MessageQueue.access$setInFlightRequest$p(MessageQueue.this, new InflightRequest(this.$request, subscription, this.$drainListener));
         }
     }
 
-    /* compiled from: MessageQueue.kt */
-    /* renamed from: com.discord.utilities.messagesend.MessageQueue$doSendApplicationCommand$1 */
+    /* JADX INFO: renamed from: com.discord.utilities.messagesend.MessageQueue$doSendApplicationCommand$1 */
+    /* JADX INFO: compiled from: MessageQueue.kt */
     public static final class C68041<T> implements Action1<SendUtils.SendPayload> {
         public final /* synthetic */ MessageQueue3.SendApplicationCommand $sendApplicationCommandRequest;
 
@@ -387,7 +387,7 @@ public final class MessageQueue {
             call2(sendPayload);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final void call2(SendUtils.SendPayload sendPayload) {
             if (sendPayload instanceof SendUtils.SendPayload.Preprocessing) {
                 this.$sendApplicationCommandRequest.getOnPreprocessing().invoke(sendPayload);
@@ -400,8 +400,8 @@ public final class MessageQueue {
         }
     }
 
-    /* compiled from: MessageQueue.kt */
-    /* renamed from: com.discord.utilities.messagesend.MessageQueue$doSendApplicationCommand$2 */
+    /* JADX INFO: renamed from: com.discord.utilities.messagesend.MessageQueue$doSendApplicationCommand$2 */
+    /* JADX INFO: compiled from: MessageQueue.kt */
     public static final class C68052<T, R> implements Func1<SendUtils.SendPayload.ReadyToSendCommand, Observable<? extends Void>> {
         public static final C68052 INSTANCE = new C68052();
 
@@ -410,7 +410,7 @@ public final class MessageQueue {
             return call2(readyToSendCommand);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final Observable<? extends Void> call2(SendUtils.SendPayload.ReadyToSendCommand readyToSendCommand) {
             List<SendUtils.FileUpload> uploads = readyToSendCommand.getUploads();
             ArrayList arrayList = new ArrayList(Iterables2.collectionSizeOrDefault(uploads, 10));
@@ -429,8 +429,8 @@ public final class MessageQueue {
         }
     }
 
-    /* compiled from: MessageQueue.kt */
-    /* renamed from: com.discord.utilities.messagesend.MessageQueue$doSendApplicationCommand$3 */
+    /* JADX INFO: renamed from: com.discord.utilities.messagesend.MessageQueue$doSendApplicationCommand$3 */
+    /* JADX INFO: compiled from: MessageQueue.kt */
     public static final class C68063 extends Lambda implements Function1<Void, Unit> {
         public final /* synthetic */ DrainListener $drainListener;
         public final /* synthetic */ MessageQueue3.SendApplicationCommand $sendApplicationCommandRequest;
@@ -448,14 +448,14 @@ public final class MessageQueue {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Void r3) {
             MessageQueue.access$handleSuccess(MessageQueue.this, this.$sendApplicationCommandRequest.getMessage(), this.$drainListener);
         }
     }
 
-    /* compiled from: MessageQueue.kt */
-    /* renamed from: com.discord.utilities.messagesend.MessageQueue$doSendApplicationCommand$4 */
+    /* JADX INFO: renamed from: com.discord.utilities.messagesend.MessageQueue$doSendApplicationCommand$4 */
+    /* JADX INFO: compiled from: MessageQueue.kt */
     public static final class C68074 extends Lambda implements Function1<Error, Unit> {
         public final /* synthetic */ DrainListener $drainListener;
 
@@ -471,15 +471,15 @@ public final class MessageQueue {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Error error) {
             Intrinsics3.checkNotNullParameter(error, "it");
             MessageQueue.handleError$default(MessageQueue.this, error, this.$drainListener, null, 4, null);
         }
     }
 
-    /* compiled from: MessageQueue.kt */
-    /* renamed from: com.discord.utilities.messagesend.MessageQueue$doSendApplicationCommand$5 */
+    /* JADX INFO: renamed from: com.discord.utilities.messagesend.MessageQueue$doSendApplicationCommand$5 */
+    /* JADX INFO: compiled from: MessageQueue.kt */
     public static final class C68085 extends Lambda implements Function1<Subscription, Unit> {
         public final /* synthetic */ DrainListener $drainListener;
         public final /* synthetic */ MessageQueue3.SendApplicationCommand $sendApplicationCommandRequest;
@@ -497,15 +497,15 @@ public final class MessageQueue {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Subscription subscription) {
             Intrinsics3.checkNotNullParameter(subscription, Traits.Payment.Type.SUBSCRIPTION);
             MessageQueue.access$setInFlightRequest$p(MessageQueue.this, new InflightRequest(this.$sendApplicationCommandRequest, subscription, this.$drainListener));
         }
     }
 
-    /* compiled from: MessageQueue.kt */
-    /* renamed from: com.discord.utilities.messagesend.MessageQueue$enqueue$1 */
+    /* JADX INFO: renamed from: com.discord.utilities.messagesend.MessageQueue$enqueue$1 */
+    /* JADX INFO: compiled from: MessageQueue.kt */
     public static final class RunnableC68091 implements Runnable {
         public final /* synthetic */ MessageQueue3 $request;
 
@@ -520,8 +520,8 @@ public final class MessageQueue {
         }
     }
 
-    /* compiled from: MessageQueue.kt */
-    /* renamed from: com.discord.utilities.messagesend.MessageQueue$handleConnected$1 */
+    /* JADX INFO: renamed from: com.discord.utilities.messagesend.MessageQueue$handleConnected$1 */
+    /* JADX INFO: compiled from: MessageQueue.kt */
     public static final class RunnableC68101 implements Runnable {
         public RunnableC68101() {
         }

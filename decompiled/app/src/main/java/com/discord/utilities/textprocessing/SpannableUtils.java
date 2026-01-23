@@ -9,9 +9,9 @@ import com.discord.utilities.font.FontUtils;
 import com.discord.utilities.spans.TypefaceSpanCompat;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: SpannableUtils.kt */
-/* renamed from: com.discord.utilities.textprocessing.SpannableUtilsKt, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.utilities.textprocessing.SpannableUtilsKt, reason: use source file name */
+/* JADX INFO: compiled from: SpannableUtils.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class SpannableUtils {
     public static final void appendWithFont(SpannableStringBuilder spannableStringBuilder, Context context, @AttrRes int i, CharSequence charSequence) {
         Intrinsics3.checkNotNullParameter(spannableStringBuilder, "$this$appendWithFont");

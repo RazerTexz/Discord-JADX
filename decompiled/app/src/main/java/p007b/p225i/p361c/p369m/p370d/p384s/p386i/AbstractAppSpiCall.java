@@ -14,12 +14,12 @@ import p007b.p225i.p361c.p369m.p370d.p377n.HttpRequestFactory;
 import p007b.p225i.p361c.p369m.p370d.p377n.HttpResponse;
 import p007b.p225i.p361c.p369m.p370d.p384s.p385h.AppRequestData;
 
-/* compiled from: AbstractAppSpiCall.java */
-/* renamed from: b.i.c.m.d.s.i.a, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.c.m.d.s.i.a, reason: use source file name */
+/* JADX INFO: compiled from: AbstractAppSpiCall.java */
+/* JADX INFO: loaded from: classes3.dex */
 public abstract class AbstractAppSpiCall extends AbstractSpiCall {
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final String f12772f;
 
     public AbstractAppSpiCall(String str, String str2, HttpRequestFactory httpRequestFactory, int i, String str3) {
@@ -27,7 +27,7 @@ public abstract class AbstractAppSpiCall extends AbstractSpiCall {
         this.f12772f = str3;
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public boolean m6691d(AppRequestData appRequestData, boolean z2) {
         if (!z2) {
             throw new RuntimeException("An invalid data collection token was used.");

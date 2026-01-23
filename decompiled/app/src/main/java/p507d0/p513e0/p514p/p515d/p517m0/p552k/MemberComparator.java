@@ -8,15 +8,15 @@ import p507d0.p513e0.p514p.p515d.p517m0.p521c.FunctionDescriptor;
 import p507d0.p513e0.p514p.p515d.p517m0.p521c.PropertyDescriptor;
 import p507d0.p513e0.p514p.p515d.p517m0.p521c.TypeAliasDescriptor;
 
-/* compiled from: MemberComparator.java */
-/* renamed from: d0.e0.p.d.m0.k.h, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.k.h, reason: use source file name */
+/* JADX INFO: compiled from: MemberComparator.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class MemberComparator implements Comparator<DeclarationDescriptor> {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static final MemberComparator f24409j = new MemberComparator();
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static int m9929a(DeclarationDescriptor declarationDescriptor) {
         if (DescriptorUtils.isEnumEntry(declarationDescriptor)) {
             return 8;
@@ -41,7 +41,7 @@ public class MemberComparator implements Comparator<DeclarationDescriptor> {
         return compare2(declarationDescriptor, declarationDescriptor2);
     }
 
-    /* renamed from: compare, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: compare, reason: avoid collision after fix types in other method */
     public int compare2(DeclarationDescriptor declarationDescriptor, DeclarationDescriptor declarationDescriptor2) {
         Integer numValueOf;
         int iM9929a = m9929a(declarationDescriptor2) - m9929a(declarationDescriptor);

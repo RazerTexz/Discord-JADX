@@ -17,8 +17,8 @@ import java.io.InputStream;
 import java.lang.reflect.Field;
 import java.util.concurrent.ConcurrentHashMap;
 
+/* JADX INFO: loaded from: classes.dex */
 @RestrictTo({RestrictTo.Scope.LIBRARY_GROUP_PREFIX})
-/* loaded from: classes.dex */
 public class TypefaceCompatBaseImpl {
     private static final int INVALID_KEY = 0;
     private static final String TAG = "TypefaceCompatBaseImpl";
@@ -26,7 +26,7 @@ public class TypefaceCompatBaseImpl {
     @SuppressLint({"BanConcurrentHashMap"})
     private ConcurrentHashMap<Long, FontResourcesParserCompat.FontFamilyFilesResourceEntry> mFontFamilies = new ConcurrentHashMap<>();
 
-    /* renamed from: androidx.core.graphics.TypefaceCompatBaseImpl$1 */
+    /* JADX INFO: renamed from: androidx.core.graphics.TypefaceCompatBaseImpl$1 */
     public class C02271 implements StyleExtractor<FontsContractCompat.FontInfo> {
         public C02271() {
         }
@@ -41,18 +41,18 @@ public class TypefaceCompatBaseImpl {
             return isItalic2(fontInfo);
         }
 
-        /* renamed from: getWeight, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: getWeight, reason: avoid collision after fix types in other method */
         public int getWeight2(FontsContractCompat.FontInfo fontInfo) {
             return fontInfo.getWeight();
         }
 
-        /* renamed from: isItalic, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: isItalic, reason: avoid collision after fix types in other method */
         public boolean isItalic2(FontsContractCompat.FontInfo fontInfo) {
             return fontInfo.isItalic();
         }
     }
 
-    /* renamed from: androidx.core.graphics.TypefaceCompatBaseImpl$2 */
+    /* JADX INFO: renamed from: androidx.core.graphics.TypefaceCompatBaseImpl$2 */
     public class C02282 implements StyleExtractor<FontResourcesParserCompat.FontFileResourceEntry> {
         public C02282() {
         }
@@ -67,12 +67,12 @@ public class TypefaceCompatBaseImpl {
             return isItalic2(fontFileResourceEntry);
         }
 
-        /* renamed from: getWeight, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: getWeight, reason: avoid collision after fix types in other method */
         public int getWeight2(FontResourcesParserCompat.FontFileResourceEntry fontFileResourceEntry) {
             return fontFileResourceEntry.getWeight();
         }
 
-        /* renamed from: isItalic, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: isItalic, reason: avoid collision after fix types in other method */
         public boolean isItalic2(FontResourcesParserCompat.FontFileResourceEntry fontFileResourceEntry) {
             return fontFileResourceEntry.isItalic();
         }

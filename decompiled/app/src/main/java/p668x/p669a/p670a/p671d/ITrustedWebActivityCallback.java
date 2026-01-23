@@ -7,25 +7,25 @@ import android.os.IInterface;
 import android.os.Parcel;
 import android.os.RemoteException;
 
-/* compiled from: ITrustedWebActivityCallback.java */
-/* renamed from: x.a.a.d.a, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: x.a.a.d.a, reason: use source file name */
+/* JADX INFO: compiled from: ITrustedWebActivityCallback.java */
+/* JADX INFO: loaded from: classes.dex */
 public interface ITrustedWebActivityCallback extends IInterface {
 
-    /* compiled from: ITrustedWebActivityCallback.java */
-    /* renamed from: x.a.a.d.a$a */
+    /* JADX INFO: renamed from: x.a.a.d.a$a */
+    /* JADX INFO: compiled from: ITrustedWebActivityCallback.java */
     public static abstract class a extends Binder implements ITrustedWebActivityCallback {
         private static final String DESCRIPTOR = "android.support.customtabs.trusted.ITrustedWebActivityCallback";
         public static final int TRANSACTION_onExtraCallback = 2;
 
-        /* compiled from: ITrustedWebActivityCallback.java */
-        /* renamed from: x.a.a.d.a$a$a, reason: collision with other inner class name */
+        /* JADX INFO: renamed from: x.a.a.d.a$a$a, reason: collision with other inner class name */
+        /* JADX INFO: compiled from: ITrustedWebActivityCallback.java */
         public static class C13358a implements ITrustedWebActivityCallback {
 
-            /* renamed from: a */
+            /* JADX INFO: renamed from: a */
             public static ITrustedWebActivityCallback f27937a;
 
-            /* renamed from: b */
+            /* JADX INFO: renamed from: b */
             public IBinder f27938b;
 
             public C13358a(IBinder iBinder) {

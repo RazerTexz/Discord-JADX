@@ -3,7 +3,7 @@ package androidx.sqlite.p006db.framework;
 import androidx.annotation.NonNull;
 import androidx.sqlite.p006db.SupportSQLiteOpenHelper;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public final class FrameworkSQLiteOpenHelperFactory implements SupportSQLiteOpenHelper.Factory {
     @Override // androidx.sqlite.db.SupportSQLiteOpenHelper.Factory
     @NonNull

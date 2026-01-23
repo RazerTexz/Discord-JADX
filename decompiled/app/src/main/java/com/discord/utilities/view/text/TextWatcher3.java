@@ -7,9 +7,9 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 import p658rx.functions.Action1;
 
-/* compiled from: TextWatcher.kt */
-/* renamed from: com.discord.utilities.view.text.TextWatcher$Companion$addBindedTextWatcher$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.utilities.view.text.TextWatcher$Companion$addBindedTextWatcher$1, reason: use source file name */
+/* JADX INFO: compiled from: TextWatcher.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class TextWatcher3 extends Lambda implements Function1<Editable, Unit> {
     public final /* synthetic */ Action1 $onAfterTextChanged;
 
@@ -25,7 +25,7 @@ public final class TextWatcher3 extends Lambda implements Function1<Editable, Un
         return Unit.f27425a;
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final void invoke2(Editable editable) {
         Intrinsics3.checkNotNullParameter(editable, "it");
         this.$onAfterTextChanged.call(String.valueOf(editable));

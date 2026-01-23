@@ -29,57 +29,57 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.MutablePropertyReference1Impl;
 import p507d0.p592z.p594d.Reflection2;
 
-/* compiled from: OverlayBubbleWrap.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: OverlayBubbleWrap.kt */
+/* JADX INFO: loaded from: classes.dex */
 public class OverlayBubbleWrap extends FrameLayout {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static final /* synthetic */ KProperty[] f18620j = {Reflection2.mutableProperty1(new MutablePropertyReference1Impl(OverlayBubbleWrap.class, "isMoving", "isMoving()Z", 0))};
 
-    /* renamed from: k, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: k, reason: from kotlin metadata */
     public final WindowManager windowManager;
 
-    /* renamed from: l, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: l, reason: from kotlin metadata */
     public WindowManager.LayoutParams windowLayoutParams;
 
-    /* renamed from: m, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: m, reason: from kotlin metadata */
     public final Rect insetMargins;
 
-    /* renamed from: n, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: n, reason: from kotlin metadata */
     public final int moveThresholdPx;
 
-    /* renamed from: o, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: o, reason: from kotlin metadata */
     public final Interfaces isMoving;
 
-    /* renamed from: p, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: p, reason: from kotlin metadata */
     public Function1<? super Boolean, Unit> onMovingStateChanged;
 
-    /* renamed from: q, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: q, reason: from kotlin metadata */
     public final int[] screenOffset;
 
-    /* renamed from: r, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: r, reason: from kotlin metadata */
     public int deltaX;
 
-    /* renamed from: s, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: s, reason: from kotlin metadata */
     public int deltaY;
 
-    /* renamed from: t, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: t, reason: from kotlin metadata */
     public final SpringAnimation springAnimationX;
 
-    /* renamed from: u, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: u, reason: from kotlin metadata */
     public final SpringAnimation springAnimationY;
 
-    /* renamed from: v, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: v, reason: from kotlin metadata */
     public Point actualPosition;
 
-    /* renamed from: w, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: w, reason: from kotlin metadata */
     public Point anchorPosition;
 
-    /* compiled from: Delegates.kt */
-    /* renamed from: com.discord.overlay.views.OverlayBubbleWrap$a */
+    /* JADX INFO: renamed from: com.discord.overlay.views.OverlayBubbleWrap$a */
+    /* JADX INFO: compiled from: Delegates.kt */
     public static final class C5571a extends ObservableProperty<Boolean> {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final /* synthetic */ OverlayBubbleWrap f18634a;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -108,8 +108,8 @@ public class OverlayBubbleWrap extends FrameLayout {
         }
     }
 
-    /* compiled from: View.kt */
-    /* renamed from: com.discord.overlay.views.OverlayBubbleWrap$b */
+    /* JADX INFO: renamed from: com.discord.overlay.views.OverlayBubbleWrap$b */
+    /* JADX INFO: compiled from: View.kt */
     public static final class ViewOnLayoutChangeListenerC5572b implements View.OnLayoutChangeListener {
         public ViewOnLayoutChangeListenerC5572b() {
         }
@@ -162,7 +162,7 @@ public class OverlayBubbleWrap extends FrameLayout {
         this.actualPosition = new Point(layoutParams2.x, layoutParams2.y);
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public static void m8434c(OverlayBubbleWrap overlayBubbleWrap, int i, int i2, Rect rect, int i3, Object obj) {
         Rect rectM8436e;
         if ((i3 & 4) != 0) {
@@ -195,7 +195,7 @@ public class OverlayBubbleWrap extends FrameLayout {
     public static /* synthetic */ void getSpringAnimationY$annotations() {
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public void mo389a(boolean animate) {
         String simpleName = getClass().getSimpleName();
         StringBuilder sbM833U = outline.m833U("Unanchoring[");
@@ -218,7 +218,7 @@ public class OverlayBubbleWrap extends FrameLayout {
         this.windowManager.updateViewLayout(this, layoutParams);
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public void mo390b(View targetView) {
         Intrinsics3.checkNotNullParameter(targetView, "targetView");
         Intrinsics3.checkNotNullParameter(targetView, "view");
@@ -240,7 +240,7 @@ public class OverlayBubbleWrap extends FrameLayout {
         Log.d(simpleName, sbM833U.toString());
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final void m8435d() {
         getLocationOnScreen(this.screenOffset);
         int[] iArr = this.screenOffset;
@@ -283,7 +283,7 @@ public class OverlayBubbleWrap extends FrameLayout {
         return super.dispatchTouchEvent(motionEvent);
     }
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final Rect m8436e(Context context) {
         Intrinsics3.checkNotNullParameter(context, "context");
         Rect screenSize = DisplayUtils.getScreenSize(context);
@@ -296,7 +296,7 @@ public class OverlayBubbleWrap extends FrameLayout {
         return screenSize;
     }
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public boolean mo8437f() {
         return ((Boolean) this.isMoving.getValue(this, f18620j[0])).booleanValue();
     }

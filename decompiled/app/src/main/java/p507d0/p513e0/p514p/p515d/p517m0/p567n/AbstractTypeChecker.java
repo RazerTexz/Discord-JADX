@@ -12,15 +12,15 @@ import p507d0.p513e0.p514p.p515d.p517m0.p567n.p570n1.InterfaceC11983l;
 import p507d0.p580t._Collections;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: AbstractTypeChecker.kt */
-/* renamed from: d0.e0.p.d.m0.n.c, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.n.c, reason: use source file name */
+/* JADX INFO: compiled from: AbstractTypeChecker.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class AbstractTypeChecker {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final AbstractTypeChecker f24743a = new AbstractTypeChecker();
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final boolean m9997a(AbstractTypeChecker3 abstractTypeChecker3, InterfaceC11980i interfaceC11980i, InterfaceC11983l interfaceC11983l) {
         if (abstractTypeChecker3.isNothing(interfaceC11980i)) {
             return true;

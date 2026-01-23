@@ -29,32 +29,32 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 import p507d0.p592z.p594d.Reflection2;
 
-/* compiled from: WidgetAccessibilityDetectionDialog.kt */
-/* renamed from: b.a.a.h, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.a.a.h, reason: use source file name */
+/* JADX INFO: compiled from: WidgetAccessibilityDetectionDialog.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class WidgetAccessibilityDetectionDialog extends AppDialog {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static final /* synthetic */ KProperty[] f376j = {outline.m846d0(WidgetAccessibilityDetectionDialog.class, "binding", "getBinding()Lcom/discord/databinding/AllowAccessibilityDetectionDialogBinding;", 0)};
 
-    /* renamed from: k, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: k, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
 
-    /* renamed from: l, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: l, reason: from kotlin metadata */
     public final FragmentViewBindingDelegate binding;
 
-    /* renamed from: m, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: m, reason: from kotlin metadata */
     public final Lazy viewModel;
 
-    /* compiled from: java-style lambda group */
-    /* renamed from: b.a.a.h$a */
-    /* loaded from: classes2.dex */
+    /* JADX INFO: renamed from: b.a.a.h$a */
+    /* JADX INFO: compiled from: java-style lambda group */
+    /* JADX INFO: loaded from: classes2.dex */
     public static final class a implements View.OnClickListener {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public final /* synthetic */ int f380j;
 
-        /* renamed from: k */
+        /* JADX INFO: renamed from: k */
         public final /* synthetic */ Object f381k;
 
         public a(int i, Object obj) {
@@ -76,18 +76,18 @@ public final class WidgetAccessibilityDetectionDialog extends AppDialog {
         }
     }
 
-    /* compiled from: WidgetAccessibilityDetectionDialog.kt */
-    /* renamed from: b.a.a.h$b, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: b.a.a.h$b, reason: from kotlin metadata */
+    /* JADX INFO: compiled from: WidgetAccessibilityDetectionDialog.kt */
     public static final class Companion {
         public Companion(DefaultConstructorMarker defaultConstructorMarker) {
         }
     }
 
-    /* compiled from: WidgetAccessibilityDetectionDialog.kt */
-    /* renamed from: b.a.a.h$c */
+    /* JADX INFO: renamed from: b.a.a.h$c */
+    /* JADX INFO: compiled from: WidgetAccessibilityDetectionDialog.kt */
     public static final /* synthetic */ class c extends FunctionReferenceImpl implements Function1<View, AllowAccessibilityDetectionDialogBinding> {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public static final c f382j = new c();
 
         public c() {
@@ -119,11 +119,11 @@ public final class WidgetAccessibilityDetectionDialog extends AppDialog {
         }
     }
 
-    /* compiled from: WidgetAccessibilityDetectionDialog.kt */
-    /* renamed from: b.a.a.h$d */
+    /* JADX INFO: renamed from: b.a.a.h$d */
+    /* JADX INFO: compiled from: WidgetAccessibilityDetectionDialog.kt */
     public static final class d extends Lambda implements Function0<WidgetAccessibilityDetectionDialogViewModel> {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public static final d f383j = new d();
 
         public d() {
@@ -144,13 +144,13 @@ public final class WidgetAccessibilityDetectionDialog extends AppDialog {
         this.viewModel = FragmentViewModelLazyKt.createViewModelLazy(this, Reflection2.getOrCreateKotlinClass(WidgetAccessibilityDetectionDialogViewModel.class), new C12788k(0, appViewModelDelegates3), new AppViewModelDelegates5(dVar));
     }
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public static final void m134g(WidgetAccessibilityDetectionDialog widgetAccessibilityDetectionDialog, boolean z2) {
         ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.restSubscribeOn$default(((WidgetAccessibilityDetectionDialogViewModel) widgetAccessibilityDetectionDialog.viewModel.getValue()).f419j.setIsAccessibilityDetectionAllowed(z2), false, 1, null), WidgetAccessibilityDetectionDialogViewModel.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, WidgetAccessibilityDetectionDialogViewModel2.f422j, 62, (Object) null);
         widgetAccessibilityDetectionDialog.dismiss();
     }
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public final AllowAccessibilityDetectionDialogBinding m135h() {
         return (AllowAccessibilityDetectionDialogBinding) this.binding.getValue((Fragment) this, f376j[0]);
     }

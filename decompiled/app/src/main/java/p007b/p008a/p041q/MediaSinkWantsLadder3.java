@@ -14,40 +14,40 @@ import p507d0.p580t.Sets5;
 import p507d0.p580t._Collections;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: MediaSinkWantsLadder.kt */
-/* renamed from: b.a.q.e, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.a.q.e, reason: use source file name */
+/* JADX INFO: compiled from: MediaSinkWantsLadder.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class MediaSinkWantsLadder3 {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final b f1613a = new b(null);
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final int f1614b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final Map<MediaSinkWantsManager9, MediaSinkWantsLadder6> f1615c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final List<c> f1616d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final MediaSinkWantsLadder5 f1617e;
 
-    /* compiled from: MediaSinkWantsLadder.kt */
-    /* renamed from: b.a.q.e$a */
+    /* JADX INFO: renamed from: b.a.q.e$a */
+    /* JADX INFO: compiled from: MediaSinkWantsLadder.kt */
     public static final class a {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final int f1618a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final int f1619b;
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public final double f1620c;
 
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         public final int f1621d;
 
         public a(int i, int i2, double d, int i3) {
@@ -84,24 +84,24 @@ public final class MediaSinkWantsLadder3 {
         }
     }
 
-    /* compiled from: MediaSinkWantsLadder.kt */
-    /* renamed from: b.a.q.e$b */
+    /* JADX INFO: renamed from: b.a.q.e$b */
+    /* JADX INFO: compiled from: MediaSinkWantsLadder.kt */
     public static final class b {
         public b(DefaultConstructorMarker defaultConstructorMarker) {
         }
     }
 
-    /* compiled from: MediaSinkWantsLadder.kt */
-    /* renamed from: b.a.q.e$c */
+    /* JADX INFO: renamed from: b.a.q.e$c */
+    /* JADX INFO: compiled from: MediaSinkWantsLadder.kt */
     public static final class c {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final MediaSinkWantsLadder6 f1622a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final int f1623b;
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public final MediaSinkWantsManager9 f1624c;
 
         public c(MediaSinkWantsLadder6 mediaSinkWantsLadder6, int i, MediaSinkWantsManager9 mediaSinkWantsManager9) {
@@ -160,7 +160,7 @@ public final class MediaSinkWantsLadder3 {
             double d2 = (d * 16.0d) / 9.0d;
             if (of.contains(Double.valueOf(d2 % 16.0d)) && of.contains(Double.valueOf(d % 16.0d))) {
                 double d3 = d * d2;
-                arrayList.add(new a((int) d2, i4, d3 / i3, (int) d3));
+                arrayList.add(new a((int) d2, i4, d3 / ((double) i3), (int) d3));
             }
         }
         LinkedHashMap linkedHashMap = new LinkedHashMap();

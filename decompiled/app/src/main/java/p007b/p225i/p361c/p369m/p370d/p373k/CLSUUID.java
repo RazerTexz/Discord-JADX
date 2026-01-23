@@ -7,15 +7,15 @@ import java.util.Date;
 import java.util.Locale;
 import java.util.concurrent.atomic.AtomicLong;
 
-/* compiled from: CLSUUID.java */
-/* renamed from: b.i.c.m.d.k.g, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.c.m.d.k.g, reason: use source file name */
+/* JADX INFO: compiled from: CLSUUID.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class CLSUUID {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final AtomicLong f12292a = new AtomicLong(0);
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static String f12293b;
 
     public CLSUUID(IdManager idManager) {
@@ -35,7 +35,7 @@ public class CLSUUID {
         f12293b = String.format(locale, "%s-%s-%s-%s", strM6423q.substring(0, 12), strM6423q.substring(12, 16), strM6423q.subSequence(16, 20), strM6429w.substring(0, 12)).toUpperCase(locale);
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static byte[] m6406a(long j) {
         ByteBuffer byteBufferAllocate = ByteBuffer.allocate(2);
         byteBufferAllocate.putShort((short) j);

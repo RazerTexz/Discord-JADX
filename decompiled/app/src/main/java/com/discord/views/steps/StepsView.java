@@ -29,37 +29,37 @@ import p007b.p008a.p025i.ViewStepsBinding;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: StepsView.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: StepsView.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class StepsView extends RelativeLayout {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static final /* synthetic */ int f19295j = 0;
 
-    /* renamed from: k, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: k, reason: from kotlin metadata */
     public final ViewStepsBinding binding;
 
-    /* renamed from: l, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: l, reason: from kotlin metadata */
     public C7125d pagerAdapter;
 
-    /* renamed from: m, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: m, reason: from kotlin metadata */
     public ViewPager2.OnPageChangeCallback pagerAdapterChangeCallback;
 
-    /* compiled from: java-style lambda group */
-    /* renamed from: com.discord.views.steps.StepsView$a */
-    /* loaded from: classes.dex */
+    /* JADX INFO: renamed from: com.discord.views.steps.StepsView$a */
+    /* JADX INFO: compiled from: java-style lambda group */
+    /* JADX INFO: loaded from: classes.dex */
     public static final class ViewOnClickListenerC7122a implements View.OnClickListener {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public final /* synthetic */ int f19299j;
 
-        /* renamed from: k */
+        /* JADX INFO: renamed from: k */
         public final /* synthetic */ int f19300k;
 
-        /* renamed from: l */
+        /* JADX INFO: renamed from: l */
         public final /* synthetic */ Object f19301l;
 
-        /* renamed from: m */
+        /* JADX INFO: renamed from: m */
         public final /* synthetic */ Object f19302m;
 
         public ViewOnClickListenerC7122a(int i, int i2, Object obj, Object obj2) {
@@ -105,72 +105,72 @@ public final class StepsView extends RelativeLayout {
         }
     }
 
-    /* compiled from: StepsView.kt */
-    /* renamed from: com.discord.views.steps.StepsView$b */
+    /* JADX INFO: renamed from: com.discord.views.steps.StepsView$b */
+    /* JADX INFO: compiled from: StepsView.kt */
     public static abstract class AbstractC7123b {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final int f19303a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final int f19304b;
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public final int f19305c;
 
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         public final Function1<View, Unit> f19306d;
 
-        /* renamed from: e */
+        /* JADX INFO: renamed from: e */
         public final Function1<View, Unit> f19307e;
 
-        /* renamed from: f */
+        /* JADX INFO: renamed from: f */
         public final Function1<View, Unit> f19308f;
 
-        /* renamed from: g */
+        /* JADX INFO: renamed from: g */
         public final boolean f19309g;
 
-        /* renamed from: h */
+        /* JADX INFO: renamed from: h */
         public final boolean f19310h;
 
-        /* renamed from: i */
+        /* JADX INFO: renamed from: i */
         public final boolean f19311i;
 
-        /* compiled from: StepsView.kt */
-        /* renamed from: com.discord.views.steps.StepsView$b$a */
+        /* JADX INFO: renamed from: com.discord.views.steps.StepsView$b$a */
+        /* JADX INFO: compiled from: StepsView.kt */
         public static final class a extends AbstractC7123b {
 
-            /* renamed from: j */
+            /* JADX INFO: renamed from: j */
             public final Class<? extends Fragment> f19312j;
 
-            /* renamed from: k */
+            /* JADX INFO: renamed from: k */
             public final int f19313k;
 
-            /* renamed from: l */
+            /* JADX INFO: renamed from: l */
             public final int f19314l;
 
-            /* renamed from: m */
+            /* JADX INFO: renamed from: m */
             public final int f19315m;
 
-            /* renamed from: n */
+            /* JADX INFO: renamed from: n */
             public final Bundle f19316n;
 
-            /* renamed from: o */
+            /* JADX INFO: renamed from: o */
             public final Function1<View, Unit> f19317o;
 
-            /* renamed from: p */
+            /* JADX INFO: renamed from: p */
             public final Function1<View, Unit> f19318p;
 
-            /* renamed from: q */
+            /* JADX INFO: renamed from: q */
             public final Function1<View, Unit> f19319q;
 
-            /* renamed from: r */
+            /* JADX INFO: renamed from: r */
             public final boolean f19320r;
 
-            /* renamed from: s */
+            /* JADX INFO: renamed from: s */
             public final boolean f19321s;
 
-            /* renamed from: t */
+            /* JADX INFO: renamed from: t */
             public final boolean f19322t;
 
             /* JADX WARN: Illegal instructions before constructor call */
@@ -212,6 +212,15 @@ public final class StepsView extends RelativeLayout {
             }
 
             /* JADX WARN: Multi-variable type inference failed */
+            /* JADX WARN: Type inference failed for: r1v10 */
+            /* JADX WARN: Type inference failed for: r1v11 */
+            /* JADX WARN: Type inference failed for: r1v3, types: [int] */
+            /* JADX WARN: Type inference failed for: r1v5, types: [int] */
+            /* JADX WARN: Type inference failed for: r1v7 */
+            /* JADX WARN: Type inference failed for: r1v8 */
+            /* JADX WARN: Type inference failed for: r2v13 */
+            /* JADX WARN: Type inference failed for: r2v14, types: [int] */
+            /* JADX WARN: Type inference failed for: r2v15 */
             public int hashCode() {
                 Class<? extends Fragment> cls = this.f19312j;
                 int iHashCode = (((((((cls != null ? cls.hashCode() : 0) * 31) + this.f19313k) * 31) + this.f19314l) * 31) + this.f19315m) * 31;
@@ -224,19 +233,19 @@ public final class StepsView extends RelativeLayout {
                 Function1<View, Unit> function13 = this.f19319q;
                 int iHashCode5 = (iHashCode4 + (function13 != null ? function13.hashCode() : 0)) * 31;
                 boolean z2 = this.f19320r;
-                int i = z2;
-                if (z2 != 0) {
-                    i = 1;
+                ?? r1 = z2;
+                if (z2) {
+                    r1 = 1;
                 }
-                int i2 = (iHashCode5 + i) * 31;
+                int i = (iHashCode5 + r1) * 31;
                 boolean z3 = this.f19321s;
-                int i3 = z3;
-                if (z3 != 0) {
-                    i3 = 1;
+                ?? r12 = z3;
+                if (z3) {
+                    r12 = 1;
                 }
-                int i4 = (i2 + i3) * 31;
+                int i2 = (i + r12) * 31;
                 boolean z4 = this.f19322t;
-                return i4 + (z4 ? 1 : z4 ? 1 : 0);
+                return i2 + (z4 ? 1 : z4);
             }
 
             public String toString() {
@@ -265,8 +274,8 @@ public final class StepsView extends RelativeLayout {
             }
         }
 
-        /* compiled from: StepsView.kt */
-        /* renamed from: com.discord.views.steps.StepsView$b$b */
+        /* JADX INFO: renamed from: com.discord.views.steps.StepsView$b$b */
+        /* JADX INFO: compiled from: StepsView.kt */
         public static final class b extends AbstractC7123b {
             public boolean equals(Object obj) {
                 if (this == obj) {
@@ -301,19 +310,19 @@ public final class StepsView extends RelativeLayout {
         }
     }
 
-    /* compiled from: StepsView.kt */
-    /* renamed from: com.discord.views.steps.StepsView$c */
+    /* JADX INFO: renamed from: com.discord.views.steps.StepsView$c */
+    /* JADX INFO: compiled from: StepsView.kt */
     public static final class C7124c extends AppFragment {
         public C7124c(@LayoutRes int i) {
             super(i);
         }
     }
 
-    /* compiled from: StepsView.kt */
-    /* renamed from: com.discord.views.steps.StepsView$d */
+    /* JADX INFO: renamed from: com.discord.views.steps.StepsView$d */
+    /* JADX INFO: compiled from: StepsView.kt */
     public static final class C7125d extends FragmentStateAdapter {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public List<? extends AbstractC7123b> f19323a;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -348,14 +357,14 @@ public final class StepsView extends RelativeLayout {
         }
     }
 
-    /* compiled from: StepsView.kt */
-    /* renamed from: com.discord.views.steps.StepsView$e */
+    /* JADX INFO: renamed from: com.discord.views.steps.StepsView$e */
+    /* JADX INFO: compiled from: StepsView.kt */
     public static final class C7126e extends ViewPager2.OnPageChangeCallback {
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final /* synthetic */ Function1 f19325b;
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public final /* synthetic */ Function0 f19326c;
 
         public C7126e(Function1 function1, Function0 function0) {
@@ -374,11 +383,11 @@ public final class StepsView extends RelativeLayout {
         }
     }
 
-    /* compiled from: StepsView.kt */
-    /* renamed from: com.discord.views.steps.StepsView$f */
+    /* JADX INFO: renamed from: com.discord.views.steps.StepsView$f */
+    /* JADX INFO: compiled from: StepsView.kt */
     public static final class ViewOnClickListenerC7127f implements View.OnClickListener {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public final /* synthetic */ Function0 f19327j;
 
         public ViewOnClickListenerC7127f(Function0 function0) {
@@ -391,17 +400,17 @@ public final class StepsView extends RelativeLayout {
         }
     }
 
-    /* compiled from: StepsView.kt */
-    /* renamed from: com.discord.views.steps.StepsView$g */
+    /* JADX INFO: renamed from: com.discord.views.steps.StepsView$g */
+    /* JADX INFO: compiled from: StepsView.kt */
     public static final class ViewOnClickListenerC7128g implements View.OnClickListener {
 
-        /* renamed from: k */
+        /* JADX INFO: renamed from: k */
         public final /* synthetic */ List f19329k;
 
-        /* renamed from: l */
+        /* JADX INFO: renamed from: l */
         public final /* synthetic */ int f19330l;
 
-        /* renamed from: m */
+        /* JADX INFO: renamed from: m */
         public final /* synthetic */ Function0 f19331m;
 
         public ViewOnClickListenerC7128g(List list, int i, Function0 function0) {
@@ -478,7 +487,7 @@ public final class StepsView extends RelativeLayout {
         throw new NullPointerException("Missing required view with ID: ".concat(viewInflate.getResources().getResourceName(i)));
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final void m8609a(C7125d adapter, Function0<Unit> onClose, Function1<? super Integer, Unit> onPageSelected) {
         Intrinsics3.checkNotNullParameter(adapter, "adapter");
         Intrinsics3.checkNotNullParameter(onClose, "onClose");
@@ -499,7 +508,7 @@ public final class StepsView extends RelativeLayout {
         this.binding.f1423g.setTotalStepCount(adapter.f19323a.size());
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final void m8610b(int index) {
         if (index >= 0) {
             C7125d c7125d = this.pagerAdapter;
@@ -511,7 +520,7 @@ public final class StepsView extends RelativeLayout {
         }
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final void m8611c(int position, Function0<Unit> onClose) {
         List<? extends AbstractC7123b> list;
         this.binding.f1420d.setOnClickListener(new ViewOnClickListenerC7127f(onClose));

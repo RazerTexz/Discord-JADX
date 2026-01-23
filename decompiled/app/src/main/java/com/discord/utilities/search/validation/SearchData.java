@@ -16,8 +16,8 @@ import p007b.p100d.p104b.p105a.outline;
 import p507d0.p580t.Maps6;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: SearchData.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: SearchData.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final /* data */ class SearchData {
     private final Map<String, Long> channelNameIndex;
     private final Map<Long, Long> channelPermissions;
@@ -25,7 +25,7 @@ public final /* data */ class SearchData {
     private final Map<String, Long> usernameAndDiscriminatorIndex;
     private final Map<Long, UserGuildMember> users;
 
-    /* compiled from: SearchData.kt */
+    /* JADX INFO: compiled from: SearchData.kt */
     public static final class Builder {
         public static final /* synthetic */ String access$getUsernameWithDiscrim(Builder builder, User user) {
             return builder.getUsernameWithDiscrim(user);
@@ -98,6 +98,7 @@ public final /* data */ class SearchData {
         return this.usernameAndDiscriminatorIndex;
     }
 
+    /* JADX WARN: Multi-variable type inference failed */
     public static /* synthetic */ SearchData copy$default(SearchData searchData, Map map, Map map2, Map map3, Map map4, Map map5, int i, Object obj) {
         if ((i & 1) != 0) {
             map = searchData.usernameAndDiscriminatorIndex;

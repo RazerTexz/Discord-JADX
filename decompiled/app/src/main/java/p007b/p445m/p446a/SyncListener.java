@@ -1,15 +1,15 @@
 package p007b.p445m.p446a;
 
-/* compiled from: SyncListener.kt */
-/* renamed from: b.m.a.e, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.m.a.e, reason: use source file name */
+/* JADX INFO: compiled from: SyncListener.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public interface SyncListener {
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     void m7130a(String str);
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     void m7131b(long j, long j2);
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     void m7132c(String str, Throwable th);
 }

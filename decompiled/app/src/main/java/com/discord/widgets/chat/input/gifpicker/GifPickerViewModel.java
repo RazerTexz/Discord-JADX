@@ -22,12 +22,12 @@ import p507d0.p592z.p594d.Lambda;
 import p658rx.Observable;
 import p658rx.functions.Func2;
 
-/* compiled from: GifPickerViewModel.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: GifPickerViewModel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class GifPickerViewModel extends AppViewModel<ViewState> {
 
-    /* compiled from: GifPickerViewModel.kt */
-    /* renamed from: com.discord.widgets.chat.input.gifpicker.GifPickerViewModel$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.input.gifpicker.GifPickerViewModel$1 */
+    /* JADX INFO: compiled from: GifPickerViewModel.kt */
     public static final class C78691<T1, T2, R> implements Func2<List<? extends ModelGifCategory>, String, StoreState> {
         public static final C78691 INSTANCE = new C78691();
 
@@ -36,7 +36,7 @@ public final class GifPickerViewModel extends AppViewModel<ViewState> {
             return call2((List<ModelGifCategory>) list, str);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final StoreState call2(List<ModelGifCategory> list, String str) {
             Intrinsics3.checkNotNullExpressionValue(list, "gifCategories");
             Intrinsics3.checkNotNullExpressionValue(str, "trendingGifCategoryPreviewUrl");
@@ -44,8 +44,8 @@ public final class GifPickerViewModel extends AppViewModel<ViewState> {
         }
     }
 
-    /* compiled from: GifPickerViewModel.kt */
-    /* renamed from: com.discord.widgets.chat.input.gifpicker.GifPickerViewModel$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.input.gifpicker.GifPickerViewModel$2 */
+    /* JADX INFO: compiled from: GifPickerViewModel.kt */
     public static final class C78702 extends Lambda implements Function1<StoreState, Unit> {
         public C78702() {
             super(1);
@@ -57,14 +57,14 @@ public final class GifPickerViewModel extends AppViewModel<ViewState> {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(StoreState storeState) {
             Intrinsics3.checkNotNullParameter(storeState, "storeState");
             GifPickerViewModel.access$handleStoreState(GifPickerViewModel.this, storeState);
         }
     }
 
-    /* compiled from: GifPickerViewModel.kt */
+    /* JADX INFO: compiled from: GifPickerViewModel.kt */
     public static final /* data */ class StoreState {
         private final List<ModelGifCategory> gifCategories;
         private final String trendingGifCategoryPreviewUrl;
@@ -91,7 +91,7 @@ public final class GifPickerViewModel extends AppViewModel<ViewState> {
             return this.gifCategories;
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final String getTrendingGifCategoryPreviewUrl() {
             return this.trendingGifCategoryPreviewUrl;
         }
@@ -136,7 +136,7 @@ public final class GifPickerViewModel extends AppViewModel<ViewState> {
         }
     }
 
-    /* compiled from: GifPickerViewModel.kt */
+    /* JADX INFO: compiled from: GifPickerViewModel.kt */
     public static final /* data */ class ViewState {
         private final List<GifCategoryItem> gifCategoryItems;
         private final boolean isLoaded;
@@ -184,7 +184,7 @@ public final class GifPickerViewModel extends AppViewModel<ViewState> {
             return 0;
         }
 
-        /* renamed from: isLoaded, reason: from getter */
+        /* JADX INFO: renamed from: isLoaded, reason: from getter */
         public final boolean getIsLoaded() {
             return this.isLoaded;
         }

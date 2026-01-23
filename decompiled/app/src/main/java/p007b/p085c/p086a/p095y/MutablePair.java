@@ -5,17 +5,17 @@ import androidx.annotation.RestrictTo;
 import androidx.core.util.Pair;
 import p007b.p100d.p104b.p105a.outline;
 
-/* compiled from: MutablePair.java */
+/* JADX INFO: renamed from: b.c.a.y.j, reason: use source file name */
+/* JADX INFO: compiled from: MutablePair.java */
+/* JADX INFO: loaded from: classes.dex */
 @RestrictTo({RestrictTo.Scope.LIBRARY})
-/* renamed from: b.c.a.y.j, reason: use source file name */
-/* loaded from: classes.dex */
 public class MutablePair<T> {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     @Nullable
     public T f2720a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     @Nullable
     public T f2721b;
 

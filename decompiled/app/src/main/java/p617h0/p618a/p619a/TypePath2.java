@@ -1,14 +1,14 @@
 package p617h0.p618a.p619a;
 
-/* compiled from: TypePath.java */
-/* renamed from: h0.a.a.x, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: h0.a.a.x, reason: use source file name */
+/* JADX INFO: compiled from: TypePath.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class TypePath2 {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final byte[] f26374a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final int f26375b;
 
     public TypePath2(byte[] bArr, int i) {
@@ -16,7 +16,7 @@ public final class TypePath2 {
         this.f26375b = i;
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static void m10655a(TypePath2 typePath2, ByteVector2 byteVector2) {
         if (typePath2 == null) {
             byteVector2.m10535g(0);

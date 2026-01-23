@@ -3,9 +3,9 @@ package p615g0;
 import java.io.IOException;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ForwardingSink.kt */
-/* renamed from: g0.i, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: g0.i, reason: use source file name */
+/* JADX INFO: compiled from: ForwardingSink.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public abstract class ForwardingSink implements Sink {
     private final Sink delegate;
 
@@ -14,7 +14,7 @@ public abstract class ForwardingSink implements Sink {
         this.delegate = sink;
     }
 
-    /* renamed from: -deprecated_delegate, reason: not valid java name */
+    /* JADX INFO: renamed from: -deprecated_delegate, reason: not valid java name */
     public final Sink m11491deprecated_delegate() {
         return this.delegate;
     }

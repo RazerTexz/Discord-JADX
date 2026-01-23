@@ -8,9 +8,9 @@ import com.discord.widgets.user.WidgetUserMutualGuilds;
 import kotlin.jvm.functions.Function0;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetUserMutualGuilds.kt */
-/* renamed from: com.discord.widgets.user.WidgetUserMutualGuilds$Model$Companion$get$1, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: com.discord.widgets.user.WidgetUserMutualGuilds$Model$Companion$get$1, reason: use source file name */
+/* JADX INFO: compiled from: WidgetUserMutualGuilds.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class WidgetUserMutualGuilds3 extends Lambda implements Function0<WidgetUserMutualGuilds.Model> {
     public final /* synthetic */ StoreGuilds $storeGuilds;
     public final /* synthetic */ StoreGuildsSorted $storeGuildsSorted;

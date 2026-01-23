@@ -1,10 +1,10 @@
 package p007b.p225i.p226a.p288f.p313h.p323j;
 
-/* renamed from: b.i.a.f.h.j.v */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.h.j.v */
+/* JADX INFO: loaded from: classes3.dex */
 public final class C3546v implements InterfaceC3507d0 {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final /* synthetic */ C3538r f9807a;
 
     public C3546v(C3538r c3538r) {
@@ -12,7 +12,7 @@ public final class C3546v implements InterfaceC3507d0 {
     }
 
     @Override // p007b.p225i.p226a.p288f.p313h.p323j.InterfaceC3507d0
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final void mo4441a(Throwable th) {
         this.f9807a.m4491U();
     }

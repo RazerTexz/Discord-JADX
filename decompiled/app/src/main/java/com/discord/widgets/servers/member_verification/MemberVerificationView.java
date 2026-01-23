@@ -17,13 +17,13 @@ import kotlin.jvm.functions.Function0;
 import kotlin.jvm.internal.DefaultConstructorMarker;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: MemberVerificationView.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: MemberVerificationView.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class MemberVerificationView extends CardView {
     private final ViewMemberVerificationBinding binding;
 
-    /* compiled from: MemberVerificationView.kt */
-    /* renamed from: com.discord.widgets.servers.member_verification.MemberVerificationView$configure$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.member_verification.MemberVerificationView$configure$1 */
+    /* JADX INFO: compiled from: MemberVerificationView.kt */
     public static final class ViewOnClickListenerC95571 implements View.OnClickListener {
         public final /* synthetic */ Function0 $verificationCallback;
 

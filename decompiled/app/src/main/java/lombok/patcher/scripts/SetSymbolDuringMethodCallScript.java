@@ -14,7 +14,7 @@ import org.objectweb.asm.Label;
 import org.objectweb.asm.MethodVisitor;
 import org.objectweb.asm.Opcodes;
 
-/* loaded from: discord-126021.apk:lombok/patcher/scripts/SetSymbolDuringMethodCallScript.SCL.lombok */
+/* JADX INFO: loaded from: discord-126021.apk:lombok/patcher/scripts/SetSymbolDuringMethodCallScript.SCL.lombok */
 public class SetSymbolDuringMethodCallScript extends MethodLevelPatchScript {
     private final Hook callToWrap;
     private final String symbol;
@@ -57,8 +57,8 @@ public class SetSymbolDuringMethodCallScript extends MethodLevelPatchScript {
         return patcher;
     }
 
-    /* renamed from: lombok.patcher.scripts.SetSymbolDuringMethodCallScript$1 */
-    /* loaded from: discord-126021.apk:lombok/patcher/scripts/SetSymbolDuringMethodCallScript$1.SCL.lombok */
+    /* JADX INFO: renamed from: lombok.patcher.scripts.SetSymbolDuringMethodCallScript$1 */
+    /* JADX INFO: loaded from: discord-126021.apk:lombok/patcher/scripts/SetSymbolDuringMethodCallScript$1.SCL.lombok */
     class C129181 implements PatchScript.MethodPatcherFactory {
         private final /* synthetic */ String val$classSpec;
         private final /* synthetic */ List val$descriptors;
@@ -74,8 +74,8 @@ public class SetSymbolDuringMethodCallScript extends MethodLevelPatchScript {
         }
     }
 
-    /* renamed from: lombok.patcher.scripts.SetSymbolDuringMethodCallScript$2 */
-    /* loaded from: discord-126021.apk:lombok/patcher/scripts/SetSymbolDuringMethodCallScript$2.SCL.lombok */
+    /* JADX INFO: renamed from: lombok.patcher.scripts.SetSymbolDuringMethodCallScript$2 */
+    /* JADX INFO: loaded from: discord-126021.apk:lombok/patcher/scripts/SetSymbolDuringMethodCallScript$2.SCL.lombok */
     class C129192 extends PatchScript.MethodPatcher {
         private final /* synthetic */ List val$descriptors;
 
@@ -124,7 +124,7 @@ public class SetSymbolDuringMethodCallScript extends MethodLevelPatchScript {
         mv.visitEnd();
     }
 
-    /* loaded from: discord-126021.apk:lombok/patcher/scripts/SetSymbolDuringMethodCallScript$WrapWithSymbol.SCL.lombok */
+    /* JADX INFO: loaded from: discord-126021.apk:lombok/patcher/scripts/SetSymbolDuringMethodCallScript$WrapWithSymbol.SCL.lombok */
     private class WrapWithSymbol extends MethodVisitor {
         private final String selfMethodName;
         private final String selfTypeName;

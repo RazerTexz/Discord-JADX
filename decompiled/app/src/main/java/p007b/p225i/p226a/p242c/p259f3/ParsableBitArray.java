@@ -2,40 +2,40 @@ package p007b.p225i.p226a.p242c.p259f3;
 
 import p007b.p085c.p086a.p087a0.AnimatableValueParser;
 
-/* compiled from: ParsableBitArray.java */
-/* renamed from: b.i.a.c.f3.w, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.f3.w, reason: use source file name */
+/* JADX INFO: compiled from: ParsableBitArray.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class ParsableBitArray {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public byte[] f6789a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public int f6790b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public int f6791c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public int f6792d;
 
     public ParsableBitArray() {
         this.f6789a = Util2.f6713f;
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final void m3061a() {
         int i;
         int i2 = this.f6790b;
         AnimatableValueParser.m426D(i2 >= 0 && (i2 < (i = this.f6792d) || (i2 == i && this.f6791c == 0)));
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public int m3062b() {
         return ((this.f6792d - this.f6790b) * 8) - this.f6791c;
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public void m3063c() {
         if (this.f6791c == 0) {
             return;
@@ -45,25 +45,25 @@ public final class ParsableBitArray {
         m3061a();
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public int m3064d() {
         AnimatableValueParser.m426D(this.f6791c == 0);
         return this.f6790b;
     }
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public int m3065e() {
         return (this.f6790b * 8) + this.f6791c;
     }
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public boolean m3066f() {
         boolean z2 = (this.f6789a[this.f6790b] & (128 >> this.f6791c)) != 0;
         m3072l();
         return z2;
     }
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public int m3067g(int i) {
         int i2;
         if (i == 0) {
@@ -94,7 +94,7 @@ public final class ParsableBitArray {
         return i7;
     }
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public void m3068h(byte[] bArr, int i, int i2) {
         int i3 = (i2 >> 3) + i;
         while (i < i3) {
@@ -134,7 +134,7 @@ public final class ParsableBitArray {
         m3061a();
     }
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public void m3069i(byte[] bArr, int i, int i2) {
         AnimatableValueParser.m426D(this.f6791c == 0);
         System.arraycopy(this.f6789a, this.f6790b, bArr, i, i2);
@@ -142,7 +142,7 @@ public final class ParsableBitArray {
         m3061a();
     }
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public void m3070j(byte[] bArr, int i) {
         this.f6789a = bArr;
         this.f6790b = 0;
@@ -150,7 +150,7 @@ public final class ParsableBitArray {
         this.f6792d = i;
     }
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public void m3071k(int i) {
         int i2 = i / 8;
         this.f6790b = i2;
@@ -158,7 +158,7 @@ public final class ParsableBitArray {
         m3061a();
     }
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public void m3072l() {
         int i = this.f6791c + 1;
         this.f6791c = i;
@@ -169,7 +169,7 @@ public final class ParsableBitArray {
         m3061a();
     }
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public void m3073m(int i) {
         int i2 = i / 8;
         int i3 = this.f6790b + i2;
@@ -183,7 +183,7 @@ public final class ParsableBitArray {
         m3061a();
     }
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public void m3074n(int i) {
         AnimatableValueParser.m426D(this.f6791c == 0);
         this.f6790b += i;

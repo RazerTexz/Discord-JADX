@@ -1,6 +1,6 @@
 package androidx.view;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public interface FullLifecycleObserver extends LifecycleObserver {
     void onCreate(LifecycleOwner lifecycleOwner);
 

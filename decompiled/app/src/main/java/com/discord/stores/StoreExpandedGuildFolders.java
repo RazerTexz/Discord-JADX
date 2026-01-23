@@ -14,8 +14,8 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 import p658rx.Observable;
 
-/* compiled from: StoreExpandedGuildFolders.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: StoreExpandedGuildFolders.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class StoreExpandedGuildFolders extends StoreV2 {
     private final Dispatcher dispatcher;
     private final ObservationDeck observationDeck;
@@ -23,8 +23,8 @@ public final class StoreExpandedGuildFolders extends StoreV2 {
     private final Persister<Set<Long>> openFolderIdsCache;
     private Set<Long> openFolderIdsSnapshot;
 
-    /* compiled from: StoreExpandedGuildFolders.kt */
-    /* renamed from: com.discord.stores.StoreExpandedGuildFolders$closeFolder$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreExpandedGuildFolders$closeFolder$1 */
+    /* JADX INFO: compiled from: StoreExpandedGuildFolders.kt */
     public static final class C59121 extends Lambda implements Function0<Unit> {
         public final /* synthetic */ long $folderId;
 
@@ -40,14 +40,14 @@ public final class StoreExpandedGuildFolders extends StoreV2 {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             StoreExpandedGuildFolders.this.handleFolderClosed(this.$folderId);
         }
     }
 
-    /* compiled from: StoreExpandedGuildFolders.kt */
-    /* renamed from: com.discord.stores.StoreExpandedGuildFolders$observeOpenFolderIds$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreExpandedGuildFolders$observeOpenFolderIds$1 */
+    /* JADX INFO: compiled from: StoreExpandedGuildFolders.kt */
     public static final class C59131 extends Lambda implements Function0<Set<? extends Long>> {
         public C59131() {
             super(0);
@@ -59,14 +59,14 @@ public final class StoreExpandedGuildFolders extends StoreV2 {
         }
 
         @Override // kotlin.jvm.functions.Function0
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final Set<? extends Long> invoke2() {
             return StoreExpandedGuildFolders.this.getOpenFolderIds();
         }
     }
 
-    /* compiled from: StoreExpandedGuildFolders.kt */
-    /* renamed from: com.discord.stores.StoreExpandedGuildFolders$openFolder$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreExpandedGuildFolders$openFolder$1 */
+    /* JADX INFO: compiled from: StoreExpandedGuildFolders.kt */
     public static final class C59141 extends Lambda implements Function0<Unit> {
         public final /* synthetic */ long $folderId;
 
@@ -82,7 +82,7 @@ public final class StoreExpandedGuildFolders extends StoreV2 {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             StoreExpandedGuildFolders.this.handleFolderOpened(this.$folderId);
         }

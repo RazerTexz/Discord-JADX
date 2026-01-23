@@ -4,16 +4,16 @@ import java.util.Set;
 import p007b.p225i.p361c.p368l.ComponentContainer;
 import p007b.p225i.p361c.p368l.ComponentFactory;
 
-/* compiled from: DefaultUserAgentPublisher.java */
-/* renamed from: b.i.c.x.b, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.c.x.b, reason: use source file name */
+/* JADX INFO: compiled from: DefaultUserAgentPublisher.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final /* synthetic */ class DefaultUserAgentPublisher implements ComponentFactory {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final DefaultUserAgentPublisher f13081a = new DefaultUserAgentPublisher();
 
     @Override // p007b.p225i.p361c.p368l.ComponentFactory
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public Object mo6341a(ComponentContainer componentContainer) {
         Set setMo6347d = componentContainer.mo6347d(LibraryVersion.class);
         GlobalLibraryVersionRegistrar globalLibraryVersionRegistrar = GlobalLibraryVersionRegistrar.f13084a;

@@ -1,6 +1,6 @@
 package com.esotericsoftware.kryo;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class KryoException extends RuntimeException {
     private StringBuffer trace;
 

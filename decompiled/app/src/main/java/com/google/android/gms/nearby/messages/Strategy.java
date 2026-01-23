@@ -8,40 +8,40 @@ import p007b.p085c.p086a.p087a0.AnimatableValueParser;
 import p007b.p100d.p104b.p105a.outline;
 import p007b.p225i.p226a.p288f.p333j.p334b.C4326j;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public class Strategy extends AbstractSafeParcelable {
     public static final Parcelable.Creator<Strategy> CREATOR = new C4326j();
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static final Strategy f20727j = new Strategy(2, 0, 300, 0, false, -1, 3, 0);
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public static final Strategy f20728k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final int f20729l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     @Deprecated
     public final int f20730m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public final int f20731n;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public final int f20732o;
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     @Deprecated
     public final boolean f20733p;
 
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     public final int f20734q;
 
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     public final int f20735r;
 
-    /* renamed from: s */
+    /* JADX INFO: renamed from: s */
     public final int f20736s;
 
     static {

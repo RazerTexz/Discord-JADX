@@ -8,9 +8,9 @@ import p507d0.p579g0.Strings4;
 import p507d0.p580t.CollectionsJVM;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: WidgetApplicationCommandBottomSheetViewModel.kt */
-/* renamed from: com.discord.widgets.chat.list.sheet.WidgetApplicationCommandBottomSheetViewModelKt, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.chat.list.sheet.WidgetApplicationCommandBottomSheetViewModelKt, reason: use source file name */
+/* JADX INFO: compiled from: WidgetApplicationCommandBottomSheetViewModel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetApplicationCommandBottomSheetViewModel3 {
     public static final List<ApplicationCommandData3> flattenOptions(List<ApplicationCommandData3> list) {
         Intrinsics3.checkNotNullParameter(list, "$this$flattenOptions");

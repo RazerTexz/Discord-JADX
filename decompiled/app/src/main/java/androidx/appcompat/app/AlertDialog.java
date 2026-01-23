@@ -25,7 +25,7 @@ import androidx.annotation.StyleRes;
 import androidx.appcompat.C0051R;
 import androidx.appcompat.app.AlertController;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class AlertDialog extends AppCompatDialog implements DialogInterface {
     public static final int LAYOUT_HINT_NONE = 0;
     public static final int LAYOUT_HINT_SIDE = 1;
@@ -33,7 +33,7 @@ public class AlertDialog extends AppCompatDialog implements DialogInterface {
 
     public static class Builder {
 
-        /* renamed from: P */
+        /* JADX INFO: renamed from: P */
         private final AlertController.AlertParams f81P;
         private final int mTheme;
 

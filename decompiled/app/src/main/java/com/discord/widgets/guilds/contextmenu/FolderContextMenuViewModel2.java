@@ -9,9 +9,9 @@ import java.util.Set;
 import p507d0.p592z.p594d.Intrinsics3;
 import p658rx.functions.Func2;
 
-/* compiled from: FolderContextMenuViewModel.kt */
-/* renamed from: com.discord.widgets.guilds.contextmenu.FolderContextMenuViewModel$Companion$observeStoreState$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.guilds.contextmenu.FolderContextMenuViewModel$Companion$observeStoreState$1, reason: use source file name */
+/* JADX INFO: compiled from: FolderContextMenuViewModel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class FolderContextMenuViewModel2<T1, T2, R> implements Func2<List<? extends ModelGuildFolder>, Set<? extends Long>, FolderContextMenuViewModel.StoreState> {
     public final /* synthetic */ long $folderId;
 
@@ -24,7 +24,7 @@ public final class FolderContextMenuViewModel2<T1, T2, R> implements Func2<List<
         return call2((List<ModelGuildFolder>) list, (Set<Long>) set);
     }
 
-    /* renamed from: call, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
     public final FolderContextMenuViewModel.StoreState call2(List<ModelGuildFolder> list, Set<Long> set) {
         Object next;
         Intrinsics3.checkNotNullExpressionValue(list, "guildFolders");

@@ -7,12 +7,12 @@ import p658rx.Observable;
 import p658rx.Subscriber;
 
 /* JADX INFO: Add missing generic type declarations: [T] */
-/* compiled from: OperatorPublish.java */
-/* renamed from: j0.l.a.g1, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: j0.l.a.g1, reason: use source file name */
+/* JADX INFO: compiled from: OperatorPublish.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class OperatorPublish<T> implements Observable.InterfaceC13005a<T> {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final /* synthetic */ AtomicReference f26810j;
 
     public OperatorPublish(AtomicReference atomicReference) {

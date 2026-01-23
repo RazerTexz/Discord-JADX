@@ -44,20 +44,20 @@ import p507d0.p592z.p594d.Lambda;
 import p658rx.Observable;
 import p658rx.Subscription;
 
-/* compiled from: WidgetEnableGuildCommunication.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetEnableGuildCommunication.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetEnableGuildCommunication extends AppDialog {
     public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetEnableGuildCommunication.class, "binding", "getBinding()Lcom/discord/databinding/WidgetEnableGuildCommunicationBinding;", 0)};
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
 
-    /* renamed from: binding$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
     private final Clock clock;
     private Subscription communicationDisabledCountdownSubscription;
 
-    /* compiled from: WidgetEnableGuildCommunication.kt */
+    /* JADX INFO: compiled from: WidgetEnableGuildCommunication.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -77,8 +77,8 @@ public final class WidgetEnableGuildCommunication extends AppDialog {
         }
     }
 
-    /* compiled from: WidgetEnableGuildCommunication.kt */
-    /* renamed from: com.discord.widgets.guildcommunicationdisabled.start.WidgetEnableGuildCommunication$configureCommunicationDisabledTimer$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.guildcommunicationdisabled.start.WidgetEnableGuildCommunication$configureCommunicationDisabledTimer$1 */
+    /* JADX INFO: compiled from: WidgetEnableGuildCommunication.kt */
     public static final class C85651 extends Lambda implements Function1<Long, Unit> {
         public final /* synthetic */ long $communicationDisabledTimestampMs;
         public final /* synthetic */ CharSequence $username;
@@ -96,7 +96,7 @@ public final class WidgetEnableGuildCommunication extends AppDialog {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Long l) {
             long jMax = Math.max(this.$communicationDisabledTimestampMs - WidgetEnableGuildCommunication.access$getClock$p(WidgetEnableGuildCommunication.this).currentTimeMillis(), 0L);
             TextView textView = WidgetEnableGuildCommunication.access$getBinding$p(WidgetEnableGuildCommunication.this).f16587d;
@@ -107,8 +107,8 @@ public final class WidgetEnableGuildCommunication extends AppDialog {
         }
     }
 
-    /* compiled from: WidgetEnableGuildCommunication.kt */
-    /* renamed from: com.discord.widgets.guildcommunicationdisabled.start.WidgetEnableGuildCommunication$configureCommunicationDisabledTimer$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.guildcommunicationdisabled.start.WidgetEnableGuildCommunication$configureCommunicationDisabledTimer$2 */
+    /* JADX INFO: compiled from: WidgetEnableGuildCommunication.kt */
     public static final class C85662 extends Lambda implements Function1<Subscription, Unit> {
         public C85662() {
             super(1);
@@ -120,15 +120,15 @@ public final class WidgetEnableGuildCommunication extends AppDialog {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Subscription subscription) {
             Intrinsics3.checkNotNullParameter(subscription, Traits.Payment.Type.SUBSCRIPTION);
             WidgetEnableGuildCommunication.access$setCommunicationDisabledCountdownSubscription$p(WidgetEnableGuildCommunication.this, subscription);
         }
     }
 
-    /* compiled from: WidgetEnableGuildCommunication.kt */
-    /* renamed from: com.discord.widgets.guildcommunicationdisabled.start.WidgetEnableGuildCommunication$handleEnableGuildCommunication$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.guildcommunicationdisabled.start.WidgetEnableGuildCommunication$handleEnableGuildCommunication$1 */
+    /* JADX INFO: compiled from: WidgetEnableGuildCommunication.kt */
     public static final class C85671 extends Lambda implements Function1<Void, TrackNetworkMetadata2> {
         public final /* synthetic */ long $guildId;
         public final /* synthetic */ long $userId;
@@ -145,14 +145,14 @@ public final class WidgetEnableGuildCommunication extends AppDialog {
             return invoke2(r1);
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final TrackNetworkMetadata2 invoke2(Void r7) {
             return new TrackNetworkActionUserCommunicationDisabledUpdate(Long.valueOf(this.$guildId), Long.valueOf(this.$userId), null, null, null);
         }
     }
 
-    /* compiled from: WidgetEnableGuildCommunication.kt */
-    /* renamed from: com.discord.widgets.guildcommunicationdisabled.start.WidgetEnableGuildCommunication$handleEnableGuildCommunication$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.guildcommunicationdisabled.start.WidgetEnableGuildCommunication$handleEnableGuildCommunication$2 */
+    /* JADX INFO: compiled from: WidgetEnableGuildCommunication.kt */
     public static final class C85682 extends Lambda implements Function1<Void, Unit> {
         public C85682() {
             super(1);
@@ -164,7 +164,7 @@ public final class WidgetEnableGuildCommunication extends AppDialog {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Void r7) {
             WidgetEnableGuildCommunication.this.dismiss();
             Context context = WidgetEnableGuildCommunication.this.getContext();
@@ -173,8 +173,8 @@ public final class WidgetEnableGuildCommunication extends AppDialog {
         }
     }
 
-    /* compiled from: WidgetEnableGuildCommunication.kt */
-    /* renamed from: com.discord.widgets.guildcommunicationdisabled.start.WidgetEnableGuildCommunication$onViewBound$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.guildcommunicationdisabled.start.WidgetEnableGuildCommunication$onViewBound$1 */
+    /* JADX INFO: compiled from: WidgetEnableGuildCommunication.kt */
     public static final class ViewOnClickListenerC85691 implements View.OnClickListener {
         public ViewOnClickListenerC85691() {
         }
@@ -185,8 +185,8 @@ public final class WidgetEnableGuildCommunication extends AppDialog {
         }
     }
 
-    /* compiled from: WidgetEnableGuildCommunication.kt */
-    /* renamed from: com.discord.widgets.guildcommunicationdisabled.start.WidgetEnableGuildCommunication$onViewBound$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.guildcommunicationdisabled.start.WidgetEnableGuildCommunication$onViewBound$2 */
+    /* JADX INFO: compiled from: WidgetEnableGuildCommunication.kt */
     public static final class ViewOnClickListenerC85702 implements View.OnClickListener {
         public ViewOnClickListenerC85702() {
         }
@@ -197,8 +197,8 @@ public final class WidgetEnableGuildCommunication extends AppDialog {
         }
     }
 
-    /* compiled from: WidgetEnableGuildCommunication.kt */
-    /* renamed from: com.discord.widgets.guildcommunicationdisabled.start.WidgetEnableGuildCommunication$onViewBound$3 */
+    /* JADX INFO: renamed from: com.discord.widgets.guildcommunicationdisabled.start.WidgetEnableGuildCommunication$onViewBound$3 */
+    /* JADX INFO: compiled from: WidgetEnableGuildCommunication.kt */
     public static final class ViewOnClickListenerC85713 implements View.OnClickListener {
         public final /* synthetic */ long $guildId;
         public final /* synthetic */ long $userId;

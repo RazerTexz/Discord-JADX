@@ -8,9 +8,9 @@ import p507d0.p513e0.KClass;
 import p507d0.p592z.JvmClassMapping;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ViewModelProvider.kt */
-/* renamed from: androidx.lifecycle.ViewModelLazy, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: androidx.lifecycle.ViewModelLazy, reason: use source file name */
+/* JADX INFO: compiled from: ViewModelProvider.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class ViewModelProvider2<VM extends ViewModel> implements Lazy<VM> {
     private VM cached;
     private final Function0<ViewModelProvider.Factory> factoryProducer;

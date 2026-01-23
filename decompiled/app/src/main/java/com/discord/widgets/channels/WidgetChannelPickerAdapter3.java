@@ -27,9 +27,9 @@ import p507d0.p592z.p594d.FunctionReferenceImpl;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetChannelPickerAdapter.kt */
-/* renamed from: com.discord.widgets.channels.WidgetchannelPickerAdapter, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.channels.WidgetchannelPickerAdapter, reason: use source file name */
+/* JADX INFO: compiled from: WidgetChannelPickerAdapter.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetChannelPickerAdapter3 extends RecyclerView.Adapter<WidgetChannelPickerAdapter2> {
     private static final int VIEW_TYPE_CHANNEL_ITEM = 1;
     private static final int VIEW_TYPE_CREATE_CHANNEL = 0;
@@ -37,16 +37,16 @@ public final class WidgetChannelPickerAdapter3 extends RecyclerView.Adapter<Widg
     private List<? extends WidgetChannelPickerAdapter> items;
     private final OnItemClickListener listener;
 
-    /* compiled from: WidgetChannelPickerAdapter.kt */
-    /* renamed from: com.discord.widgets.channels.WidgetchannelPickerAdapter$OnItemClickListener */
+    /* JADX INFO: renamed from: com.discord.widgets.channels.WidgetchannelPickerAdapter$OnItemClickListener */
+    /* JADX INFO: compiled from: WidgetChannelPickerAdapter.kt */
     public interface OnItemClickListener {
         void onChannelItemClick(WidgetChannelPickerAdapter.ChannelItem channelItem);
 
         void onCreateChannelClick();
     }
 
-    /* compiled from: WidgetChannelPickerAdapter.kt */
-    /* renamed from: com.discord.widgets.channels.WidgetchannelPickerAdapter$onCreateViewHolder$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.channels.WidgetchannelPickerAdapter$onCreateViewHolder$1 */
+    /* JADX INFO: compiled from: WidgetChannelPickerAdapter.kt */
     public static final /* synthetic */ class C74021 extends FunctionReferenceImpl implements Function0<Unit> {
         public C74021(OnItemClickListener onItemClickListener) {
             super(0, onItemClickListener, OnItemClickListener.class, "onCreateChannelClick", "onCreateChannelClick()V", 0);
@@ -58,14 +58,14 @@ public final class WidgetChannelPickerAdapter3 extends RecyclerView.Adapter<Widg
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             ((OnItemClickListener) this.receiver).onCreateChannelClick();
         }
     }
 
-    /* compiled from: WidgetChannelPickerAdapter.kt */
-    /* renamed from: com.discord.widgets.channels.WidgetchannelPickerAdapter$onCreateViewHolder$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.channels.WidgetchannelPickerAdapter$onCreateViewHolder$2 */
+    /* JADX INFO: compiled from: WidgetChannelPickerAdapter.kt */
     public static final /* synthetic */ class C74032 extends FunctionReferenceImpl implements Function1<WidgetChannelPickerAdapter.ChannelItem, Unit> {
         public C74032(OnItemClickListener onItemClickListener) {
             super(1, onItemClickListener, OnItemClickListener.class, "onChannelItemClick", "onChannelItemClick(Lcom/discord/widgets/channels/ChannelPickerAdapterItem$ChannelItem;)V", 0);
@@ -77,15 +77,15 @@ public final class WidgetChannelPickerAdapter3 extends RecyclerView.Adapter<Widg
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(WidgetChannelPickerAdapter.ChannelItem channelItem) {
             Intrinsics3.checkNotNullParameter(channelItem, "p1");
             ((OnItemClickListener) this.receiver).onChannelItemClick(channelItem);
         }
     }
 
-    /* compiled from: WidgetChannelPickerAdapter.kt */
-    /* renamed from: com.discord.widgets.channels.WidgetchannelPickerAdapter$setItems$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.channels.WidgetchannelPickerAdapter$setItems$1 */
+    /* JADX INFO: compiled from: WidgetChannelPickerAdapter.kt */
     public static final class C74041 extends Lambda implements Function1<List<? extends WidgetChannelPickerAdapter>, Unit> {
         public C74041() {
             super(1);
@@ -97,7 +97,7 @@ public final class WidgetChannelPickerAdapter3 extends RecyclerView.Adapter<Widg
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(List<? extends WidgetChannelPickerAdapter> list) {
             Intrinsics3.checkNotNullParameter(list, "items");
             WidgetChannelPickerAdapter3.access$setItems$p(WidgetChannelPickerAdapter3.this, list);
@@ -117,7 +117,7 @@ public final class WidgetChannelPickerAdapter3 extends RecyclerView.Adapter<Widg
     }
 
     @Override // androidx.recyclerview.widget.RecyclerView.Adapter
-    /* renamed from: getItemCount */
+    /* JADX INFO: renamed from: getItemCount */
     public int getPageSize() {
         return this.items.size();
     }

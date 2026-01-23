@@ -10,12 +10,12 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p600f0.OkHttpClient;
 import p600f0.p601e0.p606h.RealInterceptorChain;
 
-/* compiled from: ConnectInterceptor.kt */
-/* renamed from: f0.e0.g.a, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: f0.e0.g.a, reason: use source file name */
+/* JADX INFO: compiled from: ConnectInterceptor.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class ConnectInterceptor implements Interceptor {
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static final ConnectInterceptor f25432b = new ConnectInterceptor();
 
     @Override // okhttp3.Interceptor

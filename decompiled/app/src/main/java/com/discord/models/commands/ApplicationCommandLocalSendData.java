@@ -16,8 +16,8 @@ import p507d0.p580t.Collections2;
 import p507d0.p580t.Iterables2;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ApplicationCommandLocalSendData.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: ApplicationCommandLocalSendData.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class ApplicationCommandLocalSendData {
     private final Application application;
     private final String applicationCommandId;
@@ -51,56 +51,57 @@ public final /* data */ class ApplicationCommandLocalSendData {
         this.nonceString = String.valueOf(j);
     }
 
+    /* JADX WARN: Multi-variable type inference failed */
     public static /* synthetic */ ApplicationCommandLocalSendData copy$default(ApplicationCommandLocalSendData applicationCommandLocalSendData, long j, long j2, Long l, Long l2, Application application, String str, String str2, String str3, List list, String str4, Long l3, int i, Object obj) {
         return applicationCommandLocalSendData.copy((i & 1) != 0 ? applicationCommandLocalSendData.nonce : j, (i & 2) != 0 ? applicationCommandLocalSendData.channelId : j2, (i & 4) != 0 ? applicationCommandLocalSendData.guildId : l, (i & 8) != 0 ? applicationCommandLocalSendData.commandGuildId : l2, (i & 16) != 0 ? applicationCommandLocalSendData.application : application, (i & 32) != 0 ? applicationCommandLocalSendData.sessionId : str, (i & 64) != 0 ? applicationCommandLocalSendData.applicationCommandName : str2, (i & 128) != 0 ? applicationCommandLocalSendData.applicationCommandId : str3, (i & 256) != 0 ? applicationCommandLocalSendData.applicationCommandsValues : list, (i & 512) != 0 ? applicationCommandLocalSendData.version : str4, (i & 1024) != 0 ? applicationCommandLocalSendData.interactionId : l3);
     }
 
-    /* renamed from: component1, reason: from getter */
+    /* JADX INFO: renamed from: component1, reason: from getter */
     public final long getNonce() {
         return this.nonce;
     }
 
-    /* renamed from: component10, reason: from getter */
+    /* JADX INFO: renamed from: component10, reason: from getter */
     public final String getVersion() {
         return this.version;
     }
 
-    /* renamed from: component11, reason: from getter */
+    /* JADX INFO: renamed from: component11, reason: from getter */
     public final Long getInteractionId() {
         return this.interactionId;
     }
 
-    /* renamed from: component2, reason: from getter */
+    /* JADX INFO: renamed from: component2, reason: from getter */
     public final long getChannelId() {
         return this.channelId;
     }
 
-    /* renamed from: component3, reason: from getter */
+    /* JADX INFO: renamed from: component3, reason: from getter */
     public final Long getGuildId() {
         return this.guildId;
     }
 
-    /* renamed from: component4, reason: from getter */
+    /* JADX INFO: renamed from: component4, reason: from getter */
     public final Long getCommandGuildId() {
         return this.commandGuildId;
     }
 
-    /* renamed from: component5, reason: from getter */
+    /* JADX INFO: renamed from: component5, reason: from getter */
     public final Application getApplication() {
         return this.application;
     }
 
-    /* renamed from: component6, reason: from getter */
+    /* JADX INFO: renamed from: component6, reason: from getter */
     public final String getSessionId() {
         return this.sessionId;
     }
 
-    /* renamed from: component7, reason: from getter */
+    /* JADX INFO: renamed from: component7, reason: from getter */
     public final String getApplicationCommandName() {
         return this.applicationCommandName;
     }
 
-    /* renamed from: component8, reason: from getter */
+    /* JADX INFO: renamed from: component8, reason: from getter */
     public final String getApplicationCommandId() {
         return this.applicationCommandId;
     }

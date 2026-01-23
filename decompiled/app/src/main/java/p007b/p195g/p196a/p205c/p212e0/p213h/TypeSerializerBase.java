@@ -10,15 +10,15 @@ import p007b.p195g.p196a.p205c.BeanProperty;
 import p007b.p195g.p196a.p205c.p212e0.TypeIdResolver;
 import p007b.p195g.p196a.p205c.p212e0.TypeSerializer;
 
-/* compiled from: TypeSerializerBase.java */
-/* renamed from: b.g.a.c.e0.h.m, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.g.a.c.e0.h.m, reason: use source file name */
+/* JADX INFO: compiled from: TypeSerializerBase.java */
+/* JADX INFO: loaded from: classes3.dex */
 public abstract class TypeSerializerBase extends TypeSerializer {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final TypeIdResolver f4779a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final BeanProperty f4780b;
 
     public TypeSerializerBase(TypeIdResolver typeIdResolver, BeanProperty beanProperty) {
@@ -27,13 +27,13 @@ public abstract class TypeSerializerBase extends TypeSerializer {
     }
 
     @Override // p007b.p195g.p196a.p205c.p212e0.TypeSerializer
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public String mo1956b() {
         return null;
     }
 
     @Override // p007b.p195g.p196a.p205c.p212e0.TypeSerializer
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public WritableTypeId mo1959e(JsonGenerator jsonGenerator, WritableTypeId writableTypeId) throws IOException {
         if (writableTypeId.f4586c == null) {
             Object obj = writableTypeId.f4584a;
@@ -79,7 +79,7 @@ public abstract class TypeSerializerBase extends TypeSerializer {
     }
 
     @Override // p007b.p195g.p196a.p205c.p212e0.TypeSerializer
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public WritableTypeId mo1960f(JsonGenerator jsonGenerator, WritableTypeId writableTypeId) throws IOException {
         Objects.requireNonNull(jsonGenerator);
         JsonToken2 jsonToken2 = writableTypeId.f4589f;

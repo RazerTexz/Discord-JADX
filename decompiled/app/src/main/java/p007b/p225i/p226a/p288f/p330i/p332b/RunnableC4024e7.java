@@ -11,24 +11,24 @@ import java.util.Map;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-/* compiled from: com.google.android.gms:play-services-measurement-impl@@18.0.0 */
-/* renamed from: b.i.a.f.i.b.e7 */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.i.b.e7 */
+/* JADX INFO: compiled from: com.google.android.gms:play-services-measurement-impl@@18.0.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public final /* synthetic */ class RunnableC4024e7 implements Runnable {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final RunnableC4036f7 f10689j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final int f10690k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final Exception f10691l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public final byte[] f10692m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public final Map f10693n;
 
     public RunnableC4024e7(RunnableC4036f7 runnableC4036f7, int i, Exception exc, byte[] bArr, Map map) {
@@ -40,7 +40,7 @@ public final /* synthetic */ class RunnableC4024e7 implements Runnable {
     }
 
     @Override // java.lang.Runnable
-    public final void run() throws IllegalStateException {
+    public final void run() {
         List<ResolveInfo> listQueryIntentActivities;
         RunnableC4036f7 runnableC4036f7 = this.f10689j;
         int i = this.f10690k;

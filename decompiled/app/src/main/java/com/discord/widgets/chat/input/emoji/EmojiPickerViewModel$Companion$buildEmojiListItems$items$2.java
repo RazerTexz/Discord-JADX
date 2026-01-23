@@ -14,8 +14,8 @@ import p507d0.p579g0.Strings4;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: EmojiPickerViewModel.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: EmojiPickerViewModel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class EmojiPickerViewModel$Companion$buildEmojiListItems$items$2 extends Lambda implements Function1<Emoji, WidgetEmojiAdapter.EmojiItem> {
     public final /* synthetic */ boolean $allowEmojisToAnimate;
     public final /* synthetic */ Function1 $getGuild;
@@ -34,7 +34,7 @@ public final class EmojiPickerViewModel$Companion$buildEmojiListItems$items$2 ex
         return invoke2(emoji);
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final WidgetEmojiAdapter.EmojiItem invoke2(Emoji emoji) {
         String name;
         Object next;

@@ -10,21 +10,21 @@ import java.util.concurrent.Callable;
 import org.json.JSONException;
 import p007b.p225i.p226a.p288f.p313h.p327n.C3941a;
 
-/* compiled from: com.android.billingclient:billing@@4.0.0 */
-/* renamed from: b.d.a.a.v */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.d.a.a.v */
+/* JADX INFO: compiled from: com.android.billingclient:billing@@4.0.0 */
+/* JADX INFO: loaded from: classes.dex */
 public final /* synthetic */ class CallableC1637v implements Callable {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final /* synthetic */ C1614a f2997j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final /* synthetic */ String f2998k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final /* synthetic */ List f2999l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public final /* synthetic */ InterfaceC1624i f3000m;
 
     public /* synthetic */ CallableC1637v(C1614a c1614a, String str, List list, InterfaceC1624i interfaceC1624i) {

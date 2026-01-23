@@ -3,8 +3,8 @@ package com.discord.api.botuikit;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: TextComponent.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: TextComponent.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class TextComponent extends Component5 {
     private final String customId;
     private final String label;
@@ -16,27 +16,27 @@ public final /* data */ class TextComponent extends Component5 {
     private final Component6 type;
     private final String value;
 
-    /* renamed from: a, reason: from getter */
+    /* JADX INFO: renamed from: a, reason: from getter */
     public final String getCustomId() {
         return this.customId;
     }
 
-    /* renamed from: b, reason: from getter */
+    /* JADX INFO: renamed from: b, reason: from getter */
     public final String getLabel() {
         return this.label;
     }
 
-    /* renamed from: c, reason: from getter */
+    /* JADX INFO: renamed from: c, reason: from getter */
     public final int getMaxLength() {
         return this.maxLength;
     }
 
-    /* renamed from: d, reason: from getter */
+    /* JADX INFO: renamed from: d, reason: from getter */
     public final int getMinLength() {
         return this.minLength;
     }
 
-    /* renamed from: e, reason: from getter */
+    /* JADX INFO: renamed from: e, reason: from getter */
     public final String getPlaceholder() {
         return this.placeholder;
     }
@@ -52,12 +52,12 @@ public final /* data */ class TextComponent extends Component5 {
         return Intrinsics3.areEqual(this.type, textComponent.type) && Intrinsics3.areEqual(this.style, textComponent.style) && Intrinsics3.areEqual(this.customId, textComponent.customId) && Intrinsics3.areEqual(this.label, textComponent.label) && Intrinsics3.areEqual(this.value, textComponent.value) && Intrinsics3.areEqual(this.placeholder, textComponent.placeholder) && this.minLength == textComponent.minLength && this.maxLength == textComponent.maxLength && Intrinsics3.areEqual(this.required, textComponent.required);
     }
 
-    /* renamed from: f, reason: from getter */
+    /* JADX INFO: renamed from: f, reason: from getter */
     public final Boolean getRequired() {
         return this.required;
     }
 
-    /* renamed from: g, reason: from getter */
+    /* JADX INFO: renamed from: g, reason: from getter */
     public final TextComponent2 getStyle() {
         return this.style;
     }
@@ -67,7 +67,7 @@ public final /* data */ class TextComponent extends Component5 {
         return this.type;
     }
 
-    /* renamed from: h, reason: from getter */
+    /* JADX INFO: renamed from: h, reason: from getter */
     public final String getValue() {
         return this.value;
     }

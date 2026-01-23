@@ -14,8 +14,8 @@ import androidx.view.LifecycleService;
 import androidx.work.Logger;
 import androidx.work.impl.foreground.SystemForegroundDispatcher;
 
+/* JADX INFO: loaded from: classes.dex */
 @RestrictTo({RestrictTo.Scope.LIBRARY_GROUP})
-/* loaded from: classes.dex */
 public class SystemForegroundService extends LifecycleService implements SystemForegroundDispatcher.Callback {
     private static final String TAG = Logger.tagWithPrefix("SystemFgService");
 
@@ -26,7 +26,7 @@ public class SystemForegroundService extends LifecycleService implements SystemF
     private boolean mIsShutdown;
     public NotificationManager mNotificationManager;
 
-    /* renamed from: androidx.work.impl.foreground.SystemForegroundService$1 */
+    /* JADX INFO: renamed from: androidx.work.impl.foreground.SystemForegroundService$1 */
     public class RunnableC07421 implements Runnable {
         public RunnableC07421() {
         }
@@ -37,7 +37,7 @@ public class SystemForegroundService extends LifecycleService implements SystemF
         }
     }
 
-    /* renamed from: androidx.work.impl.foreground.SystemForegroundService$2 */
+    /* JADX INFO: renamed from: androidx.work.impl.foreground.SystemForegroundService$2 */
     public class RunnableC07432 implements Runnable {
         public final /* synthetic */ Notification val$notification;
         public final /* synthetic */ int val$notificationId;
@@ -59,7 +59,7 @@ public class SystemForegroundService extends LifecycleService implements SystemF
         }
     }
 
-    /* renamed from: androidx.work.impl.foreground.SystemForegroundService$3 */
+    /* JADX INFO: renamed from: androidx.work.impl.foreground.SystemForegroundService$3 */
     public class RunnableC07443 implements Runnable {
         public final /* synthetic */ Notification val$notification;
         public final /* synthetic */ int val$notificationId;
@@ -75,7 +75,7 @@ public class SystemForegroundService extends LifecycleService implements SystemF
         }
     }
 
-    /* renamed from: androidx.work.impl.foreground.SystemForegroundService$4 */
+    /* JADX INFO: renamed from: androidx.work.impl.foreground.SystemForegroundService$4 */
     public class RunnableC07454 implements Runnable {
         public final /* synthetic */ int val$notificationId;
 

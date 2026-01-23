@@ -23,13 +23,13 @@ import p637j0.p642l.p647e.ScalarSynchronousObservable;
 import p658rx.Observable;
 import p658rx.functions.Action1;
 
-/* compiled from: GuildRoleSubscriptionUtils.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: GuildRoleSubscriptionUtils.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class GuildRoleSubscriptionUtils {
     public static final GuildRoleSubscriptionUtils INSTANCE = new GuildRoleSubscriptionUtils();
 
-    /* compiled from: GuildRoleSubscriptionUtils.kt */
-    /* renamed from: com.discord.widgets.guild_role_subscriptions.GuildRoleSubscriptionUtils$createGuildRoleSubscriptionGroupListing$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.guild_role_subscriptions.GuildRoleSubscriptionUtils$createGuildRoleSubscriptionGroupListing$1 */
+    /* JADX INFO: compiled from: GuildRoleSubscriptionUtils.kt */
     public static final class C84201<T, R> implements Func1<GuildRoleSubscriptionGroupListing, Observable<? extends GuildRoleSubscriptionTierListing>> {
         public final /* synthetic */ boolean $canAccessAllChannels;
         public final /* synthetic */ List $channelBenefits;
@@ -64,7 +64,7 @@ public final class GuildRoleSubscriptionUtils {
             return call2(guildRoleSubscriptionGroupListing);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final Observable<? extends GuildRoleSubscriptionTierListing> call2(GuildRoleSubscriptionGroupListing guildRoleSubscriptionGroupListing) {
             StoreGuildRoleSubscriptions storeGuildRoleSubscriptions = this.$storeGuildRoleSubscriptions;
             long j = this.$guildId;
@@ -74,8 +74,8 @@ public final class GuildRoleSubscriptionUtils {
         }
     }
 
-    /* compiled from: GuildRoleSubscriptionUtils.kt */
-    /* renamed from: com.discord.widgets.guild_role_subscriptions.GuildRoleSubscriptionUtils$createGuildRoleSubscriptionTierListing$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.guild_role_subscriptions.GuildRoleSubscriptionUtils$createGuildRoleSubscriptionTierListing$1 */
+    /* JADX INFO: compiled from: GuildRoleSubscriptionUtils.kt */
     public static final class C84211<T, R> implements Func1<GuildRoleSubscriptionTierListing, Observable<? extends GuildRoleSubscriptionTierListing>> {
         public final /* synthetic */ long $guildId;
         public final /* synthetic */ int $memberColor;
@@ -94,7 +94,7 @@ public final class GuildRoleSubscriptionUtils {
             return call2(guildRoleSubscriptionTierListing);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final Observable<? extends GuildRoleSubscriptionTierListing> call2(GuildRoleSubscriptionTierListing guildRoleSubscriptionTierListing) {
             GuildRoleSubscriptionUtils guildRoleSubscriptionUtils = GuildRoleSubscriptionUtils.INSTANCE;
             RestAPI restAPI = this.$restApi;
@@ -106,8 +106,8 @@ public final class GuildRoleSubscriptionUtils {
         }
     }
 
-    /* compiled from: GuildRoleSubscriptionUtils.kt */
-    /* renamed from: com.discord.widgets.guild_role_subscriptions.GuildRoleSubscriptionUtils$createGuildRoleSubscriptionTierListing$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.guild_role_subscriptions.GuildRoleSubscriptionUtils$createGuildRoleSubscriptionTierListing$2 */
+    /* JADX INFO: compiled from: GuildRoleSubscriptionUtils.kt */
     public static final class C84222<T> implements Action1<GuildRoleSubscriptionTierListing> {
         public final /* synthetic */ long $groupListingId;
         public final /* synthetic */ long $guildId;
@@ -124,7 +124,7 @@ public final class GuildRoleSubscriptionUtils {
             call2(guildRoleSubscriptionTierListing);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final void call2(GuildRoleSubscriptionTierListing guildRoleSubscriptionTierListing) {
             StoreGuildRoleSubscriptions storeGuildRoleSubscriptions = this.$storeGuildRoleSubscriptions;
             long j = this.$guildId;
@@ -134,8 +134,8 @@ public final class GuildRoleSubscriptionUtils {
         }
     }
 
-    /* compiled from: GuildRoleSubscriptionUtils.kt */
-    /* renamed from: com.discord.widgets.guild_role_subscriptions.GuildRoleSubscriptionUtils$deleteGuildRoleSubscriptionTierListing$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.guild_role_subscriptions.GuildRoleSubscriptionUtils$deleteGuildRoleSubscriptionTierListing$1 */
+    /* JADX INFO: compiled from: GuildRoleSubscriptionUtils.kt */
     public static final class C84231<T> implements Action1<Void> {
         public final /* synthetic */ long $groupListingId;
         public final /* synthetic */ long $guildId;
@@ -154,14 +154,14 @@ public final class GuildRoleSubscriptionUtils {
             call2(r1);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final void call2(Void r8) {
             this.$storeGuildRoleSubscriptions.handleGuildRoleSubscriptionTierListingDelete(this.$guildId, this.$groupListingId, this.$tierListingId);
         }
     }
 
-    /* compiled from: GuildRoleSubscriptionUtils.kt */
-    /* renamed from: com.discord.widgets.guild_role_subscriptions.GuildRoleSubscriptionUtils$updateGuildRoleSubscriptionDesign$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.guild_role_subscriptions.GuildRoleSubscriptionUtils$updateGuildRoleSubscriptionDesign$1 */
+    /* JADX INFO: compiled from: GuildRoleSubscriptionUtils.kt */
     public static final class C84241<T, R> implements Func1<Void, GuildRoleSubscriptionTierListing> {
         public final /* synthetic */ GuildRoleSubscriptionTierListing $guildRoleSubscriptionTierListing;
 
@@ -174,14 +174,14 @@ public final class GuildRoleSubscriptionUtils {
             return call2(r1);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final GuildRoleSubscriptionTierListing call2(Void r1) {
             return this.$guildRoleSubscriptionTierListing;
         }
     }
 
-    /* compiled from: GuildRoleSubscriptionUtils.kt */
-    /* renamed from: com.discord.widgets.guild_role_subscriptions.GuildRoleSubscriptionUtils$updateGuildRoleSubscriptionGroupListing$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.guild_role_subscriptions.GuildRoleSubscriptionUtils$updateGuildRoleSubscriptionGroupListing$1 */
+    /* JADX INFO: compiled from: GuildRoleSubscriptionUtils.kt */
     public static final class C84251<T> implements Action1<GuildRoleSubscriptionGroupListing> {
         public final /* synthetic */ long $guildId;
         public final /* synthetic */ StoreGuildRoleSubscriptions $storeGuildRoleSubscriptions;
@@ -196,7 +196,7 @@ public final class GuildRoleSubscriptionUtils {
             call2(guildRoleSubscriptionGroupListing);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final void call2(GuildRoleSubscriptionGroupListing guildRoleSubscriptionGroupListing) {
             StoreGuildRoleSubscriptions storeGuildRoleSubscriptions = this.$storeGuildRoleSubscriptions;
             long j = this.$guildId;
@@ -205,8 +205,8 @@ public final class GuildRoleSubscriptionUtils {
         }
     }
 
-    /* compiled from: GuildRoleSubscriptionUtils.kt */
-    /* renamed from: com.discord.widgets.guild_role_subscriptions.GuildRoleSubscriptionUtils$updateGuildRoleSubscriptionTierListing$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.guild_role_subscriptions.GuildRoleSubscriptionUtils$updateGuildRoleSubscriptionTierListing$2 */
+    /* JADX INFO: compiled from: GuildRoleSubscriptionUtils.kt */
     public static final class C84262<T, R> implements Func1<GuildRoleSubscriptionTierListing, Observable<? extends GuildRoleSubscriptionTierListing>> {
         public final /* synthetic */ long $guildId;
         public final /* synthetic */ Integer $memberColor;
@@ -225,7 +225,7 @@ public final class GuildRoleSubscriptionUtils {
             return call2(guildRoleSubscriptionTierListing);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final Observable<? extends GuildRoleSubscriptionTierListing> call2(GuildRoleSubscriptionTierListing guildRoleSubscriptionTierListing) {
             GuildRoleSubscriptionUtils guildRoleSubscriptionUtils = GuildRoleSubscriptionUtils.INSTANCE;
             RestAPI restAPI = this.$restApi;
@@ -237,8 +237,8 @@ public final class GuildRoleSubscriptionUtils {
         }
     }
 
-    /* compiled from: GuildRoleSubscriptionUtils.kt */
-    /* renamed from: com.discord.widgets.guild_role_subscriptions.GuildRoleSubscriptionUtils$updateGuildRoleSubscriptionTierListing$3 */
+    /* JADX INFO: renamed from: com.discord.widgets.guild_role_subscriptions.GuildRoleSubscriptionUtils$updateGuildRoleSubscriptionTierListing$3 */
+    /* JADX INFO: compiled from: GuildRoleSubscriptionUtils.kt */
     public static final class C84273<T, R> implements Func1<GuildRoleSubscriptionTierListing, Observable<? extends GuildRoleSubscriptionTierListing>> {
         public final /* synthetic */ NullSerializable $activeTrialUserLimit;
         public final /* synthetic */ long $guildId;
@@ -259,7 +259,7 @@ public final class GuildRoleSubscriptionUtils {
             return call2(guildRoleSubscriptionTierListing);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final Observable<? extends GuildRoleSubscriptionTierListing> call2(GuildRoleSubscriptionTierListing guildRoleSubscriptionTierListing) {
             GuildRoleSubscriptionUtils guildRoleSubscriptionUtils = GuildRoleSubscriptionUtils.INSTANCE;
             RestAPI restAPI = this.$restApi;
@@ -270,8 +270,8 @@ public final class GuildRoleSubscriptionUtils {
         }
     }
 
-    /* compiled from: GuildRoleSubscriptionUtils.kt */
-    /* renamed from: com.discord.widgets.guild_role_subscriptions.GuildRoleSubscriptionUtils$updateGuildRoleSubscriptionTierListing$4 */
+    /* JADX INFO: renamed from: com.discord.widgets.guild_role_subscriptions.GuildRoleSubscriptionUtils$updateGuildRoleSubscriptionTierListing$4 */
+    /* JADX INFO: compiled from: GuildRoleSubscriptionUtils.kt */
     public static final class C84284<T> implements Action1<GuildRoleSubscriptionTierListing> {
         public final /* synthetic */ long $guildId;
         public final /* synthetic */ StoreGuildRoleSubscriptions $storeGuildRoleSubscriptions;
@@ -286,7 +286,7 @@ public final class GuildRoleSubscriptionUtils {
             call2(guildRoleSubscriptionTierListing);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final void call2(GuildRoleSubscriptionTierListing guildRoleSubscriptionTierListing) {
             StoreGuildRoleSubscriptions storeGuildRoleSubscriptions = this.$storeGuildRoleSubscriptions;
             long j = this.$guildId;
@@ -295,8 +295,8 @@ public final class GuildRoleSubscriptionUtils {
         }
     }
 
-    /* compiled from: GuildRoleSubscriptionUtils.kt */
-    /* renamed from: com.discord.widgets.guild_role_subscriptions.GuildRoleSubscriptionUtils$updateGuildRoleSubscriptionTrial$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.guild_role_subscriptions.GuildRoleSubscriptionUtils$updateGuildRoleSubscriptionTrial$1 */
+    /* JADX INFO: compiled from: GuildRoleSubscriptionUtils.kt */
     public static final class C84291<T> implements Action1<GuildRoleSubscriptionTierFreeTrial> {
         public final /* synthetic */ long $guildId;
         public final /* synthetic */ GuildRoleSubscriptionTierListing $guildRoleSubscriptionTierListing;
@@ -313,7 +313,7 @@ public final class GuildRoleSubscriptionUtils {
             call2(guildRoleSubscriptionTierFreeTrial);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final void call2(GuildRoleSubscriptionTierFreeTrial guildRoleSubscriptionTierFreeTrial) {
             StoreGuildRoleSubscriptions storeGuildRoleSubscriptions = this.$storeGuildRoleSubscriptions;
             long j = this.$guildId;
@@ -323,8 +323,8 @@ public final class GuildRoleSubscriptionUtils {
         }
     }
 
-    /* compiled from: GuildRoleSubscriptionUtils.kt */
-    /* renamed from: com.discord.widgets.guild_role_subscriptions.GuildRoleSubscriptionUtils$updateGuildRoleSubscriptionTrial$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.guild_role_subscriptions.GuildRoleSubscriptionUtils$updateGuildRoleSubscriptionTrial$2 */
+    /* JADX INFO: compiled from: GuildRoleSubscriptionUtils.kt */
     public static final class C84302<T, R> implements Func1<GuildRoleSubscriptionTierFreeTrial, GuildRoleSubscriptionTierListing> {
         public final /* synthetic */ GuildRoleSubscriptionTierListing $guildRoleSubscriptionTierListing;
 
@@ -337,7 +337,7 @@ public final class GuildRoleSubscriptionUtils {
             return call2(guildRoleSubscriptionTierFreeTrial);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final GuildRoleSubscriptionTierListing call2(GuildRoleSubscriptionTierFreeTrial guildRoleSubscriptionTierFreeTrial) {
             return this.$guildRoleSubscriptionTierListing;
         }
@@ -372,6 +372,7 @@ public final class GuildRoleSubscriptionUtils {
         return guildRoleSubscriptionUtils.updateGuildRoleSubscriptionDesign(restAPI, j, (i & 4) != 0 ? null : num, (i & 8) != 0 ? null : str, guildRoleSubscriptionTierListing);
     }
 
+    /* JADX WARN: Multi-variable type inference failed */
     public static /* synthetic */ Observable updateGuildRoleSubscriptionTierListing$default(GuildRoleSubscriptionUtils guildRoleSubscriptionUtils, RestAPI restAPI, StoreGuildRoleSubscriptions storeGuildRoleSubscriptions, long j, long j2, long j3, String str, String str2, String str3, Integer num, Integer num2, String str4, Boolean bool, List list, List list2, Boolean bool2, NullSerializable nullSerializable, NullSerializable nullSerializable2, int i, Object obj) {
         return guildRoleSubscriptionUtils.updateGuildRoleSubscriptionTierListing(restAPI, storeGuildRoleSubscriptions, j, j2, j3, (i & 32) != 0 ? null : str, (i & 64) != 0 ? null : str2, (i & 128) != 0 ? null : str3, (i & 256) != 0 ? null : num, (i & 512) != 0 ? null : num2, (i & 1024) != 0 ? null : str4, (i & 2048) != 0 ? null : bool, (i & 4096) != 0 ? null : list, (i & 8192) != 0 ? null : list2, (i & 16384) != 0 ? null : bool2, (32768 & i) != 0 ? null : nullSerializable, (i & 65536) != 0 ? null : nullSerializable2);
     }
@@ -387,6 +388,7 @@ public final class GuildRoleSubscriptionUtils {
         return observableM11083G;
     }
 
+    /* JADX WARN: Multi-variable type inference failed */
     public static /* synthetic */ Observable updateGuildRoleSubscriptionTrial$default(GuildRoleSubscriptionUtils guildRoleSubscriptionUtils, RestAPI restAPI, StoreGuildRoleSubscriptions storeGuildRoleSubscriptions, long j, GuildRoleSubscriptionTierListing guildRoleSubscriptionTierListing, NullSerializable nullSerializable, NullSerializable nullSerializable2, int i, Object obj) {
         return guildRoleSubscriptionUtils.updateGuildRoleSubscriptionTrial(restAPI, storeGuildRoleSubscriptions, j, guildRoleSubscriptionTierListing, (i & 16) != 0 ? null : nullSerializable, (i & 32) != 0 ? null : nullSerializable2);
     }

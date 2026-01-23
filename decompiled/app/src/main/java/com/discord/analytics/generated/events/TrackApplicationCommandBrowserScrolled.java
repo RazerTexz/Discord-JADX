@@ -4,14 +4,14 @@ import com.discord.analytics.generated.traits.TrackBase;
 import com.discord.analytics.generated.traits.TrackBase2;
 import com.discord.api.science.AnalyticsSchema;
 
-/* compiled from: TrackApplicationCommandBrowserScrolled.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: TrackApplicationCommandBrowserScrolled.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class TrackApplicationCommandBrowserScrolled implements AnalyticsSchema, TrackBase2 {
     private final transient String analyticsSchemaTypeName = "application_command_browser_scrolled";
     private TrackBase trackBase;
 
     @Override // com.discord.api.science.AnalyticsSchema
-    /* renamed from: d, reason: from getter */
+    /* JADX INFO: renamed from: d, reason: from getter */
     public String getAnalyticsSchemaTypeName() {
         return this.analyticsSchemaTypeName;
     }

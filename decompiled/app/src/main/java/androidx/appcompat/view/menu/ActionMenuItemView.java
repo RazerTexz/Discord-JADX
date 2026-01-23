@@ -20,8 +20,8 @@ import androidx.appcompat.widget.ForwardingListener;
 import androidx.appcompat.widget.TooltipCompat;
 import androidx.constraintlayout.solver.widgets.analyzer.BasicMeasure;
 
+/* JADX INFO: loaded from: classes.dex */
 @RestrictTo({RestrictTo.Scope.LIBRARY_GROUP_PREFIX})
-/* loaded from: classes.dex */
 public class ActionMenuItemView extends AppCompatTextView implements MenuView.ItemView, View.OnClickListener, ActionMenuView.ActionMenuChildView {
     private static final int MAX_ICON_SIZE = 32;
     private static final String TAG = "ActionMenuItemView";

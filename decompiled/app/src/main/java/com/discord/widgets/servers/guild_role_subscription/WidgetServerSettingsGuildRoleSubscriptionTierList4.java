@@ -3,9 +3,9 @@ package com.discord.widgets.servers.guild_role_subscription;
 import kotlin.jvm.functions.Function0;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetServerSettingsGuildRoleSubscriptionTierList.kt */
-/* renamed from: com.discord.widgets.servers.guild_role_subscription.WidgetServerSettingsGuildRoleSubscriptionTierList$viewModel$2, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.servers.guild_role_subscription.WidgetServerSettingsGuildRoleSubscriptionTierList$viewModel$2, reason: use source file name */
+/* JADX INFO: compiled from: WidgetServerSettingsGuildRoleSubscriptionTierList.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetServerSettingsGuildRoleSubscriptionTierList4 extends Lambda implements Function0<ServerSettingsGuildRoleSubscriptionTierListViewModel> {
     public final /* synthetic */ WidgetServerSettingsGuildRoleSubscriptionTierList this$0;
 

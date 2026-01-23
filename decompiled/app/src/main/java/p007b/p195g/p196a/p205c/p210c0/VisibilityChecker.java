@@ -4,16 +4,16 @@ import java.io.Serializable;
 import p007b.p195g.p196a.p197a.JsonAutoDetect;
 import p007b.p195g.p196a.p205c.p210c0.VisibilityChecker;
 
-/* compiled from: VisibilityChecker.java */
-/* renamed from: b.g.a.c.c0.g0, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.g.a.c.c0.g0, reason: use source file name */
+/* JADX INFO: compiled from: VisibilityChecker.java */
+/* JADX INFO: loaded from: classes3.dex */
 public interface VisibilityChecker<T extends VisibilityChecker<T>> {
 
-    /* compiled from: VisibilityChecker.java */
-    /* renamed from: b.g.a.c.c0.g0$a */
+    /* JADX INFO: renamed from: b.g.a.c.c0.g0$a */
+    /* JADX INFO: compiled from: VisibilityChecker.java */
     public static class a implements VisibilityChecker<a>, Serializable {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public static final a f4709j;
         private static final long serialVersionUID = 1;
         public final JsonAutoDetect.a _creatorMinLevel;
@@ -36,12 +36,12 @@ public interface VisibilityChecker<T extends VisibilityChecker<T>> {
             this._fieldMinLevel = aVar5;
         }
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final JsonAutoDetect.a m1898a(JsonAutoDetect.a aVar, JsonAutoDetect.a aVar2) {
             return aVar2 == JsonAutoDetect.a.DEFAULT ? aVar : aVar2;
         }
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public a m1899b(JsonAutoDetect.a aVar, JsonAutoDetect.a aVar2, JsonAutoDetect.a aVar3, JsonAutoDetect.a aVar4, JsonAutoDetect.a aVar5) {
             return (aVar == this._getterMinLevel && aVar2 == this._isGetterMinLevel && aVar3 == this._setterMinLevel && aVar4 == this._creatorMinLevel && aVar5 == this._fieldMinLevel) ? this : new a(aVar, aVar2, aVar3, aVar4, aVar5);
         }

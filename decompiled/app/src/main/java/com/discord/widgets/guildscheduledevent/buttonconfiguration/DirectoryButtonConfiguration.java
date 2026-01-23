@@ -13,8 +13,8 @@ import p007b.p008a.p027k.FormatUtils;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: DirectoryButtonConfiguration.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: DirectoryButtonConfiguration.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final /* data */ class DirectoryButtonConfiguration implements ButtonConfiguration {
     private final View.OnClickListener extrasButtonOnClickListener;
     private final GuildScheduledEvent guildScheduledEvent;
@@ -67,22 +67,22 @@ public final /* data */ class DirectoryButtonConfiguration implements ButtonConf
         return directoryButtonConfiguration.copy((i & 1) != 0 ? directoryButtonConfiguration.guildScheduledEvent : guildScheduledEvent, (i & 2) != 0 ? directoryButtonConfiguration.isInGuild : z2, (i & 4) != 0 ? directoryButtonConfiguration.isRsvped : z3, (i & 8) != 0 ? directoryButtonConfiguration.isDetailView : z4, (i & 16) != 0 ? directoryButtonConfiguration.getPrimaryButtonOnClickListener() : onClickListener, (i & 32) != 0 ? directoryButtonConfiguration.getSecondaryButtonOnClickListener() : onClickListener2, (i & 64) != 0 ? directoryButtonConfiguration.getShareButtonOnClickListener() : onClickListener3, (i & 128) != 0 ? directoryButtonConfiguration.getExtrasButtonOnClickListener() : onClickListener4);
     }
 
-    /* renamed from: component1, reason: from getter */
+    /* JADX INFO: renamed from: component1, reason: from getter */
     public final GuildScheduledEvent getGuildScheduledEvent() {
         return this.guildScheduledEvent;
     }
 
-    /* renamed from: component2, reason: from getter */
+    /* JADX INFO: renamed from: component2, reason: from getter */
     public final boolean getIsInGuild() {
         return this.isInGuild;
     }
 
-    /* renamed from: component3, reason: from getter */
+    /* JADX INFO: renamed from: component3, reason: from getter */
     public final boolean getIsRsvped() {
         return this.isRsvped;
     }
 
-    /* renamed from: component4, reason: from getter */
+    /* JADX INFO: renamed from: component4, reason: from getter */
     public final boolean getIsDetailView() {
         return this.isDetailView;
     }
@@ -169,25 +169,34 @@ public final /* data */ class DirectoryButtonConfiguration implements ButtonConf
     }
 
     /* JADX WARN: Multi-variable type inference failed */
+    /* JADX WARN: Type inference failed for: r2v1, types: [int] */
+    /* JADX WARN: Type inference failed for: r2v18 */
+    /* JADX WARN: Type inference failed for: r2v19 */
+    /* JADX WARN: Type inference failed for: r2v20 */
+    /* JADX WARN: Type inference failed for: r2v21 */
+    /* JADX WARN: Type inference failed for: r2v3, types: [int] */
+    /* JADX WARN: Type inference failed for: r3v0 */
+    /* JADX WARN: Type inference failed for: r3v1, types: [int] */
+    /* JADX WARN: Type inference failed for: r3v2 */
     public int hashCode() {
         GuildScheduledEvent guildScheduledEvent = this.guildScheduledEvent;
         int iHashCode = (guildScheduledEvent != null ? guildScheduledEvent.hashCode() : 0) * 31;
         boolean z2 = this.isInGuild;
-        int i = z2;
-        if (z2 != 0) {
-            i = 1;
+        ?? r2 = z2;
+        if (z2) {
+            r2 = 1;
         }
-        int i2 = (iHashCode + i) * 31;
+        int i = (iHashCode + r2) * 31;
         boolean z3 = this.isRsvped;
-        int i3 = z3;
-        if (z3 != 0) {
-            i3 = 1;
+        ?? r22 = z3;
+        if (z3) {
+            r22 = 1;
         }
-        int i4 = (i2 + i3) * 31;
+        int i2 = (i + r22) * 31;
         boolean z4 = this.isDetailView;
-        int i5 = (i4 + (z4 ? 1 : z4 ? 1 : 0)) * 31;
+        int i3 = (i2 + (z4 ? 1 : z4)) * 31;
         View.OnClickListener primaryButtonOnClickListener = getPrimaryButtonOnClickListener();
-        int iHashCode2 = (i5 + (primaryButtonOnClickListener != null ? primaryButtonOnClickListener.hashCode() : 0)) * 31;
+        int iHashCode2 = (i3 + (primaryButtonOnClickListener != null ? primaryButtonOnClickListener.hashCode() : 0)) * 31;
         View.OnClickListener secondaryButtonOnClickListener = getSecondaryButtonOnClickListener();
         int iHashCode3 = (iHashCode2 + (secondaryButtonOnClickListener != null ? secondaryButtonOnClickListener.hashCode() : 0)) * 31;
         View.OnClickListener shareButtonOnClickListener = getShareButtonOnClickListener();
@@ -197,7 +206,7 @@ public final /* data */ class DirectoryButtonConfiguration implements ButtonConf
     }
 
     @Override // com.discord.widgets.guildscheduledevent.buttonconfiguration.ButtonConfiguration
-    /* renamed from: isAnyButtonVisible, reason: from getter */
+    /* JADX INFO: renamed from: isAnyButtonVisible, reason: from getter */
     public boolean getIsAnyButtonVisible() {
         return this.isAnyButtonVisible;
     }
@@ -207,7 +216,7 @@ public final /* data */ class DirectoryButtonConfiguration implements ButtonConf
     }
 
     @Override // com.discord.widgets.guildscheduledevent.buttonconfiguration.ButtonConfiguration
-    /* renamed from: isExtrasVisible, reason: from getter */
+    /* JADX INFO: renamed from: isExtrasVisible, reason: from getter */
     public boolean getIsExtrasVisible() {
         return this.isExtrasVisible;
     }
@@ -221,7 +230,7 @@ public final /* data */ class DirectoryButtonConfiguration implements ButtonConf
     }
 
     @Override // com.discord.widgets.guildscheduledevent.buttonconfiguration.ButtonConfiguration
-    /* renamed from: isShareVisible, reason: from getter */
+    /* JADX INFO: renamed from: isShareVisible, reason: from getter */
     public boolean getIsShareVisible() {
         return this.isShareVisible;
     }

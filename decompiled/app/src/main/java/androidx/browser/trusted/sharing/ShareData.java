@@ -7,7 +7,7 @@ import androidx.annotation.Nullable;
 import java.util.ArrayList;
 import java.util.List;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public final class ShareData {
     public static final String KEY_TEXT = "androidx.browser.trusted.sharing.KEY_TEXT";
     public static final String KEY_TITLE = "androidx.browser.trusted.sharing.KEY_TITLE";

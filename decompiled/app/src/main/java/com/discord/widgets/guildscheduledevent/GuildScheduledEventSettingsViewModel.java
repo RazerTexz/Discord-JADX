@@ -15,12 +15,12 @@ import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: GuildScheduledEventSettingsViewModel.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: GuildScheduledEventSettingsViewModel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class GuildScheduledEventSettingsViewModel extends AppViewModel<ViewState> {
     public static final int SAMPLE_USER_COUNT = 1;
 
-    /* compiled from: GuildScheduledEventSettingsViewModel.kt */
+    /* JADX INFO: compiled from: GuildScheduledEventSettingsViewModel.kt */
     public enum DateError {
         INVALID_VIEW_STATE,
         START_DATE_IN_PAST,
@@ -28,10 +28,10 @@ public final class GuildScheduledEventSettingsViewModel extends AppViewModel<Vie
         END_DATE_BEFORE_START_DATE
     }
 
-    /* compiled from: GuildScheduledEventSettingsViewModel.kt */
+    /* JADX INFO: compiled from: GuildScheduledEventSettingsViewModel.kt */
     public static abstract class ViewState {
 
-        /* compiled from: GuildScheduledEventSettingsViewModel.kt */
+        /* JADX INFO: compiled from: GuildScheduledEventSettingsViewModel.kt */
         public static final /* data */ class Initialized extends ViewState {
             private final GuildScheduledEventModel eventModel;
             private final GuildScheduledEvent existingEvent;
@@ -54,12 +54,12 @@ public final class GuildScheduledEventSettingsViewModel extends AppViewModel<Vie
                 return initialized.copy(guildScheduledEventModel, guildScheduledEvent);
             }
 
-            /* renamed from: component1, reason: from getter */
+            /* JADX INFO: renamed from: component1, reason: from getter */
             public final GuildScheduledEventModel getEventModel() {
                 return this.eventModel;
             }
 
-            /* renamed from: component2, reason: from getter */
+            /* JADX INFO: renamed from: component2, reason: from getter */
             public final GuildScheduledEvent getExistingEvent() {
                 return this.existingEvent;
             }
@@ -105,7 +105,7 @@ public final class GuildScheduledEventSettingsViewModel extends AppViewModel<Vie
             }
         }
 
-        /* compiled from: GuildScheduledEventSettingsViewModel.kt */
+        /* JADX INFO: compiled from: GuildScheduledEventSettingsViewModel.kt */
         public static final class Invalid extends ViewState {
             public static final Invalid INSTANCE = new Invalid();
 
@@ -122,8 +122,8 @@ public final class GuildScheduledEventSettingsViewModel extends AppViewModel<Vie
         }
     }
 
-    /* compiled from: GuildScheduledEventSettingsViewModel.kt */
-    /* renamed from: com.discord.widgets.guildscheduledevent.GuildScheduledEventSettingsViewModel$setDescription$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.guildscheduledevent.GuildScheduledEventSettingsViewModel$setDescription$1 */
+    /* JADX INFO: compiled from: GuildScheduledEventSettingsViewModel.kt */
     public static final class C88251 extends Lambda implements Function1<GuildScheduledEventModel, GuildScheduledEventModel> {
         public final /* synthetic */ String $description;
 
@@ -138,15 +138,15 @@ public final class GuildScheduledEventSettingsViewModel extends AppViewModel<Vie
             return invoke2(guildScheduledEventModel);
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final GuildScheduledEventModel invoke2(GuildScheduledEventModel guildScheduledEventModel) {
             Intrinsics3.checkNotNullParameter(guildScheduledEventModel, "$receiver");
             return GuildScheduledEventModel.copy$default(guildScheduledEventModel, 0L, null, null, null, null, null, null, null, this.$description, null, null, null, null, 7935, null);
         }
     }
 
-    /* compiled from: GuildScheduledEventSettingsViewModel.kt */
-    /* renamed from: com.discord.widgets.guildscheduledevent.GuildScheduledEventSettingsViewModel$setEndDate$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.guildscheduledevent.GuildScheduledEventSettingsViewModel$setEndDate$1 */
+    /* JADX INFO: compiled from: GuildScheduledEventSettingsViewModel.kt */
     public static final class C88261 extends Lambda implements Function1<GuildScheduledEventModel, GuildScheduledEventModel> {
         public final /* synthetic */ GuildScheduledEventPickerDateTime2 $newEndDate;
 
@@ -161,15 +161,15 @@ public final class GuildScheduledEventSettingsViewModel extends AppViewModel<Vie
             return invoke2(guildScheduledEventModel);
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final GuildScheduledEventModel invoke2(GuildScheduledEventModel guildScheduledEventModel) {
             Intrinsics3.checkNotNullParameter(guildScheduledEventModel, "$receiver");
             return GuildScheduledEventModel.copy$default(guildScheduledEventModel, 0L, null, null, null, null, null, this.$newEndDate, null, null, null, null, null, null, 8127, null);
         }
     }
 
-    /* compiled from: GuildScheduledEventSettingsViewModel.kt */
-    /* renamed from: com.discord.widgets.guildscheduledevent.GuildScheduledEventSettingsViewModel$setEndTime$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.guildscheduledevent.GuildScheduledEventSettingsViewModel$setEndTime$1 */
+    /* JADX INFO: compiled from: GuildScheduledEventSettingsViewModel.kt */
     public static final class C88271 extends Lambda implements Function1<GuildScheduledEventModel, GuildScheduledEventModel> {
         public final /* synthetic */ GuildScheduledEventPickerDateTime3 $newEndTime;
 
@@ -184,15 +184,15 @@ public final class GuildScheduledEventSettingsViewModel extends AppViewModel<Vie
             return invoke2(guildScheduledEventModel);
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final GuildScheduledEventModel invoke2(GuildScheduledEventModel guildScheduledEventModel) {
             Intrinsics3.checkNotNullParameter(guildScheduledEventModel, "$receiver");
             return GuildScheduledEventModel.copy$default(guildScheduledEventModel, 0L, null, null, null, null, null, null, this.$newEndTime, null, null, null, null, null, 8063, null);
         }
     }
 
-    /* compiled from: GuildScheduledEventSettingsViewModel.kt */
-    /* renamed from: com.discord.widgets.guildscheduledevent.GuildScheduledEventSettingsViewModel$setStartDate$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.guildscheduledevent.GuildScheduledEventSettingsViewModel$setStartDate$1 */
+    /* JADX INFO: compiled from: GuildScheduledEventSettingsViewModel.kt */
     public static final class C88281 extends Lambda implements Function1<GuildScheduledEventModel, GuildScheduledEventModel> {
         public final /* synthetic */ GuildScheduledEventPickerDateTime2 $newStartDate;
 
@@ -207,15 +207,15 @@ public final class GuildScheduledEventSettingsViewModel extends AppViewModel<Vie
             return invoke2(guildScheduledEventModel);
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final GuildScheduledEventModel invoke2(GuildScheduledEventModel guildScheduledEventModel) {
             Intrinsics3.checkNotNullParameter(guildScheduledEventModel, "$receiver");
             return GuildScheduledEventModel.copy$default(guildScheduledEventModel, 0L, null, null, null, this.$newStartDate, null, null, null, null, null, null, null, null, 8175, null);
         }
     }
 
-    /* compiled from: GuildScheduledEventSettingsViewModel.kt */
-    /* renamed from: com.discord.widgets.guildscheduledevent.GuildScheduledEventSettingsViewModel$setStartTime$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.guildscheduledevent.GuildScheduledEventSettingsViewModel$setStartTime$1 */
+    /* JADX INFO: compiled from: GuildScheduledEventSettingsViewModel.kt */
     public static final class C88291 extends Lambda implements Function1<GuildScheduledEventModel, GuildScheduledEventModel> {
         public final /* synthetic */ GuildScheduledEventPickerDateTime3 $newStartTime;
 
@@ -230,15 +230,15 @@ public final class GuildScheduledEventSettingsViewModel extends AppViewModel<Vie
             return invoke2(guildScheduledEventModel);
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final GuildScheduledEventModel invoke2(GuildScheduledEventModel guildScheduledEventModel) {
             Intrinsics3.checkNotNullParameter(guildScheduledEventModel, "$receiver");
             return GuildScheduledEventModel.copy$default(guildScheduledEventModel, 0L, null, null, null, null, this.$newStartTime, null, null, null, null, null, null, null, 8159, null);
         }
     }
 
-    /* compiled from: GuildScheduledEventSettingsViewModel.kt */
-    /* renamed from: com.discord.widgets.guildscheduledevent.GuildScheduledEventSettingsViewModel$setTopic$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.guildscheduledevent.GuildScheduledEventSettingsViewModel$setTopic$1 */
+    /* JADX INFO: compiled from: GuildScheduledEventSettingsViewModel.kt */
     public static final class C88301 extends Lambda implements Function1<GuildScheduledEventModel, GuildScheduledEventModel> {
         public final /* synthetic */ String $topic;
 
@@ -253,15 +253,15 @@ public final class GuildScheduledEventSettingsViewModel extends AppViewModel<Vie
             return invoke2(guildScheduledEventModel);
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final GuildScheduledEventModel invoke2(GuildScheduledEventModel guildScheduledEventModel) {
             Intrinsics3.checkNotNullParameter(guildScheduledEventModel, "$receiver");
             return GuildScheduledEventModel.copy$default(guildScheduledEventModel, 0L, this.$topic, null, null, null, null, null, null, null, null, null, null, null, 8189, null);
         }
     }
 
-    /* compiled from: GuildScheduledEventSettingsViewModel.kt */
-    /* renamed from: com.discord.widgets.guildscheduledevent.GuildScheduledEventSettingsViewModel$toggleBroadcastToDirectoryChannel$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.guildscheduledevent.GuildScheduledEventSettingsViewModel$toggleBroadcastToDirectoryChannel$1 */
+    /* JADX INFO: compiled from: GuildScheduledEventSettingsViewModel.kt */
     public static final class C88311 extends Lambda implements Function1<GuildScheduledEventModel, GuildScheduledEventModel> {
         public final /* synthetic */ boolean $associateToHubs;
 
@@ -276,7 +276,7 @@ public final class GuildScheduledEventSettingsViewModel extends AppViewModel<Vie
             return invoke2(guildScheduledEventModel);
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final GuildScheduledEventModel invoke2(GuildScheduledEventModel guildScheduledEventModel) {
             Intrinsics3.checkNotNullParameter(guildScheduledEventModel, "$receiver");
             return GuildScheduledEventModel.copy$default(guildScheduledEventModel, 0L, null, null, null, null, null, null, null, null, null, null, null, Boolean.valueOf(this.$associateToHubs), 4095, null);

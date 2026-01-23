@@ -6,9 +6,9 @@ import kotlin.jvm.functions.Function1;
 import p507d0.p592z.p594d.FunctionReferenceImpl;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: WidgetCallFailed.kt */
-/* renamed from: com.discord.widgets.voice.call.WidgetCallFailed$binding$2, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: com.discord.widgets.voice.call.WidgetCallFailed$binding$2, reason: use source file name */
+/* JADX INFO: compiled from: WidgetCallFailed.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* synthetic */ class WidgetCallFailed2 extends FunctionReferenceImpl implements Function1<View, ViewDialogConfirmationBinding> {
     public static final WidgetCallFailed2 INSTANCE = new WidgetCallFailed2();
 
@@ -21,7 +21,7 @@ public final /* synthetic */ class WidgetCallFailed2 extends FunctionReferenceIm
         return invoke2(view);
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final ViewDialogConfirmationBinding invoke2(View view) {
         Intrinsics3.checkNotNullParameter(view, "p1");
         return ViewDialogConfirmationBinding.m8393a(view);

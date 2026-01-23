@@ -19,9 +19,9 @@ import p507d0.p592z.p594d.FunctionReferenceImpl;
 import p507d0.p592z.p594d.Intrinsics3;
 import p600f0.p601e0.Util7;
 
-/* compiled from: RtcStatsCollector.kt */
-/* renamed from: b.a.q.o0.a, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.a.q.o0.a, reason: use source file name */
+/* JADX INFO: compiled from: RtcStatsCollector.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* synthetic */ class RtcStatsCollector extends FunctionReferenceImpl implements Function1<Stats, Unit> {
     public RtcStatsCollector(RtcStatsCollector4 rtcStatsCollector4) {
         super(1, rtcStatsCollector4, RtcStatsCollector4.class, "onStatsReceived", "onStatsReceived(Lco/discord/media_engine/Stats;)V", 0);

@@ -6,9 +6,9 @@ import java.util.Objects;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: Codecs.kt */
-/* renamed from: co.discord.media_engine.VideoDecoder, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: co.discord.media_engine.VideoDecoder, reason: use source file name */
+/* JADX INFO: compiled from: Codecs.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class Codecs4 {
     private final String name;
     private final Map<String, String> params;
@@ -49,17 +49,17 @@ public final /* data */ class Codecs4 {
         return codecs4.copy(str, i, i2, map);
     }
 
-    /* renamed from: component1, reason: from getter */
+    /* JADX INFO: renamed from: component1, reason: from getter */
     public final String getName() {
         return this.name;
     }
 
-    /* renamed from: component2, reason: from getter */
+    /* JADX INFO: renamed from: component2, reason: from getter */
     public final int getType() {
         return this.type;
     }
 
-    /* renamed from: component3, reason: from getter */
+    /* JADX INFO: renamed from: component3, reason: from getter */
     public final int getRtxType() {
         return this.rtxType;
     }

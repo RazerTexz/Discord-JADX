@@ -15,9 +15,9 @@ import kotlin.jvm.functions.Function1;
 import p507d0.p592z.p594d.FunctionReferenceImpl;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: WidgetOauth2Authorize.kt */
-/* renamed from: com.discord.widgets.auth.WidgetOauth2Authorize$binding$2, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.auth.WidgetOauth2Authorize$binding$2, reason: use source file name */
+/* JADX INFO: compiled from: WidgetOauth2Authorize.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final /* synthetic */ class WidgetOauth2Authorize5 extends FunctionReferenceImpl implements Function1<View, WidgetOauthAuthorizeBinding> {
     public static final WidgetOauth2Authorize5 INSTANCE = new WidgetOauth2Authorize5();
 
@@ -30,7 +30,7 @@ public final /* synthetic */ class WidgetOauth2Authorize5 extends FunctionRefere
         return invoke2(view);
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final WidgetOauthAuthorizeBinding invoke2(View view) {
         Intrinsics3.checkNotNullParameter(view, "p1");
         int i = C5419R.id.oauth_authorize_age_notice;

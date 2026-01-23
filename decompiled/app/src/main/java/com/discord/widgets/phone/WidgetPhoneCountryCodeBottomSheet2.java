@@ -10,9 +10,9 @@ import kotlin.jvm.functions.Function1;
 import p507d0.p592z.p594d.FunctionReferenceImpl;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: WidgetPhoneCountryCodeBottomSheet.kt */
-/* renamed from: com.discord.widgets.phone.WidgetPhoneCountryCodeBottomSheet$binding$2, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.phone.WidgetPhoneCountryCodeBottomSheet$binding$2, reason: use source file name */
+/* JADX INFO: compiled from: WidgetPhoneCountryCodeBottomSheet.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final /* synthetic */ class WidgetPhoneCountryCodeBottomSheet2 extends FunctionReferenceImpl implements Function1<View, WidgetPhoneCountryCodeBottomSheetBinding> {
     public static final WidgetPhoneCountryCodeBottomSheet2 INSTANCE = new WidgetPhoneCountryCodeBottomSheet2();
 
@@ -25,7 +25,7 @@ public final /* synthetic */ class WidgetPhoneCountryCodeBottomSheet2 extends Fu
         return invoke2(view);
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final WidgetPhoneCountryCodeBottomSheetBinding invoke2(View view) {
         Intrinsics3.checkNotNullParameter(view, "p1");
         int i = C5419R.id.phone_country_code_recycler;

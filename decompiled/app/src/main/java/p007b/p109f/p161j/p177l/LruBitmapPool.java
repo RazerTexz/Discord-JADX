@@ -6,24 +6,24 @@ import java.util.Objects;
 import p007b.p109f.p115d.p122g.MemoryTrimmableRegistry;
 import p007b.p109f.p161j.p177l.BucketMap;
 
-/* compiled from: LruBitmapPool.java */
-/* renamed from: b.f.j.l.p, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.f.j.l.p, reason: use source file name */
+/* JADX INFO: compiled from: LruBitmapPool.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class LruBitmapPool implements BitmapPool {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final LruBucketsPoolBackend<Bitmap> f3945a = new BitmapPoolBackend();
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final int f3946b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public int f3947c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final PoolStatsTracker f3948d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public int f3949e;
 
     public LruBitmapPool(int i, int i2, PoolStatsTracker poolStatsTracker, MemoryTrimmableRegistry memoryTrimmableRegistry) {

@@ -67,29 +67,29 @@ import p658rx.Observable;
 import p658rx.functions.Action1;
 import p658rx.subjects.BehaviorSubject;
 
-/* compiled from: WidgetSettingsAppearance.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetSettingsAppearance.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetSettingsAppearance extends AppFragment {
     public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetSettingsAppearance.class, "binding", "getBinding()Lcom/discord/databinding/WidgetSettingsAppearanceBinding;", 0)};
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private static final int EASTER_EGG_UNLOCK_TIMEOUT = 5;
     private static final int HOLY_LIGHT_UNLOCK_COUNT = 5;
     private static final int PURE_EVIL_HINT_COUNT = 3;
     private static final int PURE_EVIL_UNLOCK_COUNT = 8;
 
-    /* renamed from: binding$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
     private final AtomicInteger holyLightEasterEggCounter;
     private final BehaviorSubject<Integer> newFontScaleSubject;
     private final AtomicInteger pureEvilEasterEggCounter;
 
-    /* renamed from: pureEvilEasterEggSubject$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: pureEvilEasterEggSubject$delegate, reason: from kotlin metadata */
     private final Lazy pureEvilEasterEggSubject;
     private ToastManager toastManager;
 
-    /* compiled from: WidgetSettingsAppearance.kt */
+    /* JADX INFO: compiled from: WidgetSettingsAppearance.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -104,17 +104,17 @@ public final class WidgetSettingsAppearance extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetSettingsAppearance.kt */
+    /* JADX INFO: compiled from: WidgetSettingsAppearance.kt */
     public static final /* data */ class Model {
 
-        /* renamed from: Companion, reason: from kotlin metadata */
+        /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
         public static final Companion INSTANCE = new Companion(null);
         private final boolean canSeePureEvil;
         private final String currentTheme;
         private final int fontScale;
         private final MeUser meUser;
 
-        /* compiled from: WidgetSettingsAppearance.kt */
+        /* JADX INFO: compiled from: WidgetSettingsAppearance.kt */
         public static final class Companion {
             private Companion() {
             }
@@ -157,22 +157,22 @@ public final class WidgetSettingsAppearance extends AppFragment {
             return model.copy(str, z2, i, meUser);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final String getCurrentTheme() {
             return this.currentTheme;
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final boolean getCanSeePureEvil() {
             return this.canSeePureEvil;
         }
 
-        /* renamed from: component3, reason: from getter */
+        /* JADX INFO: renamed from: component3, reason: from getter */
         public final int getFontScale() {
             return this.fontScale;
         }
 
-        /* renamed from: component4, reason: from getter */
+        /* JADX INFO: renamed from: component4, reason: from getter */
         public final MeUser getMeUser() {
             return this.meUser;
         }
@@ -211,17 +211,20 @@ public final class WidgetSettingsAppearance extends AppFragment {
         }
 
         /* JADX WARN: Multi-variable type inference failed */
+        /* JADX WARN: Type inference failed for: r2v1, types: [int] */
+        /* JADX WARN: Type inference failed for: r2v4 */
+        /* JADX WARN: Type inference failed for: r2v5 */
         public int hashCode() {
             String str = this.currentTheme;
             int iHashCode = (str != null ? str.hashCode() : 0) * 31;
             boolean z2 = this.canSeePureEvil;
-            int i = z2;
-            if (z2 != 0) {
-                i = 1;
+            ?? r2 = z2;
+            if (z2) {
+                r2 = 1;
             }
-            int i2 = (((iHashCode + i) * 31) + this.fontScale) * 31;
+            int i = (((iHashCode + r2) * 31) + this.fontScale) * 31;
             MeUser meUser = this.meUser;
-            return i2 + (meUser != null ? meUser.hashCode() : 0);
+            return i + (meUser != null ? meUser.hashCode() : 0);
         }
 
         public String toString() {
@@ -238,8 +241,8 @@ public final class WidgetSettingsAppearance extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetSettingsAppearance.kt */
-    /* renamed from: com.discord.widgets.settings.WidgetSettingsAppearance$configureThemeOption$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.WidgetSettingsAppearance$configureThemeOption$1 */
+    /* JADX INFO: compiled from: WidgetSettingsAppearance.kt */
     public static final class C96271<T> implements Action1<Boolean> {
         public final /* synthetic */ String $settingTheme;
 
@@ -252,7 +255,7 @@ public final class WidgetSettingsAppearance extends AppFragment {
             call2(bool);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final void call2(Boolean bool) {
             Intrinsics3.checkNotNullExpressionValue(bool, "checked");
             if (bool.booleanValue()) {
@@ -261,13 +264,13 @@ public final class WidgetSettingsAppearance extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetSettingsAppearance.kt */
-    /* renamed from: com.discord.widgets.settings.WidgetSettingsAppearance$configureUI$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.WidgetSettingsAppearance$configureUI$1 */
+    /* JADX INFO: compiled from: WidgetSettingsAppearance.kt */
     public static final class ViewOnClickListenerC96281 implements View.OnClickListener {
 
-        /* compiled from: WidgetSettingsAppearance.kt */
+        /* JADX INFO: renamed from: com.discord.widgets.settings.WidgetSettingsAppearance$configureUI$1$1, reason: invalid class name */
+        /* JADX INFO: compiled from: WidgetSettingsAppearance.kt */
         @DebugMetadata(m10084c = "com.discord.widgets.settings.WidgetSettingsAppearance$configureUI$1$1", m10085f = "WidgetSettingsAppearance.kt", m10086l = {122}, m10087m = "invokeSuspend")
-        /* renamed from: com.discord.widgets.settings.WidgetSettingsAppearance$configureUI$1$1, reason: invalid class name */
         public static final class AnonymousClass1 extends ContinuationImpl6 implements Function2<CoroutineScope, Continuation<? super Unit>, Object> {
             public int label;
 
@@ -329,14 +332,14 @@ public final class WidgetSettingsAppearance extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetSettingsAppearance.kt */
-    /* renamed from: com.discord.widgets.settings.WidgetSettingsAppearance$configureUI$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.WidgetSettingsAppearance$configureUI$2 */
+    /* JADX INFO: compiled from: WidgetSettingsAppearance.kt */
     public static final class ViewOnClickListenerC96292 implements View.OnClickListener {
         public final /* synthetic */ Model $model;
 
-        /* compiled from: WidgetSettingsAppearance.kt */
+        /* JADX INFO: renamed from: com.discord.widgets.settings.WidgetSettingsAppearance$configureUI$2$1, reason: invalid class name */
+        /* JADX INFO: compiled from: WidgetSettingsAppearance.kt */
         @DebugMetadata(m10084c = "com.discord.widgets.settings.WidgetSettingsAppearance$configureUI$2$1", m10085f = "WidgetSettingsAppearance.kt", m10086l = {Opcodes.F2I}, m10087m = "invokeSuspend")
-        /* renamed from: com.discord.widgets.settings.WidgetSettingsAppearance$configureUI$2$1, reason: invalid class name */
         public static final class AnonymousClass1 extends ContinuationImpl6 implements Function2<CoroutineScope, Continuation<? super Unit>, Object> {
             public int label;
 
@@ -406,8 +409,8 @@ public final class WidgetSettingsAppearance extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetSettingsAppearance.kt */
-    /* renamed from: com.discord.widgets.settings.WidgetSettingsAppearance$configureUI$3 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.WidgetSettingsAppearance$configureUI$3 */
+    /* JADX INFO: compiled from: WidgetSettingsAppearance.kt */
     public static final class C96303<T> implements Action1<Boolean> {
         public final /* synthetic */ Model $model;
 
@@ -420,7 +423,7 @@ public final class WidgetSettingsAppearance extends AppFragment {
             call2(bool);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final void call2(Boolean bool) {
             Intrinsics3.checkNotNullExpressionValue(bool, "isChecked");
             if (bool.booleanValue() && Intrinsics3.areEqual(this.$model.getCurrentTheme(), ModelUserSettings.THEME_DARK)) {
@@ -434,8 +437,8 @@ public final class WidgetSettingsAppearance extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetSettingsAppearance.kt */
-    /* renamed from: com.discord.widgets.settings.WidgetSettingsAppearance$configureUI$4 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.WidgetSettingsAppearance$configureUI$4 */
+    /* JADX INFO: compiled from: WidgetSettingsAppearance.kt */
     public static final class C96314 implements SeekBar.OnSeekBarChangeListener {
         public C96314() {
         }
@@ -460,8 +463,8 @@ public final class WidgetSettingsAppearance extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetSettingsAppearance.kt */
-    /* renamed from: com.discord.widgets.settings.WidgetSettingsAppearance$configureUI$5 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.WidgetSettingsAppearance$configureUI$5 */
+    /* JADX INFO: compiled from: WidgetSettingsAppearance.kt */
     public static final class ViewOnClickListenerC96325 implements View.OnClickListener {
         public static final ViewOnClickListenerC96325 INSTANCE = new ViewOnClickListenerC96325();
 
@@ -471,8 +474,8 @@ public final class WidgetSettingsAppearance extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetSettingsAppearance.kt */
-    /* renamed from: com.discord.widgets.settings.WidgetSettingsAppearance$onViewBoundOrOnResume$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.WidgetSettingsAppearance$onViewBoundOrOnResume$1 */
+    /* JADX INFO: compiled from: WidgetSettingsAppearance.kt */
     public static final /* synthetic */ class C96331 extends FunctionReferenceImpl implements Function1<Model, Unit> {
         public C96331(WidgetSettingsAppearance widgetSettingsAppearance) {
             super(1, widgetSettingsAppearance, WidgetSettingsAppearance.class, "configureUI", "configureUI(Lcom/discord/widgets/settings/WidgetSettingsAppearance$Model;)V", 0);
@@ -484,15 +487,15 @@ public final class WidgetSettingsAppearance extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Model model) {
             Intrinsics3.checkNotNullParameter(model, "p1");
             WidgetSettingsAppearance.access$configureUI((WidgetSettingsAppearance) this.receiver, model);
         }
     }
 
-    /* compiled from: WidgetSettingsAppearance.kt */
-    /* renamed from: com.discord.widgets.settings.WidgetSettingsAppearance$onViewBoundOrOnResume$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.WidgetSettingsAppearance$onViewBoundOrOnResume$2 */
+    /* JADX INFO: compiled from: WidgetSettingsAppearance.kt */
     public static final class C96342 extends Lambda implements Function1<Integer, Unit> {
         public static final C96342 INSTANCE = new C96342();
 
@@ -506,7 +509,7 @@ public final class WidgetSettingsAppearance extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Integer num) {
             StoreUserSettingsSystem userSettingsSystem = StoreStream.INSTANCE.getUserSettingsSystem();
             Intrinsics3.checkNotNullExpressionValue(num, "fontScale");
@@ -514,8 +517,8 @@ public final class WidgetSettingsAppearance extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetSettingsAppearance.kt */
-    /* renamed from: com.discord.widgets.settings.WidgetSettingsAppearance$onViewBoundOrOnResume$3 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.WidgetSettingsAppearance$onViewBoundOrOnResume$3 */
+    /* JADX INFO: compiled from: WidgetSettingsAppearance.kt */
     public static final class C96353<T> implements Action1<Boolean> {
         public static final C96353 INSTANCE = new C96353();
 
@@ -524,7 +527,7 @@ public final class WidgetSettingsAppearance extends AppFragment {
             call2(bool);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final void call2(Boolean bool) {
             StoreUserSettingsSystem userSettingsSystem = StoreStream.INSTANCE.getUserSettingsSystem();
             Intrinsics3.checkNotNullExpressionValue(bool, "it");
@@ -532,8 +535,8 @@ public final class WidgetSettingsAppearance extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetSettingsAppearance.kt */
-    /* renamed from: com.discord.widgets.settings.WidgetSettingsAppearance$showHolyLight$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.WidgetSettingsAppearance$showHolyLight$1 */
+    /* JADX INFO: compiled from: WidgetSettingsAppearance.kt */
     public static final class C96361 extends Lambda implements Function1<Long, Unit> {
         public C96361() {
             super(1);
@@ -545,7 +548,7 @@ public final class WidgetSettingsAppearance extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Long l) {
             View view = WidgetSettingsAppearance.access$getBinding$p(WidgetSettingsAppearance.this).f17854g;
             Intrinsics3.checkNotNullExpressionValue(view, "binding.settingsAppearanceHolyLight");
@@ -554,13 +557,13 @@ public final class WidgetSettingsAppearance extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetSettingsAppearance.kt */
-    /* renamed from: com.discord.widgets.settings.WidgetSettingsAppearance$updateTheme$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.WidgetSettingsAppearance$updateTheme$1 */
+    /* JADX INFO: compiled from: WidgetSettingsAppearance.kt */
     public static final class C96371 extends Lambda implements Function0<Unit> {
         public final /* synthetic */ String $theme;
 
-        /* compiled from: WidgetSettingsAppearance.kt */
-        /* renamed from: com.discord.widgets.settings.WidgetSettingsAppearance$updateTheme$1$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.widgets.settings.WidgetSettingsAppearance$updateTheme$1$1, reason: invalid class name */
+        /* JADX INFO: compiled from: WidgetSettingsAppearance.kt */
         public static final class AnonymousClass1 extends Lambda implements Function1<ModelUserSettings, Unit> {
             public AnonymousClass1() {
                 super(1);
@@ -572,7 +575,7 @@ public final class WidgetSettingsAppearance extends AppFragment {
                 return Unit.f27425a;
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2(ModelUserSettings modelUserSettings) {
                 Intrinsics3.checkNotNullParameter(modelUserSettings, "it");
                 if (Intrinsics3.areEqual(C96371.this.$theme, ModelUserSettings.THEME_PURE_EVIL)) {
@@ -595,7 +598,7 @@ public final class WidgetSettingsAppearance extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.ui$default(ObservableExtensionsKt.restSubscribeOn$default(RestAPI.INSTANCE.getApi().updateUserSettings(RestAPIParams.UserSettings.INSTANCE.createWithTheme(Intrinsics3.areEqual(this.$theme, ModelUserSettings.THEME_PURE_EVIL) ? ModelUserSettings.THEME_DARK : this.$theme)), false, 1, null), WidgetSettingsAppearance.this, null, 2, null), StoreUserSettings.class, WidgetSettingsAppearance.this.getActivity(), (Function1) null, (Function1) null, (Function0) null, (Function0) null, new AnonymousClass1(), 60, (Object) null);
         }

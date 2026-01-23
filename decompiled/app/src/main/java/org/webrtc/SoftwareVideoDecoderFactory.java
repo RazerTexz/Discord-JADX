@@ -4,7 +4,7 @@ import androidx.annotation.Nullable;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public class SoftwareVideoDecoderFactory implements VideoDecoderFactory {
     public static VideoCodecInfo[] supportedCodecs() {
         ArrayList arrayList = new ArrayList();

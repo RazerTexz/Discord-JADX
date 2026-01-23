@@ -1,28 +1,28 @@
 package p617h0.p618a.p619a;
 
-/* compiled from: Opcodes.java */
-/* renamed from: h0.a.a.t, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: h0.a.a.t, reason: use source file name */
+/* JADX INFO: compiled from: Opcodes.java */
+/* JADX INFO: loaded from: classes3.dex */
 public interface Opcodes2 {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final Integer f26333a = 0;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static final Integer f26334b = 1;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public static final Integer f26335c = 2;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public static final Integer f26336d = 3;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public static final Integer f26337e = 4;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public static final Integer f26338f = 5;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public static final Integer f26339g = 6;
 }

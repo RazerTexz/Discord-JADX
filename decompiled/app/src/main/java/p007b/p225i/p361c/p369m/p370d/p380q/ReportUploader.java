@@ -13,62 +13,62 @@ import p007b.p225i.p361c.p369m.p370d.p380q.p381c.CreateReportRequest;
 import p007b.p225i.p361c.p369m.p370d.p380q.p381c.Report2;
 import p007b.p225i.p361c.p369m.p370d.p380q.p382d.CreateReportSpiCall;
 
-/* compiled from: ReportUploader.java */
-/* renamed from: b.i.c.m.d.q.b, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.c.m.d.q.b, reason: use source file name */
+/* JADX INFO: compiled from: ReportUploader.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class ReportUploader {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final short[] f12697a = {10, 20, 30, 60, 120, 300};
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final CreateReportSpiCall f12698b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     @Nullable
     public final String f12699c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final String f12700d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final int f12701e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final ReportManager f12702f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public final a f12703g;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public Thread f12704h;
 
-    /* compiled from: ReportUploader.java */
-    /* renamed from: b.i.c.m.d.q.b$a */
+    /* JADX INFO: renamed from: b.i.c.m.d.q.b$a */
+    /* JADX INFO: compiled from: ReportUploader.java */
     public interface a {
     }
 
-    /* compiled from: ReportUploader.java */
-    /* renamed from: b.i.c.m.d.q.b$b */
+    /* JADX INFO: renamed from: b.i.c.m.d.q.b$b */
+    /* JADX INFO: compiled from: ReportUploader.java */
     public interface b {
     }
 
-    /* compiled from: ReportUploader.java */
-    /* renamed from: b.i.c.m.d.q.b$c */
+    /* JADX INFO: renamed from: b.i.c.m.d.q.b$c */
+    /* JADX INFO: compiled from: ReportUploader.java */
     public interface c {
     }
 
-    /* compiled from: ReportUploader.java */
-    /* renamed from: b.i.c.m.d.q.b$d */
+    /* JADX INFO: renamed from: b.i.c.m.d.q.b$d */
+    /* JADX INFO: compiled from: ReportUploader.java */
     public class d extends BackgroundPriorityRunnable {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public final List<Report2> f12705j;
 
-        /* renamed from: k */
+        /* JADX INFO: renamed from: k */
         public final boolean f12706k;
 
-        /* renamed from: l */
+        /* JADX INFO: renamed from: l */
         public final float f12707l;
 
         public d(List<Report2> list, boolean z2, float f) {
@@ -78,7 +78,7 @@ public class ReportUploader {
         }
 
         @Override // p007b.p225i.p361c.p369m.p370d.p373k.BackgroundPriorityRunnable
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public void mo6398a() {
             try {
                 m6671b(this.f12705j, this.f12706k);
@@ -90,7 +90,7 @@ public class ReportUploader {
             ReportUploader.this.f12704h = null;
         }
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final void m6671b(List<Report2> list, boolean z2) {
             Logger3 logger3 = Logger3.f12227a;
             StringBuilder sbM833U = outline.m833U("Starting report processing in ");
@@ -152,7 +152,7 @@ public class ReportUploader {
     }
 
     /* JADX WARN: Removed duplicated region for block: B:19:0x0053 A[Catch: Exception -> 0x005c, TRY_LEAVE, TryCatch #0 {Exception -> 0x005c, blocks: (B:3:0x0001, B:6:0x0011, B:19:0x0053, B:9:0x001a, B:11:0x0020, B:13:0x0027, B:17:0x0040), top: B:25:0x0001 }] */
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */

@@ -11,7 +11,7 @@ import java.io.Closeable;
 import java.util.List;
 import java.util.Locale;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public interface SupportSQLiteDatabase extends Closeable {
     void beginTransaction();
 

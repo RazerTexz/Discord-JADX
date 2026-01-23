@@ -7,15 +7,15 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 import p007b.p100d.p104b.p105a.outline;
 
-/* compiled from: JsonInclude.java */
+/* JADX INFO: renamed from: b.g.a.a.p, reason: use source file name */
+/* JADX INFO: compiled from: JsonInclude.java */
+/* JADX INFO: loaded from: classes3.dex */
 @Target({ElementType.ANNOTATION_TYPE, ElementType.METHOD, ElementType.FIELD, ElementType.TYPE, ElementType.PARAMETER})
 @Retention(RetentionPolicy.RUNTIME)
-/* renamed from: b.g.a.a.p, reason: use source file name */
-/* loaded from: classes3.dex */
 public @interface JsonInclude {
 
-    /* compiled from: JsonInclude.java */
-    /* renamed from: b.g.a.a.p$a */
+    /* JADX INFO: renamed from: b.g.a.a.p$a */
+    /* JADX INFO: compiled from: JsonInclude.java */
     public enum a {
         ALWAYS,
         NON_NULL,
@@ -26,11 +26,11 @@ public @interface JsonInclude {
         USE_DEFAULTS
     }
 
-    /* compiled from: JsonInclude.java */
-    /* renamed from: b.g.a.a.p$b */
+    /* JADX INFO: renamed from: b.g.a.a.p$b */
+    /* JADX INFO: compiled from: JsonInclude.java */
     public static class b implements Serializable {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public static final b f4436j;
         private static final long serialVersionUID = 1;
         public final Class<?> _contentFilter;
@@ -51,7 +51,7 @@ public @interface JsonInclude {
             this._contentFilter = cls2 == Void.class ? null : cls2;
         }
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public b m1618a(b bVar) {
             a aVar = a.USE_DEFAULTS;
             if (bVar != null && bVar != f4436j) {
@@ -81,7 +81,7 @@ public @interface JsonInclude {
             return this;
         }
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public b m1619b(a aVar) {
             return aVar == this._valueInclusion ? this : new b(aVar, this._contentInclusion, this._valueFilter, this._contentFilter);
         }

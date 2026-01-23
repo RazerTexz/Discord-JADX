@@ -10,14 +10,14 @@ import com.facebook.drawee.view.SimpleDraweeView;
 import p007b.p008a.p025i.ViewUserListItemBinding;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: UserListItemView.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: UserListItemView.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class UserListItemView extends RelativeLayout {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static final /* synthetic */ int f19171j = 0;
 
-    /* renamed from: k, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: k, reason: from kotlin metadata */
     public final ViewUserListItemBinding binding;
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */

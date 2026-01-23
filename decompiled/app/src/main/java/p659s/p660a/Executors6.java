@@ -5,12 +5,12 @@ import java.util.concurrent.Executor;
 import java.util.concurrent.ScheduledThreadPoolExecutor;
 import p659s.p660a.p661a.Concurrent;
 
-/* compiled from: Executors.kt */
-/* renamed from: s.a.w0, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: s.a.w0, reason: use source file name */
+/* JADX INFO: compiled from: Executors.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class Executors6 extends Executors5 {
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final Executor f27914k;
 
     public Executors6(Executor executor) {
@@ -30,7 +30,7 @@ public final class Executors6 extends Executors5 {
     }
 
     @Override // kotlinx.coroutines.Executors
-    /* renamed from: H */
+    /* JADX INFO: renamed from: H */
     public Executor mo10908H() {
         return this.f27914k;
     }

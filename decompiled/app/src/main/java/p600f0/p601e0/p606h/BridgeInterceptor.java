@@ -18,12 +18,12 @@ import p600f0.p601e0.Util7;
 import p615g0.GzipSource;
 import p615g0.RealBufferedSource;
 
-/* compiled from: BridgeInterceptor.kt */
-/* renamed from: f0.e0.h.a, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: f0.e0.h.a, reason: use source file name */
+/* JADX INFO: compiled from: BridgeInterceptor.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class BridgeInterceptor implements Interceptor {
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final CookieJar2 f25524b;
 
     public BridgeInterceptor(CookieJar2 cookieJar2) {

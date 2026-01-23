@@ -22,163 +22,163 @@ import p507d0.p592z.p594d.MutablePropertyReference1Impl;
 import p507d0.p592z.p594d.PropertyReference1Impl;
 import p507d0.p592z.p594d.Reflection2;
 
-/* compiled from: DescriptorRendererOptionsImpl.kt */
-/* renamed from: d0.e0.p.d.m0.j.i, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.j.i, reason: use source file name */
+/* JADX INFO: compiled from: DescriptorRendererOptionsImpl.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class DescriptorRendererOptionsImpl implements DescriptorRenderer4 {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final /* synthetic */ KProperty<Object>[] f24261a = {Reflection2.mutableProperty1(new MutablePropertyReference1Impl(Reflection2.getOrCreateKotlinClass(DescriptorRendererOptionsImpl.class), "classifierNamePolicy", "getClassifierNamePolicy()Lorg/jetbrains/kotlin/renderer/ClassifierNamePolicy;")), Reflection2.mutableProperty1(new MutablePropertyReference1Impl(Reflection2.getOrCreateKotlinClass(DescriptorRendererOptionsImpl.class), "withDefinedIn", "getWithDefinedIn()Z")), Reflection2.mutableProperty1(new MutablePropertyReference1Impl(Reflection2.getOrCreateKotlinClass(DescriptorRendererOptionsImpl.class), "withSourceFileForTopLevel", "getWithSourceFileForTopLevel()Z")), Reflection2.mutableProperty1(new MutablePropertyReference1Impl(Reflection2.getOrCreateKotlinClass(DescriptorRendererOptionsImpl.class), "modifiers", "getModifiers()Ljava/util/Set;")), Reflection2.mutableProperty1(new MutablePropertyReference1Impl(Reflection2.getOrCreateKotlinClass(DescriptorRendererOptionsImpl.class), "startFromName", "getStartFromName()Z")), Reflection2.mutableProperty1(new MutablePropertyReference1Impl(Reflection2.getOrCreateKotlinClass(DescriptorRendererOptionsImpl.class), "startFromDeclarationKeyword", "getStartFromDeclarationKeyword()Z")), Reflection2.mutableProperty1(new MutablePropertyReference1Impl(Reflection2.getOrCreateKotlinClass(DescriptorRendererOptionsImpl.class), "debugMode", "getDebugMode()Z")), Reflection2.mutableProperty1(new MutablePropertyReference1Impl(Reflection2.getOrCreateKotlinClass(DescriptorRendererOptionsImpl.class), "classWithPrimaryConstructor", "getClassWithPrimaryConstructor()Z")), Reflection2.mutableProperty1(new MutablePropertyReference1Impl(Reflection2.getOrCreateKotlinClass(DescriptorRendererOptionsImpl.class), "verbose", "getVerbose()Z")), Reflection2.mutableProperty1(new MutablePropertyReference1Impl(Reflection2.getOrCreateKotlinClass(DescriptorRendererOptionsImpl.class), "unitReturnType", "getUnitReturnType()Z")), Reflection2.mutableProperty1(new MutablePropertyReference1Impl(Reflection2.getOrCreateKotlinClass(DescriptorRendererOptionsImpl.class), "withoutReturnType", "getWithoutReturnType()Z")), Reflection2.mutableProperty1(new MutablePropertyReference1Impl(Reflection2.getOrCreateKotlinClass(DescriptorRendererOptionsImpl.class), "enhancedTypes", "getEnhancedTypes()Z")), Reflection2.mutableProperty1(new MutablePropertyReference1Impl(Reflection2.getOrCreateKotlinClass(DescriptorRendererOptionsImpl.class), "normalizedVisibilities", "getNormalizedVisibilities()Z")), Reflection2.mutableProperty1(new MutablePropertyReference1Impl(Reflection2.getOrCreateKotlinClass(DescriptorRendererOptionsImpl.class), "renderDefaultVisibility", "getRenderDefaultVisibility()Z")), Reflection2.mutableProperty1(new MutablePropertyReference1Impl(Reflection2.getOrCreateKotlinClass(DescriptorRendererOptionsImpl.class), "renderDefaultModality", "getRenderDefaultModality()Z")), Reflection2.mutableProperty1(new MutablePropertyReference1Impl(Reflection2.getOrCreateKotlinClass(DescriptorRendererOptionsImpl.class), "renderConstructorDelegation", "getRenderConstructorDelegation()Z")), Reflection2.mutableProperty1(new MutablePropertyReference1Impl(Reflection2.getOrCreateKotlinClass(DescriptorRendererOptionsImpl.class), "renderPrimaryConstructorParametersAsProperties", "getRenderPrimaryConstructorParametersAsProperties()Z")), Reflection2.mutableProperty1(new MutablePropertyReference1Impl(Reflection2.getOrCreateKotlinClass(DescriptorRendererOptionsImpl.class), "actualPropertiesInPrimaryConstructor", "getActualPropertiesInPrimaryConstructor()Z")), Reflection2.mutableProperty1(new MutablePropertyReference1Impl(Reflection2.getOrCreateKotlinClass(DescriptorRendererOptionsImpl.class), "uninferredTypeParameterAsName", "getUninferredTypeParameterAsName()Z")), Reflection2.mutableProperty1(new MutablePropertyReference1Impl(Reflection2.getOrCreateKotlinClass(DescriptorRendererOptionsImpl.class), "includePropertyConstant", "getIncludePropertyConstant()Z")), Reflection2.mutableProperty1(new MutablePropertyReference1Impl(Reflection2.getOrCreateKotlinClass(DescriptorRendererOptionsImpl.class), "withoutTypeParameters", "getWithoutTypeParameters()Z")), Reflection2.mutableProperty1(new MutablePropertyReference1Impl(Reflection2.getOrCreateKotlinClass(DescriptorRendererOptionsImpl.class), "withoutSuperTypes", "getWithoutSuperTypes()Z")), Reflection2.mutableProperty1(new MutablePropertyReference1Impl(Reflection2.getOrCreateKotlinClass(DescriptorRendererOptionsImpl.class), "typeNormalizer", "getTypeNormalizer()Lkotlin/jvm/functions/Function1;")), Reflection2.mutableProperty1(new MutablePropertyReference1Impl(Reflection2.getOrCreateKotlinClass(DescriptorRendererOptionsImpl.class), "defaultParameterValueRenderer", "getDefaultParameterValueRenderer()Lkotlin/jvm/functions/Function1;")), Reflection2.mutableProperty1(new MutablePropertyReference1Impl(Reflection2.getOrCreateKotlinClass(DescriptorRendererOptionsImpl.class), "secondaryConstructorsAsPrimary", "getSecondaryConstructorsAsPrimary()Z")), Reflection2.mutableProperty1(new MutablePropertyReference1Impl(Reflection2.getOrCreateKotlinClass(DescriptorRendererOptionsImpl.class), "overrideRenderingPolicy", "getOverrideRenderingPolicy()Lorg/jetbrains/kotlin/renderer/OverrideRenderingPolicy;")), Reflection2.mutableProperty1(new MutablePropertyReference1Impl(Reflection2.getOrCreateKotlinClass(DescriptorRendererOptionsImpl.class), "valueParametersHandler", "getValueParametersHandler()Lorg/jetbrains/kotlin/renderer/DescriptorRenderer$ValueParametersHandler;")), Reflection2.mutableProperty1(new MutablePropertyReference1Impl(Reflection2.getOrCreateKotlinClass(DescriptorRendererOptionsImpl.class), "textFormat", "getTextFormat()Lorg/jetbrains/kotlin/renderer/RenderingFormat;")), Reflection2.mutableProperty1(new MutablePropertyReference1Impl(Reflection2.getOrCreateKotlinClass(DescriptorRendererOptionsImpl.class), "parameterNameRenderingPolicy", "getParameterNameRenderingPolicy()Lorg/jetbrains/kotlin/renderer/ParameterNameRenderingPolicy;")), Reflection2.mutableProperty1(new MutablePropertyReference1Impl(Reflection2.getOrCreateKotlinClass(DescriptorRendererOptionsImpl.class), "receiverAfterName", "getReceiverAfterName()Z")), Reflection2.mutableProperty1(new MutablePropertyReference1Impl(Reflection2.getOrCreateKotlinClass(DescriptorRendererOptionsImpl.class), "renderCompanionObjectName", "getRenderCompanionObjectName()Z")), Reflection2.mutableProperty1(new MutablePropertyReference1Impl(Reflection2.getOrCreateKotlinClass(DescriptorRendererOptionsImpl.class), "propertyAccessorRenderingPolicy", "getPropertyAccessorRenderingPolicy()Lorg/jetbrains/kotlin/renderer/PropertyAccessorRenderingPolicy;")), Reflection2.mutableProperty1(new MutablePropertyReference1Impl(Reflection2.getOrCreateKotlinClass(DescriptorRendererOptionsImpl.class), "renderDefaultAnnotationArguments", "getRenderDefaultAnnotationArguments()Z")), Reflection2.mutableProperty1(new MutablePropertyReference1Impl(Reflection2.getOrCreateKotlinClass(DescriptorRendererOptionsImpl.class), "eachAnnotationOnNewLine", "getEachAnnotationOnNewLine()Z")), Reflection2.mutableProperty1(new MutablePropertyReference1Impl(Reflection2.getOrCreateKotlinClass(DescriptorRendererOptionsImpl.class), "excludedAnnotationClasses", "getExcludedAnnotationClasses()Ljava/util/Set;")), Reflection2.mutableProperty1(new MutablePropertyReference1Impl(Reflection2.getOrCreateKotlinClass(DescriptorRendererOptionsImpl.class), "excludedTypeAnnotationClasses", "getExcludedTypeAnnotationClasses()Ljava/util/Set;")), Reflection2.mutableProperty1(new MutablePropertyReference1Impl(Reflection2.getOrCreateKotlinClass(DescriptorRendererOptionsImpl.class), "annotationFilter", "getAnnotationFilter()Lkotlin/jvm/functions/Function1;")), Reflection2.mutableProperty1(new MutablePropertyReference1Impl(Reflection2.getOrCreateKotlinClass(DescriptorRendererOptionsImpl.class), "annotationArgumentsRenderingPolicy", "getAnnotationArgumentsRenderingPolicy()Lorg/jetbrains/kotlin/renderer/AnnotationArgumentsRenderingPolicy;")), Reflection2.mutableProperty1(new MutablePropertyReference1Impl(Reflection2.getOrCreateKotlinClass(DescriptorRendererOptionsImpl.class), "alwaysRenderModifiers", "getAlwaysRenderModifiers()Z")), Reflection2.mutableProperty1(new MutablePropertyReference1Impl(Reflection2.getOrCreateKotlinClass(DescriptorRendererOptionsImpl.class), "renderConstructorKeyword", "getRenderConstructorKeyword()Z")), Reflection2.mutableProperty1(new MutablePropertyReference1Impl(Reflection2.getOrCreateKotlinClass(DescriptorRendererOptionsImpl.class), "renderUnabbreviatedType", "getRenderUnabbreviatedType()Z")), Reflection2.mutableProperty1(new MutablePropertyReference1Impl(Reflection2.getOrCreateKotlinClass(DescriptorRendererOptionsImpl.class), "renderTypeExpansions", "getRenderTypeExpansions()Z")), Reflection2.mutableProperty1(new MutablePropertyReference1Impl(Reflection2.getOrCreateKotlinClass(DescriptorRendererOptionsImpl.class), "includeAdditionalModifiers", "getIncludeAdditionalModifiers()Z")), Reflection2.mutableProperty1(new MutablePropertyReference1Impl(Reflection2.getOrCreateKotlinClass(DescriptorRendererOptionsImpl.class), "parameterNamesInFunctionalTypes", "getParameterNamesInFunctionalTypes()Z")), Reflection2.mutableProperty1(new MutablePropertyReference1Impl(Reflection2.getOrCreateKotlinClass(DescriptorRendererOptionsImpl.class), "renderFunctionContracts", "getRenderFunctionContracts()Z")), Reflection2.mutableProperty1(new MutablePropertyReference1Impl(Reflection2.getOrCreateKotlinClass(DescriptorRendererOptionsImpl.class), "presentableUnresolvedTypes", "getPresentableUnresolvedTypes()Z")), Reflection2.mutableProperty1(new MutablePropertyReference1Impl(Reflection2.getOrCreateKotlinClass(DescriptorRendererOptionsImpl.class), "boldOnlyForNamesInHtml", "getBoldOnlyForNamesInHtml()Z")), Reflection2.mutableProperty1(new MutablePropertyReference1Impl(Reflection2.getOrCreateKotlinClass(DescriptorRendererOptionsImpl.class), "informativeErrorType", "getInformativeErrorType()Z"))};
 
-    /* renamed from: A */
+    /* JADX INFO: renamed from: A */
     public final Interfaces f24262A;
 
-    /* renamed from: B */
+    /* JADX INFO: renamed from: B */
     public final Interfaces f24263B;
 
-    /* renamed from: C */
+    /* JADX INFO: renamed from: C */
     public final Interfaces f24264C;
 
-    /* renamed from: D */
+    /* JADX INFO: renamed from: D */
     public final Interfaces f24265D;
 
-    /* renamed from: E */
+    /* JADX INFO: renamed from: E */
     public final Interfaces f24266E;
 
-    /* renamed from: F */
+    /* JADX INFO: renamed from: F */
     public final Interfaces f24267F;
 
-    /* renamed from: G */
+    /* JADX INFO: renamed from: G */
     public final Interfaces f24268G;
 
-    /* renamed from: H */
+    /* JADX INFO: renamed from: H */
     public final Interfaces f24269H;
 
-    /* renamed from: I */
+    /* JADX INFO: renamed from: I */
     public final Interfaces f24270I;
 
-    /* renamed from: J */
+    /* JADX INFO: renamed from: J */
     public final Interfaces f24271J;
 
-    /* renamed from: K */
+    /* JADX INFO: renamed from: K */
     public final Interfaces f24272K;
 
-    /* renamed from: L */
+    /* JADX INFO: renamed from: L */
     public final Interfaces f24273L;
 
-    /* renamed from: M */
+    /* JADX INFO: renamed from: M */
     public final Interfaces f24274M;
 
-    /* renamed from: N */
+    /* JADX INFO: renamed from: N */
     public final Interfaces f24275N;
 
-    /* renamed from: O */
+    /* JADX INFO: renamed from: O */
     public final Interfaces f24276O;
 
-    /* renamed from: P */
+    /* JADX INFO: renamed from: P */
     public final Interfaces f24277P;
 
-    /* renamed from: Q */
+    /* JADX INFO: renamed from: Q */
     public final Interfaces f24278Q;
 
-    /* renamed from: R */
+    /* JADX INFO: renamed from: R */
     public final Interfaces f24279R;
 
-    /* renamed from: S */
+    /* JADX INFO: renamed from: S */
     public final Interfaces f24280S;
 
-    /* renamed from: T */
+    /* JADX INFO: renamed from: T */
     public final Interfaces f24281T;
 
-    /* renamed from: U */
+    /* JADX INFO: renamed from: U */
     public final Interfaces f24282U;
 
-    /* renamed from: V */
+    /* JADX INFO: renamed from: V */
     public final Interfaces f24283V;
 
-    /* renamed from: W */
+    /* JADX INFO: renamed from: W */
     public final Interfaces f24284W;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public boolean f24285b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final Interfaces f24286c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final Interfaces f24287d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final Interfaces f24288e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final Interfaces f24289f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public final Interfaces f24290g;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public final Interfaces f24291h;
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public final Interfaces f24292i;
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final Interfaces f24293j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final Interfaces f24294k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final Interfaces f24295l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public final Interfaces f24296m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public final Interfaces f24297n;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public final Interfaces f24298o;
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public final Interfaces f24299p;
 
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     public final Interfaces f24300q;
 
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     public final Interfaces f24301r;
 
-    /* renamed from: s */
+    /* JADX INFO: renamed from: s */
     public final Interfaces f24302s;
 
-    /* renamed from: t */
+    /* JADX INFO: renamed from: t */
     public final Interfaces f24303t;
 
-    /* renamed from: u */
+    /* JADX INFO: renamed from: u */
     public final Interfaces f24304u;
 
-    /* renamed from: v */
+    /* JADX INFO: renamed from: v */
     public final Interfaces f24305v;
 
-    /* renamed from: w */
+    /* JADX INFO: renamed from: w */
     public final Interfaces f24306w;
 
-    /* renamed from: x */
+    /* JADX INFO: renamed from: x */
     public final Interfaces f24307x;
 
-    /* renamed from: y */
+    /* JADX INFO: renamed from: y */
     public final Interfaces f24308y;
 
-    /* renamed from: z */
+    /* JADX INFO: renamed from: z */
     public final Interfaces f24309z;
 
-    /* compiled from: DescriptorRendererOptionsImpl.kt */
-    /* renamed from: d0.e0.p.d.m0.j.i$a */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.j.i$a */
+    /* JADX INFO: compiled from: DescriptorRendererOptionsImpl.kt */
     public static final class a extends Lambda implements Function1<ValueParameterDescriptor, String> {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public static final a f24310j = new a();
 
         public a() {
@@ -190,25 +190,25 @@ public final class DescriptorRendererOptionsImpl implements DescriptorRenderer4 
             return invoke2(valueParameterDescriptor);
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final String invoke2(ValueParameterDescriptor valueParameterDescriptor) {
             Intrinsics3.checkNotNullParameter(valueParameterDescriptor, "it");
             return "...";
         }
     }
 
-    /* compiled from: DescriptorRendererOptionsImpl.kt */
-    /* renamed from: d0.e0.p.d.m0.j.i$b */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.j.i$b */
+    /* JADX INFO: compiled from: DescriptorRendererOptionsImpl.kt */
     public static final class b extends Lambda implements Function1<KotlinType, KotlinType> {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public static final b f24311j = new b();
 
         public b() {
             super(1);
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final KotlinType invoke2(KotlinType kotlinType) {
             Intrinsics3.checkNotNullParameter(kotlinType, "it");
             return kotlinType;

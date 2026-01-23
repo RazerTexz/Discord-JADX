@@ -3,8 +3,8 @@ package com.discord.analytics.generated.traits;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: TrackEmail.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: TrackEmail.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class TrackEmail {
     private final CharSequence emailType = null;
     private final CharSequence subjectType = null;

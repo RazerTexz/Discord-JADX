@@ -50,141 +50,141 @@ import p007b.p225i.p226a.p242c.p278y2.MediaCodecAdapter;
 import p007b.p225i.p226a.p242c.p278y2.MediaCodecInfo;
 import p007b.p225i.p226a.p242c.p278y2.MediaCodecSelector;
 
-/* compiled from: MediaCodecVideoRenderer.java */
-/* renamed from: b.i.a.c.g3.r, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.g3.r, reason: use source file name */
+/* JADX INFO: compiled from: MediaCodecVideoRenderer.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class MediaCodecVideoRenderer extends MediaCodecRenderer {
 
-    /* renamed from: N0 */
+    /* JADX INFO: renamed from: N0 */
     public static final int[] f6867N0 = {1920, 1600, 1440, 1280, 960, 854, 640, 540, 480};
 
-    /* renamed from: O0 */
+    /* JADX INFO: renamed from: O0 */
     public static boolean f6868O0;
 
-    /* renamed from: P0 */
+    /* JADX INFO: renamed from: P0 */
     public static boolean f6869P0;
 
-    /* renamed from: Q0 */
+    /* JADX INFO: renamed from: Q0 */
     public final Context f6870Q0;
 
-    /* renamed from: R0 */
+    /* JADX INFO: renamed from: R0 */
     public final VideoFrameReleaseHelper f6871R0;
 
-    /* renamed from: S0 */
+    /* JADX INFO: renamed from: S0 */
     public final VideoRendererEventListener2.a f6872S0;
 
-    /* renamed from: T0 */
+    /* JADX INFO: renamed from: T0 */
     public final long f6873T0;
 
-    /* renamed from: U0 */
+    /* JADX INFO: renamed from: U0 */
     public final int f6874U0;
 
-    /* renamed from: V0 */
+    /* JADX INFO: renamed from: V0 */
     public final boolean f6875V0;
 
-    /* renamed from: W0 */
+    /* JADX INFO: renamed from: W0 */
     public a f6876W0;
 
-    /* renamed from: X0 */
+    /* JADX INFO: renamed from: X0 */
     public boolean f6877X0;
 
-    /* renamed from: Y0 */
+    /* JADX INFO: renamed from: Y0 */
     public boolean f6878Y0;
 
-    /* renamed from: Z0 */
+    /* JADX INFO: renamed from: Z0 */
     @Nullable
     public Surface f6879Z0;
 
-    /* renamed from: a1 */
+    /* JADX INFO: renamed from: a1 */
     @Nullable
     public DummySurface f6880a1;
 
-    /* renamed from: b1 */
+    /* JADX INFO: renamed from: b1 */
     public boolean f6881b1;
 
-    /* renamed from: c1 */
+    /* JADX INFO: renamed from: c1 */
     public int f6882c1;
 
-    /* renamed from: d1 */
+    /* JADX INFO: renamed from: d1 */
     public boolean f6883d1;
 
-    /* renamed from: e1 */
+    /* JADX INFO: renamed from: e1 */
     public boolean f6884e1;
 
-    /* renamed from: f1 */
+    /* JADX INFO: renamed from: f1 */
     public boolean f6885f1;
 
-    /* renamed from: g1 */
+    /* JADX INFO: renamed from: g1 */
     public long f6886g1;
 
-    /* renamed from: h1 */
+    /* JADX INFO: renamed from: h1 */
     public long f6887h1;
 
-    /* renamed from: i1 */
+    /* JADX INFO: renamed from: i1 */
     public long f6888i1;
 
-    /* renamed from: j1 */
+    /* JADX INFO: renamed from: j1 */
     public int f6889j1;
 
-    /* renamed from: k1 */
+    /* JADX INFO: renamed from: k1 */
     public int f6890k1;
 
-    /* renamed from: l1 */
+    /* JADX INFO: renamed from: l1 */
     public int f6891l1;
 
-    /* renamed from: m1 */
+    /* JADX INFO: renamed from: m1 */
     public long f6892m1;
 
-    /* renamed from: n1 */
+    /* JADX INFO: renamed from: n1 */
     public long f6893n1;
 
-    /* renamed from: o1 */
+    /* JADX INFO: renamed from: o1 */
     public long f6894o1;
 
-    /* renamed from: p1 */
+    /* JADX INFO: renamed from: p1 */
     public int f6895p1;
 
-    /* renamed from: q1 */
+    /* JADX INFO: renamed from: q1 */
     public int f6896q1;
 
-    /* renamed from: r1 */
+    /* JADX INFO: renamed from: r1 */
     public int f6897r1;
 
-    /* renamed from: s1 */
+    /* JADX INFO: renamed from: s1 */
     public int f6898s1;
 
-    /* renamed from: t1 */
+    /* JADX INFO: renamed from: t1 */
     public float f6899t1;
 
-    /* renamed from: u1 */
+    /* JADX INFO: renamed from: u1 */
     @Nullable
     public VideoSize f6900u1;
 
-    /* renamed from: v1 */
+    /* JADX INFO: renamed from: v1 */
     public boolean f6901v1;
 
-    /* renamed from: w1 */
+    /* JADX INFO: renamed from: w1 */
     public int f6902w1;
 
-    /* renamed from: x1 */
+    /* JADX INFO: renamed from: x1 */
     @Nullable
     public b f6903x1;
 
-    /* renamed from: y1 */
+    /* JADX INFO: renamed from: y1 */
     @Nullable
     public VideoFrameMetadataListener f6904y1;
 
-    /* compiled from: MediaCodecVideoRenderer.java */
-    /* renamed from: b.i.a.c.g3.r$a */
+    /* JADX INFO: renamed from: b.i.a.c.g3.r$a */
+    /* JADX INFO: compiled from: MediaCodecVideoRenderer.java */
     public static final class a {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final int f6905a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final int f6906b;
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public final int f6907c;
 
         public a(int i, int i2, int i3) {
@@ -194,12 +194,12 @@ public class MediaCodecVideoRenderer extends MediaCodecRenderer {
         }
     }
 
-    /* compiled from: MediaCodecVideoRenderer.java */
+    /* JADX INFO: renamed from: b.i.a.c.g3.r$b */
+    /* JADX INFO: compiled from: MediaCodecVideoRenderer.java */
     @RequiresApi(23)
-    /* renamed from: b.i.a.c.g3.r$b */
     public final class b implements MediaCodecAdapter.c, Handler.Callback {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public final Handler f6908j;
 
         public b(MediaCodecAdapter mediaCodecAdapter) {
@@ -211,7 +211,7 @@ public class MediaCodecVideoRenderer extends MediaCodecRenderer {
             mediaCodecAdapter.mo3839f(this, handler);
         }
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final void m3175a(long j) {
             MediaCodecVideoRenderer mediaCodecVideoRenderer = MediaCodecVideoRenderer.this;
             if (this != mediaCodecVideoRenderer.f6903x1) {
@@ -228,7 +228,7 @@ public class MediaCodecVideoRenderer extends MediaCodecRenderer {
             }
         }
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public void m3176b(MediaCodecAdapter mediaCodecAdapter, long j, long j2) {
             if (Util2.f6708a >= 30) {
                 m3175a(j);
@@ -265,6 +265,10 @@ public class MediaCodecVideoRenderer extends MediaCodecRenderer {
         this.f6900u1 = null;
     }
 
+    /* JADX WARN: Can't fix incorrect switch cases order, some code will duplicate */
+    /* JADX WARN: Removed duplicated region for block: B:47:0x008c  */
+    /* JADX WARN: Removed duplicated region for block: B:610:0x082b  */
+    /* JADX WARN: Removed duplicated region for block: B:6:0x001a  */
     /*  JADX ERROR: UnsupportedOperationException in pass: RegionMakerVisitor
         java.lang.UnsupportedOperationException
         	at java.base/java.util.Collections$UnmodifiableCollection.add(Collections.java:1092)
@@ -299,11 +303,7 @@ public class MediaCodecVideoRenderer extends MediaCodecRenderer {
         	at jadx.core.dex.visitors.regions.PostProcessRegions.process(PostProcessRegions.java:23)
         	at jadx.core.dex.visitors.regions.RegionMakerVisitor.visit(RegionMakerVisitor.java:31)
         */
-    /* JADX WARN: Can't fix incorrect switch cases order, some code will duplicate */
-    /* JADX WARN: Removed duplicated region for block: B:47:0x008c  */
-    /* JADX WARN: Removed duplicated region for block: B:610:0x082b  */
-    /* JADX WARN: Removed duplicated region for block: B:6:0x001a  */
-    /* renamed from: E0 */
+    /* JADX INFO: renamed from: E0 */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
@@ -319,12 +319,12 @@ public class MediaCodecVideoRenderer extends MediaCodecRenderer {
     /* JADX WARN: Failed to restore switch over string. Please report as a decompilation issue */
     /* JADX WARN: Removed duplicated region for block: B:43:0x0080  */
     /* JADX WARN: Removed duplicated region for block: B:65:0x00cc  */
-    /* renamed from: F0 */
+    /* JADX INFO: renamed from: F0 */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
     public static int m3133F0(MediaCodecInfo mediaCodecInfo, Format2 format2) {
-        char c;
+        byte b2;
         int iM2998f;
         int iIntValue;
         int i = format2.f7128B;
@@ -341,48 +341,48 @@ public class MediaCodecVideoRenderer extends MediaCodecRenderer {
         int i3 = 4;
         switch (str.hashCode()) {
             case -1664118616:
-                c = !str.equals("video/3gpp") ? (char) 65535 : (char) 0;
+                b2 = !str.equals("video/3gpp") ? (byte) -1 : (byte) 0;
                 break;
             case -1662541442:
                 if (str.equals("video/hevc")) {
-                    c = 1;
+                    b2 = 1;
                     break;
                 }
                 break;
             case 1187890754:
                 if (str.equals("video/mp4v-es")) {
-                    c = 2;
+                    b2 = 2;
                     break;
                 }
                 break;
             case 1331836730:
                 if (str.equals("video/avc")) {
-                    c = 3;
+                    b2 = 3;
                     break;
                 }
                 break;
             case 1599127256:
                 if (str.equals("video/x-vnd.on2.vp8")) {
-                    c = 4;
+                    b2 = 4;
                     break;
                 }
                 break;
             case 1599127257:
                 if (str.equals("video/x-vnd.on2.vp9")) {
-                    c = 5;
+                    b2 = 5;
                     break;
                 }
                 break;
         }
-        if (c == 0) {
+        if (b2 == 0) {
             iM2998f = i * i2;
             i3 = 2;
         } else {
-            if (c != 1) {
-                if (c != 2) {
-                    if (c != 3) {
-                        if (c != 4) {
-                            if (c != 5) {
+            if (b2 != 1) {
+                if (b2 != 2) {
+                    if (b2 != 3) {
+                        if (b2 != 4) {
+                            if (b2 != 5) {
                                 return -1;
                             }
                         }
@@ -403,7 +403,7 @@ public class MediaCodecVideoRenderer extends MediaCodecRenderer {
         return (iM2998f * 3) / (i3 * 2);
     }
 
-    /* renamed from: G0 */
+    /* JADX INFO: renamed from: G0 */
     public static List<MediaCodecInfo> m3134G0(MediaCodecSelector mediaCodecSelector, Format2 format2, boolean z2, boolean z3) throws MediaCodecUtil.DecoderQueryException {
         Pair<Integer, Integer> pairM8864c;
         String str = format2.f7155w;
@@ -425,7 +425,7 @@ public class MediaCodecVideoRenderer extends MediaCodecRenderer {
         return Collections.unmodifiableList(arrayList);
     }
 
-    /* renamed from: H0 */
+    /* JADX INFO: renamed from: H0 */
     public static int m3135H0(MediaCodecInfo mediaCodecInfo, Format2 format2) {
         if (format2.f7156x == -1) {
             return m3133F0(mediaCodecInfo, format2);
@@ -438,13 +438,13 @@ public class MediaCodecVideoRenderer extends MediaCodecRenderer {
         return format2.f7156x + length;
     }
 
-    /* renamed from: I0 */
+    /* JADX INFO: renamed from: I0 */
     public static boolean m3136I0(long j) {
         return j < -30000;
     }
 
     @Override // com.google.android.exoplayer2.mediacodec.MediaCodecRenderer, p007b.p225i.p226a.p242c.BaseRenderer
-    /* renamed from: B */
+    /* JADX INFO: renamed from: B */
     public void mo2621B() {
         this.f6900u1 = null;
         m3138C0();
@@ -484,7 +484,7 @@ public class MediaCodecVideoRenderer extends MediaCodecRenderer {
     }
 
     @Override // p007b.p225i.p226a.p242c.BaseRenderer
-    /* renamed from: C */
+    /* JADX INFO: renamed from: C */
     public void mo3137C(boolean z2, boolean z3) throws ExoPlaybackException {
         this.f19877J0 = new DecoderCounters();
         RendererConfiguration rendererConfiguration = this.f7891l;
@@ -512,7 +512,7 @@ public class MediaCodecVideoRenderer extends MediaCodecRenderer {
         this.f6885f1 = false;
     }
 
-    /* renamed from: C0 */
+    /* JADX INFO: renamed from: C0 */
     public final void m3138C0() {
         MediaCodecAdapter mediaCodecAdapter;
         this.f6883d1 = false;
@@ -523,7 +523,7 @@ public class MediaCodecVideoRenderer extends MediaCodecRenderer {
     }
 
     @Override // com.google.android.exoplayer2.mediacodec.MediaCodecRenderer, p007b.p225i.p226a.p242c.BaseRenderer
-    /* renamed from: D */
+    /* JADX INFO: renamed from: D */
     public void mo2622D(long j, boolean z2) throws ExoPlaybackException {
         super.mo2622D(j, z2);
         m3138C0();
@@ -538,7 +538,7 @@ public class MediaCodecVideoRenderer extends MediaCodecRenderer {
         }
     }
 
-    /* renamed from: D0 */
+    /* JADX INFO: renamed from: D0 */
     public boolean m3139D0(String str) {
         if (str.startsWith("OMX.google")) {
             return false;
@@ -554,7 +554,7 @@ public class MediaCodecVideoRenderer extends MediaCodecRenderer {
 
     @Override // p007b.p225i.p226a.p242c.BaseRenderer
     @TargetApi(17)
-    /* renamed from: E */
+    /* JADX INFO: renamed from: E */
     public void mo3140E() {
         try {
             try {
@@ -571,7 +571,7 @@ public class MediaCodecVideoRenderer extends MediaCodecRenderer {
     }
 
     @Override // p007b.p225i.p226a.p242c.BaseRenderer
-    /* renamed from: F */
+    /* JADX INFO: renamed from: F */
     public void mo3141F() {
         this.f6889j1 = 0;
         this.f6888i1 = SystemClock.elapsedRealtime();
@@ -585,7 +585,7 @@ public class MediaCodecVideoRenderer extends MediaCodecRenderer {
     }
 
     @Override // p007b.p225i.p226a.p242c.BaseRenderer
-    /* renamed from: G */
+    /* JADX INFO: renamed from: G */
     public void mo3142G() {
         this.f6887h1 = -9223372036854775807L;
         m3143J0();
@@ -605,7 +605,7 @@ public class MediaCodecVideoRenderer extends MediaCodecRenderer {
         videoFrameReleaseHelper.m3178a();
     }
 
-    /* renamed from: J0 */
+    /* JADX INFO: renamed from: J0 */
     public final void m3143J0() {
         if (this.f6889j1 > 0) {
             long jElapsedRealtime = SystemClock.elapsedRealtime();
@@ -622,7 +622,7 @@ public class MediaCodecVideoRenderer extends MediaCodecRenderer {
     }
 
     @Override // com.google.android.exoplayer2.mediacodec.MediaCodecRenderer
-    /* renamed from: K */
+    /* JADX INFO: renamed from: K */
     public DecoderReuseEvaluation mo3144K(MediaCodecInfo mediaCodecInfo, Format2 format2, Format2 format22) {
         DecoderReuseEvaluation decoderReuseEvaluationM3865c = mediaCodecInfo.m3865c(format2, format22);
         int i = decoderReuseEvaluationM3865c.f7930e;
@@ -638,7 +638,7 @@ public class MediaCodecVideoRenderer extends MediaCodecRenderer {
         return new DecoderReuseEvaluation(mediaCodecInfo.f9112a, format2, format22, i3 != 0 ? 0 : decoderReuseEvaluationM3865c.f7929d, i3);
     }
 
-    /* renamed from: K0 */
+    /* JADX INFO: renamed from: K0 */
     public void m3145K0() {
         this.f6885f1 = true;
         if (this.f6883d1) {
@@ -654,12 +654,12 @@ public class MediaCodecVideoRenderer extends MediaCodecRenderer {
     }
 
     @Override // com.google.android.exoplayer2.mediacodec.MediaCodecRenderer
-    /* renamed from: L */
+    /* JADX INFO: renamed from: L */
     public MediaCodecDecoderException mo3146L(Throwable th, @Nullable MediaCodecInfo mediaCodecInfo) {
         return new MediaCodecVideoDecoderException(th, mediaCodecInfo, this.f6879Z0);
     }
 
-    /* renamed from: L0 */
+    /* JADX INFO: renamed from: L0 */
     public final void m3147L0() {
         int i = this.f6896q1;
         if (i == -1 && this.f6897r1 == -1) {
@@ -678,7 +678,7 @@ public class MediaCodecVideoRenderer extends MediaCodecRenderer {
         }
     }
 
-    /* renamed from: M0 */
+    /* JADX INFO: renamed from: M0 */
     public final void m3148M0(long j, long j2, Format2 format2) {
         VideoFrameMetadataListener videoFrameMetadataListener = this.f6904y1;
         if (videoFrameMetadataListener != null) {
@@ -686,7 +686,7 @@ public class MediaCodecVideoRenderer extends MediaCodecRenderer {
         }
     }
 
-    /* renamed from: N0 */
+    /* JADX INFO: renamed from: N0 */
     public void m3149N0(long j) throws ExoPlaybackException {
         m8839B0(j);
         m3147L0();
@@ -700,7 +700,7 @@ public class MediaCodecVideoRenderer extends MediaCodecRenderer {
     }
 
     @RequiresApi(17)
-    /* renamed from: O0 */
+    /* JADX INFO: renamed from: O0 */
     public final void m3150O0() {
         Surface surface = this.f6879Z0;
         DummySurface dummySurface = this.f6880a1;
@@ -711,7 +711,7 @@ public class MediaCodecVideoRenderer extends MediaCodecRenderer {
         this.f6880a1 = null;
     }
 
-    /* renamed from: P0 */
+    /* JADX INFO: renamed from: P0 */
     public void m3151P0(MediaCodecAdapter mediaCodecAdapter, int i) {
         m3147L0();
         AnimatableValueParser.m515f("releaseOutputBuffer");
@@ -724,7 +724,7 @@ public class MediaCodecVideoRenderer extends MediaCodecRenderer {
     }
 
     @RequiresApi(21)
-    /* renamed from: Q0 */
+    /* JADX INFO: renamed from: Q0 */
     public void m3152Q0(MediaCodecAdapter mediaCodecAdapter, int i, long j) {
         m3147L0();
         AnimatableValueParser.m515f("releaseOutputBuffer");
@@ -736,17 +736,17 @@ public class MediaCodecVideoRenderer extends MediaCodecRenderer {
         m3145K0();
     }
 
-    /* renamed from: R0 */
+    /* JADX INFO: renamed from: R0 */
     public final void m3153R0() {
         this.f6887h1 = this.f6873T0 > 0 ? SystemClock.elapsedRealtime() + this.f6873T0 : -9223372036854775807L;
     }
 
-    /* renamed from: S0 */
+    /* JADX INFO: renamed from: S0 */
     public final boolean m3154S0(MediaCodecInfo mediaCodecInfo) {
         return Util2.f6708a >= 23 && !this.f6901v1 && !m3139D0(mediaCodecInfo.f9112a) && (!mediaCodecInfo.f9117f || DummySurface.m8951b(this.f6870Q0));
     }
 
-    /* renamed from: T0 */
+    /* JADX INFO: renamed from: T0 */
     public void m3155T0(MediaCodecAdapter mediaCodecAdapter, int i) {
         AnimatableValueParser.m515f("skipVideoBuffer");
         mediaCodecAdapter.releaseOutputBuffer(i, false);
@@ -755,12 +755,12 @@ public class MediaCodecVideoRenderer extends MediaCodecRenderer {
     }
 
     @Override // com.google.android.exoplayer2.mediacodec.MediaCodecRenderer
-    /* renamed from: U */
+    /* JADX INFO: renamed from: U */
     public boolean mo3156U() {
         return this.f6901v1 && Util2.f6708a < 23;
     }
 
-    /* renamed from: U0 */
+    /* JADX INFO: renamed from: U0 */
     public void m3157U0(int i) {
         DecoderCounters decoderCounters = this.f19877J0;
         decoderCounters.f7920g += i;
@@ -776,7 +776,7 @@ public class MediaCodecVideoRenderer extends MediaCodecRenderer {
     }
 
     @Override // com.google.android.exoplayer2.mediacodec.MediaCodecRenderer
-    /* renamed from: V */
+    /* JADX INFO: renamed from: V */
     public float mo3158V(float f, Format2 format2, Format2[] format2Arr) {
         float fMax = -1.0f;
         for (Format2 format22 : format2Arr) {
@@ -791,7 +791,7 @@ public class MediaCodecVideoRenderer extends MediaCodecRenderer {
         return fMax * f;
     }
 
-    /* renamed from: V0 */
+    /* JADX INFO: renamed from: V0 */
     public void m3159V0(long j) {
         DecoderCounters decoderCounters = this.f19877J0;
         decoderCounters.f7923j += j;
@@ -801,7 +801,7 @@ public class MediaCodecVideoRenderer extends MediaCodecRenderer {
     }
 
     @Override // com.google.android.exoplayer2.mediacodec.MediaCodecRenderer
-    /* renamed from: W */
+    /* JADX INFO: renamed from: W */
     public List<MediaCodecInfo> mo3160W(MediaCodecSelector mediaCodecSelector, Format2 format2, boolean z2) throws MediaCodecUtil.DecoderQueryException {
         return m3134G0(mediaCodecSelector, format2, z2, this.f6901v1);
     }
@@ -832,7 +832,7 @@ public class MediaCodecVideoRenderer extends MediaCodecRenderer {
      */
     @Override // com.google.android.exoplayer2.mediacodec.MediaCodecRenderer
     @TargetApi(17)
-    /* renamed from: Y */
+    /* JADX INFO: renamed from: Y */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
@@ -938,13 +938,14 @@ public class MediaCodecVideoRenderer extends MediaCodecRenderer {
                             i3 = i10;
                             f2 = f3;
                         } catch (MediaCodecUtil.DecoderQueryException unused) {
+                            Point point2 = pointM3862a;
                         }
                     }
                 }
-                Point point2 = pointM3862a;
-                if (point2 != null) {
-                    iMax = Math.max(iMax, point2.x);
-                    iMax2 = Math.max(iMax2, point2.y);
+                Point point22 = pointM3862a;
+                if (point22 != null) {
+                    iMax = Math.max(iMax, point22.x);
+                    iMax2 = Math.max(iMax2, point22.y);
                     Format2.b bVarM3275a2 = format2.m3275a();
                     bVarM3275a2.f7178p = iMax;
                     bVarM3275a2.f7179q = iMax2;
@@ -1014,7 +1015,7 @@ public class MediaCodecVideoRenderer extends MediaCodecRenderer {
 
     @Override // com.google.android.exoplayer2.mediacodec.MediaCodecRenderer
     @TargetApi(29)
-    /* renamed from: Z */
+    /* JADX INFO: renamed from: Z */
     public void mo3162Z(DecoderInputBuffer decoderInputBuffer) throws ExoPlaybackException {
         if (this.f6878Y0) {
             ByteBuffer byteBuffer = decoderInputBuffer.f19781o;
@@ -1040,7 +1041,7 @@ public class MediaCodecVideoRenderer extends MediaCodecRenderer {
     }
 
     @Override // com.google.android.exoplayer2.mediacodec.MediaCodecRenderer, p007b.p225i.p226a.p242c.Renderer2
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public boolean mo2632d() {
         DummySurface dummySurface;
         if (super.mo2632d() && (this.f6883d1 || (((dummySurface = this.f6880a1) != null && this.f6879Z0 == dummySurface) || this.f19889S == null || this.f6901v1))) {
@@ -1058,7 +1059,7 @@ public class MediaCodecVideoRenderer extends MediaCodecRenderer {
     }
 
     @Override // com.google.android.exoplayer2.mediacodec.MediaCodecRenderer
-    /* renamed from: d0 */
+    /* JADX INFO: renamed from: d0 */
     public void mo3163d0(Exception exc) {
         Log2.m3039b("MediaCodecVideoRenderer", "Video codec error", exc);
         VideoRendererEventListener2.a aVar = this.f6872S0;
@@ -1069,7 +1070,7 @@ public class MediaCodecVideoRenderer extends MediaCodecRenderer {
     }
 
     @Override // com.google.android.exoplayer2.mediacodec.MediaCodecRenderer
-    /* renamed from: e0 */
+    /* JADX INFO: renamed from: e0 */
     public void mo3164e0(String str, long j, long j2) {
         VideoRendererEventListener2.a aVar = this.f6872S0;
         Handler handler = aVar.f6952a;
@@ -1105,7 +1106,7 @@ public class MediaCodecVideoRenderer extends MediaCodecRenderer {
     }
 
     @Override // com.google.android.exoplayer2.mediacodec.MediaCodecRenderer
-    /* renamed from: f0 */
+    /* JADX INFO: renamed from: f0 */
     public void mo3165f0(String str) {
         VideoRendererEventListener2.a aVar = this.f6872S0;
         Handler handler = aVar.f6952a;
@@ -1116,7 +1117,7 @@ public class MediaCodecVideoRenderer extends MediaCodecRenderer {
 
     @Override // com.google.android.exoplayer2.mediacodec.MediaCodecRenderer
     @Nullable
-    /* renamed from: g0 */
+    /* JADX INFO: renamed from: g0 */
     public DecoderReuseEvaluation mo3166g0(FormatHolder formatHolder) throws ExoPlaybackException {
         DecoderReuseEvaluation decoderReuseEvaluationMo3166g0 = super.mo3166g0(formatHolder);
         VideoRendererEventListener2.a aVar = this.f6872S0;
@@ -1134,7 +1135,7 @@ public class MediaCodecVideoRenderer extends MediaCodecRenderer {
     }
 
     @Override // com.google.android.exoplayer2.mediacodec.MediaCodecRenderer
-    /* renamed from: h0 */
+    /* JADX INFO: renamed from: h0 */
     public void mo3167h0(Format2 format2, @Nullable MediaFormat mediaFormat) {
         MediaCodecAdapter mediaCodecAdapter = this.f19889S;
         if (mediaCodecAdapter != null) {
@@ -1175,7 +1176,7 @@ public class MediaCodecVideoRenderer extends MediaCodecRenderer {
 
     @Override // com.google.android.exoplayer2.mediacodec.MediaCodecRenderer
     @CallSuper
-    /* renamed from: i0 */
+    /* JADX INFO: renamed from: i0 */
     public void mo3168i0(long j) {
         super.mo3168i0(j);
         if (this.f6901v1) {
@@ -1185,14 +1186,14 @@ public class MediaCodecVideoRenderer extends MediaCodecRenderer {
     }
 
     @Override // com.google.android.exoplayer2.mediacodec.MediaCodecRenderer
-    /* renamed from: j0 */
+    /* JADX INFO: renamed from: j0 */
     public void mo3169j0() {
         m3138C0();
     }
 
     @Override // com.google.android.exoplayer2.mediacodec.MediaCodecRenderer
     @CallSuper
-    /* renamed from: k0 */
+    /* JADX INFO: renamed from: k0 */
     public void mo3170k0(DecoderInputBuffer decoderInputBuffer) throws ExoPlaybackException {
         boolean z2 = this.f6901v1;
         if (!z2) {
@@ -1206,7 +1207,7 @@ public class MediaCodecVideoRenderer extends MediaCodecRenderer {
 
     /* JADX WARN: Removed duplicated region for block: B:22:0x0077  */
     @Override // com.google.android.exoplayer2.mediacodec.MediaCodecRenderer
-    /* renamed from: m0 */
+    /* JADX INFO: renamed from: m0 */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
@@ -1421,7 +1422,7 @@ public class MediaCodecVideoRenderer extends MediaCodecRenderer {
     }
 
     @Override // com.google.android.exoplayer2.mediacodec.MediaCodecRenderer, p007b.p225i.p226a.p242c.BaseRenderer, p007b.p225i.p226a.p242c.Renderer2
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public void mo2939n(float f, float f2) throws ExoPlaybackException {
         this.f19887Q = f;
         this.f19888R = f2;
@@ -1434,16 +1435,25 @@ public class MediaCodecVideoRenderer extends MediaCodecRenderer {
 
     @Override // com.google.android.exoplayer2.mediacodec.MediaCodecRenderer
     @CallSuper
-    /* renamed from: q0 */
+    /* JADX INFO: renamed from: q0 */
     public void mo3172q0() {
         super.mo3172q0();
         this.f6891l1 = 0;
     }
 
     /* JADX WARN: Multi-variable type inference failed */
-    /* JADX WARN: Type inference failed for: r6v11, types: [android.view.Surface] */
+    /* JADX WARN: Type inference failed for: r0v4, types: [b.i.a.c.y2.t] */
+    /* JADX WARN: Type inference failed for: r2v2 */
+    /* JADX WARN: Type inference failed for: r2v3, types: [android.view.Surface] */
+    /* JADX WARN: Type inference failed for: r2v7 */
+    /* JADX WARN: Type inference failed for: r6v1 */
+    /* JADX WARN: Type inference failed for: r6v10 */
+    /* JADX WARN: Type inference failed for: r6v19 */
+    /* JADX WARN: Type inference failed for: r6v2 */
+    /* JADX WARN: Type inference failed for: r6v3, types: [android.view.Surface] */
+    /* JADX WARN: Type inference failed for: r6v9, types: [com.google.android.exoplayer2.video.DummySurface] */
     @Override // p007b.p225i.p226a.p242c.BaseRenderer, p007b.p225i.p226a.p242c.PlayerMessage.b
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     public void mo2603r(int i, @Nullable Object obj) throws ExoPlaybackException {
         VideoRendererEventListener2.a aVar;
         Handler handler;
@@ -1488,21 +1498,21 @@ public class MediaCodecVideoRenderer extends MediaCodecRenderer {
             videoFrameReleaseHelper.m3181d(true);
             return;
         }
-        DummySurface dummySurfaceM8952c = obj instanceof Surface ? (Surface) obj : null;
-        if (dummySurfaceM8952c == null) {
+        ?? M8952c = obj instanceof Surface ? (Surface) obj : 0;
+        if (M8952c == 0) {
             DummySurface dummySurface = this.f6880a1;
             if (dummySurface != null) {
-                dummySurfaceM8952c = dummySurface;
+                M8952c = dummySurface;
             } else {
                 p007b.p225i.p226a.p242c.p278y2.MediaCodecInfo mediaCodecInfo = this.f19896Z;
                 if (mediaCodecInfo != null && m3154S0(mediaCodecInfo)) {
-                    dummySurfaceM8952c = DummySurface.m8952c(this.f6870Q0, mediaCodecInfo.f9117f);
-                    this.f6880a1 = dummySurfaceM8952c;
+                    M8952c = DummySurface.m8952c(this.f6870Q0, mediaCodecInfo.f9117f);
+                    this.f6880a1 = M8952c;
                 }
             }
         }
-        if (this.f6879Z0 == dummySurfaceM8952c) {
-            if (dummySurfaceM8952c == null || dummySurfaceM8952c == this.f6880a1) {
+        if (this.f6879Z0 == M8952c) {
+            if (M8952c == 0 || M8952c == this.f6880a1) {
                 return;
             }
             VideoSize videoSize = this.f6900u1;
@@ -1520,27 +1530,27 @@ public class MediaCodecVideoRenderer extends MediaCodecRenderer {
             }
             return;
         }
-        this.f6879Z0 = dummySurfaceM8952c;
+        this.f6879Z0 = M8952c;
         VideoFrameReleaseHelper videoFrameReleaseHelper2 = this.f6871R0;
         Objects.requireNonNull(videoFrameReleaseHelper2);
-        DummySurface dummySurface2 = dummySurfaceM8952c instanceof DummySurface ? null : dummySurfaceM8952c;
-        if (videoFrameReleaseHelper2.f6930e != dummySurface2) {
+        ?? r2 = M8952c instanceof DummySurface ? 0 : M8952c;
+        if (videoFrameReleaseHelper2.f6930e != r2) {
             videoFrameReleaseHelper2.m3178a();
-            videoFrameReleaseHelper2.f6930e = dummySurface2;
+            videoFrameReleaseHelper2.f6930e = r2;
             videoFrameReleaseHelper2.m3181d(true);
         }
         this.f6881b1 = false;
         int i2 = this.f7893n;
-        MediaCodecAdapter mediaCodecAdapter2 = this.f19889S;
-        if (mediaCodecAdapter2 != null) {
-            if (Util2.f6708a < 23 || dummySurfaceM8952c == null || this.f6877X0) {
+        ?? r0 = this.f19889S;
+        if (r0 != 0) {
+            if (Util2.f6708a < 23 || M8952c == 0 || this.f6877X0) {
                 m8855o0();
                 m8851b0();
             } else {
-                mediaCodecAdapter2.mo3842i(dummySurfaceM8952c);
+                r0.mo3842i(M8952c);
             }
         }
-        if (dummySurfaceM8952c == null || dummySurfaceM8952c == this.f6880a1) {
+        if (M8952c == 0 || M8952c == this.f6880a1) {
             this.f6900u1 = null;
             m3138C0();
             return;
@@ -1556,13 +1566,13 @@ public class MediaCodecVideoRenderer extends MediaCodecRenderer {
     }
 
     @Override // com.google.android.exoplayer2.mediacodec.MediaCodecRenderer
-    /* renamed from: w0 */
+    /* JADX INFO: renamed from: w0 */
     public boolean mo3173w0(p007b.p225i.p226a.p242c.p278y2.MediaCodecInfo mediaCodecInfo) {
         return this.f6879Z0 != null || m3154S0(mediaCodecInfo);
     }
 
     @Override // com.google.android.exoplayer2.mediacodec.MediaCodecRenderer
-    /* renamed from: y0 */
+    /* JADX INFO: renamed from: y0 */
     public int mo3174y0(MediaCodecSelector mediaCodecSelector, Format2 format2) throws MediaCodecUtil.DecoderQueryException {
         int i = 0;
         if (!MimeTypes.m3052j(format2.f7155w)) {

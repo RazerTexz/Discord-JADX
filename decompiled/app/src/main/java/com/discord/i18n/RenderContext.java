@@ -13,35 +13,35 @@ import p007b.p008a.p027k.RenderContext2;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: RenderContext.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: RenderContext.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class RenderContext {
 
-    /* renamed from: a, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: a, reason: from kotlin metadata */
     public final Map<String, String> args = new HashMap();
 
-    /* renamed from: b, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: b, reason: from kotlin metadata */
     public final Map<String, Hook> hooks = new HashMap();
 
-    /* renamed from: c, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: c, reason: from kotlin metadata */
     public List<? extends Object> orderedArguments;
 
-    /* renamed from: d, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: d, reason: from kotlin metadata */
     @ColorInt
     public Integer boldColor;
 
-    /* renamed from: e, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: e, reason: from kotlin metadata */
     @ColorInt
     public Integer strikethroughColor;
 
-    /* renamed from: f, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: f, reason: from kotlin metadata */
     public boolean uppercase;
 
-    /* renamed from: g, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: g, reason: from kotlin metadata */
     public boolean hasClickables;
 
-    /* compiled from: RenderContext.kt */
-    /* renamed from: com.discord.i18n.RenderContext$a */
+    /* JADX INFO: renamed from: com.discord.i18n.RenderContext$a */
+    /* JADX INFO: compiled from: RenderContext.kt */
     public static final class C5526a extends Lambda implements Function1<Hook, Unit> {
         public final /* synthetic */ Function1 $onClick;
 
@@ -63,7 +63,7 @@ public final class RenderContext {
         }
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final void m8422a(String key, Function1<? super Hook, Unit> hookInitializer) {
         Intrinsics3.checkNotNullParameter(key, "key");
         Intrinsics3.checkNotNullParameter(hookInitializer, "hookInitializer");
@@ -73,7 +73,7 @@ public final class RenderContext {
         map.put(key, hook);
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final void m8423b(String key, Function1<? super View, Unit> onClick) {
         Intrinsics3.checkNotNullParameter(key, "key");
         Intrinsics3.checkNotNullParameter(onClick, "onClick");

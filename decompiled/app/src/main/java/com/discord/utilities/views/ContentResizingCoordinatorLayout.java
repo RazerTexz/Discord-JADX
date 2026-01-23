@@ -15,15 +15,15 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 import p507d0.p592z.p594d.MutablePropertyReference0Impl;
 
-/* compiled from: ContentResizingCoordinatorLayout.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: ContentResizingCoordinatorLayout.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class ContentResizingCoordinatorLayout extends CoordinatorLayout {
     private AppBarLayout appBarLayout;
     private View content;
     private int currentVerticalOffset;
 
-    /* compiled from: ContentResizingCoordinatorLayout.kt */
-    /* renamed from: com.discord.utilities.views.ContentResizingCoordinatorLayout$onMeasure$1 */
+    /* JADX INFO: renamed from: com.discord.utilities.views.ContentResizingCoordinatorLayout$onMeasure$1 */
+    /* JADX INFO: compiled from: ContentResizingCoordinatorLayout.kt */
     public final /* synthetic */ class C70211 extends MutablePropertyReference0Impl {
         public C70211(ContentResizingCoordinatorLayout contentResizingCoordinatorLayout) {
             super(contentResizingCoordinatorLayout, ContentResizingCoordinatorLayout.class, "appBarLayout", "getAppBarLayout()Lcom/google/android/material/appbar/AppBarLayout;", 0);
@@ -40,8 +40,8 @@ public final class ContentResizingCoordinatorLayout extends CoordinatorLayout {
         }
     }
 
-    /* compiled from: ContentResizingCoordinatorLayout.kt */
-    /* renamed from: com.discord.utilities.views.ContentResizingCoordinatorLayout$onMeasure$2 */
+    /* JADX INFO: renamed from: com.discord.utilities.views.ContentResizingCoordinatorLayout$onMeasure$2 */
+    /* JADX INFO: compiled from: ContentResizingCoordinatorLayout.kt */
     public static final class C70222 implements AppBarLayout.OnOffsetChangedListener {
         public final /* synthetic */ int $heightMeasureSpec;
         public final /* synthetic */ int $widthMeasureSpec;
@@ -59,8 +59,8 @@ public final class ContentResizingCoordinatorLayout extends CoordinatorLayout {
         }
     }
 
-    /* compiled from: ContentResizingCoordinatorLayout.kt */
-    /* renamed from: com.discord.utilities.views.ContentResizingCoordinatorLayout$onMeasure$3 */
+    /* JADX INFO: renamed from: com.discord.utilities.views.ContentResizingCoordinatorLayout$onMeasure$3 */
+    /* JADX INFO: compiled from: ContentResizingCoordinatorLayout.kt */
     public static final class C70233 extends Lambda implements Function2<Integer, Integer, Unit> {
         public final /* synthetic */ int $heightMeasureSpec;
         public final /* synthetic */ int $widthMeasureSpec;

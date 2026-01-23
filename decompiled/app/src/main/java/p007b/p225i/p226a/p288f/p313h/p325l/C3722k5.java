@@ -9,15 +9,15 @@ import java.util.List;
 import java.util.Objects;
 import java.util.RandomAccess;
 
-/* compiled from: com.google.android.gms:play-services-measurement-base@@18.0.0 */
-/* renamed from: b.i.a.f.h.l.k5 */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.h.l.k5 */
+/* JADX INFO: compiled from: com.google.android.gms:play-services-measurement-base@@18.0.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public final class C3722k5 extends AbstractC3772o3<String> implements InterfaceC3709j5, RandomAccess {
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public static final C3722k5 f10054k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final List<Object> f10055l;
 
     static {
@@ -30,7 +30,7 @@ public final class C3722k5 extends AbstractC3772o3<String> implements InterfaceC
         this.f10055l = new ArrayList(i);
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public static String m5020d(Object obj) {
         if (obj instanceof String) {
             return (String) obj;
@@ -45,7 +45,7 @@ public final class C3722k5 extends AbstractC3772o3<String> implements InterfaceC
     }
 
     @Override // p007b.p225i.p226a.p288f.p313h.p325l.InterfaceC3709j5
-    /* renamed from: A */
+    /* JADX INFO: renamed from: A */
     public final Object mo4863A(int i) {
         return this.f10055l.get(i);
     }
@@ -63,7 +63,7 @@ public final class C3722k5 extends AbstractC3772o3<String> implements InterfaceC
     }
 
     @Override // p007b.p225i.p226a.p288f.p313h.p325l.InterfaceC3709j5
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final List<?> mo4864b() {
         return Collections.unmodifiableList(this.f10055l);
     }
@@ -76,7 +76,7 @@ public final class C3722k5 extends AbstractC3772o3<String> implements InterfaceC
     }
 
     @Override // p007b.p225i.p226a.p288f.p313h.p325l.InterfaceC3597b5
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final /* synthetic */ InterfaceC3597b5 mo4569f(int i) {
         if (i < size()) {
             throw new IllegalArgumentException();
@@ -119,7 +119,7 @@ public final class C3722k5 extends AbstractC3772o3<String> implements InterfaceC
     }
 
     @Override // p007b.p225i.p226a.p288f.p313h.p325l.InterfaceC3709j5
-    /* renamed from: s */
+    /* JADX INFO: renamed from: s */
     public final InterfaceC3709j5 mo4865s() {
         return this.f10123j ? new C3641e7(this) : this;
     }
@@ -136,7 +136,7 @@ public final class C3722k5 extends AbstractC3772o3<String> implements InterfaceC
     }
 
     @Override // p007b.p225i.p226a.p288f.p313h.p325l.InterfaceC3709j5
-    /* renamed from: t */
+    /* JADX INFO: renamed from: t */
     public final void mo4866t(AbstractC3837t3 abstractC3837t3) {
         m5153c();
         this.f10055l.add(abstractC3837t3);

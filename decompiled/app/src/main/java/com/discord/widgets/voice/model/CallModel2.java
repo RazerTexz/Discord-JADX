@@ -31,19 +31,19 @@ import p637j0.p641k.Func1;
 import p637j0.p642l.p647e.ScalarSynchronousObservable;
 import p658rx.Observable;
 
-/* compiled from: CallModel.kt */
-/* renamed from: com.discord.widgets.voice.model.CallModel$Companion$get$1, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: com.discord.widgets.voice.model.CallModel$Companion$get$1, reason: use source file name */
+/* JADX INFO: compiled from: CallModel.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class CallModel2<T, R> implements Func1<Channel, Observable<? extends CallModel>> {
     public final /* synthetic */ long $channelId;
 
-    /* compiled from: CallModel.kt */
-    /* renamed from: com.discord.widgets.voice.model.CallModel$Companion$get$1$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.voice.model.CallModel$Companion$get$1$1 */
+    /* JADX INFO: compiled from: CallModel.kt */
     public static final class C105591<T, R> implements Func1<Map<Long, ? extends EmbeddedActivity>, Observable<? extends CallModel>> {
         public final /* synthetic */ Channel $channel;
 
-        /* compiled from: CallModel.kt */
-        /* renamed from: com.discord.widgets.voice.model.CallModel$Companion$get$1$1$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.widgets.voice.model.CallModel$Companion$get$1$1$1, reason: invalid class name */
+        /* JADX INFO: compiled from: CallModel.kt */
         public static final class AnonymousClass1<T, R> implements Func1<Experiment, Integer> {
             public static final AnonymousClass1 INSTANCE = new AnonymousClass1();
 
@@ -52,14 +52,14 @@ public final class CallModel2<T, R> implements Func1<Channel, Observable<? exten
                 return call2(experiment);
             }
 
-            /* renamed from: call, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
             public final Integer call2(Experiment experiment) {
                 return Integer.valueOf(experiment != null ? experiment.getBucket() : 0);
             }
         }
 
-        /* compiled from: CallModel.kt */
-        /* renamed from: com.discord.widgets.voice.model.CallModel$Companion$get$1$1$2, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.widgets.voice.model.CallModel$Companion$get$1$1$2, reason: invalid class name */
+        /* JADX INFO: compiled from: CallModel.kt */
         public static final class AnonymousClass2<T, R> implements Func1<Experiment, Integer> {
             public static final AnonymousClass2 INSTANCE = new AnonymousClass2();
 
@@ -68,14 +68,14 @@ public final class CallModel2<T, R> implements Func1<Channel, Observable<? exten
                 return call2(experiment);
             }
 
-            /* renamed from: call, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
             public final Integer call2(Experiment experiment) {
                 return Integer.valueOf(experiment != null ? experiment.getBucket() : 0);
             }
         }
 
-        /* compiled from: CallModel.kt */
-        /* renamed from: com.discord.widgets.voice.model.CallModel$Companion$get$1$1$3, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.widgets.voice.model.CallModel$Companion$get$1$1$3, reason: invalid class name */
+        /* JADX INFO: compiled from: CallModel.kt */
         public static final class AnonymousClass3 extends Lambda implements Function10<CallModel.Companion.Chunk, StoreApplicationStreaming.ActiveApplicationStream, RtcConnection.Metadata, Integer, Integer, VoiceChannelJoinabilityUtils2, Guild, Long, List<? extends GuildScheduledEvent>, Map<Long, ? extends Application>, CallModel> {
             public final /* synthetic */ Map $embeddedActivities;
 
@@ -148,7 +148,7 @@ public final class CallModel2<T, R> implements Func1<Channel, Observable<? exten
             return call2((Map<Long, EmbeddedActivity>) map);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final Observable<? extends CallModel> call2(Map<Long, EmbeddedActivity> map) {
             Set<Long> setKeySet = map.keySet();
             Observable observableAccess$observeChunk = CallModel.Companion.access$observeChunk(CallModel.INSTANCE, this.$channel);
@@ -167,7 +167,7 @@ public final class CallModel2<T, R> implements Func1<Channel, Observable<? exten
         this.$channelId = j;
     }
 
-    /* renamed from: call, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
     public final Observable<? extends CallModel> call2(Channel channel) {
         return channel == null ? new ScalarSynchronousObservable(null) : StoreStream.INSTANCE.getEmbeddedActivities().observeEmbeddedActivitiesForChannel(this.$channelId).m11099Y(new C105591(channel));
     }

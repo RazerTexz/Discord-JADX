@@ -23,12 +23,12 @@ import p507d0.p513e0.p514p.p515d.p517m0.p567n.KotlinType;
 import p507d0.p513e0.p514p.p515d.p517m0.p567n.TypeSubstitutor2;
 import p507d0.p513e0.p514p.p515d.p517m0.p567n.Variance;
 
-/* compiled from: AbstractReceiverParameterDescriptor.java */
-/* renamed from: d0.e0.p.d.m0.c.i1.c, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.c.i1.c, reason: use source file name */
+/* JADX INFO: compiled from: AbstractReceiverParameterDescriptor.java */
+/* JADX INFO: loaded from: classes3.dex */
 public abstract class AbstractReceiverParameterDescriptor extends DeclarationDescriptorImpl implements ReceiverParameterDescriptor {
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public static final Name f22818l = Name.special("<this>");
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -41,7 +41,7 @@ public abstract class AbstractReceiverParameterDescriptor extends DeclarationDes
         }
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static /* synthetic */ void m9391a(int i) {
         String str;
         int i2;

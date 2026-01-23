@@ -15,26 +15,26 @@ import p659s.p660a.p661a.ThreadContext;
 import p659s.p660a.p666e2.Tasks4;
 import p659s.p660a.p666e2.Tasks5;
 
-/* compiled from: DispatchedTask.kt */
-/* renamed from: s.a.j0, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: s.a.j0, reason: use source file name */
+/* JADX INFO: compiled from: DispatchedTask.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public abstract class DispatchedTask<T> extends Tasks4 {
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public int f27864l;
 
     public DispatchedTask(int i) {
         this.f27864l = i;
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public void mo11145b(Object obj, Throwable th) {
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public abstract Continuation<T> mo11146d();
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public Throwable mo11315e(Object obj) {
         if (!(obj instanceof CompletionState2)) {
             obj = null;
@@ -47,12 +47,12 @@ public abstract class DispatchedTask<T> extends Tasks4 {
     }
 
     /* JADX WARN: Multi-variable type inference failed */
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public <T> T mo11316j(Object obj) {
         return obj;
     }
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final void m11317l(Throwable th, Throwable th2) {
         if (th == null && th2 == null) {
             return;
@@ -67,7 +67,7 @@ public abstract class DispatchedTask<T> extends Tasks4 {
         C3404f.m4348u0(mo11146d().getContext(), new C13052c0("Fatal exception in coroutines machinery for " + this + ". Please read KDoc to 'handleFatalException' method and report this incident to maintainers", th));
     }
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public abstract Object mo11147m();
 
     @Override // java.lang.Runnable

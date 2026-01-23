@@ -14,8 +14,8 @@ import p007b.p008a.p027k.FormatUtils;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: GuildButtonConfiguration.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: GuildButtonConfiguration.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final /* data */ class GuildButtonConfiguration implements ButtonConfiguration {
     private final boolean canConnect;
     private final boolean canConnectToChannel;
@@ -113,72 +113,72 @@ public final /* data */ class GuildButtonConfiguration implements ButtonConfigur
         return guildButtonConfiguration.copy((i & 1) != 0 ? guildButtonConfiguration.guildScheduledEvent : guildScheduledEvent, (i & 2) != 0 ? guildButtonConfiguration.canRsvp : z2, (i & 4) != 0 ? guildButtonConfiguration.canStartEvent : z3, (i & 8) != 0 ? guildButtonConfiguration.isConnected : z4, (i & 16) != 0 ? guildButtonConfiguration.canConnect : z5, (i & 32) != 0 ? guildButtonConfiguration.isInGuild : z6, (i & 64) != 0 ? guildButtonConfiguration.isRsvped : z7, (i & 128) != 0 ? guildButtonConfiguration.isDetailView : z8, (i & 256) != 0 ? guildButtonConfiguration.onRsvpButtonClicked : onClickListener, (i & 512) != 0 ? guildButtonConfiguration.onJoinButtonClicked : onClickListener2, (i & 1024) != 0 ? guildButtonConfiguration.onEndEventButtonClicked : onClickListener3, (i & 2048) != 0 ? guildButtonConfiguration.onStartEventButtonClicked : onClickListener4, (i & 4096) != 0 ? guildButtonConfiguration.onShareButtonClicked : onClickListener5, (i & 8192) != 0 ? guildButtonConfiguration.onExtraButtonClicked : onClickListener6);
     }
 
-    /* renamed from: component1, reason: from getter */
+    /* JADX INFO: renamed from: component1, reason: from getter */
     public final GuildScheduledEvent getGuildScheduledEvent() {
         return this.guildScheduledEvent;
     }
 
-    /* renamed from: component10, reason: from getter */
+    /* JADX INFO: renamed from: component10, reason: from getter */
     public final View.OnClickListener getOnJoinButtonClicked() {
         return this.onJoinButtonClicked;
     }
 
-    /* renamed from: component11, reason: from getter */
+    /* JADX INFO: renamed from: component11, reason: from getter */
     public final View.OnClickListener getOnEndEventButtonClicked() {
         return this.onEndEventButtonClicked;
     }
 
-    /* renamed from: component12, reason: from getter */
+    /* JADX INFO: renamed from: component12, reason: from getter */
     public final View.OnClickListener getOnStartEventButtonClicked() {
         return this.onStartEventButtonClicked;
     }
 
-    /* renamed from: component13, reason: from getter */
+    /* JADX INFO: renamed from: component13, reason: from getter */
     public final View.OnClickListener getOnShareButtonClicked() {
         return this.onShareButtonClicked;
     }
 
-    /* renamed from: component14, reason: from getter */
+    /* JADX INFO: renamed from: component14, reason: from getter */
     public final View.OnClickListener getOnExtraButtonClicked() {
         return this.onExtraButtonClicked;
     }
 
-    /* renamed from: component2, reason: from getter */
+    /* JADX INFO: renamed from: component2, reason: from getter */
     public final boolean getCanRsvp() {
         return this.canRsvp;
     }
 
-    /* renamed from: component3, reason: from getter */
+    /* JADX INFO: renamed from: component3, reason: from getter */
     public final boolean getCanStartEvent() {
         return this.canStartEvent;
     }
 
-    /* renamed from: component4, reason: from getter */
+    /* JADX INFO: renamed from: component4, reason: from getter */
     public final boolean getIsConnected() {
         return this.isConnected;
     }
 
-    /* renamed from: component5, reason: from getter */
+    /* JADX INFO: renamed from: component5, reason: from getter */
     public final boolean getCanConnect() {
         return this.canConnect;
     }
 
-    /* renamed from: component6, reason: from getter */
+    /* JADX INFO: renamed from: component6, reason: from getter */
     public final boolean getIsInGuild() {
         return this.isInGuild;
     }
 
-    /* renamed from: component7, reason: from getter */
+    /* JADX INFO: renamed from: component7, reason: from getter */
     public final boolean getIsRsvped() {
         return this.isRsvped;
     }
 
-    /* renamed from: component8, reason: from getter */
+    /* JADX INFO: renamed from: component8, reason: from getter */
     public final boolean getIsDetailView() {
         return this.isDetailView;
     }
 
-    /* renamed from: component9, reason: from getter */
+    /* JADX INFO: renamed from: component9, reason: from getter */
     public final View.OnClickListener getOnRsvpButtonClicked() {
         return this.onRsvpButtonClicked;
     }
@@ -285,49 +285,70 @@ public final /* data */ class GuildButtonConfiguration implements ButtonConfigur
     }
 
     /* JADX WARN: Multi-variable type inference failed */
+    /* JADX WARN: Type inference failed for: r2v1, types: [int] */
+    /* JADX WARN: Type inference failed for: r2v11, types: [int] */
+    /* JADX WARN: Type inference failed for: r2v3, types: [int] */
+    /* JADX WARN: Type inference failed for: r2v34 */
+    /* JADX WARN: Type inference failed for: r2v35 */
+    /* JADX WARN: Type inference failed for: r2v36 */
+    /* JADX WARN: Type inference failed for: r2v37 */
+    /* JADX WARN: Type inference failed for: r2v38 */
+    /* JADX WARN: Type inference failed for: r2v39 */
+    /* JADX WARN: Type inference failed for: r2v40 */
+    /* JADX WARN: Type inference failed for: r2v41 */
+    /* JADX WARN: Type inference failed for: r2v42 */
+    /* JADX WARN: Type inference failed for: r2v43 */
+    /* JADX WARN: Type inference failed for: r2v44 */
+    /* JADX WARN: Type inference failed for: r2v45 */
+    /* JADX WARN: Type inference failed for: r2v5, types: [int] */
+    /* JADX WARN: Type inference failed for: r2v7, types: [int] */
+    /* JADX WARN: Type inference failed for: r2v9, types: [int] */
+    /* JADX WARN: Type inference failed for: r3v0 */
+    /* JADX WARN: Type inference failed for: r3v1, types: [int] */
+    /* JADX WARN: Type inference failed for: r3v2 */
     public int hashCode() {
         GuildScheduledEvent guildScheduledEvent = this.guildScheduledEvent;
         int iHashCode = (guildScheduledEvent != null ? guildScheduledEvent.hashCode() : 0) * 31;
         boolean z2 = this.canRsvp;
-        int i = z2;
-        if (z2 != 0) {
-            i = 1;
+        ?? r2 = z2;
+        if (z2) {
+            r2 = 1;
         }
-        int i2 = (iHashCode + i) * 31;
+        int i = (iHashCode + r2) * 31;
         boolean z3 = this.canStartEvent;
-        int i3 = z3;
-        if (z3 != 0) {
-            i3 = 1;
+        ?? r22 = z3;
+        if (z3) {
+            r22 = 1;
         }
-        int i4 = (i2 + i3) * 31;
+        int i2 = (i + r22) * 31;
         boolean z4 = this.isConnected;
-        int i5 = z4;
-        if (z4 != 0) {
-            i5 = 1;
+        ?? r23 = z4;
+        if (z4) {
+            r23 = 1;
         }
-        int i6 = (i4 + i5) * 31;
+        int i3 = (i2 + r23) * 31;
         boolean z5 = this.canConnect;
-        int i7 = z5;
-        if (z5 != 0) {
-            i7 = 1;
+        ?? r24 = z5;
+        if (z5) {
+            r24 = 1;
         }
-        int i8 = (i6 + i7) * 31;
+        int i4 = (i3 + r24) * 31;
         boolean z6 = this.isInGuild;
-        int i9 = z6;
-        if (z6 != 0) {
-            i9 = 1;
+        ?? r25 = z6;
+        if (z6) {
+            r25 = 1;
         }
-        int i10 = (i8 + i9) * 31;
+        int i5 = (i4 + r25) * 31;
         boolean z7 = this.isRsvped;
-        int i11 = z7;
-        if (z7 != 0) {
-            i11 = 1;
+        ?? r26 = z7;
+        if (z7) {
+            r26 = 1;
         }
-        int i12 = (i10 + i11) * 31;
+        int i6 = (i5 + r26) * 31;
         boolean z8 = this.isDetailView;
-        int i13 = (i12 + (z8 ? 1 : z8 ? 1 : 0)) * 31;
+        int i7 = (i6 + (z8 ? 1 : z8)) * 31;
         View.OnClickListener onClickListener = this.onRsvpButtonClicked;
-        int iHashCode2 = (i13 + (onClickListener != null ? onClickListener.hashCode() : 0)) * 31;
+        int iHashCode2 = (i7 + (onClickListener != null ? onClickListener.hashCode() : 0)) * 31;
         View.OnClickListener onClickListener2 = this.onJoinButtonClicked;
         int iHashCode3 = (iHashCode2 + (onClickListener2 != null ? onClickListener2.hashCode() : 0)) * 31;
         View.OnClickListener onClickListener3 = this.onEndEventButtonClicked;
@@ -341,7 +362,7 @@ public final /* data */ class GuildButtonConfiguration implements ButtonConfigur
     }
 
     @Override // com.discord.widgets.guildscheduledevent.buttonconfiguration.ButtonConfiguration
-    /* renamed from: isAnyButtonVisible, reason: from getter */
+    /* JADX INFO: renamed from: isAnyButtonVisible, reason: from getter */
     public boolean getIsAnyButtonVisible() {
         return this.isAnyButtonVisible;
     }
@@ -355,7 +376,7 @@ public final /* data */ class GuildButtonConfiguration implements ButtonConfigur
     }
 
     @Override // com.discord.widgets.guildscheduledevent.buttonconfiguration.ButtonConfiguration
-    /* renamed from: isExtrasVisible, reason: from getter */
+    /* JADX INFO: renamed from: isExtrasVisible, reason: from getter */
     public boolean getIsExtrasVisible() {
         return this.isExtrasVisible;
     }
@@ -369,7 +390,7 @@ public final /* data */ class GuildButtonConfiguration implements ButtonConfigur
     }
 
     @Override // com.discord.widgets.guildscheduledevent.buttonconfiguration.ButtonConfiguration
-    /* renamed from: isShareVisible, reason: from getter */
+    /* JADX INFO: renamed from: isShareVisible, reason: from getter */
     public boolean getIsShareVisible() {
         return this.isShareVisible;
     }

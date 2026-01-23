@@ -44,8 +44,8 @@ import p507d0.p592z.p594d.Lambda;
 import p637j0.p641k.Func1;
 import p658rx.Observable;
 
-/* compiled from: StoreUserPresence.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: StoreUserPresence.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class StoreUserPresence extends StoreV2 {
     private static final StoreUserPresence2 LocalPresenceUpdateSource = new StoreUserPresence2();
     private final Clock clock;
@@ -58,7 +58,7 @@ public final class StoreUserPresence extends StoreV2 {
     private final StoreStream stream;
     private final HashMap<Long, Map<Long, TimestampedPresence>> userGuildPresences;
 
-    /* compiled from: StoreUserPresence.kt */
+    /* JADX INFO: compiled from: StoreUserPresence.kt */
     public static final /* data */ class TimestampedPresence {
         private final Presence presence;
         private final long timestamp;
@@ -79,12 +79,12 @@ public final class StoreUserPresence extends StoreV2 {
             return timestampedPresence.copy(presence, j);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final Presence getPresence() {
             return this.presence;
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final long getTimestamp() {
             return this.timestamp;
         }
@@ -126,8 +126,8 @@ public final class StoreUserPresence extends StoreV2 {
         }
     }
 
-    /* compiled from: StoreUserPresence.kt */
-    /* renamed from: com.discord.stores.StoreUserPresence$observeAllPresences$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreUserPresence$observeAllPresences$1 */
+    /* JADX INFO: compiled from: StoreUserPresence.kt */
     public static final class C65831 extends Lambda implements Function0<Map<Long, ? extends Presence>> {
         public C65831() {
             super(0);
@@ -139,14 +139,14 @@ public final class StoreUserPresence extends StoreV2 {
         }
 
         @Override // kotlin.jvm.functions.Function0
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final Map<Long, ? extends Presence> invoke2() {
             return StoreUserPresence.this.m11396getPresences();
         }
     }
 
-    /* compiled from: StoreUserPresence.kt */
-    /* renamed from: com.discord.stores.StoreUserPresence$observeApplicationActivity$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreUserPresence$observeApplicationActivity$1 */
+    /* JADX INFO: compiled from: StoreUserPresence.kt */
     public static final class C65841<T, R> implements Func1<Presence, Activity> {
         public final /* synthetic */ long $applicationId;
 
@@ -159,7 +159,7 @@ public final class StoreUserPresence extends StoreV2 {
             return call2(presence);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final Activity call2(Presence presence) {
             List<Activity> activities;
             Activity activity = null;
@@ -182,8 +182,8 @@ public final class StoreUserPresence extends StoreV2 {
         }
     }
 
-    /* compiled from: StoreUserPresence.kt */
-    /* renamed from: com.discord.stores.StoreUserPresence$observeLocalPresence$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreUserPresence$observeLocalPresence$1 */
+    /* JADX INFO: compiled from: StoreUserPresence.kt */
     public static final class C65851 extends Lambda implements Function0<Presence> {
         public C65851() {
             super(0);
@@ -201,8 +201,8 @@ public final class StoreUserPresence extends StoreV2 {
         }
     }
 
-    /* compiled from: StoreUserPresence.kt */
-    /* renamed from: com.discord.stores.StoreUserPresence$observePresenceForUser$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreUserPresence$observePresenceForUser$1 */
+    /* JADX INFO: compiled from: StoreUserPresence.kt */
     public static final class C65861<T, R> implements Func1<Map<Long, ? extends Presence>, Presence> {
         public final /* synthetic */ long $userId;
 
@@ -215,14 +215,14 @@ public final class StoreUserPresence extends StoreV2 {
             return call2((Map<Long, Presence>) map);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final Presence call2(Map<Long, Presence> map) {
             return map.get(Long.valueOf(this.$userId));
         }
     }
 
-    /* compiled from: StoreUserPresence.kt */
-    /* renamed from: com.discord.stores.StoreUserPresence$observePresencesForUsers$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreUserPresence$observePresencesForUsers$1 */
+    /* JADX INFO: compiled from: StoreUserPresence.kt */
     public static final class C65871<T, R> implements Func1<Map<Long, ? extends Presence>, Map<Long, ? extends Presence>> {
         public final /* synthetic */ Collection $userIds;
 
@@ -235,7 +235,7 @@ public final class StoreUserPresence extends StoreV2 {
             return call2((Map<Long, Presence>) map);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final Map<Long, Presence> call2(Map<Long, Presence> map) {
             Intrinsics3.checkNotNullExpressionValue(map, "it");
             LinkedHashMap linkedHashMap = new LinkedHashMap();
@@ -504,12 +504,12 @@ public final class StoreUserPresence extends StoreV2 {
         return (Activity) obj;
     }
 
-    /* renamed from: getLocalPresence, reason: from getter */
+    /* JADX INFO: renamed from: getLocalPresence, reason: from getter */
     public final Presence getLocalPresenceSnapshot() {
         return this.localPresenceSnapshot;
     }
 
-    /* renamed from: getLocalPresence$app_productionGoogleRelease, reason: from getter */
+    /* JADX INFO: renamed from: getLocalPresence$app_productionGoogleRelease, reason: from getter */
     public final Presence getLocalPresence() {
         return this.localPresence;
     }
@@ -736,7 +736,7 @@ public final class StoreUserPresence extends StoreV2 {
         }
     }
 
-    /* renamed from: getPresences, reason: collision with other method in class */
+    /* JADX INFO: renamed from: getPresences, reason: collision with other method in class */
     public final Map<Long, Presence> m11396getPresences() {
         return this.presencesSnapshot;
     }

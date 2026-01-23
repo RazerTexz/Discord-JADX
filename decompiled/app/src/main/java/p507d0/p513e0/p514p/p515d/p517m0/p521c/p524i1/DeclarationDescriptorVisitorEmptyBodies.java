@@ -16,9 +16,9 @@ import p507d0.p513e0.p514p.p515d.p517m0.p521c.TypeParameterDescriptor;
 import p507d0.p513e0.p514p.p515d.p517m0.p521c.ValueParameterDescriptor;
 import p507d0.p513e0.p514p.p515d.p517m0.p521c.VariableDescriptor;
 
-/* compiled from: DeclarationDescriptorVisitorEmptyBodies.java */
-/* renamed from: d0.e0.p.d.m0.c.i1.m, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.c.i1.m, reason: use source file name */
+/* JADX INFO: compiled from: DeclarationDescriptorVisitorEmptyBodies.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class DeclarationDescriptorVisitorEmptyBodies<R, D> implements DeclarationDescriptorVisitor<R, D> {
     @Override // p507d0.p513e0.p514p.p515d.p517m0.p521c.DeclarationDescriptorVisitor
     public R visitClassDescriptor(ClassDescriptor classDescriptor, D d) {

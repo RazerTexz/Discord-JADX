@@ -21,11 +21,11 @@ import p507d0.LazyJVM;
 import p507d0.p578f0._Sequences2;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: AcceptTermsStepCard.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: AcceptTermsStepCard.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class AcceptTermsStepCard extends ConstraintLayout {
 
-    /* renamed from: binding$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: binding$delegate, reason: from kotlin metadata */
     private final Lazy binding;
 
     @StringRes

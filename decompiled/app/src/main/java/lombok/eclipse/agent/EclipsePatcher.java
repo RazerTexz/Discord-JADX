@@ -18,7 +18,7 @@ import lombok.patcher.TargetMatcher;
 import lombok.patcher.TransplantMapper;
 import lombok.patcher.scripts.ScriptBuilder;
 
-/* loaded from: discord-126021.apk:lombok/eclipse/agent/EclipsePatcher.SCL.lombok */
+/* JADX INFO: loaded from: discord-126021.apk:lombok/eclipse/agent/EclipsePatcher.SCL.lombok */
 public class EclipsePatcher implements AgentLauncher.AgentLaunchable {
     @Override // lombok.core.AgentLauncher.AgentLaunchable
     public void runAgent(String agentArgs, Instrumentation instrumentation, boolean injected, Class<?> launchingContext) throws Exception {
@@ -63,8 +63,8 @@ public class EclipsePatcher implements AgentLauncher.AgentLaunchable {
         }
     }
 
-    /* renamed from: lombok.eclipse.agent.EclipsePatcher$1 */
-    /* loaded from: discord-126021.apk:lombok/eclipse/agent/EclipsePatcher$1.SCL.lombok */
+    /* JADX INFO: renamed from: lombok.eclipse.agent.EclipsePatcher$1 */
+    /* JADX INFO: loaded from: discord-126021.apk:lombok/eclipse/agent/EclipsePatcher$1.SCL.lombok */
     class C128501 implements Filter {
         C128501() {
         }
@@ -79,8 +79,8 @@ public class EclipsePatcher implements AgentLauncher.AgentLaunchable {
         }
     }
 
-    /* renamed from: lombok.eclipse.agent.EclipsePatcher$2 */
-    /* loaded from: discord-126021.apk:lombok/eclipse/agent/EclipsePatcher$2.SCL.lombok */
+    /* JADX INFO: renamed from: lombok.eclipse.agent.EclipsePatcher$2 */
+    /* JADX INFO: loaded from: discord-126021.apk:lombok/eclipse/agent/EclipsePatcher$2.SCL.lombok */
     class C128512 implements TransplantMapper {
         private final /* synthetic */ boolean val$forceBaseResourceNames;
 
@@ -222,8 +222,8 @@ public class EclipsePatcher implements AgentLauncher.AgentLaunchable {
         sm.addScriptIfWitness(EclipseLoaderPatcher.OSGI_TYPES, ScriptBuilder.wrapMethodCall().target(new MethodTarget("org.eclipse.jdt.core.dom.ASTConverter", "setTypeNameForAnnotation", "void", "org.eclipse.jdt.internal.compiler.ast.Annotation", "org.eclipse.jdt.core.dom.Annotation")).methodToWrap(new Hook("org.eclipse.jdt.core.dom.QualifiedName", "<init>", "void", "org.eclipse.jdt.core.dom.AST")).requestExtra(StackRequest.PARAM1).wrapMethod(new Hook("lombok.launch.PatchFixesHider$PatchFixes", "setIsGeneratedFlagForName", "void", "org.eclipse.jdt.core.dom.Name", "java.lang.Object")).transplant().build());
     }
 
-    /* renamed from: lombok.eclipse.agent.EclipsePatcher$3 */
-    /* loaded from: discord-126021.apk:lombok/eclipse/agent/EclipsePatcher$3.SCL.lombok */
+    /* JADX INFO: renamed from: lombok.eclipse.agent.EclipsePatcher$3 */
+    /* JADX INFO: loaded from: discord-126021.apk:lombok/eclipse/agent/EclipsePatcher$3.SCL.lombok */
     class C128523 implements TargetMatcher {
         C128523() {
         }
@@ -248,8 +248,8 @@ public class EclipsePatcher implements AgentLauncher.AgentLaunchable {
         }
     }
 
-    /* renamed from: lombok.eclipse.agent.EclipsePatcher$4 */
-    /* loaded from: discord-126021.apk:lombok/eclipse/agent/EclipsePatcher$4.SCL.lombok */
+    /* JADX INFO: renamed from: lombok.eclipse.agent.EclipsePatcher$4 */
+    /* JADX INFO: loaded from: discord-126021.apk:lombok/eclipse/agent/EclipsePatcher$4.SCL.lombok */
     class C128534 implements TargetMatcher {
         C128534() {
         }

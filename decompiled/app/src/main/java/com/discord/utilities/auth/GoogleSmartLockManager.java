@@ -59,11 +59,11 @@ import p507d0.p592z.p594d.Lambda;
 import p507d0.p592z.p594d.Reflection2;
 import p658rx.Observable;
 
-/* compiled from: GoogleSmartLockManager.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: GoogleSmartLockManager.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class GoogleSmartLockManager {
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     public static final String DISCORD_ACCOUNT_IDENTITY = "https://discord.com/";
     public static final boolean ENABLE_SMART_LOCK = false;
@@ -75,7 +75,7 @@ public final class GoogleSmartLockManager {
     private final List<KClass<? extends AppFragment>> resolvableFragments;
     private final GoogleSmartLockRepo smartLockRepo;
 
-    /* compiled from: GoogleSmartLockManager.kt */
+    /* JADX INFO: compiled from: GoogleSmartLockManager.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -98,7 +98,7 @@ public final class GoogleSmartLockManager {
         }
     }
 
-    /* compiled from: GoogleSmartLockManager.kt */
+    /* JADX INFO: compiled from: GoogleSmartLockManager.kt */
     public static final /* data */ class SmartLockCredentials {
         private final String id;
         private final String password;
@@ -120,12 +120,12 @@ public final class GoogleSmartLockManager {
             return smartLockCredentials.copy(str, str2);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final String getId() {
             return this.id;
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final String getPassword() {
             return this.password;
         }
@@ -170,8 +170,8 @@ public final class GoogleSmartLockManager {
         }
     }
 
-    /* compiled from: GoogleSmartLockManager.kt */
-    /* renamed from: com.discord.utilities.auth.GoogleSmartLockManager$requestCredentials$1 */
+    /* JADX INFO: renamed from: com.discord.utilities.auth.GoogleSmartLockManager$requestCredentials$1 */
+    /* JADX INFO: compiled from: GoogleSmartLockManager.kt */
     public static final class C66991<TResult> implements InterfaceC4357c<C3186a> {
         public final /* synthetic */ AppFragment $fragment;
         public final /* synthetic */ int $requestCode;
@@ -219,14 +219,14 @@ public final class GoogleSmartLockManager {
         }
     }
 
-    /* compiled from: GoogleSmartLockManager.kt */
-    /* renamed from: com.discord.utilities.auth.GoogleSmartLockManager$saveCredentials$1 */
+    /* JADX INFO: renamed from: com.discord.utilities.auth.GoogleSmartLockManager$saveCredentials$1 */
+    /* JADX INFO: compiled from: GoogleSmartLockManager.kt */
     public static final class C67001 extends Lambda implements Function1<MeUser, Unit> {
         public final /* synthetic */ String $id;
         public final /* synthetic */ String $password;
 
-        /* compiled from: GoogleSmartLockManager.kt */
-        /* renamed from: com.discord.utilities.auth.GoogleSmartLockManager$saveCredentials$1$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.utilities.auth.GoogleSmartLockManager$saveCredentials$1$1, reason: invalid class name */
+        /* JADX INFO: compiled from: GoogleSmartLockManager.kt */
         public static final class AnonymousClass1<TResult> implements InterfaceC4357c<Void> {
             public AnonymousClass1() {
             }
@@ -262,7 +262,7 @@ public final class GoogleSmartLockManager {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(MeUser meUser) {
             String forUser$default = IconUtils.getForUser$default(meUser, false, null, 4, null);
             Credential.C10792a c10792a = new Credential.C10792a(this.$id);

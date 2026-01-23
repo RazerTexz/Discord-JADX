@@ -6,13 +6,13 @@ import kotlin.jvm.functions.Function2;
 import p507d0.p580t.Iterators4;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: SparseIntArray.kt */
-/* renamed from: androidx.core.util.SparseIntArrayKt, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: androidx.core.util.SparseIntArrayKt, reason: use source file name */
+/* JADX INFO: compiled from: SparseIntArray.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class SparseIntArray {
 
-    /* compiled from: SparseIntArray.kt */
-    /* renamed from: androidx.core.util.SparseIntArrayKt$keyIterator$1 */
+    /* JADX INFO: renamed from: androidx.core.util.SparseIntArrayKt$keyIterator$1 */
+    /* JADX INFO: compiled from: SparseIntArray.kt */
     public static final class C02731 extends Iterators4 {
         public final /* synthetic */ android.util.SparseIntArray $this_keyIterator;
         private int index;
@@ -43,8 +43,8 @@ public final class SparseIntArray {
         }
     }
 
-    /* compiled from: SparseIntArray.kt */
-    /* renamed from: androidx.core.util.SparseIntArrayKt$valueIterator$1 */
+    /* JADX INFO: renamed from: androidx.core.util.SparseIntArrayKt$valueIterator$1 */
+    /* JADX INFO: compiled from: SparseIntArray.kt */
     public static final class C02741 extends Iterators4 {
         public final /* synthetic */ android.util.SparseIntArray $this_valueIterator;
         private int index;

@@ -37,7 +37,7 @@ import p007b.p008a.p033m.p034a.C1164y;
 import p007b.p008a.p033m.p034a.C1165z;
 import p007b.p100d.p104b.p105a.outline;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class ModelPayload implements Model {
     private String analyticsToken;
     private String authToken;
@@ -53,7 +53,7 @@ public class ModelPayload implements Model {
     private List<List<Presence>> guildPresences;
     private List<Guild> guilds;
 
-    /* renamed from: me */
+    /* JADX INFO: renamed from: me */
     private User f18573me;
     private List<Presence> presences;
     private List<Channel> privateChannels;
@@ -68,7 +68,7 @@ public class ModelPayload implements Model {
     private UserSurvey userSurvey;
     private List<User> users;
 
-    /* renamed from: v */
+    /* JADX INFO: renamed from: v */
     private int f18574v;
 
     public static class Hello implements Model {

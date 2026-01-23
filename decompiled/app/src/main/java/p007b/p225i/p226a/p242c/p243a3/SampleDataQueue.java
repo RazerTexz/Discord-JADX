@@ -14,59 +14,59 @@ import p007b.p225i.p226a.p242c.p259f3.Util2;
 import p007b.p225i.p226a.p242c.p265v2.CryptoInfo;
 import p007b.p225i.p226a.p242c.p267x2.TrackOutput2;
 
-/* compiled from: SampleDataQueue.java */
-/* renamed from: b.i.a.c.a3.g0, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.a3.g0, reason: use source file name */
+/* JADX INFO: compiled from: SampleDataQueue.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class SampleDataQueue {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final DefaultAllocator f5578a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final int f5579b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final ParsableByteArray f5580c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public a f5581d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public a f5582e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public a f5583f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public long f5584g;
 
-    /* compiled from: SampleDataQueue.java */
-    /* renamed from: b.i.a.c.a3.g0$a */
+    /* JADX INFO: renamed from: b.i.a.c.a3.g0$a */
+    /* JADX INFO: compiled from: SampleDataQueue.java */
     public static final class a {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final long f5585a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final long f5586b;
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public boolean f5587c;
 
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         @Nullable
         public Allocation f5588d;
 
-        /* renamed from: e */
+        /* JADX INFO: renamed from: e */
         @Nullable
         public a f5589e;
 
         public a(long j, int i) {
             this.f5585a = j;
-            this.f5586b = j + i;
+            this.f5586b = j + ((long) i);
         }
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public int m2521a(long j) {
             return ((int) (j - this.f5585a)) + this.f5588d.f6523b;
         }
@@ -83,7 +83,7 @@ public class SampleDataQueue {
         this.f5583f = aVar;
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public static a m2515d(a aVar, long j, ByteBuffer byteBuffer, int i) {
         while (j >= aVar.f5586b) {
             aVar = aVar.f5589e;
@@ -92,7 +92,7 @@ public class SampleDataQueue {
             int iMin = Math.min(i, (int) (aVar.f5586b - j));
             byteBuffer.put(aVar.f5588d.f6522a, aVar.m2521a(j), iMin);
             i -= iMin;
-            j += iMin;
+            j += (long) iMin;
             if (j == aVar.f5586b) {
                 aVar = aVar.f5589e;
             }
@@ -100,7 +100,7 @@ public class SampleDataQueue {
         return aVar;
     }
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public static a m2516e(a aVar, long j, byte[] bArr, int i) {
         while (j >= aVar.f5586b) {
             aVar = aVar.f5589e;
@@ -110,7 +110,7 @@ public class SampleDataQueue {
             int iMin = Math.min(i2, (int) (aVar.f5586b - j));
             System.arraycopy(aVar.f5588d.f6522a, aVar.m2521a(j), bArr, i - i2, iMin);
             i2 -= iMin;
-            j += iMin;
+            j += (long) iMin;
             if (j == aVar.f5586b) {
                 aVar = aVar.f5589e;
             }
@@ -118,7 +118,7 @@ public class SampleDataQueue {
         return aVar;
     }
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public static a m2517f(a aVar, DecoderInputBuffer decoderInputBuffer, SampleQueue.b bVar, ParsableByteArray parsableByteArray) {
         if (decoderInputBuffer.m8814t()) {
             long j = bVar.f5623b;
@@ -137,7 +137,7 @@ public class SampleDataQueue {
                 Arrays.fill(bArr, (byte) 0);
             }
             aVar = m2516e(aVarM2516e, j2, cryptoInfo.f7902a, i);
-            long j3 = j2 + i;
+            long j3 = j2 + ((long) i);
             if (z2) {
                 parsableByteArray.m3075A(2);
                 aVar = m2516e(aVar, j3, parsableByteArray.f6793a, 2);
@@ -156,7 +156,7 @@ public class SampleDataQueue {
                 int i2 = iM3105y * 6;
                 parsableByteArray.m3075A(i2);
                 aVar = m2516e(aVar, j3, parsableByteArray.f6793a, i2);
-                j3 += i2;
+                j3 += (long) i2;
                 parsableByteArray.m3079E(0);
                 for (int i3 = 0; i3 < iM3105y; i3++) {
                     iArr[i3] = parsableByteArray.m3105y();
@@ -196,7 +196,7 @@ public class SampleDataQueue {
             }
             long j4 = bVar.f5623b;
             int i8 = (int) (j3 - j4);
-            bVar.f5623b = j4 + i8;
+            bVar.f5623b = j4 + ((long) i8);
             bVar.f5622a -= i8;
         }
         if (!decoderInputBuffer.m3553l()) {
@@ -210,7 +210,7 @@ public class SampleDataQueue {
         bVar.f5622a -= 4;
         decoderInputBuffer.m8812r(iM3103w);
         a aVarM2515d = m2515d(aVarM2516e2, bVar.f5623b, decoderInputBuffer.f19778l, iM3103w);
-        bVar.f5623b += iM3103w;
+        bVar.f5623b += (long) iM3103w;
         int i9 = bVar.f5622a - iM3103w;
         bVar.f5622a = i9;
         ByteBuffer byteBuffer = decoderInputBuffer.f19781o;
@@ -222,7 +222,7 @@ public class SampleDataQueue {
         return m2515d(aVarM2515d, bVar.f5623b, decoderInputBuffer.f19781o, bVar.f5622a);
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public void m2518a(long j) {
         a aVar;
         if (j == -1) {
@@ -251,9 +251,9 @@ public class SampleDataQueue {
         }
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final void m2519b(int i) {
-        long j = this.f5584g + i;
+        long j = this.f5584g + ((long) i);
         this.f5584g = j;
         a aVar = this.f5583f;
         if (j == aVar.f5586b) {
@@ -261,7 +261,7 @@ public class SampleDataQueue {
         }
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final int m2520c(int i) {
         Allocation allocation;
         a aVar = this.f5583f;

@@ -7,12 +7,12 @@ import p507d0.p513e0.p514p.p515d.p517m0.p521c.ClassDescriptor;
 import p507d0.p513e0.p514p.p515d.p517m0.p562l.p563b.ErrorReporter;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: RuntimeErrorReporter.kt */
-/* renamed from: d0.e0.p.d.m0.c.k1.a.j, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.c.k1.a.j, reason: use source file name */
+/* JADX INFO: compiled from: RuntimeErrorReporter.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class RuntimeErrorReporter implements ErrorReporter {
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static final RuntimeErrorReporter f23021b = new RuntimeErrorReporter();
 
     @Override // p507d0.p513e0.p514p.p515d.p517m0.p562l.p563b.ErrorReporter

@@ -14,10 +14,10 @@ import p007b.p225i.p226a.p341g.p345d.CalendarStyle;
 import p007b.p225i.p226a.p341g.p345d.UtcDates;
 import p007b.p225i.p226a.p341g.p345d.YearGridAdapter2;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public class YearGridAdapter extends RecyclerView.Adapter<ViewHolder> {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final MaterialCalendar<?> f21006a;
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
@@ -33,7 +33,7 @@ public class YearGridAdapter extends RecyclerView.Adapter<ViewHolder> {
         this.f21006a = materialCalendar;
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public int m9142a(int i) {
         return i - this.f21006a.getCalendarConstraints().getStart().f20986l;
     }

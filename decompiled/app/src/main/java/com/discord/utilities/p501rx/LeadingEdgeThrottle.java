@@ -12,12 +12,12 @@ import p658rx.functions.Action0;
 import p658rx.observers.SerializedSubscriber;
 import p658rx.subscriptions.SerialSubscription;
 
-/* loaded from: classes2.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class LeadingEdgeThrottle<T> implements Observable.InterfaceC13006b<T, T> {
     public final Scheduler scheduler;
     public final long timeInMilliseconds;
 
-    /* renamed from: com.discord.utilities.rx.LeadingEdgeThrottle$1 */
+    /* JADX INFO: renamed from: com.discord.utilities.rx.LeadingEdgeThrottle$1 */
     public class C68681 extends Subscriber<T> {
         public long lastOnNext;
         public final Subscriber<?> self;
@@ -26,7 +26,7 @@ public class LeadingEdgeThrottle<T> implements Observable.InterfaceC13006b<T, T>
         public final /* synthetic */ SerialSubscription val$serial;
         public final /* synthetic */ Scheduler.Worker val$worker;
 
-        /* renamed from: com.discord.utilities.rx.LeadingEdgeThrottle$1$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.utilities.rx.LeadingEdgeThrottle$1$1, reason: invalid class name */
         public class AnonymousClass1 implements Action0 {
             public final /* synthetic */ int val$index;
 

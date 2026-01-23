@@ -51,8 +51,8 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 import p658rx.Observable;
 
-/* compiled from: WidgetServerSettingsEditIntegration.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetServerSettingsEditIntegration.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetServerSettingsEditIntegration extends AppFragment {
     private static final String INTENT_EXTRA_GUILD_ID = "INTENT_EXTRA_GUILD_ID";
     private static final String INTENT_EXTRA_INTEGRATION_ID = "INTENT_EXTRA_INTEGRATION_ID";
@@ -60,24 +60,24 @@ public final class WidgetServerSettingsEditIntegration extends AppFragment {
     private static final int STATE_KEY_EXPIRE_BEHAVIOR = 2131363152;
     private static final int STATE_KEY_GRACE_PERIOD = 2131363153;
 
-    /* renamed from: binding$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
     private RadioManager expiryBehaviorRadioManager;
 
-    /* renamed from: expiryBehaviorRadios$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: expiryBehaviorRadios$delegate, reason: from kotlin metadata */
     private final Lazy expiryBehaviorRadios;
     private RadioManager gracePeriodRadioManager;
 
-    /* renamed from: gracePeriodRadios$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: gracePeriodRadios$delegate, reason: from kotlin metadata */
     private final Lazy gracePeriodRadios;
     private final StatefulViews state;
     public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetServerSettingsEditIntegration.class, "binding", "getBinding()Lcom/discord/databinding/WidgetServerSettingsEditIntegrationBinding;", 0)};
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private static final int[] gracePeriodDays = {1, 3, 7, 14, 30};
 
-    /* compiled from: WidgetServerSettingsEditIntegration.kt */
+    /* JADX INFO: compiled from: WidgetServerSettingsEditIntegration.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -95,16 +95,16 @@ public final class WidgetServerSettingsEditIntegration extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetServerSettingsEditIntegration.kt */
+    /* JADX INFO: compiled from: WidgetServerSettingsEditIntegration.kt */
     public static final /* data */ class Model {
 
-        /* renamed from: Companion, reason: from kotlin metadata */
+        /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
         public static final Companion INSTANCE = new Companion(null);
         private final Guild guild;
         private final ModelGuildIntegration integration;
         private final GuildRole role;
 
-        /* compiled from: WidgetServerSettingsEditIntegration.kt */
+        /* JADX INFO: compiled from: WidgetServerSettingsEditIntegration.kt */
         public static final class Companion {
             private Companion() {
             }
@@ -144,17 +144,17 @@ public final class WidgetServerSettingsEditIntegration extends AppFragment {
             return model.copy(guild, modelGuildIntegration, guildRole);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final Guild getGuild() {
             return this.guild;
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final ModelGuildIntegration getIntegration() {
             return this.integration;
         }
 
-        /* renamed from: component3, reason: from getter */
+        /* JADX INFO: renamed from: component3, reason: from getter */
         public final GuildRole getRole() {
             return this.role;
         }
@@ -209,13 +209,13 @@ public final class WidgetServerSettingsEditIntegration extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetServerSettingsEditIntegration.kt */
-    /* renamed from: com.discord.widgets.servers.WidgetServerSettingsEditIntegration$configureUI$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.WidgetServerSettingsEditIntegration$configureUI$1 */
+    /* JADX INFO: compiled from: WidgetServerSettingsEditIntegration.kt */
     public static final class ViewOnClickListenerC92181 implements View.OnClickListener {
         public final /* synthetic */ Model $model;
 
-        /* compiled from: WidgetServerSettingsEditIntegration.kt */
-        /* renamed from: com.discord.widgets.servers.WidgetServerSettingsEditIntegration$configureUI$1$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.widgets.servers.WidgetServerSettingsEditIntegration$configureUI$1$1, reason: invalid class name */
+        /* JADX INFO: compiled from: WidgetServerSettingsEditIntegration.kt */
         public static final class AnonymousClass1 extends Lambda implements Function1<Void, Unit> {
             public AnonymousClass1() {
                 super(1);
@@ -227,7 +227,7 @@ public final class WidgetServerSettingsEditIntegration extends AppFragment {
                 return Unit.f27425a;
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2(Void r5) {
                 DimmerView.setDimmed$default(WidgetServerSettingsEditIntegration.access$getBinding$p(WidgetServerSettingsEditIntegration.this).f17612b, true, false, 2, null);
             }
@@ -246,8 +246,8 @@ public final class WidgetServerSettingsEditIntegration extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetServerSettingsEditIntegration.kt */
-    /* renamed from: com.discord.widgets.servers.WidgetServerSettingsEditIntegration$configureUI$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.WidgetServerSettingsEditIntegration$configureUI$2 */
+    /* JADX INFO: compiled from: WidgetServerSettingsEditIntegration.kt */
     public static final class ViewOnClickListenerC92192 implements View.OnClickListener {
         public final /* synthetic */ Model $model;
 
@@ -267,13 +267,13 @@ public final class WidgetServerSettingsEditIntegration extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetServerSettingsEditIntegration.kt */
-    /* renamed from: com.discord.widgets.servers.WidgetServerSettingsEditIntegration$configureUI$3 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.WidgetServerSettingsEditIntegration$configureUI$3 */
+    /* JADX INFO: compiled from: WidgetServerSettingsEditIntegration.kt */
     public static final class ViewOnClickListenerC92203 implements View.OnClickListener {
         public final /* synthetic */ Model $model;
 
-        /* compiled from: WidgetServerSettingsEditIntegration.kt */
-        /* renamed from: com.discord.widgets.servers.WidgetServerSettingsEditIntegration$configureUI$3$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.widgets.servers.WidgetServerSettingsEditIntegration$configureUI$3$1, reason: invalid class name */
+        /* JADX INFO: compiled from: WidgetServerSettingsEditIntegration.kt */
         public static final class AnonymousClass1 extends Lambda implements Function1<Void, Unit> {
             public static final AnonymousClass1 INSTANCE = new AnonymousClass1();
 
@@ -287,7 +287,7 @@ public final class WidgetServerSettingsEditIntegration extends AppFragment {
                 return Unit.f27425a;
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2(Void r1) {
             }
         }
@@ -309,8 +309,8 @@ public final class WidgetServerSettingsEditIntegration extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetServerSettingsEditIntegration.kt */
-    /* renamed from: com.discord.widgets.servers.WidgetServerSettingsEditIntegration$onViewBound$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.WidgetServerSettingsEditIntegration$onViewBound$2 */
+    /* JADX INFO: compiled from: WidgetServerSettingsEditIntegration.kt */
     public static final class ViewOnClickListenerC92212 implements View.OnClickListener {
         public ViewOnClickListenerC92212() {
         }
@@ -326,8 +326,8 @@ public final class WidgetServerSettingsEditIntegration extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetServerSettingsEditIntegration.kt */
-    /* renamed from: com.discord.widgets.servers.WidgetServerSettingsEditIntegration$onViewBoundOrOnResume$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.WidgetServerSettingsEditIntegration$onViewBoundOrOnResume$1 */
+    /* JADX INFO: compiled from: WidgetServerSettingsEditIntegration.kt */
     public static final /* synthetic */ class C92221 extends FunctionReferenceImpl implements Function1<Model, Unit> {
         public C92221(WidgetServerSettingsEditIntegration widgetServerSettingsEditIntegration) {
             super(1, widgetServerSettingsEditIntegration, WidgetServerSettingsEditIntegration.class, "configureUI", "configureUI(Lcom/discord/widgets/servers/WidgetServerSettingsEditIntegration$Model;)V", 0);
@@ -339,7 +339,7 @@ public final class WidgetServerSettingsEditIntegration extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Model model) {
             WidgetServerSettingsEditIntegration.access$configureUI((WidgetServerSettingsEditIntegration) this.receiver, model);
         }

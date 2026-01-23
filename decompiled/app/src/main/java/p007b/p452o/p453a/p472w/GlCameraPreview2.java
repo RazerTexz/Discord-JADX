@@ -23,42 +23,42 @@ import p007b.p452o.p453a.p472w.CameraPreview;
 import p007b.p452o.p453a.p473x.AspectRatio2;
 import p007b.p452o.p475b.p481f.GlTexture2;
 
-/* compiled from: GlCameraPreview.java */
-/* renamed from: b.o.a.w.d, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.o.a.w.d, reason: use source file name */
+/* JADX INFO: compiled from: GlCameraPreview.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class GlCameraPreview2 extends CameraPreview<GLSurfaceView, SurfaceTexture> implements FilterCameraPreview, RendererCameraPreview {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public boolean f14221j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public SurfaceTexture f14222k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public GlTextureDrawer f14223l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public final Set<RendererFrameCallback> f14224m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     @VisibleForTesting
     public float f14225n;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     @VisibleForTesting
     public float f14226o;
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public View f14227p;
 
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     public Filter2 f14228q;
 
-    /* compiled from: GlCameraPreview.java */
-    /* renamed from: b.o.a.w.d$a */
+    /* JADX INFO: renamed from: b.o.a.w.d$a */
+    /* JADX INFO: compiled from: GlCameraPreview.java */
     public class a implements Runnable {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public final /* synthetic */ RendererFrameCallback f14229j;
 
         public a(RendererFrameCallback rendererFrameCallback) {
@@ -76,11 +76,11 @@ public class GlCameraPreview2 extends CameraPreview<GLSurfaceView, SurfaceTextur
         }
     }
 
-    /* compiled from: GlCameraPreview.java */
-    /* renamed from: b.o.a.w.d$b */
+    /* JADX INFO: renamed from: b.o.a.w.d$b */
+    /* JADX INFO: compiled from: GlCameraPreview.java */
     public class b implements Runnable {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public final /* synthetic */ Filter2 f14231j;
 
         public b(Filter2 filter2) {
@@ -101,15 +101,15 @@ public class GlCameraPreview2 extends CameraPreview<GLSurfaceView, SurfaceTextur
         }
     }
 
-    /* compiled from: GlCameraPreview.java */
-    /* renamed from: b.o.a.w.d$c */
+    /* JADX INFO: renamed from: b.o.a.w.d$c */
+    /* JADX INFO: compiled from: GlCameraPreview.java */
     public class c implements GLSurfaceView.Renderer {
 
-        /* compiled from: GlCameraPreview.java */
-        /* renamed from: b.o.a.w.d$c$a */
+        /* JADX INFO: renamed from: b.o.a.w.d$c$a */
+        /* JADX INFO: compiled from: GlCameraPreview.java */
         public class a implements Runnable {
 
-            /* renamed from: j */
+            /* JADX INFO: renamed from: j */
             public final /* synthetic */ int f14234j;
 
             public a(int i) {
@@ -125,8 +125,8 @@ public class GlCameraPreview2 extends CameraPreview<GLSurfaceView, SurfaceTextur
             }
         }
 
-        /* compiled from: GlCameraPreview.java */
-        /* renamed from: b.o.a.w.d$c$b */
+        /* JADX INFO: renamed from: b.o.a.w.d$c$b */
+        /* JADX INFO: compiled from: GlCameraPreview.java */
         public class b implements SurfaceTexture.OnFrameAvailableListener {
             public b() {
             }
@@ -209,7 +209,7 @@ public class GlCameraPreview2 extends CameraPreview<GLSurfaceView, SurfaceTextur
     }
 
     @Override // p007b.p452o.p453a.p472w.FilterCameraPreview
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public void mo7443a(@NonNull Filter2 filter2) {
         this.f14228q = filter2;
         if (m7433m()) {
@@ -219,26 +219,26 @@ public class GlCameraPreview2 extends CameraPreview<GLSurfaceView, SurfaceTextur
     }
 
     @Override // p007b.p452o.p453a.p472w.RendererCameraPreview
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public void mo7445b(@NonNull RendererFrameCallback rendererFrameCallback) {
         ((GLSurfaceView) this.f14208c).queueEvent(new a(rendererFrameCallback));
     }
 
     @Override // p007b.p452o.p453a.p472w.FilterCameraPreview
     @NonNull
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public Filter2 mo7444c() {
         return this.f14228q;
     }
 
     @Override // p007b.p452o.p453a.p472w.RendererCameraPreview
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public void mo7446d(@NonNull RendererFrameCallback rendererFrameCallback) {
         this.f14224m.remove(rendererFrameCallback);
     }
 
     @Override // p007b.p452o.p453a.p472w.CameraPreview
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public void mo7425e(@Nullable CameraPreview.b bVar) {
         int i;
         int i2;
@@ -264,28 +264,28 @@ public class GlCameraPreview2 extends CameraPreview<GLSurfaceView, SurfaceTextur
 
     @Override // p007b.p452o.p453a.p472w.CameraPreview
     @NonNull
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public SurfaceTexture mo7429i() {
         return this.f14222k;
     }
 
     @Override // p007b.p452o.p453a.p472w.CameraPreview
     @NonNull
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public Class<SurfaceTexture> mo7430j() {
         return SurfaceTexture.class;
     }
 
     @Override // p007b.p452o.p453a.p472w.CameraPreview
     @NonNull
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public View mo7431k() {
         return this.f14227p;
     }
 
     @Override // p007b.p452o.p453a.p472w.CameraPreview
     @NonNull
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public View mo7434n(@NonNull Context context, @NonNull ViewGroup viewGroup) {
         ViewGroup viewGroup2 = (ViewGroup) LayoutInflater.from(context).inflate(C11196R.b.cameraview_gl_view, viewGroup, false);
         GLSurfaceView gLSurfaceView = (GLSurfaceView) viewGroup2.findViewById(C11196R.a.gl_surface_view);
@@ -300,20 +300,20 @@ public class GlCameraPreview2 extends CameraPreview<GLSurfaceView, SurfaceTextur
     }
 
     @Override // p007b.p452o.p453a.p472w.CameraPreview
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public void mo7435o() {
         super.mo7435o();
         this.f14224m.clear();
     }
 
     @Override // p007b.p452o.p453a.p472w.CameraPreview
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public void mo7436p() {
         ((GLSurfaceView) this.f14208c).onPause();
     }
 
     @Override // p007b.p452o.p453a.p472w.CameraPreview
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     public void mo7437q() {
         ((GLSurfaceView) this.f14208c).onResume();
     }

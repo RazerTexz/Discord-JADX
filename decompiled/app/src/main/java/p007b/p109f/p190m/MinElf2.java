@@ -1,8 +1,8 @@
 package p007b.p109f.p190m;
 
-/* compiled from: MinElf.java */
-/* renamed from: b.f.m.i, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.f.m.i, reason: use source file name */
+/* JADX INFO: compiled from: MinElf.java */
+/* JADX INFO: loaded from: classes3.dex */
 public enum MinElf2 {
     NOT_SO("not_so"),
     X86("x86"),

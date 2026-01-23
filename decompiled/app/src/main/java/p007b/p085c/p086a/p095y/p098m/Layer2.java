@@ -13,83 +13,83 @@ import p007b.p085c.p086a.p095y.p097l.ContentModel2;
 import p007b.p085c.p086a.p095y.p097l.Mask;
 import p007b.p100d.p104b.p105a.outline;
 
-/* compiled from: Layer.java */
-/* renamed from: b.c.a.y.m.e, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.c.a.y.m.e, reason: use source file name */
+/* JADX INFO: compiled from: Layer.java */
+/* JADX INFO: loaded from: classes.dex */
 public class Layer2 {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final List<ContentModel2> f2868a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final LottieComposition f2869b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final String f2870c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final long f2871d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final a f2872e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final long f2873f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     @Nullable
     public final String f2874g;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public final List<Mask> f2875h;
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public final AnimatableTransform f2876i;
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final int f2877j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final int f2878k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final int f2879l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public final float f2880m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public final float f2881n;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public final int f2882o;
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public final int f2883p;
 
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     @Nullable
     public final AnimatableTextFrame f2884q;
 
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     @Nullable
     public final AnimatableTextProperties f2885r;
 
-    /* renamed from: s */
+    /* JADX INFO: renamed from: s */
     @Nullable
     public final AnimatableFloatValue f2886s;
 
-    /* renamed from: t */
+    /* JADX INFO: renamed from: t */
     public final List<Keyframe<Float>> f2887t;
 
-    /* renamed from: u */
+    /* JADX INFO: renamed from: u */
     public final int f2888u;
 
-    /* renamed from: v */
+    /* JADX INFO: renamed from: v */
     public final boolean f2889v;
 
-    /* compiled from: Layer.java */
-    /* renamed from: b.c.a.y.m.e$a */
+    /* JADX INFO: renamed from: b.c.a.y.m.e$a */
+    /* JADX INFO: compiled from: Layer.java */
     public enum a {
         PRE_COMP,
         SOLID,
@@ -126,7 +126,7 @@ public class Layer2 {
         this.f2889v = z2;
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public String m788a(String str) {
         StringBuilder sbM833U = outline.m833U(str);
         sbM833U.append(this.f2870c);

@@ -49,24 +49,24 @@ import p507d0.p592z.p594d.Reflection2;
 import p658rx.functions.Action1;
 import p658rx.functions.Action2;
 
-/* compiled from: WidgetChannelGroupDMSettings.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetChannelGroupDMSettings.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetChannelGroupDMSettings extends AppFragment {
     public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetChannelGroupDMSettings.class, "binding", "getBinding()Lcom/discord/databinding/WidgetChannelGroupDmSettingsBinding;", 0)};
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private static final String INTENT_EXTRA_CHANNEL_ID = "INTENT_EXTRA_CHANNEL_ID";
 
-    /* renamed from: binding$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
     private Function1<? super String, Unit> iconEditedResult;
     private final StatefulViews state;
 
-    /* renamed from: viewModel$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: viewModel$delegate, reason: from kotlin metadata */
     private final Lazy viewModel;
 
-    /* compiled from: WidgetChannelGroupDMSettings.kt */
+    /* JADX INFO: compiled from: WidgetChannelGroupDMSettings.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -83,8 +83,8 @@ public final class WidgetChannelGroupDMSettings extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetChannelGroupDMSettings.kt */
-    /* renamed from: com.discord.widgets.channels.settings.WidgetChannelGroupDMSettings$configureIcon$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.channels.settings.WidgetChannelGroupDMSettings$configureIcon$1 */
+    /* JADX INFO: compiled from: WidgetChannelGroupDMSettings.kt */
     public static final class ViewOnClickListenerC75751 implements View.OnClickListener {
         public ViewOnClickListenerC75751() {
         }
@@ -95,8 +95,8 @@ public final class WidgetChannelGroupDMSettings extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetChannelGroupDMSettings.kt */
-    /* renamed from: com.discord.widgets.channels.settings.WidgetChannelGroupDMSettings$configureIcon$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.channels.settings.WidgetChannelGroupDMSettings$configureIcon$2 */
+    /* JADX INFO: compiled from: WidgetChannelGroupDMSettings.kt */
     public static final class C75762 extends Lambda implements Function1<String, Unit> {
         public C75762() {
             super(1);
@@ -108,15 +108,15 @@ public final class WidgetChannelGroupDMSettings extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(String str) {
             Intrinsics3.checkNotNullParameter(str, "dataUrl");
             WidgetChannelGroupDMSettings.access$getViewModel$p(WidgetChannelGroupDMSettings.this).onIconEdited(str);
         }
     }
 
-    /* compiled from: WidgetChannelGroupDMSettings.kt */
-    /* renamed from: com.discord.widgets.channels.settings.WidgetChannelGroupDMSettings$configureIcon$3 */
+    /* JADX INFO: renamed from: com.discord.widgets.channels.settings.WidgetChannelGroupDMSettings$configureIcon$3 */
+    /* JADX INFO: compiled from: WidgetChannelGroupDMSettings.kt */
     public static final class ViewOnClickListenerC75773 implements View.OnClickListener {
         public ViewOnClickListenerC75773() {
         }
@@ -127,13 +127,13 @@ public final class WidgetChannelGroupDMSettings extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetChannelGroupDMSettings.kt */
-    /* renamed from: com.discord.widgets.channels.settings.WidgetChannelGroupDMSettings$configureUi$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.channels.settings.WidgetChannelGroupDMSettings$configureUi$1 */
+    /* JADX INFO: compiled from: WidgetChannelGroupDMSettings.kt */
     public static final class C75781<T1, T2> implements Action2<MenuItem, Context> {
         public final /* synthetic */ String $displayName;
 
-        /* compiled from: WidgetChannelGroupDMSettings.kt */
-        /* renamed from: com.discord.widgets.channels.settings.WidgetChannelGroupDMSettings$configureUi$1$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.widgets.channels.settings.WidgetChannelGroupDMSettings$configureUi$1$1, reason: invalid class name */
+        /* JADX INFO: compiled from: WidgetChannelGroupDMSettings.kt */
         public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
             public AnonymousClass1() {
                 super(0);
@@ -145,7 +145,7 @@ public final class WidgetChannelGroupDMSettings extends AppFragment {
                 return Unit.f27425a;
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2() {
                 WidgetChannelGroupDMSettings.access$getViewModel$p(WidgetChannelGroupDMSettings.this).leaveGroup();
             }
@@ -160,7 +160,7 @@ public final class WidgetChannelGroupDMSettings extends AppFragment {
             call2(menuItem, context);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final void call2(MenuItem menuItem, Context context) {
             Intrinsics3.checkNotNullExpressionValue(menuItem, "menuItem");
             if (menuItem.getItemId() == C5419R.id.menu_leave_group) {
@@ -170,8 +170,8 @@ public final class WidgetChannelGroupDMSettings extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetChannelGroupDMSettings.kt */
-    /* renamed from: com.discord.widgets.channels.settings.WidgetChannelGroupDMSettings$configureUi$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.channels.settings.WidgetChannelGroupDMSettings$configureUi$2 */
+    /* JADX INFO: compiled from: WidgetChannelGroupDMSettings.kt */
     public static final class ViewOnClickListenerC75792 implements View.OnClickListener {
         public final /* synthetic */ String $displayName;
         public final /* synthetic */ Channel $group;
@@ -192,8 +192,8 @@ public final class WidgetChannelGroupDMSettings extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetChannelGroupDMSettings.kt */
-    /* renamed from: com.discord.widgets.channels.settings.WidgetChannelGroupDMSettings$configureUi$3 */
+    /* JADX INFO: renamed from: com.discord.widgets.channels.settings.WidgetChannelGroupDMSettings$configureUi$3 */
+    /* JADX INFO: compiled from: WidgetChannelGroupDMSettings.kt */
     public static final class C75803 extends Lambda implements Function0<Unit> {
         public final /* synthetic */ long $channelId;
 
@@ -209,7 +209,7 @@ public final class WidgetChannelGroupDMSettings extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             WidgetMuteSettingsSheet.Companion companion = WidgetMuteSettingsSheet.INSTANCE;
             long j = this.$channelId;
@@ -219,8 +219,8 @@ public final class WidgetChannelGroupDMSettings extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetChannelGroupDMSettings.kt */
-    /* renamed from: com.discord.widgets.channels.settings.WidgetChannelGroupDMSettings$configureUi$4 */
+    /* JADX INFO: renamed from: com.discord.widgets.channels.settings.WidgetChannelGroupDMSettings$configureUi$4 */
+    /* JADX INFO: compiled from: WidgetChannelGroupDMSettings.kt */
     public static final class C75814 extends Lambda implements Function0<Unit> {
         public C75814() {
             super(0);
@@ -232,14 +232,14 @@ public final class WidgetChannelGroupDMSettings extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             WidgetChannelGroupDMSettings.access$getViewModel$p(WidgetChannelGroupDMSettings.this).unmute(WidgetChannelGroupDMSettings.this.requireContext());
         }
     }
 
-    /* compiled from: WidgetChannelGroupDMSettings.kt */
-    /* renamed from: com.discord.widgets.channels.settings.WidgetChannelGroupDMSettings$confirmLeave$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.channels.settings.WidgetChannelGroupDMSettings$confirmLeave$1 */
+    /* JADX INFO: compiled from: WidgetChannelGroupDMSettings.kt */
     public static final class C75821 extends Lambda implements Function1<View, Unit> {
         public final /* synthetic */ Function0 $confirmed;
 
@@ -255,15 +255,15 @@ public final class WidgetChannelGroupDMSettings extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(View view) {
             Intrinsics3.checkNotNullParameter(view, "it");
             this.$confirmed.invoke();
         }
     }
 
-    /* compiled from: WidgetChannelGroupDMSettings.kt */
-    /* renamed from: com.discord.widgets.channels.settings.WidgetChannelGroupDMSettings$onViewBoundOrOnResume$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.channels.settings.WidgetChannelGroupDMSettings$onViewBoundOrOnResume$1 */
+    /* JADX INFO: compiled from: WidgetChannelGroupDMSettings.kt */
     public static final class C75831 extends Lambda implements Function1<ChannelGroupDMSettingsViewModel.ViewState, Unit> {
         public C75831() {
             super(1);
@@ -275,15 +275,15 @@ public final class WidgetChannelGroupDMSettings extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(ChannelGroupDMSettingsViewModel.ViewState viewState) {
             Intrinsics3.checkNotNullParameter(viewState, "viewState");
             WidgetChannelGroupDMSettings.access$configureUi(WidgetChannelGroupDMSettings.this, viewState);
         }
     }
 
-    /* compiled from: WidgetChannelGroupDMSettings.kt */
-    /* renamed from: com.discord.widgets.channels.settings.WidgetChannelGroupDMSettings$onViewBoundOrOnResume$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.channels.settings.WidgetChannelGroupDMSettings$onViewBoundOrOnResume$2 */
+    /* JADX INFO: compiled from: WidgetChannelGroupDMSettings.kt */
     public static final class C75842 extends Lambda implements Function1<ChannelGroupDMSettingsViewModel.Event, Unit> {
         public C75842() {
             super(1);
@@ -295,7 +295,7 @@ public final class WidgetChannelGroupDMSettings extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(ChannelGroupDMSettingsViewModel.Event event) {
             Intrinsics3.checkNotNullParameter(event, "event");
             WidgetChannelGroupDMSettings.this.handleEvent(event);
@@ -431,8 +431,6 @@ public final class WidgetChannelGroupDMSettings extends AppFragment {
         }
     }
 
-    /* JADX WARN: Multi-variable type inference failed */
-    /* JADX WARN: Type inference failed for: r1v1, types: [com.discord.widgets.channels.settings.WidgetChannelGroupDMSettings$sam$rx_functions_Action1$0] */
     @Override // com.discord.app.AppFragment
     public void onImageChosen(Uri uri, String mimeType) {
         Intrinsics3.checkNotNullParameter(uri, NotificationCompat.MessagingStyle.Message.KEY_DATA_URI);
@@ -440,24 +438,24 @@ public final class WidgetChannelGroupDMSettings extends AppFragment {
         super.onImageChosen(uri, mimeType);
         FragmentManager parentFragmentManager = getParentFragmentManager();
         Intrinsics3.checkNotNullExpressionValue(parentFragmentManager, "parentFragmentManager");
-        Function1<? super String, Unit> widgetChannelGroupDMSettings4 = this.iconEditedResult;
-        if (widgetChannelGroupDMSettings4 != null) {
-            widgetChannelGroupDMSettings4 = new WidgetChannelGroupDMSettings4(widgetChannelGroupDMSettings4);
+        Function1<? super String, Unit> function1 = this.iconEditedResult;
+        Object widgetChannelGroupDMSettings4 = function1;
+        if (function1 != null) {
+            widgetChannelGroupDMSettings4 = new WidgetChannelGroupDMSettings4(function1);
         }
         MGImages.prepareImageUpload(uri, mimeType, parentFragmentManager, this, (Action1) widgetChannelGroupDMSettings4, ImageUploadDialog.PreviewType.GUILD_AVATAR);
     }
 
-    /* JADX WARN: Multi-variable type inference failed */
-    /* JADX WARN: Type inference failed for: r2v0, types: [com.discord.widgets.channels.settings.WidgetChannelGroupDMSettings$sam$rx_functions_Action1$0] */
     @Override // com.discord.app.AppFragment
     public void onImageCropped(Uri uri, String mimeType) {
         Intrinsics3.checkNotNullParameter(uri, NotificationCompat.MessagingStyle.Message.KEY_DATA_URI);
         Intrinsics3.checkNotNullParameter(mimeType, "mimeType");
         super.onImageCropped(uri, mimeType);
         Context context = getContext();
-        Function1<? super String, Unit> widgetChannelGroupDMSettings4 = this.iconEditedResult;
-        if (widgetChannelGroupDMSettings4 != null) {
-            widgetChannelGroupDMSettings4 = new WidgetChannelGroupDMSettings4(widgetChannelGroupDMSettings4);
+        Function1<? super String, Unit> function1 = this.iconEditedResult;
+        Object widgetChannelGroupDMSettings4 = function1;
+        if (function1 != null) {
+            widgetChannelGroupDMSettings4 = new WidgetChannelGroupDMSettings4(function1);
         }
         MGImages.requestDataUrl(context, uri, mimeType, (Action1) widgetChannelGroupDMSettings4);
     }

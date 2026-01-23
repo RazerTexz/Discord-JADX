@@ -8,9 +8,9 @@ import kotlin.jvm.functions.Function1;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: SpoilerNode.kt */
-/* renamed from: com.discord.utilities.textprocessing.node.SpoilerNode$createStyles$$inlined$let$lambda$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.utilities.textprocessing.node.SpoilerNode$createStyles$$inlined$let$lambda$1, reason: use source file name */
+/* JADX INFO: compiled from: SpoilerNode.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class SpoilerNode2 extends Lambda implements Function1<View, Unit> {
     public final /* synthetic */ Context $context$inlined;
     public final /* synthetic */ Function1 $handler;
@@ -30,7 +30,7 @@ public final class SpoilerNode2 extends Lambda implements Function1<View, Unit> 
         return Unit.f27425a;
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final void invoke2(View view) {
         Intrinsics3.checkNotNullParameter(view, "it");
         this.$handler.invoke(this.this$0);

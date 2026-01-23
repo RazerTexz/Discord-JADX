@@ -5,12 +5,12 @@ import java.util.Collections;
 import java.util.List;
 import p007b.p085c.p086a.p090c0.Keyframe;
 
-/* compiled from: BaseAnimatableValue.java */
-/* renamed from: b.c.a.y.k.n, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.c.a.y.k.n, reason: use source file name */
+/* JADX INFO: compiled from: BaseAnimatableValue.java */
+/* JADX INFO: loaded from: classes.dex */
 public abstract class BaseAnimatableValue<V, O> implements AnimatableValue<V, O> {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final List<Keyframe<V>> f2738a;
 
     public BaseAnimatableValue(V v) {
@@ -18,7 +18,7 @@ public abstract class BaseAnimatableValue<V, O> implements AnimatableValue<V, O>
     }
 
     @Override // p007b.p085c.p086a.p095y.p096k.AnimatableValue
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public List<Keyframe<V>> mo774b() {
         return this.f2738a;
     }

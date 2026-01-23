@@ -21,8 +21,8 @@ import org.objectweb.asm.Opcodes;
 import p507d0.p580t.Collections2;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: SelectedApplicationCommandAdapter.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: SelectedApplicationCommandAdapter.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class SelectedApplicationCommandAdapter extends MGRecyclerAdapterSimple<SelectedApplicationCommandAdapter8> {
     private ApplicationCommand currentCommand;
     private ApplicationCommandOption highlightedCommandOption;

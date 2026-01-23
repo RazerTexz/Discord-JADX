@@ -12,10 +12,10 @@ import p507d0.p584w.p586i.p587a.ContinuationImpl6;
 import p507d0.p584w.p586i.p587a.DebugMetadata;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: WidgetChatListAdapter.kt */
+/* JADX INFO: renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapter$ScrollToWithHighlight$animateHighlight$1, reason: use source file name */
+/* JADX INFO: compiled from: WidgetChatListAdapter.kt */
+/* JADX INFO: loaded from: classes2.dex */
 @DebugMetadata(m10084c = "com.discord.widgets.chat.list.adapter.WidgetChatListAdapter$ScrollToWithHighlight$animateHighlight$1", m10085f = "WidgetChatListAdapter.kt", m10086l = {443}, m10087m = "invokeSuspend")
-/* renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapter$ScrollToWithHighlight$animateHighlight$1, reason: use source file name */
-/* loaded from: classes2.dex */
 public final class WidgetChatListAdapter4 extends ContinuationImpl6 implements Function2<CoroutineScope, Continuation<? super Unit>, Object> {
     public final /* synthetic */ TransitionDrawable $transition;
     public int label;

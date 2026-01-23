@@ -10,31 +10,31 @@ import p007b.p100d.p104b.p105a.outline;
 import p507d0.p579g0.StringsJVM;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ClaimedOutboundPromotion.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: ClaimedOutboundPromotion.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class ClaimedOutboundPromotion {
     private final UtcDateTime claimedAt;
     private final String code;
     private final OutboundPromotion promotion;
     private final long userId;
 
-    /* renamed from: a, reason: from getter */
+    /* JADX INFO: renamed from: a, reason: from getter */
     public final String getCode() {
         return this.code;
     }
 
-    /* renamed from: b, reason: from getter */
+    /* JADX INFO: renamed from: b, reason: from getter */
     public final OutboundPromotion getPromotion() {
         return this.promotion;
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final UtcDateTime m8135c() {
         return new UtcDateTime(TimeUnit.DAYS.toMillis(30L) + this.promotion.getEndDate().getDateTimeMillis());
     }
 
     /* JADX WARN: Removed duplicated region for block: B:7:0x0022  */
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */

@@ -3,15 +3,15 @@ package p659s.p660a.p661a;
 import p507d0.Result2;
 import p507d0.Result3;
 
-/* compiled from: StackTraceRecovery.kt */
-/* renamed from: s.a.a.s, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: s.a.a.s, reason: use source file name */
+/* JADX INFO: compiled from: StackTraceRecovery.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class StackTraceRecovery {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final String f27703a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static final String f27704b;
 
     static {

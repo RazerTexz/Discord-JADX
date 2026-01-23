@@ -9,28 +9,28 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-/* compiled from: com.android.billingclient:billing@@4.0.0 */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: com.android.billingclient:billing@@4.0.0 */
+/* JADX INFO: loaded from: classes.dex */
 public class Purchase {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final String f14561a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final String f14562b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final JSONObject f14563c;
 
-    /* compiled from: com.android.billingclient:billing@@4.0.0 */
-    /* renamed from: com.android.billingclient.api.Purchase$a */
+    /* JADX INFO: renamed from: com.android.billingclient.api.Purchase$a */
+    /* JADX INFO: compiled from: com.android.billingclient:billing@@4.0.0 */
     public static class C5413a {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         @Nullable
         public final List<Purchase> f14564a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final BillingResult f14565b;
 
         public C5413a(@NonNull BillingResult billingResult, @Nullable List<Purchase> list) {
@@ -46,14 +46,14 @@ public class Purchase {
     }
 
     @NonNull
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public String m7497a() {
         JSONObject jSONObject = this.f14563c;
         return jSONObject.optString("token", jSONObject.optString("purchaseToken"));
     }
 
     @NonNull
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public ArrayList<String> m7498b() {
         ArrayList<String> arrayList = new ArrayList<>();
         if (this.f14563c.has("productIds")) {
@@ -69,7 +69,7 @@ public class Purchase {
         return arrayList;
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public boolean m7499c() {
         return this.f14563c.optBoolean("acknowledged", true);
     }

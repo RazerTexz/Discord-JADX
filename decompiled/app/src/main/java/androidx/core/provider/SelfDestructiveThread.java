@@ -13,9 +13,9 @@ import java.util.concurrent.atomic.AtomicReference;
 import java.util.concurrent.locks.Condition;
 import java.util.concurrent.locks.ReentrantLock;
 
+/* JADX INFO: loaded from: classes.dex */
 @RestrictTo({RestrictTo.Scope.LIBRARY_GROUP_PREFIX})
 @Deprecated
-/* loaded from: classes.dex */
 public class SelfDestructiveThread {
     private static final int MSG_DESTRUCTION = 0;
     private static final int MSG_INVOKE_RUNNABLE = 1;
@@ -34,7 +34,7 @@ public class SelfDestructiveThread {
     @GuardedBy("mLock")
     private int mGeneration = 0;
 
-    /* renamed from: androidx.core.provider.SelfDestructiveThread$1 */
+    /* JADX INFO: renamed from: androidx.core.provider.SelfDestructiveThread$1 */
     public class C02531 implements Handler.Callback {
         public C02531() {
         }
@@ -54,13 +54,13 @@ public class SelfDestructiveThread {
         }
     }
 
-    /* renamed from: androidx.core.provider.SelfDestructiveThread$2 */
+    /* JADX INFO: renamed from: androidx.core.provider.SelfDestructiveThread$2 */
     public class RunnableC02542 implements Runnable {
         public final /* synthetic */ Callable val$callable;
         public final /* synthetic */ Handler val$calleeHandler;
         public final /* synthetic */ ReplyCallback val$reply;
 
-        /* renamed from: androidx.core.provider.SelfDestructiveThread$2$1, reason: invalid class name */
+        /* JADX INFO: renamed from: androidx.core.provider.SelfDestructiveThread$2$1, reason: invalid class name */
         public class AnonymousClass1 implements Runnable {
             public final /* synthetic */ Object val$result;
 
@@ -92,7 +92,7 @@ public class SelfDestructiveThread {
         }
     }
 
-    /* renamed from: androidx.core.provider.SelfDestructiveThread$3 */
+    /* JADX INFO: renamed from: androidx.core.provider.SelfDestructiveThread$3 */
     public class RunnableC02553 implements Runnable {
         public final /* synthetic */ Callable val$callable;
         public final /* synthetic */ Condition val$cond;

@@ -1,16 +1,16 @@
 package p007b.p225i.p226a.p288f.p313h.p323j;
 
-/* renamed from: b.i.a.f.h.j.u0 */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.h.j.u0 */
+/* JADX INFO: loaded from: classes3.dex */
 public final /* synthetic */ class RunnableC3545u0 implements Runnable {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final C3543t0 f9804j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final int f9805k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final C3529m0 f9806l;
 
     public RunnableC3545u0(C3543t0 c3543t0, int i, C3529m0 c3529m0) {

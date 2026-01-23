@@ -11,11 +11,11 @@ import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 import p658rx.Observable;
 
-/* compiled from: ModelStageRichPresence.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: ModelStageRichPresence.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class ModelStageRichPresence {
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private final long audienceSize;
     private final long channelId;
@@ -31,7 +31,7 @@ public final /* data */ class ModelStageRichPresence {
     private final String topic;
     private final boolean userIsSpeaker;
 
-    /* compiled from: ModelStageRichPresence.kt */
+    /* JADX INFO: compiled from: ModelStageRichPresence.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -75,11 +75,12 @@ public final /* data */ class ModelStageRichPresence {
         this.audienceSize = j5;
     }
 
+    /* JADX WARN: Multi-variable type inference failed */
     public static /* synthetic */ ModelStageRichPresence copy$default(ModelStageRichPresence modelStageRichPresence, long j, long j2, boolean z2, long j3, boolean z3, boolean z4, String str, String str2, String str3, Set set, Set set2, long j4, long j5, int i, Object obj) {
         return modelStageRichPresence.copy((i & 1) != 0 ? modelStageRichPresence.channelId : j, (i & 2) != 0 ? modelStageRichPresence.stageInstanceId : j2, (i & 4) != 0 ? modelStageRichPresence.userIsSpeaker : z2, (i & 8) != 0 ? modelStageRichPresence.guildId : j3, (i & 16) != 0 ? modelStageRichPresence.guildIsPartnered : z3, (i & 32) != 0 ? modelStageRichPresence.guildIsVerified : z4, (i & 64) != 0 ? modelStageRichPresence.guildName : str, (i & 128) != 0 ? modelStageRichPresence.guildIcon : str2, (i & 256) != 0 ? modelStageRichPresence.topic : str3, (i & 512) != 0 ? modelStageRichPresence.knownUserIds : set, (i & 1024) != 0 ? modelStageRichPresence.speakerIds : set2, (i & 2048) != 0 ? modelStageRichPresence.speakerCount : j4, (i & 4096) != 0 ? modelStageRichPresence.audienceSize : j5);
     }
 
-    /* renamed from: component1, reason: from getter */
+    /* JADX INFO: renamed from: component1, reason: from getter */
     public final long getChannelId() {
         return this.channelId;
     }
@@ -92,52 +93,52 @@ public final /* data */ class ModelStageRichPresence {
         return this.speakerIds;
     }
 
-    /* renamed from: component12, reason: from getter */
+    /* JADX INFO: renamed from: component12, reason: from getter */
     public final long getSpeakerCount() {
         return this.speakerCount;
     }
 
-    /* renamed from: component13, reason: from getter */
+    /* JADX INFO: renamed from: component13, reason: from getter */
     public final long getAudienceSize() {
         return this.audienceSize;
     }
 
-    /* renamed from: component2, reason: from getter */
+    /* JADX INFO: renamed from: component2, reason: from getter */
     public final long getStageInstanceId() {
         return this.stageInstanceId;
     }
 
-    /* renamed from: component3, reason: from getter */
+    /* JADX INFO: renamed from: component3, reason: from getter */
     public final boolean getUserIsSpeaker() {
         return this.userIsSpeaker;
     }
 
-    /* renamed from: component4, reason: from getter */
+    /* JADX INFO: renamed from: component4, reason: from getter */
     public final long getGuildId() {
         return this.guildId;
     }
 
-    /* renamed from: component5, reason: from getter */
+    /* JADX INFO: renamed from: component5, reason: from getter */
     public final boolean getGuildIsPartnered() {
         return this.guildIsPartnered;
     }
 
-    /* renamed from: component6, reason: from getter */
+    /* JADX INFO: renamed from: component6, reason: from getter */
     public final boolean getGuildIsVerified() {
         return this.guildIsVerified;
     }
 
-    /* renamed from: component7, reason: from getter */
+    /* JADX INFO: renamed from: component7, reason: from getter */
     public final String getGuildName() {
         return this.guildName;
     }
 
-    /* renamed from: component8, reason: from getter */
+    /* JADX INFO: renamed from: component8, reason: from getter */
     public final String getGuildIcon() {
         return this.guildIcon;
     }
 
-    /* renamed from: component9, reason: from getter */
+    /* JADX INFO: renamed from: component9, reason: from getter */
     public final String getTopic() {
         return this.topic;
     }
@@ -214,24 +215,33 @@ public final /* data */ class ModelStageRichPresence {
     }
 
     /* JADX WARN: Multi-variable type inference failed */
+    /* JADX WARN: Type inference failed for: r0v24 */
+    /* JADX WARN: Type inference failed for: r0v25 */
+    /* JADX WARN: Type inference failed for: r0v4, types: [int] */
+    /* JADX WARN: Type inference failed for: r1v30 */
+    /* JADX WARN: Type inference failed for: r1v31 */
+    /* JADX WARN: Type inference failed for: r1v7, types: [int] */
+    /* JADX WARN: Type inference failed for: r2v0 */
+    /* JADX WARN: Type inference failed for: r2v1, types: [int] */
+    /* JADX WARN: Type inference failed for: r2v6 */
     public int hashCode() {
         int iM3a = (C0002b.m3a(this.stageInstanceId) + (C0002b.m3a(this.channelId) * 31)) * 31;
         boolean z2 = this.userIsSpeaker;
-        int i = z2;
-        if (z2 != 0) {
-            i = 1;
+        ?? r0 = z2;
+        if (z2) {
+            r0 = 1;
         }
-        int iM3a2 = (C0002b.m3a(this.guildId) + ((iM3a + i) * 31)) * 31;
+        int iM3a2 = (C0002b.m3a(this.guildId) + ((iM3a + r0) * 31)) * 31;
         boolean z3 = this.guildIsPartnered;
-        int i2 = z3;
-        if (z3 != 0) {
-            i2 = 1;
+        ?? r1 = z3;
+        if (z3) {
+            r1 = 1;
         }
-        int i3 = (iM3a2 + i2) * 31;
+        int i = (iM3a2 + r1) * 31;
         boolean z4 = this.guildIsVerified;
-        int i4 = (i3 + (z4 ? 1 : z4 ? 1 : 0)) * 31;
+        int i2 = (i + (z4 ? 1 : z4)) * 31;
         String str = this.guildName;
-        int iHashCode = (i4 + (str != null ? str.hashCode() : 0)) * 31;
+        int iHashCode = (i2 + (str != null ? str.hashCode() : 0)) * 31;
         String str2 = this.guildIcon;
         int iHashCode2 = (iHashCode + (str2 != null ? str2.hashCode() : 0)) * 31;
         String str3 = this.topic;

@@ -1,6 +1,5 @@
 package p007b.p076b.p077a.p078a;
 
-import android.content.res.Resources;
 import androidx.fragment.app.Fragment;
 import androidx.viewpager.widget.ViewPager;
 import com.google.android.material.tabs.TabLayout;
@@ -8,12 +7,12 @@ import com.lytefast.flexinput.fragment.FlexInputFragment;
 import com.lytefast.flexinput.viewmodel.FlexInputViewModel;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: AddContentDialogFragment.kt */
-/* renamed from: b.b.a.a.b, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.b.a.a.b, reason: use source file name */
+/* JADX INFO: compiled from: AddContentDialogFragment.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class AddContentDialogFragment2 implements TabLayout.OnTabSelectedListener {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final /* synthetic */ AddContentDialogFragment f2129a;
 
     public AddContentDialogFragment2(AddContentDialogFragment addContentDialogFragment) {
@@ -26,7 +25,7 @@ public final class AddContentDialogFragment2 implements TabLayout.OnTabSelectedL
     }
 
     @Override // com.google.android.material.tabs.TabLayout.BaseOnTabSelectedListener
-    public void onTabSelected(TabLayout.Tab tab) throws Resources.NotFoundException {
+    public void onTabSelected(TabLayout.Tab tab) {
         FlexInputViewModel flexInputViewModel;
         Intrinsics3.checkNotNullParameter(tab, "tab");
         int position = tab.getPosition();

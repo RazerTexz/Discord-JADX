@@ -4,7 +4,7 @@ import com.sun.tools.javac.parser.Scanner;
 import com.sun.tools.javac.util.Context;
 import java.nio.CharBuffer;
 
-/* loaded from: discord-126021.apk:lombok/javac/java6/CommentCollectingScannerFactory.SCL.lombok */
+/* JADX INFO: loaded from: discord-126021.apk:lombok/javac/java6/CommentCollectingScannerFactory.SCL.lombok */
 public class CommentCollectingScannerFactory extends Scanner.Factory {
     public static void preRegister(Context context) {
         if (context.get(scannerFactoryKey) == null) {
@@ -13,8 +13,8 @@ public class CommentCollectingScannerFactory extends Scanner.Factory {
         }
     }
 
-    /* renamed from: lombok.javac.java6.CommentCollectingScannerFactory$1MyFactory, reason: invalid class name */
-    /* loaded from: discord-126021.apk:lombok/javac/java6/CommentCollectingScannerFactory$1MyFactory.SCL.lombok */
+    /* JADX INFO: renamed from: lombok.javac.java6.CommentCollectingScannerFactory$1MyFactory, reason: invalid class name */
+    /* JADX INFO: loaded from: discord-126021.apk:lombok/javac/java6/CommentCollectingScannerFactory$1MyFactory.SCL.lombok */
     class C1MyFactory implements Context.Factory {
         private final /* synthetic */ Context val$context;
 

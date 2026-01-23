@@ -6,17 +6,17 @@ import java.util.Set;
 import p007b.p225i.p408d.JsonNull;
 import p007b.p225i.p408d.JsonPrimitive;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public final class JsonObject extends JsonElement {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final LinkedTreeMap<String, JsonElement> f21481a = new LinkedTreeMap<>();
 
     public boolean equals(Object obj) {
         return obj == this || ((obj instanceof JsonObject) && ((JsonObject) obj).f21481a.equals(this.f21481a));
     }
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public void m9214h(String str, JsonElement jsonElement) {
         LinkedTreeMap<String, JsonElement> linkedTreeMap = this.f21481a;
         if (jsonElement == null) {
@@ -29,12 +29,12 @@ public final class JsonObject extends JsonElement {
         return this.f21481a.hashCode();
     }
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public void m9215i(String str, Number number) {
         this.f21481a.put(str, number == null ? JsonNull.f13106a : new JsonPrimitive(number));
     }
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public Set<Map.Entry<String, JsonElement>> m9216j() {
         return this.f21481a.entrySet();
     }

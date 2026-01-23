@@ -1,8 +1,8 @@
 package com.discord.widgets.voice.feedback;
 
 
-/* compiled from: FeedbackRating.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: FeedbackRating.kt */
+/* JADX INFO: loaded from: classes.dex */
 public enum FeedbackRating {
     GOOD("good"),
     NEUTRAL("neutral"),

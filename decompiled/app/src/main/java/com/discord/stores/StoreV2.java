@@ -11,12 +11,12 @@ import kotlin.reflect.KProperty;
 import p507d0.p580t.MutableCollections;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: StoreV2.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: StoreV2.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public abstract class StoreV2 extends Store implements Store2, ObservationDeck.UpdateSource {
     private final Set<ObservationDeck.UpdateSource> updateSources = new HashSet();
 
-    /* compiled from: StoreV2.kt */
+    /* JADX INFO: compiled from: StoreV2.kt */
     public static final class MarkChangedDelegate<T> {
         private final ObservationDeck.UpdateSource overrideUpdateSource;
         private T value;

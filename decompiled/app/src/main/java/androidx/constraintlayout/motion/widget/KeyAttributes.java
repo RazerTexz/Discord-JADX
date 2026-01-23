@@ -13,7 +13,7 @@ import java.util.HashSet;
 import java.util.Iterator;
 import p007b.p100d.p104b.p105a.outline;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class KeyAttributes extends Key {
     public static final int KEY_TYPE = 1;
     public static final String NAME = "KeyAttribute";
@@ -312,7 +312,6 @@ public class KeyAttributes extends Key {
     }
 
     /* JADX WARN: Can't fix incorrect switch cases order, some code will duplicate */
-    /* JADX WARN: Failed to restore switch over string. Please report as a decompilation issue */
     /* JADX WARN: Removed duplicated region for block: B:12:0x0041  */
     @Override // androidx.constraintlayout.motion.widget.Key
     /*
@@ -321,158 +320,118 @@ public class KeyAttributes extends Key {
     public void addValues(HashMap<String, SplineSet> map) {
         for (String str : map.keySet()) {
             SplineSet splineSet = map.get(str);
-            char c = 7;
             if (!str.startsWith(Key.CUSTOM)) {
-                switch (str.hashCode()) {
-                    case -1249320806:
-                        c = str.equals(Key.ROTATION_X) ? (char) 0 : (char) 65535;
-                        break;
-                    case -1249320805:
-                        if (str.equals(Key.ROTATION_Y)) {
-                            c = 1;
+                switch (str) {
+                    case "rotationX":
+                        if (Float.isNaN(this.mRotationX)) {
                             break;
-                        }
-                        break;
-                    case -1225497657:
-                        if (str.equals(Key.TRANSLATION_X)) {
-                            c = 2;
-                            break;
-                        }
-                        break;
-                    case -1225497656:
-                        if (str.equals(Key.TRANSLATION_Y)) {
-                            c = 3;
-                            break;
-                        }
-                        break;
-                    case -1225497655:
-                        if (str.equals(Key.TRANSLATION_Z)) {
-                            c = 4;
-                            break;
-                        }
-                        break;
-                    case -1001078227:
-                        if (str.equals("progress")) {
-                            c = 5;
-                            break;
-                        }
-                        break;
-                    case -908189618:
-                        if (str.equals(Key.SCALE_X)) {
-                            c = 6;
-                            break;
-                        }
-                        break;
-                    case -908189617:
-                        if (!str.equals(Key.SCALE_Y)) {
-                        }
-                        break;
-                    case -760884510:
-                        if (str.equals(Key.PIVOT_X)) {
-                            c = '\b';
-                            break;
-                        }
-                        break;
-                    case -760884509:
-                        if (str.equals(Key.PIVOT_Y)) {
-                            c = '\t';
-                            break;
-                        }
-                        break;
-                    case -40300674:
-                        if (str.equals(Key.ROTATION)) {
-                            c = '\n';
-                            break;
-                        }
-                        break;
-                    case -4379043:
-                        if (str.equals(Key.ELEVATION)) {
-                            c = 11;
-                            break;
-                        }
-                        break;
-                    case 37232917:
-                        if (str.equals(Key.TRANSITION_PATH_ROTATE)) {
-                            c = '\f';
-                            break;
-                        }
-                        break;
-                    case 92909918:
-                        if (str.equals(Key.ALPHA)) {
-                            c = '\r';
-                            break;
-                        }
-                        break;
-                }
-                switch (c) {
-                    case 0:
-                        if (!Float.isNaN(this.mRotationX)) {
+                        } else {
                             splineSet.setPoint(this.mFramePosition, this.mRotationX);
+                            break;
                         }
                         break;
-                    case 1:
-                        if (!Float.isNaN(this.mRotationY)) {
+                    case "rotationY":
+                        if (Float.isNaN(this.mRotationY)) {
+                            break;
+                        } else {
                             splineSet.setPoint(this.mFramePosition, this.mRotationY);
+                            break;
                         }
                         break;
-                    case 2:
-                        if (!Float.isNaN(this.mTranslationX)) {
+                    case "translationX":
+                        if (Float.isNaN(this.mTranslationX)) {
+                            break;
+                        } else {
                             splineSet.setPoint(this.mFramePosition, this.mTranslationX);
+                            break;
                         }
                         break;
-                    case 3:
-                        if (!Float.isNaN(this.mTranslationY)) {
+                    case "translationY":
+                        if (Float.isNaN(this.mTranslationY)) {
+                            break;
+                        } else {
                             splineSet.setPoint(this.mFramePosition, this.mTranslationY);
+                            break;
                         }
                         break;
-                    case 4:
-                        if (!Float.isNaN(this.mTranslationZ)) {
+                    case "translationZ":
+                        if (Float.isNaN(this.mTranslationZ)) {
+                            break;
+                        } else {
                             splineSet.setPoint(this.mFramePosition, this.mTranslationZ);
+                            break;
                         }
                         break;
-                    case 5:
-                        if (!Float.isNaN(this.mProgress)) {
+                    case "progress":
+                        if (Float.isNaN(this.mProgress)) {
+                            break;
+                        } else {
                             splineSet.setPoint(this.mFramePosition, this.mProgress);
+                            break;
                         }
                         break;
-                    case 6:
-                        if (!Float.isNaN(this.mScaleX)) {
+                    case "scaleX":
+                        if (Float.isNaN(this.mScaleX)) {
+                            break;
+                        } else {
                             splineSet.setPoint(this.mFramePosition, this.mScaleX);
+                            break;
                         }
                         break;
-                    case 7:
-                        if (!Float.isNaN(this.mScaleY)) {
+                    case "scaleY":
+                        if (Float.isNaN(this.mScaleY)) {
+                            break;
+                        } else {
                             splineSet.setPoint(this.mFramePosition, this.mScaleY);
+                            break;
                         }
                         break;
-                    case '\b':
-                        if (!Float.isNaN(this.mRotationX)) {
+                    case "transformPivotX":
+                        if (Float.isNaN(this.mRotationX)) {
+                            break;
+                        } else {
                             splineSet.setPoint(this.mFramePosition, this.mPivotX);
+                            break;
                         }
                         break;
-                    case '\t':
-                        if (!Float.isNaN(this.mRotationY)) {
+                    case "transformPivotY":
+                        if (Float.isNaN(this.mRotationY)) {
+                            break;
+                        } else {
                             splineSet.setPoint(this.mFramePosition, this.mPivotY);
+                            break;
                         }
                         break;
-                    case '\n':
-                        if (!Float.isNaN(this.mRotation)) {
+                    case "rotation":
+                        if (Float.isNaN(this.mRotation)) {
+                            break;
+                        } else {
                             splineSet.setPoint(this.mFramePosition, this.mRotation);
+                            break;
                         }
                         break;
-                    case 11:
-                        if (!Float.isNaN(this.mElevation)) {
+                    case "elevation":
+                        if (Float.isNaN(this.mElevation)) {
+                            break;
+                        } else {
                             splineSet.setPoint(this.mFramePosition, this.mElevation);
+                            break;
                         }
                         break;
-                    case '\f':
-                        if (!Float.isNaN(this.mTransitionPathRotate)) {
+                    case "transitionPathRotate":
+                        if (Float.isNaN(this.mTransitionPathRotate)) {
+                            break;
+                        } else {
                             splineSet.setPoint(this.mFramePosition, this.mTransitionPathRotate);
+                            break;
                         }
                         break;
-                    case '\r':
-                        if (!Float.isNaN(this.mAlpha)) {
+                    case "alpha":
+                        if (Float.isNaN(this.mAlpha)) {
+                            break;
+                        } else {
                             splineSet.setPoint(this.mFramePosition, this.mAlpha);
+                            break;
                         }
                         break;
                     default:

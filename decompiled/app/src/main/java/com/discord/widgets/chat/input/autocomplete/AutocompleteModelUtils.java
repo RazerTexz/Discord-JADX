@@ -50,8 +50,8 @@ import p507d0.p580t.MapsJVM;
 import p507d0.p580t._Collections;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: AutocompleteModelUtils.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: AutocompleteModelUtils.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class AutocompleteModelUtils {
     public static final AutocompleteModelUtils INSTANCE = new AutocompleteModelUtils();
 

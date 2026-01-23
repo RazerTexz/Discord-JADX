@@ -28,8 +28,8 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 import p658rx.Observable;
 
-/* compiled from: StoreMessageReactions.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: StoreMessageReactions.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class StoreMessageReactions extends StoreV2 {
     private final Dispatcher dispatcher;
     private final ObservationDeck observationDeck;
@@ -37,10 +37,10 @@ public final class StoreMessageReactions extends StoreV2 {
     private Map<Long, ? extends Map<String, ? extends EmojiResults>> reactionsSnapshot;
     private final StoreUser userStore;
 
-    /* compiled from: StoreMessageReactions.kt */
+    /* JADX INFO: compiled from: StoreMessageReactions.kt */
     public static abstract class EmojiResults {
 
-        /* compiled from: StoreMessageReactions.kt */
+        /* JADX INFO: compiled from: StoreMessageReactions.kt */
         public static final /* data */ class Failure extends EmojiResults {
             private final long channelId;
             private final MessageReactionEmoji emoji;
@@ -70,17 +70,17 @@ public final class StoreMessageReactions extends StoreV2 {
                 return failure.copy(j3, j4, messageReactionEmoji);
             }
 
-            /* renamed from: component1, reason: from getter */
+            /* JADX INFO: renamed from: component1, reason: from getter */
             public final long getChannelId() {
                 return this.channelId;
             }
 
-            /* renamed from: component2, reason: from getter */
+            /* JADX INFO: renamed from: component2, reason: from getter */
             public final long getMessageId() {
                 return this.messageId;
             }
 
-            /* renamed from: component3, reason: from getter */
+            /* JADX INFO: renamed from: component3, reason: from getter */
             public final MessageReactionEmoji getEmoji() {
                 return this.emoji;
             }
@@ -131,7 +131,7 @@ public final class StoreMessageReactions extends StoreV2 {
             }
         }
 
-        /* compiled from: StoreMessageReactions.kt */
+        /* JADX INFO: compiled from: StoreMessageReactions.kt */
         public static final class Loading extends EmojiResults {
             public static final Loading INSTANCE = new Loading();
 
@@ -140,7 +140,7 @@ public final class StoreMessageReactions extends StoreV2 {
             }
         }
 
-        /* compiled from: StoreMessageReactions.kt */
+        /* JADX INFO: compiled from: StoreMessageReactions.kt */
         public static final /* data */ class Users extends EmojiResults {
             private final long channelId;
             private final MessageReactionEmoji emoji;
@@ -158,6 +158,7 @@ public final class StoreMessageReactions extends StoreV2 {
                 this.emoji = messageReactionEmoji;
             }
 
+            /* JADX WARN: Multi-variable type inference failed */
             public static /* synthetic */ Users copy$default(Users users, LinkedHashMap linkedHashMap, long j, long j2, MessageReactionEmoji messageReactionEmoji, int i, Object obj) {
                 if ((i & 1) != 0) {
                     linkedHashMap = users.users;
@@ -180,17 +181,17 @@ public final class StoreMessageReactions extends StoreV2 {
                 return this.users;
             }
 
-            /* renamed from: component2, reason: from getter */
+            /* JADX INFO: renamed from: component2, reason: from getter */
             public final long getChannelId() {
                 return this.channelId;
             }
 
-            /* renamed from: component3, reason: from getter */
+            /* JADX INFO: renamed from: component3, reason: from getter */
             public final long getMessageId() {
                 return this.messageId;
             }
 
-            /* renamed from: component4, reason: from getter */
+            /* JADX INFO: renamed from: component4, reason: from getter */
             public final MessageReactionEmoji getEmoji() {
                 return this.emoji;
             }
@@ -261,8 +262,8 @@ public final class StoreMessageReactions extends StoreV2 {
         }
     }
 
-    /* compiled from: StoreMessageReactions.kt */
-    /* renamed from: com.discord.stores.StoreMessageReactions$deleteEmoji$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreMessageReactions$deleteEmoji$1 */
+    /* JADX INFO: compiled from: StoreMessageReactions.kt */
     public static final class C62141 extends Lambda implements Function1<Void, Unit> {
         public static final C62141 INSTANCE = new C62141();
 
@@ -276,20 +277,20 @@ public final class StoreMessageReactions extends StoreV2 {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Void r1) {
         }
     }
 
-    /* compiled from: StoreMessageReactions.kt */
-    /* renamed from: com.discord.stores.StoreMessageReactions$fetchReactions$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreMessageReactions$fetchReactions$1 */
+    /* JADX INFO: compiled from: StoreMessageReactions.kt */
     public static final class C62151 extends Lambda implements Function1<List<? extends com.discord.api.user.User>, Unit> {
         public final /* synthetic */ long $channelId;
         public final /* synthetic */ MessageReactionEmoji $emoji;
         public final /* synthetic */ long $messageId;
 
-        /* compiled from: StoreMessageReactions.kt */
-        /* renamed from: com.discord.stores.StoreMessageReactions$fetchReactions$1$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.stores.StoreMessageReactions$fetchReactions$1$1, reason: invalid class name */
+        /* JADX INFO: compiled from: StoreMessageReactions.kt */
         public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
             public final /* synthetic */ List $reactionUsers;
 
@@ -305,7 +306,7 @@ public final class StoreMessageReactions extends StoreV2 {
                 return Unit.f27425a;
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2() {
                 C62151 c62151 = C62151.this;
                 StoreMessageReactions storeMessageReactions = StoreMessageReactions.this;
@@ -336,22 +337,22 @@ public final class StoreMessageReactions extends StoreV2 {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(List<com.discord.api.user.User> list) {
             Intrinsics3.checkNotNullParameter(list, "reactionUsers");
             StoreMessageReactions.access$getDispatcher$p(StoreMessageReactions.this).schedule(new AnonymousClass1(list));
         }
     }
 
-    /* compiled from: StoreMessageReactions.kt */
-    /* renamed from: com.discord.stores.StoreMessageReactions$fetchReactions$2 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreMessageReactions$fetchReactions$2 */
+    /* JADX INFO: compiled from: StoreMessageReactions.kt */
     public static final class C62162 extends Lambda implements Function1<Error, Unit> {
         public final /* synthetic */ long $channelId;
         public final /* synthetic */ MessageReactionEmoji $emoji;
         public final /* synthetic */ long $messageId;
 
-        /* compiled from: StoreMessageReactions.kt */
-        /* renamed from: com.discord.stores.StoreMessageReactions$fetchReactions$2$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.stores.StoreMessageReactions$fetchReactions$2$1, reason: invalid class name */
+        /* JADX INFO: compiled from: StoreMessageReactions.kt */
         public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
             public AnonymousClass1() {
                 super(0);
@@ -363,7 +364,7 @@ public final class StoreMessageReactions extends StoreV2 {
                 return Unit.f27425a;
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2() {
                 C62162 c62162 = C62162.this;
                 StoreMessageReactions.access$handleLoadReactionUsersFailure(StoreMessageReactions.this, c62162.$channelId, c62162.$messageId, c62162.$emoji);
@@ -384,15 +385,15 @@ public final class StoreMessageReactions extends StoreV2 {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Error error) {
             Intrinsics3.checkNotNullParameter(error, "it");
             StoreMessageReactions.access$getDispatcher$p(StoreMessageReactions.this).schedule(new AnonymousClass1());
         }
     }
 
-    /* compiled from: StoreMessageReactions.kt */
-    /* renamed from: com.discord.stores.StoreMessageReactions$forceRetryFetchReactions$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreMessageReactions$forceRetryFetchReactions$1 */
+    /* JADX INFO: compiled from: StoreMessageReactions.kt */
     public static final class C62171 extends Lambda implements Function0<Unit> {
         public final /* synthetic */ long $channelId;
         public final /* synthetic */ MessageReactionEmoji $emoji;
@@ -412,7 +413,7 @@ public final class StoreMessageReactions extends StoreV2 {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             Map map = (Map) StoreMessageReactions.access$getReactions$p(StoreMessageReactions.this).get(Long.valueOf(this.$messageId));
             if (map != null) {
@@ -422,8 +423,8 @@ public final class StoreMessageReactions extends StoreV2 {
         }
     }
 
-    /* compiled from: StoreMessageReactions.kt */
-    /* renamed from: com.discord.stores.StoreMessageReactions$observeMessageReactions$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreMessageReactions$observeMessageReactions$1 */
+    /* JADX INFO: compiled from: StoreMessageReactions.kt */
     public static final class C62181 extends Lambda implements Function0<Unit> {
         public final /* synthetic */ long $channelId;
         public final /* synthetic */ MessageReactionEmoji $emoji;
@@ -443,14 +444,14 @@ public final class StoreMessageReactions extends StoreV2 {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             StoreMessageReactions.access$fetchReactions(StoreMessageReactions.this, this.$channelId, this.$messageId, this.$emoji);
         }
     }
 
-    /* compiled from: StoreMessageReactions.kt */
-    /* renamed from: com.discord.stores.StoreMessageReactions$observeMessageReactions$2 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreMessageReactions$observeMessageReactions$2 */
+    /* JADX INFO: compiled from: StoreMessageReactions.kt */
     public static final class C62192 extends Lambda implements Function0<EmojiResults> {
         public final /* synthetic */ MessageReactionEmoji $emoji;
         public final /* synthetic */ long $messageId;

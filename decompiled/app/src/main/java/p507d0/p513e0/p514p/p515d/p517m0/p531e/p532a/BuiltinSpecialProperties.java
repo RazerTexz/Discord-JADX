@@ -19,24 +19,24 @@ import p507d0.p580t.Maps6;
 import p507d0.p580t._Collections;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: BuiltinSpecialProperties.kt */
-/* renamed from: d0.e0.p.d.m0.e.a.i, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.e.a.i, reason: use source file name */
+/* JADX INFO: compiled from: BuiltinSpecialProperties.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class BuiltinSpecialProperties {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final BuiltinSpecialProperties f23276a = new BuiltinSpecialProperties();
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static final Map<FqName, Name> f23277b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public static final Map<Name, List<Name>> f23278c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public static final Set<FqName> f23279d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public static final Set<Name> f23280e;
 
     static {

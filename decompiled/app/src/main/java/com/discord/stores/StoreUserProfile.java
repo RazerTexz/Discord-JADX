@@ -21,11 +21,11 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 import p658rx.Observable;
 
-/* compiled from: StoreUserProfile.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: StoreUserProfile.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class StoreUserProfile extends StoreV2 {
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private static final UserProfile EMPTY_PROFILE = new UserProfile(null, null, null, null, null, null, null, Opcodes.LAND);
     private final Dispatcher dispatcher;
@@ -36,7 +36,7 @@ public final class StoreUserProfile extends StoreV2 {
     private final RestAPI restAPI;
     private final StoreStream storeStream;
 
-    /* compiled from: StoreUserProfile.kt */
+    /* JADX INFO: compiled from: StoreUserProfile.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -50,20 +50,20 @@ public final class StoreUserProfile extends StoreV2 {
         }
     }
 
-    /* compiled from: StoreUserProfile.kt */
-    /* renamed from: com.discord.stores.StoreUserProfile$fetchProfile$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreUserProfile$fetchProfile$1 */
+    /* JADX INFO: compiled from: StoreUserProfile.kt */
     public static final class C65881 extends Lambda implements Function0<Unit> {
         public final /* synthetic */ Long $guildId;
         public final /* synthetic */ Function1 $onFetchSuccess;
         public final /* synthetic */ long $userId;
         public final /* synthetic */ boolean $withMutualGuilds;
 
-        /* compiled from: StoreUserProfile.kt */
-        /* renamed from: com.discord.stores.StoreUserProfile$fetchProfile$1$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.stores.StoreUserProfile$fetchProfile$1$1, reason: invalid class name */
+        /* JADX INFO: compiled from: StoreUserProfile.kt */
         public static final class AnonymousClass1 extends Lambda implements Function1<UserProfile, Unit> {
 
-            /* compiled from: StoreUserProfile.kt */
-            /* renamed from: com.discord.stores.StoreUserProfile$fetchProfile$1$1$1, reason: invalid class name and collision with other inner class name */
+            /* JADX INFO: renamed from: com.discord.stores.StoreUserProfile$fetchProfile$1$1$1, reason: invalid class name and collision with other inner class name */
+            /* JADX INFO: compiled from: StoreUserProfile.kt */
             public static final class C132661 extends Lambda implements Function0<Unit> {
                 public final /* synthetic */ UserProfile $userProfile;
 
@@ -79,7 +79,7 @@ public final class StoreUserProfile extends StoreV2 {
                     return Unit.f27425a;
                 }
 
-                /* renamed from: invoke, reason: avoid collision after fix types in other method */
+                /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
                 public final void invoke2() {
                     if (this.$userProfile != null) {
                         StoreUserProfile.access$getStoreStream$p(StoreUserProfile.this).handleUserProfile(this.$userProfile, C65881.this.$guildId);
@@ -100,18 +100,18 @@ public final class StoreUserProfile extends StoreV2 {
                 return Unit.f27425a;
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2(UserProfile userProfile) {
                 StoreUserProfile.access$getDispatcher$p(StoreUserProfile.this).schedule(new C132661(userProfile));
             }
         }
 
-        /* compiled from: StoreUserProfile.kt */
-        /* renamed from: com.discord.stores.StoreUserProfile$fetchProfile$1$2, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.stores.StoreUserProfile$fetchProfile$1$2, reason: invalid class name */
+        /* JADX INFO: compiled from: StoreUserProfile.kt */
         public static final class AnonymousClass2 extends Lambda implements Function1<Error, Unit> {
 
-            /* compiled from: StoreUserProfile.kt */
-            /* renamed from: com.discord.stores.StoreUserProfile$fetchProfile$1$2$1, reason: invalid class name */
+            /* JADX INFO: renamed from: com.discord.stores.StoreUserProfile$fetchProfile$1$2$1, reason: invalid class name */
+            /* JADX INFO: compiled from: StoreUserProfile.kt */
             public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
                 public AnonymousClass1() {
                     super(0);
@@ -123,7 +123,7 @@ public final class StoreUserProfile extends StoreV2 {
                     return Unit.f27425a;
                 }
 
-                /* renamed from: invoke, reason: avoid collision after fix types in other method */
+                /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
                 public final void invoke2() {
                     C65881 c65881 = C65881.this;
                     StoreUserProfile.access$handleFailure(StoreUserProfile.this, c65881.$userId);
@@ -140,7 +140,7 @@ public final class StoreUserProfile extends StoreV2 {
                 return Unit.f27425a;
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2(Error error) {
                 Intrinsics3.checkNotNullParameter(error, "it");
                 StoreUserProfile.access$getDispatcher$p(StoreUserProfile.this).schedule(new AnonymousClass1());
@@ -162,7 +162,7 @@ public final class StoreUserProfile extends StoreV2 {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             if (StoreUserProfile.access$getProfilesLoading$p(StoreUserProfile.this).contains(Long.valueOf(this.$userId))) {
                 return;
@@ -174,8 +174,8 @@ public final class StoreUserProfile extends StoreV2 {
         }
     }
 
-    /* compiled from: StoreUserProfile.kt */
-    /* renamed from: com.discord.stores.StoreUserProfile$observeUserProfile$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreUserProfile$observeUserProfile$1 */
+    /* JADX INFO: compiled from: StoreUserProfile.kt */
     public static final class C65891 extends Lambda implements Function0<UserProfile> {
         public final /* synthetic */ long $userId;
 
@@ -197,8 +197,8 @@ public final class StoreUserProfile extends StoreV2 {
         }
     }
 
-    /* compiled from: StoreUserProfile.kt */
-    /* renamed from: com.discord.stores.StoreUserProfile$updateUser$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreUserProfile$updateUser$1 */
+    /* JADX INFO: compiled from: StoreUserProfile.kt */
     public static final class C65901 extends Lambda implements Function0<Unit> {
         public final /* synthetic */ User $user;
 
@@ -214,7 +214,7 @@ public final class StoreUserProfile extends StoreV2 {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             StoreUserProfile.access$handleUser(StoreUserProfile.this, this.$user);
         }
@@ -252,6 +252,7 @@ public final class StoreUserProfile extends StoreV2 {
         storeUserProfile.handleUser(user);
     }
 
+    /* JADX WARN: Multi-variable type inference failed */
     public static /* synthetic */ void fetchProfile$default(StoreUserProfile storeUserProfile, long j, Long l, boolean z2, Function1 function1, int i, Object obj) {
         storeUserProfile.fetchProfile(j, (i & 2) != 0 ? null : l, (i & 4) != 0 ? false : z2, (i & 8) != 0 ? null : function1);
     }

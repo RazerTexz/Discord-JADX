@@ -18,7 +18,7 @@ import java.lang.ref.WeakReference;
 import java.util.Collections;
 import java.util.List;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class AccessibilityDelegateCompat {
     private static final View.AccessibilityDelegate DEFAULT_DELEGATE = new View.AccessibilityDelegate();
     private final View.AccessibilityDelegate mBridge;

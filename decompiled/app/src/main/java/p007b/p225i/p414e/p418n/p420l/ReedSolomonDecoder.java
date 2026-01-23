@@ -3,19 +3,19 @@ package p007b.p225i.p414e.p418n.p420l;
 import com.google.zxing.common.reedsolomon.ReedSolomonException;
 import java.util.Objects;
 
-/* compiled from: ReedSolomonDecoder.java */
-/* renamed from: b.i.e.n.l.c, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.e.n.l.c, reason: use source file name */
+/* JADX INFO: compiled from: ReedSolomonDecoder.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class ReedSolomonDecoder {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final GenericGF f13316a;
 
     public ReedSolomonDecoder(GenericGF genericGF) {
         this.f13316a = genericGF;
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public void m6968a(int[] iArr, int i) throws ReedSolomonException {
         int[] iArr2;
         GenericGFPoly genericGFPoly;

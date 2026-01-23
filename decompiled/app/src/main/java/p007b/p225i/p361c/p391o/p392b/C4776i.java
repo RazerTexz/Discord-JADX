@@ -8,15 +8,15 @@ import p007b.p225i.p226a.p288f.p299e.p300h.C3266a;
 import p007b.p225i.p226a.p288f.p299e.p300h.p301j.AbstractC3311p;
 import p007b.p225i.p361c.p362j.p363a.InterfaceC4549a;
 
-/* compiled from: com.google.firebase:firebase-dynamic-links@@19.1.1 */
-/* renamed from: b.i.c.o.b.i */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.c.o.b.i */
+/* JADX INFO: compiled from: com.google.firebase:firebase-dynamic-links@@19.1.1 */
+/* JADX INFO: loaded from: classes3.dex */
 public final class C4776i extends AbstractC3311p<C4771d, PendingDynamicLinkData> {
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final String f12813c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     @Nullable
     public final InterfaceC4549a f12814d;
 
@@ -26,7 +26,7 @@ public final class C4776i extends AbstractC3311p<C4771d, PendingDynamicLinkData>
     }
 
     @Override // p007b.p225i.p226a.p288f.p299e.p300h.p301j.AbstractC3311p
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final /* synthetic */ void mo4109c(C3266a.b bVar, TaskCompletionSource<PendingDynamicLinkData> taskCompletionSource) throws RemoteException {
         C4771d c4771d = (C4771d) bVar;
         try {

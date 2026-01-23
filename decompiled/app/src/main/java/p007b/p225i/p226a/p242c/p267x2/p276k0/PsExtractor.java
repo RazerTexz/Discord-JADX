@@ -18,71 +18,71 @@ import p007b.p225i.p226a.p242c.p267x2.PositionHolder;
 import p007b.p225i.p226a.p242c.p267x2.SeekMap;
 import p007b.p225i.p226a.p242c.p267x2.p276k0.TsPayloadReader;
 
-/* compiled from: PsExtractor.java */
-/* renamed from: b.i.a.c.x2.k0.b0, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.x2.k0.b0, reason: use source file name */
+/* JADX INFO: compiled from: PsExtractor.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class PsExtractor implements Extractor {
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public boolean f8578e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public boolean f8579f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public boolean f8580g;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public long f8581h;
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     @Nullable
     public PsBinarySearchSeeker f8582i;
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public ExtractorOutput f8583j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public boolean f8584k;
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final TimestampAdjuster f8574a = new TimestampAdjuster(0);
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final ParsableByteArray f8576c = new ParsableByteArray(4096);
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final SparseArray<a> f8575b = new SparseArray<>();
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final PsDurationReader f8577d = new PsDurationReader();
 
-    /* compiled from: PsExtractor.java */
-    /* renamed from: b.i.a.c.x2.k0.b0$a */
+    /* JADX INFO: renamed from: b.i.a.c.x2.k0.b0$a */
+    /* JADX INFO: compiled from: PsExtractor.java */
     public static final class a {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final ElementaryStreamReader f8585a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final TimestampAdjuster f8586b;
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public final ParsableBitArray f8587c = new ParsableBitArray(new byte[64]);
 
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         public boolean f8588d;
 
-        /* renamed from: e */
+        /* JADX INFO: renamed from: e */
         public boolean f8589e;
 
-        /* renamed from: f */
+        /* JADX INFO: renamed from: f */
         public boolean f8590f;
 
-        /* renamed from: g */
+        /* JADX INFO: renamed from: g */
         public int f8591g;
 
-        /* renamed from: h */
+        /* JADX INFO: renamed from: h */
         public long f8592h;
 
         public a(ElementaryStreamReader elementaryStreamReader, TimestampAdjuster timestampAdjuster) {
@@ -96,7 +96,7 @@ public final class PsExtractor implements Extractor {
     }
 
     @Override // p007b.p225i.p226a.p242c.p267x2.Extractor
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public boolean mo3633b(ExtractorInput extractorInput) throws IOException {
         byte[] bArr = new byte[14];
         extractorInput.mo3652o(bArr, 0, 14);
@@ -110,7 +110,7 @@ public final class PsExtractor implements Extractor {
 
     /* JADX WARN: Removed duplicated region for block: B:105:0x021d  */
     @Override // p007b.p225i.p226a.p242c.p267x2.Extractor
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
@@ -127,7 +127,7 @@ public final class PsExtractor implements Extractor {
                 if (!psDurationReader.f8569e) {
                     long jMo3642b2 = extractorInput.mo3642b();
                     int iMin = (int) Math.min(20000L, jMo3642b2);
-                    long j2 = jMo3642b2 - iMin;
+                    long j2 = jMo3642b2 - ((long) iMin);
                     if (extractorInput.getPosition() != j2) {
                         positionHolder.f8992a = j2;
                     } else {
@@ -312,19 +312,24 @@ public final class PsExtractor implements Extractor {
         aVar.f8592h = 0L;
         if (aVar.f8588d) {
             aVar.f8587c.m3073m(4);
+            long jM3067g = ((long) aVar.f8587c.m3067g(3)) << 30;
             aVar.f8587c.m3073m(1);
+            long jM3067g2 = jM3067g | ((long) (aVar.f8587c.m3067g(15) << 15));
             aVar.f8587c.m3073m(1);
-            long jM3067g = (aVar.f8587c.m3067g(3) << 30) | (aVar.f8587c.m3067g(15) << 15) | aVar.f8587c.m3067g(15);
+            long jM3067g3 = jM3067g2 | ((long) aVar.f8587c.m3067g(15));
             aVar.f8587c.m3073m(1);
             if (!aVar.f8590f && aVar.f8589e) {
                 aVar.f8587c.m3073m(4);
+                long jM3067g4 = ((long) aVar.f8587c.m3067g(3)) << 30;
                 aVar.f8587c.m3073m(1);
+                long jM3067g5 = jM3067g4 | ((long) (aVar.f8587c.m3067g(15) << 15));
                 aVar.f8587c.m3073m(1);
+                long jM3067g6 = ((long) aVar.f8587c.m3067g(15)) | jM3067g5;
                 aVar.f8587c.m3073m(1);
-                aVar.f8586b.m2973b(aVar.f8587c.m3067g(15) | (aVar.f8587c.m3067g(3) << 30) | (aVar.f8587c.m3067g(15) << 15));
+                aVar.f8586b.m2973b(jM3067g6);
                 aVar.f8590f = true;
             }
-            aVar.f8592h = aVar.f8586b.m2973b(jM3067g);
+            aVar.f8592h = aVar.f8586b.m2973b(jM3067g3);
         }
         aVar.f8585a.mo3762f(aVar.f8592h, 4);
         aVar.f8585a.mo3758b(parsableByteArray3);
@@ -335,13 +340,13 @@ public final class PsExtractor implements Extractor {
     }
 
     @Override // p007b.p225i.p226a.p242c.p267x2.Extractor
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public void mo3636f(ExtractorOutput extractorOutput) {
         this.f8583j = extractorOutput;
     }
 
     @Override // p007b.p225i.p226a.p242c.p267x2.Extractor
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public void mo3637g(long j, long j2) {
         boolean z2 = this.f8574a.m2975d() == -9223372036854775807L;
         if (!z2) {

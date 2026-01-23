@@ -4,9 +4,9 @@ import android.os.Bundle;
 import kotlin.jvm.functions.Function0;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetThreadBrowserArchived.kt */
-/* renamed from: com.discord.widgets.channels.threads.browser.WidgetThreadBrowserArchived$channelId$2, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.channels.threads.browser.WidgetThreadBrowserArchived$channelId$2, reason: use source file name */
+/* JADX INFO: compiled from: WidgetThreadBrowserArchived.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetThreadBrowserArchived4 extends Lambda implements Function0<Long> {
     public final /* synthetic */ WidgetThreadBrowserArchived this$0;
 
@@ -21,7 +21,7 @@ public final class WidgetThreadBrowserArchived4 extends Lambda implements Functi
         return Long.valueOf(invoke2());
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final long invoke2() {
         Bundle arguments = this.this$0.getArguments();
         if (arguments == null) {

@@ -7,38 +7,38 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 import p659s.p660a.ThreadContextElement;
 
-/* compiled from: ThreadContext.kt */
-/* renamed from: s.a.a.a, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: s.a.a.a, reason: use source file name */
+/* JADX INFO: compiled from: ThreadContext.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class ThreadContext {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final Symbol3 f27658a = new Symbol3("ZERO");
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static final Function2<Object, CoroutineContext.Element, Object> f27659b = b.f27666j;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public static final Function2<ThreadContextElement<?>, CoroutineContext.Element, ThreadContextElement<?>> f27660c = c.f27667j;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public static final Function2<ThreadContext2, CoroutineContext.Element, ThreadContext2> f27661d = a.f27664k;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public static final Function2<ThreadContext2, CoroutineContext.Element, ThreadContext2> f27662e = a.f27663j;
 
-    /* compiled from: kotlin-style lambda group */
-    /* renamed from: s.a.a.a$a */
-    /* loaded from: classes2.dex */
+    /* JADX INFO: renamed from: s.a.a.a$a */
+    /* JADX INFO: compiled from: kotlin-style lambda group */
+    /* JADX INFO: loaded from: classes2.dex */
     public static final class a extends Lambda implements Function2<ThreadContext2, CoroutineContext.Element, ThreadContext2> {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public static final a f27663j = new a(0);
 
-        /* renamed from: k */
+        /* JADX INFO: renamed from: k */
         public static final a f27664k = new a(1);
 
-        /* renamed from: l */
+        /* JADX INFO: renamed from: l */
         public final /* synthetic */ int f27665l;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -78,11 +78,11 @@ public final class ThreadContext {
         }
     }
 
-    /* compiled from: ThreadContext.kt */
-    /* renamed from: s.a.a.a$b */
+    /* JADX INFO: renamed from: s.a.a.a$b */
+    /* JADX INFO: compiled from: ThreadContext.kt */
     public static final class b extends Lambda implements Function2<Object, CoroutineContext.Element, Object> {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public static final b f27666j = new b();
 
         public b() {
@@ -104,11 +104,11 @@ public final class ThreadContext {
         }
     }
 
-    /* compiled from: ThreadContext.kt */
-    /* renamed from: s.a.a.a$c */
+    /* JADX INFO: renamed from: s.a.a.a$c */
+    /* JADX INFO: compiled from: ThreadContext.kt */
     public static final class c extends Lambda implements Function2<ThreadContextElement<?>, CoroutineContext.Element, ThreadContextElement<?>> {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public static final c f27667j = new c();
 
         public c() {
@@ -129,7 +129,7 @@ public final class ThreadContext {
         }
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final void m11140a(CoroutineContext coroutineContext, Object obj) {
         if (obj == f27658a) {
             return;
@@ -144,7 +144,7 @@ public final class ThreadContext {
         }
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static final Object m11141b(CoroutineContext coroutineContext, Object obj) {
         if (obj == null) {
             obj = coroutineContext.fold(0, f27659b);

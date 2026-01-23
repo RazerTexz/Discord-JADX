@@ -15,21 +15,21 @@ import p007b.p225i.p226a.p242c.p245b3.SimpleSubtitleDecoder2;
 import p007b.p225i.p226a.p242c.p245b3.Subtitle;
 import p007b.p225i.p226a.p242c.p259f3.ParsableByteArray;
 
-/* compiled from: SubripDecoder.java */
-/* renamed from: b.i.a.c.b3.s.a, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.b3.s.a, reason: use source file name */
+/* JADX INFO: compiled from: SubripDecoder.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class SubripDecoder extends SimpleSubtitleDecoder2 {
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public static final Pattern f6020n = Pattern.compile("\\s*((?:(\\d+):)?(\\d+):(\\d+)(?:,(\\d+))?)\\s*-->\\s*((?:(\\d+):)?(\\d+):(\\d+)(?:,(\\d+))?)\\s*");
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public static final Pattern f6021o = Pattern.compile("\\{\\\\.*?\\}");
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public final StringBuilder f6022p;
 
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     public final ArrayList<String> f6023q;
 
     public SubripDecoder() {
@@ -38,7 +38,7 @@ public final class SubripDecoder extends SimpleSubtitleDecoder2 {
         this.f6023q = new ArrayList<>();
     }
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public static float m2677k(int i) {
         if (i == 0) {
             return 0.08f;
@@ -52,7 +52,7 @@ public final class SubripDecoder extends SimpleSubtitleDecoder2 {
         throw new IllegalArgumentException();
     }
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public static long m2678l(Matcher matcher, int i) {
         String strGroup = matcher.group(i + 1);
         long j = strGroup != null ? Long.parseLong(strGroup) * 60 * 60 * 1000 : 0L;
@@ -74,7 +74,7 @@ public final class SubripDecoder extends SimpleSubtitleDecoder2 {
     /* JADX WARN: Removed duplicated region for block: B:116:0x0208  */
     /* JADX WARN: Removed duplicated region for block: B:71:0x019f  */
     @Override // p007b.p225i.p226a.p242c.p245b3.SimpleSubtitleDecoder2
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
@@ -83,9 +83,9 @@ public final class SubripDecoder extends SimpleSubtitleDecoder2 {
         String strM3087g;
         long[] jArr;
         ParsableByteArray parsableByteArray2;
-        char c;
+        byte b2;
         int i2;
-        char c2;
+        byte b3;
         Cue cue;
         SubripDecoder subripDecoder = this;
         ArrayList arrayList = new ArrayList();
@@ -166,113 +166,113 @@ public final class SubripDecoder extends SimpleSubtitleDecoder2 {
                                 parsableByteArray2 = parsableByteArray3;
                                 switch (str.hashCode()) {
                                     case -685620710:
-                                        c = str.equals("{\\an1}") ? (char) 0 : (char) 65535;
+                                        b2 = str.equals("{\\an1}") ? (byte) 0 : (byte) -1;
                                         break;
                                     case -685620679:
                                         if (str.equals("{\\an2}")) {
-                                            c = 6;
+                                            b2 = 6;
                                             break;
                                         }
                                         break;
                                     case -685620648:
                                         if (str.equals("{\\an3}")) {
-                                            c = 3;
+                                            b2 = 3;
                                             break;
                                         }
                                         break;
                                     case -685620617:
                                         if (str.equals("{\\an4}")) {
-                                            c = 1;
+                                            b2 = 1;
                                             break;
                                         }
                                         break;
                                     case -685620586:
                                         if (str.equals("{\\an5}")) {
-                                            c = 7;
+                                            b2 = 7;
                                             break;
                                         }
                                         break;
                                     case -685620555:
                                         if (str.equals("{\\an6}")) {
-                                            c = 4;
+                                            b2 = 4;
                                             break;
                                         }
                                         break;
                                     case -685620524:
                                         if (str.equals("{\\an7}")) {
-                                            c = 2;
+                                            b2 = 2;
                                             break;
                                         }
                                         break;
                                     case -685620493:
                                         if (str.equals("{\\an8}")) {
-                                            c = '\b';
+                                            b2 = 8;
                                             break;
                                         }
                                         break;
                                     case -685620462:
                                         if (str.equals("{\\an9}")) {
-                                            c = 5;
+                                            b2 = 5;
                                             break;
                                         }
                                         break;
                                 }
                                 i2 = i6;
-                                int i9 = (c == 0 || c == 1 || c == 2) ? 0 : (c == 3 || c == 4 || c == 5) ? 2 : 1;
+                                int i9 = (b2 == 0 || b2 == 1 || b2 == 2) ? 0 : (b2 == 3 || b2 == 4 || b2 == 5) ? 2 : 1;
                                 switch (str.hashCode()) {
                                     case -685620710:
-                                        c2 = str.equals("{\\an1}") ? (char) 0 : (char) 65535;
+                                        b3 = str.equals("{\\an1}") ? (byte) 0 : (byte) -1;
                                         break;
                                     case -685620679:
                                         if (str.equals("{\\an2}")) {
-                                            c2 = 1;
+                                            b3 = 1;
                                             break;
                                         }
                                         break;
                                     case -685620648:
                                         if (str.equals("{\\an3}")) {
-                                            c2 = 2;
+                                            b3 = 2;
                                             break;
                                         }
                                         break;
                                     case -685620617:
                                         if (str.equals("{\\an4}")) {
-                                            c2 = 6;
+                                            b3 = 6;
                                             break;
                                         }
                                         break;
                                     case -685620586:
                                         if (str.equals("{\\an5}")) {
-                                            c2 = 7;
+                                            b3 = 7;
                                             break;
                                         }
                                         break;
                                     case -685620555:
                                         if (str.equals("{\\an6}")) {
-                                            c2 = '\b';
+                                            b3 = 8;
                                             break;
                                         }
                                         break;
                                     case -685620524:
                                         if (str.equals("{\\an7}")) {
-                                            c2 = 3;
+                                            b3 = 3;
                                             break;
                                         }
                                         break;
                                     case -685620493:
                                         if (str.equals("{\\an8}")) {
-                                            c2 = 4;
+                                            b3 = 4;
                                             break;
                                         }
                                         break;
                                     case -685620462:
                                         if (str.equals("{\\an9}")) {
-                                            c2 = 5;
+                                            b3 = 5;
                                             break;
                                         }
                                         break;
                                 }
-                                int i10 = (c2 == 0 || c2 == 1 || c2 == 2) ? 2 : (c2 == 3 || c2 == 4 || c2 == 5) ? 0 : 1;
+                                int i10 = (b3 == 0 || b3 == 1 || b3 == 2) ? 2 : (b3 == 3 || b3 == 4 || b3 == 5) ? 0 : 1;
                                 cue = new Cue(spannedFromHtml, null, null, null, m2677k(i10), 0, i10, m2677k(i9), i9, Integer.MIN_VALUE, -3.4028235E38f, -3.4028235E38f, -3.4028235E38f, false, ViewCompat.MEASURED_STATE_MASK, Integer.MIN_VALUE, 0.0f, null);
                             }
                             arrayList.add(cue);

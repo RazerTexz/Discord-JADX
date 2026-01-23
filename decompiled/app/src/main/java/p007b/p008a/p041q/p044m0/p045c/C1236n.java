@@ -4,9 +4,9 @@ import java.util.Comparator;
 import p507d0.p582u.C12169a;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: Comparisons.kt */
-/* renamed from: b.a.q.m0.c.n */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.a.q.m0.c.n */
+/* JADX INFO: compiled from: Comparisons.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class C1236n<T> implements Comparator<T> {
     /* JADX WARN: Multi-variable type inference failed */
     @Override // java.util.Comparator

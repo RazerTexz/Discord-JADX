@@ -16,7 +16,7 @@ import androidx.appcompat.widget.AppCompatImageButton;
 import androidx.constraintlayout.utils.widget.ImageFilterView;
 import androidx.constraintlayout.widget.C0201R;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class ImageFilterButton extends AppCompatImageButton {
     private float mCrossfade;
     private ImageFilterView.ImageMatrix mImageMatrix;
@@ -29,7 +29,7 @@ public class ImageFilterButton extends AppCompatImageButton {
     private float mRoundPercent;
     public ViewOutlineProvider mViewOutlineProvider;
 
-    /* renamed from: androidx.constraintlayout.utils.widget.ImageFilterButton$1 */
+    /* JADX INFO: renamed from: androidx.constraintlayout.utils.widget.ImageFilterButton$1 */
     public class C01951 extends ViewOutlineProvider {
         public C01951() {
         }
@@ -40,7 +40,7 @@ public class ImageFilterButton extends AppCompatImageButton {
         }
     }
 
-    /* renamed from: androidx.constraintlayout.utils.widget.ImageFilterButton$2 */
+    /* JADX INFO: renamed from: androidx.constraintlayout.utils.widget.ImageFilterButton$2 */
     public class C01962 extends ViewOutlineProvider {
         public C01962() {
         }

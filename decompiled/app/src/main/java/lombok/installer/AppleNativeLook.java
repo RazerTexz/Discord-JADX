@@ -4,12 +4,12 @@ import java.awt.Image;
 import java.awt.image.BufferedImage;
 import javax.imageio.ImageIO;
 
-/* loaded from: discord-126021.apk:lombok/installer/AppleNativeLook.SCL.lombok */
+/* JADX INFO: loaded from: discord-126021.apk:lombok/installer/AppleNativeLook.SCL.lombok */
 class AppleNativeLook {
     AppleNativeLook() {
     }
 
-    /* renamed from: go */
+    /* JADX INFO: renamed from: go */
     public static void m10938go() throws Exception {
         Class<?> appClass = Class.forName("com.apple.eawt.Application");
         Object app = appClass.getMethod("getApplication", new Class[0]).invoke(null, new Object[0]);

@@ -9,12 +9,12 @@ import androidx.recyclerview.widget.RecyclerView;
 import androidx.recyclerview.widget.RecyclerView.ViewHolder;
 import java.util.List;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public abstract class ListAdapter<T, VH extends RecyclerView.ViewHolder> extends RecyclerView.Adapter<VH> {
     public final AsyncListDiffer<T> mDiffer;
     private final AsyncListDiffer.ListListener<T> mListener;
 
-    /* renamed from: androidx.recyclerview.widget.ListAdapter$1 */
+    /* JADX INFO: renamed from: androidx.recyclerview.widget.ListAdapter$1 */
     public class C05591 implements AsyncListDiffer.ListListener<T> {
         public C05591() {
         }

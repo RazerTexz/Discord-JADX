@@ -4,15 +4,15 @@ import com.discord.models.domain.ModelAuditLogEntry;
 import kotlin.jvm.internal.DefaultConstructorMarker;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: StockGuildTemplate.kt */
-/* renamed from: com.discord.widgets.guilds.create.ChannelTemplate, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.guilds.create.ChannelTemplate, reason: use source file name */
+/* JADX INFO: compiled from: StockGuildTemplate.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public abstract class StockGuildTemplate2 {
     private final Long id;
     private final String name;
 
-    /* compiled from: StockGuildTemplate.kt */
-    /* renamed from: com.discord.widgets.guilds.create.ChannelTemplate$NormalChannel */
+    /* JADX INFO: renamed from: com.discord.widgets.guilds.create.ChannelTemplate$NormalChannel */
+    /* JADX INFO: compiled from: StockGuildTemplate.kt */
     public static final class NormalChannel extends StockGuildTemplate2 {
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
         public NormalChannel(String str) {
@@ -21,8 +21,8 @@ public abstract class StockGuildTemplate2 {
         }
     }
 
-    /* compiled from: StockGuildTemplate.kt */
-    /* renamed from: com.discord.widgets.guilds.create.ChannelTemplate$SystemChannel */
+    /* JADX INFO: renamed from: com.discord.widgets.guilds.create.ChannelTemplate$SystemChannel */
+    /* JADX INFO: compiled from: StockGuildTemplate.kt */
     public static final class SystemChannel extends StockGuildTemplate2 {
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
         public SystemChannel(String str) {

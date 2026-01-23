@@ -13,13 +13,13 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.core.view.ViewCompat;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class ChangeClipBounds extends Transition {
     private static final String PROPNAME_BOUNDS = "android:clipBounds:bounds";
     private static final String PROPNAME_CLIP = "android:clipBounds:clip";
     private static final String[] sTransitionProperties = {PROPNAME_CLIP};
 
-    /* renamed from: androidx.transition.ChangeClipBounds$1 */
+    /* JADX INFO: renamed from: androidx.transition.ChangeClipBounds$1 */
     public class C06441 extends AnimatorListenerAdapter {
         public final /* synthetic */ View val$endView;
 

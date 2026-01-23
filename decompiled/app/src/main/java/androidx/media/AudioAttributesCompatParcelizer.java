@@ -3,8 +3,8 @@ package androidx.media;
 import androidx.annotation.RestrictTo;
 import androidx.versionedparcelable.VersionedParcel;
 
+/* JADX INFO: loaded from: classes.dex */
 @RestrictTo({RestrictTo.Scope.LIBRARY})
-/* loaded from: classes.dex */
 public class AudioAttributesCompatParcelizer {
     public static AudioAttributesCompat read(VersionedParcel versionedParcel) {
         AudioAttributesCompat audioAttributesCompat = new AudioAttributesCompat();
@@ -12,7 +12,7 @@ public class AudioAttributesCompatParcelizer {
         return audioAttributesCompat;
     }
 
-    public static void write(AudioAttributesCompat audioAttributesCompat, VersionedParcel versionedParcel) throws IllegalArgumentException {
+    public static void write(AudioAttributesCompat audioAttributesCompat, VersionedParcel versionedParcel) {
         versionedParcel.setSerializationFlags(false, false);
         versionedParcel.writeVersionedParcelable(audioAttributesCompat.mImpl, 1);
     }

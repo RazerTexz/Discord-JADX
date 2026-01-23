@@ -12,43 +12,43 @@ import com.discord.views.LoadingButton;
 import com.discord.widgets.servers.creator_monetization_eligibility.EligibilityChecklistView;
 import com.google.android.material.button.MaterialButton;
 
-/* renamed from: com.discord.databinding.WidgetServerSettingsCreatorMonetizationOnboardingCreateRequestBinding */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: com.discord.databinding.WidgetServerSettingsCreatorMonetizationOnboardingCreateRequestBinding */
+/* JADX INFO: loaded from: classes.dex */
 public final class C5474x305cfbd8 implements ViewBinding {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     @NonNull
     public final ScrollView f17602a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     @NonNull
     public final MaterialButton f17603b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     @NonNull
     public final LoadingButton f17604c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     @NonNull
     public final EligibilityChecklistView f17605d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     @NonNull
     public final ImageView f17606e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     @NonNull
     public final TextView f17607f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     @NonNull
     public final ViewStub f17608g;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     @NonNull
     public final TextView f17609h;
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     @NonNull
     public final LinkifiedTextView f17610i;
 

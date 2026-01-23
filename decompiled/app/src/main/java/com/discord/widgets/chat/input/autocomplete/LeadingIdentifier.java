@@ -5,8 +5,8 @@ import com.discord.widgets.chat.AutocompleteUtils2;
 import com.discord.widgets.chat.input.MentionUtils;
 import kotlin.jvm.internal.DefaultConstructorMarker;
 
-/* compiled from: Autocompletable.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: Autocompletable.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public enum LeadingIdentifier {
     APP_COMMAND(Character.valueOf(MentionUtils.SLASH_CHAR)),
     EMOJI_AND_STICKERS(Character.valueOf(MentionUtils.EMOJIS_AND_STICKERS_CHAR)),
@@ -15,11 +15,11 @@ public enum LeadingIdentifier {
     NONE(null);
 
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private final Character identifier;
 
-    /* compiled from: Autocompletable.kt */
+    /* JADX INFO: compiled from: Autocompletable.kt */
     public static final class Companion {
         private Companion() {
         }

@@ -3,8 +3,8 @@ package com.discord.stores;
 import kotlin.jvm.functions.Function0;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: StoreStream.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: StoreStream.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class StoreStream$Companion$collector$2 extends Lambda implements Function0<StoreStream> {
     public static final StoreStream$Companion$collector$2 INSTANCE = new StoreStream$Companion$collector$2();
 

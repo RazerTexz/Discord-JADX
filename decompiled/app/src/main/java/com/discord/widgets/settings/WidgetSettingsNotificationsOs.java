@@ -28,19 +28,19 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 import p658rx.functions.Action1;
 
-/* compiled from: WidgetSettingsNotificationsOs.kt */
+/* JADX INFO: compiled from: WidgetSettingsNotificationsOs.kt */
+/* JADX INFO: loaded from: classes2.dex */
 @RequiresApi(26)
-/* loaded from: classes2.dex */
 public final class WidgetSettingsNotificationsOs extends AppBottomSheet {
     public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetSettingsNotificationsOs.class, "binding", "getBinding()Lcom/discord/databinding/WidgetSettingsNotificationOsBinding;", 0)};
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
 
-    /* renamed from: binding$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
 
-    /* compiled from: WidgetSettingsNotificationsOs.kt */
+    /* JADX INFO: compiled from: WidgetSettingsNotificationsOs.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -55,8 +55,8 @@ public final class WidgetSettingsNotificationsOs extends AppBottomSheet {
         }
     }
 
-    /* compiled from: WidgetSettingsNotificationsOs.kt */
-    /* renamed from: com.discord.widgets.settings.WidgetSettingsNotificationsOs$onResume$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.WidgetSettingsNotificationsOs$onResume$1 */
+    /* JADX INFO: compiled from: WidgetSettingsNotificationsOs.kt */
     public static final class C96541 extends Lambda implements Function1<NotificationClient.SettingsV2, Unit> {
         public C96541() {
             super(1);
@@ -68,7 +68,7 @@ public final class WidgetSettingsNotificationsOs extends AppBottomSheet {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(NotificationClient.SettingsV2 settingsV2) {
             Intrinsics3.checkNotNullParameter(settingsV2, "settings");
             CheckedSetting checkedSetting = WidgetSettingsNotificationsOs.access$getBinding$p(WidgetSettingsNotificationsOs.this).f18021d;
@@ -80,8 +80,8 @@ public final class WidgetSettingsNotificationsOs extends AppBottomSheet {
         }
     }
 
-    /* compiled from: WidgetSettingsNotificationsOs.kt */
-    /* renamed from: com.discord.widgets.settings.WidgetSettingsNotificationsOs$onViewCreated$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.WidgetSettingsNotificationsOs$onViewCreated$1 */
+    /* JADX INFO: compiled from: WidgetSettingsNotificationsOs.kt */
     public static final class C96551<T> implements Action1<Boolean> {
         public static final C96551 INSTANCE = new C96551();
 
@@ -90,7 +90,7 @@ public final class WidgetSettingsNotificationsOs extends AppBottomSheet {
             call2(bool);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final void call2(Boolean bool) {
             StoreNotifications notifications = StoreStream.INSTANCE.getNotifications();
             Intrinsics3.checkNotNullExpressionValue(bool, "it");
@@ -98,8 +98,8 @@ public final class WidgetSettingsNotificationsOs extends AppBottomSheet {
         }
     }
 
-    /* compiled from: WidgetSettingsNotificationsOs.kt */
-    /* renamed from: com.discord.widgets.settings.WidgetSettingsNotificationsOs$onViewCreated$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.WidgetSettingsNotificationsOs$onViewCreated$2 */
+    /* JADX INFO: compiled from: WidgetSettingsNotificationsOs.kt */
     public static final class C96562<T> implements Action1<Boolean> {
         public static final C96562 INSTANCE = new C96562();
 
@@ -108,7 +108,7 @@ public final class WidgetSettingsNotificationsOs extends AppBottomSheet {
             call2(bool);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final void call2(Boolean bool) {
             StoreNotifications notifications = StoreStream.INSTANCE.getNotifications();
             Intrinsics3.checkNotNullExpressionValue(bool, "it");
@@ -116,8 +116,8 @@ public final class WidgetSettingsNotificationsOs extends AppBottomSheet {
         }
     }
 
-    /* compiled from: WidgetSettingsNotificationsOs.kt */
-    /* renamed from: com.discord.widgets.settings.WidgetSettingsNotificationsOs$onViewCreated$3 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.WidgetSettingsNotificationsOs$onViewCreated$3 */
+    /* JADX INFO: compiled from: WidgetSettingsNotificationsOs.kt */
     public static final class ViewOnClickListenerC96573 implements View.OnClickListener {
         public ViewOnClickListenerC96573() {
         }

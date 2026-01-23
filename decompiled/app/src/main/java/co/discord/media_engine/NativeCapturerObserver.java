@@ -7,7 +7,7 @@ import org.webrtc.SurfaceTextureHelper;
 import org.webrtc.VideoCapturer;
 import org.webrtc.VideoFrame;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public final class NativeCapturerObserver implements CapturerObserver {
     private long nativeHandle_;
     private boolean startCaptureOnReconfigure_;

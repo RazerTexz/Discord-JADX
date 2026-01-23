@@ -11,83 +11,83 @@ import p007b.p225i.p226a.p242c.Format2;
 import p007b.p225i.p226a.p242c.p243a3.SampleStream;
 import p007b.p225i.p226a.p242c.p259f3.MediaClock;
 
-/* compiled from: BaseRenderer.java */
-/* renamed from: b.i.a.c.v0, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.v0, reason: use source file name */
+/* JADX INFO: compiled from: BaseRenderer.java */
+/* JADX INFO: loaded from: classes3.dex */
 public abstract class BaseRenderer implements Renderer2, RendererCapabilities {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final int f7889j;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     @Nullable
     public RendererConfiguration f7891l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public int f7892m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public int f7893n;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     @Nullable
     public SampleStream f7894o;
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     @Nullable
     public Format2[] f7895p;
 
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     public long f7896q;
 
-    /* renamed from: s */
+    /* JADX INFO: renamed from: s */
     public boolean f7898s;
 
-    /* renamed from: t */
+    /* JADX INFO: renamed from: t */
     public boolean f7899t;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final FormatHolder f7890k = new FormatHolder();
 
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     public long f7897r = Long.MIN_VALUE;
 
     public BaseRenderer(int i) {
         this.f7889j = i;
     }
 
-    /* renamed from: A */
+    /* JADX INFO: renamed from: A */
     public final FormatHolder m3547A() {
         this.f7890k.m3279a();
         return this.f7890k;
     }
 
-    /* renamed from: B */
+    /* JADX INFO: renamed from: B */
     public abstract void mo2621B();
 
-    /* renamed from: C */
+    /* JADX INFO: renamed from: C */
     public void mo3137C(boolean z2, boolean z3) throws ExoPlaybackException {
     }
 
-    /* renamed from: D */
+    /* JADX INFO: renamed from: D */
     public abstract void mo2622D(long j, boolean z2) throws ExoPlaybackException;
 
-    /* renamed from: E */
+    /* JADX INFO: renamed from: E */
     public void mo3140E() {
     }
 
-    /* renamed from: F */
+    /* JADX INFO: renamed from: F */
     public void mo3141F() throws ExoPlaybackException {
     }
 
-    /* renamed from: G */
+    /* JADX INFO: renamed from: G */
     public void mo3142G() {
     }
 
-    /* renamed from: H */
+    /* JADX INFO: renamed from: H */
     public abstract void mo2623H(Format2[] format2Arr, long j, long j2) throws ExoPlaybackException;
 
-    /* renamed from: I */
+    /* JADX INFO: renamed from: I */
     public final int m3548I(FormatHolder formatHolder, DecoderInputBuffer decoderInputBuffer, int i) {
         SampleStream sampleStream = this.f7894o;
         Objects.requireNonNull(sampleStream);
@@ -113,13 +113,13 @@ public abstract class BaseRenderer implements Renderer2, RendererCapabilities {
     }
 
     @Override // p007b.p225i.p226a.p242c.Renderer2
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final void mo2932f(int i) {
         this.f7892m = i;
     }
 
     @Override // p007b.p225i.p226a.p242c.Renderer2
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public final void mo2933g() {
         AnimatableValueParser.m426D(this.f7893n == 1);
         this.f7890k.m3279a();
@@ -137,19 +137,19 @@ public abstract class BaseRenderer implements Renderer2, RendererCapabilities {
 
     @Override // p007b.p225i.p226a.p242c.Renderer2
     @Nullable
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public final SampleStream mo2934h() {
         return this.f7894o;
     }
 
     @Override // p007b.p225i.p226a.p242c.Renderer2
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final boolean mo2935j() {
         return this.f7897r == Long.MIN_VALUE;
     }
 
     @Override // p007b.p225i.p226a.p242c.Renderer2
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final void mo2936k(Format2[] format2Arr, SampleStream sampleStream, long j, long j2) throws ExoPlaybackException {
         AnimatableValueParser.m426D(!this.f7898s);
         this.f7894o = sampleStream;
@@ -162,25 +162,25 @@ public abstract class BaseRenderer implements Renderer2, RendererCapabilities {
     }
 
     @Override // p007b.p225i.p226a.p242c.Renderer2
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final void mo2937l() {
         this.f7898s = true;
     }
 
     @Override // p007b.p225i.p226a.p242c.Renderer2
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public final RendererCapabilities mo2938m() {
         return this;
     }
 
     @Override // p007b.p225i.p226a.p242c.Renderer2
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public /* synthetic */ void mo2939n(float f, float f2) throws ExoPlaybackException {
         Renderer.m2772a(this, f, f2);
     }
 
     @Override // p007b.p225i.p226a.p242c.Renderer2
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public final void mo2940o(RendererConfiguration rendererConfiguration, Format2[] format2Arr, SampleStream sampleStream, long j, boolean z2, boolean z3, long j2, long j3) throws ExoPlaybackException {
         AnimatableValueParser.m426D(this.f7893n == 0);
         this.f7891l = rendererConfiguration;
@@ -191,13 +191,13 @@ public abstract class BaseRenderer implements Renderer2, RendererCapabilities {
     }
 
     @Override // p007b.p225i.p226a.p242c.RendererCapabilities
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public int mo3119p() throws ExoPlaybackException {
         return 0;
     }
 
     @Override // p007b.p225i.p226a.p242c.PlayerMessage.b
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     public void mo2603r(int i, @Nullable Object obj) throws ExoPlaybackException {
     }
 
@@ -209,7 +209,7 @@ public abstract class BaseRenderer implements Renderer2, RendererCapabilities {
     }
 
     @Override // p007b.p225i.p226a.p242c.Renderer2
-    /* renamed from: s */
+    /* JADX INFO: renamed from: s */
     public final void mo2941s() throws IOException {
         SampleStream sampleStream = this.f7894o;
         Objects.requireNonNull(sampleStream);
@@ -231,13 +231,13 @@ public abstract class BaseRenderer implements Renderer2, RendererCapabilities {
     }
 
     @Override // p007b.p225i.p226a.p242c.Renderer2
-    /* renamed from: t */
+    /* JADX INFO: renamed from: t */
     public final long mo2942t() {
         return this.f7897r;
     }
 
     @Override // p007b.p225i.p226a.p242c.Renderer2
-    /* renamed from: u */
+    /* JADX INFO: renamed from: u */
     public final void mo2943u(long j) throws ExoPlaybackException {
         this.f7898s = false;
         this.f7897r = j;
@@ -245,30 +245,30 @@ public abstract class BaseRenderer implements Renderer2, RendererCapabilities {
     }
 
     @Override // p007b.p225i.p226a.p242c.Renderer2
-    /* renamed from: v */
+    /* JADX INFO: renamed from: v */
     public final boolean mo2944v() {
         return this.f7898s;
     }
 
     @Override // p007b.p225i.p226a.p242c.Renderer2
     @Nullable
-    /* renamed from: w */
+    /* JADX INFO: renamed from: w */
     public MediaClock mo2945w() {
         return null;
     }
 
     @Override // p007b.p225i.p226a.p242c.Renderer2
-    /* renamed from: x */
+    /* JADX INFO: renamed from: x */
     public final int mo2946x() {
         return this.f7889j;
     }
 
-    /* renamed from: y */
+    /* JADX INFO: renamed from: y */
     public final ExoPlaybackException m3549y(Throwable th, @Nullable Format2 format2, int i) {
         return m3550z(th, format2, false, i);
     }
 
-    /* renamed from: z */
+    /* JADX INFO: renamed from: z */
     public final ExoPlaybackException m3550z(Throwable th, @Nullable Format2 format2, boolean z2, int i) {
         int iMo2630a;
         if (format2 == null || this.f7899t) {
@@ -278,6 +278,7 @@ public abstract class BaseRenderer implements Renderer2, RendererCapabilities {
             try {
                 iMo2630a = mo2630a(format2) & 7;
             } catch (ExoPlaybackException unused) {
+                iMo2630a = 4;
             } finally {
                 this.f7899t = false;
             }

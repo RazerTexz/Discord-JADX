@@ -13,12 +13,12 @@ import p007b.p225i.p226a.p228b.p231j.p236t.p237h.SchedulerConfig;
 import p007b.p225i.p226a.p228b.p231j.p240v.Clock3;
 import p496c0.p497a.Provider3;
 
-/* compiled from: SchedulingConfigModule_ConfigFactory.java */
-/* renamed from: b.i.a.b.j.t.f, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.b.j.t.f, reason: use source file name */
+/* JADX INFO: compiled from: SchedulingConfigModule_ConfigFactory.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class SchedulingConfigModule_ConfigFactory implements Provider3 {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final Provider3<Clock3> f5347a;
 
     public SchedulingConfigModule_ConfigFactory(Provider3<Clock3> provider3) {

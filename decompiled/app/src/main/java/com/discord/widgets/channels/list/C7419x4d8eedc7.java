@@ -16,9 +16,9 @@ import p507d0.p580t.Collections2;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetChannelListModel.kt */
-/* renamed from: com.discord.widgets.channels.list.WidgetChannelListModel$Companion$guildListBuilder$$inlined$forEach$lambda$7 */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.channels.list.WidgetChannelListModel$Companion$guildListBuilder$$inlined$forEach$lambda$7 */
+/* JADX INFO: compiled from: WidgetChannelListModel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class C7419x4d8eedc7 extends Lambda implements Function1<Channel, Collection<? extends ChannelListItemThread>> {
     public final /* synthetic */ WidgetChannelListModel$Companion$guildListBuilder$4 $areAllChildThreadsRead$4$inlined;
     public final /* synthetic */ WidgetChannelListModel$Companion$guildListBuilder$5 $areAnyChildThreadsSelected$5$inlined;
@@ -85,7 +85,7 @@ public final class C7419x4d8eedc7 extends Lambda implements Function1<Channel, C
         return invoke2(channel);
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final Collection<ChannelListItemThread> invoke2(Channel channel) {
         List listEmptyList;
         Intrinsics3.checkNotNullParameter(channel, "parentChannel");

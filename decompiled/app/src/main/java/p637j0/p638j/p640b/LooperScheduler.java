@@ -14,25 +14,25 @@ import p658rx.Subscription;
 import p658rx.exceptions.OnErrorNotImplementedException;
 import p658rx.functions.Action0;
 
-/* compiled from: LooperScheduler.java */
-/* renamed from: j0.j.b.b, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: j0.j.b.b, reason: use source file name */
+/* JADX INFO: compiled from: LooperScheduler.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class LooperScheduler extends Scheduler {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final Handler f26703a;
 
-    /* compiled from: LooperScheduler.java */
-    /* renamed from: j0.j.b.b$a */
+    /* JADX INFO: renamed from: j0.j.b.b$a */
+    /* JADX INFO: compiled from: LooperScheduler.java */
     public static class a extends Scheduler.Worker {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public final Handler f26704j;
 
-        /* renamed from: k */
+        /* JADX INFO: renamed from: k */
         public final RxAndroidSchedulersHook f26705k = RxAndroidPlugins.f26698a.m10737a();
 
-        /* renamed from: l */
+        /* JADX INFO: renamed from: l */
         public volatile boolean f26706l;
 
         public a(Handler handler) {
@@ -40,13 +40,13 @@ public class LooperScheduler extends Scheduler {
         }
 
         @Override // rx.Scheduler.Worker
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public Subscription mo10740a(Action0 action0) {
             return mo10741b(action0, 0L, TimeUnit.MILLISECONDS);
         }
 
         @Override // rx.Scheduler.Worker
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public Subscription mo10741b(Action0 action0, long j, TimeUnit timeUnit) {
             if (this.f26706l) {
                 return Subscriptions.f27422a;
@@ -76,17 +76,17 @@ public class LooperScheduler extends Scheduler {
         }
     }
 
-    /* compiled from: LooperScheduler.java */
-    /* renamed from: j0.j.b.b$b */
+    /* JADX INFO: renamed from: j0.j.b.b$b */
+    /* JADX INFO: compiled from: LooperScheduler.java */
     public static final class b implements Runnable, Subscription {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public final Action0 f26707j;
 
-        /* renamed from: k */
+        /* JADX INFO: renamed from: k */
         public final Handler f26708k;
 
-        /* renamed from: l */
+        /* JADX INFO: renamed from: l */
         public volatile boolean f26709l;
 
         public b(Action0 action0, Handler handler) {
@@ -123,7 +123,7 @@ public class LooperScheduler extends Scheduler {
     }
 
     @Override // p658rx.Scheduler
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public Scheduler.Worker mo10739a() {
         return new a(this.f26703a);
     }

@@ -36,19 +36,19 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 import p658rx.Observable;
 
-/* compiled from: WidgetUserEmailVerify.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: WidgetUserEmailVerify.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class WidgetUserEmailVerify extends WidgetUserAccountVerifyBase {
     public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetUserEmailVerify.class, "binding", "getBinding()Lcom/discord/databinding/WidgetUserEmailVerifyBinding;", 0)};
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
 
-    /* renamed from: binding$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
     private final ActivityResultLauncher<Intent> emailUpdateLauncher;
 
-    /* compiled from: WidgetUserEmailVerify.kt */
+    /* JADX INFO: compiled from: WidgetUserEmailVerify.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -64,16 +64,16 @@ public final class WidgetUserEmailVerify extends WidgetUserAccountVerifyBase {
         }
     }
 
-    /* compiled from: WidgetUserEmailVerify.kt */
+    /* JADX INFO: compiled from: WidgetUserEmailVerify.kt */
     public static final /* data */ class Model {
 
-        /* renamed from: Companion, reason: from kotlin metadata */
+        /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
         public static final Companion INSTANCE = new Companion(null);
         private final String email;
         private final MeUser me;
         private final boolean verified;
 
-        /* compiled from: WidgetUserEmailVerify.kt */
+        /* JADX INFO: compiled from: WidgetUserEmailVerify.kt */
         public static final class Companion {
             private Companion() {
             }
@@ -103,7 +103,7 @@ public final class WidgetUserEmailVerify extends WidgetUserAccountVerifyBase {
             return model.copy(meUser);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final MeUser getMe() {
             return this.me;
         }
@@ -148,8 +148,8 @@ public final class WidgetUserEmailVerify extends WidgetUserAccountVerifyBase {
         }
     }
 
-    /* compiled from: WidgetUserEmailVerify.kt */
-    /* renamed from: com.discord.widgets.user.email.WidgetUserEmailVerify$configureUI$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.user.email.WidgetUserEmailVerify$configureUI$1 */
+    /* JADX INFO: compiled from: WidgetUserEmailVerify.kt */
     public static final class ViewOnClickListenerC102561 implements View.OnClickListener {
         public ViewOnClickListenerC102561() {
         }
@@ -160,13 +160,13 @@ public final class WidgetUserEmailVerify extends WidgetUserAccountVerifyBase {
         }
     }
 
-    /* compiled from: WidgetUserEmailVerify.kt */
-    /* renamed from: com.discord.widgets.user.email.WidgetUserEmailVerify$configureUI$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.user.email.WidgetUserEmailVerify$configureUI$2 */
+    /* JADX INFO: compiled from: WidgetUserEmailVerify.kt */
     public static final class ViewOnClickListenerC102572 implements View.OnClickListener {
         public final /* synthetic */ Model $model;
 
-        /* compiled from: WidgetUserEmailVerify.kt */
-        /* renamed from: com.discord.widgets.user.email.WidgetUserEmailVerify$configureUI$2$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.widgets.user.email.WidgetUserEmailVerify$configureUI$2$1, reason: invalid class name */
+        /* JADX INFO: compiled from: WidgetUserEmailVerify.kt */
         public static final class AnonymousClass1 extends Lambda implements Function1<Void, TrackNetworkMetadata2> {
             public static final AnonymousClass1 INSTANCE = new AnonymousClass1();
 
@@ -179,14 +179,14 @@ public final class WidgetUserEmailVerify extends WidgetUserAccountVerifyBase {
                 return invoke2(r1);
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final TrackNetworkMetadata2 invoke2(Void r1) {
                 return new TrackNetworkActionUserVerifyResend();
             }
         }
 
-        /* compiled from: WidgetUserEmailVerify.kt */
-        /* renamed from: com.discord.widgets.user.email.WidgetUserEmailVerify$configureUI$2$2, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.widgets.user.email.WidgetUserEmailVerify$configureUI$2$2, reason: invalid class name */
+        /* JADX INFO: compiled from: WidgetUserEmailVerify.kt */
         public static final class AnonymousClass2 extends Lambda implements Function1<Void, Unit> {
             public AnonymousClass2() {
                 super(1);
@@ -198,7 +198,7 @@ public final class WidgetUserEmailVerify extends WidgetUserAccountVerifyBase {
                 return Unit.f27425a;
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2(Void r6) {
                 ViewOnClickListenerC102572 viewOnClickListenerC102572 = ViewOnClickListenerC102572.this;
                 WidgetUserEmailVerify widgetUserEmailVerify = WidgetUserEmailVerify.this;
@@ -216,8 +216,8 @@ public final class WidgetUserEmailVerify extends WidgetUserAccountVerifyBase {
         }
     }
 
-    /* compiled from: WidgetUserEmailVerify.kt */
-    /* renamed from: com.discord.widgets.user.email.WidgetUserEmailVerify$onViewBoundOrOnResume$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.user.email.WidgetUserEmailVerify$onViewBoundOrOnResume$1 */
+    /* JADX INFO: compiled from: WidgetUserEmailVerify.kt */
     public static final /* synthetic */ class C102581 extends FunctionReferenceImpl implements Function1<Model, Unit> {
         public C102581(WidgetUserEmailVerify widgetUserEmailVerify) {
             super(1, widgetUserEmailVerify, WidgetUserEmailVerify.class, "configureUI", "configureUI(Lcom/discord/widgets/user/email/WidgetUserEmailVerify$Model;)V", 0);
@@ -229,7 +229,7 @@ public final class WidgetUserEmailVerify extends WidgetUserAccountVerifyBase {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Model model) {
             Intrinsics3.checkNotNullParameter(model, "p1");
             WidgetUserEmailVerify.access$configureUI((WidgetUserEmailVerify) this.receiver, model);

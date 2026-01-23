@@ -15,35 +15,35 @@ import p507d0.p579g0.StringsJVM;
 import p507d0.p580t._Arrays;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: MediaType.kt */
-/* loaded from: classes3.dex */
+/* JADX INFO: compiled from: MediaType.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class MediaType {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final Pattern f27514a = Pattern.compile("([a-zA-Z0-9-!#$%&'*+.^_`{|}~]+)/([a-zA-Z0-9-!#$%&'*+.^_`{|}~]+)");
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static final Pattern f27515b = Pattern.compile(";\\s*(?:([a-zA-Z0-9-!#$%&'*+.^_`{|}~]+)=(?:([a-zA-Z0-9-!#$%&'*+.^_`{|}~]+)|\"([^\"]*)\"))?");
 
-    /* renamed from: c, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: c, reason: from kotlin metadata */
     public static final Companion INSTANCE = null;
 
-    /* renamed from: d, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: d, reason: from kotlin metadata */
     public final String mediaType;
 
-    /* renamed from: e, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: e, reason: from kotlin metadata */
     public final String type;
 
-    /* renamed from: f, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: f, reason: from kotlin metadata */
     public final String subtype;
 
-    /* renamed from: g, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: g, reason: from kotlin metadata */
     public final String[] parameterNamesAndValues;
 
-    /* compiled from: MediaType.kt */
-    /* renamed from: okhttp3.MediaType$a, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: okhttp3.MediaType$a, reason: from kotlin metadata */
+    /* JADX INFO: compiled from: MediaType.kt */
     public static final class Companion {
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public static final MediaType m10967a(String str) {
             Intrinsics3.checkParameterIsNotNull(str, "$this$toMediaType");
             Matcher matcher = MediaType.f27514a.matcher(str);
@@ -105,7 +105,7 @@ public final class MediaType {
             throw new TypeCastException("null cannot be cast to non-null type kotlin.Array<T>");
         }
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public static final MediaType m10968b(String str) {
             Intrinsics3.checkParameterIsNotNull(str, "$this$toMediaTypeOrNull");
             try {
@@ -123,12 +123,12 @@ public final class MediaType {
         this.parameterNamesAndValues = strArr;
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static final MediaType m10965b(String str) {
         return Companion.m10967a(str);
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final Charset m10966a(Charset defaultValue) {
         String str;
         Intrinsics3.checkParameterIsNotNull("charset", ModelAuditLogEntry.CHANGE_KEY_NAME);
@@ -166,7 +166,7 @@ public final class MediaType {
         return this.mediaType.hashCode();
     }
 
-    /* renamed from: toString, reason: from getter */
+    /* JADX INFO: renamed from: toString, reason: from getter */
     public String getMediaType() {
         return this.mediaType;
     }

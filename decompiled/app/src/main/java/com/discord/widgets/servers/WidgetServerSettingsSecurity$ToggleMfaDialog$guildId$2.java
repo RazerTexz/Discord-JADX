@@ -4,8 +4,8 @@ import com.discord.widgets.servers.WidgetServerSettingsSecurity;
 import kotlin.jvm.functions.Function0;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetServerSettingsSecurity.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetServerSettingsSecurity.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetServerSettingsSecurity$ToggleMfaDialog$guildId$2 extends Lambda implements Function0<Long> {
     public final /* synthetic */ WidgetServerSettingsSecurity.ToggleMfaDialog this$0;
 
@@ -20,7 +20,7 @@ public final class WidgetServerSettingsSecurity$ToggleMfaDialog$guildId$2 extend
         return Long.valueOf(invoke2());
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final long invoke2() {
         return WidgetServerSettingsSecurity.ToggleMfaDialog.access$getArgumentsOrDefault$p(this.this$0).getLong("ARG_GUILD_ID", -1L);
     }

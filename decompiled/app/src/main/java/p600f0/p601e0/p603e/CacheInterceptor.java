@@ -22,21 +22,21 @@ import p600f0.p601e0.p605g.Exchange;
 import p600f0.p601e0.p605g.RealCall;
 import p600f0.p601e0.p606h.RealInterceptorChain;
 
-/* compiled from: CacheInterceptor.kt */
-/* renamed from: f0.e0.e.a, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: f0.e0.e.a, reason: use source file name */
+/* JADX INFO: compiled from: CacheInterceptor.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class CacheInterceptor implements Interceptor {
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static final a f25406b = new a(null);
 
-    /* compiled from: CacheInterceptor.kt */
-    /* renamed from: f0.e0.e.a$a */
+    /* JADX INFO: renamed from: f0.e0.e.a$a */
+    /* JADX INFO: compiled from: CacheInterceptor.kt */
     public static final class a {
         public a(DefaultConstructorMarker defaultConstructorMarker) {
         }
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public static final Response m10147a(a aVar, Response response) {
             if ((response != null ? response.body : null) == null) {
                 return response;
@@ -69,12 +69,12 @@ public final class CacheInterceptor implements Interceptor {
             throw new IllegalStateException("message == null".toString());
         }
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final boolean m10148b(String str) {
             return StringsJVM.equals("Content-Length", str, true) || StringsJVM.equals("Content-Encoding", str, true) || StringsJVM.equals("Content-Type", str, true);
         }
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public final boolean m10149c(String str) {
             return (StringsJVM.equals("Connection", str, true) || StringsJVM.equals("Keep-Alive", str, true) || StringsJVM.equals("Proxy-Authenticate", str, true) || StringsJVM.equals("Proxy-Authorization", str, true) || StringsJVM.equals("TE", str, true) || StringsJVM.equals("Trailers", str, true) || StringsJVM.equals("Transfer-Encoding", str, true) || StringsJVM.equals("Upgrade", str, true)) ? false : true;
         }

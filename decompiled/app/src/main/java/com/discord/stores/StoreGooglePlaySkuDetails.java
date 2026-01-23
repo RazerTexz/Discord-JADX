@@ -20,18 +20,18 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 import p658rx.Observable;
 
-/* compiled from: StoreGooglePlaySkuDetails.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: StoreGooglePlaySkuDetails.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class StoreGooglePlaySkuDetails extends StoreV2 {
     private final Dispatcher dispatcher;
     private final ObservationDeck observationDeck;
     private State skuState;
     private State skuStateSnapshot;
 
-    /* compiled from: StoreGooglePlaySkuDetails.kt */
+    /* JADX INFO: compiled from: StoreGooglePlaySkuDetails.kt */
     public static abstract class State {
 
-        /* compiled from: StoreGooglePlaySkuDetails.kt */
+        /* JADX INFO: compiled from: StoreGooglePlaySkuDetails.kt */
         public static final class Failure extends State {
             public static final Failure INSTANCE = new Failure();
 
@@ -40,7 +40,7 @@ public final class StoreGooglePlaySkuDetails extends StoreV2 {
             }
         }
 
-        /* compiled from: StoreGooglePlaySkuDetails.kt */
+        /* JADX INFO: compiled from: StoreGooglePlaySkuDetails.kt */
         public static final /* data */ class Loaded extends State {
             private final Map<String, SkuDetails> skuDetails;
 
@@ -93,7 +93,7 @@ public final class StoreGooglePlaySkuDetails extends StoreV2 {
             }
         }
 
-        /* compiled from: StoreGooglePlaySkuDetails.kt */
+        /* JADX INFO: compiled from: StoreGooglePlaySkuDetails.kt */
         public static final class Uninitialized extends State {
             public static final Uninitialized INSTANCE = new Uninitialized();
 
@@ -110,8 +110,8 @@ public final class StoreGooglePlaySkuDetails extends StoreV2 {
         }
     }
 
-    /* compiled from: StoreGooglePlaySkuDetails.kt */
-    /* renamed from: com.discord.stores.StoreGooglePlaySkuDetails$handleError$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreGooglePlaySkuDetails$handleError$1 */
+    /* JADX INFO: compiled from: StoreGooglePlaySkuDetails.kt */
     public static final class C60141 extends Lambda implements Function0<Unit> {
         public C60141() {
             super(0);
@@ -123,14 +123,14 @@ public final class StoreGooglePlaySkuDetails extends StoreV2 {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             StoreGooglePlaySkuDetails.this.handleFetchError();
         }
     }
 
-    /* compiled from: StoreGooglePlaySkuDetails.kt */
-    /* renamed from: com.discord.stores.StoreGooglePlaySkuDetails$observeState$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreGooglePlaySkuDetails$observeState$1 */
+    /* JADX INFO: compiled from: StoreGooglePlaySkuDetails.kt */
     public static final class C60151 extends Lambda implements Function0<State> {
         public C60151() {
             super(0);
@@ -148,8 +148,8 @@ public final class StoreGooglePlaySkuDetails extends StoreV2 {
         }
     }
 
-    /* compiled from: StoreGooglePlaySkuDetails.kt */
-    /* renamed from: com.discord.stores.StoreGooglePlaySkuDetails$updateSkuDetails$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreGooglePlaySkuDetails$updateSkuDetails$1 */
+    /* JADX INFO: compiled from: StoreGooglePlaySkuDetails.kt */
     public static final class C60161 extends Lambda implements Function0<Unit> {
         public final /* synthetic */ List $skuDetails;
 
@@ -165,7 +165,7 @@ public final class StoreGooglePlaySkuDetails extends StoreV2 {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             StoreGooglePlaySkuDetails.this.handleFetchSuccess(this.$skuDetails);
         }
@@ -181,7 +181,7 @@ public final class StoreGooglePlaySkuDetails extends StoreV2 {
         this.skuStateSnapshot = uninitialized;
     }
 
-    /* renamed from: getState, reason: from getter */
+    /* JADX INFO: renamed from: getState, reason: from getter */
     public final State getSkuStateSnapshot() {
         return this.skuStateSnapshot;
     }

@@ -3,12 +3,12 @@ package p007b.p225i.p226a.p242c.p262s2;
 import p007b.p225i.p226a.p242c.p259f3.ListenerSet;
 import p007b.p225i.p226a.p242c.p262s2.AnalyticsListener;
 
-/* compiled from: lambda */
-/* renamed from: b.i.a.c.s2.p */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.s2.p */
+/* JADX INFO: compiled from: lambda */
+/* JADX INFO: loaded from: classes3.dex */
 public final /* synthetic */ class RunnableC2886p implements Runnable {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final /* synthetic */ AnalyticsCollector f7610j;
 
     public /* synthetic */ RunnableC2886p(AnalyticsCollector analyticsCollector) {

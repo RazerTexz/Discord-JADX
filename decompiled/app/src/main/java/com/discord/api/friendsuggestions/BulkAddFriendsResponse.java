@@ -4,18 +4,18 @@ import java.util.List;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: BulkAddFriendsResponse.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: BulkAddFriendsResponse.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class BulkAddFriendsResponse {
     private final List<String> failedRequests;
     private final List<String> successfulRequests;
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final List<String> m7826a() {
         return this.failedRequests;
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final List<String> m7827b() {
         return this.successfulRequests;
     }

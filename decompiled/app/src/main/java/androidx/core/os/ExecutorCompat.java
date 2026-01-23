@@ -6,7 +6,7 @@ import androidx.core.util.Preconditions;
 import java.util.concurrent.Executor;
 import java.util.concurrent.RejectedExecutionException;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public final class ExecutorCompat {
 
     public static class HandlerExecutor implements Executor {

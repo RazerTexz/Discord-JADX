@@ -17,9 +17,9 @@ import p007b.p008a.p025i.IntegrationSyncSettingsBinding;
 import p507d0.p592z.p594d.FunctionReferenceImpl;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: WidgetServerSettingsEditIntegration.kt */
-/* renamed from: com.discord.widgets.servers.WidgetServerSettingsEditIntegration$binding$2, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.servers.WidgetServerSettingsEditIntegration$binding$2, reason: use source file name */
+/* JADX INFO: compiled from: WidgetServerSettingsEditIntegration.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final /* synthetic */ class WidgetServerSettingsEditIntegration3 extends FunctionReferenceImpl implements Function1<View, WidgetServerSettingsEditIntegrationBinding> {
     public static final WidgetServerSettingsEditIntegration3 INSTANCE = new WidgetServerSettingsEditIntegration3();
 
@@ -32,7 +32,7 @@ public final /* synthetic */ class WidgetServerSettingsEditIntegration3 extends 
         return invoke2(view);
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final WidgetServerSettingsEditIntegrationBinding invoke2(View view) {
         Intrinsics3.checkNotNullParameter(view, "p1");
         int i = C5419R.id.dimmer_view;

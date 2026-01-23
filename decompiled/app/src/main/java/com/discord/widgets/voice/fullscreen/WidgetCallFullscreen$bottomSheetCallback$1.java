@@ -5,8 +5,8 @@ import com.discord.widgets.voice.controls.VoiceControlsSheetSwipeTooltip;
 import com.google.android.material.bottomsheet.BottomSheetBehavior;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: WidgetCallFullscreen.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: WidgetCallFullscreen.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class WidgetCallFullscreen$bottomSheetCallback$1 extends BottomSheetBehavior.BottomSheetCallback {
     public final /* synthetic */ WidgetCallFullscreen this$0;
 

@@ -11,9 +11,9 @@ import kotlin.jvm.functions.Function1;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetGuildProfileSheet.kt */
-/* renamed from: com.discord.widgets.guilds.profile.WidgetGuildProfileSheet$configureGuildActions$$inlined$apply$lambda$4 */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.guilds.profile.WidgetGuildProfileSheet$configureGuildActions$$inlined$apply$lambda$4 */
+/* JADX INFO: compiled from: WidgetGuildProfileSheet.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class C8783x6f508c57 extends Lambda implements Function1<View, Unit> {
     public final /* synthetic */ long $guildId$inlined;
     public final /* synthetic */ WidgetGuildProfileSheet this$0;
@@ -31,7 +31,7 @@ public final class C8783x6f508c57 extends Lambda implements Function1<View, Unit
         return Unit.f27425a;
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final void invoke2(View view) {
         Intrinsics3.checkNotNullParameter(view, "it");
         Experiment userExperiment = StoreStream.INSTANCE.getExperiments().getUserExperiment("2021-10_premium_guild_member_profiles", true);

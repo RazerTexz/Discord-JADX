@@ -10,9 +10,9 @@ import p507d0.p584w.p586i.p587a.DebugProbes;
 import p507d0.p592z.p594d.InlineMarker;
 import p659s.p660a.CancellableContinuationImpl5;
 
-/* compiled from: ListenableFuture.kt */
-/* renamed from: androidx.work.ListenableFutureKt, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: androidx.work.ListenableFutureKt, reason: use source file name */
+/* JADX INFO: compiled from: ListenableFuture.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class ListenableFuture3 {
     @RestrictTo({RestrictTo.Scope.LIBRARY_GROUP})
     public static final <R> Object await(ListenableFuture8<R> listenableFuture8, Continuation<? super R> continuation) throws Throwable {

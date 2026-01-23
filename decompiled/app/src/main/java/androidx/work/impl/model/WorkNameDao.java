@@ -6,8 +6,8 @@ import androidx.room.Insert;
 import androidx.room.Query;
 import java.util.List;
 
+/* JADX INFO: loaded from: classes.dex */
 @Dao
-/* loaded from: classes.dex */
 public interface WorkNameDao {
     @NonNull
     @Query("SELECT name FROM workname WHERE work_spec_id=:workSpecId")

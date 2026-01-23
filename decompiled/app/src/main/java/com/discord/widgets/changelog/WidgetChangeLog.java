@@ -46,26 +46,26 @@ import p507d0.p580t.MapsJVM;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetChangeLog.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetChangeLog.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetChangeLog extends AppFragment {
     public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetChangeLog.class, "binding", "getBinding()Lcom/discord/databinding/WidgetChangeLogBinding;", 0)};
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private static final String INTENT_EXTRA_BODY = "INTENT_EXTRA_BODY";
     private static final String INTENT_EXTRA_REVISION = "INTENT_EXTRA_REVISION";
     private static final String INTENT_EXTRA_VERSION = "INTENT_EXTRA_VERSION";
     private static final String INTENT_EXTRA_VIDEO = "INTENT_EXTRA_VIDEO";
 
-    /* renamed from: binding$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
     private int maxScrolledPercent;
     private long openedTimestamp;
     private final WidgetChangeLog4 thumbnailControllerListener;
     private AbstractDraweeController<Object, Object> thumbnailDraweeController;
 
-    /* compiled from: WidgetChangeLog.kt */
+    /* JADX INFO: compiled from: WidgetChangeLog.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -89,8 +89,8 @@ public final class WidgetChangeLog extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetChangeLog.kt */
-    /* renamed from: com.discord.widgets.changelog.WidgetChangeLog$configureFooter$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.changelog.WidgetChangeLog$configureFooter$1 */
+    /* JADX INFO: compiled from: WidgetChangeLog.kt */
     public static final class ViewOnClickListenerC73051 implements View.OnClickListener {
         public ViewOnClickListenerC73051() {
         }
@@ -101,8 +101,8 @@ public final class WidgetChangeLog extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetChangeLog.kt */
-    /* renamed from: com.discord.widgets.changelog.WidgetChangeLog$configureFooter$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.changelog.WidgetChangeLog$configureFooter$2 */
+    /* JADX INFO: compiled from: WidgetChangeLog.kt */
     public static final class ViewOnClickListenerC73062 implements View.OnClickListener {
         public ViewOnClickListenerC73062() {
         }
@@ -113,8 +113,8 @@ public final class WidgetChangeLog extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetChangeLog.kt */
-    /* renamed from: com.discord.widgets.changelog.WidgetChangeLog$configureFooter$3 */
+    /* JADX INFO: renamed from: com.discord.widgets.changelog.WidgetChangeLog$configureFooter$3 */
+    /* JADX INFO: compiled from: WidgetChangeLog.kt */
     public static final class ViewOnClickListenerC73073 implements View.OnClickListener {
         public ViewOnClickListenerC73073() {
         }
@@ -125,8 +125,8 @@ public final class WidgetChangeLog extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetChangeLog.kt */
-    /* renamed from: com.discord.widgets.changelog.WidgetChangeLog$configureMedia$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.changelog.WidgetChangeLog$configureMedia$1 */
+    /* JADX INFO: compiled from: WidgetChangeLog.kt */
     public static final class C73081 implements MediaPlayer.OnCompletionListener {
         public C73081() {
         }
@@ -137,8 +137,8 @@ public final class WidgetChangeLog extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetChangeLog.kt */
-    /* renamed from: com.discord.widgets.changelog.WidgetChangeLog$configureMedia$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.changelog.WidgetChangeLog$configureMedia$2 */
+    /* JADX INFO: compiled from: WidgetChangeLog.kt */
     public static final class ViewOnClickListenerC73092 implements View.OnClickListener {
         public ViewOnClickListenerC73092() {
         }
@@ -158,14 +158,14 @@ public final class WidgetChangeLog extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetChangeLog.kt */
-    /* renamed from: com.discord.widgets.changelog.WidgetChangeLog$configureMedia$3 */
+    /* JADX INFO: renamed from: com.discord.widgets.changelog.WidgetChangeLog$configureMedia$3 */
+    /* JADX INFO: compiled from: WidgetChangeLog.kt */
     public static final class C73103 implements MediaPlayer.OnPreparedListener {
         public C73103() {
         }
 
         @Override // android.media.MediaPlayer.OnPreparedListener
-        public final void onPrepared(MediaPlayer mediaPlayer) throws IllegalStateException {
+        public final void onPrepared(MediaPlayer mediaPlayer) {
             Intrinsics3.checkNotNullParameter(mediaPlayer, "mp");
             mediaPlayer.start();
             mediaPlayer.pause();
@@ -176,8 +176,8 @@ public final class WidgetChangeLog extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetChangeLog.kt */
-    /* renamed from: com.discord.widgets.changelog.WidgetChangeLog$hideVideoOverlay$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.changelog.WidgetChangeLog$hideVideoOverlay$1 */
+    /* JADX INFO: compiled from: WidgetChangeLog.kt */
     public static final class C73111 extends Lambda implements Function1<ViewPropertyAnimator, Unit> {
         public static final C73111 INSTANCE = new C73111();
 
@@ -191,7 +191,7 @@ public final class WidgetChangeLog extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(ViewPropertyAnimator viewPropertyAnimator) {
             Intrinsics3.checkNotNullParameter(viewPropertyAnimator, "$receiver");
             viewPropertyAnimator.scaleX(2.0f);
@@ -199,8 +199,8 @@ public final class WidgetChangeLog extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetChangeLog.kt */
-    /* renamed from: com.discord.widgets.changelog.WidgetChangeLog$onViewBound$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.changelog.WidgetChangeLog$onViewBound$1 */
+    /* JADX INFO: compiled from: WidgetChangeLog.kt */
     public static final class C73121 extends Lambda implements Function3<Context, String, String, Unit> {
         public C73121() {
             super(3);
@@ -212,7 +212,7 @@ public final class WidgetChangeLog extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Context context, String str, String str2) {
             Intrinsics3.checkNotNullParameter(context, "context");
             Intrinsics3.checkNotNullParameter(str, "url");
@@ -221,8 +221,8 @@ public final class WidgetChangeLog extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetChangeLog.kt */
-    /* renamed from: com.discord.widgets.changelog.WidgetChangeLog$onViewBound$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.changelog.WidgetChangeLog$onViewBound$2 */
+    /* JADX INFO: compiled from: WidgetChangeLog.kt */
     public static final class C73132 implements NestedScrollView.OnScrollChangeListener {
         public C73132() {
         }
@@ -240,8 +240,8 @@ public final class WidgetChangeLog extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetChangeLog.kt */
-    /* renamed from: com.discord.widgets.changelog.WidgetChangeLog$showVideoOverlay$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.changelog.WidgetChangeLog$showVideoOverlay$1 */
+    /* JADX INFO: compiled from: WidgetChangeLog.kt */
     public static final class C73141 extends Lambda implements Function1<View, Unit> {
         public static final C73141 INSTANCE = new C73141();
 
@@ -255,7 +255,7 @@ public final class WidgetChangeLog extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(View view) {
             Intrinsics3.checkNotNullParameter(view, "view");
             view.setScaleX(2.0f);
@@ -263,8 +263,8 @@ public final class WidgetChangeLog extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetChangeLog.kt */
-    /* renamed from: com.discord.widgets.changelog.WidgetChangeLog$showVideoOverlay$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.changelog.WidgetChangeLog$showVideoOverlay$2 */
+    /* JADX INFO: compiled from: WidgetChangeLog.kt */
     public static final class C73152 extends Lambda implements Function1<ViewPropertyAnimator, Unit> {
         public static final C73152 INSTANCE = new C73152();
 
@@ -278,7 +278,7 @@ public final class WidgetChangeLog extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(ViewPropertyAnimator viewPropertyAnimator) {
             Intrinsics3.checkNotNullParameter(viewPropertyAnimator, "$receiver");
             viewPropertyAnimator.scaleX(1.0f);
@@ -411,7 +411,7 @@ public final class WidgetChangeLog extends AppFragment {
         Intrinsics3.checkNotNullExpressionValue(stringExtra2, "mostRecentIntent.getStri…g.change_log_md_revision)");
         HashMap map = new HashMap();
         if (includeStats) {
-            map.put("seconds_open", Long.valueOf((ClockFactory.get().currentTimeMillis() - this.openedTimestamp) / 1000));
+            map.put("seconds_open", Long.valueOf((ClockFactory.get().currentTimeMillis() - this.openedTimestamp) / ((long) 1000)));
             map.put("max_scrolled_percentage", Integer.valueOf(this.maxScrolledPercent));
         }
         AnalyticsTracker.INSTANCE.changeLogEvent(event, stringExtra, stringExtra2, Maps6.plus(properties, map));

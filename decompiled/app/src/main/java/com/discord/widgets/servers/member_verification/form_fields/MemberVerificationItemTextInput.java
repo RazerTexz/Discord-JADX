@@ -3,8 +3,8 @@ package com.discord.widgets.servers.member_verification.form_fields;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: MemberVerificationItemTextInput.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: MemberVerificationItemTextInput.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final /* data */ class MemberVerificationItemTextInput implements MemberVerificationItem {
     private final int fieldIndex;
     private final String key;
@@ -30,12 +30,12 @@ public final /* data */ class MemberVerificationItemTextInput implements MemberV
         return memberVerificationItemTextInput.copy(i, str);
     }
 
-    /* renamed from: component1, reason: from getter */
+    /* JADX INFO: renamed from: component1, reason: from getter */
     public final int getFieldIndex() {
         return this.fieldIndex;
     }
 
-    /* renamed from: component2, reason: from getter */
+    /* JADX INFO: renamed from: component2, reason: from getter */
     public final String getResponse() {
         return this.response;
     }

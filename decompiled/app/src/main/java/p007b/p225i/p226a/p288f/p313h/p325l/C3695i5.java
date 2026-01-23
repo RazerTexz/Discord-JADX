@@ -3,12 +3,12 @@ package p007b.p225i.p226a.p288f.p313h.p325l;
 import java.util.Iterator;
 import java.util.Map;
 
-/* compiled from: com.google.android.gms:play-services-measurement-base@@18.0.0 */
-/* renamed from: b.i.a.f.h.l.i5 */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.h.l.i5 */
+/* JADX INFO: compiled from: com.google.android.gms:play-services-measurement-base@@18.0.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public final class C3695i5<K> implements Iterator<Map.Entry<K, Object>> {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public Iterator<Map.Entry<K, Object>> f10009j;
 
     public C3695i5(Iterator<Map.Entry<K, Object>> it) {

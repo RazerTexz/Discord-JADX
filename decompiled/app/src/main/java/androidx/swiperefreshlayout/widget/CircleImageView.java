@@ -13,7 +13,7 @@ import android.widget.ImageView;
 import androidx.core.view.ViewCompat;
 import androidx.swiperefreshlayout.C0621R;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class CircleImageView extends ImageView {
     private static final int DEFAULT_BACKGROUND_COLOR = -328966;
     private static final int FILL_SHADOW_COLOR = 1023410176;

@@ -3,9 +3,9 @@ package com.discord.widgets.channels.permissions;
 import kotlin.jvm.functions.Function0;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetChannelSettingsEditPermissions.kt */
-/* renamed from: com.discord.widgets.channels.permissions.WidgetChannelSettingsEditPermissions$type$2, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.channels.permissions.WidgetChannelSettingsEditPermissions$type$2, reason: use source file name */
+/* JADX INFO: compiled from: WidgetChannelSettingsEditPermissions.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetChannelSettingsEditPermissions7 extends Lambda implements Function0<Integer> {
     public final /* synthetic */ WidgetChannelSettingsEditPermissions this$0;
 
@@ -20,7 +20,7 @@ public final class WidgetChannelSettingsEditPermissions7 extends Lambda implemen
         return Integer.valueOf(invoke2());
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final int invoke2() {
         return this.this$0.getMostRecentIntent().getIntExtra("INTENT_EXTRA_TYPE", -1);
     }

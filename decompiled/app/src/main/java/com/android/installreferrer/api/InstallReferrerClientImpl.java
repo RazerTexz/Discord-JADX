@@ -16,19 +16,19 @@ import java.lang.annotation.RetentionPolicy;
 import java.util.List;
 import p007b.p225i.p226a.p285d.p286a.IGetInstallReferrerService;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class InstallReferrerClientImpl extends InstallReferrerClient {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public int f14569a = 0;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final Context f14570b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public IGetInstallReferrerService f14571c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public ServiceConnection f14572d;
 
     @Retention(RetentionPolicy.SOURCE)
@@ -39,10 +39,10 @@ public class InstallReferrerClientImpl extends InstallReferrerClient {
         public static final int DISCONNECTED = 0;
     }
 
-    /* renamed from: com.android.installreferrer.api.InstallReferrerClientImpl$b */
+    /* JADX INFO: renamed from: com.android.installreferrer.api.InstallReferrerClientImpl$b */
     public final class ServiceConnectionC5418b implements ServiceConnection {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public final InstallReferrerStateListener f14573j;
 
         public ServiceConnectionC5418b(InstallReferrerStateListener installReferrerStateListener, C5417a c5417a) {

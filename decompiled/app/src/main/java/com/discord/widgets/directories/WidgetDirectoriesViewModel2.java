@@ -25,9 +25,9 @@ import p507d0.p580t.Iterables2;
 import p507d0.p580t._Collections;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetDirectoriesViewModel.kt */
-/* renamed from: com.discord.widgets.directories.WidgetDirectoriesViewModel$Companion$observeStores$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.directories.WidgetDirectoriesViewModel$Companion$observeStores$1, reason: use source file name */
+/* JADX INFO: compiled from: WidgetDirectoriesViewModel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetDirectoriesViewModel2 extends Lambda implements Function0<WidgetDirectoriesViewModel.ViewState> {
     public final /* synthetic */ StoreChannelsSelected $channelsSelectedStore;
     public final /* synthetic */ StoreDirectories $directoriesStore;

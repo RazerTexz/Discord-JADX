@@ -18,18 +18,18 @@ import kotlin.reflect.KProperty;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: WidgetUnknownStickerSheet.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: WidgetUnknownStickerSheet.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class WidgetUnknownStickerSheet extends AppBottomSheet {
     public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetUnknownStickerSheet.class, "binding", "getBinding()Lcom/discord/databinding/WidgetUnknownStickerSheetBinding;", 0)};
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
 
-    /* renamed from: binding$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
 
-    /* compiled from: WidgetUnknownStickerSheet.kt */
+    /* JADX INFO: compiled from: WidgetUnknownStickerSheet.kt */
     public static final class Companion {
         private Companion() {
         }

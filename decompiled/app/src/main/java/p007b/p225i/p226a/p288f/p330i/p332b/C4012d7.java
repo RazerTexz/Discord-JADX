@@ -8,15 +8,15 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 import java.net.URLConnection;
 
-/* compiled from: com.google.android.gms:play-services-measurement-impl@@18.0.0 */
-/* renamed from: b.i.a.f.i.b.d7 */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.i.b.d7 */
+/* JADX INFO: compiled from: com.google.android.gms:play-services-measurement-impl@@18.0.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public final class C4012d7 extends AbstractC4170r5 {
     public C4012d7(C4202u4 c4202u4) {
         super(c4202u4);
     }
 
-    /* renamed from: t */
+    /* JADX INFO: renamed from: t */
     public static byte[] m5582t(HttpURLConnection httpURLConnection) throws IOException {
         InputStream inputStream = null;
         try {
@@ -41,13 +41,13 @@ public final class C4012d7 extends AbstractC4170r5 {
     }
 
     @Override // p007b.p225i.p226a.p288f.p330i.p332b.AbstractC4170r5
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     public final boolean mo5574r() {
         return false;
     }
 
     @WorkerThread
-    /* renamed from: s */
+    /* JADX INFO: renamed from: s */
     public final HttpURLConnection m5583s(URL url) throws IOException {
         URLConnection uRLConnectionOpenConnection = url.openConnection();
         if (!(uRLConnectionOpenConnection instanceof HttpURLConnection)) {

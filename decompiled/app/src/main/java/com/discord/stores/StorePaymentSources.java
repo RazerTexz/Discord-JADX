@@ -28,8 +28,8 @@ import p507d0.p592z.p594d.Lambda;
 import p637j0.p641k.Func1;
 import p658rx.Observable;
 
-/* compiled from: StorePaymentSources.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: StorePaymentSources.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class StorePaymentSources extends StoreV2 {
     private final Dispatcher dispatcher;
     private final ObservationDeck observationDeck;
@@ -37,10 +37,10 @@ public final class StorePaymentSources extends StoreV2 {
     private PaymentSourcesState paymentSourcesStateSnapshot;
     private final RestAPI restAPI;
 
-    /* compiled from: StorePaymentSources.kt */
+    /* JADX INFO: compiled from: StorePaymentSources.kt */
     public static abstract class PaymentSourcesState {
 
-        /* compiled from: StorePaymentSources.kt */
+        /* JADX INFO: compiled from: StorePaymentSources.kt */
         public static final class Failure extends PaymentSourcesState {
             public static final Failure INSTANCE = new Failure();
 
@@ -49,7 +49,7 @@ public final class StorePaymentSources extends StoreV2 {
             }
         }
 
-        /* compiled from: StorePaymentSources.kt */
+        /* JADX INFO: compiled from: StorePaymentSources.kt */
         public static final /* data */ class Loaded extends PaymentSourcesState {
             private final List<ModelPaymentSource> paymentSources;
 
@@ -102,7 +102,7 @@ public final class StorePaymentSources extends StoreV2 {
             }
         }
 
-        /* compiled from: StorePaymentSources.kt */
+        /* JADX INFO: compiled from: StorePaymentSources.kt */
         public static final class Loading extends PaymentSourcesState {
             public static final Loading INSTANCE = new Loading();
 
@@ -111,7 +111,7 @@ public final class StorePaymentSources extends StoreV2 {
             }
         }
 
-        /* compiled from: StorePaymentSources.kt */
+        /* JADX INFO: compiled from: StorePaymentSources.kt */
         public static final class Unfetched extends PaymentSourcesState {
             public static final Unfetched INSTANCE = new Unfetched();
 
@@ -128,12 +128,12 @@ public final class StorePaymentSources extends StoreV2 {
         }
     }
 
-    /* compiled from: StorePaymentSources.kt */
-    /* renamed from: com.discord.stores.StorePaymentSources$fetchPaymentSources$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StorePaymentSources$fetchPaymentSources$1 */
+    /* JADX INFO: compiled from: StorePaymentSources.kt */
     public static final class C63231 extends Lambda implements Function0<Unit> {
 
-        /* compiled from: StorePaymentSources.kt */
-        /* renamed from: com.discord.stores.StorePaymentSources$fetchPaymentSources$1$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.stores.StorePaymentSources$fetchPaymentSources$1$1, reason: invalid class name */
+        /* JADX INFO: compiled from: StorePaymentSources.kt */
         public static final class AnonymousClass1<T, R> implements Func1<List<? extends ModelPaymentSource3>, List<? extends ModelPaymentSource>> {
             public AnonymousClass1() {
             }
@@ -143,7 +143,7 @@ public final class StorePaymentSources extends StoreV2 {
                 return call2((List<ModelPaymentSource3>) list);
             }
 
-            /* renamed from: call, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
             public final List<ModelPaymentSource> call2(List<ModelPaymentSource3> list) {
                 StorePaymentSources storePaymentSources = StorePaymentSources.this;
                 Intrinsics3.checkNotNullExpressionValue(list, "it");
@@ -151,12 +151,12 @@ public final class StorePaymentSources extends StoreV2 {
             }
         }
 
-        /* compiled from: StorePaymentSources.kt */
-        /* renamed from: com.discord.stores.StorePaymentSources$fetchPaymentSources$1$2, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.stores.StorePaymentSources$fetchPaymentSources$1$2, reason: invalid class name */
+        /* JADX INFO: compiled from: StorePaymentSources.kt */
         public static final class AnonymousClass2 extends Lambda implements Function1<List<? extends ModelPaymentSource>, Unit> {
 
-            /* compiled from: StorePaymentSources.kt */
-            /* renamed from: com.discord.stores.StorePaymentSources$fetchPaymentSources$1$2$1, reason: invalid class name */
+            /* JADX INFO: renamed from: com.discord.stores.StorePaymentSources$fetchPaymentSources$1$2$1, reason: invalid class name */
+            /* JADX INFO: compiled from: StorePaymentSources.kt */
             public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
                 public final /* synthetic */ List $paymentSources;
 
@@ -172,7 +172,7 @@ public final class StorePaymentSources extends StoreV2 {
                     return Unit.f27425a;
                 }
 
-                /* renamed from: invoke, reason: avoid collision after fix types in other method */
+                /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
                 public final void invoke2() {
                     StorePaymentSources storePaymentSources = StorePaymentSources.this;
                     List list = this.$paymentSources;
@@ -191,18 +191,18 @@ public final class StorePaymentSources extends StoreV2 {
                 return Unit.f27425a;
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2(List<? extends ModelPaymentSource> list) {
                 StorePaymentSources.access$getDispatcher$p(StorePaymentSources.this).schedule(new AnonymousClass1(list));
             }
         }
 
-        /* compiled from: StorePaymentSources.kt */
-        /* renamed from: com.discord.stores.StorePaymentSources$fetchPaymentSources$1$3, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.stores.StorePaymentSources$fetchPaymentSources$1$3, reason: invalid class name */
+        /* JADX INFO: compiled from: StorePaymentSources.kt */
         public static final class AnonymousClass3 extends Lambda implements Function1<Error, Unit> {
 
-            /* compiled from: StorePaymentSources.kt */
-            /* renamed from: com.discord.stores.StorePaymentSources$fetchPaymentSources$1$3$1, reason: invalid class name */
+            /* JADX INFO: renamed from: com.discord.stores.StorePaymentSources$fetchPaymentSources$1$3$1, reason: invalid class name */
+            /* JADX INFO: compiled from: StorePaymentSources.kt */
             public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
                 public AnonymousClass1() {
                     super(0);
@@ -214,7 +214,7 @@ public final class StorePaymentSources extends StoreV2 {
                     return Unit.f27425a;
                 }
 
-                /* renamed from: invoke, reason: avoid collision after fix types in other method */
+                /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
                 public final void invoke2() {
                     StorePaymentSources.access$handlePaymentSourcesFetchFailure(StorePaymentSources.this);
                 }
@@ -230,7 +230,7 @@ public final class StorePaymentSources extends StoreV2 {
                 return Unit.f27425a;
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2(Error error) {
                 Intrinsics3.checkNotNullParameter(error, "it");
                 StorePaymentSources.access$getDispatcher$p(StorePaymentSources.this).schedule(new AnonymousClass1());
@@ -247,7 +247,7 @@ public final class StorePaymentSources extends StoreV2 {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             if (StorePaymentSources.access$getPaymentSourcesState$p(StorePaymentSources.this) instanceof PaymentSourcesState.Loading) {
                 return;
@@ -259,8 +259,8 @@ public final class StorePaymentSources extends StoreV2 {
         }
     }
 
-    /* compiled from: StorePaymentSources.kt */
-    /* renamed from: com.discord.stores.StorePaymentSources$observePaymentSourcesState$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StorePaymentSources$observePaymentSourcesState$1 */
+    /* JADX INFO: compiled from: StorePaymentSources.kt */
     public static final class C63241 extends Lambda implements Function0<PaymentSourcesState> {
         public C63241() {
             super(0);
@@ -350,7 +350,7 @@ public final class StorePaymentSources extends StoreV2 {
         this.dispatcher.schedule(new C63231());
     }
 
-    /* renamed from: getPaymentSourcesState, reason: from getter */
+    /* JADX INFO: renamed from: getPaymentSourcesState, reason: from getter */
     public final PaymentSourcesState getPaymentSourcesStateSnapshot() {
         return this.paymentSourcesStateSnapshot;
     }

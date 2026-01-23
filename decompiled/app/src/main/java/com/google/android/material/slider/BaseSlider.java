@@ -67,7 +67,7 @@ import java.util.Iterator;
 import java.util.List;
 import p007b.p100d.p104b.p105a.outline;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public abstract class BaseSlider<S extends BaseSlider<S, L, T>, L extends BaseOnChangeListener<S>, T extends BaseOnSliderTouchListener<S>> extends View {
     private static final String EXCEPTION_ILLEGAL_DISCRETE_VALUE = "Value(%s) must be equal to valueFrom(%s) plus a multiple of stepSize(%s) when using stepSize(%s)";
     private static final String EXCEPTION_ILLEGAL_STEP_SIZE = "The stepSize(%s) must be 0, or a factor of the valueFrom(%s)-valueTo(%s) range";
@@ -173,22 +173,22 @@ public abstract class BaseSlider<S extends BaseSlider<S, L, T>, L extends BaseOn
     public static class SliderState extends View.BaseSavedState {
         public static final Parcelable.Creator<SliderState> CREATOR = new C10975a();
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public float f21107j;
 
-        /* renamed from: k */
+        /* JADX INFO: renamed from: k */
         public float f21108k;
 
-        /* renamed from: l */
+        /* JADX INFO: renamed from: l */
         public ArrayList<Float> f21109l;
 
-        /* renamed from: m */
+        /* JADX INFO: renamed from: m */
         public float f21110m;
 
-        /* renamed from: n */
+        /* JADX INFO: renamed from: n */
         public boolean f21111n;
 
-        /* renamed from: com.google.android.material.slider.BaseSlider$SliderState$a */
+        /* JADX INFO: renamed from: com.google.android.material.slider.BaseSlider$SliderState$a */
         public static class C10975a implements Parcelable.Creator<SliderState> {
             @Override // android.os.Parcelable.Creator
             @NonNull
@@ -229,13 +229,13 @@ public abstract class BaseSlider<S extends BaseSlider<S, L, T>, L extends BaseOn
         }
     }
 
-    /* renamed from: com.google.android.material.slider.BaseSlider$a */
+    /* JADX INFO: renamed from: com.google.android.material.slider.BaseSlider$a */
     public class C10976a implements InterfaceC10981f {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final /* synthetic */ AttributeSet f21112a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final /* synthetic */ int f21113b;
 
         public C10976a(AttributeSet attributeSet, int i) {
@@ -244,7 +244,7 @@ public abstract class BaseSlider<S extends BaseSlider<S, L, T>, L extends BaseOn
         }
     }
 
-    /* renamed from: com.google.android.material.slider.BaseSlider$b */
+    /* JADX INFO: renamed from: com.google.android.material.slider.BaseSlider$b */
     public class C10977b implements ValueAnimator.AnimatorUpdateListener {
         public C10977b() {
         }
@@ -260,7 +260,7 @@ public abstract class BaseSlider<S extends BaseSlider<S, L, T>, L extends BaseOn
         }
     }
 
-    /* renamed from: com.google.android.material.slider.BaseSlider$c */
+    /* JADX INFO: renamed from: com.google.android.material.slider.BaseSlider$c */
     public class C10978c extends AnimatorListenerAdapter {
         public C10978c() {
         }
@@ -275,10 +275,10 @@ public abstract class BaseSlider<S extends BaseSlider<S, L, T>, L extends BaseOn
         }
     }
 
-    /* renamed from: com.google.android.material.slider.BaseSlider$d */
+    /* JADX INFO: renamed from: com.google.android.material.slider.BaseSlider$d */
     public class RunnableC10979d implements Runnable {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public int f21117j = -1;
 
         public RunnableC10979d(C10976a c10976a) {
@@ -290,13 +290,13 @@ public abstract class BaseSlider<S extends BaseSlider<S, L, T>, L extends BaseOn
         }
     }
 
-    /* renamed from: com.google.android.material.slider.BaseSlider$e */
+    /* JADX INFO: renamed from: com.google.android.material.slider.BaseSlider$e */
     public static class C10980e extends ExploreByTouchHelper {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final BaseSlider<?, ?, ?> f21119a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public Rect f21120b;
 
         public C10980e(BaseSlider<?, ?, ?> baseSlider) {
@@ -387,7 +387,7 @@ public abstract class BaseSlider<S extends BaseSlider<S, L, T>, L extends BaseOn
         }
     }
 
-    /* renamed from: com.google.android.material.slider.BaseSlider$f */
+    /* JADX INFO: renamed from: com.google.android.material.slider.BaseSlider$f */
     public interface InterfaceC10981f {
     }
 
@@ -681,7 +681,8 @@ public abstract class BaseSlider<S extends BaseSlider<S, L, T>, L extends BaseOn
             dSnapPosition = 1.0d - dSnapPosition;
         }
         float f = this.valueTo;
-        return (float) ((dSnapPosition * (f - r3)) + this.valueFrom);
+        float f2 = this.valueFrom;
+        return (float) ((dSnapPosition * ((double) (f - f2))) + ((double) f2));
     }
 
     private float getValueOfTouchPositionAbsolute() {
@@ -715,7 +716,7 @@ public abstract class BaseSlider<S extends BaseSlider<S, L, T>, L extends BaseOn
         }
     }
 
-    private void loadResources(@NonNull Resources resources) throws Resources.NotFoundException {
+    private void loadResources(@NonNull Resources resources) {
         this.widgetHeight = resources.getDimensionPixelSize(C10817R.dimen.mtrl_slider_widget_height);
         int dimensionPixelOffset = resources.getDimensionPixelOffset(C10817R.dimen.mtrl_slider_track_side_padding);
         this.minTrackSidePadding = dimensionPixelOffset;
@@ -778,7 +779,7 @@ public abstract class BaseSlider<S extends BaseSlider<S, L, T>, L extends BaseOn
 
     private boolean moveFocus(int i) {
         int i2 = this.focusedThumbIdx;
-        int iClamp = (int) MathUtils.clamp(i2 + i, 0L, this.values.size() - 1);
+        int iClamp = (int) MathUtils.clamp(((long) i2) + ((long) i), 0L, this.values.size() - 1);
         this.focusedThumbIdx = iClamp;
         if (iClamp == i2) {
             return false;
@@ -857,7 +858,7 @@ public abstract class BaseSlider<S extends BaseSlider<S, L, T>, L extends BaseOn
         return Math.round(f * ((fArr.length / 2) - 1));
     }
 
-    private void processAttributes(Context context, AttributeSet attributeSet, int i) throws Resources.NotFoundException {
+    private void processAttributes(Context context, AttributeSet attributeSet, int i) {
         TypedArray typedArrayObtainStyledAttributes = ThemeEnforcement.obtainStyledAttributes(context, attributeSet, C10817R.styleable.Slider, i, DEF_STYLE_RES, new int[0]);
         this.valueFrom = typedArrayObtainStyledAttributes.getFloat(C10817R.styleable.Slider_android_valueFrom, 0.0f);
         this.valueTo = typedArrayObtainStyledAttributes.getFloat(C10817R.styleable.Slider_android_valueTo, 1.0f);
@@ -971,7 +972,8 @@ public abstract class BaseSlider<S extends BaseSlider<S, L, T>, L extends BaseOn
         if (f2 <= 0.0f) {
             return f;
         }
-        return Math.round(f * r0) / ((int) ((this.valueTo - this.valueFrom) / f2));
+        int i = (int) ((this.valueTo - this.valueFrom) / f2);
+        return ((double) Math.round(f * i)) / ((double) i);
     }
 
     private boolean snapThumbToValue(int i, float f) {
@@ -1731,7 +1733,7 @@ public abstract class BaseSlider<S extends BaseSlider<S, L, T>, L extends BaseOn
         return (this.valueTo - this.valueFrom) / fCalculateStepIncrement <= i ? fCalculateStepIncrement : Math.round(r1 / r4) * fCalculateStepIncrement;
     }
 
-    public BaseSlider(@NonNull Context context, @Nullable AttributeSet attributeSet, int i) throws Resources.NotFoundException {
+    public BaseSlider(@NonNull Context context, @Nullable AttributeSet attributeSet, int i) {
         super(MaterialThemeOverlay.wrap(context, attributeSet, i, DEF_STYLE_RES), attributeSet, i);
         this.labels = new ArrayList();
         this.changeListeners = new ArrayList();

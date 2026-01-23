@@ -1,7 +1,6 @@
 package com.discord.widgets.chat.list.adapter;
 
 import android.content.Context;
-import android.content.res.Resources;
 import android.view.View;
 import androidx.exifinterface.media.ExifInterface;
 import androidx.fragment.app.ViewKt;
@@ -42,18 +41,18 @@ import p507d0.p592z.p594d.Lambda;
 import p658rx.Observable;
 import p658rx.Subscription;
 
-/* compiled from: WidgetChatListAdapterItemGuildScheduledEventInvite.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetChatListAdapterItemGuildScheduledEventInvite.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetChatListAdapterItemGuildScheduledEventInvite extends WidgetChatListAdapterItemInviteBase {
     private final WidgetChatListAdapterItemGuildScheduledEventInviteBinding binding;
     private final StoreGuildScheduledEvents guildScheduledEventStore;
     private Job inviteJoinJob;
     private Subscription subscription;
 
-    /* compiled from: WidgetChatListAdapterItemGuildScheduledEventInvite.kt */
+    /* JADX INFO: compiled from: WidgetChatListAdapterItemGuildScheduledEventInvite.kt */
     public static final /* data */ class Model {
 
-        /* renamed from: Companion, reason: from kotlin metadata */
+        /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
         public static final Companion INSTANCE = new Companion(null);
         private final boolean canConnect;
         private final boolean canShare;
@@ -66,7 +65,7 @@ public final class WidgetChatListAdapterItemGuildScheduledEventInvite extends Wi
         private final boolean isRsvped;
         private final Long selectedVoiceChannelId;
 
-        /* compiled from: WidgetChatListAdapterItemGuildScheduledEventInvite.kt */
+        /* JADX INFO: compiled from: WidgetChatListAdapterItemGuildScheduledEventInvite.kt */
         public static final class Companion {
             private Companion() {
             }
@@ -110,52 +109,52 @@ public final class WidgetChatListAdapterItemGuildScheduledEventInvite extends Wi
             return model.copy((i & 1) != 0 ? model.invite : modelInvite, (i & 2) != 0 ? model.isInGuild : z2, (i & 4) != 0 ? model.isRsvped : z3, (i & 8) != 0 ? model.guildScheduledEvent : guildScheduledEvent, (i & 16) != 0 ? model.channel : channel, (i & 32) != 0 ? model.guild : guild, (i & 64) != 0 ? model.creator : userGuildMember, (i & 128) != 0 ? model.selectedVoiceChannelId : l, (i & 256) != 0 ? model.canConnect : z4, (i & 512) != 0 ? model.canShare : z5);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final ModelInvite getInvite() {
             return this.invite;
         }
 
-        /* renamed from: component10, reason: from getter */
+        /* JADX INFO: renamed from: component10, reason: from getter */
         public final boolean getCanShare() {
             return this.canShare;
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final boolean getIsInGuild() {
             return this.isInGuild;
         }
 
-        /* renamed from: component3, reason: from getter */
+        /* JADX INFO: renamed from: component3, reason: from getter */
         public final boolean getIsRsvped() {
             return this.isRsvped;
         }
 
-        /* renamed from: component4, reason: from getter */
+        /* JADX INFO: renamed from: component4, reason: from getter */
         public final GuildScheduledEvent getGuildScheduledEvent() {
             return this.guildScheduledEvent;
         }
 
-        /* renamed from: component5, reason: from getter */
+        /* JADX INFO: renamed from: component5, reason: from getter */
         public final Channel getChannel() {
             return this.channel;
         }
 
-        /* renamed from: component6, reason: from getter */
+        /* JADX INFO: renamed from: component6, reason: from getter */
         public final Guild getGuild() {
             return this.guild;
         }
 
-        /* renamed from: component7, reason: from getter */
+        /* JADX INFO: renamed from: component7, reason: from getter */
         public final UserGuildMember getCreator() {
             return this.creator;
         }
 
-        /* renamed from: component8, reason: from getter */
+        /* JADX INFO: renamed from: component8, reason: from getter */
         public final Long getSelectedVoiceChannelId() {
             return this.selectedVoiceChannelId;
         }
 
-        /* renamed from: component9, reason: from getter */
+        /* JADX INFO: renamed from: component9, reason: from getter */
         public final boolean getCanConnect() {
             return this.canConnect;
         }
@@ -210,23 +209,35 @@ public final class WidgetChatListAdapterItemGuildScheduledEventInvite extends Wi
         }
 
         /* JADX WARN: Multi-variable type inference failed */
+        /* JADX WARN: Type inference failed for: r1v3, types: [int] */
+        /* JADX WARN: Type inference failed for: r1v5 */
+        /* JADX WARN: Type inference failed for: r1v7 */
+        /* JADX WARN: Type inference failed for: r2v1, types: [int] */
+        /* JADX WARN: Type inference failed for: r2v21 */
+        /* JADX WARN: Type inference failed for: r2v22 */
+        /* JADX WARN: Type inference failed for: r2v23 */
+        /* JADX WARN: Type inference failed for: r2v24 */
+        /* JADX WARN: Type inference failed for: r2v3, types: [int] */
+        /* JADX WARN: Type inference failed for: r3v0 */
+        /* JADX WARN: Type inference failed for: r3v1, types: [int] */
+        /* JADX WARN: Type inference failed for: r3v2 */
         public int hashCode() {
             ModelInvite modelInvite = this.invite;
             int iHashCode = (modelInvite != null ? modelInvite.hashCode() : 0) * 31;
             boolean z2 = this.isInGuild;
-            int i = z2;
-            if (z2 != 0) {
-                i = 1;
+            ?? r2 = z2;
+            if (z2) {
+                r2 = 1;
             }
-            int i2 = (iHashCode + i) * 31;
+            int i = (iHashCode + r2) * 31;
             boolean z3 = this.isRsvped;
-            int i3 = z3;
-            if (z3 != 0) {
-                i3 = 1;
+            ?? r22 = z3;
+            if (z3) {
+                r22 = 1;
             }
-            int i4 = (i2 + i3) * 31;
+            int i2 = (i + r22) * 31;
             GuildScheduledEvent guildScheduledEvent = this.guildScheduledEvent;
-            int iHashCode2 = (i4 + (guildScheduledEvent != null ? guildScheduledEvent.hashCode() : 0)) * 31;
+            int iHashCode2 = (i2 + (guildScheduledEvent != null ? guildScheduledEvent.hashCode() : 0)) * 31;
             Channel channel = this.channel;
             int iHashCode3 = (iHashCode2 + (channel != null ? channel.hashCode() : 0)) * 31;
             Guild guild = this.guild;
@@ -236,13 +247,13 @@ public final class WidgetChatListAdapterItemGuildScheduledEventInvite extends Wi
             Long l = this.selectedVoiceChannelId;
             int iHashCode6 = (iHashCode5 + (l != null ? l.hashCode() : 0)) * 31;
             boolean z4 = this.canConnect;
-            int i5 = z4;
-            if (z4 != 0) {
-                i5 = 1;
+            ?? r1 = z4;
+            if (z4) {
+                r1 = 1;
             }
-            int i6 = (iHashCode6 + i5) * 31;
+            int i3 = (iHashCode6 + r1) * 31;
             boolean z5 = this.canShare;
-            return i6 + (z5 ? 1 : z5 ? 1 : 0);
+            return i3 + (z5 ? 1 : z5);
         }
 
         public final boolean isInGuild() {
@@ -277,8 +288,8 @@ public final class WidgetChatListAdapterItemGuildScheduledEventInvite extends Wi
         }
     }
 
-    /* compiled from: WidgetChatListAdapterItemGuildScheduledEventInvite.kt */
-    /* renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemGuildScheduledEventInvite$configureUI$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemGuildScheduledEventInvite$configureUI$2 */
+    /* JADX INFO: compiled from: WidgetChatListAdapterItemGuildScheduledEventInvite.kt */
     public static final class ViewOnClickListenerC80772 implements View.OnClickListener {
         public final /* synthetic */ Model $model;
 
@@ -296,8 +307,8 @@ public final class WidgetChatListAdapterItemGuildScheduledEventInvite extends Wi
         }
     }
 
-    /* compiled from: WidgetChatListAdapterItemGuildScheduledEventInvite.kt */
-    /* renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemGuildScheduledEventInvite$configureUI$3 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemGuildScheduledEventInvite$configureUI$3 */
+    /* JADX INFO: compiled from: WidgetChatListAdapterItemGuildScheduledEventInvite.kt */
     public static final class ViewOnClickListenerC80783 implements View.OnClickListener {
         public final /* synthetic */ Model $model;
 
@@ -311,8 +322,8 @@ public final class WidgetChatListAdapterItemGuildScheduledEventInvite extends Wi
         }
     }
 
-    /* compiled from: WidgetChatListAdapterItemGuildScheduledEventInvite.kt */
-    /* renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemGuildScheduledEventInvite$configureUI$4 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemGuildScheduledEventInvite$configureUI$4 */
+    /* JADX INFO: compiled from: WidgetChatListAdapterItemGuildScheduledEventInvite.kt */
     public static final class ViewOnClickListenerC80794 implements View.OnClickListener {
         public final /* synthetic */ Model $model;
 
@@ -330,8 +341,8 @@ public final class WidgetChatListAdapterItemGuildScheduledEventInvite extends Wi
         }
     }
 
-    /* compiled from: WidgetChatListAdapterItemGuildScheduledEventInvite.kt */
-    /* renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemGuildScheduledEventInvite$configureUI$5 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemGuildScheduledEventInvite$configureUI$5 */
+    /* JADX INFO: compiled from: WidgetChatListAdapterItemGuildScheduledEventInvite.kt */
     public static final class ViewOnClickListenerC80805 implements View.OnClickListener {
         public final /* synthetic */ Model $model;
 
@@ -345,28 +356,28 @@ public final class WidgetChatListAdapterItemGuildScheduledEventInvite extends Wi
         }
     }
 
-    /* compiled from: WidgetChatListAdapterItemGuildScheduledEventInvite.kt */
-    /* renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemGuildScheduledEventInvite$onConfigure$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemGuildScheduledEventInvite$onConfigure$1 */
+    /* JADX INFO: compiled from: WidgetChatListAdapterItemGuildScheduledEventInvite.kt */
     public static final /* synthetic */ class C80811 extends FunctionReferenceImpl implements Function1<Model, Unit> {
         public C80811(WidgetChatListAdapterItemGuildScheduledEventInvite widgetChatListAdapterItemGuildScheduledEventInvite) {
             super(1, widgetChatListAdapterItemGuildScheduledEventInvite, WidgetChatListAdapterItemGuildScheduledEventInvite.class, "configureUI", "configureUI(Lcom/discord/widgets/chat/list/adapter/WidgetChatListAdapterItemGuildScheduledEventInvite$Model;)V", 0);
         }
 
         @Override // kotlin.jvm.functions.Function1
-        public /* bridge */ /* synthetic */ Unit invoke(Model model) throws Resources.NotFoundException {
+        public /* bridge */ /* synthetic */ Unit invoke(Model model) {
             invoke2(model);
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
-        public final void invoke2(Model model) throws Resources.NotFoundException {
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
+        public final void invoke2(Model model) {
             Intrinsics3.checkNotNullParameter(model, "p1");
             WidgetChatListAdapterItemGuildScheduledEventInvite.access$configureUI((WidgetChatListAdapterItemGuildScheduledEventInvite) this.receiver, model);
         }
     }
 
-    /* compiled from: WidgetChatListAdapterItemGuildScheduledEventInvite.kt */
-    /* renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemGuildScheduledEventInvite$onConfigure$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemGuildScheduledEventInvite$onConfigure$2 */
+    /* JADX INFO: compiled from: WidgetChatListAdapterItemGuildScheduledEventInvite.kt */
     public static final class C80822 extends Lambda implements Function1<Subscription, Unit> {
         public C80822() {
             super(1);
@@ -378,7 +389,7 @@ public final class WidgetChatListAdapterItemGuildScheduledEventInvite extends Wi
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Subscription subscription) {
             Intrinsics3.checkNotNullParameter(subscription, "it");
             WidgetChatListAdapterItemGuildScheduledEventInvite.access$setSubscription$p(WidgetChatListAdapterItemGuildScheduledEventInvite.this, subscription);
@@ -389,7 +400,7 @@ public final class WidgetChatListAdapterItemGuildScheduledEventInvite extends Wi
         this(widgetChatListAdapter, (i & 2) != 0 ? StoreStream.INSTANCE.getGuildScheduledEvents() : storeGuildScheduledEvents);
     }
 
-    public static final /* synthetic */ void access$configureUI(WidgetChatListAdapterItemGuildScheduledEventInvite widgetChatListAdapterItemGuildScheduledEventInvite, Model model) throws Resources.NotFoundException {
+    public static final /* synthetic */ void access$configureUI(WidgetChatListAdapterItemGuildScheduledEventInvite widgetChatListAdapterItemGuildScheduledEventInvite, Model model) {
         widgetChatListAdapterItemGuildScheduledEventInvite.configureUI(model);
     }
 
@@ -417,7 +428,7 @@ public final class WidgetChatListAdapterItemGuildScheduledEventInvite extends Wi
         widgetChatListAdapterItemGuildScheduledEventInvite.subscription = subscription;
     }
 
-    private final void configureUI(Model model) throws Resources.NotFoundException {
+    private final void configureUI(Model model) {
         GuildScheduledEventItemView guildScheduledEventItemView = this.binding.f16227b;
         Intrinsics3.checkNotNullExpressionValue(guildScheduledEventItemView, "binding.guildScheduledEventInviteContainer");
         guildScheduledEventItemView.setBackground(null);

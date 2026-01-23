@@ -4,19 +4,19 @@ import java.util.List;
 import javax.net.ssl.SSLSocket;
 import p600f0.Protocol2;
 
-/* compiled from: SocketAdapter.kt */
-/* renamed from: f0.e0.k.i.k, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: f0.e0.k.i.k, reason: use source file name */
+/* JADX INFO: compiled from: SocketAdapter.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public interface SocketAdapter {
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     boolean mo10334a(SSLSocket sSLSocket);
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     boolean mo10335b();
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     String mo10336c(SSLSocket sSLSocket);
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     void mo10337d(SSLSocket sSLSocket, String str, List<? extends Protocol2> list);
 }

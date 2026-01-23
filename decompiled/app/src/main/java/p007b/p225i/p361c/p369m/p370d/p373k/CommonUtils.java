@@ -41,22 +41,22 @@ import java.util.regex.Pattern;
 import p007b.p225i.p361c.p369m.p370d.Logger3;
 import p007b.p225i.p361c.p369m.p370d.p379p.CodedOutputStream2;
 
-/* compiled from: CommonUtils.java */
-/* renamed from: b.i.c.m.d.k.h, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.c.m.d.k.h, reason: use source file name */
+/* JADX INFO: compiled from: CommonUtils.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class CommonUtils {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final char[] f12297a = {'0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'a', 'b', 'c', 'd', 'e', 'f'};
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static long f12298b = -1;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public static final Comparator<File> f12299c = new a();
 
-    /* compiled from: CommonUtils.java */
-    /* renamed from: b.i.c.m.d.k.h$a */
+    /* JADX INFO: renamed from: b.i.c.m.d.k.h$a */
+    /* JADX INFO: compiled from: CommonUtils.java */
     public class a implements Comparator<File> {
         @Override // java.util.Comparator
         public int compare(File file, File file2) {
@@ -64,8 +64,8 @@ public class CommonUtils {
         }
     }
 
-    /* compiled from: CommonUtils.java */
-    /* renamed from: b.i.c.m.d.k.h$b */
+    /* JADX INFO: renamed from: b.i.c.m.d.k.h$b */
+    /* JADX INFO: compiled from: CommonUtils.java */
     public enum b {
         X86_32,
         X86_64,
@@ -79,7 +79,7 @@ public class CommonUtils {
         ARM64;
 
 
-        /* renamed from: t */
+        /* JADX INFO: renamed from: t */
         public static final Map<String, b> f12310t;
 
         static {
@@ -96,14 +96,15 @@ public class CommonUtils {
         }
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static long m6407a(String str) {
-        long blockSize = new StatFs(str).getBlockSize();
-        return (r0.getBlockCount() * blockSize) - (blockSize * r0.getAvailableBlocks());
+        StatFs statFs = new StatFs(str);
+        long blockSize = statFs.getBlockSize();
+        return (((long) statFs.getBlockCount()) * blockSize) - (blockSize * ((long) statFs.getAvailableBlocks()));
     }
 
     @SuppressLint({"MissingPermission"})
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static boolean m6408b(Context context) {
         if (!(context.checkCallingOrSelfPermission("android.permission.ACCESS_NETWORK_STATE") == 0)) {
             return true;
@@ -112,7 +113,7 @@ public class CommonUtils {
         return activeNetworkInfo != null && activeNetworkInfo.isConnectedOrConnecting();
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public static void m6409c(Closeable closeable, String str) {
         if (closeable != null) {
             try {
@@ -125,7 +126,7 @@ public class CommonUtils {
         }
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public static void m6410d(Closeable closeable) {
         if (closeable != null) {
             try {
@@ -137,12 +138,12 @@ public class CommonUtils {
         }
     }
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public static long m6411e(String str, String str2, int i) {
-        return Long.parseLong(str.split(str2)[0].trim()) * i;
+        return Long.parseLong(str.split(str2)[0].trim()) * ((long) i);
     }
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public static String m6412f(String... strArr) {
         if (strArr.length != 0) {
             ArrayList arrayList = new ArrayList();
@@ -176,7 +177,10 @@ public class CommonUtils {
     /* JADX WARN: Type inference failed for: r1v3 */
     /* JADX WARN: Type inference failed for: r1v4, types: [java.io.Closeable] */
     /* JADX WARN: Type inference failed for: r1v5, types: [java.io.BufferedReader] */
-    /* renamed from: g */
+    /* JADX WARN: Type inference failed for: r2v1 */
+    /* JADX WARN: Type inference failed for: r2v2, types: [java.io.Closeable] */
+    /* JADX WARN: Type inference failed for: r2v6 */
+    /* JADX INFO: renamed from: g */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
@@ -185,7 +189,7 @@ public class CommonUtils {
         String str2 = null;
         str2 = null;
         str2 = null;
-        Closeable closeable = null;
+        ?? r2 = 0;
         try {
             if (Exists != 0) {
                 try {
@@ -203,8 +207,6 @@ public class CommonUtils {
                         } catch (Exception e) {
                             e = e;
                             Logger3.f12227a.m6374e("Error parsing " + file, e);
-                            m6409c(Exists, "Failed to close system file reader.");
-                            return str2;
                         }
                     }
                 } catch (Exception e2) {
@@ -212,7 +214,7 @@ public class CommonUtils {
                     Exists = 0;
                 } catch (Throwable th) {
                     th = th;
-                    m6409c(closeable, "Failed to close system file reader.");
+                    m6409c(r2, "Failed to close system file reader.");
                     throw th;
                 }
                 m6409c(Exists, "Failed to close system file reader.");
@@ -220,11 +222,11 @@ public class CommonUtils {
             return str2;
         } catch (Throwable th2) {
             th = th2;
-            closeable = Exists;
+            r2 = Exists;
         }
     }
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public static void m6414h(Flushable flushable, String str) {
         if (flushable != null) {
             try {
@@ -237,7 +239,7 @@ public class CommonUtils {
         }
     }
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public static ActivityManager.RunningAppProcessInfo m6415i(String str, Context context) {
         List<ActivityManager.RunningAppProcessInfo> runningAppProcesses = ((ActivityManager) context.getSystemService(ActivityChooserModel.ATTRIBUTE_ACTIVITY)).getRunningAppProcesses();
         if (runningAppProcesses != null) {
@@ -250,7 +252,7 @@ public class CommonUtils {
         return null;
     }
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static boolean m6416j(Context context, String str, boolean z2) {
         Resources resources;
         if (context != null && (resources = context.getResources()) != null) {
@@ -266,7 +268,7 @@ public class CommonUtils {
         return z2;
     }
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public static int m6417k(Context context) {
         boolean z2 = true;
         int i = m6425s(context) ? 1 : 0;
@@ -279,7 +281,7 @@ public class CommonUtils {
         return z2 ? i | 4 : i;
     }
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public static String m6418l(Context context) {
         int iM6420n = m6420n(context, "com.google.firebase.crashlytics.mapping_file_id", "string");
         if (iM6420n == 0) {
@@ -291,12 +293,12 @@ public class CommonUtils {
         return null;
     }
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public static boolean m6419m(Context context) {
         return (m6425s(context) || ((SensorManager) context.getSystemService("sensor")).getDefaultSensor(8) == null) ? false : true;
     }
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public static int m6420n(Context context, String str, String str2) {
         String packageName;
         Resources resources = context.getResources();
@@ -316,12 +318,12 @@ public class CommonUtils {
         return resources.getIdentifier(str, str2, packageName);
     }
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public static SharedPreferences m6421o(Context context) {
         return context.getSharedPreferences("com.google.firebase.crashlytics", 0);
     }
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public static synchronized long m6422p() {
         if (f12298b == -1) {
             long jM6411e = 0;
@@ -347,7 +349,7 @@ public class CommonUtils {
         return f12298b;
     }
 
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     public static String m6423q(byte[] bArr) {
         char[] cArr = new char[bArr.length * 2];
         for (int i = 0; i < bArr.length; i++) {
@@ -360,7 +362,7 @@ public class CommonUtils {
         return new String(cArr);
     }
 
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     public static void m6424r(Context context, View view) {
         InputMethodManager inputMethodManager = (InputMethodManager) context.getSystemService("input_method");
         if (inputMethodManager != null) {
@@ -368,19 +370,19 @@ public class CommonUtils {
         }
     }
 
-    /* renamed from: s */
+    /* JADX INFO: renamed from: s */
     public static boolean m6425s(Context context) {
         String string = Settings.Secure.getString(context.getContentResolver(), "android_id");
         String str = Build.PRODUCT;
         return "sdk".equals(str) || "google_sdk".equals(str) || string == null;
     }
 
-    /* renamed from: t */
+    /* JADX INFO: renamed from: t */
     public static boolean m6426t(String str) {
         return str == null || str.length() == 0;
     }
 
-    /* renamed from: u */
+    /* JADX INFO: renamed from: u */
     public static boolean m6427u(Context context) {
         boolean zM6425s = m6425s(context);
         String str = Build.TAGS;
@@ -390,7 +392,7 @@ public class CommonUtils {
         return true;
     }
 
-    /* renamed from: v */
+    /* JADX INFO: renamed from: v */
     public static String m6428v(int i) {
         if (i >= 0) {
             return String.format(Locale.US, "%1$10s", Integer.valueOf(i)).replace(' ', '0');
@@ -398,7 +400,7 @@ public class CommonUtils {
         throw new IllegalArgumentException("value must be zero or greater");
     }
 
-    /* renamed from: w */
+    /* JADX INFO: renamed from: w */
     public static String m6429w(String str) {
         byte[] bytes = str.getBytes();
         try {
@@ -411,7 +413,7 @@ public class CommonUtils {
         }
     }
 
-    /* renamed from: x */
+    /* JADX INFO: renamed from: x */
     public static String m6430x(InputStream inputStream) throws IOException {
         Scanner scannerUseDelimiter = new Scanner(inputStream).useDelimiter("\\A");
         return scannerUseDelimiter.hasNext() ? scannerUseDelimiter.next() : "";

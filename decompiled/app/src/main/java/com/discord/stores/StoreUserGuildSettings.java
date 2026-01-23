@@ -47,8 +47,8 @@ import p658rx.Observable;
 import p658rx.Subscription;
 import p658rx.subjects.PublishSubject;
 
-/* compiled from: StoreUserGuildSettings.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: StoreUserGuildSettings.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class StoreUserGuildSettings extends StoreV2 {
     private final StoreAnalytics analytics;
     private final Clock clock;
@@ -66,10 +66,10 @@ public final class StoreUserGuildSettings extends StoreV2 {
     private final StoreChannels storeChannels;
     private final StoreThreadsJoined storeThreadsJoined;
 
-    /* compiled from: StoreUserGuildSettings.kt */
+    /* JADX INFO: compiled from: StoreUserGuildSettings.kt */
     public static abstract class Event {
 
-        /* compiled from: StoreUserGuildSettings.kt */
+        /* JADX INFO: compiled from: StoreUserGuildSettings.kt */
         public static final /* data */ class SettingsUpdated extends Event {
             private final SettingsUpdateType type;
 
@@ -87,7 +87,7 @@ public final class StoreUserGuildSettings extends StoreV2 {
                 return settingsUpdated.copy(settingsUpdateType);
             }
 
-            /* renamed from: component1, reason: from getter */
+            /* JADX INFO: renamed from: component1, reason: from getter */
             public final SettingsUpdateType getType() {
                 return this.type;
             }
@@ -132,7 +132,7 @@ public final class StoreUserGuildSettings extends StoreV2 {
         }
     }
 
-    /* compiled from: StoreUserGuildSettings.kt */
+    /* JADX INFO: compiled from: StoreUserGuildSettings.kt */
     public enum SettingsUpdateType {
         GUILD,
         CHANNEL,
@@ -140,8 +140,8 @@ public final class StoreUserGuildSettings extends StoreV2 {
         CATEGORY
     }
 
-    /* compiled from: StoreUserGuildSettings.kt */
-    /* renamed from: com.discord.stores.StoreUserGuildSettings$handleGuildSettings$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreUserGuildSettings$handleGuildSettings$1 */
+    /* JADX INFO: compiled from: StoreUserGuildSettings.kt */
     public static final class C65691 extends Lambda implements Function1<Subscription, Unit> {
         public C65691() {
             super(1);
@@ -153,7 +153,7 @@ public final class StoreUserGuildSettings extends StoreV2 {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Subscription subscription) {
             Intrinsics3.checkNotNullParameter(subscription, Traits.Payment.Type.SUBSCRIPTION);
             Subscription subscriptionAccess$getRecomputeSettingsSubscription$p = StoreUserGuildSettings.access$getRecomputeSettingsSubscription$p(StoreUserGuildSettings.this);
@@ -164,12 +164,12 @@ public final class StoreUserGuildSettings extends StoreV2 {
         }
     }
 
-    /* compiled from: StoreUserGuildSettings.kt */
-    /* renamed from: com.discord.stores.StoreUserGuildSettings$handleGuildSettings$2 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreUserGuildSettings$handleGuildSettings$2 */
+    /* JADX INFO: compiled from: StoreUserGuildSettings.kt */
     public static final class C65702 extends Lambda implements Function1<Long, Unit> {
 
-        /* compiled from: StoreUserGuildSettings.kt */
-        /* renamed from: com.discord.stores.StoreUserGuildSettings$handleGuildSettings$2$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.stores.StoreUserGuildSettings$handleGuildSettings$2$1, reason: invalid class name */
+        /* JADX INFO: compiled from: StoreUserGuildSettings.kt */
         public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
             public AnonymousClass1() {
                 super(0);
@@ -181,7 +181,7 @@ public final class StoreUserGuildSettings extends StoreV2 {
                 return Unit.f27425a;
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2() {
                 StoreUserGuildSettings.access$recomputeMuteConfigs(StoreUserGuildSettings.this);
             }
@@ -197,14 +197,14 @@ public final class StoreUserGuildSettings extends StoreV2 {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Long l) {
             StoreUserGuildSettings.access$getDispatcher$p(StoreUserGuildSettings.this).schedule(new AnonymousClass1());
         }
     }
 
-    /* compiled from: StoreUserGuildSettings.kt */
-    /* renamed from: com.discord.stores.StoreUserGuildSettings$observeGuildSettings$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreUserGuildSettings$observeGuildSettings$1 */
+    /* JADX INFO: compiled from: StoreUserGuildSettings.kt */
     public static final class C65711 extends Lambda implements Function0<Map<Long, ? extends ModelNotificationSettings>> {
         public C65711() {
             super(0);
@@ -216,14 +216,14 @@ public final class StoreUserGuildSettings extends StoreV2 {
         }
 
         @Override // kotlin.jvm.functions.Function0
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final Map<Long, ? extends ModelNotificationSettings> invoke2() {
             return StoreUserGuildSettings.this.getGuildSettings();
         }
     }
 
-    /* compiled from: StoreUserGuildSettings.kt */
-    /* renamed from: com.discord.stores.StoreUserGuildSettings$observeGuildSettings$2 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreUserGuildSettings$observeGuildSettings$2 */
+    /* JADX INFO: compiled from: StoreUserGuildSettings.kt */
     public static final class C65722<T, R> implements Func1<Map<Long, ? extends ModelNotificationSettings>, ModelNotificationSettings> {
         public final /* synthetic */ long $guildId;
 
@@ -236,15 +236,15 @@ public final class StoreUserGuildSettings extends StoreV2 {
             return call2(map);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final ModelNotificationSettings call2(Map<Long, ? extends ModelNotificationSettings> map) {
             ModelNotificationSettings modelNotificationSettings = map.get(Long.valueOf(this.$guildId));
             return modelNotificationSettings != null ? modelNotificationSettings : new ModelNotificationSettings();
         }
     }
 
-    /* compiled from: StoreUserGuildSettings.kt */
-    /* renamed from: com.discord.stores.StoreUserGuildSettings$observeHideMutedChannels$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreUserGuildSettings$observeHideMutedChannels$1 */
+    /* JADX INFO: compiled from: StoreUserGuildSettings.kt */
     public static final class C65731 extends Lambda implements Function0<Set<? extends Long>> {
         public C65731() {
             super(0);
@@ -256,14 +256,14 @@ public final class StoreUserGuildSettings extends StoreV2 {
         }
 
         @Override // kotlin.jvm.functions.Function0
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final Set<? extends Long> invoke2() {
             return StoreUserGuildSettings.this.getGuildsToHideMutedChannelsIn();
         }
     }
 
-    /* compiled from: StoreUserGuildSettings.kt */
-    /* renamed from: com.discord.stores.StoreUserGuildSettings$observeHideMutedChannels$2 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreUserGuildSettings$observeHideMutedChannels$2 */
+    /* JADX INFO: compiled from: StoreUserGuildSettings.kt */
     public static final class C65742<T, R> implements Func1<Set<? extends Long>, Boolean> {
         public final /* synthetic */ long $guildId;
 
@@ -276,14 +276,14 @@ public final class StoreUserGuildSettings extends StoreV2 {
             return call2((Set<Long>) set);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final Boolean call2(Set<Long> set) {
             return Boolean.valueOf(set.contains(Long.valueOf(this.$guildId)));
         }
     }
 
-    /* compiled from: StoreUserGuildSettings.kt */
-    /* renamed from: com.discord.stores.StoreUserGuildSettings$observeMutedGuildIds$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreUserGuildSettings$observeMutedGuildIds$1 */
+    /* JADX INFO: compiled from: StoreUserGuildSettings.kt */
     public static final class C65751<T, R> implements Func1<Map<Long, ? extends ModelNotificationSettings>, List<? extends Long>> {
         public static final C65751 INSTANCE = new C65751();
 
@@ -292,7 +292,7 @@ public final class StoreUserGuildSettings extends StoreV2 {
             return call2(map);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final List<Long> call2(Map<Long, ? extends ModelNotificationSettings> map) {
             Collection<? extends ModelNotificationSettings> collectionValues = map.values();
             ArrayList arrayList = new ArrayList();
@@ -310,8 +310,8 @@ public final class StoreUserGuildSettings extends StoreV2 {
         }
     }
 
-    /* compiled from: StoreUserGuildSettings.kt */
-    /* renamed from: com.discord.stores.StoreUserGuildSettings$setChannelMuted$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreUserGuildSettings$setChannelMuted$1 */
+    /* JADX INFO: compiled from: StoreUserGuildSettings.kt */
     public static final class C65761 extends Lambda implements Function0<Unit> {
         public final /* synthetic */ long $channelId;
         public final /* synthetic */ Context $context;
@@ -333,7 +333,7 @@ public final class StoreUserGuildSettings extends StoreV2 {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             Channel channelFindChannelByIdInternal$app_productionGoogleRelease = StoreUserGuildSettings.access$getStoreChannels$p(StoreUserGuildSettings.this).findChannelByIdInternal$app_productionGoogleRelease(this.$channelId);
             if (channelFindChannelByIdInternal$app_productionGoogleRelease != null) {
@@ -348,8 +348,8 @@ public final class StoreUserGuildSettings extends StoreV2 {
         }
     }
 
-    /* compiled from: StoreUserGuildSettings.kt */
-    /* renamed from: com.discord.stores.StoreUserGuildSettings$setHideMutedChannels$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreUserGuildSettings$setHideMutedChannels$1 */
+    /* JADX INFO: compiled from: StoreUserGuildSettings.kt */
     public static final class C65771 extends Lambda implements Function0<Unit> {
         public final /* synthetic */ long $guildId;
         public final /* synthetic */ boolean $hideChannels;
@@ -367,7 +367,7 @@ public final class StoreUserGuildSettings extends StoreV2 {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             if (this.$hideChannels) {
                 StoreUserGuildSettings.access$getGuildsToHideMutedChannelsIn$p(StoreUserGuildSettings.this).add(Long.valueOf(this.$guildId));
@@ -378,8 +378,8 @@ public final class StoreUserGuildSettings extends StoreV2 {
         }
     }
 
-    /* compiled from: StoreUserGuildSettings.kt */
-    /* renamed from: com.discord.stores.StoreUserGuildSettings$updateThreadMemberSettings$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreUserGuildSettings$updateThreadMemberSettings$1 */
+    /* JADX INFO: compiled from: StoreUserGuildSettings.kt */
     public static final class C65781 extends Lambda implements Function1<ThreadMember, Unit> {
         public final /* synthetic */ long $channelId;
         public final /* synthetic */ int $oldFlags;
@@ -399,7 +399,7 @@ public final class StoreUserGuildSettings extends StoreV2 {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(ThreadMember threadMember) {
             Intrinsics3.checkNotNullParameter(threadMember, "threadMember");
             StoreUserGuildSettings.access$getAnalytics$p(StoreUserGuildSettings.this).onThreadNotificationSettingsUpdated(this.$channelId, this.$parentChannelId, threadMember.getFlags(), this.$oldFlags);
@@ -408,8 +408,8 @@ public final class StoreUserGuildSettings extends StoreV2 {
         }
     }
 
-    /* compiled from: StoreUserGuildSettings.kt */
-    /* renamed from: com.discord.stores.StoreUserGuildSettings$updateUserGuildSettings$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreUserGuildSettings$updateUserGuildSettings$1 */
+    /* JADX INFO: compiled from: StoreUserGuildSettings.kt */
     public static final class C65791 extends Lambda implements Function1<ModelNotificationSettings, Unit> {
         public final /* synthetic */ Long $channelId;
         public final /* synthetic */ SettingsUpdateType $settingsUpdateType;
@@ -427,7 +427,7 @@ public final class StoreUserGuildSettings extends StoreV2 {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(ModelNotificationSettings modelNotificationSettings) {
             Intrinsics3.checkNotNullParameter(modelNotificationSettings, "notifSettings");
             StoreUserGuildSettings.access$getAnalytics$p(StoreUserGuildSettings.this).onNotificationSettingsUpdated(modelNotificationSettings, this.$channelId);

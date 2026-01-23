@@ -9,7 +9,7 @@ import android.view.Surface;
 import java.io.IOException;
 import java.nio.ByteBuffer;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public class MediaCodecWrapperFactoryImpl implements MediaCodecWrapperFactory {
 
     public static class MediaCodecWrapperImpl implements MediaCodecWrapper {
@@ -61,7 +61,7 @@ public class MediaCodecWrapperFactoryImpl implements MediaCodecWrapperFactory {
         }
 
         @Override // org.webrtc.MediaCodecWrapper
-        public void queueInputBuffer(int i, int i2, int i3, long j, int i4) throws MediaCodec.CryptoException {
+        public void queueInputBuffer(int i, int i2, int i3, long j, int i4) {
             this.mediaCodec.queueInputBuffer(i, i2, i3, j, i4);
         }
 

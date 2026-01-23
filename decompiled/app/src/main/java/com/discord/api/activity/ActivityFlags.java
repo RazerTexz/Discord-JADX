@@ -1,8 +1,8 @@
 package com.discord.api.activity;
 
 
-/* compiled from: ActivityFlags.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: ActivityFlags.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class ActivityFlags {
     public static final ActivityFlags INSTANCE = new ActivityFlags();
     public static final int JOIN = 2;

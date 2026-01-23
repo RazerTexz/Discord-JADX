@@ -46,30 +46,30 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 import p507d0.p592z.p594d.Reflection2;
 
-/* compiled from: WidgetTosReportViolation.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: WidgetTosReportViolation.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class WidgetTosReportViolation extends AppFragment {
     public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetTosReportViolation.class, "binding", "getBinding()Lcom/discord/databinding/WidgetTosReportViolationBinding;", 0)};
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private static final String EXTRA_CHANNEL_ID = "EXTRA_CHANNEL_ID";
     private static final String EXTRA_MESSAGE_ID = "EXTRA_MESSAGE_ID";
     private static final String EXTRA_TARGET = "EXTRA_TARGET";
 
-    /* renamed from: args$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: args$delegate, reason: from kotlin metadata */
     private final Lazy args;
 
-    /* renamed from: binding$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
 
-    /* renamed from: viewModel$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: viewModel$delegate, reason: from kotlin metadata */
     private final Lazy viewModel;
 
-    /* compiled from: WidgetTosReportViolation.kt */
+    /* JADX INFO: compiled from: WidgetTosReportViolation.kt */
     public static final class Companion {
 
-        /* compiled from: WidgetTosReportViolation.kt */
+        /* JADX INFO: compiled from: WidgetTosReportViolation.kt */
         public static final /* data */ class Arguments {
             private final long channelId;
             private final long messageId;
@@ -96,17 +96,17 @@ public final class WidgetTosReportViolation extends AppFragment {
                 return arguments.copy(str, j3, j2);
             }
 
-            /* renamed from: component1, reason: from getter */
+            /* JADX INFO: renamed from: component1, reason: from getter */
             public final String getTarget() {
                 return this.target;
             }
 
-            /* renamed from: component2, reason: from getter */
+            /* JADX INFO: renamed from: component2, reason: from getter */
             public final long getChannelId() {
                 return this.channelId;
             }
 
-            /* renamed from: component3, reason: from getter */
+            /* JADX INFO: renamed from: component3, reason: from getter */
             public final long getMessageId() {
                 return this.messageId;
             }
@@ -182,8 +182,8 @@ public final class WidgetTosReportViolation extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetTosReportViolation.kt */
-    /* renamed from: com.discord.widgets.tos.WidgetTosReportViolation$handleLoaded$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.tos.WidgetTosReportViolation$handleLoaded$1 */
+    /* JADX INFO: compiled from: WidgetTosReportViolation.kt */
     public static final class ViewOnClickListenerC101741 implements View.OnClickListener {
         public ViewOnClickListenerC101741() {
         }
@@ -194,8 +194,8 @@ public final class WidgetTosReportViolation extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetTosReportViolation.kt */
-    /* renamed from: com.discord.widgets.tos.WidgetTosReportViolation$handleReportSubmissionError$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.tos.WidgetTosReportViolation$handleReportSubmissionError$1 */
+    /* JADX INFO: compiled from: WidgetTosReportViolation.kt */
     public static final class C101751 extends Lambda implements Function0<Unit> {
         public C101751() {
             super(0);
@@ -207,14 +207,14 @@ public final class WidgetTosReportViolation extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             WidgetTosReportViolation.access$getViewModel$p(WidgetTosReportViolation.this).handleDismissError();
         }
     }
 
-    /* compiled from: WidgetTosReportViolation.kt */
-    /* renamed from: com.discord.widgets.tos.WidgetTosReportViolation$onViewBoundOrOnResume$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.tos.WidgetTosReportViolation$onViewBoundOrOnResume$1 */
+    /* JADX INFO: compiled from: WidgetTosReportViolation.kt */
     public static final /* synthetic */ class C101761 extends FunctionReferenceImpl implements Function1<WidgetTosReportViolationViewModel.ViewState, Unit> {
         public C101761(WidgetTosReportViolation widgetTosReportViolation) {
             super(1, widgetTosReportViolation, WidgetTosReportViolation.class, "configureUI", "configureUI(Lcom/discord/widgets/tos/WidgetTosReportViolationViewModel$ViewState;)V", 0);
@@ -226,7 +226,7 @@ public final class WidgetTosReportViolation extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(WidgetTosReportViolationViewModel.ViewState viewState) {
             Intrinsics3.checkNotNullParameter(viewState, "p1");
             WidgetTosReportViolation.access$configureUI((WidgetTosReportViolation) this.receiver, viewState);

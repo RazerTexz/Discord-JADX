@@ -23,13 +23,13 @@ import p637j0.p642l.p643a.OnSubscribeLift;
 import p658rx.Observable;
 import p658rx.functions.Func6;
 
-/* compiled from: GuildVerificationLevelUtils.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: GuildVerificationLevelUtils.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class GuildVerificationLevelUtils {
     public static final GuildVerificationLevelUtils INSTANCE = new GuildVerificationLevelUtils();
 
-    /* compiled from: GuildVerificationLevelUtils.kt */
-    /* renamed from: com.discord.utilities.guilds.GuildVerificationLevelUtils$observeVerificationLevelTriggered$1 */
+    /* JADX INFO: renamed from: com.discord.utilities.guilds.GuildVerificationLevelUtils$observeVerificationLevelTriggered$1 */
+    /* JADX INFO: compiled from: GuildVerificationLevelUtils.kt */
     public static final class C67671<T1, T2, T3, T4, T5, T6, R> implements Func6<Long, Guild, GuildVerificationLevel, Map<Long, ? extends GuildMember>, MeUser, Map<Long, ? extends GuildRole>, GuildVerificationLevel> {
         public final /* synthetic */ Clock $clock;
 
@@ -42,7 +42,7 @@ public final class GuildVerificationLevelUtils {
             return call2(l, guild, guildVerificationLevel, (Map<Long, GuildMember>) map, meUser, (Map<Long, GuildRole>) map2);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final GuildVerificationLevel call2(Long l, Guild guild, GuildVerificationLevel guildVerificationLevel, Map<Long, GuildMember> map, MeUser meUser, Map<Long, GuildRole> map2) {
             GuildVerificationLevelUtils guildVerificationLevelUtils = GuildVerificationLevelUtils.INSTANCE;
             Intrinsics3.checkNotNullExpressionValue(meUser, "me");

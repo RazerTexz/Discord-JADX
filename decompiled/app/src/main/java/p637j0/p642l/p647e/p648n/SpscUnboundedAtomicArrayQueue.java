@@ -8,39 +8,39 @@ import java.util.concurrent.atomic.AtomicLong;
 import java.util.concurrent.atomic.AtomicReferenceArray;
 import p637j0.p642l.p647e.UtilityFunctions;
 
-/* compiled from: SpscUnboundedAtomicArrayQueue.java */
-/* renamed from: j0.l.e.n.g, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: j0.l.e.n.g, reason: use source file name */
+/* JADX INFO: compiled from: SpscUnboundedAtomicArrayQueue.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class SpscUnboundedAtomicArrayQueue<T> implements Queue<T> {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static final int f27322j = Integer.getInteger("jctools.spsc.max.lookahead.step", 4096).intValue();
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public static final Object f27323k = new Object();
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final AtomicLong f27324l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public int f27325m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public long f27326n;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public int f27327o;
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public AtomicReferenceArray<Object> f27328p;
 
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     public int f27329q;
 
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     public AtomicReferenceArray<Object> f27330r;
 
-    /* renamed from: s */
+    /* JADX INFO: renamed from: s */
     public final AtomicLong f27331s;
 
     public SpscUnboundedAtomicArrayQueue(int i) {
@@ -69,7 +69,7 @@ public final class SpscUnboundedAtomicArrayQueue<T> implements Queue<T> {
         throw new UnsupportedOperationException();
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final long m10831c() {
         return this.f27331s.get();
     }
@@ -93,7 +93,7 @@ public final class SpscUnboundedAtomicArrayQueue<T> implements Queue<T> {
         throw new UnsupportedOperationException();
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final boolean m10832d(AtomicReferenceArray<Object> atomicReferenceArray, T t, long j, int i) {
         this.f27324l.lazySet(j + 1);
         atomicReferenceArray.lazySet(i, t);
@@ -126,7 +126,7 @@ public final class SpscUnboundedAtomicArrayQueue<T> implements Queue<T> {
             m10832d(atomicReferenceArray, t, j, i2);
             return true;
         }
-        long j2 = this.f27325m + j;
+        long j2 = ((long) this.f27325m) + j;
         if (atomicReferenceArray.get(((int) j2) & i) == null) {
             this.f27326n = j2 - 1;
             this.f27324l.lazySet(j + 1);
@@ -141,7 +141,7 @@ public final class SpscUnboundedAtomicArrayQueue<T> implements Queue<T> {
         }
         AtomicReferenceArray<Object> atomicReferenceArray2 = new AtomicReferenceArray<>(atomicReferenceArray.length());
         this.f27328p = atomicReferenceArray2;
-        this.f27326n = (i + j) - 1;
+        this.f27326n = (((long) i) + j) - 1;
         this.f27324l.lazySet(j3);
         atomicReferenceArray2.lazySet(i2, t);
         atomicReferenceArray.lazySet(atomicReferenceArray.length() - 1, atomicReferenceArray2);

@@ -28,10 +28,10 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p600f0.OkHttpClient;
 import p600f0.p601e0.p605g.RealCall;
 
-/* compiled from: SamsungConnect.kt */
+/* JADX INFO: renamed from: b.a.r.b, reason: use source file name */
+/* JADX INFO: compiled from: SamsungConnect.kt */
+/* JADX INFO: loaded from: classes.dex */
 @DebugMetadata(m10084c = "com.discord.samsung.SamsungConnect$postSamsungAuthorizeCallback$2", m10085f = "SamsungConnect.kt", m10086l = {}, m10087m = "invokeSuspend")
-/* renamed from: b.a.r.b, reason: use source file name */
-/* loaded from: classes.dex */
 public final class SamsungConnect2 extends ContinuationImpl6 implements Function2<CoroutineScope, Continuation<? super Uri>, Object> {
     public final /* synthetic */ OkHttpClient $okHttpClient;
     public final /* synthetic */ String $samsungAuthCode;

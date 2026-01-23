@@ -52,20 +52,20 @@ import lombok.javac.JavacNode;
 import lombok.javac.JavacTreeMaker;
 import lombok.permit.Permit;
 
-/* loaded from: discord-126021.apk:lombok/javac/handlers/JavacHandlerUtil.SCL.lombok */
+/* JADX INFO: loaded from: discord-126021.apk:lombok/javac/handlers/JavacHandlerUtil.SCL.lombok */
 public class JavacHandlerUtil {
     private static /* synthetic */ int[] $SWITCH_TABLE$lombok$core$AST$Kind;
     private static /* synthetic */ int[] $SWITCH_TABLE$lombok$AccessLevel;
     static final /* synthetic */ boolean $assertionsDisabled;
     private static /* synthetic */ int[] $SWITCH_TABLE$com$sun$source$tree$Tree$Kind;
 
-    /* loaded from: discord-126021.apk:lombok/javac/handlers/JavacHandlerUtil$MemberExistsResult.SCL.lombok */
+    /* JADX INFO: loaded from: discord-126021.apk:lombok/javac/handlers/JavacHandlerUtil$MemberExistsResult.SCL.lombok */
     public enum MemberExistsResult {
         NOT_EXISTS,
         EXISTS_BY_LOMBOK,
         EXISTS_BY_USER;
 
-        /* renamed from: values, reason: to resolve conflict with enum method */
+        /* JADX INFO: renamed from: values, reason: to resolve conflict with enum method */
         public static MemberExistsResult[] valuesCustom() {
             MemberExistsResult[] memberExistsResultArrValuesCustom = values();
             int length = memberExistsResultArrValuesCustom.length;
@@ -544,7 +544,7 @@ public class JavacHandlerUtil {
     private JavacHandlerUtil() {
     }
 
-    /* loaded from: discord-126021.apk:lombok/javac/handlers/JavacHandlerUtil$MarkingScanner.SCL.lombok */
+    /* JADX INFO: loaded from: discord-126021.apk:lombok/javac/handlers/JavacHandlerUtil$MarkingScanner.SCL.lombok */
     private static class MarkingScanner extends TreeScanner {
         private final JCTree source;
         private final Context context;
@@ -775,7 +775,7 @@ public class JavacHandlerUtil {
         return createAnnotation(type, node.get(), node);
     }
 
-    public static <A extends Annotation> AnnotationValues<A> createAnnotation(Class<A> type, JCTree.JCAnnotation anno, JavacNode node) throws SecurityException {
+    public static <A extends Annotation> AnnotationValues<A> createAnnotation(Class<A> type, JCTree.JCAnnotation anno, JavacNode node) {
         JCTree.JCExpression rhs;
         String mName;
         Map<String, AnnotationValues.AnnotationValue> values = new HashMap<>();
@@ -838,8 +838,8 @@ public class JavacHandlerUtil {
         return new AnnotationValues<>(type, values, node);
     }
 
-    /* renamed from: lombok.javac.handlers.JavacHandlerUtil$1 */
-    /* loaded from: discord-126021.apk:lombok/javac/handlers/JavacHandlerUtil$1.SCL.lombok */
+    /* JADX INFO: renamed from: lombok.javac.handlers.JavacHandlerUtil$1 */
+    /* JADX INFO: loaded from: discord-126021.apk:lombok/javac/handlers/JavacHandlerUtil$1.SCL.lombok */
     class C128971 extends AnnotationValues.AnnotationValue {
         private final /* synthetic */ JavacNode val$node;
         private final /* synthetic */ java.util.List val$positions;
@@ -870,8 +870,8 @@ public class JavacHandlerUtil {
         }
     }
 
-    /* renamed from: lombok.javac.handlers.JavacHandlerUtil$2 */
-    /* loaded from: discord-126021.apk:lombok/javac/handlers/JavacHandlerUtil$2.SCL.lombok */
+    /* JADX INFO: renamed from: lombok.javac.handlers.JavacHandlerUtil$2 */
+    /* JADX INFO: loaded from: discord-126021.apk:lombok/javac/handlers/JavacHandlerUtil$2.SCL.lombok */
     class C128982 extends AnnotationValues.AnnotationValue {
         private final /* synthetic */ JavacNode val$node;
 
@@ -1206,7 +1206,7 @@ public class JavacHandlerUtil {
         }
     }
 
-    /* loaded from: discord-126021.apk:lombok/javac/handlers/JavacHandlerUtil$GetterMethod.SCL.lombok */
+    /* JADX INFO: loaded from: discord-126021.apk:lombok/javac/handlers/JavacHandlerUtil$GetterMethod.SCL.lombok */
     private static class GetterMethod {
         private final Name name;
         private final JCTree.JCExpression type;
@@ -1406,7 +1406,7 @@ public class JavacHandlerUtil {
         return (field.mods.flags & Permission.EMBED_LINKS) != 0;
     }
 
-    /* loaded from: discord-126021.apk:lombok/javac/handlers/JavacHandlerUtil$JCAnnotatedTypeReflect.SCL.lombok */
+    /* JADX INFO: loaded from: discord-126021.apk:lombok/javac/handlers/JavacHandlerUtil$JCAnnotatedTypeReflect.SCL.lombok */
     static class JCAnnotatedTypeReflect {
         private static Class<?> TYPE;
         private static Constructor<?> CONSTRUCTOR;
@@ -1439,7 +1439,7 @@ public class JavacHandlerUtil {
             }
         }
 
-        /* renamed from: is */
+        /* JADX INFO: renamed from: is */
         static boolean m10951is(JCTree obj) {
             if (obj == null) {
                 return false;
@@ -1484,7 +1484,7 @@ public class JavacHandlerUtil {
         }
     }
 
-    /* loaded from: discord-126021.apk:lombok/javac/handlers/JavacHandlerUtil$JCAnnotationReflect.SCL.lombok */
+    /* JADX INFO: loaded from: discord-126021.apk:lombok/javac/handlers/JavacHandlerUtil$JCAnnotationReflect.SCL.lombok */
     static class JCAnnotationReflect {
         private static Field ATTRIBUTE;
 
@@ -1507,7 +1507,7 @@ public class JavacHandlerUtil {
         }
     }
 
-    /* loaded from: discord-126021.apk:lombok/javac/handlers/JavacHandlerUtil$ClassSymbolMembersField.SCL.lombok */
+    /* JADX INFO: loaded from: discord-126021.apk:lombok/javac/handlers/JavacHandlerUtil$ClassSymbolMembersField.SCL.lombok */
     static class ClassSymbolMembersField {
         private static final Field membersField;
         private static final Method removeMethod;
@@ -2052,7 +2052,7 @@ public class JavacHandlerUtil {
         return problematic.toList();
     }
 
-    static List<JCTree.JCAnnotation> unboxAndRemoveAnnotationParameter(JCTree.JCAnnotation ast, String parameterName, String errorName, JavacNode annotationNode) throws IllegalArgumentException {
+    static List<JCTree.JCAnnotation> unboxAndRemoveAnnotationParameter(JCTree.JCAnnotation ast, String parameterName, String errorName, JavacNode annotationNode) {
         ListBuffer<JCTree.JCExpression> params = new ListBuffer<>();
         ListBuffer<JCTree.JCAnnotation> result = new ListBuffer<>();
         for (JCTree.JCAssign jCAssign : ast.args) {
@@ -2375,7 +2375,7 @@ public class JavacHandlerUtil {
 
     /* JADX WARN: Failed to restore enum class, 'enum' modifier and super class removed */
     /* JADX WARN: Unknown enum class pattern. Please report as an issue! */
-    /* loaded from: discord-126021.apk:lombok/javac/handlers/JavacHandlerUtil$CopyJavadoc.SCL.lombok */
+    /* JADX INFO: loaded from: discord-126021.apk:lombok/javac/handlers/JavacHandlerUtil$CopyJavadoc.SCL.lombok */
     public static abstract class CopyJavadoc {
         public static final CopyJavadoc VERBATIM = new C128991("VERBATIM", 0);
         public static final CopyJavadoc GETTER = new C129002("GETTER", 1);
@@ -2398,8 +2398,8 @@ public class JavacHandlerUtil {
             return (CopyJavadoc) Enum.valueOf(CopyJavadoc.class, str);
         }
 
-        /* renamed from: lombok.javac.handlers.JavacHandlerUtil$CopyJavadoc$1 */
-        /* loaded from: discord-126021.apk:lombok/javac/handlers/JavacHandlerUtil$CopyJavadoc$1.SCL.lombok */
+        /* JADX INFO: renamed from: lombok.javac.handlers.JavacHandlerUtil$CopyJavadoc$1 */
+        /* JADX INFO: loaded from: discord-126021.apk:lombok/javac/handlers/JavacHandlerUtil$CopyJavadoc$1.SCL.lombok */
         enum C128991 extends CopyJavadoc {
             C128991(String str, int i) {
                 super(str, i, null);
@@ -2418,8 +2418,8 @@ public class JavacHandlerUtil {
             this(str, i);
         }
 
-        /* renamed from: lombok.javac.handlers.JavacHandlerUtil$CopyJavadoc$2 */
-        /* loaded from: discord-126021.apk:lombok/javac/handlers/JavacHandlerUtil$CopyJavadoc$2.SCL.lombok */
+        /* JADX INFO: renamed from: lombok.javac.handlers.JavacHandlerUtil$CopyJavadoc$2 */
+        /* JADX INFO: loaded from: discord-126021.apk:lombok/javac/handlers/JavacHandlerUtil$CopyJavadoc$2.SCL.lombok */
         enum C129002 extends CopyJavadoc {
             C129002(String str, int i) {
                 super(str, i, null);
@@ -2438,8 +2438,8 @@ public class JavacHandlerUtil {
                 return out;
             }
 
-            /* renamed from: lombok.javac.handlers.JavacHandlerUtil$CopyJavadoc$2$1, reason: invalid class name */
-            /* loaded from: discord-126021.apk:lombok/javac/handlers/JavacHandlerUtil$CopyJavadoc$2$1.SCL.lombok */
+            /* JADX INFO: renamed from: lombok.javac.handlers.JavacHandlerUtil$CopyJavadoc$2$1, reason: invalid class name */
+            /* JADX INFO: loaded from: discord-126021.apk:lombok/javac/handlers/JavacHandlerUtil$CopyJavadoc$2$1.SCL.lombok */
             class AnonymousClass1 implements CleanupTask {
                 private final /* synthetic */ JCTree.JCCompilationUnit val$cu;
                 private final /* synthetic */ JCTree val$n;
@@ -2466,8 +2466,8 @@ public class JavacHandlerUtil {
             }
         }
 
-        /* renamed from: lombok.javac.handlers.JavacHandlerUtil$CopyJavadoc$3 */
-        /* loaded from: discord-126021.apk:lombok/javac/handlers/JavacHandlerUtil$CopyJavadoc$3.SCL.lombok */
+        /* JADX INFO: renamed from: lombok.javac.handlers.JavacHandlerUtil$CopyJavadoc$3 */
+        /* JADX INFO: loaded from: discord-126021.apk:lombok/javac/handlers/JavacHandlerUtil$CopyJavadoc$3.SCL.lombok */
         enum C129013 extends CopyJavadoc {
             C129013(String str, int i) {
                 super(str, i, null);
@@ -2479,8 +2479,8 @@ public class JavacHandlerUtil {
             }
         }
 
-        /* renamed from: lombok.javac.handlers.JavacHandlerUtil$CopyJavadoc$4 */
-        /* loaded from: discord-126021.apk:lombok/javac/handlers/JavacHandlerUtil$CopyJavadoc$4.SCL.lombok */
+        /* JADX INFO: renamed from: lombok.javac.handlers.JavacHandlerUtil$CopyJavadoc$4 */
+        /* JADX INFO: loaded from: discord-126021.apk:lombok/javac/handlers/JavacHandlerUtil$CopyJavadoc$4.SCL.lombok */
         enum C129024 extends CopyJavadoc {
             C129024(String str, int i) {
                 super(str, i, null);
@@ -2492,8 +2492,8 @@ public class JavacHandlerUtil {
             }
         }
 
-        /* renamed from: lombok.javac.handlers.JavacHandlerUtil$CopyJavadoc$5 */
-        /* loaded from: discord-126021.apk:lombok/javac/handlers/JavacHandlerUtil$CopyJavadoc$5.SCL.lombok */
+        /* JADX INFO: renamed from: lombok.javac.handlers.JavacHandlerUtil$CopyJavadoc$5 */
+        /* JADX INFO: loaded from: discord-126021.apk:lombok/javac/handlers/JavacHandlerUtil$CopyJavadoc$5.SCL.lombok */
         enum C129035 extends CopyJavadoc {
             C129035(String str, int i) {
                 super(str, i, null);
@@ -2521,8 +2521,8 @@ public class JavacHandlerUtil {
             return JavacHandlerUtil.shouldReturnThis(node) ? HandlerUtil.addReturnsThisIfNeeded(out) : out;
         }
 
-        /* renamed from: lombok.javac.handlers.JavacHandlerUtil$CopyJavadoc$6 */
-        /* loaded from: discord-126021.apk:lombok/javac/handlers/JavacHandlerUtil$CopyJavadoc$6.SCL.lombok */
+        /* JADX INFO: renamed from: lombok.javac.handlers.JavacHandlerUtil$CopyJavadoc$6 */
+        /* JADX INFO: loaded from: discord-126021.apk:lombok/javac/handlers/JavacHandlerUtil$CopyJavadoc$6.SCL.lombok */
         class C129046 implements CleanupTask {
             private final /* synthetic */ JCTree.JCCompilationUnit val$cu;
             private final /* synthetic */ JCTree val$n;

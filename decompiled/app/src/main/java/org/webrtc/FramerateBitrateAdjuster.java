@@ -1,6 +1,6 @@
 package org.webrtc;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public class FramerateBitrateAdjuster extends BaseBitrateAdjuster {
     private static final int INITIAL_FPS = 30;
 

@@ -51,190 +51,190 @@ import p007b.p225i.p226a.p242c.p267x2.p272g0.DefaultEbmlReader;
 import p007b.p225i.p355b.p357b.AbstractIndexedListIterator;
 import p007b.p225i.p355b.p357b.ImmutableList2;
 
-/* compiled from: MatroskaExtractor.java */
-/* renamed from: b.i.a.c.x2.g0.e, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.x2.g0.e, reason: use source file name */
+/* JADX INFO: compiled from: MatroskaExtractor.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class MatroskaExtractor implements Extractor {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final byte[] f8190a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static final byte[] f8191b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public static final byte[] f8192c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public static final UUID f8193d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public static final Map<String, Integer> f8194e;
 
-    /* renamed from: A */
+    /* JADX INFO: renamed from: A */
     public boolean f8195A;
 
-    /* renamed from: B */
+    /* JADX INFO: renamed from: B */
     public int f8196B;
 
-    /* renamed from: C */
+    /* JADX INFO: renamed from: C */
     public long f8197C;
 
-    /* renamed from: D */
+    /* JADX INFO: renamed from: D */
     public boolean f8198D;
 
-    /* renamed from: E */
+    /* JADX INFO: renamed from: E */
     public long f8199E;
 
-    /* renamed from: F */
+    /* JADX INFO: renamed from: F */
     public long f8200F;
 
-    /* renamed from: G */
+    /* JADX INFO: renamed from: G */
     public long f8201G;
 
-    /* renamed from: H */
+    /* JADX INFO: renamed from: H */
     @Nullable
     public LongArray f8202H;
 
-    /* renamed from: I */
+    /* JADX INFO: renamed from: I */
     @Nullable
     public LongArray f8203I;
 
-    /* renamed from: J */
+    /* JADX INFO: renamed from: J */
     public boolean f8204J;
 
-    /* renamed from: K */
+    /* JADX INFO: renamed from: K */
     public boolean f8205K;
 
-    /* renamed from: L */
+    /* JADX INFO: renamed from: L */
     public int f8206L;
 
-    /* renamed from: M */
+    /* JADX INFO: renamed from: M */
     public long f8207M;
 
-    /* renamed from: N */
+    /* JADX INFO: renamed from: N */
     public long f8208N;
 
-    /* renamed from: O */
+    /* JADX INFO: renamed from: O */
     public int f8209O;
 
-    /* renamed from: P */
+    /* JADX INFO: renamed from: P */
     public int f8210P;
 
-    /* renamed from: Q */
+    /* JADX INFO: renamed from: Q */
     public int[] f8211Q;
 
-    /* renamed from: R */
+    /* JADX INFO: renamed from: R */
     public int f8212R;
 
-    /* renamed from: S */
+    /* JADX INFO: renamed from: S */
     public int f8213S;
 
-    /* renamed from: T */
+    /* JADX INFO: renamed from: T */
     public int f8214T;
 
-    /* renamed from: U */
+    /* JADX INFO: renamed from: U */
     public int f8215U;
 
-    /* renamed from: V */
+    /* JADX INFO: renamed from: V */
     public boolean f8216V;
 
-    /* renamed from: W */
+    /* JADX INFO: renamed from: W */
     public int f8217W;
 
-    /* renamed from: X */
+    /* JADX INFO: renamed from: X */
     public int f8218X;
 
-    /* renamed from: Y */
+    /* JADX INFO: renamed from: Y */
     public int f8219Y;
 
-    /* renamed from: Z */
+    /* JADX INFO: renamed from: Z */
     public boolean f8220Z;
 
-    /* renamed from: a0 */
+    /* JADX INFO: renamed from: a0 */
     public boolean f8221a0;
 
-    /* renamed from: b0 */
+    /* JADX INFO: renamed from: b0 */
     public boolean f8222b0;
 
-    /* renamed from: c0 */
+    /* JADX INFO: renamed from: c0 */
     public int f8223c0;
 
-    /* renamed from: d0 */
+    /* JADX INFO: renamed from: d0 */
     public byte f8224d0;
 
-    /* renamed from: e0 */
+    /* JADX INFO: renamed from: e0 */
     public boolean f8225e0;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final EbmlReader f8226f;
 
-    /* renamed from: f0 */
+    /* JADX INFO: renamed from: f0 */
     public ExtractorOutput f8227f0;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public final VarintReader f8228g;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public final SparseArray<c> f8229h;
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public final boolean f8230i;
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final ParsableByteArray f8231j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final ParsableByteArray f8232k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final ParsableByteArray f8233l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public final ParsableByteArray f8234m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public final ParsableByteArray f8235n;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public final ParsableByteArray f8236o;
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public final ParsableByteArray f8237p;
 
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     public final ParsableByteArray f8238q;
 
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     public final ParsableByteArray f8239r;
 
-    /* renamed from: s */
+    /* JADX INFO: renamed from: s */
     public final ParsableByteArray f8240s;
 
-    /* renamed from: t */
+    /* JADX INFO: renamed from: t */
     public ByteBuffer f8241t;
 
-    /* renamed from: u */
+    /* JADX INFO: renamed from: u */
     public long f8242u;
 
-    /* renamed from: v */
+    /* JADX INFO: renamed from: v */
     public long f8243v;
 
-    /* renamed from: w */
+    /* JADX INFO: renamed from: w */
     public long f8244w;
 
-    /* renamed from: x */
+    /* JADX INFO: renamed from: x */
     public long f8245x;
 
-    /* renamed from: y */
+    /* JADX INFO: renamed from: y */
     public long f8246y;
 
-    /* renamed from: z */
+    /* JADX INFO: renamed from: z */
     @Nullable
     public c f8247z;
 
-    /* compiled from: MatroskaExtractor.java */
-    /* renamed from: b.i.a.c.x2.g0.e$b */
+    /* JADX INFO: renamed from: b.i.a.c.x2.g0.e$b */
+    /* JADX INFO: compiled from: MatroskaExtractor.java */
     public final class b implements EbmlProcessor {
         public b(a aVar) {
         }
@@ -281,24 +281,24 @@ public class MatroskaExtractor implements Extractor {
         this.f8211Q = new int[1];
     }
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public static int[] m3671i(@Nullable int[] iArr, int i) {
         return iArr == null ? new int[i] : iArr.length >= i ? iArr : new int[Math.max(iArr.length * 2, i)];
     }
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static byte[] m3672j(long j, String str, long j2) {
         AnimatableValueParser.m531j(j != -9223372036854775807L);
         int i = (int) (j / 3600000000L);
-        long j3 = j - ((i * 3600) * 1000000);
+        long j3 = j - (((long) (i * 3600)) * 1000000);
         int i2 = (int) (j3 / 60000000);
-        long j4 = j3 - ((i2 * 60) * 1000000);
+        long j4 = j3 - (((long) (i2 * 60)) * 1000000);
         int i3 = (int) (j4 / 1000000);
-        return Util2.m3015w(String.format(Locale.US, str, Integer.valueOf(i), Integer.valueOf(i2), Integer.valueOf(i3), Integer.valueOf((int) ((j4 - (i3 * 1000000)) / j2))));
+        return Util2.m3015w(String.format(Locale.US, str, Integer.valueOf(i), Integer.valueOf(i2), Integer.valueOf(i3), Integer.valueOf((int) ((j4 - (((long) i3) * 1000000)) / j2))));
     }
 
     @EnsuresNonNull({"cueTimesUs", "cueClusterPositions"})
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final void m3673a(int i) throws ParserException {
         if (this.f8202H == null || this.f8203I == null) {
             StringBuilder sb = new StringBuilder(37);
@@ -310,7 +310,7 @@ public class MatroskaExtractor implements Extractor {
     }
 
     @Override // p007b.p225i.p226a.p242c.p267x2.Extractor
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final boolean mo3633b(ExtractorInput extractorInput) throws IOException {
         Sniffer sniffer = new Sniffer();
         long jMo3642b = extractorInput.mo3642b();
@@ -321,7 +321,7 @@ public class MatroskaExtractor implements Extractor {
         int i = (int) j;
         extractorInput.mo3652o(sniffer.f8300a.f6793a, 0, 4);
         sniffer.f8301b = 4;
-        for (long jM3101u = sniffer.f8300a.m3101u(); jM3101u != 440786851; jM3101u = ((jM3101u << 8) & (-256)) | (sniffer.f8300a.f6793a[0] & 255)) {
+        for (long jM3101u = sniffer.f8300a.m3101u(); jM3101u != 440786851; jM3101u = ((jM3101u << 8) & (-256)) | ((long) (sniffer.f8300a.f6793a[0] & 255))) {
             int i2 = sniffer.f8301b + 1;
             sniffer.f8301b = i2;
             if (i2 == i) {
@@ -359,7 +359,7 @@ public class MatroskaExtractor implements Extractor {
     }
 
     @EnsuresNonNull({"currentTrack"})
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final void m3674c(int i) throws ParserException {
         if (this.f8247z != null) {
             return;
@@ -372,7 +372,7 @@ public class MatroskaExtractor implements Extractor {
     }
 
     @RequiresNonNull({"#1.output"})
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final void m3675d(c cVar, long j, int i, int i2, int i3) {
         byte[] bArrM3672j;
         int i4;
@@ -501,14 +501,11 @@ public class MatroskaExtractor implements Extractor {
     /* JADX WARN: Type inference failed for: r3v145 */
     /* JADX WARN: Type inference failed for: r3v68 */
     /* JADX WARN: Type inference failed for: r3v79 */
-    /* JADX WARN: Type inference failed for: r4v124 */
-    /* JADX WARN: Type inference failed for: r4v139 */
-    /* JADX WARN: Type inference failed for: r4v3, types: [boolean] */
-    /* JADX WARN: Type inference failed for: r5v89, types: [b.i.a.c.x2.g0.g] */
-    /* JADX WARN: Type inference failed for: r5v90, types: [b.i.a.c.x2.g0.g] */
-    /* JADX WARN: Type inference failed for: r8v28, types: [b.i.a.c.x2.g0.g] */
+    /* JADX WARN: Type inference failed for: r4v141 */
+    /* JADX WARN: Type inference failed for: r4v56, types: [int] */
+    /* JADX WARN: Type inference failed for: r4v69 */
     @Override // p007b.p225i.p226a.p242c.p267x2.Extractor
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
@@ -527,12 +524,12 @@ public class MatroskaExtractor implements Extractor {
             DefaultEbmlReader defaultEbmlReader = (DefaultEbmlReader) this.f8226f;
             AnimatableValueParser.m438H(defaultEbmlReader.f8184d);
             boolean z5 = z2;
-            ?? r4 = z3;
+            boolean z6 = z3;
             while (true) {
                 DefaultEbmlReader.b bVarPeek = defaultEbmlReader.f8182b.peek();
                 if (bVarPeek == null || extractorInput.getPosition() < bVarPeek.f8189b) {
                     if (defaultEbmlReader.f8185e == 0) {
-                        long jM3687c = defaultEbmlReader.f8183c.m3687c(extractorInput, r4, z5, 4);
+                        long jM3687c = defaultEbmlReader.f8183c.m3687c(extractorInput, z6, z5, 4);
                         if (jM3687c == -2) {
                             extractorInput.mo3649k();
                             while (true) {
@@ -546,18 +543,18 @@ public class MatroskaExtractor implements Extractor {
                                         jM3687c = iM3685a;
                                     }
                                 }
-                                extractorInput.mo3650l(r4 == true ? 1 : 0);
+                                extractorInput.mo3650l(z6 ? 1 : 0);
                             }
                         }
                         if (jM3687c == -1) {
                             z4 = false;
                         } else {
                             defaultEbmlReader.f8186f = (int) jM3687c;
-                            defaultEbmlReader.f8185e = r4 == true ? 1 : 0;
+                            defaultEbmlReader.f8185e = z6 ? 1 : 0;
                         }
                     }
-                    if (defaultEbmlReader.f8185e == r4) {
-                        defaultEbmlReader.f8187g = defaultEbmlReader.f8183c.m3687c(extractorInput, z5, r4, 8);
+                    if (defaultEbmlReader.f8185e == z6) {
+                        defaultEbmlReader.f8187g = defaultEbmlReader.f8183c.m3687c(extractorInput, z5, z6, 8);
                         defaultEbmlReader.f8185e = 2;
                     }
                     EbmlProcessor ebmlProcessor = defaultEbmlReader.f8184d;
@@ -673,8 +670,8 @@ public class MatroskaExtractor implements Extractor {
                         extractorInput.mo3650l((int) defaultEbmlReader.f8187g);
                         z5 = false;
                         defaultEbmlReader.f8185e = 0;
-                        r4 = 1;
-                    } else if (i == r4) {
+                        z6 = true;
+                    } else if (i == z6) {
                         long position = extractorInput.getPosition();
                         defaultEbmlReader.f8182b.push(new DefaultEbmlReader.b(defaultEbmlReader.f8186f, defaultEbmlReader.f8187g + position, null));
                         EbmlProcessor ebmlProcessor2 = defaultEbmlReader.f8184d;
@@ -981,10 +978,10 @@ public class MatroskaExtractor implements Extractor {
                         Objects.requireNonNull(matroskaExtractor4);
                         if (i13 == 161 || i13 == 163) {
                             if (matroskaExtractor4.f8206L == 0) {
-                                matroskaExtractor4.f8212R = (int) matroskaExtractor4.f8228g.m3687c(extractorInput, z5, r4, 8);
+                                matroskaExtractor4.f8212R = (int) matroskaExtractor4.f8228g.m3687c(extractorInput, z5, z6, 8);
                                 matroskaExtractor4.f8213S = matroskaExtractor4.f8228g.f8305d;
                                 matroskaExtractor4.f8208N = -9223372036854775807L;
-                                matroskaExtractor4.f8206L = r4 == true ? 1 : 0;
+                                matroskaExtractor4.f8206L = z6 ? 1 : 0;
                                 matroskaExtractor4.f8233l.m3075A(z5 ? 1 : 0);
                             }
                             c cVar = matroskaExtractor4.f8229h.get(matroskaExtractor4.f8212R);
@@ -993,18 +990,18 @@ public class MatroskaExtractor implements Extractor {
                                 matroskaExtractor4.f8206L = z5 ? 1 : 0;
                             } else {
                                 Objects.requireNonNull(cVar.f8272X);
-                                if (matroskaExtractor4.f8206L == r4) {
+                                if (matroskaExtractor4.f8206L == z6) {
                                     matroskaExtractor4.m3677k(extractorInput, 3);
-                                    int i15 = (matroskaExtractor4.f8233l.f6793a[2] & 6) >> (r4 == true ? 1 : 0);
+                                    int i15 = (matroskaExtractor4.f8233l.f6793a[2] & 6) >> (z6 ? 1 : 0);
                                     byte b2 = 255;
                                     if (i15 == 0) {
-                                        matroskaExtractor4.f8210P = r4 == true ? 1 : 0;
-                                        int[] iArrM3671i = m3671i(matroskaExtractor4.f8211Q, r4 == true ? 1 : 0);
+                                        matroskaExtractor4.f8210P = z6 ? 1 : 0;
+                                        int[] iArrM3671i = m3671i(matroskaExtractor4.f8211Q, z6 ? 1 : 0);
                                         matroskaExtractor4.f8211Q = iArrM3671i;
                                         iArrM3671i[z5 ? 1 : 0] = (i14 - matroskaExtractor4.f8213S) - 3;
                                     } else {
                                         matroskaExtractor4.m3677k(extractorInput, 4);
-                                        int i16 = (matroskaExtractor4.f8233l.f6793a[3] & 255) + (r4 == true ? 1 : 0);
+                                        int i16 = (matroskaExtractor4.f8233l.f6793a[3] & 255) + (z6 ? 1 : 0);
                                         matroskaExtractor4.f8210P = i16;
                                         int[] iArrM3671i2 = m3671i(matroskaExtractor4.f8211Q, i16);
                                         matroskaExtractor4.f8211Q = iArrM3671i2;
@@ -1014,49 +1011,49 @@ public class MatroskaExtractor implements Extractor {
                                             Arrays.fill(iArrM3671i2, z5 ? 1 : 0, i18, i17 / i18);
                                         } else {
                                             int i19 = 4;
-                                            if (i15 != r4) {
+                                            if (i15 != z6) {
                                                 if (i15 != 3) {
                                                     throw outline.m884w0(36, "Unexpected lacing value: ", i15, null);
                                                 }
                                                 int i20 = 0;
                                                 int i21 = 0;
                                                 ?? r3 = z5;
-                                                int i22 = r4;
+                                                boolean z7 = z6;
                                                 while (true) {
-                                                    int i23 = matroskaExtractor4.f8210P;
-                                                    if (i20 < i23 - 1) {
+                                                    int i22 = matroskaExtractor4.f8210P;
+                                                    if (i20 < i22 - 1) {
                                                         matroskaExtractor4.f8211Q[i20] = r3;
                                                         i19++;
                                                         matroskaExtractor4.m3677k(extractorInput, i19);
-                                                        int i24 = i19 - 1;
-                                                        if (matroskaExtractor4.f8233l.f6793a[i24] == 0) {
+                                                        int i23 = i19 - 1;
+                                                        if (matroskaExtractor4.f8233l.f6793a[i23] == 0) {
                                                             throw ParserException.m8755a("No valid varint length mask found", null);
                                                         }
-                                                        int i25 = 8;
-                                                        int i26 = 0;
-                                                        int i27 = i22;
+                                                        int i24 = 8;
+                                                        int i25 = 0;
+                                                        ?? r4 = z7;
                                                         while (true) {
-                                                            if (i26 < i25) {
-                                                                int i28 = i27 << (7 - i26);
-                                                                if ((matroskaExtractor4.f8233l.f6793a[i24] & i28) != 0) {
-                                                                    int i29 = i19 + i26;
-                                                                    matroskaExtractor4.m3677k(extractorInput, i29);
-                                                                    j = (~i28) & matroskaExtractor4.f8233l.f6793a[i24] & b2;
-                                                                    int i30 = i24 + 1;
-                                                                    while (i30 < i29) {
-                                                                        j = (j << 8) | (matroskaExtractor4.f8233l.f6793a[i30] & 255);
-                                                                        i30++;
-                                                                        i29 = i29;
+                                                            if (i25 < i24) {
+                                                                int i26 = r4 << (7 - i25);
+                                                                if ((matroskaExtractor4.f8233l.f6793a[i23] & i26) != 0) {
+                                                                    int i27 = i19 + i25;
+                                                                    matroskaExtractor4.m3677k(extractorInput, i27);
+                                                                    j = (~i26) & matroskaExtractor4.f8233l.f6793a[i23] & b2;
+                                                                    int i28 = i23 + 1;
+                                                                    while (i28 < i27) {
+                                                                        j = (j << 8) | ((long) (matroskaExtractor4.f8233l.f6793a[i28] & 255));
+                                                                        i28++;
+                                                                        i27 = i27;
                                                                     }
-                                                                    int i31 = i29;
+                                                                    int i29 = i27;
                                                                     if (i20 > 0) {
-                                                                        j -= (1 << ((i26 * 7) + 6)) - 1;
+                                                                        j -= (1 << ((i25 * 7) + 6)) - 1;
                                                                     }
-                                                                    i19 = i31;
+                                                                    i19 = i29;
                                                                 } else {
-                                                                    i26++;
-                                                                    i25 = 8;
-                                                                    i27 = 1;
+                                                                    i25++;
+                                                                    i24 = 8;
+                                                                    r4 = 1;
                                                                     b2 = 255;
                                                                 }
                                                             } else {
@@ -1064,41 +1061,41 @@ public class MatroskaExtractor implements Extractor {
                                                             }
                                                         }
                                                         if (j >= -2147483648L && j <= 2147483647L) {
-                                                            int i32 = (int) j;
+                                                            int i30 = (int) j;
                                                             int[] iArr2 = matroskaExtractor4.f8211Q;
                                                             if (i20 != 0) {
-                                                                i32 += iArr2[i20 - 1];
+                                                                i30 += iArr2[i20 - 1];
                                                             }
-                                                            iArr2[i20] = i32;
+                                                            iArr2[i20] = i30;
                                                             i21 += iArr2[i20];
                                                             i20++;
                                                             r3 = 0;
-                                                            i22 = 1;
+                                                            z7 = true;
                                                             b2 = 255;
                                                         }
                                                     } else {
-                                                        matroskaExtractor4.f8211Q[i23 - 1] = ((i14 - matroskaExtractor4.f8213S) - i19) - i21;
+                                                        matroskaExtractor4.f8211Q[i22 - 1] = ((i14 - matroskaExtractor4.f8213S) - i19) - i21;
                                                     }
                                                 }
                                                 throw ParserException.m8755a("EBML lacing sample size out of range.", null);
                                             }
-                                            int i33 = 0;
-                                            int i34 = 0;
+                                            int i31 = 0;
+                                            int i32 = 0;
                                             while (true) {
-                                                int i35 = matroskaExtractor4.f8210P;
-                                                if (i33 < i35 - 1) {
-                                                    matroskaExtractor4.f8211Q[i33] = z5 ? 1 : 0;
+                                                int i33 = matroskaExtractor4.f8210P;
+                                                if (i31 < i33 - 1) {
+                                                    matroskaExtractor4.f8211Q[i31] = z5 ? 1 : 0;
                                                     do {
-                                                        i19 += r4 == true ? 1 : 0;
+                                                        i19 += z6 ? 1 : 0;
                                                         matroskaExtractor4.m3677k(extractorInput, i19);
                                                         i3 = matroskaExtractor4.f8233l.f6793a[i19 - 1] & 255;
                                                         iArr = matroskaExtractor4.f8211Q;
-                                                        iArr[i33] = iArr[i33] + i3;
+                                                        iArr[i31] = iArr[i31] + i3;
                                                     } while (i3 == 255);
-                                                    i34 += iArr[i33];
-                                                    i33++;
+                                                    i32 += iArr[i31];
+                                                    i31++;
                                                 } else {
-                                                    matroskaExtractor4.f8211Q[i35 - 1] = ((i14 - matroskaExtractor4.f8213S) - i19) - i34;
+                                                    matroskaExtractor4.f8211Q[i33 - 1] = ((i14 - matroskaExtractor4.f8213S) - i19) - i32;
                                                 }
                                             }
                                         }
@@ -1111,9 +1108,9 @@ public class MatroskaExtractor implements Extractor {
                                 }
                                 if (i13 == 163) {
                                     while (true) {
-                                        int i36 = matroskaExtractor4.f8209O;
-                                        if (i36 < matroskaExtractor4.f8210P) {
-                                            matroskaExtractor4.m3675d(cVar, ((matroskaExtractor4.f8209O * cVar.f8278e) / 1000) + matroskaExtractor4.f8207M, matroskaExtractor4.f8214T, matroskaExtractor4.m3680n(extractorInput, cVar, matroskaExtractor4.f8211Q[i36]), 0);
+                                        int i34 = matroskaExtractor4.f8209O;
+                                        if (i34 < matroskaExtractor4.f8210P) {
+                                            matroskaExtractor4.m3675d(cVar, ((long) ((matroskaExtractor4.f8209O * cVar.f8278e) / 1000)) + matroskaExtractor4.f8207M, matroskaExtractor4.f8214T, matroskaExtractor4.m3680n(extractorInput, cVar, matroskaExtractor4.f8211Q[i34]), 0);
                                             matroskaExtractor4.f8209O++;
                                         } else {
                                             matroskaExtractor4.f8206L = 0;
@@ -1121,10 +1118,10 @@ public class MatroskaExtractor implements Extractor {
                                     }
                                 } else {
                                     while (true) {
-                                        int i37 = matroskaExtractor4.f8209O;
-                                        if (i37 < matroskaExtractor4.f8210P) {
+                                        int i35 = matroskaExtractor4.f8209O;
+                                        if (i35 < matroskaExtractor4.f8210P) {
                                             int[] iArr3 = matroskaExtractor4.f8211Q;
-                                            iArr3[i37] = matroskaExtractor4.m3680n(extractorInput, cVar, iArr3[i37]);
+                                            iArr3[i35] = matroskaExtractor4.m3680n(extractorInput, cVar, iArr3[i35]);
                                             matroskaExtractor4.f8209O++;
                                         }
                                     }
@@ -1134,8 +1131,8 @@ public class MatroskaExtractor implements Extractor {
                             if (i13 == 16877) {
                                 matroskaExtractor4.m3674c(i13);
                                 c cVar2 = matroskaExtractor4.f8247z;
-                                int i38 = cVar2.f8280g;
-                                if (i38 == 1685485123 || i38 == 1685480259) {
+                                int i36 = cVar2.f8280g;
+                                if (i36 == 1685485123 || i36 == 1685480259) {
                                     byte[] bArr3 = new byte[i14];
                                     cVar2.f8262N = bArr3;
                                     extractorInput.readFully(bArr3, z5 ? 1 : 0, i14);
@@ -1151,7 +1148,7 @@ public class MatroskaExtractor implements Extractor {
                                 byte[] bArr5 = new byte[i14];
                                 extractorInput.readFully(bArr5, z5 ? 1 : 0, i14);
                                 matroskaExtractor4.m3674c(i13);
-                                matroskaExtractor4.f8247z.f8283j = new TrackOutput2.a(r4 == true ? 1 : 0, bArr5, z5 ? 1 : 0, z5 ? 1 : 0);
+                                matroskaExtractor4.f8247z.f8283j = new TrackOutput2.a(z6 ? 1 : 0, bArr5, z5 ? 1 : 0, z5 ? 1 : 0);
                             } else if (i13 == 21419) {
                                 Arrays.fill(matroskaExtractor4.f8235n.f6793a, z5 ? (byte) 1 : (byte) 0);
                                 extractorInput.readFully(matroskaExtractor4.f8235n.f6793a, 4 - i14, i14);
@@ -1198,68 +1195,68 @@ public class MatroskaExtractor implements Extractor {
                             throw ParserException.m8755a(sb4.toString(), null);
                         }
                         EbmlProcessor ebmlProcessor6 = defaultEbmlReader.f8184d;
-                        int i39 = defaultEbmlReader.f8186f;
-                        int i40 = (int) j6;
-                        double dIntBitsToFloat = i40 == 4 ? Float.intBitsToFloat((int) r9) : Double.longBitsToDouble(defaultEbmlReader.m3670a(extractorInput, i40));
+                        int i37 = defaultEbmlReader.f8186f;
+                        int i38 = (int) j6;
+                        double dIntBitsToFloat = i38 == 4 ? Float.intBitsToFloat((int) r9) : Double.longBitsToDouble(defaultEbmlReader.m3670a(extractorInput, i38));
                         MatroskaExtractor matroskaExtractor5 = MatroskaExtractor.this;
                         Objects.requireNonNull(matroskaExtractor5);
-                        if (i39 == 181) {
-                            matroskaExtractor5.m3674c(i39);
+                        if (i37 == 181) {
+                            matroskaExtractor5.m3674c(i37);
                             matroskaExtractor5.f8247z.f8265Q = (int) dIntBitsToFloat;
-                        } else if (i39 != 17545) {
-                            switch (i39) {
+                        } else if (i37 != 17545) {
+                            switch (i37) {
                                 case 21969:
-                                    matroskaExtractor5.m3674c(i39);
+                                    matroskaExtractor5.m3674c(i37);
                                     matroskaExtractor5.f8247z.f8252D = (float) dIntBitsToFloat;
                                     break;
                                 case 21970:
-                                    matroskaExtractor5.m3674c(i39);
+                                    matroskaExtractor5.m3674c(i37);
                                     matroskaExtractor5.f8247z.f8253E = (float) dIntBitsToFloat;
                                     break;
                                 case 21971:
-                                    matroskaExtractor5.m3674c(i39);
+                                    matroskaExtractor5.m3674c(i37);
                                     matroskaExtractor5.f8247z.f8254F = (float) dIntBitsToFloat;
                                     break;
                                 case 21972:
-                                    matroskaExtractor5.m3674c(i39);
+                                    matroskaExtractor5.m3674c(i37);
                                     matroskaExtractor5.f8247z.f8255G = (float) dIntBitsToFloat;
                                     break;
                                 case 21973:
-                                    matroskaExtractor5.m3674c(i39);
+                                    matroskaExtractor5.m3674c(i37);
                                     matroskaExtractor5.f8247z.f8256H = (float) dIntBitsToFloat;
                                     break;
                                 case 21974:
-                                    matroskaExtractor5.m3674c(i39);
+                                    matroskaExtractor5.m3674c(i37);
                                     matroskaExtractor5.f8247z.f8257I = (float) dIntBitsToFloat;
                                     break;
                                 case 21975:
-                                    matroskaExtractor5.m3674c(i39);
+                                    matroskaExtractor5.m3674c(i37);
                                     matroskaExtractor5.f8247z.f8258J = (float) dIntBitsToFloat;
                                     break;
                                 case 21976:
-                                    matroskaExtractor5.m3674c(i39);
+                                    matroskaExtractor5.m3674c(i37);
                                     matroskaExtractor5.f8247z.f8259K = (float) dIntBitsToFloat;
                                     break;
                                 case 21977:
-                                    matroskaExtractor5.m3674c(i39);
+                                    matroskaExtractor5.m3674c(i37);
                                     matroskaExtractor5.f8247z.f8260L = (float) dIntBitsToFloat;
                                     break;
                                 case 21978:
-                                    matroskaExtractor5.m3674c(i39);
+                                    matroskaExtractor5.m3674c(i37);
                                     matroskaExtractor5.f8247z.f8261M = (float) dIntBitsToFloat;
                                     break;
                                 default:
-                                    switch (i39) {
+                                    switch (i37) {
                                         case 30323:
-                                            matroskaExtractor5.m3674c(i39);
+                                            matroskaExtractor5.m3674c(i37);
                                             matroskaExtractor5.f8247z.f8292s = (float) dIntBitsToFloat;
                                             break;
                                         case 30324:
-                                            matroskaExtractor5.m3674c(i39);
+                                            matroskaExtractor5.m3674c(i37);
                                             matroskaExtractor5.f8247z.f8293t = (float) dIntBitsToFloat;
                                             break;
                                         case 30325:
-                                            matroskaExtractor5.m3674c(i39);
+                                            matroskaExtractor5.m3674c(i37);
                                             matroskaExtractor5.f8247z.f8294u = (float) dIntBitsToFloat;
                                             break;
                                     }
@@ -1278,8 +1275,8 @@ public class MatroskaExtractor implements Extractor {
         if (z4) {
             return 0;
         }
-        for (int i41 = 0; i41 < this.f8229h.size(); i41++) {
-            c cVarValueAt = this.f8229h.valueAt(i41);
+        for (int i39 = 0; i39 < this.f8229h.size(); i39++) {
+            c cVarValueAt = this.f8229h.valueAt(i39);
             Objects.requireNonNull(cVarValueAt.f8272X);
             TrueHdSampleRechunker trueHdSampleRechunker = cVarValueAt.f8268T;
             if (trueHdSampleRechunker != null) {
@@ -1290,14 +1287,14 @@ public class MatroskaExtractor implements Extractor {
     }
 
     @Override // p007b.p225i.p226a.p242c.p267x2.Extractor
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final void mo3636f(ExtractorOutput extractorOutput) {
         this.f8227f0 = extractorOutput;
     }
 
     @Override // p007b.p225i.p226a.p242c.p267x2.Extractor
     @CallSuper
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public void mo3637g(long j, long j2) {
         this.f8201G = -9223372036854775807L;
         this.f8206L = 0;
@@ -1339,13 +1336,13 @@ public class MatroskaExtractor implements Extractor {
     /* JADX WARN: Type inference failed for: r0v15, types: [java.lang.Throwable] */
     /* JADX WARN: Type inference failed for: r0v9, types: [b.i.a.c.x2.g0.e$c, java.lang.Object] */
     @CallSuper
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
     public void m3676h(int i) throws ParserException {
         boolean z2;
-        char c2;
+        byte b2;
         boolean z3;
         int iM3010r;
         List<byte[]> listSingletonList;
@@ -1358,14 +1355,15 @@ public class MatroskaExtractor implements Extractor {
         Pair pair;
         Pair pair2;
         String str4;
-        List<byte[]> list2;
         String str5;
         String str6;
         String str7;
+        List<byte[]> list2;
         int i3;
         String str8;
         List<byte[]> list3;
         List<byte[]> list4;
+        List<byte[]> list5;
         List<byte[]> listM6266u;
         byte[] bArr;
         Format2.b bVar;
@@ -1377,8 +1375,8 @@ public class MatroskaExtractor implements Extractor {
         int i7;
         String str9;
         DolbyVisionConfig dolbyVisionConfigM3126a;
-        List<byte[]> list5;
         List<byte[]> list6;
+        List<byte[]> list7;
         SeekMap bVar2;
         int i8;
         int i9;
@@ -1396,7 +1394,7 @@ public class MatroskaExtractor implements Extractor {
             Objects.requireNonNull(cVar.f8272X);
             int i13 = 0;
             while (i13 < this.f8210P) {
-                long j = this.f8207M + ((cVar.f8278e * i13) / 1000);
+                long j = this.f8207M + ((long) ((cVar.f8278e * i13) / 1000));
                 int i14 = this.f8214T;
                 if (i13 == 0 && !this.f8216V) {
                     i14 |= 1;
@@ -1566,211 +1564,211 @@ public class MatroskaExtractor implements Extractor {
             str11.hashCode();
             switch (str11.hashCode()) {
                 case -2095576542:
-                    c2 = str11.equals("V_MPEG4/ISO/AP") ? (char) 0 : (char) 65535;
+                    b2 = str11.equals("V_MPEG4/ISO/AP") ? (byte) 0 : (byte) -1;
                     break;
                 case -2095575984:
                     if (str11.equals("V_MPEG4/ISO/SP")) {
-                        c2 = 1;
+                        b2 = 1;
                         break;
                     }
                     break;
                 case -1985379776:
                     if (str11.equals("A_MS/ACM")) {
-                        c2 = 2;
+                        b2 = 2;
                         break;
                     }
                     break;
                 case -1784763192:
                     if (str11.equals("A_TRUEHD")) {
-                        c2 = 3;
+                        b2 = 3;
                         break;
                     }
                     break;
                 case -1730367663:
                     if (str11.equals("A_VORBIS")) {
-                        c2 = 4;
+                        b2 = 4;
                         break;
                     }
                     break;
                 case -1482641358:
                     if (str11.equals("A_MPEG/L2")) {
-                        c2 = 5;
+                        b2 = 5;
                         break;
                     }
                     break;
                 case -1482641357:
                     if (str11.equals("A_MPEG/L3")) {
-                        c2 = 6;
+                        b2 = 6;
                         break;
                     }
                     break;
                 case -1373388978:
                     if (str11.equals("V_MS/VFW/FOURCC")) {
-                        c2 = 7;
+                        b2 = 7;
                         break;
                     }
                     break;
                 case -933872740:
                     if (str11.equals("S_DVBSUB")) {
-                        c2 = '\b';
+                        b2 = 8;
                         break;
                     }
                     break;
                 case -538363189:
                     if (str11.equals("V_MPEG4/ISO/ASP")) {
-                        c2 = '\t';
+                        b2 = 9;
                         break;
                     }
                     break;
                 case -538363109:
                     if (str11.equals("V_MPEG4/ISO/AVC")) {
-                        c2 = '\n';
+                        b2 = 10;
                         break;
                     }
                     break;
                 case -425012669:
                     if (str11.equals("S_VOBSUB")) {
-                        c2 = 11;
+                        b2 = 11;
                         break;
                     }
                     break;
                 case -356037306:
                     if (str11.equals("A_DTS/LOSSLESS")) {
-                        c2 = '\f';
+                        b2 = 12;
                         break;
                     }
                     break;
                 case 62923557:
                     if (str11.equals("A_AAC")) {
-                        c2 = '\r';
+                        b2 = 13;
                         break;
                     }
                     break;
                 case 62923603:
                     if (str11.equals("A_AC3")) {
-                        c2 = 14;
+                        b2 = 14;
                         break;
                     }
                     break;
                 case 62927045:
                     if (str11.equals("A_DTS")) {
-                        c2 = 15;
+                        b2 = 15;
                         break;
                     }
                     break;
                 case 82318131:
                     if (str11.equals("V_AV1")) {
-                        c2 = 16;
+                        b2 = 16;
                         break;
                     }
                     break;
                 case 82338133:
                     if (str11.equals("V_VP8")) {
-                        c2 = 17;
+                        b2 = 17;
                         break;
                     }
                     break;
                 case 82338134:
                     if (str11.equals("V_VP9")) {
-                        c2 = 18;
+                        b2 = 18;
                         break;
                     }
                     break;
                 case 99146302:
                     if (str11.equals("S_HDMV/PGS")) {
-                        c2 = 19;
+                        b2 = 19;
                         break;
                     }
                     break;
                 case 444813526:
                     if (str11.equals("V_THEORA")) {
-                        c2 = 20;
+                        b2 = 20;
                         break;
                     }
                     break;
                 case 542569478:
                     if (str11.equals("A_DTS/EXPRESS")) {
-                        c2 = 21;
+                        b2 = 21;
                         break;
                     }
                     break;
                 case 635596514:
                     if (str11.equals("A_PCM/FLOAT/IEEE")) {
-                        c2 = 22;
+                        b2 = 22;
                         break;
                     }
                     break;
                 case 725948237:
                     if (str11.equals("A_PCM/INT/BIG")) {
-                        c2 = 23;
+                        b2 = 23;
                         break;
                     }
                     break;
                 case 725957860:
                     if (str11.equals("A_PCM/INT/LIT")) {
-                        c2 = 24;
+                        b2 = 24;
                         break;
                     }
                     break;
                 case 738597099:
                     if (str11.equals("S_TEXT/ASS")) {
-                        c2 = 25;
+                        b2 = 25;
                         break;
                     }
                     break;
                 case 855502857:
                     if (str11.equals("V_MPEGH/ISO/HEVC")) {
-                        c2 = 26;
+                        b2 = 26;
                         break;
                     }
                     break;
                 case 1422270023:
                     if (str11.equals("S_TEXT/UTF8")) {
-                        c2 = 27;
+                        b2 = 27;
                         break;
                     }
                     break;
                 case 1809237540:
                     if (str11.equals("V_MPEG2")) {
-                        c2 = 28;
+                        b2 = 28;
                         break;
                     }
                     break;
                 case 1950749482:
                     if (str11.equals("A_EAC3")) {
-                        c2 = 29;
+                        b2 = 29;
                         break;
                     }
                     break;
                 case 1950789798:
                     if (str11.equals("A_FLAC")) {
-                        c2 = 30;
+                        b2 = 30;
                         break;
                     }
                     break;
                 case 1951062397:
                     if (str11.equals("A_OPUS")) {
-                        c2 = 31;
+                        b2 = 31;
                         break;
                     }
                     break;
             }
             String str12 = "video/x-unknown";
             String str13 = "audio/x-unknown";
-            switch (c2) {
+            switch (b2) {
                 case 0:
                 case 1:
-                case '\t':
+                case 9:
                     byte[] bArr3 = r0.f8284k;
                     str13 = "video/mp4v-es";
                     listSingletonList = bArr3 == null ? null : Collections.singletonList(bArr3);
                     i2 = -1;
                     list = listSingletonList;
                     str = null;
-                    list5 = list;
+                    list6 = list;
                     str8 = str;
                     i3 = i2;
-                    list2 = list5;
+                    list2 = list6;
                     iM3010r = -1;
                     bArr = r0.f8262N;
                     if (bArr != null && (dolbyVisionConfigM3126a = DolbyVisionConfig.m3126a(new ParsableByteArray(bArr))) != null) {
@@ -1946,10 +1944,10 @@ public class MatroskaExtractor implements Extractor {
                                     i2 = -1;
                                     list = listSingletonList;
                                     str = null;
-                                    list5 = list;
+                                    list6 = list;
                                     str8 = str;
                                     i3 = i2;
-                                    list2 = list5;
+                                    list2 = list6;
                                     iM3010r = -1;
                                     bArr = r0.f8262N;
                                     if (bArr != null) {
@@ -1983,10 +1981,10 @@ public class MatroskaExtractor implements Extractor {
                             i2 = -1;
                             list = listSingletonList;
                             str = null;
-                            list5 = list;
+                            list6 = list;
                             str8 = str;
                             i3 = i2;
-                            list2 = list5;
+                            list2 = list6;
                             iM3010r = -1;
                             bArr = r0.f8262N;
                             if (bArr != null) {
@@ -2020,10 +2018,10 @@ public class MatroskaExtractor implements Extractor {
                         i2 = -1;
                         list = listSingletonList;
                         str = null;
-                        list5 = list;
+                        list6 = list;
                         str8 = str;
                         i3 = i2;
-                        list2 = list5;
+                        list2 = list6;
                         iM3010r = -1;
                         bArr = r0.f8262N;
                         if (bArr != null) {
@@ -2059,10 +2057,10 @@ public class MatroskaExtractor implements Extractor {
                     i2 = -1;
                     list = listSingletonList;
                     str = null;
-                    list5 = list;
+                    list6 = list;
                     str8 = str;
                     i3 = i2;
-                    list2 = list5;
+                    list2 = list6;
                     iM3010r = -1;
                     bArr = r0.f8262N;
                     if (bArr != null) {
@@ -2132,10 +2130,10 @@ public class MatroskaExtractor implements Extractor {
                             str13 = "audio/vorbis";
                             list = arrayList2;
                             str = null;
-                            list5 = list;
+                            list6 = list;
                             str8 = str;
                             i3 = i2;
-                            list2 = list5;
+                            list2 = list6;
                             iM3010r = -1;
                             bArr = r0.f8262N;
                             if (bArr != null) {
@@ -2173,12 +2171,12 @@ public class MatroskaExtractor implements Extractor {
                     i2 = 4096;
                     arrayList = null;
                     str = null;
-                    list6 = arrayList;
+                    list7 = arrayList;
                     str13 = str3;
-                    list5 = list6;
+                    list6 = list7;
                     str8 = str;
                     i3 = i2;
-                    list2 = list5;
+                    list2 = list6;
                     iM3010r = -1;
                     bArr = r0.f8262N;
                     if (bArr != null) {
@@ -2210,12 +2208,12 @@ public class MatroskaExtractor implements Extractor {
                     i2 = 4096;
                     arrayList = null;
                     str = null;
-                    list6 = arrayList;
+                    list7 = arrayList;
                     str13 = str3;
-                    list5 = list6;
+                    list6 = list7;
                     str8 = str;
                     i3 = i2;
-                    list2 = list5;
+                    list2 = list6;
                     iM3010r = -1;
                     bArr = r0.f8262N;
                     if (bArr != null) {
@@ -2245,7 +2243,7 @@ public class MatroskaExtractor implements Extractor {
                     byte[] bArrM3683a2 = r0.m3683a(r0.f8275b);
                     try {
                         AnimatableValueParser.m531j(16 <= bArrM3683a2.length);
-                        long j5 = (bArrM3683a2[16] & 255) | ((bArrM3683a2[17] & 255) << 8) | ((bArrM3683a2[18] & 255) << 16) | ((255 & bArrM3683a2[19]) << 24);
+                        long j5 = (((long) bArrM3683a2[16]) & 255) | ((((long) bArrM3683a2[17]) & 255) << 8) | ((((long) bArrM3683a2[18]) & 255) << 16) | ((255 & ((long) bArrM3683a2[19])) << 24);
                         if (j5 == 1482049860) {
                             pair2 = new Pair("video/divx", null);
                         } else if (j5 == 859189832) {
@@ -2270,15 +2268,15 @@ public class MatroskaExtractor implements Extractor {
                         str3 = str4;
                         list3 = listM6266u;
                         str7 = null;
-                        list4 = list3;
+                        list5 = list3;
                         str = str7;
                         i2 = -1;
-                        list6 = list4;
+                        list7 = list5;
                         str13 = str3;
-                        list5 = list6;
+                        list6 = list7;
                         str8 = str;
                         i3 = i2;
-                        list2 = list5;
+                        list2 = list6;
                         iM3010r = -1;
                         bArr = r0.f8262N;
                         if (bArr != null) {
@@ -2307,7 +2305,7 @@ public class MatroskaExtractor implements Extractor {
                         throw ParserException.m8755a("Error parsing FourCC private data", null);
                     }
                     break;
-                case '\b':
+                case 8:
                     byte[] bArr6 = new byte[4];
                     System.arraycopy(r0.m3683a(r0.f8275b), 0, bArr6, 0, 4);
                     ImmutableList2 immutableList2M6266u = ImmutableList2.m6266u(bArr6);
@@ -2316,15 +2314,15 @@ public class MatroskaExtractor implements Extractor {
                     str3 = str4;
                     list3 = listM6266u;
                     str7 = null;
-                    list4 = list3;
+                    list5 = list3;
                     str = str7;
                     i2 = -1;
-                    list6 = list4;
+                    list7 = list5;
                     str13 = str3;
-                    list5 = list6;
+                    list6 = list7;
                     str8 = str;
                     i3 = i2;
-                    list2 = list5;
+                    list2 = list6;
                     iM3010r = -1;
                     bArr = r0.f8262N;
                     if (bArr != null) {
@@ -2350,16 +2348,18 @@ public class MatroskaExtractor implements Extractor {
                     trackOutput2Mo2492p2222222222.mo2526e(format2M3277a2222222222);
                     this.f8229h.put(r0.f8276c, r0);
                     break;
-                case '\n':
+                case 10:
                     AvcConfig avcConfigM3122b = AvcConfig.m3122b(new ParsableByteArray(r0.m3683a(r0.f8275b)));
-                    list2 = avcConfigM3122b.f6837a;
+                    List<byte[]> list8 = avcConfigM3122b.f6837a;
                     r0.f8273Y = avcConfigM3122b.f6838b;
                     str5 = avcConfigM3122b.f6842f;
                     str6 = "video/avc";
+                    list4 = list8;
                     str8 = str5;
                     str13 = str6;
                     iM3010r = -1;
                     i3 = -1;
+                    list2 = list4;
                     bArr = r0.f8262N;
                     if (bArr != null) {
                     }
@@ -2390,15 +2390,15 @@ public class MatroskaExtractor implements Extractor {
                     str3 = str4;
                     list3 = listM6266u;
                     str7 = null;
-                    list4 = list3;
+                    list5 = list3;
                     str = str7;
                     i2 = -1;
-                    list6 = list4;
+                    list7 = list5;
                     str13 = str3;
-                    list5 = list6;
+                    list6 = list7;
                     str8 = str;
                     i3 = i2;
-                    list2 = list5;
+                    list2 = list6;
                     iM3010r = -1;
                     bArr = r0.f8262N;
                     if (bArr != null) {
@@ -2424,21 +2424,21 @@ public class MatroskaExtractor implements Extractor {
                     trackOutput2Mo2492p222222222222.mo2526e(format2M3277a222222222222);
                     this.f8229h.put(r0.f8276c, r0);
                     break;
-                case '\f':
+                case 12:
                     str12 = "audio/vnd.dts.hd";
                     str13 = str12;
                     str3 = str13;
                     list3 = null;
                     str7 = null;
-                    list4 = list3;
+                    list5 = list3;
                     str = str7;
                     i2 = -1;
-                    list6 = list4;
+                    list7 = list5;
                     str13 = str3;
-                    list5 = list6;
+                    list6 = list7;
                     str8 = str;
                     i3 = i2;
-                    list2 = list5;
+                    list2 = list6;
                     iM3010r = -1;
                     bArr = r0.f8262N;
                     if (bArr != null) {
@@ -2464,22 +2464,22 @@ public class MatroskaExtractor implements Extractor {
                     trackOutput2Mo2492p2222222222222.mo2526e(format2M3277a2222222222222);
                     this.f8229h.put(r0.f8276c, r0);
                     break;
-                case '\r':
+                case 13:
                     List<byte[]> listSingletonList2 = Collections.singletonList(r0.m3683a(r0.f8275b));
                     AacUtil.b bVarM3490c = AacUtil.m3490c(r0.f8284k);
                     r0.f8265Q = bVarM3490c.f7766a;
                     r0.f8263O = bVarM3490c.f7767b;
                     str7 = bVarM3490c.f7768c;
                     str3 = "audio/mp4a-latm";
-                    list4 = listSingletonList2;
+                    list5 = listSingletonList2;
                     str = str7;
                     i2 = -1;
-                    list6 = list4;
+                    list7 = list5;
                     str13 = str3;
-                    list5 = list6;
+                    list6 = list7;
                     str8 = str;
                     i3 = i2;
-                    list2 = list5;
+                    list2 = list6;
                     iM3010r = -1;
                     bArr = r0.f8262N;
                     if (bArr != null) {
@@ -2511,15 +2511,15 @@ public class MatroskaExtractor implements Extractor {
                     str3 = str13;
                     list3 = null;
                     str7 = null;
-                    list4 = list3;
+                    list5 = list3;
                     str = str7;
                     i2 = -1;
-                    list6 = list4;
+                    list7 = list5;
                     str13 = str3;
-                    list5 = list6;
+                    list6 = list7;
                     str8 = str;
                     i3 = i2;
-                    list2 = list5;
+                    list2 = list6;
                     iM3010r = -1;
                     bArr = r0.f8262N;
                     if (bArr != null) {
@@ -2552,15 +2552,15 @@ public class MatroskaExtractor implements Extractor {
                     str3 = str13;
                     list3 = null;
                     str7 = null;
-                    list4 = list3;
+                    list5 = list3;
                     str = str7;
                     i2 = -1;
-                    list6 = list4;
+                    list7 = list5;
                     str13 = str3;
-                    list5 = list6;
+                    list6 = list7;
                     str8 = str;
                     i3 = i2;
-                    list2 = list5;
+                    list2 = list6;
                     iM3010r = -1;
                     bArr = r0.f8262N;
                     if (bArr != null) {
@@ -2592,15 +2592,15 @@ public class MatroskaExtractor implements Extractor {
                     str3 = str13;
                     list3 = null;
                     str7 = null;
-                    list4 = list3;
+                    list5 = list3;
                     str = str7;
                     i2 = -1;
-                    list6 = list4;
+                    list7 = list5;
                     str13 = str3;
-                    list5 = list6;
+                    list6 = list7;
                     str8 = str;
                     i3 = i2;
-                    list2 = list5;
+                    list2 = list6;
                     iM3010r = -1;
                     bArr = r0.f8262N;
                     if (bArr != null) {
@@ -2632,15 +2632,15 @@ public class MatroskaExtractor implements Extractor {
                     str3 = str13;
                     list3 = null;
                     str7 = null;
-                    list4 = list3;
+                    list5 = list3;
                     str = str7;
                     i2 = -1;
-                    list6 = list4;
+                    list7 = list5;
                     str13 = str3;
-                    list5 = list6;
+                    list6 = list7;
                     str8 = str;
                     i3 = i2;
-                    list2 = list5;
+                    list2 = list6;
                     iM3010r = -1;
                     bArr = r0.f8262N;
                     if (bArr != null) {
@@ -2672,15 +2672,15 @@ public class MatroskaExtractor implements Extractor {
                     str3 = str13;
                     list3 = null;
                     str7 = null;
-                    list4 = list3;
+                    list5 = list3;
                     str = str7;
                     i2 = -1;
-                    list6 = list4;
+                    list7 = list5;
                     str13 = str3;
-                    list5 = list6;
+                    list6 = list7;
                     str8 = str;
                     i3 = i2;
-                    list2 = list5;
+                    list2 = list6;
                     iM3010r = -1;
                     bArr = r0.f8262N;
                     if (bArr != null) {
@@ -2712,15 +2712,15 @@ public class MatroskaExtractor implements Extractor {
                     str3 = str13;
                     list3 = null;
                     str7 = null;
-                    list4 = list3;
+                    list5 = list3;
                     str = str7;
                     i2 = -1;
-                    list6 = list4;
+                    list7 = list5;
                     str13 = str3;
-                    list5 = list6;
+                    list6 = list7;
                     str8 = str;
                     i3 = i2;
-                    list2 = list5;
+                    list2 = list6;
                     iM3010r = -1;
                     bArr = r0.f8262N;
                     if (bArr != null) {
@@ -2751,15 +2751,15 @@ public class MatroskaExtractor implements Extractor {
                     str3 = str13;
                     list3 = null;
                     str7 = null;
-                    list4 = list3;
+                    list5 = list3;
                     str = str7;
                     i2 = -1;
-                    list6 = list4;
+                    list7 = list5;
                     str13 = str3;
-                    list5 = list6;
+                    list6 = list7;
                     str8 = str;
                     i3 = i2;
-                    list2 = list5;
+                    list2 = list6;
                     iM3010r = -1;
                     bArr = r0.f8262N;
                     if (bArr != null) {
@@ -2826,15 +2826,15 @@ public class MatroskaExtractor implements Extractor {
                         str3 = str13;
                         list3 = null;
                         str7 = null;
-                        list4 = list3;
+                        list5 = list3;
                         str = str7;
                         i2 = -1;
-                        list6 = list4;
+                        list7 = list5;
                         str13 = str3;
-                        list5 = list6;
+                        list6 = list7;
                         str8 = str;
                         i3 = i2;
-                        list2 = list5;
+                        list2 = list6;
                         iM3010r = -1;
                         bArr = r0.f8262N;
                         if (bArr != null) {
@@ -2875,15 +2875,15 @@ public class MatroskaExtractor implements Extractor {
                         str3 = str13;
                         list3 = null;
                         str7 = null;
-                        list4 = list3;
+                        list5 = list3;
                         str = str7;
                         i2 = -1;
-                        list6 = list4;
+                        list7 = list5;
                         str13 = str3;
-                        list5 = list6;
+                        list6 = list7;
                         str8 = str;
                         i3 = i2;
-                        list2 = list5;
+                        list2 = list6;
                         iM3010r = -1;
                         bArr = r0.f8262N;
                         if (bArr != null) {
@@ -2952,15 +2952,15 @@ public class MatroskaExtractor implements Extractor {
                         str3 = str13;
                         list3 = null;
                         str7 = null;
-                        list4 = list3;
+                        list5 = list3;
                         str = str7;
                         i2 = -1;
-                        list6 = list4;
+                        list7 = list5;
                         str13 = str3;
-                        list5 = list6;
+                        list6 = list7;
                         str8 = str;
                         i3 = i2;
-                        list2 = list5;
+                        list2 = list6;
                         iM3010r = -1;
                         bArr = r0.f8262N;
                         if (bArr != null) {
@@ -3024,15 +3024,15 @@ public class MatroskaExtractor implements Extractor {
                     str3 = str4;
                     list3 = listM6266u;
                     str7 = null;
-                    list4 = list3;
+                    list5 = list3;
                     str = str7;
                     i2 = -1;
-                    list6 = list4;
+                    list7 = list5;
                     str13 = str3;
-                    list5 = list6;
+                    list6 = list7;
                     str8 = str;
                     i3 = i2;
-                    list2 = list5;
+                    list2 = list6;
                     iM3010r = -1;
                     bArr = r0.f8262N;
                     if (bArr != null) {
@@ -3060,14 +3060,16 @@ public class MatroskaExtractor implements Extractor {
                     break;
                 case 26:
                     HevcConfig hevcConfigM3131a = HevcConfig.m3131a(new ParsableByteArray(r0.m3683a(r0.f8275b)));
-                    list2 = hevcConfigM3131a.f6863a;
+                    List<byte[]> list9 = hevcConfigM3131a.f6863a;
                     r0.f8273Y = hevcConfigM3131a.f6864b;
                     str5 = hevcConfigM3131a.f6866d;
                     str6 = "video/hevc";
+                    list4 = list9;
                     str8 = str5;
                     str13 = str6;
                     iM3010r = -1;
                     i3 = -1;
+                    list2 = list4;
                     bArr = r0.f8262N;
                     if (bArr != null) {
                     }
@@ -3098,15 +3100,15 @@ public class MatroskaExtractor implements Extractor {
                     str3 = str13;
                     list3 = null;
                     str7 = null;
-                    list4 = list3;
+                    list5 = list3;
                     str = str7;
                     i2 = -1;
-                    list6 = list4;
+                    list7 = list5;
                     str13 = str3;
-                    list5 = list6;
+                    list6 = list7;
                     str8 = str;
                     i3 = i2;
-                    list2 = list5;
+                    list2 = list6;
                     iM3010r = -1;
                     bArr = r0.f8262N;
                     if (bArr != null) {
@@ -3138,15 +3140,15 @@ public class MatroskaExtractor implements Extractor {
                     str3 = str13;
                     list3 = null;
                     str7 = null;
-                    list4 = list3;
+                    list5 = list3;
                     str = str7;
                     i2 = -1;
-                    list6 = list4;
+                    list7 = list5;
                     str13 = str3;
-                    list5 = list6;
+                    list6 = list7;
                     str8 = str;
                     i3 = i2;
-                    list2 = list5;
+                    list2 = list6;
                     iM3010r = -1;
                     bArr = r0.f8262N;
                     if (bArr != null) {
@@ -3178,15 +3180,15 @@ public class MatroskaExtractor implements Extractor {
                     str3 = str13;
                     list3 = null;
                     str7 = null;
-                    list4 = list3;
+                    list5 = list3;
                     str = str7;
                     i2 = -1;
-                    list6 = list4;
+                    list7 = list5;
                     str13 = str3;
-                    list5 = list6;
+                    list6 = list7;
                     str8 = str;
                     i3 = i2;
-                    list2 = list5;
+                    list2 = list6;
                     iM3010r = -1;
                     bArr = r0.f8262N;
                     if (bArr != null) {
@@ -3218,15 +3220,15 @@ public class MatroskaExtractor implements Extractor {
                     str3 = str4;
                     list3 = listM6266u;
                     str7 = null;
-                    list4 = list3;
+                    list5 = list3;
                     str = str7;
                     i2 = -1;
-                    list6 = list4;
+                    list7 = list5;
                     str13 = str3;
-                    list5 = list6;
+                    list6 = list7;
                     str8 = str;
                     i3 = i2;
-                    list2 = list5;
+                    list2 = list6;
                     iM3010r = -1;
                     bArr = r0.f8262N;
                     if (bArr != null) {
@@ -3263,12 +3265,12 @@ public class MatroskaExtractor implements Extractor {
                     str3 = "audio/opus";
                     arrayList = arrayList3;
                     str = null;
-                    list6 = arrayList;
+                    list7 = arrayList;
                     str13 = str3;
-                    list5 = list6;
+                    list6 = list7;
                     str8 = str;
                     i3 = i2;
-                    list2 = list5;
+                    list2 = list6;
                     iM3010r = -1;
                     bArr = r0.f8262N;
                     if (bArr != null) {
@@ -3301,7 +3303,7 @@ public class MatroskaExtractor implements Extractor {
         this.f8247z = null;
     }
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final void m3677k(ExtractorInput extractorInput, int i) throws IOException {
         ParsableByteArray parsableByteArray = this.f8233l;
         if (parsableByteArray.f6795c >= i) {
@@ -3318,7 +3320,7 @@ public class MatroskaExtractor implements Extractor {
         this.f8233l.m3078D(i);
     }
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final void m3678l() {
         this.f8217W = 0;
         this.f8218X = 0;
@@ -3332,7 +3334,7 @@ public class MatroskaExtractor implements Extractor {
         this.f8236o.m3075A(0);
     }
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public final long m3679m(long j) throws ParserException {
         long j2 = this.f8244w;
         if (j2 != -9223372036854775807L) {
@@ -3342,7 +3344,7 @@ public class MatroskaExtractor implements Extractor {
     }
 
     @RequiresNonNull({"#2.output"})
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public final int m3680n(ExtractorInput extractorInput, c cVar, int i) throws IOException {
         int i2;
         if ("S_TEXT/UTF8".equals(cVar.f8275b)) {
@@ -3517,7 +3519,7 @@ public class MatroskaExtractor implements Extractor {
         return i15;
     }
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public final void m3681o(ExtractorInput extractorInput, byte[] bArr, int i) throws IOException {
         int length = bArr.length + i;
         ParsableByteArray parsableByteArray = this.f8237p;
@@ -3532,7 +3534,7 @@ public class MatroskaExtractor implements Extractor {
         this.f8237p.m3078D(length);
     }
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public final int m3682p(ExtractorInput extractorInput, TrackOutput2 trackOutput2, int i) throws IOException {
         int iM3081a = this.f8236o.m3081a();
         if (iM3081a <= 0) {
@@ -3547,168 +3549,168 @@ public class MatroskaExtractor implements Extractor {
     public final void release() {
     }
 
-    /* compiled from: MatroskaExtractor.java */
-    /* renamed from: b.i.a.c.x2.g0.e$c */
+    /* JADX INFO: renamed from: b.i.a.c.x2.g0.e$c */
+    /* JADX INFO: compiled from: MatroskaExtractor.java */
     public static final class c {
 
-        /* renamed from: N */
+        /* JADX INFO: renamed from: N */
         public byte[] f8262N;
 
-        /* renamed from: T */
+        /* JADX INFO: renamed from: T */
         public TrueHdSampleRechunker f8268T;
 
-        /* renamed from: U */
+        /* JADX INFO: renamed from: U */
         public boolean f8269U;
 
-        /* renamed from: X */
+        /* JADX INFO: renamed from: X */
         public TrackOutput2 f8272X;
 
-        /* renamed from: Y */
+        /* JADX INFO: renamed from: Y */
         public int f8273Y;
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public String f8274a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public String f8275b;
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public int f8276c;
 
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         public int f8277d;
 
-        /* renamed from: e */
+        /* JADX INFO: renamed from: e */
         public int f8278e;
 
-        /* renamed from: f */
+        /* JADX INFO: renamed from: f */
         public int f8279f;
 
-        /* renamed from: g */
+        /* JADX INFO: renamed from: g */
         public int f8280g;
 
-        /* renamed from: h */
+        /* JADX INFO: renamed from: h */
         public boolean f8281h;
 
-        /* renamed from: i */
+        /* JADX INFO: renamed from: i */
         public byte[] f8282i;
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public TrackOutput2.a f8283j;
 
-        /* renamed from: k */
+        /* JADX INFO: renamed from: k */
         public byte[] f8284k;
 
-        /* renamed from: l */
+        /* JADX INFO: renamed from: l */
         public DrmInitData f8285l;
 
-        /* renamed from: m */
+        /* JADX INFO: renamed from: m */
         public int f8286m = -1;
 
-        /* renamed from: n */
+        /* JADX INFO: renamed from: n */
         public int f8287n = -1;
 
-        /* renamed from: o */
+        /* JADX INFO: renamed from: o */
         public int f8288o = -1;
 
-        /* renamed from: p */
+        /* JADX INFO: renamed from: p */
         public int f8289p = -1;
 
-        /* renamed from: q */
+        /* JADX INFO: renamed from: q */
         public int f8290q = 0;
 
-        /* renamed from: r */
+        /* JADX INFO: renamed from: r */
         public int f8291r = -1;
 
-        /* renamed from: s */
+        /* JADX INFO: renamed from: s */
         public float f8292s = 0.0f;
 
-        /* renamed from: t */
+        /* JADX INFO: renamed from: t */
         public float f8293t = 0.0f;
 
-        /* renamed from: u */
+        /* JADX INFO: renamed from: u */
         public float f8294u = 0.0f;
 
-        /* renamed from: v */
+        /* JADX INFO: renamed from: v */
         public byte[] f8295v = null;
 
-        /* renamed from: w */
+        /* JADX INFO: renamed from: w */
         public int f8296w = -1;
 
-        /* renamed from: x */
+        /* JADX INFO: renamed from: x */
         public boolean f8297x = false;
 
-        /* renamed from: y */
+        /* JADX INFO: renamed from: y */
         public int f8298y = -1;
 
-        /* renamed from: z */
+        /* JADX INFO: renamed from: z */
         public int f8299z = -1;
 
-        /* renamed from: A */
+        /* JADX INFO: renamed from: A */
         public int f8249A = -1;
 
-        /* renamed from: B */
+        /* JADX INFO: renamed from: B */
         public int f8250B = 1000;
 
-        /* renamed from: C */
+        /* JADX INFO: renamed from: C */
         public int f8251C = 200;
 
-        /* renamed from: D */
+        /* JADX INFO: renamed from: D */
         public float f8252D = -1.0f;
 
-        /* renamed from: E */
+        /* JADX INFO: renamed from: E */
         public float f8253E = -1.0f;
 
-        /* renamed from: F */
+        /* JADX INFO: renamed from: F */
         public float f8254F = -1.0f;
 
-        /* renamed from: G */
+        /* JADX INFO: renamed from: G */
         public float f8255G = -1.0f;
 
-        /* renamed from: H */
+        /* JADX INFO: renamed from: H */
         public float f8256H = -1.0f;
 
-        /* renamed from: I */
+        /* JADX INFO: renamed from: I */
         public float f8257I = -1.0f;
 
-        /* renamed from: J */
+        /* JADX INFO: renamed from: J */
         public float f8258J = -1.0f;
 
-        /* renamed from: K */
+        /* JADX INFO: renamed from: K */
         public float f8259K = -1.0f;
 
-        /* renamed from: L */
+        /* JADX INFO: renamed from: L */
         public float f8260L = -1.0f;
 
-        /* renamed from: M */
+        /* JADX INFO: renamed from: M */
         public float f8261M = -1.0f;
 
-        /* renamed from: O */
+        /* JADX INFO: renamed from: O */
         public int f8263O = 1;
 
-        /* renamed from: P */
+        /* JADX INFO: renamed from: P */
         public int f8264P = -1;
 
-        /* renamed from: Q */
+        /* JADX INFO: renamed from: Q */
         public int f8265Q = 8000;
 
-        /* renamed from: R */
+        /* JADX INFO: renamed from: R */
         public long f8266R = 0;
 
-        /* renamed from: S */
+        /* JADX INFO: renamed from: S */
         public long f8267S = 0;
 
-        /* renamed from: V */
+        /* JADX INFO: renamed from: V */
         public boolean f8270V = true;
 
-        /* renamed from: W */
+        /* JADX INFO: renamed from: W */
         public String f8271W = "eng";
 
         public c() {
         }
 
         @EnsuresNonNull({"codecPrivate"})
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final byte[] m3683a(String str) throws ParserException {
             byte[] bArr = this.f8284k;
             if (bArr != null) {

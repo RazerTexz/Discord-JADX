@@ -12,63 +12,63 @@ import java.util.Arrays;
 import p007b.p085c.p086a.p087a0.AnimatableValueParser;
 import p007b.p085c.p086a.p095y.C1563b;
 
-/* compiled from: RoundedCornersDrawable.java */
-/* renamed from: b.f.g.e.m, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.f.g.e.m, reason: use source file name */
+/* JADX INFO: compiled from: RoundedCornersDrawable.java */
+/* JADX INFO: loaded from: classes.dex */
 public class RoundedCornersDrawable extends ForwardingDrawable implements Rounded {
 
-    /* renamed from: A */
+    /* JADX INFO: renamed from: A */
     public boolean f3389A;
 
-    /* renamed from: B */
+    /* JADX INFO: renamed from: B */
     public final Path f3390B;
 
-    /* renamed from: C */
+    /* JADX INFO: renamed from: C */
     public final Path f3391C;
 
-    /* renamed from: D */
+    /* JADX INFO: renamed from: D */
     public final RectF f3392D;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     @VisibleForTesting
     public int f3393n;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public final RectF f3394o;
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public RectF f3395p;
 
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     public Matrix f3396q;
 
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     public final float[] f3397r;
 
-    /* renamed from: s */
+    /* JADX INFO: renamed from: s */
     @VisibleForTesting
     public final float[] f3398s;
 
-    /* renamed from: t */
+    /* JADX INFO: renamed from: t */
     @VisibleForTesting
     public final Paint f3399t;
 
-    /* renamed from: u */
+    /* JADX INFO: renamed from: u */
     public boolean f3400u;
 
-    /* renamed from: v */
+    /* JADX INFO: renamed from: v */
     public float f3401v;
 
-    /* renamed from: w */
+    /* JADX INFO: renamed from: w */
     public int f3402w;
 
-    /* renamed from: x */
+    /* JADX INFO: renamed from: x */
     public int f3403x;
 
-    /* renamed from: y */
+    /* JADX INFO: renamed from: y */
     public float f3404y;
 
-    /* renamed from: z */
+    /* JADX INFO: renamed from: z */
     public boolean f3405z;
 
     public RoundedCornersDrawable(Drawable drawable) {
@@ -91,7 +91,7 @@ public class RoundedCornersDrawable extends ForwardingDrawable implements Rounde
     }
 
     @Override // p007b.p109f.p132g.p142e.Rounded
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public void mo1106a(int i, float f) {
         this.f3402w = i;
         this.f3401v = f;
@@ -100,7 +100,7 @@ public class RoundedCornersDrawable extends ForwardingDrawable implements Rounde
     }
 
     @Override // p007b.p109f.p132g.p142e.Rounded
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public void mo1107c(boolean z2) {
         this.f3400u = z2;
         m1115p();
@@ -185,7 +185,7 @@ public class RoundedCornersDrawable extends ForwardingDrawable implements Rounde
     }
 
     @Override // p007b.p109f.p132g.p142e.Rounded
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public void mo1108e(boolean z2) {
         if (this.f3389A != z2) {
             this.f3389A = z2;
@@ -194,7 +194,7 @@ public class RoundedCornersDrawable extends ForwardingDrawable implements Rounde
     }
 
     @Override // p007b.p109f.p132g.p142e.Rounded
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public void mo1109f(boolean z2) {
         this.f3405z = z2;
         m1115p();
@@ -202,7 +202,7 @@ public class RoundedCornersDrawable extends ForwardingDrawable implements Rounde
     }
 
     @Override // p007b.p109f.p132g.p142e.Rounded
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public void mo1110i(float f) {
         this.f3404y = f;
         m1115p();
@@ -210,7 +210,7 @@ public class RoundedCornersDrawable extends ForwardingDrawable implements Rounde
     }
 
     @Override // p007b.p109f.p132g.p142e.Rounded
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public void mo1111j(float f) {
         Arrays.fill(this.f3397r, f);
         m1115p();
@@ -218,7 +218,7 @@ public class RoundedCornersDrawable extends ForwardingDrawable implements Rounde
     }
 
     @Override // p007b.p109f.p132g.p142e.Rounded
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public void mo1112m(float[] fArr) {
         if (fArr == null) {
             Arrays.fill(this.f3397r, 0.0f);
@@ -239,7 +239,7 @@ public class RoundedCornersDrawable extends ForwardingDrawable implements Rounde
         m1115p();
     }
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public final void m1115p() {
         float[] fArr;
         this.f3390B.reset();

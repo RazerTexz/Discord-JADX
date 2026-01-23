@@ -9,9 +9,9 @@ import java.util.Objects;
 import p507d0.Result2;
 import p507d0.Result3;
 
-/* compiled from: HandlerDispatcher.kt */
-/* renamed from: s.a.b2.c, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: s.a.b2.c, reason: use source file name */
+/* JADX INFO: compiled from: HandlerDispatcher.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class HandlerDispatcher4 {
     static {
         Object objM11474constructorimpl;
@@ -25,8 +25,8 @@ public final class HandlerDispatcher4 {
     }
 
     @VisibleForTesting
-    /* renamed from: a */
-    public static final Handler m11197a(Looper looper, boolean z2) throws IllegalAccessException, IllegalArgumentException, InvocationTargetException {
+    /* JADX INFO: renamed from: a */
+    public static final Handler m11197a(Looper looper, boolean z2) throws IllegalAccessException, InvocationTargetException {
         if (!z2) {
             return new Handler(looper);
         }

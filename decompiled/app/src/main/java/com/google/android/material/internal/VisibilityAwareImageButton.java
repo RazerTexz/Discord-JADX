@@ -6,9 +6,9 @@ import android.util.AttributeSet;
 import android.widget.ImageButton;
 import androidx.annotation.RestrictTo;
 
+/* JADX INFO: loaded from: classes3.dex */
 @SuppressLint({"AppCompatCustomView"})
 @RestrictTo({RestrictTo.Scope.LIBRARY_GROUP})
-/* loaded from: classes3.dex */
 public class VisibilityAwareImageButton extends ImageButton {
     private int userSetVisibility;
 

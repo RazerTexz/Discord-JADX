@@ -11,11 +11,11 @@ import p007b.p008a.p033m.p034a.C1148i;
 import p007b.p008a.p033m.p034a.C1149j;
 import p007b.p100d.p104b.p105a.outline;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class ModelCall implements Model {
     private static final List<Long> EMPTY_RINGING = new ArrayList();
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static final /* synthetic */ int f18564j = 0;
     private long channelId;
     private long messageId;

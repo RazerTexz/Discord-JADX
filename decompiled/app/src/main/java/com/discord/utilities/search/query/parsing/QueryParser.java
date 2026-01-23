@@ -12,17 +12,17 @@ import java.util.regex.Pattern;
 import kotlin.jvm.internal.DefaultConstructorMarker;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: QueryParser.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: QueryParser.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class QueryParser extends Parser<Context, QueryNode, Object> {
     private static final String ANY_TOKEN_REGEX = "^[\\s]*[\\S]*[\\s]*";
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private static final String IN_ANSWER_REGEX = "(?:\\s*#([^ ]+))";
     private static final String USER_REGEX = "(?:\\s*([^@#:]+)#([0-9]{4}))";
 
-    /* compiled from: QueryParser.kt */
+    /* JADX INFO: compiled from: QueryParser.kt */
     public static final class Companion {
         private Companion() {
         }

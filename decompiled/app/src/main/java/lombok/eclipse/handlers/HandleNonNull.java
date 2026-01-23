@@ -31,9 +31,9 @@ import org.eclipse.jdt.internal.compiler.ast.ThrowStatement;
 import org.eclipse.jdt.internal.compiler.ast.TryStatement;
 import org.eclipse.jdt.internal.compiler.ast.TypeReference;
 
+/* JADX INFO: loaded from: discord-126021.apk:lombok/eclipse/handlers/HandleNonNull.SCL.lombok */
 @DeferUntilPostDiet
 @HandlerPriority(512)
-/* loaded from: discord-126021.apk:lombok/eclipse/handlers/HandleNonNull.SCL.lombok */
 public class HandleNonNull extends EclipseAnnotationHandler<NonNull> {
     private static final char[] REQUIRE_NON_NULL = "requireNonNull".toCharArray();
     private static final char[] CHECK_NOT_NULL = "checkNotNull".toCharArray();

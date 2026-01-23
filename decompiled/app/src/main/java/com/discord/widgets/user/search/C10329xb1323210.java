@@ -5,9 +5,9 @@ import com.discord.widgets.user.search.WidgetGlobalSearchModel;
 import java.util.Comparator;
 import p507d0.p582u.C12169a;
 
-/* compiled from: Comparisons.kt */
-/* renamed from: com.discord.widgets.user.search.WidgetGlobalSearchModel$Companion$create$$inlined$sortedByDescending$1 */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: com.discord.widgets.user.search.WidgetGlobalSearchModel$Companion$create$$inlined$sortedByDescending$1 */
+/* JADX INFO: compiled from: Comparisons.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class C10329xb1323210<T> implements Comparator {
     public final /* synthetic */ WidgetGlobalSearchModel.SearchContext $searchContext$inlined;
 

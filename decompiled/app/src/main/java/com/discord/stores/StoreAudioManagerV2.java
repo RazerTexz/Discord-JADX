@@ -33,11 +33,11 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 import p658rx.Observable;
 
-/* compiled from: StoreAudioManagerV2.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: StoreAudioManagerV2.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class StoreAudioManagerV2 extends StoreV2 {
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private static final State DEFAULT_STATE;
     private Handler audioManagerHandler;
@@ -55,7 +55,7 @@ public final class StoreAudioManagerV2 extends StoreV2 {
     private final VideoUseDetector videoUseDetector;
     private final StoreVoiceChannelSelected voiceChannelSelectedStore;
 
-    /* compiled from: StoreAudioManagerV2.kt */
+    /* JADX INFO: compiled from: StoreAudioManagerV2.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -73,7 +73,7 @@ public final class StoreAudioManagerV2 extends StoreV2 {
         }
     }
 
-    /* compiled from: StoreAudioManagerV2.kt */
+    /* JADX INFO: compiled from: StoreAudioManagerV2.kt */
     public static final /* data */ class State {
         private DiscordAudioManager.DeviceTypes activeAudioDevice;
         private List<DiscordAudioManager.AudioDevice> audioDevices;
@@ -104,7 +104,7 @@ public final class StoreAudioManagerV2 extends StoreV2 {
             return this.audioDevices;
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final DiscordAudioManager.DeviceTypes getActiveAudioDevice() {
             return this.activeAudioDevice;
         }
@@ -170,7 +170,7 @@ public final class StoreAudioManagerV2 extends StoreV2 {
         }
     }
 
-    /* compiled from: StoreAudioManagerV2.kt */
+    /* JADX INFO: compiled from: StoreAudioManagerV2.kt */
     public static final class VideoUseDetector {
         private final StoreChannels channelsStore;
         private final StoreUser usersStore;
@@ -224,8 +224,8 @@ public final class StoreAudioManagerV2 extends StoreV2 {
         }
     }
 
-    /* compiled from: StoreAudioManagerV2.kt */
-    /* renamed from: com.discord.stores.StoreAudioManagerV2$handleRtcConnectionState$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreAudioManagerV2$handleRtcConnectionState$1 */
+    /* JADX INFO: compiled from: StoreAudioManagerV2.kt */
     public static final class RunnableC57521 implements Runnable {
         public static final RunnableC57521 INSTANCE = new RunnableC57521();
 
@@ -236,8 +236,8 @@ public final class StoreAudioManagerV2 extends StoreV2 {
         }
     }
 
-    /* compiled from: StoreAudioManagerV2.kt */
-    /* renamed from: com.discord.stores.StoreAudioManagerV2$handleRtcConnectionState$2 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreAudioManagerV2$handleRtcConnectionState$2 */
+    /* JADX INFO: compiled from: StoreAudioManagerV2.kt */
     public static final class RunnableC57532 implements Runnable {
         public static final RunnableC57532 INSTANCE = new RunnableC57532();
 
@@ -248,16 +248,16 @@ public final class StoreAudioManagerV2 extends StoreV2 {
         }
     }
 
-    /* compiled from: StoreAudioManagerV2.kt */
-    /* renamed from: com.discord.stores.StoreAudioManagerV2$init$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreAudioManagerV2$init$1 */
+    /* JADX INFO: compiled from: StoreAudioManagerV2.kt */
     public static final class RunnableC57541 implements Runnable {
 
-        /* compiled from: StoreAudioManagerV2.kt */
-        /* renamed from: com.discord.stores.StoreAudioManagerV2$init$1$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.stores.StoreAudioManagerV2$init$1$1, reason: invalid class name */
+        /* JADX INFO: compiled from: StoreAudioManagerV2.kt */
         public static final class AnonymousClass1 extends Lambda implements Function1<List<? extends DiscordAudioManager.AudioDevice>, Unit> {
 
-            /* compiled from: StoreAudioManagerV2.kt */
-            /* renamed from: com.discord.stores.StoreAudioManagerV2$init$1$1$1, reason: invalid class name and collision with other inner class name */
+            /* JADX INFO: renamed from: com.discord.stores.StoreAudioManagerV2$init$1$1$1, reason: invalid class name and collision with other inner class name */
+            /* JADX INFO: compiled from: StoreAudioManagerV2.kt */
             public static final class C132491 extends Lambda implements Function0<Unit> {
                 public final /* synthetic */ List $it;
 
@@ -273,7 +273,7 @@ public final class StoreAudioManagerV2 extends StoreV2 {
                     return Unit.f27425a;
                 }
 
-                /* renamed from: invoke, reason: avoid collision after fix types in other method */
+                /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
                 public final void invoke2() {
                     StoreAudioManagerV2.access$updateAudioDevices(StoreAudioManagerV2.this, this.$it);
                 }
@@ -289,19 +289,19 @@ public final class StoreAudioManagerV2 extends StoreV2 {
                 return Unit.f27425a;
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2(List<DiscordAudioManager.AudioDevice> list) {
                 Intrinsics3.checkNotNullParameter(list, "it");
                 StoreAudioManagerV2.access$getDispatcher$p(StoreAudioManagerV2.this).schedule(new C132491(list));
             }
         }
 
-        /* compiled from: StoreAudioManagerV2.kt */
-        /* renamed from: com.discord.stores.StoreAudioManagerV2$init$1$2, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.stores.StoreAudioManagerV2$init$1$2, reason: invalid class name */
+        /* JADX INFO: compiled from: StoreAudioManagerV2.kt */
         public static final class AnonymousClass2 extends Lambda implements Function1<DiscordAudioManager.DeviceTypes, Unit> {
 
-            /* compiled from: StoreAudioManagerV2.kt */
-            /* renamed from: com.discord.stores.StoreAudioManagerV2$init$1$2$1, reason: invalid class name */
+            /* JADX INFO: renamed from: com.discord.stores.StoreAudioManagerV2$init$1$2$1, reason: invalid class name */
+            /* JADX INFO: compiled from: StoreAudioManagerV2.kt */
             public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
                 public final /* synthetic */ DiscordAudioManager.DeviceTypes $it;
 
@@ -317,7 +317,7 @@ public final class StoreAudioManagerV2 extends StoreV2 {
                     return Unit.f27425a;
                 }
 
-                /* renamed from: invoke, reason: avoid collision after fix types in other method */
+                /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
                 public final void invoke2() {
                     StoreAudioManagerV2.access$updateActiveAudioDevice(StoreAudioManagerV2.this, this.$it);
                 }
@@ -333,19 +333,19 @@ public final class StoreAudioManagerV2 extends StoreV2 {
                 return Unit.f27425a;
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2(DiscordAudioManager.DeviceTypes deviceTypes) {
                 Intrinsics3.checkNotNullParameter(deviceTypes, "it");
                 StoreAudioManagerV2.access$getDispatcher$p(StoreAudioManagerV2.this).schedule(new AnonymousClass1(deviceTypes));
             }
         }
 
-        /* compiled from: StoreAudioManagerV2.kt */
-        /* renamed from: com.discord.stores.StoreAudioManagerV2$init$1$3, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.stores.StoreAudioManagerV2$init$1$3, reason: invalid class name */
+        /* JADX INFO: compiled from: StoreAudioManagerV2.kt */
         public static final class AnonymousClass3 extends Lambda implements Function1<Integer, Unit> {
 
-            /* compiled from: StoreAudioManagerV2.kt */
-            /* renamed from: com.discord.stores.StoreAudioManagerV2$init$1$3$1, reason: invalid class name */
+            /* JADX INFO: renamed from: com.discord.stores.StoreAudioManagerV2$init$1$3$1, reason: invalid class name */
+            /* JADX INFO: compiled from: StoreAudioManagerV2.kt */
             public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
                 public final /* synthetic */ int $it;
 
@@ -361,7 +361,7 @@ public final class StoreAudioManagerV2 extends StoreV2 {
                     return Unit.f27425a;
                 }
 
-                /* renamed from: invoke, reason: avoid collision after fix types in other method */
+                /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
                 public final void invoke2() {
                     StoreAudioManagerV2.access$updateCurrentMediaVolume(StoreAudioManagerV2.this, this.$it);
                 }
@@ -400,8 +400,8 @@ public final class StoreAudioManagerV2 extends StoreV2 {
         }
     }
 
-    /* compiled from: StoreAudioManagerV2.kt */
-    /* renamed from: com.discord.stores.StoreAudioManagerV2$observeAudioManagerState$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreAudioManagerV2$observeAudioManagerState$1 */
+    /* JADX INFO: compiled from: StoreAudioManagerV2.kt */
     public static final class C57551 extends Lambda implements Function0<State> {
         public C57551() {
             super(0);
@@ -419,8 +419,8 @@ public final class StoreAudioManagerV2 extends StoreV2 {
         }
     }
 
-    /* compiled from: StoreAudioManagerV2.kt */
-    /* renamed from: com.discord.stores.StoreAudioManagerV2$selectOutputDevice$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreAudioManagerV2$selectOutputDevice$1 */
+    /* JADX INFO: compiled from: StoreAudioManagerV2.kt */
     public static final class RunnableC57561 implements Runnable {
         public final /* synthetic */ DiscordAudioManager.DeviceTypes $device;
 
@@ -484,8 +484,8 @@ public final class StoreAudioManagerV2 extends StoreV2 {
         }
     }
 
-    /* compiled from: StoreAudioManagerV2.kt */
-    /* renamed from: com.discord.stores.StoreAudioManagerV2$toggleSpeakerOutput$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreAudioManagerV2$toggleSpeakerOutput$1 */
+    /* JADX INFO: compiled from: StoreAudioManagerV2.kt */
     public static final class C57571 extends Lambda implements Function0<Unit> {
         public C57571() {
             super(0);
@@ -497,7 +497,7 @@ public final class StoreAudioManagerV2 extends StoreV2 {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             DiscordAudioManager.DeviceTypes deviceTypesPrevious;
             if (StoreAudioManagerV2.this.getState().getActiveAudioDevice().ordinal() != 2) {
@@ -523,8 +523,8 @@ public final class StoreAudioManagerV2 extends StoreV2 {
         }
     }
 
-    /* compiled from: StoreAudioManagerV2.kt */
-    /* renamed from: com.discord.stores.StoreAudioManagerV2$updateMediaVolume$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreAudioManagerV2$updateMediaVolume$1 */
+    /* JADX INFO: compiled from: StoreAudioManagerV2.kt */
     public static final class RunnableC57581 implements Runnable {
         public final /* synthetic */ float $ratio;
 
@@ -602,7 +602,7 @@ public final class StoreAudioManagerV2 extends StoreV2 {
         storeAudioManagerV2.updateCurrentMediaVolume(i);
     }
 
-    /* renamed from: getAudioManagerState, reason: from getter */
+    /* JADX INFO: renamed from: getAudioManagerState, reason: from getter */
     private final State getStateSnapshot() {
         return this.stateSnapshot;
     }
@@ -628,12 +628,12 @@ public final class StoreAudioManagerV2 extends StoreV2 {
         this.streamRtcConnectionStore.updateStreamVolume(PerceptualVolumeUtils.INSTANCE.perceptualToAmplitude((currentMediaVolumeIndex / DiscordAudioManager.m8481d().f18853x) * 300.0f, 300.0f));
     }
 
-    /* renamed from: getLastActiveAudioDevice$app_productionGoogleRelease, reason: from getter */
+    /* JADX INFO: renamed from: getLastActiveAudioDevice$app_productionGoogleRelease, reason: from getter */
     public final DiscordAudioManager.AudioDevice getLastActiveAudioDevice() {
         return this.lastActiveAudioDevice;
     }
 
-    /* renamed from: getState$app_productionGoogleRelease, reason: from getter */
+    /* JADX INFO: renamed from: getState$app_productionGoogleRelease, reason: from getter */
     public final State getState() {
         return this.state;
     }

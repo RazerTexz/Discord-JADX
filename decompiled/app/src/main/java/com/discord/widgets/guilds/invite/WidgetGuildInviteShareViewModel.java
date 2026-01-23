@@ -49,8 +49,8 @@ import p658rx.Observable;
 import p658rx.functions.Action1;
 import p658rx.subjects.BehaviorSubject;
 
-/* compiled from: WidgetGuildInviteShareViewModel.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetGuildInviteShareViewModel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetGuildInviteShareViewModel extends AppViewModel<ViewState> implements AppComponent {
     private final Long eventId;
     private final BehaviorSubject<String> filterPublisher;
@@ -71,8 +71,8 @@ public final class WidgetGuildInviteShareViewModel extends AppViewModel<ViewStat
     private final StoreUser storeUser;
     private final boolean subscribeOnInit;
 
-    /* compiled from: WidgetGuildInviteShareViewModel.kt */
-    /* renamed from: com.discord.widgets.guilds.invite.WidgetGuildInviteShareViewModel$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.guilds.invite.WidgetGuildInviteShareViewModel$1 */
+    /* JADX INFO: compiled from: WidgetGuildInviteShareViewModel.kt */
     public static final class C87071<T> implements Action1<ViewState.Loaded> {
         public C87071() {
         }
@@ -82,7 +82,7 @@ public final class WidgetGuildInviteShareViewModel extends AppViewModel<ViewStat
             call2(loaded);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final void call2(ViewState.Loaded loaded) {
             WidgetGuildInviteShareViewModel widgetGuildInviteShareViewModel = WidgetGuildInviteShareViewModel.this;
             Intrinsics3.checkNotNullExpressionValue(loaded, "viewState");
@@ -90,8 +90,8 @@ public final class WidgetGuildInviteShareViewModel extends AppViewModel<ViewStat
         }
     }
 
-    /* compiled from: WidgetGuildInviteShareViewModel.kt */
-    /* renamed from: com.discord.widgets.guilds.invite.WidgetGuildInviteShareViewModel$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.guilds.invite.WidgetGuildInviteShareViewModel$2 */
+    /* JADX INFO: compiled from: WidgetGuildInviteShareViewModel.kt */
     public static final /* synthetic */ class C87082 extends FunctionReferenceImpl implements Function1<ViewState, Unit> {
         public C87082(WidgetGuildInviteShareViewModel widgetGuildInviteShareViewModel) {
             super(1, widgetGuildInviteShareViewModel, WidgetGuildInviteShareViewModel.class, "updateViewState", "updateViewState(Ljava/lang/Object;)V", 0);
@@ -103,17 +103,17 @@ public final class WidgetGuildInviteShareViewModel extends AppViewModel<ViewStat
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(ViewState viewState) {
             Intrinsics3.checkNotNullParameter(viewState, "p1");
             WidgetGuildInviteShareViewModel.access$updateViewState((WidgetGuildInviteShareViewModel) this.receiver, viewState);
         }
     }
 
-    /* compiled from: WidgetGuildInviteShareViewModel.kt */
+    /* JADX INFO: compiled from: WidgetGuildInviteShareViewModel.kt */
     public static abstract class ViewState {
 
-        /* compiled from: WidgetGuildInviteShareViewModel.kt */
+        /* JADX INFO: compiled from: WidgetGuildInviteShareViewModel.kt */
         public static final /* data */ class Loaded extends ViewState {
             private final List<InviteSuggestionItem> inviteSuggestionItems;
             private final String searchQuery;
@@ -125,6 +125,7 @@ public final class WidgetGuildInviteShareViewModel extends AppViewModel<ViewStat
                 this(widgetInviteModel, list, (i & 4) != 0 ? "" : str, map, (i & 16) != 0 ? true : z2);
             }
 
+            /* JADX WARN: Multi-variable type inference failed */
             public static /* synthetic */ Loaded copy$default(Loaded loaded, WidgetInviteModel widgetInviteModel, List list, String str, Map map, boolean z2, int i, Object obj) {
                 if ((i & 1) != 0) {
                     widgetInviteModel = loaded.widgetInviteModel;
@@ -147,7 +148,7 @@ public final class WidgetGuildInviteShareViewModel extends AppViewModel<ViewStat
                 return loaded.copy(widgetInviteModel, list2, str2, map2, z2);
             }
 
-            /* renamed from: component1, reason: from getter */
+            /* JADX INFO: renamed from: component1, reason: from getter */
             public final WidgetInviteModel getWidgetInviteModel() {
                 return this.widgetInviteModel;
             }
@@ -156,7 +157,7 @@ public final class WidgetGuildInviteShareViewModel extends AppViewModel<ViewStat
                 return this.inviteSuggestionItems;
             }
 
-            /* renamed from: component3, reason: from getter */
+            /* JADX INFO: renamed from: component3, reason: from getter */
             public final String getSearchQuery() {
                 return this.searchQuery;
             }
@@ -165,7 +166,7 @@ public final class WidgetGuildInviteShareViewModel extends AppViewModel<ViewStat
                 return this.sentInvites;
             }
 
-            /* renamed from: component5, reason: from getter */
+            /* JADX INFO: renamed from: component5, reason: from getter */
             public final boolean getShowInviteSettings() {
                 return this.showInviteSettings;
             }
@@ -210,6 +211,9 @@ public final class WidgetGuildInviteShareViewModel extends AppViewModel<ViewStat
             }
 
             /* JADX WARN: Multi-variable type inference failed */
+            /* JADX WARN: Type inference failed for: r1v3, types: [int] */
+            /* JADX WARN: Type inference failed for: r1v4 */
+            /* JADX WARN: Type inference failed for: r1v6 */
             public int hashCode() {
                 WidgetInviteModel widgetInviteModel = this.widgetInviteModel;
                 int iHashCode = (widgetInviteModel != null ? widgetInviteModel.hashCode() : 0) * 31;
@@ -220,11 +224,11 @@ public final class WidgetGuildInviteShareViewModel extends AppViewModel<ViewStat
                 Map<String, Set<Long>> map = this.sentInvites;
                 int iHashCode4 = (iHashCode3 + (map != null ? map.hashCode() : 0)) * 31;
                 boolean z2 = this.showInviteSettings;
-                int i = z2;
-                if (z2 != 0) {
-                    i = 1;
+                ?? r1 = z2;
+                if (z2) {
+                    r1 = 1;
                 }
-                return iHashCode4 + i;
+                return iHashCode4 + r1;
             }
 
             public String toString() {
@@ -256,7 +260,7 @@ public final class WidgetGuildInviteShareViewModel extends AppViewModel<ViewStat
             }
         }
 
-        /* compiled from: WidgetGuildInviteShareViewModel.kt */
+        /* JADX INFO: compiled from: WidgetGuildInviteShareViewModel.kt */
         public static final class Uninitialized extends ViewState {
             public static final Uninitialized INSTANCE = new Uninitialized();
 
@@ -273,8 +277,8 @@ public final class WidgetGuildInviteShareViewModel extends AppViewModel<ViewStat
         }
     }
 
-    /* compiled from: WidgetGuildInviteShareViewModel.kt */
-    /* renamed from: com.discord.widgets.guilds.invite.WidgetGuildInviteShareViewModel$observeWidgetInviteViewModel$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.guilds.invite.WidgetGuildInviteShareViewModel$observeWidgetInviteViewModel$1 */
+    /* JADX INFO: compiled from: WidgetGuildInviteShareViewModel.kt */
     public static final class C87091 extends Lambda implements Function10<ModelInvite.Settings, Map<Long, ? extends Channel>, InviteGenerator.InviteGenerationState, Long, MeUser, List<? extends Channel>, Guild, Map<Long, ? extends StageInstance>, GuildScheduledEvent, StoreInstantInvites.InviteState, WidgetInviteModel> {
         public static final C87091 INSTANCE = new C87091();
 
@@ -287,7 +291,7 @@ public final class WidgetGuildInviteShareViewModel extends AppViewModel<ViewStat
             return invoke2(settings, (Map<Long, Channel>) map, inviteGenerationState, l, meUser, (List<Channel>) list, guild, (Map<Long, StageInstance>) map2, guildScheduledEvent, inviteState);
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final WidgetInviteModel invoke2(ModelInvite.Settings settings, Map<Long, Channel> map, InviteGenerator.InviteGenerationState inviteGenerationState, Long l, MeUser meUser, List<Channel> list, Guild guild, Map<Long, StageInstance> map2, GuildScheduledEvent guildScheduledEvent, StoreInstantInvites.InviteState inviteState) {
             StoreInstantInvites.InviteState inviteState2 = inviteState;
             Intrinsics3.checkNotNullParameter(settings, "settings");
@@ -306,8 +310,8 @@ public final class WidgetGuildInviteShareViewModel extends AppViewModel<ViewStat
         }
     }
 
-    /* compiled from: WidgetGuildInviteShareViewModel.kt */
-    /* renamed from: com.discord.widgets.guilds.invite.WidgetGuildInviteShareViewModel$sendInviteToChannel$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.guilds.invite.WidgetGuildInviteShareViewModel$sendInviteToChannel$1 */
+    /* JADX INFO: compiled from: WidgetGuildInviteShareViewModel.kt */
     public static final class C87101 extends Lambda implements Function1<MessageQueue4, Unit> {
         public final /* synthetic */ ModelInvite $invite;
         public final /* synthetic */ String $inviteLink;
@@ -327,7 +331,7 @@ public final class WidgetGuildInviteShareViewModel extends AppViewModel<ViewStat
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(MessageQueue4 messageQueue4) {
             Intrinsics3.checkNotNullParameter(messageQueue4, "result");
             if (messageQueue4 instanceof MessageQueue4.Success) {
@@ -345,8 +349,8 @@ public final class WidgetGuildInviteShareViewModel extends AppViewModel<ViewStat
         }
     }
 
-    /* compiled from: WidgetGuildInviteShareViewModel.kt */
-    /* renamed from: com.discord.widgets.guilds.invite.WidgetGuildInviteShareViewModel$sendInviteToUser$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.guilds.invite.WidgetGuildInviteShareViewModel$sendInviteToUser$1 */
+    /* JADX INFO: compiled from: WidgetGuildInviteShareViewModel.kt */
     public static final class C87111 extends Lambda implements Function1<Channel, Unit> {
         public final /* synthetic */ ModelInvite $invite;
         public final /* synthetic */ ViewState.Loaded $viewState;
@@ -364,7 +368,7 @@ public final class WidgetGuildInviteShareViewModel extends AppViewModel<ViewStat
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Channel channel) {
             Intrinsics3.checkNotNullParameter(channel, "channel");
             WidgetGuildInviteShareViewModel.this.sendInviteToChannel(channel.getId(), this.$viewState, this.$invite);

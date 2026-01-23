@@ -12,16 +12,16 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p658rx.Scheduler;
 import p658rx.functions.Action0;
 
-/* compiled from: Dispatcher.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: Dispatcher.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class Dispatcher {
     private final boolean assertCleanDispatches;
     private final ArrayList<Store2> dispatchHandlers;
     private Thread dispatcherThread;
     private final Scheduler scheduler;
 
-    /* compiled from: Dispatcher.kt */
-    /* renamed from: com.discord.stores.Dispatcher$schedule$1 */
+    /* JADX INFO: renamed from: com.discord.stores.Dispatcher$schedule$1 */
+    /* JADX INFO: compiled from: Dispatcher.kt */
     public static final class C56681 implements Action0 {
         public final /* synthetic */ Function0 $action;
 

@@ -12,27 +12,27 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p600f0.Protocol2;
 import p600f0.p601e0.p609k.Platform2;
 
-/* compiled from: Android10SocketAdapter.kt */
+/* JADX INFO: renamed from: f0.e0.k.i.a, reason: use source file name */
+/* JADX INFO: compiled from: Android10SocketAdapter.kt */
+/* JADX INFO: loaded from: classes3.dex */
 @SuppressLint({"NewApi"})
-/* renamed from: f0.e0.k.i.a, reason: use source file name */
-/* loaded from: classes3.dex */
 public final class Android10SocketAdapter implements SocketAdapter {
     @Override // p600f0.p601e0.p609k.p610i.SocketAdapter
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public boolean mo10334a(SSLSocket sSLSocket) {
         Intrinsics3.checkParameterIsNotNull(sSLSocket, "sslSocket");
         return SSLSockets.isSupportedSocket(sSLSocket);
     }
 
     @Override // p600f0.p601e0.p609k.p610i.SocketAdapter
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public boolean mo10335b() {
         return Platform2.f25785c.m10333c() && Build.VERSION.SDK_INT >= 29;
     }
 
     @Override // p600f0.p601e0.p609k.p610i.SocketAdapter
     @SuppressLint({"NewApi"})
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public String mo10336c(SSLSocket sSLSocket) {
         Intrinsics3.checkParameterIsNotNull(sSLSocket, "sslSocket");
         String applicationProtocol = sSLSocket.getApplicationProtocol();
@@ -44,7 +44,7 @@ public final class Android10SocketAdapter implements SocketAdapter {
 
     @Override // p600f0.p601e0.p609k.p610i.SocketAdapter
     @SuppressLint({"NewApi"})
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public void mo10337d(SSLSocket sSLSocket, String str, List<? extends Protocol2> list) throws IOException {
         Intrinsics3.checkParameterIsNotNull(sSLSocket, "sslSocket");
         Intrinsics3.checkParameterIsNotNull(list, "protocols");

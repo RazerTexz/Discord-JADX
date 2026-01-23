@@ -6,9 +6,9 @@ import p001a0.p002a.p003a.C0002b;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: WidgetHubEventsViewModel.kt */
-/* renamed from: com.discord.widgets.hubs.events.HubGuildScheduledEventData, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.hubs.events.HubGuildScheduledEventData, reason: use source file name */
+/* JADX INFO: compiled from: WidgetHubEventsViewModel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final /* data */ class WidgetHubEventsViewModel2 {
     private final boolean canConnect;
     private final boolean canShare;
@@ -37,47 +37,47 @@ public final /* data */ class WidgetHubEventsViewModel2 {
         return widgetHubEventsViewModel2.copy((i & 1) != 0 ? widgetHubEventsViewModel2.directoryChannelId : j, (i & 2) != 0 ? widgetHubEventsViewModel2.event : guildScheduledEvent, (i & 4) != 0 ? widgetHubEventsViewModel2.channel : channel, (i & 8) != 0 ? widgetHubEventsViewModel2.isRsvped : z2, (i & 16) != 0 ? widgetHubEventsViewModel2.canShare : z3, (i & 32) != 0 ? widgetHubEventsViewModel2.canStartEvent : z4, (i & 64) != 0 ? widgetHubEventsViewModel2.canConnect : z5, (i & 128) != 0 ? widgetHubEventsViewModel2.isConnected : z6, (i & 256) != 0 ? widgetHubEventsViewModel2.isInGuild : z7);
     }
 
-    /* renamed from: component1, reason: from getter */
+    /* JADX INFO: renamed from: component1, reason: from getter */
     public final long getDirectoryChannelId() {
         return this.directoryChannelId;
     }
 
-    /* renamed from: component2, reason: from getter */
+    /* JADX INFO: renamed from: component2, reason: from getter */
     public final GuildScheduledEvent getEvent() {
         return this.event;
     }
 
-    /* renamed from: component3, reason: from getter */
+    /* JADX INFO: renamed from: component3, reason: from getter */
     public final Channel getChannel() {
         return this.channel;
     }
 
-    /* renamed from: component4, reason: from getter */
+    /* JADX INFO: renamed from: component4, reason: from getter */
     public final boolean getIsRsvped() {
         return this.isRsvped;
     }
 
-    /* renamed from: component5, reason: from getter */
+    /* JADX INFO: renamed from: component5, reason: from getter */
     public final boolean getCanShare() {
         return this.canShare;
     }
 
-    /* renamed from: component6, reason: from getter */
+    /* JADX INFO: renamed from: component6, reason: from getter */
     public final boolean getCanStartEvent() {
         return this.canStartEvent;
     }
 
-    /* renamed from: component7, reason: from getter */
+    /* JADX INFO: renamed from: component7, reason: from getter */
     public final boolean getCanConnect() {
         return this.canConnect;
     }
 
-    /* renamed from: component8, reason: from getter */
+    /* JADX INFO: renamed from: component8, reason: from getter */
     public final boolean getIsConnected() {
         return this.isConnected;
     }
 
-    /* renamed from: component9, reason: from getter */
+    /* JADX INFO: renamed from: component9, reason: from getter */
     public final boolean getIsInGuild() {
         return this.isInGuild;
     }
@@ -123,6 +123,24 @@ public final /* data */ class WidgetHubEventsViewModel2 {
     }
 
     /* JADX WARN: Multi-variable type inference failed */
+    /* JADX WARN: Type inference failed for: r1v11, types: [int] */
+    /* JADX WARN: Type inference failed for: r1v13, types: [int] */
+    /* JADX WARN: Type inference failed for: r1v15 */
+    /* JADX WARN: Type inference failed for: r1v16 */
+    /* JADX WARN: Type inference failed for: r1v17 */
+    /* JADX WARN: Type inference failed for: r1v18 */
+    /* JADX WARN: Type inference failed for: r1v19 */
+    /* JADX WARN: Type inference failed for: r1v21 */
+    /* JADX WARN: Type inference failed for: r1v22 */
+    /* JADX WARN: Type inference failed for: r1v23 */
+    /* JADX WARN: Type inference failed for: r1v24 */
+    /* JADX WARN: Type inference failed for: r1v25 */
+    /* JADX WARN: Type inference failed for: r1v5, types: [int] */
+    /* JADX WARN: Type inference failed for: r1v7, types: [int] */
+    /* JADX WARN: Type inference failed for: r1v9, types: [int] */
+    /* JADX WARN: Type inference failed for: r2v2 */
+    /* JADX WARN: Type inference failed for: r2v3, types: [int] */
+    /* JADX WARN: Type inference failed for: r2v4 */
     public int hashCode() {
         int iM3a = C0002b.m3a(this.directoryChannelId) * 31;
         GuildScheduledEvent guildScheduledEvent = this.event;
@@ -130,37 +148,37 @@ public final /* data */ class WidgetHubEventsViewModel2 {
         Channel channel = this.channel;
         int iHashCode2 = (iHashCode + (channel != null ? channel.hashCode() : 0)) * 31;
         boolean z2 = this.isRsvped;
-        int i = z2;
-        if (z2 != 0) {
-            i = 1;
+        ?? r1 = z2;
+        if (z2) {
+            r1 = 1;
         }
-        int i2 = (iHashCode2 + i) * 31;
+        int i = (iHashCode2 + r1) * 31;
         boolean z3 = this.canShare;
-        int i3 = z3;
-        if (z3 != 0) {
-            i3 = 1;
+        ?? r12 = z3;
+        if (z3) {
+            r12 = 1;
         }
-        int i4 = (i2 + i3) * 31;
+        int i2 = (i + r12) * 31;
         boolean z4 = this.canStartEvent;
-        int i5 = z4;
-        if (z4 != 0) {
-            i5 = 1;
+        ?? r13 = z4;
+        if (z4) {
+            r13 = 1;
         }
-        int i6 = (i4 + i5) * 31;
+        int i3 = (i2 + r13) * 31;
         boolean z5 = this.canConnect;
-        int i7 = z5;
-        if (z5 != 0) {
-            i7 = 1;
+        ?? r14 = z5;
+        if (z5) {
+            r14 = 1;
         }
-        int i8 = (i6 + i7) * 31;
+        int i4 = (i3 + r14) * 31;
         boolean z6 = this.isConnected;
-        int i9 = z6;
-        if (z6 != 0) {
-            i9 = 1;
+        ?? r15 = z6;
+        if (z6) {
+            r15 = 1;
         }
-        int i10 = (i8 + i9) * 31;
+        int i5 = (i4 + r15) * 31;
         boolean z7 = this.isInGuild;
-        return i10 + (z7 ? 1 : z7 ? 1 : 0);
+        return i5 + (z7 ? 1 : z7);
     }
 
     public final boolean isConnected() {

@@ -6,8 +6,8 @@ import com.discord.models.user.MeUser;
 import com.discord.widgets.servers.WidgetServerSettingsSecurity;
 import p658rx.functions.Func2;
 
-/* compiled from: WidgetServerSettingsSecurity.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetServerSettingsSecurity.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetServerSettingsSecurity$Model$Companion$get$1<T1, T2, R> implements Func2<MeUser, Guild, WidgetServerSettingsSecurity.Model> {
     public static final WidgetServerSettingsSecurity$Model$Companion$get$1 INSTANCE = new WidgetServerSettingsSecurity$Model$Companion$get$1();
 
@@ -16,7 +16,7 @@ public final class WidgetServerSettingsSecurity$Model$Companion$get$1<T1, T2, R>
         return call2(meUser, guild);
     }
 
-    /* renamed from: call, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
     public final WidgetServerSettingsSecurity.Model call2(MeUser meUser, Guild guild) {
         if (meUser == null || guild == null || guild.getOwnerId() != meUser.getId()) {
             return null;

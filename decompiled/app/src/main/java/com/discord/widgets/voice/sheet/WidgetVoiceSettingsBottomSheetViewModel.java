@@ -21,19 +21,19 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 import p658rx.Observable;
 
-/* compiled from: WidgetVoiceSettingsBottomSheetViewModel.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: WidgetVoiceSettingsBottomSheetViewModel.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class WidgetVoiceSettingsBottomSheetViewModel extends AppViewModel<ViewState> {
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private final long channelId;
     private final StoreMediaSettings mediaSettingsStore;
     private final StoreStageChannels stageChannelsStore;
     private final Observable<StoreState> storeObservable;
 
-    /* compiled from: WidgetVoiceSettingsBottomSheetViewModel.kt */
-    /* renamed from: com.discord.widgets.voice.sheet.WidgetVoiceSettingsBottomSheetViewModel$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.voice.sheet.WidgetVoiceSettingsBottomSheetViewModel$1 */
+    /* JADX INFO: compiled from: WidgetVoiceSettingsBottomSheetViewModel.kt */
     public static final class C106151 extends Lambda implements Function1<StoreState, Unit> {
         public C106151() {
             super(1);
@@ -45,14 +45,14 @@ public final class WidgetVoiceSettingsBottomSheetViewModel extends AppViewModel<
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(StoreState storeState) {
             Intrinsics3.checkNotNullParameter(storeState, "storeState");
             WidgetVoiceSettingsBottomSheetViewModel.access$handleStoreState(WidgetVoiceSettingsBottomSheetViewModel.this, storeState);
         }
     }
 
-    /* compiled from: WidgetVoiceSettingsBottomSheetViewModel.kt */
+    /* JADX INFO: compiled from: WidgetVoiceSettingsBottomSheetViewModel.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -72,10 +72,10 @@ public final class WidgetVoiceSettingsBottomSheetViewModel extends AppViewModel<
         }
     }
 
-    /* compiled from: WidgetVoiceSettingsBottomSheetViewModel.kt */
+    /* JADX INFO: compiled from: WidgetVoiceSettingsBottomSheetViewModel.kt */
     public static abstract class StoreState {
 
-        /* compiled from: WidgetVoiceSettingsBottomSheetViewModel.kt */
+        /* JADX INFO: compiled from: WidgetVoiceSettingsBottomSheetViewModel.kt */
         public static final class Invalid extends StoreState {
             public static final Invalid INSTANCE = new Invalid();
 
@@ -84,7 +84,7 @@ public final class WidgetVoiceSettingsBottomSheetViewModel extends AppViewModel<
             }
         }
 
-        /* compiled from: WidgetVoiceSettingsBottomSheetViewModel.kt */
+        /* JADX INFO: compiled from: WidgetVoiceSettingsBottomSheetViewModel.kt */
         public static final /* data */ class Valid extends StoreState {
             private final CallModel callModel;
             private final StageRoles myStageRoles;
@@ -93,7 +93,7 @@ public final class WidgetVoiceSettingsBottomSheetViewModel extends AppViewModel<
                 this(callModel, stageRoles);
             }
 
-            /* renamed from: copy-FZvHQiQ$default, reason: not valid java name */
+            /* JADX INFO: renamed from: copy-FZvHQiQ$default, reason: not valid java name */
             public static /* synthetic */ Valid m11450copyFZvHQiQ$default(Valid valid, CallModel callModel, StageRoles stageRoles, int i, Object obj) {
                 if ((i & 1) != 0) {
                     callModel = valid.callModel;
@@ -104,17 +104,17 @@ public final class WidgetVoiceSettingsBottomSheetViewModel extends AppViewModel<
                 return valid.m11452copyFZvHQiQ(callModel, stageRoles);
             }
 
-            /* renamed from: component1, reason: from getter */
+            /* JADX INFO: renamed from: component1, reason: from getter */
             public final CallModel getCallModel() {
                 return this.callModel;
             }
 
-            /* renamed from: component2-twRsX-0, reason: not valid java name and from getter */
+            /* JADX INFO: renamed from: component2-twRsX-0, reason: not valid java name and from getter */
             public final StageRoles getMyStageRoles() {
                 return this.myStageRoles;
             }
 
-            /* renamed from: copy-FZvHQiQ, reason: not valid java name */
+            /* JADX INFO: renamed from: copy-FZvHQiQ, reason: not valid java name */
             public final Valid m11452copyFZvHQiQ(CallModel callModel, StageRoles myStageRoles) {
                 Intrinsics3.checkNotNullParameter(callModel, "callModel");
                 return new Valid(callModel, myStageRoles);
@@ -135,7 +135,7 @@ public final class WidgetVoiceSettingsBottomSheetViewModel extends AppViewModel<
                 return this.callModel;
             }
 
-            /* renamed from: getMyStageRoles-twRsX-0, reason: not valid java name */
+            /* JADX INFO: renamed from: getMyStageRoles-twRsX-0, reason: not valid java name */
             public final StageRoles m11453getMyStageRolestwRsX0() {
                 return this.myStageRoles;
             }
@@ -171,7 +171,7 @@ public final class WidgetVoiceSettingsBottomSheetViewModel extends AppViewModel<
         }
     }
 
-    /* compiled from: WidgetVoiceSettingsBottomSheetViewModel.kt */
+    /* JADX INFO: compiled from: WidgetVoiceSettingsBottomSheetViewModel.kt */
     public static final /* data */ class ViewState implements WidgetVoiceSettingsBottomSheet.ViewState {
         private final Channel channel;
         private final Guild guild;
@@ -286,43 +286,62 @@ public final class WidgetVoiceSettingsBottomSheetViewModel extends AppViewModel<
             return this.showVoiceParticipantsToggle;
         }
 
+        /* JADX WARN: Multi-variable type inference failed */
+        /* JADX WARN: Type inference failed for: r2v1, types: [int] */
+        /* JADX WARN: Type inference failed for: r2v12 */
+        /* JADX WARN: Type inference failed for: r2v13 */
+        /* JADX WARN: Type inference failed for: r2v14 */
+        /* JADX WARN: Type inference failed for: r2v15 */
+        /* JADX WARN: Type inference failed for: r2v16 */
+        /* JADX WARN: Type inference failed for: r2v17 */
+        /* JADX WARN: Type inference failed for: r2v18 */
+        /* JADX WARN: Type inference failed for: r2v19 */
+        /* JADX WARN: Type inference failed for: r2v20 */
+        /* JADX WARN: Type inference failed for: r2v21 */
+        /* JADX WARN: Type inference failed for: r2v3, types: [int] */
+        /* JADX WARN: Type inference failed for: r2v5, types: [int] */
+        /* JADX WARN: Type inference failed for: r2v7, types: [int] */
+        /* JADX WARN: Type inference failed for: r2v9, types: [int] */
+        /* JADX WARN: Type inference failed for: r3v0 */
+        /* JADX WARN: Type inference failed for: r3v1, types: [int] */
+        /* JADX WARN: Type inference failed for: r3v2 */
         public int hashCode() {
             Channel channel = getChannel();
             int iHashCode = (channel != null ? channel.hashCode() : 0) * 31;
             boolean showVoiceParticipants = getShowVoiceParticipants();
-            int i = showVoiceParticipants;
+            ?? r2 = showVoiceParticipants;
             if (showVoiceParticipants) {
-                i = 1;
+                r2 = 1;
             }
-            int i2 = (iHashCode + i) * 31;
+            int i = (iHashCode + r2) * 31;
             boolean showVoiceParticipantsToggle = getShowVoiceParticipantsToggle();
-            int i3 = showVoiceParticipantsToggle;
+            ?? r22 = showVoiceParticipantsToggle;
             if (showVoiceParticipantsToggle) {
-                i3 = 1;
+                r22 = 1;
             }
-            int i4 = (i2 + i3) * 31;
+            int i2 = (i + r22) * 31;
             boolean showInviteItem = getShowInviteItem();
-            int i5 = showInviteItem;
+            ?? r23 = showInviteItem;
             if (showInviteItem) {
-                i5 = 1;
+                r23 = 1;
             }
-            int i6 = (i4 + i5) * 31;
+            int i3 = (i2 + r23) * 31;
             boolean noiseCancellationEnabled = getNoiseCancellationEnabled();
-            int i7 = noiseCancellationEnabled;
+            ?? r24 = noiseCancellationEnabled;
             if (noiseCancellationEnabled) {
-                i7 = 1;
+                r24 = 1;
             }
-            int i8 = (i6 + i7) * 31;
+            int i4 = (i3 + r24) * 31;
             boolean showStageSettings = getShowStageSettings();
-            int i9 = showStageSettings;
+            ?? r25 = showStageSettings;
             if (showStageSettings) {
-                i9 = 1;
+                r25 = 1;
             }
-            int i10 = (i8 + i9) * 31;
+            int i5 = (i4 + r25) * 31;
             boolean showReportItem = getShowReportItem();
-            int i11 = (i10 + (showReportItem ? 1 : showReportItem)) * 31;
+            int i6 = (i5 + (showReportItem ? 1 : showReportItem)) * 31;
             Guild guild = getGuild();
-            return i11 + (guild != null ? guild.hashCode() : 0);
+            return i6 + (guild != null ? guild.hashCode() : 0);
         }
 
         public String toString() {

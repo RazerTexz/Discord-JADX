@@ -13,8 +13,8 @@ import p007b.p100d.p104b.p105a.outline;
 import p507d0.p580t._Collections;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ChatListItemMessageAccessibilityDelegate.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: ChatListItemMessageAccessibilityDelegate.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class ChatListItemMessageAccessibilityDelegate extends AccessibilityDelegateCompat {
     private final TextView nameView;
     private final TextView tagView;

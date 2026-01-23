@@ -1,10 +1,10 @@
 package com.google.android.gms.nearby.messages;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public interface BleSignal {
-    /* renamed from: U */
+    /* JADX INFO: renamed from: U */
     int mo9118U();
 
-    /* renamed from: V */
+    /* JADX INFO: renamed from: V */
     int mo9119V();
 }

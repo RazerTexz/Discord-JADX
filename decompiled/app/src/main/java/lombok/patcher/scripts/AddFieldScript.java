@@ -10,7 +10,7 @@ import org.objectweb.asm.ClassWriter;
 import org.objectweb.asm.FieldVisitor;
 import org.objectweb.asm.Opcodes;
 
-/* loaded from: discord-126021.apk:lombok/patcher/scripts/AddFieldScript.SCL.lombok */
+/* JADX INFO: loaded from: discord-126021.apk:lombok/patcher/scripts/AddFieldScript.SCL.lombok */
 public class AddFieldScript extends PatchScript {
     private final int accessFlags;
     private final List<String> targetClasses;
@@ -76,8 +76,8 @@ public class AddFieldScript extends PatchScript {
         return null;
     }
 
-    /* renamed from: lombok.patcher.scripts.AddFieldScript$1 */
-    /* loaded from: discord-126021.apk:lombok/patcher/scripts/AddFieldScript$1.SCL.lombok */
+    /* JADX INFO: renamed from: lombok.patcher.scripts.AddFieldScript$1 */
+    /* JADX INFO: loaded from: discord-126021.apk:lombok/patcher/scripts/AddFieldScript$1.SCL.lombok */
     class C129151 extends ClassVisitor {
         private boolean alreadyAdded;
 

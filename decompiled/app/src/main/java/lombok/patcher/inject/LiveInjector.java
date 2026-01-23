@@ -10,24 +10,24 @@ import java.lang.management.ManagementFactory;
 import java.lang.reflect.InvocationTargetException;
 import lombok.patcher.ClassRootFinder;
 
-/* loaded from: discord-126021.apk:lombok/patcher/inject/LiveInjector.SCL.lombok */
+/* JADX INFO: loaded from: discord-126021.apk:lombok/patcher/inject/LiveInjector.SCL.lombok */
 public class LiveInjector {
 
-    /* loaded from: discord-126021.apk:lombok/patcher/inject/LiveInjector$LibInstrument.SCL.lombok */
+    /* JADX INFO: loaded from: discord-126021.apk:lombok/patcher/inject/LiveInjector$LibInstrument.SCL.lombok */
     public interface LibInstrument extends Library {
         void Agent_OnAttach(Pointer pointer, String str, Pointer pointer2);
     }
 
-    /* loaded from: discord-126021.apk:lombok/patcher/inject/LiveInjector$LibJVM.SCL.lombok */
+    /* JADX INFO: loaded from: discord-126021.apk:lombok/patcher/inject/LiveInjector$LibJVM.SCL.lombok */
     public interface LibJVM extends Library {
         int JNI_GetCreatedJavaVMs(PointerByReference pointerByReference, int i, IntByReference intByReference);
     }
 
-    public void injectSelf() throws IllegalStateException, NumberFormatException {
+    public void injectSelf() throws IllegalStateException {
         inject(ClassRootFinder.findClassRootOfSelf());
     }
 
-    public void inject(String jarFile) throws IllegalStateException, NumberFormatException {
+    public void inject(String jarFile) throws IllegalStateException {
         File f = new File(jarFile);
         if (!f.isFile()) {
             throw new IllegalArgumentException("Live Injection is not possible unless the classpath root to inject is a jar file.");
@@ -54,7 +54,7 @@ public class LiveInjector {
         }
     }
 
-    private void slowInject(String jarFile) throws IllegalStateException, NumberFormatException {
+    private void slowInject(String jarFile) throws IllegalStateException {
         String ownPidS = ManagementFactory.getRuntimeMXBean().getName();
         int ownPid = Integer.parseInt(ownPidS.substring(0, ownPidS.indexOf(64)));
         boolean unsupportedEnvironment = false;

@@ -9,21 +9,21 @@ import p007b.p225i.p226a.p242c.p259f3.CodecSpecificDataUtil;
 import p007b.p225i.p226a.p242c.p259f3.NalUnitUtil;
 import p007b.p225i.p226a.p242c.p259f3.ParsableByteArray;
 
-/* compiled from: HevcConfig.java */
-/* renamed from: b.i.a.c.g3.q, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.g3.q, reason: use source file name */
+/* JADX INFO: compiled from: HevcConfig.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class HevcConfig {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final List<byte[]> f6863a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final int f6864b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final float f6865c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     @Nullable
     public final String f6866d;
 
@@ -34,7 +34,7 @@ public final class HevcConfig {
         this.f6866d = str;
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static HevcConfig m3131a(ParsableByteArray parsableByteArray) throws ParserException {
         int i;
         int i2;

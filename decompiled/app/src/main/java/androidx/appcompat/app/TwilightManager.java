@@ -12,7 +12,7 @@ import androidx.core.content.PermissionChecker;
 import com.discord.models.domain.ModelAuditLogEntry;
 import java.util.Calendar;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class TwilightManager {
     private static final int SUNRISE = 6;
     private static final int SUNSET = 22;

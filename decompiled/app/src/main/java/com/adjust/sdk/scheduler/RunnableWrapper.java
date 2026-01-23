@@ -2,7 +2,7 @@ package com.adjust.sdk.scheduler;
 
 import com.adjust.sdk.AdjustFactory;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class RunnableWrapper implements Runnable {
     private Runnable runnable;
 

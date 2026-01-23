@@ -20,7 +20,7 @@ import p617h0.p628c.RunnableC12492v;
 import p617h0.p628c.RunnableC12493w;
 import p617h0.p628c.RunnableC12494x;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public class SurfaceTextureHelper {
     private static final String TAG = "SurfaceTextureHelper";
     private final EglBase eglBase;
@@ -47,7 +47,7 @@ public class SurfaceTextureHelper {
     private final TimestampAligner timestampAligner;
     private final YuvConverter yuvConverter;
 
-    /* renamed from: org.webrtc.SurfaceTextureHelper$1 */
+    /* JADX INFO: renamed from: org.webrtc.SurfaceTextureHelper$1 */
     public class CallableC129861 implements Callable<SurfaceTextureHelper> {
         public final /* synthetic */ boolean val$alignTimestamps;
         public final /* synthetic */ FrameRefMonitor val$frameRefMonitor;
@@ -73,7 +73,7 @@ public class SurfaceTextureHelper {
 
         @Override // java.util.concurrent.Callable
         @Nullable
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public SurfaceTextureHelper call2() {
             try {
                 return new SurfaceTextureHelper(this.val$sharedContext, this.val$handler, this.val$alignTimestamps, this.val$yuvConverter, this.val$frameRefMonitor, null);
@@ -84,7 +84,7 @@ public class SurfaceTextureHelper {
         }
     }
 
-    /* renamed from: org.webrtc.SurfaceTextureHelper$2 */
+    /* JADX INFO: renamed from: org.webrtc.SurfaceTextureHelper$2 */
     public class C129872 implements TextureBufferImpl.RefCountMonitor {
         public C129872() {
         }
@@ -112,7 +112,7 @@ public class SurfaceTextureHelper {
         }
     }
 
-    /* renamed from: org.webrtc.SurfaceTextureHelper$3 */
+    /* JADX INFO: renamed from: org.webrtc.SurfaceTextureHelper$3 */
     public class RunnableC129883 implements Runnable {
         public RunnableC129883() {
         }
@@ -252,7 +252,7 @@ public class SurfaceTextureHelper {
         }
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public /* synthetic */ void m11040a() {
         this.isQuitting = true;
         if (this.isTextureInUse) {
@@ -261,13 +261,13 @@ public class SurfaceTextureHelper {
         release();
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public /* synthetic */ void m11041b() {
         this.hasPendingTexture = true;
         tryDeliverTextureFrame();
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public /* synthetic */ void m11042c(SurfaceTexture surfaceTexture) {
         if (this.hasPendingTexture) {
             Logging.m11027d(TAG, "A frame is already pending, dropping frame.");
@@ -276,7 +276,7 @@ public class SurfaceTextureHelper {
         tryDeliverTextureFrame();
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public /* synthetic */ void m11043d() {
         this.isTextureInUse = false;
         if (this.isQuitting) {
@@ -291,12 +291,12 @@ public class SurfaceTextureHelper {
         ThreadUtils.invokeAtFrontUninterruptibly(this.handler, new RunnableC12486s(this));
     }
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public /* synthetic */ void m11044e(int i) {
         this.frameRotation = i;
     }
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public /* synthetic */ void m11045f(int i, int i2) {
         this.textureWidth = i;
         this.textureHeight = i2;
@@ -307,7 +307,7 @@ public class SurfaceTextureHelper {
         this.handler.post(new RunnableC12490u(this));
     }
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public /* synthetic */ void m11046g() {
         this.listener = null;
         this.pendingListener = null;

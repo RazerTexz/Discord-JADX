@@ -29,13 +29,13 @@ import p507d0.p580t._Arrays;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: ComponentStateMapper.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: ComponentStateMapper.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class ComponentStateMapper {
     public static final ComponentStateMapper INSTANCE = new ComponentStateMapper();
 
-    /* compiled from: ComponentStateMapper.kt */
-    /* renamed from: com.discord.widgets.botuikit.ComponentStateMapper$processComponentsToMessageComponents$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.botuikit.ComponentStateMapper$processComponentsToMessageComponents$1 */
+    /* JADX INFO: compiled from: ComponentStateMapper.kt */
     public static final class C72711 extends Lambda implements Function2<Integer, Component, Unit> {
         public final /* synthetic */ Stack $childComponentsLevelStack;
         public final /* synthetic */ Ref$ObjectRef $childrenComponents;
@@ -172,7 +172,7 @@ public final class ComponentStateMapper {
         return null;
     }
 
-    /* compiled from: ComponentStateMapper.kt */
+    /* JADX INFO: compiled from: ComponentStateMapper.kt */
     public static final /* data */ class ChildComponents {
         private final MessageComponent[] components;
         private int currentComponentInsertionIndex;
@@ -208,22 +208,22 @@ public final class ComponentStateMapper {
             return childComponents.copy(i, component8, i2, i3);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final int getLayoutComponentIndex() {
             return this.layoutComponentIndex;
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final Component8 getParentLayoutComponent() {
             return this.parentLayoutComponent;
         }
 
-        /* renamed from: component3, reason: from getter */
+        /* JADX INFO: renamed from: component3, reason: from getter */
         public final int getCurrentComponentInsertionIndex() {
             return this.currentComponentInsertionIndex;
         }
 
-        /* renamed from: component4, reason: from getter */
+        /* JADX INFO: renamed from: component4, reason: from getter */
         public final int getTotal() {
             return this.total;
         }

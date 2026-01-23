@@ -6,12 +6,12 @@ import kotlinx.coroutines.CoroutineScope;
 import p007b.p225i.p226a.p288f.p299e.p308o.C3404f;
 import p507d0.p584w.ContinuationInterceptor;
 
-/* compiled from: CoroutineContext.kt */
-/* renamed from: s.a.z, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: s.a.z, reason: use source file name */
+/* JADX INFO: compiled from: CoroutineContext.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class CoroutineContext2 {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final boolean f27923a;
 
     /* JADX WARN: Code restructure failed: missing block: B:15:0x0028, code lost:
@@ -37,7 +37,7 @@ public final class CoroutineContext2 {
         f27923a = z2;
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final CoroutineContext m11354a(CoroutineScope coroutineScope, CoroutineContext coroutineContext) {
         CoroutineContext coroutineContextPlus = coroutineScope.getCoroutineContext().plus(coroutineContext);
         CoroutineDispatcher coroutineDispatcher = Dispatchers.f27866a;

@@ -2,8 +2,8 @@ package com.discord.models.domain;
 
 import p007b.p100d.p104b.p105a.outline;
 
-/* compiled from: ModelUserAffinity.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: ModelUserAffinity.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class ModelUserAffinity {
     private final float affinity;
     private final long userId;
@@ -23,12 +23,12 @@ public final /* data */ class ModelUserAffinity {
         return modelUserAffinity.copy(j, f);
     }
 
-    /* renamed from: component1, reason: from getter */
+    /* JADX INFO: renamed from: component1, reason: from getter */
     public final long getUserId() {
         return this.userId;
     }
 
-    /* renamed from: component2, reason: from getter */
+    /* JADX INFO: renamed from: component2, reason: from getter */
     public final float getAffinity() {
         return this.affinity;
     }

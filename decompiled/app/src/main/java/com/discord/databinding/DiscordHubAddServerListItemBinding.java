@@ -12,22 +12,22 @@ import com.discord.C5419R;
 import com.discord.views.GuildView;
 import com.google.android.material.card.MaterialCardView;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public final class DiscordHubAddServerListItemBinding implements ViewBinding {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     @NonNull
     public final FrameLayout f15046a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     @NonNull
     public final GuildView f15047b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     @NonNull
     public final MaterialCardView f15048c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     @NonNull
     public final TextView f15049d;
 
@@ -39,7 +39,7 @@ public final class DiscordHubAddServerListItemBinding implements ViewBinding {
     }
 
     @NonNull
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static DiscordHubAddServerListItemBinding m8382a(@NonNull LayoutInflater layoutInflater, @Nullable ViewGroup viewGroup, boolean z2) {
         View viewInflate = layoutInflater.inflate(C5419R.layout.discord_hub_add_server_list_item, viewGroup, false);
         if (z2) {

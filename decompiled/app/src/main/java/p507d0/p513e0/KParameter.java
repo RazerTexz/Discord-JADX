@@ -2,13 +2,13 @@ package p507d0.p513e0;
 
 import kotlin.reflect.KType;
 
-/* compiled from: KParameter.kt */
-/* renamed from: d0.e0.f, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.f, reason: use source file name */
+/* JADX INFO: compiled from: KParameter.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public interface KParameter extends KAnnotatedElement {
 
-    /* compiled from: KParameter.kt */
-    /* renamed from: d0.e0.f$a */
+    /* JADX INFO: renamed from: d0.e0.f$a */
+    /* JADX INFO: compiled from: KParameter.kt */
     public enum a {
         INSTANCE,
         EXTENSION_RECEIVER,

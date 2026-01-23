@@ -5,15 +5,15 @@ import java.util.Arrays;
 import p007b.p100d.p104b.p105a.outline;
 import p007b.p225i.p226a.p228b.p231j.EventInternal;
 
-/* compiled from: AutoValue_BackendRequest.java */
-/* renamed from: b.i.a.b.j.q.a, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.b.j.q.a, reason: use source file name */
+/* JADX INFO: compiled from: AutoValue_BackendRequest.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class AutoValue_BackendRequest extends BackendRequest {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final Iterable<EventInternal> f5300a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final byte[] f5301b;
 
     public AutoValue_BackendRequest(Iterable iterable, byte[] bArr, a aVar) {
@@ -22,14 +22,14 @@ public final class AutoValue_BackendRequest extends BackendRequest {
     }
 
     @Override // p007b.p225i.p226a.p228b.p231j.p232q.BackendRequest
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public Iterable<EventInternal> mo2362a() {
         return this.f5300a;
     }
 
     @Override // p007b.p225i.p226a.p228b.p231j.p232q.BackendRequest
     @Nullable
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public byte[] mo2363b() {
         return this.f5301b;
     }

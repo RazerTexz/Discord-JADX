@@ -3,9 +3,9 @@ package com.discord.utilities.embed;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-/* compiled from: FileType.kt */
-/* renamed from: com.discord.utilities.embed.FileType$threadLocalMatcher$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.utilities.embed.FileType$threadLocalMatcher$1, reason: use source file name */
+/* JADX INFO: compiled from: FileType.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class FileType2 extends ThreadLocal<Matcher> {
     public final /* synthetic */ Pattern $pattern;
 
@@ -19,7 +19,7 @@ public final class FileType2 extends ThreadLocal<Matcher> {
     }
 
     @Override // java.lang.ThreadLocal
-    /* renamed from: initialValue, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: initialValue, reason: avoid collision after fix types in other method */
     public Matcher initialValue2() {
         return this.$pattern.matcher("");
     }

@@ -6,15 +6,15 @@ import java.util.EnumMap;
 import p007b.p100d.p104b.p105a.outline;
 import p007b.p225i.p226a.p228b.Priority3;
 
-/* compiled from: PriorityMapping.java */
-/* renamed from: b.i.a.b.j.w.a, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.b.j.w.a, reason: use source file name */
+/* JADX INFO: compiled from: PriorityMapping.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class PriorityMapping {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static SparseArray<Priority3> f5461a = new SparseArray<>();
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static EnumMap<Priority3, Integer> f5462b;
 
     static {
@@ -28,7 +28,7 @@ public final class PriorityMapping {
         }
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static int m2414a(@NonNull Priority3 priority3) {
         Integer num = f5462b.get(priority3);
         if (num != null) {
@@ -38,7 +38,7 @@ public final class PriorityMapping {
     }
 
     @NonNull
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static Priority3 m2415b(int i) {
         Priority3 priority3 = f5461a.get(i);
         if (priority3 != null) {

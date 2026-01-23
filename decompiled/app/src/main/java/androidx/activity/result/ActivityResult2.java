@@ -3,9 +3,9 @@ package androidx.activity.result;
 import android.content.Intent;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ActivityResult.kt */
-/* renamed from: androidx.activity.result.ActivityResultKt, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: androidx.activity.result.ActivityResultKt, reason: use source file name */
+/* JADX INFO: compiled from: ActivityResult.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class ActivityResult2 {
     public static final int component1(ActivityResult activityResult) {
         Intrinsics3.checkNotNullParameter(activityResult, "$this$component1");

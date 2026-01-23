@@ -3,8 +3,8 @@ package com.discord.widgets.chat.input.sticker;
 import android.view.View;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: View.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: View.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetStickerPicker$scrollToTop$$inlined$doOnLayout$1 implements View.OnLayoutChangeListener {
     public final /* synthetic */ WidgetStickerPicker this$0;
 

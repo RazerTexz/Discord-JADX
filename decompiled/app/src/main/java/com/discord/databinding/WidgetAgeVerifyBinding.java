@@ -9,26 +9,26 @@ import p007b.p008a.p025i.LayoutAgeVerifyBinding;
 import p007b.p008a.p025i.LayoutAgeVerifyConfirmBinding;
 import p007b.p008a.p025i.LayoutAgeVerifyUnderageBinding;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public final class WidgetAgeVerifyBinding implements ViewBinding {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     @NonNull
     public final CoordinatorLayout f15643a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     @NonNull
     public final AppViewFlipper f15644b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     @NonNull
     public final LayoutAgeVerifyConfirmBinding f15645c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     @NonNull
     public final LayoutAgeVerifyUnderageBinding f15646d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     @NonNull
     public final LayoutAgeVerifyBinding f15647e;
 

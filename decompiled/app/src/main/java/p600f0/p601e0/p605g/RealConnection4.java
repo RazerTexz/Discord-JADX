@@ -80,57 +80,57 @@ import p615g0.Sink;
 import p615g0.Source2;
 import p615g0.Timeout2;
 
-/* compiled from: RealConnection.kt */
-/* renamed from: f0.e0.g.j, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: f0.e0.g.j, reason: use source file name */
+/* JADX INFO: compiled from: RealConnection.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class RealConnection4 extends Http2Connection.c implements Connection2 {
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public Socket f25491b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public Socket f25492c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public Handshake f25493d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public Protocol2 f25494e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public Http2Connection f25495f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public BufferedSource f25496g;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public BufferedSink f25497h;
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public boolean f25498i;
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public boolean f25499j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public int f25500k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public int f25501l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public int f25502m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public int f25503n;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public final List<Reference<RealCall>> f25504o;
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public long f25505p;
 
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     public final Route f25506q;
 
     public RealConnection4(RealConnectionPool realConnectionPool, Route route) {
@@ -143,7 +143,7 @@ public final class RealConnection4 extends Http2Connection.c implements Connecti
     }
 
     @Override // p600f0.p601e0.p608j.Http2Connection.c
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public synchronized void mo10192a(Http2Connection http2Connection, Settings3 settings3) {
         Intrinsics3.checkParameterIsNotNull(http2Connection, "connection");
         Intrinsics3.checkParameterIsNotNull(settings3, "settings");
@@ -151,7 +151,7 @@ public final class RealConnection4 extends Http2Connection.c implements Connecti
     }
 
     @Override // p600f0.p601e0.p608j.Http2Connection.c
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public void mo10193b(Http2Stream http2Stream) throws IOException {
         Intrinsics3.checkParameterIsNotNull(http2Stream, "stream");
         http2Stream.m10284c(ErrorCode2.REFUSED_STREAM, null);
@@ -163,7 +163,7 @@ public final class RealConnection4 extends Http2Connection.c implements Connecti
     /* JADX WARN: Removed duplicated region for block: B:56:0x0122  */
     /* JADX WARN: Removed duplicated region for block: B:58:0x0127  */
     /* JADX WARN: Removed duplicated region for block: B:95:0x015b A[SYNTHETIC] */
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
@@ -292,7 +292,7 @@ public final class RealConnection4 extends Http2Connection.c implements Connecti
         throw routeException;
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final void m10195d(OkHttpClient okHttpClient, Route route, IOException iOException) {
         Intrinsics3.checkParameterIsNotNull(okHttpClient, "client");
         Intrinsics3.checkParameterIsNotNull(route, "failedRoute");
@@ -308,7 +308,7 @@ public final class RealConnection4 extends Http2Connection.c implements Connecti
         }
     }
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final void m10196e(int i, int i2, Call2 call2, EventListener eventListener) throws IOException {
         Socket socket;
         int i3;
@@ -355,7 +355,7 @@ public final class RealConnection4 extends Http2Connection.c implements Connecti
         }
     }
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final void m10197f(int i, int i2, int i3, Call2 call2, EventListener eventListener) throws IOException {
         Request.C12935a c12935a = new Request.C12935a();
         c12935a.m10984g(this.f25506q.f25370a.f25353a);
@@ -475,7 +475,7 @@ public final class RealConnection4 extends Http2Connection.c implements Connecti
 
     /* JADX WARN: Removed duplicated region for block: B:15:0x004a A[Catch: all -> 0x019b, TRY_LEAVE, TryCatch #1 {all -> 0x019b, blocks: (B:12:0x0038, B:13:0x003b, B:15:0x004a, B:51:0x0193, B:52:0x019a), top: B:61:0x0038 }] */
     /* JADX WARN: Removed duplicated region for block: B:51:0x0193 A[Catch: all -> 0x019b, TRY_ENTER, TryCatch #1 {all -> 0x019b, blocks: (B:12:0x0038, B:13:0x003b, B:15:0x004a, B:51:0x0193, B:52:0x019a), top: B:61:0x0038 }] */
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
@@ -612,7 +612,7 @@ public final class RealConnection4 extends Http2Connection.c implements Connecti
     /* JADX WARN: Removed duplicated region for block: B:58:0x00d3  */
     /* JADX WARN: Removed duplicated region for block: B:63:0x00db A[RETURN] */
     /* JADX WARN: Removed duplicated region for block: B:74:0x00dc A[EXC_TOP_SPLITTER, SYNTHETIC] */
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
@@ -704,7 +704,7 @@ public final class RealConnection4 extends Http2Connection.c implements Connecti
         return false;
     }
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public final boolean m10200i(boolean z2) {
         long j;
         byte[] bArr = Util7.f25397a;
@@ -764,12 +764,12 @@ public final class RealConnection4 extends Http2Connection.c implements Connecti
         }
     }
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final boolean m10201j() {
         return this.f25495f != null;
     }
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final ExchangeCodec m10202k(OkHttpClient okHttpClient, RealInterceptorChain realInterceptorChain) throws SocketException {
         Intrinsics3.checkParameterIsNotNull(okHttpClient, "client");
         Intrinsics3.checkParameterIsNotNull(realInterceptorChain, "chain");
@@ -798,12 +798,12 @@ public final class RealConnection4 extends Http2Connection.c implements Connecti
         return new Http1ExchangeCodec(okHttpClient, this, bufferedSource, bufferedSink);
     }
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final synchronized void m10203l() {
         this.f25498i = true;
     }
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public Protocol2 m10204m() {
         Protocol2 protocol2 = this.f25494e;
         if (protocol2 == null) {
@@ -812,7 +812,7 @@ public final class RealConnection4 extends Http2Connection.c implements Connecti
         return protocol2;
     }
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public Socket m10205n() {
         Socket socket = this.f25492c;
         if (socket == null) {
@@ -821,7 +821,7 @@ public final class RealConnection4 extends Http2Connection.c implements Connecti
         return socket;
     }
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public final void m10206o(int i) throws IOException {
         String strM883w;
         Socket socket = this.f25492c;

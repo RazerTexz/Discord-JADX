@@ -16,18 +16,18 @@ import p007b.p225i.p226a.p288f.p299e.p300h.C3266a;
 import p007b.p225i.p226a.p288f.p299e.p300h.p301j.InterfaceC3290f;
 import p007b.p225i.p226a.p288f.p299e.p300h.p301j.InterfaceC3303l;
 
-/* compiled from: com.google.android.gms:play-services-base@@17.3.0 */
-/* renamed from: b.i.a.f.e.k.d */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.e.k.d */
+/* JADX INFO: compiled from: com.google.android.gms:play-services-base@@17.3.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public abstract class AbstractC3349d<T extends IInterface> extends AbstractC3345b<T> implements C3266a.f {
 
-    /* renamed from: x */
+    /* JADX INFO: renamed from: x */
     public final C3347c f9513x;
 
-    /* renamed from: y */
+    /* JADX INFO: renamed from: y */
     public final Set<Scope> f9514y;
 
-    /* renamed from: z */
+    /* JADX INFO: renamed from: z */
     @Nullable
     public final Account f9515z;
 
@@ -53,20 +53,20 @@ public abstract class AbstractC3349d<T extends IInterface> extends AbstractC3345
 
     @Override // p007b.p225i.p226a.p288f.p299e.p300h.C3266a.f
     @NonNull
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public Set<Scope> mo4030a() {
         return mo4042o() ? this.f9514y : Collections.emptySet();
     }
 
     @Override // p007b.p225i.p226a.p288f.p299e.p304k.AbstractC3345b
     @Nullable
-    /* renamed from: s */
+    /* JADX INFO: renamed from: s */
     public final Account mo4138s() {
         return this.f9515z;
     }
 
     @Override // p007b.p225i.p226a.p288f.p299e.p304k.AbstractC3345b
-    /* renamed from: v */
+    /* JADX INFO: renamed from: v */
     public final Set<Scope> mo4141v() {
         return this.f9514y;
     }

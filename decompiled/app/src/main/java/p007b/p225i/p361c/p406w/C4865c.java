@@ -41,18 +41,18 @@ import org.json.JSONException;
 import p007b.p100d.p104b.p105a.outline;
 import p007b.p225i.p226a.p288f.p299e.p308o.C3404f;
 
-/* compiled from: com.google.firebase:firebase-messaging@@21.0.0 */
-/* renamed from: b.i.c.w.c */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.c.w.c */
+/* JADX INFO: compiled from: com.google.firebase:firebase-messaging@@21.0.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public class C4865c {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final Executor f13014a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final Context f13015b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final C4880r f13016c;
 
     public C4865c(Context context, C4880r c4880r, Executor executor) {
@@ -62,8 +62,10 @@ public class C4865c {
     }
 
     /* JADX WARN: Multi-variable type inference failed */
+    /* JADX WARN: Removed duplicated region for block: B:163:0x0373  */
     /* JADX WARN: Removed duplicated region for block: B:18:0x004e A[EDGE_INSN: B:283:0x004e->B:18:0x004e BREAK  A[LOOP:0: B:11:0x0036->B:285:?]] */
     /* JADX WARN: Removed duplicated region for block: B:270:0x01cb A[EXC_TOP_SPLITTER, SYNTHETIC] */
+    /* JADX WARN: Removed duplicated region for block: B:272:0x0365 A[EXC_TOP_SPLITTER, SYNTHETIC] */
     /* JADX WARN: Removed duplicated region for block: B:42:0x00c3  */
     /* JADX WARN: Removed duplicated region for block: B:57:0x0117  */
     /* JADX WARN: Removed duplicated region for block: B:61:0x0124  */
@@ -71,7 +73,10 @@ public class C4865c {
     /* JADX WARN: Removed duplicated region for block: B:65:0x014e  */
     /* JADX WARN: Removed duplicated region for block: B:95:0x01e4  */
     /* JADX WARN: Removed duplicated region for block: B:97:0x01ea  */
-    /* renamed from: a */
+    /* JADX WARN: Type inference failed for: r0v49 */
+    /* JADX WARN: Type inference failed for: r0v81 */
+    /* JADX WARN: Type inference failed for: r0v82 */
+    /* JADX INFO: renamed from: a */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
@@ -88,6 +93,7 @@ public class C4865c {
         Long lValueOf;
         long[] jArr;
         int[] iArr;
+        int i2;
         ApplicationInfo applicationInfo;
         if (this.f13016c.m6822a("gcm.n.noui")) {
             return true;
@@ -120,6 +126,7 @@ public class C4865c {
             } catch (MalformedURLException unused) {
                 String strValueOf = String.valueOf(strM6826e);
                 Log.w("FirebaseMessaging", strValueOf.length() != 0 ? "Not downloading image, bad URL: ".concat(strValueOf) : new String("Not downloading image, bad URL: "));
+                c4877o = null;
             }
         }
         if (c4877o != null) {
@@ -198,6 +205,7 @@ public class C4865c {
                 } catch (PackageManager.NameNotFoundException e2) {
                     String strValueOf3 = String.valueOf(e2);
                     outline.m854h0(strValueOf3.length() + 35, "Couldn't get own application info: ", strValueOf3, "FirebaseMessaging");
+                    identifier = i;
                 }
                 if (identifier == 0 || !C4863a.m6815b(resources, identifier)) {
                     identifier = R.drawable.sym_def_app_icon;
@@ -280,12 +288,13 @@ public class C4865c {
         }
         String strM6826e7 = c4880r.m6826e("gcm.n.color");
         if (TextUtils.isEmpty(strM6826e7)) {
-            int i2 = bundle.getInt("com.google.firebase.messaging.default_notification_color", 0);
-            if (i2 != 0) {
+            i2 = bundle.getInt("com.google.firebase.messaging.default_notification_color", 0);
+            if (i2 == 0) {
                 try {
                     numValueOf = Integer.valueOf(ContextCompat.getColor(context, i2));
                 } catch (Resources.NotFoundException unused3) {
                     Log.w("FirebaseMessaging", "Cannot find the color resource referenced in AndroidManifest.");
+                    numValueOf = null;
                 }
             } else {
                 numValueOf = null;
@@ -295,6 +304,9 @@ public class C4865c {
                 numValueOf = Integer.valueOf(Color.parseColor(strM6826e7));
             } catch (IllegalArgumentException unused4) {
                 outline.m856i0(outline.m841b(strM6826e7, 56), "Color is invalid: ", strM6826e7, ". Notification will use default color.", "FirebaseMessaging");
+                i2 = bundle.getInt("com.google.firebase.messaging.default_notification_color", 0);
+                if (i2 == 0) {
+                }
             }
         }
         if (numValueOf != null) {
@@ -348,6 +360,7 @@ public class C4865c {
             } catch (NumberFormatException unused5) {
                 String strM6821h = C4880r.m6821h("gcm.n.event_time");
                 outline.m874r0(outline.m831S(outline.m841b(strM6826e8, outline.m841b(strM6821h, 38)), "Couldn't parse value of ", strM6821h, "(", strM6826e8), ") into a long", "NotificationParams");
+                lValueOf = null;
             }
         }
         if (lValueOf != null) {
@@ -370,6 +383,7 @@ public class C4865c {
             } catch (NumberFormatException | JSONException unused6) {
                 String strValueOf7 = String.valueOf(jSONArrayM6824c);
                 outline.m856i0(strValueOf7.length() + 74, "User defined vibrateTimings is invalid: ", strValueOf7, ". Skipping setting vibrateTimings.", "NotificationParams");
+                jArr = null;
             }
         }
         if (jArr != null) {
@@ -395,22 +409,24 @@ public class C4865c {
                 String strValueOf8 = String.valueOf(jSONArrayM6824c2);
                 String message = e3.getMessage();
                 outline.m874r0(outline.m831S(outline.m841b(message, strValueOf8.length() + 60), "LightSettings is invalid: ", strValueOf8, ". ", message), ". Skipping setting LightSettings", "NotificationParams");
+                iArr = null;
             } catch (JSONException unused7) {
                 String strValueOf9 = String.valueOf(jSONArrayM6824c2);
                 outline.m856i0(strValueOf9.length() + 58, "LightSettings is invalid: ", strValueOf9, ". Skipping setting LightSettings", "NotificationParams");
+                iArr = null;
             }
         }
         if (iArr != null) {
             builder.setLights(iArr[0], iArr[1], iArr[2]);
         }
         boolean zM6822a = c4880r.m6822a("gcm.n.default_sound");
-        boolean z3 = zM6822a;
+        ?? r0 = zM6822a;
         if (c4880r.m6822a("gcm.n.default_vibrate_timings")) {
-            z3 = (zM6822a ? 1 : 0) | 2;
+            r0 = (zM6822a ? 1 : 0) | 2;
         }
-        int i4 = z3;
+        int i4 = r0;
         if (c4880r.m6822a("gcm.n.default_light_settings")) {
-            i4 = (z3 ? 1 : 0) | 4;
+            i4 = (r0 == true ? 1 : 0) | 4;
         }
         builder.setDefaults(i4);
         String strM6826e9 = c4880r.m6826e("gcm.n.tag");

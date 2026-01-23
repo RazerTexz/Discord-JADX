@@ -12,16 +12,16 @@ import p507d0.p513e0.p514p.p515d.p517m0.p552k.DescriptorUtils;
 import p507d0.p580t.ReversedViews3;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ClassifierNamePolicy.kt */
-/* renamed from: d0.e0.p.d.m0.j.b, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.j.b, reason: use source file name */
+/* JADX INFO: compiled from: ClassifierNamePolicy.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public interface ClassifierNamePolicy {
 
-    /* compiled from: ClassifierNamePolicy.kt */
-    /* renamed from: d0.e0.p.d.m0.j.b$a */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.j.b$a */
+    /* JADX INFO: compiled from: ClassifierNamePolicy.kt */
     public static final class a implements ClassifierNamePolicy {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public static final a f24222a = new a();
 
         @Override // p507d0.p513e0.p514p.p515d.p517m0.p551j.ClassifierNamePolicy
@@ -39,11 +39,11 @@ public interface ClassifierNamePolicy {
         }
     }
 
-    /* compiled from: ClassifierNamePolicy.kt */
-    /* renamed from: d0.e0.p.d.m0.j.b$b */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.j.b$b */
+    /* JADX INFO: compiled from: ClassifierNamePolicy.kt */
     public static final class b implements ClassifierNamePolicy {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public static final b f24223a = new b();
 
         /* JADX WARN: Multi-variable type inference failed */
@@ -68,14 +68,14 @@ public interface ClassifierNamePolicy {
         }
     }
 
-    /* compiled from: ClassifierNamePolicy.kt */
-    /* renamed from: d0.e0.p.d.m0.j.b$c */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.j.b$c */
+    /* JADX INFO: compiled from: ClassifierNamePolicy.kt */
     public static final class c implements ClassifierNamePolicy {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public static final c f24224a = new c();
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final String m9869a(ClassifierDescriptor classifierDescriptor) {
             String strRender;
             Name name = classifierDescriptor.getName();

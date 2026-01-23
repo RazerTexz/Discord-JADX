@@ -6,9 +6,9 @@ import com.android.billingclient.api.BillingResult;
 import com.android.billingclient.api.SkuDetails;
 import java.util.List;
 
-/* compiled from: com.android.billingclient:billing@@4.0.0 */
-/* renamed from: b.d.a.a.i */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.d.a.a.i */
+/* JADX INFO: compiled from: com.android.billingclient:billing@@4.0.0 */
+/* JADX INFO: loaded from: classes.dex */
 public interface InterfaceC1624i {
     void onSkuDetailsResponse(@NonNull BillingResult billingResult, @Nullable List<SkuDetails> list);
 }

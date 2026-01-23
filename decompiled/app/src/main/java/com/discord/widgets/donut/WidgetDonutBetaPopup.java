@@ -20,18 +20,18 @@ import p007b.p008a.p027k.FormatUtils;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: WidgetDonutBetaPopup.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetDonutBetaPopup.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetDonutBetaPopup extends AppFragment {
     public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetDonutBetaPopup.class, "binding", "getBinding()Lcom/discord/databinding/WidgetDonutBetaPopupBinding;", 0)};
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
 
-    /* renamed from: binding$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
 
-    /* compiled from: WidgetDonutBetaPopup.kt */
+    /* JADX INFO: compiled from: WidgetDonutBetaPopup.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -48,8 +48,8 @@ public final class WidgetDonutBetaPopup extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetDonutBetaPopup.kt */
-    /* renamed from: com.discord.widgets.donut.WidgetDonutBetaPopup$onViewBound$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.donut.WidgetDonutBetaPopup$onViewBound$1 */
+    /* JADX INFO: compiled from: WidgetDonutBetaPopup.kt */
     public static final class ViewOnClickListenerC83001 implements View.OnClickListener {
         public static final ViewOnClickListenerC83001 INSTANCE = new ViewOnClickListenerC83001();
 
@@ -59,8 +59,8 @@ public final class WidgetDonutBetaPopup extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetDonutBetaPopup.kt */
-    /* renamed from: com.discord.widgets.donut.WidgetDonutBetaPopup$onViewBound$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.donut.WidgetDonutBetaPopup$onViewBound$2 */
+    /* JADX INFO: compiled from: WidgetDonutBetaPopup.kt */
     public static final class ViewOnClickListenerC83012 implements View.OnClickListener {
         public ViewOnClickListenerC83012() {
         }
@@ -74,8 +74,8 @@ public final class WidgetDonutBetaPopup extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetDonutBetaPopup.kt */
-    /* renamed from: com.discord.widgets.donut.WidgetDonutBetaPopup$onViewBound$3 */
+    /* JADX INFO: renamed from: com.discord.widgets.donut.WidgetDonutBetaPopup$onViewBound$3 */
+    /* JADX INFO: compiled from: WidgetDonutBetaPopup.kt */
     public static final class ViewOnClickListenerC83023 implements View.OnClickListener {
         public ViewOnClickListenerC83023() {
         }

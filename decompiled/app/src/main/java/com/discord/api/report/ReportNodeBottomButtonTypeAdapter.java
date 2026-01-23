@@ -11,8 +11,8 @@ import kotlin.Unit;
 import p507d0.p591y.Closeable;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: InAppReportsMenu.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: InAppReportsMenu.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class ReportNodeBottomButtonTypeAdapter extends TypeAdapter<ReportNodeBottomButton> {
 
     public final /* synthetic */ class WhenMappings {
@@ -27,6 +27,7 @@ public final class ReportNodeBottomButtonTypeAdapter extends TypeAdapter<ReportN
         }
     }
 
+    /* JADX WARN: Failed to restore switch over string. Please report as a decompilation issue */
     /* JADX WARN: Removed duplicated region for block: B:28:0x0064  */
     @Override // com.google.gson.TypeAdapter
     /*

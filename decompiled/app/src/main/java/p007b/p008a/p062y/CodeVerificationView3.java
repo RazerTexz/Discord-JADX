@@ -3,12 +3,12 @@ package p007b.p008a.p062y;
 import android.view.View;
 import com.discord.views.CodeVerificationView;
 
-/* compiled from: CodeVerificationView.kt */
-/* renamed from: b.a.y.c, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: b.a.y.c, reason: use source file name */
+/* JADX INFO: compiled from: CodeVerificationView.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class CodeVerificationView3 implements View.OnClickListener {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final /* synthetic */ CodeVerificationView f2014j;
 
     public CodeVerificationView3(CodeVerificationView codeVerificationView) {

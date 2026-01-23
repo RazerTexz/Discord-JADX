@@ -20,37 +20,37 @@ import java.util.Objects;
 import p007b.p085c.p086a.p087a0.AnimatableValueParser;
 import p007b.p100d.p104b.p105a.outline;
 
-/* compiled from: UnpackingSoSource.java */
-/* renamed from: b.f.m.m, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.f.m.m, reason: use source file name */
+/* JADX INFO: compiled from: UnpackingSoSource.java */
+/* JADX INFO: loaded from: classes3.dex */
 public abstract class UnpackingSoSource extends DirectorySoSource {
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final Context f4344c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public String f4345d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final Map<String, Object> f4346e;
 
-    /* compiled from: UnpackingSoSource.java */
-    /* renamed from: b.f.m.m$a */
+    /* JADX INFO: renamed from: b.f.m.m$a */
+    /* JADX INFO: compiled from: UnpackingSoSource.java */
     public class a implements Runnable {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public final /* synthetic */ File f4347j;
 
-        /* renamed from: k */
+        /* JADX INFO: renamed from: k */
         public final /* synthetic */ byte[] f4348k;
 
-        /* renamed from: l */
+        /* JADX INFO: renamed from: l */
         public final /* synthetic */ c f4349l;
 
-        /* renamed from: m */
+        /* JADX INFO: renamed from: m */
         public final /* synthetic */ File f4350m;
 
-        /* renamed from: n */
+        /* JADX INFO: renamed from: n */
         public final /* synthetic */ FileLocker f4351n;
 
         public a(File file, byte[] bArr, c cVar, File file2, FileLocker fileLocker) {
@@ -109,14 +109,14 @@ public abstract class UnpackingSoSource extends DirectorySoSource {
         }
     }
 
-    /* compiled from: UnpackingSoSource.java */
-    /* renamed from: b.f.m.m$b */
+    /* JADX INFO: renamed from: b.f.m.m$b */
+    /* JADX INFO: compiled from: UnpackingSoSource.java */
     public static class b {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public final String f4353j;
 
-        /* renamed from: k */
+        /* JADX INFO: renamed from: k */
         public final String f4354k;
 
         public b(String str, String str2) {
@@ -125,18 +125,18 @@ public abstract class UnpackingSoSource extends DirectorySoSource {
         }
     }
 
-    /* compiled from: UnpackingSoSource.java */
-    /* renamed from: b.f.m.m$c */
+    /* JADX INFO: renamed from: b.f.m.m$c */
+    /* JADX INFO: compiled from: UnpackingSoSource.java */
     public static final class c {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final b[] f4355a;
 
         public c(b[] bVarArr) {
             this.f4355a = bVarArr;
         }
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public static final c m1586a(DataInput dataInput) throws IOException {
             if (dataInput.readByte() != 1) {
                 throw new RuntimeException("wrong dso manifest version");
@@ -153,14 +153,14 @@ public abstract class UnpackingSoSource extends DirectorySoSource {
         }
     }
 
-    /* compiled from: UnpackingSoSource.java */
-    /* renamed from: b.f.m.m$d */
+    /* JADX INFO: renamed from: b.f.m.m$d */
+    /* JADX INFO: compiled from: UnpackingSoSource.java */
     public static final class d implements Closeable {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public final b f4356j;
 
-        /* renamed from: k */
+        /* JADX INFO: renamed from: k */
         public final InputStream f4357k;
 
         public d(b bVar, InputStream inputStream) {
@@ -174,13 +174,13 @@ public abstract class UnpackingSoSource extends DirectorySoSource {
         }
     }
 
-    /* compiled from: UnpackingSoSource.java */
-    /* renamed from: b.f.m.m$e */
+    /* JADX INFO: renamed from: b.f.m.m$e */
+    /* JADX INFO: compiled from: UnpackingSoSource.java */
     public static abstract class e implements Closeable {
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public abstract boolean mo1575a();
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public abstract d mo1576b() throws IOException;
 
         @Override // java.io.Closeable, java.lang.AutoCloseable
@@ -188,13 +188,13 @@ public abstract class UnpackingSoSource extends DirectorySoSource {
         }
     }
 
-    /* compiled from: UnpackingSoSource.java */
-    /* renamed from: b.f.m.m$f */
+    /* JADX INFO: renamed from: b.f.m.m$f */
+    /* JADX INFO: compiled from: UnpackingSoSource.java */
     public static abstract class f implements Closeable {
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public abstract c mo1573a() throws IOException;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public abstract e mo1574b() throws IOException;
 
         @Override // java.io.Closeable, java.lang.AutoCloseable
@@ -208,7 +208,7 @@ public abstract class UnpackingSoSource extends DirectorySoSource {
         this.f4344c = context;
     }
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public static void m1579l(File file, byte b2) throws IOException {
         RandomAccessFile randomAccessFile = new RandomAccessFile(file, "rw");
         try {
@@ -232,7 +232,7 @@ public abstract class UnpackingSoSource extends DirectorySoSource {
     }
 
     @Override // p007b.p109f.p190m.DirectorySoSource, p007b.p109f.p190m.SoSource
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public int mo1568a(String str, int i, StrictMode.ThreadPolicy threadPolicy) throws IOException {
         int iM1572c;
         synchronized (m1583h(str)) {
@@ -242,7 +242,7 @@ public abstract class UnpackingSoSource extends DirectorySoSource {
     }
 
     @Override // p007b.p109f.p190m.SoSource
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public void mo1569b(int i) throws IOException {
         File file = this.f4319a;
         if (!file.mkdirs() && !file.isDirectory()) {
@@ -271,7 +271,7 @@ public abstract class UnpackingSoSource extends DirectorySoSource {
         }
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final void m1580d(b[] bVarArr) throws IOException {
         String[] list = this.f4319a.list();
         if (list == null) {
@@ -296,7 +296,7 @@ public abstract class UnpackingSoSource extends DirectorySoSource {
         }
     }
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final void m1581e(d dVar, byte[] bArr) throws IOException {
         StringBuilder sbM833U = outline.m833U("extracting DSO ");
         sbM833U.append(dVar.f4356j.f4353j);
@@ -317,7 +317,12 @@ public abstract class UnpackingSoSource extends DirectorySoSource {
         }
     }
 
-    /* renamed from: f */
+    /* JADX WARN: Removed duplicated region for block: B:36:0x00db  */
+    /* JADX WARN: Removed duplicated region for block: B:38:0x00f2  */
+    /* JADX INFO: renamed from: f */
+    /*
+        Code decompiled incorrectly, please refer to instructions dump.
+    */
     public final void m1582f(d dVar, byte[] bArr) throws IOException {
         RandomAccessFile randomAccessFile;
         File file = new File(this.f4319a, dVar.f4356j.f4353j);
@@ -357,22 +362,28 @@ public abstract class UnpackingSoSource extends DirectorySoSource {
                     Log.w("fb-UnpackingSoSource", "error removing " + file + " write permission");
                 }
                 randomAccessFile2.close();
+                return;
             } catch (IOException e3) {
                 AnimatableValueParser.m500b0(file);
                 throw e3;
             }
         } catch (Throwable th) {
             if (!file.setWritable(false)) {
-                Log.w("fb-UnpackingSoSource", "error removing " + file + " write permission");
             }
             if (randomAccessFile2 != null) {
-                randomAccessFile2.close();
             }
             throw th;
         }
+        if (!file.setWritable(false)) {
+            Log.w("fb-UnpackingSoSource", "error removing " + file + " write permission");
+        }
+        if (randomAccessFile2 != null) {
+            randomAccessFile2.close();
+        }
+        throw th;
     }
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public byte[] mo1565g() throws IOException {
         Parcel parcelObtain = Parcel.obtain();
         f fVarMo1566i = mo1566i();
@@ -404,7 +415,7 @@ public abstract class UnpackingSoSource extends DirectorySoSource {
         }
     }
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public final Object m1583h(String str) {
         Object obj;
         synchronized (this.f4346e) {
@@ -417,10 +428,10 @@ public abstract class UnpackingSoSource extends DirectorySoSource {
         return obj;
     }
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public abstract f mo1566i() throws IOException;
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final boolean m1584j(FileLocker fileLocker, int i, byte[] bArr) throws IOException {
         byte b2;
         File file = new File(this.f4319a, "dso_state");
@@ -489,7 +500,7 @@ public abstract class UnpackingSoSource extends DirectorySoSource {
         }
     }
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final void m1585k(byte b2, c cVar, e eVar) throws IOException {
         c cVarM1586a;
         StringBuilder sbM833U = outline.m833U("regenerating DSO store ");
@@ -502,6 +513,7 @@ public abstract class UnpackingSoSource extends DirectorySoSource {
                     cVarM1586a = c.m1586a(randomAccessFile);
                 } catch (Exception e2) {
                     Log.i("fb-UnpackingSoSource", "error reading existing DSO manifest", e2);
+                    cVarM1586a = null;
                 }
             } else {
                 cVarM1586a = null;

@@ -14,20 +14,20 @@ import p658rx.functions.Func2;
 import p658rx.functions.FuncN;
 import p658rx.subscriptions.CompositeSubscription;
 
-/* compiled from: OperatorZip.java */
-/* renamed from: j0.l.a.q2, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: j0.l.a.q2, reason: use source file name */
+/* JADX INFO: compiled from: OperatorZip.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class OperatorZip<R> implements Observable.InterfaceC13006b<R, Observable<?>[]> {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final FuncN<? extends R> f27005j;
 
-    /* compiled from: OperatorZip.java */
-    /* renamed from: j0.l.a.q2$a */
+    /* JADX INFO: renamed from: j0.l.a.q2$a */
+    /* JADX INFO: compiled from: OperatorZip.java */
     public static final class a<R> extends AtomicLong {
 
-        /* renamed from: j */
-        public static final int f27006j = (int) (RxRingBuffer.f27283j * 0.7d);
+        /* JADX INFO: renamed from: j */
+        public static final int f27006j = (int) (((double) RxRingBuffer.f27283j) * 0.7d);
         private static final long serialVersionUID = 5995274816189928317L;
         public final Observer2<? super R> child;
         private final CompositeSubscription childSubscription;
@@ -36,11 +36,11 @@ public final class OperatorZip<R> implements Observable.InterfaceC13006b<R, Obse
         private volatile Object[] subscribers;
         private final FuncN<? extends R> zipFunction;
 
-        /* compiled from: OperatorZip.java */
-        /* renamed from: j0.l.a.q2$a$a, reason: collision with other inner class name */
+        /* JADX INFO: renamed from: j0.l.a.q2$a$a, reason: collision with other inner class name */
+        /* JADX INFO: compiled from: OperatorZip.java */
         public final class C13348a extends Subscriber {
 
-            /* renamed from: j */
+            /* JADX INFO: renamed from: j */
             public final RxRingBuffer f27007j;
 
             public C13348a() {
@@ -86,7 +86,7 @@ public final class OperatorZip<R> implements Observable.InterfaceC13006b<R, Obse
             subscriber.add(compositeSubscription);
         }
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public void m10778a(Observable[] observableArr, AtomicLong atomicLong) {
             Object[] objArr = new Object[observableArr.length];
             for (int i = 0; i < observableArr.length; i++) {
@@ -101,7 +101,7 @@ public final class OperatorZip<R> implements Observable.InterfaceC13006b<R, Obse
             }
         }
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public void m10779b() {
             Object[] objArr = this.subscribers;
             if (objArr == null || getAndIncrement() != 0) {
@@ -157,8 +157,8 @@ public final class OperatorZip<R> implements Observable.InterfaceC13006b<R, Obse
         }
     }
 
-    /* compiled from: OperatorZip.java */
-    /* renamed from: j0.l.a.q2$b */
+    /* JADX INFO: renamed from: j0.l.a.q2$b */
+    /* JADX INFO: compiled from: OperatorZip.java */
     public static final class b<R> extends AtomicLong implements Producer {
         private static final long serialVersionUID = -1216676403723546796L;
         public final a<R> zipper;
@@ -168,27 +168,27 @@ public final class OperatorZip<R> implements Observable.InterfaceC13006b<R, Obse
         }
 
         @Override // p658rx.Producer
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public void mo10704j(long j) {
             C3404f.m4276c0(this, j);
             this.zipper.m10779b();
         }
     }
 
-    /* compiled from: OperatorZip.java */
-    /* renamed from: j0.l.a.q2$c */
+    /* JADX INFO: renamed from: j0.l.a.q2$c */
+    /* JADX INFO: compiled from: OperatorZip.java */
     public final class c extends Subscriber<Observable[]> {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public final Subscriber<? super R> f27009j;
 
-        /* renamed from: k */
+        /* JADX INFO: renamed from: k */
         public final a<R> f27010k;
 
-        /* renamed from: l */
+        /* JADX INFO: renamed from: l */
         public final b<R> f27011l;
 
-        /* renamed from: m */
+        /* JADX INFO: renamed from: m */
         public boolean f27012m;
 
         public c(OperatorZip operatorZip, Subscriber<? super R> subscriber, a<R> aVar, b<R> bVar) {

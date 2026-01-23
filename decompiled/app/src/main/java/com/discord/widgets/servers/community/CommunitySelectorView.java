@@ -12,8 +12,8 @@ import com.discord.databinding.ViewServerSettingsCommunitySettingSelectorBinding
 import kotlin.jvm.internal.DefaultConstructorMarker;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: CommunitySelectorView.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: CommunitySelectorView.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class CommunitySelectorView extends LinearLayout {
     private final ViewServerSettingsCommunitySettingSelectorBinding binding;
 

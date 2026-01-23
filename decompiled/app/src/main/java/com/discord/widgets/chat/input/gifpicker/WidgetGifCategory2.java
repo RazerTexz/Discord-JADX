@@ -10,9 +10,9 @@ import kotlin.jvm.functions.Function1;
 import p507d0.p592z.p594d.FunctionReferenceImpl;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: WidgetGifCategory.kt */
-/* renamed from: com.discord.widgets.chat.input.gifpicker.WidgetGifCategory$binding$2, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.chat.input.gifpicker.WidgetGifCategory$binding$2, reason: use source file name */
+/* JADX INFO: compiled from: WidgetGifCategory.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final /* synthetic */ class WidgetGifCategory2 extends FunctionReferenceImpl implements Function1<View, WidgetGifCategoryBinding> {
     public static final WidgetGifCategory2 INSTANCE = new WidgetGifCategory2();
 
@@ -25,7 +25,7 @@ public final /* synthetic */ class WidgetGifCategory2 extends FunctionReferenceI
         return invoke2(view);
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final WidgetGifCategoryBinding invoke2(View view) {
         Intrinsics3.checkNotNullParameter(view, "p1");
         ContentResizingCoordinatorLayout contentResizingCoordinatorLayout = (ContentResizingCoordinatorLayout) view;

@@ -13,22 +13,22 @@ import p507d0.p513e0.p514p.p515d.p517m0.p521c.PropertyDescriptor;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: KProperty1Impl.kt */
-/* renamed from: d0.e0.p.d.q, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.q, reason: use source file name */
+/* JADX INFO: compiled from: KProperty1Impl.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public class KProperty1Impl2<T, V> extends KPropertyImpl<V> implements KProperty3<T, V> {
 
-    /* renamed from: u */
+    /* JADX INFO: renamed from: u */
     public final ReflectProperties.b<a<T, V>> f25042u;
 
-    /* renamed from: v */
+    /* JADX INFO: renamed from: v */
     public final Lazy<Field> f25043v;
 
-    /* compiled from: KProperty1Impl.kt */
-    /* renamed from: d0.e0.p.d.q$a */
+    /* JADX INFO: renamed from: d0.e0.p.d.q$a */
+    /* JADX INFO: compiled from: KProperty1Impl.kt */
     public static final class a<T, V> extends KPropertyImpl.c<V> implements KProperty3.a<T, V> {
 
-        /* renamed from: q */
+        /* JADX INFO: renamed from: q */
         public final KProperty1Impl2<T, V> f25044q;
 
         /* JADX WARN: Multi-variable type inference failed */
@@ -53,8 +53,8 @@ public class KProperty1Impl2<T, V> extends KPropertyImpl<V> implements KProperty
         }
     }
 
-    /* compiled from: KProperty1Impl.kt */
-    /* renamed from: d0.e0.p.d.q$b */
+    /* JADX INFO: renamed from: d0.e0.p.d.q$b */
+    /* JADX INFO: compiled from: KProperty1Impl.kt */
     public static final class b extends Lambda implements Function0<a<T, ? extends V>> {
         public b() {
             super(0);
@@ -71,8 +71,8 @@ public class KProperty1Impl2<T, V> extends KPropertyImpl<V> implements KProperty
         }
     }
 
-    /* compiled from: KProperty1Impl.kt */
-    /* renamed from: d0.e0.p.d.q$c */
+    /* JADX INFO: renamed from: d0.e0.p.d.q$c */
+    /* JADX INFO: compiled from: KProperty1Impl.kt */
     public static final class c extends Lambda implements Function0<Field> {
         public c() {
             super(0);
@@ -84,7 +84,7 @@ public class KProperty1Impl2<T, V> extends KPropertyImpl<V> implements KProperty
         }
 
         @Override // kotlin.jvm.functions.Function0
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final Field invoke2() {
             return KProperty1Impl2.this.m10056c();
         }
@@ -118,13 +118,13 @@ public class KProperty1Impl2<T, V> extends KPropertyImpl<V> implements KProperty
     }
 
     @Override // p507d0.p513e0.p514p.p515d.KPropertyImpl, kotlin.reflect.KProperty6
-    /* renamed from: getGetter */
+    /* JADX INFO: renamed from: getGetter */
     public /* bridge */ /* synthetic */ KPropertyImpl.c mo11489getGetter() {
         return mo11489getGetter();
     }
 
     @Override // p507d0.p513e0.p514p.p515d.KPropertyImpl, kotlin.reflect.KProperty6
-    /* renamed from: getGetter */
+    /* JADX INFO: renamed from: getGetter */
     public a<T, V> mo11489getGetter() {
         a<T, V> aVarInvoke = this.f25042u.invoke();
         Intrinsics3.checkNotNullExpressionValue(aVarInvoke, "_getter()");

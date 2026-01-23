@@ -5,7 +5,7 @@ import androidx.annotation.NonNull;
 import androidx.core.util.Preconditions;
 import p007b.p100d.p104b.p105a.outline;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public final class PathSegment {
     private final PointF mEnd;
     private final float mEndFraction;

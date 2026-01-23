@@ -9,8 +9,8 @@ import android.util.Log;
 import androidx.annotation.Nullable;
 import androidx.annotation.RequiresApi;
 
+/* JADX INFO: loaded from: classes.dex */
 @RequiresApi(19)
-/* loaded from: classes.dex */
 public class DocumentsContractApi19 {
     private static final int FLAG_VIRTUAL_DOCUMENT = 512;
     private static final String TAG = "DocumentFile";
@@ -123,6 +123,7 @@ public class DocumentsContractApi19 {
         } finally {
             closeQuietly(cursorQuery);
         }
+        closeQuietly(cursorQuery);
     }
 
     @Nullable
@@ -137,5 +138,6 @@ public class DocumentsContractApi19 {
         } finally {
             closeQuietly(cursorQuery);
         }
+        closeQuietly(cursorQuery);
     }
 }

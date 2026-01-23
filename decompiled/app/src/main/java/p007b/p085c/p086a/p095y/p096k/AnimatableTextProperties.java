@@ -2,24 +2,24 @@ package p007b.p085c.p086a.p095y.p096k;
 
 import androidx.annotation.Nullable;
 
-/* compiled from: AnimatableTextProperties.java */
-/* renamed from: b.c.a.y.k.k, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.c.a.y.k.k, reason: use source file name */
+/* JADX INFO: compiled from: AnimatableTextProperties.java */
+/* JADX INFO: loaded from: classes.dex */
 public class AnimatableTextProperties {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     @Nullable
     public final AnimatableColorValue f2725a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     @Nullable
     public final AnimatableColorValue f2726b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     @Nullable
     public final AnimatableFloatValue f2727c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     @Nullable
     public final AnimatableFloatValue f2728d;
 

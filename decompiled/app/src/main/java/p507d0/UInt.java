@@ -2,13 +2,13 @@ package p507d0;
 
 import kotlin.jvm.internal.DefaultConstructorMarker;
 
-/* compiled from: UInt.kt */
-/* renamed from: d0.p, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.p, reason: use source file name */
+/* JADX INFO: compiled from: UInt.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class UInt implements Comparable<UInt> {
 
-    /* compiled from: UInt.kt */
-    /* renamed from: d0.p$a */
+    /* JADX INFO: renamed from: d0.p$a */
+    /* JADX INFO: compiled from: UInt.kt */
     public static final class a {
         public a(DefaultConstructorMarker defaultConstructorMarker) {
         }
@@ -18,7 +18,7 @@ public final class UInt implements Comparable<UInt> {
         new a(null);
     }
 
-    /* renamed from: constructor-impl, reason: not valid java name */
+    /* JADX INFO: renamed from: constructor-impl, reason: not valid java name */
     public static int m11482constructorimpl(int i) {
         return i;
     }

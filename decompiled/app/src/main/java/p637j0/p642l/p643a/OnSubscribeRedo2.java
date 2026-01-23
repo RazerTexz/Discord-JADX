@@ -5,15 +5,15 @@ import p637j0.Notification;
 import p658rx.Producer;
 import p658rx.Subscriber;
 
-/* compiled from: OnSubscribeRedo.java */
-/* renamed from: j0.l.a.u, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: j0.l.a.u, reason: use source file name */
+/* JADX INFO: compiled from: OnSubscribeRedo.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class OnSubscribeRedo2 extends Subscriber<Notification<?>> {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final /* synthetic */ Subscriber f27055j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final /* synthetic */ OnSubscribeRedo3 f27056k;
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */

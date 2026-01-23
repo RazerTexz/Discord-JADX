@@ -9,12 +9,12 @@ import p007b.p225i.p361c.p369m.p370d.Logger3;
 import p007b.p225i.p361c.p369m.p370d.p373k.CommonUtils;
 import p007b.p225i.p361c.p369m.p370d.p378o.FileStoreImpl;
 
-/* compiled from: CachedSettingsIo.java */
-/* renamed from: b.i.c.m.d.s.a, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.c.m.d.s.a, reason: use source file name */
+/* JADX INFO: compiled from: CachedSettingsIo.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class CachedSettingsIo {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final Context f12728a;
 
     public CachedSettingsIo(Context context) {
@@ -25,7 +25,7 @@ public class CachedSettingsIo {
     /* JADX WARN: Type inference failed for: r2v1 */
     /* JADX WARN: Type inference failed for: r2v2, types: [java.io.Closeable] */
     /* JADX WARN: Type inference failed for: r2v4 */
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public JSONObject m6680a() throws Throwable {
         Exception e;
         FileInputStream fileInputStream;

@@ -20,18 +20,18 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p658rx.Observable;
 import p659s.p660a.Dispatchers;
 
-/* compiled from: MobileWebHandoff.kt */
+/* JADX INFO: renamed from: com.discord.utilities.handoff.MobileWebHandoff$redirectWithHandoffToken$token$1, reason: use source file name */
+/* JADX INFO: compiled from: MobileWebHandoff.kt */
+/* JADX INFO: loaded from: classes2.dex */
 @DebugMetadata(m10084c = "com.discord.utilities.handoff.MobileWebHandoff$redirectWithHandoffToken$token$1", m10085f = "MobileWebHandoff.kt", m10086l = {45}, m10087m = "invokeSuspend")
-/* renamed from: com.discord.utilities.handoff.MobileWebHandoff$redirectWithHandoffToken$token$1, reason: use source file name */
-/* loaded from: classes2.dex */
 public final class MobileWebHandoff2 extends ContinuationImpl6 implements Function1<Continuation<? super HandoffToken>, Object> {
     public final /* synthetic */ Ref$ObjectRef $nonce;
     public int label;
     public final /* synthetic */ MobileWebHandoff this$0;
 
-    /* compiled from: MobileWebHandoff.kt */
+    /* JADX INFO: renamed from: com.discord.utilities.handoff.MobileWebHandoff$redirectWithHandoffToken$token$1$1 */
+    /* JADX INFO: compiled from: MobileWebHandoff.kt */
     @DebugMetadata(m10084c = "com.discord.utilities.handoff.MobileWebHandoff$redirectWithHandoffToken$token$1$1", m10085f = "MobileWebHandoff.kt", m10086l = {48}, m10087m = "invokeSuspend")
-    /* renamed from: com.discord.utilities.handoff.MobileWebHandoff$redirectWithHandoffToken$token$1$1 */
     public static final class C67711 extends ContinuationImpl6 implements Function2<CoroutineScope, Continuation<? super HandoffToken>, Object> {
         public int label;
 

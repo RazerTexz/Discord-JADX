@@ -25,13 +25,13 @@ import p507d0.p592z.p593c.InterfaceC12212b;
 import p507d0.p592z.p593c.InterfaceC12213c;
 import p507d0.p592z.p593c.InterfaceC12214d;
 
-/* compiled from: FunctionWithAllInvokes.kt */
-/* renamed from: d0.e0.p.d.c, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.c, reason: use source file name */
+/* JADX INFO: compiled from: FunctionWithAllInvokes.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public interface FunctionWithAllInvokes extends Function0<Object>, Function1<Object, Object>, Function10<Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object>, Function11<Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object>, Function12<Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object>, Function13<Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object>, Function14<Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object>, Function15<Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object>, Function16<Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object>, Function17<Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object>, InterfaceC12211a<Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object>, InterfaceC12212b<Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object>, Function2<Object, Object, Object>, InterfaceC12213c<Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object>, InterfaceC12214d<Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object>, Function22<Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object>, Function3<Object, Object, Object, Object>, Function4<Object, Object, Object, Object, Object>, Function5<Object, Object, Object, Object, Object, Object>, Function6<Object, Object, Object, Object, Object, Object, Object>, Function7<Object, Object, Object, Object, Object, Object, Object, Object>, Function8<Object, Object, Object, Object, Object, Object, Object, Object, Object>, Function9<Object, Object, Object, Object, Object, Object, Object, Object, Object, Object>, KCallable<Object> {
 
-    /* compiled from: FunctionWithAllInvokes.kt */
-    /* renamed from: d0.e0.p.d.c$a */
+    /* JADX INFO: renamed from: d0.e0.p.d.c$a */
+    /* JADX INFO: compiled from: FunctionWithAllInvokes.kt */
     public static final class a {
         /* JADX WARN: Multi-variable type inference failed */
         public static Object invoke(FunctionWithAllInvokes functionWithAllInvokes) {

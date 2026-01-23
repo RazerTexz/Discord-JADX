@@ -6,19 +6,19 @@ import kotlin.jvm.internal.DefaultConstructorMarker;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: GuildScheduledEventPickerDateTime.kt */
-/* renamed from: com.discord.widgets.guildscheduledevent.GuildScheduledEventPickerDate, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.guildscheduledevent.GuildScheduledEventPickerDate, reason: use source file name */
+/* JADX INFO: compiled from: GuildScheduledEventPickerDateTime.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final /* data */ class GuildScheduledEventPickerDateTime2 implements Serializable {
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private final int dayOfMonth;
     private final int month;
     private final int year;
 
-    /* compiled from: GuildScheduledEventPickerDateTime.kt */
-    /* renamed from: com.discord.widgets.guildscheduledevent.GuildScheduledEventPickerDate$Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: com.discord.widgets.guildscheduledevent.GuildScheduledEventPickerDate$Companion, reason: from kotlin metadata */
+    /* JADX INFO: compiled from: GuildScheduledEventPickerDateTime.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -52,17 +52,17 @@ public final /* data */ class GuildScheduledEventPickerDateTime2 implements Seri
         return guildScheduledEventPickerDateTime2.copy(i, i2, i3);
     }
 
-    /* renamed from: component1, reason: from getter */
+    /* JADX INFO: renamed from: component1, reason: from getter */
     public final int getYear() {
         return this.year;
     }
 
-    /* renamed from: component2, reason: from getter */
+    /* JADX INFO: renamed from: component2, reason: from getter */
     public final int getMonth() {
         return this.month;
     }
 
-    /* renamed from: component3, reason: from getter */
+    /* JADX INFO: renamed from: component3, reason: from getter */
     public final int getDayOfMonth() {
         return this.dayOfMonth;
     }

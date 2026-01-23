@@ -25,13 +25,13 @@ import p617h0.p620b.p627b.StdInstantiatorStrategy;
 import p658rx.Observable;
 import p658rx.functions.Func2;
 
-/* compiled from: PersisterConfig.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: PersisterConfig.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class PersisterConfig {
     public static final PersisterConfig INSTANCE = new PersisterConfig();
 
-    /* compiled from: PersisterConfig.kt */
-    /* renamed from: com.discord.utilities.persister.PersisterConfig$init$1 */
+    /* JADX INFO: renamed from: com.discord.utilities.persister.PersisterConfig$init$1 */
+    /* JADX INFO: compiled from: PersisterConfig.kt */
     public static final class C68331 extends Lambda implements Function1<Kryo, Unit> {
         public static final C68331 INSTANCE = new C68331();
 
@@ -45,7 +45,7 @@ public final class PersisterConfig {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Kryo kryo) {
             Intrinsics3.checkNotNullParameter(kryo, "it");
             kryo.setInstantiatorStrategy(new Kryo.DefaultInstantiatorStrategy(new StdInstantiatorStrategy()));
@@ -57,8 +57,8 @@ public final class PersisterConfig {
         }
     }
 
-    /* compiled from: PersisterConfig.kt */
-    /* renamed from: com.discord.utilities.persister.PersisterConfig$isNotActive$1 */
+    /* JADX INFO: renamed from: com.discord.utilities.persister.PersisterConfig$isNotActive$1 */
+    /* JADX INFO: compiled from: PersisterConfig.kt */
     public static final class C68341<T1, T2, R> implements Func2<Boolean, Boolean, Boolean> {
         public static final C68341 INSTANCE = new C68341();
 
@@ -67,7 +67,7 @@ public final class PersisterConfig {
             return call2(bool, bool2);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final Boolean call2(Boolean bool, Boolean bool2) {
             Intrinsics3.checkNotNullExpressionValue(bool, "isBackgrounded");
             return Boolean.valueOf(bool.booleanValue() && !bool2.booleanValue());

@@ -3,8 +3,8 @@ package com.google.android.gms.common.internal.safeparcel;
 import android.os.Parcelable;
 import androidx.annotation.RecentlyNonNull;
 
-/* compiled from: com.google.android.gms:play-services-basement@@17.6.0 */
-/* loaded from: classes3.dex */
+/* JADX INFO: compiled from: com.google.android.gms:play-services-basement@@17.6.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public interface SafeParcelable extends Parcelable {
 
     @RecentlyNonNull

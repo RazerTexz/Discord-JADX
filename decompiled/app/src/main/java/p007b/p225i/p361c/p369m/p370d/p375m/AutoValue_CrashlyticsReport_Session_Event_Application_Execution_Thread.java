@@ -4,18 +4,18 @@ import androidx.annotation.NonNull;
 import p007b.p100d.p104b.p105a.outline;
 import p007b.p225i.p361c.p369m.p370d.p375m.CrashlyticsReport;
 
-/* compiled from: AutoValue_CrashlyticsReport_Session_Event_Application_Execution_Thread.java */
-/* renamed from: b.i.c.m.d.m.p, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.c.m.d.m.p, reason: use source file name */
+/* JADX INFO: compiled from: AutoValue_CrashlyticsReport_Session_Event_Application_Execution_Thread.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class AutoValue_CrashlyticsReport_Session_Event_Application_Execution_Thread extends CrashlyticsReport.d.AbstractC13233d.a.b.AbstractC13237d {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final String f12616a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final int f12617b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final ImmutableList3<CrashlyticsReport.d.AbstractC13233d.a.b.AbstractC13237d.AbstractC13238a> f12618c;
 
     public AutoValue_CrashlyticsReport_Session_Event_Application_Execution_Thread(String str, int i, ImmutableList3 immutableList3, a aVar) {
@@ -26,20 +26,20 @@ public final class AutoValue_CrashlyticsReport_Session_Event_Application_Executi
 
     @Override // p007b.p225i.p361c.p369m.p370d.p375m.CrashlyticsReport.d.AbstractC13233d.a.b.AbstractC13237d
     @NonNull
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public ImmutableList3<CrashlyticsReport.d.AbstractC13233d.a.b.AbstractC13237d.AbstractC13238a> mo6590a() {
         return this.f12618c;
     }
 
     @Override // p007b.p225i.p361c.p369m.p370d.p375m.CrashlyticsReport.d.AbstractC13233d.a.b.AbstractC13237d
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public int mo6591b() {
         return this.f12617b;
     }
 
     @Override // p007b.p225i.p361c.p369m.p370d.p375m.CrashlyticsReport.d.AbstractC13233d.a.b.AbstractC13237d
     @NonNull
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public String mo6592c() {
         return this.f12616a;
     }

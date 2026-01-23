@@ -4,36 +4,36 @@ import com.discord.models.domain.ModelAuditLogEntry;
 import okio.ByteString;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: Header.kt */
-/* renamed from: f0.e0.j.b, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: f0.e0.j.b, reason: use source file name */
+/* JADX INFO: compiled from: Header.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class Header2 {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final ByteString f25580a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static final ByteString f25581b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public static final ByteString f25582c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public static final ByteString f25583d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public static final ByteString f25584e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public static final ByteString f25585f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public final int f25586g;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public final ByteString f25587h;
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public final ByteString f25588i;
 
     static {

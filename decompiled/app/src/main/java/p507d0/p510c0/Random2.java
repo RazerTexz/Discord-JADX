@@ -3,9 +3,9 @@ package p507d0.p510c0;
 import kotlin.ranges.Ranges2;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: Random.kt */
-/* renamed from: d0.c0.d, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.c0.d, reason: use source file name */
+/* JADX INFO: compiled from: Random.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class Random2 {
     public static final Random Random(long j) {
         return new XorWowRandom((int) j, (int) (j >> 32));

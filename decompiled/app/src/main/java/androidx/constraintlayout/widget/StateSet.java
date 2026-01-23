@@ -1,7 +1,6 @@
 package androidx.constraintlayout.widget;
 
 import android.content.Context;
-import android.content.res.Resources;
 import android.content.res.TypedArray;
 import android.util.Log;
 import android.util.SparseArray;
@@ -12,7 +11,7 @@ import java.util.Iterator;
 import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserException;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class StateSet {
     private static final boolean DEBUG = false;
     public static final String TAG = "ConstraintLayoutStates";
@@ -30,7 +29,7 @@ public class StateSet {
         public boolean mIsLayout;
         public ArrayList<Variant> mVariants = new ArrayList<>();
 
-        public State(Context context, XmlPullParser xmlPullParser) throws Resources.NotFoundException {
+        public State(Context context, XmlPullParser xmlPullParser) {
             this.mConstraintID = -1;
             this.mIsLayout = false;
             TypedArray typedArrayObtainStyledAttributes = context.obtainStyledAttributes(Xml.asAttributeSet(xmlPullParser), C0201R.styleable.State);
@@ -74,7 +73,7 @@ public class StateSet {
         public float mMinHeight;
         public float mMinWidth;
 
-        public Variant(Context context, XmlPullParser xmlPullParser) throws Resources.NotFoundException {
+        public Variant(Context context, XmlPullParser xmlPullParser) {
             this.mMinWidth = Float.NaN;
             this.mMinHeight = Float.NaN;
             this.mMaxWidth = Float.NaN;
@@ -144,34 +143,34 @@ public class StateSet {
                     xmlPullParser.getName();
                 } else if (eventType == 2) {
                     String name = xmlPullParser.getName();
-                    char c = 65535;
+                    byte b2 = -1;
                     switch (name.hashCode()) {
                         case 80204913:
                             if (name.equals("State")) {
-                                c = 2;
+                                b2 = 2;
                             }
                             break;
                         case 1301459538:
                             if (name.equals("LayoutDescription")) {
-                                c = 0;
+                                b2 = 0;
                             }
                             break;
                         case 1382829617:
                             if (name.equals("StateSet")) {
-                                c = 1;
+                                b2 = 1;
                             }
                             break;
                         case 1901439077:
                             if (name.equals("Variant")) {
-                                c = 3;
+                                b2 = 3;
                             }
                             break;
                     }
-                    if (c != 0 && c != 1) {
-                        if (c == 2) {
+                    if (b2 != 0 && b2 != 1) {
+                        if (b2 == 2) {
                             state = new State(context, xmlPullParser);
                             this.mStateList.put(state.mId, state);
-                        } else if (c != 3) {
+                        } else if (b2 != 3) {
                             Log.v("ConstraintLayoutStates", "unknown tag " + name);
                         } else {
                             Variant variant = new Variant(context, xmlPullParser);

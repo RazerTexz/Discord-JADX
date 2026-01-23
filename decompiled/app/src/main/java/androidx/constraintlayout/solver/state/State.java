@@ -13,7 +13,7 @@ import java.util.HashMap;
 import java.util.Iterator;
 import p007b.p100d.p104b.p105a.outline;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class State {
     public static final int CONSTRAINT_RATIO = 2;
     public static final int CONSTRAINT_SPREAD = 0;
@@ -25,7 +25,7 @@ public class State {
     public HashMap<Object, Reference> mReferences = new HashMap<>();
     public HashMap<Object, HelperReference> mHelperReferences = new HashMap<>();
 
-    /* renamed from: androidx.constraintlayout.solver.state.State$1 */
+    /* JADX INFO: renamed from: androidx.constraintlayout.solver.state.State$1 */
     public static /* synthetic */ class C01851 {
         public static final /* synthetic */ int[] $SwitchMap$androidx$constraintlayout$solver$state$State$Helper;
 
@@ -211,15 +211,15 @@ public class State {
 
     public GuidelineReference guideline(Object obj, int i) {
         Reference reference = this.mReferences.get(obj);
-        Reference reference2 = reference;
+        Object obj2 = reference;
         if (reference == null) {
             GuidelineReference guidelineReference = new GuidelineReference(this);
             guidelineReference.setOrientation(i);
             guidelineReference.setKey(obj);
             this.mReferences.put(obj, guidelineReference);
-            reference2 = guidelineReference;
+            obj2 = guidelineReference;
         }
-        return (GuidelineReference) reference2;
+        return (GuidelineReference) obj2;
     }
 
     public State height(Dimension dimension) {

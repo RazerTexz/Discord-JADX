@@ -10,29 +10,29 @@ import p007b.p085c.p086a.p095y.p096k.AnimatableIntegerValue;
 import p007b.p085c.p086a.p095y.p098m.BaseLayer2;
 import p007b.p100d.p104b.p105a.outline;
 
-/* compiled from: ShapeFill.java */
-/* renamed from: b.c.a.y.l.l, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.c.a.y.l.l, reason: use source file name */
+/* JADX INFO: compiled from: ShapeFill.java */
+/* JADX INFO: loaded from: classes.dex */
 public class ShapeFill implements ContentModel2 {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final boolean f2806a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final Path.FillType f2807b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final String f2808c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     @Nullable
     public final AnimatableColorValue f2809d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     @Nullable
     public final AnimatableIntegerValue f2810e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final boolean f2811f;
 
     public ShapeFill(String str, boolean z2, Path.FillType fillType, @Nullable AnimatableColorValue animatableColorValue, @Nullable AnimatableIntegerValue animatableIntegerValue, boolean z3) {
@@ -45,7 +45,7 @@ public class ShapeFill implements ContentModel2 {
     }
 
     @Override // p007b.p085c.p086a.p095y.p097l.ContentModel2
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public Content2 mo775a(LottieDrawable lottieDrawable, BaseLayer2 baseLayer2) {
         return new FillContent(lottieDrawable, baseLayer2, this);
     }

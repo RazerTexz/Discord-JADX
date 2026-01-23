@@ -21,19 +21,19 @@ import p507d0.p592z.p594d.Lambda;
 import p637j0.p642l.p647e.ScalarSynchronousObservable;
 import p658rx.Observable;
 
-/* compiled from: GuildInviteViewModel.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: GuildInviteViewModel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class GuildInviteViewModel extends AppViewModel<ViewState> implements AppComponent {
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private final StoreInstantInvites instantInvitesStore;
     private final StoreInviteSettings.InviteCode inviteCode;
     private boolean inviteResolved;
     private final Observable<StoreState> storeStateObservable;
 
-    /* compiled from: GuildInviteViewModel.kt */
-    /* renamed from: com.discord.widgets.guilds.invite.GuildInviteViewModel$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.guilds.invite.GuildInviteViewModel$1 */
+    /* JADX INFO: compiled from: GuildInviteViewModel.kt */
     public static final class C86261 extends Lambda implements Function1<StoreState, Unit> {
         public C86261() {
             super(1);
@@ -45,14 +45,14 @@ public final class GuildInviteViewModel extends AppViewModel<ViewState> implemen
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(StoreState storeState) {
             Intrinsics3.checkNotNullParameter(storeState, "storeState");
             GuildInviteViewModel.access$handleStoreState(GuildInviteViewModel.this, storeState);
         }
     }
 
-    /* compiled from: GuildInviteViewModel.kt */
+    /* JADX INFO: compiled from: GuildInviteViewModel.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -77,10 +77,10 @@ public final class GuildInviteViewModel extends AppViewModel<ViewState> implemen
         }
     }
 
-    /* compiled from: GuildInviteViewModel.kt */
+    /* JADX INFO: compiled from: GuildInviteViewModel.kt */
     public static abstract class StoreState {
 
-        /* compiled from: GuildInviteViewModel.kt */
+        /* JADX INFO: compiled from: GuildInviteViewModel.kt */
         public static final class Invalid extends StoreState {
             public static final Invalid INSTANCE = new Invalid();
 
@@ -89,7 +89,7 @@ public final class GuildInviteViewModel extends AppViewModel<ViewState> implemen
             }
         }
 
-        /* compiled from: GuildInviteViewModel.kt */
+        /* JADX INFO: compiled from: GuildInviteViewModel.kt */
         public static final /* data */ class Loaded extends StoreState {
             private final ModelInvite invite;
 
@@ -107,7 +107,7 @@ public final class GuildInviteViewModel extends AppViewModel<ViewState> implemen
                 return loaded.copy(modelInvite);
             }
 
-            /* renamed from: component1, reason: from getter */
+            /* JADX INFO: renamed from: component1, reason: from getter */
             public final ModelInvite getInvite() {
                 return this.invite;
             }
@@ -144,7 +144,7 @@ public final class GuildInviteViewModel extends AppViewModel<ViewState> implemen
             }
         }
 
-        /* compiled from: GuildInviteViewModel.kt */
+        /* JADX INFO: compiled from: GuildInviteViewModel.kt */
         public static final class Loading extends StoreState {
             public static final Loading INSTANCE = new Loading();
 
@@ -161,10 +161,10 @@ public final class GuildInviteViewModel extends AppViewModel<ViewState> implemen
         }
     }
 
-    /* compiled from: GuildInviteViewModel.kt */
+    /* JADX INFO: compiled from: GuildInviteViewModel.kt */
     public static abstract class ViewState {
 
-        /* compiled from: GuildInviteViewModel.kt */
+        /* JADX INFO: compiled from: GuildInviteViewModel.kt */
         public static final class Invalid extends ViewState {
             public static final Invalid INSTANCE = new Invalid();
 
@@ -173,7 +173,7 @@ public final class GuildInviteViewModel extends AppViewModel<ViewState> implemen
             }
         }
 
-        /* compiled from: GuildInviteViewModel.kt */
+        /* JADX INFO: compiled from: GuildInviteViewModel.kt */
         public static final /* data */ class Loaded extends ViewState {
             private final ModelInvite invite;
 
@@ -191,7 +191,7 @@ public final class GuildInviteViewModel extends AppViewModel<ViewState> implemen
                 return loaded.copy(modelInvite);
             }
 
-            /* renamed from: component1, reason: from getter */
+            /* JADX INFO: renamed from: component1, reason: from getter */
             public final ModelInvite getInvite() {
                 return this.invite;
             }
@@ -228,7 +228,7 @@ public final class GuildInviteViewModel extends AppViewModel<ViewState> implemen
             }
         }
 
-        /* compiled from: GuildInviteViewModel.kt */
+        /* JADX INFO: compiled from: GuildInviteViewModel.kt */
         public static final class Loading extends ViewState {
             public static final Loading INSTANCE = new Loading();
 
@@ -237,7 +237,7 @@ public final class GuildInviteViewModel extends AppViewModel<ViewState> implemen
             }
         }
 
-        /* compiled from: GuildInviteViewModel.kt */
+        /* JADX INFO: compiled from: GuildInviteViewModel.kt */
         public static final class Uninitialized extends ViewState {
             public static final Uninitialized INSTANCE = new Uninitialized();
 
@@ -254,8 +254,8 @@ public final class GuildInviteViewModel extends AppViewModel<ViewState> implemen
         }
     }
 
-    /* compiled from: GuildInviteViewModel.kt */
-    /* renamed from: com.discord.widgets.guilds.invite.GuildInviteViewModel$fetchInviteIfNotLoaded$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.guilds.invite.GuildInviteViewModel$fetchInviteIfNotLoaded$1 */
+    /* JADX INFO: compiled from: GuildInviteViewModel.kt */
     public static final class C86271 extends Lambda implements Function0<Unit> {
         public C86271() {
             super(0);
@@ -267,7 +267,7 @@ public final class GuildInviteViewModel extends AppViewModel<ViewState> implemen
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             AppLog appLog = AppLog.f14950g;
             StringBuilder sbM833U = outline.m833U("Failed to resolve invite[");

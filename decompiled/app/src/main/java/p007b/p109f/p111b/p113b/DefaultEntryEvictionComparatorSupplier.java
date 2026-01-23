@@ -2,13 +2,13 @@ package p007b.p109f.p111b.p113b;
 
 import p007b.p109f.p111b.p113b.DiskStorage;
 
-/* compiled from: DefaultEntryEvictionComparatorSupplier.java */
-/* renamed from: b.f.b.b.b, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.f.b.b.b, reason: use source file name */
+/* JADX INFO: compiled from: DefaultEntryEvictionComparatorSupplier.java */
+/* JADX INFO: loaded from: classes.dex */
 public class DefaultEntryEvictionComparatorSupplier implements EntryEvictionComparatorSupplier {
 
-    /* compiled from: DefaultEntryEvictionComparatorSupplier.java */
-    /* renamed from: b.f.b.b.b$a */
+    /* JADX INFO: renamed from: b.f.b.b.b$a */
+    /* JADX INFO: compiled from: DefaultEntryEvictionComparatorSupplier.java */
     public class a implements EntryEvictionComparator {
         public a(DefaultEntryEvictionComparatorSupplier defaultEntryEvictionComparatorSupplier) {
         }

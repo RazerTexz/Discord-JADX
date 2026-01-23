@@ -13,14 +13,14 @@ import p007b.p008a.p025i.ViewStageChannelSpeakerBinding;
 import p507d0.p592z.p594d.Intrinsics3;
 import p658rx.Subscription;
 
-/* compiled from: StageCallSpeakerView.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: StageCallSpeakerView.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class StageCallSpeakerView extends CardView {
 
-    /* renamed from: j, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: j, reason: from kotlin metadata */
     public final ViewStageChannelSpeakerBinding binding;
 
-    /* renamed from: k, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: k, reason: from kotlin metadata */
     public Subscription subscription;
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */

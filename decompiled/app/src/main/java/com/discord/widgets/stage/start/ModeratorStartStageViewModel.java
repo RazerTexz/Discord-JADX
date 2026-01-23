@@ -27,11 +27,11 @@ import p507d0.p592z.p594d.FunctionReferenceImpl;
 import p507d0.p592z.p594d.Intrinsics3;
 import p658rx.Observable;
 
-/* compiled from: ModeratorStartStageViewModel.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: ModeratorStartStageViewModel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class ModeratorStartStageViewModel extends AppViewModel<ViewState> {
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private static final int MAX_DISPLAY_WAITING_USERS = 3;
     private final long channelId;
@@ -41,8 +41,8 @@ public final class ModeratorStartStageViewModel extends AppViewModel<ViewState> 
     private final StoreVoiceChannelSelected selectedVoiceChannelStore;
     private final StoreVoiceParticipants voiceParticipants;
 
-    /* compiled from: ModeratorStartStageViewModel.kt */
-    /* renamed from: com.discord.widgets.stage.start.ModeratorStartStageViewModel$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.stage.start.ModeratorStartStageViewModel$1 */
+    /* JADX INFO: compiled from: ModeratorStartStageViewModel.kt */
     public static final /* synthetic */ class C100681 extends FunctionReferenceImpl implements Function1<StoreState, Unit> {
         public C100681(ModeratorStartStageViewModel moderatorStartStageViewModel) {
             super(1, moderatorStartStageViewModel, ModeratorStartStageViewModel.class, "handleStoreState", "handleStoreState(Lcom/discord/widgets/stage/start/ModeratorStartStageViewModel$StoreState;)V", 0);
@@ -54,14 +54,14 @@ public final class ModeratorStartStageViewModel extends AppViewModel<ViewState> 
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(StoreState storeState) {
             Intrinsics3.checkNotNullParameter(storeState, "p1");
             ModeratorStartStageViewModel.access$handleStoreState((ModeratorStartStageViewModel) this.receiver, storeState);
         }
     }
 
-    /* compiled from: ModeratorStartStageViewModel.kt */
+    /* JADX INFO: compiled from: ModeratorStartStageViewModel.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -83,7 +83,7 @@ public final class ModeratorStartStageViewModel extends AppViewModel<ViewState> 
         }
     }
 
-    /* compiled from: ModeratorStartStageViewModel.kt */
+    /* JADX INFO: compiled from: ModeratorStartStageViewModel.kt */
     public static final /* data */ class StoreState {
         private final boolean canStartEvent;
         private final List<GuildScheduledEvent> channelEvents;
@@ -119,7 +119,7 @@ public final class ModeratorStartStageViewModel extends AppViewModel<ViewState> 
             return this.voiceParticipants;
         }
 
-        /* renamed from: component3, reason: from getter */
+        /* JADX INFO: renamed from: component3, reason: from getter */
         public final boolean getCanStartEvent() {
             return this.canStartEvent;
         }
@@ -154,17 +154,20 @@ public final class ModeratorStartStageViewModel extends AppViewModel<ViewState> 
         }
 
         /* JADX WARN: Multi-variable type inference failed */
+        /* JADX WARN: Type inference failed for: r1v3, types: [int] */
+        /* JADX WARN: Type inference failed for: r1v4 */
+        /* JADX WARN: Type inference failed for: r1v6 */
         public int hashCode() {
             List<GuildScheduledEvent> list = this.channelEvents;
             int iHashCode = (list != null ? list.hashCode() : 0) * 31;
             List<UserGuildMember> list2 = this.voiceParticipants;
             int iHashCode2 = (iHashCode + (list2 != null ? list2.hashCode() : 0)) * 31;
             boolean z2 = this.canStartEvent;
-            int i = z2;
-            if (z2 != 0) {
-                i = 1;
+            ?? r1 = z2;
+            if (z2) {
+                r1 = 1;
             }
-            return iHashCode2 + i;
+            return iHashCode2 + r1;
         }
 
         public String toString() {
@@ -177,7 +180,7 @@ public final class ModeratorStartStageViewModel extends AppViewModel<ViewState> 
         }
     }
 
-    /* compiled from: ModeratorStartStageViewModel.kt */
+    /* JADX INFO: compiled from: ModeratorStartStageViewModel.kt */
     public static final /* data */ class ViewState {
         private final boolean channelEventActive;
         private final List<GuildScheduledEvent> channelEvents;
@@ -214,7 +217,7 @@ public final class ModeratorStartStageViewModel extends AppViewModel<ViewState> 
             return this.items;
         }
 
-        /* renamed from: component3, reason: from getter */
+        /* JADX INFO: renamed from: component3, reason: from getter */
         public final boolean getChannelEventActive() {
             return this.channelEventActive;
         }
@@ -249,17 +252,20 @@ public final class ModeratorStartStageViewModel extends AppViewModel<ViewState> 
         }
 
         /* JADX WARN: Multi-variable type inference failed */
+        /* JADX WARN: Type inference failed for: r1v3, types: [int] */
+        /* JADX WARN: Type inference failed for: r1v4 */
+        /* JADX WARN: Type inference failed for: r1v6 */
         public int hashCode() {
             List<GuildScheduledEvent> list = this.channelEvents;
             int iHashCode = (list != null ? list.hashCode() : 0) * 31;
             List<ModeratorStartStageItem> list2 = this.items;
             int iHashCode2 = (iHashCode + (list2 != null ? list2.hashCode() : 0)) * 31;
             boolean z2 = this.channelEventActive;
-            int i = z2;
-            if (z2 != 0) {
-                i = 1;
+            ?? r1 = z2;
+            if (z2) {
+                r1 = 1;
             }
-            return iHashCode2 + i;
+            return iHashCode2 + r1;
         }
 
         public String toString() {

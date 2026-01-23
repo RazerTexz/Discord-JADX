@@ -17,17 +17,17 @@ import kotlin.jvm.internal.DefaultConstructorMarker;
 import p007b.p008a.p018d.AppScreen2;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: WidgetAuthCaptcha.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetAuthCaptcha.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetAuthCaptcha extends WidgetCaptcha {
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private static final String EXTRA_CAPTCHA_ERROR_BODY = "EXTRA_CAPTCHA_ERROR_BODY";
     private static final String RESULT_EXTRA_RQTOKEN = "RESULT_EXTRA_RQTOKEN";
     private static final String RESULT_EXTRA_TOKEN = "RESULT_EXTRA_TOKEN";
 
-    /* compiled from: WidgetAuthCaptcha.kt */
+    /* JADX INFO: compiled from: WidgetAuthCaptcha.kt */
     public static final class Companion {
         private Companion() {
         }

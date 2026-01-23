@@ -98,12 +98,12 @@ import p007b.p195g.p196a.p205c.p219i0.EnumValues;
 import p007b.p195g.p196a.p205c.p219i0.NameTransformer4;
 import p007b.p195g.p196a.p205c.p221z.SerializerFactoryConfig;
 
-/* compiled from: BeanSerializerFactory.java */
-/* renamed from: b.g.a.c.g0.f, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.g.a.c.g0.f, reason: use source file name */
+/* JADX INFO: compiled from: BeanSerializerFactory.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class BeanSerializerFactory extends BasicSerializerFactory implements Serializable {
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public static final BeanSerializerFactory f4805l = new BeanSerializerFactory(null);
     private static final long serialVersionUID = 1;
 
@@ -112,7 +112,7 @@ public class BeanSerializerFactory extends BasicSerializerFactory implements Ser
     }
 
     @Override // p007b.p195g.p196a.p205c.p215g0.SerializerFactory2
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public JsonSerializer<Object> mo1991b(SerializerProvider serializerProvider, JavaType javaType) throws JsonMappingException {
         JavaType javaTypeMo1780e0;
         Object objMo1752H;
@@ -184,7 +184,7 @@ public class BeanSerializerFactory extends BasicSerializerFactory implements Ser
     /* JADX WARN: Removed duplicated region for block: B:138:0x02b0  */
     /* JADX WARN: Removed duplicated region for block: B:139:0x02b6  */
     /* JADX WARN: Removed duplicated region for block: B:97:0x020f  */
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
@@ -471,13 +471,76 @@ public class BeanSerializerFactory extends BasicSerializerFactory implements Ser
     /* JADX WARN: Removed duplicated region for block: B:631:0x0bad  */
     /* JADX WARN: Removed duplicated region for block: B:676:0x0c71  */
     /* JADX WARN: Removed duplicated region for block: B:680:0x0c9d  */
+    /* JADX WARN: Type inference failed for: r1v1 */
+    /* JADX WARN: Type inference failed for: r1v111, types: [b.g.a.c.n] */
+    /* JADX WARN: Type inference failed for: r1v114 */
+    /* JADX WARN: Type inference failed for: r1v120 */
+    /* JADX WARN: Type inference failed for: r1v121, types: [b.g.a.c.g0.d] */
+    /* JADX WARN: Type inference failed for: r1v127, types: [b.g.a.c.g0.d] */
+    /* JADX WARN: Type inference failed for: r1v155 */
+    /* JADX WARN: Type inference failed for: r1v162 */
+    /* JADX WARN: Type inference failed for: r1v163, types: [b.g.a.c.n] */
+    /* JADX WARN: Type inference failed for: r1v164 */
+    /* JADX WARN: Type inference failed for: r1v194 */
+    /* JADX WARN: Type inference failed for: r1v195 */
+    /* JADX WARN: Type inference failed for: r1v196 */
+    /* JADX WARN: Type inference failed for: r1v197 */
+    /* JADX WARN: Type inference failed for: r1v2 */
+    /* JADX WARN: Type inference failed for: r1v203 */
+    /* JADX WARN: Type inference failed for: r1v204, types: [b.g.a.c.g0.u.d0] */
+    /* JADX WARN: Type inference failed for: r1v207, types: [b.g.a.c.n] */
+    /* JADX WARN: Type inference failed for: r1v208 */
+    /* JADX WARN: Type inference failed for: r1v210 */
+    /* JADX WARN: Type inference failed for: r1v211 */
+    /* JADX WARN: Type inference failed for: r1v217 */
+    /* JADX WARN: Type inference failed for: r1v218 */
+    /* JADX WARN: Type inference failed for: r1v229 */
+    /* JADX WARN: Type inference failed for: r1v235, types: [b.g.a.c.n<?>] */
+    /* JADX WARN: Type inference failed for: r1v236 */
+    /* JADX WARN: Type inference failed for: r1v237 */
+    /* JADX WARN: Type inference failed for: r1v239 */
+    /* JADX WARN: Type inference failed for: r1v242 */
+    /* JADX WARN: Type inference failed for: r1v243 */
+    /* JADX WARN: Type inference failed for: r1v247 */
+    /* JADX WARN: Type inference failed for: r1v249 */
+    /* JADX WARN: Type inference failed for: r1v250 */
+    /* JADX WARN: Type inference failed for: r1v251 */
+    /* JADX WARN: Type inference failed for: r1v252 */
+    /* JADX WARN: Type inference failed for: r1v253 */
+    /* JADX WARN: Type inference failed for: r1v254 */
+    /* JADX WARN: Type inference failed for: r1v255 */
+    /* JADX WARN: Type inference failed for: r1v256 */
+    /* JADX WARN: Type inference failed for: r1v257 */
+    /* JADX WARN: Type inference failed for: r1v258 */
+    /* JADX WARN: Type inference failed for: r1v259 */
+    /* JADX WARN: Type inference failed for: r1v260 */
+    /* JADX WARN: Type inference failed for: r1v261 */
+    /* JADX WARN: Type inference failed for: r1v262 */
+    /* JADX WARN: Type inference failed for: r1v263 */
+    /* JADX WARN: Type inference failed for: r1v264 */
+    /* JADX WARN: Type inference failed for: r1v265 */
+    /* JADX WARN: Type inference failed for: r1v266 */
+    /* JADX WARN: Type inference failed for: r1v267 */
+    /* JADX WARN: Type inference failed for: r1v268 */
+    /* JADX WARN: Type inference failed for: r1v269 */
+    /* JADX WARN: Type inference failed for: r1v270 */
+    /* JADX WARN: Type inference failed for: r1v271 */
+    /* JADX WARN: Type inference failed for: r1v272 */
+    /* JADX WARN: Type inference failed for: r1v3, types: [b.g.a.c.n] */
+    /* JADX WARN: Type inference failed for: r1v30 */
+    /* JADX WARN: Type inference failed for: r1v31, types: [b.g.a.c.n<?>] */
+    /* JADX WARN: Type inference failed for: r1v35 */
+    /* JADX WARN: Type inference failed for: r1v36 */
+    /* JADX WARN: Type inference failed for: r1v39 */
+    /* JADX WARN: Type inference failed for: r1v41 */
+    /* JADX WARN: Type inference failed for: r1v70 */
     /* JADX WARN: Type inference failed for: r26v0, types: [b.g.a.c.g0.b, b.g.a.c.g0.f] */
     /* JADX WARN: Type inference failed for: r5v33, types: [b.g.a.c.g0.t.i] */
     /* JADX WARN: Type inference failed for: r5v34 */
     /* JADX WARN: Type inference failed for: r5v35 */
     /* JADX WARN: Type inference failed for: r5v8, types: [b.g.a.c.n] */
     /* JADX WARN: Type inference failed for: r5v9 */
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
@@ -488,7 +551,7 @@ public class BeanSerializerFactory extends BasicSerializerFactory implements Ser
         Class<Enum> cls;
         BeanDescription beanDescription2;
         int i;
-        JsonSerializer<?> jsonSerializerM1974e;
+        ?? M1974e;
         JsonSerializer<?> jsonSerializerM2010a;
         int i2;
         Object objM572t0;
@@ -513,14 +576,14 @@ public class BeanSerializerFactory extends BasicSerializerFactory implements Ser
         int size;
         int i4;
         List<BeanPropertyWriter> list;
-        JsonSerializer<?> jsonSerializerM2259x;
+        JsonSerializer<Object> jsonSerializerM2259x;
         EnumSerializer2 enumSerializer2;
         Class<? extends JsonSerializer<?>> cls2;
         boolean z5;
         boolean z6;
         TypeSerializer typeSerializer;
         JsonSerializer<Object> jsonSerializer;
-        JsonSerializer<?> collectionSerializer2;
+        ContainerSerializer collectionSerializer2;
         JsonFormat.c cVar2;
         SerializationConfig serializationConfig;
         JsonSerializer<Object> jsonSerializer2;
@@ -554,12 +617,12 @@ public class BeanSerializerFactory extends BasicSerializerFactory implements Ser
                 if (mapLikeType instanceof MapType) {
                     MapType mapType = (MapType) mapLikeType;
                     if (beanDescription3.mo1812a(null).m1601e() == cVar3) {
-                        jsonSerializerM1974e = null;
+                        M1974e = 0;
                         cVar2 = cVar3;
                     } else {
                         SerializationConfig serializationConfig4 = serializerProvider._config;
                         ArrayIterator2 arrayIterator2 = (ArrayIterator2) m1994j();
-                        JsonSerializer<?> jsonSerializerM1974e2 = null;
+                        JsonSerializer<?> jsonSerializerM1974e = null;
                         while (true) {
                             if (!arrayIterator2.hasNext()) {
                                 cVar2 = cVar3;
@@ -576,8 +639,8 @@ public class BeanSerializerFactory extends BasicSerializerFactory implements Ser
                             basicBeanDescription = basicBeanDescription2;
                             z7 = z10;
                             typeSerializer2 = typeSerializerMo1972c;
-                            jsonSerializerM1974e2 = ((Serializers) arrayIterator2.next()).m2012c(serializationConfig4, mapType, beanDescription, jsonSerializerMo2000H2, typeSerializerMo1972c, jsonSerializer2);
-                            if (jsonSerializerM1974e2 != null) {
+                            jsonSerializerM1974e = ((Serializers) arrayIterator2.next()).m2012c(serializationConfig4, mapType, beanDescription, jsonSerializerMo2000H2, typeSerializerMo1972c, jsonSerializer2);
+                            if (jsonSerializerM1974e != null) {
                                 break;
                             }
                             serializationConfig4 = serializationConfig;
@@ -587,7 +650,7 @@ public class BeanSerializerFactory extends BasicSerializerFactory implements Ser
                             jsonSerializerMo2000H = jsonSerializer2;
                             cVar3 = cVar2;
                         }
-                        if (jsonSerializerM1974e2 == null && (jsonSerializerM1974e2 = m1974e(serializerProvider, mapType, beanDescription3)) == null) {
+                        if (jsonSerializerM1974e == null && (jsonSerializerM1974e = m1974e(serializerProvider, mapType, beanDescription3)) == null) {
                             Object objMo1783g = serializationConfig.m2267e().mo1783g(basicBeanDescription.f4736f);
                             SerializationConfig serializationConfig5 = serializationConfig;
                             JsonIgnoreProperties.a aVarM2280s = serializationConfig5.m2280s(Map.class, basicBeanDescription.f4736f);
@@ -600,9 +663,9 @@ public class BeanSerializerFactory extends BasicSerializerFactory implements Ser
                             JsonInclude.b bVarM1973d = m1973d(serializerProvider, beanDescription3, javaType2, Map.class);
                             JsonInclude.a aVar5 = bVarM1973d == null ? aVar4 : bVarM1973d._contentInclusion;
                             if (aVar5 == aVar4 || aVar5 == aVar3) {
-                                jsonSerializerM1974e = mapSerializer2M2082s;
+                                M1974e = mapSerializer2M2082s;
                                 if (!serializerProvider.m2240D(SerializationFeature.WRITE_NULL_MAP_VALUES)) {
-                                    jsonSerializerM1974e = mapSerializer2M2082s.m2086v(null, true);
+                                    M1974e = mapSerializer2M2082s.m2086v(null, true);
                                 }
                             } else {
                                 int iOrdinal2 = aVar5.ordinal();
@@ -632,10 +695,10 @@ public class BeanSerializerFactory extends BasicSerializerFactory implements Ser
                                     zMo1999B3 = true;
                                     objM572t03 = null;
                                 }
-                                jsonSerializerM1974e = mapSerializer2M2082s.m2086v(objM572t03, zMo1999B3);
+                                M1974e = mapSerializer2M2082s.m2086v(objM572t03, zMo1999B3);
                             }
                         } else {
-                            jsonSerializerM1974e = jsonSerializerM1974e2;
+                            M1974e = jsonSerializerM1974e;
                         }
                         if (this._factoryConfig.m2282a()) {
                             ArrayIterator2 arrayIterator22 = (ArrayIterator2) this._factoryConfig.m2283b();
@@ -656,8 +719,8 @@ public class BeanSerializerFactory extends BasicSerializerFactory implements Ser
                         }
                         mapLikeType = mapLikeType2;
                     }
-                    jsonSerializerM1974e = jsonSerializerM2015f == null ? m1974e(serializerProvider, javaType, beanDescription) : jsonSerializerM2015f;
-                    if (jsonSerializerM1974e != null && this._factoryConfig.m2282a()) {
+                    M1974e = jsonSerializerM2015f == null ? m1974e(serializerProvider, javaType, beanDescription) : jsonSerializerM2015f;
+                    if (M1974e != 0 && this._factoryConfig.m2282a()) {
                         ArrayIterator2 arrayIterator24 = (ArrayIterator2) this._factoryConfig.m2283b();
                         while (arrayIterator24.hasNext()) {
                             Objects.requireNonNull((BeanSerializerModifier) arrayIterator24.next());
@@ -672,7 +735,7 @@ public class BeanSerializerFactory extends BasicSerializerFactory implements Ser
             } else {
                 JsonFormat.c cVar4 = cVar3;
                 boolean z11 = z10;
-                JsonSerializer<?> jsonSerializerM1974e3 = null;
+                JsonSerializer<?> jsonSerializerM1974e2 = null;
                 if (javaType.mo2111u()) {
                     CollectionLikeType collectionLikeType = (CollectionLikeType) javaType;
                     if (collectionLikeType instanceof CollectionType) {
@@ -697,8 +760,8 @@ public class BeanSerializerFactory extends BasicSerializerFactory implements Ser
                             cls = cls3;
                             ArrayIterator2 arrayIterator26 = arrayIterator25;
                             beanDescription2 = beanDescription3;
-                            jsonSerializerM1974e3 = serializers.m2016g(serializationConfig7, collectionType, beanDescription, typeSerializerMo1972c, jsonSerializerMo2000H);
-                            if (jsonSerializerM1974e3 != null) {
+                            jsonSerializerM1974e2 = serializers.m2016g(serializationConfig7, collectionType, beanDescription, typeSerializerMo1972c, jsonSerializerMo2000H);
+                            if (jsonSerializerM1974e2 != null) {
                                 break;
                             }
                             cls3 = cls;
@@ -709,7 +772,7 @@ public class BeanSerializerFactory extends BasicSerializerFactory implements Ser
                             serializationConfig6 = serializationConfig8;
                             arrayIterator25 = arrayIterator26;
                         }
-                        if (jsonSerializerM1974e3 == null && (jsonSerializerM1974e3 = m1974e(serializerProvider, collectionType, beanDescription2)) == null) {
+                        if (jsonSerializerM1974e2 == null && (jsonSerializerM1974e2 = m1974e(serializerProvider, collectionType, beanDescription2)) == null) {
                             if (beanDescription2.mo1812a(null).m1601e() != cVar) {
                                 Class<?> cls4 = collectionType._class;
                                 if (EnumSet.class.isAssignableFrom(cls4)) {
@@ -725,11 +788,11 @@ public class BeanSerializerFactory extends BasicSerializerFactory implements Ser
                                         typeSerializer = typeSerializerMo1972c;
                                         jsonSerializer = jsonSerializerMo2000H;
                                         if (cls5 == String.class && ClassUtil.m2187s(jsonSerializer)) {
-                                            jsonSerializerM1974e3 = StringCollectionSerializer.f4844k;
+                                            jsonSerializerM1974e2 = StringCollectionSerializer.f4844k;
                                         }
                                     } else if (cls5 == String.class) {
                                         if (ClassUtil.m2187s(jsonSerializerMo2000H)) {
-                                            jsonSerializerM1974e3 = IndexedStringListSerializer.f4817k;
+                                            jsonSerializerM1974e2 = IndexedStringListSerializer.f4817k;
                                         }
                                         z6 = z11;
                                         typeSerializer = typeSerializerMo1972c;
@@ -738,22 +801,22 @@ public class BeanSerializerFactory extends BasicSerializerFactory implements Ser
                                         z6 = z11;
                                         typeSerializer = typeSerializerMo1972c;
                                         jsonSerializer = jsonSerializerMo2000H;
-                                        jsonSerializerM1974e3 = new IndexedListSerializer(collectionType._elementType, z6, typeSerializer, jsonSerializer);
+                                        jsonSerializerM1974e2 = new IndexedListSerializer(collectionType._elementType, z6, typeSerializer, jsonSerializer);
                                     }
-                                    if (jsonSerializerM1974e3 == null) {
+                                    if (jsonSerializerM1974e2 == null) {
                                         collectionSerializer2 = new CollectionSerializer2(collectionType._elementType, z6, typeSerializer, jsonSerializer);
                                     }
-                                    jsonSerializerM1974e = jsonSerializerM1974e3;
+                                    M1974e = jsonSerializerM1974e2;
                                     if (this._factoryConfig.m2282a()) {
                                     }
                                 }
-                                jsonSerializerM1974e = collectionSerializer2;
+                                M1974e = collectionSerializer2;
                                 if (this._factoryConfig.m2282a()) {
                                 }
                             }
-                            jsonSerializerM1974e = null;
+                            M1974e = 0;
                         } else {
-                            jsonSerializerM1974e = jsonSerializerM1974e3;
+                            M1974e = jsonSerializerM1974e2;
                             if (this._factoryConfig.m2282a()) {
                                 ArrayIterator2 arrayIterator27 = (ArrayIterator2) this._factoryConfig.m2283b();
                                 while (arrayIterator27.hasNext()) {
@@ -783,8 +846,8 @@ public class BeanSerializerFactory extends BasicSerializerFactory implements Ser
                             typeSerializer3 = typeSerializer4;
                             jsonSerializer3 = jsonSerializer4;
                         }
-                        jsonSerializerM1974e = jsonSerializerM2013d == null ? m1974e(serializerProvider, javaType, beanDescription) : jsonSerializerM2013d;
-                        if (jsonSerializerM1974e != null && this._factoryConfig.m2282a()) {
+                        M1974e = jsonSerializerM2013d == null ? m1974e(serializerProvider, javaType, beanDescription) : jsonSerializerM2013d;
+                        if (M1974e != 0 && this._factoryConfig.m2282a()) {
                             ArrayIterator2 arrayIterator29 = (ArrayIterator2) this._factoryConfig.m2283b();
                             while (arrayIterator29.hasNext()) {
                                 Objects.requireNonNull((BeanSerializerModifier) arrayIterator29.next());
@@ -802,7 +865,7 @@ public class BeanSerializerFactory extends BasicSerializerFactory implements Ser
                         ArrayType arrayType = (ArrayType) javaType;
                         SerializationConfig serializationConfig10 = serializerProvider._config;
                         ArrayIterator2 arrayIterator210 = (ArrayIterator2) m1994j();
-                        jsonSerializerM1974e = null;
+                        M1974e = 0;
                         while (true) {
                             if (!arrayIterator210.hasNext()) {
                                 z5 = z12;
@@ -811,23 +874,23 @@ public class BeanSerializerFactory extends BasicSerializerFactory implements Ser
                             SerializationConfig serializationConfig11 = serializationConfig10;
                             SerializationConfig serializationConfig12 = serializationConfig10;
                             z5 = z12;
-                            jsonSerializerM1974e = ((Serializers) arrayIterator210.next()).m2014e(serializationConfig11, arrayType, beanDescription, typeSerializerMo1972c, jsonSerializerMo2000H);
-                            if (jsonSerializerM1974e != null) {
+                            M1974e = ((Serializers) arrayIterator210.next()).m2014e(serializationConfig11, arrayType, beanDescription, typeSerializerMo1972c, jsonSerializerMo2000H);
+                            if (M1974e != 0) {
                                 break;
                             }
                             z12 = z5;
                             serializationConfig10 = serializationConfig12;
-                            jsonSerializerM1974e = jsonSerializerM1974e;
+                            M1974e = M1974e;
                         }
-                        if (jsonSerializerM1974e == null) {
+                        if (M1974e == 0) {
                             Class<?> cls6 = arrayType._class;
                             if (jsonSerializerMo2000H != null) {
-                                jsonSerializerM1974e = jsonSerializerM1974e;
+                                M1974e = M1974e;
                                 if (ClassUtil.m2187s(jsonSerializerMo2000H)) {
-                                    jsonSerializerM1974e = String[].class == cls6 ? StringArraySerializer2.f4843k : StdArraySerializers.f4855a.get(cls6.getName());
+                                    M1974e = String[].class == cls6 ? StringArraySerializer2.f4843k : StdArraySerializers.f4855a.get(cls6.getName());
                                 }
-                                if (jsonSerializerM1974e == null) {
-                                    jsonSerializerM1974e = new ObjectArraySerializer2(arrayType._componentType, z5, typeSerializerMo1972c, jsonSerializerMo2000H);
+                                if (M1974e == 0) {
+                                    M1974e = new ObjectArraySerializer2(arrayType._componentType, z5, typeSerializerMo1972c, jsonSerializerMo2000H);
                                 }
                             }
                         }
@@ -838,12 +901,12 @@ public class BeanSerializerFactory extends BasicSerializerFactory implements Ser
                             }
                         }
                     } else {
-                        jsonSerializerM1974e = null;
+                        M1974e = 0;
                     }
                 }
             }
-            if (jsonSerializerM1974e != null) {
-                return jsonSerializerM1974e;
+            if (M1974e != 0) {
+                return M1974e;
             }
             i = 3;
             z8 = zM1976g;
@@ -917,37 +980,37 @@ public class BeanSerializerFactory extends BasicSerializerFactory implements Ser
                             }
                             ReferenceTypeSerializer<AtomicReference<?>> referenceTypeSerializerMo2049t = new AtomicReferenceSerializer(referenceType, z8, typeSerializer7, jsonSerializer7).mo2049t(objM572t0, zMo1999B);
                             i = i2;
-                            jsonSerializerM1974e = referenceTypeSerializerMo2049t;
+                            M1974e = referenceTypeSerializerMo2049t;
                         } else {
                             jsonSerializerM2010a = null;
                         }
                     }
                 }
                 i = 3;
-                jsonSerializerM1974e = jsonSerializerM2010a;
+                M1974e = jsonSerializerM2010a;
             } else {
                 i = 3;
                 ArrayIterator2 arrayIterator213 = (ArrayIterator2) m1994j();
                 JsonSerializer<?> jsonSerializerM2011b = null;
                 while (arrayIterator213.hasNext() && (jsonSerializerM2011b = ((Serializers) arrayIterator213.next()).m2011b(serializationConfig2, javaType, beanDescription2)) == null) {
                 }
-                jsonSerializerM1974e = jsonSerializerM2011b;
+                M1974e = jsonSerializerM2011b;
             }
-            if (jsonSerializerM1974e == null) {
-                jsonSerializerM1974e = m1974e(serializerProvider, javaType, beanDescription);
+            if (M1974e == 0) {
+                M1974e = m1974e(serializerProvider, javaType, beanDescription);
             }
         }
-        if (jsonSerializerM1974e == null) {
+        if (M1974e == 0) {
             String name = javaType._class.getName();
             JsonSerializer<?> jsonSerializer8 = BasicSerializerFactory.f4788j.get(name);
             if (jsonSerializer8 != null || (cls2 = BasicSerializerFactory.f4789k.get(name)) == null) {
-                jsonSerializerM1974e = jsonSerializer8;
+                M1974e = jsonSerializer8;
                 i3 = 0;
             } else {
                 i3 = 0;
-                jsonSerializerM1974e = (JsonSerializer) ClassUtil.m2175g(cls2, false);
+                M1974e = (JsonSerializer) ClassUtil.m2175g(cls2, false);
             }
-            if (jsonSerializerM1974e == null) {
+            if (M1974e == 0) {
                 if (javaType.m2219w()) {
                     SerializationConfig serializationConfig15 = serializerProvider._config;
                     JsonFormat.d dVarMo1812a = beanDescription2.mo1812a(null);
@@ -976,17 +1039,17 @@ public class BeanSerializerFactory extends BasicSerializerFactory implements Ser
                         enumSerializer2 = enumSerializer22;
                     }
                     c = 1;
-                    jsonSerializerM1974e = enumSerializer2;
+                    M1974e = enumSerializer2;
                 } else {
                     c = 1;
                     Class<?> cls8 = javaType._class;
                     ?? M1809a = OptionalHandlerFactory.f4625l.m1809a(serializerProvider._config, javaType, beanDescription2);
                     if (M1809a != 0) {
-                        jsonSerializerM1974e = M1809a;
+                        M1974e = M1809a;
                     } else if (Calendar.class.isAssignableFrom(cls8)) {
-                        jsonSerializerM1974e = CalendarSerializer2.f4854k;
+                        M1974e = CalendarSerializer2.f4854k;
                     } else if (Date.class.isAssignableFrom(cls8)) {
-                        jsonSerializerM1974e = DateSerializer2.f4856k;
+                        M1974e = DateSerializer2.f4856k;
                     } else if (Map.Entry.class.isAssignableFrom(cls8)) {
                         JavaType javaTypeMo2144i = javaType.mo2144i(Map.Entry.class);
                         JavaType javaTypeM2217h = javaTypeMo2144i.m2217h(i3);
@@ -1038,12 +1101,12 @@ public class BeanSerializerFactory extends BasicSerializerFactory implements Ser
                                 }
                             }
                         }
-                        jsonSerializerM1974e = M1809a;
+                        M1974e = M1809a;
                     } else {
-                        jsonSerializerM1974e = ByteBuffer.class.isAssignableFrom(cls8) ? new ByteBufferSerializer() : InetAddress.class.isAssignableFrom(cls8) ? new InetAddressSerializer() : InetSocketAddress.class.isAssignableFrom(cls8) ? new InetSocketAddressSerializer() : TimeZone.class.isAssignableFrom(cls8) ? new TimeZoneSerializer2() : Charset.class.isAssignableFrom(cls8) ? ToStringSerializer.f4866k : (!Number.class.isAssignableFrom(cls8) || (iOrdinal = beanDescription2.mo1812a(null).m1601e().ordinal()) == i || iOrdinal == 4) ? null : iOrdinal != 8 ? NumberSerializer.f4868k : ToStringSerializer.f4866k;
+                        M1974e = ByteBuffer.class.isAssignableFrom(cls8) ? new ByteBufferSerializer() : InetAddress.class.isAssignableFrom(cls8) ? new InetAddressSerializer() : InetSocketAddress.class.isAssignableFrom(cls8) ? new InetSocketAddressSerializer() : TimeZone.class.isAssignableFrom(cls8) ? new TimeZoneSerializer2() : Charset.class.isAssignableFrom(cls8) ? ToStringSerializer.f4866k : (!Number.class.isAssignableFrom(cls8) || (iOrdinal = beanDescription2.mo1812a(null).m1601e().ordinal()) == i || iOrdinal == 4) ? 0 : iOrdinal != 8 ? NumberSerializer.f4868k : ToStringSerializer.f4866k;
                     }
                 }
-                if (jsonSerializerM1974e == null) {
+                if (M1974e == 0) {
                     Class<?> cls9 = javaType._class;
                     Annotation[] annotationArr = ClassUtil.f4944a;
                     if ((cls9.isAnnotation() ? "annotation" : cls9.isArray() ? "array" : cls.isAssignableFrom(cls9) ? "enum" : cls9.isPrimitive() ? "primitive" : null) == null) {
@@ -1065,7 +1128,7 @@ public class BeanSerializerFactory extends BasicSerializerFactory implements Ser
                                 str = null;
                                 unsupportedTypeSerializer = (str == null && serializerProvider._config.mo1885a(javaType._class) == null) ? new UnsupportedTypeSerializer(javaType, str) : null;
                                 if (unsupportedTypeSerializer == null) {
-                                    jsonSerializerM1974e = unsupportedTypeSerializer;
+                                    M1974e = unsupportedTypeSerializer;
                                 } else {
                                     SerializationConfig serializationConfig16 = serializerProvider._config;
                                     BeanSerializerBuilder beanSerializerBuilder = new BeanSerializerBuilder(beanDescription2);
@@ -1292,29 +1355,29 @@ public class BeanSerializerFactory extends BasicSerializerFactory implements Ser
                                             }
                                         }
                                         try {
-                                            jsonSerializerM1974e = beanSerializerBuilder.m1990a();
-                                            if (jsonSerializerM1974e == null) {
+                                            M1974e = beanSerializerBuilder.m1990a();
+                                            if (M1974e == 0) {
                                                 if (javaType.m2215A()) {
-                                                    jsonSerializerM1974e = new BeanSerializer2(beanSerializerBuilder.f4797b.f4626a, beanSerializerBuilder, BeanSerializerBase.f4851k, null);
+                                                    M1974e = new BeanSerializer2(beanSerializerBuilder.f4797b.f4626a, beanSerializerBuilder, BeanSerializerBase.f4851k, null);
                                                 } else {
                                                     Class<?> cls13 = javaType._class;
                                                     if (Iterator.class.isAssignableFrom(cls13)) {
                                                         JavaType[] javaTypeArrM2167i = serializationConfig16._base._typeFactory.m2167i(javaType, Iterator.class);
                                                         JavaType javaTypeM2158k = (javaTypeArrM2167i == null || javaTypeArrM2167i.length != 1) ? TypeFactory.m2158k() : javaTypeArrM2167i[0];
-                                                        jsonSerializerM1974e = new IteratorSerializer(javaTypeM2158k, z3, mo1972c(serializationConfig16, javaTypeM2158k));
+                                                        M1974e = new IteratorSerializer(javaTypeM2158k, z3, mo1972c(serializationConfig16, javaTypeM2158k));
                                                     } else {
                                                         boolean z14 = z3;
                                                         if (Iterable.class.isAssignableFrom(cls13)) {
                                                             JavaType[] javaTypeArrM2167i2 = serializationConfig16._base._typeFactory.m2167i(javaType, Iterable.class);
                                                             JavaType javaTypeM2158k2 = (javaTypeArrM2167i2 == null || javaTypeArrM2167i2.length != 1) ? TypeFactory.m2158k() : javaTypeArrM2167i2[0];
-                                                            jsonSerializerM1974e = new IterableSerializer(javaTypeM2158k2, z14, mo1972c(serializationConfig16, javaTypeM2158k2));
+                                                            M1974e = new IterableSerializer(javaTypeM2158k2, z14, mo1972c(serializationConfig16, javaTypeM2158k2));
                                                         } else {
-                                                            jsonSerializerM1974e = CharSequence.class.isAssignableFrom(cls13) ? ToStringSerializer.f4866k : null;
+                                                            M1974e = CharSequence.class.isAssignableFrom(cls13) ? ToStringSerializer.f4866k : null;
                                                         }
                                                     }
-                                                    if (jsonSerializerM1974e == null) {
+                                                    if (M1974e == 0) {
                                                         if (basicBeanDescription3.f4736f.f4663t.size() > 0) {
-                                                            jsonSerializerM1974e = new BeanSerializer2(beanSerializerBuilder.f4797b.f4626a, beanSerializerBuilder, BeanSerializerBase.f4851k, null);
+                                                            M1974e = new BeanSerializer2(beanSerializerBuilder.f4797b.f4626a, beanSerializerBuilder, BeanSerializerBase.f4851k, null);
                                                         }
                                                     }
                                                 }
@@ -1376,8 +1439,8 @@ public class BeanSerializerFactory extends BasicSerializerFactory implements Ser
                                         }
                                     }
                                 }
-                                if (jsonSerializerM1974e == null) {
-                                    jsonSerializerM1974e = serializerProvider.m2259x(beanDescription2.f4626a._class);
+                                if (M1974e == 0) {
+                                    M1974e = serializerProvider.m2259x(beanDescription2.f4626a._class);
                                 }
                             }
                             Object[] objArr2 = new Object[i];
@@ -1388,27 +1451,27 @@ public class BeanSerializerFactory extends BasicSerializerFactory implements Ser
                             if (str == null) {
                                 if (unsupportedTypeSerializer == null) {
                                 }
-                                if (jsonSerializerM1974e == null) {
+                                if (M1974e == 0) {
                                 }
                             }
                         }
-                        jsonSerializerM1974e = jsonSerializerM2259x;
-                        if (jsonSerializerM1974e == null) {
+                        M1974e = jsonSerializerM2259x;
+                        if (M1974e == 0) {
                         }
                     }
                 }
             }
         }
-        if (jsonSerializerM1974e != null && this._factoryConfig.m2282a()) {
+        if (M1974e != 0 && this._factoryConfig.m2282a()) {
             ArrayIterator2 arrayIterator218 = (ArrayIterator2) this._factoryConfig.m2283b();
             while (arrayIterator218.hasNext()) {
                 Objects.requireNonNull((BeanSerializerModifier) arrayIterator218.next());
             }
         }
-        return jsonSerializerM1974e;
+        return M1974e;
     }
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public Iterable<Serializers> m1994j() {
         return new ArrayIterator2(this._factoryConfig._additionalSerializers);
     }

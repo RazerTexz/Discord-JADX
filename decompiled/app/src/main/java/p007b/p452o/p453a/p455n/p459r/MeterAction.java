@@ -17,28 +17,28 @@ import p007b.p452o.p453a.p455n.p460s.Camera2MeteringTransform;
 import p007b.p452o.p453a.p455n.p461t.Reference2;
 import p007b.p452o.p453a.p469t.MeteringRegions;
 
-/* compiled from: MeterAction.java */
+/* JADX INFO: renamed from: b.o.a.n.r.g, reason: use source file name */
+/* JADX INFO: compiled from: MeterAction.java */
+/* JADX INFO: loaded from: classes3.dex */
 @RequiresApi(21)
-/* renamed from: b.o.a.n.r.g, reason: use source file name */
-/* loaded from: classes3.dex */
 public class MeterAction extends ActionWrapper {
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public static final CameraLogger f13976e = new CameraLogger(MeterAction.class.getSimpleName());
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public List<BaseMeter> f13977f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public BaseAction f13978g;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public final MeteringRegions f13979h;
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public final CameraEngine f13980i;
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final boolean f13981j;
 
     public MeterAction(@NonNull CameraEngine cameraEngine, @Nullable MeteringRegions meteringRegions, boolean z2) {
@@ -48,7 +48,7 @@ public class MeterAction extends ActionWrapper {
     }
 
     @Override // p007b.p452o.p453a.p455n.p456o.ActionWrapper, p007b.p452o.p453a.p455n.p456o.BaseAction
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public void mo7249j(@NonNull ActionHolder actionHolder) {
         CameraLogger cameraLogger = f13976e;
         cameraLogger.m7159a(2, "onStart:", "initializing.");
@@ -59,12 +59,12 @@ public class MeterAction extends ActionWrapper {
 
     @Override // p007b.p452o.p453a.p455n.p456o.ActionWrapper
     @NonNull
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public BaseAction mo7336m() {
         return this.f13978g;
     }
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public final void m7353n(@NonNull ActionHolder actionHolder) {
         List arrayList = new ArrayList();
         if (this.f13979h != null) {

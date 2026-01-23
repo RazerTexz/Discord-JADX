@@ -5,9 +5,9 @@ import kotlin.Unit;
 import kotlin.jvm.functions.Function0;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: Handler.kt */
-/* renamed from: androidx.core.os.HandlerKt, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: androidx.core.os.HandlerKt, reason: use source file name */
+/* JADX INFO: compiled from: Handler.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class Handler2 {
     public static final Runnable postAtTime(Handler handler, long j, Object obj, Function0<Unit> function0) {
         Intrinsics3.checkNotNullParameter(handler, "<this>");

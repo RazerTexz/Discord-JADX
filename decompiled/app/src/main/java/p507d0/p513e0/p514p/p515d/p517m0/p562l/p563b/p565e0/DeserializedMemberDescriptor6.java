@@ -35,45 +35,45 @@ import p507d0.p513e0.p514p.p515d.p517m0.p567n.TypeUtils;
 import p507d0.p513e0.p514p.p515d.p517m0.p567n.Variance;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: DeserializedMemberDescriptor.kt */
-/* renamed from: d0.e0.p.d.m0.l.b.e0.l, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.l.b.e0.l, reason: use source file name */
+/* JADX INFO: compiled from: DeserializedMemberDescriptor.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class DeserializedMemberDescriptor6 extends AbstractTypeAliasDescriptor2 implements DeserializedMemberDescriptor3 {
 
-    /* renamed from: A */
+    /* JADX INFO: renamed from: A */
     public KotlinType4 f24610A;
 
-    /* renamed from: B */
+    /* JADX INFO: renamed from: B */
     public DeserializedMemberDescriptor3.a f24611B;
 
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     public final StorageManager f24612q;
 
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     public final C11693r f24613r;
 
-    /* renamed from: s */
+    /* JADX INFO: renamed from: s */
     public final NameResolver f24614s;
 
-    /* renamed from: t */
+    /* JADX INFO: renamed from: t */
     public final TypeTable f24615t;
 
-    /* renamed from: u */
+    /* JADX INFO: renamed from: u */
     public final VersionRequirement2 f24616u;
 
-    /* renamed from: v */
+    /* JADX INFO: renamed from: v */
     public final DeserializedContainerSource2 f24617v;
 
-    /* renamed from: w */
+    /* JADX INFO: renamed from: w */
     public Collection<? extends TypeAliasConstructorDescriptor> f24618w;
 
-    /* renamed from: x */
+    /* JADX INFO: renamed from: x */
     public KotlinType4 f24619x;
 
-    /* renamed from: y */
+    /* JADX INFO: renamed from: y */
     public KotlinType4 f24620y;
 
-    /* renamed from: z */
+    /* JADX INFO: renamed from: z */
     public List<? extends TypeParameterDescriptor> f24621z;
 
     /* JADX WARN: Illegal instructions before constructor call */

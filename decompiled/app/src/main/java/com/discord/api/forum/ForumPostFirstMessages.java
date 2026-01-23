@@ -4,12 +4,12 @@ import java.util.Map;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ForumPostFirstMessages.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: ForumPostFirstMessages.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class ForumPostFirstMessages {
     private final Map<Long, ForumPostFirstMessages2> threads;
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final Map<Long, ForumPostFirstMessages2> m7821a() {
         return this.threads;
     }

@@ -12,8 +12,8 @@ import androidx.core.view.OnApplyWindowInsetsListener;
 import java.util.Objects;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: DisplayUtils.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: DisplayUtils.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class DisplayUtils {
     private static final OnApplyWindowInsetsListener NO_OP_WINDOW_INSETS_LISTENER = DisplayUtils2.INSTANCE;
 

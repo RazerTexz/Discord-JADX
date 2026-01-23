@@ -2,54 +2,54 @@ package p007b.p225i.p414e.p418n.p420l;
 
 import p007b.p100d.p104b.p105a.outline;
 
-/* compiled from: GenericGF.java */
-/* renamed from: b.i.e.n.l.a, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.e.n.l.a, reason: use source file name */
+/* JADX INFO: compiled from: GenericGF.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class GenericGF {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final GenericGF f13299a = new GenericGF(4201, 4096, 1);
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static final GenericGF f13300b = new GenericGF(1033, 1024, 1);
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public static final GenericGF f13301c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public static final GenericGF f13302d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public static final GenericGF f13303e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public static final GenericGF f13304f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public static final GenericGF f13305g;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public static final GenericGF f13306h;
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public final int[] f13307i;
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final int[] f13308j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final GenericGFPoly f13309k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final GenericGFPoly f13310l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public final int f13311m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public final int f13312n;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public final int f13313o;
 
     static {
@@ -84,7 +84,7 @@ public final class GenericGF {
         this.f13310l = new GenericGFPoly(this, new int[]{1});
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public GenericGFPoly m6959a(int i, int i2) {
         if (i < 0) {
             throw new IllegalArgumentException();
@@ -97,7 +97,7 @@ public final class GenericGF {
         return new GenericGFPoly(this, iArr);
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public int m6960b(int i) {
         if (i != 0) {
             return this.f13307i[(this.f13311m - this.f13308j[i]) - 1];
@@ -105,7 +105,7 @@ public final class GenericGF {
         throw new ArithmeticException();
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public int m6961c(int i, int i2) {
         if (i == 0 || i2 == 0) {
             return 0;

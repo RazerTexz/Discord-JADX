@@ -13,31 +13,31 @@ import org.objectweb.asm.Opcodes;
 import org.webrtc.MediaStreamTrack;
 import p007b.p225i.p226a.p288f.p299e.p308o.C3404f;
 
-/* compiled from: MimeTypes.java */
-/* renamed from: b.i.a.c.f3.t, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.f3.t, reason: use source file name */
+/* JADX INFO: compiled from: MimeTypes.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class MimeTypes {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final ArrayList<a> f6749a = new ArrayList<>();
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static final Pattern f6750b = Pattern.compile("^mp4a\\.([a-zA-Z0-9]{2})(?:\\.([0-9]{1,2}))?$");
 
-    /* compiled from: MimeTypes.java */
-    /* renamed from: b.i.a.c.f3.t$a */
+    /* JADX INFO: renamed from: b.i.a.c.f3.t$a */
+    /* JADX INFO: compiled from: MimeTypes.java */
     public static final class a {
     }
 
-    /* compiled from: MimeTypes.java */
+    /* JADX INFO: renamed from: b.i.a.c.f3.t$b */
+    /* JADX INFO: compiled from: MimeTypes.java */
     @VisibleForTesting
-    /* renamed from: b.i.a.c.f3.t$b */
     public static final class b {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final int f6751a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final int f6752b;
 
         public b(int i, int i2) {
@@ -45,7 +45,7 @@ public final class MimeTypes {
             this.f6752b = i2;
         }
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public int m3053a() {
             int i = this.f6752b;
             if (i == 2) {
@@ -64,7 +64,7 @@ public final class MimeTypes {
         }
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static boolean m3043a(@Nullable String str, @Nullable String str2) {
         b bVarM3047e;
         int iM3053a;
@@ -80,7 +80,7 @@ public final class MimeTypes {
         return false;
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static int m3044b(String str, @Nullable String str2) {
         b bVarM3047e;
         switch (str) {
@@ -111,7 +111,7 @@ public final class MimeTypes {
     }
 
     @Nullable
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public static String m3045c(@Nullable String str) {
         b bVarM3047e;
         String strM3046d = null;
@@ -205,7 +205,7 @@ public final class MimeTypes {
     }
 
     @Nullable
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public static String m3046d(int i) {
         if (i == 32) {
             return "video/mp4v-es";
@@ -268,7 +268,7 @@ public final class MimeTypes {
 
     @Nullable
     @VisibleForTesting
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public static b m3047e(String str) {
         Matcher matcher = f6750b.matcher(str);
         if (!matcher.matches()) {
@@ -285,7 +285,7 @@ public final class MimeTypes {
     }
 
     @Nullable
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public static String m3048f(@Nullable String str) {
         int iIndexOf;
         if (str == null || (iIndexOf = str.indexOf(47)) == -1) {
@@ -294,7 +294,7 @@ public final class MimeTypes {
         return str.substring(0, iIndexOf);
     }
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public static int m3049g(@Nullable String str) {
         if (TextUtils.isEmpty(str)) {
             return -1;
@@ -327,17 +327,17 @@ public final class MimeTypes {
         return -1;
     }
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public static boolean m3050h(@Nullable String str) {
         return MediaStreamTrack.AUDIO_TRACK_KIND.equals(m3048f(str));
     }
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public static boolean m3051i(@Nullable String str) {
         return NotificationCompat.MessagingStyle.Message.KEY_TEXT.equals(m3048f(str)) || "application/cea-608".equals(str) || "application/cea-708".equals(str) || "application/x-mp4-cea-608".equals(str) || "application/x-subrip".equals(str) || "application/ttml+xml".equals(str) || "application/x-quicktime-tx3g".equals(str) || "application/x-mp4-vtt".equals(str) || "application/x-rawcc".equals(str) || "application/vobsub".equals(str) || "application/pgs".equals(str) || "application/dvbsubs".equals(str);
     }
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static boolean m3052j(@Nullable String str) {
         return MediaStreamTrack.VIDEO_TRACK_KIND.equals(m3048f(str));
     }

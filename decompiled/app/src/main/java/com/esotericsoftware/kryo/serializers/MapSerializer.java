@@ -1,7 +1,6 @@
 package com.esotericsoftware.kryo.serializers;
 
 import com.esotericsoftware.kryo.Kryo;
-import com.esotericsoftware.kryo.KryoException;
 import com.esotericsoftware.kryo.Serializer;
 import com.esotericsoftware.kryo.p502io.Input;
 import com.esotericsoftware.kryo.p502io.Output;
@@ -11,7 +10,7 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 import java.util.Map;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class MapSerializer extends Serializer<Map> {
     private Class keyClass;
     private Class keyGenericType;
@@ -95,7 +94,7 @@ public class MapSerializer extends Serializer<Map> {
         write(kryo, output, map);
     }
 
-    /* renamed from: copy, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: copy, reason: avoid collision after fix types in other method */
     public Map copy2(Kryo kryo, Map map) {
         Map mapCreateCopy = createCopy(kryo, map);
         for (Map.Entry entry : map.entrySet()) {
@@ -105,8 +104,8 @@ public class MapSerializer extends Serializer<Map> {
     }
 
     @Override // com.esotericsoftware.kryo.Serializer
-    /* renamed from: read, reason: avoid collision after fix types in other method */
-    public Map read2(Kryo kryo, Input input, Class<Map> cls) throws KryoException {
+    /* JADX INFO: renamed from: read, reason: avoid collision after fix types in other method */
+    public Map read2(Kryo kryo, Input input, Class<Map> cls) {
         Map mapCreate = create(kryo, input, cls);
         int i = input.readInt(true);
         Class cls2 = this.keyClass;

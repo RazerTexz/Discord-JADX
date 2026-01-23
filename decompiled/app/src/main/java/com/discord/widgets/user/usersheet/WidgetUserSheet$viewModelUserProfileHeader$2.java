@@ -4,8 +4,8 @@ import com.discord.widgets.user.profile.UserProfileHeaderViewModel;
 import kotlin.jvm.functions.Function0;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetUserSheet.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: WidgetUserSheet.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class WidgetUserSheet$viewModelUserProfileHeader$2 extends Lambda implements Function0<UserProfileHeaderViewModel> {
     public final /* synthetic */ WidgetUserSheet this$0;
 

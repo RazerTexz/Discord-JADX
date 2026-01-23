@@ -29,44 +29,44 @@ import p507d0.p592z.p594d.Lambda;
 import p637j0.p654q.ReplaySubject;
 import p658rx.subjects.SerializedSubject;
 
-/* compiled from: AppLog.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: AppLog.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class AppLog extends Logger {
 
-    /* renamed from: b, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: b, reason: from kotlin metadata */
     public static boolean initCalled;
 
-    /* renamed from: c, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: c, reason: from kotlin metadata */
     public static SharedPreferences cache;
 
-    /* renamed from: e, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: e, reason: from kotlin metadata */
     public static boolean hasReportedTombstone;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public static final AppLog f14950g = new AppLog();
 
-    /* renamed from: a, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: a, reason: from kotlin metadata */
     public static int minLoggingPriority = 99;
 
-    /* renamed from: d, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: d, reason: from kotlin metadata */
     public static final SerializedSubject<LoggedItem, LoggedItem> logsSubject = new SerializedSubject<>(new ReplaySubject(new ReplaySubject.d(new ReplaySubject.c(5000))));
 
-    /* renamed from: f, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: f, reason: from kotlin metadata */
     public static final String[] PACKAGE_MARKERS = {BuildConfig.APPLICATION_ID, "co.discord"};
 
-    /* compiled from: AppLog.kt */
+    /* JADX INFO: compiled from: AppLog.kt */
     public static final /* data */ class LoggedItem implements MGRecyclerDataPayload {
 
-        /* renamed from: j, reason: from kotlin metadata */
+        /* JADX INFO: renamed from: j, reason: from kotlin metadata */
         public final String key;
 
-        /* renamed from: k, reason: from kotlin metadata */
+        /* JADX INFO: renamed from: k, reason: from kotlin metadata */
         public final int priority;
 
-        /* renamed from: l, reason: from kotlin metadata */
+        /* JADX INFO: renamed from: l, reason: from kotlin metadata */
         public final String message;
 
-        /* renamed from: m, reason: from kotlin metadata */
+        /* JADX INFO: renamed from: m, reason: from kotlin metadata */
         public final Throwable throwable;
 
         public LoggedItem(int i, String str, Throwable th) {
@@ -120,15 +120,15 @@ public final class AppLog extends Logger {
         }
     }
 
-    /* compiled from: AppLog.kt */
-    /* renamed from: com.discord.app.AppLog$a */
+    /* JADX INFO: renamed from: com.discord.app.AppLog$a */
+    /* JADX INFO: compiled from: AppLog.kt */
     public static final class C5452a extends Lambda implements Function1<String, Unit> {
         public final /* synthetic */ Map $metadata;
         public final /* synthetic */ int $priority;
         public final /* synthetic */ Throwable $throwable;
 
-        /* compiled from: AppLog.kt */
-        /* renamed from: com.discord.app.AppLog$a$a */
+        /* JADX INFO: renamed from: com.discord.app.AppLog$a$a */
+        /* JADX INFO: compiled from: AppLog.kt */
         public static final class a extends Lambda implements Function2<String, Integer, Unit> {
             public a() {
                 super(2);
@@ -163,7 +163,7 @@ public final class AppLog extends Logger {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(String str) {
             Set setEntrySet;
             String strJoinToString$default;
@@ -180,8 +180,8 @@ public final class AppLog extends Logger {
         }
     }
 
-    /* compiled from: AppLog.kt */
-    /* renamed from: com.discord.app.AppLog$b */
+    /* JADX INFO: renamed from: com.discord.app.AppLog$b */
+    /* JADX INFO: compiled from: AppLog.kt */
     public static final class C5453b extends Lambda implements Function1<String, Unit> {
         public final /* synthetic */ Map $metadata;
         public final /* synthetic */ Throwable $throwable;
@@ -199,7 +199,7 @@ public final class AppLog extends Logger {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(String str) {
             Set<Map.Entry> setEntrySet;
             Intrinsics3.checkNotNullParameter(str, "message");
@@ -245,8 +245,8 @@ public final class AppLog extends Logger {
         }
     }
 
-    /* compiled from: AppLog.kt */
-    /* renamed from: com.discord.app.AppLog$c */
+    /* JADX INFO: renamed from: com.discord.app.AppLog$c */
+    /* JADX INFO: compiled from: AppLog.kt */
     public static final /* synthetic */ class C5454c extends FunctionReferenceImpl implements Function2<String, Throwable, Unit> {
         public C5454c(AppLog appLog) {
             super(2, appLog, AppLog.class, "v", "v(Ljava/lang/String;Ljava/lang/Throwable;)V", 0);
@@ -266,7 +266,7 @@ public final class AppLog extends Logger {
     }
 
     /* JADX WARN: Removed duplicated region for block: B:19:0x007a  */
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
@@ -344,7 +344,7 @@ public final class AppLog extends Logger {
         return stackTraceElementArr2;
     }
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public static final void m8357g(Long userId, String userLogin, String username) {
         String strValueOf;
         if (initCalled) {
@@ -383,7 +383,7 @@ public final class AppLog extends Logger {
         }
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final void m8359b(String str, int i, Throwable th, Map<String, String> map) {
         if (i < minLoggingPriority) {
             return;
@@ -397,7 +397,7 @@ public final class AppLog extends Logger {
         c5452a.invoke2(str);
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final void m8360c(String message, String category, Throwable throwable, Function2<? super String, ? super Throwable, Unit> loggingFn) {
         Intrinsics3.checkNotNullParameter(message, "message");
         Intrinsics3.checkNotNullParameter(category, "category");
@@ -410,7 +410,7 @@ public final class AppLog extends Logger {
     }
 
     @Override // com.discord.utilities.logging.Logger
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public void mo8361d(String tag, String message, Throwable throwable) {
         Intrinsics3.checkNotNullParameter(tag, "tag");
         Intrinsics3.checkNotNullParameter(message, "message");
@@ -418,13 +418,13 @@ public final class AppLog extends Logger {
     }
 
     @Override // com.discord.utilities.logging.Logger
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public void mo8364e(String message, Throwable throwable, Map<String, String> metadata) {
         Intrinsics3.checkNotNullParameter(message, "message");
         m8359b(message, 6, throwable, metadata);
     }
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final void m8365f(String from, String to) {
         Intrinsics3.checkNotNullParameter(from, "from");
         Intrinsics3.checkNotNullParameter(to, "to");
@@ -432,7 +432,7 @@ public final class AppLog extends Logger {
     }
 
     @Override // com.discord.utilities.logging.Logger
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public void mo8366i(String tag, String message, Throwable throwable) {
         Intrinsics3.checkNotNullParameter(tag, "tag");
         Intrinsics3.checkNotNullParameter(message, "message");
@@ -447,35 +447,35 @@ public final class AppLog extends Logger {
     }
 
     @Override // com.discord.utilities.logging.Logger
-    /* renamed from: v */
+    /* JADX INFO: renamed from: v */
     public void mo8368v(String message, Throwable throwable) {
         Intrinsics3.checkNotNullParameter(message, "message");
         m8359b(message, 2, throwable, null);
     }
 
     @Override // com.discord.utilities.logging.Logger
-    /* renamed from: w */
+    /* JADX INFO: renamed from: w */
     public void mo8369w(String tag, String message, Throwable throwable) {
         Intrinsics3.checkNotNullParameter(tag, "tag");
         Intrinsics3.checkNotNullParameter(message, "message");
         mo8370w(tag + " -> " + message, throwable);
     }
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public static final void m8358i(String message) {
         Intrinsics3.checkNotNullParameter(message, "message");
         f14950g.mo8367i(message, null);
     }
 
     @Override // com.discord.utilities.logging.Logger
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public void mo8362d(String message, Throwable throwable) {
         Intrinsics3.checkNotNullParameter(message, "message");
         m8359b(message, 3, throwable, null);
     }
 
     @Override // com.discord.utilities.logging.Logger
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public void mo8363e(String tag, String message, Throwable throwable, Map<String, String> metadata) {
         Intrinsics3.checkNotNullParameter(tag, "tag");
         Intrinsics3.checkNotNullParameter(message, "message");
@@ -483,14 +483,14 @@ public final class AppLog extends Logger {
     }
 
     @Override // com.discord.utilities.logging.Logger
-    /* renamed from: w */
+    /* JADX INFO: renamed from: w */
     public void mo8370w(String message, Throwable throwable) {
         Intrinsics3.checkNotNullParameter(message, "message");
         m8359b(message, 5, throwable, null);
     }
 
     @Override // com.discord.utilities.logging.Logger
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public void mo8367i(String message, Throwable throwable) {
         Intrinsics3.checkNotNullParameter(message, "message");
         m8359b(message, 4, throwable, null);

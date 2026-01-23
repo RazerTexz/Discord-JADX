@@ -12,11 +12,11 @@ import p507d0.p580t.Iterators4;
 import p507d0.p580t._Arrays;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: EglNativeConfigChooser.kt */
-/* renamed from: b.o.b.a.b, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.o.b.a.b, reason: use source file name */
+/* JADX INFO: compiled from: EglNativeConfigChooser.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public class EglNativeConfigChooser {
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final egl m7454a(egl3 egl3Var, int i, boolean z2) {
         Intrinsics3.checkNotNullParameter(egl3Var, "display");
         int i2 = i >= 3 ? egl4.f14280j | egl4.f14281k : egl4.f14280j;

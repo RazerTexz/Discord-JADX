@@ -5,9 +5,9 @@ import com.discord.models.user.User;
 import com.discord.widgets.channels.SimpleMembersAdapter;
 import kotlin.jvm.functions.Function1;
 
-/* compiled from: SimpleMembersAdapter.kt */
-/* renamed from: com.discord.widgets.channels.SimpleMembersAdapter$MemberAdapterItem$onConfigure$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.channels.SimpleMembersAdapter$MemberAdapterItem$onConfigure$1, reason: use source file name */
+/* JADX INFO: compiled from: SimpleMembersAdapter.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class SimpleMembersAdapter2 implements View.OnClickListener {
     public final /* synthetic */ User $user;
     public final /* synthetic */ SimpleMembersAdapter.MemberAdapterItem this$0;

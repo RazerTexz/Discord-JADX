@@ -30,12 +30,12 @@ import p507d0.p580t.Iterables2;
 import p507d0.p580t._Collections;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ChannelUtils.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: ChannelUtils.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class ChannelUtils {
     private static final long HQ_DIRECTORY_CHANNEL_ID = 883060064561299456L;
 
-    /* renamed from: A */
+    /* JADX INFO: renamed from: A */
     public static final boolean m7666A(Channel channel) {
         Intrinsics3.checkNotNullParameter(channel, "$this$isPinned");
         Intrinsics3.checkNotNullParameter(channel, "$this$hasFlag");
@@ -43,25 +43,25 @@ public final class ChannelUtils {
         return ((flags != null ? flags.longValue() : 0L) & 2) == 2;
     }
 
-    /* renamed from: B */
+    /* JADX INFO: renamed from: B */
     public static final boolean m7667B(Channel channel) {
         Intrinsics3.checkNotNullParameter(channel, "$this$isPrivate");
         return channel.getType() == 1 || channel.getType() == 3;
     }
 
-    /* renamed from: C */
+    /* JADX INFO: renamed from: C */
     public static final boolean m7668C(Channel channel) {
         Intrinsics3.checkNotNullParameter(channel, "$this$isPrivateThread");
         return channel.getType() == 12;
     }
 
-    /* renamed from: D */
+    /* JADX INFO: renamed from: D */
     public static final boolean m7669D(Channel channel) {
         Intrinsics3.checkNotNullParameter(channel, "$this$isStageVoiceChannel");
         return channel.getType() == 13;
     }
 
-    /* renamed from: E */
+    /* JADX INFO: renamed from: E */
     public static final boolean m7670E(Channel channel) {
         User user;
         Intrinsics3.checkNotNullParameter(channel, "$this$isSystemDM");
@@ -74,43 +74,43 @@ public final class ChannelUtils {
         return false;
     }
 
-    /* renamed from: F */
+    /* JADX INFO: renamed from: F */
     public static final boolean m7671F(Channel channel) {
         Intrinsics3.checkNotNullParameter(channel, "$this$isTextChannel");
         return m7667B(channel) || m7698v(channel);
     }
 
-    /* renamed from: G */
+    /* JADX INFO: renamed from: G */
     public static final boolean m7672G(Channel channel) {
         Intrinsics3.checkNotNullParameter(channel, "$this$isTextOrVoiceChannel");
         return m7671F(channel) || m7675J(channel);
     }
 
-    /* renamed from: H */
+    /* JADX INFO: renamed from: H */
     public static final boolean m7673H(Channel channel) {
         Intrinsics3.checkNotNullParameter(channel, "$this$isThread");
         return channel.getType() == 10 || channel.getType() == 11 || channel.getType() == 12;
     }
 
-    /* renamed from: I */
+    /* JADX INFO: renamed from: I */
     public static final boolean m7674I(Channel channel) {
         Intrinsics3.checkNotNullParameter(channel, "$this$isThreaded");
         return channel.getType() == 0 || channel.getType() == 5 || channel.getType() == 15;
     }
 
-    /* renamed from: J */
+    /* JADX INFO: renamed from: J */
     public static final boolean m7675J(Channel channel) {
         Intrinsics3.checkNotNullParameter(channel, "$this$isVoiceChannel");
         return channel.getType() == 2;
     }
 
-    /* renamed from: K */
+    /* JADX INFO: renamed from: K */
     public static final boolean m7676K(Channel channel) {
         Intrinsics3.checkNotNullParameter(channel, "$this$shouldPlayJoinLeaveSounds");
         return m7675J(channel) || m7667B(channel);
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final com.discord.models.user.User m7677a(Channel channel) {
         List<User> listM7659z;
         List<User> listM7659z2;
@@ -122,7 +122,7 @@ public final class ChannelUtils {
         return new CoreUser(user);
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static final Integer m7678b(Channel channel) {
         Intrinsics3.checkNotNullParameter(channel, "$this$getDeletedMessage");
         if (m7687k(channel)) {
@@ -138,7 +138,7 @@ public final class ChannelUtils {
     }
 
     /* JADX WARN: Removed duplicated region for block: B:18:0x0038  */
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
@@ -163,7 +163,7 @@ public final class ChannelUtils {
         return name;
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public static final String m7680d(Channel channel, Context context, boolean z2) {
         Intrinsics3.checkNotNullParameter(channel, "$this$getDisplayNameOrDefault");
         Intrinsics3.checkNotNullParameter(context, "context");
@@ -210,7 +210,7 @@ public final class ChannelUtils {
         return strM7679c;
     }
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public static /* synthetic */ String m7681e(Channel channel, Context context, boolean z2, int i) {
         if ((i & 2) != 0) {
             z2 = true;
@@ -218,7 +218,7 @@ public final class ChannelUtils {
         return m7680d(channel, context, z2);
     }
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public static final PermissionOverwrite m7682f(Channel channel, long j) {
         Intrinsics3.checkNotNullParameter(channel, "$this$getPermissionOverwriteForId");
         List<PermissionOverwrite> listM7655v = channel.m7655v();
@@ -240,7 +240,7 @@ public final class ChannelUtils {
         return (PermissionOverwrite) obj;
     }
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public static final List<com.discord.models.user.User> m7683g(Channel channel) {
         Intrinsics3.checkNotNullParameter(channel, "$this$getRecipients");
         List<User> listM7659z = channel.m7659z();
@@ -255,79 +255,79 @@ public final class ChannelUtils {
         return arrayList;
     }
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public static final Comparator<Channel> m7684h(Channel.Companion companion) {
         Intrinsics3.checkNotNullParameter(companion, "$this$getSortByNameAndType");
         return new ChannelUtils4(companion);
     }
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public static final boolean m7685i(Channel channel) {
         Intrinsics3.checkNotNullParameter(channel, "$this$isAnnouncementChannel");
         return channel.getType() == 5;
     }
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static final boolean m7686j(Channel channel) {
         Intrinsics3.checkNotNullParameter(channel, "$this$isArchivedThread");
         ThreadMetadata threadMetadata = channel.getThreadMetadata();
         return threadMetadata != null && threadMetadata.getArchived();
     }
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public static final boolean m7687k(Channel channel) {
         Intrinsics3.checkNotNullParameter(channel, "$this$isCategory");
         return channel.getType() == 4;
     }
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public static final boolean m7688l(int i) {
         return i == 0 || i == 5 || i == 10 || i == 11 || i == 12 || i == 14 || i == 15;
     }
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public static final boolean m7689m(Channel channel) {
         Intrinsics3.checkNotNullParameter(channel, "$this$isDM");
         return channel.getType() == 1;
     }
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public static final boolean m7690n(Channel channel, Presence presence) {
         Intrinsics3.checkNotNullParameter(channel, "$this$isDMStatusVisible");
         com.discord.models.user.User userM7677a = m7677a(channel);
         return m7689m(channel) && !m7670E(channel) && (userM7677a != null ? UserUtils.INSTANCE.isStatusVisible(userM7677a, presence, true) : false);
     }
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public static final boolean m7691o(Channel channel) {
         Intrinsics3.checkNotNullParameter(channel, "$this$isDirectory");
         return channel.getType() == 14;
     }
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public static final boolean m7692p(Channel channel) {
         Intrinsics3.checkNotNullParameter(channel, "$this$isGroup");
         return channel.getType() == 3;
     }
 
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     public static final boolean m7693q(Channel channel) {
         Intrinsics3.checkNotNullParameter(channel, "$this$isGuildForumChannel");
         return channel.getType() == 15;
     }
 
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     public static final boolean m7694r(Channel channel, Channel channel2) {
         Intrinsics3.checkNotNullParameter(channel, "$this$isGuildForumPost");
         return channel2 != null && channel2.getType() == 15;
     }
 
-    /* renamed from: s */
+    /* JADX INFO: renamed from: s */
     public static /* synthetic */ boolean m7695s(Channel channel, Channel channel2, int i) {
         return m7694r(channel, (i & 1) != 0 ? StoreStream.INSTANCE.getChannels().getChannel(channel.getParentId()) : null);
     }
 
-    /* renamed from: t */
+    /* JADX INFO: renamed from: t */
     public static final boolean m7696t(Channel channel, Guild guild, GuildRole guildRole, Map<Long, GuildRole> map) {
         Object next;
         Intrinsics3.checkNotNullParameter(channel, "$this$isGuildRoleSubscriptionChannel");
@@ -367,37 +367,37 @@ public final class ChannelUtils {
         return false;
     }
 
-    /* renamed from: u */
+    /* JADX INFO: renamed from: u */
     public static final boolean m7697u(Channel channel) {
         Intrinsics3.checkNotNullParameter(channel, "$this$isGuildTextChannel");
         return channel.getType() == 0 || channel.getType() == 15;
     }
 
-    /* renamed from: v */
+    /* JADX INFO: renamed from: v */
     public static final boolean m7698v(Channel channel) {
         Intrinsics3.checkNotNullParameter(channel, "$this$isGuildTextyChannel");
         return m7688l(channel.getType());
     }
 
-    /* renamed from: w */
+    /* JADX INFO: renamed from: w */
     public static final boolean m7699w(Channel channel) {
         Intrinsics3.checkNotNullParameter(channel, "$this$isGuildVocalChannel");
         return channel.getType() == 2 || channel.getType() == 13;
     }
 
-    /* renamed from: x */
+    /* JADX INFO: renamed from: x */
     public static final boolean m7700x(Channel channel) {
         Intrinsics3.checkNotNullParameter(channel, "$this$isHQDirectoryChannel");
         return channel.getId() == HQ_DIRECTORY_CHANNEL_ID;
     }
 
-    /* renamed from: y */
+    /* JADX INFO: renamed from: y */
     public static final boolean m7701y(Channel channel) {
         Intrinsics3.checkNotNullParameter(channel, "$this$isManaged");
         return channel.getApplicationId() != 0;
     }
 
-    /* renamed from: z */
+    /* JADX INFO: renamed from: z */
     public static final boolean m7702z(Channel channel) {
         Intrinsics3.checkNotNullParameter(channel, "$this$isMultiUserDM");
         return channel.getType() == 3;

@@ -15,18 +15,18 @@ import p007b.p100d.p104b.p105a.outline;
 import p007b.p195g.p196a.p205c.JavaType;
 import p007b.p195g.p196a.p205c.p219i0.ClassUtil;
 
-/* compiled from: TypeBindings.java */
-/* renamed from: b.g.a.c.h0.m, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.g.a.c.h0.m, reason: use source file name */
+/* JADX INFO: compiled from: TypeBindings.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class TypeBindings implements Serializable {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static final String[] f4906j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public static final JavaType[] f4907k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public static final TypeBindings f4908l;
     private static final long serialVersionUID = 1;
     private final int _hashCode;
@@ -34,17 +34,17 @@ public class TypeBindings implements Serializable {
     private final JavaType[] _types;
     private final String[] _unboundVariables;
 
-    /* compiled from: TypeBindings.java */
-    /* renamed from: b.g.a.c.h0.m$a */
+    /* JADX INFO: renamed from: b.g.a.c.h0.m$a */
+    /* JADX INFO: compiled from: TypeBindings.java */
     public static final class a {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final Class<?> f4909a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final JavaType[] f4910b;
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public final int f4911c;
 
         public a(Class<?> cls, JavaType[] javaTypeArr, int i) {
@@ -85,32 +85,32 @@ public class TypeBindings implements Serializable {
         }
     }
 
-    /* compiled from: TypeBindings.java */
-    /* renamed from: b.g.a.c.h0.m$b */
+    /* JADX INFO: renamed from: b.g.a.c.h0.m$b */
+    /* JADX INFO: compiled from: TypeBindings.java */
     public static class b {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public static final TypeVariable<?>[] f4912a = AbstractList.class.getTypeParameters();
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public static final TypeVariable<?>[] f4913b = Collection.class.getTypeParameters();
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public static final TypeVariable<?>[] f4914c = Iterable.class.getTypeParameters();
 
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         public static final TypeVariable<?>[] f4915d = List.class.getTypeParameters();
 
-        /* renamed from: e */
+        /* JADX INFO: renamed from: e */
         public static final TypeVariable<?>[] f4916e = ArrayList.class.getTypeParameters();
 
-        /* renamed from: f */
+        /* JADX INFO: renamed from: f */
         public static final TypeVariable<?>[] f4917f = Map.class.getTypeParameters();
 
-        /* renamed from: g */
+        /* JADX INFO: renamed from: g */
         public static final TypeVariable<?>[] f4918g = HashMap.class.getTypeParameters();
 
-        /* renamed from: h */
+        /* JADX INFO: renamed from: h */
         public static final TypeVariable<?>[] f4919h = LinkedHashMap.class.getTypeParameters();
     }
 
@@ -142,7 +142,7 @@ public class TypeBindings implements Serializable {
         this._hashCode = i;
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static TypeBindings m2146b(Class<?> cls, JavaType javaType) {
         TypeVariable<?>[] typeVariableArr = b.f4912a;
         TypeVariable[] typeParameters = cls == Collection.class ? b.f4913b : cls == List.class ? b.f4915d : cls == ArrayList.class ? b.f4916e : cls == AbstractList.class ? b.f4912a : cls == Iterable.class ? b.f4914c : cls.getTypeParameters();
@@ -157,7 +157,7 @@ public class TypeBindings implements Serializable {
         throw new IllegalArgumentException(sbM833U.toString());
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public static TypeBindings m2147c(Class<?> cls, JavaType javaType, JavaType javaType2) {
         TypeVariable<?>[] typeVariableArr = b.f4912a;
         TypeVariable[] typeParameters = cls == Map.class ? b.f4917f : cls == HashMap.class ? b.f4918g : cls == LinkedHashMap.class ? b.f4919h : cls.getTypeParameters();
@@ -172,7 +172,7 @@ public class TypeBindings implements Serializable {
         throw new IllegalArgumentException(sbM833U.toString());
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public static TypeBindings m2148d(Class<?> cls, JavaType[] javaTypeArr) {
         String[] strArr;
         int length = javaTypeArr.length;
@@ -205,12 +205,12 @@ public class TypeBindings implements Serializable {
         throw new IllegalArgumentException(sbM833U.toString());
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public Object m2149a(Class<?> cls) {
         return new a(cls, this._types, this._hashCode);
     }
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public JavaType m2150e(String str) {
         JavaType javaType;
         int length = this._names.length;
@@ -243,7 +243,7 @@ public class TypeBindings implements Serializable {
         return true;
     }
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public JavaType m2151f(int i) {
         if (i < 0) {
             return null;
@@ -255,13 +255,13 @@ public class TypeBindings implements Serializable {
         return javaTypeArr[i];
     }
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public List<JavaType> m2152g() {
         JavaType[] javaTypeArr = this._types;
         return javaTypeArr.length == 0 ? Collections.emptyList() : Arrays.asList(javaTypeArr);
     }
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public boolean m2153h(String str) {
         String[] strArr = this._unboundVariables;
         if (strArr == null) {
@@ -281,22 +281,22 @@ public class TypeBindings implements Serializable {
         return this._hashCode;
     }
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public boolean m2154i() {
         return this._types.length == 0;
     }
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public int m2155j() {
         return this._types.length;
     }
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public JavaType[] m2156k() {
         return this._types;
     }
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public TypeBindings m2157l(String str) {
         String[] strArr = this._unboundVariables;
         int length = strArr == null ? 0 : strArr.length;

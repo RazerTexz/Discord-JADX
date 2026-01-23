@@ -3,9 +3,9 @@ package com.discord.widgets.chat.list.adapter;
 import kotlin.jvm.functions.Function1;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetChatListAdapterItemPrivateChannelStart.kt */
-/* renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemPrivateChannelStart$onConfigure$1$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemPrivateChannelStart$onConfigure$1$1, reason: use source file name */
+/* JADX INFO: compiled from: WidgetChatListAdapterItemPrivateChannelStart.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetChatListAdapterItemPrivateChannelStart2 extends Lambda implements Function1<Integer, String> {
     public final /* synthetic */ String $iconURL;
 

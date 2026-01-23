@@ -10,9 +10,9 @@ import p637j0.p641k.Func1;
 import p658rx.Observable;
 import p658rx.subjects.BehaviorSubject;
 
-/* compiled from: GifSearchViewModel.kt */
-/* renamed from: com.discord.widgets.chat.input.gifpicker.GifSearchViewModel$Companion$observeStoreState$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.chat.input.gifpicker.GifSearchViewModel$Companion$observeStoreState$1, reason: use source file name */
+/* JADX INFO: compiled from: GifSearchViewModel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class GifSearchViewModel4<T, R> implements Func1<List<? extends String>, Observable<? extends GifSearchViewModel.StoreState>> {
     public final /* synthetic */ BehaviorSubject $searchSubject;
     public final /* synthetic */ StoreAnalytics $storeAnalytics;
@@ -29,7 +29,7 @@ public final class GifSearchViewModel4<T, R> implements Func1<List<? extends Str
         return call2((List<String>) list);
     }
 
-    /* renamed from: call, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
     public final Observable<? extends GifSearchViewModel.StoreState> call2(List<String> list) {
         GifSearchViewModel.Companion companion = GifSearchViewModel.INSTANCE;
         BehaviorSubject behaviorSubject = this.$searchSubject;

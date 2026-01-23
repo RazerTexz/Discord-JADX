@@ -9,18 +9,18 @@ import p507d0.p513e0.p514p.p515d.p517m0.p552k.p553a0.MemberScope3;
 import p507d0.p513e0.p514p.p515d.p517m0.p576p.DFS;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: LazyJavaStaticClassScope.kt */
-/* renamed from: d0.e0.p.d.m0.e.a.i0.l.q, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.e.a.i0.l.q, reason: use source file name */
+/* JADX INFO: compiled from: LazyJavaStaticClassScope.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class LazyJavaStaticClassScope4 extends DFS.b<ClassDescriptor, Unit> {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final /* synthetic */ ClassDescriptor f23415a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final /* synthetic */ Set<R> f23416b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final /* synthetic */ Function1<MemberScope3, Collection<R>> f23417c;
 
     /* JADX WARN: Multi-variable type inference failed */
@@ -41,7 +41,7 @@ public final class LazyJavaStaticClassScope4 extends DFS.b<ClassDescriptor, Unit
         return Unit.f27425a;
     }
 
-    /* renamed from: result, reason: collision with other method in class */
+    /* JADX INFO: renamed from: result, reason: collision with other method in class */
     public void m11464result() {
     }
 

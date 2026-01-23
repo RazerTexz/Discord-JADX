@@ -10,73 +10,73 @@ import p007b.p100d.p104b.p105a.outline;
 import p507d0.p579g0.StringsJVM;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: CipherSuite.kt */
-/* renamed from: f0.j, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: f0.j, reason: use source file name */
+/* JADX INFO: compiled from: CipherSuite.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class CipherSuite {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final Comparator<String> f25909a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static final Map<String, CipherSuite> f25910b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public static final CipherSuite f25911c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public static final CipherSuite f25912d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public static final CipherSuite f25913e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public static final CipherSuite f25914f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public static final CipherSuite f25915g;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public static final CipherSuite f25916h;
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public static final CipherSuite f25917i;
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static final CipherSuite f25918j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public static final CipherSuite f25919k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public static final CipherSuite f25920l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public static final CipherSuite f25921m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public static final CipherSuite f25922n;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public static final CipherSuite f25923o;
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public static final CipherSuite f25924p;
 
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     public static final CipherSuite f25925q;
 
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     public static final CipherSuite f25926r;
 
-    /* renamed from: s */
+    /* JADX INFO: renamed from: s */
     public static final b f25927s;
 
-    /* renamed from: t */
+    /* JADX INFO: renamed from: t */
     public final String f25928t;
 
-    /* compiled from: CipherSuite.kt */
-    /* renamed from: f0.j$a */
+    /* JADX INFO: renamed from: f0.j$a */
+    /* JADX INFO: compiled from: CipherSuite.kt */
     public static final class a implements Comparator<String> {
         /* JADX WARN: Code restructure failed: missing block: B:9:0x002c, code lost:
         
@@ -116,20 +116,20 @@ public final class CipherSuite {
         }
     }
 
-    /* compiled from: CipherSuite.kt */
-    /* renamed from: f0.j$b */
+    /* JADX INFO: renamed from: f0.j$b */
+    /* JADX INFO: compiled from: CipherSuite.kt */
     public static final class b {
         public b(DefaultConstructorMarker defaultConstructorMarker) {
         }
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public static final CipherSuite m10372a(b bVar, String str, int i) {
             CipherSuite cipherSuite = new CipherSuite(str, null);
             CipherSuite.f25910b.put(str, cipherSuite);
             return cipherSuite;
         }
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final synchronized CipherSuite m10373b(String str) {
             CipherSuite cipherSuite;
             Intrinsics3.checkParameterIsNotNull(str, "javaName");
@@ -145,7 +145,7 @@ public final class CipherSuite {
             return cipherSuite;
         }
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public final String m10374c(String str) {
             if (StringsJVM.startsWith$default(str, "TLS_", false, 2, null)) {
                 StringBuilder sbM833U = outline.m833U("SSL_");

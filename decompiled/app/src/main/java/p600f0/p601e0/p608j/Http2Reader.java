@@ -21,49 +21,49 @@ import p615g0.BufferedSource;
 import p615g0.Source2;
 import p615g0.Timeout2;
 
-/* compiled from: Http2Reader.kt */
-/* renamed from: f0.e0.j.m, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: f0.e0.j.m, reason: use source file name */
+/* JADX INFO: compiled from: Http2Reader.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class Http2Reader implements Closeable {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static final Logger f25700j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public static final Http2Reader f25701k = null;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final a f25702l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public final Hpack.a f25703m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public final BufferedSource f25704n;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public final boolean f25705o;
 
-    /* compiled from: Http2Reader.kt */
-    /* renamed from: f0.e0.j.m$a */
+    /* JADX INFO: renamed from: f0.e0.j.m$a */
+    /* JADX INFO: compiled from: Http2Reader.kt */
     public static final class a implements Source2 {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public int f25706j;
 
-        /* renamed from: k */
+        /* JADX INFO: renamed from: k */
         public int f25707k;
 
-        /* renamed from: l */
+        /* JADX INFO: renamed from: l */
         public int f25708l;
 
-        /* renamed from: m */
+        /* JADX INFO: renamed from: m */
         public int f25709m;
 
-        /* renamed from: n */
+        /* JADX INFO: renamed from: n */
         public int f25710n;
 
-        /* renamed from: o */
+        /* JADX INFO: renamed from: o */
         public final BufferedSource f25711o;
 
         public a(BufferedSource bufferedSource) {
@@ -76,7 +76,7 @@ public final class Http2Reader implements Closeable {
         }
 
         @Override // p615g0.Source2
-        /* renamed from: i0 */
+        /* JADX INFO: renamed from: i0 */
         public long mo10176i0(Buffer3 buffer3, long j) throws IOException {
             int i;
             int i2;
@@ -122,37 +122,37 @@ public final class Http2Reader implements Closeable {
         }
     }
 
-    /* compiled from: Http2Reader.kt */
-    /* renamed from: f0.e0.j.m$b */
+    /* JADX INFO: renamed from: f0.e0.j.m$b */
+    /* JADX INFO: compiled from: Http2Reader.kt */
     public interface b {
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         void mo10268a();
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         void mo10269b(boolean z2, Settings3 settings3);
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         void mo10270c(boolean z2, int i, int i2, List<Header2> list);
 
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         void mo10271d(int i, long j);
 
-        /* renamed from: e */
+        /* JADX INFO: renamed from: e */
         void mo10272e(boolean z2, int i, BufferedSource bufferedSource, int i2) throws IOException;
 
-        /* renamed from: f */
+        /* JADX INFO: renamed from: f */
         void mo10273f(boolean z2, int i, int i2);
 
-        /* renamed from: g */
+        /* JADX INFO: renamed from: g */
         void mo10274g(int i, int i2, int i3, boolean z2);
 
-        /* renamed from: h */
+        /* JADX INFO: renamed from: h */
         void mo10275h(int i, ErrorCode2 errorCode2);
 
-        /* renamed from: i */
+        /* JADX INFO: renamed from: i */
         void mo10276i(int i, int i2, List<Header2> list) throws IOException;
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         void mo10277j(int i, ErrorCode2 errorCode2, ByteString byteString);
     }
 
@@ -171,7 +171,7 @@ public final class Http2Reader implements Closeable {
         this.f25703m = new Hpack.a(aVar, 4096, 0, 4);
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final boolean m10278a(boolean z2, b bVar) throws IOException {
         ErrorCode2 errorCode2;
         int i;
@@ -392,7 +392,7 @@ public final class Http2Reader implements Closeable {
                     }
                     int i20 = this.f25704n.readInt();
                     byte[] bArr5 = Util7.f25397a;
-                    long j = i20 & 2147483647L;
+                    long j = ((long) i20) & 2147483647L;
                     if (j == 0) {
                         throw new IOException("windowSizeIncrement was 0");
                     }
@@ -407,7 +407,7 @@ public final class Http2Reader implements Closeable {
         }
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final void m10279b(b bVar) throws IOException {
         Intrinsics3.checkParameterIsNotNull(bVar, "handler");
         if (this.f25705o) {
@@ -433,7 +433,7 @@ public final class Http2Reader implements Closeable {
     }
 
     /* JADX WARN: Removed duplicated region for block: B:14:0x003d  */
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
@@ -521,7 +521,7 @@ public final class Http2Reader implements Closeable {
         this.f25704n.close();
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final void m10281d(b bVar, int i) throws IOException {
         int i2 = this.f25704n.readInt();
         boolean z2 = (i2 & ((int) Permission.USE_APPLICATION_COMMANDS)) != 0;

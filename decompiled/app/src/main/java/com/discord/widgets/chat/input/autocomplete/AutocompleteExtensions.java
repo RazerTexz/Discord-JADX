@@ -9,9 +9,9 @@ import p507d0.p579g0.Strings4;
 import p507d0.p580t._Collections;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: AutocompleteExtensions.kt */
-/* renamed from: com.discord.widgets.chat.input.autocomplete.AutocompleteExtensionsKt, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.chat.input.autocomplete.AutocompleteExtensionsKt, reason: use source file name */
+/* JADX INFO: compiled from: AutocompleteExtensions.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class AutocompleteExtensions {
     public static final String replaceAutocompleteDataWithServerValues(String str, Map<Ranges2, ? extends Autocompletable> map) {
         Intrinsics3.checkNotNullParameter(str, "$this$replaceAutocompleteDataWithServerValues");

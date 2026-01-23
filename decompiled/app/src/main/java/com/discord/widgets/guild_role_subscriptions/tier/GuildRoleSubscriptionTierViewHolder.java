@@ -25,11 +25,11 @@ import kotlin.jvm.internal.DefaultConstructorMarker;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: GuildRoleSubscriptionTierViewHolder.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: GuildRoleSubscriptionTierViewHolder.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public abstract class GuildRoleSubscriptionTierViewHolder extends RecyclerView.ViewHolder {
 
-    /* compiled from: GuildRoleSubscriptionTierViewHolder.kt */
+    /* JADX INFO: compiled from: GuildRoleSubscriptionTierViewHolder.kt */
     public static final /* data */ class BenefitViewHolder extends GuildRoleSubscriptionTierViewHolder {
         private final GuildRoleSubscriptionBenefitItemView view;
 
@@ -42,7 +42,7 @@ public abstract class GuildRoleSubscriptionTierViewHolder extends RecyclerView.V
             guildRoleSubscriptionBenefitItemView.setBackground(null);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         private final GuildRoleSubscriptionBenefitItemView getView() {
             return this.view;
         }
@@ -96,7 +96,7 @@ public abstract class GuildRoleSubscriptionTierViewHolder extends RecyclerView.V
         }
     }
 
-    /* compiled from: GuildRoleSubscriptionTierViewHolder.kt */
+    /* JADX INFO: compiled from: GuildRoleSubscriptionTierViewHolder.kt */
     public static final /* data */ class MemberPreviewViewHolder extends GuildRoleSubscriptionTierViewHolder {
         private final GuildRoleSubscriptionMemberPreview memberPreview;
 
@@ -109,7 +109,7 @@ public abstract class GuildRoleSubscriptionTierViewHolder extends RecyclerView.V
             guildRoleSubscriptionMemberPreview.setBackgroundColor(ColorCompat.getThemedColor(guildRoleSubscriptionMemberPreview, C5419R.attr.colorBackgroundSecondary));
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         private final GuildRoleSubscriptionMemberPreview getMemberPreview() {
             return this.memberPreview;
         }
@@ -157,7 +157,7 @@ public abstract class GuildRoleSubscriptionTierViewHolder extends RecyclerView.V
         }
     }
 
-    /* compiled from: GuildRoleSubscriptionTierViewHolder.kt */
+    /* JADX INFO: compiled from: GuildRoleSubscriptionTierViewHolder.kt */
     public static final /* data */ class PlanDetailsViewHolder extends GuildRoleSubscriptionTierViewHolder {
         private final ViewGuildRoleSubscriptionPlanDetailsReviewBinding binding;
 
@@ -170,7 +170,7 @@ public abstract class GuildRoleSubscriptionTierViewHolder extends RecyclerView.V
             this.binding = viewGuildRoleSubscriptionPlanDetailsReviewBinding;
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         private final ViewGuildRoleSubscriptionPlanDetailsReviewBinding getBinding() {
             return this.binding;
         }
@@ -223,7 +223,7 @@ public abstract class GuildRoleSubscriptionTierViewHolder extends RecyclerView.V
         }
     }
 
-    /* compiled from: GuildRoleSubscriptionTierViewHolder.kt */
+    /* JADX INFO: compiled from: GuildRoleSubscriptionTierViewHolder.kt */
     public static final /* data */ class SectionHeaderViewHolder extends GuildRoleSubscriptionTierViewHolder {
         private final ViewGuildRoleSubscriptionSectionHeaderItemBinding binding;
 
@@ -239,7 +239,7 @@ public abstract class GuildRoleSubscriptionTierViewHolder extends RecyclerView.V
             view.setBackground(null);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         private final ViewGuildRoleSubscriptionSectionHeaderItemBinding getBinding() {
             return this.binding;
         }
@@ -297,7 +297,7 @@ public abstract class GuildRoleSubscriptionTierViewHolder extends RecyclerView.V
         }
     }
 
-    /* compiled from: GuildRoleSubscriptionTierViewHolder.kt */
+    /* JADX INFO: compiled from: GuildRoleSubscriptionTierViewHolder.kt */
     public static final /* data */ class TierHeaderViewHolder extends GuildRoleSubscriptionTierViewHolder {
         private final ViewGuildRoleSubscriptionTierHeaderBinding binding;
 
@@ -310,7 +310,7 @@ public abstract class GuildRoleSubscriptionTierViewHolder extends RecyclerView.V
             this.binding = viewGuildRoleSubscriptionTierHeaderBinding;
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         private final ViewGuildRoleSubscriptionTierHeaderBinding getBinding() {
             return this.binding;
         }

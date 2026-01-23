@@ -18,7 +18,7 @@ import androidx.work.impl.utils.taskexecutor.TaskExecutor;
 import java.util.ArrayList;
 import java.util.List;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class WorkConstraintsTracker implements ConstraintController.OnConstraintUpdatedCallback {
     private static final String TAG = Logger.tagWithPrefix("WorkConstraintsTracker");
 

@@ -5,22 +5,22 @@ import java.text.SimpleDateFormat;
 import java.util.Locale;
 import p600f0.p601e0.Util7;
 
-/* compiled from: dates.kt */
-/* renamed from: f0.e0.h.c, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: f0.e0.h.c, reason: use source file name */
+/* JADX INFO: compiled from: dates.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class dates {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final a f25526a = new a();
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static final String[] f25527b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public static final DateFormat[] f25528c;
 
-    /* compiled from: dates.kt */
-    /* renamed from: f0.e0.h.c$a */
+    /* JADX INFO: renamed from: f0.e0.h.c$a */
+    /* JADX INFO: compiled from: dates.kt */
     public static final class a extends ThreadLocal<DateFormat> {
         @Override // java.lang.ThreadLocal
         public DateFormat initialValue() {

@@ -12,7 +12,7 @@ import androidx.annotation.NonNull;
 import androidx.core.graphics.ColorUtils;
 import com.google.android.material.resources.MaterialAttributes;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public class MaterialColors {
     public static final float ALPHA_DISABLED = 0.38f;
     public static final float ALPHA_DISABLED_LOW = 0.12f;

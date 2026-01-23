@@ -12,15 +12,15 @@ import com.google.android.gms.nearby.messages.internal.zzj;
 import p007b.p225i.p226a.p288f.p313h.p326m.C3924a;
 import p007b.p225i.p226a.p288f.p313h.p326m.C3926c;
 
-/* renamed from: b.i.a.f.j.b.e.v0 */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.j.b.e.v0 */
+/* JADX INFO: loaded from: classes3.dex */
 public final class C4313v0 extends C3924a implements InterfaceC4311u0 {
     public C4313v0(IBinder iBinder) {
         super(iBinder, "com.google.android.gms.nearby.messages.internal.INearbyMessagesService");
     }
 
     @Override // p007b.p225i.p226a.p288f.p333j.p334b.p335e.InterfaceC4311u0
-    /* renamed from: C */
+    /* JADX INFO: renamed from: C */
     public final void mo5991C(SubscribeRequest subscribeRequest) throws RemoteException {
         Parcel parcelM5398c = m5398c();
         C3926c.m5402b(parcelM5398c, subscribeRequest);
@@ -28,7 +28,7 @@ public final class C4313v0 extends C3924a implements InterfaceC4311u0 {
     }
 
     @Override // p007b.p225i.p226a.p288f.p333j.p334b.p335e.InterfaceC4311u0
-    /* renamed from: P */
+    /* JADX INFO: renamed from: P */
     public final void mo5992P(zzce zzceVar) throws RemoteException {
         Parcel parcelM5398c = m5398c();
         C3926c.m5402b(parcelM5398c, zzceVar);
@@ -36,7 +36,7 @@ public final class C4313v0 extends C3924a implements InterfaceC4311u0 {
     }
 
     @Override // p007b.p225i.p226a.p288f.p333j.p334b.p335e.InterfaceC4311u0
-    /* renamed from: i0 */
+    /* JADX INFO: renamed from: i0 */
     public final void mo5993i0(zzj zzjVar) throws RemoteException {
         Parcel parcelM5398c = m5398c();
         C3926c.m5402b(parcelM5398c, zzjVar);
@@ -44,7 +44,7 @@ public final class C4313v0 extends C3924a implements InterfaceC4311u0 {
     }
 
     @Override // p007b.p225i.p226a.p288f.p333j.p334b.p335e.InterfaceC4311u0
-    /* renamed from: j0 */
+    /* JADX INFO: renamed from: j0 */
     public final void mo5994j0(zzcg zzcgVar) throws RemoteException {
         Parcel parcelM5398c = m5398c();
         C3926c.m5402b(parcelM5398c, zzcgVar);
@@ -52,7 +52,7 @@ public final class C4313v0 extends C3924a implements InterfaceC4311u0 {
     }
 
     @Override // p007b.p225i.p226a.p288f.p333j.p334b.p335e.InterfaceC4311u0
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public final void mo5995n(zzbz zzbzVar) throws RemoteException {
         Parcel parcelM5398c = m5398c();
         C3926c.m5402b(parcelM5398c, zzbzVar);
@@ -60,7 +60,7 @@ public final class C4313v0 extends C3924a implements InterfaceC4311u0 {
     }
 
     @Override // p007b.p225i.p226a.p288f.p333j.p334b.p335e.InterfaceC4311u0
-    /* renamed from: s */
+    /* JADX INFO: renamed from: s */
     public final void mo5996s(zzcb zzcbVar) throws RemoteException {
         Parcel parcelM5398c = m5398c();
         C3926c.m5402b(parcelM5398c, zzcbVar);

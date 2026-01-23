@@ -15,36 +15,36 @@ import org.checkerframework.checker.nullness.compatqual.NullableDecl;
 import p007b.p225i.p226a.p288f.p299e.p308o.C3404f;
 import p007b.p225i.p355b.p357b.ImmutableCollection;
 
-/* compiled from: ImmutableMap.java */
-/* renamed from: b.i.b.b.q, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.b.b.q, reason: use source file name */
+/* JADX INFO: compiled from: ImmutableMap.java */
+/* JADX INFO: loaded from: classes3.dex */
 public abstract class ImmutableMap2<K, V> implements Map<K, V>, Serializable {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     @LazyInit
     public transient ImmutableSet2<Map.Entry<K, V>> f12049j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     @RetainedWith
     @LazyInit
     public transient ImmutableSet2<K> f12050k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     @RetainedWith
     @LazyInit
     public transient ImmutableCollection<V> f12051l;
 
-    /* compiled from: ImmutableMap.java */
-    /* renamed from: b.i.b.b.q$a */
+    /* JADX INFO: renamed from: b.i.b.b.q$a */
+    /* JADX INFO: compiled from: ImmutableMap.java */
     public static class a<K, V> {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public Object[] f12052a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public int f12053b = 0;
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public boolean f12054c = false;
 
         public a(int i) {
@@ -56,7 +56,7 @@ public abstract class ImmutableMap2<K, V> implements Map<K, V>, Serializable {
             r5[r10] = r8;
             r4 = r4 + 1;
          */
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         /*
             Code decompiled incorrectly, please refer to instructions dump.
         */
@@ -105,7 +105,7 @@ public abstract class ImmutableMap2<K, V> implements Map<K, V>, Serializable {
             return new RegularImmutableMap(iArr, objArr, i);
         }
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final void m6276b(int i) {
             int i2 = i * 2;
             Object[] objArr = this.f12052a;
@@ -116,7 +116,7 @@ public abstract class ImmutableMap2<K, V> implements Map<K, V>, Serializable {
         }
 
         @CanIgnoreReturnValue
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public a<K, V> m6277c(K k, V v) {
             m6276b(this.f12053b + 1);
             C3404f.m4366z(k, v);
@@ -129,8 +129,8 @@ public abstract class ImmutableMap2<K, V> implements Map<K, V>, Serializable {
         }
     }
 
-    /* compiled from: ImmutableMap.java */
-    /* renamed from: b.i.b.b.q$b */
+    /* JADX INFO: renamed from: b.i.b.b.q$b */
+    /* JADX INFO: compiled from: ImmutableMap.java */
     public static class b implements Serializable {
         private static final long serialVersionUID = 0;
         private final Object[] keys;
@@ -165,7 +165,7 @@ public abstract class ImmutableMap2<K, V> implements Map<K, V>, Serializable {
     }
 
     /* JADX WARN: Multi-variable type inference failed */
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static <K, V> ImmutableMap2<K, V> m6273a(Map<? extends K, ? extends V> map) {
         if ((map instanceof ImmutableMap2) && !(map instanceof SortedMap)) {
             ImmutableMap2<K, V> immutableMap2 = (ImmutableMap2) map;
@@ -187,10 +187,10 @@ public abstract class ImmutableMap2<K, V> implements Map<K, V>, Serializable {
         return aVar.m6275a();
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public abstract ImmutableSet2<Map.Entry<K, V>> mo6247b();
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public abstract ImmutableSet2<K> mo6248c();
 
     @Override // java.util.Map
@@ -214,10 +214,10 @@ public abstract class ImmutableMap2<K, V> implements Map<K, V>, Serializable {
         return immutableCollectionMo6249d.contains(obj);
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public abstract ImmutableCollection<V> mo6249d();
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public ImmutableSet2<Map.Entry<K, V>> m6274e() {
         ImmutableSet2<Map.Entry<K, V>> immutableSet2 = this.f12049j;
         if (immutableSet2 != null) {
@@ -244,7 +244,7 @@ public abstract class ImmutableMap2<K, V> implements Map<K, V>, Serializable {
         return false;
     }
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public abstract boolean mo6250f();
 
     @Override // java.util.Map
@@ -300,7 +300,7 @@ public abstract class ImmutableMap2<K, V> implements Map<K, V>, Serializable {
     public String toString() {
         int size = size();
         C3404f.m4189A(size, "size");
-        StringBuilder sb = new StringBuilder((int) Math.min(size * 8, Permission.MANAGE_EMOJIS_AND_STICKERS));
+        StringBuilder sb = new StringBuilder((int) Math.min(((long) size) * 8, Permission.MANAGE_EMOJIS_AND_STICKERS));
         sb.append('{');
         boolean z2 = true;
         for (Map.Entry entry : entrySet()) {

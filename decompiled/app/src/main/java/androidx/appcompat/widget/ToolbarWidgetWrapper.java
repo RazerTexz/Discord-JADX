@@ -29,8 +29,8 @@ import androidx.core.view.ViewPropertyAnimatorListenerAdapter;
 import com.google.android.material.badge.BadgeDrawable;
 import p007b.p100d.p104b.p105a.outline;
 
+/* JADX INFO: loaded from: classes.dex */
 @RestrictTo({RestrictTo.Scope.LIBRARY_GROUP_PREFIX})
-/* loaded from: classes.dex */
 public class ToolbarWidgetWrapper implements DecorToolbar {
     private static final int AFFECTS_LOGO_MASK = 3;
     private static final long DEFAULT_FADE_DURATION_MS = 200;
@@ -54,7 +54,7 @@ public class ToolbarWidgetWrapper implements DecorToolbar {
     public Toolbar mToolbar;
     public Window.Callback mWindowCallback;
 
-    /* renamed from: androidx.appcompat.widget.ToolbarWidgetWrapper$1 */
+    /* JADX INFO: renamed from: androidx.appcompat.widget.ToolbarWidgetWrapper$1 */
     public class ViewOnClickListenerC01331 implements View.OnClickListener {
         public final ActionMenuItem mNavItem;
 
@@ -73,7 +73,7 @@ public class ToolbarWidgetWrapper implements DecorToolbar {
         }
     }
 
-    /* renamed from: androidx.appcompat.widget.ToolbarWidgetWrapper$2 */
+    /* JADX INFO: renamed from: androidx.appcompat.widget.ToolbarWidgetWrapper$2 */
     public class C01342 extends ViewPropertyAnimatorListenerAdapter {
         private boolean mCanceled = false;
         public final /* synthetic */ int val$visibility;

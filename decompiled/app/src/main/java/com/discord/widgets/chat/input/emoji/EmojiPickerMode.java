@@ -1,8 +1,8 @@
 package com.discord.widgets.chat.input.emoji;
 
 
-/* compiled from: EmojiPickerMode.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: EmojiPickerMode.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public enum EmojiPickerMode {
     INLINE,
     BOTTOM_SHEET

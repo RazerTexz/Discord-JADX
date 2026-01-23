@@ -5,7 +5,7 @@ import androidx.annotation.VisibleForTesting;
 import java.util.ArrayDeque;
 import java.util.concurrent.Executor;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class SerialExecutor implements Executor {
     private volatile Runnable mActive;
     private final Executor mExecutor;

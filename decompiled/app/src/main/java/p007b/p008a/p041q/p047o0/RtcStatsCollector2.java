@@ -2,12 +2,12 @@ package p007b.p008a.p041q.p047o0;
 
 import p658rx.functions.Action1;
 
-/* compiled from: RtcStatsCollector.kt */
-/* renamed from: b.a.q.o0.b, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.a.q.o0.b, reason: use source file name */
+/* JADX INFO: compiled from: RtcStatsCollector.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class RtcStatsCollector2<T> implements Action1<Long> {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final /* synthetic */ RtcStatsCollector4 f1805j;
 
     public RtcStatsCollector2(RtcStatsCollector4 rtcStatsCollector4) {

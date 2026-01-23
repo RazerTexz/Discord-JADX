@@ -11,10 +11,10 @@ import java.io.Writer;
 import p007b.p225i.p408d.p410q.p411x.JsonTreeReader;
 import p007b.p225i.p408d.p410q.p411x.JsonTreeWriter;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public abstract class TypeAdapter<T> {
 
-    /* renamed from: com.google.gson.TypeAdapter$1 */
+    /* JADX INFO: renamed from: com.google.gson.TypeAdapter$1 */
     public class C110991 extends TypeAdapter<T> {
         public C110991() {
         }

@@ -6,8 +6,8 @@ import kotlin.jvm.functions.Function0;
 import p507d0.p580t.Collections2;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetSettingsPrivacy.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetSettingsPrivacy.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetSettingsPrivacy$friendSourceRadios$2 extends Lambda implements Function0<List<? extends CheckedSetting>> {
     public final /* synthetic */ WidgetSettingsPrivacy this$0;
 
@@ -23,7 +23,7 @@ public final class WidgetSettingsPrivacy$friendSourceRadios$2 extends Lambda imp
     }
 
     @Override // kotlin.jvm.functions.Function0
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final List<? extends CheckedSetting> invoke2() {
         return Collections2.listOf((Object[]) new CheckedSetting[]{WidgetSettingsPrivacy.access$getBinding$p(this.this$0).f18067r, WidgetSettingsPrivacy.access$getBinding$p(this.this$0).f18068s, WidgetSettingsPrivacy.access$getBinding$p(this.this$0).f18069t});
     }

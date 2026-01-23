@@ -2,19 +2,19 @@ package p507d0.p513e0.p514p.p515d.p517m0.p552k.p553a0;
 
 import p507d0.p513e0.p514p.p515d.p517m0.p552k.p553a0.MemberScope2;
 
-/* compiled from: MemberScope.kt */
-/* renamed from: d0.e0.p.d.m0.k.a0.c, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.k.a0.c, reason: use source file name */
+/* JADX INFO: compiled from: MemberScope.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public abstract class MemberScope {
 
-    /* compiled from: MemberScope.kt */
-    /* renamed from: d0.e0.p.d.m0.k.a0.c$a */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.k.a0.c$a */
+    /* JADX INFO: compiled from: MemberScope.kt */
     public static final class a extends MemberScope {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public static final a f24336a = new a();
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public static final int f24337b;
 
         static {
@@ -28,11 +28,11 @@ public abstract class MemberScope {
         }
     }
 
-    /* compiled from: MemberScope.kt */
-    /* renamed from: d0.e0.p.d.m0.k.a0.c$b */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.k.a0.c$b */
+    /* JADX INFO: compiled from: MemberScope.kt */
     public static final class b extends MemberScope {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public static final b f24338a = new b();
 
         @Override // p507d0.p513e0.p514p.p515d.p517m0.p552k.p553a0.MemberScope

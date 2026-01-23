@@ -11,7 +11,7 @@ import androidx.recyclerview.widget.ThreadUtil;
 import androidx.recyclerview.widget.TileList;
 import p007b.p100d.p104b.p105a.outline;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class AsyncListUtil<T> {
     public static final boolean DEBUG = false;
     public static final String TAG = "AsyncListUtil";
@@ -34,7 +34,7 @@ public class AsyncListUtil<T> {
     public int mRequestedGeneration = 0;
     public final SparseIntArray mMissingPositions = new SparseIntArray();
 
-    /* renamed from: androidx.recyclerview.widget.AsyncListUtil$1 */
+    /* JADX INFO: renamed from: androidx.recyclerview.widget.AsyncListUtil$1 */
     public class C05361 implements ThreadUtil.MainThreadCallback<T> {
         public C05361() {
         }
@@ -105,7 +105,7 @@ public class AsyncListUtil<T> {
         }
     }
 
-    /* renamed from: androidx.recyclerview.widget.AsyncListUtil$2 */
+    /* JADX INFO: renamed from: androidx.recyclerview.widget.AsyncListUtil$2 */
     public class C05372 implements ThreadUtil.BackgroundCallback<T> {
         private int mFirstRequiredTileStart;
         private int mGeneration;

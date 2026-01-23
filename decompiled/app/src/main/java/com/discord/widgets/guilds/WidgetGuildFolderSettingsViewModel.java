@@ -27,19 +27,19 @@ import p507d0.p592z.p594d.Lambda;
 import p658rx.Observable;
 import p658rx.subjects.PublishSubject;
 
-/* compiled from: WidgetGuildFolderSettingsViewModel.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetGuildFolderSettingsViewModel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetGuildFolderSettingsViewModel extends AppViewModel<ViewState> {
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private final PublishSubject<Event> eventSubject;
     private final long folderId;
     private StoreState previousStoreState;
     private final StoreUserSettings storeUserSettings;
 
-    /* compiled from: WidgetGuildFolderSettingsViewModel.kt */
-    /* renamed from: com.discord.widgets.guilds.WidgetGuildFolderSettingsViewModel$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.guilds.WidgetGuildFolderSettingsViewModel$1 */
+    /* JADX INFO: compiled from: WidgetGuildFolderSettingsViewModel.kt */
     public static final class C85781 extends Lambda implements Function1<StoreState, Unit> {
         public C85781() {
             super(1);
@@ -51,14 +51,14 @@ public final class WidgetGuildFolderSettingsViewModel extends AppViewModel<ViewS
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(StoreState storeState) {
             Intrinsics3.checkNotNullParameter(storeState, "storeState");
             WidgetGuildFolderSettingsViewModel.access$handleStoreState(WidgetGuildFolderSettingsViewModel.this, storeState);
         }
     }
 
-    /* compiled from: WidgetGuildFolderSettingsViewModel.kt */
+    /* JADX INFO: compiled from: WidgetGuildFolderSettingsViewModel.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -78,10 +78,10 @@ public final class WidgetGuildFolderSettingsViewModel extends AppViewModel<ViewS
         }
     }
 
-    /* compiled from: WidgetGuildFolderSettingsViewModel.kt */
+    /* JADX INFO: compiled from: WidgetGuildFolderSettingsViewModel.kt */
     public static abstract class Event {
 
-        /* compiled from: WidgetGuildFolderSettingsViewModel.kt */
+        /* JADX INFO: compiled from: WidgetGuildFolderSettingsViewModel.kt */
         public static final /* data */ class UpdateFolderSettingsFailure extends Event {
             private final int failureMessageStringRes;
 
@@ -97,7 +97,7 @@ public final class WidgetGuildFolderSettingsViewModel extends AppViewModel<ViewS
                 return updateFolderSettingsFailure.copy(i);
             }
 
-            /* renamed from: component1, reason: from getter */
+            /* JADX INFO: renamed from: component1, reason: from getter */
             public final int getFailureMessageStringRes() {
                 return this.failureMessageStringRes;
             }
@@ -126,7 +126,7 @@ public final class WidgetGuildFolderSettingsViewModel extends AppViewModel<ViewS
             }
         }
 
-        /* compiled from: WidgetGuildFolderSettingsViewModel.kt */
+        /* JADX INFO: compiled from: WidgetGuildFolderSettingsViewModel.kt */
         public static final /* data */ class UpdateFolderSettingsSuccess extends Event {
             private final int successMessageStringRes;
 
@@ -142,7 +142,7 @@ public final class WidgetGuildFolderSettingsViewModel extends AppViewModel<ViewS
                 return updateFolderSettingsSuccess.copy(i);
             }
 
-            /* renamed from: component1, reason: from getter */
+            /* JADX INFO: renamed from: component1, reason: from getter */
             public final int getSuccessMessageStringRes() {
                 return this.successMessageStringRes;
             }
@@ -179,7 +179,7 @@ public final class WidgetGuildFolderSettingsViewModel extends AppViewModel<ViewS
         }
     }
 
-    /* compiled from: WidgetGuildFolderSettingsViewModel.kt */
+    /* JADX INFO: compiled from: WidgetGuildFolderSettingsViewModel.kt */
     public static final /* data */ class FormState {
         private final Integer color;
         private final String name;
@@ -199,12 +199,12 @@ public final class WidgetGuildFolderSettingsViewModel extends AppViewModel<ViewS
             return formState.copy(str, num);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final String getName() {
             return this.name;
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final Integer getColor() {
             return this.color;
         }
@@ -247,10 +247,10 @@ public final class WidgetGuildFolderSettingsViewModel extends AppViewModel<ViewS
         }
     }
 
-    /* compiled from: WidgetGuildFolderSettingsViewModel.kt */
+    /* JADX INFO: compiled from: WidgetGuildFolderSettingsViewModel.kt */
     public static abstract class StoreState {
 
-        /* compiled from: WidgetGuildFolderSettingsViewModel.kt */
+        /* JADX INFO: compiled from: WidgetGuildFolderSettingsViewModel.kt */
         public static final class Invalid extends StoreState {
             public static final Invalid INSTANCE = new Invalid();
 
@@ -259,7 +259,7 @@ public final class WidgetGuildFolderSettingsViewModel extends AppViewModel<ViewS
             }
         }
 
-        /* compiled from: WidgetGuildFolderSettingsViewModel.kt */
+        /* JADX INFO: compiled from: WidgetGuildFolderSettingsViewModel.kt */
         public static final /* data */ class Valid extends StoreState {
             private final ModelGuildFolder folder;
             private final List<StoreGuildsSorted.Entry> sortedGuilds;
@@ -285,7 +285,7 @@ public final class WidgetGuildFolderSettingsViewModel extends AppViewModel<ViewS
                 return valid.copy(modelGuildFolder, list);
             }
 
-            /* renamed from: component1, reason: from getter */
+            /* JADX INFO: renamed from: component1, reason: from getter */
             public final ModelGuildFolder getFolder() {
                 return this.folder;
             }
@@ -342,10 +342,10 @@ public final class WidgetGuildFolderSettingsViewModel extends AppViewModel<ViewS
         }
     }
 
-    /* compiled from: WidgetGuildFolderSettingsViewModel.kt */
+    /* JADX INFO: compiled from: WidgetGuildFolderSettingsViewModel.kt */
     public static abstract class ViewState {
 
-        /* compiled from: WidgetGuildFolderSettingsViewModel.kt */
+        /* JADX INFO: compiled from: WidgetGuildFolderSettingsViewModel.kt */
         public static final /* data */ class Loaded extends ViewState {
             private final FormState formState;
             private final boolean showSave;
@@ -368,12 +368,12 @@ public final class WidgetGuildFolderSettingsViewModel extends AppViewModel<ViewS
                 return loaded.copy(formState, z2);
             }
 
-            /* renamed from: component1, reason: from getter */
+            /* JADX INFO: renamed from: component1, reason: from getter */
             public final FormState getFormState() {
                 return this.formState;
             }
 
-            /* renamed from: component2, reason: from getter */
+            /* JADX INFO: renamed from: component2, reason: from getter */
             public final boolean getShowSave() {
                 return this.showSave;
             }
@@ -403,15 +403,18 @@ public final class WidgetGuildFolderSettingsViewModel extends AppViewModel<ViewS
             }
 
             /* JADX WARN: Multi-variable type inference failed */
+            /* JADX WARN: Type inference failed for: r1v1, types: [int] */
+            /* JADX WARN: Type inference failed for: r1v2 */
+            /* JADX WARN: Type inference failed for: r1v3 */
             public int hashCode() {
                 FormState formState = this.formState;
                 int iHashCode = (formState != null ? formState.hashCode() : 0) * 31;
                 boolean z2 = this.showSave;
-                int i = z2;
-                if (z2 != 0) {
-                    i = 1;
+                ?? r1 = z2;
+                if (z2) {
+                    r1 = 1;
                 }
-                return iHashCode + i;
+                return iHashCode + r1;
             }
 
             public String toString() {
@@ -422,7 +425,7 @@ public final class WidgetGuildFolderSettingsViewModel extends AppViewModel<ViewS
             }
         }
 
-        /* compiled from: WidgetGuildFolderSettingsViewModel.kt */
+        /* JADX INFO: compiled from: WidgetGuildFolderSettingsViewModel.kt */
         public static final class Uninitialized extends ViewState {
             public static final Uninitialized INSTANCE = new Uninitialized();
 
@@ -439,8 +442,8 @@ public final class WidgetGuildFolderSettingsViewModel extends AppViewModel<ViewS
         }
     }
 
-    /* compiled from: WidgetGuildFolderSettingsViewModel.kt */
-    /* renamed from: com.discord.widgets.guilds.WidgetGuildFolderSettingsViewModel$saveFolder$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.guilds.WidgetGuildFolderSettingsViewModel$saveFolder$1 */
+    /* JADX INFO: compiled from: WidgetGuildFolderSettingsViewModel.kt */
     public static final class C85791 extends Lambda implements Function1<ModelUserSettings, Unit> {
         public C85791() {
             super(1);
@@ -452,15 +455,15 @@ public final class WidgetGuildFolderSettingsViewModel extends AppViewModel<ViewS
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(ModelUserSettings modelUserSettings) {
             Intrinsics3.checkNotNullParameter(modelUserSettings, "it");
             WidgetGuildFolderSettingsViewModel.access$emitUpdateSuccessEvent(WidgetGuildFolderSettingsViewModel.this);
         }
     }
 
-    /* compiled from: WidgetGuildFolderSettingsViewModel.kt */
-    /* renamed from: com.discord.widgets.guilds.WidgetGuildFolderSettingsViewModel$saveFolder$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.guilds.WidgetGuildFolderSettingsViewModel$saveFolder$2 */
+    /* JADX INFO: compiled from: WidgetGuildFolderSettingsViewModel.kt */
     public static final class C85802 extends Lambda implements Function1<Error, Unit> {
         public C85802() {
             super(1);
@@ -472,7 +475,7 @@ public final class WidgetGuildFolderSettingsViewModel extends AppViewModel<ViewS
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Error error) {
             Intrinsics3.checkNotNullParameter(error, "it");
             WidgetGuildFolderSettingsViewModel.access$emitUpdateFailureEvent(WidgetGuildFolderSettingsViewModel.this);

@@ -7,15 +7,15 @@ import com.google.android.gms.common.internal.zas;
 import p007b.p085c.p086a.p087a0.AnimatableValueParser;
 import p007b.p225i.p226a.p288f.p337l.p338b.C4344i;
 
-/* compiled from: com.google.android.gms:play-services-base@@17.3.0 */
-/* loaded from: classes3.dex */
+/* JADX INFO: compiled from: com.google.android.gms:play-services-base@@17.3.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public final class zak extends AbstractSafeParcelable {
     public static final Parcelable.Creator<zak> CREATOR = new C4344i();
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final int f20839j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final zas f20840k;
 
     public zak(int i, zas zasVar) {

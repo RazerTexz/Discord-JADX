@@ -8,9 +8,9 @@ import kotlin.jvm.functions.Function1;
 import p507d0.p592z.p594d.FunctionReferenceImpl;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: WidgetServerSettingsEnableCommunitySteps.kt */
-/* renamed from: com.discord.widgets.servers.community.WidgetServerSettingsEnableCommunitySteps$binding$2, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.servers.community.WidgetServerSettingsEnableCommunitySteps$binding$2, reason: use source file name */
+/* JADX INFO: compiled from: WidgetServerSettingsEnableCommunitySteps.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final /* synthetic */ class WidgetServerSettingsEnableCommunitySteps2 extends FunctionReferenceImpl implements Function1<View, WidgetEnableCommunityStepsBinding> {
     public static final WidgetServerSettingsEnableCommunitySteps2 INSTANCE = new WidgetServerSettingsEnableCommunitySteps2();
 
@@ -23,7 +23,7 @@ public final /* synthetic */ class WidgetServerSettingsEnableCommunitySteps2 ext
         return invoke2(view);
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final WidgetEnableCommunityStepsBinding invoke2(View view) {
         Intrinsics3.checkNotNullParameter(view, "p1");
         Objects.requireNonNull(view, "rootView");

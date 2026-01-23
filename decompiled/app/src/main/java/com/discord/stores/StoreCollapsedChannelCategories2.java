@@ -9,9 +9,9 @@ import p507d0.p579g0.Strings4;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: StoreCollapsedChannelCategories.kt */
-/* renamed from: com.discord.stores.StoreCollapsedChannelCategories$Companion$fromCache$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.stores.StoreCollapsedChannelCategories$Companion$fromCache$1, reason: use source file name */
+/* JADX INFO: compiled from: StoreCollapsedChannelCategories.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class StoreCollapsedChannelCategories2 extends Lambda implements Function2<String, String, Tuples2<? extends Long, ? extends Set<Long>>> {
     public static final StoreCollapsedChannelCategories2 INSTANCE = new StoreCollapsedChannelCategories2();
 
@@ -24,8 +24,8 @@ public final class StoreCollapsedChannelCategories2 extends Lambda implements Fu
         return invoke2(str, str2);
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
-    public final Tuples2<Long, Set<Long>> invoke2(String str, String str2) throws NumberFormatException {
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
+    public final Tuples2<Long, Set<Long>> invoke2(String str, String str2) {
         Intrinsics3.checkNotNullParameter(str, "key");
         Intrinsics3.checkNotNullParameter(str2, "value");
         long j = Long.parseLong(str);

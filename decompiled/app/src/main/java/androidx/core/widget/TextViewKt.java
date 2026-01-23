@@ -9,12 +9,12 @@ import kotlin.jvm.functions.Function4;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: TextView.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: TextView.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class TextViewKt {
 
-    /* compiled from: TextView.kt */
-    /* renamed from: androidx.core.widget.TextViewKt$addTextChangedListener$1 */
+    /* JADX INFO: renamed from: androidx.core.widget.TextViewKt$addTextChangedListener$1 */
+    /* JADX INFO: compiled from: TextView.kt */
     public static final class C03041 extends Lambda implements Function4<CharSequence, Integer, Integer, Integer, Unit> {
         public static final C03041 INSTANCE = new C03041();
 
@@ -32,8 +32,8 @@ public final class TextViewKt {
         }
     }
 
-    /* compiled from: TextView.kt */
-    /* renamed from: androidx.core.widget.TextViewKt$addTextChangedListener$2 */
+    /* JADX INFO: renamed from: androidx.core.widget.TextViewKt$addTextChangedListener$2 */
+    /* JADX INFO: compiled from: TextView.kt */
     public static final class C03052 extends Lambda implements Function4<CharSequence, Integer, Integer, Integer, Unit> {
         public static final C03052 INSTANCE = new C03052();
 
@@ -51,8 +51,8 @@ public final class TextViewKt {
         }
     }
 
-    /* compiled from: TextView.kt */
-    /* renamed from: androidx.core.widget.TextViewKt$addTextChangedListener$3 */
+    /* JADX INFO: renamed from: androidx.core.widget.TextViewKt$addTextChangedListener$3 */
+    /* JADX INFO: compiled from: TextView.kt */
     public static final class C03063 extends Lambda implements Function1<Editable, Unit> {
         public static final C03063 INSTANCE = new C03063();
 
@@ -66,7 +66,7 @@ public final class TextViewKt {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Editable editable) {
         }
     }

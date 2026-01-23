@@ -9,9 +9,9 @@ import java.io.Serializable;
 import kotlin.Tuples2;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: Bundle.kt */
-/* renamed from: androidx.core.os.BundleKt, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: androidx.core.os.BundleKt, reason: use source file name */
+/* JADX INFO: compiled from: Bundle.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class Bundle2 {
     public static final Bundle bundleOf(Tuples2<String, ? extends Object>... tuples2Arr) {
         Intrinsics3.checkNotNullParameter(tuples2Arr, "pairs");

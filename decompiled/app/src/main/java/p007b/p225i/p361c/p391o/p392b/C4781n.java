@@ -5,9 +5,9 @@ import android.os.Parcelable;
 import com.google.firebase.dynamiclinks.internal.zzr;
 import p007b.p085c.p086a.p087a0.AnimatableValueParser;
 
-/* compiled from: com.google.firebase:firebase-dynamic-links@@19.1.1 */
-/* renamed from: b.i.c.o.b.n */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.c.o.b.n */
+/* JADX INFO: compiled from: com.google.firebase:firebase-dynamic-links@@19.1.1 */
+/* JADX INFO: loaded from: classes3.dex */
 public final class C4781n implements Parcelable.Creator<zzr> {
     @Override // android.os.Parcelable.Creator
     public final zzr createFromParcel(Parcel parcel) {

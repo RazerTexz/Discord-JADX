@@ -11,7 +11,7 @@ import androidx.annotation.RequiresPermission;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class TelephonyManagerCompat {
     private static Method sGetDeviceIdMethod;
     private static Method sGetSubIdMethod;

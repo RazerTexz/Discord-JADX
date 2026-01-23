@@ -5,9 +5,9 @@ import kotlin.jvm.functions.Function1;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetStageChannelModeratorPermissionsViewModel.kt */
-/* renamed from: com.discord.widgets.channels.permissions.WidgetStageChannelModeratorPermissionsViewModel$handleStoreState$usersWithModeratorPermissions$4, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.channels.permissions.WidgetStageChannelModeratorPermissionsViewModel$handleStoreState$usersWithModeratorPermissions$4, reason: use source file name */
+/* JADX INFO: compiled from: WidgetStageChannelModeratorPermissionsViewModel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetStageChannelModeratorPermissionsViewModel6 extends Lambda implements Function1<PermissionOverwrite, Long> {
     public static final WidgetStageChannelModeratorPermissionsViewModel6 INSTANCE = new WidgetStageChannelModeratorPermissionsViewModel6();
 
@@ -20,7 +20,7 @@ public final class WidgetStageChannelModeratorPermissionsViewModel6 extends Lamb
         return Long.valueOf(invoke2(permissionOverwrite));
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final long invoke2(PermissionOverwrite permissionOverwrite) {
         Intrinsics3.checkNotNullParameter(permissionOverwrite, "it");
         return permissionOverwrite.m8131e();

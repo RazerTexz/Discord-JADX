@@ -63,30 +63,30 @@ import p507d0.p592z.p594d.Lambda;
 import p507d0.p592z.p594d.Reflection2;
 import p658rx.Observable;
 
-/* compiled from: WidgetGuildsList.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetGuildsList.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetGuildsList extends AppFragment implements WidgetGuildListAdapter.InteractionListener {
     public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetGuildsList.class, "binding", "getBinding()Lcom/discord/databinding/WidgetGuildsListBinding;", 0)};
     private WidgetGuildListAdapter adapter;
 
-    /* renamed from: binding$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
     private final BottomNavViewObserver bottomNavViewObserver;
     private View guildListAddHint;
     private WidgetChannelListUnreads guildListUnreads;
 
-    /* renamed from: viewModel$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: viewModel$delegate, reason: from kotlin metadata */
     private final Lazy viewModel;
 
-    /* compiled from: WidgetGuildsList.kt */
+    /* JADX INFO: compiled from: WidgetGuildsList.kt */
     public static final /* data */ class AddGuildHint {
 
-        /* renamed from: Companion, reason: from kotlin metadata */
+        /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
         public static final Companion INSTANCE = new Companion(null);
         private final boolean isAddGuildHint;
         private final boolean isEligible;
 
-        /* compiled from: WidgetGuildsList.kt */
+        /* JADX INFO: compiled from: WidgetGuildsList.kt */
         public static final class Companion {
             private Companion() {
             }
@@ -126,12 +126,12 @@ public final class WidgetGuildsList extends AppFragment implements WidgetGuildLi
             return addGuildHint.copy(z2, z3);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final boolean getIsEligible() {
             return this.isEligible;
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final boolean getIsAddGuildHint() {
             return this.isAddGuildHint;
         }
@@ -155,6 +155,9 @@ public final class WidgetGuildsList extends AppFragment implements WidgetGuildLi
         /* JADX WARN: Type inference failed for: r0v1, types: [int] */
         /* JADX WARN: Type inference failed for: r0v4 */
         /* JADX WARN: Type inference failed for: r0v5 */
+        /* JADX WARN: Type inference failed for: r1v0 */
+        /* JADX WARN: Type inference failed for: r1v1, types: [int] */
+        /* JADX WARN: Type inference failed for: r1v2 */
         public int hashCode() {
             boolean z2 = this.isEligible;
             ?? r0 = z2;
@@ -163,7 +166,7 @@ public final class WidgetGuildsList extends AppFragment implements WidgetGuildLi
             }
             int i = r0 * 31;
             boolean z3 = this.isAddGuildHint;
-            return i + (z3 ? 1 : z3 ? 1 : 0);
+            return i + (z3 ? 1 : z3);
         }
 
         public final boolean isAddGuildHint() {
@@ -186,8 +189,8 @@ public final class WidgetGuildsList extends AppFragment implements WidgetGuildLi
         }
     }
 
-    /* compiled from: WidgetGuildsList.kt */
-    /* renamed from: com.discord.widgets.guilds.list.WidgetGuildsList$configureAddGuildHint$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.guilds.list.WidgetGuildsList$configureAddGuildHint$1 */
+    /* JADX INFO: compiled from: WidgetGuildsList.kt */
     public static final class C87451 extends Lambda implements Function1<StoreNux.NuxState, StoreNux.NuxState> {
         public static final C87451 INSTANCE = new C87451();
 
@@ -200,15 +203,15 @@ public final class WidgetGuildsList extends AppFragment implements WidgetGuildLi
             return invoke2(nuxState);
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final StoreNux.NuxState invoke2(StoreNux.NuxState nuxState) {
             Intrinsics3.checkNotNullParameter(nuxState, "nux");
             return StoreNux.NuxState.copy$default(nuxState, false, false, false, false, false, null, 47, null);
         }
     }
 
-    /* compiled from: WidgetGuildsList.kt */
-    /* renamed from: com.discord.widgets.guilds.list.WidgetGuildsList$configureBottomNavSpace$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.guilds.list.WidgetGuildsList$configureBottomNavSpace$1 */
+    /* JADX INFO: compiled from: WidgetGuildsList.kt */
     public static final class C87461 extends Lambda implements Function1<Integer, Unit> {
         public C87461() {
             super(1);
@@ -234,8 +237,8 @@ public final class WidgetGuildsList extends AppFragment implements WidgetGuildLi
         }
     }
 
-    /* compiled from: WidgetGuildsList.kt */
-    /* renamed from: com.discord.widgets.guilds.list.WidgetGuildsList$onResume$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.guilds.list.WidgetGuildsList$onResume$1 */
+    /* JADX INFO: compiled from: WidgetGuildsList.kt */
     public static final class C87471 extends Lambda implements Function1<WidgetGuildsListViewModel.ViewState, Unit> {
         public C87471() {
             super(1);
@@ -247,15 +250,15 @@ public final class WidgetGuildsList extends AppFragment implements WidgetGuildLi
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(WidgetGuildsListViewModel.ViewState viewState) {
             Intrinsics3.checkNotNullParameter(viewState, "it");
             WidgetGuildsList.access$configureUI(WidgetGuildsList.this, viewState);
         }
     }
 
-    /* compiled from: WidgetGuildsList.kt */
-    /* renamed from: com.discord.widgets.guilds.list.WidgetGuildsList$onResume$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.guilds.list.WidgetGuildsList$onResume$2 */
+    /* JADX INFO: compiled from: WidgetGuildsList.kt */
     public static final class C87482 extends Lambda implements Function1<WidgetGuildsListViewModel.Event, Unit> {
         public C87482() {
             super(1);
@@ -267,15 +270,15 @@ public final class WidgetGuildsList extends AppFragment implements WidgetGuildLi
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(WidgetGuildsListViewModel.Event event) {
             Intrinsics3.checkNotNullParameter(event, "it");
             WidgetGuildsList.access$handleEvent(WidgetGuildsList.this, event);
         }
     }
 
-    /* compiled from: WidgetGuildsList.kt */
-    /* renamed from: com.discord.widgets.guilds.list.WidgetGuildsList$onResume$3 */
+    /* JADX INFO: renamed from: com.discord.widgets.guilds.list.WidgetGuildsList$onResume$3 */
+    /* JADX INFO: compiled from: WidgetGuildsList.kt */
     public static final class C87493 extends Lambda implements Function1<AddGuildHint, Unit> {
         public C87493() {
             super(1);
@@ -287,15 +290,15 @@ public final class WidgetGuildsList extends AppFragment implements WidgetGuildLi
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(AddGuildHint addGuildHint) {
             Intrinsics3.checkNotNullParameter(addGuildHint, "it");
             WidgetGuildsList.access$configureAddGuildHint(WidgetGuildsList.this, addGuildHint);
         }
     }
 
-    /* compiled from: WidgetGuildsList.kt */
-    /* renamed from: com.discord.widgets.guilds.list.WidgetGuildsList$onResume$4 */
+    /* JADX INFO: renamed from: com.discord.widgets.guilds.list.WidgetGuildsList$onResume$4 */
+    /* JADX INFO: compiled from: WidgetGuildsList.kt */
     public static final class C87504 extends Lambda implements Function1<Boolean, Unit> {
         public C87504() {
             super(1);
@@ -314,8 +317,8 @@ public final class WidgetGuildsList extends AppFragment implements WidgetGuildLi
         }
     }
 
-    /* compiled from: WidgetGuildsList.kt */
-    /* renamed from: com.discord.widgets.guilds.list.WidgetGuildsList$onViewBound$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.guilds.list.WidgetGuildsList$onViewBound$1 */
+    /* JADX INFO: compiled from: WidgetGuildsList.kt */
     public static final class C87511 extends Lambda implements Function0<Integer> {
         public C87511() {
             super(0);
@@ -326,18 +329,18 @@ public final class WidgetGuildsList extends AppFragment implements WidgetGuildLi
             return Integer.valueOf(invoke2());
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final int invoke2() {
             return WidgetGuildsList.access$getAdapter$p(WidgetGuildsList.this).getItemCount();
         }
     }
 
-    /* compiled from: WidgetGuildsList.kt */
-    /* renamed from: com.discord.widgets.guilds.list.WidgetGuildsList$onViewBound$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.guilds.list.WidgetGuildsList$onViewBound$2 */
+    /* JADX INFO: compiled from: WidgetGuildsList.kt */
     public static final class C87522 extends Lambda implements Function1<View, Unit> {
 
-        /* compiled from: WidgetGuildsList.kt */
-        /* renamed from: com.discord.widgets.guilds.list.WidgetGuildsList$onViewBound$2$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.widgets.guilds.list.WidgetGuildsList$onViewBound$2$1, reason: invalid class name */
+        /* JADX INFO: compiled from: WidgetGuildsList.kt */
         public static final class AnonymousClass1 implements View.OnClickListener {
             public AnonymousClass1() {
             }
@@ -358,7 +361,7 @@ public final class WidgetGuildsList extends AppFragment implements WidgetGuildLi
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(View view) {
             Intrinsics3.checkNotNullParameter(view, "it");
             WidgetGuildsList.access$setGuildListAddHint$p(WidgetGuildsList.this, view);

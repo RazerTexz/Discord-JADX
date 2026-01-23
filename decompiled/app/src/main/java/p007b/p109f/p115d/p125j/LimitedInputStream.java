@@ -4,15 +4,15 @@ import java.io.FilterInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 
-/* compiled from: LimitedInputStream.java */
-/* renamed from: b.f.d.j.a, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.f.d.j.a, reason: use source file name */
+/* JADX INFO: compiled from: LimitedInputStream.java */
+/* JADX INFO: loaded from: classes.dex */
 public class LimitedInputStream extends FilterInputStream {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public int f3128j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public int f3129k;
 
     public LimitedInputStream(InputStream inputStream, int i) {
@@ -64,7 +64,7 @@ public class LimitedInputStream extends FilterInputStream {
     @Override // java.io.FilterInputStream, java.io.InputStream
     public long skip(long j) throws IOException {
         long jSkip = ((FilterInputStream) this).in.skip(Math.min(j, this.f3128j));
-        this.f3128j = (int) (this.f3128j - jSkip);
+        this.f3128j = (int) (((long) this.f3128j) - jSkip);
         return jSkip;
     }
 

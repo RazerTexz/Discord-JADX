@@ -18,11 +18,11 @@ import java.util.Objects;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: GuildBoostPerkViewAdapter.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: GuildBoostPerkViewAdapter.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class GuildBoostPerkViewAdapter extends MGRecyclerAdapterSimple<GuildBoostPerkViewListItem> {
 
-    /* compiled from: GuildBoostPerkViewAdapter.kt */
+    /* JADX INFO: compiled from: GuildBoostPerkViewAdapter.kt */
     public static final /* data */ class GuildBoostPerkViewListItem implements MGRecyclerDataPayload {
         public static final int TYPE_LIST_ITEM = 1;
         private final int iconResId;
@@ -48,12 +48,12 @@ public final class GuildBoostPerkViewAdapter extends MGRecyclerAdapterSimple<Gui
             return guildBoostPerkViewListItem.copy(i, charSequence);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final int getIconResId() {
             return this.iconResId;
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final CharSequence getText() {
             return this.text;
         }
@@ -106,7 +106,7 @@ public final class GuildBoostPerkViewAdapter extends MGRecyclerAdapterSimple<Gui
         }
     }
 
-    /* compiled from: GuildBoostPerkViewAdapter.kt */
+    /* JADX INFO: compiled from: GuildBoostPerkViewAdapter.kt */
     public static final class PerkViewHolder extends MGRecyclerViewHolder<GuildBoostPerkViewAdapter, GuildBoostPerkViewListItem> {
         private final ViewNitroBoostPerksListItemBinding binding;
 
@@ -127,7 +127,7 @@ public final class GuildBoostPerkViewAdapter extends MGRecyclerAdapterSimple<Gui
             onConfigure2(i, guildBoostPerkViewListItem);
         }
 
-        /* renamed from: onConfigure, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: onConfigure, reason: avoid collision after fix types in other method */
         public void onConfigure2(int position, GuildBoostPerkViewListItem data) {
             Intrinsics3.checkNotNullParameter(data, "data");
             super.onConfigure(position, data);

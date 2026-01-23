@@ -8,24 +8,24 @@ import p007b.p100d.p104b.p105a.outline;
 import p007b.p225i.p226a.p242c.MediaMetadata;
 import p007b.p225i.p226a.p242c.p259f3.Util2;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public final class ApicFrame extends Id3Frame {
     public static final Parcelable.Creator<ApicFrame> CREATOR = new C10726a();
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final String f19966k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     @Nullable
     public final String f19967l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public final int f19968m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public final byte[] f19969n;
 
-    /* renamed from: com.google.android.exoplayer2.metadata.id3.ApicFrame$a */
+    /* JADX INFO: renamed from: com.google.android.exoplayer2.metadata.id3.ApicFrame$a */
     public class C10726a implements Parcelable.Creator<ApicFrame> {
         @Override // android.os.Parcelable.Creator
         public ApicFrame createFromParcel(Parcel parcel) {
@@ -66,7 +66,7 @@ public final class ApicFrame extends Id3Frame {
     }
 
     @Override // com.google.android.exoplayer2.metadata.id3.Id3Frame, com.google.android.exoplayer2.metadata.Metadata.Entry
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public void mo8878n(MediaMetadata.b bVar) {
         bVar.m3346b(this.f19969n, this.f19968m);
     }

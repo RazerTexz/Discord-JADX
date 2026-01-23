@@ -4,9 +4,9 @@ import androidx.core.app.ActivityOptionsCompat;
 import kotlin.Unit;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ActivityResultLauncher.kt */
-/* renamed from: androidx.activity.result.ActivityResultLauncherKt, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: androidx.activity.result.ActivityResultLauncherKt, reason: use source file name */
+/* JADX INFO: compiled from: ActivityResultLauncher.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class ActivityResultLauncher2 {
     public static final void launch(ActivityResultLauncher<Void> activityResultLauncher, ActivityOptionsCompat activityOptionsCompat) {
         Intrinsics3.checkNotNullParameter(activityResultLauncher, "$this$launch");

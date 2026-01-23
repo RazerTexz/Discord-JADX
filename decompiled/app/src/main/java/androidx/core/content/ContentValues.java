@@ -3,9 +3,9 @@ package androidx.core.content;
 import kotlin.Tuples2;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ContentValues.kt */
-/* renamed from: androidx.core.content.ContentValuesKt, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: androidx.core.content.ContentValuesKt, reason: use source file name */
+/* JADX INFO: compiled from: ContentValues.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class ContentValues {
     public static final android.content.ContentValues contentValuesOf(Tuples2<String, ? extends Object>... tuples2Arr) {
         Intrinsics3.checkNotNullParameter(tuples2Arr, "pairs");

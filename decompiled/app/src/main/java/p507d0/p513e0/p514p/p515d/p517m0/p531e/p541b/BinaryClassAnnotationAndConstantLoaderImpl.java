@@ -30,56 +30,56 @@ import p507d0.p513e0.p514p.p515d.p517m0.p576p.collections;
 import p507d0.p580t._Collections;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: BinaryClassAnnotationAndConstantLoaderImpl.kt */
-/* renamed from: d0.e0.p.d.m0.e.b.c, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.e.b.c, reason: use source file name */
+/* JADX INFO: compiled from: BinaryClassAnnotationAndConstantLoaderImpl.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class BinaryClassAnnotationAndConstantLoaderImpl extends AbstractBinaryClassAnnotationAndConstantLoader<AnnotationDescriptor, AbstractC11815g<?>> {
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final ModuleDescriptor2 f23585c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final NotFoundClasses f23586d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final AnnotationDeserializer f23587e;
 
-    /* compiled from: BinaryClassAnnotationAndConstantLoaderImpl.kt */
-    /* renamed from: d0.e0.p.d.m0.e.b.c$a */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.e.b.c$a */
+    /* JADX INFO: compiled from: BinaryClassAnnotationAndConstantLoaderImpl.kt */
     public static final class a implements KotlinJvmBinaryClass.a {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final HashMap<Name, AbstractC11815g<?>> f23588a = new HashMap<>();
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final /* synthetic */ ClassDescriptor f23589b;
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public final /* synthetic */ BinaryClassAnnotationAndConstantLoaderImpl f23590c;
 
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         public final /* synthetic */ List<AnnotationDescriptor> f23591d;
 
-        /* renamed from: e */
+        /* JADX INFO: renamed from: e */
         public final /* synthetic */ SourceElement f23592e;
 
-        /* compiled from: BinaryClassAnnotationAndConstantLoaderImpl.kt */
-        /* renamed from: d0.e0.p.d.m0.e.b.c$a$a, reason: collision with other inner class name */
+        /* JADX INFO: renamed from: d0.e0.p.d.m0.e.b.c$a$a, reason: collision with other inner class name */
+        /* JADX INFO: compiled from: BinaryClassAnnotationAndConstantLoaderImpl.kt */
         public static final class C13315a implements KotlinJvmBinaryClass.a {
 
-            /* renamed from: a */
+            /* JADX INFO: renamed from: a */
             public final /* synthetic */ KotlinJvmBinaryClass.a f23593a;
 
-            /* renamed from: b */
+            /* JADX INFO: renamed from: b */
             public final /* synthetic */ KotlinJvmBinaryClass.a f23594b;
 
-            /* renamed from: c */
+            /* JADX INFO: renamed from: c */
             public final /* synthetic */ a f23595c;
 
-            /* renamed from: d */
+            /* JADX INFO: renamed from: d */
             public final /* synthetic */ Name f23596d;
 
-            /* renamed from: e */
+            /* JADX INFO: renamed from: e */
             public final /* synthetic */ ArrayList<AnnotationDescriptor> f23597e;
 
             public C13315a(KotlinJvmBinaryClass.a aVar, a aVar2, Name name, ArrayList<AnnotationDescriptor> arrayList) {
@@ -130,17 +130,17 @@ public final class BinaryClassAnnotationAndConstantLoaderImpl extends AbstractBi
             }
         }
 
-        /* compiled from: BinaryClassAnnotationAndConstantLoaderImpl.kt */
-        /* renamed from: d0.e0.p.d.m0.e.b.c$a$b */
+        /* JADX INFO: renamed from: d0.e0.p.d.m0.e.b.c$a$b */
+        /* JADX INFO: compiled from: BinaryClassAnnotationAndConstantLoaderImpl.kt */
         public static final class b implements KotlinJvmBinaryClass.b {
 
-            /* renamed from: a */
+            /* JADX INFO: renamed from: a */
             public final ArrayList<AbstractC11815g<?>> f23598a = new ArrayList<>();
 
-            /* renamed from: c */
+            /* JADX INFO: renamed from: c */
             public final /* synthetic */ Name f23600c;
 
-            /* renamed from: d */
+            /* JADX INFO: renamed from: d */
             public final /* synthetic */ ClassDescriptor f23601d;
 
             public b(Name name, ClassDescriptor classDescriptor) {
@@ -196,7 +196,7 @@ public final class BinaryClassAnnotationAndConstantLoaderImpl extends AbstractBi
             return aVar.f23588a;
         }
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final AbstractC11815g<?> m9544a(Name name, Object obj) {
             AbstractC11815g<?> abstractC11815gCreateConstantValue = ConstantValueFactory.f24439a.createConstantValue(obj);
             return abstractC11815gCreateConstantValue == null ? AbstractC11819k.f24442b.create(Intrinsics3.stringPlus("Unsupported annotation argument: ", name)) : abstractC11815gCreateConstantValue;
@@ -262,7 +262,7 @@ public final class BinaryClassAnnotationAndConstantLoaderImpl extends AbstractBi
     }
 
     @Override // p507d0.p513e0.p514p.p515d.p517m0.p531e.p541b.AbstractBinaryClassAnnotationAndConstantLoader
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public KotlinJvmBinaryClass.a mo9535h(ClassId classId, SourceElement sourceElement, List<AnnotationDescriptor> list) {
         Intrinsics3.checkNotNullParameter(classId, "annotationClassId");
         Intrinsics3.checkNotNullParameter(sourceElement, "source");

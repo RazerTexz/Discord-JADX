@@ -6,9 +6,9 @@ import com.discord.models.user.MeUser;
 import com.discord.utilities.permissions.PermissionUtils;
 import p658rx.functions.Func3;
 
-/* compiled from: WidgetServerSettingsBans.kt */
-/* renamed from: com.discord.widgets.servers.WidgetServerSettingsBans$Model$Companion$getCanManageBans$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.servers.WidgetServerSettingsBans$Model$Companion$getCanManageBans$1, reason: use source file name */
+/* JADX INFO: compiled from: WidgetServerSettingsBans.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetServerSettingsBans5<T1, T2, T3, R> implements Func3<Long, Guild, MeUser, Boolean> {
     public static final WidgetServerSettingsBans5 INSTANCE = new WidgetServerSettingsBans5();
 
@@ -17,7 +17,7 @@ public final class WidgetServerSettingsBans5<T1, T2, T3, R> implements Func3<Lon
         return call2(l, guild, meUser);
     }
 
-    /* renamed from: call, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
     public final Boolean call2(Long l, Guild guild, MeUser meUser) {
         return Boolean.valueOf((guild == null || l == null) ? false : PermissionUtils.canAndIsElevated(4L, l, meUser.getMfaEnabled(), guild.getMfaLevel()));
     }

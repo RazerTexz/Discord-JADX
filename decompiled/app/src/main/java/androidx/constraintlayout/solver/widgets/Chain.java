@@ -6,7 +6,7 @@ import androidx.constraintlayout.solver.SolverVariable;
 import androidx.constraintlayout.solver.widgets.ConstraintWidget;
 import java.util.ArrayList;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class Chain {
     private static final boolean DEBUG = false;
     public static final boolean USE_CHAIN_OPTIMIZATION = false;
@@ -44,7 +44,12 @@ public class Chain {
       0x0040: PHI (r14v28 boolean) = (r14v1 boolean), (r14v30 boolean) binds: [B:24:0x003c, B:15:0x002d] A[DONT_GENERATE, DONT_INLINE]
       0x0040: PHI (r15v35 boolean) = (r15v1 boolean), (r15v37 boolean) binds: [B:24:0x003c, B:15:0x002d] A[DONT_GENERATE, DONT_INLINE]] */
     /* JADX WARN: Removed duplicated region for block: B:96:0x016a  */
-    /* JADX WARN: Type inference failed for: r2v56, types: [androidx.constraintlayout.solver.widgets.ConstraintWidget] */
+    /* JADX WARN: Type inference failed for: r38v0, types: [androidx.constraintlayout.solver.LinearSystem] */
+    /* JADX WARN: Type inference failed for: r5v27 */
+    /* JADX WARN: Type inference failed for: r5v28 */
+    /* JADX WARN: Type inference failed for: r5v29, types: [androidx.constraintlayout.solver.SolverVariable] */
+    /* JADX WARN: Type inference failed for: r5v33 */
+    /* JADX WARN: Type inference failed for: r5v40 */
     /* JADX WARN: Type inference failed for: r7v1 */
     /* JADX WARN: Type inference failed for: r7v2, types: [androidx.constraintlayout.solver.widgets.ConstraintWidget] */
     /* JADX WARN: Type inference failed for: r7v32 */
@@ -155,14 +160,14 @@ public class Chain {
             }
             ConstraintAnchor constraintAnchor6 = r7.mListAnchors[i2 + 1].mTarget;
             if (constraintAnchor6 != null) {
-                ?? r2 = constraintAnchor6.mOwner;
-                ConstraintAnchor[] constraintAnchorArr2 = r2.mListAnchors;
+                ConstraintWidget constraintWidget11 = constraintAnchor6.mOwner;
+                ConstraintAnchor[] constraintAnchorArr2 = constraintWidget11.mListAnchors;
                 if (constraintAnchorArr2[i2].mTarget != null && constraintAnchorArr2[i2].mTarget.mOwner == r7) {
-                    solverVariable = r2;
+                    obj = constraintWidget11;
                 }
             }
-            if (solverVariable != null) {
-                r7 = solverVariable;
+            if (obj != null) {
+                r7 = obj;
                 z9 = z10;
             } else {
                 z9 = true;
@@ -174,9 +179,9 @@ public class Chain {
             constraintWidget6 = constraintWidget5;
             r7 = r7;
         }
-        ConstraintWidget constraintWidget11 = constraintWidget10;
+        ConstraintWidget constraintWidget12 = constraintWidget10;
         float f4 = f2;
-        ConstraintWidget constraintWidget12 = constraintWidget6;
+        ConstraintWidget constraintWidget13 = constraintWidget6;
         boolean z11 = z2;
         boolean z12 = z3;
         if (constraintWidget9 != null) {
@@ -210,15 +215,15 @@ public class Chain {
         if (arrayList2 != null && (size = arrayList2.size()) > 1) {
             float f5 = (!chainHead.mHasUndefinedWeights || chainHead.mHasComplexMatchWeights) ? f4 : chainHead.mWidgetsMatchCount;
             float f6 = 0.0f;
-            ConstraintWidget constraintWidget13 = null;
+            ConstraintWidget constraintWidget14 = null;
             int i12 = 0;
             float f7 = 0.0f;
             while (i12 < size) {
-                ConstraintWidget constraintWidget14 = arrayList2.get(i12);
-                float f8 = constraintWidget14.mWeight[i];
+                ConstraintWidget constraintWidget15 = arrayList2.get(i12);
+                float f8 = constraintWidget15.mWeight[i];
                 if (f8 < f6) {
                     if (chainHead.mHasComplexMatchWeights) {
-                        ConstraintAnchor[] constraintAnchorArr4 = constraintWidget14.mListAnchors;
+                        ConstraintAnchor[] constraintAnchorArr4 = constraintWidget15.mListAnchors;
                         linearSystem.addEquality(constraintAnchorArr4[i2 + 1].mSolverVariable, constraintAnchorArr4[i2].mSolverVariable, 0, 4);
                         arrayList = arrayList2;
                         i12++;
@@ -229,19 +234,19 @@ public class Chain {
                     }
                 }
                 if (f8 == f6) {
-                    ConstraintAnchor[] constraintAnchorArr5 = constraintWidget14.mListAnchors;
+                    ConstraintAnchor[] constraintAnchorArr5 = constraintWidget15.mListAnchors;
                     linearSystem.addEquality(constraintAnchorArr5[i2 + 1].mSolverVariable, constraintAnchorArr5[i2].mSolverVariable, 0, 8);
                     arrayList = arrayList2;
                     i12++;
                     arrayList2 = arrayList;
                     f6 = 0.0f;
                 } else {
-                    if (constraintWidget13 != null) {
-                        ConstraintAnchor[] constraintAnchorArr6 = constraintWidget13.mListAnchors;
+                    if (constraintWidget14 != null) {
+                        ConstraintAnchor[] constraintAnchorArr6 = constraintWidget14.mListAnchors;
                         SolverVariable solverVariable6 = constraintAnchorArr6[i2].mSolverVariable;
                         int i13 = i2 + 1;
                         SolverVariable solverVariable7 = constraintAnchorArr6[i13].mSolverVariable;
-                        ConstraintAnchor[] constraintAnchorArr7 = constraintWidget14.mListAnchors;
+                        ConstraintAnchor[] constraintAnchorArr7 = constraintWidget15.mListAnchors;
                         SolverVariable solverVariable8 = constraintAnchorArr7[i2].mSolverVariable;
                         SolverVariable solverVariable9 = constraintAnchorArr7[i13].mSolverVariable;
                         arrayList = arrayList2;
@@ -251,7 +256,7 @@ public class Chain {
                     } else {
                         arrayList = arrayList2;
                     }
-                    constraintWidget13 = constraintWidget14;
+                    constraintWidget14 = constraintWidget15;
                     f7 = f8;
                     i12++;
                     arrayList2 = arrayList;
@@ -260,7 +265,7 @@ public class Chain {
             }
         }
         if (constraintWidget8 != null && (constraintWidget8 == constraintWidget9 || z4)) {
-            ConstraintAnchor constraintAnchor10 = constraintWidget12.mListAnchors[i2];
+            ConstraintAnchor constraintAnchor10 = constraintWidget13.mListAnchors[i2];
             int i14 = i2 + 1;
             ConstraintAnchor constraintAnchor11 = constraintWidget7.mListAnchors[i14];
             ConstraintAnchor constraintAnchor12 = constraintAnchor10.mTarget;
@@ -271,9 +276,9 @@ public class Chain {
             ConstraintAnchor constraintAnchor15 = constraintWidget9.mListAnchors[i14];
             if (solverVariable10 != null && solverVariable11 != null) {
                 if (i == 0) {
-                    f = constraintWidget11.mHorizontalBiasPercent;
+                    f = constraintWidget12.mHorizontalBiasPercent;
                 } else {
-                    f = constraintWidget11.mVerticalBiasPercent;
+                    f = constraintWidget12.mVerticalBiasPercent;
                 }
                 linearSystem.addCentering(constraintAnchor14.mSolverVariable, solverVariable10, constraintAnchor14.getMargin(), f, solverVariable11, constraintAnchor15.mSolverVariable, constraintAnchor15.getMargin(), 7);
             }
@@ -282,63 +287,63 @@ public class Chain {
             if (z12 && constraintWidget8 != null) {
                 int i16 = chainHead.mWidgetsMatchCount;
                 boolean z13 = i16 > 0 && chainHead.mWidgetsCount == i16;
-                ConstraintWidget constraintWidget15 = constraintWidget8;
-                ConstraintWidget constraintWidget16 = constraintWidget15;
-                while (constraintWidget15 != null) {
-                    ConstraintWidget constraintWidget17 = constraintWidget15.mNextChainWidget[i];
-                    while (constraintWidget17 != null && constraintWidget17.getVisibility() == i15) {
-                        constraintWidget17 = constraintWidget17.mNextChainWidget[i];
+                ConstraintWidget constraintWidget16 = constraintWidget8;
+                ConstraintWidget constraintWidget17 = constraintWidget16;
+                while (constraintWidget16 != null) {
+                    ConstraintWidget constraintWidget18 = constraintWidget16.mNextChainWidget[i];
+                    while (constraintWidget18 != null && constraintWidget18.getVisibility() == i15) {
+                        constraintWidget18 = constraintWidget18.mNextChainWidget[i];
                     }
-                    if (constraintWidget15 == constraintWidget8 || constraintWidget15 == constraintWidget9 || constraintWidget17 == null) {
-                        constraintWidget = constraintWidget16;
+                    if (constraintWidget16 == constraintWidget8 || constraintWidget16 == constraintWidget9 || constraintWidget18 == null) {
+                        constraintWidget = constraintWidget17;
                         i4 = 8;
                     } else {
-                        ConstraintWidget constraintWidget18 = constraintWidget17 == constraintWidget9 ? null : constraintWidget17;
-                        ConstraintAnchor constraintAnchor16 = constraintWidget15.mListAnchors[i2];
+                        ConstraintWidget constraintWidget19 = constraintWidget18 == constraintWidget9 ? null : constraintWidget18;
+                        ConstraintAnchor constraintAnchor16 = constraintWidget16.mListAnchors[i2];
                         SolverVariable solverVariable12 = constraintAnchor16.mSolverVariable;
                         ConstraintAnchor constraintAnchor17 = constraintAnchor16.mTarget;
                         if (constraintAnchor17 != null) {
                             SolverVariable solverVariable13 = constraintAnchor17.mSolverVariable;
                         }
                         int i17 = i2 + 1;
-                        SolverVariable solverVariable14 = constraintWidget16.mListAnchors[i17].mSolverVariable;
+                        SolverVariable solverVariable14 = constraintWidget17.mListAnchors[i17].mSolverVariable;
                         int margin2 = constraintAnchor16.getMargin();
-                        int margin3 = constraintWidget15.mListAnchors[i17].getMargin();
-                        if (constraintWidget18 != null) {
-                            constraintAnchor = constraintWidget18.mListAnchors[i2];
+                        int margin3 = constraintWidget16.mListAnchors[i17].getMargin();
+                        if (constraintWidget19 != null) {
+                            constraintAnchor = constraintWidget19.mListAnchors[i2];
                             solverVariable = constraintAnchor.mSolverVariable;
                             ConstraintAnchor constraintAnchor18 = constraintAnchor.mTarget;
                             solverVariable2 = constraintAnchor18 != null ? constraintAnchor18.mSolverVariable : null;
                         } else {
                             constraintAnchor = constraintWidget9.mListAnchors[i2];
                             solverVariable = constraintAnchor != null ? constraintAnchor.mSolverVariable : null;
-                            solverVariable2 = constraintWidget15.mListAnchors[i17].mSolverVariable;
+                            solverVariable2 = constraintWidget16.mListAnchors[i17].mSolverVariable;
                         }
                         int margin4 = constraintAnchor != null ? constraintAnchor.getMargin() + margin3 : margin3;
-                        int margin5 = constraintWidget16.mListAnchors[i17].getMargin() + margin2;
+                        int margin5 = constraintWidget17.mListAnchors[i17].getMargin() + margin2;
                         int i18 = z13 ? 8 : 4;
                         if (solverVariable12 == null || solverVariable14 == null || solverVariable == null || solverVariable2 == null) {
-                            constraintWidget2 = constraintWidget18;
-                            constraintWidget = constraintWidget16;
+                            constraintWidget2 = constraintWidget19;
+                            constraintWidget = constraintWidget17;
                             i4 = 8;
                         } else {
-                            constraintWidget2 = constraintWidget18;
+                            constraintWidget2 = constraintWidget19;
                             int i19 = margin4;
-                            constraintWidget = constraintWidget16;
+                            constraintWidget = constraintWidget17;
                             i4 = 8;
                             linearSystem.addCentering(solverVariable12, solverVariable14, margin5, 0.5f, solverVariable, solverVariable2, i19, i18);
                         }
-                        constraintWidget17 = constraintWidget2;
+                        constraintWidget18 = constraintWidget2;
                     }
-                    if (constraintWidget15.getVisibility() == i4) {
-                        constraintWidget15 = constraintWidget;
+                    if (constraintWidget16.getVisibility() == i4) {
+                        constraintWidget16 = constraintWidget;
                     }
-                    constraintWidget16 = constraintWidget15;
+                    constraintWidget17 = constraintWidget16;
                     i15 = 8;
-                    constraintWidget15 = constraintWidget17;
+                    constraintWidget16 = constraintWidget18;
                 }
                 ConstraintAnchor constraintAnchor19 = constraintWidget8.mListAnchors[i2];
-                ConstraintAnchor constraintAnchor20 = constraintWidget12.mListAnchors[i2].mTarget;
+                ConstraintAnchor constraintAnchor20 = constraintWidget13.mListAnchors[i2].mTarget;
                 int i20 = i2 + 1;
                 ConstraintAnchor constraintAnchor21 = constraintWidget9.mListAnchors[i20];
                 ConstraintAnchor constraintAnchor22 = constraintWidget7.mListAnchors[i20].mTarget;
@@ -360,58 +365,58 @@ public class Chain {
         } else {
             int i21 = chainHead.mWidgetsMatchCount;
             boolean z14 = i21 > 0 && chainHead.mWidgetsCount == i21;
-            ConstraintWidget constraintWidget19 = constraintWidget8;
-            ConstraintWidget constraintWidget20 = constraintWidget19;
-            while (constraintWidget19 != null) {
-                ConstraintWidget constraintWidget21 = constraintWidget19.mNextChainWidget[i];
-                while (constraintWidget21 != null && constraintWidget21.getVisibility() == 8) {
-                    constraintWidget21 = constraintWidget21.mNextChainWidget[i];
+            ConstraintWidget constraintWidget20 = constraintWidget8;
+            ConstraintWidget constraintWidget21 = constraintWidget20;
+            while (constraintWidget20 != null) {
+                ConstraintWidget constraintWidget22 = constraintWidget20.mNextChainWidget[i];
+                while (constraintWidget22 != null && constraintWidget22.getVisibility() == 8) {
+                    constraintWidget22 = constraintWidget22.mNextChainWidget[i];
                 }
-                if (constraintWidget21 != null || constraintWidget19 == constraintWidget9) {
-                    ConstraintAnchor constraintAnchor23 = constraintWidget19.mListAnchors[i2];
+                if (constraintWidget22 != null || constraintWidget20 == constraintWidget9) {
+                    ConstraintAnchor constraintAnchor23 = constraintWidget20.mListAnchors[i2];
                     SolverVariable solverVariable15 = constraintAnchor23.mSolverVariable;
                     ConstraintAnchor constraintAnchor24 = constraintAnchor23.mTarget;
                     SolverVariable solverVariable16 = constraintAnchor24 != null ? constraintAnchor24.mSolverVariable : null;
-                    if (constraintWidget20 != constraintWidget19) {
-                        solverVariable16 = constraintWidget20.mListAnchors[i2 + 1].mSolverVariable;
-                    } else if (constraintWidget19 == constraintWidget8 && constraintWidget20 == constraintWidget19) {
-                        ConstraintAnchor[] constraintAnchorArr8 = constraintWidget12.mListAnchors;
+                    if (constraintWidget21 != constraintWidget20) {
+                        solverVariable16 = constraintWidget21.mListAnchors[i2 + 1].mSolverVariable;
+                    } else if (constraintWidget20 == constraintWidget8 && constraintWidget21 == constraintWidget20) {
+                        ConstraintAnchor[] constraintAnchorArr8 = constraintWidget13.mListAnchors;
                         solverVariable16 = constraintAnchorArr8[i2].mTarget != null ? constraintAnchorArr8[i2].mTarget.mSolverVariable : null;
                     }
                     int margin6 = constraintAnchor23.getMargin();
                     int i22 = i2 + 1;
-                    int margin7 = constraintWidget19.mListAnchors[i22].getMargin();
-                    if (constraintWidget21 != null) {
-                        constraintAnchor2 = constraintWidget21.mListAnchors[i2];
+                    int margin7 = constraintWidget20.mListAnchors[i22].getMargin();
+                    if (constraintWidget22 != null) {
+                        constraintAnchor2 = constraintWidget22.mListAnchors[i2];
                         SolverVariable solverVariable17 = constraintAnchor2.mSolverVariable;
-                        solverVariable4 = constraintWidget19.mListAnchors[i22].mSolverVariable;
+                        solverVariable4 = constraintWidget20.mListAnchors[i22].mSolverVariable;
                         solverVariable3 = solverVariable17;
                     } else {
                         constraintAnchor2 = constraintWidget7.mListAnchors[i22].mTarget;
                         solverVariable3 = constraintAnchor2 != null ? constraintAnchor2.mSolverVariable : null;
-                        solverVariable4 = constraintWidget19.mListAnchors[i22].mSolverVariable;
+                        solverVariable4 = constraintWidget20.mListAnchors[i22].mSolverVariable;
                     }
                     if (constraintAnchor2 != null) {
                         margin7 += constraintAnchor2.getMargin();
                     }
-                    if (constraintWidget20 != null) {
-                        margin6 += constraintWidget20.mListAnchors[i22].getMargin();
+                    if (constraintWidget21 != null) {
+                        margin6 += constraintWidget21.mListAnchors[i22].getMargin();
                     }
                     if (solverVariable15 == null || solverVariable16 == null || solverVariable3 == null || solverVariable4 == null) {
-                        constraintWidget3 = constraintWidget21;
+                        constraintWidget3 = constraintWidget22;
                     } else {
-                        if (constraintWidget19 == constraintWidget8) {
+                        if (constraintWidget20 == constraintWidget8) {
                             margin6 = constraintWidget8.mListAnchors[i2].getMargin();
                         }
                         int i23 = margin6;
-                        constraintWidget3 = constraintWidget21;
-                        linearSystem.addCentering(solverVariable15, solverVariable16, i23, 0.5f, solverVariable3, solverVariable4, constraintWidget19 == constraintWidget9 ? constraintWidget9.mListAnchors[i22].getMargin() : margin7, z14 ? 8 : 5);
+                        constraintWidget3 = constraintWidget22;
+                        linearSystem.addCentering(solverVariable15, solverVariable16, i23, 0.5f, solverVariable3, solverVariable4, constraintWidget20 == constraintWidget9 ? constraintWidget9.mListAnchors[i22].getMargin() : margin7, z14 ? 8 : 5);
                     }
                 }
-                if (constraintWidget19.getVisibility() != 8) {
-                    constraintWidget20 = constraintWidget19;
+                if (constraintWidget20.getVisibility() != 8) {
+                    constraintWidget21 = constraintWidget20;
                 }
-                constraintWidget19 = constraintWidget3;
+                constraintWidget20 = constraintWidget3;
             }
         }
         if ((!z11 && !z12) || constraintWidget8 == null || constraintWidget8 == constraintWidget9) {
@@ -424,18 +429,18 @@ public class Chain {
         ConstraintAnchor constraintAnchor27 = constraintAnchor25.mTarget;
         SolverVariable solverVariable18 = constraintAnchor27 != null ? constraintAnchor27.mSolverVariable : null;
         ConstraintAnchor constraintAnchor28 = constraintAnchor26.mTarget;
-        SolverVariable solverVariable19 = constraintAnchor28 != null ? constraintAnchor28.mSolverVariable : null;
+        ?? r5 = constraintAnchor28 != null ? constraintAnchor28.mSolverVariable : 0;
         if (constraintWidget7 != constraintWidget9) {
             ConstraintAnchor constraintAnchor29 = constraintWidget7.mListAnchors[i24].mTarget;
-            solverVariable19 = constraintAnchor29 != null ? constraintAnchor29.mSolverVariable : null;
+            r5 = constraintAnchor29 != null ? constraintAnchor29.mSolverVariable : null;
         }
         if (constraintWidget8 == constraintWidget9) {
             constraintAnchor25 = constraintAnchorArr9[i2];
             constraintAnchor26 = constraintAnchorArr9[i24];
         }
-        if (solverVariable18 == null || solverVariable19 == null) {
+        if (solverVariable18 == null || r5 == 0) {
             return;
         }
-        linearSystem.addCentering(constraintAnchor25.mSolverVariable, solverVariable18, constraintAnchor25.getMargin(), 0.5f, solverVariable19, constraintAnchor26.mSolverVariable, constraintWidget9.mListAnchors[i24].getMargin(), 5);
+        linearSystem.addCentering(constraintAnchor25.mSolverVariable, solverVariable18, constraintAnchor25.getMargin(), 0.5f, r5, constraintAnchor26.mSolverVariable, constraintWidget9.mListAnchors[i24].getMargin(), 5);
     }
 }

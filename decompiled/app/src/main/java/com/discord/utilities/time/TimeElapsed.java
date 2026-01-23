@@ -5,14 +5,14 @@ import kotlin.jvm.internal.DefaultConstructorMarker;
 import p507d0.LazyJVM;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: TimeElapsed.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: TimeElapsed.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class TimeElapsed {
 
-    /* renamed from: milliseconds$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: milliseconds$delegate, reason: from kotlin metadata */
     private final Lazy milliseconds;
 
-    /* renamed from: seconds$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: seconds$delegate, reason: from kotlin metadata */
     private final Lazy seconds;
     private final long startTime;
 

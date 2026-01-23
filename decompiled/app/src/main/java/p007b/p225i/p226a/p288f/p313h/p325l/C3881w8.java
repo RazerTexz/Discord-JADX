@@ -1,11 +1,11 @@
 package p007b.p225i.p226a.p288f.p313h.p325l;
 
-/* compiled from: com.google.android.gms:play-services-measurement-impl@@18.0.0 */
-/* renamed from: b.i.a.f.h.l.w8 */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.h.l.w8 */
+/* JADX INFO: compiled from: com.google.android.gms:play-services-measurement-impl@@18.0.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public final class C3881w8 implements InterfaceC3894x8 {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final AbstractC3732l2<Boolean> f10392a;
 
     static {
@@ -17,7 +17,7 @@ public final class C3881w8 implements InterfaceC3894x8 {
     }
 
     @Override // p007b.p225i.p226a.p288f.p313h.p325l.InterfaceC3894x8
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final boolean mo5351a() {
         return f10392a.m5050d().booleanValue();
     }

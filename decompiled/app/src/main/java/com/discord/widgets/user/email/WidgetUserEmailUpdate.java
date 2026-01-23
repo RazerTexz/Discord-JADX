@@ -36,18 +36,18 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 import p658rx.functions.Action1;
 
-/* compiled from: WidgetUserEmailUpdate.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: WidgetUserEmailUpdate.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class WidgetUserEmailUpdate extends WidgetUserAccountVerifyBase {
     public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetUserEmailUpdate.class, "binding", "getBinding()Lcom/discord/databinding/WidgetUserEmailUpdateBinding;", 0)};
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
 
-    /* renamed from: binding$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
 
-    /* compiled from: WidgetUserEmailUpdate.kt */
+    /* JADX INFO: compiled from: WidgetUserEmailUpdate.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -84,8 +84,8 @@ public final class WidgetUserEmailUpdate extends WidgetUserAccountVerifyBase {
         }
     }
 
-    /* compiled from: WidgetUserEmailUpdate.kt */
-    /* renamed from: com.discord.widgets.user.email.WidgetUserEmailUpdate$onViewBound$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.user.email.WidgetUserEmailUpdate$onViewBound$1 */
+    /* JADX INFO: compiled from: WidgetUserEmailUpdate.kt */
     public static final class C102531 extends Lambda implements Function1<Editable, Unit> {
         public C102531() {
             super(1);
@@ -97,15 +97,15 @@ public final class WidgetUserEmailUpdate extends WidgetUserAccountVerifyBase {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Editable editable) {
             Intrinsics3.checkNotNullParameter(editable, "it");
             WidgetUserEmailUpdate.access$handleTextChanged(WidgetUserEmailUpdate.this);
         }
     }
 
-    /* compiled from: WidgetUserEmailUpdate.kt */
-    /* renamed from: com.discord.widgets.user.email.WidgetUserEmailUpdate$onViewBound$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.user.email.WidgetUserEmailUpdate$onViewBound$2 */
+    /* JADX INFO: compiled from: WidgetUserEmailUpdate.kt */
     public static final class C102542 extends Lambda implements Function1<Editable, Unit> {
         public C102542() {
             super(1);
@@ -117,19 +117,19 @@ public final class WidgetUserEmailUpdate extends WidgetUserAccountVerifyBase {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Editable editable) {
             Intrinsics3.checkNotNullParameter(editable, "it");
             WidgetUserEmailUpdate.access$handleTextChanged(WidgetUserEmailUpdate.this);
         }
     }
 
-    /* compiled from: WidgetUserEmailUpdate.kt */
-    /* renamed from: com.discord.widgets.user.email.WidgetUserEmailUpdate$onViewBound$3 */
+    /* JADX INFO: renamed from: com.discord.widgets.user.email.WidgetUserEmailUpdate$onViewBound$3 */
+    /* JADX INFO: compiled from: WidgetUserEmailUpdate.kt */
     public static final class ViewOnClickListenerC102553 implements View.OnClickListener {
 
-        /* compiled from: WidgetUserEmailUpdate.kt */
-        /* renamed from: com.discord.widgets.user.email.WidgetUserEmailUpdate$onViewBound$3$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.widgets.user.email.WidgetUserEmailUpdate$onViewBound$3$1, reason: invalid class name */
+        /* JADX INFO: compiled from: WidgetUserEmailUpdate.kt */
         public static final class AnonymousClass1<T> implements Action1<User> {
             public AnonymousClass1() {
             }
@@ -139,7 +139,7 @@ public final class WidgetUserEmailUpdate extends WidgetUserAccountVerifyBase {
                 call2(user);
             }
 
-            /* renamed from: call, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
             public final void call2(User user) {
                 WidgetUserEmailUpdate.access$onEmailUpdated(WidgetUserEmailUpdate.this);
             }

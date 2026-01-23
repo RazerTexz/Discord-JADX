@@ -42,8 +42,8 @@ import p507d0.p592z.p594d.Reflection2;
 import p658rx.Observable;
 import p658rx.subscriptions.CompositeSubscription;
 
-/* compiled from: WidgetFeedbackSheet.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetFeedbackSheet.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetFeedbackSheet extends AppBottomSheet {
     public static final String ARG_CALL_FEEDBACK_CONFIG = "ARG_CONFIG";
     public static final String ARG_FEEDBACK_TYPE = "ARG_FEEDBACK_TYPE";
@@ -53,25 +53,25 @@ public final class WidgetFeedbackSheet extends AppBottomSheet {
     private static final long SHEET_DISMISS_DELAY_MS = 600;
     private static final long SHEET_EXPAND_DELAY_MS = 100;
 
-    /* renamed from: binding$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
     private boolean isShowingFeedbackIssues;
     private Function0<Unit> onDismissed;
 
-    /* renamed from: viewModelCallFeedbackSheet$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: viewModelCallFeedbackSheet$delegate, reason: from kotlin metadata */
     private final Lazy viewModelCallFeedbackSheet;
 
-    /* renamed from: viewModelGuildDeleteFeedbackSheet$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: viewModelGuildDeleteFeedbackSheet$delegate, reason: from kotlin metadata */
     private final Lazy viewModelGuildDeleteFeedbackSheet;
 
-    /* renamed from: viewModelStreamFeedbackSheet$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: viewModelStreamFeedbackSheet$delegate, reason: from kotlin metadata */
     private final Lazy viewModelStreamFeedbackSheet;
     public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetFeedbackSheet.class, "binding", "getBinding()Lcom/discord/databinding/WidgetFeedbackSheetBinding;", 0)};
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
 
-    /* compiled from: WidgetFeedbackSheet.kt */
+    /* JADX INFO: compiled from: WidgetFeedbackSheet.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -90,7 +90,7 @@ public final class WidgetFeedbackSheet extends AppBottomSheet {
         }
     }
 
-    /* compiled from: WidgetFeedbackSheet.kt */
+    /* JADX INFO: compiled from: WidgetFeedbackSheet.kt */
     public enum FeedbackType {
         CALL,
         STREAM,
@@ -110,8 +110,8 @@ public final class WidgetFeedbackSheet extends AppBottomSheet {
         }
     }
 
-    /* compiled from: WidgetFeedbackSheet.kt */
-    /* renamed from: com.discord.widgets.feedback.WidgetFeedbackSheet$bindSubscriptions$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.feedback.WidgetFeedbackSheet$bindSubscriptions$1 */
+    /* JADX INFO: compiled from: WidgetFeedbackSheet.kt */
     public static final /* synthetic */ class C83121 extends FunctionReferenceImpl implements Function1<FeedbackSheetViewModel.ViewState, Unit> {
         public C83121(WidgetFeedbackSheet widgetFeedbackSheet) {
             super(1, widgetFeedbackSheet, WidgetFeedbackSheet.class, "updateView", "updateView(Lcom/discord/widgets/feedback/FeedbackSheetViewModel$ViewState;)V", 0);
@@ -123,15 +123,15 @@ public final class WidgetFeedbackSheet extends AppBottomSheet {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(FeedbackSheetViewModel.ViewState viewState) {
             Intrinsics3.checkNotNullParameter(viewState, "p1");
             WidgetFeedbackSheet.access$updateView((WidgetFeedbackSheet) this.receiver, viewState);
         }
     }
 
-    /* compiled from: WidgetFeedbackSheet.kt */
-    /* renamed from: com.discord.widgets.feedback.WidgetFeedbackSheet$bindSubscriptions$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.feedback.WidgetFeedbackSheet$bindSubscriptions$2 */
+    /* JADX INFO: compiled from: WidgetFeedbackSheet.kt */
     public static final /* synthetic */ class C83132 extends FunctionReferenceImpl implements Function1<FeedbackSheetViewModel.Event, Unit> {
         public C83132(WidgetFeedbackSheet widgetFeedbackSheet) {
             super(1, widgetFeedbackSheet, WidgetFeedbackSheet.class, "handleEvent", "handleEvent(Lcom/discord/widgets/feedback/FeedbackSheetViewModel$Event;)V", 0);
@@ -143,15 +143,15 @@ public final class WidgetFeedbackSheet extends AppBottomSheet {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(FeedbackSheetViewModel.Event event) {
             Intrinsics3.checkNotNullParameter(event, "p1");
             WidgetFeedbackSheet.access$handleEvent((WidgetFeedbackSheet) this.receiver, event);
         }
     }
 
-    /* compiled from: WidgetFeedbackSheet.kt */
-    /* renamed from: com.discord.widgets.feedback.WidgetFeedbackSheet$handleEvent$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.feedback.WidgetFeedbackSheet$handleEvent$1 */
+    /* JADX INFO: compiled from: WidgetFeedbackSheet.kt */
     public static final class C83141 extends Lambda implements Function1<Long, Unit> {
         public C83141() {
             super(1);
@@ -163,15 +163,15 @@ public final class WidgetFeedbackSheet extends AppBottomSheet {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Long l) {
             AppToast.m171i(WidgetFeedbackSheet.this, C5419R.string.call_feedback_confirmation, 0, 4);
             WidgetFeedbackSheet.this.requireDialog().cancel();
         }
     }
 
-    /* compiled from: WidgetFeedbackSheet.kt */
-    /* renamed from: com.discord.widgets.feedback.WidgetFeedbackSheet$onResume$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.feedback.WidgetFeedbackSheet$onResume$1 */
+    /* JADX INFO: compiled from: WidgetFeedbackSheet.kt */
     public static final class ViewOnClickListenerC83151 implements View.OnClickListener {
         public ViewOnClickListenerC83151() {
         }
@@ -182,8 +182,8 @@ public final class WidgetFeedbackSheet extends AppBottomSheet {
         }
     }
 
-    /* compiled from: WidgetFeedbackSheet.kt */
-    /* renamed from: com.discord.widgets.feedback.WidgetFeedbackSheet$updateView$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.feedback.WidgetFeedbackSheet$updateView$2 */
+    /* JADX INFO: compiled from: WidgetFeedbackSheet.kt */
     public static final class C83162 extends Lambda implements Function0<Unit> {
         public C83162() {
             super(0);
@@ -195,14 +195,14 @@ public final class WidgetFeedbackSheet extends AppBottomSheet {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             WidgetFeedbackSheet.access$getViewModel$p(WidgetFeedbackSheet.this).selectRating(FeedbackRating.BAD);
         }
     }
 
-    /* compiled from: WidgetFeedbackSheet.kt */
-    /* renamed from: com.discord.widgets.feedback.WidgetFeedbackSheet$updateView$3 */
+    /* JADX INFO: renamed from: com.discord.widgets.feedback.WidgetFeedbackSheet$updateView$3 */
+    /* JADX INFO: compiled from: WidgetFeedbackSheet.kt */
     public static final class C83173 extends Lambda implements Function0<Unit> {
         public C83173() {
             super(0);
@@ -214,14 +214,14 @@ public final class WidgetFeedbackSheet extends AppBottomSheet {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             WidgetFeedbackSheet.access$getViewModel$p(WidgetFeedbackSheet.this).selectRating(FeedbackRating.NEUTRAL);
         }
     }
 
-    /* compiled from: WidgetFeedbackSheet.kt */
-    /* renamed from: com.discord.widgets.feedback.WidgetFeedbackSheet$updateView$4 */
+    /* JADX INFO: renamed from: com.discord.widgets.feedback.WidgetFeedbackSheet$updateView$4 */
+    /* JADX INFO: compiled from: WidgetFeedbackSheet.kt */
     public static final class C83184 extends Lambda implements Function0<Unit> {
         public C83184() {
             super(0);
@@ -233,14 +233,14 @@ public final class WidgetFeedbackSheet extends AppBottomSheet {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             WidgetFeedbackSheet.access$getViewModel$p(WidgetFeedbackSheet.this).selectRating(FeedbackRating.GOOD);
         }
     }
 
-    /* compiled from: WidgetFeedbackSheet.kt */
-    /* renamed from: com.discord.widgets.feedback.WidgetFeedbackSheet$updateView$5 */
+    /* JADX INFO: renamed from: com.discord.widgets.feedback.WidgetFeedbackSheet$updateView$5 */
+    /* JADX INFO: compiled from: WidgetFeedbackSheet.kt */
     public static final class C83195 extends Lambda implements Function1<FeedbackIssue, Unit> {
         public C83195() {
             super(1);
@@ -252,15 +252,15 @@ public final class WidgetFeedbackSheet extends AppBottomSheet {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(FeedbackIssue feedbackIssue) {
             Intrinsics3.checkNotNullParameter(feedbackIssue, "issue");
             WidgetFeedbackSheet.access$getViewModel$p(WidgetFeedbackSheet.this).selectIssue(feedbackIssue, WidgetFeedbackSheet.this.getString(feedbackIssue.getReasonStringRes()));
         }
     }
 
-    /* compiled from: WidgetFeedbackSheet.kt */
-    /* renamed from: com.discord.widgets.feedback.WidgetFeedbackSheet$updateView$6 */
+    /* JADX INFO: renamed from: com.discord.widgets.feedback.WidgetFeedbackSheet$updateView$6 */
+    /* JADX INFO: compiled from: WidgetFeedbackSheet.kt */
     public static final class C83206 extends Lambda implements Function1<Long, Unit> {
         public C83206() {
             super(1);
@@ -272,7 +272,7 @@ public final class WidgetFeedbackSheet extends AppBottomSheet {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Long l) {
             WidgetFeedbackSheet.access$setShowingFeedbackIssues$p(WidgetFeedbackSheet.this, true);
             WidgetFeedbackSheet.this.setBottomSheetState(3);

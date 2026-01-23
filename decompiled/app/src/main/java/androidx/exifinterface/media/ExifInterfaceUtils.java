@@ -13,7 +13,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class ExifInterfaceUtils {
     private static final String TAG = "ExifInterfaceUtils";
 
@@ -44,7 +44,7 @@ public class ExifInterfaceUtils {
         }
 
         @DoNotInline
-        public static void setDataSource(MediaMetadataRetriever mediaMetadataRetriever, MediaDataSource mediaDataSource) throws IllegalArgumentException {
+        public static void setDataSource(MediaMetadataRetriever mediaMetadataRetriever, MediaDataSource mediaDataSource) {
             mediaMetadataRetriever.setDataSource(mediaDataSource);
         }
     }

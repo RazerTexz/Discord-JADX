@@ -3,8 +3,8 @@ package co.discord.media_engine;
 import p001a0.p002a.p003a.C0001a;
 import p007b.p100d.p104b.p105a.outline;
 
-/* compiled from: Statistics.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: Statistics.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class PlayoutMetric {
     private final double last;
     private final double max;
@@ -26,32 +26,32 @@ public final /* data */ class PlayoutMetric {
         return playoutMetric.copy((i & 1) != 0 ? playoutMetric.last : d, (i & 2) != 0 ? playoutMetric.mean : d2, (i & 4) != 0 ? playoutMetric.p75 : d3, (i & 8) != 0 ? playoutMetric.p95 : d4, (i & 16) != 0 ? playoutMetric.p99 : d5, (i & 32) != 0 ? playoutMetric.max : d6);
     }
 
-    /* renamed from: component1, reason: from getter */
+    /* JADX INFO: renamed from: component1, reason: from getter */
     public final double getLast() {
         return this.last;
     }
 
-    /* renamed from: component2, reason: from getter */
+    /* JADX INFO: renamed from: component2, reason: from getter */
     public final double getMean() {
         return this.mean;
     }
 
-    /* renamed from: component3, reason: from getter */
+    /* JADX INFO: renamed from: component3, reason: from getter */
     public final double getP75() {
         return this.p75;
     }
 
-    /* renamed from: component4, reason: from getter */
+    /* JADX INFO: renamed from: component4, reason: from getter */
     public final double getP95() {
         return this.p95;
     }
 
-    /* renamed from: component5, reason: from getter */
+    /* JADX INFO: renamed from: component5, reason: from getter */
     public final double getP99() {
         return this.p99;
     }
 
-    /* renamed from: component6, reason: from getter */
+    /* JADX INFO: renamed from: component6, reason: from getter */
     public final double getMax() {
         return this.max;
     }

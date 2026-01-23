@@ -58,8 +58,8 @@ import p658rx.subjects.BehaviorSubject;
 import p658rx.subjects.PublishSubject;
 import p658rx.subjects.SerializedSubject;
 
-/* compiled from: StoreRtcConnection.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: StoreRtcConnection.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class StoreRtcConnection extends RtcConnection.AbstractC5616b implements DebugPrintable {
     private static final long SPEAKING_UPDATES_BUFFER_MS = 300;
     private static int instanceCounter;
@@ -94,7 +94,7 @@ public final class StoreRtcConnection extends RtcConnection.AbstractC5616b imple
     private StoreRtcConnection2 voicePropsTracker;
     private VoiceServer voiceServer;
 
-    /* compiled from: StoreRtcConnection.kt */
+    /* JADX INFO: compiled from: StoreRtcConnection.kt */
     public static abstract class DefaultListener implements Listener {
         @Override // com.discord.stores.StoreRtcConnection.Listener
         public void onConnected() {
@@ -113,7 +113,7 @@ public final class StoreRtcConnection extends RtcConnection.AbstractC5616b imple
         }
     }
 
-    /* compiled from: StoreRtcConnection.kt */
+    /* JADX INFO: compiled from: StoreRtcConnection.kt */
     public interface Listener {
         void onConnected();
 
@@ -124,7 +124,7 @@ public final class StoreRtcConnection extends RtcConnection.AbstractC5616b imple
         /* synthetic */ void onFirstFrameSent();
     }
 
-    /* compiled from: StoreRtcConnection.kt */
+    /* JADX INFO: compiled from: StoreRtcConnection.kt */
     public static final /* data */ class SpeakingUserUpdate {
         private final boolean isSpeaking;
         private final long userId;
@@ -144,12 +144,12 @@ public final class StoreRtcConnection extends RtcConnection.AbstractC5616b imple
             return speakingUserUpdate.copy(j, z2);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final long getUserId() {
             return this.userId;
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final boolean getIsSpeaking() {
             return this.isSpeaking;
         }
@@ -174,14 +174,17 @@ public final class StoreRtcConnection extends RtcConnection.AbstractC5616b imple
         }
 
         /* JADX WARN: Multi-variable type inference failed */
+        /* JADX WARN: Type inference failed for: r1v1, types: [int] */
+        /* JADX WARN: Type inference failed for: r1v2 */
+        /* JADX WARN: Type inference failed for: r1v3 */
         public int hashCode() {
             int iM3a = C0002b.m3a(this.userId) * 31;
             boolean z2 = this.isSpeaking;
-            int i = z2;
-            if (z2 != 0) {
-                i = 1;
+            ?? r1 = z2;
+            if (z2) {
+                r1 = 1;
             }
-            return iM3a + i;
+            return iM3a + r1;
         }
 
         public final boolean isSpeaking() {
@@ -211,8 +214,8 @@ public final class StoreRtcConnection extends RtcConnection.AbstractC5616b imple
         }
     }
 
-    /* compiled from: StoreRtcConnection.kt */
-    /* renamed from: com.discord.stores.StoreRtcConnection$createRtcConnection$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreRtcConnection$createRtcConnection$1 */
+    /* JADX INFO: compiled from: StoreRtcConnection.kt */
     public static final class C63571 extends Lambda implements Function1<Listener, Unit> {
         public static final C63571 INSTANCE = new C63571();
 
@@ -226,19 +229,19 @@ public final class StoreRtcConnection extends RtcConnection.AbstractC5616b imple
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Listener listener) {
             Intrinsics3.checkNotNullParameter(listener, "it");
             listener.onConnecting();
         }
     }
 
-    /* compiled from: StoreRtcConnection.kt */
-    /* renamed from: com.discord.stores.StoreRtcConnection$init$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreRtcConnection$init$1 */
+    /* JADX INFO: compiled from: StoreRtcConnection.kt */
     public static final class C63581 extends Lambda implements Function1<Boolean, Unit> {
 
-        /* compiled from: StoreRtcConnection.kt */
-        /* renamed from: com.discord.stores.StoreRtcConnection$init$1$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.stores.StoreRtcConnection$init$1$1, reason: invalid class name */
+        /* JADX INFO: compiled from: StoreRtcConnection.kt */
         public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
             public final /* synthetic */ boolean $isMuted;
 
@@ -254,7 +257,7 @@ public final class StoreRtcConnection extends RtcConnection.AbstractC5616b imple
                 return Unit.f27425a;
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2() {
                 StoreRtcConnection.access$handleSelfMuted(StoreRtcConnection.this, this.$isMuted);
             }
@@ -275,12 +278,12 @@ public final class StoreRtcConnection extends RtcConnection.AbstractC5616b imple
         }
     }
 
-    /* compiled from: StoreRtcConnection.kt */
-    /* renamed from: com.discord.stores.StoreRtcConnection$init$2 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreRtcConnection$init$2 */
+    /* JADX INFO: compiled from: StoreRtcConnection.kt */
     public static final class C63592 extends Lambda implements Function1<Boolean, Unit> {
 
-        /* compiled from: StoreRtcConnection.kt */
-        /* renamed from: com.discord.stores.StoreRtcConnection$init$2$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.stores.StoreRtcConnection$init$2$1, reason: invalid class name */
+        /* JADX INFO: compiled from: StoreRtcConnection.kt */
         public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
             public final /* synthetic */ boolean $isDeafened;
 
@@ -296,7 +299,7 @@ public final class StoreRtcConnection extends RtcConnection.AbstractC5616b imple
                 return Unit.f27425a;
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2() {
                 StoreRtcConnection.access$handleSelfDeafened(StoreRtcConnection.this, this.$isDeafened);
             }
@@ -317,8 +320,8 @@ public final class StoreRtcConnection extends RtcConnection.AbstractC5616b imple
         }
     }
 
-    /* compiled from: StoreRtcConnection.kt */
-    /* renamed from: com.discord.stores.StoreRtcConnection$init$3 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreRtcConnection$init$3 */
+    /* JADX INFO: compiled from: StoreRtcConnection.kt */
     public static final class C63603<T, R> implements Func1<DeviceDescription4, Boolean> {
         public static final C63603 INSTANCE = new C63603();
 
@@ -327,18 +330,18 @@ public final class StoreRtcConnection extends RtcConnection.AbstractC5616b imple
             return call2(deviceDescription4);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final Boolean call2(DeviceDescription4 deviceDescription4) {
             return Boolean.valueOf(deviceDescription4 != null);
         }
     }
 
-    /* compiled from: StoreRtcConnection.kt */
-    /* renamed from: com.discord.stores.StoreRtcConnection$init$4 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreRtcConnection$init$4 */
+    /* JADX INFO: compiled from: StoreRtcConnection.kt */
     public static final class C63614 extends Lambda implements Function1<Boolean, Unit> {
 
-        /* compiled from: StoreRtcConnection.kt */
-        /* renamed from: com.discord.stores.StoreRtcConnection$init$4$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.stores.StoreRtcConnection$init$4$1, reason: invalid class name */
+        /* JADX INFO: compiled from: StoreRtcConnection.kt */
         public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
             public final /* synthetic */ Boolean $isVideoSelected;
 
@@ -354,7 +357,7 @@ public final class StoreRtcConnection extends RtcConnection.AbstractC5616b imple
                 return Unit.f27425a;
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2() {
                 StoreRtcConnection storeRtcConnection = StoreRtcConnection.this;
                 Boolean bool = this.$isVideoSelected;
@@ -373,18 +376,18 @@ public final class StoreRtcConnection extends RtcConnection.AbstractC5616b imple
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Boolean bool) {
             StoreRtcConnection.access$getDispatcher$p(StoreRtcConnection.this).schedule(new AnonymousClass1(bool));
         }
     }
 
-    /* compiled from: StoreRtcConnection.kt */
-    /* renamed from: com.discord.stores.StoreRtcConnection$init$5 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreRtcConnection$init$5 */
+    /* JADX INFO: compiled from: StoreRtcConnection.kt */
     public static final class C63625 extends Lambda implements Function1<Map<Long, ? extends Float>, Unit> {
 
-        /* compiled from: StoreRtcConnection.kt */
-        /* renamed from: com.discord.stores.StoreRtcConnection$init$5$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.stores.StoreRtcConnection$init$5$1, reason: invalid class name */
+        /* JADX INFO: compiled from: StoreRtcConnection.kt */
         public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
             public final /* synthetic */ Map $usersVolume;
 
@@ -400,7 +403,7 @@ public final class StoreRtcConnection extends RtcConnection.AbstractC5616b imple
                 return Unit.f27425a;
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2() {
                 StoreRtcConnection.access$handleUsersVolume(StoreRtcConnection.this, this.$usersVolume);
             }
@@ -416,19 +419,19 @@ public final class StoreRtcConnection extends RtcConnection.AbstractC5616b imple
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Map<Long, Float> map) {
             Intrinsics3.checkNotNullParameter(map, "usersVolume");
             StoreRtcConnection.access$getDispatcher$p(StoreRtcConnection.this).schedule(new AnonymousClass1(map));
         }
     }
 
-    /* compiled from: StoreRtcConnection.kt */
-    /* renamed from: com.discord.stores.StoreRtcConnection$init$6 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreRtcConnection$init$6 */
+    /* JADX INFO: compiled from: StoreRtcConnection.kt */
     public static final class C63636 extends Lambda implements Function1<Map<Long, ? extends Boolean>, Unit> {
 
-        /* compiled from: StoreRtcConnection.kt */
-        /* renamed from: com.discord.stores.StoreRtcConnection$init$6$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.stores.StoreRtcConnection$init$6$1, reason: invalid class name */
+        /* JADX INFO: compiled from: StoreRtcConnection.kt */
         public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
             public final /* synthetic */ Map $usersMuted;
 
@@ -444,7 +447,7 @@ public final class StoreRtcConnection extends RtcConnection.AbstractC5616b imple
                 return Unit.f27425a;
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2() {
                 StoreRtcConnection.access$handleUsersMuted(StoreRtcConnection.this, this.$usersMuted);
             }
@@ -460,19 +463,19 @@ public final class StoreRtcConnection extends RtcConnection.AbstractC5616b imple
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Map<Long, Boolean> map) {
             Intrinsics3.checkNotNullParameter(map, "usersMuted");
             StoreRtcConnection.access$getDispatcher$p(StoreRtcConnection.this).schedule(new AnonymousClass1(map));
         }
     }
 
-    /* compiled from: StoreRtcConnection.kt */
-    /* renamed from: com.discord.stores.StoreRtcConnection$init$7 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreRtcConnection$init$7 */
+    /* JADX INFO: compiled from: StoreRtcConnection.kt */
     public static final class C63647 extends Lambda implements Function1<Map<Long, ? extends Boolean>, Unit> {
 
-        /* compiled from: StoreRtcConnection.kt */
-        /* renamed from: com.discord.stores.StoreRtcConnection$init$7$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.stores.StoreRtcConnection$init$7$1, reason: invalid class name */
+        /* JADX INFO: compiled from: StoreRtcConnection.kt */
         public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
             public final /* synthetic */ Map $usersOffScreen;
 
@@ -488,7 +491,7 @@ public final class StoreRtcConnection extends RtcConnection.AbstractC5616b imple
                 return Unit.f27425a;
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2() {
                 StoreRtcConnection.access$handleUsersOffScreen(StoreRtcConnection.this, this.$usersOffScreen);
             }
@@ -504,15 +507,15 @@ public final class StoreRtcConnection extends RtcConnection.AbstractC5616b imple
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Map<Long, Boolean> map) {
             Intrinsics3.checkNotNullParameter(map, "usersOffScreen");
             StoreRtcConnection.access$getDispatcher$p(StoreRtcConnection.this).schedule(new AnonymousClass1(map));
         }
     }
 
-    /* compiled from: StoreRtcConnection.kt */
-    /* renamed from: com.discord.stores.StoreRtcConnection$onAnalyticsEvent$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreRtcConnection$onAnalyticsEvent$1 */
+    /* JADX INFO: compiled from: StoreRtcConnection.kt */
     public static final class C63651 extends Lambda implements Function0<Unit> {
         public final /* synthetic */ Map $properties;
 
@@ -528,14 +531,14 @@ public final class StoreRtcConnection extends RtcConnection.AbstractC5616b imple
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             StoreRtcConnection.access$getStoreAnalytics$p(StoreRtcConnection.this).trackVideoStreamEnded(this.$properties);
         }
     }
 
-    /* compiled from: StoreRtcConnection.kt */
-    /* renamed from: com.discord.stores.StoreRtcConnection$onFirstFrameReceived$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreRtcConnection$onFirstFrameReceived$1 */
+    /* JADX INFO: compiled from: StoreRtcConnection.kt */
     public static final class C63661 extends Lambda implements Function1<Listener, Unit> {
         public final /* synthetic */ long $ssrc;
 
@@ -551,15 +554,15 @@ public final class StoreRtcConnection extends RtcConnection.AbstractC5616b imple
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Listener listener) {
             Intrinsics3.checkNotNullParameter(listener, "it");
             listener.onFirstFrameReceived(this.$ssrc);
         }
     }
 
-    /* compiled from: StoreRtcConnection.kt */
-    /* renamed from: com.discord.stores.StoreRtcConnection$onFirstFrameSent$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreRtcConnection$onFirstFrameSent$1 */
+    /* JADX INFO: compiled from: StoreRtcConnection.kt */
     public static final class C63671 extends Lambda implements Function1<Listener, Unit> {
         public static final C63671 INSTANCE = new C63671();
 
@@ -573,15 +576,15 @@ public final class StoreRtcConnection extends RtcConnection.AbstractC5616b imple
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Listener listener) {
             Intrinsics3.checkNotNullParameter(listener, "it");
             listener.onFirstFrameSent();
         }
     }
 
-    /* compiled from: StoreRtcConnection.kt */
-    /* renamed from: com.discord.stores.StoreRtcConnection$onMediaEngineConnectionConnected$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreRtcConnection$onMediaEngineConnectionConnected$1 */
+    /* JADX INFO: compiled from: StoreRtcConnection.kt */
     public static final class C63681 extends Lambda implements Function0<Unit> {
         public final /* synthetic */ RtcConnection $connection;
 
@@ -597,14 +600,14 @@ public final class StoreRtcConnection extends RtcConnection.AbstractC5616b imple
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             StoreRtcConnection.applyVoiceConfiguration$default(StoreRtcConnection.this, this.$connection, null, 2, null);
         }
     }
 
-    /* compiled from: StoreRtcConnection.kt */
-    /* renamed from: com.discord.stores.StoreRtcConnection$onMediaSessionIdReceived$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreRtcConnection$onMediaSessionIdReceived$1 */
+    /* JADX INFO: compiled from: StoreRtcConnection.kt */
     public static final class C63691 extends Lambda implements Function0<Unit> {
         public C63691() {
             super(0);
@@ -616,14 +619,14 @@ public final class StoreRtcConnection extends RtcConnection.AbstractC5616b imple
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             StoreRtcConnection.access$handleMediaSessionIdReceived(StoreRtcConnection.this);
         }
     }
 
-    /* compiled from: StoreRtcConnection.kt */
-    /* renamed from: com.discord.stores.StoreRtcConnection$onSpeaking$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreRtcConnection$onSpeaking$1 */
+    /* JADX INFO: compiled from: StoreRtcConnection.kt */
     public static final class C63701 extends Lambda implements Function0<Unit> {
         public final /* synthetic */ boolean $isSpeaking;
         public final /* synthetic */ long $userId;
@@ -641,7 +644,7 @@ public final class StoreRtcConnection extends RtcConnection.AbstractC5616b imple
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             StoreRtcConnection2 storeRtcConnection2Access$getVoicePropsTracker$p = StoreRtcConnection.access$getVoicePropsTracker$p(StoreRtcConnection.this);
             if (storeRtcConnection2Access$getVoicePropsTracker$p != null) {
@@ -650,8 +653,8 @@ public final class StoreRtcConnection extends RtcConnection.AbstractC5616b imple
         }
     }
 
-    /* compiled from: StoreRtcConnection.kt */
-    /* renamed from: com.discord.stores.StoreRtcConnection$onStateChange$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreRtcConnection$onStateChange$1 */
+    /* JADX INFO: compiled from: StoreRtcConnection.kt */
     public static final class C63711 extends Lambda implements Function1<Listener, Unit> {
         public static final C63711 INSTANCE = new C63711();
 
@@ -665,15 +668,15 @@ public final class StoreRtcConnection extends RtcConnection.AbstractC5616b imple
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Listener listener) {
             Intrinsics3.checkNotNullParameter(listener, "it");
             listener.onConnected();
         }
     }
 
-    /* compiled from: StoreRtcConnection.kt */
-    /* renamed from: com.discord.stores.StoreRtcConnection$onVideoMetadata$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreRtcConnection$onVideoMetadata$1 */
+    /* JADX INFO: compiled from: StoreRtcConnection.kt */
     public static final class C63721 extends Lambda implements Function0<Unit> {
         public final /* synthetic */ VideoMetadata $metadata;
 
@@ -689,14 +692,14 @@ public final class StoreRtcConnection extends RtcConnection.AbstractC5616b imple
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             StoreRtcConnection.access$getStream$p(StoreRtcConnection.this).handleVideoMetadataUpdate(this.$metadata);
         }
     }
 
-    /* compiled from: StoreRtcConnection.kt */
-    /* renamed from: com.discord.stores.StoreRtcConnection$onVideoStream$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreRtcConnection$onVideoStream$1 */
+    /* JADX INFO: compiled from: StoreRtcConnection.kt */
     public static final class C63731 extends Lambda implements Function0<Unit> {
         public final /* synthetic */ int $audioSsrc;
         public final /* synthetic */ int $rtxSsrc;
@@ -720,7 +723,7 @@ public final class StoreRtcConnection extends RtcConnection.AbstractC5616b imple
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             StoreRtcConnection.access$getStream$p(StoreRtcConnection.this).handleVideoStreamUpdate(this.$userId, this.$streamId, this.$audioSsrc, this.$videoSsrc, this.$rtxSsrc);
         }
@@ -1140,7 +1143,7 @@ public final class StoreRtcConnection extends RtcConnection.AbstractC5616b imple
         return this.quality;
     }
 
-    /* renamed from: getRtcConnection$app_productionGoogleRelease, reason: from getter */
+    /* JADX INFO: renamed from: getRtcConnection$app_productionGoogleRelease, reason: from getter */
     public final RtcConnection getRtcConnection() {
         return this.rtcConnection;
     }

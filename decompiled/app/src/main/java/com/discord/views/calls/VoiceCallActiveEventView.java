@@ -12,11 +12,11 @@ import com.discord.C5419R;
 import p007b.p008a.p025i.ViewVoiceCallActiveEventBinding;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: VoiceCallActiveEventView.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: VoiceCallActiveEventView.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class VoiceCallActiveEventView extends ConstraintLayout {
 
-    /* renamed from: j, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: j, reason: from kotlin metadata */
     public final ViewVoiceCallActiveEventBinding binding;
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */

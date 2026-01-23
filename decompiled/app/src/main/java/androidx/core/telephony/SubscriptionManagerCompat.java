@@ -7,8 +7,8 @@ import androidx.annotation.RequiresApi;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 
+/* JADX INFO: loaded from: classes.dex */
 @RequiresApi(22)
-/* loaded from: classes.dex */
 public class SubscriptionManagerCompat {
     private static Method sGetSlotIndexMethod;
 

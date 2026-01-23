@@ -8,17 +8,17 @@ import com.discord.C5419R;
 import com.discord.utilities.accessibility.AccessibilityUtils;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: AppTransitionActivity.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: AppTransitionActivity.kt */
+/* JADX INFO: loaded from: classes.dex */
 public abstract class AppTransitionActivity extends AppCompatActivity {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static boolean f14963j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public C5457a f14964k = Transition.TYPE_SLIDE_POP_VERTICAL.getAnimations();
 
-    /* compiled from: AppTransitionActivity.kt */
+    /* JADX INFO: compiled from: AppTransitionActivity.kt */
     public enum Transition {
         TYPE_FADE(new C5457a(C5419R.anim.activity_fade_open_in, C5419R.anim.activity_fade_open_out, C5419R.anim.activity_fade_close_in, C5419R.anim.activity_fade_close_out)),
         TYPE_FADE_FAST(new C5457a(C5419R.anim.activity_fade_open_in_fast, C5419R.anim.activity_fade_open_out_fast, C5419R.anim.activity_fade_close_in_fast, C5419R.anim.activity_fade_close_out_fast)),
@@ -51,20 +51,20 @@ public abstract class AppTransitionActivity extends AppCompatActivity {
         }
     }
 
-    /* compiled from: AppTransitionActivity.kt */
-    /* renamed from: com.discord.app.AppTransitionActivity$a */
+    /* JADX INFO: renamed from: com.discord.app.AppTransitionActivity$a */
+    /* JADX INFO: compiled from: AppTransitionActivity.kt */
     public static final class C5457a {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final int f14965a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final int f14966b;
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public final int f14967c;
 
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         public final int f14968d;
 
         public C5457a(@AnimRes int i, @AnimRes int i2, @AnimRes int i3, @AnimRes int i4) {
@@ -75,7 +75,7 @@ public abstract class AppTransitionActivity extends AppCompatActivity {
         }
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final void m8373a(boolean z2, boolean z3) {
         C5457a c5457a;
         if (z2 && z3) {

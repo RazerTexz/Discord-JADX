@@ -13,19 +13,19 @@ import p507d0.p513e0.p514p.p515d.p517m0.p521c.PropertyDescriptor;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: KProperty2Impl.kt */
-/* renamed from: d0.e0.p.d.m, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m, reason: use source file name */
+/* JADX INFO: compiled from: KProperty2Impl.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class KProperty2Impl<D, E, V> extends KProperty2Impl2<D, E, V> implements KProperty, Function2 {
 
-    /* renamed from: w */
+    /* JADX INFO: renamed from: w */
     public final ReflectProperties.b<a<D, E, V>> f22447w;
 
-    /* compiled from: KProperty2Impl.kt */
-    /* renamed from: d0.e0.p.d.m$a */
+    /* JADX INFO: renamed from: d0.e0.p.d.m$a */
+    /* JADX INFO: compiled from: KProperty2Impl.kt */
     public static final class a<D, E, V> extends KPropertyImpl.d<V> implements KProperty4, Function3 {
 
-        /* renamed from: q */
+        /* JADX INFO: renamed from: q */
         public final KProperty2Impl<D, E, V> f22448q;
 
         public a(KProperty2Impl<D, E, V> kProperty2Impl) {
@@ -50,14 +50,14 @@ public final class KProperty2Impl<D, E, V> extends KProperty2Impl2<D, E, V> impl
             return getProperty();
         }
 
-        /* renamed from: invoke, reason: collision with other method in class */
+        /* JADX INFO: renamed from: invoke, reason: collision with other method in class */
         public void m11458invoke(D d, E e, V v) throws exceptions {
             getProperty().set(d, e, v);
         }
     }
 
-    /* compiled from: KProperty2Impl.kt */
-    /* renamed from: d0.e0.p.d.m$b */
+    /* JADX INFO: renamed from: d0.e0.p.d.m$b */
+    /* JADX INFO: compiled from: KProperty2Impl.kt */
     public static final class b extends Lambda implements Function0<a<D, E, V>> {
         public b() {
             super(0);

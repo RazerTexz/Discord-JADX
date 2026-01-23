@@ -33,23 +33,23 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 import p658rx.Observable;
 
-/* compiled from: WidgetVoiceCallInline.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: WidgetVoiceCallInline.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class WidgetVoiceCallInline extends AppFragment {
     public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetVoiceCallInline.class, "binding", "getBinding()Lcom/discord/databinding/WidgetVoiceCallInlineBinding;", 0)};
 
-    /* renamed from: binding$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
     private final ViewVisibilityObserver inlineVoiceVisibilityObserver;
 
-    /* compiled from: WidgetVoiceCallInline.kt */
+    /* JADX INFO: compiled from: WidgetVoiceCallInline.kt */
     public static final /* data */ class Model {
 
-        /* renamed from: Companion, reason: from kotlin metadata */
+        /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
         public static final Companion INSTANCE = new Companion(null);
         private final VoiceConnected voiceConnected;
 
-        /* compiled from: WidgetVoiceCallInline.kt */
+        /* JADX INFO: compiled from: WidgetVoiceCallInline.kt */
         public static final class Companion {
             private Companion() {
             }
@@ -65,16 +65,16 @@ public final class WidgetVoiceCallInline extends AppFragment {
             }
         }
 
-        /* compiled from: WidgetVoiceCallInline.kt */
+        /* JADX INFO: compiled from: WidgetVoiceCallInline.kt */
         public static final /* data */ class VoiceConnected {
 
-            /* renamed from: Companion, reason: from kotlin metadata */
+            /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
             public static final Companion INSTANCE = new Companion(null);
             private final MediaEngineConnection.InputMode inputMode;
             private final Channel selectedVoiceChannel;
             private final StreamContext streamContext;
 
-            /* compiled from: WidgetVoiceCallInline.kt */
+            /* JADX INFO: compiled from: WidgetVoiceCallInline.kt */
             public static final class Companion {
                 private Companion() {
                 }
@@ -111,17 +111,17 @@ public final class WidgetVoiceCallInline extends AppFragment {
                 return voiceConnected.copy(channel, inputMode, streamContext);
             }
 
-            /* renamed from: component1, reason: from getter */
+            /* JADX INFO: renamed from: component1, reason: from getter */
             public final Channel getSelectedVoiceChannel() {
                 return this.selectedVoiceChannel;
             }
 
-            /* renamed from: component2, reason: from getter */
+            /* JADX INFO: renamed from: component2, reason: from getter */
             public final MediaEngineConnection.InputMode getInputMode() {
                 return this.inputMode;
             }
 
-            /* renamed from: component3, reason: from getter */
+            /* JADX INFO: renamed from: component3, reason: from getter */
             public final StreamContext getStreamContext() {
                 return this.streamContext;
             }
@@ -187,7 +187,7 @@ public final class WidgetVoiceCallInline extends AppFragment {
             return model.copy(voiceConnected);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final VoiceConnected getVoiceConnected() {
             return this.voiceConnected;
         }
@@ -223,8 +223,8 @@ public final class WidgetVoiceCallInline extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetVoiceCallInline.kt */
-    /* renamed from: com.discord.widgets.voice.call.WidgetVoiceCallInline$onViewBound$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.voice.call.WidgetVoiceCallInline$onViewBound$1 */
+    /* JADX INFO: compiled from: WidgetVoiceCallInline.kt */
     public static final class ViewOnClickListenerC104231 implements View.OnClickListener {
         public static final ViewOnClickListenerC104231 INSTANCE = new ViewOnClickListenerC104231();
 
@@ -233,8 +233,8 @@ public final class WidgetVoiceCallInline extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetVoiceCallInline.kt */
-    /* renamed from: com.discord.widgets.voice.call.WidgetVoiceCallInline$onViewBound$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.voice.call.WidgetVoiceCallInline$onViewBound$2 */
+    /* JADX INFO: compiled from: WidgetVoiceCallInline.kt */
     public static final class C104242 extends Lambda implements Function1<Boolean, Unit> {
         public static final C104242 INSTANCE = new C104242();
 
@@ -253,8 +253,8 @@ public final class WidgetVoiceCallInline extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetVoiceCallInline.kt */
-    /* renamed from: com.discord.widgets.voice.call.WidgetVoiceCallInline$onViewBoundOrOnResume$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.voice.call.WidgetVoiceCallInline$onViewBoundOrOnResume$1 */
+    /* JADX INFO: compiled from: WidgetVoiceCallInline.kt */
     public static final class C104251 extends Lambda implements Function1<Model, Unit> {
         public C104251() {
             super(1);
@@ -266,15 +266,15 @@ public final class WidgetVoiceCallInline extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Model model) {
             Intrinsics3.checkNotNullParameter(model, "it");
             WidgetVoiceCallInline.access$configureUI(WidgetVoiceCallInline.this, model);
         }
     }
 
-    /* compiled from: WidgetVoiceCallInline.kt */
-    /* renamed from: com.discord.widgets.voice.call.WidgetVoiceCallInline$setWindowInsetsListeners$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.voice.call.WidgetVoiceCallInline$setWindowInsetsListeners$1 */
+    /* JADX INFO: compiled from: WidgetVoiceCallInline.kt */
     public static final class C104261 implements OnApplyWindowInsetsListener {
         public static final C104261 INSTANCE = new C104261();
 

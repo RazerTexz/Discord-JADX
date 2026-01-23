@@ -1,14 +1,14 @@
 package p007b.p225i.p226a.p242c.p257e3;
 
-/* compiled from: Allocation.java */
-/* renamed from: b.i.a.c.e3.e, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.e3.e, reason: use source file name */
+/* JADX INFO: compiled from: Allocation.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class Allocation {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final byte[] f6522a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final int f6523b;
 
     public Allocation(byte[] bArr, int i) {

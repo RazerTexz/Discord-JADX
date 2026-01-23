@@ -27,9 +27,9 @@ import p637j0.p642l.p647e.ScalarSynchronousObservable;
 import p658rx.Observable;
 import p658rx.functions.Func8;
 
-/* compiled from: UserProfileHeaderViewModel.kt */
-/* renamed from: com.discord.widgets.user.profile.UserProfileHeaderViewModel$Companion$observeStoreState$2, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: com.discord.widgets.user.profile.UserProfileHeaderViewModel$Companion$observeStoreState$2, reason: use source file name */
+/* JADX INFO: compiled from: UserProfileHeaderViewModel.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class UserProfileHeaderViewModel4<T, R> implements Func1<Tuples2<? extends MeUser, ? extends User>, Observable<? extends UserProfileHeaderViewModel.StoreState>> {
     public final /* synthetic */ Long $channelId;
     public final /* synthetic */ Long $guildId;
@@ -41,8 +41,8 @@ public final class UserProfileHeaderViewModel4<T, R> implements Func1<Tuples2<? 
     public final /* synthetic */ StoreUserSettings $storeUserSettings;
     public final /* synthetic */ StreamContextService $streamContextService;
 
-    /* compiled from: UserProfileHeaderViewModel.kt */
-    /* renamed from: com.discord.widgets.user.profile.UserProfileHeaderViewModel$Companion$observeStoreState$2$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.user.profile.UserProfileHeaderViewModel$Companion$observeStoreState$2$1 */
+    /* JADX INFO: compiled from: UserProfileHeaderViewModel.kt */
     public static final class C103111<T1, T2, T3, T4, T5, T6, T7, T8, R> implements Func8<Map<Long, ? extends GuildMember>, Map<Long, ? extends Map<Long, ? extends GuildMember>>, ModelRichPresence, StreamContext, UserProfile, Boolean, Boolean, Channel, UserProfileHeaderViewModel.StoreState> {
         public final /* synthetic */ MeUser $meUser;
         public final /* synthetic */ User $targetUser;
@@ -57,7 +57,7 @@ public final class UserProfileHeaderViewModel4<T, R> implements Func1<Tuples2<? 
             return call2((Map<Long, GuildMember>) map, (Map<Long, ? extends Map<Long, GuildMember>>) map2, modelRichPresence, streamContext, userProfile, bool, bool2, channel);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final UserProfileHeaderViewModel.StoreState call2(Map<Long, GuildMember> map, Map<Long, ? extends Map<Long, GuildMember>> map2, ModelRichPresence modelRichPresence, StreamContext streamContext, UserProfile userProfile, Boolean bool, Boolean bool2, Channel channel) {
             MeUser meUser = this.$meUser;
             Intrinsics3.checkNotNullExpressionValue(meUser, "meUser");
@@ -85,7 +85,7 @@ public final class UserProfileHeaderViewModel4<T, R> implements Func1<Tuples2<? 
     }
 
     /* JADX WARN: Removed duplicated region for block: B:11:0x0028  */
-    /* renamed from: call, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */

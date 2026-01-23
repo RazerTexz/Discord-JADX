@@ -22,27 +22,27 @@ import p507d0.p513e0.p514p.p515d.p517m0.p562l.p563b.p565e0.DeserializedMemberDes
 import p507d0.p513e0.p514p.p515d.p517m0.p562l.p563b.p565e0.DeserializedMemberDescriptor3;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: DeserializedMemberDescriptor.kt */
-/* renamed from: d0.e0.p.d.m0.l.b.e0.c, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.l.b.e0.c, reason: use source file name */
+/* JADX INFO: compiled from: DeserializedMemberDescriptor.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class DeserializedMemberDescriptor2 extends ClassConstructorDescriptorImpl implements DeserializedMemberDescriptor {
 
-    /* renamed from: O */
+    /* JADX INFO: renamed from: O */
     public final C11679d f24523O;
 
-    /* renamed from: P */
+    /* JADX INFO: renamed from: P */
     public final NameResolver f24524P;
 
-    /* renamed from: Q */
+    /* JADX INFO: renamed from: Q */
     public final TypeTable f24525Q;
 
-    /* renamed from: R */
+    /* JADX INFO: renamed from: R */
     public final VersionRequirement2 f24526R;
 
-    /* renamed from: S */
+    /* JADX INFO: renamed from: S */
     public final DeserializedContainerSource2 f24527S;
 
-    /* renamed from: T */
+    /* JADX INFO: renamed from: T */
     public DeserializedMemberDescriptor3.a f24528T;
 
     public /* synthetic */ DeserializedMemberDescriptor2(ClassDescriptor classDescriptor, ConstructorDescriptor constructorDescriptor, Annotations4 annotations4, boolean z2, CallableMemberDescriptor.a aVar, C11679d c11679d, NameResolver nameResolver, TypeTable typeTable, VersionRequirement2 versionRequirement2, DeserializedContainerSource2 deserializedContainerSource2, SourceElement sourceElement, int i, DefaultConstructorMarker defaultConstructorMarker) {
@@ -50,18 +50,18 @@ public final class DeserializedMemberDescriptor2 extends ClassConstructorDescrip
     }
 
     @Override // p507d0.p513e0.p514p.p515d.p517m0.p521c.p524i1.ClassConstructorDescriptorImpl, p507d0.p513e0.p514p.p515d.p517m0.p521c.p524i1.FunctionDescriptorImpl
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public /* bridge */ /* synthetic */ FunctionDescriptorImpl mo9373b(DeclarationDescriptor declarationDescriptor, FunctionDescriptor functionDescriptor, CallableMemberDescriptor.a aVar, Name name, Annotations4 annotations4, SourceElement sourceElement) {
         return m9953f(declarationDescriptor, functionDescriptor, aVar, annotations4, sourceElement);
     }
 
     @Override // p507d0.p513e0.p514p.p515d.p517m0.p521c.p524i1.ClassConstructorDescriptorImpl
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public /* bridge */ /* synthetic */ ClassConstructorDescriptorImpl mo9408e(DeclarationDescriptor declarationDescriptor, FunctionDescriptor functionDescriptor, CallableMemberDescriptor.a aVar, Name name, Annotations4 annotations4, SourceElement sourceElement) {
         return m9953f(declarationDescriptor, functionDescriptor, aVar, annotations4, sourceElement);
     }
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public DeserializedMemberDescriptor2 m9953f(DeclarationDescriptor declarationDescriptor, FunctionDescriptor functionDescriptor, CallableMemberDescriptor.a aVar, Annotations4 annotations4, SourceElement sourceElement) {
         Intrinsics3.checkNotNullParameter(declarationDescriptor, "newOwner");
         Intrinsics3.checkNotNullParameter(aVar, "kind");

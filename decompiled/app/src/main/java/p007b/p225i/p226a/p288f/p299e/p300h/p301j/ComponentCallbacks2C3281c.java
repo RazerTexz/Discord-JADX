@@ -11,34 +11,34 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.concurrent.atomic.AtomicBoolean;
 
-/* compiled from: com.google.android.gms:play-services-basement@@17.6.0 */
-/* renamed from: b.i.a.f.e.h.j.c */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.e.h.j.c */
+/* JADX INFO: compiled from: com.google.android.gms:play-services-basement@@17.6.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public final class ComponentCallbacks2C3281c implements Application.ActivityLifecycleCallbacks, ComponentCallbacks2 {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static final ComponentCallbacks2C3281c f9349j = new ComponentCallbacks2C3281c();
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final AtomicBoolean f9350k = new AtomicBoolean();
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final AtomicBoolean f9351l = new AtomicBoolean();
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public final ArrayList<a> f9352m = new ArrayList<>();
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public boolean f9353n = false;
 
-    /* compiled from: com.google.android.gms:play-services-basement@@17.6.0 */
-    /* renamed from: b.i.a.f.e.h.j.c$a */
+    /* JADX INFO: renamed from: b.i.a.f.e.h.j.c$a */
+    /* JADX INFO: compiled from: com.google.android.gms:play-services-basement@@17.6.0 */
     public interface a {
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         void mo4066a(boolean z2);
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static void m4064a(@RecentlyNonNull Application application) {
         ComponentCallbacks2C3281c componentCallbacks2C3281c = f9349j;
         synchronized (componentCallbacks2C3281c) {
@@ -50,7 +50,7 @@ public final class ComponentCallbacks2C3281c implements Application.ActivityLife
         }
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final void m4065b(boolean z2) {
         synchronized (f9349j) {
             Iterator<a> it = this.f9352m.iterator();

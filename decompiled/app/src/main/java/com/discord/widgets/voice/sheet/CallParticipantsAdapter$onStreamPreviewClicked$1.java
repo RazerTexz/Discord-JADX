@@ -6,8 +6,8 @@ import kotlin.jvm.functions.Function1;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: CallParticipantsAdapter.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: CallParticipantsAdapter.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class CallParticipantsAdapter$onStreamPreviewClicked$1 extends Lambda implements Function1<StreamContext, Unit> {
     public static final CallParticipantsAdapter$onStreamPreviewClicked$1 INSTANCE = new CallParticipantsAdapter$onStreamPreviewClicked$1();
 
@@ -21,7 +21,7 @@ public final class CallParticipantsAdapter$onStreamPreviewClicked$1 extends Lamb
         return Unit.f27425a;
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final void invoke2(StreamContext streamContext) {
         Intrinsics3.checkNotNullParameter(streamContext, "it");
     }

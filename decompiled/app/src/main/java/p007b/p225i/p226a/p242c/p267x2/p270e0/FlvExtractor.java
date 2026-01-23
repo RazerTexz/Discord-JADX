@@ -11,57 +11,57 @@ import p007b.p225i.p226a.p242c.p267x2.IndexSeekMap;
 import p007b.p225i.p226a.p242c.p267x2.PositionHolder;
 import p007b.p225i.p226a.p242c.p267x2.SeekMap;
 
-/* compiled from: FlvExtractor.java */
-/* renamed from: b.i.a.c.x2.e0.c, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.x2.e0.c, reason: use source file name */
+/* JADX INFO: compiled from: FlvExtractor.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class FlvExtractor implements Extractor {
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public ExtractorOutput f8131f;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public boolean f8133h;
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public long f8134i;
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public int f8135j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public int f8136k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public int f8137l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public long f8138m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public boolean f8139n;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public AudioTagPayloadReader f8140o;
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public VideoTagPayloadReader f8141p;
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final ParsableByteArray f8126a = new ParsableByteArray(4);
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final ParsableByteArray f8127b = new ParsableByteArray(9);
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final ParsableByteArray f8128c = new ParsableByteArray(11);
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final ParsableByteArray f8129d = new ParsableByteArray();
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final ScriptTagPayloadReader f8130e = new ScriptTagPayloadReader();
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public int f8132g = 1;
 
     static {
@@ -69,7 +69,7 @@ public final class FlvExtractor implements Extractor {
     }
 
     @RequiresNonNull({"extractorOutput"})
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final void m3659a() {
         if (this.f8139n) {
             return;
@@ -79,7 +79,7 @@ public final class FlvExtractor implements Extractor {
     }
 
     @Override // p007b.p225i.p226a.p242c.p267x2.Extractor
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public boolean mo3633b(ExtractorInput extractorInput) throws IOException {
         extractorInput.mo3652o(this.f8126a.f6793a, 0, 3);
         this.f8126a.m3079E(0);
@@ -101,7 +101,7 @@ public final class FlvExtractor implements Extractor {
         return this.f8126a.m3086f() == 0;
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final ParsableByteArray m3660c(ExtractorInput extractorInput) throws IOException {
         int i = this.f8137l;
         ParsableByteArray parsableByteArray = this.f8129d;
@@ -123,7 +123,7 @@ public final class FlvExtractor implements Extractor {
     /* JADX WARN: Removed duplicated region for block: B:79:0x00b4 A[SYNTHETIC] */
     /* JADX WARN: Removed duplicated region for block: B:89:0x0009 A[SYNTHETIC] */
     @Override // p007b.p225i.p226a.p242c.p267x2.Extractor
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
@@ -164,7 +164,7 @@ public final class FlvExtractor implements Extractor {
                     this.f8136k = this.f8128c.m3100t();
                     this.f8137l = this.f8128c.m3102v();
                     this.f8138m = this.f8128c.m3102v();
-                    this.f8138m = ((this.f8128c.m3100t() << 24) | this.f8138m) * 1000;
+                    this.f8138m = (((long) (this.f8128c.m3100t() << 24)) | this.f8138m) * 1000;
                     this.f8128c.m3080F(3);
                     this.f8132g = 4;
                     z = true;
@@ -220,13 +220,13 @@ public final class FlvExtractor implements Extractor {
     }
 
     @Override // p007b.p225i.p226a.p242c.p267x2.Extractor
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public void mo3636f(ExtractorOutput extractorOutput) {
         this.f8131f = extractorOutput;
     }
 
     @Override // p007b.p225i.p226a.p242c.p267x2.Extractor
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public void mo3637g(long j, long j2) {
         if (j == 0) {
             this.f8132g = 1;

@@ -8,9 +8,9 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 import p658rx.subjects.PublishSubject;
 
-/* compiled from: StoreGooglePlayPurchases.kt */
-/* renamed from: com.discord.stores.StoreGooglePlayPurchases$onVerificationSuccess$$inlined$forEach$lambda$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.stores.StoreGooglePlayPurchases$onVerificationSuccess$$inlined$forEach$lambda$1, reason: use source file name */
+/* JADX INFO: compiled from: StoreGooglePlayPurchases.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class StoreGooglePlayPurchases4 extends Lambda implements Function0<Unit> {
     public final /* synthetic */ String $sku;
     public final /* synthetic */ StoreGooglePlayPurchases.VerificationResult $verificationResult$inlined;
@@ -30,7 +30,7 @@ public final class StoreGooglePlayPurchases4 extends Lambda implements Function0
         return Unit.f27425a;
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final void invoke2() {
         PublishSubject publishSubjectAccess$getEventSubject$p = StoreGooglePlayPurchases.access$getEventSubject$p(this.this$0);
         String str = this.$sku;

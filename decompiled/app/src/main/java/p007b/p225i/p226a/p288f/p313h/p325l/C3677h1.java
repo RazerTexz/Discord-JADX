@@ -3,9 +3,9 @@ package p007b.p225i.p226a.p288f.p313h.p325l;
 import java.util.List;
 import p007b.p225i.p226a.p288f.p313h.p325l.AbstractC3851u4;
 
-/* compiled from: com.google.android.gms:play-services-measurement@@18.0.0 */
-/* renamed from: b.i.a.f.h.l.h1 */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.h.l.h1 */
+/* JADX INFO: compiled from: com.google.android.gms:play-services-measurement@@18.0.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public final class C3677h1 extends AbstractC3851u4<C3677h1, a> implements InterfaceC3626d6 {
     private static final C3677h1 zzf;
     private static volatile InterfaceC3710j6<C3677h1> zzg;
@@ -13,8 +13,8 @@ public final class C3677h1 extends AbstractC3851u4<C3677h1, a> implements Interf
     private int zzd;
     private InterfaceC3611c5 zze = C3800q5.f10271k;
 
-    /* compiled from: com.google.android.gms:play-services-measurement@@18.0.0 */
-    /* renamed from: b.i.a.f.h.l.h1$a */
+    /* JADX INFO: renamed from: b.i.a.f.h.l.h1$a */
+    /* JADX INFO: compiled from: com.google.android.gms:play-services-measurement@@18.0.0 */
     public static final class a extends AbstractC3851u4.b<C3677h1, a> implements InterfaceC3626d6 {
         public a() {
             super(C3677h1.m4925C());
@@ -31,24 +31,24 @@ public final class C3677h1 extends AbstractC3851u4<C3677h1, a> implements Interf
         AbstractC3851u4.m5313r(C3677h1.class, c3677h1);
     }
 
-    /* renamed from: B */
+    /* JADX INFO: renamed from: B */
     public static a m4924B() {
         return zzf.m5314s();
     }
 
-    /* renamed from: C */
+    /* JADX INFO: renamed from: C */
     public static /* synthetic */ C3677h1 m4925C() {
         return zzf;
     }
 
-    /* renamed from: v */
+    /* JADX INFO: renamed from: v */
     public static void m4926v(C3677h1 c3677h1, int i) {
         c3677h1.zzc |= 1;
         c3677h1.zzd = i;
     }
 
     /* JADX WARN: Multi-variable type inference failed */
-    /* renamed from: w */
+    /* JADX INFO: renamed from: w */
     public static void m4927w(C3677h1 c3677h1, Iterable iterable) {
         InterfaceC3611c5 interfaceC3611c5 = c3677h1.zze;
         if (!((AbstractC3772o3) interfaceC3611c5).f10123j) {
@@ -57,13 +57,13 @@ public final class C3677h1 extends AbstractC3851u4<C3677h1, a> implements Interf
         AbstractC3733l3.m5051c(iterable, c3677h1.zze);
     }
 
-    /* renamed from: A */
+    /* JADX INFO: renamed from: A */
     public final int m4928A() {
         return ((C3800q5) this.zze).size();
     }
 
     @Override // p007b.p225i.p226a.p288f.p313h.p325l.AbstractC3851u4
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public final Object mo4541p(int i, Object obj, Object obj2) {
         switch (C3718k1.f10050a[i - 1]) {
             case 1:
@@ -96,24 +96,24 @@ public final class C3677h1 extends AbstractC3851u4<C3677h1, a> implements Interf
         }
     }
 
-    /* renamed from: u */
+    /* JADX INFO: renamed from: u */
     public final long m4929u(int i) {
         C3800q5 c3800q5 = (C3800q5) this.zze;
         c3800q5.m5189h(i);
         return c3800q5.f10272l[i];
     }
 
-    /* renamed from: x */
+    /* JADX INFO: renamed from: x */
     public final boolean m4930x() {
         return (this.zzc & 1) != 0;
     }
 
-    /* renamed from: y */
+    /* JADX INFO: renamed from: y */
     public final int m4931y() {
         return this.zzd;
     }
 
-    /* renamed from: z */
+    /* JADX INFO: renamed from: z */
     public final List<Long> m4932z() {
         return this.zze;
     }

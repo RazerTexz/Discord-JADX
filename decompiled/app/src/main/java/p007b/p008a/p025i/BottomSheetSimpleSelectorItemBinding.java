@@ -7,24 +7,24 @@ import androidx.viewbinding.ViewBinding;
 import com.facebook.drawee.view.SimpleDraweeView;
 import com.google.android.material.textview.MaterialTextView;
 
-/* compiled from: BottomSheetSimpleSelectorItemBinding.java */
-/* renamed from: b.a.i.d, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.a.i.d, reason: use source file name */
+/* JADX INFO: compiled from: BottomSheetSimpleSelectorItemBinding.java */
+/* JADX INFO: loaded from: classes.dex */
 public final class BottomSheetSimpleSelectorItemBinding implements ViewBinding {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     @NonNull
     public final ConstraintLayout f761a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     @NonNull
     public final MaterialTextView f762b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     @NonNull
     public final SimpleDraweeView f763c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     @NonNull
     public final MaterialTextView f764d;
 

@@ -2,7 +2,7 @@ package com.esotericsoftware.kryo.serializers;
 
 import p007b.p106e.p107a.Log;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class TaggedFieldSerializerConfig extends FieldSerializerConfig {
     private boolean skipUnknownTags = false;
 
@@ -30,7 +30,7 @@ public class TaggedFieldSerializerConfig extends FieldSerializerConfig {
     }
 
     @Override // com.esotericsoftware.kryo.serializers.FieldSerializerConfig
-    /* renamed from: clone */
+    /* JADX INFO: renamed from: clone */
     public /* bridge */ /* synthetic */ Object mo11454clone() throws CloneNotSupportedException {
         return clone();
     }

@@ -2,8 +2,8 @@ package com.discord.analytics.generated.events;
 
 import com.discord.api.science.AnalyticsSchema;
 
-/* compiled from: TrackMessageDeleted.kt */
-/* renamed from: com.discord.analytics.generated.events.TrackMessageDeletedReceiver, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: com.discord.analytics.generated.events.TrackMessageDeletedReceiver, reason: use source file name */
+/* JADX INFO: compiled from: TrackMessageDeleted.kt */
+/* JADX INFO: loaded from: classes.dex */
 public interface TrackMessageDeleted2 extends AnalyticsSchema {
 }

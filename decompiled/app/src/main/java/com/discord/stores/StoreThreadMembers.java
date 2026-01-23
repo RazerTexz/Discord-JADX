@@ -26,16 +26,16 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 import p658rx.Observable;
 
-/* compiled from: StoreThreadMembers.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: StoreThreadMembers.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class StoreThreadMembers extends StoreV2 {
     private final Map<Long, Set<Long>> memberLists;
     private HashMap<Long, Set<Long>> memberListsSnapshot;
     private final ObservationDeck observationDeck;
     private final StoreChannels storeChannels;
 
-    /* compiled from: StoreThreadMembers.kt */
-    /* renamed from: com.discord.stores.StoreThreadMembers$observeThreadMembers$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreThreadMembers$observeThreadMembers$1 */
+    /* JADX INFO: compiled from: StoreThreadMembers.kt */
     public static final class C65321 extends Lambda implements Function0<Set<? extends Long>> {
         public final /* synthetic */ long $channelId;
 
@@ -51,7 +51,7 @@ public final class StoreThreadMembers extends StoreV2 {
         }
 
         @Override // kotlin.jvm.functions.Function0
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final Set<? extends Long> invoke2() {
             Set<? extends Long> set = (Set) StoreThreadMembers.access$getMemberListsSnapshot$p(StoreThreadMembers.this).get(Long.valueOf(this.$channelId));
             return set != null ? set : Sets5.emptySet();

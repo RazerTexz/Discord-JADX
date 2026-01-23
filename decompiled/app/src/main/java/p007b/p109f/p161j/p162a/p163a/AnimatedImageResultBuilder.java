@@ -5,31 +5,31 @@ import com.facebook.common.references.CloseableReference;
 import java.util.List;
 import p007b.p109f.p161j.p185t.BitmapTransformation;
 
-/* compiled from: AnimatedImageResultBuilder.java */
-/* renamed from: b.f.j.a.a.f, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: b.f.j.a.a.f, reason: use source file name */
+/* JADX INFO: compiled from: AnimatedImageResultBuilder.java */
+/* JADX INFO: loaded from: classes2.dex */
 public class AnimatedImageResultBuilder {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final AnimatedImage f3613a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public CloseableReference<Bitmap> f3614b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public List<CloseableReference<Bitmap>> f3615c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public int f3616d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public BitmapTransformation f3617e;
 
     public AnimatedImageResultBuilder(AnimatedImage animatedImage) {
         this.f3613a = animatedImage;
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public AnimatedImageResult m1188a() {
         try {
             AnimatedImageResult animatedImageResult = new AnimatedImageResult(this);

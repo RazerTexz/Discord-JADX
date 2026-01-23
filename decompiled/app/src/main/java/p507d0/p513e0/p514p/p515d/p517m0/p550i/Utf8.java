@@ -1,10 +1,10 @@
 package p507d0.p513e0.p514p.p515d.p517m0.p550i;
 
-/* compiled from: Utf8.java */
-/* renamed from: d0.e0.p.d.m0.i.v, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.i.v, reason: use source file name */
+/* JADX INFO: compiled from: Utf8.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class Utf8 {
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static int m9866a(int i, int i2) {
         if (i > -12 || i2 > -65) {
             return -1;
@@ -12,7 +12,7 @@ public final class Utf8 {
         return i ^ (i2 << 8);
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static int m9867b(int i, int i2, int i3) {
         if (i > -12 || i2 > -65 || i3 > -65) {
             return -1;
@@ -20,7 +20,7 @@ public final class Utf8 {
         return (i ^ (i2 << 8)) ^ (i3 << 16);
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public static int m9868c(byte[] bArr, int i, int i2) {
         byte b2 = bArr[i - 1];
         int i3 = i2 - i;

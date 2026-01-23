@@ -6,9 +6,9 @@ import kotlin.coroutines.Continuation;
 import kotlin.sequences.Sequence;
 import p507d0.p584w.p585h.Intrinsics2;
 
-/* compiled from: SequenceBuilder.kt */
-/* renamed from: d0.f0.k, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.f0.k, reason: use source file name */
+/* JADX INFO: compiled from: SequenceBuilder.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public abstract class SequenceBuilder2<T> {
     public abstract Object yield(T t, Continuation<? super Unit> continuation);
 

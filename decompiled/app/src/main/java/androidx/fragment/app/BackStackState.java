@@ -9,8 +9,8 @@ import androidx.fragment.app.FragmentTransaction;
 import androidx.view.Lifecycle;
 import java.util.ArrayList;
 
+/* JADX INFO: loaded from: classes.dex */
 @SuppressLint({"BanParcelableUsage"})
-/* loaded from: classes.dex */
 public final class BackStackState implements Parcelable {
     public static final Parcelable.Creator<BackStackState> CREATOR = new C03451();
     private static final String TAG = "FragmentManager";
@@ -29,7 +29,7 @@ public final class BackStackState implements Parcelable {
     public final ArrayList<String> mSharedElementTargetNames;
     public final int mTransition;
 
-    /* renamed from: androidx.fragment.app.BackStackState$1 */
+    /* JADX INFO: renamed from: androidx.fragment.app.BackStackState$1 */
     public class C03451 implements Parcelable.Creator<BackStackState> {
         @Override // android.os.Parcelable.Creator
         public /* bridge */ /* synthetic */ BackStackState createFromParcel(Parcel parcel) {

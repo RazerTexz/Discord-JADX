@@ -26,25 +26,25 @@ import p507d0.p513e0.p514p.p515d.p517m0.p576p.collections;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: SubstitutingScope.kt */
-/* renamed from: d0.e0.p.d.m0.k.a0.n, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.k.a0.n, reason: use source file name */
+/* JADX INFO: compiled from: SubstitutingScope.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class SubstitutingScope implements MemberScope3 {
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final MemberScope3 f24377b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final TypeSubstitutor2 f24378c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public Map<DeclarationDescriptor, DeclarationDescriptor> f24379d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final Lazy f24380e;
 
-    /* compiled from: SubstitutingScope.kt */
-    /* renamed from: d0.e0.p.d.m0.k.a0.n$a */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.k.a0.n$a */
+    /* JADX INFO: compiled from: SubstitutingScope.kt */
     public static final class a extends Lambda implements Function0<Collection<? extends DeclarationDescriptor>> {
         public a() {
             super(0);
@@ -56,7 +56,7 @@ public final class SubstitutingScope implements MemberScope3 {
         }
 
         @Override // kotlin.jvm.functions.Function0
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final Collection<? extends DeclarationDescriptor> invoke2() {
             SubstitutingScope substitutingScope = SubstitutingScope.this;
             return SubstitutingScope.access$substitute(substitutingScope, ResolutionScope.a.getContributedDescriptors$default(SubstitutingScope.access$getWorkerScope$p(substitutingScope), null, null, 3, null));
@@ -82,7 +82,7 @@ public final class SubstitutingScope implements MemberScope3 {
     }
 
     /* JADX WARN: Multi-variable type inference failed */
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final <D extends DeclarationDescriptor> Collection<D> m9912a(Collection<? extends D> collection) {
         if (this.f24378c.isEmpty() || collection.isEmpty()) {
             return collection;
@@ -95,7 +95,7 @@ public final class SubstitutingScope implements MemberScope3 {
         return linkedHashSetNewLinkedHashSetWithExpectedSize;
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final <D extends DeclarationDescriptor> D m9913b(D d) {
         if (this.f24378c.isEmpty()) {
             return d;

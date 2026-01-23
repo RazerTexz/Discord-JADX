@@ -15,13 +15,13 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 import p658rx.Subscription;
 
-/* compiled from: GuildJoinHelper.kt */
-/* renamed from: com.discord.widgets.guilds.join.GuildJoinHelperKt, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.guilds.join.GuildJoinHelperKt, reason: use source file name */
+/* JADX INFO: compiled from: GuildJoinHelper.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class GuildJoinHelper {
 
-    /* compiled from: GuildJoinHelper.kt */
-    /* renamed from: com.discord.widgets.guilds.join.GuildJoinHelperKt$joinGuild$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.guilds.join.GuildJoinHelperKt$joinGuild$1 */
+    /* JADX INFO: compiled from: GuildJoinHelper.kt */
     public static final class C87161 extends Lambda implements Function1<Error, Unit> {
         public final /* synthetic */ Context $context;
         public final /* synthetic */ Long $directoryChannelId;
@@ -53,7 +53,7 @@ public final class GuildJoinHelper {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Error error) {
             Intrinsics3.checkNotNullParameter(error, "it");
             GuildCaptchaUtils.handleHttpException(error, this.$context, new JoinArgs(this.$guildId, this.$isLurker, this.$sessionId, this.$directoryChannelId, this.$errorClass, this.$subscriptionHandler, this.$errorHandler, this.$onNext));

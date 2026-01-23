@@ -3,8 +3,8 @@ package com.discord.stores;
 import com.discord.api.channel.Channel;
 import com.discord.utilities.channel.ChannelSelector;
 
-/* compiled from: StoreChannelConversions.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: StoreChannelConversions.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class StoreChannelConversions extends StoreV2 {
     private long selectedChannelId;
 

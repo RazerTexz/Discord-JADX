@@ -1,7 +1,7 @@
 package p007b.p452o.p453a.p454m;
 
-/* compiled from: Control.java */
-/* renamed from: b.o.a.m.c, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.o.a.m.c, reason: use source file name */
+/* JADX INFO: compiled from: Control.java */
+/* JADX INFO: loaded from: classes3.dex */
 public interface Control {
 }

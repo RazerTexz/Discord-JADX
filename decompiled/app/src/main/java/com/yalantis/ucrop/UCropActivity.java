@@ -1,7 +1,6 @@
 package com.yalantis.ucrop;
 
 import android.content.Intent;
-import android.content.res.Resources;
 import android.graphics.Bitmap;
 import android.graphics.PorterDuff;
 import android.graphics.drawable.Animatable;
@@ -58,111 +57,111 @@ import p007b.p485q.p486a.p490k.SelectedStateListDrawable;
 import p007b.p485q.p486a.p491l.TransformImageView;
 import p007b.p485q.p486a.p491l.TransformImageView2;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public class UCropActivity extends AppCompatActivity {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static final Bitmap.CompressFormat f22167j = Bitmap.CompressFormat.JPEG;
 
-    /* renamed from: A */
+    /* JADX INFO: renamed from: A */
     public ViewGroup f22168A;
 
-    /* renamed from: B */
+    /* JADX INFO: renamed from: B */
     public ViewGroup f22169B;
 
-    /* renamed from: C */
+    /* JADX INFO: renamed from: C */
     public ViewGroup f22170C;
 
-    /* renamed from: D */
+    /* JADX INFO: renamed from: D */
     public ViewGroup f22171D;
 
-    /* renamed from: F */
+    /* JADX INFO: renamed from: F */
     public TextView f22173F;
 
-    /* renamed from: G */
+    /* JADX INFO: renamed from: G */
     public TextView f22174G;
 
-    /* renamed from: H */
+    /* JADX INFO: renamed from: H */
     public View f22175H;
 
-    /* renamed from: I */
+    /* JADX INFO: renamed from: I */
     public Transition f22176I;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public String f22182k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public int f22183l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public int f22184m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public int f22185n;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public int f22186o;
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     @ColorInt
     public int f22187p;
 
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     @DrawableRes
     public int f22188q;
 
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     @DrawableRes
     public int f22189r;
 
-    /* renamed from: s */
+    /* JADX INFO: renamed from: s */
     public int f22190s;
 
-    /* renamed from: t */
+    /* JADX INFO: renamed from: t */
     public boolean f22191t;
 
-    /* renamed from: v */
+    /* JADX INFO: renamed from: v */
     public UCropView f22193v;
 
-    /* renamed from: w */
+    /* JADX INFO: renamed from: w */
     public GestureCropImageView f22194w;
 
-    /* renamed from: x */
+    /* JADX INFO: renamed from: x */
     public OverlayView f22195x;
 
-    /* renamed from: y */
+    /* JADX INFO: renamed from: y */
     public ViewGroup f22196y;
 
-    /* renamed from: z */
+    /* JADX INFO: renamed from: z */
     public ViewGroup f22197z;
 
-    /* renamed from: u */
+    /* JADX INFO: renamed from: u */
     public boolean f22192u = true;
 
-    /* renamed from: E */
+    /* JADX INFO: renamed from: E */
     public List<ViewGroup> f22172E = new ArrayList();
 
-    /* renamed from: J */
+    /* JADX INFO: renamed from: J */
     public Bitmap.CompressFormat f22177J = f22167j;
 
-    /* renamed from: K */
+    /* JADX INFO: renamed from: K */
     public int f22178K = 90;
 
-    /* renamed from: L */
+    /* JADX INFO: renamed from: L */
     public int[] f22179L = {1, 2, 3};
 
-    /* renamed from: M */
+    /* JADX INFO: renamed from: M */
     public TransformImageView2.a f22180M = new C11200a();
 
-    /* renamed from: N */
+    /* JADX INFO: renamed from: N */
     public final View.OnClickListener f22181N = new ViewOnClickListenerC11201b();
 
-    /* renamed from: com.yalantis.ucrop.UCropActivity$a */
+    /* JADX INFO: renamed from: com.yalantis.ucrop.UCropActivity$a */
     public class C11200a implements TransformImageView2.a {
         public C11200a() {
         }
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public void m9322a(float f) {
             TextView textView = UCropActivity.this.f22173F;
             if (textView != null) {
@@ -170,7 +169,7 @@ public class UCropActivity extends AppCompatActivity {
             }
         }
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public void m9323b(float f) {
             TextView textView = UCropActivity.this.f22174G;
             if (textView != null) {
@@ -179,7 +178,7 @@ public class UCropActivity extends AppCompatActivity {
         }
     }
 
-    /* renamed from: com.yalantis.ucrop.UCropActivity$b */
+    /* JADX INFO: renamed from: com.yalantis.ucrop.UCropActivity$b */
     public class ViewOnClickListenerC11201b implements View.OnClickListener {
         public ViewOnClickListenerC11201b() {
         }
@@ -200,7 +199,7 @@ public class UCropActivity extends AppCompatActivity {
         AppCompatDelegate.setCompatVectorFromResourcesEnabled(true);
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final void m9319a(int i) {
         GestureCropImageView gestureCropImageView = this.f22194w;
         int[] iArr = this.f22179L;
@@ -210,12 +209,12 @@ public class UCropActivity extends AppCompatActivity {
         gestureCropImageView2.setRotateEnabled(iArr2[i] == 3 || iArr2[i] == 2);
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public void m9320b(Throwable th) {
         setResult(96, new Intent().putExtra("com.yalantis.ucrop.Error", th));
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final void m9321c(@IdRes int i) {
         if (this.f22191t) {
             ViewGroup viewGroup = this.f22196y;
@@ -245,7 +244,7 @@ public class UCropActivity extends AppCompatActivity {
     }
 
     @Override // androidx.appcompat.app.AppCompatActivity, androidx.fragment.app.FragmentActivity, androidx.activity.ComponentActivity, androidx.core.app.ComponentActivity, android.app.Activity
-    public void onCreate(Bundle bundle) throws Resources.NotFoundException {
+    public void onCreate(Bundle bundle) {
         super.onCreate(bundle);
         setContentView(C11199R.e.ucrop_activity_photobox);
         Intent intent = getIntent();

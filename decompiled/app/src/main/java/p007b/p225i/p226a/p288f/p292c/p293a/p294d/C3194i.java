@@ -5,9 +5,9 @@ import android.os.Parcelable;
 import com.google.android.gms.auth.api.credentials.IdToken;
 import p007b.p085c.p086a.p087a0.AnimatableValueParser;
 
-/* compiled from: com.google.android.gms:play-services-auth@@19.0.0 */
-/* renamed from: b.i.a.f.c.a.d.i */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.c.a.d.i */
+/* JADX INFO: compiled from: com.google.android.gms:play-services-auth@@19.0.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public final class C3194i implements Parcelable.Creator<IdToken> {
     @Override // android.os.Parcelable.Creator
     public final IdToken createFromParcel(Parcel parcel) {

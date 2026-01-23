@@ -8,24 +8,24 @@ import java.lang.annotation.Target;
 /* JADX WARN: Method from annotation default annotation not found: i */
 /* JADX WARN: Method from annotation default annotation not found: n */
 /* JADX WARN: Method from annotation default annotation not found: s */
-/* compiled from: DebugMetadata.kt */
+/* JADX INFO: renamed from: d0.w.i.a.e, reason: use source file name */
+/* JADX INFO: compiled from: DebugMetadata.kt */
+/* JADX INFO: loaded from: classes3.dex */
 @Target({ElementType.TYPE})
 @Retention(RetentionPolicy.RUNTIME)
-/* renamed from: d0.w.i.a.e, reason: use source file name */
-/* loaded from: classes3.dex */
 public @interface DebugMetadata {
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     String m10084c() default "";
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     String m10085f() default "";
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     int[] m10086l() default {};
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     String m10087m() default "";
 
-    /* renamed from: v */
+    /* JADX INFO: renamed from: v */
     int m10088v() default 1;
 }

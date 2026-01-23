@@ -2,12 +2,12 @@ package com.discord.api.guild;
 
 import p007b.p100d.p104b.p105a.outline;
 
-/* compiled from: PruneCountResponse.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: PruneCountResponse.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class PruneCountResponse {
     private final int pruned;
 
-    /* renamed from: a, reason: from getter */
+    /* JADX INFO: renamed from: a, reason: from getter */
     public final int getPruned() {
         return this.pruned;
     }

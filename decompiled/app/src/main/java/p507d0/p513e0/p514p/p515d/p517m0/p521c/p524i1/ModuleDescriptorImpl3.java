@@ -38,37 +38,37 @@ import p507d0.p580t._Collections;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: ModuleDescriptorImpl.kt */
-/* renamed from: d0.e0.p.d.m0.c.i1.y, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.c.i1.y, reason: use source file name */
+/* JADX INFO: compiled from: ModuleDescriptorImpl.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class ModuleDescriptorImpl3 extends DeclarationDescriptorImpl implements ModuleDescriptor2 {
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final StorageManager f22990l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public final KotlinBuiltIns f22991m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public final Map<ModuleCapability<?>, Object> f22992n;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public ModuleDescriptorImpl f22993o;
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public PackageFragmentProvider f22994p;
 
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     public boolean f22995q;
 
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     public final storage3<FqName, PackageViewDescriptor> f22996r;
 
-    /* renamed from: s */
+    /* JADX INFO: renamed from: s */
     public final Lazy f22997s;
 
-    /* compiled from: ModuleDescriptorImpl.kt */
-    /* renamed from: d0.e0.p.d.m0.c.i1.y$a */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.c.i1.y$a */
+    /* JADX INFO: compiled from: ModuleDescriptorImpl.kt */
     public static final class a extends Lambda implements Function0<CompositePackageFragmentProvider> {
         public a() {
             super(0);
@@ -107,8 +107,8 @@ public final class ModuleDescriptorImpl3 extends DeclarationDescriptorImpl imple
         }
     }
 
-    /* compiled from: ModuleDescriptorImpl.kt */
-    /* renamed from: d0.e0.p.d.m0.c.i1.y$b */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.c.i1.y$b */
+    /* JADX INFO: compiled from: ModuleDescriptorImpl.kt */
     public static final class b extends Lambda implements Function1<FqName, PackageViewDescriptor> {
         public b() {
             super(1);
@@ -119,7 +119,7 @@ public final class ModuleDescriptorImpl3 extends DeclarationDescriptorImpl imple
             return invoke2(fqName);
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final PackageViewDescriptor invoke2(FqName fqName) {
             Intrinsics3.checkNotNullParameter(fqName, "fqName");
             ModuleDescriptorImpl3 moduleDescriptorImpl3 = ModuleDescriptorImpl3.this;
@@ -170,7 +170,7 @@ public final class ModuleDescriptorImpl3 extends DeclarationDescriptorImpl imple
         }
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final String m9430b() {
         String string = getName().toString();
         Intrinsics3.checkNotNullExpressionValue(string, "name.toString()");

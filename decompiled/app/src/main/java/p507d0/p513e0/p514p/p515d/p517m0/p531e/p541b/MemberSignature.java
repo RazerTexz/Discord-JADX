@@ -10,19 +10,19 @@ import p507d0.p513e0.p514p.p515d.p517m0.p543f.p544a0.p545b.JvmMemberSignature;
 import p507d0.p513e0.p514p.p515d.p517m0.p543f.p547z.NameResolver;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: MemberSignature.kt */
-/* renamed from: d0.e0.p.d.m0.e.b.s, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.e.b.s, reason: use source file name */
+/* JADX INFO: compiled from: MemberSignature.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class MemberSignature {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final a f23633a = new a(null);
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final String f23634b;
 
-    /* compiled from: MemberSignature.kt */
-    /* renamed from: d0.e0.p.d.m0.e.b.s$a */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.e.b.s$a */
+    /* JADX INFO: compiled from: MemberSignature.kt */
     public static final class a {
         public a(DefaultConstructorMarker defaultConstructorMarker) {
         }

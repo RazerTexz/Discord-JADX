@@ -6,9 +6,9 @@ import kotlin.jvm.internal.DefaultConstructorMarker;
 import p507d0.p580t._Arrays;
 import p507d0.p580t._Collections;
 
-/* compiled from: DescriptorRenderer.kt */
-/* renamed from: d0.e0.p.d.m0.j.g, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.j.g, reason: use source file name */
+/* JADX INFO: compiled from: DescriptorRenderer.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public enum DescriptorRenderer3 {
     VISIBILITY(true),
     MODALITY(true),
@@ -26,15 +26,15 @@ public enum DescriptorRenderer3 {
     VALUE(true);
 
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static final Set<DescriptorRenderer3> f24244j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public static final Set<DescriptorRenderer3> f24245k;
     private final boolean includeByDefault;
 
-    /* compiled from: DescriptorRenderer.kt */
-    /* renamed from: d0.e0.p.d.m0.j.g$a */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.j.g$a */
+    /* JADX INFO: compiled from: DescriptorRenderer.kt */
     public static final class a {
         public a(DefaultConstructorMarker defaultConstructorMarker) {
         }
@@ -58,7 +58,7 @@ public enum DescriptorRenderer3 {
         this.includeByDefault = z2;
     }
 
-    /* renamed from: values, reason: to resolve conflict with enum method */
+    /* JADX INFO: renamed from: values, reason: to resolve conflict with enum method */
     public static DescriptorRenderer3[] valuesCustom() {
         DescriptorRenderer3[] descriptorRenderer3ArrValuesCustom = values();
         DescriptorRenderer3[] descriptorRenderer3Arr = new DescriptorRenderer3[descriptorRenderer3ArrValuesCustom.length];

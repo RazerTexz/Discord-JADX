@@ -5,21 +5,21 @@ import android.animation.AnimatorListenerAdapter;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import p007b.p225i.p226a.p341g.p346e.FloatingActionButtonImpl3;
 
-/* compiled from: FloatingActionButtonImpl.java */
-/* renamed from: b.i.a.g.e.d, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.g.e.d, reason: use source file name */
+/* JADX INFO: compiled from: FloatingActionButtonImpl.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class FloatingActionButtonImpl extends AnimatorListenerAdapter {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public boolean f11645a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final /* synthetic */ boolean f11646b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final /* synthetic */ FloatingActionButtonImpl3.f f11647c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final /* synthetic */ FloatingActionButtonImpl3 f11648d;
 
     public FloatingActionButtonImpl(FloatingActionButtonImpl3 floatingActionButtonImpl3, boolean z2, FloatingActionButtonImpl3.f fVar) {

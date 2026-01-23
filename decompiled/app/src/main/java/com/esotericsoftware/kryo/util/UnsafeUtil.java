@@ -12,7 +12,7 @@ import sun.misc.Cleaner;
 import sun.misc.Unsafe;
 import sun.nio.ch.DirectBuffer;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class UnsafeUtil {
     private static final Unsafe _unsafe;
     public static final long byteArrayBaseOffset;
@@ -24,14 +24,14 @@ public class UnsafeUtil {
     public static final long longArrayBaseOffset;
     public static final long shortArrayBaseOffset;
 
-    /* renamed from: com.esotericsoftware.kryo.util.UnsafeUtil$1 */
+    /* JADX INFO: renamed from: com.esotericsoftware.kryo.util.UnsafeUtil$1 */
     public static class C106291 implements Comparator<Field> {
         @Override // java.util.Comparator
         public /* bridge */ /* synthetic */ int compare(Field field, Field field2) {
             return compare2(field, field2);
         }
 
-        /* renamed from: compare, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: compare, reason: avoid collision after fix types in other method */
         public int compare2(Field field, Field field2) {
             long jObjectFieldOffset = UnsafeUtil.unsafe().objectFieldOffset(field);
             long jObjectFieldOffset2 = UnsafeUtil.unsafe().objectFieldOffset(field2);
@@ -161,17 +161,6 @@ public class UnsafeUtil {
                                 unsafe2 = unsafe;
                                 j2 = jArrayBaseOffset;
                                 j3 = jArrayBaseOffset2;
-                                byteArrayBaseOffset = j3;
-                                charArrayBaseOffset = jArrayBaseOffset3;
-                                shortArrayBaseOffset = jArrayBaseOffset4;
-                                intArrayBaseOffset = jArrayBaseOffset5;
-                                floatArrayBaseOffset = jArrayBaseOffset6;
-                                longArrayBaseOffset = j2;
-                                doubleArrayBaseOffset = j;
-                                _unsafe = unsafe2;
-                                Constructor declaredConstructor222 = ByteBuffer.allocateDirect(1).getClass().getDeclaredConstructor(Long.TYPE, Integer.TYPE, Object.class);
-                                directByteBufferConstr = declaredConstructor222;
-                                declaredConstructor222.setAccessible(true);
                             }
                         } catch (Exception unused5) {
                             jArrayBaseOffset = 0;
@@ -192,9 +181,9 @@ public class UnsafeUtil {
                         longArrayBaseOffset = j2;
                         doubleArrayBaseOffset = j;
                         _unsafe = unsafe2;
-                        Constructor declaredConstructor2222 = ByteBuffer.allocateDirect(1).getClass().getDeclaredConstructor(Long.TYPE, Integer.TYPE, Object.class);
-                        directByteBufferConstr = declaredConstructor2222;
-                        declaredConstructor2222.setAccessible(true);
+                        Constructor declaredConstructor222 = ByteBuffer.allocateDirect(1).getClass().getDeclaredConstructor(Long.TYPE, Integer.TYPE, Object.class);
+                        directByteBufferConstr = declaredConstructor222;
+                        declaredConstructor222.setAccessible(true);
                     }
                 } catch (Exception unused7) {
                     jArrayBaseOffset = 0;
@@ -216,9 +205,9 @@ public class UnsafeUtil {
                     longArrayBaseOffset = j2;
                     doubleArrayBaseOffset = j;
                     _unsafe = unsafe2;
-                    Constructor declaredConstructor22222 = ByteBuffer.allocateDirect(1).getClass().getDeclaredConstructor(Long.TYPE, Integer.TYPE, Object.class);
-                    directByteBufferConstr = declaredConstructor22222;
-                    declaredConstructor22222.setAccessible(true);
+                    Constructor declaredConstructor2222 = ByteBuffer.allocateDirect(1).getClass().getDeclaredConstructor(Long.TYPE, Integer.TYPE, Object.class);
+                    directByteBufferConstr = declaredConstructor2222;
+                    declaredConstructor2222.setAccessible(true);
                 }
             }
             jArrayBaseOffset6 = j4;
@@ -236,9 +225,9 @@ public class UnsafeUtil {
         doubleArrayBaseOffset = j;
         _unsafe = unsafe2;
         try {
-            Constructor declaredConstructor222222 = ByteBuffer.allocateDirect(1).getClass().getDeclaredConstructor(Long.TYPE, Integer.TYPE, Object.class);
-            directByteBufferConstr = declaredConstructor222222;
-            declaredConstructor222222.setAccessible(true);
+            Constructor declaredConstructor22222 = ByteBuffer.allocateDirect(1).getClass().getDeclaredConstructor(Long.TYPE, Integer.TYPE, Object.class);
+            directByteBufferConstr = declaredConstructor22222;
+            declaredConstructor22222.setAccessible(true);
         } catch (Exception unused9) {
             directByteBufferConstr = null;
         }

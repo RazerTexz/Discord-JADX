@@ -1,8 +1,8 @@
 package p007b.p085c.p086a.p099z;
 
-/* compiled from: FileExtension.java */
-/* renamed from: b.c.a.z.a, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.c.a.z.a, reason: use source file name */
+/* JADX INFO: compiled from: FileExtension.java */
+/* JADX INFO: loaded from: classes.dex */
 public enum FileExtension {
     JSON(".json"),
     ZIP(".zip");

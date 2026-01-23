@@ -14,7 +14,7 @@ import androidx.core.app.BundleCompat;
 import androidx.core.content.FileProvider;
 import java.io.File;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class TrustedWebUtils {
 
     @RestrictTo({RestrictTo.Scope.LIBRARY})

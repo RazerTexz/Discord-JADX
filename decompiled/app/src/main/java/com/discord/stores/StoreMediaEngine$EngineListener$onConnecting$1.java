@@ -6,8 +6,8 @@ import kotlin.jvm.functions.Function1;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: StoreMediaEngine.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: StoreMediaEngine.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class StoreMediaEngine$EngineListener$onConnecting$1 extends Lambda implements Function1<StoreMediaEngine.Listener, Unit> {
     public static final StoreMediaEngine$EngineListener$onConnecting$1 INSTANCE = new StoreMediaEngine$EngineListener$onConnecting$1();
 
@@ -21,7 +21,7 @@ public final class StoreMediaEngine$EngineListener$onConnecting$1 extends Lambda
         return Unit.f27425a;
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final void invoke2(StoreMediaEngine.Listener listener) {
         Intrinsics3.checkNotNullParameter(listener, "it");
         listener.onConnecting();

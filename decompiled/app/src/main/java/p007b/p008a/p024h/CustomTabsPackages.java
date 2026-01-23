@@ -4,12 +4,12 @@ import kotlin.jvm.functions.Function1;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: CustomTabsPackages.kt */
-/* renamed from: b.a.h.b, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.a.h.b, reason: use source file name */
+/* JADX INFO: compiled from: CustomTabsPackages.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class CustomTabsPackages extends Lambda implements Function1<String, Boolean> {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static final CustomTabsPackages f651j = new CustomTabsPackages();
 
     public CustomTabsPackages() {

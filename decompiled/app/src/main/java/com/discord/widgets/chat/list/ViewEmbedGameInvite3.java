@@ -11,9 +11,9 @@ import kotlin.jvm.functions.Function6;
 import p507d0.p592z.p594d.FunctionReferenceImpl;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ViewEmbedGameInvite.kt */
-/* renamed from: com.discord.widgets.chat.list.ViewEmbedGameInvite$Model$Companion$getForShare$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.chat.list.ViewEmbedGameInvite$Model$Companion$getForShare$1, reason: use source file name */
+/* JADX INFO: compiled from: ViewEmbedGameInvite.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final /* synthetic */ class ViewEmbedGameInvite3 extends FunctionReferenceImpl implements Function6<MeUser, Long, MessageActivity, Activity, Map<Long, ? extends User>, Application, ViewEmbedGameInvite.Model> {
     public ViewEmbedGameInvite3(ViewEmbedGameInvite.Model.Companion companion) {
         super(6, companion, ViewEmbedGameInvite.Model.Companion.class, "createForShare", "createForShare(Lcom/discord/models/user/MeUser;JLcom/discord/api/message/activity/MessageActivity;Lcom/discord/api/activity/Activity;Ljava/util/Map;Lcom/discord/api/application/Application;)Lcom/discord/widgets/chat/list/ViewEmbedGameInvite$Model;", 0);

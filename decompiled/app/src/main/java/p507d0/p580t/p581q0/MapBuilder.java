@@ -5,9 +5,9 @@ import java.util.Map.Entry;
 import p507d0.p580t.AbstractMutableSet;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: MapBuilder.kt */
-/* renamed from: d0.t.q0.a, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.t.q0.a, reason: use source file name */
+/* JADX INFO: compiled from: MapBuilder.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public abstract class MapBuilder<E extends Map.Entry<? extends K, ? extends V>, K, V> extends AbstractMutableSet<E> {
     @Override // java.util.AbstractCollection, java.util.Collection, java.util.Set
     public final /* bridge */ boolean contains(Object obj) {

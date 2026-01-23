@@ -28,46 +28,46 @@ import p007b.p100d.p104b.p105a.outline;
 import p007b.p225i.p226a.p288f.p299e.p308o.C3404f;
 import p007b.p225i.p355b.p356a.Charsets;
 
-/* compiled from: Util.java */
-/* renamed from: b.i.a.c.f3.e0, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.f3.e0, reason: use source file name */
+/* JADX INFO: compiled from: Util.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class Util2 {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final int f6708a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static final String f6709b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public static final String f6710c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public static final String f6711d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public static final String f6712e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public static final byte[] f6713f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public static final Pattern f6714g;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     @Nullable
     public static HashMap<String, String> f6715h;
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public static final String[] f6716i;
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static final String[] f6717j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public static final int[] f6718k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public static final int[] f6719l;
 
     static {
@@ -95,18 +95,18 @@ public final class Util2 {
         f6719l = new int[]{0, 7, 14, 9, 28, 27, 18, 21, 56, 63, 54, 49, 36, 35, 42, 45, 112, 119, 126, 121, 108, 107, 98, 101, 72, 79, 70, 65, 84, 83, 90, 93, 224, 231, 238, 233, 252, 251, 242, 245, 216, 223, 214, 209, 196, Opcodes.MONITOREXIT, 202, 205, Opcodes.D2F, Opcodes.DCMPL, 158, 153, Opcodes.F2L, Opcodes.F2I, 130, Opcodes.I2L, Opcodes.JSR, 175, Opcodes.IF_ACMPNE, Opcodes.IF_ICMPLT, 180, Opcodes.PUTSTATIC, Opcodes.INVOKEDYNAMIC, Opcodes.ANEWARRAY, Opcodes.IFNONNULL, Opcodes.CHECKCAST, 201, 206, 219, 220, 213, 210, 255, 248, 241, 246, 227, 228, 237, 234, Opcodes.INVOKESPECIAL, Opcodes.ARETURN, Opcodes.INVOKEINTERFACE, Opcodes.ARRAYLENGTH, Opcodes.LOOKUPSWITCH, Opcodes.IRETURN, Opcodes.IF_ACMPEQ, Opcodes.IF_ICMPGE, Opcodes.D2L, Opcodes.L2I, Opcodes.LOR, Opcodes.I2F, Opcodes.I2S, Opcodes.LCMP, 157, 154, 39, 32, 41, 46, 59, 60, 53, 50, 31, 24, 17, 22, 3, 4, 13, 10, 87, 80, 89, 94, 75, 76, 69, 66, 111, 104, 97, 102, 115, 116, Opcodes.LUSHR, 122, Opcodes.L2F, Opcodes.D2I, Opcodes.I2D, 128, Opcodes.FCMPL, Opcodes.I2C, 155, 156, Opcodes.RETURN, Opcodes.INVOKEVIRTUAL, Opcodes.ATHROW, Opcodes.INVOKESTATIC, Opcodes.LRETURN, Opcodes.TABLESWITCH, Opcodes.IF_ICMPGT, Opcodes.IF_ICMPLE, 249, 254, 247, 240, 229, 226, 235, 236, Opcodes.INSTANCEOF, Opcodes.IFNULL, 207, 200, 221, 218, 211, 212, 105, 110, 103, 96, 117, 114, 123, 124, 81, 86, 95, 88, 77, 74, 67, 68, 25, 30, 23, 16, 5, 2, 11, 12, 33, 38, 47, 40, 61, 58, 51, 52, 78, 73, 64, 71, 82, 85, 92, 91, 118, 113, 120, Opcodes.LAND, 106, 109, 100, 99, 62, 57, 48, 55, 34, 37, 44, 43, 6, 1, 8, 15, 26, 29, 20, 19, Opcodes.FRETURN, Opcodes.RET, Opcodes.IF_ICMPNE, Opcodes.GOTO, Opcodes.GETSTATIC, Opcodes.PUTFIELD, Opcodes.NEWARRAY, Opcodes.NEW, 150, Opcodes.I2B, Opcodes.DCMPG, Opcodes.IF_ICMPEQ, Opcodes.L2D, Opcodes.F2D, Opcodes.IINC, Opcodes.LXOR, 222, 217, 208, 215, Opcodes.MONITORENTER, Opcodes.MULTIANEWARRAY, 204, 203, 230, HideBottomViewOnScrollBehavior.ENTER_ANIMATION_DURATION, 232, 239, 250, 253, 244, 243};
     }
 
-    /* renamed from: A */
+    /* JADX INFO: renamed from: A */
     public static boolean m2980A(Context context) {
         UiModeManager uiModeManager = (UiModeManager) context.getApplicationContext().getSystemService("uimode");
         return uiModeManager != null && uiModeManager.getCurrentModeType() == 4;
     }
 
-    /* renamed from: B */
+    /* JADX INFO: renamed from: B */
     public static long m2981B(long j) {
         return (j == -9223372036854775807L || j == Long.MIN_VALUE) ? j : j * 1000;
     }
 
-    /* renamed from: C */
+    /* JADX INFO: renamed from: C */
     public static String m2982C(String str) {
         if (str == null) {
             return null;
@@ -164,13 +164,13 @@ public final class Util2 {
         }
     }
 
-    /* renamed from: D */
+    /* JADX INFO: renamed from: D */
     public static <T> T[] m2983D(T[] tArr, int i) {
         AnimatableValueParser.m531j(i <= tArr.length);
         return (T[]) Arrays.copyOf(tArr, i);
     }
 
-    /* renamed from: E */
+    /* JADX INFO: renamed from: E */
     public static boolean m2984E(Handler handler, Runnable runnable) {
         if (!handler.getLooper().getThread().isAlive()) {
             return false;
@@ -182,7 +182,7 @@ public final class Util2 {
         return true;
     }
 
-    /* renamed from: F */
+    /* JADX INFO: renamed from: F */
     public static long m2985F(long j, long j2, long j3) {
         if (j3 >= j2 && j3 % j2 == 0) {
             return j / (j3 / j2);
@@ -193,7 +193,7 @@ public final class Util2 {
         return (long) (j * (j2 / j3));
     }
 
-    /* renamed from: G */
+    /* JADX INFO: renamed from: G */
     public static void m2986G(long[] jArr, long j, long j2) {
         int i = 0;
         if (j2 >= j && j2 % j == 0) {
@@ -219,22 +219,22 @@ public final class Util2 {
         }
     }
 
-    /* renamed from: H */
+    /* JADX INFO: renamed from: H */
     public static String[] m2987H(String str, String str2) {
         return str.split(str2, -1);
     }
 
-    /* renamed from: I */
+    /* JADX INFO: renamed from: I */
     public static String[] m2988I(String str, String str2) {
         return str.split(str2, 2);
     }
 
-    /* renamed from: J */
+    /* JADX INFO: renamed from: J */
     public static boolean m2989J(SQLiteDatabase sQLiteDatabase, String str) {
         return DatabaseUtils.queryNumEntries(sQLiteDatabase, "sqlite_master", "tbl_name = ?", new String[]{str}) > 0;
     }
 
-    /* renamed from: K */
+    /* JADX INFO: renamed from: K */
     public static byte[] m2990K(InputStream inputStream) throws IOException {
         byte[] bArr = new byte[4096];
         ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
@@ -247,22 +247,22 @@ public final class Util2 {
         }
     }
 
-    /* renamed from: L */
+    /* JADX INFO: renamed from: L */
     public static long m2991L(int i) {
-        return i & 4294967295L;
+        return ((long) i) & 4294967295L;
     }
 
-    /* renamed from: M */
+    /* JADX INFO: renamed from: M */
     public static long m2992M(long j) {
         return (j == -9223372036854775807L || j == Long.MIN_VALUE) ? j : j / 1000;
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static boolean m2993a(@Nullable Object obj, @Nullable Object obj2) {
         return obj == null ? obj2 == null : obj.equals(obj2);
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static int m2994b(long[] jArr, long j, boolean z2, boolean z3) {
         int i;
         int iBinarySearch = Arrays.binarySearch(jArr, j);
@@ -280,7 +280,7 @@ public final class Util2 {
         return z3 ? Math.min(jArr.length - 1, i) : i;
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public static int m2995c(LongArray longArray, long j, boolean z2, boolean z3) {
         int i;
         int i2 = longArray.f6747a - 1;
@@ -302,7 +302,7 @@ public final class Util2 {
         return i2;
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public static int m2996d(int[] iArr, int i, boolean z2, boolean z3) {
         int i2;
         int iBinarySearch = Arrays.binarySearch(iArr, i);
@@ -320,7 +320,7 @@ public final class Util2 {
         return z3 ? Math.max(0, i2) : i2;
     }
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public static int m2997e(long[] jArr, long j, boolean z2, boolean z3) {
         int i;
         int iBinarySearch = Arrays.binarySearch(jArr, j);
@@ -338,49 +338,49 @@ public final class Util2 {
         return z3 ? Math.max(0, i) : i;
     }
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public static int m2998f(int i, int i2) {
         return ((i + i2) - 1) / i2;
     }
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public static float m2999g(float f, float f2, float f3) {
         return Math.max(f2, Math.min(f, f3));
     }
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public static int m3000h(int i, int i2, int i3) {
         return Math.max(i2, Math.min(i, i3));
     }
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public static long m3001i(long j, long j2, long j3) {
         return Math.max(j2, Math.min(j, j3));
     }
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static Handler m3002j() {
         Looper looperMyLooper = Looper.myLooper();
         AnimatableValueParser.m438H(looperMyLooper);
         return new Handler(looperMyLooper, null);
     }
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public static String m3003k(String str, Object... objArr) {
         return String.format(Locale.US, str, objArr);
     }
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public static String m3004l(byte[] bArr) {
         return new String(bArr, Charsets.f11945c);
     }
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public static String m3005m(byte[] bArr, int i, int i2) {
         return new String(bArr, i, i2, Charsets.f11945c);
     }
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public static int m3006n(int i) {
         switch (i) {
             case 1:
@@ -405,13 +405,13 @@ public final class Util2 {
         }
     }
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public static Looper m3007o() {
         Looper looperMyLooper = Looper.myLooper();
         return looperMyLooper != null ? looperMyLooper : Looper.getMainLooper();
     }
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public static int m3008p(int i) {
         if (i == 2 || i == 4) {
             return 6005;
@@ -451,12 +451,12 @@ public final class Util2 {
         }
     }
 
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     public static long m3009q(long j, float f) {
-        return f == 1.0f ? j : Math.round(j * f);
+        return f == 1.0f ? j : Math.round(j * ((double) f));
     }
 
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     public static int m3010r(int i) {
         if (i == 8) {
             return 3;
@@ -470,7 +470,7 @@ public final class Util2 {
         return 536870912;
     }
 
-    /* renamed from: s */
+    /* JADX INFO: renamed from: s */
     public static int m3011s(int i, int i2) {
         if (i != 2) {
             if (i == 3) {
@@ -491,7 +491,7 @@ public final class Util2 {
         return i2 * 2;
     }
 
-    /* renamed from: t */
+    /* JADX INFO: renamed from: t */
     public static int m3012t(int i) {
         if (i == 13) {
             return 1;
@@ -516,7 +516,7 @@ public final class Util2 {
         }
     }
 
-    /* renamed from: u */
+    /* JADX INFO: renamed from: u */
     public static String m3013u(StringBuilder sb, Formatter formatter, long j) {
         if (j == -9223372036854775807L) {
             j = 0;
@@ -531,7 +531,7 @@ public final class Util2 {
     }
 
     @Nullable
-    /* renamed from: v */
+    /* JADX INFO: renamed from: v */
     public static String m3014v(String str) {
         try {
             Class<?> cls = Class.forName("android.os.SystemProperties");
@@ -542,12 +542,12 @@ public final class Util2 {
         }
     }
 
-    /* renamed from: w */
+    /* JADX INFO: renamed from: w */
     public static byte[] m3015w(String str) {
         return str.getBytes(Charsets.f11945c);
     }
 
-    /* renamed from: x */
+    /* JADX INFO: renamed from: x */
     public static boolean m3016x(ParsableByteArray parsableByteArray, ParsableByteArray parsableByteArray2, @Nullable Inflater inflater) {
         if (parsableByteArray.m3081a() <= 0) {
             return false;
@@ -585,12 +585,12 @@ public final class Util2 {
         return false;
     }
 
-    /* renamed from: y */
+    /* JADX INFO: renamed from: y */
     public static boolean m3017y(int i) {
         return i == 536870912 || i == 805306368 || i == 4;
     }
 
-    /* renamed from: z */
+    /* JADX INFO: renamed from: z */
     public static boolean m3018z(int i) {
         return i == 3 || i == 2 || i == 268435456 || i == 536870912 || i == 805306368 || i == 4;
     }

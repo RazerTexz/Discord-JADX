@@ -2,15 +2,15 @@ package p007b.p225i.p414e.p418n;
 
 import java.nio.charset.Charset;
 
-/* compiled from: StringUtils.java */
-/* renamed from: b.i.e.n.j, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.e.n.j, reason: use source file name */
+/* JADX INFO: compiled from: StringUtils.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class StringUtils {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final String f13290a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static final boolean f13291b;
 
     static {

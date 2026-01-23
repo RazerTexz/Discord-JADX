@@ -10,23 +10,23 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p637j0.p641k.Func1;
 import p658rx.Observable;
 
-/* compiled from: WidgetGroupInviteFriends.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetGroupInviteFriends.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetGroupInviteFriends$Model$Companion$getFilteredFriends$2<T, R> implements Func1<List<Long>, Observable<? extends Map<Long, Integer>>> {
     public final /* synthetic */ String $nameFilter;
 
-    /* compiled from: WidgetGroupInviteFriends.kt */
-    /* renamed from: com.discord.widgets.channels.WidgetGroupInviteFriends$Model$Companion$getFilteredFriends$2$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.channels.WidgetGroupInviteFriends$Model$Companion$getFilteredFriends$2$1 */
+    /* JADX INFO: compiled from: WidgetGroupInviteFriends.kt */
     public static final class C73781<T, R> implements Func1<Map<Long, ? extends Integer>, Observable<? extends Map<Long, Integer>>> {
         public final /* synthetic */ List $excludeUserIds;
 
-        /* compiled from: WidgetGroupInviteFriends.kt */
-        /* renamed from: com.discord.widgets.channels.WidgetGroupInviteFriends$Model$Companion$getFilteredFriends$2$1$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.widgets.channels.WidgetGroupInviteFriends$Model$Companion$getFilteredFriends$2$1$1, reason: invalid class name */
+        /* JADX INFO: compiled from: WidgetGroupInviteFriends.kt */
         public static final class AnonymousClass1<T, R> implements Func1<Map<Long, ? extends User>, Observable<? extends Map<Long, Integer>>> {
             public final /* synthetic */ Map $relationships;
 
-            /* compiled from: WidgetGroupInviteFriends.kt */
-            /* renamed from: com.discord.widgets.channels.WidgetGroupInviteFriends$Model$Companion$getFilteredFriends$2$1$1$1, reason: invalid class name and collision with other inner class name */
+            /* JADX INFO: renamed from: com.discord.widgets.channels.WidgetGroupInviteFriends$Model$Companion$getFilteredFriends$2$1$1$1, reason: invalid class name and collision with other inner class name */
+            /* JADX INFO: compiled from: WidgetGroupInviteFriends.kt */
             public static final class C132741<T, R> implements Func1<Map.Entry<? extends Long, ? extends Integer>, Boolean> {
                 public final /* synthetic */ Map $users;
 
@@ -41,7 +41,7 @@ public final class WidgetGroupInviteFriends$Model$Companion$getFilteredFriends$2
 
                 /* JADX WARN: Removed duplicated region for block: B:17:0x004a  */
                 /* JADX WARN: Removed duplicated region for block: B:22:0x0055  */
-                /* renamed from: call, reason: avoid collision after fix types in other method */
+                /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
                 /*
                     Code decompiled incorrectly, please refer to instructions dump.
                 */
@@ -74,8 +74,8 @@ public final class WidgetGroupInviteFriends$Model$Companion$getFilteredFriends$2
                 }
             }
 
-            /* compiled from: WidgetGroupInviteFriends.kt */
-            /* renamed from: com.discord.widgets.channels.WidgetGroupInviteFriends$Model$Companion$getFilteredFriends$2$1$1$2, reason: invalid class name */
+            /* JADX INFO: renamed from: com.discord.widgets.channels.WidgetGroupInviteFriends$Model$Companion$getFilteredFriends$2$1$1$2, reason: invalid class name */
+            /* JADX INFO: compiled from: WidgetGroupInviteFriends.kt */
             public static final class AnonymousClass2<T, R> implements Func1<Map.Entry<? extends Long, ? extends Integer>, Long> {
                 public static final AnonymousClass2 INSTANCE = new AnonymousClass2();
 
@@ -84,14 +84,14 @@ public final class WidgetGroupInviteFriends$Model$Companion$getFilteredFriends$2
                     return call2((Map.Entry<Long, Integer>) entry);
                 }
 
-                /* renamed from: call, reason: avoid collision after fix types in other method */
+                /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
                 public final Long call2(Map.Entry<Long, Integer> entry) {
                     return entry.getKey();
                 }
             }
 
-            /* compiled from: WidgetGroupInviteFriends.kt */
-            /* renamed from: com.discord.widgets.channels.WidgetGroupInviteFriends$Model$Companion$getFilteredFriends$2$1$1$3, reason: invalid class name */
+            /* JADX INFO: renamed from: com.discord.widgets.channels.WidgetGroupInviteFriends$Model$Companion$getFilteredFriends$2$1$1$3, reason: invalid class name */
+            /* JADX INFO: compiled from: WidgetGroupInviteFriends.kt */
             public static final class AnonymousClass3<T, R> implements Func1<Map.Entry<? extends Long, ? extends Integer>, Integer> {
                 public static final AnonymousClass3 INSTANCE = new AnonymousClass3();
 
@@ -100,7 +100,7 @@ public final class WidgetGroupInviteFriends$Model$Companion$getFilteredFriends$2
                     return call2((Map.Entry<Long, Integer>) entry);
                 }
 
-                /* renamed from: call, reason: avoid collision after fix types in other method */
+                /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
                 public final Integer call2(Map.Entry<Long, Integer> entry) {
                     return entry.getValue();
                 }
@@ -115,7 +115,7 @@ public final class WidgetGroupInviteFriends$Model$Companion$getFilteredFriends$2
                 return call2(map);
             }
 
-            /* renamed from: call, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
             public final Observable<? extends Map<Long, Integer>> call2(Map<Long, ? extends User> map) {
                 return Observable.m11058B(this.$relationships.entrySet()).m11118y(new C132741(map)).m11106g0(AnonymousClass2.INSTANCE, AnonymousClass3.INSTANCE);
             }
@@ -130,7 +130,7 @@ public final class WidgetGroupInviteFriends$Model$Companion$getFilteredFriends$2
             return call2((Map<Long, Integer>) map);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final Observable<? extends Map<Long, Integer>> call2(Map<Long, Integer> map) {
             return StoreStream.INSTANCE.getUsers().observeUsers(map.keySet()).m11099Y(new AnonymousClass1(map));
         }
@@ -145,7 +145,7 @@ public final class WidgetGroupInviteFriends$Model$Companion$getFilteredFriends$2
         return call2(list);
     }
 
-    /* renamed from: call, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
     public final Observable<? extends Map<Long, Integer>> call2(List<Long> list) {
         return StoreStream.INSTANCE.getUserRelationships().observeForType(1).m11099Y(new C73781(list));
     }

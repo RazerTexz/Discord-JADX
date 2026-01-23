@@ -11,7 +11,7 @@ import org.apache.tools.ant.Location;
 import org.apache.tools.ant.types.Path;
 import org.apache.tools.ant.types.resources.FileResource;
 
-/* loaded from: discord-126021.apk:lombok/delombok/ant/DelombokTaskImpl.SCL.lombok */
+/* JADX INFO: loaded from: discord-126021.apk:lombok/delombok/ant/DelombokTaskImpl.SCL.lombok */
 public class DelombokTaskImpl {
     private File fromDir;
     private File toDir;
@@ -24,7 +24,7 @@ public class DelombokTaskImpl {
     private List<String> formatOptions = new ArrayList();
 
     /* JADX INFO: Thrown type has an unknown type hierarchy: org.apache.tools.ant.BuildException */
-    public void execute(Location location) throws BuildException, IllegalArgumentException {
+    public void execute(Location location) throws BuildException {
         if (this.fromDir == null && this.path == null) {
             throw new BuildException("Either 'from' attribute, or nested <fileset> tags are required.");
         }

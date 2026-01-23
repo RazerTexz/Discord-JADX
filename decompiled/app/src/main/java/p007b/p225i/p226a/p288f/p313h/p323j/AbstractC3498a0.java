@@ -4,20 +4,20 @@ import android.os.Handler;
 import java.util.Objects;
 import p007b.p225i.p226a.p288f.p299e.p308o.C3401c;
 
-/* renamed from: b.i.a.f.h.j.a0 */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.h.j.a0 */
+/* JADX INFO: loaded from: classes3.dex */
 public abstract class AbstractC3498a0 {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static volatile Handler f9662a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final C3515g f9663b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final Runnable f9664c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public volatile long f9665d;
 
     public AbstractC3498a0(C3515g c3515g) {
@@ -26,13 +26,13 @@ public abstract class AbstractC3498a0 {
         this.f9664c = new RunnableC3501b0(this);
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final void m4416a() {
         this.f9665d = 0L;
         m4417b().removeCallbacks(this.f9664c);
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final Handler m4417b() {
         Handler handler;
         if (f9662a != null) {
@@ -47,15 +47,15 @@ public abstract class AbstractC3498a0 {
         return handler;
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public abstract void mo4418c();
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final boolean m4419d() {
         return this.f9665d != 0;
     }
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final void m4420e(long j) {
         m4416a();
         if (j >= 0) {

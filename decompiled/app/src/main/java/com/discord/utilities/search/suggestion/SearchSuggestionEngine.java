@@ -50,8 +50,8 @@ import p658rx.Observable;
 import p658rx.subjects.PublishSubject;
 import p658rx.subjects.SerializedSubject;
 
-/* compiled from: SearchSuggestionEngine.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: SearchSuggestionEngine.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class SearchSuggestionEngine {
     public static final SearchSuggestionEngine INSTANCE;
     private static final int MAX_ENTRY_TYPE_COUNT;
@@ -71,8 +71,8 @@ public final class SearchSuggestionEngine {
         }
     }
 
-    /* compiled from: SearchSuggestionEngine.kt */
-    /* renamed from: com.discord.utilities.search.suggestion.SearchSuggestionEngine$setupMemberRequestSubscription$1 */
+    /* JADX INFO: renamed from: com.discord.utilities.search.suggestion.SearchSuggestionEngine$setupMemberRequestSubscription$1 */
+    /* JADX INFO: compiled from: SearchSuggestionEngine.kt */
     public static final class C69101<T, R> implements Func1<CharSequence, String> {
         public static final C69101 INSTANCE = new C69101();
 
@@ -81,14 +81,14 @@ public final class SearchSuggestionEngine {
             return call2(charSequence);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final String call2(CharSequence charSequence) {
             return charSequence.toString();
         }
     }
 
-    /* compiled from: SearchSuggestionEngine.kt */
-    /* renamed from: com.discord.utilities.search.suggestion.SearchSuggestionEngine$setupMemberRequestSubscription$2 */
+    /* JADX INFO: renamed from: com.discord.utilities.search.suggestion.SearchSuggestionEngine$setupMemberRequestSubscription$2 */
+    /* JADX INFO: compiled from: SearchSuggestionEngine.kt */
     public static final /* synthetic */ class C69112 extends FunctionReferenceImpl implements Function1<CharSequence, Boolean> {
         public static final C69112 INSTANCE = new C69112();
 
@@ -107,8 +107,8 @@ public final class SearchSuggestionEngine {
         }
     }
 
-    /* compiled from: SearchSuggestionEngine.kt */
-    /* renamed from: com.discord.utilities.search.suggestion.SearchSuggestionEngine$setupMemberRequestSubscription$3 */
+    /* JADX INFO: renamed from: com.discord.utilities.search.suggestion.SearchSuggestionEngine$setupMemberRequestSubscription$3 */
+    /* JADX INFO: compiled from: SearchSuggestionEngine.kt */
     public static final class C69123 extends Lambda implements Function1<String, Unit> {
         public static final C69123 INSTANCE = new C69123();
 
@@ -122,7 +122,7 @@ public final class SearchSuggestionEngine {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(String str) {
             StoreGatewayConnection gatewaySocket = StoreStream.INSTANCE.getGatewaySocket();
             Long targetGuildId = SearchSuggestionEngine.INSTANCE.getTargetGuildId();

@@ -2,11 +2,11 @@ package retrofit2;
 
 import java.util.Objects;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public class HttpException extends RuntimeException {
     private final int code;
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final transient Response<?> f27630j;
     private final String message;
 
@@ -20,7 +20,7 @@ public class HttpException extends RuntimeException {
         this.f27630j = response;
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public int m11055a() {
         return this.code;
     }

@@ -14,7 +14,7 @@ import co.discord.media_engine.StreamParameters;
 import org.webrtc.EglBase;
 import org.webrtc.VideoFrame;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public class Discord {
     public static final int LOGLEVEL_DEBUG = 2;
     public static final int LOGLEVEL_DEFAULT = -1;

@@ -7,12 +7,12 @@ import p507d0.p513e0.p514p.p515d.p517m0.p567n.KotlinType;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: signatureEnhancement.kt */
-/* renamed from: d0.e0.p.d.m0.e.a.l0.n, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.e.a.l0.n, reason: use source file name */
+/* JADX INFO: compiled from: signatureEnhancement.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class signatureEnhancement3 extends Lambda implements Function1<CallableMemberDescriptor, KotlinType> {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static final signatureEnhancement3 f23489j = new signatureEnhancement3();
 
     public signatureEnhancement3() {
@@ -24,7 +24,7 @@ public final class signatureEnhancement3 extends Lambda implements Function1<Cal
         return invoke2(callableMemberDescriptor);
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final KotlinType invoke2(CallableMemberDescriptor callableMemberDescriptor) {
         Intrinsics3.checkNotNullParameter(callableMemberDescriptor, "it");
         ReceiverParameterDescriptor extensionReceiverParameter = callableMemberDescriptor.getExtensionReceiverParameter();

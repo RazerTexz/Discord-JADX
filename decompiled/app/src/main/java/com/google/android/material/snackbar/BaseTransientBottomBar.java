@@ -8,7 +8,6 @@ import android.animation.ValueAnimator;
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.res.ColorStateList;
-import android.content.res.Resources;
 import android.content.res.TypedArray;
 import android.graphics.PorterDuff;
 import android.graphics.Rect;
@@ -62,7 +61,7 @@ import java.util.List;
 import p007b.p100d.p104b.p105a.outline;
 import p007b.p225i.p226a.p341g.p349h.SnackbarManager;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public abstract class BaseTransientBottomBar<B extends BaseTransientBottomBar<B>> {
     public static final int ANIMATION_DURATION = 250;
     public static final int ANIMATION_FADE_DURATION = 180;
@@ -231,7 +230,7 @@ public abstract class BaseTransientBottomBar<B extends BaseTransientBottomBar<B>
         private OnAttachStateChangeListener onAttachStateChangeListener;
         private OnLayoutChangeListener onLayoutChangeListener;
 
-        /* renamed from: com.google.android.material.snackbar.BaseTransientBottomBar$SnackbarBaseLayout$a */
+        /* JADX INFO: renamed from: com.google.android.material.snackbar.BaseTransientBottomBar$SnackbarBaseLayout$a */
         public static class ViewOnTouchListenerC10984a implements View.OnTouchListener {
             @Override // android.view.View.OnTouchListener
             @SuppressLint({"ClickableViewAccessibility"})
@@ -245,7 +244,7 @@ public abstract class BaseTransientBottomBar<B extends BaseTransientBottomBar<B>
         }
 
         @NonNull
-        private Drawable createThemedBackground() throws Resources.NotFoundException {
+        private Drawable createThemedBackground() {
             float dimension = getResources().getDimension(C10817R.dimen.mtrl_snackbar_background_corner_radius);
             GradientDrawable gradientDrawable = new GradientDrawable();
             gradientDrawable.setShape(0);
@@ -378,7 +377,7 @@ public abstract class BaseTransientBottomBar<B extends BaseTransientBottomBar<B>
         }
     }
 
-    /* renamed from: com.google.android.material.snackbar.BaseTransientBottomBar$a */
+    /* JADX INFO: renamed from: com.google.android.material.snackbar.BaseTransientBottomBar$a */
     public class RunnableC10985a implements Runnable {
         public RunnableC10985a() {
         }
@@ -400,7 +399,7 @@ public abstract class BaseTransientBottomBar<B extends BaseTransientBottomBar<B>
         }
     }
 
-    /* renamed from: com.google.android.material.snackbar.BaseTransientBottomBar$b */
+    /* JADX INFO: renamed from: com.google.android.material.snackbar.BaseTransientBottomBar$b */
     public class C10986b extends AnimatorListenerAdapter {
         public C10986b() {
         }
@@ -411,10 +410,10 @@ public abstract class BaseTransientBottomBar<B extends BaseTransientBottomBar<B>
         }
     }
 
-    /* renamed from: com.google.android.material.snackbar.BaseTransientBottomBar$c */
+    /* JADX INFO: renamed from: com.google.android.material.snackbar.BaseTransientBottomBar$c */
     public class C10987c extends AnimatorListenerAdapter {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final /* synthetic */ int f21125a;
 
         public C10987c(int i) {
@@ -427,7 +426,7 @@ public abstract class BaseTransientBottomBar<B extends BaseTransientBottomBar<B>
         }
     }
 
-    /* renamed from: com.google.android.material.snackbar.BaseTransientBottomBar$d */
+    /* JADX INFO: renamed from: com.google.android.material.snackbar.BaseTransientBottomBar$d */
     public class C10988d implements ValueAnimator.AnimatorUpdateListener {
         public C10988d() {
         }
@@ -438,7 +437,7 @@ public abstract class BaseTransientBottomBar<B extends BaseTransientBottomBar<B>
         }
     }
 
-    /* renamed from: com.google.android.material.snackbar.BaseTransientBottomBar$e */
+    /* JADX INFO: renamed from: com.google.android.material.snackbar.BaseTransientBottomBar$e */
     public class C10989e implements ValueAnimator.AnimatorUpdateListener {
         public C10989e() {
         }
@@ -451,7 +450,7 @@ public abstract class BaseTransientBottomBar<B extends BaseTransientBottomBar<B>
         }
     }
 
-    /* renamed from: com.google.android.material.snackbar.BaseTransientBottomBar$f */
+    /* JADX INFO: renamed from: com.google.android.material.snackbar.BaseTransientBottomBar$f */
     public class C10990f extends AnimatorListenerAdapter {
         public C10990f() {
         }
@@ -467,13 +466,13 @@ public abstract class BaseTransientBottomBar<B extends BaseTransientBottomBar<B>
         }
     }
 
-    /* renamed from: com.google.android.material.snackbar.BaseTransientBottomBar$g */
+    /* JADX INFO: renamed from: com.google.android.material.snackbar.BaseTransientBottomBar$g */
     public class C10991g implements ValueAnimator.AnimatorUpdateListener {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public int f21130a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final /* synthetic */ int f21131b;
 
         public C10991g(int i) {
@@ -493,10 +492,10 @@ public abstract class BaseTransientBottomBar<B extends BaseTransientBottomBar<B>
         }
     }
 
-    /* renamed from: com.google.android.material.snackbar.BaseTransientBottomBar$h */
+    /* JADX INFO: renamed from: com.google.android.material.snackbar.BaseTransientBottomBar$h */
     public class C10992h extends AnimatorListenerAdapter {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final /* synthetic */ int f21133a;
 
         public C10992h(int i) {
@@ -514,10 +513,10 @@ public abstract class BaseTransientBottomBar<B extends BaseTransientBottomBar<B>
         }
     }
 
-    /* renamed from: com.google.android.material.snackbar.BaseTransientBottomBar$i */
+    /* JADX INFO: renamed from: com.google.android.material.snackbar.BaseTransientBottomBar$i */
     public class C10993i implements ValueAnimator.AnimatorUpdateListener {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public int f21135a = 0;
 
         public C10993i() {
@@ -535,7 +534,7 @@ public abstract class BaseTransientBottomBar<B extends BaseTransientBottomBar<B>
         }
     }
 
-    /* renamed from: com.google.android.material.snackbar.BaseTransientBottomBar$j */
+    /* JADX INFO: renamed from: com.google.android.material.snackbar.BaseTransientBottomBar$j */
     public static class C10994j implements Handler.Callback {
         @Override // android.os.Handler.Callback
         public boolean handleMessage(@NonNull Message message) {
@@ -552,7 +551,7 @@ public abstract class BaseTransientBottomBar<B extends BaseTransientBottomBar<B>
         }
     }
 
-    /* renamed from: com.google.android.material.snackbar.BaseTransientBottomBar$k */
+    /* JADX INFO: renamed from: com.google.android.material.snackbar.BaseTransientBottomBar$k */
     public class ViewTreeObserverOnGlobalLayoutListenerC10995k implements ViewTreeObserver.OnGlobalLayoutListener {
         public ViewTreeObserverOnGlobalLayoutListenerC10995k() {
         }
@@ -567,7 +566,7 @@ public abstract class BaseTransientBottomBar<B extends BaseTransientBottomBar<B>
         }
     }
 
-    /* renamed from: com.google.android.material.snackbar.BaseTransientBottomBar$l */
+    /* JADX INFO: renamed from: com.google.android.material.snackbar.BaseTransientBottomBar$l */
     public class RunnableC10996l implements Runnable {
         public RunnableC10996l() {
         }
@@ -590,7 +589,7 @@ public abstract class BaseTransientBottomBar<B extends BaseTransientBottomBar<B>
         }
     }
 
-    /* renamed from: com.google.android.material.snackbar.BaseTransientBottomBar$m */
+    /* JADX INFO: renamed from: com.google.android.material.snackbar.BaseTransientBottomBar$m */
     public class C10997m implements OnApplyWindowInsetsListener {
         public C10997m() {
         }
@@ -606,7 +605,7 @@ public abstract class BaseTransientBottomBar<B extends BaseTransientBottomBar<B>
         }
     }
 
-    /* renamed from: com.google.android.material.snackbar.BaseTransientBottomBar$n */
+    /* JADX INFO: renamed from: com.google.android.material.snackbar.BaseTransientBottomBar$n */
     public class C10998n extends AccessibilityDelegateCompat {
         public C10998n() {
         }
@@ -628,13 +627,13 @@ public abstract class BaseTransientBottomBar<B extends BaseTransientBottomBar<B>
         }
     }
 
-    /* renamed from: com.google.android.material.snackbar.BaseTransientBottomBar$o */
+    /* JADX INFO: renamed from: com.google.android.material.snackbar.BaseTransientBottomBar$o */
     public class C10999o implements SnackbarManager.b {
         public C10999o() {
         }
 
         @Override // p007b.p225i.p226a.p341g.p349h.SnackbarManager.b
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public void mo6142a(int i) {
             Handler handler = BaseTransientBottomBar.handler;
             handler.sendMessage(handler.obtainMessage(1, i, 0, BaseTransientBottomBar.this));
@@ -647,10 +646,10 @@ public abstract class BaseTransientBottomBar<B extends BaseTransientBottomBar<B>
         }
     }
 
-    /* renamed from: com.google.android.material.snackbar.BaseTransientBottomBar$p */
+    /* JADX INFO: renamed from: com.google.android.material.snackbar.BaseTransientBottomBar$p */
     public class C11000p implements OnAttachStateChangeListener {
 
-        /* renamed from: com.google.android.material.snackbar.BaseTransientBottomBar$p$a */
+        /* JADX INFO: renamed from: com.google.android.material.snackbar.BaseTransientBottomBar$p$a */
         public class a implements Runnable {
             public a() {
             }
@@ -682,7 +681,7 @@ public abstract class BaseTransientBottomBar<B extends BaseTransientBottomBar<B>
         }
     }
 
-    /* renamed from: com.google.android.material.snackbar.BaseTransientBottomBar$q */
+    /* JADX INFO: renamed from: com.google.android.material.snackbar.BaseTransientBottomBar$q */
     public class C11001q implements OnLayoutChangeListener {
         public C11001q() {
         }
@@ -694,7 +693,7 @@ public abstract class BaseTransientBottomBar<B extends BaseTransientBottomBar<B>
         }
     }
 
-    /* renamed from: com.google.android.material.snackbar.BaseTransientBottomBar$r */
+    /* JADX INFO: renamed from: com.google.android.material.snackbar.BaseTransientBottomBar$r */
     public class C11002r implements SwipeDismissBehavior.OnDismissListener {
         public C11002r() {
         }

@@ -19,9 +19,9 @@ import p507d0.p580t._Collections;
 import p507d0.p580t._Maps;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetDirectoriesViewModel.kt */
-/* renamed from: com.discord.widgets.directories.WidgetDirectoriesViewModel$ViewState$mappedTabs$2, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.directories.WidgetDirectoriesViewModel$ViewState$mappedTabs$2, reason: use source file name */
+/* JADX INFO: compiled from: WidgetDirectoriesViewModel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetDirectoriesViewModel5 extends Lambda implements Function0<List<? extends Tuples2<? extends DirectoryEntryCategory, ? extends Integer>>> {
     public final /* synthetic */ WidgetDirectoriesViewModel.ViewState this$0;
 
@@ -37,7 +37,7 @@ public final class WidgetDirectoriesViewModel5 extends Lambda implements Functio
     }
 
     @Override // kotlin.jvm.functions.Function0
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final List<? extends Tuples2<? extends DirectoryEntryCategory, ? extends Integer>> invoke2() {
         Map mapEmptyMap;
         List listListOf = CollectionsJVM.listOf(Tuples.m10073to(DirectoryEntryCategory.Home, 0));

@@ -1,29 +1,29 @@
 package p007b.p225i.p414e.p418n;
 
-/* compiled from: BitSource.java */
-/* renamed from: b.i.e.n.c, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.e.n.c, reason: use source file name */
+/* JADX INFO: compiled from: BitSource.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class BitSource {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final byte[] f13233a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public int f13234b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public int f13235c;
 
     public BitSource(byte[] bArr) {
         this.f13233a = bArr;
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public int m6948a() {
         return ((this.f13233a.length - this.f13234b) * 8) - this.f13235c;
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public int m6949b(int i) {
         if (i <= 0 || i > 32 || i > m6948a()) {
             throw new IllegalArgumentException(String.valueOf(i));

@@ -19,14 +19,14 @@ import p507d0.p579g0.Strings4;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: SystemLogReport.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: SystemLogReport.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class SystemLogReport {
     private static final String CACHE_KEY_LAST_STORED_TOMBSTONE_HASH = "CACHE_KEY_SYSTEM_LOG_STORE_LAST_STORED_TOMBSTONE_HASH";
     public static final SystemLogReport INSTANCE = new SystemLogReport();
 
-    /* compiled from: SystemLogReport.kt */
-    /* renamed from: com.discord.utilities.systemlog.SystemLogReport$reportLastCrash$1 */
+    /* JADX INFO: renamed from: com.discord.utilities.systemlog.SystemLogReport$reportLastCrash$1 */
+    /* JADX INFO: compiled from: SystemLogReport.kt */
     public static final class C69341 extends Lambda implements Function1<Error, Unit> {
         public static final C69341 INSTANCE = new C69341();
 
@@ -40,7 +40,7 @@ public final class SystemLogReport {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Error error) {
             Intrinsics3.checkNotNullParameter(error, "error");
             error.setShouldLog(false);
@@ -50,8 +50,8 @@ public final class SystemLogReport {
         }
     }
 
-    /* compiled from: SystemLogReport.kt */
-    /* renamed from: com.discord.utilities.systemlog.SystemLogReport$reportLastCrash$2 */
+    /* JADX INFO: renamed from: com.discord.utilities.systemlog.SystemLogReport$reportLastCrash$2 */
+    /* JADX INFO: compiled from: SystemLogReport.kt */
     public static final class C69352 extends Lambda implements Function1<SystemLogUtils.Tombstone, Unit> {
         public static final C69352 INSTANCE = new C69352();
 
@@ -65,7 +65,7 @@ public final class SystemLogReport {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(SystemLogUtils.Tombstone tombstone) {
             Intrinsics3.checkNotNullParameter(tombstone, "crash");
             Iterator it = Strings4.split$default((CharSequence) tombstone.getText(), new String[]{"\n"}, false, 0, 6, (Object) null).iterator();

@@ -4,16 +4,16 @@ import android.content.Context;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
-/* compiled from: com.google.android.gms:play-services-auth@@19.0.0 */
-/* renamed from: b.i.a.f.c.a.f.b.m */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.c.a.f.b.m */
+/* JADX INFO: compiled from: com.google.android.gms:play-services-auth@@19.0.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public final class C3210m {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     @Nullable
     public static C3210m f9238a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public C3198a f9239b;
 
     public C3210m(Context context) {
@@ -23,7 +23,7 @@ public final class C3210m {
         this.f9239b.m3976c();
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static synchronized C3210m m3990b(@NonNull Context context) {
         C3210m c3210m;
         Context applicationContext = context.getApplicationContext();
@@ -38,7 +38,7 @@ public final class C3210m {
         return c3210m;
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final synchronized void m3991a() {
         C3198a c3198a = this.f9239b;
         c3198a.f9227c.lock();

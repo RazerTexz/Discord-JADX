@@ -54,23 +54,23 @@ import p507d0.p580t._CollectionsJvm;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: ModalComponent.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: ModalComponent.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class ModalComponent extends AppFragment {
     public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(ModalComponent.class, "binding", "getBinding()Lcom/discord/databinding/ViewInteractionModalBinding;", 0)};
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private static final String EXTRA_OPTIONS = "extra_options";
 
-    /* renamed from: args$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: args$delegate, reason: from kotlin metadata */
     private final Lazy args;
 
-    /* renamed from: binding$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
     private String sentNonce;
 
-    /* compiled from: ModalComponent.kt */
+    /* JADX INFO: compiled from: ModalComponent.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -88,7 +88,7 @@ public final class ModalComponent extends AppFragment {
         }
     }
 
-    /* compiled from: ModalComponent.kt */
+    /* JADX INFO: compiled from: ModalComponent.kt */
     public static final /* data */ class Options implements Parcelable {
         public static final Parcelable.Creator<Options> CREATOR = new Creator();
         private final InteractionModalCreate modal;
@@ -130,7 +130,7 @@ public final class ModalComponent extends AppFragment {
             return options.copy(interactionModalCreate);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final InteractionModalCreate getModal() {
             return this.modal;
         }
@@ -190,8 +190,8 @@ public final class ModalComponent extends AppFragment {
         }
     }
 
-    /* compiled from: ModalComponent.kt */
-    /* renamed from: com.discord.widgets.botuikit.ModalComponent$onViewBound$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.botuikit.ModalComponent$onViewBound$1 */
+    /* JADX INFO: compiled from: ModalComponent.kt */
     public static final class ViewOnClickListenerC72721 implements View.OnClickListener {
         public ViewOnClickListenerC72721() {
         }
@@ -205,14 +205,14 @@ public final class ModalComponent extends AppFragment {
         }
     }
 
-    /* compiled from: ModalComponent.kt */
-    /* renamed from: com.discord.widgets.botuikit.ModalComponent$onViewBound$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.botuikit.ModalComponent$onViewBound$2 */
+    /* JADX INFO: compiled from: ModalComponent.kt */
     public static final class ViewOnClickListenerC72732 implements View.OnClickListener {
         public final /* synthetic */ List $components;
         public final /* synthetic */ View $view;
 
-        /* compiled from: ModalComponent.kt */
-        /* renamed from: com.discord.widgets.botuikit.ModalComponent$onViewBound$2$2, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.widgets.botuikit.ModalComponent$onViewBound$2$2, reason: invalid class name */
+        /* JADX INFO: compiled from: ModalComponent.kt */
         public static final class AnonymousClass2 extends Lambda implements Function1<String, Unit> {
             public AnonymousClass2() {
                 super(1);
@@ -224,19 +224,19 @@ public final class ModalComponent extends AppFragment {
                 return Unit.f27425a;
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2(String str) {
                 Intrinsics3.checkNotNullParameter(str, "nonce");
                 ModalComponent.access$setSentNonce$p(ModalComponent.this, str);
             }
         }
 
-        /* compiled from: ModalComponent.kt */
-        /* renamed from: com.discord.widgets.botuikit.ModalComponent$onViewBound$2$3, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.widgets.botuikit.ModalComponent$onViewBound$2$3, reason: invalid class name */
+        /* JADX INFO: compiled from: ModalComponent.kt */
         public static final class AnonymousClass3 extends Lambda implements Function0<Unit> {
 
-            /* compiled from: ModalComponent.kt */
-            /* renamed from: com.discord.widgets.botuikit.ModalComponent$onViewBound$2$3$1, reason: invalid class name */
+            /* JADX INFO: renamed from: com.discord.widgets.botuikit.ModalComponent$onViewBound$2$3$1, reason: invalid class name */
+            /* JADX INFO: compiled from: ModalComponent.kt */
             public static final class AnonymousClass1 implements Runnable {
                 public AnonymousClass1() {
                 }
@@ -263,7 +263,7 @@ public final class ModalComponent extends AppFragment {
                 return Unit.f27425a;
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2() {
                 ViewOnClickListenerC72732.this.$view.post(new AnonymousClass1());
             }
@@ -312,8 +312,8 @@ public final class ModalComponent extends AppFragment {
         }
     }
 
-    /* compiled from: ModalComponent.kt */
-    /* renamed from: com.discord.widgets.botuikit.ModalComponent$onViewBoundOrOnResume$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.botuikit.ModalComponent$onViewBoundOrOnResume$1 */
+    /* JADX INFO: compiled from: ModalComponent.kt */
     public static final class C72741 extends Lambda implements Function1<Map<String, ? extends StoreApplicationInteractions.SentInteraction>, Unit> {
         public C72741() {
             super(1);
@@ -325,7 +325,7 @@ public final class ModalComponent extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Map<String, StoreApplicationInteractions.SentInteraction> map) {
             StoreApplicationInteractions.SentInteraction sentInteraction;
             FragmentActivity activity;

@@ -4,8 +4,8 @@ import kotlin.Unit;
 import kotlin.jvm.functions.Function1;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: StoreStream.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: StoreStream.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class StoreStream$userSettingsSystem$1 extends Lambda implements Function1<Integer, Unit> {
     public final /* synthetic */ StoreStream this$0;
 

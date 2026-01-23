@@ -7,8 +7,8 @@ import p007b.p109f.p115d.p119d.DoNotStrip;
 import p007b.p109f.p161j.p178m.ImagePipelineNativeLoader;
 import p007b.p109f.p190m.p191n.NativeLoader;
 
+/* JADX INFO: loaded from: classes3.dex */
 @DoNotStrip
-/* loaded from: classes3.dex */
 public class Bitmaps {
     static {
         List<String> list = ImagePipelineNativeLoader.f3980a;

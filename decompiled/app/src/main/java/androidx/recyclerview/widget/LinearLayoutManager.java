@@ -17,7 +17,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.List;
 import p007b.p100d.p104b.p105a.outline;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class LinearLayoutManager extends RecyclerView.LayoutManager implements ItemTouchHelper.ViewDropHandler, RecyclerView.SmoothScroller.ScrollVectorProvider {
     public static final boolean DEBUG = false;
     public static final int HORIZONTAL = 0;
@@ -243,7 +243,7 @@ public class LinearLayoutManager extends RecyclerView.LayoutManager implements I
         public int mAnchorOffset;
         public int mAnchorPosition;
 
-        /* renamed from: androidx.recyclerview.widget.LinearLayoutManager$SavedState$1 */
+        /* JADX INFO: renamed from: androidx.recyclerview.widget.LinearLayoutManager$SavedState$1 */
         public class C05581 implements Parcelable.Creator<SavedState> {
             @Override // android.os.Parcelable.Creator
             public /* bridge */ /* synthetic */ SavedState createFromParcel(Parcel parcel) {
@@ -398,7 +398,7 @@ public class LinearLayoutManager extends RecyclerView.LayoutManager implements I
         for (int i3 = 0; i3 < size; i3++) {
             RecyclerView.ViewHolder viewHolder = scrapList.get(i3);
             if (!viewHolder.isRemoved()) {
-                if (((viewHolder.getLayoutPosition() < position) != this.mShouldReverseLayout ? (char) 65535 : (char) 1) == 65535) {
+                if (((viewHolder.getLayoutPosition() < position) != this.mShouldReverseLayout ? (byte) -1 : (byte) 1) == -1) {
                     decoratedMeasurement += this.mOrientationHelper.getDecoratedMeasurement(viewHolder.itemView);
                 } else {
                     decoratedMeasurement2 += this.mOrientationHelper.getDecoratedMeasurement(viewHolder.itemView);
@@ -901,7 +901,7 @@ public class LinearLayoutManager extends RecyclerView.LayoutManager implements I
         int i3;
         int i4;
         ensureLayoutState();
-        if ((i2 > i ? (char) 1 : i2 < i ? (char) 65535 : (char) 0) == 0) {
+        if ((i2 > i ? (byte) 1 : i2 < i ? (byte) -1 : (byte) 0) == 0) {
             return getChildAt(i);
         }
         if (this.mOrientationHelper.getDecoratedStart(getChildAt(i)) < this.mOrientationHelper.getStartAfterPadding()) {
@@ -1354,9 +1354,9 @@ public class LinearLayoutManager extends RecyclerView.LayoutManager implements I
         resolveShouldLayoutReverse();
         int position = getPosition(view);
         int position2 = getPosition(view2);
-        char c = position < position2 ? (char) 1 : (char) 65535;
+        byte b2 = position < position2 ? (byte) 1 : (byte) -1;
         if (this.mShouldReverseLayout) {
-            if (c == 1) {
+            if (b2 == 1) {
                 scrollToPositionWithOffset(position2, this.mOrientationHelper.getEndAfterPadding() - (this.mOrientationHelper.getDecoratedMeasurement(view) + this.mOrientationHelper.getDecoratedStart(view2)));
                 return;
             } else {
@@ -1364,7 +1364,7 @@ public class LinearLayoutManager extends RecyclerView.LayoutManager implements I
                 return;
             }
         }
-        if (c == 65535) {
+        if (b2 == -1) {
             scrollToPositionWithOffset(position2, this.mOrientationHelper.getDecoratedStart(view2));
         } else {
             scrollToPositionWithOffset(position2, this.mOrientationHelper.getDecoratedEnd(view2) - this.mOrientationHelper.getDecoratedMeasurement(view));

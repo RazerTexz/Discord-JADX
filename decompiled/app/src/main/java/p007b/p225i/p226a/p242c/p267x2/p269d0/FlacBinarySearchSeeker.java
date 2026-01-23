@@ -11,22 +11,22 @@ import p007b.p225i.p226a.p242c.p267x2.ExtractorInput;
 import p007b.p225i.p226a.p242c.p267x2.FlacFrameReader;
 import p007b.p225i.p226a.p242c.p267x2.FlacStreamMetadata;
 
-/* compiled from: FlacBinarySearchSeeker.java */
-/* renamed from: b.i.a.c.x2.d0.c, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.x2.d0.c, reason: use source file name */
+/* JADX INFO: compiled from: FlacBinarySearchSeeker.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class FlacBinarySearchSeeker extends BinarySearchSeeker {
 
-    /* compiled from: FlacBinarySearchSeeker.java */
-    /* renamed from: b.i.a.c.x2.d0.c$b */
+    /* JADX INFO: renamed from: b.i.a.c.x2.d0.c$b */
+    /* JADX INFO: compiled from: FlacBinarySearchSeeker.java */
     public static final class b implements BinarySearchSeeker.f {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final FlacStreamMetadata f8097a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final int f8098b;
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public final FlacFrameReader.a f8099c = new FlacFrameReader.a();
 
         public b(FlacStreamMetadata flacStreamMetadata, int i, a aVar) {
@@ -35,13 +35,13 @@ public final class FlacBinarySearchSeeker extends BinarySearchSeeker {
         }
 
         @Override // p007b.p225i.p226a.p242c.p267x2.BinarySearchSeeker.f
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public /* synthetic */ void mo3627a() {
             BinarySearchSeeker2.m3629a(this);
         }
 
         @Override // p007b.p225i.p226a.p242c.p267x2.BinarySearchSeeker.f
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public BinarySearchSeeker.e mo3628b(ExtractorInput extractorInput, long j) throws IOException {
             long position = extractorInput.getPosition();
             long jM3640c = m3640c(extractorInput);
@@ -51,7 +51,7 @@ public final class FlacBinarySearchSeeker extends BinarySearchSeeker {
             return (jM3640c > j || jM3640c2 <= j) ? jM3640c2 <= j ? BinarySearchSeeker.e.m3626c(jM3640c2, extractorInput.mo3645f()) : BinarySearchSeeker.e.m3624a(jM3640c, position) : BinarySearchSeeker.e.m3625b(jMo3645f);
         }
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public final long m3640c(ExtractorInput extractorInput) throws IOException {
             while (extractorInput.mo3645f() < extractorInput.mo3642b() - 6) {
                 FlacStreamMetadata flacStreamMetadata = this.f8097a;
@@ -95,11 +95,11 @@ public final class FlacBinarySearchSeeker extends BinarySearchSeeker {
         long j5 = flacStreamMetadata.f8979j;
         int i2 = flacStreamMetadata.f8973d;
         if (i2 > 0) {
-            j3 = (i2 + flacStreamMetadata.f8972c) / 2;
+            j3 = (((long) i2) + ((long) flacStreamMetadata.f8972c)) / 2;
             j4 = 1;
         } else {
             int i3 = flacStreamMetadata.f8970a;
-            j3 = ((((i3 != flacStreamMetadata.f8971b || i3 <= 0) ? Permission.SEND_TTS_MESSAGES : i3) * flacStreamMetadata.f8976g) * flacStreamMetadata.f8977h) / 8;
+            j3 = ((((i3 != flacStreamMetadata.f8971b || i3 <= 0) ? Permission.SEND_TTS_MESSAGES : i3) * ((long) flacStreamMetadata.f8976g)) * ((long) flacStreamMetadata.f8977h)) / 8;
             j4 = 64;
         }
         super(c3008b, bVar, jM3810d, 0L, j5, j, j2, j3 + j4, Math.max(6, flacStreamMetadata.f8972c));

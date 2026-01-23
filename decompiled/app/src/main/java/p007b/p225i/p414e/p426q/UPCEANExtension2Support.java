@@ -1,13 +1,13 @@
 package p007b.p225i.p414e.p426q;
 
-/* compiled from: UPCEANExtension2Support.java */
-/* renamed from: b.i.e.q.m, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.e.q.m, reason: use source file name */
+/* JADX INFO: compiled from: UPCEANExtension2Support.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class UPCEANExtension2Support {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final int[] f13381a = new int[4];
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final StringBuilder f13382b = new StringBuilder();
 }

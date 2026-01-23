@@ -8,17 +8,17 @@ import java.util.Arrays;
 import p007b.p085c.p086a.p087a0.AnimatableValueParser;
 import p007b.p225i.p226a.p288f.p333j.p334b.p335e.C4314w;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public final class zza extends AbstractSafeParcelable implements BleSignal {
     public static final Parcelable.Creator<zza> CREATOR = new C4314w();
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final int f20771j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final int f20772k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final int f20773l;
 
     public zza(int i, int i2, int i3) {
@@ -28,13 +28,13 @@ public final class zza extends AbstractSafeParcelable implements BleSignal {
     }
 
     @Override // com.google.android.gms.nearby.messages.BleSignal
-    /* renamed from: U */
+    /* JADX INFO: renamed from: U */
     public final int mo9118U() {
         return this.f20773l;
     }
 
     @Override // com.google.android.gms.nearby.messages.BleSignal
-    /* renamed from: V */
+    /* JADX INFO: renamed from: V */
     public final int mo9119V() {
         return this.f20772k;
     }

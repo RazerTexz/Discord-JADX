@@ -9,24 +9,24 @@ import java.util.zip.Inflater;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: GzipSource.kt */
-/* renamed from: g0.l, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: g0.l, reason: use source file name */
+/* JADX INFO: compiled from: GzipSource.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class GzipSource implements Source2 {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public byte f26095j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final RealBufferedSource f26096k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final Inflater f26097l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public final InflaterSource f26098m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public final CRC32 f26099n;
 
     public GzipSource(Source2 source2) {
@@ -39,7 +39,7 @@ public final class GzipSource implements Source2 {
         this.f26099n = new CRC32();
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final void m10486a(String str, int i, int i2) throws IOException {
         if (i2 == i) {
             return;
@@ -49,7 +49,7 @@ public final class GzipSource implements Source2 {
         throw new IOException(str2);
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final void m10487b(Buffer3 buffer3, long j, long j2) {
         Segment2 segment2 = buffer3.f26079j;
         if (segment2 == null) {
@@ -61,16 +61,17 @@ public final class GzipSource implements Source2 {
             if (j < i - i2) {
                 break;
             }
-            j -= i - i2;
+            j -= (long) (i - i2);
             segment2 = segment2.f26123f;
             if (segment2 == null) {
                 Intrinsics3.throwNpe();
             }
         }
         while (j2 > 0) {
-            int iMin = (int) Math.min(segment2.f26120c - r7, j2);
-            this.f26099n.update(segment2.f26118a, (int) (segment2.f26119b + j), iMin);
-            j2 -= iMin;
+            int i3 = (int) (((long) segment2.f26119b) + j);
+            int iMin = (int) Math.min(segment2.f26120c - i3, j2);
+            this.f26099n.update(segment2.f26118a, i3, iMin);
+            j2 -= (long) iMin;
             segment2 = segment2.f26123f;
             if (segment2 == null) {
                 Intrinsics3.throwNpe();
@@ -85,7 +86,7 @@ public final class GzipSource implements Source2 {
     }
 
     @Override // p615g0.Source2
-    /* renamed from: i0 */
+    /* JADX INFO: renamed from: i0 */
     public long mo10176i0(Buffer3 buffer3, long j) throws IOException {
         long j2;
         Intrinsics3.checkParameterIsNotNull(buffer3, "sink");

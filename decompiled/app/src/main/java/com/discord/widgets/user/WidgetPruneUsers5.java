@@ -6,9 +6,9 @@ import kotlin.jvm.functions.Function0;
 import p507d0.p580t.Collections2;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetPruneUsers.kt */
-/* renamed from: com.discord.widgets.user.WidgetPruneUsers$radioManager$2, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: com.discord.widgets.user.WidgetPruneUsers$radioManager$2, reason: use source file name */
+/* JADX INFO: compiled from: WidgetPruneUsers.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class WidgetPruneUsers5 extends Lambda implements Function0<RadioManager> {
     public final /* synthetic */ WidgetPruneUsers this$0;
 

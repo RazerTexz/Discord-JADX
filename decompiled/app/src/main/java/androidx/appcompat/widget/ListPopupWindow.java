@@ -34,7 +34,7 @@ import androidx.core.widget.PopupWindowCompat;
 import java.lang.reflect.Method;
 import p007b.p100d.p104b.p105a.outline;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class ListPopupWindow implements ShowableListMenu {
     private static final boolean DEBUG = false;
     public static final int EXPAND_LIST_TIMEOUT = 250;
@@ -82,7 +82,7 @@ public class ListPopupWindow implements ShowableListMenu {
     private final Rect mTempRect;
     private final PopupTouchInterceptor mTouchInterceptor;
 
-    /* renamed from: androidx.appcompat.widget.ListPopupWindow$1 */
+    /* JADX INFO: renamed from: androidx.appcompat.widget.ListPopupWindow$1 */
     public class C01091 extends ForwardingListener {
         public C01091(View view) {
             super(view);
@@ -99,13 +99,13 @@ public class ListPopupWindow implements ShowableListMenu {
         }
     }
 
-    /* renamed from: androidx.appcompat.widget.ListPopupWindow$2 */
+    /* JADX INFO: renamed from: androidx.appcompat.widget.ListPopupWindow$2 */
     public class RunnableC01102 implements Runnable {
         public RunnableC01102() {
         }
 
         @Override // java.lang.Runnable
-        public void run() throws IllegalArgumentException {
+        public void run() {
             View anchorView = ListPopupWindow.this.getAnchorView();
             if (anchorView == null || anchorView.getWindowToken() == null) {
                 return;
@@ -114,7 +114,7 @@ public class ListPopupWindow implements ShowableListMenu {
         }
     }
 
-    /* renamed from: androidx.appcompat.widget.ListPopupWindow$3 */
+    /* JADX INFO: renamed from: androidx.appcompat.widget.ListPopupWindow$3 */
     public class C01113 implements AdapterView.OnItemSelectedListener {
         public C01113() {
         }
@@ -148,7 +148,7 @@ public class ListPopupWindow implements ShowableListMenu {
         }
 
         @Override // android.database.DataSetObserver
-        public void onChanged() throws IllegalArgumentException {
+        public void onChanged() {
             if (ListPopupWindow.this.isShowing()) {
                 ListPopupWindow.this.show();
             }
@@ -169,7 +169,7 @@ public class ListPopupWindow implements ShowableListMenu {
         }
 
         @Override // android.widget.AbsListView.OnScrollListener
-        public void onScrollStateChanged(AbsListView absListView, int i) throws IllegalArgumentException {
+        public void onScrollStateChanged(AbsListView absListView, int i) {
             if (i != 1 || ListPopupWindow.this.isInputMethodNotNeeded() || ListPopupWindow.this.mPopup.getContentView() == null) {
                 return;
             }
@@ -208,7 +208,7 @@ public class ListPopupWindow implements ShowableListMenu {
         }
 
         @Override // java.lang.Runnable
-        public void run() throws IllegalArgumentException {
+        public void run() {
             DropDownListView dropDownListView = ListPopupWindow.this.mDropDownList;
             if (dropDownListView == null || !ViewCompat.isAttachedToWindow(dropDownListView) || ListPopupWindow.this.mDropDownList.getCount() <= ListPopupWindow.this.mDropDownList.getChildCount()) {
                 return;
@@ -252,6 +252,7 @@ public class ListPopupWindow implements ShowableListMenu {
         int measuredHeight;
         int i;
         int iMakeMeasureSpec;
+        View view;
         int i2;
         if (this.mDropDownList == null) {
             Context context = this.mContext;
@@ -272,22 +273,22 @@ public class ListPopupWindow implements ShowableListMenu {
             if (onItemSelectedListener != null) {
                 this.mDropDownList.setOnItemSelectedListener(onItemSelectedListener);
             }
-            View view = this.mDropDownList;
+            DropDownListView dropDownListView = this.mDropDownList;
             View view2 = this.mPromptView;
             if (view2 != null) {
                 LinearLayout linearLayout = new LinearLayout(context);
                 linearLayout.setOrientation(1);
-                ViewGroup.LayoutParams layoutParams = new LinearLayout.LayoutParams(-1, 0, 1.0f);
+                LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(-1, 0, 1.0f);
                 int i3 = this.mPromptPosition;
                 if (i3 == 0) {
                     linearLayout.addView(view2);
-                    linearLayout.addView(view, layoutParams);
+                    linearLayout.addView(dropDownListView, layoutParams);
                 } else if (i3 != 1) {
                     StringBuilder sbM833U = outline.m833U("Invalid hint position ");
                     sbM833U.append(this.mPromptPosition);
                     Log.e(TAG, sbM833U.toString());
                 } else {
-                    linearLayout.addView(view, layoutParams);
+                    linearLayout.addView(dropDownListView, layoutParams);
                     linearLayout.addView(view2);
                 }
                 int i4 = this.mDropDownWidth;
@@ -303,6 +304,7 @@ public class ListPopupWindow implements ShowableListMenu {
                 view = linearLayout;
             } else {
                 measuredHeight = 0;
+                view = dropDownListView;
             }
             this.mPopup.setContentView(view);
         } else {
@@ -528,7 +530,7 @@ public class ListPopupWindow implements ShowableListMenu {
         return this.mPopup.isShowing();
     }
 
-    public boolean onKeyDown(int i, @NonNull KeyEvent keyEvent) throws IllegalArgumentException {
+    public boolean onKeyDown(int i, @NonNull KeyEvent keyEvent) {
         if (isShowing() && i != 62 && (this.mDropDownList.getSelectedItemPosition() >= 0 || !isConfirmKey(i))) {
             int selectedItemPosition = this.mDropDownList.getSelectedItemPosition();
             boolean z2 = !this.mPopup.isAboveAnchor();
@@ -731,7 +733,7 @@ public class ListPopupWindow implements ShowableListMenu {
         this.mPromptPosition = i;
     }
 
-    public void setPromptView(@Nullable View view) throws IllegalArgumentException {
+    public void setPromptView(@Nullable View view) {
         boolean zIsShowing = isShowing();
         if (zIsShowing) {
             removePromptView();
@@ -772,7 +774,7 @@ public class ListPopupWindow implements ShowableListMenu {
     }
 
     @Override // androidx.appcompat.view.menu.ShowableListMenu
-    public void show() throws IllegalArgumentException {
+    public void show() {
         int iBuildDropDown = buildDropDown();
         boolean zIsInputMethodNotNeeded = isInputMethodNotNeeded();
         PopupWindowCompat.setWindowLayoutType(this.mPopup, this.mDropDownWindowLayoutType);

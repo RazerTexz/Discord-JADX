@@ -20,12 +20,12 @@ import kotlin.Unit;
 import kotlin.jvm.functions.Function2;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: WidgetServerSettingsMembersAdapter.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetServerSettingsMembersAdapter.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetServerSettingsMembersAdapter extends MGRecyclerAdapterSimple<WidgetServerSettingsMembersModel.MemberItem> {
     private Function2<? super Long, ? super List<Long>, Unit> memberSelectedListener;
 
-    /* compiled from: WidgetServerSettingsMembersAdapter.kt */
+    /* JADX INFO: compiled from: WidgetServerSettingsMembersAdapter.kt */
     public static final class MemberListItem extends MGRecyclerViewHolder<WidgetServerSettingsMembersAdapter, WidgetServerSettingsMembersModel.MemberItem> {
         private final WidgetServerSettingsMemberListItemBinding binding;
 
@@ -67,7 +67,7 @@ public final class WidgetServerSettingsMembersAdapter extends MGRecyclerAdapterS
             onConfigure2(i, memberItem);
         }
 
-        /* renamed from: onConfigure, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: onConfigure, reason: avoid collision after fix types in other method */
         public void onConfigure2(int position, WidgetServerSettingsMembersModel.MemberItem data) {
             Intrinsics3.checkNotNullParameter(data, "data");
             super.onConfigure(position, data);

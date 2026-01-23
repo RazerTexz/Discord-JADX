@@ -6,12 +6,12 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 
-/* compiled from: com.google.android.gms:play-services-measurement-impl@@18.0.0 */
-/* renamed from: b.i.a.f.h.l.x1 */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.h.l.x1 */
+/* JADX INFO: compiled from: com.google.android.gms:play-services-measurement-impl@@18.0.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public final /* synthetic */ class C3887x1 implements InterfaceC3622d2 {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final C3900y1 f10399a;
 
     public C3887x1(C3900y1 c3900y1) {
@@ -19,7 +19,7 @@ public final /* synthetic */ class C3887x1 implements InterfaceC3622d2 {
     }
 
     @Override // p007b.p225i.p226a.p288f.p313h.p325l.InterfaceC3622d2
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final Object mo4628a() {
         C3900y1 c3900y1 = this.f10399a;
         Cursor cursorQuery = c3900y1.f10419c.query(c3900y1.f10420d, C3900y1.f10418b, null, null, null);

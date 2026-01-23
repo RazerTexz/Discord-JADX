@@ -8,7 +8,7 @@ import androidx.annotation.IntRange;
 import androidx.annotation.NonNull;
 import androidx.annotation.RequiresApi;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public final class AudioManagerCompat {
     public static final int AUDIOFOCUS_GAIN = 1;
     public static final int AUDIOFOCUS_GAIN_TRANSIENT = 2;

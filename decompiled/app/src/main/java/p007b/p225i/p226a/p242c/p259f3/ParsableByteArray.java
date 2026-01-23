@@ -7,25 +7,25 @@ import p007b.p085c.p086a.p087a0.AnimatableValueParser;
 import p007b.p100d.p104b.p105a.outline;
 import p007b.p225i.p355b.p356a.Charsets;
 
-/* compiled from: ParsableByteArray.java */
-/* renamed from: b.i.a.c.f3.x, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.f3.x, reason: use source file name */
+/* JADX INFO: compiled from: ParsableByteArray.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class ParsableByteArray {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public byte[] f6793a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public int f6794b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public int f6795c;
 
     public ParsableByteArray() {
         this.f6793a = Util2.f6713f;
     }
 
-    /* renamed from: A */
+    /* JADX INFO: renamed from: A */
     public void m3075A(int i) {
         byte[] bArr = this.f6793a;
         if (bArr.length < i) {
@@ -34,7 +34,7 @@ public final class ParsableByteArray {
         m3077C(bArr, i);
     }
 
-    /* renamed from: B */
+    /* JADX INFO: renamed from: B */
     public void m3076B(byte[] bArr) {
         int length = bArr.length;
         this.f6793a = bArr;
@@ -42,36 +42,36 @@ public final class ParsableByteArray {
         this.f6794b = 0;
     }
 
-    /* renamed from: C */
+    /* JADX INFO: renamed from: C */
     public void m3077C(byte[] bArr, int i) {
         this.f6793a = bArr;
         this.f6795c = i;
         this.f6794b = 0;
     }
 
-    /* renamed from: D */
+    /* JADX INFO: renamed from: D */
     public void m3078D(int i) {
         AnimatableValueParser.m531j(i >= 0 && i <= this.f6793a.length);
         this.f6795c = i;
     }
 
-    /* renamed from: E */
+    /* JADX INFO: renamed from: E */
     public void m3079E(int i) {
         AnimatableValueParser.m531j(i >= 0 && i <= this.f6795c);
         this.f6794b = i;
     }
 
-    /* renamed from: F */
+    /* JADX INFO: renamed from: F */
     public void m3080F(int i) {
         m3079E(this.f6794b + i);
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public int m3081a() {
         return this.f6795c - this.f6794b;
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public void m3082b(int i) {
         byte[] bArr = this.f6793a;
         if (i > bArr.length) {
@@ -79,24 +79,24 @@ public final class ParsableByteArray {
         }
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public int m3083c() {
         return this.f6793a[this.f6794b] & 255;
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public void m3084d(ParsableBitArray parsableBitArray, int i) {
         m3085e(parsableBitArray.f6789a, 0, i);
         parsableBitArray.m3071k(0);
     }
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public void m3085e(byte[] bArr, int i, int i2) {
         System.arraycopy(this.f6793a, this.f6794b, bArr, i, i2);
         this.f6794b += i2;
     }
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public int m3086f() {
         byte[] bArr = this.f6793a;
         int i = this.f6794b;
@@ -114,7 +114,7 @@ public final class ParsableByteArray {
     }
 
     @Nullable
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public String m3087g() {
         if (m3081a() == 0) {
             return null;
@@ -158,7 +158,7 @@ public final class ParsableByteArray {
         return strM3005m;
     }
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public int m3088h() {
         byte[] bArr = this.f6793a;
         int i = this.f6794b;
@@ -175,7 +175,7 @@ public final class ParsableByteArray {
         return ((bArr[i6] & 255) << 24) | i7;
     }
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public short m3089i() {
         byte[] bArr = this.f6793a;
         int i = this.f6794b;
@@ -186,22 +186,24 @@ public final class ParsableByteArray {
         return (short) (((bArr[i2] & 255) << 8) | i3);
     }
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public long m3090j() {
         byte[] bArr = this.f6793a;
-        int i = this.f6794b + 1;
-        this.f6794b = i;
-        long j = bArr[r1] & 255;
+        int i = this.f6794b;
         int i2 = i + 1;
         this.f6794b = i2;
+        long j = ((long) bArr[i]) & 255;
         int i3 = i2 + 1;
         this.f6794b = i3;
-        long j2 = j | ((bArr[i] & 255) << 8) | ((bArr[i2] & 255) << 16);
-        this.f6794b = i3 + 1;
-        return j2 | ((bArr[i3] & 255) << 24);
+        long j2 = j | ((((long) bArr[i2]) & 255) << 8);
+        int i4 = i3 + 1;
+        this.f6794b = i4;
+        long j3 = j2 | ((((long) bArr[i3]) & 255) << 16);
+        this.f6794b = i4 + 1;
+        return j3 | ((((long) bArr[i4]) & 255) << 24);
     }
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public int m3091k() {
         int iM3088h = m3088h();
         if (iM3088h >= 0) {
@@ -210,7 +212,7 @@ public final class ParsableByteArray {
         throw new IllegalStateException(outline.m851g(29, "Top bit not zero: ", iM3088h));
     }
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public int m3092l() {
         byte[] bArr = this.f6793a;
         int i = this.f6794b;
@@ -221,35 +223,37 @@ public final class ParsableByteArray {
         return ((bArr[i2] & 255) << 8) | i3;
     }
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public long m3093m() {
         byte[] bArr = this.f6793a;
-        int i = this.f6794b + 1;
-        this.f6794b = i;
-        long j = (bArr[r1] & 255) << 56;
+        int i = this.f6794b;
         int i2 = i + 1;
         this.f6794b = i2;
+        long j = (((long) bArr[i]) & 255) << 56;
         int i3 = i2 + 1;
         this.f6794b = i3;
-        long j2 = j | ((bArr[i] & 255) << 48) | ((bArr[i2] & 255) << 40);
+        long j2 = j | ((((long) bArr[i2]) & 255) << 48);
         int i4 = i3 + 1;
         this.f6794b = i4;
-        long j3 = j2 | ((bArr[i3] & 255) << 32);
+        long j3 = j2 | ((((long) bArr[i3]) & 255) << 40);
         int i5 = i4 + 1;
         this.f6794b = i5;
-        long j4 = j3 | ((bArr[i4] & 255) << 24);
+        long j4 = j3 | ((((long) bArr[i4]) & 255) << 32);
         int i6 = i5 + 1;
         this.f6794b = i6;
-        long j5 = j4 | ((bArr[i5] & 255) << 16);
+        long j5 = j4 | ((((long) bArr[i5]) & 255) << 24);
         int i7 = i6 + 1;
         this.f6794b = i7;
-        long j6 = j5 | ((bArr[i6] & 255) << 8);
-        this.f6794b = i7 + 1;
-        return j6 | (bArr[i7] & 255);
+        long j6 = j5 | ((((long) bArr[i6]) & 255) << 16);
+        int i8 = i7 + 1;
+        this.f6794b = i8;
+        long j7 = j6 | ((((long) bArr[i7]) & 255) << 8);
+        this.f6794b = i8 + 1;
+        return j7 | (((long) bArr[i8]) & 255);
     }
 
     @Nullable
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public String m3094n() {
         if (m3081a() == 0) {
             return null;
@@ -268,7 +272,7 @@ public final class ParsableByteArray {
         return strM3005m;
     }
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public String m3095o(int i) {
         if (i == 0) {
             return "";
@@ -280,7 +284,7 @@ public final class ParsableByteArray {
         return strM3005m;
     }
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public short m3096p() {
         byte[] bArr = this.f6793a;
         int i = this.f6794b;
@@ -291,24 +295,24 @@ public final class ParsableByteArray {
         return (short) ((bArr[i2] & 255) | i3);
     }
 
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     public String m3097q(int i) {
         return m3098r(i, Charsets.f11945c);
     }
 
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     public String m3098r(int i, Charset charset) {
         String str = new String(this.f6793a, this.f6794b, i, charset);
         this.f6794b += i;
         return str;
     }
 
-    /* renamed from: s */
+    /* JADX INFO: renamed from: s */
     public int m3099s() {
         return (m3100t() << 21) | (m3100t() << 14) | (m3100t() << 7) | m3100t();
     }
 
-    /* renamed from: t */
+    /* JADX INFO: renamed from: t */
     public int m3100t() {
         byte[] bArr = this.f6793a;
         int i = this.f6794b;
@@ -316,22 +320,24 @@ public final class ParsableByteArray {
         return bArr[i] & 255;
     }
 
-    /* renamed from: u */
+    /* JADX INFO: renamed from: u */
     public long m3101u() {
         byte[] bArr = this.f6793a;
-        int i = this.f6794b + 1;
-        this.f6794b = i;
-        long j = (bArr[r1] & 255) << 24;
+        int i = this.f6794b;
         int i2 = i + 1;
         this.f6794b = i2;
+        long j = (((long) bArr[i]) & 255) << 24;
         int i3 = i2 + 1;
         this.f6794b = i3;
-        long j2 = j | ((bArr[i] & 255) << 16) | ((bArr[i2] & 255) << 8);
-        this.f6794b = i3 + 1;
-        return j2 | (bArr[i3] & 255);
+        long j2 = j | ((((long) bArr[i2]) & 255) << 16);
+        int i4 = i3 + 1;
+        this.f6794b = i4;
+        long j3 = j2 | ((((long) bArr[i3]) & 255) << 8);
+        this.f6794b = i4 + 1;
+        return j3 | (((long) bArr[i4]) & 255);
     }
 
-    /* renamed from: v */
+    /* JADX INFO: renamed from: v */
     public int m3102v() {
         byte[] bArr = this.f6793a;
         int i = this.f6794b;
@@ -345,7 +351,7 @@ public final class ParsableByteArray {
         return (bArr[i4] & 255) | i5;
     }
 
-    /* renamed from: w */
+    /* JADX INFO: renamed from: w */
     public int m3103w() {
         int iM3086f = m3086f();
         if (iM3086f >= 0) {
@@ -354,7 +360,7 @@ public final class ParsableByteArray {
         throw new IllegalStateException(outline.m851g(29, "Top bit not zero: ", iM3086f));
     }
 
-    /* renamed from: x */
+    /* JADX INFO: renamed from: x */
     public long m3104x() {
         long jM3093m = m3093m();
         if (jM3093m >= 0) {
@@ -366,7 +372,7 @@ public final class ParsableByteArray {
         throw new IllegalStateException(sb.toString());
     }
 
-    /* renamed from: y */
+    /* JADX INFO: renamed from: y */
     public int m3105y() {
         byte[] bArr = this.f6793a;
         int i = this.f6794b;
@@ -377,7 +383,7 @@ public final class ParsableByteArray {
         return (bArr[i2] & 255) | i3;
     }
 
-    /* renamed from: z */
+    /* JADX INFO: renamed from: z */
     public long m3106z() {
         int i;
         int i2;
@@ -387,10 +393,11 @@ public final class ParsableByteArray {
             if (i3 < 0) {
                 break;
             }
-            if (((1 << i3) & j) != 0) {
+            int i4 = 1 << i3;
+            if ((((long) i4) & j) != 0) {
                 i3--;
             } else if (i3 < 6) {
-                j &= r6 - 1;
+                j &= (long) (i4 - 1);
                 i2 = 7 - i3;
             } else if (i3 == 7) {
                 i2 = 1;
@@ -404,13 +411,14 @@ public final class ParsableByteArray {
             throw new NumberFormatException(sb.toString());
         }
         for (i = 1; i < i2; i++) {
-            if ((this.f6793a[this.f6794b + i] & 192) != 128) {
+            byte b2 = this.f6793a[this.f6794b + i];
+            if ((b2 & 192) != 128) {
                 StringBuilder sb2 = new StringBuilder(62);
                 sb2.append("Invalid UTF-8 sequence continuation byte: ");
                 sb2.append(j);
                 throw new NumberFormatException(sb2.toString());
             }
-            j = (j << 6) | (r3 & 63);
+            j = (j << 6) | ((long) (b2 & 63));
         }
         this.f6794b += i2;
         return j;

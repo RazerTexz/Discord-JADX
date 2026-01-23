@@ -8,15 +8,15 @@ import java.util.Locale;
 import p007b.p100d.p104b.p105a.outline;
 import p007b.p225i.p226a.p288f.p299e.p308o.C3404f;
 
-/* compiled from: com.google.android.gms:play-services-measurement-base@@18.0.0 */
-/* renamed from: b.i.a.f.h.l.t3 */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.h.l.t3 */
+/* JADX INFO: compiled from: com.google.android.gms:play-services-measurement-base@@18.0.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public abstract class AbstractC3837t3 implements Serializable, Iterable<Byte> {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static final AbstractC3837t3 f10322j = new C3915z3(C3877w4.f10380b);
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public static final InterfaceC3889x3 f10323k;
     private int zzc = 0;
 
@@ -24,13 +24,13 @@ public abstract class AbstractC3837t3 implements Serializable, Iterable<Byte> {
         f10323k = C3798q3.m5185a() ? new C3610c4(null) : new C3876w3(null);
     }
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public static AbstractC3837t3 m5279h(byte[] bArr, int i, int i2) {
         m5280l(i, i + i2, bArr.length);
         return new C3915z3(f10323k.mo4603a(bArr, i, i2));
     }
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public static int m5280l(int i, int i2, int i3) {
         int i4 = i2 - i;
         if ((i | i2 | i4 | (i3 - i2)) >= 0) {
@@ -49,18 +49,18 @@ public abstract class AbstractC3837t3 implements Serializable, Iterable<Byte> {
         throw new IndexOutOfBoundsException(sb.toString());
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public abstract byte mo5281c(int i);
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public abstract int mo5282d();
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public abstract int mo5283e(int i, int i2, int i3);
 
     public abstract boolean equals(Object obj);
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public abstract AbstractC3837t3 mo5284g(int i, int i2);
 
     public final int hashCode() {
@@ -76,7 +76,7 @@ public abstract class AbstractC3837t3 implements Serializable, Iterable<Byte> {
         return iMo5283e;
     }
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public abstract String mo5285i(Charset charset);
 
     @Override // java.lang.Iterable
@@ -84,16 +84,16 @@ public abstract class AbstractC3837t3 implements Serializable, Iterable<Byte> {
         return new C3863v3(this);
     }
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public abstract void mo5286j(AbstractC3850u3 abstractC3850u3) throws IOException;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public abstract byte mo5287k(int i);
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public abstract boolean mo5288m();
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public final int m5289n() {
         return this.zzc;
     }

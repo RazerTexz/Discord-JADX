@@ -6,12 +6,12 @@ import kotlin.jvm.functions.Function1;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: MediaEngineLegacy.kt */
-/* renamed from: b.a.q.m0.c.j */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.a.q.m0.c.j */
+/* JADX INFO: compiled from: MediaEngineLegacy.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class C1232j extends Lambda implements Function1<MediaEngine.InterfaceC5642c, Unit> {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static final C1232j f1720j = new C1232j();
 
     public C1232j() {

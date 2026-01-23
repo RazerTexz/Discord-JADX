@@ -10,30 +10,30 @@ import com.discord.views.directories.ServerDiscoveryHeader;
 import com.google.android.material.tabs.TabLayout;
 import p007b.p008a.p025i.WidgetDirectoryChannelEmptyBinding;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public final class WidgetDirectoryChannelBinding implements ViewBinding {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     @NonNull
     public final CoordinatorLayout f16461a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     @NonNull
     public final Toolbar f16462b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     @NonNull
     public final ServerDiscoveryHeader f16463c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     @NonNull
     public final TabLayout f16464d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     @NonNull
     public final ViewPager2 f16465e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     @NonNull
     public final WidgetDirectoryChannelEmptyBinding f16466f;
 

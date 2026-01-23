@@ -20,88 +20,88 @@ import p007b.p225i.p226a.p242c.p257e3.TransferListener;
 import p007b.p225i.p226a.p242c.p259f3.Util2;
 import p007b.p225i.p355b.p356a.Charsets;
 
-/* compiled from: CacheDataSource.java */
-/* renamed from: b.i.a.c.e3.b0.c, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.e3.b0.c, reason: use source file name */
+/* JADX INFO: compiled from: CacheDataSource.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class CacheDataSource implements DataSource3 {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final Cache f6438a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final DataSource3 f6439b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     @Nullable
     public final DataSource3 f6440c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final DataSource3 f6441d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final CacheKeyFactory2 f6442e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     @Nullable
     public final a f6443f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public final boolean f6444g;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public final boolean f6445h;
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public final boolean f6446i;
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     @Nullable
     public Uri f6447j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     @Nullable
     public DataSpec f6448k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     @Nullable
     public DataSpec f6449l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     @Nullable
     public DataSource3 f6450m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public long f6451n;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public long f6452o;
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public long f6453p;
 
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     @Nullable
     public CacheSpan f6454q;
 
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     public boolean f6455r;
 
-    /* renamed from: s */
+    /* JADX INFO: renamed from: s */
     public boolean f6456s;
 
-    /* renamed from: t */
+    /* JADX INFO: renamed from: t */
     public long f6457t;
 
-    /* renamed from: u */
+    /* JADX INFO: renamed from: u */
     public long f6458u;
 
-    /* compiled from: CacheDataSource.java */
-    /* renamed from: b.i.a.c.e3.b0.c$a */
+    /* JADX INFO: renamed from: b.i.a.c.e3.b0.c$a */
+    /* JADX INFO: compiled from: CacheDataSource.java */
     public interface a {
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         void m2783a(int i);
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         void m2784b(long j, long j2);
     }
 
@@ -119,7 +119,7 @@ public final class CacheDataSource implements DataSource3 {
     }
 
     @Override // p007b.p225i.p226a.p242c.p257e3.DataSource3
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public long mo2586a(DataSpec dataSpec) throws IOException {
         a aVar;
         try {
@@ -206,7 +206,7 @@ public final class CacheDataSource implements DataSource3 {
     }
 
     @Override // p007b.p225i.p226a.p242c.p257e3.DataSource3
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public void mo2587d(TransferListener transferListener) {
         Objects.requireNonNull(transferListener);
         this.f6439b.mo2587d(transferListener);
@@ -214,20 +214,20 @@ public final class CacheDataSource implements DataSource3 {
     }
 
     @Override // p007b.p225i.p226a.p242c.p257e3.DataSource3
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public Map<String, List<String>> mo2588j() {
         return m2781s() ? this.f6441d.mo2588j() : Collections.emptyMap();
     }
 
     @Override // p007b.p225i.p226a.p242c.p257e3.DataSource3
     @Nullable
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public Uri mo2589n() {
         return this.f6447j;
     }
 
     /* JADX WARN: Multi-variable type inference failed */
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public final void m2778p() throws IOException {
         DataSource3 dataSource3 = this.f6450m;
         if (dataSource3 == null) {
@@ -246,14 +246,14 @@ public final class CacheDataSource implements DataSource3 {
         }
     }
 
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     public final void m2779q(Throwable th) {
         if (m2780r() || (th instanceof Cache.CacheException)) {
             this.f6455r = true;
         }
     }
 
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     public final boolean m2780r() {
         return this.f6450m == this.f6439b;
     }
@@ -283,7 +283,7 @@ public final class CacheDataSource implements DataSource3 {
             int i3 = dataSource3.read(bArr, i, i2);
             if (i3 != -1) {
                 if (m2780r()) {
-                    this.f6457t += i3;
+                    this.f6457t += (long) i3;
                 }
                 long j = i3;
                 this.f6452o += j;
@@ -320,12 +320,12 @@ public final class CacheDataSource implements DataSource3 {
         }
     }
 
-    /* renamed from: s */
+    /* JADX INFO: renamed from: s */
     public final boolean m2781s() {
         return !m2780r();
     }
 
-    /* renamed from: t */
+    /* JADX INFO: renamed from: t */
     public final void m2782t(DataSpec dataSpec, boolean z2) throws IOException {
         CacheSpan cacheSpanMo2831f;
         DataSpec dataSpecM2857a;

@@ -33,9 +33,9 @@ import org.eclipse.jdt.internal.ui.text.java.AbstractJavaCompletionProposal;
 import org.eclipse.jdt.ui.text.java.CompletionProposalCollector;
 import org.eclipse.jdt.ui.text.java.IJavaCompletionProposal;
 
-/* loaded from: discord-126021.apk:lombok/eclipse/agent/PatchExtensionMethodCompletionProposal.SCL.lombok */
+/* JADX INFO: loaded from: discord-126021.apk:lombok/eclipse/agent/PatchExtensionMethodCompletionProposal.SCL.lombok */
 public class PatchExtensionMethodCompletionProposal {
-    public static IJavaCompletionProposal[] getJavaCompletionProposals(IJavaCompletionProposal[] javaCompletionProposals, CompletionProposalCollector completionProposalCollector) throws IllegalArgumentException {
+    public static IJavaCompletionProposal[] getJavaCompletionProposals(IJavaCompletionProposal[] javaCompletionProposals, CompletionProposalCollector completionProposalCollector) {
         List<IJavaCompletionProposal> proposals = new ArrayList<>(Arrays.asList(javaCompletionProposals));
         if (canExtendCodeAssist()) {
             for (PatchExtensionMethod.Extension extension : getExtensionMethods(completionProposalCollector)) {
@@ -134,7 +134,7 @@ public class PatchExtensionMethodCompletionProposal {
         return scope;
     }
 
-    private static void copyNameLookupAndCompletionEngine(CompletionProposalCollector completionProposalCollector, InternalCompletionProposal newProposal) throws IllegalArgumentException {
+    private static void copyNameLookupAndCompletionEngine(CompletionProposalCollector completionProposalCollector, InternalCompletionProposal newProposal) {
         try {
             InternalCompletionContext context = (InternalCompletionContext) Reflection.contextField.get(completionProposalCollector);
             InternalExtendedCompletionContext extendedContext = (InternalExtendedCompletionContext) Reflection.extendedContextField.get(context);
@@ -156,7 +156,7 @@ public class PatchExtensionMethodCompletionProposal {
         return Reflection.isComplete();
     }
 
-    /* loaded from: discord-126021.apk:lombok/eclipse/agent/PatchExtensionMethodCompletionProposal$Reflection.SCL.lombok */
+    /* JADX INFO: loaded from: discord-126021.apk:lombok/eclipse/agent/PatchExtensionMethodCompletionProposal$Reflection.SCL.lombok */
     static class Reflection {
         public static final Field replacementOffsetField = accessField(AbstractJavaCompletionProposal.class, "fReplacementOffset");
         public static final Field contextField = accessField(CompletionProposalCollector.class, "fContext");

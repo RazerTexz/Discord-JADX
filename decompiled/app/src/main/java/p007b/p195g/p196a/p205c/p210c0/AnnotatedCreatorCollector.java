@@ -8,18 +8,18 @@ import p007b.p195g.p196a.p205c.AnnotationIntrospector;
 import p007b.p195g.p196a.p205c.p210c0.AnnotationCollector;
 import p007b.p195g.p196a.p205c.p219i0.ClassUtil;
 
-/* compiled from: AnnotatedCreatorCollector.java */
-/* renamed from: b.g.a.c.c0.f, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.g.a.c.c0.f, reason: use source file name */
+/* JADX INFO: compiled from: AnnotatedCreatorCollector.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class AnnotatedCreatorCollector extends CollectorBase {
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final TypeResolutionContext f4705d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final boolean f4706e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public AnnotatedConstructor f4707f;
 
     public AnnotatedCreatorCollector(AnnotationIntrospector annotationIntrospector, TypeResolutionContext typeResolutionContext, boolean z2) {
@@ -28,12 +28,12 @@ public final class AnnotatedCreatorCollector extends CollectorBase {
         this.f4706e = z2;
     }
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public static boolean m1892f(Method method) {
         return Modifier.isStatic(method.getModifiers()) && !method.isSynthetic();
     }
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public final AnnotationMap m1893g(ClassUtil.a aVar, ClassUtil.a aVar2) {
         if (!this.f4706e) {
             return new AnnotationMap();
@@ -55,7 +55,7 @@ public final class AnnotatedCreatorCollector extends CollectorBase {
         return annotationCollectorM1925c.mo1912b();
     }
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public final AnnotationMap m1894h(AnnotatedElement annotatedElement, AnnotatedElement annotatedElement2) {
         AnnotationCollector annotationCollectorM1925c = m1925c(annotatedElement.getDeclaredAnnotations());
         if (annotatedElement2 != null) {
@@ -64,7 +64,7 @@ public final class AnnotatedCreatorCollector extends CollectorBase {
         return annotationCollectorM1925c.mo1912b();
     }
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public final AnnotationMap[] m1895i(Annotation[][] annotationArr, Annotation[][] annotationArr2) {
         if (!this.f4706e) {
             return CollectorBase.f4748a;
@@ -81,7 +81,7 @@ public final class AnnotatedCreatorCollector extends CollectorBase {
         return annotationMapArr;
     }
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public AnnotatedMethod m1896j(Method method, TypeResolutionContext typeResolutionContext, Method method2) {
         int length = method.getParameterTypes().length;
         if (this.f4750c == null) {
@@ -94,7 +94,7 @@ public final class AnnotatedCreatorCollector extends CollectorBase {
     }
 
     /* JADX WARN: Removed duplicated region for block: B:27:0x007d  */
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */

@@ -14,8 +14,8 @@ import com.discord.api.science.AnalyticsSchema;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: TrackPremiumGuildUpsellOpened.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: TrackPremiumGuildUpsellOpened.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class TrackPremiumGuildUpsellOpened implements AnalyticsSchema, TrackBase2, TrackChannel2, TrackGuild2, TrackLocationMetadata2, TrackSourceMetadata2 {
     private TrackBase trackBase;
     private TrackChannel trackChannel;
@@ -26,19 +26,19 @@ public final /* data */ class TrackPremiumGuildUpsellOpened implements Analytics
     private final transient String analyticsSchemaTypeName = "premium_guild_upsell_opened";
 
     @Override // com.discord.analytics.generated.traits.TrackGuild2
-    /* renamed from: a, reason: from getter */
+    /* JADX INFO: renamed from: a, reason: from getter */
     public TrackGuild getTrackGuild() {
         return this.trackGuild;
     }
 
     @Override // com.discord.analytics.generated.traits.TrackGuild2
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public void mo7508c(TrackGuild trackGuild) {
         this.trackGuild = trackGuild;
     }
 
     @Override // com.discord.api.science.AnalyticsSchema
-    /* renamed from: d, reason: from getter */
+    /* JADX INFO: renamed from: d, reason: from getter */
     public String getAnalyticsSchemaTypeName() {
         return this.analyticsSchemaTypeName;
     }

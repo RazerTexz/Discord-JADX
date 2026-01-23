@@ -8,7 +8,7 @@ import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.util.Locale;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public final class ICUCompat {
     private static final String TAG = "ICUCompat";
     private static Method sAddLikelySubtagsMethod;

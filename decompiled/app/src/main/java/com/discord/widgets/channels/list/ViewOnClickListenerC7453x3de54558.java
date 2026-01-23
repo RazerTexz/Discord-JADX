@@ -6,9 +6,9 @@ import com.discord.models.user.User;
 import com.discord.widgets.user.usersheet.WidgetUserSheet;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: WidgetChannelsListItemChannelActions.kt */
-/* renamed from: com.discord.widgets.channels.list.WidgetChannelsListItemChannelActions$configureUI$$inlined$apply$lambda$1 */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.channels.list.WidgetChannelsListItemChannelActions$configureUI$$inlined$apply$lambda$1 */
+/* JADX INFO: compiled from: WidgetChannelsListItemChannelActions.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class ViewOnClickListenerC7453x3de54558 implements View.OnClickListener {
     public final /* synthetic */ User $dmRecipient$inlined;
     public final /* synthetic */ WidgetChannelsListItemChannelActions this$0;

@@ -10,8 +10,8 @@ import p007b.p100d.p104b.p105a.outline;
 import p507d0.p580t.Collections2;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: GuildRoleSubscriptionTier.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: GuildRoleSubscriptionTier.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final /* data */ class GuildRoleSubscriptionTier {
     private final Integer activeTrialUserLimit;
     private final Long applicationId;
@@ -53,11 +53,12 @@ public final /* data */ class GuildRoleSubscriptionTier {
         this.activeTrialUserLimit = num3;
     }
 
-    /* renamed from: component11, reason: from getter */
+    /* JADX INFO: renamed from: component11, reason: from getter */
     private final Boolean getCanAccessAllChannels() {
         return this.canAccessAllChannels;
     }
 
+    /* JADX WARN: Multi-variable type inference failed */
     public static /* synthetic */ GuildRoleSubscriptionTier copy$default(GuildRoleSubscriptionTier guildRoleSubscriptionTier, String str, Long l, Integer num, Integer num2, String str2, GuildRole guildRole, String str3, Long l2, String str4, Boolean bool, Boolean bool2, List list, List list2, SubscriptionTrialInterval subscriptionTrialInterval, Integer num3, int i, Object obj) {
         return guildRoleSubscriptionTier.copy((i & 1) != 0 ? guildRoleSubscriptionTier.name : str, (i & 2) != 0 ? guildRoleSubscriptionTier.applicationId : l, (i & 4) != 0 ? guildRoleSubscriptionTier.priceTier : num, (i & 8) != 0 ? guildRoleSubscriptionTier.memberColor : num2, (i & 16) != 0 ? guildRoleSubscriptionTier.memberIcon : str2, (i & 32) != 0 ? guildRoleSubscriptionTier.guildRole : guildRole, (i & 64) != 0 ? guildRoleSubscriptionTier.image : str3, (i & 128) != 0 ? guildRoleSubscriptionTier.imageAssetId : l2, (i & 256) != 0 ? guildRoleSubscriptionTier.description : str4, (i & 512) != 0 ? guildRoleSubscriptionTier.isPublished : bool, (i & 1024) != 0 ? guildRoleSubscriptionTier.canAccessAllChannels : bool2, (i & 2048) != 0 ? guildRoleSubscriptionTier.channelBenefits : list, (i & 4096) != 0 ? guildRoleSubscriptionTier.intangibleBenefits : list2, (i & 8192) != 0 ? guildRoleSubscriptionTier.trialInterval : subscriptionTrialInterval, (i & 16384) != 0 ? guildRoleSubscriptionTier.activeTrialUserLimit : num3);
     }
@@ -67,12 +68,12 @@ public final /* data */ class GuildRoleSubscriptionTier {
         return Intrinsics3.areEqual(isFullServerGating, bool) && (Intrinsics3.areEqual(this.canAccessAllChannels, bool) || this.canAccessAllChannels == null);
     }
 
-    /* renamed from: component1, reason: from getter */
+    /* JADX INFO: renamed from: component1, reason: from getter */
     public final String getName() {
         return this.name;
     }
 
-    /* renamed from: component10, reason: from getter */
+    /* JADX INFO: renamed from: component10, reason: from getter */
     public final Boolean getIsPublished() {
         return this.isPublished;
     }
@@ -85,52 +86,52 @@ public final /* data */ class GuildRoleSubscriptionTier {
         return this.intangibleBenefits;
     }
 
-    /* renamed from: component14, reason: from getter */
+    /* JADX INFO: renamed from: component14, reason: from getter */
     public final SubscriptionTrialInterval getTrialInterval() {
         return this.trialInterval;
     }
 
-    /* renamed from: component15, reason: from getter */
+    /* JADX INFO: renamed from: component15, reason: from getter */
     public final Integer getActiveTrialUserLimit() {
         return this.activeTrialUserLimit;
     }
 
-    /* renamed from: component2, reason: from getter */
+    /* JADX INFO: renamed from: component2, reason: from getter */
     public final Long getApplicationId() {
         return this.applicationId;
     }
 
-    /* renamed from: component3, reason: from getter */
+    /* JADX INFO: renamed from: component3, reason: from getter */
     public final Integer getPriceTier() {
         return this.priceTier;
     }
 
-    /* renamed from: component4, reason: from getter */
+    /* JADX INFO: renamed from: component4, reason: from getter */
     public final Integer getMemberColor() {
         return this.memberColor;
     }
 
-    /* renamed from: component5, reason: from getter */
+    /* JADX INFO: renamed from: component5, reason: from getter */
     public final String getMemberIcon() {
         return this.memberIcon;
     }
 
-    /* renamed from: component6, reason: from getter */
+    /* JADX INFO: renamed from: component6, reason: from getter */
     public final GuildRole getGuildRole() {
         return this.guildRole;
     }
 
-    /* renamed from: component7, reason: from getter */
+    /* JADX INFO: renamed from: component7, reason: from getter */
     public final String getImage() {
         return this.image;
     }
 
-    /* renamed from: component8, reason: from getter */
+    /* JADX INFO: renamed from: component8, reason: from getter */
     public final Long getImageAssetId() {
         return this.imageAssetId;
     }
 
-    /* renamed from: component9, reason: from getter */
+    /* JADX INFO: renamed from: component9, reason: from getter */
     public final String getDescription() {
         return this.description;
     }

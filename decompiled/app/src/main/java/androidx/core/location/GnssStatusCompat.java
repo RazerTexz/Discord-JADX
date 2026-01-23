@@ -11,7 +11,7 @@ import androidx.annotation.RestrictTo;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public abstract class GnssStatusCompat {
 
     @SuppressLint({"InlinedApi"})

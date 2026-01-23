@@ -33,7 +33,7 @@ import java.lang.reflect.Field;
 import java.lang.reflect.Method;
 import java.util.ArrayList;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class SlidingPaneLayout extends ViewGroup {
     private static final int DEFAULT_FADE_COLOR = -858993460;
     private static final int DEFAULT_OVERHANG_SIZE = 32;
@@ -247,7 +247,7 @@ public class SlidingPaneLayout extends ViewGroup {
         public static final Parcelable.Creator<SavedState> CREATOR = new C06151();
         public boolean isOpen;
 
-        /* renamed from: androidx.slidingpanelayout.widget.SlidingPaneLayout$SavedState$1 */
+        /* JADX INFO: renamed from: androidx.slidingpanelayout.widget.SlidingPaneLayout$SavedState$1 */
         public static class C06151 implements Parcelable.ClassLoaderCreator<SavedState> {
             @Override // android.os.Parcelable.Creator
             public /* bridge */ /* synthetic */ Object createFromParcel(Parcel parcel) {

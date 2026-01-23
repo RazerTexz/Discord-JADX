@@ -4,15 +4,15 @@ import android.view.View;
 import kotlin.Unit;
 import p658rx.functions.Action1;
 
-/* compiled from: FloatingViewManager.kt */
-/* renamed from: b.a.j.d, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.a.j.d, reason: use source file name */
+/* JADX INFO: compiled from: FloatingViewManager.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class FloatingViewManager2<T> implements Action1<Unit> {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final /* synthetic */ FloatingViewManager f1474j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final /* synthetic */ View f1475k;
 
     public FloatingViewManager2(FloatingViewManager floatingViewManager, View view) {

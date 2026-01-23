@@ -6,8 +6,8 @@ import java.util.List;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: WidgetChatInputMentionsTags.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetChatInputMentionsTags.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final /* data */ class WidgetChatInputMentionsTags<T> {
     private final List<T> tags;
     private final String token;
@@ -40,12 +40,12 @@ public final /* data */ class WidgetChatInputMentionsTags<T> {
         return this.tags;
     }
 
-    /* renamed from: component2, reason: from getter */
+    /* JADX INFO: renamed from: component2, reason: from getter */
     public final char getTokenIdentifier() {
         return this.tokenIdentifier;
     }
 
-    /* renamed from: component3, reason: from getter */
+    /* JADX INFO: renamed from: component3, reason: from getter */
     public final String getToken() {
         return this.token;
     }

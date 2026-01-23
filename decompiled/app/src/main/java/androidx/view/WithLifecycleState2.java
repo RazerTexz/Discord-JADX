@@ -16,14 +16,14 @@ import p659s.p660a.Dispatchers;
 import p659s.p660a.MainCoroutineDispatcher;
 import p659s.p660a.p661a.MainDispatchers;
 
-/* compiled from: WithLifecycleState.kt */
-/* renamed from: androidx.lifecycle.WithLifecycleStateKt, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: androidx.lifecycle.WithLifecycleStateKt, reason: use source file name */
+/* JADX INFO: compiled from: WithLifecycleState.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class WithLifecycleState2 {
 
     /* JADX INFO: Add missing generic type declarations: [R] */
-    /* compiled from: WithLifecycleState.kt */
-    /* renamed from: androidx.lifecycle.WithLifecycleStateKt$withStateAtLeastUnchecked$2 */
+    /* JADX INFO: renamed from: androidx.lifecycle.WithLifecycleStateKt$withStateAtLeastUnchecked$2 */
+    /* JADX INFO: compiled from: WithLifecycleState.kt */
     public static final class C04572<R> extends Lambda implements Function0<R> {
         public final /* synthetic */ Function0 $block;
 

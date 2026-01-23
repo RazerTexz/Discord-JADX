@@ -15,9 +15,9 @@ import kotlin.Unit;
 import kotlin.jvm.functions.Function1;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: SpannableStringBuilder.kt */
-/* renamed from: androidx.core.text.SpannableStringBuilderKt, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: androidx.core.text.SpannableStringBuilderKt, reason: use source file name */
+/* JADX INFO: compiled from: SpannableStringBuilder.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class SpannableStringBuilder {
     public static final android.text.SpannableStringBuilder backgroundColor(android.text.SpannableStringBuilder spannableStringBuilder, @ColorInt int i, Function1<? super android.text.SpannableStringBuilder, Unit> function1) {
         Intrinsics3.checkNotNullParameter(spannableStringBuilder, "<this>");

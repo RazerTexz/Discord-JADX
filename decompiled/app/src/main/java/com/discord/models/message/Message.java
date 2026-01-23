@@ -34,8 +34,8 @@ import p507d0.p579g0.Strings4;
 import p507d0.p580t.Maps6;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: Message.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: Message.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class Message {
     private static final Map<String, MessageReaction> EMPTY_REACTIONS = Maps6.emptyMap();
     private final MessageActivity activity;
@@ -122,6 +122,7 @@ public final /* data */ class Message {
         this.captchaPayload = captchaPayload;
     }
 
+    /* JADX WARN: Multi-variable type inference failed */
     public static /* synthetic */ Message copy$default(Message message, long j, long j2, Long l, User user, String str, UtcDateTime utcDateTime, UtcDateTime utcDateTime2, Boolean bool, Boolean bool2, List list, List list2, List list3, List list4, List list5, String str2, Boolean bool3, Long l2, Integer num, MessageActivity messageActivity, Application application, Long l3, MessageReference messageReference, Long l4, List list6, List list7, com.discord.api.message.Message message2, Interaction interaction, Channel channel, List list8, MessageCall messageCall, Boolean bool4, RoleSubscriptionData roleSubscriptionData, boolean z2, MessageAllowedMentions messageAllowedMentions, Integer num2, Long l5, Long l6, List list9, CaptchaHelper.CaptchaPayload captchaPayload, int i, int i2, Object obj) {
         return message.copy((i & 1) != 0 ? message.id : j, (i & 2) != 0 ? message.channelId : j2, (i & 4) != 0 ? message.guildId : l, (i & 8) != 0 ? message.author : user, (i & 16) != 0 ? message.content : str, (i & 32) != 0 ? message.timestamp : utcDateTime, (i & 64) != 0 ? message.editedTimestamp : utcDateTime2, (i & 128) != 0 ? message.tts : bool, (i & 256) != 0 ? message.mentionEveryone : bool2, (i & 512) != 0 ? message.mentions : list, (i & 1024) != 0 ? message.mentionRoles : list2, (i & 2048) != 0 ? message.attachments : list3, (i & 4096) != 0 ? message.embeds : list4, (i & 8192) != 0 ? message.reactions : list5, (i & 16384) != 0 ? message.nonce : str2, (i & 32768) != 0 ? message.pinned : bool3, (i & 65536) != 0 ? message.webhookId : l2, (i & 131072) != 0 ? message.type : num, (i & 262144) != 0 ? message.activity : messageActivity, (i & 524288) != 0 ? message.application : application, (i & 1048576) != 0 ? message.applicationId : l3, (i & 2097152) != 0 ? message.messageReference : messageReference, (i & 4194304) != 0 ? message.flags : l4, (i & 8388608) != 0 ? message.stickers : list6, (i & 16777216) != 0 ? message.stickerItems : list7, (i & 33554432) != 0 ? message.referencedMessage : message2, (i & 67108864) != 0 ? message.interaction : interaction, (i & 134217728) != 0 ? message.thread : channel, (i & 268435456) != 0 ? message.components : list8, (i & 536870912) != 0 ? message.call : messageCall, (i & BasicMeasure.EXACTLY) != 0 ? message.hit : bool4, (i & Integer.MIN_VALUE) != 0 ? message.roleSubscriptionData : roleSubscriptionData, (i2 & 1) != 0 ? message.hasLocalUploads : z2, (i2 & 2) != 0 ? message.allowedMentions : messageAllowedMentions, (i2 & 4) != 0 ? message.numRetries : num2, (i2 & 8) != 0 ? message.lastManualAttemptTimestamp : l5, (i2 & 16) != 0 ? message.initialAttemptTimestamp : l6, (i2 & 32) != 0 ? message.localAttachments : list9, (i2 & 64) != 0 ? message.captchaPayload : captchaPayload);
     }
@@ -131,7 +132,7 @@ public final /* data */ class Message {
         return num != null && num.intValue() == -2;
     }
 
-    /* renamed from: component1, reason: from getter */
+    /* JADX INFO: renamed from: component1, reason: from getter */
     public final long getId() {
         return this.id;
     }
@@ -156,52 +157,52 @@ public final /* data */ class Message {
         return this.reactions;
     }
 
-    /* renamed from: component15, reason: from getter */
+    /* JADX INFO: renamed from: component15, reason: from getter */
     public final String getNonce() {
         return this.nonce;
     }
 
-    /* renamed from: component16, reason: from getter */
+    /* JADX INFO: renamed from: component16, reason: from getter */
     public final Boolean getPinned() {
         return this.pinned;
     }
 
-    /* renamed from: component17, reason: from getter */
+    /* JADX INFO: renamed from: component17, reason: from getter */
     public final Long getWebhookId() {
         return this.webhookId;
     }
 
-    /* renamed from: component18, reason: from getter */
+    /* JADX INFO: renamed from: component18, reason: from getter */
     public final Integer getType() {
         return this.type;
     }
 
-    /* renamed from: component19, reason: from getter */
+    /* JADX INFO: renamed from: component19, reason: from getter */
     public final MessageActivity getActivity() {
         return this.activity;
     }
 
-    /* renamed from: component2, reason: from getter */
+    /* JADX INFO: renamed from: component2, reason: from getter */
     public final long getChannelId() {
         return this.channelId;
     }
 
-    /* renamed from: component20, reason: from getter */
+    /* JADX INFO: renamed from: component20, reason: from getter */
     public final Application getApplication() {
         return this.application;
     }
 
-    /* renamed from: component21, reason: from getter */
+    /* JADX INFO: renamed from: component21, reason: from getter */
     public final Long getApplicationId() {
         return this.applicationId;
     }
 
-    /* renamed from: component22, reason: from getter */
+    /* JADX INFO: renamed from: component22, reason: from getter */
     public final MessageReference getMessageReference() {
         return this.messageReference;
     }
 
-    /* renamed from: component23, reason: from getter */
+    /* JADX INFO: renamed from: component23, reason: from getter */
     public final Long getFlags() {
         return this.flags;
     }
@@ -214,17 +215,17 @@ public final /* data */ class Message {
         return this.stickerItems;
     }
 
-    /* renamed from: component26, reason: from getter */
+    /* JADX INFO: renamed from: component26, reason: from getter */
     public final com.discord.api.message.Message getReferencedMessage() {
         return this.referencedMessage;
     }
 
-    /* renamed from: component27, reason: from getter */
+    /* JADX INFO: renamed from: component27, reason: from getter */
     public final Interaction getInteraction() {
         return this.interaction;
     }
 
-    /* renamed from: component28, reason: from getter */
+    /* JADX INFO: renamed from: component28, reason: from getter */
     public final Channel getThread() {
         return this.thread;
     }
@@ -233,47 +234,47 @@ public final /* data */ class Message {
         return this.components;
     }
 
-    /* renamed from: component3, reason: from getter */
+    /* JADX INFO: renamed from: component3, reason: from getter */
     public final Long getGuildId() {
         return this.guildId;
     }
 
-    /* renamed from: component30, reason: from getter */
+    /* JADX INFO: renamed from: component30, reason: from getter */
     public final MessageCall getCall() {
         return this.call;
     }
 
-    /* renamed from: component31, reason: from getter */
+    /* JADX INFO: renamed from: component31, reason: from getter */
     public final Boolean getHit() {
         return this.hit;
     }
 
-    /* renamed from: component32, reason: from getter */
+    /* JADX INFO: renamed from: component32, reason: from getter */
     public final RoleSubscriptionData getRoleSubscriptionData() {
         return this.roleSubscriptionData;
     }
 
-    /* renamed from: component33, reason: from getter */
+    /* JADX INFO: renamed from: component33, reason: from getter */
     public final boolean getHasLocalUploads() {
         return this.hasLocalUploads;
     }
 
-    /* renamed from: component34, reason: from getter */
+    /* JADX INFO: renamed from: component34, reason: from getter */
     public final MessageAllowedMentions getAllowedMentions() {
         return this.allowedMentions;
     }
 
-    /* renamed from: component35, reason: from getter */
+    /* JADX INFO: renamed from: component35, reason: from getter */
     public final Integer getNumRetries() {
         return this.numRetries;
     }
 
-    /* renamed from: component36, reason: from getter */
+    /* JADX INFO: renamed from: component36, reason: from getter */
     public final Long getLastManualAttemptTimestamp() {
         return this.lastManualAttemptTimestamp;
     }
 
-    /* renamed from: component37, reason: from getter */
+    /* JADX INFO: renamed from: component37, reason: from getter */
     public final Long getInitialAttemptTimestamp() {
         return this.initialAttemptTimestamp;
     }
@@ -282,37 +283,37 @@ public final /* data */ class Message {
         return this.localAttachments;
     }
 
-    /* renamed from: component39, reason: from getter */
+    /* JADX INFO: renamed from: component39, reason: from getter */
     public final CaptchaHelper.CaptchaPayload getCaptchaPayload() {
         return this.captchaPayload;
     }
 
-    /* renamed from: component4, reason: from getter */
+    /* JADX INFO: renamed from: component4, reason: from getter */
     public final User getAuthor() {
         return this.author;
     }
 
-    /* renamed from: component5, reason: from getter */
+    /* JADX INFO: renamed from: component5, reason: from getter */
     public final String getContent() {
         return this.content;
     }
 
-    /* renamed from: component6, reason: from getter */
+    /* JADX INFO: renamed from: component6, reason: from getter */
     public final UtcDateTime getTimestamp() {
         return this.timestamp;
     }
 
-    /* renamed from: component7, reason: from getter */
+    /* JADX INFO: renamed from: component7, reason: from getter */
     public final UtcDateTime getEditedTimestamp() {
         return this.editedTimestamp;
     }
 
-    /* renamed from: component8, reason: from getter */
+    /* JADX INFO: renamed from: component8, reason: from getter */
     public final Boolean getTts() {
         return this.tts;
     }
 
-    /* renamed from: component9, reason: from getter */
+    /* JADX INFO: renamed from: component9, reason: from getter */
     public final Boolean getMentionEveryone() {
         return this.mentionEveryone;
     }
@@ -549,6 +550,9 @@ public final /* data */ class Message {
     }
 
     /* JADX WARN: Multi-variable type inference failed */
+    /* JADX WARN: Type inference failed for: r0v116 */
+    /* JADX WARN: Type inference failed for: r0v147 */
+    /* JADX WARN: Type inference failed for: r0v94, types: [int] */
     public int hashCode() {
         int iM3a = (C0002b.m3a(this.channelId) + (C0002b.m3a(this.id) * 31)) * 31;
         Long l = this.guildId;
@@ -612,13 +616,13 @@ public final /* data */ class Message {
         RoleSubscriptionData roleSubscriptionData = this.roleSubscriptionData;
         int iHashCode30 = (iHashCode29 + (roleSubscriptionData != null ? roleSubscriptionData.hashCode() : 0)) * 31;
         boolean z2 = this.hasLocalUploads;
-        int i = z2;
-        if (z2 != 0) {
-            i = 1;
+        ?? r0 = z2;
+        if (z2) {
+            r0 = 1;
         }
-        int i2 = (iHashCode30 + i) * 31;
+        int i = (iHashCode30 + r0) * 31;
         MessageAllowedMentions messageAllowedMentions = this.allowedMentions;
-        int iHashCode31 = (i2 + (messageAllowedMentions != null ? messageAllowedMentions.hashCode() : 0)) * 31;
+        int iHashCode31 = (i + (messageAllowedMentions != null ? messageAllowedMentions.hashCode() : 0)) * 31;
         Integer num2 = this.numRetries;
         int iHashCode32 = (iHashCode31 + (num2 != null ? num2.hashCode() : 0)) * 31;
         Long l5 = this.lastManualAttemptTimestamp;

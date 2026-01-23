@@ -4,24 +4,24 @@ import com.discord.models.domain.ModelAuditLogEntry;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ProfileApplication.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: ProfileApplication.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class ProfileApplication {
     private final String customInstallUrl;
     private final String id;
     private final ProfileApplication2 installParams;
 
-    /* renamed from: a, reason: from getter */
+    /* JADX INFO: renamed from: a, reason: from getter */
     public final String getCustomInstallUrl() {
         return this.customInstallUrl;
     }
 
-    /* renamed from: b, reason: from getter */
+    /* JADX INFO: renamed from: b, reason: from getter */
     public final String getId() {
         return this.id;
     }
 
-    /* renamed from: c, reason: from getter */
+    /* JADX INFO: renamed from: c, reason: from getter */
     public final ProfileApplication2 getInstallParams() {
         return this.installParams;
     }

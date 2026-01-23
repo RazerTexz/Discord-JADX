@@ -12,27 +12,27 @@ import p007b.p109f.p161j.p162a.p163a.AnimatedDrawableFrameInfo;
 import p007b.p109f.p161j.p162a.p163a.AnimatedImageResult;
 import p007b.p109f.p161j.p185t.BitmapTransformation;
 
-/* compiled from: AnimatedImageCompositor.java */
-/* renamed from: b.f.j.a.c.d, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: b.f.j.a.c.d, reason: use source file name */
+/* JADX INFO: compiled from: AnimatedImageCompositor.java */
+/* JADX INFO: loaded from: classes2.dex */
 public class AnimatedImageCompositor {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final AnimatedDrawableBackend f3641a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final a f3642b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final Paint f3643c;
 
-    /* compiled from: AnimatedImageCompositor.java */
-    /* renamed from: b.f.j.a.c.d$a */
+    /* JADX INFO: renamed from: b.f.j.a.c.d$a */
+    /* JADX INFO: compiled from: AnimatedImageCompositor.java */
     public interface a {
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         void mo1162a(int i, Bitmap bitmap);
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         CloseableReference<Bitmap> mo1163b(int i);
     }
 
@@ -46,17 +46,17 @@ public class AnimatedImageCompositor {
         paint.setXfermode(new PorterDuffXfermode(PorterDuff.Mode.SRC));
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final void m1202a(Canvas canvas, AnimatedDrawableFrameInfo animatedDrawableFrameInfo) {
         canvas.drawRect(animatedDrawableFrameInfo.f3603a, animatedDrawableFrameInfo.f3604b, r0 + animatedDrawableFrameInfo.f3605c, r1 + animatedDrawableFrameInfo.f3606d, this.f3643c);
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final boolean m1203b(AnimatedDrawableFrameInfo animatedDrawableFrameInfo) {
         return animatedDrawableFrameInfo.f3603a == 0 && animatedDrawableFrameInfo.f3604b == 0 && animatedDrawableFrameInfo.f3605c == ((AnimatedDrawableBackendImpl) this.f3641a).f3627d.width() && animatedDrawableFrameInfo.f3606d == ((AnimatedDrawableBackendImpl) this.f3641a).f3627d.height();
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final boolean m1204c(int i) {
         if (i == 0) {
             return true;
@@ -75,7 +75,7 @@ public class AnimatedImageCompositor {
         r2 = r1;
      */
     /* JADX WARN: Removed duplicated region for block: B:13:0x002f  */
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */

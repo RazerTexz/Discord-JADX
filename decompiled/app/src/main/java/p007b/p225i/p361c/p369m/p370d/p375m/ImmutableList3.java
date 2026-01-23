@@ -9,12 +9,12 @@ import java.util.List;
 import java.util.ListIterator;
 import java.util.RandomAccess;
 
-/* compiled from: ImmutableList.java */
-/* renamed from: b.i.c.m.d.m.w, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.c.m.d.m.w, reason: use source file name */
+/* JADX INFO: compiled from: ImmutableList.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class ImmutableList3<E> implements List<E>, RandomAccess {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final List<E> f12648j;
 
     public ImmutableList3(List<E> list) {

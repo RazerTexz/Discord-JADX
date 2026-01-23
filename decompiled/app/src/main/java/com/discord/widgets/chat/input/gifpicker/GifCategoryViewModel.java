@@ -28,19 +28,19 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 import p658rx.Observable;
 
-/* compiled from: GifCategoryViewModel.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: GifCategoryViewModel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class GifCategoryViewModel extends AppViewModel<ViewState> {
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private final GifCategoryItem gifCategoryItem;
     private final MessageManager messageManager;
     private final StoreAnalytics storeAnalytics;
     private final StoreGifPicker storeGifPicker;
 
-    /* compiled from: GifCategoryViewModel.kt */
-    /* renamed from: com.discord.widgets.chat.input.gifpicker.GifCategoryViewModel$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.input.gifpicker.GifCategoryViewModel$1 */
+    /* JADX INFO: compiled from: GifCategoryViewModel.kt */
     public static final class C78681 extends Lambda implements Function1<StoreState, Unit> {
         public C78681() {
             super(1);
@@ -52,14 +52,14 @@ public final class GifCategoryViewModel extends AppViewModel<ViewState> {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(StoreState storeState) {
             Intrinsics3.checkNotNullParameter(storeState, "storeState");
             GifCategoryViewModel.access$handleStoreState(GifCategoryViewModel.this, storeState);
         }
     }
 
-    /* compiled from: GifCategoryViewModel.kt */
+    /* JADX INFO: compiled from: GifCategoryViewModel.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -88,7 +88,7 @@ public final class GifCategoryViewModel extends AppViewModel<ViewState> {
         }
     }
 
-    /* compiled from: GifCategoryViewModel.kt */
+    /* JADX INFO: compiled from: GifCategoryViewModel.kt */
     public static final /* data */ class StoreState {
         private final List<ModelGif> gifs;
 
@@ -138,10 +138,10 @@ public final class GifCategoryViewModel extends AppViewModel<ViewState> {
         }
     }
 
-    /* compiled from: GifCategoryViewModel.kt */
+    /* JADX INFO: compiled from: GifCategoryViewModel.kt */
     public static final /* data */ class ViewState {
 
-        /* renamed from: gifCount$delegate, reason: from kotlin metadata */
+        /* JADX INFO: renamed from: gifCount$delegate, reason: from kotlin metadata */
         private final Lazy gifCount;
         private final List<GifAdapterItem.GifItem> gifItems;
 

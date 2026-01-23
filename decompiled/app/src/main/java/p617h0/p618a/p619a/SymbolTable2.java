@@ -3,72 +3,72 @@ package p617h0.p618a.p619a;
 import org.objectweb.asm.Opcodes;
 import p007b.p100d.p104b.p105a.outline;
 
-/* compiled from: SymbolTable.java */
-/* renamed from: h0.a.a.v, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: h0.a.a.v, reason: use source file name */
+/* JADX INFO: compiled from: SymbolTable.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class SymbolTable2 {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final ClassWriter2 f26347a;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public int f26349c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public String f26350d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public int f26351e;
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public int f26355i;
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public ByteVector2 f26356j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public int f26357k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public a[] f26358l;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final ClassReader2 f26348b = null;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public a[] f26352f = new a[256];
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public int f26353g = 1;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public ByteVector2 f26354h = new ByteVector2();
 
     public SymbolTable2(ClassWriter2 classWriter2) {
         this.f26347a = classWriter2;
     }
 
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     public static int m10622r(int i, int i2) {
         return (i + i2) & Integer.MAX_VALUE;
     }
 
-    /* renamed from: s */
+    /* JADX INFO: renamed from: s */
     public static int m10623s(int i, String str, String str2, int i2) {
         return Integer.MAX_VALUE & (((i2 + 1) * str2.hashCode() * str.hashCode()) + i);
     }
 
-    /* renamed from: t */
+    /* JADX INFO: renamed from: t */
     public static int m10624t(int i, String str, String str2, String str3) {
         return Integer.MAX_VALUE & ((str3.hashCode() * str2.hashCode() * str.hashCode()) + i);
     }
 
-    /* renamed from: u */
+    /* JADX INFO: renamed from: u */
     public static int m10625u(int i, String str, String str2, String str3, int i2) {
         return Integer.MAX_VALUE & ((str3.hashCode() * str2.hashCode() * str.hashCode() * i2) + i);
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public Symbol2 m10626a(Handle2 handle2, Object... objArr) {
         boolean z2;
         ByteVector2 byteVector2 = this.f26356j;
@@ -121,7 +121,7 @@ public final class SymbolTable2 {
         return aVar2;
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public Symbol2 m10627b(Object obj) {
         if (obj instanceof Integer) {
             return m10630e(((Integer) obj).intValue());
@@ -166,12 +166,12 @@ public final class SymbolTable2 {
         return m10629d(17, constantDynamic2.f26190a, constantDynamic2.f26191b, m10626a(constantDynamic2.f26192c, constantDynamic2.f26193d).f26340a);
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public Symbol2 m10628c(String str) {
         return m10638m(7, str);
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final Symbol2 m10629d(int i, String str, String str2, int i2) {
         int iM10623s = m10623s(i, str, str2, i2);
         for (a aVarM10642q = m10642q(iM10623s); aVarM10642q != null; aVarM10642q = aVarM10642q.f26360i) {
@@ -187,12 +187,12 @@ public final class SymbolTable2 {
         return aVar;
     }
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public Symbol2 m10630e(int i) {
         return m10631f(3, i);
     }
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final Symbol2 m10631f(int i, int i2) {
         int iM10622r = m10622r(i, i2);
         for (a aVarM10642q = m10642q(iM10622r); aVarM10642q != null; aVarM10642q = aVarM10642q.f26360i) {
@@ -210,7 +210,7 @@ public final class SymbolTable2 {
         return aVar;
     }
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public final Symbol2 m10632g(int i, long j) {
         int i2 = (int) j;
         int i3 = (int) (j >>> 32);
@@ -250,7 +250,7 @@ public final class SymbolTable2 {
         return aVar;
     }
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public final a m10633h(int i, String str, String str2, String str3) {
         int iM10624t = m10624t(i, str, str2, str3);
         for (a aVarM10642q = m10642q(iM10624t); aVarM10642q != null; aVarM10642q = aVarM10642q.f26360i) {
@@ -266,7 +266,7 @@ public final class SymbolTable2 {
         return aVar;
     }
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public Symbol2 m10634i(int i, String str, String str2, String str3, boolean z2) {
         int iM10625u = m10625u(15, str, str2, str3, i);
         for (a aVarM10642q = m10642q(iM10625u); aVarM10642q != null; aVarM10642q = aVarM10642q.f26360i) {
@@ -286,12 +286,12 @@ public final class SymbolTable2 {
         return aVar;
     }
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public Symbol2 m10635j(String str) {
         return m10638m(19, str);
     }
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public int m10636k(String str, String str2) {
         int iHashCode = ((str2.hashCode() * str.hashCode()) + 12) & Integer.MAX_VALUE;
         for (a aVarM10642q = m10642q(iHashCode); aVarM10642q != null; aVarM10642q = aVarM10642q.f26360i) {
@@ -306,7 +306,7 @@ public final class SymbolTable2 {
         return i;
     }
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public int m10637l(String str) {
         int iHashCode = (str.hashCode() + 1) & Integer.MAX_VALUE;
         for (a aVarM10642q = m10642q(iHashCode); aVarM10642q != null; aVarM10642q = aVarM10642q.f26360i) {
@@ -348,7 +348,7 @@ public final class SymbolTable2 {
         return i5;
     }
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public final Symbol2 m10638m(int i, String str) {
         int iHashCode = (str.hashCode() + i) & Integer.MAX_VALUE;
         for (a aVarM10642q = m10642q(iHashCode); aVarM10642q != null; aVarM10642q = aVarM10642q.f26360i) {
@@ -364,7 +364,7 @@ public final class SymbolTable2 {
         return aVar;
     }
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public int m10639n(String str) {
         int iHashCode = (str.hashCode() + 128) & Integer.MAX_VALUE;
         for (a aVarM10642q = m10642q(iHashCode); aVarM10642q != null; aVarM10642q = aVarM10642q.f26360i) {
@@ -375,7 +375,7 @@ public final class SymbolTable2 {
         return m10640o(new a(this.f26357k, 128, str, iHashCode));
     }
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public final int m10640o(a aVar) {
         if (this.f26358l == null) {
             this.f26358l = new a[16];
@@ -395,7 +395,7 @@ public final class SymbolTable2 {
         return aVar.f26340a;
     }
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public int m10641p(String str, int i) {
         int iHashCode = (str.hashCode() + Opcodes.LOR + i) & Integer.MAX_VALUE;
         for (a aVarM10642q = m10642q(iHashCode); aVarM10642q != null; aVarM10642q = aVarM10642q.f26360i) {
@@ -406,13 +406,13 @@ public final class SymbolTable2 {
         return m10640o(new a(this.f26357k, Opcodes.LOR, str, i, iHashCode));
     }
 
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     public final a m10642q(int i) {
         a[] aVarArr = this.f26352f;
         return aVarArr[i % aVarArr.length];
     }
 
-    /* renamed from: v */
+    /* JADX INFO: renamed from: v */
     public final a m10643v(a aVar) {
         int i = this.f26351e;
         a[] aVarArr = this.f26352f;
@@ -441,14 +441,14 @@ public final class SymbolTable2 {
         return aVar;
     }
 
-    /* compiled from: SymbolTable.java */
-    /* renamed from: h0.a.a.v$a */
+    /* JADX INFO: renamed from: h0.a.a.v$a */
+    /* JADX INFO: compiled from: SymbolTable.java */
     public static class a extends Symbol2 {
 
-        /* renamed from: h */
+        /* JADX INFO: renamed from: h */
         public final int f26359h;
 
-        /* renamed from: i */
+        /* JADX INFO: renamed from: i */
         public a f26360i;
 
         public a(int i, int i2, String str, String str2, String str3, long j, int i3) {

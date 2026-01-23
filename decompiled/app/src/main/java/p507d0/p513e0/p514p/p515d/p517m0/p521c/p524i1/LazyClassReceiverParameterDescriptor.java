@@ -7,15 +7,15 @@ import p507d0.p513e0.p514p.p515d.p517m0.p521c.p522g1.Annotations4;
 import p507d0.p513e0.p514p.p515d.p517m0.p552k.p553a0.p554p.ImplicitClassReceiver;
 import p507d0.p513e0.p514p.p515d.p517m0.p552k.p553a0.p554p.ReceiverValue;
 
-/* compiled from: LazyClassReceiverParameterDescriptor.java */
-/* renamed from: d0.e0.p.d.m0.c.i1.r, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.c.i1.r, reason: use source file name */
+/* JADX INFO: compiled from: LazyClassReceiverParameterDescriptor.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class LazyClassReceiverParameterDescriptor extends AbstractReceiverParameterDescriptor {
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public final ClassDescriptor f22973m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public final ImplicitClassReceiver f22974n;
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -29,7 +29,7 @@ public class LazyClassReceiverParameterDescriptor extends AbstractReceiverParame
         this.f22974n = new ImplicitClassReceiver(classDescriptor, null);
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static /* synthetic */ void m9427a(int i) {
         String str = (i == 1 || i == 2) ? "@NotNull method %s.%s must not return null" : "Argument for @NotNull parameter '%s' of %s.%s must not be null";
         Object[] objArr = new Object[(i == 1 || i == 2) ? 2 : 3];

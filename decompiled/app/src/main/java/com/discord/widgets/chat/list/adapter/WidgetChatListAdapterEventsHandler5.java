@@ -6,9 +6,9 @@ import kotlin.Unit;
 import kotlin.jvm.functions.Function1;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetChatListAdapterEventsHandler.kt */
-/* renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterEventsHandler$UserReactionHandler$requestReactionUpdate$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterEventsHandler$UserReactionHandler$requestReactionUpdate$1, reason: use source file name */
+/* JADX INFO: compiled from: WidgetChatListAdapterEventsHandler.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetChatListAdapterEventsHandler5 extends Lambda implements Function1<Void, Unit> {
     public final /* synthetic */ MessageReaction $reaction;
     public final /* synthetic */ WidgetChatListAdapterEventsHandler.UserReactionHandler this$0;
@@ -26,7 +26,7 @@ public final class WidgetChatListAdapterEventsHandler5 extends Lambda implements
         return Unit.f27425a;
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final void invoke2(Void r2) {
         if (this.$reaction.getMe()) {
             return;

@@ -5,8 +5,8 @@ import java.util.List;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ConnectedAccount.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: ConnectedAccount.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class ConnectedAccount {
     public static final int HIDDEN = 0;
     public static final int VISIBLE = 1;
@@ -33,27 +33,27 @@ public final /* data */ class ConnectedAccount {
         this.type = "";
     }
 
-    /* renamed from: a, reason: from getter */
+    /* JADX INFO: renamed from: a, reason: from getter */
     public final boolean getFriendSync() {
         return this.friendSync;
     }
 
-    /* renamed from: b, reason: from getter */
+    /* JADX INFO: renamed from: b, reason: from getter */
     public final String getId() {
         return this.id;
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final List<ConnectedAccountIntegration> m7751c() {
         return this.integrations;
     }
 
-    /* renamed from: d, reason: from getter */
+    /* JADX INFO: renamed from: d, reason: from getter */
     public final String getName() {
         return this.name;
     }
 
-    /* renamed from: e, reason: from getter */
+    /* JADX INFO: renamed from: e, reason: from getter */
     public final boolean getRevoked() {
         return this.revoked;
     }
@@ -69,54 +69,66 @@ public final /* data */ class ConnectedAccount {
         return Intrinsics3.areEqual(this.id, connectedAccount.id) && Intrinsics3.areEqual(this.name, connectedAccount.name) && this.visibility == connectedAccount.visibility && this.friendSync == connectedAccount.friendSync && this.showActivity == connectedAccount.showActivity && this.revoked == connectedAccount.revoked && this.verified == connectedAccount.verified && Intrinsics3.areEqual(this.integrations, connectedAccount.integrations) && Intrinsics3.areEqual(this.type, connectedAccount.type);
     }
 
-    /* renamed from: f, reason: from getter */
+    /* JADX INFO: renamed from: f, reason: from getter */
     public final boolean getShowActivity() {
         return this.showActivity;
     }
 
-    /* renamed from: g, reason: from getter */
+    /* JADX INFO: renamed from: g, reason: from getter */
     public final String getType() {
         return this.type;
     }
 
-    /* renamed from: h, reason: from getter */
+    /* JADX INFO: renamed from: h, reason: from getter */
     public final boolean getVerified() {
         return this.verified;
     }
 
     /* JADX WARN: Multi-variable type inference failed */
+    /* JADX WARN: Type inference failed for: r2v16 */
+    /* JADX WARN: Type inference failed for: r2v17 */
+    /* JADX WARN: Type inference failed for: r2v18 */
+    /* JADX WARN: Type inference failed for: r2v20 */
+    /* JADX WARN: Type inference failed for: r2v21 */
+    /* JADX WARN: Type inference failed for: r2v22 */
+    /* JADX WARN: Type inference failed for: r2v5, types: [int] */
+    /* JADX WARN: Type inference failed for: r2v7, types: [int] */
+    /* JADX WARN: Type inference failed for: r2v9, types: [int] */
+    /* JADX WARN: Type inference failed for: r3v0 */
+    /* JADX WARN: Type inference failed for: r3v1, types: [int] */
+    /* JADX WARN: Type inference failed for: r3v2 */
     public int hashCode() {
         String str = this.id;
         int iHashCode = (str != null ? str.hashCode() : 0) * 31;
         String str2 = this.name;
         int iHashCode2 = (((iHashCode + (str2 != null ? str2.hashCode() : 0)) * 31) + this.visibility) * 31;
         boolean z2 = this.friendSync;
-        int i = z2;
-        if (z2 != 0) {
-            i = 1;
+        ?? r2 = z2;
+        if (z2) {
+            r2 = 1;
         }
-        int i2 = (iHashCode2 + i) * 31;
+        int i = (iHashCode2 + r2) * 31;
         boolean z3 = this.showActivity;
-        int i3 = z3;
-        if (z3 != 0) {
-            i3 = 1;
+        ?? r22 = z3;
+        if (z3) {
+            r22 = 1;
         }
-        int i4 = (i2 + i3) * 31;
+        int i2 = (i + r22) * 31;
         boolean z4 = this.revoked;
-        int i5 = z4;
-        if (z4 != 0) {
-            i5 = 1;
+        ?? r23 = z4;
+        if (z4) {
+            r23 = 1;
         }
-        int i6 = (i4 + i5) * 31;
+        int i3 = (i2 + r23) * 31;
         boolean z5 = this.verified;
-        int i7 = (i6 + (z5 ? 1 : z5 ? 1 : 0)) * 31;
+        int i4 = (i3 + (z5 ? 1 : z5)) * 31;
         List<ConnectedAccountIntegration> list = this.integrations;
-        int iHashCode3 = (i7 + (list != null ? list.hashCode() : 0)) * 31;
+        int iHashCode3 = (i4 + (list != null ? list.hashCode() : 0)) * 31;
         String str3 = this.type;
         return iHashCode3 + (str3 != null ? str3.hashCode() : 0);
     }
 
-    /* renamed from: i, reason: from getter */
+    /* JADX INFO: renamed from: i, reason: from getter */
     public final int getVisibility() {
         return this.visibility;
     }

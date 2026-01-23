@@ -58,14 +58,14 @@ import p507d0.p580t._Collections;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetAuthLogin.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetAuthLogin.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetAuthLogin extends AppFragment {
     public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetAuthLogin.class, "binding", "getBinding()Lcom/discord/databinding/WidgetAuthLoginBinding;", 0)};
     public static final String GOOGLE_SMARTLOCK_LOGIN_EXTRA_ID = "smartlock_extra_id";
     public static final String GOOGLE_SMARTLOCK_LOGIN_EXTRA_PASSWORD = "smartlock_extra_password";
 
-    /* renamed from: binding$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
     private final ActivityResultLauncher<Intent> captchaForgotPasswordLauncher;
     private final ActivityResultLauncher<Intent> captchaLoginLauncher;
@@ -76,11 +76,11 @@ public final class WidgetAuthLogin extends AppFragment {
     private GoogleSmartLockManager.SmartLockCredentials smartLockCredentials;
     private final ActivityResultLauncher<Intent> undeleteAccountLauncher;
 
-    /* renamed from: validationManager$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: validationManager$delegate, reason: from kotlin metadata */
     private final Lazy validationManager;
 
-    /* compiled from: WidgetAuthLogin.kt */
-    /* renamed from: com.discord.widgets.auth.WidgetAuthLogin$forgotPassword$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.auth.WidgetAuthLogin$forgotPassword$1 */
+    /* JADX INFO: compiled from: WidgetAuthLogin.kt */
     public static final class C71821 extends Lambda implements Function1<Void, Unit> {
         public final /* synthetic */ String $login;
 
@@ -96,14 +96,14 @@ public final class WidgetAuthLogin extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Void r2) {
             WidgetAuthLogin.access$showEmailSentToast(WidgetAuthLogin.this, this.$login);
         }
     }
 
-    /* compiled from: WidgetAuthLogin.kt */
-    /* renamed from: com.discord.widgets.auth.WidgetAuthLogin$forgotPassword$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.auth.WidgetAuthLogin$forgotPassword$2 */
+    /* JADX INFO: compiled from: WidgetAuthLogin.kt */
     public static final class C71832 extends Lambda implements Function1<Error, Unit> {
         public final /* synthetic */ String $login;
 
@@ -119,7 +119,7 @@ public final class WidgetAuthLogin extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Error error) {
             Intrinsics3.checkNotNullParameter(error, "error");
             Error.Response response = error.getResponse();
@@ -147,8 +147,8 @@ public final class WidgetAuthLogin extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetAuthLogin.kt */
-    /* renamed from: com.discord.widgets.auth.WidgetAuthLogin$login$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.auth.WidgetAuthLogin$login$1 */
+    /* JADX INFO: compiled from: WidgetAuthLogin.kt */
     public static final class C71841 extends Lambda implements Function1<ModelLoginResult, Unit> {
         public final /* synthetic */ Context $context;
         public final /* synthetic */ String $id;
@@ -168,7 +168,7 @@ public final class WidgetAuthLogin extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(ModelLoginResult modelLoginResult) {
             Intrinsics3.checkNotNullParameter(modelLoginResult, "it");
             WidgetAuthLogin.access$onLoginSuccess(WidgetAuthLogin.this, this.$id, this.$password);
@@ -184,8 +184,8 @@ public final class WidgetAuthLogin extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetAuthLogin.kt */
-    /* renamed from: com.discord.widgets.auth.WidgetAuthLogin$login$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.auth.WidgetAuthLogin$login$2 */
+    /* JADX INFO: compiled from: WidgetAuthLogin.kt */
     public static final class C71852 extends Lambda implements Function1<Error, Unit> {
         public final /* synthetic */ String $id;
 
@@ -201,7 +201,7 @@ public final class WidgetAuthLogin extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Error error) {
             Intrinsics3.checkNotNullParameter(error, "it");
             WidgetAuthLogin.access$handleError(WidgetAuthLogin.this, error, this.$id);
@@ -209,8 +209,8 @@ public final class WidgetAuthLogin extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetAuthLogin.kt */
-    /* renamed from: com.discord.widgets.auth.WidgetAuthLogin$onViewBound$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.auth.WidgetAuthLogin$onViewBound$1 */
+    /* JADX INFO: compiled from: WidgetAuthLogin.kt */
     public static final class C71861 extends Lambda implements Function1<ModelInvite, Unit> {
         public static final C71861 INSTANCE = new C71861();
 
@@ -224,14 +224,14 @@ public final class WidgetAuthLogin extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(ModelInvite modelInvite) {
             AnalyticsTracker.INSTANCE.loginViewed(modelInvite);
         }
     }
 
-    /* compiled from: WidgetAuthLogin.kt */
-    /* renamed from: com.discord.widgets.auth.WidgetAuthLogin$onViewBound$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.auth.WidgetAuthLogin$onViewBound$2 */
+    /* JADX INFO: compiled from: WidgetAuthLogin.kt */
     public static final class ViewOnClickListenerC71872 implements View.OnClickListener {
         public ViewOnClickListenerC71872() {
         }
@@ -242,8 +242,8 @@ public final class WidgetAuthLogin extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetAuthLogin.kt */
-    /* renamed from: com.discord.widgets.auth.WidgetAuthLogin$onViewBound$3 */
+    /* JADX INFO: renamed from: com.discord.widgets.auth.WidgetAuthLogin$onViewBound$3 */
+    /* JADX INFO: compiled from: WidgetAuthLogin.kt */
     public static final class C71883 extends Lambda implements Function1<TextView, Unit> {
         public C71883() {
             super(1);
@@ -255,15 +255,15 @@ public final class WidgetAuthLogin extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(TextView textView) {
             Intrinsics3.checkNotNullParameter(textView, "it");
             WidgetAuthLogin.login$default(WidgetAuthLogin.this, null, false, 3, null);
         }
     }
 
-    /* compiled from: WidgetAuthLogin.kt */
-    /* renamed from: com.discord.widgets.auth.WidgetAuthLogin$onViewBound$4 */
+    /* JADX INFO: renamed from: com.discord.widgets.auth.WidgetAuthLogin$onViewBound$4 */
+    /* JADX INFO: compiled from: WidgetAuthLogin.kt */
     public static final class ViewOnClickListenerC71894 implements View.OnClickListener {
         public ViewOnClickListenerC71894() {
         }
@@ -274,12 +274,12 @@ public final class WidgetAuthLogin extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetAuthLogin.kt */
-    /* renamed from: com.discord.widgets.auth.WidgetAuthLogin$onViewBound$5 */
+    /* JADX INFO: renamed from: com.discord.widgets.auth.WidgetAuthLogin$onViewBound$5 */
+    /* JADX INFO: compiled from: WidgetAuthLogin.kt */
     public static final class ViewOnClickListenerC71905 implements View.OnClickListener {
 
-        /* compiled from: WidgetAuthLogin.kt */
-        /* renamed from: com.discord.widgets.auth.WidgetAuthLogin$onViewBound$5$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.widgets.auth.WidgetAuthLogin$onViewBound$5$1, reason: invalid class name */
+        /* JADX INFO: compiled from: WidgetAuthLogin.kt */
         public static final class AnonymousClass1 extends Lambda implements Function1<View, Unit> {
             public static final AnonymousClass1 INSTANCE = new AnonymousClass1();
 
@@ -293,7 +293,7 @@ public final class WidgetAuthLogin extends AppFragment {
                 return Unit.f27425a;
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2(View view) {
                 Intrinsics3.checkNotNullParameter(view, "it");
                 try {
@@ -316,8 +316,8 @@ public final class WidgetAuthLogin extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetAuthLogin.kt */
-    /* renamed from: com.discord.widgets.auth.WidgetAuthLogin$onViewBound$6 */
+    /* JADX INFO: renamed from: com.discord.widgets.auth.WidgetAuthLogin$onViewBound$6 */
+    /* JADX INFO: compiled from: WidgetAuthLogin.kt */
     public static final class ViewOnClickListenerC71916 implements View.OnClickListener {
         public ViewOnClickListenerC71916() {
         }
@@ -328,8 +328,8 @@ public final class WidgetAuthLogin extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetAuthLogin.kt */
-    /* renamed from: com.discord.widgets.auth.WidgetAuthLogin$onViewBound$8 */
+    /* JADX INFO: renamed from: com.discord.widgets.auth.WidgetAuthLogin$onViewBound$8 */
+    /* JADX INFO: compiled from: WidgetAuthLogin.kt */
     public static final class C71928 extends Lambda implements Function0<PhoneCountryCode> {
         public final /* synthetic */ StorePhone $phoneStore;
 
@@ -351,8 +351,8 @@ public final class WidgetAuthLogin extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetAuthLogin.kt */
-    /* renamed from: com.discord.widgets.auth.WidgetAuthLogin$onViewBound$9 */
+    /* JADX INFO: renamed from: com.discord.widgets.auth.WidgetAuthLogin$onViewBound$9 */
+    /* JADX INFO: compiled from: WidgetAuthLogin.kt */
     public static final class C71939 extends Lambda implements Function1<PhoneCountryCode, Unit> {
         public C71939() {
             super(1);
@@ -364,7 +364,7 @@ public final class WidgetAuthLogin extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(PhoneCountryCode phoneCountryCode) {
             Intrinsics3.checkNotNullParameter(phoneCountryCode, "it");
             WidgetAuthLogin.access$getBinding$p(WidgetAuthLogin.this).f15684e.setCountryCode(phoneCountryCode);

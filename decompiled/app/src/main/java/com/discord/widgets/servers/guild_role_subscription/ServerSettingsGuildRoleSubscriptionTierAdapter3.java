@@ -18,17 +18,17 @@ import kotlin.jvm.internal.DefaultConstructorMarker;
 import p007b.p008a.p027k.FormatUtils;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ServerSettingsGuildRoleSubscriptionTierAdapter.kt */
-/* renamed from: com.discord.widgets.servers.guild_role_subscription.TierViewHolder, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.servers.guild_role_subscription.TierViewHolder, reason: use source file name */
+/* JADX INFO: compiled from: ServerSettingsGuildRoleSubscriptionTierAdapter.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public abstract class ServerSettingsGuildRoleSubscriptionTierAdapter3 extends RecyclerView.ViewHolder {
 
-    /* compiled from: ServerSettingsGuildRoleSubscriptionTierAdapter.kt */
-    /* renamed from: com.discord.widgets.servers.guild_role_subscription.TierViewHolder$AddTierItemViewHolder */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.guild_role_subscription.TierViewHolder$AddTierItemViewHolder */
+    /* JADX INFO: compiled from: ServerSettingsGuildRoleSubscriptionTierAdapter.kt */
     public static final class AddTierItemViewHolder extends ServerSettingsGuildRoleSubscriptionTierAdapter3 {
 
-        /* compiled from: ServerSettingsGuildRoleSubscriptionTierAdapter.kt */
-        /* renamed from: com.discord.widgets.servers.guild_role_subscription.TierViewHolder$AddTierItemViewHolder$1 */
+        /* JADX INFO: renamed from: com.discord.widgets.servers.guild_role_subscription.TierViewHolder$AddTierItemViewHolder$1 */
+        /* JADX INFO: compiled from: ServerSettingsGuildRoleSubscriptionTierAdapter.kt */
         public static final class ViewOnClickListenerC94481 implements View.OnClickListener {
             public final /* synthetic */ ServerSettingsGuildRoleSubscriptionTierAdapter.ItemClickListener $itemClickListener;
 
@@ -54,8 +54,8 @@ public abstract class ServerSettingsGuildRoleSubscriptionTierAdapter3 extends Re
         }
     }
 
-    /* compiled from: ServerSettingsGuildRoleSubscriptionTierAdapter.kt */
-    /* renamed from: com.discord.widgets.servers.guild_role_subscription.TierViewHolder$TierItemViewHolder */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.guild_role_subscription.TierViewHolder$TierItemViewHolder */
+    /* JADX INFO: compiled from: ServerSettingsGuildRoleSubscriptionTierAdapter.kt */
     public static final class TierItemViewHolder extends ServerSettingsGuildRoleSubscriptionTierAdapter3 {
         private static final int MAX_TIER_IMAGE_SIZE = 64;
         private final ViewServerSettingsGuildRoleSubscriptionTierItemBinding binding;

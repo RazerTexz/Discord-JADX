@@ -11,46 +11,46 @@ import p007b.p225i.p226a.p242c.p267x2.ExtractorOutput;
 import p007b.p225i.p226a.p242c.p267x2.TrackOutput2;
 import p007b.p225i.p226a.p242c.p267x2.p276k0.TsPayloadReader;
 
-/* compiled from: Ac3Reader.java */
-/* renamed from: b.i.a.c.x2.k0.g, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.x2.k0.g, reason: use source file name */
+/* JADX INFO: compiled from: Ac3Reader.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class Ac3Reader implements ElementaryStreamReader {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final ParsableBitArray f8611a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final ParsableByteArray f8612b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     @Nullable
     public final String f8613c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public String f8614d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public TrackOutput2 f8615e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public int f8616f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public int f8617g;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public boolean f8618h;
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public long f8619i;
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public Format2 f8620j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public int f8621k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public long f8622l;
 
     public Ac3Reader(@Nullable String str) {
@@ -66,7 +66,7 @@ public final class Ac3Reader implements ElementaryStreamReader {
     /* JADX WARN: Removed duplicated region for block: B:127:0x0212  */
     /* JADX WARN: Removed duplicated region for block: B:136:0x022e  */
     @Override // p007b.p225i.p226a.p242c.p267x2.p276k0.ElementaryStreamReader
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
@@ -348,7 +348,7 @@ public final class Ac3Reader implements ElementaryStreamReader {
                         this.f8615e.mo2526e(format2M3277a);
                     }
                     this.f8621k = iM3067g;
-                    this.f8619i = (i3 * 1000000) / this.f8620j.f7137K;
+                    this.f8619i = (((long) i3) * 1000000) / ((long) this.f8620j.f7137K);
                     this.f8612b.m3079E(0);
                     this.f8615e.mo2524c(this.f8612b, 128);
                     this.f8616f = 2;
@@ -372,7 +372,7 @@ public final class Ac3Reader implements ElementaryStreamReader {
     }
 
     @Override // p007b.p225i.p226a.p242c.p267x2.p276k0.ElementaryStreamReader
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public void mo3759c() {
         this.f8616f = 0;
         this.f8617g = 0;
@@ -381,12 +381,12 @@ public final class Ac3Reader implements ElementaryStreamReader {
     }
 
     @Override // p007b.p225i.p226a.p242c.p267x2.p276k0.ElementaryStreamReader
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public void mo3760d() {
     }
 
     @Override // p007b.p225i.p226a.p242c.p267x2.p276k0.ElementaryStreamReader
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public void mo3761e(ExtractorOutput extractorOutput, TsPayloadReader.d dVar) {
         dVar.m3765a();
         this.f8614d = dVar.m3766b();
@@ -394,7 +394,7 @@ public final class Ac3Reader implements ElementaryStreamReader {
     }
 
     @Override // p007b.p225i.p226a.p242c.p267x2.p276k0.ElementaryStreamReader
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public void mo3762f(long j, int i) {
         if (j != -9223372036854775807L) {
             this.f8622l = j;

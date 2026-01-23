@@ -15,13 +15,13 @@ import kotlin.jvm.functions.Function3;
 import kotlin.jvm.internal.DefaultConstructorMarker;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: UrlNode.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: UrlNode.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class UrlNode<T extends RenderContext> extends Node<T> {
     private final String mask;
     private final String url;
 
-    /* compiled from: UrlNode.kt */
+    /* JADX INFO: compiled from: UrlNode.kt */
     public interface RenderContext extends BasicRenderContext {
         @AttrRes
         int getLinkColorAttrResId();

@@ -5,15 +5,15 @@ import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
-/* compiled from: JsonTypeInfo.java */
+/* JADX INFO: renamed from: b.g.a.a.c0, reason: use source file name */
+/* JADX INFO: compiled from: JsonTypeInfo.java */
+/* JADX INFO: loaded from: classes3.dex */
 @Target({ElementType.ANNOTATION_TYPE, ElementType.TYPE, ElementType.FIELD, ElementType.METHOD, ElementType.PARAMETER})
 @Retention(RetentionPolicy.RUNTIME)
-/* renamed from: b.g.a.a.c0, reason: use source file name */
-/* loaded from: classes3.dex */
 public @interface JsonTypeInfo {
 
-    /* compiled from: JsonTypeInfo.java */
-    /* renamed from: b.g.a.a.c0$a */
+    /* JADX INFO: renamed from: b.g.a.a.c0$a */
+    /* JADX INFO: compiled from: JsonTypeInfo.java */
     public enum a {
         PROPERTY,
         WRAPPER_OBJECT,
@@ -22,8 +22,8 @@ public @interface JsonTypeInfo {
         EXISTING_PROPERTY
     }
 
-    /* compiled from: JsonTypeInfo.java */
-    /* renamed from: b.g.a.a.c0$b */
+    /* JADX INFO: renamed from: b.g.a.a.c0$b */
+    /* JADX INFO: compiled from: JsonTypeInfo.java */
     public enum b {
         NONE(null),
         CLASS("@class"),
@@ -38,15 +38,15 @@ public @interface JsonTypeInfo {
             this._defaultPropertyName = str;
         }
 
-        /* renamed from: f */
+        /* JADX INFO: renamed from: f */
         public String m1594f() {
             return this._defaultPropertyName;
         }
     }
 
-    /* compiled from: JsonTypeInfo.java */
+    /* JADX INFO: renamed from: b.g.a.a.c0$c */
+    /* JADX INFO: compiled from: JsonTypeInfo.java */
     @Deprecated
-    /* renamed from: b.g.a.a.c0$c */
     public static abstract class c {
     }
 

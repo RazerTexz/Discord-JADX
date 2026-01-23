@@ -15,21 +15,21 @@ import p658rx.subjects.BehaviorSubject;
 import p658rx.subjects.SerializedSubject;
 import p658rx.subscriptions.SerialSubscription;
 
-/* compiled from: OnSubscribeRedo.java */
-/* renamed from: j0.l.a.y, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: j0.l.a.y, reason: use source file name */
+/* JADX INFO: compiled from: OnSubscribeRedo.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class OnSubscribeRedo6<T> implements Observable.InterfaceC13005a<T> {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final Observable<T> f27120j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final Func1<? super Observable<? extends Notification<?>>, ? extends Observable<?>> f27121k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final boolean f27122l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public final boolean f27123m;
 
     public OnSubscribeRedo6(Observable<T> observable, Func1<? super Observable<? extends Notification<?>>, ? extends Observable<?>> func1, boolean z2, boolean z3, Scheduler scheduler) {

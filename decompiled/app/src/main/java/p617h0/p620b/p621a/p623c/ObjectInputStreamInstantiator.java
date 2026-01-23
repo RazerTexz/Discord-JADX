@@ -12,12 +12,12 @@ import org.objenesis.ObjenesisException;
 import p007b.p100d.p104b.p105a.outline;
 import p617h0.p620b.p621a.ObjectInstantiator;
 
-/* compiled from: ObjectInputStreamInstantiator.java */
-/* renamed from: h0.b.a.c.b, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: h0.b.a.c.b, reason: use source file name */
+/* JADX INFO: compiled from: ObjectInputStreamInstantiator.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class ObjectInputStreamInstantiator<T> implements ObjectInstantiator<T> {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public ObjectInputStream f26385a;
 
     public ObjectInputStreamInstantiator(Class<T> cls) {
@@ -46,32 +46,32 @@ public class ObjectInputStreamInstantiator<T> implements ObjectInstantiator<T> {
         }
     }
 
-    /* compiled from: ObjectInputStreamInstantiator.java */
-    /* renamed from: h0.b.a.c.b$a */
+    /* JADX INFO: renamed from: h0.b.a.c.b$a */
+    /* JADX INFO: compiled from: ObjectInputStreamInstantiator.java */
     public static class a extends InputStream {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public static final int[] f26386j = {1, 2, 2};
 
-        /* renamed from: k */
+        /* JADX INFO: renamed from: k */
         public static byte[] f26387k;
 
-        /* renamed from: l */
+        /* JADX INFO: renamed from: l */
         public static byte[] f26388l;
 
-        /* renamed from: p */
+        /* JADX INFO: renamed from: p */
         public byte[][] f26392p;
 
-        /* renamed from: q */
+        /* JADX INFO: renamed from: q */
         public final byte[] f26393q;
 
-        /* renamed from: m */
+        /* JADX INFO: renamed from: m */
         public int f26389m = 0;
 
-        /* renamed from: o */
+        /* JADX INFO: renamed from: o */
         public int f26391o = 0;
 
-        /* renamed from: n */
+        /* JADX INFO: renamed from: n */
         public byte[] f26390n = f26387k;
 
         static {

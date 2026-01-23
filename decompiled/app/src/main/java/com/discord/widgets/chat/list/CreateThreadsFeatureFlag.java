@@ -14,17 +14,17 @@ import p507d0.p592z.p594d.FunctionReferenceImpl;
 import p507d0.p592z.p594d.Intrinsics3;
 import p658rx.Observable;
 
-/* compiled from: CreateThreadsFeatureFlag.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: CreateThreadsFeatureFlag.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class CreateThreadsFeatureFlag {
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private static final Lazy INSTANCE$delegate = LazyJVM.lazy(CreateThreadsFeatureFlag2.INSTANCE);
     private final StoreExperiments storeExperiments;
     private final StoreGuilds storeGuilds;
 
-    /* compiled from: CreateThreadsFeatureFlag.kt */
+    /* JADX INFO: compiled from: CreateThreadsFeatureFlag.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -50,8 +50,8 @@ public final class CreateThreadsFeatureFlag {
         }
     }
 
-    /* compiled from: CreateThreadsFeatureFlag.kt */
-    /* renamed from: com.discord.widgets.chat.list.CreateThreadsFeatureFlag$observeEnabled$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.list.CreateThreadsFeatureFlag$observeEnabled$1 */
+    /* JADX INFO: compiled from: CreateThreadsFeatureFlag.kt */
     public static final /* synthetic */ class C79321 extends FunctionReferenceImpl implements Function3<Experiment, Experiment, Guild, Boolean> {
         public C79321(Companion companion) {
             super(3, companion, Companion.class, "computeIsEnabled", "computeIsEnabled(Lcom/discord/models/experiments/domain/Experiment;Lcom/discord/models/experiments/domain/Experiment;Lcom/discord/models/guild/Guild;)Z", 0);
@@ -62,7 +62,7 @@ public final class CreateThreadsFeatureFlag {
             return Boolean.valueOf(invoke2(experiment, experiment2, guild));
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final boolean invoke2(Experiment experiment, Experiment experiment2, Guild guild) {
             return ((Companion) this.receiver).computeIsEnabled(experiment, experiment2, guild);
         }

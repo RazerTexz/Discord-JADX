@@ -2,8 +2,8 @@ package com.discord.widgets.chat.input.models;
 
 import kotlin.jvm.internal.DefaultConstructorMarker;
 
-/* compiled from: CommandOptionValue.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: CommandOptionValue.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public abstract class CommandOptionValue {
     private final Object value;
 

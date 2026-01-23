@@ -33,21 +33,21 @@ import p507d0.p592z.p594d.Lambda;
 import p507d0.p592z.p594d.Reflection2;
 import p658rx.Observable;
 
-/* compiled from: WidgetGifPickerSearch.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetGifPickerSearch.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetGifPickerSearch extends AppFragment {
     public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetGifPickerSearch.class, "binding", "getBinding()Lcom/discord/databinding/WidgetGifPickerSearchBinding;", 0)};
 
-    /* renamed from: binding$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
     private GifAdapter gifAdapter;
 
-    /* renamed from: gifPickerViewModel$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: gifPickerViewModel$delegate, reason: from kotlin metadata */
     private final Lazy gifPickerViewModel;
     private Function0<Unit> onGifSelected;
 
-    /* compiled from: WidgetGifPickerSearch.kt */
-    /* renamed from: com.discord.widgets.chat.input.gifpicker.WidgetGifPickerSearch$onViewBoundOrOnResume$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.input.gifpicker.WidgetGifPickerSearch$onViewBoundOrOnResume$1 */
+    /* JADX INFO: compiled from: WidgetGifPickerSearch.kt */
     public static final class C78861 extends Lambda implements Function1<GifSearchViewModel.ViewState, Unit> {
         public C78861() {
             super(1);
@@ -59,7 +59,7 @@ public final class WidgetGifPickerSearch extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(GifSearchViewModel.ViewState viewState) {
             WidgetGifPickerSearch widgetGifPickerSearch = WidgetGifPickerSearch.this;
             Intrinsics3.checkNotNullExpressionValue(viewState, "viewState");
@@ -67,8 +67,8 @@ public final class WidgetGifPickerSearch extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetGifPickerSearch.kt */
-    /* renamed from: com.discord.widgets.chat.input.gifpicker.WidgetGifPickerSearch$setUpGifRecycler$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.input.gifpicker.WidgetGifPickerSearch$setUpGifRecycler$1 */
+    /* JADX INFO: compiled from: WidgetGifPickerSearch.kt */
     public static final class C78871 extends Lambda implements Function1<GifAdapterItem.GifItem, Unit> {
         public C78871() {
             super(1);
@@ -80,7 +80,7 @@ public final class WidgetGifPickerSearch extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(GifAdapterItem.GifItem gifItem) {
             Intrinsics3.checkNotNullParameter(gifItem, "gifItem");
             WidgetGifPickerSearch.access$getGifPickerViewModel$p(WidgetGifPickerSearch.this).selectGif(gifItem);
@@ -90,8 +90,8 @@ public final class WidgetGifPickerSearch extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetGifPickerSearch.kt */
-    /* renamed from: com.discord.widgets.chat.input.gifpicker.WidgetGifPickerSearch$setUpGifRecycler$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.input.gifpicker.WidgetGifPickerSearch$setUpGifRecycler$2 */
+    /* JADX INFO: compiled from: WidgetGifPickerSearch.kt */
     public static final /* synthetic */ class C78882 extends FunctionReferenceImpl implements Function1<String, Unit> {
         public C78882(SearchInputView searchInputView) {
             super(1, searchInputView, SearchInputView.class, "setText", "setText(Ljava/lang/String;)V", 0);
@@ -103,15 +103,15 @@ public final class WidgetGifPickerSearch extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(String str) {
             Intrinsics3.checkNotNullParameter(str, "p1");
             ((SearchInputView) this.receiver).setText(str);
         }
     }
 
-    /* compiled from: WidgetGifPickerSearch.kt */
-    /* renamed from: com.discord.widgets.chat.input.gifpicker.WidgetGifPickerSearch$setupSearchBar$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.input.gifpicker.WidgetGifPickerSearch$setupSearchBar$1 */
+    /* JADX INFO: compiled from: WidgetGifPickerSearch.kt */
     public static final class C78891 extends Lambda implements Function1<String, Unit> {
         public C78891() {
             super(1);
@@ -123,7 +123,7 @@ public final class WidgetGifPickerSearch extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(String str) {
             Intrinsics3.checkNotNullParameter(str, "searchQuery");
             WidgetGifPickerSearch.access$getGifPickerViewModel$p(WidgetGifPickerSearch.this).setSearchText(str);

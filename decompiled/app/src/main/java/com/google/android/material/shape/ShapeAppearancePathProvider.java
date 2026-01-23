@@ -10,7 +10,7 @@ import androidx.annotation.RequiresApi;
 import androidx.annotation.RestrictTo;
 import androidx.annotation.UiThread;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public class ShapeAppearancePathProvider {
     private final ShapePath[] cornerPaths = new ShapePath[4];
     private final Matrix[] cornerTransforms = new Matrix[4];
@@ -32,33 +32,33 @@ public class ShapeAppearancePathProvider {
         void onEdgePathCreated(ShapePath shapePath, Matrix matrix, int i);
     }
 
-    /* renamed from: com.google.android.material.shape.ShapeAppearancePathProvider$a */
+    /* JADX INFO: renamed from: com.google.android.material.shape.ShapeAppearancePathProvider$a */
     public static class C10969a {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public static final ShapeAppearancePathProvider f21092a = new ShapeAppearancePathProvider();
     }
 
-    /* renamed from: com.google.android.material.shape.ShapeAppearancePathProvider$b */
+    /* JADX INFO: renamed from: com.google.android.material.shape.ShapeAppearancePathProvider$b */
     public static final class C10970b {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         @NonNull
         public final ShapeAppearanceModel f21093a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         @NonNull
         public final Path f21094b;
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         @NonNull
         public final RectF f21095c;
 
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         @Nullable
         public final PathListener f21096d;
 
-        /* renamed from: e */
+        /* JADX INFO: renamed from: e */
         public final float f21097e;
 
         public C10970b(@NonNull ShapeAppearanceModel shapeAppearanceModel, float f, RectF rectF, @Nullable PathListener pathListener, Path path) {

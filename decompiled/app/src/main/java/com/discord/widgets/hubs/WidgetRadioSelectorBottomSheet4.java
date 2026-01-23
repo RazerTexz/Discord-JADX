@@ -9,15 +9,15 @@ import kotlin.Unit;
 import kotlin.jvm.functions.Function1;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: WidgetRadioSelectorBottomSheet.kt */
-/* renamed from: com.discord.widgets.hubs.RadioSelectorViewHolder, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.hubs.RadioSelectorViewHolder, reason: use source file name */
+/* JADX INFO: compiled from: WidgetRadioSelectorBottomSheet.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetRadioSelectorBottomSheet4 extends SimpleRecyclerAdapter.ViewHolder<WidgetRadioSelectorBottomSheet2> {
     private final WidgetRadioSelectorViewHolderBinding binding;
     private final Function1<Integer, Unit> onSelected;
 
-    /* compiled from: WidgetRadioSelectorBottomSheet.kt */
-    /* renamed from: com.discord.widgets.hubs.RadioSelectorViewHolder$bind$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.hubs.RadioSelectorViewHolder$bind$1 */
+    /* JADX INFO: compiled from: WidgetRadioSelectorBottomSheet.kt */
     public static final class ViewOnClickListenerC89861 implements View.OnClickListener {
         public final /* synthetic */ WidgetRadioSelectorBottomSheet2 $data;
 
@@ -56,7 +56,7 @@ public final class WidgetRadioSelectorBottomSheet4 extends SimpleRecyclerAdapter
         return this.onSelected;
     }
 
-    /* renamed from: bind, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: bind, reason: avoid collision after fix types in other method */
     public void bind2(WidgetRadioSelectorBottomSheet2 data) {
         Intrinsics3.checkNotNullParameter(data, "data");
         this.binding.f17405b.setText(data.getText());

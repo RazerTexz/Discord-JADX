@@ -8,15 +8,15 @@ import kotlin.NoWhenBranchMatchedException;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Reflection2;
 
-/* compiled from: Autocompletable.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: Autocompletable.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class AutocompletableComparator implements Comparator<Autocompletable> {
     @Override // java.util.Comparator
     public /* bridge */ /* synthetic */ int compare(Autocompletable autocompletable, Autocompletable autocompletable2) {
         return compare2(autocompletable, autocompletable2);
     }
 
-    /* renamed from: compare, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: compare, reason: avoid collision after fix types in other method */
     public int compare2(Autocompletable o1, Autocompletable o2) {
         Intrinsics3.checkNotNullParameter(o1, "o1");
         Intrinsics3.checkNotNullParameter(o2, "o2");

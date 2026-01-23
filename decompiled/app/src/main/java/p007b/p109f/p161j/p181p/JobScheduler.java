@@ -10,48 +10,48 @@ import p007b.p085c.p086a.p087a0.AnimatableValueParser;
 import p007b.p085c.p086a.p095y.C1563b;
 import p007b.p109f.p161j.p175j.EncodedImage2;
 
-/* compiled from: JobScheduler.java */
-/* renamed from: b.f.j.p.c0, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.f.j.p.c0, reason: use source file name */
+/* JADX INFO: compiled from: JobScheduler.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class JobScheduler {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final Executor f3999a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final c f4000b;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final int f4003e;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final Runnable f4001c = new a();
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final Runnable f4002d = new b();
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     @VisibleForTesting
     public EncodedImage2 f4004f = null;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     @VisibleForTesting
     public int f4005g = 0;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     @VisibleForTesting
     public int f4006h = 1;
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     @VisibleForTesting
     public long f4007i = 0;
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     @VisibleForTesting
     public long f4008j = 0;
 
-    /* compiled from: JobScheduler.java */
-    /* renamed from: b.f.j.p.c0$a */
+    /* JADX INFO: renamed from: b.f.j.p.c0$a */
+    /* JADX INFO: compiled from: JobScheduler.java */
     public class a implements Runnable {
         public a() {
         }
@@ -84,8 +84,8 @@ public class JobScheduler {
         }
     }
 
-    /* compiled from: JobScheduler.java */
-    /* renamed from: b.f.j.p.c0$b */
+    /* JADX INFO: renamed from: b.f.j.p.c0$b */
+    /* JADX INFO: compiled from: JobScheduler.java */
     public class b implements Runnable {
         public b() {
         }
@@ -97,10 +97,10 @@ public class JobScheduler {
         }
     }
 
-    /* compiled from: JobScheduler.java */
-    /* renamed from: b.f.j.p.c0$c */
+    /* JADX INFO: renamed from: b.f.j.p.c0$c */
+    /* JADX INFO: compiled from: JobScheduler.java */
     public interface c {
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         void mo1436a(EncodedImage2 encodedImage2, int i);
     }
 
@@ -110,12 +110,12 @@ public class JobScheduler {
         this.f4003e = i;
     }
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public static boolean m1430e(EncodedImage2 encodedImage2, int i) {
         return BaseConsumer.m1419e(i) || BaseConsumer.m1422m(i, 4) || EncodedImage2.m1338u(encodedImage2);
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public void m1431a() {
         EncodedImage2 encodedImage2;
         synchronized (this) {
@@ -128,7 +128,7 @@ public class JobScheduler {
         }
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final void m1432b(long j) {
         Runnable runnable = this.f4002d;
         if (j <= 0) {
@@ -141,7 +141,7 @@ public class JobScheduler {
         AnimatableValueParser.f2217b.schedule(runnable, j, TimeUnit.MILLISECONDS);
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final void m1433c() {
         boolean z2;
         long jMax;
@@ -149,7 +149,7 @@ public class JobScheduler {
         synchronized (this) {
             z2 = true;
             if (this.f4006h == 4) {
-                jMax = Math.max(this.f4008j + this.f4003e, jUptimeMillis);
+                jMax = Math.max(this.f4008j + ((long) this.f4003e), jUptimeMillis);
                 this.f4007i = jUptimeMillis;
                 this.f4006h = 2;
             } else {
@@ -163,7 +163,7 @@ public class JobScheduler {
         }
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public boolean m1434d() {
         long jMax;
         long jUptimeMillis = SystemClock.uptimeMillis();
@@ -179,7 +179,7 @@ public class JobScheduler {
                 }
                 jMax = 0;
             } else {
-                jMax = Math.max(this.f4008j + this.f4003e, jUptimeMillis);
+                jMax = Math.max(this.f4008j + ((long) this.f4003e), jUptimeMillis);
                 this.f4007i = jUptimeMillis;
                 this.f4006h = 2;
                 z2 = true;
@@ -191,7 +191,7 @@ public class JobScheduler {
         }
     }
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public boolean m1435f(EncodedImage2 encodedImage2, int i) {
         EncodedImage2 encodedImage22;
         if (!m1430e(encodedImage2, i)) {

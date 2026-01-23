@@ -11,7 +11,7 @@ import androidx.annotation.StyleRes;
 import androidx.appcompat.view.ContextThemeWrapper;
 import com.google.android.material.C10817R;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public class MaterialThemeOverlay {
     private static final int[] ANDROID_THEME_OVERLAY_ATTRS = {R.attr.theme, C10817R.attr.theme};
     private static final int[] MATERIAL_THEME_OVERLAY_ATTR = {C10817R.attr.materialThemeOverlay};

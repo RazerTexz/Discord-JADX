@@ -35,8 +35,8 @@ import p658rx.Subscription;
 import p658rx.subjects.BehaviorSubject;
 import p658rx.subjects.SerializedSubject;
 
-/* compiled from: StoreSearch.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: StoreSearch.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class StoreSearch {
     private final Dispatcher dispatcher;
     private final SerializedSubject<DisplayState, DisplayState> displayStateSubject;
@@ -51,18 +51,18 @@ public final class StoreSearch {
     private final StoreStream stream;
     private Subscription subscription;
 
-    /* compiled from: StoreSearch.kt */
+    /* JADX INFO: compiled from: StoreSearch.kt */
     public enum DisplayState {
         SUGGESTIONS,
         RESULTS
     }
 
-    /* compiled from: StoreSearch.kt */
+    /* JADX INFO: compiled from: StoreSearch.kt */
     public static final /* data */ class SearchTarget {
         private final long id;
         private final Type type;
 
-        /* compiled from: StoreSearch.kt */
+        /* JADX INFO: compiled from: StoreSearch.kt */
         public enum Type {
             GUILD,
             CHANNEL
@@ -84,12 +84,12 @@ public final class StoreSearch {
             return searchTarget.copy(type, j);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final Type getType() {
             return this.type;
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final long getId() {
             return this.id;
         }
@@ -143,8 +143,8 @@ public final class StoreSearch {
         }
     }
 
-    /* compiled from: StoreSearch.kt */
-    /* renamed from: com.discord.stores.StoreSearch$getHistory$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreSearch$getHistory$1 */
+    /* JADX INFO: compiled from: StoreSearch.kt */
     public static final class C63761<T, R> implements Func1<SearchTarget, Observable<? extends Collection<? extends List<? extends QueryNode>>>> {
         public C63761() {
         }
@@ -154,14 +154,14 @@ public final class StoreSearch {
             return call2(searchTarget);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final Observable<? extends Collection<List<QueryNode>>> call2(SearchTarget searchTarget) {
             return searchTarget != null ? StoreSearch.access$getHistoryCache$p(StoreSearch.this).getHistory(searchTarget) : new ScalarSynchronousObservable(Collections2.emptyList());
         }
     }
 
-    /* compiled from: StoreSearch.kt */
-    /* renamed from: com.discord.stores.StoreSearch$init$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreSearch$init$1 */
+    /* JADX INFO: compiled from: StoreSearch.kt */
     public static final class C63771<T, R> implements Func1<SearchState, Boolean> {
         public static final C63771 INSTANCE = new C63771();
 
@@ -170,14 +170,14 @@ public final class StoreSearch {
             return call2(searchState);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final Boolean call2(SearchState searchState) {
             return Boolean.valueOf(searchState.getQueryFetchState() != QueryFetchState.NONE);
         }
     }
 
-    /* compiled from: StoreSearch.kt */
-    /* renamed from: com.discord.stores.StoreSearch$init$2 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreSearch$init$2 */
+    /* JADX INFO: compiled from: StoreSearch.kt */
     public static final class C63782<T, R> implements Func1<SearchState, DisplayState> {
         public static final C63782 INSTANCE = new C63782();
 
@@ -186,14 +186,14 @@ public final class StoreSearch {
             return call2(searchState);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final DisplayState call2(SearchState searchState) {
             return DisplayState.RESULTS;
         }
     }
 
-    /* compiled from: StoreSearch.kt */
-    /* renamed from: com.discord.stores.StoreSearch$init$3 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreSearch$init$3 */
+    /* JADX INFO: compiled from: StoreSearch.kt */
     public static final class C63793<T, R> implements Func1<List<? extends QueryNode>, DisplayState> {
         public static final C63793 INSTANCE = new C63793();
 
@@ -202,14 +202,14 @@ public final class StoreSearch {
             return call2(list);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final DisplayState call2(List<? extends QueryNode> list) {
             return DisplayState.SUGGESTIONS;
         }
     }
 
-    /* compiled from: StoreSearch.kt */
-    /* renamed from: com.discord.stores.StoreSearch$init$4 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreSearch$init$4 */
+    /* JADX INFO: compiled from: StoreSearch.kt */
     public static final /* synthetic */ class C63804 extends FunctionReferenceImpl implements Function1<Subscription, Unit> {
         public C63804(StoreSearch storeSearch) {
             super(1, storeSearch, StoreSearch.class, "handleSubscription", "handleSubscription(Lrx/Subscription;)V", 0);
@@ -221,14 +221,14 @@ public final class StoreSearch {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Subscription subscription) {
             StoreSearch.access$handleSubscription((StoreSearch) this.receiver, subscription);
         }
     }
 
-    /* compiled from: StoreSearch.kt */
-    /* renamed from: com.discord.stores.StoreSearch$init$5 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreSearch$init$5 */
+    /* JADX INFO: compiled from: StoreSearch.kt */
     public static final class C63815 extends Lambda implements Function1<DisplayState, Unit> {
         public C63815() {
             super(1);
@@ -240,7 +240,7 @@ public final class StoreSearch {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(DisplayState displayState) {
             if (displayState != DisplayState.RESULTS) {
                 StoreSearch.this.getStoreSearchQuery().clear();
@@ -251,12 +251,12 @@ public final class StoreSearch {
         }
     }
 
-    /* compiled from: StoreSearch.kt */
-    /* renamed from: com.discord.stores.StoreSearch$init$6 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreSearch$init$6 */
+    /* JADX INFO: compiled from: StoreSearch.kt */
     public static final class C63826 extends Lambda implements Function1<SearchState, Unit> {
 
-        /* compiled from: StoreSearch.kt */
-        /* renamed from: com.discord.stores.StoreSearch$init$6$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.stores.StoreSearch$init$6$1, reason: invalid class name */
+        /* JADX INFO: compiled from: StoreSearch.kt */
         public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
             public final /* synthetic */ SearchState $searchState;
 
@@ -272,7 +272,7 @@ public final class StoreSearch {
                 return Unit.f27425a;
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2() {
                 StoreSearch.access$getStream$p(StoreSearch.this).handleSearchFinish(this.$searchState);
             }
@@ -288,7 +288,7 @@ public final class StoreSearch {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(SearchState searchState) {
             Intrinsics3.checkNotNullParameter(searchState, "searchState");
             StoreSearch.access$getDispatcher$p(StoreSearch.this).schedule(new AnonymousClass1(searchState));

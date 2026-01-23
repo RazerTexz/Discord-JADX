@@ -4,9 +4,9 @@ import android.view.View;
 import com.discord.utilities.guildscheduledevent.GuildScheduledEventUtilities2;
 import com.discord.widgets.guildscheduledevent.GuildScheduledEventDetailsViewModel;
 
-/* compiled from: WidgetGuildScheduledEventDetailsExtrasBottomSheet.kt */
-/* renamed from: com.discord.widgets.guildscheduledevent.WidgetGuildScheduledEventDetailsExtrasBottomSheet$configureUi$$inlined$apply$lambda$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.guildscheduledevent.WidgetGuildScheduledEventDetailsExtrasBottomSheet$configureUi$$inlined$apply$lambda$1, reason: use source file name */
+/* JADX INFO: compiled from: WidgetGuildScheduledEventDetailsExtrasBottomSheet.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetGuildScheduledEventDetailsExtrasBottomSheet3 implements View.OnClickListener {
     public final /* synthetic */ boolean $canManageEvent$inlined;
     public final /* synthetic */ GuildScheduledEventUtilities2 $eventTiming$inlined;

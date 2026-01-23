@@ -48,11 +48,11 @@ import p637j0.p642l.p647e.UtilityFunctions;
 import p658rx.Observable;
 import p658rx.subjects.PublishSubject;
 
-/* compiled from: StoreChannelMembers.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: StoreChannelMembers.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class StoreChannelMembers extends StoreV2 {
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private final Dispatcher dispatcher;
     private final Function1<Long, Channel> getChannel;
@@ -66,12 +66,12 @@ public final class StoreChannelMembers extends StoreV2 {
     private final StoreGuilds storeGuilds;
     private final StoreUser storeUser;
 
-    /* compiled from: StoreChannelMembers.kt */
-    /* renamed from: com.discord.stores.StoreChannelMembers$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreChannelMembers$1 */
+    /* JADX INFO: compiled from: StoreChannelMembers.kt */
     public static final class C58121 extends Lambda implements Function1<Unit, Unit> {
 
-        /* compiled from: StoreChannelMembers.kt */
-        /* renamed from: com.discord.stores.StoreChannelMembers$1$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.stores.StoreChannelMembers$1$1, reason: invalid class name */
+        /* JADX INFO: compiled from: StoreChannelMembers.kt */
         public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
             public AnonymousClass1() {
                 super(0);
@@ -83,7 +83,7 @@ public final class StoreChannelMembers extends StoreV2 {
                 return Unit.f27425a;
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2() {
                 StoreChannelMembers.this.markChanged();
             }
@@ -99,13 +99,13 @@ public final class StoreChannelMembers extends StoreV2 {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Unit unit) {
             StoreChannelMembers.access$getDispatcher$p(StoreChannelMembers.this).schedule(new AnonymousClass1());
         }
     }
 
-    /* compiled from: StoreChannelMembers.kt */
+    /* JADX INFO: compiled from: StoreChannelMembers.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -125,7 +125,7 @@ public final class StoreChannelMembers extends StoreV2 {
         }
     }
 
-    /* compiled from: StoreChannelMembers.kt */
+    /* JADX INFO: compiled from: StoreChannelMembers.kt */
     public static final class MemberListIdCalculator {
         public static final MemberListIdCalculator INSTANCE = new MemberListIdCalculator();
 
@@ -159,7 +159,7 @@ public final class StoreChannelMembers extends StoreV2 {
         }
 
         private final long toUnsignedLong(int i) {
-            return i & 4294967295L;
+            return ((long) i) & 4294967295L;
         }
 
         public final String computeMemberListId(Function1<? super Long, Channel> channelsProvider, long channelId, StoreGuilds storeGuilds) {
@@ -183,7 +183,7 @@ public final class StoreChannelMembers extends StoreV2 {
         }
     }
 
-    /* compiled from: StoreChannelMembers.kt */
+    /* JADX INFO: compiled from: StoreChannelMembers.kt */
     public static final class MemberListUpdateException extends RuntimeException {
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
         public MemberListUpdateException(Exception exc) {
@@ -192,7 +192,7 @@ public final class StoreChannelMembers extends StoreV2 {
         }
     }
 
-    /* compiled from: StoreChannelMembers.kt */
+    /* JADX INFO: compiled from: StoreChannelMembers.kt */
     public static final class MemberListUpdateLogger {
         private static final String ERROR_TAG = "MemberListUpdateError";
         private static final int MAX_UPDATE_COUNT = 20;
@@ -285,8 +285,8 @@ public final class StoreChannelMembers extends StoreV2 {
         }
     }
 
-    /* compiled from: StoreChannelMembers.kt */
-    /* renamed from: com.discord.stores.StoreChannelMembers$handleGuildMemberListUpdate$2 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreChannelMembers$handleGuildMemberListUpdate$2 */
+    /* JADX INFO: compiled from: StoreChannelMembers.kt */
     public static final class C58132 extends Lambda implements Function1<ModelGuildMemberListUpdate.Group, MemberListRow> {
         public final /* synthetic */ long $guildId;
 
@@ -301,15 +301,15 @@ public final class StoreChannelMembers extends StoreV2 {
             return invoke2(group);
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final MemberListRow invoke2(ModelGuildMemberListUpdate.Group group) {
             Intrinsics3.checkNotNullParameter(group, "it");
             return StoreChannelMembers.access$makeGroup(StoreChannelMembers.this, this.$guildId, group);
         }
     }
 
-    /* compiled from: StoreChannelMembers.kt */
-    /* renamed from: com.discord.stores.StoreChannelMembers$observeChannelMemberList$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreChannelMembers$observeChannelMemberList$1 */
+    /* JADX INFO: compiled from: StoreChannelMembers.kt */
     public static final class C58151 extends Lambda implements Function0<ChannelMemberList> {
         public final /* synthetic */ long $channelId;
         public final /* synthetic */ long $guildId;
@@ -428,7 +428,7 @@ public final class StoreChannelMembers extends StoreV2 {
     }
 
     @Store3
-    private final void handleSync(String memberListId, ModelGuildMemberListUpdate.Operation.Sync syncOperation, long guildId) throws NumberFormatException {
+    private final void handleSync(String memberListId, ModelGuildMemberListUpdate.Operation.Sync syncOperation, long guildId) {
         MemberListRow memberListRowMakeGroup;
         Map<String, ChannelMemberList> map = this.memberLists.get(Long.valueOf(guildId));
         if (map == null) {
@@ -468,7 +468,7 @@ public final class StoreChannelMembers extends StoreV2 {
     }
 
     @Store3
-    private final MemberListRow makeGroup(long guildId, ModelGuildMemberListUpdate.Group group) throws NumberFormatException {
+    private final MemberListRow makeGroup(long guildId, ModelGuildMemberListUpdate.Group group) {
         String name;
         GuildRole guildRole;
         String id2 = group.getId();

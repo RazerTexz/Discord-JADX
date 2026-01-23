@@ -42,7 +42,7 @@ import java.util.ArrayList;
 import java.util.List;
 import p007b.p100d.p104b.p105a.outline;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public final class TextViewCompat {
     public static final int AUTO_SIZE_TEXT_TYPE_NONE = 0;
     public static final int AUTO_SIZE_TEXT_TYPE_UNIFORM = 1;

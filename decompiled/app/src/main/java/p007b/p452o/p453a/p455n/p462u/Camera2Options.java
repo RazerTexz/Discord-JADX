@@ -26,10 +26,10 @@ import p007b.p452o.p453a.p467r.CamcorderProfiles;
 import p007b.p452o.p453a.p473x.AspectRatio2;
 import p007b.p452o.p453a.p473x.Size3;
 
-/* compiled from: Camera2Options.java */
+/* JADX INFO: renamed from: b.o.a.n.u.b, reason: use source file name */
+/* JADX INFO: compiled from: Camera2Options.java */
+/* JADX INFO: loaded from: classes3.dex */
 @RequiresApi(21)
-/* renamed from: b.o.a.n.u.b, reason: use source file name */
-/* loaded from: classes3.dex */
 public class Camera2Options extends CameraOptions {
     /* JADX WARN: Removed duplicated region for block: B:35:0x00ad  */
     /*

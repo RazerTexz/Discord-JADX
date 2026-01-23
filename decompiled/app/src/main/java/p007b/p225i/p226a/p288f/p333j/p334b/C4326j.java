@@ -5,8 +5,8 @@ import android.os.Parcelable;
 import com.google.android.gms.nearby.messages.Strategy;
 import p007b.p085c.p086a.p087a0.AnimatableValueParser;
 
-/* renamed from: b.i.a.f.j.b.j */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.j.b.j */
+/* JADX INFO: loaded from: classes3.dex */
 public final class C4326j implements Parcelable.Creator<Strategy> {
     @Override // android.os.Parcelable.Creator
     public final Strategy createFromParcel(Parcel parcel) {

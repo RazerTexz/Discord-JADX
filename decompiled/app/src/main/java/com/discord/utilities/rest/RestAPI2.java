@@ -10,9 +10,9 @@ import p507d0.p580t._Collections;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: RestAPI.kt */
-/* renamed from: com.discord.utilities.rest.RestAPI$AppHeadersProvider$acceptLanguageProvider$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.utilities.rest.RestAPI$AppHeadersProvider$acceptLanguageProvider$1, reason: use source file name */
+/* JADX INFO: compiled from: RestAPI.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class RestAPI2 extends Lambda implements Function0<String> {
     public static final RestAPI2 INSTANCE = new RestAPI2();
 
@@ -26,7 +26,7 @@ public final class RestAPI2 extends Lambda implements Function0<String> {
     }
 
     @Override // kotlin.jvm.functions.Function0
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final String invoke2() {
         ArrayList arrayList = new ArrayList();
         if (Build.VERSION.SDK_INT >= 24) {

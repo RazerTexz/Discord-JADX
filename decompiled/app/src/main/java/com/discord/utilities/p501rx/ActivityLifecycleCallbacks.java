@@ -8,8 +8,8 @@ import com.discord.app.AppActivity;
 import java.lang.ref.WeakReference;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ActivityLifecycleCallbacks.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: ActivityLifecycleCallbacks.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public abstract class ActivityLifecycleCallbacks implements Application.ActivityLifecycleCallbacks {
     private WeakReference<AppActivity> onActivityCreatedInvoked;
 

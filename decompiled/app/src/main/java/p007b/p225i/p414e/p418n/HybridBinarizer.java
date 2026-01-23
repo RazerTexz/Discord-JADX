@@ -4,21 +4,21 @@ import com.google.zxing.NotFoundException;
 import p007b.p225i.p414e.Binarizer;
 import p007b.p225i.p414e.LuminanceSource;
 
-/* compiled from: HybridBinarizer.java */
-/* renamed from: b.i.e.n.h, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.e.n.h, reason: use source file name */
+/* JADX INFO: compiled from: HybridBinarizer.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class HybridBinarizer extends Binarizer {
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static final byte[] f13277b = new byte[0];
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public byte[] f13278c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final int[] f13279d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public BitMatrix f13280e;
 
     public HybridBinarizer(LuminanceSource luminanceSource) {
@@ -27,7 +27,7 @@ public final class HybridBinarizer extends Binarizer {
         this.f13279d = new int[32];
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static int m6952a(int[] iArr) throws NotFoundException {
         int length = iArr.length;
         int i = 0;
@@ -75,7 +75,7 @@ public final class HybridBinarizer extends Binarizer {
         return i12 << 3;
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final void m6953b(int i) {
         if (this.f13278c.length < i) {
             this.f13278c = new byte[i];

@@ -14,13 +14,13 @@ import p007b.p100d.p104b.p105a.outline;
 import p007b.p225i.p361c.p369m.p370d.Logger3;
 import p007b.p225i.p361c.p369m.p389e.NativeApi;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public class JniNativeApi implements NativeApi {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final boolean f21419a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public Context f21420b;
 
     static {
@@ -42,7 +42,7 @@ public class JniNativeApi implements NativeApi {
         this.f21420b = context;
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public boolean m9176a(String str, AssetManager assetManager) {
         String str2 = Build.CPU_ABI;
         try {

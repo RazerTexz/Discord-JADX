@@ -5,16 +5,16 @@ import java.util.ArrayList;
 import java.util.List;
 import p007b.p109f.p148h.p158b.p159a.ControllerListener2;
 
-/* compiled from: ForwardingControllerListener2.java */
-/* renamed from: b.f.h.b.a.c, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.f.h.b.a.c, reason: use source file name */
+/* JADX INFO: compiled from: ForwardingControllerListener2.java */
+/* JADX INFO: loaded from: classes.dex */
 public class ForwardingControllerListener2<I> extends BaseControllerListener2<I> {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final List<ControllerListener2<I>> f3568j = new ArrayList(2);
 
     @Override // p007b.p109f.p148h.p158b.p159a.ControllerListener2
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public void mo1071a(String str, Object obj, ControllerListener2.a aVar) {
         int size = this.f3568j.size();
         for (int i = 0; i < size; i++) {
@@ -30,7 +30,7 @@ public class ForwardingControllerListener2<I> extends BaseControllerListener2<I>
     }
 
     @Override // p007b.p109f.p148h.p158b.p159a.ControllerListener2
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public void mo1072b(String str, Throwable th, ControllerListener2.a aVar) {
         int size = this.f3568j.size();
         for (int i = 0; i < size; i++) {
@@ -46,7 +46,7 @@ public class ForwardingControllerListener2<I> extends BaseControllerListener2<I>
     }
 
     @Override // p007b.p109f.p148h.p158b.p159a.ControllerListener2
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public void mo1073c(String str, ControllerListener2.a aVar) {
         int size = this.f3568j.size();
         for (int i = 0; i < size; i++) {
@@ -62,7 +62,7 @@ public class ForwardingControllerListener2<I> extends BaseControllerListener2<I>
     }
 
     @Override // p007b.p109f.p148h.p158b.p159a.ControllerListener2
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public void mo1074d(String str, I i, ControllerListener2.a aVar) {
         int size = this.f3568j.size();
         for (int i2 = 0; i2 < size; i2++) {
@@ -77,7 +77,7 @@ public class ForwardingControllerListener2<I> extends BaseControllerListener2<I>
         }
     }
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final synchronized void m1168e(String str, Throwable th) {
         Log.e("FwdControllerListener2", str, th);
     }

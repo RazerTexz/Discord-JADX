@@ -6,10 +6,10 @@ import java.util.concurrent.atomic.AtomicBoolean;
 import lombok.ConfigurationKeys;
 import lombok.core.SpiLoadUtil;
 
-/* loaded from: discord-126021.apk:lombok/core/configuration/ConfigurationKeysLoader.SCL.lombok */
+/* JADX INFO: loaded from: discord-126021.apk:lombok/core/configuration/ConfigurationKeysLoader.SCL.lombok */
 public interface ConfigurationKeysLoader {
 
-    /* loaded from: discord-126021.apk:lombok/core/configuration/ConfigurationKeysLoader$LoaderLoader.SCL.lombok */
+    /* JADX INFO: loaded from: discord-126021.apk:lombok/core/configuration/ConfigurationKeysLoader$LoaderLoader.SCL.lombok */
     public static class LoaderLoader {
         private static final AtomicBoolean alreadyLoaded = new AtomicBoolean(false);
 

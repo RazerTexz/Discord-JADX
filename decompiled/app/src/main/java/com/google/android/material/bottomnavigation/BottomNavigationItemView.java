@@ -31,8 +31,8 @@ import com.google.android.material.C10817R;
 import com.google.android.material.badge.BadgeDrawable;
 import com.google.android.material.badge.BadgeUtils;
 
+/* JADX INFO: loaded from: classes3.dex */
 @RestrictTo({RestrictTo.Scope.LIBRARY_GROUP})
-/* loaded from: classes3.dex */
 public class BottomNavigationItemView extends FrameLayout implements MenuView.ItemView {
     private static final int[] CHECKED_STATE_SET = {R.attr.state_checked};
     public static final int INVALID_ITEM_POSITION = -1;
@@ -63,7 +63,7 @@ public class BottomNavigationItemView extends FrameLayout implements MenuView.It
     @Nullable
     private Drawable wrappedIconDrawable;
 
-    /* renamed from: com.google.android.material.bottomnavigation.BottomNavigationItemView$a */
+    /* JADX INFO: renamed from: com.google.android.material.bottomnavigation.BottomNavigationItemView$a */
     public class ViewOnLayoutChangeListenerC10846a implements View.OnLayoutChangeListener {
         public ViewOnLayoutChangeListenerC10846a() {
         }

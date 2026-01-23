@@ -8,23 +8,23 @@ import java.util.ArrayList;
 import java.util.List;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ChipsVerticalLinearLayout.kt */
+/* JADX INFO: renamed from: b.a.f.e, reason: use source file name */
+/* JADX INFO: compiled from: ChipsVerticalLinearLayout.kt */
+/* JADX INFO: loaded from: classes.dex */
 @SuppressLint({"ViewConstructor"})
-/* renamed from: b.a.f.e, reason: use source file name */
-/* loaded from: classes.dex */
 public final class ChipsVerticalLinearLayout extends LinearLayout {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final List<LinearLayout> f618j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final int f619k;
 
-    /* compiled from: ChipsVerticalLinearLayout.kt */
-    /* renamed from: b.a.f.e$a */
+    /* JADX INFO: renamed from: b.a.f.e$a */
+    /* JADX INFO: compiled from: ChipsVerticalLinearLayout.kt */
     public static final class a {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public int f620a;
 
         public a(int i, int i2) {
@@ -41,7 +41,7 @@ public final class ChipsVerticalLinearLayout extends LinearLayout {
         setOrientation(1);
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final LinearLayout m188a() {
         LinearLayout linearLayout = new LinearLayout(getContext());
         linearLayout.setLayoutParams(new ViewGroup.LayoutParams(-1, this.f619k));

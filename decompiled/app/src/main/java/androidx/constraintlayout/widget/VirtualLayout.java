@@ -6,7 +6,7 @@ import android.util.AttributeSet;
 import android.view.View;
 import android.view.ViewParent;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public abstract class VirtualLayout extends ConstraintHelper {
     private boolean mApplyElevationOnAttach;
     private boolean mApplyVisibilityOnAttach;

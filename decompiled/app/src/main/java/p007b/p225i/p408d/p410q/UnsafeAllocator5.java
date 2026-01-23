@@ -3,11 +3,11 @@ package p007b.p225i.p408d.p410q;
 import java.lang.reflect.Modifier;
 import p007b.p100d.p104b.p105a.outline;
 
-/* compiled from: UnsafeAllocator.java */
-/* renamed from: b.i.d.q.w, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.d.q.w, reason: use source file name */
+/* JADX INFO: compiled from: UnsafeAllocator.java */
+/* JADX INFO: loaded from: classes3.dex */
 public abstract class UnsafeAllocator5 {
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static void m6872a(Class<?> cls) {
         int modifiers = cls.getModifiers();
         if (Modifier.isInterface(modifiers)) {
@@ -22,6 +22,6 @@ public abstract class UnsafeAllocator5 {
         }
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public abstract <T> T mo6871b(Class<T> cls) throws Exception;
 }

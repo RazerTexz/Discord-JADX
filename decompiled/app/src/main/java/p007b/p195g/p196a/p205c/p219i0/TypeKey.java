@@ -3,21 +3,21 @@ package p007b.p195g.p196a.p205c.p219i0;
 import p007b.p100d.p104b.p105a.outline;
 import p007b.p195g.p196a.p205c.JavaType;
 
-/* compiled from: TypeKey.java */
-/* renamed from: b.g.a.c.i0.u, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.g.a.c.i0.u, reason: use source file name */
+/* JADX INFO: compiled from: TypeKey.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class TypeKey {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public int f4987a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public Class<?> f4988b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public JavaType f4989c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public boolean f4990d;
 
     public TypeKey() {

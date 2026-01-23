@@ -41,8 +41,8 @@ import p637j0.p642l.p647e.ScalarSynchronousObservable;
 import p637j0.p653p.Schedulers2;
 import p658rx.Observable;
 
-/* compiled from: SystemLogUtils.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: SystemLogUtils.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class SystemLogUtils {
     public static final String logcatPath = "/system/bin/logcat";
     private static final int maxLogSize = 2500000;
@@ -51,7 +51,7 @@ public final class SystemLogUtils {
     private static final DebugPrintable3 debugPrintables = new DebugPrintable3();
     private static final SystemLogCapture systemLogCapture = new SystemLogCapture();
 
-    /* compiled from: SystemLogUtils.kt */
+    /* JADX INFO: compiled from: SystemLogUtils.kt */
     public static final /* data */ class Tombstone {
         private final String cause;
         private final String groupBy;
@@ -100,32 +100,32 @@ public final class SystemLogUtils {
             return tombstone.copy(str, str7, str8, str9, str10, str6);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final String getText() {
             return this.text;
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final String getCause() {
             return this.cause;
         }
 
-        /* renamed from: component3, reason: from getter */
+        /* JADX INFO: renamed from: component3, reason: from getter */
         public final String getGroupBy() {
             return this.groupBy;
         }
 
-        /* renamed from: component4, reason: from getter */
+        /* JADX INFO: renamed from: component4, reason: from getter */
         public final String getOrigin() {
             return this.origin;
         }
 
-        /* renamed from: component5, reason: from getter */
+        /* JADX INFO: renamed from: component5, reason: from getter */
         public final String getGroupHash() {
             return this.groupHash;
         }
 
-        /* renamed from: component6, reason: from getter */
+        /* JADX INFO: renamed from: component6, reason: from getter */
         public final String getTextHash() {
             return this.textHash;
         }
@@ -205,8 +205,8 @@ public final class SystemLogUtils {
         }
     }
 
-    /* compiled from: SystemLogUtils.kt */
-    /* renamed from: com.discord.utilities.systemlog.SystemLogUtils$fetch$1 */
+    /* JADX INFO: renamed from: com.discord.utilities.systemlog.SystemLogUtils$fetch$1 */
+    /* JADX INFO: compiled from: SystemLogUtils.kt */
     public static final class CallableC69361<V> implements Callable<LinkedList<String>> {
         public final /* synthetic */ Regex $filter;
         public final /* synthetic */ boolean $logErrors;
@@ -224,7 +224,7 @@ public final class SystemLogUtils {
         }
 
         @Override // java.util.concurrent.Callable
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final LinkedList<String> call2() {
             Process processStart = null;
             try {
@@ -251,6 +251,7 @@ public final class SystemLogUtils {
                     }
                     if (processStart != null) {
                     }
+                    return this.$output;
                 }
                 processStart.destroy();
                 return this.$output;
@@ -263,8 +264,8 @@ public final class SystemLogUtils {
         }
     }
 
-    /* compiled from: SystemLogUtils.kt */
-    /* renamed from: com.discord.utilities.systemlog.SystemLogUtils$fetchLastTombstone$1 */
+    /* JADX INFO: renamed from: com.discord.utilities.systemlog.SystemLogUtils$fetchLastTombstone$1 */
+    /* JADX INFO: compiled from: SystemLogUtils.kt */
     public static final class C69371<T, R> implements Func1<LinkedList<String>, Observable<? extends Tombstone>> {
         public static final C69371 INSTANCE = new C69371();
 
@@ -273,7 +274,7 @@ public final class SystemLogUtils {
             return call2(linkedList);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final Observable<? extends Tombstone> call2(LinkedList<String> linkedList) {
             SystemLogUtils systemLogUtils = SystemLogUtils.INSTANCE;
             Intrinsics3.checkNotNullExpressionValue(linkedList, "crashes");
@@ -282,8 +283,8 @@ public final class SystemLogUtils {
         }
     }
 
-    /* compiled from: SystemLogUtils.kt */
-    /* renamed from: com.discord.utilities.systemlog.SystemLogUtils$hashString$1 */
+    /* JADX INFO: renamed from: com.discord.utilities.systemlog.SystemLogUtils$hashString$1 */
+    /* JADX INFO: compiled from: SystemLogUtils.kt */
     public static final class C69381 extends Lambda implements Function1<Byte, CharSequence> {
         public static final C69381 INSTANCE = new C69381();
 
@@ -433,8 +434,6 @@ public final class SystemLogUtils {
     
         throw new java.util.NoSuchElementException("List contains no element matching the predicate.");
      */
-    /* JADX WARN: Removed duplicated region for block: B:41:0x0098  */
-    /* JADX WARN: Removed duplicated region for block: B:64:? A[RETURN, SYNTHETIC] */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
@@ -474,19 +473,17 @@ public final class SystemLogUtils {
                     } catch (Exception e) {
                         e = e;
                         i = length;
-                        e.printStackTrace();
-                        if (filter == null) {
-                            output.add("IOException: " + e);
-                        }
-                        if (i <= maxLogSize) {
-                        }
                     }
                 }
             } catch (Exception e2) {
                 e = e2;
             }
+            e.printStackTrace();
+            if (filter == null) {
+                output.add("IOException: " + e);
+            }
         }
-        if (i <= maxLogSize) {
+        if (i > maxLogSize) {
             output.pop().length();
         }
     }

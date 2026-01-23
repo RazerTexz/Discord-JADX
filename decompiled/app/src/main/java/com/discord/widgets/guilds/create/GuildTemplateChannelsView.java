@@ -30,13 +30,13 @@ import p007b.p100d.p104b.p105a.outline;
 import p507d0.p580t.Iterables2;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: GuildTemplateChannelsView.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: GuildTemplateChannelsView.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class GuildTemplateChannelsView extends LinearLayout {
     private final GuildTemplateChannelsViewBinding binding;
     private final ChannelsAdapter channelsAdapter;
 
-    /* compiled from: GuildTemplateChannelsView.kt */
+    /* JADX INFO: compiled from: GuildTemplateChannelsView.kt */
     public static final /* data */ class ChannelDataPayload implements MGRecyclerDataPayload {
         private final Channel channel;
         private final String key;
@@ -55,7 +55,7 @@ public final class GuildTemplateChannelsView extends LinearLayout {
             return channelDataPayload.copy(channel);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final Channel getChannel() {
             return this.channel;
         }
@@ -102,7 +102,7 @@ public final class GuildTemplateChannelsView extends LinearLayout {
         }
     }
 
-    /* compiled from: GuildTemplateChannelsView.kt */
+    /* JADX INFO: compiled from: GuildTemplateChannelsView.kt */
     public static final class ChannelViewHolder extends MGRecyclerViewHolder<ChannelsAdapter, ChannelDataPayload> {
         private final GuildTemplateChannelsItemViewBinding binding;
 
@@ -131,7 +131,7 @@ public final class GuildTemplateChannelsView extends LinearLayout {
             onConfigure2(i, channelDataPayload);
         }
 
-        /* renamed from: onConfigure, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: onConfigure, reason: avoid collision after fix types in other method */
         public void onConfigure2(int position, ChannelDataPayload data) {
             Intrinsics3.checkNotNullParameter(data, "data");
             super.onConfigure(position, data);
@@ -157,7 +157,7 @@ public final class GuildTemplateChannelsView extends LinearLayout {
         }
     }
 
-    /* compiled from: GuildTemplateChannelsView.kt */
+    /* JADX INFO: compiled from: GuildTemplateChannelsView.kt */
     public static final class ChannelsAdapter extends MGRecyclerAdapterSimple<ChannelDataPayload> {
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
         public ChannelsAdapter(RecyclerView recyclerView) {

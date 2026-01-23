@@ -39,52 +39,52 @@ import p507d0.p579g0.Strings4;
 import p507d0.p580t.Collections2;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: CodeVerificationView.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: CodeVerificationView.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class CodeVerificationView extends LinearLayout {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static final EnumC7072a f19031j = EnumC7072a.NUMERIC;
 
-    /* renamed from: k, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: k, reason: from kotlin metadata */
     public final ViewCodeVerificationBinding binding;
 
-    /* renamed from: l, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: l, reason: from kotlin metadata */
     public final List<TextView> characterViews;
 
-    /* renamed from: m, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: m, reason: from kotlin metadata */
     public final Drawable charBackgroundDrawableUnfocused;
 
-    /* renamed from: n, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: n, reason: from kotlin metadata */
     public final Drawable charBackgroundDrawableFocused;
 
-    /* renamed from: o, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: o, reason: from kotlin metadata */
     public EnumC7072a inputType;
 
-    /* renamed from: p, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: p, reason: from kotlin metadata */
     public String inputFormat;
 
-    /* renamed from: q, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: q, reason: from kotlin metadata */
     public String code;
 
-    /* renamed from: r, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: r, reason: from kotlin metadata */
     public Function1<? super String, Unit> onCodeEntered;
 
-    /* compiled from: CodeVerificationView.kt */
-    /* renamed from: com.discord.views.CodeVerificationView$a */
+    /* JADX INFO: renamed from: com.discord.views.CodeVerificationView$a */
+    /* JADX INFO: compiled from: CodeVerificationView.kt */
     public enum EnumC7072a {
         NUMERIC,
         ALPHANUMERIC;
 
 
-        /* renamed from: n */
+        /* JADX INFO: renamed from: n */
         public static final a f19044n = new a(null);
 
-        /* renamed from: m */
+        /* JADX INFO: renamed from: m */
         public static final EnumC7072a[] f19043m = values();
 
-        /* compiled from: CodeVerificationView.kt */
-        /* renamed from: com.discord.views.CodeVerificationView$a$a */
+        /* JADX INFO: renamed from: com.discord.views.CodeVerificationView$a$a */
+        /* JADX INFO: compiled from: CodeVerificationView.kt */
         public static final class a {
             public a(DefaultConstructorMarker defaultConstructorMarker) {
             }
@@ -181,7 +181,7 @@ public final class CodeVerificationView extends LinearLayout {
         m8541e();
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final void m8537a(CodeVerificationView codeVerificationView) {
         Object systemService = codeVerificationView.getContext().getSystemService("input_method");
         Objects.requireNonNull(systemService, "null cannot be cast to non-null type android.view.inputmethod.InputMethodManager");
@@ -202,7 +202,7 @@ public final class CodeVerificationView extends LinearLayout {
         return i;
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final void m8538b() {
         if (this.code.length() > 0) {
             this.code = "";
@@ -210,7 +210,7 @@ public final class CodeVerificationView extends LinearLayout {
         }
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final void m8539c(char c) {
         if (this.code.length() < getInputLength()) {
             this.code = this.code + c;
@@ -218,7 +218,7 @@ public final class CodeVerificationView extends LinearLayout {
         }
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final void m8540d() {
         int i = 0;
         for (Object obj : this.characterViews) {
@@ -240,7 +240,7 @@ public final class CodeVerificationView extends LinearLayout {
         m8541e();
     }
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final void m8541e() {
         int iMin = Math.min(this.code.length(), Collections2.getLastIndex(this.characterViews));
         int i = 0;

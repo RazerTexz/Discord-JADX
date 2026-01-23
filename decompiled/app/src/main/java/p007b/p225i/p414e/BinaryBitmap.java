@@ -6,22 +6,22 @@ import p007b.p225i.p414e.p418n.BitArray;
 import p007b.p225i.p414e.p418n.BitMatrix;
 import p007b.p225i.p414e.p418n.HybridBinarizer;
 
-/* compiled from: BinaryBitmap.java */
-/* renamed from: b.i.e.c, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.e.c, reason: use source file name */
+/* JADX INFO: compiled from: BinaryBitmap.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class BinaryBitmap {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final Binarizer f13171a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public BitMatrix f13172b;
 
     public BinaryBitmap(Binarizer binarizer) {
         this.f13171a = binarizer;
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public BitMatrix m6913a() throws NotFoundException {
         int i;
         BinaryBitmap binaryBitmap = this;
@@ -223,7 +223,7 @@ public final class BinaryBitmap {
         return binaryBitmap.f13172b;
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public BitArray m6914b(int i, BitArray bitArray) throws NotFoundException {
         int i2;
         HybridBinarizer hybridBinarizer = (HybridBinarizer) this.f13171a;

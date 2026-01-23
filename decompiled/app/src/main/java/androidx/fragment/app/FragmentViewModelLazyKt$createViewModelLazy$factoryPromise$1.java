@@ -4,8 +4,8 @@ import androidx.view.ViewModelProvider;
 import kotlin.jvm.functions.Function0;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: FragmentViewModelLazy.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: FragmentViewModelLazy.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class FragmentViewModelLazyKt$createViewModelLazy$factoryPromise$1 extends Lambda implements Function0<ViewModelProvider.Factory> {
     public final /* synthetic */ Fragment $this_createViewModelLazy;
 

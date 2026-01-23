@@ -8,8 +8,8 @@ import p007b.p100d.p104b.p105a.outline;
 import p507d0.Standard2;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: PaddedItemDecorator.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: PaddedItemDecorator.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class PaddedItemDecorator extends RecyclerView.ItemDecoration {
     private final int orientation;
     private final boolean spaceBetweenItemsOnly;

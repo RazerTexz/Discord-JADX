@@ -32,34 +32,34 @@ import p507d0.p592z.p594d.Lambda;
 import p507d0.p592z.p594d.PropertyReference1Impl;
 import p507d0.p592z.p594d.Reflection2;
 
-/* compiled from: KPropertyImpl.kt */
-/* renamed from: d0.e0.p.d.s, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.s, reason: use source file name */
+/* JADX INFO: compiled from: KPropertyImpl.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public abstract class KPropertyImpl<V> extends KCallableImpl<V> implements KProperty<V> {
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public static final Object f25048n;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public final ReflectProperties.b<Field> f25049o;
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public final ReflectProperties.a<PropertyDescriptor> f25050p;
 
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     public final KDeclarationContainerImpl f25051q;
 
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     public final String f25052r;
 
-    /* renamed from: s */
+    /* JADX INFO: renamed from: s */
     public final String f25053s;
 
-    /* renamed from: t */
+    /* JADX INFO: renamed from: t */
     public final Object f25054t;
 
-    /* compiled from: KPropertyImpl.kt */
-    /* renamed from: d0.e0.p.d.s$a */
+    /* JADX INFO: renamed from: d0.e0.p.d.s$a */
+    /* JADX INFO: compiled from: KPropertyImpl.kt */
     public static abstract class a<PropertyType, ReturnType> extends KCallableImpl<ReturnType> implements KFunction<ReturnType> {
         @Override // p507d0.p513e0.p514p.p515d.KCallableImpl
         public KDeclarationContainerImpl getContainer() {
@@ -107,28 +107,28 @@ public abstract class KPropertyImpl<V> extends KCallableImpl<V> implements KProp
         }
     }
 
-    /* compiled from: KPropertyImpl.kt */
-    /* renamed from: d0.e0.p.d.s$b */
+    /* JADX INFO: renamed from: d0.e0.p.d.s$b */
+    /* JADX INFO: compiled from: KPropertyImpl.kt */
     public static final class b {
         public b(DefaultConstructorMarker defaultConstructorMarker) {
         }
     }
 
-    /* compiled from: KPropertyImpl.kt */
-    /* renamed from: d0.e0.p.d.s$c */
+    /* JADX INFO: renamed from: d0.e0.p.d.s$c */
+    /* JADX INFO: compiled from: KPropertyImpl.kt */
     public static abstract class c<V> extends a<V, V> implements KProperty.Getter<V> {
 
-        /* renamed from: n */
+        /* JADX INFO: renamed from: n */
         public static final /* synthetic */ KProperty[] f25055n = {Reflection2.property1(new PropertyReference1Impl(Reflection2.getOrCreateKotlinClass(c.class), "descriptor", "getDescriptor()Lorg/jetbrains/kotlin/descriptors/PropertyGetterDescriptor;")), Reflection2.property1(new PropertyReference1Impl(Reflection2.getOrCreateKotlinClass(c.class), "caller", "getCaller()Lkotlin/reflect/jvm/internal/calls/Caller;"))};
 
-        /* renamed from: o */
+        /* JADX INFO: renamed from: o */
         public final ReflectProperties.a f25056o = ReflectProperties.lazySoft(new b());
 
-        /* renamed from: p */
+        /* JADX INFO: renamed from: p */
         public final ReflectProperties.b f25057p = ReflectProperties.lazy(new a());
 
-        /* compiled from: KPropertyImpl.kt */
-        /* renamed from: d0.e0.p.d.s$c$a */
+        /* JADX INFO: renamed from: d0.e0.p.d.s$c$a */
+        /* JADX INFO: compiled from: KPropertyImpl.kt */
         public static final class a extends Lambda implements Function0<Caller2<?>> {
             public a() {
                 super(0);
@@ -146,8 +146,8 @@ public abstract class KPropertyImpl<V> extends KCallableImpl<V> implements KProp
             }
         }
 
-        /* compiled from: KPropertyImpl.kt */
-        /* renamed from: d0.e0.p.d.s$c$b */
+        /* JADX INFO: renamed from: d0.e0.p.d.s$c$b */
+        /* JADX INFO: compiled from: KPropertyImpl.kt */
         public static final class b extends Lambda implements Function0<PropertyGetterDescriptor> {
             public b() {
                 super(0);
@@ -195,21 +195,21 @@ public abstract class KPropertyImpl<V> extends KCallableImpl<V> implements KProp
         }
     }
 
-    /* compiled from: KPropertyImpl.kt */
-    /* renamed from: d0.e0.p.d.s$d */
+    /* JADX INFO: renamed from: d0.e0.p.d.s$d */
+    /* JADX INFO: compiled from: KPropertyImpl.kt */
     public static abstract class d<V> extends a<V, Unit> implements KProperty4<V> {
 
-        /* renamed from: n */
+        /* JADX INFO: renamed from: n */
         public static final /* synthetic */ KProperty[] f25058n = {Reflection2.property1(new PropertyReference1Impl(Reflection2.getOrCreateKotlinClass(d.class), "descriptor", "getDescriptor()Lorg/jetbrains/kotlin/descriptors/PropertySetterDescriptor;")), Reflection2.property1(new PropertyReference1Impl(Reflection2.getOrCreateKotlinClass(d.class), "caller", "getCaller()Lkotlin/reflect/jvm/internal/calls/Caller;"))};
 
-        /* renamed from: o */
+        /* JADX INFO: renamed from: o */
         public final ReflectProperties.a f25059o = ReflectProperties.lazySoft(new b());
 
-        /* renamed from: p */
+        /* JADX INFO: renamed from: p */
         public final ReflectProperties.b f25060p = ReflectProperties.lazy(new a());
 
-        /* compiled from: KPropertyImpl.kt */
-        /* renamed from: d0.e0.p.d.s$d$a */
+        /* JADX INFO: renamed from: d0.e0.p.d.s$d$a */
+        /* JADX INFO: compiled from: KPropertyImpl.kt */
         public static final class a extends Lambda implements Function0<Caller2<?>> {
             public a() {
                 super(0);
@@ -227,8 +227,8 @@ public abstract class KPropertyImpl<V> extends KCallableImpl<V> implements KProp
             }
         }
 
-        /* compiled from: KPropertyImpl.kt */
-        /* renamed from: d0.e0.p.d.s$d$b */
+        /* JADX INFO: renamed from: d0.e0.p.d.s$d$b */
+        /* JADX INFO: compiled from: KPropertyImpl.kt */
         public static final class b extends Lambda implements Function0<PropertySetterDescriptor> {
             public b() {
                 super(0);
@@ -281,8 +281,8 @@ public abstract class KPropertyImpl<V> extends KCallableImpl<V> implements KProp
         }
     }
 
-    /* compiled from: KPropertyImpl.kt */
-    /* renamed from: d0.e0.p.d.s$e */
+    /* JADX INFO: renamed from: d0.e0.p.d.s$e */
+    /* JADX INFO: compiled from: KPropertyImpl.kt */
     public static final class e extends Lambda implements Function0<PropertyDescriptor> {
         public e() {
             super(0);
@@ -300,8 +300,8 @@ public abstract class KPropertyImpl<V> extends KCallableImpl<V> implements KProp
         }
     }
 
-    /* compiled from: KPropertyImpl.kt */
-    /* renamed from: d0.e0.p.d.s$f */
+    /* JADX INFO: renamed from: d0.e0.p.d.s$f */
+    /* JADX INFO: compiled from: KPropertyImpl.kt */
     public static final class f extends Lambda implements Function0<Field> {
         public f() {
             super(0);
@@ -313,7 +313,7 @@ public abstract class KPropertyImpl<V> extends KCallableImpl<V> implements KProp
         }
 
         @Override // kotlin.jvm.functions.Function0
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final Field invoke2() {
             Class<?> enclosingClass;
             RuntimeTypeMapper2 runtimeTypeMapper2MapPropertySignature = RuntimeTypeMapper3.f22358b.mapPropertySignature(KPropertyImpl.this.getDescriptor());
@@ -367,7 +367,7 @@ public abstract class KPropertyImpl<V> extends KCallableImpl<V> implements KProp
         this.f25050p = aVarLazySoft;
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final Field m10056c() {
         if (getDescriptor().isDelegated()) {
             return getJavaField();
@@ -404,7 +404,7 @@ public abstract class KPropertyImpl<V> extends KCallableImpl<V> implements KProp
         return getDescriptor();
     }
 
-    /* renamed from: getGetter */
+    /* JADX INFO: renamed from: getGetter */
     public abstract c<V> mo11489getGetter();
 
     public final Field getJavaField() {

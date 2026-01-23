@@ -8,8 +8,8 @@ import com.discord.utilities.view.extensions.ViewExtensions;
 import kotlin.jvm.internal.DefaultConstructorMarker;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: DimmerView.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: DimmerView.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class DimmerView extends RelativeLayout {
     private final ProgressBar dimmerProgressBar;
 

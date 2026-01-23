@@ -15,9 +15,9 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p600f0.HttpUrl;
 import p600f0.p601e0.Util7;
 
-/* compiled from: RestInterceptors.kt */
-/* renamed from: com.discord.restapi.SpotifyTokenInterceptor, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: com.discord.restapi.SpotifyTokenInterceptor, reason: use source file name */
+/* JADX INFO: compiled from: RestInterceptors.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class RestInterceptors3 implements Interceptor {
     private final RestInterceptors2.HeadersProvider headersProvider;
 

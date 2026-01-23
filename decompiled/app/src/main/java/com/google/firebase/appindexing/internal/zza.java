@@ -9,30 +9,30 @@ import p007b.p100d.p104b.p105a.outline;
 import p007b.p225i.p361c.p365k.InterfaceC4560a;
 import p007b.p225i.p361c.p365k.p367d.C4563a;
 
-/* compiled from: com.google.firebase:firebase-appindexing@@19.1.0 */
-/* loaded from: classes3.dex */
+/* JADX INFO: compiled from: com.google.firebase:firebase-appindexing@@19.1.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public final class zza extends AbstractSafeParcelable implements InterfaceC4560a {
     public static final Parcelable.Creator<zza> CREATOR = new C4563a();
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final String f21405j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final String f21406k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final String f21407l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public final String f21408m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public final zzc f21409n;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public final String f21410o;
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public final Bundle f21411p;
 
     public zza(String str, String str2, String str3, String str4, zzc zzcVar, String str5, Bundle bundle) {

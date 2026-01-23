@@ -11,8 +11,8 @@ import kotlin.jvm.functions.Function0;
 import p507d0.p580t._Collections;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetChannelListModel.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetChannelListModel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetChannelListModel$Companion$guildListBuilder$2 extends Lambda implements Function0<Unit> {
     public final /* synthetic */ Set $collapsedCategories;
     public final /* synthetic */ HashSet $forceViewCategories;
@@ -32,7 +32,7 @@ public final class WidgetChannelListModel$Companion$guildListBuilder$2 extends L
         return Unit.f27425a;
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final void invoke2() {
         ChannelListItem channelListItem = (ChannelListItem) _Collections.lastOrNull((List) this.$items);
         if (channelListItem != null && channelListItem.getType() == 8 && (channelListItem instanceof ChannelListItemCategory)) {

@@ -17,34 +17,34 @@ import com.google.android.material.animation.MotionSpec;
 import com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton;
 import java.util.ArrayList;
 
-/* compiled from: BaseMotionStrategy.java */
-/* renamed from: b.i.a.g.e.b, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.g.e.b, reason: use source file name */
+/* JADX INFO: compiled from: BaseMotionStrategy.java */
+/* JADX INFO: loaded from: classes3.dex */
 public abstract class BaseMotionStrategy implements MotionStrategy {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final Context f11621a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     @NonNull
     public final ExtendedFloatingActionButton f11622b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final ArrayList<Animator.AnimatorListener> f11623c = new ArrayList<>();
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final AnimatorTracker f11624d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     @Nullable
     public MotionSpec f11625e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     @Nullable
     public MotionSpec f11626f;
 
-    /* compiled from: BaseMotionStrategy.java */
-    /* renamed from: b.i.a.g.e.b$a */
+    /* JADX INFO: renamed from: b.i.a.g.e.b$a */
+    /* JADX INFO: compiled from: BaseMotionStrategy.java */
     public class a extends Property<ExtendedFloatingActionButton, Float> {
         public a(Class cls, String str) {
             super(cls, str);
@@ -78,26 +78,26 @@ public abstract class BaseMotionStrategy implements MotionStrategy {
 
     @Override // p007b.p225i.p226a.p341g.p346e.MotionStrategy
     @CallSuper
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public void mo6078a() {
         this.f11624d.f11620a = null;
     }
 
     @Override // p007b.p225i.p226a.p341g.p346e.MotionStrategy
     @CallSuper
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public void mo6079e() {
         this.f11624d.f11620a = null;
     }
 
     @Override // p007b.p225i.p226a.p341g.p346e.MotionStrategy
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public AnimatorSet mo6080f() {
         return m6081h(m6082i());
     }
 
     @NonNull
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public AnimatorSet m6081h(@NonNull MotionSpec motionSpec) {
         ArrayList arrayList = new ArrayList();
         if (motionSpec.hasPropertyValues("opacity")) {
@@ -127,7 +127,7 @@ public abstract class BaseMotionStrategy implements MotionStrategy {
         return animatorSet;
     }
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public final MotionSpec m6082i() {
         MotionSpec motionSpec = this.f11626f;
         if (motionSpec != null) {

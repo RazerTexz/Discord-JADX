@@ -15,27 +15,27 @@ import p007b.p225i.p361c.p369m.p370d.p375m.ImmutableList3;
 import p007b.p225i.p361c.p369m.p370d.p387t.StackTraceTrimmingStrategy;
 import p007b.p225i.p361c.p369m.p370d.p387t.TrimmedThrowableData;
 
-/* compiled from: CrashlyticsReportDataCapture.java */
-/* renamed from: b.i.c.m.d.k.n0, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.c.m.d.k.n0, reason: use source file name */
+/* JADX INFO: compiled from: CrashlyticsReportDataCapture.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class CrashlyticsReportDataCapture {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final String f12353a = String.format(Locale.US, "Crashlytics Android SDK/%s", "17.3.0");
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static final Map<String, Integer> f12354b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final Context f12355c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final IdManager f12356d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final AppData f12357e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final StackTraceTrimmingStrategy f12358f;
 
     static {
@@ -52,7 +52,7 @@ public class CrashlyticsReportDataCapture {
         this.f12358f = stackTraceTrimmingStrategy;
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final CrashlyticsReport.d.AbstractC13233d.a.b.AbstractC13236b m6446a(TrimmedThrowableData trimmedThrowableData, int i, int i2, int i3) {
         String str = trimmedThrowableData.f12778b;
         String str2 = trimmedThrowableData.f12777a;
@@ -83,7 +83,7 @@ public class CrashlyticsReportDataCapture {
         throw new IllegalStateException(outline.m883w("Missing required properties:", str3));
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final ImmutableList3<CrashlyticsReport.d.AbstractC13233d.a.b.AbstractC13237d.AbstractC13238a> m6447b(StackTraceElement[] stackTraceElementArr, int i) {
         ArrayList arrayList = new ArrayList();
         for (StackTraceElement stackTraceElement : stackTraceElementArr) {
@@ -106,7 +106,7 @@ public class CrashlyticsReportDataCapture {
         return new ImmutableList3<>(arrayList);
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final CrashlyticsReport.d.AbstractC13233d.a.b.AbstractC13237d m6448c(Thread thread, StackTraceElement[] stackTraceElementArr, int i) {
         String name = thread.getName();
         Objects.requireNonNull(name, "Null name");

@@ -11,27 +11,27 @@ import p007b.p195g.p196a.p205c.p218h0.SimpleType;
 import p007b.p195g.p196a.p205c.p219i0.ClassUtil;
 import p007b.p195g.p196a.p205c.p221z.MapperConfig;
 
-/* compiled from: BasicClassIntrospector.java */
-/* renamed from: b.g.a.c.c0.r, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.g.a.c.c0.r, reason: use source file name */
+/* JADX INFO: compiled from: BasicClassIntrospector.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class BasicClassIntrospector extends ClassIntrospector implements Serializable {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static final Class<?> f4741j = JsonNode.class;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public static final BasicBeanDescription f4742k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public static final BasicBeanDescription f4743l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public static final BasicBeanDescription f4744m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public static final BasicBeanDescription f4745n;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public static final BasicBeanDescription f4746o;
     private static final long serialVersionUID = 2;
 
@@ -48,7 +48,7 @@ public class BasicClassIntrospector extends ClassIntrospector implements Seriali
         f4746o = BasicBeanDescription.m1918e(null, SimpleType.m2138L(Object.class), new AnnotatedClass(Object.class));
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public BasicBeanDescription m1920a(MapperConfig<?> mapperConfig, JavaType javaType) {
         Class<?> cls = javaType._class;
         if (cls.isPrimitive()) {
@@ -88,7 +88,7 @@ public class BasicClassIntrospector extends ClassIntrospector implements Seriali
         return null;
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public AnnotatedClass m1921b(MapperConfig<?> mapperConfig, JavaType javaType, ClassIntrospector.a aVar) {
         Class<?> cls = AnnotatedClassResolver.f4692a;
         Objects.requireNonNull(javaType);

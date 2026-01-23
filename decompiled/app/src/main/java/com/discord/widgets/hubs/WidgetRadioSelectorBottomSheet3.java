@@ -8,15 +8,15 @@ import java.util.List;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: WidgetRadioSelectorBottomSheet.kt */
-/* renamed from: com.discord.widgets.hubs.RadioSelectorItems, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.hubs.RadioSelectorItems, reason: use source file name */
+/* JADX INFO: compiled from: WidgetRadioSelectorBottomSheet.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final /* data */ class WidgetRadioSelectorBottomSheet3 implements Parcelable {
     public static final Parcelable.Creator<WidgetRadioSelectorBottomSheet3> CREATOR = new Creator();
     private final List<WidgetRadioSelectorBottomSheet2> items;
     private final String title;
 
-    /* renamed from: com.discord.widgets.hubs.RadioSelectorItems$Creator */
+    /* JADX INFO: renamed from: com.discord.widgets.hubs.RadioSelectorItems$Creator */
     public static class Creator implements Parcelable.Creator<WidgetRadioSelectorBottomSheet3> {
         /* JADX WARN: Can't rename method to resolve collision */
         @Override // android.os.Parcelable.Creator
@@ -67,7 +67,7 @@ public final /* data */ class WidgetRadioSelectorBottomSheet3 implements Parcela
         return widgetRadioSelectorBottomSheet3.copy(str, list);
     }
 
-    /* renamed from: component1, reason: from getter */
+    /* JADX INFO: renamed from: component1, reason: from getter */
     public final String getTitle() {
         return this.title;
     }

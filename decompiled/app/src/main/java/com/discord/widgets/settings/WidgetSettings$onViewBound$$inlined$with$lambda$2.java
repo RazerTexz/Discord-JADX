@@ -4,8 +4,8 @@ import kotlin.Unit;
 import kotlin.jvm.functions.Function0;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetSettings.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetSettings.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetSettings$onViewBound$$inlined$with$lambda$2 extends Lambda implements Function0<Unit> {
     public final /* synthetic */ WidgetSettings this$0;
 
@@ -21,7 +21,7 @@ public final class WidgetSettings$onViewBound$$inlined$with$lambda$2 extends Lam
         return Unit.f27425a;
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final void invoke2() {
         WidgetSettings.access$getViewModelUserProfileHeader$p(this.this$0).toggleAllowAnimationInReducedMotion();
     }

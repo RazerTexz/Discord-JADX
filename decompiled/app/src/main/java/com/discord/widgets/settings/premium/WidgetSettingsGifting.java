@@ -91,27 +91,27 @@ import p507d0.p592z.p594d.Lambda;
 import p507d0.p592z.p594d.Reflection2;
 import p658rx.Observable;
 
-/* compiled from: WidgetSettingsGifting.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetSettingsGifting.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetSettingsGifting extends AppFragment {
     public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetSettingsGifting.class, "binding", "getBinding()Lcom/discord/databinding/WidgetSettingsGiftingBinding;", 0)};
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     public static final int VIEW_INDEX_FAILURE = 1;
     public static final int VIEW_INDEX_LOADED = 2;
     public static final int VIEW_INDEX_LOADING = 0;
 
-    /* renamed from: binding$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
     private Map<GiftSelectView, GooglePlayInAppSku> chooseGiftViews;
     private WidgetSettingsGiftingAdapter giftingAdapter;
     private WidgetSettingsGiftingOutboundPromosAdapter promosAdapter;
 
-    /* renamed from: viewModel$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: viewModel$delegate, reason: from kotlin metadata */
     private final Lazy viewModel;
 
-    /* compiled from: WidgetSettingsGifting.kt */
+    /* JADX INFO: compiled from: WidgetSettingsGifting.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -138,8 +138,8 @@ public final class WidgetSettingsGifting extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetSettingsGifting.kt */
-    /* renamed from: com.discord.widgets.settings.premium.WidgetSettingsGifting$configureUI$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.premium.WidgetSettingsGifting$configureUI$1 */
+    /* JADX INFO: compiled from: WidgetSettingsGifting.kt */
     public static final class C99021 extends Lambda implements Function2<Long, Long, Unit> {
         public C99021() {
             super(2);
@@ -156,8 +156,8 @@ public final class WidgetSettingsGifting extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetSettingsGifting.kt */
-    /* renamed from: com.discord.widgets.settings.premium.WidgetSettingsGifting$configureUI$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.premium.WidgetSettingsGifting$configureUI$2 */
+    /* JADX INFO: compiled from: WidgetSettingsGifting.kt */
     public static final class C99032 extends Lambda implements Function1<String, Unit> {
         public C99032() {
             super(1);
@@ -169,7 +169,7 @@ public final class WidgetSettingsGifting extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(String str) {
             Intrinsics3.checkNotNullParameter(str, "giftCode");
             Context context = WidgetSettingsGifting.this.getContext();
@@ -182,8 +182,8 @@ public final class WidgetSettingsGifting extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetSettingsGifting.kt */
-    /* renamed from: com.discord.widgets.settings.premium.WidgetSettingsGifting$configureUI$3 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.premium.WidgetSettingsGifting$configureUI$3 */
+    /* JADX INFO: compiled from: WidgetSettingsGifting.kt */
     public static final class C99043 extends Lambda implements Function1<ModelGift, Unit> {
         public static final C99043 INSTANCE = new C99043();
 
@@ -197,15 +197,15 @@ public final class WidgetSettingsGifting extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(ModelGift modelGift) {
             Intrinsics3.checkNotNullParameter(modelGift, "gift");
             StoreStream.INSTANCE.getGifting().revokeGiftCode(modelGift);
         }
     }
 
-    /* compiled from: WidgetSettingsGifting.kt */
-    /* renamed from: com.discord.widgets.settings.premium.WidgetSettingsGifting$configureUI$4 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.premium.WidgetSettingsGifting$configureUI$4 */
+    /* JADX INFO: compiled from: WidgetSettingsGifting.kt */
     public static final class C99054 extends Lambda implements Function2<Long, Long, Unit> {
         public static final C99054 INSTANCE = new C99054();
 
@@ -224,8 +224,8 @@ public final class WidgetSettingsGifting extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetSettingsGifting.kt */
-    /* renamed from: com.discord.widgets.settings.premium.WidgetSettingsGifting$handleEvent$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.premium.WidgetSettingsGifting$handleEvent$1 */
+    /* JADX INFO: compiled from: WidgetSettingsGifting.kt */
     public static final class C99061 extends Lambda implements Function1<ClaimStatus.Claimed, Unit> {
         public C99061() {
             super(1);
@@ -237,15 +237,15 @@ public final class WidgetSettingsGifting extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(ClaimStatus.Claimed claimed) {
             Intrinsics3.checkNotNullParameter(claimed, "it");
             WidgetSettingsGifting.access$getViewModel$p(WidgetSettingsGifting.this).handleClaimedPromo(claimed);
         }
     }
 
-    /* compiled from: WidgetSettingsGifting.kt */
-    /* renamed from: com.discord.widgets.settings.premium.WidgetSettingsGifting$handleGiftPurchaseEvent$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.premium.WidgetSettingsGifting$handleGiftPurchaseEvent$1 */
+    /* JADX INFO: compiled from: WidgetSettingsGifting.kt */
     public static final class C99071 extends Lambda implements Function0<Unit> {
         public C99071() {
             super(0);
@@ -257,14 +257,14 @@ public final class WidgetSettingsGifting extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             WidgetSettingsGifting.this.requireAppActivity().setResult(-1);
         }
     }
 
-    /* compiled from: WidgetSettingsGifting.kt */
-    /* renamed from: com.discord.widgets.settings.premium.WidgetSettingsGifting$onViewBound$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.premium.WidgetSettingsGifting$onViewBound$1 */
+    /* JADX INFO: compiled from: WidgetSettingsGifting.kt */
     public static final class ViewOnClickListenerC99081 implements View.OnClickListener {
         public static final ViewOnClickListenerC99081 INSTANCE = new ViewOnClickListenerC99081();
 
@@ -274,8 +274,8 @@ public final class WidgetSettingsGifting extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetSettingsGifting.kt */
-    /* renamed from: com.discord.widgets.settings.premium.WidgetSettingsGifting$onViewBound$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.premium.WidgetSettingsGifting$onViewBound$2 */
+    /* JADX INFO: compiled from: WidgetSettingsGifting.kt */
     public static final class C99092 extends Lambda implements Function1<TextView, Unit> {
         public C99092() {
             super(1);
@@ -287,7 +287,7 @@ public final class WidgetSettingsGifting extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(TextView textView) {
             Intrinsics3.checkNotNullParameter(textView, "it");
             TextInputLayout textInputLayout = WidgetSettingsGifting.access$getBinding$p(WidgetSettingsGifting.this).f17963k;
@@ -296,8 +296,8 @@ public final class WidgetSettingsGifting extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetSettingsGifting.kt */
-    /* renamed from: com.discord.widgets.settings.premium.WidgetSettingsGifting$onViewBound$3 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.premium.WidgetSettingsGifting$onViewBound$3 */
+    /* JADX INFO: compiled from: WidgetSettingsGifting.kt */
     public static final /* synthetic */ class C99103 extends FunctionReferenceImpl implements Function1<SettingsGiftingViewModel.OutboundPromoItem, Unit> {
         public C99103(SettingsGiftingViewModel settingsGiftingViewModel) {
             super(1, settingsGiftingViewModel, SettingsGiftingViewModel.class, "handlePromoMoreDetailsClicked", "handlePromoMoreDetailsClicked(Lcom/discord/widgets/settings/premium/SettingsGiftingViewModel$OutboundPromoItem;)V", 0);
@@ -309,15 +309,15 @@ public final class WidgetSettingsGifting extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(SettingsGiftingViewModel.OutboundPromoItem outboundPromoItem) {
             Intrinsics3.checkNotNullParameter(outboundPromoItem, "p1");
             ((SettingsGiftingViewModel) this.receiver).handlePromoMoreDetailsClicked(outboundPromoItem);
         }
     }
 
-    /* compiled from: WidgetSettingsGifting.kt */
-    /* renamed from: com.discord.widgets.settings.premium.WidgetSettingsGifting$onViewBound$4 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.premium.WidgetSettingsGifting$onViewBound$4 */
+    /* JADX INFO: compiled from: WidgetSettingsGifting.kt */
     public static final /* synthetic */ class C99114 extends FunctionReferenceImpl implements Function1<SettingsGiftingViewModel.OutboundPromoItem, Unit> {
         public C99114(SettingsGiftingViewModel settingsGiftingViewModel) {
             super(1, settingsGiftingViewModel, SettingsGiftingViewModel.class, "handlePromoButtonClicked", "handlePromoButtonClicked(Lcom/discord/widgets/settings/premium/SettingsGiftingViewModel$OutboundPromoItem;)V", 0);
@@ -329,20 +329,20 @@ public final class WidgetSettingsGifting extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(SettingsGiftingViewModel.OutboundPromoItem outboundPromoItem) {
             Intrinsics3.checkNotNullParameter(outboundPromoItem, "p1");
             ((SettingsGiftingViewModel) this.receiver).handlePromoButtonClicked(outboundPromoItem);
         }
     }
 
-    /* compiled from: WidgetSettingsGifting.kt */
-    /* renamed from: com.discord.widgets.settings.premium.WidgetSettingsGifting$onViewBound$7 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.premium.WidgetSettingsGifting$onViewBound$7 */
+    /* JADX INFO: compiled from: WidgetSettingsGifting.kt */
     public static final class C99127 extends Lambda implements Function1<RenderContext, Unit> {
         public static final C99127 INSTANCE = new C99127();
 
-        /* compiled from: WidgetSettingsGifting.kt */
-        /* renamed from: com.discord.widgets.settings.premium.WidgetSettingsGifting$onViewBound$7$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.widgets.settings.premium.WidgetSettingsGifting$onViewBound$7$1, reason: invalid class name */
+        /* JADX INFO: compiled from: WidgetSettingsGifting.kt */
         public static final class AnonymousClass1 extends Lambda implements Function1<View, Unit> {
             public static final AnonymousClass1 INSTANCE = new AnonymousClass1();
 
@@ -356,7 +356,7 @@ public final class WidgetSettingsGifting extends AppFragment {
                 return Unit.f27425a;
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2(View view) {
                 Intrinsics3.checkNotNullParameter(view, "view");
                 WidgetSettingsPremium.Companion companion = WidgetSettingsPremium.INSTANCE;
@@ -376,20 +376,20 @@ public final class WidgetSettingsGifting extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(RenderContext renderContext) {
             Intrinsics3.checkNotNullParameter(renderContext, "$receiver");
             renderContext.m8423b("onClick", AnonymousClass1.INSTANCE);
         }
     }
 
-    /* compiled from: WidgetSettingsGifting.kt */
-    /* renamed from: com.discord.widgets.settings.premium.WidgetSettingsGifting$onViewBound$8 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.premium.WidgetSettingsGifting$onViewBound$8 */
+    /* JADX INFO: compiled from: WidgetSettingsGifting.kt */
     public static final class C99138 extends Lambda implements Function1<RenderContext, Unit> {
         public static final C99138 INSTANCE = new C99138();
 
-        /* compiled from: WidgetSettingsGifting.kt */
-        /* renamed from: com.discord.widgets.settings.premium.WidgetSettingsGifting$onViewBound$8$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.widgets.settings.premium.WidgetSettingsGifting$onViewBound$8$1, reason: invalid class name */
+        /* JADX INFO: compiled from: WidgetSettingsGifting.kt */
         public static final class AnonymousClass1 extends Lambda implements Function1<View, Unit> {
             public static final AnonymousClass1 INSTANCE = new AnonymousClass1();
 
@@ -403,7 +403,7 @@ public final class WidgetSettingsGifting extends AppFragment {
                 return Unit.f27425a;
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2(View view) {
                 Intrinsics3.checkNotNullParameter(view, "view");
                 WidgetSettingsPremium.Companion companion = WidgetSettingsPremium.INSTANCE;
@@ -423,15 +423,15 @@ public final class WidgetSettingsGifting extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(RenderContext renderContext) {
             Intrinsics3.checkNotNullParameter(renderContext, "$receiver");
             renderContext.m8423b("onClick", AnonymousClass1.INSTANCE);
         }
     }
 
-    /* compiled from: WidgetSettingsGifting.kt */
-    /* renamed from: com.discord.widgets.settings.premium.WidgetSettingsGifting$onViewBoundOrOnResume$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.premium.WidgetSettingsGifting$onViewBoundOrOnResume$1 */
+    /* JADX INFO: compiled from: WidgetSettingsGifting.kt */
     public static final /* synthetic */ class C99151 extends FunctionReferenceImpl implements Function1<SettingsGiftingViewModel.ViewState, Unit> {
         public C99151(WidgetSettingsGifting widgetSettingsGifting) {
             super(1, widgetSettingsGifting, WidgetSettingsGifting.class, "configureUI", "configureUI(Lcom/discord/widgets/settings/premium/SettingsGiftingViewModel$ViewState;)V", 0);
@@ -443,15 +443,15 @@ public final class WidgetSettingsGifting extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(SettingsGiftingViewModel.ViewState viewState) {
             Intrinsics3.checkNotNullParameter(viewState, "p1");
             WidgetSettingsGifting.access$configureUI((WidgetSettingsGifting) this.receiver, viewState);
         }
     }
 
-    /* compiled from: WidgetSettingsGifting.kt */
-    /* renamed from: com.discord.widgets.settings.premium.WidgetSettingsGifting$onViewBoundOrOnResume$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.premium.WidgetSettingsGifting$onViewBoundOrOnResume$2 */
+    /* JADX INFO: compiled from: WidgetSettingsGifting.kt */
     public static final /* synthetic */ class C99162 extends FunctionReferenceImpl implements Function1<SettingsGiftingViewModel.GiftPurchaseEvent, Unit> {
         public C99162(WidgetSettingsGifting widgetSettingsGifting) {
             super(1, widgetSettingsGifting, WidgetSettingsGifting.class, "handleGiftPurchaseEvent", "handleGiftPurchaseEvent(Lcom/discord/widgets/settings/premium/SettingsGiftingViewModel$GiftPurchaseEvent;)V", 0);
@@ -463,15 +463,15 @@ public final class WidgetSettingsGifting extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(SettingsGiftingViewModel.GiftPurchaseEvent giftPurchaseEvent) {
             Intrinsics3.checkNotNullParameter(giftPurchaseEvent, "p1");
             WidgetSettingsGifting.access$handleGiftPurchaseEvent((WidgetSettingsGifting) this.receiver, giftPurchaseEvent);
         }
     }
 
-    /* compiled from: WidgetSettingsGifting.kt */
-    /* renamed from: com.discord.widgets.settings.premium.WidgetSettingsGifting$onViewBoundOrOnResume$3 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.premium.WidgetSettingsGifting$onViewBoundOrOnResume$3 */
+    /* JADX INFO: compiled from: WidgetSettingsGifting.kt */
     public static final /* synthetic */ class C99173 extends FunctionReferenceImpl implements Function1<SettingsGiftingViewModel.Event, Unit> {
         public C99173(WidgetSettingsGifting widgetSettingsGifting) {
             super(1, widgetSettingsGifting, WidgetSettingsGifting.class, "handleEvent", "handleEvent(Lcom/discord/widgets/settings/premium/SettingsGiftingViewModel$Event;)V", 0);
@@ -483,15 +483,15 @@ public final class WidgetSettingsGifting extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(SettingsGiftingViewModel.Event event) {
             Intrinsics3.checkNotNullParameter(event, "p1");
             WidgetSettingsGifting.access$handleEvent((WidgetSettingsGifting) this.receiver, event);
         }
     }
 
-    /* compiled from: WidgetSettingsGifting.kt */
-    /* renamed from: com.discord.widgets.settings.premium.WidgetSettingsGifting$onViewBoundOrOnResume$4 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.premium.WidgetSettingsGifting$onViewBoundOrOnResume$4 */
+    /* JADX INFO: compiled from: WidgetSettingsGifting.kt */
     public static final class C99184 extends Lambda implements Function1<String, Unit> {
         public static final C99184 INSTANCE = new C99184();
 
@@ -505,7 +505,7 @@ public final class WidgetSettingsGifting extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(String str) {
             Intrinsics3.checkNotNullParameter(str, "giftCode");
             WidgetGiftAcceptDialog.INSTANCE.m107a(str, "Settings - Gifting", 0L);

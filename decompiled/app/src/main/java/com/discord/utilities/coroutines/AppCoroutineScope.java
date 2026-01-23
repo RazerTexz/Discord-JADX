@@ -14,9 +14,9 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p659s.p660a.Dispatchers;
 import p659s.p660a.p661a.MainDispatchers;
 
-/* compiled from: AppCoroutineScope.kt */
-/* renamed from: com.discord.utilities.coroutines.AppCoroutineScopeKt, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.utilities.coroutines.AppCoroutineScopeKt, reason: use source file name */
+/* JADX INFO: compiled from: AppCoroutineScope.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class AppCoroutineScope {
     public static final Job appLaunch(CoroutineScope coroutineScope, Class<?> cls, CoroutineContext coroutineContext, CoroutineStart coroutineStart, Function2<? super CoroutineScope, ? super Continuation<? super Unit>, ? extends Object> function2) {
         Intrinsics3.checkNotNullParameter(coroutineScope, "$this$appLaunch");

@@ -16,21 +16,21 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 import p658rx.Observable;
 
-/* compiled from: StoreBans.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: StoreBans.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class StoreBans extends StoreV2 {
     private final HashMap<Long, HashMap<Long, ModelBan>> bannedUsers;
     private HashMap<Long, HashMap<Long, ModelBan>> bannedUsersSnapshot;
     private final Dispatcher dispatcher;
     private final ObservationDeck observationDeck;
 
-    /* compiled from: StoreBans.kt */
-    /* renamed from: com.discord.stores.StoreBans$observeBans$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreBans$observeBans$1 */
+    /* JADX INFO: compiled from: StoreBans.kt */
     public static final class C57941 extends Lambda implements Function1<List<? extends ModelBan>, Unit> {
         public final /* synthetic */ long $guildId;
 
-        /* compiled from: StoreBans.kt */
-        /* renamed from: com.discord.stores.StoreBans$observeBans$1$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.stores.StoreBans$observeBans$1$1, reason: invalid class name */
+        /* JADX INFO: compiled from: StoreBans.kt */
         public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
             public final /* synthetic */ List $bans;
 
@@ -46,7 +46,7 @@ public final class StoreBans extends StoreV2 {
                 return Unit.f27425a;
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2() {
                 HashMap mapAccess$getBannedUsers$p = StoreBans.access$getBannedUsers$p(StoreBans.this);
                 Long lValueOf = Long.valueOf(C57941.this.$guildId);
@@ -75,15 +75,15 @@ public final class StoreBans extends StoreV2 {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(List<? extends ModelBan> list) {
             Intrinsics3.checkNotNullParameter(list, "bans");
             StoreBans.access$getDispatcher$p(StoreBans.this).schedule(new AnonymousClass1(list));
         }
     }
 
-    /* compiled from: StoreBans.kt */
-    /* renamed from: com.discord.stores.StoreBans$observeBans$2 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreBans$observeBans$2 */
+    /* JADX INFO: compiled from: StoreBans.kt */
     public static final class C57952 extends Lambda implements Function0<Map<Long, ? extends ModelBan>> {
         public final /* synthetic */ long $guildId;
 
@@ -99,7 +99,7 @@ public final class StoreBans extends StoreV2 {
         }
 
         @Override // kotlin.jvm.functions.Function0
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final Map<Long, ? extends ModelBan> invoke2() {
             return (Map) StoreBans.access$getBannedUsersSnapshot$p(StoreBans.this).get(Long.valueOf(this.$guildId));
         }

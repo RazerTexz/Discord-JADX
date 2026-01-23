@@ -4,15 +4,15 @@ import java.io.Serializable;
 import java.util.List;
 import p007b.p195g.p196a.p205c.DeserializationContext;
 
-/* compiled from: DefaultDeserializationContext.java */
-/* renamed from: b.g.a.c.a0.d, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.g.a.c.a0.d, reason: use source file name */
+/* JADX INFO: compiled from: DefaultDeserializationContext.java */
+/* JADX INFO: loaded from: classes3.dex */
 public abstract class DefaultDeserializationContext extends DeserializationContext implements Serializable {
     private static final long serialVersionUID = 1;
     private List<?> _objectIdResolvers;
 
-    /* compiled from: DefaultDeserializationContext.java */
-    /* renamed from: b.g.a.c.a0.d$a */
+    /* JADX INFO: renamed from: b.g.a.c.a0.d$a */
+    /* JADX INFO: compiled from: DefaultDeserializationContext.java */
     public static final class a extends DefaultDeserializationContext {
         private static final long serialVersionUID = 1;
 

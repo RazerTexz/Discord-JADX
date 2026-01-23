@@ -6,12 +6,12 @@ import p658rx.Observable;
 import p658rx.Subscriber;
 import p658rx.functions.Func0;
 
-/* compiled from: OnSubscribeDefer.java */
-/* renamed from: j0.l.a.j, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: j0.l.a.j, reason: use source file name */
+/* JADX INFO: compiled from: OnSubscribeDefer.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class OnSubscribeDefer<T> implements Observable.InterfaceC13005a<T> {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final Func0<? extends Observable<? extends T>> f26853j;
 
     public OnSubscribeDefer(Func0<? extends Observable<? extends T>> func0) {

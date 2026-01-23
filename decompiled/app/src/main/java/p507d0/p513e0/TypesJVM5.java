@@ -17,11 +17,11 @@ import p507d0.p592z.JvmClassMapping;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.KTypeBase;
 
-/* compiled from: TypesJVM.kt */
-/* renamed from: d0.e0.n, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.n, reason: use source file name */
+/* JADX INFO: compiled from: TypesJVM.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class TypesJVM5 {
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final Type m9328a(KType kType, boolean z2) {
         KClassifier classifier = kType.getClassifier();
         if (classifier instanceof KTypeParameter) {
@@ -87,7 +87,7 @@ public final class TypesJVM5 {
         return name;
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static final Type m9329b(Class<?> cls, List<KTypeProjection> list) {
         Class<?> declaringClass = cls.getDeclaringClass();
         if (declaringClass == null) {
@@ -117,7 +117,7 @@ public final class TypesJVM5 {
         return new TypesJVM2(cls, typeM9329b, arrayList3);
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public static final Type m9330c(KTypeProjection kTypeProjection) {
         KVariance variance = kTypeProjection.getVariance();
         if (variance == null) {

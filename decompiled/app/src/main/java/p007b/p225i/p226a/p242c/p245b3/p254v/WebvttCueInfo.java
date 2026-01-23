@@ -2,18 +2,18 @@ package p007b.p225i.p226a.p242c.p245b3.p254v;
 
 import p007b.p225i.p226a.p242c.p245b3.Cue;
 
-/* compiled from: WebvttCueInfo.java */
-/* renamed from: b.i.a.c.b3.v.g, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.b3.v.g, reason: use source file name */
+/* JADX INFO: compiled from: WebvttCueInfo.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class WebvttCueInfo {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final Cue f6131a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final long f6132b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final long f6133c;
 
     public WebvttCueInfo(Cue cue, long j, long j2) {

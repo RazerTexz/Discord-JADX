@@ -8,15 +8,15 @@ import p007b.p085c.p086a.p087a0.p088i0.JsonReader2;
 import p007b.p085c.p086a.p090c0.Keyframe;
 import p007b.p085c.p086a.p091w.p093c.PathKeyframe;
 
-/* compiled from: KeyframesParser.java */
-/* renamed from: b.c.a.a0.r, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.c.a.a0.r, reason: use source file name */
+/* JADX INFO: compiled from: KeyframesParser.java */
+/* JADX INFO: loaded from: classes.dex */
 public class KeyframesParser {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static JsonReader2.a f2279a = JsonReader2.a.m616a("k");
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static <T> List<Keyframe<T>> m632a(JsonReader2 jsonReader2, LottieComposition lottieComposition, float f, ValueParser<T> valueParser) throws IOException {
         ArrayList arrayList = new ArrayList();
         if (jsonReader2.mo613u() == JsonReader2.b.STRING) {
@@ -46,7 +46,7 @@ public class KeyframesParser {
         return arrayList;
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static <T> void m633b(List<? extends Keyframe<T>> list) {
         int i;
         T t;

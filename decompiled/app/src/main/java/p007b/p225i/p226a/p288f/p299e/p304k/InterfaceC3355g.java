@@ -7,16 +7,16 @@ import android.os.RemoteException;
 import androidx.annotation.RecentlyNonNull;
 import p007b.p225i.p226a.p288f.p313h.p320g.BinderC3482b;
 
-/* compiled from: com.google.android.gms:play-services-basement@@17.6.0 */
-/* renamed from: b.i.a.f.e.k.g */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.e.k.g */
+/* JADX INFO: compiled from: com.google.android.gms:play-services-basement@@17.6.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public interface InterfaceC3355g extends IInterface {
 
-    /* compiled from: com.google.android.gms:play-services-basement@@17.6.0 */
-    /* renamed from: b.i.a.f.e.k.g$a */
+    /* JADX INFO: renamed from: b.i.a.f.e.k.g$a */
+    /* JADX INFO: compiled from: com.google.android.gms:play-services-basement@@17.6.0 */
     public static abstract class a extends BinderC3482b implements InterfaceC3355g {
         @RecentlyNonNull
-        /* renamed from: g */
+        /* JADX INFO: renamed from: g */
         public static InterfaceC3355g m4157g(@RecentlyNonNull IBinder iBinder) {
             if (iBinder == null) {
                 return null;
@@ -27,6 +27,6 @@ public interface InterfaceC3355g extends IInterface {
     }
 
     @RecentlyNonNull
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     Account mo4156b() throws RemoteException;
 }

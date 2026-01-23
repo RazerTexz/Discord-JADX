@@ -7,39 +7,39 @@ import java.util.concurrent.atomic.AtomicLong;
 import java.util.concurrent.atomic.AtomicReferenceArray;
 import p637j0.p642l.p647e.UtilityFunctions;
 
-/* compiled from: SpscLinkedArrayQueue.java */
-/* renamed from: j0.l.e.n.e, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: j0.l.e.n.e, reason: use source file name */
+/* JADX INFO: compiled from: SpscLinkedArrayQueue.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class SpscLinkedArrayQueue<T> implements Queue<T> {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static final int f27310j = Integer.getInteger("jctools.spsc.max.lookahead.step", 4096).intValue();
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public static final Object f27311k = new Object();
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final AtomicLong f27312l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public int f27313m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public long f27314n;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public int f27315o;
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public AtomicReferenceArray<Object> f27316p;
 
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     public int f27317q;
 
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     public AtomicReferenceArray<Object> f27318r;
 
-    /* renamed from: s */
+    /* JADX INFO: renamed from: s */
     public final AtomicLong f27319s;
 
     public SpscLinkedArrayQueue(int i) {
@@ -66,7 +66,7 @@ public final class SpscLinkedArrayQueue<T> implements Queue<T> {
         throw new UnsupportedOperationException();
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final long m10828c() {
         return this.f27319s.get();
     }
@@ -90,12 +90,12 @@ public final class SpscLinkedArrayQueue<T> implements Queue<T> {
         throw new UnsupportedOperationException();
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final long m10829d() {
         return this.f27312l.get();
     }
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public boolean m10830e(T t, T t2) {
         AtomicReferenceArray<Object> atomicReferenceArray = this.f27316p;
         long jM10829d = m10829d();
@@ -145,7 +145,7 @@ public final class SpscLinkedArrayQueue<T> implements Queue<T> {
             this.f27312l.lazySet(j + 1);
             return true;
         }
-        long j2 = this.f27313m + j;
+        long j2 = ((long) this.f27313m) + j;
         if (atomicReferenceArray.get(((int) j2) & i) == null) {
             this.f27314n = j2 - 1;
             atomicReferenceArray.lazySet(i2, t);
@@ -160,7 +160,7 @@ public final class SpscLinkedArrayQueue<T> implements Queue<T> {
         }
         AtomicReferenceArray<Object> atomicReferenceArray2 = new AtomicReferenceArray<>(atomicReferenceArray.length());
         this.f27316p = atomicReferenceArray2;
-        this.f27314n = (i + j) - 1;
+        this.f27314n = (((long) i) + j) - 1;
         atomicReferenceArray2.lazySet(i2, t);
         atomicReferenceArray.lazySet(atomicReferenceArray.length() - 1, atomicReferenceArray2);
         atomicReferenceArray.lazySet(i2, f27311k);

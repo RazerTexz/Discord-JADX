@@ -4,7 +4,7 @@ import android.view.View;
 import androidx.recyclerview.widget.RecyclerView;
 import p007b.p100d.p104b.p105a.outline;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class LayoutState {
     public static final int INVALID_LAYOUT = Integer.MIN_VALUE;
     public static final int ITEM_DIRECTION_HEAD = -1;

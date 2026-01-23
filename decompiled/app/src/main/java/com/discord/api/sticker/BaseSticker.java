@@ -1,18 +1,18 @@
 package com.discord.api.sticker;
 
 
-/* compiled from: BaseSticker.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: BaseSticker.kt */
+/* JADX INFO: loaded from: classes.dex */
 public interface BaseSticker {
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     StickerFormatType getFormatType();
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     String mo8228b();
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     StickerPartial mo8229c();
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     long getId();
 }

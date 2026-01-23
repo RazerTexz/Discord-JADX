@@ -8,7 +8,7 @@ import java.io.OutputStream;
 import java.nio.ByteOrder;
 import org.objectweb.asm.Opcodes;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public final class UnsafeOutput extends Output {
     private static final boolean isLittleEndian = ByteOrder.nativeOrder().equals(ByteOrder.LITTLE_ENDIAN);
     private boolean supportVarInts;
@@ -17,7 +17,7 @@ public final class UnsafeOutput extends Output {
         this.supportVarInts = false;
     }
 
-    private final void writeLittleEndianInt(int i) throws KryoException {
+    private final void writeLittleEndianInt(int i) {
         if (isLittleEndian) {
             writeInt(i);
         } else {
@@ -25,7 +25,7 @@ public final class UnsafeOutput extends Output {
         }
     }
 
-    private final void writeLittleEndianLong(long j) throws KryoException {
+    private final void writeLittleEndianLong(long j) {
         if (isLittleEndian) {
             writeLong(j);
         } else {
@@ -44,7 +44,7 @@ public final class UnsafeOutput extends Output {
     @Override // com.esotericsoftware.kryo.p502io.Output
     public final void writeChar(char c) throws KryoException {
         require(2);
-        UnsafeUtil.unsafe().putChar(this.buffer, UnsafeUtil.byteArrayBaseOffset + this.position, c);
+        UnsafeUtil.unsafe().putChar(this.buffer, UnsafeUtil.byteArrayBaseOffset + ((long) this.position), c);
         this.position += 2;
     }
 
@@ -56,7 +56,7 @@ public final class UnsafeOutput extends Output {
     @Override // com.esotericsoftware.kryo.p502io.Output
     public final void writeDouble(double d) throws KryoException {
         require(8);
-        UnsafeUtil.unsafe().putDouble(this.buffer, UnsafeUtil.byteArrayBaseOffset + this.position, d);
+        UnsafeUtil.unsafe().putDouble(this.buffer, UnsafeUtil.byteArrayBaseOffset + ((long) this.position), d);
         this.position += 8;
     }
 
@@ -68,7 +68,7 @@ public final class UnsafeOutput extends Output {
     @Override // com.esotericsoftware.kryo.p502io.Output
     public final void writeFloat(float f) throws KryoException {
         require(4);
-        UnsafeUtil.unsafe().putFloat(this.buffer, UnsafeUtil.byteArrayBaseOffset + this.position, f);
+        UnsafeUtil.unsafe().putFloat(this.buffer, UnsafeUtil.byteArrayBaseOffset + ((long) this.position), f);
         this.position += 4;
     }
 
@@ -80,7 +80,7 @@ public final class UnsafeOutput extends Output {
     @Override // com.esotericsoftware.kryo.p502io.Output
     public final void writeInt(int i) throws KryoException {
         require(4);
-        UnsafeUtil.unsafe().putInt(this.buffer, UnsafeUtil.byteArrayBaseOffset + this.position, i);
+        UnsafeUtil.unsafe().putInt(this.buffer, UnsafeUtil.byteArrayBaseOffset + ((long) this.position), i);
         this.position += 4;
     }
 
@@ -96,7 +96,7 @@ public final class UnsafeOutput extends Output {
     @Override // com.esotericsoftware.kryo.p502io.Output
     public final void writeLong(long j) throws KryoException {
         require(8);
-        UnsafeUtil.unsafe().putLong(this.buffer, UnsafeUtil.byteArrayBaseOffset + this.position, j);
+        UnsafeUtil.unsafe().putLong(this.buffer, UnsafeUtil.byteArrayBaseOffset + ((long) this.position), j);
         this.position += 8;
     }
 
@@ -112,7 +112,7 @@ public final class UnsafeOutput extends Output {
     @Override // com.esotericsoftware.kryo.p502io.Output
     public final void writeShort(int i) throws KryoException {
         require(2);
-        UnsafeUtil.unsafe().putShort(this.buffer, UnsafeUtil.byteArrayBaseOffset + this.position, (short) i);
+        UnsafeUtil.unsafe().putShort(this.buffer, UnsafeUtil.byteArrayBaseOffset + ((long) this.position), (short) i);
         this.position += 2;
     }
 
@@ -147,12 +147,13 @@ public final class UnsafeOutput extends Output {
             return 3;
         }
         int i8 = i6 | 8388608 | ((i7 & Opcodes.LAND) << 24);
-        if ((i7 >>> 7) == 0) {
+        int i9 = i7 >>> 7;
+        if (i9 == 0) {
             writeLittleEndianInt(i8);
             this.position += 0;
             return 4;
         }
-        writeLittleEndianLong((((r7 & Opcodes.LAND) << 32) | i8 | Permission.USE_APPLICATION_COMMANDS) & 68719476735L);
+        writeLittleEndianLong(((((long) (i9 & Opcodes.LAND)) << 32) | ((long) i8) | Permission.USE_APPLICATION_COMMANDS) & 68719476735L);
         this.position -= 3;
         return 5;
     }
@@ -166,28 +167,28 @@ public final class UnsafeOutput extends Output {
             writeByte(i);
             return 1;
         }
-        int i2 = (int) (i | 128 | ((j3 & 127) << 8));
+        int i2 = (int) (((long) (i | 128)) | ((j3 & 127) << 8));
         long j4 = j3 >>> 7;
         if (j4 == 0) {
             writeLittleEndianInt(i2);
             this.position -= 2;
             return 2;
         }
-        int i3 = (int) (i2 | 32768 | ((j4 & 127) << 16));
+        int i3 = (int) (((long) (i2 | 32768)) | ((j4 & 127) << 16));
         long j5 = j4 >>> 7;
         if (j5 == 0) {
             writeLittleEndianInt(i3);
             this.position--;
             return 3;
         }
-        int i4 = (int) (i3 | 8388608 | ((j5 & 127) << 24));
+        int i4 = (int) (((long) (i3 | 8388608)) | ((j5 & 127) << 24));
         long j6 = j5 >>> 7;
         if (j6 == 0) {
             writeLittleEndianInt(i4);
             this.position += 0;
             return 4;
         }
-        long j7 = (i4 & 4294967295L) | Permission.USE_APPLICATION_COMMANDS | ((j6 & 127) << 32);
+        long j7 = (((long) i4) & 4294967295L) | Permission.USE_APPLICATION_COMMANDS | ((j6 & 127) << 32);
         long j8 = j6 >>> 7;
         if (j8 == 0) {
             writeLittleEndianLong(j7);
@@ -225,7 +226,7 @@ public final class UnsafeOutput extends Output {
         long j5 = j2;
         while (true) {
             long j6 = iMin;
-            UnsafeUtil.unsafe().copyMemory(obj, j + j5, this.buffer, UnsafeUtil.byteArrayBaseOffset + this.position, j6);
+            UnsafeUtil.unsafe().copyMemory(obj, j + j5, this.buffer, UnsafeUtil.byteArrayBaseOffset + ((long) this.position), j6);
             this.position += iMin;
             j4 -= j6;
             if (j4 == 0) {

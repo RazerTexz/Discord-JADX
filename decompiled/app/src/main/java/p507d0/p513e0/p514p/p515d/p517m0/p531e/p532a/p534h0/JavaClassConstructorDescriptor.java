@@ -15,15 +15,15 @@ import p507d0.p513e0.p514p.p515d.p517m0.p548g.Name;
 import p507d0.p513e0.p514p.p515d.p517m0.p552k.DescriptorFactory;
 import p507d0.p513e0.p514p.p515d.p517m0.p567n.KotlinType;
 
-/* compiled from: JavaClassConstructorDescriptor.java */
-/* renamed from: d0.e0.p.d.m0.e.a.h0.c, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.e.a.h0.c, reason: use source file name */
+/* JADX INFO: compiled from: JavaClassConstructorDescriptor.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class JavaClassConstructorDescriptor extends ClassConstructorDescriptorImpl implements JavaCallableMemberDescriptor {
 
-    /* renamed from: O */
+    /* JADX INFO: renamed from: O */
     public Boolean f23260O;
 
-    /* renamed from: P */
+    /* JADX INFO: renamed from: P */
     public Boolean f23261P;
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -49,7 +49,7 @@ public class JavaClassConstructorDescriptor extends ClassConstructorDescriptorIm
         this.f23261P = null;
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static /* synthetic */ void m9456a(int i) {
         String str = (i == 11 || i == 18) ? "@NotNull method %s.%s must not return null" : "Argument for @NotNull parameter '%s' of %s.%s must not be null";
         Object[] objArr = new Object[(i == 11 || i == 18) ? 2 : 3];
@@ -152,13 +152,13 @@ public class JavaClassConstructorDescriptor extends ClassConstructorDescriptorIm
     }
 
     @Override // p507d0.p513e0.p514p.p515d.p517m0.p521c.p524i1.ClassConstructorDescriptorImpl, p507d0.p513e0.p514p.p515d.p517m0.p521c.p524i1.FunctionDescriptorImpl
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public /* bridge */ /* synthetic */ FunctionDescriptorImpl mo9373b(DeclarationDescriptor declarationDescriptor, FunctionDescriptor functionDescriptor, CallableMemberDescriptor.a aVar, Name name, Annotations4 annotations4, SourceElement sourceElement) {
         return m9457f(declarationDescriptor, functionDescriptor, aVar, name, annotations4, sourceElement);
     }
 
     @Override // p507d0.p513e0.p514p.p515d.p517m0.p521c.p524i1.ClassConstructorDescriptorImpl
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public /* bridge */ /* synthetic */ ClassConstructorDescriptorImpl mo9408e(DeclarationDescriptor declarationDescriptor, FunctionDescriptor functionDescriptor, CallableMemberDescriptor.a aVar, Name name, Annotations4 annotations4, SourceElement sourceElement) {
         return m9457f(declarationDescriptor, functionDescriptor, aVar, name, annotations4, sourceElement);
     }
@@ -168,7 +168,7 @@ public class JavaClassConstructorDescriptor extends ClassConstructorDescriptorIm
         return enhance(kotlinType, (List<util4>) list, kotlinType2, (Tuples2<CallableDescriptor.a<?>, ?>) tuples2);
     }
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public JavaClassConstructorDescriptor m9457f(DeclarationDescriptor declarationDescriptor, FunctionDescriptor functionDescriptor, CallableMemberDescriptor.a aVar, Name name, Annotations4 annotations4, SourceElement sourceElement) {
         if (declarationDescriptor == null) {
             m9456a(7);

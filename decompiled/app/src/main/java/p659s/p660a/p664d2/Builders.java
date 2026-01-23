@@ -12,17 +12,17 @@ import p507d0.p584w.p586i.p587a.ContinuationImpl3;
 import p507d0.p584w.p586i.p587a.DebugMetadata;
 import p659s.p660a.p663c2.BufferOverflow;
 
-/* compiled from: Builders.kt */
-/* renamed from: s.a.d2.b, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: s.a.d2.b, reason: use source file name */
+/* JADX INFO: compiled from: Builders.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class Builders<T> extends Builders2<T> {
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final Function2<Produce<? super T>, Continuation<? super Unit>, Object> f27781e;
 
-    /* compiled from: Builders.kt */
+    /* JADX INFO: renamed from: s.a.d2.b$a */
+    /* JADX INFO: compiled from: Builders.kt */
     @DebugMetadata(m10084c = "kotlinx.coroutines.flow.CallbackFlowBuilder", m10085f = "Builders.kt", m10086l = {358}, m10087m = "collectTo")
-    /* renamed from: s.a.d2.b$a */
     public static final class a extends ContinuationImpl3 {
         public Object L$0;
         public Object L$1;
@@ -48,7 +48,7 @@ public final class Builders<T> extends Builders2<T> {
 
     /* JADX WARN: Removed duplicated region for block: B:7:0x0013  */
     @Override // p659s.p660a.p664d2.p665g.ChannelFlow
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */

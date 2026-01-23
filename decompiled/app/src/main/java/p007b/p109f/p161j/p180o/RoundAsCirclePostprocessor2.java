@@ -6,9 +6,9 @@ import com.facebook.imagepipeline.nativecode.NativeRoundingFilter;
 import p007b.p109f.p111b.p112a.SimpleCacheKey;
 import p007b.p109f.p161j.p182q.BasePostprocessor;
 
-/* compiled from: RoundAsCirclePostprocessor.java */
-/* renamed from: b.f.j.o.a, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.f.j.o.a, reason: use source file name */
+/* JADX INFO: compiled from: RoundAsCirclePostprocessor.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class RoundAsCirclePostprocessor2 extends BasePostprocessor {
     private static final boolean ENABLE_ANTI_ALIASING = true;
     private CacheKey mCacheKey;

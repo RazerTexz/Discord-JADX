@@ -9,21 +9,21 @@ import com.google.android.gms.common.internal.safeparcel.AbstractSafeParcelable;
 import p007b.p085c.p086a.p087a0.AnimatableValueParser;
 import p007b.p225i.p226a.p288f.p299e.p304k.C3370n0;
 
-/* compiled from: com.google.android.gms:play-services-basement@@17.6.0 */
-/* loaded from: classes3.dex */
+/* JADX INFO: compiled from: com.google.android.gms:play-services-basement@@17.6.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public final class zzi extends AbstractSafeParcelable {
     public static final Parcelable.Creator<zzi> CREATOR = new C3370n0();
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public Bundle f20555j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public Feature[] f20556k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public int f20557l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     @Nullable
     public ConnectionTelemetryConfiguration f20558m;
 

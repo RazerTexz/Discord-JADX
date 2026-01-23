@@ -11,15 +11,15 @@ import p007b.p195g.p196a.p197a.JsonIgnore;
 import p007b.p195g.p196a.p198b.JsonParser;
 import p007b.p195g.p196a.p205c.p219i0.ClassUtil;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public class JsonMappingException extends JsonProcessingException {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static final /* synthetic */ int f19661j = 0;
     private static final long serialVersionUID = 1;
     public LinkedList<C10677a> _path;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public transient Closeable f19662k;
 
     public JsonMappingException(Closeable closeable, String str) {
@@ -30,7 +30,7 @@ public class JsonMappingException extends JsonProcessingException {
         }
     }
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public static JsonMappingException m8741f(Throwable th, C10677a c10677a) {
         JsonMappingException jsonMappingException;
         if (th instanceof JsonMappingException) {
@@ -58,12 +58,12 @@ public class JsonMappingException extends JsonProcessingException {
 
     @Override // com.fasterxml.jackson.core.JsonProcessingException
     @JsonIgnore
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public Object mo8737c() {
         return this.f19662k;
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public String m8742d() {
         String message = super.getMessage();
         if (this._path == null) {
@@ -85,7 +85,7 @@ public class JsonMappingException extends JsonProcessingException {
         return sb.toString();
     }
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public void m8743e(C10677a c10677a) {
         if (this._path == null) {
             this._path = new LinkedList<>();
@@ -110,21 +110,21 @@ public class JsonMappingException extends JsonProcessingException {
         return getClass().getName() + ": " + getMessage();
     }
 
-    /* renamed from: com.fasterxml.jackson.databind.JsonMappingException$a */
+    /* JADX INFO: renamed from: com.fasterxml.jackson.databind.JsonMappingException$a */
     public static class C10677a implements Serializable {
         private static final long serialVersionUID = 2;
         public String _desc;
         public String _fieldName;
         public int _index;
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public transient Object f19663j;
 
         public C10677a() {
             this._index = -1;
         }
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public String m8744a() {
             if (this._desc == null) {
                 StringBuilder sb = new StringBuilder();

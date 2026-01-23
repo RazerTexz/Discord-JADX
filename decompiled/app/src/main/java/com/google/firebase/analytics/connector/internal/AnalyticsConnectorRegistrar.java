@@ -14,9 +14,9 @@ import p007b.p225i.p361c.p368l.ComponentRegistrar;
 import p007b.p225i.p361c.p368l.Dependency2;
 import p007b.p225i.p361c.p396q.Subscriber2;
 
-/* compiled from: com.google.android.gms:play-services-measurement-api@@18.0.0 */
+/* JADX INFO: compiled from: com.google.android.gms:play-services-measurement-api@@18.0.0 */
+/* JADX INFO: loaded from: classes3.dex */
 @Keep
-/* loaded from: classes3.dex */
 public class AnalyticsConnectorRegistrar implements ComponentRegistrar {
     @Override // p007b.p225i.p361c.p368l.ComponentRegistrar
     @Keep

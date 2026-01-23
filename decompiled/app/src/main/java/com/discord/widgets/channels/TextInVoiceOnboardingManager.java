@@ -13,8 +13,8 @@ import p507d0.p580t.CollectionsJVM;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Reflection2;
 
-/* compiled from: TextInVoiceOnboardingManager.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: TextInVoiceOnboardingManager.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class TextInVoiceOnboardingManager {
     private final Clock clock = ClockFactory.get();
 

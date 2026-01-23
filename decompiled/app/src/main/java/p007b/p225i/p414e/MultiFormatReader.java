@@ -13,25 +13,25 @@ import p007b.p225i.p414e.p426q.MultiFormatOneDReader;
 import p007b.p225i.p414e.p430r.PDF417Reader;
 import p007b.p225i.p414e.p434s.QRCodeReader;
 
-/* compiled from: MultiFormatReader.java */
-/* renamed from: b.i.e.g, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.e.g, reason: use source file name */
+/* JADX INFO: compiled from: MultiFormatReader.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class MultiFormatReader implements Reader {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public Map<DecodeHintType, ?> f13188a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public Reader[] f13189b;
 
     @Override // p007b.p225i.p414e.Reader
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public Result mo6919a(BinaryBitmap binaryBitmap, Map<DecodeHintType, ?> map) throws NotFoundException {
         m6921c(map);
         return m6920b(binaryBitmap);
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final Result m6920b(BinaryBitmap binaryBitmap) throws NotFoundException {
         Reader[] readerArr = this.f13189b;
         if (readerArr != null) {
@@ -45,7 +45,7 @@ public final class MultiFormatReader implements Reader {
         throw NotFoundException.f21665l;
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public void m6921c(Map<DecodeHintType, ?> map) {
         this.f13188a = map;
         boolean z2 = map != null && map.containsKey(DecodeHintType.TRY_HARDER);

@@ -15,45 +15,45 @@ import p507d0.p513e0.p514p.p515d.p517m0.p550i.ExtensionRegistryLite;
 import p507d0.p513e0.p514p.p515d.p517m0.p550i.GeneratedMessageLite;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: SerializerExtensionProtocol.kt */
-/* renamed from: d0.e0.p.d.m0.l.a, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.l.a, reason: use source file name */
+/* JADX INFO: compiled from: SerializerExtensionProtocol.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public class SerializerExtensionProtocol {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final ExtensionRegistryLite f24478a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final GeneratedMessageLite.f<C11679d, List<C11677b>> f24479b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final GeneratedMessageLite.f<C11678c, List<C11677b>> f24480c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final GeneratedMessageLite.f<C11684i, List<C11677b>> f24481d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final GeneratedMessageLite.f<C11689n, List<C11677b>> f24482e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final GeneratedMessageLite.f<C11689n, List<C11677b>> f24483f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public final GeneratedMessageLite.f<C11689n, List<C11677b>> f24484g;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public final GeneratedMessageLite.f<C11682g, List<C11677b>> f24485h;
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public final GeneratedMessageLite.f<C11689n, C11677b.b.c> f24486i;
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final GeneratedMessageLite.f<C11696u, List<C11677b>> f24487j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final GeneratedMessageLite.f<C11692q, List<C11677b>> f24488k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final GeneratedMessageLite.f<C11694s, List<C11677b>> f24489l;
 
     public SerializerExtensionProtocol(ExtensionRegistryLite extensionRegistryLite, GeneratedMessageLite.f<C11687l, Integer> fVar, GeneratedMessageLite.f<C11679d, List<C11677b>> fVar2, GeneratedMessageLite.f<C11678c, List<C11677b>> fVar3, GeneratedMessageLite.f<C11684i, List<C11677b>> fVar4, GeneratedMessageLite.f<C11689n, List<C11677b>> fVar5, GeneratedMessageLite.f<C11689n, List<C11677b>> fVar6, GeneratedMessageLite.f<C11689n, List<C11677b>> fVar7, GeneratedMessageLite.f<C11682g, List<C11677b>> fVar8, GeneratedMessageLite.f<C11689n, C11677b.b.c> fVar9, GeneratedMessageLite.f<C11696u, List<C11677b>> fVar10, GeneratedMessageLite.f<C11692q, List<C11677b>> fVar11, GeneratedMessageLite.f<C11694s, List<C11677b>> fVar12) {

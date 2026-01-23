@@ -4,8 +4,8 @@ import kotlin.Unit;
 import kotlin.jvm.functions.Function1;
 import p507d0.p592z.p594d.FunctionReferenceImpl;
 
-/* compiled from: WidgetCallFullscreen.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: WidgetCallFullscreen.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* synthetic */ class WidgetCallFullscreen$onViewBound$listener$1 extends FunctionReferenceImpl implements Function1<Boolean, Unit> {
     public WidgetCallFullscreen$onViewBound$listener$1(WidgetCallFullscreenViewModel widgetCallFullscreenViewModel) {
         super(1, widgetCallFullscreenViewModel, WidgetCallFullscreenViewModel.class, "onPushToTalkPressed", "onPushToTalkPressed(Z)V", 0);

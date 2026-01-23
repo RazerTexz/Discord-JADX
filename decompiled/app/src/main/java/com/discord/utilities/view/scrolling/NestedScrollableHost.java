@@ -9,8 +9,8 @@ import android.widget.FrameLayout;
 import androidx.viewpager2.widget.ViewPager2;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: NestedScrollableHost.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: NestedScrollableHost.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class NestedScrollableHost extends FrameLayout {
     private float initialX;
     private float initialY;

@@ -10,25 +10,25 @@ import p007b.p109f.p132g.p138b.DraweeEventTracker;
 import p007b.p109f.p132g.p142e.VisibilityAwareDrawable;
 import p007b.p109f.p132g.p142e.VisibilityCallback;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class DraweeHolder<DH extends DraweeHierarchy> implements VisibilityCallback {
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public DH f19528d;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final DraweeEventTracker f19530f;
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public boolean f19525a = false;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public boolean f19526b = false;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public boolean f19527c = true;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public DraweeController f19529e = null;
 
     public DraweeHolder(DH dh) {
@@ -38,7 +38,7 @@ public class DraweeHolder<DH extends DraweeHierarchy> implements VisibilityCallb
         }
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final void m8687a() {
         if (this.f19525a) {
             return;
@@ -52,7 +52,7 @@ public class DraweeHolder<DH extends DraweeHierarchy> implements VisibilityCallb
         this.f19529e.mo8655d();
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final void m8688b() {
         if (this.f19526b && this.f19527c) {
             m8687a();
@@ -61,7 +61,7 @@ public class DraweeHolder<DH extends DraweeHierarchy> implements VisibilityCallb
         }
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final void m8689c() {
         if (this.f19525a) {
             this.f19530f.m1084a(DraweeEventTracker.a.ON_DETACH_CONTROLLER);
@@ -72,7 +72,7 @@ public class DraweeHolder<DH extends DraweeHierarchy> implements VisibilityCallb
         }
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public Drawable m8690d() {
         DH dh = this.f19528d;
         if (dh == null) {
@@ -81,13 +81,13 @@ public class DraweeHolder<DH extends DraweeHierarchy> implements VisibilityCallb
         return dh.mo8670e();
     }
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public boolean m8691e() {
         DraweeController draweeController = this.f19529e;
         return draweeController != null && draweeController.mo8653b() == this.f19528d;
     }
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public void m8692f(boolean z2) {
         if (this.f19527c == z2) {
             return;
@@ -97,7 +97,7 @@ public class DraweeHolder<DH extends DraweeHierarchy> implements VisibilityCallb
         m8688b();
     }
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public void m8693g(DraweeController draweeController) {
         boolean z2 = this.f19525a;
         if (z2) {
@@ -119,7 +119,7 @@ public class DraweeHolder<DH extends DraweeHierarchy> implements VisibilityCallb
         }
     }
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public void m8694h(DH dh) {
         this.f19530f.m1084a(DraweeEventTracker.a.ON_SET_HIERARCHY);
         boolean zM8691e = m8691e();

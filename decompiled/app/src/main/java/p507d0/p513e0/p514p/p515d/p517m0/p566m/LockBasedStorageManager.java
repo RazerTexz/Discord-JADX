@@ -13,34 +13,34 @@ import p507d0.p513e0.p514p.p515d.p517m0.p566m.locks4;
 import p507d0.p513e0.p514p.p515d.p517m0.p576p.exceptionUtils;
 import p507d0.p579g0.Strings4;
 
-/* compiled from: LockBasedStorageManager.java */
-/* renamed from: d0.e0.p.d.m0.m.f, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.m.f, reason: use source file name */
+/* JADX INFO: compiled from: LockBasedStorageManager.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class LockBasedStorageManager implements StorageManager {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final String f24709a = Strings4.substringBeforeLast(LockBasedStorageManager.class.getCanonicalName(), ".", "");
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static final StorageManager f24710b = new a("NO_LOCKS", f.f24717a, locks3.f24708b);
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final locks4 f24711c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final f f24712d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final String f24713e;
 
-    /* compiled from: LockBasedStorageManager.java */
-    /* renamed from: d0.e0.p.d.m0.m.f$a */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.m.f$a */
+    /* JADX INFO: compiled from: LockBasedStorageManager.java */
     public static class a extends LockBasedStorageManager {
         public a(String str, f fVar, locks4 locks4Var) {
             super(str, fVar, locks4Var);
         }
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public static /* synthetic */ void m9981a(int i) {
             String str = i != 1 ? "Argument for @NotNull parameter '%s' of %s.%s must not be null" : "@NotNull method %s.%s must not return null";
             Object[] objArr = new Object[i != 1 ? 3 : 2];
@@ -64,7 +64,7 @@ public class LockBasedStorageManager implements StorageManager {
         }
 
         @Override // p507d0.p513e0.p514p.p515d.p517m0.p566m.LockBasedStorageManager
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public <K, V> o<V> mo9980c(String str, K k) {
             o<V> oVarFallThrough = o.fallThrough();
             if (oVarFallThrough != null) {
@@ -76,11 +76,11 @@ public class LockBasedStorageManager implements StorageManager {
     }
 
     /* JADX INFO: Add missing generic type declarations: [T] */
-    /* compiled from: LockBasedStorageManager.java */
-    /* renamed from: d0.e0.p.d.m0.m.f$b */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.m.f$b */
+    /* JADX INFO: compiled from: LockBasedStorageManager.java */
     public class b<T> extends j<T> {
 
-        /* renamed from: m */
+        /* JADX INFO: renamed from: m */
         public final /* synthetic */ Object f24714m;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -90,7 +90,7 @@ public class LockBasedStorageManager implements StorageManager {
         }
 
         @Override // p507d0.p513e0.p514p.p515d.p517m0.p566m.LockBasedStorageManager.h
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public o<T> mo9982c(boolean z2) {
             o<T> oVarValue = o.value(this.f24714m);
             if (oVarValue != null) {
@@ -101,14 +101,14 @@ public class LockBasedStorageManager implements StorageManager {
     }
 
     /* JADX INFO: Add missing generic type declarations: [T] */
-    /* compiled from: LockBasedStorageManager.java */
-    /* renamed from: d0.e0.p.d.m0.m.f$c */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.m.f$c */
+    /* JADX INFO: compiled from: LockBasedStorageManager.java */
     public class c<T> extends k<T> {
 
-        /* renamed from: n */
+        /* JADX INFO: renamed from: n */
         public final /* synthetic */ Function1 f24715n;
 
-        /* renamed from: o */
+        /* JADX INFO: renamed from: o */
         public final /* synthetic */ Function1 f24716o;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -118,7 +118,7 @@ public class LockBasedStorageManager implements StorageManager {
             this.f24716o = function12;
         }
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public static /* synthetic */ void m9983a(int i) {
             String str = i != 2 ? "@NotNull method %s.%s must not return null" : "Argument for @NotNull parameter '%s' of %s.%s must not be null";
             Object[] objArr = new Object[i != 2 ? 2 : 3];
@@ -142,7 +142,7 @@ public class LockBasedStorageManager implements StorageManager {
         }
 
         @Override // p507d0.p513e0.p514p.p515d.p517m0.p566m.LockBasedStorageManager.h
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public o<T> mo9982c(boolean z2) {
             Function1 function1 = this.f24715n;
             if (function1 == null) {
@@ -162,14 +162,14 @@ public class LockBasedStorageManager implements StorageManager {
         }
     }
 
-    /* compiled from: LockBasedStorageManager.java */
-    /* renamed from: d0.e0.p.d.m0.m.f$d */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.m.f$d */
+    /* JADX INFO: compiled from: LockBasedStorageManager.java */
     public static class d<K, V> extends e<K, V> implements storage<K, V> {
         public d(LockBasedStorageManager lockBasedStorageManager, ConcurrentMap concurrentMap, a aVar) {
             super(lockBasedStorageManager, concurrentMap, null);
         }
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public static /* synthetic */ void m9984a(int i) {
             String str = i != 3 ? "Argument for @NotNull parameter '%s' of %s.%s must not be null" : "@NotNull method %s.%s must not return null";
             Object[] objArr = new Object[i != 3 ? 3 : 2];
@@ -213,8 +213,8 @@ public class LockBasedStorageManager implements StorageManager {
         }
     }
 
-    /* compiled from: LockBasedStorageManager.java */
-    /* renamed from: d0.e0.p.d.m0.m.f$e */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.m.f$e */
+    /* JADX INFO: compiled from: LockBasedStorageManager.java */
     public static class e<K, V> extends l<g<K, V>, V> implements storage2<K, V> {
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
         public e(LockBasedStorageManager lockBasedStorageManager, ConcurrentMap concurrentMap, a aVar) {
@@ -230,7 +230,7 @@ public class LockBasedStorageManager implements StorageManager {
             }
         }
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public static /* synthetic */ void m9985a(int i) {
             Object[] objArr = new Object[3];
             if (i == 1) {
@@ -258,15 +258,15 @@ public class LockBasedStorageManager implements StorageManager {
         }
     }
 
-    /* compiled from: LockBasedStorageManager.java */
-    /* renamed from: d0.e0.p.d.m0.m.f$f */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.m.f$f */
+    /* JADX INFO: compiled from: LockBasedStorageManager.java */
     public interface f {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public static final f f24717a = new a();
 
-        /* compiled from: LockBasedStorageManager.java */
-        /* renamed from: d0.e0.p.d.m0.m.f$f$a */
+        /* JADX INFO: renamed from: d0.e0.p.d.m0.m.f$f$a */
+        /* JADX INFO: compiled from: LockBasedStorageManager.java */
         public static class a implements f {
             public RuntimeException handleException(Throwable th) {
                 if (th == null) {
@@ -277,14 +277,14 @@ public class LockBasedStorageManager implements StorageManager {
         }
     }
 
-    /* compiled from: LockBasedStorageManager.java */
-    /* renamed from: d0.e0.p.d.m0.m.f$g */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.m.f$g */
+    /* JADX INFO: compiled from: LockBasedStorageManager.java */
     public static class g<K, V> {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final K f24718a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final Function0<? extends V> f24719b;
 
         public g(K k, Function0<? extends V> function0) {
@@ -304,17 +304,17 @@ public class LockBasedStorageManager implements StorageManager {
         }
     }
 
-    /* compiled from: LockBasedStorageManager.java */
-    /* renamed from: d0.e0.p.d.m0.m.f$h */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.m.f$h */
+    /* JADX INFO: compiled from: LockBasedStorageManager.java */
     public static class h<T> implements storage6<T> {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public final LockBasedStorageManager f24720j;
 
-        /* renamed from: k */
+        /* JADX INFO: renamed from: k */
         public final Function0<? extends T> f24721k;
 
-        /* renamed from: l */
+        /* JADX INFO: renamed from: l */
         public volatile Object f24722l;
 
         public h(LockBasedStorageManager lockBasedStorageManager, Function0<? extends T> function0) {
@@ -331,7 +331,7 @@ public class LockBasedStorageManager implements StorageManager {
             this.f24721k = function0;
         }
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public static /* synthetic */ void m9986a(int i) {
             String str = (i == 2 || i == 3) ? "@NotNull method %s.%s must not return null" : "Argument for @NotNull parameter '%s' of %s.%s must not be null";
             Object[] objArr = new Object[(i == 2 || i == 3) ? 2 : 3];
@@ -359,11 +359,11 @@ public class LockBasedStorageManager implements StorageManager {
             throw new IllegalStateException(str2);
         }
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public void mo9987b(T t) {
         }
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public o<T> mo9982c(boolean z2) {
             o<T> oVarMo9980c = this.f24720j.mo9980c("in a lazy value", null);
             if (oVarMo9980c != null) {
@@ -431,11 +431,11 @@ public class LockBasedStorageManager implements StorageManager {
         }
     }
 
-    /* compiled from: LockBasedStorageManager.java */
-    /* renamed from: d0.e0.p.d.m0.m.f$i */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.m.f$i */
+    /* JADX INFO: compiled from: LockBasedStorageManager.java */
     public static abstract class i<T> extends h<T> {
 
-        /* renamed from: m */
+        /* JADX INFO: renamed from: m */
         public volatile SingleThreadValue<T> f24723m;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -452,7 +452,7 @@ public class LockBasedStorageManager implements StorageManager {
             this.f24723m = null;
         }
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public static /* synthetic */ void m9988a(int i) {
             Object[] objArr = new Object[3];
             if (i != 1) {
@@ -466,7 +466,7 @@ public class LockBasedStorageManager implements StorageManager {
         }
 
         @Override // p507d0.p513e0.p514p.p515d.p517m0.p566m.LockBasedStorageManager.h
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final void mo9987b(T t) {
             this.f24723m = new SingleThreadValue<>(t);
             try {
@@ -489,8 +489,8 @@ public class LockBasedStorageManager implements StorageManager {
         }
     }
 
-    /* compiled from: LockBasedStorageManager.java */
-    /* renamed from: d0.e0.p.d.m0.m.f$j */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.m.f$j */
+    /* JADX INFO: compiled from: LockBasedStorageManager.java */
     public static class j<T> extends h<T> implements storage5<T> {
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
         public j(LockBasedStorageManager lockBasedStorageManager, Function0<? extends T> function0) {
@@ -506,7 +506,7 @@ public class LockBasedStorageManager implements StorageManager {
             }
         }
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public static /* synthetic */ void m9989a(int i) {
             String str = i != 2 ? "Argument for @NotNull parameter '%s' of %s.%s must not be null" : "@NotNull method %s.%s must not return null";
             Object[] objArr = new Object[i != 2 ? 3 : 2];
@@ -542,8 +542,8 @@ public class LockBasedStorageManager implements StorageManager {
         }
     }
 
-    /* compiled from: LockBasedStorageManager.java */
-    /* renamed from: d0.e0.p.d.m0.m.f$k */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.m.f$k */
+    /* JADX INFO: compiled from: LockBasedStorageManager.java */
     public static abstract class k<T> extends i<T> implements storage5<T> {
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
         public k(LockBasedStorageManager lockBasedStorageManager, Function0<? extends T> function0) {
@@ -559,7 +559,7 @@ public class LockBasedStorageManager implements StorageManager {
             }
         }
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public static /* synthetic */ void m9990a(int i) {
             String str = i != 2 ? "Argument for @NotNull parameter '%s' of %s.%s must not be null" : "@NotNull method %s.%s must not return null";
             Object[] objArr = new Object[i != 2 ? 3 : 2];
@@ -595,17 +595,17 @@ public class LockBasedStorageManager implements StorageManager {
         }
     }
 
-    /* compiled from: LockBasedStorageManager.java */
-    /* renamed from: d0.e0.p.d.m0.m.f$l */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.m.f$l */
+    /* JADX INFO: compiled from: LockBasedStorageManager.java */
     public static class l<K, V> implements storage4<K, V> {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public final LockBasedStorageManager f24724j;
 
-        /* renamed from: k */
+        /* JADX INFO: renamed from: k */
         public final ConcurrentMap<K, Object> f24725k;
 
-        /* renamed from: l */
+        /* JADX INFO: renamed from: l */
         public final Function1<? super K, ? extends V> f24726l;
 
         public l(LockBasedStorageManager lockBasedStorageManager, ConcurrentMap<K, Object> concurrentMap, Function1<? super K, ? extends V> function1) {
@@ -626,7 +626,7 @@ public class LockBasedStorageManager implements StorageManager {
             this.f24726l = function1;
         }
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public static /* synthetic */ void m9991a(int i) {
             String str = (i == 3 || i == 4) ? "@NotNull method %s.%s must not return null" : "Argument for @NotNull parameter '%s' of %s.%s must not be null";
             Object[] objArr = new Object[(i == 3 || i == 4) ? 2 : 3];
@@ -656,7 +656,7 @@ public class LockBasedStorageManager implements StorageManager {
             throw new IllegalStateException(str2);
         }
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final AssertionError m9992b(K k, Object obj) {
             AssertionError assertionError = new AssertionError("Race condition detected on input " + k + ". Old value is " + obj + " under " + this.f24724j);
             LockBasedStorageManager.m9979d(assertionError);
@@ -738,8 +738,8 @@ public class LockBasedStorageManager implements StorageManager {
         }
     }
 
-    /* compiled from: LockBasedStorageManager.java */
-    /* renamed from: d0.e0.p.d.m0.m.f$m */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.m.f$m */
+    /* JADX INFO: compiled from: LockBasedStorageManager.java */
     public static class m<K, V> extends l<K, V> implements storage3<K, V> {
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
         public m(LockBasedStorageManager lockBasedStorageManager, ConcurrentMap<K, Object> concurrentMap, Function1<? super K, ? extends V> function1) {
@@ -759,7 +759,7 @@ public class LockBasedStorageManager implements StorageManager {
             }
         }
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public static /* synthetic */ void m9993a(int i) {
             String str = i != 3 ? "Argument for @NotNull parameter '%s' of %s.%s must not be null" : "@NotNull method %s.%s must not return null";
             Object[] objArr = new Object[i != 3 ? 3 : 2];
@@ -797,22 +797,22 @@ public class LockBasedStorageManager implements StorageManager {
         }
     }
 
-    /* compiled from: LockBasedStorageManager.java */
-    /* renamed from: d0.e0.p.d.m0.m.f$n */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.m.f$n */
+    /* JADX INFO: compiled from: LockBasedStorageManager.java */
     public enum n {
         NOT_COMPUTED,
         COMPUTING,
         RECURSION_WAS_DETECTED
     }
 
-    /* compiled from: LockBasedStorageManager.java */
-    /* renamed from: d0.e0.p.d.m0.m.f$o */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.m.f$o */
+    /* JADX INFO: compiled from: LockBasedStorageManager.java */
     public static class o<T> {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final T f24731a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final boolean f24732b;
 
         public o(T t, boolean z2) {
@@ -860,7 +860,7 @@ public class LockBasedStorageManager implements StorageManager {
     }
 
     /* JADX WARN: Removed duplicated region for block: B:34:0x0065  */
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
@@ -1007,12 +1007,12 @@ public class LockBasedStorageManager implements StorageManager {
         throw new IllegalStateException(str2);
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static <K> ConcurrentMap<K, Object> m9978b() {
         return new ConcurrentHashMap(3, 1.0f, 2);
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public static <T extends Throwable> T m9979d(T t) {
         if (t == null) {
             m9977a(36);
@@ -1037,7 +1037,7 @@ public class LockBasedStorageManager implements StorageManager {
         return t;
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public <K, V> o<V> mo9980c(String str, K k2) {
         StringBuilder sbM836X = outline.m836X("Recursion detected ", str);
         sbM836X.append(k2 == null ? "" : outline.m881v("on input: ", k2));

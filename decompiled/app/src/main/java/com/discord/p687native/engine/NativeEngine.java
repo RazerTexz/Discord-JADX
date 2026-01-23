@@ -7,65 +7,65 @@ import org.webrtc.EglBase;
 import org.webrtc.VideoFrame;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: NativeEngine.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: NativeEngine.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class NativeEngine {
     public static final int LOGLEVEL_DEBUG = 2;
     public static final int LOGLEVEL_DEFAULT = -1;
     private final int logLevel;
     private final long nativeInstance;
 
-    /* compiled from: NativeEngine.kt */
+    /* JADX INFO: compiled from: NativeEngine.kt */
     public interface ConnectToServerCallback {
         void onConnectToServer(ConnectionInfo info, String error);
     }
 
-    /* compiled from: NativeEngine.kt */
+    /* JADX INFO: compiled from: NativeEngine.kt */
     public interface DeviceChangeCallback {
         void onChange(AudioInputDeviceDescription[] audioInputDevices, AudioOutputDeviceDescription[] audioOutputDevices, VideoInputDeviceDescription[] videoInputDevices);
     }
 
-    /* compiled from: NativeEngine.kt */
+    /* JADX INFO: compiled from: NativeEngine.kt */
     public interface GetAudioInputDevicesCallback {
         void onDevices(AudioInputDeviceDescription[] devices);
     }
 
-    /* compiled from: NativeEngine.kt */
+    /* JADX INFO: compiled from: NativeEngine.kt */
     public interface GetAudioOutputDevicesCallback {
         void onDevices(AudioOutputDeviceDescription[] devices);
     }
 
-    /* compiled from: NativeEngine.kt */
+    /* JADX INFO: compiled from: NativeEngine.kt */
     public interface GetAudioSubsystemCallback {
         void onAudioSubsystem(String subsystem, String audioLayer);
     }
 
-    /* compiled from: NativeEngine.kt */
+    /* JADX INFO: compiled from: NativeEngine.kt */
     public interface GetRankedRtcRegionsCallback {
         void onRankedRtcRegions(String[] regions);
     }
 
-    /* compiled from: NativeEngine.kt */
+    /* JADX INFO: compiled from: NativeEngine.kt */
     public interface GetSupportedVideoCodecsCallback {
         void onSupportedVideoCodecs(String[] codecs);
     }
 
-    /* compiled from: NativeEngine.kt */
+    /* JADX INFO: compiled from: NativeEngine.kt */
     public interface GetVideoInputDevicesCallback {
         void onDevices(VideoInputDeviceDescription[] devices);
     }
 
-    /* compiled from: NativeEngine.kt */
+    /* JADX INFO: compiled from: NativeEngine.kt */
     public interface OnNoInputCallback {
         void onNoInput(boolean input);
     }
 
-    /* compiled from: NativeEngine.kt */
+    /* JADX INFO: compiled from: NativeEngine.kt */
     public interface OnVoiceCallback {
         void onVoice(float level, int speaking);
     }
 
-    /* compiled from: NativeEngine.kt */
+    /* JADX INFO: compiled from: NativeEngine.kt */
     public interface VideoFrameCallback {
         boolean onFrame(VideoFrame frame);
     }

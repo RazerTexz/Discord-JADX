@@ -1,8 +1,8 @@
 package com.discord.widgets.chat.list.entries;
 
 
-/* compiled from: SearchIndexingEntry.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: SearchIndexingEntry.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class SearchIndexingEntry extends ChatListEntry {
     private final int type = 12;
     private final String key = String.valueOf(getType());

@@ -29,7 +29,7 @@ import java.util.Arrays;
 import p007b.p225i.p226a.p341g.p348g.DrawableWithAnimatedVisibilityChange;
 import p007b.p225i.p226a.p341g.p348g.DrawingDelegate;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public abstract class BaseProgressIndicator<S extends BaseProgressIndicatorSpec> extends ProgressBar {
     public static final float DEFAULT_OPACITY = 0.2f;
     public static final int DEF_STYLE_RES = C10817R.style.Widget_MaterialComponents_ProgressIndicator;
@@ -66,7 +66,7 @@ public abstract class BaseProgressIndicator<S extends BaseProgressIndicatorSpec>
     public @interface ShowAnimationBehavior {
     }
 
-    /* renamed from: com.google.android.material.progressindicator.BaseProgressIndicator$a */
+    /* JADX INFO: renamed from: com.google.android.material.progressindicator.BaseProgressIndicator$a */
     public class RunnableC10955a implements Runnable {
         public RunnableC10955a() {
         }
@@ -77,7 +77,7 @@ public abstract class BaseProgressIndicator<S extends BaseProgressIndicatorSpec>
         }
     }
 
-    /* renamed from: com.google.android.material.progressindicator.BaseProgressIndicator$b */
+    /* JADX INFO: renamed from: com.google.android.material.progressindicator.BaseProgressIndicator$b */
     public class RunnableC10956b implements Runnable {
         public RunnableC10956b() {
         }
@@ -89,7 +89,7 @@ public abstract class BaseProgressIndicator<S extends BaseProgressIndicatorSpec>
         }
     }
 
-    /* renamed from: com.google.android.material.progressindicator.BaseProgressIndicator$c */
+    /* JADX INFO: renamed from: com.google.android.material.progressindicator.BaseProgressIndicator$c */
     public class C10957c extends Animatable2Compat.AnimationCallback {
         public C10957c() {
         }
@@ -103,7 +103,7 @@ public abstract class BaseProgressIndicator<S extends BaseProgressIndicatorSpec>
         }
     }
 
-    /* renamed from: com.google.android.material.progressindicator.BaseProgressIndicator$d */
+    /* JADX INFO: renamed from: com.google.android.material.progressindicator.BaseProgressIndicator$d */
     public class C10958d extends Animatable2Compat.AnimationCallback {
         public C10958d() {
         }
@@ -286,7 +286,7 @@ public abstract class BaseProgressIndicator<S extends BaseProgressIndicatorSpec>
         if (jUptimeMillis >= ((long) i)) {
             this.delayedHide.run();
         } else {
-            postDelayed(this.delayedHide, i - jUptimeMillis);
+            postDelayed(this.delayedHide, ((long) i) - jUptimeMillis);
         }
     }
 

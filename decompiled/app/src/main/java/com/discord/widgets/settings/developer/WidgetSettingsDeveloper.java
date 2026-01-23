@@ -55,19 +55,19 @@ import p637j0.p641k.Func1;
 import p658rx.Observable;
 import p658rx.functions.Action1;
 
-/* compiled from: WidgetSettingsDeveloper.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetSettingsDeveloper.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetSettingsDeveloper extends AppFragment {
     public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetSettingsDeveloper.class, "binding", "getBinding()Lcom/discord/databinding/WidgetSettingsDeveloperBinding;", 0)};
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
 
-    /* renamed from: binding$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
     private ExperimentOverridesAdapter experimentOverridesAdapter;
 
-    /* compiled from: WidgetSettingsDeveloper.kt */
+    /* JADX INFO: compiled from: WidgetSettingsDeveloper.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -82,7 +82,7 @@ public final class WidgetSettingsDeveloper extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetSettingsDeveloper.kt */
+    /* JADX INFO: compiled from: WidgetSettingsDeveloper.kt */
     public static final class NoticeViewHolder extends SimpleRecyclerAdapter.ViewHolder<Tuples2<? extends String, ? extends Long>> {
         private final IconListItemTextViewBinding binding;
         public String noticeName;
@@ -115,7 +115,7 @@ public final class WidgetSettingsDeveloper extends AppFragment {
         }
 
         @SuppressLint({"SetTextI18n"})
-        /* renamed from: bind, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: bind, reason: avoid collision after fix types in other method */
         public void bind2(Tuples2<String, Long> data) {
             Intrinsics3.checkNotNullParameter(data, "data");
             String strComponent1 = data.component1();
@@ -132,8 +132,8 @@ public final class WidgetSettingsDeveloper extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetSettingsDeveloper.kt */
-    /* renamed from: com.discord.widgets.settings.developer.WidgetSettingsDeveloper$setupCrashes$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.developer.WidgetSettingsDeveloper$setupCrashes$1 */
+    /* JADX INFO: compiled from: WidgetSettingsDeveloper.kt */
     public static final class ViewOnClickListenerC98441 implements View.OnClickListener {
         public static final ViewOnClickListenerC98441 INSTANCE = new ViewOnClickListenerC98441();
 
@@ -143,8 +143,8 @@ public final class WidgetSettingsDeveloper extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetSettingsDeveloper.kt */
-    /* renamed from: com.discord.widgets.settings.developer.WidgetSettingsDeveloper$setupCrashes$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.developer.WidgetSettingsDeveloper$setupCrashes$2 */
+    /* JADX INFO: compiled from: WidgetSettingsDeveloper.kt */
     public static final class ViewOnClickListenerC98452 implements View.OnClickListener {
         public ViewOnClickListenerC98452() {
         }
@@ -160,8 +160,8 @@ public final class WidgetSettingsDeveloper extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetSettingsDeveloper.kt */
-    /* renamed from: com.discord.widgets.settings.developer.WidgetSettingsDeveloper$setupCrashes$3 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.developer.WidgetSettingsDeveloper$setupCrashes$3 */
+    /* JADX INFO: compiled from: WidgetSettingsDeveloper.kt */
     public static final class ViewOnClickListenerC98463 implements View.OnClickListener {
         public ViewOnClickListenerC98463() {
         }
@@ -174,8 +174,8 @@ public final class WidgetSettingsDeveloper extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetSettingsDeveloper.kt */
-    /* renamed from: com.discord.widgets.settings.developer.WidgetSettingsDeveloper$setupCrashes$4 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.developer.WidgetSettingsDeveloper$setupCrashes$4 */
+    /* JADX INFO: compiled from: WidgetSettingsDeveloper.kt */
     public static final class ViewOnClickListenerC98474 implements View.OnClickListener {
         public ViewOnClickListenerC98474() {
         }
@@ -187,8 +187,8 @@ public final class WidgetSettingsDeveloper extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetSettingsDeveloper.kt */
-    /* renamed from: com.discord.widgets.settings.developer.WidgetSettingsDeveloper$setupExperimentSection$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.developer.WidgetSettingsDeveloper$setupExperimentSection$1 */
+    /* JADX INFO: compiled from: WidgetSettingsDeveloper.kt */
     public static final class C98481<T, R> implements Func1<Map<String, ? extends Integer>, List<? extends 1.1>> {
         public final /* synthetic */ StoreExperiments $experimentStore;
 
@@ -201,7 +201,7 @@ public final class WidgetSettingsDeveloper extends AppFragment {
             return call2((Map<String, Integer>) map);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final List<1.1> call2(Map<String, Integer> map) {
             Collection<ExperimentRegistry2> collectionValues = ExperimentRegistry.INSTANCE.getRegisteredExperiments().values();
             Intrinsics3.checkNotNullExpressionValue(collectionValues, "ExperimentRegistry\n     …nts\n              .values");
@@ -214,8 +214,8 @@ public final class WidgetSettingsDeveloper extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetSettingsDeveloper.kt */
-    /* renamed from: com.discord.widgets.settings.developer.WidgetSettingsDeveloper$setupExperimentSection$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.developer.WidgetSettingsDeveloper$setupExperimentSection$2 */
+    /* JADX INFO: compiled from: WidgetSettingsDeveloper.kt */
     public static final class C98502 extends Lambda implements Function1<List<? extends C98481.1.1>, Unit> {
         public C98502() {
             super(1);
@@ -227,7 +227,7 @@ public final class WidgetSettingsDeveloper extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(List<C98481.1.1> list) {
             ExperimentOverridesAdapter experimentOverridesAdapterAccess$getExperimentOverridesAdapter$p = WidgetSettingsDeveloper.access$getExperimentOverridesAdapter$p(WidgetSettingsDeveloper.this);
             Intrinsics3.checkNotNullExpressionValue(list, "data");
@@ -235,12 +235,12 @@ public final class WidgetSettingsDeveloper extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetSettingsDeveloper.kt */
-    /* renamed from: com.discord.widgets.settings.developer.WidgetSettingsDeveloper$setupNoticesSection$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.developer.WidgetSettingsDeveloper$setupNoticesSection$1 */
+    /* JADX INFO: compiled from: WidgetSettingsDeveloper.kt */
     public static final class C98511 extends Lambda implements Function0<ItemTouchHelper> {
 
-        /* compiled from: WidgetSettingsDeveloper.kt */
-        /* renamed from: com.discord.widgets.settings.developer.WidgetSettingsDeveloper$setupNoticesSection$1$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.widgets.settings.developer.WidgetSettingsDeveloper$setupNoticesSection$1$1, reason: invalid class name */
+        /* JADX INFO: compiled from: WidgetSettingsDeveloper.kt */
         public static final class AnonymousClass1 extends SwipeableItemTouchHelper {
             public final /* synthetic */ SwipeableItemTouchHelper.SwipeRevealConfiguration $deleteConfig;
 
@@ -276,8 +276,8 @@ public final class WidgetSettingsDeveloper extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetSettingsDeveloper.kt */
-    /* renamed from: com.discord.widgets.settings.developer.WidgetSettingsDeveloper$setupNoticesSection$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.developer.WidgetSettingsDeveloper$setupNoticesSection$2 */
+    /* JADX INFO: compiled from: WidgetSettingsDeveloper.kt */
     public static final class C98522<T, R> implements Func1<HashMap<String, Long>, List<? extends Tuples2<? extends String, ? extends Long>>> {
         public static final C98522 INSTANCE = new C98522();
 
@@ -286,15 +286,15 @@ public final class WidgetSettingsDeveloper extends AppFragment {
             return call2(map);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final List<Tuples2<String, Long>> call2(HashMap<String, Long> map) {
             Intrinsics3.checkNotNullExpressionValue(map, "noticesSeenMap");
             return _Maps.toList(MapsJVM.toSortedMap(map));
         }
     }
 
-    /* compiled from: WidgetSettingsDeveloper.kt */
-    /* renamed from: com.discord.widgets.settings.developer.WidgetSettingsDeveloper$setupNoticesSection$3 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.developer.WidgetSettingsDeveloper$setupNoticesSection$3 */
+    /* JADX INFO: compiled from: WidgetSettingsDeveloper.kt */
     public static final class C98533 extends Lambda implements Function1<List<? extends Tuples2<? extends String, ? extends Long>>, Unit> {
         public final /* synthetic */ SimpleRecyclerAdapter $noticesAdapter;
 
@@ -310,7 +310,7 @@ public final class WidgetSettingsDeveloper extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(List<Tuples2<String, Long>> list) {
             SimpleRecyclerAdapter simpleRecyclerAdapter = this.$noticesAdapter;
             Intrinsics3.checkNotNullExpressionValue(list, "noticesSeenMap");
@@ -318,8 +318,8 @@ public final class WidgetSettingsDeveloper extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetSettingsDeveloper.kt */
-    /* renamed from: com.discord.widgets.settings.developer.WidgetSettingsDeveloper$setupScreenshotDetector$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.developer.WidgetSettingsDeveloper$setupScreenshotDetector$1 */
+    /* JADX INFO: compiled from: WidgetSettingsDeveloper.kt */
     public static final class C98541<T> implements Action1<Boolean> {
         public final /* synthetic */ BugReportManager $bugReportProvider;
 
@@ -332,7 +332,7 @@ public final class WidgetSettingsDeveloper extends AppFragment {
             call2(bool);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final void call2(Boolean bool) {
             BugReportManager bugReportManager = this.$bugReportProvider;
             Intrinsics3.checkNotNullExpressionValue(bool, "isChecked");

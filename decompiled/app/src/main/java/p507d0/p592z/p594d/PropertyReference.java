@@ -4,9 +4,9 @@ import kotlin.reflect.KCallable;
 import kotlin.reflect.KProperty;
 import p007b.p100d.p104b.p105a.outline;
 
-/* compiled from: PropertyReference.java */
-/* renamed from: d0.z.d.z, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.z.d.z, reason: use source file name */
+/* JADX INFO: compiled from: PropertyReference.java */
+/* JADX INFO: loaded from: classes3.dex */
 public abstract class PropertyReference extends CallableReference implements KProperty {
     public PropertyReference() {
     }

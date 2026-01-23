@@ -7,8 +7,8 @@ import kotlin.jvm.functions.Function0;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetCallFullscreen.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: WidgetCallFullscreen.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class WidgetCallFullscreen$configureEventPrompt$onStartStage$1 extends Lambda implements Function0<Unit> {
     public final /* synthetic */ WidgetCallFullscreen this$0;
 
@@ -24,7 +24,7 @@ public final class WidgetCallFullscreen$configureEventPrompt$onStartStage$1 exte
         return Unit.f27425a;
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final void invoke2() {
         WidgetStageStartEventBottomSheet.Companion companion = WidgetStageStartEventBottomSheet.INSTANCE;
         FragmentManager parentFragmentManager = this.this$0.getParentFragmentManager();

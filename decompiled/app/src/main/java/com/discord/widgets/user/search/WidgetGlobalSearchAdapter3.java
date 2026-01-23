@@ -8,9 +8,9 @@ import kotlin.jvm.functions.Function1;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetGlobalSearchAdapter.kt */
-/* renamed from: com.discord.widgets.user.search.WidgetGlobalSearchAdapter$HeaderViewHolder$onConfigure$2, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: com.discord.widgets.user.search.WidgetGlobalSearchAdapter$HeaderViewHolder$onConfigure$2, reason: use source file name */
+/* JADX INFO: compiled from: WidgetGlobalSearchAdapter.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class WidgetGlobalSearchAdapter3 extends Lambda implements Function1<View, Unit> {
     public final /* synthetic */ WidgetGlobalSearchModel.ItemDataPayload $data;
     public final /* synthetic */ int $position;
@@ -30,7 +30,7 @@ public final class WidgetGlobalSearchAdapter3 extends Lambda implements Function
         return Unit.f27425a;
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final void invoke2(View view) {
         Intrinsics3.checkNotNullParameter(view, "view");
         WidgetGlobalSearchAdapter.HeaderViewHolder.access$getAdapter$p(this.this$0).getOnSelectedListener().invoke(view, Integer.valueOf(this.$position), this.$data, Boolean.TRUE);

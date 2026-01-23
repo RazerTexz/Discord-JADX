@@ -28,8 +28,8 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 import p658rx.Observable;
 
-/* compiled from: StoreClientDataState.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: StoreClientDataState.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class StoreClientDataState extends StoreV2 {
     private ClientDataState clientDataStateSnapshot;
     private Map<Long, GuildHashes> guildHashes;
@@ -38,7 +38,7 @@ public final class StoreClientDataState extends StoreV2 {
     private int readStateVersion;
     private int userGuildSettingsVersion;
 
-    /* compiled from: StoreClientDataState.kt */
+    /* JADX INFO: compiled from: StoreClientDataState.kt */
     public static final /* data */ class ClientDataState {
         private final Map<Long, GuildHashes> guildHashes;
         private final long highestLastMessageId;
@@ -57,6 +57,7 @@ public final class StoreClientDataState extends StoreV2 {
             this.userGuildSettingsVersion = i2;
         }
 
+        /* JADX WARN: Multi-variable type inference failed */
         public static /* synthetic */ ClientDataState copy$default(ClientDataState clientDataState, Map map, long j, int i, int i2, int i3, Object obj) {
             if ((i3 & 1) != 0) {
                 map = clientDataState.guildHashes;
@@ -92,17 +93,17 @@ public final class StoreClientDataState extends StoreV2 {
             return this.guildHashes;
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final long getHighestLastMessageId() {
             return this.highestLastMessageId;
         }
 
-        /* renamed from: component3, reason: from getter */
+        /* JADX INFO: renamed from: component3, reason: from getter */
         public final int getReadStateVersion() {
             return this.readStateVersion;
         }
 
-        /* renamed from: component4, reason: from getter */
+        /* JADX INFO: renamed from: component4, reason: from getter */
         public final int getUserGuildSettingsVersion() {
             return this.userGuildSettingsVersion;
         }
@@ -184,8 +185,8 @@ public final class StoreClientDataState extends StoreV2 {
         }
     }
 
-    /* compiled from: StoreClientDataState.kt */
-    /* renamed from: com.discord.stores.StoreClientDataState$observeClientState$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreClientDataState$observeClientState$1 */
+    /* JADX INFO: compiled from: StoreClientDataState.kt */
     public static final class C58461 extends Lambda implements Function0<ClientDataState> {
         public C58461() {
             super(0);

@@ -17,14 +17,14 @@ import p507d0.p580t.Collections2;
 import p507d0.p580t.Maps6;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: MentionInputModel.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: MentionInputModel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public abstract class MentionInputModel {
     private final Map<LeadingIdentifier, Set<Autocompletable>> autocompletables;
     private final CharSequence input;
     private final Map<Ranges2, Autocompletable> inputMentionsMap;
 
-    /* compiled from: MentionInputModel.kt */
+    /* JADX INFO: compiled from: MentionInputModel.kt */
     public static final /* data */ class VerifiedMessageInputModel extends MentionInputModel {
         private final Map<LeadingIdentifier, Set<Autocompletable>> autocompletables;
         private final CharSequence input;
@@ -145,7 +145,7 @@ public abstract class MentionInputModel {
         this(charSequence, map, map2);
     }
 
-    /* compiled from: MentionInputModel.kt */
+    /* JADX INFO: compiled from: MentionInputModel.kt */
     public static final class VerifiedCommandInputModel extends MentionInputModel {
         private final List<Application> applications;
         private final Map<LeadingIdentifier, Set<Autocompletable>> autocompletables;

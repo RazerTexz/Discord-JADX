@@ -3,51 +3,51 @@ package p007b.p225i.p226a.p242c.p255c3;
 import p007b.p225i.p226a.p242c.Format2;
 import p007b.p225i.p226a.p242c.p243a3.TrackGroup;
 
-/* compiled from: ExoTrackSelection.java */
-/* renamed from: b.i.a.c.c3.j, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.c3.j, reason: use source file name */
+/* JADX INFO: compiled from: ExoTrackSelection.java */
+/* JADX INFO: loaded from: classes3.dex */
 public interface ExoTrackSelection2 extends TrackSelection {
 
-    /* compiled from: ExoTrackSelection.java */
-    /* renamed from: b.i.a.c.c3.j$b */
+    /* JADX INFO: renamed from: b.i.a.c.c3.j$b */
+    /* JADX INFO: compiled from: ExoTrackSelection.java */
     public interface b {
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     int mo2723b();
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     void mo2728c(boolean z2);
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     void mo2724e();
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     void mo2725g();
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     Format2 mo2731h();
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     void mo2726i(float f);
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     void mo2732j();
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     void mo2733k();
 
-    /* compiled from: ExoTrackSelection.java */
-    /* renamed from: b.i.a.c.c3.j$a */
+    /* JADX INFO: renamed from: b.i.a.c.c3.j$a */
+    /* JADX INFO: compiled from: ExoTrackSelection.java */
     public static final class a {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final TrackGroup f6259a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final int[] f6260b;
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public final int f6261c;
 
         public a(TrackGroup trackGroup, int... iArr) {

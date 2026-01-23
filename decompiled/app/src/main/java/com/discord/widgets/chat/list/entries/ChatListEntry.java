@@ -44,8 +44,8 @@ import p507d0.p580t.Iterables2;
 import p507d0.p580t.Maps6;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ChatListEntry.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: ChatListEntry.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public abstract class ChatListEntry implements MGRecyclerDataPayload {
     public static final int APPLICATION_COMMAND = 33;
     public static final int AUTOMOD_BLOCKED = 44;
@@ -54,7 +54,7 @@ public abstract class ChatListEntry implements MGRecyclerDataPayload {
     public static final int BOT_UI_COMPONENT = 36;
     public static final int CALL_MESSAGE = 19;
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     public static final int DIVIDER = 15;
     public static final int EMPTY_PINS = 16;
@@ -97,7 +97,7 @@ public abstract class ChatListEntry implements MGRecyclerDataPayload {
     public static final int UPLOAD_STATUS = 6;
     private boolean shouldShowThreadSpine;
 
-    /* compiled from: ChatListEntry.kt */
+    /* JADX INFO: compiled from: ChatListEntry.kt */
     public static final class Companion {
         private Companion() {
         }

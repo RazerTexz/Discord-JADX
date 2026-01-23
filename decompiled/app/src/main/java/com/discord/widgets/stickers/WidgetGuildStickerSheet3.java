@@ -7,9 +7,9 @@ import com.discord.utilities.analytics.Traits;
 import com.discord.widgets.stickers.StickerPremiumUpsellDialog;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: WidgetGuildStickerSheet.kt */
-/* renamed from: com.discord.widgets.stickers.WidgetGuildStickerSheet$configureButtons$$inlined$with$lambda$1, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: com.discord.widgets.stickers.WidgetGuildStickerSheet$configureButtons$$inlined$with$lambda$1, reason: use source file name */
+/* JADX INFO: compiled from: WidgetGuildStickerSheet.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class WidgetGuildStickerSheet3 implements View.OnClickListener {
     public final /* synthetic */ Guild $guild$inlined;
     public final /* synthetic */ boolean $isUserInGuild$inlined;

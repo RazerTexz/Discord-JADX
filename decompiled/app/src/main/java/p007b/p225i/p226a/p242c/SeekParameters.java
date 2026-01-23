@@ -4,21 +4,21 @@ import androidx.annotation.Nullable;
 import androidx.recyclerview.widget.RecyclerView;
 import p007b.p085c.p086a.p087a0.AnimatableValueParser;
 
-/* compiled from: SeekParameters.java */
-/* renamed from: b.i.a.c.j2, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.j2, reason: use source file name */
+/* JADX INFO: compiled from: SeekParameters.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class SeekParameters {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final SeekParameters f7189a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static final SeekParameters f7190b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final long f7191c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final long f7192d;
 
     static {

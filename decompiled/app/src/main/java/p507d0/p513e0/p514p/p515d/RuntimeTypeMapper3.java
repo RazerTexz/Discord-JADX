@@ -47,15 +47,15 @@ import p507d0.p513e0.p514p.p515d.p517m0.p562l.p563b.p565e0.DeserializedMemberDes
 import p507d0.p513e0.p514p.p515d.p517m0.p562l.p563b.p565e0.DeserializedMemberDescriptor4;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: RuntimeTypeMapper.kt */
-/* renamed from: d0.e0.p.d.f0, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.f0, reason: use source file name */
+/* JADX INFO: compiled from: RuntimeTypeMapper.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class RuntimeTypeMapper3 {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final ClassId f22357a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static final RuntimeTypeMapper3 f22358b = new RuntimeTypeMapper3();
 
     static {
@@ -64,7 +64,7 @@ public final class RuntimeTypeMapper3 {
         f22357a = classId;
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final PrimitiveType m9338a(Class<?> cls) {
         if (!cls.isPrimitive()) {
             return null;
@@ -74,7 +74,7 @@ public final class RuntimeTypeMapper3 {
         return jvmPrimitiveType.getPrimitiveType();
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final RuntimeTypeMapper.e m9339b(FunctionDescriptor functionDescriptor) {
         String jvmMethodNameIfSpecial = specialBuiltinMembers.getJvmMethodNameIfSpecial(functionDescriptor);
         if (jvmMethodNameIfSpecial == null) {

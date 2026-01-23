@@ -1,8 +1,8 @@
 package p507d0.p584w.p586i.p587a;
 
-/* compiled from: boxing.kt */
-/* renamed from: d0.w.i.a.b, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.w.i.a.b, reason: use source file name */
+/* JADX INFO: compiled from: boxing.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class boxing {
     public static final Boolean boxBoolean(boolean z2) {
         return Boolean.valueOf(z2);

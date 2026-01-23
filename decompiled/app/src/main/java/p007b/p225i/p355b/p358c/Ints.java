@@ -9,9 +9,9 @@ import java.util.RandomAccess;
 import org.checkerframework.checker.nullness.compatqual.NullableDecl;
 import p007b.p225i.p226a.p288f.p299e.p308o.C3404f;
 
-/* compiled from: Ints.java */
-/* renamed from: b.i.b.c.a, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.b.c.a, reason: use source file name */
+/* JADX INFO: compiled from: Ints.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class Ints extends AbstractList<Integer> implements RandomAccess, Serializable {
     private static final long serialVersionUID = 0;
     public final int[] array;

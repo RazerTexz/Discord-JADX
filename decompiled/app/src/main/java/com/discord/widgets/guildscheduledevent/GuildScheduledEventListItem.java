@@ -8,12 +8,12 @@ import kotlin.jvm.internal.DefaultConstructorMarker;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: GuildScheduledEventListItem.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: GuildScheduledEventListItem.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public abstract class GuildScheduledEventListItem implements MGRecyclerDataPayload {
     public static final int TYPE_EVENT = 0;
 
-    /* compiled from: GuildScheduledEventListItem.kt */
+    /* JADX INFO: compiled from: GuildScheduledEventListItem.kt */
     public static final /* data */ class Event extends GuildScheduledEventListItem {
         private final boolean canConnect;
         private final boolean canShare;
@@ -45,42 +45,42 @@ public abstract class GuildScheduledEventListItem implements MGRecyclerDataPaylo
             return event.copy((i & 1) != 0 ? event.event : guildScheduledEvent, (i & 2) != 0 ? event.channel : channel, (i & 4) != 0 ? event.creator : userGuildMember, (i & 8) != 0 ? event.isRsvped : z2, (i & 16) != 0 ? event.canStartEvent : z3, (i & 32) != 0 ? event.canShare : z4, (i & 64) != 0 ? event.isConnected : z5, (i & 128) != 0 ? event.canConnect : z6);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final GuildScheduledEvent getEvent() {
             return this.event;
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final Channel getChannel() {
             return this.channel;
         }
 
-        /* renamed from: component3, reason: from getter */
+        /* JADX INFO: renamed from: component3, reason: from getter */
         public final UserGuildMember getCreator() {
             return this.creator;
         }
 
-        /* renamed from: component4, reason: from getter */
+        /* JADX INFO: renamed from: component4, reason: from getter */
         public final boolean getIsRsvped() {
             return this.isRsvped;
         }
 
-        /* renamed from: component5, reason: from getter */
+        /* JADX INFO: renamed from: component5, reason: from getter */
         public final boolean getCanStartEvent() {
             return this.canStartEvent;
         }
 
-        /* renamed from: component6, reason: from getter */
+        /* JADX INFO: renamed from: component6, reason: from getter */
         public final boolean getCanShare() {
             return this.canShare;
         }
 
-        /* renamed from: component7, reason: from getter */
+        /* JADX INFO: renamed from: component7, reason: from getter */
         public final boolean getIsConnected() {
             return this.isConnected;
         }
 
-        /* renamed from: component8, reason: from getter */
+        /* JADX INFO: renamed from: component8, reason: from getter */
         public final boolean getCanConnect() {
             return this.canConnect;
         }
@@ -136,6 +136,21 @@ public abstract class GuildScheduledEventListItem implements MGRecyclerDataPaylo
         }
 
         /* JADX WARN: Multi-variable type inference failed */
+        /* JADX WARN: Type inference failed for: r1v11 */
+        /* JADX WARN: Type inference failed for: r1v12 */
+        /* JADX WARN: Type inference failed for: r1v13 */
+        /* JADX WARN: Type inference failed for: r1v14 */
+        /* JADX WARN: Type inference failed for: r1v16 */
+        /* JADX WARN: Type inference failed for: r1v17 */
+        /* JADX WARN: Type inference failed for: r1v18 */
+        /* JADX WARN: Type inference failed for: r1v19 */
+        /* JADX WARN: Type inference failed for: r1v3, types: [int] */
+        /* JADX WARN: Type inference failed for: r1v5, types: [int] */
+        /* JADX WARN: Type inference failed for: r1v7, types: [int] */
+        /* JADX WARN: Type inference failed for: r1v9, types: [int] */
+        /* JADX WARN: Type inference failed for: r2v4 */
+        /* JADX WARN: Type inference failed for: r2v5, types: [int] */
+        /* JADX WARN: Type inference failed for: r2v6 */
         public int hashCode() {
             GuildScheduledEvent guildScheduledEvent = this.event;
             int iHashCode = (guildScheduledEvent != null ? guildScheduledEvent.hashCode() : 0) * 31;
@@ -144,31 +159,31 @@ public abstract class GuildScheduledEventListItem implements MGRecyclerDataPaylo
             UserGuildMember userGuildMember = this.creator;
             int iHashCode3 = (iHashCode2 + (userGuildMember != null ? userGuildMember.hashCode() : 0)) * 31;
             boolean z2 = this.isRsvped;
-            int i = z2;
-            if (z2 != 0) {
-                i = 1;
+            ?? r1 = z2;
+            if (z2) {
+                r1 = 1;
             }
-            int i2 = (iHashCode3 + i) * 31;
+            int i = (iHashCode3 + r1) * 31;
             boolean z3 = this.canStartEvent;
-            int i3 = z3;
-            if (z3 != 0) {
-                i3 = 1;
+            ?? r12 = z3;
+            if (z3) {
+                r12 = 1;
             }
-            int i4 = (i2 + i3) * 31;
+            int i2 = (i + r12) * 31;
             boolean z4 = this.canShare;
-            int i5 = z4;
-            if (z4 != 0) {
-                i5 = 1;
+            ?? r13 = z4;
+            if (z4) {
+                r13 = 1;
             }
-            int i6 = (i4 + i5) * 31;
+            int i3 = (i2 + r13) * 31;
             boolean z5 = this.isConnected;
-            int i7 = z5;
-            if (z5 != 0) {
-                i7 = 1;
+            ?? r14 = z5;
+            if (z5) {
+                r14 = 1;
             }
-            int i8 = (i6 + i7) * 31;
+            int i4 = (i3 + r14) * 31;
             boolean z6 = this.canConnect;
-            return i8 + (z6 ? 1 : z6 ? 1 : 0);
+            return i4 + (z6 ? 1 : z6);
         }
 
         public final boolean isConnected() {

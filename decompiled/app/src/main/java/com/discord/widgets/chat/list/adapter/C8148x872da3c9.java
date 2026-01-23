@@ -7,9 +7,9 @@ import java.util.Objects;
 import p507d0.p592z.p594d.Intrinsics3;
 import p658rx.functions.FuncN;
 
-/* compiled from: WidgetChatListAdapterItemUploadProgress.kt */
-/* renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemUploadProgress$ModelProvider$getFewUploadsObservable$2 */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemUploadProgress$ModelProvider$getFewUploadsObservable$2 */
+/* JADX INFO: compiled from: WidgetChatListAdapterItemUploadProgress.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class C8148x872da3c9<R> implements FuncN<WidgetChatListAdapterItemUploadProgress.Model.Few> {
     public static final C8148x872da3c9 INSTANCE = new C8148x872da3c9();
 

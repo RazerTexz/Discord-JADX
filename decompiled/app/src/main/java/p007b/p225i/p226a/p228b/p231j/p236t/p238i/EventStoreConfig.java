@@ -3,13 +3,13 @@ package p007b.p225i.p226a.p228b.p231j.p236t.p238i;
 import com.google.auto.value.AutoValue;
 import p007b.p100d.p104b.p105a.outline;
 
-/* compiled from: EventStoreConfig.java */
+/* JADX INFO: renamed from: b.i.a.b.j.t.i.d, reason: use source file name */
+/* JADX INFO: compiled from: EventStoreConfig.java */
+/* JADX INFO: loaded from: classes3.dex */
 @AutoValue
-/* renamed from: b.i.a.b.j.t.i.d, reason: use source file name */
-/* loaded from: classes3.dex */
 public abstract class EventStoreConfig {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final EventStoreConfig f5420a;
 
     static {
@@ -37,18 +37,18 @@ public abstract class EventStoreConfig {
         f5420a = new AutoValue_EventStoreConfig(l.longValue(), num.intValue(), num2.intValue(), l2.longValue(), num3.intValue(), null);
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public abstract int mo2386a();
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public abstract long mo2387b();
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public abstract int mo2388c();
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public abstract int mo2389d();
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public abstract long mo2390e();
 }

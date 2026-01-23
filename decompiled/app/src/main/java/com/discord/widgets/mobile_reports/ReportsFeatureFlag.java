@@ -4,14 +4,14 @@ import com.discord.models.experiments.domain.Experiment;
 import com.discord.stores.StoreStream;
 import kotlin.jvm.internal.DefaultConstructorMarker;
 
-/* compiled from: ReportsFeatureFlag.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: ReportsFeatureFlag.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class ReportsFeatureFlag {
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
 
-    /* compiled from: ReportsFeatureFlag.kt */
+    /* JADX INFO: compiled from: ReportsFeatureFlag.kt */
     public static final class Companion {
         private Companion() {
         }

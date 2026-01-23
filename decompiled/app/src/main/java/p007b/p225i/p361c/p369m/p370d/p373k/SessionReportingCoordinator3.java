@@ -43,24 +43,24 @@ import p007b.p225i.p361c.p369m.p370d.p384s.SettingsController;
 import p007b.p225i.p361c.p369m.p370d.p387t.TrimmedThrowableData;
 import p007b.p225i.p361c.p393p.p395h.JsonDataEncoderBuilder4;
 
-/* compiled from: SessionReportingCoordinator.java */
-/* renamed from: b.i.c.m.d.k.d1, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.c.m.d.k.d1, reason: use source file name */
+/* JADX INFO: compiled from: SessionReportingCoordinator.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class SessionReportingCoordinator3 {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final CrashlyticsReportDataCapture f12278a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final CrashlyticsReportPersistence7 f12279b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final DataTransportCrashlyticsReportSender3 f12280c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final LogFileManager f12281d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final UserMetadata f12282e;
 
     public SessionReportingCoordinator3(CrashlyticsReportDataCapture crashlyticsReportDataCapture, CrashlyticsReportPersistence7 crashlyticsReportPersistence7, DataTransportCrashlyticsReportSender3 dataTransportCrashlyticsReportSender3, LogFileManager logFileManager, UserMetadata userMetadata) {
@@ -71,9 +71,7 @@ public class SessionReportingCoordinator3 {
         this.f12282e = userMetadata;
     }
 
-    /* JADX WARN: Multi-variable type inference failed */
-    /* JADX WARN: Type inference failed for: r0v24, types: [b.i.c.m.d.m.v$d$d$a] */
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final void m6399a(@NonNull Throwable th, @NonNull Thread thread, @NonNull String str, @NonNull String str2, long j, boolean z2) {
         AutoValue_CrashlyticsReport_Session_Event_Log autoValue_CrashlyticsReport_Session_Event_Log;
         boolean zEquals = str2.equals("crash");
@@ -164,19 +162,19 @@ public class SessionReportingCoordinator3 {
             arrayList2.add(new AutoValue_CrashlyticsReport_CustomAttribute(key2, value, null));
         }
         Collections.sort(arrayList2, SessionReportingCoordinator2.f12272j);
-        AutoValue_CrashlyticsReport_Session_Event_Application autoValue_CrashlyticsReport_Session_Event_ApplicationM6573a = autoValue_CrashlyticsReport_Session_Event_Application;
+        CrashlyticsReport.d.AbstractC13233d.a aVarM6573a = autoValue_CrashlyticsReport_Session_Event_Application;
         if (!arrayList2.isEmpty()) {
             AutoValue_CrashlyticsReport_Session_Event_Application.b bVar2 = (AutoValue_CrashlyticsReport_Session_Event_Application.b) autoValue_CrashlyticsReport_Session_Event_Application.m6572e();
             bVar2.f12597b = new ImmutableList3<>(arrayList2);
-            autoValue_CrashlyticsReport_Session_Event_ApplicationM6573a = bVar2.m6573a();
+            aVarM6573a = bVar2.m6573a();
         }
-        AutoValue_CrashlyticsReport_Session_Event_Application autoValue_CrashlyticsReport_Session_Event_Application2 = autoValue_CrashlyticsReport_Session_Event_ApplicationM6573a;
+        CrashlyticsReport.d.AbstractC13233d.a aVar = aVarM6573a;
         CrashlyticsReportPersistence7 crashlyticsReportPersistence7 = this.f12279b;
         String str8 = lValueOf2 != null ? "" : " timestamp";
         if (!str8.isEmpty()) {
             throw new IllegalStateException(outline.m883w("Missing required properties:", str8));
         }
-        AutoValue_CrashlyticsReport_Session_Event autoValue_CrashlyticsReport_Session_Event = new AutoValue_CrashlyticsReport_Session_Event(lValueOf2.longValue(), str2, autoValue_CrashlyticsReport_Session_Event_Application2, bVarM6605a, autoValue_CrashlyticsReport_Session_Event_Log, null);
+        AutoValue_CrashlyticsReport_Session_Event autoValue_CrashlyticsReport_Session_Event = new AutoValue_CrashlyticsReport_Session_Event(lValueOf2.longValue(), str2, aVar, bVarM6605a, autoValue_CrashlyticsReport_Session_Event_Log, null);
         int i2 = ((SettingsController) crashlyticsReportPersistence7.f12682k).m6685c().mo6690b().f12758a;
         File fileM6635h = crashlyticsReportPersistence7.m6635h(str);
         Objects.requireNonNull(CrashlyticsReportPersistence7.f12674c);
@@ -198,7 +196,7 @@ public class SessionReportingCoordinator3 {
     }
 
     /* JADX WARN: Incorrect types in method signature: (Ljava/util/concurrent/Executor;Ljava/lang/Object;)Lcom/google/android/gms/tasks/Task<Ljava/lang/Void;>; */
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public Task m6400b(@NonNull Executor executor, @NonNull int i) {
         if (i == 1) {
             Logger3.f12227a.m6371b("Send via DataTransport disabled. Removing DataTransport reports.");

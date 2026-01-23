@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-/* loaded from: discord-126021.apk:lombok/bytecode/ClassFileMetaData.SCL.lombok */
+/* JADX INFO: loaded from: discord-126021.apk:lombok/bytecode/ClassFileMetaData.SCL.lombok */
 public class ClassFileMetaData {
     private static final byte UTF8 = 1;
     private static final byte INTEGER = 3;
@@ -240,7 +240,7 @@ public class ClassFileMetaData {
 
     private long readLong(int index) {
         int pos = this.offsets[index];
-        return (read32(pos) << 32) | (read32(pos + 4) & 4294967295L);
+        return (((long) read32(pos)) << 32) | (((long) read32(pos + 4)) & 4294967295L);
     }
 
     private double readDouble(int index) {

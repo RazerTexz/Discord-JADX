@@ -21,22 +21,22 @@ import p507d0.p513e0.p514p.p515d.p517m0.p521c.p522g1.Annotations4;
 import p507d0.p513e0.p514p.p515d.p517m0.p548g.Name;
 import p507d0.p513e0.p514p.p515d.p517m0.p567n.KotlinType;
 
-/* compiled from: PropertyGetterDescriptorImpl.java */
-/* renamed from: d0.e0.p.d.m0.c.i1.d0, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.c.i1.d0, reason: use source file name */
+/* JADX INFO: compiled from: PropertyGetterDescriptorImpl.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class PropertyGetterDescriptorImpl extends PropertyAccessorDescriptorImpl implements PropertyGetterDescriptor {
 
-    /* renamed from: v */
+    /* JADX INFO: renamed from: v */
     public KotlinType f22849v;
 
-    /* renamed from: w */
+    /* JADX INFO: renamed from: w */
     public final PropertyGetterDescriptor f22850w;
 
     /* JADX WARN: Illegal instructions before constructor call */
     /* JADX WARN: Multi-variable type inference failed */
     public PropertyGetterDescriptorImpl(PropertyDescriptor propertyDescriptor, Annotations4 annotations4, Modality modality, DescriptorVisibility2 descriptorVisibility2, boolean z2, boolean z3, boolean z4, CallableMemberDescriptor.a aVar, PropertyGetterDescriptor propertyGetterDescriptor, SourceElement sourceElement) {
+        PropertyGetterDescriptor propertyGetterDescriptor2;
         PropertyGetterDescriptorImpl propertyGetterDescriptorImpl;
-        PropertyGetterDescriptorImpl propertyGetterDescriptorImpl2;
         if (propertyDescriptor == null) {
             m9396a(0);
             throw null;
@@ -65,17 +65,17 @@ public class PropertyGetterDescriptorImpl extends PropertyAccessorDescriptorImpl
         sbM833U.append(propertyDescriptor.getName());
         sbM833U.append(">");
         super(modality, descriptorVisibility2, propertyDescriptor, annotations4, Name.special(sbM833U.toString()), z2, z3, z4, aVar, sourceElement);
-        if (propertyGetterDescriptor != 0) {
-            propertyGetterDescriptorImpl2 = this;
-            propertyGetterDescriptorImpl = propertyGetterDescriptor;
-        } else {
+        if (propertyGetterDescriptor != null) {
             propertyGetterDescriptorImpl = this;
-            propertyGetterDescriptorImpl2 = propertyGetterDescriptorImpl;
+            propertyGetterDescriptor2 = propertyGetterDescriptor;
+        } else {
+            propertyGetterDescriptor2 = this;
+            propertyGetterDescriptorImpl = propertyGetterDescriptor2;
         }
-        propertyGetterDescriptorImpl2.f22850w = propertyGetterDescriptorImpl;
+        propertyGetterDescriptorImpl.f22850w = propertyGetterDescriptor2;
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static /* synthetic */ void m9396a(int i) {
         String str = (i == 6 || i == 7 || i == 8) ? "@NotNull method %s.%s must not return null" : "Argument for @NotNull parameter '%s' of %s.%s must not be null";
         Object[] objArr = new Object[(i == 6 || i == 7 || i == 8) ? 2 : 3];

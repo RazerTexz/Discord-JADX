@@ -3,12 +3,12 @@ package p007b.p485q.p486a;
 import android.view.View;
 import com.yalantis.ucrop.UCropActivity;
 
-/* compiled from: UCropActivity.java */
-/* renamed from: b.q.a.e, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.q.a.e, reason: use source file name */
+/* JADX INFO: compiled from: UCropActivity.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class UCropActivity5 implements View.OnClickListener {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final /* synthetic */ UCropActivity f14392j;
 
     public UCropActivity5(UCropActivity uCropActivity) {

@@ -37,36 +37,36 @@ import p658rx.Observable;
 import p658rx.subjects.PublishSubject;
 import p658rx.subjects.Subject;
 
-/* compiled from: OverlayMenuView.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: OverlayMenuView.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class OverlayMenuView extends LinearLayout implements AppComponent {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static final /* synthetic */ int f19098j = 0;
 
-    /* renamed from: k, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: k, reason: from kotlin metadata */
     public final ViewOverlayMenuBinding binding;
 
-    /* renamed from: l, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: l, reason: from kotlin metadata */
     public final Subject<Void, Void> unsubscribeSignal;
 
-    /* renamed from: m, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: m, reason: from kotlin metadata */
     public Function0<Unit> onDismissRequested;
 
-    /* compiled from: OverlayMenuView.kt */
-    /* renamed from: com.discord.views.OverlayMenuView$a */
+    /* JADX INFO: renamed from: com.discord.views.OverlayMenuView$a */
+    /* JADX INFO: compiled from: OverlayMenuView.kt */
     public static final class C7085a {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final Long f19102a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final Guild f19103b;
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public final CallModel f19104c;
 
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         public final RtcConnection.Quality f19105d;
 
         public C7085a(Long l, Guild guild, CallModel callModel, RtcConnection.Quality quality) {
@@ -78,8 +78,8 @@ public final class OverlayMenuView extends LinearLayout implements AppComponent 
         }
     }
 
-    /* compiled from: OverlayMenuView.kt */
-    /* renamed from: com.discord.views.OverlayMenuView$b */
+    /* JADX INFO: renamed from: com.discord.views.OverlayMenuView$b */
+    /* JADX INFO: compiled from: OverlayMenuView.kt */
     public static final class C7086b extends Lambda implements Function1<C7085a, Unit> {
         public C7086b() {
             super(1);

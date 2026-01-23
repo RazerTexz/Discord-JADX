@@ -13,9 +13,9 @@ import java.text.NumberFormat;
 import p007b.p008a.p027k.FormatUtils;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: StageCallViewHolder.kt */
-/* renamed from: com.discord.widgets.voice.fullscreen.stage.AudienceHeaderViewHolder, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: com.discord.widgets.voice.fullscreen.stage.AudienceHeaderViewHolder, reason: use source file name */
+/* JADX INFO: compiled from: StageCallViewHolder.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class StageCallViewHolder2 extends StageCallViewHolder {
     private final WidgetStageChannelAudienceRoleBinding binding;
     private final NumberFormat numberFormatter;
@@ -44,7 +44,7 @@ public final class StageCallViewHolder2 extends StageCallViewHolder {
     }
 
     @SuppressLint({"SetTextI18n"})
-    /* renamed from: onConfigure, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: onConfigure, reason: avoid collision after fix types in other method */
     public void onConfigure2(int position, StageCallItem data) {
         Intrinsics3.checkNotNullParameter(data, "data");
         super.onConfigure(position, data);

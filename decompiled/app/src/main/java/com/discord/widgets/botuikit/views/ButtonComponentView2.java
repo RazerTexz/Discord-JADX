@@ -4,9 +4,9 @@ import com.discord.api.botuikit.ButtonComponent2;
 import com.discord.models.botuikit.ButtonMessageComponent;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ButtonComponentView.kt */
-/* renamed from: com.discord.widgets.botuikit.views.ButtonComponentViewKt, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.botuikit.views.ButtonComponentViewKt, reason: use source file name */
+/* JADX INFO: compiled from: ButtonComponentView.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class ButtonComponentView2 {
     public static final boolean hasEmoji(ButtonMessageComponent buttonMessageComponent) {
         Intrinsics3.checkNotNullParameter(buttonMessageComponent, "$this$hasEmoji");

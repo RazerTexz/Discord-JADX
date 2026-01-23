@@ -3,16 +3,16 @@ package p007b.p225i.p226a.p288f.p313h.p325l;
 import android.util.Log;
 import p007b.p100d.p104b.p105a.outline;
 
-/* compiled from: com.google.android.gms:play-services-measurement-impl@@18.0.0 */
-/* renamed from: b.i.a.f.h.l.m2 */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.h.l.m2 */
+/* JADX INFO: compiled from: com.google.android.gms:play-services-measurement-impl@@18.0.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public final class C3745m2 extends AbstractC3732l2<Long> {
     public C3745m2(C3797q2 c3797q2, String str, Long l) {
         super(c3797q2, str, l, true, null);
     }
 
     @Override // p007b.p225i.p226a.p288f.p313h.p325l.AbstractC3732l2
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final Long mo5047a(Object obj) {
         if (obj instanceof Long) {
             return (Long) obj;

@@ -1,8 +1,8 @@
 package com.discord.widgets.servers.member_verification.form_fields;
 
 
-/* compiled from: MemberVerificationItemTermsHeader.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: MemberVerificationItemTermsHeader.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class MemberVerificationItemTermsHeader implements MemberVerificationItem {
     private final int type = 1;
     private final String key = String.valueOf(getType());

@@ -8,24 +8,24 @@ import androidx.cardview.widget.CardView;
 import androidx.viewbinding.ViewBinding;
 import com.discord.widgets.roles.RoleIconView;
 
-/* compiled from: GuildRoleChipBinding.java */
-/* renamed from: b.a.i.y, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.a.i.y, reason: use source file name */
+/* JADX INFO: compiled from: GuildRoleChipBinding.java */
+/* JADX INFO: loaded from: classes.dex */
 public final class GuildRoleChipBinding implements ViewBinding {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     @NonNull
     public final CardView f1388a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     @NonNull
     public final ImageView f1389b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     @NonNull
     public final RoleIconView f1390c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     @NonNull
     public final TextView f1391d;
 

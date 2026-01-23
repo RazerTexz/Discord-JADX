@@ -27,8 +27,8 @@ import p007b.p109f.p190m.p191n.NativeLoader;
 import p007b.p109f.p190m.p191n.SystemDelegate;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: MGImagesConfig.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: MGImagesConfig.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class MGImagesConfig {
     private static final String CACHE_DIR = "app_images_cache";
     private static final String CACHE_DIR_SMALL = "app_images_cache_small";
@@ -36,8 +36,8 @@ public final class MGImagesConfig {
     private static final int MAX_BITMAP_MEM_CACHE_SIZE_RATIO = 3;
     private static final long MAX_DISK_CACHE_SIZE = 41943040;
 
-    /* compiled from: MGImagesConfig.kt */
-    /* renamed from: com.discord.utilities.images.MGImagesConfig$getAppBitmapMemoryCacheParamsSupplier$1 */
+    /* JADX INFO: renamed from: com.discord.utilities.images.MGImagesConfig$getAppBitmapMemoryCacheParamsSupplier$1 */
+    /* JADX INFO: compiled from: MGImagesConfig.kt */
     public static final class C67801 extends DefaultBitmapMemoryCacheParamsSupplier {
         public final /* synthetic */ ActivityManager $activityManager;
 

@@ -12,22 +12,22 @@ import p007b.p225i.p226a.p242c.p279z2.SimpleMetadataDecoder;
 import p007b.p225i.p226a.p288f.p299e.p308o.C3404f;
 import p007b.p225i.p355b.p356a.Charsets;
 
-/* compiled from: IcyDecoder.java */
-/* renamed from: b.i.a.c.z2.j.a, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.z2.j.a, reason: use source file name */
+/* JADX INFO: compiled from: IcyDecoder.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class IcyDecoder extends SimpleMetadataDecoder {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final Pattern f9150a = Pattern.compile("(.+?)='(.*?)';", 32);
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final CharsetDecoder f9151b = Charsets.f11945c.newDecoder();
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final CharsetDecoder f9152c = Charsets.f11944b.newDecoder();
 
     @Override // p007b.p225i.p226a.p242c.p279z2.SimpleMetadataDecoder
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public Metadata mo3899b(MetadataInputBuffer metadataInputBuffer, ByteBuffer byteBuffer) {
         String string;
         String str = null;

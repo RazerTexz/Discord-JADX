@@ -19,15 +19,15 @@ import p007b.p225i.p226a.p242c.p259f3.ParsableByteArray;
 import p007b.p225i.p226a.p242c.p259f3.Util2;
 import p007b.p225i.p226a.p288f.p299e.p308o.C3404f;
 
-/* compiled from: WebvttDecoder.java */
-/* renamed from: b.i.a.c.b3.v.i, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.b3.v.i, reason: use source file name */
+/* JADX INFO: compiled from: WebvttDecoder.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class WebvttDecoder extends SimpleSubtitleDecoder2 {
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public final ParsableByteArray f6158n;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public final WebvttCssParser f6159o;
 
     public WebvttDecoder() {
@@ -53,7 +53,7 @@ public final class WebvttDecoder extends SimpleSubtitleDecoder2 {
     /* JADX WARN: Type inference failed for: r7v4, types: [boolean, int] */
     /* JADX WARN: Type inference failed for: r7v6 */
     @Override // p007b.p225i.p226a.p242c.p245b3.SimpleSubtitleDecoder2
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
@@ -63,7 +63,7 @@ public final class WebvttDecoder extends SimpleSubtitleDecoder2 {
         String str;
         WebvttCssParser webvttCssParser;
         String string;
-        char c;
+        byte b2;
         int i2;
         ParsableByteArray parsableByteArray = this.f6158n;
         parsableByteArray.f6793a = bArr;
@@ -80,22 +80,22 @@ public final class WebvttDecoder extends SimpleSubtitleDecoder2 {
                 ParsableByteArray parsableByteArray2 = this.f6158n;
                 int i4 = -1;
                 ?? r7 = 1;
-                char c2 = 65535;
+                byte b3 = -1;
                 int i5 = 0;
-                while (c2 == 65535) {
+                while (b3 == -1) {
                     i5 = parsableByteArray2.f6794b;
                     String strM3087g = parsableByteArray2.m3087g();
-                    c2 = strM3087g == null ? (char) 0 : "STYLE".equals(strM3087g) ? (char) 2 : strM3087g.startsWith("NOTE") ? (char) 1 : (char) 3;
+                    b3 = strM3087g == null ? (byte) 0 : "STYLE".equals(strM3087g) ? (byte) 2 : strM3087g.startsWith("NOTE") ? (byte) 1 : (byte) 3;
                 }
                 parsableByteArray2.m3079E(i5);
-                if (c2 == 0) {
+                if (b3 == 0) {
                     return new WebvttSubtitle(arrayList2);
                 }
-                if (c2 == 1) {
+                if (b3 == 1) {
                     while (!TextUtils.isEmpty(this.f6158n.m3087g())) {
                     }
                 } else {
-                    if (c2 == 2) {
+                    if (b3 == 2) {
                         if (!arrayList2.isEmpty()) {
                             throw new SubtitleDecoderException("A style block was found after the first cue.");
                         }
@@ -254,21 +254,21 @@ public final class WebvttDecoder extends SimpleSubtitleDecoder2 {
                                                                 int iHashCode = strGroup2.hashCode();
                                                                 if (iHashCode == 37) {
                                                                     if (strGroup2.equals("%")) {
-                                                                        c = 0;
+                                                                        b2 = 0;
                                                                     }
-                                                                    if (c != 0) {
+                                                                    if (b2 != 0) {
                                                                     }
                                                                     String strGroup3 = matcher2.group(i2);
                                                                     Objects.requireNonNull(strGroup3);
                                                                     webvttCssStyle.f6128o = Float.parseFloat(strGroup3);
                                                                 } else if (iHashCode != 3240) {
-                                                                    c = (iHashCode == 3592 && strGroup2.equals("px")) ? (char) 2 : (char) 65535;
-                                                                    if (c != 0) {
+                                                                    b2 = (iHashCode == 3592 && strGroup2.equals("px")) ? (byte) 2 : (byte) -1;
+                                                                    if (b2 != 0) {
                                                                         i2 = 1;
-                                                                        if (c == 1) {
+                                                                        if (b2 == 1) {
                                                                             webvttCssStyle.f6127n = 2;
                                                                         } else {
-                                                                            if (c != 2) {
+                                                                            if (b2 != 2) {
                                                                                 throw new IllegalStateException();
                                                                             }
                                                                             webvttCssStyle.f6127n = 1;
@@ -282,9 +282,9 @@ public final class WebvttDecoder extends SimpleSubtitleDecoder2 {
                                                                     webvttCssStyle.f6128o = Float.parseFloat(strGroup32);
                                                                 } else {
                                                                     if (strGroup2.equals("em")) {
-                                                                        c = 1;
+                                                                        b2 = 1;
                                                                     }
-                                                                    if (c != 0) {
+                                                                    if (b2 != 0) {
                                                                     }
                                                                     String strGroup322 = matcher2.group(i2);
                                                                     Objects.requireNonNull(strGroup322);
@@ -320,7 +320,7 @@ public final class WebvttDecoder extends SimpleSubtitleDecoder2 {
                                 }
                             }
                         }
-                    } else if (c2 == 3) {
+                    } else if (b3 == 3) {
                         ParsableByteArray parsableByteArray7 = this.f6158n;
                         Pattern pattern = WebvttCueParser.f6134a;
                         String strM3087g2 = parsableByteArray7.m3087g();

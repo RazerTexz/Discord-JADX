@@ -56,11 +56,11 @@ import p007b.p008a.p027k.FormatUtils;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: WidgetSearchSuggestionsAdapter.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetSearchSuggestionsAdapter.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetSearchSuggestionsAdapter extends MGRecyclerAdapterSimple<MGRecyclerDataPayload> {
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private static final int TYPE_FILTER = 2;
     private static final int TYPE_HAS = 5;
@@ -76,7 +76,7 @@ public final class WidgetSearchSuggestionsAdapter extends MGRecyclerAdapterSimpl
     private Function1<? super List<? extends QueryNode>, Unit> onRecentQueryClicked;
     private Function1<? super UserSuggestion, Unit> onUserClicked;
 
-    /* compiled from: WidgetSearchSuggestionsAdapter.kt */
+    /* JADX INFO: compiled from: WidgetSearchSuggestionsAdapter.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -116,7 +116,7 @@ public final class WidgetSearchSuggestionsAdapter extends MGRecyclerAdapterSimpl
         }
     }
 
-    /* compiled from: WidgetSearchSuggestionsAdapter.kt */
+    /* JADX INFO: compiled from: WidgetSearchSuggestionsAdapter.kt */
     public static final class FilterViewHolder extends MGRecyclerViewHolder<WidgetSearchSuggestionsAdapter, MGRecyclerDataPayload> {
         private final WidgetSearchSuggestionsItemSuggestionBinding binding;
 
@@ -242,7 +242,7 @@ public final class WidgetSearchSuggestionsAdapter extends MGRecyclerAdapterSimpl
         }
 
         @SuppressLint({"SetTextI18n"})
-        /* renamed from: onConfigure, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: onConfigure, reason: avoid collision after fix types in other method */
         public void onConfigure2(int position, MGRecyclerDataPayload data) {
             Intrinsics3.checkNotNullParameter(data, "data");
             super.onConfigure(position, data);
@@ -264,15 +264,15 @@ public final class WidgetSearchSuggestionsAdapter extends MGRecyclerAdapterSimpl
         }
     }
 
-    /* compiled from: WidgetSearchSuggestionsAdapter.kt */
+    /* JADX INFO: compiled from: WidgetSearchSuggestionsAdapter.kt */
     public static final class HasViewHolder extends MGRecyclerViewHolder<WidgetSearchSuggestionsAdapter, MGRecyclerDataPayload> {
 
-        /* renamed from: Companion, reason: from kotlin metadata */
+        /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
         public static final Companion INSTANCE = new Companion(null);
         private final WidgetSearchSuggestionsItemHasBinding binding;
         private final SearchStringProvider searchStringProvider;
 
-        /* compiled from: WidgetSearchSuggestionsAdapter.kt */
+        /* JADX INFO: compiled from: WidgetSearchSuggestionsAdapter.kt */
         public static final class Companion {
 
             public final /* synthetic */ class WhenMappings {
@@ -361,7 +361,7 @@ public final class WidgetSearchSuggestionsAdapter extends MGRecyclerAdapterSimpl
         }
 
         @SuppressLint({"SetTextI18n"})
-        /* renamed from: onConfigure, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: onConfigure, reason: avoid collision after fix types in other method */
         public void onConfigure2(int position, MGRecyclerDataPayload data) {
             Intrinsics3.checkNotNullParameter(data, "data");
             super.onConfigure(position, data);
@@ -374,7 +374,7 @@ public final class WidgetSearchSuggestionsAdapter extends MGRecyclerAdapterSimpl
         }
     }
 
-    /* compiled from: WidgetSearchSuggestionsAdapter.kt */
+    /* JADX INFO: compiled from: WidgetSearchSuggestionsAdapter.kt */
     public static final class HeaderViewHolder extends MGRecyclerViewHolder<WidgetSearchSuggestionsAdapter, MGRecyclerDataPayload> {
         private final WidgetSearchSuggestionItemHeaderBinding binding;
 
@@ -436,7 +436,7 @@ public final class WidgetSearchSuggestionsAdapter extends MGRecyclerAdapterSimpl
             onConfigure2(i, mGRecyclerDataPayload);
         }
 
-        /* renamed from: onConfigure, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: onConfigure, reason: avoid collision after fix types in other method */
         public void onConfigure2(int position, MGRecyclerDataPayload data) {
             Intrinsics3.checkNotNullParameter(data, "data");
             super.onConfigure(position, data);
@@ -444,7 +444,7 @@ public final class WidgetSearchSuggestionsAdapter extends MGRecyclerAdapterSimpl
         }
     }
 
-    /* compiled from: WidgetSearchSuggestionsAdapter.kt */
+    /* JADX INFO: compiled from: WidgetSearchSuggestionsAdapter.kt */
     public static final class HistoryHeaderViewHolder extends MGRecyclerViewHolder<WidgetSearchSuggestionsAdapter, MGRecyclerDataPayload> {
         private final WidgetSearchSuggestionItemHeaderHistoryBinding binding;
 
@@ -481,7 +481,7 @@ public final class WidgetSearchSuggestionsAdapter extends MGRecyclerAdapterSimpl
             onConfigure2(i, mGRecyclerDataPayload);
         }
 
-        /* renamed from: onConfigure, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: onConfigure, reason: avoid collision after fix types in other method */
         public void onConfigure2(int position, MGRecyclerDataPayload data) {
             Intrinsics3.checkNotNullParameter(data, "data");
             super.onConfigure(position, data);
@@ -489,7 +489,7 @@ public final class WidgetSearchSuggestionsAdapter extends MGRecyclerAdapterSimpl
         }
     }
 
-    /* compiled from: WidgetSearchSuggestionsAdapter.kt */
+    /* JADX INFO: compiled from: WidgetSearchSuggestionsAdapter.kt */
     public static final class InChannelViewHolder extends MGRecyclerViewHolder<WidgetSearchSuggestionsAdapter, MGRecyclerDataPayload> {
         private final WidgetSearchSuggestionsItemChannelBinding binding;
 
@@ -523,7 +523,7 @@ public final class WidgetSearchSuggestionsAdapter extends MGRecyclerAdapterSimpl
             onConfigure2(i, mGRecyclerDataPayload);
         }
 
-        /* renamed from: onConfigure, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: onConfigure, reason: avoid collision after fix types in other method */
         public void onConfigure2(int position, MGRecyclerDataPayload data) {
             Intrinsics3.checkNotNullParameter(data, "data");
             super.onConfigure(position, data);
@@ -535,7 +535,7 @@ public final class WidgetSearchSuggestionsAdapter extends MGRecyclerAdapterSimpl
         }
     }
 
-    /* compiled from: WidgetSearchSuggestionsAdapter.kt */
+    /* JADX INFO: compiled from: WidgetSearchSuggestionsAdapter.kt */
     public static final class RecentQueryViewHolder extends MGRecyclerViewHolder<WidgetSearchSuggestionsAdapter, MGRecyclerDataPayload> {
         private final WidgetSearchSuggestionsItemRecentQueryBinding binding;
 
@@ -569,7 +569,7 @@ public final class WidgetSearchSuggestionsAdapter extends MGRecyclerAdapterSimpl
             onConfigure2(i, mGRecyclerDataPayload);
         }
 
-        /* renamed from: onConfigure, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: onConfigure, reason: avoid collision after fix types in other method */
         public void onConfigure2(int position, MGRecyclerDataPayload data) {
             Intrinsics3.checkNotNullParameter(data, "data");
             super.onConfigure(position, data);
@@ -585,7 +585,7 @@ public final class WidgetSearchSuggestionsAdapter extends MGRecyclerAdapterSimpl
         }
     }
 
-    /* compiled from: WidgetSearchSuggestionsAdapter.kt */
+    /* JADX INFO: compiled from: WidgetSearchSuggestionsAdapter.kt */
     public static final class UserViewHolder extends MGRecyclerViewHolder<WidgetSearchSuggestionsAdapter, MGRecyclerDataPayload> {
         private final WidgetSearchSuggestionsItemUserBinding binding;
 
@@ -610,7 +610,7 @@ public final class WidgetSearchSuggestionsAdapter extends MGRecyclerAdapterSimpl
             onConfigure2(i, mGRecyclerDataPayload);
         }
 
-        /* renamed from: onConfigure, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: onConfigure, reason: avoid collision after fix types in other method */
         public void onConfigure2(int position, MGRecyclerDataPayload data) {
             Intrinsics3.checkNotNullParameter(data, "data");
             super.onConfigure(position, data);

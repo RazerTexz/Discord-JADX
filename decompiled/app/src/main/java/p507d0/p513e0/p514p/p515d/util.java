@@ -6,12 +6,12 @@ import p507d0.p513e0.p514p.p515d.p517m0.p521c.PropertyDescriptor;
 import p507d0.p513e0.p514p.p515d.p517m0.p521c.p524i1.DeclarationDescriptorVisitorEmptyBodies;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: util.kt */
-/* renamed from: d0.e0.p.d.a, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.a, reason: use source file name */
+/* JADX INFO: compiled from: util.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public class util extends DeclarationDescriptorVisitorEmptyBodies<KCallableImpl<?>, Unit> {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final KDeclarationContainerImpl f22319a;
 
     public util(KDeclarationContainerImpl kDeclarationContainerImpl) {

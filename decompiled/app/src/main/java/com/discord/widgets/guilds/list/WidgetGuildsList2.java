@@ -8,9 +8,9 @@ import java.util.Map;
 import p507d0.p592z.p594d.Intrinsics3;
 import p658rx.functions.Func3;
 
-/* compiled from: WidgetGuildsList.kt */
-/* renamed from: com.discord.widgets.guilds.list.WidgetGuildsList$AddGuildHint$Companion$get$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.guilds.list.WidgetGuildsList$AddGuildHint$Companion$get$1, reason: use source file name */
+/* JADX INFO: compiled from: WidgetGuildsList.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetGuildsList2<T1, T2, T3, R> implements Func3<StoreNux.NuxState, Boolean, Map<Long, ? extends Channel>, WidgetGuildsList.AddGuildHint> {
     public static final WidgetGuildsList2 INSTANCE = new WidgetGuildsList2();
 
@@ -20,7 +20,7 @@ public final class WidgetGuildsList2<T1, T2, T3, R> implements Func3<StoreNux.Nu
     }
 
     /* JADX WARN: Removed duplicated region for block: B:9:0x001b  */
-    /* renamed from: call, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */

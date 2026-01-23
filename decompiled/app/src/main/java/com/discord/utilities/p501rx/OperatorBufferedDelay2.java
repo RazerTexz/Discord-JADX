@@ -5,9 +5,9 @@ import androidx.exifinterface.media.ExifInterface;
 import com.discord.utilities.p501rx.OperatorBufferedDelay;
 import p658rx.functions.Action0;
 
-/* compiled from: OperatorBufferedDelay.kt */
-/* renamed from: com.discord.utilities.rx.OperatorBufferedDelay$ExactSubscriber$onNext$$inlined$synchronized$lambda$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.utilities.rx.OperatorBufferedDelay$ExactSubscriber$onNext$$inlined$synchronized$lambda$1, reason: use source file name */
+/* JADX INFO: compiled from: OperatorBufferedDelay.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class OperatorBufferedDelay2 implements Action0 {
     public final /* synthetic */ Object $t$inlined;
     public final /* synthetic */ OperatorBufferedDelay.ExactSubscriber this$0;

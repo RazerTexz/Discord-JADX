@@ -7,7 +7,7 @@ import java.util.Collections;
 import java.util.List;
 import p007b.p225i.p355b.p359d.p360a.ListenableFuture8;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public abstract class WorkContinuation {
     @NonNull
     public static WorkContinuation combine(@NonNull List<WorkContinuation> list) {

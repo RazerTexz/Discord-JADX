@@ -19,12 +19,12 @@ import p007b.p225i.p226a.p288f.p299e.p305l.C3395a;
 import p007b.p225i.p226a.p288f.p299e.p308o.C3404f;
 import p007b.p225i.p226a.p288f.p313h.p316c.BinderC3453b;
 
-/* compiled from: com.google.android.gms:play-services-auth@@19.0.0 */
-/* renamed from: b.i.a.f.c.a.f.b.q */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.c.a.f.b.q */
+/* JADX INFO: compiled from: com.google.android.gms:play-services-auth@@19.0.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public final class BinderC3214q extends BinderC3453b implements IInterface {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final Context f9240a;
 
     public BinderC3214q(Context context) {
@@ -33,7 +33,7 @@ public final class BinderC3214q extends BinderC3453b implements IInterface {
     }
 
     @Override // p007b.p225i.p226a.p288f.p313h.p316c.BinderC3453b
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final boolean mo3994c(int i, Parcel parcel, Parcel parcel2, int i2) {
         BasePendingResult basePendingResultMo4049b;
         BasePendingResult basePendingResultMo4049b2;
@@ -98,7 +98,7 @@ public final class BinderC3214q extends BinderC3453b implements IInterface {
         return true;
     }
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public final void m3995g() {
         if (C3404f.m4199D0(this.f9240a, Binder.getCallingUid())) {
             return;

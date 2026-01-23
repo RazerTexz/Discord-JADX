@@ -1,7 +1,6 @@
 package com.discord.widgets.channels;
 
 import android.content.Context;
-import android.content.res.Resources;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.widget.TextView;
@@ -20,8 +19,8 @@ import p507d0.p580t.Collections2;
 import p507d0.p580t.Iterables2;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: UserAkaView.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: UserAkaView.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class UserAkaView extends ConstraintLayout {
     private final UserAkaViewBinding binding;
     private List<GuildMember> guildMembers;
@@ -44,7 +43,7 @@ public final class UserAkaView extends ConstraintLayout {
         return userAkaView.binding;
     }
 
-    public final void configure(List<GuildMember> guildMembers) throws Resources.NotFoundException {
+    public final void configure(List<GuildMember> guildMembers) {
         Intrinsics3.checkNotNullParameter(guildMembers, "guildMembers");
         this.guildMembers = guildMembers;
         float dimension = getResources().getDimension(C5419R.dimen.aka_avatar_width);

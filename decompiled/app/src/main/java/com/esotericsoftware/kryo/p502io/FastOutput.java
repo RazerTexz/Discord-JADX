@@ -3,7 +3,7 @@ package com.esotericsoftware.kryo.p502io;
 import com.esotericsoftware.kryo.KryoException;
 import java.io.OutputStream;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public final class FastOutput extends Output {
     public FastOutput() {
     }

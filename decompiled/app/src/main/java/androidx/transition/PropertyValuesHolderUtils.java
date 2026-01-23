@@ -6,7 +6,7 @@ import android.graphics.Path;
 import android.graphics.PointF;
 import android.util.Property;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class PropertyValuesHolderUtils {
     private PropertyValuesHolderUtils() {
     }

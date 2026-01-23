@@ -10,47 +10,47 @@ import p600f0.Handshake;
 import p600f0.Protocol2;
 import p600f0.p601e0.p605g.Exchange;
 
-/* compiled from: Response.kt */
-/* loaded from: classes3.dex */
+/* JADX INFO: compiled from: Response.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class Response implements Closeable {
 
-    /* renamed from: j, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: j, reason: from kotlin metadata */
     public final Request request;
 
-    /* renamed from: k, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: k, reason: from kotlin metadata */
     public final Protocol2 protocol;
 
-    /* renamed from: l, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: l, reason: from kotlin metadata */
     public final String message;
 
-    /* renamed from: m, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: m, reason: from kotlin metadata */
     public final int code;
 
-    /* renamed from: n, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: n, reason: from kotlin metadata */
     public final Handshake handshake;
 
-    /* renamed from: o, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: o, reason: from kotlin metadata */
     public final Headers headers;
 
-    /* renamed from: p, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: p, reason: from kotlin metadata */
     public final ResponseBody body;
 
-    /* renamed from: q, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: q, reason: from kotlin metadata */
     public final Response networkResponse;
 
-    /* renamed from: r, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: r, reason: from kotlin metadata */
     public final Response cacheResponse;
 
-    /* renamed from: s, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: s, reason: from kotlin metadata */
     public final Response priorResponse;
 
-    /* renamed from: t, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: t, reason: from kotlin metadata */
     public final long sentRequestAtMillis;
 
-    /* renamed from: u, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: u, reason: from kotlin metadata */
     public final long receivedResponseAtMillis;
 
-    /* renamed from: v, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: v, reason: from kotlin metadata */
     public final Exchange exchange;
 
     public Response(Request request, Protocol2 protocol2, String str, int i, Handshake handshake, Headers headers, ResponseBody responseBody, Response response, Response response2, Response response3, long j, long j2, Exchange exchange) {
@@ -73,7 +73,7 @@ public final class Response implements Closeable {
         this.exchange = exchange;
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static String m10989a(Response response, String str, String str2, int i) {
         int i2 = i & 2;
         Objects.requireNonNull(response);
@@ -85,7 +85,7 @@ public final class Response implements Closeable {
         return null;
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final boolean m10990b() {
         int i = this.code;
         return 200 <= i && 299 >= i;
@@ -113,47 +113,47 @@ public final class Response implements Closeable {
         return sbM833U.toString();
     }
 
-    /* compiled from: Response.kt */
-    /* renamed from: okhttp3.Response$a */
+    /* JADX INFO: renamed from: okhttp3.Response$a */
+    /* JADX INFO: compiled from: Response.kt */
     public static class C12937a {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public Request f27565a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public Protocol2 f27566b;
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public int f27567c;
 
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         public String f27568d;
 
-        /* renamed from: e */
+        /* JADX INFO: renamed from: e */
         public Handshake f27569e;
 
-        /* renamed from: f */
+        /* JADX INFO: renamed from: f */
         public Headers.C12930a f27570f;
 
-        /* renamed from: g */
+        /* JADX INFO: renamed from: g */
         public ResponseBody f27571g;
 
-        /* renamed from: h */
+        /* JADX INFO: renamed from: h */
         public Response f27572h;
 
-        /* renamed from: i */
+        /* JADX INFO: renamed from: i */
         public Response f27573i;
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public Response f27574j;
 
-        /* renamed from: k */
+        /* JADX INFO: renamed from: k */
         public long f27575k;
 
-        /* renamed from: l */
+        /* JADX INFO: renamed from: l */
         public long f27576l;
 
-        /* renamed from: m */
+        /* JADX INFO: renamed from: m */
         public Exchange f27577m;
 
         public C12937a() {
@@ -161,7 +161,7 @@ public final class Response implements Closeable {
             this.f27570f = new Headers.C12930a();
         }
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public Response m10991a() {
             int i = this.f27567c;
             if (!(i >= 0)) {
@@ -184,14 +184,14 @@ public final class Response implements Closeable {
             throw new IllegalStateException("message == null".toString());
         }
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public C12937a m10992b(Response response) {
             m10993c("cacheResponse", response);
             this.f27573i = response;
             return this;
         }
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public final void m10993c(String str, Response response) {
             if (response != null) {
                 if (!(response.body == null)) {
@@ -209,28 +209,28 @@ public final class Response implements Closeable {
             }
         }
 
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         public C12937a m10994d(Headers headers) {
             Intrinsics3.checkParameterIsNotNull(headers, "headers");
             this.f27570f = headers.m10956e();
             return this;
         }
 
-        /* renamed from: e */
+        /* JADX INFO: renamed from: e */
         public C12937a m10995e(String str) {
             Intrinsics3.checkParameterIsNotNull(str, "message");
             this.f27568d = str;
             return this;
         }
 
-        /* renamed from: f */
+        /* JADX INFO: renamed from: f */
         public C12937a m10996f(Protocol2 protocol2) {
             Intrinsics3.checkParameterIsNotNull(protocol2, "protocol");
             this.f27566b = protocol2;
             return this;
         }
 
-        /* renamed from: g */
+        /* JADX INFO: renamed from: g */
         public C12937a m10997g(Request request) {
             Intrinsics3.checkParameterIsNotNull(request, "request");
             this.f27565a = request;

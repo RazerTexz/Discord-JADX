@@ -3,8 +3,8 @@ package com.discord.api.activity;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ActivitySecrets.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: ActivitySecrets.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class ActivitySecrets {
     private final String join;
     private final String match;

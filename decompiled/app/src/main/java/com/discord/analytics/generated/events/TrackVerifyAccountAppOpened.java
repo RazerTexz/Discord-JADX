@@ -6,15 +6,15 @@ import com.discord.api.science.AnalyticsSchema;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: TrackVerifyAccountAppOpened.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: TrackVerifyAccountAppOpened.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class TrackVerifyAccountAppOpened implements AnalyticsSchema, TrackBase2 {
     private TrackBase trackBase;
     private final Long verifyingUserId = null;
     private final transient String analyticsSchemaTypeName = "verify_account_app_opened";
 
     @Override // com.discord.api.science.AnalyticsSchema
-    /* renamed from: d, reason: from getter */
+    /* JADX INFO: renamed from: d, reason: from getter */
     public String getAnalyticsSchemaTypeName() {
         return this.analyticsSchemaTypeName;
     }

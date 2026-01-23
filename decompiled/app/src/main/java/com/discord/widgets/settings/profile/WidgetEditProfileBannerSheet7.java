@@ -4,9 +4,9 @@ import kotlin.Unit;
 import kotlin.jvm.functions.Function1;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetEditProfileBannerSheet.kt */
-/* renamed from: com.discord.widgets.settings.profile.WidgetEditProfileBannerSheet$onColorSelected$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.settings.profile.WidgetEditProfileBannerSheet$onColorSelected$1, reason: use source file name */
+/* JADX INFO: compiled from: WidgetEditProfileBannerSheet.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetEditProfileBannerSheet7 extends Lambda implements Function1<Integer, Unit> {
     public static final WidgetEditProfileBannerSheet7 INSTANCE = new WidgetEditProfileBannerSheet7();
 
@@ -20,7 +20,7 @@ public final class WidgetEditProfileBannerSheet7 extends Lambda implements Funct
         return Unit.f27425a;
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final void invoke2(Integer num) {
     }
 }

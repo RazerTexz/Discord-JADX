@@ -3,18 +3,18 @@ package com.discord.api.guildhash;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: GuildHash.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: GuildHash.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class GuildHash {
     private final String hash;
     private final boolean omitted;
 
-    /* renamed from: a, reason: from getter */
+    /* JADX INFO: renamed from: a, reason: from getter */
     public final String getHash() {
         return this.hash;
     }
 
-    /* renamed from: b, reason: from getter */
+    /* JADX INFO: renamed from: b, reason: from getter */
     public final boolean getOmitted() {
         return this.omitted;
     }
@@ -31,15 +31,18 @@ public final /* data */ class GuildHash {
     }
 
     /* JADX WARN: Multi-variable type inference failed */
+    /* JADX WARN: Type inference failed for: r1v1, types: [int] */
+    /* JADX WARN: Type inference failed for: r1v2 */
+    /* JADX WARN: Type inference failed for: r1v3 */
     public int hashCode() {
         String str = this.hash;
         int iHashCode = (str != null ? str.hashCode() : 0) * 31;
         boolean z2 = this.omitted;
-        int i = z2;
-        if (z2 != 0) {
-            i = 1;
+        ?? r1 = z2;
+        if (z2) {
+            r1 = 1;
         }
-        return iHashCode + i;
+        return iHashCode + r1;
     }
 
     public String toString() {

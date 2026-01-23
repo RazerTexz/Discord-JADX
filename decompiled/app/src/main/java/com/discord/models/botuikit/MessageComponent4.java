@@ -3,9 +3,9 @@ package com.discord.models.botuikit;
 import com.discord.models.botuikit.ActionInteractionComponentState;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: MessageComponent.kt */
-/* renamed from: com.discord.models.botuikit.MessageComponentUtils, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: com.discord.models.botuikit.MessageComponentUtils, reason: use source file name */
+/* JADX INFO: compiled from: MessageComponent.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class MessageComponent4 {
     public static final MessageComponent4 INSTANCE = new MessageComponent4();
 

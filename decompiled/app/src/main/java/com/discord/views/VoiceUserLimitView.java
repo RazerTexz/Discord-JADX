@@ -22,32 +22,32 @@ import p507d0.LazyJVM;
 import p507d0.p508a0.MathJVM;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: VoiceUserLimitView.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: VoiceUserLimitView.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class VoiceUserLimitView extends LinearLayout {
 
-    /* renamed from: j, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: j, reason: from kotlin metadata */
     public final VoiceUserLimitViewBinding binding;
 
-    /* renamed from: k, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: k, reason: from kotlin metadata */
     public final Paint paint;
 
-    /* renamed from: l, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: l, reason: from kotlin metadata */
     public final int slantWidthPx;
 
-    /* renamed from: m, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: m, reason: from kotlin metadata */
     public final Path path;
 
-    /* renamed from: n, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: n, reason: from kotlin metadata */
     public final Point point1;
 
-    /* renamed from: o, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: o, reason: from kotlin metadata */
     public final Point point2;
 
-    /* renamed from: p, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: p, reason: from kotlin metadata */
     public final Point point3;
 
-    /* renamed from: q, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: q, reason: from kotlin metadata */
     public final Lazy videoCamDrawable;
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -90,7 +90,7 @@ public final class VoiceUserLimitView extends LinearLayout {
         return (Drawable) this.videoCamDrawable.getValue();
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final void m8569a(int current, int max, boolean isVideo) {
         TextView textView = this.binding.f1005b;
         Intrinsics3.checkNotNullExpressionValue(textView, "binding.voiceUserLimitCurrent");

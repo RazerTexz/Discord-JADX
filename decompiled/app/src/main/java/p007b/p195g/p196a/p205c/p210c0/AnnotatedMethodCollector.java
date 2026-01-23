@@ -13,28 +13,28 @@ import p007b.p195g.p196a.p205c.p210c0.AnnotationCollector;
 import p007b.p195g.p196a.p205c.p210c0.ClassIntrospector;
 import p007b.p195g.p196a.p205c.p219i0.ClassUtil;
 
-/* compiled from: AnnotatedMethodCollector.java */
-/* renamed from: b.g.a.c.c0.k, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.g.a.c.c0.k, reason: use source file name */
+/* JADX INFO: compiled from: AnnotatedMethodCollector.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class AnnotatedMethodCollector extends CollectorBase {
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final ClassIntrospector.a f4719d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final boolean f4720e;
 
-    /* compiled from: AnnotatedMethodCollector.java */
-    /* renamed from: b.g.a.c.c0.k$a */
+    /* JADX INFO: renamed from: b.g.a.c.c0.k$a */
+    /* JADX INFO: compiled from: AnnotatedMethodCollector.java */
     public static final class a {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public TypeResolutionContext f4721a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public Method f4722b;
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public AnnotationCollector f4723c;
 
         public a(TypeResolutionContext typeResolutionContext, Method method, AnnotationCollector annotationCollector) {
@@ -50,12 +50,12 @@ public class AnnotatedMethodCollector extends CollectorBase {
         this.f4720e = z2;
     }
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public static boolean m1907h(Method method) {
         return (Modifier.isStatic(method.getModifiers()) || method.isSynthetic() || method.isBridge() || method.getParameterTypes().length > 2) ? false : true;
     }
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final void m1908f(TypeResolutionContext typeResolutionContext, Class<?> cls, Map<MemberKey, a> map, Class<?> cls2) {
         if (cls2 != null) {
             m1909g(typeResolutionContext, cls, map, cls2);
@@ -85,7 +85,7 @@ public class AnnotatedMethodCollector extends CollectorBase {
         }
     }
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public void m1909g(TypeResolutionContext typeResolutionContext, Class<?> cls, Map<MemberKey, a> map, Class<?> cls2) {
         List listEmptyList;
         if (this.f4750c == null) {

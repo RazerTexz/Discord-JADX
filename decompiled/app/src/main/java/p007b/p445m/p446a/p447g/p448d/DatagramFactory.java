@@ -5,16 +5,16 @@ import java.net.DatagramSocket;
 import java.net.InetAddress;
 import java.net.SocketException;
 
-/* compiled from: DatagramFactory.kt */
-/* renamed from: b.m.a.g.d.a, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.m.a.g.d.a, reason: use source file name */
+/* JADX INFO: compiled from: DatagramFactory.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public interface DatagramFactory {
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     DatagramPacket mo7140a(byte[] bArr);
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     DatagramPacket mo7141b(byte[] bArr, InetAddress inetAddress, int i);
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     DatagramSocket mo7142c() throws SocketException;
 }

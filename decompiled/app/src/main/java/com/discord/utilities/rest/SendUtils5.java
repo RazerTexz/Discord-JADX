@@ -10,9 +10,9 @@ import com.discord.utilities.logging.Logger;
 import p507d0.p591y.Closeable;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: SendUtils.kt */
-/* renamed from: com.discord.utilities.rest.SendUtilsKt, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.utilities.rest.SendUtilsKt, reason: use source file name */
+/* JADX INFO: compiled from: SendUtils.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class SendUtils5 {
     public static final long computeFileSizeBytes(Uri uri, ContentResolver contentResolver) {
         long jLongValue;

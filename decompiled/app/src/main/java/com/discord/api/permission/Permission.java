@@ -1,8 +1,8 @@
 package com.discord.api.permission;
 
 
-/* compiled from: Permission.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: Permission.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class Permission {
     public static final long ADD_REACTIONS = 64;
     public static final long ADMINISTRATOR = 8;
@@ -55,7 +55,7 @@ public final class Permission {
     public static final long VIEW_CHANNEL = 1024;
     public static final long VIEW_GUILD_ANALYTICS = 524288;
 
-    /* compiled from: Permission.kt */
+    /* JADX INFO: compiled from: Permission.kt */
     public static final class AllowList {
         public static final long COMMUNICATIONS_DISABLED_DEFAULT = 66560;
         public static final AllowList INSTANCE = new AllowList();

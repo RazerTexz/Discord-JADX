@@ -4,8 +4,8 @@ import java.util.Arrays;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: EncryptionSettings.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: EncryptionSettings.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class EncryptionSettings {
     private final String mode;
     private final int[] secretKey;
@@ -27,12 +27,12 @@ public final /* data */ class EncryptionSettings {
         return encryptionSettings.copy(str, iArr);
     }
 
-    /* renamed from: component1, reason: from getter */
+    /* JADX INFO: renamed from: component1, reason: from getter */
     public final String getMode() {
         return this.mode;
     }
 
-    /* renamed from: component2, reason: from getter */
+    /* JADX INFO: renamed from: component2, reason: from getter */
     public final int[] getSecretKey() {
         return this.secretKey;
     }

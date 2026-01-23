@@ -3,8 +3,8 @@ package com.discord.gateway.p498io;
 import com.discord.gateway.opcodes.Opcode;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: Incoming.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: Incoming.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class Incoming {
     private final Object data;
     private final Opcode opcode;

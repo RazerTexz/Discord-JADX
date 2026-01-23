@@ -71,75 +71,75 @@ import p507d0.p580t._Collections;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: LazyJavaClassDescriptor.kt */
-/* renamed from: d0.e0.p.d.m0.e.a.i0.l.f, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.e.a.i0.l.f, reason: use source file name */
+/* JADX INFO: compiled from: LazyJavaClassDescriptor.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class LazyJavaClassDescriptor extends ClassDescriptorBase implements JavaClassDescriptor {
 
-    /* renamed from: A */
+    /* JADX INFO: renamed from: A */
     public final LazyJavaClassMemberScope2 f23343A;
 
-    /* renamed from: B */
+    /* JADX INFO: renamed from: B */
     public final ScopesHolderForClass<LazyJavaClassMemberScope2> f23344B;
 
-    /* renamed from: C */
+    /* JADX INFO: renamed from: C */
     public final InnerClassesScopeWrapper f23345C;
 
-    /* renamed from: D */
+    /* JADX INFO: renamed from: D */
     public final LazyJavaStaticClassScope2 f23346D;
 
-    /* renamed from: E */
+    /* JADX INFO: renamed from: E */
     public final Annotations4 f23347E;
 
-    /* renamed from: F */
+    /* JADX INFO: renamed from: F */
     public final storage5<List<TypeParameterDescriptor>> f23348F;
 
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     public final context4 f23349r;
 
-    /* renamed from: s */
+    /* JADX INFO: renamed from: s */
     public final InterfaceC11574g f23350s;
 
-    /* renamed from: t */
+    /* JADX INFO: renamed from: t */
     public final ClassDescriptor f23351t;
 
-    /* renamed from: u */
+    /* JADX INFO: renamed from: u */
     public final context4 f23352u;
 
-    /* renamed from: v */
+    /* JADX INFO: renamed from: v */
     public final ClassKind f23353v;
 
-    /* renamed from: w */
+    /* JADX INFO: renamed from: w */
     public final Modality f23354w;
 
-    /* renamed from: x */
+    /* JADX INFO: renamed from: x */
     public final Visibility2 f23355x;
 
-    /* renamed from: y */
+    /* JADX INFO: renamed from: y */
     public final boolean f23356y;
 
-    /* renamed from: z */
+    /* JADX INFO: renamed from: z */
     public final b f23357z;
 
-    /* compiled from: LazyJavaClassDescriptor.kt */
-    /* renamed from: d0.e0.p.d.m0.e.a.i0.l.f$a */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.e.a.i0.l.f$a */
+    /* JADX INFO: compiled from: LazyJavaClassDescriptor.kt */
     public static final class a {
         public a(DefaultConstructorMarker defaultConstructorMarker) {
         }
     }
 
-    /* compiled from: LazyJavaClassDescriptor.kt */
-    /* renamed from: d0.e0.p.d.m0.e.a.i0.l.f$b */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.e.a.i0.l.f$b */
+    /* JADX INFO: compiled from: LazyJavaClassDescriptor.kt */
     public final class b extends AbstractClassTypeConstructor {
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public final storage5<List<TypeParameterDescriptor>> f23358c;
 
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         public final /* synthetic */ LazyJavaClassDescriptor f23359d;
 
-        /* compiled from: LazyJavaClassDescriptor.kt */
-        /* renamed from: d0.e0.p.d.m0.e.a.i0.l.f$b$a */
+        /* JADX INFO: renamed from: d0.e0.p.d.m0.e.a.i0.l.f$b$a */
+        /* JADX INFO: compiled from: LazyJavaClassDescriptor.kt */
         public static final class a extends Lambda implements Function0<List<? extends TypeParameterDescriptor>> {
             public final /* synthetic */ LazyJavaClassDescriptor this$0;
 
@@ -155,7 +155,7 @@ public final class LazyJavaClassDescriptor extends ClassDescriptorBase implement
             }
 
             @Override // kotlin.jvm.functions.Function0
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final List<? extends TypeParameterDescriptor> invoke2() {
                 return typeParameterUtils.computeConstructorTypeParameters(this.this$0);
             }
@@ -178,7 +178,7 @@ public final class LazyJavaClassDescriptor extends ClassDescriptorBase implement
         /* JADX WARN: Removed duplicated region for block: B:86:0x020f  */
         /* JADX WARN: Removed duplicated region for block: B:87:0x0214  */
         @Override // p507d0.p513e0.p514p.p515d.p517m0.p567n.AbstractTypeConstructor
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         /*
             Code decompiled incorrectly, please refer to instructions dump.
         */
@@ -284,7 +284,7 @@ public final class LazyJavaClassDescriptor extends ClassDescriptorBase implement
         }
 
         @Override // p507d0.p513e0.p514p.p515d.p517m0.p567n.AbstractTypeConstructor
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         public SupertypeLoopChecker mo9371d() {
             return LazyJavaClassDescriptor.access$getC$p(this.f23359d).getComponents().getSupertypeLoopChecker();
         }
@@ -316,8 +316,8 @@ public final class LazyJavaClassDescriptor extends ClassDescriptorBase implement
         }
     }
 
-    /* compiled from: LazyJavaClassDescriptor.kt */
-    /* renamed from: d0.e0.p.d.m0.e.a.i0.l.f$c */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.e.a.i0.l.f$c */
+    /* JADX INFO: compiled from: LazyJavaClassDescriptor.kt */
     public static final class c extends Lambda implements Function0<List<? extends TypeParameterDescriptor>> {
         public c() {
             super(0);
@@ -329,7 +329,7 @@ public final class LazyJavaClassDescriptor extends ClassDescriptorBase implement
         }
 
         @Override // kotlin.jvm.functions.Function0
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final List<? extends TypeParameterDescriptor> invoke2() {
             List<InterfaceC11592y> typeParameters = LazyJavaClassDescriptor.this.getJClass().getTypeParameters();
             LazyJavaClassDescriptor lazyJavaClassDescriptor = LazyJavaClassDescriptor.this;
@@ -345,8 +345,8 @@ public final class LazyJavaClassDescriptor extends ClassDescriptorBase implement
         }
     }
 
-    /* compiled from: LazyJavaClassDescriptor.kt */
-    /* renamed from: d0.e0.p.d.m0.e.a.i0.l.f$d */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.e.a.i0.l.f$d */
+    /* JADX INFO: compiled from: LazyJavaClassDescriptor.kt */
     public static final class d extends Lambda implements Function1<KotlinTypeRefiner, LazyJavaClassMemberScope2> {
         public d() {
             super(1);
@@ -357,7 +357,7 @@ public final class LazyJavaClassDescriptor extends ClassDescriptorBase implement
             return invoke2(kotlinTypeRefiner);
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final LazyJavaClassMemberScope2 invoke2(KotlinTypeRefiner kotlinTypeRefiner) {
             Intrinsics3.checkNotNullParameter(kotlinTypeRefiner, "it");
             context4 context4VarAccess$getC$p = LazyJavaClassDescriptor.access$getC$p(LazyJavaClassDescriptor.this);

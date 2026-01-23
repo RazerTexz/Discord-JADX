@@ -15,8 +15,8 @@ import androidx.annotation.RestrictTo;
 import androidx.appcompat.C0051R;
 import java.lang.ref.WeakReference;
 
+/* JADX INFO: loaded from: classes.dex */
 @RestrictTo({RestrictTo.Scope.LIBRARY_GROUP_PREFIX})
-/* loaded from: classes.dex */
 public final class ViewStubCompat extends View {
     private OnInflateListener mInflateListener;
     private int mInflatedId;

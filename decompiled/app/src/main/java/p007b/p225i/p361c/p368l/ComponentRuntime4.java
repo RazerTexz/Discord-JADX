@@ -14,24 +14,24 @@ import p007b.p225i.p361c.p396q.Publisher;
 import p007b.p225i.p361c.p396q.Subscriber2;
 import p007b.p225i.p361c.p400t.Provider2;
 
-/* compiled from: ComponentRuntime.java */
-/* renamed from: b.i.c.l.k, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.c.l.k, reason: use source file name */
+/* JADX INFO: compiled from: ComponentRuntime.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class ComponentRuntime4 extends AbstractComponentContainer {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final /* synthetic */ int f12191a = 0;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final Map<Component4<?>, Lazy2<?>> f12192b = new HashMap();
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final Map<Class<?>, Lazy2<?>> f12193c = new HashMap();
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final Map<Class<?>, Lazy2<Set<?>>> f12194d = new HashMap();
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final EventBus2 f12195e;
 
     public ComponentRuntime4(Executor executor, Iterable<ComponentRegistrar> iterable, Component4<?>... component4Arr) {
@@ -153,14 +153,14 @@ public class ComponentRuntime4 extends AbstractComponentContainer {
     }
 
     @Override // p007b.p225i.p361c.p368l.ComponentContainer
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public <T> Provider2<T> mo6355b(Class<T> cls) {
         Objects.requireNonNull(cls, "Null interface requested.");
         return this.f12193c.get(cls);
     }
 
     @Override // p007b.p225i.p361c.p368l.ComponentContainer
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public <T> Provider2<Set<T>> mo6356c(Class<T> cls) {
         Lazy2<Set<?>> lazy2 = this.f12194d.get(cls);
         return lazy2 != null ? lazy2 : ComponentRuntime3.f12190a;

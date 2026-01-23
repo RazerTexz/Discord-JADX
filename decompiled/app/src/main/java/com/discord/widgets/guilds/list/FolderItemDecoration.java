@@ -8,8 +8,8 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.discord.widgets.guilds.list.GuildListViewHolder;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: FolderItemDecoration.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: FolderItemDecoration.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class FolderItemDecoration extends RecyclerView.ItemDecoration {
     private static final int EXTRA_PADDING_PX = 200;
     private final Drawable drawableNoChildren;

@@ -26,16 +26,16 @@ import p637j0.p641k.Func1;
 import p658rx.Observable;
 import p658rx.functions.Func7;
 
-/* compiled from: WidgetServerSettingsMembersModel.kt */
-/* renamed from: com.discord.widgets.servers.settings.members.WidgetServerSettingsMembersModel$Companion$get$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.servers.settings.members.WidgetServerSettingsMembersModel$Companion$get$1, reason: use source file name */
+/* JADX INFO: compiled from: WidgetServerSettingsMembersModel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetServerSettingsMembersModel2<T, R> implements Func1<Map<Long, ? extends GuildMember>, Observable<? extends WidgetServerSettingsMembersModel>> {
     public final /* synthetic */ Observable $filterPublisher;
     public final /* synthetic */ long $guildId;
     public final /* synthetic */ Observable $roleFilterPublisher;
 
-    /* compiled from: WidgetServerSettingsMembersModel.kt */
-    /* renamed from: com.discord.widgets.servers.settings.members.WidgetServerSettingsMembersModel$Companion$get$1$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.settings.members.WidgetServerSettingsMembersModel$Companion$get$1$1 */
+    /* JADX INFO: compiled from: WidgetServerSettingsMembersModel.kt */
     public static final class C95951<T1, T2, T3, T4, T5, T6, T7, R> implements Func7<Guild, Long, MeUser, Map<Long, ? extends User>, Map<Long, ? extends GuildRole>, String, Long, WidgetServerSettingsMembersModel> {
         public final /* synthetic */ Map $members;
 
@@ -49,7 +49,7 @@ public final class WidgetServerSettingsMembersModel2<T, R> implements Func1<Map<
         }
 
         /* JADX WARN: Removed duplicated region for block: B:37:0x0108  */
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         /*
             Code decompiled incorrectly, please refer to instructions dump.
         */
@@ -122,7 +122,7 @@ public final class WidgetServerSettingsMembersModel2<T, R> implements Func1<Map<
         return call2((Map<Long, GuildMember>) map);
     }
 
-    /* renamed from: call, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
     public final Observable<? extends WidgetServerSettingsMembersModel> call2(Map<Long, GuildMember> map) {
         StoreStream.Companion companion = StoreStream.INSTANCE;
         return Observable.m11069e(companion.getGuilds().observeGuild(this.$guildId), companion.getPermissions().observePermissionsForGuild(this.$guildId), StoreUser.observeMe$default(companion.getUsers(), false, 1, null), companion.getUsers().observeUsers(map.keySet()), companion.getGuilds().observeRoles(this.$guildId), this.$filterPublisher.m11110p(300L, TimeUnit.MILLISECONDS), this.$roleFilterPublisher, new C95951(map));

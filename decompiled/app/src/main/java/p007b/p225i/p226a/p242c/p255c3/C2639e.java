@@ -14,16 +14,16 @@ import p007b.p225i.p355b.p357b.ImmutableList2;
 import p007b.p225i.p355b.p357b.RegularImmutableList;
 import p007b.p225i.p355b.p358c.Ints;
 
-/* compiled from: lambda */
-/* renamed from: b.i.a.c.c3.e */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.c3.e */
+/* JADX INFO: compiled from: lambda */
+/* JADX INFO: loaded from: classes3.dex */
 public final /* synthetic */ class C2639e implements Bundleable.a {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final /* synthetic */ C2639e f6181a = new C2639e();
 
     @Override // p007b.p225i.p226a.p242c.Bundleable.a
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final Bundleable mo2576a(Bundle bundle) {
         int i = TrackSelectionOverrides.a.f6273j;
         Bundle bundle2 = bundle.getBundle(Integer.toString(0, 36));

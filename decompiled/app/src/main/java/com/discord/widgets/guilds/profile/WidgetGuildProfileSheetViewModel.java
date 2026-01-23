@@ -46,11 +46,11 @@ import p507d0.p592z.p594d.Lambda;
 import p658rx.Observable;
 import p658rx.subjects.PublishSubject;
 
-/* compiled from: WidgetGuildProfileSheetViewModel.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetGuildProfileSheetViewModel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetGuildProfileSheetViewModel extends AppViewModel<ViewState> {
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private final PublishSubject<Event> eventSubject;
     private final long guildId;
@@ -61,8 +61,8 @@ public final class WidgetGuildProfileSheetViewModel extends AppViewModel<ViewSta
     private final StoreUserSettings storeUserSettings;
     private final boolean viewingGuild;
 
-    /* compiled from: WidgetGuildProfileSheetViewModel.kt */
-    /* renamed from: com.discord.widgets.guilds.profile.WidgetGuildProfileSheetViewModel$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.guilds.profile.WidgetGuildProfileSheetViewModel$1 */
+    /* JADX INFO: compiled from: WidgetGuildProfileSheetViewModel.kt */
     public static final class C88031 extends Lambda implements Function1<StoreState, Unit> {
         public C88031() {
             super(1);
@@ -74,14 +74,14 @@ public final class WidgetGuildProfileSheetViewModel extends AppViewModel<ViewSta
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(StoreState storeState) {
             Intrinsics3.checkNotNullParameter(storeState, "storeState");
             WidgetGuildProfileSheetViewModel.access$handleStoreState(WidgetGuildProfileSheetViewModel.this, storeState);
         }
     }
 
-    /* compiled from: WidgetGuildProfileSheetViewModel.kt */
+    /* JADX INFO: compiled from: WidgetGuildProfileSheetViewModel.kt */
     public static final /* data */ class Actions {
         private final boolean canChangeNickname;
         private final boolean canLeaveGuild;
@@ -127,57 +127,57 @@ public final class WidgetGuildProfileSheetViewModel extends AppViewModel<ViewSta
             return actions.copy((i & 1) != 0 ? actions.isUnread : z2, (i & 2) != 0 ? actions.canManageChannels : z3, (i & 4) != 0 ? actions.canManageEvents : z4, (i & 8) != 0 ? actions.canChangeNickname : z5, (i & 16) != 0 ? actions.nick : str, (i & 32) != 0 ? actions.guildAvatar : str2, (i & 64) != 0 ? actions.isAllowDMChecked : z6, (i & 128) != 0 ? actions.hideMutedChannels : z7, (i & 256) != 0 ? actions.canLeaveGuild : z8, (i & 512) != 0 ? actions.isDeveloper : z9, (i & 1024) != 0 ? actions.username : str3);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final boolean getIsUnread() {
             return this.isUnread;
         }
 
-        /* renamed from: component10, reason: from getter */
+        /* JADX INFO: renamed from: component10, reason: from getter */
         public final boolean getIsDeveloper() {
             return this.isDeveloper;
         }
 
-        /* renamed from: component11, reason: from getter */
+        /* JADX INFO: renamed from: component11, reason: from getter */
         public final String getUsername() {
             return this.username;
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final boolean getCanManageChannels() {
             return this.canManageChannels;
         }
 
-        /* renamed from: component3, reason: from getter */
+        /* JADX INFO: renamed from: component3, reason: from getter */
         public final boolean getCanManageEvents() {
             return this.canManageEvents;
         }
 
-        /* renamed from: component4, reason: from getter */
+        /* JADX INFO: renamed from: component4, reason: from getter */
         public final boolean getCanChangeNickname() {
             return this.canChangeNickname;
         }
 
-        /* renamed from: component5, reason: from getter */
+        /* JADX INFO: renamed from: component5, reason: from getter */
         public final String getNick() {
             return this.nick;
         }
 
-        /* renamed from: component6, reason: from getter */
+        /* JADX INFO: renamed from: component6, reason: from getter */
         public final String getGuildAvatar() {
             return this.guildAvatar;
         }
 
-        /* renamed from: component7, reason: from getter */
+        /* JADX INFO: renamed from: component7, reason: from getter */
         public final boolean getIsAllowDMChecked() {
             return this.isAllowDMChecked;
         }
 
-        /* renamed from: component8, reason: from getter */
+        /* JADX INFO: renamed from: component8, reason: from getter */
         public final boolean getHideMutedChannels() {
             return this.hideMutedChannels;
         }
 
-        /* renamed from: component9, reason: from getter */
+        /* JADX INFO: renamed from: component9, reason: from getter */
         public final boolean getCanLeaveGuild() {
             return this.canLeaveGuild;
         }
@@ -238,12 +238,27 @@ public final class WidgetGuildProfileSheetViewModel extends AppViewModel<ViewSta
         /* JADX WARN: Type inference failed for: r0v1, types: [int] */
         /* JADX WARN: Type inference failed for: r0v22 */
         /* JADX WARN: Type inference failed for: r0v23 */
-        /* JADX WARN: Type inference failed for: r2v0, types: [boolean] */
-        /* JADX WARN: Type inference failed for: r2v12, types: [boolean] */
-        /* JADX WARN: Type inference failed for: r2v14, types: [boolean] */
-        /* JADX WARN: Type inference failed for: r2v16, types: [boolean] */
-        /* JADX WARN: Type inference failed for: r2v2, types: [boolean] */
-        /* JADX WARN: Type inference failed for: r2v4, types: [boolean] */
+        /* JADX WARN: Type inference failed for: r1v0 */
+        /* JADX WARN: Type inference failed for: r1v1, types: [int] */
+        /* JADX WARN: Type inference failed for: r1v3 */
+        /* JADX WARN: Type inference failed for: r2v1, types: [int] */
+        /* JADX WARN: Type inference failed for: r2v13, types: [int] */
+        /* JADX WARN: Type inference failed for: r2v15, types: [int] */
+        /* JADX WARN: Type inference failed for: r2v17, types: [int] */
+        /* JADX WARN: Type inference failed for: r2v19 */
+        /* JADX WARN: Type inference failed for: r2v20 */
+        /* JADX WARN: Type inference failed for: r2v21 */
+        /* JADX WARN: Type inference failed for: r2v24 */
+        /* JADX WARN: Type inference failed for: r2v25 */
+        /* JADX WARN: Type inference failed for: r2v26 */
+        /* JADX WARN: Type inference failed for: r2v27 */
+        /* JADX WARN: Type inference failed for: r2v28 */
+        /* JADX WARN: Type inference failed for: r2v29 */
+        /* JADX WARN: Type inference failed for: r2v3, types: [int] */
+        /* JADX WARN: Type inference failed for: r2v30 */
+        /* JADX WARN: Type inference failed for: r2v31 */
+        /* JADX WARN: Type inference failed for: r2v32 */
+        /* JADX WARN: Type inference failed for: r2v5, types: [int] */
         public int hashCode() {
             boolean z2 = this.isUnread;
             ?? r0 = z2;
@@ -251,50 +266,50 @@ public final class WidgetGuildProfileSheetViewModel extends AppViewModel<ViewSta
                 r0 = 1;
             }
             int i = r0 * 31;
-            ?? r2 = this.canManageChannels;
-            int i2 = r2;
-            if (r2 != 0) {
-                i2 = 1;
+            boolean z3 = this.canManageChannels;
+            ?? r2 = z3;
+            if (z3) {
+                r2 = 1;
             }
-            int i3 = (i + i2) * 31;
-            ?? r22 = this.canManageEvents;
-            int i4 = r22;
-            if (r22 != 0) {
-                i4 = 1;
+            int i2 = (i + r2) * 31;
+            boolean z4 = this.canManageEvents;
+            ?? r22 = z4;
+            if (z4) {
+                r22 = 1;
             }
-            int i5 = (i3 + i4) * 31;
-            ?? r23 = this.canChangeNickname;
-            int i6 = r23;
-            if (r23 != 0) {
-                i6 = 1;
+            int i3 = (i2 + r22) * 31;
+            boolean z5 = this.canChangeNickname;
+            ?? r23 = z5;
+            if (z5) {
+                r23 = 1;
             }
-            int i7 = (i5 + i6) * 31;
+            int i4 = (i3 + r23) * 31;
             String str = this.nick;
-            int iHashCode = (i7 + (str != null ? str.hashCode() : 0)) * 31;
+            int iHashCode = (i4 + (str != null ? str.hashCode() : 0)) * 31;
             String str2 = this.guildAvatar;
             int iHashCode2 = (iHashCode + (str2 != null ? str2.hashCode() : 0)) * 31;
-            ?? r24 = this.isAllowDMChecked;
-            int i8 = r24;
-            if (r24 != 0) {
-                i8 = 1;
+            boolean z6 = this.isAllowDMChecked;
+            ?? r24 = z6;
+            if (z6) {
+                r24 = 1;
             }
-            int i9 = (iHashCode2 + i8) * 31;
-            ?? r25 = this.hideMutedChannels;
-            int i10 = r25;
-            if (r25 != 0) {
-                i10 = 1;
+            int i5 = (iHashCode2 + r24) * 31;
+            boolean z7 = this.hideMutedChannels;
+            ?? r25 = z7;
+            if (z7) {
+                r25 = 1;
             }
-            int i11 = (i9 + i10) * 31;
-            ?? r26 = this.canLeaveGuild;
-            int i12 = r26;
-            if (r26 != 0) {
-                i12 = 1;
+            int i6 = (i5 + r25) * 31;
+            boolean z8 = this.canLeaveGuild;
+            ?? r26 = z8;
+            if (z8) {
+                r26 = 1;
             }
-            int i13 = (i11 + i12) * 31;
-            boolean z3 = this.isDeveloper;
-            int i14 = (i13 + (z3 ? 1 : z3 ? 1 : 0)) * 31;
+            int i7 = (i6 + r26) * 31;
+            boolean z9 = this.isDeveloper;
+            int i8 = (i7 + (z9 ? 1 : z9)) * 31;
             String str3 = this.username;
-            return i14 + (str3 != null ? str3.hashCode() : 0);
+            return i8 + (str3 != null ? str3.hashCode() : 0);
         }
 
         public final boolean isAllowDMChecked() {
@@ -335,13 +350,13 @@ public final class WidgetGuildProfileSheetViewModel extends AppViewModel<ViewSta
         }
     }
 
-    /* compiled from: WidgetGuildProfileSheetViewModel.kt */
+    /* JADX INFO: compiled from: WidgetGuildProfileSheetViewModel.kt */
     public static final /* data */ class Banner {
         private final long guildId;
         private final String hash;
         private final Type type;
 
-        /* compiled from: WidgetGuildProfileSheetViewModel.kt */
+        /* JADX INFO: compiled from: WidgetGuildProfileSheetViewModel.kt */
         public enum Type {
             BANNER,
             SPLASH
@@ -367,17 +382,17 @@ public final class WidgetGuildProfileSheetViewModel extends AppViewModel<ViewSta
             return banner.copy(j, str, type);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final long getGuildId() {
             return this.guildId;
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final String getHash() {
             return this.hash;
         }
 
-        /* renamed from: component3, reason: from getter */
+        /* JADX INFO: renamed from: component3, reason: from getter */
         public final Type getType() {
             return this.type;
         }
@@ -430,7 +445,7 @@ public final class WidgetGuildProfileSheetViewModel extends AppViewModel<ViewSta
         }
     }
 
-    /* compiled from: WidgetGuildProfileSheetViewModel.kt */
+    /* JADX INFO: compiled from: WidgetGuildProfileSheetViewModel.kt */
     public static final /* data */ class BottomActions {
         private final boolean showJoinServer;
         private final boolean showUploadEmoji;
@@ -455,17 +470,17 @@ public final class WidgetGuildProfileSheetViewModel extends AppViewModel<ViewSta
             return bottomActions.copy(z2, z3, z4);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final boolean getShowUploadEmoji() {
             return this.showUploadEmoji;
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final boolean getShowJoinServer() {
             return this.showJoinServer;
         }
 
-        /* renamed from: component3, reason: from getter */
+        /* JADX INFO: renamed from: component3, reason: from getter */
         public final boolean getShowViewServer() {
             return this.showViewServer;
         }
@@ -501,7 +516,12 @@ public final class WidgetGuildProfileSheetViewModel extends AppViewModel<ViewSta
         /* JADX WARN: Type inference failed for: r0v1, types: [int] */
         /* JADX WARN: Type inference failed for: r0v6 */
         /* JADX WARN: Type inference failed for: r0v7 */
-        /* JADX WARN: Type inference failed for: r2v0, types: [boolean] */
+        /* JADX WARN: Type inference failed for: r1v0 */
+        /* JADX WARN: Type inference failed for: r1v1, types: [int] */
+        /* JADX WARN: Type inference failed for: r1v2 */
+        /* JADX WARN: Type inference failed for: r2v1, types: [int] */
+        /* JADX WARN: Type inference failed for: r2v3 */
+        /* JADX WARN: Type inference failed for: r2v4 */
         public int hashCode() {
             boolean z2 = this.showUploadEmoji;
             ?? r0 = z2;
@@ -509,14 +529,14 @@ public final class WidgetGuildProfileSheetViewModel extends AppViewModel<ViewSta
                 r0 = 1;
             }
             int i = r0 * 31;
-            ?? r2 = this.showJoinServer;
-            int i2 = r2;
-            if (r2 != 0) {
-                i2 = 1;
+            boolean z3 = this.showJoinServer;
+            ?? r2 = z3;
+            if (z3) {
+                r2 = 1;
             }
-            int i3 = (i + i2) * 31;
-            boolean z3 = this.showViewServer;
-            return i3 + (z3 ? 1 : z3 ? 1 : 0);
+            int i2 = (i + r2) * 31;
+            boolean z4 = this.showViewServer;
+            return i2 + (z4 ? 1 : z4);
         }
 
         public String toString() {
@@ -529,7 +549,7 @@ public final class WidgetGuildProfileSheetViewModel extends AppViewModel<ViewSta
         }
     }
 
-    /* compiled from: WidgetGuildProfileSheetViewModel.kt */
+    /* JADX INFO: compiled from: WidgetGuildProfileSheetViewModel.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -546,7 +566,7 @@ public final class WidgetGuildProfileSheetViewModel extends AppViewModel<ViewSta
         }
     }
 
-    /* compiled from: WidgetGuildProfileSheetViewModel.kt */
+    /* JADX INFO: compiled from: WidgetGuildProfileSheetViewModel.kt */
     public static final /* data */ class EmojisData {
         private final List<Emoji> emojis;
         private final boolean isExpanded;
@@ -574,12 +594,12 @@ public final class WidgetGuildProfileSheetViewModel extends AppViewModel<ViewSta
             return emojisData.copy(z2, z3, list);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final boolean getIsPremium() {
             return this.isPremium;
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final boolean getIsExpanded() {
             return this.isExpanded;
         }
@@ -612,6 +632,9 @@ public final class WidgetGuildProfileSheetViewModel extends AppViewModel<ViewSta
         /* JADX WARN: Type inference failed for: r0v1, types: [int] */
         /* JADX WARN: Type inference failed for: r0v6 */
         /* JADX WARN: Type inference failed for: r0v7 */
+        /* JADX WARN: Type inference failed for: r1v0 */
+        /* JADX WARN: Type inference failed for: r1v1, types: [int] */
+        /* JADX WARN: Type inference failed for: r1v6 */
         public int hashCode() {
             boolean z2 = this.isPremium;
             ?? r0 = z2;
@@ -620,7 +643,7 @@ public final class WidgetGuildProfileSheetViewModel extends AppViewModel<ViewSta
             }
             int i = r0 * 31;
             boolean z3 = this.isExpanded;
-            int i2 = (i + (z3 ? 1 : z3 ? 1 : 0)) * 31;
+            int i2 = (i + (z3 ? 1 : z3)) * 31;
             List<Emoji> list = this.emojis;
             return i2 + (list != null ? list.hashCode() : 0);
         }
@@ -643,10 +666,10 @@ public final class WidgetGuildProfileSheetViewModel extends AppViewModel<ViewSta
         }
     }
 
-    /* compiled from: WidgetGuildProfileSheetViewModel.kt */
+    /* JADX INFO: compiled from: WidgetGuildProfileSheetViewModel.kt */
     public static abstract class Event {
 
-        /* compiled from: WidgetGuildProfileSheetViewModel.kt */
+        /* JADX INFO: compiled from: WidgetGuildProfileSheetViewModel.kt */
         public static final /* data */ class DismissAndShowToast extends Event {
             private final int stringRes;
 
@@ -662,7 +685,7 @@ public final class WidgetGuildProfileSheetViewModel extends AppViewModel<ViewSta
                 return dismissAndShowToast.copy(i);
             }
 
-            /* renamed from: component1, reason: from getter */
+            /* JADX INFO: renamed from: component1, reason: from getter */
             public final int getStringRes() {
                 return this.stringRes;
             }
@@ -699,7 +722,7 @@ public final class WidgetGuildProfileSheetViewModel extends AppViewModel<ViewSta
         }
     }
 
-    /* compiled from: WidgetGuildProfileSheetViewModel.kt */
+    /* JADX INFO: compiled from: WidgetGuildProfileSheetViewModel.kt */
     public static final /* data */ class StoreState {
         private final GuildMember computedMe;
         private final List<Emoji> emojis;
@@ -730,36 +753,37 @@ public final class WidgetGuildProfileSheetViewModel extends AppViewModel<ViewSta
             this.isUnread = z4;
         }
 
+        /* JADX WARN: Multi-variable type inference failed */
         public static /* synthetic */ StoreState copy$default(StoreState storeState, Guild guild, StoreGuildProfiles.GuildProfileData guildProfileData, GuildChannelsInfo guildChannelsInfo, MeUser meUser, GuildMember guildMember, List list, boolean z2, List list2, boolean z3, boolean z4, int i, Object obj) {
             return storeState.copy((i & 1) != 0 ? storeState.guild : guild, (i & 2) != 0 ? storeState.guildProfile : guildProfileData, (i & 4) != 0 ? storeState.guildChannelsInfo : guildChannelsInfo, (i & 8) != 0 ? storeState.me : meUser, (i & 16) != 0 ? storeState.computedMe : guildMember, (i & 32) != 0 ? storeState.restrictedGuildIds : list, (i & 64) != 0 ? storeState.isDeveloper : z2, (i & 128) != 0 ? storeState.emojis : list2, (i & 256) != 0 ? storeState.isLurking : z3, (i & 512) != 0 ? storeState.isUnread : z4);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final Guild getGuild() {
             return this.guild;
         }
 
-        /* renamed from: component10, reason: from getter */
+        /* JADX INFO: renamed from: component10, reason: from getter */
         public final boolean getIsUnread() {
             return this.isUnread;
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final StoreGuildProfiles.GuildProfileData getGuildProfile() {
             return this.guildProfile;
         }
 
-        /* renamed from: component3, reason: from getter */
+        /* JADX INFO: renamed from: component3, reason: from getter */
         public final GuildChannelsInfo getGuildChannelsInfo() {
             return this.guildChannelsInfo;
         }
 
-        /* renamed from: component4, reason: from getter */
+        /* JADX INFO: renamed from: component4, reason: from getter */
         public final MeUser getMe() {
             return this.me;
         }
 
-        /* renamed from: component5, reason: from getter */
+        /* JADX INFO: renamed from: component5, reason: from getter */
         public final GuildMember getComputedMe() {
             return this.computedMe;
         }
@@ -768,7 +792,7 @@ public final class WidgetGuildProfileSheetViewModel extends AppViewModel<ViewSta
             return this.restrictedGuildIds;
         }
 
-        /* renamed from: component7, reason: from getter */
+        /* JADX INFO: renamed from: component7, reason: from getter */
         public final boolean getIsDeveloper() {
             return this.isDeveloper;
         }
@@ -777,7 +801,7 @@ public final class WidgetGuildProfileSheetViewModel extends AppViewModel<ViewSta
             return this.emojis;
         }
 
-        /* renamed from: component9, reason: from getter */
+        /* JADX INFO: renamed from: component9, reason: from getter */
         public final boolean getIsLurking() {
             return this.isLurking;
         }
@@ -830,6 +854,15 @@ public final class WidgetGuildProfileSheetViewModel extends AppViewModel<ViewSta
         }
 
         /* JADX WARN: Multi-variable type inference failed */
+        /* JADX WARN: Type inference failed for: r1v3, types: [int] */
+        /* JADX WARN: Type inference failed for: r1v5 */
+        /* JADX WARN: Type inference failed for: r1v7 */
+        /* JADX WARN: Type inference failed for: r2v16, types: [int] */
+        /* JADX WARN: Type inference failed for: r2v18 */
+        /* JADX WARN: Type inference failed for: r2v24 */
+        /* JADX WARN: Type inference failed for: r3v0 */
+        /* JADX WARN: Type inference failed for: r3v1, types: [int] */
+        /* JADX WARN: Type inference failed for: r3v2 */
         public int hashCode() {
             Guild guild = this.guild;
             int iHashCode = (guild != null ? guild.hashCode() : 0) * 31;
@@ -844,21 +877,21 @@ public final class WidgetGuildProfileSheetViewModel extends AppViewModel<ViewSta
             List<Long> list = this.restrictedGuildIds;
             int iHashCode6 = (iHashCode5 + (list != null ? list.hashCode() : 0)) * 31;
             boolean z2 = this.isDeveloper;
-            int i = z2;
-            if (z2 != 0) {
-                i = 1;
+            ?? r2 = z2;
+            if (z2) {
+                r2 = 1;
             }
-            int i2 = (iHashCode6 + i) * 31;
+            int i = (iHashCode6 + r2) * 31;
             List<Emoji> list2 = this.emojis;
-            int iHashCode7 = (i2 + (list2 != null ? list2.hashCode() : 0)) * 31;
+            int iHashCode7 = (i + (list2 != null ? list2.hashCode() : 0)) * 31;
             boolean z3 = this.isLurking;
-            int i3 = z3;
-            if (z3 != 0) {
-                i3 = 1;
+            ?? r1 = z3;
+            if (z3) {
+                r1 = 1;
             }
-            int i4 = (iHashCode7 + i3) * 31;
+            int i2 = (iHashCode7 + r1) * 31;
             boolean z4 = this.isUnread;
-            return i4 + (z4 ? 1 : z4 ? 1 : 0);
+            return i2 + (z4 ? 1 : z4);
         }
 
         public final boolean isDeveloper() {
@@ -897,7 +930,7 @@ public final class WidgetGuildProfileSheetViewModel extends AppViewModel<ViewSta
         }
     }
 
-    /* compiled from: WidgetGuildProfileSheetViewModel.kt */
+    /* JADX INFO: compiled from: WidgetGuildProfileSheetViewModel.kt */
     public static final /* data */ class TabItems {
         private final boolean ableToInstantInvite;
         private final boolean canAccessSettings;
@@ -922,17 +955,17 @@ public final class WidgetGuildProfileSheetViewModel extends AppViewModel<ViewSta
             return tabItems.copy(z2, z3, i);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final boolean getCanAccessSettings() {
             return this.canAccessSettings;
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final boolean getAbleToInstantInvite() {
             return this.ableToInstantInvite;
         }
 
-        /* renamed from: component3, reason: from getter */
+        /* JADX INFO: renamed from: component3, reason: from getter */
         public final int getPremiumSubscriptionCount() {
             return this.premiumSubscriptionCount;
         }
@@ -968,6 +1001,9 @@ public final class WidgetGuildProfileSheetViewModel extends AppViewModel<ViewSta
         /* JADX WARN: Type inference failed for: r0v1, types: [int] */
         /* JADX WARN: Type inference failed for: r0v6 */
         /* JADX WARN: Type inference failed for: r0v7 */
+        /* JADX WARN: Type inference failed for: r1v0 */
+        /* JADX WARN: Type inference failed for: r1v1, types: [int] */
+        /* JADX WARN: Type inference failed for: r1v3 */
         public int hashCode() {
             boolean z2 = this.canAccessSettings;
             ?? r0 = z2;
@@ -976,7 +1012,7 @@ public final class WidgetGuildProfileSheetViewModel extends AppViewModel<ViewSta
             }
             int i = r0 * 31;
             boolean z3 = this.ableToInstantInvite;
-            return ((i + (z3 ? 1 : z3 ? 1 : 0)) * 31) + this.premiumSubscriptionCount;
+            return ((i + (z3 ? 1 : z3)) * 31) + this.premiumSubscriptionCount;
         }
 
         public String toString() {
@@ -989,10 +1025,10 @@ public final class WidgetGuildProfileSheetViewModel extends AppViewModel<ViewSta
         }
     }
 
-    /* compiled from: WidgetGuildProfileSheetViewModel.kt */
+    /* JADX INFO: compiled from: WidgetGuildProfileSheetViewModel.kt */
     public static abstract class ViewState {
 
-        /* compiled from: WidgetGuildProfileSheetViewModel.kt */
+        /* JADX INFO: compiled from: WidgetGuildProfileSheetViewModel.kt */
         public static final class Invalid extends ViewState {
             public static final Invalid INSTANCE = new Invalid();
 
@@ -1001,7 +1037,7 @@ public final class WidgetGuildProfileSheetViewModel extends AppViewModel<ViewSta
             }
         }
 
-        /* compiled from: WidgetGuildProfileSheetViewModel.kt */
+        /* JADX INFO: compiled from: WidgetGuildProfileSheetViewModel.kt */
         public static final /* data */ class Loaded extends ViewState {
             private final Actions actions;
             private final Banner banner;
@@ -1049,77 +1085,77 @@ public final class WidgetGuildProfileSheetViewModel extends AppViewModel<ViewSta
                 return loaded.copy((i & 1) != 0 ? loaded.guildId : j, (i & 2) != 0 ? loaded.guildName : str, (i & 4) != 0 ? loaded.guildShortName : str2, (i & 8) != 0 ? loaded.guildIcon : str3, (i & 16) != 0 ? loaded.guildDescription : str4, (i & 32) != 0 ? loaded.verifiedPartneredIconRes : num, (i & 64) != 0 ? loaded.banner : banner, (i & 128) != 0 ? loaded.onlineCount : num2, (i & 256) != 0 ? loaded.memberCount : num3, (i & 512) != 0 ? loaded.tabItems : tabItems, (i & 1024) != 0 ? loaded.actions : actions, (i & 2048) != 0 ? loaded.emojisData : emojisData, (i & 4096) != 0 ? loaded.bottomActions : bottomActions, (i & 8192) != 0 ? loaded.isGuildHub : z2, (i & 16384) != 0 ? loaded.meUser : meUser);
             }
 
-            /* renamed from: component1, reason: from getter */
+            /* JADX INFO: renamed from: component1, reason: from getter */
             public final long getGuildId() {
                 return this.guildId;
             }
 
-            /* renamed from: component10, reason: from getter */
+            /* JADX INFO: renamed from: component10, reason: from getter */
             public final TabItems getTabItems() {
                 return this.tabItems;
             }
 
-            /* renamed from: component11, reason: from getter */
+            /* JADX INFO: renamed from: component11, reason: from getter */
             public final Actions getActions() {
                 return this.actions;
             }
 
-            /* renamed from: component12, reason: from getter */
+            /* JADX INFO: renamed from: component12, reason: from getter */
             public final EmojisData getEmojisData() {
                 return this.emojisData;
             }
 
-            /* renamed from: component13, reason: from getter */
+            /* JADX INFO: renamed from: component13, reason: from getter */
             public final BottomActions getBottomActions() {
                 return this.bottomActions;
             }
 
-            /* renamed from: component14, reason: from getter */
+            /* JADX INFO: renamed from: component14, reason: from getter */
             public final boolean getIsGuildHub() {
                 return this.isGuildHub;
             }
 
-            /* renamed from: component15, reason: from getter */
+            /* JADX INFO: renamed from: component15, reason: from getter */
             public final MeUser getMeUser() {
                 return this.meUser;
             }
 
-            /* renamed from: component2, reason: from getter */
+            /* JADX INFO: renamed from: component2, reason: from getter */
             public final String getGuildName() {
                 return this.guildName;
             }
 
-            /* renamed from: component3, reason: from getter */
+            /* JADX INFO: renamed from: component3, reason: from getter */
             public final String getGuildShortName() {
                 return this.guildShortName;
             }
 
-            /* renamed from: component4, reason: from getter */
+            /* JADX INFO: renamed from: component4, reason: from getter */
             public final String getGuildIcon() {
                 return this.guildIcon;
             }
 
-            /* renamed from: component5, reason: from getter */
+            /* JADX INFO: renamed from: component5, reason: from getter */
             public final String getGuildDescription() {
                 return this.guildDescription;
             }
 
-            /* renamed from: component6, reason: from getter */
+            /* JADX INFO: renamed from: component6, reason: from getter */
             public final Integer getVerifiedPartneredIconRes() {
                 return this.verifiedPartneredIconRes;
             }
 
-            /* renamed from: component7, reason: from getter */
+            /* JADX INFO: renamed from: component7, reason: from getter */
             public final Banner getBanner() {
                 return this.banner;
             }
 
-            /* renamed from: component8, reason: from getter */
+            /* JADX INFO: renamed from: component8, reason: from getter */
             public final Integer getOnlineCount() {
                 return this.onlineCount;
             }
 
-            /* renamed from: component9, reason: from getter */
+            /* JADX INFO: renamed from: component9, reason: from getter */
             public final Integer getMemberCount() {
                 return this.memberCount;
             }
@@ -1202,6 +1238,9 @@ public final class WidgetGuildProfileSheetViewModel extends AppViewModel<ViewSta
             }
 
             /* JADX WARN: Multi-variable type inference failed */
+            /* JADX WARN: Type inference failed for: r1v37, types: [int] */
+            /* JADX WARN: Type inference failed for: r1v39 */
+            /* JADX WARN: Type inference failed for: r1v52 */
             public int hashCode() {
                 int iM3a = C0002b.m3a(this.guildId) * 31;
                 String str = this.guildName;
@@ -1229,13 +1268,13 @@ public final class WidgetGuildProfileSheetViewModel extends AppViewModel<ViewSta
                 BottomActions bottomActions = this.bottomActions;
                 int iHashCode12 = (iHashCode11 + (bottomActions != null ? bottomActions.hashCode() : 0)) * 31;
                 boolean z2 = this.isGuildHub;
-                int i = z2;
-                if (z2 != 0) {
-                    i = 1;
+                ?? r1 = z2;
+                if (z2) {
+                    r1 = 1;
                 }
-                int i2 = (iHashCode12 + i) * 31;
+                int i = (iHashCode12 + r1) * 31;
                 MeUser meUser = this.meUser;
-                return i2 + (meUser != null ? meUser.hashCode() : 0);
+                return i + (meUser != null ? meUser.hashCode() : 0);
             }
 
             public final boolean isGuildHub() {
@@ -1278,7 +1317,7 @@ public final class WidgetGuildProfileSheetViewModel extends AppViewModel<ViewSta
             }
         }
 
-        /* compiled from: WidgetGuildProfileSheetViewModel.kt */
+        /* JADX INFO: compiled from: WidgetGuildProfileSheetViewModel.kt */
         public static final class Loading extends ViewState {
             public static final Loading INSTANCE = new Loading();
 
@@ -1295,8 +1334,8 @@ public final class WidgetGuildProfileSheetViewModel extends AppViewModel<ViewSta
         }
     }
 
-    /* compiled from: WidgetGuildProfileSheetViewModel.kt */
-    /* renamed from: com.discord.widgets.guilds.profile.WidgetGuildProfileSheetViewModel$onClickLeaveServer$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.guilds.profile.WidgetGuildProfileSheetViewModel$onClickLeaveServer$1 */
+    /* JADX INFO: compiled from: WidgetGuildProfileSheetViewModel.kt */
     public static final class C88051 extends Lambda implements Function1<Void, Unit> {
         public final /* synthetic */ Function0 $onSuccess;
 
@@ -1312,14 +1351,14 @@ public final class WidgetGuildProfileSheetViewModel extends AppViewModel<ViewSta
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Void r1) {
             this.$onSuccess.invoke();
         }
     }
 
-    /* compiled from: WidgetGuildProfileSheetViewModel.kt */
-    /* renamed from: com.discord.widgets.guilds.profile.WidgetGuildProfileSheetViewModel$onClickMarkAsRead$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.guilds.profile.WidgetGuildProfileSheetViewModel$onClickMarkAsRead$1 */
+    /* JADX INFO: compiled from: WidgetGuildProfileSheetViewModel.kt */
     public static final class C88061 extends Lambda implements Function1<Void, Unit> {
         public C88061() {
             super(1);
@@ -1331,15 +1370,15 @@ public final class WidgetGuildProfileSheetViewModel extends AppViewModel<ViewSta
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Void r3) {
             PublishSubject publishSubjectAccess$getEventSubject$p = WidgetGuildProfileSheetViewModel.access$getEventSubject$p(WidgetGuildProfileSheetViewModel.this);
             publishSubjectAccess$getEventSubject$p.f27650k.onNext(new Event.DismissAndShowToast(C5419R.string.marked_as_read));
         }
     }
 
-    /* compiled from: WidgetGuildProfileSheetViewModel.kt */
-    /* renamed from: com.discord.widgets.guilds.profile.WidgetGuildProfileSheetViewModel$onClickResetNickname$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.guilds.profile.WidgetGuildProfileSheetViewModel$onClickResetNickname$1 */
+    /* JADX INFO: compiled from: WidgetGuildProfileSheetViewModel.kt */
     public static final class C88071 extends Lambda implements Function1<Void, Unit> {
         public final /* synthetic */ Function0 $onSuccess;
 
@@ -1355,14 +1394,14 @@ public final class WidgetGuildProfileSheetViewModel extends AppViewModel<ViewSta
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Void r1) {
             this.$onSuccess.invoke();
         }
     }
 
-    /* compiled from: WidgetGuildProfileSheetViewModel.kt */
-    /* renamed from: com.discord.widgets.guilds.profile.WidgetGuildProfileSheetViewModel$onClickSaveNickname$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.guilds.profile.WidgetGuildProfileSheetViewModel$onClickSaveNickname$1 */
+    /* JADX INFO: compiled from: WidgetGuildProfileSheetViewModel.kt */
     public static final class C88081 extends Lambda implements Function1<Void, Unit> {
         public final /* synthetic */ Function0 $onSuccess;
 
@@ -1378,7 +1417,7 @@ public final class WidgetGuildProfileSheetViewModel extends AppViewModel<ViewSta
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Void r1) {
             this.$onSuccess.invoke();
         }
@@ -1510,6 +1549,7 @@ public final class WidgetGuildProfileSheetViewModel extends AppViewModel<ViewSta
         updateViewState(new ViewState.Loaded(id2, name, strComputeShortName, icon, description, numValueOf, banner, approximatePresenceCount, approximateMemberCount, null, null, new EmojisData(zIsPremium, z2, arrayList), bottomActions, guildPreview.m7889f().contains(GuildFeature.HUB), meUser));
     }
 
+    /* JADX WARN: Multi-variable type inference failed */
     private final void handleStoreState(StoreState storeState) {
         Guild guild = storeState.getGuild();
         StoreGuildProfiles.GuildProfileData guildProfile = storeState.getGuildProfile();
@@ -1518,21 +1558,21 @@ public final class WidgetGuildProfileSheetViewModel extends AppViewModel<ViewSta
         GuildMember computedMe = storeState.getComputedMe();
         List<Long> listComponent6 = storeState.component6();
         boolean isDeveloper = storeState.getIsDeveloper();
-        List<Emoji> listComponent8 = storeState.component8();
+        List<? extends Emoji> listComponent8 = storeState.component8();
         boolean isLurking = storeState.getIsLurking();
         boolean isUnread = storeState.getIsUnread();
         if (guild != null) {
             handleLoadedGuild(guild, guildProfile != null ? guildProfile.getData() : null, guildChannelsInfo, me2, computedMe, listComponent6, isDeveloper, listComponent8, isLurking, isUnread);
             return;
         }
-        StoreGuildProfiles.FetchStates fetchState = guildProfile != null ? guildProfile.getFetchState() : null;
-        StoreGuildProfiles.FetchStates fetchStates = StoreGuildProfiles.FetchStates.SUCCEEDED;
-        if (fetchState == fetchStates && guildProfile.getData() != null) {
+        Object fetchState = guildProfile != null ? guildProfile.getFetchState() : null;
+        Object obj = StoreGuildProfiles.FetchStates.SUCCEEDED;
+        if (fetchState == obj && guildProfile.getData() != null) {
             handleLoadedGuildPreview(guildProfile.getData(), me2);
             return;
         }
         if ((guildProfile != null ? guildProfile.getFetchState() : null) != StoreGuildProfiles.FetchStates.FAILED) {
-            if ((guildProfile != null ? guildProfile.getFetchState() : null) != fetchStates || guildProfile.getData() != null) {
+            if ((guildProfile != null ? guildProfile.getFetchState() : null) != obj || guildProfile.getData() != null) {
                 updateViewState(ViewState.Loading.INSTANCE);
                 return;
             }

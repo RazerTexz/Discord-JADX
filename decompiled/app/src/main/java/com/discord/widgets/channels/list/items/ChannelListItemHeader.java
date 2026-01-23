@@ -4,8 +4,8 @@ import com.discord.models.domain.ModelAuditLogEntry;
 import p001a0.p002a.p003a.C0002b;
 import p007b.p100d.p104b.p105a.outline;
 
-/* compiled from: ChannelListItemHeader.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: ChannelListItemHeader.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final /* data */ class ChannelListItemHeader implements ChannelListItem {
     private final boolean ableToManageChannel;
     private final long id;
@@ -45,22 +45,22 @@ public final /* data */ class ChannelListItemHeader implements ChannelListItem {
         return channelListItemHeader.copy(j3, i3, z3, j2);
     }
 
-    /* renamed from: component1, reason: from getter */
+    /* JADX INFO: renamed from: component1, reason: from getter */
     public final long getId() {
         return this.id;
     }
 
-    /* renamed from: component2, reason: from getter */
+    /* JADX INFO: renamed from: component2, reason: from getter */
     public final int getTextResId() {
         return this.textResId;
     }
 
-    /* renamed from: component3, reason: from getter */
+    /* JADX INFO: renamed from: component3, reason: from getter */
     public final boolean getAbleToManageChannel() {
         return this.ableToManageChannel;
     }
 
-    /* renamed from: component4, reason: from getter */
+    /* JADX INFO: renamed from: component4, reason: from getter */
     public final long getSelectedGuildId() {
         return this.selectedGuildId;
     }
@@ -107,14 +107,17 @@ public final /* data */ class ChannelListItemHeader implements ChannelListItem {
     }
 
     /* JADX WARN: Multi-variable type inference failed */
+    /* JADX WARN: Type inference failed for: r1v2, types: [int] */
+    /* JADX WARN: Type inference failed for: r1v6 */
+    /* JADX WARN: Type inference failed for: r1v7 */
     public int hashCode() {
         int iM3a = ((C0002b.m3a(this.id) * 31) + this.textResId) * 31;
         boolean z2 = this.ableToManageChannel;
-        int i = z2;
-        if (z2 != 0) {
-            i = 1;
+        ?? r1 = z2;
+        if (z2) {
+            r1 = 1;
         }
-        return C0002b.m3a(this.selectedGuildId) + ((iM3a + i) * 31);
+        return C0002b.m3a(this.selectedGuildId) + ((iM3a + r1) * 31);
     }
 
     public String toString() {

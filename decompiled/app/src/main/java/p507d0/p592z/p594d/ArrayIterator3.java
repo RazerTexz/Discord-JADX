@@ -4,15 +4,15 @@ import java.util.Iterator;
 import java.util.NoSuchElementException;
 import p507d0.p592z.p594d.p595g0.KMarkers;
 
-/* compiled from: ArrayIterator.kt */
-/* renamed from: d0.z.d.b, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.z.d.b, reason: use source file name */
+/* JADX INFO: compiled from: ArrayIterator.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class ArrayIterator3<T> implements Iterator<T>, KMarkers {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public int f25277j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final T[] f25278k;
 
     public ArrayIterator3(T[] tArr) {

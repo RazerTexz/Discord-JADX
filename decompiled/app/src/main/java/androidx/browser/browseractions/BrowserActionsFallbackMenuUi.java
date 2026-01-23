@@ -27,8 +27,8 @@ import com.discord.restapi.RestAPIBuilder;
 import java.util.ArrayList;
 import java.util.List;
 
+/* JADX INFO: loaded from: classes.dex */
 @Deprecated
-/* loaded from: classes.dex */
 public class BrowserActionsFallbackMenuUi implements AdapterView.OnItemClickListener {
     private static final String TAG = "BrowserActionskMenuUi";
 
@@ -41,7 +41,7 @@ public class BrowserActionsFallbackMenuUi implements AdapterView.OnItemClickList
     public BrowserActionsFallMenuUiListener mMenuUiListener;
     public final Uri mUri;
 
-    /* renamed from: androidx.browser.browseractions.BrowserActionsFallbackMenuUi$1 */
+    /* JADX INFO: renamed from: androidx.browser.browseractions.BrowserActionsFallbackMenuUi$1 */
     public class RunnableC01471 implements Runnable {
         public RunnableC01471() {
         }
@@ -53,7 +53,7 @@ public class BrowserActionsFallbackMenuUi implements AdapterView.OnItemClickList
         }
     }
 
-    /* renamed from: androidx.browser.browseractions.BrowserActionsFallbackMenuUi$2 */
+    /* JADX INFO: renamed from: androidx.browser.browseractions.BrowserActionsFallbackMenuUi$2 */
     public class DialogInterfaceOnShowListenerC01482 implements DialogInterface.OnShowListener {
         public final /* synthetic */ View val$view;
 
@@ -72,7 +72,7 @@ public class BrowserActionsFallbackMenuUi implements AdapterView.OnItemClickList
         }
     }
 
-    /* renamed from: androidx.browser.browseractions.BrowserActionsFallbackMenuUi$3 */
+    /* JADX INFO: renamed from: androidx.browser.browseractions.BrowserActionsFallbackMenuUi$3 */
     public class ViewOnClickListenerC01493 implements View.OnClickListener {
         public final /* synthetic */ TextView val$urlTextView;
 

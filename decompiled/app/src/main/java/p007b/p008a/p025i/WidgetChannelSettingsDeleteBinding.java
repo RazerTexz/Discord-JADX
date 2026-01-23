@@ -11,28 +11,28 @@ import androidx.viewbinding.ViewBinding;
 import com.discord.C5419R;
 import com.google.android.material.button.MaterialButton;
 
-/* compiled from: WidgetChannelSettingsDeleteBinding.java */
-/* renamed from: b.a.i.s4, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.a.i.s4, reason: use source file name */
+/* JADX INFO: compiled from: WidgetChannelSettingsDeleteBinding.java */
+/* JADX INFO: loaded from: classes.dex */
 public final class WidgetChannelSettingsDeleteBinding implements ViewBinding {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     @NonNull
     public final LinearLayout f1214a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     @NonNull
     public final TextView f1215b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     @NonNull
     public final MaterialButton f1216c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     @NonNull
     public final MaterialButton f1217d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     @NonNull
     public final TextView f1218e;
 
@@ -45,7 +45,7 @@ public final class WidgetChannelSettingsDeleteBinding implements ViewBinding {
     }
 
     @NonNull
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static WidgetChannelSettingsDeleteBinding m206a(@NonNull LayoutInflater layoutInflater, @Nullable ViewGroup viewGroup, boolean z2) {
         View viewInflate = layoutInflater.inflate(C5419R.layout.widget_channel_settings_delete, (ViewGroup) null, false);
         if (z2) {

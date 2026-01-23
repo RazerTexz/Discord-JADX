@@ -6,7 +6,7 @@ import com.adjust.sdk.Util;
 import java.util.concurrent.ScheduledFuture;
 import java.util.concurrent.TimeUnit;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class TimerOnce {
     private Runnable command;
     private ILogger logger = AdjustFactory.getLogger();
@@ -14,7 +14,7 @@ public class TimerOnce {
     private FutureScheduler scheduler;
     private ScheduledFuture waitingTask;
 
-    /* renamed from: com.adjust.sdk.scheduler.TimerOnce$1 */
+    /* JADX INFO: renamed from: com.adjust.sdk.scheduler.TimerOnce$1 */
     public class RunnableC54051 implements Runnable {
         public RunnableC54051() {
         }

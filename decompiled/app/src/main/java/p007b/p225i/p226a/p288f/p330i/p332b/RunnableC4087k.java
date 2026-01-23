@@ -1,14 +1,14 @@
 package p007b.p225i.p226a.p288f.p330i.p332b;
 
-/* compiled from: com.google.android.gms:play-services-measurement-impl@@18.0.0 */
-/* renamed from: b.i.a.f.i.b.k */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.i.b.k */
+/* JADX INFO: compiled from: com.google.android.gms:play-services-measurement-impl@@18.0.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public final class RunnableC4087k implements Runnable {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final /* synthetic */ InterfaceC4192t5 f10866j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final /* synthetic */ AbstractC4064i f10867k;
 
     public RunnableC4087k(AbstractC4064i abstractC4064i, InterfaceC4192t5 interfaceC4192t5) {
@@ -17,7 +17,7 @@ public final class RunnableC4087k implements Runnable {
     }
 
     @Override // java.lang.Runnable
-    public final void run() throws IllegalStateException {
+    public final void run() {
         this.f10866j.mo5730k();
         if (C4051ga.m5647a()) {
             this.f10866j.mo5725f().m5852v(this);

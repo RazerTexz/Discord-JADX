@@ -4,15 +4,15 @@ import java.util.List;
 import p507d0.p513e0.p514p.p515d.p517m0.p521c.p522g1.Annotations4;
 import p507d0.p513e0.p514p.p515d.p517m0.p552k.p553a0.MemberScope3;
 
-/* compiled from: KotlinType.kt */
-/* renamed from: d0.e0.p.d.m0.n.k1, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.n.k1, reason: use source file name */
+/* JADX INFO: compiled from: KotlinType.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public abstract class KotlinType5 extends KotlinType {
     public KotlinType5() {
         super(null);
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public abstract KotlinType mo10011a();
 
     @Override // p507d0.p513e0.p514p.p515d.p517m0.p521c.p522g1.Annotations3

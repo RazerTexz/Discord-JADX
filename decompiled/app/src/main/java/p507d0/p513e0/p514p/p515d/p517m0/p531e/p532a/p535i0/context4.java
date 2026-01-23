@@ -7,24 +7,24 @@ import p507d0.p513e0.p514p.p515d.p517m0.p531e.p532a.p535i0.p537m.JavaTypeResolve
 import p507d0.p513e0.p514p.p515d.p517m0.p566m.StorageManager;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: context.kt */
-/* renamed from: d0.e0.p.d.m0.e.a.i0.g, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.e.a.i0.g, reason: use source file name */
+/* JADX INFO: compiled from: context.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class context4 {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final context2 f23310a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final resolvers2 f23311b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final Lazy<JavaTypeQualifiersByElementType> f23312c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final Lazy f23313d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final JavaTypeResolver4 f23314e;
 
     public context4(context2 context2Var, resolvers2 resolvers2Var, Lazy<JavaTypeQualifiersByElementType> lazy) {

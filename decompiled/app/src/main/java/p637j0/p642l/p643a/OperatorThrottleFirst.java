@@ -5,18 +5,18 @@ import java.util.Objects;
 import p658rx.Subscriber;
 
 /* JADX INFO: Add missing generic type declarations: [T] */
-/* compiled from: OperatorThrottleFirst.java */
-/* renamed from: j0.l.a.k2, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: j0.l.a.k2, reason: use source file name */
+/* JADX INFO: compiled from: OperatorThrottleFirst.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class OperatorThrottleFirst<T> extends Subscriber<T> {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public long f26891j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final /* synthetic */ Subscriber f26892k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final /* synthetic */ OperatorThrottleFirst2 f26893l;
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */

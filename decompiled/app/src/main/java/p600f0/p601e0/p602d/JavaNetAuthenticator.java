@@ -41,12 +41,12 @@ import p600f0.p601e0.p606h.HttpHeaders;
 import p600f0.p601e0.p609k.Platform2;
 import p615g0.Buffer3;
 
-/* compiled from: JavaNetAuthenticator.kt */
-/* renamed from: f0.e0.d.b, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: f0.e0.d.b, reason: use source file name */
+/* JADX INFO: compiled from: JavaNetAuthenticator.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class JavaNetAuthenticator implements Authenticator2 {
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final Dns2 f25405b;
 
     public JavaNetAuthenticator(Dns2 dns2, int i) {
@@ -59,7 +59,7 @@ public final class JavaNetAuthenticator implements Authenticator2 {
     /* JADX WARN: Removed duplicated region for block: B:26:0x0077  */
     /* JADX WARN: Removed duplicated region for block: B:30:0x0083  */
     @Override // p600f0.Authenticator2
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
@@ -126,6 +126,8 @@ public final class JavaNetAuthenticator implements Authenticator2 {
                                     charsetForName = Charset.forName(str5);
                                     Intrinsics3.checkExpressionValueIsNotNull(charsetForName, "Charset.forName(charset)");
                                 } catch (Exception unused) {
+                                    charsetForName = StandardCharsets.ISO_8859_1;
+                                    Intrinsics3.checkExpressionValueIsNotNull(charsetForName, "ISO_8859_1");
                                 }
                             } else {
                                 charsetForName = StandardCharsets.ISO_8859_1;
@@ -198,7 +200,7 @@ public final class JavaNetAuthenticator implements Authenticator2 {
         return null;
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final InetAddress m10146b(Proxy proxy, HttpUrl httpUrl, Dns2 dns2) throws IOException {
         Proxy.Type type = proxy.type();
         if (type != null && C12273a.f25404a[type.ordinal()] == 1) {

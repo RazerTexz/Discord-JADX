@@ -14,16 +14,16 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import p007b.p225i.p408d.TypeAdapterFactory2;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public final class SqlDateTypeAdapter extends TypeAdapter<Date> {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final TypeAdapterFactory2 f21537a = new C111101();
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final DateFormat f21538b = new SimpleDateFormat("MMM d, yyyy");
 
-    /* renamed from: com.google.gson.internal.bind.SqlDateTypeAdapter$1 */
+    /* JADX INFO: renamed from: com.google.gson.internal.bind.SqlDateTypeAdapter$1 */
     public class C111101 implements TypeAdapterFactory2 {
         @Override // p007b.p225i.p408d.TypeAdapterFactory2
         public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> typeToken) {

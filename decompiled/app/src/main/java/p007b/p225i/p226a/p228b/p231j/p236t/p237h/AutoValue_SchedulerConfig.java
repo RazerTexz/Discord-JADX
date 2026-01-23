@@ -7,15 +7,15 @@ import p007b.p225i.p226a.p228b.Priority3;
 import p007b.p225i.p226a.p228b.p231j.p236t.p237h.SchedulerConfig;
 import p007b.p225i.p226a.p228b.p231j.p240v.Clock3;
 
-/* compiled from: AutoValue_SchedulerConfig.java */
-/* renamed from: b.i.a.b.j.t.h.b, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.b.j.t.h.b, reason: use source file name */
+/* JADX INFO: compiled from: AutoValue_SchedulerConfig.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class AutoValue_SchedulerConfig extends SchedulerConfig {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final Clock3 f5353a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final Map<Priority3, SchedulerConfig.a> f5354b;
 
     public AutoValue_SchedulerConfig(Clock3 clock3, Map<Priority3, SchedulerConfig.a> map) {
@@ -26,13 +26,13 @@ public final class AutoValue_SchedulerConfig extends SchedulerConfig {
     }
 
     @Override // p007b.p225i.p226a.p228b.p231j.p236t.p237h.SchedulerConfig
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public Clock3 mo2374a() {
         return this.f5353a;
     }
 
     @Override // p007b.p225i.p226a.p228b.p231j.p236t.p237h.SchedulerConfig
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public Map<Priority3, SchedulerConfig.a> mo2375c() {
         return this.f5354b;
     }

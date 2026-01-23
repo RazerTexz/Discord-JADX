@@ -4,15 +4,15 @@ import android.os.IBinder;
 import androidx.browser.customtabs.CustomTabsService;
 import androidx.browser.customtabs.CustomTabsSessionToken;
 
-/* compiled from: lambda */
-/* renamed from: y.a.a.a */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: y.a.a.a */
+/* JADX INFO: compiled from: lambda */
+/* JADX INFO: loaded from: classes.dex */
 public final /* synthetic */ class C13186a implements IBinder.DeathRecipient {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final /* synthetic */ CustomTabsService.BinderC01531 f27950a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final /* synthetic */ CustomTabsSessionToken f27951b;
 
     public /* synthetic */ C13186a(CustomTabsService.BinderC01531 binderC01531, CustomTabsSessionToken customTabsSessionToken) {

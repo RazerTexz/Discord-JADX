@@ -5,9 +5,9 @@ import kotlin.ranges.Ranges2;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ReversedViews.kt */
-/* renamed from: d0.t.s, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.t.s, reason: use source file name */
+/* JADX INFO: compiled from: ReversedViews.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public class ReversedViews3 extends MutableCollections {
     public static final int access$reverseElementIndex(List list, int i) {
         int lastIndex = Collections2.getLastIndex(list);

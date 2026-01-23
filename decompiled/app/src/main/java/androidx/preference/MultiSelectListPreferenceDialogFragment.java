@@ -8,8 +8,8 @@ import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Set;
 
+/* JADX INFO: loaded from: classes.dex */
 @Deprecated
-/* loaded from: classes.dex */
 public class MultiSelectListPreferenceDialogFragment extends PreferenceDialogFragment {
     private static final String SAVE_STATE_CHANGED = "MultiSelectListPreferenceDialogFragment.changed";
     private static final String SAVE_STATE_ENTRIES = "MultiSelectListPreferenceDialogFragment.entries";
@@ -20,7 +20,7 @@ public class MultiSelectListPreferenceDialogFragment extends PreferenceDialogFra
     public Set<String> mNewValues = new HashSet();
     public boolean mPreferenceChanged;
 
-    /* renamed from: androidx.preference.MultiSelectListPreferenceDialogFragment$1 */
+    /* JADX INFO: renamed from: androidx.preference.MultiSelectListPreferenceDialogFragment$1 */
     public class DialogInterfaceOnMultiChoiceClickListenerC05081 implements DialogInterface.OnMultiChoiceClickListener {
         public DialogInterfaceOnMultiChoiceClickListenerC05081() {
         }

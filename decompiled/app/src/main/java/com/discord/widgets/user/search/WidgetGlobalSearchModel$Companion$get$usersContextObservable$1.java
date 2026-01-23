@@ -9,8 +9,8 @@ import kotlin.jvm.functions.Function4;
 import p507d0.p592z.p594d.FunctionReferenceImpl;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: WidgetGlobalSearchModel.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: WidgetGlobalSearchModel.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* synthetic */ class WidgetGlobalSearchModel$Companion$get$usersContextObservable$1 extends FunctionReferenceImpl implements Function4<Map<Long, ? extends User>, Map<Long, ? extends Presence>, Map<Long, ? extends Integer>, Map<Long, ? extends Map<Long, ? extends GuildMember>>, WidgetGlobalSearchModel.UsersContext> {
     public static final WidgetGlobalSearchModel$Companion$get$usersContextObservable$1 INSTANCE = new WidgetGlobalSearchModel$Companion$get$usersContextObservable$1();
 
@@ -23,7 +23,7 @@ public final /* synthetic */ class WidgetGlobalSearchModel$Companion$get$usersCo
         return invoke2(map, (Map<Long, Presence>) map2, (Map<Long, Integer>) map3, (Map<Long, ? extends Map<Long, GuildMember>>) map4);
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final WidgetGlobalSearchModel.UsersContext invoke2(Map<Long, ? extends User> map, Map<Long, Presence> map2, Map<Long, Integer> map3, Map<Long, ? extends Map<Long, GuildMember>> map4) {
         Intrinsics3.checkNotNullParameter(map, "p1");
         Intrinsics3.checkNotNullParameter(map2, "p2");

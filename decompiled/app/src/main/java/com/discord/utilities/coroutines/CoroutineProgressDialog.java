@@ -22,14 +22,14 @@ import p659s.p660a.MainCoroutineDispatcher;
 import p659s.p660a.NonCancellable;
 import p659s.p660a.p661a.MainDispatchers;
 
-/* compiled from: CoroutineProgressDialog.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: CoroutineProgressDialog.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class CoroutineProgressDialog {
     public static final CoroutineProgressDialog INSTANCE = new CoroutineProgressDialog();
 
-    /* compiled from: CoroutineProgressDialog.kt */
+    /* JADX INFO: renamed from: com.discord.utilities.coroutines.CoroutineProgressDialog$withCancellableProgressDialog$1 */
+    /* JADX INFO: compiled from: CoroutineProgressDialog.kt */
     @DebugMetadata(m10084c = "com.discord.utilities.coroutines.CoroutineProgressDialog", m10085f = "CoroutineProgressDialog.kt", m10086l = {22, 32, 34, 34}, m10087m = "withCancellableProgressDialog")
-    /* renamed from: com.discord.utilities.coroutines.CoroutineProgressDialog$withCancellableProgressDialog$1 */
     public static final class C67371 extends ContinuationImpl3 {
         public Object L$0;
         public Object L$1;
@@ -49,9 +49,9 @@ public final class CoroutineProgressDialog {
         }
     }
 
-    /* compiled from: CoroutineProgressDialog.kt */
+    /* JADX INFO: renamed from: com.discord.utilities.coroutines.CoroutineProgressDialog$withCancellableProgressDialog$2 */
+    /* JADX INFO: compiled from: CoroutineProgressDialog.kt */
     @DebugMetadata(m10084c = "com.discord.utilities.coroutines.CoroutineProgressDialog$withCancellableProgressDialog$2", m10085f = "CoroutineProgressDialog.kt", m10086l = {}, m10087m = "invokeSuspend")
-    /* renamed from: com.discord.utilities.coroutines.CoroutineProgressDialog$withCancellableProgressDialog$2 */
     public static final class C67382 extends ContinuationImpl6 implements Function2<CoroutineScope, Continuation<? super Unit>, Object> {
         public final /* synthetic */ Ref$ObjectRef $dialog;
         public int label;

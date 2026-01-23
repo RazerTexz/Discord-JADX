@@ -1,21 +1,21 @@
 package p686z;
 
-/* compiled from: TaskCompletionSource.java */
-/* renamed from: z.h, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: z.h, reason: use source file name */
+/* JADX INFO: compiled from: TaskCompletionSource.java */
+/* JADX INFO: loaded from: classes.dex */
 public class TaskCompletionSource2<TResult> {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final Task6<TResult> f27990a = new Task6<>();
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public void m11374a() {
         if (!this.f27990a.m11372g()) {
             throw new IllegalStateException("Cannot cancel a completed task.");
         }
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public void m11375b(Exception exc) {
         boolean z2;
         Task6<TResult> task6 = this.f27990a;
@@ -35,7 +35,7 @@ public class TaskCompletionSource2<TResult> {
         }
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public void m11376c(TResult tresult) {
         if (!this.f27990a.m11373h(tresult)) {
             throw new IllegalStateException("Cannot set the result of a completed task.");

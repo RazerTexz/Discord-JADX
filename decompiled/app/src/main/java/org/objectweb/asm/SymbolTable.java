@@ -1,6 +1,6 @@
 package org.objectweb.asm;
 
-/* loaded from: discord-126021.apk:org/objectweb/asm/SymbolTable.SCL.lombok */
+/* JADX INFO: loaded from: discord-126021.apk:org/objectweb/asm/SymbolTable.SCL.lombok */
 final class SymbolTable {
     final ClassWriter classWriter;
     private final ClassReader sourceClassReader;
@@ -618,7 +618,7 @@ final class SymbolTable {
     }
 
     int addMergedType(int typeTableIndex1, int typeTableIndex2) {
-        long data = typeTableIndex1 < typeTableIndex2 ? typeTableIndex1 | (typeTableIndex2 << 32) : typeTableIndex2 | (typeTableIndex1 << 32);
+        long data = typeTableIndex1 < typeTableIndex2 ? ((long) typeTableIndex1) | (((long) typeTableIndex2) << 32) : ((long) typeTableIndex2) | (((long) typeTableIndex1) << 32);
         int hashCode = hash(130, typeTableIndex1 + typeTableIndex2);
         Entry entry = get(hashCode);
         while (true) {
@@ -686,7 +686,7 @@ final class SymbolTable {
         return Integer.MAX_VALUE & (tag + (value1.hashCode() * value2.hashCode() * value3.hashCode() * value4));
     }
 
-    /* loaded from: discord-126021.apk:org/objectweb/asm/SymbolTable$Entry.SCL.lombok */
+    /* JADX INFO: loaded from: discord-126021.apk:org/objectweb/asm/SymbolTable$Entry.SCL.lombok */
     private static class Entry extends Symbol {
         final int hashCode;
         Entry next;

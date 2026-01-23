@@ -6,12 +6,12 @@ import kotlin.jvm.functions.Function1;
 import p007b.p100d.p104b.p105a.outline;
 import p007b.p225i.p226a.p288f.p299e.p308o.C3404f;
 
-/* compiled from: CancellableContinuationImpl.kt */
-/* renamed from: s.a.b1, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: s.a.b1, reason: use source file name */
+/* JADX INFO: compiled from: CancellableContinuationImpl.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class CancellableContinuationImpl extends CancellableContinuationImpl4 {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final Function1<Throwable, Unit> f27717j;
 
     /* JADX WARN: Multi-variable type inference failed */
@@ -20,7 +20,7 @@ public final class CancellableContinuationImpl extends CancellableContinuationIm
     }
 
     @Override // p659s.p660a.CompletionHandler
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public void mo11193a(Throwable th) {
         this.f27717j.invoke(th);
     }

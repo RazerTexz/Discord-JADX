@@ -6,20 +6,20 @@ import androidx.annotation.NonNull;
 import androidx.viewbinding.ViewBinding;
 import com.google.android.material.textfield.TextInputEditText;
 
-/* compiled from: SearchInputViewBinding.java */
-/* renamed from: b.a.i.j1, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.a.i.j1, reason: use source file name */
+/* JADX INFO: compiled from: SearchInputViewBinding.java */
+/* JADX INFO: loaded from: classes.dex */
 public final class SearchInputViewBinding implements ViewBinding {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     @NonNull
     public final View f969a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     @NonNull
     public final ImageView f970b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     @NonNull
     public final TextInputEditText f971c;
 

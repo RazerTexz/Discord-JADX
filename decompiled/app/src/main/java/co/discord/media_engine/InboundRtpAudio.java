@@ -4,8 +4,8 @@ import p001a0.p002a.p003a.C0002b;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: Statistics.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: Statistics.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class InboundRtpAudio {
     private final boolean audioDetected;
     private final PlayoutMetric audioJitterBuffer;
@@ -77,152 +77,152 @@ public final /* data */ class InboundRtpAudio {
         return inboundRtpAudio.copy((i6 & 1) != 0 ? inboundRtpAudio.type : str, (i6 & 2) != 0 ? inboundRtpAudio.ssrc : j, (i6 & 4) != 0 ? inboundRtpAudio.codec : statsCodec, (i6 & 8) != 0 ? inboundRtpAudio.bytesReceived : j2, (i6 & 16) != 0 ? inboundRtpAudio.packetsReceived : j3, (i6 & 32) != 0 ? inboundRtpAudio.packetsLost : j4, (i6 & 64) != 0 ? inboundRtpAudio.audioLevel : f, (i6 & 128) != 0 ? inboundRtpAudio.audioDetected : z2, (i6 & 256) != 0 ? inboundRtpAudio.jitter : j5, (i6 & 512) != 0 ? inboundRtpAudio.jitterBuffer : j6, (i6 & 1024) != 0 ? inboundRtpAudio.jitterBufferPreferred : j7, (i6 & 2048) != 0 ? inboundRtpAudio.delayEstimate : j8, (i6 & 4096) != 0 ? inboundRtpAudio.decodingCNG : i, (i6 & 8192) != 0 ? inboundRtpAudio.decodingMutedOutput : i2, (i6 & 16384) != 0 ? inboundRtpAudio.decodingNormal : i3, (i6 & 32768) != 0 ? inboundRtpAudio.decodingPLC : i4, (i6 & 65536) != 0 ? inboundRtpAudio.decodingPLCCNG : i5, (i6 & 131072) != 0 ? inboundRtpAudio.opSilence : l, (i6 & 262144) != 0 ? inboundRtpAudio.opNormal : l2, (i6 & 524288) != 0 ? inboundRtpAudio.opMerge : l3, (i6 & 1048576) != 0 ? inboundRtpAudio.opExpand : l4, (i6 & 2097152) != 0 ? inboundRtpAudio.opAccelerate : l5, (i6 & 4194304) != 0 ? inboundRtpAudio.opPreemptiveExpand : l6, (i6 & 8388608) != 0 ? inboundRtpAudio.opCNG : l7, (i6 & 16777216) != 0 ? inboundRtpAudio.audioJitterBuffer : playoutMetric, (i6 & 33554432) != 0 ? inboundRtpAudio.audioJitterDelay : playoutMetric2, (i6 & 67108864) != 0 ? inboundRtpAudio.audioJitterTarget : playoutMetric3, (i6 & 134217728) != 0 ? inboundRtpAudio.audioPlayoutUnderruns : playoutMetric4, (i6 & 268435456) != 0 ? inboundRtpAudio.relativeReceptionDelay : playoutMetric5, (i6 & 536870912) != 0 ? inboundRtpAudio.relativePlayoutDelay : playoutMetric6);
     }
 
-    /* renamed from: component1, reason: from getter */
+    /* JADX INFO: renamed from: component1, reason: from getter */
     public final String getType() {
         return this.type;
     }
 
-    /* renamed from: component10, reason: from getter */
+    /* JADX INFO: renamed from: component10, reason: from getter */
     public final long getJitterBuffer() {
         return this.jitterBuffer;
     }
 
-    /* renamed from: component11, reason: from getter */
+    /* JADX INFO: renamed from: component11, reason: from getter */
     public final long getJitterBufferPreferred() {
         return this.jitterBufferPreferred;
     }
 
-    /* renamed from: component12, reason: from getter */
+    /* JADX INFO: renamed from: component12, reason: from getter */
     public final long getDelayEstimate() {
         return this.delayEstimate;
     }
 
-    /* renamed from: component13, reason: from getter */
+    /* JADX INFO: renamed from: component13, reason: from getter */
     public final int getDecodingCNG() {
         return this.decodingCNG;
     }
 
-    /* renamed from: component14, reason: from getter */
+    /* JADX INFO: renamed from: component14, reason: from getter */
     public final int getDecodingMutedOutput() {
         return this.decodingMutedOutput;
     }
 
-    /* renamed from: component15, reason: from getter */
+    /* JADX INFO: renamed from: component15, reason: from getter */
     public final int getDecodingNormal() {
         return this.decodingNormal;
     }
 
-    /* renamed from: component16, reason: from getter */
+    /* JADX INFO: renamed from: component16, reason: from getter */
     public final int getDecodingPLC() {
         return this.decodingPLC;
     }
 
-    /* renamed from: component17, reason: from getter */
+    /* JADX INFO: renamed from: component17, reason: from getter */
     public final int getDecodingPLCCNG() {
         return this.decodingPLCCNG;
     }
 
-    /* renamed from: component18, reason: from getter */
+    /* JADX INFO: renamed from: component18, reason: from getter */
     public final Long getOpSilence() {
         return this.opSilence;
     }
 
-    /* renamed from: component19, reason: from getter */
+    /* JADX INFO: renamed from: component19, reason: from getter */
     public final Long getOpNormal() {
         return this.opNormal;
     }
 
-    /* renamed from: component2, reason: from getter */
+    /* JADX INFO: renamed from: component2, reason: from getter */
     public final long getSsrc() {
         return this.ssrc;
     }
 
-    /* renamed from: component20, reason: from getter */
+    /* JADX INFO: renamed from: component20, reason: from getter */
     public final Long getOpMerge() {
         return this.opMerge;
     }
 
-    /* renamed from: component21, reason: from getter */
+    /* JADX INFO: renamed from: component21, reason: from getter */
     public final Long getOpExpand() {
         return this.opExpand;
     }
 
-    /* renamed from: component22, reason: from getter */
+    /* JADX INFO: renamed from: component22, reason: from getter */
     public final Long getOpAccelerate() {
         return this.opAccelerate;
     }
 
-    /* renamed from: component23, reason: from getter */
+    /* JADX INFO: renamed from: component23, reason: from getter */
     public final Long getOpPreemptiveExpand() {
         return this.opPreemptiveExpand;
     }
 
-    /* renamed from: component24, reason: from getter */
+    /* JADX INFO: renamed from: component24, reason: from getter */
     public final Long getOpCNG() {
         return this.opCNG;
     }
 
-    /* renamed from: component25, reason: from getter */
+    /* JADX INFO: renamed from: component25, reason: from getter */
     public final PlayoutMetric getAudioJitterBuffer() {
         return this.audioJitterBuffer;
     }
 
-    /* renamed from: component26, reason: from getter */
+    /* JADX INFO: renamed from: component26, reason: from getter */
     public final PlayoutMetric getAudioJitterDelay() {
         return this.audioJitterDelay;
     }
 
-    /* renamed from: component27, reason: from getter */
+    /* JADX INFO: renamed from: component27, reason: from getter */
     public final PlayoutMetric getAudioJitterTarget() {
         return this.audioJitterTarget;
     }
 
-    /* renamed from: component28, reason: from getter */
+    /* JADX INFO: renamed from: component28, reason: from getter */
     public final PlayoutMetric getAudioPlayoutUnderruns() {
         return this.audioPlayoutUnderruns;
     }
 
-    /* renamed from: component29, reason: from getter */
+    /* JADX INFO: renamed from: component29, reason: from getter */
     public final PlayoutMetric getRelativeReceptionDelay() {
         return this.relativeReceptionDelay;
     }
 
-    /* renamed from: component3, reason: from getter */
+    /* JADX INFO: renamed from: component3, reason: from getter */
     public final StatsCodec getCodec() {
         return this.codec;
     }
 
-    /* renamed from: component30, reason: from getter */
+    /* JADX INFO: renamed from: component30, reason: from getter */
     public final PlayoutMetric getRelativePlayoutDelay() {
         return this.relativePlayoutDelay;
     }
 
-    /* renamed from: component4, reason: from getter */
+    /* JADX INFO: renamed from: component4, reason: from getter */
     public final long getBytesReceived() {
         return this.bytesReceived;
     }
 
-    /* renamed from: component5, reason: from getter */
+    /* JADX INFO: renamed from: component5, reason: from getter */
     public final long getPacketsReceived() {
         return this.packetsReceived;
     }
 
-    /* renamed from: component6, reason: from getter */
+    /* JADX INFO: renamed from: component6, reason: from getter */
     public final long getPacketsLost() {
         return this.packetsLost;
     }
 
-    /* renamed from: component7, reason: from getter */
+    /* JADX INFO: renamed from: component7, reason: from getter */
     public final float getAudioLevel() {
         return this.audioLevel;
     }
 
-    /* renamed from: component8, reason: from getter */
+    /* JADX INFO: renamed from: component8, reason: from getter */
     public final boolean getAudioDetected() {
         return this.audioDetected;
     }
 
-    /* renamed from: component9, reason: from getter */
+    /* JADX INFO: renamed from: component9, reason: from getter */
     public final long getJitter() {
         return this.jitter;
     }
@@ -365,17 +365,20 @@ public final /* data */ class InboundRtpAudio {
     }
 
     /* JADX WARN: Multi-variable type inference failed */
+    /* JADX WARN: Type inference failed for: r0v14, types: [int] */
+    /* JADX WARN: Type inference failed for: r0v75 */
+    /* JADX WARN: Type inference failed for: r0v78 */
     public int hashCode() {
         String str = this.type;
         int iM3a = (C0002b.m3a(this.ssrc) + ((str != null ? str.hashCode() : 0) * 31)) * 31;
         StatsCodec statsCodec = this.codec;
         int iFloatToIntBits = (Float.floatToIntBits(this.audioLevel) + ((C0002b.m3a(this.packetsLost) + ((C0002b.m3a(this.packetsReceived) + ((C0002b.m3a(this.bytesReceived) + ((iM3a + (statsCodec != null ? statsCodec.hashCode() : 0)) * 31)) * 31)) * 31)) * 31)) * 31;
         boolean z2 = this.audioDetected;
-        int i = z2;
-        if (z2 != 0) {
-            i = 1;
+        ?? r0 = z2;
+        if (z2) {
+            r0 = 1;
         }
-        int iM3a2 = (((((((((((C0002b.m3a(this.delayEstimate) + ((C0002b.m3a(this.jitterBufferPreferred) + ((C0002b.m3a(this.jitterBuffer) + ((C0002b.m3a(this.jitter) + ((iFloatToIntBits + i) * 31)) * 31)) * 31)) * 31)) * 31) + this.decodingCNG) * 31) + this.decodingMutedOutput) * 31) + this.decodingNormal) * 31) + this.decodingPLC) * 31) + this.decodingPLCCNG) * 31;
+        int iM3a2 = (((((((((((C0002b.m3a(this.delayEstimate) + ((C0002b.m3a(this.jitterBufferPreferred) + ((C0002b.m3a(this.jitterBuffer) + ((C0002b.m3a(this.jitter) + ((iFloatToIntBits + r0) * 31)) * 31)) * 31)) * 31)) * 31) + this.decodingCNG) * 31) + this.decodingMutedOutput) * 31) + this.decodingNormal) * 31) + this.decodingPLC) * 31) + this.decodingPLCCNG) * 31;
         Long l = this.opSilence;
         int iHashCode = (iM3a2 + (l != null ? l.hashCode() : 0)) * 31;
         Long l2 = this.opNormal;

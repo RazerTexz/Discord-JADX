@@ -6,8 +6,8 @@ import kotlin.jvm.functions.Function1;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: CallParticipantsAdapter.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: CallParticipantsAdapter.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class CallParticipantsAdapter$onToggleRingingClicked$1 extends Lambda implements Function1<StoreVoiceParticipants.VoiceUser, Unit> {
     public static final CallParticipantsAdapter$onToggleRingingClicked$1 INSTANCE = new CallParticipantsAdapter$onToggleRingingClicked$1();
 
@@ -21,7 +21,7 @@ public final class CallParticipantsAdapter$onToggleRingingClicked$1 extends Lamb
         return Unit.f27425a;
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final void invoke2(StoreVoiceParticipants.VoiceUser voiceUser) {
         Intrinsics3.checkNotNullParameter(voiceUser, "it");
     }

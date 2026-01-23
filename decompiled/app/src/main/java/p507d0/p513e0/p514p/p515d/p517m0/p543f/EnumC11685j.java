@@ -2,9 +2,9 @@ package p507d0.p513e0.p514p.p515d.p517m0.p543f;
 
 import p507d0.p513e0.p514p.p515d.p517m0.p550i.Internal;
 
-/* compiled from: ProtoBuf.java */
-/* renamed from: d0.e0.p.d.m0.f.j */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.f.j */
+/* JADX INFO: compiled from: ProtoBuf.java */
+/* JADX INFO: loaded from: classes3.dex */
 public enum EnumC11685j implements Internal.a {
     DECLARATION(0),
     FAKE_OVERRIDE(1),

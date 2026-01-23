@@ -7,19 +7,19 @@ import com.google.android.gms.common.internal.safeparcel.AbstractSafeParcelable;
 import p007b.p085c.p086a.p087a0.AnimatableValueParser;
 import p007b.p225i.p226a.p288f.p333j.p334b.p335e.C4297n0;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public final class zzj extends AbstractSafeParcelable {
     public static final Parcelable.Creator<zzj> CREATOR = new C4297n0();
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final int f20815j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     @Nullable
     @Deprecated
     public final ClientAppContext f20816k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final int f20817l;
 
     public zzj(int i) {

@@ -78,8 +78,8 @@ import p507d0.p580t._Collections;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: Rules.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: Rules.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class Rules {
     private static final Pattern PATTERN_HEADER_ITEM;
     public static final String REGEX_CUSTOM_EMOJI = "<(a)?:([a-zA-Z_0-9]+):(\\d+)>";
@@ -93,7 +93,7 @@ public final class Rules {
     private static final Pattern PATTERN_ROLE_MENTION = Pattern.compile("^<@&(\\d+)>");
     private static final Pattern PATTERN_MENTION = Pattern.compile("^<@!?(\\d+)>|^@(everyone|here)");
 
-    /* renamed from: PATTERN_UNICODE_EMOJI$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: PATTERN_UNICODE_EMOJI$delegate, reason: from kotlin metadata */
     private static final Lazy PATTERN_UNICODE_EMOJI = LazyJVM.lazy(Rules$PATTERN_UNICODE_EMOJI$2.INSTANCE);
     private static final Pattern PATTERN_CUSTOM_EMOJI = Pattern.compile("^<(a)?:([a-zA-Z_0-9]+):(\\d+)>");
     private static final Pattern PATTERN_NAMED_EMOJI = Pattern.compile("^:([^\\s:]+?(?:::skin-tone-\\d)?):");
@@ -110,15 +110,15 @@ public final class Rules {
     private static final Pattern PATTERN_HOOKED_LINK = Pattern.compile(HOOKED_LINK);
     private static final Pattern PATTERN_LIST_ITEM = Pattern.compile("^([^\\S\\r\\n]*)[*-][ \\s]?(.*)([\\n|$])?");
 
-    /* compiled from: Rules.kt */
+    /* JADX INFO: compiled from: Rules.kt */
     public interface BlockQuoteState<Self extends BlockQuoteState<Self>> {
-        /* renamed from: isInQuote */
+        /* JADX INFO: renamed from: isInQuote */
         boolean getIsInQuote();
 
         Self newBlockQuoteState(boolean isInQuote);
     }
 
-    /* compiled from: Rules.kt */
+    /* JADX INFO: compiled from: Rules.kt */
     public interface EmojiDataProvider {
         Map<String, ModelEmojiUnicode> getUnicodeEmojiSurrogateMap();
 
@@ -127,7 +127,7 @@ public final class Rules {
         Pattern getUnicodeEmojisPattern();
     }
 
-    /* compiled from: Rules.kt */
+    /* JADX INFO: compiled from: Rules.kt */
     public static final class HeaderLineClassedRule<RC, T, S> extends MarkdownRules.a<RC, Object, S> {
         private final Function0<List<Object>> headerPaddingSpanProvider;
 
@@ -153,7 +153,7 @@ public final class Rules {
         }
     }
 
-    /* compiled from: Rules.kt */
+    /* JADX INFO: compiled from: Rules.kt */
     public static final class MarkdownListItemRule<RC, S> extends Rule.BlockRule<RC, Node<RC>, S> {
         private final Function0<List<Object>> spansProvider;
 
@@ -179,8 +179,8 @@ public final class Rules {
     }
 
     /* JADX INFO: Add missing generic type declarations: [S, T] */
-    /* compiled from: Rules.kt */
-    /* renamed from: com.discord.utilities.textprocessing.Rules$createBlockQuoteRule$1 */
+    /* JADX INFO: renamed from: com.discord.utilities.textprocessing.Rules$createBlockQuoteRule$1 */
+    /* JADX INFO: compiled from: Rules.kt */
     public static final class C69521<S, T> extends Rule.BlockRule<T, BlockQuoteNode<T>, S> {
         public C69521(Pattern pattern) {
             super(pattern);
@@ -222,8 +222,8 @@ public final class Rules {
         }
     }
 
-    /* compiled from: Rules.kt */
-    /* renamed from: com.discord.utilities.textprocessing.Rules$createBoldColoredRule$1 */
+    /* JADX INFO: renamed from: com.discord.utilities.textprocessing.Rules$createBoldColoredRule$1 */
+    /* JADX INFO: compiled from: Rules.kt */
     public static final class C69531 extends Lambda implements Function0<List<? extends CharacterStyle>> {
         public final /* synthetic */ int $color;
 
@@ -239,15 +239,15 @@ public final class Rules {
         }
 
         @Override // kotlin.jvm.functions.Function0
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final List<? extends CharacterStyle> invoke2() {
             return Collections2.listOf((Object[]) new CharacterStyle[]{new ForegroundColorSpan(this.$color), new StyleSpan(1)});
         }
     }
 
     /* JADX INFO: Add missing generic type declarations: [S, T] */
-    /* compiled from: Rules.kt */
-    /* renamed from: com.discord.utilities.textprocessing.Rules$createChannelMentionRule$1 */
+    /* JADX INFO: renamed from: com.discord.utilities.textprocessing.Rules$createChannelMentionRule$1 */
+    /* JADX INFO: compiled from: Rules.kt */
     public static final class C69541<S, T> extends Rule<T, ChannelMentionNode<T>, S> {
         public C69541(Pattern pattern) {
             super(pattern);
@@ -264,13 +264,13 @@ public final class Rules {
     }
 
     /* JADX INFO: Add missing generic type declarations: [RC, S] */
-    /* compiled from: Rules.kt */
-    /* renamed from: com.discord.utilities.textprocessing.Rules$createCodeBlockRule$1 */
+    /* JADX INFO: renamed from: com.discord.utilities.textprocessing.Rules$createCodeBlockRule$1 */
+    /* JADX INFO: compiled from: Rules.kt */
     public static final class C69551<RC, S> extends Lambda implements Function3<CodeNode<RC>, Boolean, S, Node<RC>> {
         public static final C69551 INSTANCE = new C69551();
 
-        /* compiled from: Rules.kt */
-        /* renamed from: com.discord.utilities.textprocessing.Rules$createCodeBlockRule$1$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.utilities.textprocessing.Rules$createCodeBlockRule$1$1, reason: invalid class name */
+        /* JADX INFO: compiled from: Rules.kt */
         public static final class AnonymousClass1 extends Node.C5655a<RC> {
             public final /* synthetic */ CodeNode $codeNode;
 
@@ -313,8 +313,8 @@ public final class Rules {
     }
 
     /* JADX INFO: Add missing generic type declarations: [S, T] */
-    /* compiled from: Rules.kt */
-    /* renamed from: com.discord.utilities.textprocessing.Rules$createCustomEmojiRule$1 */
+    /* JADX INFO: renamed from: com.discord.utilities.textprocessing.Rules$createCustomEmojiRule$1 */
+    /* JADX INFO: compiled from: Rules.kt */
     public static final class C69561<S, T> extends Rule<T, EmojiNode<T>, S> {
         public C69561(Pattern pattern) {
             super(pattern);
@@ -335,8 +335,8 @@ public final class Rules {
     }
 
     /* JADX INFO: Add missing generic type declarations: [S, T] */
-    /* compiled from: Rules.kt */
-    /* renamed from: com.discord.utilities.textprocessing.Rules$createHeaderItemRule$1 */
+    /* JADX INFO: renamed from: com.discord.utilities.textprocessing.Rules$createHeaderItemRule$1 */
+    /* JADX INFO: compiled from: Rules.kt */
     public static final class C69571<S, T> extends Rule.BlockRule<T, HeaderNode<T>, S> {
         public C69571(Pattern pattern) {
             super(pattern);
@@ -356,8 +356,8 @@ public final class Rules {
     }
 
     /* JADX INFO: Add missing generic type declarations: [S, T] */
-    /* compiled from: Rules.kt */
-    /* renamed from: com.discord.utilities.textprocessing.Rules$createHookedLinkRule$1 */
+    /* JADX INFO: renamed from: com.discord.utilities.textprocessing.Rules$createHookedLinkRule$1 */
+    /* JADX INFO: compiled from: Rules.kt */
     public static final class C69581<S, T> extends Rule<T, Node<T>, S> {
         public C69581(Pattern pattern) {
             super(pattern);
@@ -375,8 +375,8 @@ public final class Rules {
         }
     }
 
-    /* compiled from: Rules.kt */
-    /* renamed from: com.discord.utilities.textprocessing.Rules$createInlineCodeRule$1 */
+    /* JADX INFO: renamed from: com.discord.utilities.textprocessing.Rules$createInlineCodeRule$1 */
+    /* JADX INFO: compiled from: Rules.kt */
     public static final class C69591<RC> implements StyleNode.InterfaceC5656a<RC> {
         public static final C69591 INSTANCE = new C69591();
 
@@ -392,8 +392,8 @@ public final class Rules {
         }
     }
 
-    /* compiled from: Rules.kt */
-    /* renamed from: com.discord.utilities.textprocessing.Rules$createInlineCodeRule$2 */
+    /* JADX INFO: renamed from: com.discord.utilities.textprocessing.Rules$createInlineCodeRule$2 */
+    /* JADX INFO: compiled from: Rules.kt */
     public static final class C69602<RC> implements StyleNode.InterfaceC5656a<RC> {
         public static final C69602 INSTANCE = new C69602();
 
@@ -410,8 +410,8 @@ public final class Rules {
     }
 
     /* JADX INFO: Add missing generic type declarations: [S, T] */
-    /* compiled from: Rules.kt */
-    /* renamed from: com.discord.utilities.textprocessing.Rules$createListItemRule$1 */
+    /* JADX INFO: renamed from: com.discord.utilities.textprocessing.Rules$createListItemRule$1 */
+    /* JADX INFO: compiled from: Rules.kt */
     public static final class C69611<S, T> extends Rule<T, BulletListNode<T>, S> {
         public C69611(Pattern pattern) {
             super(pattern);
@@ -433,8 +433,8 @@ public final class Rules {
     }
 
     /* JADX INFO: Add missing generic type declarations: [S, T] */
-    /* compiled from: Rules.kt */
-    /* renamed from: com.discord.utilities.textprocessing.Rules$createMaskedLinkRule$1 */
+    /* JADX INFO: renamed from: com.discord.utilities.textprocessing.Rules$createMaskedLinkRule$1 */
+    /* JADX INFO: compiled from: Rules.kt */
     public static final class C69621<S, T> extends Rule<T, UrlNode<T>, S> {
         public C69621(Pattern pattern) {
             super(pattern);
@@ -444,7 +444,7 @@ public final class Rules {
             if (source.length() < 30) {
                 return false;
             }
-            double length = source.length() * 0.3d;
+            double length = ((double) source.length()) * 0.3d;
             int length2 = source.length();
             int i = 0;
             for (int i2 = 0; i2 < length2; i2++) {
@@ -482,8 +482,8 @@ public final class Rules {
     }
 
     /* JADX INFO: Add missing generic type declarations: [S, T] */
-    /* compiled from: Rules.kt */
-    /* renamed from: com.discord.utilities.textprocessing.Rules$createNamedEmojiRule$1 */
+    /* JADX INFO: renamed from: com.discord.utilities.textprocessing.Rules$createNamedEmojiRule$1 */
+    /* JADX INFO: compiled from: Rules.kt */
     public static final class C69631<S, T> extends Rule<T, Node<T>, S> {
         public C69631(Pattern pattern) {
             super(pattern);
@@ -510,8 +510,8 @@ public final class Rules {
     }
 
     /* JADX INFO: Add missing generic type declarations: [S, T] */
-    /* compiled from: Rules.kt */
-    /* renamed from: com.discord.utilities.textprocessing.Rules$createRoleMentionRule$1 */
+    /* JADX INFO: renamed from: com.discord.utilities.textprocessing.Rules$createRoleMentionRule$1 */
+    /* JADX INFO: compiled from: Rules.kt */
     public static final class C69641<S, T> extends Rule<T, RoleMentionNode<T>, S> {
         public C69641(Pattern pattern) {
             super(pattern);
@@ -528,8 +528,8 @@ public final class Rules {
     }
 
     /* JADX INFO: Add missing generic type declarations: [S, T] */
-    /* compiled from: Rules.kt */
-    /* renamed from: com.discord.utilities.textprocessing.Rules$createSoftHyphenRule$1 */
+    /* JADX INFO: renamed from: com.discord.utilities.textprocessing.Rules$createSoftHyphenRule$1 */
+    /* JADX INFO: compiled from: Rules.kt */
     public static final class C69651<S, T> extends Rule<T, TextNode<T>, S> {
         public C69651(Pattern pattern) {
             super(pattern);
@@ -546,8 +546,8 @@ public final class Rules {
     }
 
     /* JADX INFO: Add missing generic type declarations: [S, T] */
-    /* compiled from: Rules.kt */
-    /* renamed from: com.discord.utilities.textprocessing.Rules$createSpoilerRule$1 */
+    /* JADX INFO: renamed from: com.discord.utilities.textprocessing.Rules$createSpoilerRule$1 */
+    /* JADX INFO: compiled from: Rules.kt */
     public static final class C69661<S, T> extends Rule<T, SpoilerNode<T>, S> {
         public C69661(Pattern pattern) {
             super(pattern);
@@ -567,8 +567,8 @@ public final class Rules {
         }
     }
 
-    /* compiled from: Rules.kt */
-    /* renamed from: com.discord.utilities.textprocessing.Rules$createStrikethroughColoredRule$1 */
+    /* JADX INFO: renamed from: com.discord.utilities.textprocessing.Rules$createStrikethroughColoredRule$1 */
+    /* JADX INFO: compiled from: Rules.kt */
     public static final class C69671 extends Lambda implements Function0<List<? extends CharacterStyle>> {
         public final /* synthetic */ int $color;
 
@@ -584,15 +584,15 @@ public final class Rules {
         }
 
         @Override // kotlin.jvm.functions.Function0
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final List<? extends CharacterStyle> invoke2() {
             return Collections2.listOf((Object[]) new CharacterStyle[]{new ForegroundColorSpan(this.$color), new StrikethroughSpan()});
         }
     }
 
     /* JADX INFO: Add missing generic type declarations: [S, T] */
-    /* compiled from: Rules.kt */
-    /* renamed from: com.discord.utilities.textprocessing.Rules$createTextReplacementRule$1 */
+    /* JADX INFO: renamed from: com.discord.utilities.textprocessing.Rules$createTextReplacementRule$1 */
+    /* JADX INFO: compiled from: Rules.kt */
     public static final class C69681<S, T> extends Rule<T, Node<T>, S> {
         private final List<Rule<T, Node<T>, S>> innerRules;
 
@@ -632,8 +632,8 @@ public final class Rules {
     }
 
     /* JADX INFO: Add missing generic type declarations: [S, T] */
-    /* compiled from: Rules.kt */
-    /* renamed from: com.discord.utilities.textprocessing.Rules$createTimestampRule$1 */
+    /* JADX INFO: renamed from: com.discord.utilities.textprocessing.Rules$createTimestampRule$1 */
+    /* JADX INFO: compiled from: Rules.kt */
     public static final class C69691<S, T> extends Rule<T, TimestampNode<T>, S> {
         public C69691(Pattern pattern) {
             super(pattern);
@@ -652,8 +652,8 @@ public final class Rules {
     }
 
     /* JADX INFO: Add missing generic type declarations: [S, T] */
-    /* compiled from: Rules.kt */
-    /* renamed from: com.discord.utilities.textprocessing.Rules$createUnescapeEmoticonRule$1 */
+    /* JADX INFO: renamed from: com.discord.utilities.textprocessing.Rules$createUnescapeEmoticonRule$1 */
+    /* JADX INFO: compiled from: Rules.kt */
     public static final class C69701<S, T> extends Rule<T, TextNode<T>, S> {
         public C69701(Pattern pattern) {
             super(pattern);
@@ -672,8 +672,8 @@ public final class Rules {
     }
 
     /* JADX INFO: Add missing generic type declarations: [S, T] */
-    /* compiled from: Rules.kt */
-    /* renamed from: com.discord.utilities.textprocessing.Rules$createUnicodeEmojiRule$1 */
+    /* JADX INFO: renamed from: com.discord.utilities.textprocessing.Rules$createUnicodeEmojiRule$1 */
+    /* JADX INFO: compiled from: Rules.kt */
     public static final class C69711<S, T> extends Rule<T, Node<T>, S> {
         public C69711(Pattern pattern) {
             super(pattern);
@@ -698,8 +698,8 @@ public final class Rules {
     }
 
     /* JADX INFO: Add missing generic type declarations: [S, T] */
-    /* compiled from: Rules.kt */
-    /* renamed from: com.discord.utilities.textprocessing.Rules$createUrlNoEmbedRule$1 */
+    /* JADX INFO: renamed from: com.discord.utilities.textprocessing.Rules$createUrlNoEmbedRule$1 */
+    /* JADX INFO: compiled from: Rules.kt */
     public static final class C69721<S, T> extends Rule<T, UrlNode<T>, S> {
         public C69721(Pattern pattern) {
             super(pattern);
@@ -718,8 +718,8 @@ public final class Rules {
     }
 
     /* JADX INFO: Add missing generic type declarations: [S, T] */
-    /* compiled from: Rules.kt */
-    /* renamed from: com.discord.utilities.textprocessing.Rules$createUrlRule$1 */
+    /* JADX INFO: renamed from: com.discord.utilities.textprocessing.Rules$createUrlRule$1 */
+    /* JADX INFO: compiled from: Rules.kt */
     public static final class C69731<S, T> extends Rule<T, UrlNode<T>, S> {
         public C69731(Pattern pattern) {
             super(pattern);
@@ -738,8 +738,8 @@ public final class Rules {
     }
 
     /* JADX INFO: Add missing generic type declarations: [S, T] */
-    /* compiled from: Rules.kt */
-    /* renamed from: com.discord.utilities.textprocessing.Rules$createUserMentionRule$1 */
+    /* JADX INFO: renamed from: com.discord.utilities.textprocessing.Rules$createUserMentionRule$1 */
+    /* JADX INFO: compiled from: Rules.kt */
     public static final class C69741<S, T> extends Rule<T, Node<T>, S> {
         public C69741(Pattern pattern) {
             super(pattern);

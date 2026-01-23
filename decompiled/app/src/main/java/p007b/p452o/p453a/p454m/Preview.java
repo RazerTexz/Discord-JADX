@@ -2,9 +2,9 @@ package p007b.p452o.p453a.p454m;
 
 import androidx.annotation.NonNull;
 
-/* compiled from: Preview.java */
-/* renamed from: b.o.a.m.k, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.o.a.m.k, reason: use source file name */
+/* JADX INFO: compiled from: Preview.java */
+/* JADX INFO: loaded from: classes3.dex */
 public enum Preview implements Control {
     SURFACE(0),
     TEXTURE(1),
@@ -17,7 +17,7 @@ public enum Preview implements Control {
     }
 
     @NonNull
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public static Preview m7184f(int i) {
         Preview[] previewArrValues = values();
         for (int i2 = 0; i2 < 3; i2++) {
@@ -29,7 +29,7 @@ public enum Preview implements Control {
         return GL_SURFACE;
     }
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public int m7185g() {
         return this.value;
     }

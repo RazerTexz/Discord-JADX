@@ -30,16 +30,16 @@ import p507d0.p580t._Collections;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: TypeUtils.kt */
-/* renamed from: d0.e0.p.d.m0.n.o1.a, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.n.o1.a, reason: use source file name */
+/* JADX INFO: compiled from: TypeUtils.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class TypeUtils2 {
 
-    /* compiled from: TypeUtils.kt */
-    /* renamed from: d0.e0.p.d.m0.n.o1.a$a */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.n.o1.a$a */
+    /* JADX INFO: compiled from: TypeUtils.kt */
     public static final class a extends Lambda implements Function1<KotlinType3, Boolean> {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public static final a f24850j = new a();
 
         public a() {
@@ -51,7 +51,7 @@ public final class TypeUtils2 {
             return Boolean.valueOf(invoke2(kotlinType3));
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final boolean invoke2(KotlinType3 kotlinType3) {
             Intrinsics3.checkNotNullParameter(kotlinType3, "it");
             ClassifierDescriptor declarationDescriptor = kotlinType3.getConstructor().getDeclarationDescriptor();
@@ -62,11 +62,11 @@ public final class TypeUtils2 {
         }
     }
 
-    /* compiled from: TypeUtils.kt */
-    /* renamed from: d0.e0.p.d.m0.n.o1.a$b */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.n.o1.a$b */
+    /* JADX INFO: compiled from: TypeUtils.kt */
     public static final class b extends Lambda implements Function1<KotlinType3, Boolean> {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public static final b f24851j = new b();
 
         public b() {
@@ -78,7 +78,7 @@ public final class TypeUtils2 {
             return Boolean.valueOf(invoke2(kotlinType3));
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final boolean invoke2(KotlinType3 kotlinType3) {
             Intrinsics3.checkNotNullParameter(kotlinType3, "it");
             ClassifierDescriptor declarationDescriptor = kotlinType3.getConstructor().getDeclarationDescriptor();
@@ -194,10 +194,8 @@ public final class TypeUtils2 {
         return (kotlinType.getAnnotations().isEmpty() && annotations4.isEmpty()) ? kotlinType : kotlinType.unwrap().replaceAnnotations(annotations4);
     }
 
-    /* JADX WARN: Multi-variable type inference failed */
-    /* JADX WARN: Type inference failed for: r0v12, types: [d0.e0.p.d.m0.n.i1] */
     public static final KotlinType replaceArgumentsWithStarProjections(KotlinType kotlinType) {
-        KotlinType4 kotlinType4Replace$default;
+        KotlinType3 kotlinType3Replace$default;
         Intrinsics3.checkNotNullParameter(kotlinType, "<this>");
         KotlinType3 kotlinType3Unwrap = kotlinType.unwrap();
         if (kotlinType3Unwrap instanceof KotlinType6) {
@@ -208,7 +206,7 @@ public final class TypeUtils2 {
                 List<TypeParameterDescriptor> parameters = lowerBound.getConstructor().getParameters();
                 Intrinsics3.checkNotNullExpressionValue(parameters, "constructor.parameters");
                 ArrayList arrayList = new ArrayList(Iterables2.collectionSizeOrDefault(parameters, 10));
-                Iterator it = parameters.iterator();
+                Iterator<T> it = parameters.iterator();
                 while (it.hasNext()) {
                     arrayList.add(new StarProjectionImpl2((TypeParameterDescriptor) it.next()));
                 }
@@ -219,36 +217,36 @@ public final class TypeUtils2 {
                 List<TypeParameterDescriptor> parameters2 = upperBound.getConstructor().getParameters();
                 Intrinsics3.checkNotNullExpressionValue(parameters2, "constructor.parameters");
                 ArrayList arrayList2 = new ArrayList(Iterables2.collectionSizeOrDefault(parameters2, 10));
-                Iterator it2 = parameters2.iterator();
+                Iterator<T> it2 = parameters2.iterator();
                 while (it2.hasNext()) {
                     arrayList2.add(new StarProjectionImpl2((TypeParameterDescriptor) it2.next()));
                 }
                 upperBound = TypeSubstitution.replace$default(upperBound, arrayList2, null, 2, null);
             }
-            kotlinType4Replace$default = KotlinTypeFactory.flexibleType(lowerBound, upperBound);
+            kotlinType3Replace$default = KotlinTypeFactory.flexibleType(lowerBound, upperBound);
         } else {
             if (!(kotlinType3Unwrap instanceof KotlinType4)) {
                 throw new NoWhenBranchMatchedException();
             }
             KotlinType4 kotlinType4 = (KotlinType4) kotlinType3Unwrap;
             boolean zIsEmpty = kotlinType4.getConstructor().getParameters().isEmpty();
-            kotlinType4Replace$default = kotlinType4;
+            kotlinType3Replace$default = kotlinType4;
             if (!zIsEmpty) {
                 ClassifierDescriptor declarationDescriptor = kotlinType4.getConstructor().getDeclarationDescriptor();
-                kotlinType4Replace$default = kotlinType4;
+                kotlinType3Replace$default = kotlinType4;
                 if (declarationDescriptor != null) {
                     List<TypeParameterDescriptor> parameters3 = kotlinType4.getConstructor().getParameters();
                     Intrinsics3.checkNotNullExpressionValue(parameters3, "constructor.parameters");
                     ArrayList arrayList3 = new ArrayList(Iterables2.collectionSizeOrDefault(parameters3, 10));
-                    Iterator it3 = parameters3.iterator();
+                    Iterator<T> it3 = parameters3.iterator();
                     while (it3.hasNext()) {
                         arrayList3.add(new StarProjectionImpl2((TypeParameterDescriptor) it3.next()));
                     }
-                    kotlinType4Replace$default = TypeSubstitution.replace$default(kotlinType4, arrayList3, null, 2, null);
+                    kotlinType3Replace$default = TypeSubstitution.replace$default(kotlinType4, arrayList3, null, 2, null);
                 }
             }
         }
-        return TypeWithEnhancement2.inheritEnhancement(kotlinType4Replace$default, kotlinType3Unwrap);
+        return TypeWithEnhancement2.inheritEnhancement(kotlinType3Replace$default, kotlinType3Unwrap);
     }
 
     public static final boolean requiresTypeAliasExpansion(KotlinType kotlinType) {

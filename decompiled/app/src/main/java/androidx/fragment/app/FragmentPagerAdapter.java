@@ -8,8 +8,8 @@ import androidx.annotation.Nullable;
 import androidx.view.Lifecycle;
 import androidx.viewpager.widget.PagerAdapter;
 
+/* JADX INFO: loaded from: classes.dex */
 @Deprecated
-/* loaded from: classes.dex */
 public abstract class FragmentPagerAdapter extends PagerAdapter {
     public static final int BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT = 1;
 

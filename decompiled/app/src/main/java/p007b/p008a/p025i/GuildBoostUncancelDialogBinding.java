@@ -10,40 +10,40 @@ import com.discord.app.AppViewFlipper;
 import com.discord.views.LoadingButton;
 import com.google.android.material.button.MaterialButton;
 
-/* compiled from: GuildBoostUncancelDialogBinding.java */
-/* renamed from: b.a.i.u, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.a.i.u, reason: use source file name */
+/* JADX INFO: compiled from: GuildBoostUncancelDialogBinding.java */
+/* JADX INFO: loaded from: classes.dex */
 public final class GuildBoostUncancelDialogBinding implements ViewBinding {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     @NonNull
     public final LinearLayout f1265a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     @NonNull
     public final TextView f1266b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     @NonNull
     public final LoadingButton f1267c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     @NonNull
     public final TextView f1268d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     @NonNull
     public final AppViewFlipper f1269e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     @NonNull
     public final TextView f1270f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     @NonNull
     public final ImageView f1271g;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     @NonNull
     public final MaterialButton f1272h;
 

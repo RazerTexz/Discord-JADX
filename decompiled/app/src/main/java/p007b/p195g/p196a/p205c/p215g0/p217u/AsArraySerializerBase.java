@@ -19,9 +19,9 @@ import p007b.p195g.p196a.p205c.p215g0.ContainerSerializer;
 import p007b.p195g.p196a.p205c.p215g0.ContextualSerializer;
 import p007b.p195g.p196a.p205c.p215g0.p216t.PropertySerializerMap;
 
-/* compiled from: AsArraySerializerBase.java */
-/* renamed from: b.g.a.c.g0.u.b, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.g.a.c.g0.u.b, reason: use source file name */
+/* JADX INFO: compiled from: AsArraySerializerBase.java */
+/* JADX INFO: loaded from: classes3.dex */
 public abstract class AsArraySerializerBase<T> extends ContainerSerializer<T> implements ContextualSerializer {
     public PropertySerializerMap _dynamicSerializers;
     public final JsonSerializer<Object> _elementSerializer;
@@ -49,7 +49,7 @@ public abstract class AsArraySerializerBase<T> extends ContainerSerializer<T> im
 
     /* JADX WARN: Removed duplicated region for block: B:12:0x0020  */
     @Override // p007b.p195g.p196a.p205c.p215g0.ContextualSerializer
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
@@ -79,7 +79,7 @@ public abstract class AsArraySerializerBase<T> extends ContainerSerializer<T> im
     }
 
     @Override // p007b.p195g.p196a.p205c.JsonSerializer
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public void mo1807f(T t, JsonGenerator jsonGenerator, SerializerProvider serializerProvider) throws IOException {
         if (serializerProvider.m2240D(SerializationFeature.WRITE_SINGLE_ELEM_ARRAYS_UNWRAPPED) && mo1996q(t)) {
             mo2022s(t, jsonGenerator, serializerProvider);
@@ -91,7 +91,7 @@ public abstract class AsArraySerializerBase<T> extends ContainerSerializer<T> im
     }
 
     @Override // p007b.p195g.p196a.p205c.JsonSerializer
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public void mo1808g(T t, JsonGenerator jsonGenerator, SerializerProvider serializerProvider, TypeSerializer typeSerializer) throws IOException {
         WritableTypeId writableTypeIdMo1959e = typeSerializer.mo1959e(jsonGenerator, typeSerializer.m1958d(t, JsonToken2.START_ARRAY));
         jsonGenerator.mo1654e(t);
@@ -99,7 +99,7 @@ public abstract class AsArraySerializerBase<T> extends ContainerSerializer<T> im
         typeSerializer.mo1960f(jsonGenerator, writableTypeIdMo1959e);
     }
 
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     public final JsonSerializer<Object> m2045r(PropertySerializerMap propertySerializerMap, Class<?> cls, SerializerProvider serializerProvider) throws JsonMappingException {
         JsonSerializer<Object> jsonSerializerM2250n = serializerProvider.m2250n(cls, this._property);
         PropertySerializerMap propertySerializerMapMo2033b = propertySerializerMap.mo2033b(cls, jsonSerializerM2250n);
@@ -109,10 +109,10 @@ public abstract class AsArraySerializerBase<T> extends ContainerSerializer<T> im
         return jsonSerializerM2250n;
     }
 
-    /* renamed from: s */
+    /* JADX INFO: renamed from: s */
     public abstract void mo2022s(T t, JsonGenerator jsonGenerator, SerializerProvider serializerProvider) throws IOException;
 
-    /* renamed from: t */
+    /* JADX INFO: renamed from: t */
     public abstract AsArraySerializerBase<T> mo2023t(BeanProperty beanProperty, TypeSerializer typeSerializer, JsonSerializer<?> jsonSerializer, Boolean bool);
 
     public AsArraySerializerBase(AsArraySerializerBase<?> asArraySerializerBase, BeanProperty beanProperty, TypeSerializer typeSerializer, JsonSerializer<?> jsonSerializer, Boolean bool) {

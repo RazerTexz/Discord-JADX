@@ -7,18 +7,18 @@ import p507d0.p579g0.StringsJVM;
 import p507d0.p592z.p594d.Intrinsics3;
 import p600f0.Protocol2;
 
-/* compiled from: StatusLine.kt */
-/* renamed from: f0.e0.h.j, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: f0.e0.h.j, reason: use source file name */
+/* JADX INFO: compiled from: StatusLine.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class StatusLine {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final Protocol2 f25544a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final int f25545b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final String f25546c;
 
     public StatusLine(Protocol2 protocol2, int i, String str) {
@@ -29,7 +29,7 @@ public final class StatusLine {
         this.f25546c = str;
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final StatusLine m10234a(String str) throws IOException {
         String strSubstring;
         Protocol2 protocol2 = Protocol2.HTTP_1_0;

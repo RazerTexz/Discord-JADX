@@ -10,9 +10,9 @@ import p007b.p008a.p018d.AppToast;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: MessageManager.kt */
-/* renamed from: com.discord.widgets.chat.MessageManager$defaultMessageResultHandler$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.chat.MessageManager$defaultMessageResultHandler$1, reason: use source file name */
+/* JADX INFO: compiled from: MessageManager.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class MessageManager2 extends Lambda implements Function1<MessageManager.MessageSendResult, Unit> {
     public final /* synthetic */ MessageManager this$0;
 
@@ -28,7 +28,7 @@ public final class MessageManager2 extends Lambda implements Function1<MessageMa
         return Unit.f27425a;
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final void invoke2(MessageManager.MessageSendResult messageSendResult) {
         Intrinsics3.checkNotNullParameter(messageSendResult, "messageSendResult");
         MessageQueue4 messageResult = messageSendResult.getMessageResult();

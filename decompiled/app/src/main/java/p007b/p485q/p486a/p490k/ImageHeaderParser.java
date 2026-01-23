@@ -10,37 +10,37 @@ import java.nio.charset.Charset;
 import java.util.Objects;
 import p007b.p100d.p104b.p105a.outline;
 
-/* compiled from: ImageHeaderParser.java */
-/* renamed from: b.q.a.k.b, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.q.a.k.b, reason: use source file name */
+/* JADX INFO: compiled from: ImageHeaderParser.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class ImageHeaderParser {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final byte[] f14440a = "Exif\u0000\u0000".getBytes(Charset.forName(Constants.ENCODING));
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static final int[] f14441b = {0, 1, 1, 2, 4, 8, 1, 1, 2, 4, 8, 4, 8};
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final a f14442c;
 
-    /* compiled from: ImageHeaderParser.java */
-    /* renamed from: b.q.a.k.b$a */
+    /* JADX INFO: renamed from: b.q.a.k.b$a */
+    /* JADX INFO: compiled from: ImageHeaderParser.java */
     public interface a {
     }
 
-    /* compiled from: ImageHeaderParser.java */
-    /* renamed from: b.q.a.k.b$b */
+    /* JADX INFO: renamed from: b.q.a.k.b$b */
+    /* JADX INFO: compiled from: ImageHeaderParser.java */
     public static class b implements a {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final InputStream f14443a;
 
         public b(InputStream inputStream) {
             this.f14443a = inputStream;
         }
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public int m7476a() throws IOException {
             return ((this.f14443a.read() << 8) & 65280) | (this.f14443a.read() & 255);
         }
@@ -50,7 +50,7 @@ public class ImageHeaderParser {
         this.f14442c = new b(inputStream);
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public int m7475a() throws IOException {
         int iM7476a;
         int iM7476a2 = ((b) this.f14442c).m7476a();

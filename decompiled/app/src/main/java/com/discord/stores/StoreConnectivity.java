@@ -24,8 +24,8 @@ import p507d0.p592z.p594d.MutablePropertyReference1Impl;
 import p507d0.p592z.p594d.Reflection2;
 import p658rx.Observable;
 
-/* compiled from: StoreConnectivity.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: StoreConnectivity.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class StoreConnectivity extends StoreV2 {
     public static final /* synthetic */ KProperty[] $$delegatedProperties = {Reflection2.mutableProperty1(new MutablePropertyReference1Impl(StoreConnectivity.class, "state", "getState()Lcom/discord/stores/StoreConnectivity$DelayedState;", 0))};
     private static final Companion Companion = new Companion(null);
@@ -44,13 +44,13 @@ public final class StoreConnectivity extends StoreV2 {
     private final Dispatcher dispatcher;
     private boolean isReadyPayloadReceived;
 
-    /* renamed from: state$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: state$delegate, reason: from kotlin metadata */
     private final StoreV2.MarkChangedDelegate state;
     private long stateTriggeredDelay;
     private Long stateTriggeredTimeMillis;
     private final StoreStream stream;
 
-    /* compiled from: StoreConnectivity.kt */
+    /* JADX INFO: compiled from: StoreConnectivity.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -60,7 +60,7 @@ public final class StoreConnectivity extends StoreV2 {
         }
     }
 
-    /* compiled from: StoreConnectivity.kt */
+    /* JADX INFO: compiled from: StoreConnectivity.kt */
     public static final /* data */ class DelayedState {
         private final long delay;
         private final State state;
@@ -81,12 +81,12 @@ public final class StoreConnectivity extends StoreV2 {
             return delayedState.copy(state, j);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final State getState() {
             return this.state;
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final long getDelay() {
             return this.delay;
         }
@@ -137,7 +137,7 @@ public final class StoreConnectivity extends StoreV2 {
         }
     }
 
-    /* compiled from: StoreConnectivity.kt */
+    /* JADX INFO: compiled from: StoreConnectivity.kt */
     public enum State {
         ONLINE,
         OFFLINE,
@@ -159,8 +159,8 @@ public final class StoreConnectivity extends StoreV2 {
         }
     }
 
-    /* compiled from: StoreConnectivity.kt */
-    /* renamed from: com.discord.stores.StoreConnectivity$handleChannelMessagesLoading$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreConnectivity$handleChannelMessagesLoading$1 */
+    /* JADX INFO: compiled from: StoreConnectivity.kt */
     public static final class C58531 extends Lambda implements Function0<Unit> {
         public final /* synthetic */ boolean $channelMessagesLoading;
 
@@ -176,15 +176,15 @@ public final class StoreConnectivity extends StoreV2 {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             StoreConnectivity.access$setChannelMessagesLoading$p(StoreConnectivity.this, this.$channelMessagesLoading);
             StoreConnectivity.access$updateConnectivityState(StoreConnectivity.this);
         }
     }
 
-    /* compiled from: StoreConnectivity.kt */
-    /* renamed from: com.discord.stores.StoreConnectivity$handleDeviceNetworkStateUpdated$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreConnectivity$handleDeviceNetworkStateUpdated$1 */
+    /* JADX INFO: compiled from: StoreConnectivity.kt */
     public static final class C58541 extends Lambda implements Function0<Unit> {
         public final /* synthetic */ NetworkMonitor.State $state;
 
@@ -200,15 +200,15 @@ public final class StoreConnectivity extends StoreV2 {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             StoreConnectivity.access$setDeviceNetworkState$p(StoreConnectivity.this, this.$state);
             StoreConnectivity.access$updateConnectivityState(StoreConnectivity.this);
         }
     }
 
-    /* compiled from: StoreConnectivity.kt */
-    /* renamed from: com.discord.stores.StoreConnectivity$init$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreConnectivity$init$1 */
+    /* JADX INFO: compiled from: StoreConnectivity.kt */
     public static final /* synthetic */ class C58551 extends FunctionReferenceImpl implements Function1<NetworkMonitor.State, Unit> {
         public C58551(StoreConnectivity storeConnectivity) {
             super(1, storeConnectivity, StoreConnectivity.class, "handleDeviceNetworkStateUpdated", "handleDeviceNetworkStateUpdated(Lcom/discord/utilities/networking/NetworkMonitor$State;)V", 0);
@@ -220,15 +220,15 @@ public final class StoreConnectivity extends StoreV2 {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(NetworkMonitor.State state) {
             Intrinsics3.checkNotNullParameter(state, "p1");
             StoreConnectivity.access$handleDeviceNetworkStateUpdated((StoreConnectivity) this.receiver, state);
         }
     }
 
-    /* compiled from: StoreConnectivity.kt */
-    /* renamed from: com.discord.stores.StoreConnectivity$init$2 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreConnectivity$init$2 */
+    /* JADX INFO: compiled from: StoreConnectivity.kt */
     public static final /* synthetic */ class C58562 extends FunctionReferenceImpl implements Function1<Boolean, Unit> {
         public C58562(StoreConnectivity storeConnectivity) {
             super(1, storeConnectivity, StoreConnectivity.class, "handleChannelMessagesLoading", "handleChannelMessagesLoading(Z)V", 0);
@@ -245,8 +245,8 @@ public final class StoreConnectivity extends StoreV2 {
         }
     }
 
-    /* compiled from: StoreConnectivity.kt */
-    /* renamed from: com.discord.stores.StoreConnectivity$observeState$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreConnectivity$observeState$1 */
+    /* JADX INFO: compiled from: StoreConnectivity.kt */
     public static final class C58571 extends Lambda implements Function0<DelayedState> {
         public C58571() {
             super(0);
@@ -348,7 +348,7 @@ public final class StoreConnectivity extends StoreV2 {
     }
 
     private final long getStateDelay(long defaultDelay) {
-        return _Ranges.coerceAtLeast(MathJVM.roundToInt((defaultDelay - getStateActiveMillis()) / 100) * 100, 0L);
+        return _Ranges.coerceAtLeast(((long) MathJVM.roundToInt((defaultDelay - getStateActiveMillis()) / 100)) * 100, 0L);
     }
 
     private final void handleChannelMessagesLoading(boolean channelMessagesLoading) {

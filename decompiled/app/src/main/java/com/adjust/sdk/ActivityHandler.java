@@ -22,7 +22,7 @@ import java.util.Properties;
 import org.json.JSONObject;
 import p007b.p100d.p104b.p105a.outline;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class ActivityHandler implements IActivityHandler {
     private static final String ACTIVITY_STATE_NAME = "Activity state";
     private static final String ATTRIBUTION_NAME = "Attribution";
@@ -58,7 +58,7 @@ public class ActivityHandler implements IActivityHandler {
     private SessionParameters sessionParameters;
     private String subscriptionPath;
 
-    /* renamed from: com.adjust.sdk.ActivityHandler$1 */
+    /* JADX INFO: renamed from: com.adjust.sdk.ActivityHandler$1 */
     public class RunnableC53191 implements Runnable {
         public RunnableC53191() {
         }
@@ -69,7 +69,7 @@ public class ActivityHandler implements IActivityHandler {
         }
     }
 
-    /* renamed from: com.adjust.sdk.ActivityHandler$10 */
+    /* JADX INFO: renamed from: com.adjust.sdk.ActivityHandler$10 */
     public class RunnableC532010 implements Runnable {
         public final /* synthetic */ long val$installBeginTimestampSeconds;
         public final /* synthetic */ String val$installReferrer;
@@ -89,7 +89,7 @@ public class ActivityHandler implements IActivityHandler {
         }
     }
 
-    /* renamed from: com.adjust.sdk.ActivityHandler$11 */
+    /* JADX INFO: renamed from: com.adjust.sdk.ActivityHandler$11 */
     public class RunnableC532111 implements Runnable {
         public final /* synthetic */ EventResponseData val$eventResponseData;
 
@@ -103,7 +103,7 @@ public class ActivityHandler implements IActivityHandler {
         }
     }
 
-    /* renamed from: com.adjust.sdk.ActivityHandler$12 */
+    /* JADX INFO: renamed from: com.adjust.sdk.ActivityHandler$12 */
     public class RunnableC532212 implements Runnable {
         public final /* synthetic */ SdkClickResponseData val$sdkClickResponseData;
 
@@ -117,7 +117,7 @@ public class ActivityHandler implements IActivityHandler {
         }
     }
 
-    /* renamed from: com.adjust.sdk.ActivityHandler$13 */
+    /* JADX INFO: renamed from: com.adjust.sdk.ActivityHandler$13 */
     public class RunnableC532313 implements Runnable {
         public final /* synthetic */ SessionResponseData val$sessionResponseData;
 
@@ -131,7 +131,7 @@ public class ActivityHandler implements IActivityHandler {
         }
     }
 
-    /* renamed from: com.adjust.sdk.ActivityHandler$14 */
+    /* JADX INFO: renamed from: com.adjust.sdk.ActivityHandler$14 */
     public class RunnableC532414 implements Runnable {
         public final /* synthetic */ AttributionResponseData val$attributionResponseData;
 
@@ -145,7 +145,7 @@ public class ActivityHandler implements IActivityHandler {
         }
     }
 
-    /* renamed from: com.adjust.sdk.ActivityHandler$15 */
+    /* JADX INFO: renamed from: com.adjust.sdk.ActivityHandler$15 */
     public class RunnableC532515 implements Runnable {
         public RunnableC532515() {
         }
@@ -156,7 +156,7 @@ public class ActivityHandler implements IActivityHandler {
         }
     }
 
-    /* renamed from: com.adjust.sdk.ActivityHandler$16 */
+    /* JADX INFO: renamed from: com.adjust.sdk.ActivityHandler$16 */
     public class RunnableC532616 implements Runnable {
         public final /* synthetic */ String val$key;
         public final /* synthetic */ String val$value;
@@ -172,7 +172,7 @@ public class ActivityHandler implements IActivityHandler {
         }
     }
 
-    /* renamed from: com.adjust.sdk.ActivityHandler$17 */
+    /* JADX INFO: renamed from: com.adjust.sdk.ActivityHandler$17 */
     public class RunnableC532717 implements Runnable {
         public final /* synthetic */ String val$key;
         public final /* synthetic */ String val$value;
@@ -188,7 +188,7 @@ public class ActivityHandler implements IActivityHandler {
         }
     }
 
-    /* renamed from: com.adjust.sdk.ActivityHandler$18 */
+    /* JADX INFO: renamed from: com.adjust.sdk.ActivityHandler$18 */
     public class RunnableC532818 implements Runnable {
         public final /* synthetic */ String val$key;
 
@@ -202,7 +202,7 @@ public class ActivityHandler implements IActivityHandler {
         }
     }
 
-    /* renamed from: com.adjust.sdk.ActivityHandler$19 */
+    /* JADX INFO: renamed from: com.adjust.sdk.ActivityHandler$19 */
     public class RunnableC532919 implements Runnable {
         public final /* synthetic */ String val$key;
 
@@ -216,7 +216,7 @@ public class ActivityHandler implements IActivityHandler {
         }
     }
 
-    /* renamed from: com.adjust.sdk.ActivityHandler$2 */
+    /* JADX INFO: renamed from: com.adjust.sdk.ActivityHandler$2 */
     public class RunnableC53302 implements Runnable {
         public RunnableC53302() {
         }
@@ -231,7 +231,7 @@ public class ActivityHandler implements IActivityHandler {
         }
     }
 
-    /* renamed from: com.adjust.sdk.ActivityHandler$20 */
+    /* JADX INFO: renamed from: com.adjust.sdk.ActivityHandler$20 */
     public class RunnableC533120 implements Runnable {
         public RunnableC533120() {
         }
@@ -242,7 +242,7 @@ public class ActivityHandler implements IActivityHandler {
         }
     }
 
-    /* renamed from: com.adjust.sdk.ActivityHandler$21 */
+    /* JADX INFO: renamed from: com.adjust.sdk.ActivityHandler$21 */
     public class RunnableC533221 implements Runnable {
         public RunnableC533221() {
         }
@@ -253,7 +253,7 @@ public class ActivityHandler implements IActivityHandler {
         }
     }
 
-    /* renamed from: com.adjust.sdk.ActivityHandler$22 */
+    /* JADX INFO: renamed from: com.adjust.sdk.ActivityHandler$22 */
     public class RunnableC533322 implements Runnable {
         public final /* synthetic */ boolean val$preSaved;
         public final /* synthetic */ String val$token;
@@ -275,7 +275,7 @@ public class ActivityHandler implements IActivityHandler {
         }
     }
 
-    /* renamed from: com.adjust.sdk.ActivityHandler$23 */
+    /* JADX INFO: renamed from: com.adjust.sdk.ActivityHandler$23 */
     public class RunnableC533423 implements Runnable {
         public RunnableC533423() {
         }
@@ -286,7 +286,7 @@ public class ActivityHandler implements IActivityHandler {
         }
     }
 
-    /* renamed from: com.adjust.sdk.ActivityHandler$24 */
+    /* JADX INFO: renamed from: com.adjust.sdk.ActivityHandler$24 */
     public class RunnableC533524 implements Runnable {
         public RunnableC533524() {
         }
@@ -297,7 +297,7 @@ public class ActivityHandler implements IActivityHandler {
         }
     }
 
-    /* renamed from: com.adjust.sdk.ActivityHandler$25 */
+    /* JADX INFO: renamed from: com.adjust.sdk.ActivityHandler$25 */
     public class RunnableC533625 implements Runnable {
         public final /* synthetic */ JSONObject val$adRevenueJson;
         public final /* synthetic */ String val$source;
@@ -313,7 +313,7 @@ public class ActivityHandler implements IActivityHandler {
         }
     }
 
-    /* renamed from: com.adjust.sdk.ActivityHandler$26 */
+    /* JADX INFO: renamed from: com.adjust.sdk.ActivityHandler$26 */
     public class RunnableC533726 implements Runnable {
         public final /* synthetic */ AdjustPlayStoreSubscription val$subscription;
 
@@ -327,7 +327,7 @@ public class ActivityHandler implements IActivityHandler {
         }
     }
 
-    /* renamed from: com.adjust.sdk.ActivityHandler$27 */
+    /* JADX INFO: renamed from: com.adjust.sdk.ActivityHandler$27 */
     public class RunnableC533827 implements Runnable {
         public RunnableC533827() {
         }
@@ -338,7 +338,7 @@ public class ActivityHandler implements IActivityHandler {
         }
     }
 
-    /* renamed from: com.adjust.sdk.ActivityHandler$28 */
+    /* JADX INFO: renamed from: com.adjust.sdk.ActivityHandler$28 */
     public class RunnableC533928 implements Runnable {
         public RunnableC533928() {
         }
@@ -349,7 +349,7 @@ public class ActivityHandler implements IActivityHandler {
         }
     }
 
-    /* renamed from: com.adjust.sdk.ActivityHandler$29 */
+    /* JADX INFO: renamed from: com.adjust.sdk.ActivityHandler$29 */
     public class RunnableC534029 implements Runnable {
         public RunnableC534029() {
         }
@@ -360,7 +360,7 @@ public class ActivityHandler implements IActivityHandler {
         }
     }
 
-    /* renamed from: com.adjust.sdk.ActivityHandler$3 */
+    /* JADX INFO: renamed from: com.adjust.sdk.ActivityHandler$3 */
     public class RunnableC53413 implements Runnable {
         public RunnableC53413() {
         }
@@ -374,7 +374,7 @@ public class ActivityHandler implements IActivityHandler {
         }
     }
 
-    /* renamed from: com.adjust.sdk.ActivityHandler$30 */
+    /* JADX INFO: renamed from: com.adjust.sdk.ActivityHandler$30 */
     public class C534230 implements IRunActivityHandler {
         public C534230() {
         }
@@ -385,7 +385,7 @@ public class ActivityHandler implements IActivityHandler {
         }
     }
 
-    /* renamed from: com.adjust.sdk.ActivityHandler$31 */
+    /* JADX INFO: renamed from: com.adjust.sdk.ActivityHandler$31 */
     public class RunnableC534331 implements Runnable {
         public RunnableC534331() {
         }
@@ -396,7 +396,7 @@ public class ActivityHandler implements IActivityHandler {
         }
     }
 
-    /* renamed from: com.adjust.sdk.ActivityHandler$32 */
+    /* JADX INFO: renamed from: com.adjust.sdk.ActivityHandler$32 */
     public class RunnableC534432 implements Runnable {
         public RunnableC534432() {
         }
@@ -407,7 +407,7 @@ public class ActivityHandler implements IActivityHandler {
         }
     }
 
-    /* renamed from: com.adjust.sdk.ActivityHandler$33 */
+    /* JADX INFO: renamed from: com.adjust.sdk.ActivityHandler$33 */
     public class RunnableC534533 implements Runnable {
         public RunnableC534533() {
         }
@@ -418,7 +418,7 @@ public class ActivityHandler implements IActivityHandler {
         }
     }
 
-    /* renamed from: com.adjust.sdk.ActivityHandler$34 */
+    /* JADX INFO: renamed from: com.adjust.sdk.ActivityHandler$34 */
     public class C534634 implements InstallReferrerReadListener {
         public C534634() {
         }
@@ -429,7 +429,7 @@ public class ActivityHandler implements IActivityHandler {
         }
     }
 
-    /* renamed from: com.adjust.sdk.ActivityHandler$35 */
+    /* JADX INFO: renamed from: com.adjust.sdk.ActivityHandler$35 */
     public class C534735 implements InstallReferrerReadListener {
         public C534735() {
         }
@@ -440,7 +440,7 @@ public class ActivityHandler implements IActivityHandler {
         }
     }
 
-    /* renamed from: com.adjust.sdk.ActivityHandler$36 */
+    /* JADX INFO: renamed from: com.adjust.sdk.ActivityHandler$36 */
     public class RunnableC534836 implements Runnable {
         public final /* synthetic */ EventResponseData val$eventResponseData;
 
@@ -457,7 +457,7 @@ public class ActivityHandler implements IActivityHandler {
         }
     }
 
-    /* renamed from: com.adjust.sdk.ActivityHandler$37 */
+    /* JADX INFO: renamed from: com.adjust.sdk.ActivityHandler$37 */
     public class RunnableC534937 implements Runnable {
         public final /* synthetic */ EventResponseData val$eventResponseData;
 
@@ -474,7 +474,7 @@ public class ActivityHandler implements IActivityHandler {
         }
     }
 
-    /* renamed from: com.adjust.sdk.ActivityHandler$38 */
+    /* JADX INFO: renamed from: com.adjust.sdk.ActivityHandler$38 */
     public class RunnableC535038 implements Runnable {
         public final /* synthetic */ SessionResponseData val$sessionResponseData;
 
@@ -491,7 +491,7 @@ public class ActivityHandler implements IActivityHandler {
         }
     }
 
-    /* renamed from: com.adjust.sdk.ActivityHandler$39 */
+    /* JADX INFO: renamed from: com.adjust.sdk.ActivityHandler$39 */
     public class RunnableC535139 implements Runnable {
         public final /* synthetic */ SessionResponseData val$sessionResponseData;
 
@@ -508,7 +508,7 @@ public class ActivityHandler implements IActivityHandler {
         }
     }
 
-    /* renamed from: com.adjust.sdk.ActivityHandler$4 */
+    /* JADX INFO: renamed from: com.adjust.sdk.ActivityHandler$4 */
     public class RunnableC53524 implements Runnable {
         public final /* synthetic */ AdjustEvent val$event;
 
@@ -526,7 +526,7 @@ public class ActivityHandler implements IActivityHandler {
         }
     }
 
-    /* renamed from: com.adjust.sdk.ActivityHandler$40 */
+    /* JADX INFO: renamed from: com.adjust.sdk.ActivityHandler$40 */
     public class RunnableC535340 implements Runnable {
         public RunnableC535340() {
         }
@@ -540,7 +540,7 @@ public class ActivityHandler implements IActivityHandler {
         }
     }
 
-    /* renamed from: com.adjust.sdk.ActivityHandler$41 */
+    /* JADX INFO: renamed from: com.adjust.sdk.ActivityHandler$41 */
     public class RunnableC535441 implements Runnable {
         public final /* synthetic */ Uri val$deeplink;
         public final /* synthetic */ Intent val$deeplinkIntent;
@@ -561,7 +561,7 @@ public class ActivityHandler implements IActivityHandler {
         }
     }
 
-    /* renamed from: com.adjust.sdk.ActivityHandler$5 */
+    /* JADX INFO: renamed from: com.adjust.sdk.ActivityHandler$5 */
     public class RunnableC53555 implements Runnable {
         public final /* synthetic */ boolean val$enabled;
 
@@ -575,7 +575,7 @@ public class ActivityHandler implements IActivityHandler {
         }
     }
 
-    /* renamed from: com.adjust.sdk.ActivityHandler$6 */
+    /* JADX INFO: renamed from: com.adjust.sdk.ActivityHandler$6 */
     public class RunnableC53566 implements Runnable {
         public final /* synthetic */ boolean val$offline;
 
@@ -589,7 +589,7 @@ public class ActivityHandler implements IActivityHandler {
         }
     }
 
-    /* renamed from: com.adjust.sdk.ActivityHandler$7 */
+    /* JADX INFO: renamed from: com.adjust.sdk.ActivityHandler$7 */
     public class RunnableC53577 implements Runnable {
         public final /* synthetic */ long val$clickTime;
         public final /* synthetic */ Uri val$url;
@@ -605,7 +605,7 @@ public class ActivityHandler implements IActivityHandler {
         }
     }
 
-    /* renamed from: com.adjust.sdk.ActivityHandler$8 */
+    /* JADX INFO: renamed from: com.adjust.sdk.ActivityHandler$8 */
     public class RunnableC53588 implements Runnable {
         public final /* synthetic */ boolean val$askingAttribution;
 
@@ -619,7 +619,7 @@ public class ActivityHandler implements IActivityHandler {
         }
     }
 
-    /* renamed from: com.adjust.sdk.ActivityHandler$9 */
+    /* JADX INFO: renamed from: com.adjust.sdk.ActivityHandler$9 */
     public class RunnableC53599 implements Runnable {
         public RunnableC53599() {
         }

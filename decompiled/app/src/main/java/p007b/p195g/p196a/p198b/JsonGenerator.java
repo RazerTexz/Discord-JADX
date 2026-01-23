@@ -8,22 +8,22 @@ import java.math.BigDecimal;
 import java.math.BigInteger;
 import p007b.p195g.p196a.p198b.p204t.JacksonFeatureSet;
 
-/* compiled from: JsonGenerator.java */
-/* renamed from: b.g.a.b.d, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.g.a.b.d, reason: use source file name */
+/* JADX INFO: compiled from: JsonGenerator.java */
+/* JADX INFO: loaded from: classes3.dex */
 public abstract class JsonGenerator implements Closeable, Flushable {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static final JacksonFeatureSet<StreamWriteCapability> f4464j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public static final JacksonFeatureSet<StreamWriteCapability> f4465k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public PrettyPrinter2 f4466l;
 
-    /* compiled from: JsonGenerator.java */
-    /* renamed from: b.g.a.b.d$a */
+    /* JADX INFO: renamed from: b.g.a.b.d$a */
+    /* JADX INFO: compiled from: JsonGenerator.java */
     public enum a {
         AUTO_CLOSE_TARGET(true),
         AUTO_CLOSE_JSON_CONTENT(true),
@@ -43,7 +43,7 @@ public abstract class JsonGenerator implements Closeable, Flushable {
             this._defaultState = z2;
         }
 
-        /* renamed from: f */
+        /* JADX INFO: renamed from: f */
         public static int m1667f() {
             a[] aVarArrValues = values();
             int i = 0;
@@ -56,12 +56,12 @@ public abstract class JsonGenerator implements Closeable, Flushable {
             return i;
         }
 
-        /* renamed from: g */
+        /* JADX INFO: renamed from: g */
         public boolean m1668g(int i) {
             return (i & this._mask) != 0;
         }
 
-        /* renamed from: h */
+        /* JADX INFO: renamed from: h */
         public int m1669h() {
             return this._mask;
         }
@@ -74,96 +74,96 @@ public abstract class JsonGenerator implements Closeable, Flushable {
         jacksonFeatureSetM1734a.m1735b(StreamWriteCapability.CAN_WRITE_BINARY_NATIVELY);
     }
 
-    /* renamed from: A */
+    /* JADX INFO: renamed from: A */
     public abstract void mo1631A() throws IOException;
 
-    /* renamed from: C */
+    /* JADX INFO: renamed from: C */
     public abstract void mo1632C(double d) throws IOException;
 
-    /* renamed from: D */
+    /* JADX INFO: renamed from: D */
     public abstract void mo1633D(float f) throws IOException;
 
-    /* renamed from: H */
+    /* JADX INFO: renamed from: H */
     public abstract void mo1634H(int i) throws IOException;
 
-    /* renamed from: I */
+    /* JADX INFO: renamed from: I */
     public abstract void mo1635I(long j) throws IOException;
 
-    /* renamed from: J */
+    /* JADX INFO: renamed from: J */
     public abstract void mo1636J(String str) throws IOException;
 
-    /* renamed from: L */
+    /* JADX INFO: renamed from: L */
     public abstract void mo1637L(BigDecimal bigDecimal) throws IOException;
 
-    /* renamed from: N */
+    /* JADX INFO: renamed from: N */
     public abstract void mo1638N(BigInteger bigInteger) throws IOException;
 
-    /* renamed from: O */
+    /* JADX INFO: renamed from: O */
     public void mo1639O(short s2) throws IOException {
         mo1634H(s2);
     }
 
-    /* renamed from: R */
+    /* JADX INFO: renamed from: R */
     public abstract void mo1640R(char c) throws IOException;
 
-    /* renamed from: S */
+    /* JADX INFO: renamed from: S */
     public void mo1641S(SerializableString serializableString) throws IOException {
         mo1642T(serializableString.getValue());
     }
 
-    /* renamed from: T */
+    /* JADX INFO: renamed from: T */
     public abstract void mo1642T(String str) throws IOException;
 
-    /* renamed from: U */
+    /* JADX INFO: renamed from: U */
     public abstract void mo1643U(char[] cArr, int i, int i2) throws IOException;
 
-    /* renamed from: V */
+    /* JADX INFO: renamed from: V */
     public abstract void mo1644V(String str) throws IOException;
 
-    /* renamed from: W */
+    /* JADX INFO: renamed from: W */
     public abstract void mo1645W() throws IOException;
 
-    /* renamed from: X */
+    /* JADX INFO: renamed from: X */
     public void mo1646X(Object obj) throws IOException {
         mo1645W();
         mo1654e(obj);
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final void m1647a(int i, int i2, int i3) {
         if (i2 < 0 || i2 + i3 > i) {
             throw new IllegalArgumentException(String.format("invalid argument(s) (offset=%d, length=%d) for input array of %d element", Integer.valueOf(i2), Integer.valueOf(i3), Integer.valueOf(i)));
         }
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public abstract JsonGenerator mo1648b(a aVar);
 
-    /* renamed from: b0 */
+    /* JADX INFO: renamed from: b0 */
     public void mo1649b0(Object obj, int i) throws IOException {
         mo1645W();
         mo1654e(obj);
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public abstract JsonStreamContext mo1650c();
 
-    /* renamed from: c0 */
+    /* JADX INFO: renamed from: c0 */
     public abstract void mo1651c0() throws IOException;
 
     @Override // java.io.Closeable, java.lang.AutoCloseable
     public abstract void close() throws IOException;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public abstract boolean mo1652d(a aVar);
 
-    /* renamed from: d0 */
+    /* JADX INFO: renamed from: d0 */
     public void mo1653d0(Object obj) throws IOException {
         mo1651c0();
         mo1654e(obj);
     }
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public void mo1654e(Object obj) {
         JsonStreamContext jsonStreamContextMo1650c = mo1650c();
         if (jsonStreamContextMo1650c != null) {
@@ -171,44 +171,44 @@ public abstract class JsonGenerator implements Closeable, Flushable {
         }
     }
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public abstract int mo1655f(Base64Variant base64Variant, InputStream inputStream, int i) throws IOException;
 
-    /* renamed from: f0 */
+    /* JADX INFO: renamed from: f0 */
     public void mo1656f0(Object obj, int i) throws IOException {
         mo1651c0();
         mo1654e(obj);
     }
 
-    /* renamed from: g0 */
+    /* JADX INFO: renamed from: g0 */
     public abstract void mo1657g0(SerializableString serializableString) throws IOException;
 
-    /* renamed from: j0 */
+    /* JADX INFO: renamed from: j0 */
     public abstract void mo1658j0(String str) throws IOException;
 
-    /* renamed from: m0 */
+    /* JADX INFO: renamed from: m0 */
     public abstract void mo1659m0(char[] cArr, int i, int i2) throws IOException;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public abstract void mo1660n(Base64Variant base64Variant, byte[] bArr, int i, int i2) throws IOException;
 
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     public void m1661q(byte[] bArr) throws IOException {
         mo1660n(Base64Variants.f4452b, bArr, 0, bArr.length);
     }
 
-    /* renamed from: s */
+    /* JADX INFO: renamed from: s */
     public abstract void mo1662s(boolean z2) throws IOException;
 
-    /* renamed from: t */
+    /* JADX INFO: renamed from: t */
     public abstract void mo1663t() throws IOException;
 
-    /* renamed from: u */
+    /* JADX INFO: renamed from: u */
     public abstract void mo1664u() throws IOException;
 
-    /* renamed from: x */
+    /* JADX INFO: renamed from: x */
     public abstract void mo1665x(SerializableString serializableString) throws IOException;
 
-    /* renamed from: y */
+    /* JADX INFO: renamed from: y */
     public abstract void mo1666y(String str) throws IOException;
 }

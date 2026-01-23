@@ -4,15 +4,15 @@ import java.util.Objects;
 import p007b.p100d.p104b.p105a.outline;
 import p007b.p225i.p361c.p369m.p370d.p375m.CrashlyticsReport;
 
-/* compiled from: AutoValue_CrashlyticsReportWithSessionId.java */
-/* renamed from: b.i.c.m.d.k.c, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.c.m.d.k.c, reason: use source file name */
+/* JADX INFO: compiled from: AutoValue_CrashlyticsReportWithSessionId.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class AutoValue_CrashlyticsReportWithSessionId extends CrashlyticsReportWithSessionId {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final CrashlyticsReport f12268a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final String f12269b;
 
     public AutoValue_CrashlyticsReportWithSessionId(CrashlyticsReport crashlyticsReport, String str) {
@@ -23,13 +23,13 @@ public final class AutoValue_CrashlyticsReportWithSessionId extends CrashlyticsR
     }
 
     @Override // p007b.p225i.p361c.p369m.p370d.p373k.CrashlyticsReportWithSessionId
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public CrashlyticsReport mo6396a() {
         return this.f12268a;
     }
 
     @Override // p007b.p225i.p361c.p369m.p370d.p373k.CrashlyticsReportWithSessionId
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public String mo6397b() {
         return this.f12269b;
     }

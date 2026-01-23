@@ -13,28 +13,28 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 
-/* compiled from: MetadataBackendRegistry.java */
-/* renamed from: b.i.a.b.j.q.k, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.b.j.q.k, reason: use source file name */
+/* JADX INFO: compiled from: MetadataBackendRegistry.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class MetadataBackendRegistry implements BackendRegistry {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final a f5318a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final CreationContextFactory f5319b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final Map<String, TransportBackend> f5320c;
 
-    /* compiled from: MetadataBackendRegistry.java */
-    /* renamed from: b.i.a.b.j.q.k$a */
+    /* JADX INFO: renamed from: b.i.a.b.j.q.k$a */
+    /* JADX INFO: compiled from: MetadataBackendRegistry.java */
     public static class a {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final Context f5321a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public Map<String, String> f5322b = null;
 
         public a(Context context) {
@@ -44,7 +44,7 @@ public class MetadataBackendRegistry implements BackendRegistry {
         /* JADX WARN: Removed duplicated region for block: B:16:0x003a  */
         /* JADX WARN: Removed duplicated region for block: B:17:0x0044  */
         @Nullable
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         /*
             Code decompiled incorrectly, please refer to instructions dump.
         */

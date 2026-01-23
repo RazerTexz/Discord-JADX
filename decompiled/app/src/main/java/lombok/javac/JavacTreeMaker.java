@@ -17,10 +17,10 @@ import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentMap;
 import lombok.permit.Permit;
 
-/* loaded from: discord-126021.apk:lombok/javac/JavacTreeMaker.SCL.lombok */
+/* JADX INFO: loaded from: discord-126021.apk:lombok/javac/JavacTreeMaker.SCL.lombok */
 public class JavacTreeMaker {
 
-    /* renamed from: tm */
+    /* JADX INFO: renamed from: tm */
     private final TreeMaker f27479tm;
     private static final ConcurrentHashMap<FieldId<?>, Object> FIELD_CACHE = new ConcurrentHashMap<>();
     private static final Object REFLECTIVE_ITEM_NOT_FOUND = new Object[0];
@@ -48,7 +48,7 @@ public class JavacTreeMaker {
     private static final MethodId<JCTree.JCCatch> Catch = MethodId("Catch");
     private static final MethodId<JCTree.JCConditional> Conditional = MethodId("Conditional");
 
-    /* renamed from: If */
+    /* JADX INFO: renamed from: If */
     private static final MethodId<JCTree.JCIf> f27480If = MethodId("If");
     private static final MethodId<JCTree.JCExpressionStatement> Exec = MethodId("Exec");
     private static final MethodId<JCTree.JCBreak> Break11 = MethodId("Break", JCTree.JCBreak.class, Name.class);
@@ -100,7 +100,7 @@ public class JavacTreeMaker {
     private static final MethodId<JCTree.JCExpression> Type = MethodId("Type");
     private static final FieldId<JCTree.JCVariableDecl> MethodDecl_recvParam = FieldId(JCTree.JCMethodDecl.class, "recvparam", JCTree.JCVariableDecl.class);
 
-    /* loaded from: discord-126021.apk:lombok/javac/JavacTreeMaker$Case12.SCL.lombok */
+    /* JADX INFO: loaded from: discord-126021.apk:lombok/javac/JavacTreeMaker$Case12.SCL.lombok */
     public static class Case12 {
         private static final Class<?> CASE_KIND_CLASS = JavacTreeMaker.classForName(TreeMaker.class, "com.sun.source.tree.CaseTree$CaseKind");
         static final MethodId<JCTree.JCCase> Case12 = JavacTreeMaker.MethodId("Case", JCTree.JCCase.class, CASE_KIND_CLASS, List.class, List.class, JCTree.class);
@@ -115,13 +115,13 @@ public class JavacTreeMaker {
         return this.f27479tm;
     }
 
-    /* renamed from: at */
+    /* JADX INFO: renamed from: at */
     public JavacTreeMaker m10939at(int pos) {
         this.f27479tm.at(pos);
         return this;
     }
 
-    /* loaded from: discord-126021.apk:lombok/javac/JavacTreeMaker$FieldId.SCL.lombok */
+    /* JADX INFO: loaded from: discord-126021.apk:lombok/javac/JavacTreeMaker$FieldId.SCL.lombok */
     private static final class FieldId<J> {
         private final Class<?> owner;
         private final String name;
@@ -146,7 +146,7 @@ public class JavacTreeMaker {
         }
     }
 
-    /* loaded from: discord-126021.apk:lombok/javac/JavacTreeMaker$MethodId.SCL.lombok */
+    /* JADX INFO: loaded from: discord-126021.apk:lombok/javac/JavacTreeMaker$MethodId.SCL.lombok */
     private static final class MethodId<J> {
         private final Class<?> owner;
         private final String name;
@@ -192,7 +192,7 @@ public class JavacTreeMaker {
         }
     }
 
-    /* loaded from: discord-126021.apk:lombok/javac/JavacTreeMaker$SchroedingerType.SCL.lombok */
+    /* JADX INFO: loaded from: discord-126021.apk:lombok/javac/JavacTreeMaker$SchroedingerType.SCL.lombok */
     private static class SchroedingerType {
         final Object value;
         private static Field NOSUCHFIELDEX_MARKER;
@@ -220,7 +220,7 @@ public class JavacTreeMaker {
             return false;
         }
 
-        static Object getFieldCached(ConcurrentMap<String, Object> cache, String className, String fieldName) throws IllegalArgumentException {
+        static Object getFieldCached(ConcurrentMap<String, Object> cache, String className, String fieldName) {
             Object value = cache.get(fieldName);
             if (value != null) {
                 return value;
@@ -246,7 +246,7 @@ public class JavacTreeMaker {
             }
         }
 
-        static Object getFieldCached(ConcurrentMap<Class<?>, Field> cache, Object ref, String fieldName) throws NoSuchFieldException, SecurityException {
+        static Object getFieldCached(ConcurrentMap<Class<?>, Field> cache, Object ref, String fieldName) throws NoSuchFieldException {
             Class<?> c = ref.getClass();
             Field field = cache.get(c);
             if (field == null) {
@@ -273,7 +273,7 @@ public class JavacTreeMaker {
         }
     }
 
-    /* loaded from: discord-126021.apk:lombok/javac/JavacTreeMaker$TypeTag.SCL.lombok */
+    /* JADX INFO: loaded from: discord-126021.apk:lombok/javac/JavacTreeMaker$TypeTag.SCL.lombok */
     public static class TypeTag extends SchroedingerType {
         private static final ConcurrentMap<String, Object> TYPE_TAG_CACHE = new ConcurrentHashMap();
         private static final ConcurrentMap<Class<?>, Field> FIELD_CACHE = new ConcurrentHashMap();
@@ -335,7 +335,7 @@ public class JavacTreeMaker {
         }
     }
 
-    /* loaded from: discord-126021.apk:lombok/javac/JavacTreeMaker$TreeTag.SCL.lombok */
+    /* JADX INFO: loaded from: discord-126021.apk:lombok/javac/JavacTreeMaker$TreeTag.SCL.lombok */
     public static class TreeTag extends SchroedingerType {
         private static final Field TAG_FIELD;
         private static final Method TAG_METHOD;
@@ -407,7 +407,7 @@ public class JavacTreeMaker {
         return new MethodId<>(TreeMaker.class, name, returnType, clsArr);
     }
 
-    static <J> MethodId<J> MethodId(String name) throws SecurityException {
+    static <J> MethodId<J> MethodId(String name) {
         for (Method m : JavacTreeMaker.class.getDeclaredMethods()) {
             if (m.getName().equals(name)) {
                 return new MethodId<>(TreeMaker.class, name, m.getReturnType(), m.getParameterTypes());
@@ -501,7 +501,7 @@ public class JavacTreeMaker {
         return invokeAny(obj, methodId, objArr);
     }
 
-    private static <J> J invokeAny(Object obj, MethodId<J> methodId, Object... objArr) throws SecurityException {
+    private static <J> J invokeAny(Object obj, MethodId<J> methodId, Object... objArr) {
         Method fromCache = getFromCache((MethodId<?>) methodId);
         try {
             if (MethodId.access$0(methodId).isPrimitive()) {
@@ -518,7 +518,7 @@ public class JavacTreeMaker {
         }
     }
 
-    private static boolean tryResolve(MethodId<?> m) throws SecurityException {
+    private static boolean tryResolve(MethodId<?> m) {
         Object s2 = METHOD_CACHE.get(m);
         if (s2 == null) {
             s2 = addToCache(m);
@@ -526,7 +526,7 @@ public class JavacTreeMaker {
         return s2 instanceof Method;
     }
 
-    private static Method getFromCache(MethodId<?> m) throws SecurityException {
+    private static Method getFromCache(MethodId<?> m) {
         Object s2 = METHOD_CACHE.get(m);
         if (s2 == null) {
             s2 = addToCache(m);
@@ -540,7 +540,7 @@ public class JavacTreeMaker {
         return (Method) s2;
     }
 
-    private static Object addToCache(MethodId<?> m) throws SecurityException {
+    private static Object addToCache(MethodId<?> m) {
         Method found = null;
         for (Method method : MethodId.access$1(m).getDeclaredMethods()) {
             if (MethodId.access$2(m).equals(method.getName())) {
@@ -694,7 +694,7 @@ public class JavacTreeMaker {
         return (JCTree.JCConditional) invoke(Conditional, cond, thenpart, elsepart);
     }
 
-    /* renamed from: If */
+    /* JADX INFO: renamed from: If */
     public JCTree.JCIf m10940If(JCTree.JCExpression cond, JCTree.JCStatement thenpart, JCTree.JCStatement elsepart) {
         return (JCTree.JCIf) invoke(f27480If, cond, thenpart, elsepart);
     }

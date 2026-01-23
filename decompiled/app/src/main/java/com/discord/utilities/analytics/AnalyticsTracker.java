@@ -117,8 +117,8 @@ import p637j0.p641k.Func1;
 import p658rx.Observable;
 import p658rx.functions.Func2;
 
-/* compiled from: AnalyticsTracker.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: AnalyticsTracker.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class AnalyticsTracker {
     private static final int ATTACHMENT_ADD = 0;
     public static final String ATTACHMENT_SOURCE_KEYBOARD = "keyboard";
@@ -130,10 +130,10 @@ public final class AnalyticsTracker {
     public static final AnalyticsTracker INSTANCE = new AnalyticsTracker();
     private static final AnalyticsUtils.Tracker tracker = AnalyticsUtils.Tracker.INSTANCE.getInstance();
 
-    /* renamed from: firebaseAnalytics$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: firebaseAnalytics$delegate, reason: from kotlin metadata */
     private static final Lazy firebaseAnalytics = LazyJVM.lazy(AnalyticsTracker2.INSTANCE);
 
-    /* compiled from: AnalyticsTracker.kt */
+    /* JADX INFO: compiled from: AnalyticsTracker.kt */
     public static final class AdjustEventTracker {
         private static final String EVENT_TOKEN_LOGIN = "ctt5aq";
         private static final String EVENT_TOKEN_REGISTER = "ebn8ke";
@@ -151,7 +151,7 @@ public final class AnalyticsTracker {
         }
     }
 
-    /* compiled from: AnalyticsTracker.kt */
+    /* JADX INFO: compiled from: AnalyticsTracker.kt */
     public enum PremiumUpsellType {
         EmojiPickerHeaderViewed("emoji_picker_search"),
         EmojiPickerLockedItemClicked("emoji_picker_emoji_clicked"),
@@ -201,8 +201,8 @@ public final class AnalyticsTracker {
         }
     }
 
-    /* compiled from: AnalyticsTracker.kt */
-    /* renamed from: com.discord.utilities.analytics.AnalyticsTracker$ackMessage$1 */
+    /* JADX INFO: renamed from: com.discord.utilities.analytics.AnalyticsTracker$ackMessage$1 */
+    /* JADX INFO: compiled from: AnalyticsTracker.kt */
     public static final class C66681 extends Lambda implements Function0<Map<String, ? extends Object>> {
         public final /* synthetic */ Function0 $propertyProvider;
 
@@ -218,14 +218,14 @@ public final class AnalyticsTracker {
         }
 
         @Override // kotlin.jvm.functions.Function0
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final Map<String, ? extends Object> invoke2() {
             return CollectionExtensions.filterNonNullValues((Map) this.$propertyProvider.invoke());
         }
     }
 
-    /* compiled from: AnalyticsTracker.kt */
-    /* renamed from: com.discord.utilities.analytics.AnalyticsTracker$addAttachment$1 */
+    /* JADX INFO: renamed from: com.discord.utilities.analytics.AnalyticsTracker$addAttachment$1 */
+    /* JADX INFO: compiled from: AnalyticsTracker.kt */
     public static final class C66691<T, R> implements Func1<Channel, Map<String, ? extends Object>> {
         public final /* synthetic */ String $mimeType;
         public final /* synthetic */ String $source;
@@ -242,7 +242,7 @@ public final class AnalyticsTracker {
             return call2(channel);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final Map<String, Object> call2(Channel channel) {
             Map mapMapOf = Maps6.mapOf(Tuples.m10073to("source", this.$source), Tuples.m10073to("action_type", 0), Tuples.m10073to("mime_type", this.$mimeType), Tuples.m10073to("total_attachments", Integer.valueOf(this.$totalAttachments)), Tuples.m10073to(ModelAuditLogEntry.CHANGE_KEY_GUILD_ID, Long.valueOf(channel.getGuildId())));
             AnalyticsUtils analyticsUtils = AnalyticsUtils.INSTANCE;
@@ -251,8 +251,8 @@ public final class AnalyticsTracker {
         }
     }
 
-    /* compiled from: AnalyticsTracker.kt */
-    /* renamed from: com.discord.utilities.analytics.AnalyticsTracker$addAttachment$2 */
+    /* JADX INFO: renamed from: com.discord.utilities.analytics.AnalyticsTracker$addAttachment$2 */
+    /* JADX INFO: compiled from: AnalyticsTracker.kt */
     public static final class C66702 extends Lambda implements Function1<Map<String, ? extends Object>, Unit> {
         public static final C66702 INSTANCE = new C66702();
 
@@ -266,14 +266,14 @@ public final class AnalyticsTracker {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Map<String, ? extends Object> map) {
             AnalyticsTracker.INSTANCE.getTracker().track("message_attachment_updated", map);
         }
     }
 
-    /* compiled from: AnalyticsTracker.kt */
-    /* renamed from: com.discord.utilities.analytics.AnalyticsTracker$channelOpened$1 */
+    /* JADX INFO: renamed from: com.discord.utilities.analytics.AnalyticsTracker$channelOpened$1 */
+    /* JADX INFO: compiled from: AnalyticsTracker.kt */
     public static final class C66711 extends Lambda implements Function0<Map<String, ? extends Object>> {
         public final /* synthetic */ Function0 $lazyPropertyProvider;
 
@@ -289,14 +289,14 @@ public final class AnalyticsTracker {
         }
 
         @Override // kotlin.jvm.functions.Function0
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final Map<String, ? extends Object> invoke2() {
             return CollectionExtensions.filterNonNullValues((Map) this.$lazyPropertyProvider.invoke());
         }
     }
 
-    /* compiled from: AnalyticsTracker.kt */
-    /* renamed from: com.discord.utilities.analytics.AnalyticsTracker$getGameProperties$1 */
+    /* JADX INFO: renamed from: com.discord.utilities.analytics.AnalyticsTracker$getGameProperties$1 */
+    /* JADX INFO: compiled from: AnalyticsTracker.kt */
     public static final class C66721<T1, T2, R> implements Func2<Presence, Presence, Activity> {
         public static final C66721 INSTANCE = new C66721();
 
@@ -317,8 +317,8 @@ public final class AnalyticsTracker {
         }
     }
 
-    /* compiled from: AnalyticsTracker.kt */
-    /* renamed from: com.discord.utilities.analytics.AnalyticsTracker$getGameProperties$2 */
+    /* JADX INFO: renamed from: com.discord.utilities.analytics.AnalyticsTracker$getGameProperties$2 */
+    /* JADX INFO: compiled from: AnalyticsTracker.kt */
     public static final class C66732<T, R> implements Func1<Activity, Map<String, Object>> {
         public static final C66732 INSTANCE = new C66732();
 
@@ -327,7 +327,7 @@ public final class AnalyticsTracker {
             return call2(activity);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final Map<String, Object> call2(Activity activity) {
             Tuples2[] tuples2Arr = new Tuples2[3];
             tuples2Arr[0] = Tuples.m10073to("game_platform", activity != null ? ActivityUtils.getGamePlatform(activity) : null);
@@ -337,8 +337,8 @@ public final class AnalyticsTracker {
         }
     }
 
-    /* compiled from: AnalyticsTracker.kt */
-    /* renamed from: com.discord.utilities.analytics.AnalyticsTracker$guildViewed$1 */
+    /* JADX INFO: renamed from: com.discord.utilities.analytics.AnalyticsTracker$guildViewed$1 */
+    /* JADX INFO: compiled from: AnalyticsTracker.kt */
     public static final class C66741 extends Lambda implements Function0<Map<String, ? extends Object>> {
         public final /* synthetic */ Function0 $lazyPropertyProvider;
 
@@ -354,14 +354,14 @@ public final class AnalyticsTracker {
         }
 
         @Override // kotlin.jvm.functions.Function0
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final Map<String, ? extends Object> invoke2() {
             return (Map) this.$lazyPropertyProvider.invoke();
         }
     }
 
-    /* compiled from: AnalyticsTracker.kt */
-    /* renamed from: com.discord.utilities.analytics.AnalyticsTracker$inviteSuggestionOpened$1 */
+    /* JADX INFO: renamed from: com.discord.utilities.analytics.AnalyticsTracker$inviteSuggestionOpened$1 */
+    /* JADX INFO: compiled from: AnalyticsTracker.kt */
     public static final class C66751<T, R> implements Func1<Map<Long, ? extends Integer>, Set<? extends Long>> {
         public static final C66751 INSTANCE = new C66751();
 
@@ -370,7 +370,7 @@ public final class AnalyticsTracker {
             return call2((Map<Long, Integer>) map);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final Set<Long> call2(Map<Long, Integer> map) {
             Intrinsics3.checkNotNullExpressionValue(map, "userRelationships");
             LinkedHashMap linkedHashMap = new LinkedHashMap();
@@ -383,8 +383,8 @@ public final class AnalyticsTracker {
         }
     }
 
-    /* compiled from: AnalyticsTracker.kt */
-    /* renamed from: com.discord.utilities.analytics.AnalyticsTracker$inviteSuggestionOpened$2 */
+    /* JADX INFO: renamed from: com.discord.utilities.analytics.AnalyticsTracker$inviteSuggestionOpened$2 */
+    /* JADX INFO: compiled from: AnalyticsTracker.kt */
     public static final class C66762 extends Lambda implements Function1<Set<? extends Long>, Unit> {
         public final /* synthetic */ List $channelSuggestions;
         public final /* synthetic */ long $guildId;
@@ -404,7 +404,7 @@ public final class AnalyticsTracker {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Set<Long> set) {
             List list = this.$channelSuggestions;
             LinkedHashMap linkedHashMap = new LinkedHashMap();
@@ -424,8 +424,8 @@ public final class AnalyticsTracker {
         }
     }
 
-    /* compiled from: AnalyticsTracker.kt */
-    /* renamed from: com.discord.utilities.analytics.AnalyticsTracker$textInVoiceOpened$1 */
+    /* JADX INFO: renamed from: com.discord.utilities.analytics.AnalyticsTracker$textInVoiceOpened$1 */
+    /* JADX INFO: compiled from: AnalyticsTracker.kt */
     public static final class C66771 extends Lambda implements Function0<Map<String, ? extends Object>> {
         public final /* synthetic */ Function0 $lazyPropertyProvider;
 
@@ -441,21 +441,21 @@ public final class AnalyticsTracker {
         }
 
         @Override // kotlin.jvm.functions.Function0
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final Map<String, ? extends Object> invoke2() {
             return CollectionExtensions.filterNonNullValues((Map) this.$lazyPropertyProvider.invoke());
         }
     }
 
-    /* compiled from: AnalyticsTracker.kt */
-    /* renamed from: com.discord.utilities.analytics.AnalyticsTracker$trackUserVoiceEvent$1 */
+    /* JADX INFO: renamed from: com.discord.utilities.analytics.AnalyticsTracker$trackUserVoiceEvent$1 */
+    /* JADX INFO: compiled from: AnalyticsTracker.kt */
     public static final class C66781 extends Lambda implements Function1<Map<String, Object>, Unit> {
         public final /* synthetic */ String $inputMode;
         public final /* synthetic */ Channel $this_trackUserVoiceEvent;
         public final /* synthetic */ Tuples2 $throttleKey;
 
-        /* compiled from: AnalyticsTracker.kt */
-        /* renamed from: com.discord.utilities.analytics.AnalyticsTracker$trackUserVoiceEvent$1$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.utilities.analytics.AnalyticsTracker$trackUserVoiceEvent$1$1, reason: invalid class name */
+        /* JADX INFO: compiled from: AnalyticsTracker.kt */
         public static final class AnonymousClass1 extends Lambda implements Function0<Map<String, ? extends Object>> {
             public final /* synthetic */ Map $gameProperties;
 
@@ -471,7 +471,7 @@ public final class AnalyticsTracker {
             }
 
             @Override // kotlin.jvm.functions.Function0
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final Map<String, ? extends Object> invoke2() {
                 this.$gameProperties.put("mode", C66781.this.$inputMode);
                 this.$gameProperties.put("channel", Long.valueOf(C66781.this.$this_trackUserVoiceEvent.getId()));
@@ -495,15 +495,15 @@ public final class AnalyticsTracker {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Map<String, Object> map) {
             Intrinsics3.checkNotNullParameter(map, "gameProperties");
             AnalyticsTracker.INSTANCE.getTracker().track(this.$throttleKey, 900000L, new AnonymousClass1(map));
         }
     }
 
-    /* compiled from: AnalyticsTracker.kt */
-    /* renamed from: com.discord.utilities.analytics.AnalyticsTracker$videoInputsUpdate$1 */
+    /* JADX INFO: renamed from: com.discord.utilities.analytics.AnalyticsTracker$videoInputsUpdate$1 */
+    /* JADX INFO: compiled from: AnalyticsTracker.kt */
     public static final class C66791 extends Lambda implements Function1<Map<String, Object>, Unit> {
         public final /* synthetic */ Map $voiceProperties;
 
@@ -519,7 +519,7 @@ public final class AnalyticsTracker {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Map<String, Object> map) {
             Intrinsics3.checkNotNullParameter(map, "gameProperties");
             AnalyticsUtils.Tracker tracker = AnalyticsTracker.INSTANCE.getTracker();
@@ -529,8 +529,8 @@ public final class AnalyticsTracker {
         }
     }
 
-    /* compiled from: AnalyticsTracker.kt */
-    /* renamed from: com.discord.utilities.analytics.AnalyticsTracker$voiceChannelJoin$1 */
+    /* JADX INFO: renamed from: com.discord.utilities.analytics.AnalyticsTracker$voiceChannelJoin$1 */
+    /* JADX INFO: compiled from: AnalyticsTracker.kt */
     public static final class C66801 extends Lambda implements Function1<Map<String, Object>, Unit> {
         public final /* synthetic */ Map $voiceProperties;
 
@@ -546,7 +546,7 @@ public final class AnalyticsTracker {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Map<String, Object> map) {
             Intrinsics3.checkNotNullParameter(map, "gameProperties");
             this.$voiceProperties.putAll(map);
@@ -554,8 +554,8 @@ public final class AnalyticsTracker {
         }
     }
 
-    /* compiled from: AnalyticsTracker.kt */
-    /* renamed from: com.discord.utilities.analytics.AnalyticsTracker$voiceChannelLeave$1 */
+    /* JADX INFO: renamed from: com.discord.utilities.analytics.AnalyticsTracker$voiceChannelLeave$1 */
+    /* JADX INFO: compiled from: AnalyticsTracker.kt */
     public static final class C66811 extends Lambda implements Function1<Map<String, Object>, Unit> {
         public final /* synthetic */ Map $voiceProperties;
 
@@ -571,7 +571,7 @@ public final class AnalyticsTracker {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Map<String, Object> map) {
             Intrinsics3.checkNotNullParameter(map, "gameProperties");
             AnalyticsUtils.Tracker tracker = AnalyticsTracker.INSTANCE.getTracker();
@@ -885,6 +885,7 @@ public final class AnalyticsTracker {
         return mapMutableMapOf;
     }
 
+    /* JADX WARN: Multi-variable type inference failed */
     public static /* synthetic */ Map getVoiceChannelProperties$default(AnalyticsTracker analyticsTracker, long j, Channel channel, Long l, Map map, DeviceDescription4 deviceDescription4, String str, int i, Object obj) {
         return analyticsTracker.getVoiceChannelProperties(j, channel, (i & 4) != 0 ? null : l, (i & 8) != 0 ? null : map, (i & 16) != 0 ? null : deviceDescription4, (i & 32) != 0 ? null : str);
     }
@@ -908,6 +909,7 @@ public final class AnalyticsTracker {
         tracker.track("experiment_guild_triggered", Maps6.mutableMapOf(Tuples.m10073to(ModelAuditLogEntry.CHANGE_KEY_NAME, name), Tuples.m10073to("revision", Integer.valueOf(revision)), Tuples.m10073to("bucket", Integer.valueOf(bucket)), Tuples.m10073to(ModelAuditLogEntry.CHANGE_KEY_GUILD_ID, Long.valueOf(guildId))));
     }
 
+    /* JADX WARN: Multi-variable type inference failed */
     public static /* synthetic */ void guildRoleSubscriptionUpsellOpened$default(AnalyticsTracker analyticsTracker, long j, List list, boolean z2, String str, int i, Object obj) {
         if ((i & 2) != 0) {
             list = Collections2.emptyList();

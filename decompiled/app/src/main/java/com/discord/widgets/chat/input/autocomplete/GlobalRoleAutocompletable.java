@@ -10,18 +10,18 @@ import p507d0.LazyJVM;
 import p507d0.p580t.CollectionsJVM;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: Autocompletable.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: Autocompletable.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final /* data */ class GlobalRoleAutocompletable extends Autocompletable {
     private final String text;
     private final List<String> textMatchers;
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private static final Lazy here$delegate = LazyJVM.lazy(GlobalRoleAutocompletable$Companion$here$2.INSTANCE);
     private static final Lazy everyone$delegate = LazyJVM.lazy(GlobalRoleAutocompletable$Companion$everyone$2.INSTANCE);
 
-    /* compiled from: Autocompletable.kt */
+    /* JADX INFO: compiled from: Autocompletable.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -66,7 +66,7 @@ public final /* data */ class GlobalRoleAutocompletable extends Autocompletable 
         return globalRoleAutocompletable.copy(str);
     }
 
-    /* renamed from: component1, reason: from getter */
+    /* JADX INFO: renamed from: component1, reason: from getter */
     public final String getText() {
         return this.text;
     }

@@ -11,8 +11,8 @@ import p507d0.p580t.Iterables2;
 import p507d0.p580t._Collections;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ForumGuidelinesManager.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: ForumGuidelinesManager.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class ForumGuidelinesManager {
     public static final ForumGuidelinesManager INSTANCE;
     private static final Set<Long> seenChannelIds;

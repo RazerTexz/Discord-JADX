@@ -19,23 +19,23 @@ import p007b.p225i.p226a.p288f.p291b.C3180f;
 import p007b.p225i.p226a.p288f.p299e.p308o.C3401c;
 import p007b.p225i.p226a.p288f.p299e.p308o.C3403e;
 
-/* renamed from: b.i.a.f.h.j.o */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.h.j.o */
+/* JADX INFO: loaded from: classes3.dex */
 public final class C3532o extends AbstractC3509e implements Closeable {
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public static final String f9768l = String.format("CREATE TABLE IF NOT EXISTS %s ( '%s' INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, '%s' INTEGER NOT NULL, '%s' TEXT NOT NULL, '%s' TEXT NOT NULL, '%s' INTEGER);", "hits2", "hit_id", "hit_time", "hit_url", "hit_string", "hit_app_id");
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public static final String f9769m = String.format("SELECT MAX(%s) FROM %s WHERE 1;", "hit_time", "hits2");
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public final C3534p f9770n;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public final C3553y0 f9771o;
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public final C3553y0 f9772p;
 
     public C3532o(C3515g c3515g) {
@@ -46,11 +46,11 @@ public final class C3532o extends AbstractC3509e implements Closeable {
     }
 
     @Override // p007b.p225i.p226a.p288f.p313h.p323j.AbstractC3509e
-    /* renamed from: L */
+    /* JADX INFO: renamed from: L */
     public final void mo4414L() {
     }
 
-    /* renamed from: O */
+    /* JADX INFO: renamed from: O */
     public final SQLiteDatabase m4468O() {
         try {
             return this.f9770n.getWritableDatabase();
@@ -60,7 +60,7 @@ public final class C3532o extends AbstractC3509e implements Closeable {
         }
     }
 
-    /* renamed from: R */
+    /* JADX INFO: renamed from: R */
     public final boolean m4469R() {
         C3180f.m3967b();
         m4444N();
@@ -86,7 +86,7 @@ public final class C3532o extends AbstractC3509e implements Closeable {
         }
     }
 
-    /* renamed from: S */
+    /* JADX INFO: renamed from: S */
     public final void m4470S(List<Long> list) {
         C3180f.m3967b();
         m4444N();
@@ -120,7 +120,7 @@ public final class C3532o extends AbstractC3509e implements Closeable {
         }
     }
 
-    /* renamed from: T */
+    /* JADX INFO: renamed from: T */
     public final List<C3523j0> m4471T(long j) {
         AnimatableValueParser.m539l(j >= 0);
         C3180f.m3967b();
@@ -153,7 +153,7 @@ public final class C3532o extends AbstractC3509e implements Closeable {
         }
     }
 
-    /* renamed from: U */
+    /* JADX INFO: renamed from: U */
     public final int m4472U() {
         C3180f.m3967b();
         m4444N();
@@ -169,7 +169,11 @@ public final class C3532o extends AbstractC3509e implements Closeable {
         return iDelete;
     }
 
-    /* renamed from: V */
+    /* JADX WARN: Removed duplicated region for block: B:15:0x0031  */
+    /* JADX INFO: renamed from: V */
+    /*
+        Code decompiled incorrectly, please refer to instructions dump.
+    */
     public final long m4473V() {
         C3180f.m3967b();
         m4444N();
@@ -191,13 +195,16 @@ public final class C3532o extends AbstractC3509e implements Closeable {
             }
         } catch (Throwable th) {
             if (cursorRawQuery != null) {
-                cursorRawQuery.close();
             }
             throw th;
         }
+        if (cursorRawQuery != null) {
+            cursorRawQuery.close();
+        }
+        throw th;
     }
 
-    /* renamed from: W */
+    /* JADX INFO: renamed from: W */
     public final void m4474W(long j) {
         C3180f.m3967b();
         m4444N();
@@ -207,7 +214,7 @@ public final class C3532o extends AbstractC3509e implements Closeable {
         m4470S(arrayList);
     }
 
-    /* renamed from: X */
+    /* JADX INFO: renamed from: X */
     public final Map<String, String> m4475X(String str) {
         if (TextUtils.isEmpty(str)) {
             return new HashMap(0);

@@ -46,27 +46,27 @@ import p600f0.p601e0.p612m.CertificateChainCleaner;
 import p600f0.p601e0.p612m.TrustRootIndex;
 import p615g0.Buffer3;
 
-/* compiled from: Platform.kt */
-/* renamed from: f0.e0.k.h, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: f0.e0.k.h, reason: use source file name */
+/* JADX INFO: compiled from: Platform.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public class Platform2 {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static volatile Platform2 f25783a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static final Logger f25784b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public static final a f25785c;
 
-    /* compiled from: Platform.kt */
-    /* renamed from: f0.e0.k.h$a */
+    /* JADX INFO: renamed from: f0.e0.k.h$a */
+    /* JADX INFO: compiled from: Platform.kt */
     public static final class a {
         public a(DefaultConstructorMarker defaultConstructorMarker) {
         }
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final List<String> m10331a(List<? extends Protocol2> list) {
             Intrinsics3.checkParameterIsNotNull(list, "protocols");
             ArrayList arrayList = new ArrayList();
@@ -83,7 +83,7 @@ public class Platform2 {
             return arrayList2;
         }
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final byte[] m10332b(List<? extends Protocol2> list) {
             Intrinsics3.checkParameterIsNotNull(list, "protocols");
             Buffer3 buffer3 = new Buffer3();
@@ -94,7 +94,7 @@ public class Platform2 {
             return buffer3.mo10450Z(buffer3.f26080k);
         }
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public final boolean m10333c() {
             return Intrinsics3.areEqual("Dalvik", System.getProperty("java.vm.name"));
         }
@@ -187,7 +187,7 @@ public class Platform2 {
         f25784b = Logger.getLogger(OkHttpClient.class.getName());
     }
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static /* synthetic */ void m10329j(Platform2 platform2, String str, int i, Throwable th, int i2, Object obj) {
         if ((i2 & 2) != 0) {
             i = 4;
@@ -196,18 +196,18 @@ public class Platform2 {
         platform2.m10330i(str, i, null);
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public void mo10328a(SSLSocket sSLSocket) {
         Intrinsics3.checkParameterIsNotNull(sSLSocket, "sslSocket");
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public CertificateChainCleaner mo10315b(X509TrustManager x509TrustManager) {
         Intrinsics3.checkParameterIsNotNull(x509TrustManager, "trustManager");
         return new BasicCertificateChainCleaner(mo10319c(x509TrustManager));
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public TrustRootIndex mo10319c(X509TrustManager x509TrustManager) {
         Intrinsics3.checkParameterIsNotNull(x509TrustManager, "trustManager");
         X509Certificate[] acceptedIssuers = x509TrustManager.getAcceptedIssuers();
@@ -215,26 +215,26 @@ public class Platform2 {
         return new BasicTrustRootIndex((X509Certificate[]) Arrays.copyOf(acceptedIssuers, acceptedIssuers.length));
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public void mo10316d(SSLSocket sSLSocket, String str, List<Protocol2> list) {
         Intrinsics3.checkParameterIsNotNull(sSLSocket, "sslSocket");
         Intrinsics3.checkParameterIsNotNull(list, "protocols");
     }
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public void mo10320e(Socket socket, InetSocketAddress inetSocketAddress, int i) throws IOException {
         Intrinsics3.checkParameterIsNotNull(socket, "socket");
         Intrinsics3.checkParameterIsNotNull(inetSocketAddress, "address");
         socket.connect(inetSocketAddress, i);
     }
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public String mo10317f(SSLSocket sSLSocket) {
         Intrinsics3.checkParameterIsNotNull(sSLSocket, "sslSocket");
         return null;
     }
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public Object mo10321g(String str) {
         Intrinsics3.checkParameterIsNotNull(str, "closer");
         if (f25784b.isLoggable(Level.FINE)) {
@@ -243,19 +243,19 @@ public class Platform2 {
         return null;
     }
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public boolean mo10318h(String str) {
         Intrinsics3.checkParameterIsNotNull(str, "hostname");
         return true;
     }
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public void m10330i(String str, int i, Throwable th) {
         Intrinsics3.checkParameterIsNotNull(str, "message");
         f25784b.log(i == 5 ? Level.WARNING : Level.INFO, str, th);
     }
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public void mo10322k(String str, Object obj) {
         Intrinsics3.checkParameterIsNotNull(str, "message");
         if (obj == null) {
@@ -264,14 +264,14 @@ public class Platform2 {
         m10330i(str, 5, (Throwable) obj);
     }
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public SSLContext mo10324l() throws NoSuchAlgorithmException {
         SSLContext sSLContext = SSLContext.getInstance("TLS");
         Intrinsics3.checkExpressionValueIsNotNull(sSLContext, "SSLContext.getInstance(\"TLS\")");
         return sSLContext;
     }
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public SSLSocketFactory mo10326m(X509TrustManager x509TrustManager) {
         Intrinsics3.checkParameterIsNotNull(x509TrustManager, "trustManager");
         try {
@@ -285,7 +285,7 @@ public class Platform2 {
         }
     }
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public X509TrustManager mo10325n() throws NoSuchAlgorithmException, KeyStoreException {
         TrustManagerFactory trustManagerFactory = TrustManagerFactory.getInstance(TrustManagerFactory.getDefaultAlgorithm());
         trustManagerFactory.init((KeyStore) null);

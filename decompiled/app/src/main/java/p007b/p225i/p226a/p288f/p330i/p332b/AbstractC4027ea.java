@@ -11,27 +11,27 @@ import java.util.regex.PatternSyntaxException;
 import p007b.p225i.p226a.p288f.p313h.p325l.C3756n0;
 import p007b.p225i.p226a.p288f.p313h.p325l.C3782p0;
 
-/* compiled from: com.google.android.gms:play-services-measurement@@18.0.0 */
-/* renamed from: b.i.a.f.i.b.ea */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.i.b.ea */
+/* JADX INFO: compiled from: com.google.android.gms:play-services-measurement@@18.0.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public abstract class AbstractC4027ea {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public String f10698a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public int f10699b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public Boolean f10700c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public Boolean f10701d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public Long f10702e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public Long f10703f;
 
     public AbstractC4027ea(String str, int i) {
@@ -39,7 +39,7 @@ public abstract class AbstractC4027ea {
         this.f10699b = i;
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static Boolean m5588b(long j, C3756n0 c3756n0) {
         try {
             return m5592f(new BigDecimal(j), c3756n0, 0.0d);
@@ -48,7 +48,7 @@ public abstract class AbstractC4027ea {
         }
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public static Boolean m5589c(Boolean bool, boolean z2) {
         if (bool == null) {
             return null;
@@ -56,7 +56,7 @@ public abstract class AbstractC4027ea {
         return Boolean.valueOf(bool.booleanValue() != z2);
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public static Boolean m5590d(String str, C3756n0 c3756n0) {
         if (!C4163q9.m5827P(str)) {
             return null;
@@ -68,7 +68,7 @@ public abstract class AbstractC4027ea {
         }
     }
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public static Boolean m5591e(String str, C3782p0 c3782p0, C4157q3 c4157q3) {
         List<String> listM5163A;
         C3782p0.b bVar = C3782p0.b.REGEXP;
@@ -126,7 +126,7 @@ public abstract class AbstractC4027ea {
         return null;
     }
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public static Boolean m5592f(BigDecimal bigDecimal, C3756n0 c3756n0, double d) {
         BigDecimal bigDecimal2;
         BigDecimal bigDecimal3;
@@ -196,12 +196,12 @@ public abstract class AbstractC4027ea {
         return null;
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public abstract int mo5593a();
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public abstract boolean mo5594g();
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public abstract boolean mo5595h();
 }

@@ -3,8 +3,8 @@ package com.discord.api.message.activity;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: MessageActivity.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: MessageActivity.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class MessageActivity {
     private final String partyId;
     private final MessageActivityType type;
@@ -16,12 +16,12 @@ public final /* data */ class MessageActivity {
         this.partyId = str;
     }
 
-    /* renamed from: a, reason: from getter */
+    /* JADX INFO: renamed from: a, reason: from getter */
     public final String getPartyId() {
         return this.partyId;
     }
 
-    /* renamed from: b, reason: from getter */
+    /* JADX INFO: renamed from: b, reason: from getter */
     public final MessageActivityType getType() {
         return this.type;
     }

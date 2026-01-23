@@ -8,8 +8,8 @@ import com.discord.views.directories.ServerDiscoveryItem;
 import com.discord.widgets.directories.DirectoryChannelItem;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: WidgetDirectoryEntryViewHolder.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetDirectoryEntryViewHolder.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class DirectoryEntryViewHolder extends DirectoryChannelViewHolder {
     private final DirectoryEntryListItemBinding viewBinding;
 

@@ -6,8 +6,8 @@ import com.discord.databinding.WidgetChatInputCommandApplicationHeaderItemBindin
 import com.discord.utilities.views.StickyHeaderItemDecoration;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: StickyHeaderManager.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: StickyHeaderManager.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class StickyHeaderManager {
     private final ChatInputAutocompleteAdapter adapter;
     private final RecyclerView recyclerView;

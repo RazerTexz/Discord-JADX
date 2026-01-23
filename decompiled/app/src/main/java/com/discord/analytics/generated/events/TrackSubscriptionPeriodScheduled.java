@@ -12,8 +12,8 @@ import com.discord.api.science.AnalyticsSchema;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: TrackSubscriptionPeriodScheduled.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: TrackSubscriptionPeriodScheduled.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class TrackSubscriptionPeriodScheduled implements AnalyticsSchema, TrackBase2, TrackSubscriptionMetadata2, TrackEntitlementMetadata2, TrackPaymentMetadata2 {
     private TrackBase trackBase;
     private TrackEntitlementMetadata trackEntitlementMetadata;
@@ -31,7 +31,7 @@ public final /* data */ class TrackSubscriptionPeriodScheduled implements Analyt
     private final transient String analyticsSchemaTypeName = "subscription_period_scheduled";
 
     @Override // com.discord.api.science.AnalyticsSchema
-    /* renamed from: d, reason: from getter */
+    /* JADX INFO: renamed from: d, reason: from getter */
     public String getAnalyticsSchemaTypeName() {
         return this.analyticsSchemaTypeName;
     }

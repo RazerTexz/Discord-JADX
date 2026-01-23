@@ -14,8 +14,8 @@ import com.discord.utilities.color.ColorCompat;
 import com.discord.utilities.dimen.DimenUtils;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ViewReplySpline.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: ViewReplySpline.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class ViewReplySpline extends View {
     private static final int BOTTOM_TO_END = 0;
     private static final int CAP_LONG = 1;

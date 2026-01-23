@@ -5,24 +5,24 @@ import java.io.Serializable;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ComponentEmoji.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: ComponentEmoji.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class ComponentEmoji implements Serializable {
     private final Boolean animated;
     private final String id;
     private final String name;
 
-    /* renamed from: a, reason: from getter */
+    /* JADX INFO: renamed from: a, reason: from getter */
     public final Boolean getAnimated() {
         return this.animated;
     }
 
-    /* renamed from: b, reason: from getter */
+    /* JADX INFO: renamed from: b, reason: from getter */
     public final String getId() {
         return this.id;
     }
 
-    /* renamed from: c, reason: from getter */
+    /* JADX INFO: renamed from: c, reason: from getter */
     public final String getName() {
         return this.name;
     }

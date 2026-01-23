@@ -4,8 +4,8 @@ import java.io.IOException;
 import p507d0.p592z.p594d.Intrinsics3;
 import p600f0.p601e0.p608j.ErrorCode2;
 
-/* compiled from: StreamResetException.kt */
-/* loaded from: classes3.dex */
+/* JADX INFO: compiled from: StreamResetException.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class StreamResetException extends IOException {
     public final ErrorCode2 errorCode;
 

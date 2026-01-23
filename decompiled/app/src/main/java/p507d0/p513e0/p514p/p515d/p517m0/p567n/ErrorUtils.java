@@ -41,35 +41,35 @@ import p507d0.p513e0.p514p.p515d.p517m0.p567n.p568l1.KotlinTypeRefiner;
 import p507d0.p513e0.p514p.p515d.p517m0.p567n.p569m1.ErrorSimpleFunctionDescriptorImpl;
 import p507d0.p580t.Collections2;
 
-/* compiled from: ErrorUtils.java */
-/* renamed from: d0.e0.p.d.m0.n.t, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.n.t, reason: use source file name */
+/* JADX INFO: compiled from: ErrorUtils.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class ErrorUtils {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final ModuleDescriptor2 f24877a = new a();
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static final c f24878b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public static final KotlinType4 f24879c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public static final KotlinType f24880d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public static final PropertyDescriptor f24881e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public static final Set<PropertyDescriptor> f24882f;
 
-    /* compiled from: ErrorUtils.java */
-    /* renamed from: d0.e0.p.d.m0.n.t$a */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.n.t$a */
+    /* JADX INFO: compiled from: ErrorUtils.java */
     public static class a implements ModuleDescriptor2 {
         /* JADX WARN: Removed duplicated region for block: B:11:0x001a  */
         /* JADX WARN: Removed duplicated region for block: B:21:0x002e  */
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         /*
             Code decompiled incorrectly, please refer to instructions dump.
         */
@@ -307,14 +307,14 @@ public class ErrorUtils {
         }
     }
 
-    /* compiled from: ErrorUtils.java */
-    /* renamed from: d0.e0.p.d.m0.n.t$b */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.n.t$b */
+    /* JADX INFO: compiled from: ErrorUtils.java */
     public static class b implements TypeConstructor {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final /* synthetic */ c f24883a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final /* synthetic */ String f24884b;
 
         public b(c cVar, String str) {
@@ -322,7 +322,7 @@ public class ErrorUtils {
             this.f24884b = str;
         }
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public static /* synthetic */ void m10033a(int i) {
             String str = i != 3 ? "@NotNull method %s.%s must not return null" : "Argument for @NotNull parameter '%s' of %s.%s must not be null";
             Object[] objArr = new Object[i != 3 ? 2 : 3];
@@ -405,8 +405,8 @@ public class ErrorUtils {
         }
     }
 
-    /* compiled from: ErrorUtils.java */
-    /* renamed from: d0.e0.p.d.m0.n.t$c */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.n.t$c */
+    /* JADX INFO: compiled from: ErrorUtils.java */
     public static class c extends ClassDescriptorImpl {
         /* JADX WARN: Illegal instructions before constructor call */
         public c(Name name) {
@@ -427,7 +427,7 @@ public class ErrorUtils {
             initialize(memberScope3CreateErrorScope, Collections.singleton(classConstructorDescriptorImplCreate), classConstructorDescriptorImplCreate);
         }
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public static /* synthetic */ void m10034a(int i) {
             String str = (i == 2 || i == 5 || i == 8) ? "@NotNull method %s.%s must not return null" : "Argument for @NotNull parameter '%s' of %s.%s must not be null";
             Object[] objArr = new Object[(i == 2 || i == 5 || i == 8) ? 2 : 3];
@@ -528,11 +528,11 @@ public class ErrorUtils {
         }
     }
 
-    /* compiled from: ErrorUtils.java */
-    /* renamed from: d0.e0.p.d.m0.n.t$d */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.n.t$d */
+    /* JADX INFO: compiled from: ErrorUtils.java */
     public static class d implements MemberScope3 {
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final String f24885b;
 
         public d(String str, a aVar) {
@@ -546,7 +546,7 @@ public class ErrorUtils {
 
         /* JADX WARN: Removed duplicated region for block: B:13:0x0019  */
         /* JADX WARN: Removed duplicated region for block: B:7:0x000d  */
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         /*
             Code decompiled incorrectly, please refer to instructions dump.
         */
@@ -813,11 +813,11 @@ public class ErrorUtils {
         }
     }
 
-    /* compiled from: ErrorUtils.java */
-    /* renamed from: d0.e0.p.d.m0.n.t$e */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.n.t$e */
+    /* JADX INFO: compiled from: ErrorUtils.java */
     public static class e implements MemberScope3 {
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final String f24886b;
 
         public e(String str, a aVar) {
@@ -829,7 +829,7 @@ public class ErrorUtils {
             }
         }
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public static /* synthetic */ void m10036a(int i) {
             Object[] objArr = new Object[3];
             switch (i) {
@@ -972,10 +972,10 @@ public class ErrorUtils {
         }
     }
 
-    /* compiled from: ErrorUtils.java */
-    /* renamed from: d0.e0.p.d.m0.n.t$f */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.n.t$f */
+    /* JADX INFO: compiled from: ErrorUtils.java */
     public static class f implements TypeConstructor {
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public static /* synthetic */ void m10037a(int i) {
             String str = (i == 1 || i == 2 || i == 3 || i == 4 || i == 6) ? "@NotNull method %s.%s must not return null" : "Argument for @NotNull parameter '%s' of %s.%s must not be null";
             Object[] objArr = new Object[(i == 1 || i == 2 || i == 3 || i == 4 || i == 6) ? 2 : 3];
@@ -1085,7 +1085,7 @@ public class ErrorUtils {
         f24882f = Collections.singleton(propertyDescriptorImplCreate);
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static /* synthetic */ void m10030a(int i) {
         String str = (i == 4 || i == 6 || i == 19) ? "@NotNull method %s.%s must not return null" : "Argument for @NotNull parameter '%s' of %s.%s must not be null";
         Object[] objArr = new Object[(i == 4 || i == 6 || i == 19) ? 2 : 3];
@@ -1196,7 +1196,7 @@ public class ErrorUtils {
         throw new IllegalStateException(str2);
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static TypeConstructor m10031b(String str, c cVar) {
         if (str == null) {
             m10030a(17);

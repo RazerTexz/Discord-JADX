@@ -34,25 +34,25 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 import p507d0.p592z.p594d.Reflection2;
 
-/* compiled from: WidgetEnableMFASteps.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetEnableMFASteps.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetEnableMFASteps extends AppFragment {
     public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetEnableMFASteps.class, "binding", "getBinding()Lcom/discord/databinding/WidgetEnableMfaStepsBinding;", 0)};
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     public static final int KEY_SCREEN = 2;
     private static final String STATE_TOTP_PASSWORD_KEY = "STATE_TOTP_PASSWORD_KEY";
     private static final String STATE_TOTP_SECRET_KEY = "STATE_TOTP_SECRET_KEY";
     public static final int SUCCESS_SCREEN = 3;
 
-    /* renamed from: binding$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
 
-    /* renamed from: viewModel$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: viewModel$delegate, reason: from kotlin metadata */
     private final Lazy viewModel;
 
-    /* compiled from: WidgetEnableMFASteps.kt */
+    /* JADX INFO: compiled from: WidgetEnableMFASteps.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -67,8 +67,8 @@ public final class WidgetEnableMFASteps extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetEnableMFASteps.kt */
-    /* renamed from: com.discord.widgets.settings.account.mfa.WidgetEnableMFASteps$onViewBound$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.account.mfa.WidgetEnableMFASteps$onViewBound$1 */
+    /* JADX INFO: compiled from: WidgetEnableMFASteps.kt */
     public static final class C97961 extends Lambda implements Function0<Unit> {
         public C97961() {
             super(0);
@@ -80,7 +80,7 @@ public final class WidgetEnableMFASteps extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             FragmentActivity activity = WidgetEnableMFASteps.this.getActivity();
             if (activity != null) {
@@ -89,8 +89,8 @@ public final class WidgetEnableMFASteps extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetEnableMFASteps.kt */
-    /* renamed from: com.discord.widgets.settings.account.mfa.WidgetEnableMFASteps$onViewBound$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.account.mfa.WidgetEnableMFASteps$onViewBound$2 */
+    /* JADX INFO: compiled from: WidgetEnableMFASteps.kt */
     public static final class C97972 extends Lambda implements Function1<Integer, Unit> {
         public C97972() {
             super(1);
@@ -107,8 +107,8 @@ public final class WidgetEnableMFASteps extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetEnableMFASteps.kt */
-    /* renamed from: com.discord.widgets.settings.account.mfa.WidgetEnableMFASteps$onViewBoundOrOnResume$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.account.mfa.WidgetEnableMFASteps$onViewBoundOrOnResume$1 */
+    /* JADX INFO: compiled from: WidgetEnableMFASteps.kt */
     public static final class C97981 extends Lambda implements Function1<WidgetEnableMFAViewModel.ViewState, Unit> {
         public C97981() {
             super(1);
@@ -120,7 +120,7 @@ public final class WidgetEnableMFASteps extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(WidgetEnableMFAViewModel.ViewState viewState) {
             Intrinsics3.checkNotNullParameter(viewState, "it");
             DimmerView.setDimmed$default(WidgetEnableMFASteps.access$getBinding$p(WidgetEnableMFASteps.this).f16590b, viewState.isLoading(), false, 2, null);
@@ -131,8 +131,8 @@ public final class WidgetEnableMFASteps extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetEnableMFASteps.kt */
-    /* renamed from: com.discord.widgets.settings.account.mfa.WidgetEnableMFASteps$showPasswordModal$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.account.mfa.WidgetEnableMFASteps$showPasswordModal$1 */
+    /* JADX INFO: compiled from: WidgetEnableMFASteps.kt */
     public static final class C97991 extends Lambda implements Function1<String, Unit> {
         public C97991() {
             super(1);
@@ -144,7 +144,7 @@ public final class WidgetEnableMFASteps extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(String str) {
             Intrinsics3.checkNotNullParameter(str, "newPassword");
             WidgetEnableMFASteps.access$getViewModel$p(WidgetEnableMFASteps.this).setPassword(str);

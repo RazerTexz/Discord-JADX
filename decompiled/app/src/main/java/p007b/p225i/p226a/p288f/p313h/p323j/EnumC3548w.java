@@ -1,7 +1,7 @@
 package p007b.p225i.p226a.p288f.p313h.p323j;
 
-/* renamed from: b.i.a.f.h.j.w */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.h.j.w */
+/* JADX INFO: loaded from: classes3.dex */
 public enum EnumC3548w {
     NONE,
     BATCH_BY_SESSION,

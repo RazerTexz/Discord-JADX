@@ -4,9 +4,9 @@ import java.util.HashSet;
 import kotlin.jvm.functions.Function1;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetGlobalSearchModel.kt */
-/* renamed from: com.discord.widgets.user.search.WidgetGlobalSearchModel$Companion$create$filteredResults$selectedGuildUserResults$1 */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: com.discord.widgets.user.search.WidgetGlobalSearchModel$Companion$create$filteredResults$selectedGuildUserResults$1 */
+/* JADX INFO: compiled from: WidgetGlobalSearchModel.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class C10333x15369a2b extends Lambda implements Function1<Long, Boolean> {
     public final /* synthetic */ HashSet $seenUsersIds;
 

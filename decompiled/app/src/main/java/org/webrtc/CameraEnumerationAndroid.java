@@ -10,12 +10,12 @@ import java.util.List;
 import org.objectweb.asm.Opcodes;
 import p007b.p100d.p104b.p105a.outline;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public class CameraEnumerationAndroid {
     public static final ArrayList<Size> COMMON_RESOLUTIONS = new ArrayList<>(Arrays.asList(new Size(Opcodes.IF_ICMPNE, 120), new Size(240, Opcodes.IF_ICMPNE), new Size(320, 240), new Size(400, 240), new Size(480, 320), new Size(640, 360), new Size(640, 480), new Size(768, 480), new Size(854, 480), new Size(800, 600), new Size(960, 540), new Size(960, 640), new Size(1024, 576), new Size(1024, 600), new Size(1280, 720), new Size(1280, 1024), new Size(1920, WidgetEditUserOrGuildMemberProfile.MAX_BANNER_IMAGE_SIZE), new Size(1920, 1440), new Size(2560, 1440), new Size(3840, 2160)));
     private static final String TAG = "CameraEnumerationAndroid";
 
-    /* renamed from: org.webrtc.CameraEnumerationAndroid$1 */
+    /* JADX INFO: renamed from: org.webrtc.CameraEnumerationAndroid$1 */
     public class C129571 extends ClosestComparator<CaptureFormat.FramerateRange> {
         private static final int MAX_FPS_DIFF_THRESHOLD = 5000;
         private static final int MAX_FPS_HIGH_DIFF_WEIGHT = 3;
@@ -43,13 +43,13 @@ public class CameraEnumerationAndroid {
             return diff2(framerateRange);
         }
 
-        /* renamed from: diff, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: diff, reason: avoid collision after fix types in other method */
         public int diff2(CaptureFormat.FramerateRange framerateRange) {
             return progressivePenalty(framerateRange.min, MIN_FPS_THRESHOLD, 1, 4) + progressivePenalty(Math.abs((this.val$requestedFps * 1000) - framerateRange.max), MAX_FPS_DIFF_THRESHOLD, 1, 3);
         }
     }
 
-    /* renamed from: org.webrtc.CameraEnumerationAndroid$2 */
+    /* JADX INFO: renamed from: org.webrtc.CameraEnumerationAndroid$2 */
     public class C129582 extends ClosestComparator<Size> {
         public final /* synthetic */ int val$requestedHeight;
         public final /* synthetic */ int val$requestedWidth;
@@ -66,7 +66,7 @@ public class CameraEnumerationAndroid {
             return diff2(size);
         }
 
-        /* renamed from: diff, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: diff, reason: avoid collision after fix types in other method */
         public int diff2(Size size) {
             return Math.abs(this.val$requestedHeight - size.height) + Math.abs(this.val$requestedWidth - size.width);
         }

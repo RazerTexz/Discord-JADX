@@ -3,9 +3,9 @@ package com.discord.widgets.emoji;
 import kotlin.jvm.functions.Function0;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetEmojiSheet.kt */
-/* renamed from: com.discord.widgets.emoji.WidgetEmojiSheet$viewModel$2, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.emoji.WidgetEmojiSheet$viewModel$2, reason: use source file name */
+/* JADX INFO: compiled from: WidgetEmojiSheet.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetEmojiSheet9 extends Lambda implements Function0<EmojiSheetViewModel> {
     public final /* synthetic */ WidgetEmojiSheet this$0;
 

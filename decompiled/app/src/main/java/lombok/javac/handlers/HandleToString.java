@@ -19,11 +19,11 @@ import lombok.javac.JavacNode;
 import lombok.javac.JavacTreeMaker;
 import lombok.javac.handlers.JavacHandlerUtil;
 
-/* loaded from: discord-126021.apk:lombok/javac/handlers/HandleToString.SCL.lombok */
+/* JADX INFO: loaded from: discord-126021.apk:lombok/javac/handlers/HandleToString.SCL.lombok */
 public class HandleToString extends JavacAnnotationHandler<ToString> {
     private static /* synthetic */ int[] $SWITCH_TABLE$lombok$core$configuration$CallSuperType;
 
-    /* renamed from: $SWITCH_TABLE$lombok$javac$handlers$JavacHandlerUtil$MemberExistsResult */
+    /* JADX INFO: renamed from: $SWITCH_TABLE$lombok$javac$handlers$JavacHandlerUtil$MemberExistsResult */
     private static /* synthetic */ int[] f27489x2486df07;
 
     static /* synthetic */ int[] $SWITCH_TABLE$lombok$core$configuration$CallSuperType() {
@@ -48,7 +48,7 @@ public class HandleToString extends JavacAnnotationHandler<ToString> {
         return iArr2;
     }
 
-    /* renamed from: $SWITCH_TABLE$lombok$javac$handlers$JavacHandlerUtil$MemberExistsResult */
+    /* JADX INFO: renamed from: $SWITCH_TABLE$lombok$javac$handlers$JavacHandlerUtil$MemberExistsResult */
     static /* synthetic */ int[] m10947x2486df07() {
         int[] iArr = f27489x2486df07;
         if (iArr != null) {

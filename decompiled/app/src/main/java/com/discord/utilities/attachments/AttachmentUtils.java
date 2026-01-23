@@ -26,16 +26,16 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 import p615g0.Buffer3;
 
-/* compiled from: AttachmentUtils.kt */
-/* renamed from: com.discord.utilities.attachments.AttachmentUtilsKt, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.utilities.attachments.AttachmentUtilsKt, reason: use source file name */
+/* JADX INFO: compiled from: AttachmentUtils.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class AttachmentUtils {
     private static final int UTF_8_RANGE_END_EXCLUSIVE = 126;
     private static final int UTF_8_RANGE_START_EXCLUSIVE = 32;
     private static final Lazy REGEX_FILE_NAME_PATTERN$delegate = LazyJVM.lazy(AttachmentUtils2.INSTANCE);
     private static final Ranges2 UTF_8_RANGE_EXCLUSIVE = new Ranges2(32, 126);
 
-    /* renamed from: com.discord.utilities.attachments.AttachmentUtilsKt$WhenMappings */
+    /* JADX INFO: renamed from: com.discord.utilities.attachments.AttachmentUtilsKt$WhenMappings */
     public final /* synthetic */ class WhenMappings {
         public static final /* synthetic */ int[] $EnumSwitchMapping$0 = new int[Bitmap.CompressFormat.values().length];
         public static final /* synthetic */ int[] $EnumSwitchMapping$1;
@@ -49,8 +49,8 @@ public final class AttachmentUtils {
         }
     }
 
-    /* compiled from: AttachmentUtils.kt */
-    /* renamed from: com.discord.utilities.attachments.AttachmentUtilsKt$appendLinks$1 */
+    /* JADX INFO: renamed from: com.discord.utilities.attachments.AttachmentUtilsKt$appendLinks$1 */
+    /* JADX INFO: compiled from: AttachmentUtils.kt */
     public static final class C66881 extends Lambda implements Function1<Attachment<?>, CharSequence> {
         public static final C66881 INSTANCE = new C66881();
 
@@ -58,7 +58,7 @@ public final class AttachmentUtils {
             super(1);
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final CharSequence invoke2(Attachment<?> attachment) {
             Intrinsics3.checkNotNullParameter(attachment, "it");
             Object data = attachment.getData();
@@ -75,8 +75,8 @@ public final class AttachmentUtils {
         }
     }
 
-    /* compiled from: AttachmentUtils.kt */
-    /* renamed from: com.discord.utilities.attachments.AttachmentUtilsKt$getMimeType$1 */
+    /* JADX INFO: renamed from: com.discord.utilities.attachments.AttachmentUtilsKt$getMimeType$1 */
+    /* JADX INFO: compiled from: AttachmentUtils.kt */
     public static final class C66891 extends Lambda implements Function1<String, String> {
         public static final C66891 INSTANCE = new C66891();
 
@@ -89,7 +89,7 @@ public final class AttachmentUtils {
             return invoke2(str);
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final String invoke2(String str) {
             Intrinsics3.checkNotNullParameter(str, "file");
             Matcher matcher = AttachmentUtils.access$getREGEX_FILE_NAME_PATTERN$p().matcher(str);

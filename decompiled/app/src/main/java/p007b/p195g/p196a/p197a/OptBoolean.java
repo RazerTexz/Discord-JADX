@@ -1,14 +1,14 @@
 package p007b.p195g.p196a.p197a;
 
-/* compiled from: OptBoolean.java */
-/* renamed from: b.g.a.a.m0, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.g.a.a.m0, reason: use source file name */
+/* JADX INFO: compiled from: OptBoolean.java */
+/* JADX INFO: loaded from: classes3.dex */
 public enum OptBoolean {
     TRUE,
     FALSE,
     DEFAULT;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public Boolean m1613f() {
         if (this == DEFAULT) {
             return null;

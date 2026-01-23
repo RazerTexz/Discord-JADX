@@ -1,8 +1,8 @@
 package p507d0.p513e0.p514p.p515d.p517m0.p531e.p532a;
 
-/* compiled from: AnnotationQualifierApplicabilityType.kt */
-/* renamed from: d0.e0.p.d.m0.e.a.a, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.e.a.a, reason: use source file name */
+/* JADX INFO: compiled from: AnnotationQualifierApplicabilityType.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public enum AnnotationQualifierApplicabilityType {
     METHOD_RETURN_TYPE("METHOD"),
     VALUE_PARAMETER("PARAMETER"),
@@ -17,7 +17,7 @@ public enum AnnotationQualifierApplicabilityType {
         this.javaTarget = str;
     }
 
-    /* renamed from: values, reason: to resolve conflict with enum method */
+    /* JADX INFO: renamed from: values, reason: to resolve conflict with enum method */
     public static AnnotationQualifierApplicabilityType[] valuesCustom() {
         AnnotationQualifierApplicabilityType[] annotationQualifierApplicabilityTypeArrValuesCustom = values();
         AnnotationQualifierApplicabilityType[] annotationQualifierApplicabilityTypeArr = new AnnotationQualifierApplicabilityType[annotationQualifierApplicabilityTypeArrValuesCustom.length];

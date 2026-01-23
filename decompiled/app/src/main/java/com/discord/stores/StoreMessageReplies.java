@@ -28,8 +28,8 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 import p658rx.Observable;
 
-/* compiled from: StoreMessageReplies.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: StoreMessageReplies.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class StoreMessageReplies extends StoreV2 {
     private static final Map<Long, MessageState> NO_RESULTS = Maps6.emptyMap();
     private final HashMap<Long, Set<Long>> channelMap;
@@ -40,7 +40,7 @@ public final class StoreMessageReplies extends StoreV2 {
     private Map<Long, ? extends MessageState> repliedMessagesCacheSnapshot;
     private final StoreMessages storeMessages;
 
-    /* compiled from: StoreMessageReplies.kt */
+    /* JADX INFO: compiled from: StoreMessageReplies.kt */
     public static final class MessageCache<K, V> extends LinkedHashMap<K, V> {
         @Override // java.util.LinkedHashMap, java.util.HashMap, java.util.AbstractMap, java.util.Map
         public final /* bridge */ Set<Map.Entry<K, V>> entrySet() {
@@ -84,10 +84,10 @@ public final class StoreMessageReplies extends StoreV2 {
         }
     }
 
-    /* compiled from: StoreMessageReplies.kt */
+    /* JADX INFO: compiled from: StoreMessageReplies.kt */
     public static abstract class MessageState {
 
-        /* compiled from: StoreMessageReplies.kt */
+        /* JADX INFO: compiled from: StoreMessageReplies.kt */
         public static final class Deleted extends MessageState {
             public static final Deleted INSTANCE = new Deleted();
 
@@ -96,7 +96,7 @@ public final class StoreMessageReplies extends StoreV2 {
             }
         }
 
-        /* compiled from: StoreMessageReplies.kt */
+        /* JADX INFO: compiled from: StoreMessageReplies.kt */
         public static final /* data */ class Loaded extends MessageState {
             private final Message message;
 
@@ -114,7 +114,7 @@ public final class StoreMessageReplies extends StoreV2 {
                 return loaded.copy(message);
             }
 
-            /* renamed from: component1, reason: from getter */
+            /* JADX INFO: renamed from: component1, reason: from getter */
             public final Message getMessage() {
                 return this.message;
             }
@@ -151,7 +151,7 @@ public final class StoreMessageReplies extends StoreV2 {
             }
         }
 
-        /* compiled from: StoreMessageReplies.kt */
+        /* JADX INFO: compiled from: StoreMessageReplies.kt */
         public static final class Unloaded extends MessageState {
             public static final Unloaded INSTANCE = new Unloaded();
 
@@ -168,8 +168,8 @@ public final class StoreMessageReplies extends StoreV2 {
         }
     }
 
-    /* compiled from: StoreMessageReplies.kt */
-    /* renamed from: com.discord.stores.StoreMessageReplies$observeMessageReferencesForChannel$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreMessageReplies$observeMessageReferencesForChannel$1 */
+    /* JADX INFO: compiled from: StoreMessageReplies.kt */
     public static final class C62201 extends Lambda implements Function0<Map<Long, ? extends MessageState>> {
         public final /* synthetic */ long $channelId;
 
@@ -185,7 +185,7 @@ public final class StoreMessageReplies extends StoreV2 {
         }
 
         @Override // kotlin.jvm.functions.Function0
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final Map<Long, ? extends MessageState> invoke2() {
             return StoreMessageReplies.access$getCachedChannelMessages(StoreMessageReplies.this, this.$channelId);
         }

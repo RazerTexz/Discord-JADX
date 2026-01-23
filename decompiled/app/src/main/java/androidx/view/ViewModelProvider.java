@@ -5,7 +5,7 @@ import androidx.annotation.MainThread;
 import androidx.annotation.NonNull;
 import java.lang.reflect.InvocationTargetException;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class ViewModelProvider {
     private static final String DEFAULT_KEY = "androidx.lifecycle.ViewModelProvider.DefaultKey";
     private final Factory mFactory;

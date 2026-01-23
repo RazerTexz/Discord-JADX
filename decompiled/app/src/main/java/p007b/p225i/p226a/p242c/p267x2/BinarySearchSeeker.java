@@ -7,47 +7,47 @@ import p007b.p085c.p086a.p087a0.AnimatableValueParser;
 import p007b.p225i.p226a.p242c.p259f3.Util2;
 import p007b.p225i.p226a.p242c.p267x2.SeekMap;
 
-/* compiled from: BinarySearchSeeker.java */
-/* renamed from: b.i.a.c.x2.a, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.x2.a, reason: use source file name */
+/* JADX INFO: compiled from: BinarySearchSeeker.java */
+/* JADX INFO: loaded from: classes3.dex */
 public abstract class BinarySearchSeeker {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final a f8030a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final f f8031b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     @Nullable
     public c f8032c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final int f8033d;
 
-    /* compiled from: BinarySearchSeeker.java */
-    /* renamed from: b.i.a.c.x2.a$a */
+    /* JADX INFO: renamed from: b.i.a.c.x2.a$a */
+    /* JADX INFO: compiled from: BinarySearchSeeker.java */
     public static class a implements SeekMap {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final d f8034a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final long f8035b;
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public final long f8036c;
 
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         public final long f8037d;
 
-        /* renamed from: e */
+        /* JADX INFO: renamed from: e */
         public final long f8038e;
 
-        /* renamed from: f */
+        /* JADX INFO: renamed from: f */
         public final long f8039f;
 
-        /* renamed from: g */
+        /* JADX INFO: renamed from: g */
         public final long f8040g;
 
         public a(d dVar, long j, long j2, long j3, long j4, long j5, long j6) {
@@ -61,60 +61,60 @@ public abstract class BinarySearchSeeker {
         }
 
         @Override // p007b.p225i.p226a.p242c.p267x2.SeekMap
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public boolean mo3619c() {
             return true;
         }
 
         @Override // p007b.p225i.p226a.p242c.p267x2.SeekMap
-        /* renamed from: h */
+        /* JADX INFO: renamed from: h */
         public SeekMap.a mo3620h(long j) {
             return new SeekMap.a(new SeekPoint(j, c.m3623a(this.f8034a.mo3622a(j), this.f8036c, this.f8037d, this.f8038e, this.f8039f, this.f8040g)));
         }
 
         @Override // p007b.p225i.p226a.p242c.p267x2.SeekMap
-        /* renamed from: i */
+        /* JADX INFO: renamed from: i */
         public long mo3621i() {
             return this.f8035b;
         }
     }
 
-    /* compiled from: BinarySearchSeeker.java */
-    /* renamed from: b.i.a.c.x2.a$b */
+    /* JADX INFO: renamed from: b.i.a.c.x2.a$b */
+    /* JADX INFO: compiled from: BinarySearchSeeker.java */
     public static final class b implements d {
         @Override // p007b.p225i.p226a.p242c.p267x2.BinarySearchSeeker.d
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public long mo3622a(long j) {
             return j;
         }
     }
 
-    /* compiled from: BinarySearchSeeker.java */
-    /* renamed from: b.i.a.c.x2.a$c */
+    /* JADX INFO: renamed from: b.i.a.c.x2.a$c */
+    /* JADX INFO: compiled from: BinarySearchSeeker.java */
     public static class c {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final long f8041a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final long f8042b;
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public final long f8043c;
 
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         public long f8044d;
 
-        /* renamed from: e */
+        /* JADX INFO: renamed from: e */
         public long f8045e;
 
-        /* renamed from: f */
+        /* JADX INFO: renamed from: f */
         public long f8046f;
 
-        /* renamed from: g */
+        /* JADX INFO: renamed from: g */
         public long f8047g;
 
-        /* renamed from: h */
+        /* JADX INFO: renamed from: h */
         public long f8048h;
 
         public c(long j, long j2, long j3, long j4, long j5, long j6, long j7) {
@@ -128,7 +128,7 @@ public abstract class BinarySearchSeeker {
             this.f8048h = m3623a(j2, j3, j4, j5, j6, j7);
         }
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public static long m3623a(long j, long j2, long j3, long j4, long j5, long j6) {
             if (j4 + 1 >= j5 || j2 + 1 >= j3) {
                 return j4;
@@ -138,27 +138,27 @@ public abstract class BinarySearchSeeker {
         }
     }
 
-    /* compiled from: BinarySearchSeeker.java */
-    /* renamed from: b.i.a.c.x2.a$d */
+    /* JADX INFO: renamed from: b.i.a.c.x2.a$d */
+    /* JADX INFO: compiled from: BinarySearchSeeker.java */
     public interface d {
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         long mo3622a(long j);
     }
 
-    /* compiled from: BinarySearchSeeker.java */
-    /* renamed from: b.i.a.c.x2.a$e */
+    /* JADX INFO: renamed from: b.i.a.c.x2.a$e */
+    /* JADX INFO: compiled from: BinarySearchSeeker.java */
     public static final class e {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public static final e f8049a = new e(-3, -9223372036854775807L, -1);
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final int f8050b;
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public final long f8051c;
 
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         public final long f8052d;
 
         public e(int i, long j, long j2) {
@@ -167,29 +167,29 @@ public abstract class BinarySearchSeeker {
             this.f8052d = j2;
         }
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public static e m3624a(long j, long j2) {
             return new e(-1, j, j2);
         }
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public static e m3625b(long j) {
             return new e(0, -9223372036854775807L, j);
         }
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public static e m3626c(long j, long j2) {
             return new e(-2, j, j2);
         }
     }
 
-    /* compiled from: BinarySearchSeeker.java */
-    /* renamed from: b.i.a.c.x2.a$f */
+    /* JADX INFO: renamed from: b.i.a.c.x2.a$f */
+    /* JADX INFO: compiled from: BinarySearchSeeker.java */
     public interface f {
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         void mo3627a();
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         e mo3628b(ExtractorInput extractorInput, long j) throws IOException;
     }
 
@@ -199,7 +199,7 @@ public abstract class BinarySearchSeeker {
         this.f8030a = new a(dVar, j, j2, j3, j4, j5, j6);
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public int m3613a(ExtractorInput extractorInput, PositionHolder positionHolder) throws IOException {
         while (true) {
             c cVar = this.f8032c;
@@ -245,18 +245,18 @@ public abstract class BinarySearchSeeker {
         }
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final boolean m3614b() {
         return this.f8032c != null;
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final void m3615c(boolean z2, long j) {
         this.f8032c = null;
         this.f8031b.mo3627a();
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final int m3616d(ExtractorInput extractorInput, long j, PositionHolder positionHolder) {
         if (j == extractorInput.getPosition()) {
             return 0;
@@ -265,7 +265,7 @@ public abstract class BinarySearchSeeker {
         return 1;
     }
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final void m3617e(long j) {
         c cVar = this.f8032c;
         if (cVar == null || cVar.f8041a != j) {
@@ -275,7 +275,7 @@ public abstract class BinarySearchSeeker {
         }
     }
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final boolean m3618f(ExtractorInput extractorInput, long j) throws IOException {
         long position = j - extractorInput.getPosition();
         if (position < 0 || position > Permission.USE_EXTERNAL_EMOJIS) {

@@ -21,27 +21,27 @@ import p600f0.OkHttpClient;
 import p600f0.p601e0.Util7;
 import p600f0.p601e0.p605g.RealCall;
 
-/* compiled from: HttpRequest.java */
-/* renamed from: b.i.c.m.d.n.a, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.c.m.d.n.a, reason: use source file name */
+/* JADX INFO: compiled from: HttpRequest.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class HttpRequest {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final OkHttpClient f12657a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final int f12658b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final String f12659c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final Map<String, String> f12660d;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public MultipartBody.C12933a f12662f = null;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final Map<String, String> f12661e = new HashMap();
 
     static {
@@ -59,7 +59,7 @@ public class HttpRequest {
         this.f12660d = map;
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public HttpResponse m6621a() throws IOException {
         HttpUrl httpUrlM10409b;
         Request.C12935a c12935a = new Request.C12935a();
@@ -96,7 +96,7 @@ public class HttpRequest {
         return new HttpResponse(responseExecute.com.discord.models.domain.ModelAuditLogEntry.CHANGE_KEY_CODE java.lang.String, responseBody != null ? responseBody.m10998d() : null, responseExecute.headers);
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public HttpRequest m6622b(String str, String str2) {
         if (this.f12662f == null) {
             MultipartBody.C12933a c12933a = new MultipartBody.C12933a();
@@ -114,7 +114,7 @@ public class HttpRequest {
         return this;
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public HttpRequest m6623c(String str, String str2, String str3, File file) {
         MediaType.Companion c12932a = MediaType.INSTANCE;
         RequestBody requestBodyCreate = RequestBody.create(MediaType.Companion.m10968b(str3), file);

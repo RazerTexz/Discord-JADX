@@ -8,9 +8,9 @@ import p007b.p008a.p018d.AppToast;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: StoreUserSettings.kt */
-/* renamed from: com.discord.stores.StoreUserSettings$Companion$updateUserSettings$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.stores.StoreUserSettings$Companion$updateUserSettings$1, reason: use source file name */
+/* JADX INFO: compiled from: StoreUserSettings.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class StoreUserSettings2 extends Lambda implements Function1<ModelUserSettings, Unit> {
     public final /* synthetic */ Integer $successStringResId;
     public final /* synthetic */ AppActivity $this_updateUserSettings;
@@ -28,7 +28,7 @@ public final class StoreUserSettings2 extends Lambda implements Function1<ModelU
         return Unit.f27425a;
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final void invoke2(ModelUserSettings modelUserSettings) {
         Intrinsics3.checkNotNullParameter(modelUserSettings, "it");
         Integer num = this.$successStringResId;

@@ -5,8 +5,8 @@ import androidx.exifinterface.media.ExifInterface;
 import kotlin.jvm.functions.Function0;
 import p658rx.functions.Action0;
 
-/* compiled from: ObservableExtensions.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: ObservableExtensions.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class ObservableExtensionsKt$appSubscribe$subscription$2 implements Action0 {
     public final /* synthetic */ Function0 $onCompleted;
     public final /* synthetic */ Function0 $onTerminated;

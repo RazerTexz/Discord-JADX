@@ -14,27 +14,27 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p658rx.Observable;
 import p658rx.functions.Func3;
 
-/* compiled from: UserAvatarPresenceViewController.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: UserAvatarPresenceViewController.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class UserAvatarPresenceViewController extends RxViewController<UserAvatarPresenceView, UserAvatarPresenceView.C7131a> {
 
-    /* renamed from: a, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: a, reason: from kotlin metadata */
     public long userId;
 
-    /* renamed from: b, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: b, reason: from kotlin metadata */
     public final StoreUser storeUser;
 
-    /* renamed from: c, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: c, reason: from kotlin metadata */
     public final StoreUserPresence storeUserPresence;
 
-    /* renamed from: d, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: d, reason: from kotlin metadata */
     public final StreamContextService streamContextService;
 
-    /* compiled from: UserAvatarPresenceViewController.kt */
-    /* renamed from: com.discord.views.user.UserAvatarPresenceViewController$a */
+    /* JADX INFO: renamed from: com.discord.views.user.UserAvatarPresenceViewController$a */
+    /* JADX INFO: compiled from: UserAvatarPresenceViewController.kt */
     public static final class C7135a<T1, T2, T3, R> implements Func3<User, ModelRichPresence, StreamContext, UserAvatarPresenceView.C7131a> {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public static final C7135a f19365a = new C7135a();
 
         @Override // p658rx.functions.Func3

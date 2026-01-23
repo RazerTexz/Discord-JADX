@@ -41,8 +41,8 @@ import p507d0.p592z.p594d.Lambda;
 import p637j0.p641k.Func1;
 import p658rx.Observable;
 
-/* compiled from: AnchoredVoiceControlsView.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: AnchoredVoiceControlsView.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class AnchoredVoiceControlsView extends FrameLayout {
     private final AnchoredVoiceControlsViewBinding binding;
     private final TooltipManager tooltipManager;
@@ -58,8 +58,8 @@ public final class AnchoredVoiceControlsView extends FrameLayout {
         }
     }
 
-    /* compiled from: AnchoredVoiceControlsView.kt */
-    /* renamed from: com.discord.widgets.voice.controls.AnchoredVoiceControlsView$configureScreenShareButtonSparkle$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.voice.controls.AnchoredVoiceControlsView$configureScreenShareButtonSparkle$1 */
+    /* JADX INFO: compiled from: AnchoredVoiceControlsView.kt */
     public static final class ViewOnClickListenerC104271 implements View.OnClickListener {
         public final /* synthetic */ long $channelId;
         public final /* synthetic */ WidgetVoiceBottomSheet.FeatureContext $featureContext;
@@ -92,8 +92,8 @@ public final class AnchoredVoiceControlsView extends FrameLayout {
         }
     }
 
-    /* compiled from: AnchoredVoiceControlsView.kt */
-    /* renamed from: com.discord.widgets.voice.controls.AnchoredVoiceControlsView$configureScreenShareButtonSparkle$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.voice.controls.AnchoredVoiceControlsView$configureScreenShareButtonSparkle$2 */
+    /* JADX INFO: compiled from: AnchoredVoiceControlsView.kt */
     public static final class C104282<T, R> implements Func1<Void, Unit> {
         public static final C104282 INSTANCE = new C104282();
 
@@ -103,13 +103,13 @@ public final class AnchoredVoiceControlsView extends FrameLayout {
             return Unit.f27425a;
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final void call2(Void r1) {
         }
     }
 
-    /* compiled from: AnchoredVoiceControlsView.kt */
-    /* renamed from: com.discord.widgets.voice.controls.AnchoredVoiceControlsView$configureUI$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.voice.controls.AnchoredVoiceControlsView$configureUI$1 */
+    /* JADX INFO: compiled from: AnchoredVoiceControlsView.kt */
     public static final class ViewOnClickListenerC104291 implements View.OnClickListener {
         public final /* synthetic */ Function0 $onCameraButtonPressed;
 
@@ -123,8 +123,8 @@ public final class AnchoredVoiceControlsView extends FrameLayout {
         }
     }
 
-    /* compiled from: AnchoredVoiceControlsView.kt */
-    /* renamed from: com.discord.widgets.voice.controls.AnchoredVoiceControlsView$configureUI$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.voice.controls.AnchoredVoiceControlsView$configureUI$2 */
+    /* JADX INFO: compiled from: AnchoredVoiceControlsView.kt */
     public static final class ViewOnClickListenerC104302 implements View.OnClickListener {
         public final /* synthetic */ Function0 $onSpeakerButtonPressed;
 
@@ -138,8 +138,8 @@ public final class AnchoredVoiceControlsView extends FrameLayout {
         }
     }
 
-    /* compiled from: AnchoredVoiceControlsView.kt */
-    /* renamed from: com.discord.widgets.voice.controls.AnchoredVoiceControlsView$configureUI$3 */
+    /* JADX INFO: renamed from: com.discord.widgets.voice.controls.AnchoredVoiceControlsView$configureUI$3 */
+    /* JADX INFO: compiled from: AnchoredVoiceControlsView.kt */
     public static final class ViewOnClickListenerC104313 implements View.OnClickListener {
         public final /* synthetic */ Function0 $onMutePressed;
 
@@ -153,8 +153,8 @@ public final class AnchoredVoiceControlsView extends FrameLayout {
         }
     }
 
-    /* compiled from: AnchoredVoiceControlsView.kt */
-    /* renamed from: com.discord.widgets.voice.controls.AnchoredVoiceControlsView$configureUI$4 */
+    /* JADX INFO: renamed from: com.discord.widgets.voice.controls.AnchoredVoiceControlsView$configureUI$4 */
+    /* JADX INFO: compiled from: AnchoredVoiceControlsView.kt */
     public static final class ViewOnClickListenerC104324 implements View.OnClickListener {
         public final /* synthetic */ Function0 $onScreenSharePressed;
 
@@ -168,8 +168,8 @@ public final class AnchoredVoiceControlsView extends FrameLayout {
         }
     }
 
-    /* compiled from: AnchoredVoiceControlsView.kt */
-    /* renamed from: com.discord.widgets.voice.controls.AnchoredVoiceControlsView$configureUI$5 */
+    /* JADX INFO: renamed from: com.discord.widgets.voice.controls.AnchoredVoiceControlsView$configureUI$5 */
+    /* JADX INFO: compiled from: AnchoredVoiceControlsView.kt */
     public static final class ViewOnClickListenerC104335 implements View.OnClickListener {
         public final /* synthetic */ Function0 $onDisconnectPressed;
 
@@ -183,8 +183,8 @@ public final class AnchoredVoiceControlsView extends FrameLayout {
         }
     }
 
-    /* compiled from: AnchoredVoiceControlsView.kt */
-    /* renamed from: com.discord.widgets.voice.controls.AnchoredVoiceControlsView$setOnPttPressedListener$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.voice.controls.AnchoredVoiceControlsView$setOnPttPressedListener$1 */
+    /* JADX INFO: compiled from: AnchoredVoiceControlsView.kt */
     public static final class C104341 extends Lambda implements Function1<Boolean, Unit> {
         public final /* synthetic */ Function1 $onPttPressed;
 

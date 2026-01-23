@@ -7,12 +7,12 @@ import kotlin.Tuples2;
 import p507d0.Tuples;
 import p658rx.functions.Func2;
 
-/* compiled from: RtcConnection.kt */
-/* renamed from: b.a.q.z */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.a.q.z */
+/* JADX INFO: compiled from: RtcConnection.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class C1268z<T1, T2, R> implements Func2<Map<String, ? extends MediaSinkWantsManager9>, RtcConnection.StateChange, Tuples2<? extends Map<String, ? extends MediaSinkWantsManager9>, ? extends RtcConnection.State>> {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static final C1268z f1874j = new C1268z();
 
     @Override // p658rx.functions.Func2

@@ -40,29 +40,29 @@ import p507d0.p592z.p594d.Lambda;
 import p507d0.p592z.p594d.Reflection2;
 import p658rx.Observable;
 
-/* compiled from: WidgetGuildBoostConfirmation.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetGuildBoostConfirmation.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetGuildBoostConfirmation extends AppFragment {
     public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetGuildBoostConfirmation.class, "binding", "getBinding()Lcom/discord/databinding/WidgetServerBoostConfirmationBinding;", 0)};
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private static final String INTENT_EXTRA_GUILD_ID = "GUILD_ID";
     private static final String INTENT_EXTRA_SLOT_ID = "SLOT_ID";
 
-    /* renamed from: binding$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
 
-    /* renamed from: guildId$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: guildId$delegate, reason: from kotlin metadata */
     private final Lazy guildId;
 
-    /* renamed from: slotId$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: slotId$delegate, reason: from kotlin metadata */
     private final Lazy slotId;
 
-    /* renamed from: viewModel$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: viewModel$delegate, reason: from kotlin metadata */
     private final Lazy viewModel;
 
-    /* compiled from: WidgetGuildBoostConfirmation.kt */
+    /* JADX INFO: compiled from: WidgetGuildBoostConfirmation.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -93,8 +93,8 @@ public final class WidgetGuildBoostConfirmation extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetGuildBoostConfirmation.kt */
-    /* renamed from: com.discord.widgets.servers.guildboost.WidgetGuildBoostConfirmation$configureUI$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.guildboost.WidgetGuildBoostConfirmation$configureUI$1 */
+    /* JADX INFO: compiled from: WidgetGuildBoostConfirmation.kt */
     public static final class C95171 extends Lambda implements Function0<Unit> {
         public C95171() {
             super(0);
@@ -106,7 +106,7 @@ public final class WidgetGuildBoostConfirmation extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             FragmentActivity activity = WidgetGuildBoostConfirmation.this.getActivity();
             if (activity != null) {
@@ -115,8 +115,8 @@ public final class WidgetGuildBoostConfirmation extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetGuildBoostConfirmation.kt */
-    /* renamed from: com.discord.widgets.servers.guildboost.WidgetGuildBoostConfirmation$onResume$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.guildboost.WidgetGuildBoostConfirmation$onResume$1 */
+    /* JADX INFO: compiled from: WidgetGuildBoostConfirmation.kt */
     public static final /* synthetic */ class C95181 extends FunctionReferenceImpl implements Function1<GuildBoostInProgressViewModel.ViewState, Unit> {
         public C95181(WidgetGuildBoostConfirmation widgetGuildBoostConfirmation) {
             super(1, widgetGuildBoostConfirmation, WidgetGuildBoostConfirmation.class, "configureUI", "configureUI(Lcom/discord/widgets/servers/guildboost/GuildBoostInProgressViewModel$ViewState;)V", 0);
@@ -128,15 +128,15 @@ public final class WidgetGuildBoostConfirmation extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(GuildBoostInProgressViewModel.ViewState viewState) {
             Intrinsics3.checkNotNullParameter(viewState, "p1");
             WidgetGuildBoostConfirmation.access$configureUI((WidgetGuildBoostConfirmation) this.receiver, viewState);
         }
     }
 
-    /* compiled from: WidgetGuildBoostConfirmation.kt */
-    /* renamed from: com.discord.widgets.servers.guildboost.WidgetGuildBoostConfirmation$onViewBound$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.guildboost.WidgetGuildBoostConfirmation$onViewBound$1 */
+    /* JADX INFO: compiled from: WidgetGuildBoostConfirmation.kt */
     public static final class ViewOnClickListenerC95191 implements View.OnClickListener {
         public ViewOnClickListenerC95191() {
         }

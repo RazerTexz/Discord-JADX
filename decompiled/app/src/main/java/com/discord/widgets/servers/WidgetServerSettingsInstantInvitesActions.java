@@ -29,19 +29,19 @@ import p507d0.p579g0.StringsJVM;
 import p507d0.p592z.p594d.FunctionReferenceImpl;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: WidgetServerSettingsInstantInvitesActions.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetServerSettingsInstantInvitesActions.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetServerSettingsInstantInvitesActions extends AppBottomSheet {
     private static final String ARG_INVITE_CODE = "ARG_INVITE_CODE";
 
-    /* renamed from: binding$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
     public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetServerSettingsInstantInvitesActions.class, "binding", "getBinding()Lcom/discord/databinding/WidgetServerSettingsInstantInviteActionsBinding;", 0)};
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
 
-    /* compiled from: WidgetServerSettingsInstantInvitesActions.kt */
+    /* JADX INFO: compiled from: WidgetServerSettingsInstantInvitesActions.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -61,13 +61,13 @@ public final class WidgetServerSettingsInstantInvitesActions extends AppBottomSh
         }
     }
 
-    /* compiled from: WidgetServerSettingsInstantInvitesActions.kt */
-    /* renamed from: com.discord.widgets.servers.WidgetServerSettingsInstantInvitesActions$onResume$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.WidgetServerSettingsInstantInvitesActions$onResume$1 */
+    /* JADX INFO: compiled from: WidgetServerSettingsInstantInvitesActions.kt */
     public static final class ViewOnClickListenerC92591 implements View.OnClickListener {
         public final /* synthetic */ String $inviteCode;
 
-        /* compiled from: WidgetServerSettingsInstantInvitesActions.kt */
-        /* renamed from: com.discord.widgets.servers.WidgetServerSettingsInstantInvitesActions$onResume$1$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.widgets.servers.WidgetServerSettingsInstantInvitesActions$onResume$1$1, reason: invalid class name */
+        /* JADX INFO: compiled from: WidgetServerSettingsInstantInvitesActions.kt */
         public static final /* synthetic */ class AnonymousClass1 extends FunctionReferenceImpl implements Function1<ModelInvite, Unit> {
             public AnonymousClass1(WidgetServerSettingsInstantInvitesActions widgetServerSettingsInstantInvitesActions) {
                 super(1, widgetServerSettingsInstantInvitesActions, WidgetServerSettingsInstantInvitesActions.class, "handleInviteRevoked", "handleInviteRevoked(Lcom/discord/models/domain/ModelInvite;)V", 0);
@@ -79,7 +79,7 @@ public final class WidgetServerSettingsInstantInvitesActions extends AppBottomSh
                 return Unit.f27425a;
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2(ModelInvite modelInvite) {
                 Intrinsics3.checkNotNullParameter(modelInvite, "p1");
                 WidgetServerSettingsInstantInvitesActions.access$handleInviteRevoked((WidgetServerSettingsInstantInvitesActions) this.receiver, modelInvite);
@@ -96,8 +96,8 @@ public final class WidgetServerSettingsInstantInvitesActions extends AppBottomSh
         }
     }
 
-    /* compiled from: WidgetServerSettingsInstantInvitesActions.kt */
-    /* renamed from: com.discord.widgets.servers.WidgetServerSettingsInstantInvitesActions$onResume$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.WidgetServerSettingsInstantInvitesActions$onResume$2 */
+    /* JADX INFO: compiled from: WidgetServerSettingsInstantInvitesActions.kt */
     public static final class ViewOnClickListenerC92602 implements View.OnClickListener {
         public final /* synthetic */ String $inviteUrl;
 
@@ -112,8 +112,8 @@ public final class WidgetServerSettingsInstantInvitesActions extends AppBottomSh
         }
     }
 
-    /* compiled from: WidgetServerSettingsInstantInvitesActions.kt */
-    /* renamed from: com.discord.widgets.servers.WidgetServerSettingsInstantInvitesActions$onResume$3 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.WidgetServerSettingsInstantInvitesActions$onResume$3 */
+    /* JADX INFO: compiled from: WidgetServerSettingsInstantInvitesActions.kt */
     public static final class ViewOnClickListenerC92613 implements View.OnClickListener {
         public final /* synthetic */ String $inviteUrl;
 

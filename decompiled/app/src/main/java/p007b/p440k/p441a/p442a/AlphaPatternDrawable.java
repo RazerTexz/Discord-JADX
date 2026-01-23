@@ -7,30 +7,30 @@ import android.graphics.Paint;
 import android.graphics.Rect;
 import android.graphics.drawable.Drawable;
 
-/* compiled from: AlphaPatternDrawable.java */
-/* renamed from: b.k.a.a.a, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.k.a.a.a, reason: use source file name */
+/* JADX INFO: compiled from: AlphaPatternDrawable.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class AlphaPatternDrawable extends Drawable {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public int f13598a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public Paint f13599b = new Paint();
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public Paint f13600c = new Paint();
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public Paint f13601d = new Paint();
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public int f13602e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public int f13603f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public Bitmap f13604g;
 
     public AlphaPatternDrawable(int i) {

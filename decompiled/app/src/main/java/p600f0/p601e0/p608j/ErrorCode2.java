@@ -2,9 +2,9 @@ package p600f0.p601e0.p608j;
 
 import kotlin.jvm.internal.DefaultConstructorMarker;
 
-/* compiled from: ErrorCode.kt */
-/* renamed from: f0.e0.j.a, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: f0.e0.j.a, reason: use source file name */
+/* JADX INFO: compiled from: ErrorCode.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public enum ErrorCode2 {
     NO_ERROR(0),
     PROTOCOL_ERROR(1),
@@ -30,12 +30,12 @@ public enum ErrorCode2 {
     HTTP_1_1_REQUIRED(13);
 
 
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     public static final a f25579q = new a(null);
     private final int httpCode;
 
-    /* compiled from: ErrorCode.kt */
-    /* renamed from: f0.e0.j.a$a */
+    /* JADX INFO: renamed from: f0.e0.j.a$a */
+    /* JADX INFO: compiled from: ErrorCode.kt */
     public static final class a {
         public a(DefaultConstructorMarker defaultConstructorMarker) {
         }
@@ -45,7 +45,7 @@ public enum ErrorCode2 {
         this.httpCode = i;
     }
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final int m10241f() {
         return this.httpCode;
     }

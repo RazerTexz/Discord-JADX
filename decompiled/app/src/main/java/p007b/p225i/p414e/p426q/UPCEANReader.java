@@ -14,30 +14,30 @@ import p007b.p225i.p414e.ResultPoint;
 import p007b.p225i.p414e.ResultPointCallback;
 import p007b.p225i.p414e.p418n.BitArray;
 
-/* compiled from: UPCEANReader.java */
-/* renamed from: b.i.e.q.p, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.e.q.p, reason: use source file name */
+/* JADX INFO: compiled from: UPCEANReader.java */
+/* JADX INFO: loaded from: classes3.dex */
 public abstract class UPCEANReader extends OneDReader {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final int[] f13389a = {1, 1, 1};
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static final int[] f13390b = {1, 1, 1, 1, 1};
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public static final int[][] f13391c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public static final int[][] f13392d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final StringBuilder f13393e = new StringBuilder(20);
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final UPCEANExtensionSupport f13394f = new UPCEANExtensionSupport();
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public final EANManufacturerOrgSupport f13395g = new EANManufacturerOrgSupport();
 
     static {
@@ -56,7 +56,7 @@ public abstract class UPCEANReader extends OneDReader {
         }
     }
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public static int m7004h(BitArray bitArray, int[] iArr, int i, int[][] iArr2) throws NotFoundException {
         OneDReader.m6997e(bitArray, i, iArr);
         int length = iArr2.length;
@@ -75,7 +75,7 @@ public abstract class UPCEANReader extends OneDReader {
         throw NotFoundException.f21665l;
     }
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public static int[] m7005l(BitArray bitArray, int i, boolean z2, int[] iArr, int[] iArr2) throws NotFoundException {
         int i2 = bitArray.f13228k;
         int iM6937g = z2 ? bitArray.m6937g(i) : bitArray.m6936f(i);
@@ -108,7 +108,7 @@ public abstract class UPCEANReader extends OneDReader {
         throw NotFoundException.f21665l;
     }
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public static int[] m7006m(BitArray bitArray) throws NotFoundException {
         int[] iArr = new int[f13389a.length];
         int[] iArrM7005l = null;
@@ -130,12 +130,12 @@ public abstract class UPCEANReader extends OneDReader {
     }
 
     @Override // p007b.p225i.p414e.p426q.OneDReader
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public Result mo6983b(int i, BitArray bitArray, Map<DecodeHintType, ?> map) throws NotFoundException, ChecksumException, FormatException {
         return mo7001k(i, bitArray, m7006m(bitArray), map);
     }
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public boolean mo7007g(String str) throws FormatException {
         int length = str.length();
         if (length == 0) {
@@ -168,17 +168,17 @@ public abstract class UPCEANReader extends OneDReader {
         throw FormatException.m9260a();
     }
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public int[] mo7008i(BitArray bitArray, int i) throws NotFoundException {
         int[] iArr = f13389a;
         return m7005l(bitArray, i, false, iArr, new int[iArr.length]);
     }
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public abstract int mo6989j(BitArray bitArray, int[] iArr, StringBuilder sb) throws NotFoundException;
 
-    /* renamed from: k */
-    public Result mo7001k(int i, BitArray bitArray, int[] iArr, Map<DecodeHintType, ?> map) throws NotFoundException, ChecksumException, NumberFormatException, FormatException {
+    /* JADX INFO: renamed from: k */
+    public Result mo7001k(int i, BitArray bitArray, int[] iArr, Map<DecodeHintType, ?> map) throws NotFoundException, ChecksumException, FormatException {
         int length;
         boolean z2;
         String str = null;
@@ -280,6 +280,6 @@ public abstract class UPCEANReader extends OneDReader {
         return result;
     }
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public abstract BarcodeFormat mo6990n();
 }

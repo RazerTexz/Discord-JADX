@@ -10,33 +10,33 @@ import p007b.p109f.p115d.p122g.MemoryTrimmableRegistry;
 import p007b.p109f.p115d.p122g.PooledByteBufferFactory;
 import p007b.p109f.p115d.p122g.PooledByteStreams;
 
-/* compiled from: PoolFactory.java */
-/* renamed from: b.f.j.l.x, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.f.j.l.x, reason: use source file name */
+/* JADX INFO: compiled from: PoolFactory.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class PoolFactory {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final PoolConfig f3968a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public MemoryChunkPool f3969b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public BitmapPool f3970c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public MemoryChunkPool f3971d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public MemoryChunkPool f3972e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public PooledByteBufferFactory f3973f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public PooledByteStreams f3974g;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public ByteArrayPool f3975h;
 
     public PoolFactory(PoolConfig poolConfig) {
@@ -44,49 +44,49 @@ public class PoolFactory {
     }
 
     /* JADX WARN: Failed to restore switch over string. Please report as a decompilation issue */
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public BitmapPool m1406a() {
         if (this.f3970c == null) {
             String str = this.f3968a.f3966i;
-            char c = 65535;
+            byte b2 = -1;
             switch (str.hashCode()) {
                 case -1868884870:
                     if (str.equals("legacy_default_params")) {
-                        c = 3;
+                        b2 = 3;
                     }
                     break;
                 case -1106578487:
                     if (str.equals("legacy")) {
-                        c = 4;
+                        b2 = 4;
                     }
                     break;
                 case -404562712:
                     if (str.equals("experimental")) {
-                        c = 2;
+                        b2 = 2;
                     }
                     break;
                 case -402149703:
                     if (str.equals("dummy_with_tracking")) {
-                        c = 1;
+                        b2 = 1;
                     }
                     break;
                 case 95945896:
                     if (str.equals("dummy")) {
-                        c = 0;
+                        b2 = 0;
                     }
                     break;
             }
-            if (c == 0) {
+            if (b2 == 0) {
                 this.f3970c = new DummyBitmapPool();
-            } else if (c == 1) {
+            } else if (b2 == 1) {
                 this.f3970c = new DummyTrackingInUseBitmapPool();
-            } else if (c == 2) {
+            } else if (b2 == 2) {
                 Objects.requireNonNull(this.f3968a);
                 int i = this.f3968a.f3967j;
                 NoOpPoolStatsTracker noOpPoolStatsTrackerM1398h = NoOpPoolStatsTracker.m1398h();
                 Objects.requireNonNull(this.f3968a);
                 this.f3970c = new LruBitmapPool(0, i, noOpPoolStatsTrackerM1398h, null);
-            } else if (c != 3) {
+            } else if (b2 != 3) {
                 PoolConfig poolConfig = this.f3968a;
                 this.f3970c = new BucketsBitmapPool(poolConfig.f3961d, poolConfig.f3958a, poolConfig.f3959b, false);
             } else {
@@ -96,13 +96,13 @@ public class PoolFactory {
         return this.f3970c;
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public int m1407b() {
         return this.f3968a.f3960c.f3979d;
     }
 
-    /* renamed from: c */
-    public PooledByteBufferFactory m1408c(int i) throws SecurityException {
+    /* JADX INFO: renamed from: c */
+    public PooledByteBufferFactory m1408c(int i) {
         MemoryChunkPool memoryChunkPool;
         if (this.f3973f == null) {
             if (i == 0) {
@@ -177,7 +177,7 @@ public class PoolFactory {
         return this.f3973f;
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public PooledByteStreams m1409d() {
         if (this.f3974g == null) {
             this.f3974g = new PooledByteStreams(m1410e());
@@ -185,7 +185,7 @@ public class PoolFactory {
         return this.f3974g;
     }
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public ByteArrayPool m1410e() {
         if (this.f3975h == null) {
             PoolConfig poolConfig = this.f3968a;

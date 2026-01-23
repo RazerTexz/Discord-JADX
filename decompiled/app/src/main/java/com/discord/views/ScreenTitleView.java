@@ -13,11 +13,11 @@ import com.discord.utilities.view.extensions.ViewExtensions;
 import p007b.p008a.p025i.ViewScreenTitleBinding;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ScreenTitleView.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: ScreenTitleView.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class ScreenTitleView extends LinearLayout {
 
-    /* renamed from: j, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: j, reason: from kotlin metadata */
     public final ViewScreenTitleBinding binding;
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */

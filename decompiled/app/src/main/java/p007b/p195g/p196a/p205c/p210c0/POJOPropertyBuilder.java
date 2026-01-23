@@ -15,106 +15,106 @@ import p007b.p195g.p196a.p205c.PropertyName;
 import p007b.p195g.p196a.p205c.p218h0.TypeFactory;
 import p007b.p195g.p196a.p205c.p221z.MapperConfig;
 
-/* compiled from: POJOPropertyBuilder.java */
-/* renamed from: b.g.a.c.c0.c0, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.g.a.c.c0.c0, reason: use source file name */
+/* JADX INFO: compiled from: POJOPropertyBuilder.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class POJOPropertyBuilder extends BeanPropertyDefinition implements Comparable<POJOPropertyBuilder> {
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public static final AnnotationIntrospector.a f4671k = new AnnotationIntrospector.a(1, "");
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final boolean f4672l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public final MapperConfig<?> f4673m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public final AnnotationIntrospector f4674n;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public final PropertyName f4675o;
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public final PropertyName f4676p;
 
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     public d<AnnotatedField> f4677q;
 
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     public d<AnnotatedParameter> f4678r;
 
-    /* renamed from: s */
+    /* JADX INFO: renamed from: s */
     public d<AnnotatedMethod> f4679s;
 
-    /* renamed from: t */
+    /* JADX INFO: renamed from: t */
     public d<AnnotatedMethod> f4680t;
 
-    /* renamed from: u */
+    /* JADX INFO: renamed from: u */
     public transient PropertyMetadata f4681u;
 
-    /* renamed from: v */
+    /* JADX INFO: renamed from: v */
     public transient AnnotationIntrospector.a f4682v;
 
-    /* compiled from: POJOPropertyBuilder.java */
-    /* renamed from: b.g.a.c.c0.c0$a */
+    /* JADX INFO: renamed from: b.g.a.c.c0.c0$a */
+    /* JADX INFO: compiled from: POJOPropertyBuilder.java */
     public class a implements e<Class<?>[]> {
         public a() {
         }
 
         @Override // p007b.p195g.p196a.p205c.p210c0.POJOPropertyBuilder.e
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public Class<?>[] mo1869a(AnnotatedMember annotatedMember) {
             return POJOPropertyBuilder.this.f4674n.mo1762R(annotatedMember);
         }
     }
 
-    /* compiled from: POJOPropertyBuilder.java */
-    /* renamed from: b.g.a.c.c0.c0$b */
+    /* JADX INFO: renamed from: b.g.a.c.c0.c0$b */
+    /* JADX INFO: compiled from: POJOPropertyBuilder.java */
     public class b implements e<AnnotationIntrospector.a> {
         public b() {
         }
 
         @Override // p007b.p195g.p196a.p205c.p210c0.POJOPropertyBuilder.e
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public AnnotationIntrospector.a mo1869a(AnnotatedMember annotatedMember) {
             return POJOPropertyBuilder.this.f4674n.mo1748D(annotatedMember);
         }
     }
 
-    /* compiled from: POJOPropertyBuilder.java */
-    /* renamed from: b.g.a.c.c0.c0$c */
+    /* JADX INFO: renamed from: b.g.a.c.c0.c0$c */
+    /* JADX INFO: compiled from: POJOPropertyBuilder.java */
     public class c implements e<Boolean> {
         public c() {
         }
 
         @Override // p007b.p195g.p196a.p205c.p210c0.POJOPropertyBuilder.e
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public Boolean mo1869a(AnnotatedMember annotatedMember) {
             return POJOPropertyBuilder.this.f4674n.mo1778d0(annotatedMember);
         }
     }
 
-    /* compiled from: POJOPropertyBuilder.java */
-    /* renamed from: b.g.a.c.c0.c0$d */
+    /* JADX INFO: renamed from: b.g.a.c.c0.c0$d */
+    /* JADX INFO: compiled from: POJOPropertyBuilder.java */
     public static final class d<T> {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final T f4686a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final d<T> f4687b;
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public final PropertyName f4688c;
 
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         public final boolean f4689d;
 
-        /* renamed from: e */
+        /* JADX INFO: renamed from: e */
         public final boolean f4690e;
 
-        /* renamed from: f */
+        /* JADX INFO: renamed from: f */
         public final boolean f4691f;
 
         public d(T t, d<T> dVar, PropertyName propertyName, boolean z2, boolean z3, boolean z4) {
@@ -135,13 +135,13 @@ public class POJOPropertyBuilder extends BeanPropertyDefinition implements Compa
             this.f4691f = z4;
         }
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public d<T> m1870a(d<T> dVar) {
             d<T> dVar2 = this.f4687b;
             return dVar2 == null ? m1872c(dVar) : m1872c(dVar2.m1870a(dVar));
         }
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public d<T> m1871b() {
             d<T> dVar = this.f4687b;
             if (dVar == null) {
@@ -158,12 +158,12 @@ public class POJOPropertyBuilder extends BeanPropertyDefinition implements Compa
             return z2 == dVarM1871b.f4690e ? m1872c(dVarM1871b) : z2 ? m1872c(null) : dVarM1871b;
         }
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public d<T> m1872c(d<T> dVar) {
             return dVar == this.f4687b ? this : new d<>(this.f4686a, dVar, this.f4688c, this.f4689d, this.f4690e, this.f4691f);
         }
 
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         public d<T> m1873d() {
             d<T> dVarM1873d;
             if (!this.f4691f) {
@@ -177,12 +177,12 @@ public class POJOPropertyBuilder extends BeanPropertyDefinition implements Compa
             return dVar2.m1873d();
         }
 
-        /* renamed from: e */
+        /* JADX INFO: renamed from: e */
         public d<T> m1874e() {
             return this.f4687b == null ? this : new d<>(this.f4686a, null, this.f4688c, this.f4689d, this.f4690e, this.f4691f);
         }
 
-        /* renamed from: f */
+        /* JADX INFO: renamed from: f */
         public d<T> m1875f() {
             d<T> dVar = this.f4687b;
             d<T> dVarM1875f = dVar == null ? null : dVar.m1875f();
@@ -200,10 +200,10 @@ public class POJOPropertyBuilder extends BeanPropertyDefinition implements Compa
         }
     }
 
-    /* compiled from: POJOPropertyBuilder.java */
-    /* renamed from: b.g.a.c.c0.c0$e */
+    /* JADX INFO: renamed from: b.g.a.c.c0.c0$e */
+    /* JADX INFO: compiled from: POJOPropertyBuilder.java */
     public interface e<T> {
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         T mo1869a(AnnotatedMember annotatedMember);
     }
 
@@ -215,7 +215,7 @@ public class POJOPropertyBuilder extends BeanPropertyDefinition implements Compa
         this.f4672l = z2;
     }
 
-    /* renamed from: N */
+    /* JADX INFO: renamed from: N */
     public static <T> d<T> m1835N(d<T> dVar, d<T> dVar2) {
         if (dVar == null) {
             return dVar2;
@@ -227,7 +227,7 @@ public class POJOPropertyBuilder extends BeanPropertyDefinition implements Compa
         return dVar3 == null ? dVar.m1872c(dVar2) : dVar.m1872c(dVar3.m1870a(dVar2));
     }
 
-    /* renamed from: A */
+    /* JADX INFO: renamed from: A */
     public final <T extends AnnotatedMember> d<T> m1836A(d<T> dVar, AnnotationMap annotationMap) {
         AnnotatedMember annotatedMember = (AnnotatedMember) dVar.f4686a.mo1890l(annotationMap);
         d<T> dVar2 = dVar.f4687b;
@@ -249,7 +249,7 @@ public class POJOPropertyBuilder extends BeanPropertyDefinition implements Compa
         	at jadx.core.dex.visitors.ConstructorVisitor.replaceInvoke(ConstructorVisitor.java:59)
         	at jadx.core.dex.visitors.ConstructorVisitor.visit(ConstructorVisitor.java:42)
         */
-    /* renamed from: B */
+    /* JADX INFO: renamed from: B */
     public final void m1837B(
     /*  JADX ERROR: JadxRuntimeException in pass: ConstructorVisitor
         jadx.core.utils.exceptions.JadxRuntimeException: Can't remove SSA var: r8v0 ??, still in use, count: 1, list:
@@ -265,20 +265,20 @@ public class POJOPropertyBuilder extends BeanPropertyDefinition implements Compa
     /*  JADX ERROR: Method generation error
         jadx.core.utils.exceptions.JadxRuntimeException: Code variable not set in r10v0 ??
         	at jadx.core.dex.instructions.args.SSAVar.getCodeVar(SSAVar.java:236)
-        	at jadx.core.codegen.MethodGen.addMethodArguments(MethodGen.java:222)
-        	at jadx.core.codegen.MethodGen.addDefinition(MethodGen.java:167)
-        	at jadx.core.codegen.ClassGen.addMethodCode(ClassGen.java:405)
-        	at jadx.core.codegen.ClassGen.addMethod(ClassGen.java:335)
-        	at jadx.core.codegen.ClassGen.lambda$addInnerClsAndMethods$3(ClassGen.java:301)
+        	at jadx.core.codegen.MethodGen.addMethodArguments(MethodGen.java:224)
+        	at jadx.core.codegen.MethodGen.addDefinition(MethodGen.java:169)
+        	at jadx.core.codegen.ClassGen.addMethodCode(ClassGen.java:407)
+        	at jadx.core.codegen.ClassGen.addMethod(ClassGen.java:337)
+        	at jadx.core.codegen.ClassGen.lambda$addInnerClsAndMethods$3(ClassGen.java:303)
         	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:184)
         	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
         	at java.base/java.util.stream.SortedOps$RefSortingSink.end(SortedOps.java:395)
         	at java.base/java.util.stream.Sink$ChainedReference.end(Sink.java:261)
         */
 
-    /* renamed from: C */
+    /* JADX INFO: renamed from: C */
     public final Set<PropertyName> m1838C(d<? extends AnnotatedMember> dVar, Set<PropertyName> set) {
-        for (d<? extends AnnotatedMember> dVar2 = dVar; dVar2 != null; dVar2 = dVar2.f4687b) {
+        for (d dVar2 = dVar; dVar2 != null; dVar2 = dVar2.f4687b) {
             if (dVar2.f4689d && dVar2.f4688c != null) {
                 if (set == null) {
                     set = new HashSet<>();
@@ -289,14 +289,14 @@ public class POJOPropertyBuilder extends BeanPropertyDefinition implements Compa
         return set;
     }
 
-    /* renamed from: D */
+    /* JADX INFO: renamed from: D */
     public final <T extends AnnotatedMember> AnnotationMap m1839D(d<T> dVar) {
         AnnotationMap annotationMap = dVar.f4686a.f4717k;
         d<T> dVar2 = dVar.f4687b;
         return dVar2 != null ? AnnotationMap.m1916c(annotationMap, m1839D(dVar2)) : annotationMap;
     }
 
-    /* renamed from: E */
+    /* JADX INFO: renamed from: E */
     public int m1840E(AnnotatedMethod annotatedMethod) {
         String strMo1819c = annotatedMethod.mo1819c();
         if (!strMo1819c.startsWith("get") || strMo1819c.length() <= 3) {
@@ -306,7 +306,7 @@ public class POJOPropertyBuilder extends BeanPropertyDefinition implements Compa
     }
 
     /* JADX WARN: Multi-variable type inference failed */
-    /* renamed from: F */
+    /* JADX INFO: renamed from: F */
     public final AnnotationMap m1841F(int i, d<? extends AnnotatedMember>... dVarArr) {
         d<? extends AnnotatedMember> dVar = dVarArr[i];
         AnnotationMap annotationMapM1916c = ((AnnotatedMember) dVar.f4686a).f4717k;
@@ -323,28 +323,28 @@ public class POJOPropertyBuilder extends BeanPropertyDefinition implements Compa
         return AnnotationMap.m1916c(annotationMapM1916c, m1841F(i, dVarArr));
     }
 
-    /* renamed from: G */
+    /* JADX INFO: renamed from: G */
     public final <T> d<T> m1842G(d<T> dVar) {
         return dVar == null ? dVar : dVar.m1873d();
     }
 
-    /* renamed from: H */
+    /* JADX INFO: renamed from: H */
     public final <T> d<T> m1843H(d<T> dVar) {
         return dVar == null ? dVar : dVar.m1875f();
     }
 
-    /* renamed from: I */
+    /* JADX INFO: renamed from: I */
     public int m1844I(AnnotatedMethod annotatedMethod) {
         String strMo1819c = annotatedMethod.mo1819c();
         return (!strMo1819c.startsWith("set") || strMo1819c.length() <= 3) ? 2 : 1;
     }
 
-    /* renamed from: J */
+    /* JADX INFO: renamed from: J */
     public final <T> d<T> m1845J(d<T> dVar) {
         return dVar == null ? dVar : dVar.m1871b();
     }
 
-    /* renamed from: K */
+    /* JADX INFO: renamed from: K */
     public void m1846K(POJOPropertyBuilder pOJOPropertyBuilder) {
         this.f4677q = m1835N(this.f4677q, pOJOPropertyBuilder.f4677q);
         this.f4678r = m1835N(this.f4678r, pOJOPropertyBuilder.f4678r);
@@ -352,13 +352,13 @@ public class POJOPropertyBuilder extends BeanPropertyDefinition implements Compa
         this.f4680t = m1835N(this.f4680t, pOJOPropertyBuilder.f4680t);
     }
 
-    /* renamed from: L */
+    /* JADX INFO: renamed from: L */
     public Set<PropertyName> m1847L() {
         Set<PropertyName> setM1838C = m1838C(this.f4678r, m1838C(this.f4680t, m1838C(this.f4679s, m1838C(this.f4677q, null))));
         return setM1838C == null ? Collections.emptySet() : setM1838C;
     }
 
-    /* renamed from: M */
+    /* JADX INFO: renamed from: M */
     public <T> T m1848M(e<T> eVar) {
         d<AnnotatedMethod> dVar;
         d<AnnotatedField> dVar2;
@@ -394,13 +394,13 @@ public class POJOPropertyBuilder extends BeanPropertyDefinition implements Compa
     }
 
     @Override // p007b.p195g.p196a.p205c.p210c0.BeanPropertyDefinition
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public boolean mo1849f() {
         return (this.f4678r == null && this.f4680t == null && this.f4677q == null) ? false : true;
     }
 
     @Override // p007b.p195g.p196a.p205c.p210c0.BeanPropertyDefinition
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public JsonInclude.b mo1850g() {
         AnnotatedMember annotatedMemberM1922j = m1922j();
         AnnotationIntrospector annotationIntrospector = this.f4674n;
@@ -413,7 +413,7 @@ public class POJOPropertyBuilder extends BeanPropertyDefinition implements Compa
     }
 
     @Override // p007b.p195g.p196a.p205c.p210c0.BeanPropertyDefinition
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public AnnotationIntrospector.a mo1851h() {
         AnnotationIntrospector.a aVar = this.f4682v;
         if (aVar != null) {
@@ -428,14 +428,14 @@ public class POJOPropertyBuilder extends BeanPropertyDefinition implements Compa
     }
 
     @Override // p007b.p195g.p196a.p205c.p210c0.BeanPropertyDefinition
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public Class<?>[] mo1852i() {
         return (Class[]) m1848M(new a());
     }
 
     /* JADX WARN: Multi-variable type inference failed */
     @Override // p007b.p195g.p196a.p205c.p210c0.BeanPropertyDefinition
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public AnnotatedParameter mo1853k() {
         d dVar = this.f4678r;
         if (dVar == null) {
@@ -453,7 +453,7 @@ public class POJOPropertyBuilder extends BeanPropertyDefinition implements Compa
 
     /* JADX WARN: Multi-variable type inference failed */
     @Override // p007b.p195g.p196a.p205c.p210c0.BeanPropertyDefinition
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public AnnotatedField mo1854l() {
         d<AnnotatedField> dVar = this.f4677q;
         if (dVar == null) {
@@ -482,53 +482,55 @@ public class POJOPropertyBuilder extends BeanPropertyDefinition implements Compa
     }
 
     @Override // p007b.p195g.p196a.p205c.p210c0.BeanPropertyDefinition
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public PropertyName mo1855m() {
         return this.f4675o;
     }
 
+    /* JADX WARN: Multi-variable type inference failed */
     /* JADX WARN: Removed duplicated region for block: B:19:0x0031  */
     /* JADX WARN: Removed duplicated region for block: B:22:0x0045  */
     @Override // p007b.p195g.p196a.p205c.p210c0.BeanPropertyDefinition
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
     public AnnotatedMethod mo1856n() {
-        d<AnnotatedMethod> dVar = this.f4679s;
+        d dVar = this.f4679s;
         if (dVar == null) {
             return null;
         }
-        d<AnnotatedMethod> dVar2 = dVar.f4687b;
+        d dVar2 = dVar.f4687b;
         if (dVar2 == null) {
-            return dVar.f4686a;
+            return (AnnotatedMethod) dVar.f4686a;
         }
-        for (d<AnnotatedMethod> dVar3 = dVar2; dVar3 != null; dVar3 = dVar3.f4687b) {
-            Class<?> clsMo1887g = dVar.f4686a.mo1887g();
-            Class<?> clsMo1887g2 = dVar3.f4686a.mo1887g();
+        while (dVar2 != null) {
+            Class<?> clsMo1887g = ((AnnotatedMethod) dVar.f4686a).mo1887g();
+            Class<?> clsMo1887g2 = ((AnnotatedMethod) dVar2.f4686a).mo1887g();
             if (clsMo1887g == clsMo1887g2) {
-                int iM1840E = m1840E(dVar3.f4686a);
-                int iM1840E2 = m1840E(dVar.f4686a);
+                int iM1840E = m1840E((AnnotatedMethod) dVar2.f4686a);
+                int iM1840E2 = m1840E((AnnotatedMethod) dVar.f4686a);
                 if (iM1840E == iM1840E2) {
                     StringBuilder sbM833U = outline.m833U("Conflicting getter definitions for property \"");
                     sbM833U.append(mo1858p());
                     sbM833U.append("\": ");
-                    sbM833U.append(dVar.f4686a.mo1903h());
+                    sbM833U.append(((AnnotatedMethod) dVar.f4686a).mo1903h());
                     sbM833U.append(" vs ");
-                    sbM833U.append(dVar3.f4686a.mo1903h());
+                    sbM833U.append(((AnnotatedMethod) dVar2.f4686a).mo1903h());
                     throw new IllegalArgumentException(sbM833U.toString());
                 }
                 if (iM1840E < iM1840E2) {
-                    dVar = dVar3;
+                    dVar = dVar2;
                 }
             } else if (!clsMo1887g.isAssignableFrom(clsMo1887g2)) {
                 if (clsMo1887g2.isAssignableFrom(clsMo1887g)) {
                     continue;
                 }
             }
+            dVar2 = dVar2.f4687b;
         }
         this.f4679s = dVar.m1874e();
-        return dVar.f4686a;
+        return (AnnotatedMethod) dVar.f4686a;
     }
 
     /* JADX WARN: Removed duplicated region for block: B:12:0x001d  */
@@ -536,7 +538,7 @@ public class POJOPropertyBuilder extends BeanPropertyDefinition implements Compa
     /* JADX WARN: Removed duplicated region for block: B:27:0x004a  */
     /* JADX WARN: Removed duplicated region for block: B:74:0x0104  */
     @Override // p007b.p195g.p196a.p205c.p210c0.BeanPropertyDefinition
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
@@ -653,7 +655,7 @@ public class POJOPropertyBuilder extends BeanPropertyDefinition implements Compa
     }
 
     @Override // p007b.p195g.p196a.p205c.p210c0.BeanPropertyDefinition
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public String mo1858p() {
         PropertyName propertyName = this.f4675o;
         if (propertyName == null) {
@@ -663,7 +665,7 @@ public class POJOPropertyBuilder extends BeanPropertyDefinition implements Compa
     }
 
     @Override // p007b.p195g.p196a.p205c.p210c0.BeanPropertyDefinition
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     public AnnotatedMember mo1859q() {
         if (this.f4672l) {
             return m1922j();
@@ -678,7 +680,7 @@ public class POJOPropertyBuilder extends BeanPropertyDefinition implements Compa
     /* JADX WARN: Removed duplicated region for block: B:20:0x003d A[PHI: r0
       0x003d: PHI (r0v3 b.g.a.c.c0.b) = (r0v2 b.g.a.c.c0.b), (r0v5 b.g.a.c.c0.b) binds: [B:16:0x0030, B:18:0x0036] A[DONT_GENERATE, DONT_INLINE]] */
     @Override // p007b.p195g.p196a.p205c.p210c0.BeanPropertyDefinition
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
@@ -705,28 +707,29 @@ public class POJOPropertyBuilder extends BeanPropertyDefinition implements Compa
         return javaTypeMo1821e._class;
     }
 
+    /* JADX WARN: Multi-variable type inference failed */
     /* JADX WARN: Removed duplicated region for block: B:19:0x0031  */
     /* JADX WARN: Removed duplicated region for block: B:29:0x0055  */
     @Override // p007b.p195g.p196a.p205c.p210c0.BeanPropertyDefinition
-    /* renamed from: s */
+    /* JADX INFO: renamed from: s */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
     public AnnotatedMethod mo1861s() {
-        d<AnnotatedMethod> dVar = this.f4680t;
+        d dVar = this.f4680t;
         if (dVar == null) {
             return null;
         }
-        d<AnnotatedMethod> dVar2 = dVar.f4687b;
+        d dVar2 = dVar.f4687b;
         if (dVar2 == null) {
-            return dVar.f4686a;
+            return (AnnotatedMethod) dVar.f4686a;
         }
-        for (d<AnnotatedMethod> dVar3 = dVar2; dVar3 != null; dVar3 = dVar3.f4687b) {
-            Class<?> clsMo1887g = dVar.f4686a.mo1887g();
-            Class<?> clsMo1887g2 = dVar3.f4686a.mo1887g();
+        while (dVar2 != null) {
+            Class<?> clsMo1887g = ((AnnotatedMethod) dVar.f4686a).mo1887g();
+            Class<?> clsMo1887g2 = ((AnnotatedMethod) dVar2.f4686a).mo1887g();
             if (clsMo1887g == clsMo1887g2) {
-                AnnotatedMethod annotatedMethod = dVar3.f4686a;
-                AnnotatedMethod annotatedMethod2 = dVar.f4686a;
+                AnnotatedMethod annotatedMethod = (AnnotatedMethod) dVar2.f4686a;
+                AnnotatedMethod annotatedMethod2 = (AnnotatedMethod) dVar.f4686a;
                 int iM1844I = m1844I(annotatedMethod);
                 int iM1844I2 = m1844I(annotatedMethod2);
                 if (iM1844I == iM1844I2) {
@@ -736,28 +739,29 @@ public class POJOPropertyBuilder extends BeanPropertyDefinition implements Compa
                         if (annotatedMethodMo1782f0 != annotatedMethod2) {
                             if (annotatedMethodMo1782f0 != annotatedMethod) {
                             }
-                            dVar = dVar3;
+                            dVar = dVar2;
                         } else {
                             continue;
                         }
                     }
-                    throw new IllegalArgumentException(String.format("Conflicting setter definitions for property \"%s\": %s vs %s", mo1858p(), dVar.f4686a.mo1903h(), dVar3.f4686a.mo1903h()));
+                    throw new IllegalArgumentException(String.format("Conflicting setter definitions for property \"%s\": %s vs %s", mo1858p(), ((AnnotatedMethod) dVar.f4686a).mo1903h(), ((AnnotatedMethod) dVar2.f4686a).mo1903h()));
                 }
                 if (iM1844I < iM1844I2) {
-                    dVar = dVar3;
+                    dVar = dVar2;
                 }
             } else if (!clsMo1887g.isAssignableFrom(clsMo1887g2)) {
                 if (clsMo1887g2.isAssignableFrom(clsMo1887g)) {
                     continue;
                 }
             }
+            dVar2 = dVar2.f4687b;
         }
         this.f4680t = dVar.m1874e();
-        return dVar.f4686a;
+        return (AnnotatedMethod) dVar.f4686a;
     }
 
     @Override // p007b.p195g.p196a.p205c.p210c0.BeanPropertyDefinition
-    /* renamed from: t */
+    /* JADX INFO: renamed from: t */
     public PropertyName mo1862t() {
         AnnotationIntrospector annotationIntrospector;
         if (mo1859q() == null || (annotationIntrospector = this.f4674n) == null) {
@@ -783,19 +787,19 @@ public class POJOPropertyBuilder extends BeanPropertyDefinition implements Compa
     }
 
     @Override // p007b.p195g.p196a.p205c.p210c0.BeanPropertyDefinition
-    /* renamed from: u */
+    /* JADX INFO: renamed from: u */
     public boolean mo1863u() {
         return m1866x(this.f4677q) || m1866x(this.f4679s) || m1866x(this.f4680t) || m1865w(this.f4678r);
     }
 
     @Override // p007b.p195g.p196a.p205c.p210c0.BeanPropertyDefinition
-    /* renamed from: v */
+    /* JADX INFO: renamed from: v */
     public boolean mo1864v() {
         Boolean bool = (Boolean) m1848M(new c());
         return bool != null && bool.booleanValue();
     }
 
-    /* renamed from: w */
+    /* JADX INFO: renamed from: w */
     public final <T> boolean m1865w(d<T> dVar) {
         while (dVar != null) {
             if (dVar.f4688c != null && dVar.f4689d) {
@@ -806,7 +810,7 @@ public class POJOPropertyBuilder extends BeanPropertyDefinition implements Compa
         return false;
     }
 
-    /* renamed from: x */
+    /* JADX INFO: renamed from: x */
     public final <T> boolean m1866x(d<T> dVar) {
         while (dVar != null) {
             PropertyName propertyName = dVar.f4688c;
@@ -818,7 +822,7 @@ public class POJOPropertyBuilder extends BeanPropertyDefinition implements Compa
         return false;
     }
 
-    /* renamed from: y */
+    /* JADX INFO: renamed from: y */
     public final <T> boolean m1867y(d<T> dVar) {
         while (dVar != null) {
             if (dVar.f4691f) {
@@ -829,7 +833,7 @@ public class POJOPropertyBuilder extends BeanPropertyDefinition implements Compa
         return false;
     }
 
-    /* renamed from: z */
+    /* JADX INFO: renamed from: z */
     public final <T> boolean m1868z(d<T> dVar) {
         while (dVar != null) {
             if (dVar.f4690e) {

@@ -19,37 +19,37 @@ import java.lang.ref.WeakReference;
 import java.util.Objects;
 import java.util.concurrent.CopyOnWriteArrayList;
 
-/* compiled from: NetworkTypeObserver.java */
-/* renamed from: b.i.a.c.f3.v, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.f3.v, reason: use source file name */
+/* JADX INFO: compiled from: NetworkTypeObserver.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class NetworkTypeObserver {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     @Nullable
     public static NetworkTypeObserver f6782a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final Handler f6783b = new Handler(Looper.getMainLooper());
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final CopyOnWriteArrayList<WeakReference<b>> f6784c = new CopyOnWriteArrayList<>();
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final Object f6785d = new Object();
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     @GuardedBy("networkTypeLock")
     public int f6786e = 0;
 
-    /* compiled from: NetworkTypeObserver.java */
-    /* renamed from: b.i.a.c.f3.v$b */
+    /* JADX INFO: renamed from: b.i.a.c.f3.v$b */
+    /* JADX INFO: compiled from: NetworkTypeObserver.java */
     public interface b {
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         void mo2777a(int i);
     }
 
-    /* compiled from: NetworkTypeObserver.java */
-    /* renamed from: b.i.a.c.f3.v$c */
+    /* JADX INFO: renamed from: b.i.a.c.f3.v$c */
+    /* JADX INFO: compiled from: NetworkTypeObserver.java */
     public final class c extends BroadcastReceiver {
         public c(a aVar) {
         }
@@ -142,8 +142,8 @@ public final class NetworkTypeObserver {
         }
     }
 
-    /* compiled from: NetworkTypeObserver.java */
-    /* renamed from: b.i.a.c.f3.v$d */
+    /* JADX INFO: renamed from: b.i.a.c.f3.v$d */
+    /* JADX INFO: compiled from: NetworkTypeObserver.java */
     public class d extends PhoneStateListener {
         public d(a aVar) {
         }
@@ -168,7 +168,7 @@ public final class NetworkTypeObserver {
         context.registerReceiver(new c(null), intentFilter);
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static void m3060a(NetworkTypeObserver networkTypeObserver, int i) {
         synchronized (networkTypeObserver.f6785d) {
             if (networkTypeObserver.f6786e == i) {

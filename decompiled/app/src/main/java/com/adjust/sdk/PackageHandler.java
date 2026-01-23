@@ -9,7 +9,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.concurrent.atomic.AtomicBoolean;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class PackageHandler implements IPackageHandler {
     private static final String PACKAGE_QUEUE_FILENAME = "AdjustIoPackageQueue";
     private static final String PACKAGE_QUEUE_NAME = "Package queue";
@@ -27,7 +27,7 @@ public class PackageHandler implements IPackageHandler {
     private BackoffStrategy backoffStrategy = AdjustFactory.getPackageHandlerBackoffStrategy();
     private BackoffStrategy backoffStrategyForInstallSession = AdjustFactory.getInstallSessionBackoffStrategy();
 
-    /* renamed from: com.adjust.sdk.PackageHandler$1 */
+    /* JADX INFO: renamed from: com.adjust.sdk.PackageHandler$1 */
     public class RunnableC53801 implements Runnable {
         public RunnableC53801() {
         }
@@ -38,7 +38,7 @@ public class PackageHandler implements IPackageHandler {
         }
     }
 
-    /* renamed from: com.adjust.sdk.PackageHandler$2 */
+    /* JADX INFO: renamed from: com.adjust.sdk.PackageHandler$2 */
     public class RunnableC53812 implements Runnable {
         public final /* synthetic */ ActivityPackage val$activityPackage;
 
@@ -52,7 +52,7 @@ public class PackageHandler implements IPackageHandler {
         }
     }
 
-    /* renamed from: com.adjust.sdk.PackageHandler$3 */
+    /* JADX INFO: renamed from: com.adjust.sdk.PackageHandler$3 */
     public class RunnableC53823 implements Runnable {
         public RunnableC53823() {
         }
@@ -63,7 +63,7 @@ public class PackageHandler implements IPackageHandler {
         }
     }
 
-    /* renamed from: com.adjust.sdk.PackageHandler$4 */
+    /* JADX INFO: renamed from: com.adjust.sdk.PackageHandler$4 */
     public class RunnableC53834 implements Runnable {
         public RunnableC53834() {
         }
@@ -74,7 +74,7 @@ public class PackageHandler implements IPackageHandler {
         }
     }
 
-    /* renamed from: com.adjust.sdk.PackageHandler$5 */
+    /* JADX INFO: renamed from: com.adjust.sdk.PackageHandler$5 */
     public class RunnableC53845 implements Runnable {
         public RunnableC53845() {
         }
@@ -87,7 +87,7 @@ public class PackageHandler implements IPackageHandler {
         }
     }
 
-    /* renamed from: com.adjust.sdk.PackageHandler$6 */
+    /* JADX INFO: renamed from: com.adjust.sdk.PackageHandler$6 */
     public class RunnableC53856 implements Runnable {
         public final /* synthetic */ SessionParameters val$sessionParametersCopy;
 
@@ -101,7 +101,7 @@ public class PackageHandler implements IPackageHandler {
         }
     }
 
-    /* renamed from: com.adjust.sdk.PackageHandler$7 */
+    /* JADX INFO: renamed from: com.adjust.sdk.PackageHandler$7 */
     public class RunnableC53867 implements Runnable {
         public RunnableC53867() {
         }

@@ -18,14 +18,14 @@ import p507d0.p591y.Closeable;
 import p507d0.p591y.ReadWrite;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ZLibWebSocketListener.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: ZLibWebSocketListener.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class ZLibWebSocketListener extends WebSocketListener {
     private final Inflater inflater;
     private final Listener listener;
     private final Inflater loggingInflater;
 
-    /* compiled from: ZLibWebSocketListener.kt */
+    /* JADX INFO: compiled from: ZLibWebSocketListener.kt */
     public static abstract class Listener extends WebSocketListener {
         private final RawMessageHandler rawMessageHandler;
 
@@ -52,7 +52,7 @@ public final class ZLibWebSocketListener extends WebSocketListener {
         }
     }
 
-    /* compiled from: ZLibWebSocketListener.kt */
+    /* JADX INFO: compiled from: ZLibWebSocketListener.kt */
     public static final class ZLibByteStream extends ByteArrayOutputStream {
         private static final int INFLATE_BUFFER_SIZE = 4096;
         private static final int INITIAL_BUFFER_SIZE_MULTIPLIER = 2;

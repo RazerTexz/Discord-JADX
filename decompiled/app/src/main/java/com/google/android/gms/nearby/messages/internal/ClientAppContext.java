@@ -13,28 +13,28 @@ import java.util.Objects;
 import p007b.p085c.p086a.p087a0.AnimatableValueParser;
 import p007b.p225i.p226a.p288f.p333j.p334b.p335e.C4293l0;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public final class ClientAppContext extends AbstractSafeParcelable implements ReflectedParcelable {
     public static final Parcelable.Creator<ClientAppContext> CREATOR = new C4293l0();
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final int f20741j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final String f20742k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     @Nullable
     public final String f20743l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public final boolean f20744m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     @Deprecated
     public final int f20745n;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public final String f20746o;
 
     public ClientAppContext(int i, String str, @Nullable String str2, boolean z2, int i2, @Nullable String str3) {
@@ -56,7 +56,7 @@ public final class ClientAppContext extends AbstractSafeParcelable implements Re
     }
 
     @Nullable
-    /* renamed from: w0 */
+    /* JADX INFO: renamed from: w0 */
     public static final ClientAppContext m9121w0(@Nullable ClientAppContext clientAppContext, @Nullable String str, @Nullable String str2, boolean z2) {
         if (clientAppContext != null) {
             return clientAppContext;
@@ -67,7 +67,7 @@ public final class ClientAppContext extends AbstractSafeParcelable implements Re
         return new ClientAppContext(str, str2, z2, null, 0);
     }
 
-    /* renamed from: x0 */
+    /* JADX INFO: renamed from: x0 */
     public static boolean m9122x0(String str, String str2) {
         return TextUtils.isEmpty(str) ? TextUtils.isEmpty(str2) : str.equals(str2);
     }

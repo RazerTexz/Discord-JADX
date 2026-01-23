@@ -6,14 +6,14 @@ import androidx.exifinterface.media.ExifInterface;
 import p507d0.p512d0.Range3;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: Range.kt */
-/* renamed from: androidx.core.util.RangeKt, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: androidx.core.util.RangeKt, reason: use source file name */
+/* JADX INFO: compiled from: Range.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class Range2 {
 
     /* JADX INFO: Add missing generic type declarations: [T] */
-    /* compiled from: Range.kt */
-    /* renamed from: androidx.core.util.RangeKt$toClosedRange$1 */
+    /* JADX INFO: renamed from: androidx.core.util.RangeKt$toClosedRange$1 */
+    /* JADX INFO: compiled from: Range.kt */
     public static final class C02681<T> implements Range3<T> {
         public final /* synthetic */ Range<T> $this_toClosedRange;
 

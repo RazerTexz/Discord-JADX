@@ -52,22 +52,22 @@ import p507d0.p592z.p594d.Lambda;
 import p507d0.p592z.p594d.Reflection2;
 import p658rx.functions.Action2;
 
-/* compiled from: WidgetSettings.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetSettings.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetSettings extends AppFragment implements OnTabSelectedListener {
     public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetSettings.class, "binding", "getBinding()Lcom/discord/databinding/WidgetSettingsBinding;", 0)};
 
-    /* renamed from: binding$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
 
-    /* renamed from: viewModel$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: viewModel$delegate, reason: from kotlin metadata */
     private final Lazy viewModel;
 
-    /* renamed from: viewModelUserProfileHeader$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: viewModelUserProfileHeader$delegate, reason: from kotlin metadata */
     private final Lazy viewModelUserProfileHeader;
 
-    /* compiled from: WidgetSettings.kt */
-    /* renamed from: com.discord.widgets.settings.WidgetSettings$configureToolbar$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.WidgetSettings$configureToolbar$1 */
+    /* JADX INFO: compiled from: WidgetSettings.kt */
     public static final class C96101<T1, T2> implements Action2<MenuItem, Context> {
         public C96101() {
         }
@@ -77,7 +77,7 @@ public final class WidgetSettings extends AppFragment implements OnTabSelectedLi
             call2(menuItem, context);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final void call2(MenuItem menuItem, Context context) {
             Intrinsics3.checkNotNullExpressionValue(menuItem, "menuItem");
             switch (menuItem.getItemId()) {
@@ -95,8 +95,8 @@ public final class WidgetSettings extends AppFragment implements OnTabSelectedLi
         }
     }
 
-    /* compiled from: WidgetSettings.kt */
-    /* renamed from: com.discord.widgets.settings.WidgetSettings$onViewBoundOrOnResume$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.WidgetSettings$onViewBoundOrOnResume$1 */
+    /* JADX INFO: compiled from: WidgetSettings.kt */
     public static final /* synthetic */ class C96161 extends FunctionReferenceImpl implements Function1<SettingsViewModel.ViewState, Unit> {
         public C96161(WidgetSettings widgetSettings) {
             super(1, widgetSettings, WidgetSettings.class, "configureUI", "configureUI(Lcom/discord/widgets/settings/SettingsViewModel$ViewState;)V", 0);
@@ -108,15 +108,15 @@ public final class WidgetSettings extends AppFragment implements OnTabSelectedLi
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(SettingsViewModel.ViewState viewState) {
             Intrinsics3.checkNotNullParameter(viewState, "p1");
             WidgetSettings.access$configureUI((WidgetSettings) this.receiver, viewState);
         }
     }
 
-    /* compiled from: WidgetSettings.kt */
-    /* renamed from: com.discord.widgets.settings.WidgetSettings$showLogoutDialog$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.WidgetSettings$showLogoutDialog$1 */
+    /* JADX INFO: compiled from: WidgetSettings.kt */
     public static final class C96171 extends Lambda implements Function1<View, Unit> {
         public static final C96171 INSTANCE = new C96171();
 
@@ -130,7 +130,7 @@ public final class WidgetSettings extends AppFragment implements OnTabSelectedLi
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(View view) {
             Intrinsics3.checkNotNullParameter(view, "it");
             StoreStream.INSTANCE.getAuthentication().logout();

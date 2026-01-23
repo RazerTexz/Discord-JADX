@@ -11,9 +11,9 @@ import p007b.p225i.p361c.p368l.Dependency2;
 import p007b.p225i.p361c.p391o.AbstractC4767a;
 import p007b.p225i.p361c.p391o.p392b.C4773f;
 
-/* compiled from: com.google.firebase:firebase-dynamic-links@@19.1.1 */
+/* JADX INFO: compiled from: com.google.firebase:firebase-dynamic-links@@19.1.1 */
+/* JADX INFO: loaded from: classes3.dex */
 @Keep
-/* loaded from: classes3.dex */
 public final class FirebaseDynamicLinkRegistrar implements ComponentRegistrar {
     @Override // p007b.p225i.p361c.p368l.ComponentRegistrar
     @Keep

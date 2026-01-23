@@ -30,14 +30,14 @@ import p507d0.Tuples;
 import p507d0.p580t.Maps6;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: FeedbackView.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: FeedbackView.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class FeedbackView extends LinearLayout {
     private final FeedbackViewBinding binding;
     private final IssuesAdapter issuesAdapter;
     private final Map<View, FeedbackRating> viewToFeedbackRatingMap;
 
-    /* compiled from: FeedbackView.kt */
+    /* JADX INFO: compiled from: FeedbackView.kt */
     public static final class IssueViewHolder extends MGRecyclerViewHolder<IssuesAdapter, FeedbackIssue> {
         private final TextView issueItem;
 
@@ -59,7 +59,7 @@ public final class FeedbackView extends LinearLayout {
             onConfigure2(i, feedbackIssue);
         }
 
-        /* renamed from: onConfigure, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: onConfigure, reason: avoid collision after fix types in other method */
         public void onConfigure2(int position, FeedbackIssue data) {
             Intrinsics3.checkNotNullParameter(data, "data");
             super.onConfigure(position, data);
@@ -69,7 +69,7 @@ public final class FeedbackView extends LinearLayout {
         }
     }
 
-    /* compiled from: FeedbackView.kt */
+    /* JADX INFO: compiled from: FeedbackView.kt */
     public static final class IssuesAdapter extends MGRecyclerAdapterSimple<FeedbackIssue> {
         private Function1<? super FeedbackIssue, Unit> onIssueClick;
 
@@ -101,8 +101,8 @@ public final class FeedbackView extends LinearLayout {
         }
     }
 
-    /* compiled from: FeedbackView.kt */
-    /* renamed from: com.discord.widgets.voice.feedback.FeedbackView$updateView$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.voice.feedback.FeedbackView$updateView$1 */
+    /* JADX INFO: compiled from: FeedbackView.kt */
     public static final class ViewOnClickListenerC104471 implements View.OnClickListener {
         public final /* synthetic */ Function0 $onSadRatingClick;
 
@@ -116,8 +116,8 @@ public final class FeedbackView extends LinearLayout {
         }
     }
 
-    /* compiled from: FeedbackView.kt */
-    /* renamed from: com.discord.widgets.voice.feedback.FeedbackView$updateView$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.voice.feedback.FeedbackView$updateView$2 */
+    /* JADX INFO: compiled from: FeedbackView.kt */
     public static final class ViewOnClickListenerC104482 implements View.OnClickListener {
         public final /* synthetic */ Function0 $onNeutralRatingClick;
 
@@ -131,8 +131,8 @@ public final class FeedbackView extends LinearLayout {
         }
     }
 
-    /* compiled from: FeedbackView.kt */
-    /* renamed from: com.discord.widgets.voice.feedback.FeedbackView$updateView$3 */
+    /* JADX INFO: renamed from: com.discord.widgets.voice.feedback.FeedbackView$updateView$3 */
+    /* JADX INFO: compiled from: FeedbackView.kt */
     public static final class ViewOnClickListenerC104493 implements View.OnClickListener {
         public final /* synthetic */ Function0 $onHappyRatingClick;
 

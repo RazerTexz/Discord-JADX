@@ -34,17 +34,17 @@ import p658rx.Observable;
 import p658rx.functions.Func2;
 import p658rx.functions.Func3;
 
-/* compiled from: GuildScheduledEventDescriptionParser.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: GuildScheduledEventDescriptionParser.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class GuildScheduledEventDescriptionParser {
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private static final Lazy INSTANCE$delegate = LazyJVM.lazy(GuildScheduledEventDescriptionParser2.INSTANCE);
     private DescriptionCache savedDescriptionCache;
     private final WeakReference<LinkifiedTextView> weakRefTextView;
 
-    /* compiled from: GuildScheduledEventDescriptionParser.kt */
+    /* JADX INFO: compiled from: GuildScheduledEventDescriptionParser.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -64,12 +64,12 @@ public final class GuildScheduledEventDescriptionParser {
         }
     }
 
-    /* compiled from: GuildScheduledEventDescriptionParser.kt */
+    /* JADX INFO: compiled from: GuildScheduledEventDescriptionParser.kt */
     public static abstract class DescriptionCache {
         private final List<Node<MessageRenderContext>> maybeAst;
         private final String maybeDescription;
 
-        /* compiled from: GuildScheduledEventDescriptionParser.kt */
+        /* JADX INFO: compiled from: GuildScheduledEventDescriptionParser.kt */
         public static final /* data */ class HasDescription extends DescriptionCache {
             private final List<Node<MessageRenderContext>> ast;
             private final String description;
@@ -100,7 +100,7 @@ public final class GuildScheduledEventDescriptionParser {
                 return hasDescription.copy(str, list, set);
             }
 
-            /* renamed from: component1, reason: from getter */
+            /* JADX INFO: renamed from: component1, reason: from getter */
             public final String getDescription() {
                 return this.description;
             }
@@ -162,7 +162,7 @@ public final class GuildScheduledEventDescriptionParser {
             }
         }
 
-        /* compiled from: GuildScheduledEventDescriptionParser.kt */
+        /* JADX INFO: compiled from: GuildScheduledEventDescriptionParser.kt */
         public static final class NoDescription extends DescriptionCache {
             public static final NoDescription INSTANCE = new NoDescription();
 
@@ -189,7 +189,7 @@ public final class GuildScheduledEventDescriptionParser {
         }
     }
 
-    /* compiled from: GuildScheduledEventDescriptionParser.kt */
+    /* JADX INFO: compiled from: GuildScheduledEventDescriptionParser.kt */
     public static final /* data */ class MessageRenderContextModel {
         private final Map<Long, String> channelNames;
         private final Map<Long, GuildRole> roles;
@@ -281,8 +281,8 @@ public final class GuildScheduledEventDescriptionParser {
         }
     }
 
-    /* compiled from: GuildScheduledEventDescriptionParser.kt */
-    /* renamed from: com.discord.widgets.guildscheduledevent.GuildScheduledEventDescriptionParser$getRenderContext$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.guildscheduledevent.GuildScheduledEventDescriptionParser$getRenderContext$1 */
+    /* JADX INFO: compiled from: GuildScheduledEventDescriptionParser.kt */
     public static final class C88121<T1, T2, R> implements Func2<Map<Long, ? extends GuildMember>, Map<Long, ? extends String>, HashMap<Long, String>> {
         public static final C88121 INSTANCE = new C88121();
 
@@ -292,7 +292,7 @@ public final class GuildScheduledEventDescriptionParser {
         }
 
         /* JADX WARN: Multi-variable type inference failed */
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final HashMap<Long, String> call2(Map<Long, GuildMember> map, Map<Long, String> map2) {
             Intrinsics3.checkNotNullExpressionValue(map, "members");
             LinkedHashMap linkedHashMap = new LinkedHashMap();
@@ -312,8 +312,8 @@ public final class GuildScheduledEventDescriptionParser {
         }
     }
 
-    /* compiled from: GuildScheduledEventDescriptionParser.kt */
-    /* renamed from: com.discord.widgets.guildscheduledevent.GuildScheduledEventDescriptionParser$getRenderContext$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.guildscheduledevent.GuildScheduledEventDescriptionParser$getRenderContext$2 */
+    /* JADX INFO: compiled from: GuildScheduledEventDescriptionParser.kt */
     public static final class C88132<T1, T2, T3, R> implements Func3<Map<Long, ? extends String>, HashMap<Long, String>, Map<Long, ? extends GuildRole>, MessageRenderContextModel> {
         public static final C88132 INSTANCE = new C88132();
 
@@ -322,7 +322,7 @@ public final class GuildScheduledEventDescriptionParser {
             return call2((Map<Long, String>) map, map2, (Map<Long, GuildRole>) map3);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final MessageRenderContextModel call2(Map<Long, String> map, HashMap<Long, String> map2, Map<Long, GuildRole> map3) {
             return new MessageRenderContextModel(map, map2, map3);
         }

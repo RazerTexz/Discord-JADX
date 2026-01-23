@@ -18,48 +18,48 @@ import p007b.p225i.p361c.p369m.p370d.p384s.p385h.AppSettingsData;
 import p007b.p225i.p361c.p369m.p370d.p384s.p386i.CreateAppSpiCall;
 import p007b.p225i.p361c.p369m.p370d.p384s.p386i.UpdateAppSpiCall;
 
-/* compiled from: Onboarding.java */
-/* renamed from: b.i.c.m.d.h, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.c.m.d.h, reason: use source file name */
+/* JADX INFO: compiled from: Onboarding.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class Onboarding4 {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final HttpRequestFactory f12234a = new HttpRequestFactory();
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final FirebaseApp2 f12235b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final Context f12236c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public PackageManager f12237d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public String f12238e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public PackageInfo f12239f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public String f12240g;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public String f12241h;
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public String f12242i;
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public String f12243j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public String f12244k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public IdManager f12245l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public DataCollectionArbiter f12246m;
 
     public Onboarding4(FirebaseApp2 firebaseApp2, Context context, IdManager idManager, DataCollectionArbiter dataCollectionArbiter) {
@@ -69,7 +69,7 @@ public class Onboarding4 {
         this.f12246m = dataCollectionArbiter;
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static void m6383a(Onboarding4 onboarding4, AppSettingsData appSettingsData, String str, SettingsController settingsController, Executor executor, boolean z2) throws Throwable {
         Objects.requireNonNull(onboarding4);
         if ("new".equals(appSettingsData.f12749a)) {
@@ -92,12 +92,12 @@ public class Onboarding4 {
         }
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final AppRequestData m6384b(String str, String str2) {
         return new AppRequestData(str, str2, this.f12245l.f12411e, this.f12241h, this.f12240g, CommonUtils.m6412f(CommonUtils.m6418l(this.f12236c), str2, this.f12241h, this.f12240g), this.f12243j, DeliveryMechanism.m6452f(this.f12242i).m6453g(), this.f12244k, "0");
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public String m6385c() {
         Context context = this.f12236c;
         int iM6420n = CommonUtils.m6420n(context, "com.crashlytics.ApiEndpoint", "string");

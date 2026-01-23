@@ -3,19 +3,19 @@ package p007b.p225i.p226a.p288f.p313h.p322i;
 import java.io.PrintStream;
 import org.objectweb.asm.Opcodes;
 
-/* compiled from: com.google.firebase:firebase-messaging@@21.0.0 */
-/* renamed from: b.i.a.f.h.i.e */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.h.i.e */
+/* JADX INFO: compiled from: com.google.firebase:firebase-messaging@@21.0.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public final class C3491e {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final AbstractC3493g f9656a;
 
-    /* compiled from: com.google.firebase:firebase-messaging@@21.0.0 */
-    /* renamed from: b.i.a.f.h.i.e$a */
+    /* JADX INFO: renamed from: b.i.a.f.h.i.e$a */
+    /* JADX INFO: compiled from: com.google.firebase:firebase-messaging@@21.0.0 */
     public static final class a extends AbstractC3493g {
         @Override // p007b.p225i.p226a.p288f.p313h.p322i.AbstractC3493g
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final void mo4413a(Throwable th, Throwable th2) {
         }
     }

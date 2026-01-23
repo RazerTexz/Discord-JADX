@@ -4,8 +4,8 @@ import android.content.Context;
 import com.discord.C5419R;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ContextSearchStringProvider.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: ContextSearchStringProvider.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class ContextSearchStringProvider implements SearchStringProvider {
     private final String embedAnswerString;
     private final String fileAnswerString;

@@ -5,12 +5,12 @@ import android.widget.Space;
 import androidx.annotation.NonNull;
 import androidx.viewbinding.ViewBinding;
 
-/* compiled from: ViewCodeVerificationSpaceBinding.java */
-/* renamed from: b.a.i.f2, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.a.i.f2, reason: use source file name */
+/* JADX INFO: compiled from: ViewCodeVerificationSpaceBinding.java */
+/* JADX INFO: loaded from: classes.dex */
 public final class ViewCodeVerificationSpaceBinding implements ViewBinding {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     @NonNull
     public final Space f840a;
 

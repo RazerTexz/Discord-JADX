@@ -5,23 +5,23 @@ import com.discord.rtcconnection.mediaengine.MediaEngineConnection;
 import kotlin.Tuples2;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: KrispOveruseDetector.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: KrispOveruseDetector.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class KrispOveruseDetector {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public OutboundRtpAudio f18736a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public OutboundRtpAudio f18737b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public int f18738c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final MediaEngineConnection f18739d;
 
-    /* compiled from: KrispOveruseDetector.kt */
+    /* JADX INFO: compiled from: KrispOveruseDetector.kt */
     public enum Status {
         CPU_OVERUSE,
         FAILED,
@@ -33,7 +33,7 @@ public final class KrispOveruseDetector {
         this.f18739d = mediaEngineConnection;
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final Tuples2<Boolean, Long> m8451a(OutboundRtpAudio outboundRtpAudio, OutboundRtpAudio outboundRtpAudio2, double d) {
         if (outboundRtpAudio == null || outboundRtpAudio2 == null) {
             return new Tuples2<>(Boolean.FALSE, 0L);

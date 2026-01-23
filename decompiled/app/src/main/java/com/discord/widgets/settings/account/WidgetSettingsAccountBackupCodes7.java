@@ -5,9 +5,9 @@ import kotlin.Unit;
 import kotlin.jvm.functions.Function0;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetSettingsAccountBackupCodes.kt */
-/* renamed from: com.discord.widgets.settings.account.WidgetSettingsAccountBackupCodes$showVerificationKeyModal$$inlined$let$lambda$2, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.settings.account.WidgetSettingsAccountBackupCodes$showVerificationKeyModal$$inlined$let$lambda$2, reason: use source file name */
+/* JADX INFO: compiled from: WidgetSettingsAccountBackupCodes.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetSettingsAccountBackupCodes7 extends Lambda implements Function0<Unit> {
     public final /* synthetic */ WidgetSettingsAccountBackupCodes this$0;
 
@@ -23,7 +23,7 @@ public final class WidgetSettingsAccountBackupCodes7 extends Lambda implements F
         return Unit.f27425a;
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final void invoke2() {
         FragmentActivity activity = this.this$0.getActivity();
         if (activity != null) {

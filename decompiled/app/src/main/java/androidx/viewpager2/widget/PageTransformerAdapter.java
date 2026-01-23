@@ -6,7 +6,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.viewpager2.widget.ViewPager2;
 import java.util.Locale;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public final class PageTransformerAdapter extends ViewPager2.OnPageChangeCallback {
     private final LinearLayoutManager mLayoutManager;
     private ViewPager2.PageTransformer mPageTransformer;

@@ -47,7 +47,7 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public class BottomAppBar extends Toolbar implements CoordinatorLayout.AttachedBehavior {
     private static final long ANIMATION_DURATION = 300;
     private static final int DEF_STYLE_RES = C10817R.style.Widget_MaterialComponents_BottomAppBar;
@@ -96,7 +96,7 @@ public class BottomAppBar extends Toolbar implements CoordinatorLayout.AttachedB
         private int originalBottomMargin;
         private WeakReference<BottomAppBar> viewRef;
 
-        /* renamed from: com.google.android.material.bottomappbar.BottomAppBar$Behavior$a */
+        /* JADX INFO: renamed from: com.google.android.material.bottomappbar.BottomAppBar$Behavior$a */
         public class ViewOnLayoutChangeListenerC10834a implements View.OnLayoutChangeListener {
             public ViewOnLayoutChangeListenerC10834a() {
             }
@@ -193,13 +193,13 @@ public class BottomAppBar extends Toolbar implements CoordinatorLayout.AttachedB
     public static class SavedState extends AbsSavedState {
         public static final Parcelable.Creator<SavedState> CREATOR = new C10835a();
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public int f20897j;
 
-        /* renamed from: k */
+        /* JADX INFO: renamed from: k */
         public boolean f20898k;
 
-        /* renamed from: com.google.android.material.bottomappbar.BottomAppBar$SavedState$a */
+        /* JADX INFO: renamed from: com.google.android.material.bottomappbar.BottomAppBar$SavedState$a */
         public static class C10835a implements Parcelable.ClassLoaderCreator<SavedState> {
             @Override // android.os.Parcelable.ClassLoaderCreator
             @NonNull
@@ -238,7 +238,7 @@ public class BottomAppBar extends Toolbar implements CoordinatorLayout.AttachedB
         }
     }
 
-    /* renamed from: com.google.android.material.bottomappbar.BottomAppBar$a */
+    /* JADX INFO: renamed from: com.google.android.material.bottomappbar.BottomAppBar$a */
     public class C10836a extends AnimatorListenerAdapter {
         public C10836a() {
         }
@@ -253,7 +253,7 @@ public class BottomAppBar extends Toolbar implements CoordinatorLayout.AttachedB
         }
     }
 
-    /* renamed from: com.google.android.material.bottomappbar.BottomAppBar$b */
+    /* JADX INFO: renamed from: com.google.android.material.bottomappbar.BottomAppBar$b */
     public class C10837b implements TransformationCallback<FloatingActionButton> {
         public C10837b() {
         }
@@ -281,7 +281,7 @@ public class BottomAppBar extends Toolbar implements CoordinatorLayout.AttachedB
         }
     }
 
-    /* renamed from: com.google.android.material.bottomappbar.BottomAppBar$c */
+    /* JADX INFO: renamed from: com.google.android.material.bottomappbar.BottomAppBar$c */
     public class C10838c implements ViewUtils.OnApplyWindowInsetsListener {
         public C10838c() {
         }
@@ -314,7 +314,7 @@ public class BottomAppBar extends Toolbar implements CoordinatorLayout.AttachedB
         }
     }
 
-    /* renamed from: com.google.android.material.bottomappbar.BottomAppBar$d */
+    /* JADX INFO: renamed from: com.google.android.material.bottomappbar.BottomAppBar$d */
     public class C10839d extends AnimatorListenerAdapter {
         public C10839d() {
         }
@@ -331,13 +331,13 @@ public class BottomAppBar extends Toolbar implements CoordinatorLayout.AttachedB
         }
     }
 
-    /* renamed from: com.google.android.material.bottomappbar.BottomAppBar$e */
+    /* JADX INFO: renamed from: com.google.android.material.bottomappbar.BottomAppBar$e */
     public class C10840e extends FloatingActionButton.OnVisibilityChangedListener {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final /* synthetic */ int f20903a;
 
-        /* renamed from: com.google.android.material.bottomappbar.BottomAppBar$e$a */
+        /* JADX INFO: renamed from: com.google.android.material.bottomappbar.BottomAppBar$e$a */
         public class a extends FloatingActionButton.OnVisibilityChangedListener {
             public a() {
             }
@@ -359,7 +359,7 @@ public class BottomAppBar extends Toolbar implements CoordinatorLayout.AttachedB
         }
     }
 
-    /* renamed from: com.google.android.material.bottomappbar.BottomAppBar$f */
+    /* JADX INFO: renamed from: com.google.android.material.bottomappbar.BottomAppBar$f */
     public class C10841f extends AnimatorListenerAdapter {
         public C10841f() {
         }
@@ -377,19 +377,19 @@ public class BottomAppBar extends Toolbar implements CoordinatorLayout.AttachedB
         }
     }
 
-    /* renamed from: com.google.android.material.bottomappbar.BottomAppBar$g */
+    /* JADX INFO: renamed from: com.google.android.material.bottomappbar.BottomAppBar$g */
     public class C10842g extends AnimatorListenerAdapter {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public boolean f20907a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final /* synthetic */ ActionMenuView f20908b;
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public final /* synthetic */ int f20909c;
 
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         public final /* synthetic */ boolean f20910d;
 
         public C10842g(ActionMenuView actionMenuView, int i, boolean z2) {
@@ -415,16 +415,16 @@ public class BottomAppBar extends Toolbar implements CoordinatorLayout.AttachedB
         }
     }
 
-    /* renamed from: com.google.android.material.bottomappbar.BottomAppBar$h */
+    /* JADX INFO: renamed from: com.google.android.material.bottomappbar.BottomAppBar$h */
     public class RunnableC10843h implements Runnable {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public final /* synthetic */ ActionMenuView f20912j;
 
-        /* renamed from: k */
+        /* JADX INFO: renamed from: k */
         public final /* synthetic */ int f20913k;
 
-        /* renamed from: l */
+        /* JADX INFO: renamed from: l */
         public final /* synthetic */ boolean f20914l;
 
         public RunnableC10843h(ActionMenuView actionMenuView, int i, boolean z2) {
@@ -439,7 +439,7 @@ public class BottomAppBar extends Toolbar implements CoordinatorLayout.AttachedB
         }
     }
 
-    /* renamed from: com.google.android.material.bottomappbar.BottomAppBar$i */
+    /* JADX INFO: renamed from: com.google.android.material.bottomappbar.BottomAppBar$i */
     public class C10844i extends AnimatorListenerAdapter {
         public C10844i() {
         }
@@ -454,12 +454,12 @@ public class BottomAppBar extends Toolbar implements CoordinatorLayout.AttachedB
         }
     }
 
-    /* renamed from: com.google.android.material.bottomappbar.BottomAppBar$j */
+    /* JADX INFO: renamed from: com.google.android.material.bottomappbar.BottomAppBar$j */
     public interface InterfaceC10845j {
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         void m9127a(BottomAppBar bottomAppBar);
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         void m9128b(BottomAppBar bottomAppBar);
     }
 

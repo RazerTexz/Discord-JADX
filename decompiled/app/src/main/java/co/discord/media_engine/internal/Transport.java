@@ -6,8 +6,8 @@ import p001a0.p002a.p003a.C0002b;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: NativeStatistics.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: NativeStatistics.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class Transport {
     private final long decryptionFailures;
     private final String localAddress;
@@ -32,37 +32,37 @@ public final /* data */ class Transport {
         return transport.copy((i4 & 1) != 0 ? transport.decryptionFailures : j, (i4 & 2) != 0 ? transport.maxPaddingBitrate : i, (i4 & 4) != 0 ? transport.pacerDelay : j2, (i4 & 8) != 0 ? transport.rtt : i2, (i4 & 16) != 0 ? transport.sendBandwidth : i3, (i4 & 32) != 0 ? transport.localAddress : str, (i4 & 64) != 0 ? transport.receiverReports : receiverReportArr);
     }
 
-    /* renamed from: component1, reason: from getter */
+    /* JADX INFO: renamed from: component1, reason: from getter */
     public final long getDecryptionFailures() {
         return this.decryptionFailures;
     }
 
-    /* renamed from: component2, reason: from getter */
+    /* JADX INFO: renamed from: component2, reason: from getter */
     public final int getMaxPaddingBitrate() {
         return this.maxPaddingBitrate;
     }
 
-    /* renamed from: component3, reason: from getter */
+    /* JADX INFO: renamed from: component3, reason: from getter */
     public final long getPacerDelay() {
         return this.pacerDelay;
     }
 
-    /* renamed from: component4, reason: from getter */
+    /* JADX INFO: renamed from: component4, reason: from getter */
     public final int getRtt() {
         return this.rtt;
     }
 
-    /* renamed from: component5, reason: from getter */
+    /* JADX INFO: renamed from: component5, reason: from getter */
     public final int getSendBandwidth() {
         return this.sendBandwidth;
     }
 
-    /* renamed from: component6, reason: from getter */
+    /* JADX INFO: renamed from: component6, reason: from getter */
     public final String getLocalAddress() {
         return this.localAddress;
     }
 
-    /* renamed from: component7, reason: from getter */
+    /* JADX INFO: renamed from: component7, reason: from getter */
     public final ReceiverReport[] getReceiverReports() {
         return this.receiverReports;
     }

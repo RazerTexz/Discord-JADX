@@ -3,18 +3,18 @@ package p007b.p225i.p226a.p242c.p267x2;
 import androidx.annotation.Nullable;
 import p007b.p100d.p104b.p105a.outline;
 
-/* compiled from: SeekPoint.java */
-/* renamed from: b.i.a.c.x2.u, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.x2.u, reason: use source file name */
+/* JADX INFO: compiled from: SeekPoint.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class SeekPoint {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final SeekPoint f8997a = new SeekPoint(0, 0);
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final long f8998b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final long f8999c;
 
     public SeekPoint(long j, long j2) {

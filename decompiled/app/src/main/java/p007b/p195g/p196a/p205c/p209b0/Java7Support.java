@@ -5,12 +5,12 @@ import p007b.p195g.p196a.p205c.p210c0.Annotated;
 import p007b.p195g.p196a.p205c.p210c0.AnnotatedParameter;
 import p007b.p195g.p196a.p205c.p219i0.ClassUtil;
 
-/* compiled from: Java7Support.java */
-/* renamed from: b.g.a.c.b0.c, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.g.a.c.b0.c, reason: use source file name */
+/* JADX INFO: compiled from: Java7Support.java */
+/* JADX INFO: loaded from: classes3.dex */
 public abstract class Java7Support {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final Java7Support f4622a;
 
     static {
@@ -23,12 +23,12 @@ public abstract class Java7Support {
         f4622a = java7Support;
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public abstract PropertyName mo1804a(AnnotatedParameter annotatedParameter);
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public abstract Boolean mo1805b(Annotated annotated);
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public abstract Boolean mo1806c(Annotated annotated);
 }

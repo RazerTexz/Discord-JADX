@@ -8,25 +8,25 @@ import java.util.List;
 import java.util.Objects;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ReflectJavaMember.kt */
-/* renamed from: d0.e0.p.d.m0.c.k1.b.a, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.c.k1.b.a, reason: use source file name */
+/* JADX INFO: compiled from: ReflectJavaMember.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class ReflectJavaMember {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final ReflectJavaMember f23028a = new ReflectJavaMember();
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static a f23029b;
 
-    /* compiled from: ReflectJavaMember.kt */
-    /* renamed from: d0.e0.p.d.m0.c.k1.b.a$a */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.c.k1.b.a$a */
+    /* JADX INFO: compiled from: ReflectJavaMember.kt */
     public static final class a {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final Method f23030a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final Method f23031b;
 
         public a(Method method, Method method2) {
@@ -43,7 +43,7 @@ public final class ReflectJavaMember {
         }
     }
 
-    public final a buildCache(Member member) throws SecurityException {
+    public final a buildCache(Member member) {
         Intrinsics3.checkNotNullParameter(member, "member");
         Class<?> cls = member.getClass();
         try {
@@ -53,7 +53,7 @@ public final class ReflectJavaMember {
         }
     }
 
-    public final List<String> loadParameterNames(Member member) throws IllegalAccessException, SecurityException, IllegalArgumentException, InvocationTargetException {
+    public final List<String> loadParameterNames(Member member) throws IllegalAccessException, InvocationTargetException {
         Method getName;
         Intrinsics3.checkNotNullParameter(member, "member");
         a aVarBuildCache = f23029b;

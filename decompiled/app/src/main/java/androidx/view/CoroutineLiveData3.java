@@ -5,10 +5,10 @@ import kotlin.coroutines.Continuation;
 import p507d0.p584w.p586i.p587a.ContinuationImpl3;
 import p507d0.p584w.p586i.p587a.DebugMetadata;
 
-/* compiled from: CoroutineLiveData.kt */
+/* JADX INFO: renamed from: androidx.lifecycle.CoroutineLiveData$clearSource$1, reason: use source file name */
+/* JADX INFO: compiled from: CoroutineLiveData.kt */
+/* JADX INFO: loaded from: classes.dex */
 @DebugMetadata(m10084c = "androidx.lifecycle.CoroutineLiveData", m10085f = "CoroutineLiveData.kt", m10086l = {234}, m10087m = "clearSource$lifecycle_livedata_ktx_release")
-/* renamed from: androidx.lifecycle.CoroutineLiveData$clearSource$1, reason: use source file name */
-/* loaded from: classes.dex */
 public final class CoroutineLiveData3 extends ContinuationImpl3 {
     public Object L$0;
     public int label;

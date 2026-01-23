@@ -11,9 +11,9 @@ import kotlin.jvm.functions.Function0;
 import kotlin.jvm.functions.Function1;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetSettingsDeveloper.kt */
-/* renamed from: com.discord.widgets.settings.developer.WidgetSettingsDeveloper$setupExperimentSection$1$$special$$inlined$map$lambda$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.settings.developer.WidgetSettingsDeveloper$setupExperimentSection$1$$special$$inlined$map$lambda$1, reason: use source file name */
+/* JADX INFO: compiled from: WidgetSettingsDeveloper.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetSettingsDeveloper3 implements ExperimentOverridesAdapter.Item {
     public final /* synthetic */ Map $allOverrides$inlined;
     public final /* synthetic */ ExperimentRegistry2 $registeredExperiment;
@@ -25,8 +25,8 @@ public final class WidgetSettingsDeveloper3 implements ExperimentOverridesAdapte
     private final Function1<Integer, Unit> onOverrideBucketSelected = new AnonymousClass1();
     private final Function0<Unit> onOverrideBucketCleared = new AnonymousClass2();
 
-    /* compiled from: WidgetSettingsDeveloper.kt */
-    /* renamed from: com.discord.widgets.settings.developer.WidgetSettingsDeveloper$setupExperimentSection$1$$special$$inlined$map$lambda$1$1, reason: invalid class name */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.developer.WidgetSettingsDeveloper$setupExperimentSection$1$$special$$inlined$map$lambda$1$1, reason: invalid class name */
+    /* JADX INFO: compiled from: WidgetSettingsDeveloper.kt */
     public static final class AnonymousClass1 extends Lambda implements Function1<Integer, Unit> {
         public AnonymousClass1() {
             super(1);
@@ -44,8 +44,8 @@ public final class WidgetSettingsDeveloper3 implements ExperimentOverridesAdapte
         }
     }
 
-    /* compiled from: WidgetSettingsDeveloper.kt */
-    /* renamed from: com.discord.widgets.settings.developer.WidgetSettingsDeveloper$setupExperimentSection$1$$special$$inlined$map$lambda$1$2, reason: invalid class name */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.developer.WidgetSettingsDeveloper$setupExperimentSection$1$$special$$inlined$map$lambda$1$2, reason: invalid class name */
+    /* JADX INFO: compiled from: WidgetSettingsDeveloper.kt */
     public static final class AnonymousClass2 extends Lambda implements Function0<Unit> {
         public AnonymousClass2() {
             super(0);
@@ -57,7 +57,7 @@ public final class WidgetSettingsDeveloper3 implements ExperimentOverridesAdapte
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             WidgetSettingsDeveloper3 widgetSettingsDeveloper3 = WidgetSettingsDeveloper3.this;
             widgetSettingsDeveloper3.this$0.$experimentStore.clearOverride(widgetSettingsDeveloper3.$registeredExperiment.getName());

@@ -6,9 +6,9 @@ import p507d0.p592z.p594d.Lambda;
 import p658rx.functions.Action1;
 
 /* JADX INFO: Add missing generic type declarations: [T] */
-/* compiled from: AppTransformers.kt */
-/* renamed from: b.a.d.c0 */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.a.d.c0 */
+/* JADX INFO: compiled from: AppTransformers.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class C0857c0<T> extends Lambda implements Function1<T, Unit> {
     public final /* synthetic */ Action1 $action;
 

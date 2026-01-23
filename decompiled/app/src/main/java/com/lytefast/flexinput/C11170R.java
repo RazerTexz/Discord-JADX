@@ -1,10 +1,10 @@
 package com.lytefast.flexinput;
 
-/* renamed from: com.lytefast.flexinput.R */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: com.lytefast.flexinput.R */
+/* JADX INFO: loaded from: classes3.dex */
 public final class C11170R {
 
-    /* renamed from: com.lytefast.flexinput.R$a */
+    /* JADX INFO: renamed from: com.lytefast.flexinput.R$a */
     public static final class a {
         public static final int design_appbar_state_list_animator = 2130837504;
         public static final int design_fab_hide_motion_spec = 2130837505;
@@ -43,7 +43,7 @@ public final class C11170R {
         }
     }
 
-    /* renamed from: com.lytefast.flexinput.R$b */
+    /* JADX INFO: renamed from: com.lytefast.flexinput.R$b */
     public static final class b {
         public static final int actionBarDivider = 2130968576;
         public static final int actionBarItemBackground = 2130968577;
@@ -1780,7 +1780,7 @@ public final class C11170R {
         }
     }
 
-    /* renamed from: com.lytefast.flexinput.R$c */
+    /* JADX INFO: renamed from: com.lytefast.flexinput.R$c */
     public static final class c {
         public static final int abc_background_cache_hint_selector_material_dark = 2131099648;
         public static final int abc_background_cache_hint_selector_material_light = 2131099649;
@@ -2626,7 +2626,7 @@ public final class C11170R {
         }
     }
 
-    /* renamed from: com.lytefast.flexinput.R$d */
+    /* JADX INFO: renamed from: com.lytefast.flexinput.R$d */
     public static final class d {
         public static final int abc_action_bar_content_inset_material = 2131165184;
         public static final int abc_action_bar_content_inset_with_nav = 2131165185;
@@ -3160,7 +3160,7 @@ public final class C11170R {
         }
     }
 
-    /* renamed from: com.lytefast.flexinput.R$e */
+    /* JADX INFO: renamed from: com.lytefast.flexinput.R$e */
     public static final class e {
         public static final int abc_ab_share_pack_mtrl_alpha = 2131230859;
         public static final int abc_action_bar_item_background_material = 2131230860;
@@ -4740,7 +4740,7 @@ public final class C11170R {
         }
     }
 
-    /* renamed from: com.lytefast.flexinput.R$f */
+    /* JADX INFO: renamed from: com.lytefast.flexinput.R$f */
     public static final class f {
         public static final int BOTTOM_END = 2131361793;
         public static final int BOTTOM_START = 2131361794;
@@ -5076,7 +5076,7 @@ public final class C11170R {
         public static final int numeric = 2131364579;
         public static final int off = 2131364616;
 
-        /* renamed from: on */
+        /* JADX INFO: renamed from: on */
         public static final int f21830on = 2131364620;
         public static final int outline = 2131364641;
         public static final int outward = 2131364642;
@@ -5244,7 +5244,7 @@ public final class C11170R {
         public static final int uniform = 2131365931;
         public static final int unlabeled = 2131365934;
 
-        /* renamed from: up */
+        /* JADX INFO: renamed from: up */
         public static final int f21831up = 2131365940;
         public static final int video = 2131366101;
         public static final int view_offset_helper = 2131366113;
@@ -5265,7 +5265,7 @@ public final class C11170R {
         }
     }
 
-    /* renamed from: com.lytefast.flexinput.R$g */
+    /* JADX INFO: renamed from: com.lytefast.flexinput.R$g */
     public static final class g {
         public static final int abc_action_bar_title_item = 2131558400;
         public static final int abc_action_bar_up_container = 2131558401;
@@ -5413,7 +5413,7 @@ public final class C11170R {
         }
     }
 
-    /* renamed from: com.lytefast.flexinput.R$h */
+    /* JADX INFO: renamed from: com.lytefast.flexinput.R$h */
     public static final class h {
         public static final int _continue = 2131886085;
         public static final int _default = 2131886086;
@@ -5495,7 +5495,7 @@ public final class C11170R {
         public static final int accessibility_settings_saturation_title = 2131886186;
         public static final int accessibility_settings_sync_forced_colors_description = 2131886187;
 
-        /* renamed from: accessibility_settings_sync_forced_colors_description_with_feedback */
+        /* JADX INFO: renamed from: accessibility_settings_sync_forced_colors_description_with_feedback */
         public static final int f21832x728e7f39 = 2131886188;
         public static final int accessibility_settings_sync_forced_colors_label = 2131886189;
         public static final int accessibility_settings_tts_rate_faster = 2131886190;
@@ -5970,7 +5970,7 @@ public final class C11170R {
         public static final int application_store_gift_purchase_gift_error_sending_link = 2131886672;
         public static final int application_store_gift_purchase_gift_recipient_section_label = 2131886673;
 
-        /* renamed from: application_store_gift_purchase_gift_recipient_select_placeholder */
+        /* JADX INFO: renamed from: application_store_gift_purchase_gift_recipient_select_placeholder */
         public static final int f21833x4d009ce9 = 2131886674;
         public static final int application_store_gift_purchase_gift_recipient_subtext = 2131886675;
         public static final int application_store_gift_purchase_gift_send_now_button = 2131886676;
@@ -6130,7 +6130,7 @@ public final class C11170R {
         public static final int application_store_staff_pick = 2131886830;
         public static final int application_store_the_game_awards_winner = 2131886831;
 
-        /* renamed from: application_store_warning_dlc_requires_base_application_description */
+        /* JADX INFO: renamed from: application_store_warning_dlc_requires_base_application_description */
         public static final int f21834x8b3323fc = 2131886832;
         public static final int application_store_warning_dlc_requires_base_application_title = 2131886833;
         public static final int application_store_warning_early_access_description = 2131886834;
@@ -6324,7 +6324,7 @@ public final class C11170R {
         public static final int beginning_thread_archive_description = 2131887025;
         public static final int beta = 2131887026;
 
-        /* renamed from: bg */
+        /* JADX INFO: renamed from: bg */
         public static final int f21835bg = 2131887027;
         public static final int billing = 2131887028;
         public static final int billing_accept_terms_paid_services_tooltip = 2131887029;
@@ -6425,10 +6425,10 @@ public final class C11170R {
         public static final int billing_payment_table_header_date = 2131887124;
         public static final int billing_payment_table_header_description = 2131887125;
 
-        /* renamed from: billing_plan_select_description_premium_tier_1_premium_guild_bundle */
+        /* JADX INFO: renamed from: billing_plan_select_description_premium_tier_1_premium_guild_bundle */
         public static final int f21836x807c55a5 = 2131887126;
 
-        /* renamed from: billing_plan_select_description_premium_tier_2_premium_guild_bundle */
+        /* JADX INFO: renamed from: billing_plan_select_description_premium_tier_2_premium_guild_bundle */
         public static final int f21837x7021044 = 2131887127;
         public static final int billing_plan_select_includes_boosts = 2131887128;
         public static final int billing_plan_selection_discount = 2131887129;
@@ -7564,7 +7564,7 @@ public final class C11170R {
         public static final int credit_card_security_code = 2131888289;
         public static final int crop = 2131888290;
 
-        /* renamed from: cs */
+        /* JADX INFO: renamed from: cs */
         public static final int f21838cs = 2131888291;
         public static final int currently_in_voice_1 = 2131888292;
         public static final int currently_in_voice_2 = 2131888293;
@@ -7595,7 +7595,7 @@ public final class C11170R {
         public static final int customize_group = 2131888320;
         public static final int cut = 2131888321;
 
-        /* renamed from: da */
+        /* JADX INFO: renamed from: da */
         public static final int f21839da = 2131888322;
         public static final int dark_blue = 2131888323;
         public static final int dark_grey = 2131888324;
@@ -7629,7 +7629,7 @@ public final class C11170R {
         public static final int date = 2131888352;
         public static final int day = 2131888353;
 
-        /* renamed from: de */
+        /* JADX INFO: renamed from: de */
         public static final int f21840de = 2131888354;
         public static final int deafen = 2131888355;
         public static final int deafen_members = 2131888356;
@@ -7841,7 +7841,7 @@ public final class C11170R {
         public static final int display_silence_warning = 2131888570;
         public static final int display_submit_button = 2131888571;
 
-        /* renamed from: dm */
+        /* JADX INFO: renamed from: dm */
         public static final int f21841dm = 2131888572;
         public static final int dm_search_placeholder = 2131888573;
         public static final int dm_textarea_placeholder = 2131888574;
@@ -7919,7 +7919,7 @@ public final class C11170R {
         public static final int education_new_feature_dismiss = 2131888648;
         public static final int education_new_feature_try_it = 2131888649;
 
-        /* renamed from: el */
+        /* JADX INFO: renamed from: el */
         public static final int f21842el = 2131888650;
         public static final int elevated_permissions_sound_body = 2131888651;
         public static final int elevated_permissions_sound_no_sound_button = 2131888652;
@@ -7939,10 +7939,10 @@ public final class C11170R {
         public static final int embedded_activities_boosting_badge_tooltip = 2131888669;
         public static final int embedded_activities_careful = 2131888670;
 
-        /* renamed from: embedded_activities_concurrent_activities_limited_upsell_modal_body */
+        /* JADX INFO: renamed from: embedded_activities_concurrent_activities_limited_upsell_modal_body */
         public static final int f21843xe825b5da = 2131888671;
 
-        /* renamed from: embedded_activities_concurrent_activities_unlimited_upsell_modal_body */
+        /* JADX INFO: renamed from: embedded_activities_concurrent_activities_unlimited_upsell_modal_body */
         public static final int f21844xe1036b21 = 2131888672;
         public static final int embedded_activities_concurrent_activities_upsell_modal_title = 2131888673;
         public static final int embedded_activities_desktop_only_modal_description = 2131888675;
@@ -8070,7 +8070,7 @@ public final class C11170R {
         public static final int empty_voice_channel_body = 2131888819;
         public static final int empty_voice_channel_title = 2131888820;
 
-        /* renamed from: en */
+        /* JADX INFO: renamed from: en */
         public static final int f21845en = 2131888821;
         public static final int en_gb = 2131888822;
         public static final int en_us = 2131888823;
@@ -8207,7 +8207,7 @@ public final class C11170R {
         public static final int feedback_modal_title = 2131889018;
         public static final int feedback_need_more_help = 2131889019;
 
-        /* renamed from: fi */
+        /* JADX INFO: renamed from: fi */
         public static final int f21846fi = 2131889020;
         public static final int file_rate_kb = 2131889021;
         public static final int file_rate_mb = 2131889022;
@@ -8590,7 +8590,7 @@ public final class C11170R {
         public static final int forum_upsell_modal_body = 2131889433;
         public static final int forum_upsell_modal_header = 2131889434;
 
-        /* renamed from: fr */
+        /* JADX INFO: renamed from: fr */
         public static final int f21847fr = 2131889435;
         public static final int frequently_used = 2131889440;
         public static final int friend_add_instructions = 2131889441;
@@ -9470,7 +9470,7 @@ public final class C11170R {
         public static final int guild_role_manage_subscription_manage_options_change_tier = 2131890408;
         public static final int guild_role_manage_subscription_manage_options_label = 2131890409;
 
-        /* renamed from: guild_role_manage_subscription_manage_options_restart_subscription */
+        /* JADX INFO: renamed from: guild_role_manage_subscription_manage_options_restart_subscription */
         public static final int f21848x55353a63 = 2131890410;
         public static final int guild_role_manage_subscription_page_description = 2131890411;
         public static final int guild_role_manage_subscription_page_title = 2131890412;
@@ -9489,7 +9489,7 @@ public final class C11170R {
         public static final int guild_role_subscription_benefit_import_num_benefits = 2131890425;
         public static final int guild_role_subscription_benefit_import_select_role = 2131890426;
 
-        /* renamed from: guild_role_subscription_benefit_intangible_description_placeholder */
+        /* JADX INFO: renamed from: guild_role_subscription_benefit_intangible_description_placeholder */
         public static final int f21849x9d8bc2db = 2131890427;
         public static final int guild_role_subscription_benefit_intangible_name_title = 2131890428;
         public static final int guild_role_subscription_change_tier_disabled_in_trial = 2131890429;
@@ -9514,7 +9514,7 @@ public final class C11170R {
         public static final int guild_role_subscription_create_tier_details_description = 2131890448;
         public static final int guild_role_subscription_create_tier_details_title = 2131890449;
 
-        /* renamed from: guild_role_subscription_create_tier_intangible_benefits_description */
+        /* JADX INFO: renamed from: guild_role_subscription_create_tier_intangible_benefits_description */
         public static final int f21850x2e4f7edc = 2131890450;
         public static final int guild_role_subscription_create_tier_intangible_benefits_title = 2131890451;
         public static final int guild_role_subscription_earnings_a11y_toggle_transaction_period = 2131890452;
@@ -9523,14 +9523,14 @@ public final class C11170R {
         public static final int guild_role_subscription_earnings_earnings_history_header = 2131890455;
         public static final int guild_role_subscription_earnings_edit_payment_method_link = 2131890456;
 
-        /* renamed from: guild_role_subscription_earnings_free_trial_converted_users_metrics_sub_label */
+        /* JADX INFO: renamed from: guild_role_subscription_earnings_free_trial_converted_users_metrics_sub_label */
         public static final int f21851x25752e2a = 2131890457;
         public static final int guild_role_subscription_earnings_free_trial_metrics_description = 2131890458;
         public static final int guild_role_subscription_earnings_free_trial_metrics_title = 2131890459;
         public static final int guild_role_subscription_earnings_header = 2131890460;
         public static final int guild_role_subscription_earnings_insights_notice_text = 2131890461;
 
-        /* renamed from: guild_role_subscription_earnings_metric_converted_to_paid_members */
+        /* JADX INFO: renamed from: guild_role_subscription_earnings_metric_converted_to_paid_members */
         public static final int f21852x9ea4af3f = 2131890462;
         public static final int guild_role_subscription_earnings_metric_current_active_trials = 2131890463;
         public static final int guild_role_subscription_earnings_metric_next_payment = 2131890464;
@@ -9566,10 +9566,10 @@ public final class C11170R {
         public static final int guild_role_subscription_empty_perk_3_title = 2131890494;
         public static final int guild_role_subscription_empty_title = 2131890495;
 
-        /* renamed from: guild_role_subscription_enable_monetization_unavailable_mobile_description */
+        /* JADX INFO: renamed from: guild_role_subscription_enable_monetization_unavailable_mobile_description */
         public static final int f21853x43086a8d = 2131890496;
 
-        /* renamed from: guild_role_subscription_enable_monetization_unavailable_mobile_title */
+        /* JADX INFO: renamed from: guild_role_subscription_enable_monetization_unavailable_mobile_title */
         public static final int f21854x27f789a9 = 2131890497;
         public static final int guild_role_subscription_format_all_channels_description = 2131890498;
         public static final int guild_role_subscription_format_all_channels_name = 2131890499;
@@ -9584,26 +9584,26 @@ public final class C11170R {
         public static final int guild_role_subscription_import_benefits_from_role_modal_header_2 = 2131890508;
         public static final int guild_role_subscription_import_benefits_modal_header = 2131890509;
 
-        /* renamed from: guild_role_subscription_import_benefits_select_all_channel_benefits */
+        /* JADX INFO: renamed from: guild_role_subscription_import_benefits_select_all_channel_benefits */
         public static final int f21855xd925924b = 2131890510;
 
-        /* renamed from: guild_role_subscription_import_benefits_select_all_intangible_benefits */
+        /* JADX INFO: renamed from: guild_role_subscription_import_benefits_select_all_intangible_benefits */
         public static final int f21856x5c32c5ab = 2131890511;
         public static final int guild_role_subscription_ineligible_trial_disclaimer = 2131890512;
         public static final int guild_role_subscription_info_description_description = 2131890513;
 
-        /* renamed from: guild_role_subscription_intangible_benefit_description_placeholder */
+        /* JADX INFO: renamed from: guild_role_subscription_intangible_benefit_description_placeholder */
         public static final int f21857xecdcb48b = 2131890514;
 
-        /* renamed from: guild_role_subscription_manage_subscription_page_trial_price_info */
+        /* JADX INFO: renamed from: guild_role_subscription_manage_subscription_page_trial_price_info */
         public static final int f21858x9e169cd0 = 2131890515;
         public static final int guild_role_subscription_mobile_subcribe_cta_description = 2131890516;
         public static final int guild_role_subscription_mobile_subcribe_cta_title = 2131890517;
 
-        /* renamed from: guild_role_subscription_payment_analytics_unavailable_mobile_description */
+        /* JADX INFO: renamed from: guild_role_subscription_payment_analytics_unavailable_mobile_description */
         public static final int f21859x2fda02c5 = 2131890518;
 
-        /* renamed from: guild_role_subscription_payment_analytics_unavailable_mobile_title */
+        /* JADX INFO: renamed from: guild_role_subscription_payment_analytics_unavailable_mobile_title */
         public static final int f21860x170dabe1 = 2131890519;
         public static final int guild_role_subscription_plan_finish = 2131890520;
         public static final int guild_role_subscription_plan_setup_cover_photo_description = 2131890521;
@@ -9622,15 +9622,15 @@ public final class C11170R {
         public static final int guild_role_subscription_purchase_available_tiers = 2131890534;
         public static final int guild_role_subscription_purchase_back_to_groups_view_cta = 2131890535;
 
-        /* renamed from: guild_role_subscription_purchase_back_to_subscription_user_setting_cta */
+        /* JADX INFO: renamed from: guild_role_subscription_purchase_back_to_subscription_user_setting_cta */
         public static final int f21861xa02cbeca = 2131890536;
         public static final int guild_role_subscription_purchase_group_card_cta = 2131890537;
         public static final int guild_role_subscription_purchase_group_channel_benefit_preview = 2131890538;
 
-        /* renamed from: guild_role_subscription_purchase_group_intangible_benefit_preview */
+        /* JADX INFO: renamed from: guild_role_subscription_purchase_group_intangible_benefit_preview */
         public static final int f21862x15d2e277 = 2131890539;
 
-        /* renamed from: guild_role_subscription_purchase_modal_confirmation_channel_preview */
+        /* JADX INFO: renamed from: guild_role_subscription_purchase_modal_confirmation_channel_preview */
         public static final int f21863xc9ade10d = 2131890540;
         public static final int guild_role_subscription_purchase_modal_confirmation_done_button = 2131890541;
         public static final int guild_role_subscription_purchase_modal_confirmation_subtitle = 2131890542;
@@ -9645,58 +9645,58 @@ public final class C11170R {
         public static final int guild_role_subscription_search_channels_placeholder = 2131890551;
         public static final int guild_role_subscription_settings_description = 2131890552;
 
-        /* renamed from: guild_role_subscription_settings_eligibility_requirement_age_description */
+        /* JADX INFO: renamed from: guild_role_subscription_settings_eligibility_requirement_age_description */
         public static final int f21864xe15d9b97 = 2131890553;
 
-        /* renamed from: guild_role_subscription_settings_eligibility_requirement_age_eligible */
+        /* JADX INFO: renamed from: guild_role_subscription_settings_eligibility_requirement_age_eligible */
         public static final int f21865xe742c01c = 2131890554;
 
-        /* renamed from: guild_role_subscription_settings_eligibility_requirement_age_not_eligible */
+        /* JADX INFO: renamed from: guild_role_subscription_settings_eligibility_requirement_age_not_eligible */
         public static final int f21866x57071988 = 2131890555;
 
-        /* renamed from: guild_role_subscription_settings_eligibility_requirement_communicators_description */
+        /* JADX INFO: renamed from: guild_role_subscription_settings_eligibility_requirement_communicators_description */
         public static final int f21867x1112cd16 = 2131890556;
 
-        /* renamed from: guild_role_subscription_settings_eligibility_requirement_communicators_eligible */
+        /* JADX INFO: renamed from: guild_role_subscription_settings_eligibility_requirement_communicators_eligible */
         public static final int f21868xa26c16fd = 2131890557;
 
-        /* renamed from: guild_role_subscription_settings_eligibility_requirement_communicators_not_eligible */
+        /* JADX INFO: renamed from: guild_role_subscription_settings_eligibility_requirement_communicators_not_eligible */
         public static final int f21869x1df817e9 = 2131890558;
 
-        /* renamed from: guild_role_subscription_settings_eligibility_requirement_members_description */
+        /* JADX INFO: renamed from: guild_role_subscription_settings_eligibility_requirement_members_description */
         public static final int f21870x26fcaf31 = 2131890559;
 
-        /* renamed from: guild_role_subscription_settings_eligibility_requirement_members_eligible */
+        /* JADX INFO: renamed from: guild_role_subscription_settings_eligibility_requirement_members_eligible */
         public static final int f21871x95c3e2c2 = 2131890560;
 
-        /* renamed from: guild_role_subscription_settings_eligibility_requirement_members_not_eligible */
+        /* JADX INFO: renamed from: guild_role_subscription_settings_eligibility_requirement_members_not_eligible */
         public static final int f21872xc54a792e = 2131890561;
 
-        /* renamed from: guild_role_subscription_settings_eligibility_requirement_nsfw_content_description */
+        /* JADX INFO: renamed from: guild_role_subscription_settings_eligibility_requirement_nsfw_content_description */
         public static final int f21873x82652c52 = 2131890562;
 
-        /* renamed from: guild_role_subscription_settings_eligibility_requirement_nsfw_content_eligible */
+        /* JADX INFO: renamed from: guild_role_subscription_settings_eligibility_requirement_nsfw_content_eligible */
         public static final int f21874xfcdc6141 = 2131890563;
 
-        /* renamed from: guild_role_subscription_settings_eligibility_requirement_nsfw_content_not_eligible */
+        /* JADX INFO: renamed from: guild_role_subscription_settings_eligibility_requirement_nsfw_content_not_eligible */
         public static final int f21875xd6f1a02d = 2131890564;
 
-        /* renamed from: guild_role_subscription_settings_eligibility_requirement_retention_description */
+        /* JADX INFO: renamed from: guild_role_subscription_settings_eligibility_requirement_retention_description */
         public static final int f21876x89d9faf6 = 2131890565;
 
-        /* renamed from: guild_role_subscription_settings_eligibility_requirement_retention_eligible */
+        /* JADX INFO: renamed from: guild_role_subscription_settings_eligibility_requirement_retention_eligible */
         public static final int f21877x8b46b51d = 2131890566;
 
-        /* renamed from: guild_role_subscription_settings_eligibility_requirement_retention_not_eligible */
+        /* JADX INFO: renamed from: guild_role_subscription_settings_eligibility_requirement_retention_not_eligible */
         public static final int f21878xbe16a609 = 2131890567;
 
-        /* renamed from: guild_role_subscription_settings_eligibility_requirement_violations_description */
+        /* JADX INFO: renamed from: guild_role_subscription_settings_eligibility_requirement_violations_description */
         public static final int f21879xa4da8df0 = 2131890568;
 
-        /* renamed from: guild_role_subscription_settings_eligibility_requirement_violations_eligible */
+        /* JADX INFO: renamed from: guild_role_subscription_settings_eligibility_requirement_violations_eligible */
         public static final int f21880x95059463 = 2131890569;
 
-        /* renamed from: guild_role_subscription_settings_eligibility_requirement_violations_not_eligible */
+        /* JADX INFO: renamed from: guild_role_subscription_settings_eligibility_requirement_violations_not_eligible */
         public static final int f21881x328724f = 2131890570;
         public static final int guild_role_subscription_settings_eligible_message = 2131890571;
         public static final int guild_role_subscription_settings_enable_cta = 2131890572;
@@ -9711,7 +9711,7 @@ public final class C11170R {
         public static final int guild_role_subscription_settings_section_advanced = 2131890581;
         public static final int guild_role_subscription_settings_section_basic_info = 2131890582;
 
-        /* renamed from: guild_role_subscription_settings_section_basic_info_needs_application */
+        /* JADX INFO: renamed from: guild_role_subscription_settings_section_basic_info_needs_application */
         public static final int f21882x867567bf = 2131890583;
         public static final int guild_role_subscription_settings_section_payment = 2131890584;
         public static final int guild_role_subscription_settings_section_preview = 2131890585;
@@ -9719,7 +9719,7 @@ public final class C11170R {
         public static final int guild_role_subscription_settings_title = 2131890587;
         public static final int guild_role_subscription_setup_channel_benefits_add_button_text = 2131890588;
 
-        /* renamed from: guild_role_subscription_setup_channel_benefits_channels_description */
+        /* JADX INFO: renamed from: guild_role_subscription_setup_channel_benefits_channels_description */
         public static final int f21883x99169d6d = 2131890589;
         public static final int guild_role_subscription_setup_channel_benefits_channels_title = 2131890590;
         public static final int guild_role_subscription_setup_delete_group_button = 2131890591;
@@ -9749,15 +9749,15 @@ public final class C11170R {
         public static final int guild_role_subscription_setup_info_full_out_all_info = 2131890615;
         public static final int guild_role_subscription_setup_initial_tier_name = 2131890616;
 
-        /* renamed from: guild_role_subscription_setup_intangible_benefits_add_button_text */
+        /* JADX INFO: renamed from: guild_role_subscription_setup_intangible_benefits_add_button_text */
         public static final int f21884xd6a6bdd4 = 2131890617;
         public static final int guild_role_subscription_setup_intangible_benefits_description = 2131890618;
         public static final int guild_role_subscription_setup_intangible_benefits_title = 2131890619;
 
-        /* renamed from: guild_role_subscription_setup_tier_active_trial_user_limit_description */
+        /* JADX INFO: renamed from: guild_role_subscription_setup_tier_active_trial_user_limit_description */
         public static final int f21885x21033570 = 2131890620;
 
-        /* renamed from: guild_role_subscription_setup_tier_active_trial_user_limit_none_option */
+        /* JADX INFO: renamed from: guild_role_subscription_setup_tier_active_trial_user_limit_none_option */
         public static final int f21886x846378d0 = 2131890621;
         public static final int guild_role_subscription_setup_tier_active_trial_user_limit_title = 2131890622;
         public static final int guild_role_subscription_setup_tier_advance_section_title = 2131890623;
@@ -9782,7 +9782,7 @@ public final class C11170R {
         public static final int guild_role_subscription_setup_tier_symbol_description = 2131890642;
         public static final int guild_role_subscription_setup_tier_symbol_title = 2131890643;
 
-        /* renamed from: guild_role_subscription_setup_tier_trial_time_limit_default_option */
+        /* JADX INFO: renamed from: guild_role_subscription_setup_tier_trial_time_limit_default_option */
         public static final int f21887xa624d60a = 2131890644;
         public static final int guild_role_subscription_tier_additional_benefit_title = 2131890645;
         public static final int guild_role_subscription_tier_additional_benefits_section_title = 2131890646;
@@ -9793,11 +9793,11 @@ public final class C11170R {
         public static final int guild_role_subscription_tier_benefits_emoji_placeholder = 2131890651;
         public static final int guild_role_subscription_tier_benefits_include_all_channels_label = 2131890652;
 
-        /* renamed from: guild_role_subscription_tier_benefits_intangible_name_placeholder */
+        /* JADX INFO: renamed from: guild_role_subscription_tier_benefits_intangible_name_placeholder */
         public static final int f21888xf947c396 = 2131890653;
         public static final int guild_role_subscription_tier_benefits_remove_from_tier_label = 2131890654;
 
-        /* renamed from: guild_role_subscription_tier_benefits_select_channels_manually_label */
+        /* JADX INFO: renamed from: guild_role_subscription_tier_benefits_select_channels_manually_label */
         public static final int f21889x5072293f = 2131890655;
         public static final int guild_role_subscription_tier_delete_confirmation_subtitle = 2131890656;
         public static final int guild_role_subscription_tier_delete_confirmation_title = 2131890657;
@@ -9806,7 +9806,7 @@ public final class C11170R {
         public static final int guild_role_subscription_tier_design_member_badge_label = 2131890660;
         public static final int guild_role_subscription_tier_design_member_color_label = 2131890661;
 
-        /* renamed from: guild_role_subscription_tier_design_member_preview_placeholder_message */
+        /* JADX INFO: renamed from: guild_role_subscription_tier_design_member_preview_placeholder_message */
         public static final int f21890xdb419408 = 2131890662;
         public static final int guild_role_subscription_tier_detail_custom_image_a11y_label = 2131890663;
         public static final int guild_role_subscription_tier_detail_custom_image_button = 2131890664;
@@ -9844,7 +9844,7 @@ public final class C11170R {
         public static final int guild_role_subscription_welcome_description = 2131890696;
         public static final int guild_role_subscription_welcome_get_started_button = 2131890697;
 
-        /* renamed from: guild_role_subscription_welcome_get_started_button_disabled_tooltip */
+        /* JADX INFO: renamed from: guild_role_subscription_welcome_get_started_button_disabled_tooltip */
         public static final int f21891x7500a1e4 = 2131890698;
         public static final int guild_role_subscription_welcome_get_started_description = 2131890699;
         public static final int guild_role_subscription_welcome_get_started_title = 2131890700;
@@ -9857,7 +9857,7 @@ public final class C11170R {
         public static final int guild_role_subscriptions_edit_settings = 2131890707;
         public static final int guild_role_subscriptions_manage_subscriptions_button = 2131890708;
 
-        /* renamed from: guild_role_subscriptions_manage_subscriptions_page_back_button_cta */
+        /* JADX INFO: renamed from: guild_role_subscriptions_manage_subscriptions_page_back_button_cta */
         public static final int f21892x758940e8 = 2131890709;
         public static final int guild_role_subscriptions_require_approved_member = 2131890710;
         public static final int guild_role_subscriptions_toggle_section_label = 2131890711;
@@ -9883,7 +9883,7 @@ public final class C11170R {
         public static final int guild_security_req_owner_only = 2131890731;
         public static final int guild_select = 2131890732;
 
-        /* renamed from: guild_settings_action_filter_application_command_permission_update */
+        /* JADX INFO: renamed from: guild_settings_action_filter_application_command_permission_update */
         public static final int f21893xbc12f1a8 = 2131890733;
         public static final int guild_settings_action_filter_auto_moderation_block_message = 2131890734;
         public static final int guild_settings_action_filter_automod_rule_create = 2131890735;
@@ -9944,7 +9944,7 @@ public final class C11170R {
         public static final int guild_settings_audit_log_announcement_thread_create = 2131890794;
         public static final int guild_settings_audit_log_auto_moderation_block_message = 2131890795;
 
-        /* renamed from: guild_settings_audit_log_auto_moderation_triggered_rule_name_change */
+        /* JADX INFO: renamed from: guild_settings_audit_log_auto_moderation_triggered_rule_name_change */
         public static final int f21894x44d8aa41 = 2131890797;
         public static final int guild_settings_audit_log_automod_rule_actions_update = 2131890799;
         public static final int guild_settings_audit_log_automod_rule_create = 2131890800;
@@ -9957,7 +9957,7 @@ public final class C11170R {
         public static final int guild_settings_audit_log_automod_rule_name_update = 2131890807;
         public static final int guild_settings_audit_log_automod_rule_none = 2131890808;
 
-        /* renamed from: guild_settings_audit_log_automod_rule_trigger_metadata_keywords_update */
+        /* JADX INFO: renamed from: guild_settings_audit_log_automod_rule_trigger_metadata_keywords_update */
         public static final int f21895x34d6e0bd = 2131890809;
         public static final int guild_settings_audit_log_automod_rule_trigger_metadata_update = 2131890810;
         public static final int guild_settings_audit_log_automod_rule_trigger_type_update = 2131890811;
@@ -9967,10 +9967,10 @@ public final class C11170R {
         public static final int guild_settings_audit_log_channel_bitrate_create = 2131890818;
         public static final int guild_settings_audit_log_channel_category_create = 2131890819;
 
-        /* renamed from: guild_settings_audit_log_channel_default_auto_archive_duration_change */
+        /* JADX INFO: renamed from: guild_settings_audit_log_channel_default_auto_archive_duration_change */
         public static final int f21896x846dabf7 = 2131890820;
 
-        /* renamed from: guild_settings_audit_log_channel_default_auto_archive_duration_create */
+        /* JADX INFO: renamed from: guild_settings_audit_log_channel_default_auto_archive_duration_create */
         public static final int f21897x84fc3943 = 2131890821;
         public static final int guild_settings_audit_log_channel_delete = 2131890822;
         public static final int guild_settings_audit_log_channel_name_change = 2131890824;
@@ -10023,20 +10023,20 @@ public final class C11170R {
         public static final int guild_settings_audit_log_guild_banner_hash_change = 2131890871;
         public static final int guild_settings_audit_log_guild_banner_hash_remove = 2131890872;
 
-        /* renamed from: guild_settings_audit_log_guild_default_message_notifications_change_all_messages */
+        /* JADX INFO: renamed from: guild_settings_audit_log_guild_default_message_notifications_change_all_messages */
         public static final int f21898x464da8d1 = 2131890873;
 
-        /* renamed from: guild_settings_audit_log_guild_default_message_notifications_change_only_mentions */
+        /* JADX INFO: renamed from: guild_settings_audit_log_guild_default_message_notifications_change_only_mentions */
         public static final int f21899xa4a33d35 = 2131890874;
         public static final int guild_settings_audit_log_guild_description_change = 2131890875;
         public static final int guild_settings_audit_log_guild_description_clear = 2131890876;
         public static final int guild_settings_audit_log_guild_discovery_splash_hash_change = 2131890877;
 
-        /* renamed from: guild_settings_audit_log_guild_explicit_content_filter_all_members */
+        /* JADX INFO: renamed from: guild_settings_audit_log_guild_explicit_content_filter_all_members */
         public static final int f21900x46ff686a = 2131890878;
         public static final int guild_settings_audit_log_guild_explicit_content_filter_disable = 2131890879;
 
-        /* renamed from: guild_settings_audit_log_guild_explicit_content_filter_members_without_roles */
+        /* JADX INFO: renamed from: guild_settings_audit_log_guild_explicit_content_filter_members_without_roles */
         public static final int f21901xdc84490f = 2131890880;
         public static final int guild_settings_audit_log_guild_icon_hash_change = 2131890889;
         public static final int guild_settings_audit_log_guild_mfa_level_disabled = 2131890890;
@@ -10045,10 +10045,10 @@ public final class C11170R {
         public static final int guild_settings_audit_log_guild_owner_id_change = 2131890893;
         public static final int guild_settings_audit_log_guild_preferred_locale_change = 2131890894;
 
-        /* renamed from: guild_settings_audit_log_guild_premium_progress_bar_enabled_disabled */
+        /* JADX INFO: renamed from: guild_settings_audit_log_guild_premium_progress_bar_enabled_disabled */
         public static final int f21902xb50841d5 = 2131890895;
 
-        /* renamed from: guild_settings_audit_log_guild_premium_progress_bar_enabled_enabled */
+        /* JADX INFO: renamed from: guild_settings_audit_log_guild_premium_progress_bar_enabled_enabled */
         public static final int f21903x6b92b4c8 = 2131890896;
         public static final int guild_settings_audit_log_guild_region_change = 2131890897;
         public static final int guild_settings_audit_log_guild_rules_channel_id_change = 2131890898;
@@ -10058,14 +10058,14 @@ public final class C11170R {
         public static final int guild_settings_audit_log_guild_system_channel_id_change = 2131890902;
         public static final int guild_settings_audit_log_guild_system_channel_id_disable = 2131890903;
 
-        /* renamed from: guild_settings_audit_log_guild_system_channel_join_notification_replies */
+        /* JADX INFO: renamed from: guild_settings_audit_log_guild_system_channel_join_notification_replies */
         public static final int f21904xfa726b8 = 2131890904;
         public static final int guild_settings_audit_log_guild_system_channel_join_notifications = 2131890905;
 
-        /* renamed from: guild_settings_audit_log_guild_system_channel_premium_subscriptions */
+        /* JADX INFO: renamed from: guild_settings_audit_log_guild_system_channel_premium_subscriptions */
         public static final int f21905xda832b9d = 2131890906;
 
-        /* renamed from: guild_settings_audit_log_guild_system_channel_reminder_notifications */
+        /* JADX INFO: renamed from: guild_settings_audit_log_guild_system_channel_reminder_notifications */
         public static final int f21906xc4d9e52c = 2131890907;
         public static final int guild_settings_audit_log_guild_update = 2131890908;
         public static final int guild_settings_audit_log_guild_updates_channel_id_change = 2131890909;
@@ -10077,7 +10077,7 @@ public final class C11170R {
         public static final int guild_settings_audit_log_guild_verification_level_change_medium = 2131890915;
         public static final int guild_settings_audit_log_guild_verification_level_change_none = 2131890916;
 
-        /* renamed from: guild_settings_audit_log_guild_verification_level_change_very_high */
+        /* JADX INFO: renamed from: guild_settings_audit_log_guild_verification_level_change_very_high */
         public static final int f21907x55e0b00 = 2131890917;
         public static final int guild_settings_audit_log_guild_widget_channel_id_change = 2131890918;
         public static final int guild_settings_audit_log_guild_widget_channel_id_delete = 2131890919;
@@ -10088,10 +10088,10 @@ public final class C11170R {
         public static final int guild_settings_audit_log_integration_enable_emoticons_off = 2131890924;
         public static final int guild_settings_audit_log_integration_enable_emoticons_on = 2131890925;
 
-        /* renamed from: guild_settings_audit_log_integration_expire_behavior_kick_from_server */
+        /* JADX INFO: renamed from: guild_settings_audit_log_integration_expire_behavior_kick_from_server */
         public static final int f21908xdcd81586 = 2131890926;
 
-        /* renamed from: guild_settings_audit_log_integration_expire_behavior_remove_synced_role */
+        /* JADX INFO: renamed from: guild_settings_audit_log_integration_expire_behavior_remove_synced_role */
         public static final int f21909x5ab68a7 = 2131890927;
         public static final int guild_settings_audit_log_integration_expire_grace_period = 2131890928;
         public static final int guild_settings_audit_log_integration_update = 2131890929;
@@ -10156,7 +10156,7 @@ public final class C11170R {
         public static final int guild_settings_audit_log_scheduled_event_entity_type_external = 2131890988;
         public static final int guild_settings_audit_log_scheduled_event_entity_type_none = 2131890989;
 
-        /* renamed from: guild_settings_audit_log_scheduled_event_entity_type_stage_instance */
+        /* JADX INFO: renamed from: guild_settings_audit_log_scheduled_event_entity_type_stage_instance */
         public static final int f21910x99771025 = 2131890990;
         public static final int guild_settings_audit_log_scheduled_event_entity_type_voice = 2131890991;
         public static final int guild_settings_audit_log_scheduled_event_image_hash_change = 2131890992;
@@ -10275,7 +10275,7 @@ public final class C11170R {
         public static final int guild_settings_discovery_checklist_change_name = 2131891107;
         public static final int guild_settings_discovery_checklist_communicator_failing_action = 2131891108;
 
-        /* renamed from: guild_settings_discovery_checklist_communicator_failing_action_details */
+        /* JADX INFO: renamed from: guild_settings_discovery_checklist_communicator_failing_action_details */
         public static final int f21911xd2faa46 = 2131891109;
         public static final int guild_settings_discovery_checklist_communicator_progress_label = 2131891110;
         public static final int guild_settings_discovery_checklist_does_not_pass = 2131891111;
@@ -10288,7 +10288,7 @@ public final class C11170R {
         public static final int guild_settings_discovery_checklist_healthy_description_failing = 2131891118;
         public static final int guild_settings_discovery_checklist_healthy_description_pending = 2131891119;
 
-        /* renamed from: guild_settings_discovery_checklist_healthy_description_pending_size */
+        /* JADX INFO: renamed from: guild_settings_discovery_checklist_healthy_description_pending_size */
         public static final int f21912x15aa2226 = 2131891120;
         public static final int guild_settings_discovery_checklist_healthy_failing = 2131891121;
         public static final int guild_settings_discovery_checklist_healthy_pending = 2131891122;
@@ -10300,25 +10300,25 @@ public final class C11170R {
         public static final int guild_settings_discovery_checklist_retention_failing = 2131891128;
         public static final int guild_settings_discovery_checklist_retention_failing_action = 2131891129;
 
-        /* renamed from: guild_settings_discovery_checklist_retention_failing_action_details_updated */
+        /* JADX INFO: renamed from: guild_settings_discovery_checklist_retention_failing_action_details_updated */
         public static final int f21913x58783449 = 2131891130;
         public static final int guild_settings_discovery_checklist_retention_progress_label = 2131891131;
         public static final int guild_settings_discovery_checklist_safe = 2131891132;
         public static final int guild_settings_discovery_checklist_safe_description = 2131891133;
 
-        /* renamed from: guild_settings_discovery_checklist_safe_description_failing_guidelines */
+        /* JADX INFO: renamed from: guild_settings_discovery_checklist_safe_description_failing_guidelines */
         public static final int f21914x52745cfb = 2131891134;
         public static final int guild_settings_discovery_checklist_safe_failing = 2131891135;
         public static final int guild_settings_discovery_checklist_score_explain = 2131891136;
         public static final int guild_settings_discovery_checklist_size = 2131891137;
         public static final int guild_settings_discovery_checklist_size_description_fail = 2131891138;
 
-        /* renamed from: guild_settings_discovery_checklist_size_description_failing_partners */
+        /* JADX INFO: renamed from: guild_settings_discovery_checklist_size_description_failing_partners */
         public static final int f21915xf0d6aa2f = 2131891139;
         public static final int guild_settings_discovery_checklist_size_fail = 2131891140;
         public static final int guild_settings_discovery_checklist_visitor_failing_action = 2131891141;
 
-        /* renamed from: guild_settings_discovery_checklist_visitor_failing_action_details */
+        /* JADX INFO: renamed from: guild_settings_discovery_checklist_visitor_failing_action_details */
         public static final int f21916x8a04487d = 2131891142;
         public static final int guild_settings_discovery_checklist_visitor_progress_label = 2131891143;
         public static final int guild_settings_discovery_disable_public_confirm_text = 2131891144;
@@ -10357,48 +10357,48 @@ public final class C11170R {
         public static final int guild_settings_filtered_user = 2131891185;
         public static final int guild_settings_follower_analytics_tooltip = 2131891186;
 
-        /* renamed from: guild_settings_guild_premium_perk_description_tier_1_animated_guild_icon */
+        /* JADX INFO: renamed from: guild_settings_guild_premium_perk_description_tier_1_animated_guild_icon */
         public static final int f21917xe43300c6 = 2131891187;
 
-        /* renamed from: guild_settings_guild_premium_perk_description_tier_1_audio_quality */
+        /* JADX INFO: renamed from: guild_settings_guild_premium_perk_description_tier_1_audio_quality */
         public static final int f21918x8efa6cbb = 2131891188;
         public static final int guild_settings_guild_premium_perk_description_tier_1_emoji = 2131891189;
         public static final int guild_settings_guild_premium_perk_description_tier_1_splash = 2131891190;
         public static final int guild_settings_guild_premium_perk_description_tier_1_sticker = 2131891191;
         public static final int guild_settings_guild_premium_perk_description_tier_1_streaming = 2131891192;
 
-        /* renamed from: guild_settings_guild_premium_perk_description_tier_2_audio_quality */
+        /* JADX INFO: renamed from: guild_settings_guild_premium_perk_description_tier_2_audio_quality */
         public static final int f21919xe8d5d6fc = 2131891193;
         public static final int guild_settings_guild_premium_perk_description_tier_2_banner = 2131891194;
 
-        /* renamed from: guild_settings_guild_premium_perk_description_tier_2_custom_role_icons */
+        /* JADX INFO: renamed from: guild_settings_guild_premium_perk_description_tier_2_custom_role_icons */
         public static final int f21920x1ff35605 = 2131891195;
         public static final int guild_settings_guild_premium_perk_description_tier_2_emoji = 2131891196;
         public static final int guild_settings_guild_premium_perk_description_tier_2_sticker = 2131891197;
         public static final int guild_settings_guild_premium_perk_description_tier_2_streaming = 2131891198;
 
-        /* renamed from: guild_settings_guild_premium_perk_description_tier_2_thread_private */
+        /* JADX INFO: renamed from: guild_settings_guild_premium_perk_description_tier_2_thread_private */
         public static final int f21921x40b353a8 = 2131891199;
 
-        /* renamed from: guild_settings_guild_premium_perk_description_tier_2_upload_limit */
+        /* JADX INFO: renamed from: guild_settings_guild_premium_perk_description_tier_2_upload_limit */
         public static final int f21922x93efa9d7 = 2131891200;
 
-        /* renamed from: guild_settings_guild_premium_perk_description_tier_3_animated_banner */
+        /* JADX INFO: renamed from: guild_settings_guild_premium_perk_description_tier_3_animated_banner */
         public static final int f21923x86b5eb2f = 2131891201;
 
-        /* renamed from: guild_settings_guild_premium_perk_description_tier_3_animated_guild_banner */
+        /* JADX INFO: renamed from: guild_settings_guild_premium_perk_description_tier_3_animated_guild_banner */
         public static final int f21924x2bca96bb = 2131891202;
 
-        /* renamed from: guild_settings_guild_premium_perk_description_tier_3_audio_quality */
+        /* JADX INFO: renamed from: guild_settings_guild_premium_perk_description_tier_3_audio_quality */
         public static final int f21925x42b1413d = 2131891203;
         public static final int guild_settings_guild_premium_perk_description_tier_3_emoji = 2131891204;
         public static final int guild_settings_guild_premium_perk_description_tier_3_sticker = 2131891205;
 
-        /* renamed from: guild_settings_guild_premium_perk_description_tier_3_upload_limit */
+        /* JADX INFO: renamed from: guild_settings_guild_premium_perk_description_tier_3_upload_limit */
         public static final int f21926x75cd7376 = 2131891206;
         public static final int guild_settings_guild_premium_perk_description_tier_3_vanity_url = 2131891207;
 
-        /* renamed from: guild_settings_guild_premium_perk_title_tier_1_animated_guild_icon */
+        /* JADX INFO: renamed from: guild_settings_guild_premium_perk_title_tier_1_animated_guild_icon */
         public static final int f21927xa9bebeaa = 2131891208;
         public static final int guild_settings_guild_premium_perk_title_tier_1_splash = 2131891209;
         public static final int guild_settings_guild_premium_perk_title_tier_1_streaming = 2131891210;
@@ -10452,22 +10452,22 @@ public final class C11170R {
         public static final int guild_settings_member_verification_edit_warning_descriptiong = 2131891258;
         public static final int guild_settings_member_verification_edit_warning_title = 2131891259;
 
-        /* renamed from: guild_settings_member_verification_empty_approved_applications_body */
+        /* JADX INFO: renamed from: guild_settings_member_verification_empty_approved_applications_body */
         public static final int f21928xb72961f7 = 2131891260;
 
-        /* renamed from: guild_settings_member_verification_empty_approved_applications_title */
+        /* JADX INFO: renamed from: guild_settings_member_verification_empty_approved_applications_title */
         public static final int f21929x2efe04a3 = 2131891261;
 
-        /* renamed from: guild_settings_member_verification_empty_pending_applications_body */
+        /* JADX INFO: renamed from: guild_settings_member_verification_empty_pending_applications_body */
         public static final int f21930xe2abf435 = 2131891262;
 
-        /* renamed from: guild_settings_member_verification_empty_pending_applications_title */
+        /* JADX INFO: renamed from: guild_settings_member_verification_empty_pending_applications_title */
         public static final int f21931x73cdba25 = 2131891263;
 
-        /* renamed from: guild_settings_member_verification_empty_rejected_applications_body */
+        /* JADX INFO: renamed from: guild_settings_member_verification_empty_rejected_applications_body */
         public static final int f21932x147fcbfe = 2131891264;
 
-        /* renamed from: guild_settings_member_verification_empty_rejected_applications_title */
+        /* JADX INFO: renamed from: guild_settings_member_verification_empty_rejected_applications_title */
         public static final int f21933x7c74db7c = 2131891265;
         public static final int guild_settings_member_verification_enable_reminder = 2131891266;
         public static final int guild_settings_member_verification_enabled = 2131891267;
@@ -10498,7 +10498,7 @@ public final class C11170R {
         public static final int guild_settings_member_verification_requirements_description = 2131891292;
         public static final int guild_settings_member_verification_requirements_intro_button = 2131891293;
 
-        /* renamed from: guild_settings_member_verification_review_application_description */
+        /* JADX INFO: renamed from: guild_settings_member_verification_review_application_description */
         public static final int f21934x872d7775 = 2131891294;
         public static final int guild_settings_member_verification_review_application_title = 2131891295;
         public static final int guild_settings_member_verification_review_pending_applications = 2131891296;
@@ -10529,7 +10529,7 @@ public final class C11170R {
         public static final int guild_settings_partner_checklist_healthy_description_failing = 2131891321;
         public static final int guild_settings_partner_checklist_healthy_description_pending = 2131891322;
 
-        /* renamed from: guild_settings_partner_checklist_healthy_description_pending_size */
+        /* JADX INFO: renamed from: guild_settings_partner_checklist_healthy_description_pending_size */
         public static final int f21935xe2de00e = 2131891323;
         public static final int guild_settings_partner_checklist_loading_failed = 2131891324;
         public static final int guild_settings_partner_checklist_loading_failed_tooltip = 2131891325;
@@ -10568,10 +10568,10 @@ public final class C11170R {
         public static final int guild_settings_premium_progress_bar_img_alt = 2131891358;
         public static final int guild_settings_premium_progress_bar_title = 2131891359;
 
-        /* renamed from: guild_settings_premium_upsell_body_perk_guild_subscription_discount */
+        /* JADX INFO: renamed from: guild_settings_premium_upsell_body_perk_guild_subscription_discount */
         public static final int f21936xf6a2f9e9 = 2131891360;
 
-        /* renamed from: guild_settings_premium_upsell_body_perk_no_free_guild_subscriptions */
+        /* JADX INFO: renamed from: guild_settings_premium_upsell_body_perk_no_free_guild_subscriptions */
         public static final int f21937xe408127 = 2131891361;
         public static final int guild_settings_premium_upsell_body_perk_num_guild_subscriptions = 2131891362;
         public static final int guild_settings_premium_upsell_heading_primary = 2131891363;
@@ -10583,7 +10583,7 @@ public final class C11170R {
         public static final int guild_settings_premium_upsell_subheading_extra_android = 2131891369;
         public static final int guild_settings_premium_upsell_subheading_extra_ios = 2131891370;
 
-        /* renamed from: guild_settings_premium_upsell_subheading_extra_ios_voiceover_label */
+        /* JADX INFO: renamed from: guild_settings_premium_upsell_subheading_extra_ios_voiceover_label */
         public static final int f21938x2cff2b7 = 2131891371;
         public static final int guild_settings_premium_upsell_subheading_tier_1 = 2131891372;
         public static final int guild_settings_premium_upsell_subheading_tier_1_mobile = 2131891373;
@@ -10633,7 +10633,7 @@ public final class C11170R {
         public static final int guild_settings_role_subscription_tier_edit_details_title = 2131891417;
         public static final int guild_settings_role_subscription_tier_edit_publish_draft_cta = 2131891418;
 
-        /* renamed from: guild_settings_role_subscription_tier_edit_publish_draft_description */
+        /* JADX INFO: renamed from: guild_settings_role_subscription_tier_edit_publish_draft_description */
         public static final int f21939xde911c6d = 2131891419;
         public static final int guild_settings_role_subscription_tier_edit_subtitle = 2131891420;
         public static final int guild_settings_role_subscription_tiers_tab_description = 2131891421;
@@ -10738,12 +10738,12 @@ public final class C11170R {
         public static final int guild_subscription_purchase_modal_activated_close_button = 2131891524;
         public static final int guild_subscription_purchase_modal_activated_description = 2131891525;
 
-        /* renamed from: guild_subscription_purchase_modal_activated_description_generic_guild */
+        /* JADX INFO: renamed from: guild_subscription_purchase_modal_activated_description_generic_guild */
         public static final int f21940x287b4760 = 2131891526;
         public static final int guild_subscription_purchase_modal_activated_description_mobile1 = 2131891527;
         public static final int guild_subscription_purchase_modal_activated_description_mobile2 = 2131891528;
 
-        /* renamed from: guild_subscription_purchase_modal_activated_description_no_application */
+        /* JADX INFO: renamed from: guild_subscription_purchase_modal_activated_description_no_application */
         public static final int f21941x736db69d = 2131891529;
         public static final int guild_subscription_purchase_modal_counter = 2131891530;
         public static final int guild_subscription_purchase_modal_external = 2131891531;
@@ -10758,13 +10758,13 @@ public final class C11170R {
         public static final int guild_subscription_purchase_modal_subtotal = 2131891540;
         public static final int guild_subscription_purchase_modal_transferred_description = 2131891541;
 
-        /* renamed from: guild_subscription_purchase_modal_transferred_description_generic_guild */
+        /* JADX INFO: renamed from: guild_subscription_purchase_modal_transferred_description_generic_guild */
         public static final int f21942x690ca095 = 2131891542;
 
-        /* renamed from: guild_subscription_purchase_modal_transferred_description_mobile1 */
+        /* JADX INFO: renamed from: guild_subscription_purchase_modal_transferred_description_mobile1 */
         public static final int f21943xeb628859 = 2131891543;
 
-        /* renamed from: guild_subscription_purchase_modal_transferred_description_mobile2 */
+        /* JADX INFO: renamed from: guild_subscription_purchase_modal_transferred_description_mobile2 */
         public static final int f21944xeb62885a = 2131891544;
         public static final int guild_subscription_purchase_modal_unused_slot_notice = 2131891545;
         public static final int guild_template_based_on = 2131891546;
@@ -10931,7 +10931,7 @@ public final class C11170R {
         public static final int help_roles_description = 2131891709;
         public static final int help_singular_permission = 2131891710;
 
-        /* renamed from: hi */
+        /* JADX INFO: renamed from: hi */
         public static final int f21945hi = 2131891711;
         public static final int hidden_spam_message_count = 2131891712;
         public static final int hide = 2131891713;
@@ -10954,10 +10954,10 @@ public final class C11170R {
         public static final int home = 2131891730;
         public static final int how_to_invite_others = 2131891732;
 
-        /* renamed from: hr */
+        /* JADX INFO: renamed from: hr */
         public static final int f21946hr = 2131891733;
 
-        /* renamed from: hu */
+        /* JADX INFO: renamed from: hu */
         public static final int f21947hu = 2131891734;
         public static final int hub_add_guild_category_placeholder = 2131891735;
         public static final int hub_add_guild_category_title = 2131891736;
@@ -11417,20 +11417,20 @@ public final class C11170R {
         public static final int interim_create_public_threads = 2131892192;
         public static final int interim_role_permissions_create_private_threads_description = 2131892193;
 
-        /* renamed from: interim_role_permissions_create_private_threads_description_category */
+        /* JADX INFO: renamed from: interim_role_permissions_create_private_threads_description_category */
         public static final int f21948x19ffc831 = 2131892194;
         public static final int interim_role_permissions_create_private_threads_description_text = 2131892195;
         public static final int interim_role_permissions_create_public_threads_description = 2131892196;
 
-        /* renamed from: interim_role_permissions_create_public_threads_description_category */
+        /* JADX INFO: renamed from: interim_role_permissions_create_public_threads_description_category */
         public static final int f21949x8ac810cf = 2131892197;
         public static final int interim_role_permissions_create_public_threads_description_text = 2131892198;
         public static final int interim_role_permissions_send_messages_in_threads_description = 2131892199;
 
-        /* renamed from: interim_role_permissions_send_messages_in_threads_description_category */
+        /* JADX INFO: renamed from: interim_role_permissions_send_messages_in_threads_description_category */
         public static final int f21950x98d4cb90 = 2131892200;
 
-        /* renamed from: interim_role_permissions_send_messages_in_threads_description_text */
+        /* JADX INFO: renamed from: interim_role_permissions_send_messages_in_threads_description_text */
         public static final int f21951xa26a6cbf = 2131892201;
         public static final int interim_send_messages_in_threads = 2131892202;
         public static final int internal_server_error = 2131892203;
@@ -11606,11 +11606,11 @@ public final class C11170R {
         public static final int ipad_no_screenshare_dialog_body = 2131892373;
         public static final int ipad_no_screenshare_dialog_title = 2131892374;
 
-        /* renamed from: it */
+        /* JADX INFO: renamed from: it */
         public static final int f21952it = 2131892375;
         public static final int item_view_role_description = 2131892376;
 
-        /* renamed from: ja */
+        /* JADX INFO: renamed from: ja */
         public static final int f21953ja = 2131892377;
         public static final int join = 2131892378;
         public static final int join_afk_channel_body = 2131892379;
@@ -11739,7 +11739,7 @@ public final class C11170R {
         public static final int kick_user_from_server = 2131892503;
         public static final int kick_user_title = 2131892504;
 
-        /* renamed from: ko */
+        /* JADX INFO: renamed from: ko */
         public static final int f21954ko = 2131892505;
         public static final int label_with_online_status = 2131892507;
         public static final int language = 2131892508;
@@ -11884,7 +11884,7 @@ public final class C11170R {
         public static final int low_quality_image_mode = 2131892655;
         public static final int low_quality_image_mode_help = 2131892656;
 
-        /* renamed from: lt */
+        /* JADX INFO: renamed from: lt */
         public static final int f21955lt = 2131892657;
         public static final int lurker_mode_chat_input_button = 2131892658;
         public static final int lurker_mode_chat_input_message = 2131892659;
@@ -11935,7 +11935,7 @@ public final class C11170R {
         public static final int marked_as_read = 2131892707;
         public static final int marketing_refresh_premium_features_go_live_info = 2131892733;
 
-        /* renamed from: marketing_refresh_premium_tier_1_cta_description_with_price_no_info_hook */
+        /* JADX INFO: renamed from: marketing_refresh_premium_tier_1_cta_description_with_price_no_info_hook */
         public static final int f21956x648dec4d = 2131892734;
         public static final int marketing_refresh_premium_tier_2_cta_subtitle = 2131892735;
         public static final int marketing_refresh_premium_tier_2_cta_title = 2131892736;
@@ -11976,7 +11976,7 @@ public final class C11170R {
         public static final int maximum_length_error = 2131892771;
         public static final int maybe_later = 2131892772;
 
-        /* renamed from: me */
+        /* JADX INFO: renamed from: me */
         public static final int f21957me = 2131892773;
         public static final int media_keyboard_browse = 2131892774;
         public static final int media_keyboard_gift = 2131892775;
@@ -12004,7 +12004,7 @@ public final class C11170R {
         public static final int member_verification_application_confirmation_subtitle = 2131892797;
         public static final int member_verification_application_confirmation_title = 2131892798;
 
-        /* renamed from: member_verification_application_confirmation_title_with_guild_name */
+        /* JADX INFO: renamed from: member_verification_application_confirmation_title_with_guild_name */
         public static final int f21958x4f2133cd = 2131892799;
         public static final int member_verification_application_reapply = 2131892800;
         public static final int member_verification_application_rejected_icon = 2131892801;
@@ -12432,10 +12432,10 @@ public final class C11170R {
         public static final int nitro_churn_survey_subtitle = 2131893230;
         public static final int nitro_churn_survey_title = 2131893231;
 
-        /* renamed from: nl */
+        /* JADX INFO: renamed from: nl */
         public static final int f21959nl = 2131893232;
 
-        /* renamed from: no */
+        /* JADX INFO: renamed from: no */
         public static final int f21960no = 2131893233;
         public static final int no_afk_channel = 2131893234;
         public static final int no_authorized_apps = 2131893235;
@@ -12915,7 +12915,7 @@ public final class C11170R {
         public static final int payment_waiting_for_purchase_token_authorization_modal = 2131893749;
         public static final int payment_waiting_for_purchase_token_authorization_modal_header = 2131893750;
 
-        /* renamed from: payment_waiting_for_purchase_token_authorization_modal_instructions */
+        /* JADX INFO: renamed from: payment_waiting_for_purchase_token_authorization_modal_instructions */
         public static final int f21961x13a082e0 = 2131893751;
         public static final int payments_all_method_button = 2131893752;
         public static final int paypal_account_verifying = 2131893753;
@@ -12987,7 +12987,7 @@ public final class C11170R {
         public static final int pins_unread_a11y_label = 2131893819;
         public static final int pixel_value_a11y_text = 2131893820;
 
-        /* renamed from: pl */
+        /* JADX INFO: renamed from: pl */
         public static final int f21962pl = 2131893821;
         public static final int platform_android = 2131893822;
         public static final int platform_ios = 2131893823;
@@ -13150,7 +13150,7 @@ public final class C11170R {
         public static final int premium_guild_perks_modal_boost_alert_ios_title = 2131894033;
         public static final int premium_guild_perks_modal_button_subscribe_this_server = 2131894034;
 
-        /* renamed from: premium_guild_perks_modal_button_upgrade_to_premium_external_error */
+        /* JADX INFO: renamed from: premium_guild_perks_modal_button_upgrade_to_premium_external_error */
         public static final int f21963x25dca4d0 = 2131894035;
         public static final int premium_guild_perks_modal_gift_nitro = 2131894036;
         public static final int premium_guild_perks_modal_header = 2131894037;
@@ -13205,7 +13205,7 @@ public final class C11170R {
         public static final int premium_guild_subscription_cancel_body_inventory = 2131894086;
         public static final int premium_guild_subscription_cancel_button = 2131894087;
 
-        /* renamed from: premium_guild_subscription_cancel_button_disabled_past_due_tooltip */
+        /* JADX INFO: renamed from: premium_guild_subscription_cancel_button_disabled_past_due_tooltip */
         public static final int f21964x3e671c58 = 2131894088;
         public static final int premium_guild_subscription_cancel_button_disabled_tooltip = 2131894089;
         public static final int premium_guild_subscription_cancel_button_mobile = 2131894090;
@@ -13235,7 +13235,7 @@ public final class C11170R {
         public static final int premium_guild_subscription_inventory_uncancel_button = 2131894114;
         public static final int premium_guild_subscription_inventory_uncancel_button_mobile = 2131894115;
 
-        /* renamed from: premium_guild_subscription_inventory_uncancel_confirm_description */
+        /* JADX INFO: renamed from: premium_guild_subscription_inventory_uncancel_confirm_description */
         public static final int f21965x8c928042 = 2131894116;
         public static final int premium_guild_subscription_inventory_uncancel_confirm_title = 2131894117;
         public static final int premium_guild_subscription_inventory_uncancel_description = 2131894118;
@@ -13247,10 +13247,10 @@ public final class C11170R {
         public static final int premium_guild_subscription_marketing_guilds_blurb_prompt = 2131894124;
         public static final int premium_guild_subscription_marketing_guilds_blurb_without_prompt = 2131894125;
 
-        /* renamed from: premium_guild_subscription_marketing_guilds_empty_description_text */
+        /* JADX INFO: renamed from: premium_guild_subscription_marketing_guilds_empty_description_text */
         public static final int f21966x744a06ba = 2131894126;
 
-        /* renamed from: premium_guild_subscription_marketing_guilds_empty_description_title */
+        /* JADX INFO: renamed from: premium_guild_subscription_marketing_guilds_empty_description_title */
         public static final int f21967x14f8926b = 2131894127;
         public static final int premium_guild_subscription_marketing_header = 2131894128;
         public static final int premium_guild_subscription_marketing_header_ios = 2131894129;
@@ -13266,16 +13266,16 @@ public final class C11170R {
         public static final int premium_guild_subscription_out_of_slots_title = 2131894139;
         public static final int premium_guild_subscription_pending_cancelation = 2131894140;
 
-        /* renamed from: premium_guild_subscription_purchase_button_disabled_pending_mutation_plan */
+        /* JADX INFO: renamed from: premium_guild_subscription_purchase_button_disabled_pending_mutation_plan */
         public static final int f21968xc1250bf1 = 2131894141;
 
-        /* renamed from: premium_guild_subscription_purchase_button_disabled_pending_mutation_premium_guild_subscription */
+        /* JADX INFO: renamed from: premium_guild_subscription_purchase_button_disabled_pending_mutation_premium_guild_subscription */
         public static final int f21969xf4d89799 = 2131894142;
 
-        /* renamed from: premium_guild_subscription_purchase_button_disabled_subscription_account_hold */
+        /* JADX INFO: renamed from: premium_guild_subscription_purchase_button_disabled_subscription_account_hold */
         public static final int f21970xe4ed740d = 2131894143;
 
-        /* renamed from: premium_guild_subscription_purchase_button_disabled_subscription_past_due */
+        /* JADX INFO: renamed from: premium_guild_subscription_purchase_button_disabled_subscription_past_due */
         public static final int f21971x127b5ac3 = 2131894144;
         public static final int premium_guild_subscription_select_server_button = 2131894145;
         public static final int premium_guild_subscription_slot_cancel_button = 2131894146;
@@ -13330,10 +13330,10 @@ public final class C11170R {
         public static final int premium_guild_subscriptions_renewal_info_no_price = 2131894195;
         public static final int premium_guild_subscriptions_renewal_info_pending_cancelation = 2131894196;
 
-        /* renamed from: premium_guild_subscriptions_renewal_info_pending_cancelation_android */
+        /* JADX INFO: renamed from: premium_guild_subscriptions_renewal_info_pending_cancelation_android */
         public static final int f21972x33f555f6 = 2131894197;
 
-        /* renamed from: premium_guild_subscriptions_renewal_info_pending_cancelation_no_price */
+        /* JADX INFO: renamed from: premium_guild_subscriptions_renewal_info_pending_cancelation_no_price */
         public static final int f21973xbd67dea4 = 2131894198;
         public static final int premium_guild_tier_0 = 2131894199;
         public static final int premium_guild_tier_1 = 2131894200;
@@ -13436,7 +13436,7 @@ public final class C11170R {
         public static final int premium_progress_bar_guild_header_size_tooltip_title = 2131894322;
         public static final int premium_progress_bar_guild_header_tooltip_content = 2131894323;
 
-        /* renamed from: premium_progress_bar_guild_header_tooltip_cta_primary_role_settings */
+        /* JADX INFO: renamed from: premium_progress_bar_guild_header_tooltip_cta_primary_role_settings */
         public static final int f21974x432ffcd4 = 2131894324;
         public static final int premium_progress_bar_guild_header_tooltip_cta_secondary = 2131894325;
         public static final int premium_progress_bar_guild_header_tooltip_title = 2131894326;
@@ -13452,7 +13452,7 @@ public final class C11170R {
         public static final int premium_settings_account_hold_info_external = 2131894336;
         public static final int premium_settings_account_hold_info_price = 2131894337;
 
-        /* renamed from: premium_settings_account_hold_notice_change_payment_method_button */
+        /* JADX INFO: renamed from: premium_settings_account_hold_notice_change_payment_method_button */
         public static final int f21975x97f0c195 = 2131894338;
         public static final int premium_settings_account_hold_notice_info = 2131894339;
         public static final int premium_settings_billing_info = 2131894340;
@@ -13488,7 +13488,7 @@ public final class C11170R {
         public static final int premium_subscription_description_tier_1_no_price = 2131894374;
         public static final int premium_subscription_description_tier_1_pending_cancelation = 2131894375;
 
-        /* renamed from: premium_subscription_description_tier_1_pending_cancelation_no_price */
+        /* JADX INFO: renamed from: premium_subscription_description_tier_1_pending_cancelation_no_price */
         public static final int f21976x57a57445 = 2131894376;
         public static final int premium_subscription_description_tier_1_pending_payment = 2131894377;
         public static final int premium_subscription_description_tier_2 = 2131894378;
@@ -13497,13 +13497,13 @@ public final class C11170R {
         public static final int premium_subscription_description_tier_2_no_price = 2131894381;
         public static final int premium_subscription_description_tier_2_pending_cancelation = 2131894382;
 
-        /* renamed from: premium_subscription_description_tier_2_pending_cancelation_no_price */
+        /* JADX INFO: renamed from: premium_subscription_description_tier_2_pending_cancelation_no_price */
         public static final int f21977x58521fe4 = 2131894383;
         public static final int premium_subscription_description_tier_2_pending_payment = 2131894384;
         public static final int premium_subscription_ending_missing_payment_notice_button_text = 2131894385;
         public static final int premium_subscription_ending_missing_payment_notice_text = 2131894386;
 
-        /* renamed from: premium_subscription_ending_missing_payment_tier_1_notice_button_text */
+        /* JADX INFO: renamed from: premium_subscription_ending_missing_payment_tier_1_notice_button_text */
         public static final int f21978xefde2c8e = 2131894387;
         public static final int premium_subscription_ending_missing_payment_tier_1_notice_text = 2131894388;
         public static final int premium_subscription_ending_notice_button_text = 2131894389;
@@ -13512,7 +13512,7 @@ public final class C11170R {
         public static final int premium_subscription_ending_tier_1_notice_text = 2131894392;
         public static final int premium_subscription_ending_what_you_lose_footer_button_cancel = 2131894393;
 
-        /* renamed from: premium_subscription_ending_what_you_lose_footer_button_keep_nitro */
+        /* JADX INFO: renamed from: premium_subscription_ending_what_you_lose_footer_button_keep_nitro */
         public static final int f21979x915e96d2 = 2131894394;
         public static final int premium_subscription_ending_what_you_lose_footer_monthly = 2131894395;
         public static final int premium_subscription_ending_what_you_lose_footer_monthly_tier_1 = 2131894396;
@@ -13552,7 +13552,7 @@ public final class C11170R {
         public static final int premium_switch_plan_disabled_in_trial = 2131894431;
         public static final int premium_switch_plan_disabled_pending_mutation_plan = 2131894432;
 
-        /* renamed from: premium_switch_plan_disabled_pending_mutation_premium_guild_subscription */
+        /* JADX INFO: renamed from: premium_switch_plan_disabled_pending_mutation_premium_guild_subscription */
         public static final int f21980xaf33b2f = 2131894433;
         public static final int premium_switch_plans = 2131894434;
         public static final int premium_switch_review_header_premium_month_tier_1 = 2131894436;
@@ -13936,7 +13936,7 @@ public final class C11170R {
         public static final int ring = 2131894850;
         public static final int ring_username_a11y_label = 2131894851;
 
-        /* renamed from: ro */
+        /* JADX INFO: renamed from: ro */
         public static final int f21981ro = 2131894852;
         public static final int role = 2131894853;
         public static final int role_add_members_button = 2131894854;
@@ -14154,13 +14154,13 @@ public final class C11170R {
         public static final int role_permissions_send_messages_description_category = 2131895087;
         public static final int role_permissions_send_messages_description_text = 2131895088;
 
-        /* renamed from: role_permissions_send_messages_in_threads_and_forum_posts_description */
+        /* JADX INFO: renamed from: role_permissions_send_messages_in_threads_and_forum_posts_description */
         public static final int f21982x65c54fa = 2131895089;
 
-        /* renamed from: role_permissions_send_messages_in_threads_and_forum_posts_description_category */
+        /* JADX INFO: renamed from: role_permissions_send_messages_in_threads_and_forum_posts_description_category */
         public static final int f21983x126292a3 = 2131895090;
 
-        /* renamed from: role_permissions_send_messages_in_threads_and_forum_posts_description_text */
+        /* JADX INFO: renamed from: role_permissions_send_messages_in_threads_and_forum_posts_description_text */
         public static final int f21984x9a44b552 = 2131895091;
         public static final int role_permissions_send_messages_in_threads_description = 2131895092;
         public static final int role_permissions_send_messages_in_threads_description_category = 2131895093;
@@ -14169,7 +14169,7 @@ public final class C11170R {
         public static final int role_permissions_send_messages_with_forums_description_category = 2131895096;
         public static final int role_permissions_send_messages_with_forums_description_text = 2131895097;
 
-        /* renamed from: role_permissions_send_messages_with_forums_description_text_disabled */
+        /* JADX INFO: renamed from: role_permissions_send_messages_with_forums_description_text_disabled */
         public static final int f21985xeedd0cf7 = 2131895098;
         public static final int role_permissions_send_tts_messages = 2131895100;
         public static final int role_permissions_send_tts_messages_description = 2131895101;
@@ -14257,7 +14257,7 @@ public final class C11170R {
         public static final int rtc_debug_screenshare = 2131895183;
         public static final int rtc_debug_transport = 2131895184;
 
-        /* renamed from: ru */
+        /* JADX INFO: renamed from: ru */
         public static final int f21986ru = 2131895185;
         public static final int salmon = 2131895188;
         public static final int sample_channel_message = 2131895189;
@@ -14880,16 +14880,16 @@ public final class C11170R {
         public static final int stage_discovery_connection_error_generic = 2131895811;
         public static final int stage_discovery_intro_card_body_desktop = 2131895812;
 
-        /* renamed from: stage_discovery_live_stage_tile_friends_guilds_context_audience_1 */
+        /* JADX INFO: renamed from: stage_discovery_live_stage_tile_friends_guilds_context_audience_1 */
         public static final int f21987xf2a1bce = 2131895813;
 
-        /* renamed from: stage_discovery_live_stage_tile_friends_guilds_context_audience_2 */
+        /* JADX INFO: renamed from: stage_discovery_live_stage_tile_friends_guilds_context_audience_2 */
         public static final int f21988xf2a1bcf = 2131895814;
 
-        /* renamed from: stage_discovery_live_stage_tile_friends_guilds_context_audience_3 */
+        /* JADX INFO: renamed from: stage_discovery_live_stage_tile_friends_guilds_context_audience_3 */
         public static final int f21989xf2a1bd0 = 2131895815;
 
-        /* renamed from: stage_discovery_live_stage_tile_friends_guilds_context_audience_3_n */
+        /* JADX INFO: renamed from: stage_discovery_live_stage_tile_friends_guilds_context_audience_3_n */
         public static final int f21990xed1273bf = 2131895816;
         public static final int stage_discovery_live_stage_tile_speaker_summary_overflow = 2131895817;
         public static final int stage_discovery_no_results_header = 2131895818;
@@ -15017,7 +15017,7 @@ public final class C11170R {
         public static final int sticker_picker_discounted_price_android = 2131895940;
         public static final int sticker_picker_empty_guild_upsell_no_premium_subscriptions_cta = 2131895941;
 
-        /* renamed from: sticker_picker_empty_guild_upsell_no_premium_subscriptions_description */
+        /* JADX INFO: renamed from: sticker_picker_empty_guild_upsell_no_premium_subscriptions_description */
         public static final int f21991xe07aefb2 = 2131895942;
         public static final int sticker_picker_empty_guild_upsell_no_stickers_cta = 2131895943;
         public static final int sticker_picker_empty_guild_upsell_no_stickers_description = 2131895944;
@@ -15385,7 +15385,7 @@ public final class C11170R {
         public static final int textarea_actions_suggestions = 2131896323;
         public static final int textarea_placeholder = 2131896324;
 
-        /* renamed from: th */
+        /* JADX INFO: renamed from: th */
         public static final int f21992th = 2131896325;
         public static final int theme = 2131896327;
         public static final int theme_dark = 2131896328;
@@ -15524,7 +15524,7 @@ public final class C11170R {
         public static final int top_channels = 2131896464;
         public static final int total_results = 2131896465;
 
-        /* renamed from: tr */
+        /* JADX INFO: renamed from: tr */
         public static final int f21993tr = 2131896466;
         public static final int transfer = 2131896467;
         public static final int transfer_ownership = 2131896469;
@@ -15608,7 +15608,7 @@ public final class C11170R {
         public static final int two_fa_view_codes_submit = 2131896547;
         public static final int two_users_typing = 2131896548;
 
-        /* renamed from: uk */
+        /* JADX INFO: renamed from: uk */
         public static final int f21994uk = 2131896557;
         public static final int unable_to_join_channel_full = 2131896558;
         public static final int unable_to_join_channel_full_modal_body = 2131896559;
@@ -16112,7 +16112,7 @@ public final class C11170R {
         public static final int verifying = 2131897075;
         public static final int very_out_of_date_description = 2131897076;
 
-        /* renamed from: vi */
+        /* JADX INFO: renamed from: vi */
         public static final int f21995vi = 2131897077;
         public static final int video = 2131897078;
         public static final int video_background_cannot_remove_default = 2131897080;
@@ -16318,7 +16318,7 @@ public final class C11170R {
         }
     }
 
-    /* renamed from: com.lytefast.flexinput.R$i */
+    /* JADX INFO: renamed from: com.lytefast.flexinput.R$i */
     public static final class i {
         public static final int AlertDialog_AppCompat = 2131951617;
         public static final int AlertDialog_AppCompat_Light = 2131951618;
@@ -16457,7 +16457,7 @@ public final class C11170R {
         public static final int Base_ThemeOverlay_MaterialComponents_Dialog_Alert = 2131951789;
         public static final int Base_ThemeOverlay_MaterialComponents_Dialog_Alert_Framework = 2131951790;
 
-        /* renamed from: Base_ThemeOverlay_MaterialComponents_Light_Dialog_Alert_Framework */
+        /* JADX INFO: renamed from: Base_ThemeOverlay_MaterialComponents_Light_Dialog_Alert_Framework */
         public static final int f21996x519bcd25 = 2131951791;
         public static final int Base_ThemeOverlay_MaterialComponents_MaterialAlertDialog = 2131951792;
         public static final int Base_Theme_AppCompat = 2131951748;
@@ -16795,16 +16795,16 @@ public final class C11170R {
         public static final int ShapeAppearanceOverlay_MaterialComponents_BottomSheet = 2131952142;
         public static final int ShapeAppearanceOverlay_MaterialComponents_Chip = 2131952143;
 
-        /* renamed from: ShapeAppearanceOverlay_MaterialComponents_ExtendedFloatingActionButton */
+        /* JADX INFO: renamed from: ShapeAppearanceOverlay_MaterialComponents_ExtendedFloatingActionButton */
         public static final int f21997x7c26e1f5 = 2131952144;
         public static final int ShapeAppearanceOverlay_MaterialComponents_FloatingActionButton = 2131952145;
         public static final int ShapeAppearanceOverlay_MaterialComponents_MaterialCalendar_Day = 2131952146;
 
-        /* renamed from: ShapeAppearanceOverlay_MaterialComponents_MaterialCalendar_Window_Fullscreen */
+        /* JADX INFO: renamed from: ShapeAppearanceOverlay_MaterialComponents_MaterialCalendar_Window_Fullscreen */
         public static final int f21998x121af39e = 2131952147;
         public static final int ShapeAppearanceOverlay_MaterialComponents_MaterialCalendar_Year = 2131952148;
 
-        /* renamed from: ShapeAppearanceOverlay_MaterialComponents_TextInputLayout_FilledBox */
+        /* JADX INFO: renamed from: ShapeAppearanceOverlay_MaterialComponents_TextInputLayout_FilledBox */
         public static final int f21999xaf44c2a3 = 2131952149;
         public static final int ShapeAppearanceOverlay_TopLeftCut = 2131952150;
         public static final int ShapeAppearanceOverlay_TopRightDifferentCornerSize = 2131952151;
@@ -16827,7 +16827,7 @@ public final class C11170R {
         public static final int TestThemeWithLineHeight = 2131952167;
         public static final int TestThemeWithLineHeightDisabled = 2131952168;
 
-        /* renamed from: Test_ShapeAppearanceOverlay_MaterialComponents_MaterialCalendar_Day */
+        /* JADX INFO: renamed from: Test_ShapeAppearanceOverlay_MaterialComponents_MaterialCalendar_Day */
         public static final int f22000x774f7bdd = 2131952158;
         public static final int Test_Theme_MaterialComponents_MaterialCalendar = 2131952159;
         public static final int Test_Widget_MaterialComponents_MaterialCalendar = 2131952160;
@@ -16936,11 +16936,11 @@ public final class C11170R {
         public static final int ThemeOverlay_MaterialComponents_AutoCompleteTextView = 2131952350;
         public static final int ThemeOverlay_MaterialComponents_AutoCompleteTextView_FilledBox = 2131952351;
 
-        /* renamed from: ThemeOverlay_MaterialComponents_AutoCompleteTextView_FilledBox_Dense */
+        /* JADX INFO: renamed from: ThemeOverlay_MaterialComponents_AutoCompleteTextView_FilledBox_Dense */
         public static final int f22001x3194dd0e = 2131952352;
         public static final int ThemeOverlay_MaterialComponents_AutoCompleteTextView_OutlinedBox = 2131952353;
 
-        /* renamed from: ThemeOverlay_MaterialComponents_AutoCompleteTextView_OutlinedBox_Dense */
+        /* JADX INFO: renamed from: ThemeOverlay_MaterialComponents_AutoCompleteTextView_OutlinedBox_Dense */
         public static final int f22002x2469ccce = 2131952354;
         public static final int ThemeOverlay_MaterialComponents_BottomAppBar_Primary = 2131952355;
         public static final int ThemeOverlay_MaterialComponents_BottomAppBar_Surface = 2131952356;
@@ -16958,27 +16958,27 @@ public final class C11170R {
         public static final int ThemeOverlay_MaterialComponents_MaterialAlertDialog_Centered = 2131952368;
         public static final int ThemeOverlay_MaterialComponents_MaterialAlertDialog_Picker_Date = 2131952369;
 
-        /* renamed from: ThemeOverlay_MaterialComponents_MaterialAlertDialog_Picker_Date_Calendar */
+        /* JADX INFO: renamed from: ThemeOverlay_MaterialComponents_MaterialAlertDialog_Picker_Date_Calendar */
         public static final int f22003x8886184a = 2131952370;
 
-        /* renamed from: ThemeOverlay_MaterialComponents_MaterialAlertDialog_Picker_Date_Header_Text */
+        /* JADX INFO: renamed from: ThemeOverlay_MaterialComponents_MaterialAlertDialog_Picker_Date_Header_Text */
         public static final int f22004x9b335733 = 2131952371;
 
-        /* renamed from: ThemeOverlay_MaterialComponents_MaterialAlertDialog_Picker_Date_Header_Text_Day */
+        /* JADX INFO: renamed from: ThemeOverlay_MaterialComponents_MaterialAlertDialog_Picker_Date_Header_Text_Day */
         public static final int f22005x96aac070 = 2131952372;
 
-        /* renamed from: ThemeOverlay_MaterialComponents_MaterialAlertDialog_Picker_Date_Spinner */
+        /* JADX INFO: renamed from: ThemeOverlay_MaterialComponents_MaterialAlertDialog_Picker_Date_Spinner */
         public static final int f22006x7cc1c38d = 2131952373;
         public static final int ThemeOverlay_MaterialComponents_MaterialCalendar = 2131952374;
         public static final int ThemeOverlay_MaterialComponents_MaterialCalendar_Fullscreen = 2131952375;
         public static final int ThemeOverlay_MaterialComponents_TextInputEditText = 2131952376;
         public static final int ThemeOverlay_MaterialComponents_TextInputEditText_FilledBox = 2131952377;
 
-        /* renamed from: ThemeOverlay_MaterialComponents_TextInputEditText_FilledBox_Dense */
+        /* JADX INFO: renamed from: ThemeOverlay_MaterialComponents_TextInputEditText_FilledBox_Dense */
         public static final int f22007xb44864b4 = 2131952378;
         public static final int ThemeOverlay_MaterialComponents_TextInputEditText_OutlinedBox = 2131952379;
 
-        /* renamed from: ThemeOverlay_MaterialComponents_TextInputEditText_OutlinedBox_Dense */
+        /* JADX INFO: renamed from: ThemeOverlay_MaterialComponents_TextInputEditText_OutlinedBox_Dense */
         public static final int f22008xc85a02f4 = 2131952380;
         public static final int ThemeOverlay_MaterialComponents_TimePicker = 2131952381;
         public static final int ThemeOverlay_MaterialComponents_TimePicker_Display = 2131952382;
@@ -17472,7 +17472,7 @@ public final class C11170R {
         public static final int Widget_MaterialComponents_MaterialCalendar_HeaderLayout = 2131952794;
         public static final int Widget_MaterialComponents_MaterialCalendar_HeaderSelection = 2131952795;
 
-        /* renamed from: Widget_MaterialComponents_MaterialCalendar_HeaderSelection_Fullscreen */
+        /* JADX INFO: renamed from: Widget_MaterialComponents_MaterialCalendar_HeaderSelection_Fullscreen */
         public static final int f22009x77b19d4e = 2131952796;
         public static final int Widget_MaterialComponents_MaterialCalendar_HeaderTitle = 2131952797;
         public static final int Widget_MaterialComponents_MaterialCalendar_HeaderToggleButton = 2131952798;
@@ -17504,18 +17504,18 @@ public final class C11170R {
         public static final int Widget_MaterialComponents_TextInputLayout_FilledBox = 2131952824;
         public static final int Widget_MaterialComponents_TextInputLayout_FilledBox_Dense = 2131952825;
 
-        /* renamed from: Widget_MaterialComponents_TextInputLayout_FilledBox_Dense_ExposedDropdownMenu */
+        /* JADX INFO: renamed from: Widget_MaterialComponents_TextInputLayout_FilledBox_Dense_ExposedDropdownMenu */
         public static final int f22010x5c070b9b = 2131952826;
 
-        /* renamed from: Widget_MaterialComponents_TextInputLayout_FilledBox_ExposedDropdownMenu */
+        /* JADX INFO: renamed from: Widget_MaterialComponents_TextInputLayout_FilledBox_ExposedDropdownMenu */
         public static final int f22011x22b53d1b = 2131952827;
         public static final int Widget_MaterialComponents_TextInputLayout_OutlinedBox = 2131952828;
         public static final int Widget_MaterialComponents_TextInputLayout_OutlinedBox_Dense = 2131952829;
 
-        /* renamed from: Widget_MaterialComponents_TextInputLayout_OutlinedBox_Dense_ExposedDropdownMenu */
+        /* JADX INFO: renamed from: Widget_MaterialComponents_TextInputLayout_OutlinedBox_Dense_ExposedDropdownMenu */
         public static final int f22012xc3fd845b = 2131952830;
 
-        /* renamed from: Widget_MaterialComponents_TextInputLayout_OutlinedBox_ExposedDropdownMenu */
+        /* JADX INFO: renamed from: Widget_MaterialComponents_TextInputLayout_OutlinedBox_ExposedDropdownMenu */
         public static final int f22013x802545db = 2131952831;
         public static final int Widget_MaterialComponents_TextView = 2131952832;
         public static final int Widget_MaterialComponents_TimePicker = 2131952833;

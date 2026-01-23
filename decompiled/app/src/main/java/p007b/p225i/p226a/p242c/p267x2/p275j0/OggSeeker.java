@@ -5,17 +5,17 @@ import java.io.IOException;
 import p007b.p225i.p226a.p242c.p267x2.ExtractorInput;
 import p007b.p225i.p226a.p242c.p267x2.SeekMap;
 
-/* compiled from: OggSeeker.java */
-/* renamed from: b.i.a.c.x2.j0.g, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.x2.j0.g, reason: use source file name */
+/* JADX INFO: compiled from: OggSeeker.java */
+/* JADX INFO: loaded from: classes3.dex */
 public interface OggSeeker {
     @Nullable
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     SeekMap mo3734a();
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     long mo3735b(ExtractorInput extractorInput) throws IOException;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     void mo3736c(long j);
 }

@@ -3,18 +3,18 @@ package com.discord.api.auth.mfa;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: GetBackupCodesSendVerificationKeyResponse.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: GetBackupCodesSendVerificationKeyResponse.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class GetBackupCodesSendVerificationKeyResponse {
     private final String nonce;
     private final String regenerateNonce;
 
-    /* renamed from: a, reason: from getter */
+    /* JADX INFO: renamed from: a, reason: from getter */
     public final String getNonce() {
         return this.nonce;
     }
 
-    /* renamed from: b, reason: from getter */
+    /* JADX INFO: renamed from: b, reason: from getter */
     public final String getRegenerateNonce() {
         return this.regenerateNonce;
     }

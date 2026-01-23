@@ -59,30 +59,30 @@ import p507d0.p592z.p594d.Lambda;
 import p507d0.p592z.p594d.Reflection2;
 import p658rx.functions.Action2;
 
-/* compiled from: WidgetSettingsUserConnections.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetSettingsUserConnections.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetSettingsUserConnections extends AppFragment {
     public static final String CONNECTION_ID = "connection_id";
     public static final String PLATFORM_NAME = "platform_name";
     public static final String PLATFORM_TITLE = "platform_title";
     private Adapter adapter;
 
-    /* renamed from: binding$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
 
-    /* renamed from: viewModel$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: viewModel$delegate, reason: from kotlin metadata */
     private final Lazy viewModel;
     public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetSettingsUserConnections.class, "binding", "getBinding()Lcom/discord/databinding/WidgetSettingsConnectionsBinding;", 0)};
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
 
-    /* compiled from: WidgetSettingsUserConnections.kt */
+    /* JADX INFO: compiled from: WidgetSettingsUserConnections.kt */
     public static final class Adapter extends MGRecyclerAdapterSimple<UserConnectionItem> {
         private final FragmentManager fragmentManager;
         private final Function1<String, Unit> onJoinIntegration;
 
-        /* compiled from: WidgetSettingsUserConnections.kt */
+        /* JADX INFO: compiled from: WidgetSettingsUserConnections.kt */
         public final class ViewHolder extends MGRecyclerViewHolder<Adapter, UserConnectionItem> {
             private final WidgetSettingsItemConnectedAccountBinding binding;
             public final /* synthetic */ Adapter this$0;
@@ -176,7 +176,7 @@ public final class WidgetSettingsUserConnections extends AppFragment {
             }
 
             @SuppressLint({"DefaultLocale"})
-            /* renamed from: onConfigure, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: onConfigure, reason: avoid collision after fix types in other method */
             public void onConfigure2(int position, UserConnectionItem data) {
                 Intrinsics3.checkNotNullParameter(data, "data");
                 super.onConfigure(position, data);
@@ -294,7 +294,7 @@ public final class WidgetSettingsUserConnections extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetSettingsUserConnections.kt */
+    /* JADX INFO: compiled from: WidgetSettingsUserConnections.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -309,7 +309,7 @@ public final class WidgetSettingsUserConnections extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetSettingsUserConnections.kt */
+    /* JADX INFO: compiled from: WidgetSettingsUserConnections.kt */
     public static final class UserConnectionItem implements MGRecyclerDataPayload {
         private final WidgetSettingsUserConnectionsViewModel.ConnectionState connectedAccount;
         private final String key;
@@ -336,8 +336,8 @@ public final class WidgetSettingsUserConnections extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetSettingsUserConnections.kt */
-    /* renamed from: com.discord.widgets.settings.connections.WidgetSettingsUserConnections$onViewBound$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.connections.WidgetSettingsUserConnections$onViewBound$2 */
+    /* JADX INFO: compiled from: WidgetSettingsUserConnections.kt */
     public static final class C98322<T1, T2> implements Action2<MenuItem, Context> {
         public C98322() {
         }
@@ -347,7 +347,7 @@ public final class WidgetSettingsUserConnections extends AppFragment {
             call2(menuItem, context);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final void call2(MenuItem menuItem, Context context) {
             Intrinsics3.checkNotNullExpressionValue(menuItem, "menuItem");
             if (menuItem.getItemId() == C5419R.id.menu_add_connections && WidgetSettingsUserConnections.this.getContext() != null) {
@@ -356,8 +356,8 @@ public final class WidgetSettingsUserConnections extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetSettingsUserConnections.kt */
-    /* renamed from: com.discord.widgets.settings.connections.WidgetSettingsUserConnections$onViewBoundOrOnResume$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.connections.WidgetSettingsUserConnections$onViewBoundOrOnResume$1 */
+    /* JADX INFO: compiled from: WidgetSettingsUserConnections.kt */
     public static final class C98331 extends Lambda implements Function1<WidgetSettingsUserConnectionsViewModel.ViewState, Unit> {
         public C98331() {
             super(1);
@@ -369,7 +369,7 @@ public final class WidgetSettingsUserConnections extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(WidgetSettingsUserConnectionsViewModel.ViewState viewState) {
             Intrinsics3.checkNotNullParameter(viewState, "viewState");
             WidgetSettingsUserConnections.access$handleViewState(WidgetSettingsUserConnections.this, viewState);

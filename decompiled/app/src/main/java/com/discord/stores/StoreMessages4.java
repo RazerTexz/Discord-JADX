@@ -16,22 +16,22 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 import p658rx.Emitter;
 
-/* compiled from: StoreMessages.kt */
-/* renamed from: com.discord.stores.StoreMessages$sendMessage$createRequest$2, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.stores.StoreMessages$sendMessage$createRequest$2, reason: use source file name */
+/* JADX INFO: compiled from: StoreMessages.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class StoreMessages4 extends Lambda implements Function1<Emitter<MessageQueue4>, MessageQueue3.SendApplicationCommand> {
     public final /* synthetic */ ApplicationCommandLocalSendData $applicationCommandLocalSendData;
     public final /* synthetic */ List $attachments;
     public final /* synthetic */ Message $message;
     public final /* synthetic */ StoreMessages this$0;
 
-    /* compiled from: StoreMessages.kt */
-    /* renamed from: com.discord.stores.StoreMessages$sendMessage$createRequest$2$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreMessages$sendMessage$createRequest$2$1 */
+    /* JADX INFO: compiled from: StoreMessages.kt */
     public static final class C62481 extends Lambda implements Function2<MessageQueue4, Boolean, Unit> {
         public final /* synthetic */ Emitter $emitter;
 
-        /* compiled from: StoreMessages.kt */
-        /* renamed from: com.discord.stores.StoreMessages$sendMessage$createRequest$2$1$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.stores.StoreMessages$sendMessage$createRequest$2$1$1, reason: invalid class name */
+        /* JADX INFO: compiled from: StoreMessages.kt */
         public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
             public AnonymousClass1() {
                 super(0);
@@ -43,7 +43,7 @@ public final class StoreMessages4 extends Lambda implements Function1<Emitter<Me
                 return Unit.f27425a;
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2() {
                 StoreMessages.Companion.access$cancelBackgroundSendingWork(StoreMessages.INSTANCE, StoreMessages.access$getContext$p(StoreMessages4.this.this$0));
             }
@@ -71,12 +71,12 @@ public final class StoreMessages4 extends Lambda implements Function1<Emitter<Me
         }
     }
 
-    /* compiled from: StoreMessages.kt */
-    /* renamed from: com.discord.stores.StoreMessages$sendMessage$createRequest$2$2 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreMessages$sendMessage$createRequest$2$2 */
+    /* JADX INFO: compiled from: StoreMessages.kt */
     public static final class C62492 extends Lambda implements Function1<SendUtils.SendPayload.Preprocessing, Unit> {
 
-        /* compiled from: StoreMessages.kt */
-        /* renamed from: com.discord.stores.StoreMessages$sendMessage$createRequest$2$2$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.stores.StoreMessages$sendMessage$createRequest$2$2$1, reason: invalid class name */
+        /* JADX INFO: compiled from: StoreMessages.kt */
         public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
             public final /* synthetic */ String $displayName;
             public final /* synthetic */ String $mimeType;
@@ -96,7 +96,7 @@ public final class StoreMessages4 extends Lambda implements Function1<Emitter<Me
                 return Unit.f27425a;
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2() {
                 StoreMessages.access$getStream$p(StoreMessages4.this.this$0).getMessageUploads().onPreprocessing(StoreMessages4.this.$applicationCommandLocalSendData.getNonceString(), this.$numFiles, this.$displayName, this.$mimeType);
             }
@@ -112,19 +112,19 @@ public final class StoreMessages4 extends Lambda implements Function1<Emitter<Me
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(SendUtils.SendPayload.Preprocessing preprocessing) {
             Intrinsics3.checkNotNullParameter(preprocessing, "<name for destructuring parameter 0>");
             StoreMessages.access$getDispatcher$p(StoreMessages4.this.this$0).schedule(new AnonymousClass1(preprocessing.getNumFiles(), preprocessing.getName(), preprocessing.getMimeType()));
         }
     }
 
-    /* compiled from: StoreMessages.kt */
-    /* renamed from: com.discord.stores.StoreMessages$sendMessage$createRequest$2$3 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreMessages$sendMessage$createRequest$2$3 */
+    /* JADX INFO: compiled from: StoreMessages.kt */
     public static final class C62503 extends Lambda implements Function1<List<? extends SendUtils.FileUpload>, Unit> {
 
-        /* compiled from: StoreMessages.kt */
-        /* renamed from: com.discord.stores.StoreMessages$sendMessage$createRequest$2$3$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.stores.StoreMessages$sendMessage$createRequest$2$3$1, reason: invalid class name */
+        /* JADX INFO: compiled from: StoreMessages.kt */
         public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
             public final /* synthetic */ List $uploads;
 
@@ -140,7 +140,7 @@ public final class StoreMessages4 extends Lambda implements Function1<Emitter<Me
                 return Unit.f27425a;
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2() {
                 StoreMessages.access$getStream$p(StoreMessages4.this.this$0).getMessageUploads().bindUpload(StoreMessages4.this.$applicationCommandLocalSendData.getNonceString(), this.$uploads);
             }
@@ -156,7 +156,7 @@ public final class StoreMessages4 extends Lambda implements Function1<Emitter<Me
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(List<SendUtils.FileUpload> list) {
             Intrinsics3.checkNotNullParameter(list, "uploads");
             StoreMessages.access$getDispatcher$p(StoreMessages4.this.this$0).schedule(new AnonymousClass1(list));
@@ -177,7 +177,7 @@ public final class StoreMessages4 extends Lambda implements Function1<Emitter<Me
         return invoke2(emitter);
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final MessageQueue3.SendApplicationCommand invoke2(Emitter<MessageQueue4> emitter) {
         Intrinsics3.checkNotNullParameter(emitter, "emitter");
         com.discord.api.message.Message messageSynthesizeApiMessage = this.$message.synthesizeApiMessage();

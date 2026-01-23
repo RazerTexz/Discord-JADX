@@ -6,48 +6,48 @@ import java.util.Objects;
 import org.objectweb.asm.Opcodes;
 import p617h0.p618a.p619a.SymbolTable2;
 
-/* compiled from: Frame.java */
-/* renamed from: h0.a.a.m, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: h0.a.a.m, reason: use source file name */
+/* JADX INFO: compiled from: Frame.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class Frame3 {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public Label2 f26228a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public int[] f26229b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public int[] f26230c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public int[] f26231d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public int[] f26232e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public short f26233f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public short f26234g;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public int f26235h;
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public int[] f26236i;
 
     public Frame3(Label2 label2) {
         this.f26228a = label2;
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public static int m10572c(SymbolTable2 symbolTable2, Object obj) {
         return obj instanceof Integer ? 16777216 | ((Integer) obj).intValue() : obj instanceof String ? m10573d(symbolTable2, Type2.m10647h((String) obj).m10651d(), 0) : symbolTable2.m10641p("", ((Label2) obj).f26252e) | 50331648;
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public static int m10573d(SymbolTable2 symbolTable2, String str, int i) {
         char cCharAt = str.charAt(i);
         int iM10639n = 16777218;
@@ -116,7 +116,7 @@ public class Frame3 {
         return 16777217;
     }
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public static boolean m10574g(SymbolTable2 symbolTable2, int i, int[] iArr, int i2) {
         int iMin;
         int iM10639n;
@@ -160,7 +160,7 @@ public class Frame3 {
                 int i9 = (i4 & (-268435456)) | 33554432;
                 int i10 = i4 & 1048575;
                 int i11 = 1048575 & i5;
-                long j = i10 | (i11 << 32);
+                long j = ((long) i10) | (((long) i11) << 32);
                 int iM10622r = SymbolTable2.m10622r(130, i10 + i11);
                 SymbolTable2.a aVarM10642q = symbolTable2.m10642q(iM10622r);
                 while (true) {
@@ -222,7 +222,7 @@ public class Frame3 {
         return true;
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final void m10575a(MethodWriter2 methodWriter2) {
         int i;
         int[] iArr = this.f26229b;
@@ -289,7 +289,7 @@ public class Frame3 {
     /* JADX WARN: Removed duplicated region for block: B:122:0x0366  */
     /* JADX WARN: Removed duplicated region for block: B:123:0x036a  */
     /* JADX WARN: Removed duplicated region for block: B:124:0x0371  */
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
@@ -767,7 +767,7 @@ public class Frame3 {
 
     /* JADX WARN: Removed duplicated region for block: B:23:0x004f A[LOOP:0: B:7:0x000d->B:23:0x004f, LOOP_END] */
     /* JADX WARN: Removed duplicated region for block: B:25:0x0037 A[SYNTHETIC] */
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
@@ -798,7 +798,7 @@ public class Frame3 {
         return i;
     }
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final int m10577f(int i) {
         int[] iArr = this.f26231d;
         if (iArr == null || i >= iArr.length) {
@@ -819,7 +819,7 @@ public class Frame3 {
     /* JADX WARN: Removed duplicated region for block: B:64:0x00f8  */
     /* JADX WARN: Removed duplicated region for block: B:65:0x00fb A[PHI: r6
       0x00fb: PHI (r6v6 int) = (r6v5 int), (r6v5 int), (r6v9 int), (r6v9 int) binds: [B:68:0x010a, B:70:0x010e, B:61:0x00f2, B:63:0x00f6] A[DONT_GENERATE, DONT_INLINE]] */
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
@@ -910,7 +910,7 @@ public class Frame3 {
         return zM10574g2;
     }
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public final int m10579i() {
         short s2 = this.f26234g;
         if (s2 <= 0) {
@@ -924,7 +924,7 @@ public class Frame3 {
         return iArr[s4];
     }
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final void m10580j(int i) {
         short s2 = this.f26234g;
         if (s2 >= i) {
@@ -935,7 +935,7 @@ public class Frame3 {
         }
     }
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final void m10581k(String str) {
         char cCharAt = str.charAt(0);
         if (cCharAt == '(') {
@@ -947,7 +947,7 @@ public class Frame3 {
         }
     }
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final void m10582l(int i) {
         if (this.f26232e == null) {
             this.f26232e = new int[10];
@@ -971,7 +971,7 @@ public class Frame3 {
         }
     }
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public final void m10583m(SymbolTable2 symbolTable2, String str) {
         int iM10573d = m10573d(symbolTable2, str, str.charAt(0) == '(' ? str.indexOf(41) + 1 : 0);
         if (iM10573d != 0) {
@@ -982,7 +982,7 @@ public class Frame3 {
         }
     }
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public final void m10584n(SymbolTable2 symbolTable2, int i, String str, int i2) {
         int[] iArr = new int[i2];
         this.f26229b = iArr;
@@ -1013,7 +1013,7 @@ public class Frame3 {
         }
     }
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public final void m10585o(int i, int i2) {
         if (this.f26231d == null) {
             this.f26231d = new int[10];

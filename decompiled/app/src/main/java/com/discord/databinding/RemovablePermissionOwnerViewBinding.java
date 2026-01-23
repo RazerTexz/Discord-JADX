@@ -11,18 +11,18 @@ import androidx.viewbinding.ViewBinding;
 import com.discord.C5419R;
 import com.discord.views.permissions.ChannelPermissionOwnerView;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public final class RemovablePermissionOwnerViewBinding implements ViewBinding {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     @NonNull
     public final ConstraintLayout f15225a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     @NonNull
     public final ChannelPermissionOwnerView f15226b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     @NonNull
     public final ImageView f15227c;
 
@@ -33,7 +33,7 @@ public final class RemovablePermissionOwnerViewBinding implements ViewBinding {
     }
 
     @NonNull
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static RemovablePermissionOwnerViewBinding m8389a(@NonNull LayoutInflater layoutInflater, @Nullable ViewGroup viewGroup, boolean z2) {
         View viewInflate = layoutInflater.inflate(C5419R.layout.removable_permission_owner_view, viewGroup, false);
         if (z2) {

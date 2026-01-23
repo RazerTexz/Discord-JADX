@@ -1,7 +1,7 @@
 package p637j0.p652o;
 
-/* compiled from: RxJavaCompletableExecutionHook.java */
-/* renamed from: j0.o.a, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: j0.o.a, reason: use source file name */
+/* JADX INFO: compiled from: RxJavaCompletableExecutionHook.java */
+/* JADX INFO: loaded from: classes3.dex */
 public abstract class RxJavaCompletableExecutionHook {
 }

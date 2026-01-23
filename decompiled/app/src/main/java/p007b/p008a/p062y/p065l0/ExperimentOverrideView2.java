@@ -4,12 +4,12 @@ import android.view.View;
 import android.widget.AdapterView;
 import kotlin.jvm.functions.Function1;
 
-/* compiled from: ExperimentOverrideView.kt */
-/* renamed from: b.a.y.l0.a, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: b.a.y.l0.a, reason: use source file name */
+/* JADX INFO: compiled from: ExperimentOverrideView.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class ExperimentOverrideView2 implements AdapterView.OnItemSelectedListener {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final /* synthetic */ Function1 f2046j;
 
     public ExperimentOverrideView2(Function1 function1) {

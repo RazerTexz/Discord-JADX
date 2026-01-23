@@ -6,16 +6,16 @@ import java.lang.reflect.Member;
 import java.util.HashMap;
 import p007b.p195g.p196a.p205c.p219i0.ClassUtil;
 
-/* compiled from: AnnotatedMember.java */
-/* renamed from: b.g.a.c.c0.i, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.g.a.c.c0.i, reason: use source file name */
+/* JADX INFO: compiled from: AnnotatedMember.java */
+/* JADX INFO: loaded from: classes3.dex */
 public abstract class AnnotatedMember extends Annotated implements Serializable {
     private static final long serialVersionUID = 1;
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final transient TypeResolutionContext f4716j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final transient AnnotationMap f4717k;
 
     public AnnotatedMember(TypeResolutionContext typeResolutionContext, AnnotationMap annotationMap) {
@@ -24,7 +24,7 @@ public abstract class AnnotatedMember extends Annotated implements Serializable 
     }
 
     @Override // p007b.p195g.p196a.p205c.p210c0.Annotated
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final <A extends Annotation> A mo1818b(Class<A> cls) {
         HashMap<Class<?>, Annotation> map;
         AnnotationMap annotationMap = this.f4717k;
@@ -34,7 +34,7 @@ public abstract class AnnotatedMember extends Annotated implements Serializable 
         return (A) map.get(cls);
     }
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final void m1902f(boolean z2) {
         Member memberMo1888i = mo1888i();
         if (memberMo1888i != null) {
@@ -42,21 +42,21 @@ public abstract class AnnotatedMember extends Annotated implements Serializable 
         }
     }
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public abstract Class<?> mo1887g();
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public String mo1903h() {
         return mo1887g().getName() + "#" + mo1819c();
     }
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public abstract Member mo1888i();
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public abstract Object mo1889j(Object obj) throws UnsupportedOperationException, IllegalArgumentException;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final boolean m1904k(Class<?> cls) {
         HashMap<Class<?>, Annotation> map;
         AnnotationMap annotationMap = this.f4717k;
@@ -66,6 +66,6 @@ public abstract class AnnotatedMember extends Annotated implements Serializable 
         return map.containsKey(cls);
     }
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public abstract Annotated mo1890l(AnnotationMap annotationMap);
 }

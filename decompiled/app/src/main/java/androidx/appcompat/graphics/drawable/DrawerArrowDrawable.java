@@ -17,7 +17,7 @@ import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import p007b.p100d.p104b.p105a.outline;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class DrawerArrowDrawable extends Drawable {
     public static final int ARROW_DIRECTION_END = 3;
     public static final int ARROW_DIRECTION_LEFT = 0;
@@ -199,7 +199,7 @@ public class DrawerArrowDrawable extends Drawable {
     public void setBarThickness(float f) {
         if (this.mPaint.getStrokeWidth() != f) {
             this.mPaint.setStrokeWidth(f);
-            this.mMaxCutForBarSize = (float) (Math.cos(ARROW_HEAD_ANGLE) * (f / 2.0f));
+            this.mMaxCutForBarSize = (float) (Math.cos(ARROW_HEAD_ANGLE) * ((double) (f / 2.0f)));
             invalidateSelf();
         }
     }

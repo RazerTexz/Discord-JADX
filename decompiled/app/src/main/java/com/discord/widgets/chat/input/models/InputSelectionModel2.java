@@ -10,9 +10,9 @@ import java.util.List;
 import kotlin.NoWhenBranchMatchedException;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: InputSelectionModel.kt */
-/* renamed from: com.discord.widgets.chat.input.models.InputSelectionModelKt, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.chat.input.models.InputSelectionModelKt, reason: use source file name */
+/* JADX INFO: compiled from: InputSelectionModel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class InputSelectionModel2 {
     public static final ApplicationCommand getSelectedCommand(InputSelectionModel inputSelectionModel) {
         InputCommandContext inputCommandContext;

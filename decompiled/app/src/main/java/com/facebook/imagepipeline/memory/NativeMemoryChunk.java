@@ -11,17 +11,17 @@ import p007b.p109f.p115d.p119d.DoNotStrip;
 import p007b.p109f.p161j.p177l.MemoryChunk;
 import p007b.p109f.p190m.p191n.NativeLoader;
 
+/* JADX INFO: loaded from: classes3.dex */
 @DoNotStrip
-/* loaded from: classes3.dex */
 public class NativeMemoryChunk implements MemoryChunk, Closeable {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final long f19563j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final int f19564k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public boolean f19565l;
 
     static {
@@ -54,7 +54,7 @@ public class NativeMemoryChunk implements MemoryChunk, Closeable {
     private static native byte nativeReadByte(long j);
 
     @Override // p007b.p109f.p161j.p177l.MemoryChunk
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public void mo1365a(int i, MemoryChunk memoryChunk, int i2, int i3) {
         Objects.requireNonNull(memoryChunk);
         if (memoryChunk.getUniqueId() == this.f19563j) {
@@ -83,17 +83,17 @@ public class NativeMemoryChunk implements MemoryChunk, Closeable {
     }
 
     @Override // p007b.p109f.p161j.p177l.MemoryChunk
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public synchronized int mo1366b(int i, byte[] bArr, int i2, int i3) {
         int iM507d;
         AnimatableValueParser.m419B(!isClosed());
         iM507d = AnimatableValueParser.m507d(i, i3, this.f19564k);
         AnimatableValueParser.m555p(i, bArr.length, i2, iM507d, this.f19564k);
-        nativeCopyFromByteArray(this.f19563j + i, bArr, i2, iM507d);
+        nativeCopyFromByteArray(this.f19563j + ((long) i), bArr, i2, iM507d);
         return iM507d;
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final void m8708c(int i, MemoryChunk memoryChunk, int i2, int i3) {
         if (!(memoryChunk instanceof NativeMemoryChunk)) {
             throw new IllegalArgumentException("Cannot copy two incompatible MemoryChunks");
@@ -101,7 +101,7 @@ public class NativeMemoryChunk implements MemoryChunk, Closeable {
         AnimatableValueParser.m419B(!isClosed());
         AnimatableValueParser.m419B(!memoryChunk.isClosed());
         AnimatableValueParser.m555p(i, memoryChunk.getSize(), i2, i3, this.f19564k);
-        nativeMemcpy(memoryChunk.mo1370k() + i2, this.f19563j + i, i3);
+        nativeMemcpy(memoryChunk.mo1370k() + ((long) i2), this.f19563j + ((long) i), i3);
     }
 
     @Override // p007b.p109f.p161j.p177l.MemoryChunk, java.io.Closeable, java.lang.AutoCloseable
@@ -143,7 +143,7 @@ public class NativeMemoryChunk implements MemoryChunk, Closeable {
     }
 
     @Override // p007b.p109f.p161j.p177l.MemoryChunk
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public synchronized byte mo1368h(int i) {
         boolean z2 = true;
         AnimatableValueParser.m419B(!isClosed());
@@ -152,18 +152,18 @@ public class NativeMemoryChunk implements MemoryChunk, Closeable {
             z2 = false;
         }
         AnimatableValueParser.m527i(Boolean.valueOf(z2));
-        return nativeReadByte(this.f19563j + i);
+        return nativeReadByte(this.f19563j + ((long) i));
     }
 
     @Override // p007b.p109f.p161j.p177l.MemoryChunk
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public synchronized int mo1369i(int i, byte[] bArr, int i2, int i3) {
         int iM507d;
         Objects.requireNonNull(bArr);
         AnimatableValueParser.m419B(!isClosed());
         iM507d = AnimatableValueParser.m507d(i, i3, this.f19564k);
         AnimatableValueParser.m555p(i, bArr.length, i2, iM507d, this.f19564k);
-        nativeCopyToByteArray(this.f19563j + i, bArr, i2, iM507d);
+        nativeCopyToByteArray(this.f19563j + ((long) i), bArr, i2, iM507d);
         return iM507d;
     }
 
@@ -173,7 +173,7 @@ public class NativeMemoryChunk implements MemoryChunk, Closeable {
     }
 
     @Override // p007b.p109f.p161j.p177l.MemoryChunk
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public long mo1370k() {
         return this.f19563j;
     }

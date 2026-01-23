@@ -22,21 +22,21 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p658rx.subjects.PublishSubject;
 import p658rx.subjects.Subject;
 
-/* compiled from: AppDialog.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: AppDialog.kt */
+/* JADX INFO: loaded from: classes.dex */
 public abstract class AppDialog extends DialogFragment implements AppComponent {
     private boolean isRecreated;
     private boolean onViewBoundOrOnResumeInvoked;
     private final Subject<Void, Void> unsubscribeSignal;
 
-    /* compiled from: AppDialog.kt */
-    /* renamed from: com.discord.app.AppDialog$a */
+    /* JADX INFO: renamed from: com.discord.app.AppDialog$a */
+    /* JADX INFO: compiled from: AppDialog.kt */
     public static final class ViewOnClickListenerC5446a implements View.OnClickListener {
 
-        /* renamed from: k */
+        /* JADX INFO: renamed from: k */
         public final /* synthetic */ View f14941k;
 
-        /* renamed from: l */
+        /* JADX INFO: renamed from: l */
         public final /* synthetic */ Function1 f14942l;
 
         public ViewOnClickListenerC5446a(View view, Function1 function1) {
@@ -103,7 +103,7 @@ public abstract class AppDialog extends DialogFragment implements AppComponent {
         }
     }
 
-    /* renamed from: isRecreated, reason: from getter */
+    /* JADX INFO: renamed from: isRecreated, reason: from getter */
     public final boolean getIsRecreated() {
         return this.isRecreated;
     }

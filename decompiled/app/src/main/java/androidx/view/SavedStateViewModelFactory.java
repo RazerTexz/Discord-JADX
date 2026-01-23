@@ -12,7 +12,7 @@ import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
 import java.util.Arrays;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public final class SavedStateViewModelFactory extends ViewModelProvider.KeyedFactory {
     private static final Class<?>[] ANDROID_VIEWMODEL_SIGNATURE = {Application.class, SavedStateHandle.class};
     private static final Class<?>[] VIEWMODEL_SIGNATURE = {SavedStateHandle.class};
@@ -26,7 +26,7 @@ public final class SavedStateViewModelFactory extends ViewModelProvider.KeyedFac
         this(application, savedStateRegistryOwner, null);
     }
 
-    private static <T> Constructor<T> findMatchingConstructor(Class<T> cls, Class<?>[] clsArr) throws SecurityException {
+    private static <T> Constructor<T> findMatchingConstructor(Class<T> cls, Class<?>[] clsArr) {
         for (Object obj : cls.getConstructors()) {
             Constructor<T> constructor = (Constructor<T>) obj;
             if (Arrays.equals(clsArr, constructor.getParameterTypes())) {
@@ -42,7 +42,7 @@ public final class SavedStateViewModelFactory extends ViewModelProvider.KeyedFac
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
-    public <T extends ViewModel> T create(@NonNull String str, @NonNull Class<T> cls) throws SecurityException {
+    public <T extends ViewModel> T create(@NonNull String str, @NonNull Class<T> cls) {
         T t;
         boolean zIsAssignableFrom = AndroidViewModel.class.isAssignableFrom(cls);
         Constructor constructorFindMatchingConstructor = (!zIsAssignableFrom || this.mApplication == null) ? findMatchingConstructor(cls, VIEWMODEL_SIGNATURE) : findMatchingConstructor(cls, ANDROID_VIEWMODEL_SIGNATURE);
@@ -67,7 +67,7 @@ public final class SavedStateViewModelFactory extends ViewModelProvider.KeyedFac
     }
 
     @Override // androidx.lifecycle.ViewModelProvider.OnRequeryFactory
-    public void onRequery(@NonNull ViewModel viewModel) throws SecurityException {
+    public void onRequery(@NonNull ViewModel viewModel) {
         SavedStateHandleController.attachHandleIfNeeded(viewModel, this.mSavedStateRegistry, this.mLifecycle);
     }
 

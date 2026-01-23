@@ -5,23 +5,23 @@ import androidx.annotation.MainThread;
 import com.discord.rtcconnection.enums.ScoAudioState;
 import p007b.p008a.p041q.p043l0.WiredHeadsetState;
 
-/* compiled from: OnAudioManagerBroadcastListener.kt */
+/* JADX INFO: renamed from: b.a.q.k0.h, reason: use source file name */
+/* JADX INFO: compiled from: OnAudioManagerBroadcastListener.kt */
+/* JADX INFO: loaded from: classes.dex */
 @MainThread
-/* renamed from: b.a.q.k0.h, reason: use source file name */
-/* loaded from: classes.dex */
 public interface OnAudioManagerBroadcastListener {
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     void mo281a(Context context, boolean z2);
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     void mo282b(Context context, ScoAudioState.C5637b c5637b);
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     void mo283c(Context context);
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     void mo284d(Context context, boolean z2);
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     void mo285e(Context context, WiredHeadsetState wiredHeadsetState);
 }

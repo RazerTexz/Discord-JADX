@@ -8,12 +8,12 @@ import java.util.TreeMap;
 import kotlin.jvm.functions.Function0;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: AppEventHandlerActivity.kt */
-/* renamed from: b.a.d.d, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.a.d.d, reason: use source file name */
+/* JADX INFO: compiled from: AppEventHandlerActivity.kt */
+/* JADX INFO: loaded from: classes.dex */
 public abstract class AppEventHandlerActivity extends AppTransitionActivity {
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final TreeMap<Integer, HashMap<String, Function0<Boolean>>> f505l = new TreeMap<>();
 
     @Override // com.discord.app.AppTransitionActivity, androidx.activity.ComponentActivity, android.app.Activity

@@ -1,14 +1,14 @@
 package p007b.p225i.p226a.p288f.p313h.p325l;
 
-/* compiled from: com.google.android.gms:play-services-measurement-impl@@18.0.0 */
-/* renamed from: b.i.a.f.h.l.ma */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.h.l.ma */
+/* JADX INFO: compiled from: com.google.android.gms:play-services-measurement-impl@@18.0.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public final class C3753ma implements InterfaceC3766na {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final AbstractC3732l2<Boolean> f10099a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static final AbstractC3732l2<Boolean> f10100b;
 
     static {
@@ -21,13 +21,13 @@ public final class C3753ma implements InterfaceC3766na {
     }
 
     @Override // p007b.p225i.p226a.p288f.p313h.p325l.InterfaceC3766na
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final boolean mo5107a() {
         return f10099a.m5050d().booleanValue();
     }
 
     @Override // p007b.p225i.p226a.p288f.p313h.p325l.InterfaceC3766na
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final boolean mo5108b() {
         return f10100b.m5050d().booleanValue();
     }

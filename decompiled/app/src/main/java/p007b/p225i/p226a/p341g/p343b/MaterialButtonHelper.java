@@ -20,73 +20,73 @@ import com.google.android.material.shape.MaterialShapeDrawable;
 import com.google.android.material.shape.ShapeAppearanceModel;
 import com.google.android.material.shape.Shapeable;
 
-/* compiled from: MaterialButtonHelper.java */
+/* JADX INFO: renamed from: b.i.a.g.b.a, reason: use source file name */
+/* JADX INFO: compiled from: MaterialButtonHelper.java */
+/* JADX INFO: loaded from: classes3.dex */
 @RestrictTo({RestrictTo.Scope.LIBRARY_GROUP})
-/* renamed from: b.i.a.g.b.a, reason: use source file name */
-/* loaded from: classes3.dex */
 public class MaterialButtonHelper {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final MaterialButton f11538a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     @NonNull
     public ShapeAppearanceModel f11539b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public int f11540c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public int f11541d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public int f11542e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public int f11543f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public int f11544g;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public int f11545h;
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     @Nullable
     public PorterDuff.Mode f11546i;
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     @Nullable
     public ColorStateList f11547j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     @Nullable
     public ColorStateList f11548k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     @Nullable
     public ColorStateList f11549l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     @Nullable
     public Drawable f11550m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public boolean f11551n = false;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public boolean f11552o = false;
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public boolean f11553p = false;
 
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     public boolean f11554q;
 
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     public LayerDrawable f11555r;
 
-    /* renamed from: s */
+    /* JADX INFO: renamed from: s */
     public int f11556s;
 
     public MaterialButtonHelper(MaterialButton materialButton, @NonNull ShapeAppearanceModel shapeAppearanceModel) {
@@ -95,7 +95,7 @@ public class MaterialButtonHelper {
     }
 
     @Nullable
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public Shapeable m6036a() {
         LayerDrawable layerDrawable = this.f11555r;
         if (layerDrawable == null || layerDrawable.getNumberOfLayers() <= 1) {
@@ -105,13 +105,13 @@ public class MaterialButtonHelper {
     }
 
     @Nullable
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public MaterialShapeDrawable m6037b() {
         return m6038c(false);
     }
 
     @Nullable
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final MaterialShapeDrawable m6038c(boolean z2) {
         LayerDrawable layerDrawable = this.f11555r;
         if (layerDrawable == null || layerDrawable.getNumberOfLayers() <= 0) {
@@ -121,12 +121,12 @@ public class MaterialButtonHelper {
     }
 
     @Nullable
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final MaterialShapeDrawable m6039d() {
         return m6038c(true);
     }
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public void m6040e(@NonNull ShapeAppearanceModel shapeAppearanceModel) {
         this.f11539b = shapeAppearanceModel;
         if (m6037b() != null) {
@@ -140,7 +140,7 @@ public class MaterialButtonHelper {
         }
     }
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final void m6041f(@Dimension int i, @Dimension int i2) {
         int paddingStart = ViewCompat.getPaddingStart(this.f11538a);
         int paddingTop = this.f11538a.getPaddingTop();
@@ -156,7 +156,7 @@ public class MaterialButtonHelper {
         ViewCompat.setPaddingRelative(this.f11538a, paddingStart, (paddingTop + i) - i3, paddingEnd, (paddingBottom + i2) - i4);
     }
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public final void m6042g() {
         MaterialButton materialButton = this.f11538a;
         MaterialShapeDrawable materialShapeDrawable = new MaterialShapeDrawable(this.f11539b);
@@ -182,7 +182,7 @@ public class MaterialButtonHelper {
         }
     }
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public final void m6043h() {
         MaterialShapeDrawable materialShapeDrawableM6037b = m6037b();
         MaterialShapeDrawable materialShapeDrawableM6039d = m6039d();

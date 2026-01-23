@@ -23,20 +23,20 @@ import p507d0.p592z.p594d.Lambda;
 import p637j0.p641k.Func1;
 import p658rx.Observable;
 
-/* compiled from: StoreUserAffinities.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: StoreUserAffinities.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class StoreUserAffinities extends StoreV2 {
     private ModelUserAffinities affinities;
     private ModelUserAffinities affinitiesSnapshot;
     private final Dispatcher dispatcher;
     private final ObservationDeck observationDeck;
 
-    /* compiled from: StoreUserAffinities.kt */
-    /* renamed from: com.discord.stores.StoreUserAffinities$fetchUserAffinities$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreUserAffinities$fetchUserAffinities$1 */
+    /* JADX INFO: compiled from: StoreUserAffinities.kt */
     public static final class C65581 extends Lambda implements Function1<ModelUserAffinities, Unit> {
 
-        /* compiled from: StoreUserAffinities.kt */
-        /* renamed from: com.discord.stores.StoreUserAffinities$fetchUserAffinities$1$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.stores.StoreUserAffinities$fetchUserAffinities$1$1, reason: invalid class name */
+        /* JADX INFO: compiled from: StoreUserAffinities.kt */
         public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
             public final /* synthetic */ ModelUserAffinities $affinities;
 
@@ -52,7 +52,7 @@ public final class StoreUserAffinities extends StoreV2 {
                 return Unit.f27425a;
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2() {
                 StoreUserAffinities.access$handleUserAffinitiesFetchSuccess(StoreUserAffinities.this, this.$affinities);
             }
@@ -68,15 +68,15 @@ public final class StoreUserAffinities extends StoreV2 {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(ModelUserAffinities modelUserAffinities) {
             Intrinsics3.checkNotNullParameter(modelUserAffinities, "affinities");
             StoreUserAffinities.access$getDispatcher$p(StoreUserAffinities.this).schedule(new AnonymousClass1(modelUserAffinities));
         }
     }
 
-    /* compiled from: StoreUserAffinities.kt */
-    /* renamed from: com.discord.stores.StoreUserAffinities$observeAffinityUserIds$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreUserAffinities$observeAffinityUserIds$1 */
+    /* JADX INFO: compiled from: StoreUserAffinities.kt */
     public static final class C65591<T, R> implements Func1<ModelUserAffinities, List<? extends Long>> {
         public static final C65591 INSTANCE = new C65591();
 
@@ -85,7 +85,7 @@ public final class StoreUserAffinities extends StoreV2 {
             return call2(modelUserAffinities);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final List<Long> call2(ModelUserAffinities modelUserAffinities) {
             List<ModelUserAffinity> userAffinities = modelUserAffinities.getUserAffinities();
             ArrayList arrayList = new ArrayList(Iterables2.collectionSizeOrDefault(userAffinities, 10));
@@ -97,8 +97,8 @@ public final class StoreUserAffinities extends StoreV2 {
         }
     }
 
-    /* compiled from: StoreUserAffinities.kt */
-    /* renamed from: com.discord.stores.StoreUserAffinities$observeUserAffinities$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreUserAffinities$observeUserAffinities$1 */
+    /* JADX INFO: compiled from: StoreUserAffinities.kt */
     public static final class C65601 extends Lambda implements Function0<ModelUserAffinities> {
         public C65601() {
             super(0);

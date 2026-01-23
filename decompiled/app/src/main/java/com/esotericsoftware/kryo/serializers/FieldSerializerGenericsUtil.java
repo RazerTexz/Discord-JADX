@@ -12,7 +12,7 @@ import java.lang.reflect.WildcardType;
 import java.util.HashMap;
 import p007b.p106e.p107a.Log;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public final class FieldSerializerGenericsUtil {
     private Kryo kryo;
     private FieldSerializer serializer;

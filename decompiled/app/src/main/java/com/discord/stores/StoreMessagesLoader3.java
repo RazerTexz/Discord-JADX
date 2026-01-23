@@ -8,9 +8,9 @@ import kotlin.jvm.functions.Function1;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: StoreMessagesLoader.kt */
-/* renamed from: com.discord.stores.StoreMessagesLoader$tryLoadMessages$$inlined$apply$lambda$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.stores.StoreMessagesLoader$tryLoadMessages$$inlined$apply$lambda$1, reason: use source file name */
+/* JADX INFO: compiled from: StoreMessagesLoader.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class StoreMessagesLoader3 extends Lambda implements Function1<List<? extends Message>, Unit> {
     public final /* synthetic */ long $channelId$inlined;
     public final /* synthetic */ StoreMessagesLoader.ChannelLoadedState $channelLoadedState$inlined;
@@ -36,7 +36,7 @@ public final class StoreMessagesLoader3 extends Lambda implements Function1<List
         return Unit.f27425a;
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final void invoke2(List<Message> list) {
         StoreMessagesLoader.C62694 c62694 = this.$loadPagedMessages$4$inlined;
         long j = this.$channelId$inlined;

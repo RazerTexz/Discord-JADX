@@ -1,6 +1,6 @@
 package androidx.work;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public enum BackoffPolicy {
     EXPONENTIAL,
     LINEAR

@@ -31,8 +31,8 @@ import p007b.p008a.p025i.WidgetCallFullscreenPrivateCallBinding;
 import p507d0.p592z.p594d.FunctionReferenceImpl;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: WidgetCallFullscreen.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: WidgetCallFullscreen.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* synthetic */ class WidgetCallFullscreen$binding$2 extends FunctionReferenceImpl implements Function1<View, WidgetCallFullscreenBinding> {
     public static final WidgetCallFullscreen$binding$2 INSTANCE = new WidgetCallFullscreen$binding$2();
 
@@ -45,7 +45,7 @@ public final /* synthetic */ class WidgetCallFullscreen$binding$2 extends Functi
         return invoke2(view);
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final WidgetCallFullscreenBinding invoke2(View view) {
         Intrinsics3.checkNotNullParameter(view, "p1");
         int i = C5419R.id.action_bar_toolbar;

@@ -32,134 +32,134 @@ import p507d0.p579g0.Charsets2;
 import p507d0.p580t._Arrays;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: RLottieDrawable.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: RLottieDrawable.kt */
+/* JADX INFO: loaded from: classes.dex */
 public class RLottieDrawable extends BitmapDrawable implements Animatable {
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public static ThreadPoolExecutor f18694n;
 
-    /* renamed from: A */
+    /* JADX INFO: renamed from: A */
     public Runnable f18696A;
 
-    /* renamed from: B */
+    /* JADX INFO: renamed from: B */
     public Runnable f18697B;
 
-    /* renamed from: C */
+    /* JADX INFO: renamed from: C */
     public volatile Bitmap f18698C;
 
-    /* renamed from: D */
+    /* JADX INFO: renamed from: D */
     public volatile Bitmap f18699D;
 
-    /* renamed from: E */
+    /* JADX INFO: renamed from: E */
     public volatile Bitmap f18700E;
 
-    /* renamed from: F */
+    /* JADX INFO: renamed from: F */
     public boolean f18701F;
 
-    /* renamed from: G */
+    /* JADX INFO: renamed from: G */
     public boolean f18702G;
 
-    /* renamed from: H */
+    /* JADX INFO: renamed from: H */
     public boolean f18703H;
 
-    /* renamed from: I */
+    /* JADX INFO: renamed from: I */
     public int f18704I;
 
-    /* renamed from: J */
+    /* JADX INFO: renamed from: J */
     public boolean f18705J;
 
-    /* renamed from: K */
+    /* JADX INFO: renamed from: K */
     public float f18706K;
 
-    /* renamed from: L */
+    /* JADX INFO: renamed from: L */
     public float f18707L;
 
-    /* renamed from: M */
+    /* JADX INFO: renamed from: M */
     public float f18708M;
 
-    /* renamed from: N */
+    /* JADX INFO: renamed from: N */
     public boolean f18709N;
 
-    /* renamed from: O */
+    /* JADX INFO: renamed from: O */
     public final Rect f18710O;
 
-    /* renamed from: P */
+    /* JADX INFO: renamed from: P */
     public volatile boolean f18711P;
 
-    /* renamed from: Q */
+    /* JADX INFO: renamed from: Q */
     public volatile long f18712Q;
 
-    /* renamed from: R */
+    /* JADX INFO: renamed from: R */
     public final ArrayList<WeakReference<View>> f18713R;
 
-    /* renamed from: S */
+    /* JADX INFO: renamed from: S */
     public final Runnable f18714S;
 
-    /* renamed from: T */
+    /* JADX INFO: renamed from: T */
     public final Runnable f18715T;
 
-    /* renamed from: U */
+    /* JADX INFO: renamed from: U */
     public final Runnable f18716U;
 
-    /* renamed from: V */
+    /* JADX INFO: renamed from: V */
     public final Runnable f18717V;
 
-    /* renamed from: W */
+    /* JADX INFO: renamed from: W */
     public final Runnable f18718W;
 
-    /* renamed from: X */
+    /* JADX INFO: renamed from: X */
     public final Runnable f18719X;
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public int f18720p;
 
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     public int f18721q;
 
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     public final int[] f18722r;
 
-    /* renamed from: s */
+    /* JADX INFO: renamed from: s */
     public int f18723s;
 
-    /* renamed from: t */
+    /* JADX INFO: renamed from: t */
     public Integer[] f18724t;
 
-    /* renamed from: u */
+    /* JADX INFO: renamed from: u */
     public final HashMap<String, Integer> f18725u;
 
-    /* renamed from: v */
+    /* JADX INFO: renamed from: v */
     public volatile HashMap<String, Integer> f18726v;
 
-    /* renamed from: w */
+    /* JADX INFO: renamed from: w */
     public PlaybackMode f18727w;
 
-    /* renamed from: x */
+    /* JADX INFO: renamed from: x */
     public int f18728x;
 
-    /* renamed from: y */
+    /* JADX INFO: renamed from: y */
     public long f18729y;
 
-    /* renamed from: z */
+    /* JADX INFO: renamed from: z */
     public volatile boolean f18730z;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public static final Companion f18695o = new Companion(null);
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static final Handler f18690j = new Handler(Looper.getMainLooper());
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public static byte[] f18691k = new byte[65536];
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public static final byte[] f18692l = new byte[4096];
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public static final ExecutorService f18693m = Executors.newCachedThreadPool();
 
-    /* compiled from: RLottieDrawable.kt */
+    /* JADX INFO: compiled from: RLottieDrawable.kt */
     public static final class Companion {
         public Companion(DefaultConstructorMarker defaultConstructorMarker) {
         }
@@ -177,22 +177,22 @@ public class RLottieDrawable extends BitmapDrawable implements Animatable {
         public final native void setLayerColor(long j, String str, int i);
     }
 
-    /* compiled from: RLottieDrawable.kt */
+    /* JADX INFO: compiled from: RLottieDrawable.kt */
     public enum PlaybackMode {
         LOOP,
         ONCE,
         FREEZE
     }
 
-    /* compiled from: java-style lambda group */
-    /* renamed from: com.discord.rlottie.RLottieDrawable$a */
-    /* loaded from: classes2.dex */
+    /* JADX INFO: renamed from: com.discord.rlottie.RLottieDrawable$a */
+    /* JADX INFO: compiled from: java-style lambda group */
+    /* JADX INFO: loaded from: classes2.dex */
     public static final class RunnableC5598a implements Runnable {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public final /* synthetic */ int f18731j;
 
-        /* renamed from: k */
+        /* JADX INFO: renamed from: k */
         public final /* synthetic */ Object f18732k;
 
         public RunnableC5598a(int i, Object obj) {
@@ -382,7 +382,7 @@ public class RLottieDrawable extends BitmapDrawable implements Animatable {
         this.f18723s = Math.max(this.f18705J ? 33 : 16, (int) (1000.0f / iArr2[1]));
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final void m8442a(RLottieDrawable rLottieDrawable) {
         if (rLottieDrawable.f18712Q != 0) {
             if (!rLottieDrawable.m8443b()) {
@@ -409,7 +409,7 @@ public class RLottieDrawable extends BitmapDrawable implements Animatable {
         }
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final boolean m8443b() {
         if (getCallback() != null) {
             return true;
@@ -423,7 +423,7 @@ public class RLottieDrawable extends BitmapDrawable implements Animatable {
         return false;
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final void m8444c() {
         int size = this.f18713R.size();
         int i = 0;
@@ -443,7 +443,7 @@ public class RLottieDrawable extends BitmapDrawable implements Animatable {
         }
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final boolean m8445d() {
         if (this.f18697B != null || this.f18699D != null || this.f18712Q == 0) {
             return false;
@@ -497,7 +497,7 @@ public class RLottieDrawable extends BitmapDrawable implements Animatable {
                             this.f18702G = true;
                             this.f18699D = null;
                             if (this.f18706K > f) {
-                                jElapsedRealtime -= Math.min(16L, jAbs - i);
+                                jElapsedRealtime -= Math.min(16L, jAbs - ((long) i));
                             }
                             this.f18729y = jElapsedRealtime;
                             m8445d();
@@ -529,7 +529,7 @@ public class RLottieDrawable extends BitmapDrawable implements Animatable {
                 this.f18702G = true;
                 this.f18699D = null;
                 if (this.f18706K > f) {
-                    jElapsedRealtime -= Math.min(16L, jAbs - i);
+                    jElapsedRealtime -= Math.min(16L, jAbs - ((long) i));
                 }
                 this.f18729y = jElapsedRealtime;
                 if (this.f18703H) {
@@ -562,7 +562,7 @@ public class RLottieDrawable extends BitmapDrawable implements Animatable {
         }
     }
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final void m8446e(boolean z2) {
         this.f18701F = z2;
         if (z2) {
@@ -570,7 +570,7 @@ public class RLottieDrawable extends BitmapDrawable implements Animatable {
         }
     }
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final void m8447f(PlaybackMode playbackMode) {
         Intrinsics3.checkParameterIsNotNull(playbackMode, "value");
         if (this.f18727w == PlaybackMode.ONCE && playbackMode == PlaybackMode.FREEZE && this.f18704I != 0) {

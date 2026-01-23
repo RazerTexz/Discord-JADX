@@ -1,11 +1,11 @@
 package p507d0.p513e0.p514p.p515d.p517m0.p521c.p522g1;
 
-/* compiled from: AnnotatedImpl.java */
-/* renamed from: d0.e0.p.d.m0.c.g1.b, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.c.g1.b, reason: use source file name */
+/* JADX INFO: compiled from: AnnotatedImpl.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class AnnotatedImpl implements Annotations3 {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final Annotations4 f22716j;
 
     public AnnotatedImpl(Annotations4 annotations4) {
@@ -17,7 +17,7 @@ public class AnnotatedImpl implements Annotations3 {
         }
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static /* synthetic */ void m9384a(int i) {
         String str = i != 1 ? "Argument for @NotNull parameter '%s' of %s.%s must not be null" : "@NotNull method %s.%s must not return null";
         Object[] objArr = new Object[i != 1 ? 3 : 2];

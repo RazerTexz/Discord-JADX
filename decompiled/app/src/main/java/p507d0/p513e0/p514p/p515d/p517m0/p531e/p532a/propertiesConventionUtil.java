@@ -9,11 +9,11 @@ import p507d0.p579g0.StringsJVM;
 import p507d0.p580t.Collections2;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: propertiesConventionUtil.kt */
-/* renamed from: d0.e0.p.d.m0.e.a.c0, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.e.a.c0, reason: use source file name */
+/* JADX INFO: compiled from: propertiesConventionUtil.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class propertiesConventionUtil {
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static Name m9449a(Name name, String str, boolean z2, String str2, int i) {
         if ((i & 4) != 0) {
             z2 = true;

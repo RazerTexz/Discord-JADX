@@ -2,7 +2,7 @@ package org.webrtc;
 
 import p617h0.p628c.RunnableC12480p;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public class MediaSource {
     private long nativeSource;
     private final RefCountDelegate refCountDelegate;

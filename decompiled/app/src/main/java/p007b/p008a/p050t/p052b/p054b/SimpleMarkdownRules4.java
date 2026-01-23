@@ -10,9 +10,9 @@ import p007b.p008a.p050t.p052b.p053a.TextNode;
 import p507d0.p592z.p594d.Intrinsics3;
 
 /* JADX INFO: Add missing generic type declarations: [R, S] */
-/* compiled from: SimpleMarkdownRules.kt */
-/* renamed from: b.a.t.b.b.d, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.a.t.b.b.d, reason: use source file name */
+/* JADX INFO: compiled from: SimpleMarkdownRules.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class SimpleMarkdownRules4<R, S> extends Rule.BlockRule<R, Node<R>, S> {
     public SimpleMarkdownRules4(SimpleMarkdownRules5 simpleMarkdownRules5, Pattern pattern) {
         super(pattern);

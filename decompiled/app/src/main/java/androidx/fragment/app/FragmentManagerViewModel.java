@@ -12,7 +12,7 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public final class FragmentManagerViewModel extends ViewModel {
     private static final ViewModelProvider.Factory FACTORY = new C03891();
     private static final String TAG = "FragmentManager";
@@ -24,7 +24,7 @@ public final class FragmentManagerViewModel extends ViewModel {
     private boolean mHasSavedSnapshot = false;
     private boolean mIsStateSaved = false;
 
-    /* renamed from: androidx.fragment.app.FragmentManagerViewModel$1 */
+    /* JADX INFO: renamed from: androidx.fragment.app.FragmentManagerViewModel$1 */
     public class C03891 implements ViewModelProvider.Factory {
         @Override // androidx.lifecycle.ViewModelProvider.Factory
         @NonNull

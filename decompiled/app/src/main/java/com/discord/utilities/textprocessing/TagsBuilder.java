@@ -13,17 +13,17 @@ import p007b.p008a.p050t.p052b.p055c.NodeProcessor;
 import p007b.p085c.p086a.p087a0.AnimatableValueParser;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: TagsBuilder.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: TagsBuilder.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class TagsBuilder implements NodeProcessor {
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private Set<Long> taggedChannelIds;
     private Set<Long> taggedRoleIds;
     private Set<Long> taggedUserIds;
 
-    /* compiled from: TagsBuilder.kt */
+    /* JADX INFO: compiled from: TagsBuilder.kt */
     public static final class Companion {
         private Companion() {
         }

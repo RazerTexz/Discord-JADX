@@ -10,18 +10,18 @@ import p507d0.p513e0.p514p.p515d.p517m0.p567n.TypeConstructor;
 import p507d0.p513e0.p514p.p515d.p517m0.p567n.Variance;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: typeParameterUtils.kt */
-/* renamed from: d0.e0.p.d.m0.c.c, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.c.c, reason: use source file name */
+/* JADX INFO: compiled from: typeParameterUtils.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class typeParameterUtils2 implements TypeParameterDescriptor {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final TypeParameterDescriptor f22682j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final DeclarationDescriptor f22683k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final int f22684l;
 
     public typeParameterUtils2(TypeParameterDescriptor typeParameterDescriptor, DeclarationDescriptor declarationDescriptor, int i) {

@@ -4,19 +4,19 @@ import java.io.Serializable;
 import p007b.p100d.p104b.p105a.outline;
 import p637j0.Observer2;
 
-/* compiled from: NotificationLite.java */
-/* renamed from: j0.l.a.e, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: j0.l.a.e, reason: use source file name */
+/* JADX INFO: compiled from: NotificationLite.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class NotificationLite {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final Object f26768a = new a();
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static final Object f26769b = new b();
 
-    /* compiled from: NotificationLite.java */
-    /* renamed from: j0.l.a.e$a */
+    /* JADX INFO: renamed from: j0.l.a.e$a */
+    /* JADX INFO: compiled from: NotificationLite.java */
     public static class a implements Serializable {
         private static final long serialVersionUID = 1;
 
@@ -25,8 +25,8 @@ public final class NotificationLite {
         }
     }
 
-    /* compiled from: NotificationLite.java */
-    /* renamed from: j0.l.a.e$b */
+    /* JADX INFO: renamed from: j0.l.a.e$b */
+    /* JADX INFO: compiled from: NotificationLite.java */
     public static class b implements Serializable {
         private static final long serialVersionUID = 2;
 
@@ -35,12 +35,12 @@ public final class NotificationLite {
         }
     }
 
-    /* compiled from: NotificationLite.java */
-    /* renamed from: j0.l.a.e$c */
+    /* JADX INFO: renamed from: j0.l.a.e$c */
+    /* JADX INFO: compiled from: NotificationLite.java */
     public static final class c implements Serializable {
         private static final long serialVersionUID = 3;
 
-        /* renamed from: e */
+        /* JADX INFO: renamed from: e */
         public final Throwable f26770e;
 
         public c(Throwable th) {
@@ -54,7 +54,7 @@ public final class NotificationLite {
         }
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static <T> boolean m10744a(Observer2<? super T> observer2, Object obj) {
         if (obj == f26768a) {
             observer2.onCompleted();
@@ -76,7 +76,7 @@ public final class NotificationLite {
     }
 
     /* JADX WARN: Multi-variable type inference failed */
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static <T> T m10745b(Object obj) {
         if (obj == f26769b) {
             return null;
@@ -84,7 +84,7 @@ public final class NotificationLite {
         return obj;
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public static boolean m10746c(Object obj) {
         return obj == f26768a;
     }

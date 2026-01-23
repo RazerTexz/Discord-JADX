@@ -8,8 +8,8 @@ import java.util.Collection;
 import p007b.p008a.p050t.p052b.p054b.SimpleRenderer;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: AstRenderer.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: AstRenderer.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class AstRenderer {
     public static final AstRenderer INSTANCE = new AstRenderer();
 

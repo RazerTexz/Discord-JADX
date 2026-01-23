@@ -29,8 +29,8 @@ import p507d0.p592z.p594d.Lambda;
 import p637j0.p641k.Func1;
 import p658rx.Observable;
 
-/* compiled from: StoreMessagesMostRecent.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: StoreMessagesMostRecent.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class StoreMessagesMostRecent extends StoreV2 {
     private final HashMap<Long, Long> mostRecentIds;
     private final Persister<Map<Long, Long>> mostRecentIdsCache;
@@ -38,8 +38,8 @@ public final class StoreMessagesMostRecent extends StoreV2 {
     private final ObservationDeck observationDeck;
     private final StoreChannels storeChannels;
 
-    /* compiled from: StoreMessagesMostRecent.kt */
-    /* renamed from: com.discord.stores.StoreMessagesMostRecent$observeRecentMessageIds$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreMessagesMostRecent$observeRecentMessageIds$1 */
+    /* JADX INFO: compiled from: StoreMessagesMostRecent.kt */
     public static final class C62701 extends Lambda implements Function0<Map<Long, ? extends Long>> {
         public C62701() {
             super(0);
@@ -51,14 +51,14 @@ public final class StoreMessagesMostRecent extends StoreV2 {
         }
 
         @Override // kotlin.jvm.functions.Function0
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final Map<Long, ? extends Long> invoke2() {
             return StoreMessagesMostRecent.this.getMostRecentIds();
         }
     }
 
-    /* compiled from: StoreMessagesMostRecent.kt */
-    /* renamed from: com.discord.stores.StoreMessagesMostRecent$observeRecentMessageIds$2 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreMessagesMostRecent$observeRecentMessageIds$2 */
+    /* JADX INFO: compiled from: StoreMessagesMostRecent.kt */
     public static final class C62712<T, R> implements Func1<Map<Long, ? extends Long>, Long> {
         public final /* synthetic */ long $channelId;
 
@@ -71,7 +71,7 @@ public final class StoreMessagesMostRecent extends StoreV2 {
             return call2((Map<Long, Long>) map);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final Long call2(Map<Long, Long> map) {
             Long l = map.get(Long.valueOf(this.$channelId));
             return Long.valueOf(l != null ? l.longValue() : 0L);

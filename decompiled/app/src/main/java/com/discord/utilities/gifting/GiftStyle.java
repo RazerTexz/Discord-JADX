@@ -10,8 +10,8 @@ import kotlin.jvm.internal.DefaultConstructorMarker;
 import p507d0.LazyJVM;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: GiftStyle.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: GiftStyle.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public enum GiftStyle {
     WumpusGlobe(1, C5419R.drawable.gift_wumpus_snowglobe, C5419R.raw.anim_gift_wumpus_globe),
     WumpusBox(2, C5419R.drawable.gift_wumpus_box, C5419R.raw.anim_gift_wumpus_box),
@@ -21,11 +21,11 @@ public enum GiftStyle {
     private final int id;
     private final int staticRes;
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private static final Lazy values$delegate = LazyJVM.lazy(GiftStyle2.INSTANCE);
 
-    /* compiled from: GiftStyle.kt */
+    /* JADX INFO: compiled from: GiftStyle.kt */
     public static final class Companion {
         private Companion() {
         }

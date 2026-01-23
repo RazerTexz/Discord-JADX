@@ -4,8 +4,8 @@ import android.os.Build;
 import androidx.annotation.RestrictTo;
 import java.util.Locale;
 
+/* JADX INFO: loaded from: classes3.dex */
 @RestrictTo({RestrictTo.Scope.LIBRARY_GROUP})
-/* loaded from: classes3.dex */
 public class ManufacturerUtils {
     private static final String LGE = "lge";
     private static final String MEIZU = "meizu";

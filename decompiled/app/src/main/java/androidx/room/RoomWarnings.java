@@ -1,6 +1,6 @@
 package androidx.room;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class RoomWarnings {
     public static final String CANNOT_CREATE_VERIFICATION_DATABASE = "ROOM_CANNOT_CREATE_VERIFICATION_DATABASE";
     public static final String CURSOR_MISMATCH = "ROOM_CURSOR_MISMATCH";

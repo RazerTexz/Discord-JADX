@@ -29,9 +29,9 @@ import p507d0.p580t.Iterables2;
 import p507d0.p580t._Collections;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetHubAddServerViewModel.kt */
-/* renamed from: com.discord.widgets.hubs.WidgetHubAddServerViewModel$Companion$observeStores$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.hubs.WidgetHubAddServerViewModel$Companion$observeStores$1, reason: use source file name */
+/* JADX INFO: compiled from: WidgetHubAddServerViewModel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetHubAddServerViewModel3 extends Lambda implements Function0<WidgetHubAddServerViewModel2> {
     public final /* synthetic */ StoreChannelsSelected $channelsSelectedStore;
     public final /* synthetic */ StoreChannels $channelsStore;

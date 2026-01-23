@@ -2,30 +2,30 @@ package p007b.p225i.p408d;
 
 /* JADX WARN: Failed to restore enum class, 'enum' modifier and super class removed */
 /* JADX WARN: Unknown enum class pattern. Please report as an issue! */
-/* compiled from: LongSerializationPolicy.java */
-/* renamed from: b.i.d.n, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.d.n, reason: use source file name */
+/* JADX INFO: compiled from: LongSerializationPolicy.java */
+/* JADX INFO: loaded from: classes3.dex */
 public abstract class LongSerializationPolicy {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static final LongSerializationPolicy f13108j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public static final LongSerializationPolicy f13109k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public static final /* synthetic */ LongSerializationPolicy[] f13110l;
 
-    /* compiled from: LongSerializationPolicy.java */
-    /* renamed from: b.i.d.n$a */
+    /* JADX INFO: renamed from: b.i.d.n$a */
+    /* JADX INFO: compiled from: LongSerializationPolicy.java */
     public enum a extends LongSerializationPolicy {
         public a(String str, int i) {
             super(str, i, null);
         }
     }
 
-    /* compiled from: LongSerializationPolicy.java */
-    /* renamed from: b.i.d.n$b */
+    /* JADX INFO: renamed from: b.i.d.n$b */
+    /* JADX INFO: compiled from: LongSerializationPolicy.java */
     public enum b extends LongSerializationPolicy {
         public b(String str, int i) {
             super(str, i, null);

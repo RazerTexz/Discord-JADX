@@ -44,26 +44,26 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 import p507d0.p592z.p594d.Reflection2;
 
-/* compiled from: WidgetGuildScheduledEventDetailsExtrasBottomSheet.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetGuildScheduledEventDetailsExtrasBottomSheet.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetGuildScheduledEventDetailsExtrasBottomSheet extends AppBottomSheet {
     public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetGuildScheduledEventDetailsExtrasBottomSheet.class, "binding", "getBinding()Lcom/discord/databinding/WidgetGuildScheduledEventDetailsExtrasBottomSheetBinding;", 0)};
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private boolean actionTaken;
 
-    /* renamed from: args$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: args$delegate, reason: from kotlin metadata */
     private final Lazy args;
 
-    /* renamed from: binding$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
     private final ActivityResultLauncher<Intent> previewLauncher;
 
-    /* renamed from: viewModel$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: viewModel$delegate, reason: from kotlin metadata */
     private final Lazy viewModel;
 
-    /* compiled from: WidgetGuildScheduledEventDetailsExtrasBottomSheet.kt */
+    /* JADX INFO: compiled from: WidgetGuildScheduledEventDetailsExtrasBottomSheet.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -81,8 +81,8 @@ public final class WidgetGuildScheduledEventDetailsExtrasBottomSheet extends App
         }
     }
 
-    /* compiled from: WidgetGuildScheduledEventDetailsExtrasBottomSheet.kt */
-    /* renamed from: com.discord.widgets.guildscheduledevent.WidgetGuildScheduledEventDetailsExtrasBottomSheet$configureUi$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.guildscheduledevent.WidgetGuildScheduledEventDetailsExtrasBottomSheet$configureUi$2 */
+    /* JADX INFO: compiled from: WidgetGuildScheduledEventDetailsExtrasBottomSheet.kt */
     public static final class ViewOnClickListenerC88772 implements View.OnClickListener {
         public final /* synthetic */ GuildScheduledEventDetailsViewModel.ViewState $viewState;
 
@@ -99,8 +99,8 @@ public final class WidgetGuildScheduledEventDetailsExtrasBottomSheet extends App
         }
     }
 
-    /* compiled from: WidgetGuildScheduledEventDetailsExtrasBottomSheet.kt */
-    /* renamed from: com.discord.widgets.guildscheduledevent.WidgetGuildScheduledEventDetailsExtrasBottomSheet$configureUi$3 */
+    /* JADX INFO: renamed from: com.discord.widgets.guildscheduledevent.WidgetGuildScheduledEventDetailsExtrasBottomSheet$configureUi$3 */
+    /* JADX INFO: compiled from: WidgetGuildScheduledEventDetailsExtrasBottomSheet.kt */
     public static final class ViewOnClickListenerC88783 implements View.OnClickListener {
         public final /* synthetic */ GuildScheduledEventDetailsViewModel.ViewState $viewState;
 
@@ -118,12 +118,12 @@ public final class WidgetGuildScheduledEventDetailsExtrasBottomSheet extends App
         }
     }
 
-    /* compiled from: WidgetGuildScheduledEventDetailsExtrasBottomSheet.kt */
-    /* renamed from: com.discord.widgets.guildscheduledevent.WidgetGuildScheduledEventDetailsExtrasBottomSheet$configureUi$4 */
+    /* JADX INFO: renamed from: com.discord.widgets.guildscheduledevent.WidgetGuildScheduledEventDetailsExtrasBottomSheet$configureUi$4 */
+    /* JADX INFO: compiled from: WidgetGuildScheduledEventDetailsExtrasBottomSheet.kt */
     public static final class ViewOnClickListenerC88794 implements View.OnClickListener {
 
-        /* compiled from: WidgetGuildScheduledEventDetailsExtrasBottomSheet.kt */
-        /* renamed from: com.discord.widgets.guildscheduledevent.WidgetGuildScheduledEventDetailsExtrasBottomSheet$configureUi$4$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.widgets.guildscheduledevent.WidgetGuildScheduledEventDetailsExtrasBottomSheet$configureUi$4$1, reason: invalid class name */
+        /* JADX INFO: compiled from: WidgetGuildScheduledEventDetailsExtrasBottomSheet.kt */
         public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
             public AnonymousClass1() {
                 super(0);
@@ -135,7 +135,7 @@ public final class WidgetGuildScheduledEventDetailsExtrasBottomSheet extends App
                 return Unit.f27425a;
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2() {
                 WidgetGuildScheduledEventDetailsExtrasBottomSheet.access$dismissWithActionTaken(WidgetGuildScheduledEventDetailsExtrasBottomSheet.this);
             }
@@ -153,17 +153,17 @@ public final class WidgetGuildScheduledEventDetailsExtrasBottomSheet extends App
         }
     }
 
-    /* compiled from: WidgetGuildScheduledEventDetailsExtrasBottomSheet.kt */
-    /* renamed from: com.discord.widgets.guildscheduledevent.WidgetGuildScheduledEventDetailsExtrasBottomSheet$configureUi$5 */
+    /* JADX INFO: renamed from: com.discord.widgets.guildscheduledevent.WidgetGuildScheduledEventDetailsExtrasBottomSheet$configureUi$5 */
+    /* JADX INFO: compiled from: WidgetGuildScheduledEventDetailsExtrasBottomSheet.kt */
     public static final class ViewOnClickListenerC88805 implements View.OnClickListener {
         public final /* synthetic */ GuildScheduledEventDetailsViewModel.ViewState $viewState;
 
-        /* compiled from: WidgetGuildScheduledEventDetailsExtrasBottomSheet.kt */
-        /* renamed from: com.discord.widgets.guildscheduledevent.WidgetGuildScheduledEventDetailsExtrasBottomSheet$configureUi$5$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.widgets.guildscheduledevent.WidgetGuildScheduledEventDetailsExtrasBottomSheet$configureUi$5$1, reason: invalid class name */
+        /* JADX INFO: compiled from: WidgetGuildScheduledEventDetailsExtrasBottomSheet.kt */
         public static final class AnonymousClass1 extends Lambda implements Function1<View, Unit> {
 
-            /* compiled from: WidgetGuildScheduledEventDetailsExtrasBottomSheet.kt */
-            /* renamed from: com.discord.widgets.guildscheduledevent.WidgetGuildScheduledEventDetailsExtrasBottomSheet$configureUi$5$1$1, reason: invalid class name and collision with other inner class name */
+            /* JADX INFO: renamed from: com.discord.widgets.guildscheduledevent.WidgetGuildScheduledEventDetailsExtrasBottomSheet$configureUi$5$1$1, reason: invalid class name and collision with other inner class name */
+            /* JADX INFO: compiled from: WidgetGuildScheduledEventDetailsExtrasBottomSheet.kt */
             public static final class C132861 extends Lambda implements Function0<Unit> {
                 public C132861() {
                     super(0);
@@ -175,7 +175,7 @@ public final class WidgetGuildScheduledEventDetailsExtrasBottomSheet extends App
                     return Unit.f27425a;
                 }
 
-                /* renamed from: invoke, reason: avoid collision after fix types in other method */
+                /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
                 public final void invoke2() {
                     WidgetGuildScheduledEventDetailsExtrasBottomSheet.this.dismiss();
                 }
@@ -191,7 +191,7 @@ public final class WidgetGuildScheduledEventDetailsExtrasBottomSheet extends App
                 return Unit.f27425a;
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2(View view) {
                 Intrinsics3.checkNotNullParameter(view, "it");
                 GuildScheduledEventDetailsViewModel guildScheduledEventDetailsViewModelAccess$getViewModel$p = WidgetGuildScheduledEventDetailsExtrasBottomSheet.access$getViewModel$p(WidgetGuildScheduledEventDetailsExtrasBottomSheet.this);
@@ -217,8 +217,8 @@ public final class WidgetGuildScheduledEventDetailsExtrasBottomSheet extends App
         }
     }
 
-    /* compiled from: WidgetGuildScheduledEventDetailsExtrasBottomSheet.kt */
-    /* renamed from: com.discord.widgets.guildscheduledevent.WidgetGuildScheduledEventDetailsExtrasBottomSheet$configureUi$6 */
+    /* JADX INFO: renamed from: com.discord.widgets.guildscheduledevent.WidgetGuildScheduledEventDetailsExtrasBottomSheet$configureUi$6 */
+    /* JADX INFO: compiled from: WidgetGuildScheduledEventDetailsExtrasBottomSheet.kt */
     public static final class ViewOnClickListenerC88816 implements View.OnClickListener {
         public final /* synthetic */ GuildScheduledEventDetailsViewModel.ViewState $viewState;
 
@@ -236,8 +236,8 @@ public final class WidgetGuildScheduledEventDetailsExtrasBottomSheet extends App
         }
     }
 
-    /* compiled from: WidgetGuildScheduledEventDetailsExtrasBottomSheet.kt */
-    /* renamed from: com.discord.widgets.guildscheduledevent.WidgetGuildScheduledEventDetailsExtrasBottomSheet$configureUi$7 */
+    /* JADX INFO: renamed from: com.discord.widgets.guildscheduledevent.WidgetGuildScheduledEventDetailsExtrasBottomSheet$configureUi$7 */
+    /* JADX INFO: compiled from: WidgetGuildScheduledEventDetailsExtrasBottomSheet.kt */
     public static final class ViewOnClickListenerC88827 implements View.OnClickListener {
         public final /* synthetic */ GuildScheduledEventDetailsViewModel.ViewState $viewState;
 
@@ -254,8 +254,8 @@ public final class WidgetGuildScheduledEventDetailsExtrasBottomSheet extends App
         }
     }
 
-    /* compiled from: WidgetGuildScheduledEventDetailsExtrasBottomSheet.kt */
-    /* renamed from: com.discord.widgets.guildscheduledevent.WidgetGuildScheduledEventDetailsExtrasBottomSheet$onResume$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.guildscheduledevent.WidgetGuildScheduledEventDetailsExtrasBottomSheet$onResume$1 */
+    /* JADX INFO: compiled from: WidgetGuildScheduledEventDetailsExtrasBottomSheet.kt */
     public static final /* synthetic */ class C88831 extends FunctionReferenceImpl implements Function1<GuildScheduledEventDetailsViewModel.ViewState, Unit> {
         public C88831(WidgetGuildScheduledEventDetailsExtrasBottomSheet widgetGuildScheduledEventDetailsExtrasBottomSheet) {
             super(1, widgetGuildScheduledEventDetailsExtrasBottomSheet, WidgetGuildScheduledEventDetailsExtrasBottomSheet.class, "configureUi", "configureUi(Lcom/discord/widgets/guildscheduledevent/GuildScheduledEventDetailsViewModel$ViewState;)V", 0);
@@ -267,7 +267,7 @@ public final class WidgetGuildScheduledEventDetailsExtrasBottomSheet extends App
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(GuildScheduledEventDetailsViewModel.ViewState viewState) {
             Intrinsics3.checkNotNullParameter(viewState, "p1");
             WidgetGuildScheduledEventDetailsExtrasBottomSheet.access$configureUi((WidgetGuildScheduledEventDetailsExtrasBottomSheet) this.receiver, viewState);

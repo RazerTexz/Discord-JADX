@@ -6,8 +6,8 @@ import kotlin.NoWhenBranchMatchedException;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: StickerPartial.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: StickerPartial.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class StickerPartial implements Serializable, BaseSticker {
     private final StickerFormatType formatType;
     private final long id;
@@ -36,13 +36,13 @@ public final /* data */ class StickerPartial implements Serializable, BaseSticke
     }
 
     @Override // com.discord.api.sticker.BaseSticker
-    /* renamed from: a, reason: from getter */
+    /* JADX INFO: renamed from: a, reason: from getter */
     public StickerFormatType getFormatType() {
         return this.formatType;
     }
 
     @Override // com.discord.api.sticker.BaseSticker
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public String mo8228b() {
         int iOrdinal = this.formatType.ordinal();
         if (iOrdinal == 0) {
@@ -58,18 +58,18 @@ public final /* data */ class StickerPartial implements Serializable, BaseSticke
     }
 
     @Override // com.discord.api.sticker.BaseSticker
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public StickerPartial mo8229c() {
         return this;
     }
 
     @Override // com.discord.api.sticker.BaseSticker
-    /* renamed from: d, reason: from getter */
+    /* JADX INFO: renamed from: d, reason: from getter */
     public long getId() {
         return this.id;
     }
 
-    /* renamed from: e, reason: from getter */
+    /* JADX INFO: renamed from: e, reason: from getter */
     public final String getName() {
         return this.name;
     }

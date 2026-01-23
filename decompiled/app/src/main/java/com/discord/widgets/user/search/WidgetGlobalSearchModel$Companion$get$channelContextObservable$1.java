@@ -10,8 +10,8 @@ import kotlin.jvm.functions.Function8;
 import p507d0.p592z.p594d.FunctionReferenceImpl;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: WidgetGlobalSearchModel.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: WidgetGlobalSearchModel.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* synthetic */ class WidgetGlobalSearchModel$Companion$get$channelContextObservable$1 extends FunctionReferenceImpl implements Function8<Map<Long, ? extends Guild>, Map<Long, ? extends Channel>, Map<Long, ? extends Channel>, Map<Long, ? extends Long>, Map<Long, ? extends Channel>, Map<Long, ? extends List<? extends Long>>, Set<? extends Long>, Set<? extends Long>, WidgetGlobalSearchModel.ChannelContext> {
     public static final WidgetGlobalSearchModel$Companion$get$channelContextObservable$1 INSTANCE = new WidgetGlobalSearchModel$Companion$get$channelContextObservable$1();
 
@@ -24,7 +24,7 @@ public final /* synthetic */ class WidgetGlobalSearchModel$Companion$get$channel
         return invoke2((Map<Long, Guild>) map, (Map<Long, Channel>) map2, (Map<Long, Channel>) map3, (Map<Long, Long>) map4, (Map<Long, Channel>) map5, (Map<Long, ? extends List<Long>>) map6, (Set<Long>) set, (Set<Long>) set2);
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final WidgetGlobalSearchModel.ChannelContext invoke2(Map<Long, Guild> map, Map<Long, Channel> map2, Map<Long, Channel> map3, Map<Long, Long> map4, Map<Long, Channel> map5, Map<Long, ? extends List<Long>> map6, Set<Long> set, Set<Long> set2) {
         Intrinsics3.checkNotNullParameter(map, "p1");
         Intrinsics3.checkNotNullParameter(map2, "p2");

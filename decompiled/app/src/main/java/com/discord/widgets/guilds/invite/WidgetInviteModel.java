@@ -18,11 +18,11 @@ import p007b.p100d.p104b.p105a.outline;
 import p507d0.p580t.Collections2;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: WidgetInviteModel.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetInviteModel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final /* data */ class WidgetInviteModel {
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private final List<Channel> dms;
     private final List<Channel> invitableChannels;
@@ -34,7 +34,7 @@ public final /* data */ class WidgetInviteModel {
     private final ModelInvite.Settings settings;
     private final Channel targetChannel;
 
-    /* compiled from: WidgetInviteModel.kt */
+    /* JADX INFO: compiled from: WidgetInviteModel.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -105,31 +105,32 @@ public final /* data */ class WidgetInviteModel {
         this.isInviteFromStore = z4;
     }
 
+    /* JADX WARN: Multi-variable type inference failed */
     public static /* synthetic */ WidgetInviteModel copy$default(WidgetInviteModel widgetInviteModel, Channel channel, ModelInvite.Settings settings, ModelInvite modelInvite, boolean z2, boolean z3, List list, MeUser meUser, List list2, boolean z4, int i, Object obj) {
         return widgetInviteModel.copy((i & 1) != 0 ? widgetInviteModel.targetChannel : channel, (i & 2) != 0 ? widgetInviteModel.settings : settings, (i & 4) != 0 ? widgetInviteModel.invite : modelInvite, (i & 8) != 0 ? widgetInviteModel.isGeneratingInvite : z2, (i & 16) != 0 ? widgetInviteModel.isValidInvite : z3, (i & 32) != 0 ? widgetInviteModel.invitableChannels : list, (i & 64) != 0 ? widgetInviteModel.me : meUser, (i & 128) != 0 ? widgetInviteModel.dms : list2, (i & 256) != 0 ? widgetInviteModel.isInviteFromStore : z4);
     }
 
-    /* renamed from: component1, reason: from getter */
+    /* JADX INFO: renamed from: component1, reason: from getter */
     public final Channel getTargetChannel() {
         return this.targetChannel;
     }
 
-    /* renamed from: component2, reason: from getter */
+    /* JADX INFO: renamed from: component2, reason: from getter */
     public final ModelInvite.Settings getSettings() {
         return this.settings;
     }
 
-    /* renamed from: component3, reason: from getter */
+    /* JADX INFO: renamed from: component3, reason: from getter */
     public final ModelInvite getInvite() {
         return this.invite;
     }
 
-    /* renamed from: component4, reason: from getter */
+    /* JADX INFO: renamed from: component4, reason: from getter */
     public final boolean getIsGeneratingInvite() {
         return this.isGeneratingInvite;
     }
 
-    /* renamed from: component5, reason: from getter */
+    /* JADX INFO: renamed from: component5, reason: from getter */
     public final boolean getIsValidInvite() {
         return this.isValidInvite;
     }
@@ -138,7 +139,7 @@ public final /* data */ class WidgetInviteModel {
         return this.invitableChannels;
     }
 
-    /* renamed from: component7, reason: from getter */
+    /* JADX INFO: renamed from: component7, reason: from getter */
     public final MeUser getMe() {
         return this.me;
     }
@@ -147,7 +148,7 @@ public final /* data */ class WidgetInviteModel {
         return this.dms;
     }
 
-    /* renamed from: component9, reason: from getter */
+    /* JADX INFO: renamed from: component9, reason: from getter */
     public final boolean getIsInviteFromStore() {
         return this.isInviteFromStore;
     }
@@ -195,6 +196,15 @@ public final /* data */ class WidgetInviteModel {
     }
 
     /* JADX WARN: Multi-variable type inference failed */
+    /* JADX WARN: Type inference failed for: r2v19 */
+    /* JADX WARN: Type inference failed for: r2v20 */
+    /* JADX WARN: Type inference failed for: r2v23 */
+    /* JADX WARN: Type inference failed for: r2v24 */
+    /* JADX WARN: Type inference failed for: r2v7, types: [int] */
+    /* JADX WARN: Type inference failed for: r2v9, types: [int] */
+    /* JADX WARN: Type inference failed for: r3v0 */
+    /* JADX WARN: Type inference failed for: r3v1, types: [int] */
+    /* JADX WARN: Type inference failed for: r3v2 */
     public int hashCode() {
         Channel channel = this.targetChannel;
         int iHashCode = (channel != null ? channel.hashCode() : 0) * 31;
@@ -203,25 +213,25 @@ public final /* data */ class WidgetInviteModel {
         ModelInvite modelInvite = this.invite;
         int iHashCode3 = (iHashCode2 + (modelInvite != null ? modelInvite.hashCode() : 0)) * 31;
         boolean z2 = this.isGeneratingInvite;
-        int i = z2;
-        if (z2 != 0) {
-            i = 1;
+        ?? r2 = z2;
+        if (z2) {
+            r2 = 1;
         }
-        int i2 = (iHashCode3 + i) * 31;
+        int i = (iHashCode3 + r2) * 31;
         boolean z3 = this.isValidInvite;
-        int i3 = z3;
-        if (z3 != 0) {
-            i3 = 1;
+        ?? r22 = z3;
+        if (z3) {
+            r22 = 1;
         }
-        int i4 = (i2 + i3) * 31;
+        int i2 = (i + r22) * 31;
         List<Channel> list = this.invitableChannels;
-        int iHashCode4 = (i4 + (list != null ? list.hashCode() : 0)) * 31;
+        int iHashCode4 = (i2 + (list != null ? list.hashCode() : 0)) * 31;
         MeUser meUser = this.me;
         int iHashCode5 = (iHashCode4 + (meUser != null ? meUser.hashCode() : 0)) * 31;
         List<Channel> list2 = this.dms;
         int iHashCode6 = (iHashCode5 + (list2 != null ? list2.hashCode() : 0)) * 31;
         boolean z4 = this.isInviteFromStore;
-        return iHashCode6 + (z4 ? 1 : z4 ? 1 : 0);
+        return iHashCode6 + (z4 ? 1 : z4);
     }
 
     public final boolean isGeneratingInvite() {

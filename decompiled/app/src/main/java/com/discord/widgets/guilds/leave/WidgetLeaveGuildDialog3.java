@@ -3,9 +3,9 @@ package com.discord.widgets.guilds.leave;
 import kotlin.jvm.functions.Function0;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetLeaveGuildDialog.kt */
-/* renamed from: com.discord.widgets.guilds.leave.WidgetLeaveGuildDialog$viewModel$2, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.guilds.leave.WidgetLeaveGuildDialog$viewModel$2, reason: use source file name */
+/* JADX INFO: compiled from: WidgetLeaveGuildDialog.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetLeaveGuildDialog3 extends Lambda implements Function0<LeaveGuildDialogViewModel> {
     public final /* synthetic */ WidgetLeaveGuildDialog this$0;
 

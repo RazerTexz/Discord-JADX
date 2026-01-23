@@ -2,9 +2,9 @@ package androidx.core.database;
 
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: Cursor.kt */
-/* renamed from: androidx.core.database.CursorKt, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: androidx.core.database.CursorKt, reason: use source file name */
+/* JADX INFO: compiled from: Cursor.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class Cursor {
     public static final byte[] getBlobOrNull(android.database.Cursor cursor, int i) {
         Intrinsics3.checkNotNullParameter(cursor, "<this>");

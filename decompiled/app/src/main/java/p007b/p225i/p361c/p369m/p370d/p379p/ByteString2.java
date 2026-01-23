@@ -3,22 +3,22 @@ package p007b.p225i.p361c.p369m.p370d.p379p;
 import com.adjust.sdk.Constants;
 import java.io.UnsupportedEncodingException;
 
-/* compiled from: ByteString.java */
-/* renamed from: b.i.c.m.d.p.a, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.c.m.d.p.a, reason: use source file name */
+/* JADX INFO: compiled from: ByteString.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class ByteString2 {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final byte[] f12684a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public volatile int f12685b = 0;
 
     public ByteString2(byte[] bArr) {
         this.f12684a = bArr;
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static ByteString2 m6637a(String str) {
         try {
             return new ByteString2(str.getBytes(Constants.ENCODING));

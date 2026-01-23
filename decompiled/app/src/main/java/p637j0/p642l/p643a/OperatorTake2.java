@@ -4,12 +4,12 @@ import p007b.p100d.p104b.p105a.outline;
 import p658rx.Observable;
 import p658rx.Subscriber;
 
-/* compiled from: OperatorTake.java */
-/* renamed from: j0.l.a.c2, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: j0.l.a.c2, reason: use source file name */
+/* JADX INFO: compiled from: OperatorTake.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class OperatorTake2<T> implements Observable.InterfaceC13006b<T, T> {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final int f26758j;
 
     public OperatorTake2(int i) {

@@ -3,16 +3,16 @@ package p507d0.p513e0.p514p.p515d.p517m0.p550i;
 import java.util.Iterator;
 import java.util.Map;
 
-/* compiled from: LazyField.java */
-/* renamed from: d0.e0.p.d.m0.i.i, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.i.i, reason: use source file name */
+/* JADX INFO: compiled from: LazyField.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class LazyField extends LazyFieldLite {
 
-    /* compiled from: LazyField.java */
-    /* renamed from: d0.e0.p.d.m0.i.i$b */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.i.i$b */
+    /* JADX INFO: compiled from: LazyField.java */
     public static class b<K> implements Map.Entry<K, Object> {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public Map.Entry<K, LazyField> f24143j;
 
         public b(Map.Entry entry, a aVar) {
@@ -42,11 +42,11 @@ public class LazyField extends LazyFieldLite {
         }
     }
 
-    /* compiled from: LazyField.java */
-    /* renamed from: d0.e0.p.d.m0.i.i$c */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.i.i$c */
+    /* JADX INFO: compiled from: LazyField.java */
     public static class c<K> implements Iterator<Map.Entry<K, Object>> {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public Iterator<Map.Entry<K, Object>> f24144j;
 
         public c(Iterator<Map.Entry<K, Object>> it) {

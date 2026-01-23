@@ -46,31 +46,31 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 import p507d0.p592z.p594d.Reflection2;
 
-/* compiled from: WidgetCaptchaBottomSheet.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetCaptchaBottomSheet.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetCaptchaBottomSheet extends AppBottomSheet {
     private static final String ARG_REQUEST_KEY = "INTENT_EXTRA_REQUEST_CODE";
     private static final String NOTICE_NAME = "captcha notice";
     private static final String RESULT_EXTRA_CAPTCHA_RQTOKEN = "INTENT_EXTRA_CAPTCHA_RQTOKEN";
     private static final String RESULT_EXTRA_CAPTCHA_TOKEN = "INTENT_EXTRA_CAPTCHA_TOKEN";
 
-    /* renamed from: binding$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
 
-    /* renamed from: captchaErrorBody$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: captchaErrorBody$delegate, reason: from kotlin metadata */
     private final Lazy captchaErrorBody;
     private boolean captchaPassed;
     private Function0<Unit> onCaptchaAttemptFailed;
 
-    /* renamed from: requestCode$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: requestCode$delegate, reason: from kotlin metadata */
     private final Lazy requestCode;
     public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetCaptchaBottomSheet.class, "binding", "getBinding()Lcom/discord/databinding/WidgetCaptchaBottomSheetBinding;", 0)};
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private static final List<KClass<? extends AppFragment>> resolvableFragments = Collections2.listOf((Object[]) new KClass[]{Reflection2.getOrCreateKotlinClass(WidgetTabsHost.class), Reflection2.getOrCreateKotlinClass(WidgetIncomingShare.class)});
 
-    /* compiled from: WidgetCaptchaBottomSheet.kt */
+    /* JADX INFO: compiled from: WidgetCaptchaBottomSheet.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -121,8 +121,8 @@ public final class WidgetCaptchaBottomSheet extends AppBottomSheet {
         }
     }
 
-    /* compiled from: WidgetCaptchaBottomSheet.kt */
-    /* renamed from: com.discord.widgets.captcha.WidgetCaptchaBottomSheet$configureUI$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.captcha.WidgetCaptchaBottomSheet$configureUI$1 */
+    /* JADX INFO: compiled from: WidgetCaptchaBottomSheet.kt */
     public static final class ViewOnClickListenerC73021 implements View.OnClickListener {
         public ViewOnClickListenerC73021() {
         }
@@ -133,8 +133,8 @@ public final class WidgetCaptchaBottomSheet extends AppBottomSheet {
         }
     }
 
-    /* compiled from: WidgetCaptchaBottomSheet.kt */
-    /* renamed from: com.discord.widgets.captcha.WidgetCaptchaBottomSheet$openCaptcha$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.captcha.WidgetCaptchaBottomSheet$openCaptcha$1 */
+    /* JADX INFO: compiled from: WidgetCaptchaBottomSheet.kt */
     public static final class C73031 extends Lambda implements Function1<String, Unit> {
         public C73031() {
             super(1);
@@ -146,7 +146,7 @@ public final class WidgetCaptchaBottomSheet extends AppBottomSheet {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(String str) {
             CaptchaHelper.INSTANCE.setCaptchaToken(str);
             WidgetCaptchaBottomSheet.access$setCaptchaPassed$p(WidgetCaptchaBottomSheet.this, true);
@@ -157,8 +157,8 @@ public final class WidgetCaptchaBottomSheet extends AppBottomSheet {
         }
     }
 
-    /* compiled from: WidgetCaptchaBottomSheet.kt */
-    /* renamed from: com.discord.widgets.captcha.WidgetCaptchaBottomSheet$openCaptcha$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.captcha.WidgetCaptchaBottomSheet$openCaptcha$2 */
+    /* JADX INFO: compiled from: WidgetCaptchaBottomSheet.kt */
     public static final class C73042 extends Lambda implements Function1<Error, Unit> {
         public C73042() {
             super(1);
@@ -170,7 +170,7 @@ public final class WidgetCaptchaBottomSheet extends AppBottomSheet {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Error error) {
             Intrinsics3.checkNotNullParameter(error, "it");
             Throwable throwable = error.getThrowable();

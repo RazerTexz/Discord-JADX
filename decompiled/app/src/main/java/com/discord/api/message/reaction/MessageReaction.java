@@ -3,8 +3,8 @@ package com.discord.api.message.reaction;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: MessageReaction.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: MessageReaction.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class MessageReaction {
     private final int count;
     private final MessageReactionEmoji emoji;
@@ -17,17 +17,17 @@ public final /* data */ class MessageReaction {
         this.me = z2;
     }
 
-    /* renamed from: a, reason: from getter */
+    /* JADX INFO: renamed from: a, reason: from getter */
     public final int getCount() {
         return this.count;
     }
 
-    /* renamed from: b, reason: from getter */
+    /* JADX INFO: renamed from: b, reason: from getter */
     public final MessageReactionEmoji getEmoji() {
         return this.emoji;
     }
 
-    /* renamed from: c, reason: from getter */
+    /* JADX INFO: renamed from: c, reason: from getter */
     public final boolean getMe() {
         return this.me;
     }
@@ -44,16 +44,19 @@ public final /* data */ class MessageReaction {
     }
 
     /* JADX WARN: Multi-variable type inference failed */
+    /* JADX WARN: Type inference failed for: r1v4, types: [int] */
+    /* JADX WARN: Type inference failed for: r1v5 */
+    /* JADX WARN: Type inference failed for: r1v7 */
     public int hashCode() {
         int i = this.count * 31;
         MessageReactionEmoji messageReactionEmoji = this.emoji;
         int iHashCode = (i + (messageReactionEmoji != null ? messageReactionEmoji.hashCode() : 0)) * 31;
         boolean z2 = this.me;
-        int i2 = z2;
-        if (z2 != 0) {
-            i2 = 1;
+        ?? r1 = z2;
+        if (z2) {
+            r1 = 1;
         }
-        return iHashCode + i2;
+        return iHashCode + r1;
     }
 
     public String toString() {

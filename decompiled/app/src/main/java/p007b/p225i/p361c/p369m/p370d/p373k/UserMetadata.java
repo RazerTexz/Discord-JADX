@@ -6,18 +6,18 @@ import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 import p007b.p225i.p361c.p369m.p370d.Logger3;
 
-/* compiled from: UserMetadata.java */
-/* renamed from: b.i.c.m.d.k.f1, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.c.m.d.k.f1, reason: use source file name */
+/* JADX INFO: compiled from: UserMetadata.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class UserMetadata {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public String f12290a = null;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final ConcurrentHashMap<String, String> f12291b = new ConcurrentHashMap<>();
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static String m6403b(String str) {
         if (str == null) {
             return str;
@@ -27,12 +27,12 @@ public class UserMetadata {
     }
 
     @NonNull
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public Map<String, String> m6404a() {
         return Collections.unmodifiableMap(this.f12291b);
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public void m6405c(String str, String str2) {
         if (str == null) {
             throw new IllegalArgumentException("Custom attribute key must not be null.");

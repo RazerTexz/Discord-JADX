@@ -15,24 +15,24 @@ import p007b.p085c.p086a.p095y.C1563b;
 import p007b.p085c.p086a.p095y.p097l.ShapeStroke;
 import p007b.p085c.p086a.p095y.p098m.BaseLayer2;
 
-/* compiled from: StrokeContent.java */
-/* renamed from: b.c.a.w.b.r, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.c.a.w.b.r, reason: use source file name */
+/* JADX INFO: compiled from: StrokeContent.java */
+/* JADX INFO: loaded from: classes.dex */
 public class StrokeContent extends BaseStrokeContent {
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public final BaseLayer2 f2585o;
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public final String f2586p;
 
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     public final boolean f2587q;
 
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     public final BaseKeyframeAnimation<Integer, Integer> f2588r;
 
-    /* renamed from: s */
+    /* JADX INFO: renamed from: s */
     @Nullable
     public BaseKeyframeAnimation<ColorFilter, ColorFilter> f2589s;
 
@@ -48,7 +48,7 @@ public class StrokeContent extends BaseStrokeContent {
     }
 
     @Override // p007b.p085c.p086a.p091w.p092b.BaseStrokeContent, p007b.p085c.p086a.p091w.p092b.DrawingContent
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public void mo713f(Canvas canvas, Matrix matrix, int i) {
         if (this.f2587q) {
             return;
@@ -65,7 +65,7 @@ public class StrokeContent extends BaseStrokeContent {
 
     /* JADX WARN: Multi-variable type inference failed */
     @Override // p007b.p085c.p086a.p091w.p092b.BaseStrokeContent, p007b.p085c.p086a.p095y.KeyPathElement
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public <T> void mo714g(T t, @Nullable LottieValueCallback<T> lottieValueCallback) {
         super.mo714g(t, lottieValueCallback);
         if (t == LottieProperty.f2424b) {

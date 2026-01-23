@@ -3,8 +3,8 @@ package com.discord.models.domain;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ModelTypingResponse.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: ModelTypingResponse.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class ModelTypingResponse {
     private final Long messageSendCooldownMs;
     private final Long threadCreateCooldownMs;
@@ -24,12 +24,12 @@ public final /* data */ class ModelTypingResponse {
         return modelTypingResponse.copy(l, l2);
     }
 
-    /* renamed from: component1, reason: from getter */
+    /* JADX INFO: renamed from: component1, reason: from getter */
     public final Long getMessageSendCooldownMs() {
         return this.messageSendCooldownMs;
     }
 
-    /* renamed from: component2, reason: from getter */
+    /* JADX INFO: renamed from: component2, reason: from getter */
     public final Long getThreadCreateCooldownMs() {
         return this.threadCreateCooldownMs;
     }

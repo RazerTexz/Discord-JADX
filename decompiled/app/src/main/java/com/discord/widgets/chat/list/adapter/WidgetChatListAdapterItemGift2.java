@@ -9,9 +9,9 @@ import p637j0.p641k.Func1;
 import p637j0.p642l.p647e.ScalarSynchronousObservable;
 import p658rx.Observable;
 
-/* compiled from: WidgetChatListAdapterItemGift.kt */
-/* renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemGift$ModelProvider$get$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemGift$ModelProvider$get$1, reason: use source file name */
+/* JADX INFO: compiled from: WidgetChatListAdapterItemGift.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetChatListAdapterItemGift2<T, R> implements Func1<StoreGifting.GiftState, Observable<? extends WidgetChatListAdapterItemGift.Model>> {
     public final /* synthetic */ GiftEntry $item;
 
@@ -24,7 +24,7 @@ public final class WidgetChatListAdapterItemGift2<T, R> implements Func1<StoreGi
         return call2(giftState);
     }
 
-    /* renamed from: call, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
     public final Observable<? extends WidgetChatListAdapterItemGift.Model> call2(StoreGifting.GiftState giftState) {
         if ((giftState instanceof StoreGifting.GiftState.Loading) || (giftState instanceof StoreGifting.GiftState.LoadFailed)) {
             return new ScalarSynchronousObservable(WidgetChatListAdapterItemGift.Model.Loading.INSTANCE);

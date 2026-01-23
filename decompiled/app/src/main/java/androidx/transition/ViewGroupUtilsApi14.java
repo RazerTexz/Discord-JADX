@@ -8,7 +8,7 @@ import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class ViewGroupUtilsApi14 {
     private static final int LAYOUT_TRANSITION_CHANGING = 4;
     private static final String TAG = "ViewGroupUtilsApi14";
@@ -18,7 +18,7 @@ public class ViewGroupUtilsApi14 {
     private static Field sLayoutSuppressedField;
     private static boolean sLayoutSuppressedFieldFetched;
 
-    /* renamed from: androidx.transition.ViewGroupUtilsApi14$1 */
+    /* JADX INFO: renamed from: androidx.transition.ViewGroupUtilsApi14$1 */
     public static class C06701 extends LayoutTransition {
         @Override // android.animation.LayoutTransition
         public boolean isChangingLayout() {
@@ -29,7 +29,7 @@ public class ViewGroupUtilsApi14 {
     private ViewGroupUtilsApi14() {
     }
 
-    private static void cancelLayoutTransition(LayoutTransition layoutTransition) throws SecurityException, IllegalArgumentException {
+    private static void cancelLayoutTransition(LayoutTransition layoutTransition) {
         if (!sCancelMethodFetched) {
             try {
                 Method declaredMethod = LayoutTransition.class.getDeclaredMethod("cancel", new Class[0]);
@@ -52,14 +52,7 @@ public class ViewGroupUtilsApi14 {
         }
     }
 
-    /* JADX WARN: Removed duplicated region for block: B:31:0x0081  */
-    /* JADX WARN: Removed duplicated region for block: B:34:0x008e  */
-    /* JADX WARN: Removed duplicated region for block: B:44:? A[RETURN, SYNTHETIC] */
-    /*
-        Code decompiled incorrectly, please refer to instructions dump.
-    */
-    public static void suppressLayout(@NonNull ViewGroup viewGroup, boolean z2) throws SecurityException, IllegalArgumentException {
-        LayoutTransition layoutTransition;
+    public static void suppressLayout(@NonNull ViewGroup viewGroup, boolean z2) {
         boolean z3 = false;
         if (sEmptyLayoutTransition == null) {
             C06701 c06701 = new C06701();
@@ -71,13 +64,13 @@ public class ViewGroupUtilsApi14 {
             sEmptyLayoutTransition.setAnimator(4, null);
         }
         if (z2) {
-            LayoutTransition layoutTransition2 = viewGroup.getLayoutTransition();
-            if (layoutTransition2 != null) {
-                if (layoutTransition2.isRunning()) {
-                    cancelLayoutTransition(layoutTransition2);
+            LayoutTransition layoutTransition = viewGroup.getLayoutTransition();
+            if (layoutTransition != null) {
+                if (layoutTransition.isRunning()) {
+                    cancelLayoutTransition(layoutTransition);
                 }
-                if (layoutTransition2 != sEmptyLayoutTransition) {
-                    viewGroup.setTag(C0658R.id.transition_layout_save, layoutTransition2);
+                if (layoutTransition != sEmptyLayoutTransition) {
+                    viewGroup.setTag(C0658R.id.transition_layout_save, layoutTransition);
                 }
             }
             viewGroup.setLayoutTransition(sEmptyLayoutTransition);
@@ -104,12 +97,6 @@ public class ViewGroupUtilsApi14 {
                     } catch (IllegalAccessException unused2) {
                         z3 = z4;
                         Log.i(TAG, "Failed to get mLayoutSuppressed field by reflection");
-                        if (z3) {
-                        }
-                        int i = C0658R.id.transition_layout_save;
-                        layoutTransition = (LayoutTransition) viewGroup.getTag(i);
-                        if (layoutTransition == null) {
-                        }
                     }
                 }
                 z3 = z4;
@@ -119,11 +106,11 @@ public class ViewGroupUtilsApi14 {
         if (z3) {
             viewGroup.requestLayout();
         }
-        int i2 = C0658R.id.transition_layout_save;
-        layoutTransition = (LayoutTransition) viewGroup.getTag(i2);
-        if (layoutTransition == null) {
-            viewGroup.setTag(i2, null);
-            viewGroup.setLayoutTransition(layoutTransition);
+        int i = C0658R.id.transition_layout_save;
+        LayoutTransition layoutTransition2 = (LayoutTransition) viewGroup.getTag(i);
+        if (layoutTransition2 != null) {
+            viewGroup.setTag(i, null);
+            viewGroup.setLayoutTransition(layoutTransition2);
         }
     }
 }

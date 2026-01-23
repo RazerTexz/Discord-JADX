@@ -5,9 +5,9 @@ import com.discord.widgets.servers.auditlog.WidgetServerSettingsAuditLogFilterAd
 import java.util.Comparator;
 import p507d0.p582u.C12169a;
 
-/* compiled from: Comparisons.kt */
-/* renamed from: com.discord.widgets.servers.auditlog.WidgetServerSettingsAuditLogFilter$Model$Companion$get$2$$special$$inlined$sortedBy$2 */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.servers.auditlog.WidgetServerSettingsAuditLogFilter$Model$Companion$get$2$$special$$inlined$sortedBy$2 */
+/* JADX INFO: compiled from: Comparisons.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class C9332xfe5b3dfc<T> implements Comparator {
     /* JADX WARN: Multi-variable type inference failed */
     @Override // java.util.Comparator

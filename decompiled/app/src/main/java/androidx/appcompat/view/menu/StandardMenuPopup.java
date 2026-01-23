@@ -20,7 +20,7 @@ import androidx.appcompat.view.menu.MenuPresenter;
 import androidx.appcompat.widget.MenuPopupWindow;
 import androidx.core.view.ViewCompat;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public final class StandardMenuPopup extends MenuPopup implements PopupWindow.OnDismissListener, AdapterView.OnItemClickListener, MenuPresenter, View.OnKeyListener {
     private static final int ITEM_LAYOUT = C0051R.layout.abc_popup_menu_item_layout;
     private final MenuAdapter mAdapter;
@@ -44,13 +44,13 @@ public final class StandardMenuPopup extends MenuPopup implements PopupWindow.On
     private final View.OnAttachStateChangeListener mAttachStateChangeListener = new ViewOnAttachStateChangeListenerC00882();
     private int mDropDownGravity = 0;
 
-    /* renamed from: androidx.appcompat.view.menu.StandardMenuPopup$1 */
+    /* JADX INFO: renamed from: androidx.appcompat.view.menu.StandardMenuPopup$1 */
     public class ViewTreeObserverOnGlobalLayoutListenerC00871 implements ViewTreeObserver.OnGlobalLayoutListener {
         public ViewTreeObserverOnGlobalLayoutListenerC00871() {
         }
 
         @Override // android.view.ViewTreeObserver.OnGlobalLayoutListener
-        public void onGlobalLayout() throws IllegalArgumentException {
+        public void onGlobalLayout() {
             if (!StandardMenuPopup.this.isShowing() || StandardMenuPopup.this.mPopup.isModal()) {
                 return;
             }
@@ -63,7 +63,7 @@ public final class StandardMenuPopup extends MenuPopup implements PopupWindow.On
         }
     }
 
-    /* renamed from: androidx.appcompat.view.menu.StandardMenuPopup$2 */
+    /* JADX INFO: renamed from: androidx.appcompat.view.menu.StandardMenuPopup$2 */
     public class ViewOnAttachStateChangeListenerC00882 implements View.OnAttachStateChangeListener {
         public ViewOnAttachStateChangeListenerC00882() {
         }
@@ -100,7 +100,7 @@ public final class StandardMenuPopup extends MenuPopup implements PopupWindow.On
         menuBuilder.addMenuPresenter(this, context);
     }
 
-    private boolean tryShow() throws IllegalArgumentException {
+    private boolean tryShow() {
         View view;
         if (isShowing()) {
             return true;

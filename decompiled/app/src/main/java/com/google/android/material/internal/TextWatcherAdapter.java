@@ -5,8 +5,8 @@ import android.text.TextWatcher;
 import androidx.annotation.NonNull;
 import androidx.annotation.RestrictTo;
 
+/* JADX INFO: loaded from: classes3.dex */
 @RestrictTo({RestrictTo.Scope.LIBRARY_GROUP})
-/* loaded from: classes3.dex */
 public class TextWatcherAdapter implements TextWatcher {
     @Override // android.text.TextWatcher
     public void afterTextChanged(@NonNull Editable editable) {

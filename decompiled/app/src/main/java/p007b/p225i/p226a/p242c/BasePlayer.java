@@ -2,22 +2,22 @@ package p007b.p225i.p226a.p242c;
 
 import p007b.p225i.p226a.p242c.Timeline;
 
-/* compiled from: BasePlayer.java */
-/* renamed from: b.i.a.c.u0, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.u0, reason: use source file name */
+/* JADX INFO: compiled from: BasePlayer.java */
+/* JADX INFO: loaded from: classes3.dex */
 public abstract class BasePlayer implements Player2 {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final Timeline.c f7863a = new Timeline.c();
 
     @Override // p007b.p225i.p226a.p242c.Player2
-    /* renamed from: D */
+    /* JADX INFO: renamed from: D */
     public final boolean mo3518D(int i) {
         return mo2906i().f9033k.f6733a.get(i);
     }
 
     @Override // p007b.p225i.p226a.p242c.Player2
-    /* renamed from: O */
+    /* JADX INFO: renamed from: O */
     public final void mo3519O() {
         if (mo2888K().m3331q() || mo2900f()) {
             return;
@@ -36,18 +36,18 @@ public abstract class BasePlayer implements Player2 {
     }
 
     @Override // p007b.p225i.p226a.p242c.Player2
-    /* renamed from: P */
+    /* JADX INFO: renamed from: P */
     public final void mo3520P() {
         m3530c0(mo2927v());
     }
 
     @Override // p007b.p225i.p226a.p242c.Player2
-    /* renamed from: R */
+    /* JADX INFO: renamed from: R */
     public final void mo3521R() {
         m3530c0(-mo2895U());
     }
 
-    /* renamed from: V */
+    /* JADX INFO: renamed from: V */
     public final int m3522V() {
         Timeline timelineMo2888K = mo2888K();
         if (timelineMo2888K.m3331q()) {
@@ -61,35 +61,35 @@ public abstract class BasePlayer implements Player2 {
         return timelineMo2888K.mo2585l(iMo2881C, iMo2886I, mo2890M());
     }
 
-    /* renamed from: W */
+    /* JADX INFO: renamed from: W */
     public final boolean m3523W() {
         return m3528b() != -1;
     }
 
-    /* renamed from: X */
+    /* JADX INFO: renamed from: X */
     public final boolean m3524X() {
         return m3522V() != -1;
     }
 
-    /* renamed from: Y */
+    /* JADX INFO: renamed from: Y */
     public final boolean m3525Y() {
         Timeline timelineMo2888K = mo2888K();
         return !timelineMo2888K.m3331q() && timelineMo2888K.m3330n(mo2881C(), this.f7863a).f7361v;
     }
 
-    /* renamed from: Z */
+    /* JADX INFO: renamed from: Z */
     public final boolean m3526Z() {
         Timeline timelineMo2888K = mo2888K();
         return !timelineMo2888K.m3331q() && timelineMo2888K.m3330n(mo2881C(), this.f7863a).m3341c();
     }
 
-    /* renamed from: a0 */
+    /* JADX INFO: renamed from: a0 */
     public final boolean m3527a0() {
         Timeline timelineMo2888K = mo2888K();
         return !timelineMo2888K.m3331q() && timelineMo2888K.m3330n(mo2881C(), this.f7863a).f7360u;
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final int m3528b() {
         Timeline timelineMo2888K = mo2888K();
         if (timelineMo2888K.m3331q()) {
@@ -103,12 +103,12 @@ public abstract class BasePlayer implements Player2 {
         return timelineMo2888K.mo2584e(iMo2881C, iMo2886I, mo2890M());
     }
 
-    /* renamed from: b0 */
+    /* JADX INFO: renamed from: b0 */
     public final void m3529b0(long j) {
         mo2904h(mo2881C(), j);
     }
 
-    /* renamed from: c0 */
+    /* JADX INFO: renamed from: c0 */
     public final void m3530c0(long j) {
         long jMo2894T = mo2894T() + j;
         long jMo2887J = mo2887J();
@@ -119,19 +119,19 @@ public abstract class BasePlayer implements Player2 {
     }
 
     @Override // p007b.p225i.p226a.p242c.Player2
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final void mo3531d() {
         mo2926u(false);
     }
 
     @Override // p007b.p225i.p226a.p242c.Player2
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final void mo3532e() {
         mo2926u(true);
     }
 
     @Override // p007b.p225i.p226a.p242c.Player2
-    /* renamed from: s */
+    /* JADX INFO: renamed from: s */
     public final void mo3533s() {
         int iM3522V;
         if (mo2888K().m3331q() || mo2900f()) {
@@ -156,7 +156,7 @@ public abstract class BasePlayer implements Player2 {
     }
 
     @Override // p007b.p225i.p226a.p242c.Player2
-    /* renamed from: z */
+    /* JADX INFO: renamed from: z */
     public final boolean mo3534z() {
         return mo2930y() == 3 && mo2908j() && mo2884G() == 0;
     }

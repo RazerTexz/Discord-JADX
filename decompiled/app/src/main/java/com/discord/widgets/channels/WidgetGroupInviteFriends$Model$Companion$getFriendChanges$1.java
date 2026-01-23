@@ -8,18 +8,18 @@ import java.util.Map;
 import p637j0.p641k.Func1;
 import p658rx.Observable;
 
-/* compiled from: WidgetGroupInviteFriends.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetGroupInviteFriends.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetGroupInviteFriends$Model$Companion$getFriendChanges$1<T, R> implements Func1<Map<Long, ? extends Integer>, Observable<? extends List<User>>> {
     public final /* synthetic */ Observable $addedUsers;
 
-    /* compiled from: WidgetGroupInviteFriends.kt */
-    /* renamed from: com.discord.widgets.channels.WidgetGroupInviteFriends$Model$Companion$getFriendChanges$1$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.channels.WidgetGroupInviteFriends$Model$Companion$getFriendChanges$1$1 */
+    /* JADX INFO: compiled from: WidgetGroupInviteFriends.kt */
     public static final class C73841<T, R> implements Func1<Collection<? extends User>, Observable<? extends List<User>>> {
         public final /* synthetic */ Map $friends;
 
-        /* compiled from: WidgetGroupInviteFriends.kt */
-        /* renamed from: com.discord.widgets.channels.WidgetGroupInviteFriends$Model$Companion$getFriendChanges$1$1$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.widgets.channels.WidgetGroupInviteFriends$Model$Companion$getFriendChanges$1$1$1, reason: invalid class name */
+        /* JADX INFO: compiled from: WidgetGroupInviteFriends.kt */
         public static final class AnonymousClass1<T, R> implements Func1<User, Boolean> {
             public AnonymousClass1() {
             }
@@ -29,7 +29,7 @@ public final class WidgetGroupInviteFriends$Model$Companion$getFriendChanges$1<T
                 return call2(user);
             }
 
-            /* renamed from: call, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
             public final Boolean call2(User user) {
                 return Boolean.valueOf(C73841.this.$friends.containsKey(Long.valueOf(user.getId())));
             }
@@ -44,7 +44,7 @@ public final class WidgetGroupInviteFriends$Model$Companion$getFriendChanges$1<T
             return call2(collection);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final Observable<? extends List<User>> call2(Collection<? extends User> collection) {
             return Observable.m11058B(collection).m11118y(new AnonymousClass1()).m11105f0();
         }
@@ -59,7 +59,7 @@ public final class WidgetGroupInviteFriends$Model$Companion$getFriendChanges$1<T
         return call2((Map<Long, Integer>) map);
     }
 
-    /* renamed from: call, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
     public final Observable<? extends List<User>> call2(Map<Long, Integer> map) {
         return this.$addedUsers.m11099Y(new C73841(map));
     }

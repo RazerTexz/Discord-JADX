@@ -3,7 +3,7 @@ package org.webrtc;
 import org.webrtc.VideoDecoder;
 import p617h0.p628c.C12453b0;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public class VideoDecoderWrapper {
     @CalledByNative
     public static VideoDecoder.Callback createDecoderCallback(long j) {

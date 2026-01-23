@@ -12,9 +12,9 @@ import p007b.p100d.p104b.p105a.outline;
 import p507d0.p513e0.p514p.p515d.p517m0.p518b.PrimitiveType;
 import p507d0.p513e0.p514p.p515d.p517m0.p548g.FqName;
 
-/* compiled from: JvmPrimitiveType.java */
-/* renamed from: d0.e0.p.d.m0.k.y.d, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.k.y.d, reason: use source file name */
+/* JADX INFO: compiled from: JvmPrimitiveType.java */
+/* JADX INFO: loaded from: classes3.dex */
 public enum JvmPrimitiveType {
     BOOLEAN(PrimitiveType.BOOLEAN, "boolean", "Z", "java.lang.Boolean"),
     CHAR(PrimitiveType.CHAR, "char", "C", "java.lang.Character"),
@@ -26,16 +26,16 @@ public enum JvmPrimitiveType {
     DOUBLE(PrimitiveType.DOUBLE, "double", "D", "java.lang.Double");
 
 
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     public static final Set<FqName> f24472r = new HashSet();
 
-    /* renamed from: s */
+    /* JADX INFO: renamed from: s */
     public static final Map<String, JvmPrimitiveType> f24473s = new HashMap();
 
-    /* renamed from: t */
+    /* JADX INFO: renamed from: t */
     public static final Map<PrimitiveType, JvmPrimitiveType> f24474t = new EnumMap(PrimitiveType.class);
 
-    /* renamed from: u */
+    /* JADX INFO: renamed from: u */
     public static final Map<String, JvmPrimitiveType> f24475u = new HashMap();
     private final String desc;
     private final String name;
@@ -66,7 +66,7 @@ public enum JvmPrimitiveType {
 
     /* JADX WARN: Removed duplicated region for block: B:12:0x0017  */
     /* JADX WARN: Removed duplicated region for block: B:7:0x000c  */
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */

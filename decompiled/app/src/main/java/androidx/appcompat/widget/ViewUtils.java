@@ -8,8 +8,8 @@ import androidx.core.view.ViewCompat;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 
+/* JADX INFO: loaded from: classes.dex */
 @RestrictTo({RestrictTo.Scope.LIBRARY_GROUP_PREFIX})
-/* loaded from: classes.dex */
 public class ViewUtils {
     private static final String TAG = "ViewUtils";
     private static Method sComputeFitSystemWindowsMethod;
@@ -45,7 +45,7 @@ public class ViewUtils {
         return ViewCompat.getLayoutDirection(view) == 1;
     }
 
-    public static void makeOptionalFitsSystemWindows(View view) throws SecurityException, IllegalArgumentException {
+    public static void makeOptionalFitsSystemWindows(View view) {
         try {
             Method method = view.getClass().getMethod("makeOptionalFitsSystemWindows", new Class[0]);
             if (!method.isAccessible()) {

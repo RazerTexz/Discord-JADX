@@ -8,12 +8,12 @@ import p007b.p109f.p161j.p168c.CacheKeyFactory;
 import p007b.p109f.p161j.p168c.DefaultCacheKeyFactory;
 import p007b.p109f.p161j.p175j.EncodedImage2;
 
-/* compiled from: EncodedCacheKeyMultiplexProducer.java */
-/* renamed from: b.f.j.p.u, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.f.j.p.u, reason: use source file name */
+/* JADX INFO: compiled from: EncodedCacheKeyMultiplexProducer.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class EncodedCacheKeyMultiplexProducer extends MultiplexProducer<Pair<CacheKey, ImageRequest.EnumC10667c>, EncodedImage2> {
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final CacheKeyFactory f4236f;
 
     public EncodedCacheKeyMultiplexProducer(CacheKeyFactory cacheKeyFactory, boolean z2, Producer2 producer2) {
@@ -22,13 +22,13 @@ public class EncodedCacheKeyMultiplexProducer extends MultiplexProducer<Pair<Cac
     }
 
     @Override // p007b.p109f.p161j.p181p.MultiplexProducer
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public Closeable mo1476c(Closeable closeable) {
         return EncodedImage2.m1336a((EncodedImage2) closeable);
     }
 
     @Override // p007b.p109f.p161j.p181p.MultiplexProducer
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public Pair<CacheKey, ImageRequest.EnumC10667c> mo1477d(ProducerContext producerContext) {
         return Pair.create(((DefaultCacheKeyFactory) this.f4236f).m1230b(producerContext.mo1447e(), producerContext.mo1444b()), producerContext.mo1459q());
     }

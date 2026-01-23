@@ -22,8 +22,8 @@ import p507d0.p580t.Sets5;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: MemberVerificationUtils.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: MemberVerificationUtils.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class MemberVerificationUtils {
     public static final MemberVerificationUtils INSTANCE = new MemberVerificationUtils();
 
@@ -42,8 +42,8 @@ public final class MemberVerificationUtils {
         }
     }
 
-    /* compiled from: MemberVerificationUtils.kt */
-    /* renamed from: com.discord.utilities.guilds.MemberVerificationUtils$maybeShowVerificationGate$1 */
+    /* JADX INFO: renamed from: com.discord.utilities.guilds.MemberVerificationUtils$maybeShowVerificationGate$1 */
+    /* JADX INFO: compiled from: MemberVerificationUtils.kt */
     public static final class C67681 extends Lambda implements Function0<Unit> {
         public static final C67681 INSTANCE = new C67681();
 
@@ -57,7 +57,7 @@ public final class MemberVerificationUtils {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
         }
     }
@@ -75,6 +75,7 @@ public final class MemberVerificationUtils {
         return memberVerificationUtils.hasVerificationGate(guild, modelInvite);
     }
 
+    /* JADX WARN: Multi-variable type inference failed */
     public static /* synthetic */ void maybeShowVerificationGate$default(MemberVerificationUtils memberVerificationUtils, Context context, FragmentManager fragmentManager, long j, String str, ModelInvite modelInvite, Function0 function0, Function0 function02, int i, Object obj) {
         memberVerificationUtils.maybeShowVerificationGate(context, fragmentManager, j, str, (i & 16) != 0 ? null : modelInvite, (i & 32) != 0 ? C67681.INSTANCE : function0, function02);
     }

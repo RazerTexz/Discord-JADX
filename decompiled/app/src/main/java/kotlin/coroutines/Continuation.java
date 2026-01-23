@@ -2,8 +2,8 @@ package kotlin.coroutines;
 
 import androidx.exifinterface.media.ExifInterface;
 
-/* compiled from: Continuation.kt */
-/* loaded from: classes3.dex */
+/* JADX INFO: compiled from: Continuation.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public interface Continuation<T> {
     CoroutineContext getContext();
 

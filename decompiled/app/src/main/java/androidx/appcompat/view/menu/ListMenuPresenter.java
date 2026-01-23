@@ -17,8 +17,8 @@ import androidx.appcompat.view.menu.MenuPresenter;
 import androidx.appcompat.view.menu.MenuView;
 import java.util.ArrayList;
 
+/* JADX INFO: loaded from: classes.dex */
 @RestrictTo({RestrictTo.Scope.LIBRARY_GROUP_PREFIX})
-/* loaded from: classes.dex */
 public class ListMenuPresenter implements MenuPresenter, AdapterView.OnItemClickListener {
     private static final String TAG = "ListMenuPresenter";
     public static final String VIEWS_TAG = "android:menu:list";

@@ -2,31 +2,31 @@ package p507d0.p513e0.p514p.p515d.p517m0.p531e.p532a.p540l0;
 
 import kotlin.jvm.internal.DefaultConstructorMarker;
 
-/* compiled from: typeQualifiers.kt */
-/* renamed from: d0.e0.p.d.m0.e.a.l0.e, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.e.a.l0.e, reason: use source file name */
+/* JADX INFO: compiled from: typeQualifiers.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class typeQualifiers {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final a f23450a = new a(null);
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static final typeQualifiers f23451b = new typeQualifiers(null, null, false, false, 8, null);
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final typeQualifiers3 f23452c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final typeQualifiers2 f23453d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final boolean f23454e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final boolean f23455f;
 
-    /* compiled from: typeQualifiers.kt */
-    /* renamed from: d0.e0.p.d.m0.e.a.l0.e$a */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.e.a.l0.e$a */
+    /* JADX INFO: compiled from: typeQualifiers.kt */
     public static final class a {
         public a(DefaultConstructorMarker defaultConstructorMarker) {
         }

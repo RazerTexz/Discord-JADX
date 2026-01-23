@@ -6,8 +6,8 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p658rx.Observable;
 import p658rx.subjects.PublishSubject;
 
-/* compiled from: WidgetGlobalSearchDismissModel.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: WidgetGlobalSearchDismissModel.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class WidgetGlobalSearchDismissModel extends AppViewModel<Unit> {
     private final PublishSubject<Unit> dismissEventsSubject;
 

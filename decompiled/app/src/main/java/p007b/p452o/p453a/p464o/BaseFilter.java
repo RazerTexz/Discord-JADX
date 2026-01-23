@@ -22,29 +22,29 @@ import p007b.p452o.p475b.p482g.buffers;
 import p507d0.UInt;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: BaseFilter.java */
-/* renamed from: b.o.a.o.a, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.o.a.o.a, reason: use source file name */
+/* JADX INFO: compiled from: BaseFilter.java */
+/* JADX INFO: loaded from: classes3.dex */
 public abstract class BaseFilter implements Filter2 {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final CameraLogger f14046a = new CameraLogger(BaseFilter.class.getSimpleName());
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     @VisibleForTesting
     public GlTextureProgram f14047b = null;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public GlDrawable f14048c = null;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     @VisibleForTesting
     public Size3 f14049d;
 
     /* JADX WARN: Multi-variable type inference failed */
     @Override // p007b.p452o.p453a.p464o.Filter2
     @NonNull
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public Filter2 mo7369a() {
         try {
             Filter2 filter2 = (BaseFilter) getClass().newInstance();
@@ -68,7 +68,7 @@ public abstract class BaseFilter implements Filter2 {
 
     @Override // p007b.p452o.p453a.p464o.Filter2
     @NonNull
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public String mo7370c() {
         StringBuilder sb = new StringBuilder();
         sb.append("uniform mat4 ");
@@ -87,7 +87,7 @@ public abstract class BaseFilter implements Filter2 {
     }
 
     @Override // p007b.p452o.p453a.p464o.Filter2
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public void mo7371e(long j, @NonNull float[] fArr) {
         GlTextureProgram glTextureProgram = this.f14047b;
         if (glTextureProgram == null) {
@@ -202,7 +202,7 @@ public abstract class BaseFilter implements Filter2 {
     }
 
     @Override // p007b.p452o.p453a.p464o.Filter2
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public void mo7372f() {
         GlTextureProgram glTextureProgram = this.f14047b;
         if (!glTextureProgram.f14309d) {
@@ -224,14 +224,14 @@ public abstract class BaseFilter implements Filter2 {
     }
 
     @Override // p007b.p452o.p453a.p464o.Filter2
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public void mo7373j(int i) {
         this.f14047b = new GlTextureProgram(i, "aPosition", "uMVPMatrix", "aTextureCoord", "uTexMatrix");
         this.f14048c = new GlRect();
     }
 
     @Override // p007b.p452o.p453a.p464o.Filter2
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public void mo7374k(int i, int i2) {
         this.f14049d = new Size3(i, i2);
     }

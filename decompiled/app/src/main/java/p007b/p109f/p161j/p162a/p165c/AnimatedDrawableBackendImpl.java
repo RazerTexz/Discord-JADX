@@ -12,39 +12,39 @@ import p007b.p109f.p161j.p162a.p163a.AnimatedImageFrame;
 import p007b.p109f.p161j.p162a.p163a.AnimatedImageResult;
 import p007b.p109f.p161j.p162a.p166d.AnimatedDrawableUtil;
 
-/* compiled from: AnimatedDrawableBackendImpl.java */
-/* renamed from: b.f.j.a.c.a, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: b.f.j.a.c.a, reason: use source file name */
+/* JADX INFO: compiled from: AnimatedDrawableBackendImpl.java */
+/* JADX INFO: loaded from: classes2.dex */
 public class AnimatedDrawableBackendImpl implements AnimatedDrawableBackend {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final AnimatedDrawableUtil f3624a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final AnimatedImageResult f3625b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final AnimatedImage f3626c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final Rect f3627d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final int[] f3628e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final AnimatedDrawableFrameInfo[] f3629f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public final Rect f3630g = new Rect();
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public final Rect f3631h = new Rect();
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public final boolean f3632i;
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public Bitmap f3633j;
 
     public AnimatedDrawableBackendImpl(AnimatedDrawableUtil animatedDrawableUtil, AnimatedImageResult animatedImageResult, Rect rect, boolean z2) {
@@ -82,17 +82,17 @@ public class AnimatedDrawableBackendImpl implements AnimatedDrawableBackend {
         }
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static Rect m1195a(AnimatedImage animatedImage, Rect rect) {
         return rect == null ? new Rect(0, 0, animatedImage.getWidth(), animatedImage.getHeight()) : new Rect(0, 0, Math.min(rect.width(), animatedImage.getWidth()), Math.min(rect.height(), animatedImage.getHeight()));
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public int m1196b() {
         return this.f3626c.mo1177a();
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final synchronized Bitmap m1197c(int i, int i2) {
         Bitmap bitmap = this.f3633j;
         if (bitmap != null && (bitmap.getWidth() < i || this.f3633j.getHeight() < i2)) {
@@ -111,7 +111,7 @@ public class AnimatedDrawableBackendImpl implements AnimatedDrawableBackend {
         return this.f3633j;
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public void m1198d(int i, Canvas canvas) {
         AnimatedImageFrame animatedImageFrameMo1180e = this.f3626c.mo1180e(i);
         try {
@@ -127,7 +127,7 @@ public class AnimatedDrawableBackendImpl implements AnimatedDrawableBackend {
         }
     }
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final void m1199e(Canvas canvas, AnimatedImageFrame animatedImageFrame) {
         int width;
         int height;
@@ -156,14 +156,14 @@ public class AnimatedDrawableBackendImpl implements AnimatedDrawableBackend {
         }
     }
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final void m1200f(Canvas canvas, AnimatedImageFrame animatedImageFrame) {
-        double dWidth = this.f3627d.width() / this.f3626c.getWidth();
-        double dHeight = this.f3627d.height() / this.f3626c.getHeight();
-        int iRound = (int) Math.round(animatedImageFrame.getWidth() * dWidth);
-        int iRound2 = (int) Math.round(animatedImageFrame.getHeight() * dHeight);
-        int iMo1186b = (int) (animatedImageFrame.mo1186b() * dWidth);
-        int iMo1187c = (int) (animatedImageFrame.mo1187c() * dHeight);
+        double dWidth = ((double) this.f3627d.width()) / ((double) this.f3626c.getWidth());
+        double dHeight = ((double) this.f3627d.height()) / ((double) this.f3626c.getHeight());
+        int iRound = (int) Math.round(((double) animatedImageFrame.getWidth()) * dWidth);
+        int iRound2 = (int) Math.round(((double) animatedImageFrame.getHeight()) * dHeight);
+        int iMo1186b = (int) (((double) animatedImageFrame.mo1186b()) * dWidth);
+        int iMo1187c = (int) (((double) animatedImageFrame.mo1187c()) * dHeight);
         synchronized (this) {
             int iWidth = this.f3627d.width();
             int iHeight = this.f3627d.height();

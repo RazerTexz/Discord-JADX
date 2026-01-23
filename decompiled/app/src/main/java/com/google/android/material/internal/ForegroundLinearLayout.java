@@ -16,8 +16,8 @@ import androidx.appcompat.widget.LinearLayoutCompat;
 import androidx.core.view.GravityCompat;
 import com.google.android.material.C10817R;
 
+/* JADX INFO: loaded from: classes3.dex */
 @RestrictTo({RestrictTo.Scope.LIBRARY_GROUP})
-/* loaded from: classes3.dex */
 public class ForegroundLinearLayout extends LinearLayoutCompat {
 
     @Nullable

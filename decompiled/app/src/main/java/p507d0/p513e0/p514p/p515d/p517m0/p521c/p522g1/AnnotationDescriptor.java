@@ -11,13 +11,13 @@ import p507d0.p513e0.p514p.p515d.p517m0.p567n.ErrorUtils;
 import p507d0.p513e0.p514p.p515d.p517m0.p567n.KotlinType;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: AnnotationDescriptor.kt */
-/* renamed from: d0.e0.p.d.m0.c.g1.c, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.c.g1.c, reason: use source file name */
+/* JADX INFO: compiled from: AnnotationDescriptor.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public interface AnnotationDescriptor {
 
-    /* compiled from: AnnotationDescriptor.kt */
-    /* renamed from: d0.e0.p.d.m0.c.g1.c$a */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.c.g1.c$a */
+    /* JADX INFO: compiled from: AnnotationDescriptor.kt */
     public static final class a {
         public static FqName getFqName(AnnotationDescriptor annotationDescriptor) {
             Intrinsics3.checkNotNullParameter(annotationDescriptor, "this");

@@ -18,43 +18,43 @@ import p007b.p225i.p226a.p242c.p267x2.VorbisUtil2;
 import p007b.p225i.p226a.p242c.p267x2.VorbisUtil3;
 import p007b.p225i.p226a.p242c.p267x2.p275j0.StreamReader;
 
-/* compiled from: VorbisReader.java */
-/* renamed from: b.i.a.c.x2.j0.j, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.x2.j0.j, reason: use source file name */
+/* JADX INFO: compiled from: VorbisReader.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class VorbisReader extends StreamReader {
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     @Nullable
     public a f8555n;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public int f8556o;
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public boolean f8557p;
 
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     @Nullable
     public VorbisUtil2 f8558q;
 
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     @Nullable
     public VorbisUtil3 f8559r;
 
-    /* compiled from: VorbisReader.java */
-    /* renamed from: b.i.a.c.x2.j0.j$a */
+    /* JADX INFO: renamed from: b.i.a.c.x2.j0.j$a */
+    /* JADX INFO: compiled from: VorbisReader.java */
     public static final class a {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final VorbisUtil2 f8560a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final byte[] f8561b;
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public final VorbisUtil[] f8562c;
 
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         public final int f8563d;
 
         public a(VorbisUtil2 vorbisUtil2, VorbisUtil3 vorbisUtil3, byte[] bArr, VorbisUtil[] vorbisUtilArr, int i) {
@@ -66,7 +66,7 @@ public final class VorbisReader extends StreamReader {
     }
 
     @Override // p007b.p225i.p226a.p242c.p267x2.p275j0.StreamReader
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public void mo3747b(long j) {
         this.f8546g = j;
         this.f8557p = j != 0;
@@ -75,7 +75,7 @@ public final class VorbisReader extends StreamReader {
     }
 
     @Override // p007b.p225i.p226a.p242c.p267x2.p275j0.StreamReader
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public long mo3737c(ParsableByteArray parsableByteArray) {
         byte[] bArr = parsableByteArray.f6793a;
         if ((bArr[0] & 1) == 1) {
@@ -108,7 +108,7 @@ public final class VorbisReader extends StreamReader {
 
     @Override // p007b.p225i.p226a.p242c.p267x2.p275j0.StreamReader
     @EnsuresNonNullIf(expression = {"#3.format"}, result = false)
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public boolean mo3738d(ParsableByteArray parsableByteArray, long j, StreamReader.b bVar) throws IOException {
         a aVar;
         int i;
@@ -376,7 +376,7 @@ public final class VorbisReader extends StreamReader {
                             vorbisBitArray.m3824c(32);
                             int iM3823b20 = vorbisBitArray.m3823b(4) + 1;
                             vorbisBitArray.m3824c(1);
-                            vorbisBitArray.m3824c((int) (iM3823b20 * (iM3823b19 == 1 ? iM3823b15 != 0 ? (long) Math.floor(Math.pow(iM3823b16, 1.0d / iM3823b15)) : 0L : iM3823b16 * iM3823b15)));
+                            vorbisBitArray.m3824c((int) (((long) iM3823b20) * (iM3823b19 == 1 ? iM3823b15 != 0 ? (long) Math.floor(Math.pow(iM3823b16, 1.0d / ((double) iM3823b15))) : 0L : ((long) iM3823b16) * ((long) iM3823b15))));
                         }
                         i11++;
                         i10 = 5;
@@ -408,7 +408,7 @@ public final class VorbisReader extends StreamReader {
     }
 
     @Override // p007b.p225i.p226a.p242c.p267x2.p275j0.StreamReader
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public void mo3739e(boolean z2) {
         super.mo3739e(z2);
         if (z2) {

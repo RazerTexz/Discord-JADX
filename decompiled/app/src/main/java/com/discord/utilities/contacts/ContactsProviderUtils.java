@@ -10,8 +10,8 @@ import java.util.HashSet;
 import java.util.Set;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ContactsProviderUtils.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: ContactsProviderUtils.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class ContactsProviderUtils {
     private static final String CONTACTS_PERMISSION = "android.permission.READ_CONTACTS";
     public static final ContactsProviderUtils INSTANCE = new ContactsProviderUtils();

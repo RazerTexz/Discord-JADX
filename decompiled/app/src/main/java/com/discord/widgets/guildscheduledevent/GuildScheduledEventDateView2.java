@@ -10,9 +10,9 @@ import kotlin.jvm.functions.Function1;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: GuildScheduledEventDateView.kt */
-/* renamed from: com.discord.widgets.guildscheduledevent.GuildScheduledEventDateView$configureCompleteTimeString$$inlined$apply$lambda$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.guildscheduledevent.GuildScheduledEventDateView$configureCompleteTimeString$$inlined$apply$lambda$1, reason: use source file name */
+/* JADX INFO: compiled from: GuildScheduledEventDateView.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class GuildScheduledEventDateView2 extends Lambda implements Function1<RenderContext, Unit> {
     public final /* synthetic */ CharSequence $eventEndingTimeString$inlined;
     public final /* synthetic */ CharSequence $eventStartingTimeString$inlined;
@@ -34,14 +34,14 @@ public final class GuildScheduledEventDateView2 extends Lambda implements Functi
         return Unit.f27425a;
     }
 
-    /* compiled from: GuildScheduledEventDateView.kt */
-    /* renamed from: com.discord.widgets.guildscheduledevent.GuildScheduledEventDateView$configureCompleteTimeString$$inlined$apply$lambda$1$1, reason: invalid class name */
+    /* JADX INFO: renamed from: com.discord.widgets.guildscheduledevent.GuildScheduledEventDateView$configureCompleteTimeString$$inlined$apply$lambda$1$1, reason: invalid class name */
+    /* JADX INFO: compiled from: GuildScheduledEventDateView.kt */
     public static final class AnonymousClass1 extends Lambda implements Function1<Hook, Unit> {
         public AnonymousClass1() {
             super(1);
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Hook hook) {
             Intrinsics3.checkNotNullParameter(hook, "$receiver");
             List<Object> list = hook.styles;
@@ -56,7 +56,7 @@ public final class GuildScheduledEventDateView2 extends Lambda implements Functi
         }
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final void invoke2(RenderContext renderContext) {
         Intrinsics3.checkNotNullParameter(renderContext, "$receiver");
         renderContext.m8422a("startHook", new AnonymousClass1());

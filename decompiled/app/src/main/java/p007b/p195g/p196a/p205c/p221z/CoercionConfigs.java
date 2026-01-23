@@ -4,9 +4,9 @@ import java.io.Serializable;
 import java.util.Map;
 import p007b.p085c.p086a.p095y.C1563b;
 
-/* compiled from: CoercionConfigs.java */
-/* renamed from: b.g.a.c.z.d, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.g.a.c.z.d, reason: use source file name */
+/* JADX INFO: compiled from: CoercionConfigs.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class CoercionConfigs implements Serializable {
     private static final long serialVersionUID = 1;
     public CoercionAction _defaultAction;

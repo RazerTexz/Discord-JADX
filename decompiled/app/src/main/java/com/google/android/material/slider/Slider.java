@@ -15,7 +15,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import com.google.android.material.C10817R;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public class Slider extends BaseSlider<Slider, OnChangeListener, OnSliderTouchListener> {
 
     public interface OnChangeListener extends BaseOnChangeListener<Slider> {

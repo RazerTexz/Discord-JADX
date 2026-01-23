@@ -10,9 +10,9 @@ import p600f0.CertificatePinner;
 import p600f0.Handshake;
 import p600f0.p601e0.p612m.CertificateChainCleaner;
 
-/* compiled from: RealConnection.kt */
-/* renamed from: f0.e0.g.g, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: f0.e0.g.g, reason: use source file name */
+/* JADX INFO: compiled from: RealConnection.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class RealConnection extends Lambda implements Function0<List<? extends Certificate>> {
     public final /* synthetic */ Address $address;
     public final /* synthetic */ CertificatePinner $certificatePinner;

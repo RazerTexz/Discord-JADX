@@ -5,12 +5,12 @@ import androidx.annotation.NonNull;
 import p007b.p452o.p453a.p455n.p456o.ActionHolder;
 import p007b.p452o.p453a.p455n.p456o.BaseAction;
 
-/* compiled from: Camera2Engine.java */
-/* renamed from: b.o.a.n.f, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.o.a.n.f, reason: use source file name */
+/* JADX INFO: compiled from: Camera2Engine.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class Camera2Engine3 extends BaseAction {
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final /* synthetic */ Camera2Engine f13865e;
 
     public Camera2Engine3(Camera2Engine camera2Engine) {
@@ -18,7 +18,7 @@ public class Camera2Engine3 extends BaseAction {
     }
 
     @Override // p007b.p452o.p453a.p455n.p456o.BaseAction
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public void mo7249j(@NonNull ActionHolder actionHolder) {
         this.f13939c = actionHolder;
         this.f13865e.m7231f1(((Camera2Engine) actionHolder).f13807i0);

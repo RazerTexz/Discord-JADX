@@ -2,8 +2,8 @@ package androidx.core.util;
 
 import androidx.annotation.RestrictTo;
 
+/* JADX INFO: loaded from: classes.dex */
 @RestrictTo({RestrictTo.Scope.LIBRARY_GROUP_PREFIX})
-/* loaded from: classes.dex */
 public class DebugUtils {
     private DebugUtils() {
     }

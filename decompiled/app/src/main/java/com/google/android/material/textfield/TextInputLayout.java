@@ -6,7 +6,6 @@ import android.animation.ValueAnimator;
 import android.annotation.TargetApi;
 import android.content.Context;
 import android.content.res.ColorStateList;
-import android.content.res.Resources;
 import android.graphics.Canvas;
 import android.graphics.PorterDuff;
 import android.graphics.Rect;
@@ -85,7 +84,7 @@ import p007b.p225i.p226a.p341g.p351j.IndicatorViewController;
 import p007b.p225i.p226a.p341g.p351j.NoEndIconDelegate;
 import p007b.p225i.p226a.p341g.p351j.PasswordToggleEndIconDelegate;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public class TextInputLayout extends LinearLayout {
     public static final int BOX_BACKGROUND_FILLED = 1;
     public static final int BOX_BACKGROUND_NONE = 0;
@@ -324,26 +323,26 @@ public class TextInputLayout extends LinearLayout {
     public static class SavedState extends AbsSavedState {
         public static final Parcelable.Creator<SavedState> CREATOR = new C11014a();
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         @Nullable
         public CharSequence f21172j;
 
-        /* renamed from: k */
+        /* JADX INFO: renamed from: k */
         public boolean f21173k;
 
-        /* renamed from: l */
+        /* JADX INFO: renamed from: l */
         @Nullable
         public CharSequence f21174l;
 
-        /* renamed from: m */
+        /* JADX INFO: renamed from: m */
         @Nullable
         public CharSequence f21175m;
 
-        /* renamed from: n */
+        /* JADX INFO: renamed from: n */
         @Nullable
         public CharSequence f21176n;
 
-        /* renamed from: com.google.android.material.textfield.TextInputLayout$SavedState$a */
+        /* JADX INFO: renamed from: com.google.android.material.textfield.TextInputLayout$SavedState$a */
         public static class C11014a implements Parcelable.ClassLoaderCreator<SavedState> {
             @Override // android.os.Parcelable.ClassLoaderCreator
             @NonNull
@@ -404,7 +403,7 @@ public class TextInputLayout extends LinearLayout {
         }
     }
 
-    /* renamed from: com.google.android.material.textfield.TextInputLayout$a */
+    /* JADX INFO: renamed from: com.google.android.material.textfield.TextInputLayout$a */
     public class C11015a implements TextWatcher {
         public C11015a() {
         }
@@ -430,7 +429,7 @@ public class TextInputLayout extends LinearLayout {
         }
     }
 
-    /* renamed from: com.google.android.material.textfield.TextInputLayout$b */
+    /* JADX INFO: renamed from: com.google.android.material.textfield.TextInputLayout$b */
     public class RunnableC11016b implements Runnable {
         public RunnableC11016b() {
         }
@@ -442,7 +441,7 @@ public class TextInputLayout extends LinearLayout {
         }
     }
 
-    /* renamed from: com.google.android.material.textfield.TextInputLayout$c */
+    /* JADX INFO: renamed from: com.google.android.material.textfield.TextInputLayout$c */
     public class RunnableC11017c implements Runnable {
         public RunnableC11017c() {
         }
@@ -453,7 +452,7 @@ public class TextInputLayout extends LinearLayout {
         }
     }
 
-    /* renamed from: com.google.android.material.textfield.TextInputLayout$d */
+    /* JADX INFO: renamed from: com.google.android.material.textfield.TextInputLayout$d */
     public class C11018d implements ValueAnimator.AnimatorUpdateListener {
         public C11018d() {
         }
@@ -2620,7 +2619,7 @@ public class TextInputLayout extends LinearLayout {
     }
 
     /* JADX WARN: Illegal instructions before constructor call */
-    public TextInputLayout(@NonNull Context context, @Nullable AttributeSet attributeSet, int i) throws Resources.NotFoundException {
+    public TextInputLayout(@NonNull Context context, @Nullable AttributeSet attributeSet, int i) {
         int i2;
         int i3;
         int i4 = DEF_STYLE_RES;

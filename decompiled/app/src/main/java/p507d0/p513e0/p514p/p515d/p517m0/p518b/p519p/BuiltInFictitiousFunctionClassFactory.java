@@ -21,15 +21,15 @@ import p507d0.p580t.Sets5;
 import p507d0.p580t._Collections;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: BuiltInFictitiousFunctionClassFactory.kt */
-/* renamed from: d0.e0.p.d.m0.b.p.a, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.b.p.a, reason: use source file name */
+/* JADX INFO: compiled from: BuiltInFictitiousFunctionClassFactory.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class BuiltInFictitiousFunctionClassFactory implements ClassDescriptorFactory {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final StorageManager f22589a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final ModuleDescriptor2 f22590b;
 
     public BuiltInFictitiousFunctionClassFactory(StorageManager storageManager, ModuleDescriptor2 moduleDescriptor2) {

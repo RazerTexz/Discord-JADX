@@ -5,24 +5,24 @@ import java.util.List;
 import java.util.Map;
 import p007b.p225i.p361c.p369m.p370d.p387t.TrimmedThrowableData;
 
-/* compiled from: SessionProtobufHelper.java */
-/* renamed from: b.i.c.m.d.p.d, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.c.m.d.p.d, reason: use source file name */
+/* JADX INFO: compiled from: SessionProtobufHelper.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class SessionProtobufHelper {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final ByteString2 f12694a = ByteString2.m6637a("0");
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static final ByteString2 f12695b = ByteString2.m6637a("Unity");
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static int m6657a(ByteString2 byteString2, ByteString2 byteString22) {
         int iM6640b = CodedOutputStream2.m6640b(3, byteString2) + CodedOutputStream2.m6645h(2, 0L) + CodedOutputStream2.m6645h(1, 0L) + 0;
         return byteString22 != null ? iM6640b + CodedOutputStream2.m6640b(4, byteString22) : iM6640b;
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static int m6658b(String str, String str2) {
         int iM6640b = CodedOutputStream2.m6640b(1, ByteString2.m6637a(str));
         if (str2 == null) {
@@ -31,7 +31,7 @@ public class SessionProtobufHelper {
         return CodedOutputStream2.m6640b(2, ByteString2.m6637a(str2)) + iM6640b;
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public static int m6659c(TrimmedThrowableData trimmedThrowableData, int i, int i2) {
         int i3 = 0;
         int iM6640b = CodedOutputStream2.m6640b(1, ByteString2.m6637a(trimmedThrowableData.f12778b)) + 0;
@@ -58,13 +58,13 @@ public class SessionProtobufHelper {
         return iM6640b + CodedOutputStream2.m6644f(7, i3);
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public static int m6660d() {
         ByteString2 byteString2 = f12694a;
         return CodedOutputStream2.m6645h(3, 0L) + CodedOutputStream2.m6640b(2, byteString2) + CodedOutputStream2.m6640b(1, byteString2) + 0;
     }
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public static int m6661e(TrimmedThrowableData trimmedThrowableData, Thread thread, StackTraceElement[] stackTraceElementArr, Thread[] threadArr, List<StackTraceElement[]> list, int i, ByteString2 byteString2, ByteString2 byteString22) {
         int iM6643e = CodedOutputStream2.m6643e(1);
         int iM6665i = m6665i(thread, stackTraceElementArr, 4, true);
@@ -82,7 +82,7 @@ public class SessionProtobufHelper {
         return CodedOutputStream2.m6642d(iM6657a) + CodedOutputStream2.m6643e(3) + iM6657a + iM6642d3;
     }
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public static int m6662f(TrimmedThrowableData trimmedThrowableData, Thread thread, StackTraceElement[] stackTraceElementArr, Thread[] threadArr, List<StackTraceElement[]> list, int i, ByteString2 byteString2, ByteString2 byteString22, Map<String, String> map, ActivityManager.RunningAppProcessInfo runningAppProcessInfo, int i2) {
         int iM6661e = m6661e(trimmedThrowableData, thread, stackTraceElementArr, threadArr, list, i, byteString2, byteString22);
         int iM6642d = CodedOutputStream2.m6642d(iM6661e) + CodedOutputStream2.m6643e(1) + iM6661e + 0;
@@ -98,7 +98,7 @@ public class SessionProtobufHelper {
         return CodedOutputStream2.m6644f(4, i2) + iM6642d;
     }
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public static int m6663g(Float f, int i, boolean z2, int i2, long j, long j2) {
         int iM6643e = 0;
         if (f != null) {
@@ -108,7 +108,7 @@ public class SessionProtobufHelper {
         return CodedOutputStream2.m6645h(6, j2) + CodedOutputStream2.m6645h(5, j) + CodedOutputStream2.m6644f(4, i2) + CodedOutputStream2.m6639a(3, z2) + iM6643e + CodedOutputStream2.m6642d((i >> 31) ^ (i << 1)) + CodedOutputStream2.m6643e(2);
     }
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public static int m6664h(StackTraceElement stackTraceElement, boolean z2) {
         int iM6640b = CodedOutputStream2.m6640b(2, ByteString2.m6637a(stackTraceElement.getClassName() + "." + stackTraceElement.getMethodName())) + (stackTraceElement.isNativeMethod() ? CodedOutputStream2.m6645h(1, Math.max(stackTraceElement.getLineNumber(), 0)) : CodedOutputStream2.m6645h(1, 0L)) + 0;
         if (stackTraceElement.getFileName() != null) {
@@ -120,7 +120,7 @@ public class SessionProtobufHelper {
         return CodedOutputStream2.m6644f(5, z2 ? 2 : 0) + iM6640b;
     }
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public static int m6665i(Thread thread, StackTraceElement[] stackTraceElementArr, int i, boolean z2) {
         int iM6644f = CodedOutputStream2.m6644f(2, i) + CodedOutputStream2.m6640b(1, ByteString2.m6637a(thread.getName()));
         for (StackTraceElement stackTraceElement : stackTraceElementArr) {
@@ -130,7 +130,7 @@ public class SessionProtobufHelper {
         return iM6644f;
     }
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static ByteString2 m6666j(String str) {
         if (str == null) {
             return null;
@@ -138,7 +138,7 @@ public class SessionProtobufHelper {
         return ByteString2.m6637a(str);
     }
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public static void m6667k(CodedOutputStream2 codedOutputStream2, int i, StackTraceElement stackTraceElement, boolean z2) throws Exception {
         codedOutputStream2.m6652o((i << 3) | 2);
         codedOutputStream2.m6652o(m6664h(stackTraceElement, z2));
@@ -157,7 +157,7 @@ public class SessionProtobufHelper {
         codedOutputStream2.m6655s(5, z2 ? 4 : 0);
     }
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public static void m6668l(CodedOutputStream2 codedOutputStream2, TrimmedThrowableData trimmedThrowableData, int i, int i2, int i3) throws Exception {
         codedOutputStream2.m6652o((i3 << 3) | 2);
         codedOutputStream2.m6652o(m6659c(trimmedThrowableData, 1, i2));
@@ -184,7 +184,7 @@ public class SessionProtobufHelper {
         }
     }
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public static void m6669m(CodedOutputStream2 codedOutputStream2, Thread thread, StackTraceElement[] stackTraceElementArr, int i, boolean z2) throws Exception {
         codedOutputStream2.m6654r(1, 2);
         codedOutputStream2.m6652o(m6665i(thread, stackTraceElementArr, i, z2));

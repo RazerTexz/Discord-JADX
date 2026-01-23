@@ -6,9 +6,9 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.discord.utilities.dimen.DimenUtils;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: WidgetForumBrowserAdapter.kt */
-/* renamed from: com.discord.widgets.forums.WidgetForumBrowserAdapter$itemDecoration$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.forums.WidgetForumBrowserAdapter$itemDecoration$1, reason: use source file name */
+/* JADX INFO: compiled from: WidgetForumBrowserAdapter.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetForumBrowserAdapter4 extends RecyclerView.ItemDecoration {
     public final /* synthetic */ WidgetForumBrowserAdapter this$0;
 

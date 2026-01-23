@@ -9,13 +9,13 @@ import kotlin.jvm.internal.DefaultConstructorMarker;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: AutocompleteViewModel.kt */
-/* renamed from: com.discord.widgets.chat.input.autocomplete.AutocompleteViewState, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.chat.input.autocomplete.AutocompleteViewState, reason: use source file name */
+/* JADX INFO: compiled from: AutocompleteViewModel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public abstract class AutocompleteViewModel4 {
 
-    /* compiled from: AutocompleteViewModel.kt */
-    /* renamed from: com.discord.widgets.chat.input.autocomplete.AutocompleteViewState$Autocomplete */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.input.autocomplete.AutocompleteViewState$Autocomplete */
+    /* JADX INFO: compiled from: AutocompleteViewModel.kt */
     public static final /* data */ class Autocomplete extends AutocompleteViewModel4 {
         private final List<Autocompletable> autocompletables;
         private final boolean isAutocomplete;
@@ -28,6 +28,7 @@ public abstract class AutocompleteViewModel4 {
             this((i & 1) != 0 ? false : z2, (i & 2) != 0 ? false : z3, (i & 4) != 0 ? false : z4, list, list2, str);
         }
 
+        /* JADX WARN: Multi-variable type inference failed */
         public static /* synthetic */ Autocomplete copy$default(Autocomplete autocomplete, boolean z2, boolean z3, boolean z4, List list, List list2, String str, int i, Object obj) {
             if ((i & 1) != 0) {
                 z2 = autocomplete.isLoading;
@@ -54,17 +55,17 @@ public abstract class AutocompleteViewModel4 {
             return autocomplete.copy(z2, z5, z6, list3, list4, str);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final boolean getIsLoading() {
             return this.isLoading;
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final boolean getIsError() {
             return this.isError;
         }
 
-        /* renamed from: component3, reason: from getter */
+        /* JADX INFO: renamed from: component3, reason: from getter */
         public final boolean getIsAutocomplete() {
             return this.isAutocomplete;
         }
@@ -77,7 +78,7 @@ public abstract class AutocompleteViewModel4 {
             return this.stickers;
         }
 
-        /* renamed from: component6, reason: from getter */
+        /* JADX INFO: renamed from: component6, reason: from getter */
         public final String getToken() {
             return this.token;
         }
@@ -116,7 +117,12 @@ public abstract class AutocompleteViewModel4 {
         /* JADX WARN: Type inference failed for: r0v1, types: [int] */
         /* JADX WARN: Type inference failed for: r0v12 */
         /* JADX WARN: Type inference failed for: r0v13 */
-        /* JADX WARN: Type inference failed for: r2v0, types: [boolean] */
+        /* JADX WARN: Type inference failed for: r1v0 */
+        /* JADX WARN: Type inference failed for: r1v1, types: [int] */
+        /* JADX WARN: Type inference failed for: r1v11 */
+        /* JADX WARN: Type inference failed for: r2v1, types: [int] */
+        /* JADX WARN: Type inference failed for: r2v6 */
+        /* JADX WARN: Type inference failed for: r2v7 */
         public int hashCode() {
             boolean z2 = this.isLoading;
             ?? r0 = z2;
@@ -124,16 +130,16 @@ public abstract class AutocompleteViewModel4 {
                 r0 = 1;
             }
             int i = r0 * 31;
-            ?? r2 = this.isError;
-            int i2 = r2;
-            if (r2 != 0) {
-                i2 = 1;
+            boolean z3 = this.isError;
+            ?? r2 = z3;
+            if (z3) {
+                r2 = 1;
             }
-            int i3 = (i + i2) * 31;
-            boolean z3 = this.isAutocomplete;
-            int i4 = (i3 + (z3 ? 1 : z3 ? 1 : 0)) * 31;
+            int i2 = (i + r2) * 31;
+            boolean z4 = this.isAutocomplete;
+            int i3 = (i2 + (z4 ? 1 : z4)) * 31;
             List<Autocompletable> list = this.autocompletables;
-            int iHashCode = (i4 + (list != null ? list.hashCode() : 0)) * 31;
+            int iHashCode = (i3 + (list != null ? list.hashCode() : 0)) * 31;
             List<WidgetChatInputAutocompleteStickerAdapter2> list2 = this.stickers;
             int iHashCode2 = (iHashCode + (list2 != null ? list2.hashCode() : 0)) * 31;
             String str = this.token;
@@ -183,8 +189,8 @@ public abstract class AutocompleteViewModel4 {
         }
     }
 
-    /* compiled from: AutocompleteViewModel.kt */
-    /* renamed from: com.discord.widgets.chat.input.autocomplete.AutocompleteViewState$CommandBrowser */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.input.autocomplete.AutocompleteViewState$CommandBrowser */
+    /* JADX INFO: compiled from: AutocompleteViewModel.kt */
     public static final /* data */ class CommandBrowser extends AutocompleteViewModel4 {
         private final List<Application> applications;
         private final WidgetChatInputDiscoveryCommandsModel discoverCommands;
@@ -224,7 +230,7 @@ public abstract class AutocompleteViewModel4 {
             return this.applications;
         }
 
-        /* renamed from: component3, reason: from getter */
+        /* JADX INFO: renamed from: component3, reason: from getter */
         public final WidgetChatInputDiscoveryCommandsModel getDiscoverCommands() {
             return this.discoverCommands;
         }
@@ -280,8 +286,8 @@ public abstract class AutocompleteViewModel4 {
         }
     }
 
-    /* compiled from: AutocompleteViewModel.kt */
-    /* renamed from: com.discord.widgets.chat.input.autocomplete.AutocompleteViewState$Hidden */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.input.autocomplete.AutocompleteViewState$Hidden */
+    /* JADX INFO: compiled from: AutocompleteViewModel.kt */
     public static final class Hidden extends AutocompleteViewModel4 {
         public static final Hidden INSTANCE = new Hidden();
 
@@ -290,8 +296,8 @@ public abstract class AutocompleteViewModel4 {
         }
     }
 
-    /* compiled from: AutocompleteViewModel.kt */
-    /* renamed from: com.discord.widgets.chat.input.autocomplete.AutocompleteViewState$LoadingItems */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.input.autocomplete.AutocompleteViewState$LoadingItems */
+    /* JADX INFO: compiled from: AutocompleteViewModel.kt */
     public static final /* data */ class LoadingItems extends AutocompleteViewModel4 {
         private final int numberLoadingItems;
 
@@ -307,7 +313,7 @@ public abstract class AutocompleteViewModel4 {
             return loadingItems.copy(i);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final int getNumberLoadingItems() {
             return this.numberLoadingItems;
         }

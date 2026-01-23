@@ -10,8 +10,8 @@ import com.facebook.drawee.view.SimpleDraweeView;
 import p507d0.p579g0.StringNumberConversions;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ComponentViewUtils.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: ComponentViewUtils.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class ComponentViewUtils {
     public static final ComponentViewUtils INSTANCE = new ComponentViewUtils();
 

@@ -10,11 +10,11 @@ import p001a0.p002a.p003a.C0002b;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ClaimStatus.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: ClaimStatus.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public abstract class ClaimStatus implements Parcelable {
 
-    /* compiled from: ClaimStatus.kt */
+    /* JADX INFO: compiled from: ClaimStatus.kt */
     public static final /* data */ class Claimed extends ClaimStatus {
         public static final Parcelable.Creator<Claimed> CREATOR = new Creator();
         private final String body;
@@ -85,27 +85,27 @@ public abstract class ClaimStatus implements Parcelable {
             return claimed.copy(j2, str4, str5, str6, utcDateTime);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final long getPromoId() {
             return this.promoId;
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final String getCode() {
             return this.code;
         }
 
-        /* renamed from: component3, reason: from getter */
+        /* JADX INFO: renamed from: component3, reason: from getter */
         public final String getBody() {
             return this.body;
         }
 
-        /* renamed from: component4, reason: from getter */
+        /* JADX INFO: renamed from: component4, reason: from getter */
         public final String getLink() {
             return this.link;
         }
 
-        /* renamed from: component5, reason: from getter */
+        /* JADX INFO: renamed from: component5, reason: from getter */
         public final UtcDateTime getRedeemBy() {
             return this.redeemBy;
         }
@@ -192,7 +192,7 @@ public abstract class ClaimStatus implements Parcelable {
         }
     }
 
-    /* compiled from: ClaimStatus.kt */
+    /* JADX INFO: compiled from: ClaimStatus.kt */
     public static final /* data */ class Unclaimed extends ClaimStatus {
         public static final Parcelable.Creator<Unclaimed> CREATOR = new Creator();
         private final UtcDateTime claimBy;
@@ -241,12 +241,12 @@ public abstract class ClaimStatus implements Parcelable {
             return unclaimed.copy(j, utcDateTime);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final long getPromoId() {
             return this.promoId;
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final UtcDateTime getClaimBy() {
             return this.claimBy;
         }

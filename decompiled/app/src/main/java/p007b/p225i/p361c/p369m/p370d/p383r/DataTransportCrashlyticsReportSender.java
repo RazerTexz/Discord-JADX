@@ -5,15 +5,15 @@ import p007b.p225i.p226a.p228b.TransportScheduleCallback;
 import p007b.p225i.p361c.p369m.p370d.p373k.CrashlyticsReportWithSessionId;
 import p007b.p225i.p361c.p369m.p370d.p375m.p376x.CrashlyticsReportJsonTransform8;
 
-/* compiled from: DataTransportCrashlyticsReportSender.java */
-/* renamed from: b.i.c.m.d.r.a, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.c.m.d.r.a, reason: use source file name */
+/* JADX INFO: compiled from: DataTransportCrashlyticsReportSender.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final /* synthetic */ class DataTransportCrashlyticsReportSender implements TransportScheduleCallback {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final TaskCompletionSource f12720a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final CrashlyticsReportWithSessionId f12721b;
 
     public DataTransportCrashlyticsReportSender(TaskCompletionSource taskCompletionSource, CrashlyticsReportWithSessionId crashlyticsReportWithSessionId) {
@@ -22,7 +22,7 @@ public final /* synthetic */ class DataTransportCrashlyticsReportSender implemen
     }
 
     @Override // p007b.p225i.p226a.p228b.TransportScheduleCallback
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public void mo2292a(Exception exc) {
         TaskCompletionSource taskCompletionSource = this.f12720a;
         CrashlyticsReportWithSessionId crashlyticsReportWithSessionId = this.f12721b;

@@ -7,8 +7,8 @@ import android.view.animation.AccelerateDecelerateInterpolator;
 import kotlin.jvm.functions.Function0;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: RingAnimator.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: RingAnimator.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class RingAnimator {
     private final ObjectAnimator fadeAnim;
     private boolean isAnimating;

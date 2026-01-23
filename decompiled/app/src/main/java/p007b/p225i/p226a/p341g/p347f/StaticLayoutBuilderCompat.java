@@ -13,53 +13,53 @@ import androidx.core.util.Preconditions;
 import java.lang.reflect.Constructor;
 import p007b.p100d.p104b.p105a.outline;
 
-/* compiled from: StaticLayoutBuilderCompat.java */
+/* JADX INFO: renamed from: b.i.a.g.f.a, reason: use source file name */
+/* JADX INFO: compiled from: StaticLayoutBuilderCompat.java */
+/* JADX INFO: loaded from: classes3.dex */
 @RestrictTo({RestrictTo.Scope.LIBRARY_GROUP})
-/* renamed from: b.i.a.g.f.a, reason: use source file name */
-/* loaded from: classes3.dex */
 public final class StaticLayoutBuilderCompat {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static boolean f11700a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     @Nullable
     public static Constructor<StaticLayout> f11701b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     @Nullable
     public static Object f11702c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public CharSequence f11703d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final TextPaint f11704e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final int f11705f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public int f11706g;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public boolean f11710k;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public Layout.Alignment f11707h = Layout.Alignment.ALIGN_NORMAL;
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public int f11708i = Integer.MAX_VALUE;
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public boolean f11709j = true;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     @Nullable
     public TextUtils.TruncateAt f11711l = null;
 
-    /* compiled from: StaticLayoutBuilderCompat.java */
-    /* renamed from: b.i.a.g.f.a$a */
+    /* JADX INFO: renamed from: b.i.a.g.f.a$a */
+    /* JADX INFO: compiled from: StaticLayoutBuilderCompat.java */
     public static class a extends Exception {
         /* JADX WARN: Illegal instructions before constructor call */
         public a(Throwable th) {
@@ -76,7 +76,7 @@ public final class StaticLayoutBuilderCompat {
         this.f11706g = charSequence.length();
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public StaticLayout m6116a() throws a {
         if (this.f11703d == null) {
             this.f11703d = "";

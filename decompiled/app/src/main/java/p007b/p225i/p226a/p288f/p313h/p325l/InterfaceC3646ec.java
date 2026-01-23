@@ -7,9 +7,9 @@ import com.google.android.gms.internal.measurement.zzae;
 import java.util.Map;
 import p007b.p225i.p226a.p288f.p311f.InterfaceC3422a;
 
-/* compiled from: com.google.android.gms:play-services-measurement-base@@18.0.0 */
-/* renamed from: b.i.a.f.h.l.ec */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.h.l.ec */
+/* JADX INFO: compiled from: com.google.android.gms:play-services-measurement-base@@18.0.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public interface InterfaceC3646ec extends IInterface {
     void beginAdUnitExposure(String str, long j) throws RemoteException;
 

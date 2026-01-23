@@ -3,42 +3,42 @@ package p637j0.p642l.p644b;
 import androidx.recyclerview.widget.RecyclerView;
 import p658rx.Producer;
 
-/* compiled from: ProducerArbiter.java */
-/* renamed from: j0.l.b.a, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: j0.l.b.a, reason: use source file name */
+/* JADX INFO: compiled from: ProducerArbiter.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class ProducerArbiter implements Producer {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static final Producer f27159j = new a();
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public long f27160k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public Producer f27161l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public boolean f27162m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public long f27163n;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public long f27164o;
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public Producer f27165p;
 
-    /* compiled from: ProducerArbiter.java */
-    /* renamed from: j0.l.b.a$a */
+    /* JADX INFO: renamed from: j0.l.b.a$a */
+    /* JADX INFO: compiled from: ProducerArbiter.java */
     public static class a implements Producer {
         @Override // p658rx.Producer
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public void mo10704j(long j) {
         }
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public void m10795a() {
         while (true) {
             synchronized (this) {
@@ -81,7 +81,7 @@ public final class ProducerArbiter implements Producer {
         }
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public void m10796b(long j) {
         if (j <= 0) {
             throw new IllegalArgumentException("n > 0 required");
@@ -111,7 +111,7 @@ public final class ProducerArbiter implements Producer {
         }
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public void m10797c(Producer producer) {
         synchronized (this) {
             if (this.f27162m) {
@@ -138,7 +138,7 @@ public final class ProducerArbiter implements Producer {
     }
 
     @Override // p658rx.Producer
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public void mo10704j(long j) {
         if (j < 0) {
             throw new IllegalArgumentException("n >= 0 required");

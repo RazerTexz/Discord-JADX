@@ -7,7 +7,7 @@ import java.util.HashMap;
 import java.util.Map;
 import org.json.JSONObject;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class PackageBuilder {
     private static ILogger logger = AdjustFactory.getLogger();
     private ActivityStateCopy activityStateCopy;

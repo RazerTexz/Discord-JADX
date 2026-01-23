@@ -3,16 +3,16 @@ package p507d0.p510c0;
 import java.util.Random;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: PlatformRandom.kt */
-/* renamed from: d0.c0.b, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.c0.b, reason: use source file name */
+/* JADX INFO: compiled from: PlatformRandom.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class PlatformRandom2 extends PlatformRandom {
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final a f22270l = new a();
 
-    /* compiled from: PlatformRandom.kt */
-    /* renamed from: d0.c0.b$a */
+    /* JADX INFO: renamed from: d0.c0.b$a */
+    /* JADX INFO: compiled from: PlatformRandom.kt */
     public static final class a extends ThreadLocal<Random> {
         @Override // java.lang.ThreadLocal
         public Random initialValue() {

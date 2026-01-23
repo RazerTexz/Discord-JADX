@@ -1,7 +1,6 @@
 package com.discord.views.typing;
 
 import android.content.Context;
-import android.content.res.Resources;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import androidx.constraintlayout.widget.ConstraintLayout;
@@ -11,27 +10,27 @@ import p007b.p008a.p062y.p071r0.TypingDots2;
 import p507d0.p580t.Collections2;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: TypingDots.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: TypingDots.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class TypingDots extends ConstraintLayout {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static final /* synthetic */ int f19342j = 0;
 
-    /* renamed from: k, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: k, reason: from kotlin metadata */
     public final TypingDotsViewBinding binding;
 
-    /* renamed from: l, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: l, reason: from kotlin metadata */
     public final int dotsAnimationTimeMs;
 
-    /* renamed from: m, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: m, reason: from kotlin metadata */
     public final long dotsAnimationStaggerTimeMs;
 
-    /* renamed from: n, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: n, reason: from kotlin metadata */
     public boolean isRunning;
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-    public TypingDots(Context context, AttributeSet attributeSet) throws Resources.NotFoundException {
+    public TypingDots(Context context, AttributeSet attributeSet) {
         super(context, attributeSet, 0);
         Intrinsics3.checkNotNullParameter(context, "context");
         LayoutInflater.from(context).inflate(C5419R.layout.typing_dots_view, this);
@@ -49,7 +48,7 @@ public final class TypingDots extends ConstraintLayout {
                     this.binding = typingDotsViewBinding;
                     int integer = getResources().getInteger(C5419R.integer.animation_time_standard);
                     this.dotsAnimationTimeMs = integer;
-                    this.dotsAnimationStaggerTimeMs = (long) (integer / 1.5d);
+                    this.dotsAnimationStaggerTimeMs = (long) (((double) integer) / 1.5d);
                     typingDot3.setOnScaleDownCompleteListener(new TypingDots2(this));
                     return;
                 }
@@ -58,7 +57,7 @@ public final class TypingDots extends ConstraintLayout {
         throw new NullPointerException("Missing required view with ID: ".concat(getResources().getResourceName(i)));
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static /* synthetic */ void m8618b(TypingDots typingDots, boolean z2, int i) {
         if ((i & 1) != 0) {
             z2 = false;
@@ -66,7 +65,7 @@ public final class TypingDots extends ConstraintLayout {
         typingDots.m8619a(z2);
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final void m8619a(boolean isReplay) {
         if (this.isRunning && !isReplay) {
             return;
@@ -80,7 +79,7 @@ public final class TypingDots extends ConstraintLayout {
         this.isRunning = true;
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final void m8620c() {
         TypingDotsViewBinding typingDotsViewBinding = this.binding;
         for (TypingDot typingDot : Collections2.listOf((Object[]) new TypingDot[]{typingDotsViewBinding.f1240b, typingDotsViewBinding.f1241c, typingDotsViewBinding.f1242d})) {

@@ -9,8 +9,8 @@ import java.util.List;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: TrackFeedItemSeenBatch.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: TrackFeedItemSeenBatch.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class TrackFeedItemSeenBatch implements AnalyticsSchema, TrackBase2, TrackGuild2 {
     private TrackBase trackBase;
     private TrackGuild trackGuild;
@@ -21,19 +21,19 @@ public final /* data */ class TrackFeedItemSeenBatch implements AnalyticsSchema,
     private final transient String analyticsSchemaTypeName = "feed_item_seen_batch";
 
     @Override // com.discord.analytics.generated.traits.TrackGuild2
-    /* renamed from: a, reason: from getter */
+    /* JADX INFO: renamed from: a, reason: from getter */
     public TrackGuild getTrackGuild() {
         return this.trackGuild;
     }
 
     @Override // com.discord.analytics.generated.traits.TrackGuild2
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public void mo7508c(TrackGuild trackGuild) {
         this.trackGuild = trackGuild;
     }
 
     @Override // com.discord.api.science.AnalyticsSchema
-    /* renamed from: d, reason: from getter */
+    /* JADX INFO: renamed from: d, reason: from getter */
     public String getAnalyticsSchemaTypeName() {
         return this.analyticsSchemaTypeName;
     }

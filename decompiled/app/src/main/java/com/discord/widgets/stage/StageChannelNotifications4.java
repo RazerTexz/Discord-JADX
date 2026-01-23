@@ -17,10 +17,10 @@ import p637j0.p642l.p643a.OnSubscribeLift;
 import p637j0.p642l.p643a.OperatorOnErrorResumeNextViaFunction4;
 import p658rx.Observable;
 
-/* compiled from: StageChannelNotifications.kt */
+/* JADX INFO: renamed from: com.discord.widgets.stage.StageChannelNotifications$onInvitedToSpeak$1$invokeSuspend$$inlined$let$lambda$1, reason: use source file name */
+/* JADX INFO: compiled from: StageChannelNotifications.kt */
+/* JADX INFO: loaded from: classes2.dex */
 @DebugMetadata(m10084c = "com.discord.widgets.stage.StageChannelNotifications$onInvitedToSpeak$1$bitmap$1$1", m10085f = "StageChannelNotifications.kt", m10086l = {51}, m10087m = "invokeSuspend")
-/* renamed from: com.discord.widgets.stage.StageChannelNotifications$onInvitedToSpeak$1$invokeSuspend$$inlined$let$lambda$1, reason: use source file name */
-/* loaded from: classes2.dex */
 public final class StageChannelNotifications4 extends ContinuationImpl6 implements Function2<CoroutineScope, Continuation<? super Bitmap>, Object> {
     public final /* synthetic */ String $iconUrl$inlined;
     public int label;

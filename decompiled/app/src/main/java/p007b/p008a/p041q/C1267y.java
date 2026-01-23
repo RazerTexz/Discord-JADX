@@ -5,9 +5,9 @@ import kotlin.Unit;
 import kotlin.jvm.functions.Function0;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: RtcConnection.kt */
-/* renamed from: b.a.q.y */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.a.q.y */
+/* JADX INFO: compiled from: RtcConnection.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class C1267y extends Lambda implements Function0<Unit> {
     public final /* synthetic */ Throwable $throwable;
     public final /* synthetic */ RtcConnection this$0;

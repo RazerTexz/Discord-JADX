@@ -27,15 +27,15 @@ import p507d0.p579g0.StringsJVM;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: CommandHeaderViewHolder.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: CommandHeaderViewHolder.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class CommandHeaderViewHolder extends RecyclerView.ViewHolder implements StickyHeaderManager2 {
     private final WidgetChatInputCommandApplicationHeaderItemBinding binding;
     private ApplicationPlaceholder currentItem;
     private final View itemView;
 
-    /* compiled from: CommandHeaderViewHolder.kt */
-    /* renamed from: com.discord.widgets.chat.input.autocomplete.adapter.CommandHeaderViewHolder$bind$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.input.autocomplete.adapter.CommandHeaderViewHolder$bind$1 */
+    /* JADX INFO: compiled from: CommandHeaderViewHolder.kt */
     public static final class C77981 extends Lambda implements Function1<MGImagesBitmap.CloseableBitmaps, Unit> {
         public final /* synthetic */ String $iconUrl;
         public final /* synthetic */ ApplicationPlaceholder $item;
@@ -53,7 +53,7 @@ public final class CommandHeaderViewHolder extends RecyclerView.ViewHolder imple
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(MGImagesBitmap.CloseableBitmaps closeableBitmaps) {
             Application application;
             Intrinsics3.checkNotNullParameter(closeableBitmaps, "closeableBitmaps");
@@ -64,8 +64,8 @@ public final class CommandHeaderViewHolder extends RecyclerView.ViewHolder imple
         }
     }
 
-    /* compiled from: CommandHeaderViewHolder.kt */
-    /* renamed from: com.discord.widgets.chat.input.autocomplete.adapter.CommandHeaderViewHolder$bind$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.input.autocomplete.adapter.CommandHeaderViewHolder$bind$2 */
+    /* JADX INFO: compiled from: CommandHeaderViewHolder.kt */
     public static final class C77992 extends Lambda implements Function1<Error, Unit> {
         public final /* synthetic */ int $tint;
 
@@ -81,7 +81,7 @@ public final class CommandHeaderViewHolder extends RecyclerView.ViewHolder imple
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Error error) {
             Intrinsics3.checkNotNullParameter(error, "<anonymous parameter 0>");
             ImageView imageView = CommandHeaderViewHolder.access$getBinding$p(CommandHeaderViewHolder.this).f16115b;

@@ -15,19 +15,19 @@ import java.util.concurrent.TimeUnit;
 import java.util.concurrent.TimeoutException;
 import p007b.p225i.p226a.p288f.p299e.p308o.C3404f;
 
-/* compiled from: Utils.java */
-/* renamed from: b.i.c.m.d.k.h1, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.c.m.d.k.h1, reason: use source file name */
+/* JADX INFO: compiled from: Utils.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class Utils3 {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final FilenameFilter f12313a = new a();
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static final ExecutorService f12314b = C3404f.m4319n("awaitEvenIfOnMainThread task continuation executor");
 
-    /* compiled from: Utils.java */
-    /* renamed from: b.i.c.m.d.k.h1$a */
+    /* JADX INFO: renamed from: b.i.c.m.d.k.h1$a */
+    /* JADX INFO: compiled from: Utils.java */
     public class a implements FilenameFilter {
         @Override // java.io.FilenameFilter
         public boolean accept(File file, String str) {
@@ -35,7 +35,7 @@ public final class Utils3 {
         }
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static <T> T m6432a(Task<T> task) throws InterruptedException, TimeoutException {
         CountDownLatch countDownLatch = new CountDownLatch(1);
         task.mo6014i(f12314b, new Utils2(countDownLatch));
@@ -56,7 +56,7 @@ public final class Utils3 {
         throw new TimeoutException();
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static int m6433b(File file, FilenameFilter filenameFilter, int i, Comparator<File> comparator) {
         File[] fileArrListFiles = file.listFiles(filenameFilter);
         if (fileArrListFiles == null) {
@@ -65,7 +65,7 @@ public final class Utils3 {
         return m6434c(Arrays.asList(fileArrListFiles), i, comparator);
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public static int m6434c(List<File> list, int i, Comparator<File> comparator) {
         int size = list.size();
         Collections.sort(list, comparator);
@@ -79,7 +79,7 @@ public final class Utils3 {
         return size;
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public static void m6435d(File file) {
         if (file.isDirectory()) {
             for (File file2 : file.listFiles()) {

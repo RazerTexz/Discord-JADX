@@ -9,8 +9,8 @@ import java.io.Serializable;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: User.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: User.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class User implements Serializable {
     private final String analyticsToken;
     private final Integer approximateGuildCount;
@@ -82,27 +82,27 @@ public final /* data */ class User implements Serializable {
         this.bannerColor = null;
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final NullSerializable<String> m8288a() {
         return this.avatar;
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final NullSerializable<String> m8289b() {
         return this.banner;
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final NullSerializable<String> m8290c() {
         return this.bannerColor;
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final NullSerializable<String> m8291d() {
         return this.bio;
     }
 
-    /* renamed from: e, reason: from getter */
+    /* JADX INFO: renamed from: e, reason: from getter */
     public final Boolean getBot() {
         return this.bot;
     }
@@ -118,12 +118,12 @@ public final /* data */ class User implements Serializable {
         return this.id == user.id && Intrinsics3.areEqual(this.username, user.username) && Intrinsics3.areEqual(this.avatar, user.avatar) && Intrinsics3.areEqual(this.banner, user.banner) && Intrinsics3.areEqual(this.discriminator, user.discriminator) && Intrinsics3.areEqual(this.publicFlags, user.publicFlags) && Intrinsics3.areEqual(this.flags, user.flags) && Intrinsics3.areEqual(this.bot, user.bot) && Intrinsics3.areEqual(this.system, user.system) && Intrinsics3.areEqual(this.token, user.token) && Intrinsics3.areEqual(this.email, user.email) && Intrinsics3.areEqual(this.verified, user.verified) && Intrinsics3.areEqual(this.locale, user.locale) && Intrinsics3.areEqual(this.nsfwAllowed, user.nsfwAllowed) && Intrinsics3.areEqual(this.mfaEnabled, user.mfaEnabled) && Intrinsics3.areEqual(this.phone, user.phone) && Intrinsics3.areEqual(this.analyticsToken, user.analyticsToken) && Intrinsics3.areEqual(this.premiumType, user.premiumType) && Intrinsics3.areEqual(this.approximateGuildCount, user.approximateGuildCount) && Intrinsics3.areEqual(this.member, user.member) && Intrinsics3.areEqual(this.bio, user.bio) && Intrinsics3.areEqual(this.bannerColor, user.bannerColor);
     }
 
-    /* renamed from: f, reason: from getter */
+    /* JADX INFO: renamed from: f, reason: from getter */
     public final String getDiscriminator() {
         return this.discriminator;
     }
 
-    /* renamed from: g, reason: from getter */
+    /* JADX INFO: renamed from: g, reason: from getter */
     public final String getEmail() {
         return this.email;
     }
@@ -136,7 +136,7 @@ public final /* data */ class User implements Serializable {
         return this.username;
     }
 
-    /* renamed from: h, reason: from getter */
+    /* JADX INFO: renamed from: h, reason: from getter */
     public final Integer getFlags() {
         return this.flags;
     }
@@ -188,47 +188,47 @@ public final /* data */ class User implements Serializable {
         return iHashCode20 + (nullSerializable4 != null ? nullSerializable4.hashCode() : 0);
     }
 
-    /* renamed from: i, reason: from getter */
+    /* JADX INFO: renamed from: i, reason: from getter */
     public final GuildMember getMember() {
         return this.member;
     }
 
-    /* renamed from: j, reason: from getter */
+    /* JADX INFO: renamed from: j, reason: from getter */
     public final Boolean getMfaEnabled() {
         return this.mfaEnabled;
     }
 
-    /* renamed from: k, reason: from getter */
+    /* JADX INFO: renamed from: k, reason: from getter */
     public final NsfwAllowance getNsfwAllowed() {
         return this.nsfwAllowed;
     }
 
-    /* renamed from: l, reason: from getter */
+    /* JADX INFO: renamed from: l, reason: from getter */
     public final Phone getPhone() {
         return this.phone;
     }
 
-    /* renamed from: m, reason: from getter */
+    /* JADX INFO: renamed from: m, reason: from getter */
     public final PremiumTier getPremiumType() {
         return this.premiumType;
     }
 
-    /* renamed from: n, reason: from getter */
+    /* JADX INFO: renamed from: n, reason: from getter */
     public final Integer getPublicFlags() {
         return this.publicFlags;
     }
 
-    /* renamed from: o, reason: from getter */
+    /* JADX INFO: renamed from: o, reason: from getter */
     public final Boolean getSystem() {
         return this.system;
     }
 
-    /* renamed from: p, reason: from getter */
+    /* JADX INFO: renamed from: p, reason: from getter */
     public final String getToken() {
         return this.token;
     }
 
-    /* renamed from: q, reason: from getter */
+    /* JADX INFO: renamed from: q, reason: from getter */
     public final Boolean getVerified() {
         return this.verified;
     }

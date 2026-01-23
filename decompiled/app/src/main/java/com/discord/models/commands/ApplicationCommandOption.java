@@ -9,8 +9,8 @@ import p007b.p100d.p104b.p105a.outline;
 import p507d0.p580t.Collections2;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ApplicationCommandOption.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: ApplicationCommandOption.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class ApplicationCommandOption {
     private final boolean autocomplete;
     private final List<Integer> channelTypes;
@@ -42,51 +42,52 @@ public final /* data */ class ApplicationCommandOption {
         this.maxValue = number2;
     }
 
+    /* JADX WARN: Multi-variable type inference failed */
     public static /* synthetic */ ApplicationCommandOption copy$default(ApplicationCommandOption applicationCommandOption, ApplicationCommandType applicationCommandType, String str, String str2, Integer num, boolean z2, boolean z3, List list, List list2, List list3, boolean z4, Number number, Number number2, int i, Object obj) {
         return applicationCommandOption.copy((i & 1) != 0 ? applicationCommandOption.type : applicationCommandType, (i & 2) != 0 ? applicationCommandOption.name : str, (i & 4) != 0 ? applicationCommandOption.description : str2, (i & 8) != 0 ? applicationCommandOption.descriptionRes : num, (i & 16) != 0 ? applicationCommandOption.required : z2, (i & 32) != 0 ? applicationCommandOption.default : z3, (i & 64) != 0 ? applicationCommandOption.channelTypes : list, (i & 128) != 0 ? applicationCommandOption.choices : list2, (i & 256) != 0 ? applicationCommandOption.options : list3, (i & 512) != 0 ? applicationCommandOption.autocomplete : z4, (i & 1024) != 0 ? applicationCommandOption.minValue : number, (i & 2048) != 0 ? applicationCommandOption.maxValue : number2);
     }
 
-    /* renamed from: component1, reason: from getter */
+    /* JADX INFO: renamed from: component1, reason: from getter */
     public final ApplicationCommandType getType() {
         return this.type;
     }
 
-    /* renamed from: component10, reason: from getter */
+    /* JADX INFO: renamed from: component10, reason: from getter */
     public final boolean getAutocomplete() {
         return this.autocomplete;
     }
 
-    /* renamed from: component11, reason: from getter */
+    /* JADX INFO: renamed from: component11, reason: from getter */
     public final Number getMinValue() {
         return this.minValue;
     }
 
-    /* renamed from: component12, reason: from getter */
+    /* JADX INFO: renamed from: component12, reason: from getter */
     public final Number getMaxValue() {
         return this.maxValue;
     }
 
-    /* renamed from: component2, reason: from getter */
+    /* JADX INFO: renamed from: component2, reason: from getter */
     public final String getName() {
         return this.name;
     }
 
-    /* renamed from: component3, reason: from getter */
+    /* JADX INFO: renamed from: component3, reason: from getter */
     public final String getDescription() {
         return this.description;
     }
 
-    /* renamed from: component4, reason: from getter */
+    /* JADX INFO: renamed from: component4, reason: from getter */
     public final Integer getDescriptionRes() {
         return this.descriptionRes;
     }
 
-    /* renamed from: component5, reason: from getter */
+    /* JADX INFO: renamed from: component5, reason: from getter */
     public final boolean getRequired() {
         return this.required;
     }
 
-    /* renamed from: component6, reason: from getter */
+    /* JADX INFO: renamed from: component6, reason: from getter */
     public final boolean getDefault() {
         return this.default;
     }
@@ -169,6 +170,15 @@ public final /* data */ class ApplicationCommandOption {
     }
 
     /* JADX WARN: Multi-variable type inference failed */
+    /* JADX WARN: Type inference failed for: r2v10, types: [int] */
+    /* JADX WARN: Type inference failed for: r2v12, types: [int] */
+    /* JADX WARN: Type inference failed for: r2v31 */
+    /* JADX WARN: Type inference failed for: r2v32 */
+    /* JADX WARN: Type inference failed for: r2v36 */
+    /* JADX WARN: Type inference failed for: r2v37 */
+    /* JADX WARN: Type inference failed for: r3v0 */
+    /* JADX WARN: Type inference failed for: r3v1, types: [int] */
+    /* JADX WARN: Type inference failed for: r3v2 */
     public int hashCode() {
         ApplicationCommandType applicationCommandType = this.type;
         int iHashCode = (applicationCommandType != null ? applicationCommandType.hashCode() : 0) * 31;
@@ -179,27 +189,27 @@ public final /* data */ class ApplicationCommandOption {
         Integer num = this.descriptionRes;
         int iHashCode4 = (iHashCode3 + (num != null ? num.hashCode() : 0)) * 31;
         boolean z2 = this.required;
-        int i = z2;
-        if (z2 != 0) {
-            i = 1;
+        ?? r2 = z2;
+        if (z2) {
+            r2 = 1;
         }
-        int i2 = (iHashCode4 + i) * 31;
+        int i = (iHashCode4 + r2) * 31;
         boolean z3 = this.default;
-        int i3 = z3;
-        if (z3 != 0) {
-            i3 = 1;
+        ?? r22 = z3;
+        if (z3) {
+            r22 = 1;
         }
-        int i4 = (i2 + i3) * 31;
+        int i2 = (i + r22) * 31;
         List<Integer> list = this.channelTypes;
-        int iHashCode5 = (i4 + (list != null ? list.hashCode() : 0)) * 31;
+        int iHashCode5 = (i2 + (list != null ? list.hashCode() : 0)) * 31;
         List<CommandChoice> list2 = this.choices;
         int iHashCode6 = (iHashCode5 + (list2 != null ? list2.hashCode() : 0)) * 31;
         List<ApplicationCommandOption> list3 = this.options;
         int iHashCode7 = (iHashCode6 + (list3 != null ? list3.hashCode() : 0)) * 31;
         boolean z4 = this.autocomplete;
-        int i5 = (iHashCode7 + (z4 ? 1 : z4 ? 1 : 0)) * 31;
+        int i3 = (iHashCode7 + (z4 ? 1 : z4)) * 31;
         Number number = this.minValue;
-        int iHashCode8 = (i5 + (number != null ? number.hashCode() : 0)) * 31;
+        int iHashCode8 = (i3 + (number != null ? number.hashCode() : 0)) * 31;
         Number number2 = this.maxValue;
         return iHashCode8 + (number2 != null ? number2.hashCode() : 0);
     }

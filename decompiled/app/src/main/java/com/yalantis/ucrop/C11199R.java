@@ -2,11 +2,11 @@ package com.yalantis.ucrop;
 
 import com.discord.C5419R;
 
-/* renamed from: com.yalantis.ucrop.R */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: com.yalantis.ucrop.R */
+/* JADX INFO: loaded from: classes3.dex */
 public final class C11199R {
 
-    /* renamed from: com.yalantis.ucrop.R$a */
+    /* JADX INFO: renamed from: com.yalantis.ucrop.R$a */
     public static final class a {
         public static final int abc_background_cache_hint_selector_material_dark = 2131099648;
         public static final int abc_background_cache_hint_selector_material_light = 2131099649;
@@ -121,7 +121,7 @@ public final class C11199R {
         }
     }
 
-    /* renamed from: com.yalantis.ucrop.R$b */
+    /* JADX INFO: renamed from: com.yalantis.ucrop.R$b */
     public static final class b {
         public static final int abc_action_bar_content_inset_material = 2131165184;
         public static final int abc_action_bar_content_inset_with_nav = 2131165185;
@@ -267,7 +267,7 @@ public final class C11199R {
         }
     }
 
-    /* renamed from: com.yalantis.ucrop.R$c */
+    /* JADX INFO: renamed from: com.yalantis.ucrop.R$c */
     public static final class c {
         public static final int abc_ab_share_pack_mtrl_alpha = 2131230859;
         public static final int abc_action_bar_item_background_material = 2131230860;
@@ -401,7 +401,7 @@ public final class C11199R {
         }
     }
 
-    /* renamed from: com.yalantis.ucrop.R$d */
+    /* JADX INFO: renamed from: com.yalantis.ucrop.R$d */
     public static final class d {
         public static final int accessibility_action_clickable_span = 2131361830;
         public static final int accessibility_custom_action_0 = 2131361831;
@@ -508,7 +508,7 @@ public final class C11199R {
         public static final int notification_main_column_container = 2131364559;
         public static final int off = 2131364616;
 
-        /* renamed from: on */
+        /* JADX INFO: renamed from: on */
         public static final int f22165on = 2131364620;
         public static final int parentPanel = 2131364665;
         public static final int parent_matrix = 2131364667;
@@ -581,7 +581,7 @@ public final class C11199R {
         public static final int unchecked = 2131365926;
         public static final int uniform = 2131365931;
 
-        /* renamed from: up */
+        /* JADX INFO: renamed from: up */
         public static final int f22166up = 2131365940;
         public static final int view_overlay = 2131366114;
         public static final int wrap_content = 2131366286;
@@ -594,7 +594,7 @@ public final class C11199R {
         }
     }
 
-    /* renamed from: com.yalantis.ucrop.R$e */
+    /* JADX INFO: renamed from: com.yalantis.ucrop.R$e */
     public static final class e {
         public static final int abc_action_bar_title_item = 2131558400;
         public static final int abc_action_bar_up_container = 2131558401;
@@ -647,7 +647,7 @@ public final class C11199R {
         }
     }
 
-    /* renamed from: com.yalantis.ucrop.R$f */
+    /* JADX INFO: renamed from: com.yalantis.ucrop.R$f */
     public static final class f {
         public static final int ucrop_menu_activity = 2131623971;
 
@@ -655,7 +655,7 @@ public final class C11199R {
         }
     }
 
-    /* renamed from: com.yalantis.ucrop.R$g */
+    /* JADX INFO: renamed from: com.yalantis.ucrop.R$g */
     public static final class g {
         public static final int abc_action_bar_home_description = 2131886099;
         public static final int abc_action_bar_up_description = 2131886100;
@@ -699,7 +699,7 @@ public final class C11199R {
         }
     }
 
-    /* renamed from: com.yalantis.ucrop.R$h */
+    /* JADX INFO: renamed from: com.yalantis.ucrop.R$h */
     public static final class h {
         public static final int ActionBarLayout_android_layout_gravity = 0;
         public static final int ActionBar_background = 0;

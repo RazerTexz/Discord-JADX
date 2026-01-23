@@ -3,8 +3,8 @@ package androidx.core.util;
 import androidx.annotation.RestrictTo;
 import java.io.PrintWriter;
 
+/* JADX INFO: loaded from: classes.dex */
 @RestrictTo({RestrictTo.Scope.LIBRARY_GROUP_PREFIX})
-/* loaded from: classes.dex */
 public final class TimeUtils {
 
     @RestrictTo({RestrictTo.Scope.LIBRARY_GROUP_PREFIX})

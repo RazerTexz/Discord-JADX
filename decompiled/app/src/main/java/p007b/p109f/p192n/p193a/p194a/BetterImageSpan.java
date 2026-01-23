@@ -7,27 +7,27 @@ import android.graphics.drawable.Drawable;
 import android.text.style.ReplacementSpan;
 import androidx.annotation.Nullable;
 
-/* compiled from: BetterImageSpan.java */
-/* renamed from: b.f.n.a.a.a, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.f.n.a.a.a, reason: use source file name */
+/* JADX INFO: compiled from: BetterImageSpan.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class BetterImageSpan extends ReplacementSpan {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public int f4359j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public int f4360k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public Rect f4361l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public final int f4362m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public final Paint.FontMetricsInt f4363n = new Paint.FontMetricsInt();
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public final Drawable f4364o;
 
     public BetterImageSpan(Drawable drawable, int i) {
@@ -36,7 +36,7 @@ public class BetterImageSpan extends ReplacementSpan {
         m1592b();
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final int m1591a(Paint.FontMetricsInt fontMetricsInt) {
         int i = this.f4362m;
         if (i == 0) {
@@ -50,7 +50,7 @@ public class BetterImageSpan extends ReplacementSpan {
         return (((i2 - i3) - this.f4360k) / 2) + i3;
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public void m1592b() {
         Rect bounds = this.f4364o.getBounds();
         this.f4361l = bounds;

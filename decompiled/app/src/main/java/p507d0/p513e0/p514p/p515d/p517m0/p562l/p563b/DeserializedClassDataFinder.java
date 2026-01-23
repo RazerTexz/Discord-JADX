@@ -7,12 +7,12 @@ import p507d0.p513e0.p514p.p515d.p517m0.p548g.ClassId;
 import p507d0.p513e0.p514p.p515d.p517m0.p548g.FqName;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: DeserializedClassDataFinder.kt */
-/* renamed from: d0.e0.p.d.m0.l.b.m, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.l.b.m, reason: use source file name */
+/* JADX INFO: compiled from: DeserializedClassDataFinder.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class DeserializedClassDataFinder implements ClassDataFinder {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final PackageFragmentProvider f24668a;
 
     public DeserializedClassDataFinder(PackageFragmentProvider packageFragmentProvider) {

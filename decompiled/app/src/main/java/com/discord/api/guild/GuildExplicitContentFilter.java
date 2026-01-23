@@ -1,8 +1,8 @@
 package com.discord.api.guild;
 
 
-/* compiled from: GuildExplicitContentFilter.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: GuildExplicitContentFilter.kt */
+/* JADX INFO: loaded from: classes.dex */
 public enum GuildExplicitContentFilter {
     NONE(0),
     SOME(1),

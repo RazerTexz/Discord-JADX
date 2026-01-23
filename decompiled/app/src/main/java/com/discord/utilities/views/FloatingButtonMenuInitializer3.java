@@ -7,9 +7,9 @@ import android.view.View;
 import com.discord.utilities.views.FloatingButtonMenuInitializer;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: FloatingButtonMenuInitializer.kt */
-/* renamed from: com.discord.utilities.views.FloatingButtonMenuInitializer$animatorFactorySlideUp$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.utilities.views.FloatingButtonMenuInitializer$animatorFactorySlideUp$1, reason: use source file name */
+/* JADX INFO: compiled from: FloatingButtonMenuInitializer.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class FloatingButtonMenuInitializer3 implements FloatingButtonMenuInitializer.AnimatorFactory<View> {
     @Override // com.discord.utilities.views.FloatingButtonMenuInitializer.AnimatorFactory
     public Animator createAnimator(View view) {

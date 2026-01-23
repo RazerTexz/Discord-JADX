@@ -41,11 +41,11 @@ import p658rx.Observable;
 import p658rx.Subscription;
 import p658rx.subjects.PublishSubject;
 
-/* compiled from: WidgetStageRaisedHandsBottomSheetViewModel.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetStageRaisedHandsBottomSheetViewModel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetStageRaisedHandsBottomSheetViewModel extends AppViewModel<ViewState> {
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private final long channelId;
     private final StoreChannels channelsStore;
@@ -54,8 +54,8 @@ public final class WidgetStageRaisedHandsBottomSheetViewModel extends AppViewMod
     private final StoreUser usersStore;
     private final StoreVoiceParticipants voiceParticipants;
 
-    /* compiled from: WidgetStageRaisedHandsBottomSheetViewModel.kt */
-    /* renamed from: com.discord.widgets.stage.sheet.WidgetStageRaisedHandsBottomSheetViewModel$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.stage.sheet.WidgetStageRaisedHandsBottomSheetViewModel$1 */
+    /* JADX INFO: compiled from: WidgetStageRaisedHandsBottomSheetViewModel.kt */
     public static final class C100411 extends Lambda implements Function1<StoreState, Unit> {
         public C100411() {
             super(1);
@@ -67,14 +67,14 @@ public final class WidgetStageRaisedHandsBottomSheetViewModel extends AppViewMod
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(StoreState storeState) {
             Intrinsics3.checkNotNullParameter(storeState, "storeState");
             WidgetStageRaisedHandsBottomSheetViewModel.access$handleStoreState(WidgetStageRaisedHandsBottomSheetViewModel.this, storeState);
         }
     }
 
-    /* compiled from: WidgetStageRaisedHandsBottomSheetViewModel.kt */
+    /* JADX INFO: compiled from: WidgetStageRaisedHandsBottomSheetViewModel.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -96,10 +96,10 @@ public final class WidgetStageRaisedHandsBottomSheetViewModel extends AppViewMod
         }
     }
 
-    /* compiled from: WidgetStageRaisedHandsBottomSheetViewModel.kt */
+    /* JADX INFO: compiled from: WidgetStageRaisedHandsBottomSheetViewModel.kt */
     public static abstract class Event {
 
-        /* compiled from: WidgetStageRaisedHandsBottomSheetViewModel.kt */
+        /* JADX INFO: compiled from: WidgetStageRaisedHandsBottomSheetViewModel.kt */
         public static final class Dismiss extends Event {
             public static final Dismiss INSTANCE = new Dismiss();
 
@@ -108,7 +108,7 @@ public final class WidgetStageRaisedHandsBottomSheetViewModel extends AppViewMod
             }
         }
 
-        /* compiled from: WidgetStageRaisedHandsBottomSheetViewModel.kt */
+        /* JADX INFO: compiled from: WidgetStageRaisedHandsBottomSheetViewModel.kt */
         public static final /* data */ class Error extends Event {
             private final com.discord.utilities.error.Error error;
 
@@ -126,7 +126,7 @@ public final class WidgetStageRaisedHandsBottomSheetViewModel extends AppViewMod
                 return error.copy(error2);
             }
 
-            /* renamed from: component1, reason: from getter */
+            /* JADX INFO: renamed from: component1, reason: from getter */
             public final com.discord.utilities.error.Error getError() {
                 return this.error;
             }
@@ -171,7 +171,7 @@ public final class WidgetStageRaisedHandsBottomSheetViewModel extends AppViewMod
         }
     }
 
-    /* compiled from: WidgetStageRaisedHandsBottomSheetViewModel.kt */
+    /* JADX INFO: compiled from: WidgetStageRaisedHandsBottomSheetViewModel.kt */
     public static final /* data */ class StoreState {
         private final Channel channel;
         private final int myStageRoles;
@@ -187,7 +187,7 @@ public final class WidgetStageRaisedHandsBottomSheetViewModel extends AppViewMod
         }
 
         /* JADX WARN: Multi-variable type inference failed */
-        /* renamed from: copy-FZjiw-U$default, reason: not valid java name */
+        /* JADX INFO: renamed from: copy-FZjiw-U$default, reason: not valid java name */
         public static /* synthetic */ StoreState m11424copyFZjiwU$default(StoreState storeState, Channel channel, Map map, List list, int i, int i2, Object obj) {
             if ((i2 & 1) != 0) {
                 channel = storeState.channel;
@@ -204,7 +204,7 @@ public final class WidgetStageRaisedHandsBottomSheetViewModel extends AppViewMod
             return storeState.m11426copyFZjiwU(channel, map, list, i);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final Channel getChannel() {
             return this.channel;
         }
@@ -217,12 +217,12 @@ public final class WidgetStageRaisedHandsBottomSheetViewModel extends AppViewMod
             return this.raisedHandsParticipants;
         }
 
-        /* renamed from: component4-1LxfuJo, reason: not valid java name and from getter */
+        /* JADX INFO: renamed from: component4-1LxfuJo, reason: not valid java name and from getter */
         public final int getMyStageRoles() {
             return this.myStageRoles;
         }
 
-        /* renamed from: copy-FZjiw-U, reason: not valid java name */
+        /* JADX INFO: renamed from: copy-FZjiw-U, reason: not valid java name */
         public final StoreState m11426copyFZjiwU(Channel channel, Map<Long, GuildRole> roles, List<? extends WidgetStageRaisedHandsBottomSheetAdapter.ListItem> raisedHandsParticipants, int myStageRoles) {
             Intrinsics3.checkNotNullParameter(channel, "channel");
             Intrinsics3.checkNotNullParameter(roles, "roles");
@@ -245,7 +245,7 @@ public final class WidgetStageRaisedHandsBottomSheetViewModel extends AppViewMod
             return this.channel;
         }
 
-        /* renamed from: getMyStageRoles-1LxfuJo, reason: not valid java name */
+        /* JADX INFO: renamed from: getMyStageRoles-1LxfuJo, reason: not valid java name */
         public final int m11427getMyStageRoles1LxfuJo() {
             return this.myStageRoles;
         }
@@ -285,10 +285,10 @@ public final class WidgetStageRaisedHandsBottomSheetViewModel extends AppViewMod
         }
     }
 
-    /* compiled from: WidgetStageRaisedHandsBottomSheetViewModel.kt */
+    /* JADX INFO: compiled from: WidgetStageRaisedHandsBottomSheetViewModel.kt */
     public static abstract class ViewState {
 
-        /* compiled from: WidgetStageRaisedHandsBottomSheetViewModel.kt */
+        /* JADX INFO: compiled from: WidgetStageRaisedHandsBottomSheetViewModel.kt */
         public static final class Invalid extends ViewState {
             public static final Invalid INSTANCE = new Invalid();
 
@@ -297,7 +297,7 @@ public final class WidgetStageRaisedHandsBottomSheetViewModel extends AppViewMod
             }
         }
 
-        /* compiled from: WidgetStageRaisedHandsBottomSheetViewModel.kt */
+        /* JADX INFO: compiled from: WidgetStageRaisedHandsBottomSheetViewModel.kt */
         public static final /* data */ class Loaded extends ViewState {
             private final Channel channel;
             private final boolean isEmpty;
@@ -311,6 +311,7 @@ public final class WidgetStageRaisedHandsBottomSheetViewModel extends AppViewMod
                 this(channel, list, z2, z3, (i & 16) != 0 ? false : z4, (i & 32) != 0 ? false : z5);
             }
 
+            /* JADX WARN: Multi-variable type inference failed */
             public static /* synthetic */ Loaded copy$default(Loaded loaded, Channel channel, List list, boolean z2, boolean z3, boolean z4, boolean z5, int i, Object obj) {
                 if ((i & 1) != 0) {
                     channel = loaded.channel;
@@ -337,7 +338,7 @@ public final class WidgetStageRaisedHandsBottomSheetViewModel extends AppViewMod
                 return loaded.copy(channel, list2, z6, z7, z8, z5);
             }
 
-            /* renamed from: component1, reason: from getter */
+            /* JADX INFO: renamed from: component1, reason: from getter */
             public final Channel getChannel() {
                 return this.channel;
             }
@@ -346,22 +347,22 @@ public final class WidgetStageRaisedHandsBottomSheetViewModel extends AppViewMod
                 return this.raisedHandsParticipants;
             }
 
-            /* renamed from: component3, reason: from getter */
+            /* JADX INFO: renamed from: component3, reason: from getter */
             public final boolean getIsRequestToSpeakEnabled() {
                 return this.isRequestToSpeakEnabled;
             }
 
-            /* renamed from: component4, reason: from getter */
+            /* JADX INFO: renamed from: component4, reason: from getter */
             public final boolean getIsSpeaker() {
                 return this.isSpeaker;
             }
 
-            /* renamed from: component5, reason: from getter */
+            /* JADX INFO: renamed from: component5, reason: from getter */
             public final boolean getIsUpdatingRequestToSpeakPermissions() {
                 return this.isUpdatingRequestToSpeakPermissions;
             }
 
-            /* renamed from: component6, reason: from getter */
+            /* JADX INFO: renamed from: component6, reason: from getter */
             public final boolean getIsTogglingSpeakingState() {
                 return this.isTogglingSpeakingState;
             }
@@ -392,34 +393,46 @@ public final class WidgetStageRaisedHandsBottomSheetViewModel extends AppViewMod
             }
 
             /* JADX WARN: Multi-variable type inference failed */
+            /* JADX WARN: Type inference failed for: r1v10 */
+            /* JADX WARN: Type inference failed for: r1v11 */
+            /* JADX WARN: Type inference failed for: r1v13 */
+            /* JADX WARN: Type inference failed for: r1v14 */
+            /* JADX WARN: Type inference failed for: r1v15 */
+            /* JADX WARN: Type inference failed for: r1v3, types: [int] */
+            /* JADX WARN: Type inference failed for: r1v5, types: [int] */
+            /* JADX WARN: Type inference failed for: r1v7, types: [int] */
+            /* JADX WARN: Type inference failed for: r1v9 */
+            /* JADX WARN: Type inference failed for: r2v1 */
+            /* JADX WARN: Type inference failed for: r2v2, types: [int] */
+            /* JADX WARN: Type inference failed for: r2v3 */
             public int hashCode() {
                 Channel channel = this.channel;
                 int iHashCode = (channel != null ? channel.hashCode() : 0) * 31;
                 List<WidgetStageRaisedHandsBottomSheetAdapter.ListItem> list = this.raisedHandsParticipants;
                 int iHashCode2 = (iHashCode + (list != null ? list.hashCode() : 0)) * 31;
                 boolean z2 = this.isRequestToSpeakEnabled;
-                int i = z2;
-                if (z2 != 0) {
-                    i = 1;
+                ?? r1 = z2;
+                if (z2) {
+                    r1 = 1;
                 }
-                int i2 = (iHashCode2 + i) * 31;
+                int i = (iHashCode2 + r1) * 31;
                 boolean z3 = this.isSpeaker;
-                int i3 = z3;
-                if (z3 != 0) {
-                    i3 = 1;
+                ?? r12 = z3;
+                if (z3) {
+                    r12 = 1;
                 }
-                int i4 = (i2 + i3) * 31;
+                int i2 = (i + r12) * 31;
                 boolean z4 = this.isUpdatingRequestToSpeakPermissions;
-                int i5 = z4;
-                if (z4 != 0) {
-                    i5 = 1;
+                ?? r13 = z4;
+                if (z4) {
+                    r13 = 1;
                 }
-                int i6 = (i4 + i5) * 31;
+                int i3 = (i2 + r13) * 31;
                 boolean z5 = this.isTogglingSpeakingState;
-                return i6 + (z5 ? 1 : z5 ? 1 : 0);
+                return i3 + (z5 ? 1 : z5);
             }
 
-            /* renamed from: isEmpty, reason: from getter */
+            /* JADX INFO: renamed from: isEmpty, reason: from getter */
             public final boolean getIsEmpty() {
                 return this.isEmpty;
             }
@@ -479,8 +492,8 @@ public final class WidgetStageRaisedHandsBottomSheetViewModel extends AppViewMod
         }
     }
 
-    /* compiled from: WidgetStageRaisedHandsBottomSheetViewModel.kt */
-    /* renamed from: com.discord.widgets.stage.sheet.WidgetStageRaisedHandsBottomSheetViewModel$dismissRequestToSpeak$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.stage.sheet.WidgetStageRaisedHandsBottomSheetViewModel$dismissRequestToSpeak$1 */
+    /* JADX INFO: compiled from: WidgetStageRaisedHandsBottomSheetViewModel.kt */
     public static final class C100441 extends Lambda implements Function1<Void, Unit> {
         public static final C100441 INSTANCE = new C100441();
 
@@ -494,13 +507,13 @@ public final class WidgetStageRaisedHandsBottomSheetViewModel extends AppViewMod
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Void r1) {
         }
     }
 
-    /* compiled from: WidgetStageRaisedHandsBottomSheetViewModel.kt */
-    /* renamed from: com.discord.widgets.stage.sheet.WidgetStageRaisedHandsBottomSheetViewModel$inviteToSpeak$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.stage.sheet.WidgetStageRaisedHandsBottomSheetViewModel$inviteToSpeak$1 */
+    /* JADX INFO: compiled from: WidgetStageRaisedHandsBottomSheetViewModel.kt */
     public static final /* synthetic */ class C100451 extends FunctionReferenceImpl implements Function1<Error, Unit> {
         public C100451(WidgetStageRaisedHandsBottomSheetViewModel widgetStageRaisedHandsBottomSheetViewModel) {
             super(1, widgetStageRaisedHandsBottomSheetViewModel, WidgetStageRaisedHandsBottomSheetViewModel.class, "emitError", "emitError(Lcom/discord/utilities/error/Error;)V", 0);
@@ -512,15 +525,15 @@ public final class WidgetStageRaisedHandsBottomSheetViewModel extends AppViewMod
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Error error) {
             Intrinsics3.checkNotNullParameter(error, "p1");
             WidgetStageRaisedHandsBottomSheetViewModel.access$emitError((WidgetStageRaisedHandsBottomSheetViewModel) this.receiver, error);
         }
     }
 
-    /* compiled from: WidgetStageRaisedHandsBottomSheetViewModel.kt */
-    /* renamed from: com.discord.widgets.stage.sheet.WidgetStageRaisedHandsBottomSheetViewModel$inviteToSpeak$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.stage.sheet.WidgetStageRaisedHandsBottomSheetViewModel$inviteToSpeak$2 */
+    /* JADX INFO: compiled from: WidgetStageRaisedHandsBottomSheetViewModel.kt */
     public static final class C100462 extends Lambda implements Function1<Void, Unit> {
         public static final C100462 INSTANCE = new C100462();
 
@@ -534,13 +547,13 @@ public final class WidgetStageRaisedHandsBottomSheetViewModel extends AppViewMod
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Void r1) {
         }
     }
 
-    /* compiled from: WidgetStageRaisedHandsBottomSheetViewModel.kt */
-    /* renamed from: com.discord.widgets.stage.sheet.WidgetStageRaisedHandsBottomSheetViewModel$setRequestToSpeakEnabled$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.stage.sheet.WidgetStageRaisedHandsBottomSheetViewModel$setRequestToSpeakEnabled$1 */
+    /* JADX INFO: compiled from: WidgetStageRaisedHandsBottomSheetViewModel.kt */
     public static final class C100471 extends Lambda implements Function1<Subscription, Unit> {
         public C100471() {
             super(1);
@@ -552,15 +565,15 @@ public final class WidgetStageRaisedHandsBottomSheetViewModel extends AppViewMod
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Subscription subscription) {
             Intrinsics3.checkNotNullParameter(subscription, "it");
             WidgetStageRaisedHandsBottomSheetViewModel.access$setLastRequestToSpeakSubscription$p(WidgetStageRaisedHandsBottomSheetViewModel.this, subscription);
         }
     }
 
-    /* compiled from: WidgetStageRaisedHandsBottomSheetViewModel.kt */
-    /* renamed from: com.discord.widgets.stage.sheet.WidgetStageRaisedHandsBottomSheetViewModel$setRequestToSpeakEnabled$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.stage.sheet.WidgetStageRaisedHandsBottomSheetViewModel$setRequestToSpeakEnabled$2 */
+    /* JADX INFO: compiled from: WidgetStageRaisedHandsBottomSheetViewModel.kt */
     public static final class C100482 extends Lambda implements Function1<Error, Unit> {
         public C100482() {
             super(1);
@@ -572,7 +585,7 @@ public final class WidgetStageRaisedHandsBottomSheetViewModel extends AppViewMod
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Error error) {
             Intrinsics3.checkNotNullParameter(error, "it");
             ViewState viewStateAccess$getViewState$p = WidgetStageRaisedHandsBottomSheetViewModel.access$getViewState$p(WidgetStageRaisedHandsBottomSheetViewModel.this);
@@ -586,8 +599,8 @@ public final class WidgetStageRaisedHandsBottomSheetViewModel extends AppViewMod
         }
     }
 
-    /* compiled from: WidgetStageRaisedHandsBottomSheetViewModel.kt */
-    /* renamed from: com.discord.widgets.stage.sheet.WidgetStageRaisedHandsBottomSheetViewModel$setRequestToSpeakEnabled$3 */
+    /* JADX INFO: renamed from: com.discord.widgets.stage.sheet.WidgetStageRaisedHandsBottomSheetViewModel$setRequestToSpeakEnabled$3 */
+    /* JADX INFO: compiled from: WidgetStageRaisedHandsBottomSheetViewModel.kt */
     public static final class C100493 extends Lambda implements Function1<Void, Unit> {
         public final /* synthetic */ boolean $isEnabled;
 
@@ -603,7 +616,7 @@ public final class WidgetStageRaisedHandsBottomSheetViewModel extends AppViewMod
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Void r10) {
             ViewState viewStateAccess$getViewState$p = WidgetStageRaisedHandsBottomSheetViewModel.access$getViewState$p(WidgetStageRaisedHandsBottomSheetViewModel.this);
             if (!(viewStateAccess$getViewState$p instanceof ViewState.Loaded)) {
@@ -616,8 +629,8 @@ public final class WidgetStageRaisedHandsBottomSheetViewModel extends AppViewMod
         }
     }
 
-    /* compiled from: WidgetStageRaisedHandsBottomSheetViewModel.kt */
-    /* renamed from: com.discord.widgets.stage.sheet.WidgetStageRaisedHandsBottomSheetViewModel$setSpeakingState$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.stage.sheet.WidgetStageRaisedHandsBottomSheetViewModel$setSpeakingState$1 */
+    /* JADX INFO: compiled from: WidgetStageRaisedHandsBottomSheetViewModel.kt */
     public static final /* synthetic */ class C100501 extends FunctionReferenceImpl implements Function1<Error, Unit> {
         public C100501(WidgetStageRaisedHandsBottomSheetViewModel widgetStageRaisedHandsBottomSheetViewModel) {
             super(1, widgetStageRaisedHandsBottomSheetViewModel, WidgetStageRaisedHandsBottomSheetViewModel.class, "emitError", "emitError(Lcom/discord/utilities/error/Error;)V", 0);
@@ -629,15 +642,15 @@ public final class WidgetStageRaisedHandsBottomSheetViewModel extends AppViewMod
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Error error) {
             Intrinsics3.checkNotNullParameter(error, "p1");
             WidgetStageRaisedHandsBottomSheetViewModel.access$emitError((WidgetStageRaisedHandsBottomSheetViewModel) this.receiver, error);
         }
     }
 
-    /* compiled from: WidgetStageRaisedHandsBottomSheetViewModel.kt */
-    /* renamed from: com.discord.widgets.stage.sheet.WidgetStageRaisedHandsBottomSheetViewModel$setSpeakingState$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.stage.sheet.WidgetStageRaisedHandsBottomSheetViewModel$setSpeakingState$2 */
+    /* JADX INFO: compiled from: WidgetStageRaisedHandsBottomSheetViewModel.kt */
     public static final class C100512 extends Lambda implements Function0<Unit> {
         public C100512() {
             super(0);
@@ -649,7 +662,7 @@ public final class WidgetStageRaisedHandsBottomSheetViewModel extends AppViewMod
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             ViewState viewStateAccess$getViewState$p = WidgetStageRaisedHandsBottomSheetViewModel.access$getViewState$p(WidgetStageRaisedHandsBottomSheetViewModel.this);
             if (!(viewStateAccess$getViewState$p instanceof ViewState.Loaded)) {
@@ -662,8 +675,8 @@ public final class WidgetStageRaisedHandsBottomSheetViewModel extends AppViewMod
         }
     }
 
-    /* compiled from: WidgetStageRaisedHandsBottomSheetViewModel.kt */
-    /* renamed from: com.discord.widgets.stage.sheet.WidgetStageRaisedHandsBottomSheetViewModel$setSpeakingState$3 */
+    /* JADX INFO: renamed from: com.discord.widgets.stage.sheet.WidgetStageRaisedHandsBottomSheetViewModel$setSpeakingState$3 */
+    /* JADX INFO: compiled from: WidgetStageRaisedHandsBottomSheetViewModel.kt */
     public static final class C100523 extends Lambda implements Function1<Void, Unit> {
         public static final C100523 INSTANCE = new C100523();
 
@@ -677,13 +690,13 @@ public final class WidgetStageRaisedHandsBottomSheetViewModel extends AppViewMod
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Void r1) {
         }
     }
 
-    /* compiled from: WidgetStageRaisedHandsBottomSheetViewModel.kt */
-    /* renamed from: com.discord.widgets.stage.sheet.WidgetStageRaisedHandsBottomSheetViewModel$setUserSuppressed$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.stage.sheet.WidgetStageRaisedHandsBottomSheetViewModel$setUserSuppressed$1 */
+    /* JADX INFO: compiled from: WidgetStageRaisedHandsBottomSheetViewModel.kt */
     public static final class C100531<T, R> implements Func1<Channel, Observable<? extends Void>> {
         public final /* synthetic */ boolean $isSuppressed;
         public final /* synthetic */ long $userId;
@@ -698,7 +711,7 @@ public final class WidgetStageRaisedHandsBottomSheetViewModel extends AppViewMod
             return call2(channel);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final Observable<? extends Void> call2(Channel channel) {
             StageChannelAPI stageChannelAPI = StageChannelAPI.INSTANCE;
             Intrinsics3.checkNotNullExpressionValue(channel, "channel");

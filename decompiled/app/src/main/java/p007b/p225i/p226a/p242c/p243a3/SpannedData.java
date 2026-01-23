@@ -4,25 +4,25 @@ import android.util.SparseArray;
 import p007b.p085c.p086a.p087a0.AnimatableValueParser;
 import p007b.p225i.p226a.p242c.p259f3.Consumer3;
 
-/* compiled from: SpannedData.java */
-/* renamed from: b.i.a.c.a3.m0, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.a3.m0, reason: use source file name */
+/* JADX INFO: compiled from: SpannedData.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class SpannedData<V> {
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final Consumer3<V> f5650c;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final SparseArray<V> f5649b = new SparseArray<>();
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public int f5648a = -1;
 
     public SpannedData(Consumer3<V> consumer3) {
         this.f5650c = consumer3;
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public void m2560a(int i, V v) {
         if (this.f5648a == -1) {
             AnimatableValueParser.m426D(this.f5649b.size() == 0);
@@ -41,7 +41,7 @@ public final class SpannedData<V> {
         this.f5649b.append(i, v);
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public V m2561b(int i) {
         if (this.f5648a == -1) {
             this.f5648a = 0;
@@ -59,7 +59,7 @@ public final class SpannedData<V> {
         return this.f5649b.valueAt(this.f5648a);
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public V m2562c() {
         return this.f5649b.valueAt(r0.size() - 1);
     }

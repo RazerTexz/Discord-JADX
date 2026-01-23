@@ -1,6 +1,6 @@
 package androidx.dynamicanimation.animation;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public interface Force {
     float getAcceleration(float f, float f2);
 

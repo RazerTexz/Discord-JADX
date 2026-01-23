@@ -3,7 +3,7 @@ package org.webrtc;
 import androidx.annotation.Nullable;
 import p007b.p100d.p104b.p105a.outline;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public class MediaStreamTrack {
     public static final String AUDIO_TRACK_KIND = "audio";
     public static final String VIDEO_TRACK_KIND = "video";
@@ -101,7 +101,7 @@ public class MediaStreamTrack {
         return this.nativeTrack;
     }
 
-    /* renamed from: id */
+    /* JADX INFO: renamed from: id */
     public String m11033id() {
         checkMediaStreamTrackExists();
         return nativeGetId(this.nativeTrack);

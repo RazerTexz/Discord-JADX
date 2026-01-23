@@ -8,9 +8,9 @@ import kotlin.Tuples2;
 import p507d0.Tuples;
 import p637j0.p641k.Func1;
 
-/* compiled from: WidgetIncomingShare.kt */
-/* renamed from: com.discord.widgets.share.WidgetIncomingShare$onSendClicked$2$$special$$inlined$let$lambda$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.share.WidgetIncomingShare$onSendClicked$2$$special$$inlined$let$lambda$1, reason: use source file name */
+/* JADX INFO: compiled from: WidgetIncomingShare.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetIncomingShare6<T, R> implements Func1<MessageQueue4, Tuples2<? extends MeUser, ? extends MessageQueue4>> {
     public final /* synthetic */ MeUser $meUser$inlined;
     public final /* synthetic */ WidgetIncomingShare.C99912 this$0;
@@ -25,7 +25,7 @@ public final class WidgetIncomingShare6<T, R> implements Func1<MessageQueue4, Tu
         return call2(messageQueue4);
     }
 
-    /* renamed from: call, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
     public final Tuples2<MeUser, MessageQueue4> call2(MessageQueue4 messageQueue4) {
         return Tuples.m10073to(this.$meUser$inlined, messageQueue4);
     }

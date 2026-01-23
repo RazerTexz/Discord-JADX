@@ -8,7 +8,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager2.widget.ViewPager2;
 import java.util.Locale;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public final class ScrollEventAdapter extends RecyclerView.OnScrollListener {
     private static final int NO_POSITION = -1;
     private static final int STATE_IDLE = 0;
@@ -168,7 +168,7 @@ public final class ScrollEventAdapter extends RecyclerView.OnScrollListener {
     public double getRelativeScrollPosition() {
         updateScrollEventValues();
         ScrollEventValues scrollEventValues = this.mScrollValues;
-        return scrollEventValues.mPosition + scrollEventValues.mOffset;
+        return ((double) scrollEventValues.mPosition) + ((double) scrollEventValues.mOffset);
     }
 
     public int getScrollState() {

@@ -11,8 +11,8 @@ import p637j0.p641k.Func1;
 import p637j0.p642l.p647e.ScalarSynchronousObservable;
 import p658rx.Observable;
 
-/* compiled from: WidgetChatListAdapterItemUploadProgress.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetChatListAdapterItemUploadProgress.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetChatListAdapterItemUploadProgress$ModelProvider$get$2<T, R> implements Func1<StoreMessageUploads.MessageUploadState, Observable<? extends WidgetChatListAdapterItemUploadProgress.Model>> {
     public final /* synthetic */ long $throttleIntervalMs;
 
@@ -25,7 +25,7 @@ public final class WidgetChatListAdapterItemUploadProgress$ModelProvider$get$2<T
         return call2(messageUploadState);
     }
 
-    /* renamed from: call, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
     public final Observable<? extends WidgetChatListAdapterItemUploadProgress.Model> call2(StoreMessageUploads.MessageUploadState messageUploadState) {
         if (messageUploadState instanceof StoreMessageUploads.MessageUploadState.None) {
             return new ScalarSynchronousObservable(WidgetChatListAdapterItemUploadProgress.Model.None.INSTANCE);

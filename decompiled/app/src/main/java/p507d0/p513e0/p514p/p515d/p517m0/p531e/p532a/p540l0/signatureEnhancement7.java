@@ -6,21 +6,21 @@ import p507d0.p513e0.p514p.p515d.p517m0.p531e.p532a.AnnotationQualifiersFqNames2
 import p507d0.p513e0.p514p.p515d.p517m0.p567n.KotlinType;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: signatureEnhancement.kt */
-/* renamed from: d0.e0.p.d.m0.e.a.l0.s, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.e.a.l0.s, reason: use source file name */
+/* JADX INFO: compiled from: signatureEnhancement.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class signatureEnhancement7 {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final KotlinType f23499a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final AnnotationQualifiersFqNames2 f23500b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final TypeParameterDescriptor f23501c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final boolean f23502d;
 
     public signatureEnhancement7(KotlinType kotlinType, AnnotationQualifiersFqNames2 annotationQualifiersFqNames2, TypeParameterDescriptor typeParameterDescriptor, boolean z2) {
@@ -63,6 +63,9 @@ public final class signatureEnhancement7 {
     }
 
     /* JADX WARN: Multi-variable type inference failed */
+    /* JADX WARN: Type inference failed for: r1v5, types: [int] */
+    /* JADX WARN: Type inference failed for: r1v6 */
+    /* JADX WARN: Type inference failed for: r1v8 */
     public int hashCode() {
         int iHashCode = this.f23499a.hashCode() * 31;
         AnnotationQualifiersFqNames2 annotationQualifiersFqNames2 = this.f23500b;
@@ -70,11 +73,11 @@ public final class signatureEnhancement7 {
         TypeParameterDescriptor typeParameterDescriptor = this.f23501c;
         int iHashCode3 = (iHashCode2 + (typeParameterDescriptor != null ? typeParameterDescriptor.hashCode() : 0)) * 31;
         boolean z2 = this.f23502d;
-        int i = z2;
-        if (z2 != 0) {
-            i = 1;
+        ?? r1 = z2;
+        if (z2) {
+            r1 = 1;
         }
-        return iHashCode3 + i;
+        return iHashCode3 + r1;
     }
 
     public String toString() {

@@ -42,8 +42,8 @@ import p507d0.p592z.p594d.Lambda;
 import p637j0.p641k.Func1;
 import p658rx.Observable;
 
-/* compiled from: StorePermissions.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: StorePermissions.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class StorePermissions extends StoreV2 {
     private final ObservationDeck observationDeck;
     private final Map<Long, Map<Long, Long>> permissionsForChannels;
@@ -59,8 +59,8 @@ public final class StorePermissions extends StoreV2 {
     private final StoreThreadsJoined storeThreadsJoined;
     private final StoreUser storeUser;
 
-    /* compiled from: StorePermissions.kt */
-    /* renamed from: com.discord.stores.StorePermissions$observeAllPermissions$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StorePermissions$observeAllPermissions$1 */
+    /* JADX INFO: compiled from: StorePermissions.kt */
     public static final class C63291 extends Lambda implements Function0<Map<Long, ? extends Map<Long, ? extends Long>>> {
         public C63291() {
             super(0);
@@ -72,14 +72,14 @@ public final class StorePermissions extends StoreV2 {
         }
 
         @Override // kotlin.jvm.functions.Function0
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final Map<Long, ? extends Map<Long, ? extends Long>> invoke2() {
             return StorePermissions.access$getPermissionsForChannels$p(StorePermissions.this);
         }
     }
 
-    /* compiled from: StorePermissions.kt */
-    /* renamed from: com.discord.stores.StorePermissions$observeChannelPermissionsForGuild$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StorePermissions$observeChannelPermissionsForGuild$1 */
+    /* JADX INFO: compiled from: StorePermissions.kt */
     public static final class C63301<T, R> implements Func1<Map<Long, ? extends Map<Long, ? extends Long>>, Map<Long, ? extends Long>> {
         public final /* synthetic */ long $guildId;
 
@@ -92,7 +92,7 @@ public final class StorePermissions extends StoreV2 {
             return call2((Map<Long, ? extends Map<Long, Long>>) map);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final Map<Long, Long> call2(Map<Long, ? extends Map<Long, Long>> map) {
             Intrinsics3.checkNotNullExpressionValue(map, ModelAuditLogEntry.CHANGE_KEY_PERMISSIONS);
             Map<Long, Long> mapEmptyMap = map.get(Long.valueOf(this.$guildId));
@@ -103,8 +103,8 @@ public final class StorePermissions extends StoreV2 {
         }
     }
 
-    /* compiled from: StorePermissions.kt */
-    /* renamed from: com.discord.stores.StorePermissions$observePermissionsForAllChannels$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StorePermissions$observePermissionsForAllChannels$1 */
+    /* JADX INFO: compiled from: StorePermissions.kt */
     public static final class C63311 extends Lambda implements Function0<Map<Long, ? extends Long>> {
         public C63311() {
             super(0);
@@ -116,14 +116,14 @@ public final class StorePermissions extends StoreV2 {
         }
 
         @Override // kotlin.jvm.functions.Function0
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final Map<Long, ? extends Long> invoke2() {
             return StorePermissions.access$getPermissionsForChannelsFlattenedSnapshot$p(StorePermissions.this);
         }
     }
 
-    /* compiled from: StorePermissions.kt */
-    /* renamed from: com.discord.stores.StorePermissions$observePermissionsForChannel$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StorePermissions$observePermissionsForChannel$1 */
+    /* JADX INFO: compiled from: StorePermissions.kt */
     public static final class C63321 extends Lambda implements Function0<Long> {
         public final /* synthetic */ long $channelId;
 
@@ -145,8 +145,8 @@ public final class StorePermissions extends StoreV2 {
         }
     }
 
-    /* compiled from: StorePermissions.kt */
-    /* renamed from: com.discord.stores.StorePermissions$observePermissionsForGuild$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StorePermissions$observePermissionsForGuild$1 */
+    /* JADX INFO: compiled from: StorePermissions.kt */
     public static final class C63331 extends Lambda implements Function0<Long> {
         public final /* synthetic */ long $guildId;
 

@@ -8,9 +8,9 @@ import p507d0.p513e0.p514p.p515d.p516l0.CallerImpl;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: KPropertyImpl.kt */
-/* renamed from: d0.e0.p.d.v, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.v, reason: use source file name */
+/* JADX INFO: compiled from: KPropertyImpl.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class KPropertyImpl4 extends Lambda implements Function1<Field, CallerImpl<? extends Field>> {
     public final /* synthetic */ boolean $isGetter;
     public final /* synthetic */ KPropertyImpl2 $isJvmStaticProperty$1;
@@ -26,7 +26,7 @@ public final class KPropertyImpl4 extends Lambda implements Function1<Field, Cal
         this.$isJvmStaticProperty$1 = kPropertyImpl2;
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final CallerImpl<Field> invoke2(Field field) {
         Intrinsics3.checkNotNullParameter(field, "field");
         return (KPropertyImpl5.access$isJvmFieldPropertyInCompanionObject(this.$this_computeCallerForAccessor.getProperty().getDescriptor()) || !Modifier.isStatic(field.getModifiers())) ? this.$isGetter ? this.$this_computeCallerForAccessor.isBound() ? new CallerImpl.f.a(field, KPropertyImpl5.getBoundReceiver(this.$this_computeCallerForAccessor)) : new CallerImpl.f.c(field) : this.$this_computeCallerForAccessor.isBound() ? new CallerImpl.g.a(field, this.$isNotNullProperty$2.invoke2(), KPropertyImpl5.getBoundReceiver(this.$this_computeCallerForAccessor)) : new CallerImpl.g.c(field, this.$isNotNullProperty$2.invoke2()) : this.$isJvmStaticProperty$1.invoke2() ? this.$isGetter ? this.$this_computeCallerForAccessor.isBound() ? new CallerImpl.f.b(field) : new CallerImpl.f.d(field) : this.$this_computeCallerForAccessor.isBound() ? new CallerImpl.g.b(field, this.$isNotNullProperty$2.invoke2()) : new CallerImpl.g.d(field, this.$isNotNullProperty$2.invoke2()) : this.$isGetter ? new CallerImpl.f.e(field) : new CallerImpl.g.e(field, this.$isNotNullProperty$2.invoke2());

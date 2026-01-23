@@ -4,8 +4,8 @@ import com.discord.models.domain.ModelAuditLogEntry;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: GuildRoleSubscriptionBenefit.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: GuildRoleSubscriptionBenefit.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class GuildRoleSubscriptionBenefit {
     private final String description;
     private final Long emojiId;
@@ -25,27 +25,27 @@ public final /* data */ class GuildRoleSubscriptionBenefit {
         this.refId = l2;
     }
 
-    /* renamed from: a, reason: from getter */
+    /* JADX INFO: renamed from: a, reason: from getter */
     public final String getDescription() {
         return this.description;
     }
 
-    /* renamed from: b, reason: from getter */
+    /* JADX INFO: renamed from: b, reason: from getter */
     public final Long getEmojiId() {
         return this.emojiId;
     }
 
-    /* renamed from: c, reason: from getter */
+    /* JADX INFO: renamed from: c, reason: from getter */
     public final String getEmojiName() {
         return this.emojiName;
     }
 
-    /* renamed from: d, reason: from getter */
+    /* JADX INFO: renamed from: d, reason: from getter */
     public final String getName() {
         return this.name;
     }
 
-    /* renamed from: e, reason: from getter */
+    /* JADX INFO: renamed from: e, reason: from getter */
     public final Long getRefId() {
         return this.refId;
     }
@@ -61,7 +61,7 @@ public final /* data */ class GuildRoleSubscriptionBenefit {
         return Intrinsics3.areEqual(this.emojiId, guildRoleSubscriptionBenefit.emojiId) && Intrinsics3.areEqual(this.emojiName, guildRoleSubscriptionBenefit.emojiName) && Intrinsics3.areEqual(this.name, guildRoleSubscriptionBenefit.name) && Intrinsics3.areEqual(this.refType, guildRoleSubscriptionBenefit.refType) && Intrinsics3.areEqual(this.description, guildRoleSubscriptionBenefit.description) && Intrinsics3.areEqual(this.refId, guildRoleSubscriptionBenefit.refId);
     }
 
-    /* renamed from: f, reason: from getter */
+    /* JADX INFO: renamed from: f, reason: from getter */
     public final GuildRoleSubscriptionBenefitType getRefType() {
         return this.refType;
     }

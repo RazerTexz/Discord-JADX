@@ -8,16 +8,16 @@ import kotlinx.coroutines.Job;
 import p007b.p100d.p104b.p105a.outline;
 import p007b.p225i.p226a.p288f.p299e.p308o.C3404f;
 
-/* compiled from: JobSupport.kt */
-/* renamed from: s.a.c1 */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: s.a.c1 */
+/* JADX INFO: compiled from: JobSupport.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class C13053c1 extends AbstractC13094e1<Job> {
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public static final AtomicIntegerFieldUpdater f27727n = AtomicIntegerFieldUpdater.newUpdater(C13053c1.class, "_invoked");
     public volatile int _invoked;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public final Function1<Throwable, Unit> f27728o;
 
     /* JADX WARN: Multi-variable type inference failed */
@@ -34,7 +34,7 @@ public final class C13053c1 extends AbstractC13094e1<Job> {
     }
 
     @Override // p659s.p660a.CompletionHandler2
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     public void mo11198q(Throwable th) {
         if (f27727n.compareAndSet(this, 0, 1)) {
             this.f27728o.invoke(th);

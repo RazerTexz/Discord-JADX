@@ -10,28 +10,28 @@ import androidx.viewbinding.ViewBinding;
 import com.discord.utilities.view.text.LinkifiedTextView;
 import com.facebook.drawee.view.SimpleDraweeView;
 
-/* compiled from: WidgetChatListAdapterItemSingleLineMessagePreviewBinding.java */
-/* renamed from: b.a.i.z4, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.a.i.z4, reason: use source file name */
+/* JADX INFO: compiled from: WidgetChatListAdapterItemSingleLineMessagePreviewBinding.java */
+/* JADX INFO: loaded from: classes.dex */
 public final class WidgetChatListAdapterItemSingleLineMessagePreviewBinding implements ViewBinding {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     @NonNull
     public final ConstraintLayout f1444a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     @NonNull
     public final ImageView f1445b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     @NonNull
     public final LinkifiedTextView f1446c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     @NonNull
     public final SimpleDraweeView f1447d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     @NonNull
     public final TextView f1448e;
 

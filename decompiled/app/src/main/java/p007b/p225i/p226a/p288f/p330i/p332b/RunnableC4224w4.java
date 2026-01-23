@@ -1,7 +1,6 @@
 package p007b.p225i.p226a.p288f.p330i.p332b;
 
 import android.content.SharedPreferences;
-import android.content.res.Resources;
 import android.os.Bundle;
 import android.text.TextUtils;
 import com.google.android.gms.internal.measurement.zzae;
@@ -13,15 +12,15 @@ import p007b.p225i.p226a.p288f.p313h.p325l.C3587a9;
 import p007b.p225i.p226a.p288f.p313h.p325l.C3644ea;
 import p007b.p225i.p226a.p288f.p313h.p325l.C3842t8;
 
-/* compiled from: com.google.android.gms:play-services-measurement-impl@@18.0.0 */
-/* renamed from: b.i.a.f.i.b.w4 */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.i.b.w4 */
+/* JADX INFO: compiled from: com.google.android.gms:play-services-measurement-impl@@18.0.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public final class RunnableC4224w4 implements Runnable {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final /* synthetic */ C4247y5 f11319j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final /* synthetic */ C4202u4 f11320k;
 
     public RunnableC4224w4(C4202u4 c4202u4, C4247y5 c4247y5) {
@@ -35,7 +34,7 @@ public final class RunnableC4224w4 implements Runnable {
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
-    public final void run() throws IllegalStateException, Resources.NotFoundException {
+    public final void run() {
         C4004d c4004dM5566g;
         String strConcat;
         C4179s3 c4179s3;

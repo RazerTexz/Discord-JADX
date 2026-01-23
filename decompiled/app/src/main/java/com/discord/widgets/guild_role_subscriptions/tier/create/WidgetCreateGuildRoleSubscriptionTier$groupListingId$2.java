@@ -3,8 +3,8 @@ package com.discord.widgets.guild_role_subscriptions.tier.create;
 import kotlin.jvm.functions.Function0;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetCreateGuildRoleSubscriptionTier.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetCreateGuildRoleSubscriptionTier.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetCreateGuildRoleSubscriptionTier$groupListingId$2 extends Lambda implements Function0<Long> {
     public final /* synthetic */ WidgetCreateGuildRoleSubscriptionTier this$0;
 
@@ -19,7 +19,7 @@ public final class WidgetCreateGuildRoleSubscriptionTier$groupListingId$2 extend
         return Long.valueOf(invoke2());
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final long invoke2() {
         return this.this$0.getMostRecentIntent().getLongExtra("INTENT_EXTRA_GROUP_LISTING_ID", 0L);
     }

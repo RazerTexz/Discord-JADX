@@ -7,14 +7,14 @@ import androidx.view.SavedStateRegistry;
 import androidx.view.SavedStateRegistryOwner;
 import java.util.Iterator;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public final class SavedStateHandleController implements LifecycleEventObserver {
     public static final String TAG_SAVED_STATE_HANDLE_CONTROLLER = "androidx.lifecycle.savedstate.vm.tag";
     private final SavedStateHandle mHandle;
     private boolean mIsAttached = false;
     private final String mKey;
 
-    /* renamed from: androidx.lifecycle.SavedStateHandleController$1 */
+    /* JADX INFO: renamed from: androidx.lifecycle.SavedStateHandleController$1 */
     public class C04481 implements LifecycleEventObserver {
         public final /* synthetic */ Lifecycle val$lifecycle;
         public final /* synthetic */ SavedStateRegistry val$registry;
@@ -25,7 +25,7 @@ public final class SavedStateHandleController implements LifecycleEventObserver 
         }
 
         @Override // androidx.view.LifecycleEventObserver
-        public void onStateChanged(@NonNull LifecycleOwner lifecycleOwner, @NonNull Lifecycle.Event event) throws SecurityException {
+        public void onStateChanged(@NonNull LifecycleOwner lifecycleOwner, @NonNull Lifecycle.Event event) {
             if (event == Lifecycle.Event.ON_START) {
                 this.val$lifecycle.removeObserver(this);
                 this.val$registry.runOnNextRecreation(OnRecreation.class);
@@ -35,7 +35,7 @@ public final class SavedStateHandleController implements LifecycleEventObserver 
 
     public static final class OnRecreation implements SavedStateRegistry.AutoRecreated {
         @Override // androidx.savedstate.SavedStateRegistry.AutoRecreated
-        public void onRecreated(@NonNull SavedStateRegistryOwner savedStateRegistryOwner) throws SecurityException {
+        public void onRecreated(@NonNull SavedStateRegistryOwner savedStateRegistryOwner) {
             if (!(savedStateRegistryOwner instanceof ViewModelStoreOwner)) {
                 throw new IllegalStateException("Internal error: OnRecreation should be registered only on componentsthat implement ViewModelStoreOwner");
             }
@@ -57,7 +57,7 @@ public final class SavedStateHandleController implements LifecycleEventObserver 
         this.mHandle = savedStateHandle;
     }
 
-    public static void attachHandleIfNeeded(ViewModel viewModel, SavedStateRegistry savedStateRegistry, Lifecycle lifecycle) throws SecurityException {
+    public static void attachHandleIfNeeded(ViewModel viewModel, SavedStateRegistry savedStateRegistry, Lifecycle lifecycle) {
         SavedStateHandleController savedStateHandleController = (SavedStateHandleController) viewModel.getTag("androidx.lifecycle.savedstate.vm.tag");
         if (savedStateHandleController == null || savedStateHandleController.isAttached()) {
             return;
@@ -66,14 +66,14 @@ public final class SavedStateHandleController implements LifecycleEventObserver 
         tryToAddRecreator(savedStateRegistry, lifecycle);
     }
 
-    public static SavedStateHandleController create(SavedStateRegistry savedStateRegistry, Lifecycle lifecycle, String str, Bundle bundle) throws SecurityException {
+    public static SavedStateHandleController create(SavedStateRegistry savedStateRegistry, Lifecycle lifecycle, String str, Bundle bundle) {
         SavedStateHandleController savedStateHandleController = new SavedStateHandleController(str, SavedStateHandle.createHandle(savedStateRegistry.consumeRestoredStateForKey(str), bundle));
         savedStateHandleController.attachToLifecycle(savedStateRegistry, lifecycle);
         tryToAddRecreator(savedStateRegistry, lifecycle);
         return savedStateHandleController;
     }
 
-    private static void tryToAddRecreator(SavedStateRegistry savedStateRegistry, Lifecycle lifecycle) throws SecurityException {
+    private static void tryToAddRecreator(SavedStateRegistry savedStateRegistry, Lifecycle lifecycle) {
         Lifecycle.State currentState = lifecycle.getCurrentState();
         if (currentState == Lifecycle.State.INITIALIZED || currentState.isAtLeast(Lifecycle.State.STARTED)) {
             savedStateRegistry.runOnNextRecreation(OnRecreation.class);

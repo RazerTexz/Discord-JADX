@@ -13,13 +13,13 @@ import p507d0.p580t.Maps6;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: RestAPIAbortMessages.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: RestAPIAbortMessages.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class RestAPIAbortMessages {
     public static final RestAPIAbortMessages INSTANCE = new RestAPIAbortMessages();
     private static final Map<Integer, Integer> MESSAGES;
 
-    /* compiled from: RestAPIAbortMessages.kt */
+    /* JADX INFO: compiled from: RestAPIAbortMessages.kt */
     public static final class ResponseResolver {
         public static final ResponseResolver INSTANCE = new ResponseResolver();
 
@@ -43,8 +43,8 @@ public final class RestAPIAbortMessages {
         }
     }
 
-    /* compiled from: RestAPIAbortMessages.kt */
-    /* renamed from: com.discord.utilities.rest.RestAPIAbortMessages$handleAbortCodeOrDefault$1 */
+    /* JADX INFO: renamed from: com.discord.utilities.rest.RestAPIAbortMessages$handleAbortCodeOrDefault$1 */
+    /* JADX INFO: compiled from: RestAPIAbortMessages.kt */
     public static final class C68601 extends Lambda implements Function0<Boolean> {
         public static final C68601 INSTANCE = new C68601();
 
@@ -57,7 +57,7 @@ public final class RestAPIAbortMessages {
             return Boolean.valueOf(invoke2());
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final boolean invoke2() {
             return true;
         }

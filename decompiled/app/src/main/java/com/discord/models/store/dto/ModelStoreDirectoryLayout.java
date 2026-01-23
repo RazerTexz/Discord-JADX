@@ -5,8 +5,8 @@ import java.util.List;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ModelStoreDirectoryLayout.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: ModelStoreDirectoryLayout.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class ModelStoreDirectoryLayout {
     private final List<Long> allSkus;
     private final long id;
@@ -28,7 +28,7 @@ public final /* data */ class ModelStoreDirectoryLayout {
         return modelStoreDirectoryLayout.copy(j, list);
     }
 
-    /* renamed from: component1, reason: from getter */
+    /* JADX INFO: renamed from: component1, reason: from getter */
     public final long getId() {
         return this.id;
     }

@@ -2,23 +2,23 @@ package p007b.p225i.p226a.p242c.p259f3;
 
 import androidx.exifinterface.media.ExifInterface;
 
-/* compiled from: CodecSpecificDataUtil.java */
-/* renamed from: b.i.a.c.f3.h, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.f3.h, reason: use source file name */
+/* JADX INFO: compiled from: CodecSpecificDataUtil.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class CodecSpecificDataUtil {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final byte[] f6721a = {0, 0, 0, 1};
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static final String[] f6722b = {"", ExifInterface.GPS_MEASUREMENT_IN_PROGRESS, "B", "C"};
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static String m3022a(int i, int i2, int i3) {
         return String.format("avc1.%02X%02X%02X", Integer.valueOf(i), Integer.valueOf(i2), Integer.valueOf(i3));
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static String m3023b(int i, boolean z2, int i2, int i3, int[] iArr, int i4) {
         Object[] objArr = new Object[5];
         objArr[0] = f6722b[i];

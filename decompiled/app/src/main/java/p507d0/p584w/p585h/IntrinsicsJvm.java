@@ -14,13 +14,13 @@ import p507d0.p584w.p586i.p587a.DebugProbes;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.TypeIntrinsics;
 
-/* compiled from: IntrinsicsJvm.kt */
-/* renamed from: d0.w.h.b, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.w.h.b, reason: use source file name */
+/* JADX INFO: compiled from: IntrinsicsJvm.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public class IntrinsicsJvm {
 
-    /* compiled from: IntrinsicsJvm.kt */
-    /* renamed from: d0.w.h.b$a */
+    /* JADX INFO: renamed from: d0.w.h.b$a */
+    /* JADX INFO: compiled from: IntrinsicsJvm.kt */
     public static final class a extends ContinuationImpl4 {
         public final /* synthetic */ Continuation $completion;
         public final /* synthetic */ Object $receiver$inlined;
@@ -54,8 +54,8 @@ public class IntrinsicsJvm {
         }
     }
 
-    /* compiled from: IntrinsicsJvm.kt */
-    /* renamed from: d0.w.h.b$b */
+    /* JADX INFO: renamed from: d0.w.h.b$b */
+    /* JADX INFO: compiled from: IntrinsicsJvm.kt */
     public static final class b extends ContinuationImpl3 {
         public final /* synthetic */ Continuation $completion;
         public final /* synthetic */ CoroutineContext $context;
@@ -107,7 +107,7 @@ public class IntrinsicsJvm {
     public static final <T> Continuation<T> intercepted(Continuation<? super T> continuation) {
         Continuation<T> continuation2;
         Intrinsics3.checkNotNullParameter(continuation, "$this$intercepted");
-        ContinuationImpl3 continuationImpl3 = !(continuation instanceof ContinuationImpl3) ? null : continuation;
+        ContinuationImpl3 continuationImpl3 = (ContinuationImpl3) (!(continuation instanceof ContinuationImpl3) ? null : continuation);
         return (continuationImpl3 == null || (continuation2 = (Continuation<T>) continuationImpl3.intercepted()) == null) ? continuation : continuation2;
     }
 }

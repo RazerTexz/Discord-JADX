@@ -38,23 +38,23 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 import p507d0.p592z.p594d.Reflection2;
 
-/* compiled from: WidgetQuickMentionsDialog.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetQuickMentionsDialog.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetQuickMentionsDialog extends AppDialog {
     public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetQuickMentionsDialog.class, "binding", "getBinding()Lcom/discord/databinding/WidgetQuickMentionsDialogBinding;", 0)};
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private static final int POSITION_MENTIONS = 1;
     private static final int POSITION_QUICK_SWITCHER = 0;
 
-    /* renamed from: binding$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
 
-    /* renamed from: dismissViewModel$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: dismissViewModel$delegate, reason: from kotlin metadata */
     private final Lazy dismissViewModel;
 
-    /* compiled from: WidgetQuickMentionsDialog.kt */
+    /* JADX INFO: compiled from: WidgetQuickMentionsDialog.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -88,7 +88,7 @@ public final class WidgetQuickMentionsDialog extends AppDialog {
         }
     }
 
-    /* compiled from: WidgetQuickMentionsDialog.kt */
+    /* JADX INFO: compiled from: WidgetQuickMentionsDialog.kt */
     public static final class TabsAdapter extends FragmentStateAdapter {
         private final String searchText;
 
@@ -111,7 +111,7 @@ public final class WidgetQuickMentionsDialog extends AppDialog {
         }
 
         @Override // androidx.recyclerview.widget.RecyclerView.Adapter
-        /* renamed from: getItemCount */
+        /* JADX INFO: renamed from: getItemCount */
         public int getPageSize() {
             return 2;
         }
@@ -127,8 +127,8 @@ public final class WidgetQuickMentionsDialog extends AppDialog {
         }
     }
 
-    /* compiled from: WidgetQuickMentionsDialog.kt */
-    /* renamed from: com.discord.widgets.quickmentions.WidgetQuickMentionsDialog$onViewBoundOrOnResume$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.quickmentions.WidgetQuickMentionsDialog$onViewBoundOrOnResume$1 */
+    /* JADX INFO: compiled from: WidgetQuickMentionsDialog.kt */
     public static final class C91221 extends Lambda implements Function1<Unit, Unit> {
         public C91221() {
             super(1);
@@ -140,15 +140,15 @@ public final class WidgetQuickMentionsDialog extends AppDialog {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Unit unit) {
             Intrinsics3.checkNotNullParameter(unit, "it");
             WidgetQuickMentionsDialog.this.dismiss();
         }
     }
 
-    /* compiled from: WidgetQuickMentionsDialog.kt */
-    /* renamed from: com.discord.widgets.quickmentions.WidgetQuickMentionsDialog$onViewBoundOrOnResume$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.quickmentions.WidgetQuickMentionsDialog$onViewBoundOrOnResume$2 */
+    /* JADX INFO: compiled from: WidgetQuickMentionsDialog.kt */
     public static final class C91232 extends Lambda implements Function2<TabLayout.Tab, Integer, Unit> {
         public final /* synthetic */ TabsAdapter $adapter;
 

@@ -35,19 +35,19 @@ import p507d0.p592z.p594d.Lambda;
 import p658rx.Observable;
 import p658rx.subjects.PublishSubject;
 
-/* compiled from: WidgetUserSetCustomStatusViewModel.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: WidgetUserSetCustomStatusViewModel.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class WidgetUserSetCustomStatusViewModel extends AppViewModel<ViewState> {
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private static final FormState.Expiration DEFAULT_EXPIRATION = FormState.Expiration.TOMORROW;
     private final Clock clock;
     private final PublishSubject<Event> eventSubject;
     private final StoreUserSettings storeUserSettings;
 
-    /* compiled from: WidgetUserSetCustomStatusViewModel.kt */
-    /* renamed from: com.discord.widgets.user.WidgetUserSetCustomStatusViewModel$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.user.WidgetUserSetCustomStatusViewModel$1 */
+    /* JADX INFO: compiled from: WidgetUserSetCustomStatusViewModel.kt */
     public static final class C102361 extends Lambda implements Function1<StoreState, Unit> {
         public C102361() {
             super(1);
@@ -59,14 +59,14 @@ public final class WidgetUserSetCustomStatusViewModel extends AppViewModel<ViewS
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(StoreState storeState) {
             Intrinsics3.checkNotNullParameter(storeState, "storeState");
             WidgetUserSetCustomStatusViewModel.access$handleStoreState(WidgetUserSetCustomStatusViewModel.this, storeState);
         }
     }
 
-    /* compiled from: WidgetUserSetCustomStatusViewModel.kt */
+    /* JADX INFO: compiled from: WidgetUserSetCustomStatusViewModel.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -90,10 +90,10 @@ public final class WidgetUserSetCustomStatusViewModel extends AppViewModel<ViewS
         }
     }
 
-    /* compiled from: WidgetUserSetCustomStatusViewModel.kt */
+    /* JADX INFO: compiled from: WidgetUserSetCustomStatusViewModel.kt */
     public static abstract class Event {
 
-        /* compiled from: WidgetUserSetCustomStatusViewModel.kt */
+        /* JADX INFO: compiled from: WidgetUserSetCustomStatusViewModel.kt */
         public static final /* data */ class SetStatusFailure extends Event {
             private final int failureMessageStringRes;
 
@@ -109,7 +109,7 @@ public final class WidgetUserSetCustomStatusViewModel extends AppViewModel<ViewS
                 return setStatusFailure.copy(i);
             }
 
-            /* renamed from: component1, reason: from getter */
+            /* JADX INFO: renamed from: component1, reason: from getter */
             public final int getFailureMessageStringRes() {
                 return this.failureMessageStringRes;
             }
@@ -138,7 +138,7 @@ public final class WidgetUserSetCustomStatusViewModel extends AppViewModel<ViewS
             }
         }
 
-        /* compiled from: WidgetUserSetCustomStatusViewModel.kt */
+        /* JADX INFO: compiled from: WidgetUserSetCustomStatusViewModel.kt */
         public static final /* data */ class SetStatusSuccess extends Event {
             private final int successMessageStringRes;
 
@@ -154,7 +154,7 @@ public final class WidgetUserSetCustomStatusViewModel extends AppViewModel<ViewS
                 return setStatusSuccess.copy(i);
             }
 
-            /* renamed from: component1, reason: from getter */
+            /* JADX INFO: renamed from: component1, reason: from getter */
             public final int getSuccessMessageStringRes() {
                 return this.successMessageStringRes;
             }
@@ -191,13 +191,13 @@ public final class WidgetUserSetCustomStatusViewModel extends AppViewModel<ViewS
         }
     }
 
-    /* compiled from: WidgetUserSetCustomStatusViewModel.kt */
+    /* JADX INFO: compiled from: WidgetUserSetCustomStatusViewModel.kt */
     public static final /* data */ class FormState {
         private final Emoji emoji;
         private final Expiration expiration;
         private final String text;
 
-        /* compiled from: WidgetUserSetCustomStatusViewModel.kt */
+        /* JADX INFO: compiled from: WidgetUserSetCustomStatusViewModel.kt */
         public enum Expiration {
             NEVER,
             IN_30_MINUTES,
@@ -227,17 +227,17 @@ public final class WidgetUserSetCustomStatusViewModel extends AppViewModel<ViewS
             return formState.copy(emoji, str, expiration);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final Emoji getEmoji() {
             return this.emoji;
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final String getText() {
             return this.text;
         }
 
-        /* renamed from: component3, reason: from getter */
+        /* JADX INFO: renamed from: component3, reason: from getter */
         public final Expiration getExpiration() {
             return this.expiration;
         }
@@ -292,7 +292,7 @@ public final class WidgetUserSetCustomStatusViewModel extends AppViewModel<ViewS
         }
     }
 
-    /* compiled from: WidgetUserSetCustomStatusViewModel.kt */
+    /* JADX INFO: compiled from: WidgetUserSetCustomStatusViewModel.kt */
     public static final /* data */ class StoreState {
         private final ModelCustomStatusSetting customStatusSetting;
         private final EmojiSet emojiSet;
@@ -314,12 +314,12 @@ public final class WidgetUserSetCustomStatusViewModel extends AppViewModel<ViewS
             return storeState.copy(modelCustomStatusSetting, emojiSet);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final ModelCustomStatusSetting getCustomStatusSetting() {
             return this.customStatusSetting;
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final EmojiSet getEmojiSet() {
             return this.emojiSet;
         }
@@ -366,10 +366,10 @@ public final class WidgetUserSetCustomStatusViewModel extends AppViewModel<ViewS
         }
     }
 
-    /* compiled from: WidgetUserSetCustomStatusViewModel.kt */
+    /* JADX INFO: compiled from: WidgetUserSetCustomStatusViewModel.kt */
     public static abstract class ViewState {
 
-        /* compiled from: WidgetUserSetCustomStatusViewModel.kt */
+        /* JADX INFO: compiled from: WidgetUserSetCustomStatusViewModel.kt */
         public static final /* data */ class Loaded extends ViewState {
             private final FormState formState;
 
@@ -387,7 +387,7 @@ public final class WidgetUserSetCustomStatusViewModel extends AppViewModel<ViewS
                 return loaded.copy(formState);
             }
 
-            /* renamed from: component1, reason: from getter */
+            /* JADX INFO: renamed from: component1, reason: from getter */
             public final FormState getFormState() {
                 return this.formState;
             }
@@ -433,7 +433,7 @@ public final class WidgetUserSetCustomStatusViewModel extends AppViewModel<ViewS
             }
         }
 
-        /* compiled from: WidgetUserSetCustomStatusViewModel.kt */
+        /* JADX INFO: compiled from: WidgetUserSetCustomStatusViewModel.kt */
         public static final class Uninitialized extends ViewState {
             public static final Uninitialized INSTANCE = new Uninitialized();
 
@@ -465,8 +465,8 @@ public final class WidgetUserSetCustomStatusViewModel extends AppViewModel<ViewS
         }
     }
 
-    /* compiled from: WidgetUserSetCustomStatusViewModel.kt */
-    /* renamed from: com.discord.widgets.user.WidgetUserSetCustomStatusViewModel$saveStatus$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.user.WidgetUserSetCustomStatusViewModel$saveStatus$1 */
+    /* JADX INFO: compiled from: WidgetUserSetCustomStatusViewModel.kt */
     public static final class C102371 extends Lambda implements Function1<ModelUserSettings, Unit> {
         public C102371() {
             super(1);
@@ -478,15 +478,15 @@ public final class WidgetUserSetCustomStatusViewModel extends AppViewModel<ViewS
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(ModelUserSettings modelUserSettings) {
             Intrinsics3.checkNotNullParameter(modelUserSettings, "it");
             WidgetUserSetCustomStatusViewModel.access$emitSetStatusSuccessEvent(WidgetUserSetCustomStatusViewModel.this);
         }
     }
 
-    /* compiled from: WidgetUserSetCustomStatusViewModel.kt */
-    /* renamed from: com.discord.widgets.user.WidgetUserSetCustomStatusViewModel$saveStatus$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.user.WidgetUserSetCustomStatusViewModel$saveStatus$2 */
+    /* JADX INFO: compiled from: WidgetUserSetCustomStatusViewModel.kt */
     public static final class C102382 extends Lambda implements Function1<Error, Unit> {
         public C102382() {
             super(1);
@@ -498,7 +498,7 @@ public final class WidgetUserSetCustomStatusViewModel extends AppViewModel<ViewS
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Error error) {
             Intrinsics3.checkNotNullParameter(error, "it");
             WidgetUserSetCustomStatusViewModel.access$emitSetStatusFailureEvent(WidgetUserSetCustomStatusViewModel.this);

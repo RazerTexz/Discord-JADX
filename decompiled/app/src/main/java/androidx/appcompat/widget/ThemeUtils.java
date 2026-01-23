@@ -15,8 +15,8 @@ import androidx.annotation.RestrictTo;
 import androidx.appcompat.C0051R;
 import androidx.core.graphics.ColorUtils;
 
+/* JADX INFO: loaded from: classes.dex */
 @RestrictTo({RestrictTo.Scope.LIBRARY})
-/* loaded from: classes.dex */
 public class ThemeUtils {
     private static final String TAG = "ThemeUtils";
     private static final ThreadLocal<TypedValue> TL_TYPED_VALUE = new ThreadLocal<>();

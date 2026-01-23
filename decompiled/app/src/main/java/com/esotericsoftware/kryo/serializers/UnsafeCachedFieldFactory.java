@@ -4,7 +4,7 @@ import com.esotericsoftware.kryo.serializers.FieldSerializer;
 import com.esotericsoftware.kryo.serializers.UnsafeCacheFields;
 import java.lang.reflect.Field;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class UnsafeCachedFieldFactory implements FieldSerializer.CachedFieldFactory {
     @Override // com.esotericsoftware.kryo.serializers.FieldSerializer.CachedFieldFactory
     public FieldSerializer.CachedField createCachedField(Class cls, Field field, FieldSerializer fieldSerializer) {

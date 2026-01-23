@@ -12,15 +12,15 @@ import p007b.p225i.p226a.p288f.p313h.p325l.C3657f9;
 import p007b.p225i.p226a.p288f.p313h.p325l.C3730l0;
 import p007b.p225i.p226a.p288f.p313h.p325l.C3743m0;
 
-/* compiled from: com.google.android.gms:play-services-measurement@@18.0.0 */
-/* renamed from: b.i.a.f.i.b.fa */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.i.b.fa */
+/* JADX INFO: compiled from: com.google.android.gms:play-services-measurement@@18.0.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public final class C4039fa extends AbstractC4027ea {
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public C3730l0 f10733g;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public final /* synthetic */ C3991ba f10734h;
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -31,26 +31,25 @@ public final class C4039fa extends AbstractC4027ea {
     }
 
     @Override // p007b.p225i.p226a.p288f.p330i.p332b.AbstractC4027ea
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final int mo5593a() {
         return this.f10733g.m5045y();
     }
 
     @Override // p007b.p225i.p226a.p288f.p330i.p332b.AbstractC4027ea
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public final boolean mo5594g() {
         return false;
     }
 
     @Override // p007b.p225i.p226a.p288f.p330i.p332b.AbstractC4027ea
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public final boolean mo5595h() {
         return this.f10733g.m5037C();
     }
 
-    /* JADX WARN: Multi-variable type inference failed */
     /* JADX WARN: Removed duplicated region for block: B:65:0x0190  */
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
@@ -60,18 +59,18 @@ public final class C4039fa extends AbstractC4027ea {
         String string;
         boolean z3 = C3657f9.m4881b() && this.f10734h.f11202a.f11260h.m5532u(this.f10698a, C4142p.f11066c0);
         long j2 = this.f10733g.m5042H() ? c4098l.f10930e : j;
-        bool = 0;
-        bool = 0;
-        bool = 0;
-        bool = 0;
-        bool = 0;
-        bool = 0;
-        bool = 0;
-        bool = 0;
-        bool = 0;
-        bool = 0;
-        bool = 0;
-        Boolean bool = 0;
+        bool = null;
+        bool = null;
+        bool = null;
+        bool = null;
+        bool = null;
+        bool = null;
+        bool = null;
+        bool = null;
+        bool = null;
+        bool = null;
+        bool = null;
+        Boolean bool = null;
         if (this.f10734h.mo5726g().m5800x(2)) {
             this.f10734h.mo5726g().f11149n.m5863d("Evaluating filter. audience, filter, event", Integer.valueOf(this.f10699b), this.f10733g.m5044x() ? Integer.valueOf(this.f10733g.m5045y()) : null, this.f10734h.m5865d().m5766u(this.f10733g.m5046z()));
             C4179s3 c4179s3 = this.f10734h.mo5726g().f11149n;
@@ -236,8 +235,8 @@ public final class C4039fa extends AbstractC4027ea {
                 }
             }
         }
-        this.f10734h.mo5726g().f11149n.m5861b("Event filter result", bool != 0 ? bool : "null");
-        if (bool == 0) {
+        this.f10734h.mo5726g().f11149n.m5861b("Event filter result", bool != null ? bool : "null");
+        if (bool == null) {
             return false;
         }
         Boolean bool2 = Boolean.TRUE;

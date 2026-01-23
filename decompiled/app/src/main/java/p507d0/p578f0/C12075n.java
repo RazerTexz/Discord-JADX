@@ -8,17 +8,17 @@ import p507d0.p580t._Arrays;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: Sequences.kt */
-/* renamed from: d0.f0.n */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.f0.n */
+/* JADX INFO: compiled from: Sequences.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public class C12075n extends SequencesJVM2 {
 
     /* JADX INFO: Add missing generic type declarations: [T] */
-    /* compiled from: Sequences.kt */
-    /* renamed from: d0.f0.n$a */
+    /* JADX INFO: renamed from: d0.f0.n$a */
+    /* JADX INFO: compiled from: Sequences.kt */
     public static final class a<T> implements Sequence<T> {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final /* synthetic */ Iterator f25105a;
 
         public a(Iterator it) {
@@ -32,11 +32,11 @@ public class C12075n extends SequencesJVM2 {
     }
 
     /* JADX INFO: Add missing generic type declarations: [T] */
-    /* compiled from: Sequences.kt */
-    /* renamed from: d0.f0.n$b */
+    /* JADX INFO: renamed from: d0.f0.n$b */
+    /* JADX INFO: compiled from: Sequences.kt */
     public static final class b<T> extends Lambda implements Function1<Sequence<? extends T>, Iterator<? extends T>> {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public static final b f25106j = new b();
 
         public b() {
@@ -55,11 +55,11 @@ public class C12075n extends SequencesJVM2 {
     }
 
     /* JADX INFO: Add missing generic type declarations: [T] */
-    /* compiled from: Sequences.kt */
-    /* renamed from: d0.f0.n$c */
+    /* JADX INFO: renamed from: d0.f0.n$c */
+    /* JADX INFO: compiled from: Sequences.kt */
     public static final class c<T> extends Lambda implements Function1<Iterable<? extends T>, Iterator<? extends T>> {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public static final c f25107j = new c();
 
         public c() {
@@ -78,8 +78,8 @@ public class C12075n extends SequencesJVM2 {
     }
 
     /* JADX INFO: Add missing generic type declarations: [T] */
-    /* compiled from: Sequences.kt */
-    /* renamed from: d0.f0.n$d */
+    /* JADX INFO: renamed from: d0.f0.n$d */
+    /* JADX INFO: compiled from: Sequences.kt */
     public static final class d<T> extends Lambda implements Function1<T, T> {
         public final /* synthetic */ Function0 $nextFunction;
 
@@ -97,8 +97,8 @@ public class C12075n extends SequencesJVM2 {
     }
 
     /* JADX INFO: Add missing generic type declarations: [T] */
-    /* compiled from: Sequences.kt */
-    /* renamed from: d0.f0.n$e */
+    /* JADX INFO: renamed from: d0.f0.n$e */
+    /* JADX INFO: compiled from: Sequences.kt */
     public static final class e<T> extends Lambda implements Function0<T> {
         public final /* synthetic */ Object $seed;
 

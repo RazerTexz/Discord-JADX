@@ -16,14 +16,14 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 import p658rx.Observable;
 
-/* compiled from: WidgetSettings.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetSettings.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetSettings$onViewBound$$inlined$with$lambda$6 implements View.OnClickListener {
     public final /* synthetic */ WidgetSettingsBinding $this_with;
     public final /* synthetic */ WidgetSettings this$0;
 
-    /* compiled from: WidgetSettings.kt */
-    /* renamed from: com.discord.widgets.settings.WidgetSettings$onViewBound$$inlined$with$lambda$6$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.WidgetSettings$onViewBound$$inlined$with$lambda$6$1 */
+    /* JADX INFO: compiled from: WidgetSettings.kt */
     public static final class C96121 extends Lambda implements Function1<Boolean, Unit> {
         public C96121() {
             super(1);
@@ -61,8 +61,8 @@ public final class WidgetSettings$onViewBound$$inlined$with$lambda$6 implements 
         }
     }
 
-    /* compiled from: WidgetSettings.kt */
-    /* renamed from: com.discord.widgets.settings.WidgetSettings$onViewBound$$inlined$with$lambda$6$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.WidgetSettings$onViewBound$$inlined$with$lambda$6$2 */
+    /* JADX INFO: compiled from: WidgetSettings.kt */
     public static final class C96132 extends Lambda implements Function1<Void, Unit> {
         public final /* synthetic */ C96121 $updateUploadDebugLogsUI$1;
 
@@ -78,15 +78,15 @@ public final class WidgetSettings$onViewBound$$inlined$with$lambda$6 implements 
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Void r4) {
             AppToast.m171i(WidgetSettings$onViewBound$$inlined$with$lambda$6.this.this$0, C5419R.string.upload_debug_log_success, 0, 4);
             C96121.invoke$default(this.$updateUploadDebugLogsUI$1, false, 1, null);
         }
     }
 
-    /* compiled from: WidgetSettings.kt */
-    /* renamed from: com.discord.widgets.settings.WidgetSettings$onViewBound$$inlined$with$lambda$6$3 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.WidgetSettings$onViewBound$$inlined$with$lambda$6$3 */
+    /* JADX INFO: compiled from: WidgetSettings.kt */
     public static final class C96143 extends Lambda implements Function1<Error, Unit> {
         public final /* synthetic */ C96121 $updateUploadDebugLogsUI$1;
 
@@ -102,15 +102,15 @@ public final class WidgetSettings$onViewBound$$inlined$with$lambda$6 implements 
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Error error) {
             Intrinsics3.checkNotNullParameter(error, "it");
             C96121.invoke$default(this.$updateUploadDebugLogsUI$1, false, 1, null);
         }
     }
 
-    /* compiled from: WidgetSettings.kt */
-    /* renamed from: com.discord.widgets.settings.WidgetSettings$onViewBound$$inlined$with$lambda$6$4 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.WidgetSettings$onViewBound$$inlined$with$lambda$6$4 */
+    /* JADX INFO: compiled from: WidgetSettings.kt */
     public static final class C96154 extends Lambda implements Function0<Unit> {
         public final /* synthetic */ C96121 $updateUploadDebugLogsUI$1;
 
@@ -126,7 +126,7 @@ public final class WidgetSettings$onViewBound$$inlined$with$lambda$6 implements 
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             C96121.invoke$default(this.$updateUploadDebugLogsUI$1, false, 1, null);
         }

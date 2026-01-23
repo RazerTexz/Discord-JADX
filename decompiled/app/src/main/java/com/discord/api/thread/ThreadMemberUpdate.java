@@ -5,8 +5,8 @@ import com.discord.models.domain.ModelAuditLogEntry;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ThreadMemberUpdate.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: ThreadMemberUpdate.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class ThreadMemberUpdate {
     private final int flags;
     private final long guildId;
@@ -16,27 +16,27 @@ public final /* data */ class ThreadMemberUpdate {
     private final boolean muted;
     private final long userId;
 
-    /* renamed from: a, reason: from getter */
+    /* JADX INFO: renamed from: a, reason: from getter */
     public final int getFlags() {
         return this.flags;
     }
 
-    /* renamed from: b, reason: from getter */
+    /* JADX INFO: renamed from: b, reason: from getter */
     public final long getGuildId() {
         return this.guildId;
     }
 
-    /* renamed from: c, reason: from getter */
+    /* JADX INFO: renamed from: c, reason: from getter */
     public final long getId() {
         return this.id;
     }
 
-    /* renamed from: d, reason: from getter */
+    /* JADX INFO: renamed from: d, reason: from getter */
     public final UtcDateTime getJoinTimestamp() {
         return this.joinTimestamp;
     }
 
-    /* renamed from: e, reason: from getter */
+    /* JADX INFO: renamed from: e, reason: from getter */
     public final MuteConfig getMuteConfig() {
         return this.muteConfig;
     }
@@ -52,17 +52,20 @@ public final /* data */ class ThreadMemberUpdate {
         return this.id == threadMemberUpdate.id && this.guildId == threadMemberUpdate.guildId && this.userId == threadMemberUpdate.userId && this.flags == threadMemberUpdate.flags && Intrinsics3.areEqual(this.joinTimestamp, threadMemberUpdate.joinTimestamp) && this.muted == threadMemberUpdate.muted && Intrinsics3.areEqual(this.muteConfig, threadMemberUpdate.muteConfig);
     }
 
-    /* renamed from: f, reason: from getter */
+    /* JADX INFO: renamed from: f, reason: from getter */
     public final boolean getMuted() {
         return this.muted;
     }
 
-    /* renamed from: g, reason: from getter */
+    /* JADX INFO: renamed from: g, reason: from getter */
     public final long getUserId() {
         return this.userId;
     }
 
     /* JADX WARN: Multi-variable type inference failed */
+    /* JADX WARN: Type inference failed for: r0v11 */
+    /* JADX WARN: Type inference failed for: r0v13 */
+    /* JADX WARN: Type inference failed for: r0v9, types: [int] */
     public int hashCode() {
         long j = this.id;
         long j2 = this.guildId;
@@ -72,13 +75,13 @@ public final /* data */ class ThreadMemberUpdate {
         UtcDateTime utcDateTime = this.joinTimestamp;
         int iHashCode = (i2 + (utcDateTime != null ? utcDateTime.hashCode() : 0)) * 31;
         boolean z2 = this.muted;
-        int i3 = z2;
-        if (z2 != 0) {
-            i3 = 1;
+        ?? r0 = z2;
+        if (z2) {
+            r0 = 1;
         }
-        int i4 = (iHashCode + i3) * 31;
+        int i3 = (iHashCode + r0) * 31;
         MuteConfig muteConfig = this.muteConfig;
-        return i4 + (muteConfig != null ? muteConfig.hashCode() : 0);
+        return i3 + (muteConfig != null ? muteConfig.hashCode() : 0);
     }
 
     public String toString() {

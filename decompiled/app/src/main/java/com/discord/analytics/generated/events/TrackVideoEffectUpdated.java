@@ -8,8 +8,8 @@ import com.discord.api.science.AnalyticsSchema;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: TrackVideoEffectUpdated.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: TrackVideoEffectUpdated.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class TrackVideoEffectUpdated implements AnalyticsSchema, TrackBase2, TrackLocationMetadata2 {
     private TrackBase trackBase;
     private TrackLocationMetadata trackLocationMetadata;
@@ -27,7 +27,7 @@ public final /* data */ class TrackVideoEffectUpdated implements AnalyticsSchema
     private final transient String analyticsSchemaTypeName = "video_effect_updated";
 
     @Override // com.discord.api.science.AnalyticsSchema
-    /* renamed from: d, reason: from getter */
+    /* JADX INFO: renamed from: d, reason: from getter */
     public String getAnalyticsSchemaTypeName() {
         return this.analyticsSchemaTypeName;
     }

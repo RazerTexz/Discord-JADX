@@ -30,13 +30,13 @@ import p507d0.p579g0.StringNumberConversions;
 import p507d0.p579g0.StringsJVM;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ContactSyncFriendSuggestionListAdapter.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: ContactSyncFriendSuggestionListAdapter.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class ContactSyncFriendSuggestionListAdapter extends MGRecyclerAdapterSimple<WidgetContactSyncViewModel.Item> {
     private Function2<? super Long, ? super Boolean, Unit> onClickFriendSuggestion;
     private final int spacing;
 
-    /* compiled from: ContactSyncFriendSuggestionListAdapter.kt */
+    /* JADX INFO: compiled from: ContactSyncFriendSuggestionListAdapter.kt */
     public static final class ItemFriendSuggestion extends MGRecyclerViewHolder<ContactSyncFriendSuggestionListAdapter, WidgetContactSyncViewModel.Item> {
         private final ViewSelectableFriendSuggestionBinding binding;
 
@@ -83,7 +83,7 @@ public final class ContactSyncFriendSuggestionListAdapter extends MGRecyclerAdap
         }
 
         @SuppressLint({"SetTextI18n"})
-        /* renamed from: onConfigure, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: onConfigure, reason: avoid collision after fix types in other method */
         public void onConfigure2(int position, WidgetContactSyncViewModel.Item data) {
             Object next;
             Intrinsics3.checkNotNullParameter(data, "data");

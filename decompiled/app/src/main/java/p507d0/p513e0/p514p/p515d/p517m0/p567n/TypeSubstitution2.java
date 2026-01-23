@@ -4,12 +4,12 @@ import com.discord.models.domain.ModelAuditLogEntry;
 import p507d0.p513e0.p514p.p515d.p517m0.p521c.p522g1.Annotations4;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: TypeSubstitution.kt */
-/* renamed from: d0.e0.p.d.m0.n.l, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.n.l, reason: use source file name */
+/* JADX INFO: compiled from: TypeSubstitution.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public class TypeSubstitution2 extends TypeSubstitution5 {
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final TypeSubstitution5 f24796b;
 
     public TypeSubstitution2(TypeSubstitution5 typeSubstitution5) {

@@ -10,15 +10,15 @@ import p507d0.p579g0.Strings4;
 import p507d0.p592z.p594d.Intrinsics3;
 import p615g0.BufferedSource;
 
-/* compiled from: HeadersReader.kt */
-/* renamed from: f0.e0.i.a, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: f0.e0.i.a, reason: use source file name */
+/* JADX INFO: compiled from: HeadersReader.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class HeadersReader {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public long f25547a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final BufferedSource f25548b;
 
     public HeadersReader(BufferedSource bufferedSource) {
@@ -27,7 +27,7 @@ public final class HeadersReader {
         this.f25547a = 262144;
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final Headers m10235a() throws IOException {
         ArrayList arrayList = new ArrayList(20);
         while (true) {
@@ -67,10 +67,10 @@ public final class HeadersReader {
         throw new TypeCastException("null cannot be cast to non-null type kotlin.Array<T>");
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final String m10236b() throws IOException {
         String strMo10432G = this.f25548b.mo10432G(this.f25547a);
-        this.f25547a -= strMo10432G.length();
+        this.f25547a -= (long) strMo10432G.length();
         return strMo10432G;
     }
 }

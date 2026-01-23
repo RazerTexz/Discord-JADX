@@ -24,43 +24,43 @@ import p007b.p225i.p226a.p242c.p259f3.Log2;
 import p007b.p225i.p226a.p242c.p264u2.DatabaseProvider;
 import p007b.p225i.p355b.p357b.ImmutableSet2;
 
-/* compiled from: SimpleCache.java */
-/* renamed from: b.i.a.c.e3.b0.r, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.e3.b0.r, reason: use source file name */
+/* JADX INFO: compiled from: SimpleCache.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class SimpleCache2 implements Cache {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final HashSet<File> f6506a = new HashSet<>();
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final File f6507b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final CacheEvictor f6508c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final CachedContentIndex f6509d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     @Nullable
     public final CacheFileMetadataIndex f6510e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final HashMap<String, ArrayList<Cache.InterfaceC10774a>> f6511f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public final Random f6512g;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public final boolean f6513h;
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public long f6514i;
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public long f6515j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public Cache.CacheException f6516k;
 
     public SimpleCache2(File file, CacheEvictor cacheEvictor, DatabaseProvider databaseProvider) {
@@ -87,8 +87,8 @@ public final class SimpleCache2 implements Cache {
         conditionVariable.block();
     }
 
-    /* renamed from: j */
-    public static void m2823j(SimpleCache2 simpleCache2) throws NumberFormatException {
+    /* JADX INFO: renamed from: j */
+    public static void m2823j(SimpleCache2 simpleCache2) {
         long j;
         if (!simpleCache2.f6507b.exists()) {
             try {
@@ -180,7 +180,7 @@ public final class SimpleCache2 implements Cache {
         }
     }
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public static void m2824m(File file) throws Cache.CacheException {
         if (file.mkdirs() || file.isDirectory()) {
             return;
@@ -194,7 +194,7 @@ public final class SimpleCache2 implements Cache {
         throw new Cache.CacheException(string);
     }
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public static long m2825n(File file) throws IOException {
         long jNextLong = new SecureRandom().nextLong();
         long jAbs = jNextLong == Long.MIN_VALUE ? 0L : Math.abs(jNextLong);
@@ -208,7 +208,7 @@ public final class SimpleCache2 implements Cache {
     }
 
     @Override // com.google.android.exoplayer2.upstream.cache.Cache
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public synchronized File mo2826a(String str, long j, long j2) throws Cache.CacheException {
         CachedContent cachedContent;
         File file;
@@ -230,7 +230,7 @@ public final class SimpleCache2 implements Cache {
     }
 
     @Override // com.google.android.exoplayer2.upstream.cache.Cache
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public synchronized ContentMetadata2 mo2827b(String str) {
         CachedContent cachedContent;
         AnimatableValueParser.m426D(true);
@@ -239,7 +239,7 @@ public final class SimpleCache2 implements Cache {
     }
 
     @Override // com.google.android.exoplayer2.upstream.cache.Cache
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public synchronized void mo2828c(String str, ContentMetadataMutations contentMetadataMutations) throws Cache.CacheException {
         AnimatableValueParser.m426D(true);
         m2836l();
@@ -257,7 +257,7 @@ public final class SimpleCache2 implements Cache {
     }
 
     @Override // com.google.android.exoplayer2.upstream.cache.Cache
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public synchronized void mo2829d(CacheSpan cacheSpan) {
         AnimatableValueParser.m426D(true);
         m2839q(cacheSpan);
@@ -269,7 +269,7 @@ public final class SimpleCache2 implements Cache {
       0x005b: PHI (r20v4 b.i.a.c.e3.b0.s) = (r20v3 b.i.a.c.e3.b0.s), (r20v3 b.i.a.c.e3.b0.s), (r20v7 b.i.a.c.e3.b0.s), (r20v7 b.i.a.c.e3.b0.s) binds: [B:21:0x0050, B:24:0x0058, B:16:0x0044, B:19:0x004b] A[DONT_GENERATE, DONT_INLINE]] */
     @Override // com.google.android.exoplayer2.upstream.cache.Cache
     @Nullable
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
@@ -318,7 +318,7 @@ public final class SimpleCache2 implements Cache {
     }
 
     @Override // com.google.android.exoplayer2.upstream.cache.Cache
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public synchronized CacheSpan mo2831f(String str, long j, long j2) throws InterruptedException, Cache.CacheException {
         CacheSpan cacheSpanMo2830e;
         AnimatableValueParser.m426D(true);
@@ -333,7 +333,7 @@ public final class SimpleCache2 implements Cache {
     }
 
     @Override // com.google.android.exoplayer2.upstream.cache.Cache
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public synchronized void mo2832g(File file, long j) throws Cache.CacheException {
         boolean z2 = true;
         AnimatableValueParser.m426D(true);
@@ -377,14 +377,14 @@ public final class SimpleCache2 implements Cache {
     }
 
     @Override // com.google.android.exoplayer2.upstream.cache.Cache
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public synchronized long mo2833h() {
         AnimatableValueParser.m426D(true);
         return this.f6515j;
     }
 
     @Override // com.google.android.exoplayer2.upstream.cache.Cache
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public synchronized void mo2834i(CacheSpan cacheSpan) {
         AnimatableValueParser.m426D(true);
         CachedContent cachedContentM2795c = this.f6509d.m2795c(cacheSpan.f6465j);
@@ -400,7 +400,7 @@ public final class SimpleCache2 implements Cache {
         throw new IllegalStateException();
     }
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final void m2835k(SimpleCacheSpan simpleCacheSpan) {
         this.f6509d.m2796d(simpleCacheSpan.f6465j).f6473c.add(simpleCacheSpan);
         this.f6515j += simpleCacheSpan.f6467l;
@@ -419,7 +419,7 @@ public final class SimpleCache2 implements Cache {
         this.f6508c.mo2820d(this, simpleCacheSpan);
     }
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public synchronized void m2836l() throws Cache.CacheException {
         Cache.CacheException cacheException = this.f6516k;
         if (cacheException != null) {
@@ -427,7 +427,7 @@ public final class SimpleCache2 implements Cache {
         }
     }
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public final SimpleCacheSpan m2837o(String str, long j, long j2) {
         SimpleCacheSpan simpleCacheSpanFloor;
         long j3;
@@ -459,8 +459,8 @@ public final class SimpleCache2 implements Cache {
         return simpleCacheSpanFloor;
     }
 
-    /* renamed from: p */
-    public final void m2838p(File file, boolean z2, @Nullable File[] fileArr, @Nullable Map<String, CacheFileMetadata> map) throws NumberFormatException {
+    /* JADX INFO: renamed from: p */
+    public final void m2838p(File file, boolean z2, @Nullable File[] fileArr, @Nullable Map<String, CacheFileMetadata> map) {
         if (fileArr == null || fileArr.length == 0) {
             if (z2) {
                 return;
@@ -490,7 +490,7 @@ public final class SimpleCache2 implements Cache {
         }
     }
 
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     public final void m2839q(CacheSpan cacheSpan) {
         boolean z2;
         CachedContent cachedContentM2795c = this.f6509d.m2795c(cacheSpan.f6465j);
@@ -539,7 +539,7 @@ public final class SimpleCache2 implements Cache {
         }
     }
 
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     public final void m2840r() {
         ArrayList arrayList = new ArrayList();
         Iterator it = Collections.unmodifiableCollection(this.f6509d.f6478a.values()).iterator();
@@ -555,7 +555,7 @@ public final class SimpleCache2 implements Cache {
         }
     }
 
-    /* renamed from: s */
+    /* JADX INFO: renamed from: s */
     public final SimpleCacheSpan m2841s(String str, SimpleCacheSpan simpleCacheSpan) {
         File file;
         if (!this.f6513h) {

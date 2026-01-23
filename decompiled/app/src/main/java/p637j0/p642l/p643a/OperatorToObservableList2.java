@@ -5,16 +5,16 @@ import p637j0.p642l.p644b.SingleDelayedProducer;
 import p658rx.Observable;
 import p658rx.Subscriber;
 
-/* compiled from: OperatorToObservableList.java */
-/* renamed from: j0.l.a.n2, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: j0.l.a.n2, reason: use source file name */
+/* JADX INFO: compiled from: OperatorToObservableList.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class OperatorToObservableList2<T> implements Observable.InterfaceC13006b<List<T>, T> {
 
-    /* compiled from: OperatorToObservableList.java */
-    /* renamed from: j0.l.a.n2$a */
+    /* JADX INFO: renamed from: j0.l.a.n2$a */
+    /* JADX INFO: compiled from: OperatorToObservableList.java */
     public static final class a {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public static final OperatorToObservableList2<Object> f26954a = new OperatorToObservableList2<>();
     }
 

@@ -14,16 +14,16 @@ import p507d0.p513e0.p514p.p515d.p517m0.p552k.p559x.DescriptorUtils2;
 import p507d0.p580t.Collections2;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: SealedClassInheritorsProvider.kt */
-/* renamed from: d0.e0.p.d.m0.k.a, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.k.a, reason: use source file name */
+/* JADX INFO: compiled from: SealedClassInheritorsProvider.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class SealedClassInheritorsProvider extends SealedClassInheritorsProvider2 {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final SealedClassInheritorsProvider f24332a = new SealedClassInheritorsProvider();
 
     /* JADX WARN: Multi-variable type inference failed */
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final void m9909a(ClassDescriptor classDescriptor, LinkedHashSet<ClassDescriptor> linkedHashSet, MemberScope3 memberScope3, boolean z2) {
         for (DeclarationDescriptor declarationDescriptor : ResolutionScope.a.getContributedDescriptors$default(memberScope3, MemberScope2.f24353o, null, 2, null)) {
             if (declarationDescriptor instanceof ClassDescriptor) {

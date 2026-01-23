@@ -4,12 +4,12 @@ import java.util.Iterator;
 import java.util.Map;
 import java.util.Objects;
 
-/* compiled from: TransformedIterator.java */
-/* renamed from: b.i.b.b.r0, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.b.b.r0, reason: use source file name */
+/* JADX INFO: compiled from: TransformedIterator.java */
+/* JADX INFO: loaded from: classes3.dex */
 public abstract class TransformedIterator<F, T> implements Iterator<T> {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final Iterator<? extends F> f12059j;
 
     public TransformedIterator(Iterator<? extends F> it) {

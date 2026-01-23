@@ -7,8 +7,8 @@ import com.discord.models.domain.ModelAuditLogEntry;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: TrackGuildSettingsUpdated.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: TrackGuildSettingsUpdated.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class TrackGuildSettingsUpdated implements AnalyticsSchema, TrackBase2 {
     private TrackBase trackBase;
     private final Long guildId = null;
@@ -34,7 +34,7 @@ public final /* data */ class TrackGuildSettingsUpdated implements AnalyticsSche
     private final transient String analyticsSchemaTypeName = "guild_settings_updated";
 
     @Override // com.discord.api.science.AnalyticsSchema
-    /* renamed from: d, reason: from getter */
+    /* JADX INFO: renamed from: d, reason: from getter */
     public String getAnalyticsSchemaTypeName() {
         return this.analyticsSchemaTypeName;
     }

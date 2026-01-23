@@ -77,8 +77,8 @@ import java.util.Objects;
 import p007b.p225i.p226a.p341g.p350i.ElasticTabIndicatorInterpolator;
 import p007b.p225i.p226a.p341g.p350i.TabIndicatorInterpolator;
 
+/* JADX INFO: loaded from: classes3.dex */
 @ViewPager.DecorView
-/* loaded from: classes3.dex */
 public class TabLayout extends HorizontalScrollView {
     private static final int ANIMATION_DURATION = 300;
 
@@ -272,10 +272,10 @@ public class TabLayout extends HorizontalScrollView {
         private Tab tab;
         private TextView textView;
 
-        /* renamed from: com.google.android.material.tabs.TabLayout$TabView$a */
+        /* JADX INFO: renamed from: com.google.android.material.tabs.TabLayout$TabView$a */
         public class ViewOnLayoutChangeListenerC11005a implements View.OnLayoutChangeListener {
 
-            /* renamed from: j */
+            /* JADX INFO: renamed from: j */
             public final /* synthetic */ View f21149j;
 
             public ViewOnLayoutChangeListenerC11005a(View view) {
@@ -399,32 +399,32 @@ public class TabLayout extends HorizontalScrollView {
             return this.badgeDrawable != null;
         }
 
-        /* JADX WARN: Multi-variable type inference failed */
         private void inflateAndAddDefaultIconView() {
-            FrameLayout frameLayoutCreatePreApi18BadgeAnchorRoot;
+            ViewGroup viewGroup;
             if (BadgeUtils.USE_COMPAT_PARENT) {
-                frameLayoutCreatePreApi18BadgeAnchorRoot = createPreApi18BadgeAnchorRoot();
+                FrameLayout frameLayoutCreatePreApi18BadgeAnchorRoot = createPreApi18BadgeAnchorRoot();
                 addView(frameLayoutCreatePreApi18BadgeAnchorRoot, 0);
+                viewGroup = frameLayoutCreatePreApi18BadgeAnchorRoot;
             } else {
-                frameLayoutCreatePreApi18BadgeAnchorRoot = this;
+                viewGroup = this;
             }
-            ImageView imageView = (ImageView) LayoutInflater.from(getContext()).inflate(C10817R.layout.design_layout_tab_icon, (ViewGroup) frameLayoutCreatePreApi18BadgeAnchorRoot, false);
+            ImageView imageView = (ImageView) LayoutInflater.from(getContext()).inflate(C10817R.layout.design_layout_tab_icon, viewGroup, false);
             this.iconView = imageView;
-            frameLayoutCreatePreApi18BadgeAnchorRoot.addView(imageView, 0);
+            viewGroup.addView(imageView, 0);
         }
 
-        /* JADX WARN: Multi-variable type inference failed */
         private void inflateAndAddDefaultTextView() {
-            FrameLayout frameLayoutCreatePreApi18BadgeAnchorRoot;
+            ViewGroup viewGroup;
             if (BadgeUtils.USE_COMPAT_PARENT) {
-                frameLayoutCreatePreApi18BadgeAnchorRoot = createPreApi18BadgeAnchorRoot();
+                FrameLayout frameLayoutCreatePreApi18BadgeAnchorRoot = createPreApi18BadgeAnchorRoot();
                 addView(frameLayoutCreatePreApi18BadgeAnchorRoot);
+                viewGroup = frameLayoutCreatePreApi18BadgeAnchorRoot;
             } else {
-                frameLayoutCreatePreApi18BadgeAnchorRoot = this;
+                viewGroup = this;
             }
-            TextView textView = (TextView) LayoutInflater.from(getContext()).inflate(C10817R.layout.design_layout_tab_text, (ViewGroup) frameLayoutCreatePreApi18BadgeAnchorRoot, false);
+            TextView textView = (TextView) LayoutInflater.from(getContext()).inflate(C10817R.layout.design_layout_tab_text, viewGroup, false);
             this.textView = textView;
-            frameLayoutCreatePreApi18BadgeAnchorRoot.addView(textView);
+            viewGroup.addView(textView);
         }
 
         private void removeBadge() {
@@ -494,8 +494,6 @@ public class TabLayout extends HorizontalScrollView {
             }
         }
 
-        /* JADX WARN: Multi-variable type inference failed */
-        /* JADX WARN: Type inference failed for: r3v0, types: [android.graphics.drawable.RippleDrawable] */
         private void updateBackgroundDrawable(Context context) {
             int i = TabLayout.this.tabBackgroundResId;
             if (i != 0) {
@@ -509,18 +507,20 @@ public class TabLayout extends HorizontalScrollView {
             }
             GradientDrawable gradientDrawable = new GradientDrawable();
             gradientDrawable.setColor(0);
+            Drawable rippleDrawable = gradientDrawable;
             if (TabLayout.this.tabRippleColorStateList != null) {
                 GradientDrawable gradientDrawable2 = new GradientDrawable();
                 gradientDrawable2.setCornerRadius(1.0E-5f);
                 gradientDrawable2.setColor(-1);
                 ColorStateList colorStateListConvertToRippleDrawableColor = RippleUtils.convertToRippleDrawableColor(TabLayout.this.tabRippleColorStateList);
                 boolean z2 = TabLayout.this.unboundedRipple;
+                GradientDrawable gradientDrawable3 = gradientDrawable;
                 if (z2) {
-                    gradientDrawable = null;
+                    gradientDrawable3 = null;
                 }
-                gradientDrawable = new RippleDrawable(colorStateListConvertToRippleDrawableColor, gradientDrawable, z2 ? null : gradientDrawable2);
+                rippleDrawable = new RippleDrawable(colorStateListConvertToRippleDrawableColor, gradientDrawable3, z2 ? null : gradientDrawable2);
             }
-            ViewCompat.setBackground(this, gradientDrawable);
+            ViewCompat.setBackground(this, rippleDrawable);
             TabLayout.this.invalidate();
         }
 
@@ -838,7 +838,7 @@ public class TabLayout extends HorizontalScrollView {
         }
     }
 
-    /* renamed from: com.google.android.material.tabs.TabLayout$a */
+    /* JADX INFO: renamed from: com.google.android.material.tabs.TabLayout$a */
     public class C11006a implements ValueAnimator.AnimatorUpdateListener {
         public C11006a() {
         }
@@ -849,10 +849,10 @@ public class TabLayout extends HorizontalScrollView {
         }
     }
 
-    /* renamed from: com.google.android.material.tabs.TabLayout$b */
+    /* JADX INFO: renamed from: com.google.android.material.tabs.TabLayout$b */
     public class C11007b implements ViewPager.OnAdapterChangeListener {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public boolean f21152a;
 
         public C11007b() {
@@ -867,7 +867,7 @@ public class TabLayout extends HorizontalScrollView {
         }
     }
 
-    /* renamed from: com.google.android.material.tabs.TabLayout$c */
+    /* JADX INFO: renamed from: com.google.android.material.tabs.TabLayout$c */
     public class C11008c extends DataSetObserver {
         public C11008c() {
         }
@@ -883,28 +883,28 @@ public class TabLayout extends HorizontalScrollView {
         }
     }
 
-    /* renamed from: com.google.android.material.tabs.TabLayout$d */
+    /* JADX INFO: renamed from: com.google.android.material.tabs.TabLayout$d */
     public class C11009d extends LinearLayout {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public ValueAnimator f21155j;
 
-        /* renamed from: k */
+        /* JADX INFO: renamed from: k */
         public int f21156k;
 
-        /* renamed from: l */
+        /* JADX INFO: renamed from: l */
         public float f21157l;
 
-        /* renamed from: m */
+        /* JADX INFO: renamed from: m */
         public int f21158m;
 
-        /* renamed from: com.google.android.material.tabs.TabLayout$d$a */
+        /* JADX INFO: renamed from: com.google.android.material.tabs.TabLayout$d$a */
         public class a implements ValueAnimator.AnimatorUpdateListener {
 
-            /* renamed from: a */
+            /* JADX INFO: renamed from: a */
             public final /* synthetic */ View f21160a;
 
-            /* renamed from: b */
+            /* JADX INFO: renamed from: b */
             public final /* synthetic */ View f21161b;
 
             public a(View view, View view2) {
@@ -918,10 +918,10 @@ public class TabLayout extends HorizontalScrollView {
             }
         }
 
-        /* renamed from: com.google.android.material.tabs.TabLayout$d$b */
+        /* JADX INFO: renamed from: com.google.android.material.tabs.TabLayout$d$b */
         public class b extends AnimatorListenerAdapter {
 
-            /* renamed from: a */
+            /* JADX INFO: renamed from: a */
             public final /* synthetic */ int f21163a;
 
             public b(int i) {
@@ -946,7 +946,7 @@ public class TabLayout extends HorizontalScrollView {
             setWillNotDraw(false);
         }
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final void m9148a() {
             View childAt = getChildAt(this.f21156k);
             TabIndicatorInterpolator tabIndicatorInterpolatorAccess$1200 = TabLayout.access$1200(TabLayout.this);
@@ -957,14 +957,14 @@ public class TabLayout extends HorizontalScrollView {
             drawable.setBounds((int) rectFM6145a.left, drawable.getBounds().top, (int) rectFM6145a.right, drawable.getBounds().bottom);
         }
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public void m9149b(int i) {
             Rect bounds = TabLayout.this.tabSelectedIndicator.getBounds();
             TabLayout.this.tabSelectedIndicator.setBounds(bounds.left, 0, bounds.right, i);
             requestLayout();
         }
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public final void m9150c(View view, View view2, float f) {
             if (view != null && view.getWidth() > 0) {
                 TabIndicatorInterpolator tabIndicatorInterpolatorAccess$1200 = TabLayout.access$1200(TabLayout.this);
@@ -977,7 +977,7 @@ public class TabLayout extends HorizontalScrollView {
             ViewCompat.postInvalidateOnAnimation(this);
         }
 
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         public final void m9151d(boolean z2, int i, int i2) {
             View childAt = getChildAt(this.f21156k);
             View childAt2 = getChildAt(i);
@@ -1856,7 +1856,7 @@ public class TabLayout extends HorizontalScrollView {
         @LabelVisibility
         private int labelVisibilityMode = 1;
 
-        /* renamed from: id */
+        /* JADX INFO: renamed from: id */
         private int f21148id = -1;
 
         public static /* synthetic */ int access$000(Tab tab) {
@@ -2174,7 +2174,7 @@ public class TabLayout extends HorizontalScrollView {
     }
 
     /* JADX WARN: Illegal instructions before constructor call */
-    public TabLayout(@NonNull Context context, @Nullable AttributeSet attributeSet, int i) throws Resources.NotFoundException {
+    public TabLayout(@NonNull Context context, @Nullable AttributeSet attributeSet, int i) {
         int i2 = DEF_STYLE_RES;
         super(MaterialThemeOverlay.wrap(context, attributeSet, i, i2), attributeSet, i);
         this.tabs = new ArrayList<>();

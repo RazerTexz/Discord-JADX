@@ -21,8 +21,8 @@ import com.discord.models.domain.ModelAuditLogEntry;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ColorCompat.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: ColorCompat.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class ColorCompat {
     public static final ColorCompat INSTANCE = new ColorCompat();
 

@@ -24,17 +24,17 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 import p507d0.p592z.p594d.p595g0.KMarkers;
 
-/* compiled from: _Arrays.kt */
-/* renamed from: d0.t.k, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.t.k, reason: use source file name */
+/* JADX INFO: compiled from: _Arrays.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public class _Arrays extends _ArraysJvm {
 
     /* JADX INFO: Add missing generic type declarations: [T] */
-    /* compiled from: Iterables.kt */
-    /* renamed from: d0.t.k$a */
+    /* JADX INFO: renamed from: d0.t.k$a */
+    /* JADX INFO: compiled from: Iterables.kt */
     public static final class a<T> implements Iterable<T>, KMarkers {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public final /* synthetic */ Object[] f25188j;
 
         public a(Object[] objArr) {
@@ -48,11 +48,11 @@ public class _Arrays extends _ArraysJvm {
     }
 
     /* JADX INFO: Add missing generic type declarations: [T] */
-    /* compiled from: Sequences.kt */
-    /* renamed from: d0.t.k$b */
+    /* JADX INFO: renamed from: d0.t.k$b */
+    /* JADX INFO: compiled from: Sequences.kt */
     public static final class b<T> implements Sequence<T> {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final /* synthetic */ Object[] f25189a;
 
         public b(Object[] objArr) {
@@ -66,8 +66,8 @@ public class _Arrays extends _ArraysJvm {
     }
 
     /* JADX INFO: Add missing generic type declarations: [T] */
-    /* compiled from: _Arrays.kt */
-    /* renamed from: d0.t.k$c */
+    /* JADX INFO: renamed from: d0.t.k$c */
+    /* JADX INFO: compiled from: _Arrays.kt */
     public static final class c<T> extends Lambda implements Function0<Iterator<? extends T>> {
         public final /* synthetic */ Object[] $this_withIndex;
 

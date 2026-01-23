@@ -6,12 +6,12 @@ import p007b.p085c.p086a.p090c0.Keyframe;
 import p007b.p085c.p086a.p090c0.LottieValueCallback;
 import p007b.p085c.p086a.p090c0.ScaleXY;
 
-/* compiled from: ScaleKeyframeAnimation.java */
-/* renamed from: b.c.a.w.c.k, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.c.a.w.c.k, reason: use source file name */
+/* JADX INFO: compiled from: ScaleKeyframeAnimation.java */
+/* JADX INFO: loaded from: classes.dex */
 public class ScaleKeyframeAnimation extends KeyframeAnimation<ScaleXY> {
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public final ScaleXY f2621i;
 
     public ScaleKeyframeAnimation(List<Keyframe<ScaleXY>> list) {
@@ -21,7 +21,7 @@ public class ScaleKeyframeAnimation extends KeyframeAnimation<ScaleXY> {
 
     /* JADX WARN: Multi-variable type inference failed */
     @Override // p007b.p085c.p086a.p091w.p093c.BaseKeyframeAnimation
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public Object mo728f(Keyframe keyframe, float f) {
         T t;
         ScaleXY scaleXY;

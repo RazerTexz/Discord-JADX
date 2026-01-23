@@ -5,15 +5,15 @@ import android.view.ViewGroup;
 import java.util.Objects;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: SwipeDismissTouchListener.kt */
-/* renamed from: b.p.a.n, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.p.a.n, reason: use source file name */
+/* JADX INFO: compiled from: SwipeDismissTouchListener.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class SwipeDismissTouchListener3 implements ValueAnimator.AnimatorUpdateListener {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final /* synthetic */ SwipeDismissTouchListener f14385a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final /* synthetic */ ViewGroup.LayoutParams f14386b;
 
     public SwipeDismissTouchListener3(SwipeDismissTouchListener swipeDismissTouchListener, ViewGroup.LayoutParams layoutParams) {

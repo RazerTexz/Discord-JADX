@@ -3,12 +3,12 @@ package p507d0.p582u;
 import java.util.Comparator;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: Comparisons.kt */
-/* renamed from: d0.u.c */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.u.c */
+/* JADX INFO: compiled from: Comparisons.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class C12171c implements Comparator<Comparable<? super Object>> {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static final C12171c f25229j = new C12171c();
 
     @Override // java.util.Comparator
@@ -21,7 +21,7 @@ public final class C12171c implements Comparator<Comparable<? super Object>> {
         return C12172d.f25230j;
     }
 
-    /* renamed from: compare, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: compare, reason: avoid collision after fix types in other method */
     public int compare2(Comparable<Object> comparable, Comparable<Object> comparable2) {
         Intrinsics3.checkNotNullParameter(comparable, "a");
         Intrinsics3.checkNotNullParameter(comparable2, "b");

@@ -1,6 +1,5 @@
 package com.discord.widgets.guilds.list;
 
-import android.content.res.Resources;
 import android.graphics.Rect;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -24,8 +23,8 @@ import p507d0.p580t.Collections2;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetGuildListAdapter.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetGuildListAdapter.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetGuildListAdapter extends RecyclerView.Adapter<GuildListViewHolder> implements GuildsDragAndDropCallback.Controller {
     private static final float NEAR_CENTER_PERCENTAGE = 0.2f;
     private int bottomNavHeight;
@@ -37,7 +36,7 @@ public final class WidgetGuildListAdapter extends RecyclerView.Adapter<GuildList
     private int selectedCenterY;
     private int targetCenterY;
 
-    /* compiled from: WidgetGuildListAdapter.kt */
+    /* JADX INFO: compiled from: WidgetGuildListAdapter.kt */
     public interface InteractionListener {
         boolean onDrop();
 
@@ -50,10 +49,10 @@ public final class WidgetGuildListAdapter extends RecyclerView.Adapter<GuildList
         void onOperation(Operation operation);
     }
 
-    /* compiled from: WidgetGuildListAdapter.kt */
+    /* JADX INFO: compiled from: WidgetGuildListAdapter.kt */
     public static abstract class Operation {
 
-        /* compiled from: WidgetGuildListAdapter.kt */
+        /* JADX INFO: compiled from: WidgetGuildListAdapter.kt */
         public static final /* data */ class MoveAbove extends Operation {
             private final int fromPosition;
             private final int targetPosition;
@@ -74,12 +73,12 @@ public final class WidgetGuildListAdapter extends RecyclerView.Adapter<GuildList
                 return moveAbove.copy(i, i2);
             }
 
-            /* renamed from: component1, reason: from getter */
+            /* JADX INFO: renamed from: component1, reason: from getter */
             public final int getFromPosition() {
                 return this.fromPosition;
             }
 
-            /* renamed from: component2, reason: from getter */
+            /* JADX INFO: renamed from: component2, reason: from getter */
             public final int getTargetPosition() {
                 return this.targetPosition;
             }
@@ -119,7 +118,7 @@ public final class WidgetGuildListAdapter extends RecyclerView.Adapter<GuildList
             }
         }
 
-        /* compiled from: WidgetGuildListAdapter.kt */
+        /* JADX INFO: compiled from: WidgetGuildListAdapter.kt */
         public static final /* data */ class MoveBelow extends Operation {
             private final int fromPosition;
             private final int targetPosition;
@@ -140,12 +139,12 @@ public final class WidgetGuildListAdapter extends RecyclerView.Adapter<GuildList
                 return moveBelow.copy(i, i2);
             }
 
-            /* renamed from: component1, reason: from getter */
+            /* JADX INFO: renamed from: component1, reason: from getter */
             public final int getFromPosition() {
                 return this.fromPosition;
             }
 
-            /* renamed from: component2, reason: from getter */
+            /* JADX INFO: renamed from: component2, reason: from getter */
             public final int getTargetPosition() {
                 return this.targetPosition;
             }
@@ -185,7 +184,7 @@ public final class WidgetGuildListAdapter extends RecyclerView.Adapter<GuildList
             }
         }
 
-        /* compiled from: WidgetGuildListAdapter.kt */
+        /* JADX INFO: compiled from: WidgetGuildListAdapter.kt */
         public static final /* data */ class TargetOperation extends Operation {
             private final int fromPosition;
             private final int targetPosition;
@@ -206,12 +205,12 @@ public final class WidgetGuildListAdapter extends RecyclerView.Adapter<GuildList
                 return targetOperation.copy(i, i2);
             }
 
-            /* renamed from: component1, reason: from getter */
+            /* JADX INFO: renamed from: component1, reason: from getter */
             public final int getFromPosition() {
                 return this.fromPosition;
             }
 
-            /* renamed from: component2, reason: from getter */
+            /* JADX INFO: renamed from: component2, reason: from getter */
             public final int getTargetPosition() {
                 return this.targetPosition;
             }
@@ -259,7 +258,7 @@ public final class WidgetGuildListAdapter extends RecyclerView.Adapter<GuildList
         }
     }
 
-    /* compiled from: WidgetGuildListAdapter.kt */
+    /* JADX INFO: compiled from: WidgetGuildListAdapter.kt */
     public enum TargetPosition {
         TOP,
         CENTER,
@@ -279,8 +278,8 @@ public final class WidgetGuildListAdapter extends RecyclerView.Adapter<GuildList
         }
     }
 
-    /* compiled from: WidgetGuildListAdapter.kt */
-    /* renamed from: com.discord.widgets.guilds.list.WidgetGuildListAdapter$createDiffUtilCallback$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.guilds.list.WidgetGuildListAdapter$createDiffUtilCallback$1 */
+    /* JADX INFO: compiled from: WidgetGuildListAdapter.kt */
     public static final class C87341 extends DiffUtil.Callback {
         public final /* synthetic */ List $newItems;
         public final /* synthetic */ List $oldItems;
@@ -311,8 +310,8 @@ public final class WidgetGuildListAdapter extends RecyclerView.Adapter<GuildList
         }
     }
 
-    /* compiled from: WidgetGuildListAdapter.kt */
-    /* renamed from: com.discord.widgets.guilds.list.WidgetGuildListAdapter$onBindViewHolder$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.guilds.list.WidgetGuildListAdapter$onBindViewHolder$1 */
+    /* JADX INFO: compiled from: WidgetGuildListAdapter.kt */
     public static final class ViewOnClickListenerC87351 implements View.OnClickListener {
         public final /* synthetic */ GuildListViewHolder $holder;
         public final /* synthetic */ GuildListItem $item;
@@ -331,8 +330,8 @@ public final class WidgetGuildListAdapter extends RecyclerView.Adapter<GuildList
         }
     }
 
-    /* compiled from: WidgetGuildListAdapter.kt */
-    /* renamed from: com.discord.widgets.guilds.list.WidgetGuildListAdapter$onBindViewHolder$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.guilds.list.WidgetGuildListAdapter$onBindViewHolder$2 */
+    /* JADX INFO: compiled from: WidgetGuildListAdapter.kt */
     public static final class ViewOnClickListenerC87362 implements View.OnClickListener {
         public final /* synthetic */ GuildListViewHolder $holder;
         public final /* synthetic */ GuildListItem $item;
@@ -351,8 +350,8 @@ public final class WidgetGuildListAdapter extends RecyclerView.Adapter<GuildList
         }
     }
 
-    /* compiled from: WidgetGuildListAdapter.kt */
-    /* renamed from: com.discord.widgets.guilds.list.WidgetGuildListAdapter$onCreateViewHolder$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.guilds.list.WidgetGuildListAdapter$onCreateViewHolder$1 */
+    /* JADX INFO: compiled from: WidgetGuildListAdapter.kt */
     public static final class C87371 extends Lambda implements Function1<Integer, View> {
         public final /* synthetic */ ViewGroup $parent;
 
@@ -372,8 +371,8 @@ public final class WidgetGuildListAdapter extends RecyclerView.Adapter<GuildList
         }
     }
 
-    /* compiled from: WidgetGuildListAdapter.kt */
-    /* renamed from: com.discord.widgets.guilds.list.WidgetGuildListAdapter$onCreateViewHolder$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.guilds.list.WidgetGuildListAdapter$onCreateViewHolder$2 */
+    /* JADX INFO: compiled from: WidgetGuildListAdapter.kt */
     public static final class C87382 extends Lambda implements Function1<GuildListItem.GuildItem, Unit> {
         public final /* synthetic */ View $itemView;
 
@@ -389,7 +388,7 @@ public final class WidgetGuildListAdapter extends RecyclerView.Adapter<GuildList
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(GuildListItem.GuildItem guildItem) {
             Intrinsics3.checkNotNullParameter(guildItem, "item");
             InteractionListener interactionListenerAccess$getInteractionListener$p = WidgetGuildListAdapter.access$getInteractionListener$p(WidgetGuildListAdapter.this);
@@ -399,8 +398,8 @@ public final class WidgetGuildListAdapter extends RecyclerView.Adapter<GuildList
         }
     }
 
-    /* compiled from: WidgetGuildListAdapter.kt */
-    /* renamed from: com.discord.widgets.guilds.list.WidgetGuildListAdapter$onCreateViewHolder$3 */
+    /* JADX INFO: renamed from: com.discord.widgets.guilds.list.WidgetGuildListAdapter$onCreateViewHolder$3 */
+    /* JADX INFO: compiled from: WidgetGuildListAdapter.kt */
     public static final class C87393 extends Lambda implements Function1<GuildListItem.GuildItem, Unit> {
         public final /* synthetic */ View $itemView;
 
@@ -416,7 +415,7 @@ public final class WidgetGuildListAdapter extends RecyclerView.Adapter<GuildList
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(GuildListItem.GuildItem guildItem) {
             Intrinsics3.checkNotNullParameter(guildItem, "item");
             InteractionListener interactionListenerAccess$getInteractionListener$p = WidgetGuildListAdapter.access$getInteractionListener$p(WidgetGuildListAdapter.this);
@@ -426,8 +425,8 @@ public final class WidgetGuildListAdapter extends RecyclerView.Adapter<GuildList
         }
     }
 
-    /* compiled from: WidgetGuildListAdapter.kt */
-    /* renamed from: com.discord.widgets.guilds.list.WidgetGuildListAdapter$onCreateViewHolder$4 */
+    /* JADX INFO: renamed from: com.discord.widgets.guilds.list.WidgetGuildListAdapter$onCreateViewHolder$4 */
+    /* JADX INFO: compiled from: WidgetGuildListAdapter.kt */
     public static final class C87404 extends Lambda implements Function1<GuildListItem.FolderItem, Unit> {
         public final /* synthetic */ View $itemView;
 
@@ -443,7 +442,7 @@ public final class WidgetGuildListAdapter extends RecyclerView.Adapter<GuildList
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(GuildListItem.FolderItem folderItem) {
             Intrinsics3.checkNotNullParameter(folderItem, "item");
             InteractionListener interactionListenerAccess$getInteractionListener$p = WidgetGuildListAdapter.access$getInteractionListener$p(WidgetGuildListAdapter.this);
@@ -453,8 +452,8 @@ public final class WidgetGuildListAdapter extends RecyclerView.Adapter<GuildList
         }
     }
 
-    /* compiled from: WidgetGuildListAdapter.kt */
-    /* renamed from: com.discord.widgets.guilds.list.WidgetGuildListAdapter$onCreateViewHolder$5 */
+    /* JADX INFO: renamed from: com.discord.widgets.guilds.list.WidgetGuildListAdapter$onCreateViewHolder$5 */
+    /* JADX INFO: compiled from: WidgetGuildListAdapter.kt */
     public static final class C87415 extends Lambda implements Function1<GuildListItem.FolderItem, Unit> {
         public final /* synthetic */ View $itemView;
 
@@ -470,7 +469,7 @@ public final class WidgetGuildListAdapter extends RecyclerView.Adapter<GuildList
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(GuildListItem.FolderItem folderItem) {
             Intrinsics3.checkNotNullParameter(folderItem, "item");
             InteractionListener interactionListenerAccess$getInteractionListener$p = WidgetGuildListAdapter.access$getInteractionListener$p(WidgetGuildListAdapter.this);
@@ -480,8 +479,8 @@ public final class WidgetGuildListAdapter extends RecyclerView.Adapter<GuildList
         }
     }
 
-    /* compiled from: WidgetGuildListAdapter.kt */
-    /* renamed from: com.discord.widgets.guilds.list.WidgetGuildListAdapter$onCreateViewHolder$6 */
+    /* JADX INFO: renamed from: com.discord.widgets.guilds.list.WidgetGuildListAdapter$onCreateViewHolder$6 */
+    /* JADX INFO: compiled from: WidgetGuildListAdapter.kt */
     public static final class C87426 extends Lambda implements Function1<GuildListItem.PrivateChannelItem, Unit> {
         public final /* synthetic */ View $itemView;
 
@@ -497,7 +496,7 @@ public final class WidgetGuildListAdapter extends RecyclerView.Adapter<GuildList
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(GuildListItem.PrivateChannelItem privateChannelItem) {
             Intrinsics3.checkNotNullParameter(privateChannelItem, "item");
             InteractionListener interactionListenerAccess$getInteractionListener$p = WidgetGuildListAdapter.access$getInteractionListener$p(WidgetGuildListAdapter.this);
@@ -507,8 +506,8 @@ public final class WidgetGuildListAdapter extends RecyclerView.Adapter<GuildList
         }
     }
 
-    /* compiled from: WidgetGuildListAdapter.kt */
-    /* renamed from: com.discord.widgets.guilds.list.WidgetGuildListAdapter$onCreateViewHolder$7 */
+    /* JADX INFO: renamed from: com.discord.widgets.guilds.list.WidgetGuildListAdapter$onCreateViewHolder$7 */
+    /* JADX INFO: compiled from: WidgetGuildListAdapter.kt */
     public static final class C87437 extends Lambda implements Function1<GuildListItem.PrivateChannelItem, Unit> {
         public final /* synthetic */ View $itemView;
 
@@ -524,7 +523,7 @@ public final class WidgetGuildListAdapter extends RecyclerView.Adapter<GuildList
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(GuildListItem.PrivateChannelItem privateChannelItem) {
             Intrinsics3.checkNotNullParameter(privateChannelItem, "item");
             InteractionListener interactionListenerAccess$getInteractionListener$p = WidgetGuildListAdapter.access$getInteractionListener$p(WidgetGuildListAdapter.this);
@@ -534,8 +533,8 @@ public final class WidgetGuildListAdapter extends RecyclerView.Adapter<GuildList
         }
     }
 
-    /* compiled from: WidgetGuildListAdapter.kt */
-    /* renamed from: com.discord.widgets.guilds.list.WidgetGuildListAdapter$onCreateViewHolder$8 */
+    /* JADX INFO: renamed from: com.discord.widgets.guilds.list.WidgetGuildListAdapter$onCreateViewHolder$8 */
+    /* JADX INFO: compiled from: WidgetGuildListAdapter.kt */
     public static final class C87448 extends Lambda implements Function1<GuildListItem.FriendsItem, Unit> {
         public final /* synthetic */ View $itemView;
 
@@ -551,7 +550,7 @@ public final class WidgetGuildListAdapter extends RecyclerView.Adapter<GuildList
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(GuildListItem.FriendsItem friendsItem) {
             Intrinsics3.checkNotNullParameter(friendsItem, "item");
             InteractionListener interactionListenerAccess$getInteractionListener$p = WidgetGuildListAdapter.access$getInteractionListener$p(WidgetGuildListAdapter.this);
@@ -604,7 +603,7 @@ public final class WidgetGuildListAdapter extends RecyclerView.Adapter<GuildList
     }
 
     @Override // androidx.recyclerview.widget.RecyclerView.Adapter
-    /* renamed from: getItemCount */
+    /* JADX INFO: renamed from: getItemCount */
     public int getPageSize() {
         return this.items.size();
     }
@@ -656,7 +655,7 @@ public final class WidgetGuildListAdapter extends RecyclerView.Adapter<GuildList
     }
 
     @Override // androidx.recyclerview.widget.RecyclerView.Adapter
-    public /* bridge */ /* synthetic */ void onBindViewHolder(RecyclerView.ViewHolder viewHolder, int i) throws Resources.NotFoundException {
+    public /* bridge */ /* synthetic */ void onBindViewHolder(RecyclerView.ViewHolder viewHolder, int i) {
         onBindViewHolder((GuildListViewHolder) viewHolder, i);
     }
 
@@ -774,7 +773,7 @@ public final class WidgetGuildListAdapter extends RecyclerView.Adapter<GuildList
         }
     }
 
-    public void onBindViewHolder(GuildListViewHolder holder, int position) throws Resources.NotFoundException {
+    public void onBindViewHolder(GuildListViewHolder holder, int position) {
         Intrinsics3.checkNotNullParameter(holder, "holder");
         GuildListItem guildListItem = this.items.get(position);
         if (guildListItem instanceof GuildListItem.GuildItem) {

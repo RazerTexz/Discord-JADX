@@ -9,8 +9,8 @@ import com.google.android.gms.common.api.Status;
 import com.google.android.gms.safetynet.zzf;
 import p007b.p225i.p226a.p288f.p313h.p328o.C3962i;
 
-/* renamed from: b.i.a.f.h.o.a */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.h.o.a */
+/* JADX INFO: loaded from: classes3.dex */
 public class BinderC3954a extends Binder implements IInterface {
     public BinderC3954a(String str) {
         attachInterface(this, str);

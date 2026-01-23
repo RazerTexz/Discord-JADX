@@ -15,17 +15,17 @@ import kotlin.jvm.internal.DefaultConstructorMarker;
 import p507d0.p592z.p594d.Intrinsics3;
 import p658rx.functions.Action1;
 
-/* compiled from: TextWatcher.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: TextWatcher.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public class TextWatcher implements android.text.TextWatcher {
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private final Function1<Editable, Unit> onAfterTextChanged;
     private final Function4<CharSequence, Integer, Integer, Integer, Unit> onBeforeTextChanged;
     private final Function4<CharSequence, Integer, Integer, Integer, Unit> onTextChanged;
 
-    /* compiled from: TextWatcher.kt */
+    /* JADX INFO: compiled from: TextWatcher.kt */
     public static final class Companion {
         private Companion() {
         }

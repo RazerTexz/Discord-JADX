@@ -8,12 +8,12 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.constraintlayout.widget.Guideline;
 import androidx.viewbinding.ViewBinding;
 
-/* compiled from: ViewAddOverrideItemBinding.java */
-/* renamed from: b.a.i.z1, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.a.i.z1, reason: use source file name */
+/* JADX INFO: compiled from: ViewAddOverrideItemBinding.java */
+/* JADX INFO: loaded from: classes.dex */
 public final class ViewAddOverrideItemBinding implements ViewBinding {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     @NonNull
     public final ConstraintLayout f1434a;
 

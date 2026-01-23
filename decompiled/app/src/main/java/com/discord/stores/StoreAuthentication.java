@@ -71,14 +71,14 @@ import p658rx.subjects.BehaviorSubject;
 import p658rx.subjects.PublishSubject;
 import p658rx.subjects.SerializedSubject;
 
-/* compiled from: StoreAuthentication.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: StoreAuthentication.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class StoreAuthentication extends Store {
     private static final String CACHE_KEY_FINGERPRINT = "STORE_AUTHED_FINGERPRINT";
     private static final String CACHE_KEY_LOGIN = "STORE_AUTHED_LOGIN";
     private static final String CACHE_KEY_TOKEN_RNA = "token";
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private static final String SHARED_PREFS_NAME_RNA = "CacheStore";
     private Boolean _isConsentRequired;
@@ -95,7 +95,7 @@ public final class StoreAuthentication extends Store {
     private final StoreStream storeStream;
     private final PublishSubject<Boolean> userInitiatedAuthEventSubject;
 
-    /* compiled from: StoreAuthentication.kt */
+    /* JADX INFO: compiled from: StoreAuthentication.kt */
     public static final /* data */ class AuthRequestParams {
         private final String guildTemplateCode;
         private final StoreInviteSettings.InviteCode inviteCode;
@@ -115,12 +115,12 @@ public final class StoreAuthentication extends Store {
             return authRequestParams.copy(inviteCode, str);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final StoreInviteSettings.InviteCode getInviteCode() {
             return this.inviteCode;
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final String getGuildTemplateCode() {
             return this.guildTemplateCode;
         }
@@ -163,7 +163,7 @@ public final class StoreAuthentication extends Store {
         }
     }
 
-    /* compiled from: StoreAuthentication.kt */
+    /* JADX INFO: compiled from: StoreAuthentication.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -218,8 +218,8 @@ public final class StoreAuthentication extends Store {
         }
     }
 
-    /* compiled from: StoreAuthentication.kt */
-    /* renamed from: com.discord.stores.StoreAuthentication$authMFA$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreAuthentication$authMFA$1 */
+    /* JADX INFO: compiled from: StoreAuthentication.kt */
     public static final class C57711 extends Lambda implements Function1<ModelLoginResult, TrackNetworkMetadata2> {
         public static final C57711 INSTANCE = new C57711();
 
@@ -232,14 +232,14 @@ public final class StoreAuthentication extends Store {
             return invoke2(modelLoginResult);
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final TrackNetworkMetadata2 invoke2(ModelLoginResult modelLoginResult) {
             return new TrackNetworkActionUserLoginMfa();
         }
     }
 
-    /* compiled from: StoreAuthentication.kt */
-    /* renamed from: com.discord.stores.StoreAuthentication$authMFA$2 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreAuthentication$authMFA$2 */
+    /* JADX INFO: compiled from: StoreAuthentication.kt */
     public static final class C57722<T> implements Action1<ModelLoginResult> {
         public C57722() {
         }
@@ -249,7 +249,7 @@ public final class StoreAuthentication extends Store {
             call2(modelLoginResult);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final void call2(ModelLoginResult modelLoginResult) {
             StoreAuthentication storeAuthentication = StoreAuthentication.this;
             Intrinsics3.checkNotNullExpressionValue(modelLoginResult, "loginResult");
@@ -257,8 +257,8 @@ public final class StoreAuthentication extends Store {
         }
     }
 
-    /* compiled from: StoreAuthentication.kt */
-    /* renamed from: com.discord.stores.StoreAuthentication$authorizeIP$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreAuthentication$authorizeIP$1 */
+    /* JADX INFO: compiled from: StoreAuthentication.kt */
     public static final class C57731 extends Lambda implements Function1<Void, TrackNetworkMetadata2> {
         public static final C57731 INSTANCE = new C57731();
 
@@ -271,14 +271,14 @@ public final class StoreAuthentication extends Store {
             return invoke2(r1);
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final TrackNetworkMetadata2 invoke2(Void r1) {
             return new TrackNetworkActionAuthorizeIp();
         }
     }
 
-    /* compiled from: StoreAuthentication.kt */
-    /* renamed from: com.discord.stores.StoreAuthentication$dispatchLogin$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreAuthentication$dispatchLogin$1 */
+    /* JADX INFO: compiled from: StoreAuthentication.kt */
     public static final class C57741 extends Lambda implements Function0<Unit> {
         public final /* synthetic */ ModelLoginResult $loginResult;
 
@@ -294,14 +294,14 @@ public final class StoreAuthentication extends Store {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             StoreAuthentication.access$getStoreStream$p(StoreAuthentication.this).handleLoginResult(this.$loginResult);
         }
     }
 
-    /* compiled from: StoreAuthentication.kt */
-    /* renamed from: com.discord.stores.StoreAuthentication$forgotPassword$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreAuthentication$forgotPassword$1 */
+    /* JADX INFO: compiled from: StoreAuthentication.kt */
     public static final class C57751 extends Lambda implements Function1<Void, TrackNetworkMetadata2> {
         public static final C57751 INSTANCE = new C57751();
 
@@ -314,19 +314,19 @@ public final class StoreAuthentication extends Store {
             return invoke2(r1);
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final TrackNetworkMetadata2 invoke2(Void r1) {
             return new TrackNetworkActionForgotPassword();
         }
     }
 
-    /* compiled from: StoreAuthentication.kt */
-    /* renamed from: com.discord.stores.StoreAuthentication$getFingerprintSnapshotOrGenerate$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreAuthentication$getFingerprintSnapshotOrGenerate$1 */
+    /* JADX INFO: compiled from: StoreAuthentication.kt */
     public static final class C57761<T, R> implements Func1<String, Observable<? extends String>> {
         public static final C57761 INSTANCE = new C57761();
 
-        /* compiled from: StoreAuthentication.kt */
-        /* renamed from: com.discord.stores.StoreAuthentication$getFingerprintSnapshotOrGenerate$1$2, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.stores.StoreAuthentication$getFingerprintSnapshotOrGenerate$1$2, reason: invalid class name */
+        /* JADX INFO: compiled from: StoreAuthentication.kt */
         public static final class AnonymousClass2<T, R> implements Func1<FingerprintResponse, String> {
             public static final AnonymousClass2 INSTANCE = new AnonymousClass2();
 
@@ -335,7 +335,7 @@ public final class StoreAuthentication extends Store {
                 return call2(fingerprintResponse);
             }
 
-            /* renamed from: call, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
             public final String call2(FingerprintResponse fingerprintResponse) {
                 return fingerprintResponse.getFingerprint();
             }
@@ -346,14 +346,14 @@ public final class StoreAuthentication extends Store {
             return call2(str);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final Observable<? extends String> call2(String str) {
             return str != null ? new ScalarSynchronousObservable(str) : ObservableExtensionsKt.restSubscribeOn$default(RestAPI.INSTANCE.getApi().postAuthFingerprint(new RestAPIParams.EmptyBody()), false, 1, null).m11083G(AnonymousClass2.INSTANCE);
         }
     }
 
-    /* compiled from: StoreAuthentication.kt */
-    /* renamed from: com.discord.stores.StoreAuthentication$getFingerprintSnapshotOrGenerate$2 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreAuthentication$getFingerprintSnapshotOrGenerate$2 */
+    /* JADX INFO: compiled from: StoreAuthentication.kt */
     public static final class C57772<T> implements Action1<String> {
         public C57772() {
         }
@@ -363,14 +363,14 @@ public final class StoreAuthentication extends Store {
             call2(str);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final void call2(String str) {
             StoreAuthentication.this.setFingerprint(str, false);
         }
     }
 
-    /* compiled from: StoreAuthentication.kt */
-    /* renamed from: com.discord.stores.StoreAuthentication$getShouldShowAgeGate$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreAuthentication$getShouldShowAgeGate$1 */
+    /* JADX INFO: compiled from: StoreAuthentication.kt */
     public static final class C57781<T1, T2, T3, R> implements Func3<MeUser, String, Channel, StoreNavigation.AgeGate> {
         public static final C57781 INSTANCE = new C57781();
 
@@ -379,7 +379,7 @@ public final class StoreAuthentication extends Store {
             return call2(meUser, str, channel);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final StoreNavigation.AgeGate call2(MeUser meUser, String str, Channel channel) {
             long uTCDate = TimeUtils.parseUTCDate("2021-02-05T12:00:00+0000");
             if (!meUser.getHasBirthday() && (meUser.getId() >>> 22) + SnowflakeUtils.DISCORD_EPOCH > uTCDate) {
@@ -392,8 +392,8 @@ public final class StoreAuthentication extends Store {
         }
     }
 
-    /* compiled from: StoreAuthentication.kt */
-    /* renamed from: com.discord.stores.StoreAuthentication$init$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreAuthentication$init$1 */
+    /* JADX INFO: compiled from: StoreAuthentication.kt */
     public static final class C57791 extends Lambda implements Function1<Boolean, Unit> {
         public final /* synthetic */ Context $context;
 
@@ -409,7 +409,7 @@ public final class StoreAuthentication extends Store {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Boolean bool) {
             Context context = this.$context;
             Intrinsics3.checkNotNullExpressionValue(bool, "isLoggedIn");
@@ -417,8 +417,8 @@ public final class StoreAuthentication extends Store {
         }
     }
 
-    /* compiled from: StoreAuthentication.kt */
-    /* renamed from: com.discord.stores.StoreAuthentication$login$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreAuthentication$login$1 */
+    /* JADX INFO: compiled from: StoreAuthentication.kt */
     public static final class C57801<T, R> implements Func1<String, Observable<? extends ModelLoginResult>> {
         public final /* synthetic */ CaptchaHelper.CaptchaPayload $captchaPayload;
         public final /* synthetic */ String $login;
@@ -426,8 +426,8 @@ public final class StoreAuthentication extends Store {
         public final /* synthetic */ String $password;
         public final /* synthetic */ boolean $undelete;
 
-        /* compiled from: StoreAuthentication.kt */
-        /* renamed from: com.discord.stores.StoreAuthentication$login$1$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.stores.StoreAuthentication$login$1$1, reason: invalid class name */
+        /* JADX INFO: compiled from: StoreAuthentication.kt */
         public static final class AnonymousClass1 extends Lambda implements Function1<ModelLoginResult, TrackNetworkMetadata2> {
             public static final AnonymousClass1 INSTANCE = new AnonymousClass1();
 
@@ -440,7 +440,7 @@ public final class StoreAuthentication extends Store {
                 return invoke2(modelLoginResult);
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final TrackNetworkMetadata2 invoke2(ModelLoginResult modelLoginResult) {
                 Observable<T> observableM11087M = ObservableExtensionsKt.takeSingleUntilTimeout$default(StoreStream.INSTANCE.getInviteSettings().getInvite(), 250L, false, 2, null).m11087M(StoreAuthentication4.INSTANCE);
                 ModelInvite modelInvite = (ModelInvite) new BlockingObservable(observableM11087M).m10859a(observableM11087M.m11119z());
@@ -461,7 +461,7 @@ public final class StoreAuthentication extends Store {
             return call2(str);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final Observable<? extends ModelLoginResult> call2(String str) {
             RestAPI api = RestAPI.INSTANCE.getApi();
             String str2 = this.$login;
@@ -473,8 +473,8 @@ public final class StoreAuthentication extends Store {
         }
     }
 
-    /* compiled from: StoreAuthentication.kt */
-    /* renamed from: com.discord.stores.StoreAuthentication$login$2 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreAuthentication$login$2 */
+    /* JADX INFO: compiled from: StoreAuthentication.kt */
     public static final class C57812<T> implements Action1<ModelLoginResult> {
         public C57812() {
         }
@@ -484,7 +484,7 @@ public final class StoreAuthentication extends Store {
             call2(modelLoginResult);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final void call2(ModelLoginResult modelLoginResult) {
             if (modelLoginResult.getMfa()) {
                 return;
@@ -495,8 +495,8 @@ public final class StoreAuthentication extends Store {
         }
     }
 
-    /* compiled from: StoreAuthentication.kt */
-    /* renamed from: com.discord.stores.StoreAuthentication$logout$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreAuthentication$logout$1 */
+    /* JADX INFO: compiled from: StoreAuthentication.kt */
     public static final class C57821 extends Lambda implements Function1<Void, TrackNetworkMetadata2> {
         public static final C57821 INSTANCE = new C57821();
 
@@ -509,14 +509,14 @@ public final class StoreAuthentication extends Store {
             return invoke2(r1);
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final TrackNetworkMetadata2 invoke2(Void r1) {
             return new TrackNetworkActionUserLogout();
         }
     }
 
-    /* compiled from: StoreAuthentication.kt */
-    /* renamed from: com.discord.stores.StoreAuthentication$logout$2 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreAuthentication$logout$2 */
+    /* JADX INFO: compiled from: StoreAuthentication.kt */
     public static final class C57832<T, R> implements Func1<Void, Observable<? extends String>> {
         public C57832() {
         }
@@ -526,14 +526,14 @@ public final class StoreAuthentication extends Store {
             return call2(r1);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final Observable<? extends String> call2(Void r1) {
             return StoreAuthentication.access$getFingerprintSnapshotOrGenerate(StoreAuthentication.this);
         }
     }
 
-    /* compiled from: StoreAuthentication.kt */
-    /* renamed from: com.discord.stores.StoreAuthentication$logout$3 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreAuthentication$logout$3 */
+    /* JADX INFO: compiled from: StoreAuthentication.kt */
     public static final class C57843 extends Lambda implements Function1<String, Unit> {
         public C57843() {
             super(1);
@@ -545,15 +545,15 @@ public final class StoreAuthentication extends Store {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(String str) {
             StoreStream.INSTANCE.getNux().clearNux();
             StoreAuthentication.access$publishAuthState(StoreAuthentication.this, null);
         }
     }
 
-    /* compiled from: StoreAuthentication.kt */
-    /* renamed from: com.discord.stores.StoreAuthentication$logout$4 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreAuthentication$logout$4 */
+    /* JADX INFO: compiled from: StoreAuthentication.kt */
     public static final class C57854 extends Lambda implements Function1<Error, Unit> {
         public C57854() {
             super(1);
@@ -565,15 +565,15 @@ public final class StoreAuthentication extends Store {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Error error) {
             Intrinsics3.checkNotNullParameter(error, "it");
             StoreAuthentication.access$publishAuthState(StoreAuthentication.this, null);
         }
     }
 
-    /* compiled from: StoreAuthentication.kt */
-    /* renamed from: com.discord.stores.StoreAuthentication$onPasswordChanged$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreAuthentication$onPasswordChanged$1 */
+    /* JADX INFO: compiled from: StoreAuthentication.kt */
     public static final class C57861 extends Lambda implements Function0<Unit> {
         public final /* synthetic */ String $token;
 
@@ -589,7 +589,7 @@ public final class StoreAuthentication extends Store {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             Set<RequiredAction> setEmptySet;
             AuthState authState = StoreAuthentication.this.getAuthState();
@@ -600,8 +600,8 @@ public final class StoreAuthentication extends Store {
         }
     }
 
-    /* compiled from: StoreAuthentication.kt */
-    /* renamed from: com.discord.stores.StoreAuthentication$register$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreAuthentication$register$1 */
+    /* JADX INFO: compiled from: StoreAuthentication.kt */
     public static final class C57871<T, R> implements Func1<String, Observable<? extends RegisterResponse>> {
         public final /* synthetic */ CaptchaHelper.CaptchaPayload $captchaPayload;
         public final /* synthetic */ boolean $consent;
@@ -611,8 +611,8 @@ public final class StoreAuthentication extends Store {
         public final /* synthetic */ String $phoneToken;
         public final /* synthetic */ String $username;
 
-        /* compiled from: StoreAuthentication.kt */
-        /* renamed from: com.discord.stores.StoreAuthentication$register$1$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.stores.StoreAuthentication$register$1$1, reason: invalid class name */
+        /* JADX INFO: compiled from: StoreAuthentication.kt */
         public static final /* synthetic */ class AnonymousClass1 extends FunctionReferenceImpl implements Function2<StoreInviteSettings.InviteCode, String, AuthRequestParams> {
             public static final AnonymousClass1 INSTANCE = new AnonymousClass1();
 
@@ -625,19 +625,19 @@ public final class StoreAuthentication extends Store {
                 return invoke2(inviteCode, str);
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final AuthRequestParams invoke2(StoreInviteSettings.InviteCode inviteCode, String str) {
                 return new AuthRequestParams(inviteCode, str);
             }
         }
 
-        /* compiled from: StoreAuthentication.kt */
-        /* renamed from: com.discord.stores.StoreAuthentication$register$1$2, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.stores.StoreAuthentication$register$1$2, reason: invalid class name */
+        /* JADX INFO: compiled from: StoreAuthentication.kt */
         public static final class AnonymousClass2<T, R> implements Func1<AuthRequestParams, Observable<? extends RegisterResponse>> {
             public final /* synthetic */ String $fingerprint;
 
-            /* compiled from: StoreAuthentication.kt */
-            /* renamed from: com.discord.stores.StoreAuthentication$register$1$2$1, reason: invalid class name */
+            /* JADX INFO: renamed from: com.discord.stores.StoreAuthentication$register$1$2$1, reason: invalid class name */
+            /* JADX INFO: compiled from: StoreAuthentication.kt */
             public static final class AnonymousClass1 extends Lambda implements Function1<RegisterResponse, TrackNetworkMetadata2> {
                 public final /* synthetic */ String $inviteCode;
 
@@ -652,7 +652,7 @@ public final class StoreAuthentication extends Store {
                     return invoke2(registerResponse);
                 }
 
-                /* renamed from: invoke, reason: avoid collision after fix types in other method */
+                /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
                 public final TrackNetworkMetadata2 invoke2(RegisterResponse registerResponse) {
                     return new TrackNetworkActionUserRegister(this.$inviteCode, Boolean.valueOf(C57871.this.$consent), Boolean.FALSE);
                 }
@@ -667,7 +667,7 @@ public final class StoreAuthentication extends Store {
                 return call2(authRequestParams);
             }
 
-            /* renamed from: call, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
             public final Observable<? extends RegisterResponse> call2(AuthRequestParams authRequestParams) {
                 StoreInviteSettings.InviteCode inviteCode = authRequestParams.getInviteCode();
                 String inviteCode2 = inviteCode != null ? inviteCode.getInviteCode() : null;
@@ -693,8 +693,8 @@ public final class StoreAuthentication extends Store {
             }
         }
 
-        /* compiled from: StoreAuthentication.kt */
-        /* renamed from: com.discord.stores.StoreAuthentication$register$1$3, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.stores.StoreAuthentication$register$1$3, reason: invalid class name */
+        /* JADX INFO: compiled from: StoreAuthentication.kt */
         public static final class AnonymousClass3<T> implements Action1<RegisterResponse> {
             public AnonymousClass3() {
             }
@@ -704,7 +704,7 @@ public final class StoreAuthentication extends Store {
                 call2(registerResponse);
             }
 
-            /* renamed from: call, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
             public final void call2(RegisterResponse registerResponse) {
                 StoreStream.Companion companion = StoreStream.INSTANCE;
                 companion.getUserSettingsSystem().setIsSyncThemeEnabled(false);
@@ -731,7 +731,7 @@ public final class StoreAuthentication extends Store {
             return call2(str);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final Observable<? extends RegisterResponse> call2(String str) {
             StoreStream.Companion companion = StoreStream.INSTANCE;
             Observable<StoreInviteSettings.InviteCode> inviteCode = companion.getInviteSettings().getInviteCode();
@@ -749,8 +749,8 @@ public final class StoreAuthentication extends Store {
         }
     }
 
-    /* compiled from: StoreAuthentication.kt */
-    /* renamed from: com.discord.stores.StoreAuthentication$requestConsentRequired$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreAuthentication$requestConsentRequired$1 */
+    /* JADX INFO: compiled from: StoreAuthentication.kt */
     public static final class C57881 extends Lambda implements Function1<ModelLocationMetadata, Unit> {
         public C57881() {
             super(1);
@@ -762,7 +762,7 @@ public final class StoreAuthentication extends Store {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(ModelLocationMetadata modelLocationMetadata) {
             Intrinsics3.checkNotNullParameter(modelLocationMetadata, "it");
             StoreAuthentication.access$setConsentRequired$p(StoreAuthentication.this, modelLocationMetadata.getConsentRequired());
@@ -773,8 +773,8 @@ public final class StoreAuthentication extends Store {
         }
     }
 
-    /* compiled from: StoreAuthentication.kt */
-    /* renamed from: com.discord.stores.StoreAuthentication$requestConsentRequired$2 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreAuthentication$requestConsentRequired$2 */
+    /* JADX INFO: compiled from: StoreAuthentication.kt */
     public static final class C57892 extends Lambda implements Function1<Error, Unit> {
         public C57892() {
             super(1);
@@ -786,15 +786,15 @@ public final class StoreAuthentication extends Store {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Error error) {
             Intrinsics3.checkNotNullParameter(error, "it");
             StoreAuthentication.access$setConsentRequired$p(StoreAuthentication.this, true);
         }
     }
 
-    /* compiled from: StoreAuthentication.kt */
-    /* renamed from: com.discord.stores.StoreAuthentication$requestConsentRequired$3 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreAuthentication$requestConsentRequired$3 */
+    /* JADX INFO: compiled from: StoreAuthentication.kt */
     public static final class C57903 extends Lambda implements Function1<Subscription, Unit> {
         public C57903() {
             super(1);
@@ -806,15 +806,15 @@ public final class StoreAuthentication extends Store {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Subscription subscription) {
             Intrinsics3.checkNotNullParameter(subscription, "consentSubscription");
             StoreAuthentication.access$setConsentRequiredSubscription$p(StoreAuthentication.this, subscription);
         }
     }
 
-    /* compiled from: StoreAuthentication.kt */
-    /* renamed from: com.discord.stores.StoreAuthentication$setAgeGateError$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreAuthentication$setAgeGateError$1 */
+    /* JADX INFO: compiled from: StoreAuthentication.kt */
     public static final class C57911 extends Lambda implements Function0<Unit> {
         public final /* synthetic */ String $error;
 
@@ -830,7 +830,7 @@ public final class StoreAuthentication extends Store {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             StoreAuthentication.this.handleAgeGateError(this.$error);
         }
@@ -965,7 +965,7 @@ public final class StoreAuthentication extends Store {
         return observableM11112r;
     }
 
-    /* renamed from: getAuthState$app_productionGoogleRelease, reason: from getter */
+    /* JADX INFO: renamed from: getAuthState$app_productionGoogleRelease, reason: from getter */
     public final AuthState getAuthState() {
         return this.authState;
     }
@@ -982,7 +982,7 @@ public final class StoreAuthentication extends Store {
         return observableM11112r;
     }
 
-    /* renamed from: getFingerprint$app_productionGoogleRelease, reason: from getter */
+    /* JADX INFO: renamed from: getFingerprint$app_productionGoogleRelease, reason: from getter */
     public final String getFingerprint() {
         return this.fingerprint;
     }
@@ -1164,7 +1164,7 @@ public final class StoreAuthentication extends Store {
         this.oauthUriSubject.f27653k.onNext(uri);
     }
 
-    /* renamed from: getAuthState$app_productionGoogleRelease, reason: collision with other method in class */
+    /* JADX INFO: renamed from: getAuthState$app_productionGoogleRelease, reason: collision with other method in class */
     public final Observable<AuthState> m11385getAuthState$app_productionGoogleRelease() {
         Observable<AuthState> observableM11112r = this.authStateSubject.m11112r();
         Intrinsics3.checkNotNullExpressionValue(observableM11112r, "authStateSubject.distinctUntilChanged()");

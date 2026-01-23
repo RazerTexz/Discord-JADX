@@ -27,12 +27,12 @@ import p507d0.p592z.p594d.Lambda;
 import p658rx.Observable;
 import p658rx.subjects.PublishSubject;
 
-/* compiled from: CreateGuildRoleSubscriptionTierViewModel.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: CreateGuildRoleSubscriptionTierViewModel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class CreateGuildRoleSubscriptionTierViewModel extends AppViewModel<ViewState> {
     private static final int CHANNEL_BENEFITS_STEP = 1;
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private static final int DESIGN_STEP = 3;
     private static final int DETAILS_STEP = 0;
@@ -44,8 +44,8 @@ public final class CreateGuildRoleSubscriptionTierViewModel extends AppViewModel
     private final RestAPI restApi;
     private final StoreGuildRoleSubscriptions storeGuildRoleSubscriptions;
 
-    /* compiled from: CreateGuildRoleSubscriptionTierViewModel.kt */
-    /* renamed from: com.discord.widgets.guild_role_subscriptions.tier.create.CreateGuildRoleSubscriptionTierViewModel$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.guild_role_subscriptions.tier.create.CreateGuildRoleSubscriptionTierViewModel$1 */
+    /* JADX INFO: compiled from: CreateGuildRoleSubscriptionTierViewModel.kt */
     public static final class C84761 extends Lambda implements Function1<StoreState, Unit> {
         public C84761() {
             super(1);
@@ -57,7 +57,7 @@ public final class CreateGuildRoleSubscriptionTierViewModel extends AppViewModel
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(StoreState storeState) {
             CreateGuildRoleSubscriptionTierViewModel createGuildRoleSubscriptionTierViewModel = CreateGuildRoleSubscriptionTierViewModel.this;
             Intrinsics3.checkNotNullExpressionValue(storeState, "storeState");
@@ -65,7 +65,7 @@ public final class CreateGuildRoleSubscriptionTierViewModel extends AppViewModel
         }
     }
 
-    /* compiled from: CreateGuildRoleSubscriptionTierViewModel.kt */
+    /* JADX INFO: compiled from: CreateGuildRoleSubscriptionTierViewModel.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -83,10 +83,10 @@ public final class CreateGuildRoleSubscriptionTierViewModel extends AppViewModel
         }
     }
 
-    /* compiled from: CreateGuildRoleSubscriptionTierViewModel.kt */
+    /* JADX INFO: compiled from: CreateGuildRoleSubscriptionTierViewModel.kt */
     public static abstract class Event {
 
-        /* compiled from: CreateGuildRoleSubscriptionTierViewModel.kt */
+        /* JADX INFO: compiled from: CreateGuildRoleSubscriptionTierViewModel.kt */
         public static final /* data */ class ServerGatingUpdate extends Event {
             private final boolean isFullServerGating;
 
@@ -102,7 +102,7 @@ public final class CreateGuildRoleSubscriptionTierViewModel extends AppViewModel
                 return serverGatingUpdate.copy(z2);
             }
 
-            /* renamed from: component1, reason: from getter */
+            /* JADX INFO: renamed from: component1, reason: from getter */
             public final boolean getIsFullServerGating() {
                 return this.isFullServerGating;
             }
@@ -135,7 +135,7 @@ public final class CreateGuildRoleSubscriptionTierViewModel extends AppViewModel
             }
         }
 
-        /* compiled from: CreateGuildRoleSubscriptionTierViewModel.kt */
+        /* JADX INFO: compiled from: CreateGuildRoleSubscriptionTierViewModel.kt */
         public static final /* data */ class SubmitFailure extends Event {
             private final Error error;
 
@@ -153,7 +153,7 @@ public final class CreateGuildRoleSubscriptionTierViewModel extends AppViewModel
                 return submitFailure.copy(error);
             }
 
-            /* renamed from: component1, reason: from getter */
+            /* JADX INFO: renamed from: component1, reason: from getter */
             public final Error getError() {
                 return this.error;
             }
@@ -190,7 +190,7 @@ public final class CreateGuildRoleSubscriptionTierViewModel extends AppViewModel
             }
         }
 
-        /* compiled from: CreateGuildRoleSubscriptionTierViewModel.kt */
+        /* JADX INFO: compiled from: CreateGuildRoleSubscriptionTierViewModel.kt */
         public static final class SubmitSuccess extends Event {
             public static final SubmitSuccess INSTANCE = new SubmitSuccess();
 
@@ -207,7 +207,7 @@ public final class CreateGuildRoleSubscriptionTierViewModel extends AppViewModel
         }
     }
 
-    /* compiled from: CreateGuildRoleSubscriptionTierViewModel.kt */
+    /* JADX INFO: compiled from: CreateGuildRoleSubscriptionTierViewModel.kt */
     public static final /* data */ class StoreState {
         private final Boolean fullServerGatingOverwrite;
         private final GuildRoleSubscriptionGroupListing guildRoleSubscriptionGroupListing;
@@ -231,12 +231,12 @@ public final class CreateGuildRoleSubscriptionTierViewModel extends AppViewModel
             return storeState.copy(guildRoleSubscriptionGroupListing, bool);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final GuildRoleSubscriptionGroupListing getGuildRoleSubscriptionGroupListing() {
             return this.guildRoleSubscriptionGroupListing;
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final Boolean getFullServerGatingOverwrite() {
             return this.fullServerGatingOverwrite;
         }
@@ -283,7 +283,7 @@ public final class CreateGuildRoleSubscriptionTierViewModel extends AppViewModel
         }
     }
 
-    /* compiled from: CreateGuildRoleSubscriptionTierViewModel.kt */
+    /* JADX INFO: compiled from: CreateGuildRoleSubscriptionTierViewModel.kt */
     public static final /* data */ class ViewState {
         private final boolean canProceed;
         private final int currentStep;
@@ -317,22 +317,22 @@ public final class CreateGuildRoleSubscriptionTierViewModel extends AppViewModel
             return viewState.copy(i, z2, z3, guildRoleSubscriptionTier);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final int getCurrentStep() {
             return this.currentStep;
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final boolean getCanProceed() {
             return this.canProceed;
         }
 
-        /* renamed from: component3, reason: from getter */
+        /* JADX INFO: renamed from: component3, reason: from getter */
         public final boolean getIsSubmitting() {
             return this.isSubmitting;
         }
 
-        /* renamed from: component4, reason: from getter */
+        /* JADX INFO: renamed from: component4, reason: from getter */
         public final GuildRoleSubscriptionTier getGuildRoleSubscriptionTier() {
             return this.guildRoleSubscriptionTier;
         }
@@ -365,18 +365,24 @@ public final class CreateGuildRoleSubscriptionTierViewModel extends AppViewModel
         }
 
         /* JADX WARN: Multi-variable type inference failed */
+        /* JADX WARN: Type inference failed for: r1v1, types: [int] */
+        /* JADX WARN: Type inference failed for: r1v7 */
+        /* JADX WARN: Type inference failed for: r1v8 */
+        /* JADX WARN: Type inference failed for: r2v0 */
+        /* JADX WARN: Type inference failed for: r2v1, types: [int] */
+        /* JADX WARN: Type inference failed for: r2v2 */
         public int hashCode() {
             int i = this.currentStep * 31;
             boolean z2 = this.canProceed;
-            int i2 = z2;
-            if (z2 != 0) {
-                i2 = 1;
+            ?? r1 = z2;
+            if (z2) {
+                r1 = 1;
             }
-            int i3 = (i + i2) * 31;
+            int i2 = (i + r1) * 31;
             boolean z3 = this.isSubmitting;
-            int i4 = (i3 + (z3 ? 1 : z3 ? 1 : 0)) * 31;
+            int i3 = (i2 + (z3 ? 1 : z3)) * 31;
             GuildRoleSubscriptionTier guildRoleSubscriptionTier = this.guildRoleSubscriptionTier;
-            return i4 + (guildRoleSubscriptionTier != null ? guildRoleSubscriptionTier.hashCode() : 0);
+            return i3 + (guildRoleSubscriptionTier != null ? guildRoleSubscriptionTier.hashCode() : 0);
         }
 
         public final boolean isSubmitting() {
@@ -401,8 +407,8 @@ public final class CreateGuildRoleSubscriptionTierViewModel extends AppViewModel
         }
     }
 
-    /* compiled from: CreateGuildRoleSubscriptionTierViewModel.kt */
-    /* renamed from: com.discord.widgets.guild_role_subscriptions.tier.create.CreateGuildRoleSubscriptionTierViewModel$submit$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.guild_role_subscriptions.tier.create.CreateGuildRoleSubscriptionTierViewModel$submit$1 */
+    /* JADX INFO: compiled from: CreateGuildRoleSubscriptionTierViewModel.kt */
     public static final class C84781 extends Lambda implements Function1<GuildRoleSubscriptionTierListing, Unit> {
         public C84781() {
             super(1);
@@ -414,7 +420,7 @@ public final class CreateGuildRoleSubscriptionTierViewModel extends AppViewModel
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(GuildRoleSubscriptionTierListing guildRoleSubscriptionTierListing) {
             Intrinsics3.checkNotNullParameter(guildRoleSubscriptionTierListing, "it");
             CreateGuildRoleSubscriptionTierViewModel createGuildRoleSubscriptionTierViewModel = CreateGuildRoleSubscriptionTierViewModel.this;
@@ -423,8 +429,8 @@ public final class CreateGuildRoleSubscriptionTierViewModel extends AppViewModel
         }
     }
 
-    /* compiled from: CreateGuildRoleSubscriptionTierViewModel.kt */
-    /* renamed from: com.discord.widgets.guild_role_subscriptions.tier.create.CreateGuildRoleSubscriptionTierViewModel$submit$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.guild_role_subscriptions.tier.create.CreateGuildRoleSubscriptionTierViewModel$submit$2 */
+    /* JADX INFO: compiled from: CreateGuildRoleSubscriptionTierViewModel.kt */
     public static final class C84792 extends Lambda implements Function1<Error, Unit> {
         public C84792() {
             super(1);
@@ -436,7 +442,7 @@ public final class CreateGuildRoleSubscriptionTierViewModel extends AppViewModel
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Error error) {
             Intrinsics3.checkNotNullParameter(error, "error");
             CreateGuildRoleSubscriptionTierViewModel createGuildRoleSubscriptionTierViewModel = CreateGuildRoleSubscriptionTierViewModel.this;
@@ -546,7 +552,7 @@ public final class CreateGuildRoleSubscriptionTierViewModel extends AppViewModel
         updateViewState2(viewState);
     }
 
-    /* renamed from: updateViewState, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: updateViewState, reason: avoid collision after fix types in other method */
     public void updateViewState2(ViewState viewState) {
         Intrinsics3.checkNotNullParameter(viewState, "viewState");
         super.updateViewState(ViewState.copy$default(viewState, 0, computeCanProceedToNextStep(viewState), false, null, 13, null));

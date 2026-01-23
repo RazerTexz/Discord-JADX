@@ -12,15 +12,15 @@ import p007b.p100d.p104b.p105a.outline;
 import p007b.p225i.p408d.TypeAdapterFactory2;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: UserExperimentDto.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: UserExperimentDto.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class UserExperimentDto {
     private final int bucket;
     private final long nameHash;
     private final int population;
     private final int revision;
 
-    /* compiled from: UserExperimentDto.kt */
+    /* JADX INFO: compiled from: UserExperimentDto.kt */
     public static final class Parser {
         public static final Parser INSTANCE = new Parser();
 
@@ -53,11 +53,11 @@ public final /* data */ class UserExperimentDto {
         }
     }
 
-    /* compiled from: UserExperimentDto.kt */
+    /* JADX INFO: compiled from: UserExperimentDto.kt */
     public static final class TypeAdapterFactory implements TypeAdapterFactory2 {
         public static final TypeAdapterFactory INSTANCE = new TypeAdapterFactory();
 
-        /* compiled from: UserExperimentDto.kt */
+        /* JADX INFO: compiled from: UserExperimentDto.kt */
         public static final class TypeAdapter extends com.google.gson.TypeAdapter<UserExperimentDto> {
             @Override // com.google.gson.TypeAdapter
             public /* bridge */ /* synthetic */ UserExperimentDto read(JsonReader jsonReader) {
@@ -75,7 +75,7 @@ public final /* data */ class UserExperimentDto {
                 return Parser.parse(new Model.JsonReader(in));
             }
 
-            /* renamed from: write, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: write, reason: avoid collision after fix types in other method */
             public void write2(JsonWriter out, UserExperimentDto value) {
                 throw new UnsupportedOperationException();
             }
@@ -119,22 +119,22 @@ public final /* data */ class UserExperimentDto {
         return userExperimentDto.copy(j2, i5, i6, i3);
     }
 
-    /* renamed from: component1, reason: from getter */
+    /* JADX INFO: renamed from: component1, reason: from getter */
     public final long getNameHash() {
         return this.nameHash;
     }
 
-    /* renamed from: component2, reason: from getter */
+    /* JADX INFO: renamed from: component2, reason: from getter */
     public final int getRevision() {
         return this.revision;
     }
 
-    /* renamed from: component3, reason: from getter */
+    /* JADX INFO: renamed from: component3, reason: from getter */
     public final int getBucket() {
         return this.bucket;
     }
 
-    /* renamed from: component4, reason: from getter */
+    /* JADX INFO: renamed from: component4, reason: from getter */
     public final int getPopulation() {
         return this.population;
     }

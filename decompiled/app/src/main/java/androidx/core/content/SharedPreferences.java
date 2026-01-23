@@ -6,9 +6,9 @@ import kotlin.Unit;
 import kotlin.jvm.functions.Function1;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: SharedPreferences.kt */
-/* renamed from: androidx.core.content.SharedPreferencesKt, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: androidx.core.content.SharedPreferencesKt, reason: use source file name */
+/* JADX INFO: compiled from: SharedPreferences.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class SharedPreferences {
     @SuppressLint({"ApplySharedPref"})
     public static final void edit(android.content.SharedPreferences sharedPreferences, boolean z2, Function1<? super SharedPreferences.Editor, Unit> function1) {

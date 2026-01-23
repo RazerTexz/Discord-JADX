@@ -5,22 +5,22 @@ import p637j0.p641k.Func1;
 import p658rx.Observable;
 import p658rx.Subscriber;
 
-/* compiled from: OperatorTakeUntilPredicate.java */
-/* renamed from: j0.l.a.h2, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: j0.l.a.h2, reason: use source file name */
+/* JADX INFO: compiled from: OperatorTakeUntilPredicate.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class OperatorTakeUntilPredicate2<T> implements Observable.InterfaceC13006b<T, T> {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final Func1<? super T, Boolean> f26841j;
 
-    /* compiled from: OperatorTakeUntilPredicate.java */
-    /* renamed from: j0.l.a.h2$a */
+    /* JADX INFO: renamed from: j0.l.a.h2$a */
+    /* JADX INFO: compiled from: OperatorTakeUntilPredicate.java */
     public final class a extends Subscriber<T> {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public final Subscriber<? super T> f26842j;
 
-        /* renamed from: k */
+        /* JADX INFO: renamed from: k */
         public boolean f26843k;
 
         public a(Subscriber<? super T> subscriber) {

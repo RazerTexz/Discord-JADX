@@ -44,24 +44,24 @@ import p507d0.p592z.p594d.Lambda;
 import p507d0.p592z.p594d.Reflection2;
 import p658rx.Observable;
 
-/* compiled from: WidgetChannelFollowSheet.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetChannelFollowSheet.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetChannelFollowSheet extends AppBottomSheet {
     public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetChannelFollowSheet.class, "binding", "getBinding()Lcom/discord/databinding/WidgetChannelFollowSheetBinding;", 0)};
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private static final String REQUEST_KEY_CHANNEL_FOLLOW = "REQUEST_KEY_CHANNEL_FOLLOW_CHANNEL";
     private static final int VIEW_INDEX_FOLLOW = 0;
     private static final int VIEW_INDEX_NO_AVAILABLE_GUILDS = 1;
 
-    /* renamed from: binding$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
 
-    /* renamed from: viewModel$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: viewModel$delegate, reason: from kotlin metadata */
     private final Lazy viewModel;
 
-    /* compiled from: WidgetChannelFollowSheet.kt */
+    /* JADX INFO: compiled from: WidgetChannelFollowSheet.kt */
     public static final /* data */ class ChannelFollowChannelFilterFunction implements WidgetChannelSelector.FilterFunction {
         private final Set<Long> channelIds;
         private final long selectedGuildId;
@@ -72,7 +72,7 @@ public final class WidgetChannelFollowSheet extends AppBottomSheet {
             this.channelIds = set;
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         private final long getSelectedGuildId() {
             return this.selectedGuildId;
         }
@@ -128,7 +128,7 @@ public final class WidgetChannelFollowSheet extends AppBottomSheet {
         }
     }
 
-    /* compiled from: WidgetChannelFollowSheet.kt */
+    /* JADX INFO: compiled from: WidgetChannelFollowSheet.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -147,8 +147,8 @@ public final class WidgetChannelFollowSheet extends AppBottomSheet {
         }
     }
 
-    /* compiled from: WidgetChannelFollowSheet.kt */
-    /* renamed from: com.discord.widgets.announcements.WidgetChannelFollowSheet$configureChannelSelector$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.announcements.WidgetChannelFollowSheet$configureChannelSelector$1 */
+    /* JADX INFO: compiled from: WidgetChannelFollowSheet.kt */
     public static final class ViewOnClickListenerC71381 implements View.OnClickListener {
         public final /* synthetic */ Guild $selectedGuild;
         public final /* synthetic */ WidgetChannelFollowSheetViewModel.ViewState.Loaded $viewState;
@@ -164,8 +164,8 @@ public final class WidgetChannelFollowSheet extends AppBottomSheet {
         }
     }
 
-    /* compiled from: WidgetChannelFollowSheet.kt */
-    /* renamed from: com.discord.widgets.announcements.WidgetChannelFollowSheet$configureChannelSelector$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.announcements.WidgetChannelFollowSheet$configureChannelSelector$2 */
+    /* JADX INFO: compiled from: WidgetChannelFollowSheet.kt */
     public static final class ViewOnClickListenerC71392 implements View.OnClickListener {
         public final /* synthetic */ Channel $selectedChannel;
 
@@ -179,8 +179,8 @@ public final class WidgetChannelFollowSheet extends AppBottomSheet {
         }
     }
 
-    /* compiled from: WidgetChannelFollowSheet.kt */
-    /* renamed from: com.discord.widgets.announcements.WidgetChannelFollowSheet$configureGuildSelector$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.announcements.WidgetChannelFollowSheet$configureGuildSelector$1 */
+    /* JADX INFO: compiled from: WidgetChannelFollowSheet.kt */
     public static final class ViewOnClickListenerC71401 implements View.OnClickListener {
         public final /* synthetic */ WidgetChannelFollowSheetViewModel.ViewState.Loaded $viewState;
 
@@ -194,8 +194,8 @@ public final class WidgetChannelFollowSheet extends AppBottomSheet {
         }
     }
 
-    /* compiled from: WidgetChannelFollowSheet.kt */
-    /* renamed from: com.discord.widgets.announcements.WidgetChannelFollowSheet$onCreate$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.announcements.WidgetChannelFollowSheet$onCreate$1 */
+    /* JADX INFO: compiled from: WidgetChannelFollowSheet.kt */
     public static final class C71411 extends Lambda implements Function2<Long, String, Unit> {
         public C71411() {
             super(2);
@@ -213,8 +213,8 @@ public final class WidgetChannelFollowSheet extends AppBottomSheet {
         }
     }
 
-    /* compiled from: WidgetChannelFollowSheet.kt */
-    /* renamed from: com.discord.widgets.announcements.WidgetChannelFollowSheet$onCreate$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.announcements.WidgetChannelFollowSheet$onCreate$2 */
+    /* JADX INFO: compiled from: WidgetChannelFollowSheet.kt */
     public static final class C71422 extends Lambda implements Function2<Long, String, Unit> {
         public C71422() {
             super(2);
@@ -233,8 +233,8 @@ public final class WidgetChannelFollowSheet extends AppBottomSheet {
         }
     }
 
-    /* compiled from: WidgetChannelFollowSheet.kt */
-    /* renamed from: com.discord.widgets.announcements.WidgetChannelFollowSheet$onResume$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.announcements.WidgetChannelFollowSheet$onResume$1 */
+    /* JADX INFO: compiled from: WidgetChannelFollowSheet.kt */
     public static final /* synthetic */ class C71431 extends FunctionReferenceImpl implements Function1<WidgetChannelFollowSheetViewModel.ViewState.Loaded, Unit> {
         public C71431(WidgetChannelFollowSheet widgetChannelFollowSheet) {
             super(1, widgetChannelFollowSheet, WidgetChannelFollowSheet.class, "configureUI", "configureUI(Lcom/discord/widgets/announcements/WidgetChannelFollowSheetViewModel$ViewState$Loaded;)V", 0);
@@ -246,15 +246,15 @@ public final class WidgetChannelFollowSheet extends AppBottomSheet {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(WidgetChannelFollowSheetViewModel.ViewState.Loaded loaded) {
             Intrinsics3.checkNotNullParameter(loaded, "p1");
             WidgetChannelFollowSheet.access$configureUI((WidgetChannelFollowSheet) this.receiver, loaded);
         }
     }
 
-    /* compiled from: WidgetChannelFollowSheet.kt */
-    /* renamed from: com.discord.widgets.announcements.WidgetChannelFollowSheet$onResume$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.announcements.WidgetChannelFollowSheet$onResume$2 */
+    /* JADX INFO: compiled from: WidgetChannelFollowSheet.kt */
     public static final class C71442 extends Lambda implements Function1<WidgetChannelFollowSheetViewModel.Event, Unit> {
         public C71442() {
             super(1);
@@ -266,7 +266,7 @@ public final class WidgetChannelFollowSheet extends AppBottomSheet {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(WidgetChannelFollowSheetViewModel.Event event) {
             Intrinsics3.checkNotNullParameter(event, "it");
             WidgetChannelFollowSheet.this.dismiss();

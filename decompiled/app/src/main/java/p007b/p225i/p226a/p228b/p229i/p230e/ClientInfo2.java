@@ -3,14 +3,14 @@ package p007b.p225i.p226a.p228b.p229i.p230e;
 import androidx.annotation.Nullable;
 import com.google.auto.value.AutoValue;
 
-/* compiled from: ClientInfo.java */
+/* JADX INFO: renamed from: b.i.a.b.i.e.k, reason: use source file name */
+/* JADX INFO: compiled from: ClientInfo.java */
+/* JADX INFO: loaded from: classes3.dex */
 @AutoValue
-/* renamed from: b.i.a.b.i.e.k, reason: use source file name */
-/* loaded from: classes3.dex */
 public abstract class ClientInfo2 {
 
-    /* compiled from: ClientInfo.java */
-    /* renamed from: b.i.a.b.i.e.k$a */
+    /* JADX INFO: renamed from: b.i.a.b.i.e.k$a */
+    /* JADX INFO: compiled from: ClientInfo.java */
     public enum a {
         UNKNOWN(0),
         ANDROID_FIREBASE(23);
@@ -23,10 +23,10 @@ public abstract class ClientInfo2 {
     }
 
     @Nullable
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public abstract AndroidClientInfo mo2314a();
 
     @Nullable
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public abstract a mo2315b();
 }

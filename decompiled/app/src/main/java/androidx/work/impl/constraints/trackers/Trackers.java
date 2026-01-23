@@ -6,8 +6,8 @@ import androidx.annotation.RestrictTo;
 import androidx.annotation.VisibleForTesting;
 import androidx.work.impl.utils.taskexecutor.TaskExecutor;
 
+/* JADX INFO: loaded from: classes.dex */
 @RestrictTo({RestrictTo.Scope.LIBRARY_GROUP})
-/* loaded from: classes.dex */
 public class Trackers {
     private static Trackers sInstance;
     private BatteryChargingTracker mBatteryChargingTracker;

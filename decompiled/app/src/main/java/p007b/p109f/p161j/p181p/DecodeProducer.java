@@ -33,68 +33,68 @@ import p007b.p109f.p161j.p175j.QualityInfo;
 import p007b.p109f.p161j.p181p.JobScheduler;
 import p007b.p109f.p161j.p183r.FrescoSystrace;
 
-/* compiled from: DecodeProducer.java */
-/* renamed from: b.f.j.p.n, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.f.j.p.n, reason: use source file name */
+/* JADX INFO: compiled from: DecodeProducer.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class DecodeProducer implements Producer2<CloseableReference<CloseableImage>> {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final ByteArrayPool f4143a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final Executor f4144b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final ImageDecoder2 f4145c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final ProgressiveJpegConfig f4146d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final Producer2<EncodedImage2> f4147e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final boolean f4148f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public final boolean f4149g;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public final boolean f4150h;
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public final int f4151i;
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final CloseableReferenceFactory f4152j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final Runnable f4153k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final Supplier<Boolean> f4154l;
 
-    /* compiled from: DecodeProducer.java */
-    /* renamed from: b.f.j.p.n$a */
+    /* JADX INFO: renamed from: b.f.j.p.n$a */
+    /* JADX INFO: compiled from: DecodeProducer.java */
     public class a extends c {
         public a(DecodeProducer decodeProducer, Consumer2<CloseableReference<CloseableImage>> consumer2, ProducerContext producerContext, boolean z2, int i) {
             super(consumer2, producerContext, z2, i);
         }
 
         @Override // p007b.p109f.p161j.p181p.DecodeProducer.c
-        /* renamed from: o */
+        /* JADX INFO: renamed from: o */
         public int mo1495o(EncodedImage2 encodedImage2) {
             return encodedImage2.m1344n();
         }
 
         @Override // p007b.p109f.p161j.p181p.DecodeProducer.c
-        /* renamed from: p */
+        /* JADX INFO: renamed from: p */
         public QualityInfo mo1496p() {
             return new ImmutableQualityInfo(0, false, false);
         }
 
         @Override // p007b.p109f.p161j.p181p.DecodeProducer.c
-        /* renamed from: w */
+        /* JADX INFO: renamed from: w */
         public synchronized boolean mo1497w(EncodedImage2 encodedImage2, int i) {
             if (BaseConsumer.m1420f(i)) {
                 return false;
@@ -103,17 +103,17 @@ public class DecodeProducer implements Producer2<CloseableReference<CloseableIma
         }
     }
 
-    /* compiled from: DecodeProducer.java */
-    /* renamed from: b.f.j.p.n$b */
+    /* JADX INFO: renamed from: b.f.j.p.n$b */
+    /* JADX INFO: compiled from: DecodeProducer.java */
     public class b extends c {
 
-        /* renamed from: i */
+        /* JADX INFO: renamed from: i */
         public final ProgressiveJpegParser f4155i;
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public final ProgressiveJpegConfig f4156j;
 
-        /* renamed from: k */
+        /* JADX INFO: renamed from: k */
         public int f4157k;
 
         public b(DecodeProducer decodeProducer, Consumer2<CloseableReference<CloseableImage>> consumer2, ProducerContext producerContext, ProgressiveJpegParser progressiveJpegParser, ProgressiveJpegConfig progressiveJpegConfig, boolean z2, int i) {
@@ -125,19 +125,19 @@ public class DecodeProducer implements Producer2<CloseableReference<CloseableIma
         }
 
         @Override // p007b.p109f.p161j.p181p.DecodeProducer.c
-        /* renamed from: o */
+        /* JADX INFO: renamed from: o */
         public int mo1495o(EncodedImage2 encodedImage2) {
             return this.f4155i.f3878f;
         }
 
         @Override // p007b.p109f.p161j.p181p.DecodeProducer.c
-        /* renamed from: p */
+        /* JADX INFO: renamed from: p */
         public QualityInfo mo1496p() {
             return this.f4156j.mo1324a(this.f4155i.f3877e);
         }
 
         @Override // p007b.p109f.p161j.p181p.DecodeProducer.c
-        /* renamed from: w */
+        /* JADX INFO: renamed from: w */
         public synchronized boolean mo1497w(EncodedImage2 encodedImage2, int i) {
             boolean zM1435f = this.f4162g.m1435f(encodedImage2, i);
             if ((BaseConsumer.m1420f(i) || BaseConsumer.m1422m(i, 8)) && !BaseConsumer.m1422m(i, 4) && EncodedImage2.m1338u(encodedImage2)) {
@@ -161,33 +161,33 @@ public class DecodeProducer implements Producer2<CloseableReference<CloseableIma
         }
     }
 
-    /* compiled from: DecodeProducer.java */
-    /* renamed from: b.f.j.p.n$c */
+    /* JADX INFO: renamed from: b.f.j.p.n$c */
+    /* JADX INFO: compiled from: DecodeProducer.java */
     public abstract class c extends DelegatingConsumer<EncodedImage2, CloseableReference<CloseableImage>> {
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public final ProducerContext f4158c;
 
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         public final ProducerListener2 f4159d;
 
-        /* renamed from: e */
+        /* JADX INFO: renamed from: e */
         public final ImageDecodeOptions f4160e;
 
-        /* renamed from: f */
+        /* JADX INFO: renamed from: f */
         public boolean f4161f;
 
-        /* renamed from: g */
+        /* JADX INFO: renamed from: g */
         public final JobScheduler f4162g;
 
-        /* compiled from: DecodeProducer.java */
-        /* renamed from: b.f.j.p.n$c$a */
+        /* JADX INFO: renamed from: b.f.j.p.n$c$a */
+        /* JADX INFO: compiled from: DecodeProducer.java */
         public class a implements JobScheduler.c {
 
-            /* renamed from: a */
+            /* JADX INFO: renamed from: a */
             public final /* synthetic */ ProducerContext f4164a;
 
-            /* renamed from: b */
+            /* JADX INFO: renamed from: b */
             public final /* synthetic */ int f4165b;
 
             public a(DecodeProducer decodeProducer, ProducerContext producerContext, int i) {
@@ -196,7 +196,7 @@ public class DecodeProducer implements Producer2<CloseableReference<CloseableIma
             }
 
             @Override // p007b.p109f.p161j.p181p.JobScheduler.c
-            /* renamed from: a */
+            /* JADX INFO: renamed from: a */
             public void mo1436a(EncodedImage2 encodedImage2, int i) {
                 boolean z2;
                 String str;
@@ -287,11 +287,11 @@ public class DecodeProducer implements Producer2<CloseableReference<CloseableIma
             }
         }
 
-        /* compiled from: DecodeProducer.java */
-        /* renamed from: b.f.j.p.n$c$b */
+        /* JADX INFO: renamed from: b.f.j.p.n$c$b */
+        /* JADX INFO: compiled from: DecodeProducer.java */
         public class b extends BaseProducerContextCallbacks {
 
-            /* renamed from: a */
+            /* JADX INFO: renamed from: a */
             public final /* synthetic */ boolean f4167a;
 
             public b(DecodeProducer decodeProducer, boolean z2) {
@@ -299,7 +299,7 @@ public class DecodeProducer implements Producer2<CloseableReference<CloseableIma
             }
 
             @Override // p007b.p109f.p161j.p181p.ProducerContextCallbacks
-            /* renamed from: a */
+            /* JADX INFO: renamed from: a */
             public void mo1438a() {
                 if (this.f4167a) {
                     c cVar = c.this;
@@ -309,7 +309,7 @@ public class DecodeProducer implements Producer2<CloseableReference<CloseableIma
             }
 
             @Override // p007b.p109f.p161j.p181p.BaseProducerContextCallbacks, p007b.p109f.p161j.p181p.ProducerContextCallbacks
-            /* renamed from: b */
+            /* JADX INFO: renamed from: b */
             public void mo1439b() {
                 if (c.this.f4158c.mo1458p()) {
                     c.this.f4162g.m1434d();
@@ -329,20 +329,20 @@ public class DecodeProducer implements Producer2<CloseableReference<CloseableIma
         }
 
         @Override // p007b.p109f.p161j.p181p.DelegatingConsumer, p007b.p109f.p161j.p181p.BaseConsumer
-        /* renamed from: g */
+        /* JADX INFO: renamed from: g */
         public void mo1318g() {
             m1499q();
         }
 
         @Override // p007b.p109f.p161j.p181p.DelegatingConsumer, p007b.p109f.p161j.p181p.BaseConsumer
-        /* renamed from: h */
+        /* JADX INFO: renamed from: h */
         public void mo1319h(Throwable th) {
             m1500r(th);
         }
 
         /* JADX WARN: Removed duplicated region for block: B:11:0x0034 A[Catch: all -> 0x0056, TRY_LEAVE, TryCatch #0 {all -> 0x0056, blocks: (B:3:0x0002, B:7:0x000e, B:8:0x001e, B:10:0x0024, B:11:0x0034, B:15:0x003f, B:18:0x0047, B:20:0x004f), top: B:26:0x0002 }] */
         @Override // p007b.p109f.p161j.p181p.BaseConsumer
-        /* renamed from: i */
+        /* JADX INFO: renamed from: i */
         /*
             Code decompiled incorrectly, please refer to instructions dump.
         */
@@ -373,12 +373,12 @@ public class DecodeProducer implements Producer2<CloseableReference<CloseableIma
         }
 
         @Override // p007b.p109f.p161j.p181p.DelegatingConsumer, p007b.p109f.p161j.p181p.BaseConsumer
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public void mo1321j(float f) {
             this.f4179b.mo1423a(f * 0.99f);
         }
 
-        /* renamed from: n */
+        /* JADX INFO: renamed from: n */
         public final Map<String, String> m1498n(CloseableImage closeableImage, long j, QualityInfo qualityInfo, boolean z2, String str, String str2, String str3, String str4) {
             if (!this.f4159d.mo1360g(this.f4158c, "DecodeProducer")) {
                 return null;
@@ -413,25 +413,25 @@ public class DecodeProducer implements Producer2<CloseableReference<CloseableIma
             return new ImmutableMap(map2);
         }
 
-        /* renamed from: o */
+        /* JADX INFO: renamed from: o */
         public abstract int mo1495o(EncodedImage2 encodedImage2);
 
-        /* renamed from: p */
+        /* JADX INFO: renamed from: p */
         public abstract QualityInfo mo1496p();
 
-        /* renamed from: q */
+        /* JADX INFO: renamed from: q */
         public final void m1499q() {
             m1503u(true);
             this.f4179b.mo1426d();
         }
 
-        /* renamed from: r */
+        /* JADX INFO: renamed from: r */
         public final void m1500r(Throwable th) {
             m1503u(true);
             this.f4179b.mo1425c(th);
         }
 
-        /* renamed from: s */
+        /* JADX INFO: renamed from: s */
         public final void m1501s(CloseableImage closeableImage, int i) {
             CloseableReference.InterfaceC10637c interfaceC10637c = DecodeProducer.this.f4152j.f3725a;
             Class<CloseableReference> cls = CloseableReference.f19438j;
@@ -449,7 +449,7 @@ public class DecodeProducer implements Producer2<CloseableReference<CloseableIma
             }
         }
 
-        /* renamed from: t */
+        /* JADX INFO: renamed from: t */
         public final CloseableImage m1502t(EncodedImage2 encodedImage2, int i, QualityInfo qualityInfo) {
             DecodeProducer decodeProducer = DecodeProducer.this;
             boolean z2 = decodeProducer.f4153k != null && decodeProducer.f4154l.get().booleanValue();
@@ -465,7 +465,7 @@ public class DecodeProducer implements Producer2<CloseableReference<CloseableIma
             }
         }
 
-        /* renamed from: u */
+        /* JADX INFO: renamed from: u */
         public final void m1503u(boolean z2) {
             synchronized (this) {
                 if (z2) {
@@ -478,7 +478,7 @@ public class DecodeProducer implements Producer2<CloseableReference<CloseableIma
             }
         }
 
-        /* renamed from: v */
+        /* JADX INFO: renamed from: v */
         public final void m1504v(EncodedImage2 encodedImage2, CloseableImage closeableImage) {
             ProducerContext producerContext = this.f4158c;
             encodedImage2.m1347x();
@@ -496,7 +496,7 @@ public class DecodeProducer implements Producer2<CloseableReference<CloseableIma
             }
         }
 
-        /* renamed from: w */
+        /* JADX INFO: renamed from: w */
         public abstract boolean mo1497w(EncodedImage2 encodedImage2, int i);
     }
 
@@ -521,7 +521,7 @@ public class DecodeProducer implements Producer2<CloseableReference<CloseableIma
     }
 
     @Override // p007b.p109f.p161j.p181p.Producer2
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public void mo1417b(Consumer2<CloseableReference<CloseableImage>> consumer2, ProducerContext producerContext) {
         try {
             FrescoSystrace.m1527b();

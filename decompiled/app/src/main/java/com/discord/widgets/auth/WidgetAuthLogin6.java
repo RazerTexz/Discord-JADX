@@ -11,14 +11,14 @@ import p507d0.p592z.p594d.AdaptedFunctionReference;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetAuthLogin.kt */
-/* renamed from: com.discord.widgets.auth.WidgetAuthLogin$phoneVerifyLoginLauncher$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.auth.WidgetAuthLogin$phoneVerifyLoginLauncher$1, reason: use source file name */
+/* JADX INFO: compiled from: WidgetAuthLogin.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetAuthLogin6 extends Lambda implements Function1<WidgetAuthPhoneVerify.Result, Unit> {
     public final /* synthetic */ WidgetAuthLogin this$0;
 
-    /* compiled from: WidgetAuthLogin.kt */
-    /* renamed from: com.discord.widgets.auth.WidgetAuthLogin$phoneVerifyLoginLauncher$1$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.auth.WidgetAuthLogin$phoneVerifyLoginLauncher$1$1 */
+    /* JADX INFO: compiled from: WidgetAuthLogin.kt */
     public static final /* synthetic */ class C71941 extends AdaptedFunctionReference implements Function1<Error, Unit> {
         public C71941(WidgetAuthLogin widgetAuthLogin) {
             super(1, widgetAuthLogin, WidgetAuthLogin.class, "handleError", "handleError(Lcom/discord/utilities/error/Error;Ljava/lang/String;)V", 0);
@@ -30,15 +30,15 @@ public final class WidgetAuthLogin6 extends Lambda implements Function1<WidgetAu
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Error error) {
             Intrinsics3.checkNotNullParameter(error, "p1");
             WidgetAuthLogin.handleError$default((WidgetAuthLogin) this.receiver, error, null, 2, null);
         }
     }
 
-    /* compiled from: WidgetAuthLogin.kt */
-    /* renamed from: com.discord.widgets.auth.WidgetAuthLogin$phoneVerifyLoginLauncher$1$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.auth.WidgetAuthLogin$phoneVerifyLoginLauncher$1$2 */
+    /* JADX INFO: compiled from: WidgetAuthLogin.kt */
     public static final class C71952 extends Lambda implements Function1<Void, Unit> {
         public C71952() {
             super(1);
@@ -50,7 +50,7 @@ public final class WidgetAuthLogin6 extends Lambda implements Function1<WidgetAu
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Void r4) {
             WidgetAuthLogin.login$default(WidgetAuthLogin6.this.this$0, null, false, 3, null);
         }
@@ -68,7 +68,7 @@ public final class WidgetAuthLogin6 extends Lambda implements Function1<WidgetAu
         return Unit.f27425a;
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final void invoke2(WidgetAuthPhoneVerify.Result result) {
         Intrinsics3.checkNotNullParameter(result, "result");
         if (result instanceof WidgetAuthPhoneVerify.Result.Token) {

@@ -9,13 +9,13 @@ import androidx.annotation.Nullable;
 import androidx.annotation.RestrictTo;
 import p668x.p669a.p670a.ICustomTabsService;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public abstract class CustomTabsServiceConnection implements ServiceConnection {
 
     @Nullable
     private Context mApplicationContext;
 
-    /* renamed from: androidx.browser.customtabs.CustomTabsServiceConnection$1 */
+    /* JADX INFO: renamed from: androidx.browser.customtabs.CustomTabsServiceConnection$1 */
     public class C01541 extends CustomTabsClient {
         public C01541(ICustomTabsService iCustomTabsService, ComponentName componentName, Context context) {
             super(iCustomTabsService, componentName, context);

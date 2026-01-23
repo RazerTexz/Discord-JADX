@@ -4,7 +4,7 @@ import java.util.Iterator;
 import java.util.LinkedList;
 import p007b.p106e.p107a.Log;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public final class GenericsResolver {
     private LinkedList<Generics> stack = new LinkedList<>();
 

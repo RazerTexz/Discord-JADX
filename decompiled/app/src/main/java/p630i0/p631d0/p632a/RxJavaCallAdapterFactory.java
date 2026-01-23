@@ -12,15 +12,15 @@ import p658rx.Observable;
 import p658rx.Scheduler;
 import retrofit2.Response;
 
-/* compiled from: RxJavaCallAdapterFactory.java */
-/* renamed from: i0.d0.a.g, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: i0.d0.a.g, reason: use source file name */
+/* JADX INFO: compiled from: RxJavaCallAdapterFactory.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class RxJavaCallAdapterFactory extends CallAdapter.a {
     public RxJavaCallAdapterFactory(Scheduler scheduler, boolean z2) {
     }
 
     @Override // p630i0.CallAdapter.a
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public CallAdapter<?, ?> mo10707a(Type type, Annotation[] annotationArr, Retrofit2 retrofit22) {
         Type type2;
         boolean z2;

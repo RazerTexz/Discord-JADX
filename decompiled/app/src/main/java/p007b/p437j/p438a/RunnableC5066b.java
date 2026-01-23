@@ -2,11 +2,11 @@ package p007b.p437j.p438a;
 
 import android.app.Dialog;
 
-/* renamed from: b.j.a.b */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.j.a.b */
+/* JADX INFO: loaded from: classes3.dex */
 public class RunnableC5066b implements Runnable {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final /* synthetic */ C5067c f13581j;
 
     public RunnableC5066b(C5067c c5067c) {

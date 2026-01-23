@@ -3,9 +3,9 @@ package com.discord.utilities.uri;
 import android.view.View;
 import androidx.appcompat.app.AlertDialog;
 
-/* compiled from: UriHandler.kt */
-/* renamed from: com.discord.utilities.uri.UriHandler$showUnhandledUrlDialog$1$2, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.utilities.uri.UriHandler$showUnhandledUrlDialog$1$2, reason: use source file name */
+/* JADX INFO: compiled from: UriHandler.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class UriHandler4 implements View.OnClickListener {
     public final /* synthetic */ AlertDialog $this_apply;
 

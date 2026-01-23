@@ -8,22 +8,22 @@ import kotlin.jvm.functions.Function1;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: LocaleProvider.kt */
-/* renamed from: b.a.o.a, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.a.o.a, reason: use source file name */
+/* JADX INFO: compiled from: LocaleProvider.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class LocaleProvider {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static Function1<? super Context, Locale> f1570a = a.f1572j;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static final LocaleProvider f1571b = null;
 
-    /* compiled from: LocaleProvider.kt */
-    /* renamed from: b.a.o.a$a */
+    /* JADX INFO: renamed from: b.a.o.a$a */
+    /* JADX INFO: compiled from: LocaleProvider.kt */
     public static final class a extends Lambda implements Function1<Context, Locale> {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public static final a f1572j = new a();
 
         public a() {

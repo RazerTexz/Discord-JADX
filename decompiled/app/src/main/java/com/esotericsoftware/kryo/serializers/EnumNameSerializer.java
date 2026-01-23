@@ -7,7 +7,7 @@ import com.esotericsoftware.kryo.p502io.Input;
 import com.esotericsoftware.kryo.p502io.Output;
 import p007b.p100d.p104b.p105a.outline;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class EnumNameSerializer extends Serializer<Enum> {
     private final Class<? extends Enum> enumType;
     private final Serializer stringSerializer;
@@ -43,7 +43,7 @@ public class EnumNameSerializer extends Serializer<Enum> {
         }
     }
 
-    /* renamed from: write, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: write, reason: avoid collision after fix types in other method */
     public void write2(Kryo kryo, Output output, Enum r4) {
         kryo.writeObject(output, r4.name(), this.stringSerializer);
     }

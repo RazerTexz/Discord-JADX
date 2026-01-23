@@ -4,12 +4,12 @@ import java.io.File;
 import java.io.FilenameFilter;
 import java.util.Set;
 
-/* compiled from: CrashlyticsController.java */
-/* renamed from: b.i.c.m.d.k.t */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.c.m.d.k.t */
+/* JADX INFO: compiled from: CrashlyticsController.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class C4655t implements FilenameFilter {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final /* synthetic */ Set f12390a;
 
     public C4655t(C4663x c4663x, Set set) {

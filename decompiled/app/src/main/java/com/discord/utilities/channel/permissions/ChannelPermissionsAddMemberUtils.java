@@ -14,8 +14,8 @@ import kotlin.NoWhenBranchMatchedException;
 import p507d0.p592z.p594d.Intrinsics3;
 import p658rx.Observable;
 
-/* compiled from: ChannelPermissionsAddMemberUtils.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: ChannelPermissionsAddMemberUtils.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class ChannelPermissionsAddMemberUtils {
     public static final ChannelPermissionsAddMemberUtils INSTANCE = new ChannelPermissionsAddMemberUtils();
 

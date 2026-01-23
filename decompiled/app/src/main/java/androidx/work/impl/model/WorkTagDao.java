@@ -5,8 +5,8 @@ import androidx.room.Insert;
 import androidx.room.Query;
 import java.util.List;
 
+/* JADX INFO: loaded from: classes.dex */
 @Dao
-/* loaded from: classes.dex */
 public interface WorkTagDao {
     @Query("SELECT DISTINCT tag FROM worktag WHERE work_spec_id=:id")
     List<String> getTagsForWorkSpecId(String str);

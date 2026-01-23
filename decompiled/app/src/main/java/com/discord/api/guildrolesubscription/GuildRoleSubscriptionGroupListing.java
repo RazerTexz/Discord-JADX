@@ -6,8 +6,8 @@ import java.util.Objects;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: GuildRoleSubscriptionGroupListing.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: GuildRoleSubscriptionGroupListing.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class GuildRoleSubscriptionGroupListing {
     private final long applicationId;
     private final String description;
@@ -29,7 +29,7 @@ public final /* data */ class GuildRoleSubscriptionGroupListing {
         this.fullServerGate = z2;
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static GuildRoleSubscriptionGroupListing m7941a(GuildRoleSubscriptionGroupListing guildRoleSubscriptionGroupListing, long j, long j2, long j3, ImageAsset imageAsset, String str, List list, List list2, boolean z2, int i) {
         long j4 = (i & 1) != 0 ? guildRoleSubscriptionGroupListing.id : j;
         long j5 = (i & 2) != 0 ? guildRoleSubscriptionGroupListing.guildId : j2;
@@ -43,22 +43,22 @@ public final /* data */ class GuildRoleSubscriptionGroupListing {
         return new GuildRoleSubscriptionGroupListing(j4, j5, j6, imageAsset2, str2, list3, list4, z3);
     }
 
-    /* renamed from: b, reason: from getter */
+    /* JADX INFO: renamed from: b, reason: from getter */
     public final long getApplicationId() {
         return this.applicationId;
     }
 
-    /* renamed from: c, reason: from getter */
+    /* JADX INFO: renamed from: c, reason: from getter */
     public final String getDescription() {
         return this.description;
     }
 
-    /* renamed from: d, reason: from getter */
+    /* JADX INFO: renamed from: d, reason: from getter */
     public final boolean getFullServerGate() {
         return this.fullServerGate;
     }
 
-    /* renamed from: e, reason: from getter */
+    /* JADX INFO: renamed from: e, reason: from getter */
     public final long getGuildId() {
         return this.guildId;
     }
@@ -74,22 +74,25 @@ public final /* data */ class GuildRoleSubscriptionGroupListing {
         return this.id == guildRoleSubscriptionGroupListing.id && this.guildId == guildRoleSubscriptionGroupListing.guildId && this.applicationId == guildRoleSubscriptionGroupListing.applicationId && Intrinsics3.areEqual(this.imageAsset, guildRoleSubscriptionGroupListing.imageAsset) && Intrinsics3.areEqual(this.description, guildRoleSubscriptionGroupListing.description) && Intrinsics3.areEqual(this.subscriptionListingsIds, guildRoleSubscriptionGroupListing.subscriptionListingsIds) && Intrinsics3.areEqual(this.subscriptionListings, guildRoleSubscriptionGroupListing.subscriptionListings) && this.fullServerGate == guildRoleSubscriptionGroupListing.fullServerGate;
     }
 
-    /* renamed from: f, reason: from getter */
+    /* JADX INFO: renamed from: f, reason: from getter */
     public final long getId() {
         return this.id;
     }
 
-    /* renamed from: g, reason: from getter */
+    /* JADX INFO: renamed from: g, reason: from getter */
     public final ImageAsset getImageAsset() {
         return this.imageAsset;
     }
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public final List<GuildRoleSubscriptionTierListing> m7948h() {
         return this.subscriptionListings;
     }
 
     /* JADX WARN: Multi-variable type inference failed */
+    /* JADX WARN: Type inference failed for: r0v15, types: [int] */
+    /* JADX WARN: Type inference failed for: r0v16 */
+    /* JADX WARN: Type inference failed for: r0v20 */
     public int hashCode() {
         long j = this.id;
         long j2 = this.guildId;
@@ -105,14 +108,14 @@ public final /* data */ class GuildRoleSubscriptionGroupListing {
         List<GuildRoleSubscriptionTierListing> list2 = this.subscriptionListings;
         int iHashCode4 = (iHashCode3 + (list2 != null ? list2.hashCode() : 0)) * 31;
         boolean z2 = this.fullServerGate;
-        int i3 = z2;
-        if (z2 != 0) {
-            i3 = 1;
+        ?? r0 = z2;
+        if (z2) {
+            r0 = 1;
         }
-        return iHashCode4 + i3;
+        return iHashCode4 + r0;
     }
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public final List<Long> m7949i() {
         return this.subscriptionListingsIds;
     }

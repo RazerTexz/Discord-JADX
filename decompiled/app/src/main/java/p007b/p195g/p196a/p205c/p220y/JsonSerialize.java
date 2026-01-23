@@ -7,16 +7,16 @@ import java.lang.annotation.Target;
 import p007b.p195g.p196a.p205c.JsonSerializer;
 import p007b.p195g.p196a.p205c.p219i0.Converter;
 
-/* compiled from: JsonSerialize.java */
+/* JADX INFO: renamed from: b.g.a.c.y.e, reason: use source file name */
+/* JADX INFO: compiled from: JsonSerialize.java */
+/* JADX INFO: loaded from: classes3.dex */
 @Target({ElementType.ANNOTATION_TYPE, ElementType.METHOD, ElementType.FIELD, ElementType.TYPE, ElementType.PARAMETER})
 @Retention(RetentionPolicy.RUNTIME)
-/* renamed from: b.g.a.c.y.e, reason: use source file name */
-/* loaded from: classes3.dex */
 public @interface JsonSerialize {
 
-    /* compiled from: JsonSerialize.java */
+    /* JADX INFO: renamed from: b.g.a.c.y.e$a */
+    /* JADX INFO: compiled from: JsonSerialize.java */
     @Deprecated
-    /* renamed from: b.g.a.c.y.e$a */
     public enum a {
         ALWAYS,
         NON_NULL,
@@ -25,15 +25,15 @@ public @interface JsonSerialize {
         DEFAULT_INCLUSION
     }
 
-    /* compiled from: JsonSerialize.java */
-    /* renamed from: b.g.a.c.y.e$b */
+    /* JADX INFO: renamed from: b.g.a.c.y.e$b */
+    /* JADX INFO: compiled from: JsonSerialize.java */
     public enum b {
         DYNAMIC,
         STATIC,
         DEFAULT_TYPING
     }
 
-    /* renamed from: as */
+    /* JADX INFO: renamed from: as */
     Class<?> m2262as() default Void.class;
 
     Class<?> contentAs() default Void.class;

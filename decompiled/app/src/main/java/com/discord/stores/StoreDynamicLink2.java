@@ -14,14 +14,14 @@ import p507d0.p592z.p594d.FunctionReferenceImpl;
 import p658rx.Emitter;
 import p658rx.functions.Action1;
 
-/* compiled from: StoreDynamicLink.kt */
-/* renamed from: com.discord.stores.StoreDynamicLink$getDynamicLinkObservable$firebaseDynamicLinks$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.stores.StoreDynamicLink$getDynamicLinkObservable$firebaseDynamicLinks$1, reason: use source file name */
+/* JADX INFO: compiled from: StoreDynamicLink.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class StoreDynamicLink2<T> implements Action1<Emitter<Uri>> {
     public final /* synthetic */ Intent $intent;
 
-    /* compiled from: StoreDynamicLink.kt */
-    /* renamed from: com.discord.stores.StoreDynamicLink$getDynamicLinkObservable$firebaseDynamicLinks$1$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreDynamicLink$getDynamicLinkObservable$firebaseDynamicLinks$1$1 */
+    /* JADX INFO: compiled from: StoreDynamicLink.kt */
     public static final /* synthetic */ class C58791 extends FunctionReferenceImpl implements Function1<Throwable, Unit> {
         public C58791(Emitter emitter) {
             super(1, emitter, Emitter.class, "onError", "onError(Ljava/lang/Throwable;)V", 0);
@@ -33,14 +33,14 @@ public final class StoreDynamicLink2<T> implements Action1<Emitter<Uri>> {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Throwable th) {
             ((Emitter) this.receiver).onError(th);
         }
     }
 
-    /* compiled from: StoreDynamicLink.kt */
-    /* renamed from: com.discord.stores.StoreDynamicLink$getDynamicLinkObservable$firebaseDynamicLinks$1$2 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreDynamicLink$getDynamicLinkObservable$firebaseDynamicLinks$1$2 */
+    /* JADX INFO: compiled from: StoreDynamicLink.kt */
     public static final class C58802<TResult> implements InterfaceC4361e<PendingDynamicLinkData> {
         public final /* synthetic */ Emitter $it;
 
@@ -54,7 +54,7 @@ public final class StoreDynamicLink2<T> implements Action1<Emitter<Uri>> {
         }
 
         /* JADX WARN: Removed duplicated region for block: B:12:0x0015  */
-        /* renamed from: onSuccess, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: onSuccess, reason: avoid collision after fix types in other method */
         /*
             Code decompiled incorrectly, please refer to instructions dump.
         */
@@ -81,7 +81,7 @@ public final class StoreDynamicLink2<T> implements Action1<Emitter<Uri>> {
         this.$intent = intent;
     }
 
-    /* renamed from: call, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
     public final void call2(Emitter<Uri> emitter) {
         AbstractC4767a abstractC4767a;
         synchronized (AbstractC4767a.class) {

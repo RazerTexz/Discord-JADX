@@ -39,39 +39,39 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 import p507d0.p592z.p594d.Reflection2;
 
-/* compiled from: WidgetGuildRoleSubscriptionTierBenefits.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetGuildRoleSubscriptionTierBenefits.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetGuildRoleSubscriptionTierBenefits extends AppFragment {
     public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetGuildRoleSubscriptionTierBenefits.class, "binding", "getBinding()Lcom/discord/databinding/WidgetGuildRoleSubscriptionTierBenefitsBinding;", 0)};
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private static final String INTENT_EXTRA_BENEFITS_HIDE_HEADER = "INTENT_EXTRA_BENEFITS_HIDE_HEADER";
     public static final String INTENT_EXTRA_BENEFIT_LIST_TYPE = "INTENT_EXTRA_BENEFIT_LIST_TYPE";
     private final ActivityResultLauncher<Intent> benefitLauncher;
 
-    /* renamed from: benefitListType$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: benefitListType$delegate, reason: from kotlin metadata */
     private final Lazy benefitListType;
     private GuildRoleSubscriptionBenefitAdapter benefitsAdapter;
 
-    /* renamed from: benefitsViewModel$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: benefitsViewModel$delegate, reason: from kotlin metadata */
     private final Lazy benefitsViewModel;
 
-    /* renamed from: binding$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
     private final RadioGroup.OnCheckedChangeListener channelBenefitSettingsCheckedChangeListener;
 
-    /* renamed from: guildId$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: guildId$delegate, reason: from kotlin metadata */
     private final Lazy guildId;
 
-    /* renamed from: hideHeader$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: hideHeader$delegate, reason: from kotlin metadata */
     private final Lazy hideHeader;
     private final WidgetGuildRoleSubscriptionTierBenefits$itemClickListener$1 itemClickListener;
 
-    /* renamed from: viewModel$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: viewModel$delegate, reason: from kotlin metadata */
     private final Lazy viewModel;
 
-    /* compiled from: WidgetGuildRoleSubscriptionTierBenefits.kt */
+    /* JADX INFO: compiled from: WidgetGuildRoleSubscriptionTierBenefits.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -108,8 +108,8 @@ public final class WidgetGuildRoleSubscriptionTierBenefits extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetGuildRoleSubscriptionTierBenefits.kt */
-    /* renamed from: com.discord.widgets.guild_role_subscriptions.tier.create.benefits.WidgetGuildRoleSubscriptionTierBenefits$onViewBoundOrOnResume$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.guild_role_subscriptions.tier.create.benefits.WidgetGuildRoleSubscriptionTierBenefits$onViewBoundOrOnResume$1 */
+    /* JADX INFO: compiled from: WidgetGuildRoleSubscriptionTierBenefits.kt */
     public static final class C85501 extends Lambda implements Function1<GuildRoleSubscriptionTierViewModel.ViewState, Unit> {
         public C85501() {
             super(1);
@@ -121,15 +121,15 @@ public final class WidgetGuildRoleSubscriptionTierBenefits extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(GuildRoleSubscriptionTierViewModel.ViewState viewState) {
             Intrinsics3.checkNotNullParameter(viewState, "it");
             WidgetGuildRoleSubscriptionTierBenefits.access$getBenefitsViewModel$p(WidgetGuildRoleSubscriptionTierBenefits.this).updateBenefits(viewState.getGuildRoleSubscriptionTier(), viewState.isFullServerGating());
         }
     }
 
-    /* compiled from: WidgetGuildRoleSubscriptionTierBenefits.kt */
-    /* renamed from: com.discord.widgets.guild_role_subscriptions.tier.create.benefits.WidgetGuildRoleSubscriptionTierBenefits$onViewBoundOrOnResume$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.guild_role_subscriptions.tier.create.benefits.WidgetGuildRoleSubscriptionTierBenefits$onViewBoundOrOnResume$2 */
+    /* JADX INFO: compiled from: WidgetGuildRoleSubscriptionTierBenefits.kt */
     public static final class C85512 extends Lambda implements Function1<GuildRoleSubscriptionTierBenefitsViewModel.ViewState, Unit> {
         public C85512() {
             super(1);
@@ -141,7 +141,7 @@ public final class WidgetGuildRoleSubscriptionTierBenefits extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(GuildRoleSubscriptionTierBenefitsViewModel.ViewState viewState) {
             Intrinsics3.checkNotNullParameter(viewState, "it");
             WidgetGuildRoleSubscriptionTierBenefits.access$configureUI(WidgetGuildRoleSubscriptionTierBenefits.this, viewState);

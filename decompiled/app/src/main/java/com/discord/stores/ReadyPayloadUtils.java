@@ -37,13 +37,13 @@ import p507d0.p580t._Collections;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: ReadyPayloadUtils.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: ReadyPayloadUtils.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class ReadyPayloadUtils {
     public static final ReadyPayloadUtils INSTANCE = new ReadyPayloadUtils();
     private static final HashMap<Long, GuildCache> cache = new HashMap<>();
 
-    /* compiled from: ReadyPayloadUtils.kt */
+    /* JADX INFO: compiled from: ReadyPayloadUtils.kt */
     public static final /* data */ class GuildCache {
         private final List<Channel> channels;
         private final List<GuildEmoji> emojis;
@@ -60,6 +60,7 @@ public final class ReadyPayloadUtils {
             this.roles = list4;
         }
 
+        /* JADX WARN: Multi-variable type inference failed */
         public static /* synthetic */ GuildCache copy$default(GuildCache guildCache, Guild guild, List list, List list2, List list3, List list4, int i, Object obj) {
             if ((i & 1) != 0) {
                 guild = guildCache.guild;
@@ -82,7 +83,7 @@ public final class ReadyPayloadUtils {
             return guildCache.copy(guild, list5, list6, list7, list4);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final Guild getGuild() {
             return this.guild;
         }
@@ -166,10 +167,10 @@ public final class ReadyPayloadUtils {
         }
     }
 
-    /* compiled from: ReadyPayloadUtils.kt */
+    /* JADX INFO: compiled from: ReadyPayloadUtils.kt */
     public static abstract class HydrateGuildResult {
 
-        /* compiled from: ReadyPayloadUtils.kt */
+        /* JADX INFO: compiled from: ReadyPayloadUtils.kt */
         public static final class Error extends HydrateGuildResult {
             public static final Error INSTANCE = new Error();
 
@@ -178,7 +179,7 @@ public final class ReadyPayloadUtils {
             }
         }
 
-        /* compiled from: ReadyPayloadUtils.kt */
+        /* JADX INFO: compiled from: ReadyPayloadUtils.kt */
         public static final /* data */ class Success extends HydrateGuildResult {
             private final Guild guild;
 
@@ -196,7 +197,7 @@ public final class ReadyPayloadUtils {
                 return success.copy(guild);
             }
 
-            /* renamed from: component1, reason: from getter */
+            /* JADX INFO: renamed from: component1, reason: from getter */
             public final Guild getGuild() {
                 return this.guild;
             }
@@ -241,10 +242,10 @@ public final class ReadyPayloadUtils {
         }
     }
 
-    /* compiled from: ReadyPayloadUtils.kt */
+    /* JADX INFO: compiled from: ReadyPayloadUtils.kt */
     public static abstract class HydrateResult {
 
-        /* compiled from: ReadyPayloadUtils.kt */
+        /* JADX INFO: compiled from: ReadyPayloadUtils.kt */
         public static final class Error extends HydrateResult {
             public static final Error INSTANCE = new Error();
 
@@ -253,7 +254,7 @@ public final class ReadyPayloadUtils {
             }
         }
 
-        /* compiled from: ReadyPayloadUtils.kt */
+        /* JADX INFO: compiled from: ReadyPayloadUtils.kt */
         public static final /* data */ class Success extends HydrateResult {
             private final ModelPayload payload;
 
@@ -271,7 +272,7 @@ public final class ReadyPayloadUtils {
                 return success.copy(modelPayload);
             }
 
-            /* renamed from: component1, reason: from getter */
+            /* JADX INFO: renamed from: component1, reason: from getter */
             public final ModelPayload getPayload() {
                 return this.payload;
             }
@@ -316,8 +317,8 @@ public final class ReadyPayloadUtils {
         }
     }
 
-    /* compiled from: ReadyPayloadUtils.kt */
-    /* renamed from: com.discord.stores.ReadyPayloadUtils$hydrateGuild$6 */
+    /* JADX INFO: renamed from: com.discord.stores.ReadyPayloadUtils$hydrateGuild$6 */
+    /* JADX INFO: compiled from: ReadyPayloadUtils.kt */
     public static final class C56696 extends Lambda implements Function2<Channel, Channel, Channel> {
         public static final C56696 INSTANCE = new C56696();
 
@@ -330,7 +331,7 @@ public final class ReadyPayloadUtils {
             return invoke2(channel, channel2);
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final Channel invoke2(Channel channel, Channel channel2) {
             Intrinsics3.checkNotNullParameter(channel, "channel");
             Intrinsics3.checkNotNullParameter(channel2, "channelUpdate");

@@ -6,9 +6,9 @@ import androidx.activity.result.ActivityResultCallback;
 import com.discord.widgets.guilds.create.WidgetGuildCreate;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: WidgetHubAddServer.kt */
-/* renamed from: com.discord.widgets.hubs.WidgetHubAddServer$launcher$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.hubs.WidgetHubAddServer$launcher$1, reason: use source file name */
+/* JADX INFO: compiled from: WidgetHubAddServer.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetHubAddServer4<O> implements ActivityResultCallback<ActivityResult> {
     public final /* synthetic */ WidgetHubAddServer this$0;
 
@@ -21,7 +21,7 @@ public final class WidgetHubAddServer4<O> implements ActivityResultCallback<Acti
         onActivityResult2(activityResult);
     }
 
-    /* renamed from: onActivityResult, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: onActivityResult, reason: avoid collision after fix types in other method */
     public final void onActivityResult2(ActivityResult activityResult) {
         WidgetGuildCreate.Result result;
         Intrinsics3.checkNotNullExpressionValue(activityResult, "activityResult");

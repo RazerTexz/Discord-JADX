@@ -4,16 +4,16 @@ import android.graphics.Matrix;
 import android.graphics.Rect;
 import com.facebook.drawee.drawable.ScalingUtils$ScaleType;
 
-/* compiled from: ScalingUtils.java */
-/* renamed from: b.f.g.e.s */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.f.g.e.s */
+/* JADX INFO: compiled from: ScalingUtils.java */
+/* JADX INFO: loaded from: classes.dex */
 public class C1785s extends AbstractC1783q {
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public static final ScalingUtils$ScaleType f3443l = new C1785s();
 
     @Override // p007b.p109f.p132g.p142e.AbstractC1783q
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public void mo1092b(Matrix matrix, Rect rect, int i, int i2, float f, float f2, float f3, float f4) {
         float fWidth;
         float fHeight;

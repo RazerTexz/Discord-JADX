@@ -5,9 +5,9 @@ import com.discord.api.directory.DirectoryEntryGuild;
 import java.util.Comparator;
 import p507d0.p582u.C12169a;
 
-/* compiled from: Comparisons.kt */
-/* renamed from: com.discord.stores.StoreDirectories$fetchDirectoriesForChannel$1$$special$$inlined$sortedByDescending$1 */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.stores.StoreDirectories$fetchDirectoriesForChannel$1$$special$$inlined$sortedByDescending$1 */
+/* JADX INFO: compiled from: Comparisons.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class C5867x1dbdc8f9<T> implements Comparator {
     /* JADX WARN: Multi-variable type inference failed */
     @Override // java.util.Comparator

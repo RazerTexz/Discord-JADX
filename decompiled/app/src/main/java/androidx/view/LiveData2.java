@@ -6,9 +6,9 @@ import kotlin.Unit;
 import kotlin.jvm.functions.Function1;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: LiveData.kt */
-/* renamed from: androidx.lifecycle.LiveDataKt, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: androidx.lifecycle.LiveDataKt, reason: use source file name */
+/* JADX INFO: compiled from: LiveData.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class LiveData2 {
     @MainThread
     public static final <T> Observer<T> observe(LiveData<T> liveData, LifecycleOwner lifecycleOwner, Function1<? super T, Unit> function1) {

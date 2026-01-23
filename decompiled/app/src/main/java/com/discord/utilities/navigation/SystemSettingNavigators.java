@@ -6,8 +6,8 @@ import android.net.Uri;
 import com.discord.utilities.fcm.NotificationClient;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: SystemSettingNavigators.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: SystemSettingNavigators.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class SystemSettingNavigators {
     public static final SystemSettingNavigators INSTANCE = new SystemSettingNavigators();
 

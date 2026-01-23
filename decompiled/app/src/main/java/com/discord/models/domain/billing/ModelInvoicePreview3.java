@@ -5,9 +5,9 @@ import java.util.List;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ModelInvoicePreview.kt */
-/* renamed from: com.discord.models.domain.billing.ModelInvoiceItem, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: com.discord.models.domain.billing.ModelInvoiceItem, reason: use source file name */
+/* JADX INFO: compiled from: ModelInvoicePreview.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class ModelInvoicePreview3 {
     private final int amount;
     private final List<ModelInvoicePreview2> discount;
@@ -28,11 +28,12 @@ public final /* data */ class ModelInvoicePreview3 {
         this.subscriptionPlanPrice = i3;
     }
 
+    /* JADX WARN: Multi-variable type inference failed */
     public static /* synthetic */ ModelInvoicePreview3 copy$default(ModelInvoicePreview3 modelInvoicePreview3, int i, List list, long j, boolean z2, int i2, long j2, int i3, int i4, Object obj) {
         return modelInvoicePreview3.copy((i4 & 1) != 0 ? modelInvoicePreview3.amount : i, (i4 & 2) != 0 ? modelInvoicePreview3.discount : list, (i4 & 4) != 0 ? modelInvoicePreview3.id : j, (i4 & 8) != 0 ? modelInvoicePreview3.proration : z2, (i4 & 16) != 0 ? modelInvoicePreview3.quantity : i2, (i4 & 32) != 0 ? modelInvoicePreview3.subscriptionPlanId : j2, (i4 & 64) != 0 ? modelInvoicePreview3.subscriptionPlanPrice : i3);
     }
 
-    /* renamed from: component1, reason: from getter */
+    /* JADX INFO: renamed from: component1, reason: from getter */
     public final int getAmount() {
         return this.amount;
     }
@@ -41,27 +42,27 @@ public final /* data */ class ModelInvoicePreview3 {
         return this.discount;
     }
 
-    /* renamed from: component3, reason: from getter */
+    /* JADX INFO: renamed from: component3, reason: from getter */
     public final long getId() {
         return this.id;
     }
 
-    /* renamed from: component4, reason: from getter */
+    /* JADX INFO: renamed from: component4, reason: from getter */
     public final boolean getProration() {
         return this.proration;
     }
 
-    /* renamed from: component5, reason: from getter */
+    /* JADX INFO: renamed from: component5, reason: from getter */
     public final int getQuantity() {
         return this.quantity;
     }
 
-    /* renamed from: component6, reason: from getter */
+    /* JADX INFO: renamed from: component6, reason: from getter */
     public final long getSubscriptionPlanId() {
         return this.subscriptionPlanId;
     }
 
-    /* renamed from: component7, reason: from getter */
+    /* JADX INFO: renamed from: component7, reason: from getter */
     public final int getSubscriptionPlanPrice() {
         return this.subscriptionPlanPrice;
     }
@@ -111,6 +112,9 @@ public final /* data */ class ModelInvoicePreview3 {
     }
 
     /* JADX WARN: Multi-variable type inference failed */
+    /* JADX WARN: Type inference failed for: r1v11 */
+    /* JADX WARN: Type inference failed for: r1v13 */
+    /* JADX WARN: Type inference failed for: r1v6, types: [int] */
     public int hashCode() {
         int i = this.amount * 31;
         List<ModelInvoicePreview2> list = this.discount;
@@ -118,13 +122,13 @@ public final /* data */ class ModelInvoicePreview3 {
         long j = this.id;
         int i2 = (iHashCode + ((int) (j ^ (j >>> 32)))) * 31;
         boolean z2 = this.proration;
-        int i3 = z2;
-        if (z2 != 0) {
-            i3 = 1;
+        ?? r1 = z2;
+        if (z2) {
+            r1 = 1;
         }
-        int i4 = (((i2 + i3) * 31) + this.quantity) * 31;
+        int i3 = (((i2 + r1) * 31) + this.quantity) * 31;
         long j2 = this.subscriptionPlanId;
-        return ((i4 + ((int) (j2 ^ (j2 >>> 32)))) * 31) + this.subscriptionPlanPrice;
+        return ((i3 + ((int) (j2 ^ (j2 >>> 32)))) * 31) + this.subscriptionPlanPrice;
     }
 
     public String toString() {

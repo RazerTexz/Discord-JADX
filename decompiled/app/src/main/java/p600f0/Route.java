@@ -5,18 +5,18 @@ import java.net.Proxy;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: Route.kt */
-/* renamed from: f0.c0, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: f0.c0, reason: use source file name */
+/* JADX INFO: compiled from: Route.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class Route {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final Address f25370a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final Proxy f25371b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final InetSocketAddress f25372c;
 
     public Route(Address address, Proxy proxy, InetSocketAddress inetSocketAddress) {
@@ -28,7 +28,7 @@ public final class Route {
         this.f25372c = inetSocketAddress;
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final boolean m10106a() {
         return this.f25370a.f25358f != null && this.f25371b.type() == Proxy.Type.HTTP;
     }

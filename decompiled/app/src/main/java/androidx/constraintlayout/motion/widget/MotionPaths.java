@@ -10,7 +10,7 @@ import com.discord.models.domain.ModelAuditLogEntry;
 import java.util.Arrays;
 import java.util.LinkedHashMap;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class MotionPaths implements Comparable<MotionPaths> {
     public static final int CARTESIAN = 2;
     public static final boolean DEBUG = false;
@@ -39,10 +39,10 @@ public class MotionPaths implements Comparable<MotionPaths> {
     public float time;
     public float width;
 
-    /* renamed from: x */
+    /* JADX INFO: renamed from: x */
     public float f108x;
 
-    /* renamed from: y */
+    /* JADX INFO: renamed from: y */
     public float f109y;
 
     public MotionPaths() {
@@ -407,7 +407,7 @@ public class MotionPaths implements Comparable<MotionPaths> {
         }
         float f13 = f2;
         if (!Float.isNaN(f6)) {
-            view.setRotation((float) (Math.toDegrees(Math.atan2((f10 / 2.0f) + f9, (f8 / 2.0f) + f7)) + f6 + (Float.isNaN(Float.NaN) ? 0.0f : Float.NaN)));
+            view.setRotation((float) (Math.toDegrees(Math.atan2((f10 / 2.0f) + f9, (f8 / 2.0f) + f7)) + ((double) f6) + ((double) (Float.isNaN(Float.NaN) ? 0.0f : Float.NaN))));
         } else if (!Float.isNaN(Float.NaN)) {
             view.setRotation(Float.NaN);
         }
@@ -425,7 +425,7 @@ public class MotionPaths implements Comparable<MotionPaths> {
         view.layout(i4, i5, i6, i7);
     }
 
-    /* renamed from: compareTo, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: compareTo, reason: avoid collision after fix types in other method */
     public int compareTo2(@NonNull MotionPaths motionPaths) {
         return Float.compare(this.position, motionPaths.position);
     }

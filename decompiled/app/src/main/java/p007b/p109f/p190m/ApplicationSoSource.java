@@ -7,18 +7,18 @@ import android.util.Log;
 import java.io.File;
 import java.io.IOException;
 
-/* compiled from: ApplicationSoSource.java */
-/* renamed from: b.f.m.b, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.f.m.b, reason: use source file name */
+/* JADX INFO: compiled from: ApplicationSoSource.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class ApplicationSoSource extends SoSource {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public Context f4316a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public int f4317b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public DirectorySoSource f4318c;
 
     public ApplicationSoSource(Context context, int i) {
@@ -32,24 +32,24 @@ public class ApplicationSoSource extends SoSource {
         this.f4318c = new DirectorySoSource(new File(this.f4316a.getApplicationInfo().nativeLibraryDir), i);
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public static File m1567d(Context context) {
         return new File(context.getApplicationInfo().nativeLibraryDir);
     }
 
     @Override // p007b.p109f.p190m.SoSource
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public int mo1568a(String str, int i, StrictMode.ThreadPolicy threadPolicy) throws IOException {
         return this.f4318c.mo1568a(str, i, threadPolicy);
     }
 
     @Override // p007b.p109f.p190m.SoSource
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public void mo1569b(int i) throws IOException {
         this.f4318c.mo1569b(i);
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public boolean m1570c() throws IOException {
         File file = this.f4318c.f4319a;
         Context contextM1571e = m1571e();
@@ -65,7 +65,7 @@ public class ApplicationSoSource extends SoSource {
         return true;
     }
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public Context m1571e() {
         try {
             Context context = this.f4316a;

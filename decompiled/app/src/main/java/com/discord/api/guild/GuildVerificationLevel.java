@@ -1,8 +1,8 @@
 package com.discord.api.guild;
 
 
-/* compiled from: GuildVerificationLevel.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: GuildVerificationLevel.kt */
+/* JADX INFO: loaded from: classes.dex */
 public enum GuildVerificationLevel {
     NONE(0),
     LOW(1),

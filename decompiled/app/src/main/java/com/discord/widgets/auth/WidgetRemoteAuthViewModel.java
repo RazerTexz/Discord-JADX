@@ -27,19 +27,19 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 import p658rx.subjects.BehaviorSubject;
 
-/* compiled from: WidgetRemoteAuthViewModel.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetRemoteAuthViewModel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetRemoteAuthViewModel extends AppViewModel<ViewState> {
     private final RestAPI restAPI;
     private final BehaviorSubject<Boolean> temporaryBehaviorSubject;
 
-    /* compiled from: WidgetRemoteAuthViewModel.kt */
-    /* renamed from: com.discord.widgets.auth.WidgetRemoteAuthViewModel$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.auth.WidgetRemoteAuthViewModel$1 */
+    /* JADX INFO: compiled from: WidgetRemoteAuthViewModel.kt */
     public static final class C72651 extends Lambda implements Function1<ModelRemoteAuthHandshake, Unit> {
 
-        /* compiled from: WidgetRemoteAuthViewModel.kt */
+        /* JADX INFO: renamed from: com.discord.widgets.auth.WidgetRemoteAuthViewModel$1$1, reason: invalid class name */
+        /* JADX INFO: compiled from: WidgetRemoteAuthViewModel.kt */
         @DebugMetadata(m10084c = "com.discord.widgets.auth.WidgetRemoteAuthViewModel$1$1", m10085f = "WidgetRemoteAuthViewModel.kt", m10086l = {54}, m10087m = "invokeSuspend")
-        /* renamed from: com.discord.widgets.auth.WidgetRemoteAuthViewModel$1$1, reason: invalid class name */
         public static final class AnonymousClass1 extends ContinuationImpl6 implements Function2<CoroutineScope, Continuation<? super Unit>, Object> {
             public final /* synthetic */ ModelRemoteAuthHandshake $handshakeData;
             public int label;
@@ -98,7 +98,7 @@ public final class WidgetRemoteAuthViewModel extends AppViewModel<ViewState> {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(ModelRemoteAuthHandshake modelRemoteAuthHandshake) {
             Intrinsics3.checkNotNullParameter(modelRemoteAuthHandshake, "handshakeData");
             WidgetRemoteAuthViewModel widgetRemoteAuthViewModel = WidgetRemoteAuthViewModel.this;
@@ -112,8 +112,8 @@ public final class WidgetRemoteAuthViewModel extends AppViewModel<ViewState> {
         }
     }
 
-    /* compiled from: WidgetRemoteAuthViewModel.kt */
-    /* renamed from: com.discord.widgets.auth.WidgetRemoteAuthViewModel$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.auth.WidgetRemoteAuthViewModel$2 */
+    /* JADX INFO: compiled from: WidgetRemoteAuthViewModel.kt */
     public static final class C72662 extends Lambda implements Function1<Error, Unit> {
         public C72662() {
             super(1);
@@ -125,7 +125,7 @@ public final class WidgetRemoteAuthViewModel extends AppViewModel<ViewState> {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Error error) {
             Intrinsics3.checkNotNullParameter(error, "it");
             Error.Response response = error.getResponse();
@@ -137,10 +137,10 @@ public final class WidgetRemoteAuthViewModel extends AppViewModel<ViewState> {
         }
     }
 
-    /* compiled from: WidgetRemoteAuthViewModel.kt */
+    /* JADX INFO: compiled from: WidgetRemoteAuthViewModel.kt */
     public static abstract class ViewState {
 
-        /* compiled from: WidgetRemoteAuthViewModel.kt */
+        /* JADX INFO: compiled from: WidgetRemoteAuthViewModel.kt */
         public static final class Failed extends ViewState {
             public static final Failed INSTANCE = new Failed();
 
@@ -149,7 +149,7 @@ public final class WidgetRemoteAuthViewModel extends AppViewModel<ViewState> {
             }
         }
 
-        /* compiled from: WidgetRemoteAuthViewModel.kt */
+        /* JADX INFO: compiled from: WidgetRemoteAuthViewModel.kt */
         public static final /* data */ class Loaded extends ViewState {
             private final String handshakeToken;
             private final boolean isTemporary;
@@ -177,17 +177,17 @@ public final class WidgetRemoteAuthViewModel extends AppViewModel<ViewState> {
                 return loaded.copy(str, z2, z3);
             }
 
-            /* renamed from: component1, reason: from getter */
+            /* JADX INFO: renamed from: component1, reason: from getter */
             public final String getHandshakeToken() {
                 return this.handshakeToken;
             }
 
-            /* renamed from: component2, reason: from getter */
+            /* JADX INFO: renamed from: component2, reason: from getter */
             public final boolean getIsTemporary() {
                 return this.isTemporary;
             }
 
-            /* renamed from: component3, reason: from getter */
+            /* JADX INFO: renamed from: component3, reason: from getter */
             public final boolean getLoginAllowed() {
                 return this.loginAllowed;
             }
@@ -217,17 +217,23 @@ public final class WidgetRemoteAuthViewModel extends AppViewModel<ViewState> {
             }
 
             /* JADX WARN: Multi-variable type inference failed */
+            /* JADX WARN: Type inference failed for: r1v1, types: [int] */
+            /* JADX WARN: Type inference failed for: r1v3 */
+            /* JADX WARN: Type inference failed for: r1v4 */
+            /* JADX WARN: Type inference failed for: r2v0 */
+            /* JADX WARN: Type inference failed for: r2v1, types: [int] */
+            /* JADX WARN: Type inference failed for: r2v2 */
             public int hashCode() {
                 String str = this.handshakeToken;
                 int iHashCode = (str != null ? str.hashCode() : 0) * 31;
                 boolean z2 = this.isTemporary;
-                int i = z2;
-                if (z2 != 0) {
-                    i = 1;
+                ?? r1 = z2;
+                if (z2) {
+                    r1 = 1;
                 }
-                int i2 = (iHashCode + i) * 31;
+                int i = (iHashCode + r1) * 31;
                 boolean z3 = this.loginAllowed;
-                return i2 + (z3 ? 1 : z3 ? 1 : 0);
+                return i + (z3 ? 1 : z3);
             }
 
             public final boolean isTemporary() {
@@ -244,7 +250,7 @@ public final class WidgetRemoteAuthViewModel extends AppViewModel<ViewState> {
             }
         }
 
-        /* compiled from: WidgetRemoteAuthViewModel.kt */
+        /* JADX INFO: compiled from: WidgetRemoteAuthViewModel.kt */
         public static final class Loading extends ViewState {
             public static final Loading INSTANCE = new Loading();
 
@@ -253,7 +259,7 @@ public final class WidgetRemoteAuthViewModel extends AppViewModel<ViewState> {
             }
         }
 
-        /* compiled from: WidgetRemoteAuthViewModel.kt */
+        /* JADX INFO: compiled from: WidgetRemoteAuthViewModel.kt */
         public static final class Succeeded extends ViewState {
             public static final Succeeded INSTANCE = new Succeeded();
 
@@ -270,8 +276,8 @@ public final class WidgetRemoteAuthViewModel extends AppViewModel<ViewState> {
         }
     }
 
-    /* compiled from: WidgetRemoteAuthViewModel.kt */
-    /* renamed from: com.discord.widgets.auth.WidgetRemoteAuthViewModel$cancelLogin$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.auth.WidgetRemoteAuthViewModel$cancelLogin$1 */
+    /* JADX INFO: compiled from: WidgetRemoteAuthViewModel.kt */
     public static final class C72671 extends Lambda implements Function1<Void, Unit> {
         public static final C72671 INSTANCE = new C72671();
 
@@ -285,13 +291,13 @@ public final class WidgetRemoteAuthViewModel extends AppViewModel<ViewState> {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Void r1) {
         }
     }
 
-    /* compiled from: WidgetRemoteAuthViewModel.kt */
-    /* renamed from: com.discord.widgets.auth.WidgetRemoteAuthViewModel$remoteLogin$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.auth.WidgetRemoteAuthViewModel$remoteLogin$1 */
+    /* JADX INFO: compiled from: WidgetRemoteAuthViewModel.kt */
     public static final class C72681 extends Lambda implements Function1<Void, Unit> {
         public C72681() {
             super(1);
@@ -303,14 +309,14 @@ public final class WidgetRemoteAuthViewModel extends AppViewModel<ViewState> {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Void r2) {
             WidgetRemoteAuthViewModel.access$updateViewState(WidgetRemoteAuthViewModel.this, ViewState.Succeeded.INSTANCE);
         }
     }
 
-    /* compiled from: WidgetRemoteAuthViewModel.kt */
-    /* renamed from: com.discord.widgets.auth.WidgetRemoteAuthViewModel$remoteLogin$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.auth.WidgetRemoteAuthViewModel$remoteLogin$2 */
+    /* JADX INFO: compiled from: WidgetRemoteAuthViewModel.kt */
     public static final class C72692 extends Lambda implements Function1<Error, Unit> {
         public C72692() {
             super(1);
@@ -322,7 +328,7 @@ public final class WidgetRemoteAuthViewModel extends AppViewModel<ViewState> {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Error error) {
             Intrinsics3.checkNotNullParameter(error, "it");
             WidgetRemoteAuthViewModel.access$updateViewState(WidgetRemoteAuthViewModel.this, ViewState.Failed.INSTANCE);

@@ -178,45 +178,45 @@ import p007b.p225i.p355b.p356a.Predicate3;
 import p507d0.p580t._Arrays;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: AnimatableValueParser.java */
-/* renamed from: b.c.a.a0.d, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.c.a.a0.d, reason: use source file name */
+/* JADX INFO: compiled from: AnimatableValueParser.java */
+/* JADX INFO: loaded from: classes.dex */
 public class AnimatableValueParser {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static boolean f2216a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static ScheduledExecutorService f2217b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     @Nullable
     public static Boolean f2218c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     @Nullable
     public static Boolean f2219d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     @Nullable
     public static Boolean f2220e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     @Nullable
     public static Boolean f2221f;
 
-    /* compiled from: ArrayBuilders.java */
-    /* renamed from: b.c.a.a0.d$a */
-    /* loaded from: classes3.dex */
+    /* JADX INFO: renamed from: b.c.a.a0.d$a */
+    /* JADX INFO: compiled from: ArrayBuilders.java */
+    /* JADX INFO: loaded from: classes3.dex */
     public static class a {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final /* synthetic */ Class f2222a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final /* synthetic */ int f2223b;
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public final /* synthetic */ Object f2224c;
 
         public a(Class cls, int i, Object obj) {
@@ -225,7 +225,7 @@ public class AnimatableValueParser {
             this.f2224c = obj;
         }
 
-        public boolean equals(Object obj) throws ArrayIndexOutOfBoundsException, IllegalArgumentException {
+        public boolean equals(Object obj) {
             if (obj == this) {
                 return true;
             }
@@ -245,13 +245,13 @@ public class AnimatableValueParser {
 
     @NonNull
     @EnsuresNonNull({"#1"})
-    /* renamed from: A */
+    /* JADX INFO: renamed from: A */
     public static <T> T m415A(@Nullable T t) {
         Objects.requireNonNull(t, "null reference");
         return t;
     }
 
-    /* renamed from: A0 */
+    /* JADX INFO: renamed from: A0 */
     public static ScalingUtils$ScaleType m416A0(TypedArray typedArray, int i) {
         switch (typedArray.getInt(i, -2)) {
             case -1:
@@ -288,7 +288,7 @@ public class AnimatableValueParser {
         }
     }
 
-    /* renamed from: A1 */
+    /* JADX INFO: renamed from: A1 */
     public static boolean m417A1(TypeResolutionContext typeResolutionContext, JavaType javaType, Type type) {
         if (!javaType.m2216B(typeResolutionContext.mo1831a(type)._class)) {
             return false;
@@ -310,7 +310,7 @@ public class AnimatableValueParser {
         return true;
     }
 
-    /* renamed from: A2 */
+    /* JADX INFO: renamed from: A2 */
     public static void m418A2(Parcel parcel, int i) {
         int iDataPosition = parcel.dataPosition();
         parcel.setDataPosition(i - 4);
@@ -318,7 +318,7 @@ public class AnimatableValueParser {
         parcel.setDataPosition(iDataPosition);
     }
 
-    /* renamed from: B */
+    /* JADX INFO: renamed from: B */
     public static void m419B(boolean z2) {
         if (!z2) {
             throw new IllegalStateException();
@@ -326,7 +326,7 @@ public class AnimatableValueParser {
     }
 
     @NonNull
-    /* renamed from: B0 */
+    /* JADX INFO: renamed from: B0 */
     public static String m420B0(int i) {
         switch (i) {
             case -1:
@@ -378,7 +378,7 @@ public class AnimatableValueParser {
         }
     }
 
-    /* renamed from: B1 */
+    /* JADX INFO: renamed from: B1 */
     public static int m421B1(InputStream inputStream, byte[] bArr, int i, int i2) throws IOException {
         if (i2 < 0) {
             throw new IndexOutOfBoundsException("len is negative");
@@ -394,7 +394,7 @@ public class AnimatableValueParser {
         return i3;
     }
 
-    /* renamed from: B2 */
+    /* JADX INFO: renamed from: B2 */
     public static <T extends Parcelable> void m422B2(Parcel parcel, T t, int i) {
         int iDataPosition = parcel.dataPosition();
         parcel.writeInt(1);
@@ -406,25 +406,25 @@ public class AnimatableValueParser {
         parcel.setDataPosition(iDataPosition3);
     }
 
-    /* renamed from: C */
+    /* JADX INFO: renamed from: C */
     public static void m423C(boolean z2, Object obj) {
         if (!z2) {
             throw new IllegalStateException(String.valueOf(obj));
         }
     }
 
-    /* renamed from: C0 */
+    /* JADX INFO: renamed from: C0 */
     public static String[] m424C0() {
         return Build.VERSION.SDK_INT >= 23 ? SysUtil$MarshmallowSysdeps.getSupportedAbis() : SysUtil$LollipopSysdeps.getSupportedAbis();
     }
 
-    /* renamed from: C1 */
+    /* JADX INFO: renamed from: C1 */
     public static void m425C1(FileChannel fileChannel, ByteBuffer byteBuffer, int i, long j) throws IOException {
         int i2;
         byteBuffer.position(0);
         byteBuffer.limit(i);
         while (byteBuffer.remaining() > 0 && (i2 = fileChannel.read(byteBuffer, j)) != -1) {
-            j += i2;
+            j += (long) i2;
         }
         if (byteBuffer.remaining() > 0) {
             throw new MinElf("ELF file truncated");
@@ -433,33 +433,33 @@ public class AnimatableValueParser {
     }
 
     @Pure
-    /* renamed from: D */
+    /* JADX INFO: renamed from: D */
     public static void m426D(boolean z2) {
         if (!z2) {
             throw new IllegalStateException();
         }
     }
 
-    /* renamed from: D0 */
+    /* JADX INFO: renamed from: D0 */
     public static String m427D0(String str) {
         return outline.m883w("TransportRuntime.", str);
     }
 
-    /* renamed from: D1 */
+    /* JADX INFO: renamed from: D1 */
     public static int m428D1(InputStream inputStream) throws IOException {
         byte b2 = (byte) (inputStream.read() & 255);
         return ((((byte) (inputStream.read() & 255)) << 16) & ItemTouchHelper.ACTION_MODE_DRAG_MASK) | ((((byte) (inputStream.read() & 255)) << 8) & 65280) | (b2 & 255);
     }
 
     @Pure
-    /* renamed from: E */
+    /* JADX INFO: renamed from: E */
     public static void m429E(boolean z2, Object obj) {
         if (!z2) {
             throw new IllegalStateException(String.valueOf(obj));
         }
     }
 
-    /* renamed from: E0 */
+    /* JADX INFO: renamed from: E0 */
     public static Pair<Integer, Integer> m430E0(InputStream inputStream) throws IOException {
         inputStream.skip(7L);
         short s2 = (short) (inputStream.read() & 255);
@@ -471,20 +471,20 @@ public class AnimatableValueParser {
         return null;
     }
 
-    /* renamed from: E1 */
+    /* JADX INFO: renamed from: E1 */
     public static boolean m431E1(@RecentlyNonNull Parcel parcel, int i) {
         m590x2(parcel, i, 4);
         return parcel.readInt() != 0;
     }
 
-    /* renamed from: F */
+    /* JADX INFO: renamed from: F */
     public static void m432F(boolean z2) {
         if (!z2) {
             throw new IllegalStateException();
         }
     }
 
-    /* renamed from: F0 */
+    /* JADX INFO: renamed from: F0 */
     public static Pair<Integer, Integer> m433F0(InputStream inputStream) throws IOException {
         m584w0(inputStream);
         if (((byte) (inputStream.read() & 255)) != 47) {
@@ -496,7 +496,7 @@ public class AnimatableValueParser {
     }
 
     @RecentlyNonNull
-    /* renamed from: F1 */
+    /* JADX INFO: renamed from: F1 */
     public static IBinder m434F1(@RecentlyNonNull Parcel parcel, int i) {
         int iM455M1 = m455M1(parcel, i);
         int iDataPosition = parcel.dataPosition();
@@ -508,20 +508,20 @@ public class AnimatableValueParser {
         return strongBinder;
     }
 
-    /* renamed from: G */
+    /* JADX INFO: renamed from: G */
     public static void m435G(boolean z2, @RecentlyNonNull Object obj) {
         if (!z2) {
             throw new IllegalStateException(String.valueOf(obj));
         }
     }
 
-    /* renamed from: G0 */
+    /* JADX INFO: renamed from: G0 */
     public static long m436G0(FileChannel fileChannel, ByteBuffer byteBuffer, long j) throws IOException {
         m425C1(fileChannel, byteBuffer, 4, j);
-        return byteBuffer.getInt() & 4294967295L;
+        return ((long) byteBuffer.getInt()) & 4294967295L;
     }
 
-    /* renamed from: G1 */
+    /* JADX INFO: renamed from: G1 */
     public static int m437G1(@RecentlyNonNull Parcel parcel, int i) {
         m590x2(parcel, i, 4);
         return parcel.readInt();
@@ -529,7 +529,7 @@ public class AnimatableValueParser {
 
     @EnsuresNonNull({"#1"})
     @Pure
-    /* renamed from: H */
+    /* JADX INFO: renamed from: H */
     public static <T> T m438H(@Nullable T t) {
         if (t != null) {
             return t;
@@ -537,18 +537,18 @@ public class AnimatableValueParser {
         throw new IllegalStateException();
     }
 
-    /* renamed from: H0 */
+    /* JADX INFO: renamed from: H0 */
     public static final boolean m439H0(Long l, long j) {
         return l != null && (l.longValue() & j) == j;
     }
 
-    /* renamed from: H1 */
+    /* JADX INFO: renamed from: H1 */
     public static long m440H1(@RecentlyNonNull Parcel parcel, int i) {
         m590x2(parcel, i, 8);
         return parcel.readLong();
     }
 
-    /* renamed from: I */
+    /* JADX INFO: renamed from: I */
     public static boolean m441I(byte[] bArr, String str) {
         if (bArr.length != str.length()) {
             return false;
@@ -561,7 +561,7 @@ public class AnimatableValueParser {
         return true;
     }
 
-    /* renamed from: I0 */
+    /* JADX INFO: renamed from: I0 */
     public static boolean m442I0(byte[] bArr, byte[] bArr2, int i) {
         Objects.requireNonNull(bArr);
         Objects.requireNonNull(bArr2);
@@ -576,7 +576,7 @@ public class AnimatableValueParser {
         return true;
     }
 
-    /* renamed from: I1 */
+    /* JADX INFO: renamed from: I1 */
     public static int m443I1(ParsableByteArray parsableByteArray) {
         int i = 0;
         while (parsableByteArray.m3081a() != 0) {
@@ -589,7 +589,7 @@ public class AnimatableValueParser {
         return -1;
     }
 
-    /* renamed from: J */
+    /* JADX INFO: renamed from: J */
     public static void m444J(long j, ParsableByteArray parsableByteArray, TrackOutput2[] trackOutput2Arr) {
         while (true) {
             if (parsableByteArray.m3081a() <= 1) {
@@ -621,12 +621,12 @@ public class AnimatableValueParser {
         }
     }
 
-    /* renamed from: J0 */
+    /* JADX INFO: renamed from: J0 */
     public static int m445J0(int i, int i2) {
         return ((i + 31) * 31) + i2;
     }
 
-    /* renamed from: J1 */
+    /* JADX INFO: renamed from: J1 */
     public static int m446J1(InputStream inputStream, int i, boolean z2) throws IOException {
         int i2;
         int i3 = 0;
@@ -646,7 +646,7 @@ public class AnimatableValueParser {
         return i3;
     }
 
-    /* renamed from: K */
+    /* JADX INFO: renamed from: K */
     public static void m447K(long j, ParsableByteArray parsableByteArray, TrackOutput2[] trackOutput2Arr) {
         int iM3100t = parsableByteArray.m3100t();
         if ((iM3100t & 64) != 0) {
@@ -663,12 +663,12 @@ public class AnimatableValueParser {
         }
     }
 
-    /* renamed from: K0 */
+    /* JADX INFO: renamed from: K0 */
     public static int m448K0(Object obj, Object obj2) {
         return m445J0(obj == null ? 0 : obj.hashCode(), obj2 != null ? obj2.hashCode() : 0);
     }
 
-    /* renamed from: K1 */
+    /* JADX INFO: renamed from: K1 */
     public static long m449K1(ParsableByteArray parsableByteArray, int i, int i2) {
         parsableByteArray.m3079E(i);
         if (parsableByteArray.m3081a() < 5) {
@@ -680,15 +680,16 @@ public class AnimatableValueParser {
         }
         if (((iM3086f & 32) != 0) && parsableByteArray.m3100t() >= 7 && parsableByteArray.m3081a() >= 7) {
             if ((parsableByteArray.m3100t() & 16) == 16) {
-                System.arraycopy(parsableByteArray.f6793a, parsableByteArray.f6794b, new byte[6], 0, 6);
+                byte[] bArr = new byte[6];
+                System.arraycopy(parsableByteArray.f6793a, parsableByteArray.f6794b, bArr, 0, 6);
                 parsableByteArray.f6794b += 6;
-                return ((r0[0] & 255) << 25) | ((r0[1] & 255) << 17) | ((r0[2] & 255) << 9) | ((r0[3] & 255) << 1) | ((r0[4] & 255) >> 7);
+                return ((((long) bArr[0]) & 255) << 25) | ((((long) bArr[1]) & 255) << 17) | ((((long) bArr[2]) & 255) << 9) | ((((long) bArr[3]) & 255) << 1) | ((((long) bArr[4]) & 255) >> 7);
             }
         }
         return -9223372036854775807L;
     }
 
-    /* renamed from: L */
+    /* JADX INFO: renamed from: L */
     public static void m450L(Drawable drawable, Drawable drawable2) {
         if (drawable == null || drawable == drawable2) {
             return;
@@ -700,16 +701,16 @@ public class AnimatableValueParser {
         drawable.setState(drawable2.getState());
     }
 
-    /* renamed from: L0 */
+    /* JADX INFO: renamed from: L0 */
     public static void m451L0(String str, String str2) {
         Log.i(m427D0(str), str2);
     }
 
-    /* renamed from: L1 */
+    /* JADX INFO: renamed from: L1 */
     public static FlacStreamMetadata.a m452L1(ParsableByteArray parsableByteArray) {
         parsableByteArray.m3080F(1);
         int iM3102v = parsableByteArray.m3102v();
-        long j = parsableByteArray.f6794b + iM3102v;
+        long j = ((long) parsableByteArray.f6794b) + ((long) iM3102v);
         int i = iM3102v / 18;
         long[] jArrCopyOf = new long[i];
         long[] jArrCopyOf2 = new long[i];
@@ -729,12 +730,12 @@ public class AnimatableValueParser {
             parsableByteArray.m3080F(2);
             i2++;
         }
-        parsableByteArray.m3080F((int) (j - parsableByteArray.f6794b));
+        parsableByteArray.m3080F((int) (j - ((long) parsableByteArray.f6794b)));
         return new FlacStreamMetadata.a(jArrCopyOf, jArrCopyOf2);
     }
 
     @RecentlyNonNull
-    /* renamed from: M */
+    /* JADX INFO: renamed from: M */
     public static Bundle m453M(@RecentlyNonNull Parcel parcel, int i) {
         int iM455M1 = m455M1(parcel, i);
         int iDataPosition = parcel.dataPosition();
@@ -746,7 +747,7 @@ public class AnimatableValueParser {
         return bundle;
     }
 
-    /* renamed from: M0 */
+    /* JADX INFO: renamed from: M0 */
     public static int m454M0(int i) {
         int i2 = 0;
         while (i > 0) {
@@ -756,13 +757,13 @@ public class AnimatableValueParser {
         return i2;
     }
 
-    /* renamed from: M1 */
+    /* JADX INFO: renamed from: M1 */
     public static int m455M1(@RecentlyNonNull Parcel parcel, int i) {
         return (i & (-65536)) != -65536 ? (char) (i >> 16) : parcel.readInt();
     }
 
     @RecentlyNonNull
-    /* renamed from: N */
+    /* JADX INFO: renamed from: N */
     public static byte[] m456N(@RecentlyNonNull Parcel parcel, int i) {
         int iM455M1 = m455M1(parcel, i);
         int iDataPosition = parcel.dataPosition();
@@ -774,7 +775,7 @@ public class AnimatableValueParser {
         return bArrCreateByteArray;
     }
 
-    /* renamed from: N0 */
+    /* JADX INFO: renamed from: N0 */
     public static <T> DataSource<T> m457N0(Throwable th) {
         SimpleDataSource simpleDataSource = new SimpleDataSource();
         Objects.requireNonNull(th);
@@ -782,7 +783,7 @@ public class AnimatableValueParser {
         return simpleDataSource;
     }
 
-    /* renamed from: N1 */
+    /* JADX INFO: renamed from: N1 */
     public static VorbisUtil3 m458N1(ParsableByteArray parsableByteArray, boolean z2, boolean z3) throws ParserException {
         if (z2) {
             m550n2(3, parsableByteArray, false);
@@ -803,7 +804,7 @@ public class AnimatableValueParser {
     }
 
     @RecentlyNonNull
-    /* renamed from: O */
+    /* JADX INFO: renamed from: O */
     public static int[] m459O(@RecentlyNonNull Parcel parcel, int i) {
         int iM455M1 = m455M1(parcel, i);
         int iDataPosition = parcel.dataPosition();
@@ -816,11 +817,10 @@ public class AnimatableValueParser {
     }
 
     /* JADX WARN: Can't fix incorrect switch cases order, some code will duplicate */
-    /* JADX WARN: Failed to restore switch over string. Please report as a decompilation issue */
     /* JADX WARN: Failed to restore switch over string. Please report as a decompilation issue
     java.lang.NullPointerException: Cannot invoke "java.util.List.iterator()" because the return value of "jadx.core.dex.visitors.regions.SwitchOverStringVisitor$SwitchData.getNewCases()" is null
-    	at jadx.core.dex.visitors.regions.SwitchOverStringVisitor.restoreSwitchOverString(SwitchOverStringVisitor.java:109)
-    	at jadx.core.dex.visitors.regions.SwitchOverStringVisitor.visitRegion(SwitchOverStringVisitor.java:66)
+    	at jadx.core.dex.visitors.regions.SwitchOverStringVisitor.restoreSwitchOverString(SwitchOverStringVisitor.java:116)
+    	at jadx.core.dex.visitors.regions.SwitchOverStringVisitor.visitRegion(SwitchOverStringVisitor.java:71)
     	at jadx.core.dex.visitors.regions.DepthRegionTraversal.traverseIterativeStepInternal(DepthRegionTraversal.java:77)
     	at jadx.core.dex.visitors.regions.DepthRegionTraversal.traverseIterativeStepInternal(DepthRegionTraversal.java:82)
      */
@@ -866,25 +866,24 @@ public class AnimatableValueParser {
     /* JADX WARN: Removed duplicated region for block: B:90:0x0129  */
     /* JADX WARN: Removed duplicated region for block: B:94:0x0137  */
     /* JADX WARN: Removed duplicated region for block: B:98:0x0146  */
-    /* renamed from: O0 */
+    /* JADX INFO: renamed from: O0 */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
     public static int m460O0(Map<String, List<String>> map) {
-        char c;
+        byte b2;
         List<String> list = map.get("Content-Type");
         String str = (list == null || list.isEmpty()) ? null : list.get(0);
         if (str != null) {
             ArrayList<MimeTypes.a> arrayList = MimeTypes.f6749a;
             int iHashCode = str.hashCode();
-            char c2 = 2;
             if (iHashCode == -1007807498) {
                 if (str.equals("audio/x-flac")) {
-                    c = 0;
+                    b2 = 0;
                 }
-                if (c == 0) {
+                if (b2 == 0) {
                 }
-                switch (str.hashCode()) {
+                switch (str) {
                     case -2123537834:
                         break;
                     case -1662384011:
@@ -934,206 +933,63 @@ public class AnimatableValueParser {
                     case 2039520277:
                         break;
                 }
-                switch (c2) {
-                }
             } else {
                 if (iHashCode != -586683234) {
-                    c = (iHashCode == 187090231 && str.equals("audio/mp3")) ? (char) 2 : (char) 65535;
-                    if (c == 0) {
+                    b2 = (iHashCode == 187090231 && str.equals("audio/mp3")) ? (byte) 2 : (byte) -1;
+                    if (b2 == 0) {
                         str = "audio/flac";
-                    } else if (c == 1) {
+                    } else if (b2 == 1) {
                         str = "audio/wav";
-                    } else if (c == 2) {
+                    } else if (b2 == 2) {
                         str = "audio/mpeg";
                     }
-                    switch (str.hashCode()) {
-                        case -2123537834:
-                            c2 = !str.equals("audio/eac3-joc") ? (char) 65535 : (char) 0;
-                            break;
-                        case -1662384011:
-                            if (str.equals("video/mp2p")) {
-                                c2 = 1;
-                                break;
-                            }
-                            break;
-                        case -1662384007:
-                            if (!str.equals("video/mp2t")) {
-                            }
-                            break;
-                        case -1662095187:
-                            if (str.equals("video/webm")) {
-                                c2 = 3;
-                                break;
-                            }
-                            break;
-                        case -1606874997:
-                            if (str.equals("audio/amr-wb")) {
-                                c2 = 4;
-                                break;
-                            }
-                            break;
-                        case -1487394660:
-                            if (str.equals("image/jpeg")) {
-                                c2 = 5;
-                                break;
-                            }
-                            break;
-                        case -1248337486:
-                            if (str.equals("application/mp4")) {
-                                c2 = 6;
-                                break;
-                            }
-                            break;
-                        case -1004728940:
-                            if (str.equals("text/vtt")) {
-                                c2 = 7;
-                                break;
-                            }
-                            break;
-                        case -387023398:
-                            if (str.equals("audio/x-matroska")) {
-                                c2 = '\b';
-                                break;
-                            }
-                            break;
-                        case -43467528:
-                            if (str.equals("application/webm")) {
-                                c2 = '\t';
-                                break;
-                            }
-                            break;
-                        case 13915911:
-                            if (str.equals("video/x-flv")) {
-                                c2 = '\n';
-                                break;
-                            }
-                            break;
-                        case 187078296:
-                            if (str.equals("audio/ac3")) {
-                                c2 = 11;
-                                break;
-                            }
-                            break;
-                        case 187078297:
-                            if (str.equals("audio/ac4")) {
-                                c2 = '\f';
-                                break;
-                            }
-                            break;
-                        case 187078669:
-                            if (str.equals("audio/amr")) {
-                                c2 = '\r';
-                                break;
-                            }
-                            break;
-                        case 187090232:
-                            if (str.equals("audio/mp4")) {
-                                c2 = 14;
-                                break;
-                            }
-                            break;
-                        case 187091926:
-                            if (str.equals("audio/ogg")) {
-                                c2 = 15;
-                                break;
-                            }
-                            break;
-                        case 187099443:
-                            if (str.equals("audio/wav")) {
-                                c2 = 16;
-                                break;
-                            }
-                            break;
-                        case 1331848029:
-                            if (str.equals("video/mp4")) {
-                                c2 = 17;
-                                break;
-                            }
-                            break;
-                        case 1503095341:
-                            if (str.equals("audio/3gpp")) {
-                                c2 = 18;
-                                break;
-                            }
-                            break;
-                        case 1504578661:
-                            if (str.equals("audio/eac3")) {
-                                c2 = 19;
-                                break;
-                            }
-                            break;
-                        case 1504619009:
-                            if (str.equals("audio/flac")) {
-                                c2 = 20;
-                                break;
-                            }
-                            break;
-                        case 1504831518:
-                            if (str.equals("audio/mpeg")) {
-                                c2 = 21;
-                                break;
-                            }
-                            break;
-                        case 1505118770:
-                            if (str.equals("audio/webm")) {
-                                c2 = 22;
-                                break;
-                            }
-                            break;
-                        case 2039520277:
-                            if (str.equals("video/x-matroska")) {
-                                c2 = 23;
-                                break;
-                            }
-                            break;
-                    }
-                    switch (c2) {
-                        case 0:
-                        case 11:
-                        case 19:
+                    switch (str) {
+                        case "audio/eac3-joc":
+                        case "audio/ac3":
+                        case "audio/eac3":
                             return 0;
-                        case 1:
+                        case "video/mp2p":
                             return 10;
-                        case 2:
+                        case "video/mp2t":
                             return 11;
-                        case 3:
-                        case '\b':
-                        case '\t':
-                        case 22:
-                        case 23:
+                        case "video/webm":
+                        case "audio/x-matroska":
+                        case "application/webm":
+                        case "audio/webm":
+                        case "video/x-matroska":
                             return 6;
-                        case 4:
-                        case '\r':
-                        case 18:
+                        case "audio/amr-wb":
+                        case "audio/amr":
+                        case "audio/3gpp":
                             return 3;
-                        case 5:
+                        case "image/jpeg":
                             return 14;
-                        case 6:
-                        case 14:
-                        case 17:
+                        case "application/mp4":
+                        case "audio/mp4":
+                        case "video/mp4":
                             return 8;
-                        case 7:
+                        case "text/vtt":
                             return 13;
-                        case '\n':
+                        case "video/x-flv":
                             return 5;
-                        case '\f':
+                        case "audio/ac4":
                             return 1;
-                        case 15:
+                        case "audio/ogg":
                             return 9;
-                        case 16:
+                        case "audio/wav":
                             return 12;
-                        case 20:
+                        case "audio/flac":
                             return 4;
-                        case 21:
+                        case "audio/mpeg":
                             return 7;
                     }
                 }
                 if (str.equals("audio/x-wav")) {
-                    c = 1;
+                    b2 = 1;
                 }
-                if (c == 0) {
+                if (b2 == 0) {
                 }
-                switch (str.hashCode()) {
+                switch (str) {
                     case -2123537834:
                         break;
                     case -1662384011:
@@ -1182,15 +1038,13 @@ public class AnimatableValueParser {
                         break;
                     case 2039520277:
                         break;
-                }
-                switch (c2) {
                 }
             }
         }
         return -1;
     }
 
-    /* renamed from: O1 */
+    /* JADX INFO: renamed from: O1 */
     public static void m461O1(Cue.b bVar) {
         bVar.f5783k = -3.4028235E38f;
         bVar.f5782j = Integer.MIN_VALUE;
@@ -1205,7 +1059,7 @@ public class AnimatableValueParser {
         }
     }
 
-    /* renamed from: P */
+    /* JADX INFO: renamed from: P */
     public static final MediaSource m462P(MediaType mediaType, String str, String str2) {
         Intrinsics3.checkNotNullParameter(mediaType, "mediaType");
         Intrinsics3.checkNotNullParameter(str, "progressiveMediaUri");
@@ -1215,7 +1069,7 @@ public class AnimatableValueParser {
         return new MediaSource(uri, str2, mediaType);
     }
 
-    /* renamed from: P0 */
+    /* JADX INFO: renamed from: P0 */
     public static int m463P0(Uri uri) {
         String lastPathSegment = uri.getLastPathSegment();
         if (lastPathSegment == null) {
@@ -1266,7 +1120,7 @@ public class AnimatableValueParser {
         return (lastPathSegment.endsWith(".jpg") || lastPathSegment.endsWith(".jpeg")) ? 14 : -1;
     }
 
-    /* renamed from: P1 */
+    /* JADX INFO: renamed from: P1 */
     public static void m464P1(Spannable spannable, Predicate3<Object> predicate3) {
         for (Object obj : spannable.getSpans(0, spannable.length(), Object.class)) {
             if (predicate3.apply(obj)) {
@@ -1276,7 +1130,7 @@ public class AnimatableValueParser {
     }
 
     @RecentlyNonNull
-    /* renamed from: Q */
+    /* JADX INFO: renamed from: Q */
     public static <T extends Parcelable> T m465Q(@RecentlyNonNull Parcel parcel, int i, @RecentlyNonNull Parcelable.Creator<T> creator) {
         int iM455M1 = m455M1(parcel, i);
         int iDataPosition = parcel.dataPosition();
@@ -1288,12 +1142,12 @@ public class AnimatableValueParser {
         return tCreateFromParcel;
     }
 
-    /* renamed from: Q0 */
+    /* JADX INFO: renamed from: Q0 */
     public static void m466Q0(String str) {
         throw new IllegalArgumentException(outline.m883w("Unknown library: ", str));
     }
 
-    /* renamed from: Q1 */
+    /* JADX INFO: renamed from: Q1 */
     public static void m467Q1(File file, File file2) throws FileUtils$RenameException {
         Objects.requireNonNull(file);
         file2.delete();
@@ -1316,7 +1170,7 @@ public class AnimatableValueParser {
     }
 
     @RecentlyNonNull
-    /* renamed from: R */
+    /* JADX INFO: renamed from: R */
     public static String m468R(@RecentlyNonNull Parcel parcel, int i) {
         int iM455M1 = m455M1(parcel, i);
         int iDataPosition = parcel.dataPosition();
@@ -1328,12 +1182,12 @@ public class AnimatableValueParser {
         return string;
     }
 
-    /* renamed from: R0 */
+    /* JADX INFO: renamed from: R0 */
     public static boolean m469R0(XmlPullParser xmlPullParser, String str) throws XmlPullParserException {
         return (xmlPullParser.getEventType() == 3) && xmlPullParser.getName().equals(str);
     }
 
-    /* renamed from: R1 */
+    /* JADX INFO: renamed from: R1 */
     public static final RenderContext m470R1(Function1<? super RenderContext, Unit> function1, Object... objArr) {
         Intrinsics3.checkNotNullParameter(function1, "init");
         Intrinsics3.checkNotNullParameter(objArr, "orderedArguments");
@@ -1349,7 +1203,7 @@ public class AnimatableValueParser {
     }
 
     @RecentlyNonNull
-    /* renamed from: S */
+    /* JADX INFO: renamed from: S */
     public static String[] m471S(@RecentlyNonNull Parcel parcel, int i) {
         int iM455M1 = m455M1(parcel, i);
         int iDataPosition = parcel.dataPosition();
@@ -1361,19 +1215,19 @@ public class AnimatableValueParser {
         return strArrCreateStringArray;
     }
 
-    /* renamed from: S0 */
+    /* JADX INFO: renamed from: S0 */
     public static boolean m472S0(int i, int i2, ResizeOptions resizeOptions) {
         return resizeOptions == null ? ((float) m552o0(i)) >= 2048.0f && m552o0(i2) >= 2048 : m552o0(i) >= resizeOptions.f3717a && m552o0(i2) >= resizeOptions.f3718b;
     }
 
-    /* renamed from: S1 */
+    /* JADX INFO: renamed from: S1 */
     public static /* synthetic */ void m473S1(AppPermissions2 appPermissions2, Function0 function0, Function0 function02, int i, Object obj) {
         int i2 = i & 1;
         appPermissions2.requestMicrophone(null, function02);
     }
 
     @RecentlyNonNull
-    /* renamed from: T */
+    /* JADX INFO: renamed from: T */
     public static ArrayList<String> m474T(@RecentlyNonNull Parcel parcel, int i) {
         int iM455M1 = m455M1(parcel, i);
         int iDataPosition = parcel.dataPosition();
@@ -1385,7 +1239,7 @@ public class AnimatableValueParser {
         return arrayListCreateStringArrayList;
     }
 
-    /* renamed from: T0 */
+    /* JADX INFO: renamed from: T0 */
     public static boolean m475T0(EncodedImage2 encodedImage2, ResizeOptions resizeOptions) {
         if (encodedImage2 == null) {
             return false;
@@ -1405,7 +1259,7 @@ public class AnimatableValueParser {
     }
 
     @Nullable
-    /* renamed from: T1 */
+    /* JADX INFO: renamed from: T1 */
     public static TtmlStyle m476T1(@Nullable TtmlStyle ttmlStyle, @Nullable String[] strArr, Map<String, TtmlStyle> map) {
         int i = 0;
         if (ttmlStyle == null) {
@@ -1441,7 +1295,7 @@ public class AnimatableValueParser {
     }
 
     @RecentlyNonNull
-    /* renamed from: U */
+    /* JADX INFO: renamed from: U */
     public static <T> T[] m477U(@RecentlyNonNull Parcel parcel, int i, @RecentlyNonNull Parcelable.Creator<T> creator) {
         int iM455M1 = m455M1(parcel, i);
         int iDataPosition = parcel.dataPosition();
@@ -1453,13 +1307,13 @@ public class AnimatableValueParser {
         return tArr;
     }
 
-    /* renamed from: U0 */
+    /* JADX INFO: renamed from: U0 */
     public static final boolean m478U0(Context context) {
         Intrinsics3.checkNotNullParameter(context, "$this$isLtr");
         return TextUtilsCompat.getLayoutDirectionFromLocale(Locale.getDefault()) == 0;
     }
 
-    /* renamed from: U1 */
+    /* JADX INFO: renamed from: U1 */
     public static float m479U1(int i, float f, int i2, int i3) {
         float f2;
         if (f == -3.4028235E38f) {
@@ -1480,7 +1334,7 @@ public class AnimatableValueParser {
     }
 
     @RecentlyNonNull
-    /* renamed from: V */
+    /* JADX INFO: renamed from: V */
     public static <T> ArrayList<T> m480V(@RecentlyNonNull Parcel parcel, int i, @RecentlyNonNull Parcelable.Creator<T> creator) {
         int iM455M1 = m455M1(parcel, i);
         int iDataPosition = parcel.dataPosition();
@@ -1492,7 +1346,7 @@ public class AnimatableValueParser {
         return arrayListCreateTypedArrayList;
     }
 
-    /* renamed from: V0 */
+    /* JADX INFO: renamed from: V0 */
     public static final boolean m481V0(VoiceState voiceState) {
         Intrinsics3.checkNotNullParameter(voiceState, "$this$isMutedByAnySource");
         return voiceState.getSelfMute() || voiceState.getMute() || voiceState.getSuppress();
@@ -1506,7 +1360,7 @@ public class AnimatableValueParser {
     /* JADX WARN: Type inference failed for: r6v4 */
     /* JADX WARN: Type inference failed for: r6v8 */
     /* JADX WARN: Type inference failed for: r7v0, types: [b.i.a.b.i.b, b.i.a.b.i.b<TInput, TResult, TException extends java.lang.Throwable>] */
-    /* renamed from: V1 */
+    /* JADX INFO: renamed from: V1 */
     public static <TInput, TResult, TException extends Throwable> TResult m482V1(int i, TInput tinput, CctTransportBackend<TInput, TResult, TException> cctTransportBackend, RetryStrategy<TInput, TResult> retryStrategy) throws Throwable {
         ?? r0;
         if (i < 1) {
@@ -1531,20 +1385,20 @@ public class AnimatableValueParser {
         return r0;
     }
 
-    /* renamed from: W */
+    /* JADX INFO: renamed from: W */
     public static String m483W(String str) {
         StringBuilder sbM831S = outline.m831S(outline.m841b(str, outline.m841b(str, 5)), ".", str, ",.", str);
         sbM831S.append(" *");
         return sbM831S.toString();
     }
 
-    /* renamed from: W0 */
+    /* JADX INFO: renamed from: W0 */
     public static final boolean m484W0(StageInstance stageInstance) {
         Intrinsics3.checkNotNullParameter(stageInstance, "$this$isPublic");
         return stageInstance.getPrivacyLevel() == StageInstancePrivacyLevel.PUBLIC;
     }
 
-    /* renamed from: W1 */
+    /* JADX INFO: renamed from: W1 */
     public static String m485W1(CacheKey cacheKey) throws UnsupportedEncodingException {
         byte[] bytes = cacheKey.mo930b().getBytes(Constants.ENCODING);
         try {
@@ -1556,19 +1410,19 @@ public class AnimatableValueParser {
         }
     }
 
-    /* renamed from: X */
+    /* JADX INFO: renamed from: X */
     public static void m486X(String str, String str2, Object obj) {
         Log.d(m427D0(str), String.format(str2, obj));
     }
 
-    /* renamed from: X0 */
+    /* JADX INFO: renamed from: X0 */
     public static final boolean m487X0(VoiceState voiceState) {
         Intrinsics3.checkNotNullParameter(voiceState, "$this$isRemoveSignal");
         return voiceState.getChannelId() == null;
     }
 
     /* JADX WARN: Multi-variable type inference failed */
-    /* renamed from: X1 */
+    /* JADX INFO: renamed from: X1 */
     public static void m488X1(Drawable drawable, Drawable.Callback callback, TransformCallback transformCallback) {
         if (drawable != 0) {
             drawable.setCallback(callback);
@@ -1578,24 +1432,24 @@ public class AnimatableValueParser {
         }
     }
 
-    /* renamed from: Y */
+    /* JADX INFO: renamed from: Y */
     public static void m489Y(String str, String str2, Object... objArr) {
         Log.d(m427D0(str), String.format(str2, objArr));
     }
 
-    /* renamed from: Y0 */
+    /* JADX INFO: renamed from: Y0 */
     public static boolean m490Y0(XmlPullParser xmlPullParser, String str) throws XmlPullParserException {
         return (xmlPullParser.getEventType() == 2) && xmlPullParser.getName().equals(str);
     }
 
-    /* renamed from: Y1 */
+    /* JADX INFO: renamed from: Y1 */
     public static void m491Y1(MediaFormat mediaFormat, List<byte[]> list) {
         for (int i = 0; i < list.size(); i++) {
             mediaFormat.setByteBuffer(outline.m851g(15, "csd-", i), ByteBuffer.wrap(list.get(i)));
         }
     }
 
-    /* renamed from: Z */
+    /* JADX INFO: renamed from: Z */
     public static boolean m492Z(File file) {
         File[] fileArrListFiles;
         if (file.isDirectory() && (fileArrListFiles = file.listFiles()) != null) {
@@ -1607,7 +1461,7 @@ public class AnimatableValueParser {
     }
 
     @TargetApi(20)
-    /* renamed from: Z0 */
+    /* JADX INFO: renamed from: Z0 */
     public static boolean m493Z0(@RecentlyNonNull Context context) {
         PackageManager packageManager = context.getPackageManager();
         if (f2218c == null) {
@@ -1616,7 +1470,7 @@ public class AnimatableValueParser {
         return f2218c.booleanValue();
     }
 
-    /* renamed from: Z1 */
+    /* JADX INFO: renamed from: Z1 */
     public static void m494Z1(Drawable drawable, DrawableProperties drawableProperties) {
         if (drawable == null || drawableProperties == null) {
             return;
@@ -1638,13 +1492,13 @@ public class AnimatableValueParser {
         }
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static float m495a(float f) {
         return f <= 0.04045f ? f / 12.92f : (float) Math.pow((f + 0.055f) / 1.055f, 2.4000000953674316d);
     }
 
     /* JADX WARN: Removed duplicated region for block: B:39:0x0086  */
-    /* renamed from: a0 */
+    /* JADX INFO: renamed from: a0 */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
@@ -1699,7 +1553,7 @@ public class AnimatableValueParser {
                 i5 = 2;
                 while (true) {
                     int i8 = i5 * 2;
-                    double d = 1.0d / i8;
+                    double d = 1.0d / ((double) i8);
                     if ((d * 0.3333333432674408d) + d <= fMax) {
                         break;
                     }
@@ -1729,7 +1583,7 @@ public class AnimatableValueParser {
     }
 
     @TargetApi(26)
-    /* renamed from: a1 */
+    /* JADX INFO: renamed from: a1 */
     public static boolean m497a1(@RecentlyNonNull Context context) {
         if (!m493Z0(context)) {
             return false;
@@ -1743,7 +1597,7 @@ public class AnimatableValueParser {
         return f2219d.booleanValue() && !C3404f.m4190A0();
     }
 
-    /* renamed from: a2 */
+    /* JADX INFO: renamed from: a2 */
     public static <TResult> void m498a2(Status status, @Nullable TResult tresult, TaskCompletionSource<TResult> taskCompletionSource) {
         if (status.m9030w0()) {
             taskCompletionSource.f20845a.m6024s(tresult);
@@ -1752,12 +1606,12 @@ public class AnimatableValueParser {
         }
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static float m499b(float f) {
         return f <= 0.0031308f ? f * 12.92f : (float) ((Math.pow(f, 0.4166666567325592d) * 1.0549999475479126d) - 0.054999999701976776d);
     }
 
-    /* renamed from: b0 */
+    /* JADX INFO: renamed from: b0 */
     public static void m500b0(File file) throws IOException {
         if (file.isDirectory()) {
             File[] fileArrListFiles = file.listFiles();
@@ -1778,14 +1632,14 @@ public class AnimatableValueParser {
         throw new IOException("Could not delete file " + file);
     }
 
-    /* renamed from: b1 */
+    /* JADX INFO: renamed from: b1 */
     public static final void m501b1(String str, String str2) {
         Intrinsics3.checkNotNullParameter(str, "tag");
         Intrinsics3.checkNotNullParameter(str2, NotificationCompat.CATEGORY_MESSAGE);
         Logger.d$default(LoggingProvider.INSTANCE.get(), str, str2, null, 4, null);
     }
 
-    /* renamed from: b2 */
+    /* JADX INFO: renamed from: b2 */
     public static boolean m502b2(Object obj, Collection<String> collection, Collection<String> collection2) {
         if (collection == null && collection2 == null) {
             return false;
@@ -1793,7 +1647,7 @@ public class AnimatableValueParser {
         return collection2 == null ? collection.contains(obj) : collection == null ? !collection2.contains(obj) : !collection2.contains(obj) || collection.contains(obj);
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public static void m503c(Spannable spannable, Object obj, int i, int i2, int i3) {
         for (Object obj2 : spannable.getSpans(i, i2, obj.getClass())) {
             if (spannable.getSpanStart(obj2) == i && spannable.getSpanEnd(obj2) == i2 && spannable.getSpanFlags(obj2) == i3) {
@@ -1803,19 +1657,19 @@ public class AnimatableValueParser {
         spannable.setSpan(obj, i, i2, i3);
     }
 
-    /* renamed from: c0 */
+    /* JADX INFO: renamed from: c0 */
     public static void m504c0(String str, String str2, Throwable th) {
         Log.e(m427D0(str), str2, th);
     }
 
-    /* renamed from: c1 */
+    /* JADX INFO: renamed from: c1 */
     public static final void m505c1(String str, String str2, Throwable th) {
         Intrinsics3.checkNotNullParameter(str, "tag");
         Intrinsics3.checkNotNullParameter(str2, NotificationCompat.CATEGORY_MESSAGE);
         Logger.e$default(LoggingProvider.INSTANCE.get(), str, str2, th, null, 8, null);
     }
 
-    /* renamed from: c2 */
+    /* JADX INFO: renamed from: c2 */
     public static long m506c2(InputStream inputStream, long j) throws IOException {
         m527i(Boolean.valueOf(j >= 0));
         long j2 = j;
@@ -1832,31 +1686,31 @@ public class AnimatableValueParser {
         return j;
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public static int m507d(int i, int i2, int i3) {
         return Math.min(Math.max(0, i3 - i), i2);
     }
 
-    /* renamed from: d0 */
+    /* JADX INFO: renamed from: d0 */
     public static void m508d0() {
         if (Util2.f6708a >= 18) {
             Trace.endSection();
         }
     }
 
-    /* renamed from: d1 */
+    /* JADX INFO: renamed from: d1 */
     public static final void m509d1(String str, String str2) {
         Intrinsics3.checkNotNullParameter(str, "tag");
         Intrinsics3.checkNotNullParameter(str2, NotificationCompat.CATEGORY_MESSAGE);
         Logger.i$default(LoggingProvider.INSTANCE.get(), str, str2, null, 4, null);
     }
 
-    /* renamed from: d2 */
+    /* JADX INFO: renamed from: d2 */
     public static void m510d2(@RecentlyNonNull Parcel parcel, int i) {
         parcel.setDataPosition(parcel.dataPosition() + m455M1(parcel, i));
     }
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public static byte[] m511e(String str) {
         try {
             return str.getBytes("ASCII");
@@ -1865,7 +1719,7 @@ public class AnimatableValueParser {
         }
     }
 
-    /* renamed from: e0 */
+    /* JADX INFO: renamed from: e0 */
     public static synchronized void m512e0() {
         if (!f2216a) {
             NativeLoader.m1589c("native-imagetranscoder");
@@ -1873,14 +1727,14 @@ public class AnimatableValueParser {
         }
     }
 
-    /* renamed from: e1 */
+    /* JADX INFO: renamed from: e1 */
     public static final void m513e1(String str, String str2) {
         Intrinsics3.checkNotNullParameter(str, "tag");
         Intrinsics3.checkNotNullParameter(str2, NotificationCompat.CATEGORY_MESSAGE);
         Logger.v$default(LoggingProvider.INSTANCE.get(), str, str2, null, 4, null);
     }
 
-    /* renamed from: e2 */
+    /* JADX INFO: renamed from: e2 */
     public static final <P extends Parcelable> Bundle m514e2(P p) {
         Intrinsics3.checkNotNullParameter(p, "$this$toBundle");
         Bundle bundle = new Bundle();
@@ -1888,52 +1742,53 @@ public class AnimatableValueParser {
         return bundle;
     }
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public static void m515f(String str) {
         if (Util2.f6708a >= 18) {
             Trace.beginSection(str);
         }
     }
 
-    /* renamed from: f0 */
+    /* JADX INFO: renamed from: f0 */
     public static void m516f0(@RecentlyNonNull Parcel parcel, int i) {
         if (parcel.dataPosition() != i) {
             throw new SafeParcelReader$ParseException(outline.m851g(37, "Overread allowed size end=", i), parcel);
         }
     }
 
-    /* renamed from: f1 */
+    /* JADX INFO: renamed from: f1 */
     public static final void m517f1(String str, String str2) {
         Intrinsics3.checkNotNullParameter(str, "tag");
         Intrinsics3.checkNotNullParameter(str2, NotificationCompat.CATEGORY_MESSAGE);
         Logger.w$default(LoggingProvider.INSTANCE.get(), str, str2, null, 4, null);
     }
 
-    /* renamed from: f2 */
+    /* JADX INFO: renamed from: f2 */
     public static String m518f2(@ColorInt int i) {
-        return Util2.m3003k("rgba(%d,%d,%d,%.3f)", Integer.valueOf(Color.red(i)), Integer.valueOf(Color.green(i)), Integer.valueOf(Color.blue(i)), Double.valueOf(Color.alpha(i) / 255.0d));
+        return Util2.m3003k("rgba(%d,%d,%d,%.3f)", Integer.valueOf(Color.red(i)), Integer.valueOf(Color.green(i)), Integer.valueOf(Color.blue(i)), Double.valueOf(((double) Color.alpha(i)) / 255.0d));
     }
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public static List<byte[]> m519g(byte[] bArr) {
+        long j = (((long) (((bArr[11] & 255) << 8) | (bArr[10] & 255))) * 1000000000) / 48000;
         ArrayList arrayList = new ArrayList(3);
         arrayList.add(bArr);
-        arrayList.add(m523h(((((bArr[11] & 255) << 8) | (bArr[10] & 255)) * 1000000000) / 48000));
+        arrayList.add(m523h(j));
         arrayList.add(m523h(80000000L));
         return arrayList;
     }
 
-    /* renamed from: g0 */
+    /* JADX INFO: renamed from: g0 */
     public static boolean m520g0(Object obj, Object obj2) {
         return obj == obj2 || (obj != null && obj.equals(obj2));
     }
 
-    /* renamed from: g1 */
+    /* JADX INFO: renamed from: g1 */
     public static boolean m521g1(BitmapTransformation bitmapTransformation, CloseableReference<Bitmap> closeableReference) {
         return false;
     }
 
-    /* renamed from: g2 */
+    /* JADX INFO: renamed from: g2 */
     public static final <P extends Parcelable> Intent m522g2(P p) {
         Intrinsics3.checkNotNullParameter(p, "$this$toIntent");
         Intent intentPutExtra = new Intent().putExtra("intent_args_key", p);
@@ -1941,17 +1796,17 @@ public class AnimatableValueParser {
         return intentPutExtra;
     }
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public static byte[] m523h(long j) {
         return ByteBuffer.allocate(8).order(ByteOrder.nativeOrder()).putLong(j).array();
     }
 
-    /* renamed from: h0 */
+    /* JADX INFO: renamed from: h0 */
     public static boolean m524h0(@Nullable Object obj, @Nullable Object obj2) {
         return obj == obj2 || (obj != null && obj.equals(obj2));
     }
 
-    /* renamed from: h1 */
+    /* JADX INFO: renamed from: h1 */
     public static ParameterizedType m525h1(Type type) {
         if (type instanceof ParameterizedType) {
             return (ParameterizedType) type;
@@ -1969,19 +1824,19 @@ public class AnimatableValueParser {
         return null;
     }
 
-    /* renamed from: h2 */
+    /* JADX INFO: renamed from: h2 */
     public static Objects2 m526h2(Object obj) {
         return new Objects2(obj.getClass().getSimpleName(), null);
     }
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public static void m527i(Boolean bool) {
         if (bool != null && !bool.booleanValue()) {
             throw new IllegalArgumentException();
         }
     }
 
-    /* renamed from: i0 */
+    /* JADX INFO: renamed from: i0 */
     public static int m528i0(float f, int i, int i2) {
         if (i == i2) {
             return i;
@@ -2003,7 +1858,7 @@ public class AnimatableValueParser {
         return Math.round(m499b(fM839a4) * 255.0f) | (Math.round(fM499b) << 16) | (Math.round(fM839a * 255.0f) << 24) | (Math.round(fM499b2) << 8);
     }
 
-    /* renamed from: i1 */
+    /* JADX INFO: renamed from: i1 */
     public static TypeVariable<?> m529i1(Type type) {
         if (type instanceof TypeVariable) {
             return (TypeVariable) type;
@@ -2021,7 +1876,7 @@ public class AnimatableValueParser {
         return null;
     }
 
-    /* renamed from: i2 */
+    /* JADX INFO: renamed from: i2 */
     public static void m530i2(Collection<? extends Node> collection, NodeProcessor nodeProcessor) {
         Iterator<? extends Node> it = collection.iterator();
         while (it.hasNext()) {
@@ -2030,14 +1885,14 @@ public class AnimatableValueParser {
     }
 
     @Pure
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static void m531j(boolean z2) {
         if (!z2) {
             throw new IllegalArgumentException();
         }
     }
 
-    /* renamed from: j0 */
+    /* JADX INFO: renamed from: j0 */
     public static String[] m532j0(FileChannel fileChannel) throws IOException {
         long jM436G0;
         long jM436G02;
@@ -2095,7 +1950,7 @@ public class AnimatableValueParser {
                 break;
             }
             if ((z2 ? m436G0(fileChannel, byteBufferAllocate, j6 + 0) : m436G0(fileChannel, byteBufferAllocate, 0 + j6)) != 2) {
-                j6 += i2;
+                j6 += (long) i2;
                 j5++;
             } else if (z2) {
                 jM436G02 = m436G0(fileChannel, byteBufferAllocate, j6 + 4);
@@ -2182,7 +2037,7 @@ public class AnimatableValueParser {
                     } else {
                         j4 = jM436G012;
                     }
-                    jM436G0 += i2;
+                    jM436G0 += (long) i2;
                     i4++;
                     j11 = 16;
                     j12 = 0;
@@ -2246,14 +2101,14 @@ public class AnimatableValueParser {
         }
     }
 
-    /* renamed from: j1 */
+    /* JADX INFO: renamed from: j1 */
     public static void m533j1(MediaFormat mediaFormat, String str, int i) {
         if (i != -1) {
             mediaFormat.setInteger(str, i);
         }
     }
 
-    /* renamed from: j2 */
+    /* JADX INFO: renamed from: j2 */
     public static void m534j2(Node node, NodeProcessor nodeProcessor) {
         if (node.hasChildren()) {
             Iterator it = node.getChildren().iterator();
@@ -2264,14 +2119,14 @@ public class AnimatableValueParser {
         nodeProcessor.processNode(node);
     }
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public static void m535k(boolean z2, Object obj) {
         if (!z2) {
             throw new IllegalArgumentException(String.valueOf(obj));
         }
     }
 
-    /* renamed from: k0 */
+    /* JADX INFO: renamed from: k0 */
     public static String m536k0(String str, Object... objArr) {
         int iIndexOf;
         String strValueOf = String.valueOf(str);
@@ -2297,7 +2152,7 @@ public class AnimatableValueParser {
         return sb.toString();
     }
 
-    /* renamed from: k1 */
+    /* JADX INFO: renamed from: k1 */
     public static String m537k1(String str, String str2) {
         int length = str.length() - str2.length();
         if (length < 0 || length > 1) {
@@ -2313,7 +2168,7 @@ public class AnimatableValueParser {
         return sb.toString();
     }
 
-    /* renamed from: k2 */
+    /* JADX INFO: renamed from: k2 */
     public static void m538k2(Node node, NodeProcessor nodeProcessor) {
         nodeProcessor.processNode(node);
         if (node.hasChildren()) {
@@ -2324,7 +2179,7 @@ public class AnimatableValueParser {
         }
     }
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public static void m539l(boolean z2) {
         if (!z2) {
             throw new IllegalArgumentException();
@@ -2332,12 +2187,12 @@ public class AnimatableValueParser {
     }
 
     @NonNull
-    /* renamed from: l0 */
+    /* JADX INFO: renamed from: l0 */
     public static ApiException m540l0(@NonNull Status status) {
         return status.f20497r != null ? new ResolvableApiException(status) : new ApiException(status);
     }
 
-    /* renamed from: l1 */
+    /* JADX INFO: renamed from: l1 */
     public static void m541l1(File file) throws FileUtils$CreateDirectoryException {
         if (file.exists()) {
             if (file.isDirectory()) {
@@ -2361,7 +2216,7 @@ public class AnimatableValueParser {
       0x0268: PHI (r1v17 boolean) = (r1v15 boolean), (r1v15 boolean), (r1v22 boolean), (r1v22 boolean) binds: [B:158:0x0262, B:159:0x0264, B:143:0x0248, B:144:0x024a] A[DONT_GENERATE, DONT_INLINE]
       0x0268: PHI (r2v14 boolean) = (r2v12 boolean), (r2v12 boolean), (r2v19 boolean), (r2v19 boolean) binds: [B:158:0x0262, B:159:0x0264, B:143:0x0248, B:144:0x024a] A[DONT_GENERATE, DONT_INLINE]
       0x0268: PHI (r3v8 boolean) = (r3v6 boolean), (r3v6 boolean), (r3v12 boolean), (r3v12 boolean) binds: [B:158:0x0262, B:159:0x0264, B:143:0x0248, B:144:0x024a] A[DONT_GENERATE, DONT_INLINE]] */
-    /* renamed from: l2 */
+    /* JADX INFO: renamed from: l2 */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
@@ -2633,14 +2488,14 @@ public class AnimatableValueParser {
     }
 
     @Pure
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public static void m543m(boolean z2, Object obj) {
         if (!z2) {
             throw new IllegalArgumentException(String.valueOf(obj));
         }
     }
 
-    /* renamed from: m0 */
+    /* JADX INFO: renamed from: m0 */
     public static void m544m0(File file) throws IOException {
         if (file.isDirectory()) {
             File[] fileArrListFiles = file.listFiles();
@@ -2673,7 +2528,7 @@ public class AnimatableValueParser {
         }
     }
 
-    /* renamed from: m1 */
+    /* JADX INFO: renamed from: m1 */
     public static int m545m1(int i, int i2) {
         if (i2 == 255) {
             return i;
@@ -2684,7 +2539,7 @@ public class AnimatableValueParser {
         return (i & ViewCompat.MEASURED_SIZE_MASK) | ((((i >>> 24) * (i2 + (i2 >> 7))) >> 8) << 24);
     }
 
-    /* renamed from: m2 */
+    /* JADX INFO: renamed from: m2 */
     public static int m546m2(@RecentlyNonNull Parcel parcel) {
         int i = parcel.readInt();
         int iM455M1 = m455M1(parcel, i);
@@ -2700,19 +2555,19 @@ public class AnimatableValueParser {
         return i2;
     }
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public static void m547n(boolean z2, @RecentlyNonNull String str, @RecentlyNonNull Object... objArr) {
         if (!z2) {
             throw new IllegalArgumentException(String.format(str, objArr));
         }
     }
 
-    /* renamed from: n0 */
+    /* JADX INFO: renamed from: n0 */
     public static int m548n0(InputStream inputStream) throws IOException {
         return ((((byte) inputStream.read()) << 8) & 65280) | (((byte) inputStream.read()) & 255);
     }
 
-    /* renamed from: n1 */
+    /* JADX INFO: renamed from: n1 */
     public static final Integer m549n1(JsonReader jsonReader) throws IOException {
         Intrinsics3.checkNotNullParameter(jsonReader, "$this$nextIntOrNull");
         if (jsonReader.mo6878N() != JsonToken.NULL) {
@@ -2722,7 +2577,7 @@ public class AnimatableValueParser {
         return null;
     }
 
-    /* renamed from: n2 */
+    /* JADX INFO: renamed from: n2 */
     public static boolean m550n2(int i, ParsableByteArray parsableByteArray, boolean z2) throws ParserException {
         if (parsableByteArray.m3081a() < 7) {
             if (z2) {
@@ -2746,25 +2601,25 @@ public class AnimatableValueParser {
         throw ParserException.m8755a("expected characters 'vorbis'", null);
     }
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public static void m551o(boolean z2, @RecentlyNonNull Object obj) {
         if (!z2) {
             throw new IllegalArgumentException(String.valueOf(obj));
         }
     }
 
-    /* renamed from: o0 */
+    /* JADX INFO: renamed from: o0 */
     public static int m552o0(int i) {
         return (int) (i * 1.3333334f);
     }
 
     @Nullable
-    /* renamed from: o1 */
+    /* JADX INFO: renamed from: o1 */
     public static <T> List<Keyframe<T>> m553o1(JsonReader2 jsonReader2, LottieComposition lottieComposition, ValueParser<T> valueParser) throws IOException {
         return KeyframesParser.m632a(jsonReader2, lottieComposition, 1.0f, valueParser);
     }
 
-    /* renamed from: o2 */
+    /* JADX INFO: renamed from: o2 */
     public static void m554o2(File file, FileTreeVisitor fileTreeVisitor) {
         fileTreeVisitor.mo943b(file);
         File[] fileArrListFiles = file.listFiles();
@@ -2780,7 +2635,7 @@ public class AnimatableValueParser {
         fileTreeVisitor.mo944c(file);
     }
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public static void m555p(int i, int i2, int i3, int i4, int i5) {
         m527i(Boolean.valueOf(i4 >= 0));
         m527i(Boolean.valueOf(i >= 0));
@@ -2790,7 +2645,7 @@ public class AnimatableValueParser {
     }
 
     /* JADX WARN: Multi-variable type inference failed */
-    /* renamed from: p0 */
+    /* JADX INFO: renamed from: p0 */
     public static ScaleTypeDrawable m556p0(Drawable drawable) {
         if (drawable == 0) {
             return null;
@@ -2814,12 +2669,12 @@ public class AnimatableValueParser {
         return null;
     }
 
-    /* renamed from: p1 */
+    /* JADX INFO: renamed from: p1 */
     public static AnimatableColorValue m557p1(JsonReader2 jsonReader2, LottieComposition lottieComposition) throws IOException {
         return new AnimatableColorValue(m553o1(jsonReader2, lottieComposition, ColorParser.f2228a));
     }
 
-    /* renamed from: p2 */
+    /* JADX INFO: renamed from: p2 */
     public static void m558p2(@RecentlyNonNull Parcel parcel, int i, @RecentlyNonNull Bundle bundle, boolean z2) {
         if (bundle == null) {
             if (z2) {
@@ -2833,24 +2688,24 @@ public class AnimatableValueParser {
     }
 
     @Pure
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     public static void m559q(boolean z2, @Nullable String str) throws ParserException {
         if (!z2) {
             throw ParserException.m8755a(str, null);
         }
     }
 
-    /* renamed from: q0 */
+    /* JADX INFO: renamed from: q0 */
     public static Object m560q0(Object obj) {
         return new a(obj.getClass(), Array.getLength(obj), obj);
     }
 
-    /* renamed from: q1 */
+    /* JADX INFO: renamed from: q1 */
     public static AnimatableFloatValue m561q1(JsonReader2 jsonReader2, LottieComposition lottieComposition) throws IOException {
         return m565r1(jsonReader2, lottieComposition, true);
     }
 
-    /* renamed from: q2 */
+    /* JADX INFO: renamed from: q2 */
     public static void m562q2(@RecentlyNonNull Parcel parcel, int i, @RecentlyNonNull byte[] bArr, boolean z2) {
         if (bArr == null) {
             if (z2) {
@@ -2863,7 +2718,7 @@ public class AnimatableValueParser {
         }
     }
 
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     public static boolean m563r(ExtractorInput extractorInput) throws IOException {
         ParsableByteArray parsableByteArray = new ParsableByteArray(8);
         if (WavHeaderReader.m3800a(extractorInput, parsableByteArray).f8960a != 1380533830) {
@@ -2883,7 +2738,7 @@ public class AnimatableValueParser {
     }
 
     @Nullable
-    /* renamed from: r0 */
+    /* JADX INFO: renamed from: r0 */
     public static String m564r0(XmlPullParser xmlPullParser, String str) {
         int attributeCount = xmlPullParser.getAttributeCount();
         for (int i = 0; i < attributeCount; i++) {
@@ -2894,12 +2749,12 @@ public class AnimatableValueParser {
         return null;
     }
 
-    /* renamed from: r1 */
+    /* JADX INFO: renamed from: r1 */
     public static AnimatableFloatValue m565r1(JsonReader2 jsonReader2, LottieComposition lottieComposition, boolean z2) throws IOException {
         return new AnimatableFloatValue(KeyframesParser.m632a(jsonReader2, lottieComposition, z2 ? Utils.m659c() : 1.0f, FloatParser.f2235a));
     }
 
-    /* renamed from: r2 */
+    /* JADX INFO: renamed from: r2 */
     public static void m566r2(@RecentlyNonNull Parcel parcel, int i, @RecentlyNonNull IBinder iBinder, boolean z2) {
         if (iBinder == null) {
             if (z2) {
@@ -2912,7 +2767,7 @@ public class AnimatableValueParser {
         }
     }
 
-    /* renamed from: s */
+    /* JADX INFO: renamed from: s */
     public static void m567s(@RecentlyNonNull Handler handler) {
         Looper looperMyLooper = Looper.myLooper();
         if (looperMyLooper != handler.getLooper()) {
@@ -2925,7 +2780,7 @@ public class AnimatableValueParser {
         }
     }
 
-    /* renamed from: s0 */
+    /* JADX INFO: renamed from: s0 */
     public static int m568s0(int i) {
         if (i == 3) {
             return 180;
@@ -2936,12 +2791,12 @@ public class AnimatableValueParser {
         return 90;
     }
 
-    /* renamed from: s1 */
+    /* JADX INFO: renamed from: s1 */
     public static AnimatableIntegerValue m569s1(JsonReader2 jsonReader2, LottieComposition lottieComposition) throws IOException {
         return new AnimatableIntegerValue(m553o1(jsonReader2, lottieComposition, IntegerParser.f2274a));
     }
 
-    /* renamed from: s2 */
+    /* JADX INFO: renamed from: s2 */
     public static void m570s2(@RecentlyNonNull Parcel parcel, int i, @RecentlyNonNull Parcelable parcelable, int i2, boolean z2) {
         if (parcelable == null) {
             if (z2) {
@@ -2955,7 +2810,7 @@ public class AnimatableValueParser {
     }
 
     @Pure
-    /* renamed from: t */
+    /* JADX INFO: renamed from: t */
     public static int m571t(int i, int i2, int i3) {
         if (i < i2 || i >= i3) {
             throw new IndexOutOfBoundsException();
@@ -2963,7 +2818,7 @@ public class AnimatableValueParser {
         return i;
     }
 
-    /* renamed from: t0 */
+    /* JADX INFO: renamed from: t0 */
     public static Object m572t0(JavaType javaType) {
         Class<?> cls = javaType._class;
         Class<?> clsM2190v = ClassUtil.m2190v(cls);
@@ -3014,7 +2869,7 @@ public class AnimatableValueParser {
     /* JADX WARN: Removed duplicated region for block: B:64:0x01a5  */
     /* JADX WARN: Removed duplicated region for block: B:75:0x01bc A[SYNTHETIC] */
     @Nullable
-    /* renamed from: t1 */
+    /* JADX INFO: renamed from: t1 */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
@@ -3061,7 +2916,7 @@ public class AnimatableValueParser {
                         if (iM3086f4 <= 32000) {
                             double dLog = Math.log(2.0d);
                             arrayList2 = arrayList3;
-                            int iCeil = (int) Math.ceil(Math.log(iM3086f3 * 2.0d) / dLog);
+                            int iCeil = (int) Math.ceil(Math.log(((double) iM3086f3) * 2.0d) / dLog);
                             ParsableBitArray parsableBitArray = new ParsableBitArray(parsableByteArray2.f6793a);
                             parsableBitArray.m3071k(parsableByteArray2.f6794b * 8);
                             float[] fArr2 = new float[iM3086f4 * 5];
@@ -3099,7 +2954,7 @@ public class AnimatableValueParser {
                                         int iM3067g5 = parsableBitArray.m3067g(i11);
                                         if (iM3067g5 <= 128000) {
                                             i = i3;
-                                            int iCeil2 = (int) Math.ceil(Math.log(iM3086f4 * 2.0d) / dLog);
+                                            int iCeil2 = (int) Math.ceil(Math.log(((double) iM3086f4) * 2.0d) / dLog);
                                             float[] fArr3 = new float[iM3067g5 * 3];
                                             float[] fArr4 = new float[iM3067g5 * 2];
                                             int i13 = 0;
@@ -3166,7 +3021,7 @@ public class AnimatableValueParser {
         return arrayList3;
     }
 
-    /* renamed from: t2 */
+    /* JADX INFO: renamed from: t2 */
     public static void m574t2(@RecentlyNonNull Parcel parcel, int i, @RecentlyNonNull String str, boolean z2) {
         if (str == null) {
             if (z2) {
@@ -3179,14 +3034,14 @@ public class AnimatableValueParser {
         }
     }
 
-    /* renamed from: u */
+    /* JADX INFO: renamed from: u */
     public static void m575u(@RecentlyNonNull String str) {
         if (!(Looper.getMainLooper() == Looper.myLooper())) {
             throw new IllegalStateException(str);
         }
     }
 
-    /* renamed from: u0 */
+    /* JADX INFO: renamed from: u0 */
     public static Drawable m576u0(Context context, TypedArray typedArray, int i) {
         int resourceId = typedArray.getResourceId(i, 0);
         if (resourceId == 0) {
@@ -3195,12 +3050,12 @@ public class AnimatableValueParser {
         return context.getResources().getDrawable(resourceId);
     }
 
-    /* renamed from: u1 */
+    /* JADX INFO: renamed from: u1 */
     public static AnimatablePointValue m577u1(JsonReader2 jsonReader2, LottieComposition lottieComposition) throws IOException {
         return new AnimatablePointValue(KeyframesParser.m632a(jsonReader2, lottieComposition, Utils.m659c(), PointFParser.f2289a));
     }
 
-    /* renamed from: u2 */
+    /* JADX INFO: renamed from: u2 */
     public static void m578u2(@RecentlyNonNull Parcel parcel, int i, @RecentlyNonNull String[] strArr, boolean z2) {
         if (strArr == null) {
             if (z2) {
@@ -3215,7 +3070,7 @@ public class AnimatableValueParser {
 
     @RecentlyNonNull
     @EnsuresNonNull({"#1"})
-    /* renamed from: v */
+    /* JADX INFO: renamed from: v */
     public static String m579v(@Nullable String str, @RecentlyNonNull Object obj) {
         if (TextUtils.isEmpty(str)) {
             throw new IllegalArgumentException(String.valueOf(obj));
@@ -3224,15 +3079,15 @@ public class AnimatableValueParser {
     }
 
     @RecentlyNonNull
-    /* renamed from: v0 */
+    /* JADX INFO: renamed from: v0 */
     public static String m580v0(@RecentlyNonNull PowerManager.WakeLock wakeLock, @RecentlyNonNull String str) {
-        String strValueOf = String.valueOf(String.valueOf(System.identityHashCode(wakeLock) | (Process.myPid() << 32)));
+        String strValueOf = String.valueOf(String.valueOf(((long) System.identityHashCode(wakeLock)) | (((long) Process.myPid()) << 32)));
         String strValueOf2 = String.valueOf(true == TextUtils.isEmpty(null) ? "" : null);
         return strValueOf2.length() != 0 ? strValueOf.concat(strValueOf2) : new String(strValueOf);
     }
 
     @Nullable
-    /* renamed from: v1 */
+    /* JADX INFO: renamed from: v1 */
     public static PsshAtomUtil m581v1(byte[] bArr) {
         ParsableByteArray parsableByteArray = new ParsableByteArray(bArr);
         if (parsableByteArray.f6795c < 32) {
@@ -3261,7 +3116,7 @@ public class AnimatableValueParser {
         return new PsshAtomUtil(uuid, iM3086f, bArr2);
     }
 
-    /* renamed from: v2 */
+    /* JADX INFO: renamed from: v2 */
     public static <T extends Parcelable> void m582v2(@RecentlyNonNull Parcel parcel, int i, @RecentlyNonNull T[] tArr, int i2, boolean z2) {
         if (tArr == null) {
             if (z2) {
@@ -3284,7 +3139,7 @@ public class AnimatableValueParser {
 
     @RecentlyNonNull
     @EnsuresNonNull({"#1"})
-    /* renamed from: w */
+    /* JADX INFO: renamed from: w */
     public static String m583w(@Nullable String str) {
         if (TextUtils.isEmpty(str)) {
             throw new IllegalArgumentException("Given String is empty or null");
@@ -3292,7 +3147,7 @@ public class AnimatableValueParser {
         return str;
     }
 
-    /* renamed from: w0 */
+    /* JADX INFO: renamed from: w0 */
     public static int m584w0(InputStream inputStream) throws IOException {
         byte b2 = (byte) inputStream.read();
         byte b3 = (byte) inputStream.read();
@@ -3300,7 +3155,7 @@ public class AnimatableValueParser {
     }
 
     @Nullable
-    /* renamed from: w1 */
+    /* JADX INFO: renamed from: w1 */
     public static byte[] m585w1(byte[] bArr, UUID uuid) {
         PsshAtomUtil psshAtomUtilM581v1 = m581v1(bArr);
         if (psshAtomUtilM581v1 == null) {
@@ -3315,7 +3170,7 @@ public class AnimatableValueParser {
         return null;
     }
 
-    /* renamed from: w2 */
+    /* JADX INFO: renamed from: w2 */
     public static <T extends Parcelable> void m586w2(@RecentlyNonNull Parcel parcel, int i, @RecentlyNonNull List<T> list, boolean z2) {
         if (list == null) {
             if (z2) {
@@ -3338,14 +3193,14 @@ public class AnimatableValueParser {
         m418A2(parcel, iM594y2);
     }
 
-    /* renamed from: x */
+    /* JADX INFO: renamed from: x */
     public static void m587x(@RecentlyNonNull String str) {
         if (Looper.getMainLooper() == Looper.myLooper()) {
             throw new IllegalStateException(str);
         }
     }
 
-    /* renamed from: x0 */
+    /* JADX INFO: renamed from: x0 */
     public static final Integer m588x0(Intent intent, String str) {
         Intrinsics3.checkNotNullParameter(intent, "$this$getIntExtraOrNull");
         Intrinsics3.checkNotNullParameter(str, "key");
@@ -3356,7 +3211,7 @@ public class AnimatableValueParser {
         return numValueOf;
     }
 
-    /* renamed from: x1 */
+    /* JADX INFO: renamed from: x1 */
     public static boolean m589x1(ExtractorInput extractorInput, byte[] bArr, int i, int i2, boolean z2) throws IOException {
         try {
             return extractorInput.mo3644e(bArr, i, i2, z2);
@@ -3368,7 +3223,7 @@ public class AnimatableValueParser {
         }
     }
 
-    /* renamed from: x2 */
+    /* JADX INFO: renamed from: x2 */
     public static void m590x2(Parcel parcel, int i, int i2) {
         int iM455M1 = m455M1(parcel, i);
         if (iM455M1 == i2) {
@@ -3383,7 +3238,7 @@ public class AnimatableValueParser {
         throw new SafeParcelReader$ParseException(outline.m823K(sb, " (0x", hexString, ")"), parcel);
     }
 
-    /* renamed from: y */
+    /* JADX INFO: renamed from: y */
     public static <T> T m591y(T t, Object obj) {
         if (t != null) {
             return t;
@@ -3391,13 +3246,13 @@ public class AnimatableValueParser {
         throw new NullPointerException(String.valueOf(obj));
     }
 
-    /* renamed from: y0 */
+    /* JADX INFO: renamed from: y0 */
     public static final StageRequestToSpeakState m592y0(VoiceState voiceState) {
         return voiceState == null ? StageRequestToSpeakState.NONE : (!voiceState.getSuppress() || voiceState.getRequestToSpeakTimestamp() == null) ? (voiceState.getSuppress() || voiceState.getRequestToSpeakTimestamp() == null) ? !voiceState.getSuppress() ? StageRequestToSpeakState.ON_STAGE : StageRequestToSpeakState.NONE : StageRequestToSpeakState.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK : StageRequestToSpeakState.REQUESTED_TO_SPEAK;
     }
 
     @Nullable
-    /* renamed from: y1 */
+    /* JADX INFO: renamed from: y1 */
     public static Metadata m593y1(ExtractorInput extractorInput, boolean z2) throws IOException {
         C3166a c3166a;
         if (z2) {
@@ -3439,7 +3294,7 @@ public class AnimatableValueParser {
         return metadataM3922d;
     }
 
-    /* renamed from: y2 */
+    /* JADX INFO: renamed from: y2 */
     public static int m594y2(Parcel parcel, int i) {
         parcel.writeInt(i | (-65536));
         parcel.writeInt(0);
@@ -3448,7 +3303,7 @@ public class AnimatableValueParser {
 
     @NonNull
     @EnsuresNonNull({"#1"})
-    /* renamed from: z */
+    /* JADX INFO: renamed from: z */
     public static <T> T m595z(@RecentlyNonNull T t, @RecentlyNonNull Object obj) {
         if (t != null) {
             return t;
@@ -3456,7 +3311,7 @@ public class AnimatableValueParser {
         throw new NullPointerException(String.valueOf(obj));
     }
 
-    /* renamed from: z0 */
+    /* JADX INFO: renamed from: z0 */
     public static List<String> m596z0(CacheKey cacheKey) {
         try {
             if (cacheKey instanceof MultiCacheKey) {
@@ -3471,7 +3326,7 @@ public class AnimatableValueParser {
         }
     }
 
-    /* renamed from: z1 */
+    /* JADX INFO: renamed from: z1 */
     public static int m597z1(ExtractorInput extractorInput, byte[] bArr, int i, int i2) throws IOException {
         int i3 = 0;
         while (i3 < i2) {
@@ -3484,7 +3339,7 @@ public class AnimatableValueParser {
         return i3;
     }
 
-    /* renamed from: z2 */
+    /* JADX INFO: renamed from: z2 */
     public static void m598z2(Parcel parcel, int i, int i2, int i3) {
         if (i2 == i3) {
             return;

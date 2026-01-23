@@ -19,9 +19,9 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p659s.p660a.Dispatchers;
 import p659s.p660a.p661a.MainDispatchers;
 
-/* compiled from: CoroutineLiveData.kt */
-/* renamed from: androidx.lifecycle.BlockRunner, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: androidx.lifecycle.BlockRunner, reason: use source file name */
+/* JADX INFO: compiled from: CoroutineLiveData.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class CoroutineLiveData2<T> {
     private final Function2<CoroutineLiveData7<T>, Continuation<? super Unit>, Object> block;
     private Job cancellationJob;
@@ -31,9 +31,9 @@ public final class CoroutineLiveData2<T> {
     private final CoroutineScope scope;
     private final long timeoutInMs;
 
-    /* compiled from: CoroutineLiveData.kt */
+    /* JADX INFO: renamed from: androidx.lifecycle.BlockRunner$cancel$1 */
+    /* JADX INFO: compiled from: CoroutineLiveData.kt */
     @DebugMetadata(m10084c = "androidx.lifecycle.BlockRunner$cancel$1", m10085f = "CoroutineLiveData.kt", m10086l = {Opcodes.NEW}, m10087m = "invokeSuspend")
-    /* renamed from: androidx.lifecycle.BlockRunner$cancel$1 */
     public static final class C04241 extends ContinuationImpl6 implements Function2<CoroutineScope, Continuation<? super Unit>, Object> {
         public int label;
 
@@ -80,9 +80,9 @@ public final class CoroutineLiveData2<T> {
         }
     }
 
-    /* compiled from: CoroutineLiveData.kt */
+    /* JADX INFO: renamed from: androidx.lifecycle.BlockRunner$maybeRun$1 */
+    /* JADX INFO: compiled from: CoroutineLiveData.kt */
     @DebugMetadata(m10084c = "androidx.lifecycle.BlockRunner$maybeRun$1", m10085f = "CoroutineLiveData.kt", m10086l = {Opcodes.ARETURN}, m10087m = "invokeSuspend")
-    /* renamed from: androidx.lifecycle.BlockRunner$maybeRun$1 */
     public static final class C04251 extends ContinuationImpl6 implements Function2<CoroutineScope, Continuation<? super Unit>, Object> {
         private /* synthetic */ Object L$0;
         public int label;

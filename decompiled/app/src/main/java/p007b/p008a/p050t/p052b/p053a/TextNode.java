@@ -4,9 +4,9 @@ import android.text.SpannableStringBuilder;
 import com.discord.simpleast.core.node.Node;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: TextNode.kt */
-/* renamed from: b.a.t.b.a.a, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.a.t.b.a.a, reason: use source file name */
+/* JADX INFO: compiled from: TextNode.kt */
+/* JADX INFO: loaded from: classes.dex */
 public class TextNode<R> extends Node<R> {
     private final String content;
 

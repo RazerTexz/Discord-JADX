@@ -8,13 +8,13 @@ import android.os.IInterface;
 import android.os.Parcel;
 import android.os.RemoteException;
 
-/* compiled from: ICustomTabsCallback.java */
-/* renamed from: x.a.a.a, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: x.a.a.a, reason: use source file name */
+/* JADX INFO: compiled from: ICustomTabsCallback.java */
+/* JADX INFO: loaded from: classes.dex */
 public interface ICustomTabsCallback extends IInterface {
 
-    /* compiled from: ICustomTabsCallback.java */
-    /* renamed from: x.a.a.a$a */
+    /* JADX INFO: renamed from: x.a.a.a$a */
+    /* JADX INFO: compiled from: ICustomTabsCallback.java */
     public static abstract class a extends Binder implements ICustomTabsCallback {
         private static final String DESCRIPTOR = "android.support.customtabs.ICustomTabsCallback";
         public static final int TRANSACTION_extraCallback = 3;
@@ -24,14 +24,14 @@ public interface ICustomTabsCallback extends IInterface {
         public static final int TRANSACTION_onPostMessage = 5;
         public static final int TRANSACTION_onRelationshipValidationResult = 6;
 
-        /* compiled from: ICustomTabsCallback.java */
-        /* renamed from: x.a.a.a$a$a, reason: collision with other inner class name */
+        /* JADX INFO: renamed from: x.a.a.a$a$a, reason: collision with other inner class name */
+        /* JADX INFO: compiled from: ICustomTabsCallback.java */
         public static class C13355a implements ICustomTabsCallback {
 
-            /* renamed from: a */
+            /* JADX INFO: renamed from: a */
             public static ICustomTabsCallback f27931a;
 
-            /* renamed from: b */
+            /* JADX INFO: renamed from: b */
             public IBinder f27932b;
 
             public C13355a(IBinder iBinder) {

@@ -9,12 +9,12 @@ import p007b.p100d.p104b.p105a.outline;
 import p507d0.p580t.Maps6;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: InputEditTextAction.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: InputEditTextAction.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public abstract class InputEditTextAction {
     private final CharSequence assumedInput;
 
-    /* compiled from: InputEditTextAction.kt */
+    /* JADX INFO: compiled from: InputEditTextAction.kt */
     public static final /* data */ class ClearSpans extends InputEditTextAction {
         private final CharSequence assumedInput;
 
@@ -69,7 +69,7 @@ public abstract class InputEditTextAction {
         }
     }
 
-    /* compiled from: InputEditTextAction.kt */
+    /* JADX INFO: compiled from: InputEditTextAction.kt */
     public static final /* data */ class InsertText extends InputEditTextAction {
         private final CharSequence assumedInput;
         private final Ranges2 insertRange;
@@ -108,17 +108,17 @@ public abstract class InputEditTextAction {
             return getAssumedInput();
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final CharSequence getToAppend() {
             return this.toAppend;
         }
 
-        /* renamed from: component3, reason: from getter */
+        /* JADX INFO: renamed from: component3, reason: from getter */
         public final Ranges2 getInsertRange() {
             return this.insertRange;
         }
 
-        /* renamed from: component4, reason: from getter */
+        /* JADX INFO: renamed from: component4, reason: from getter */
         public final int getSelectionIndex() {
             return this.selectionIndex;
         }
@@ -179,7 +179,7 @@ public abstract class InputEditTextAction {
         }
     }
 
-    /* compiled from: InputEditTextAction.kt */
+    /* JADX INFO: compiled from: InputEditTextAction.kt */
     public static final /* data */ class None extends InputEditTextAction {
         private final CharSequence assumedInput;
 
@@ -234,7 +234,7 @@ public abstract class InputEditTextAction {
         }
     }
 
-    /* compiled from: InputEditTextAction.kt */
+    /* JADX INFO: compiled from: InputEditTextAction.kt */
     public static final /* data */ class RemoveText extends InputEditTextAction {
         private final CharSequence assumedInput;
         private final Ranges2 range;
@@ -267,12 +267,12 @@ public abstract class InputEditTextAction {
             return getAssumedInput();
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final Ranges2 getRange() {
             return this.range;
         }
 
-        /* renamed from: component3, reason: from getter */
+        /* JADX INFO: renamed from: component3, reason: from getter */
         public final int getSelectionIndex() {
             return this.selectionIndex;
         }
@@ -324,7 +324,7 @@ public abstract class InputEditTextAction {
         }
     }
 
-    /* compiled from: InputEditTextAction.kt */
+    /* JADX INFO: compiled from: InputEditTextAction.kt */
     public static final /* data */ class ReplaceCharacterStyleSpans extends InputEditTextAction {
         private final CharSequence assumedInput;
         private final Map<Ranges2, List<CharacterStyle>> spans;
@@ -403,7 +403,7 @@ public abstract class InputEditTextAction {
         }
     }
 
-    /* compiled from: InputEditTextAction.kt */
+    /* JADX INFO: compiled from: InputEditTextAction.kt */
     public static final /* data */ class ReplacePillSpans extends InputEditTextAction {
         private final CharSequence assumedInput;
         private final Map<Ranges2, List<CharacterStyle>> spans;
@@ -482,7 +482,7 @@ public abstract class InputEditTextAction {
         }
     }
 
-    /* compiled from: InputEditTextAction.kt */
+    /* JADX INFO: compiled from: InputEditTextAction.kt */
     public static final /* data */ class ReplaceText extends InputEditTextAction {
         private final CharSequence assumedInput;
         private final CharSequence newText;
@@ -509,12 +509,12 @@ public abstract class InputEditTextAction {
             return getAssumedInput();
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final CharSequence getNewText() {
             return this.newText;
         }
 
-        /* renamed from: component3, reason: from getter */
+        /* JADX INFO: renamed from: component3, reason: from getter */
         public final int getSelectionIndex() {
             return this.selectionIndex;
         }
@@ -576,7 +576,7 @@ public abstract class InputEditTextAction {
         }
     }
 
-    /* compiled from: InputEditTextAction.kt */
+    /* JADX INFO: compiled from: InputEditTextAction.kt */
     public static final /* data */ class SelectText extends InputEditTextAction {
         private final CharSequence assumedInput;
         private final Ranges2 selection;
@@ -604,7 +604,7 @@ public abstract class InputEditTextAction {
             return getAssumedInput();
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final Ranges2 getSelection() {
             return this.selection;
         }

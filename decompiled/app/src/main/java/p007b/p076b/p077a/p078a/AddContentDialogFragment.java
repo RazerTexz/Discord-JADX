@@ -9,7 +9,6 @@ import android.content.ContentResolver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.res.ColorStateList;
-import android.content.res.Resources;
 import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.Bundle;
@@ -60,47 +59,47 @@ import p507d0.p580t.Iterators4;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: AddContentDialogFragment.kt */
-/* renamed from: b.b.a.a.a, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.b.a.a.a, reason: use source file name */
+/* JADX INFO: compiled from: AddContentDialogFragment.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public class AddContentDialogFragment extends AppCompatDialogFragment {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static final /* synthetic */ int f2113j = 0;
 
-    /* renamed from: k, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: k, reason: from kotlin metadata */
     public ViewPager contentPager;
 
-    /* renamed from: l, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: l, reason: from kotlin metadata */
     public TabLayout contentTabs;
 
-    /* renamed from: m, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: m, reason: from kotlin metadata */
     public FloatingActionButton actionButton;
 
-    /* renamed from: n, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: n, reason: from kotlin metadata */
     public ImageView launchButton;
 
-    /* renamed from: o, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: o, reason: from kotlin metadata */
     public SelectionAggregator<Attachment<Object>> selectionAggregator;
 
-    /* renamed from: p, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: p, reason: from kotlin metadata */
     public Function1<? super View, Unit> onKeyboardSelectedListener;
 
-    /* renamed from: q, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: q, reason: from kotlin metadata */
     public ViewPager.OnPageChangeListener onPageChangeListener;
 
-    /* renamed from: r, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: r, reason: from kotlin metadata */
     public final c itemSelectionListener = new c();
 
-    /* compiled from: java-style lambda group */
-    /* renamed from: b.b.a.a.a$a */
-    /* loaded from: classes.dex */
+    /* JADX INFO: renamed from: b.b.a.a.a$a */
+    /* JADX INFO: compiled from: java-style lambda group */
+    /* JADX INFO: loaded from: classes.dex */
     public static final class a implements View.OnClickListener {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public final /* synthetic */ int f2122j;
 
-        /* renamed from: k */
+        /* JADX INFO: renamed from: k */
         public final /* synthetic */ Object f2123k;
 
         public a(int i, Object obj) {
@@ -109,7 +108,7 @@ public class AddContentDialogFragment extends AppCompatDialogFragment {
         }
 
         @Override // android.view.View.OnClickListener
-        public final void onClick(View view) throws Resources.NotFoundException {
+        public final void onClick(View view) {
             int i = this.f2122j;
             if (i == 0) {
                 AddContentDialogFragment addContentDialogFragment = (AddContentDialogFragment) this.f2123k;
@@ -146,11 +145,11 @@ public class AddContentDialogFragment extends AppCompatDialogFragment {
         }
     }
 
-    /* compiled from: AddContentDialogFragment.kt */
-    /* renamed from: b.b.a.a.a$b */
+    /* JADX INFO: renamed from: b.b.a.a.a$b */
+    /* JADX INFO: compiled from: AddContentDialogFragment.kt */
     public static final class b implements Animation.AnimationListener {
 
-        /* renamed from: k */
+        /* JADX INFO: renamed from: k */
         public final /* synthetic */ boolean f2125k;
 
         public b(boolean z2) {
@@ -181,8 +180,8 @@ public class AddContentDialogFragment extends AppCompatDialogFragment {
         }
     }
 
-    /* compiled from: AddContentDialogFragment.kt */
-    /* renamed from: b.b.a.a.a$c */
+    /* JADX INFO: renamed from: b.b.a.a.a$c */
+    /* JADX INFO: compiled from: AddContentDialogFragment.kt */
     public static final class c implements SelectionCoordinator.ItemSelectionListener<Attachment<?>> {
         public c() {
         }
@@ -204,8 +203,8 @@ public class AddContentDialogFragment extends AppCompatDialogFragment {
         }
     }
 
-    /* compiled from: AddContentDialogFragment.kt */
-    /* renamed from: b.b.a.a.a$d */
+    /* JADX INFO: renamed from: b.b.a.a.a$d */
+    /* JADX INFO: compiled from: AddContentDialogFragment.kt */
     public static final class d extends AppCompatDialog {
         public d(AddContentDialogFragment addContentDialogFragment, Context context, int i) {
             super(context, i);
@@ -221,8 +220,8 @@ public class AddContentDialogFragment extends AppCompatDialogFragment {
         }
     }
 
-    /* compiled from: AddContentDialogFragment.kt */
-    /* renamed from: b.b.a.a.a$e */
+    /* JADX INFO: renamed from: b.b.a.a.a$e */
+    /* JADX INFO: compiled from: AddContentDialogFragment.kt */
     public static final class e extends Lambda implements Function0<Unit> {
         public final /* synthetic */ Fragment $flexInputFragment;
 
@@ -233,7 +232,7 @@ public class AddContentDialogFragment extends AppCompatDialogFragment {
         }
 
         @Override // kotlin.jvm.functions.Function0
-        public Unit invoke() throws Resources.NotFoundException {
+        public Unit invoke() {
             TabLayout tabLayout;
             TabLayout.Tab tabAt;
             FragmentManager childFragmentManager = AddContentDialogFragment.this.getChildFragmentManager();
@@ -301,8 +300,8 @@ public class AddContentDialogFragment extends AppCompatDialogFragment {
         }
     }
 
-    /* compiled from: AddContentDialogFragment.kt */
-    /* renamed from: b.b.a.a.a$f */
+    /* JADX INFO: renamed from: b.b.a.a.a$f */
+    /* JADX INFO: compiled from: AddContentDialogFragment.kt */
     public static final class f extends AccessibilityDelegateCompat {
         public f() {
         }
@@ -318,8 +317,8 @@ public class AddContentDialogFragment extends AppCompatDialogFragment {
         }
     }
 
-    /* compiled from: AddContentDialogFragment.kt */
-    /* renamed from: b.b.a.a.a$g */
+    /* JADX INFO: renamed from: b.b.a.a.a$g */
+    /* JADX INFO: compiled from: AddContentDialogFragment.kt */
     public static final class g implements Runnable {
         public g() {
         }
@@ -330,7 +329,7 @@ public class AddContentDialogFragment extends AppCompatDialogFragment {
         }
     }
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public static final void m394g(AddContentDialogFragment addContentDialogFragment) {
         FloatingActionButton floatingActionButton = addContentDialogFragment.actionButton;
         if (floatingActionButton != null) {
@@ -338,8 +337,8 @@ public class AddContentDialogFragment extends AppCompatDialogFragment {
         }
     }
 
-    /* renamed from: h */
-    public final void m395h(boolean openKeyboard) throws Resources.NotFoundException {
+    /* JADX INFO: renamed from: h */
+    public final void m395h(boolean openKeyboard) {
         Context context = getContext();
         if (context == null) {
             dismissAllowingStateLoss();
@@ -425,7 +424,7 @@ public class AddContentDialogFragment extends AppCompatDialogFragment {
     }
 
     @Override // androidx.fragment.app.Fragment
-    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) throws Resources.NotFoundException {
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         Intrinsics3.checkNotNullParameter(inflater, "inflater");
         View viewInflate = inflater.inflate(C11170R.g.dialog_add_content_pager_with_fab, container, false);
         if (viewInflate != null) {
@@ -485,7 +484,7 @@ public class AddContentDialogFragment extends AppCompatDialogFragment {
     }
 
     @Override // androidx.fragment.app.DialogFragment, androidx.fragment.app.Fragment
-    public void onStart() throws Resources.NotFoundException {
+    public void onStart() {
         super.onStart();
         Context context = getContext();
         if (context != null) {

@@ -6,13 +6,13 @@ import java.util.Collection;
 import java.util.Map;
 import java.util.Set;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class ArrayMap<K, V> extends SimpleArrayMap<K, V> implements Map<K, V> {
 
     @Nullable
     public MapCollections<K, V> mCollections;
 
-    /* renamed from: androidx.collection.ArrayMap$1 */
+    /* JADX INFO: renamed from: androidx.collection.ArrayMap$1 */
     public class C01631 extends MapCollections<K, V> {
         public C01631() {
         }

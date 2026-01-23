@@ -42,30 +42,30 @@ import p007b.p225i.p226a.p288f.p313h.p325l.C3780ob;
 import p007b.p225i.p226a.p288f.p313h.p325l.C3842t8;
 import p007b.p225i.p226a.p288f.p313h.p325l.InterfaceC3819rb;
 
-/* compiled from: com.google.android.gms:play-services-measurement-impl@@18.0.0 */
-/* renamed from: b.i.a.f.i.b.q7 */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.i.b.q7 */
+/* JADX INFO: compiled from: com.google.android.gms:play-services-measurement-impl@@18.0.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public final class C4161q7 extends AbstractC3974a5 {
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final ServiceConnectionC4096k8 f11153c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public InterfaceC4068i3 f11154d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public volatile Boolean f11155e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final AbstractC4064i f11156f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public final C4026e9 f11157g;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public final List<Runnable> f11158h;
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public final AbstractC4064i f11159i;
 
     public C4161q7(C4202u4 c4202u4) {
@@ -77,7 +77,7 @@ public final class C4161q7 extends AbstractC3974a5 {
         this.f11159i = new C4260z7(this, c4202u4);
     }
 
-    /* renamed from: x */
+    /* JADX INFO: renamed from: x */
     public static void m5802x(C4161q7 c4161q7, ComponentName componentName) {
         c4161q7.mo5848b();
         if (c4161q7.f11154d != null) {
@@ -89,7 +89,7 @@ public final class C4161q7 extends AbstractC3974a5 {
     }
 
     @WorkerThread
-    /* renamed from: A */
+    /* JADX INFO: renamed from: A */
     public final void m5803A(AtomicReference<String> atomicReference) {
         mo5848b();
         m5497t();
@@ -97,7 +97,7 @@ public final class C4161q7 extends AbstractC3974a5 {
     }
 
     @WorkerThread
-    /* renamed from: B */
+    /* JADX INFO: renamed from: B */
     public final boolean m5804B() {
         mo5848b();
         m5497t();
@@ -105,7 +105,7 @@ public final class C4161q7 extends AbstractC3974a5 {
     }
 
     @WorkerThread
-    /* renamed from: C */
+    /* JADX INFO: renamed from: C */
     public final void m5805C() {
         mo5848b();
         m5497t();
@@ -158,7 +158,7 @@ public final class C4161q7 extends AbstractC3974a5 {
     }
 
     @WorkerThread
-    /* renamed from: D */
+    /* JADX INFO: renamed from: D */
     public final void m5806D() {
         mo5848b();
         m5497t();
@@ -175,7 +175,7 @@ public final class C4161q7 extends AbstractC3974a5 {
     }
 
     @WorkerThread
-    /* renamed from: E */
+    /* JADX INFO: renamed from: E */
     public final boolean m5807E() {
         mo5848b();
         m5497t();
@@ -186,7 +186,7 @@ public final class C4161q7 extends AbstractC3974a5 {
     }
 
     @WorkerThread
-    /* renamed from: F */
+    /* JADX INFO: renamed from: F */
     public final void m5808F() {
         mo5848b();
         C4026e9 c4026e9 = this.f11157g;
@@ -199,7 +199,7 @@ public final class C4161q7 extends AbstractC3974a5 {
     /* JADX WARN: Removed duplicated region for block: B:47:0x0100  */
     /* JADX WARN: Removed duplicated region for block: B:49:0x0103  */
     @WorkerThread
-    /* renamed from: G */
+    /* JADX INFO: renamed from: G */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
@@ -280,7 +280,7 @@ public final class C4161q7 extends AbstractC3974a5 {
     }
 
     @WorkerThread
-    /* renamed from: H */
+    /* JADX INFO: renamed from: H */
     public final void m5810H() {
         mo5848b();
         mo5726g().f11149n.m5861b("Processing queued up service tasks", Integer.valueOf(this.f11158h.size()));
@@ -296,18 +296,10 @@ public final class C4161q7 extends AbstractC3974a5 {
         this.f11159i.m5664c();
     }
 
-    /* JADX WARN: Removed duplicated region for block: B:49:0x017a  */
-    /* JADX WARN: Removed duplicated region for block: B:50:0x0181  */
-    /* JADX WARN: Removed duplicated region for block: B:57:0x01b5  */
-    /* JADX WARN: Removed duplicated region for block: B:60:0x01e1  */
-    /* JADX WARN: Removed duplicated region for block: B:61:0x01e4  */
-    /* JADX WARN: Removed duplicated region for block: B:64:0x01fa  */
-    /* JADX WARN: Removed duplicated region for block: B:67:0x0212  */
-    /* JADX WARN: Removed duplicated region for block: B:71:0x021e  */
     /* JADX WARN: Removed duplicated region for block: B:74:0x0237  */
     @Nullable
     @WorkerThread
-    /* renamed from: I */
+    /* JADX INFO: renamed from: I */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
@@ -316,7 +308,6 @@ public final class C4161q7 extends AbstractC3974a5 {
         Method declaredMethod;
         Object[] objArr;
         String str;
-        Long lValueOf;
         String str2;
         long jMin;
         List<String> list;
@@ -398,33 +389,11 @@ public final class C4161q7 extends AbstractC3974a5 {
                                     str = (String) clsLoadClass.getDeclaredMethod("getFirebaseInstanceId", new Class[0]).invoke(objInvoke, new Object[0]);
                                 } catch (Exception unused2) {
                                     c4124n3M5970o.mo5726g().f11146k.m5860a("Failed to retrieve Firebase Instance Id");
+                                    str = null;
                                 }
                             }
                         } catch (Exception unused3) {
                             c4124n3M5970o.mo5726g().f11145j.m5860a("Failed to obtain Firebase Analytics instance");
-                            str = null;
-                            C4202u4 c4202u4 = c4124n3M5970o.f11202a;
-                            lValueOf = Long.valueOf(c4202u4.m5946o().f10641k.m5648a());
-                            if (lValueOf.longValue() != 0) {
-                            }
-                            c4124n3M5970o.m5497t();
-                            int i = c4124n3M5970o.f10986j;
-                            boolean zBooleanValue = c4124n3M5970o.f11202a.f11260h.m5536y().booleanValue();
-                            Boolean boolM5534w = c4124n3M5970o.f11202a.f11260h.m5534w("google_analytics_ssaid_collection_enabled");
-                            boolean zBooleanValue2 = Boolean.valueOf(boolM5534w != null || boolM5534w.booleanValue()).booleanValue();
-                            C4009d4 c4009d4M5867l = c4124n3M5970o.m5867l();
-                            c4009d4M5867l.mo5848b();
-                            boolean z5 = c4009d4M5867l.m5579w().getBoolean("deferred_analytics_collection", false);
-                            c4124n3M5970o.m5497t();
-                            String str8 = c4124n3M5970o.f10988l;
-                            if (c4124n3M5970o.f11202a.f11260h.m5534w("google_analytics_default_allow_ad_personalization_signals") != null) {
-                            }
-                            long j5 = c4124n3M5970o.f10984h;
-                            List<String> list2 = c4124n3M5970o.f10985i;
-                            if (!C3630da.m4644b()) {
-                            }
-                            str3 = null;
-                            return new zzn(str4, str5, str6, j3, str7, 33025L, j4, strM5796E, z3, z4, str2, 0L, jMin, i, zBooleanValue, zBooleanValue2, z5, str8, boolValueOf, j, list, str3, (C3842t8.m5293b() && c4124n3M5970o.f11202a.f11260h.m5526o(C4142p.f11035H0)) ? c4124n3M5970o.m5867l().m5581y().m5568d() : "");
                         }
                     }
                 } catch (ClassNotFoundException unused4) {
@@ -437,45 +406,45 @@ public final class C4161q7 extends AbstractC3974a5 {
             z3 = zM5940d;
             str = null;
         }
-        C4202u4 c4202u42 = c4124n3M5970o.f11202a;
-        lValueOf = Long.valueOf(c4202u42.m5946o().f10641k.m5648a());
-        if (lValueOf.longValue() != 0) {
+        C4202u4 c4202u4 = c4124n3M5970o.f11202a;
+        Long lValueOf = Long.valueOf(c4202u4.m5946o().f10641k.m5648a());
+        if (lValueOf.longValue() == 0) {
             str2 = str;
-            jMin = c4202u42.f11253H;
+            jMin = c4202u4.f11253H;
         } else {
             str2 = str;
-            jMin = Math.min(c4202u42.f11253H, lValueOf.longValue());
+            jMin = Math.min(c4202u4.f11253H, lValueOf.longValue());
         }
         c4124n3M5970o.m5497t();
-        int i2 = c4124n3M5970o.f10986j;
-        boolean zBooleanValue3 = c4124n3M5970o.f11202a.f11260h.m5536y().booleanValue();
-        Boolean boolM5534w2 = c4124n3M5970o.f11202a.f11260h.m5534w("google_analytics_ssaid_collection_enabled");
-        boolean zBooleanValue22 = Boolean.valueOf(boolM5534w2 != null || boolM5534w2.booleanValue()).booleanValue();
-        C4009d4 c4009d4M5867l2 = c4124n3M5970o.m5867l();
-        c4009d4M5867l2.mo5848b();
-        boolean z52 = c4009d4M5867l2.m5579w().getBoolean("deferred_analytics_collection", false);
+        int i = c4124n3M5970o.f10986j;
+        boolean zBooleanValue = c4124n3M5970o.f11202a.f11260h.m5536y().booleanValue();
+        Boolean boolM5534w = c4124n3M5970o.f11202a.f11260h.m5534w("google_analytics_ssaid_collection_enabled");
+        boolean zBooleanValue2 = Boolean.valueOf(boolM5534w == null || boolM5534w.booleanValue()).booleanValue();
+        C4009d4 c4009d4M5867l = c4124n3M5970o.m5867l();
+        c4009d4M5867l.mo5848b();
+        boolean z5 = c4009d4M5867l.m5579w().getBoolean("deferred_analytics_collection", false);
         c4124n3M5970o.m5497t();
-        String str82 = c4124n3M5970o.f10988l;
-        Boolean boolValueOf = c4124n3M5970o.f11202a.f11260h.m5534w("google_analytics_default_allow_ad_personalization_signals") != null ? null : Boolean.valueOf(!r3.booleanValue());
-        long j52 = c4124n3M5970o.f10984h;
-        List<String> list22 = c4124n3M5970o.f10985i;
-        if (!C3630da.m4644b()) {
-            list = list22;
-            j = j52;
+        String str8 = c4124n3M5970o.f10988l;
+        Boolean boolValueOf = c4124n3M5970o.f11202a.f11260h.m5534w("google_analytics_default_allow_ad_personalization_signals") == null ? null : Boolean.valueOf(!r3.booleanValue());
+        long j5 = c4124n3M5970o.f10984h;
+        List<String> list2 = c4124n3M5970o.f10985i;
+        if (C3630da.m4644b()) {
+            list = list2;
+            j = j5;
             if (c4124n3M5970o.f11202a.f11260h.m5526o(C4142p.f11080j0)) {
                 c4124n3M5970o.m5497t();
                 str3 = c4124n3M5970o.f10989m;
             }
-            return new zzn(str4, str5, str6, j3, str7, 33025L, j4, strM5796E, z3, z4, str2, 0L, jMin, i2, zBooleanValue3, zBooleanValue22, z52, str82, boolValueOf, j, list, str3, (C3842t8.m5293b() && c4124n3M5970o.f11202a.f11260h.m5526o(C4142p.f11035H0)) ? c4124n3M5970o.m5867l().m5581y().m5568d() : "");
+            return new zzn(str4, str5, str6, j3, str7, 33025L, j4, strM5796E, z3, z4, str2, 0L, jMin, i, zBooleanValue, zBooleanValue2, z5, str8, boolValueOf, j, list, str3, (C3842t8.m5293b() || !c4124n3M5970o.f11202a.f11260h.m5526o(C4142p.f11035H0)) ? "" : c4124n3M5970o.m5867l().m5581y().m5568d());
         }
-        list = list22;
-        j = j52;
+        list = list2;
+        j = j5;
         str3 = null;
-        return new zzn(str4, str5, str6, j3, str7, 33025L, j4, strM5796E, z3, z4, str2, 0L, jMin, i2, zBooleanValue3, zBooleanValue22, z52, str82, boolValueOf, j, list, str3, (C3842t8.m5293b() && c4124n3M5970o.f11202a.f11260h.m5526o(C4142p.f11035H0)) ? c4124n3M5970o.m5867l().m5581y().m5568d() : "");
+        return new zzn(str4, str5, str6, j3, str7, 33025L, j4, strM5796E, z3, z4, str2, 0L, jMin, i, zBooleanValue, zBooleanValue2, z5, str8, boolValueOf, j, list, str3, (C3842t8.m5293b() || !c4124n3M5970o.f11202a.f11260h.m5526o(C4142p.f11035H0)) ? "" : c4124n3M5970o.m5867l().m5581y().m5568d());
     }
 
     @Override // p007b.p225i.p226a.p288f.p330i.p332b.AbstractC3974a5
-    /* renamed from: v */
+    /* JADX INFO: renamed from: v */
     public final boolean mo5499v() {
         return false;
     }
@@ -492,7 +461,7 @@ public final class C4161q7 extends AbstractC3974a5 {
     /* JADX WARN: Removed duplicated region for block: B:207:0x0218 A[SYNTHETIC] */
     /* JADX WARN: Removed duplicated region for block: B:209:0x0218 A[SYNTHETIC] */
     @WorkerThread
-    /* renamed from: w */
+    /* JADX INFO: renamed from: w */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
@@ -808,8 +777,8 @@ public final class C4161q7 extends AbstractC3974a5 {
     }
 
     @WorkerThread
-    /* renamed from: y */
-    public final void m5813y(zzz zzzVar) throws IllegalStateException {
+    /* JADX INFO: renamed from: y */
+    public final void m5813y(zzz zzzVar) {
         boolean zM5755x;
         mo5848b();
         m5497t();
@@ -826,7 +795,7 @@ public final class C4161q7 extends AbstractC3974a5 {
     }
 
     @WorkerThread
-    /* renamed from: z */
+    /* JADX INFO: renamed from: z */
     public final void m5814z(Runnable runnable) throws IllegalStateException {
         mo5848b();
         if (m5804B()) {

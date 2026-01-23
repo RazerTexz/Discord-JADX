@@ -13,71 +13,71 @@ import androidx.core.view.ViewCompat;
 import me.dm7.barcodescanner.core.C12923R;
 import p007b.p225i.p226a.p288f.p299e.p308o.C3404f;
 
-/* compiled from: BarcodeScannerView.java */
-/* renamed from: e0.a.a.a.a, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: e0.a.a.a.a, reason: use source file name */
+/* JADX INFO: compiled from: BarcodeScannerView.java */
+/* JADX INFO: loaded from: classes3.dex */
 public abstract class BarcodeScannerView extends FrameLayout implements Camera.PreviewCallback {
 
-    /* renamed from: A */
+    /* JADX INFO: renamed from: A */
     public float f25296A;
 
-    /* renamed from: B */
+    /* JADX INFO: renamed from: B */
     public int f25297B;
 
-    /* renamed from: C */
+    /* JADX INFO: renamed from: C */
     public float f25298C;
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public CameraWrapper f25299j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public CameraPreview2 f25300k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public IViewFinder f25301l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public Rect f25302m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public CameraHandlerThread2 f25303n;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public Boolean f25304o;
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public boolean f25305p;
 
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     public boolean f25306q;
 
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     public boolean f25307r;
 
-    /* renamed from: s */
+    /* JADX INFO: renamed from: s */
     @ColorInt
     public int f25308s;
 
-    /* renamed from: t */
+    /* JADX INFO: renamed from: t */
     @ColorInt
     public int f25309t;
 
-    /* renamed from: u */
+    /* JADX INFO: renamed from: u */
     public int f25310u;
 
-    /* renamed from: v */
+    /* JADX INFO: renamed from: v */
     public int f25311v;
 
-    /* renamed from: w */
+    /* JADX INFO: renamed from: w */
     public int f25312w;
 
-    /* renamed from: x */
+    /* JADX INFO: renamed from: x */
     public boolean f25313x;
 
-    /* renamed from: y */
+    /* JADX INFO: renamed from: y */
     public int f25314y;
 
-    /* renamed from: z */
+    /* JADX INFO: renamed from: z */
     public boolean f25315z;
 
     public BarcodeScannerView(Context context, AttributeSet attributeSet) {
@@ -129,7 +129,7 @@ public abstract class BarcodeScannerView extends FrameLayout implements Camera.P
         }
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public void m10094a() {
         if (this.f25299j != null) {
             this.f25300k.m10099e();

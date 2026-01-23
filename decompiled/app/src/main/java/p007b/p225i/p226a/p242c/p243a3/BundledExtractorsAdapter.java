@@ -18,19 +18,19 @@ import p007b.p225i.p226a.p242c.p267x2.ExtractorInput;
 import p007b.p225i.p226a.p242c.p267x2.ExtractorOutput;
 import p007b.p225i.p226a.p242c.p267x2.ExtractorsFactory2;
 
-/* compiled from: BundledExtractorsAdapter.java */
-/* renamed from: b.i.a.c.a3.m, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.a3.m, reason: use source file name */
+/* JADX INFO: compiled from: BundledExtractorsAdapter.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class BundledExtractorsAdapter implements ProgressiveMediaExtractor {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final ExtractorsFactory2 f5645a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     @Nullable
     public Extractor f5646b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     @Nullable
     public ExtractorInput f5647c;
 
@@ -38,7 +38,7 @@ public final class BundledExtractorsAdapter implements ProgressiveMediaExtractor
         this.f5645a = extractorsFactory2;
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public long m2558a() {
         ExtractorInput extractorInput = this.f5647c;
         if (extractorInput != null) {
@@ -47,7 +47,11 @@ public final class BundledExtractorsAdapter implements ProgressiveMediaExtractor
         return -1L;
     }
 
-    /* renamed from: b */
+    /* JADX WARN: Removed duplicated region for block: B:35:0x0061  */
+    /* JADX INFO: renamed from: b */
+    /*
+        Code decompiled incorrectly, please refer to instructions dump.
+    */
     public void m2559b(DataReader dataReader, Uri uri, Map<String, List<String>> map, long j, long j2, ExtractorOutput extractorOutput) throws IOException {
         DefaultExtractorInput defaultExtractorInput = new DefaultExtractorInput(dataReader, j, j2);
         this.f5647c = defaultExtractorInput;
@@ -89,6 +93,9 @@ public final class BundledExtractorsAdapter implements ProgressiveMediaExtractor
                     defaultExtractorInput.f8119f = 0;
                     i++;
                 }
+                AnimatableValueParser.m426D(z3);
+                defaultExtractorInput.f8119f = 0;
+                i++;
             }
             if (this.f5646b == null) {
                 int i2 = Util2.f6708a;

@@ -19,14 +19,14 @@ import p507d0.p580t.Collections2;
 import p507d0.p580t.CollectionsJVM;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: SpoilerNode.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: SpoilerNode.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class SpoilerNode<T extends RenderContext> extends Node<T> implements Spoilerable {
     private final String content;
     private int id;
     private boolean isRevealed;
 
-    /* compiled from: SpoilerNode.kt */
+    /* JADX INFO: compiled from: SpoilerNode.kt */
     public interface RenderContext extends BasicRenderContext {
         int getSpoilerColorRes();
 
@@ -65,7 +65,7 @@ public final class SpoilerNode<T extends RenderContext> extends Node<T> implemen
     }
 
     @Override // com.discord.utilities.textprocessing.node.Spoilerable
-    /* renamed from: isRevealed, reason: from getter */
+    /* JADX INFO: renamed from: isRevealed, reason: from getter */
     public boolean getIsRevealed() {
         return this.isRevealed;
     }

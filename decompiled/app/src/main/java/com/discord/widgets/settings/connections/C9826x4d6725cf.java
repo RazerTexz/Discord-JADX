@@ -4,9 +4,9 @@ import android.widget.CompoundButton;
 import com.discord.api.connectedaccounts.ConnectedAccount;
 import com.discord.widgets.settings.connections.WidgetSettingsUserConnections;
 
-/* compiled from: WidgetSettingsUserConnections.kt */
-/* renamed from: com.discord.widgets.settings.connections.WidgetSettingsUserConnections$Adapter$ViewHolder$onConfigure$$inlined$apply$lambda$3 */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.settings.connections.WidgetSettingsUserConnections$Adapter$ViewHolder$onConfigure$$inlined$apply$lambda$3 */
+/* JADX INFO: compiled from: WidgetSettingsUserConnections.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class C9826x4d6725cf implements CompoundButton.OnCheckedChangeListener {
     public final /* synthetic */ ConnectedAccount $connectedAccount;
     public final /* synthetic */ WidgetSettingsUserConnections.UserConnectionItem $data$inlined;

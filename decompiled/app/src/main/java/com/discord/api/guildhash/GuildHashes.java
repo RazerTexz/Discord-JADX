@@ -3,30 +3,30 @@ package com.discord.api.guildhash;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: GuildHashes.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: GuildHashes.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class GuildHashes {
     private final GuildHash channels;
     private final GuildHash metadata;
     private final GuildHash roles;
     private final int version;
 
-    /* renamed from: a, reason: from getter */
+    /* JADX INFO: renamed from: a, reason: from getter */
     public final GuildHash getChannels() {
         return this.channels;
     }
 
-    /* renamed from: b, reason: from getter */
+    /* JADX INFO: renamed from: b, reason: from getter */
     public final GuildHash getMetadata() {
         return this.metadata;
     }
 
-    /* renamed from: c, reason: from getter */
+    /* JADX INFO: renamed from: c, reason: from getter */
     public final GuildHash getRoles() {
         return this.roles;
     }
 
-    /* renamed from: d, reason: from getter */
+    /* JADX INFO: renamed from: d, reason: from getter */
     public final int getVersion() {
         return this.version;
     }

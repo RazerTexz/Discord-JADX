@@ -8,9 +8,9 @@ import com.discord.widgets.guilds.invite.GuildInviteShareSheetViewModel;
 import com.discord.widgets.guilds.invite.WidgetGuildInviteSettings;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: WidgetGuildInviteShareSheet.kt */
-/* renamed from: com.discord.widgets.guilds.invite.WidgetGuildInviteShareSheet$configureNormalUI$$inlined$with$lambda$3 */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.guilds.invite.WidgetGuildInviteShareSheet$configureNormalUI$$inlined$with$lambda$3 */
+/* JADX INFO: compiled from: WidgetGuildInviteShareSheet.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class ViewOnClickListenerC8703xecba64c6 implements View.OnClickListener {
     public final /* synthetic */ GuildInvite $invite;
     public final /* synthetic */ String $searchQuery$inlined;

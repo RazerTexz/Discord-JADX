@@ -4,9 +4,9 @@ import android.view.View;
 import kotlin.jvm.functions.Function1;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ViewExtensions.kt */
-/* renamed from: com.discord.utilities.view.extensions.ViewExtensions$sam$android_view_View_OnClickListener$0, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.utilities.view.extensions.ViewExtensions$sam$android_view_View_OnClickListener$0, reason: use source file name */
+/* JADX INFO: compiled from: ViewExtensions.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class ViewExtensions6 implements View.OnClickListener {
     private final /* synthetic */ Function1 function;
 

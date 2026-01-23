@@ -3,12 +3,12 @@ package p007b.p076b.p077a.p078a;
 import androidx.viewpager.widget.ViewPager;
 import com.google.android.material.tabs.TabLayout;
 
-/* compiled from: AddContentDialogFragment.kt */
-/* renamed from: b.b.a.a.c, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.b.a.a.c, reason: use source file name */
+/* JADX INFO: compiled from: AddContentDialogFragment.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class AddContentDialogFragment3 implements ViewPager.OnPageChangeListener {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final /* synthetic */ AddContentDialogFragment f2130a;
 
     public AddContentDialogFragment3(AddContentDialogFragment addContentDialogFragment) {

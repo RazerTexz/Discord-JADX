@@ -14,21 +14,21 @@ import p007b.p109f.p161j.p175j.CloseableImage;
 import p007b.p109f.p161j.p175j.CloseableStaticBitmap;
 import p007b.p109f.p161j.p175j.ImmutableQualityInfo;
 
-/* compiled from: FrescoFrameCache.java */
-/* renamed from: b.f.h.a.b.d.b, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.f.h.a.b.d.b, reason: use source file name */
+/* JADX INFO: compiled from: FrescoFrameCache.java */
+/* JADX INFO: loaded from: classes.dex */
 public class FrescoFrameCache implements BitmapFrameCache {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final AnimatedFrameCache f3509a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final boolean f3510b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final SparseArray<CloseableReference<CloseableImage>> f3511c = new SparseArray<>();
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public CloseableReference<CloseableImage> f3512d;
 
     public FrescoFrameCache(AnimatedFrameCache animatedFrameCache, boolean z2) {
@@ -37,7 +37,7 @@ public class FrescoFrameCache implements BitmapFrameCache {
     }
 
     @VisibleForTesting
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public static CloseableReference<Bitmap> m1157g(CloseableReference<CloseableImage> closeableReference) {
         CloseableReference<Bitmap> closeableReferenceM8636n;
         try {
@@ -63,7 +63,7 @@ public class FrescoFrameCache implements BitmapFrameCache {
     }
 
     @Override // p007b.p109f.p148h.p149a.p151b.BitmapFrameCache
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public synchronized CloseableReference<Bitmap> mo1151a(int i, int i2, int i3) {
         CacheKey next;
         CloseableReference<CloseableImage> closeableReference = null;
@@ -94,7 +94,7 @@ public class FrescoFrameCache implements BitmapFrameCache {
     }
 
     @Override // p007b.p109f.p148h.p149a.p151b.BitmapFrameCache
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public synchronized void mo1152b(int i, CloseableReference<Bitmap> closeableReference, int i2) {
         CloseableReference closeableReference2 = null;
         try {
@@ -125,7 +125,7 @@ public class FrescoFrameCache implements BitmapFrameCache {
     }
 
     @Override // p007b.p109f.p148h.p149a.p151b.BitmapFrameCache
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public synchronized boolean mo1153c(int i) {
         AnimatedFrameCache animatedFrameCache;
         animatedFrameCache = this.f3509a;
@@ -150,7 +150,7 @@ public class FrescoFrameCache implements BitmapFrameCache {
     }
 
     @Override // p007b.p109f.p148h.p149a.p151b.BitmapFrameCache
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public synchronized CloseableReference<Bitmap> mo1154d(int i) {
         AnimatedFrameCache animatedFrameCache;
         animatedFrameCache = this.f3509a;
@@ -158,7 +158,7 @@ public class FrescoFrameCache implements BitmapFrameCache {
     }
 
     @Override // p007b.p109f.p148h.p149a.p151b.BitmapFrameCache
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public synchronized void mo1155e(int i, CloseableReference<Bitmap> closeableReference, int i2) {
         CloseableReference<CloseableImage> closeableReferenceM8632A;
         try {
@@ -194,7 +194,7 @@ public class FrescoFrameCache implements BitmapFrameCache {
     }
 
     @Override // p007b.p109f.p148h.p149a.p151b.BitmapFrameCache
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public synchronized CloseableReference<Bitmap> mo1156f(int i) {
         return m1157g(CloseableReference.m8636n(this.f3512d));
     }

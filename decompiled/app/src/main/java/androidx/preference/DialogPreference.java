@@ -9,7 +9,7 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.content.res.AppCompatResources;
 import androidx.core.content.res.TypedArrayUtils;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public abstract class DialogPreference extends Preference {
     private Drawable mDialogIcon;
     private int mDialogLayoutResId;

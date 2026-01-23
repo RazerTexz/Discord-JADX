@@ -4,7 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.concurrent.futures.ResolvableFuture;
 import p007b.p225i.p355b.p359d.p360a.ListenableFuture8;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class FutureUtils {
     private FutureUtils() {
     }

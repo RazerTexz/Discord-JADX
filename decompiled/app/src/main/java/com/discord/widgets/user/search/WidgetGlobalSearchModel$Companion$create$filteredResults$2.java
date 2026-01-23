@@ -6,8 +6,8 @@ import kotlin.jvm.functions.Function1;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetGlobalSearchModel.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: WidgetGlobalSearchModel.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class WidgetGlobalSearchModel$Companion$create$filteredResults$2 extends Lambda implements Function1<Guild, WidgetGlobalSearchModel.ItemGuild> {
     public final /* synthetic */ String $sanitizedFilter;
     public final /* synthetic */ WidgetGlobalSearchModel$Companion$create$3 $toItemGuild$3;
@@ -24,7 +24,7 @@ public final class WidgetGlobalSearchModel$Companion$create$filteredResults$2 ex
         return invoke2(guild);
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final WidgetGlobalSearchModel.ItemGuild invoke2(Guild guild) {
         Intrinsics3.checkNotNullParameter(guild, "it");
         return this.$toItemGuild$3.invoke2(guild, this.$sanitizedFilter);

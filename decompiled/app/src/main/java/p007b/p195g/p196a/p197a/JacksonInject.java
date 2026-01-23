@@ -6,18 +6,18 @@ import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
-/* compiled from: JacksonInject.java */
+/* JADX INFO: renamed from: b.g.a.a.b, reason: use source file name */
+/* JADX INFO: compiled from: JacksonInject.java */
+/* JADX INFO: loaded from: classes3.dex */
 @Target({ElementType.ANNOTATION_TYPE, ElementType.METHOD, ElementType.FIELD, ElementType.PARAMETER})
 @Retention(RetentionPolicy.RUNTIME)
-/* renamed from: b.g.a.a.b, reason: use source file name */
-/* loaded from: classes3.dex */
 public @interface JacksonInject {
 
-    /* compiled from: JacksonInject.java */
-    /* renamed from: b.g.a.a.b$a */
+    /* JADX INFO: renamed from: b.g.a.a.b$a */
+    /* JADX INFO: compiled from: JacksonInject.java */
     public static class a implements Serializable {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public static final a f4365j = new a(null, null);
         private static final long serialVersionUID = 1;
         public final Object _id;
@@ -28,7 +28,7 @@ public @interface JacksonInject {
             this._useInput = bool;
         }
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public static a m1593a(Object obj, Boolean bool) {
             if ("".equals(obj)) {
                 obj = null;

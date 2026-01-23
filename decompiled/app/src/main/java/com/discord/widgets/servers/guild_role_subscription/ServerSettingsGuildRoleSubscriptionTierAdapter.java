@@ -27,8 +27,8 @@ import p507d0.p580t.Collections2;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: ServerSettingsGuildRoleSubscriptionTierAdapter.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: ServerSettingsGuildRoleSubscriptionTierAdapter.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class ServerSettingsGuildRoleSubscriptionTierAdapter extends RecyclerView.Adapter<ServerSettingsGuildRoleSubscriptionTierAdapter3> {
     private static final int VIEW_TYPE_ADD_ITEM = 1;
     private static final int VIEW_TYPE_TIER = 0;
@@ -36,15 +36,15 @@ public final class ServerSettingsGuildRoleSubscriptionTierAdapter extends Recycl
     private ItemClickListener itemClickListener;
     private List<? extends ServerSettingsGuildRoleSubscriptionTierAdapter2> items;
 
-    /* compiled from: ServerSettingsGuildRoleSubscriptionTierAdapter.kt */
+    /* JADX INFO: compiled from: ServerSettingsGuildRoleSubscriptionTierAdapter.kt */
     public interface ItemClickListener {
         void onAddTierItemClick();
 
         void onTierItemClick(long tierListingId);
     }
 
-    /* compiled from: ServerSettingsGuildRoleSubscriptionTierAdapter.kt */
-    /* renamed from: com.discord.widgets.servers.guild_role_subscription.ServerSettingsGuildRoleSubscriptionTierAdapter$setItems$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.guild_role_subscription.ServerSettingsGuildRoleSubscriptionTierAdapter$setItems$1 */
+    /* JADX INFO: compiled from: ServerSettingsGuildRoleSubscriptionTierAdapter.kt */
     public static final class C94411 extends Lambda implements Function1<List<? extends ServerSettingsGuildRoleSubscriptionTierAdapter2>, Unit> {
         public C94411() {
             super(1);
@@ -56,7 +56,7 @@ public final class ServerSettingsGuildRoleSubscriptionTierAdapter extends Recycl
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(List<? extends ServerSettingsGuildRoleSubscriptionTierAdapter2> list) {
             Intrinsics3.checkNotNullParameter(list, "items");
             ServerSettingsGuildRoleSubscriptionTierAdapter.access$setItems$p(ServerSettingsGuildRoleSubscriptionTierAdapter.this, list);

@@ -9,9 +9,9 @@ import kotlin.jvm.functions.Function1;
 import p507d0.p592z.p594d.FunctionReferenceImpl;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: WidgetGuildRoleSubscriptionReview.kt */
-/* renamed from: com.discord.widgets.guild_role_subscriptions.tier.create.WidgetGuildRoleSubscriptionReview$binding$2, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.guild_role_subscriptions.tier.create.WidgetGuildRoleSubscriptionReview$binding$2, reason: use source file name */
+/* JADX INFO: compiled from: WidgetGuildRoleSubscriptionReview.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final /* synthetic */ class WidgetGuildRoleSubscriptionReview2 extends FunctionReferenceImpl implements Function1<View, WidgetGuildRoleSubscriptionTierReviewBinding> {
     public static final WidgetGuildRoleSubscriptionReview2 INSTANCE = new WidgetGuildRoleSubscriptionReview2();
 
@@ -24,7 +24,7 @@ public final /* synthetic */ class WidgetGuildRoleSubscriptionReview2 extends Fu
         return invoke2(view);
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final WidgetGuildRoleSubscriptionTierReviewBinding invoke2(View view) {
         Intrinsics3.checkNotNullParameter(view, "p1");
         RecyclerView recyclerView = (RecyclerView) view.findViewById(C5419R.id.subscription_tier_review_recycler);

@@ -6,8 +6,8 @@ import com.discord.api.science.AnalyticsSchema;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: TrackMessageComponentUsed.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: TrackMessageComponentUsed.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class TrackMessageComponentUsed implements AnalyticsSchema, TrackBase2 {
     private TrackBase trackBase;
     private final Long applicationId = null;
@@ -17,7 +17,7 @@ public final /* data */ class TrackMessageComponentUsed implements AnalyticsSche
     private final transient String analyticsSchemaTypeName = "message_component_used";
 
     @Override // com.discord.api.science.AnalyticsSchema
-    /* renamed from: d, reason: from getter */
+    /* JADX INFO: renamed from: d, reason: from getter */
     public String getAnalyticsSchemaTypeName() {
         return this.analyticsSchemaTypeName;
     }

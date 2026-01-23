@@ -12,28 +12,28 @@ import p007b.p195g.p196a.p205c.p218h0.MapLikeType;
 import p007b.p195g.p196a.p205c.p218h0.MapType;
 import p007b.p195g.p196a.p205c.p218h0.ReferenceType;
 
-/* compiled from: Serializers.java */
-/* renamed from: b.g.a.c.g0.r, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.g.a.c.g0.r, reason: use source file name */
+/* JADX INFO: compiled from: Serializers.java */
+/* JADX INFO: loaded from: classes3.dex */
 public interface Serializers {
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     JsonSerializer<?> m2010a(SerializationConfig serializationConfig, ReferenceType referenceType, BeanDescription beanDescription, TypeSerializer typeSerializer, JsonSerializer<Object> jsonSerializer);
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     JsonSerializer<?> m2011b(SerializationConfig serializationConfig, JavaType javaType, BeanDescription beanDescription);
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     JsonSerializer<?> m2012c(SerializationConfig serializationConfig, MapType mapType, BeanDescription beanDescription, JsonSerializer<Object> jsonSerializer, TypeSerializer typeSerializer, JsonSerializer<Object> jsonSerializer2);
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     JsonSerializer<?> m2013d(SerializationConfig serializationConfig, CollectionLikeType collectionLikeType, BeanDescription beanDescription, TypeSerializer typeSerializer, JsonSerializer<Object> jsonSerializer);
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     JsonSerializer<?> m2014e(SerializationConfig serializationConfig, ArrayType arrayType, BeanDescription beanDescription, TypeSerializer typeSerializer, JsonSerializer<Object> jsonSerializer);
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     JsonSerializer<?> m2015f(SerializationConfig serializationConfig, MapLikeType mapLikeType, BeanDescription beanDescription, JsonSerializer<Object> jsonSerializer, TypeSerializer typeSerializer, JsonSerializer<Object> jsonSerializer2);
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     JsonSerializer<?> m2016g(SerializationConfig serializationConfig, CollectionType collectionType, BeanDescription beanDescription, TypeSerializer typeSerializer, JsonSerializer<Object> jsonSerializer);
 }

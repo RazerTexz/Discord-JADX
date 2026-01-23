@@ -4,8 +4,8 @@ import androidx.annotation.RestrictTo;
 import androidx.work.WorkerParameters;
 import androidx.work.impl.WorkManagerImpl;
 
+/* JADX INFO: loaded from: classes.dex */
 @RestrictTo({RestrictTo.Scope.LIBRARY_GROUP})
-/* loaded from: classes.dex */
 public class StartWorkRunnable implements Runnable {
     private WorkerParameters.RuntimeExtras mRuntimeExtras;
     private WorkManagerImpl mWorkManagerImpl;

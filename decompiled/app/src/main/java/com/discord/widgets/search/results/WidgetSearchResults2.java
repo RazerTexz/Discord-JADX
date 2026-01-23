@@ -35,14 +35,14 @@ import p507d0.p592z.p594d.Lambda;
 import p637j0.p641k.Func1;
 import p658rx.Observable;
 
-/* compiled from: WidgetSearchResults.kt */
-/* renamed from: com.discord.widgets.search.results.WidgetSearchResults$Model$Companion$get$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.search.results.WidgetSearchResults$Model$Companion$get$1, reason: use source file name */
+/* JADX INFO: compiled from: WidgetSearchResults.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetSearchResults2<T, R> implements Func1<SearchState, Observable<? extends WidgetSearchResults.Model>> {
     public static final WidgetSearchResults2 INSTANCE = new WidgetSearchResults2();
 
-    /* compiled from: WidgetSearchResults.kt */
-    /* renamed from: com.discord.widgets.search.results.WidgetSearchResults$Model$Companion$get$1$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.search.results.WidgetSearchResults$Model$Companion$get$1$1 */
+    /* JADX INFO: compiled from: WidgetSearchResults.kt */
     public static final class C91341 extends Lambda implements Function10<WidgetChatListModelMessages.MessagesWithMetadata, Long, Map<Long, ? extends String>, Map<Long, ? extends Guild>, Map<Long, ? extends Map<Long, ? extends GuildMember>>, Map<Long, ? extends Map<Long, ? extends GuildRole>>, Map<Long, ? extends Channel>, Boolean, Boolean, InviteEmbedModel, WidgetSearchResults.Model> {
         public final /* synthetic */ SearchState $searchState;
 
@@ -128,7 +128,7 @@ public final class WidgetSearchResults2<T, R> implements Func1<SearchState, Obse
         return call2(searchState);
     }
 
-    /* renamed from: call, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
     public final Observable<? extends WidgetSearchResults.Model> call2(SearchState searchState) {
         WidgetChatListModelMessages.MessagesWithMetadata.Companion companion = WidgetChatListModelMessages.MessagesWithMetadata.INSTANCE;
         List<Message> hits = searchState.getHits();

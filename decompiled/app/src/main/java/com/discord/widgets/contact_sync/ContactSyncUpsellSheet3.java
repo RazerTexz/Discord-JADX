@@ -9,14 +9,14 @@ import kotlin.jvm.functions.Function1;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: ContactSyncUpsellSheet.kt */
-/* renamed from: com.discord.widgets.contact_sync.ContactSyncUpsellSheet$viewModel$2, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.contact_sync.ContactSyncUpsellSheet$viewModel$2, reason: use source file name */
+/* JADX INFO: compiled from: ContactSyncUpsellSheet.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class ContactSyncUpsellSheet3 extends Lambda implements Function0<WidgetContactSyncViewModel> {
     public static final ContactSyncUpsellSheet3 INSTANCE = new ContactSyncUpsellSheet3();
 
-    /* compiled from: ContactSyncUpsellSheet.kt */
-    /* renamed from: com.discord.widgets.contact_sync.ContactSyncUpsellSheet$viewModel$2$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.contact_sync.ContactSyncUpsellSheet$viewModel$2$1 */
+    /* JADX INFO: compiled from: ContactSyncUpsellSheet.kt */
     public static final class C82221 extends Lambda implements Function1<Error, Unit> {
         public static final C82221 INSTANCE = new C82221();
 
@@ -30,7 +30,7 @@ public final class ContactSyncUpsellSheet3 extends Lambda implements Function0<W
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Error error) {
             Intrinsics3.checkNotNullParameter(error, "it");
             Logger.e$default(AppLog.f14950g, "Invalid CAPTCHA: We shouldn't be interacting with CAPTCHA on this screen.", null, null, 6, null);

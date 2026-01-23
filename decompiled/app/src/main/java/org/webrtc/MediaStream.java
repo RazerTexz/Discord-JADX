@@ -5,7 +5,7 @@ import java.util.Iterator;
 import java.util.List;
 import p007b.p100d.p104b.p105a.outline;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public class MediaStream {
     private static final String TAG = "MediaStream";
     private long nativeStream;

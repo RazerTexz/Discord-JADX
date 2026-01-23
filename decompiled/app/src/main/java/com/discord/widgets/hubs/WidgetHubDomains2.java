@@ -7,20 +7,20 @@ import com.discord.models.domain.ModelAuditLogEntry;
 import kotlin.jvm.internal.DefaultConstructorMarker;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: WidgetHubDomains.kt */
-/* renamed from: com.discord.widgets.hubs.DomainGuildInfo, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.hubs.DomainGuildInfo, reason: use source file name */
+/* JADX INFO: compiled from: WidgetHubDomains.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetHubDomains2 implements Parcelable {
     private final String icon;
     private final long id;
     private final String name;
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     public static final Parcelable.Creator<WidgetHubDomains2> CREATOR = new Creator();
 
-    /* compiled from: WidgetHubDomains.kt */
-    /* renamed from: com.discord.widgets.hubs.DomainGuildInfo$Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: com.discord.widgets.hubs.DomainGuildInfo$Companion, reason: from kotlin metadata */
+    /* JADX INFO: compiled from: WidgetHubDomains.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -35,7 +35,7 @@ public final class WidgetHubDomains2 implements Parcelable {
         }
     }
 
-    /* renamed from: com.discord.widgets.hubs.DomainGuildInfo$Creator */
+    /* JADX INFO: renamed from: com.discord.widgets.hubs.DomainGuildInfo$Creator */
     public static class Creator implements Parcelable.Creator<WidgetHubDomains2> {
         /* JADX WARN: Can't rename method to resolve collision */
         @Override // android.os.Parcelable.Creator

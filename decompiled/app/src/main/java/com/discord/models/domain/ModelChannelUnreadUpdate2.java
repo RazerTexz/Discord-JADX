@@ -8,15 +8,15 @@ import kotlin.jvm.internal.Ref$ObjectRef;
 import p507d0.p592z.p594d.Intrinsics3;
 import p658rx.functions.Action1;
 
-/* compiled from: ModelChannelUnreadUpdate.kt */
-/* renamed from: com.discord.models.domain.ModelChannelUnreadUpdate$Parser$parse$1, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: com.discord.models.domain.ModelChannelUnreadUpdate$Parser$parse$1, reason: use source file name */
+/* JADX INFO: compiled from: ModelChannelUnreadUpdate.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class ModelChannelUnreadUpdate2<T> implements Action1<String> {
     public final /* synthetic */ Ref$ObjectRef $channelReadStates;
     public final /* synthetic */ Model.JsonReader $reader;
 
-    /* compiled from: ModelChannelUnreadUpdate.kt */
-    /* renamed from: com.discord.models.domain.ModelChannelUnreadUpdate$Parser$parse$1$1 */
+    /* JADX INFO: renamed from: com.discord.models.domain.ModelChannelUnreadUpdate$Parser$parse$1$1 */
+    /* JADX INFO: compiled from: ModelChannelUnreadUpdate.kt */
     public static final class C55341<T> implements Model.JsonReader.ItemFactory<ModelReadState> {
         public C55341() {
         }
@@ -43,7 +43,7 @@ public final class ModelChannelUnreadUpdate2<T> implements Action1<String> {
         call2(str);
     }
 
-    /* renamed from: call, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
     public final void call2(String str) throws IOException {
         if (str == null || str.hashCode() != -298662154 || !str.equals("channel_unread_updates")) {
             this.$reader.skipValue();

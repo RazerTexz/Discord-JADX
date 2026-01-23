@@ -6,15 +6,15 @@ import p001a0.p002a.p003a.C0002b;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: WidgetHubDescription.kt */
-/* renamed from: com.discord.widgets.hubs.DescriptionResult, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.hubs.DescriptionResult, reason: use source file name */
+/* JADX INFO: compiled from: WidgetHubDescription.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final /* data */ class WidgetHubDescription2 implements Parcelable {
     public static final Parcelable.Creator<WidgetHubDescription2> CREATOR = new Creator();
     private final long guildId;
     private final String hubName;
 
-    /* renamed from: com.discord.widgets.hubs.DescriptionResult$Creator */
+    /* JADX INFO: renamed from: com.discord.widgets.hubs.DescriptionResult$Creator */
     public static class Creator implements Parcelable.Creator<WidgetHubDescription2> {
         /* JADX WARN: Can't rename method to resolve collision */
         @Override // android.os.Parcelable.Creator
@@ -56,12 +56,12 @@ public final /* data */ class WidgetHubDescription2 implements Parcelable {
         return widgetHubDescription2.copy(j, str);
     }
 
-    /* renamed from: component1, reason: from getter */
+    /* JADX INFO: renamed from: component1, reason: from getter */
     public final long getGuildId() {
         return this.guildId;
     }
 
-    /* renamed from: component2, reason: from getter */
+    /* JADX INFO: renamed from: component2, reason: from getter */
     public final String getHubName() {
         return this.hubName;
     }

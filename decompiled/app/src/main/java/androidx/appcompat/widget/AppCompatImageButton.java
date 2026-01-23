@@ -16,7 +16,7 @@ import androidx.appcompat.C0051R;
 import androidx.core.view.TintableBackgroundView;
 import androidx.core.widget.TintableImageSourceView;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class AppCompatImageButton extends ImageButton implements TintableBackgroundView, TintableImageSourceView {
     private final AppCompatBackgroundHelper mBackgroundTintHelper;
     private final AppCompatImageHelper mImageHelper;

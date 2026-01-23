@@ -10,14 +10,14 @@ import androidx.appcompat.widget.AppCompatImageView;
 import com.discord.C5419R;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: CheckableImageView.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: CheckableImageView.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class CheckableImageView extends AppCompatImageView implements Checkable {
 
-    /* renamed from: j, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: j, reason: from kotlin metadata */
     public final int[] checkedStateSet;
 
-    /* renamed from: k, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: k, reason: from kotlin metadata */
     public boolean checked;
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */

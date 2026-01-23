@@ -3,7 +3,7 @@ package com.esotericsoftware.kryo.util;
 import java.util.concurrent.ConcurrentHashMap;
 import p007b.p106e.p107a.Log;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class Util {
     public static final boolean IS_ANDROID;
     private static final ConcurrentHashMap<String, Boolean> classAvailabilities;

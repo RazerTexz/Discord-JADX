@@ -15,9 +15,9 @@ import kotlin.Unit;
 import kotlin.jvm.functions.Function1;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ContextExtensions.kt */
-/* renamed from: com.discord.utilities.context.ContextExtensionsKt, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.utilities.context.ContextExtensionsKt, reason: use source file name */
+/* JADX INFO: compiled from: ContextExtensions.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class ContextExtensions {
     public static final AppCompatActivity findActivity(Context context) {
         Intrinsics3.checkNotNullParameter(context, "$this$findActivity");

@@ -12,7 +12,7 @@ import org.objectweb.asm.ClassWriter;
 import org.objectweb.asm.MethodVisitor;
 import org.objectweb.asm.Opcodes;
 
-/* loaded from: discord-126021.apk:lombok/patcher/scripts/ReplaceMethodCallScript.SCL.lombok */
+/* JADX INFO: loaded from: discord-126021.apk:lombok/patcher/scripts/ReplaceMethodCallScript.SCL.lombok */
 public class ReplaceMethodCallScript extends MethodLevelPatchScript {
     private final Hook wrapper;
     private final Hook methodToReplace;
@@ -72,8 +72,8 @@ public class ReplaceMethodCallScript extends MethodLevelPatchScript {
         this.extraRequests = extraRequests;
     }
 
-    /* renamed from: lombok.patcher.scripts.ReplaceMethodCallScript$1 */
-    /* loaded from: discord-126021.apk:lombok/patcher/scripts/ReplaceMethodCallScript$1.SCL.lombok */
+    /* JADX INFO: renamed from: lombok.patcher.scripts.ReplaceMethodCallScript$1 */
+    /* JADX INFO: loaded from: discord-126021.apk:lombok/patcher/scripts/ReplaceMethodCallScript$1.SCL.lombok */
     class C129171 implements PatchScript.MethodPatcherFactory {
         private final /* synthetic */ String val$classSpec;
 
@@ -96,7 +96,7 @@ public class ReplaceMethodCallScript extends MethodLevelPatchScript {
         return patcher;
     }
 
-    /* loaded from: discord-126021.apk:lombok/patcher/scripts/ReplaceMethodCallScript$ReplaceMethodCall.SCL.lombok */
+    /* JADX INFO: loaded from: discord-126021.apk:lombok/patcher/scripts/ReplaceMethodCallScript$ReplaceMethodCall.SCL.lombok */
     private class ReplaceMethodCall extends MethodVisitor {
         private final String ownClassSpec;
         private final MethodLogistics logistics;

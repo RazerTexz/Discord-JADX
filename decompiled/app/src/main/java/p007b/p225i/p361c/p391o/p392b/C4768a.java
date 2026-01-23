@@ -7,9 +7,9 @@ import android.os.Parcelable;
 import com.google.firebase.dynamiclinks.internal.DynamicLinkData;
 import p007b.p085c.p086a.p087a0.AnimatableValueParser;
 
-/* compiled from: com.google.firebase:firebase-dynamic-links@@19.1.1 */
-/* renamed from: b.i.c.o.b.a */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.c.o.b.a */
+/* JADX INFO: compiled from: com.google.firebase:firebase-dynamic-links@@19.1.1 */
+/* JADX INFO: loaded from: classes3.dex */
 public final class C4768a implements Parcelable.Creator<DynamicLinkData> {
     @Override // android.os.Parcelable.Creator
     public final DynamicLinkData createFromParcel(Parcel parcel) {

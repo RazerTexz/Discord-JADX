@@ -50,28 +50,28 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 import p507d0.p592z.p594d.Reflection2;
 
-/* compiled from: reflectClassUtil.kt */
-/* renamed from: d0.e0.p.d.m0.c.k1.b.b, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.c.k1.b.b, reason: use source file name */
+/* JADX INFO: compiled from: reflectClassUtil.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class reflectClassUtil {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final List<KClass<? extends Object>> f23032a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static final Map<Class<? extends Object>, Class<? extends Object>> f23033b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public static final Map<Class<? extends Object>, Class<? extends Object>> f23034c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public static final Map<Class<? extends Function3<?>>, Integer> f23035d;
 
-    /* compiled from: reflectClassUtil.kt */
-    /* renamed from: d0.e0.p.d.m0.c.k1.b.b$a */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.c.k1.b.b$a */
+    /* JADX INFO: compiled from: reflectClassUtil.kt */
     public static final class a extends Lambda implements Function1<ParameterizedType, ParameterizedType> {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public static final a f23036j = new a();
 
         public a() {
@@ -83,7 +83,7 @@ public final class reflectClassUtil {
             return invoke2(parameterizedType);
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final ParameterizedType invoke2(ParameterizedType parameterizedType) {
             Intrinsics3.checkNotNullParameter(parameterizedType, "it");
             Type ownerType = parameterizedType.getOwnerType();
@@ -94,11 +94,11 @@ public final class reflectClassUtil {
         }
     }
 
-    /* compiled from: reflectClassUtil.kt */
-    /* renamed from: d0.e0.p.d.m0.c.k1.b.b$b */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.c.k1.b.b$b */
+    /* JADX INFO: compiled from: reflectClassUtil.kt */
     public static final class b extends Lambda implements Function1<ParameterizedType, Sequence<? extends Type>> {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public static final b f23037j = new b();
 
         public b() {
@@ -110,7 +110,7 @@ public final class reflectClassUtil {
             return invoke2(parameterizedType);
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final Sequence<Type> invoke2(ParameterizedType parameterizedType) {
             Intrinsics3.checkNotNullParameter(parameterizedType, "it");
             Type[] actualTypeArguments = parameterizedType.getActualTypeArguments();

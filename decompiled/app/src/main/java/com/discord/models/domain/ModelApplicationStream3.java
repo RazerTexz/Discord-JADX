@@ -9,17 +9,17 @@ import p007b.p100d.p104b.p105a.outline;
 import p507d0.p580t.Collections2;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ModelApplicationStream.kt */
-/* renamed from: com.discord.models.domain.StreamCreateOrUpdate, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: com.discord.models.domain.StreamCreateOrUpdate, reason: use source file name */
+/* JADX INFO: compiled from: ModelApplicationStream.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class ModelApplicationStream3 {
     private final boolean paused;
     private final String rtcServerId;
     private final String streamKey;
     private final List<Long> viewerIds;
 
-    /* compiled from: ModelApplicationStream.kt */
-    /* renamed from: com.discord.models.domain.StreamCreateOrUpdate$Parser */
+    /* JADX INFO: renamed from: com.discord.models.domain.StreamCreateOrUpdate$Parser */
+    /* JADX INFO: compiled from: ModelApplicationStream.kt */
     public static final class Parser implements Model.Parser<ModelApplicationStream3> {
         public static final Parser INSTANCE = new Parser();
 
@@ -85,17 +85,17 @@ public final /* data */ class ModelApplicationStream3 {
         return modelApplicationStream3.copy(str, str2, z2, list);
     }
 
-    /* renamed from: component1, reason: from getter */
+    /* JADX INFO: renamed from: component1, reason: from getter */
     public final String getStreamKey() {
         return this.streamKey;
     }
 
-    /* renamed from: component2, reason: from getter */
+    /* JADX INFO: renamed from: component2, reason: from getter */
     public final String getRtcServerId() {
         return this.rtcServerId;
     }
 
-    /* renamed from: component3, reason: from getter */
+    /* JADX INFO: renamed from: component3, reason: from getter */
     public final boolean getPaused() {
         return this.paused;
     }
@@ -138,19 +138,22 @@ public final /* data */ class ModelApplicationStream3 {
     }
 
     /* JADX WARN: Multi-variable type inference failed */
+    /* JADX WARN: Type inference failed for: r2v4, types: [int] */
+    /* JADX WARN: Type inference failed for: r2v6 */
+    /* JADX WARN: Type inference failed for: r2v8 */
     public int hashCode() {
         String str = this.streamKey;
         int iHashCode = (str != null ? str.hashCode() : 0) * 31;
         String str2 = this.rtcServerId;
         int iHashCode2 = (iHashCode + (str2 != null ? str2.hashCode() : 0)) * 31;
         boolean z2 = this.paused;
-        int i = z2;
-        if (z2 != 0) {
-            i = 1;
+        ?? r2 = z2;
+        if (z2) {
+            r2 = 1;
         }
-        int i2 = (iHashCode2 + i) * 31;
+        int i = (iHashCode2 + r2) * 31;
         List<Long> list = this.viewerIds;
-        return i2 + (list != null ? list.hashCode() : 0);
+        return i + (list != null ? list.hashCode() : 0);
     }
 
     public String toString() {

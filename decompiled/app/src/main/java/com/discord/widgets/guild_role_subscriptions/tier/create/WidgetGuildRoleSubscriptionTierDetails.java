@@ -43,27 +43,27 @@ import p507d0.p592z.p594d.Reflection2;
 import p658rx.Observable;
 import p658rx.functions.Action1;
 
-/* compiled from: WidgetGuildRoleSubscriptionTierDetails.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetGuildRoleSubscriptionTierDetails.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetGuildRoleSubscriptionTierDetails extends AppFragment {
     public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetGuildRoleSubscriptionTierDetails.class, "binding", "getBinding()Lcom/discord/databinding/WidgetGuildRoleSubscriptionDetailsBinding;", 0)};
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private static final String INTENT_IS_EDIT_MODE = "INTENT_IS_EDIT_MODE";
     private static final String REQUEST_KEY_PRICE_TIER_PICKER = "REQUEST_KEY_PRICE_TIER_PICKER";
 
-    /* renamed from: binding$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
 
-    /* renamed from: isEditMode$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: isEditMode$delegate, reason: from kotlin metadata */
     private final Lazy isEditMode;
     private final Action1<String> tierImageSelectedResult;
 
-    /* renamed from: viewModel$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: viewModel$delegate, reason: from kotlin metadata */
     private final Lazy viewModel;
 
-    /* compiled from: WidgetGuildRoleSubscriptionTierDetails.kt */
+    /* JADX INFO: compiled from: WidgetGuildRoleSubscriptionTierDetails.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -86,8 +86,8 @@ public final class WidgetGuildRoleSubscriptionTierDetails extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetGuildRoleSubscriptionTierDetails.kt */
-    /* renamed from: com.discord.widgets.guild_role_subscriptions.tier.create.WidgetGuildRoleSubscriptionTierDetails$configureUI$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.guild_role_subscriptions.tier.create.WidgetGuildRoleSubscriptionTierDetails$configureUI$1 */
+    /* JADX INFO: compiled from: WidgetGuildRoleSubscriptionTierDetails.kt */
     public static final class ViewOnClickListenerC85091 implements View.OnClickListener {
         public ViewOnClickListenerC85091() {
         }
@@ -98,8 +98,8 @@ public final class WidgetGuildRoleSubscriptionTierDetails extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetGuildRoleSubscriptionTierDetails.kt */
-    /* renamed from: com.discord.widgets.guild_role_subscriptions.tier.create.WidgetGuildRoleSubscriptionTierDetails$isEditMode$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.guild_role_subscriptions.tier.create.WidgetGuildRoleSubscriptionTierDetails$isEditMode$2 */
+    /* JADX INFO: compiled from: WidgetGuildRoleSubscriptionTierDetails.kt */
     public static final class C85102 extends Lambda implements Function0<Boolean> {
         public C85102() {
             super(0);
@@ -110,7 +110,7 @@ public final class WidgetGuildRoleSubscriptionTierDetails extends AppFragment {
             return Boolean.valueOf(invoke2());
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final boolean invoke2() {
             Bundle arguments = WidgetGuildRoleSubscriptionTierDetails.this.getArguments();
             if (arguments != null) {
@@ -120,8 +120,8 @@ public final class WidgetGuildRoleSubscriptionTierDetails extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetGuildRoleSubscriptionTierDetails.kt */
-    /* renamed from: com.discord.widgets.guild_role_subscriptions.tier.create.WidgetGuildRoleSubscriptionTierDetails$onViewBound$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.guild_role_subscriptions.tier.create.WidgetGuildRoleSubscriptionTierDetails$onViewBound$1 */
+    /* JADX INFO: compiled from: WidgetGuildRoleSubscriptionTierDetails.kt */
     public static final class C85111 extends Lambda implements Function1<Integer, Unit> {
         public C85111() {
             super(1);
@@ -138,8 +138,8 @@ public final class WidgetGuildRoleSubscriptionTierDetails extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetGuildRoleSubscriptionTierDetails.kt */
-    /* renamed from: com.discord.widgets.guild_role_subscriptions.tier.create.WidgetGuildRoleSubscriptionTierDetails$onViewBound$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.guild_role_subscriptions.tier.create.WidgetGuildRoleSubscriptionTierDetails$onViewBound$2 */
+    /* JADX INFO: compiled from: WidgetGuildRoleSubscriptionTierDetails.kt */
     public static final class C85122 extends Lambda implements Function0<Unit> {
         public static final C85122 INSTANCE = new C85122();
 
@@ -153,13 +153,13 @@ public final class WidgetGuildRoleSubscriptionTierDetails extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
         }
     }
 
-    /* compiled from: WidgetGuildRoleSubscriptionTierDetails.kt */
-    /* renamed from: com.discord.widgets.guild_role_subscriptions.tier.create.WidgetGuildRoleSubscriptionTierDetails$onViewBound$3 */
+    /* JADX INFO: renamed from: com.discord.widgets.guild_role_subscriptions.tier.create.WidgetGuildRoleSubscriptionTierDetails$onViewBound$3 */
+    /* JADX INFO: compiled from: WidgetGuildRoleSubscriptionTierDetails.kt */
     public static final class C85133 extends Lambda implements Function0<Unit> {
         public C85133() {
             super(0);
@@ -171,14 +171,14 @@ public final class WidgetGuildRoleSubscriptionTierDetails extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             WidgetGuildRoleSubscriptionTierDetails.this.openMediaChooser();
         }
     }
 
-    /* compiled from: WidgetGuildRoleSubscriptionTierDetails.kt */
-    /* renamed from: com.discord.widgets.guild_role_subscriptions.tier.create.WidgetGuildRoleSubscriptionTierDetails$onViewBound$4 */
+    /* JADX INFO: renamed from: com.discord.widgets.guild_role_subscriptions.tier.create.WidgetGuildRoleSubscriptionTierDetails$onViewBound$4 */
+    /* JADX INFO: compiled from: WidgetGuildRoleSubscriptionTierDetails.kt */
     public static final class C85144 extends Lambda implements Function1<String, Unit> {
         public C85144() {
             super(1);
@@ -190,15 +190,15 @@ public final class WidgetGuildRoleSubscriptionTierDetails extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(String str) {
             Intrinsics3.checkNotNullParameter(str, "it");
             WidgetGuildRoleSubscriptionTierDetails.access$getViewModel$p(WidgetGuildRoleSubscriptionTierDetails.this).updateTierName(str);
         }
     }
 
-    /* compiled from: WidgetGuildRoleSubscriptionTierDetails.kt */
-    /* renamed from: com.discord.widgets.guild_role_subscriptions.tier.create.WidgetGuildRoleSubscriptionTierDetails$onViewBound$5 */
+    /* JADX INFO: renamed from: com.discord.widgets.guild_role_subscriptions.tier.create.WidgetGuildRoleSubscriptionTierDetails$onViewBound$5 */
+    /* JADX INFO: compiled from: WidgetGuildRoleSubscriptionTierDetails.kt */
     public static final class C85155 extends Lambda implements Function1<String, Unit> {
         public C85155() {
             super(1);
@@ -210,15 +210,15 @@ public final class WidgetGuildRoleSubscriptionTierDetails extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(String str) {
             Intrinsics3.checkNotNullParameter(str, "it");
             WidgetGuildRoleSubscriptionTierDetails.access$getViewModel$p(WidgetGuildRoleSubscriptionTierDetails.this).updateDescription(str);
         }
     }
 
-    /* compiled from: WidgetGuildRoleSubscriptionTierDetails.kt */
-    /* renamed from: com.discord.widgets.guild_role_subscriptions.tier.create.WidgetGuildRoleSubscriptionTierDetails$onViewBoundOrOnResume$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.guild_role_subscriptions.tier.create.WidgetGuildRoleSubscriptionTierDetails$onViewBoundOrOnResume$1 */
+    /* JADX INFO: compiled from: WidgetGuildRoleSubscriptionTierDetails.kt */
     public static final class C85161 extends Lambda implements Function1<GuildRoleSubscriptionTierViewModel.ViewState, Unit> {
         public C85161() {
             super(1);
@@ -230,7 +230,7 @@ public final class WidgetGuildRoleSubscriptionTierDetails extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(GuildRoleSubscriptionTierViewModel.ViewState viewState) {
             WidgetGuildRoleSubscriptionTierDetails widgetGuildRoleSubscriptionTierDetails = WidgetGuildRoleSubscriptionTierDetails.this;
             Intrinsics3.checkNotNullExpressionValue(viewState, "viewState");

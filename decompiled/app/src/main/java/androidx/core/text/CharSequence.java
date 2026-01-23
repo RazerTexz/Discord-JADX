@@ -3,9 +3,9 @@ package androidx.core.text;
 import android.text.TextUtils;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: CharSequence.kt */
-/* renamed from: androidx.core.text.CharSequenceKt, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: androidx.core.text.CharSequenceKt, reason: use source file name */
+/* JADX INFO: compiled from: CharSequence.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class CharSequence {
     public static final boolean isDigitsOnly(java.lang.CharSequence charSequence) {
         Intrinsics3.checkNotNullParameter(charSequence, "<this>");

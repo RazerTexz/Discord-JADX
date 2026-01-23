@@ -5,9 +5,9 @@ import androidx.fragment.app.Fragment;
 import com.lytefast.flexinput.fragment.CameraFragment;
 import p007b.p076b.p077a.p079d.AddContentPagerAdapter4;
 
-/* compiled from: WidgetChatInputAttachments.kt */
-/* renamed from: com.discord.widgets.chat.input.WidgetChatInputAttachments$configureFlexInputContentPages$1$pageArray$3 */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.chat.input.WidgetChatInputAttachments$configureFlexInputContentPages$1$pageArray$3 */
+/* JADX INFO: compiled from: WidgetChatInputAttachments.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class C7740xcc8c685a extends AddContentPagerAdapter4.a {
     public final /* synthetic */ Context $context;
 

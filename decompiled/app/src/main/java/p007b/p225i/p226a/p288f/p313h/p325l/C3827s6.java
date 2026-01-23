@@ -8,21 +8,21 @@ import java.util.Map;
 import java.util.Objects;
 import java.util.logging.Logger;
 
-/* compiled from: com.google.android.gms:play-services-measurement-base@@18.0.0 */
-/* renamed from: b.i.a.f.h.l.s6 */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.h.l.s6 */
+/* JADX INFO: compiled from: com.google.android.gms:play-services-measurement-base@@18.0.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public final class C3827s6 {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final Class<?> f10313a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static final AbstractC3627d7<?, ?> f10314b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public static final AbstractC3627d7<?, ?> f10315c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public static final AbstractC3627d7<?, ?> f10316d;
 
     static {
@@ -38,7 +38,7 @@ public final class C3827s6 {
         f10316d = new C3655f7();
     }
 
-    /* renamed from: A */
+    /* JADX INFO: renamed from: A */
     public static void m5217A(int i, List<Long> list, InterfaceC3867v7 interfaceC3867v7, boolean z2) throws IOException {
         if (list == null || list.isEmpty()) {
             return;
@@ -65,7 +65,7 @@ public final class C3827s6 {
         }
     }
 
-    /* renamed from: B */
+    /* JADX INFO: renamed from: B */
     public static int m5218B(int i, List list) {
         int size = list.size();
         if (size == 0) {
@@ -74,7 +74,7 @@ public final class C3827s6 {
         return (zzhi.m9052D(i) * size) + m5219C(list);
     }
 
-    /* renamed from: C */
+    /* JADX INFO: renamed from: C */
     public static int m5219C(List<Integer> list) {
         int iM9059L;
         int size = list.size();
@@ -99,7 +99,7 @@ public final class C3827s6 {
         return iM9059L;
     }
 
-    /* renamed from: D */
+    /* JADX INFO: renamed from: D */
     public static void m5220D(int i, List<Long> list, InterfaceC3867v7 interfaceC3867v7, boolean z2) throws IOException {
         if (list == null || list.isEmpty()) {
             return;
@@ -128,7 +128,7 @@ public final class C3827s6 {
         }
     }
 
-    /* renamed from: E */
+    /* JADX INFO: renamed from: E */
     public static int m5221E(int i, List list) {
         int size = list.size();
         if (size == 0) {
@@ -137,7 +137,7 @@ public final class C3827s6 {
         return (zzhi.m9052D(i) * size) + m5222F(list);
     }
 
-    /* renamed from: F */
+    /* JADX INFO: renamed from: F */
     public static int m5222F(List<Integer> list) {
         int iM9062O;
         int size = list.size();
@@ -162,7 +162,7 @@ public final class C3827s6 {
         return iM9062O;
     }
 
-    /* renamed from: G */
+    /* JADX INFO: renamed from: G */
     public static void m5223G(int i, List<Long> list, InterfaceC3867v7 interfaceC3867v7, boolean z2) throws IOException {
         if (list == null || list.isEmpty()) {
             return;
@@ -191,7 +191,7 @@ public final class C3827s6 {
         }
     }
 
-    /* renamed from: H */
+    /* JADX INFO: renamed from: H */
     public static int m5224H(int i, List list) {
         int size = list.size();
         if (size == 0) {
@@ -200,12 +200,12 @@ public final class C3827s6 {
         return zzhi.m9066S(i) * size;
     }
 
-    /* renamed from: I */
+    /* JADX INFO: renamed from: I */
     public static int m5225I(List<?> list) {
         return list.size() << 2;
     }
 
-    /* renamed from: J */
+    /* JADX INFO: renamed from: J */
     public static void m5226J(int i, List<Integer> list, InterfaceC3867v7 interfaceC3867v7, boolean z2) throws IOException {
         if (list == null || list.isEmpty()) {
             return;
@@ -232,7 +232,7 @@ public final class C3827s6 {
         }
     }
 
-    /* renamed from: K */
+    /* JADX INFO: renamed from: K */
     public static int m5227K(int i, List list) {
         int size = list.size();
         if (size == 0) {
@@ -241,12 +241,12 @@ public final class C3827s6 {
         return zzhi.m9061N(i) * size;
     }
 
-    /* renamed from: L */
+    /* JADX INFO: renamed from: L */
     public static int m5228L(List<?> list) {
         return list.size() << 3;
     }
 
-    /* renamed from: M */
+    /* JADX INFO: renamed from: M */
     public static void m5229M(int i, List<Integer> list, InterfaceC3867v7 interfaceC3867v7, boolean z2) throws IOException {
         if (list == null || list.isEmpty()) {
             return;
@@ -273,7 +273,7 @@ public final class C3827s6 {
         }
     }
 
-    /* renamed from: N */
+    /* JADX INFO: renamed from: N */
     public static void m5230N(int i, List<Integer> list, InterfaceC3867v7 interfaceC3867v7, boolean z2) throws IOException {
         if (list == null || list.isEmpty()) {
             return;
@@ -300,7 +300,7 @@ public final class C3827s6 {
         }
     }
 
-    /* renamed from: O */
+    /* JADX INFO: renamed from: O */
     public static void m5231O(int i, List<Integer> list, InterfaceC3867v7 interfaceC3867v7, boolean z2) throws IOException {
         if (list == null || list.isEmpty()) {
             return;
@@ -329,7 +329,7 @@ public final class C3827s6 {
         }
     }
 
-    /* renamed from: P */
+    /* JADX INFO: renamed from: P */
     public static void m5232P(int i, List<Integer> list, InterfaceC3867v7 interfaceC3867v7, boolean z2) throws IOException {
         if (list == null || list.isEmpty()) {
             return;
@@ -358,7 +358,7 @@ public final class C3827s6 {
         }
     }
 
-    /* renamed from: Q */
+    /* JADX INFO: renamed from: Q */
     public static void m5233Q(int i, List<Integer> list, InterfaceC3867v7 interfaceC3867v7, boolean z2) throws IOException {
         if (list == null || list.isEmpty()) {
             return;
@@ -385,7 +385,7 @@ public final class C3827s6 {
         }
     }
 
-    /* renamed from: R */
+    /* JADX INFO: renamed from: R */
     public static void m5234R(int i, List<Boolean> list, InterfaceC3867v7 interfaceC3867v7, boolean z2) throws IOException {
         if (list == null || list.isEmpty()) {
             return;
@@ -414,7 +414,7 @@ public final class C3827s6 {
         }
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static int m5235a(int i, Object obj, InterfaceC3801q6 interfaceC3801q6) {
         if (!(obj instanceof C3681h5)) {
             return zzhi.m9071c((InterfaceC3612c6) obj, interfaceC3801q6) + zzhi.m9059L(i << 3);
@@ -424,7 +424,7 @@ public final class C3827s6 {
         return zzhi.m9059L(iM4934a) + iM4934a + iM9059L;
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static int m5236b(int i, List<?> list) {
         int size = list.size();
         int i2 = 0;
@@ -449,7 +449,7 @@ public final class C3827s6 {
         return iM9052D;
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public static int m5237c(int i, List<?> list, InterfaceC3801q6 interfaceC3801q6) {
         int size = list.size();
         if (size == 0) {
@@ -463,7 +463,7 @@ public final class C3827s6 {
         return iM9052D;
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public static int m5238d(List<Long> list) {
         int iM9054F;
         int size = list.size();
@@ -488,7 +488,7 @@ public final class C3827s6 {
         return iM9054F;
     }
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public static AbstractC3627d7<?, ?> m5239e(boolean z2) {
         Class<?> cls;
         try {
@@ -506,7 +506,7 @@ public final class C3827s6 {
         }
     }
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public static void m5240f(int i, List<String> list, InterfaceC3867v7 interfaceC3867v7) throws IOException {
         if (list == null || list.isEmpty()) {
             return;
@@ -533,7 +533,7 @@ public final class C3827s6 {
         }
     }
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public static void m5241g(int i, List<?> list, InterfaceC3867v7 interfaceC3867v7, InterfaceC3801q6 interfaceC3801q6) throws IOException {
         if (list == null || list.isEmpty()) {
             return;
@@ -545,7 +545,7 @@ public final class C3827s6 {
         }
     }
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public static void m5242h(int i, List<Double> list, InterfaceC3867v7 interfaceC3867v7, boolean z2) throws IOException {
         if (list == null || list.isEmpty()) {
             return;
@@ -580,7 +580,7 @@ public final class C3827s6 {
         }
     }
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public static <T, FT extends InterfaceC3786p4<FT>> void m5243i(AbstractC3708j4<FT> abstractC3708j4, T t, T t2) {
         C3760n4<T> c3760n4Mo4970b = abstractC3708j4.mo4970b(t2);
         if (c3760n4Mo4970b.f10111b.isEmpty()) {
@@ -597,7 +597,7 @@ public final class C3827s6 {
         }
     }
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static boolean m5244j(Object obj, Object obj2) {
         if (obj != obj2) {
             return obj != null && obj.equals(obj2);
@@ -605,7 +605,7 @@ public final class C3827s6 {
         return true;
     }
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public static int m5245k(int i, List list) {
         if (list.size() == 0) {
             return 0;
@@ -613,7 +613,7 @@ public final class C3827s6 {
         return (zzhi.m9052D(i) * list.size()) + m5238d(list);
     }
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public static int m5246l(int i, List<AbstractC3837t3> list) {
         int size = list.size();
         if (size == 0) {
@@ -626,7 +626,7 @@ public final class C3827s6 {
         return iM9052D;
     }
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public static int m5247m(int i, List<InterfaceC3612c6> list, InterfaceC3801q6 interfaceC3801q6) {
         int size = list.size();
         if (size == 0) {
@@ -639,7 +639,7 @@ public final class C3827s6 {
         return iM9079x;
     }
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public static int m5248n(List<Long> list) {
         int iM9054F;
         int size = list.size();
@@ -664,7 +664,7 @@ public final class C3827s6 {
         return iM9054F;
     }
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public static void m5249o(int i, List<AbstractC3837t3> list, InterfaceC3867v7 interfaceC3867v7) throws IOException {
         if (list == null || list.isEmpty()) {
             return;
@@ -676,7 +676,7 @@ public final class C3827s6 {
         }
     }
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public static void m5250p(int i, List<?> list, InterfaceC3867v7 interfaceC3867v7, InterfaceC3801q6 interfaceC3801q6) throws IOException {
         if (list == null || list.isEmpty()) {
             return;
@@ -688,7 +688,7 @@ public final class C3827s6 {
         }
     }
 
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     public static void m5251q(int i, List<Float> list, InterfaceC3867v7 interfaceC3867v7, boolean z2) throws IOException {
         if (list == null || list.isEmpty()) {
             return;
@@ -723,7 +723,7 @@ public final class C3827s6 {
         }
     }
 
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     public static int m5252r(int i, List list) {
         int size = list.size();
         if (size == 0) {
@@ -732,7 +732,7 @@ public final class C3827s6 {
         return (zzhi.m9052D(i) * size) + m5248n(list);
     }
 
-    /* renamed from: s */
+    /* JADX INFO: renamed from: s */
     public static int m5253s(int i, List list) {
         int size = list.size();
         if (size == 0) {
@@ -741,7 +741,7 @@ public final class C3827s6 {
         return (zzhi.m9052D(i) * size) + m5254t(list);
     }
 
-    /* renamed from: t */
+    /* JADX INFO: renamed from: t */
     public static int m5254t(List<Long> list) {
         int iM9058K;
         int size = list.size();
@@ -766,7 +766,7 @@ public final class C3827s6 {
         return iM9058K;
     }
 
-    /* renamed from: u */
+    /* JADX INFO: renamed from: u */
     public static void m5255u(int i, List<Long> list, InterfaceC3867v7 interfaceC3867v7, boolean z2) throws IOException {
         if (list == null || list.isEmpty()) {
             return;
@@ -793,7 +793,7 @@ public final class C3827s6 {
         }
     }
 
-    /* renamed from: v */
+    /* JADX INFO: renamed from: v */
     public static int m5256v(int i, List list) {
         int size = list.size();
         if (size == 0) {
@@ -802,7 +802,7 @@ public final class C3827s6 {
         return (zzhi.m9052D(i) * size) + m5257w(list);
     }
 
-    /* renamed from: w */
+    /* JADX INFO: renamed from: w */
     public static int m5257w(List<Integer> list) {
         int iM9055H;
         int size = list.size();
@@ -827,7 +827,7 @@ public final class C3827s6 {
         return iM9055H;
     }
 
-    /* renamed from: x */
+    /* JADX INFO: renamed from: x */
     public static void m5258x(int i, List<Long> list, InterfaceC3867v7 interfaceC3867v7, boolean z2) throws IOException {
         if (list == null || list.isEmpty()) {
             return;
@@ -854,7 +854,7 @@ public final class C3827s6 {
         }
     }
 
-    /* renamed from: y */
+    /* JADX INFO: renamed from: y */
     public static int m5259y(int i, List list) {
         int size = list.size();
         if (size == 0) {
@@ -863,7 +863,7 @@ public final class C3827s6 {
         return (zzhi.m9052D(i) * size) + m5260z(list);
     }
 
-    /* renamed from: z */
+    /* JADX INFO: renamed from: z */
     public static int m5260z(List<Integer> list) {
         int iM9055H;
         int size = list.size();

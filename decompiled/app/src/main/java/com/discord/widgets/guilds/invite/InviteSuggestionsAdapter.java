@@ -21,12 +21,12 @@ import kotlin.Unit;
 import kotlin.jvm.functions.Function1;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: InviteSuggestionsAdapter.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: InviteSuggestionsAdapter.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class InviteSuggestionsAdapter extends MGRecyclerAdapterSimple<InviteSuggestionItemV2> {
     private Function1<? super InviteSuggestionItemV2, Unit> onClick;
 
-    /* compiled from: InviteSuggestionsAdapter.kt */
+    /* JADX INFO: compiled from: InviteSuggestionsAdapter.kt */
     public static final class EmptySearchResultsViewHolder extends MGRecyclerViewHolder<InviteSuggestionsAdapter, InviteSuggestionItemV2> {
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
         public EmptySearchResultsViewHolder(InviteSuggestionsAdapter inviteSuggestionsAdapter) {
@@ -35,7 +35,7 @@ public final class InviteSuggestionsAdapter extends MGRecyclerAdapterSimple<Invi
         }
     }
 
-    /* compiled from: InviteSuggestionsAdapter.kt */
+    /* JADX INFO: compiled from: InviteSuggestionsAdapter.kt */
     public static final class InviteSuggestionViewHolder extends MGRecyclerViewHolder<InviteSuggestionsAdapter, InviteSuggestionItemV2> {
         private final WidgetGuildInviteShareItemBinding binding;
 
@@ -75,7 +75,7 @@ public final class InviteSuggestionsAdapter extends MGRecyclerAdapterSimple<Invi
             onConfigure2(i, inviteSuggestionItemV2);
         }
 
-        /* renamed from: onConfigure, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: onConfigure, reason: avoid collision after fix types in other method */
         public void onConfigure2(int position, InviteSuggestionItemV2 data) {
             Intrinsics3.checkNotNullParameter(data, "data");
             super.onConfigure(position, data);

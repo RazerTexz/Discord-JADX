@@ -7,9 +7,9 @@ import java.util.Objects;
 import p007b.p225i.p226a.p288f.p299e.p308o.C3404f;
 import p007b.p225i.p355b.p357b.AbstractMapBasedMultimap2;
 
-/* compiled from: Maps.java */
-/* renamed from: b.i.b.b.x, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.b.b.x, reason: use source file name */
+/* JADX INFO: compiled from: Maps.java */
+/* JADX INFO: loaded from: classes3.dex */
 public abstract class Maps3<K, V> extends Sets3<Map.Entry<K, V>> {
     @Override // java.util.AbstractCollection, java.util.Collection, java.util.Set
     public void clear() {

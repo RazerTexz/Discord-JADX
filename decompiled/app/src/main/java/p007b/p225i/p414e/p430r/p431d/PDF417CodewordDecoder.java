@@ -3,12 +3,12 @@ package p007b.p225i.p414e.p430r.p431d;
 import java.lang.reflect.Array;
 import p007b.p225i.p414e.p430r.PDF417Common;
 
-/* compiled from: PDF417CodewordDecoder.java */
-/* renamed from: b.i.e.r.d.i, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.e.r.d.i, reason: use source file name */
+/* JADX INFO: compiled from: PDF417CodewordDecoder.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class PDF417CodewordDecoder {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final float[][] f13494a = (float[][]) Array.newInstance((Class<?>) float.class, PDF417Common.f13461b.length, 8);
 
     static {

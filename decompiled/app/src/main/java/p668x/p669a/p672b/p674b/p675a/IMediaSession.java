@@ -7,23 +7,23 @@ import android.os.Parcel;
 import android.os.RemoteException;
 import p668x.p669a.p672b.p674b.p675a.IMediaControllerCallback;
 
-/* compiled from: IMediaSession.java */
-/* renamed from: x.a.b.b.a.b, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: x.a.b.b.a.b, reason: use source file name */
+/* JADX INFO: compiled from: IMediaSession.java */
+/* JADX INFO: loaded from: classes.dex */
 public interface IMediaSession extends IInterface {
 
-    /* compiled from: IMediaSession.java */
-    /* renamed from: x.a.b.b.a.b$a */
+    /* JADX INFO: renamed from: x.a.b.b.a.b$a */
+    /* JADX INFO: compiled from: IMediaSession.java */
     public static abstract class a extends Binder implements IMediaSession {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public static final /* synthetic */ int f27943a = 0;
 
-        /* compiled from: IMediaSession.java */
-        /* renamed from: x.a.b.b.a.b$a$a, reason: collision with other inner class name */
+        /* JADX INFO: renamed from: x.a.b.b.a.b$a$a, reason: collision with other inner class name */
+        /* JADX INFO: compiled from: IMediaSession.java */
         public static class C13361a implements IMediaSession {
 
-            /* renamed from: a */
+            /* JADX INFO: renamed from: a */
             public IBinder f27944a;
 
             public C13361a(IBinder iBinder) {
@@ -36,7 +36,7 @@ public interface IMediaSession extends IInterface {
             }
 
             @Override // p668x.p669a.p672b.p674b.p675a.IMediaSession
-            /* renamed from: k */
+            /* JADX INFO: renamed from: k */
             public void mo11355k(IMediaControllerCallback iMediaControllerCallback) throws RemoteException {
                 Parcel parcelObtain = Parcel.obtain();
                 Parcel parcelObtain2 = Parcel.obtain();
@@ -54,7 +54,7 @@ public interface IMediaSession extends IInterface {
             }
         }
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public static IMediaSession m11356c(IBinder iBinder) {
             if (iBinder == null) {
                 return null;
@@ -64,6 +64,6 @@ public interface IMediaSession extends IInterface {
         }
     }
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     void mo11355k(IMediaControllerCallback iMediaControllerCallback) throws RemoteException;
 }

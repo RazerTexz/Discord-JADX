@@ -13,8 +13,8 @@ import java.util.Set;
 import p507d0.p592z.p594d.Intrinsics3;
 import p658rx.functions.Func4;
 
-/* compiled from: WidgetGlobalSearchModel.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: WidgetGlobalSearchModel.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class WidgetGlobalSearchModel$Companion$get$guildsListObservable$1<T1, T2, T3, T4, R> implements Func4<WidgetGlobalSearchModel.SearchContext, WidgetGlobalSearchModel.ChannelContext, Map<Long, ? extends ModelNotificationSettings>, LinkedHashMap<Long, Guild>, WidgetGlobalSearchGuildsModel> {
     public static final WidgetGlobalSearchModel$Companion$get$guildsListObservable$1 INSTANCE = new WidgetGlobalSearchModel$Companion$get$guildsListObservable$1();
 
@@ -23,7 +23,7 @@ public final class WidgetGlobalSearchModel$Companion$get$guildsListObservable$1<
         return call2(searchContext, channelContext, map, linkedHashMap);
     }
 
-    /* renamed from: call, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
     public final WidgetGlobalSearchGuildsModel call2(WidgetGlobalSearchModel.SearchContext searchContext, WidgetGlobalSearchModel.ChannelContext channelContext, Map<Long, ? extends ModelNotificationSettings> map, LinkedHashMap<Long, Guild> linkedHashMap) {
         WidgetGlobalSearchGuildsModel.Companion companion = WidgetGlobalSearchGuildsModel.INSTANCE;
         List<Long> recentGuildIds = searchContext.getRecentGuildIds();

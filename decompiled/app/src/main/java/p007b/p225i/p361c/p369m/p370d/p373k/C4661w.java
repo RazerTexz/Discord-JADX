@@ -6,12 +6,12 @@ import p007b.p225i.p361c.p369m.p370d.p379p.ByteString2;
 import p007b.p225i.p361c.p369m.p370d.p379p.CodedOutputStream2;
 import p007b.p225i.p361c.p369m.p370d.p379p.SessionProtobufHelper;
 
-/* compiled from: CrashlyticsController.java */
-/* renamed from: b.i.c.m.d.k.w */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.c.m.d.k.w */
+/* JADX INFO: compiled from: CrashlyticsController.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class C4661w implements C4663x.g {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final /* synthetic */ boolean f12414a;
 
     public C4661w(C4663x c4663x, String str, String str2, boolean z2) {
@@ -19,7 +19,7 @@ public class C4661w implements C4663x.g {
     }
 
     @Override // p007b.p225i.p361c.p369m.p370d.p373k.C4663x.g
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public void mo6454a(CodedOutputStream2 codedOutputStream2) throws Exception {
         String str = Build.VERSION.RELEASE;
         String str2 = Build.VERSION.CODENAME;

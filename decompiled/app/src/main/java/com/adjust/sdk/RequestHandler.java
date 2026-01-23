@@ -8,7 +8,7 @@ import java.lang.ref.WeakReference;
 import java.net.SocketTimeoutException;
 import p007b.p100d.p104b.p105a.outline;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class RequestHandler implements IRequestHandler {
     private WeakReference<IActivityHandler> activityHandlerWeakRef;
     private String basePath;
@@ -18,7 +18,7 @@ public class RequestHandler implements IRequestHandler {
     private ILogger logger = AdjustFactory.getLogger();
     private ThreadExecutor executor = new SingleThreadCachedScheduler("RequestHandler");
 
-    /* renamed from: com.adjust.sdk.RequestHandler$1 */
+    /* JADX INFO: renamed from: com.adjust.sdk.RequestHandler$1 */
     public class RunnableC53871 implements Runnable {
         public final /* synthetic */ ActivityPackage val$activityPackage;
         public final /* synthetic */ int val$queueSize;

@@ -5,8 +5,8 @@ import java.util.List;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: Activity.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: Activity.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class Activity {
     private final Long applicationId;
     private final ActivityAssets assets;
@@ -50,27 +50,27 @@ public final /* data */ class Activity {
         this.buttons = null;
     }
 
-    /* renamed from: a, reason: from getter */
+    /* JADX INFO: renamed from: a, reason: from getter */
     public final Long getApplicationId() {
         return this.applicationId;
     }
 
-    /* renamed from: b, reason: from getter */
+    /* JADX INFO: renamed from: b, reason: from getter */
     public final ActivityAssets getAssets() {
         return this.assets;
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final List<String> m7534c() {
         return this.buttons;
     }
 
-    /* renamed from: d, reason: from getter */
+    /* JADX INFO: renamed from: d, reason: from getter */
     public final long getCreatedAt() {
         return this.createdAt;
     }
 
-    /* renamed from: e, reason: from getter */
+    /* JADX INFO: renamed from: e, reason: from getter */
     public final String getDetails() {
         return this.details;
     }
@@ -86,17 +86,17 @@ public final /* data */ class Activity {
         return Intrinsics3.areEqual(this.name, activity.name) && Intrinsics3.areEqual(this.type, activity.type) && Intrinsics3.areEqual(this.url, activity.url) && this.createdAt == activity.createdAt && Intrinsics3.areEqual(this.timestamps, activity.timestamps) && Intrinsics3.areEqual(this.applicationId, activity.applicationId) && Intrinsics3.areEqual(this.details, activity.details) && Intrinsics3.areEqual(this.state, activity.state) && Intrinsics3.areEqual(this.emoji, activity.emoji) && Intrinsics3.areEqual(this.party, activity.party) && Intrinsics3.areEqual(this.assets, activity.assets) && Intrinsics3.areEqual(this.flags, activity.flags) && Intrinsics3.areEqual(this.syncId, activity.syncId) && Intrinsics3.areEqual(this.sessionId, activity.sessionId) && Intrinsics3.areEqual(this.metadata, activity.metadata) && Intrinsics3.areEqual(this.platform, activity.platform) && Intrinsics3.areEqual(this.supportedPlatforms, activity.supportedPlatforms) && Intrinsics3.areEqual(this.buttons, activity.buttons);
     }
 
-    /* renamed from: f, reason: from getter */
+    /* JADX INFO: renamed from: f, reason: from getter */
     public final ActivityEmoji getEmoji() {
         return this.emoji;
     }
 
-    /* renamed from: g, reason: from getter */
+    /* JADX INFO: renamed from: g, reason: from getter */
     public final Integer getFlags() {
         return this.flags;
     }
 
-    /* renamed from: h, reason: from getter */
+    /* JADX INFO: renamed from: h, reason: from getter */
     public final String getName() {
         return this.name;
     }
@@ -140,42 +140,42 @@ public final /* data */ class Activity {
         return iHashCode16 + (list2 != null ? list2.hashCode() : 0);
     }
 
-    /* renamed from: i, reason: from getter */
+    /* JADX INFO: renamed from: i, reason: from getter */
     public final ActivityParty getParty() {
         return this.party;
     }
 
-    /* renamed from: j, reason: from getter */
+    /* JADX INFO: renamed from: j, reason: from getter */
     public final ActivityPlatform getPlatform() {
         return this.platform;
     }
 
-    /* renamed from: k, reason: from getter */
+    /* JADX INFO: renamed from: k, reason: from getter */
     public final String getSessionId() {
         return this.sessionId;
     }
 
-    /* renamed from: l, reason: from getter */
+    /* JADX INFO: renamed from: l, reason: from getter */
     public final String getState() {
         return this.state;
     }
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public final List<ActivityPlatform> m7544m() {
         return this.supportedPlatforms;
     }
 
-    /* renamed from: n, reason: from getter */
+    /* JADX INFO: renamed from: n, reason: from getter */
     public final String getSyncId() {
         return this.syncId;
     }
 
-    /* renamed from: o, reason: from getter */
+    /* JADX INFO: renamed from: o, reason: from getter */
     public final ActivityTimestamps getTimestamps() {
         return this.timestamps;
     }
 
-    /* renamed from: p, reason: from getter */
+    /* JADX INFO: renamed from: p, reason: from getter */
     public final ActivityType getType() {
         return this.type;
     }

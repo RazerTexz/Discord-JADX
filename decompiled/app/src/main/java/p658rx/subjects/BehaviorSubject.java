@@ -8,19 +8,19 @@ import p637j0.p654q.SubjectSubscriptionManager2;
 import p658rx.Observable;
 import p658rx.functions.Action1;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public final class BehaviorSubject<T> extends Subject<T, T> {
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public static final Object[] f27647k = new Object[0];
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final SubjectSubscriptionManager2<T> f27648l;
 
-    /* renamed from: rx.subjects.BehaviorSubject$a */
+    /* JADX INFO: renamed from: rx.subjects.BehaviorSubject$a */
     public static class C13014a implements Action1<SubjectSubscriptionManager2.b<T>> {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public final /* synthetic */ SubjectSubscriptionManager2 f27649j;
 
         public C13014a(SubjectSubscriptionManager2 subjectSubscriptionManager2) {
@@ -106,17 +106,17 @@ public final class BehaviorSubject<T> extends Subject<T, T> {
         this.f27648l = subjectSubscriptionManager2;
     }
 
-    /* renamed from: k0 */
+    /* JADX INFO: renamed from: k0 */
     public static <T> BehaviorSubject<T> m11129k0() {
         return m11131m0(null, false);
     }
 
-    /* renamed from: l0 */
+    /* JADX INFO: renamed from: l0 */
     public static <T> BehaviorSubject<T> m11130l0(T t) {
         return m11131m0(t, true);
     }
 
-    /* renamed from: m0 */
+    /* JADX INFO: renamed from: m0 */
     public static <T> BehaviorSubject<T> m11131m0(T t, boolean z2) {
         SubjectSubscriptionManager2 subjectSubscriptionManager2 = new SubjectSubscriptionManager2();
         if (z2) {
@@ -131,7 +131,7 @@ public final class BehaviorSubject<T> extends Subject<T, T> {
         return new BehaviorSubject<>(subjectSubscriptionManager2, subjectSubscriptionManager2);
     }
 
-    /* renamed from: n0 */
+    /* JADX INFO: renamed from: n0 */
     public T m11132n0() {
         Object obj = this.f27648l.latest;
         if ((obj == null || (obj instanceof NotificationLite.c) || NotificationLite.m10746c(obj)) ? false : true) {

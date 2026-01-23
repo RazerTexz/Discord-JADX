@@ -12,11 +12,11 @@ import kotlin.jvm.internal.DefaultConstructorMarker;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: CallParticipant.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: CallParticipant.kt */
+/* JADX INFO: loaded from: classes.dex */
 public abstract class CallParticipant {
 
-    /* compiled from: CallParticipant.kt */
+    /* JADX INFO: compiled from: CallParticipant.kt */
     public static final /* data */ class EmbeddedActivityParticipant extends CallParticipant {
         private final Application application;
         private final ApplicationAsset backgroundAsset;
@@ -54,7 +54,7 @@ public abstract class CallParticipant {
             return embeddedActivityParticipant.copy(embeddedActivity, list, application, applicationAsset);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final EmbeddedActivity getEmbeddedActivity() {
             return this.embeddedActivity;
         }
@@ -63,12 +63,12 @@ public abstract class CallParticipant {
             return this.participantsInActivity;
         }
 
-        /* renamed from: component3, reason: from getter */
+        /* JADX INFO: renamed from: component3, reason: from getter */
         public final Application getApplication() {
             return this.application;
         }
 
-        /* renamed from: component4, reason: from getter */
+        /* JADX INFO: renamed from: component4, reason: from getter */
         public final ApplicationAsset getBackgroundAsset() {
             return this.backgroundAsset;
         }
@@ -142,7 +142,7 @@ public abstract class CallParticipant {
         }
     }
 
-    /* compiled from: CallParticipant.kt */
+    /* JADX INFO: compiled from: CallParticipant.kt */
     public static final /* data */ class UserOrStreamParticipant extends CallParticipant {
         private final String id;
         private final VideoCallParticipantView.ParticipantData participantData;
@@ -162,7 +162,7 @@ public abstract class CallParticipant {
             return userOrStreamParticipant.copy(participantData);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final VideoCallParticipantView.ParticipantData getParticipantData() {
             return this.participantData;
         }

@@ -4,12 +4,12 @@ import java.lang.ref.WeakReference;
 import p507d0.p513e0.p514p.p515d.p577n0.HashPMap;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: kClassCache.kt */
-/* renamed from: d0.e0.p.d.g, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.g, reason: use source file name */
+/* JADX INFO: compiled from: kClassCache.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class kClassCache {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static HashPMap<String, Object> f22359a;
 
     static {

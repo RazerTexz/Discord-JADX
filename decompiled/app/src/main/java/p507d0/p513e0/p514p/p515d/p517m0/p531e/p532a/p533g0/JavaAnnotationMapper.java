@@ -24,34 +24,34 @@ import p507d0.p592z.p594d.Lambda;
 import p507d0.p592z.p594d.PropertyReference1Impl;
 import p507d0.p592z.p594d.Reflection2;
 
-/* compiled from: JavaAnnotationMapper.kt */
-/* renamed from: d0.e0.p.d.m0.e.a.g0.b, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.e.a.g0.b, reason: use source file name */
+/* JADX INFO: compiled from: JavaAnnotationMapper.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public class JavaAnnotationMapper implements AnnotationDescriptor, PossiblyExternalAnnotationDescriptor {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final /* synthetic */ KProperty<Object>[] f23223a = {Reflection2.property1(new PropertyReference1Impl(Reflection2.getOrCreateKotlinClass(JavaAnnotationMapper.class), "type", "getType()Lorg/jetbrains/kotlin/types/SimpleType;"))};
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final FqName f23224b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final SourceElement f23225c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final storage5 f23226d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final annotationArguments f23227e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final boolean f23228f;
 
-    /* compiled from: JavaAnnotationMapper.kt */
-    /* renamed from: d0.e0.p.d.m0.e.a.g0.b$a */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.e.a.g0.b$a */
+    /* JADX INFO: compiled from: JavaAnnotationMapper.kt */
     public static final class a extends Lambda implements Function0<KotlinType4> {
 
-        /* renamed from: $c */
+        /* JADX INFO: renamed from: $c */
         public final /* synthetic */ context4 f23229$c;
         public final /* synthetic */ JavaAnnotationMapper this$0;
 

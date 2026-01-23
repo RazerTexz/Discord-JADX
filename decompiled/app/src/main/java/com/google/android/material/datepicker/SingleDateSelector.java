@@ -27,18 +27,18 @@ import p007b.p225i.p226a.p288f.p299e.p308o.C3404f;
 import p007b.p225i.p226a.p341g.p345d.DateFormatTextWatcher;
 import p007b.p225i.p226a.p341g.p345d.UtcDates;
 
+/* JADX INFO: loaded from: classes3.dex */
 @RestrictTo({RestrictTo.Scope.LIBRARY_GROUP})
-/* loaded from: classes3.dex */
 public class SingleDateSelector implements DateSelector<Long> {
     public static final Parcelable.Creator<SingleDateSelector> CREATOR = new C10907b();
 
     @Nullable
     private Long selectedItem;
 
-    /* renamed from: com.google.android.material.datepicker.SingleDateSelector$a */
+    /* JADX INFO: renamed from: com.google.android.material.datepicker.SingleDateSelector$a */
     public class C10906a extends DateFormatTextWatcher {
 
-        /* renamed from: p */
+        /* JADX INFO: renamed from: p */
         public final /* synthetic */ OnSelectionChangedListener f21004p;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -48,13 +48,13 @@ public class SingleDateSelector implements DateSelector<Long> {
         }
 
         @Override // p007b.p225i.p226a.p341g.p345d.DateFormatTextWatcher
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public void mo6060a() {
             this.f21004p.onIncompleteSelectionChanged();
         }
 
         @Override // p007b.p225i.p226a.p341g.p345d.DateFormatTextWatcher
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public void mo6061b(@Nullable Long l) {
             if (l == null) {
                 SingleDateSelector.access$000(SingleDateSelector.this);
@@ -65,7 +65,7 @@ public class SingleDateSelector implements DateSelector<Long> {
         }
     }
 
-    /* renamed from: com.google.android.material.datepicker.SingleDateSelector$b */
+    /* JADX INFO: renamed from: com.google.android.material.datepicker.SingleDateSelector$b */
     public static class C10907b implements Parcelable.Creator<SingleDateSelector> {
         @Override // android.os.Parcelable.Creator
         @NonNull
@@ -150,7 +150,7 @@ public class SingleDateSelector implements DateSelector<Long> {
     }
 
     @Override // com.google.android.material.datepicker.DateSelector
-    public View onCreateTextInputView(@NonNull LayoutInflater layoutInflater, @Nullable ViewGroup viewGroup, @Nullable Bundle bundle, CalendarConstraints calendarConstraints, @NonNull OnSelectionChangedListener<Long> onSelectionChangedListener) throws Resources.NotFoundException {
+    public View onCreateTextInputView(@NonNull LayoutInflater layoutInflater, @Nullable ViewGroup viewGroup, @Nullable Bundle bundle, CalendarConstraints calendarConstraints, @NonNull OnSelectionChangedListener<Long> onSelectionChangedListener) {
         View viewInflate = layoutInflater.inflate(C10817R.layout.mtrl_picker_text_input_date, viewGroup, false);
         TextInputLayout textInputLayout = (TextInputLayout) viewInflate.findViewById(C10817R.id.mtrl_picker_text_input_date);
         EditText editText = textInputLayout.getEditText();
@@ -191,7 +191,7 @@ public class SingleDateSelector implements DateSelector<Long> {
         return this.selectedItem;
     }
 
-    /* renamed from: setSelection, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: setSelection, reason: avoid collision after fix types in other method */
     public void setSelection2(@Nullable Long l) {
         this.selectedItem = l == null ? null : Long.valueOf(UtcDates.m6068a(l.longValue()));
     }

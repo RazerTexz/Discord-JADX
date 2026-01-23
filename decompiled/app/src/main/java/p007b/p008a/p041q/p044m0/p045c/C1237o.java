@@ -5,12 +5,12 @@ import com.hammerandchisel.libdiscord.Discord;
 import p507d0.p592z.p594d.Intrinsics3;
 import p658rx.Emitter;
 
-/* compiled from: MediaEngineLegacy.kt */
-/* renamed from: b.a.q.m0.c.o */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.a.q.m0.c.o */
+/* JADX INFO: compiled from: MediaEngineLegacy.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class C1237o implements Discord.GetAudioSubsystemCallback {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final /* synthetic */ Emitter f1750a;
 
     public C1237o(Emitter emitter) {

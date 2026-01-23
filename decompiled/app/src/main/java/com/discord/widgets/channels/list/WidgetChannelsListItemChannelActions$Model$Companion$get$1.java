@@ -14,13 +14,13 @@ import p637j0.p642l.p647e.ScalarSynchronousObservable;
 import p658rx.Observable;
 import p658rx.functions.Func3;
 
-/* compiled from: WidgetChannelsListItemChannelActions.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetChannelsListItemChannelActions.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetChannelsListItemChannelActions$Model$Companion$get$1<T, R> implements Func1<Channel, Observable<? extends WidgetChannelsListItemChannelActions.Model>> {
     public final /* synthetic */ long $channelId;
 
-    /* compiled from: WidgetChannelsListItemChannelActions.kt */
-    /* renamed from: com.discord.widgets.channels.list.WidgetChannelsListItemChannelActions$Model$Companion$get$1$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.channels.list.WidgetChannelsListItemChannelActions$Model$Companion$get$1$1 */
+    /* JADX INFO: compiled from: WidgetChannelsListItemChannelActions.kt */
     public static final class C74511<T1, T2, T3, R> implements Func3<Guild, Long, Map<Long, ? extends ModelNotificationSettings>, WidgetChannelsListItemChannelActions.Model> {
         public final /* synthetic */ Channel $channel;
 
@@ -33,7 +33,7 @@ public final class WidgetChannelsListItemChannelActions$Model$Companion$get$1<T,
             return call2(guild, l, map);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final WidgetChannelsListItemChannelActions.Model call2(Guild guild, Long l, Map<Long, ? extends ModelNotificationSettings> map) {
             ModelNotificationSettings.ChannelOverride channelOverride;
             ModelNotificationSettings modelNotificationSettings = (ModelNotificationSettings) outline.m843c(this.$channel, map);
@@ -45,7 +45,7 @@ public final class WidgetChannelsListItemChannelActions$Model$Companion$get$1<T,
         this.$channelId = j;
     }
 
-    /* renamed from: call, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
     public final Observable<? extends WidgetChannelsListItemChannelActions.Model> call2(Channel channel) {
         if (channel == null) {
             return new ScalarSynchronousObservable(null);

@@ -16,18 +16,18 @@ import p007b.p225i.p355b.p357b.ImmutableCollection;
 import p007b.p225i.p355b.p357b.ImmutableList2;
 import p007b.p225i.p355b.p357b.RegularImmutableList;
 
-/* compiled from: XmpMotionPhotoDescriptionParser.java */
-/* renamed from: b.i.a.c.x2.f0.e, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.x2.f0.e, reason: use source file name */
+/* JADX INFO: compiled from: XmpMotionPhotoDescriptionParser.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class XmpMotionPhotoDescriptionParser {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final String[] f8176a = {"Camera:MotionPhoto", "GCamera:MotionPhoto", "Camera:MicroVideo", "GCamera:MicroVideo"};
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static final String[] f8177b = {"Camera:MotionPhotoPresentationTimestampUs", "GCamera:MotionPhotoPresentationTimestampUs", "Camera:MicroVideoPresentationTimestampUs", "GCamera:MicroVideoPresentationTimestampUs"};
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public static final String[] f8178c = {"Camera:MicroVideoOffset", "GCamera:MicroVideoOffset"};
 
     /* JADX WARN: Code restructure failed: missing block: B:25:0x006c, code lost:
@@ -35,7 +35,7 @@ public final class XmpMotionPhotoDescriptionParser {
         r10 = -9223372036854775807L;
      */
     @Nullable
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
@@ -121,7 +121,7 @@ public final class XmpMotionPhotoDescriptionParser {
         return new MotionPhotoDescription(j2, immutableList2M3669b);
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static ImmutableList2<MotionPhotoDescription.a> m3669b(XmlPullParser xmlPullParser, String str, String str2) throws XmlPullParserException, IOException {
         AbstractIndexedListIterator<Object> abstractIndexedListIterator = ImmutableList2.f12045k;
         C3404f.m4189A(4, "initialCapacity");

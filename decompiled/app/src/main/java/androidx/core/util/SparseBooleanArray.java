@@ -7,13 +7,13 @@ import p507d0.p580t.Iterators4;
 import p507d0.p580t.Iterators6;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: SparseBooleanArray.kt */
-/* renamed from: androidx.core.util.SparseBooleanArrayKt, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: androidx.core.util.SparseBooleanArrayKt, reason: use source file name */
+/* JADX INFO: compiled from: SparseBooleanArray.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class SparseBooleanArray {
 
-    /* compiled from: SparseBooleanArray.kt */
-    /* renamed from: androidx.core.util.SparseBooleanArrayKt$keyIterator$1 */
+    /* JADX INFO: renamed from: androidx.core.util.SparseBooleanArrayKt$keyIterator$1 */
+    /* JADX INFO: compiled from: SparseBooleanArray.kt */
     public static final class C02711 extends Iterators4 {
         public final /* synthetic */ android.util.SparseBooleanArray $this_keyIterator;
         private int index;
@@ -44,8 +44,8 @@ public final class SparseBooleanArray {
         }
     }
 
-    /* compiled from: SparseBooleanArray.kt */
-    /* renamed from: androidx.core.util.SparseBooleanArrayKt$valueIterator$1 */
+    /* JADX INFO: renamed from: androidx.core.util.SparseBooleanArrayKt$valueIterator$1 */
+    /* JADX INFO: compiled from: SparseBooleanArray.kt */
     public static final class C02721 extends Iterators6 {
         public final /* synthetic */ android.util.SparseBooleanArray $this_valueIterator;
         private int index;

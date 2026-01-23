@@ -27,25 +27,25 @@ import p007b.p109f.p132g.p143f.WrappingUtils;
 import p007b.p109f.p132g.p145h.SettableDraweeHierarchy;
 import p007b.p109f.p161j.p183r.FrescoSystrace;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class GenericDraweeHierarchy implements SettableDraweeHierarchy {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final Drawable f19506a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final Resources f19507b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public RoundingParams f19508c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final RootDrawable f19509d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final FadeDrawable f19510e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final ForwardingDrawable f19511f;
 
     public GenericDraweeHierarchy(GenericDraweeHierarchyBuilder genericDraweeHierarchyBuilder) {
@@ -100,7 +100,7 @@ public class GenericDraweeHierarchy implements SettableDraweeHierarchy {
     }
 
     @Override // p007b.p109f.p132g.p145h.SettableDraweeHierarchy
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public void mo1131a(Drawable drawable) {
         RootDrawable rootDrawable = this.f19509d;
         rootDrawable.f3469n = drawable;
@@ -108,7 +108,7 @@ public class GenericDraweeHierarchy implements SettableDraweeHierarchy {
     }
 
     @Override // p007b.p109f.p132g.p145h.SettableDraweeHierarchy
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public void mo1132b(Throwable th) {
         this.f19510e.m1098e();
         m8673i();
@@ -121,7 +121,7 @@ public class GenericDraweeHierarchy implements SettableDraweeHierarchy {
     }
 
     @Override // p007b.p109f.p132g.p145h.SettableDraweeHierarchy
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public void mo1133c(Throwable th) {
         this.f19510e.m1098e();
         m8673i();
@@ -134,7 +134,7 @@ public class GenericDraweeHierarchy implements SettableDraweeHierarchy {
     }
 
     @Override // p007b.p109f.p132g.p145h.SettableDraweeHierarchy
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public void mo1134d(float f, boolean z2) {
         if (this.f19510e.m1093a(3) == null) {
             return;
@@ -148,13 +148,13 @@ public class GenericDraweeHierarchy implements SettableDraweeHierarchy {
     }
 
     @Override // com.facebook.drawee.interfaces.DraweeHierarchy
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public Drawable mo8670e() {
         return this.f19509d;
     }
 
     @Override // p007b.p109f.p132g.p145h.SettableDraweeHierarchy
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public void mo1135f(Drawable drawable, float f, boolean z2) {
         Drawable drawableM1128c = WrappingUtils.m1128c(drawable, this.f19508c, this.f19507b);
         drawableM1128c.mutate();
@@ -169,7 +169,7 @@ public class GenericDraweeHierarchy implements SettableDraweeHierarchy {
         this.f19510e.m1099f();
     }
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public final Drawable m8671g(Drawable drawable, ScalingUtils$ScaleType scalingUtils$ScaleType) {
         return WrappingUtils.m1130e(WrappingUtils.m1128c(drawable, this.f19508c, this.f19507b), scalingUtils$ScaleType, null);
     }
@@ -179,7 +179,7 @@ public class GenericDraweeHierarchy implements SettableDraweeHierarchy {
         return this.f19509d.getBounds();
     }
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public final void m8672h(int i) {
         if (i >= 0) {
             FadeDrawable fadeDrawable = this.f19510e;
@@ -189,7 +189,7 @@ public class GenericDraweeHierarchy implements SettableDraweeHierarchy {
         }
     }
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public final void m8673i() {
         m8674j(1);
         m8674j(2);
@@ -198,7 +198,7 @@ public class GenericDraweeHierarchy implements SettableDraweeHierarchy {
         m8674j(5);
     }
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final void m8674j(int i) {
         if (i >= 0) {
             FadeDrawable fadeDrawable = this.f19510e;
@@ -208,7 +208,7 @@ public class GenericDraweeHierarchy implements SettableDraweeHierarchy {
         }
     }
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final DrawableParent m8675k(int i) {
         FadeDrawable fadeDrawable = this.f19510e;
         Objects.requireNonNull(fadeDrawable);
@@ -225,7 +225,7 @@ public class GenericDraweeHierarchy implements SettableDraweeHierarchy {
         return drawableParent.mo1091l() instanceof ScaleTypeDrawable ? (ScaleTypeDrawable) drawableParent.mo1091l() : drawableParent;
     }
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final ScaleTypeDrawable m8676l(int i) {
         DrawableParent drawableParentM8675k = m8675k(i);
         if (drawableParentM8675k instanceof ScaleTypeDrawable) {
@@ -238,7 +238,7 @@ public class GenericDraweeHierarchy implements SettableDraweeHierarchy {
         return (ScaleTypeDrawable) drawableM1130e;
     }
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public final void m8677m() {
         FadeDrawable fadeDrawable = this.f19510e;
         if (fadeDrawable != null) {
@@ -254,13 +254,13 @@ public class GenericDraweeHierarchy implements SettableDraweeHierarchy {
         }
     }
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public void m8678n(ScalingUtils$ScaleType scalingUtils$ScaleType) {
         Objects.requireNonNull(scalingUtils$ScaleType);
         m8676l(2).m1120r(scalingUtils$ScaleType);
     }
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public final void m8679o(int i, Drawable drawable) {
         if (drawable == null) {
             this.f19510e.m1095c(i, null);
@@ -269,19 +269,19 @@ public class GenericDraweeHierarchy implements SettableDraweeHierarchy {
         }
     }
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public void m8680p(int i) {
         m8679o(1, this.f19507b.getDrawable(i));
     }
 
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     public void m8681q(Drawable drawable, ScalingUtils$ScaleType scalingUtils$ScaleType) {
         m8679o(1, drawable);
         m8676l(1).m1120r(scalingUtils$ScaleType);
     }
 
     /* JADX WARN: Multi-variable type inference failed */
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     public final void m8682r(float f) {
         Drawable drawableM1093a = this.f19510e.m1093a(3);
         if (drawableM1093a == 0) {
@@ -308,7 +308,7 @@ public class GenericDraweeHierarchy implements SettableDraweeHierarchy {
     }
 
     /* JADX WARN: Multi-variable type inference failed */
-    /* renamed from: s */
+    /* JADX INFO: renamed from: s */
     public void m8683s(RoundingParams roundingParams) {
         this.f19508c = roundingParams;
         RootDrawable rootDrawable = this.f19509d;

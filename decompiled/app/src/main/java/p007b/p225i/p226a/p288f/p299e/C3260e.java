@@ -16,24 +16,24 @@ import java.util.Objects;
 import java.util.concurrent.atomic.AtomicBoolean;
 import p007b.p225i.p226a.p288f.p299e.p310p.C3411b;
 
-/* compiled from: com.google.android.gms:play-services-basement@@17.6.0 */
-/* renamed from: b.i.a.f.e.e */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.e.e */
+/* JADX INFO: compiled from: com.google.android.gms:play-services-basement@@17.6.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public class C3260e {
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static boolean f9310b = false;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public static boolean f9311c = false;
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final AtomicBoolean f9309a = new AtomicBoolean();
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public static final AtomicBoolean f9312d = new AtomicBoolean();
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static boolean m4019a(@RecentlyNonNull Context context) {
         try {
             if (!f9311c) {
@@ -54,7 +54,7 @@ public class C3260e {
     }
 
     @TargetApi(21)
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static boolean m4020b(Context context, String str) throws PackageManager.NameNotFoundException {
         ApplicationInfo applicationInfo;
         boolean zEquals = str.equals("com.google.android.gms");

@@ -9,8 +9,8 @@ import p507d0.p584w.Continuation2;
 import p507d0.p592z.p594d.FunctionReferenceImpl;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: StoreMediaEngine.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: StoreMediaEngine.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final /* synthetic */ class StoreMediaEngine$getVideoInputDevicesNativeAsync$2$1 extends FunctionReferenceImpl implements Function1<DeviceDescription4[], Unit> {
     public StoreMediaEngine$getVideoInputDevicesNativeAsync$2$1(CancellableContinuation cancellableContinuation) {
         super(1, cancellableContinuation, Continuation2.class, "resume", "resume(Lkotlin/coroutines/Continuation;Ljava/lang/Object;)V", 1);
@@ -22,7 +22,7 @@ public final /* synthetic */ class StoreMediaEngine$getVideoInputDevicesNativeAs
         return Unit.f27425a;
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final void invoke2(DeviceDescription4[] deviceDescription4Arr) {
         Intrinsics3.checkNotNullParameter(deviceDescription4Arr, "p1");
         CancellableContinuation cancellableContinuation = (CancellableContinuation) this.receiver;

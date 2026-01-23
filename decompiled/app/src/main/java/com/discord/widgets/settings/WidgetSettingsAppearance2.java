@@ -8,9 +8,9 @@ import com.discord.widgets.settings.WidgetSettingsAppearance;
 import p507d0.p592z.p594d.Intrinsics3;
 import p658rx.functions.Func3;
 
-/* compiled from: WidgetSettingsAppearance.kt */
-/* renamed from: com.discord.widgets.settings.WidgetSettingsAppearance$Model$Companion$get$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.settings.WidgetSettingsAppearance$Model$Companion$get$1, reason: use source file name */
+/* JADX INFO: compiled from: WidgetSettingsAppearance.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetSettingsAppearance2<T1, T2, T3, R> implements Func3<MeUser, StoreUserSettingsSystem.Settings, Boolean, WidgetSettingsAppearance.Model> {
     public static final WidgetSettingsAppearance2 INSTANCE = new WidgetSettingsAppearance2();
 
@@ -20,7 +20,7 @@ public final class WidgetSettingsAppearance2<T1, T2, T3, R> implements Func3<MeU
     }
 
     /* JADX WARN: Removed duplicated region for block: B:8:0x0021  */
-    /* renamed from: call, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */

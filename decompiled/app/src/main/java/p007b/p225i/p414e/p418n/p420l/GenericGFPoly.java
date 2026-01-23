@@ -2,15 +2,15 @@ package p007b.p225i.p414e.p418n.p420l;
 
 import java.util.Objects;
 
-/* compiled from: GenericGFPoly.java */
-/* renamed from: b.i.e.n.l.b, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.e.n.l.b, reason: use source file name */
+/* JADX INFO: compiled from: GenericGFPoly.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class GenericGFPoly {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final GenericGF f13314a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final int[] f13315b;
 
     public GenericGFPoly(GenericGF genericGF, int[] iArr) {
@@ -36,7 +36,7 @@ public final class GenericGFPoly {
         System.arraycopy(iArr, i, iArr2, 0, iArr2.length);
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public GenericGFPoly m6962a(GenericGFPoly genericGFPoly) {
         if (!this.f13314a.equals(genericGFPoly.f13314a)) {
             throw new IllegalArgumentException("GenericGFPolys do not have same GenericGF field");
@@ -62,7 +62,7 @@ public final class GenericGFPoly {
         return new GenericGFPoly(this.f13314a, iArr3);
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public int m6963b(int i) {
         if (i == 0) {
             return m6964c(0);
@@ -84,22 +84,22 @@ public final class GenericGFPoly {
         return i3;
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public int m6964c(int i) {
         return this.f13315b[(r0.length - 1) - i];
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public int m6965d() {
         return this.f13315b.length - 1;
     }
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public boolean m6966e() {
         return this.f13315b[0] == 0;
     }
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public GenericGFPoly m6967f(int i) {
         if (i == 0) {
             return this.f13314a.f13309k;

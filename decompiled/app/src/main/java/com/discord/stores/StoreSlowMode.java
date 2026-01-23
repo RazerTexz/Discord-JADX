@@ -10,8 +10,8 @@ import p637j0.p642l.p647e.ScalarSynchronousObservable;
 import p658rx.Observable;
 import p658rx.subjects.BehaviorSubject;
 
-/* compiled from: StoreSlowMode.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: StoreSlowMode.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class StoreSlowMode extends Store {
 
     @Deprecated
@@ -26,7 +26,7 @@ public final class StoreSlowMode extends Store {
     private final HashMap<Long, Long> threadCreateNextSendTimes;
     private final BehaviorSubject<HashMap<Long, Long>> threadCreateNextSendTimesSubject;
 
-    /* compiled from: StoreSlowMode.kt */
+    /* JADX INFO: compiled from: StoreSlowMode.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -36,10 +36,10 @@ public final class StoreSlowMode extends Store {
         }
     }
 
-    /* compiled from: StoreSlowMode.kt */
+    /* JADX INFO: compiled from: StoreSlowMode.kt */
     public static abstract class Type {
 
-        /* compiled from: StoreSlowMode.kt */
+        /* JADX INFO: compiled from: StoreSlowMode.kt */
         public static final class MessageSend extends Type {
             public static final MessageSend INSTANCE = new MessageSend();
 
@@ -48,7 +48,7 @@ public final class StoreSlowMode extends Store {
             }
         }
 
-        /* compiled from: StoreSlowMode.kt */
+        /* JADX INFO: compiled from: StoreSlowMode.kt */
         public static final class ThreadCreate extends Type {
             public static final ThreadCreate INSTANCE = new ThreadCreate();
 
@@ -153,7 +153,7 @@ public final class StoreSlowMode extends Store {
         Channel channelFindChannelByIdInternal$app_productionGoogleRelease = this.stream.getChannels().findChannelByIdInternal$app_productionGoogleRelease(channelId);
         int rateLimitPerUser = channelFindChannelByIdInternal$app_productionGoogleRelease != null ? channelFindChannelByIdInternal$app_productionGoogleRelease.getRateLimitPerUser() : 0;
         if (rateLimitPerUser > 0) {
-            onCooldownInternal(channelId, rateLimitPerUser * 1000, Type.MessageSend.INSTANCE);
+            onCooldownInternal(channelId, ((long) rateLimitPerUser) * 1000, Type.MessageSend.INSTANCE);
         }
     }
 
@@ -162,7 +162,7 @@ public final class StoreSlowMode extends Store {
         Channel channelFindChannelByIdInternal$app_productionGoogleRelease = this.stream.getChannels().findChannelByIdInternal$app_productionGoogleRelease(parentChannelId);
         int rateLimitPerUser = channelFindChannelByIdInternal$app_productionGoogleRelease != null ? channelFindChannelByIdInternal$app_productionGoogleRelease.getRateLimitPerUser() : 0;
         if (rateLimitPerUser > 0) {
-            onCooldownInternal(parentChannelId, rateLimitPerUser * 1000, Type.ThreadCreate.INSTANCE);
+            onCooldownInternal(parentChannelId, ((long) rateLimitPerUser) * 1000, Type.ThreadCreate.INSTANCE);
         }
     }
 }

@@ -3,9 +3,9 @@ package com.discord.models.domain.auth;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ModelLoginResult.kt */
-/* renamed from: com.discord.models.domain.auth.ModelUserSettingsBootstrap, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: com.discord.models.domain.auth.ModelUserSettingsBootstrap, reason: use source file name */
+/* JADX INFO: compiled from: ModelLoginResult.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class ModelLoginResult2 {
     private final String locale;
     private final String theme;
@@ -25,12 +25,12 @@ public final /* data */ class ModelLoginResult2 {
         return modelLoginResult2.copy(str, str2);
     }
 
-    /* renamed from: component1, reason: from getter */
+    /* JADX INFO: renamed from: component1, reason: from getter */
     public final String getTheme() {
         return this.theme;
     }
 
-    /* renamed from: component2, reason: from getter */
+    /* JADX INFO: renamed from: component2, reason: from getter */
     public final String getLocale() {
         return this.locale;
     }

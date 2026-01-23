@@ -3,19 +3,19 @@ package p007b.p225i.p226a.p242c.p267x2;
 import androidx.annotation.Nullable;
 import p007b.p100d.p104b.p105a.outline;
 
-/* compiled from: SeekMap.java */
-/* renamed from: b.i.a.c.x2.t, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.x2.t, reason: use source file name */
+/* JADX INFO: compiled from: SeekMap.java */
+/* JADX INFO: loaded from: classes3.dex */
 public interface SeekMap {
 
-    /* compiled from: SeekMap.java */
-    /* renamed from: b.i.a.c.x2.t$b */
+    /* JADX INFO: renamed from: b.i.a.c.x2.t$b */
+    /* JADX INFO: compiled from: SeekMap.java */
     public static class b implements SeekMap {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final long f8995a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final a f8996b;
 
         public b(long j, long j2) {
@@ -24,41 +24,41 @@ public interface SeekMap {
         }
 
         @Override // p007b.p225i.p226a.p242c.p267x2.SeekMap
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public boolean mo3619c() {
             return false;
         }
 
         @Override // p007b.p225i.p226a.p242c.p267x2.SeekMap
-        /* renamed from: h */
+        /* JADX INFO: renamed from: h */
         public a mo3620h(long j) {
             return this.f8996b;
         }
 
         @Override // p007b.p225i.p226a.p242c.p267x2.SeekMap
-        /* renamed from: i */
+        /* JADX INFO: renamed from: i */
         public long mo3621i() {
             return this.f8995a;
         }
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     boolean mo3619c();
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     a mo3620h(long j);
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     long mo3621i();
 
-    /* compiled from: SeekMap.java */
-    /* renamed from: b.i.a.c.x2.t$a */
+    /* JADX INFO: renamed from: b.i.a.c.x2.t$a */
+    /* JADX INFO: compiled from: SeekMap.java */
     public static final class a {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final SeekPoint f8993a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final SeekPoint f8994b;
 
         public a(SeekPoint seekPoint) {

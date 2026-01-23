@@ -31,13 +31,13 @@ import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: UserProfileConnectionsView.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: UserProfileConnectionsView.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class UserProfileConnectionsView extends LinearLayout {
     private final UserProfileConnectionsViewBinding binding;
     private final ConnectedAccountsAdapter connectedAccountsAdapter;
 
-    /* compiled from: UserProfileConnectionsView.kt */
+    /* JADX INFO: compiled from: UserProfileConnectionsView.kt */
     public static final /* data */ class ConnectedAccountItem implements MGRecyclerDataPayload {
         private final ConnectedAccount connectedAccount;
         private final String key;
@@ -56,7 +56,7 @@ public final class UserProfileConnectionsView extends LinearLayout {
             return connectedAccountItem.copy(connectedAccount);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final ConnectedAccount getConnectedAccount() {
             return this.connectedAccount;
         }
@@ -103,7 +103,7 @@ public final class UserProfileConnectionsView extends LinearLayout {
         }
     }
 
-    /* compiled from: UserProfileConnectionsView.kt */
+    /* JADX INFO: compiled from: UserProfileConnectionsView.kt */
     public static final class ConnectedAccountsAdapter extends MGRecyclerAdapterSimple<ConnectedAccountItem> {
         private Function3<? super String, ? super Integer, ? super String, Unit> onConnectedAccountClick;
 
@@ -135,7 +135,7 @@ public final class UserProfileConnectionsView extends LinearLayout {
         }
     }
 
-    /* compiled from: UserProfileConnectionsView.kt */
+    /* JADX INFO: compiled from: UserProfileConnectionsView.kt */
     public static final class ViewHolder extends MGRecyclerViewHolder<ConnectedAccountsAdapter, ConnectedAccountItem> {
         private final TextView listItemTextView;
 
@@ -157,7 +157,7 @@ public final class UserProfileConnectionsView extends LinearLayout {
             onConfigure2(i, connectedAccountItem);
         }
 
-        /* renamed from: onConfigure, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: onConfigure, reason: avoid collision after fix types in other method */
         public void onConfigure2(int position, ConnectedAccountItem data) {
             Intrinsics3.checkNotNullParameter(data, "data");
             super.onConfigure(position, data);
@@ -179,7 +179,7 @@ public final class UserProfileConnectionsView extends LinearLayout {
         }
     }
 
-    /* compiled from: UserProfileConnectionsView.kt */
+    /* JADX INFO: compiled from: UserProfileConnectionsView.kt */
     public static final /* data */ class ViewState {
         private final List<ConnectedAccountItem> connectedAccountItems;
         private final boolean showConnectionsSection;
@@ -206,12 +206,12 @@ public final class UserProfileConnectionsView extends LinearLayout {
             return viewState.copy(z2, z3, list);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final boolean getShowConnectionsSection() {
             return this.showConnectionsSection;
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final boolean getShowMutualGuildsAndFriends() {
             return this.showMutualGuildsAndFriends;
         }
@@ -252,6 +252,9 @@ public final class UserProfileConnectionsView extends LinearLayout {
         /* JADX WARN: Type inference failed for: r0v1, types: [int] */
         /* JADX WARN: Type inference failed for: r0v6 */
         /* JADX WARN: Type inference failed for: r0v7 */
+        /* JADX WARN: Type inference failed for: r1v0 */
+        /* JADX WARN: Type inference failed for: r1v1, types: [int] */
+        /* JADX WARN: Type inference failed for: r1v6 */
         public int hashCode() {
             boolean z2 = this.showConnectionsSection;
             ?? r0 = z2;
@@ -260,7 +263,7 @@ public final class UserProfileConnectionsView extends LinearLayout {
             }
             int i = r0 * 31;
             boolean z3 = this.showMutualGuildsAndFriends;
-            int i2 = (i + (z3 ? 1 : z3 ? 1 : 0)) * 31;
+            int i2 = (i + (z3 ? 1 : z3)) * 31;
             List<ConnectedAccountItem> list = this.connectedAccountItems;
             return i2 + (list != null ? list.hashCode() : 0);
         }
@@ -275,8 +278,8 @@ public final class UserProfileConnectionsView extends LinearLayout {
         }
     }
 
-    /* compiled from: UserProfileConnectionsView.kt */
-    /* renamed from: com.discord.widgets.user.profile.UserProfileConnectionsView$updateViewState$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.user.profile.UserProfileConnectionsView$updateViewState$1 */
+    /* JADX INFO: compiled from: UserProfileConnectionsView.kt */
     public static final class C102931 extends Lambda implements Function3<String, Integer, String, Unit> {
         public final /* synthetic */ Function3 $onConnectedAccountClick;
 
@@ -298,8 +301,8 @@ public final class UserProfileConnectionsView extends LinearLayout {
         }
     }
 
-    /* compiled from: UserProfileConnectionsView.kt */
-    /* renamed from: com.discord.widgets.user.profile.UserProfileConnectionsView$updateViewState$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.user.profile.UserProfileConnectionsView$updateViewState$2 */
+    /* JADX INFO: compiled from: UserProfileConnectionsView.kt */
     public static final class ViewOnClickListenerC102942 implements View.OnClickListener {
         public final /* synthetic */ Function0 $onMutualGuildsItemClick;
 
@@ -313,8 +316,8 @@ public final class UserProfileConnectionsView extends LinearLayout {
         }
     }
 
-    /* compiled from: UserProfileConnectionsView.kt */
-    /* renamed from: com.discord.widgets.user.profile.UserProfileConnectionsView$updateViewState$3 */
+    /* JADX INFO: renamed from: com.discord.widgets.user.profile.UserProfileConnectionsView$updateViewState$3 */
+    /* JADX INFO: compiled from: UserProfileConnectionsView.kt */
     public static final class ViewOnClickListenerC102953 implements View.OnClickListener {
         public final /* synthetic */ Function0 $onMutualFriendsItemClick;
 

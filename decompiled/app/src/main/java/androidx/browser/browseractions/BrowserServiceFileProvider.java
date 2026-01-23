@@ -28,9 +28,9 @@ import java.util.concurrent.TimeUnit;
 import p007b.p100d.p104b.p105a.outline;
 import p007b.p225i.p355b.p359d.p360a.ListenableFuture8;
 
+/* JADX INFO: loaded from: classes.dex */
 @RestrictTo({RestrictTo.Scope.LIBRARY})
 @Deprecated
-/* loaded from: classes.dex */
 public final class BrowserServiceFileProvider extends FileProvider {
     private static final String AUTHORITY_SUFFIX = ".image_provider";
     private static final String CLIP_DATA_LABEL = "image_provider_uris";
@@ -42,7 +42,7 @@ public final class BrowserServiceFileProvider extends FileProvider {
     private static final String TAG = "BrowserServiceFP";
     public static Object sFileCleanupLock = new Object();
 
-    /* renamed from: androidx.browser.browseractions.BrowserServiceFileProvider$1 */
+    /* JADX INFO: renamed from: androidx.browser.browseractions.BrowserServiceFileProvider$1 */
     public class RunnableC01501 implements Runnable {
         public final /* synthetic */ ContentResolver val$resolver;
         public final /* synthetic */ ResolvableFuture val$result;
@@ -105,7 +105,7 @@ public final class BrowserServiceFileProvider extends FileProvider {
             return doInBackground2(voidArr);
         }
 
-        /* renamed from: doInBackground, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: doInBackground, reason: avoid collision after fix types in other method */
         public Void doInBackground2(Void... voidArr) {
             SharedPreferences sharedPreferences = this.mAppContext.getSharedPreferences(this.mAppContext.getPackageName() + BrowserServiceFileProvider.AUTHORITY_SUFFIX, 0);
             if (!shouldCleanUp(sharedPreferences)) {
@@ -209,13 +209,13 @@ public final class BrowserServiceFileProvider extends FileProvider {
             onPostExecute2(r1);
         }
 
-        /* renamed from: doInBackground, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: doInBackground, reason: avoid collision after fix types in other method */
         public Void doInBackground2(String... strArr) {
             saveFileIfNeededBlocking();
             return null;
         }
 
-        /* renamed from: onPostExecute, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: onPostExecute, reason: avoid collision after fix types in other method */
         public void onPostExecute2(Void r3) {
             new FileCleanupTask(this.mAppContext).executeOnExecutor(AsyncTask.SERIAL_EXECUTOR, new Void[0]);
         }

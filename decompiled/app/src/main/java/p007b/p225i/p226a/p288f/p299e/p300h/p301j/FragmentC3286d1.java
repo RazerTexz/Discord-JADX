@@ -19,26 +19,26 @@ import java.util.WeakHashMap;
 import p007b.p100d.p104b.p105a.outline;
 import p007b.p225i.p226a.p288f.p313h.p320g.HandlerC3484d;
 
-/* compiled from: com.google.android.gms:play-services-basement@@17.6.0 */
-/* renamed from: b.i.a.f.e.h.j.d1 */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.e.h.j.d1 */
+/* JADX INFO: compiled from: com.google.android.gms:play-services-basement@@17.6.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public final class FragmentC3286d1 extends Fragment implements InterfaceC3299j {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static final WeakHashMap<Activity, WeakReference<FragmentC3286d1>> f9363j = new WeakHashMap<>();
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final Map<String, LifecycleCallback> f9364k = Collections.synchronizedMap(new ArrayMap());
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public int f9365l = 0;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     @Nullable
     public Bundle f9366m;
 
     @Override // p007b.p225i.p226a.p288f.p299e.p300h.p301j.InterfaceC3299j
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final void mo4069a(String str, @NonNull LifecycleCallback lifecycleCallback) {
         if (this.f9364k.containsKey(str)) {
             throw new IllegalArgumentException(outline.m823K(new StringBuilder(str.length() + 59), "LifecycleCallback with tag ", str, " already added to this fragment."));
@@ -51,7 +51,7 @@ public final class FragmentC3286d1 extends Fragment implements InterfaceC3299j {
 
     @Override // p007b.p225i.p226a.p288f.p299e.p300h.p301j.InterfaceC3299j
     @Nullable
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final <T extends LifecycleCallback> T mo4070d(String str, Class<T> cls) {
         return cls.cast(this.f9364k.get(str));
     }
@@ -66,7 +66,7 @@ public final class FragmentC3286d1 extends Fragment implements InterfaceC3299j {
     }
 
     @Override // p007b.p225i.p226a.p288f.p299e.p300h.p301j.InterfaceC3299j
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final Activity mo4071e() {
         return getActivity();
     }

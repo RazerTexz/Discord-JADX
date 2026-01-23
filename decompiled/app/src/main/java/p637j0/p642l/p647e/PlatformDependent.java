@@ -1,14 +1,14 @@
 package p637j0.p642l.p647e;
 
-/* compiled from: PlatformDependent.java */
-/* renamed from: j0.l.e.h, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: j0.l.e.h, reason: use source file name */
+/* JADX INFO: compiled from: PlatformDependent.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class PlatformDependent {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final int f27281a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static final boolean f27282b;
 
     static {

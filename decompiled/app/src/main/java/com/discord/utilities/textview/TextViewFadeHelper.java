@@ -11,14 +11,14 @@ import android.text.style.UpdateAppearance;
 import android.widget.TextView;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: TextViewFadeHelper.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: TextViewFadeHelper.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class TextViewFadeHelper {
     private Float lineWidth;
     private final LinearGradientSpan span;
     private final TextView textView;
 
-    /* compiled from: TextViewFadeHelper.kt */
+    /* JADX INFO: compiled from: TextViewFadeHelper.kt */
     public final class LinearGradientSpan extends CharacterStyle implements UpdateAppearance {
         public LinearGradientSpan() {
         }

@@ -5,8 +5,8 @@ import java.io.Serializable;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: GuildRole.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: GuildRole.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class GuildRole implements Serializable {
     private final int color;
     private final boolean hoist;
@@ -20,27 +20,27 @@ public final /* data */ class GuildRole implements Serializable {
     private final GuildRoleTags tags;
     private final String unicodeEmoji;
 
-    /* renamed from: a, reason: from getter */
+    /* JADX INFO: renamed from: a, reason: from getter */
     public final long getId() {
         return this.id;
     }
 
-    /* renamed from: b, reason: from getter */
+    /* JADX INFO: renamed from: b, reason: from getter */
     public final int getColor() {
         return this.color;
     }
 
-    /* renamed from: c, reason: from getter */
+    /* JADX INFO: renamed from: c, reason: from getter */
     public final boolean getHoist() {
         return this.hoist;
     }
 
-    /* renamed from: d, reason: from getter */
+    /* JADX INFO: renamed from: d, reason: from getter */
     public final String getIcon() {
         return this.icon;
     }
 
-    /* renamed from: e, reason: from getter */
+    /* JADX INFO: renamed from: e, reason: from getter */
     public final boolean getManaged() {
         return this.managed;
     }
@@ -56,12 +56,12 @@ public final /* data */ class GuildRole implements Serializable {
         return this.position == guildRole.position && Intrinsics3.areEqual(this.name, guildRole.name) && this.id == guildRole.id && this.color == guildRole.color && this.hoist == guildRole.hoist && this.permissions == guildRole.permissions && this.mentionable == guildRole.mentionable && this.managed == guildRole.managed && Intrinsics3.areEqual(this.icon, guildRole.icon) && Intrinsics3.areEqual(this.tags, guildRole.tags) && Intrinsics3.areEqual(this.unicodeEmoji, guildRole.unicodeEmoji);
     }
 
-    /* renamed from: f, reason: from getter */
+    /* JADX INFO: renamed from: f, reason: from getter */
     public final boolean getMentionable() {
         return this.mentionable;
     }
 
-    /* renamed from: g, reason: from getter */
+    /* JADX INFO: renamed from: g, reason: from getter */
     public final String getName() {
         return this.name;
     }
@@ -70,12 +70,21 @@ public final /* data */ class GuildRole implements Serializable {
         return this.id;
     }
 
-    /* renamed from: h, reason: from getter */
+    /* JADX INFO: renamed from: h, reason: from getter */
     public final long getPermissions() {
         return this.permissions;
     }
 
     /* JADX WARN: Multi-variable type inference failed */
+    /* JADX WARN: Type inference failed for: r1v17 */
+    /* JADX WARN: Type inference failed for: r1v19 */
+    /* JADX WARN: Type inference failed for: r1v6, types: [int] */
+    /* JADX WARN: Type inference failed for: r3v4, types: [int] */
+    /* JADX WARN: Type inference failed for: r3v5 */
+    /* JADX WARN: Type inference failed for: r3v6 */
+    /* JADX WARN: Type inference failed for: r4v1 */
+    /* JADX WARN: Type inference failed for: r4v2, types: [int] */
+    /* JADX WARN: Type inference failed for: r4v3 */
     public int hashCode() {
         int i = this.position * 31;
         String str = this.name;
@@ -83,39 +92,39 @@ public final /* data */ class GuildRole implements Serializable {
         long j = this.id;
         int i2 = (((((i + iHashCode) * 31) + ((int) (j ^ (j >>> 32)))) * 31) + this.color) * 31;
         boolean z2 = this.hoist;
-        int i3 = z2;
-        if (z2 != 0) {
-            i3 = 1;
+        ?? r3 = z2;
+        if (z2) {
+            r3 = 1;
         }
         long j2 = this.permissions;
-        int i4 = (((i2 + i3) * 31) + ((int) (j2 ^ (j2 >>> 32)))) * 31;
+        int i3 = (((i2 + r3) * 31) + ((int) (j2 ^ (j2 >>> 32)))) * 31;
         boolean z3 = this.mentionable;
-        int i5 = z3;
-        if (z3 != 0) {
-            i5 = 1;
+        ?? r1 = z3;
+        if (z3) {
+            r1 = 1;
         }
-        int i6 = (i4 + i5) * 31;
+        int i4 = (i3 + r1) * 31;
         boolean z4 = this.managed;
-        int i7 = (i6 + (z4 ? 1 : z4 ? 1 : 0)) * 31;
+        int i5 = (i4 + (z4 ? 1 : z4)) * 31;
         String str2 = this.icon;
-        int iHashCode2 = (i7 + (str2 != null ? str2.hashCode() : 0)) * 31;
+        int iHashCode2 = (i5 + (str2 != null ? str2.hashCode() : 0)) * 31;
         GuildRoleTags guildRoleTags = this.tags;
         int iHashCode3 = (iHashCode2 + (guildRoleTags != null ? guildRoleTags.hashCode() : 0)) * 31;
         String str3 = this.unicodeEmoji;
         return iHashCode3 + (str3 != null ? str3.hashCode() : 0);
     }
 
-    /* renamed from: i, reason: from getter */
+    /* JADX INFO: renamed from: i, reason: from getter */
     public final int getPosition() {
         return this.position;
     }
 
-    /* renamed from: j, reason: from getter */
+    /* JADX INFO: renamed from: j, reason: from getter */
     public final GuildRoleTags getTags() {
         return this.tags;
     }
 
-    /* renamed from: k, reason: from getter */
+    /* JADX INFO: renamed from: k, reason: from getter */
     public final String getUnicodeEmoji() {
         return this.unicodeEmoji;
     }

@@ -5,35 +5,35 @@ import androidx.annotation.NonNull;
 import java.util.Arrays;
 import p007b.p225i.p226a.p288f.p299e.p308o.C3404f;
 
-/* compiled from: com.google.firebase:firebase-appindexing@@19.1.0 */
-/* renamed from: b.i.c.k.a */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.c.k.a */
+/* JADX INFO: compiled from: com.google.firebase:firebase-appindexing@@19.1.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public interface InterfaceC4560a {
 
-    /* compiled from: com.google.firebase:firebase-appindexing@@19.1.0 */
-    /* renamed from: b.i.c.k.a$a */
+    /* JADX INFO: renamed from: b.i.c.k.a$a */
+    /* JADX INFO: compiled from: com.google.firebase:firebase-appindexing@@19.1.0 */
     public static class a {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final Bundle f12163a = new Bundle();
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final String f12164b;
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public String f12165c;
 
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         public String f12166d;
 
-        /* renamed from: e */
+        /* JADX INFO: renamed from: e */
         public String f12167e;
 
         public a(@NonNull String str) {
             this.f12164b = str;
         }
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public a m6344a(@NonNull String str, @NonNull String... strArr) {
             Bundle bundle = this.f12163a;
             String[] strArr2 = (String[]) Arrays.copyOf(strArr, strArr.length);

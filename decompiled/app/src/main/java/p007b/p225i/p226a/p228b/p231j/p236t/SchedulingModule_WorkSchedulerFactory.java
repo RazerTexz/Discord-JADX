@@ -7,21 +7,21 @@ import p007b.p225i.p226a.p228b.p231j.p236t.p238i.EventStore;
 import p007b.p225i.p226a.p228b.p231j.p240v.Clock3;
 import p496c0.p497a.Provider3;
 
-/* compiled from: SchedulingModule_WorkSchedulerFactory.java */
-/* renamed from: b.i.a.b.j.t.g, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.b.j.t.g, reason: use source file name */
+/* JADX INFO: compiled from: SchedulingModule_WorkSchedulerFactory.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class SchedulingModule_WorkSchedulerFactory implements Provider3 {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final Provider3<Context> f5348a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final Provider3<EventStore> f5349b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final Provider3<SchedulerConfig> f5350c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final Provider3<Clock3> f5351d;
 
     public SchedulingModule_WorkSchedulerFactory(Provider3<Context> provider3, Provider3<EventStore> provider32, Provider3<SchedulerConfig> provider33, Provider3<Clock3> provider34) {

@@ -14,14 +14,14 @@ import com.google.android.material.textfield.TextInputLayout;
 import p007b.p008a.p025i.LayoutIconUploaderBinding;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: GuildCreateCloneViews.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: GuildCreateCloneViews.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public interface GuildCreateCloneViews {
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = Companion.$$INSTANCE;
 
-    /* compiled from: GuildCreateCloneViews.kt */
+    /* JADX INFO: compiled from: GuildCreateCloneViews.kt */
     public static final class Companion {
         public static final /* synthetic */ Companion $$INSTANCE = new Companion();
 
@@ -39,7 +39,7 @@ public interface GuildCreateCloneViews {
         }
     }
 
-    /* compiled from: GuildCreateCloneViews.kt */
+    /* JADX INFO: compiled from: GuildCreateCloneViews.kt */
     public static final class GuildCloneViews implements GuildCreateCloneViews {
         private final TextView guidelinesTextView;
         private final LoadingButton guildCreateButton;
@@ -109,7 +109,7 @@ public interface GuildCreateCloneViews {
         }
     }
 
-    /* compiled from: GuildCreateCloneViews.kt */
+    /* JADX INFO: compiled from: GuildCreateCloneViews.kt */
     public static final class GuildCreateViews implements GuildCreateCloneViews {
         private final TextView guidelinesTextView;
         private final LoadingButton guildCreateButton;

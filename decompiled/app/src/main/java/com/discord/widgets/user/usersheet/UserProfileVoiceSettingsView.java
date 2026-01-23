@@ -20,12 +20,12 @@ import p007b.p100d.p104b.p105a.outline;
 import p507d0.p508a0.MathJVM;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: UserProfileVoiceSettingsView.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: UserProfileVoiceSettingsView.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class UserProfileVoiceSettingsView extends LinearLayout {
     private final UserProfileVoiceSettingsViewBinding binding;
 
-    /* compiled from: UserProfileVoiceSettingsView.kt */
+    /* JADX INFO: compiled from: UserProfileVoiceSettingsView.kt */
     public static final /* data */ class ViewState {
         private final Boolean isDeafened;
         private final boolean isMuted;
@@ -50,17 +50,17 @@ public final class UserProfileVoiceSettingsView extends LinearLayout {
             return viewState.copy(z2, bool, f);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final boolean getIsMuted() {
             return this.isMuted;
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final Boolean getIsDeafened() {
             return this.isDeafened;
         }
 
-        /* renamed from: component3, reason: from getter */
+        /* JADX INFO: renamed from: component3, reason: from getter */
         public final Float getOutputVolume() {
             return this.outputVolume;
         }
@@ -121,8 +121,8 @@ public final class UserProfileVoiceSettingsView extends LinearLayout {
         }
     }
 
-    /* compiled from: UserProfileVoiceSettingsView.kt */
-    /* renamed from: com.discord.widgets.user.usersheet.UserProfileVoiceSettingsView$setOnDeafenChecked$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.user.usersheet.UserProfileVoiceSettingsView$setOnDeafenChecked$1 */
+    /* JADX INFO: compiled from: UserProfileVoiceSettingsView.kt */
     public static final class C103391 implements CompoundButton.OnCheckedChangeListener {
         public final /* synthetic */ Function1 $onChecked;
 
@@ -136,8 +136,8 @@ public final class UserProfileVoiceSettingsView extends LinearLayout {
         }
     }
 
-    /* compiled from: UserProfileVoiceSettingsView.kt */
-    /* renamed from: com.discord.widgets.user.usersheet.UserProfileVoiceSettingsView$setOnMuteChecked$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.user.usersheet.UserProfileVoiceSettingsView$setOnMuteChecked$1 */
+    /* JADX INFO: compiled from: UserProfileVoiceSettingsView.kt */
     public static final class C103401 implements CompoundButton.OnCheckedChangeListener {
         public final /* synthetic */ Function1 $onChecked;
 

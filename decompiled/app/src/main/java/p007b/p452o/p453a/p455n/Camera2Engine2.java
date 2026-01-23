@@ -3,12 +3,12 @@ package p007b.p452o.p453a.p455n;
 import android.util.Range;
 import java.util.Comparator;
 
-/* compiled from: Camera2Engine.java */
-/* renamed from: b.o.a.n.e, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.o.a.n.e, reason: use source file name */
+/* JADX INFO: compiled from: Camera2Engine.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class Camera2Engine2 implements Comparator<Range<Integer>> {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final /* synthetic */ boolean f13864j;
 
     public Camera2Engine2(Camera2Engine camera2Engine, boolean z2) {

@@ -6,9 +6,9 @@ import kotlin.text.Regex;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: SystemLogUtils.kt */
-/* renamed from: com.discord.utilities.systemlog.SystemLogUtils$fetchLastTombstone$extractedGroups$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.utilities.systemlog.SystemLogUtils$fetchLastTombstone$extractedGroups$1, reason: use source file name */
+/* JADX INFO: compiled from: SystemLogUtils.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class SystemLogUtils2 extends Lambda implements Function1<MatchResult, String> {
     public final /* synthetic */ Regex $removeDexNameExp;
 
@@ -23,7 +23,7 @@ public final class SystemLogUtils2 extends Lambda implements Function1<MatchResu
         return invoke2(matchResult);
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final String invoke2(MatchResult matchResult) {
         Intrinsics3.checkNotNullParameter(matchResult, "it");
         return this.$removeDexNameExp.replace(matchResult.getGroupValues().get(1), "classesN.dex");

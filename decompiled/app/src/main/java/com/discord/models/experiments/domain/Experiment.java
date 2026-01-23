@@ -5,8 +5,8 @@ import kotlin.jvm.functions.Function0;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: Experiment.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: Experiment.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class Experiment {
     private final int bucket;
     private final boolean isOverride;
@@ -23,6 +23,7 @@ public final /* data */ class Experiment {
         this.trackExposure = function0;
     }
 
+    /* JADX WARN: Multi-variable type inference failed */
     public static /* synthetic */ Experiment copy$default(Experiment experiment, int i, int i2, int i3, boolean z2, Function0 function0, int i4, Object obj) {
         if ((i4 & 1) != 0) {
             i = experiment.revision;
@@ -45,22 +46,22 @@ public final /* data */ class Experiment {
         return experiment.copy(i, i5, i6, z3, function0);
     }
 
-    /* renamed from: component1, reason: from getter */
+    /* JADX INFO: renamed from: component1, reason: from getter */
     public final int getRevision() {
         return this.revision;
     }
 
-    /* renamed from: component2, reason: from getter */
+    /* JADX INFO: renamed from: component2, reason: from getter */
     public final int getBucket() {
         return this.bucket;
     }
 
-    /* renamed from: component3, reason: from getter */
+    /* JADX INFO: renamed from: component3, reason: from getter */
     public final int getPopulation() {
         return this.population;
     }
 
-    /* renamed from: component4, reason: from getter */
+    /* JADX INFO: renamed from: component4, reason: from getter */
     public final boolean getIsOverride() {
         return this.isOverride;
     }
@@ -102,16 +103,19 @@ public final /* data */ class Experiment {
     }
 
     /* JADX WARN: Multi-variable type inference failed */
+    /* JADX WARN: Type inference failed for: r1v3, types: [int] */
+    /* JADX WARN: Type inference failed for: r1v8 */
+    /* JADX WARN: Type inference failed for: r1v9 */
     public int hashCode() {
         int i = ((((this.revision * 31) + this.bucket) * 31) + this.population) * 31;
         boolean z2 = this.isOverride;
-        int i2 = z2;
-        if (z2 != 0) {
-            i2 = 1;
+        ?? r1 = z2;
+        if (z2) {
+            r1 = 1;
         }
-        int i3 = (i + i2) * 31;
+        int i2 = (i + r1) * 31;
         Function0<Unit> function0 = this.trackExposure;
-        return i3 + (function0 != null ? function0.hashCode() : 0);
+        return i2 + (function0 != null ? function0.hashCode() : 0);
     }
 
     public final boolean isOverride() {

@@ -8,78 +8,78 @@ import java.util.List;
 import p007b.p085c.p086a.p087a0.AnimatableValueParser;
 import p007b.p225i.p226a.p288f.p330i.p332b.C4262z9;
 
-/* compiled from: com.google.android.gms:play-services-measurement-impl@@18.0.0 */
-/* loaded from: classes3.dex */
+/* JADX INFO: compiled from: com.google.android.gms:play-services-measurement-impl@@18.0.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public final class zzn extends AbstractSafeParcelable {
     public static final Parcelable.Creator<zzn> CREATOR = new C4262z9();
 
-    /* renamed from: A */
+    /* JADX INFO: renamed from: A */
     public final String f20677A;
 
-    /* renamed from: B */
+    /* JADX INFO: renamed from: B */
     public final Boolean f20678B;
 
-    /* renamed from: C */
+    /* JADX INFO: renamed from: C */
     public final long f20679C;
 
-    /* renamed from: D */
+    /* JADX INFO: renamed from: D */
     public final List<String> f20680D;
 
-    /* renamed from: E */
+    /* JADX INFO: renamed from: E */
     public final String f20681E;
 
-    /* renamed from: F */
+    /* JADX INFO: renamed from: F */
     public final String f20682F;
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final String f20683j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final String f20684k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final String f20685l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public final String f20686m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public final long f20687n;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public final long f20688o;
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public final String f20689p;
 
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     public final boolean f20690q;
 
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     public final boolean f20691r;
 
-    /* renamed from: s */
+    /* JADX INFO: renamed from: s */
     public final long f20692s;
 
-    /* renamed from: t */
+    /* JADX INFO: renamed from: t */
     public final String f20693t;
 
-    /* renamed from: u */
+    /* JADX INFO: renamed from: u */
     public final long f20694u;
 
-    /* renamed from: v */
+    /* JADX INFO: renamed from: v */
     public final long f20695v;
 
-    /* renamed from: w */
+    /* JADX INFO: renamed from: w */
     public final int f20696w;
 
-    /* renamed from: x */
+    /* JADX INFO: renamed from: x */
     public final boolean f20697x;
 
-    /* renamed from: y */
+    /* JADX INFO: renamed from: y */
     public final boolean f20698y;
 
-    /* renamed from: z */
+    /* JADX INFO: renamed from: z */
     public final boolean f20699z;
 
     public zzn(String str, String str2, String str3, long j, String str4, long j2, long j3, String str5, boolean z2, boolean z3, String str6, long j4, long j5, int i, boolean z4, boolean z5, boolean z6, String str7, Boolean bool, long j6, List<String> list, String str8, String str9) {

@@ -5,65 +5,65 @@ import androidx.annotation.Nullable;
 import java.util.Collections;
 import java.util.Set;
 
-/* compiled from: WebvttCssStyle.java */
-/* renamed from: b.i.a.c.b3.v.f, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.b3.v.f, reason: use source file name */
+/* JADX INFO: compiled from: WebvttCssStyle.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class WebvttCssStyle {
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     @ColorInt
     public int f6119f;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public int f6121h;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public float f6128o;
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public String f6114a = "";
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public String f6115b = "";
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public Set<String> f6116c = Collections.emptySet();
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public String f6117d = "";
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     @Nullable
     public String f6118e = null;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public boolean f6120g = false;
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public boolean f6122i = false;
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public int f6123j = -1;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public int f6124k = -1;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public int f6125l = -1;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public int f6126m = -1;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public int f6127n = -1;
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public int f6129p = -1;
 
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     public boolean f6130q = false;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static int m2708b(int i, String str, @Nullable String str2, int i2) {
         if (str.isEmpty() || i == -1) {
             return i;
@@ -74,7 +74,7 @@ public final class WebvttCssStyle {
         return -1;
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public int m2709a() {
         int i = this.f6125l;
         if (i == -1 && this.f6126m == -1) {

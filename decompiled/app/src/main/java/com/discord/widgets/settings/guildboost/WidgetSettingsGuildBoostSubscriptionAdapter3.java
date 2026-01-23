@@ -4,9 +4,9 @@ import android.view.MenuItem;
 import com.discord.models.domain.ModelAppliedGuildBoost;
 import com.discord.widgets.settings.guildboost.WidgetSettingsGuildBoostSubscriptionAdapter;
 
-/* compiled from: WidgetSettingsGuildBoostSubscriptionAdapter.kt */
-/* renamed from: com.discord.widgets.settings.guildboost.WidgetSettingsGuildBoostSubscriptionAdapter$GuildBoostListItem$showGuildBoostPopup$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.settings.guildboost.WidgetSettingsGuildBoostSubscriptionAdapter$GuildBoostListItem$showGuildBoostPopup$1, reason: use source file name */
+/* JADX INFO: compiled from: WidgetSettingsGuildBoostSubscriptionAdapter.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetSettingsGuildBoostSubscriptionAdapter3 implements MenuItem.OnMenuItemClickListener {
     public final /* synthetic */ WidgetSettingsGuildBoostSubscriptionAdapter.Item.GuildBoostItem $data;
     public final /* synthetic */ WidgetSettingsGuildBoostSubscriptionAdapter.GuildBoostListItem this$0;

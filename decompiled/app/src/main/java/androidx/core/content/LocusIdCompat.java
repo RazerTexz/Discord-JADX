@@ -8,7 +8,7 @@ import androidx.annotation.RequiresApi;
 import androidx.core.util.Preconditions;
 import p007b.p100d.p104b.p105a.outline;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public final class LocusIdCompat {
     private final String mId;
     private final LocusId mWrapped;

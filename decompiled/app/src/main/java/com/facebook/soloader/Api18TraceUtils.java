@@ -6,11 +6,11 @@ import org.objectweb.asm.Opcodes;
 import p007b.p100d.p104b.p105a.outline;
 import p007b.p109f.p190m.DoNotOptimize;
 
+/* JADX INFO: loaded from: classes3.dex */
 @DoNotOptimize
 @TargetApi(18)
-/* loaded from: classes3.dex */
 public class Api18TraceUtils {
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static void m8727a(String str, String str2, String str3) {
         String strM886y = outline.m886y(str, str2, str3);
         if (strM886y.length() > 127 && str2 != null) {

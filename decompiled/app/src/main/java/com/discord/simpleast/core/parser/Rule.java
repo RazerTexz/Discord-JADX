@@ -7,12 +7,12 @@ import java.util.regex.Pattern;
 import p507d0.p579g0.Strings4;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: Rule.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: Rule.kt */
+/* JADX INFO: loaded from: classes.dex */
 public abstract class Rule<R, T extends Node<R>, S> {
     private final Matcher matcher;
 
-    /* compiled from: Rule.kt */
+    /* JADX INFO: compiled from: Rule.kt */
     public static abstract class BlockRule<R, T extends Node<R>, S> extends Rule<R, T, S> {
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
         public BlockRule(Pattern pattern) {

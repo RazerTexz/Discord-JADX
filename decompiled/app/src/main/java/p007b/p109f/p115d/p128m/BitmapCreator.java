@@ -2,10 +2,10 @@ package p007b.p109f.p115d.p128m;
 
 import android.graphics.Bitmap;
 
-/* compiled from: BitmapCreator.java */
-/* renamed from: b.f.d.m.a, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.f.d.m.a, reason: use source file name */
+/* JADX INFO: compiled from: BitmapCreator.java */
+/* JADX INFO: loaded from: classes.dex */
 public interface BitmapCreator {
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     Bitmap m1010a(int i, int i2, Bitmap.Config config);
 }

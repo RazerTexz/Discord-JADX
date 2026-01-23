@@ -47,19 +47,19 @@ import p507d0.p592z.p594d.Lambda;
 import p658rx.Observable;
 import p658rx.subjects.PublishSubject;
 
-/* compiled from: WidgetChannelMembersListViewModel.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetChannelMembersListViewModel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetChannelMembersListViewModel extends AppViewModel<ViewState> {
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private final PublishSubject<Event> eventSubject;
     private final GuildChannelSubscriber guildChannelSubscriber;
     private final StoreEmojiCustom storeCustomEmojis;
     private final StoreGuilds storeGuilds;
 
-    /* compiled from: WidgetChannelMembersListViewModel.kt */
-    /* renamed from: com.discord.widgets.channels.memberlist.WidgetChannelMembersListViewModel$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.channels.memberlist.WidgetChannelMembersListViewModel$1 */
+    /* JADX INFO: compiled from: WidgetChannelMembersListViewModel.kt */
     public static final class C74941 implements GuildChannelSubscriber {
         @Override // com.discord.widgets.channels.memberlist.WidgetChannelMembersListViewModel.GuildChannelSubscriber
         public void subscribeToChannelRange(Channel channel, Ranges2 range) {
@@ -75,8 +75,8 @@ public final class WidgetChannelMembersListViewModel extends AppViewModel<ViewSt
         }
     }
 
-    /* compiled from: WidgetChannelMembersListViewModel.kt */
-    /* renamed from: com.discord.widgets.channels.memberlist.WidgetChannelMembersListViewModel$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.channels.memberlist.WidgetChannelMembersListViewModel$2 */
+    /* JADX INFO: compiled from: WidgetChannelMembersListViewModel.kt */
     public static final class C74952 extends Lambda implements Function1<StoreState, Unit> {
         public C74952() {
             super(1);
@@ -88,14 +88,14 @@ public final class WidgetChannelMembersListViewModel extends AppViewModel<ViewSt
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(StoreState storeState) {
             Intrinsics3.checkNotNullParameter(storeState, "storeState");
             WidgetChannelMembersListViewModel.access$handleStoreState(WidgetChannelMembersListViewModel.this, storeState);
         }
     }
 
-    /* compiled from: WidgetChannelMembersListViewModel.kt */
+    /* JADX INFO: compiled from: WidgetChannelMembersListViewModel.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -115,10 +115,10 @@ public final class WidgetChannelMembersListViewModel extends AppViewModel<ViewSt
         }
     }
 
-    /* compiled from: WidgetChannelMembersListViewModel.kt */
+    /* JADX INFO: compiled from: WidgetChannelMembersListViewModel.kt */
     public static abstract class Event {
 
-        /* compiled from: WidgetChannelMembersListViewModel.kt */
+        /* JADX INFO: compiled from: WidgetChannelMembersListViewModel.kt */
         public static final /* data */ class Error extends Event {
             private final int code;
 
@@ -134,7 +134,7 @@ public final class WidgetChannelMembersListViewModel extends AppViewModel<ViewSt
                 return error.copy(i);
             }
 
-            /* renamed from: component1, reason: from getter */
+            /* JADX INFO: renamed from: component1, reason: from getter */
             public final int getCode() {
                 return this.code;
             }
@@ -163,7 +163,7 @@ public final class WidgetChannelMembersListViewModel extends AppViewModel<ViewSt
             }
         }
 
-        /* compiled from: WidgetChannelMembersListViewModel.kt */
+        /* JADX INFO: compiled from: WidgetChannelMembersListViewModel.kt */
         public static final class ScrollToTop extends Event {
             public static final ScrollToTop INSTANCE = new ScrollToTop();
 
@@ -172,7 +172,7 @@ public final class WidgetChannelMembersListViewModel extends AppViewModel<ViewSt
             }
         }
 
-        /* compiled from: WidgetChannelMembersListViewModel.kt */
+        /* JADX INFO: compiled from: WidgetChannelMembersListViewModel.kt */
         public static final class UpdateRanges extends Event {
             public static final UpdateRanges INSTANCE = new UpdateRanges();
 
@@ -189,20 +189,20 @@ public final class WidgetChannelMembersListViewModel extends AppViewModel<ViewSt
         }
     }
 
-    /* compiled from: WidgetChannelMembersListViewModel.kt */
+    /* JADX INFO: compiled from: WidgetChannelMembersListViewModel.kt */
     public interface GuildChannelSubscriber {
         void subscribeToChannelRange(Channel channel, Ranges2 range);
 
         void subscribeToThread(Channel channel);
     }
 
-    /* compiled from: WidgetChannelMembersListViewModel.kt */
+    /* JADX INFO: compiled from: WidgetChannelMembersListViewModel.kt */
     public interface MemberList {
 
-        /* renamed from: Companion, reason: from kotlin metadata */
+        /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
         public static final Companion INSTANCE = Companion.$$INSTANCE;
 
-        /* compiled from: WidgetChannelMembersListViewModel.kt */
+        /* JADX INFO: compiled from: WidgetChannelMembersListViewModel.kt */
         public static final class Companion {
             public static final /* synthetic */ Companion $$INSTANCE = new Companion();
             private static final MemberList EMPTY = new WidgetChannelMembersListViewModel4();
@@ -224,12 +224,12 @@ public final class WidgetChannelMembersListViewModel extends AppViewModel<ViewSt
         int getSize();
     }
 
-    /* compiled from: WidgetChannelMembersListViewModel.kt */
+    /* JADX INFO: compiled from: WidgetChannelMembersListViewModel.kt */
     public static abstract class StoreState {
         private final Channel channel;
         private final boolean isPanelOpen;
 
-        /* compiled from: WidgetChannelMembersListViewModel.kt */
+        /* JADX INFO: compiled from: WidgetChannelMembersListViewModel.kt */
         public static final /* data */ class Guild extends StoreState {
             private final Channel channel;
             private final ChannelMemberList channelMembers;
@@ -252,6 +252,7 @@ public final class WidgetChannelMembersListViewModel extends AppViewModel<ViewSt
                 this.guildRoles = map;
             }
 
+            /* JADX WARN: Multi-variable type inference failed */
             public static /* synthetic */ Guild copy$default(Guild guild, boolean z2, Channel channel, com.discord.models.guild.Guild guild2, ChannelMemberList channelMemberList, Long l, Map map, int i, Object obj) {
                 if ((i & 1) != 0) {
                     z2 = guild.getIsPanelOpen();
@@ -286,17 +287,17 @@ public final class WidgetChannelMembersListViewModel extends AppViewModel<ViewSt
                 return getChannel();
             }
 
-            /* renamed from: component3, reason: from getter */
+            /* JADX INFO: renamed from: component3, reason: from getter */
             public final com.discord.models.guild.Guild getGuild() {
                 return this.guild;
             }
 
-            /* renamed from: component4, reason: from getter */
+            /* JADX INFO: renamed from: component4, reason: from getter */
             public final ChannelMemberList getChannelMembers() {
                 return this.channelMembers;
             }
 
-            /* renamed from: component5, reason: from getter */
+            /* JADX INFO: renamed from: component5, reason: from getter */
             public final Long getChannelPermissions() {
                 return this.channelPermissions;
             }
@@ -364,7 +365,7 @@ public final class WidgetChannelMembersListViewModel extends AppViewModel<ViewSt
             }
 
             @Override // com.discord.widgets.channels.memberlist.WidgetChannelMembersListViewModel.StoreState
-            /* renamed from: isPanelOpen, reason: from getter */
+            /* JADX INFO: renamed from: isPanelOpen, reason: from getter */
             public boolean getIsPanelOpen() {
                 return this.isPanelOpen;
             }
@@ -385,7 +386,7 @@ public final class WidgetChannelMembersListViewModel extends AppViewModel<ViewSt
             }
         }
 
-        /* compiled from: WidgetChannelMembersListViewModel.kt */
+        /* JADX INFO: compiled from: WidgetChannelMembersListViewModel.kt */
         public static final /* data */ class None extends StoreState {
             private final boolean isPanelOpen;
 
@@ -425,7 +426,7 @@ public final class WidgetChannelMembersListViewModel extends AppViewModel<ViewSt
             }
 
             @Override // com.discord.widgets.channels.memberlist.WidgetChannelMembersListViewModel.StoreState
-            /* renamed from: isPanelOpen, reason: from getter */
+            /* JADX INFO: renamed from: isPanelOpen, reason: from getter */
             public boolean getIsPanelOpen() {
                 return this.isPanelOpen;
             }
@@ -438,7 +439,7 @@ public final class WidgetChannelMembersListViewModel extends AppViewModel<ViewSt
             }
         }
 
-        /* compiled from: WidgetChannelMembersListViewModel.kt */
+        /* JADX INFO: compiled from: WidgetChannelMembersListViewModel.kt */
         public static final /* data */ class Private extends StoreState {
             private final Map<Long, ModelApplicationStream> applicationStreams;
             private final Channel channel;
@@ -464,6 +465,7 @@ public final class WidgetChannelMembersListViewModel extends AppViewModel<ViewSt
                 this.relationships = map4;
             }
 
+            /* JADX WARN: Multi-variable type inference failed */
             public static /* synthetic */ Private copy$default(Private r4, boolean z2, Channel channel, Map map, Map map2, Map map3, Map map4, int i, Object obj) {
                 if ((i & 1) != 0) {
                     z2 = r4.getIsPanelOpen();
@@ -575,7 +577,7 @@ public final class WidgetChannelMembersListViewModel extends AppViewModel<ViewSt
             }
 
             @Override // com.discord.widgets.channels.memberlist.WidgetChannelMembersListViewModel.StoreState
-            /* renamed from: isPanelOpen, reason: from getter */
+            /* JADX INFO: renamed from: isPanelOpen, reason: from getter */
             public boolean getIsPanelOpen() {
                 return this.isPanelOpen;
             }
@@ -596,7 +598,7 @@ public final class WidgetChannelMembersListViewModel extends AppViewModel<ViewSt
             }
         }
 
-        /* compiled from: WidgetChannelMembersListViewModel.kt */
+        /* JADX INFO: compiled from: WidgetChannelMembersListViewModel.kt */
         public static final /* data */ class Thread extends StoreState {
             private final Channel channel;
             private final com.discord.models.guild.Guild guild;
@@ -634,6 +636,7 @@ public final class WidgetChannelMembersListViewModel extends AppViewModel<ViewSt
                 this.joinedThread = joinedThread;
             }
 
+            /* JADX WARN: Multi-variable type inference failed */
             public static /* synthetic */ Thread copy$default(Thread thread, boolean z2, Channel channel, Channel channel2, com.discord.models.guild.Guild guild, Map map, Map map2, Map map3, Map map4, Map map5, Set set, StoreThreadsJoined.JoinedThread joinedThread, int i, Object obj) {
                 return thread.copy((i & 1) != 0 ? thread.getIsPanelOpen() : z2, (i & 2) != 0 ? thread.getChannel() : channel, (i & 4) != 0 ? thread.parentChannel : channel2, (i & 8) != 0 ? thread.guild : guild, (i & 16) != 0 ? thread.roles : map, (i & 32) != 0 ? thread.guildMembers : map2, (i & 64) != 0 ? thread.users : map3, (i & 128) != 0 ? thread.presences : map4, (i & 256) != 0 ? thread.streams : map5, (i & 512) != 0 ? thread.threadMembers : set, (i & 1024) != 0 ? thread.joinedThread : joinedThread);
             }
@@ -646,7 +649,7 @@ public final class WidgetChannelMembersListViewModel extends AppViewModel<ViewSt
                 return this.threadMembers;
             }
 
-            /* renamed from: component11, reason: from getter */
+            /* JADX INFO: renamed from: component11, reason: from getter */
             public final StoreThreadsJoined.JoinedThread getJoinedThread() {
                 return this.joinedThread;
             }
@@ -655,12 +658,12 @@ public final class WidgetChannelMembersListViewModel extends AppViewModel<ViewSt
                 return getChannel();
             }
 
-            /* renamed from: component3, reason: from getter */
+            /* JADX INFO: renamed from: component3, reason: from getter */
             public final Channel getParentChannel() {
                 return this.parentChannel;
             }
 
-            /* renamed from: component4, reason: from getter */
+            /* JADX INFO: renamed from: component4, reason: from getter */
             public final com.discord.models.guild.Guild getGuild() {
                 return this.guild;
             }
@@ -778,7 +781,7 @@ public final class WidgetChannelMembersListViewModel extends AppViewModel<ViewSt
             }
 
             @Override // com.discord.widgets.channels.memberlist.WidgetChannelMembersListViewModel.StoreState
-            /* renamed from: isPanelOpen, reason: from getter */
+            /* JADX INFO: renamed from: isPanelOpen, reason: from getter */
             public boolean getIsPanelOpen() {
                 return this.isPanelOpen;
             }
@@ -820,7 +823,7 @@ public final class WidgetChannelMembersListViewModel extends AppViewModel<ViewSt
             return this.channel;
         }
 
-        /* renamed from: isPanelOpen, reason: from getter */
+        /* JADX INFO: renamed from: isPanelOpen, reason: from getter */
         public boolean getIsPanelOpen() {
             return this.isPanelOpen;
         }
@@ -830,11 +833,11 @@ public final class WidgetChannelMembersListViewModel extends AppViewModel<ViewSt
         }
     }
 
-    /* compiled from: WidgetChannelMembersListViewModel.kt */
+    /* JADX INFO: compiled from: WidgetChannelMembersListViewModel.kt */
     public static abstract class ViewState {
         private final String listId;
 
-        /* compiled from: WidgetChannelMembersListViewModel.kt */
+        /* JADX INFO: compiled from: WidgetChannelMembersListViewModel.kt */
         public static final class Empty extends ViewState {
             public static final Empty INSTANCE = new Empty();
 
@@ -843,7 +846,7 @@ public final class WidgetChannelMembersListViewModel extends AppViewModel<ViewSt
             }
         }
 
-        /* compiled from: WidgetChannelMembersListViewModel.kt */
+        /* JADX INFO: compiled from: WidgetChannelMembersListViewModel.kt */
         public static final /* data */ class Loaded extends ViewState {
             private final Channel channel;
             private final boolean isOpen;
@@ -876,22 +879,22 @@ public final class WidgetChannelMembersListViewModel extends AppViewModel<ViewSt
                 return loaded.copy(memberList, z2, channel, z3);
             }
 
-            /* renamed from: component1, reason: from getter */
+            /* JADX INFO: renamed from: component1, reason: from getter */
             public final MemberList getListItems() {
                 return this.listItems;
             }
 
-            /* renamed from: component2, reason: from getter */
+            /* JADX INFO: renamed from: component2, reason: from getter */
             public final boolean getIsOpen() {
                 return this.isOpen;
             }
 
-            /* renamed from: component3, reason: from getter */
+            /* JADX INFO: renamed from: component3, reason: from getter */
             public final Channel getChannel() {
                 return this.channel;
             }
 
-            /* renamed from: component4, reason: from getter */
+            /* JADX INFO: renamed from: component4, reason: from getter */
             public final boolean getIsThreadJoined() {
                 return this.isThreadJoined;
             }
@@ -921,19 +924,25 @@ public final class WidgetChannelMembersListViewModel extends AppViewModel<ViewSt
             }
 
             /* JADX WARN: Multi-variable type inference failed */
+            /* JADX WARN: Type inference failed for: r2v1, types: [int] */
+            /* JADX WARN: Type inference failed for: r2v3 */
+            /* JADX WARN: Type inference failed for: r2v4 */
+            /* JADX WARN: Type inference failed for: r3v0 */
+            /* JADX WARN: Type inference failed for: r3v1, types: [int] */
+            /* JADX WARN: Type inference failed for: r3v2 */
             public int hashCode() {
                 MemberList memberList = this.listItems;
                 int iHashCode = (memberList != null ? memberList.hashCode() : 0) * 31;
                 boolean z2 = this.isOpen;
-                int i = z2;
-                if (z2 != 0) {
-                    i = 1;
+                ?? r2 = z2;
+                if (z2) {
+                    r2 = 1;
                 }
-                int i2 = (iHashCode + i) * 31;
+                int i = (iHashCode + r2) * 31;
                 Channel channel = this.channel;
-                int iHashCode2 = (i2 + (channel != null ? channel.hashCode() : 0)) * 31;
+                int iHashCode2 = (i + (channel != null ? channel.hashCode() : 0)) * 31;
                 boolean z3 = this.isThreadJoined;
-                return iHashCode2 + (z3 ? 1 : z3 ? 1 : 0);
+                return iHashCode2 + (z3 ? 1 : z3);
             }
 
             public final boolean isOpen() {
@@ -969,8 +978,8 @@ public final class WidgetChannelMembersListViewModel extends AppViewModel<ViewSt
         }
     }
 
-    /* compiled from: WidgetChannelMembersListViewModel.kt */
-    /* renamed from: com.discord.widgets.channels.memberlist.WidgetChannelMembersListViewModel$onThreadJoinLeaveClicked$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.channels.memberlist.WidgetChannelMembersListViewModel$onThreadJoinLeaveClicked$1 */
+    /* JADX INFO: compiled from: WidgetChannelMembersListViewModel.kt */
     public static final class C75011 extends Lambda implements Function1<Error, Unit> {
         public C75011() {
             super(1);
@@ -982,7 +991,7 @@ public final class WidgetChannelMembersListViewModel extends AppViewModel<ViewSt
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Error error) {
             Intrinsics3.checkNotNullParameter(error, "error");
             PublishSubject publishSubjectAccess$getEventSubject$p = WidgetChannelMembersListViewModel.access$getEventSubject$p(WidgetChannelMembersListViewModel.this);
@@ -992,8 +1001,8 @@ public final class WidgetChannelMembersListViewModel extends AppViewModel<ViewSt
         }
     }
 
-    /* compiled from: WidgetChannelMembersListViewModel.kt */
-    /* renamed from: com.discord.widgets.channels.memberlist.WidgetChannelMembersListViewModel$onThreadJoinLeaveClicked$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.channels.memberlist.WidgetChannelMembersListViewModel$onThreadJoinLeaveClicked$2 */
+    /* JADX INFO: compiled from: WidgetChannelMembersListViewModel.kt */
     public static final class C75022 extends Lambda implements Function1<Void, Unit> {
         public static final C75022 INSTANCE = new C75022();
 
@@ -1007,13 +1016,13 @@ public final class WidgetChannelMembersListViewModel extends AppViewModel<ViewSt
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Void r1) {
         }
     }
 
-    /* compiled from: WidgetChannelMembersListViewModel.kt */
-    /* renamed from: com.discord.widgets.channels.memberlist.WidgetChannelMembersListViewModel$onThreadJoinLeaveClicked$3 */
+    /* JADX INFO: renamed from: com.discord.widgets.channels.memberlist.WidgetChannelMembersListViewModel$onThreadJoinLeaveClicked$3 */
+    /* JADX INFO: compiled from: WidgetChannelMembersListViewModel.kt */
     public static final class C75033 extends Lambda implements Function1<Error, Unit> {
         public C75033() {
             super(1);
@@ -1025,7 +1034,7 @@ public final class WidgetChannelMembersListViewModel extends AppViewModel<ViewSt
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Error error) {
             Intrinsics3.checkNotNullParameter(error, "error");
             PublishSubject publishSubjectAccess$getEventSubject$p = WidgetChannelMembersListViewModel.access$getEventSubject$p(WidgetChannelMembersListViewModel.this);
@@ -1035,8 +1044,8 @@ public final class WidgetChannelMembersListViewModel extends AppViewModel<ViewSt
         }
     }
 
-    /* compiled from: WidgetChannelMembersListViewModel.kt */
-    /* renamed from: com.discord.widgets.channels.memberlist.WidgetChannelMembersListViewModel$onThreadJoinLeaveClicked$4 */
+    /* JADX INFO: renamed from: com.discord.widgets.channels.memberlist.WidgetChannelMembersListViewModel$onThreadJoinLeaveClicked$4 */
+    /* JADX INFO: compiled from: WidgetChannelMembersListViewModel.kt */
     public static final class C75044 extends Lambda implements Function1<Void, Unit> {
         public static final C75044 INSTANCE = new C75044();
 
@@ -1050,7 +1059,7 @@ public final class WidgetChannelMembersListViewModel extends AppViewModel<ViewSt
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Void r1) {
         }
     }

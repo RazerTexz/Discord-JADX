@@ -16,7 +16,7 @@ import java.lang.reflect.Modifier;
 import java.util.ArrayList;
 import p007b.p100d.p104b.p105a.outline;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public abstract class FragmentTransaction {
     public static final int OP_ADD = 1;
     public static final int OP_ATTACH = 7;
@@ -58,7 +58,7 @@ public abstract class FragmentTransaction {
     public ArrayList<String> mSharedElementTargetNames;
     public int mTransition;
 
-    /* renamed from: androidx.fragment.app.FragmentTransaction$Op */
+    /* JADX INFO: renamed from: androidx.fragment.app.FragmentTransaction$Op */
     public static final class C0394Op {
         public int mCmd;
         public Lifecycle.State mCurrentMaxState;

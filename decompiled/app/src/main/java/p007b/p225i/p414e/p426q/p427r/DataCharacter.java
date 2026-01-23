@@ -2,15 +2,15 @@ package p007b.p225i.p414e.p426q.p427r;
 
 import p007b.p100d.p104b.p105a.outline;
 
-/* compiled from: DataCharacter.java */
-/* renamed from: b.i.e.q.r.b, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.e.q.r.b, reason: use source file name */
+/* JADX INFO: compiled from: DataCharacter.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class DataCharacter {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final int f13405a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final int f13406b;
 
     public DataCharacter(int i, int i2) {

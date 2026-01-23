@@ -3,9 +3,9 @@ package com.discord.widgets.chat.list.model;
 import kotlin.jvm.functions.Function6;
 import p658rx.functions.Func6;
 
-/* compiled from: WidgetChatListModelMessages.kt */
-/* renamed from: com.discord.widgets.chat.list.model.WidgetChatListModelMessages$sam$rx_functions_Func6$0, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.chat.list.model.WidgetChatListModelMessages$sam$rx_functions_Func6$0, reason: use source file name */
+/* JADX INFO: compiled from: WidgetChatListModelMessages.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetChatListModelMessages7 implements Func6 {
     private final /* synthetic */ Function6 function;
 

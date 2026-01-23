@@ -7,9 +7,9 @@ import kotlin.jvm.functions.Function1;
 import p007b.p008a.p036n.p038h.OverlayTrashWrap;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: OverlayManager.kt */
-/* renamed from: b.a.n.c, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.a.n.c, reason: use source file name */
+/* JADX INFO: compiled from: OverlayManager.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class OverlayManager4 extends Lambda implements Function1<Boolean, Unit> {
     public final /* synthetic */ OverlayBubbleWrap $bubble;
     public final /* synthetic */ OverlayManager this$0;

@@ -3,9 +3,9 @@ package androidx.collection;
 import androidx.exifinterface.media.ExifInterface;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ArraySet.kt */
-/* renamed from: androidx.collection.ArraySetKt, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: androidx.collection.ArraySetKt, reason: use source file name */
+/* JADX INFO: compiled from: ArraySet.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class ArraySet2 {
     public static final <T> ArraySet<T> arraySetOf() {
         return new ArraySet<>();

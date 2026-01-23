@@ -21,94 +21,94 @@ import p007b.p225i.p226a.p287e.FlexContainer;
 import p007b.p225i.p226a.p287e.FlexLine;
 import p007b.p225i.p226a.p287e.FlexboxHelper;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public class FlexboxLayoutManager extends RecyclerView.LayoutManager implements FlexContainer, RecyclerView.SmoothScroller.ScrollVectorProvider {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static final Rect f20318j = new Rect();
 
-    /* renamed from: E */
+    /* JADX INFO: renamed from: E */
     public final Context f20323E;
 
-    /* renamed from: F */
+    /* JADX INFO: renamed from: F */
     public View f20324F;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public int f20327k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public int f20328l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public int f20329m;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public boolean f20331o;
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public boolean f20332p;
 
-    /* renamed from: s */
+    /* JADX INFO: renamed from: s */
     public RecyclerView.Recycler f20335s;
 
-    /* renamed from: t */
+    /* JADX INFO: renamed from: t */
     public RecyclerView.State f20336t;
 
-    /* renamed from: u */
+    /* JADX INFO: renamed from: u */
     public C10784c f20337u;
 
-    /* renamed from: w */
+    /* JADX INFO: renamed from: w */
     public OrientationHelper f20339w;
 
-    /* renamed from: x */
+    /* JADX INFO: renamed from: x */
     public OrientationHelper f20340x;
 
-    /* renamed from: y */
+    /* JADX INFO: renamed from: y */
     public SavedState f20341y;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public int f20330n = -1;
 
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     public List<FlexLine> f20333q = new ArrayList();
 
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     public final FlexboxHelper f20334r = new FlexboxHelper(this);
 
-    /* renamed from: v */
+    /* JADX INFO: renamed from: v */
     public C10783b f20338v = new C10783b(null);
 
-    /* renamed from: z */
+    /* JADX INFO: renamed from: z */
     public int f20342z = -1;
 
-    /* renamed from: A */
+    /* JADX INFO: renamed from: A */
     public int f20319A = Integer.MIN_VALUE;
 
-    /* renamed from: B */
+    /* JADX INFO: renamed from: B */
     public int f20320B = Integer.MIN_VALUE;
 
-    /* renamed from: C */
+    /* JADX INFO: renamed from: C */
     public int f20321C = Integer.MIN_VALUE;
 
-    /* renamed from: D */
+    /* JADX INFO: renamed from: D */
     public SparseArray<View> f20322D = new SparseArray<>();
 
-    /* renamed from: G */
+    /* JADX INFO: renamed from: G */
     public int f20325G = -1;
 
-    /* renamed from: H */
+    /* JADX INFO: renamed from: H */
     public FlexboxHelper.b f20326H = new FlexboxHelper.b();
 
     public static class SavedState implements Parcelable {
         public static final Parcelable.Creator<SavedState> CREATOR = new C10781a();
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public int f20352j;
 
-        /* renamed from: k */
+        /* JADX INFO: renamed from: k */
         public int f20353k;
 
-        /* renamed from: com.google.android.flexbox.FlexboxLayoutManager$SavedState$a */
+        /* JADX INFO: renamed from: com.google.android.flexbox.FlexboxLayoutManager$SavedState$a */
         public static class C10781a implements Parcelable.Creator<SavedState> {
             @Override // android.os.Parcelable.Creator
             public SavedState createFromParcel(Parcel parcel) {
@@ -153,34 +153,34 @@ public class FlexboxLayoutManager extends RecyclerView.LayoutManager implements 
         }
     }
 
-    /* renamed from: com.google.android.flexbox.FlexboxLayoutManager$b */
+    /* JADX INFO: renamed from: com.google.android.flexbox.FlexboxLayoutManager$b */
     public class C10783b {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public int f20354a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public int f20355b;
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public int f20356c;
 
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         public int f20357d = 0;
 
-        /* renamed from: e */
+        /* JADX INFO: renamed from: e */
         public boolean f20358e;
 
-        /* renamed from: f */
+        /* JADX INFO: renamed from: f */
         public boolean f20359f;
 
-        /* renamed from: g */
+        /* JADX INFO: renamed from: g */
         public boolean f20360g;
 
         public C10783b(C10782a c10782a) {
         }
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public static void m8998a(C10783b c10783b) {
             if (!FlexboxLayoutManager.this.mo3932i()) {
                 FlexboxLayoutManager flexboxLayoutManager = FlexboxLayoutManager.this;
@@ -192,7 +192,7 @@ public class FlexboxLayoutManager extends RecyclerView.LayoutManager implements 
             c10783b.f20356c = c10783b.f20358e ? FlexboxLayoutManager.this.f20339w.getEndAfterPadding() : FlexboxLayoutManager.this.f20339w.getStartAfterPadding();
         }
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public static void m8999b(C10783b c10783b) {
             c10783b.f20354a = -1;
             c10783b.f20355b = -1;
@@ -239,37 +239,37 @@ public class FlexboxLayoutManager extends RecyclerView.LayoutManager implements 
         }
     }
 
-    /* renamed from: com.google.android.flexbox.FlexboxLayoutManager$c */
+    /* JADX INFO: renamed from: com.google.android.flexbox.FlexboxLayoutManager$c */
     public static class C10784c {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public int f20362a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public boolean f20363b;
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public int f20364c;
 
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         public int f20365d;
 
-        /* renamed from: e */
+        /* JADX INFO: renamed from: e */
         public int f20366e;
 
-        /* renamed from: f */
+        /* JADX INFO: renamed from: f */
         public int f20367f;
 
-        /* renamed from: g */
+        /* JADX INFO: renamed from: g */
         public int f20368g;
 
-        /* renamed from: h */
+        /* JADX INFO: renamed from: h */
         public int f20369h = 1;
 
-        /* renamed from: i */
+        /* JADX INFO: renamed from: i */
         public int f20370i = 1;
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public boolean f20371j;
 
         public C10784c(C10782a c10782a) {
@@ -351,7 +351,7 @@ public class FlexboxLayoutManager extends RecyclerView.LayoutManager implements 
         return (!view.isLayoutRequested() && isMeasurementCacheEnabled() && isMeasurementUpToDate(view.getWidth(), i, ((ViewGroup.MarginLayoutParams) layoutParams).width) && isMeasurementUpToDate(view.getHeight(), i2, ((ViewGroup.MarginLayoutParams) layoutParams).height)) ? false : true;
     }
 
-    /* renamed from: A */
+    /* JADX INFO: renamed from: A */
     public final void m8981A(C10783b c10783b, boolean z2, boolean z3) {
         if (z3) {
             m8994w();
@@ -384,7 +384,7 @@ public class FlexboxLayoutManager extends RecyclerView.LayoutManager implements 
     }
 
     @Override // p007b.p225i.p226a.p287e.FlexContainer
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public void mo3924a(View view, int i, int i2, FlexLine flexLine) {
         calculateItemDecorationsForChild(view, f20318j);
         if (mo3932i()) {
@@ -399,12 +399,12 @@ public class FlexboxLayoutManager extends RecyclerView.LayoutManager implements 
     }
 
     @Override // p007b.p225i.p226a.p287e.FlexContainer
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public void mo3925b(FlexLine flexLine) {
     }
 
     @Override // p007b.p225i.p226a.p287e.FlexContainer
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public View mo3926c(int i) {
         return mo3929f(i);
     }
@@ -528,19 +528,19 @@ public class FlexboxLayoutManager extends RecyclerView.LayoutManager implements 
     }
 
     @Override // p007b.p225i.p226a.p287e.FlexContainer
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public int mo3927d(int i, int i2, int i3) {
         return RecyclerView.LayoutManager.getChildMeasureSpec(getWidth(), getWidthMode(), i2, i3, canScrollHorizontally());
     }
 
     @Override // p007b.p225i.p226a.p287e.FlexContainer
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public void mo3928e(int i, View view) {
         this.f20322D.put(i, view);
     }
 
     @Override // p007b.p225i.p226a.p287e.FlexContainer
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public View mo3929f(int i) {
         View view = this.f20322D.get(i);
         return view != null ? view : this.f20335s.getViewForPosition(i);
@@ -603,7 +603,7 @@ public class FlexboxLayoutManager extends RecyclerView.LayoutManager implements 
     }
 
     @Override // p007b.p225i.p226a.p287e.FlexContainer
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public int mo3930g(View view, int i, int i2) {
         int topDecorationHeight;
         int bottomDecorationHeight;
@@ -686,20 +686,20 @@ public class FlexboxLayoutManager extends RecyclerView.LayoutManager implements 
     }
 
     @Override // p007b.p225i.p226a.p287e.FlexContainer
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public int mo3931h(int i, int i2, int i3) {
         return RecyclerView.LayoutManager.getChildMeasureSpec(getHeight(), getHeightMode(), i2, i3, canScrollVertically());
     }
 
     @Override // p007b.p225i.p226a.p287e.FlexContainer
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public boolean mo3932i() {
         int i = this.f20327k;
         return i == 0 || i == 1;
     }
 
     @Override // p007b.p225i.p226a.p287e.FlexContainer
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public int mo3933j(View view) {
         int leftDecorationWidth;
         int rightDecorationWidth;
@@ -713,14 +713,14 @@ public class FlexboxLayoutManager extends RecyclerView.LayoutManager implements 
         return rightDecorationWidth + leftDecorationWidth;
     }
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final void m8982k() {
         this.f20333q.clear();
         C10783b.m8999b(this.f20338v);
         this.f20338v.f20357d = 0;
     }
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final void m8983l() {
         if (this.f20339w != null) {
             return;
@@ -745,7 +745,7 @@ public class FlexboxLayoutManager extends RecyclerView.LayoutManager implements 
         }
     }
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public final int m8984m(RecyclerView.Recycler recycler, RecyclerView.State state, C10784c c10784c) {
         int i;
         int i2;
@@ -972,7 +972,7 @@ public class FlexboxLayoutManager extends RecyclerView.LayoutManager implements 
         return i41 - c10784c.f20362a;
     }
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public final View m8985n(int i) {
         View viewM8990s = m8990s(0, getChildCount(), i);
         if (viewM8990s == null) {
@@ -986,7 +986,7 @@ public class FlexboxLayoutManager extends RecyclerView.LayoutManager implements 
     }
 
     /* JADX WARN: Removed duplicated region for block: B:17:0x003b  */
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
@@ -1338,7 +1338,7 @@ public class FlexboxLayoutManager extends RecyclerView.LayoutManager implements 
         return savedState2;
     }
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public final View m8987p(int i) {
         View viewM8990s = m8990s(getChildCount() - 1, -1, i);
         if (viewM8990s == null) {
@@ -1348,7 +1348,7 @@ public class FlexboxLayoutManager extends RecyclerView.LayoutManager implements 
     }
 
     /* JADX WARN: Removed duplicated region for block: B:17:0x0047  */
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
@@ -1369,7 +1369,7 @@ public class FlexboxLayoutManager extends RecyclerView.LayoutManager implements 
         return view;
     }
 
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     public final View m8989r(int i, int i2, boolean z2) {
         int i3 = i;
         int i4 = i2 > i3 ? 1 : -1;
@@ -1399,7 +1399,7 @@ public class FlexboxLayoutManager extends RecyclerView.LayoutManager implements 
         return null;
     }
 
-    /* renamed from: s */
+    /* JADX INFO: renamed from: s */
     public final View m8990s(int i, int i2, int i3) {
         m8983l();
         View view = null;
@@ -1482,7 +1482,7 @@ public class FlexboxLayoutManager extends RecyclerView.LayoutManager implements 
     }
 
     /* JADX WARN: Removed duplicated region for block: B:75:0x01ee  */
-    /* renamed from: t */
+    /* JADX INFO: renamed from: t */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
@@ -1592,7 +1592,7 @@ public class FlexboxLayoutManager extends RecyclerView.LayoutManager implements 
         return i2;
     }
 
-    /* renamed from: u */
+    /* JADX INFO: renamed from: u */
     public final int m8992u(int i) {
         int i2;
         if (getChildCount() == 0 || i == 0) {
@@ -1624,7 +1624,7 @@ public class FlexboxLayoutManager extends RecyclerView.LayoutManager implements 
         return -i2;
     }
 
-    /* renamed from: v */
+    /* JADX INFO: renamed from: v */
     public final void m8993v(RecyclerView.Recycler recycler, C10784c c10784c) {
         int childCount;
         if (c10784c.f20371j) {
@@ -1709,13 +1709,13 @@ public class FlexboxLayoutManager extends RecyclerView.LayoutManager implements 
         }
     }
 
-    /* renamed from: w */
+    /* JADX INFO: renamed from: w */
     public final void m8994w() {
         int heightMode = mo3932i() ? getHeightMode() : getWidthMode();
         this.f20337u.f20363b = heightMode == 0 || heightMode == Integer.MIN_VALUE;
     }
 
-    /* renamed from: x */
+    /* JADX INFO: renamed from: x */
     public void m8995x(int i) {
         if (this.f20327k != i) {
             removeAllViews();
@@ -1727,7 +1727,7 @@ public class FlexboxLayoutManager extends RecyclerView.LayoutManager implements 
         }
     }
 
-    /* renamed from: y */
+    /* JADX INFO: renamed from: y */
     public final void m8996y(int i) {
         if (i >= findLastVisibleItemPosition()) {
             return;
@@ -1752,7 +1752,7 @@ public class FlexboxLayoutManager extends RecyclerView.LayoutManager implements 
         }
     }
 
-    /* renamed from: z */
+    /* JADX INFO: renamed from: z */
     public final void m8997z(C10783b c10783b, boolean z2, boolean z3) {
         int i;
         if (z3) {
@@ -1790,34 +1790,34 @@ public class FlexboxLayoutManager extends RecyclerView.LayoutManager implements 
     public static class LayoutParams extends RecyclerView.LayoutParams implements FlexItem {
         public static final Parcelable.Creator<LayoutParams> CREATOR = new C10780a();
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public float f20343j;
 
-        /* renamed from: k */
+        /* JADX INFO: renamed from: k */
         public float f20344k;
 
-        /* renamed from: l */
+        /* JADX INFO: renamed from: l */
         public int f20345l;
 
-        /* renamed from: m */
+        /* JADX INFO: renamed from: m */
         public float f20346m;
 
-        /* renamed from: n */
+        /* JADX INFO: renamed from: n */
         public int f20347n;
 
-        /* renamed from: o */
+        /* JADX INFO: renamed from: o */
         public int f20348o;
 
-        /* renamed from: p */
+        /* JADX INFO: renamed from: p */
         public int f20349p;
 
-        /* renamed from: q */
+        /* JADX INFO: renamed from: q */
         public int f20350q;
 
-        /* renamed from: r */
+        /* JADX INFO: renamed from: r */
         public boolean f20351r;
 
-        /* renamed from: com.google.android.flexbox.FlexboxLayoutManager$LayoutParams$a */
+        /* JADX INFO: renamed from: com.google.android.flexbox.FlexboxLayoutManager$LayoutParams$a */
         public static class C10780a implements Parcelable.Creator<LayoutParams> {
             @Override // android.os.Parcelable.Creator
             public LayoutParams createFromParcel(Parcel parcel) {
@@ -1841,55 +1841,55 @@ public class FlexboxLayoutManager extends RecyclerView.LayoutManager implements 
         }
 
         @Override // com.google.android.flexbox.FlexItem
-        /* renamed from: D */
+        /* JADX INFO: renamed from: D */
         public int mo8955D() {
             return this.f20347n;
         }
 
         @Override // com.google.android.flexbox.FlexItem
-        /* renamed from: H */
+        /* JADX INFO: renamed from: H */
         public void mo8956H(int i) {
             this.f20347n = i;
         }
 
         @Override // com.google.android.flexbox.FlexItem
-        /* renamed from: I */
+        /* JADX INFO: renamed from: I */
         public int mo8957I() {
             return ((ViewGroup.MarginLayoutParams) this).bottomMargin;
         }
 
         @Override // com.google.android.flexbox.FlexItem
-        /* renamed from: J */
+        /* JADX INFO: renamed from: J */
         public int mo8958J() {
             return ((ViewGroup.MarginLayoutParams) this).leftMargin;
         }
 
         @Override // com.google.android.flexbox.FlexItem
-        /* renamed from: N */
+        /* JADX INFO: renamed from: N */
         public int mo8959N() {
             return ((ViewGroup.MarginLayoutParams) this).topMargin;
         }
 
         @Override // com.google.android.flexbox.FlexItem
-        /* renamed from: O */
+        /* JADX INFO: renamed from: O */
         public void mo8960O(int i) {
             this.f20348o = i;
         }
 
         @Override // com.google.android.flexbox.FlexItem
-        /* renamed from: S */
+        /* JADX INFO: renamed from: S */
         public float mo8961S() {
             return this.f20343j;
         }
 
         @Override // com.google.android.flexbox.FlexItem
-        /* renamed from: W */
+        /* JADX INFO: renamed from: W */
         public float mo8962W() {
             return this.f20346m;
         }
 
         @Override // com.google.android.flexbox.FlexItem
-        /* renamed from: d0 */
+        /* JADX INFO: renamed from: d0 */
         public int mo8963d0() {
             return ((ViewGroup.MarginLayoutParams) this).rightMargin;
         }
@@ -1900,7 +1900,7 @@ public class FlexboxLayoutManager extends RecyclerView.LayoutManager implements 
         }
 
         @Override // com.google.android.flexbox.FlexItem
-        /* renamed from: f0 */
+        /* JADX INFO: renamed from: f0 */
         public int mo8964f0() {
             return this.f20348o;
         }
@@ -1921,25 +1921,25 @@ public class FlexboxLayoutManager extends RecyclerView.LayoutManager implements 
         }
 
         @Override // com.google.android.flexbox.FlexItem
-        /* renamed from: j0 */
+        /* JADX INFO: renamed from: j0 */
         public boolean mo8965j0() {
             return this.f20351r;
         }
 
         @Override // com.google.android.flexbox.FlexItem
-        /* renamed from: m0 */
+        /* JADX INFO: renamed from: m0 */
         public int mo8966m0() {
             return this.f20350q;
         }
 
         @Override // com.google.android.flexbox.FlexItem
-        /* renamed from: t0 */
+        /* JADX INFO: renamed from: t0 */
         public int mo8967t0() {
             return this.f20349p;
         }
 
         @Override // com.google.android.flexbox.FlexItem
-        /* renamed from: u */
+        /* JADX INFO: renamed from: u */
         public int mo8968u() {
             return this.f20345l;
         }
@@ -1964,7 +1964,7 @@ public class FlexboxLayoutManager extends RecyclerView.LayoutManager implements 
         }
 
         @Override // com.google.android.flexbox.FlexItem
-        /* renamed from: x */
+        /* JADX INFO: renamed from: x */
         public float mo8969x() {
             return this.f20344k;
         }

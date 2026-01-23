@@ -5,8 +5,8 @@ import com.discord.models.domain.ModelAuditLogEntry;
 import okio.ByteString;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: WebSocketListener.kt */
-/* loaded from: classes3.dex */
+/* JADX INFO: compiled from: WebSocketListener.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public abstract class WebSocketListener {
     public void onClosed(WebSocket webSocket, int code, String reason) {
         Intrinsics3.checkParameterIsNotNull(webSocket, "webSocket");

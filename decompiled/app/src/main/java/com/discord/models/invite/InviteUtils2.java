@@ -5,9 +5,9 @@ import com.discord.utilities.time.Clock;
 import com.discord.utilities.time.ClockFactory;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: InviteUtils.kt */
-/* renamed from: com.discord.models.invite.InviteUtilsKt, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: com.discord.models.invite.InviteUtilsKt, reason: use source file name */
+/* JADX INFO: compiled from: InviteUtils.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class InviteUtils2 {
     public static final boolean isValid(ModelInvite modelInvite, Clock clock) {
         Intrinsics3.checkNotNullParameter(modelInvite, "$this$isValid");

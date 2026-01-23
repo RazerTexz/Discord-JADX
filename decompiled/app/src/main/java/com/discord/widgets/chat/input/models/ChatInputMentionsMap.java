@@ -6,8 +6,8 @@ import kotlin.ranges.Ranges2;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ChatInputMentionsMap.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: ChatInputMentionsMap.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final /* data */ class ChatInputMentionsMap {
     private final CharSequence input;
     private final Map<Ranges2, Autocompletable> mentions;
@@ -31,7 +31,7 @@ public final /* data */ class ChatInputMentionsMap {
         return chatInputMentionsMap.copy(charSequence, map);
     }
 
-    /* renamed from: component1, reason: from getter */
+    /* JADX INFO: renamed from: component1, reason: from getter */
     public final CharSequence getInput() {
         return this.input;
     }

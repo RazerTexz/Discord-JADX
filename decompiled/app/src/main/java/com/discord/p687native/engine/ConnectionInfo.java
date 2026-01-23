@@ -3,8 +3,8 @@ package com.discord.p687native.engine;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ConnectionInfo.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: ConnectionInfo.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class ConnectionInfo {
     private final boolean isConnected;
     private final String localAddress;
@@ -36,22 +36,22 @@ public final /* data */ class ConnectionInfo {
         return connectionInfo.copy(z2, str, str2, i);
     }
 
-    /* renamed from: component1, reason: from getter */
+    /* JADX INFO: renamed from: component1, reason: from getter */
     public final boolean getIsConnected() {
         return this.isConnected;
     }
 
-    /* renamed from: component2, reason: from getter */
+    /* JADX INFO: renamed from: component2, reason: from getter */
     public final String getProtocol() {
         return this.protocol;
     }
 
-    /* renamed from: component3, reason: from getter */
+    /* JADX INFO: renamed from: component3, reason: from getter */
     public final String getLocalAddress() {
         return this.localAddress;
     }
 
-    /* renamed from: component4, reason: from getter */
+    /* JADX INFO: renamed from: component4, reason: from getter */
     public final int getLocalPort() {
         return this.localPort;
     }

@@ -4,15 +4,15 @@ import android.view.View;
 import com.jaredrummler.android.colorpicker.ColorPickerDialog;
 import p007b.p440k.p441a.p442a.ColorPaletteAdapter;
 
-/* compiled from: ColorPaletteAdapter.java */
-/* renamed from: b.k.a.a.c, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.k.a.a.c, reason: use source file name */
+/* JADX INFO: compiled from: ColorPaletteAdapter.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class ColorPaletteAdapter2 implements View.OnClickListener {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final /* synthetic */ int f13614j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final /* synthetic */ ColorPaletteAdapter.b f13615k;
 
     public ColorPaletteAdapter2(ColorPaletteAdapter.b bVar, int i) {

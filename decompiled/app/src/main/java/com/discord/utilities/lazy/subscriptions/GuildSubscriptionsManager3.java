@@ -6,9 +6,9 @@ import kotlin.jvm.functions.Function3;
 import p507d0.p592z.p594d.FunctionReferenceImpl;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: GuildSubscriptionsManager.kt */
-/* renamed from: com.discord.utilities.lazy.subscriptions.GuildSubscriptionsManager$guildMemberSubscriptionsManager$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.utilities.lazy.subscriptions.GuildSubscriptionsManager$guildMemberSubscriptionsManager$1, reason: use source file name */
+/* JADX INFO: compiled from: GuildSubscriptionsManager.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final /* synthetic */ class GuildSubscriptionsManager3 extends FunctionReferenceImpl implements Function3<Long, Set<? extends Long>, Boolean, Unit> {
     public GuildSubscriptionsManager3(GuildSubscriptionsManager guildSubscriptionsManager) {
         super(3, guildSubscriptionsManager, GuildSubscriptionsManager.class, "handleMemberSubscriptionsChange", "handleMemberSubscriptionsChange(JLjava/util/Set;Z)V", 0);

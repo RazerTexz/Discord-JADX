@@ -19,9 +19,9 @@ import kotlin.jvm.functions.Function3;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetChannelListModel.kt */
-/* renamed from: com.discord.widgets.channels.list.WidgetChannelListModel$Companion$guildListBuilder$$inlined$forEach$lambda$1 */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.channels.list.WidgetChannelListModel$Companion$guildListBuilder$$inlined$forEach$lambda$1 */
+/* JADX INFO: compiled from: WidgetChannelListModel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class C7413x4d8eedc1 extends Lambda implements Function3<Channel, Boolean, Boolean, WidgetChannelListModel.Companion.TextLikeChannelData> {
     public final /* synthetic */ WidgetChannelListModel$Companion$guildListBuilder$4 $areAllChildThreadsRead$4$inlined;
     public final /* synthetic */ WidgetChannelListModel$Companion$guildListBuilder$5 $areAnyChildThreadsSelected$5$inlined;
@@ -51,8 +51,8 @@ public final class C7413x4d8eedc1 extends Lambda implements Function3<Channel, B
     public final /* synthetic */ Set $unreadChannelIds$inlined;
     public final /* synthetic */ Map $voiceStates$inlined;
 
-    /* compiled from: WidgetChannelListModel.kt */
-    /* renamed from: com.discord.widgets.channels.list.WidgetChannelListModel$Companion$guildListBuilder$$inlined$forEach$lambda$1$1, reason: invalid class name */
+    /* JADX INFO: renamed from: com.discord.widgets.channels.list.WidgetChannelListModel$Companion$guildListBuilder$$inlined$forEach$lambda$1$1, reason: invalid class name */
+    /* JADX INFO: compiled from: WidgetChannelListModel.kt */
     public static final class AnonymousClass1 extends Lambda implements Function0<Boolean> {
         public final /* synthetic */ Boolean $isParentMuted;
         public final /* synthetic */ Channel $textChannel;
@@ -69,7 +69,7 @@ public final class C7413x4d8eedc1 extends Lambda implements Function3<Channel, B
             return Boolean.valueOf(invoke2());
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final boolean invoke2() {
             Channel channel = StoreStream.INSTANCE.getChannels().getChannel(this.$textChannel.getParentId());
             if (channel == null) {
@@ -83,8 +83,8 @@ public final class C7413x4d8eedc1 extends Lambda implements Function3<Channel, B
         }
     }
 
-    /* compiled from: WidgetChannelListModel.kt */
-    /* renamed from: com.discord.widgets.channels.list.WidgetChannelListModel$Companion$guildListBuilder$$inlined$forEach$lambda$1$2, reason: invalid class name */
+    /* JADX INFO: renamed from: com.discord.widgets.channels.list.WidgetChannelListModel$Companion$guildListBuilder$$inlined$forEach$lambda$1$2, reason: invalid class name */
+    /* JADX INFO: compiled from: WidgetChannelListModel.kt */
     public static final class AnonymousClass2 extends Lambda implements Function0<Boolean> {
         public final /* synthetic */ boolean $channelSelected;
         public final /* synthetic */ boolean $isMuted;
@@ -109,7 +109,7 @@ public final class C7413x4d8eedc1 extends Lambda implements Function3<Channel, B
             return Boolean.valueOf(invoke2());
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final boolean invoke2() {
             boolean z2 = this.$mentionCount <= 0;
             boolean zContains = C7413x4d8eedc1.this.$collapsedCategories$inlined.contains(Long.valueOf(this.$textChannel.getParentId()));

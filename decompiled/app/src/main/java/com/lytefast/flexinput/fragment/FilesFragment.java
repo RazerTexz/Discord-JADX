@@ -28,8 +28,8 @@ import p507d0.p592z.p594d.FunctionReferenceImpl;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: FilesFragment.kt */
-/* loaded from: classes3.dex */
+/* JADX INFO: compiled from: FilesFragment.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public class FilesFragment extends Fragment {
     private static final String REQUIRED_PERMISSION = "android.permission.READ_EXTERNAL_STORAGE";
     private FileListAdapter adapter;
@@ -37,21 +37,21 @@ public class FilesFragment extends Fragment {
     private SelectionCoordinator<Attachment<Object>, Attachment<File>> selectionCoordinator;
     private SwipeRefreshLayout swipeRefreshLayout;
 
-    /* compiled from: FilesFragment.kt */
-    /* renamed from: com.lytefast.flexinput.fragment.FilesFragment$a */
+    /* JADX INFO: renamed from: com.lytefast.flexinput.fragment.FilesFragment$a */
+    /* JADX INFO: compiled from: FilesFragment.kt */
     public static final class ViewOnClickListenerC11179a implements View.OnClickListener {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public final /* synthetic */ View f22051j;
 
-        /* renamed from: k */
+        /* JADX INFO: renamed from: k */
         public final /* synthetic */ FilesFragment f22052k;
 
-        /* renamed from: l */
+        /* JADX INFO: renamed from: l */
         public final /* synthetic */ FlexInputCoordinator f22053l;
 
-        /* compiled from: FilesFragment.kt */
-        /* renamed from: com.lytefast.flexinput.fragment.FilesFragment$a$a */
+        /* JADX INFO: renamed from: com.lytefast.flexinput.fragment.FilesFragment$a$a */
+        /* JADX INFO: compiled from: FilesFragment.kt */
         public static final class a extends Lambda implements Function0<Unit> {
             public a() {
                 super(0);
@@ -91,8 +91,8 @@ public class FilesFragment extends Fragment {
         }
     }
 
-    /* compiled from: FilesFragment.kt */
-    /* renamed from: com.lytefast.flexinput.fragment.FilesFragment$b */
+    /* JADX INFO: renamed from: com.lytefast.flexinput.fragment.FilesFragment$b */
+    /* JADX INFO: compiled from: FilesFragment.kt */
     public static final /* synthetic */ class C11180b extends FunctionReferenceImpl implements Function0<Unit> {
         public C11180b(FilesFragment filesFragment) {
             super(0, filesFragment, FilesFragment.class, "loadDownloadFolder", "loadDownloadFolder()V", 0);
@@ -158,7 +158,7 @@ public class FilesFragment extends Fragment {
         swipeRefreshLayout2.setRefreshing(false);
     }
 
-    /* renamed from: getRecyclerView$flexinput_release, reason: from getter */
+    /* JADX INFO: renamed from: getRecyclerView$flexinput_release, reason: from getter */
     public final RecyclerView getRecyclerView() {
         return this.recyclerView;
     }

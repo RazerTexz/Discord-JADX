@@ -45,26 +45,26 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 import p658rx.functions.Action1;
 
-/* compiled from: WidgetSettingsAccountChangePassword.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetSettingsAccountChangePassword.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public class WidgetSettingsAccountChangePassword extends AppFragment {
     public static final String CURRENT_PASSWORD_FIELD = "password";
     public static final String MFA_FIELD = "mfa";
     public static final String NEW_PASSWORD_FIELD = "new_password";
 
-    /* renamed from: binding$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
     private GoogleSmartLockManager googleSmartLockManager;
     private final StatefulViews state;
 
-    /* renamed from: validationManager$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: validationManager$delegate, reason: from kotlin metadata */
     private final Lazy validationManager;
     public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetSettingsAccountChangePassword.class, "binding", "getBinding()Lcom/discord/databinding/WidgetSettingsAccountChangePasswordBinding;", 0)};
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
 
-    /* compiled from: WidgetSettingsAccountChangePassword.kt */
+    /* JADX INFO: compiled from: WidgetSettingsAccountChangePassword.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -79,8 +79,8 @@ public class WidgetSettingsAccountChangePassword extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetSettingsAccountChangePassword.kt */
-    /* renamed from: com.discord.widgets.settings.account.WidgetSettingsAccountChangePassword$configureUI$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.account.WidgetSettingsAccountChangePassword$configureUI$1 */
+    /* JADX INFO: compiled from: WidgetSettingsAccountChangePassword.kt */
     public static final class ViewOnClickListenerC97421 implements View.OnClickListener {
         public final /* synthetic */ MeUser $meUser;
 
@@ -94,8 +94,8 @@ public class WidgetSettingsAccountChangePassword extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetSettingsAccountChangePassword.kt */
-    /* renamed from: com.discord.widgets.settings.account.WidgetSettingsAccountChangePassword$onViewBound$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.account.WidgetSettingsAccountChangePassword$onViewBound$1 */
+    /* JADX INFO: compiled from: WidgetSettingsAccountChangePassword.kt */
     public static final class C97431 extends Lambda implements Function1<Editable, Unit> {
         public C97431() {
             super(1);
@@ -107,7 +107,7 @@ public class WidgetSettingsAccountChangePassword extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Editable editable) {
             Intrinsics3.checkNotNullParameter(editable, "it");
             TextInputLayout textInputLayout = WidgetSettingsAccountChangePassword.this.getBinding().f17820c;
@@ -116,8 +116,8 @@ public class WidgetSettingsAccountChangePassword extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetSettingsAccountChangePassword.kt */
-    /* renamed from: com.discord.widgets.settings.account.WidgetSettingsAccountChangePassword$onViewBound$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.account.WidgetSettingsAccountChangePassword$onViewBound$2 */
+    /* JADX INFO: compiled from: WidgetSettingsAccountChangePassword.kt */
     public static final class C97442 extends Lambda implements Function1<Editable, Unit> {
         public C97442() {
             super(1);
@@ -129,7 +129,7 @@ public class WidgetSettingsAccountChangePassword extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Editable editable) {
             Intrinsics3.checkNotNullParameter(editable, "it");
             TextInputLayout textInputLayout = WidgetSettingsAccountChangePassword.this.getBinding().f17821d;
@@ -138,8 +138,8 @@ public class WidgetSettingsAccountChangePassword extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetSettingsAccountChangePassword.kt */
-    /* renamed from: com.discord.widgets.settings.account.WidgetSettingsAccountChangePassword$onViewBound$3 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.account.WidgetSettingsAccountChangePassword$onViewBound$3 */
+    /* JADX INFO: compiled from: WidgetSettingsAccountChangePassword.kt */
     public static final class C97453 extends Lambda implements Function1<Editable, Unit> {
         public C97453() {
             super(1);
@@ -151,7 +151,7 @@ public class WidgetSettingsAccountChangePassword extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Editable editable) {
             Intrinsics3.checkNotNullParameter(editable, "it");
             TextInputLayout textInputLayout = WidgetSettingsAccountChangePassword.this.getBinding().f17823f;
@@ -160,8 +160,8 @@ public class WidgetSettingsAccountChangePassword extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetSettingsAccountChangePassword.kt */
-    /* renamed from: com.discord.widgets.settings.account.WidgetSettingsAccountChangePassword$onViewBoundOrOnResume$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.account.WidgetSettingsAccountChangePassword$onViewBoundOrOnResume$1 */
+    /* JADX INFO: compiled from: WidgetSettingsAccountChangePassword.kt */
     public static final class C97461 extends Lambda implements Function1<MeUser, Unit> {
         public C97461() {
             super(1);
@@ -173,15 +173,15 @@ public class WidgetSettingsAccountChangePassword extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(MeUser meUser) {
             Intrinsics3.checkNotNullParameter(meUser, "it");
             WidgetSettingsAccountChangePassword.access$configureUI(WidgetSettingsAccountChangePassword.this, meUser);
         }
     }
 
-    /* compiled from: WidgetSettingsAccountChangePassword.kt */
-    /* renamed from: com.discord.widgets.settings.account.WidgetSettingsAccountChangePassword$saveNewPassword$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.account.WidgetSettingsAccountChangePassword$saveNewPassword$1 */
+    /* JADX INFO: compiled from: WidgetSettingsAccountChangePassword.kt */
     public static final class C97471<T> implements Action1<User> {
         public final /* synthetic */ String $newPasswordText;
 
@@ -194,7 +194,7 @@ public class WidgetSettingsAccountChangePassword extends AppFragment {
             call2(user);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final void call2(User user) {
             GoogleSmartLockManager googleSmartLockManager;
             Context context = WidgetSettingsAccountChangePassword.this.getContext();
@@ -206,8 +206,8 @@ public class WidgetSettingsAccountChangePassword extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetSettingsAccountChangePassword.kt */
-    /* renamed from: com.discord.widgets.settings.account.WidgetSettingsAccountChangePassword$saveNewPassword$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.account.WidgetSettingsAccountChangePassword$saveNewPassword$2 */
+    /* JADX INFO: compiled from: WidgetSettingsAccountChangePassword.kt */
     public static final class C97482<T> implements Action1<Error> {
         public C97482() {
         }
@@ -217,7 +217,7 @@ public class WidgetSettingsAccountChangePassword extends AppFragment {
             call2(error);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final void call2(Error error) {
             WidgetSettingsAccountChangePassword.this.getBinding().f17822e.setIsLoading(false);
             WidgetSettingsAccountChangePassword widgetSettingsAccountChangePassword = WidgetSettingsAccountChangePassword.this;

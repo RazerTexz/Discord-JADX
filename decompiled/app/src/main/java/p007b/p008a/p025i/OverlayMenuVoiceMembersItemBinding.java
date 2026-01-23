@@ -5,12 +5,12 @@ import androidx.annotation.NonNull;
 import androidx.viewbinding.ViewBinding;
 import com.discord.views.VoiceUserView;
 
-/* compiled from: OverlayMenuVoiceMembersItemBinding.java */
-/* renamed from: b.a.i.z0, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.a.i.z0, reason: use source file name */
+/* JADX INFO: compiled from: OverlayMenuVoiceMembersItemBinding.java */
+/* JADX INFO: loaded from: classes.dex */
 public final class OverlayMenuVoiceMembersItemBinding implements ViewBinding {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     @NonNull
     public final VoiceUserView f1433a;
 

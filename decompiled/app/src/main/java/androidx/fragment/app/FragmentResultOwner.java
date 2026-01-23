@@ -4,7 +4,7 @@ import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.view.LifecycleOwner;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public interface FragmentResultOwner {
     void clearFragmentResult(@NonNull String str);
 

@@ -6,58 +6,58 @@ import p007b.p195g.p196a.p205c.p210c0.AnnotatedMethod;
 import p007b.p195g.p196a.p205c.p210c0.AnnotatedParameter;
 import p007b.p195g.p196a.p205c.p221z.MapperConfig;
 
-/* compiled from: PropertyNamingStrategy.java */
-/* renamed from: b.g.a.c.u, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.g.a.c.u, reason: use source file name */
+/* JADX INFO: compiled from: PropertyNamingStrategy.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class PropertyNamingStrategy implements Serializable {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     @Deprecated
     public static final PropertyNamingStrategy f5031j = new c();
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     @Deprecated
     public static final PropertyNamingStrategy f5032k = new b();
     private static final long serialVersionUID = 2;
 
-    /* compiled from: PropertyNamingStrategy.java */
+    /* JADX INFO: renamed from: b.g.a.c.u$a */
+    /* JADX INFO: compiled from: PropertyNamingStrategy.java */
     @Deprecated
-    /* renamed from: b.g.a.c.u$a */
     public static abstract class a extends PropertyNamingStrategy {
         @Override // p007b.p195g.p196a.p205c.PropertyNamingStrategy
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public String mo2231a(MapperConfig<?> mapperConfig, AnnotatedParameter annotatedParameter, String str) {
             return mo2235e(str);
         }
 
         @Override // p007b.p195g.p196a.p205c.PropertyNamingStrategy
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public String mo2232b(MapperConfig<?> mapperConfig, AnnotatedField annotatedField, String str) {
             return mo2235e(str);
         }
 
         @Override // p007b.p195g.p196a.p205c.PropertyNamingStrategy
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public String mo2233c(MapperConfig<?> mapperConfig, AnnotatedMethod annotatedMethod, String str) {
             return mo2235e(str);
         }
 
         @Override // p007b.p195g.p196a.p205c.PropertyNamingStrategy
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         public String mo2234d(MapperConfig<?> mapperConfig, AnnotatedMethod annotatedMethod, String str) {
             return mo2235e(str);
         }
 
-        /* renamed from: e */
+        /* JADX INFO: renamed from: e */
         public abstract String mo2235e(String str);
     }
 
-    /* compiled from: PropertyNamingStrategy.java */
+    /* JADX INFO: renamed from: b.g.a.c.u$b */
+    /* JADX INFO: compiled from: PropertyNamingStrategy.java */
     @Deprecated
-    /* renamed from: b.g.a.c.u$b */
     public static class b extends a {
         @Override // p007b.p195g.p196a.p205c.PropertyNamingStrategy.a
-        /* renamed from: e */
+        /* JADX INFO: renamed from: e */
         public String mo2235e(String str) {
             if (str == null) {
                 return str;
@@ -87,12 +87,12 @@ public class PropertyNamingStrategy implements Serializable {
         }
     }
 
-    /* compiled from: PropertyNamingStrategy.java */
+    /* JADX INFO: renamed from: b.g.a.c.u$c */
+    /* JADX INFO: compiled from: PropertyNamingStrategy.java */
     @Deprecated
-    /* renamed from: b.g.a.c.u$c */
     public static class c extends a {
         @Override // p007b.p195g.p196a.p205c.PropertyNamingStrategy.a
-        /* renamed from: e */
+        /* JADX INFO: renamed from: e */
         public String mo2235e(String str) {
             char cCharAt;
             char upperCase;
@@ -105,22 +105,22 @@ public class PropertyNamingStrategy implements Serializable {
         }
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public String mo2231a(MapperConfig<?> mapperConfig, AnnotatedParameter annotatedParameter, String str) {
         return str;
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public String mo2232b(MapperConfig<?> mapperConfig, AnnotatedField annotatedField, String str) {
         return str;
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public String mo2233c(MapperConfig<?> mapperConfig, AnnotatedMethod annotatedMethod, String str) {
         return str;
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public String mo2234d(MapperConfig<?> mapperConfig, AnnotatedMethod annotatedMethod, String str) {
         return str;
     }

@@ -41,8 +41,8 @@ import p507d0.p584w.p586i.p587a.ContinuationImpl6;
 import p507d0.p584w.p586i.p587a.DebugMetadata;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: WidgetChannelListUnreads.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetChannelListUnreads.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetChannelListUnreads {
     private static final Companion Companion = new Companion(null);
 
@@ -53,7 +53,7 @@ public final class WidgetChannelListUnreads {
     private static final int ITEM_OVER_SCROLL_COUNT = 3;
     private final AppBarLayout appBarLayout;
 
-    /* renamed from: binding$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: binding$delegate, reason: from kotlin metadata */
     private final Lazy binding;
     private List<? extends Object> data;
     private final Function0<Integer> getItemCount;
@@ -64,8 +64,8 @@ public final class WidgetChannelListUnreads {
     private int unreadsResId;
     private final ViewStub unreadsStub;
 
-    /* compiled from: WidgetChannelListUnreads.kt */
-    /* renamed from: com.discord.widgets.channels.list.WidgetChannelListUnreads$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.channels.list.WidgetChannelListUnreads$1 */
+    /* JADX INFO: compiled from: WidgetChannelListUnreads.kt */
     public static final class C74211 extends RecyclerView.OnScrollListener {
         public C74211() {
         }
@@ -89,7 +89,7 @@ public final class WidgetChannelListUnreads {
         }
     }
 
-    /* compiled from: WidgetChannelListUnreads.kt */
+    /* JADX INFO: compiled from: WidgetChannelListUnreads.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -99,10 +99,10 @@ public final class WidgetChannelListUnreads {
         }
     }
 
-    /* compiled from: WidgetChannelListUnreads.kt */
+    /* JADX INFO: compiled from: WidgetChannelListUnreads.kt */
     public static final /* data */ class Model {
 
-        /* renamed from: Companion, reason: from kotlin metadata */
+        /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
         public static final Companion INSTANCE = new Companion(null);
         public static final int INVALID_INDEX = -1;
         public static final int TYPE_MENTION = 0;
@@ -110,7 +110,7 @@ public final class WidgetChannelListUnreads {
         private final Indicator bottomIndicator;
         private final Indicator topIndicator;
 
-        /* compiled from: WidgetChannelListUnreads.kt */
+        /* JADX INFO: compiled from: WidgetChannelListUnreads.kt */
         public static final class Companion {
             private Companion() {
             }
@@ -196,7 +196,7 @@ public final class WidgetChannelListUnreads {
             }
         }
 
-        /* compiled from: WidgetChannelListUnreads.kt */
+        /* JADX INFO: compiled from: WidgetChannelListUnreads.kt */
         public static final /* data */ class Indicator {
             private final int index;
             private final int type;
@@ -216,12 +216,12 @@ public final class WidgetChannelListUnreads {
                 return indicator.copy(i, i2);
             }
 
-            /* renamed from: component1, reason: from getter */
+            /* JADX INFO: renamed from: component1, reason: from getter */
             public final int getType() {
                 return this.type;
             }
 
-            /* renamed from: component2, reason: from getter */
+            /* JADX INFO: renamed from: component2, reason: from getter */
             public final int getIndex() {
                 return this.index;
             }
@@ -280,12 +280,12 @@ public final class WidgetChannelListUnreads {
             return model.copy(indicator, indicator2);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final Indicator getTopIndicator() {
             return this.topIndicator;
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final Indicator getBottomIndicator() {
             return this.bottomIndicator;
         }
@@ -334,15 +334,15 @@ public final class WidgetChannelListUnreads {
         }
     }
 
-    /* compiled from: WidgetChannelListUnreads.kt */
+    /* JADX INFO: compiled from: WidgetChannelListUnreads.kt */
     public interface UnreadItem {
         int getMentionCount();
 
         boolean isUnread();
     }
 
-    /* compiled from: WidgetChannelListUnreads.kt */
-    /* renamed from: com.discord.widgets.channels.list.WidgetChannelListUnreads$handleVisibleRangeUpdate$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.channels.list.WidgetChannelListUnreads$handleVisibleRangeUpdate$1 */
+    /* JADX INFO: compiled from: WidgetChannelListUnreads.kt */
     public static final class ViewOnClickListenerC74221 implements View.OnClickListener {
         public final /* synthetic */ Model.Indicator $indicator;
         public final /* synthetic */ boolean $indicatorUpwards;
@@ -358,9 +358,9 @@ public final class WidgetChannelListUnreads {
         }
     }
 
-    /* compiled from: WidgetChannelListUnreads.kt */
+    /* JADX INFO: renamed from: com.discord.widgets.channels.list.WidgetChannelListUnreads$onDatasetChanged$1 */
+    /* JADX INFO: compiled from: WidgetChannelListUnreads.kt */
     @DebugMetadata(m10084c = "com.discord.widgets.channels.list.WidgetChannelListUnreads$onDatasetChanged$1", m10085f = "WidgetChannelListUnreads.kt", m10086l = {74}, m10087m = "invokeSuspend")
-    /* renamed from: com.discord.widgets.channels.list.WidgetChannelListUnreads$onDatasetChanged$1 */
     public static final class C74231 extends ContinuationImpl6 implements Function2<CoroutineScope, Continuation<? super Unit>, Object> {
         public int label;
 

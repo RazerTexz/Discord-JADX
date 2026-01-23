@@ -3,8 +3,8 @@ package com.discord.widgets.directories;
 import android.view.View;
 import com.discord.api.directory.DirectoryEntryGuild;
 
-/* compiled from: WidgetDirectoryEntryViewHolder.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetDirectoryEntryViewHolder.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class DirectoryEntryViewHolder$bind$$inlined$apply$lambda$3 implements View.OnLongClickListener {
     public final /* synthetic */ DirectoryEntryGuild $data$inlined;
     public final /* synthetic */ DirectoryEntryData $entryData$inlined;

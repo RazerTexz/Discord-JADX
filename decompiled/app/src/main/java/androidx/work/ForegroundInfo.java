@@ -3,7 +3,7 @@ package androidx.work;
 import android.app.Notification;
 import androidx.annotation.NonNull;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public final class ForegroundInfo {
     private final int mForegroundServiceType;
     private final Notification mNotification;

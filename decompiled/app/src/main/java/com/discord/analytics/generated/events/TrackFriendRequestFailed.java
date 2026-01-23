@@ -10,8 +10,8 @@ import com.discord.models.domain.ModelAuditLogEntry;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: TrackFriendRequestFailed.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: TrackFriendRequestFailed.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class TrackFriendRequestFailed implements AnalyticsSchema, TrackBase2, TrackMarketingSite2 {
     private TrackBase trackBase;
     private TrackMarketingSite trackMarketingSite;
@@ -28,7 +28,7 @@ public final /* data */ class TrackFriendRequestFailed implements AnalyticsSchem
     private final transient String analyticsSchemaTypeName = "friend_request_failed";
 
     @Override // com.discord.api.science.AnalyticsSchema
-    /* renamed from: d, reason: from getter */
+    /* JADX INFO: renamed from: d, reason: from getter */
     public String getAnalyticsSchemaTypeName() {
         return this.analyticsSchemaTypeName;
     }

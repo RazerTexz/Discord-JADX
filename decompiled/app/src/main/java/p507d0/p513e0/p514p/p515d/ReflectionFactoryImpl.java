@@ -19,11 +19,11 @@ import p507d0.p592z.p594d.PropertyReference0;
 import p507d0.p592z.p594d.PropertyReference1;
 import p507d0.p592z.p594d.ReflectionFactory;
 
-/* compiled from: ReflectionFactoryImpl.java */
-/* renamed from: d0.e0.p.d.d0, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.d0, reason: use source file name */
+/* JADX INFO: compiled from: ReflectionFactoryImpl.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class ReflectionFactoryImpl extends ReflectionFactory {
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static KDeclarationContainerImpl m9333a(CallableReference callableReference) {
         KDeclarationContainer owner = callableReference.getOwner();
         return owner instanceof KDeclarationContainerImpl ? (KDeclarationContainerImpl) owner : EmptyContainerForLocal.f22320m;

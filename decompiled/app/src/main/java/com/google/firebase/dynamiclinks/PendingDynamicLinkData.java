@@ -2,11 +2,11 @@ package com.google.firebase.dynamiclinks;
 
 import com.google.firebase.dynamiclinks.internal.DynamicLinkData;
 
-/* compiled from: com.google.firebase:firebase-dynamic-links@@19.1.1 */
-/* loaded from: classes3.dex */
+/* JADX INFO: compiled from: com.google.firebase:firebase-dynamic-links@@19.1.1 */
+/* JADX INFO: loaded from: classes3.dex */
 public class PendingDynamicLinkData {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final DynamicLinkData f21421a;
 
     public PendingDynamicLinkData(DynamicLinkData dynamicLinkData) {

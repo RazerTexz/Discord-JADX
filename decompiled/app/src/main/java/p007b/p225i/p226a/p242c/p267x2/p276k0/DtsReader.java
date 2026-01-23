@@ -11,43 +11,43 @@ import p007b.p225i.p226a.p242c.p267x2.ExtractorOutput;
 import p007b.p225i.p226a.p242c.p267x2.TrackOutput2;
 import p007b.p225i.p226a.p242c.p267x2.p276k0.TsPayloadReader;
 
-/* compiled from: DtsReader.java */
-/* renamed from: b.i.a.c.x2.k0.m, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.x2.k0.m, reason: use source file name */
+/* JADX INFO: compiled from: DtsReader.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class DtsReader implements ElementaryStreamReader {
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     @Nullable
     public final String f8724b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public String f8725c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public TrackOutput2 f8726d;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public int f8728f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public int f8729g;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public long f8730h;
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public Format2 f8731i;
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public int f8732j;
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final ParsableByteArray f8723a = new ParsableByteArray(new byte[18]);
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public int f8727e = 0;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public long f8733k = -9223372036854775807L;
 
     public DtsReader(@Nullable String str) {
@@ -58,7 +58,7 @@ public final class DtsReader implements ElementaryStreamReader {
     /* JADX WARN: Removed duplicated region for block: B:74:0x022e  */
     /* JADX WARN: Removed duplicated region for block: B:82:0x0256  */
     @Override // p007b.p225i.p226a.p242c.p267x2.p276k0.ElementaryStreamReader
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
@@ -230,7 +230,7 @@ public final class DtsReader implements ElementaryStreamReader {
                                 b5 = bArr3[6];
                             }
                             i5 = b5 & 60;
-                            this.f8730h = (int) ((((((i5 >> 2) | i4) + 1) * 32) * 1000000) / this.f8731i.f7137K);
+                            this.f8730h = (int) ((((long) ((((i5 >> 2) | i4) + 1) * 32)) * 1000000) / ((long) this.f8731i.f7137K));
                             this.f8723a.m3079E(0);
                             this.f8726d.mo2524c(this.f8723a, 18);
                             this.f8727e = 2;
@@ -239,7 +239,7 @@ public final class DtsReader implements ElementaryStreamReader {
                             b4 = bArr3[4];
                         }
                         i5 = b4 & 252;
-                        this.f8730h = (int) ((((((i5 >> 2) | i4) + 1) * 32) * 1000000) / this.f8731i.f7137K);
+                        this.f8730h = (int) ((((long) ((((i5 >> 2) | i4) + 1) * 32)) * 1000000) / ((long) this.f8731i.f7137K));
                         this.f8723a.m3079E(0);
                         this.f8726d.mo2524c(this.f8723a, 18);
                         this.f8727e = 2;
@@ -257,7 +257,7 @@ public final class DtsReader implements ElementaryStreamReader {
                     if (b3 == -2) {
                     }
                     i5 = b4 & 252;
-                    this.f8730h = (int) ((((((i5 >> 2) | i4) + 1) * 32) * 1000000) / this.f8731i.f7137K);
+                    this.f8730h = (int) ((((long) ((((i5 >> 2) | i4) + 1) * 32)) * 1000000) / ((long) this.f8731i.f7137K));
                     this.f8723a.m3079E(0);
                     this.f8726d.mo2524c(this.f8723a, 18);
                     this.f8727e = 2;
@@ -284,7 +284,7 @@ public final class DtsReader implements ElementaryStreamReader {
     }
 
     @Override // p007b.p225i.p226a.p242c.p267x2.p276k0.ElementaryStreamReader
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public void mo3759c() {
         this.f8727e = 0;
         this.f8728f = 0;
@@ -293,12 +293,12 @@ public final class DtsReader implements ElementaryStreamReader {
     }
 
     @Override // p007b.p225i.p226a.p242c.p267x2.p276k0.ElementaryStreamReader
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public void mo3760d() {
     }
 
     @Override // p007b.p225i.p226a.p242c.p267x2.p276k0.ElementaryStreamReader
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public void mo3761e(ExtractorOutput extractorOutput, TsPayloadReader.d dVar) {
         dVar.m3765a();
         this.f8725c = dVar.m3766b();
@@ -306,7 +306,7 @@ public final class DtsReader implements ElementaryStreamReader {
     }
 
     @Override // p007b.p225i.p226a.p242c.p267x2.p276k0.ElementaryStreamReader
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public void mo3762f(long j, int i) {
         if (j != -9223372036854775807L) {
             this.f8733k = j;

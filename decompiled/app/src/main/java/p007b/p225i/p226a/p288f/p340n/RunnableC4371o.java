@@ -1,11 +1,11 @@
 package p007b.p225i.p226a.p288f.p340n;
 
-/* compiled from: com.google.android.gms:play-services-tasks@@17.2.1 */
-/* renamed from: b.i.a.f.n.o */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.n.o */
+/* JADX INFO: compiled from: com.google.android.gms:play-services-tasks@@17.2.1 */
+/* JADX INFO: loaded from: classes3.dex */
 public final class RunnableC4371o implements Runnable {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final /* synthetic */ C4372p f11500j;
 
     public RunnableC4371o(C4372p c4372p) {

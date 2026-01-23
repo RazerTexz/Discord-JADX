@@ -1,8 +1,8 @@
 package com.discord.widgets.home;
 
 
-/* compiled from: PanelLayout.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: PanelLayout.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public interface PanelLayout {
     void closePanels();
 

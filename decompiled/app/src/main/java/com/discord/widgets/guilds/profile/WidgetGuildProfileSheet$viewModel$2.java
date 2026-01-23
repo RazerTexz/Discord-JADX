@@ -4,8 +4,8 @@ import kotlin.jvm.functions.Function0;
 import org.objectweb.asm.Opcodes;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetGuildProfileSheet.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetGuildProfileSheet.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetGuildProfileSheet$viewModel$2 extends Lambda implements Function0<WidgetGuildProfileSheetViewModel> {
     public final /* synthetic */ WidgetGuildProfileSheet this$0;
 

@@ -5,22 +5,22 @@ import androidx.annotation.GuardedBy;
 import java.util.Objects;
 import java.util.concurrent.BlockingQueue;
 
-/* compiled from: com.google.android.gms:play-services-measurement-impl@@18.0.0 */
-/* renamed from: b.i.a.f.i.b.v4 */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.i.b.v4 */
+/* JADX INFO: compiled from: com.google.android.gms:play-services-measurement-impl@@18.0.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public final class C4213v4 extends Thread {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final Object f11300j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final BlockingQueue<C4180s4<?>> f11301k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     @GuardedBy("threadLifeCycleLock")
     public boolean f11302l = false;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public final /* synthetic */ C4169r4 f11303m;
 
     public C4213v4(C4169r4 c4169r4, String str, BlockingQueue<C4180s4<?>> blockingQueue) {
@@ -31,12 +31,12 @@ public final class C4213v4 extends Thread {
         setName(str);
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final void m5956a(InterruptedException interruptedException) {
         this.f11303m.mo5726g().f11144i.m5861b(String.valueOf(getName()).concat(" was interrupted"), interruptedException);
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final void m5957b() {
         synchronized (this.f11303m.f11174j) {
             if (!this.f11302l) {

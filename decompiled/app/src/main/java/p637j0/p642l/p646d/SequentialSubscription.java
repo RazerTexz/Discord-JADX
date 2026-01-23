@@ -3,16 +3,16 @@ package p637j0.p642l.p646d;
 import java.util.concurrent.atomic.AtomicReference;
 import p658rx.Subscription;
 
-/* compiled from: SequentialSubscription.java */
-/* renamed from: j0.l.d.a, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: j0.l.d.a, reason: use source file name */
+/* JADX INFO: compiled from: SequentialSubscription.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class SequentialSubscription extends AtomicReference<Subscription> implements Subscription {
     private static final long serialVersionUID = 995205034283130269L;
 
     public SequentialSubscription() {
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public boolean m10809a(Subscription subscription) {
         Subscription subscription2;
         do {

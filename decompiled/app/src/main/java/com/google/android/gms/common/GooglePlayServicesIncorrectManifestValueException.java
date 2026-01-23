@@ -3,9 +3,9 @@ package com.google.android.gms.common;
 import com.google.android.gms.common.annotation.KeepName;
 import p007b.p225i.p226a.p288f.p299e.C3256c;
 
-/* compiled from: com.google.android.gms:play-services-basement@@17.6.0 */
+/* JADX INFO: compiled from: com.google.android.gms:play-services-basement@@17.6.0 */
+/* JADX INFO: loaded from: classes3.dex */
 @KeepName
-/* loaded from: classes3.dex */
 public final class GooglePlayServicesIncorrectManifestValueException extends GooglePlayServicesManifestException {
     public GooglePlayServicesIncorrectManifestValueException(int i) {
         int i2 = C3256c.f9306a;

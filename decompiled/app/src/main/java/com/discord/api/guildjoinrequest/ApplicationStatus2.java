@@ -8,9 +8,9 @@ import java.util.Locale;
 import java.util.Objects;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ApplicationStatus.kt */
-/* renamed from: com.discord.api.guildjoinrequest.ApplicationStatusTypeAdapter, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: com.discord.api.guildjoinrequest.ApplicationStatusTypeAdapter, reason: use source file name */
+/* JADX INFO: compiled from: ApplicationStatus.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class ApplicationStatus2 extends TypeAdapter<ApplicationStatus> {
     /* JADX WARN: Can't fix incorrect switch cases order, some code will duplicate */
     /* JADX WARN: Code restructure failed: missing block: B:15:0x0030, code lost:

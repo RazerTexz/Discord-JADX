@@ -16,12 +16,12 @@ import kotlin.Unit;
 import kotlin.jvm.functions.Function4;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: WidgetGlobalSearchAdapter.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: WidgetGlobalSearchAdapter.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class WidgetGlobalSearchAdapter extends MGRecyclerAdapterSimple<WidgetGlobalSearchModel.ItemDataPayload> {
     private Function4<? super View, ? super Integer, ? super WidgetGlobalSearchModel.ItemDataPayload, ? super Boolean, Unit> onSelectedListener;
 
-    /* compiled from: WidgetGlobalSearchAdapter.kt */
+    /* JADX INFO: compiled from: WidgetGlobalSearchAdapter.kt */
     public static final class ChannelViewHolder extends SearchViewHolder {
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
         public ChannelViewHolder(WidgetGlobalSearchAdapter widgetGlobalSearchAdapter) {
@@ -43,7 +43,7 @@ public final class WidgetGlobalSearchAdapter extends MGRecyclerAdapterSimple<Wid
         }
     }
 
-    /* compiled from: WidgetGlobalSearchAdapter.kt */
+    /* JADX INFO: compiled from: WidgetGlobalSearchAdapter.kt */
     public static final class GuildViewHolder extends SearchViewHolder {
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
         public GuildViewHolder(WidgetGlobalSearchAdapter widgetGlobalSearchAdapter) {
@@ -65,7 +65,7 @@ public final class WidgetGlobalSearchAdapter extends MGRecyclerAdapterSimple<Wid
         }
     }
 
-    /* compiled from: WidgetGlobalSearchAdapter.kt */
+    /* JADX INFO: compiled from: WidgetGlobalSearchAdapter.kt */
     public static final class HeaderViewHolder extends MGRecyclerViewHolder<WidgetGlobalSearchAdapter, WidgetGlobalSearchModel.ItemDataPayload> {
         private final WidgetChannelSearchItemHeaderBinding binding;
 
@@ -90,7 +90,7 @@ public final class WidgetGlobalSearchAdapter extends MGRecyclerAdapterSimple<Wid
             onConfigure2(i, itemDataPayload);
         }
 
-        /* renamed from: onConfigure, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: onConfigure, reason: avoid collision after fix types in other method */
         public void onConfigure2(int position, WidgetGlobalSearchModel.ItemDataPayload data) {
             Intrinsics3.checkNotNullParameter(data, "data");
             super.onConfigure(position, data);
@@ -102,7 +102,7 @@ public final class WidgetGlobalSearchAdapter extends MGRecyclerAdapterSimple<Wid
         }
     }
 
-    /* compiled from: WidgetGlobalSearchAdapter.kt */
+    /* JADX INFO: compiled from: WidgetGlobalSearchAdapter.kt */
     public static abstract class SearchViewHolder extends MGRecyclerViewHolder<WidgetGlobalSearchAdapter, WidgetGlobalSearchModel.ItemDataPayload> {
         private final ViewGlobalSearchItem viewGlobalSearchItem;
 
@@ -141,7 +141,7 @@ public final class WidgetGlobalSearchAdapter extends MGRecyclerAdapterSimple<Wid
         }
     }
 
-    /* compiled from: WidgetGlobalSearchAdapter.kt */
+    /* JADX INFO: compiled from: WidgetGlobalSearchAdapter.kt */
     public static final class UserViewHolder extends SearchViewHolder {
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
         public UserViewHolder(WidgetGlobalSearchAdapter widgetGlobalSearchAdapter) {

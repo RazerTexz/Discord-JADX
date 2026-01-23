@@ -5,9 +5,9 @@ import com.discord.widgets.chat.input.emoji.EmojiPickerViewModel;
 import kotlin.jvm.functions.Function0;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetEmojiPicker.kt */
-/* renamed from: com.discord.widgets.chat.input.emoji.WidgetEmojiPicker$viewModelForInline$2, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.chat.input.emoji.WidgetEmojiPicker$viewModelForInline$2, reason: use source file name */
+/* JADX INFO: compiled from: WidgetEmojiPicker.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetEmojiPicker3 extends Lambda implements Function0<EmojiPickerViewModel.Inline> {
     public final /* synthetic */ WidgetEmojiPicker this$0;
 

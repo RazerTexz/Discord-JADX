@@ -8,8 +8,8 @@ import android.view.ViewParent;
 import androidx.annotation.RestrictTo;
 import androidx.appcompat.view.menu.ShowableListMenu;
 
+/* JADX INFO: loaded from: classes.dex */
 @RestrictTo({RestrictTo.Scope.LIBRARY_GROUP_PREFIX})
-/* loaded from: classes.dex */
 public abstract class ForwardingListener implements View.OnTouchListener, View.OnAttachStateChangeListener {
     private int mActivePointerId;
     private Runnable mDisallowIntercept;
@@ -65,7 +65,7 @@ public abstract class ForwardingListener implements View.OnTouchListener, View.O
         }
     }
 
-    private boolean onTouchForwarded(MotionEvent motionEvent) throws IllegalArgumentException {
+    private boolean onTouchForwarded(MotionEvent motionEvent) {
         DropDownListView dropDownListView;
         View view = this.mSrc;
         ShowableListMenu popup = getPopup();

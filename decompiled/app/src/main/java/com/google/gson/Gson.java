@@ -44,52 +44,52 @@ import p007b.p225i.p408d.TypeAdapterFactory2;
 import p007b.p225i.p408d.p410q.C4922g;
 import p007b.p225i.p408d.p410q.p411x.JsonTreeReader;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public final class Gson {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final TypeToken<?> f21464a = TypeToken.get(Object.class);
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final ThreadLocal<Map<TypeToken<?>, FutureTypeAdapter<?>>> f21465b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final Map<TypeToken<?>, TypeAdapter<?>> f21466c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final C4922g f21467d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final JsonAdapterAnnotationTypeAdapterFactory f21468e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final List<TypeAdapterFactory2> f21469f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public final Map<Type, InstanceCreator<?>> f21470g;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public final boolean f21471h;
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public final boolean f21472i;
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final boolean f21473j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final boolean f21474k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final boolean f21475l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public final List<TypeAdapterFactory2> f21476m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public final List<TypeAdapterFactory2> f21477n;
 
-    /* renamed from: com.google.gson.Gson$1 */
+    /* JADX INFO: renamed from: com.google.gson.Gson$1 */
     public class C110941 extends TypeAdapter<Number> {
         public C110941(Gson gson) {
         }
@@ -115,7 +115,7 @@ public final class Gson {
         }
     }
 
-    /* renamed from: com.google.gson.Gson$2 */
+    /* JADX INFO: renamed from: com.google.gson.Gson$2 */
     public class C110952 extends TypeAdapter<Number> {
         public C110952(Gson gson) {
         }
@@ -141,7 +141,7 @@ public final class Gson {
         }
     }
 
-    /* renamed from: com.google.gson.Gson$3 */
+    /* JADX INFO: renamed from: com.google.gson.Gson$3 */
     public class C110963 extends TypeAdapter<Number> {
         @Override // com.google.gson.TypeAdapter
         public Number read(JsonReader jsonReader) throws IOException {
@@ -163,10 +163,10 @@ public final class Gson {
         }
     }
 
-    /* renamed from: com.google.gson.Gson$4 */
+    /* JADX INFO: renamed from: com.google.gson.Gson$4 */
     public class C110974 extends TypeAdapter<AtomicLong> {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final /* synthetic */ TypeAdapter f21478a;
 
         public C110974(TypeAdapter typeAdapter) {
@@ -184,10 +184,10 @@ public final class Gson {
         }
     }
 
-    /* renamed from: com.google.gson.Gson$5 */
+    /* JADX INFO: renamed from: com.google.gson.Gson$5 */
     public class C110985 extends TypeAdapter<AtomicLongArray> {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final /* synthetic */ TypeAdapter f21479a;
 
         public C110985(TypeAdapter typeAdapter) {
@@ -224,7 +224,7 @@ public final class Gson {
 
     public static class FutureTypeAdapter<T> extends TypeAdapter<T> {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public TypeAdapter<T> f21480a;
 
         @Override // com.google.gson.TypeAdapter
@@ -250,7 +250,7 @@ public final class Gson {
         this(Excluder.f21483j, FieldNamingPolicy.f13088j, Collections.emptyMap(), false, false, false, true, false, false, false, LongSerializationPolicy.f13108j, null, 2, 2, Collections.emptyList(), Collections.emptyList(), Collections.emptyList());
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static void m9197a(Object obj, JsonReader jsonReader) {
         if (obj != null) {
             try {
@@ -266,19 +266,19 @@ public final class Gson {
         }
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static void m9198b(double d) {
         if (Double.isNaN(d) || Double.isInfinite(d)) {
             throw new IllegalArgumentException(d + " is not a valid double value as per JSON specification. To override this behavior, use GsonBuilder.serializeSpecialFloatingPointValues() method.");
         }
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public <T> T m9199c(JsonElement jsonElement, Class<T> cls) throws JsonSyntaxException {
         return (T) C3404f.m4203E1(cls).cast(jsonElement == null ? null : m9200d(new JsonTreeReader(jsonElement), cls));
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public <T> T m9200d(JsonReader jsonReader, Type type) throws JsonSyntaxException, JsonIOException {
         boolean z2 = jsonReader.f21627l;
         boolean z3 = true;
@@ -313,7 +313,7 @@ public final class Gson {
         }
     }
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public <T> T m9201e(Reader reader, Class<T> cls) throws JsonSyntaxException, JsonIOException {
         JsonReader jsonReaderM9207k = m9207k(reader);
         Object objM9200d = m9200d(jsonReaderM9207k, cls);
@@ -321,12 +321,12 @@ public final class Gson {
         return (T) C3404f.m4203E1(cls).cast(objM9200d);
     }
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public <T> T m9202f(String str, Class<T> cls) throws JsonSyntaxException {
         return (T) C3404f.m4203E1(cls).cast(m9203g(str, cls));
     }
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public <T> T m9203g(String str, Type type) throws JsonSyntaxException {
         if (str == null) {
             return null;
@@ -337,7 +337,7 @@ public final class Gson {
         return t;
     }
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public <T> TypeAdapter<T> m9204h(TypeToken<T> typeToken) {
         TypeAdapter<T> typeAdapter = (TypeAdapter) this.f21466c.get(typeToken == null ? f21464a : typeToken);
         if (typeAdapter != null) {
@@ -378,12 +378,12 @@ public final class Gson {
         }
     }
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public <T> TypeAdapter<T> m9205i(Class<T> cls) {
         return m9204h(TypeToken.get((Class) cls));
     }
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public <T> TypeAdapter<T> m9206j(TypeAdapterFactory2 typeAdapterFactory2, TypeToken<T> typeToken) {
         if (!this.f21469f.contains(typeAdapterFactory2)) {
             typeAdapterFactory2 = this.f21468e;
@@ -402,14 +402,14 @@ public final class Gson {
         throw new IllegalArgumentException("GSON cannot serialize " + typeToken);
     }
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public JsonReader m9207k(Reader reader) {
         JsonReader jsonReader = new JsonReader(reader);
         jsonReader.f21627l = this.f21475l;
         return jsonReader;
     }
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public JsonWriter m9208l(Writer writer) throws IOException {
         if (this.f21472i) {
             writer.write(")]}'\n");
@@ -423,8 +423,8 @@ public final class Gson {
         return jsonWriter;
     }
 
-    /* renamed from: m */
-    public String m9209m(Object obj) throws JsonIOException {
+    /* JADX INFO: renamed from: m */
+    public String m9209m(Object obj) {
         if (obj == null) {
             JsonElement jsonElement = JsonNull.f13106a;
             StringWriter stringWriter = new StringWriter();
@@ -445,7 +445,7 @@ public final class Gson {
         }
     }
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public void m9210n(JsonElement jsonElement, JsonWriter jsonWriter) throws JsonIOException {
         boolean z2 = jsonWriter.f21659q;
         jsonWriter.f21659q = true;
@@ -470,7 +470,7 @@ public final class Gson {
         }
     }
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public void m9211o(Object obj, Type type, JsonWriter jsonWriter) throws JsonIOException {
         TypeAdapter typeAdapterM9204h = m9204h(TypeToken.get(type));
         boolean z2 = jsonWriter.f21659q;

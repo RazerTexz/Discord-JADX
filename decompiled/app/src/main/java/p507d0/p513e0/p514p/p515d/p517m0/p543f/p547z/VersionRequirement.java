@@ -17,50 +17,50 @@ import p507d0.p513e0.p514p.p515d.p517m0.p543f.C11697v;
 import p507d0.p513e0.p514p.p515d.p517m0.p550i.MessageLite;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: VersionRequirement.kt */
-/* renamed from: d0.e0.p.d.m0.f.z.h, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.f.z.h, reason: use source file name */
+/* JADX INFO: compiled from: VersionRequirement.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class VersionRequirement {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final a f24062a = new a(null);
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final b f24063b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final C11697v.d f24064c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final Annotations2 f24065d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final Integer f24066e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final String f24067f;
 
-    /* compiled from: VersionRequirement.kt */
-    /* renamed from: d0.e0.p.d.m0.f.z.h$b */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.f.z.h$b */
+    /* JADX INFO: compiled from: VersionRequirement.kt */
     public static final class b {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public static final a f24068a = new a(null);
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public static final b f24069b = new b(256, 256, 256);
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public final int f24070c;
 
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         public final int f24071d;
 
-        /* renamed from: e */
+        /* JADX INFO: renamed from: e */
         public final int f24072e;
 
-        /* compiled from: VersionRequirement.kt */
-        /* renamed from: d0.e0.p.d.m0.f.z.h$b$a */
+        /* JADX INFO: renamed from: d0.e0.p.d.m0.f.z.h$b$a */
+        /* JADX INFO: compiled from: VersionRequirement.kt */
         public static final class a {
             public a(DefaultConstructorMarker defaultConstructorMarker) {
             }
@@ -151,8 +151,8 @@ public final class VersionRequirement {
         return sbM833U.toString();
     }
 
-    /* compiled from: VersionRequirement.kt */
-    /* renamed from: d0.e0.p.d.m0.f.z.h$a */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.f.z.h$a */
+    /* JADX INFO: compiled from: VersionRequirement.kt */
     public static final class a {
         public a(DefaultConstructorMarker defaultConstructorMarker) {
         }

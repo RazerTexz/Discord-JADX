@@ -3,44 +3,44 @@ package p007b.p225i.p226a.p242c.p267x2.p274i0;
 import androidx.annotation.Nullable;
 import p007b.p225i.p226a.p242c.Format2;
 
-/* compiled from: Track.java */
-/* renamed from: b.i.a.c.x2.i0.m, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.x2.i0.m, reason: use source file name */
+/* JADX INFO: compiled from: Track.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class Track {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final int f8460a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final int f8461b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final long f8462c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final long f8463d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final long f8464e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final Format2 f8465f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public final int f8466g;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     @Nullable
     public final long[] f8467h;
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     @Nullable
     public final long[] f8468i;
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final int f8469j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     @Nullable
     public final TrackEncryptionBox[] f8470k;
 
@@ -59,7 +59,7 @@ public final class Track {
     }
 
     @Nullable
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public TrackEncryptionBox m3731a(int i) {
         TrackEncryptionBox[] trackEncryptionBoxArr = this.f8470k;
         if (trackEncryptionBoxArr == null) {

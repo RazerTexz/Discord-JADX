@@ -10,12 +10,12 @@ import p001a0.p002a.p003a.C0002b;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: Traits.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: Traits.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class Traits {
     public static final Traits INSTANCE = new Traits();
 
-    /* compiled from: Traits.kt */
+    /* JADX INFO: compiled from: Traits.kt */
     public static final /* data */ class Location implements Serializable {
         private final String _object;
         private final String objectType;
@@ -23,7 +23,7 @@ public final class Traits {
         private final Integer promotionId;
         private final String section;
 
-        /* compiled from: Traits.kt */
+        /* JADX INFO: compiled from: Traits.kt */
         public static final class Obj {
             public static final String ACTIVITY_ACTION = "Activity Action";
             public static final String BOOST_GEM_ICON = "Boost Gem Icon";
@@ -38,7 +38,7 @@ public final class Traits {
             }
         }
 
-        /* compiled from: Traits.kt */
+        /* JADX INFO: compiled from: Traits.kt */
         public static final class ObjType {
             public static final String BUY = "buy";
             public static final ObjType INSTANCE = new ObjType();
@@ -51,7 +51,7 @@ public final class Traits {
             }
         }
 
-        /* compiled from: Traits.kt */
+        /* JADX INFO: compiled from: Traits.kt */
         public static final class Page {
             public static final String BOOST_MARKETING = "User-Facing Premium Guild Subscription Fullscreen Modal";
             public static final String CHANNEL_SETTINGS = "Channel Settings";
@@ -63,7 +63,7 @@ public final class Traits {
             }
         }
 
-        /* compiled from: Traits.kt */
+        /* JADX INFO: compiled from: Traits.kt */
         public static final class Section {
             public static final String ANDROID_CANNOT_MANAGE_SUBSCRIPTION = "Android Cannot Manage Subscription";
             public static final String CHANNEL_TEXT_AREA = "Channel Text Area";
@@ -125,27 +125,27 @@ public final class Traits {
             return location.copy(str, str5, str6, str7, num);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final String getPage() {
             return this.page;
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final String getSection() {
             return this.section;
         }
 
-        /* renamed from: component3, reason: from getter */
+        /* JADX INFO: renamed from: component3, reason: from getter */
         public final String get_object() {
             return this._object;
         }
 
-        /* renamed from: component4, reason: from getter */
+        /* JADX INFO: renamed from: component4, reason: from getter */
         public final String getObjectType() {
             return this.objectType;
         }
 
-        /* renamed from: component5, reason: from getter */
+        /* JADX INFO: renamed from: component5, reason: from getter */
         public final Integer getPromotionId() {
             return this.promotionId;
         }
@@ -240,7 +240,7 @@ public final class Traits {
         }
     }
 
-    /* compiled from: Traits.kt */
+    /* JADX INFO: compiled from: Traits.kt */
     public static final /* data */ class Payment {
         private final String currency;
         private final boolean isGift;
@@ -248,7 +248,7 @@ public final class Traits {
         private final int regularPrice;
         private final String type;
 
-        /* compiled from: Traits.kt */
+        /* JADX INFO: compiled from: Traits.kt */
         public static final class Type {
             public static final Type INSTANCE = new Type();
             public static final String STICKER = "sticker";
@@ -290,27 +290,27 @@ public final class Traits {
             return payment.copy(str, i4, i5, str3, z2);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final String getType() {
             return this.type;
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final int getPrice() {
             return this.price;
         }
 
-        /* renamed from: component3, reason: from getter */
+        /* JADX INFO: renamed from: component3, reason: from getter */
         public final int getRegularPrice() {
             return this.regularPrice;
         }
 
-        /* renamed from: component4, reason: from getter */
+        /* JADX INFO: renamed from: component4, reason: from getter */
         public final String getCurrency() {
             return this.currency;
         }
 
-        /* renamed from: component5, reason: from getter */
+        /* JADX INFO: renamed from: component5, reason: from getter */
         public final boolean getIsGift() {
             return this.isGift;
         }
@@ -349,17 +349,20 @@ public final class Traits {
         }
 
         /* JADX WARN: Multi-variable type inference failed */
+        /* JADX WARN: Type inference failed for: r1v3, types: [int] */
+        /* JADX WARN: Type inference failed for: r1v4 */
+        /* JADX WARN: Type inference failed for: r1v6 */
         public int hashCode() {
             String str = this.type;
             int iHashCode = (((((str != null ? str.hashCode() : 0) * 31) + this.price) * 31) + this.regularPrice) * 31;
             String str2 = this.currency;
             int iHashCode2 = (iHashCode + (str2 != null ? str2.hashCode() : 0)) * 31;
             boolean z2 = this.isGift;
-            int i = z2;
-            if (z2 != 0) {
-                i = 1;
+            ?? r1 = z2;
+            if (z2) {
+                r1 = 1;
             }
-            return iHashCode2 + i;
+            return iHashCode2 + r1;
         }
 
         public final boolean isGift() {
@@ -389,7 +392,7 @@ public final class Traits {
         }
     }
 
-    /* compiled from: Traits.kt */
+    /* JADX INFO: compiled from: Traits.kt */
     public static final /* data */ class Source {
         private final String _object;
         private final String objectType;
@@ -397,7 +400,7 @@ public final class Traits {
         private final Integer promotionId;
         private final String section;
 
-        /* compiled from: Traits.kt */
+        /* JADX INFO: compiled from: Traits.kt */
         public static final class Obj {
             public static final String GIF_PICKER = "GIF Picker";
             public static final Obj INSTANCE = new Obj();
@@ -440,27 +443,27 @@ public final class Traits {
             return source.copy(str, str5, str6, str7, num);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final String getPage() {
             return this.page;
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final String getSection() {
             return this.section;
         }
 
-        /* renamed from: component3, reason: from getter */
+        /* JADX INFO: renamed from: component3, reason: from getter */
         public final String get_object() {
             return this._object;
         }
 
-        /* renamed from: component4, reason: from getter */
+        /* JADX INFO: renamed from: component4, reason: from getter */
         public final String getObjectType() {
             return this.objectType;
         }
 
-        /* renamed from: component5, reason: from getter */
+        /* JADX INFO: renamed from: component5, reason: from getter */
         public final Integer getPromotionId() {
             return this.promotionId;
         }
@@ -555,7 +558,7 @@ public final class Traits {
         }
     }
 
-    /* compiled from: Traits.kt */
+    /* JADX INFO: compiled from: Traits.kt */
     public static final /* data */ class StoreSku {
         private final long applicationId;
         private final long skuId;
@@ -589,22 +592,22 @@ public final class Traits {
             return storeSku.copy(j3, i3, j4, str);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final long getSkuId() {
             return this.skuId;
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final int getSkuType() {
             return this.skuType;
         }
 
-        /* renamed from: component3, reason: from getter */
+        /* JADX INFO: renamed from: component3, reason: from getter */
         public final long getApplicationId() {
             return this.applicationId;
         }
 
-        /* renamed from: component4, reason: from getter */
+        /* JADX INFO: renamed from: component4, reason: from getter */
         public final String getStoreTitle() {
             return this.storeTitle;
         }
@@ -667,16 +670,16 @@ public final class Traits {
         }
     }
 
-    /* compiled from: Traits.kt */
+    /* JADX INFO: compiled from: Traits.kt */
     public static final /* data */ class Subscription {
 
-        /* renamed from: Companion, reason: from kotlin metadata */
+        /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
         public static final Companion INSTANCE = new Companion(null);
         private final String gatewayPlanId;
         private final Long planId;
         private final Integer type;
 
-        /* compiled from: Traits.kt */
+        /* JADX INFO: compiled from: Traits.kt */
         public static final class Companion {
             private Companion() {
             }
@@ -715,17 +718,17 @@ public final class Traits {
             return subscription.copy(str, num, l);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final String getGatewayPlanId() {
             return this.gatewayPlanId;
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final Integer getType() {
             return this.type;
         }
 
-        /* renamed from: component3, reason: from getter */
+        /* JADX INFO: renamed from: component3, reason: from getter */
         public final Long getPlanId() {
             return this.planId;
         }

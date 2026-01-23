@@ -36,22 +36,22 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 import p507d0.p592z.p594d.Reflection2;
 
-/* compiled from: WidgetGuildRoleSubscriptionEntryPoint.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetGuildRoleSubscriptionEntryPoint.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetGuildRoleSubscriptionEntryPoint extends AppFragment {
     public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetGuildRoleSubscriptionEntryPoint.class, "viewBinding", "getViewBinding()Lcom/discord/databinding/WidgetGuildRoleSubscriptionEntryPointBinding;", 0)};
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private static final String INTENT_EXTRA_TRACKING_SOURCE_LOCATION = "INTENT_EXTRA_TRACKING_SOURCE_LOCATION";
 
-    /* renamed from: viewBinding$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: viewBinding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate viewBinding;
 
-    /* renamed from: viewModel$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: viewModel$delegate, reason: from kotlin metadata */
     private final Lazy viewModel;
 
-    /* compiled from: WidgetGuildRoleSubscriptionEntryPoint.kt */
+    /* JADX INFO: compiled from: WidgetGuildRoleSubscriptionEntryPoint.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -70,8 +70,8 @@ public final class WidgetGuildRoleSubscriptionEntryPoint extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetGuildRoleSubscriptionEntryPoint.kt */
-    /* renamed from: com.discord.widgets.guild_role_subscriptions.entrypoint.WidgetGuildRoleSubscriptionEntryPoint$configureUI$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.guild_role_subscriptions.entrypoint.WidgetGuildRoleSubscriptionEntryPoint$configureUI$1 */
+    /* JADX INFO: compiled from: WidgetGuildRoleSubscriptionEntryPoint.kt */
     public static final class C84441 extends Lambda implements Function1<RenderContext, Unit> {
         public final /* synthetic */ WidgetGuildRoleSubscriptionEntryPointViewModel.ViewState $viewState;
 
@@ -81,21 +81,21 @@ public final class WidgetGuildRoleSubscriptionEntryPoint extends AppFragment {
             this.$viewState = viewState;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(RenderContext renderContext) {
             Intrinsics3.checkNotNullParameter(renderContext, "$receiver");
             renderContext.args.put("serverName", ((WidgetGuildRoleSubscriptionEntryPointViewModel.ViewState.Valid) this.$viewState).getGuild().getName());
             renderContext.m8422a("serverNameHook", new AnonymousClass1());
         }
 
-        /* compiled from: WidgetGuildRoleSubscriptionEntryPoint.kt */
-        /* renamed from: com.discord.widgets.guild_role_subscriptions.entrypoint.WidgetGuildRoleSubscriptionEntryPoint$configureUI$1$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.widgets.guild_role_subscriptions.entrypoint.WidgetGuildRoleSubscriptionEntryPoint$configureUI$1$1, reason: invalid class name */
+        /* JADX INFO: compiled from: WidgetGuildRoleSubscriptionEntryPoint.kt */
         public static final class AnonymousClass1 extends Lambda implements Function1<Hook, Unit> {
             public AnonymousClass1() {
                 super(1);
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2(Hook hook) {
                 Intrinsics3.checkNotNullParameter(hook, "$receiver");
                 hook.styles.add(new ForegroundColorSpan(ColorCompat.getThemedColor(WidgetGuildRoleSubscriptionEntryPoint.this.getContext(), C5419R.attr.primary_000)));
@@ -115,8 +115,8 @@ public final class WidgetGuildRoleSubscriptionEntryPoint extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetGuildRoleSubscriptionEntryPoint.kt */
-    /* renamed from: com.discord.widgets.guild_role_subscriptions.entrypoint.WidgetGuildRoleSubscriptionEntryPoint$onViewBoundOrOnResume$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.guild_role_subscriptions.entrypoint.WidgetGuildRoleSubscriptionEntryPoint$onViewBoundOrOnResume$1 */
+    /* JADX INFO: compiled from: WidgetGuildRoleSubscriptionEntryPoint.kt */
     public static final /* synthetic */ class C84451 extends FunctionReferenceImpl implements Function1<WidgetGuildRoleSubscriptionEntryPointViewModel.ViewState, Unit> {
         public C84451(WidgetGuildRoleSubscriptionEntryPoint widgetGuildRoleSubscriptionEntryPoint) {
             super(1, widgetGuildRoleSubscriptionEntryPoint, WidgetGuildRoleSubscriptionEntryPoint.class, "configureUI", "configureUI(Lcom/discord/widgets/guild_role_subscriptions/entrypoint/WidgetGuildRoleSubscriptionEntryPointViewModel$ViewState;)V", 0);
@@ -128,7 +128,7 @@ public final class WidgetGuildRoleSubscriptionEntryPoint extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(WidgetGuildRoleSubscriptionEntryPointViewModel.ViewState viewState) {
             Intrinsics3.checkNotNullParameter(viewState, "p1");
             WidgetGuildRoleSubscriptionEntryPoint.access$configureUI((WidgetGuildRoleSubscriptionEntryPoint) this.receiver, viewState);

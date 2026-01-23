@@ -8,28 +8,28 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.viewbinding.ViewBinding;
 import com.discord.views.LoadingButton;
 
-/* compiled from: LayoutContactSyncLandingBinding.java */
-/* renamed from: b.a.i.k0, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.a.i.k0, reason: use source file name */
+/* JADX INFO: compiled from: LayoutContactSyncLandingBinding.java */
+/* JADX INFO: loaded from: classes.dex */
 public final class LayoutContactSyncLandingBinding implements ViewBinding {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     @NonNull
     public final ConstraintLayout f991a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     @NonNull
     public final TextView f992b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     @NonNull
     public final LoadingButton f993c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     @NonNull
     public final View f994d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     @NonNull
     public final LayoutContactSyncToggleInfoBinding f995e;
 

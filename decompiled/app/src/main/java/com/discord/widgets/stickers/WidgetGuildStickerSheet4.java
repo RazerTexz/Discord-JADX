@@ -3,9 +3,9 @@ package com.discord.widgets.stickers;
 import android.view.View;
 import com.discord.models.guild.Guild;
 
-/* compiled from: WidgetGuildStickerSheet.kt */
-/* renamed from: com.discord.widgets.stickers.WidgetGuildStickerSheet$configureButtons$$inlined$with$lambda$2, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: com.discord.widgets.stickers.WidgetGuildStickerSheet$configureButtons$$inlined$with$lambda$2, reason: use source file name */
+/* JADX INFO: compiled from: WidgetGuildStickerSheet.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class WidgetGuildStickerSheet4 implements View.OnClickListener {
     public final /* synthetic */ Guild $guild$inlined;
     public final /* synthetic */ boolean $isUserInGuild$inlined;

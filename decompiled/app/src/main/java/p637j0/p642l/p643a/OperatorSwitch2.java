@@ -17,30 +17,30 @@ import p658rx.Subscription;
 import p658rx.exceptions.CompositeException;
 import p658rx.subscriptions.SerialSubscription;
 
-/* compiled from: OperatorSwitch.java */
-/* renamed from: j0.l.a.y1, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: j0.l.a.y1, reason: use source file name */
+/* JADX INFO: compiled from: OperatorSwitch.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class OperatorSwitch2<T> implements Observable.InterfaceC13006b<T, Observable<? extends T>> {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final boolean f27125j;
 
-    /* compiled from: OperatorSwitch.java */
-    /* renamed from: j0.l.a.y1$a */
+    /* JADX INFO: renamed from: j0.l.a.y1$a */
+    /* JADX INFO: compiled from: OperatorSwitch.java */
     public static final class a {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public static final OperatorSwitch2<Object> f27126a = new OperatorSwitch2<>(false);
     }
 
-    /* compiled from: OperatorSwitch.java */
-    /* renamed from: j0.l.a.y1$b */
+    /* JADX INFO: renamed from: j0.l.a.y1$b */
+    /* JADX INFO: compiled from: OperatorSwitch.java */
     public static final class b<T> extends Subscriber<T> {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public final long f27127j;
 
-        /* renamed from: k */
+        /* JADX INFO: renamed from: k */
         public final c<T> f27128k;
 
         public b(long j, c<T> cVar) {
@@ -114,47 +114,47 @@ public final class OperatorSwitch2<T> implements Observable.InterfaceC13006b<T, 
         }
     }
 
-    /* compiled from: OperatorSwitch.java */
-    /* renamed from: j0.l.a.y1$c */
+    /* JADX INFO: renamed from: j0.l.a.y1$c */
+    /* JADX INFO: compiled from: OperatorSwitch.java */
     public static final class c<T> extends Subscriber<Observable<? extends T>> {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public static final Throwable f27129j = new Throwable("Terminal error");
 
-        /* renamed from: k */
+        /* JADX INFO: renamed from: k */
         public final Subscriber<? super T> f27130k;
 
-        /* renamed from: m */
+        /* JADX INFO: renamed from: m */
         public final boolean f27132m;
 
-        /* renamed from: p */
+        /* JADX INFO: renamed from: p */
         public boolean f27135p;
 
-        /* renamed from: q */
+        /* JADX INFO: renamed from: q */
         public boolean f27136q;
 
-        /* renamed from: r */
+        /* JADX INFO: renamed from: r */
         public long f27137r;
 
-        /* renamed from: s */
+        /* JADX INFO: renamed from: s */
         public Producer f27138s;
 
-        /* renamed from: t */
+        /* JADX INFO: renamed from: t */
         public volatile boolean f27139t;
 
-        /* renamed from: u */
+        /* JADX INFO: renamed from: u */
         public Throwable f27140u;
 
-        /* renamed from: v */
+        /* JADX INFO: renamed from: v */
         public boolean f27141v;
 
-        /* renamed from: l */
+        /* JADX INFO: renamed from: l */
         public final SerialSubscription f27131l = new SerialSubscription();
 
-        /* renamed from: n */
+        /* JADX INFO: renamed from: n */
         public final AtomicLong f27133n = new AtomicLong();
 
-        /* renamed from: o */
+        /* JADX INFO: renamed from: o */
         public final SpscLinkedArrayQueue<Object> f27134o = new SpscLinkedArrayQueue<>(RxRingBuffer.f27283j);
 
         public c(Subscriber<? super T> subscriber, boolean z2) {
@@ -162,7 +162,7 @@ public final class OperatorSwitch2<T> implements Observable.InterfaceC13006b<T, 
             this.f27132m = z2;
         }
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public boolean m10790a(boolean z2, boolean z3, Throwable th, SpscLinkedArrayQueue<Object> spscLinkedArrayQueue, Subscriber<? super T> subscriber, boolean z4) {
             if (this.f27132m) {
                 if (!z2 || z3 || !z4) {
@@ -187,7 +187,7 @@ public final class OperatorSwitch2<T> implements Observable.InterfaceC13006b<T, 
             return true;
         }
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public void m10791b() {
             Throwable th;
             Throwable th2;
@@ -260,7 +260,7 @@ public final class OperatorSwitch2<T> implements Observable.InterfaceC13006b<T, 
             }
         }
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public boolean m10792c(Throwable th) {
             Throwable th2 = this.f27140u;
             if (th2 == f27129j) {

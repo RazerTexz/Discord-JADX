@@ -6,9 +6,9 @@ import p507d0.p513e0.p514p.p515d.p517m0.p552k.p553a0.MemberScope3;
 import p507d0.p513e0.p514p.p515d.p517m0.p576p.SmartList;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: scopeUtils.kt */
-/* renamed from: d0.e0.p.d.m0.o.n.a, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.o.n.a, reason: use source file name */
+/* JADX INFO: compiled from: scopeUtils.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class scopeUtils {
     /* JADX WARN: Multi-variable type inference failed */
     public static final <T> Collection<T> concat(Collection<? extends T> collection, Collection<? extends T> collection2) {

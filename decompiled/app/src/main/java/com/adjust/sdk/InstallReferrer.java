@@ -9,7 +9,7 @@ import java.lang.reflect.Method;
 import java.lang.reflect.Proxy;
 import java.util.concurrent.atomic.AtomicBoolean;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class InstallReferrer implements InvocationHandler {
     private static final String PACKAGE_BASE_NAME = "com.android.installreferrer.";
     private static final int STATUS_DEVELOPER_ERROR = 3;
@@ -27,7 +27,7 @@ public class InstallReferrer implements InvocationHandler {
     private int retryWaitTime = PathInterpolatorCompat.MAX_NUM_POINTS;
     private final AtomicBoolean shouldTryToRead;
 
-    /* renamed from: com.adjust.sdk.InstallReferrer$1 */
+    /* JADX INFO: renamed from: com.adjust.sdk.InstallReferrer$1 */
     public class RunnableC53791 implements Runnable {
         public RunnableC53791() {
         }

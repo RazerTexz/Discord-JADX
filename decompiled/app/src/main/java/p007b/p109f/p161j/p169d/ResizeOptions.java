@@ -2,21 +2,21 @@ package p007b.p109f.p161j.p169d;
 
 import p007b.p085c.p086a.p087a0.AnimatableValueParser;
 
-/* compiled from: ResizeOptions.java */
-/* renamed from: b.f.j.d.e, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.f.j.d.e, reason: use source file name */
+/* JADX INFO: compiled from: ResizeOptions.java */
+/* JADX INFO: loaded from: classes.dex */
 public class ResizeOptions {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final int f3717a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final int f3718b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final float f3719c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final float f3720d;
 
     public ResizeOptions(int i, int i2) {

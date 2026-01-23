@@ -13,7 +13,7 @@ import androidx.annotation.RestrictTo;
 import androidx.core.app.BundleCompat;
 import p668x.p669a.p670a.ICustomTabsCallback;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class CustomTabsSessionToken {
     private static final String TAG = "CustomTabsSessionToken";
 
@@ -26,7 +26,7 @@ public class CustomTabsSessionToken {
     @Nullable
     private final PendingIntent mSessionId;
 
-    /* renamed from: androidx.browser.customtabs.CustomTabsSessionToken$1 */
+    /* JADX INFO: renamed from: androidx.browser.customtabs.CustomTabsSessionToken$1 */
     public class C01551 extends CustomTabsCallback {
         public C01551() {
         }

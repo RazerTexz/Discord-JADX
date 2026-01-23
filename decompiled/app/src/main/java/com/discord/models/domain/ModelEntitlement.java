@@ -4,8 +4,8 @@ import com.discord.api.premium.SubscriptionPlan;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ModelEntitlement.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: ModelEntitlement.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class ModelEntitlement {
     private final long applicationId;
     private final Boolean consumed;
@@ -36,52 +36,52 @@ public final /* data */ class ModelEntitlement {
         return modelEntitlement.copy((i2 & 1) != 0 ? modelEntitlement.id : j, (i2 & 2) != 0 ? modelEntitlement.applicationId : j2, (i2 & 4) != 0 ? modelEntitlement.type : i, (i2 & 8) != 0 ? modelEntitlement.userId : j3, (i2 & 16) != 0 ? modelEntitlement.skuId : j4, (i2 & 32) != 0 ? modelEntitlement.sku : modelSku, (i2 & 64) != 0 ? modelEntitlement.subscriptionPlan : subscriptionPlan, (i2 & 128) != 0 ? modelEntitlement.parentId : l, (i2 & 256) != 0 ? modelEntitlement.consumed : bool, (i2 & 512) != 0 ? modelEntitlement.promotionId : l2);
     }
 
-    /* renamed from: component1, reason: from getter */
+    /* JADX INFO: renamed from: component1, reason: from getter */
     public final long getId() {
         return this.id;
     }
 
-    /* renamed from: component10, reason: from getter */
+    /* JADX INFO: renamed from: component10, reason: from getter */
     public final Long getPromotionId() {
         return this.promotionId;
     }
 
-    /* renamed from: component2, reason: from getter */
+    /* JADX INFO: renamed from: component2, reason: from getter */
     public final long getApplicationId() {
         return this.applicationId;
     }
 
-    /* renamed from: component3, reason: from getter */
+    /* JADX INFO: renamed from: component3, reason: from getter */
     public final int getType() {
         return this.type;
     }
 
-    /* renamed from: component4, reason: from getter */
+    /* JADX INFO: renamed from: component4, reason: from getter */
     public final long getUserId() {
         return this.userId;
     }
 
-    /* renamed from: component5, reason: from getter */
+    /* JADX INFO: renamed from: component5, reason: from getter */
     public final long getSkuId() {
         return this.skuId;
     }
 
-    /* renamed from: component6, reason: from getter */
+    /* JADX INFO: renamed from: component6, reason: from getter */
     public final ModelSku getSku() {
         return this.sku;
     }
 
-    /* renamed from: component7, reason: from getter */
+    /* JADX INFO: renamed from: component7, reason: from getter */
     public final SubscriptionPlan getSubscriptionPlan() {
         return this.subscriptionPlan;
     }
 
-    /* renamed from: component8, reason: from getter */
+    /* JADX INFO: renamed from: component8, reason: from getter */
     public final Long getParentId() {
         return this.parentId;
     }
 
-    /* renamed from: component9, reason: from getter */
+    /* JADX INFO: renamed from: component9, reason: from getter */
     public final Boolean getConsumed() {
         return this.consumed;
     }

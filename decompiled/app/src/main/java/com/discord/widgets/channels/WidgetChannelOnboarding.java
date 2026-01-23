@@ -14,18 +14,18 @@ import kotlin.reflect.KProperty;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: WidgetChannelOnboarding.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetChannelOnboarding.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetChannelOnboarding extends AppBottomSheet {
     public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetChannelOnboarding.class, "binding", "getBinding()Lcom/discord/databinding/WidgetChannelOnboardingBinding;", 0)};
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
 
-    /* renamed from: binding$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
 
-    /* compiled from: WidgetChannelOnboarding.kt */
+    /* JADX INFO: compiled from: WidgetChannelOnboarding.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -40,8 +40,8 @@ public final class WidgetChannelOnboarding extends AppBottomSheet {
         }
     }
 
-    /* compiled from: WidgetChannelOnboarding.kt */
-    /* renamed from: com.discord.widgets.channels.WidgetChannelOnboarding$onViewCreated$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.channels.WidgetChannelOnboarding$onViewCreated$1 */
+    /* JADX INFO: compiled from: WidgetChannelOnboarding.kt */
     public static final class ViewOnClickListenerC73301 implements View.OnClickListener {
         public ViewOnClickListenerC73301() {
         }

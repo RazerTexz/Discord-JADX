@@ -5,7 +5,7 @@ import java.lang.reflect.Method;
 import lombok.Lombok;
 import org.eclipse.jdt.internal.compiler.lookup.TypeBinding;
 
-/* loaded from: discord-126021.apk:lombok/eclipse/agent/PatchExtensionMethodPortal.SCL.lombok */
+/* JADX INFO: loaded from: discord-126021.apk:lombok/eclipse/agent/PatchExtensionMethodPortal.SCL.lombok */
 public class PatchExtensionMethodPortal {
     private static final String TYPE_BINDING = "org.eclipse.jdt.internal.compiler.lookup.TypeBinding";
     private static final String TYPE_BINDING_ARRAY = "[Lorg.eclipse.jdt.internal.compiler.lookup.TypeBinding;";
@@ -32,7 +32,7 @@ public class PatchExtensionMethodPortal {
         }
     }
 
-    public static void errorNoMethodFor(Object problemReporter, Object messageSend, Object recType, Object params) throws IllegalArgumentException {
+    public static void errorNoMethodFor(Object problemReporter, Object messageSend, Object recType, Object params) {
         try {
             Reflection.errorNoMethodFor.invoke(null, problemReporter, messageSend, recType, params);
         } catch (IllegalAccessException e) {
@@ -48,7 +48,7 @@ public class PatchExtensionMethodPortal {
         }
     }
 
-    public static void invalidMethod(Object problemReporter, Object messageSend, Object method) throws IllegalArgumentException {
+    public static void invalidMethod(Object problemReporter, Object messageSend, Object method) {
         try {
             Reflection.invalidMethod.invoke(null, problemReporter, messageSend, method);
         } catch (IllegalAccessException e) {
@@ -64,7 +64,7 @@ public class PatchExtensionMethodPortal {
         }
     }
 
-    /* loaded from: discord-126021.apk:lombok/eclipse/agent/PatchExtensionMethodPortal$Reflection.SCL.lombok */
+    /* JADX INFO: loaded from: discord-126021.apk:lombok/eclipse/agent/PatchExtensionMethodPortal$Reflection.SCL.lombok */
     private static final class Reflection {
         public static final Method resolveType;
         public static final Method errorNoMethodFor;

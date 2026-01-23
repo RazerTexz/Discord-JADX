@@ -10,15 +10,15 @@ import p659s.p660a.CancellableContinuationImpl6;
 import p659s.p660a.p661a.LockFreeLinkedList3;
 import p659s.p660a.p661a.Symbol3;
 
-/* compiled from: AbstractChannel.kt */
-/* renamed from: s.a.c2.t, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: s.a.c2.t, reason: use source file name */
+/* JADX INFO: compiled from: AbstractChannel.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public class AbstractChannel8<E> extends AbstractChannel7 {
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public final E f27767m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public final CancellableContinuation<Unit> f27768n;
 
     /* JADX WARN: Multi-variable type inference failed */
@@ -28,19 +28,19 @@ public class AbstractChannel8<E> extends AbstractChannel7 {
     }
 
     @Override // p659s.p660a.p663c2.AbstractChannel7
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     public void mo11227q() {
         this.f27768n.mo10907r(CancellableContinuationImpl6.f27874a);
     }
 
     @Override // p659s.p660a.p663c2.AbstractChannel7
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     public E mo11228r() {
         return this.f27767m;
     }
 
     @Override // p659s.p660a.p663c2.AbstractChannel7
-    /* renamed from: s */
+    /* JADX INFO: renamed from: s */
     public void mo11229s(AbstractChannel4<?> abstractChannel4) {
         CancellableContinuation<Unit> cancellableContinuation = this.f27768n;
         Throwable thM11234w = abstractChannel4.m11234w();
@@ -49,7 +49,7 @@ public class AbstractChannel8<E> extends AbstractChannel7 {
     }
 
     @Override // p659s.p660a.p663c2.AbstractChannel7
-    /* renamed from: t */
+    /* JADX INFO: renamed from: t */
     public Symbol3 mo11230t(LockFreeLinkedList3.b bVar) {
         if (this.f27768n.mo10901c(Unit.f27425a, null) != null) {
             return CancellableContinuationImpl6.f27874a;

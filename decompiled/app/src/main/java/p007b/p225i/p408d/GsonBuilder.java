@@ -17,42 +17,42 @@ import java.util.List;
 import java.util.Map;
 import p007b.p225i.p226a.p288f.p299e.p308o.C3404f;
 
-/* compiled from: GsonBuilder.java */
-/* renamed from: b.i.d.e, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.d.e, reason: use source file name */
+/* JADX INFO: compiled from: GsonBuilder.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class GsonBuilder {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public Excluder f13095a = Excluder.f21483j;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public LongSerializationPolicy f13096b = LongSerializationPolicy.f13108j;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public FieldNamingStrategy f13097c = FieldNamingPolicy.f13088j;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final Map<Type, InstanceCreator<?>> f13098d = new HashMap();
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final List<TypeAdapterFactory2> f13099e = new ArrayList();
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final List<TypeAdapterFactory2> f13100f = new ArrayList();
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public boolean f13101g = false;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public int f13102h = 2;
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public int f13103i = 2;
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public boolean f13104j = true;
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public Gson m6851a() {
         ArrayList arrayList = new ArrayList(this.f13100f.size() + this.f13099e.size() + 3);
         arrayList.addAll(this.f13099e);
@@ -74,7 +74,7 @@ public final class GsonBuilder {
         return new Gson(this.f13095a, this.f13097c, this.f13098d, this.f13101g, false, false, this.f13104j, false, false, false, this.f13096b, null, this.f13102h, this.f13103i, this.f13099e, this.f13100f, arrayList);
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public GsonBuilder m6852b(Type type, Object obj) {
         boolean z2 = obj instanceof JsonSerializer2;
         C3404f.m4355w(z2 || (obj instanceof JsonDeserializer2) || (obj instanceof InstanceCreator) || (obj instanceof TypeAdapter));

@@ -14,21 +14,21 @@ import p600f0.CipherSuite;
 import p600f0.ConnectionSpec;
 import p600f0.p601e0.Util7;
 
-/* compiled from: ConnectionSpecSelector.kt */
-/* renamed from: f0.e0.g.b, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: f0.e0.g.b, reason: use source file name */
+/* JADX INFO: compiled from: ConnectionSpecSelector.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class ConnectionSpecSelector {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public int f25433a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public boolean f25434b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public boolean f25435c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final List<ConnectionSpec> f25436d;
 
     public ConnectionSpecSelector(List<ConnectionSpec> list) {
@@ -36,7 +36,7 @@ public final class ConnectionSpecSelector {
         this.f25436d = list;
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final ConnectionSpec m10166a(SSLSocket sSLSocket) throws IOException, CloneNotSupportedException {
         ConnectionSpec connectionSpec;
         boolean z2;

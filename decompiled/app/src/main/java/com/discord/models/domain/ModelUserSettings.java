@@ -14,7 +14,7 @@ import p007b.p008a.p033m.p034a.C1130a;
 import p007b.p008a.p033m.p034a.C1137d0;
 import p007b.p100d.p104b.p105a.outline;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class ModelUserSettings implements Model {
     public static final int EXPLICIT_CONTENT_FILTER_DISABLED = 0;
     public static final int EXPLICIT_CONTENT_FILTER_FRIENDS_AND_NON_FRIENDS = 2;

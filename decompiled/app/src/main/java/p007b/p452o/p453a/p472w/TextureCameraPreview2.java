@@ -17,19 +17,19 @@ import p007b.p452o.p453a.CameraLogger;
 import p007b.p452o.p453a.p472w.CameraPreview;
 import p007b.p452o.p453a.p473x.AspectRatio2;
 
-/* compiled from: TextureCameraPreview.java */
-/* renamed from: b.o.a.w.j, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.o.a.w.j, reason: use source file name */
+/* JADX INFO: compiled from: TextureCameraPreview.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class TextureCameraPreview2 extends CameraPreview<TextureView, SurfaceTexture> {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public View f14242j;
 
-    /* compiled from: TextureCameraPreview.java */
-    /* renamed from: b.o.a.w.j$a */
+    /* JADX INFO: renamed from: b.o.a.w.j$a */
+    /* JADX INFO: compiled from: TextureCameraPreview.java */
     public class a implements Runnable {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public final /* synthetic */ CameraPreview.b f14243j;
 
         public a(CameraPreview.b bVar) {
@@ -73,14 +73,14 @@ public class TextureCameraPreview2 extends CameraPreview<TextureView, SurfaceTex
         }
     }
 
-    /* compiled from: TextureCameraPreview.java */
-    /* renamed from: b.o.a.w.j$b */
+    /* JADX INFO: renamed from: b.o.a.w.j$b */
+    /* JADX INFO: compiled from: TextureCameraPreview.java */
     public class b implements Runnable {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public final /* synthetic */ int f14245j;
 
-        /* renamed from: k */
+        /* JADX INFO: renamed from: k */
         public final /* synthetic */ TaskCompletionSource f14246k;
 
         public b(int i, TaskCompletionSource taskCompletionSource) {
@@ -111,35 +111,35 @@ public class TextureCameraPreview2 extends CameraPreview<TextureView, SurfaceTex
     }
 
     @Override // p007b.p452o.p453a.p472w.CameraPreview
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public void mo7425e(@Nullable CameraPreview.b bVar) {
         ((TextureView) this.f14208c).post(new a(null));
     }
 
     @Override // p007b.p452o.p453a.p472w.CameraPreview
     @NonNull
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public SurfaceTexture mo7429i() {
         return ((TextureView) this.f14208c).getSurfaceTexture();
     }
 
     @Override // p007b.p452o.p453a.p472w.CameraPreview
     @NonNull
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public Class<SurfaceTexture> mo7430j() {
         return SurfaceTexture.class;
     }
 
     @Override // p007b.p452o.p453a.p472w.CameraPreview
     @NonNull
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public View mo7431k() {
         return this.f14242j;
     }
 
     @Override // p007b.p452o.p453a.p472w.CameraPreview
     @NonNull
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public View mo7434n(@NonNull Context context, @NonNull ViewGroup viewGroup) {
         View viewInflate = LayoutInflater.from(context).inflate(C11196R.b.cameraview_texture_view, viewGroup, false);
         viewGroup.addView(viewInflate, 0);
@@ -150,7 +150,7 @@ public class TextureCameraPreview2 extends CameraPreview<TextureView, SurfaceTex
     }
 
     @Override // p007b.p452o.p453a.p472w.CameraPreview
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     public void mo7438r(int i) {
         this.f14214i = i;
         TaskCompletionSource taskCompletionSource = new TaskCompletionSource();
@@ -162,7 +162,7 @@ public class TextureCameraPreview2 extends CameraPreview<TextureView, SurfaceTex
     }
 
     @Override // p007b.p452o.p453a.p472w.CameraPreview
-    /* renamed from: u */
+    /* JADX INFO: renamed from: u */
     public boolean mo7441u() {
         return true;
     }

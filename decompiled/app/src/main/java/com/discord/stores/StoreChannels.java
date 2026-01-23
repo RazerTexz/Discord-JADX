@@ -47,8 +47,8 @@ import p637j0.p641k.Func1;
 import p637j0.p642l.p647e.ScalarSynchronousObservable;
 import p658rx.Observable;
 
-/* compiled from: StoreChannels.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: StoreChannels.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class StoreChannels extends StoreV2 {
     private static final StoreChannels2 InitializedUpdateSource = new StoreChannels2();
     public static final long PRIVATE_CHANNELS_ID = 0;
@@ -71,8 +71,8 @@ public final class StoreChannels extends StoreV2 {
     private final Map<Long, Channel> threadsById;
     private Map<Long, Channel> threadsByIdSnapshot;
 
-    /* compiled from: StoreChannels.kt */
-    /* renamed from: com.discord.stores.StoreChannels$handleGuildRemove$2 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreChannels$handleGuildRemove$2 */
+    /* JADX INFO: compiled from: StoreChannels.kt */
     public static final class C58162 extends Lambda implements Function1<Channel, Boolean> {
         public final /* synthetic */ Guild $guild;
 
@@ -87,15 +87,15 @@ public final class StoreChannels extends StoreV2 {
             return Boolean.valueOf(invoke2(channel));
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final boolean invoke2(Channel channel) {
             Intrinsics3.checkNotNullParameter(channel, "thread");
             return channel.getGuildId() == this.$guild.getId();
         }
     }
 
-    /* compiled from: StoreChannels.kt */
-    /* renamed from: com.discord.stores.StoreChannels$observeAllChannels$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreChannels$observeAllChannels$1 */
+    /* JADX INFO: compiled from: StoreChannels.kt */
     public static final class C58171 extends Lambda implements Function0<Map<Long, ? extends Channel>> {
         public C58171() {
             super(0);
@@ -107,14 +107,14 @@ public final class StoreChannels extends StoreV2 {
         }
 
         @Override // kotlin.jvm.functions.Function0
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final Map<Long, ? extends Channel> invoke2() {
             return Maps6.plus(StoreChannels.access$getChannelsByIdSnapshot$p(StoreChannels.this), StoreChannels.access$getThreadsByIdSnapshot$p(StoreChannels.this));
         }
     }
 
-    /* compiled from: StoreChannels.kt */
-    /* renamed from: com.discord.stores.StoreChannels$observeChannel$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreChannels$observeChannel$1 */
+    /* JADX INFO: compiled from: StoreChannels.kt */
     public static final class C58181 extends Lambda implements Function0<Channel> {
         public final /* synthetic */ long $channelId;
 
@@ -136,8 +136,8 @@ public final class StoreChannels extends StoreV2 {
         }
     }
 
-    /* compiled from: StoreChannels.kt */
-    /* renamed from: com.discord.stores.StoreChannels$observeChannelCategories$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreChannels$observeChannelCategories$1 */
+    /* JADX INFO: compiled from: StoreChannels.kt */
     public static final class C58191<T, R> implements Func1<Map<Long, ? extends Channel>, List<? extends Channel>> {
         public static final C58191 INSTANCE = new C58191();
 
@@ -146,7 +146,7 @@ public final class StoreChannels extends StoreV2 {
             return call2((Map<Long, Channel>) map);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final List<Channel> call2(Map<Long, Channel> map) {
             Collection<Channel> collectionValues = map.values();
             ArrayList arrayList = new ArrayList();
@@ -159,8 +159,8 @@ public final class StoreChannels extends StoreV2 {
         }
     }
 
-    /* compiled from: StoreChannels.kt */
-    /* renamed from: com.discord.stores.StoreChannels$observeChannelsForGuild$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreChannels$observeChannelsForGuild$1 */
+    /* JADX INFO: compiled from: StoreChannels.kt */
     public static final class C58201<T, R> implements Func1<Map<Long, ? extends Channel>, Observable<? extends Map<Long, ? extends Channel>>> {
         public final /* synthetic */ long $guildId;
         public final /* synthetic */ Integer $type;
@@ -176,7 +176,7 @@ public final class StoreChannels extends StoreV2 {
         }
 
         /* JADX WARN: Removed duplicated region for block: B:15:0x0043  */
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         /*
             Code decompiled incorrectly, please refer to instructions dump.
         */
@@ -205,8 +205,8 @@ public final class StoreChannels extends StoreV2 {
         }
     }
 
-    /* compiled from: StoreChannels.kt */
-    /* renamed from: com.discord.stores.StoreChannels$observeDMs$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreChannels$observeDMs$1 */
+    /* JADX INFO: compiled from: StoreChannels.kt */
     public static final class C58211<T, R> implements Func1<Map<Long, ? extends Channel>, List<? extends Channel>> {
         public static final C58211 INSTANCE = new C58211();
 
@@ -215,7 +215,7 @@ public final class StoreChannels extends StoreV2 {
             return call2((Map<Long, Channel>) map);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final List<Channel> call2(Map<Long, Channel> map) {
             Collection<Channel> collectionValues = map.values();
             ArrayList arrayList = new ArrayList();
@@ -228,18 +228,18 @@ public final class StoreChannels extends StoreV2 {
         }
     }
 
-    /* compiled from: StoreChannels.kt */
-    /* renamed from: com.discord.stores.StoreChannels$observeDefaultChannel$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreChannels$observeDefaultChannel$1 */
+    /* JADX INFO: compiled from: StoreChannels.kt */
     public static final class C58221<T, R> implements Func1<Map<Long, ? extends Long>, Observable<? extends Channel>> {
         public final /* synthetic */ long $guildId;
 
-        /* compiled from: StoreChannels.kt */
-        /* renamed from: com.discord.stores.StoreChannels$observeDefaultChannel$1$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.stores.StoreChannels$observeDefaultChannel$1$1, reason: invalid class name */
+        /* JADX INFO: compiled from: StoreChannels.kt */
         public static final class AnonymousClass1<T, R> implements Func1<Map<Long, ? extends Channel>, Channel> {
             public final /* synthetic */ Map $guildChannelPermissions;
 
-            /* compiled from: StoreChannels.kt */
-            /* renamed from: com.discord.stores.StoreChannels$observeDefaultChannel$1$1$1, reason: invalid class name and collision with other inner class name */
+            /* JADX INFO: renamed from: com.discord.stores.StoreChannels$observeDefaultChannel$1$1$1, reason: invalid class name and collision with other inner class name */
+            /* JADX INFO: compiled from: StoreChannels.kt */
             public static final class C132521 extends Lambda implements Function1<Channel, Boolean> {
                 public C132521() {
                     super(1);
@@ -250,7 +250,7 @@ public final class StoreChannels extends StoreV2 {
                     return Boolean.valueOf(invoke2(channel));
                 }
 
-                /* renamed from: invoke, reason: avoid collision after fix types in other method */
+                /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
                 public final boolean invoke2(Channel channel) {
                     Intrinsics3.checkNotNullParameter(channel, "channel");
                     return PermissionUtils.can(Permission.VIEW_CHANNEL, (Long) outline.m845d(channel, AnonymousClass1.this.$guildChannelPermissions));
@@ -266,7 +266,7 @@ public final class StoreChannels extends StoreV2 {
                 return call2((Map<Long, Channel>) map);
             }
 
-            /* renamed from: call, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
             public final Channel call2(Map<Long, Channel> map) {
                 return (Channel) _Sequences2.firstOrNull(_Sequences2.sortedWith(_Sequences2.filter(_Collections.asSequence(map.values()), new C132521()), ChannelUtils.m7684h(Channel.INSTANCE)));
             }
@@ -281,14 +281,14 @@ public final class StoreChannels extends StoreV2 {
             return call2((Map<Long, Long>) map);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final Observable<? extends Channel> call2(Map<Long, Long> map) {
             return StoreChannels.this.observeChannelsForGuild(this.$guildId, 0).m11083G(new AnonymousClass1(map));
         }
     }
 
-    /* compiled from: StoreChannels.kt */
-    /* renamed from: com.discord.stores.StoreChannels$observeDirectShareCandidates$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreChannels$observeDirectShareCandidates$1 */
+    /* JADX INFO: compiled from: StoreChannels.kt */
     public static final class C58231<T, R> implements Func1<Map<Long, ? extends Channel>, Boolean> {
         public static final C58231 INSTANCE = new C58231();
 
@@ -297,15 +297,15 @@ public final class StoreChannels extends StoreV2 {
             return call2((Map<Long, Channel>) map);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final Boolean call2(Map<Long, Channel> map) {
             Intrinsics3.checkNotNullExpressionValue(map, "it");
             return Boolean.valueOf(!map.isEmpty());
         }
     }
 
-    /* compiled from: StoreChannels.kt */
-    /* renamed from: com.discord.stores.StoreChannels$observeDirectShareCandidates$2 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreChannels$observeDirectShareCandidates$2 */
+    /* JADX INFO: compiled from: StoreChannels.kt */
     public static final class C58242<T, R> implements Func1<Map<Long, ? extends Channel>, List<? extends Channel>> {
         public final /* synthetic */ Context $context;
 
@@ -318,7 +318,7 @@ public final class StoreChannels extends StoreV2 {
             return call2((Map<Long, Channel>) map);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final List<Channel> call2(Map<Long, Channel> map) {
             Collection sortedKeys$default = FrecencyTracker.getSortedKeys$default(StoreStream.INSTANCE.getChannelsSelected().getFrecency(), 0L, 1, null);
             ArrayList arrayList = new ArrayList();
@@ -339,8 +339,8 @@ public final class StoreChannels extends StoreV2 {
         }
     }
 
-    /* compiled from: StoreChannels.kt */
-    /* renamed from: com.discord.stores.StoreChannels$observeGuildAndPrivateChannels$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreChannels$observeGuildAndPrivateChannels$1 */
+    /* JADX INFO: compiled from: StoreChannels.kt */
     public static final class C58251 extends Lambda implements Function0<Map<Long, ? extends Channel>> {
         public C58251() {
             super(0);
@@ -352,14 +352,14 @@ public final class StoreChannels extends StoreV2 {
         }
 
         @Override // kotlin.jvm.functions.Function0
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final Map<Long, ? extends Channel> invoke2() {
             return StoreChannels.access$getChannelsByIdSnapshot$p(StoreChannels.this);
         }
     }
 
-    /* compiled from: StoreChannels.kt */
-    /* renamed from: com.discord.stores.StoreChannels$observeIds$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreChannels$observeIds$1 */
+    /* JADX INFO: compiled from: StoreChannels.kt */
     public static final class C58261<T, R> implements Func1<Map<Long, ? extends Channel>, Map<Long, ? extends List<? extends Long>>> {
         public static final C58261 INSTANCE = new C58261();
 
@@ -368,7 +368,7 @@ public final class StoreChannels extends StoreV2 {
             return call2((Map<Long, Channel>) map);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final Map<Long, List<Long>> call2(Map<Long, Channel> map) {
             Collection<Channel> collectionValues = map.values();
             LinkedHashMap linkedHashMap = new LinkedHashMap();
@@ -396,8 +396,8 @@ public final class StoreChannels extends StoreV2 {
         }
     }
 
-    /* compiled from: StoreChannels.kt */
-    /* renamed from: com.discord.stores.StoreChannels$observeInitializedForAuthedUser$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreChannels$observeInitializedForAuthedUser$1 */
+    /* JADX INFO: compiled from: StoreChannels.kt */
     public static final class C58271 extends Lambda implements Function0<Boolean> {
         public C58271() {
             super(0);
@@ -408,14 +408,14 @@ public final class StoreChannels extends StoreV2 {
             return Boolean.valueOf(invoke2());
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final boolean invoke2() {
             return StoreChannels.this.getInitializedForAuthedUser();
         }
     }
 
-    /* compiled from: StoreChannels.kt */
-    /* renamed from: com.discord.stores.StoreChannels$observeNames$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreChannels$observeNames$1 */
+    /* JADX INFO: compiled from: StoreChannels.kt */
     public static final class C58281 extends Lambda implements Function0<Map<Long, ? extends String>> {
         public C58281() {
             super(0);
@@ -427,14 +427,14 @@ public final class StoreChannels extends StoreV2 {
         }
 
         @Override // kotlin.jvm.functions.Function0
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final Map<Long, ? extends String> invoke2() {
             return StoreChannels.access$getChannelNamesSnapshot$p(StoreChannels.this);
         }
     }
 
-    /* compiled from: StoreChannels.kt */
-    /* renamed from: com.discord.stores.StoreChannels$observePrivateChannel$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreChannels$observePrivateChannel$1 */
+    /* JADX INFO: compiled from: StoreChannels.kt */
     public static final class C58291<T, R> implements Func1<Map<Long, ? extends Channel>, Channel> {
         public final /* synthetic */ long $channelId;
 
@@ -447,14 +447,14 @@ public final class StoreChannels extends StoreV2 {
             return call2((Map<Long, Channel>) map);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final Channel call2(Map<Long, Channel> map) {
             return map.get(Long.valueOf(this.$channelId));
         }
     }
 
-    /* compiled from: StoreChannels.kt */
-    /* renamed from: com.discord.stores.StoreChannels$observeThreadsFromMessages$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreChannels$observeThreadsFromMessages$1 */
+    /* JADX INFO: compiled from: StoreChannels.kt */
     public static final class C58301 extends Lambda implements Function0<Map<Long, ? extends Channel>> {
         public final /* synthetic */ List $messages;
 
@@ -470,7 +470,7 @@ public final class StoreChannels extends StoreV2 {
         }
 
         @Override // kotlin.jvm.functions.Function0
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final Map<Long, ? extends Channel> invoke2() {
             List list = this.$messages;
             ArrayList arrayList = new ArrayList();
@@ -495,8 +495,8 @@ public final class StoreChannels extends StoreV2 {
         }
     }
 
-    /* compiled from: StoreChannels.kt */
-    /* renamed from: com.discord.stores.StoreChannels$onGroupCreated$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreChannels$onGroupCreated$1 */
+    /* JADX INFO: compiled from: StoreChannels.kt */
     public static final class C58311 extends Lambda implements Function0<Unit> {
         public final /* synthetic */ Channel $channel;
 
@@ -512,7 +512,7 @@ public final class StoreChannels extends StoreV2 {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             StoreChannels.this.handleChannelOrThreadCreateOrUpdate(this.$channel);
         }
@@ -686,7 +686,7 @@ public final class StoreChannels extends StoreV2 {
         return null;
     }
 
-    /* renamed from: getInitializedForAuthedUser$app_productionGoogleRelease, reason: from getter */
+    /* JADX INFO: renamed from: getInitializedForAuthedUser$app_productionGoogleRelease, reason: from getter */
     public final boolean getInitializedForAuthedUser() {
         return this.initializedForAuthedUser;
     }

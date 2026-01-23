@@ -14,23 +14,23 @@ import org.objectweb.asm.Opcodes;
 import p007b.p452o.p453a.CameraLogger;
 import p007b.p452o.p453a.p473x.Size3;
 
-/* compiled from: CamcorderProfiles.java */
-/* renamed from: b.o.a.r.a, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.o.a.r.a, reason: use source file name */
+/* JADX INFO: compiled from: CamcorderProfiles.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class CamcorderProfiles {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final CameraLogger f14100a = new CameraLogger(CamcorderProfiles.class.getSimpleName());
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     @SuppressLint({"UseSparseArrays"})
     public static Map<Size3, Integer> f14101b;
 
-    /* compiled from: CamcorderProfiles.java */
-    /* renamed from: b.o.a.r.a$a */
+    /* JADX INFO: renamed from: b.o.a.r.a$a */
+    /* JADX INFO: compiled from: CamcorderProfiles.java */
     public class a implements Comparator<Size3> {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public final /* synthetic */ long f14102j;
 
         public a(long j) {
@@ -41,8 +41,8 @@ public class CamcorderProfiles {
         public int compare(Size3 size3, Size3 size32) {
             Size3 size33 = size3;
             Size3 size34 = size32;
-            long jAbs = Math.abs((size33.f14251j * size33.f14252k) - this.f14102j);
-            long jAbs2 = Math.abs((size34.f14251j * size34.f14252k) - this.f14102j);
+            long jAbs = Math.abs(((long) (size33.f14251j * size33.f14252k)) - this.f14102j);
+            long jAbs2 = Math.abs(((long) (size34.f14251j * size34.f14252k)) - this.f14102j);
             if (jAbs < jAbs2) {
                 return -1;
             }
@@ -63,9 +63,9 @@ public class CamcorderProfiles {
     }
 
     @NonNull
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static CamcorderProfile m7397a(int i, @NonNull Size3 size3) {
-        long j = size3.f14251j * size3.f14252k;
+        long j = ((long) size3.f14251j) * ((long) size3.f14252k);
         ArrayList arrayList = new ArrayList(f14101b.keySet());
         Collections.sort(arrayList, new a(j));
         while (arrayList.size() > 0) {
@@ -78,7 +78,7 @@ public class CamcorderProfiles {
     }
 
     @NonNull
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static CamcorderProfile m7398b(@NonNull String str, @NonNull Size3 size3) {
         try {
             return m7397a(Integer.parseInt(str), size3);

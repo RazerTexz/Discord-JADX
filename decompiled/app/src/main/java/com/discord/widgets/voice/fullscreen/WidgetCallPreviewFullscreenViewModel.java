@@ -44,11 +44,11 @@ import p507d0.p592z.p594d.Lambda;
 import p658rx.Observable;
 import p658rx.subjects.PublishSubject;
 
-/* compiled from: WidgetCallPreviewFullscreenViewModel.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: WidgetCallPreviewFullscreenViewModel.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class WidgetCallPreviewFullscreenViewModel extends AppViewModel<ViewState> {
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private final PublishSubject<Event> eventSubject;
     private Set<String> fetchedPreviews;
@@ -65,8 +65,8 @@ public final class WidgetCallPreviewFullscreenViewModel extends AppViewModel<Vie
     private final StoreVoiceChannelSelected storeVoiceChannelSelected;
     private long voiceChannelId;
 
-    /* compiled from: WidgetCallPreviewFullscreenViewModel.kt */
-    /* renamed from: com.discord.widgets.voice.fullscreen.WidgetCallPreviewFullscreenViewModel$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.voice.fullscreen.WidgetCallPreviewFullscreenViewModel$1 */
+    /* JADX INFO: compiled from: WidgetCallPreviewFullscreenViewModel.kt */
     public static final class C105451 extends Lambda implements Function1<StoreState, Unit> {
         public C105451() {
             super(1);
@@ -78,7 +78,7 @@ public final class WidgetCallPreviewFullscreenViewModel extends AppViewModel<Vie
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(StoreState storeState) {
             WidgetCallPreviewFullscreenViewModel widgetCallPreviewFullscreenViewModel = WidgetCallPreviewFullscreenViewModel.this;
             Intrinsics3.checkNotNullExpressionValue(storeState, "it");
@@ -86,7 +86,7 @@ public final class WidgetCallPreviewFullscreenViewModel extends AppViewModel<Vie
         }
     }
 
-    /* compiled from: WidgetCallPreviewFullscreenViewModel.kt */
+    /* JADX INFO: compiled from: WidgetCallPreviewFullscreenViewModel.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -106,10 +106,10 @@ public final class WidgetCallPreviewFullscreenViewModel extends AppViewModel<Vie
         }
     }
 
-    /* compiled from: WidgetCallPreviewFullscreenViewModel.kt */
+    /* JADX INFO: compiled from: WidgetCallPreviewFullscreenViewModel.kt */
     public static abstract class Event {
 
-        /* compiled from: WidgetCallPreviewFullscreenViewModel.kt */
+        /* JADX INFO: compiled from: WidgetCallPreviewFullscreenViewModel.kt */
         public static final /* data */ class LaunchVideoCall extends Event {
             private final String autoTargetStreamKey;
             private final long channelId;
@@ -130,12 +130,12 @@ public final class WidgetCallPreviewFullscreenViewModel extends AppViewModel<Vie
                 return launchVideoCall.copy(j, str);
             }
 
-            /* renamed from: component1, reason: from getter */
+            /* JADX INFO: renamed from: component1, reason: from getter */
             public final long getChannelId() {
                 return this.channelId;
             }
 
-            /* renamed from: component2, reason: from getter */
+            /* JADX INFO: renamed from: component2, reason: from getter */
             public final String getAutoTargetStreamKey() {
                 return this.autoTargetStreamKey;
             }
@@ -177,7 +177,7 @@ public final class WidgetCallPreviewFullscreenViewModel extends AppViewModel<Vie
             }
         }
 
-        /* compiled from: WidgetCallPreviewFullscreenViewModel.kt */
+        /* JADX INFO: compiled from: WidgetCallPreviewFullscreenViewModel.kt */
         public static final class ShowGuildVideoAtCapacityDialog extends Event {
             public static final ShowGuildVideoAtCapacityDialog INSTANCE = new ShowGuildVideoAtCapacityDialog();
 
@@ -186,7 +186,7 @@ public final class WidgetCallPreviewFullscreenViewModel extends AppViewModel<Vie
             }
         }
 
-        /* compiled from: WidgetCallPreviewFullscreenViewModel.kt */
+        /* JADX INFO: compiled from: WidgetCallPreviewFullscreenViewModel.kt */
         public static final class ShowOverlayNux extends Event {
             public static final ShowOverlayNux INSTANCE = new ShowOverlayNux();
 
@@ -203,10 +203,10 @@ public final class WidgetCallPreviewFullscreenViewModel extends AppViewModel<Vie
         }
     }
 
-    /* compiled from: WidgetCallPreviewFullscreenViewModel.kt */
+    /* JADX INFO: compiled from: WidgetCallPreviewFullscreenViewModel.kt */
     public static abstract class ParticipantsList {
 
-        /* compiled from: WidgetCallPreviewFullscreenViewModel.kt */
+        /* JADX INFO: compiled from: WidgetCallPreviewFullscreenViewModel.kt */
         public static final /* data */ class Empty extends ParticipantsList {
             private final List<CallParticipantsAdapter.ListItem> items;
 
@@ -259,7 +259,7 @@ public final class WidgetCallPreviewFullscreenViewModel extends AppViewModel<Vie
             }
         }
 
-        /* compiled from: WidgetCallPreviewFullscreenViewModel.kt */
+        /* JADX INFO: compiled from: WidgetCallPreviewFullscreenViewModel.kt */
         public static final /* data */ class ListItems extends ParticipantsList {
             private final List<CallParticipantsAdapter.ListItem> items;
 
@@ -320,10 +320,10 @@ public final class WidgetCallPreviewFullscreenViewModel extends AppViewModel<Vie
         }
     }
 
-    /* compiled from: WidgetCallPreviewFullscreenViewModel.kt */
+    /* JADX INFO: compiled from: WidgetCallPreviewFullscreenViewModel.kt */
     public static abstract class StoreState {
 
-        /* compiled from: WidgetCallPreviewFullscreenViewModel.kt */
+        /* JADX INFO: compiled from: WidgetCallPreviewFullscreenViewModel.kt */
         public static final class Invalid extends StoreState {
             public static final Invalid INSTANCE = new Invalid();
 
@@ -332,7 +332,7 @@ public final class WidgetCallPreviewFullscreenViewModel extends AppViewModel<Vie
             }
         }
 
-        /* compiled from: WidgetCallPreviewFullscreenViewModel.kt */
+        /* JADX INFO: compiled from: WidgetCallPreviewFullscreenViewModel.kt */
         public static final /* data */ class Valid extends StoreState {
             private final CallModel callModel;
             private final int channelMentionsCount;
@@ -367,52 +367,52 @@ public final class WidgetCallPreviewFullscreenViewModel extends AppViewModel<Vie
                 return valid.copy((i3 & 1) != 0 ? valid.voiceChannel : channel, (i3 & 2) != 0 ? valid.selectedTextChannel : channel2, (i3 & 4) != 0 ? valid.isTextInVoiceEnabled : z2, (i3 & 8) != 0 ? valid.totalMentionsCount : i, (i3 & 16) != 0 ? valid.channelMentionsCount : i2, (i3 & 32) != 0 ? valid.isNsfwUnconsented : z3, (i3 & 64) != 0 ? valid.isChannelNsfw : z4, (i3 & 128) != 0 ? valid.nsfwAllowed : nsfwAllowance, (i3 & 256) != 0 ? valid.callModel : callModel, (i3 & 512) != 0 ? valid.selectedVoiceChannel : channel3);
             }
 
-            /* renamed from: component1, reason: from getter */
+            /* JADX INFO: renamed from: component1, reason: from getter */
             public final Channel getVoiceChannel() {
                 return this.voiceChannel;
             }
 
-            /* renamed from: component10, reason: from getter */
+            /* JADX INFO: renamed from: component10, reason: from getter */
             public final Channel getSelectedVoiceChannel() {
                 return this.selectedVoiceChannel;
             }
 
-            /* renamed from: component2, reason: from getter */
+            /* JADX INFO: renamed from: component2, reason: from getter */
             public final Channel getSelectedTextChannel() {
                 return this.selectedTextChannel;
             }
 
-            /* renamed from: component3, reason: from getter */
+            /* JADX INFO: renamed from: component3, reason: from getter */
             public final boolean getIsTextInVoiceEnabled() {
                 return this.isTextInVoiceEnabled;
             }
 
-            /* renamed from: component4, reason: from getter */
+            /* JADX INFO: renamed from: component4, reason: from getter */
             public final int getTotalMentionsCount() {
                 return this.totalMentionsCount;
             }
 
-            /* renamed from: component5, reason: from getter */
+            /* JADX INFO: renamed from: component5, reason: from getter */
             public final int getChannelMentionsCount() {
                 return this.channelMentionsCount;
             }
 
-            /* renamed from: component6, reason: from getter */
+            /* JADX INFO: renamed from: component6, reason: from getter */
             public final boolean getIsNsfwUnconsented() {
                 return this.isNsfwUnconsented;
             }
 
-            /* renamed from: component7, reason: from getter */
+            /* JADX INFO: renamed from: component7, reason: from getter */
             public final boolean getIsChannelNsfw() {
                 return this.isChannelNsfw;
             }
 
-            /* renamed from: component8, reason: from getter */
+            /* JADX INFO: renamed from: component8, reason: from getter */
             public final NsfwAllowance getNsfwAllowed() {
                 return this.nsfwAllowed;
             }
 
-            /* renamed from: component9, reason: from getter */
+            /* JADX INFO: renamed from: component9, reason: from getter */
             public final CallModel getCallModel() {
                 return this.callModel;
             }
@@ -464,27 +464,36 @@ public final class WidgetCallPreviewFullscreenViewModel extends AppViewModel<Vie
             }
 
             /* JADX WARN: Multi-variable type inference failed */
+            /* JADX WARN: Type inference failed for: r2v19 */
+            /* JADX WARN: Type inference failed for: r2v20 */
+            /* JADX WARN: Type inference failed for: r2v22 */
+            /* JADX WARN: Type inference failed for: r2v23 */
+            /* JADX WARN: Type inference failed for: r2v4, types: [int] */
+            /* JADX WARN: Type inference failed for: r2v8, types: [int] */
+            /* JADX WARN: Type inference failed for: r3v0 */
+            /* JADX WARN: Type inference failed for: r3v1, types: [int] */
+            /* JADX WARN: Type inference failed for: r3v2 */
             public int hashCode() {
                 Channel channel = this.voiceChannel;
                 int iHashCode = (channel != null ? channel.hashCode() : 0) * 31;
                 Channel channel2 = this.selectedTextChannel;
                 int iHashCode2 = (iHashCode + (channel2 != null ? channel2.hashCode() : 0)) * 31;
                 boolean z2 = this.isTextInVoiceEnabled;
-                int i = z2;
-                if (z2 != 0) {
-                    i = 1;
+                ?? r2 = z2;
+                if (z2) {
+                    r2 = 1;
                 }
-                int i2 = (((((iHashCode2 + i) * 31) + this.totalMentionsCount) * 31) + this.channelMentionsCount) * 31;
+                int i = (((((iHashCode2 + r2) * 31) + this.totalMentionsCount) * 31) + this.channelMentionsCount) * 31;
                 boolean z3 = this.isNsfwUnconsented;
-                int i3 = z3;
-                if (z3 != 0) {
-                    i3 = 1;
+                ?? r22 = z3;
+                if (z3) {
+                    r22 = 1;
                 }
-                int i4 = (i2 + i3) * 31;
+                int i2 = (i + r22) * 31;
                 boolean z4 = this.isChannelNsfw;
-                int i5 = (i4 + (z4 ? 1 : z4 ? 1 : 0)) * 31;
+                int i3 = (i2 + (z4 ? 1 : z4)) * 31;
                 NsfwAllowance nsfwAllowance = this.nsfwAllowed;
-                int iHashCode3 = (i5 + (nsfwAllowance != null ? nsfwAllowance.hashCode() : 0)) * 31;
+                int iHashCode3 = (i3 + (nsfwAllowance != null ? nsfwAllowance.hashCode() : 0)) * 31;
                 CallModel callModel = this.callModel;
                 int iHashCode4 = (iHashCode3 + (callModel != null ? callModel.hashCode() : 0)) * 31;
                 Channel channel3 = this.selectedVoiceChannel;
@@ -537,7 +546,7 @@ public final class WidgetCallPreviewFullscreenViewModel extends AppViewModel<Vie
         }
     }
 
-    /* compiled from: WidgetCallPreviewFullscreenViewModel.kt */
+    /* JADX INFO: compiled from: WidgetCallPreviewFullscreenViewModel.kt */
     public static final /* data */ class ViewState {
         private final int channelMentionsCount;
         private final boolean isChannelNsfw;
@@ -571,57 +580,57 @@ public final class WidgetCallPreviewFullscreenViewModel extends AppViewModel<Vie
             return viewState.copy((i3 & 1) != 0 ? viewState.voiceChannel : channel, (i3 & 2) != 0 ? viewState.isTextInVoiceChannelSelected : z2, (i3 & 4) != 0 ? viewState.textInVoiceEnabled : z3, (i3 & 8) != 0 ? viewState.titleText : str, (i3 & 16) != 0 ? viewState.otherChannelsMentionsCount : i, (i3 & 32) != 0 ? viewState.channelMentionsCount : i2, (i3 & 64) != 0 ? viewState.isConnectEnabled : z4, (i3 & 128) != 0 ? viewState.participantsList : participantsList, (i3 & 256) != 0 ? viewState.isNsfwUnconsented : z5, (i3 & 512) != 0 ? viewState.isChannelNsfw : z6, (i3 & 1024) != 0 ? viewState.nsfwAllowed : nsfwAllowance);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final Channel getVoiceChannel() {
             return this.voiceChannel;
         }
 
-        /* renamed from: component10, reason: from getter */
+        /* JADX INFO: renamed from: component10, reason: from getter */
         public final boolean getIsChannelNsfw() {
             return this.isChannelNsfw;
         }
 
-        /* renamed from: component11, reason: from getter */
+        /* JADX INFO: renamed from: component11, reason: from getter */
         public final NsfwAllowance getNsfwAllowed() {
             return this.nsfwAllowed;
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final boolean getIsTextInVoiceChannelSelected() {
             return this.isTextInVoiceChannelSelected;
         }
 
-        /* renamed from: component3, reason: from getter */
+        /* JADX INFO: renamed from: component3, reason: from getter */
         public final boolean getTextInVoiceEnabled() {
             return this.textInVoiceEnabled;
         }
 
-        /* renamed from: component4, reason: from getter */
+        /* JADX INFO: renamed from: component4, reason: from getter */
         public final String getTitleText() {
             return this.titleText;
         }
 
-        /* renamed from: component5, reason: from getter */
+        /* JADX INFO: renamed from: component5, reason: from getter */
         public final int getOtherChannelsMentionsCount() {
             return this.otherChannelsMentionsCount;
         }
 
-        /* renamed from: component6, reason: from getter */
+        /* JADX INFO: renamed from: component6, reason: from getter */
         public final int getChannelMentionsCount() {
             return this.channelMentionsCount;
         }
 
-        /* renamed from: component7, reason: from getter */
+        /* JADX INFO: renamed from: component7, reason: from getter */
         public final boolean getIsConnectEnabled() {
             return this.isConnectEnabled;
         }
 
-        /* renamed from: component8, reason: from getter */
+        /* JADX INFO: renamed from: component8, reason: from getter */
         public final ParticipantsList getParticipantsList() {
             return this.participantsList;
         }
 
-        /* renamed from: component9, reason: from getter */
+        /* JADX INFO: renamed from: component9, reason: from getter */
         public final boolean getIsNsfwUnconsented() {
             return this.isNsfwUnconsented;
         }
@@ -672,41 +681,56 @@ public final class WidgetCallPreviewFullscreenViewModel extends AppViewModel<Vie
         }
 
         /* JADX WARN: Multi-variable type inference failed */
+        /* JADX WARN: Type inference failed for: r2v1, types: [int] */
+        /* JADX WARN: Type inference failed for: r2v10, types: [int] */
+        /* JADX WARN: Type inference failed for: r2v15, types: [int] */
+        /* JADX WARN: Type inference failed for: r2v18 */
+        /* JADX WARN: Type inference failed for: r2v20 */
+        /* JADX WARN: Type inference failed for: r2v22 */
+        /* JADX WARN: Type inference failed for: r2v23 */
+        /* JADX WARN: Type inference failed for: r2v24 */
+        /* JADX WARN: Type inference failed for: r2v25 */
+        /* JADX WARN: Type inference failed for: r2v26 */
+        /* JADX WARN: Type inference failed for: r2v27 */
+        /* JADX WARN: Type inference failed for: r2v3, types: [int] */
+        /* JADX WARN: Type inference failed for: r3v0 */
+        /* JADX WARN: Type inference failed for: r3v1, types: [int] */
+        /* JADX WARN: Type inference failed for: r3v2 */
         public int hashCode() {
             Channel channel = this.voiceChannel;
             int iHashCode = (channel != null ? channel.hashCode() : 0) * 31;
             boolean z2 = this.isTextInVoiceChannelSelected;
-            int i = z2;
-            if (z2 != 0) {
-                i = 1;
+            ?? r2 = z2;
+            if (z2) {
+                r2 = 1;
             }
-            int i2 = (iHashCode + i) * 31;
+            int i = (iHashCode + r2) * 31;
             boolean z3 = this.textInVoiceEnabled;
-            int i3 = z3;
-            if (z3 != 0) {
-                i3 = 1;
+            ?? r22 = z3;
+            if (z3) {
+                r22 = 1;
             }
-            int i4 = (i2 + i3) * 31;
+            int i2 = (i + r22) * 31;
             String str = this.titleText;
-            int iHashCode2 = (((((i4 + (str != null ? str.hashCode() : 0)) * 31) + this.otherChannelsMentionsCount) * 31) + this.channelMentionsCount) * 31;
+            int iHashCode2 = (((((i2 + (str != null ? str.hashCode() : 0)) * 31) + this.otherChannelsMentionsCount) * 31) + this.channelMentionsCount) * 31;
             boolean z4 = this.isConnectEnabled;
-            int i5 = z4;
-            if (z4 != 0) {
-                i5 = 1;
+            ?? r23 = z4;
+            if (z4) {
+                r23 = 1;
             }
-            int i6 = (iHashCode2 + i5) * 31;
+            int i3 = (iHashCode2 + r23) * 31;
             ParticipantsList participantsList = this.participantsList;
-            int iHashCode3 = (i6 + (participantsList != null ? participantsList.hashCode() : 0)) * 31;
+            int iHashCode3 = (i3 + (participantsList != null ? participantsList.hashCode() : 0)) * 31;
             boolean z5 = this.isNsfwUnconsented;
-            int i7 = z5;
-            if (z5 != 0) {
-                i7 = 1;
+            ?? r24 = z5;
+            if (z5) {
+                r24 = 1;
             }
-            int i8 = (iHashCode3 + i7) * 31;
+            int i4 = (iHashCode3 + r24) * 31;
             boolean z6 = this.isChannelNsfw;
-            int i9 = (i8 + (z6 ? 1 : z6 ? 1 : 0)) * 31;
+            int i5 = (i4 + (z6 ? 1 : z6)) * 31;
             NsfwAllowance nsfwAllowance = this.nsfwAllowed;
-            return i9 + (nsfwAllowance != null ? nsfwAllowance.hashCode() : 0);
+            return i5 + (nsfwAllowance != null ? nsfwAllowance.hashCode() : 0);
         }
 
         public final boolean isChannelNsfw() {

@@ -47,217 +47,217 @@ import p007b.p225i.p226a.p242c.p256d3.TimeBar;
 import p007b.p225i.p226a.p242c.p259f3.Util2;
 import p007b.p225i.p226a.p242c.p260g3.VideoSize;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public class PlayerControlView extends FrameLayout {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static final /* synthetic */ int f20103j = 0;
 
-    /* renamed from: A */
+    /* JADX INFO: renamed from: A */
     public final Timeline.b f20104A;
 
-    /* renamed from: B */
+    /* JADX INFO: renamed from: B */
     public final Timeline.c f20105B;
 
-    /* renamed from: C */
+    /* JADX INFO: renamed from: C */
     public final Runnable f20106C;
 
-    /* renamed from: D */
+    /* JADX INFO: renamed from: D */
     public final Runnable f20107D;
 
-    /* renamed from: E */
+    /* JADX INFO: renamed from: E */
     public final Drawable f20108E;
 
-    /* renamed from: F */
+    /* JADX INFO: renamed from: F */
     public final Drawable f20109F;
 
-    /* renamed from: G */
+    /* JADX INFO: renamed from: G */
     public final Drawable f20110G;
 
-    /* renamed from: H */
+    /* JADX INFO: renamed from: H */
     public final String f20111H;
 
-    /* renamed from: I */
+    /* JADX INFO: renamed from: I */
     public final String f20112I;
 
-    /* renamed from: J */
+    /* JADX INFO: renamed from: J */
     public final String f20113J;
 
-    /* renamed from: K */
+    /* JADX INFO: renamed from: K */
     public final Drawable f20114K;
 
-    /* renamed from: L */
+    /* JADX INFO: renamed from: L */
     public final Drawable f20115L;
 
-    /* renamed from: M */
+    /* JADX INFO: renamed from: M */
     public final float f20116M;
 
-    /* renamed from: N */
+    /* JADX INFO: renamed from: N */
     public final float f20117N;
 
-    /* renamed from: O */
+    /* JADX INFO: renamed from: O */
     public final String f20118O;
 
-    /* renamed from: P */
+    /* JADX INFO: renamed from: P */
     public final String f20119P;
 
-    /* renamed from: Q */
+    /* JADX INFO: renamed from: Q */
     @Nullable
     public Player2 f20120Q;
 
-    /* renamed from: R */
+    /* JADX INFO: renamed from: R */
     @Nullable
     public InterfaceC10756d f20121R;
 
-    /* renamed from: S */
+    /* JADX INFO: renamed from: S */
     public boolean f20122S;
 
-    /* renamed from: T */
+    /* JADX INFO: renamed from: T */
     public boolean f20123T;
 
-    /* renamed from: U */
+    /* JADX INFO: renamed from: U */
     public boolean f20124U;
 
-    /* renamed from: V */
+    /* JADX INFO: renamed from: V */
     public boolean f20125V;
 
-    /* renamed from: W */
+    /* JADX INFO: renamed from: W */
     public int f20126W;
 
-    /* renamed from: a0 */
+    /* JADX INFO: renamed from: a0 */
     public int f20127a0;
 
-    /* renamed from: b0 */
+    /* JADX INFO: renamed from: b0 */
     public int f20128b0;
 
-    /* renamed from: c0 */
+    /* JADX INFO: renamed from: c0 */
     public boolean f20129c0;
 
-    /* renamed from: d0 */
+    /* JADX INFO: renamed from: d0 */
     public boolean f20130d0;
 
-    /* renamed from: e0 */
+    /* JADX INFO: renamed from: e0 */
     public boolean f20131e0;
 
-    /* renamed from: f0 */
+    /* JADX INFO: renamed from: f0 */
     public boolean f20132f0;
 
-    /* renamed from: g0 */
+    /* JADX INFO: renamed from: g0 */
     public boolean f20133g0;
 
-    /* renamed from: h0 */
+    /* JADX INFO: renamed from: h0 */
     public long f20134h0;
 
-    /* renamed from: i0 */
+    /* JADX INFO: renamed from: i0 */
     public long[] f20135i0;
 
-    /* renamed from: j0 */
+    /* JADX INFO: renamed from: j0 */
     public boolean[] f20136j0;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final ViewOnClickListenerC10755c f20137k;
 
-    /* renamed from: k0 */
+    /* JADX INFO: renamed from: k0 */
     public long[] f20138k0;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final CopyOnWriteArrayList<InterfaceC10757e> f20139l;
 
-    /* renamed from: l0 */
+    /* JADX INFO: renamed from: l0 */
     public boolean[] f20140l0;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     @Nullable
     public final View f20141m;
 
-    /* renamed from: m0 */
+    /* JADX INFO: renamed from: m0 */
     public long f20142m0;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     @Nullable
     public final View f20143n;
 
-    /* renamed from: n0 */
+    /* JADX INFO: renamed from: n0 */
     public long f20144n0;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     @Nullable
     public final View f20145o;
 
-    /* renamed from: o0 */
+    /* JADX INFO: renamed from: o0 */
     public long f20146o0;
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     @Nullable
     public final View f20147p;
 
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     @Nullable
     public final View f20148q;
 
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     @Nullable
     public final View f20149r;
 
-    /* renamed from: s */
+    /* JADX INFO: renamed from: s */
     @Nullable
     public final ImageView f20150s;
 
-    /* renamed from: t */
+    /* JADX INFO: renamed from: t */
     @Nullable
     public final ImageView f20151t;
 
-    /* renamed from: u */
+    /* JADX INFO: renamed from: u */
     @Nullable
     public final View f20152u;
 
-    /* renamed from: v */
+    /* JADX INFO: renamed from: v */
     @Nullable
     public final TextView f20153v;
 
-    /* renamed from: w */
+    /* JADX INFO: renamed from: w */
     @Nullable
     public final TextView f20154w;
 
-    /* renamed from: x */
+    /* JADX INFO: renamed from: x */
     @Nullable
     public final TimeBar f20155x;
 
-    /* renamed from: y */
+    /* JADX INFO: renamed from: y */
     public final StringBuilder f20156y;
 
-    /* renamed from: z */
+    /* JADX INFO: renamed from: z */
     public final Formatter f20157z;
 
+    /* JADX INFO: renamed from: com.google.android.exoplayer2.ui.PlayerControlView$b */
     @RequiresApi(21)
-    /* renamed from: com.google.android.exoplayer2.ui.PlayerControlView$b */
     public static final class C10754b {
         @DoNotInline
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public static boolean m8910a(View view) {
             return view.isAccessibilityFocused();
         }
     }
 
-    /* renamed from: com.google.android.exoplayer2.ui.PlayerControlView$c */
+    /* JADX INFO: renamed from: com.google.android.exoplayer2.ui.PlayerControlView$c */
     public final class ViewOnClickListenerC10755c implements Player2.e, TimeBar.a, View.OnClickListener {
         public ViewOnClickListenerC10755c(C10753a c10753a) {
         }
 
         @Override // p007b.p225i.p226a.p242c.Player2.c
-        /* renamed from: A */
+        /* JADX INFO: renamed from: A */
         public /* synthetic */ void mo235A(MediaMetadata mediaMetadata) {
             Player.m2427i(this, mediaMetadata);
         }
 
         @Override // p007b.p225i.p226a.p242c.Player2.c
-        /* renamed from: D */
+        /* JADX INFO: renamed from: D */
         public /* synthetic */ void mo236D(boolean z2) {
             Player.m2438t(this, z2);
         }
 
         @Override // p007b.p225i.p226a.p242c.Player2.c
-        /* renamed from: E */
+        /* JADX INFO: renamed from: E */
         public void mo237E(Player2 player2, Player2.d dVar) {
             if (dVar.m3829a(4, 5)) {
                 PlayerControlView playerControlView = PlayerControlView.this;
@@ -292,127 +292,127 @@ public class PlayerControlView extends FrameLayout {
         }
 
         @Override // p007b.p225i.p226a.p242c.Player2.e
-        /* renamed from: G */
+        /* JADX INFO: renamed from: G */
         public /* synthetic */ void mo238G(int i, boolean z2) {
             Player.m2422d(this, i, z2);
         }
 
         @Override // p007b.p225i.p226a.p242c.Player2.c
-        /* renamed from: H */
+        /* JADX INFO: renamed from: H */
         public /* synthetic */ void mo239H(boolean z2, int i) {
             Player3.m3883k(this, z2, i);
         }
 
         @Override // p007b.p225i.p226a.p242c.Player2.c
-        /* renamed from: L */
+        /* JADX INFO: renamed from: L */
         public /* synthetic */ void mo240L(int i) {
             Player.m2437s(this, i);
         }
 
         @Override // p007b.p225i.p226a.p242c.Player2.c
-        /* renamed from: M */
+        /* JADX INFO: renamed from: M */
         public /* synthetic */ void mo241M(MediaItem2 mediaItem2, int i) {
             Player.m2426h(this, mediaItem2, i);
         }
 
         @Override // p007b.p225i.p226a.p242c.Player2.c
-        /* renamed from: W */
+        /* JADX INFO: renamed from: W */
         public /* synthetic */ void mo242W(boolean z2, int i) {
             Player.m2429k(this, z2, i);
         }
 
         @Override // p007b.p225i.p226a.p242c.Player2.c
-        /* renamed from: Y */
+        /* JADX INFO: renamed from: Y */
         public /* synthetic */ void mo243Y(TrackGroupArray trackGroupArray, TrackSelectionArray trackSelectionArray) {
             Player3.m3890r(this, trackGroupArray, trackSelectionArray);
         }
 
         @Override // p007b.p225i.p226a.p242c.Player2.c
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public /* synthetic */ void mo244a() {
             Player3.m3887o(this);
         }
 
         @Override // p007b.p225i.p226a.p242c.Player2.e
-        /* renamed from: a0 */
+        /* JADX INFO: renamed from: a0 */
         public /* synthetic */ void mo245a0(int i, int i2) {
             Player.m2440v(this, i, i2);
         }
 
         @Override // p007b.p225i.p226a.p242c.Player2.e
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public /* synthetic */ void mo246b(Metadata metadata) {
             Player.m2428j(this, metadata);
         }
 
         @Override // p007b.p225i.p226a.p242c.Player2.c
-        /* renamed from: b0 */
+        /* JADX INFO: renamed from: b0 */
         public /* synthetic */ void mo247b0(PlaybackParameters playbackParameters) {
             Player.m2430l(this, playbackParameters);
         }
 
         @Override // p007b.p225i.p226a.p242c.Player2.e
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public /* synthetic */ void mo248c() {
             Player.m2436r(this);
         }
 
         @Override // p007b.p225i.p226a.p242c.Player2.e
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         public /* synthetic */ void mo249d(boolean z2) {
             Player.m2439u(this, z2);
         }
 
         @Override // p007b.p225i.p226a.p242c.Player2.e
-        /* renamed from: e */
+        /* JADX INFO: renamed from: e */
         public /* synthetic */ void mo250e(List list) {
             Player.m2420b(this, list);
         }
 
         @Override // p007b.p225i.p226a.p242c.Player2.e
-        /* renamed from: f */
+        /* JADX INFO: renamed from: f */
         public /* synthetic */ void mo251f(VideoSize videoSize) {
             Player.m2443y(this, videoSize);
         }
 
         @Override // p007b.p225i.p226a.p242c.Player2.c
-        /* renamed from: f0 */
+        /* JADX INFO: renamed from: f0 */
         public /* synthetic */ void mo252f0(PlaybackException playbackException) {
             Player.m2434p(this, playbackException);
         }
 
         @Override // p007b.p225i.p226a.p242c.Player2.c
-        /* renamed from: g */
+        /* JADX INFO: renamed from: g */
         public /* synthetic */ void mo253g(Player2.f fVar, Player2.f fVar2, int i) {
             Player.m2435q(this, fVar, fVar2, i);
         }
 
         @Override // p007b.p225i.p226a.p242c.Player2.c
-        /* renamed from: h */
+        /* JADX INFO: renamed from: h */
         public /* synthetic */ void mo254h(int i) {
             Player.m2432n(this, i);
         }
 
         @Override // p007b.p225i.p226a.p242c.Player2.c
-        /* renamed from: i */
+        /* JADX INFO: renamed from: i */
         public /* synthetic */ void mo255i(boolean z2) {
             Player3.m3876d(this, z2);
         }
 
         @Override // p007b.p225i.p226a.p242c.Player2.c
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public /* synthetic */ void mo256j(int i) {
             Player3.m3884l(this, i);
         }
 
         @Override // p007b.p225i.p226a.p242c.Player2.c
-        /* renamed from: j0 */
+        /* JADX INFO: renamed from: j0 */
         public /* synthetic */ void mo257j0(boolean z2) {
             Player.m2425g(this, z2);
         }
 
         @Override // p007b.p225i.p226a.p242c.p256d3.TimeBar.a
-        /* renamed from: k */
+        /* JADX INFO: renamed from: k */
         public void mo2763k(TimeBar timeBar, long j) {
             PlayerControlView playerControlView = PlayerControlView.this;
             TextView textView = playerControlView.f20154w;
@@ -422,7 +422,7 @@ public class PlayerControlView extends FrameLayout {
         }
 
         @Override // p007b.p225i.p226a.p242c.p256d3.TimeBar.a
-        /* renamed from: l */
+        /* JADX INFO: renamed from: l */
         public void mo2764l(TimeBar timeBar, long j, boolean z2) {
             Player2 player2;
             PlayerControlView playerControlView = PlayerControlView.this;
@@ -455,7 +455,7 @@ public class PlayerControlView extends FrameLayout {
         }
 
         @Override // p007b.p225i.p226a.p242c.p256d3.TimeBar.a
-        /* renamed from: m */
+        /* JADX INFO: renamed from: m */
         public void mo2765m(TimeBar timeBar, long j) {
             PlayerControlView playerControlView = PlayerControlView.this;
             playerControlView.f20125V = true;
@@ -529,63 +529,63 @@ public class PlayerControlView extends FrameLayout {
         }
 
         @Override // p007b.p225i.p226a.p242c.Player2.c
-        /* renamed from: p */
+        /* JADX INFO: renamed from: p */
         public /* synthetic */ void mo258p(TracksInfo tracksInfo) {
             Player.m2442x(this, tracksInfo);
         }
 
         @Override // p007b.p225i.p226a.p242c.Player2.c
-        /* renamed from: r */
+        /* JADX INFO: renamed from: r */
         public /* synthetic */ void mo259r(boolean z2) {
             Player.m2424f(this, z2);
         }
 
         @Override // p007b.p225i.p226a.p242c.Player2.c
-        /* renamed from: s */
+        /* JADX INFO: renamed from: s */
         public /* synthetic */ void mo260s(PlaybackException playbackException) {
             Player.m2433o(this, playbackException);
         }
 
         @Override // p007b.p225i.p226a.p242c.Player2.c
-        /* renamed from: t */
+        /* JADX INFO: renamed from: t */
         public /* synthetic */ void mo261t(Player2.b bVar) {
             Player.m2419a(this, bVar);
         }
 
         @Override // p007b.p225i.p226a.p242c.Player2.c
-        /* renamed from: v */
+        /* JADX INFO: renamed from: v */
         public /* synthetic */ void mo262v(Timeline timeline, int i) {
             Player.m2441w(this, timeline, i);
         }
 
         @Override // p007b.p225i.p226a.p242c.Player2.e
-        /* renamed from: w */
+        /* JADX INFO: renamed from: w */
         public /* synthetic */ void mo263w(float f) {
             Player.m2444z(this, f);
         }
 
         @Override // p007b.p225i.p226a.p242c.Player2.c
-        /* renamed from: y */
+        /* JADX INFO: renamed from: y */
         public /* synthetic */ void mo264y(int i) {
             Player.m2431m(this, i);
         }
 
         @Override // p007b.p225i.p226a.p242c.Player2.e
-        /* renamed from: z */
+        /* JADX INFO: renamed from: z */
         public /* synthetic */ void mo265z(DeviceInfo2 deviceInfo2) {
             Player.m2421c(this, deviceInfo2);
         }
     }
 
-    /* renamed from: com.google.android.exoplayer2.ui.PlayerControlView$d */
+    /* JADX INFO: renamed from: com.google.android.exoplayer2.ui.PlayerControlView$d */
     public interface InterfaceC10756d {
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         void m8911a(long j, long j2);
     }
 
-    /* renamed from: com.google.android.exoplayer2.ui.PlayerControlView$e */
+    /* JADX INFO: renamed from: com.google.android.exoplayer2.ui.PlayerControlView$e */
     public interface InterfaceC10757e {
-        /* renamed from: k */
+        /* JADX INFO: renamed from: k */
         void mo8912k(int i);
     }
 
@@ -597,7 +597,7 @@ public class PlayerControlView extends FrameLayout {
         this(context, attributeSet, 0, attributeSet);
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public boolean m8893a(KeyEvent keyEvent) {
         int keyCode = keyEvent.getKeyCode();
         Player2 player2 = this.f20120Q;
@@ -635,7 +635,7 @@ public class PlayerControlView extends FrameLayout {
         return false;
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final void m8894b(Player2 player2) {
         int iMo2930y = player2.mo2930y();
         if (iMo2930y == 1) {
@@ -646,7 +646,7 @@ public class PlayerControlView extends FrameLayout {
         player2.mo3532e();
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public void m8895c() {
         if (m8897e()) {
             setVisibility(8);
@@ -660,7 +660,7 @@ public class PlayerControlView extends FrameLayout {
         }
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final void m8896d() {
         removeCallbacks(this.f20107D);
         if (this.f20126W <= 0) {
@@ -669,7 +669,7 @@ public class PlayerControlView extends FrameLayout {
         }
         long jUptimeMillis = SystemClock.uptimeMillis();
         int i = this.f20126W;
-        this.f20134h0 = jUptimeMillis + i;
+        this.f20134h0 = jUptimeMillis + ((long) i);
         if (this.f20122S) {
             postDelayed(this.f20107D, i);
         }
@@ -690,12 +690,12 @@ public class PlayerControlView extends FrameLayout {
         return super.dispatchTouchEvent(motionEvent);
     }
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public boolean m8897e() {
         return getVisibility() == 0;
     }
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final void m8898f() {
         View view;
         View view2;
@@ -710,7 +710,7 @@ public class PlayerControlView extends FrameLayout {
         }
     }
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public final void m8899g() {
         View view;
         View view2;
@@ -747,13 +747,13 @@ public class PlayerControlView extends FrameLayout {
         return view != null && view.getVisibility() == 0;
     }
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public final boolean m8900h() {
         Player2 player2 = this.f20120Q;
         return (player2 == null || player2.mo2930y() == 4 || this.f20120Q.mo2930y() == 1 || !this.f20120Q.mo2908j()) ? false : true;
     }
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public void m8901i() {
         if (!m8897e()) {
             setVisibility(0);
@@ -768,7 +768,7 @@ public class PlayerControlView extends FrameLayout {
         m8896d();
     }
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final void m8902j() {
         m8905m();
         m8904l();
@@ -777,7 +777,7 @@ public class PlayerControlView extends FrameLayout {
         m8909q();
     }
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final void m8903k(boolean z2, boolean z3, @Nullable View view) {
         if (view == null) {
             return;
@@ -787,7 +787,7 @@ public class PlayerControlView extends FrameLayout {
         view.setVisibility(z2 ? 0 : 8);
     }
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final void m8904l() {
         boolean zMo3518D;
         boolean z2;
@@ -821,7 +821,7 @@ public class PlayerControlView extends FrameLayout {
         }
     }
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public final void m8905m() {
         boolean z2;
         boolean z3;
@@ -857,7 +857,7 @@ public class PlayerControlView extends FrameLayout {
         }
     }
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public final void m8906n() {
         long jMo2891N;
         if (m8897e() && this.f20122S) {
@@ -902,7 +902,7 @@ public class PlayerControlView extends FrameLayout {
         }
     }
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public final void m8907o() {
         ImageView imageView;
         if (m8897e() && this.f20122S && (imageView = this.f20150s) != null) {
@@ -959,7 +959,7 @@ public class PlayerControlView extends FrameLayout {
         removeCallbacks(this.f20107D);
     }
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public final void m8908p() {
         ImageView imageView;
         if (m8897e() && this.f20122S && (imageView = this.f20151t) != null) {
@@ -984,7 +984,7 @@ public class PlayerControlView extends FrameLayout {
     /* JADX WARN: Removed duplicated region for block: B:19:0x003b  */
     /* JADX WARN: Removed duplicated region for block: B:49:0x00bb  */
     /* JADX WARN: Removed duplicated region for block: B:57:0x00f4  */
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */

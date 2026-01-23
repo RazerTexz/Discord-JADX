@@ -11,21 +11,21 @@ import p007b.p085c.p086a.p087a0.AnimatableValueParser;
 import p007b.p225i.p226a.p288f.p299e.C3413r;
 import p007b.p225i.p226a.p288f.p299e.p304k.C3361j;
 
-/* compiled from: com.google.android.gms:play-services-basement@@17.6.0 */
-/* loaded from: classes3.dex */
+/* JADX INFO: compiled from: com.google.android.gms:play-services-basement@@17.6.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public class Feature extends AbstractSafeParcelable {
 
     @RecentlyNonNull
     public static final Parcelable.Creator<Feature> CREATOR = new C3413r();
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final String f20477j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     @Deprecated
     public final int f20478k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final long f20479l;
 
     public Feature(@RecentlyNonNull String str, int i, long j) {
@@ -63,7 +63,7 @@ public class Feature extends AbstractSafeParcelable {
         return c3361j.toString();
     }
 
-    /* renamed from: w0 */
+    /* JADX INFO: renamed from: w0 */
     public long m9021w0() {
         long j = this.f20479l;
         return j == -1 ? this.f20478k : j;

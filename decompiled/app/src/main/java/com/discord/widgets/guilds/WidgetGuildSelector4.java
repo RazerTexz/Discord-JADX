@@ -10,9 +10,9 @@ import kotlin.jvm.functions.Function1;
 import p507d0.p592z.p594d.FunctionReferenceImpl;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: WidgetGuildSelector.kt */
-/* renamed from: com.discord.widgets.guilds.WidgetGuildSelector$binding$2, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.guilds.WidgetGuildSelector$binding$2, reason: use source file name */
+/* JADX INFO: compiled from: WidgetGuildSelector.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final /* synthetic */ class WidgetGuildSelector4 extends FunctionReferenceImpl implements Function1<View, WidgetGuildSelectorBinding> {
     public static final WidgetGuildSelector4 INSTANCE = new WidgetGuildSelector4();
 
@@ -25,7 +25,7 @@ public final /* synthetic */ class WidgetGuildSelector4 extends FunctionReferenc
         return invoke2(view);
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final WidgetGuildSelectorBinding invoke2(View view) {
         Intrinsics3.checkNotNullParameter(view, "p1");
         int i = C5419R.id.guild_actions_overview_header_tv;

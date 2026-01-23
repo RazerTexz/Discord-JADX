@@ -38,8 +38,8 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 import p658rx.Observable;
 
-/* compiled from: StoreStreamRtcConnection.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: StoreStreamRtcConnection.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class StoreStreamRtcConnection extends StoreV2 implements DebugPrintable {
     public static final float MAX_STREAM_VOLUME = 300.0f;
     private static int instanceCounter;
@@ -64,7 +64,7 @@ public final class StoreStreamRtcConnection extends StoreV2 implements DebugPrin
     private float streamVolume;
     private final StoreUser userStore;
 
-    /* compiled from: StoreStreamRtcConnection.kt */
+    /* JADX INFO: compiled from: StoreStreamRtcConnection.kt */
     public static abstract class DefaultListener implements Listener {
         @Override // com.discord.stores.StoreStreamRtcConnection.Listener
         public void onConnected() {
@@ -83,7 +83,7 @@ public final class StoreStreamRtcConnection extends StoreV2 implements DebugPrin
         }
     }
 
-    /* compiled from: StoreStreamRtcConnection.kt */
+    /* JADX INFO: compiled from: StoreStreamRtcConnection.kt */
     public interface Listener {
         void onConnected();
 
@@ -94,7 +94,7 @@ public final class StoreStreamRtcConnection extends StoreV2 implements DebugPrin
         /* synthetic */ void onFirstFrameSent();
     }
 
-    /* compiled from: StoreStreamRtcConnection.kt */
+    /* JADX INFO: compiled from: StoreStreamRtcConnection.kt */
     public final class RtcConnectionListener extends RtcConnection.AbstractC5616b {
 
         public final /* synthetic */ class WhenMappings {
@@ -170,7 +170,7 @@ public final class StoreStreamRtcConnection extends StoreV2 implements DebugPrin
         }
     }
 
-    /* compiled from: StoreStreamRtcConnection.kt */
+    /* JADX INFO: compiled from: StoreStreamRtcConnection.kt */
     public static final /* data */ class State {
         private final RtcConnection.Quality connectionQuality;
         private final String mediaSessionId;
@@ -201,22 +201,22 @@ public final class StoreStreamRtcConnection extends StoreV2 implements DebugPrin
             return state.copy(state2, quality, str, rtcConnection);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final RtcConnection.State getRtcConnectionState() {
             return this.rtcConnectionState;
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final RtcConnection.Quality getConnectionQuality() {
             return this.connectionQuality;
         }
 
-        /* renamed from: component3, reason: from getter */
+        /* JADX INFO: renamed from: component3, reason: from getter */
         public final String getMediaSessionId() {
             return this.mediaSessionId;
         }
 
-        /* renamed from: component4, reason: from getter */
+        /* JADX INFO: renamed from: component4, reason: from getter */
         public final RtcConnection getRtcConnection() {
             return this.rtcConnection;
         }
@@ -278,8 +278,8 @@ public final class StoreStreamRtcConnection extends StoreV2 implements DebugPrin
         }
     }
 
-    /* compiled from: StoreStreamRtcConnection.kt */
-    /* renamed from: com.discord.stores.StoreStreamRtcConnection$createRtcConnection$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreStreamRtcConnection$createRtcConnection$1 */
+    /* JADX INFO: compiled from: StoreStreamRtcConnection.kt */
     public static final class C65191 extends Lambda implements Function1<Listener, Unit> {
         public static final C65191 INSTANCE = new C65191();
 
@@ -293,15 +293,15 @@ public final class StoreStreamRtcConnection extends StoreV2 implements DebugPrin
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Listener listener) {
             Intrinsics3.checkNotNullParameter(listener, "it");
             listener.onConnecting();
         }
     }
 
-    /* compiled from: StoreStreamRtcConnection.kt */
-    /* renamed from: com.discord.stores.StoreStreamRtcConnection$observeConnectionQuality$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreStreamRtcConnection$observeConnectionQuality$1 */
+    /* JADX INFO: compiled from: StoreStreamRtcConnection.kt */
     public static final class C65201 extends Lambda implements Function0<RtcConnection.Quality> {
         public C65201() {
             super(0);
@@ -319,8 +319,8 @@ public final class StoreStreamRtcConnection extends StoreV2 implements DebugPrin
         }
     }
 
-    /* compiled from: StoreStreamRtcConnection.kt */
-    /* renamed from: com.discord.stores.StoreStreamRtcConnection$observeRtcConnection$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreStreamRtcConnection$observeRtcConnection$1 */
+    /* JADX INFO: compiled from: StoreStreamRtcConnection.kt */
     public static final class C65211 extends Lambda implements Function0<RtcConnection> {
         public C65211() {
             super(0);
@@ -338,8 +338,8 @@ public final class StoreStreamRtcConnection extends StoreV2 implements DebugPrin
         }
     }
 
-    /* compiled from: StoreStreamRtcConnection.kt */
-    /* renamed from: com.discord.stores.StoreStreamRtcConnection$observeStreamVolume$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreStreamRtcConnection$observeStreamVolume$1 */
+    /* JADX INFO: compiled from: StoreStreamRtcConnection.kt */
     public static final class C65221 extends Lambda implements Function0<Float> {
         public C65221() {
             super(0);
@@ -350,14 +350,14 @@ public final class StoreStreamRtcConnection extends StoreV2 implements DebugPrin
             return Float.valueOf(invoke2());
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final float invoke2() {
             return StoreStreamRtcConnection.this.getStreamVolume();
         }
     }
 
-    /* compiled from: StoreStreamRtcConnection.kt */
-    /* renamed from: com.discord.stores.StoreStreamRtcConnection$updateStreamVolume$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreStreamRtcConnection$updateStreamVolume$1 */
+    /* JADX INFO: compiled from: StoreStreamRtcConnection.kt */
     public static final class C65231 extends Lambda implements Function0<Unit> {
         public final /* synthetic */ float $volume;
 
@@ -373,7 +373,7 @@ public final class StoreStreamRtcConnection extends StoreV2 implements DebugPrin
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             StoreStreamRtcConnection.access$setStreamVolume$p(StoreStreamRtcConnection.this, this.$volume);
             Long lAccess$getStreamOwner$p = StoreStreamRtcConnection.access$getStreamOwner$p(StoreStreamRtcConnection.this);

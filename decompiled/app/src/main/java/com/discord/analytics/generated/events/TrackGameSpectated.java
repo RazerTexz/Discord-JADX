@@ -6,8 +6,8 @@ import com.discord.api.science.AnalyticsSchema;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: TrackGameSpectated.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: TrackGameSpectated.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class TrackGameSpectated implements AnalyticsSchema, TrackBase2 {
     private TrackBase trackBase;
     private final CharSequence source = null;
@@ -16,7 +16,7 @@ public final /* data */ class TrackGameSpectated implements AnalyticsSchema, Tra
     private final transient String analyticsSchemaTypeName = "game_spectated";
 
     @Override // com.discord.api.science.AnalyticsSchema
-    /* renamed from: d, reason: from getter */
+    /* JADX INFO: renamed from: d, reason: from getter */
     public String getAnalyticsSchemaTypeName() {
         return this.analyticsSchemaTypeName;
     }

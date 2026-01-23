@@ -33,25 +33,25 @@ import p507d0.p592z.p594d.FunctionReference;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Reflection2;
 
-/* compiled from: AnnotationTypeQualifierResolver.kt */
-/* renamed from: d0.e0.p.d.m0.e.a.c, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.e.a.c, reason: use source file name */
+/* JADX INFO: compiled from: AnnotationTypeQualifierResolver.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class AnnotationTypeQualifierResolver {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final JavaTypeEnhancementState f23187a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final storage4<ClassDescriptor, AnnotationDescriptor> f23188b;
 
-    /* compiled from: AnnotationTypeQualifierResolver.kt */
-    /* renamed from: d0.e0.p.d.m0.e.a.c$a */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.e.a.c$a */
+    /* JADX INFO: compiled from: AnnotationTypeQualifierResolver.kt */
     public static final class a {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final AnnotationDescriptor f23189a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final int f23190b;
 
         public a(AnnotationDescriptor annotationDescriptor, int i) {
@@ -83,8 +83,8 @@ public final class AnnotationTypeQualifierResolver {
         }
     }
 
-    /* compiled from: AnnotationTypeQualifierResolver.kt */
-    /* renamed from: d0.e0.p.d.m0.e.a.c$b */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.e.a.c$b */
+    /* JADX INFO: compiled from: AnnotationTypeQualifierResolver.kt */
     public /* synthetic */ class b extends FunctionReference implements Function1<ClassDescriptor, AnnotationDescriptor> {
         public b(AnnotationTypeQualifierResolver annotationTypeQualifierResolver) {
             super(1, annotationTypeQualifierResolver);
@@ -110,7 +110,7 @@ public final class AnnotationTypeQualifierResolver {
             return invoke2(classDescriptor);
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final AnnotationDescriptor invoke2(ClassDescriptor classDescriptor) {
             Intrinsics3.checkNotNullParameter(classDescriptor, "p0");
             return AnnotationTypeQualifierResolver.access$computeTypeQualifierNickname((AnnotationTypeQualifierResolver) this.receiver, classDescriptor);
@@ -150,7 +150,7 @@ public final class AnnotationTypeQualifierResolver {
         return arrayList;
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final List<AnnotationQualifierApplicabilityType> m9448a(AbstractC11815g<?> abstractC11815g, Function2<? super C11818j, ? super AnnotationQualifierApplicabilityType, Boolean> function2) {
         AnnotationQualifierApplicabilityType annotationQualifierApplicabilityType;
         if (abstractC11815g instanceof C11809b) {

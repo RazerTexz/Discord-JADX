@@ -21,18 +21,18 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 import p658rx.Observable;
 
-/* compiled from: EditProfileBannerSheetViewModel.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: EditProfileBannerSheetViewModel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class EditProfileBannerSheetViewModel extends AppViewModel<ViewState> {
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private final String defaultBannerColorHex;
     private final String initialColorPreviewHex;
     private boolean upsellViewedTracked;
 
-    /* compiled from: EditProfileBannerSheetViewModel.kt */
-    /* renamed from: com.discord.widgets.settings.profile.EditProfileBannerSheetViewModel$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.profile.EditProfileBannerSheetViewModel$1 */
+    /* JADX INFO: compiled from: EditProfileBannerSheetViewModel.kt */
     public static final class C99521 extends Lambda implements Function1<StoreState, Unit> {
         public C99521() {
             super(1);
@@ -44,7 +44,7 @@ public final class EditProfileBannerSheetViewModel extends AppViewModel<ViewStat
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(StoreState storeState) {
             EditProfileBannerSheetViewModel editProfileBannerSheetViewModel = EditProfileBannerSheetViewModel.this;
             Intrinsics3.checkNotNullExpressionValue(storeState, "storeState");
@@ -52,7 +52,7 @@ public final class EditProfileBannerSheetViewModel extends AppViewModel<ViewStat
         }
     }
 
-    /* compiled from: EditProfileBannerSheetViewModel.kt */
+    /* JADX INFO: compiled from: EditProfileBannerSheetViewModel.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -76,7 +76,7 @@ public final class EditProfileBannerSheetViewModel extends AppViewModel<ViewStat
         }
     }
 
-    /* compiled from: EditProfileBannerSheetViewModel.kt */
+    /* JADX INFO: compiled from: EditProfileBannerSheetViewModel.kt */
     public static final /* data */ class StoreState {
         private final User user;
         private final UserProfile userProfile;
@@ -98,12 +98,12 @@ public final class EditProfileBannerSheetViewModel extends AppViewModel<ViewStat
             return storeState.copy(user, userProfile);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final User getUser() {
             return this.user;
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final UserProfile getUserProfile() {
             return this.userProfile;
         }
@@ -150,7 +150,7 @@ public final class EditProfileBannerSheetViewModel extends AppViewModel<ViewStat
         }
     }
 
-    /* compiled from: EditProfileBannerSheetViewModel.kt */
+    /* JADX INFO: compiled from: EditProfileBannerSheetViewModel.kt */
     public static final /* data */ class ViewState {
         private final String bannerColorHex;
         private final boolean showPremiumUpsell;
@@ -171,12 +171,12 @@ public final class EditProfileBannerSheetViewModel extends AppViewModel<ViewStat
             return viewState.copy(str, z2);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final String getBannerColorHex() {
             return this.bannerColorHex;
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final boolean getShowPremiumUpsell() {
             return this.showPremiumUpsell;
         }
@@ -206,15 +206,18 @@ public final class EditProfileBannerSheetViewModel extends AppViewModel<ViewStat
         }
 
         /* JADX WARN: Multi-variable type inference failed */
+        /* JADX WARN: Type inference failed for: r1v1, types: [int] */
+        /* JADX WARN: Type inference failed for: r1v2 */
+        /* JADX WARN: Type inference failed for: r1v3 */
         public int hashCode() {
             String str = this.bannerColorHex;
             int iHashCode = (str != null ? str.hashCode() : 0) * 31;
             boolean z2 = this.showPremiumUpsell;
-            int i = z2;
-            if (z2 != 0) {
-                i = 1;
+            ?? r1 = z2;
+            if (z2) {
+                r1 = 1;
             }
-            return iHashCode + i;
+            return iHashCode + r1;
         }
 
         public String toString() {

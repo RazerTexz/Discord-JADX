@@ -9,39 +9,39 @@ import kotlin.reflect.jvm.internal.impl.protobuf.InvalidProtocolBufferException;
 import org.objectweb.asm.Opcodes;
 import p507d0.p513e0.p514p.p515d.p517m0.p550i.MessageLite;
 
-/* compiled from: CodedInputStream.java */
-/* renamed from: d0.e0.p.d.m0.i.d, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.i.d, reason: use source file name */
+/* JADX INFO: compiled from: CodedInputStream.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class CodedInputStream {
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public int f24110d;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final InputStream f24112f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public int f24113g;
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public int f24116j;
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public int f24115i = Integer.MAX_VALUE;
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final byte[] f24107a = new byte[4096];
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public int f24109c = 0;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public int f24111e = 0;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public int f24114h = 0;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final boolean f24108b = false;
 
     public CodedInputStream(InputStream inputStream) {
@@ -60,7 +60,7 @@ public final class CodedInputStream {
         return new CodedInputStream(inputStream);
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final byte[] m9833a(int i) throws IOException {
         if (i <= 0) {
             if (i == 0) {
@@ -122,19 +122,20 @@ public final class CodedInputStream {
         return bArr3;
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public long m9834b() throws IOException {
         long j = 0;
         for (int i = 0; i < 64; i += 7) {
-            j |= (r3 & 127) << i;
-            if ((readRawByte() & 128) == 0) {
+            byte rawByte = readRawByte();
+            j |= ((long) (rawByte & 127)) << i;
+            if ((rawByte & 128) == 0) {
                 return j;
             }
         }
         throw new InvalidProtocolBufferException("CodedInputStream encountered a malformed varint.");
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final void m9835c() {
         int i = this.f24109c + this.f24110d;
         this.f24109c = i;
@@ -155,14 +156,14 @@ public final class CodedInputStream {
         }
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final void m9836d(int i) throws IOException {
         if (!m9837e(i)) {
             throw InvalidProtocolBufferException.m10897c();
         }
     }
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final boolean m9837e(int i) throws IOException {
         int i2 = this.f24111e;
         int i3 = i2 + i;
@@ -339,7 +340,7 @@ public final class CodedInputStream {
         }
         byte[] bArr = this.f24107a;
         this.f24111e = i + 8;
-        return ((bArr[i + 7] & 255) << 56) | (bArr[i] & 255) | ((bArr[i + 1] & 255) << 8) | ((bArr[i + 2] & 255) << 16) | ((bArr[i + 3] & 255) << 24) | ((bArr[i + 4] & 255) << 32) | ((bArr[i + 5] & 255) << 40) | ((bArr[i + 6] & 255) << 48);
+        return ((((long) bArr[i + 7]) & 255) << 56) | (((long) bArr[i]) & 255) | ((((long) bArr[i + 1]) & 255) << 8) | ((((long) bArr[i + 2]) & 255) << 16) | ((((long) bArr[i + 3]) & 255) << 24) | ((((long) bArr[i + 4]) & 255) << 32) | ((((long) bArr[i + 5]) & 255) << 40) | ((((long) bArr[i + 6]) & 255) << 48);
     }
 
     /* JADX WARN: Code restructure failed: missing block: B:34:0x007a, code lost:
@@ -374,11 +375,13 @@ public final class CodedInputStream {
                         i = (int) (16256 ^ j3);
                     } else {
                         i5 = i7 + 1;
-                        j2 = i8 ^ (bArr[i7] << 21);
+                        int i9 = i8 ^ (bArr[i7] << 21);
+                        j2 = i9;
                         if (j2 >= 0) {
                             i7 = i5 + 1;
-                            i = (int) ((r0 ^ (r1 << 28)) ^ 266354560);
-                            if (bArr[i5] < 0) {
+                            byte b3 = bArr[i5];
+                            i = (int) (((long) (i9 ^ (b3 << 28))) ^ 266354560);
+                            if (b3 < 0) {
                                 i5 = i7 + 1;
                                 if (bArr[i7] < 0) {
                                     i7 = i5 + 1;
@@ -437,35 +440,35 @@ public final class CodedInputStream {
                 long j4 = b2 ^ (bArr[i3] << 7);
                 if (j4 >= 0) {
                     int i5 = i4 + 1;
-                    long j5 = j4 ^ (bArr[i4] << 14);
+                    long j5 = j4 ^ ((long) (bArr[i4] << 14));
                     if (j5 >= 0) {
                         j3 = 16256;
                     } else {
                         i4 = i5 + 1;
-                        j4 = j5 ^ (bArr[i5] << 21);
+                        j4 = j5 ^ ((long) (bArr[i5] << 21));
                         if (j4 < 0) {
                             j2 = -2080896;
                         } else {
                             i5 = i4 + 1;
-                            j5 = j4 ^ (bArr[i4] << 28);
+                            j5 = j4 ^ (((long) bArr[i4]) << 28);
                             if (j5 >= 0) {
                                 j3 = 266354560;
                             } else {
                                 i4 = i5 + 1;
-                                j4 = j5 ^ (bArr[i5] << 35);
+                                j4 = j5 ^ (((long) bArr[i5]) << 35);
                                 if (j4 < 0) {
                                     j2 = -34093383808L;
                                 } else {
                                     i5 = i4 + 1;
-                                    j5 = j4 ^ (bArr[i4] << 42);
+                                    j5 = j4 ^ (((long) bArr[i4]) << 42);
                                     if (j5 >= 0) {
                                         j3 = 4363953127296L;
                                     } else {
                                         i4 = i5 + 1;
-                                        j4 = j5 ^ (bArr[i5] << 49);
+                                        j4 = j5 ^ (((long) bArr[i5]) << 49);
                                         if (j4 >= 0) {
                                             int i6 = i4 + 1;
-                                            long j6 = (j4 ^ (bArr[i4] << 56)) ^ 71499008037633920L;
+                                            long j6 = (j4 ^ (((long) bArr[i4]) << 56)) ^ 71499008037633920L;
                                             i4 = j6 < 0 ? i6 + 1 : i6;
                                             j = j6;
                                             this.f24111e = i4;

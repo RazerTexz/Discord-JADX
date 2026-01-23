@@ -6,15 +6,15 @@ import java.util.Objects;
 import p007b.p100d.p104b.p105a.outline;
 import p007b.p225i.p226a.p228b.Encoding2;
 
-/* compiled from: EncodedPayload.java */
-/* renamed from: b.i.a.b.j.e, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.b.j.e, reason: use source file name */
+/* JADX INFO: compiled from: EncodedPayload.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class EncodedPayload {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final Encoding2 f5276a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final byte[] f5277b;
 
     public EncodedPayload(@NonNull Encoding2 encoding2, @NonNull byte[] bArr) {

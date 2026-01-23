@@ -53,12 +53,12 @@ import p507d0.p580t._Collections;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetAuthRegisterAccountInformation.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetAuthRegisterAccountInformation.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetAuthRegisterAccountInformation extends AppFragment {
     public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetAuthRegisterAccountInformation.class, "binding", "getBinding()Lcom/discord/databinding/WidgetAuthRegisterAccountInformationBinding;", 0)};
 
-    /* renamed from: binding$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
     private final ActivityResultLauncher<Intent> birthdayLauncher;
     private final ActivityResultLauncher<Intent> captchaLauncher;
@@ -67,11 +67,11 @@ public final class WidgetAuthRegisterAccountInformation extends AppFragment {
     private boolean shouldShowAgeGate;
     private boolean shouldValidateInputs;
 
-    /* renamed from: validationManager$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: validationManager$delegate, reason: from kotlin metadata */
     private final Lazy validationManager;
 
-    /* compiled from: WidgetAuthRegisterAccountInformation.kt */
-    /* renamed from: com.discord.widgets.auth.WidgetAuthRegisterAccountInformation$configureUI$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.auth.WidgetAuthRegisterAccountInformation$configureUI$1 */
+    /* JADX INFO: compiled from: WidgetAuthRegisterAccountInformation.kt */
     public static final class C72201 extends Lambda implements Function1<TextView, Unit> {
         public C72201() {
             super(1);
@@ -83,15 +83,15 @@ public final class WidgetAuthRegisterAccountInformation extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(TextView textView) {
             Intrinsics3.checkNotNullParameter(textView, "it");
             WidgetAuthRegisterAccountInformation.register$default(WidgetAuthRegisterAccountInformation.this, null, 1, null);
         }
     }
 
-    /* compiled from: WidgetAuthRegisterAccountInformation.kt */
-    /* renamed from: com.discord.widgets.auth.WidgetAuthRegisterAccountInformation$configureUI$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.auth.WidgetAuthRegisterAccountInformation$configureUI$2 */
+    /* JADX INFO: compiled from: WidgetAuthRegisterAccountInformation.kt */
     public static final class ViewOnClickListenerC72212 implements View.OnClickListener {
         public ViewOnClickListenerC72212() {
         }
@@ -102,8 +102,8 @@ public final class WidgetAuthRegisterAccountInformation extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetAuthRegisterAccountInformation.kt */
-    /* renamed from: com.discord.widgets.auth.WidgetAuthRegisterAccountInformation$onViewBound$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.auth.WidgetAuthRegisterAccountInformation$onViewBound$1 */
+    /* JADX INFO: compiled from: WidgetAuthRegisterAccountInformation.kt */
     public static final class C72221 extends Lambda implements Function1<Editable, Unit> {
         public C72221() {
             super(1);
@@ -115,7 +115,7 @@ public final class WidgetAuthRegisterAccountInformation extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Editable editable) {
             Intrinsics3.checkNotNullParameter(editable, "it");
             RegistrationFlowRepo instance = RegistrationFlowRepo.INSTANCE.getINSTANCE();
@@ -125,8 +125,8 @@ public final class WidgetAuthRegisterAccountInformation extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetAuthRegisterAccountInformation.kt */
-    /* renamed from: com.discord.widgets.auth.WidgetAuthRegisterAccountInformation$onViewBound$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.auth.WidgetAuthRegisterAccountInformation$onViewBound$2 */
+    /* JADX INFO: compiled from: WidgetAuthRegisterAccountInformation.kt */
     public static final class C72232 extends Lambda implements Function1<Editable, Unit> {
         public C72232() {
             super(1);
@@ -138,7 +138,7 @@ public final class WidgetAuthRegisterAccountInformation extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Editable editable) {
             Intrinsics3.checkNotNullParameter(editable, "it");
             RegistrationFlowRepo instance = RegistrationFlowRepo.INSTANCE.getINSTANCE();
@@ -148,8 +148,8 @@ public final class WidgetAuthRegisterAccountInformation extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetAuthRegisterAccountInformation.kt */
-    /* renamed from: com.discord.widgets.auth.WidgetAuthRegisterAccountInformation$register$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.auth.WidgetAuthRegisterAccountInformation$register$1 */
+    /* JADX INFO: compiled from: WidgetAuthRegisterAccountInformation.kt */
     public static final class C72241 extends Lambda implements Function1<RegisterResponse, Unit> {
         public static final C72241 INSTANCE = new C72241();
 
@@ -163,7 +163,7 @@ public final class WidgetAuthRegisterAccountInformation extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(RegisterResponse registerResponse) {
             Intrinsics3.checkNotNullParameter(registerResponse, "it");
             AnalyticsTracker.INSTANCE.registered(true);
@@ -171,8 +171,8 @@ public final class WidgetAuthRegisterAccountInformation extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetAuthRegisterAccountInformation.kt */
-    /* renamed from: com.discord.widgets.auth.WidgetAuthRegisterAccountInformation$register$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.auth.WidgetAuthRegisterAccountInformation$register$2 */
+    /* JADX INFO: compiled from: WidgetAuthRegisterAccountInformation.kt */
     public static final class C72252 extends Lambda implements Function1<Error, Unit> {
         public C72252() {
             super(1);
@@ -184,7 +184,7 @@ public final class WidgetAuthRegisterAccountInformation extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Error error) {
             Intrinsics3.checkNotNullParameter(error, "it");
             AnalyticsTracker.INSTANCE.registered(false);

@@ -10,13 +10,13 @@ import java.util.List;
 import p600f0.Cookie;
 import p600f0.HttpUrl;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public class PersistentCookieJar implements ClearableCookieJar {
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public CookieCache f19665b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public CookiePersistor f19666c;
 
     public PersistentCookieJar(CookieCache cookieCache, CookiePersistor cookiePersistor) {
@@ -26,7 +26,7 @@ public class PersistentCookieJar implements ClearableCookieJar {
     }
 
     @Override // p600f0.CookieJar2
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public synchronized void mo8745a(HttpUrl httpUrl, List<Cookie> list) {
         this.f19665b.addAll(list);
         CookiePersistor cookiePersistor = this.f19666c;
@@ -40,7 +40,7 @@ public class PersistentCookieJar implements ClearableCookieJar {
     }
 
     @Override // p600f0.CookieJar2
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public synchronized List<Cookie> mo8746b(HttpUrl httpUrl) {
         ArrayList arrayList;
         ArrayList arrayList2 = new ArrayList();

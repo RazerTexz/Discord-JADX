@@ -5,12 +5,12 @@ import kotlin.jvm.internal.DefaultConstructorMarker;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: WidgetDirectoryEntryViewHolder.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetDirectoryEntryViewHolder.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public abstract class DirectoryChannelItem {
     private final ViewType viewType;
 
-    /* compiled from: WidgetDirectoryEntryViewHolder.kt */
+    /* JADX INFO: compiled from: WidgetDirectoryEntryViewHolder.kt */
     public static final class AddServer extends DirectoryChannelItem {
         public static final AddServer INSTANCE = new AddServer();
 
@@ -19,7 +19,7 @@ public abstract class DirectoryChannelItem {
         }
     }
 
-    /* compiled from: WidgetDirectoryEntryViewHolder.kt */
+    /* JADX INFO: compiled from: WidgetDirectoryEntryViewHolder.kt */
     public static final /* data */ class DirectoryItem extends DirectoryChannelItem {
         private final DirectoryEntryData directoryEntryData;
 
@@ -37,7 +37,7 @@ public abstract class DirectoryChannelItem {
             return directoryItem.copy(directoryEntryData);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final DirectoryEntryData getDirectoryEntryData() {
             return this.directoryEntryData;
         }
@@ -74,7 +74,7 @@ public abstract class DirectoryChannelItem {
         }
     }
 
-    /* compiled from: WidgetDirectoryEntryViewHolder.kt */
+    /* JADX INFO: compiled from: WidgetDirectoryEntryViewHolder.kt */
     public static final /* data */ class SectionHeader extends DirectoryChannelItem {
         private final int textRes;
 
@@ -90,7 +90,7 @@ public abstract class DirectoryChannelItem {
             return sectionHeader.copy(i);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final int getTextRes() {
             return this.textRes;
         }
@@ -119,17 +119,17 @@ public abstract class DirectoryChannelItem {
         }
     }
 
-    /* compiled from: WidgetDirectoryEntryViewHolder.kt */
+    /* JADX INFO: compiled from: WidgetDirectoryEntryViewHolder.kt */
     public enum ViewType {
         Item,
         AddServer,
         SectionHeader;
 
 
-        /* renamed from: Companion, reason: from kotlin metadata */
+        /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
         public static final Companion INSTANCE = new Companion(null);
 
-        /* compiled from: WidgetDirectoryEntryViewHolder.kt */
+        /* JADX INFO: compiled from: WidgetDirectoryEntryViewHolder.kt */
         public static final class Companion {
             private Companion() {
             }

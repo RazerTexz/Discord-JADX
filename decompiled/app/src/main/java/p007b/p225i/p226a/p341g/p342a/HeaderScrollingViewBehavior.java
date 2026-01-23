@@ -16,9 +16,9 @@ import androidx.core.view.WindowInsetsCompat;
 import com.google.android.material.badge.BadgeDrawable;
 import java.util.List;
 
-/* compiled from: HeaderScrollingViewBehavior.java */
-/* renamed from: b.i.a.g.a.b, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.g.a.b, reason: use source file name */
+/* JADX INFO: compiled from: HeaderScrollingViewBehavior.java */
+/* JADX INFO: loaded from: classes3.dex */
 public abstract class HeaderScrollingViewBehavior extends ViewOffsetBehavior<View> {
     private int overlayTop;
     public final Rect tempRect1;

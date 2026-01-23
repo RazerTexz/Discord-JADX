@@ -35,18 +35,18 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 import p658rx.Observable;
 
-/* compiled from: WidgetChatStatus.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetChatStatus.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetChatStatus extends AppFragment {
     public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetChatStatus.class, "binding", "getBinding()Lcom/discord/databinding/WidgetChatStatusBinding;", 0)};
 
-    /* renamed from: binding$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
 
-    /* compiled from: WidgetChatStatus.kt */
+    /* JADX INFO: compiled from: WidgetChatStatus.kt */
     public static final /* data */ class Model {
 
-        /* renamed from: Companion, reason: from kotlin metadata */
+        /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
         public static final Companion INSTANCE = new Companion(null);
         private final boolean isUnreadEstimate;
         private final long unreadChannelId;
@@ -54,7 +54,7 @@ public final class WidgetChatStatus extends AppFragment {
         private final long unreadMessageId;
         private final boolean unreadVisible;
 
-        /* compiled from: WidgetChatStatus.kt */
+        /* JADX INFO: compiled from: WidgetChatStatus.kt */
         public static final class Companion {
             private Companion() {
             }
@@ -118,27 +118,27 @@ public final class WidgetChatStatus extends AppFragment {
             return model.copy(z2, j3, j4, i3, z3);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final boolean getUnreadVisible() {
             return this.unreadVisible;
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final long getUnreadMessageId() {
             return this.unreadMessageId;
         }
 
-        /* renamed from: component3, reason: from getter */
+        /* JADX INFO: renamed from: component3, reason: from getter */
         public final long getUnreadChannelId() {
             return this.unreadChannelId;
         }
 
-        /* renamed from: component4, reason: from getter */
+        /* JADX INFO: renamed from: component4, reason: from getter */
         public final int getUnreadCount() {
             return this.unreadCount;
         }
 
-        /* renamed from: component5, reason: from getter */
+        /* JADX INFO: renamed from: component5, reason: from getter */
         public final boolean getIsUnreadEstimate() {
             return this.isUnreadEstimate;
         }
@@ -178,6 +178,9 @@ public final class WidgetChatStatus extends AppFragment {
         /* JADX WARN: Type inference failed for: r0v1, types: [int] */
         /* JADX WARN: Type inference failed for: r0v10 */
         /* JADX WARN: Type inference failed for: r0v9 */
+        /* JADX WARN: Type inference failed for: r1v0 */
+        /* JADX WARN: Type inference failed for: r1v1, types: [int] */
+        /* JADX WARN: Type inference failed for: r1v2 */
         public int hashCode() {
             boolean z2 = this.unreadVisible;
             ?? r0 = z2;
@@ -186,7 +189,7 @@ public final class WidgetChatStatus extends AppFragment {
             }
             int iM3a = (((C0002b.m3a(this.unreadChannelId) + ((C0002b.m3a(this.unreadMessageId) + (r0 * 31)) * 31)) * 31) + this.unreadCount) * 31;
             boolean z3 = this.isUnreadEstimate;
-            return iM3a + (z3 ? 1 : z3 ? 1 : 0);
+            return iM3a + (z3 ? 1 : z3);
         }
 
         public final boolean isUnreadEstimate() {
@@ -207,8 +210,8 @@ public final class WidgetChatStatus extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetChatStatus.kt */
-    /* renamed from: com.discord.widgets.status.WidgetChatStatus$configureUI$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.status.WidgetChatStatus$configureUI$1 */
+    /* JADX INFO: compiled from: WidgetChatStatus.kt */
     public static final class ViewOnClickListenerC100791 implements View.OnClickListener {
         public final /* synthetic */ Model $data;
 
@@ -222,8 +225,8 @@ public final class WidgetChatStatus extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetChatStatus.kt */
-    /* renamed from: com.discord.widgets.status.WidgetChatStatus$configureUI$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.status.WidgetChatStatus$configureUI$2 */
+    /* JADX INFO: compiled from: WidgetChatStatus.kt */
     public static final class ViewOnClickListenerC100802 implements View.OnClickListener {
         public final /* synthetic */ Model $data;
 
@@ -237,8 +240,8 @@ public final class WidgetChatStatus extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetChatStatus.kt */
-    /* renamed from: com.discord.widgets.status.WidgetChatStatus$onViewBoundOrOnResume$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.status.WidgetChatStatus$onViewBoundOrOnResume$1 */
+    /* JADX INFO: compiled from: WidgetChatStatus.kt */
     public static final class C100831 extends Lambda implements Function1<Model, Unit> {
         public C100831() {
             super(1);
@@ -250,7 +253,7 @@ public final class WidgetChatStatus extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Model model) {
             Intrinsics3.checkNotNullParameter(model, "it");
             WidgetChatStatus.access$configureUI(WidgetChatStatus.this, model);
@@ -282,7 +285,7 @@ public final class WidgetChatStatus extends AppFragment {
         return (WidgetChatStatusBinding) this.binding.getValue((Fragment) this, $$delegatedProperties[0]);
     }
 
-    private final CharSequence getUnreadMessageText(boolean isEstimate, int count, long messageId) throws Resources.NotFoundException {
+    private final CharSequence getUnreadMessageText(boolean isEstimate, int count, long messageId) {
         String strRenderUtcDate$default = TimeUtils.renderUtcDate$default(TimeUtils.INSTANCE, TimeUtils.parseSnowflake(Long.valueOf(messageId)), requireContext(), 0, 4, null);
         if (isEstimate) {
             Resources resources = getResources();
@@ -303,8 +306,8 @@ public final class WidgetChatStatus extends AppFragment {
         ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.ui$default(Model.INSTANCE.get(), this, null, 2, null), WidgetChatStatus.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new C100831(), 62, (Object) null);
     }
 
-    /* compiled from: WidgetChatStatus.kt */
-    /* renamed from: com.discord.widgets.status.WidgetChatStatus$getUnreadMessageText$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.status.WidgetChatStatus$getUnreadMessageText$1 */
+    /* JADX INFO: compiled from: WidgetChatStatus.kt */
     public static final class C100811 extends Lambda implements Function1<RenderContext, Unit> {
         public final /* synthetic */ int $count;
         public final /* synthetic */ String $utcDateTime;
@@ -316,7 +319,7 @@ public final class WidgetChatStatus extends AppFragment {
             this.$utcDateTime = str;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(RenderContext renderContext) {
             Intrinsics3.checkNotNullParameter(renderContext, "$receiver");
             renderContext.args.put("count", String.valueOf(this.$count));
@@ -330,8 +333,8 @@ public final class WidgetChatStatus extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetChatStatus.kt */
-    /* renamed from: com.discord.widgets.status.WidgetChatStatus$getUnreadMessageText$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.status.WidgetChatStatus$getUnreadMessageText$2 */
+    /* JADX INFO: compiled from: WidgetChatStatus.kt */
     public static final class C100822 extends Lambda implements Function1<RenderContext, Unit> {
         public final /* synthetic */ CharSequence $countPlural;
         public final /* synthetic */ String $utcDateTime;
@@ -343,7 +346,7 @@ public final class WidgetChatStatus extends AppFragment {
             this.$utcDateTime = str;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(RenderContext renderContext) {
             Intrinsics3.checkNotNullParameter(renderContext, "$receiver");
             renderContext.args.put("count", this.$countPlural.toString());

@@ -61,26 +61,26 @@ import p507d0.p592z.p594d.Reflection2;
 import p658rx.functions.Action1;
 import p658rx.functions.Func0;
 
-/* compiled from: WidgetChangeGuildIdentity.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetChangeGuildIdentity.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetChangeGuildIdentity extends AppFragment {
     public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetChangeGuildIdentity.class, "binding", "getBinding()Lcom/discord/databinding/WidgetChangeGuildIdentityBinding;", 0)};
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     public static final String USER_GUILD_PROFILE_VIEWED_CACHE_KEY = "USER_GUILD_PROFILE_VIEWED_CACHE_KEY";
     private Function1<? super String, Unit> avatarSelectedResult;
 
-    /* renamed from: binding$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
     private final AtomicBoolean discardConfirmed;
     private Function1<? super String, Unit> imageSelectedResult;
     private final MGImages.DistinctChangeDetector imagesChangeDetector;
 
-    /* renamed from: viewModel$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: viewModel$delegate, reason: from kotlin metadata */
     private final Lazy viewModel;
 
-    /* compiled from: WidgetChangeGuildIdentity.kt */
+    /* JADX INFO: compiled from: WidgetChangeGuildIdentity.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -98,8 +98,8 @@ public final class WidgetChangeGuildIdentity extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetChangeGuildIdentity.kt */
-    /* renamed from: com.discord.widgets.guilds.profile.WidgetChangeGuildIdentity$configureAvatar$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.guilds.profile.WidgetChangeGuildIdentity$configureAvatar$1 */
+    /* JADX INFO: compiled from: WidgetChangeGuildIdentity.kt */
     public static final class C87621 extends Lambda implements Function1<String, Unit> {
         public C87621() {
             super(1);
@@ -111,21 +111,21 @@ public final class WidgetChangeGuildIdentity extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(String str) {
             Intrinsics3.checkNotNullParameter(str, "dataUrl");
             WidgetChangeGuildIdentity.access$getViewModel$p(WidgetChangeGuildIdentity.this).updateAvatar(str);
         }
     }
 
-    /* compiled from: WidgetChangeGuildIdentity.kt */
-    /* renamed from: com.discord.widgets.guilds.profile.WidgetChangeGuildIdentity$configureAvatar$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.guilds.profile.WidgetChangeGuildIdentity$configureAvatar$2 */
+    /* JADX INFO: compiled from: WidgetChangeGuildIdentity.kt */
     public static final class ViewOnClickListenerC87632 implements View.OnClickListener {
         public final /* synthetic */ List $avatarSheetOptions;
         public final /* synthetic */ WidgetChangeGuildIdentityViewModel.ViewState.Loaded $viewState;
 
-        /* compiled from: WidgetChangeGuildIdentity.kt */
-        /* renamed from: com.discord.widgets.guilds.profile.WidgetChangeGuildIdentity$configureAvatar$2$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.widgets.guilds.profile.WidgetChangeGuildIdentity$configureAvatar$2$1, reason: invalid class name */
+        /* JADX INFO: compiled from: WidgetChangeGuildIdentity.kt */
         public static final class AnonymousClass1 extends Lambda implements Function1<Integer, Unit> {
             public AnonymousClass1() {
                 super(1);
@@ -169,8 +169,8 @@ public final class WidgetChangeGuildIdentity extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetChangeGuildIdentity.kt */
-    /* renamed from: com.discord.widgets.guilds.profile.WidgetChangeGuildIdentity$configureUI$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.guilds.profile.WidgetChangeGuildIdentity$configureUI$1 */
+    /* JADX INFO: compiled from: WidgetChangeGuildIdentity.kt */
     public static final class C87661<R> implements Func0<Boolean> {
         public final /* synthetic */ WidgetChangeGuildIdentityViewModel.ViewState $viewState;
 
@@ -189,8 +189,8 @@ public final class WidgetChangeGuildIdentity extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetChangeGuildIdentity.kt */
-    /* renamed from: com.discord.widgets.guilds.profile.WidgetChangeGuildIdentity$configureUpsell$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.guilds.profile.WidgetChangeGuildIdentity$configureUpsell$1 */
+    /* JADX INFO: compiled from: WidgetChangeGuildIdentity.kt */
     public static final class ViewOnClickListenerC87671 implements View.OnClickListener {
         public ViewOnClickListenerC87671() {
         }
@@ -201,8 +201,8 @@ public final class WidgetChangeGuildIdentity extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetChangeGuildIdentity.kt */
-    /* renamed from: com.discord.widgets.guilds.profile.WidgetChangeGuildIdentity$handleBackPressed$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.guilds.profile.WidgetChangeGuildIdentity$handleBackPressed$1 */
+    /* JADX INFO: compiled from: WidgetChangeGuildIdentity.kt */
     public static final class ViewOnClickListenerC87681 implements View.OnClickListener {
         public final /* synthetic */ AlertDialog $dialog;
 
@@ -216,8 +216,8 @@ public final class WidgetChangeGuildIdentity extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetChangeGuildIdentity.kt */
-    /* renamed from: com.discord.widgets.guilds.profile.WidgetChangeGuildIdentity$handleBackPressed$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.guilds.profile.WidgetChangeGuildIdentity$handleBackPressed$2 */
+    /* JADX INFO: compiled from: WidgetChangeGuildIdentity.kt */
     public static final class ViewOnClickListenerC87692 implements View.OnClickListener {
         public final /* synthetic */ AlertDialog $dialog;
 
@@ -236,8 +236,8 @@ public final class WidgetChangeGuildIdentity extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetChangeGuildIdentity.kt */
-    /* renamed from: com.discord.widgets.guilds.profile.WidgetChangeGuildIdentity$onViewBound$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.guilds.profile.WidgetChangeGuildIdentity$onViewBound$2 */
+    /* JADX INFO: compiled from: WidgetChangeGuildIdentity.kt */
     public static final class ViewOnClickListenerC87702 implements View.OnClickListener {
         public final /* synthetic */ View $view;
 
@@ -255,8 +255,8 @@ public final class WidgetChangeGuildIdentity extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetChangeGuildIdentity.kt */
-    /* renamed from: com.discord.widgets.guilds.profile.WidgetChangeGuildIdentity$onViewBoundOrOnResume$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.guilds.profile.WidgetChangeGuildIdentity$onViewBoundOrOnResume$1 */
+    /* JADX INFO: compiled from: WidgetChangeGuildIdentity.kt */
     public static final class C87711 extends Lambda implements Function1<WidgetChangeGuildIdentityViewModel.ViewState, Unit> {
         public C87711() {
             super(1);
@@ -268,15 +268,15 @@ public final class WidgetChangeGuildIdentity extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(WidgetChangeGuildIdentityViewModel.ViewState viewState) {
             Intrinsics3.checkNotNullParameter(viewState, "it");
             WidgetChangeGuildIdentity.access$configureUI(WidgetChangeGuildIdentity.this, viewState);
         }
     }
 
-    /* compiled from: WidgetChangeGuildIdentity.kt */
-    /* renamed from: com.discord.widgets.guilds.profile.WidgetChangeGuildIdentity$onViewBoundOrOnResume$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.guilds.profile.WidgetChangeGuildIdentity$onViewBoundOrOnResume$2 */
+    /* JADX INFO: compiled from: WidgetChangeGuildIdentity.kt */
     public static final class C87722 extends Lambda implements Function1<WidgetChangeGuildIdentityViewModel.Event, Unit> {
         public C87722() {
             super(1);
@@ -288,7 +288,7 @@ public final class WidgetChangeGuildIdentity extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(WidgetChangeGuildIdentityViewModel.Event event) {
             Intrinsics3.checkNotNullParameter(event, "event");
             boolean z2 = true;
@@ -481,8 +481,6 @@ public final class WidgetChangeGuildIdentity extends AppFragment {
         AppToast.m171i(this, text, 0, 4);
     }
 
-    /* JADX WARN: Multi-variable type inference failed */
-    /* JADX WARN: Type inference failed for: r2v2, types: [com.discord.widgets.guilds.profile.WidgetChangeGuildIdentity$sam$rx_functions_Action1$0] */
     @Override // com.discord.app.AppFragment
     public void onImageChosen(Uri uri, String mimeType) {
         Intrinsics3.checkNotNullParameter(uri, NotificationCompat.MessagingStyle.Message.KEY_DATA_URI);
@@ -497,24 +495,24 @@ public final class WidgetChangeGuildIdentity extends AppFragment {
             return;
         }
         Context context = getContext();
-        Function1<? super String, Unit> widgetChangeGuildIdentity7 = this.imageSelectedResult;
-        if (widgetChangeGuildIdentity7 != null) {
-            widgetChangeGuildIdentity7 = new WidgetChangeGuildIdentity7(widgetChangeGuildIdentity7);
+        Function1<? super String, Unit> function1 = this.imageSelectedResult;
+        Object widgetChangeGuildIdentity7 = function1;
+        if (function1 != null) {
+            widgetChangeGuildIdentity7 = new WidgetChangeGuildIdentity7(function1);
         }
         MGImages.requestDataUrl(context, uri, mimeType, (Action1) widgetChangeGuildIdentity7);
     }
 
-    /* JADX WARN: Multi-variable type inference failed */
-    /* JADX WARN: Type inference failed for: r2v0, types: [com.discord.widgets.guilds.profile.WidgetChangeGuildIdentity$sam$rx_functions_Action1$0] */
     @Override // com.discord.app.AppFragment
     public void onImageCropped(Uri uri, String mimeType) {
         Intrinsics3.checkNotNullParameter(uri, NotificationCompat.MessagingStyle.Message.KEY_DATA_URI);
         Intrinsics3.checkNotNullParameter(mimeType, "mimeType");
         super.onImageCropped(uri, mimeType);
         Context context = getContext();
-        Function1<? super String, Unit> widgetChangeGuildIdentity7 = this.imageSelectedResult;
-        if (widgetChangeGuildIdentity7 != null) {
-            widgetChangeGuildIdentity7 = new WidgetChangeGuildIdentity7(widgetChangeGuildIdentity7);
+        Function1<? super String, Unit> function1 = this.imageSelectedResult;
+        Object widgetChangeGuildIdentity7 = function1;
+        if (function1 != null) {
+            widgetChangeGuildIdentity7 = new WidgetChangeGuildIdentity7(function1);
         }
         MGImages.requestDataUrl(context, uri, mimeType, (Action1) widgetChangeGuildIdentity7);
     }

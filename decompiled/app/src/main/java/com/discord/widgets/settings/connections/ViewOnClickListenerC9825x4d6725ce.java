@@ -10,9 +10,9 @@ import p007b.p100d.p104b.p105a.outline;
 import p507d0.Tuples;
 import p507d0.p580t.Maps6;
 
-/* compiled from: WidgetSettingsUserConnections.kt */
-/* renamed from: com.discord.widgets.settings.connections.WidgetSettingsUserConnections$Adapter$ViewHolder$onConfigure$$inlined$apply$lambda$2 */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.settings.connections.WidgetSettingsUserConnections$Adapter$ViewHolder$onConfigure$$inlined$apply$lambda$2 */
+/* JADX INFO: compiled from: WidgetSettingsUserConnections.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class ViewOnClickListenerC9825x4d6725ce implements View.OnClickListener {
     public final /* synthetic */ ConnectedAccount $connectedAccount;
     public final /* synthetic */ String $connectionId;

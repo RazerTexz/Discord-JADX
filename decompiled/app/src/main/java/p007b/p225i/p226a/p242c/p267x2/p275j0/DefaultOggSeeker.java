@@ -9,73 +9,74 @@ import p007b.p225i.p226a.p242c.p267x2.ExtractorInput;
 import p007b.p225i.p226a.p242c.p267x2.SeekMap;
 import p007b.p225i.p226a.p242c.p267x2.SeekPoint;
 
-/* compiled from: DefaultOggSeeker.java */
-/* renamed from: b.i.a.c.x2.j0.b, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.x2.j0.b, reason: use source file name */
+/* JADX INFO: compiled from: DefaultOggSeeker.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class DefaultOggSeeker implements OggSeeker {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final OggPageHeader f8503a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final long f8504b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final long f8505c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final StreamReader f8506d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public int f8507e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public long f8508f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public long f8509g;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public long f8510h;
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public long f8511i;
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public long f8512j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public long f8513k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public long f8514l;
 
-    /* compiled from: DefaultOggSeeker.java */
-    /* renamed from: b.i.a.c.x2.j0.b$b */
+    /* JADX INFO: renamed from: b.i.a.c.x2.j0.b$b */
+    /* JADX INFO: compiled from: DefaultOggSeeker.java */
     public final class b implements SeekMap {
         public b(a aVar) {
         }
 
         @Override // p007b.p225i.p226a.p242c.p267x2.SeekMap
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public boolean mo3619c() {
             return true;
         }
 
         @Override // p007b.p225i.p226a.p242c.p267x2.SeekMap
-        /* renamed from: h */
+        /* JADX INFO: renamed from: h */
         public SeekMap.a mo3620h(long j) {
             DefaultOggSeeker defaultOggSeeker = DefaultOggSeeker.this;
-            long j2 = (defaultOggSeeker.f8506d.f8548i * j) / 1000000;
+            long j2 = (((long) defaultOggSeeker.f8506d.f8548i) * j) / 1000000;
             long j3 = defaultOggSeeker.f8504b;
             long j4 = defaultOggSeeker.f8505c;
             return new SeekMap.a(new SeekPoint(j, Util2.m3001i(((((j4 - j3) * j2) / defaultOggSeeker.f8508f) + j3) - 30000, j3, j4 - 1)));
         }
 
         @Override // p007b.p225i.p226a.p242c.p267x2.SeekMap
-        /* renamed from: i */
+        /* JADX INFO: renamed from: i */
         public long mo3621i() {
-            return (DefaultOggSeeker.this.f8508f * 1000000) / r0.f8506d.f8548i;
+            DefaultOggSeeker defaultOggSeeker = DefaultOggSeeker.this;
+            return (defaultOggSeeker.f8508f * 1000000) / ((long) defaultOggSeeker.f8506d.f8548i);
         }
     }
 
@@ -95,7 +96,7 @@ public final class DefaultOggSeeker implements OggSeeker {
 
     @Override // p007b.p225i.p226a.p242c.p267x2.p275j0.OggSeeker
     @Nullable
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public SeekMap mo3734a() {
         if (this.f8508f != 0) {
             return new b(null);
@@ -107,7 +108,7 @@ public final class DefaultOggSeeker implements OggSeeker {
     /* JADX WARN: Removed duplicated region for block: B:42:0x00c2 A[RETURN] */
     /* JADX WARN: Removed duplicated region for block: B:43:0x00c3  */
     @Override // p007b.p225i.p226a.p242c.p267x2.p275j0.OggSeeker
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
@@ -155,7 +156,7 @@ public final class DefaultOggSeeker implements OggSeeker {
                             this.f8512j = position2;
                             this.f8514l = j4;
                         } else {
-                            this.f8511i = extractorInput.getPosition() + i2;
+                            this.f8511i = extractorInput.getPosition() + ((long) i2);
                             this.f8513k = this.f8503a.f8532c;
                         }
                         long j6 = this.f8512j;
@@ -164,7 +165,7 @@ public final class DefaultOggSeeker implements OggSeeker {
                             this.f8512j = j7;
                             jM3001i = j7;
                         } else {
-                            long position3 = extractorInput.getPosition() - (i2 * (j5 <= 0 ? 2L : 1L));
+                            long position3 = extractorInput.getPosition() - (((long) i2) * (j5 <= 0 ? 2L : 1L));
                             long j8 = this.f8512j;
                             long j9 = this.f8511i;
                             jM3001i = Util2.m3001i((((j8 - j9) * j5) / (this.f8514l - this.f8513k)) + position3, j9, j8 - 1);
@@ -226,7 +227,7 @@ public final class DefaultOggSeeker implements OggSeeker {
     }
 
     @Override // p007b.p225i.p226a.p242c.p267x2.p275j0.OggSeeker
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public void mo3736c(long j) {
         this.f8510h = Util2.m3001i(j, 0L, this.f8508f - 1);
         this.f8507e = 2;

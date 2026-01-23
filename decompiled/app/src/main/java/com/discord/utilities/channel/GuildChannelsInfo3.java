@@ -6,9 +6,9 @@ import com.discord.api.channel.ChannelUtils4;
 import java.util.Comparator;
 import java.util.Map;
 
-/* compiled from: GuildChannelsInfo.kt */
-/* renamed from: com.discord.utilities.channel.GuildChannelsInfo$getSortedCategories$sortedCategories$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.utilities.channel.GuildChannelsInfo$getSortedCategories$sortedCategories$1, reason: use source file name */
+/* JADX INFO: compiled from: GuildChannelsInfo.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class GuildChannelsInfo3<T> implements Comparator<Long> {
     public final /* synthetic */ Map $guildChannels;
 
@@ -22,7 +22,7 @@ public final class GuildChannelsInfo3<T> implements Comparator<Long> {
     }
 
     /* JADX WARN: Multi-variable type inference failed */
-    /* renamed from: compare, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: compare, reason: avoid collision after fix types in other method */
     public final int compare2(Long l, Long l2) {
         return ((ChannelUtils4) ChannelUtils.m7684h(Channel.INSTANCE)).compare(this.$guildChannels.get(l), this.$guildChannels.get(l2));
     }

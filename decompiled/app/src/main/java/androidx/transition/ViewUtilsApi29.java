@@ -6,8 +6,8 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.annotation.RequiresApi;
 
+/* JADX INFO: loaded from: classes.dex */
 @RequiresApi(29)
-/* loaded from: classes.dex */
 public class ViewUtilsApi29 extends ViewUtilsApi23 {
     @Override // androidx.transition.ViewUtilsApi19, androidx.transition.ViewUtilsBase
     public float getTransitionAlpha(@NonNull View view) {

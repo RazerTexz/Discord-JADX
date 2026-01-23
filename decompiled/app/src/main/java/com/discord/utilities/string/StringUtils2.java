@@ -18,9 +18,9 @@ import p007b.p008a.p027k.FormatUtils;
 import p507d0.p580t.Collections2;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: StringUtils.kt */
-/* renamed from: com.discord.utilities.string.StringUtilsKt, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.utilities.string.StringUtilsKt, reason: use source file name */
+/* JADX INFO: compiled from: StringUtils.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class StringUtils2 {
     private static final String STATIC_IMAGE_EXTENSION;
     private static final Regex STRIP_ACCENTS_REGEX = new Regex("[\\p{InCombiningDiacriticalMarks}]");
@@ -98,7 +98,7 @@ public final class StringUtils2 {
         return STRIP_ACCENTS_REGEX.replace(strNormalize, "");
     }
 
-    public static final void test(Context context, Resources resources) throws Resources.NotFoundException {
+    public static final void test(Context context, Resources resources) {
         Intrinsics3.checkNotNullParameter(context, "context");
         Intrinsics3.checkNotNullParameter(resources, "resources");
         context.getString(C7063R.a.common_google_play_services_unknown_issue, 1);

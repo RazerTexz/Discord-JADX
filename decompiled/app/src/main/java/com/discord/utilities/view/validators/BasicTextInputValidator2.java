@@ -4,9 +4,9 @@ import kotlin.jvm.functions.Function1;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: BasicTextInputValidator.kt */
-/* renamed from: com.discord.utilities.view.validators.BasicTextInputValidator$Companion$createRequiredInputValidator$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.utilities.view.validators.BasicTextInputValidator$Companion$createRequiredInputValidator$1, reason: use source file name */
+/* JADX INFO: compiled from: BasicTextInputValidator.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class BasicTextInputValidator2 extends Lambda implements Function1<String, Boolean> {
     public static final BasicTextInputValidator2 INSTANCE = new BasicTextInputValidator2();
 
@@ -19,7 +19,7 @@ public final class BasicTextInputValidator2 extends Lambda implements Function1<
         return Boolean.valueOf(invoke2(str));
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final boolean invoke2(String str) {
         Intrinsics3.checkNotNullParameter(str, "it");
         return str.length() > 0;

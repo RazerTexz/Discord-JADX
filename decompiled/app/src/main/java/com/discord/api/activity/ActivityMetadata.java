@@ -4,20 +4,20 @@ import java.util.List;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ActivityMetadata.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: ActivityMetadata.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class ActivityMetadata {
     private final String albumId;
     private final List<String> artistIds;
     private final List<String> buttonUrls;
     private final String contextUri;
 
-    /* renamed from: a, reason: from getter */
+    /* JADX INFO: renamed from: a, reason: from getter */
     public final String getAlbumId() {
         return this.albumId;
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final List<String> m7557b() {
         return this.buttonUrls;
     }

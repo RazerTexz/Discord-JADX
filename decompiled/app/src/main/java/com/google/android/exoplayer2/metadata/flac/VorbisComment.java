@@ -10,17 +10,17 @@ import p007b.p225i.p226a.p242c.MediaMetadata;
 import p007b.p225i.p226a.p242c.p259f3.Util2;
 import p007b.p225i.p226a.p242c.p279z2.Metadata2;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public final class VorbisComment implements Metadata.Entry {
     public static final Parcelable.Creator<VorbisComment> CREATOR = new C10723a();
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final String f19955j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final String f19956k;
 
-    /* renamed from: com.google.android.exoplayer2.metadata.flac.VorbisComment$a */
+    /* JADX INFO: renamed from: com.google.android.exoplayer2.metadata.flac.VorbisComment$a */
     public class C10723a implements Parcelable.Creator<VorbisComment> {
         @Override // android.os.Parcelable.Creator
         public VorbisComment createFromParcel(Parcel parcel) {
@@ -59,7 +59,7 @@ public final class VorbisComment implements Metadata.Entry {
     }
 
     @Override // com.google.android.exoplayer2.metadata.Metadata.Entry
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public void mo8878n(MediaMetadata.b bVar) {
         String str = this.f19955j;
         str.hashCode();
@@ -83,7 +83,7 @@ public final class VorbisComment implements Metadata.Entry {
     }
 
     @Override // com.google.android.exoplayer2.metadata.Metadata.Entry
-    /* renamed from: o0 */
+    /* JADX INFO: renamed from: o0 */
     public /* synthetic */ byte[] mo8879o0() {
         return Metadata2.m3892a(this);
     }
@@ -101,7 +101,7 @@ public final class VorbisComment implements Metadata.Entry {
     }
 
     @Override // com.google.android.exoplayer2.metadata.Metadata.Entry
-    /* renamed from: y */
+    /* JADX INFO: renamed from: y */
     public /* synthetic */ Format2 mo8880y() {
         return Metadata2.m3893b(this);
     }

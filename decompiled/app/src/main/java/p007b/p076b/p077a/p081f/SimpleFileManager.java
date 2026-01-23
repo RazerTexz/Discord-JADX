@@ -13,18 +13,18 @@ import java.util.Locale;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: SimpleFileManager.kt */
-/* renamed from: b.b.a.f.b, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.b.a.f.b, reason: use source file name */
+/* JADX INFO: compiled from: SimpleFileManager.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public class SimpleFileManager implements FileManager {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final Context f2199a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final String f2200b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final String f2201c;
 
     public SimpleFileManager(Context context, String str, String str2, int i) {
@@ -48,7 +48,7 @@ public class SimpleFileManager implements FileManager {
     }
 
     @Override // com.lytefast.flexinput.managers.FileManager
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public Uri mo408a(Context context, File file) {
         Intrinsics3.checkNotNullParameter(context, "context");
         Intrinsics3.checkNotNullParameter(file, "file");
@@ -58,7 +58,7 @@ public class SimpleFileManager implements FileManager {
     }
 
     @Override // com.lytefast.flexinput.managers.FileManager
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public File mo409b() {
         String str = new SimpleDateFormat("yyyyMMdd_HHmmss", Locale.getDefault()).format(new Date());
         Context context = this.f2199a;

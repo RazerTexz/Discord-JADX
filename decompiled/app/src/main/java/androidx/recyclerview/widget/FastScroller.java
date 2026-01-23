@@ -14,8 +14,8 @@ import androidx.annotation.VisibleForTesting;
 import androidx.core.view.ViewCompat;
 import androidx.recyclerview.widget.RecyclerView;
 
+/* JADX INFO: loaded from: classes.dex */
 @VisibleForTesting
-/* loaded from: classes.dex */
 public class FastScroller extends RecyclerView.ItemDecoration implements RecyclerView.OnItemTouchListener {
     private static final int ANIMATION_STATE_FADING_IN = 1;
     private static final int ANIMATION_STATE_FADING_OUT = 3;
@@ -76,7 +76,7 @@ public class FastScroller extends RecyclerView.ItemDecoration implements Recycle
     private final int[] mVerticalRange = new int[2];
     private final int[] mHorizontalRange = new int[2];
 
-    /* renamed from: androidx.recyclerview.widget.FastScroller$1 */
+    /* JADX INFO: renamed from: androidx.recyclerview.widget.FastScroller$1 */
     public class RunnableC05471 implements Runnable {
         public RunnableC05471() {
         }
@@ -87,7 +87,7 @@ public class FastScroller extends RecyclerView.ItemDecoration implements Recycle
         }
     }
 
-    /* renamed from: androidx.recyclerview.widget.FastScroller$2 */
+    /* JADX INFO: renamed from: androidx.recyclerview.widget.FastScroller$2 */
     public class C05482 extends RecyclerView.OnScrollListener {
         public C05482() {
         }

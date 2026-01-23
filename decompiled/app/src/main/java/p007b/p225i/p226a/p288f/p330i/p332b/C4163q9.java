@@ -50,15 +50,15 @@ import p007b.p225i.p226a.p288f.p313h.p325l.C3900y1;
 import p007b.p225i.p226a.p288f.p313h.p325l.C3912z0;
 import p007b.p225i.p226a.p288f.p313h.p325l.InterfaceC3598b6;
 
-/* compiled from: com.google.android.gms:play-services-measurement@@18.0.0 */
-/* renamed from: b.i.a.f.i.b.q9 */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.i.b.q9 */
+/* JADX INFO: compiled from: com.google.android.gms:play-services-measurement@@18.0.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public final class C4163q9 extends AbstractC4074i9 {
     public C4163q9(C4097k9 c4097k9) {
         super(c4097k9);
     }
 
-    /* renamed from: A */
+    /* JADX INFO: renamed from: A */
     public static String m5818A(boolean z2, boolean z3, boolean z4) {
         StringBuilder sb = new StringBuilder();
         if (z2) {
@@ -73,7 +73,7 @@ public final class C4163q9 extends AbstractC4074i9 {
         return sb.toString();
     }
 
-    /* renamed from: B */
+    /* JADX INFO: renamed from: B */
     public static List<Long> m5819B(BitSet bitSet) {
         int length = (bitSet.length() + 63) / 64;
         ArrayList arrayList = new ArrayList(length);
@@ -92,7 +92,7 @@ public final class C4163q9 extends AbstractC4074i9 {
         return arrayList;
     }
 
-    /* renamed from: D */
+    /* JADX INFO: renamed from: D */
     public static List<C3607c1> m5820D(Bundle[] bundleArr) {
         ArrayList arrayList = new ArrayList();
         for (Bundle bundle : bundleArr) {
@@ -123,7 +123,7 @@ public final class C4163q9 extends AbstractC4074i9 {
         return arrayList;
     }
 
-    /* renamed from: E */
+    /* JADX INFO: renamed from: E */
     public static void m5821E(C3579a1.a aVar, String str, Object obj) {
         List<C3607c1> listM4550v = aVar.m4550v();
         int i = 0;
@@ -164,14 +164,14 @@ public final class C4163q9 extends AbstractC4074i9 {
         C3579a1.m4530y((C3579a1) aVar.f10347k, i, (C3607c1) ((AbstractC3851u4) aVarM4578Q.m5320p()));
     }
 
-    /* renamed from: H */
+    /* JADX INFO: renamed from: H */
     public static void m5822H(StringBuilder sb, int i) {
         for (int i2 = 0; i2 < i; i2++) {
             sb.append("  ");
         }
     }
 
-    /* renamed from: J */
+    /* JADX INFO: renamed from: J */
     public static void m5823J(StringBuilder sb, int i, String str, C3756n0 c3756n0) {
         if (c3756n0 == null) {
             return;
@@ -198,7 +198,7 @@ public final class C4163q9 extends AbstractC4074i9 {
         sb.append("}\n");
     }
 
-    /* renamed from: K */
+    /* JADX INFO: renamed from: K */
     public static void m5824K(StringBuilder sb, int i, String str, C3663g1 c3663g1) {
         if (c3663g1 == null) {
             return;
@@ -281,7 +281,7 @@ public final class C4163q9 extends AbstractC4074i9 {
         sb.append("}\n");
     }
 
-    /* renamed from: L */
+    /* JADX INFO: renamed from: L */
     public static void m5825L(StringBuilder sb, int i, String str, Object obj) {
         if (obj == null) {
             return;
@@ -294,18 +294,18 @@ public final class C4163q9 extends AbstractC4074i9 {
     }
 
     @WorkerThread
-    /* renamed from: O */
+    /* JADX INFO: renamed from: O */
     public static boolean m5826O(zzaq zzaqVar, zzn zznVar) {
         Objects.requireNonNull(zzaqVar, "null reference");
         return (TextUtils.isEmpty(zznVar.f20684k) && TextUtils.isEmpty(zznVar.f20677A)) ? false : true;
     }
 
-    /* renamed from: P */
+    /* JADX INFO: renamed from: P */
     public static boolean m5827P(String str) {
         return str != null && str.matches("([+-])?([0-9]+\\.?[0-9]*|[0-9]*\\.?[0-9]+)") && str.length() <= 310;
     }
 
-    /* renamed from: Q */
+    /* JADX INFO: renamed from: Q */
     public static boolean m5828Q(List<Long> list, int i) {
         if (i < (((C3800q5) list).f10273m << 6)) {
             return ((1 << (i % 64)) & ((Long) ((C3800q5) list).get(i / 64)).longValue()) != 0;
@@ -313,7 +313,7 @@ public final class C4163q9 extends AbstractC4074i9 {
         return false;
     }
 
-    /* renamed from: R */
+    /* JADX INFO: renamed from: R */
     public static Object m5829R(C3579a1 c3579a1, String str) {
         C3607c1 c3607c1M5831w = m5831w(c3579a1, str);
         if (c3607c1M5831w == null) {
@@ -353,7 +353,7 @@ public final class C4163q9 extends AbstractC4074i9 {
         return (Bundle[]) arrayList.toArray(new Bundle[arrayList.size()]);
     }
 
-    /* renamed from: s */
+    /* JADX INFO: renamed from: s */
     public static int m5830s(C3635e1.a aVar, String str) {
         for (int i = 0; i < ((C3635e1) aVar.f10347k).m4723P0(); i++) {
             if (str.equals(((C3635e1) aVar.f10347k).m4744h0(i).m4949D())) {
@@ -363,7 +363,7 @@ public final class C4163q9 extends AbstractC4074i9 {
         return -1;
     }
 
-    /* renamed from: w */
+    /* JADX INFO: renamed from: w */
     public static C3607c1 m5831w(C3579a1 c3579a1, String str) {
         for (C3607c1 c3607c1 : c3579a1.m4543v()) {
             if (c3607c1.m4587B().equals(str)) {
@@ -373,7 +373,7 @@ public final class C4163q9 extends AbstractC4074i9 {
         return null;
     }
 
-    /* renamed from: x */
+    /* JADX INFO: renamed from: x */
     public static <Builder extends InterfaceC3598b6> Builder m5832x(Builder builder, byte[] bArr) throws zzij {
         C3680h4 c3680h4M5215b = C3680h4.f9985b;
         if (c3680h4M5215b == null) {
@@ -399,7 +399,7 @@ public final class C4163q9 extends AbstractC4074i9 {
         return bVar2;
     }
 
-    /* renamed from: C */
+    /* JADX INFO: renamed from: C */
     public final List<Long> m5833C(List<Long> list, List<Integer> list2) {
         int i;
         ArrayList arrayList = new ArrayList(list);
@@ -429,7 +429,7 @@ public final class C4163q9 extends AbstractC4074i9 {
         return arrayList.subList(0, i);
     }
 
-    /* renamed from: F */
+    /* JADX INFO: renamed from: F */
     public final void m5834F(C3607c1.a aVar, Object obj) {
         Objects.requireNonNull(obj, "null reference");
         if (aVar.f10348l) {
@@ -476,7 +476,7 @@ public final class C4163q9 extends AbstractC4074i9 {
         C3607c1.m4584y((C3607c1) aVar.f10347k, listM5820D);
     }
 
-    /* renamed from: G */
+    /* JADX INFO: renamed from: G */
     public final void m5835G(C3691i1.a aVar, Object obj) {
         Objects.requireNonNull(obj, "null reference");
         if (aVar.f10348l) {
@@ -519,7 +519,7 @@ public final class C4163q9 extends AbstractC4074i9 {
         C3691i1.m4946v((C3691i1) aVar.f10347k, dDoubleValue);
     }
 
-    /* renamed from: I */
+    /* JADX INFO: renamed from: I */
     public final void m5836I(StringBuilder sb, int i, C3743m0 c3743m0) {
         if (c3743m0 == null) {
             return;
@@ -569,7 +569,7 @@ public final class C4163q9 extends AbstractC4074i9 {
         sb.append("}\n");
     }
 
-    /* renamed from: M */
+    /* JADX INFO: renamed from: M */
     public final void m5837M(StringBuilder sb, int i, List<C3607c1> list) {
         if (list == null) {
             return;
@@ -592,7 +592,7 @@ public final class C4163q9 extends AbstractC4074i9 {
         }
     }
 
-    /* renamed from: N */
+    /* JADX INFO: renamed from: N */
     public final boolean m5838N(long j, long j2) {
         if (j == 0 || j2 <= 0) {
             return true;
@@ -601,7 +601,7 @@ public final class C4163q9 extends AbstractC4074i9 {
         return Math.abs(System.currentTimeMillis() - j) > j2;
     }
 
-    /* renamed from: S */
+    /* JADX INFO: renamed from: S */
     public final byte[] m5839S(byte[] bArr) throws IOException {
         try {
             ByteArrayInputStream byteArrayInputStream = new ByteArrayInputStream(bArr);
@@ -623,7 +623,7 @@ public final class C4163q9 extends AbstractC4074i9 {
         }
     }
 
-    /* renamed from: T */
+    /* JADX INFO: renamed from: T */
     public final byte[] m5840T(byte[] bArr) throws IOException {
         try {
             ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
@@ -639,7 +639,7 @@ public final class C4163q9 extends AbstractC4074i9 {
     }
 
     @Nullable
-    /* renamed from: U */
+    /* JADX INFO: renamed from: U */
     public final List<Integer> m5841U() {
         Context context = this.f10827b.f10906k.f11254b;
         List<C4080j3<?>> list = C4142p.f11061a;
@@ -676,13 +676,13 @@ public final class C4163q9 extends AbstractC4074i9 {
     }
 
     @Override // p007b.p225i.p226a.p288f.p330i.p332b.AbstractC4074i9
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public final boolean mo5515p() {
         return false;
     }
 
     @WorkerThread
-    /* renamed from: t */
+    /* JADX INFO: renamed from: t */
     public final long m5842t(byte[] bArr) {
         m5866e().mo5848b();
         MessageDigest messageDigestM5889x0 = C4196t9.m5889x0();
@@ -693,7 +693,7 @@ public final class C4163q9 extends AbstractC4074i9 {
         return 0L;
     }
 
-    /* renamed from: u */
+    /* JADX INFO: renamed from: u */
     public final <T extends Parcelable> T m5843u(byte[] bArr, Parcelable.Creator<T> creator) {
         if (bArr == null) {
             return null;
@@ -711,7 +711,7 @@ public final class C4163q9 extends AbstractC4074i9 {
         }
     }
 
-    /* renamed from: v */
+    /* JADX INFO: renamed from: v */
     public final C3579a1 m5844v(C4109m c4109m) {
         C3579a1.a aVarM4526M = C3579a1.m4526M();
         long j = c4109m.f10956e;
@@ -731,7 +731,7 @@ public final class C4163q9 extends AbstractC4074i9 {
         return (C3579a1) ((AbstractC3851u4) aVarM4526M.m5320p());
     }
 
-    /* renamed from: y */
+    /* JADX INFO: renamed from: y */
     public final String m5845y(C3769o0 c3769o0) {
         StringBuilder sbM833U = outline.m833U("\nproperty_filter {\n");
         if (c3769o0.m5147v()) {
@@ -747,7 +747,7 @@ public final class C4163q9 extends AbstractC4074i9 {
         return sbM833U.toString();
     }
 
-    /* renamed from: z */
+    /* JADX INFO: renamed from: z */
     public final String m5846z(C3621d1 c3621d1) {
         StringBuilder sbM833U = outline.m833U("\nbatch {\n");
         for (C3635e1 c3635e1 : c3621d1.m4626v()) {

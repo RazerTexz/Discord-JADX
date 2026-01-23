@@ -6,9 +6,9 @@ import com.discord.widgets.servers.community.WidgetServerSettingsEnableCommunity
 import java.util.Objects;
 import p637j0.p641k.Func1;
 
-/* compiled from: ObservableExtensions.kt */
-/* renamed from: com.discord.widgets.servers.community.WidgetServerSettingsEnableCommunitySteps$onViewBoundOrOnResume$$inlined$filterIs$2 */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.servers.community.WidgetServerSettingsEnableCommunitySteps$onViewBoundOrOnResume$$inlined$filterIs$2 */
+/* JADX INFO: compiled from: ObservableExtensions.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class C9401x2efa3159<T, R> implements Func1<Object, T> {
     public static final C9401x2efa3159 INSTANCE = new C9401x2efa3159();
 

@@ -4,8 +4,8 @@ import com.discord.models.experiments.domain.Experiment;
 import com.discord.stores.StoreExperiments;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: OutboundPromosPreviewFeatureFlag.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: OutboundPromosPreviewFeatureFlag.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class OutboundPromosPreviewFeatureFlag {
     private final StoreExperiments storeExperiments;
 

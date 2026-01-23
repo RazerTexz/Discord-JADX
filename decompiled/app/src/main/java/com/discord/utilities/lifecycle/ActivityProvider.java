@@ -9,18 +9,18 @@ import androidx.appcompat.widget.ActivityChooserModel;
 import kotlin.jvm.internal.DefaultConstructorMarker;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ActivityProvider.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: ActivityProvider.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class ActivityProvider implements Application.ActivityLifecycleCallbacks {
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
 
     @SuppressLint({"StaticFieldLeak"})
     private static ActivityProvider INSTANCE;
     private Activity currentActivity;
 
-    /* compiled from: ActivityProvider.kt */
+    /* JADX INFO: compiled from: ActivityProvider.kt */
     public static final class Companion {
         private Companion() {
         }

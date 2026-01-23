@@ -10,9 +10,9 @@ import p007b.p008a.p018d.AppToast;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: Badge.kt */
-/* renamed from: com.discord.widgets.user.Badge$Companion$onBadgeClick$1, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: com.discord.widgets.user.Badge$Companion$onBadgeClick$1, reason: use source file name */
+/* JADX INFO: compiled from: Badge.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class Badge2 extends Lambda implements Function1<Badge, Unit> {
     public final /* synthetic */ Context $context;
     public final /* synthetic */ FragmentManager $fragmentManager;
@@ -30,7 +30,7 @@ public final class Badge2 extends Lambda implements Function1<Badge, Unit> {
         return Unit.f27425a;
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final void invoke2(Badge badge) {
         Intrinsics3.checkNotNullParameter(badge, "badge");
         if (badge.getShowPremiumUpSell()) {

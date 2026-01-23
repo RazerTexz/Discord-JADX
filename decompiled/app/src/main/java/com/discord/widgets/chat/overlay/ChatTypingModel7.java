@@ -11,9 +11,9 @@ import p507d0.p580t._Collections;
 import p507d0.p592z.p594d.Intrinsics3;
 import p637j0.p641k.Func1;
 
-/* compiled from: ChatTypingModel.kt */
-/* renamed from: com.discord.widgets.chat.overlay.ChatTypingModel$Companion$getTypingUsers$2, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.chat.overlay.ChatTypingModel$Companion$getTypingUsers$2, reason: use source file name */
+/* JADX INFO: compiled from: ChatTypingModel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class ChatTypingModel7<T, R> implements Func1<List<? extends String>, List<? extends CharSequence>> {
     public static final ChatTypingModel7 INSTANCE = new ChatTypingModel7();
 
@@ -22,7 +22,7 @@ public final class ChatTypingModel7<T, R> implements Func1<List<? extends String
         return call2((List<String>) list);
     }
 
-    /* renamed from: call, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
     public final List<CharSequence> call2(List<String> list) {
         Intrinsics3.checkNotNullExpressionValue(list, "names");
         ArrayList arrayList = new ArrayList(Iterables2.collectionSizeOrDefault(list, 10));

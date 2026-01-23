@@ -12,12 +12,12 @@ import javax.crypto.CipherInputStream;
 import javax.crypto.CipherOutputStream;
 import javax.crypto.spec.SecretKeySpec;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class BlowfishSerializer extends Serializer {
     private static SecretKeySpec keySpec;
     private final Serializer serializer;
 
-    /* renamed from: com.esotericsoftware.kryo.serializers.BlowfishSerializer$1 */
+    /* JADX INFO: renamed from: com.esotericsoftware.kryo.serializers.BlowfishSerializer$1 */
     public class C106231 extends Output {
         public C106231(OutputStream outputStream, int i) {
             super(outputStream, i);
@@ -54,7 +54,7 @@ public class BlowfishSerializer extends Serializer {
     }
 
     @Override // com.esotericsoftware.kryo.Serializer
-    public void write(Kryo kryo, Output output, Object obj) throws KryoException {
+    public void write(Kryo kryo, Output output, Object obj) {
         CipherOutputStream cipherOutputStream = new CipherOutputStream(output, getCipher(1));
         C106231 c106231 = new C106231(cipherOutputStream, 256);
         this.serializer.write(kryo, c106231, obj);

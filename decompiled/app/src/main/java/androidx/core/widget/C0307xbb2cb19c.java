@@ -5,9 +5,9 @@ import android.text.TextWatcher;
 import androidx.core.app.NotificationCompat;
 import kotlin.jvm.functions.Function1;
 
-/* compiled from: TextView.kt */
-/* renamed from: androidx.core.widget.TextViewKt$doAfterTextChanged$$inlined$addTextChangedListener$default$1 */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: androidx.core.widget.TextViewKt$doAfterTextChanged$$inlined$addTextChangedListener$default$1 */
+/* JADX INFO: compiled from: TextView.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class C0307xbb2cb19c implements TextWatcher {
     public final /* synthetic */ Function1 $afterTextChanged;
 

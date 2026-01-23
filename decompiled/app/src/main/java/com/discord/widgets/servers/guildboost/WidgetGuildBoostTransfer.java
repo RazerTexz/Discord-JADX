@@ -38,25 +38,25 @@ import p507d0.p592z.p594d.Lambda;
 import p507d0.p592z.p594d.Reflection2;
 import p658rx.Observable;
 
-/* compiled from: WidgetGuildBoostTransfer.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetGuildBoostTransfer.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetGuildBoostTransfer extends AppFragment {
     public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetGuildBoostTransfer.class, "binding", "getBinding()Lcom/discord/databinding/WidgetGuildBoostTransferBinding;", 0)};
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private static final String INTENT_EXTRA_PREVIOUS_GUILD_ID = "PREVIOUS_GUILD_ID";
     private static final String INTENT_EXTRA_SLOT_ID = "SLOT_ID";
     private static final String INTENT_EXTRA_SUBSCRIPTION_ID = "SUBSCRIPTION_ID";
     private static final String INTENT_EXTRA_TARGET_GUILD_ID = "TARGET_GUILD_ID";
 
-    /* renamed from: binding$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
 
-    /* renamed from: viewModel$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: viewModel$delegate, reason: from kotlin metadata */
     private final Lazy viewModel;
 
-    /* compiled from: WidgetGuildBoostTransfer.kt */
+    /* JADX INFO: compiled from: WidgetGuildBoostTransfer.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -86,8 +86,8 @@ public final class WidgetGuildBoostTransfer extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetGuildBoostTransfer.kt */
-    /* renamed from: com.discord.widgets.servers.guildboost.WidgetGuildBoostTransfer$configureUI$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.guildboost.WidgetGuildBoostTransfer$configureUI$1 */
+    /* JADX INFO: compiled from: WidgetGuildBoostTransfer.kt */
     public static final class C95201 extends Lambda implements Function0<Unit> {
         public C95201() {
             super(0);
@@ -99,7 +99,7 @@ public final class WidgetGuildBoostTransfer extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             FragmentActivity activity = WidgetGuildBoostTransfer.this.getActivity();
             if (activity != null) {
@@ -108,8 +108,8 @@ public final class WidgetGuildBoostTransfer extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetGuildBoostTransfer.kt */
-    /* renamed from: com.discord.widgets.servers.guildboost.WidgetGuildBoostTransfer$onViewBound$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.guildboost.WidgetGuildBoostTransfer$onViewBound$1 */
+    /* JADX INFO: compiled from: WidgetGuildBoostTransfer.kt */
     public static final class ViewOnClickListenerC95211 implements View.OnClickListener {
         public ViewOnClickListenerC95211() {
         }
@@ -120,8 +120,8 @@ public final class WidgetGuildBoostTransfer extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetGuildBoostTransfer.kt */
-    /* renamed from: com.discord.widgets.servers.guildboost.WidgetGuildBoostTransfer$onViewBoundOrOnResume$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.guildboost.WidgetGuildBoostTransfer$onViewBoundOrOnResume$1 */
+    /* JADX INFO: compiled from: WidgetGuildBoostTransfer.kt */
     public static final /* synthetic */ class C95221 extends FunctionReferenceImpl implements Function1<GuildBoostTransferInProgressViewModel.ViewState, Unit> {
         public C95221(WidgetGuildBoostTransfer widgetGuildBoostTransfer) {
             super(1, widgetGuildBoostTransfer, WidgetGuildBoostTransfer.class, "configureUI", "configureUI(Lcom/discord/widgets/servers/guildboost/GuildBoostTransferInProgressViewModel$ViewState;)V", 0);
@@ -133,7 +133,7 @@ public final class WidgetGuildBoostTransfer extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(GuildBoostTransferInProgressViewModel.ViewState viewState) {
             Intrinsics3.checkNotNullParameter(viewState, "p1");
             WidgetGuildBoostTransfer.access$configureUI((WidgetGuildBoostTransfer) this.receiver, viewState);

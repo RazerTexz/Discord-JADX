@@ -60,12 +60,12 @@ import p507d0.p592z.p594d.Lambda;
 import p658rx.Observable;
 import p658rx.Subscription;
 
-/* compiled from: ViewHolderUserRichPresence.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: ViewHolderUserRichPresence.kt */
+/* JADX INFO: loaded from: classes.dex */
 public class ViewHolderUserRichPresence {
     public static final int BASE_RICH_PRESENCE_TYPE = 0;
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     public static final int GAME_RICH_PRESENCE_TYPE = 1;
     public static final int MUSIC_RICH_PRESENCE_TYPE = 2;
@@ -87,7 +87,7 @@ public class ViewHolderUserRichPresence {
     private final int richPresenceType;
     private final View root;
 
-    /* compiled from: ViewHolderUserRichPresence.kt */
+    /* JADX INFO: compiled from: ViewHolderUserRichPresence.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -473,8 +473,8 @@ public class ViewHolderUserRichPresence {
         }
     }
 
-    /* compiled from: ViewHolderUserRichPresence.kt */
-    /* renamed from: com.discord.widgets.user.presence.ViewHolderUserRichPresence$configureUiTimestamp$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.user.presence.ViewHolderUserRichPresence$configureUiTimestamp$1 */
+    /* JADX INFO: compiled from: ViewHolderUserRichPresence.kt */
     public static final class C102821 extends Lambda implements Function1<Subscription, Unit> {
         public C102821() {
             super(1);
@@ -486,15 +486,15 @@ public class ViewHolderUserRichPresence {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Subscription subscription) {
             Intrinsics3.checkNotNullParameter(subscription, "it");
             ViewHolderUserRichPresence.access$setPerSecondTimerSubscription$p(ViewHolderUserRichPresence.this, subscription);
         }
     }
 
-    /* compiled from: ViewHolderUserRichPresence.kt */
-    /* renamed from: com.discord.widgets.user.presence.ViewHolderUserRichPresence$configureUiTimestamp$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.user.presence.ViewHolderUserRichPresence$configureUiTimestamp$2 */
+    /* JADX INFO: compiled from: ViewHolderUserRichPresence.kt */
     public static final class C102832 extends Lambda implements Function1<Long, Unit> {
         public final /* synthetic */ Activity $model;
 
@@ -510,7 +510,7 @@ public class ViewHolderUserRichPresence {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Long l) {
             ViewHolderUserRichPresence.this.setTimeTextViews(this.$model.getTimestamps());
         }

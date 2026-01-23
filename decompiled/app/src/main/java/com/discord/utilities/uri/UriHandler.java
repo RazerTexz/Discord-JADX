@@ -49,16 +49,16 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 import p507d0.p592z.p594d.Reflection2;
 
-/* compiled from: UriHandler.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: UriHandler.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class UriHandler {
     private static final String APP_PACKAGE = "com.discord";
     public static final UriHandler INSTANCE = new UriHandler();
     private static final String URL_PLAY_STORE_ALT = "https://play.google.com/store/apps/details";
     private static final String URL_PLAY_STORE_DIRECT = "market://details";
 
-    /* compiled from: UriHandler.kt */
-    /* renamed from: com.discord.utilities.uri.UriHandler$directToPlayStore$1 */
+    /* JADX INFO: renamed from: com.discord.utilities.uri.UriHandler$directToPlayStore$1 */
+    /* JADX INFO: compiled from: UriHandler.kt */
     public static final class C69791 extends Lambda implements Function1<String, String> {
         public final /* synthetic */ String $packageName;
         public final /* synthetic */ String $source;
@@ -75,7 +75,7 @@ public final class UriHandler {
             return invoke2(str);
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final String invoke2(String str) {
             Intrinsics3.checkNotNullParameter(str, NotificationCompat.MessagingStyle.Message.KEY_DATA_URI);
             Uri.Builder builderAppendQueryParameter = Uri.parse(str).buildUpon().appendQueryParameter(ModelAuditLogEntry.CHANGE_KEY_ID, this.$packageName);
@@ -87,8 +87,8 @@ public final class UriHandler {
         }
     }
 
-    /* compiled from: UriHandler.kt */
-    /* renamed from: com.discord.utilities.uri.UriHandler$directToPlayStore$2 */
+    /* JADX INFO: renamed from: com.discord.utilities.uri.UriHandler$directToPlayStore$2 */
+    /* JADX INFO: compiled from: UriHandler.kt */
     public static final class C69802 extends Lambda implements Function0<Unit> {
         public final /* synthetic */ Context $context;
         public final /* synthetic */ C69791 $createFullUriString$1;
@@ -106,14 +106,14 @@ public final class UriHandler {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             UriHandler.handle$default(UriHandler.INSTANCE, this.$context, this.$createFullUriString$1.invoke2(UriHandler.URL_PLAY_STORE_ALT), false, false, null, 28, null);
         }
     }
 
-    /* compiled from: UriHandler.kt */
-    /* renamed from: com.discord.utilities.uri.UriHandler$openUrlExternally$1 */
+    /* JADX INFO: renamed from: com.discord.utilities.uri.UriHandler$openUrlExternally$1 */
+    /* JADX INFO: compiled from: UriHandler.kt */
     public static final class C69821 extends Lambda implements Function1<ResolveInfo, String> {
         public static final C69821 INSTANCE = new C69821();
 
@@ -126,14 +126,14 @@ public final class UriHandler {
             return invoke2(resolveInfo);
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final String invoke2(ResolveInfo resolveInfo) {
             return resolveInfo.activityInfo.packageName;
         }
     }
 
-    /* compiled from: UriHandler.kt */
-    /* renamed from: com.discord.utilities.uri.UriHandler$openUrlExternally$2 */
+    /* JADX INFO: renamed from: com.discord.utilities.uri.UriHandler$openUrlExternally$2 */
+    /* JADX INFO: compiled from: UriHandler.kt */
     public static final class C69832 extends Lambda implements Function1<String, Boolean> {
         public final /* synthetic */ Context $context;
 
@@ -148,7 +148,7 @@ public final class UriHandler {
             return Boolean.valueOf(invoke2(str));
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final boolean invoke2(String str) {
             Intrinsics3.checkNotNullParameter(str, "it");
             return !Intrinsics3.areEqual(str, this.$context.getPackageName());
@@ -188,6 +188,7 @@ public final class UriHandler {
         directToPlayStore(context, str, str2);
     }
 
+    /* JADX WARN: Multi-variable type inference failed */
     public static /* synthetic */ void handle$default(UriHandler uriHandler, Context context, String str, boolean z2, boolean z3, Function0 function0, int i, Object obj) {
         boolean z4 = (i & 4) != 0 ? false : z2;
         boolean z5 = (i & 8) != 0 ? false : z3;
@@ -256,6 +257,7 @@ public final class UriHandler {
         customTabsIntentBuild.launchUrl(context, uri);
     }
 
+    /* JADX WARN: Multi-variable type inference failed */
     public static /* synthetic */ void openUrl$default(UriHandler uriHandler, Context context, Uri uri, String str, boolean z2, boolean z3, Function0 function0, int i, Object obj) {
         uriHandler.openUrl(context, uri, str, (i & 8) != 0 ? false : z2, (i & 16) != 0 ? false : z3, (i & 32) != 0 ? null : function0);
     }
@@ -276,6 +278,7 @@ public final class UriHandler {
         }
     }
 
+    /* JADX WARN: Multi-variable type inference failed */
     public static /* synthetic */ void openUrlExternally$default(UriHandler uriHandler, Context context, Uri uri, String str, boolean z2, Function0 function0, int i, Object obj) {
         uriHandler.openUrlExternally(context, uri, (i & 4) != 0 ? null : str, (i & 8) != 0 ? false : z2, (i & 16) != 0 ? null : function0);
     }
@@ -322,8 +325,8 @@ public final class UriHandler {
         }
     }
 
-    /* compiled from: UriHandler.kt */
-    /* renamed from: com.discord.utilities.uri.UriHandler$openUrl$1 */
+    /* JADX INFO: renamed from: com.discord.utilities.uri.UriHandler$openUrl$1 */
+    /* JADX INFO: compiled from: UriHandler.kt */
     public static final class C69811 extends Lambda implements Function0<Unit> {
         public final /* synthetic */ Context $context;
         public final /* synthetic */ boolean $forceExternal;
@@ -341,7 +344,7 @@ public final class UriHandler {
             this.$onFailure = function0;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             AppTransitionActivity.f14963j = false;
             UriHandler.access$openUrlExternally(UriHandler.INSTANCE, this.$context, this.$uri, this.$url, this.$forceExternal, this.$onFailure);

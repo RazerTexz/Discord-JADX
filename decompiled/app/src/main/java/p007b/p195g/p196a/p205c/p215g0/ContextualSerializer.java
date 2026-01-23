@@ -5,10 +5,10 @@ import p007b.p195g.p196a.p205c.BeanProperty;
 import p007b.p195g.p196a.p205c.JsonSerializer;
 import p007b.p195g.p196a.p205c.SerializerProvider;
 
-/* compiled from: ContextualSerializer.java */
-/* renamed from: b.g.a.c.g0.i, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.g.a.c.g0.i, reason: use source file name */
+/* JADX INFO: compiled from: ContextualSerializer.java */
+/* JADX INFO: loaded from: classes3.dex */
 public interface ContextualSerializer {
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     JsonSerializer<?> mo1997a(SerializerProvider serializerProvider, BeanProperty beanProperty) throws JsonMappingException;
 }

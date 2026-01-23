@@ -4,15 +4,15 @@ import kotlin.ranges.Ranges2;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: Regex.kt */
-/* renamed from: d0.g0.e, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.g0.e, reason: use source file name */
+/* JADX INFO: compiled from: Regex.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class Regex2 {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final String f25150a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final Ranges2 f25151b;
 
     public Regex2(String str, Ranges2 ranges2) {

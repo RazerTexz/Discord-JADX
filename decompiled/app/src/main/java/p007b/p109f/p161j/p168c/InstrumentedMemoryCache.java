@@ -3,15 +3,15 @@ package p007b.p109f.p161j.p168c;
 import com.facebook.common.references.CloseableReference;
 import p007b.p109f.p115d.p119d.Predicate2;
 
-/* compiled from: InstrumentedMemoryCache.java */
-/* renamed from: b.f.j.c.s, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.f.j.c.s, reason: use source file name */
+/* JADX INFO: compiled from: InstrumentedMemoryCache.java */
+/* JADX INFO: loaded from: classes.dex */
 public class InstrumentedMemoryCache<K, V> implements MemoryCache<K, V> {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final MemoryCache<K, V> f3687a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final MemoryCacheTracker f3688b;
 
     public InstrumentedMemoryCache(MemoryCache<K, V> memoryCache, MemoryCacheTracker memoryCacheTracker) {
@@ -20,14 +20,14 @@ public class InstrumentedMemoryCache<K, V> implements MemoryCache<K, V> {
     }
 
     @Override // p007b.p109f.p161j.p168c.MemoryCache
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public CloseableReference<V> mo1235a(K k, CloseableReference<V> closeableReference) {
         this.f3688b.mo1234c(k);
         return this.f3687a.mo1235a(k, closeableReference);
     }
 
     @Override // p007b.p109f.p161j.p168c.MemoryCache
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public int mo1236d(Predicate2<K> predicate2) {
         return this.f3687a.mo1236d(predicate2);
     }

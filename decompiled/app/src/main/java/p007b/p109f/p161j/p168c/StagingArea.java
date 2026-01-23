@@ -10,15 +10,15 @@ import p007b.p085c.p086a.p087a0.AnimatableValueParser;
 import p007b.p109f.p115d.p120e.FLog;
 import p007b.p109f.p161j.p175j.EncodedImage2;
 
-/* compiled from: StagingArea.java */
-/* renamed from: b.f.j.c.a0, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.f.j.c.a0, reason: use source file name */
+/* JADX INFO: compiled from: StagingArea.java */
+/* JADX INFO: loaded from: classes.dex */
 public class StagingArea {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public Map<CacheKey, EncodedImage2> f3647a = new HashMap();
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public synchronized EncodedImage2 m1208a(CacheKey cacheKey) {
         Objects.requireNonNull(cacheKey);
         EncodedImage2 encodedImage2M1336a = this.f3647a.get(cacheKey);
@@ -35,7 +35,7 @@ public class StagingArea {
         return encodedImage2M1336a;
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public synchronized void m1209b(CacheKey cacheKey, EncodedImage2 encodedImage2) {
         AnimatableValueParser.m527i(Boolean.valueOf(EncodedImage2.m1338u(encodedImage2)));
         EncodedImage2 encodedImage2Put = this.f3647a.put(cacheKey, EncodedImage2.m1336a(encodedImage2));
@@ -48,7 +48,7 @@ public class StagingArea {
         }
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public boolean m1210c(CacheKey cacheKey) {
         EncodedImage2 encodedImage2Remove;
         Objects.requireNonNull(cacheKey);
@@ -65,7 +65,7 @@ public class StagingArea {
         }
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public synchronized boolean m1211d(CacheKey cacheKey, EncodedImage2 encodedImage2) {
         Objects.requireNonNull(cacheKey);
         Objects.requireNonNull(encodedImage2);

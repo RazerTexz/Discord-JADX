@@ -8,7 +8,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import androidx.annotation.RestrictTo;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class SimpleCursorAdapter extends ResourceCursorAdapter {
     private CursorToStringConverter mCursorToStringConverter;
 

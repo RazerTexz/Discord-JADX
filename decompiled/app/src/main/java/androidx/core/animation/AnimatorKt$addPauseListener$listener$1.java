@@ -5,8 +5,8 @@ import kotlin.Unit;
 import kotlin.jvm.functions.Function1;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: Animator.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: Animator.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class AnimatorKt$addPauseListener$listener$1 implements Animator.AnimatorPauseListener {
     public final /* synthetic */ Function1<Animator, Unit> $onPause;
     public final /* synthetic */ Function1<Animator, Unit> $onResume;

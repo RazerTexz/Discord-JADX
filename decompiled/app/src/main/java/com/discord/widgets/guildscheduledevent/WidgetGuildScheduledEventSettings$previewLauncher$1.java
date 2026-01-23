@@ -7,8 +7,8 @@ import kotlin.jvm.functions.Function3;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetGuildScheduledEventSettings.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetGuildScheduledEventSettings.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetGuildScheduledEventSettings$previewLauncher$1 extends Lambda implements Function3<Long, Long, Boolean, Unit> {
     public final /* synthetic */ WidgetGuildScheduledEventSettings this$0;
 

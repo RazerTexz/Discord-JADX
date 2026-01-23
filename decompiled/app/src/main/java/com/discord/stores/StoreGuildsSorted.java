@@ -35,8 +35,8 @@ import p637j0.p641k.Func1;
 import p658rx.Observable;
 import p658rx.functions.Func4;
 
-/* compiled from: StoreGuildsSorted.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: StoreGuildsSorted.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class StoreGuildsSorted extends StoreV2 {
     private final Dispatcher dispatcher;
     private final List<Entry> entries;
@@ -46,10 +46,10 @@ public final class StoreGuildsSorted extends StoreV2 {
     private final ObservationDeck observationDeck;
     private final List<ModelGuildFolder> positions;
 
-    /* compiled from: StoreGuildsSorted.kt */
+    /* JADX INFO: compiled from: StoreGuildsSorted.kt */
     public static abstract class Entry {
 
-        /* compiled from: StoreGuildsSorted.kt */
+        /* JADX INFO: compiled from: StoreGuildsSorted.kt */
         public static final /* data */ class Folder extends Entry {
             private final Integer color;
             private final List<Guild> guilds;
@@ -66,6 +66,7 @@ public final class StoreGuildsSorted extends StoreV2 {
                 this.name = str;
             }
 
+            /* JADX WARN: Multi-variable type inference failed */
             public static /* synthetic */ Folder copy$default(Folder folder, long j, List list, Integer num, String str, int i, Object obj) {
                 if ((i & 1) != 0) {
                     j = folder.id;
@@ -97,7 +98,7 @@ public final class StoreGuildsSorted extends StoreV2 {
                 return new ModelGuildFolder(lValueOf, arrayList, this.color, this.name);
             }
 
-            /* renamed from: component1, reason: from getter */
+            /* JADX INFO: renamed from: component1, reason: from getter */
             public final long getId() {
                 return this.id;
             }
@@ -106,12 +107,12 @@ public final class StoreGuildsSorted extends StoreV2 {
                 return this.guilds;
             }
 
-            /* renamed from: component3, reason: from getter */
+            /* JADX INFO: renamed from: component3, reason: from getter */
             public final Integer getColor() {
                 return this.color;
             }
 
-            /* renamed from: component4, reason: from getter */
+            /* JADX INFO: renamed from: component4, reason: from getter */
             public final String getName() {
                 return this.name;
             }
@@ -170,7 +171,7 @@ public final class StoreGuildsSorted extends StoreV2 {
             }
         }
 
-        /* compiled from: StoreGuildsSorted.kt */
+        /* JADX INFO: compiled from: StoreGuildsSorted.kt */
         public static final /* data */ class SingletonGuild extends Entry {
             private final Guild guild;
 
@@ -193,7 +194,7 @@ public final class StoreGuildsSorted extends StoreV2 {
                 return new ModelGuildFolder(null, CollectionsJVM.listOf(Long.valueOf(this.guild.getId())), null, null, 8, null);
             }
 
-            /* renamed from: component1, reason: from getter */
+            /* JADX INFO: renamed from: component1, reason: from getter */
             public final Guild getGuild() {
                 return this.guild;
             }
@@ -240,7 +241,7 @@ public final class StoreGuildsSorted extends StoreV2 {
         }
     }
 
-    /* compiled from: StoreGuildsSorted.kt */
+    /* JADX INFO: compiled from: StoreGuildsSorted.kt */
     public static final /* data */ class State {
         private final Map<Long, Long> joinedAt;
         private final Set<Long> mutedGuilds;
@@ -330,8 +331,8 @@ public final class StoreGuildsSorted extends StoreV2 {
         }
     }
 
-    /* compiled from: StoreGuildsSorted.kt */
-    /* renamed from: com.discord.stores.StoreGuildsSorted$ensureValidPositions$6 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreGuildsSorted$ensureValidPositions$6 */
+    /* JADX INFO: compiled from: StoreGuildsSorted.kt */
     public static final class C61186 extends Lambda implements Function1<ModelGuildFolder, Boolean> {
         public static final C61186 INSTANCE = new C61186();
 
@@ -344,19 +345,19 @@ public final class StoreGuildsSorted extends StoreV2 {
             return Boolean.valueOf(invoke2(modelGuildFolder));
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final boolean invoke2(ModelGuildFolder modelGuildFolder) {
             Intrinsics3.checkNotNullParameter(modelGuildFolder, "it");
             return modelGuildFolder.getGuildIds().isEmpty();
         }
     }
 
-    /* compiled from: StoreGuildsSorted.kt */
-    /* renamed from: com.discord.stores.StoreGuildsSorted$init$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreGuildsSorted$init$1 */
+    /* JADX INFO: compiled from: StoreGuildsSorted.kt */
     public static final class C61191 extends Lambda implements Function1<State, Unit> {
 
-        /* compiled from: StoreGuildsSorted.kt */
-        /* renamed from: com.discord.stores.StoreGuildsSorted$init$1$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.stores.StoreGuildsSorted$init$1$1, reason: invalid class name */
+        /* JADX INFO: compiled from: StoreGuildsSorted.kt */
         public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
             public final /* synthetic */ State $state;
 
@@ -372,7 +373,7 @@ public final class StoreGuildsSorted extends StoreV2 {
                 return Unit.f27425a;
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2() {
                 StoreGuildsSorted.access$handleNewState(StoreGuildsSorted.this, this.$state);
             }
@@ -388,15 +389,15 @@ public final class StoreGuildsSorted extends StoreV2 {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(State state) {
             Intrinsics3.checkNotNullParameter(state, "state");
             StoreGuildsSorted.access$getDispatcher$p(StoreGuildsSorted.this).schedule(new AnonymousClass1(state));
         }
     }
 
-    /* compiled from: StoreGuildsSorted.kt */
-    /* renamed from: com.discord.stores.StoreGuildsSorted$observeEntries$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreGuildsSorted$observeEntries$1 */
+    /* JADX INFO: compiled from: StoreGuildsSorted.kt */
     public static final class C61201 extends Lambda implements Function0<List<? extends Entry>> {
         public C61201() {
             super(0);
@@ -408,14 +409,14 @@ public final class StoreGuildsSorted extends StoreV2 {
         }
 
         @Override // kotlin.jvm.functions.Function0
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final List<? extends Entry> invoke2() {
             return StoreGuildsSorted.this.getEntries();
         }
     }
 
-    /* compiled from: StoreGuildsSorted.kt */
-    /* renamed from: com.discord.stores.StoreGuildsSorted$observeOrderedGuilds$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreGuildsSorted$observeOrderedGuilds$1 */
+    /* JADX INFO: compiled from: StoreGuildsSorted.kt */
     public static final class C61211 extends Lambda implements Function0<LinkedHashMap<Long, Guild>> {
         public C61211() {
             super(0);
@@ -427,14 +428,14 @@ public final class StoreGuildsSorted extends StoreV2 {
         }
 
         @Override // kotlin.jvm.functions.Function0
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final LinkedHashMap<Long, Guild> invoke2() {
             return StoreGuildsSorted.this.getOrderedGuilds();
         }
     }
 
-    /* compiled from: StoreGuildsSorted.kt */
-    /* renamed from: com.discord.stores.StoreGuildsSorted$observeStores$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreGuildsSorted$observeStores$1 */
+    /* JADX INFO: compiled from: StoreGuildsSorted.kt */
     public static final class C61221<T, R> implements Func1<List<? extends Long>, Set<? extends Long>> {
         public static final C61221 INSTANCE = new C61221();
 
@@ -443,15 +444,15 @@ public final class StoreGuildsSorted extends StoreV2 {
             return call2((List<Long>) list);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final Set<Long> call2(List<Long> list) {
             Intrinsics3.checkNotNullExpressionValue(list, "it");
             return _Collections.toSet(list);
         }
     }
 
-    /* compiled from: StoreGuildsSorted.kt */
-    /* renamed from: com.discord.stores.StoreGuildsSorted$observeStores$2 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreGuildsSorted$observeStores$2 */
+    /* JADX INFO: compiled from: StoreGuildsSorted.kt */
     public static final class C61232<T1, T2, T3, T4, R> implements Func4<Map<Long, ? extends Guild>, Set<? extends Long>, Map<Long, ? extends Long>, List<? extends ModelGuildFolder>, State> {
         public static final C61232 INSTANCE = new C61232();
 
@@ -460,7 +461,7 @@ public final class StoreGuildsSorted extends StoreV2 {
             return call2((Map<Long, Guild>) map, (Set<Long>) set, (Map<Long, Long>) map2, (List<ModelGuildFolder>) list);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final State call2(Map<Long, Guild> map, Set<Long> set, Map<Long, Long> map2, List<ModelGuildFolder> list) {
             Intrinsics3.checkNotNullExpressionValue(set, "mutedGuilds");
             Intrinsics3.checkNotNullExpressionValue(map2, "joinedAt");
@@ -469,8 +470,8 @@ public final class StoreGuildsSorted extends StoreV2 {
         }
     }
 
-    /* compiled from: StoreGuildsSorted.kt */
-    /* renamed from: com.discord.stores.StoreGuildsSorted$setPositions$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreGuildsSorted$setPositions$1 */
+    /* JADX INFO: compiled from: StoreGuildsSorted.kt */
     public static final class C61241 extends Lambda implements Function0<Unit> {
         public final /* synthetic */ List $guildPositions;
 
@@ -486,14 +487,14 @@ public final class StoreGuildsSorted extends StoreV2 {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             StoreGuildsSorted.access$handleNewPositionsFromUser(StoreGuildsSorted.this, this.$guildPositions);
         }
     }
 
-    /* compiled from: StoreGuildsSorted.kt */
-    /* renamed from: com.discord.stores.StoreGuildsSorted$updatePositions$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreGuildsSorted$updatePositions$1 */
+    /* JADX INFO: compiled from: StoreGuildsSorted.kt */
     public static final class C61251<T> implements Comparator<Long> {
         public final /* synthetic */ Map $guilds;
         public final /* synthetic */ State $state;
@@ -508,7 +509,7 @@ public final class StoreGuildsSorted extends StoreV2 {
             return compare2(l, l2);
         }
 
-        /* renamed from: compare, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: compare, reason: avoid collision after fix types in other method */
         public final int compare2(Long l, Long l2) {
             String name;
             String name2;

@@ -7,12 +7,12 @@ import android.util.Log;
 import androidx.core.os.EnvironmentCompat;
 import java.util.Objects;
 
-/* compiled from: com.google.android.gms:play-services-basement@@17.6.0 */
-/* renamed from: b.i.a.f.e.k.s0 */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.e.k.s0 */
+/* JADX INFO: compiled from: com.google.android.gms:play-services-basement@@17.6.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public final class C3380s0 implements Handler.Callback {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final /* synthetic */ C3382t0 f9563j;
 
     public /* synthetic */ C3380s0(C3382t0 c3382t0) {

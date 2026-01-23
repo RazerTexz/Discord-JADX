@@ -9,13 +9,13 @@ import p007b.p100d.p104b.p105a.outline;
 import p507d0.p580t.Collections2;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: GuildExperimentDto.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: GuildExperimentDto.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class GuildExperimentOverridesDto {
     private final int bucket;
     private final List<Long> guilds;
 
-    /* compiled from: GuildExperimentDto.kt */
+    /* JADX INFO: compiled from: GuildExperimentDto.kt */
     public static final class Parser {
         public static final Parser INSTANCE = new Parser();
 
@@ -51,7 +51,7 @@ public final /* data */ class GuildExperimentOverridesDto {
         return guildExperimentOverridesDto.copy(i, list);
     }
 
-    /* renamed from: component1, reason: from getter */
+    /* JADX INFO: renamed from: component1, reason: from getter */
     public final int getBucket() {
         return this.bucket;
     }

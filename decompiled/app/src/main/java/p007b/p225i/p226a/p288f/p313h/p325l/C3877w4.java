@@ -7,15 +7,15 @@ import java.nio.charset.Charset;
 import java.util.Objects;
 import p007b.p225i.p226a.p288f.p313h.p325l.AbstractC3851u4;
 
-/* compiled from: com.google.android.gms:play-services-measurement-base@@18.0.0 */
-/* renamed from: b.i.a.f.h.l.w4 */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.h.l.w4 */
+/* JADX INFO: compiled from: com.google.android.gms:play-services-measurement-base@@18.0.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public final class C3877w4 {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final Charset f10379a = Charset.forName(Constants.ENCODING);
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static final byte[] f10380b;
 
     static {
@@ -38,17 +38,17 @@ public final class C3877w4 {
         }
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static int m5344a(long j) {
         return (int) (j ^ (j >>> 32));
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static int m5345b(boolean z2) {
         return z2 ? 1231 : 1237;
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public static Object m5346c(Object obj, Object obj2) {
         InterfaceC3612c6 interfaceC3612c6 = (InterfaceC3612c6) obj2;
         AbstractC3759n3 abstractC3759n3 = (AbstractC3759n3) ((InterfaceC3612c6) obj).mo4605f();

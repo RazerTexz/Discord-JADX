@@ -8,15 +8,15 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.DialogFragment;
 import androidx.fragment.app.FragmentManager;
 
-/* compiled from: com.google.android.gms:play-services-base@@17.3.0 */
-/* renamed from: b.i.a.f.e.g */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.e.g */
+/* JADX INFO: compiled from: com.google.android.gms:play-services-base@@17.3.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public class C3264g extends DialogFragment {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public Dialog f9317j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public DialogInterface.OnCancelListener f9318k;
 
     @Override // androidx.fragment.app.DialogFragment, android.content.DialogInterface.OnCancelListener

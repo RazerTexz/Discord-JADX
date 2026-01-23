@@ -10,18 +10,18 @@ import p007b.p100d.p104b.p105a.outline;
 import p507d0.p580t._Collections;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: GifAdapterItem.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: GifAdapterItem.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public abstract class GifAdapterItem implements DiffKeyProvider {
     private final ViewType type;
 
-    /* compiled from: GifAdapterItem.kt */
+    /* JADX INFO: compiled from: GifAdapterItem.kt */
     public static abstract class SuggestedTermsItem extends GifAdapterItem {
         private final List<String> terms;
         private final int titleResId;
         private final ViewType viewType;
 
-        /* compiled from: GifAdapterItem.kt */
+        /* JADX INFO: compiled from: GifAdapterItem.kt */
         public static final /* data */ class SuggestedTermsEmptyResults extends SuggestedTermsItem {
             private final List<String> terms;
             private final int titleResId;
@@ -94,7 +94,7 @@ public abstract class GifAdapterItem implements DiffKeyProvider {
             }
         }
 
-        /* compiled from: GifAdapterItem.kt */
+        /* JADX INFO: compiled from: GifAdapterItem.kt */
         public static final /* data */ class SuggestedTermsNonEmptyResults extends SuggestedTermsItem {
             private final List<String> terms;
             private final int titleResId;
@@ -196,18 +196,18 @@ public abstract class GifAdapterItem implements DiffKeyProvider {
         }
     }
 
-    /* compiled from: GifAdapterItem.kt */
+    /* JADX INFO: compiled from: GifAdapterItem.kt */
     public enum ViewType {
         VIEW_TYPE_GIF_ITEM,
         VIEW_TYPE_GIF_SEARCH_TERMS_EMPTY_RESULTS,
         VIEW_TYPE_GIF_SEARCH_TERMS_NON_EMPTY_RESULTS;
 
 
-        /* renamed from: Companion, reason: from kotlin metadata */
+        /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
         public static final Companion INSTANCE = new Companion(null);
         private static final ViewType[] values = values();
 
-        /* compiled from: GifAdapterItem.kt */
+        /* JADX INFO: compiled from: GifAdapterItem.kt */
         public static final class Companion {
             private Companion() {
             }
@@ -234,7 +234,7 @@ public abstract class GifAdapterItem implements DiffKeyProvider {
         return this.type;
     }
 
-    /* compiled from: GifAdapterItem.kt */
+    /* JADX INFO: compiled from: GifAdapterItem.kt */
     public static final /* data */ class GifItem extends GifAdapterItem {
         private final ModelGif gif;
         private final String key;
@@ -259,12 +259,12 @@ public abstract class GifAdapterItem implements DiffKeyProvider {
             return gifItem.copy(modelGif, str);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final ModelGif getGif() {
             return this.gif;
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final String getQuery() {
             return this.query;
         }

@@ -8,15 +8,15 @@ import p507d0.p513e0.KClass;
 import p507d0.p513e0.KProperty2;
 import p507d0.p513e0.KProperty3;
 
-/* compiled from: Reflection.java */
-/* renamed from: d0.z.d.a0, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.z.d.a0, reason: use source file name */
+/* JADX INFO: compiled from: Reflection.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class Reflection2 {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final ReflectionFactory f25275a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static final KClass[] f25276b;
 
     static {

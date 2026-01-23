@@ -8,8 +8,8 @@ import androidx.annotation.RestrictTo;
 import androidx.work.Logger;
 import androidx.work.impl.utils.taskexecutor.TaskExecutor;
 
+/* JADX INFO: loaded from: classes.dex */
 @RestrictTo({RestrictTo.Scope.LIBRARY_GROUP})
-/* loaded from: classes.dex */
 public class StorageNotLowTracker extends BroadcastReceiverConstraintTracker<Boolean> {
     private static final String TAG = Logger.tagWithPrefix("StorageNotLowTracker");
 

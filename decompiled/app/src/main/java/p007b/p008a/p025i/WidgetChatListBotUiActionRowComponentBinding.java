@@ -10,20 +10,20 @@ import com.discord.C5419R;
 import com.discord.widgets.botuikit.views.ActionRowComponentView;
 import com.google.android.flexbox.FlexboxLayout;
 
-/* compiled from: WidgetChatListBotUiActionRowComponentBinding.java */
-/* renamed from: b.a.i.a5, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.a.i.a5, reason: use source file name */
+/* JADX INFO: compiled from: WidgetChatListBotUiActionRowComponentBinding.java */
+/* JADX INFO: loaded from: classes.dex */
 public final class WidgetChatListBotUiActionRowComponentBinding implements ViewBinding {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     @NonNull
     public final ActionRowComponentView f679a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     @NonNull
     public final FlexboxLayout f680b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     @NonNull
     public final ViewInteractionFailedLabelBinding f681c;
 
@@ -34,7 +34,7 @@ public final class WidgetChatListBotUiActionRowComponentBinding implements ViewB
     }
 
     @NonNull
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static WidgetChatListBotUiActionRowComponentBinding m195a(@NonNull View view) {
         int i = C5419R.id.action_row_component_view_group;
         FlexboxLayout flexboxLayout = (FlexboxLayout) view.findViewById(C5419R.id.action_row_component_view_group);

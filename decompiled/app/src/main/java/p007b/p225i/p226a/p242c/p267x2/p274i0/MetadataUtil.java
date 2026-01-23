@@ -12,17 +12,17 @@ import com.google.android.exoplayer2.metadata.id3.TextInformationFrame;
 import p007b.p100d.p104b.p105a.outline;
 import p007b.p225i.p226a.p242c.p259f3.ParsableByteArray;
 
-/* compiled from: MetadataUtil.java */
-/* renamed from: b.i.a.c.x2.i0.h, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.x2.i0.h, reason: use source file name */
+/* JADX INFO: compiled from: MetadataUtil.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class MetadataUtil {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     @VisibleForTesting
     public static final String[] f8418a = {"Blues", "Classic Rock", "Country", "Dance", "Disco", "Funk", "Grunge", "Hip-Hop", "Jazz", "Metal", "New Age", "Oldies", "Other", "Pop", "R&B", "Rap", "Reggae", "Rock", "Techno", "Industrial", "Alternative", "Ska", "Death Metal", "Pranks", "Soundtrack", "Euro-Techno", "Ambient", "Trip-Hop", "Vocal", "Jazz+Funk", "Fusion", "Trance", "Classical", "Instrumental", "Acid", "House", "Game", "Sound Clip", "Gospel", "Noise", "AlternRock", "Bass", "Soul", "Punk", "Space", "Meditative", "Instrumental Pop", "Instrumental Rock", "Ethnic", "Gothic", "Darkwave", "Techno-Industrial", "Electronic", "Pop-Folk", "Eurodance", "Dream", "Southern Rock", "Comedy", "Cult", "Gangsta", "Top 40", "Christian Rap", "Pop/Funk", "Jungle", "Native American", "Cabaret", "New Wave", "Psychadelic", "Rave", "Showtunes", "Trailer", "Lo-Fi", "Tribal", "Acid Punk", "Acid Jazz", "Polka", "Retro", "Musical", "Rock & Roll", "Hard Rock", "Folk", "Folk-Rock", "National Folk", "Swing", "Fast Fusion", "Bebob", "Latin", "Revival", "Celtic", "Bluegrass", "Avantgarde", "Gothic Rock", "Progressive Rock", "Psychedelic Rock", "Symphonic Rock", "Slow Rock", "Big Band", "Chorus", "Easy Listening", "Acoustic", "Humour", "Speech", "Chanson", "Opera", "Chamber Music", "Sonata", "Symphony", "Booty Bass", "Primus", "Porn Groove", "Satire", "Slow Jam", "Club", "Tango", "Samba", "Folklore", "Ballad", "Power Ballad", "Rhythmic Soul", "Freestyle", "Duet", "Punk Rock", "Drum Solo", "A capella", "Euro-House", "Dance Hall", "Goa", "Drum & Bass", "Club-House", "Hardcore", "Terror", "Indie", "BritPop", "Afro-Punk", "Polsk Punk", "Beat", "Christian Gangsta Rap", "Heavy Metal", "Black Metal", "Crossover", "Contemporary Christian", "Christian Rock", "Merengue", "Salsa", "Thrash Metal", "Anime", "Jpop", "Synthpop", "Abstract", "Art Rock", "Baroque", "Bhangra", "Big beat", "Breakbeat", "Chillout", "Downtempo", "Dub", "EBM", "Eclectic", "Electro", "Electroclash", "Emo", "Experimental", "Garage", "Global", "IDM", "Illbient", "Industro-Goth", "Jam Band", "Krautrock", "Leftfield", "Lounge", "Math Rock", "New Romantic", "Nu-Breakz", "Post-Punk", "Post-Rock", "Psytrance", "Shoegaze", "Space Rock", "Trop Rock", "World Music", "Neoclassical", "Audiobook", "Audio theatre", "Neue Deutsche Welle", "Podcast", "Indie-Rock", "G-Funk", "Dubstep", "Garage Rock", "Psybient"};
 
     @Nullable
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static CommentFrame m3721a(int i, ParsableByteArray parsableByteArray) {
         int iM3086f = parsableByteArray.m3086f();
         if (parsableByteArray.m3086f() == 1684108385) {
@@ -36,7 +36,7 @@ public final class MetadataUtil {
     }
 
     @Nullable
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static ApicFrame m3722b(ParsableByteArray parsableByteArray) {
         int iM3086f = parsableByteArray.m3086f();
         if (parsableByteArray.m3086f() != 1684108385) {
@@ -58,7 +58,7 @@ public final class MetadataUtil {
     }
 
     @Nullable
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public static TextInformationFrame m3723c(int i, String str, ParsableByteArray parsableByteArray) {
         int iM3086f = parsableByteArray.m3086f();
         if (parsableByteArray.m3086f() == 1684108385 && iM3086f >= 22) {
@@ -86,7 +86,7 @@ public final class MetadataUtil {
     }
 
     @Nullable
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public static TextInformationFrame m3724d(int i, String str, ParsableByteArray parsableByteArray) {
         int iM3086f = parsableByteArray.m3086f();
         if (parsableByteArray.m3086f() == 1684108385) {
@@ -99,7 +99,7 @@ public final class MetadataUtil {
     }
 
     @Nullable
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public static Id3Frame m3725e(int i, String str, ParsableByteArray parsableByteArray, boolean z2, boolean z3) {
         int iM3726f = m3726f(parsableByteArray);
         if (z3) {
@@ -113,7 +113,7 @@ public final class MetadataUtil {
         return null;
     }
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public static int m3726f(ParsableByteArray parsableByteArray) {
         parsableByteArray.m3080F(4);
         if (parsableByteArray.m3086f() == 1684108385) {

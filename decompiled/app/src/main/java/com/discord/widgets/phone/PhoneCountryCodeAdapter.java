@@ -14,8 +14,8 @@ import java.util.List;
 import p507d0.p580t.Collections2;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: PhoneCountryCodeAdapter.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: PhoneCountryCodeAdapter.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class PhoneCountryCodeAdapter extends RecyclerView.Adapter<PhoneCountryCodeAdapterItem> {
     private List<PhoneCountryCode> items = Collections2.emptyList();
     private PhoneCountryCodeAdapter2 onCountryCodeSelectedListener;

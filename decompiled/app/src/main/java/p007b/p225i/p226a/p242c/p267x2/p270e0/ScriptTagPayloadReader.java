@@ -10,18 +10,18 @@ import java.util.Map;
 import p007b.p225i.p226a.p242c.p259f3.ParsableByteArray;
 import p007b.p225i.p226a.p242c.p267x2.DummyTrackOutput;
 
-/* compiled from: ScriptTagPayloadReader.java */
-/* renamed from: b.i.a.c.x2.e0.d, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.x2.e0.d, reason: use source file name */
+/* JADX INFO: compiled from: ScriptTagPayloadReader.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class ScriptTagPayloadReader extends TagPayloadReader {
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public long f8142b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public long[] f8143c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public long[] f8144d;
 
     public ScriptTagPayloadReader() {
@@ -32,7 +32,7 @@ public final class ScriptTagPayloadReader extends TagPayloadReader {
     }
 
     @Nullable
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public static Object m3661d(ParsableByteArray parsableByteArray, int i) {
         if (i == 0) {
             return Double.valueOf(Double.longBitsToDouble(parsableByteArray.m3093m()));
@@ -79,7 +79,7 @@ public final class ScriptTagPayloadReader extends TagPayloadReader {
         }
     }
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public static HashMap<String, Object> m3662e(ParsableByteArray parsableByteArray) {
         int iM3103w = parsableByteArray.m3103w();
         HashMap<String, Object> map = new HashMap<>(iM3103w);
@@ -93,7 +93,7 @@ public final class ScriptTagPayloadReader extends TagPayloadReader {
         return map;
     }
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public static String m3663f(ParsableByteArray parsableByteArray) {
         int iM3105y = parsableByteArray.m3105y();
         int i = parsableByteArray.f6794b;
@@ -102,13 +102,13 @@ public final class ScriptTagPayloadReader extends TagPayloadReader {
     }
 
     @Override // com.google.android.exoplayer2.extractor.flv.TagPayloadReader
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public boolean mo3657b(ParsableByteArray parsableByteArray) {
         return true;
     }
 
     @Override // com.google.android.exoplayer2.extractor.flv.TagPayloadReader
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public boolean mo3658c(ParsableByteArray parsableByteArray, long j) {
         if (parsableByteArray.m3100t() != 2 || !"onMetaData".equals(m3663f(parsableByteArray)) || parsableByteArray.m3100t() != 8) {
             return false;

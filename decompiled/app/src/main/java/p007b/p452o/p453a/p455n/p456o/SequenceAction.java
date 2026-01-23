@@ -7,26 +7,26 @@ import androidx.annotation.NonNull;
 import androidx.annotation.RequiresApi;
 import java.util.List;
 
-/* compiled from: SequenceAction.java */
+/* JADX INFO: renamed from: b.o.a.n.o.h, reason: use source file name */
+/* JADX INFO: compiled from: SequenceAction.java */
+/* JADX INFO: loaded from: classes3.dex */
 @RequiresApi(21)
-/* renamed from: b.o.a.n.o.h, reason: use source file name */
-/* loaded from: classes3.dex */
 public class SequenceAction extends BaseAction {
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final List<BaseAction> f13943e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public int f13944f = -1;
 
-    /* compiled from: SequenceAction.java */
-    /* renamed from: b.o.a.n.o.h$a */
+    /* JADX INFO: renamed from: b.o.a.n.o.h$a */
+    /* JADX INFO: compiled from: SequenceAction.java */
     public class a implements ActionCallback {
         public a() {
         }
 
         @Override // p007b.p452o.p453a.p455n.p456o.ActionCallback
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public void mo7334a(@NonNull Action2 action2, int i) {
             if (i == Integer.MAX_VALUE) {
                 ((BaseAction) action2).f13937a.remove(this);
@@ -41,7 +41,7 @@ public class SequenceAction extends BaseAction {
     }
 
     @Override // p007b.p452o.p453a.p455n.p456o.BaseAction, p007b.p452o.p453a.p455n.p456o.Action2
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public void mo7248b(@NonNull ActionHolder actionHolder, @NonNull CaptureRequest captureRequest, @NonNull TotalCaptureResult totalCaptureResult) {
         int i = this.f13944f;
         if (i >= 0) {
@@ -50,7 +50,7 @@ public class SequenceAction extends BaseAction {
     }
 
     @Override // p007b.p452o.p453a.p455n.p456o.BaseAction, p007b.p452o.p453a.p455n.p456o.Action2
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public void mo7331c(@NonNull ActionHolder actionHolder, @NonNull CaptureRequest captureRequest) {
         if (this.f13940d) {
             mo7249j(actionHolder);
@@ -63,7 +63,7 @@ public class SequenceAction extends BaseAction {
     }
 
     @Override // p007b.p452o.p453a.p455n.p456o.BaseAction, p007b.p452o.p453a.p455n.p456o.Action2
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public void mo7332d(@NonNull ActionHolder actionHolder, @NonNull CaptureRequest captureRequest, @NonNull CaptureResult captureResult) {
         int i = this.f13944f;
         if (i >= 0) {
@@ -72,7 +72,7 @@ public class SequenceAction extends BaseAction {
     }
 
     @Override // p007b.p452o.p453a.p455n.p456o.BaseAction
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public void mo7335h(@NonNull ActionHolder actionHolder) {
         int i = this.f13944f;
         if (i >= 0) {
@@ -81,7 +81,7 @@ public class SequenceAction extends BaseAction {
     }
 
     @Override // p007b.p452o.p453a.p455n.p456o.BaseAction
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public void mo7249j(@NonNull ActionHolder actionHolder) {
         this.f13939c = actionHolder;
         int i = this.f13944f;
@@ -90,7 +90,7 @@ public class SequenceAction extends BaseAction {
         }
     }
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public final void m7342m() {
         int i = this.f13944f;
         boolean z2 = i == -1;

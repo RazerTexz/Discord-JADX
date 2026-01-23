@@ -12,9 +12,9 @@ import p507d0.p580t.Sets5;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: PrimitiveType.kt */
-/* renamed from: d0.e0.p.d.m0.b.i, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.b.i, reason: use source file name */
+/* JADX INFO: compiled from: PrimitiveType.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public enum PrimitiveType {
     BOOLEAN("Boolean"),
     CHAR("Char"),
@@ -26,22 +26,22 @@ public enum PrimitiveType {
     DOUBLE("Double");
 
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static final Set<PrimitiveType> f22472j;
     private final Lazy arrayTypeFqName$delegate;
     private final Name arrayTypeName;
     private final Lazy typeFqName$delegate;
     private final Name typeName;
 
-    /* compiled from: PrimitiveType.kt */
-    /* renamed from: d0.e0.p.d.m0.b.i$a */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.b.i$a */
+    /* JADX INFO: compiled from: PrimitiveType.kt */
     public static final class a {
         public a(DefaultConstructorMarker defaultConstructorMarker) {
         }
     }
 
-    /* compiled from: PrimitiveType.kt */
-    /* renamed from: d0.e0.p.d.m0.b.i$b */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.b.i$b */
+    /* JADX INFO: compiled from: PrimitiveType.kt */
     public static final class b extends Lambda implements Function0<FqName> {
         public b() {
             super(0);
@@ -61,8 +61,8 @@ public enum PrimitiveType {
         }
     }
 
-    /* compiled from: PrimitiveType.kt */
-    /* renamed from: d0.e0.p.d.m0.b.i$c */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.b.i$c */
+    /* JADX INFO: compiled from: PrimitiveType.kt */
     public static final class c extends Lambda implements Function0<FqName> {
         public c() {
             super(0);
@@ -106,7 +106,7 @@ public enum PrimitiveType {
         this.arrayTypeFqName$delegate = LazyJVM.lazy(lazy5, new b());
     }
 
-    /* renamed from: values, reason: to resolve conflict with enum method */
+    /* JADX INFO: renamed from: values, reason: to resolve conflict with enum method */
     public static PrimitiveType[] valuesCustom() {
         PrimitiveType[] primitiveTypeArrValuesCustom = values();
         PrimitiveType[] primitiveTypeArr = new PrimitiveType[primitiveTypeArrValuesCustom.length];

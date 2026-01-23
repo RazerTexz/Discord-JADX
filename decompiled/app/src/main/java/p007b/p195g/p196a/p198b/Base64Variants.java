@@ -3,21 +3,21 @@ package p007b.p195g.p196a.p198b;
 import com.discord.widgets.chat.input.autocomplete.AutocompleteViewModel;
 import com.google.android.material.badge.BadgeDrawable;
 
-/* compiled from: Base64Variants.java */
-/* renamed from: b.g.a.b.b, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.g.a.b.b, reason: use source file name */
+/* JADX INFO: compiled from: Base64Variants.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class Base64Variants {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final Base64Variant f4451a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static final Base64Variant f4452b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public static final Base64Variant f4453c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public static final Base64Variant f4454d;
 
     static {

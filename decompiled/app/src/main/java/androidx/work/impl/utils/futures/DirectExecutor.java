@@ -3,8 +3,8 @@ package androidx.work.impl.utils.futures;
 import androidx.annotation.RestrictTo;
 import java.util.concurrent.Executor;
 
+/* JADX INFO: loaded from: classes.dex */
 @RestrictTo({RestrictTo.Scope.LIBRARY_GROUP})
-/* loaded from: classes.dex */
 public enum DirectExecutor implements Executor {
     INSTANCE;
 

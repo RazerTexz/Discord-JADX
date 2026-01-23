@@ -8,9 +8,9 @@ import com.facebook.drawee.view.SimpleDraweeView;
 import p007b.p109f.p132g.p139c.BaseControllerListener;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: WidgetChangeLogSpecial.kt */
-/* renamed from: com.discord.widgets.changelog.WidgetChangeLogSpecial$thumbnailControllerListener$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.changelog.WidgetChangeLogSpecial$thumbnailControllerListener$1, reason: use source file name */
+/* JADX INFO: compiled from: WidgetChangeLogSpecial.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetChangeLogSpecial4 extends BaseControllerListener<Object> {
     public final /* synthetic */ WidgetChangeLogSpecial this$0;
 

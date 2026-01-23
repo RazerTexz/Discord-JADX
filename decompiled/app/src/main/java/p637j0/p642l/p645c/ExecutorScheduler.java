@@ -15,38 +15,38 @@ import p658rx.Subscription;
 import p658rx.functions.Action0;
 import p658rx.subscriptions.CompositeSubscription;
 
-/* compiled from: ExecutorScheduler.java */
-/* renamed from: j0.l.c.c, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: j0.l.c.c, reason: use source file name */
+/* JADX INFO: compiled from: ExecutorScheduler.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class ExecutorScheduler extends Scheduler {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final Executor f27203a;
 
-    /* compiled from: ExecutorScheduler.java */
-    /* renamed from: j0.l.c.c$a */
+    /* JADX INFO: renamed from: j0.l.c.c$a */
+    /* JADX INFO: compiled from: ExecutorScheduler.java */
     public static final class a extends Scheduler.Worker implements Runnable {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public final Executor f27204j;
 
-        /* renamed from: n */
+        /* JADX INFO: renamed from: n */
         public final ScheduledExecutorService f27208n;
 
-        /* renamed from: l */
+        /* JADX INFO: renamed from: l */
         public final ConcurrentLinkedQueue<ScheduledAction> f27206l = new ConcurrentLinkedQueue<>();
 
-        /* renamed from: m */
+        /* JADX INFO: renamed from: m */
         public final AtomicInteger f27207m = new AtomicInteger();
 
-        /* renamed from: k */
+        /* JADX INFO: renamed from: k */
         public final CompositeSubscription f27205k = new CompositeSubscription();
 
-        /* compiled from: ExecutorScheduler.java */
-        /* renamed from: j0.l.c.c$a$a, reason: collision with other inner class name */
+        /* JADX INFO: renamed from: j0.l.c.c$a$a, reason: collision with other inner class name */
+        /* JADX INFO: compiled from: ExecutorScheduler.java */
         public class C13353a implements Action0 {
 
-            /* renamed from: j */
+            /* JADX INFO: renamed from: j */
             public final /* synthetic */ MultipleAssignmentSubscription f27209j;
 
             public C13353a(MultipleAssignmentSubscription multipleAssignmentSubscription) {
@@ -59,17 +59,17 @@ public final class ExecutorScheduler extends Scheduler {
             }
         }
 
-        /* compiled from: ExecutorScheduler.java */
-        /* renamed from: j0.l.c.c$a$b */
+        /* JADX INFO: renamed from: j0.l.c.c$a$b */
+        /* JADX INFO: compiled from: ExecutorScheduler.java */
         public class b implements Action0 {
 
-            /* renamed from: j */
+            /* JADX INFO: renamed from: j */
             public final /* synthetic */ MultipleAssignmentSubscription f27211j;
 
-            /* renamed from: k */
+            /* JADX INFO: renamed from: k */
             public final /* synthetic */ Action0 f27212k;
 
-            /* renamed from: l */
+            /* JADX INFO: renamed from: l */
             public final /* synthetic */ Subscription f27213l;
 
             public b(MultipleAssignmentSubscription multipleAssignmentSubscription, Action0 action0, Subscription subscription) {
@@ -107,7 +107,7 @@ public final class ExecutorScheduler extends Scheduler {
         }
 
         @Override // rx.Scheduler.Worker
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public Subscription mo10740a(Action0 action0) {
             if (this.f27205k.f27656k) {
                 return Subscriptions.f27422a;
@@ -129,7 +129,7 @@ public final class ExecutorScheduler extends Scheduler {
         }
 
         @Override // rx.Scheduler.Worker
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public Subscription mo10741b(Action0 action0, long j, TimeUnit timeUnit) {
             if (j <= 0) {
                 return mo10740a(action0);
@@ -192,7 +192,7 @@ public final class ExecutorScheduler extends Scheduler {
     }
 
     @Override // p658rx.Scheduler
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public Scheduler.Worker mo10739a() {
         return new a(this.f27203a);
     }

@@ -28,63 +28,63 @@ import p007b.p085c.p086a.p095y.p096k.AnimatableFloatValue;
 import p007b.p085c.p086a.p095y.p096k.AnimatableIntegerValue;
 import p007b.p085c.p086a.p095y.p098m.BaseLayer2;
 
-/* compiled from: BaseStrokeContent.java */
-/* renamed from: b.c.a.w.b.a, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.c.a.w.b.a, reason: use source file name */
+/* JADX INFO: compiled from: BaseStrokeContent.java */
+/* JADX INFO: loaded from: classes.dex */
 public abstract class BaseStrokeContent implements BaseKeyframeAnimation.b, KeyPathElementContent, DrawingContent {
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final LottieDrawable f2469e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final BaseLayer2 f2470f;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public final float[] f2472h;
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public final Paint f2473i;
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final BaseKeyframeAnimation<?, Float> f2474j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final BaseKeyframeAnimation<?, Integer> f2475k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final List<BaseKeyframeAnimation<?, Float>> f2476l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     @Nullable
     public final BaseKeyframeAnimation<?, Float> f2477m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     @Nullable
     public BaseKeyframeAnimation<ColorFilter, ColorFilter> f2478n;
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final PathMeasure f2465a = new PathMeasure();
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final Path f2466b = new Path();
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final Path f2467c = new Path();
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final RectF f2468d = new RectF();
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public final List<b> f2471g = new ArrayList();
 
-    /* compiled from: BaseStrokeContent.java */
-    /* renamed from: b.c.a.w.b.a$b */
+    /* JADX INFO: renamed from: b.c.a.w.b.a$b */
+    /* JADX INFO: compiled from: BaseStrokeContent.java */
     public static final class b {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final List<PathContent> f2479a = new ArrayList();
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         @Nullable
         public final TrimPathContent f2480b;
 
@@ -135,14 +135,14 @@ public abstract class BaseStrokeContent implements BaseKeyframeAnimation.b, KeyP
     }
 
     @Override // p007b.p085c.p086a.p091w.p093c.BaseKeyframeAnimation.b
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public void mo709a() {
         this.f2469e.invalidateSelf();
     }
 
     /* JADX WARN: Removed duplicated region for block: B:22:0x0052  */
     @Override // p007b.p085c.p086a.p091w.p092b.Content2
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
@@ -185,13 +185,13 @@ public abstract class BaseStrokeContent implements BaseKeyframeAnimation.b, KeyP
     }
 
     @Override // p007b.p085c.p086a.p095y.KeyPathElement
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public void mo711c(KeyPath keyPath, int i, List<KeyPath> list, KeyPath keyPath2) {
         MiscUtils.m656f(keyPath, i, list, keyPath2, this);
     }
 
     @Override // p007b.p085c.p086a.p091w.p092b.DrawingContent
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public void mo712d(RectF rectF, Matrix matrix, boolean z2) {
         this.f2466b.reset();
         for (int i = 0; i < this.f2471g.size(); i++) {
@@ -212,7 +212,7 @@ public abstract class BaseStrokeContent implements BaseKeyframeAnimation.b, KeyP
 
     /* JADX WARN: Removed duplicated region for block: B:69:0x01ff  */
     @Override // p007b.p085c.p086a.p091w.p092b.DrawingContent
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
@@ -341,7 +341,7 @@ public abstract class BaseStrokeContent implements BaseKeyframeAnimation.b, KeyP
     /* JADX WARN: Multi-variable type inference failed */
     @Override // p007b.p085c.p086a.p095y.KeyPathElement
     @CallSuper
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public <T> void mo714g(T t, @Nullable LottieValueCallback<T> lottieValueCallback) {
         if (t == LottieProperty.f2426d) {
             BaseKeyframeAnimation<?, Integer> baseKeyframeAnimation = this.f2475k;

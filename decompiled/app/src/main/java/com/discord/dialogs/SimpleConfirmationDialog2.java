@@ -5,25 +5,25 @@ import android.os.Parcelable;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: SimpleConfirmationDialog.kt */
-/* renamed from: com.discord.dialogs.SimpleConfirmationDialogArgs, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: com.discord.dialogs.SimpleConfirmationDialogArgs, reason: use source file name */
+/* JADX INFO: compiled from: SimpleConfirmationDialog.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class SimpleConfirmationDialog2 implements Parcelable {
     public static final Parcelable.Creator<SimpleConfirmationDialog2> CREATOR = new C5479a();
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final String f18504j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final String f18505k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final String f18506l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public final String f18507m;
 
-    /* renamed from: com.discord.dialogs.SimpleConfirmationDialogArgs$a */
+    /* JADX INFO: renamed from: com.discord.dialogs.SimpleConfirmationDialogArgs$a */
     public static class C5479a implements Parcelable.Creator<SimpleConfirmationDialog2> {
         @Override // android.os.Parcelable.Creator
         public SimpleConfirmationDialog2 createFromParcel(Parcel parcel) {

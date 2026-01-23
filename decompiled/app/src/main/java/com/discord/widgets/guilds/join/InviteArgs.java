@@ -9,8 +9,8 @@ import kotlin.jvm.functions.Function2;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: WidgetGuildJoinCaptchaBottomSheet.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetGuildJoinCaptchaBottomSheet.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final /* data */ class InviteArgs extends CaptchaArgs {
     private final ModelInvite invite;
     private final Class<?> javaClass;
@@ -37,6 +37,7 @@ public final /* data */ class InviteArgs extends CaptchaArgs {
         this.onInviteFlowFinished = function23;
     }
 
+    /* JADX WARN: Multi-variable type inference failed */
     public static /* synthetic */ InviteArgs copy$default(InviteArgs inviteArgs, ModelInvite modelInvite, Class cls, String str, Function2 function2, Function2 function22, Function2 function23, int i, Object obj) {
         if ((i & 1) != 0) {
             modelInvite = inviteArgs.invite;
@@ -63,7 +64,7 @@ public final /* data */ class InviteArgs extends CaptchaArgs {
         return inviteArgs.copy(modelInvite, cls2, str2, function24, function25, function23);
     }
 
-    /* renamed from: component1, reason: from getter */
+    /* JADX INFO: renamed from: component1, reason: from getter */
     public final ModelInvite getInvite() {
         return this.invite;
     }
@@ -72,7 +73,7 @@ public final /* data */ class InviteArgs extends CaptchaArgs {
         return this.javaClass;
     }
 
-    /* renamed from: component3, reason: from getter */
+    /* JADX INFO: renamed from: component3, reason: from getter */
     public final String getLocation() {
         return this.location;
     }

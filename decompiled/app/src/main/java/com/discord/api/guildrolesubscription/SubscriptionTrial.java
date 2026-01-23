@@ -4,20 +4,20 @@ import com.discord.models.domain.ModelAuditLogEntry;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: SubscriptionTrial.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: SubscriptionTrial.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class SubscriptionTrial {
     private final long id;
     private final GuildRoleSubscriptionFreeTrialIntervalTypes interval;
     private final int intervalCount;
     private final long skuId;
 
-    /* renamed from: a, reason: from getter */
+    /* JADX INFO: renamed from: a, reason: from getter */
     public final GuildRoleSubscriptionFreeTrialIntervalTypes getInterval() {
         return this.interval;
     }
 
-    /* renamed from: b, reason: from getter */
+    /* JADX INFO: renamed from: b, reason: from getter */
     public final int getIntervalCount() {
         return this.intervalCount;
     }

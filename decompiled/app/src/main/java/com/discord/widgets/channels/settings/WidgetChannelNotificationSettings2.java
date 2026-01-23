@@ -9,9 +9,9 @@ import p637j0.p641k.Func1;
 import p637j0.p642l.p647e.ScalarSynchronousObservable;
 import p658rx.Observable;
 
-/* compiled from: WidgetChannelNotificationSettings.kt */
-/* renamed from: com.discord.widgets.channels.settings.WidgetChannelNotificationSettings$Model$Companion$get$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.channels.settings.WidgetChannelNotificationSettings$Model$Companion$get$1, reason: use source file name */
+/* JADX INFO: compiled from: WidgetChannelNotificationSettings.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetChannelNotificationSettings2<T, R> implements Func1<Channel, Observable<? extends WidgetChannelNotificationSettings.Model>> {
     public static final WidgetChannelNotificationSettings2 INSTANCE = new WidgetChannelNotificationSettings2();
 
@@ -20,7 +20,7 @@ public final class WidgetChannelNotificationSettings2<T, R> implements Func1<Cha
         return call2(channel);
     }
 
-    /* renamed from: call, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
     public final Observable<? extends WidgetChannelNotificationSettings.Model> call2(Channel channel) {
         if (channel == null) {
             return new ScalarSynchronousObservable(null);

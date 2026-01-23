@@ -7,12 +7,12 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.annotation.RestrictTo;
 
+/* JADX INFO: loaded from: classes3.dex */
 @RestrictTo({RestrictTo.Scope.LIBRARY_GROUP})
-/* loaded from: classes3.dex */
 public class ParcelableSparseArray extends SparseArray<Parcelable> implements Parcelable {
     public static final Parcelable.Creator<ParcelableSparseArray> CREATOR = new C10940a();
 
-    /* renamed from: com.google.android.material.internal.ParcelableSparseArray$a */
+    /* JADX INFO: renamed from: com.google.android.material.internal.ParcelableSparseArray$a */
     public static class C10940a implements Parcelable.ClassLoaderCreator<ParcelableSparseArray> {
         @Override // android.os.Parcelable.ClassLoaderCreator
         @NonNull

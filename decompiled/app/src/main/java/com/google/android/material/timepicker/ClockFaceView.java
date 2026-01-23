@@ -30,40 +30,40 @@ import p007b.p225i.p226a.p341g.p352k.ClockFaceView2;
 import p007b.p225i.p226a.p341g.p352k.ClockFaceView3;
 import p007b.p225i.p226a.p341g.p352k.RadialViewGroup;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public class ClockFaceView extends RadialViewGroup implements ClockHandView.OnRotateListener {
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public final ClockHandView f21186m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public final Rect f21187n;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public final RectF f21188o;
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public final SparseArray<TextView> f21189p;
 
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     public final AccessibilityDelegateCompat f21190q;
 
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     public final int[] f21191r;
 
-    /* renamed from: s */
+    /* JADX INFO: renamed from: s */
     public final float[] f21192s;
 
-    /* renamed from: t */
+    /* JADX INFO: renamed from: t */
     public final int f21193t;
 
-    /* renamed from: u */
+    /* JADX INFO: renamed from: u */
     public String[] f21194u;
 
-    /* renamed from: v */
+    /* JADX INFO: renamed from: v */
     public float f21195v;
 
-    /* renamed from: w */
+    /* JADX INFO: renamed from: w */
     public final ColorStateList f21196w;
 
     /* JADX WARN: Illegal instructions before constructor call */
@@ -97,7 +97,7 @@ public class ClockFaceView extends RadialViewGroup implements ClockHandView.OnRo
         m9156c(strArr, 0);
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final void m9155b() {
         RectF rectF = this.f21186m.f21209u;
         for (int i = 0; i < this.f21189p.size(); i++) {
@@ -113,7 +113,7 @@ public class ClockFaceView extends RadialViewGroup implements ClockHandView.OnRo
         }
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public void m9156c(String[] strArr, @StringRes int i) {
         this.f21194u = strArr;
         LayoutInflater layoutInflaterFrom = LayoutInflater.from(getContext());

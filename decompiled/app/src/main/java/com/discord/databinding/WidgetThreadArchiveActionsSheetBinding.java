@@ -10,54 +10,54 @@ import androidx.viewbinding.ViewBinding;
 import com.discord.C5419R;
 import com.google.android.material.radiobutton.MaterialRadioButton;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public final class WidgetThreadArchiveActionsSheetBinding implements ViewBinding {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     @NonNull
     public final NestedScrollView f18252a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     @NonNull
     public final TextView f18253b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     @NonNull
     public final LinearLayout f18254c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     @NonNull
     public final ConstraintLayout f18255d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     @NonNull
     public final MaterialRadioButton f18256e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     @NonNull
     public final ConstraintLayout f18257f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     @NonNull
     public final MaterialRadioButton f18258g;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     @NonNull
     public final ConstraintLayout f18259h;
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     @NonNull
     public final MaterialRadioButton f18260i;
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     @NonNull
     public final ConstraintLayout f18261j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     @NonNull
     public final MaterialRadioButton f18262k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     @NonNull
     public final TextView f18263l;
 
@@ -77,7 +77,7 @@ public final class WidgetThreadArchiveActionsSheetBinding implements ViewBinding
     }
 
     @NonNull
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static WidgetThreadArchiveActionsSheetBinding m8420a(@NonNull View view) {
         int i = C5419R.id.archive_now;
         TextView textView = (TextView) view.findViewById(C5419R.id.archive_now);

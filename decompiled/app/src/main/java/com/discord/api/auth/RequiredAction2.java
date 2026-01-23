@@ -7,9 +7,9 @@ import java.io.IOException;
 import java.util.Locale;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: RequiredAction.kt */
-/* renamed from: com.discord.api.auth.RequiredActionTypeAdapter, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: com.discord.api.auth.RequiredActionTypeAdapter, reason: use source file name */
+/* JADX INFO: compiled from: RequiredAction.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class RequiredAction2 extends TypeAdapter<RequiredAction> {
     @Override // com.google.gson.TypeAdapter
     public RequiredAction read(JsonReader jsonReader) throws IOException {

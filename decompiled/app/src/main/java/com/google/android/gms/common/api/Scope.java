@@ -9,17 +9,17 @@ import com.google.android.gms.common.internal.safeparcel.AbstractSafeParcelable;
 import p007b.p085c.p086a.p087a0.AnimatableValueParser;
 import p007b.p225i.p226a.p288f.p299e.p300h.C3334l;
 
-/* compiled from: com.google.android.gms:play-services-basement@@17.6.0 */
-/* loaded from: classes3.dex */
+/* JADX INFO: compiled from: com.google.android.gms:play-services-basement@@17.6.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public final class Scope extends AbstractSafeParcelable implements ReflectedParcelable {
 
     @RecentlyNonNull
     public static final Parcelable.Creator<Scope> CREATOR = new C3334l();
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final int f20487j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final String f20488k;
 
     public Scope(@RecentlyNonNull String str) {

@@ -34,7 +34,7 @@ import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import p007b.p100d.p104b.p105a.outline;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class AppCompatViewInflater {
     private static final String LOG_TAG = "AppCompatViewInflater";
     private final Object[] mConstructorArgs = new Object[2];
@@ -86,7 +86,7 @@ public class AppCompatViewInflater {
         }
 
         @Override // android.view.View.OnClickListener
-        public void onClick(@NonNull View view) throws IllegalArgumentException {
+        public void onClick(@NonNull View view) {
             if (this.mResolvedMethod == null) {
                 resolveMethod(this.mHostView.getContext());
             }

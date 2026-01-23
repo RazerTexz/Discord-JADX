@@ -4,7 +4,7 @@ import androidx.annotation.Nullable;
 import java.nio.ByteBuffer;
 import org.webrtc.VideoFrame;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public class NV12Buffer implements VideoFrame.Buffer {
     private final ByteBuffer buffer;
     private final int height;

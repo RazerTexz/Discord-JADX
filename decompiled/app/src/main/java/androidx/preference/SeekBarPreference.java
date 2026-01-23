@@ -12,7 +12,7 @@ import android.widget.SeekBar;
 import android.widget.TextView;
 import androidx.preference.Preference;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class SeekBarPreference extends Preference {
     private static final String TAG = "SeekBarPreference";
     public boolean mAdjustable;
@@ -28,7 +28,7 @@ public class SeekBarPreference extends Preference {
     public boolean mTrackingTouch;
     public boolean mUpdatesContinuously;
 
-    /* renamed from: androidx.preference.SeekBarPreference$1 */
+    /* JADX INFO: renamed from: androidx.preference.SeekBarPreference$1 */
     public class C05261 implements SeekBar.OnSeekBarChangeListener {
         public C05261() {
         }
@@ -62,7 +62,7 @@ public class SeekBarPreference extends Preference {
         }
     }
 
-    /* renamed from: androidx.preference.SeekBarPreference$2 */
+    /* JADX INFO: renamed from: androidx.preference.SeekBarPreference$2 */
     public class ViewOnKeyListenerC05272 implements View.OnKeyListener {
         public ViewOnKeyListenerC05272() {
         }
@@ -288,7 +288,7 @@ public class SeekBarPreference extends Preference {
         public int mMin;
         public int mSeekBarValue;
 
-        /* renamed from: androidx.preference.SeekBarPreference$SavedState$1 */
+        /* JADX INFO: renamed from: androidx.preference.SeekBarPreference$SavedState$1 */
         public static class C05281 implements Parcelable.Creator<SavedState> {
             @Override // android.os.Parcelable.Creator
             public /* bridge */ /* synthetic */ SavedState createFromParcel(Parcel parcel) {

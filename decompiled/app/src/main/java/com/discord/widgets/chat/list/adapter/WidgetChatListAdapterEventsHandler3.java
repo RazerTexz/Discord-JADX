@@ -8,9 +8,9 @@ import p507d0.p580t.CollectionsJVM;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetChatListAdapterEventsHandler.kt */
-/* renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterEventsHandler$UserReactionHandler$commitReactionAdd$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterEventsHandler$UserReactionHandler$commitReactionAdd$1, reason: use source file name */
+/* JADX INFO: compiled from: WidgetChatListAdapterEventsHandler.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetChatListAdapterEventsHandler3 extends Lambda implements Function1<MessageReactionUpdate, Unit> {
     public final /* synthetic */ WidgetChatListAdapterEventsHandler.UserReactionHandler this$0;
 
@@ -26,7 +26,7 @@ public final class WidgetChatListAdapterEventsHandler3 extends Lambda implements
         return Unit.f27425a;
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final void invoke2(MessageReactionUpdate messageReactionUpdate) {
         Intrinsics3.checkNotNullParameter(messageReactionUpdate, "reactionUpdate");
         WidgetChatListAdapterEventsHandler.UserReactionHandler.access$getStoreMessages$p(this.this$0).handleReactionUpdate(CollectionsJVM.listOf(messageReactionUpdate), true);

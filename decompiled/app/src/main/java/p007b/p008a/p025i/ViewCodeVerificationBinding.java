@@ -5,16 +5,16 @@ import androidx.annotation.NonNull;
 import androidx.viewbinding.ViewBinding;
 import com.google.android.flexbox.FlexboxLayout;
 
-/* compiled from: ViewCodeVerificationBinding.java */
-/* renamed from: b.a.i.e2, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.a.i.e2, reason: use source file name */
+/* JADX INFO: compiled from: ViewCodeVerificationBinding.java */
+/* JADX INFO: loaded from: classes.dex */
 public final class ViewCodeVerificationBinding implements ViewBinding {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     @NonNull
     public final FlexboxLayout f808a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     @NonNull
     public final FlexboxLayout f809b;
 

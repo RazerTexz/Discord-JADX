@@ -11,8 +11,8 @@ import p507d0.p579g0.Strings4;
 import p507d0.p579g0.StringsJVM;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: MessageAttachment.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: MessageAttachment.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class MessageAttachment {
     public static final String SPOILER_PREFIX = "SPOILER_";
     private final String filename;
@@ -23,27 +23,27 @@ public final /* data */ class MessageAttachment {
     private final String url;
     private final Integer width;
 
-    /* renamed from: a, reason: from getter */
+    /* JADX INFO: renamed from: a, reason: from getter */
     public final String getFilename() {
         return this.filename;
     }
 
-    /* renamed from: b, reason: from getter */
+    /* JADX INFO: renamed from: b, reason: from getter */
     public final Integer getHeight() {
         return this.height;
     }
 
-    /* renamed from: c, reason: from getter */
+    /* JADX INFO: renamed from: c, reason: from getter */
     public final String getProxyUrl() {
         return this.proxyUrl;
     }
 
-    /* renamed from: d, reason: from getter */
+    /* JADX INFO: renamed from: d, reason: from getter */
     public final long getSize() {
         return this.size;
     }
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final MessageAttachmentType m8068e() {
         boolean z2;
         String str = this.url;
@@ -95,17 +95,17 @@ public final /* data */ class MessageAttachment {
         return Intrinsics3.areEqual(this.url, messageAttachment.url) && this.size == messageAttachment.size && this.id == messageAttachment.id && Intrinsics3.areEqual(this.proxyUrl, messageAttachment.proxyUrl) && Intrinsics3.areEqual(this.filename, messageAttachment.filename) && Intrinsics3.areEqual(this.width, messageAttachment.width) && Intrinsics3.areEqual(this.height, messageAttachment.height);
     }
 
-    /* renamed from: f, reason: from getter */
+    /* JADX INFO: renamed from: f, reason: from getter */
     public final String getUrl() {
         return this.url;
     }
 
-    /* renamed from: g, reason: from getter */
+    /* JADX INFO: renamed from: g, reason: from getter */
     public final Integer getWidth() {
         return this.width;
     }
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public final boolean m8071h() {
         return StringsJVM.startsWith$default(this.filename, SPOILER_PREFIX, false, 2, null);
     }

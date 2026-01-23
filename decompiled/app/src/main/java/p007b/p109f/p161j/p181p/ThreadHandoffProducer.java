@@ -3,28 +3,28 @@ package p007b.p109f.p161j.p181p;
 import java.util.Objects;
 import p007b.p109f.p161j.p183r.FrescoSystrace;
 
-/* compiled from: ThreadHandoffProducer.java */
-/* renamed from: b.f.j.p.f1, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.f.j.p.f1, reason: use source file name */
+/* JADX INFO: compiled from: ThreadHandoffProducer.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class ThreadHandoffProducer<T> implements Producer2<T> {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final Producer2<T> f4051a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final ThreadHandoffProducerQueue f4052b;
 
-    /* compiled from: ThreadHandoffProducer.java */
-    /* renamed from: b.f.j.p.f1$a */
+    /* JADX INFO: renamed from: b.f.j.p.f1$a */
+    /* JADX INFO: compiled from: ThreadHandoffProducer.java */
     public class a extends StatefulProducerRunnable<T> {
 
-        /* renamed from: o */
+        /* JADX INFO: renamed from: o */
         public final /* synthetic */ ProducerListener2 f4053o;
 
-        /* renamed from: p */
+        /* JADX INFO: renamed from: p */
         public final /* synthetic */ ProducerContext f4054p;
 
-        /* renamed from: q */
+        /* JADX INFO: renamed from: q */
         public final /* synthetic */ Consumer2 f4055q;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -36,29 +36,29 @@ public class ThreadHandoffProducer<T> implements Producer2<T> {
         }
 
         @Override // p007b.p109f.p161j.p181p.StatefulProducerRunnable
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public void mo1465b(T t) {
         }
 
         @Override // p007b.p109f.p161j.p181p.StatefulProducerRunnable
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         public T mo1467d() throws Exception {
             return null;
         }
 
         @Override // p007b.p109f.p161j.p181p.StatefulProducerRunnable
-        /* renamed from: g */
+        /* JADX INFO: renamed from: g */
         public void mo1470g(T t) {
             this.f4053o.mo1363j(this.f4054p, "BackgroundThreadHandoffProducer", null);
             ThreadHandoffProducer.this.f4051a.mo1417b(this.f4055q, this.f4054p);
         }
     }
 
-    /* compiled from: ThreadHandoffProducer.java */
-    /* renamed from: b.f.j.p.f1$b */
+    /* JADX INFO: renamed from: b.f.j.p.f1$b */
+    /* JADX INFO: compiled from: ThreadHandoffProducer.java */
     public class b extends BaseProducerContextCallbacks {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final /* synthetic */ StatefulProducerRunnable f4057a;
 
         public b(StatefulProducerRunnable statefulProducerRunnable) {
@@ -66,7 +66,7 @@ public class ThreadHandoffProducer<T> implements Producer2<T> {
         }
 
         @Override // p007b.p109f.p161j.p181p.ProducerContextCallbacks
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public void mo1438a() {
             this.f4057a.m1464a();
             ThreadHandoffProducerQueue threadHandoffProducerQueue = ThreadHandoffProducer.this.f4052b;
@@ -85,7 +85,7 @@ public class ThreadHandoffProducer<T> implements Producer2<T> {
     }
 
     @Override // p007b.p109f.p161j.p181p.Producer2
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public void mo1417b(Consumer2<T> consumer2, ProducerContext producerContext) {
         try {
             FrescoSystrace.m1527b();

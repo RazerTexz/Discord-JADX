@@ -4,18 +4,18 @@ import com.discord.models.domain.ModelAuditLogEntry;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: VanityUrlResponse.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: VanityUrlResponse.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class VanityUrlResponse {
     private final String code;
     private final int uses;
 
-    /* renamed from: a, reason: from getter */
+    /* JADX INFO: renamed from: a, reason: from getter */
     public final String getCode() {
         return this.code;
     }
 
-    /* renamed from: b, reason: from getter */
+    /* JADX INFO: renamed from: b, reason: from getter */
     public final int getUses() {
         return this.uses;
     }

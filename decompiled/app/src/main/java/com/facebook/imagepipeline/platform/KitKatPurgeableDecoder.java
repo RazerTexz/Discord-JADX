@@ -11,12 +11,12 @@ import p007b.p085c.p086a.p087a0.AnimatableValueParser;
 import p007b.p109f.p115d.p119d.DoNotStrip;
 import p007b.p109f.p161j.p177l.FlexByteArrayPool;
 
+/* JADX INFO: loaded from: classes3.dex */
 @DoNotStrip
 @TargetApi(19)
-/* loaded from: classes3.dex */
 public class KitKatPurgeableDecoder extends DalvikPurgeableDecoder {
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final FlexByteArrayPool f19576c;
 
     @DoNotStrip
@@ -25,7 +25,7 @@ public class KitKatPurgeableDecoder extends DalvikPurgeableDecoder {
     }
 
     @Override // com.facebook.imagepipeline.nativecode.DalvikPurgeableDecoder
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public Bitmap mo8710c(CloseableReference<PooledByteBuffer> closeableReference, BitmapFactory.Options options) {
         PooledByteBuffer pooledByteBufferM8642u = closeableReference.m8642u();
         int size = pooledByteBufferM8642u.size();
@@ -46,7 +46,7 @@ public class KitKatPurgeableDecoder extends DalvikPurgeableDecoder {
     }
 
     @Override // com.facebook.imagepipeline.nativecode.DalvikPurgeableDecoder
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public Bitmap mo8711d(CloseableReference<PooledByteBuffer> closeableReference, int i, BitmapFactory.Options options) {
         byte[] bArr = DalvikPurgeableDecoder.m8709e(closeableReference, i) ? null : DalvikPurgeableDecoder.f19566a;
         PooledByteBuffer pooledByteBufferM8642u = closeableReference.m8642u();

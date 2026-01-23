@@ -184,11 +184,11 @@ import p658rx.Observable;
 import p658rx.functions.Action1;
 import retrofit2.Response;
 
-/* compiled from: RestAPI.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: RestAPI.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class RestAPI implements RestAPIInterface {
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     public static RestAPI api;
     public static RestAPIInterface.Dynamic apiClientVersions;
@@ -198,7 +198,7 @@ public final class RestAPI implements RestAPIInterface {
     public static RestAPI apiSpotify;
     private final RestAPIInterface _api;
 
-    /* compiled from: RestAPI.kt */
+    /* JADX INFO: compiled from: RestAPI.kt */
     public static final class AppHeadersProvider implements RestInterceptors2.HeadersProvider {
         public static final AppHeadersProvider INSTANCE = new AppHeadersProvider();
         public static Function0<String> authTokenProvider = RestAPI3.INSTANCE;
@@ -241,7 +241,7 @@ public final class RestAPI implements RestAPIInterface {
         }
     }
 
-    /* compiled from: RestAPI.kt */
+    /* JADX INFO: compiled from: RestAPI.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -374,10 +374,10 @@ public final class RestAPI implements RestAPIInterface {
         }
     }
 
-    /* compiled from: RestAPI.kt */
+    /* JADX INFO: compiled from: RestAPI.kt */
     public static abstract class HarvestState {
 
-        /* compiled from: RestAPI.kt */
+        /* JADX INFO: compiled from: RestAPI.kt */
         public static final class LastRequested extends HarvestState {
             private final ModelUserConsents3 data;
 
@@ -393,7 +393,7 @@ public final class RestAPI implements RestAPIInterface {
             }
         }
 
-        /* compiled from: RestAPI.kt */
+        /* JADX INFO: compiled from: RestAPI.kt */
         public static final class NeverRequested extends HarvestState {
             public NeverRequested() {
                 super(null);
@@ -408,8 +408,8 @@ public final class RestAPI implements RestAPIInterface {
         }
     }
 
-    /* compiled from: RestAPI.kt */
-    /* renamed from: com.discord.utilities.rest.RestAPI$addGroupRecipients$1 */
+    /* JADX INFO: renamed from: com.discord.utilities.rest.RestAPI$addGroupRecipients$1 */
+    /* JADX INFO: compiled from: RestAPI.kt */
     public static final class C68521<T, R> implements Func1<Channel, Boolean> {
         public static final C68521 INSTANCE = new C68521();
 
@@ -418,14 +418,14 @@ public final class RestAPI implements RestAPIInterface {
             return call2(channel);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final Boolean call2(Channel channel) {
             return Boolean.valueOf(channel != null);
         }
     }
 
-    /* compiled from: RestAPI.kt */
-    /* renamed from: com.discord.utilities.rest.RestAPI$addGroupRecipients$2 */
+    /* JADX INFO: renamed from: com.discord.utilities.rest.RestAPI$addGroupRecipients$2 */
+    /* JADX INFO: compiled from: RestAPI.kt */
     public static final class C68532<T, R> implements Func1<Channel, Observable<? extends Channel>> {
         public final /* synthetic */ long $channelId;
         public final /* synthetic */ List $recipients;
@@ -440,20 +440,20 @@ public final class RestAPI implements RestAPIInterface {
             return call2(channel);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final Observable<? extends Channel> call2(Channel channel) {
             return (channel == null || !ChannelUtils.m7702z(channel)) ? RestAPI.access$get_api$p(RestAPI.this).convertDMToGroup(this.$channelId, ((User) _Collections.first(this.$recipients)).getId()) : new ScalarSynchronousObservable(channel);
         }
     }
 
-    /* compiled from: RestAPI.kt */
-    /* renamed from: com.discord.utilities.rest.RestAPI$addGroupRecipients$3 */
+    /* JADX INFO: renamed from: com.discord.utilities.rest.RestAPI$addGroupRecipients$3 */
+    /* JADX INFO: compiled from: RestAPI.kt */
     public static final class C68543<T, R> implements Func1<Channel, Observable<? extends Channel>> {
         public final /* synthetic */ long $channelId;
         public final /* synthetic */ List $recipients;
 
-        /* compiled from: RestAPI.kt */
-        /* renamed from: com.discord.utilities.rest.RestAPI$addGroupRecipients$3$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.utilities.rest.RestAPI$addGroupRecipients$3$1, reason: invalid class name */
+        /* JADX INFO: compiled from: RestAPI.kt */
         public static final class AnonymousClass1<T, R> implements Func1<User, Observable<Void>> {
             public final /* synthetic */ Channel $channel;
 
@@ -466,19 +466,19 @@ public final class RestAPI implements RestAPIInterface {
                 return call2(user);
             }
 
-            /* renamed from: call, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
             public final Observable<Void> call2(User user) {
                 return RestAPI.access$get_api$p(RestAPI.this).addChannelRecipient(this.$channel.getId(), user.getId());
             }
         }
 
-        /* compiled from: RestAPI.kt */
-        /* renamed from: com.discord.utilities.rest.RestAPI$addGroupRecipients$3$2, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.utilities.rest.RestAPI$addGroupRecipients$3$2, reason: invalid class name */
+        /* JADX INFO: compiled from: RestAPI.kt */
         public static final class AnonymousClass2<T, R> implements Func1<List<Observable<Void>>, Observable<? extends Channel>> {
             public final /* synthetic */ Channel $channel;
 
-            /* compiled from: RestAPI.kt */
-            /* renamed from: com.discord.utilities.rest.RestAPI$addGroupRecipients$3$2$1, reason: invalid class name */
+            /* JADX INFO: renamed from: com.discord.utilities.rest.RestAPI$addGroupRecipients$3$2$1, reason: invalid class name */
+            /* JADX INFO: compiled from: RestAPI.kt */
             public static final class AnonymousClass1<T, R> implements Func1<List<Void>, Channel> {
                 public AnonymousClass1() {
                 }
@@ -488,7 +488,7 @@ public final class RestAPI implements RestAPIInterface {
                     return call2(list);
                 }
 
-                /* renamed from: call, reason: avoid collision after fix types in other method */
+                /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
                 public final Channel call2(List<Void> list) {
                     return AnonymousClass2.this.$channel;
                 }
@@ -503,7 +503,7 @@ public final class RestAPI implements RestAPIInterface {
                 return call2(list);
             }
 
-            /* renamed from: call, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
             public final Observable<? extends Channel> call2(List<Observable<Void>> list) {
                 return Observable.m11063H(Observable.m11074h0(new OnSubscribeFromIterable(list))).m11105f0().m11083G(new AnonymousClass1());
             }
@@ -519,7 +519,7 @@ public final class RestAPI implements RestAPIInterface {
             return call2(channel);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final Observable<? extends Channel> call2(Channel channel) {
             List listSubList;
             if (channel.getId() == this.$channelId) {
@@ -532,8 +532,8 @@ public final class RestAPI implements RestAPIInterface {
         }
     }
 
-    /* compiled from: RestAPI.kt */
-    /* renamed from: com.discord.utilities.rest.RestAPI$addGroupRecipients$4 */
+    /* JADX INFO: renamed from: com.discord.utilities.rest.RestAPI$addGroupRecipients$4 */
+    /* JADX INFO: compiled from: RestAPI.kt */
     public static final class C68554<T, R> implements Func1<Channel, Observable<? extends Channel>> {
         public static final C68554 INSTANCE = new C68554();
 
@@ -542,7 +542,7 @@ public final class RestAPI implements RestAPIInterface {
             return call2(channel);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final Observable<? extends Channel> call2(Channel channel) {
             Observable<R> observableM11083G = StoreStream.INSTANCE.getChannels().observeChannel(channel.getId()).m11118y(ObservableExtensionsKt.C68871.INSTANCE).m11083G(ObservableExtensionsKt.C68882.INSTANCE);
             Intrinsics3.checkNotNullExpressionValue(observableM11083G, "filter { it != null }.map { it!! }");
@@ -550,8 +550,8 @@ public final class RestAPI implements RestAPIInterface {
         }
     }
 
-    /* compiled from: RestAPI.kt */
-    /* renamed from: com.discord.utilities.rest.RestAPI$createGroupDM$1 */
+    /* JADX INFO: renamed from: com.discord.utilities.rest.RestAPI$createGroupDM$1 */
+    /* JADX INFO: compiled from: RestAPI.kt */
     public static final class C68561<T> implements Action1<Channel> {
         public static final C68561 INSTANCE = new C68561();
 
@@ -560,7 +560,7 @@ public final class RestAPI implements RestAPIInterface {
             call2(channel);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final void call2(Channel channel) {
             StoreChannels channels = StoreStream.INSTANCE.getChannels();
             Intrinsics3.checkNotNullExpressionValue(channel, "channel");
@@ -568,13 +568,13 @@ public final class RestAPI implements RestAPIInterface {
         }
     }
 
-    /* compiled from: RestAPI.kt */
-    /* renamed from: com.discord.utilities.rest.RestAPI$createOrFetchDM$1 */
+    /* JADX INFO: renamed from: com.discord.utilities.rest.RestAPI$createOrFetchDM$1 */
+    /* JADX INFO: compiled from: RestAPI.kt */
     public static final class C68571<T, R> implements Func1<Map<Long, ? extends Channel>, Observable<? extends Channel>> {
         public final /* synthetic */ long $userId;
 
-        /* compiled from: RestAPI.kt */
-        /* renamed from: com.discord.utilities.rest.RestAPI$createOrFetchDM$1$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.utilities.rest.RestAPI$createOrFetchDM$1$1, reason: invalid class name */
+        /* JADX INFO: compiled from: RestAPI.kt */
         public static final class AnonymousClass1<T> implements Action1<Channel> {
             public static final AnonymousClass1 INSTANCE = new AnonymousClass1();
 
@@ -583,7 +583,7 @@ public final class RestAPI implements RestAPIInterface {
                 call2(channel);
             }
 
-            /* renamed from: call, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
             public final void call2(Channel channel) {
                 StoreStream.INSTANCE.getGatewaySocket().getChannelCreateOrUpdate().f27653k.onNext(channel);
             }
@@ -598,7 +598,7 @@ public final class RestAPI implements RestAPIInterface {
             return call2((Map<Long, Channel>) map);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final Observable<? extends Channel> call2(Map<Long, Channel> map) {
             T next;
             Iterator<T> it = map.values().iterator();
@@ -618,8 +618,8 @@ public final class RestAPI implements RestAPIInterface {
         }
     }
 
-    /* compiled from: RestAPI.kt */
-    /* renamed from: com.discord.utilities.rest.RestAPI$getClientVersion$1 */
+    /* JADX INFO: renamed from: com.discord.utilities.rest.RestAPI$getClientVersion$1 */
+    /* JADX INFO: compiled from: RestAPI.kt */
     public static final class C68581<T, R> implements Func1<JsonObject, Integer> {
         public static final C68581 INSTANCE = new C68581();
 
@@ -629,7 +629,7 @@ public final class RestAPI implements RestAPIInterface {
         }
 
         /* JADX WARN: Removed duplicated region for block: B:10:0x0019  */
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         /*
             Code decompiled incorrectly, please refer to instructions dump.
         */
@@ -648,8 +648,8 @@ public final class RestAPI implements RestAPIInterface {
         }
     }
 
-    /* compiled from: RestAPI.kt */
-    /* renamed from: com.discord.utilities.rest.RestAPI$getHarvestStatusGuarded$1 */
+    /* JADX INFO: renamed from: com.discord.utilities.rest.RestAPI$getHarvestStatusGuarded$1 */
+    /* JADX INFO: compiled from: RestAPI.kt */
     public static final class C68591<T, R> implements Func1<ModelUserConsents3, HarvestState> {
         public static final C68591 INSTANCE = new C68591();
 
@@ -658,7 +658,7 @@ public final class RestAPI implements RestAPIInterface {
             return call2(modelUserConsents3);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final HarvestState call2(ModelUserConsents3 modelUserConsents3) {
             return modelUserConsents3 != null ? new HarvestState.LastRequested(modelUserConsents3) : new HarvestState.NeverRequested();
         }

@@ -5,15 +5,15 @@ import java.lang.reflect.Method;
 import org.objenesis.ObjenesisException;
 import p617h0.p620b.p621a.ObjectInstantiator;
 
-/* compiled from: Android10Instantiator.java */
-/* renamed from: h0.b.a.b.a, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: h0.b.a.b.a, reason: use source file name */
+/* JADX INFO: compiled from: Android10Instantiator.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class Android10Instantiator<T> implements ObjectInstantiator<T> {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final Class<T> f26376a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final Method f26377b;
 
     public Android10Instantiator(Class<T> cls) {

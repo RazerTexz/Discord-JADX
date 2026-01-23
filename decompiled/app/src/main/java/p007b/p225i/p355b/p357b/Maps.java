@@ -8,16 +8,16 @@ import org.checkerframework.checker.nullness.compatqual.MonotonicNonNullDecl;
 import p007b.p225i.p355b.p357b.AbstractMapBasedMultimap2;
 import p007b.p225i.p355b.p357b.AbstractMapBasedMultimap2.a.C13230a;
 
-/* compiled from: Maps.java */
-/* renamed from: b.i.b.b.a0, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.b.b.a0, reason: use source file name */
+/* JADX INFO: compiled from: Maps.java */
+/* JADX INFO: loaded from: classes3.dex */
 public abstract class Maps<K, V> extends AbstractMap<K, V> {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     @MonotonicNonNullDecl
     public transient Set<Map.Entry<K, V>> f11968j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     @MonotonicNonNullDecl
     public transient Collection<V> f11969k;
 

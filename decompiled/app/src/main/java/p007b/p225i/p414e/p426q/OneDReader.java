@@ -18,11 +18,11 @@ import p007b.p225i.p414e.ResultPoint;
 import p007b.p225i.p414e.p418n.BitArray;
 import p007b.p225i.p414e.p418n.HybridBinarizer;
 
-/* compiled from: OneDReader.java */
-/* renamed from: b.i.e.q.k, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.e.q.k, reason: use source file name */
+/* JADX INFO: compiled from: OneDReader.java */
+/* JADX INFO: loaded from: classes3.dex */
 public abstract class OneDReader implements Reader {
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public static float m6996d(int[] iArr, int[] iArr2, float f) {
         int length = iArr.length;
         int i = 0;
@@ -50,7 +50,7 @@ public abstract class OneDReader implements Reader {
         return f5 / f2;
     }
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public static void m6997e(BitArray bitArray, int i, int[] iArr) throws NotFoundException {
         int length = iArr.length;
         int i2 = 0;
@@ -80,7 +80,7 @@ public abstract class OneDReader implements Reader {
         }
     }
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public static void m6998f(BitArray bitArray, int i, int[] iArr) throws NotFoundException {
         int length = iArr.length;
         boolean zM6935b = bitArray.m6935b(i);
@@ -98,7 +98,7 @@ public abstract class OneDReader implements Reader {
     }
 
     @Override // p007b.p225i.p414e.Reader
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public Result mo6919a(BinaryBitmap binaryBitmap, Map<DecodeHintType, ?> map) throws NotFoundException, FormatException {
         ResultMetadataType resultMetadataType = ResultMetadataType.ORIENTATION;
         try {
@@ -127,11 +127,11 @@ public abstract class OneDReader implements Reader {
         }
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public abstract Result mo6983b(int i, BitArray bitArray, Map<DecodeHintType, ?> map) throws NotFoundException, ChecksumException, FormatException;
 
     /* JADX WARN: Removed duplicated region for block: B:37:0x0075  */
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */

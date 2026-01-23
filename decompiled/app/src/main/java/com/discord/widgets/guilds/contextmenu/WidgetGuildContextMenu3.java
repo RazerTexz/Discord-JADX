@@ -6,9 +6,9 @@ import kotlin.jvm.functions.Function1;
 import p507d0.p592z.p594d.FunctionReferenceImpl;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: WidgetGuildContextMenu.kt */
-/* renamed from: com.discord.widgets.guilds.contextmenu.WidgetGuildContextMenu$binding$2, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.guilds.contextmenu.WidgetGuildContextMenu$binding$2, reason: use source file name */
+/* JADX INFO: compiled from: WidgetGuildContextMenu.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final /* synthetic */ class WidgetGuildContextMenu3 extends FunctionReferenceImpl implements Function1<View, WidgetGuildContextMenuBinding> {
     public static final WidgetGuildContextMenu3 INSTANCE = new WidgetGuildContextMenu3();
 
@@ -21,7 +21,7 @@ public final /* synthetic */ class WidgetGuildContextMenu3 extends FunctionRefer
         return invoke2(view);
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final WidgetGuildContextMenuBinding invoke2(View view) {
         Intrinsics3.checkNotNullParameter(view, "p1");
         return WidgetGuildContextMenuBinding.m8416a(view);

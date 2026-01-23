@@ -8,21 +8,21 @@ import p007b.p195g.p196a.p205c.SerializerProvider;
 import p007b.p195g.p196a.p205c.p210c0.AnnotatedMember;
 import p007b.p195g.p196a.p205c.p215g0.p217u.MapSerializer2;
 
-/* compiled from: AnyGetterWriter.java */
-/* renamed from: b.g.a.c.g0.a, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.g.a.c.g0.a, reason: use source file name */
+/* JADX INFO: compiled from: AnyGetterWriter.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class AnyGetterWriter {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final BeanProperty f4784a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final AnnotatedMember f4785b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public JsonSerializer<Object> f4786c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public MapSerializer2 f4787d;
 
     public AnyGetterWriter(BeanProperty beanProperty, AnnotatedMember annotatedMember, JsonSerializer<?> jsonSerializer) {
@@ -34,7 +34,7 @@ public class AnyGetterWriter {
         }
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public void m1970a(Object obj, JsonGenerator jsonGenerator, SerializerProvider serializerProvider) throws Exception {
         Object objMo1889j = this.f4785b.mo1889j(obj);
         if (objMo1889j == null) {

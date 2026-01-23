@@ -3,8 +3,8 @@ package okhttp3.internal.connection;
 import java.io.IOException;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: RouteException.kt */
-/* loaded from: classes3.dex */
+/* JADX INFO: compiled from: RouteException.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class RouteException extends RuntimeException {
     private final IOException firstConnectException;
     private IOException lastConnectException;
@@ -17,19 +17,19 @@ public final class RouteException extends RuntimeException {
         this.lastConnectException = iOException;
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final void m10999a(IOException e) {
         Intrinsics3.checkParameterIsNotNull(e, "e");
         this.firstConnectException.addSuppressed(e);
         this.lastConnectException = e;
     }
 
-    /* renamed from: b, reason: from getter */
+    /* JADX INFO: renamed from: b, reason: from getter */
     public final IOException getFirstConnectException() {
         return this.firstConnectException;
     }
 
-    /* renamed from: c, reason: from getter */
+    /* JADX INFO: renamed from: c, reason: from getter */
     public final IOException getLastConnectException() {
         return this.lastConnectException;
     }

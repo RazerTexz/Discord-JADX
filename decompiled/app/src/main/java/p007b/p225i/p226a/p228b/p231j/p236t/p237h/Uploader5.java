@@ -3,18 +3,18 @@ package p007b.p225i.p226a.p228b.p231j.p236t.p237h;
 import p007b.p225i.p226a.p228b.p231j.TransportContext;
 import p007b.p225i.p226a.p228b.p231j.p239u.SynchronizationGuard;
 
-/* compiled from: Uploader.java */
-/* renamed from: b.i.a.b.j.t.h.k, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.b.j.t.h.k, reason: use source file name */
+/* JADX INFO: compiled from: Uploader.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final /* synthetic */ class Uploader5 implements SynchronizationGuard.a {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final Uploader6 f5382a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final TransportContext f5383b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final int f5384c;
 
     public Uploader5(Uploader6 uploader6, TransportContext transportContext, int i) {

@@ -8,27 +8,27 @@ import androidx.annotation.NonNull;
 import androidx.viewbinding.ViewBinding;
 import com.discord.views.LoadingButton;
 
-/* renamed from: com.discord.databinding.WidgetServerSettingsCreatorMonetizationOnboardingAcceptTermsBinding */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: com.discord.databinding.WidgetServerSettingsCreatorMonetizationOnboardingAcceptTermsBinding */
+/* JADX INFO: loaded from: classes.dex */
 public final class C5473x4f85106c implements ViewBinding {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     @NonNull
     public final ScrollView f17592a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     @NonNull
     public final LoadingButton f17593b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     @NonNull
     public final CheckBox f17594c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     @NonNull
     public final ScrollView f17595d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     @NonNull
     public final ViewStub f17596e;
 

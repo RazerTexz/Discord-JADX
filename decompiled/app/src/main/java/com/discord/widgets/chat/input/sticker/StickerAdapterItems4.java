@@ -5,9 +5,9 @@ import com.discord.utilities.mg_recycler.MGRecyclerDataPayload;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: StickerAdapterItems.kt */
-/* renamed from: com.discord.widgets.chat.input.sticker.StoreHeaderItem, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.chat.input.sticker.StoreHeaderItem, reason: use source file name */
+/* JADX INFO: compiled from: StickerAdapterItems.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final /* data */ class StickerAdapterItems4 implements MGRecyclerDataPayload {
     private final boolean isNewPack;
     private final String key;
@@ -34,12 +34,12 @@ public final /* data */ class StickerAdapterItems4 implements MGRecyclerDataPayl
         return stickerAdapterItems4.copy(modelStickerPack, z2);
     }
 
-    /* renamed from: component1, reason: from getter */
+    /* JADX INFO: renamed from: component1, reason: from getter */
     public final ModelStickerPack getPack() {
         return this.pack;
     }
 
-    /* renamed from: component2, reason: from getter */
+    /* JADX INFO: renamed from: component2, reason: from getter */
     public final boolean getIsNewPack() {
         return this.isNewPack;
     }
@@ -75,15 +75,18 @@ public final /* data */ class StickerAdapterItems4 implements MGRecyclerDataPayl
     }
 
     /* JADX WARN: Multi-variable type inference failed */
+    /* JADX WARN: Type inference failed for: r1v1, types: [int] */
+    /* JADX WARN: Type inference failed for: r1v2 */
+    /* JADX WARN: Type inference failed for: r1v3 */
     public int hashCode() {
         ModelStickerPack modelStickerPack = this.pack;
         int iHashCode = (modelStickerPack != null ? modelStickerPack.hashCode() : 0) * 31;
         boolean z2 = this.isNewPack;
-        int i = z2;
-        if (z2 != 0) {
-            i = 1;
+        ?? r1 = z2;
+        if (z2) {
+            r1 = 1;
         }
-        return iHashCode + i;
+        return iHashCode + r1;
     }
 
     public final boolean isNewPack() {

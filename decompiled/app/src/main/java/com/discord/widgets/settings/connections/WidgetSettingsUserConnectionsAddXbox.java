@@ -37,18 +37,18 @@ import p637j0.p641k.Func1;
 import p658rx.Observable;
 import p658rx.functions.Action1;
 
-/* compiled from: WidgetSettingsUserConnectionsAddXbox.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetSettingsUserConnectionsAddXbox.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetSettingsUserConnectionsAddXbox extends AppFragment {
     public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetSettingsUserConnectionsAddXbox.class, "binding", "getBinding()Lcom/discord/databinding/WidgetConnectionsAddXboxBinding;", 0)};
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
 
-    /* renamed from: binding$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
 
-    /* compiled from: WidgetSettingsUserConnectionsAddXbox.kt */
+    /* JADX INFO: compiled from: WidgetSettingsUserConnectionsAddXbox.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -63,8 +63,8 @@ public final class WidgetSettingsUserConnectionsAddXbox extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetSettingsUserConnectionsAddXbox.kt */
-    /* renamed from: com.discord.widgets.settings.connections.WidgetSettingsUserConnectionsAddXbox$onViewBound$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.connections.WidgetSettingsUserConnectionsAddXbox$onViewBound$1 */
+    /* JADX INFO: compiled from: WidgetSettingsUserConnectionsAddXbox.kt */
     public static final class ViewOnClickListenerC98361 implements View.OnClickListener {
         public static final ViewOnClickListenerC98361 INSTANCE = new ViewOnClickListenerC98361();
 
@@ -79,12 +79,12 @@ public final class WidgetSettingsUserConnectionsAddXbox extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetSettingsUserConnectionsAddXbox.kt */
-    /* renamed from: com.discord.widgets.settings.connections.WidgetSettingsUserConnectionsAddXbox$onViewBound$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.connections.WidgetSettingsUserConnectionsAddXbox$onViewBound$2 */
+    /* JADX INFO: compiled from: WidgetSettingsUserConnectionsAddXbox.kt */
     public static final class C98372 extends Lambda implements Function1<String, Unit> {
 
-        /* compiled from: WidgetSettingsUserConnectionsAddXbox.kt */
-        /* renamed from: com.discord.widgets.settings.connections.WidgetSettingsUserConnectionsAddXbox$onViewBound$2$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.widgets.settings.connections.WidgetSettingsUserConnectionsAddXbox$onViewBound$2$1, reason: invalid class name */
+        /* JADX INFO: compiled from: WidgetSettingsUserConnectionsAddXbox.kt */
         public static final class AnonymousClass1<T> implements Action1<Error> {
             public AnonymousClass1() {
             }
@@ -94,7 +94,7 @@ public final class WidgetSettingsUserConnectionsAddXbox extends AppFragment {
                 call2(error);
             }
 
-            /* renamed from: call, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
             public final void call2(Error error) {
                 WidgetSettingsUserConnectionsAddXbox widgetSettingsUserConnectionsAddXbox = WidgetSettingsUserConnectionsAddXbox.this;
                 Intrinsics3.checkNotNullExpressionValue(error, "error");
@@ -116,7 +116,7 @@ public final class WidgetSettingsUserConnectionsAddXbox extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(String str) {
             Intrinsics3.checkNotNullParameter(str, "verificationCode");
             if (str.length() == 6) {
@@ -129,8 +129,8 @@ public final class WidgetSettingsUserConnectionsAddXbox extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetSettingsUserConnectionsAddXbox.kt */
-    /* renamed from: com.discord.widgets.settings.connections.WidgetSettingsUserConnectionsAddXbox$submitPinCode$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.connections.WidgetSettingsUserConnectionsAddXbox$submitPinCode$1 */
+    /* JADX INFO: compiled from: WidgetSettingsUserConnectionsAddXbox.kt */
     public static final class C98381<T, R> implements Func1<ModelConnectionState, Observable<? extends Void>> {
         public final /* synthetic */ Platform $platform;
 
@@ -143,7 +143,7 @@ public final class WidgetSettingsUserConnectionsAddXbox extends AppFragment {
             return call2(modelConnectionState);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final Observable<? extends Void> call2(ModelConnectionState modelConnectionState) {
             AnalyticsTracker analyticsTracker = AnalyticsTracker.INSTANCE;
             Intrinsics3.checkNotNullExpressionValue(modelConnectionState, "state");
@@ -157,8 +157,8 @@ public final class WidgetSettingsUserConnectionsAddXbox extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetSettingsUserConnectionsAddXbox.kt */
-    /* renamed from: com.discord.widgets.settings.connections.WidgetSettingsUserConnectionsAddXbox$submitPinCode$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.connections.WidgetSettingsUserConnectionsAddXbox$submitPinCode$2 */
+    /* JADX INFO: compiled from: WidgetSettingsUserConnectionsAddXbox.kt */
     public static final class C98392 extends Lambda implements Function1<Void, Unit> {
         public final /* synthetic */ Activity $activity;
 
@@ -174,7 +174,7 @@ public final class WidgetSettingsUserConnectionsAddXbox extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Void r1) {
             Activity activity = this.$activity;
             if (activity != null) {

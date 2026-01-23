@@ -1,7 +1,6 @@
 package com.esotericsoftware.kryo.serializers;
 
 import com.esotericsoftware.kryo.Kryo;
-import com.esotericsoftware.kryo.KryoException;
 import com.esotericsoftware.kryo.Registration;
 import com.esotericsoftware.kryo.Serializer;
 import com.esotericsoftware.kryo.p502io.Input;
@@ -10,7 +9,7 @@ import java.lang.reflect.Array;
 import java.lang.reflect.Modifier;
 import p007b.p106e.p107a.Log;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class DefaultArraySerializers {
 
     public static class BooleanArraySerializer extends Serializer<boolean[]> {
@@ -29,11 +28,11 @@ public class DefaultArraySerializers {
         }
 
         @Override // com.esotericsoftware.kryo.Serializer
-        public /* bridge */ /* synthetic */ void write(Kryo kryo, Output output, boolean[] zArr) throws KryoException {
+        public /* bridge */ /* synthetic */ void write(Kryo kryo, Output output, boolean[] zArr) {
             write2(kryo, output, zArr);
         }
 
-        /* renamed from: copy, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: copy, reason: avoid collision after fix types in other method */
         public boolean[] copy2(Kryo kryo, boolean[] zArr) {
             int length = zArr.length;
             boolean[] zArr2 = new boolean[length];
@@ -42,8 +41,8 @@ public class DefaultArraySerializers {
         }
 
         @Override // com.esotericsoftware.kryo.Serializer
-        /* renamed from: read, reason: avoid collision after fix types in other method */
-        public boolean[] read2(Kryo kryo, Input input, Class<boolean[]> cls) throws KryoException {
+        /* JADX INFO: renamed from: read, reason: avoid collision after fix types in other method */
+        public boolean[] read2(Kryo kryo, Input input, Class<boolean[]> cls) {
             int varInt = input.readVarInt(true);
             if (varInt == 0) {
                 return null;
@@ -56,8 +55,8 @@ public class DefaultArraySerializers {
             return zArr;
         }
 
-        /* renamed from: write, reason: avoid collision after fix types in other method */
-        public void write2(Kryo kryo, Output output, boolean[] zArr) throws KryoException {
+        /* JADX INFO: renamed from: write, reason: avoid collision after fix types in other method */
+        public void write2(Kryo kryo, Output output, boolean[] zArr) {
             if (zArr == null) {
                 output.writeVarInt(0, true);
                 return;
@@ -85,11 +84,11 @@ public class DefaultArraySerializers {
         }
 
         @Override // com.esotericsoftware.kryo.Serializer
-        public /* bridge */ /* synthetic */ void write(Kryo kryo, Output output, byte[] bArr) throws KryoException {
+        public /* bridge */ /* synthetic */ void write(Kryo kryo, Output output, byte[] bArr) {
             write2(kryo, output, bArr);
         }
 
-        /* renamed from: copy, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: copy, reason: avoid collision after fix types in other method */
         public byte[] copy2(Kryo kryo, byte[] bArr) {
             int length = bArr.length;
             byte[] bArr2 = new byte[length];
@@ -98,8 +97,8 @@ public class DefaultArraySerializers {
         }
 
         @Override // com.esotericsoftware.kryo.Serializer
-        /* renamed from: read, reason: avoid collision after fix types in other method */
-        public byte[] read2(Kryo kryo, Input input, Class<byte[]> cls) throws KryoException {
+        /* JADX INFO: renamed from: read, reason: avoid collision after fix types in other method */
+        public byte[] read2(Kryo kryo, Input input, Class<byte[]> cls) {
             int varInt = input.readVarInt(true);
             if (varInt == 0) {
                 return null;
@@ -107,8 +106,8 @@ public class DefaultArraySerializers {
             return input.readBytes(varInt - 1);
         }
 
-        /* renamed from: write, reason: avoid collision after fix types in other method */
-        public void write2(Kryo kryo, Output output, byte[] bArr) throws KryoException {
+        /* JADX INFO: renamed from: write, reason: avoid collision after fix types in other method */
+        public void write2(Kryo kryo, Output output, byte[] bArr) {
             if (bArr == null) {
                 output.writeVarInt(0, true);
             } else {
@@ -134,11 +133,11 @@ public class DefaultArraySerializers {
         }
 
         @Override // com.esotericsoftware.kryo.Serializer
-        public /* bridge */ /* synthetic */ void write(Kryo kryo, Output output, char[] cArr) throws KryoException {
+        public /* bridge */ /* synthetic */ void write(Kryo kryo, Output output, char[] cArr) {
             write2(kryo, output, cArr);
         }
 
-        /* renamed from: copy, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: copy, reason: avoid collision after fix types in other method */
         public char[] copy2(Kryo kryo, char[] cArr) {
             int length = cArr.length;
             char[] cArr2 = new char[length];
@@ -147,8 +146,8 @@ public class DefaultArraySerializers {
         }
 
         @Override // com.esotericsoftware.kryo.Serializer
-        /* renamed from: read, reason: avoid collision after fix types in other method */
-        public char[] read2(Kryo kryo, Input input, Class<char[]> cls) throws KryoException {
+        /* JADX INFO: renamed from: read, reason: avoid collision after fix types in other method */
+        public char[] read2(Kryo kryo, Input input, Class<char[]> cls) {
             int varInt = input.readVarInt(true);
             if (varInt == 0) {
                 return null;
@@ -156,8 +155,8 @@ public class DefaultArraySerializers {
             return input.readChars(varInt - 1);
         }
 
-        /* renamed from: write, reason: avoid collision after fix types in other method */
-        public void write2(Kryo kryo, Output output, char[] cArr) throws KryoException {
+        /* JADX INFO: renamed from: write, reason: avoid collision after fix types in other method */
+        public void write2(Kryo kryo, Output output, char[] cArr) {
             if (cArr == null) {
                 output.writeVarInt(0, true);
             } else {
@@ -183,11 +182,11 @@ public class DefaultArraySerializers {
         }
 
         @Override // com.esotericsoftware.kryo.Serializer
-        public /* bridge */ /* synthetic */ void write(Kryo kryo, Output output, double[] dArr) throws KryoException {
+        public /* bridge */ /* synthetic */ void write(Kryo kryo, Output output, double[] dArr) {
             write2(kryo, output, dArr);
         }
 
-        /* renamed from: copy, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: copy, reason: avoid collision after fix types in other method */
         public double[] copy2(Kryo kryo, double[] dArr) {
             int length = dArr.length;
             double[] dArr2 = new double[length];
@@ -196,8 +195,8 @@ public class DefaultArraySerializers {
         }
 
         @Override // com.esotericsoftware.kryo.Serializer
-        /* renamed from: read, reason: avoid collision after fix types in other method */
-        public double[] read2(Kryo kryo, Input input, Class<double[]> cls) throws KryoException {
+        /* JADX INFO: renamed from: read, reason: avoid collision after fix types in other method */
+        public double[] read2(Kryo kryo, Input input, Class<double[]> cls) {
             int varInt = input.readVarInt(true);
             if (varInt == 0) {
                 return null;
@@ -205,8 +204,8 @@ public class DefaultArraySerializers {
             return input.readDoubles(varInt - 1);
         }
 
-        /* renamed from: write, reason: avoid collision after fix types in other method */
-        public void write2(Kryo kryo, Output output, double[] dArr) throws KryoException {
+        /* JADX INFO: renamed from: write, reason: avoid collision after fix types in other method */
+        public void write2(Kryo kryo, Output output, double[] dArr) {
             if (dArr == null) {
                 output.writeVarInt(0, true);
             } else {
@@ -232,11 +231,11 @@ public class DefaultArraySerializers {
         }
 
         @Override // com.esotericsoftware.kryo.Serializer
-        public /* bridge */ /* synthetic */ void write(Kryo kryo, Output output, float[] fArr) throws KryoException {
+        public /* bridge */ /* synthetic */ void write(Kryo kryo, Output output, float[] fArr) {
             write2(kryo, output, fArr);
         }
 
-        /* renamed from: copy, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: copy, reason: avoid collision after fix types in other method */
         public float[] copy2(Kryo kryo, float[] fArr) {
             int length = fArr.length;
             float[] fArr2 = new float[length];
@@ -245,8 +244,8 @@ public class DefaultArraySerializers {
         }
 
         @Override // com.esotericsoftware.kryo.Serializer
-        /* renamed from: read, reason: avoid collision after fix types in other method */
-        public float[] read2(Kryo kryo, Input input, Class<float[]> cls) throws KryoException {
+        /* JADX INFO: renamed from: read, reason: avoid collision after fix types in other method */
+        public float[] read2(Kryo kryo, Input input, Class<float[]> cls) {
             int varInt = input.readVarInt(true);
             if (varInt == 0) {
                 return null;
@@ -254,8 +253,8 @@ public class DefaultArraySerializers {
             return input.readFloats(varInt - 1);
         }
 
-        /* renamed from: write, reason: avoid collision after fix types in other method */
-        public void write2(Kryo kryo, Output output, float[] fArr) throws KryoException {
+        /* JADX INFO: renamed from: write, reason: avoid collision after fix types in other method */
+        public void write2(Kryo kryo, Output output, float[] fArr) {
             if (fArr == null) {
                 output.writeVarInt(0, true);
             } else {
@@ -281,11 +280,11 @@ public class DefaultArraySerializers {
         }
 
         @Override // com.esotericsoftware.kryo.Serializer
-        public /* bridge */ /* synthetic */ void write(Kryo kryo, Output output, int[] iArr) throws KryoException {
+        public /* bridge */ /* synthetic */ void write(Kryo kryo, Output output, int[] iArr) {
             write2(kryo, output, iArr);
         }
 
-        /* renamed from: copy, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: copy, reason: avoid collision after fix types in other method */
         public int[] copy2(Kryo kryo, int[] iArr) {
             int length = iArr.length;
             int[] iArr2 = new int[length];
@@ -294,8 +293,8 @@ public class DefaultArraySerializers {
         }
 
         @Override // com.esotericsoftware.kryo.Serializer
-        /* renamed from: read, reason: avoid collision after fix types in other method */
-        public int[] read2(Kryo kryo, Input input, Class<int[]> cls) throws KryoException {
+        /* JADX INFO: renamed from: read, reason: avoid collision after fix types in other method */
+        public int[] read2(Kryo kryo, Input input, Class<int[]> cls) {
             int varInt = input.readVarInt(true);
             if (varInt == 0) {
                 return null;
@@ -303,8 +302,8 @@ public class DefaultArraySerializers {
             return input.readInts(varInt - 1, false);
         }
 
-        /* renamed from: write, reason: avoid collision after fix types in other method */
-        public void write2(Kryo kryo, Output output, int[] iArr) throws KryoException {
+        /* JADX INFO: renamed from: write, reason: avoid collision after fix types in other method */
+        public void write2(Kryo kryo, Output output, int[] iArr) {
             if (iArr == null) {
                 output.writeVarInt(0, true);
             } else {
@@ -330,11 +329,11 @@ public class DefaultArraySerializers {
         }
 
         @Override // com.esotericsoftware.kryo.Serializer
-        public /* bridge */ /* synthetic */ void write(Kryo kryo, Output output, long[] jArr) throws KryoException {
+        public /* bridge */ /* synthetic */ void write(Kryo kryo, Output output, long[] jArr) {
             write2(kryo, output, jArr);
         }
 
-        /* renamed from: copy, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: copy, reason: avoid collision after fix types in other method */
         public long[] copy2(Kryo kryo, long[] jArr) {
             int length = jArr.length;
             long[] jArr2 = new long[length];
@@ -343,8 +342,8 @@ public class DefaultArraySerializers {
         }
 
         @Override // com.esotericsoftware.kryo.Serializer
-        /* renamed from: read, reason: avoid collision after fix types in other method */
-        public long[] read2(Kryo kryo, Input input, Class<long[]> cls) throws KryoException {
+        /* JADX INFO: renamed from: read, reason: avoid collision after fix types in other method */
+        public long[] read2(Kryo kryo, Input input, Class<long[]> cls) {
             int varInt = input.readVarInt(true);
             if (varInt == 0) {
                 return null;
@@ -352,8 +351,8 @@ public class DefaultArraySerializers {
             return input.readLongs(varInt - 1, false);
         }
 
-        /* renamed from: write, reason: avoid collision after fix types in other method */
-        public void write2(Kryo kryo, Output output, long[] jArr) throws KryoException {
+        /* JADX INFO: renamed from: write, reason: avoid collision after fix types in other method */
+        public void write2(Kryo kryo, Output output, long[] jArr) {
             if (jArr == null) {
                 output.writeVarInt(0, true);
             } else {
@@ -402,11 +401,11 @@ public class DefaultArraySerializers {
         }
 
         @Override // com.esotericsoftware.kryo.Serializer
-        public /* bridge */ /* synthetic */ void write(Kryo kryo, Output output, Object[] objArr) throws KryoException {
+        public /* bridge */ /* synthetic */ void write(Kryo kryo, Output output, Object[] objArr) {
             write2(kryo, output, objArr);
         }
 
-        /* renamed from: copy, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: copy, reason: avoid collision after fix types in other method */
         public Object[] copy2(Kryo kryo, Object[] objArr) {
             Object[] objArr2 = (Object[]) Array.newInstance(objArr.getClass().getComponentType(), objArr.length);
             int length = objArr.length;
@@ -417,8 +416,8 @@ public class DefaultArraySerializers {
         }
 
         @Override // com.esotericsoftware.kryo.Serializer
-        /* renamed from: read, reason: avoid collision after fix types in other method */
-        public Object[] read2(Kryo kryo, Input input, Class<Object[]> cls) throws KryoException {
+        /* JADX INFO: renamed from: read, reason: avoid collision after fix types in other method */
+        public Object[] read2(Kryo kryo, Input input, Class<Object[]> cls) {
             int varInt = input.readVarInt(true);
             if (varInt == 0) {
                 return null;
@@ -455,8 +454,8 @@ public class DefaultArraySerializers {
             return objArr;
         }
 
-        /* renamed from: write, reason: avoid collision after fix types in other method */
-        public void write2(Kryo kryo, Output output, Object[] objArr) throws KryoException {
+        /* JADX INFO: renamed from: write, reason: avoid collision after fix types in other method */
+        public void write2(Kryo kryo, Output output, Object[] objArr) {
             int i = 0;
             if (objArr == null) {
                 output.writeVarInt(0, true);
@@ -505,11 +504,11 @@ public class DefaultArraySerializers {
         }
 
         @Override // com.esotericsoftware.kryo.Serializer
-        public /* bridge */ /* synthetic */ void write(Kryo kryo, Output output, short[] sArr) throws KryoException {
+        public /* bridge */ /* synthetic */ void write(Kryo kryo, Output output, short[] sArr) {
             write2(kryo, output, sArr);
         }
 
-        /* renamed from: copy, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: copy, reason: avoid collision after fix types in other method */
         public short[] copy2(Kryo kryo, short[] sArr) {
             int length = sArr.length;
             short[] sArr2 = new short[length];
@@ -518,8 +517,8 @@ public class DefaultArraySerializers {
         }
 
         @Override // com.esotericsoftware.kryo.Serializer
-        /* renamed from: read, reason: avoid collision after fix types in other method */
-        public short[] read2(Kryo kryo, Input input, Class<short[]> cls) throws KryoException {
+        /* JADX INFO: renamed from: read, reason: avoid collision after fix types in other method */
+        public short[] read2(Kryo kryo, Input input, Class<short[]> cls) {
             int varInt = input.readVarInt(true);
             if (varInt == 0) {
                 return null;
@@ -527,8 +526,8 @@ public class DefaultArraySerializers {
             return input.readShorts(varInt - 1);
         }
 
-        /* renamed from: write, reason: avoid collision after fix types in other method */
-        public void write2(Kryo kryo, Output output, short[] sArr) throws KryoException {
+        /* JADX INFO: renamed from: write, reason: avoid collision after fix types in other method */
+        public void write2(Kryo kryo, Output output, short[] sArr) {
             if (sArr == null) {
                 output.writeVarInt(0, true);
             } else {
@@ -554,11 +553,11 @@ public class DefaultArraySerializers {
         }
 
         @Override // com.esotericsoftware.kryo.Serializer
-        public /* bridge */ /* synthetic */ void write(Kryo kryo, Output output, String[] strArr) throws KryoException {
+        public /* bridge */ /* synthetic */ void write(Kryo kryo, Output output, String[] strArr) {
             write2(kryo, output, strArr);
         }
 
-        /* renamed from: copy, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: copy, reason: avoid collision after fix types in other method */
         public String[] copy2(Kryo kryo, String[] strArr) {
             int length = strArr.length;
             String[] strArr2 = new String[length];
@@ -567,8 +566,8 @@ public class DefaultArraySerializers {
         }
 
         @Override // com.esotericsoftware.kryo.Serializer
-        /* renamed from: read, reason: avoid collision after fix types in other method */
-        public String[] read2(Kryo kryo, Input input, Class<String[]> cls) throws KryoException {
+        /* JADX INFO: renamed from: read, reason: avoid collision after fix types in other method */
+        public String[] read2(Kryo kryo, Input input, Class<String[]> cls) {
             int varInt = input.readVarInt(true);
             if (varInt == 0) {
                 return null;
@@ -591,8 +590,8 @@ public class DefaultArraySerializers {
             return strArr;
         }
 
-        /* renamed from: write, reason: avoid collision after fix types in other method */
-        public void write2(Kryo kryo, Output output, String[] strArr) throws KryoException {
+        /* JADX INFO: renamed from: write, reason: avoid collision after fix types in other method */
+        public void write2(Kryo kryo, Output output, String[] strArr) {
             int i = 0;
             if (strArr == null) {
                 output.writeVarInt(0, true);

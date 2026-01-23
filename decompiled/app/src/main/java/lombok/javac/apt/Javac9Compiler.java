@@ -14,9 +14,9 @@ import javax.tools.JavaFileManager;
 import javax.tools.JavaFileObject;
 import lombok.javac.apt.LombokFileObjects;
 
-/* compiled from: Javac9Compiler.java */
-/* renamed from: lombok.javac.apt.Java9Compiler, reason: use source file name */
-/* loaded from: discord-126021.apk:lombok/javac/apt/Java9Compiler.SCL.lombok */
+/* JADX INFO: renamed from: lombok.javac.apt.Java9Compiler, reason: use source file name */
+/* JADX INFO: compiled from: Javac9Compiler.java */
+/* JADX INFO: loaded from: discord-126021.apk:lombok/javac/apt/Java9Compiler.SCL.lombok */
 class Javac9Compiler implements LombokFileObjects.Compiler {
     private final BaseFileManager fileManager;
 
@@ -59,9 +59,9 @@ class Javac9Compiler implements LombokFileObjects.Compiler {
         return new FileManagerWrapper(jfm);
     }
 
-    /* compiled from: Javac9Compiler.java */
-    /* renamed from: lombok.javac.apt.Java9Compiler$FileManagerWrapper */
-    /* loaded from: discord-126021.apk:lombok/javac/apt/Java9Compiler$FileManagerWrapper.SCL.lombok */
+    /* JADX INFO: renamed from: lombok.javac.apt.Java9Compiler$FileManagerWrapper */
+    /* JADX INFO: compiled from: Javac9Compiler.java */
+    /* JADX INFO: loaded from: discord-126021.apk:lombok/javac/apt/Java9Compiler$FileManagerWrapper.SCL.lombok */
     static class FileManagerWrapper extends BaseFileManager {
         JavaFileManager manager;
 

@@ -3,24 +3,24 @@ package p007b.p225i.p414e.p426q.p427r.p428f.p429d;
 import com.google.zxing.NotFoundException;
 import p007b.p100d.p104b.p105a.outline;
 
-/* compiled from: FieldParser.java */
-/* renamed from: b.i.e.q.r.f.d.r, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.e.q.r.f.d.r, reason: use source file name */
+/* JADX INFO: compiled from: FieldParser.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class FieldParser {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final Object f13452a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static final Object[][] f13453b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public static final Object[][] f13454c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public static final Object[][] f13455d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public static final Object[][] f13456e;
 
     static {
@@ -32,7 +32,7 @@ public final class FieldParser {
         f13456e = new Object[][]{new Object[]{"7001", 13}, new Object[]{"7002", obj, 30}, new Object[]{"7003", 10}, new Object[]{"8001", 14}, new Object[]{"8002", obj, 20}, new Object[]{"8003", obj, 30}, new Object[]{"8004", obj, 30}, new Object[]{"8005", 6}, new Object[]{"8006", 18}, new Object[]{"8007", obj, 30}, new Object[]{"8008", obj, 12}, new Object[]{"8018", 18}, new Object[]{"8020", obj, 25}, new Object[]{"8100", 6}, new Object[]{"8101", 10}, new Object[]{"8102", 2}, new Object[]{"8110", obj, 70}, new Object[]{"8200", obj, 70}};
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static String m7035a(String str) throws NotFoundException {
         if (str.isEmpty()) {
             return null;
@@ -72,7 +72,7 @@ public final class FieldParser {
         throw NotFoundException.f21665l;
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static String m7036b(int i, int i2, String str) throws NotFoundException {
         if (str.length() < i) {
             throw NotFoundException.f21665l;
@@ -88,7 +88,7 @@ public final class FieldParser {
         return strM7035a == null ? str2 : outline.m883w(str2, strM7035a);
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public static String m7037c(int i, int i2, String str) throws NotFoundException {
         String strSubstring = str.substring(0, i);
         int length = i2 + i;

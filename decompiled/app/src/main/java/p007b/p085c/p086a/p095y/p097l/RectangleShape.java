@@ -10,24 +10,24 @@ import p007b.p085c.p086a.p095y.p096k.AnimatableValue;
 import p007b.p085c.p086a.p095y.p098m.BaseLayer2;
 import p007b.p100d.p104b.p105a.outline;
 
-/* compiled from: RectangleShape.java */
-/* renamed from: b.c.a.y.l.i, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.c.a.y.l.i, reason: use source file name */
+/* JADX INFO: compiled from: RectangleShape.java */
+/* JADX INFO: loaded from: classes.dex */
 public class RectangleShape implements ContentModel2 {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final String f2793a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final AnimatableValue<PointF, PointF> f2794b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final AnimatablePointValue f2795c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final AnimatableFloatValue f2796d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final boolean f2797e;
 
     public RectangleShape(String str, AnimatableValue<PointF, PointF> animatableValue, AnimatablePointValue animatablePointValue, AnimatableFloatValue animatableFloatValue, boolean z2) {
@@ -39,7 +39,7 @@ public class RectangleShape implements ContentModel2 {
     }
 
     @Override // p007b.p085c.p086a.p095y.p097l.ContentModel2
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public Content2 mo775a(LottieDrawable lottieDrawable, BaseLayer2 baseLayer2) {
         return new RectangleContent(lottieDrawable, baseLayer2, this);
     }

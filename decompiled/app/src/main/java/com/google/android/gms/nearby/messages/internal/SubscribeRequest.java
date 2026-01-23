@@ -20,71 +20,71 @@ import p007b.p225i.p226a.p288f.p333j.p334b.p335e.InterfaceC4268a;
 import p007b.p225i.p226a.p288f.p333j.p334b.p335e.InterfaceC4299o0;
 import p007b.p225i.p226a.p288f.p333j.p334b.p335e.InterfaceC4305r0;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public final class SubscribeRequest extends AbstractSafeParcelable implements ReflectedParcelable {
     public static final Parcelable.Creator<SubscribeRequest> CREATOR = new C4285h0();
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final int f20747j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     @Nullable
     public final InterfaceC4299o0 f20748k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final Strategy f20749l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public final InterfaceC4305r0 f20750m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public final MessageFilter f20751n;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     @Nullable
     public final PendingIntent f20752o;
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     @Deprecated
     public final int f20753p;
 
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     @Nullable
     @Deprecated
     public final String f20754q;
 
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     @Nullable
     @Deprecated
     public final String f20755r;
 
-    /* renamed from: s */
+    /* JADX INFO: renamed from: s */
     @Nullable
     public final byte[] f20756s;
 
-    /* renamed from: t */
+    /* JADX INFO: renamed from: t */
     @Deprecated
     public final boolean f20757t;
 
-    /* renamed from: u */
+    /* JADX INFO: renamed from: u */
     @Nullable
     public final InterfaceC4268a f20758u;
 
-    /* renamed from: v */
+    /* JADX INFO: renamed from: v */
     @Deprecated
     public final boolean f20759v;
 
-    /* renamed from: w */
+    /* JADX INFO: renamed from: w */
     @Deprecated
     public final ClientAppContext f20760w;
 
-    /* renamed from: x */
+    /* JADX INFO: renamed from: x */
     public final boolean f20761x;
 
-    /* renamed from: y */
+    /* JADX INFO: renamed from: y */
     public final int f20762y;
 
-    /* renamed from: z */
+    /* JADX INFO: renamed from: z */
     public final int f20763z;
 
     public SubscribeRequest(int i, @Nullable IBinder iBinder, Strategy strategy, IBinder iBinder2, MessageFilter messageFilter, @Nullable PendingIntent pendingIntent, int i2, @Nullable String str, @Nullable String str2, @Nullable byte[] bArr, boolean z2, @Nullable IBinder iBinder3, boolean z3, @Nullable ClientAppContext clientAppContext, boolean z4, int i3, int i4) {

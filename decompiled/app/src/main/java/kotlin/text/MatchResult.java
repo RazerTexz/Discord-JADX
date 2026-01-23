@@ -5,23 +5,23 @@ import kotlin.ranges.Ranges2;
 import p507d0.p579g0.MatchResult2;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: MatchResult.kt */
-/* loaded from: classes3.dex */
+/* JADX INFO: compiled from: MatchResult.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public interface MatchResult {
 
-    /* compiled from: MatchResult.kt */
-    /* renamed from: kotlin.text.MatchResult$a */
+    /* JADX INFO: renamed from: kotlin.text.MatchResult$a */
+    /* JADX INFO: compiled from: MatchResult.kt */
     public static final class C12797a {
         public static C12798b getDestructured(MatchResult matchResult) {
             return new C12798b(matchResult);
         }
     }
 
-    /* compiled from: MatchResult.kt */
-    /* renamed from: kotlin.text.MatchResult$b */
+    /* JADX INFO: renamed from: kotlin.text.MatchResult$b */
+    /* JADX INFO: compiled from: MatchResult.kt */
     public static final class C12798b {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final MatchResult f27452a;
 
         public C12798b(MatchResult matchResult) {

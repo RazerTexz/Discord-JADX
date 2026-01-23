@@ -8,14 +8,14 @@ import p637j0.p641k.Func1;
 import p637j0.p642l.p647e.ScalarSynchronousObservable;
 import p658rx.Observable;
 
-/* compiled from: WidgetChatListModel.kt */
-/* renamed from: com.discord.widgets.chat.list.model.WidgetChatListModel$ChatListState$Companion$get$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.chat.list.model.WidgetChatListModel$ChatListState$Companion$get$1, reason: use source file name */
+/* JADX INFO: compiled from: WidgetChatListModel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetChatListModel2<T, R> implements Func1<Boolean, Observable<? extends WidgetChatListModel.ChatListState>> {
     public final /* synthetic */ long $channelId;
 
-    /* compiled from: WidgetChatListModel.kt */
-    /* renamed from: com.discord.widgets.chat.list.model.WidgetChatListModel$ChatListState$Companion$get$1$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.list.model.WidgetChatListModel$ChatListState$Companion$get$1$1 */
+    /* JADX INFO: compiled from: WidgetChatListModel.kt */
     public static final class C81591<T, R> implements Func1<StoreMessagesLoader.ChannelLoadedState, WidgetChatListModel.ChatListState> {
         public static final C81591 INSTANCE = new C81591();
 
@@ -24,7 +24,7 @@ public final class WidgetChatListModel2<T, R> implements Func1<Boolean, Observab
             return call2(channelLoadedState);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final WidgetChatListModel.ChatListState call2(StoreMessagesLoader.ChannelLoadedState channelLoadedState) {
             return channelLoadedState.getIsTouchedSinceLastJump() ? WidgetChatListModel.ChatListState.DETACHED : WidgetChatListModel.ChatListState.DETACHED_UNTOUCHED;
         }

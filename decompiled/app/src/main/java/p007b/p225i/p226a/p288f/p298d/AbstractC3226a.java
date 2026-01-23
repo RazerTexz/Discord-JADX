@@ -23,12 +23,12 @@ import p007b.p225i.p226a.p288f.p299e.p308o.C3404f;
 import p007b.p225i.p226a.p288f.p299e.p308o.p309j.ThreadFactoryC3408a;
 import p007b.p225i.p361c.p398s.C4815f;
 
-/* compiled from: com.google.android.gms:play-services-cloud-messaging@@16.0.0 */
-/* renamed from: b.i.a.f.d.a */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.d.a */
+/* JADX INFO: compiled from: com.google.android.gms:play-services-cloud-messaging@@16.0.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public abstract class AbstractC3226a extends BroadcastReceiver {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final ExecutorService f9242a;
 
     public AbstractC3226a() {
@@ -38,7 +38,7 @@ public abstract class AbstractC3226a extends BroadcastReceiver {
     }
 
     @WorkerThread
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final int m3997a(@NonNull Context context, @NonNull Intent intent) {
         PendingIntent pendingIntent = (PendingIntent) intent.getParcelableExtra("pending_intent");
         if (pendingIntent != null) {
@@ -77,7 +77,7 @@ public abstract class AbstractC3226a extends BroadcastReceiver {
     }
 
     @WorkerThread
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final int m3998b(@NonNull Context context, @NonNull Intent intent) {
         int i;
         Task taskM4002b;

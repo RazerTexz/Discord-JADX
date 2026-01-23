@@ -45,14 +45,14 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 import p658rx.Observable;
 
-/* compiled from: AnalyticsUtils.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: AnalyticsUtils.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class AnalyticsUtils {
     public static final AnalyticsUtils INSTANCE = new AnalyticsUtils();
     private static FirebaseAnalytics fireBaseInstance;
 
-    /* compiled from: AnalyticsUtils.kt */
-    /* renamed from: com.discord.utilities.analytics.AnalyticsUtils$initAppOpen$1 */
+    /* JADX INFO: renamed from: com.discord.utilities.analytics.AnalyticsUtils$initAppOpen$1 */
+    /* JADX INFO: compiled from: AnalyticsUtils.kt */
     public static final class C66821 extends Lambda implements Function1<MeUser, Unit> {
         public static final C66821 INSTANCE = new C66821();
 
@@ -66,7 +66,7 @@ public final class AnalyticsUtils {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(MeUser meUser) {
             Intrinsics3.checkNotNullParameter(meUser, "meUser");
             if (Intrinsics3.areEqual(meUser, UserUtils.INSTANCE.getEMPTY_USER())) {
@@ -123,10 +123,10 @@ public final class AnalyticsUtils {
         RtcCameraConfig.INSTANCE.init();
     }
 
-    /* compiled from: AnalyticsUtils.kt */
+    /* JADX INFO: compiled from: AnalyticsUtils.kt */
     public static final class Tracker {
 
-        /* renamed from: Companion, reason: from kotlin metadata */
+        /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
         public static final Companion INSTANCE = new Companion(null);
         private static final Lazy instance$delegate = LazyJVM.lazy(AnalyticsUtils2.INSTANCE);
         private String analyticsToken;
@@ -136,7 +136,7 @@ public final class AnalyticsUtils {
         private boolean fingerprinted;
         private final RestAPI restAPI;
 
-        /* compiled from: AnalyticsUtils.kt */
+        /* JADX INFO: compiled from: AnalyticsUtils.kt */
         public static final class Companion {
             private Companion() {
             }

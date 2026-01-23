@@ -1,7 +1,7 @@
 package androidx.core.content.p004pm;
 
+/* JADX INFO: loaded from: classes.dex */
 @Deprecated
-/* loaded from: classes.dex */
 public final class ActivityInfoCompat {
 
     @Deprecated

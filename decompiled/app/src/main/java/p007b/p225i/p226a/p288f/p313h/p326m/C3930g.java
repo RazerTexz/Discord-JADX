@@ -5,8 +5,8 @@ import android.os.Parcelable;
 import com.google.android.gms.internal.nearby.zzgu;
 import p007b.p085c.p086a.p087a0.AnimatableValueParser;
 
-/* renamed from: b.i.a.f.h.m.g */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.h.m.g */
+/* JADX INFO: loaded from: classes3.dex */
 public final class C3930g implements Parcelable.Creator<zzgu> {
     @Override // android.os.Parcelable.Creator
     public final zzgu createFromParcel(Parcel parcel) {

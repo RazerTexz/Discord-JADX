@@ -17,7 +17,7 @@ import java.util.jar.JarFile;
 import lombok.core.LombokApp;
 import lombok.permit.Permit;
 
-/* loaded from: discord-126021.apk:lombok/delombok/DelombokApp.SCL.lombok */
+/* JADX INFO: loaded from: discord-126021.apk:lombok/delombok/DelombokApp.SCL.lombok */
 public class DelombokApp extends LombokApp {
     @Override // lombok.core.LombokApp
     public int runApp(List<String> args) throws Exception {
@@ -69,8 +69,8 @@ public class DelombokApp extends LombokApp {
         return loader.loadClass("lombok.delombok.Delombok");
     }
 
-    /* renamed from: lombok.delombok.DelombokApp$1 */
-    /* loaded from: discord-126021.apk:lombok/delombok/DelombokApp$1.SCL.lombok */
+    /* JADX INFO: renamed from: lombok.delombok.DelombokApp$1 */
+    /* JADX INFO: loaded from: discord-126021.apk:lombok/delombok/DelombokApp$1.SCL.lombok */
     class C128441 extends ClassLoader {
         private final /* synthetic */ JarFile val$toolsJarFile;
         private final /* synthetic */ File val$toolsJar;
@@ -152,8 +152,8 @@ public class DelombokApp extends LombokApp {
             return entry == null ? super.getResources(name) : new AnonymousClass1(parent, this.val$toolsJar, name);
         }
 
-        /* renamed from: lombok.delombok.DelombokApp$1$1, reason: invalid class name */
-        /* loaded from: discord-126021.apk:lombok/delombok/DelombokApp$1$1.SCL.lombok */
+        /* JADX INFO: renamed from: lombok.delombok.DelombokApp$1$1, reason: invalid class name */
+        /* JADX INFO: loaded from: discord-126021.apk:lombok/delombok/DelombokApp$1$1.SCL.lombok */
         class AnonymousClass1 implements Enumeration<URL> {
             private boolean first = false;
             private final /* synthetic */ Enumeration val$parent;
@@ -192,7 +192,7 @@ public class DelombokApp extends LombokApp {
         }
     }
 
-    private void runDirectly(List<String> args) throws SecurityException, IllegalArgumentException {
+    private void runDirectly(List<String> args) {
         Delombok.main((String[]) args.toArray(new String[0]));
     }
 

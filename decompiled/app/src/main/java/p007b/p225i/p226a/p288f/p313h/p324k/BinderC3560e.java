@@ -2,12 +2,12 @@ package p007b.p225i.p226a.p288f.p313h.p324k;
 
 import p007b.p225i.p226a.p288f.p299e.p300h.p301j.InterfaceC3287e;
 
-/* compiled from: com.google.firebase:firebase-appindexing@@19.1.0 */
-/* renamed from: b.i.a.f.h.k.e */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.h.k.e */
+/* JADX INFO: compiled from: com.google.firebase:firebase-appindexing@@19.1.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public class BinderC3560e<T> extends AbstractBinderC3561f {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public InterfaceC3287e<T> f9832a;
 
     public BinderC3560e(InterfaceC3287e<T> interfaceC3287e) {

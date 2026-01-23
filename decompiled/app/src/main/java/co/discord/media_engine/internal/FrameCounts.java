@@ -2,8 +2,8 @@ package co.discord.media_engine.internal;
 
 import p007b.p100d.p104b.p105a.outline;
 
-/* compiled from: NativeStatistics.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: NativeStatistics.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class FrameCounts {
     private final int deltaFrames;
     private final int keyFrames;
@@ -23,12 +23,12 @@ public final /* data */ class FrameCounts {
         return frameCounts.copy(i, i2);
     }
 
-    /* renamed from: component1, reason: from getter */
+    /* JADX INFO: renamed from: component1, reason: from getter */
     public final int getDeltaFrames() {
         return this.deltaFrames;
     }
 
-    /* renamed from: component2, reason: from getter */
+    /* JADX INFO: renamed from: component2, reason: from getter */
     public final int getKeyFrames() {
         return this.keyFrames;
     }

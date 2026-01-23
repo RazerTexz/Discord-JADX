@@ -4,12 +4,12 @@ import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 import kotlin.jvm.functions.Function0;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: FilesFragment.kt */
-/* renamed from: b.b.a.a.e, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.b.a.a.e, reason: use source file name */
+/* JADX INFO: compiled from: FilesFragment.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class FilesFragment2 implements SwipeRefreshLayout.OnRefreshListener {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final /* synthetic */ Function0 f2132a;
 
     public FilesFragment2(Function0 function0) {

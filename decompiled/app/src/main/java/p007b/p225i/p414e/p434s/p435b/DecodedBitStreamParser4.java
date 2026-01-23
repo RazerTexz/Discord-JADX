@@ -10,16 +10,16 @@ import p007b.p225i.p414e.p418n.BitSource;
 import p007b.p225i.p414e.p418n.CharacterSetECI;
 import p007b.p225i.p414e.p418n.StringUtils;
 
-/* compiled from: DecodedBitStreamParser.java */
-/* renamed from: b.i.e.s.b.d, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.e.s.b.d, reason: use source file name */
+/* JADX INFO: compiled from: DecodedBitStreamParser.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class DecodedBitStreamParser4 {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final char[] f13525a = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ $%*+-./:".toCharArray();
 
     /* JADX WARN: Removed duplicated region for block: B:26:0x006a  */
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
@@ -63,7 +63,7 @@ public final class DecodedBitStreamParser4 {
       0x00a2: PHI (r10v6 int) = (r10v1 int), (r10v5 int), (r10v1 int) binds: [B:37:0x0085, B:45:0x009d, B:32:0x0078] A[DONT_GENERATE, DONT_INLINE]
       0x00a2: PHI (r20v6 byte[]) = (r20v5 byte[]), (r20v5 byte[]), (r20v7 byte[]) binds: [B:37:0x0085, B:45:0x009d, B:32:0x0078] A[DONT_GENERATE, DONT_INLINE]] */
     /* JADX WARN: Removed duplicated region for block: B:97:0x010f  */
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
@@ -205,7 +205,7 @@ public final class DecodedBitStreamParser4 {
         }
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public static void m7093c(BitSource bitSource, StringBuilder sb, int i) throws FormatException {
         if (i * 13 > bitSource.m6948a()) {
             throw FormatException.m9260a();
@@ -228,7 +228,7 @@ public final class DecodedBitStreamParser4 {
         }
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public static void m7094d(BitSource bitSource, StringBuilder sb, int i) throws FormatException {
         if (i * 13 > bitSource.m6948a()) {
             throw FormatException.m9260a();
@@ -251,7 +251,7 @@ public final class DecodedBitStreamParser4 {
         }
     }
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public static void m7095e(BitSource bitSource, StringBuilder sb, int i) throws FormatException {
         while (i >= 3) {
             if (bitSource.m6948a() < 10) {
@@ -290,7 +290,7 @@ public final class DecodedBitStreamParser4 {
         }
     }
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public static char m7096f(int i) throws FormatException {
         char[] cArr = f13525a;
         if (i < cArr.length) {

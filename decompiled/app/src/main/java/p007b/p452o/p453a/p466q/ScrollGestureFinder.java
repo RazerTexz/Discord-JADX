@@ -7,28 +7,28 @@ import com.otaliastudios.cameraview.CameraView;
 import p007b.p452o.p453a.CameraLogger;
 import p007b.p452o.p453a.p466q.GestureFinder;
 
-/* compiled from: ScrollGestureFinder.java */
-/* renamed from: b.o.a.q.f, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.o.a.q.f, reason: use source file name */
+/* JADX INFO: compiled from: ScrollGestureFinder.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class ScrollGestureFinder extends GestureFinder {
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public static final CameraLogger f14091d = new CameraLogger(ScrollGestureFinder.class.getSimpleName());
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public GestureDetector f14092e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public boolean f14093f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public float f14094g;
 
-    /* compiled from: ScrollGestureFinder.java */
-    /* renamed from: b.o.a.q.f$a */
+    /* JADX INFO: renamed from: b.o.a.q.f$a */
+    /* JADX INFO: compiled from: ScrollGestureFinder.java */
     public class a extends GestureDetector.SimpleOnGestureListener {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public final /* synthetic */ GestureFinder.a f14095j;
 
         public a(GestureFinder.a aVar) {
@@ -81,12 +81,12 @@ public class ScrollGestureFinder extends GestureFinder {
     }
 
     @Override // p007b.p452o.p453a.p466q.GestureFinder
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public float mo7393b(float f, float f2, float f3) {
         return ((f3 - f2) * this.f14094g * 2.0f) + f;
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public boolean m7395c(@NonNull MotionEvent motionEvent) {
         if (motionEvent.getAction() == 0) {
             this.f14093f = false;

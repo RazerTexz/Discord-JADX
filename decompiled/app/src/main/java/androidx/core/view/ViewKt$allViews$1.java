@@ -12,9 +12,9 @@ import p507d0.p584w.p585h.Intrinsics2;
 import p507d0.p584w.p586i.p587a.ContinuationImpl5;
 import p507d0.p584w.p586i.p587a.DebugMetadata;
 
-/* compiled from: View.kt */
+/* JADX INFO: compiled from: View.kt */
+/* JADX INFO: loaded from: classes.dex */
 @DebugMetadata(m10084c = "androidx.core.view.ViewKt$allViews$1", m10085f = "View.kt", m10086l = {406, 408}, m10087m = "invokeSuspend")
-/* loaded from: classes.dex */
 public final class ViewKt$allViews$1 extends ContinuationImpl5 implements Function2<SequenceBuilder2<? super View>, Continuation<? super Unit>, Object> {
     public final /* synthetic */ View $this_allViews;
     private /* synthetic */ Object L$0;
@@ -33,7 +33,7 @@ public final class ViewKt$allViews$1 extends ContinuationImpl5 implements Functi
         return viewKt$allViews$1;
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final Object invoke2(SequenceBuilder2<? super View> sequenceBuilder2, Continuation<? super Unit> continuation) {
         return ((ViewKt$allViews$1) create(sequenceBuilder2, continuation)).invokeSuspend(Unit.f27425a);
     }

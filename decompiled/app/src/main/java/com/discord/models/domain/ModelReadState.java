@@ -8,15 +8,15 @@ import kotlin.jvm.internal.Ref$LongRef;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ModelReadState.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: ModelReadState.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class ModelReadState {
     private final long channelId;
     private final long lastMessageId;
     private final int mentionCount;
     private final int version;
 
-    /* compiled from: ModelReadState.kt */
+    /* JADX INFO: compiled from: ModelReadState.kt */
     public static final class Parser implements Model.Parser<ModelReadState> {
         public static final Parser INSTANCE = new Parser();
 
@@ -75,22 +75,22 @@ public final /* data */ class ModelReadState {
         return modelReadState.copy(j3, j4, i4, i2);
     }
 
-    /* renamed from: component1, reason: from getter */
+    /* JADX INFO: renamed from: component1, reason: from getter */
     public final long getChannelId() {
         return this.channelId;
     }
 
-    /* renamed from: component2, reason: from getter */
+    /* JADX INFO: renamed from: component2, reason: from getter */
     public final long getLastMessageId() {
         return this.lastMessageId;
     }
 
-    /* renamed from: component3, reason: from getter */
+    /* JADX INFO: renamed from: component3, reason: from getter */
     public final int getMentionCount() {
         return this.mentionCount;
     }
 
-    /* renamed from: component4, reason: from getter */
+    /* JADX INFO: renamed from: component4, reason: from getter */
     public final int getVersion() {
         return this.version;
     }

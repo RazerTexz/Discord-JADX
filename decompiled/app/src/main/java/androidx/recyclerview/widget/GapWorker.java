@@ -10,7 +10,7 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.concurrent.TimeUnit;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public final class GapWorker implements Runnable {
     public static final ThreadLocal<GapWorker> sGapWorker = new ThreadLocal<>();
     public static Comparator<Task> sTaskComparator = new C05491();
@@ -19,14 +19,14 @@ public final class GapWorker implements Runnable {
     public ArrayList<RecyclerView> mRecyclerViews = new ArrayList<>();
     private ArrayList<Task> mTasks = new ArrayList<>();
 
-    /* renamed from: androidx.recyclerview.widget.GapWorker$1 */
+    /* JADX INFO: renamed from: androidx.recyclerview.widget.GapWorker$1 */
     public class C05491 implements Comparator<Task> {
         @Override // java.util.Comparator
         public /* bridge */ /* synthetic */ int compare(Task task, Task task2) {
             return compare2(task, task2);
         }
 
-        /* renamed from: compare, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: compare, reason: avoid collision after fix types in other method */
         public int compare2(Task task, Task task2) {
             RecyclerView recyclerView = task.view;
             if ((recyclerView == null) != (task2.view == null)) {

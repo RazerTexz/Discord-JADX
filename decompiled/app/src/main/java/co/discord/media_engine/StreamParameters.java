@@ -3,8 +3,8 @@ package co.discord.media_engine;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: StreamParameters.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: StreamParameters.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class StreamParameters {
     private final boolean active;
     private final int maxBitrate;
@@ -32,42 +32,42 @@ public final /* data */ class StreamParameters {
         return streamParameters.copy((i6 & 1) != 0 ? streamParameters.type : streamParameters2, (i6 & 2) != 0 ? streamParameters.rid : str, (i6 & 4) != 0 ? streamParameters.ssrc : i, (i6 & 8) != 0 ? streamParameters.rtxSsrc : i2, (i6 & 16) != 0 ? streamParameters.active : z2, (i6 & 32) != 0 ? streamParameters.maxBitrate : i3, (i6 & 64) != 0 ? streamParameters.quality : i4, (i6 & 128) != 0 ? streamParameters.maxPixelCount : i5);
     }
 
-    /* renamed from: component1, reason: from getter */
+    /* JADX INFO: renamed from: component1, reason: from getter */
     public final StreamParameters2 getType() {
         return this.type;
     }
 
-    /* renamed from: component2, reason: from getter */
+    /* JADX INFO: renamed from: component2, reason: from getter */
     public final String getRid() {
         return this.rid;
     }
 
-    /* renamed from: component3, reason: from getter */
+    /* JADX INFO: renamed from: component3, reason: from getter */
     public final int getSsrc() {
         return this.ssrc;
     }
 
-    /* renamed from: component4, reason: from getter */
+    /* JADX INFO: renamed from: component4, reason: from getter */
     public final int getRtxSsrc() {
         return this.rtxSsrc;
     }
 
-    /* renamed from: component5, reason: from getter */
+    /* JADX INFO: renamed from: component5, reason: from getter */
     public final boolean getActive() {
         return this.active;
     }
 
-    /* renamed from: component6, reason: from getter */
+    /* JADX INFO: renamed from: component6, reason: from getter */
     public final int getMaxBitrate() {
         return this.maxBitrate;
     }
 
-    /* renamed from: component7, reason: from getter */
+    /* JADX INFO: renamed from: component7, reason: from getter */
     public final int getQuality() {
         return this.quality;
     }
 
-    /* renamed from: component8, reason: from getter */
+    /* JADX INFO: renamed from: component8, reason: from getter */
     public final int getMaxPixelCount() {
         return this.maxPixelCount;
     }
@@ -122,17 +122,20 @@ public final /* data */ class StreamParameters {
     }
 
     /* JADX WARN: Multi-variable type inference failed */
+    /* JADX WARN: Type inference failed for: r1v11 */
+    /* JADX WARN: Type inference failed for: r1v5, types: [int] */
+    /* JADX WARN: Type inference failed for: r1v9 */
     public int hashCode() {
         StreamParameters2 streamParameters2 = this.type;
         int iHashCode = (streamParameters2 != null ? streamParameters2.hashCode() : 0) * 31;
         String str = this.rid;
         int iHashCode2 = (((((iHashCode + (str != null ? str.hashCode() : 0)) * 31) + this.ssrc) * 31) + this.rtxSsrc) * 31;
         boolean z2 = this.active;
-        int i = z2;
-        if (z2 != 0) {
-            i = 1;
+        ?? r1 = z2;
+        if (z2) {
+            r1 = 1;
         }
-        return ((((((iHashCode2 + i) * 31) + this.maxBitrate) * 31) + this.quality) * 31) + this.maxPixelCount;
+        return ((((((iHashCode2 + r1) * 31) + this.maxBitrate) * 31) + this.quality) * 31) + this.maxPixelCount;
     }
 
     public String toString() {

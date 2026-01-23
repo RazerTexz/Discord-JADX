@@ -8,8 +8,8 @@ import com.discord.api.science.AnalyticsSchema;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: TrackJoinStageInstance.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: TrackJoinStageInstance.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class TrackJoinStageInstance implements AnalyticsSchema, TrackBase2, TrackNetworkInformation2 {
     private TrackBase trackBase;
     private TrackNetworkInformation trackNetworkInformation;
@@ -30,7 +30,7 @@ public final /* data */ class TrackJoinStageInstance implements AnalyticsSchema,
     private final transient String analyticsSchemaTypeName = "join_stage_instance";
 
     @Override // com.discord.api.science.AnalyticsSchema
-    /* renamed from: d, reason: from getter */
+    /* JADX INFO: renamed from: d, reason: from getter */
     public String getAnalyticsSchemaTypeName() {
         return this.analyticsSchemaTypeName;
     }

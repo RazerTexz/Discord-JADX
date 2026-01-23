@@ -7,19 +7,19 @@ import com.google.android.gms.common.internal.safeparcel.AbstractSafeParcelable;
 import p007b.p085c.p086a.p087a0.AnimatableValueParser;
 import p007b.p225i.p226a.p288f.p292c.p293a.p296f.C3222g;
 
-/* compiled from: com.google.android.gms:play-services-auth@@19.0.0 */
-/* loaded from: classes3.dex */
+/* JADX INFO: compiled from: com.google.android.gms:play-services-auth@@19.0.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public class SignInAccount extends AbstractSafeParcelable implements ReflectedParcelable {
     public static final Parcelable.Creator<SignInAccount> CREATOR = new C3222g();
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     @Deprecated
     public String f20455j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public GoogleSignInAccount f20456k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     @Deprecated
     public String f20457l;
 

@@ -5,21 +5,21 @@ import p658rx.Subscriber;
 import p658rx.functions.Func2;
 
 /* JADX INFO: Add missing generic type declarations: [T] */
-/* compiled from: OperatorTakeWhile.java */
-/* renamed from: j0.l.a.j2, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: j0.l.a.j2, reason: use source file name */
+/* JADX INFO: compiled from: OperatorTakeWhile.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class OperatorTakeWhile2<T> extends Subscriber<T> {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public int f26877j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public boolean f26878k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final /* synthetic */ Subscriber f26879l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public final /* synthetic */ OperatorTakeWhile f26880m;
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */

@@ -3,12 +3,12 @@ package p637j0.p642l.p643a;
 import p658rx.Observable;
 import p658rx.Subscriber;
 
-/* compiled from: OnSubscribeThrow.java */
-/* renamed from: j0.l.a.f0, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: j0.l.a.f0, reason: use source file name */
+/* JADX INFO: compiled from: OnSubscribeThrow.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class OnSubscribeThrow<T> implements Observable.InterfaceC13005a<T> {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final Throwable f26787j;
 
     public OnSubscribeThrow(Throwable th) {

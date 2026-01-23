@@ -4,10 +4,10 @@ import java.security.cert.Certificate;
 import java.util.List;
 import javax.net.ssl.SSLPeerUnverifiedException;
 
-/* compiled from: CertificateChainCleaner.kt */
-/* renamed from: f0.e0.m.c, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: f0.e0.m.c, reason: use source file name */
+/* JADX INFO: compiled from: CertificateChainCleaner.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public abstract class CertificateChainCleaner {
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public abstract List<Certificate> mo10338a(List<? extends Certificate> list, String str) throws SSLPeerUnverifiedException;
 }

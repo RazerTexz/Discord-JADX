@@ -4,9 +4,9 @@ import kotlin.properties.Interfaces;
 import kotlin.reflect.KProperty;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ObservableProperty.kt */
-/* renamed from: d0.b0.a, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.b0.a, reason: use source file name */
+/* JADX INFO: compiled from: ObservableProperty.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public abstract class ObservableProperty<V> implements Interfaces<Object, V> {
     private V value;
 

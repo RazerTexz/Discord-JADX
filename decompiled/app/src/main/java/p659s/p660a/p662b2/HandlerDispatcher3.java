@@ -7,14 +7,14 @@ import p659s.p660a.Delay;
 import p659s.p660a.Job2;
 import p659s.p660a.MainCoroutineDispatcher;
 
-/* compiled from: HandlerDispatcher.kt */
-/* renamed from: s.a.b2.b, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: s.a.b2.b, reason: use source file name */
+/* JADX INFO: compiled from: HandlerDispatcher.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public abstract class HandlerDispatcher3 extends MainCoroutineDispatcher implements Delay {
     public HandlerDispatcher3() {
     }
 
-    /* renamed from: x */
+    /* JADX INFO: renamed from: x */
     public Job2 mo11196x(long j, Runnable runnable, CoroutineContext coroutineContext) {
         return C3404f.m4360x0(j, runnable, coroutineContext);
     }

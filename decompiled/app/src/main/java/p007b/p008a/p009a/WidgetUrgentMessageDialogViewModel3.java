@@ -15,36 +15,36 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p658rx.Observable;
 import p658rx.subjects.PublishSubject;
 
-/* compiled from: WidgetUrgentMessageDialogViewModel.kt */
-/* renamed from: b.a.a.x, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.a.a.x, reason: use source file name */
+/* JADX INFO: compiled from: WidgetUrgentMessageDialogViewModel.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class WidgetUrgentMessageDialogViewModel3 extends AppViewModel<d> {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static final a f446j = new a(null);
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final PublishSubject<b> f447k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final RestAPI f448l;
 
-    /* compiled from: WidgetUrgentMessageDialogViewModel.kt */
-    /* renamed from: b.a.a.x$a */
+    /* JADX INFO: renamed from: b.a.a.x$a */
+    /* JADX INFO: compiled from: WidgetUrgentMessageDialogViewModel.kt */
     public static final class a {
         public a(DefaultConstructorMarker defaultConstructorMarker) {
         }
     }
 
-    /* compiled from: WidgetUrgentMessageDialogViewModel.kt */
-    /* renamed from: b.a.a.x$b */
+    /* JADX INFO: renamed from: b.a.a.x$b */
+    /* JADX INFO: compiled from: WidgetUrgentMessageDialogViewModel.kt */
     public static abstract class b {
 
-        /* compiled from: WidgetUrgentMessageDialogViewModel.kt */
-        /* renamed from: b.a.a.x$b$a */
+        /* JADX INFO: renamed from: b.a.a.x$b$a */
+        /* JADX INFO: compiled from: WidgetUrgentMessageDialogViewModel.kt */
         public static final class a extends b {
 
-            /* renamed from: a */
+            /* JADX INFO: renamed from: a */
             public static final a f449a = new a();
 
             public a() {
@@ -52,11 +52,11 @@ public final class WidgetUrgentMessageDialogViewModel3 extends AppViewModel<d> {
             }
         }
 
-        /* compiled from: WidgetUrgentMessageDialogViewModel.kt */
-        /* renamed from: b.a.a.x$b$b, reason: collision with other inner class name */
+        /* JADX INFO: renamed from: b.a.a.x$b$b, reason: collision with other inner class name */
+        /* JADX INFO: compiled from: WidgetUrgentMessageDialogViewModel.kt */
         public static final class C13210b extends b {
 
-            /* renamed from: a */
+            /* JADX INFO: renamed from: a */
             public static final C13210b f450a = new C13210b();
 
             public C13210b() {
@@ -71,11 +71,11 @@ public final class WidgetUrgentMessageDialogViewModel3 extends AppViewModel<d> {
         }
     }
 
-    /* compiled from: WidgetUrgentMessageDialogViewModel.kt */
-    /* renamed from: b.a.a.x$c */
+    /* JADX INFO: renamed from: b.a.a.x$c */
+    /* JADX INFO: compiled from: WidgetUrgentMessageDialogViewModel.kt */
     public static final class c {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final User f451a;
 
         public c(User user) {
@@ -106,14 +106,14 @@ public final class WidgetUrgentMessageDialogViewModel3 extends AppViewModel<d> {
         }
     }
 
-    /* compiled from: WidgetUrgentMessageDialogViewModel.kt */
-    /* renamed from: b.a.a.x$d */
+    /* JADX INFO: renamed from: b.a.a.x$d */
+    /* JADX INFO: compiled from: WidgetUrgentMessageDialogViewModel.kt */
     public static final class d {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final Integer f452a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final boolean f453b;
 
         public d(Integer num, boolean z2) {
@@ -133,15 +133,18 @@ public final class WidgetUrgentMessageDialogViewModel3 extends AppViewModel<d> {
         }
 
         /* JADX WARN: Multi-variable type inference failed */
+        /* JADX WARN: Type inference failed for: r1v1, types: [int] */
+        /* JADX WARN: Type inference failed for: r1v2 */
+        /* JADX WARN: Type inference failed for: r1v3 */
         public int hashCode() {
             Integer num = this.f452a;
             int iHashCode = (num != null ? num.hashCode() : 0) * 31;
             boolean z2 = this.f453b;
-            int i = z2;
-            if (z2 != 0) {
-                i = 1;
+            ?? r1 = z2;
+            if (z2) {
+                r1 = 1;
             }
-            return iHashCode + i;
+            return iHashCode + r1;
         }
 
         public String toString() {

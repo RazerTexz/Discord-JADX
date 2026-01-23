@@ -9,15 +9,15 @@ import p007b.p195g.p196a.p205c.SerializerProvider;
 import p007b.p195g.p196a.p205c.p212e0.TypeSerializer;
 import p007b.p195g.p196a.p205c.p215g0.ContextualSerializer;
 
-/* compiled from: TypeWrappedSerializer.java */
-/* renamed from: b.g.a.c.g0.t.p, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.g.a.c.g0.t.p, reason: use source file name */
+/* JADX INFO: compiled from: TypeWrappedSerializer.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class TypeWrappedSerializer extends JsonSerializer<Object> implements ContextualSerializer {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final TypeSerializer f4845j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final JsonSerializer<Object> f4846k;
 
     public TypeWrappedSerializer(TypeSerializer typeSerializer, JsonSerializer<?> jsonSerializer) {
@@ -26,7 +26,7 @@ public final class TypeWrappedSerializer extends JsonSerializer<Object> implemen
     }
 
     @Override // p007b.p195g.p196a.p205c.p215g0.ContextualSerializer
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public JsonSerializer<?> mo1997a(SerializerProvider serializerProvider, BeanProperty beanProperty) throws JsonMappingException {
         JsonSerializer<?> jsonSerializerM2261z = this.f4846k;
         if (jsonSerializerM2261z instanceof ContextualSerializer) {
@@ -36,19 +36,19 @@ public final class TypeWrappedSerializer extends JsonSerializer<Object> implemen
     }
 
     @Override // p007b.p195g.p196a.p205c.JsonSerializer
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public Class<Object> mo2041c() {
         return Object.class;
     }
 
     @Override // p007b.p195g.p196a.p205c.JsonSerializer
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public void mo1807f(Object obj, JsonGenerator jsonGenerator, SerializerProvider serializerProvider) throws IOException {
         this.f4846k.mo1808g(obj, jsonGenerator, serializerProvider, this.f4845j);
     }
 
     @Override // p007b.p195g.p196a.p205c.JsonSerializer
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public void mo1808g(Object obj, JsonGenerator jsonGenerator, SerializerProvider serializerProvider, TypeSerializer typeSerializer) throws IOException {
         this.f4846k.mo1808g(obj, jsonGenerator, serializerProvider, typeSerializer);
     }

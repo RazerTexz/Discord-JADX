@@ -12,9 +12,9 @@ import androidx.annotation.Nullable;
 import androidx.coordinatorlayout.widget.CoordinatorLayout;
 import androidx.core.view.ViewCompat;
 
-/* compiled from: HeaderBehavior.java */
-/* renamed from: b.i.a.g.a.a, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.g.a.a, reason: use source file name */
+/* JADX INFO: compiled from: HeaderBehavior.java */
+/* JADX INFO: loaded from: classes3.dex */
 public abstract class HeaderBehavior<V extends View> extends ViewOffsetBehavior<V> {
     private static final int INVALID_POINTER = -1;
     private int activePointerId;
@@ -29,14 +29,14 @@ public abstract class HeaderBehavior<V extends View> extends ViewOffsetBehavior<
     @Nullable
     private VelocityTracker velocityTracker;
 
-    /* compiled from: HeaderBehavior.java */
-    /* renamed from: b.i.a.g.a.a$a */
+    /* JADX INFO: renamed from: b.i.a.g.a.a$a */
+    /* JADX INFO: compiled from: HeaderBehavior.java */
     public class a implements Runnable {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public final CoordinatorLayout f11527j;
 
-        /* renamed from: k */
+        /* JADX INFO: renamed from: k */
         public final V f11528k;
 
         public a(CoordinatorLayout coordinatorLayout, V v) {

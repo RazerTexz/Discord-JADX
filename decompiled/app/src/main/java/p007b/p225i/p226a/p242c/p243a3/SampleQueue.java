@@ -27,132 +27,132 @@ import p007b.p225i.p226a.p242c.p266w2.DrmSessionManager2;
 import p007b.p225i.p226a.p242c.p267x2.TrackOutput;
 import p007b.p225i.p226a.p242c.p267x2.TrackOutput2;
 
-/* compiled from: SampleQueue.java */
-/* renamed from: b.i.a.c.a3.h0, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.a3.h0, reason: use source file name */
+/* JADX INFO: compiled from: SampleQueue.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class SampleQueue implements TrackOutput2 {
 
-    /* renamed from: A */
+    /* JADX INFO: renamed from: A */
     @Nullable
     public Format2 f5592A;
 
-    /* renamed from: B */
+    /* JADX INFO: renamed from: B */
     @Nullable
     public Format2 f5593B;
 
-    /* renamed from: C */
+    /* JADX INFO: renamed from: C */
     public boolean f5594C;
 
-    /* renamed from: D */
+    /* JADX INFO: renamed from: D */
     public boolean f5595D;
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final SampleDataQueue f5596a;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     @Nullable
     public final DrmSessionManager2 f5599d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     @Nullable
     public final DrmSessionEventListener.a f5600e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     @Nullable
     public final Looper f5601f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     @Nullable
     public d f5602g;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     @Nullable
     public Format2 f5603h;
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     @Nullable
     public DrmSession f5604i;
 
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     public int f5612q;
 
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     public int f5613r;
 
-    /* renamed from: s */
+    /* JADX INFO: renamed from: s */
     public int f5614s;
 
-    /* renamed from: t */
+    /* JADX INFO: renamed from: t */
     public int f5615t;
 
-    /* renamed from: x */
+    /* JADX INFO: renamed from: x */
     public boolean f5619x;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final b f5597b = new b();
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public int f5605j = 1000;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public int[] f5606k = new int[1000];
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public long[] f5607l = new long[1000];
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public long[] f5610o = new long[1000];
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public int[] f5609n = new int[1000];
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public int[] f5608m = new int[1000];
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public TrackOutput2.a[] f5611p = new TrackOutput2.a[1000];
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final SpannedData<c> f5598c = new SpannedData<>(C2549k.f5629a);
 
-    /* renamed from: u */
+    /* JADX INFO: renamed from: u */
     public long f5616u = Long.MIN_VALUE;
 
-    /* renamed from: v */
+    /* JADX INFO: renamed from: v */
     public long f5617v = Long.MIN_VALUE;
 
-    /* renamed from: w */
+    /* JADX INFO: renamed from: w */
     public long f5618w = Long.MIN_VALUE;
 
-    /* renamed from: z */
+    /* JADX INFO: renamed from: z */
     public boolean f5621z = true;
 
-    /* renamed from: y */
+    /* JADX INFO: renamed from: y */
     public boolean f5620y = true;
 
-    /* compiled from: SampleQueue.java */
-    /* renamed from: b.i.a.c.a3.h0$b */
+    /* JADX INFO: renamed from: b.i.a.c.a3.h0$b */
+    /* JADX INFO: compiled from: SampleQueue.java */
     public static final class b {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public int f5622a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public long f5623b;
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         @Nullable
         public TrackOutput2.a f5624c;
     }
 
-    /* compiled from: SampleQueue.java */
-    /* renamed from: b.i.a.c.a3.h0$c */
+    /* JADX INFO: renamed from: b.i.a.c.a3.h0$c */
+    /* JADX INFO: compiled from: SampleQueue.java */
     public static final class c {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final Format2 f5625a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final DrmSessionManager2.b f5626b;
 
         public c(Format2 format2, DrmSessionManager2.b bVar, a aVar) {
@@ -161,8 +161,8 @@ public class SampleQueue implements TrackOutput2 {
         }
     }
 
-    /* compiled from: SampleQueue.java */
-    /* renamed from: b.i.a.c.a3.h0$d */
+    /* JADX INFO: renamed from: b.i.a.c.a3.h0$d */
+    /* JADX INFO: compiled from: SampleQueue.java */
     public interface d {
     }
 
@@ -174,7 +174,7 @@ public class SampleQueue implements TrackOutput2 {
     }
 
     @Override // p007b.p225i.p226a.p242c.p267x2.TrackOutput2
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final int mo2522a(DataReader dataReader, int i, boolean z2, int i2) throws IOException {
         SampleDataQueue sampleDataQueue = this.f5596a;
         int iM2520c = sampleDataQueue.m2520c(i);
@@ -191,19 +191,19 @@ public class SampleQueue implements TrackOutput2 {
     }
 
     @Override // p007b.p225i.p226a.p242c.p267x2.TrackOutput2
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public /* synthetic */ int mo2523b(DataReader dataReader, int i, boolean z2) {
         return TrackOutput.m3817a(this, dataReader, i, z2);
     }
 
     @Override // p007b.p225i.p226a.p242c.p267x2.TrackOutput2
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public /* synthetic */ void mo2524c(ParsableByteArray parsableByteArray, int i) {
         TrackOutput.m3818b(this, parsableByteArray, i);
     }
 
     @Override // p007b.p225i.p226a.p242c.p267x2.TrackOutput2
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public void mo2525d(long j, int i, int i2, int i3, @Nullable TrackOutput2.a aVar) {
         DrmSessionManager2.b bVarMo3598b;
         int i4 = i & 1;
@@ -229,7 +229,7 @@ public class SampleQueue implements TrackOutput2 {
                 i |= 1;
             }
         }
-        long j3 = (this.f5596a.f5584g - i2) - i3;
+        long j3 = (this.f5596a.f5584g - ((long) i2)) - ((long) i3);
         synchronized (this) {
             int i5 = this.f5612q;
             if (i5 > 0) {
@@ -299,7 +299,7 @@ public class SampleQueue implements TrackOutput2 {
     }
 
     @Override // p007b.p225i.p226a.p242c.p267x2.TrackOutput2
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final void mo2526e(Format2 format2) {
         boolean z2;
         this.f5592A = format2;
@@ -327,7 +327,7 @@ public class SampleQueue implements TrackOutput2 {
     }
 
     @Override // p007b.p225i.p226a.p242c.p267x2.TrackOutput2
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final void mo2527f(ParsableByteArray parsableByteArray, int i, int i2) {
         SampleDataQueue sampleDataQueue = this.f5596a;
         Objects.requireNonNull(sampleDataQueue);
@@ -341,7 +341,7 @@ public class SampleQueue implements TrackOutput2 {
     }
 
     @GuardedBy("this")
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public final long m2528g(int i) {
         this.f5617v = Math.max(this.f5617v, m2531j(i));
         this.f5612q -= i;
@@ -380,10 +380,11 @@ public class SampleQueue implements TrackOutput2 {
         if (i9 == 0) {
             i9 = this.f5605j;
         }
-        return this.f5607l[i9 - 1] + this.f5608m[r6];
+        int i10 = i9 - 1;
+        return this.f5607l[i10] + ((long) this.f5608m[i10]);
     }
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public final void m2529h() {
         long jM2528g;
         SampleDataQueue sampleDataQueue = this.f5596a;
@@ -394,7 +395,7 @@ public class SampleQueue implements TrackOutput2 {
         sampleDataQueue.m2518a(jM2528g);
     }
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public final int m2530i(int i, int i2, long j, boolean z2) {
         int i3 = -1;
         for (int i4 = 0; i4 < i2; i4++) {
@@ -416,7 +417,7 @@ public class SampleQueue implements TrackOutput2 {
         return i3;
     }
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final long m2531j(int i) {
         long jMax = Long.MIN_VALUE;
         if (i == 0) {
@@ -436,12 +437,12 @@ public class SampleQueue implements TrackOutput2 {
         return jMax;
     }
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final int m2532k() {
         return this.f5613r + this.f5615t;
     }
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final int m2533l(int i) {
         int i2 = this.f5614s + i;
         int i3 = this.f5605j;
@@ -449,23 +450,23 @@ public class SampleQueue implements TrackOutput2 {
     }
 
     @Nullable
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public final synchronized Format2 m2534m() {
         return this.f5621z ? null : this.f5593B;
     }
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public final int m2535n() {
         return this.f5613r + this.f5612q;
     }
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public final boolean m2536o() {
         return this.f5615t != this.f5612q;
     }
 
     @CallSuper
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public synchronized boolean m2537p(boolean z2) {
         Format2 format2;
         boolean z3 = true;
@@ -481,13 +482,13 @@ public class SampleQueue implements TrackOutput2 {
         return z3;
     }
 
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     public final boolean m2538q(int i) {
         DrmSession drmSession = this.f5604i;
         return drmSession == null || drmSession.getState() == 4 || ((this.f5609n[i] & BasicMeasure.EXACTLY) == 0 && this.f5604i.mo3609d());
     }
 
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     public final void m2539r(Format2 format2, FormatHolder formatHolder) {
         Format2 format2M3277a;
         Format2 format22 = this.f5603h;
@@ -524,7 +525,7 @@ public class SampleQueue implements TrackOutput2 {
     }
 
     @CallSuper
-    /* renamed from: s */
+    /* JADX INFO: renamed from: s */
     public void m2540s(boolean z2) {
         SampleDataQueue sampleDataQueue = this.f5596a;
         SampleDataQueue.a aVar = sampleDataQueue.f5581d;
@@ -571,7 +572,7 @@ public class SampleQueue implements TrackOutput2 {
         }
     }
 
-    /* renamed from: t */
+    /* JADX INFO: renamed from: t */
     public final synchronized boolean m2541t(long j, boolean z2) {
         synchronized (this) {
             this.f5615t = 0;

@@ -12,13 +12,13 @@ import p007b.p452o.p453a.CameraLogger;
 import p007b.p452o.p453a.p455n.Camera2Engine;
 import p007b.p452o.p453a.p455n.p456o.ActionHolder;
 
-/* compiled from: FocusReset.java */
+/* JADX INFO: renamed from: b.o.a.n.r.f, reason: use source file name */
+/* JADX INFO: compiled from: FocusReset.java */
+/* JADX INFO: loaded from: classes3.dex */
 @RequiresApi(21)
-/* renamed from: b.o.a.n.r.f, reason: use source file name */
-/* loaded from: classes3.dex */
 public class FocusReset extends BaseReset {
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public static final CameraLogger f13975f = new CameraLogger(FocusReset.class.getSimpleName());
 
     public FocusReset() {
@@ -26,7 +26,7 @@ public class FocusReset extends BaseReset {
     }
 
     @Override // p007b.p452o.p453a.p455n.p459r.BaseReset
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public void mo7352m(@NonNull ActionHolder actionHolder, @Nullable MeteringRectangle meteringRectangle) {
         boolean z2;
         int iIntValue = ((Integer) m7340k(CameraCharacteristics.CONTROL_MAX_REGIONS_AF, 0)).intValue();

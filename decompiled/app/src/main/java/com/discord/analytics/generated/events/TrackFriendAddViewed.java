@@ -8,8 +8,8 @@ import com.discord.api.science.AnalyticsSchema;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: TrackFriendAddViewed.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: TrackFriendAddViewed.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class TrackFriendAddViewed implements AnalyticsSchema, TrackBase2, TrackSourceMetadata2 {
     private TrackBase trackBase;
     private TrackSourceMetadata trackSourceMetadata;
@@ -18,7 +18,7 @@ public final /* data */ class TrackFriendAddViewed implements AnalyticsSchema, T
     private final transient String analyticsSchemaTypeName = "friend_add_viewed";
 
     @Override // com.discord.api.science.AnalyticsSchema
-    /* renamed from: d, reason: from getter */
+    /* JADX INFO: renamed from: d, reason: from getter */
     public String getAnalyticsSchemaTypeName() {
         return this.analyticsSchemaTypeName;
     }

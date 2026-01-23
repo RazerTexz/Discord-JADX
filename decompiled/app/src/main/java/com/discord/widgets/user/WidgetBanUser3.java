@@ -4,9 +4,9 @@ import android.view.View;
 import com.discord.views.CheckedSetting;
 import com.discord.views.RadioManager;
 
-/* compiled from: WidgetBanUser.kt */
-/* renamed from: com.discord.widgets.user.WidgetBanUser$onViewBound$$inlined$forEach$lambda$1, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: com.discord.widgets.user.WidgetBanUser$onViewBound$$inlined$forEach$lambda$1, reason: use source file name */
+/* JADX INFO: compiled from: WidgetBanUser.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class WidgetBanUser3 implements View.OnClickListener {
     public final /* synthetic */ CheckedSetting $radio;
     public final /* synthetic */ WidgetBanUser this$0;

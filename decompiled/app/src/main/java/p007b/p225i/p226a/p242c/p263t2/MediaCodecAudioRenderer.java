@@ -34,53 +34,53 @@ import p007b.p225i.p226a.p242c.p278y2.MediaCodecAdapter;
 import p007b.p225i.p226a.p242c.p278y2.MediaCodecInfo;
 import p007b.p225i.p226a.p242c.p278y2.MediaCodecSelector;
 
-/* compiled from: MediaCodecAudioRenderer.java */
-/* renamed from: b.i.a.c.t2.z, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.t2.z, reason: use source file name */
+/* JADX INFO: compiled from: MediaCodecAudioRenderer.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class MediaCodecAudioRenderer extends MediaCodecRenderer implements MediaClock {
 
-    /* renamed from: N0 */
+    /* JADX INFO: renamed from: N0 */
     public final Context f7850N0;
 
-    /* renamed from: O0 */
+    /* JADX INFO: renamed from: O0 */
     public final AudioRendererEventListener2.a f7851O0;
 
-    /* renamed from: P0 */
+    /* JADX INFO: renamed from: P0 */
     public final AudioSink f7852P0;
 
-    /* renamed from: Q0 */
+    /* JADX INFO: renamed from: Q0 */
     public int f7853Q0;
 
-    /* renamed from: R0 */
+    /* JADX INFO: renamed from: R0 */
     public boolean f7854R0;
 
-    /* renamed from: S0 */
+    /* JADX INFO: renamed from: S0 */
     @Nullable
     public Format2 f7855S0;
 
-    /* renamed from: T0 */
+    /* JADX INFO: renamed from: T0 */
     public long f7856T0;
 
-    /* renamed from: U0 */
+    /* JADX INFO: renamed from: U0 */
     public boolean f7857U0;
 
-    /* renamed from: V0 */
+    /* JADX INFO: renamed from: V0 */
     public boolean f7858V0;
 
-    /* renamed from: W0 */
+    /* JADX INFO: renamed from: W0 */
     public boolean f7859W0;
 
-    /* renamed from: X0 */
+    /* JADX INFO: renamed from: X0 */
     @Nullable
     public Renderer2.a f7860X0;
 
-    /* compiled from: MediaCodecAudioRenderer.java */
-    /* renamed from: b.i.a.c.t2.z$b */
+    /* JADX INFO: renamed from: b.i.a.c.t2.z$b */
+    /* JADX INFO: compiled from: MediaCodecAudioRenderer.java */
     public final class b implements AudioSink.InterfaceC10686a {
         public b(a aVar) {
         }
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public void m3517a(Exception exc) {
             Log2.m3039b("MediaCodecAudioRenderer", "Audio sink error", exc);
             AudioRendererEventListener2.a aVar = MediaCodecAudioRenderer.this.f7851O0;
@@ -100,7 +100,7 @@ public class MediaCodecAudioRenderer extends MediaCodecRenderer implements Media
     }
 
     @Override // com.google.android.exoplayer2.mediacodec.MediaCodecRenderer, p007b.p225i.p226a.p242c.BaseRenderer
-    /* renamed from: B */
+    /* JADX INFO: renamed from: B */
     public void mo2621B() {
         this.f7859W0 = true;
         try {
@@ -119,7 +119,7 @@ public class MediaCodecAudioRenderer extends MediaCodecRenderer implements Media
     }
 
     @Override // p007b.p225i.p226a.p242c.BaseRenderer
-    /* renamed from: C */
+    /* JADX INFO: renamed from: C */
     public void mo3137C(boolean z2, boolean z3) throws ExoPlaybackException {
         DecoderCounters decoderCounters = new DecoderCounters();
         this.f19877J0 = decoderCounters;
@@ -137,7 +137,7 @@ public class MediaCodecAudioRenderer extends MediaCodecRenderer implements Media
         }
     }
 
-    /* renamed from: C0 */
+    /* JADX INFO: renamed from: C0 */
     public final int m3513C0(MediaCodecInfo mediaCodecInfo, Format2 format2) {
         int i;
         if (!"OMX.google.raw.decoder".equals(mediaCodecInfo.f9112a) || (i = Util2.f6708a) >= 24 || (i == 23 && Util2.m2980A(this.f7850N0))) {
@@ -147,7 +147,7 @@ public class MediaCodecAudioRenderer extends MediaCodecRenderer implements Media
     }
 
     @Override // com.google.android.exoplayer2.mediacodec.MediaCodecRenderer, p007b.p225i.p226a.p242c.BaseRenderer
-    /* renamed from: D */
+    /* JADX INFO: renamed from: D */
     public void mo2622D(long j, boolean z2) throws ExoPlaybackException {
         super.mo2622D(j, z2);
         this.f7852P0.flush();
@@ -156,7 +156,7 @@ public class MediaCodecAudioRenderer extends MediaCodecRenderer implements Media
         this.f7858V0 = true;
     }
 
-    /* renamed from: D0 */
+    /* JADX INFO: renamed from: D0 */
     public final void m3514D0() {
         long jMo8766m = this.f7852P0.mo8766m(mo2631b());
         if (jMo8766m != Long.MIN_VALUE) {
@@ -169,7 +169,7 @@ public class MediaCodecAudioRenderer extends MediaCodecRenderer implements Media
     }
 
     @Override // p007b.p225i.p226a.p242c.BaseRenderer
-    /* renamed from: E */
+    /* JADX INFO: renamed from: E */
     public void mo3140E() {
         try {
             try {
@@ -187,20 +187,20 @@ public class MediaCodecAudioRenderer extends MediaCodecRenderer implements Media
     }
 
     @Override // p007b.p225i.p226a.p242c.BaseRenderer
-    /* renamed from: F */
+    /* JADX INFO: renamed from: F */
     public void mo3141F() {
         this.f7852P0.mo8761e();
     }
 
     @Override // p007b.p225i.p226a.p242c.BaseRenderer
-    /* renamed from: G */
+    /* JADX INFO: renamed from: G */
     public void mo3142G() {
         m3514D0();
         this.f7852P0.mo8760d();
     }
 
     @Override // com.google.android.exoplayer2.mediacodec.MediaCodecRenderer
-    /* renamed from: K */
+    /* JADX INFO: renamed from: K */
     public DecoderReuseEvaluation mo3144K(MediaCodecInfo mediaCodecInfo, Format2 format2, Format2 format22) {
         DecoderReuseEvaluation decoderReuseEvaluationM3865c = mediaCodecInfo.m3865c(format2, format22);
         int i = decoderReuseEvaluationM3865c.f7930e;
@@ -212,7 +212,7 @@ public class MediaCodecAudioRenderer extends MediaCodecRenderer implements Media
     }
 
     @Override // com.google.android.exoplayer2.mediacodec.MediaCodecRenderer
-    /* renamed from: V */
+    /* JADX INFO: renamed from: V */
     public float mo3158V(float f, Format2 format2, Format2[] format2Arr) {
         int iMax = -1;
         for (Format2 format22 : format2Arr) {
@@ -228,7 +228,7 @@ public class MediaCodecAudioRenderer extends MediaCodecRenderer implements Media
     }
 
     @Override // com.google.android.exoplayer2.mediacodec.MediaCodecRenderer
-    /* renamed from: W */
+    /* JADX INFO: renamed from: W */
     public List<MediaCodecInfo> mo3160W(MediaCodecSelector mediaCodecSelector, Format2 format2, boolean z2) throws MediaCodecUtil.DecoderQueryException {
         MediaCodecInfo mediaCodecInfoM8865d;
         String str = format2.f7155w;
@@ -253,7 +253,7 @@ public class MediaCodecAudioRenderer extends MediaCodecRenderer implements Media
     /* JADX WARN: Removed duplicated region for block: B:24:0x0066  */
     /* JADX WARN: Removed duplicated region for block: B:35:0x00b4  */
     @Override // com.google.android.exoplayer2.mediacodec.MediaCodecRenderer
-    /* renamed from: Y */
+    /* JADX INFO: renamed from: Y */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
@@ -326,25 +326,25 @@ public class MediaCodecAudioRenderer extends MediaCodecRenderer implements Media
     }
 
     @Override // com.google.android.exoplayer2.mediacodec.MediaCodecRenderer, p007b.p225i.p226a.p242c.Renderer2
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public boolean mo2631b() {
         return this.f19869F0 && this.f7852P0.mo8758b();
     }
 
     @Override // p007b.p225i.p226a.p242c.p259f3.MediaClock
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public PlaybackParameters mo2416c() {
         return this.f7852P0.mo8759c();
     }
 
     @Override // com.google.android.exoplayer2.mediacodec.MediaCodecRenderer, p007b.p225i.p226a.p242c.Renderer2
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public boolean mo2632d() {
         return this.f7852P0.mo8764k() || super.mo2632d();
     }
 
     @Override // com.google.android.exoplayer2.mediacodec.MediaCodecRenderer
-    /* renamed from: d0 */
+    /* JADX INFO: renamed from: d0 */
     public void mo3163d0(Exception exc) {
         Log2.m3039b("MediaCodecAudioRenderer", "Audio codec error", exc);
         AudioRendererEventListener2.a aVar = this.f7851O0;
@@ -355,7 +355,7 @@ public class MediaCodecAudioRenderer extends MediaCodecRenderer implements Media
     }
 
     @Override // p007b.p225i.p226a.p242c.p259f3.MediaClock
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public long mo2417e() {
         if (this.f7893n == 2) {
             m3514D0();
@@ -364,7 +364,7 @@ public class MediaCodecAudioRenderer extends MediaCodecRenderer implements Media
     }
 
     @Override // com.google.android.exoplayer2.mediacodec.MediaCodecRenderer
-    /* renamed from: e0 */
+    /* JADX INFO: renamed from: e0 */
     public void mo3164e0(String str, long j, long j2) {
         AudioRendererEventListener2.a aVar = this.f7851O0;
         Handler handler = aVar.f7790a;
@@ -374,7 +374,7 @@ public class MediaCodecAudioRenderer extends MediaCodecRenderer implements Media
     }
 
     @Override // com.google.android.exoplayer2.mediacodec.MediaCodecRenderer
-    /* renamed from: f0 */
+    /* JADX INFO: renamed from: f0 */
     public void mo3165f0(String str) {
         AudioRendererEventListener2.a aVar = this.f7851O0;
         Handler handler = aVar.f7790a;
@@ -385,7 +385,7 @@ public class MediaCodecAudioRenderer extends MediaCodecRenderer implements Media
 
     @Override // com.google.android.exoplayer2.mediacodec.MediaCodecRenderer
     @Nullable
-    /* renamed from: g0 */
+    /* JADX INFO: renamed from: g0 */
     public DecoderReuseEvaluation mo3166g0(FormatHolder formatHolder) throws ExoPlaybackException {
         DecoderReuseEvaluation decoderReuseEvaluationMo3166g0 = super.mo3166g0(formatHolder);
         AudioRendererEventListener2.a aVar = this.f7851O0;
@@ -403,7 +403,7 @@ public class MediaCodecAudioRenderer extends MediaCodecRenderer implements Media
     }
 
     @Override // com.google.android.exoplayer2.mediacodec.MediaCodecRenderer
-    /* renamed from: h0 */
+    /* JADX INFO: renamed from: h0 */
     public void mo3167h0(Format2 format2, @Nullable MediaFormat mediaFormat) throws ExoPlaybackException {
         int i;
         Format2 format22 = this.f7855S0;
@@ -436,19 +436,19 @@ public class MediaCodecAudioRenderer extends MediaCodecRenderer implements Media
     }
 
     @Override // p007b.p225i.p226a.p242c.p259f3.MediaClock
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public void mo2418i(PlaybackParameters playbackParameters) {
         this.f7852P0.mo8762i(playbackParameters);
     }
 
     @Override // com.google.android.exoplayer2.mediacodec.MediaCodecRenderer
-    /* renamed from: j0 */
+    /* JADX INFO: renamed from: j0 */
     public void mo3169j0() {
         this.f7852P0.mo8769p();
     }
 
     @Override // com.google.android.exoplayer2.mediacodec.MediaCodecRenderer
-    /* renamed from: k0 */
+    /* JADX INFO: renamed from: k0 */
     public void mo3170k0(DecoderInputBuffer decoderInputBuffer) {
         if (!this.f7857U0 || decoderInputBuffer.m3554m()) {
             return;
@@ -460,7 +460,7 @@ public class MediaCodecAudioRenderer extends MediaCodecRenderer implements Media
     }
 
     @Override // com.google.android.exoplayer2.mediacodec.MediaCodecRenderer
-    /* renamed from: m0 */
+    /* JADX INFO: renamed from: m0 */
     public boolean mo3171m0(long j, long j2, @Nullable MediaCodecAdapter mediaCodecAdapter, @Nullable ByteBuffer byteBuffer, int i, int i2, int i3, long j3, boolean z2, boolean z3, Format2 format2) throws ExoPlaybackException {
         Objects.requireNonNull(byteBuffer);
         if (this.f7855S0 != null && (i2 & 2) != 0) {
@@ -493,7 +493,7 @@ public class MediaCodecAudioRenderer extends MediaCodecRenderer implements Media
     }
 
     @Override // com.google.android.exoplayer2.mediacodec.MediaCodecRenderer
-    /* renamed from: p0 */
+    /* JADX INFO: renamed from: p0 */
     public void mo3515p0() throws ExoPlaybackException {
         try {
             this.f7852P0.mo8763j();
@@ -503,7 +503,7 @@ public class MediaCodecAudioRenderer extends MediaCodecRenderer implements Media
     }
 
     @Override // p007b.p225i.p226a.p242c.BaseRenderer, p007b.p225i.p226a.p242c.PlayerMessage.b
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     public void mo2603r(int i, @Nullable Object obj) throws ExoPlaybackException {
         if (i == 2) {
             this.f7852P0.mo8770q(((Float) obj).floatValue());
@@ -531,19 +531,19 @@ public class MediaCodecAudioRenderer extends MediaCodecRenderer implements Media
 
     @Override // p007b.p225i.p226a.p242c.BaseRenderer, p007b.p225i.p226a.p242c.Renderer2
     @Nullable
-    /* renamed from: w */
+    /* JADX INFO: renamed from: w */
     public MediaClock mo2945w() {
         return this;
     }
 
     @Override // com.google.android.exoplayer2.mediacodec.MediaCodecRenderer
-    /* renamed from: x0 */
+    /* JADX INFO: renamed from: x0 */
     public boolean mo3516x0(Format2 format2) {
         return this.f7852P0.mo8757a(format2);
     }
 
     @Override // com.google.android.exoplayer2.mediacodec.MediaCodecRenderer
-    /* renamed from: y0 */
+    /* JADX INFO: renamed from: y0 */
     public int mo3174y0(MediaCodecSelector mediaCodecSelector, Format2 format2) throws MediaCodecUtil.DecoderQueryException {
         if (!MimeTypes.m3050h(format2.f7155w)) {
             return 0;

@@ -10,16 +10,16 @@ import p507d0.p580t.SlidingWindow2;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: _Strings.kt */
-/* renamed from: d0.g0.y, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.g0.y, reason: use source file name */
+/* JADX INFO: compiled from: _Strings.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public class _Strings extends _StringsJvm {
 
-    /* compiled from: _Strings.kt */
-    /* renamed from: d0.g0.y$a */
+    /* JADX INFO: renamed from: d0.g0.y$a */
+    /* JADX INFO: compiled from: _Strings.kt */
     public static final class a extends Lambda implements Function1<CharSequence, String> {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public static final a f25164j = new a();
 
         public a() {
@@ -31,7 +31,7 @@ public class _Strings extends _StringsJvm {
             return invoke2(charSequence);
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final String invoke2(CharSequence charSequence) {
             Intrinsics3.checkNotNullParameter(charSequence, "it");
             return charSequence.toString();

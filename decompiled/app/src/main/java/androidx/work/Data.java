@@ -18,7 +18,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public final class Data {
 
     @SuppressLint({"MinMaxConstant"})
@@ -268,14 +268,12 @@ public final class Data {
                         }
                     }
                     byteArrayInputStream.close();
-                    return new Data(map);
                 } catch (ClassNotFoundException e6) {
                     e = e6;
                     Log.e(TAG, "Error in Data#fromByteArray: ", e);
                     if (objectInputStream != null) {
                     }
                     byteArrayInputStream.close();
-                    return new Data(map);
                 }
             } catch (Throwable th2) {
                 th = th2;

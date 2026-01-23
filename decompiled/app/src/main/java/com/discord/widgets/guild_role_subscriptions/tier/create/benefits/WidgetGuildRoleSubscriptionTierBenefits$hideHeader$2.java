@@ -4,8 +4,8 @@ import com.discord.widgets.guild_role_subscriptions.setup.WidgetGuildRoleSubscri
 import kotlin.jvm.functions.Function0;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetGuildRoleSubscriptionTierBenefits.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetGuildRoleSubscriptionTierBenefits.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetGuildRoleSubscriptionTierBenefits$hideHeader$2 extends Lambda implements Function0<Boolean> {
     public final /* synthetic */ WidgetGuildRoleSubscriptionTierBenefits this$0;
 
@@ -20,7 +20,7 @@ public final class WidgetGuildRoleSubscriptionTierBenefits$hideHeader$2 extends 
         return Boolean.valueOf(invoke2());
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final boolean invoke2() {
         return this.this$0.requireArguments().getBoolean(WidgetGuildRoleSubscriptionPlanDetails.INTENT_EXTRA_HIDE_HEADER, false);
     }

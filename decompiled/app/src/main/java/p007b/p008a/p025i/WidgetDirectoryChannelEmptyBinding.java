@@ -8,24 +8,24 @@ import androidx.viewbinding.ViewBinding;
 import com.discord.utilities.view.text.LinkifiedTextView;
 import com.discord.views.ChatActionItem;
 
-/* compiled from: WidgetDirectoryChannelEmptyBinding.java */
-/* renamed from: b.a.i.d5, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.a.i.d5, reason: use source file name */
+/* JADX INFO: compiled from: WidgetDirectoryChannelEmptyBinding.java */
+/* JADX INFO: loaded from: classes.dex */
 public final class WidgetDirectoryChannelEmptyBinding implements ViewBinding {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     @NonNull
     public final LinearLayout f788a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     @NonNull
     public final TextView f789b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     @NonNull
     public final ChatActionItem f790c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     @NonNull
     public final ChatActionItem f791d;
 

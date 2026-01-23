@@ -45,25 +45,25 @@ import p007b.p225i.p226a.p288f.p299e.p304k.C3371o;
 import p007b.p225i.p226a.p288f.p299e.p308o.C3404f;
 import p007b.p225i.p226a.p288f.p313h.p318e.HandlerC3479c;
 
-/* compiled from: com.google.android.gms:play-services-base@@17.3.0 */
-/* loaded from: classes3.dex */
+/* JADX INFO: compiled from: com.google.android.gms:play-services-base@@17.3.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public class GoogleApiAvailability extends C3256c {
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public static final Object f20480c = new Object();
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public static final GoogleApiAvailability f20481d = new GoogleApiAvailability();
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public static final int f20482e = C3256c.f9306a;
 
-    /* compiled from: com.google.android.gms:play-services-base@@17.3.0 */
+    /* JADX INFO: renamed from: com.google.android.gms.common.GoogleApiAvailability$a */
+    /* JADX INFO: compiled from: com.google.android.gms:play-services-base@@17.3.0 */
     @SuppressLint({"HandlerLeak"})
-    /* renamed from: com.google.android.gms.common.GoogleApiAvailability$a */
     public class HandlerC10799a extends HandlerC3479c {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final Context f20483a;
 
         public HandlerC10799a(Context context) {
@@ -72,7 +72,7 @@ public class GoogleApiAvailability extends C3256c {
         }
 
         @Override // android.os.Handler
-        public final void handleMessage(Message message) throws Resources.NotFoundException {
+        public final void handleMessage(Message message) {
             int i = message.what;
             if (i != 1) {
                 outline.m852g0(50, "Don't know how to handle this message: ", i, "GoogleApiAvailability");
@@ -89,7 +89,7 @@ public class GoogleApiAvailability extends C3256c {
     }
 
     @Nullable
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public static Dialog m9022g(@NonNull Context context, int i, AbstractDialogInterfaceOnClickListenerC3369n abstractDialogInterfaceOnClickListenerC3369n, @Nullable DialogInterface.OnCancelListener onCancelListener) {
         if (i == 0) {
             return null;
@@ -116,7 +116,7 @@ public class GoogleApiAvailability extends C3256c {
         return builder.create();
     }
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public static void m9023h(Activity activity, Dialog dialog, String str, @Nullable DialogInterface.OnCancelListener onCancelListener) {
         if (activity instanceof FragmentActivity) {
             FragmentManager supportFragmentManager = ((FragmentActivity) activity).getSupportFragmentManager();
@@ -145,23 +145,23 @@ public class GoogleApiAvailability extends C3256c {
 
     @Override // p007b.p225i.p226a.p288f.p299e.C3256c
     @Nullable
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public Intent mo4017a(Context context, int i, @Nullable String str) {
         return super.mo4017a(context, i, str);
     }
 
     @Override // p007b.p225i.p226a.p288f.p299e.C3256c
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public int mo4018b(Context context, int i) {
         return super.mo4018b(context, i);
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public int m9024c(Context context) {
         return mo4018b(context, C3256c.f9306a);
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final boolean m9025d(int i) {
         AtomicBoolean atomicBoolean = C3260e.f9309a;
         return i == 1 || i == 2 || i == 3 || i == 9;
@@ -169,7 +169,7 @@ public class GoogleApiAvailability extends C3256c {
 
     @NonNull
     @MainThread
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public Task<Void> m9026e(Activity activity) throws PackageManager.NameNotFoundException {
         int i = f20482e;
         AnimatableValueParser.m575u("makeGooglePlayServicesAvailable must be called from the main thread");
@@ -188,7 +188,7 @@ public class GoogleApiAvailability extends C3256c {
         return c3279b0.f9348o.f20845a;
     }
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public boolean m9027f(Activity activity, int i, int i2, @Nullable DialogInterface.OnCancelListener onCancelListener) {
         Dialog dialogM9022g = m9022g(activity, i, new C3367m(super.mo4017a(activity, i, "d"), activity, i2), onCancelListener);
         if (dialogM9022g == null) {
@@ -199,8 +199,8 @@ public class GoogleApiAvailability extends C3256c {
     }
 
     @TargetApi(20)
-    /* renamed from: i */
-    public final void m9028i(Context context, int i, PendingIntent pendingIntent) throws Resources.NotFoundException {
+    /* JADX INFO: renamed from: i */
+    public final void m9028i(Context context, int i, PendingIntent pendingIntent) {
         int i2;
         Log.w("GoogleApiAvailability", String.format("GMS core API Availability. ConnectionResult=%s, tag=%s", Integer.valueOf(i), null), new IllegalArgumentException());
         if (i == 18) {
@@ -258,7 +258,7 @@ public class GoogleApiAvailability extends C3256c {
         notificationManager.notify(i2, notificationBuild);
     }
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final boolean m9029j(@NonNull Activity activity, @NonNull InterfaceC3299j interfaceC3299j, int i, @Nullable DialogInterface.OnCancelListener onCancelListener) {
         Dialog dialogM9022g = m9022g(activity, i, new C3371o(super.mo4017a(activity, i, "d"), interfaceC3299j, 2), onCancelListener);
         if (dialogM9022g == null) {

@@ -73,44 +73,44 @@ import p507d0.p592z.p594d.Lambda;
 import p507d0.p592z.p594d.PropertyReference1Impl;
 import p507d0.p592z.p594d.Reflection2;
 
-/* compiled from: JvmBuiltInsCustomizer.kt */
-/* renamed from: d0.e0.p.d.m0.b.q.g, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.b.q.g, reason: use source file name */
+/* JADX INFO: compiled from: JvmBuiltInsCustomizer.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class JvmBuiltInsCustomizer2 implements AdditionalClassPartsProvider, PlatformDependentDeclarationFilter {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final /* synthetic */ KProperty<Object>[] f22649a = {Reflection2.property1(new PropertyReference1Impl(Reflection2.getOrCreateKotlinClass(JvmBuiltInsCustomizer2.class), "settings", "getSettings()Lorg/jetbrains/kotlin/builtins/jvm/JvmBuiltIns$Settings;")), Reflection2.property1(new PropertyReference1Impl(Reflection2.getOrCreateKotlinClass(JvmBuiltInsCustomizer2.class), "cloneableType", "getCloneableType()Lorg/jetbrains/kotlin/types/SimpleType;")), Reflection2.property1(new PropertyReference1Impl(Reflection2.getOrCreateKotlinClass(JvmBuiltInsCustomizer2.class), "notConsideredDeprecation", "getNotConsideredDeprecation()Lorg/jetbrains/kotlin/descriptors/annotations/Annotations;"))};
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final ModuleDescriptor2 f22650b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final JavaToKotlinClassMapper f22651c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final storage5 f22652d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final KotlinType f22653e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final storage5 f22654f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public final storage<FqName, ClassDescriptor> f22655g;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public final storage5 f22656h;
 
-    /* compiled from: JvmBuiltInsCustomizer.kt */
-    /* renamed from: d0.e0.p.d.m0.b.q.g$a */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.b.q.g$a */
+    /* JADX INFO: compiled from: JvmBuiltInsCustomizer.kt */
     public enum a {
         HIDDEN,
         VISIBLE,
         NOT_CONSIDERED,
         DROP;
 
-        /* renamed from: values, reason: to resolve conflict with enum method */
+        /* JADX INFO: renamed from: values, reason: to resolve conflict with enum method */
         public static a[] valuesCustom() {
             a[] aVarArrValuesCustom = values();
             a[] aVarArr = new a[aVarArrValuesCustom.length];
@@ -119,8 +119,8 @@ public final class JvmBuiltInsCustomizer2 implements AdditionalClassPartsProvide
         }
     }
 
-    /* compiled from: JvmBuiltInsCustomizer.kt */
-    /* renamed from: d0.e0.p.d.m0.b.q.g$b */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.b.q.g$b */
+    /* JADX INFO: compiled from: JvmBuiltInsCustomizer.kt */
     public static final class b extends Lambda implements Function0<KotlinType4> {
         public final /* synthetic */ StorageManager $storageManager;
 
@@ -142,8 +142,8 @@ public final class JvmBuiltInsCustomizer2 implements AdditionalClassPartsProvide
         }
     }
 
-    /* compiled from: JvmBuiltInsCustomizer.kt */
-    /* renamed from: d0.e0.p.d.m0.b.q.g$c */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.b.q.g$c */
+    /* JADX INFO: compiled from: JvmBuiltInsCustomizer.kt */
     public static final class c extends Lambda implements Function1<MemberScope3, Collection<? extends SimpleFunctionDescriptor>> {
         public final /* synthetic */ Name $name;
 
@@ -158,15 +158,15 @@ public final class JvmBuiltInsCustomizer2 implements AdditionalClassPartsProvide
             return invoke2(memberScope3);
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final Collection<SimpleFunctionDescriptor> invoke2(MemberScope3 memberScope3) {
             Intrinsics3.checkNotNullParameter(memberScope3, "it");
             return memberScope3.getContributedFunctions(this.$name, LookupLocation3.FROM_BUILTINS);
         }
     }
 
-    /* compiled from: JvmBuiltInsCustomizer.kt */
-    /* renamed from: d0.e0.p.d.m0.b.q.g$d */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.b.q.g$d */
+    /* JADX INFO: compiled from: JvmBuiltInsCustomizer.kt */
     public static final class d extends Lambda implements Function0<Annotations4> {
         public d() {
             super(0);
@@ -217,7 +217,7 @@ public final class JvmBuiltInsCustomizer2 implements AdditionalClassPartsProvide
         return jvmBuiltInsCustomizer2.m9382b();
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final LazyJavaClassDescriptor m9381a(ClassDescriptor classDescriptor) {
         if (KotlinBuiltIns.isAny(classDescriptor) || !KotlinBuiltIns.isUnderKotlinPackage(classDescriptor)) {
             return null;
@@ -238,7 +238,7 @@ public final class JvmBuiltInsCustomizer2 implements AdditionalClassPartsProvide
         return null;
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final JvmBuiltIns.b m9382b() {
         return (JvmBuiltIns.b) storage7.getValue(this.f22652d, this, (KProperty<?>) f22649a[0]);
     }

@@ -23,9 +23,9 @@ import java.util.TreeMap;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: PrivateChannelMemberListItemGenerator.kt */
-/* renamed from: com.discord.widgets.channels.memberlist.PrivateChannelMemberListItemGeneratorKt, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.channels.memberlist.PrivateChannelMemberListItemGeneratorKt, reason: use source file name */
+/* JADX INFO: compiled from: PrivateChannelMemberListItemGenerator.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class PrivateChannelMemberListItemGenerator {
     private static final ChannelMembersListAdapter.Item.Header createGroupDmHeader(int i) {
         return new ChannelMembersListAdapter.Item.Header("%group_header_key", ChannelMembersListAdapter.Item.Header.Type.GROUP_DM, i);

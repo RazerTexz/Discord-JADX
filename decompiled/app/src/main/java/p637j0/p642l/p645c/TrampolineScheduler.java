@@ -9,35 +9,35 @@ import p658rx.Scheduler;
 import p658rx.Subscription;
 import p658rx.functions.Action0;
 
-/* compiled from: TrampolineScheduler.java */
-/* renamed from: j0.l.c.m, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: j0.l.c.m, reason: use source file name */
+/* JADX INFO: compiled from: TrampolineScheduler.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class TrampolineScheduler extends Scheduler {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final TrampolineScheduler f27250a = new TrampolineScheduler();
 
-    /* compiled from: TrampolineScheduler.java */
-    /* renamed from: j0.l.c.m$a */
+    /* JADX INFO: renamed from: j0.l.c.m$a */
+    /* JADX INFO: compiled from: TrampolineScheduler.java */
     public static final class a extends Scheduler.Worker implements Subscription {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public final AtomicInteger f27251j = new AtomicInteger();
 
-        /* renamed from: k */
+        /* JADX INFO: renamed from: k */
         public final PriorityBlockingQueue<b> f27252k = new PriorityBlockingQueue<>();
 
-        /* renamed from: l */
+        /* JADX INFO: renamed from: l */
         public final BooleanSubscription f27253l = new BooleanSubscription();
 
-        /* renamed from: m */
+        /* JADX INFO: renamed from: m */
         public final AtomicInteger f27254m = new AtomicInteger();
 
-        /* compiled from: TrampolineScheduler.java */
-        /* renamed from: j0.l.c.m$a$a, reason: collision with other inner class name */
+        /* JADX INFO: renamed from: j0.l.c.m$a$a, reason: collision with other inner class name */
+        /* JADX INFO: compiled from: TrampolineScheduler.java */
         public class C13354a implements Action0 {
 
-            /* renamed from: j */
+            /* JADX INFO: renamed from: j */
             public final /* synthetic */ b f27255j;
 
             public C13354a(b bVar) {
@@ -51,19 +51,19 @@ public final class TrampolineScheduler extends Scheduler {
         }
 
         @Override // rx.Scheduler.Worker
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public Subscription mo10740a(Action0 action0) {
             return m10808d(action0, System.currentTimeMillis());
         }
 
         @Override // rx.Scheduler.Worker
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public Subscription mo10741b(Action0 action0, long j, TimeUnit timeUnit) {
             long millis = timeUnit.toMillis(j) + System.currentTimeMillis();
             return m10808d(new SleepingAction(action0, this, millis), millis);
         }
 
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         public final Subscription m10808d(Action0 action0, long j) {
             if (this.f27253l.isUnsubscribed()) {
                 return Subscriptions.f27422a;
@@ -93,17 +93,17 @@ public final class TrampolineScheduler extends Scheduler {
         }
     }
 
-    /* compiled from: TrampolineScheduler.java */
-    /* renamed from: j0.l.c.m$b */
+    /* JADX INFO: renamed from: j0.l.c.m$b */
+    /* JADX INFO: compiled from: TrampolineScheduler.java */
     public static final class b implements Comparable<b> {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public final Action0 f27257j;
 
-        /* renamed from: k */
+        /* JADX INFO: renamed from: k */
         public final Long f27258k;
 
-        /* renamed from: l */
+        /* JADX INFO: renamed from: l */
         public final int f27259l;
 
         public b(Action0 action0, Long l, int i) {
@@ -129,7 +129,7 @@ public final class TrampolineScheduler extends Scheduler {
     }
 
     @Override // p658rx.Scheduler
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public Scheduler.Worker mo10739a() {
         return new a();
     }

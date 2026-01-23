@@ -1,7 +1,6 @@
 package com.esotericsoftware.kryo.serializers;
 
 import com.esotericsoftware.kryo.Kryo;
-import com.esotericsoftware.kryo.KryoException;
 import com.esotericsoftware.kryo.Serializer;
 import com.esotericsoftware.kryo.p502io.Input;
 import com.esotericsoftware.kryo.p502io.Output;
@@ -13,7 +12,7 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Iterator;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class CollectionSerializer extends Serializer<Collection> {
     private Class elementClass;
     private boolean elementsCanBeNull;
@@ -71,11 +70,11 @@ public class CollectionSerializer extends Serializer<Collection> {
     }
 
     @Override // com.esotericsoftware.kryo.Serializer
-    public /* bridge */ /* synthetic */ void write(Kryo kryo, Output output, Collection collection) throws KryoException {
+    public /* bridge */ /* synthetic */ void write(Kryo kryo, Output output, Collection collection) {
         write2(kryo, output, collection);
     }
 
-    /* renamed from: copy, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: copy, reason: avoid collision after fix types in other method */
     public Collection copy2(Kryo kryo, Collection collection) {
         Collection collectionCreateCopy = createCopy(kryo, collection);
         kryo.reference(collectionCreateCopy);
@@ -87,8 +86,8 @@ public class CollectionSerializer extends Serializer<Collection> {
     }
 
     @Override // com.esotericsoftware.kryo.Serializer
-    /* renamed from: read, reason: avoid collision after fix types in other method */
-    public Collection read2(Kryo kryo, Input input, Class<Collection> cls) throws KryoException {
+    /* JADX INFO: renamed from: read, reason: avoid collision after fix types in other method */
+    public Collection read2(Kryo kryo, Input input, Class<Collection> cls) {
         Collection collectionCreate = create(kryo, input, cls);
         kryo.reference(collectionCreate);
         int varInt = input.readVarInt(true);
@@ -125,8 +124,8 @@ public class CollectionSerializer extends Serializer<Collection> {
         return collectionCreate;
     }
 
-    /* renamed from: write, reason: avoid collision after fix types in other method */
-    public void write2(Kryo kryo, Output output, Collection collection) throws KryoException {
+    /* JADX INFO: renamed from: write, reason: avoid collision after fix types in other method */
+    public void write2(Kryo kryo, Output output, Collection collection) {
         output.writeVarInt(collection.size(), true);
         Serializer serializer = this.serializer;
         Class cls = this.genericType;

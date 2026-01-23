@@ -7,8 +7,8 @@ import kotlin.jvm.functions.Function2;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetChannelsListAdapter.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetChannelsListAdapter.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetChannelsListAdapter$onSelectUserOptions$1 extends Lambda implements Function2<User, Channel, Unit> {
     public static final WidgetChannelsListAdapter$onSelectUserOptions$1 INSTANCE = new WidgetChannelsListAdapter$onSelectUserOptions$1();
 
@@ -22,7 +22,7 @@ public final class WidgetChannelsListAdapter$onSelectUserOptions$1 extends Lambd
         return Unit.f27425a;
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final void invoke2(User user, Channel channel) {
         Intrinsics3.checkNotNullParameter(user, "<anonymous parameter 0>");
         Intrinsics3.checkNotNullParameter(channel, "<anonymous parameter 1>");

@@ -5,8 +5,8 @@ import p001a0.p002a.p003a.C0002b;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: NativeStatistics.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: NativeStatistics.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class OutboundVideo {
     private final int avgEncodeTime;
     private final boolean bwLimitedResolution;
@@ -53,87 +53,87 @@ public final /* data */ class OutboundVideo {
         return outboundVideo.copy((i10 & 1) != 0 ? outboundVideo.codecName : str, (i10 & 2) != 0 ? outboundVideo.codecPayloadType : i, (i10 & 4) != 0 ? outboundVideo.avgEncodeTime : i2, (i10 & 8) != 0 ? outboundVideo.bwLimitedResolution : z2, (i10 & 16) != 0 ? outboundVideo.cpuLimitedResolution : z3, (i10 & 32) != 0 ? outboundVideo.encodeFrameRate : i3, (i10 & 64) != 0 ? outboundVideo.encodeUsage : i4, (i10 & 128) != 0 ? outboundVideo.encoderImplementationName : str2, (i10 & 256) != 0 ? outboundVideo.framesEncoded : j, (i10 & 512) != 0 ? outboundVideo.inputFrameRate : i5, (i10 & 1024) != 0 ? outboundVideo.mediaBitrate : i6, (i10 & 2048) != 0 ? outboundVideo.numberOfCPUAdaptChanges : i7, (i10 & 4096) != 0 ? outboundVideo.numberOfQualityAdaptChanges : i8, (i10 & 8192) != 0 ? outboundVideo.qpSum : j2, (i10 & 16384) != 0 ? outboundVideo.substreams : substreamArr, (32768 & i10) != 0 ? outboundVideo.suspended : z4, (i10 & 65536) != 0 ? outboundVideo.targetMediaBitrate : i9);
     }
 
-    /* renamed from: component1, reason: from getter */
+    /* JADX INFO: renamed from: component1, reason: from getter */
     public final String getCodecName() {
         return this.codecName;
     }
 
-    /* renamed from: component10, reason: from getter */
+    /* JADX INFO: renamed from: component10, reason: from getter */
     public final int getInputFrameRate() {
         return this.inputFrameRate;
     }
 
-    /* renamed from: component11, reason: from getter */
+    /* JADX INFO: renamed from: component11, reason: from getter */
     public final int getMediaBitrate() {
         return this.mediaBitrate;
     }
 
-    /* renamed from: component12, reason: from getter */
+    /* JADX INFO: renamed from: component12, reason: from getter */
     public final int getNumberOfCPUAdaptChanges() {
         return this.numberOfCPUAdaptChanges;
     }
 
-    /* renamed from: component13, reason: from getter */
+    /* JADX INFO: renamed from: component13, reason: from getter */
     public final int getNumberOfQualityAdaptChanges() {
         return this.numberOfQualityAdaptChanges;
     }
 
-    /* renamed from: component14, reason: from getter */
+    /* JADX INFO: renamed from: component14, reason: from getter */
     public final long getQpSum() {
         return this.qpSum;
     }
 
-    /* renamed from: component15, reason: from getter */
+    /* JADX INFO: renamed from: component15, reason: from getter */
     public final Substream[] getSubstreams() {
         return this.substreams;
     }
 
-    /* renamed from: component16, reason: from getter */
+    /* JADX INFO: renamed from: component16, reason: from getter */
     public final boolean getSuspended() {
         return this.suspended;
     }
 
-    /* renamed from: component17, reason: from getter */
+    /* JADX INFO: renamed from: component17, reason: from getter */
     public final int getTargetMediaBitrate() {
         return this.targetMediaBitrate;
     }
 
-    /* renamed from: component2, reason: from getter */
+    /* JADX INFO: renamed from: component2, reason: from getter */
     public final int getCodecPayloadType() {
         return this.codecPayloadType;
     }
 
-    /* renamed from: component3, reason: from getter */
+    /* JADX INFO: renamed from: component3, reason: from getter */
     public final int getAvgEncodeTime() {
         return this.avgEncodeTime;
     }
 
-    /* renamed from: component4, reason: from getter */
+    /* JADX INFO: renamed from: component4, reason: from getter */
     public final boolean getBwLimitedResolution() {
         return this.bwLimitedResolution;
     }
 
-    /* renamed from: component5, reason: from getter */
+    /* JADX INFO: renamed from: component5, reason: from getter */
     public final boolean getCpuLimitedResolution() {
         return this.cpuLimitedResolution;
     }
 
-    /* renamed from: component6, reason: from getter */
+    /* JADX INFO: renamed from: component6, reason: from getter */
     public final int getEncodeFrameRate() {
         return this.encodeFrameRate;
     }
 
-    /* renamed from: component7, reason: from getter */
+    /* JADX INFO: renamed from: component7, reason: from getter */
     public final int getEncodeUsage() {
         return this.encodeUsage;
     }
 
-    /* renamed from: component8, reason: from getter */
+    /* JADX INFO: renamed from: component8, reason: from getter */
     public final String getEncoderImplementationName() {
         return this.encoderImplementationName;
     }
 
-    /* renamed from: component9, reason: from getter */
+    /* JADX INFO: renamed from: component9, reason: from getter */
     public final long getFramesEncoded() {
         return this.framesEncoded;
     }
@@ -225,27 +225,36 @@ public final /* data */ class OutboundVideo {
     }
 
     /* JADX WARN: Multi-variable type inference failed */
+    /* JADX WARN: Type inference failed for: r2v24 */
+    /* JADX WARN: Type inference failed for: r2v25 */
+    /* JADX WARN: Type inference failed for: r2v26 */
+    /* JADX WARN: Type inference failed for: r2v27 */
+    /* JADX WARN: Type inference failed for: r2v3, types: [int] */
+    /* JADX WARN: Type inference failed for: r2v5, types: [int] */
+    /* JADX WARN: Type inference failed for: r3v0 */
+    /* JADX WARN: Type inference failed for: r3v1, types: [int] */
+    /* JADX WARN: Type inference failed for: r3v2 */
     public int hashCode() {
         String str = this.codecName;
         int iHashCode = (((((str != null ? str.hashCode() : 0) * 31) + this.codecPayloadType) * 31) + this.avgEncodeTime) * 31;
         boolean z2 = this.bwLimitedResolution;
-        int i = z2;
-        if (z2 != 0) {
-            i = 1;
+        ?? r2 = z2;
+        if (z2) {
+            r2 = 1;
         }
-        int i2 = (iHashCode + i) * 31;
+        int i = (iHashCode + r2) * 31;
         boolean z3 = this.cpuLimitedResolution;
-        int i3 = z3;
-        if (z3 != 0) {
-            i3 = 1;
+        ?? r22 = z3;
+        if (z3) {
+            r22 = 1;
         }
-        int i4 = (((((i2 + i3) * 31) + this.encodeFrameRate) * 31) + this.encodeUsage) * 31;
+        int i2 = (((((i + r22) * 31) + this.encodeFrameRate) * 31) + this.encodeUsage) * 31;
         String str2 = this.encoderImplementationName;
-        int iM3a = (C0002b.m3a(this.qpSum) + ((((((((((C0002b.m3a(this.framesEncoded) + ((i4 + (str2 != null ? str2.hashCode() : 0)) * 31)) * 31) + this.inputFrameRate) * 31) + this.mediaBitrate) * 31) + this.numberOfCPUAdaptChanges) * 31) + this.numberOfQualityAdaptChanges) * 31)) * 31;
+        int iM3a = (C0002b.m3a(this.qpSum) + ((((((((((C0002b.m3a(this.framesEncoded) + ((i2 + (str2 != null ? str2.hashCode() : 0)) * 31)) * 31) + this.inputFrameRate) * 31) + this.mediaBitrate) * 31) + this.numberOfCPUAdaptChanges) * 31) + this.numberOfQualityAdaptChanges) * 31)) * 31;
         Substream[] substreamArr = this.substreams;
         int iHashCode2 = (iM3a + (substreamArr != null ? Arrays.hashCode(substreamArr) : 0)) * 31;
         boolean z4 = this.suspended;
-        return ((iHashCode2 + (z4 ? 1 : z4 ? 1 : 0)) * 31) + this.targetMediaBitrate;
+        return ((iHashCode2 + (z4 ? 1 : z4)) * 31) + this.targetMediaBitrate;
     }
 
     public String toString() {

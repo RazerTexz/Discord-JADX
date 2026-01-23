@@ -23,18 +23,18 @@ import p507d0.p580t._Collections;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.p595g0.KMarkers4;
 
-/* compiled from: ShallowPartitionMap.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: ShallowPartitionMap.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public class ShallowPartitionMap<K, V> implements Map<K, V>, KMarkers4 {
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private final int numPartitions;
     private final Function1<K, Integer> partitionStrategy;
     private final List<Map<K, V>> partitions;
     private int size;
 
-    /* compiled from: ShallowPartitionMap.kt */
+    /* JADX INFO: compiled from: ShallowPartitionMap.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -74,7 +74,7 @@ public class ShallowPartitionMap<K, V> implements Map<K, V>, KMarkers4 {
         }
     }
 
-    /* compiled from: ShallowPartitionMap.kt */
+    /* JADX INFO: compiled from: ShallowPartitionMap.kt */
     public static class CopiablePartitionMap<K, V> extends ShallowPartitionMap<K, V> {
         private List<? extends Map<K, V>> defensiveCopyPartitions;
         private final HashSet<Integer> dirtyPartitionIndices;

@@ -6,28 +6,28 @@ import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 
-/* compiled from: CameraUtils.java */
-/* renamed from: b.o.a.d, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.o.a.d, reason: use source file name */
+/* JADX INFO: compiled from: CameraUtils.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class CameraUtils implements Runnable {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final /* synthetic */ byte[] f13699j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final /* synthetic */ File f13700k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final /* synthetic */ Handler f13701l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public final /* synthetic */ FileCallback f13702m;
 
-    /* compiled from: CameraUtils.java */
-    /* renamed from: b.o.a.d$a */
+    /* JADX INFO: renamed from: b.o.a.d$a */
+    /* JADX INFO: compiled from: CameraUtils.java */
     public class a implements Runnable {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public final /* synthetic */ File f13703j;
 
         public a(File file) {
@@ -62,6 +62,7 @@ public class CameraUtils implements Runnable {
                 }
             } catch (IOException e) {
                 CameraUtils2.f13705a.m7159a(3, "writeToFile:", "could not write file.", e);
+                file = null;
             }
         } else {
             file = null;

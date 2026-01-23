@@ -13,8 +13,8 @@ import androidx.constraintlayout.solver.widgets.analyzer.BasicMeasure;
 import androidx.core.view.GravityCompat;
 import androidx.core.view.ViewCompat;
 
+/* JADX INFO: loaded from: classes.dex */
 @RestrictTo({RestrictTo.Scope.LIBRARY_GROUP_PREFIX})
-/* loaded from: classes.dex */
 public class AlertDialogLayout extends LinearLayoutCompat {
     public AlertDialogLayout(@Nullable Context context) {
         super(context);

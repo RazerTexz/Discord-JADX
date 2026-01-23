@@ -32,23 +32,23 @@ import p507d0.p592z.p594d.Lambda;
 import p507d0.p592z.p594d.Reflection2;
 import p658rx.Observable;
 
-/* compiled from: WidgetServerSettingsCommunitySecondStep.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetServerSettingsCommunitySecondStep.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetServerSettingsCommunitySecondStep extends AppFragment {
     public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetServerSettingsCommunitySecondStep.class, "binding", "getBinding()Lcom/discord/databinding/WidgetServerSettingsCommunitySetupSecondStepBinding;", 0)};
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private static final String REQUEST_KEY_RULES_CHANNEL = "REQUEST_KEY_RULES_CHANNEL";
     private static final String REQUEST_KEY_UPDATES_CHANNEL = "REQUEST_KEY_UPDATES_CHANNEL";
 
-    /* renamed from: binding$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
 
-    /* renamed from: viewModel$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: viewModel$delegate, reason: from kotlin metadata */
     private final Lazy viewModel;
 
-    /* compiled from: WidgetServerSettingsCommunitySecondStep.kt */
+    /* JADX INFO: compiled from: WidgetServerSettingsCommunitySecondStep.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -63,8 +63,8 @@ public final class WidgetServerSettingsCommunitySecondStep extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetServerSettingsCommunitySecondStep.kt */
-    /* renamed from: com.discord.widgets.servers.community.WidgetServerSettingsCommunitySecondStep$configureUI$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.community.WidgetServerSettingsCommunitySecondStep$configureUI$1 */
+    /* JADX INFO: compiled from: WidgetServerSettingsCommunitySecondStep.kt */
     public static final class ViewOnClickListenerC93751 implements View.OnClickListener {
         public ViewOnClickListenerC93751() {
         }
@@ -77,8 +77,8 @@ public final class WidgetServerSettingsCommunitySecondStep extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetServerSettingsCommunitySecondStep.kt */
-    /* renamed from: com.discord.widgets.servers.community.WidgetServerSettingsCommunitySecondStep$configureUI$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.community.WidgetServerSettingsCommunitySecondStep$configureUI$2 */
+    /* JADX INFO: compiled from: WidgetServerSettingsCommunitySecondStep.kt */
     public static final class ViewOnClickListenerC93762 implements View.OnClickListener {
         public ViewOnClickListenerC93762() {
         }
@@ -91,12 +91,12 @@ public final class WidgetServerSettingsCommunitySecondStep extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetServerSettingsCommunitySecondStep.kt */
-    /* renamed from: com.discord.widgets.servers.community.WidgetServerSettingsCommunitySecondStep$onViewBound$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.community.WidgetServerSettingsCommunitySecondStep$onViewBound$1 */
+    /* JADX INFO: compiled from: WidgetServerSettingsCommunitySecondStep.kt */
     public static final class C93771 extends Lambda implements Function2<Long, String, Unit> {
 
-        /* compiled from: WidgetServerSettingsCommunitySecondStep.kt */
-        /* renamed from: com.discord.widgets.servers.community.WidgetServerSettingsCommunitySecondStep$onViewBound$1$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.widgets.servers.community.WidgetServerSettingsCommunitySecondStep$onViewBound$1$1, reason: invalid class name */
+        /* JADX INFO: compiled from: WidgetServerSettingsCommunitySecondStep.kt */
         public static final class AnonymousClass1 extends Lambda implements Function1<WidgetServerSettingsEnableCommunityViewModel.CommunityGuildConfig, WidgetServerSettingsEnableCommunityViewModel.CommunityGuildConfig> {
             public final /* synthetic */ Channel $channel;
             public final /* synthetic */ long $channelId;
@@ -113,7 +113,7 @@ public final class WidgetServerSettingsCommunitySecondStep extends AppFragment {
                 return invoke2(communityGuildConfig);
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final WidgetServerSettingsEnableCommunityViewModel.CommunityGuildConfig invoke2(WidgetServerSettingsEnableCommunityViewModel.CommunityGuildConfig communityGuildConfig) {
                 Intrinsics3.checkNotNullParameter(communityGuildConfig, "guildConfig");
                 return WidgetServerSettingsEnableCommunityViewModel.CommunityGuildConfig.copy$default(communityGuildConfig, this.$channel, null, Long.valueOf(this.$channelId), null, false, false, false, false, null, false, null, null, 4090, null);
@@ -136,12 +136,12 @@ public final class WidgetServerSettingsCommunitySecondStep extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetServerSettingsCommunitySecondStep.kt */
-    /* renamed from: com.discord.widgets.servers.community.WidgetServerSettingsCommunitySecondStep$onViewBound$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.community.WidgetServerSettingsCommunitySecondStep$onViewBound$2 */
+    /* JADX INFO: compiled from: WidgetServerSettingsCommunitySecondStep.kt */
     public static final class C93782 extends Lambda implements Function2<Long, String, Unit> {
 
-        /* compiled from: WidgetServerSettingsCommunitySecondStep.kt */
-        /* renamed from: com.discord.widgets.servers.community.WidgetServerSettingsCommunitySecondStep$onViewBound$2$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.widgets.servers.community.WidgetServerSettingsCommunitySecondStep$onViewBound$2$1, reason: invalid class name */
+        /* JADX INFO: compiled from: WidgetServerSettingsCommunitySecondStep.kt */
         public static final class AnonymousClass1 extends Lambda implements Function1<WidgetServerSettingsEnableCommunityViewModel.CommunityGuildConfig, WidgetServerSettingsEnableCommunityViewModel.CommunityGuildConfig> {
             public final /* synthetic */ Channel $channel;
             public final /* synthetic */ long $channelId;
@@ -158,7 +158,7 @@ public final class WidgetServerSettingsCommunitySecondStep extends AppFragment {
                 return invoke2(communityGuildConfig);
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final WidgetServerSettingsEnableCommunityViewModel.CommunityGuildConfig invoke2(WidgetServerSettingsEnableCommunityViewModel.CommunityGuildConfig communityGuildConfig) {
                 Intrinsics3.checkNotNullParameter(communityGuildConfig, "guildConfig");
                 return WidgetServerSettingsEnableCommunityViewModel.CommunityGuildConfig.copy$default(communityGuildConfig, null, this.$channel, null, Long.valueOf(this.$channelId), false, false, false, false, null, false, null, null, 4085, null);
@@ -181,8 +181,8 @@ public final class WidgetServerSettingsCommunitySecondStep extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetServerSettingsCommunitySecondStep.kt */
-    /* renamed from: com.discord.widgets.servers.community.WidgetServerSettingsCommunitySecondStep$onViewBoundOrOnResume$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.community.WidgetServerSettingsCommunitySecondStep$onViewBoundOrOnResume$1 */
+    /* JADX INFO: compiled from: WidgetServerSettingsCommunitySecondStep.kt */
     public static final /* synthetic */ class C93811 extends FunctionReferenceImpl implements Function1<WidgetServerSettingsEnableCommunityViewModel.ViewState.Loaded, Unit> {
         public C93811(WidgetServerSettingsCommunitySecondStep widgetServerSettingsCommunitySecondStep) {
             super(1, widgetServerSettingsCommunitySecondStep, WidgetServerSettingsCommunitySecondStep.class, "configureUI", "configureUI(Lcom/discord/widgets/servers/community/WidgetServerSettingsEnableCommunityViewModel$ViewState$Loaded;)V", 0);
@@ -194,7 +194,7 @@ public final class WidgetServerSettingsCommunitySecondStep extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(WidgetServerSettingsEnableCommunityViewModel.ViewState.Loaded loaded) {
             Intrinsics3.checkNotNullParameter(loaded, "p1");
             WidgetServerSettingsCommunitySecondStep.access$configureUI((WidgetServerSettingsCommunitySecondStep) this.receiver, loaded);

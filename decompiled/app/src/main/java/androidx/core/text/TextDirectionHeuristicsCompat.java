@@ -3,7 +3,7 @@ package androidx.core.text;
 import java.nio.CharBuffer;
 import java.util.Locale;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public final class TextDirectionHeuristicsCompat {
     public static final TextDirectionHeuristicCompat ANYRTL_LTR;
     public static final TextDirectionHeuristicCompat FIRSTSTRONG_LTR;

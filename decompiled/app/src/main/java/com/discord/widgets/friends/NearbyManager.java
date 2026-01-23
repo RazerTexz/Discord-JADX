@@ -27,8 +27,8 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p658rx.Observable;
 import p658rx.subjects.BehaviorSubject;
 
-/* compiled from: NearbyManager.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: NearbyManager.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class NearbyManager {
     public static final int CONNECTION_ERROR = 99;
     public static final int PERMISSION_DENIED = 98;
@@ -41,10 +41,10 @@ public final class NearbyManager {
     private final HashSet<Long> nearbyUserIds = new HashSet<>();
     private final BehaviorSubject<NearbyState> nearbyStateSubject = BehaviorSubject.m11130l0(NearbyState.Uninitialized.INSTANCE);
 
-    /* compiled from: NearbyManager.kt */
+    /* JADX INFO: compiled from: NearbyManager.kt */
     public static abstract class NearbyState {
 
-        /* compiled from: NearbyManager.kt */
+        /* JADX INFO: compiled from: NearbyManager.kt */
         public static final /* data */ class Connected extends NearbyState {
             private final Set<Long> nearbyUserIds;
 
@@ -96,7 +96,7 @@ public final class NearbyManager {
             }
         }
 
-        /* compiled from: NearbyManager.kt */
+        /* JADX INFO: compiled from: NearbyManager.kt */
         public static final /* data */ class Disconnected extends NearbyState {
             private final int code;
 
@@ -112,7 +112,7 @@ public final class NearbyManager {
                 return disconnected.copy(i);
             }
 
-            /* renamed from: component1, reason: from getter */
+            /* JADX INFO: renamed from: component1, reason: from getter */
             public final int getCode() {
                 return this.code;
             }
@@ -141,7 +141,7 @@ public final class NearbyManager {
             }
         }
 
-        /* compiled from: NearbyManager.kt */
+        /* JADX INFO: compiled from: NearbyManager.kt */
         public static final class Uninitialized extends NearbyState {
             public static final Uninitialized INSTANCE = new Uninitialized();
 
@@ -158,8 +158,8 @@ public final class NearbyManager {
         }
     }
 
-    /* compiled from: NearbyManager.kt */
-    /* renamed from: com.discord.widgets.friends.NearbyManager$setupBroadcaster$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.friends.NearbyManager$setupBroadcaster$1 */
+    /* JADX INFO: compiled from: NearbyManager.kt */
     public static final class C83741 extends C4265b {
         public C83741() {
         }
@@ -171,8 +171,8 @@ public final class NearbyManager {
         }
     }
 
-    /* compiled from: NearbyManager.kt */
-    /* renamed from: com.discord.widgets.friends.NearbyManager$setupListener$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.friends.NearbyManager$setupListener$1 */
+    /* JADX INFO: compiled from: NearbyManager.kt */
     public static final class C83751 extends MessageListener {
         public C83751() {
         }

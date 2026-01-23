@@ -19,7 +19,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public abstract class PreferenceGroup extends Preference {
     private static final String TAG = "PreferenceGroup";
     private boolean mAttachedToHierarchy;
@@ -32,7 +32,7 @@ public abstract class PreferenceGroup extends Preference {
     private boolean mOrderingAsAdded;
     private List<Preference> mPreferences;
 
-    /* renamed from: androidx.preference.PreferenceGroup$1 */
+    /* JADX INFO: renamed from: androidx.preference.PreferenceGroup$1 */
     public class RunnableC05181 implements Runnable {
         public RunnableC05181() {
         }
@@ -327,7 +327,7 @@ public abstract class PreferenceGroup extends Preference {
         public static final Parcelable.Creator<SavedState> CREATOR = new C05191();
         public int mInitialExpandedChildrenCount;
 
-        /* renamed from: androidx.preference.PreferenceGroup$SavedState$1 */
+        /* JADX INFO: renamed from: androidx.preference.PreferenceGroup$SavedState$1 */
         public static class C05191 implements Parcelable.Creator<SavedState> {
             @Override // android.os.Parcelable.Creator
             public /* bridge */ /* synthetic */ SavedState createFromParcel(Parcel parcel) {

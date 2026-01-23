@@ -4,12 +4,12 @@ import kotlin.Unit;
 import p007b.p100d.p104b.p105a.outline;
 import p659s.p660a.p661a.LockFreeLinkedList3;
 
-/* compiled from: CancellableContinuation.kt */
-/* renamed from: s.a.r1, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: s.a.r1, reason: use source file name */
+/* JADX INFO: compiled from: CancellableContinuation.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class CancellableContinuation3 extends CancellableContinuationImpl3 {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final LockFreeLinkedList3 f27896j;
 
     public CancellableContinuation3(LockFreeLinkedList3 lockFreeLinkedList3) {
@@ -17,7 +17,7 @@ public final class CancellableContinuation3 extends CancellableContinuationImpl3
     }
 
     @Override // p659s.p660a.CompletionHandler
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public void mo11193a(Throwable th) {
         this.f27896j.mo11151n();
     }

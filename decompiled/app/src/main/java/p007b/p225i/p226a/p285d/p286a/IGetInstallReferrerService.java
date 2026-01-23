@@ -10,27 +10,27 @@ import p007b.p225i.p226a.p227a.BaseProxy;
 import p007b.p225i.p226a.p227a.BaseStub;
 import p007b.p225i.p226a.p227a.Codecs;
 
-/* compiled from: IGetInstallReferrerService.java */
-/* renamed from: b.i.a.d.a.a, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.d.a.a, reason: use source file name */
+/* JADX INFO: compiled from: IGetInstallReferrerService.java */
+/* JADX INFO: loaded from: classes3.dex */
 public interface IGetInstallReferrerService extends IInterface {
 
-    /* compiled from: IGetInstallReferrerService.java */
-    /* renamed from: b.i.a.d.a.a$a */
+    /* JADX INFO: renamed from: b.i.a.d.a.a$a */
+    /* JADX INFO: compiled from: IGetInstallReferrerService.java */
     public static abstract class a extends BaseStub implements IGetInstallReferrerService {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public static final /* synthetic */ int f9162a = 0;
 
-        /* compiled from: IGetInstallReferrerService.java */
-        /* renamed from: b.i.a.d.a.a$a$a, reason: collision with other inner class name */
+        /* JADX INFO: renamed from: b.i.a.d.a.a$a$a, reason: collision with other inner class name */
+        /* JADX INFO: compiled from: IGetInstallReferrerService.java */
         public static class C13227a extends BaseProxy implements IGetInstallReferrerService {
             public C13227a(IBinder iBinder) {
                 super(iBinder);
             }
 
             @Override // p007b.p225i.p226a.p285d.p286a.IGetInstallReferrerService
-            /* renamed from: B */
+            /* JADX INFO: renamed from: B */
             public final Bundle mo3923B(Bundle bundle) throws RemoteException {
                 Parcel parcelObtain = Parcel.obtain();
                 parcelObtain.writeInterfaceToken("com.google.android.finsky.externalreferrer.IGetInstallReferrerService");
@@ -52,6 +52,6 @@ public interface IGetInstallReferrerService extends IInterface {
         }
     }
 
-    /* renamed from: B */
+    /* JADX INFO: renamed from: B */
     Bundle mo3923B(Bundle bundle) throws RemoteException;
 }

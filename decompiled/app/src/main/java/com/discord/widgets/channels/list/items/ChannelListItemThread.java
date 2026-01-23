@@ -6,8 +6,8 @@ import com.discord.widgets.channels.list.WidgetChannelListUnreads;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ChannelListItemThread.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: ChannelListItemThread.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final /* data */ class ChannelListItemThread implements ChannelListItem, WidgetChannelListUnreads.UnreadItem {
     private final Channel channel;
     private final boolean isLocked;
@@ -56,12 +56,12 @@ public final /* data */ class ChannelListItemThread implements ChannelListItem, 
         return channelListItemThread.copy(channel, z6, i3, z7, z8, z5);
     }
 
-    /* renamed from: component1, reason: from getter */
+    /* JADX INFO: renamed from: component1, reason: from getter */
     public final Channel getChannel() {
         return this.channel;
     }
 
-    /* renamed from: component2, reason: from getter */
+    /* JADX INFO: renamed from: component2, reason: from getter */
     public final boolean getSelected() {
         return this.selected;
     }
@@ -74,12 +74,12 @@ public final /* data */ class ChannelListItemThread implements ChannelListItem, 
         return getIsUnread();
     }
 
-    /* renamed from: component5, reason: from getter */
+    /* JADX INFO: renamed from: component5, reason: from getter */
     public final boolean getIsLocked() {
         return this.isLocked;
     }
 
-    /* renamed from: component6, reason: from getter */
+    /* JADX INFO: renamed from: component6, reason: from getter */
     public final boolean getMuted() {
         return this.muted;
     }
@@ -137,29 +137,41 @@ public final /* data */ class ChannelListItemThread implements ChannelListItem, 
     }
 
     /* JADX WARN: Multi-variable type inference failed */
+    /* JADX WARN: Type inference failed for: r0v11 */
+    /* JADX WARN: Type inference failed for: r0v12 */
+    /* JADX WARN: Type inference failed for: r0v14 */
+    /* JADX WARN: Type inference failed for: r0v15 */
+    /* JADX WARN: Type inference failed for: r0v7, types: [int] */
+    /* JADX WARN: Type inference failed for: r0v9, types: [int] */
+    /* JADX WARN: Type inference failed for: r1v1, types: [int] */
+    /* JADX WARN: Type inference failed for: r1v10 */
+    /* JADX WARN: Type inference failed for: r1v11 */
+    /* JADX WARN: Type inference failed for: r2v0 */
+    /* JADX WARN: Type inference failed for: r2v1, types: [int] */
+    /* JADX WARN: Type inference failed for: r2v2 */
     public int hashCode() {
         Channel channel = this.channel;
         int iHashCode = (channel != null ? channel.hashCode() : 0) * 31;
         boolean z2 = this.selected;
-        int i = z2;
-        if (z2 != 0) {
-            i = 1;
+        ?? r1 = z2;
+        if (z2) {
+            r1 = 1;
         }
-        int mentionCount = (getMentionCount() + ((iHashCode + i) * 31)) * 31;
+        int mentionCount = (getMentionCount() + ((iHashCode + r1) * 31)) * 31;
         boolean isUnread = getIsUnread();
-        int i2 = isUnread;
+        ?? r0 = isUnread;
         if (isUnread) {
-            i2 = 1;
+            r0 = 1;
         }
-        int i3 = (mentionCount + i2) * 31;
+        int i = (mentionCount + r0) * 31;
         boolean z3 = this.isLocked;
-        int i4 = z3;
-        if (z3 != 0) {
-            i4 = 1;
+        ?? r02 = z3;
+        if (z3) {
+            r02 = 1;
         }
-        int i5 = (i3 + i4) * 31;
+        int i2 = (i + r02) * 31;
         boolean z4 = this.muted;
-        return i5 + (z4 ? 1 : z4 ? 1 : 0);
+        return i2 + (z4 ? 1 : z4);
     }
 
     public final boolean isLocked() {
@@ -167,7 +179,7 @@ public final /* data */ class ChannelListItemThread implements ChannelListItem, 
     }
 
     @Override // com.discord.widgets.channels.list.WidgetChannelListUnreads.UnreadItem
-    /* renamed from: isUnread, reason: from getter */
+    /* JADX INFO: renamed from: isUnread, reason: from getter */
     public boolean getIsUnread() {
         return this.isUnread;
     }

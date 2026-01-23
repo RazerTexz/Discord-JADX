@@ -5,12 +5,12 @@ import java.util.List;
 import java.util.Objects;
 import p007b.p100d.p104b.p105a.outline;
 
-/* compiled from: AutoValue_BatchedLogRequest.java */
-/* renamed from: b.i.a.b.i.e.d, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.b.i.e.d, reason: use source file name */
+/* JADX INFO: compiled from: AutoValue_BatchedLogRequest.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class AutoValue_BatchedLogRequest extends BatchedLogRequest {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final List<LogRequest> f5164a;
 
     public AutoValue_BatchedLogRequest(List<LogRequest> list) {
@@ -20,7 +20,7 @@ public final class AutoValue_BatchedLogRequest extends BatchedLogRequest {
 
     @Override // p007b.p225i.p226a.p228b.p229i.p230e.BatchedLogRequest
     @NonNull
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public List<LogRequest> mo2313a() {
         return this.f5164a;
     }

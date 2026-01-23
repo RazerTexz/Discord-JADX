@@ -16,9 +16,9 @@ import org.eclipse.jdt.internal.compiler.ast.LocalDeclaration;
 import org.eclipse.jdt.internal.compiler.ast.NullLiteral;
 import org.eclipse.jdt.internal.compiler.ast.TypeReference;
 
+/* JADX INFO: loaded from: discord-126021.apk:lombok/eclipse/handlers/HandleVal.SCL.lombok */
 @DeferUntilPostDiet
 @HandlerPriority(65536)
-/* loaded from: discord-126021.apk:lombok/eclipse/handlers/HandleVal.SCL.lombok */
 public class HandleVal extends EclipseASTAdapter {
     @Override // lombok.eclipse.EclipseASTAdapter, lombok.eclipse.EclipseASTVisitor
     public void visitLocal(EclipseNode localNode, LocalDeclaration local) {

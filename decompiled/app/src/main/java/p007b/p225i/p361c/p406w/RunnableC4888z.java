@@ -18,43 +18,43 @@ import java.util.concurrent.TimeUnit;
 import org.objectweb.asm.Opcodes;
 import p007b.p225i.p361c.p398s.C4826q;
 
-/* compiled from: com.google.firebase:firebase-messaging@@21.0.0 */
-/* renamed from: b.i.c.w.z */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.c.w.z */
+/* JADX INFO: compiled from: com.google.firebase:firebase-messaging@@21.0.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public class RunnableC4888z implements Runnable {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static final Object f13069j = new Object();
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     @GuardedBy("TOPIC_SYNC_TASK_LOCK")
     public static Boolean f13070k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     @GuardedBy("TOPIC_SYNC_TASK_LOCK")
     public static Boolean f13071l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public final Context f13072m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public final C4826q f13073n;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public final PowerManager.WakeLock f13074o;
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public final C4887y f13075p;
 
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     public final long f13076q;
 
-    /* compiled from: com.google.firebase:firebase-messaging@@21.0.0 */
+    /* JADX INFO: renamed from: b.i.c.w.z$a */
+    /* JADX INFO: compiled from: com.google.firebase:firebase-messaging@@21.0.0 */
     @VisibleForTesting
-    /* renamed from: b.i.c.w.z$a */
     public class a extends BroadcastReceiver {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         @Nullable
         @GuardedBy("this")
         public RunnableC4888z f13077a;
@@ -63,7 +63,7 @@ public class RunnableC4888z implements Runnable {
             this.f13077a = runnableC4888z;
         }
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public void m6842a() {
             if (RunnableC4888z.m6837a()) {
                 Log.d("FirebaseMessaging", "Connectivity change received registered");
@@ -97,12 +97,12 @@ public class RunnableC4888z implements Runnable {
         this.f13074o = ((PowerManager) context.getSystemService("power")).newWakeLock(1, "wake:com.google.firebase.messaging");
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static boolean m6837a() {
         return Log.isLoggable("FirebaseMessaging", 3) || (Build.VERSION.SDK_INT == 23 && Log.isLoggable("FirebaseMessaging", 3));
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static boolean m6838b(Context context) {
         boolean zBooleanValue;
         synchronized (f13069j) {
@@ -114,7 +114,7 @@ public class RunnableC4888z implements Runnable {
         return zBooleanValue;
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public static boolean m6839c(Context context, String str, Boolean bool) {
         if (bool != null) {
             return bool.booleanValue();
@@ -130,7 +130,7 @@ public class RunnableC4888z implements Runnable {
         return z2;
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public static boolean m6840d(Context context) {
         boolean zBooleanValue;
         synchronized (f13069j) {
@@ -143,7 +143,7 @@ public class RunnableC4888z implements Runnable {
     }
 
     /* JADX WARN: Removed duplicated region for block: B:13:0x001e  */
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */

@@ -12,25 +12,25 @@ import org.checkerframework.checker.nullness.compatqual.NullableDecl;
 import p007b.p225i.p226a.p288f.p299e.p308o.C3404f;
 import p007b.p225i.p355b.p357b.ImmutableList2;
 
-/* compiled from: ImmutableCollection.java */
-/* renamed from: b.i.b.b.n, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.b.b.n, reason: use source file name */
+/* JADX INFO: compiled from: ImmutableCollection.java */
+/* JADX INFO: loaded from: classes3.dex */
 public abstract class ImmutableCollection<E> extends AbstractCollection<E> implements Serializable {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static final Object[] f12039j = new Object[0];
 
-    /* compiled from: ImmutableCollection.java */
-    /* renamed from: b.i.b.b.n$a */
+    /* JADX INFO: renamed from: b.i.b.b.n$a */
+    /* JADX INFO: compiled from: ImmutableCollection.java */
     public static abstract class a<E> extends b<E> {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public Object[] f12040a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public int f12041b;
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public boolean f12042c;
 
         public a(int i) {
@@ -40,10 +40,10 @@ public abstract class ImmutableCollection<E> extends AbstractCollection<E> imple
         }
     }
 
-    /* compiled from: ImmutableCollection.java */
-    /* renamed from: b.i.b.b.n$b */
+    /* JADX INFO: renamed from: b.i.b.b.n$b */
+    /* JADX INFO: compiled from: ImmutableCollection.java */
     public static abstract class b<E> {
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public static int m6260a(int i, int i2) {
             if (i2 < 0) {
                 throw new AssertionError("cannot store more than MAX_VALUE elements");
@@ -73,7 +73,7 @@ public abstract class ImmutableCollection<E> extends AbstractCollection<E> imple
         throw new UnsupportedOperationException();
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public ImmutableList2<E> mo6253c() {
         if (!isEmpty()) {
             return ImmutableList2.m6261k(toArray());
@@ -92,7 +92,7 @@ public abstract class ImmutableCollection<E> extends AbstractCollection<E> imple
     public abstract boolean contains(@NullableDecl Object obj);
 
     @CanIgnoreReturnValue
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public int mo6242d(Object[] objArr, int i) {
         UnmodifiableIterator<E> unmodifiableIteratorMo6251j = mo6251j();
         while (unmodifiableIteratorMo6251j.hasNext()) {
@@ -102,22 +102,22 @@ public abstract class ImmutableCollection<E> extends AbstractCollection<E> imple
         return i;
     }
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public Object[] mo6243e() {
         return null;
     }
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public int mo6244g() {
         throw new UnsupportedOperationException();
     }
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public int mo6245h() {
         throw new UnsupportedOperationException();
     }
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public abstract boolean mo6246i();
 
     @Override // java.util.AbstractCollection, java.util.Collection, java.lang.Iterable, java.util.Set
@@ -125,7 +125,7 @@ public abstract class ImmutableCollection<E> extends AbstractCollection<E> imple
         return mo6251j();
     }
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public abstract UnmodifiableIterator<E> mo6251j();
 
     @Override // java.util.AbstractCollection, java.util.Collection

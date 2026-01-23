@@ -3,21 +3,21 @@ package p007b.p225i.p414e.p430r.p431d;
 import java.util.Formatter;
 import p007b.p225i.p414e.ResultPoint;
 
-/* compiled from: DetectionResult.java */
-/* renamed from: b.i.e.r.d.f, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.e.r.d.f, reason: use source file name */
+/* JADX INFO: compiled from: DetectionResult.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class DetectionResult {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final BarcodeMetadata f13487a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final DetectionResultColumn[] f13488b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public BoundingBox f13489c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final int f13490d;
 
     public DetectionResult(BarcodeMetadata barcodeMetadata, BoundingBox boundingBox) {
@@ -28,7 +28,7 @@ public final class DetectionResult {
         this.f13488b = new DetectionResultColumn[i + 2];
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static int m7055b(int i, int i2, Codeword codeword) {
         if (codeword.m7050a()) {
             return i2;
@@ -40,7 +40,7 @@ public final class DetectionResult {
         return 0;
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final void m7056a(DetectionResultColumn detectionResultColumn) {
         int i;
         if (detectionResultColumn != null) {

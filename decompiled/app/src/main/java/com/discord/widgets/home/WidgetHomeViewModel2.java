@@ -12,9 +12,9 @@ import com.discord.widgets.home.WidgetHomeViewModel;
 import p507d0.p592z.p594d.Intrinsics3;
 import p658rx.functions.Func8;
 
-/* compiled from: WidgetHomeViewModel.kt */
-/* renamed from: com.discord.widgets.home.WidgetHomeViewModel$Companion$observeStoreState$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.home.WidgetHomeViewModel$Companion$observeStoreState$1, reason: use source file name */
+/* JADX INFO: compiled from: WidgetHomeViewModel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetHomeViewModel2<T1, T2, T3, T4, T5, T6, T7, T8, R> implements Func8<PanelState, PanelState, WidgetHomeViewModel.GuildInfo, MeUser, StoreChannelsSelected.ResolvedSelectedChannel, Experiment, StoreUserConnections.State, Experiment, WidgetHomeViewModel.StoreState> {
     public static final WidgetHomeViewModel2 INSTANCE = new WidgetHomeViewModel2();
 
@@ -23,7 +23,7 @@ public final class WidgetHomeViewModel2<T1, T2, T3, T4, T5, T6, T7, T8, R> imple
         return call2(panelState, panelState2, guildInfo, meUser, resolvedSelectedChannel, experiment, state, experiment2);
     }
 
-    /* renamed from: call, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
     public final WidgetHomeViewModel.StoreState call2(PanelState panelState, PanelState panelState2, WidgetHomeViewModel.GuildInfo guildInfo, MeUser meUser, StoreChannelsSelected.ResolvedSelectedChannel resolvedSelectedChannel, Experiment experiment, StoreUserConnections.State state, Experiment experiment2) {
         StoreChannelsSelected.ResolvedSelectedChannel resolvedSelectedChannel2;
         NsfwAllowance nsfwAllowance;

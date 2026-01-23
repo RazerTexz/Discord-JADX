@@ -4,12 +4,12 @@ import com.google.android.exoplayer2.audio.AudioProcessor;
 import java.nio.ByteBuffer;
 import p007b.p225i.p226a.p242c.p259f3.Util2;
 
-/* compiled from: ResamplingAudioProcessor.java */
-/* renamed from: b.i.a.c.t2.b0, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.t2.b0, reason: use source file name */
+/* JADX INFO: compiled from: ResamplingAudioProcessor.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class ResamplingAudioProcessor extends BaseAudioProcessor {
     @Override // com.google.android.exoplayer2.audio.AudioProcessor
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public void mo3470c(ByteBuffer byteBuffer) {
         int iPosition = byteBuffer.position();
         int iLimit = byteBuffer.limit();
@@ -72,7 +72,7 @@ public final class ResamplingAudioProcessor extends BaseAudioProcessor {
     }
 
     @Override // p007b.p225i.p226a.p242c.p263t2.BaseAudioProcessor
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public AudioProcessor.C10685a mo3471f(AudioProcessor.C10685a c10685a) throws AudioProcessor.UnhandledAudioFormatException {
         int i = c10685a.f19698d;
         if (i == 3 || i == 2 || i == 268435456 || i == 536870912 || i == 805306368 || i == 4) {

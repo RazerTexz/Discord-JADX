@@ -5,10 +5,10 @@ import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
-/* compiled from: DoNotOptimize.java */
+/* JADX INFO: renamed from: b.f.m.d, reason: use source file name */
+/* JADX INFO: compiled from: DoNotOptimize.java */
+/* JADX INFO: loaded from: classes3.dex */
 @Target({ElementType.TYPE, ElementType.FIELD, ElementType.METHOD, ElementType.CONSTRUCTOR})
 @Retention(RetentionPolicy.CLASS)
-/* renamed from: b.f.m.d, reason: use source file name */
-/* loaded from: classes3.dex */
 public @interface DoNotOptimize {
 }

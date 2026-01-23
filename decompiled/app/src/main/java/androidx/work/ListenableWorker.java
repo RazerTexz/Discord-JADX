@@ -19,7 +19,7 @@ import java.util.concurrent.Executor;
 import p007b.p100d.p104b.p105a.outline;
 import p007b.p225i.p355b.p359d.p360a.ListenableFuture8;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public abstract class ListenableWorker {
 
     @NonNull

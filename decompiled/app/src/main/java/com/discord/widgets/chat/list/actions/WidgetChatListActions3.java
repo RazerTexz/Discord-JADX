@@ -22,16 +22,16 @@ import p637j0.p642l.p647e.ScalarSynchronousObservable;
 import p658rx.Observable;
 import p658rx.functions.Func5;
 
-/* compiled from: WidgetChatListActions.kt */
-/* renamed from: com.discord.widgets.chat.list.actions.WidgetChatListActions$Model$Companion$get$2, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.chat.list.actions.WidgetChatListActions$Model$Companion$get$2, reason: use source file name */
+/* JADX INFO: compiled from: WidgetChatListActions.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetChatListActions3<T, R> implements Func1<Tuples2<? extends Message, ? extends Channel>, Observable<? extends WidgetChatListActions.Model>> {
     public final /* synthetic */ long $channelId;
     public final /* synthetic */ CharSequence $messageContent;
     public final /* synthetic */ int $type;
 
-    /* compiled from: WidgetChatListActions.kt */
-    /* renamed from: com.discord.widgets.chat.list.actions.WidgetChatListActions$Model$Companion$get$2$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.list.actions.WidgetChatListActions$Model$Companion$get$2$1 */
+    /* JADX INFO: compiled from: WidgetChatListActions.kt */
     public static final class C79611<T, R> implements Func1<Map<Long, ? extends GuildMember>, GuildMember> {
         public final /* synthetic */ long $authorId;
 
@@ -44,14 +44,14 @@ public final class WidgetChatListActions3<T, R> implements Func1<Tuples2<? exten
             return call2((Map<Long, GuildMember>) map);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final GuildMember call2(Map<Long, GuildMember> map) {
             return map.get(Long.valueOf(this.$authorId));
         }
     }
 
-    /* compiled from: WidgetChatListActions.kt */
-    /* renamed from: com.discord.widgets.chat.list.actions.WidgetChatListActions$Model$Companion$get$2$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.list.actions.WidgetChatListActions$Model$Companion$get$2$2 */
+    /* JADX INFO: compiled from: WidgetChatListActions.kt */
     public static final class C79622<T1, T2, T3, T4, T5, R> implements Func5<Long, MeUser, GuildMember, Guild, EmojiSet, WidgetChatListActions.Model> {
         public final /* synthetic */ Channel $channel;
         public final /* synthetic */ Message $message;
@@ -66,7 +66,7 @@ public final class WidgetChatListActions3<T, R> implements Func1<Tuples2<? exten
             return call2(l, meUser, guildMember, guild, emojiSet);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final WidgetChatListActions.Model call2(Long l, MeUser meUser, GuildMember guildMember, Guild guild, EmojiSet emojiSet) {
             WidgetChatListActions.Model.Companion companion = WidgetChatListActions.Model.INSTANCE;
             Message message = this.$message;
@@ -91,7 +91,7 @@ public final class WidgetChatListActions3<T, R> implements Func1<Tuples2<? exten
         return call2((Tuples2<Message, Channel>) tuples2);
     }
 
-    /* renamed from: call, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
     public final Observable<? extends WidgetChatListActions.Model> call2(Tuples2<Message, Channel> tuples2) {
         User author;
         Message messageComponent1 = tuples2.component1();

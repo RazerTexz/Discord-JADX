@@ -3,9 +3,9 @@ package com.discord.widgets.auth;
 import android.view.View;
 import com.discord.app.AppActivity;
 
-/* compiled from: WidgetOauth2Authorize.kt */
-/* renamed from: com.discord.widgets.auth.WidgetOauth2Authorize$onViewBound$$inlined$forEach$lambda$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.auth.WidgetOauth2Authorize$onViewBound$$inlined$forEach$lambda$1, reason: use source file name */
+/* JADX INFO: compiled from: WidgetOauth2Authorize.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetOauth2Authorize8 implements View.OnClickListener {
     public final /* synthetic */ WidgetOauth2Authorize this$0;
 

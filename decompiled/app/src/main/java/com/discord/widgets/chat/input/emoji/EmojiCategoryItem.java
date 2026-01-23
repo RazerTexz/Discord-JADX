@@ -8,11 +8,11 @@ import kotlin.jvm.internal.DefaultConstructorMarker;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: EmojiCategoryItem.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: EmojiCategoryItem.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public abstract class EmojiCategoryItem implements DiffKeyProvider {
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     public static final int TYPE_GUILD = 1;
     public static final int TYPE_STANDARD = 0;
@@ -21,7 +21,7 @@ public abstract class EmojiCategoryItem implements DiffKeyProvider {
     private final String key;
     private final long stableId;
 
-    /* compiled from: EmojiCategoryItem.kt */
+    /* JADX INFO: compiled from: EmojiCategoryItem.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -41,7 +41,7 @@ public abstract class EmojiCategoryItem implements DiffKeyProvider {
         }
     }
 
-    /* compiled from: EmojiCategoryItem.kt */
+    /* JADX INFO: compiled from: EmojiCategoryItem.kt */
     public static final /* data */ class GuildItem extends EmojiCategoryItem {
         private final Tuples2<Integer, Integer> categoryRange;
         private final Guild guild;
@@ -71,7 +71,7 @@ public abstract class EmojiCategoryItem implements DiffKeyProvider {
             return guildItem.copy(guild, tuples2, z2);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final Guild getGuild() {
             return this.guild;
         }
@@ -128,7 +128,7 @@ public abstract class EmojiCategoryItem implements DiffKeyProvider {
         }
 
         @Override // com.discord.widgets.chat.input.emoji.EmojiCategoryItem
-        /* renamed from: isSelected, reason: from getter */
+        /* JADX INFO: renamed from: isSelected, reason: from getter */
         public boolean getIsSelected() {
             return this.isSelected;
         }
@@ -145,7 +145,7 @@ public abstract class EmojiCategoryItem implements DiffKeyProvider {
         }
     }
 
-    /* compiled from: EmojiCategoryItem.kt */
+    /* JADX INFO: compiled from: EmojiCategoryItem.kt */
     public static final /* data */ class StandardItem extends EmojiCategoryItem {
         private final Tuples2<Integer, Integer> categoryRange;
         private final EmojiCategory emojiCategory;
@@ -175,7 +175,7 @@ public abstract class EmojiCategoryItem implements DiffKeyProvider {
             return standardItem.copy(emojiCategory, tuples2, z2);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final EmojiCategory getEmojiCategory() {
             return this.emojiCategory;
         }
@@ -232,7 +232,7 @@ public abstract class EmojiCategoryItem implements DiffKeyProvider {
         }
 
         @Override // com.discord.widgets.chat.input.emoji.EmojiCategoryItem
-        /* renamed from: isSelected, reason: from getter */
+        /* JADX INFO: renamed from: isSelected, reason: from getter */
         public boolean getIsSelected() {
             return this.isSelected;
         }
@@ -273,7 +273,7 @@ public abstract class EmojiCategoryItem implements DiffKeyProvider {
         return this.stableId;
     }
 
-    /* renamed from: isSelected, reason: from getter */
+    /* JADX INFO: renamed from: isSelected, reason: from getter */
     public boolean getIsSelected() {
         return this.isSelected;
     }

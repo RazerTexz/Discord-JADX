@@ -37,23 +37,23 @@ import p507d0.p580t.Iterables2;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetSettingsUserConnectionsAdd.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetSettingsUserConnectionsAdd.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetSettingsUserConnectionsAdd extends AppBottomSheet {
     public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetSettingsUserConnectionsAdd.class, "binding", "getBinding()Lcom/discord/databinding/WidgetSettingsConnectionsAddBinding;", 0)};
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private Adapter adapter;
 
-    /* renamed from: binding$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
 
-    /* compiled from: WidgetSettingsUserConnectionsAdd.kt */
+    /* JADX INFO: compiled from: WidgetSettingsUserConnectionsAdd.kt */
     public static final class Adapter extends MGRecyclerAdapterSimple<PlatformItem> {
         private final Function0<Unit> dialogDismissCallback;
 
-        /* compiled from: WidgetSettingsUserConnectionsAdd.kt */
+        /* JADX INFO: compiled from: WidgetSettingsUserConnectionsAdd.kt */
         public static final class ViewHolder extends MGRecyclerViewHolder<Adapter, PlatformItem> {
             private final WidgetSettingsItemAddConnectedAccountBinding binding;
             private final Function0<Unit> dialogDismissCallback;
@@ -100,7 +100,7 @@ public final class WidgetSettingsUserConnectionsAdd extends AppBottomSheet {
                 onConfigure2(i, platformItem);
             }
 
-            /* renamed from: onConfigure, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: onConfigure, reason: avoid collision after fix types in other method */
             public void onConfigure2(int position, PlatformItem data) {
                 Intrinsics3.checkNotNullParameter(data, "data");
                 super.onConfigure(position, data);
@@ -140,7 +140,7 @@ public final class WidgetSettingsUserConnectionsAdd extends AppBottomSheet {
         }
     }
 
-    /* compiled from: WidgetSettingsUserConnectionsAdd.kt */
+    /* JADX INFO: compiled from: WidgetSettingsUserConnectionsAdd.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -158,7 +158,7 @@ public final class WidgetSettingsUserConnectionsAdd extends AppBottomSheet {
         }
     }
 
-    /* compiled from: WidgetSettingsUserConnectionsAdd.kt */
+    /* JADX INFO: compiled from: WidgetSettingsUserConnectionsAdd.kt */
     public static final /* data */ class PlatformItem implements MGRecyclerDataPayload {
         private final String key;
         private final Platform platform;
@@ -177,7 +177,7 @@ public final class WidgetSettingsUserConnectionsAdd extends AppBottomSheet {
             return platformItem.copy(platform);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final Platform getPlatform() {
             return this.platform;
         }
@@ -224,8 +224,8 @@ public final class WidgetSettingsUserConnectionsAdd extends AppBottomSheet {
         }
     }
 
-    /* compiled from: WidgetSettingsUserConnectionsAdd.kt */
-    /* renamed from: com.discord.widgets.settings.connections.WidgetSettingsUserConnectionsAdd$onViewCreated$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.connections.WidgetSettingsUserConnectionsAdd$onViewCreated$1 */
+    /* JADX INFO: compiled from: WidgetSettingsUserConnectionsAdd.kt */
     public static final class C98351 extends Lambda implements Function0<Unit> {
         public C98351() {
             super(0);
@@ -237,7 +237,7 @@ public final class WidgetSettingsUserConnectionsAdd extends AppBottomSheet {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             Dialog dialog = WidgetSettingsUserConnectionsAdd.this.getDialog();
             if (dialog != null) {

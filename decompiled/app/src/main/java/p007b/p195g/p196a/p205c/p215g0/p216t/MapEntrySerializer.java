@@ -22,10 +22,10 @@ import p007b.p195g.p196a.p205c.p215g0.ContextualSerializer;
 import p007b.p195g.p196a.p205c.p215g0.p216t.PropertySerializerMap;
 import p007b.p195g.p196a.p205c.p220y.JacksonStdImpl;
 
-/* compiled from: MapEntrySerializer.java */
+/* JADX INFO: renamed from: b.g.a.c.g0.t.i, reason: use source file name */
+/* JADX INFO: compiled from: MapEntrySerializer.java */
+/* JADX INFO: loaded from: classes3.dex */
 @JacksonStdImpl
-/* renamed from: b.g.a.c.g0.t.i, reason: use source file name */
-/* loaded from: classes3.dex */
 public class MapEntrySerializer extends ContainerSerializer<Map.Entry<?, ?>> implements ContextualSerializer {
     public PropertySerializerMap _dynamicValueSerializers;
     public final JavaType _entryType;
@@ -53,7 +53,7 @@ public class MapEntrySerializer extends ContainerSerializer<Map.Entry<?, ?>> imp
     }
 
     @Override // p007b.p195g.p196a.p205c.p215g0.ContextualSerializer
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public JsonSerializer<?> mo1997a(SerializerProvider serializerProvider, BeanProperty beanProperty) throws JsonMappingException {
         JsonSerializer<Object> jsonSerializerMo2000H;
         JsonSerializer<?> jsonSerializerMo2000H2;
@@ -124,7 +124,7 @@ public class MapEntrySerializer extends ContainerSerializer<Map.Entry<?, ?>> imp
     }
 
     @Override // p007b.p195g.p196a.p205c.JsonSerializer
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public boolean mo2021d(SerializerProvider serializerProvider, Object obj) {
         Object value = ((Map.Entry) obj).getValue();
         if (value == null) {
@@ -159,7 +159,7 @@ public class MapEntrySerializer extends ContainerSerializer<Map.Entry<?, ?>> imp
     }
 
     @Override // p007b.p195g.p196a.p205c.JsonSerializer
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public void mo1807f(Object obj, JsonGenerator jsonGenerator, SerializerProvider serializerProvider) throws IOException {
         Map.Entry<?, ?> entry = (Map.Entry) obj;
         jsonGenerator.mo1653d0(entry);
@@ -168,7 +168,7 @@ public class MapEntrySerializer extends ContainerSerializer<Map.Entry<?, ?>> imp
     }
 
     @Override // p007b.p195g.p196a.p205c.JsonSerializer
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public void mo1808g(Object obj, JsonGenerator jsonGenerator, SerializerProvider serializerProvider, TypeSerializer typeSerializer) throws IOException {
         Map.Entry<?, ?> entry = (Map.Entry) obj;
         jsonGenerator.mo1654e(entry);
@@ -178,12 +178,12 @@ public class MapEntrySerializer extends ContainerSerializer<Map.Entry<?, ?>> imp
     }
 
     @Override // p007b.p195g.p196a.p205c.p215g0.ContainerSerializer
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public ContainerSerializer<?> mo1995p(TypeSerializer typeSerializer) {
         return new MapEntrySerializer(this, this._keySerializer, this._valueSerializer, this._suppressableValue, this._suppressNulls);
     }
 
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     public void m2030r(Map.Entry<?, ?> entry, JsonGenerator jsonGenerator, SerializerProvider serializerProvider) throws IOException {
         JsonSerializer<Object> jsonSerializer;
         TypeSerializer typeSerializer = this._valueTypeSerializer;

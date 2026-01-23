@@ -29,19 +29,19 @@ import p659s.p660a.p661a.StackTraceRecovery;
 import p659s.p660a.p661a.Symbol3;
 import p659s.p660a.p663c2.Channel8;
 
-/* compiled from: AbstractChannel.kt */
-/* renamed from: s.a.c2.a, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: s.a.c2.a, reason: use source file name */
+/* JADX INFO: compiled from: AbstractChannel.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public abstract class AbstractChannel<E> extends AbstractChannel3<E> implements Channel4<E> {
 
-    /* compiled from: AbstractChannel.kt */
-    /* renamed from: s.a.c2.a$a */
+    /* JADX INFO: renamed from: s.a.c2.a$a */
+    /* JADX INFO: compiled from: AbstractChannel.kt */
     public static final class a<E> implements Channel5<E> {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public Object f27729a = AbstractChannel2.f27742d;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final AbstractChannel<E> f27730b;
 
         public a(AbstractChannel<E> abstractChannel) {
@@ -49,7 +49,7 @@ public abstract class AbstractChannel<E> extends AbstractChannel3<E> implements 
         }
 
         @Override // p659s.p660a.p663c2.Channel5
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public Object mo11207a(Continuation<? super Boolean> continuation) {
             Object obj = this.f27729a;
             Symbol3 symbol3 = AbstractChannel2.f27742d;
@@ -96,7 +96,7 @@ public abstract class AbstractChannel<E> extends AbstractChannel3<E> implements 
             return objM11326u;
         }
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final boolean m11208b(Object obj) throws Throwable {
             if (!(obj instanceof AbstractChannel4)) {
                 return true;
@@ -128,14 +128,14 @@ public abstract class AbstractChannel<E> extends AbstractChannel3<E> implements 
         }
     }
 
-    /* compiled from: AbstractChannel.kt */
-    /* renamed from: s.a.c2.a$b */
+    /* JADX INFO: renamed from: s.a.c2.a$b */
+    /* JADX INFO: compiled from: AbstractChannel.kt */
     public static class b<E> extends AbstractChannel5<E> {
 
-        /* renamed from: m */
+        /* JADX INFO: renamed from: m */
         public final CancellableContinuation<Object> f27731m;
 
-        /* renamed from: n */
+        /* JADX INFO: renamed from: n */
         public final int f27732n;
 
         public b(CancellableContinuation<Object> cancellableContinuation, int i) {
@@ -144,13 +144,13 @@ public abstract class AbstractChannel<E> extends AbstractChannel3<E> implements 
         }
 
         @Override // p659s.p660a.p663c2.AbstractChannel6
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public void mo11209c(E e) {
             this.f27731m.mo10907r(CancellableContinuationImpl6.f27874a);
         }
 
         @Override // p659s.p660a.p663c2.AbstractChannel6
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         public Symbol3 mo11210d(E e, LockFreeLinkedList3.b bVar) {
             if (this.f27731m.mo10904h(this.f27732n != 2 ? e : new Channel8(e), null, mo11212q(e)) != null) {
                 return CancellableContinuationImpl6.f27874a;
@@ -159,7 +159,7 @@ public abstract class AbstractChannel<E> extends AbstractChannel3<E> implements 
         }
 
         @Override // p659s.p660a.p663c2.AbstractChannel5
-        /* renamed from: r */
+        /* JADX INFO: renamed from: r */
         public void mo11211r(AbstractChannel4<?> abstractChannel4) {
             int i = this.f27732n;
             if (i == 1 && abstractChannel4.f27763m == null) {
@@ -190,11 +190,11 @@ public abstract class AbstractChannel<E> extends AbstractChannel3<E> implements 
         }
     }
 
-    /* compiled from: AbstractChannel.kt */
-    /* renamed from: s.a.c2.a$c */
+    /* JADX INFO: renamed from: s.a.c2.a$c */
+    /* JADX INFO: compiled from: AbstractChannel.kt */
     public static final class c<E> extends b<E> {
 
-        /* renamed from: o */
+        /* JADX INFO: renamed from: o */
         public final Function1<E, Unit> f27733o;
 
         /* JADX WARN: Multi-variable type inference failed */
@@ -204,20 +204,20 @@ public abstract class AbstractChannel<E> extends AbstractChannel3<E> implements 
         }
 
         @Override // p659s.p660a.p663c2.AbstractChannel5
-        /* renamed from: q */
+        /* JADX INFO: renamed from: q */
         public Function1<Throwable, Unit> mo11212q(E e) {
             return new OnUndeliveredElement2(this.f27733o, e, this.f27731m.getContext());
         }
     }
 
-    /* compiled from: AbstractChannel.kt */
-    /* renamed from: s.a.c2.a$d */
+    /* JADX INFO: renamed from: s.a.c2.a$d */
+    /* JADX INFO: compiled from: AbstractChannel.kt */
     public static class d<E> extends AbstractChannel5<E> {
 
-        /* renamed from: m */
+        /* JADX INFO: renamed from: m */
         public final a<E> f27734m;
 
-        /* renamed from: n */
+        /* JADX INFO: renamed from: n */
         public final CancellableContinuation<Boolean> f27735n;
 
         /* JADX WARN: Multi-variable type inference failed */
@@ -227,14 +227,14 @@ public abstract class AbstractChannel<E> extends AbstractChannel3<E> implements 
         }
 
         @Override // p659s.p660a.p663c2.AbstractChannel6
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public void mo11209c(E e) {
             this.f27734m.f27729a = e;
             this.f27735n.mo10907r(CancellableContinuationImpl6.f27874a);
         }
 
         @Override // p659s.p660a.p663c2.AbstractChannel6
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         public Symbol3 mo11210d(E e, LockFreeLinkedList3.b bVar) {
             if (this.f27735n.mo10904h(Boolean.TRUE, null, mo11212q(e)) != null) {
                 return CancellableContinuationImpl6.f27874a;
@@ -243,7 +243,7 @@ public abstract class AbstractChannel<E> extends AbstractChannel3<E> implements 
         }
 
         @Override // p659s.p660a.p663c2.AbstractChannel5
-        /* renamed from: q */
+        /* JADX INFO: renamed from: q */
         public Function1<Throwable, Unit> mo11212q(E e) {
             Function1<E, Unit> function1 = this.f27734m.f27730b.f27747l;
             if (function1 != null) {
@@ -253,7 +253,7 @@ public abstract class AbstractChannel<E> extends AbstractChannel3<E> implements 
         }
 
         @Override // p659s.p660a.p663c2.AbstractChannel5
-        /* renamed from: r */
+        /* JADX INFO: renamed from: r */
         public void mo11211r(AbstractChannel4<?> abstractChannel4) {
             Object objMo10901c = abstractChannel4.f27763m == null ? this.f27735n.mo10901c(Boolean.FALSE, null) : this.f27735n.mo10903g(abstractChannel4.m11233v());
             if (objMo10901c != null) {
@@ -270,11 +270,11 @@ public abstract class AbstractChannel<E> extends AbstractChannel3<E> implements 
         }
     }
 
-    /* compiled from: AbstractChannel.kt */
-    /* renamed from: s.a.c2.a$e */
+    /* JADX INFO: renamed from: s.a.c2.a$e */
+    /* JADX INFO: compiled from: AbstractChannel.kt */
     public final class e extends CancellableContinuationImpl3 {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public final AbstractChannel5<?> f27736j;
 
         public e(AbstractChannel5<?> abstractChannel5) {
@@ -282,7 +282,7 @@ public abstract class AbstractChannel<E> extends AbstractChannel3<E> implements 
         }
 
         @Override // p659s.p660a.CompletionHandler
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public void mo11193a(Throwable th) {
             if (this.f27736j.mo11151n()) {
                 Objects.requireNonNull(AbstractChannel.this);
@@ -305,11 +305,11 @@ public abstract class AbstractChannel<E> extends AbstractChannel3<E> implements 
         }
     }
 
-    /* compiled from: LockFreeLinkedList.kt */
-    /* renamed from: s.a.c2.a$f */
+    /* JADX INFO: renamed from: s.a.c2.a$f */
+    /* JADX INFO: compiled from: LockFreeLinkedList.kt */
     public static final class f extends LockFreeLinkedList3.a {
 
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         public final /* synthetic */ AbstractChannel f27738d;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -319,7 +319,7 @@ public abstract class AbstractChannel<E> extends AbstractChannel3<E> implements 
         }
 
         @Override // p659s.p660a.p661a.Atomic2
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public Object mo11144c(LockFreeLinkedList3 lockFreeLinkedList3) {
             if (this.f27738d.mo11204t()) {
                 return null;
@@ -328,9 +328,9 @@ public abstract class AbstractChannel<E> extends AbstractChannel3<E> implements 
         }
     }
 
-    /* compiled from: AbstractChannel.kt */
+    /* JADX INFO: renamed from: s.a.c2.a$g */
+    /* JADX INFO: compiled from: AbstractChannel.kt */
     @DebugMetadata(m10084c = "kotlinx.coroutines.channels.AbstractChannel", m10085f = "AbstractChannel.kt", m10086l = {624}, m10087m = "receiveOrClosed-ZYPwvRU")
-    /* renamed from: s.a.c2.a$g */
     public static final class g extends ContinuationImpl3 {
         public Object L$0;
         public Object L$1;
@@ -354,7 +354,7 @@ public abstract class AbstractChannel<E> extends AbstractChannel3<E> implements 
     }
 
     @Override // p659s.p660a.p663c2.Channel6
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final void mo11199b(CancellationException cancellationException) {
         if (cancellationException == null) {
             cancellationException = new CancellationException(getClass().getSimpleName() + " was cancelled");
@@ -370,7 +370,7 @@ public abstract class AbstractChannel<E> extends AbstractChannel3<E> implements 
     /* JADX WARN: Multi-variable type inference failed */
     /* JADX WARN: Removed duplicated region for block: B:7:0x0013  */
     @Override // p659s.p660a.p663c2.Channel6
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
@@ -430,7 +430,7 @@ public abstract class AbstractChannel<E> extends AbstractChannel3<E> implements 
     }
 
     @Override // p659s.p660a.p663c2.AbstractChannel3
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public AbstractChannel6<E> mo11201n() {
         AbstractChannel6<E> abstractChannel6Mo11201n = super.mo11201n();
         if (abstractChannel6Mo11201n != null) {
@@ -439,7 +439,7 @@ public abstract class AbstractChannel<E> extends AbstractChannel3<E> implements 
         return abstractChannel6Mo11201n;
     }
 
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     public boolean mo11202r(AbstractChannel5<? super E> abstractChannel5) {
         int iM11160p;
         LockFreeLinkedList3 lockFreeLinkedList3M11157k;
@@ -468,13 +468,13 @@ public abstract class AbstractChannel<E> extends AbstractChannel3<E> implements 
         return false;
     }
 
-    /* renamed from: s */
+    /* JADX INFO: renamed from: s */
     public abstract boolean mo11203s();
 
-    /* renamed from: t */
+    /* JADX INFO: renamed from: t */
     public abstract boolean mo11204t();
 
-    /* renamed from: u */
+    /* JADX INFO: renamed from: u */
     public void mo11205u(boolean z2) {
         AbstractChannel4<?> abstractChannel4M11216e = m11216e();
         if (abstractChannel4M11216e == null) {
@@ -513,7 +513,7 @@ public abstract class AbstractChannel<E> extends AbstractChannel3<E> implements 
         }
     }
 
-    /* renamed from: v */
+    /* JADX INFO: renamed from: v */
     public Object mo11206v() {
         while (true) {
             AbstractChannel7 abstractChannel7M11226q = m11226q();

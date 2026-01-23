@@ -7,7 +7,7 @@ import p007b.p100d.p104b.p105a.outline;
 import p617h0.p628c.RunnableC12474m;
 import p617h0.p628c.RunnableC12478o;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public class JavaI420Buffer implements VideoFrame.I420Buffer {
     private final ByteBuffer dataU;
     private final ByteBuffer dataV;

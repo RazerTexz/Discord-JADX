@@ -3,9 +3,9 @@ package com.discord.widgets.channels.threads.browser;
 import kotlin.jvm.functions.Function0;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetThreadBrowserActive.kt */
-/* renamed from: com.discord.widgets.channels.threads.browser.WidgetThreadBrowserActive$viewModel$2, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.channels.threads.browser.WidgetThreadBrowserActive$viewModel$2, reason: use source file name */
+/* JADX INFO: compiled from: WidgetThreadBrowserActive.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetThreadBrowserActive6 extends Lambda implements Function0<WidgetThreadBrowserActiveViewModel> {
     public final /* synthetic */ WidgetThreadBrowserActive this$0;
 

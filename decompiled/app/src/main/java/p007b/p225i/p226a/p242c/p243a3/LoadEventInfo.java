@@ -7,15 +7,15 @@ import java.util.Map;
 import java.util.concurrent.atomic.AtomicLong;
 import p007b.p225i.p226a.p242c.p257e3.DataSpec;
 
-/* compiled from: LoadEventInfo.java */
-/* renamed from: b.i.a.c.a3.t, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.a3.t, reason: use source file name */
+/* JADX INFO: compiled from: LoadEventInfo.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class LoadEventInfo {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final AtomicLong f5703a = new AtomicLong();
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final Map<String, List<String>> f5704b;
 
     public LoadEventInfo(long j, DataSpec dataSpec, long j2) {

@@ -4,9 +4,9 @@ import android.view.View;
 import com.discord.widgets.guilds.list.GuildListItem;
 import com.discord.widgets.guilds.list.GuildListViewHolder;
 
-/* compiled from: GuildListViewHolder.kt */
-/* renamed from: com.discord.widgets.guilds.list.GuildListViewHolder$FriendsViewHolder$configure$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.guilds.list.GuildListViewHolder$FriendsViewHolder$configure$1, reason: use source file name */
+/* JADX INFO: compiled from: GuildListViewHolder.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class GuildListViewHolder4 implements View.OnClickListener {
     public final /* synthetic */ GuildListItem.FriendsItem $data;
     public final /* synthetic */ GuildListViewHolder.FriendsViewHolder this$0;

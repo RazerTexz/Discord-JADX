@@ -6,9 +6,9 @@ import androidx.annotation.RequiresApi;
 import androidx.annotation.RestrictTo;
 import androidx.core.util.Preconditions;
 
+/* JADX INFO: loaded from: classes.dex */
 @RequiresApi(24)
 @RestrictTo({RestrictTo.Scope.LIBRARY})
-/* loaded from: classes.dex */
 public class GnssStatusWrapper extends GnssStatusCompat {
     private final GnssStatus mWrapped;
 

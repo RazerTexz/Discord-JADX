@@ -3,9 +3,9 @@ package p507d0.p591y;
 import java.io.File;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: FileTreeWalk.kt */
-/* renamed from: d0.y.g, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.y.g, reason: use source file name */
+/* JADX INFO: compiled from: FileTreeWalk.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public class FileTreeWalk3 extends FileReadWrite {
     public static final FileTreeWalk walk(File file, FileTreeWalk2 fileTreeWalk2) {
         Intrinsics3.checkNotNullParameter(file, "$this$walk");

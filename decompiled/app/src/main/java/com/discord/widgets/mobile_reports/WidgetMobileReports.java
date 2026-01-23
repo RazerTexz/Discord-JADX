@@ -35,24 +35,24 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 import p507d0.p592z.p594d.Reflection2;
 
-/* compiled from: WidgetMobileReports.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetMobileReports.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetMobileReports extends AppFragment {
     public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetMobileReports.class, "binding", "getBinding()Lcom/discord/databinding/WidgetMobileReportsBinding;", 0)};
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
 
-    /* renamed from: args$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: args$delegate, reason: from kotlin metadata */
     private final Lazy args;
 
-    /* renamed from: binding$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
 
-    /* renamed from: viewModel$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: viewModel$delegate, reason: from kotlin metadata */
     private final Lazy viewModel;
 
-    /* compiled from: WidgetMobileReports.kt */
+    /* JADX INFO: compiled from: WidgetMobileReports.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -82,8 +82,8 @@ public final class WidgetMobileReports extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetMobileReports.kt */
-    /* renamed from: com.discord.widgets.mobile_reports.WidgetMobileReports$configureUI$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.mobile_reports.WidgetMobileReports$configureUI$1 */
+    /* JADX INFO: compiled from: WidgetMobileReports.kt */
     public static final class C90821 extends Lambda implements Function0<Unit> {
         public final /* synthetic */ MobileReportsViewModel.ViewState.Menu $viewState;
 
@@ -99,20 +99,20 @@ public final class WidgetMobileReports extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             WidgetMobileReports.this.setActionBarDisplayHomeAsUpEnabled(!this.$viewState.shouldHideBackArrow());
         }
     }
 
-    /* compiled from: WidgetMobileReports.kt */
-    /* renamed from: com.discord.widgets.mobile_reports.WidgetMobileReports$configureUI$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.mobile_reports.WidgetMobileReports$configureUI$2 */
+    /* JADX INFO: compiled from: WidgetMobileReports.kt */
     public static final class C90832 extends Lambda implements Function0<Unit> {
         public final /* synthetic */ ReportsMenuNode $nextNodeView;
         public final /* synthetic */ MobileReportsViewModel.ViewState.Menu $viewState;
 
-        /* compiled from: WidgetMobileReports.kt */
-        /* renamed from: com.discord.widgets.mobile_reports.WidgetMobileReports$configureUI$2$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.widgets.mobile_reports.WidgetMobileReports$configureUI$2$1, reason: invalid class name */
+        /* JADX INFO: compiled from: WidgetMobileReports.kt */
         public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
             public AnonymousClass1() {
                 super(0);
@@ -124,7 +124,7 @@ public final class WidgetMobileReports extends AppFragment {
                 return Unit.f27425a;
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2() {
                 WidgetMobileReports.this.setActionBarDisplayHomeAsUpEnabled(!r0.$viewState.shouldHideBackArrow());
             }
@@ -143,7 +143,7 @@ public final class WidgetMobileReports extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             WidgetMobileReports.access$getBinding$p(WidgetMobileReports.this).f17268b.removeAllViewsInLayout();
             WidgetMobileReports.access$getBinding$p(WidgetMobileReports.this).f17268b.addView(this.$nextNodeView);
@@ -151,8 +151,8 @@ public final class WidgetMobileReports extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetMobileReports.kt */
-    /* renamed from: com.discord.widgets.mobile_reports.WidgetMobileReports$createNodeView$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.mobile_reports.WidgetMobileReports$createNodeView$1 */
+    /* JADX INFO: compiled from: WidgetMobileReports.kt */
     public static final class C90841 extends Lambda implements Function2<ReportNodeChild, MobileReportsViewModel.NodeState, Unit> {
         public C90841() {
             super(2);
@@ -164,7 +164,7 @@ public final class WidgetMobileReports extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(ReportNodeChild reportNodeChild, MobileReportsViewModel.NodeState nodeState) {
             Intrinsics3.checkNotNullParameter(reportNodeChild, "destination");
             Intrinsics3.checkNotNullParameter(nodeState, "nodeState");
@@ -174,8 +174,8 @@ public final class WidgetMobileReports extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetMobileReports.kt */
-    /* renamed from: com.discord.widgets.mobile_reports.WidgetMobileReports$createNodeView$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.mobile_reports.WidgetMobileReports$createNodeView$2 */
+    /* JADX INFO: compiled from: WidgetMobileReports.kt */
     public static final class C90852 extends Lambda implements Function0<Unit> {
         public C90852() {
             super(0);
@@ -187,14 +187,14 @@ public final class WidgetMobileReports extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             WidgetMobileReports.access$getViewModel$p(WidgetMobileReports.this).handleBlockUser();
         }
     }
 
-    /* compiled from: WidgetMobileReports.kt */
-    /* renamed from: com.discord.widgets.mobile_reports.WidgetMobileReports$createNodeView$3 */
+    /* JADX INFO: renamed from: com.discord.widgets.mobile_reports.WidgetMobileReports$createNodeView$3 */
+    /* JADX INFO: compiled from: WidgetMobileReports.kt */
     public static final class C90863 extends Lambda implements Function0<Unit> {
         public C90863() {
             super(0);
@@ -206,7 +206,7 @@ public final class WidgetMobileReports extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             AppActivity appActivity = WidgetMobileReports.this.getAppActivity();
             if (appActivity != null) {
@@ -215,8 +215,8 @@ public final class WidgetMobileReports extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetMobileReports.kt */
-    /* renamed from: com.discord.widgets.mobile_reports.WidgetMobileReports$createNodeView$4 */
+    /* JADX INFO: renamed from: com.discord.widgets.mobile_reports.WidgetMobileReports$createNodeView$4 */
+    /* JADX INFO: compiled from: WidgetMobileReports.kt */
     public static final class C90874 extends Lambda implements Function0<Unit> {
         public C90874() {
             super(0);
@@ -228,14 +228,14 @@ public final class WidgetMobileReports extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             WidgetMobileReports.access$getViewModel$p(WidgetMobileReports.this).handleSubmit();
         }
     }
 
-    /* compiled from: WidgetMobileReports.kt */
-    /* renamed from: com.discord.widgets.mobile_reports.WidgetMobileReports$onViewBound$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.mobile_reports.WidgetMobileReports$onViewBound$1 */
+    /* JADX INFO: compiled from: WidgetMobileReports.kt */
     public static final /* synthetic */ class C90881 extends FunctionReferenceImpl implements Function0<Boolean> {
         public C90881(MobileReportsViewModel mobileReportsViewModel) {
             super(0, mobileReportsViewModel, MobileReportsViewModel.class, "handleBack", "handleBack()Z", 0);
@@ -246,14 +246,14 @@ public final class WidgetMobileReports extends AppFragment {
             return Boolean.valueOf(invoke2());
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final boolean invoke2() {
             return ((MobileReportsViewModel) this.receiver).handleBack();
         }
     }
 
-    /* compiled from: WidgetMobileReports.kt */
-    /* renamed from: com.discord.widgets.mobile_reports.WidgetMobileReports$onViewBoundOrOnResume$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.mobile_reports.WidgetMobileReports$onViewBoundOrOnResume$1 */
+    /* JADX INFO: compiled from: WidgetMobileReports.kt */
     public static final class C90891 extends Lambda implements Function1<MobileReportsViewModel.ViewState, Unit> {
         public C90891() {
             super(1);
@@ -265,7 +265,7 @@ public final class WidgetMobileReports extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(MobileReportsViewModel.ViewState viewState) {
             AppActivity appActivity;
             Intrinsics3.checkNotNullParameter(viewState, "viewState");

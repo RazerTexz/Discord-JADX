@@ -10,9 +10,9 @@ import me.dm7.barcodescanner.zxing.ZXingScannerView;
 import p507d0.p592z.p594d.FunctionReferenceImpl;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: WidgetQRScanner.kt */
-/* renamed from: com.discord.widgets.media.WidgetQRScanner$binding$2, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.media.WidgetQRScanner$binding$2, reason: use source file name */
+/* JADX INFO: compiled from: WidgetQRScanner.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final /* synthetic */ class WidgetQRScanner2 extends FunctionReferenceImpl implements Function1<View, WidgetQrScannerBinding> {
     public static final WidgetQRScanner2 INSTANCE = new WidgetQRScanner2();
 
@@ -25,7 +25,7 @@ public final /* synthetic */ class WidgetQRScanner2 extends FunctionReferenceImp
         return invoke2(view);
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final WidgetQrScannerBinding invoke2(View view) {
         Intrinsics3.checkNotNullParameter(view, "p1");
         int i = C5419R.id.qr_scanner;

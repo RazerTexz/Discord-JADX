@@ -3,15 +3,15 @@ package p007b.p109f.p111b.p112a;
 import com.facebook.cache.common.CacheKey;
 import java.util.Objects;
 
-/* compiled from: SimpleCacheKey.java */
-/* renamed from: b.f.b.a.f, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.f.b.a.f, reason: use source file name */
+/* JADX INFO: compiled from: SimpleCacheKey.java */
+/* JADX INFO: loaded from: classes.dex */
 public class SimpleCacheKey implements CacheKey {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final String f3019a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final boolean f3020b;
 
     public SimpleCacheKey(String str) {
@@ -21,13 +21,13 @@ public class SimpleCacheKey implements CacheKey {
     }
 
     @Override // com.facebook.cache.common.CacheKey
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public boolean mo929a() {
         return this.f3020b;
     }
 
     @Override // com.facebook.cache.common.CacheKey
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public String mo930b() {
         return this.f3019a;
     }

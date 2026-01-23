@@ -53,29 +53,29 @@ import p507d0.p592z.p594d.Lambda;
 import p507d0.p592z.p594d.Reflection2;
 import p658rx.functions.Action1;
 
-/* compiled from: WidgetGuildCreate.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetGuildCreate.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public class WidgetGuildCreate extends AppFragment {
     public static final String ANALYTICS_SOURCE = "Guild Create";
     public static final String EXTRA_OPTIONS = "com.discord.intent.extra.EXTRA_OPTIONS";
     private static final String GUIDELINES_URL = "https://discord.com/guidelines";
 
-    /* renamed from: args$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: args$delegate, reason: from kotlin metadata */
     private final Lazy args;
 
-    /* renamed from: binding$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
     private String currentImageUri;
     private final AppLogger2 loggingConfig;
 
-    /* renamed from: viewModel$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: viewModel$delegate, reason: from kotlin metadata */
     private final Lazy viewModel;
     public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetGuildCreate.class, "binding", "getBinding()Lcom/discord/databinding/WidgetGuildCreateBinding;", 0)};
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
 
-    /* compiled from: WidgetGuildCreate.kt */
+    /* JADX INFO: compiled from: WidgetGuildCreate.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -101,7 +101,7 @@ public class WidgetGuildCreate extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetGuildCreate.kt */
+    /* JADX INFO: compiled from: WidgetGuildCreate.kt */
     public static final /* data */ class Options implements Parcelable {
         public static final Parcelable.Creator<Options> CREATOR = new Creator();
         private final String analyticsLocation;
@@ -167,27 +167,27 @@ public class WidgetGuildCreate extends AppFragment {
             return options.copy(str, stockGuildTemplate2, z4, str3, z3);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final String getAnalyticsLocation() {
             return this.analyticsLocation;
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final StockGuildTemplate getTemplate() {
             return this.template;
         }
 
-        /* renamed from: component3, reason: from getter */
+        /* JADX INFO: renamed from: component3, reason: from getter */
         public final boolean getShowChannelPrompt() {
             return this.showChannelPrompt;
         }
 
-        /* renamed from: component4, reason: from getter */
+        /* JADX INFO: renamed from: component4, reason: from getter */
         public final String getCustomTitle() {
             return this.customTitle;
         }
 
-        /* renamed from: component5, reason: from getter */
+        /* JADX INFO: renamed from: component5, reason: from getter */
         public final boolean getCloseWithResult() {
             return this.closeWithResult;
         }
@@ -235,21 +235,27 @@ public class WidgetGuildCreate extends AppFragment {
         }
 
         /* JADX WARN: Multi-variable type inference failed */
+        /* JADX WARN: Type inference failed for: r2v4, types: [int] */
+        /* JADX WARN: Type inference failed for: r2v6 */
+        /* JADX WARN: Type inference failed for: r2v8 */
+        /* JADX WARN: Type inference failed for: r3v0 */
+        /* JADX WARN: Type inference failed for: r3v1, types: [int] */
+        /* JADX WARN: Type inference failed for: r3v2 */
         public int hashCode() {
             String str = this.analyticsLocation;
             int iHashCode = (str != null ? str.hashCode() : 0) * 31;
             StockGuildTemplate stockGuildTemplate = this.template;
             int iHashCode2 = (iHashCode + (stockGuildTemplate != null ? stockGuildTemplate.hashCode() : 0)) * 31;
             boolean z2 = this.showChannelPrompt;
-            int i = z2;
-            if (z2 != 0) {
-                i = 1;
+            ?? r2 = z2;
+            if (z2) {
+                r2 = 1;
             }
-            int i2 = (iHashCode2 + i) * 31;
+            int i = (iHashCode2 + r2) * 31;
             String str2 = this.customTitle;
-            int iHashCode3 = (i2 + (str2 != null ? str2.hashCode() : 0)) * 31;
+            int iHashCode3 = (i + (str2 != null ? str2.hashCode() : 0)) * 31;
             boolean z3 = this.closeWithResult;
-            return iHashCode3 + (z3 ? 1 : z3 ? 1 : 0);
+            return iHashCode3 + (z3 ? 1 : z3);
         }
 
         public String toString() {
@@ -280,7 +286,7 @@ public class WidgetGuildCreate extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetGuildCreate.kt */
+    /* JADX INFO: compiled from: WidgetGuildCreate.kt */
     public static final /* data */ class Result implements Parcelable {
         public static final Parcelable.Creator<Result> CREATOR = new Creator();
         private final long guildId;
@@ -321,7 +327,7 @@ public class WidgetGuildCreate extends AppFragment {
             return result.copy(j);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final long getGuildId() {
             return this.guildId;
         }
@@ -361,8 +367,8 @@ public class WidgetGuildCreate extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetGuildCreate.kt */
-    /* renamed from: com.discord.widgets.guilds.create.WidgetGuildCreate$onImageChosen$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.guilds.create.WidgetGuildCreate$onImageChosen$1 */
+    /* JADX INFO: compiled from: WidgetGuildCreate.kt */
     public static final class C86041<T> implements Action1<String> {
         public C86041() {
         }
@@ -372,14 +378,14 @@ public class WidgetGuildCreate extends AppFragment {
             call2(str);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final void call2(String str) {
             WidgetGuildCreate.access$getViewModel$p(WidgetGuildCreate.this).updateGuildIconUri(str);
         }
     }
 
-    /* compiled from: WidgetGuildCreate.kt */
-    /* renamed from: com.discord.widgets.guilds.create.WidgetGuildCreate$onImageCropped$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.guilds.create.WidgetGuildCreate$onImageCropped$1 */
+    /* JADX INFO: compiled from: WidgetGuildCreate.kt */
     public static final class C86051<T> implements Action1<String> {
         public C86051() {
         }
@@ -389,14 +395,14 @@ public class WidgetGuildCreate extends AppFragment {
             call2(str);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final void call2(String str) {
             WidgetGuildCreate.access$getViewModel$p(WidgetGuildCreate.this).updateGuildIconUri(str);
         }
     }
 
-    /* compiled from: WidgetGuildCreate.kt */
-    /* renamed from: com.discord.widgets.guilds.create.WidgetGuildCreate$onResume$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.guilds.create.WidgetGuildCreate$onResume$1 */
+    /* JADX INFO: compiled from: WidgetGuildCreate.kt */
     public static final class C86061 extends Lambda implements Function1<WidgetGuildCreateViewModel.ViewState, Unit> {
         public C86061() {
             super(1);
@@ -408,15 +414,15 @@ public class WidgetGuildCreate extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(WidgetGuildCreateViewModel.ViewState viewState) {
             Intrinsics3.checkNotNullParameter(viewState, "it");
             WidgetGuildCreate.this.configureUI(viewState);
         }
     }
 
-    /* compiled from: WidgetGuildCreate.kt */
-    /* renamed from: com.discord.widgets.guilds.create.WidgetGuildCreate$onResume$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.guilds.create.WidgetGuildCreate$onResume$2 */
+    /* JADX INFO: compiled from: WidgetGuildCreate.kt */
     public static final class C86072 extends Lambda implements Function1<WidgetGuildCreateViewModel.Event, Unit> {
         public C86072() {
             super(1);
@@ -428,15 +434,15 @@ public class WidgetGuildCreate extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(WidgetGuildCreateViewModel.Event event) {
             Intrinsics3.checkNotNullParameter(event, "it");
             WidgetGuildCreate.access$handleEvent(WidgetGuildCreate.this, event);
         }
     }
 
-    /* compiled from: WidgetGuildCreate.kt */
-    /* renamed from: com.discord.widgets.guilds.create.WidgetGuildCreate$onResume$3 */
+    /* JADX INFO: renamed from: com.discord.widgets.guilds.create.WidgetGuildCreate$onResume$3 */
+    /* JADX INFO: compiled from: WidgetGuildCreate.kt */
     public static final class ViewOnClickListenerC86083 implements View.OnClickListener {
         public ViewOnClickListenerC86083() {
         }
@@ -449,8 +455,8 @@ public class WidgetGuildCreate extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetGuildCreate.kt */
-    /* renamed from: com.discord.widgets.guilds.create.WidgetGuildCreate$onResume$4 */
+    /* JADX INFO: renamed from: com.discord.widgets.guilds.create.WidgetGuildCreate$onResume$4 */
+    /* JADX INFO: compiled from: WidgetGuildCreate.kt */
     public static final class C86094 extends Lambda implements Function1<String, Unit> {
         public C86094() {
             super(1);
@@ -462,15 +468,15 @@ public class WidgetGuildCreate extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(String str) {
             Intrinsics3.checkNotNullParameter(str, "it");
             WidgetGuildCreate.access$getViewModel$p(WidgetGuildCreate.this).updateGuildName(str);
         }
     }
 
-    /* compiled from: WidgetGuildCreate.kt */
-    /* renamed from: com.discord.widgets.guilds.create.WidgetGuildCreate$onResume$5 */
+    /* JADX INFO: renamed from: com.discord.widgets.guilds.create.WidgetGuildCreate$onResume$5 */
+    /* JADX INFO: compiled from: WidgetGuildCreate.kt */
     public static final class ViewOnClickListenerC86105 implements View.OnClickListener {
         public ViewOnClickListenerC86105() {
         }

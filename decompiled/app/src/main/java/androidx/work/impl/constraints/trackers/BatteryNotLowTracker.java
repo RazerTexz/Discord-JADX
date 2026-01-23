@@ -8,8 +8,8 @@ import androidx.annotation.RestrictTo;
 import androidx.work.Logger;
 import androidx.work.impl.utils.taskexecutor.TaskExecutor;
 
+/* JADX INFO: loaded from: classes.dex */
 @RestrictTo({RestrictTo.Scope.LIBRARY_GROUP})
-/* loaded from: classes.dex */
 public class BatteryNotLowTracker extends BroadcastReceiverConstraintTracker<Boolean> {
     public static final float BATTERY_LOW_THRESHOLD = 0.15f;
     private static final String TAG = Logger.tagWithPrefix("BatteryNotLowTracker");

@@ -9,17 +9,17 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.discord.models.domain.ModelAuditLogEntry;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: EmptyListAdapter.kt */
-/* loaded from: classes3.dex */
+/* JADX INFO: compiled from: EmptyListAdapter.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public class EmptyListAdapter extends RecyclerView.Adapter<ViewHolder> {
     private final int actionBtnId;
     private final int itemLayoutId;
     private final View.OnClickListener onClickListener;
 
-    /* compiled from: EmptyListAdapter.kt */
+    /* JADX INFO: compiled from: EmptyListAdapter.kt */
     public final class ViewHolder extends RecyclerView.ViewHolder {
 
-        /* renamed from: a, reason: from kotlin metadata */
+        /* JADX INFO: renamed from: a, reason: from kotlin metadata */
         public final View actionBtn;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */

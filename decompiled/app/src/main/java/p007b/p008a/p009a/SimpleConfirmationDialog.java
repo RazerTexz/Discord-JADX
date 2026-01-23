@@ -27,34 +27,34 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 import p507d0.p592z.p594d.Reflection2;
 
-/* compiled from: SimpleConfirmationDialog.kt */
-/* renamed from: b.a.a.e, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.a.a.e, reason: use source file name */
+/* JADX INFO: compiled from: SimpleConfirmationDialog.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class SimpleConfirmationDialog extends AppDialog {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static final /* synthetic */ KProperty[] f344j = {outline.m846d0(SimpleConfirmationDialog.class, "binding", "getBinding()Lcom/discord/databinding/SimpleConfirmationDialogBinding;", 0)};
 
-    /* renamed from: k, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: k, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
 
-    /* renamed from: l, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: l, reason: from kotlin metadata */
     public final Lazy args;
 
-    /* renamed from: m, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: m, reason: from kotlin metadata */
     public View.OnClickListener positiveClickListener;
 
-    /* renamed from: n, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: n, reason: from kotlin metadata */
     public final FragmentViewBindingDelegate binding;
 
-    /* compiled from: java-style lambda group */
-    /* renamed from: b.a.a.e$a */
+    /* JADX INFO: renamed from: b.a.a.e$a */
+    /* JADX INFO: compiled from: java-style lambda group */
     public static final class a implements View.OnClickListener {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public final /* synthetic */ int f349j;
 
-        /* renamed from: k */
+        /* JADX INFO: renamed from: k */
         public final /* synthetic */ Object f350k;
 
         public a(int i, Object obj) {
@@ -80,8 +80,8 @@ public final class SimpleConfirmationDialog extends AppDialog {
         }
     }
 
-    /* compiled from: ArgUtils.kt */
-    /* renamed from: b.a.a.e$b */
+    /* JADX INFO: renamed from: b.a.a.e$b */
+    /* JADX INFO: compiled from: ArgUtils.kt */
     public static final class b extends Lambda implements Function0<SimpleConfirmationDialog2> {
         public final /* synthetic */ String $argsKey;
         public final /* synthetic */ AppDialog $this_args;
@@ -107,13 +107,13 @@ public final class SimpleConfirmationDialog extends AppDialog {
         }
     }
 
-    /* compiled from: SimpleConfirmationDialog.kt */
-    /* renamed from: b.a.a.e$c, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: b.a.a.e$c, reason: from kotlin metadata */
+    /* JADX INFO: compiled from: SimpleConfirmationDialog.kt */
     public static final class Companion {
         public Companion(DefaultConstructorMarker defaultConstructorMarker) {
         }
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final SimpleConfirmationDialog m128a(FragmentManager fragmentManager, SimpleConfirmationDialog2 simpleConfirmationDialog2, View.OnClickListener onClickListener) {
             Intrinsics3.checkNotNullParameter(fragmentManager, "fragmentManager");
             Intrinsics3.checkNotNullParameter(simpleConfirmationDialog2, "args");
@@ -126,11 +126,11 @@ public final class SimpleConfirmationDialog extends AppDialog {
         }
     }
 
-    /* compiled from: SimpleConfirmationDialog.kt */
-    /* renamed from: b.a.a.e$d */
+    /* JADX INFO: renamed from: b.a.a.e$d */
+    /* JADX INFO: compiled from: SimpleConfirmationDialog.kt */
     public static final /* synthetic */ class d extends FunctionReferenceImpl implements Function1<View, SimpleConfirmationDialogBinding> {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public static final d f351j = new d();
 
         public d() {
@@ -172,12 +172,12 @@ public final class SimpleConfirmationDialog extends AppDialog {
         this.binding = FragmentViewBindingDelegate3.viewBinding$default(this, d.f351j, null, 2, null);
     }
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public final SimpleConfirmationDialog2 m126g() {
         return (SimpleConfirmationDialog2) this.args.getValue();
     }
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public final SimpleConfirmationDialogBinding m127h() {
         return (SimpleConfirmationDialogBinding) this.binding.getValue((Fragment) this, f344j[0]);
     }

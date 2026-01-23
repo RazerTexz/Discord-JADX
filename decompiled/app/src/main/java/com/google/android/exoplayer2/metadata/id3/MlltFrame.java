@@ -6,26 +6,26 @@ import androidx.annotation.Nullable;
 import java.util.Arrays;
 import p007b.p225i.p226a.p242c.p259f3.Util2;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public final class MlltFrame extends Id3Frame {
     public static final Parcelable.Creator<MlltFrame> CREATOR = new C10733a();
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final int f19993k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final int f19994l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public final int f19995m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public final int[] f19996n;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public final int[] f19997o;
 
-    /* renamed from: com.google.android.exoplayer2.metadata.id3.MlltFrame$a */
+    /* JADX INFO: renamed from: com.google.android.exoplayer2.metadata.id3.MlltFrame$a */
     public class C10733a implements Parcelable.Creator<MlltFrame> {
         @Override // android.os.Parcelable.Creator
         public MlltFrame createFromParcel(Parcel parcel) {

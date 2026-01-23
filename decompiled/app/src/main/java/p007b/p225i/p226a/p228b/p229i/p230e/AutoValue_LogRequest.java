@@ -4,30 +4,30 @@ import androidx.annotation.Nullable;
 import java.util.List;
 import p007b.p100d.p104b.p105a.outline;
 
-/* compiled from: AutoValue_LogRequest.java */
-/* renamed from: b.i.a.b.i.e.g, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.b.i.e.g, reason: use source file name */
+/* JADX INFO: compiled from: AutoValue_LogRequest.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class AutoValue_LogRequest extends LogRequest {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final long f5181a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final long f5182b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final ClientInfo2 f5183c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final Integer f5184d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final String f5185e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final List<LogEvent> f5186f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public final QosTier f5187g;
 
     public AutoValue_LogRequest(long j, long j2, ClientInfo2 clientInfo2, Integer num, String str, List list, QosTier qosTier, a aVar) {
@@ -42,35 +42,35 @@ public final class AutoValue_LogRequest extends LogRequest {
 
     @Override // p007b.p225i.p226a.p228b.p229i.p230e.LogRequest
     @Nullable
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public ClientInfo2 mo2323a() {
         return this.f5183c;
     }
 
     @Override // p007b.p225i.p226a.p228b.p229i.p230e.LogRequest
     @Nullable
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public List<LogEvent> mo2324b() {
         return this.f5186f;
     }
 
     @Override // p007b.p225i.p226a.p228b.p229i.p230e.LogRequest
     @Nullable
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public Integer mo2325c() {
         return this.f5184d;
     }
 
     @Override // p007b.p225i.p226a.p228b.p229i.p230e.LogRequest
     @Nullable
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public String mo2326d() {
         return this.f5185e;
     }
 
     @Override // p007b.p225i.p226a.p228b.p229i.p230e.LogRequest
     @Nullable
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public QosTier mo2327e() {
         return this.f5187g;
     }
@@ -101,13 +101,13 @@ public final class AutoValue_LogRequest extends LogRequest {
     }
 
     @Override // p007b.p225i.p226a.p228b.p229i.p230e.LogRequest
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public long mo2328f() {
         return this.f5181a;
     }
 
     @Override // p007b.p225i.p226a.p228b.p229i.p230e.LogRequest
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public long mo2329g() {
         return this.f5182b;
     }

@@ -1,14 +1,14 @@
 package p615g0.p616z;
 
-/* compiled from: ByteString.kt */
-/* renamed from: g0.z.b, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: g0.z.b, reason: use source file name */
+/* JADX INFO: compiled from: ByteString.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class ByteString4 {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final char[] f26138a = {'0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'a', 'b', 'c', 'd', 'e', 'f'};
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final int m10515a(char c) {
         if ('0' <= c && '9' >= c) {
             return c - '0';

@@ -7,24 +7,24 @@ import androidx.viewbinding.ViewBinding;
 import com.discord.views.CutoutView;
 import com.facebook.drawee.view.SimpleDraweeView;
 
-/* compiled from: ViewPileItemBinding.java */
-/* renamed from: b.a.i.v2, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.a.i.v2, reason: use source file name */
+/* JADX INFO: compiled from: ViewPileItemBinding.java */
+/* JADX INFO: loaded from: classes.dex */
 public final class ViewPileItemBinding implements ViewBinding {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     @NonNull
     public final CutoutView f1314a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     @NonNull
     public final SimpleDraweeView f1315b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     @NonNull
     public final SimpleDraweeView f1316c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     @NonNull
     public final TextView f1317d;
 

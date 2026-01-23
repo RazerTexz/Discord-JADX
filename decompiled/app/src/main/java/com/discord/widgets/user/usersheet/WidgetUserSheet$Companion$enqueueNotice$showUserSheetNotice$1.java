@@ -8,8 +8,8 @@ import kotlin.jvm.functions.Function1;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetUserSheet.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: WidgetUserSheet.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class WidgetUserSheet$Companion$enqueueNotice$showUserSheetNotice$1 extends Lambda implements Function1<FragmentActivity, Boolean> {
     public final /* synthetic */ String $friendToken;
     public final /* synthetic */ String $noticeName;
@@ -30,7 +30,7 @@ public final class WidgetUserSheet$Companion$enqueueNotice$showUserSheetNotice$1
         return Boolean.valueOf(invoke2(fragmentActivity));
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final boolean invoke2(FragmentActivity fragmentActivity) {
         Intrinsics3.checkNotNullParameter(fragmentActivity, "fragmentActivity");
         WidgetUserSheet.Companion companion = WidgetUserSheet.INSTANCE;

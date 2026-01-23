@@ -29,17 +29,17 @@ import lombok.javac.JavacNode;
 import lombok.javac.JavacTreeMaker;
 import lombok.javac.handlers.JavacHandlerUtil;
 
-/* loaded from: discord-126021.apk:lombok/javac/handlers/HandleConstructor.SCL.lombok */
+/* JADX INFO: loaded from: discord-126021.apk:lombok/javac/handlers/HandleConstructor.SCL.lombok */
 public class HandleConstructor {
     private static /* synthetic */ int[] $SWITCH_TABLE$javax$lang$model$type$TypeKind;
 
-    /* loaded from: discord-126021.apk:lombok/javac/handlers/HandleConstructor$SkipIfConstructorExists.SCL.lombok */
+    /* JADX INFO: loaded from: discord-126021.apk:lombok/javac/handlers/HandleConstructor$SkipIfConstructorExists.SCL.lombok */
     public enum SkipIfConstructorExists {
         YES,
         NO,
         I_AM_BUILDER;
 
-        /* renamed from: values, reason: to resolve conflict with enum method */
+        /* JADX INFO: renamed from: values, reason: to resolve conflict with enum method */
         public static SkipIfConstructorExists[] valuesCustom() {
             SkipIfConstructorExists[] skipIfConstructorExistsArrValuesCustom = values();
             int length = skipIfConstructorExistsArrValuesCustom.length;
@@ -135,13 +135,13 @@ public class HandleConstructor {
         return iArr2;
     }
 
-    /* loaded from: discord-126021.apk:lombok/javac/handlers/HandleConstructor$HandleNoArgsConstructor.SCL.lombok */
+    /* JADX INFO: loaded from: discord-126021.apk:lombok/javac/handlers/HandleConstructor$HandleNoArgsConstructor.SCL.lombok */
     public static class HandleNoArgsConstructor extends JavacAnnotationHandler<NoArgsConstructor> {
         private static final String NAME = NoArgsConstructor.class.getSimpleName();
         private HandleConstructor handleConstructor = new HandleConstructor();
 
         @Override // lombok.javac.JavacAnnotationHandler
-        public void handle(AnnotationValues<NoArgsConstructor> annotation, JCTree.JCAnnotation ast, JavacNode annotationNode) throws IllegalArgumentException {
+        public void handle(AnnotationValues<NoArgsConstructor> annotation, JCTree.JCAnnotation ast, JavacNode annotationNode) {
             HandlerUtil.handleFlagUsage(annotationNode, ConfigurationKeys.NO_ARGS_CONSTRUCTOR_FLAG_USAGE, "@NoArgsConstructor", ConfigurationKeys.ANY_CONSTRUCTOR_FLAG_USAGE, "any @xArgsConstructor");
             JavacHandlerUtil.deleteAnnotationIfNeccessary(annotationNode, (Class<? extends Annotation>) NoArgsConstructor.class);
             JavacHandlerUtil.deleteImportFromCompilationUnit(annotationNode, "lombok.AccessLevel");
@@ -160,13 +160,13 @@ public class HandleConstructor {
         }
     }
 
-    /* loaded from: discord-126021.apk:lombok/javac/handlers/HandleConstructor$HandleRequiredArgsConstructor.SCL.lombok */
+    /* JADX INFO: loaded from: discord-126021.apk:lombok/javac/handlers/HandleConstructor$HandleRequiredArgsConstructor.SCL.lombok */
     public static class HandleRequiredArgsConstructor extends JavacAnnotationHandler<RequiredArgsConstructor> {
         private static final String NAME = RequiredArgsConstructor.class.getSimpleName();
         private HandleConstructor handleConstructor = new HandleConstructor();
 
         @Override // lombok.javac.JavacAnnotationHandler
-        public void handle(AnnotationValues<RequiredArgsConstructor> annotation, JCTree.JCAnnotation ast, JavacNode annotationNode) throws IllegalArgumentException {
+        public void handle(AnnotationValues<RequiredArgsConstructor> annotation, JCTree.JCAnnotation ast, JavacNode annotationNode) {
             HandlerUtil.handleFlagUsage(annotationNode, ConfigurationKeys.REQUIRED_ARGS_CONSTRUCTOR_FLAG_USAGE, "@RequiredArgsConstructor", ConfigurationKeys.ANY_CONSTRUCTOR_FLAG_USAGE, "any @xArgsConstructor");
             JavacHandlerUtil.deleteAnnotationIfNeccessary(annotationNode, (Class<? extends Annotation>) RequiredArgsConstructor.class);
             JavacHandlerUtil.deleteImportFromCompilationUnit(annotationNode, "lombok.AccessLevel");
@@ -217,13 +217,13 @@ public class HandleConstructor {
         return fields.toList();
     }
 
-    /* loaded from: discord-126021.apk:lombok/javac/handlers/HandleConstructor$HandleAllArgsConstructor.SCL.lombok */
+    /* JADX INFO: loaded from: discord-126021.apk:lombok/javac/handlers/HandleConstructor$HandleAllArgsConstructor.SCL.lombok */
     public static class HandleAllArgsConstructor extends JavacAnnotationHandler<AllArgsConstructor> {
         private static final String NAME = AllArgsConstructor.class.getSimpleName();
         private HandleConstructor handleConstructor = new HandleConstructor();
 
         @Override // lombok.javac.JavacAnnotationHandler
-        public void handle(AnnotationValues<AllArgsConstructor> annotation, JCTree.JCAnnotation ast, JavacNode annotationNode) throws IllegalArgumentException {
+        public void handle(AnnotationValues<AllArgsConstructor> annotation, JCTree.JCAnnotation ast, JavacNode annotationNode) {
             HandlerUtil.handleFlagUsage(annotationNode, ConfigurationKeys.ALL_ARGS_CONSTRUCTOR_FLAG_USAGE, "@AllArgsConstructor", ConfigurationKeys.ANY_CONSTRUCTOR_FLAG_USAGE, "any @xArgsConstructor");
             JavacHandlerUtil.deleteAnnotationIfNeccessary(annotationNode, (Class<? extends Annotation>) AllArgsConstructor.class);
             JavacHandlerUtil.deleteImportFromCompilationUnit(annotationNode, "lombok.AccessLevel");

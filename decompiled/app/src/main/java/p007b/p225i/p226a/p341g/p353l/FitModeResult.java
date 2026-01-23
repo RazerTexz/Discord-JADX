@@ -1,26 +1,26 @@
 package p007b.p225i.p226a.p341g.p353l;
 
-/* compiled from: FitModeResult.java */
-/* renamed from: b.i.a.g.l.f, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.g.l.f, reason: use source file name */
+/* JADX INFO: compiled from: FitModeResult.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class FitModeResult {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final float f11903a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final float f11904b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final float f11905c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final float f11906d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final float f11907e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final float f11908f;
 
     public FitModeResult(float f, float f2, float f3, float f4, float f5, float f6) {

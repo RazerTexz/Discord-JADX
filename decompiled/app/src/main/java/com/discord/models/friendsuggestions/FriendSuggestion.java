@@ -4,8 +4,8 @@ import com.discord.models.user.User;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: FriendSuggestion.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: FriendSuggestion.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class FriendSuggestion {
     private final String publicName;
     private final User user;
@@ -26,12 +26,12 @@ public final /* data */ class FriendSuggestion {
         return friendSuggestion.copy(user, str);
     }
 
-    /* renamed from: component1, reason: from getter */
+    /* JADX INFO: renamed from: component1, reason: from getter */
     public final User getUser() {
         return this.user;
     }
 
-    /* renamed from: component2, reason: from getter */
+    /* JADX INFO: renamed from: component2, reason: from getter */
     public final String getPublicName() {
         return this.publicName;
     }

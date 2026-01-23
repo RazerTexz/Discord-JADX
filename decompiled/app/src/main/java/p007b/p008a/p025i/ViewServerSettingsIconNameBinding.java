@@ -8,32 +8,32 @@ import androidx.viewbinding.ViewBinding;
 import com.facebook.drawee.view.SimpleDraweeView;
 import com.google.android.material.textfield.TextInputLayout;
 
-/* compiled from: ViewServerSettingsIconNameBinding.java */
-/* renamed from: b.a.i.j3, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.a.i.j3, reason: use source file name */
+/* JADX INFO: compiled from: ViewServerSettingsIconNameBinding.java */
+/* JADX INFO: loaded from: classes.dex */
 public final class ViewServerSettingsIconNameBinding implements ViewBinding {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     @NonNull
     public final ConstraintLayout f973a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     @NonNull
     public final TextView f974b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     @NonNull
     public final TextInputLayout f975c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     @NonNull
     public final SimpleDraweeView f976d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     @NonNull
     public final TextView f977e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     @NonNull
     public final TextView f978f;
 

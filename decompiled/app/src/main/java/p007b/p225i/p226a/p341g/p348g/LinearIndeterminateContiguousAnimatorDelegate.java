@@ -3,12 +3,12 @@ package p007b.p225i.p226a.p341g.p348g;
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
 
-/* compiled from: LinearIndeterminateContiguousAnimatorDelegate.java */
-/* renamed from: b.i.a.g.g.i, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.g.g.i, reason: use source file name */
+/* JADX INFO: compiled from: LinearIndeterminateContiguousAnimatorDelegate.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class LinearIndeterminateContiguousAnimatorDelegate extends AnimatorListenerAdapter {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final /* synthetic */ LinearIndeterminateContiguousAnimatorDelegate2 f11742a;
 
     public LinearIndeterminateContiguousAnimatorDelegate(LinearIndeterminateContiguousAnimatorDelegate2 linearIndeterminateContiguousAnimatorDelegate2) {

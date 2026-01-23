@@ -10,7 +10,7 @@ import androidx.constraintlayout.solver.widgets.HelperWidget;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.constraintlayout.widget.ConstraintSet;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class Barrier extends ConstraintHelper {
     public static final int BOTTOM = 3;
     public static final int END = 6;

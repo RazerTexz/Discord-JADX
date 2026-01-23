@@ -1,10 +1,10 @@
 package com.franmontiel.persistentcookiejar;
 
-/* renamed from: com.franmontiel.persistentcookiejar.R */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: com.franmontiel.persistentcookiejar.R */
+/* JADX INFO: loaded from: classes3.dex */
 public final class C10678R {
 
-    /* renamed from: com.franmontiel.persistentcookiejar.R$string */
+    /* JADX INFO: renamed from: com.franmontiel.persistentcookiejar.R$string */
     public static final class string {
         public static final int app_name = 2131886487;
 

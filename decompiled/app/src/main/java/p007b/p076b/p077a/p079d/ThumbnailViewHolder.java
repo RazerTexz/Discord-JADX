@@ -37,56 +37,56 @@ import p659s.p660a.CoroutineScope2;
 import p659s.p660a.Dispatchers;
 import p659s.p660a.p661a.MainDispatchers;
 
-/* compiled from: ThumbnailViewHolder.kt */
-/* renamed from: b.b.a.d.i, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.b.a.d.i, reason: use source file name */
+/* JADX INFO: compiled from: ThumbnailViewHolder.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public abstract class ThumbnailViewHolder extends RecyclerView.ViewHolder {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static int f2159j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public static int f2160k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public static ColorDrawable f2161l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public static final a f2162m = new a(null);
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public b f2163n;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public c f2164o;
 
-    /* compiled from: ThumbnailViewHolder.kt */
-    /* renamed from: b.b.a.d.i$a */
+    /* JADX INFO: renamed from: b.b.a.d.i$a */
+    /* JADX INFO: compiled from: ThumbnailViewHolder.kt */
     public static final class a {
         public a(DefaultConstructorMarker defaultConstructorMarker) {
         }
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public static final boolean m406a(a aVar) {
             return Build.VERSION.SDK_INT >= 29;
         }
     }
 
-    /* compiled from: ThumbnailViewHolder.kt */
+    /* JADX INFO: renamed from: b.b.a.d.i$b */
+    /* JADX INFO: compiled from: ThumbnailViewHolder.kt */
     @RequiresApi(29)
-    /* renamed from: b.b.a.d.i$b */
     public static final class b {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public Job f2165a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public CancellationSignal f2166b;
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public Bitmap f2167c;
 
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         public final ContentResolver f2168d;
 
         public b(ContentResolver contentResolver) {
@@ -94,7 +94,7 @@ public abstract class ThumbnailViewHolder extends RecyclerView.ViewHolder {
             this.f2168d = contentResolver;
         }
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final void m407a() {
             if (a.m406a(ThumbnailViewHolder.f2162m)) {
                 Job job = this.f2165a;
@@ -114,11 +114,11 @@ public abstract class ThumbnailViewHolder extends RecyclerView.ViewHolder {
         }
     }
 
-    /* compiled from: ThumbnailViewHolder.kt */
-    /* renamed from: b.b.a.d.i$c */
+    /* JADX INFO: renamed from: b.b.a.d.i$c */
+    /* JADX INFO: compiled from: ThumbnailViewHolder.kt */
     public static final class c {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final ContentResolver f2169a;
 
         public c(ContentResolver contentResolver) {
@@ -127,8 +127,8 @@ public abstract class ThumbnailViewHolder extends RecyclerView.ViewHolder {
         }
     }
 
-    /* compiled from: ThumbnailViewHolder.kt */
-    /* renamed from: b.b.a.d.i$d */
+    /* JADX INFO: renamed from: b.b.a.d.i$d */
+    /* JADX INFO: compiled from: ThumbnailViewHolder.kt */
     public static final class d extends Lambda implements Function1<Bitmap, Unit> {
         public d() {
             super(1);
@@ -165,10 +165,10 @@ public abstract class ThumbnailViewHolder extends RecyclerView.ViewHolder {
         this.f2164o = new c(contentResolver2);
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public abstract SimpleDraweeView mo401a();
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final void m404b() {
         b bVar;
         if (!(Build.VERSION.SDK_INT >= 29) || (bVar = this.f2163n) == null) {
@@ -177,7 +177,7 @@ public abstract class ThumbnailViewHolder extends RecyclerView.ViewHolder {
         bVar.m407a();
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final void m405c(Media media, Integer num, Integer num2) {
         if (f2161l == null) {
             View view = this.itemView;

@@ -12,9 +12,9 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 import p507d0.p592z.p594d.Reflection2;
 
-/* compiled from: StoreNavigation.kt */
-/* renamed from: com.discord.stores.StoreNavigation$ActivityNavigationLifecycleCallbacks$callNavHandler$1 */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.stores.StoreNavigation$ActivityNavigationLifecycleCallbacks$callNavHandler$1 */
+/* JADX INFO: compiled from: StoreNavigation.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class C6274x1d81cdc0 extends Lambda implements Function2<AppActivity, StoreNavigation.ActivityNavigationLifecycleCallbacks.ModelGlobalNavigation, Boolean> {
     public static final C6274x1d81cdc0 INSTANCE = new C6274x1d81cdc0();
 
@@ -27,7 +27,7 @@ public final class C6274x1d81cdc0 extends Lambda implements Function2<AppActivit
         return Boolean.valueOf(invoke2(appActivity, modelGlobalNavigation));
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final boolean invoke2(AppActivity appActivity, StoreNavigation.ActivityNavigationLifecycleCallbacks.ModelGlobalNavigation modelGlobalNavigation) {
         Intrinsics3.checkNotNullParameter(appActivity, ActivityChooserModel.ATTRIBUTE_ACTIVITY);
         Intrinsics3.checkNotNullParameter(modelGlobalNavigation, "model");

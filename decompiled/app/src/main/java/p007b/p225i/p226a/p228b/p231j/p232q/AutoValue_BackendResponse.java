@@ -4,15 +4,15 @@ import java.util.Objects;
 import p007b.p100d.p104b.p105a.outline;
 import p007b.p225i.p226a.p228b.p231j.p232q.BackendResponse;
 
-/* compiled from: AutoValue_BackendResponse.java */
-/* renamed from: b.i.a.b.j.q.b, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.b.j.q.b, reason: use source file name */
+/* JADX INFO: compiled from: AutoValue_BackendResponse.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class AutoValue_BackendResponse extends BackendResponse {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final BackendResponse.a f5302a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final long f5303b;
 
     public AutoValue_BackendResponse(BackendResponse.a aVar, long j) {
@@ -22,13 +22,13 @@ public final class AutoValue_BackendResponse extends BackendResponse {
     }
 
     @Override // p007b.p225i.p226a.p228b.p231j.p232q.BackendResponse
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public long mo2364b() {
         return this.f5303b;
     }
 
     @Override // p007b.p225i.p226a.p228b.p231j.p232q.BackendResponse
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public BackendResponse.a mo2365c() {
         return this.f5302a;
     }

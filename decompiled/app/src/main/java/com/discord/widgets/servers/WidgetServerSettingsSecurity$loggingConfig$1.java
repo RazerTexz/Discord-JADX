@@ -5,8 +5,8 @@ import com.discord.api.science.AnalyticsSchema;
 import kotlin.jvm.functions.Function0;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetServerSettingsSecurity.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetServerSettingsSecurity.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetServerSettingsSecurity$loggingConfig$1 extends Lambda implements Function0<AnalyticsSchema> {
     public static final WidgetServerSettingsSecurity$loggingConfig$1 INSTANCE = new WidgetServerSettingsSecurity$loggingConfig$1();
 

@@ -19,42 +19,42 @@ import p007b.p225i.p226a.p242c.p278y2.AsynchronousMediaCodecBufferEnqueuer2;
 import p007b.p225i.p226a.p242c.p278y2.MediaCodecAdapter;
 import p007b.p225i.p355b.p356a.Supplier2;
 
-/* compiled from: AsynchronousMediaCodecAdapter.java */
+/* JADX INFO: renamed from: b.i.a.c.y2.l, reason: use source file name */
+/* JADX INFO: compiled from: AsynchronousMediaCodecAdapter.java */
+/* JADX INFO: loaded from: classes3.dex */
 @RequiresApi(23)
-/* renamed from: b.i.a.c.y2.l, reason: use source file name */
-/* loaded from: classes3.dex */
 public final class AsynchronousMediaCodecAdapter implements MediaCodecAdapter {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final MediaCodec f9059a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final AsynchronousMediaCodecCallback f9060b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final AsynchronousMediaCodecBufferEnqueuer2 f9061c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final boolean f9062d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public boolean f9063e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public int f9064f = 0;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     @Nullable
     public Surface f9065g;
 
-    /* compiled from: AsynchronousMediaCodecAdapter.java */
-    /* renamed from: b.i.a.c.y2.l$b */
+    /* JADX INFO: renamed from: b.i.a.c.y2.l$b */
+    /* JADX INFO: compiled from: AsynchronousMediaCodecAdapter.java */
     public static final class b implements MediaCodecAdapter.b {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final Supplier2<HandlerThread> f9066a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final Supplier2<HandlerThread> f9067b;
 
         public b(int i, boolean z2) {
@@ -65,12 +65,12 @@ public final class AsynchronousMediaCodecAdapter implements MediaCodecAdapter {
         }
 
         @Override // p007b.p225i.p226a.p242c.p278y2.MediaCodecAdapter.b
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public /* bridge */ /* synthetic */ MediaCodecAdapter mo3845a(MediaCodecAdapter.a aVar) throws IOException {
             return m3846b(aVar);
         }
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public AsynchronousMediaCodecAdapter m3846b(MediaCodecAdapter.a aVar) throws Exception {
             MediaCodec mediaCodecCreateByCodecName;
             String str = aVar.f9107a.f9112a;
@@ -112,7 +112,7 @@ public final class AsynchronousMediaCodecAdapter implements MediaCodecAdapter {
         this.f9062d = z2;
     }
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public static void m3832k(AsynchronousMediaCodecAdapter asynchronousMediaCodecAdapter, MediaFormat mediaFormat, Surface surface, MediaCrypto mediaCrypto, int i, boolean z2) {
         AsynchronousMediaCodecCallback asynchronousMediaCodecCallback = asynchronousMediaCodecAdapter.f9060b;
         MediaCodec mediaCodec = asynchronousMediaCodecAdapter.f9059a;
@@ -139,7 +139,7 @@ public final class AsynchronousMediaCodecAdapter implements MediaCodecAdapter {
         asynchronousMediaCodecAdapter.f9064f = 1;
     }
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public static String m3833l(int i, String str) {
         StringBuilder sb = new StringBuilder(str);
         if (i == 1) {
@@ -155,13 +155,13 @@ public final class AsynchronousMediaCodecAdapter implements MediaCodecAdapter {
     }
 
     @Override // p007b.p225i.p226a.p242c.p278y2.MediaCodecAdapter
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public boolean mo3834a() {
         return false;
     }
 
     @Override // p007b.p225i.p226a.p242c.p278y2.MediaCodecAdapter
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public void mo3835b(int i, int i2, CryptoInfo cryptoInfo, long j, int i3) {
         AsynchronousMediaCodecBufferEnqueuer2 asynchronousMediaCodecBufferEnqueuer2 = this.f9061c;
         asynchronousMediaCodecBufferEnqueuer2.m3852f();
@@ -189,13 +189,13 @@ public final class AsynchronousMediaCodecAdapter implements MediaCodecAdapter {
     }
 
     @Override // p007b.p225i.p226a.p242c.p278y2.MediaCodecAdapter
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public void mo3836c(int i, long j) {
         this.f9059a.releaseOutputBuffer(i, j);
     }
 
     @Override // p007b.p225i.p226a.p242c.p278y2.MediaCodecAdapter
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public int mo3837d() {
         int iM3861b;
         AsynchronousMediaCodecCallback asynchronousMediaCodecCallback = this.f9060b;
@@ -222,7 +222,7 @@ public final class AsynchronousMediaCodecAdapter implements MediaCodecAdapter {
     }
 
     @Override // p007b.p225i.p226a.p242c.p278y2.MediaCodecAdapter
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public int mo3838e(MediaCodec.BufferInfo bufferInfo) {
         int iM3861b;
         AsynchronousMediaCodecCallback asynchronousMediaCodecCallback = this.f9060b;
@@ -256,7 +256,7 @@ public final class AsynchronousMediaCodecAdapter implements MediaCodecAdapter {
     }
 
     @Override // p007b.p225i.p226a.p242c.p278y2.MediaCodecAdapter
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public void mo3839f(MediaCodecAdapter.c cVar, Handler handler) {
         m3844m();
         this.f9059a.setOnFrameRenderedListener(new C3131c(this, cVar), handler);
@@ -279,7 +279,7 @@ public final class AsynchronousMediaCodecAdapter implements MediaCodecAdapter {
     }
 
     @Override // p007b.p225i.p226a.p242c.p278y2.MediaCodecAdapter
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public void mo3840g(int i) {
         m3844m();
         this.f9059a.setVideoScalingMode(i);
@@ -300,13 +300,13 @@ public final class AsynchronousMediaCodecAdapter implements MediaCodecAdapter {
 
     @Override // p007b.p225i.p226a.p242c.p278y2.MediaCodecAdapter
     @Nullable
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public ByteBuffer mo3841h(int i) {
         return this.f9059a.getInputBuffer(i);
     }
 
     @Override // p007b.p225i.p226a.p242c.p278y2.MediaCodecAdapter
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public void mo3842i(Surface surface) {
         m3844m();
         this.f9059a.setOutputSurface(surface);
@@ -314,12 +314,12 @@ public final class AsynchronousMediaCodecAdapter implements MediaCodecAdapter {
 
     @Override // p007b.p225i.p226a.p242c.p278y2.MediaCodecAdapter
     @Nullable
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public ByteBuffer mo3843j(int i) {
         return this.f9059a.getOutputBuffer(i);
     }
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public final void m3844m() {
         if (this.f9062d) {
             try {

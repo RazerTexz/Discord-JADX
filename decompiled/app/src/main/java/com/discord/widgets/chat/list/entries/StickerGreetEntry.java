@@ -5,8 +5,8 @@ import p001a0.p002a.p003a.C0002b;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: StickerGreetEntry.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: StickerGreetEntry.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final /* data */ class StickerGreetEntry extends ChatListEntry {
     private final long channelId;
     private final String channelName;
@@ -44,22 +44,22 @@ public final /* data */ class StickerGreetEntry extends ChatListEntry {
         return stickerGreetEntry.copy(sticker, j2, str2, i);
     }
 
-    /* renamed from: component1, reason: from getter */
+    /* JADX INFO: renamed from: component1, reason: from getter */
     public final Sticker getSticker() {
         return this.sticker;
     }
 
-    /* renamed from: component2, reason: from getter */
+    /* JADX INFO: renamed from: component2, reason: from getter */
     public final long getChannelId() {
         return this.channelId;
     }
 
-    /* renamed from: component3, reason: from getter */
+    /* JADX INFO: renamed from: component3, reason: from getter */
     public final String getChannelName() {
         return this.channelName;
     }
 
-    /* renamed from: component4, reason: from getter */
+    /* JADX INFO: renamed from: component4, reason: from getter */
     public final int getChannelType() {
         return this.channelType;
     }

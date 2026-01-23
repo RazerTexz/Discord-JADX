@@ -3,8 +3,8 @@ package co.discord.media_engine.internal;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: NativeStatistics.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: NativeStatistics.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class RtpStats {
     private final PacketStats fec;
     private final PacketStats retransmitted;
@@ -32,17 +32,17 @@ public final /* data */ class RtpStats {
         return rtpStats.copy(packetStats, packetStats2, packetStats3);
     }
 
-    /* renamed from: component1, reason: from getter */
+    /* JADX INFO: renamed from: component1, reason: from getter */
     public final PacketStats getFec() {
         return this.fec;
     }
 
-    /* renamed from: component2, reason: from getter */
+    /* JADX INFO: renamed from: component2, reason: from getter */
     public final PacketStats getRetransmitted() {
         return this.retransmitted;
     }
 
-    /* renamed from: component3, reason: from getter */
+    /* JADX INFO: renamed from: component3, reason: from getter */
     public final PacketStats getTransmitted() {
         return this.transmitted;
     }

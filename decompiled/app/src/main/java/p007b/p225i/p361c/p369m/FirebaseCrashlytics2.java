@@ -14,24 +14,24 @@ import p007b.p225i.p361c.p369m.p370d.p373k.Utils3;
 import p007b.p225i.p361c.p369m.p370d.p373k.Utils5;
 import p007b.p225i.p361c.p369m.p370d.p384s.SettingsController;
 
-/* compiled from: FirebaseCrashlytics.java */
-/* renamed from: b.i.c.m.c, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.c.m.c, reason: use source file name */
+/* JADX INFO: compiled from: FirebaseCrashlytics.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class FirebaseCrashlytics2 implements Callable<Void> {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final /* synthetic */ Onboarding4 f12222j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final /* synthetic */ ExecutorService f12223k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final /* synthetic */ SettingsController f12224l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public final /* synthetic */ boolean f12225m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public final /* synthetic */ CrashlyticsCore3 f12226n;
 
     public FirebaseCrashlytics2(Onboarding4 onboarding4, ExecutorService executorService, SettingsController settingsController, boolean z2, CrashlyticsCore3 crashlyticsCore3) {

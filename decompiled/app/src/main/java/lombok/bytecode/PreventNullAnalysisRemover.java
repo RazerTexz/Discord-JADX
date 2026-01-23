@@ -9,7 +9,7 @@ import org.objectweb.asm.ClassWriter;
 import org.objectweb.asm.MethodVisitor;
 import org.objectweb.asm.Opcodes;
 
-/* loaded from: discord-126021.apk:lombok/bytecode/PreventNullAnalysisRemover.SCL.lombok */
+/* JADX INFO: loaded from: discord-126021.apk:lombok/bytecode/PreventNullAnalysisRemover.SCL.lombok */
 public class PreventNullAnalysisRemover implements PostCompilerTransformation {
     @Override // lombok.core.PostCompilerTransformation
     public byte[] applyTransformations(byte[] original, String fileName, DiagnosticsReceiver diagnostics) {
@@ -27,8 +27,8 @@ public class PreventNullAnalysisRemover implements PostCompilerTransformation {
         return null;
     }
 
-    /* renamed from: lombok.bytecode.PreventNullAnalysisRemover$1PreventNullAnalysisVisitor, reason: invalid class name */
-    /* loaded from: discord-126021.apk:lombok/bytecode/PreventNullAnalysisRemover$1PreventNullAnalysisVisitor.SCL.lombok */
+    /* JADX INFO: renamed from: lombok.bytecode.PreventNullAnalysisRemover$1PreventNullAnalysisVisitor, reason: invalid class name */
+    /* JADX INFO: loaded from: discord-126021.apk:lombok/bytecode/PreventNullAnalysisRemover$1PreventNullAnalysisVisitor.SCL.lombok */
     class C1PreventNullAnalysisVisitor extends MethodVisitor {
         private final /* synthetic */ AtomicBoolean val$changesMade;
 
@@ -65,8 +65,8 @@ public class PreventNullAnalysisRemover implements PostCompilerTransformation {
         }
     }
 
-    /* renamed from: lombok.bytecode.PreventNullAnalysisRemover$1 */
-    /* loaded from: discord-126021.apk:lombok/bytecode/PreventNullAnalysisRemover$1.SCL.lombok */
+    /* JADX INFO: renamed from: lombok.bytecode.PreventNullAnalysisRemover$1 */
+    /* JADX INFO: loaded from: discord-126021.apk:lombok/bytecode/PreventNullAnalysisRemover$1.SCL.lombok */
     class C128091 extends ClassVisitor {
         private final /* synthetic */ AtomicBoolean val$changesMade;
 

@@ -4,15 +4,15 @@ import java.util.Iterator;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.p595g0.KMarkers;
 
-/* compiled from: Iterators.kt */
-/* renamed from: d0.t.b0, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.t.b0, reason: use source file name */
+/* JADX INFO: compiled from: Iterators.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class Iterators3<T> implements Iterator<IndexedValue<? extends T>>, KMarkers {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public int f25175j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final Iterator<T> f25176k;
 
     /* JADX WARN: Multi-variable type inference failed */

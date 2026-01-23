@@ -11,7 +11,7 @@ import org.objectweb.asm.MethodVisitor;
 import org.objectweb.asm.Opcodes;
 import org.objectweb.asm.Type;
 
-/* loaded from: discord-126021.apk:org/objectweb/asm/commons/GeneratorAdapter.SCL.lombok */
+/* JADX INFO: loaded from: discord-126021.apk:org/objectweb/asm/commons/GeneratorAdapter.SCL.lombok */
 public class GeneratorAdapter extends LocalVariablesSorter {
     private static final String CLASS_DESCRIPTOR = "Ljava/lang/Class;";
     private static final Type BYTE_TYPE = Type.getObjectType("java/lang/Byte");
@@ -41,26 +41,26 @@ public class GeneratorAdapter extends LocalVariablesSorter {
     public static final int USHR = 124;
     public static final int AND = 126;
 
-    /* renamed from: OR */
+    /* JADX INFO: renamed from: OR */
     public static final int f27604OR = 128;
     public static final int XOR = 130;
 
-    /* renamed from: EQ */
+    /* JADX INFO: renamed from: EQ */
     public static final int f27605EQ = 153;
 
-    /* renamed from: NE */
+    /* JADX INFO: renamed from: NE */
     public static final int f27606NE = 154;
 
-    /* renamed from: LT */
+    /* JADX INFO: renamed from: LT */
     public static final int f27607LT = 155;
 
-    /* renamed from: GE */
+    /* JADX INFO: renamed from: GE */
     public static final int f27608GE = 156;
 
-    /* renamed from: GT */
+    /* JADX INFO: renamed from: GT */
     public static final int f27609GT = 157;
 
-    /* renamed from: LE */
+    /* JADX INFO: renamed from: LE */
     public static final int f27610LE = 158;
     private final int access;
     private final String name;

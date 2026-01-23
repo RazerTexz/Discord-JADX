@@ -7,22 +7,22 @@ import androidx.viewbinding.ViewBinding;
 import com.discord.widgets.channels.permissions.AddPermissionOwnerView;
 import com.discord.widgets.channels.permissions.PermissionOwnerListView;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public final class WidgetStageChannelModeratorPermissionsBinding implements ViewBinding {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     @NonNull
     public final CoordinatorLayout f18151a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     @NonNull
     public final AddPermissionOwnerView f18152b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     @NonNull
     public final PermissionOwnerListView f18153c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     @NonNull
     public final PermissionOwnerListView f18154d;
 

@@ -49,15 +49,15 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 import p507d0.p592z.p594d.SpreadBuilder;
 
-/* compiled from: ViewExtensions.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: ViewExtensions.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class ViewExtensions {
     private static final long DEFAULT_FADE_MILLIS_RES = 350;
     private static final long HINT_DELAY_MILLIS = 250;
     private static final HashMap<View, ViewExtensions3> fadeAnimations = new HashMap<>();
 
-    /* compiled from: ViewExtensions.kt */
-    /* renamed from: com.discord.utilities.view.extensions.ViewExtensions$addOnHeightChangedListener$1 */
+    /* JADX INFO: renamed from: com.discord.utilities.view.extensions.ViewExtensions$addOnHeightChangedListener$1 */
+    /* JADX INFO: compiled from: ViewExtensions.kt */
     public static final class ViewOnLayoutChangeListenerC69891 implements View.OnLayoutChangeListener {
         public final /* synthetic */ Function2 $onHeightChanged;
 
@@ -75,8 +75,8 @@ public final class ViewExtensions {
         }
     }
 
-    /* compiled from: ViewExtensions.kt */
-    /* renamed from: com.discord.utilities.view.extensions.ViewExtensions$addOnSizeChangedListener$1 */
+    /* JADX INFO: renamed from: com.discord.utilities.view.extensions.ViewExtensions$addOnSizeChangedListener$1 */
+    /* JADX INFO: compiled from: ViewExtensions.kt */
     public static final class ViewOnLayoutChangeListenerC69901 implements View.OnLayoutChangeListener {
         public final /* synthetic */ Function4 $onSizeChanged;
 
@@ -97,8 +97,8 @@ public final class ViewExtensions {
         }
     }
 
-    /* compiled from: ViewExtensions.kt */
-    /* renamed from: com.discord.utilities.view.extensions.ViewExtensions$addOnWidthChangedListener$1 */
+    /* JADX INFO: renamed from: com.discord.utilities.view.extensions.ViewExtensions$addOnWidthChangedListener$1 */
+    /* JADX INFO: compiled from: ViewExtensions.kt */
     public static final class ViewOnLayoutChangeListenerC69911 implements View.OnLayoutChangeListener {
         public final /* synthetic */ Function2 $onWidthChanged;
 
@@ -116,8 +116,8 @@ public final class ViewExtensions {
         }
     }
 
-    /* compiled from: ViewExtensions.kt */
-    /* renamed from: com.discord.utilities.view.extensions.ViewExtensions$fadeIn$1 */
+    /* JADX INFO: renamed from: com.discord.utilities.view.extensions.ViewExtensions$fadeIn$1 */
+    /* JADX INFO: compiled from: ViewExtensions.kt */
     public static final class C69921 extends Lambda implements Function1<View, Unit> {
         public static final C69921 INSTANCE = new C69921();
 
@@ -131,14 +131,14 @@ public final class ViewExtensions {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(View view) {
             Intrinsics3.checkNotNullParameter(view, "it");
         }
     }
 
-    /* compiled from: ViewExtensions.kt */
-    /* renamed from: com.discord.utilities.view.extensions.ViewExtensions$fadeIn$2 */
+    /* JADX INFO: renamed from: com.discord.utilities.view.extensions.ViewExtensions$fadeIn$2 */
+    /* JADX INFO: compiled from: ViewExtensions.kt */
     public static final class C69932 extends Lambda implements Function1<ViewPropertyAnimator, Unit> {
         public static final C69932 INSTANCE = new C69932();
 
@@ -152,14 +152,14 @@ public final class ViewExtensions {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(ViewPropertyAnimator viewPropertyAnimator) {
             Intrinsics3.checkNotNullParameter(viewPropertyAnimator, "$receiver");
         }
     }
 
-    /* compiled from: ViewExtensions.kt */
-    /* renamed from: com.discord.utilities.view.extensions.ViewExtensions$fadeIn$3 */
+    /* JADX INFO: renamed from: com.discord.utilities.view.extensions.ViewExtensions$fadeIn$3 */
+    /* JADX INFO: compiled from: ViewExtensions.kt */
     public static final class C69943 extends Lambda implements Function0<Unit> {
         public static final C69943 INSTANCE = new C69943();
 
@@ -173,13 +173,13 @@ public final class ViewExtensions {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
         }
     }
 
-    /* compiled from: ViewExtensions.kt */
-    /* renamed from: com.discord.utilities.view.extensions.ViewExtensions$fadeOut$1 */
+    /* JADX INFO: renamed from: com.discord.utilities.view.extensions.ViewExtensions$fadeOut$1 */
+    /* JADX INFO: compiled from: ViewExtensions.kt */
     public static final class C69951 extends Lambda implements Function1<ViewPropertyAnimator, Unit> {
         public static final C69951 INSTANCE = new C69951();
 
@@ -193,14 +193,14 @@ public final class ViewExtensions {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(ViewPropertyAnimator viewPropertyAnimator) {
             Intrinsics3.checkNotNullParameter(viewPropertyAnimator, "$receiver");
         }
     }
 
-    /* compiled from: ViewExtensions.kt */
-    /* renamed from: com.discord.utilities.view.extensions.ViewExtensions$fadeOut$2 */
+    /* JADX INFO: renamed from: com.discord.utilities.view.extensions.ViewExtensions$fadeOut$2 */
+    /* JADX INFO: compiled from: ViewExtensions.kt */
     public static final class C69962 extends Lambda implements Function0<Unit> {
         public static final C69962 INSTANCE = new C69962();
 
@@ -214,13 +214,13 @@ public final class ViewExtensions {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
         }
     }
 
-    /* compiled from: ViewExtensions.kt */
-    /* renamed from: com.discord.utilities.view.extensions.ViewExtensions$hintWithRipple$1 */
+    /* JADX INFO: renamed from: com.discord.utilities.view.extensions.ViewExtensions$hintWithRipple$1 */
+    /* JADX INFO: compiled from: ViewExtensions.kt */
     public static final class RunnableC69971 implements Runnable {
         public final /* synthetic */ View $this_hintWithRipple;
 
@@ -235,8 +235,8 @@ public final class ViewExtensions {
         }
     }
 
-    /* compiled from: ViewExtensions.kt */
-    /* renamed from: com.discord.utilities.view.extensions.ViewExtensions$i18nSetText$1 */
+    /* JADX INFO: renamed from: com.discord.utilities.view.extensions.ViewExtensions$i18nSetText$1 */
+    /* JADX INFO: compiled from: ViewExtensions.kt */
     public static final class C69981 extends Lambda implements Function1<RenderContext, Unit> {
         public static final C69981 INSTANCE = new C69981();
 
@@ -250,14 +250,14 @@ public final class ViewExtensions {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(RenderContext renderContext) {
             Intrinsics3.checkNotNullParameter(renderContext, "$receiver");
         }
     }
 
-    /* compiled from: ViewExtensions.kt */
-    /* renamed from: com.discord.utilities.view.extensions.ViewExtensions$interceptScrollWhenInsideScrollable$1 */
+    /* JADX INFO: renamed from: com.discord.utilities.view.extensions.ViewExtensions$interceptScrollWhenInsideScrollable$1 */
+    /* JADX INFO: compiled from: ViewExtensions.kt */
     public static final class ViewOnTouchListenerC69991 implements View.OnTouchListener {
         public static final ViewOnTouchListenerC69991 INSTANCE = new ViewOnTouchListenerC69991();
 
@@ -272,8 +272,8 @@ public final class ViewExtensions {
         }
     }
 
-    /* compiled from: ViewExtensions.kt */
-    /* renamed from: com.discord.utilities.view.extensions.ViewExtensions$setForwardingWindowInsetsListener$1 */
+    /* JADX INFO: renamed from: com.discord.utilities.view.extensions.ViewExtensions$setForwardingWindowInsetsListener$1 */
+    /* JADX INFO: compiled from: ViewExtensions.kt */
     public static final class C70011 implements OnApplyWindowInsetsListener {
         public static final C70011 INSTANCE = new C70011();
 
@@ -291,8 +291,8 @@ public final class ViewExtensions {
         }
     }
 
-    /* compiled from: ViewExtensions.kt */
-    /* renamed from: com.discord.utilities.view.extensions.ViewExtensions$setOnImeActionDone$1 */
+    /* JADX INFO: renamed from: com.discord.utilities.view.extensions.ViewExtensions$setOnImeActionDone$1 */
+    /* JADX INFO: compiled from: ViewExtensions.kt */
     public static final class C70021 extends Lambda implements Function3<TextView, Integer, KeyEvent, Boolean> {
         public final /* synthetic */ boolean $isEventConsumed;
         public final /* synthetic */ Function1 $onImeActionDone;
@@ -322,8 +322,8 @@ public final class ViewExtensions {
         }
     }
 
-    /* compiled from: ViewExtensions.kt */
-    /* renamed from: com.discord.utilities.view.extensions.ViewExtensions$setOnLongClickListenerConsumeClick$1 */
+    /* JADX INFO: renamed from: com.discord.utilities.view.extensions.ViewExtensions$setOnLongClickListenerConsumeClick$1 */
+    /* JADX INFO: compiled from: ViewExtensions.kt */
     public static final class ViewOnLongClickListenerC70031 implements View.OnLongClickListener {
         public final /* synthetic */ Function1 $onLongClick;
 

@@ -22,15 +22,15 @@ import p007b.p195g.p196a.p205c.p221z.ConfigOverrides;
 import p007b.p195g.p196a.p205c.p221z.MapperConfig;
 import p007b.p195g.p196a.p205c.p221z.MapperConfigBase;
 
-/* compiled from: SerializationConfig.java */
-/* renamed from: b.g.a.c.v, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.g.a.c.v, reason: use source file name */
+/* JADX INFO: compiled from: SerializationConfig.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class SerializationConfig extends MapperConfigBase<SerializationFeature, SerializationConfig> implements Serializable {
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public static final PrettyPrinter2 f5033l = new DefaultPrettyPrinter();
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public static final int f5034m = MapperConfig.m2264c(SerializationFeature.class);
     private static final long serialVersionUID = 1;
     public final PrettyPrinter2 _defaultPrettyPrinter;
@@ -52,12 +52,12 @@ public final class SerializationConfig extends MapperConfigBase<SerializationFea
     }
 
     @Override // p007b.p195g.p196a.p205c.p221z.MapperConfigBase
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     public MapperConfigBase mo1969r(int i) {
         return new SerializationConfig(this, i, this._serFeatures, this._generatorFeatures, this._generatorFeaturesToChange, this._formatWriteFeatures, this._formatWriteFeaturesToChange);
     }
 
-    /* renamed from: u */
+    /* JADX INFO: renamed from: u */
     public BeanDescription m2236u(JavaType javaType) {
         DefaultAccessorNamingStrategy defaultAccessorNamingStrategy;
         BasicClassIntrospector basicClassIntrospector = (BasicClassIntrospector) this._base._classIntrospector;
@@ -87,7 +87,7 @@ public final class SerializationConfig extends MapperConfigBase<SerializationFea
         return new BasicBeanDescription(new POJOPropertiesCollector(this, true, javaType, annotatedClassM1921b, defaultAccessorNamingStrategy));
     }
 
-    /* renamed from: v */
+    /* JADX INFO: renamed from: v */
     public final boolean m2237v(SerializationFeature serializationFeature) {
         return (serializationFeature.mo2091g() & this._serFeatures) != 0;
     }

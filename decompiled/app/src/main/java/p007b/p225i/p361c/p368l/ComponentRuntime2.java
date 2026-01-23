@@ -6,12 +6,12 @@ import java.util.Iterator;
 import java.util.Set;
 import p007b.p225i.p361c.p400t.Provider2;
 
-/* compiled from: ComponentRuntime.java */
-/* renamed from: b.i.c.l.i, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.c.l.i, reason: use source file name */
+/* JADX INFO: compiled from: ComponentRuntime.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final /* synthetic */ class ComponentRuntime2 implements Provider2 {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final Set f12189a;
 
     public ComponentRuntime2(Set set) {

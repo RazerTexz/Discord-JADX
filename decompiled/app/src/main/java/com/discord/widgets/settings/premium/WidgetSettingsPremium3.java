@@ -3,9 +3,9 @@ package com.discord.widgets.settings.premium;
 import android.view.View;
 import com.discord.utilities.premium.PremiumUtils;
 
-/* compiled from: WidgetSettingsPremium.kt */
-/* renamed from: com.discord.widgets.settings.premium.WidgetSettingsPremium$configureButtons$$inlined$forEach$lambda$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.settings.premium.WidgetSettingsPremium$configureButtons$$inlined$forEach$lambda$1, reason: use source file name */
+/* JADX INFO: compiled from: WidgetSettingsPremium.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetSettingsPremium3 implements View.OnClickListener {
     public final /* synthetic */ WidgetSettingsPremium this$0;
 

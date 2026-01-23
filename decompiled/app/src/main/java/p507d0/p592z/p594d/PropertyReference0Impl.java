@@ -3,9 +3,9 @@ package p507d0.p592z.p594d;
 import kotlin.reflect.KDeclarationContainer;
 import p507d0.p513e0.KClass;
 
-/* compiled from: PropertyReference0Impl.java */
-/* renamed from: d0.z.d.w, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.z.d.w, reason: use source file name */
+/* JADX INFO: compiled from: PropertyReference0Impl.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class PropertyReference0Impl extends PropertyReference0 {
     public PropertyReference0Impl(KDeclarationContainer kDeclarationContainer, String str, String str2) {
         super(CallableReference.NO_RECEIVER, ((ClassBasedDeclarationContainer) kDeclarationContainer).getJClass(), str, str2, !(kDeclarationContainer instanceof KClass) ? 1 : 0);

@@ -59,11 +59,11 @@ import p507d0.p592z.p594d.Lambda;
 import p658rx.Observable;
 import p658rx.subjects.BehaviorSubject;
 
-/* compiled from: GuildInviteShareSheetViewModel.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: GuildInviteShareSheetViewModel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class GuildInviteShareSheetViewModel extends AppViewModel<ViewState> {
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private final Long channelId;
     private StoreState currentStoreState;
@@ -80,8 +80,8 @@ public final class GuildInviteShareSheetViewModel extends AppViewModel<ViewState
     private Channel targetChannel;
     private final TargetChannelSelector targetChannelSelector;
 
-    /* compiled from: GuildInviteShareSheetViewModel.kt */
-    /* renamed from: com.discord.widgets.guilds.invite.GuildInviteShareSheetViewModel$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.guilds.invite.GuildInviteShareSheetViewModel$1 */
+    /* JADX INFO: compiled from: GuildInviteShareSheetViewModel.kt */
     public static final class C86201 extends Lambda implements Function1<StoreState, Unit> {
         public C86201() {
             super(1);
@@ -93,15 +93,15 @@ public final class GuildInviteShareSheetViewModel extends AppViewModel<ViewState
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(StoreState storeState) {
             Intrinsics3.checkNotNullParameter(storeState, "storeState");
             GuildInviteShareSheetViewModel.access$handleStoreState(GuildInviteShareSheetViewModel.this, storeState);
         }
     }
 
-    /* compiled from: GuildInviteShareSheetViewModel.kt */
-    /* renamed from: com.discord.widgets.guilds.invite.GuildInviteShareSheetViewModel$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.guilds.invite.GuildInviteShareSheetViewModel$2 */
+    /* JADX INFO: compiled from: GuildInviteShareSheetViewModel.kt */
     public static final class C86212 extends Lambda implements Function1<String, Unit> {
         public C86212() {
             super(1);
@@ -113,7 +113,7 @@ public final class GuildInviteShareSheetViewModel extends AppViewModel<ViewState
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(String str) {
             GuildInviteShareSheetViewModel guildInviteShareSheetViewModel = GuildInviteShareSheetViewModel.this;
             Intrinsics3.checkNotNullExpressionValue(str, "searchQuery");
@@ -121,7 +121,7 @@ public final class GuildInviteShareSheetViewModel extends AppViewModel<ViewState
         }
     }
 
-    /* compiled from: GuildInviteShareSheetViewModel.kt */
+    /* JADX INFO: compiled from: GuildInviteShareSheetViewModel.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -141,10 +141,10 @@ public final class GuildInviteShareSheetViewModel extends AppViewModel<ViewState
         }
     }
 
-    /* compiled from: GuildInviteShareSheetViewModel.kt */
+    /* JADX INFO: compiled from: GuildInviteShareSheetViewModel.kt */
     public static abstract class StoreState {
 
-        /* compiled from: GuildInviteShareSheetViewModel.kt */
+        /* JADX INFO: compiled from: GuildInviteShareSheetViewModel.kt */
         public static final class Invalid extends StoreState {
             public static final Invalid INSTANCE = new Invalid();
 
@@ -153,7 +153,7 @@ public final class GuildInviteShareSheetViewModel extends AppViewModel<ViewState
             }
         }
 
-        /* compiled from: GuildInviteShareSheetViewModel.kt */
+        /* JADX INFO: compiled from: GuildInviteShareSheetViewModel.kt */
         public static final /* data */ class Valid extends StoreState {
             private final List<Channel> dms;
             private final Guild guild;
@@ -183,6 +183,7 @@ public final class GuildInviteShareSheetViewModel extends AppViewModel<ViewState
                 this.guildStageInstances = map2;
             }
 
+            /* JADX WARN: Multi-variable type inference failed */
             public static /* synthetic */ Valid copy$default(Valid valid, ModelInvite.Settings settings, Map map, MeUser meUser, List list, Guild guild, List list2, Map map2, int i, Object obj) {
                 if ((i & 1) != 0) {
                     settings = valid.inviteSettings;
@@ -213,7 +214,7 @@ public final class GuildInviteShareSheetViewModel extends AppViewModel<ViewState
                 return valid.copy(settings, map3, meUser2, list3, guild2, list4, map2);
             }
 
-            /* renamed from: component1, reason: from getter */
+            /* JADX INFO: renamed from: component1, reason: from getter */
             public final ModelInvite.Settings getInviteSettings() {
                 return this.inviteSettings;
             }
@@ -222,7 +223,7 @@ public final class GuildInviteShareSheetViewModel extends AppViewModel<ViewState
                 return this.invitableChannels;
             }
 
-            /* renamed from: component3, reason: from getter */
+            /* JADX INFO: renamed from: component3, reason: from getter */
             public final MeUser getMe() {
                 return this.me;
             }
@@ -231,7 +232,7 @@ public final class GuildInviteShareSheetViewModel extends AppViewModel<ViewState
                 return this.dms;
             }
 
-            /* renamed from: component5, reason: from getter */
+            /* JADX INFO: renamed from: component5, reason: from getter */
             public final Guild getGuild() {
                 return this.guild;
             }
@@ -337,8 +338,8 @@ public final class GuildInviteShareSheetViewModel extends AppViewModel<ViewState
         }
     }
 
-    /* compiled from: GuildInviteShareSheetViewModel.kt */
-    /* renamed from: com.discord.widgets.guilds.invite.GuildInviteShareSheetViewModel$generateInviteForChannel$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.guilds.invite.GuildInviteShareSheetViewModel$generateInviteForChannel$1 */
+    /* JADX INFO: compiled from: GuildInviteShareSheetViewModel.kt */
     public static final class C86221 extends Lambda implements Function1<ModelInvite, Unit> {
         public C86221() {
             super(1);
@@ -350,15 +351,15 @@ public final class GuildInviteShareSheetViewModel extends AppViewModel<ViewState
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(ModelInvite modelInvite) {
             Intrinsics3.checkNotNullParameter(modelInvite, "invite");
             GuildInviteShareSheetViewModel.access$handleInviteCreationSuccess(GuildInviteShareSheetViewModel.this, modelInvite);
         }
     }
 
-    /* compiled from: GuildInviteShareSheetViewModel.kt */
-    /* renamed from: com.discord.widgets.guilds.invite.GuildInviteShareSheetViewModel$generateInviteForChannel$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.guilds.invite.GuildInviteShareSheetViewModel$generateInviteForChannel$2 */
+    /* JADX INFO: compiled from: GuildInviteShareSheetViewModel.kt */
     public static final class C86232 extends Lambda implements Function1<Error, Unit> {
         public C86232() {
             super(1);
@@ -370,15 +371,15 @@ public final class GuildInviteShareSheetViewModel extends AppViewModel<ViewState
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Error error) {
             Intrinsics3.checkNotNullParameter(error, "it");
             GuildInviteShareSheetViewModel.access$handleInviteCreationFailure(GuildInviteShareSheetViewModel.this);
         }
     }
 
-    /* compiled from: GuildInviteShareSheetViewModel.kt */
-    /* renamed from: com.discord.widgets.guilds.invite.GuildInviteShareSheetViewModel$sendInviteToChannel$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.guilds.invite.GuildInviteShareSheetViewModel$sendInviteToChannel$1 */
+    /* JADX INFO: compiled from: GuildInviteShareSheetViewModel.kt */
     public static final class C86241 extends Lambda implements Function1<MessageQueue4, Unit> {
         public final /* synthetic */ GuildInvite $invite;
         public final /* synthetic */ String $inviteLink;
@@ -398,7 +399,7 @@ public final class GuildInviteShareSheetViewModel extends AppViewModel<ViewState
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(MessageQueue4 messageQueue4) {
             Intrinsics3.checkNotNullParameter(messageQueue4, "result");
             if (messageQueue4 instanceof MessageQueue4.Success) {
@@ -414,8 +415,8 @@ public final class GuildInviteShareSheetViewModel extends AppViewModel<ViewState
         }
     }
 
-    /* compiled from: GuildInviteShareSheetViewModel.kt */
-    /* renamed from: com.discord.widgets.guilds.invite.GuildInviteShareSheetViewModel$sendInviteToUser$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.guilds.invite.GuildInviteShareSheetViewModel$sendInviteToUser$1 */
+    /* JADX INFO: compiled from: GuildInviteShareSheetViewModel.kt */
     public static final class C86251 extends Lambda implements Function1<Channel, Unit> {
         public C86251() {
             super(1);
@@ -427,7 +428,7 @@ public final class GuildInviteShareSheetViewModel extends AppViewModel<ViewState
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Channel channel) {
             Intrinsics3.checkNotNullParameter(channel, "channel");
             GuildInviteShareSheetViewModel.access$sendInviteToChannel(GuildInviteShareSheetViewModel.this, channel.getId());
@@ -480,11 +481,9 @@ public final class GuildInviteShareSheetViewModel extends AppViewModel<ViewState
         guildInviteShareSheetViewModel.updateSentInvites(map);
     }
 
-    /* JADX WARN: Multi-variable type inference failed */
-    /* JADX WARN: Type inference failed for: r0v17, types: [java.util.List] */
     private final ViewState createViewState(String searchQuery, Map<String, ? extends Set<Long>> sentInvites, StoreState.Valid storeState, GuildInvite generatedInvite) {
         String link;
-        ArrayList arrayList;
+        List arrayList;
         DiffKeyProvider userItem;
         boolean zContains;
         Collections.sort(new ArrayList(storeState.getInvitableChannels().values()), ChannelUtils.m7684h(Channel.INSTANCE));
@@ -517,7 +516,7 @@ public final class GuildInviteShareSheetViewModel extends AppViewModel<ViewState
         }
         List<Channel> dms = storeState.getDms();
         ArrayList arrayList3 = new ArrayList(Iterables2.collectionSizeOrDefault(dms, 10));
-        Iterator it = dms.iterator();
+        Iterator<T> it = dms.iterator();
         while (true) {
             if (!it.hasNext()) {
                 break;
@@ -728,7 +727,7 @@ public final class GuildInviteShareSheetViewModel extends AppViewModel<ViewState
     }
 
     @MainThread
-    /* renamed from: updateViewState, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: updateViewState, reason: avoid collision after fix types in other method */
     public void updateViewState2(ViewState viewState) {
         Intrinsics3.checkNotNullParameter(viewState, "viewState");
         super.updateViewState(viewState);
@@ -764,7 +763,7 @@ public final class GuildInviteShareSheetViewModel extends AppViewModel<ViewState
         this.hasTrackedSuggestionsViewed = true;
     }
 
-    /* compiled from: GuildInviteShareSheetViewModel.kt */
+    /* JADX INFO: compiled from: GuildInviteShareSheetViewModel.kt */
     public static final /* data */ class ViewState {
         private final Channel channel;
         private final long guildId;
@@ -794,16 +793,17 @@ public final class GuildInviteShareSheetViewModel extends AppViewModel<ViewState
             this.hasSearchResults = list.size() > 1 && !(list.get(0) instanceof InviteSuggestionItemV2.SearchNoResultsItem);
         }
 
+        /* JADX WARN: Multi-variable type inference failed */
         public static /* synthetic */ ViewState copy$default(ViewState viewState, GuildInvite guildInvite, ModelInvite.Settings settings, List list, Channel channel, String str, Map map, boolean z2, long j, int i, Object obj) {
             return viewState.copy((i & 1) != 0 ? viewState.invite : guildInvite, (i & 2) != 0 ? viewState.inviteSettings : settings, (i & 4) != 0 ? viewState.inviteSuggestionItems : list, (i & 8) != 0 ? viewState.channel : channel, (i & 16) != 0 ? viewState.searchQuery : str, (i & 32) != 0 ? viewState.sentInvites : map, (i & 64) != 0 ? viewState.showInviteSettings : z2, (i & 128) != 0 ? viewState.guildId : j);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final GuildInvite getInvite() {
             return this.invite;
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final ModelInvite.Settings getInviteSettings() {
             return this.inviteSettings;
         }
@@ -812,12 +812,12 @@ public final class GuildInviteShareSheetViewModel extends AppViewModel<ViewState
             return this.inviteSuggestionItems;
         }
 
-        /* renamed from: component4, reason: from getter */
+        /* JADX INFO: renamed from: component4, reason: from getter */
         public final Channel getChannel() {
             return this.channel;
         }
 
-        /* renamed from: component5, reason: from getter */
+        /* JADX INFO: renamed from: component5, reason: from getter */
         public final String getSearchQuery() {
             return this.searchQuery;
         }
@@ -826,12 +826,12 @@ public final class GuildInviteShareSheetViewModel extends AppViewModel<ViewState
             return this.sentInvites;
         }
 
-        /* renamed from: component7, reason: from getter */
+        /* JADX INFO: renamed from: component7, reason: from getter */
         public final boolean getShowInviteSettings() {
             return this.showInviteSettings;
         }
 
-        /* renamed from: component8, reason: from getter */
+        /* JADX INFO: renamed from: component8, reason: from getter */
         public final long getGuildId() {
             return this.guildId;
         }
@@ -895,6 +895,9 @@ public final class GuildInviteShareSheetViewModel extends AppViewModel<ViewState
         }
 
         /* JADX WARN: Multi-variable type inference failed */
+        /* JADX WARN: Type inference failed for: r1v3, types: [int] */
+        /* JADX WARN: Type inference failed for: r1v7 */
+        /* JADX WARN: Type inference failed for: r1v9 */
         public int hashCode() {
             GuildInvite guildInvite = this.invite;
             int iHashCode = (guildInvite != null ? guildInvite.hashCode() : 0) * 31;
@@ -909,11 +912,11 @@ public final class GuildInviteShareSheetViewModel extends AppViewModel<ViewState
             Map<String, Set<Long>> map = this.sentInvites;
             int iHashCode6 = (iHashCode5 + (map != null ? map.hashCode() : 0)) * 31;
             boolean z2 = this.showInviteSettings;
-            int i = z2;
-            if (z2 != 0) {
-                i = 1;
+            ?? r1 = z2;
+            if (z2) {
+                r1 = 1;
             }
-            return C0002b.m3a(this.guildId) + ((iHashCode6 + i) * 31);
+            return C0002b.m3a(this.guildId) + ((iHashCode6 + r1) * 31);
         }
 
         public String toString() {

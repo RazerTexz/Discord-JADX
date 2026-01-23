@@ -10,18 +10,18 @@ import p007b.p225i.p226a.p288f.p299e.p300h.AbstractC3269d;
 import p007b.p225i.p226a.p288f.p299e.p300h.InterfaceC3273h;
 import p007b.p225i.p226a.p288f.p299e.p304k.C3363k;
 
-/* compiled from: com.google.android.gms:play-services-base@@17.3.0 */
-/* renamed from: b.i.a.f.e.k.s */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.e.k.s */
+/* JADX INFO: compiled from: com.google.android.gms:play-services-base@@17.3.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public final class C3379s implements AbstractC3269d.a {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final /* synthetic */ AbstractC3269d f9560a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final /* synthetic */ TaskCompletionSource f9561b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final /* synthetic */ C3363k.a f9562c;
 
     public C3379s(AbstractC3269d abstractC3269d, TaskCompletionSource taskCompletionSource, C3363k.a aVar, C3363k.b bVar) {
@@ -31,7 +31,7 @@ public final class C3379s implements AbstractC3269d.a {
     }
 
     @Override // p007b.p225i.p226a.p288f.p299e.p300h.AbstractC3269d.a
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final void mo4052a(Status status) {
         if (!status.m9030w0()) {
             this.f9561b.f20845a.m6025t(AnimatableValueParser.m540l0(status));

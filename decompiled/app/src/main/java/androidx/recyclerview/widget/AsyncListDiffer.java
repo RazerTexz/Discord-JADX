@@ -13,7 +13,7 @@ import java.util.List;
 import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.concurrent.Executor;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class AsyncListDiffer<T> {
     private static final Executor sMainThreadExecutor = new MainThreadExecutor();
     public final AsyncDifferConfig<T> mConfig;
@@ -28,14 +28,14 @@ public class AsyncListDiffer<T> {
     private List<T> mReadOnlyList;
     private final ListUpdateCallback mUpdateCallback;
 
-    /* renamed from: androidx.recyclerview.widget.AsyncListDiffer$1 */
+    /* JADX INFO: renamed from: androidx.recyclerview.widget.AsyncListDiffer$1 */
     public class RunnableC05351 implements Runnable {
         public final /* synthetic */ Runnable val$commitCallback;
         public final /* synthetic */ List val$newList;
         public final /* synthetic */ List val$oldList;
         public final /* synthetic */ int val$runGeneration;
 
-        /* renamed from: androidx.recyclerview.widget.AsyncListDiffer$1$1, reason: invalid class name */
+        /* JADX INFO: renamed from: androidx.recyclerview.widget.AsyncListDiffer$1$1, reason: invalid class name */
         public class AnonymousClass1 extends DiffUtil.Callback {
             public AnonymousClass1() {
             }
@@ -85,7 +85,7 @@ public class AsyncListDiffer<T> {
             }
         }
 
-        /* renamed from: androidx.recyclerview.widget.AsyncListDiffer$1$2, reason: invalid class name */
+        /* JADX INFO: renamed from: androidx.recyclerview.widget.AsyncListDiffer$1$2, reason: invalid class name */
         public class AnonymousClass2 implements Runnable {
             public final /* synthetic */ DiffUtil.DiffResult val$result;
 

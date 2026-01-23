@@ -11,8 +11,8 @@ import com.discord.widgets.chat.list.entries.ChatListEntry;
 import com.discord.widgets.chat.list.entries.MessageHeaderEntry;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: WidgetChatListAdapterItemMessageHeader.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetChatListAdapterItemMessageHeader.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetChatListAdapterItemMessageHeader extends WidgetChatListItem {
     private final WidgetChatListAdapterItemMessageHeaderBinding binding;
 

@@ -9,24 +9,24 @@ import java.util.Map;
 import p007b.p225i.p414e.DecodeHintType;
 import p007b.p225i.p414e.p418n.BitArray;
 
-/* compiled from: Code93Reader.java */
-/* renamed from: b.i.e.q.d, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.e.q.d, reason: use source file name */
+/* JADX INFO: compiled from: Code93Reader.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class Code93Reader extends OneDReader {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final char[] f13363a = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ-. $/+%abcd*".toCharArray();
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static final int[] f13364b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public static final int f13365c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final StringBuilder f13366d = new StringBuilder(20);
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final int[] f13367e = new int[6];
 
     static {
@@ -35,7 +35,7 @@ public final class Code93Reader extends OneDReader {
         f13365c = iArr[47];
     }
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public static void m6987g(CharSequence charSequence, int i, int i2) throws ChecksumException {
         int iIndexOf = 0;
         int i3 = 1;
@@ -51,7 +51,7 @@ public final class Code93Reader extends OneDReader {
         }
     }
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public static int m6988h(int[] iArr) {
         int i = 0;
         for (int i2 : iArr) {
@@ -334,7 +334,7 @@ public final class Code93Reader extends OneDReader {
         throw com.google.zxing.NotFoundException.f21665l;
      */
     @Override // p007b.p225i.p414e.p426q.OneDReader
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */

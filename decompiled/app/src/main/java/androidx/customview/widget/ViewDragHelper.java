@@ -16,7 +16,7 @@ import androidx.core.view.ViewCompat;
 import java.util.Arrays;
 import p007b.p100d.p104b.p105a.outline;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class ViewDragHelper {
     private static final int BASE_SETTLE_DURATION = 256;
     public static final int DIRECTION_ALL = 3;
@@ -58,7 +58,7 @@ public class ViewDragHelper {
     private int mActivePointerId = -1;
     private final Runnable mSetIdleRunnable = new RunnableC03172();
 
-    /* renamed from: androidx.customview.widget.ViewDragHelper$1 */
+    /* JADX INFO: renamed from: androidx.customview.widget.ViewDragHelper$1 */
     public static class InterpolatorC03161 implements Interpolator {
         @Override // android.animation.TimeInterpolator
         public float getInterpolation(float f) {
@@ -67,7 +67,7 @@ public class ViewDragHelper {
         }
     }
 
-    /* renamed from: androidx.customview.widget.ViewDragHelper$2 */
+    /* JADX INFO: renamed from: androidx.customview.widget.ViewDragHelper$2 */
     public class RunnableC03172 implements Runnable {
         public RunnableC03172() {
         }

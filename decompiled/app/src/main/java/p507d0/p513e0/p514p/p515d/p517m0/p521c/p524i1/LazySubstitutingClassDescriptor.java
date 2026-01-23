@@ -37,31 +37,31 @@ import p507d0.p513e0.p514p.p515d.p517m0.p567n.Variance;
 import p507d0.p513e0.p514p.p515d.p517m0.p567n.p568l1.KotlinTypeRefiner;
 import p507d0.p580t._Collections;
 
-/* compiled from: LazySubstitutingClassDescriptor.java */
-/* renamed from: d0.e0.p.d.m0.c.i1.t, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.c.i1.t, reason: use source file name */
+/* JADX INFO: compiled from: LazySubstitutingClassDescriptor.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class LazySubstitutingClassDescriptor extends ModuleAwareClassDescriptor {
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final ModuleAwareClassDescriptor f22980k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final TypeSubstitutor2 f22981l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public TypeSubstitutor2 f22982m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public List<TypeParameterDescriptor> f22983n;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public List<TypeParameterDescriptor> f22984o;
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public TypeConstructor f22985p;
 
-    /* compiled from: LazySubstitutingClassDescriptor.java */
-    /* renamed from: d0.e0.p.d.m0.c.i1.t$a */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.c.i1.t$a */
+    /* JADX INFO: compiled from: LazySubstitutingClassDescriptor.java */
     public class a implements Function1<TypeParameterDescriptor, Boolean> {
         public a(LazySubstitutingClassDescriptor lazySubstitutingClassDescriptor) {
         }
@@ -71,7 +71,7 @@ public class LazySubstitutingClassDescriptor extends ModuleAwareClassDescriptor 
             return invoke2(typeParameterDescriptor);
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public Boolean invoke2(TypeParameterDescriptor typeParameterDescriptor) {
             return Boolean.valueOf(!typeParameterDescriptor.isCapturedFromOuterDeclaration());
         }
@@ -85,7 +85,7 @@ public class LazySubstitutingClassDescriptor extends ModuleAwareClassDescriptor 
     /* JADX WARN: Removed duplicated region for block: B:34:0x0051  */
     /* JADX WARN: Removed duplicated region for block: B:35:0x0056  */
     /* JADX WARN: Removed duplicated region for block: B:36:0x005b  */
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
@@ -200,7 +200,7 @@ public class LazySubstitutingClassDescriptor extends ModuleAwareClassDescriptor 
         return declarationDescriptorVisitor.visitClassDescriptor(this, d);
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final TypeSubstitutor2 m9429b() {
         if (this.f22982m == null) {
             if (this.f22981l.isEmpty()) {

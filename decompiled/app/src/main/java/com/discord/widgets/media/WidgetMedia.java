@@ -82,12 +82,12 @@ import p658rx.Observable;
 import p658rx.Subscription;
 import p658rx.functions.Action2;
 
-/* compiled from: WidgetMedia.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetMedia.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetMedia extends AppFragment {
     public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetMedia.class, "binding", "getBinding()Lcom/discord/databinding/WidgetMediaBinding;", 0)};
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private static final String INTENT_HEIGHT = "INTENT_MEDIA_HEIGHT";
     private static final String INTENT_IMAGE_URL = "INTENT_IMAGE_URL";
@@ -99,7 +99,7 @@ public final class WidgetMedia extends AppFragment {
     private static final long VERTICAL_CONTROLS_ANIMATION_DURATION_MS = 200;
     private AppMediaPlayer appMediaPlayer;
 
-    /* renamed from: binding$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
     private ControlsAnimationAction controlsAnimationAction;
     private ValueAnimator controlsAnimator;
@@ -111,10 +111,10 @@ public final class WidgetMedia extends AppFragment {
     private int toolbarHeight;
     private String videoUrl;
 
-    /* renamed from: viewModel$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: viewModel$delegate, reason: from kotlin metadata */
     private final Lazy viewModel;
 
-    /* compiled from: WidgetMedia.kt */
+    /* JADX INFO: compiled from: WidgetMedia.kt */
     public static final class Companion {
 
         public final /* synthetic */ class WhenMappings {
@@ -184,14 +184,14 @@ public final class WidgetMedia extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetMedia.kt */
+    /* JADX INFO: compiled from: WidgetMedia.kt */
     public enum ControlsAnimationAction {
         SHOW,
         HIDE
     }
 
-    /* compiled from: WidgetMedia.kt */
-    /* renamed from: com.discord.widgets.media.WidgetMedia$configureMediaImage$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.media.WidgetMedia$configureMediaImage$1 */
+    /* JADX INFO: compiled from: WidgetMedia.kt */
     public static final class C90591 extends GestureDetector.SimpleOnGestureListener {
         private boolean mDoubleTapScroll;
         private final long DURATION_MS = 300;
@@ -297,8 +297,8 @@ public final class WidgetMedia extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetMedia.kt */
-    /* renamed from: com.discord.widgets.media.WidgetMedia$configureMediaImage$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.media.WidgetMedia$configureMediaImage$2 */
+    /* JADX INFO: compiled from: WidgetMedia.kt */
     public static final class C90602 extends BaseControllerListener<ImageInfo> {
         public C90602() {
         }
@@ -320,8 +320,8 @@ public final class WidgetMedia extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetMedia.kt */
-    /* renamed from: com.discord.widgets.media.WidgetMedia$onViewBound$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.media.WidgetMedia$onViewBound$1 */
+    /* JADX INFO: compiled from: WidgetMedia.kt */
     public static final class ViewOnClickListenerC90611 implements View.OnClickListener {
         public ViewOnClickListenerC90611() {
         }
@@ -332,8 +332,8 @@ public final class WidgetMedia extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetMedia.kt */
-    /* renamed from: com.discord.widgets.media.WidgetMedia$onViewBound$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.media.WidgetMedia$onViewBound$2 */
+    /* JADX INFO: compiled from: WidgetMedia.kt */
     public static final class ViewOnClickListenerC90622 implements View.OnClickListener {
         public ViewOnClickListenerC90622() {
         }
@@ -344,8 +344,8 @@ public final class WidgetMedia extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetMedia.kt */
-    /* renamed from: com.discord.widgets.media.WidgetMedia$onViewBound$3 */
+    /* JADX INFO: renamed from: com.discord.widgets.media.WidgetMedia$onViewBound$3 */
+    /* JADX INFO: compiled from: WidgetMedia.kt */
     public static final class C90633 extends Lambda implements Function2<Integer, Integer, Unit> {
         public C90633() {
             super(2);
@@ -362,8 +362,8 @@ public final class WidgetMedia extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetMedia.kt */
-    /* renamed from: com.discord.widgets.media.WidgetMedia$onViewBound$4 */
+    /* JADX INFO: renamed from: com.discord.widgets.media.WidgetMedia$onViewBound$4 */
+    /* JADX INFO: compiled from: WidgetMedia.kt */
     public static final class C90644 extends Lambda implements Function2<Integer, Integer, Unit> {
         public C90644() {
             super(2);
@@ -380,21 +380,21 @@ public final class WidgetMedia extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetMedia.kt */
-    /* renamed from: com.discord.widgets.media.WidgetMedia$onViewBoundOrOnResume$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.media.WidgetMedia$onViewBoundOrOnResume$1 */
+    /* JADX INFO: compiled from: WidgetMedia.kt */
     public static final class C90651<T1, T2> implements Action2<MenuItem, Context> {
         public final /* synthetic */ Uri $downloadUri;
         public final /* synthetic */ Uri $sourceUri;
         public final /* synthetic */ String $title;
         public final /* synthetic */ String $titleSubtext;
 
-        /* compiled from: WidgetMedia.kt */
-        /* renamed from: com.discord.widgets.media.WidgetMedia$onViewBoundOrOnResume$1$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.widgets.media.WidgetMedia$onViewBoundOrOnResume$1$1, reason: invalid class name */
+        /* JADX INFO: compiled from: WidgetMedia.kt */
         public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
             public final /* synthetic */ Context $context;
 
-            /* compiled from: WidgetMedia.kt */
-            /* renamed from: com.discord.widgets.media.WidgetMedia$onViewBoundOrOnResume$1$1$1, reason: invalid class name and collision with other inner class name */
+            /* JADX INFO: renamed from: com.discord.widgets.media.WidgetMedia$onViewBoundOrOnResume$1$1$1, reason: invalid class name and collision with other inner class name */
+            /* JADX INFO: compiled from: WidgetMedia.kt */
             public static final class C132871 extends Lambda implements Function1<String, Unit> {
                 public C132871() {
                     super(1);
@@ -406,7 +406,7 @@ public final class WidgetMedia extends AppFragment {
                     return Unit.f27425a;
                 }
 
-                /* renamed from: invoke, reason: avoid collision after fix types in other method */
+                /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
                 public final void invoke2(String str) {
                     Intrinsics3.checkNotNullParameter(str, "it");
                     if (WidgetMedia.this.isAdded()) {
@@ -419,8 +419,8 @@ public final class WidgetMedia extends AppFragment {
                 }
             }
 
-            /* compiled from: WidgetMedia.kt */
-            /* renamed from: com.discord.widgets.media.WidgetMedia$onViewBoundOrOnResume$1$1$2, reason: invalid class name */
+            /* JADX INFO: renamed from: com.discord.widgets.media.WidgetMedia$onViewBoundOrOnResume$1$1$2, reason: invalid class name */
+            /* JADX INFO: compiled from: WidgetMedia.kt */
             public static final class AnonymousClass2 extends Lambda implements Function1<Throwable, Unit> {
                 public AnonymousClass2() {
                     super(1);
@@ -432,7 +432,7 @@ public final class WidgetMedia extends AppFragment {
                     return Unit.f27425a;
                 }
 
-                /* renamed from: invoke, reason: avoid collision after fix types in other method */
+                /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
                 public final void invoke2(Throwable th) {
                     Intrinsics3.checkNotNullParameter(th, "it");
                     if (WidgetMedia.this.isAdded()) {
@@ -454,7 +454,7 @@ public final class WidgetMedia extends AppFragment {
                 return Unit.f27425a;
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2() {
                 Context context = this.$context;
                 Uri uri = C90651.this.$downloadUri;
@@ -476,7 +476,7 @@ public final class WidgetMedia extends AppFragment {
             call2(menuItem, context);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final void call2(MenuItem menuItem, Context context) {
             Intrinsics3.checkNotNullExpressionValue(menuItem, "menuItem");
             switch (menuItem.getItemId()) {
@@ -499,8 +499,8 @@ public final class WidgetMedia extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetMedia.kt */
-    /* renamed from: com.discord.widgets.media.WidgetMedia$showControls$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.media.WidgetMedia$showControls$1 */
+    /* JADX INFO: compiled from: WidgetMedia.kt */
     public static final class C90661 extends Lambda implements Function1<Subscription, Unit> {
         public C90661() {
             super(1);
@@ -512,15 +512,15 @@ public final class WidgetMedia extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Subscription subscription) {
             Intrinsics3.checkNotNullParameter(subscription, Traits.Payment.Type.SUBSCRIPTION);
             WidgetMedia.access$setControlsVisibilitySubscription$p(WidgetMedia.this, subscription);
         }
     }
 
-    /* compiled from: WidgetMedia.kt */
-    /* renamed from: com.discord.widgets.media.WidgetMedia$showControls$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.media.WidgetMedia$showControls$2 */
+    /* JADX INFO: compiled from: WidgetMedia.kt */
     public static final class C90672 extends Lambda implements Function1<Long, Unit> {
         public C90672() {
             super(1);
@@ -532,7 +532,7 @@ public final class WidgetMedia extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Long l) {
             WidgetMedia.access$hideControls(WidgetMedia.this);
         }

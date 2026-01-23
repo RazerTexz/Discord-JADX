@@ -7,15 +7,15 @@ import p007b.p225i.p226a.p242c.p267x2.ExtractorOutput;
 import p007b.p225i.p226a.p242c.p267x2.TrackOutput2;
 import p007b.p225i.p226a.p242c.p267x2.p276k0.TsPayloadReader;
 
-/* compiled from: SeiReader.java */
-/* renamed from: b.i.a.c.x2.k0.e0, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.x2.k0.e0, reason: use source file name */
+/* JADX INFO: compiled from: SeiReader.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class SeiReader {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final List<Format2> f8602a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final TrackOutput2[] f8603b;
 
     public SeiReader(List<Format2> list) {
@@ -23,7 +23,7 @@ public final class SeiReader {
         this.f8603b = new TrackOutput2[list.size()];
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public void m3757a(ExtractorOutput extractorOutput, TsPayloadReader.d dVar) {
         for (int i = 0; i < this.f8603b.length; i++) {
             dVar.m3765a();

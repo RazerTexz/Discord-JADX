@@ -5,12 +5,12 @@ import kotlin.jvm.functions.Function1;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: CodeVerificationView.kt */
-/* renamed from: b.a.y.e, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: b.a.y.e, reason: use source file name */
+/* JADX INFO: compiled from: CodeVerificationView.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class CodeVerificationView5 extends Lambda implements Function1<String, Unit> {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static final CodeVerificationView5 f2017j = new CodeVerificationView5();
 
     public CodeVerificationView5() {

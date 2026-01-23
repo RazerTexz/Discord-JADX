@@ -6,7 +6,7 @@ import android.content.Intent;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public abstract class ActivityResultContract<I, O> {
 
     public static final class SynchronousResult<T> {

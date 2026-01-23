@@ -14,11 +14,11 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p637j0.p642l.p647e.ScalarSynchronousObservable;
 import p658rx.Observable;
 
-/* compiled from: WidgetHomeModel.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetHomeModel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final /* data */ class WidgetHomeModel {
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private final Channel channel;
     private final long channelId;
@@ -33,7 +33,7 @@ public final /* data */ class WidgetHomeModel {
     private final boolean threadExperimentEnabled;
     private final int unreadCount;
 
-    /* compiled from: WidgetHomeModel.kt */
+    /* JADX INFO: compiled from: WidgetHomeModel.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -90,52 +90,52 @@ public final /* data */ class WidgetHomeModel {
         return widgetHomeModel.copy((i3 & 1) != 0 ? widgetHomeModel.selectedChannel : resolvedSelectedChannel, (i3 & 2) != 0 ? widgetHomeModel.selectedVoiceChannel : channel, (i3 & 4) != 0 ? widgetHomeModel.parentChannel : channel2, (i3 & 8) != 0 ? widgetHomeModel.dmPresence : presence, (i3 & 16) != 0 ? widgetHomeModel.unreadCount : i, (i3 & 32) != 0 ? widgetHomeModel.isFriend : z2, (i3 & 64) != 0 ? widgetHomeModel.isCallConnected : z3, (i3 & 128) != 0 ? widgetHomeModel.nsfwAllowed : nsfwAllowance, (i3 & 256) != 0 ? widgetHomeModel.threadCount : i2, (i3 & 512) != 0 ? widgetHomeModel.threadExperimentEnabled : z4);
     }
 
-    /* renamed from: component1, reason: from getter */
+    /* JADX INFO: renamed from: component1, reason: from getter */
     public final StoreChannelsSelected.ResolvedSelectedChannel getSelectedChannel() {
         return this.selectedChannel;
     }
 
-    /* renamed from: component10, reason: from getter */
+    /* JADX INFO: renamed from: component10, reason: from getter */
     public final boolean getThreadExperimentEnabled() {
         return this.threadExperimentEnabled;
     }
 
-    /* renamed from: component2, reason: from getter */
+    /* JADX INFO: renamed from: component2, reason: from getter */
     public final Channel getSelectedVoiceChannel() {
         return this.selectedVoiceChannel;
     }
 
-    /* renamed from: component3, reason: from getter */
+    /* JADX INFO: renamed from: component3, reason: from getter */
     public final Channel getParentChannel() {
         return this.parentChannel;
     }
 
-    /* renamed from: component4, reason: from getter */
+    /* JADX INFO: renamed from: component4, reason: from getter */
     public final Presence getDmPresence() {
         return this.dmPresence;
     }
 
-    /* renamed from: component5, reason: from getter */
+    /* JADX INFO: renamed from: component5, reason: from getter */
     public final int getUnreadCount() {
         return this.unreadCount;
     }
 
-    /* renamed from: component6, reason: from getter */
+    /* JADX INFO: renamed from: component6, reason: from getter */
     public final boolean getIsFriend() {
         return this.isFriend;
     }
 
-    /* renamed from: component7, reason: from getter */
+    /* JADX INFO: renamed from: component7, reason: from getter */
     public final boolean getIsCallConnected() {
         return this.isCallConnected;
     }
 
-    /* renamed from: component8, reason: from getter */
+    /* JADX INFO: renamed from: component8, reason: from getter */
     public final NsfwAllowance getNsfwAllowed() {
         return this.nsfwAllowed;
     }
 
-    /* renamed from: component9, reason: from getter */
+    /* JADX INFO: renamed from: component9, reason: from getter */
     public final int getThreadCount() {
         return this.threadCount;
     }
@@ -197,6 +197,15 @@ public final /* data */ class WidgetHomeModel {
     }
 
     /* JADX WARN: Multi-variable type inference failed */
+    /* JADX WARN: Type inference failed for: r2v11, types: [int] */
+    /* JADX WARN: Type inference failed for: r2v13, types: [int] */
+    /* JADX WARN: Type inference failed for: r2v15 */
+    /* JADX WARN: Type inference failed for: r2v16 */
+    /* JADX WARN: Type inference failed for: r2v20 */
+    /* JADX WARN: Type inference failed for: r2v21 */
+    /* JADX WARN: Type inference failed for: r3v0 */
+    /* JADX WARN: Type inference failed for: r3v1, types: [int] */
+    /* JADX WARN: Type inference failed for: r3v2 */
     public int hashCode() {
         StoreChannelsSelected.ResolvedSelectedChannel resolvedSelectedChannel = this.selectedChannel;
         int iHashCode = (resolvedSelectedChannel != null ? resolvedSelectedChannel.hashCode() : 0) * 31;
@@ -207,21 +216,21 @@ public final /* data */ class WidgetHomeModel {
         Presence presence = this.dmPresence;
         int iHashCode4 = (((iHashCode3 + (presence != null ? presence.hashCode() : 0)) * 31) + this.unreadCount) * 31;
         boolean z2 = this.isFriend;
-        int i = z2;
-        if (z2 != 0) {
-            i = 1;
+        ?? r2 = z2;
+        if (z2) {
+            r2 = 1;
         }
-        int i2 = (iHashCode4 + i) * 31;
+        int i = (iHashCode4 + r2) * 31;
         boolean z3 = this.isCallConnected;
-        int i3 = z3;
-        if (z3 != 0) {
-            i3 = 1;
+        ?? r22 = z3;
+        if (z3) {
+            r22 = 1;
         }
-        int i4 = (i2 + i3) * 31;
+        int i2 = (i + r22) * 31;
         NsfwAllowance nsfwAllowance = this.nsfwAllowed;
-        int iHashCode5 = (((i4 + (nsfwAllowance != null ? nsfwAllowance.hashCode() : 0)) * 31) + this.threadCount) * 31;
+        int iHashCode5 = (((i2 + (nsfwAllowance != null ? nsfwAllowance.hashCode() : 0)) * 31) + this.threadCount) * 31;
         boolean z4 = this.threadExperimentEnabled;
-        return iHashCode5 + (z4 ? 1 : z4 ? 1 : 0);
+        return iHashCode5 + (z4 ? 1 : z4);
     }
 
     public final boolean isCallConnected() {

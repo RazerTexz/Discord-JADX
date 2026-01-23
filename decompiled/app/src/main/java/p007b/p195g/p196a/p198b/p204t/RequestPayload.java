@@ -3,9 +3,9 @@ package p007b.p195g.p196a.p198b.p204t;
 import java.io.IOException;
 import java.io.Serializable;
 
-/* compiled from: RequestPayload.java */
-/* renamed from: b.g.a.b.t.i, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.g.a.b.t.i, reason: use source file name */
+/* JADX INFO: compiled from: RequestPayload.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class RequestPayload implements Serializable {
     private static final long serialVersionUID = 1;
     public String _charset;

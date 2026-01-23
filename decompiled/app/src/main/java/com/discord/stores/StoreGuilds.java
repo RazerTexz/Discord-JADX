@@ -57,8 +57,8 @@ import p637j0.p642l.p647e.ScalarSynchronousObservable;
 import p658rx.Observable;
 import p658rx.functions.Func2;
 
-/* compiled from: StoreGuilds.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: StoreGuilds.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class StoreGuilds extends StoreV2 {
     private static final int HUGE_GUILD_SIZE = 2000;
     private final Dispatcher dispatcher;
@@ -83,7 +83,7 @@ public final class StoreGuilds extends StoreV2 {
     private static final StoreGuilds8 GuildsUpdate = new StoreGuilds8();
     private static final StoreGuilds7 ComputedMembersUpdate = new StoreGuilds7();
 
-    /* compiled from: StoreGuilds.kt */
+    /* JADX INFO: compiled from: StoreGuilds.kt */
     public static final class Actions {
         public static final Actions INSTANCE = new Actions();
 
@@ -106,8 +106,8 @@ public final class StoreGuilds extends StoreV2 {
         }
     }
 
-    /* compiled from: StoreGuilds.kt */
-    /* renamed from: com.discord.stores.StoreGuilds$handleGuildMemberCommunicationEnabled$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreGuilds$handleGuildMemberCommunicationEnabled$1 */
+    /* JADX INFO: compiled from: StoreGuilds.kt */
     public static final class C60951 extends Lambda implements Function0<Unit> {
         public final /* synthetic */ long $guildId;
         public final /* synthetic */ long $userId;
@@ -125,14 +125,14 @@ public final class StoreGuilds extends StoreV2 {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             StoreGuilds.access$handleGuildMemberCommunicationEnabledInternal(StoreGuilds.this, this.$guildId, this.$userId);
         }
     }
 
-    /* compiled from: StoreGuilds.kt */
-    /* renamed from: com.discord.stores.StoreGuilds$initClearCommunicationDisabledObserver$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreGuilds$initClearCommunicationDisabledObserver$1 */
+    /* JADX INFO: compiled from: StoreGuilds.kt */
     public static final class C60961<T1, T2, R> implements Func2<List<? extends com.discord.models.member.GuildMember>, Long, List<? extends com.discord.models.member.GuildMember>> {
         public static final C60961 INSTANCE = new C60961();
 
@@ -141,7 +141,7 @@ public final class StoreGuilds extends StoreV2 {
             return call2((List<com.discord.models.member.GuildMember>) list, l);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final List<com.discord.models.member.GuildMember> call2(List<com.discord.models.member.GuildMember> list, Long l) {
             ArrayList arrayListM840a0 = outline.m840a0(list, "members");
             for (Object obj : list) {
@@ -153,12 +153,12 @@ public final class StoreGuilds extends StoreV2 {
         }
     }
 
-    /* compiled from: StoreGuilds.kt */
-    /* renamed from: com.discord.stores.StoreGuilds$initClearCommunicationDisabledObserver$2 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreGuilds$initClearCommunicationDisabledObserver$2 */
+    /* JADX INFO: compiled from: StoreGuilds.kt */
     public static final class C60972 extends Lambda implements Function1<List<? extends com.discord.models.member.GuildMember>, Unit> {
 
-        /* compiled from: StoreGuilds.kt */
-        /* renamed from: com.discord.stores.StoreGuilds$initClearCommunicationDisabledObserver$2$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.stores.StoreGuilds$initClearCommunicationDisabledObserver$2$1, reason: invalid class name */
+        /* JADX INFO: compiled from: StoreGuilds.kt */
         public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
             public final /* synthetic */ List $members;
 
@@ -174,7 +174,7 @@ public final class StoreGuilds extends StoreV2 {
                 return Unit.f27425a;
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2() {
                 List<com.discord.models.member.GuildMember> list = this.$members;
                 Intrinsics3.checkNotNullExpressionValue(list, "members");
@@ -194,14 +194,14 @@ public final class StoreGuilds extends StoreV2 {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(List<com.discord.models.member.GuildMember> list) {
             StoreGuilds.access$getDispatcher$p(StoreGuilds.this).schedule(new AnonymousClass1(list));
         }
     }
 
-    /* compiled from: StoreGuilds.kt */
-    /* renamed from: com.discord.stores.StoreGuilds$observeCommunicationDisabledGuildMembers$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreGuilds$observeCommunicationDisabledGuildMembers$1 */
+    /* JADX INFO: compiled from: StoreGuilds.kt */
     public static final class C60981<T1, T2, R> implements Func2<Set<? extends Long>, Map<Long, ? extends Map<Long, ? extends com.discord.models.member.GuildMember>>, List<? extends com.discord.models.member.GuildMember>> {
         public static final C60981 INSTANCE = new C60981();
 
@@ -210,7 +210,7 @@ public final class StoreGuilds extends StoreV2 {
             return call2((Set<Long>) set, (Map<Long, ? extends Map<Long, com.discord.models.member.GuildMember>>) map);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final List<com.discord.models.member.GuildMember> call2(Set<Long> set, Map<Long, ? extends Map<Long, com.discord.models.member.GuildMember>> map) {
             ArrayList arrayList;
             Collection<com.discord.models.member.GuildMember> collectionValues;
@@ -237,8 +237,8 @@ public final class StoreGuilds extends StoreV2 {
         }
     }
 
-    /* compiled from: StoreGuilds.kt */
-    /* renamed from: com.discord.stores.StoreGuilds$observeComputed$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreGuilds$observeComputed$1 */
+    /* JADX INFO: compiled from: StoreGuilds.kt */
     public static final class C60991 extends Lambda implements Function0<Map<Long, ? extends Map<Long, ? extends com.discord.models.member.GuildMember>>> {
         public C60991() {
             super(0);
@@ -250,14 +250,14 @@ public final class StoreGuilds extends StoreV2 {
         }
 
         @Override // kotlin.jvm.functions.Function0
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final Map<Long, ? extends Map<Long, ? extends com.discord.models.member.GuildMember>> invoke2() {
             return StoreGuilds.this.getMembers();
         }
     }
 
-    /* compiled from: StoreGuilds.kt */
-    /* renamed from: com.discord.stores.StoreGuilds$observeComputed$2 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreGuilds$observeComputed$2 */
+    /* JADX INFO: compiled from: StoreGuilds.kt */
     public static final class C61002<T, R> implements Func1<Map<Long, ? extends Map<Long, ? extends com.discord.models.member.GuildMember>>, Map<Long, ? extends com.discord.models.member.GuildMember>> {
         public final /* synthetic */ long $guildId;
 
@@ -270,15 +270,15 @@ public final class StoreGuilds extends StoreV2 {
             return call2((Map<Long, ? extends Map<Long, com.discord.models.member.GuildMember>>) map);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final Map<Long, com.discord.models.member.GuildMember> call2(Map<Long, ? extends Map<Long, com.discord.models.member.GuildMember>> map) {
             Map<Long, com.discord.models.member.GuildMember> map2 = map.get(Long.valueOf(this.$guildId));
             return map2 != null ? map2 : StoreGuilds.access$getEmptyComputedMap$cp();
         }
     }
 
-    /* compiled from: StoreGuilds.kt */
-    /* renamed from: com.discord.stores.StoreGuilds$observeComputedMember$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreGuilds$observeComputedMember$1 */
+    /* JADX INFO: compiled from: StoreGuilds.kt */
     public static final class C61011 extends Lambda implements Function0<com.discord.models.member.GuildMember> {
         public final /* synthetic */ long $guildId;
         public final /* synthetic */ long $userId;
@@ -302,8 +302,8 @@ public final class StoreGuilds extends StoreV2 {
         }
     }
 
-    /* compiled from: StoreGuilds.kt */
-    /* renamed from: com.discord.stores.StoreGuilds$observeFromChannelId$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreGuilds$observeFromChannelId$1 */
+    /* JADX INFO: compiled from: StoreGuilds.kt */
     public static final class C61021<T, R> implements Func1<Channel, Observable<? extends Guild>> {
         public C61021() {
         }
@@ -313,14 +313,14 @@ public final class StoreGuilds extends StoreV2 {
             return call2(channel);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final Observable<? extends Guild> call2(Channel channel) {
             return channel != null ? StoreGuilds.this.observeGuild(channel.getGuildId()) : new ScalarSynchronousObservable(null);
         }
     }
 
-    /* compiled from: StoreGuilds.kt */
-    /* renamed from: com.discord.stores.StoreGuilds$observeGuild$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreGuilds$observeGuild$1 */
+    /* JADX INFO: compiled from: StoreGuilds.kt */
     public static final class C61031<T, R> implements Func1<Map<Long, ? extends Guild>, Guild> {
         public final /* synthetic */ long $guildId;
 
@@ -333,14 +333,14 @@ public final class StoreGuilds extends StoreV2 {
             return call2((Map<Long, Guild>) map);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final Guild call2(Map<Long, Guild> map) {
             return map.get(Long.valueOf(this.$guildId));
         }
     }
 
-    /* compiled from: StoreGuilds.kt */
-    /* renamed from: com.discord.stores.StoreGuilds$observeGuildIds$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreGuilds$observeGuildIds$1 */
+    /* JADX INFO: compiled from: StoreGuilds.kt */
     public static final class C61041<T, R> implements Func1<Map<Long, ? extends Guild>, Observable<? extends Set<? extends Long>>> {
         public static final C61041 INSTANCE = new C61041();
 
@@ -349,14 +349,14 @@ public final class StoreGuilds extends StoreV2 {
             return call2((Map<Long, Guild>) map);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final Observable<? extends Set<Long>> call2(Map<Long, Guild> map) {
             return new ScalarSynchronousObservable(map.keySet());
         }
     }
 
-    /* compiled from: StoreGuilds.kt */
-    /* renamed from: com.discord.stores.StoreGuilds$observeGuildMember$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreGuilds$observeGuildMember$1 */
+    /* JADX INFO: compiled from: StoreGuilds.kt */
     public static final class C61051<T, R> implements Func1<Map<Long, ? extends Map<Long, ? extends com.discord.models.member.GuildMember>>, com.discord.models.member.GuildMember> {
         public final /* synthetic */ long $guildId;
         public final /* synthetic */ long $userId;
@@ -371,7 +371,7 @@ public final class StoreGuilds extends StoreV2 {
             return call2((Map<Long, ? extends Map<Long, com.discord.models.member.GuildMember>>) map);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final com.discord.models.member.GuildMember call2(Map<Long, ? extends Map<Long, com.discord.models.member.GuildMember>> map) {
             Map<Long, com.discord.models.member.GuildMember> map2 = map.get(Long.valueOf(this.$guildId));
             if (map2 != null) {
@@ -381,8 +381,8 @@ public final class StoreGuilds extends StoreV2 {
         }
     }
 
-    /* compiled from: StoreGuilds.kt */
-    /* renamed from: com.discord.stores.StoreGuilds$observeGuildMembers$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreGuilds$observeGuildMembers$1 */
+    /* JADX INFO: compiled from: StoreGuilds.kt */
     public static final class C61061<T, R> implements Func1<Map<Long, ? extends Map<Long, ? extends com.discord.models.member.GuildMember>>, Map<Long, ? extends com.discord.models.member.GuildMember>> {
         public final /* synthetic */ long $guildId;
 
@@ -395,15 +395,15 @@ public final class StoreGuilds extends StoreV2 {
             return call2((Map<Long, ? extends Map<Long, com.discord.models.member.GuildMember>>) map);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final Map<Long, com.discord.models.member.GuildMember> call2(Map<Long, ? extends Map<Long, com.discord.models.member.GuildMember>> map) {
             Map<Long, com.discord.models.member.GuildMember> map2 = map.get(Long.valueOf(this.$guildId));
             return map2 != null ? map2 : Maps6.emptyMap();
         }
     }
 
-    /* compiled from: StoreGuilds.kt */
-    /* renamed from: com.discord.stores.StoreGuilds$observeGuilds$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreGuilds$observeGuilds$1 */
+    /* JADX INFO: compiled from: StoreGuilds.kt */
     public static final class C61071 extends Lambda implements Function0<Map<Long, ? extends Guild>> {
         public C61071() {
             super(0);
@@ -415,14 +415,14 @@ public final class StoreGuilds extends StoreV2 {
         }
 
         @Override // kotlin.jvm.functions.Function0
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final Map<Long, ? extends Guild> invoke2() {
             return StoreGuilds.this.getGuilds();
         }
     }
 
-    /* compiled from: StoreGuilds.kt */
-    /* renamed from: com.discord.stores.StoreGuilds$observeJoinedAt$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreGuilds$observeJoinedAt$1 */
+    /* JADX INFO: compiled from: StoreGuilds.kt */
     public static final class C61081 extends Lambda implements Function0<Map<Long, ? extends Long>> {
         public C61081() {
             super(0);
@@ -434,14 +434,14 @@ public final class StoreGuilds extends StoreV2 {
         }
 
         @Override // kotlin.jvm.functions.Function0
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final Map<Long, ? extends Long> invoke2() {
             return StoreGuilds.this.getGuildsJoinedAt();
         }
     }
 
-    /* compiled from: StoreGuilds.kt */
-    /* renamed from: com.discord.stores.StoreGuilds$observeJoinedAt$2 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreGuilds$observeJoinedAt$2 */
+    /* JADX INFO: compiled from: StoreGuilds.kt */
     public static final class C61092<T, R> implements Func1<Map<Long, ? extends Long>, Long> {
         public final /* synthetic */ long $guildId;
 
@@ -454,14 +454,14 @@ public final class StoreGuilds extends StoreV2 {
             return call2((Map<Long, Long>) map);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final Long call2(Map<Long, Long> map) {
             return Long.valueOf(GuildMemberUtils.getJoinedAtOrNow(map.get(Long.valueOf(this.$guildId))));
         }
     }
 
-    /* compiled from: StoreGuilds.kt */
-    /* renamed from: com.discord.stores.StoreGuilds$observeRoles$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreGuilds$observeRoles$1 */
+    /* JADX INFO: compiled from: StoreGuilds.kt */
     public static final class C61101 extends Lambda implements Function0<Map<Long, ? extends Map<Long, ? extends GuildRole>>> {
         public C61101() {
             super(0);
@@ -473,14 +473,14 @@ public final class StoreGuilds extends StoreV2 {
         }
 
         @Override // kotlin.jvm.functions.Function0
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final Map<Long, ? extends Map<Long, ? extends GuildRole>> invoke2() {
             return StoreGuilds.this.getRoles();
         }
     }
 
-    /* compiled from: StoreGuilds.kt */
-    /* renamed from: com.discord.stores.StoreGuilds$observeRoles$2 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreGuilds$observeRoles$2 */
+    /* JADX INFO: compiled from: StoreGuilds.kt */
     public static final class C61112<T, R> implements Func1<Map<Long, ? extends Map<Long, ? extends GuildRole>>, Map<Long, ? extends GuildRole>> {
         public final /* synthetic */ long $guildId;
 
@@ -493,15 +493,15 @@ public final class StoreGuilds extends StoreV2 {
             return call2((Map<Long, ? extends Map<Long, GuildRole>>) map);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final Map<Long, GuildRole> call2(Map<Long, ? extends Map<Long, GuildRole>> map) {
             Map<Long, GuildRole> map2 = map.get(Long.valueOf(this.$guildId));
             return map2 != null ? map2 : StoreGuilds.access$getEmptyRoles$cp();
         }
     }
 
-    /* compiled from: StoreGuilds.kt */
-    /* renamed from: com.discord.stores.StoreGuilds$observeSortedRoles$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreGuilds$observeSortedRoles$1 */
+    /* JADX INFO: compiled from: StoreGuilds.kt */
     public static final class C61121<T, R> implements Func1<Map<Long, ? extends GuildRole>, Observable<? extends List<? extends GuildRole>>> {
         public static final C61121 INSTANCE = new C61121();
 
@@ -510,14 +510,14 @@ public final class StoreGuilds extends StoreV2 {
             return call2((Map<Long, GuildRole>) map);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final Observable<? extends List<GuildRole>> call2(Map<Long, GuildRole> map) {
             return new ScalarSynchronousObservable(_Collections.sortedWith(map.values(), RoleUtils.getROLE_COMPARATOR()));
         }
     }
 
-    /* compiled from: StoreGuilds.kt */
-    /* renamed from: com.discord.stores.StoreGuilds$observeUnavailableGuilds$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreGuilds$observeUnavailableGuilds$1 */
+    /* JADX INFO: compiled from: StoreGuilds.kt */
     public static final class C61131 extends Lambda implements Function0<Set<? extends Long>> {
         public C61131() {
             super(0);
@@ -529,14 +529,14 @@ public final class StoreGuilds extends StoreV2 {
         }
 
         @Override // kotlin.jvm.functions.Function0
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final Set<? extends Long> invoke2() {
             return StoreGuilds.this.getUnavailableGuilds();
         }
     }
 
-    /* compiled from: StoreGuilds.kt */
-    /* renamed from: com.discord.stores.StoreGuilds$observeVerificationLevel$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreGuilds$observeVerificationLevel$1 */
+    /* JADX INFO: compiled from: StoreGuilds.kt */
     public static final class C61141<T, R> implements Func1<Guild, GuildVerificationLevel> {
         public static final C61141 INSTANCE = new C61141();
 
@@ -545,7 +545,7 @@ public final class StoreGuilds extends StoreV2 {
             return call2(guild);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final GuildVerificationLevel call2(Guild guild) {
             GuildVerificationLevel verificationLevel;
             return (guild == null || (verificationLevel = guild.getVerificationLevel()) == null) ? GuildVerificationLevel.NONE : verificationLevel;

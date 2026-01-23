@@ -5,9 +5,9 @@ import com.discord.api.guildscheduledevent.GuildScheduledEvent;
 import java.util.Comparator;
 import p507d0.p582u.C12169a;
 
-/* compiled from: Comparisons.kt */
-/* renamed from: com.discord.widgets.voice.fullscreen.WidgetCallFullscreenViewModel$handleStoreState$$inlined$sortedBy$1 */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: com.discord.widgets.voice.fullscreen.WidgetCallFullscreenViewModel$handleStoreState$$inlined$sortedBy$1 */
+/* JADX INFO: compiled from: Comparisons.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class C10512x2d7d0c8f<T> implements Comparator {
     /* JADX WARN: Multi-variable type inference failed */
     @Override // java.util.Comparator

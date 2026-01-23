@@ -4,9 +4,9 @@ import androidx.exifinterface.media.ExifInterface;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: RestCallState.kt */
-/* renamed from: com.discord.stores.utilities.Success, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.stores.utilities.Success, reason: use source file name */
+/* JADX INFO: compiled from: RestCallState.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final /* data */ class RestCallState6<T> extends RestCallState<T> {
     private final T response;
 

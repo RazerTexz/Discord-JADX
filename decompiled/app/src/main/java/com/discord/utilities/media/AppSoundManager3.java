@@ -5,9 +5,9 @@ import android.media.MediaPlayer;
 import com.discord.utilities.media.AppSoundManager;
 import kotlin.jvm.functions.Function0;
 
-/* compiled from: AppSoundManager.kt */
-/* renamed from: com.discord.utilities.media.AppSoundManager$SoundPlayer$$special$$inlined$apply$lambda$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.utilities.media.AppSoundManager$SoundPlayer$$special$$inlined$apply$lambda$1, reason: use source file name */
+/* JADX INFO: compiled from: AppSoundManager.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class AppSoundManager3 implements MediaPlayer.OnCompletionListener {
     public final /* synthetic */ Context $context$inlined;
     public final /* synthetic */ Function0 $onCompletion$inlined;

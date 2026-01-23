@@ -58,12 +58,12 @@ import p507d0.p592z.p594d.Lambda;
 import p658rx.Observable;
 import p658rx.subjects.BehaviorSubject;
 
-/* compiled from: WidgetServerSettingsBans.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetServerSettingsBans.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetServerSettingsBans extends AppFragment {
     public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetServerSettingsBans.class, "binding", "getBinding()Lcom/discord/databinding/WidgetServerSettingsBansBinding;", 0)};
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private static final String INTENT_EXTRA_GUILD_ID = "GUILD_ID";
     private static final int VIEW_INDEX_BANS_LOADING = 0;
@@ -72,18 +72,18 @@ public final class WidgetServerSettingsBans extends AppFragment {
     private static final int VIEW_INDEX_NO_RESULTS = 3;
     private Adapter adapter;
 
-    /* renamed from: binding$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
     private AlertDialog dialog;
     private final BehaviorSubject<String> filterPublisher;
     private long guildId;
     private final AppLogger2 loggingConfig;
 
-    /* compiled from: WidgetServerSettingsBans.kt */
+    /* JADX INFO: compiled from: WidgetServerSettingsBans.kt */
     public static final class Adapter extends MGRecyclerAdapterSimple<Model.BanItem> {
         private Function1<? super ModelBan, Unit> onBanSelectedListener;
 
-        /* compiled from: WidgetServerSettingsBans.kt */
+        /* JADX INFO: compiled from: WidgetServerSettingsBans.kt */
         public final class BanListItem extends MGRecyclerViewHolder<Adapter, Model.BanItem> {
             private final WidgetServerSettingsBanListItemBinding binding;
             public final /* synthetic */ Adapter this$0;
@@ -119,7 +119,7 @@ public final class WidgetServerSettingsBans extends AppFragment {
                 onConfigure2(i, banItem);
             }
 
-            /* renamed from: onConfigure, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: onConfigure, reason: avoid collision after fix types in other method */
             public void onConfigure2(int position, Model.BanItem data) {
                 User user;
                 User user2;
@@ -170,7 +170,7 @@ public final class WidgetServerSettingsBans extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetServerSettingsBans.kt */
+    /* JADX INFO: compiled from: WidgetServerSettingsBans.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -188,8 +188,8 @@ public final class WidgetServerSettingsBans extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetServerSettingsBans.kt */
-    /* renamed from: com.discord.widgets.servers.WidgetServerSettingsBans$configureUI$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.WidgetServerSettingsBans$configureUI$1 */
+    /* JADX INFO: compiled from: WidgetServerSettingsBans.kt */
     public static final class C91931 extends Lambda implements Function1<ModelBan, Unit> {
         public final /* synthetic */ Model $model;
 
@@ -205,15 +205,15 @@ public final class WidgetServerSettingsBans extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(ModelBan modelBan) {
             Intrinsics3.checkNotNullParameter(modelBan, "ban");
             WidgetServerSettingsBans.access$showConfirmUnbanDialog(WidgetServerSettingsBans.this, this.$model.getGuildId(), modelBan);
         }
     }
 
-    /* compiled from: WidgetServerSettingsBans.kt */
-    /* renamed from: com.discord.widgets.servers.WidgetServerSettingsBans$onResume$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.WidgetServerSettingsBans$onResume$1 */
+    /* JADX INFO: compiled from: WidgetServerSettingsBans.kt */
     public static final class C91941 extends Lambda implements Function1<Editable, Unit> {
         public C91941() {
             super(1);
@@ -225,15 +225,15 @@ public final class WidgetServerSettingsBans extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Editable editable) {
             Intrinsics3.checkNotNullParameter(editable, "it");
             WidgetServerSettingsBans.access$getFilterPublisher$p(WidgetServerSettingsBans.this).onNext(editable.toString());
         }
     }
 
-    /* compiled from: WidgetServerSettingsBans.kt */
-    /* renamed from: com.discord.widgets.servers.WidgetServerSettingsBans$onResume$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.WidgetServerSettingsBans$onResume$2 */
+    /* JADX INFO: compiled from: WidgetServerSettingsBans.kt */
     public static final class C91952 extends Lambda implements Function1<Model, Unit> {
         public C91952() {
             super(1);
@@ -245,20 +245,20 @@ public final class WidgetServerSettingsBans extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Model model) throws Exception {
             WidgetServerSettingsBans.access$configureUI(WidgetServerSettingsBans.this, model);
         }
     }
 
-    /* compiled from: WidgetServerSettingsBans.kt */
-    /* renamed from: com.discord.widgets.servers.WidgetServerSettingsBans$showConfirmUnbanDialog$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.WidgetServerSettingsBans$showConfirmUnbanDialog$1 */
+    /* JADX INFO: compiled from: WidgetServerSettingsBans.kt */
     public static final class C91961 extends Lambda implements Function1<View, Unit> {
         public final /* synthetic */ ModelBan $ban;
         public final /* synthetic */ long $guildId;
 
-        /* compiled from: WidgetServerSettingsBans.kt */
-        /* renamed from: com.discord.widgets.servers.WidgetServerSettingsBans$showConfirmUnbanDialog$1$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.widgets.servers.WidgetServerSettingsBans$showConfirmUnbanDialog$1$1, reason: invalid class name */
+        /* JADX INFO: compiled from: WidgetServerSettingsBans.kt */
         public static final class AnonymousClass1 extends Lambda implements Function1<Void, Unit> {
             public static final AnonymousClass1 INSTANCE = new AnonymousClass1();
 
@@ -272,7 +272,7 @@ public final class WidgetServerSettingsBans extends AppFragment {
                 return Unit.f27425a;
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2(Void r1) {
             }
         }
@@ -290,7 +290,7 @@ public final class WidgetServerSettingsBans extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(View view) {
             Intrinsics3.checkNotNullParameter(view, "it");
             ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.ui$default(ObservableExtensionsKt.restSubscribeOn$default(RestAPI.INSTANCE.getApi().unbanUser(this.$guildId, this.$ban.getUser().getId()), false, 1, null), WidgetServerSettingsBans.this, null, 2, null), WidgetServerSettingsBans.this.getClass(), (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, AnonymousClass1.INSTANCE, 62, (Object) null);
@@ -432,7 +432,7 @@ public final class WidgetServerSettingsBans extends AppFragment {
         this.guildId = getMostRecentIntent().getLongExtra(INTENT_EXTRA_GUILD_ID, -1L);
     }
 
-    /* compiled from: WidgetServerSettingsBans.kt */
+    /* JADX INFO: compiled from: WidgetServerSettingsBans.kt */
     public static final /* data */ class Model {
         public static final int TYPE_BANNED_USER = 1;
         private final List<BanItem> filteredBannedUsers;
@@ -441,11 +441,11 @@ public final class WidgetServerSettingsBans extends AppFragment {
         private final boolean isLoading;
         private final int totalBannedUsers;
 
-        /* renamed from: Companion, reason: from kotlin metadata */
+        /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
         public static final Companion INSTANCE = new Companion(null);
         private static final ArrayList<BanItem> emptyBansList = new ArrayList<>();
 
-        /* compiled from: WidgetServerSettingsBans.kt */
+        /* JADX INFO: compiled from: WidgetServerSettingsBans.kt */
         public static final class Companion {
             private Companion() {
             }
@@ -513,6 +513,7 @@ public final class WidgetServerSettingsBans extends AppFragment {
             return emptyBansList;
         }
 
+        /* JADX WARN: Multi-variable type inference failed */
         public static /* synthetic */ Model copy$default(Model model, int i, List list, long j, String str, boolean z2, int i2, Object obj) {
             if ((i2 & 1) != 0) {
                 i = model.totalBannedUsers;
@@ -535,7 +536,7 @@ public final class WidgetServerSettingsBans extends AppFragment {
             return model.copy(i, list2, j2, str2, z2);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final int getTotalBannedUsers() {
             return this.totalBannedUsers;
         }
@@ -544,17 +545,17 @@ public final class WidgetServerSettingsBans extends AppFragment {
             return this.filteredBannedUsers;
         }
 
-        /* renamed from: component3, reason: from getter */
+        /* JADX INFO: renamed from: component3, reason: from getter */
         public final long getGuildId() {
             return this.guildId;
         }
 
-        /* renamed from: component4, reason: from getter */
+        /* JADX INFO: renamed from: component4, reason: from getter */
         public final String getGuildName() {
             return this.guildName;
         }
 
-        /* renamed from: component5, reason: from getter */
+        /* JADX INFO: renamed from: component5, reason: from getter */
         public final boolean getIsLoading() {
             return this.isLoading;
         }
@@ -591,6 +592,9 @@ public final class WidgetServerSettingsBans extends AppFragment {
         }
 
         /* JADX WARN: Multi-variable type inference failed */
+        /* JADX WARN: Type inference failed for: r0v6, types: [int] */
+        /* JADX WARN: Type inference failed for: r0v7 */
+        /* JADX WARN: Type inference failed for: r0v8 */
         public int hashCode() {
             int i = this.totalBannedUsers * 31;
             List<BanItem> list = this.filteredBannedUsers;
@@ -598,11 +602,11 @@ public final class WidgetServerSettingsBans extends AppFragment {
             String str = this.guildName;
             int iHashCode = (iM3a + (str != null ? str.hashCode() : 0)) * 31;
             boolean z2 = this.isLoading;
-            int i2 = z2;
-            if (z2 != 0) {
-                i2 = 1;
+            ?? r0 = z2;
+            if (z2) {
+                r0 = 1;
             }
-            return iHashCode + i2;
+            return iHashCode + r0;
         }
 
         public final boolean isLoading() {
@@ -622,7 +626,7 @@ public final class WidgetServerSettingsBans extends AppFragment {
             return outline.m827O(sbM833U, this.isLoading, ")");
         }
 
-        /* compiled from: WidgetServerSettingsBans.kt */
+        /* JADX INFO: compiled from: WidgetServerSettingsBans.kt */
         public static final /* data */ class BanItem implements MGRecyclerDataPayload {
             private ModelBan ban;
             private final String key;
@@ -646,7 +650,7 @@ public final class WidgetServerSettingsBans extends AppFragment {
                 return banItem.copy(modelBan);
             }
 
-            /* renamed from: component1, reason: from getter */
+            /* JADX INFO: renamed from: component1, reason: from getter */
             public final ModelBan getBan() {
                 return this.ban;
             }

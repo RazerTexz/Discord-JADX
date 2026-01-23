@@ -67,33 +67,33 @@ import p507d0.p592z.p594d.Lambda;
 import p507d0.p592z.p594d.MutablePropertyReference0Impl;
 import p507d0.p592z.p594d.Reflection2;
 
-/* compiled from: WidgetGuildProfileSheet.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetGuildProfileSheet.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetGuildProfileSheet extends AppBottomSheet {
     public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetGuildProfileSheet.class, "binding", "getBinding()Lcom/discord/databinding/WidgetGuildProfileSheetBinding;", 0)};
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private static final String EXTRA_FROM_UPSELL = "EXTRA_FROM_UPSELL";
     private static final int LOADED_VIEW_INDEX = 1;
     private static final int LOADING_VIEW_INDEX = 0;
     private static final int NUM_ROWS_EMOJIS = 2;
 
-    /* renamed from: binding$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
     private Long channelId;
     private AlertDialog dialog;
     private final WidgetGuildProfileSheetEmojisAdapter emojisAdapter;
 
-    /* renamed from: fromGuildEventUpsell$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: fromGuildEventUpsell$delegate, reason: from kotlin metadata */
     private final Lazy fromGuildEventUpsell;
     private WidgetGuildProfileActionsBinding guildActionBinding;
     private WidgetGuildHubProfileActionsBinding guildHubActionBinding;
 
-    /* renamed from: viewModel$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: viewModel$delegate, reason: from kotlin metadata */
     private final Lazy viewModel;
 
-    /* compiled from: WidgetGuildProfileSheet.kt */
+    /* JADX INFO: compiled from: WidgetGuildProfileSheet.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -130,8 +130,8 @@ public final class WidgetGuildProfileSheet extends AppBottomSheet {
         }
     }
 
-    /* compiled from: WidgetGuildProfileSheet.kt */
-    /* renamed from: com.discord.widgets.guilds.profile.WidgetGuildProfileSheet$configureGuildActions$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.guilds.profile.WidgetGuildProfileSheet$configureGuildActions$1 */
+    /* JADX INFO: compiled from: WidgetGuildProfileSheet.kt */
     public static final class ViewOnClickListenerC87871 implements View.OnClickListener {
         public final /* synthetic */ long $guildId;
 
@@ -145,8 +145,8 @@ public final class WidgetGuildProfileSheet extends AppBottomSheet {
         }
     }
 
-    /* compiled from: WidgetGuildProfileSheet.kt */
-    /* renamed from: com.discord.widgets.guilds.profile.WidgetGuildProfileSheet$configureGuildActions$11 */
+    /* JADX INFO: renamed from: com.discord.widgets.guilds.profile.WidgetGuildProfileSheet$configureGuildActions$11 */
+    /* JADX INFO: compiled from: WidgetGuildProfileSheet.kt */
     public static final class ViewOnClickListenerC878811 implements View.OnClickListener {
         public final /* synthetic */ long $guildId;
 
@@ -162,8 +162,8 @@ public final class WidgetGuildProfileSheet extends AppBottomSheet {
         }
     }
 
-    /* compiled from: WidgetGuildProfileSheet.kt */
-    /* renamed from: com.discord.widgets.guilds.profile.WidgetGuildProfileSheet$configureGuildHubActions$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.guilds.profile.WidgetGuildProfileSheet$configureGuildHubActions$1 */
+    /* JADX INFO: compiled from: WidgetGuildProfileSheet.kt */
     public static final class ViewOnClickListenerC87911 implements View.OnClickListener {
         public final /* synthetic */ long $guildId;
 
@@ -177,8 +177,8 @@ public final class WidgetGuildProfileSheet extends AppBottomSheet {
         }
     }
 
-    /* compiled from: WidgetGuildProfileSheet.kt */
-    /* renamed from: com.discord.widgets.guilds.profile.WidgetGuildProfileSheet$configureGuildHubActions$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.guilds.profile.WidgetGuildProfileSheet$configureGuildHubActions$2 */
+    /* JADX INFO: compiled from: WidgetGuildProfileSheet.kt */
     public static final class C87922 extends Lambda implements Function1<View, Unit> {
         public final /* synthetic */ long $guildId;
 
@@ -194,7 +194,7 @@ public final class WidgetGuildProfileSheet extends AppBottomSheet {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(View view) {
             Intrinsics3.checkNotNullParameter(view, "it");
             Experiment userExperiment = StoreStream.INSTANCE.getExperiments().getUserExperiment("2021-10_premium_guild_member_profiles", true);
@@ -213,8 +213,8 @@ public final class WidgetGuildProfileSheet extends AppBottomSheet {
         }
     }
 
-    /* compiled from: WidgetGuildProfileSheet.kt */
-    /* renamed from: com.discord.widgets.guilds.profile.WidgetGuildProfileSheet$configureUI$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.guilds.profile.WidgetGuildProfileSheet$configureUI$1 */
+    /* JADX INFO: compiled from: WidgetGuildProfileSheet.kt */
     public final /* synthetic */ class C87971 extends MutablePropertyReference0Impl {
         public C87971(WidgetGuildProfileSheet widgetGuildProfileSheet) {
             super(widgetGuildProfileSheet, WidgetGuildProfileSheet.class, "guildHubActionBinding", "getGuildHubActionBinding()Lcom/discord/databinding/WidgetGuildHubProfileActionsBinding;", 0);
@@ -231,8 +231,8 @@ public final class WidgetGuildProfileSheet extends AppBottomSheet {
         }
     }
 
-    /* compiled from: WidgetGuildProfileSheet.kt */
-    /* renamed from: com.discord.widgets.guilds.profile.WidgetGuildProfileSheet$configureUI$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.guilds.profile.WidgetGuildProfileSheet$configureUI$2 */
+    /* JADX INFO: compiled from: WidgetGuildProfileSheet.kt */
     public final /* synthetic */ class C87982 extends MutablePropertyReference0Impl {
         public C87982(WidgetGuildProfileSheet widgetGuildProfileSheet) {
             super(widgetGuildProfileSheet, WidgetGuildProfileSheet.class, "guildActionBinding", "getGuildActionBinding()Lcom/discord/databinding/WidgetGuildProfileActionsBinding;", 0);
@@ -249,28 +249,28 @@ public final class WidgetGuildProfileSheet extends AppBottomSheet {
         }
     }
 
-    /* compiled from: WidgetGuildProfileSheet.kt */
-    /* renamed from: com.discord.widgets.guilds.profile.WidgetGuildProfileSheet$onViewCreated$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.guilds.profile.WidgetGuildProfileSheet$onViewCreated$1 */
+    /* JADX INFO: compiled from: WidgetGuildProfileSheet.kt */
     public static final /* synthetic */ class C87991 extends FunctionReferenceImpl implements Function1<WidgetGuildProfileSheetViewModel.ViewState, Unit> {
         public C87991(WidgetGuildProfileSheet widgetGuildProfileSheet) {
             super(1, widgetGuildProfileSheet, WidgetGuildProfileSheet.class, "handleViewState", "handleViewState(Lcom/discord/widgets/guilds/profile/WidgetGuildProfileSheetViewModel$ViewState;)V", 0);
         }
 
         @Override // kotlin.jvm.functions.Function1
-        public /* bridge */ /* synthetic */ Unit invoke(WidgetGuildProfileSheetViewModel.ViewState viewState) throws Resources.NotFoundException {
+        public /* bridge */ /* synthetic */ Unit invoke(WidgetGuildProfileSheetViewModel.ViewState viewState) {
             invoke2(viewState);
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
-        public final void invoke2(WidgetGuildProfileSheetViewModel.ViewState viewState) throws Resources.NotFoundException {
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
+        public final void invoke2(WidgetGuildProfileSheetViewModel.ViewState viewState) {
             Intrinsics3.checkNotNullParameter(viewState, "p1");
             WidgetGuildProfileSheet.access$handleViewState((WidgetGuildProfileSheet) this.receiver, viewState);
         }
     }
 
-    /* compiled from: WidgetGuildProfileSheet.kt */
-    /* renamed from: com.discord.widgets.guilds.profile.WidgetGuildProfileSheet$onViewCreated$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.guilds.profile.WidgetGuildProfileSheet$onViewCreated$2 */
+    /* JADX INFO: compiled from: WidgetGuildProfileSheet.kt */
     public static final /* synthetic */ class C88002 extends FunctionReferenceImpl implements Function1<WidgetGuildProfileSheetViewModel.Event, Unit> {
         public C88002(WidgetGuildProfileSheet widgetGuildProfileSheet) {
             super(1, widgetGuildProfileSheet, WidgetGuildProfileSheet.class, "handleEvent", "handleEvent(Lcom/discord/widgets/guilds/profile/WidgetGuildProfileSheetViewModel$Event;)V", 0);
@@ -282,15 +282,15 @@ public final class WidgetGuildProfileSheet extends AppBottomSheet {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(WidgetGuildProfileSheetViewModel.Event event) {
             Intrinsics3.checkNotNullParameter(event, "p1");
             WidgetGuildProfileSheet.access$handleEvent((WidgetGuildProfileSheet) this.receiver, event);
         }
     }
 
-    /* compiled from: WidgetGuildProfileSheet.kt */
-    /* renamed from: com.discord.widgets.guilds.profile.WidgetGuildProfileSheet$onViewCreated$3 */
+    /* JADX INFO: renamed from: com.discord.widgets.guilds.profile.WidgetGuildProfileSheet$onViewCreated$3 */
+    /* JADX INFO: compiled from: WidgetGuildProfileSheet.kt */
     public static final class C88013 extends Lambda implements Function0<Unit> {
         public C88013() {
             super(0);
@@ -302,7 +302,7 @@ public final class WidgetGuildProfileSheet extends AppBottomSheet {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             WidgetGuildProfileSheet.access$getViewModel$p(WidgetGuildProfileSheet.this).onClickEmoji();
         }
@@ -346,7 +346,7 @@ public final class WidgetGuildProfileSheet extends AppBottomSheet {
         widgetGuildProfileSheet.handleEvent(event);
     }
 
-    public static final /* synthetic */ void access$handleViewState(WidgetGuildProfileSheet widgetGuildProfileSheet, WidgetGuildProfileSheetViewModel.ViewState viewState) throws Resources.NotFoundException {
+    public static final /* synthetic */ void access$handleViewState(WidgetGuildProfileSheet widgetGuildProfileSheet, WidgetGuildProfileSheetViewModel.ViewState viewState) {
         widgetGuildProfileSheet.handleViewState(viewState);
     }
 
@@ -736,7 +736,7 @@ public final class WidgetGuildProfileSheet extends AppBottomSheet {
         textView3.setText(shortName);
     }
 
-    private final void configureMemberCount(Integer approximatePresenceCount, Integer approximateMemberCount) throws Resources.NotFoundException {
+    private final void configureMemberCount(Integer approximatePresenceCount, Integer approximateMemberCount) {
         if (approximatePresenceCount != null) {
             LinearLayout linearLayout = getBinding().f16905q;
             Intrinsics3.checkNotNullExpressionValue(linearLayout, "binding.guildProfileSheetOnlineCount");
@@ -821,7 +821,7 @@ public final class WidgetGuildProfileSheet extends AppBottomSheet {
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
-    private final void configureUI(WidgetGuildProfileSheetViewModel.ViewState.Loaded viewState) throws Resources.NotFoundException {
+    private final void configureUI(WidgetGuildProfileSheetViewModel.ViewState.Loaded viewState) {
         WidgetGuildProfileSheetViewModel.Actions actions;
         int i;
         WidgetGuildProfileSheetViewModel.TabItems tabItems;
@@ -1154,7 +1154,7 @@ public final class WidgetGuildProfileSheet extends AppBottomSheet {
         }
     }
 
-    private final void handleViewState(WidgetGuildProfileSheetViewModel.ViewState viewState) throws Resources.NotFoundException {
+    private final void handleViewState(WidgetGuildProfileSheetViewModel.ViewState viewState) {
         if (viewState instanceof WidgetGuildProfileSheetViewModel.ViewState.Loading) {
             showLoadingView();
         } else if (viewState instanceof WidgetGuildProfileSheetViewModel.ViewState.Invalid) {
@@ -1230,7 +1230,7 @@ public final class WidgetGuildProfileSheet extends AppBottomSheet {
         appViewFlipper.setDisplayedChild(0);
     }
 
-    private final void updateView(WidgetGuildProfileSheetViewModel.ViewState.Loaded viewState) throws Resources.NotFoundException {
+    private final void updateView(WidgetGuildProfileSheetViewModel.ViewState.Loaded viewState) {
         AppViewFlipper appViewFlipper = getBinding().f16895g;
         Intrinsics3.checkNotNullExpressionValue(appViewFlipper, "binding.guildProfileSheetFlipper");
         appViewFlipper.setDisplayedChild(1);

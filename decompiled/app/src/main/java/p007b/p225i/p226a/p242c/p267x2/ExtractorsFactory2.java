@@ -4,13 +4,13 @@ import android.net.Uri;
 import java.util.List;
 import java.util.Map;
 
-/* compiled from: ExtractorsFactory.java */
-/* renamed from: b.i.a.c.x2.l, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.x2.l, reason: use source file name */
+/* JADX INFO: compiled from: ExtractorsFactory.java */
+/* JADX INFO: loaded from: classes3.dex */
 public interface ExtractorsFactory2 {
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     Extractor[] mo3630a();
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     Extractor[] mo3631b(Uri uri, Map<String, List<String>> map);
 }

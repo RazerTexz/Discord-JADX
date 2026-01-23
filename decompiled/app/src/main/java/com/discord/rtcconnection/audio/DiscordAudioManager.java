@@ -54,113 +54,113 @@ import p507d0.p592z.p594d.Lambda;
 import p658rx.subjects.BehaviorSubject;
 import p658rx.subjects.SerializedSubject;
 
-/* compiled from: DiscordAudioManager.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: DiscordAudioManager.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class DiscordAudioManager {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final Lazy f18826a = LazyJVM.lazy(C5623d.f18864j);
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static final AudioDevice f18827b = new AudioDevice(null, false, null, null, 15);
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public static final List<DeviceTypes> f18828c = Collections2.listOf((Object[]) new DeviceTypes[]{DeviceTypes.EARPIECE, DeviceTypes.SPEAKERPHONE, DeviceTypes.BLUETOOTH_HEADSET, DeviceTypes.WIRED_HEADSET});
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public static final DiscordAudioManager f18829d = null;
 
-    /* renamed from: A */
+    /* JADX INFO: renamed from: A */
     public boolean f18830A;
 
-    /* renamed from: B */
+    /* JADX INFO: renamed from: B */
     public boolean f18831B;
 
-    /* renamed from: C */
+    /* JADX INFO: renamed from: C */
     public boolean f18832C;
 
-    /* renamed from: D */
+    /* JADX INFO: renamed from: D */
     public boolean f18833D;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final AudioManager f18834e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final BluetoothManager f18835f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public final Lazy f18836g;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public final boolean f18837h;
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public final Object f18838i;
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final long f18839j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final ContentResolver f18840k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final BluetoothBroadcastReceiver f18841l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public final AudioManagerBroadcastReceiver f18842m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public BluetoothHeadset f18843n;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public BluetoothScoState f18844o;
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public AudioManager.OnAudioFocusChangeListener f18845p;
 
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     public AudioFocusRequest f18846q;
 
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     public List<AudioDevice> f18847r;
 
-    /* renamed from: s */
+    /* JADX INFO: renamed from: s */
     public final SerializedSubject<List<AudioDevice>, List<AudioDevice>> f18848s;
 
-    /* renamed from: t */
+    /* JADX INFO: renamed from: t */
     public DeviceTypes f18849t;
 
-    /* renamed from: u */
+    /* JADX INFO: renamed from: u */
     public final SerializedSubject<DeviceTypes, DeviceTypes> f18850u;
 
-    /* renamed from: v */
+    /* JADX INFO: renamed from: v */
     public ContentObserver f18851v;
 
-    /* renamed from: w */
+    /* JADX INFO: renamed from: w */
     public int f18852w;
 
-    /* renamed from: x */
+    /* JADX INFO: renamed from: x */
     public final int f18853x;
 
-    /* renamed from: y */
+    /* JADX INFO: renamed from: y */
     public final SerializedSubject<Integer, Integer> f18854y;
 
-    /* renamed from: z */
+    /* JADX INFO: renamed from: z */
     public DeviceTypes f18855z;
 
-    /* compiled from: DiscordAudioManager.kt */
+    /* JADX INFO: compiled from: DiscordAudioManager.kt */
     public static final /* data */ class AudioDevice {
 
-        /* renamed from: a, reason: from kotlin metadata */
+        /* JADX INFO: renamed from: a, reason: from kotlin metadata */
         public final DeviceTypes type;
 
-        /* renamed from: b, reason: from kotlin metadata */
+        /* JADX INFO: renamed from: b, reason: from kotlin metadata */
         public final boolean isAvailable;
 
-        /* renamed from: c, reason: from kotlin metadata */
+        /* JADX INFO: renamed from: c, reason: from kotlin metadata */
         public final String id;
 
-        /* renamed from: d, reason: from kotlin metadata */
+        /* JADX INFO: renamed from: d, reason: from kotlin metadata */
         public final String name;
 
         public AudioDevice() {
@@ -175,7 +175,7 @@ public final class DiscordAudioManager {
             this.name = str2;
         }
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public static AudioDevice m8493a(AudioDevice audioDevice, DeviceTypes deviceTypes, boolean z2, String str, String str2, int i) {
             DeviceTypes deviceTypes2 = (i & 1) != 0 ? audioDevice.type : null;
             if ((i & 2) != 0) {
@@ -204,17 +204,20 @@ public final class DiscordAudioManager {
         }
 
         /* JADX WARN: Multi-variable type inference failed */
+        /* JADX WARN: Type inference failed for: r2v1, types: [int] */
+        /* JADX WARN: Type inference failed for: r2v7 */
+        /* JADX WARN: Type inference failed for: r2v8 */
         public int hashCode() {
             DeviceTypes deviceTypes = this.type;
             int iHashCode = (deviceTypes != null ? deviceTypes.hashCode() : 0) * 31;
             boolean z2 = this.isAvailable;
-            int i = z2;
-            if (z2 != 0) {
-                i = 1;
+            ?? r2 = z2;
+            if (z2) {
+                r2 = 1;
             }
-            int i2 = (iHashCode + i) * 31;
+            int i = (iHashCode + r2) * 31;
             String str = this.id;
-            int iHashCode2 = (i2 + (str != null ? str.hashCode() : 0)) * 31;
+            int iHashCode2 = (i + (str != null ? str.hashCode() : 0)) * 31;
             String str2 = this.name;
             return iHashCode2 + (str2 != null ? str2.hashCode() : 0);
         }
@@ -243,7 +246,7 @@ public final class DiscordAudioManager {
         }
     }
 
-    /* compiled from: DiscordAudioManager.kt */
+    /* JADX INFO: compiled from: DiscordAudioManager.kt */
     public enum BluetoothScoState {
         INVALID(-1),
         OFF(0),
@@ -262,7 +265,7 @@ public final class DiscordAudioManager {
         }
     }
 
-    /* compiled from: DiscordAudioManager.kt */
+    /* JADX INFO: compiled from: DiscordAudioManager.kt */
     public enum DeviceTypes {
         DEFAULT(-2),
         INVALID(-1),
@@ -282,8 +285,8 @@ public final class DiscordAudioManager {
         }
     }
 
-    /* compiled from: DiscordAudioManager.kt */
-    /* renamed from: com.discord.rtcconnection.audio.DiscordAudioManager$a */
+    /* JADX INFO: renamed from: com.discord.rtcconnection.audio.DiscordAudioManager$a */
+    /* JADX INFO: compiled from: DiscordAudioManager.kt */
     public static final class RunnableC5620a implements Runnable {
         public RunnableC5620a() {
         }
@@ -353,14 +356,14 @@ public final class DiscordAudioManager {
         }
     }
 
-    /* compiled from: DiscordAudioManager.kt */
-    /* renamed from: com.discord.rtcconnection.audio.DiscordAudioManager$b */
+    /* JADX INFO: renamed from: com.discord.rtcconnection.audio.DiscordAudioManager$b */
+    /* JADX INFO: compiled from: DiscordAudioManager.kt */
     public final class C5621b implements OnAudioManagerBroadcastListener {
         public C5621b() {
         }
 
         @Override // p007b.p008a.p041q.p042k0.OnAudioManagerBroadcastListener
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public void mo281a(Context context, boolean z2) {
             Intrinsics3.checkNotNullParameter(context, "context");
             Intrinsics3.checkNotNullParameter(context, "context");
@@ -368,7 +371,7 @@ public final class DiscordAudioManager {
 
         @Override // p007b.p008a.p041q.p042k0.OnAudioManagerBroadcastListener
         @MainThread
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public void mo282b(Context context, ScoAudioState.C5637b c5637b) {
             boolean z2;
             Intrinsics3.checkNotNullParameter(context, "context");
@@ -420,14 +423,14 @@ public final class DiscordAudioManager {
         }
 
         @Override // p007b.p008a.p041q.p042k0.OnAudioManagerBroadcastListener
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public void mo283c(Context context) {
             Intrinsics3.checkNotNullParameter(context, "context");
             Intrinsics3.checkNotNullParameter(context, "context");
         }
 
         @Override // p007b.p008a.p041q.p042k0.OnAudioManagerBroadcastListener
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         public void mo284d(Context context, boolean z2) {
             Intrinsics3.checkNotNullParameter(context, "context");
             Intrinsics3.checkNotNullParameter(context, "context");
@@ -435,7 +438,7 @@ public final class DiscordAudioManager {
 
         @Override // p007b.p008a.p041q.p042k0.OnAudioManagerBroadcastListener
         @MainThread
-        /* renamed from: e */
+        /* JADX INFO: renamed from: e */
         public void mo285e(Context context, WiredHeadsetState wiredHeadsetState) {
             Intrinsics3.checkNotNullParameter(context, "context");
             Intrinsics3.checkNotNullParameter(wiredHeadsetState, "wiredHeadsetState");
@@ -469,15 +472,15 @@ public final class DiscordAudioManager {
         }
     }
 
-    /* compiled from: DiscordAudioManager.kt */
-    /* renamed from: com.discord.rtcconnection.audio.DiscordAudioManager$c */
+    /* JADX INFO: renamed from: com.discord.rtcconnection.audio.DiscordAudioManager$c */
+    /* JADX INFO: compiled from: DiscordAudioManager.kt */
     public final class C5622c implements OnBluetoothBroadcastListener {
         public C5622c() {
         }
 
         @Override // p007b.p008a.p041q.p042k0.OnBluetoothBroadcastListener
         @MainThread
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public void mo286a(Context context, BluetoothHeadsetAudioState.C5633b c5633b) {
             Intrinsics3.checkNotNullParameter(context, "context");
             Intrinsics3.checkNotNullParameter(c5633b, "audioState");
@@ -514,7 +517,7 @@ public final class DiscordAudioManager {
 
         @Override // p007b.p008a.p041q.p042k0.OnBluetoothBroadcastListener
         @MainThread
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public void mo287b(BluetoothDevice bluetoothDevice) {
             BluetoothHeadsetPrivateApi bluetoothHeadsetPrivateApi = BluetoothHeadsetPrivateApi.f1655c;
             if (!(((String) BluetoothHeadsetPrivateApi.f1653a.getValue()) != null)) {
@@ -527,14 +530,14 @@ public final class DiscordAudioManager {
 
         @Override // p007b.p008a.p041q.p042k0.OnBluetoothBroadcastListener
         @MainThread
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public void mo288c(BluetoothHeadset bluetoothHeadset) {
             DiscordAudioManager.this.f18843n = bluetoothHeadset;
         }
 
         @Override // p007b.p008a.p041q.p042k0.OnBluetoothBroadcastListener
         @MainThread
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         public void mo289d(Context context, BluetoothProfileConnectionState.C5635b c5635b) {
             ArrayList arrayList;
             DiscordAudioManager discordAudioManager;
@@ -594,11 +597,11 @@ public final class DiscordAudioManager {
         }
     }
 
-    /* compiled from: DiscordAudioManager.kt */
-    /* renamed from: com.discord.rtcconnection.audio.DiscordAudioManager$d */
+    /* JADX INFO: renamed from: com.discord.rtcconnection.audio.DiscordAudioManager$d */
+    /* JADX INFO: compiled from: DiscordAudioManager.kt */
     public static final class C5623d extends Lambda implements Function0<DiscordAudioManager> {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public static final C5623d f18864j = new C5623d();
 
         public C5623d() {
@@ -611,8 +614,8 @@ public final class DiscordAudioManager {
         }
     }
 
-    /* compiled from: DiscordAudioManager.kt */
-    /* renamed from: com.discord.rtcconnection.audio.DiscordAudioManager$e */
+    /* JADX INFO: renamed from: com.discord.rtcconnection.audio.DiscordAudioManager$e */
+    /* JADX INFO: compiled from: DiscordAudioManager.kt */
     public static final class C5624e extends Lambda implements Function0<AudioPermissions> {
         public final /* synthetic */ Context $context;
 
@@ -682,17 +685,17 @@ public final class DiscordAudioManager {
         this.f18855z = DeviceTypes.DEFAULT;
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public static final DiscordAudioManager m8481d() {
         return (DiscordAudioManager) f18826a.getValue();
     }
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public static final List<AudioDevice> m8482f() {
         return Collections2.listOf((Object[]) new AudioDevice[]{new AudioDevice(DeviceTypes.SPEAKERPHONE, false, null, null, 14), new AudioDevice(DeviceTypes.WIRED_HEADSET, false, null, null, 14), new AudioDevice(DeviceTypes.EARPIECE, false, null, null, 14), new AudioDevice(DeviceTypes.BLUETOOTH_HEADSET, false, null, null, 14)});
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final void m8483a(List<AudioDevice> list) {
         DeviceTypes deviceTypesPrevious;
         DeviceTypes deviceTypes;
@@ -719,7 +722,7 @@ public final class DiscordAudioManager {
         m8484b(deviceTypes);
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final void m8484b(DeviceTypes deviceTypes) {
         boolean z2;
         synchronized (this.f18838i) {
@@ -745,7 +748,7 @@ public final class DiscordAudioManager {
         AnimatableValueParser.m501b1("DiscordAudioManager", "Activated device: " + deviceTypes);
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final void m8485c() {
         Thread threadCurrentThread = Thread.currentThread();
         Intrinsics3.checkNotNullExpressionValue(threadCurrentThread, "Thread.currentThread()");
@@ -754,13 +757,13 @@ public final class DiscordAudioManager {
         }
     }
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final AudioPermissions m8486e() {
         return (AudioPermissions) this.f18836g.getValue();
     }
 
     /* JADX WARN: Removed duplicated region for block: B:80:0x0099 A[EXC_TOP_SPLITTER, SYNTHETIC] */
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
@@ -803,6 +806,7 @@ public final class DiscordAudioManager {
                 }
                 bluetoothDevice = (BluetoothDevice) objInvoke;
             } catch (Throwable unused) {
+                bluetoothDevice = null;
             }
         } else {
             bluetoothDevice = null;
@@ -841,7 +845,7 @@ public final class DiscordAudioManager {
     /* JADX WARN: Removed duplicated region for block: B:59:0x00fa  */
     /* JADX WARN: Removed duplicated region for block: B:61:0x00fd  */
     /* JADX WARN: Removed duplicated region for block: B:62:0x0105  */
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
@@ -942,7 +946,7 @@ public final class DiscordAudioManager {
         }
     }
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public final void m8489i(boolean z2) {
         try {
             this.f18834e.setMode(z2 ? 3 : 0);
@@ -953,7 +957,7 @@ public final class DiscordAudioManager {
         }
     }
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final synchronized void m8490j() {
         BluetoothScoState bluetoothScoState;
         BluetoothScoState bluetoothScoState2 = this.f18844o;
@@ -968,7 +972,7 @@ public final class DiscordAudioManager {
         }
     }
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final synchronized void m8491k() {
         BluetoothScoState bluetoothScoState = this.f18844o;
         if (bluetoothScoState == BluetoothScoState.ON || bluetoothScoState == BluetoothScoState.TURNING_ON) {
@@ -981,7 +985,7 @@ public final class DiscordAudioManager {
         }
     }
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final void m8492l() {
         DeviceTypes deviceTypes;
         ArrayList arrayList;

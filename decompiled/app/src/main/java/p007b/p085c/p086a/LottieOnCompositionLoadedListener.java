@@ -1,9 +1,9 @@
 package p007b.p085c.p086a;
 
-/* compiled from: LottieOnCompositionLoadedListener.java */
-/* renamed from: b.c.a.n, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.c.a.n, reason: use source file name */
+/* JADX INFO: compiled from: LottieOnCompositionLoadedListener.java */
+/* JADX INFO: loaded from: classes.dex */
 public interface LottieOnCompositionLoadedListener {
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     void m704a(LottieComposition lottieComposition);
 }

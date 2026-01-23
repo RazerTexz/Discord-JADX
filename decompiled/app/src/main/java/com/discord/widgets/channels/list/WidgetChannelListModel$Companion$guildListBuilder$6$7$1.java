@@ -5,8 +5,8 @@ import com.discord.widgets.channels.list.WidgetChannelListModel;
 import kotlin.jvm.functions.Function2;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetChannelListModel.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetChannelListModel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetChannelListModel$Companion$guildListBuilder$6$7$1 extends Lambda implements Function2<Integer, Integer, WidgetChannelListModel.ThreadSpineType> {
     public static final WidgetChannelListModel$Companion$guildListBuilder$6$7$1 INSTANCE = new WidgetChannelListModel$Companion$guildListBuilder$6$7$1();
 

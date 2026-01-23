@@ -4,14 +4,14 @@ import com.discord.models.domain.Model;
 import java.io.IOException;
 import kotlin.jvm.internal.Ref$ObjectRef;
 
-/* compiled from: GuildExperimentFilter.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: GuildExperimentFilter.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class GuildExperimentFilter$Parser$parseGuildIdsFilter$1 implements Runnable {
     public final /* synthetic */ Ref$ObjectRef $guildIds;
     public final /* synthetic */ Model.JsonReader $reader;
 
-    /* compiled from: GuildExperimentFilter.kt */
-    /* renamed from: com.discord.models.experiments.dto.GuildExperimentFilter$Parser$parseGuildIdsFilter$1$1 */
+    /* JADX INFO: renamed from: com.discord.models.experiments.dto.GuildExperimentFilter$Parser$parseGuildIdsFilter$1$1 */
+    /* JADX INFO: compiled from: GuildExperimentFilter.kt */
     public static final class RunnableC55551 implements Runnable {
         public RunnableC55551() {
         }
@@ -22,12 +22,12 @@ public final class GuildExperimentFilter$Parser$parseGuildIdsFilter$1 implements
         }
     }
 
-    /* compiled from: GuildExperimentFilter.kt */
-    /* renamed from: com.discord.models.experiments.dto.GuildExperimentFilter$Parser$parseGuildIdsFilter$1$2 */
+    /* JADX INFO: renamed from: com.discord.models.experiments.dto.GuildExperimentFilter$Parser$parseGuildIdsFilter$1$2 */
+    /* JADX INFO: compiled from: GuildExperimentFilter.kt */
     public static final class RunnableC55562 implements Runnable {
 
-        /* compiled from: GuildExperimentFilter.kt */
-        /* renamed from: com.discord.models.experiments.dto.GuildExperimentFilter$Parser$parseGuildIdsFilter$1$2$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.models.experiments.dto.GuildExperimentFilter$Parser$parseGuildIdsFilter$1$2$1, reason: invalid class name */
+        /* JADX INFO: compiled from: GuildExperimentFilter.kt */
         public static final class AnonymousClass1<T> implements Model.JsonReader.ItemFactory<Long> {
             public AnonymousClass1() {
             }

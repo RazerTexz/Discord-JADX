@@ -50,28 +50,28 @@ import p507d0.p513e0.p514p.p515d.p517m0.p567n.TypeProjectionImpl;
 import p507d0.p513e0.p514p.p515d.p517m0.p567n.TypeUtils;
 import p507d0.p513e0.p514p.p515d.p517m0.p567n.Variance;
 
-/* compiled from: KotlinBuiltIns.java */
-/* renamed from: d0.e0.p.d.m0.b.h, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.b.h, reason: use source file name */
+/* JADX INFO: compiled from: KotlinBuiltIns.java */
+/* JADX INFO: loaded from: classes3.dex */
 public abstract class KotlinBuiltIns {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final Name f22459a = Name.special("<built-ins module>");
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public ModuleDescriptorImpl3 f22460b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final storage5<e> f22461c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final storage3<Name, ClassDescriptor> f22462d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final StorageManager f22463e;
 
-    /* compiled from: KotlinBuiltIns.java */
-    /* renamed from: d0.e0.p.d.m0.b.h$a */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.b.h$a */
+    /* JADX INFO: compiled from: KotlinBuiltIns.java */
     public class a implements Function0<Collection<PackageViewDescriptor>> {
         public a() {
         }
@@ -82,14 +82,14 @@ public abstract class KotlinBuiltIns {
         }
 
         @Override // kotlin.jvm.functions.Function0
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public Collection<PackageViewDescriptor> invoke2() {
             return Arrays.asList(KotlinBuiltIns.this.f22460b.getPackage(StandardNames.f22499l), KotlinBuiltIns.this.f22460b.getPackage(StandardNames.f22501n), KotlinBuiltIns.this.f22460b.getPackage(StandardNames.f22502o), KotlinBuiltIns.this.f22460b.getPackage(StandardNames.f22500m));
         }
     }
 
-    /* compiled from: KotlinBuiltIns.java */
-    /* renamed from: d0.e0.p.d.m0.b.h$b */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.b.h$b */
+    /* JADX INFO: compiled from: KotlinBuiltIns.java */
     public class b implements Function0<e> {
         public b() {
         }
@@ -118,8 +118,8 @@ public abstract class KotlinBuiltIns {
         }
     }
 
-    /* compiled from: KotlinBuiltIns.java */
-    /* renamed from: d0.e0.p.d.m0.b.h$c */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.b.h$c */
+    /* JADX INFO: compiled from: KotlinBuiltIns.java */
     public class c implements Function1<Name, ClassDescriptor> {
         public c() {
         }
@@ -129,7 +129,7 @@ public abstract class KotlinBuiltIns {
             return invoke2(name);
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public ClassDescriptor invoke2(Name name) {
             ClassifierDescriptor contributedClassifier = KotlinBuiltIns.this.getBuiltInsPackageScope().getContributedClassifier(name, LookupLocation3.FROM_BUILTINS);
             if (contributedClassifier == null) {
@@ -145,11 +145,11 @@ public abstract class KotlinBuiltIns {
         }
     }
 
-    /* compiled from: KotlinBuiltIns.java */
-    /* renamed from: d0.e0.p.d.m0.b.h$d */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.b.h$d */
+    /* JADX INFO: compiled from: KotlinBuiltIns.java */
     public class d implements Function0<Void> {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public final /* synthetic */ ModuleDescriptorImpl3 f22467j;
 
         public d(ModuleDescriptorImpl3 moduleDescriptorImpl3) {
@@ -162,7 +162,7 @@ public abstract class KotlinBuiltIns {
         }
 
         @Override // kotlin.jvm.functions.Function0
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public Void invoke2() {
             KotlinBuiltIns kotlinBuiltIns = KotlinBuiltIns.this;
             if (kotlinBuiltIns.f22460b == null) {
@@ -178,17 +178,17 @@ public abstract class KotlinBuiltIns {
         }
     }
 
-    /* compiled from: KotlinBuiltIns.java */
-    /* renamed from: d0.e0.p.d.m0.b.h$e */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.b.h$e */
+    /* JADX INFO: compiled from: KotlinBuiltIns.java */
     public static class e {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final Map<PrimitiveType, KotlinType4> f22469a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final Map<KotlinType, KotlinType4> f22470b;
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public final Map<KotlinType4, KotlinType4> f22471c;
 
         public e(Map map, Map map2, Map map3, a aVar) {
@@ -209,7 +209,7 @@ public abstract class KotlinBuiltIns {
         this.f22462d = storageManager.createMemoizedFunction(new c());
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static /* synthetic */ void m9355a(int i) {
         String str;
         int i2;
@@ -1220,7 +1220,7 @@ public abstract class KotlinBuiltIns {
         }
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static KotlinType4 m9356b(KotlinBuiltIns kotlinBuiltIns, String str) {
         Objects.requireNonNull(kotlinBuiltIns);
         if (str == null) {
@@ -1235,7 +1235,7 @@ public abstract class KotlinBuiltIns {
         throw null;
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public static boolean m9357c(ClassifierDescriptor classifierDescriptor, FqNameUnsafe fqNameUnsafe) {
         if (classifierDescriptor == null) {
             m9355a(102);
@@ -1270,7 +1270,7 @@ public abstract class KotlinBuiltIns {
         return null;
     }
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public static boolean m9358i(KotlinType kotlinType, FqNameUnsafe fqNameUnsafe) {
         if (kotlinType == null) {
             m9355a(96);
@@ -1590,7 +1590,7 @@ public abstract class KotlinBuiltIns {
         throw null;
     }
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static boolean m9359j(KotlinType kotlinType, FqNameUnsafe fqNameUnsafe) {
         if (kotlinType == null) {
             m9355a(Opcodes.I2L);
@@ -1603,7 +1603,7 @@ public abstract class KotlinBuiltIns {
         throw null;
     }
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public static boolean m9360k(KotlinType kotlinType, FqNameUnsafe fqNameUnsafe) {
         if (kotlinType == null) {
             m9355a(104);
@@ -1616,7 +1616,7 @@ public abstract class KotlinBuiltIns {
         throw null;
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public void m9361d(boolean z2) {
         ModuleDescriptorImpl3 moduleDescriptorImpl3 = new ModuleDescriptorImpl3(f22459a, this.f22463e, this, null);
         this.f22460b = moduleDescriptorImpl3;
@@ -1625,12 +1625,12 @@ public abstract class KotlinBuiltIns {
         moduleDescriptorImpl32.setDependencies(moduleDescriptorImpl32);
     }
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public AdditionalClassPartsProvider mo9362e() {
         return AdditionalClassPartsProvider.a.f22796a;
     }
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final ClassDescriptor m9363f(String str) {
         if (str == null) {
             m9355a(13);
@@ -1644,7 +1644,7 @@ public abstract class KotlinBuiltIns {
         throw null;
     }
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public Iterable<ClassDescriptorFactory> mo9364g() {
         List listSingletonList = Collections.singletonList(new BuiltInFictitiousFunctionClassFactory(this.f22463e, this.f22460b));
         if (listSingletonList != null) {
@@ -1984,7 +1984,7 @@ public abstract class KotlinBuiltIns {
         throw null;
     }
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public PlatformDependentDeclarationFilter mo9365h() {
         return PlatformDependentDeclarationFilter.b.f22798a;
     }

@@ -1,6 +1,6 @@
 package org.webrtc;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public enum VideoCodecMimeType {
     VP8("video/x-vnd.on2.vp8"),
     VP9("video/x-vnd.on2.vp9"),

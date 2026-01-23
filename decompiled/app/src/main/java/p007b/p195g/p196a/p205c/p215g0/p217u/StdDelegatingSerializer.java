@@ -14,9 +14,9 @@ import p007b.p195g.p196a.p205c.p218h0.TypeFactory;
 import p007b.p195g.p196a.p205c.p219i0.ClassUtil;
 import p007b.p195g.p196a.p205c.p219i0.Converter;
 
-/* compiled from: StdDelegatingSerializer.java */
-/* renamed from: b.g.a.c.g0.u.j0, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.g.a.c.g0.u.j0, reason: use source file name */
+/* JADX INFO: compiled from: StdDelegatingSerializer.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class StdDelegatingSerializer extends StdSerializer<Object> implements ContextualSerializer, ResolvableSerializer {
     public final Converter<Object, ?> _converter;
     public final JsonSerializer<Object> _delegateSerializer;
@@ -30,7 +30,7 @@ public class StdDelegatingSerializer extends StdSerializer<Object> implements Co
     }
 
     @Override // p007b.p195g.p196a.p205c.p215g0.ContextualSerializer
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public JsonSerializer<?> mo1997a(SerializerProvider serializerProvider, BeanProperty beanProperty) throws JsonMappingException {
         JsonSerializer<?> jsonSerializerM2261z = this._delegateSerializer;
         JavaType javaTypeM2197a = this._delegateType;
@@ -54,7 +54,7 @@ public class StdDelegatingSerializer extends StdSerializer<Object> implements Co
     }
 
     @Override // p007b.p195g.p196a.p205c.p215g0.ResolvableSerializer
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public void mo2007b(SerializerProvider serializerProvider) throws JsonMappingException {
         Object obj = this._delegateSerializer;
         if (obj == null || !(obj instanceof ResolvableSerializer)) {
@@ -64,7 +64,7 @@ public class StdDelegatingSerializer extends StdSerializer<Object> implements Co
     }
 
     @Override // p007b.p195g.p196a.p205c.JsonSerializer
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public boolean mo2021d(SerializerProvider serializerProvider, Object obj) {
         Object objConvert = this._converter.convert(obj);
         if (objConvert == null) {
@@ -75,7 +75,7 @@ public class StdDelegatingSerializer extends StdSerializer<Object> implements Co
     }
 
     @Override // p007b.p195g.p196a.p205c.JsonSerializer
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public void mo1807f(Object obj, JsonGenerator jsonGenerator, SerializerProvider serializerProvider) throws IOException {
         Object objConvert = this._converter.convert(obj);
         if (objConvert == null) {
@@ -90,7 +90,7 @@ public class StdDelegatingSerializer extends StdSerializer<Object> implements Co
     }
 
     @Override // p007b.p195g.p196a.p205c.JsonSerializer
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public void mo1808g(Object obj, JsonGenerator jsonGenerator, SerializerProvider serializerProvider, TypeSerializer typeSerializer) throws IOException {
         Object objConvert = this._converter.convert(obj);
         JsonSerializer<Object> jsonSerializerM2065p = this._delegateSerializer;
@@ -100,7 +100,7 @@ public class StdDelegatingSerializer extends StdSerializer<Object> implements Co
         jsonSerializerM2065p.mo1808g(objConvert, jsonGenerator, serializerProvider, typeSerializer);
     }
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public JsonSerializer<Object> m2065p(Object obj, SerializerProvider serializerProvider) throws JsonMappingException {
         Class<?> cls = obj.getClass();
         JsonSerializer<Object> jsonSerializerM2036b = serializerProvider._knownSerializers.m2036b(cls);

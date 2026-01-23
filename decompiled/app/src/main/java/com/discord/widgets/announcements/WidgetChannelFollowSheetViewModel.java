@@ -42,8 +42,8 @@ import p658rx.functions.Func5;
 import p658rx.subjects.BehaviorSubject;
 import p658rx.subjects.PublishSubject;
 
-/* compiled from: WidgetChannelFollowSheetViewModel.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetChannelFollowSheetViewModel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetChannelFollowSheetViewModel extends AppViewModel<ViewState> implements AppComponent {
     private final PublishSubject<Event> eventSubject;
     private final BehaviorSubject<Long> selectedChannelSubject;
@@ -54,8 +54,8 @@ public final class WidgetChannelFollowSheetViewModel extends AppViewModel<ViewSt
     private final StoreGuilds storeGuilds;
     private final StorePermissions storePermissions;
 
-    /* compiled from: WidgetChannelFollowSheetViewModel.kt */
-    /* renamed from: com.discord.widgets.announcements.WidgetChannelFollowSheetViewModel$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.announcements.WidgetChannelFollowSheetViewModel$1 */
+    /* JADX INFO: compiled from: WidgetChannelFollowSheetViewModel.kt */
     public static final class C71451 extends Lambda implements Function1<ViewState.Loaded, Unit> {
         public C71451() {
             super(1);
@@ -67,17 +67,17 @@ public final class WidgetChannelFollowSheetViewModel extends AppViewModel<ViewSt
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(ViewState.Loaded loaded) {
             Intrinsics3.checkNotNullParameter(loaded, "viewState");
             WidgetChannelFollowSheetViewModel.access$updateViewState(WidgetChannelFollowSheetViewModel.this, loaded);
         }
     }
 
-    /* compiled from: WidgetChannelFollowSheetViewModel.kt */
+    /* JADX INFO: compiled from: WidgetChannelFollowSheetViewModel.kt */
     public static abstract class Event {
 
-        /* compiled from: WidgetChannelFollowSheetViewModel.kt */
+        /* JADX INFO: compiled from: WidgetChannelFollowSheetViewModel.kt */
         public static final class FollowSuccess extends Event {
             public static final FollowSuccess INSTANCE = new FollowSuccess();
 
@@ -94,10 +94,10 @@ public final class WidgetChannelFollowSheetViewModel extends AppViewModel<ViewSt
         }
     }
 
-    /* compiled from: WidgetChannelFollowSheetViewModel.kt */
+    /* JADX INFO: compiled from: WidgetChannelFollowSheetViewModel.kt */
     public static abstract class ViewState {
 
-        /* compiled from: WidgetChannelFollowSheetViewModel.kt */
+        /* JADX INFO: compiled from: WidgetChannelFollowSheetViewModel.kt */
         public static final /* data */ class Loaded extends ViewState {
             private final Set<Long> availableChannels;
             private final Set<Long> availableGuilds;
@@ -111,6 +111,7 @@ public final class WidgetChannelFollowSheetViewModel extends AppViewModel<ViewSt
                 this(channel, guild, guild2, channel2, set, set2, (i & 64) != 0 ? null : num);
             }
 
+            /* JADX WARN: Multi-variable type inference failed */
             public static /* synthetic */ Loaded copy$default(Loaded loaded, Channel channel, Guild guild, Guild guild2, Channel channel2, Set set, Set set2, Integer num, int i, Object obj) {
                 if ((i & 1) != 0) {
                     channel = loaded.sourceChannel;
@@ -141,22 +142,22 @@ public final class WidgetChannelFollowSheetViewModel extends AppViewModel<ViewSt
                 return loaded.copy(channel, guild3, guild4, channel3, set3, set4, num);
             }
 
-            /* renamed from: component1, reason: from getter */
+            /* JADX INFO: renamed from: component1, reason: from getter */
             public final Channel getSourceChannel() {
                 return this.sourceChannel;
             }
 
-            /* renamed from: component2, reason: from getter */
+            /* JADX INFO: renamed from: component2, reason: from getter */
             public final Guild getSourceGuild() {
                 return this.sourceGuild;
             }
 
-            /* renamed from: component3, reason: from getter */
+            /* JADX INFO: renamed from: component3, reason: from getter */
             public final Guild getSelectedGuild() {
                 return this.selectedGuild;
             }
 
-            /* renamed from: component4, reason: from getter */
+            /* JADX INFO: renamed from: component4, reason: from getter */
             public final Channel getSelectedChannel() {
                 return this.selectedChannel;
             }
@@ -169,7 +170,7 @@ public final class WidgetChannelFollowSheetViewModel extends AppViewModel<ViewSt
                 return this.availableChannels;
             }
 
-            /* renamed from: component7, reason: from getter */
+            /* JADX INFO: renamed from: component7, reason: from getter */
             public final Integer getErrorTextRes() {
                 return this.errorTextRes;
             }
@@ -268,7 +269,7 @@ public final class WidgetChannelFollowSheetViewModel extends AppViewModel<ViewSt
             }
         }
 
-        /* compiled from: WidgetChannelFollowSheetViewModel.kt */
+        /* JADX INFO: compiled from: WidgetChannelFollowSheetViewModel.kt */
         public static final class Uninitialized extends ViewState {
             public static final Uninitialized INSTANCE = new Uninitialized();
 
@@ -285,12 +286,12 @@ public final class WidgetChannelFollowSheetViewModel extends AppViewModel<ViewSt
         }
     }
 
-    /* compiled from: WidgetChannelFollowSheetViewModel.kt */
-    /* renamed from: com.discord.widgets.announcements.WidgetChannelFollowSheetViewModel$calculateChannelsWithPermissions$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.announcements.WidgetChannelFollowSheetViewModel$calculateChannelsWithPermissions$1 */
+    /* JADX INFO: compiled from: WidgetChannelFollowSheetViewModel.kt */
     public static final class C71461<T, R> implements Func1<Map<Long, ? extends Long>, Observable<? extends Map<Long, ? extends List<? extends Channel>>>> {
 
-        /* compiled from: WidgetChannelFollowSheetViewModel.kt */
-        /* renamed from: com.discord.widgets.announcements.WidgetChannelFollowSheetViewModel$calculateChannelsWithPermissions$1$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.widgets.announcements.WidgetChannelFollowSheetViewModel$calculateChannelsWithPermissions$1$1, reason: invalid class name */
+        /* JADX INFO: compiled from: WidgetChannelFollowSheetViewModel.kt */
         public static final class AnonymousClass1<T, R> implements Func1<Map<Long, ? extends Channel>, Map<Long, ? extends List<? extends Channel>>> {
             public final /* synthetic */ Map $perms;
 
@@ -304,7 +305,7 @@ public final class WidgetChannelFollowSheetViewModel extends AppViewModel<ViewSt
             }
 
             /* JADX WARN: Removed duplicated region for block: B:16:0x005f  */
-            /* renamed from: call, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
             /*
                 Code decompiled incorrectly, please refer to instructions dump.
             */
@@ -346,14 +347,14 @@ public final class WidgetChannelFollowSheetViewModel extends AppViewModel<ViewSt
             return call2((Map<Long, Long>) map);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final Observable<? extends Map<Long, List<Channel>>> call2(Map<Long, Long> map) {
             return WidgetChannelFollowSheetViewModel.this.getStoreChannels().observeGuildAndPrivateChannels().m11112r().m11083G(new AnonymousClass1(map));
         }
     }
 
-    /* compiled from: WidgetChannelFollowSheetViewModel.kt */
-    /* renamed from: com.discord.widgets.announcements.WidgetChannelFollowSheetViewModel$followChannel$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.announcements.WidgetChannelFollowSheetViewModel$followChannel$1 */
+    /* JADX INFO: compiled from: WidgetChannelFollowSheetViewModel.kt */
     public static final /* synthetic */ class C71471 extends FunctionReferenceImpl implements Function1<Error, Unit> {
         public C71471(WidgetChannelFollowSheetViewModel widgetChannelFollowSheetViewModel) {
             super(1, widgetChannelFollowSheetViewModel, WidgetChannelFollowSheetViewModel.class, "handleChannelFollowError", "handleChannelFollowError(Lcom/discord/utilities/error/Error;)V", 0);
@@ -365,15 +366,15 @@ public final class WidgetChannelFollowSheetViewModel extends AppViewModel<ViewSt
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Error error) {
             Intrinsics3.checkNotNullParameter(error, "p1");
             WidgetChannelFollowSheetViewModel.access$handleChannelFollowError((WidgetChannelFollowSheetViewModel) this.receiver, error);
         }
     }
 
-    /* compiled from: WidgetChannelFollowSheetViewModel.kt */
-    /* renamed from: com.discord.widgets.announcements.WidgetChannelFollowSheetViewModel$followChannel$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.announcements.WidgetChannelFollowSheetViewModel$followChannel$2 */
+    /* JADX INFO: compiled from: WidgetChannelFollowSheetViewModel.kt */
     public static final class C71482 extends Lambda implements Function1<Void, Unit> {
         public C71482() {
             super(1);
@@ -385,15 +386,15 @@ public final class WidgetChannelFollowSheetViewModel extends AppViewModel<ViewSt
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Void r2) {
             PublishSubject publishSubjectAccess$getEventSubject$p = WidgetChannelFollowSheetViewModel.access$getEventSubject$p(WidgetChannelFollowSheetViewModel.this);
             publishSubjectAccess$getEventSubject$p.f27650k.onNext(Event.FollowSuccess.INSTANCE);
         }
     }
 
-    /* compiled from: WidgetChannelFollowSheetViewModel.kt */
-    /* renamed from: com.discord.widgets.announcements.WidgetChannelFollowSheetViewModel$observeViewStateFromStores$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.announcements.WidgetChannelFollowSheetViewModel$observeViewStateFromStores$1 */
+    /* JADX INFO: compiled from: WidgetChannelFollowSheetViewModel.kt */
     public static final class C71491<T, R> implements Func1<Long, Observable<? extends Guild>> {
         public C71491() {
         }
@@ -403,7 +404,7 @@ public final class WidgetChannelFollowSheetViewModel extends AppViewModel<ViewSt
             return call2(l);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final Observable<? extends Guild> call2(Long l) {
             if (l != null) {
                 Observable<Guild> observableObserveGuild = WidgetChannelFollowSheetViewModel.this.getStoreGuilds().observeGuild(l.longValue());
@@ -415,8 +416,8 @@ public final class WidgetChannelFollowSheetViewModel extends AppViewModel<ViewSt
         }
     }
 
-    /* compiled from: WidgetChannelFollowSheetViewModel.kt */
-    /* renamed from: com.discord.widgets.announcements.WidgetChannelFollowSheetViewModel$observeViewStateFromStores$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.announcements.WidgetChannelFollowSheetViewModel$observeViewStateFromStores$2 */
+    /* JADX INFO: compiled from: WidgetChannelFollowSheetViewModel.kt */
     public static final class C71502<T, R> implements Func1<Long, Observable<? extends Channel>> {
         public C71502() {
         }
@@ -426,7 +427,7 @@ public final class WidgetChannelFollowSheetViewModel extends AppViewModel<ViewSt
             return call2(l);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final Observable<? extends Channel> call2(Long l) {
             if (l != null) {
                 Observable<Channel> observableObserveChannel = WidgetChannelFollowSheetViewModel.this.getStoreChannels().observeChannel(l.longValue());
@@ -438,8 +439,8 @@ public final class WidgetChannelFollowSheetViewModel extends AppViewModel<ViewSt
         }
     }
 
-    /* compiled from: WidgetChannelFollowSheetViewModel.kt */
-    /* renamed from: com.discord.widgets.announcements.WidgetChannelFollowSheetViewModel$observeViewStateFromStores$3 */
+    /* JADX INFO: renamed from: com.discord.widgets.announcements.WidgetChannelFollowSheetViewModel$observeViewStateFromStores$3 */
+    /* JADX INFO: compiled from: WidgetChannelFollowSheetViewModel.kt */
     public static final class C71513<T1, T2, T3, T4, T5, R> implements Func5<Guild, Channel, Map<Long, ? extends List<? extends Channel>>, Guild, Channel, ViewState.Loaded> {
         public static final C71513 INSTANCE = new C71513();
 
@@ -448,7 +449,7 @@ public final class WidgetChannelFollowSheetViewModel extends AppViewModel<ViewSt
             return call2(guild, channel, (Map<Long, ? extends List<Channel>>) map, guild2, channel2);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final ViewState.Loaded call2(Guild guild, Channel channel, Map<Long, ? extends List<Channel>> map, Guild guild2, Channel channel2) {
             Set<Long> setKeySet = map.keySet();
             List listFlatten = Iterables2.flatten(map.values());

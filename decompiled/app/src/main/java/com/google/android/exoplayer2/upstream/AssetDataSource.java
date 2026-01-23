@@ -13,24 +13,24 @@ import p007b.p225i.p226a.p242c.p257e3.BaseDataSource;
 import p007b.p225i.p226a.p242c.p257e3.DataSpec;
 import p007b.p225i.p226a.p242c.p259f3.Util2;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public final class AssetDataSource extends BaseDataSource {
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final AssetManager f20213e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     @Nullable
     public Uri f20214f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     @Nullable
     public InputStream f20215g;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public long f20216h;
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public boolean f20217i;
 
     public static final class AssetDataSourceException extends DataSourceException {
@@ -45,7 +45,7 @@ public final class AssetDataSource extends BaseDataSource {
     }
 
     @Override // p007b.p225i.p226a.p242c.p257e3.DataSource3
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public long mo2586a(DataSpec dataSpec) throws AssetDataSourceException {
         try {
             Uri uri = dataSpec.f6542a;
@@ -106,7 +106,7 @@ public final class AssetDataSource extends BaseDataSource {
 
     @Override // p007b.p225i.p226a.p242c.p257e3.DataSource3
     @Nullable
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public Uri mo2589n() {
         return this.f20214f;
     }
@@ -135,7 +135,7 @@ public final class AssetDataSource extends BaseDataSource {
         }
         long j2 = this.f20216h;
         if (j2 != -1) {
-            this.f20216h = j2 - i4;
+            this.f20216h = j2 - ((long) i4);
         }
         m2848p(i4);
         return i4;

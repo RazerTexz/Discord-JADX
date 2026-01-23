@@ -6,18 +6,18 @@ import java.util.List;
 import p007b.p085c.p086a.p095y.p097l.Mask;
 import p007b.p085c.p086a.p095y.p097l.ShapeData;
 
-/* compiled from: MaskKeyframeAnimation.java */
-/* renamed from: b.c.a.w.c.g, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.c.a.w.c.g, reason: use source file name */
+/* JADX INFO: compiled from: MaskKeyframeAnimation.java */
+/* JADX INFO: loaded from: classes.dex */
 public class MaskKeyframeAnimation {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final List<BaseKeyframeAnimation<ShapeData, Path>> f2611a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final List<BaseKeyframeAnimation<Integer, Integer>> f2612b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final List<Mask> f2613c;
 
     public MaskKeyframeAnimation(List<Mask> list) {

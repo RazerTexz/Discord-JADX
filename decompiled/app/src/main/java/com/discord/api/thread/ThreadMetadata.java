@@ -4,30 +4,30 @@ import com.discord.models.domain.ModelAuditLogEntry;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ThreadMetadata.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: ThreadMetadata.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class ThreadMetadata {
     private final String archiveTimestamp;
     private final boolean archived;
     private final int autoArchiveDuration;
     private final boolean locked;
 
-    /* renamed from: a, reason: from getter */
+    /* JADX INFO: renamed from: a, reason: from getter */
     public final String getArchiveTimestamp() {
         return this.archiveTimestamp;
     }
 
-    /* renamed from: b, reason: from getter */
+    /* JADX INFO: renamed from: b, reason: from getter */
     public final boolean getArchived() {
         return this.archived;
     }
 
-    /* renamed from: c, reason: from getter */
+    /* JADX INFO: renamed from: c, reason: from getter */
     public final int getAutoArchiveDuration() {
         return this.autoArchiveDuration;
     }
 
-    /* renamed from: d, reason: from getter */
+    /* JADX INFO: renamed from: d, reason: from getter */
     public final boolean getLocked() {
         return this.locked;
     }
@@ -47,6 +47,9 @@ public final /* data */ class ThreadMetadata {
     /* JADX WARN: Type inference failed for: r0v1, types: [int] */
     /* JADX WARN: Type inference failed for: r0v8 */
     /* JADX WARN: Type inference failed for: r0v9 */
+    /* JADX WARN: Type inference failed for: r1v0 */
+    /* JADX WARN: Type inference failed for: r1v1, types: [int] */
+    /* JADX WARN: Type inference failed for: r1v2 */
     public int hashCode() {
         boolean z2 = this.archived;
         ?? r0 = z2;
@@ -57,7 +60,7 @@ public final /* data */ class ThreadMetadata {
         String str = this.archiveTimestamp;
         int iHashCode = (((i + (str != null ? str.hashCode() : 0)) * 31) + this.autoArchiveDuration) * 31;
         boolean z3 = this.locked;
-        return iHashCode + (z3 ? 1 : z3 ? 1 : 0);
+        return iHashCode + (z3 ? 1 : z3);
     }
 
     public String toString() {

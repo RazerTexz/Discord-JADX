@@ -8,34 +8,34 @@ import p007b.p100d.p104b.p105a.outline;
 import p615g0.Buffer3;
 import p615g0.Options2;
 
-/* compiled from: JsonReader.java */
-/* renamed from: b.c.a.a0.i0.c, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.c.a.a0.i0.c, reason: use source file name */
+/* JADX INFO: compiled from: JsonReader.java */
+/* JADX INFO: loaded from: classes.dex */
 public abstract class JsonReader2 implements Closeable {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static final String[] f2236j = new String[128];
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public int f2237k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public int[] f2238l = new int[32];
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public String[] f2239m = new String[32];
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public int[] f2240n = new int[32];
 
-    /* compiled from: JsonReader.java */
-    /* renamed from: b.c.a.a0.i0.c$a */
+    /* JADX INFO: renamed from: b.c.a.a0.i0.c$a */
+    /* JADX INFO: compiled from: JsonReader.java */
     public static final class a {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final String[] f2241a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final Options2 f2242b;
 
         public a(String[] strArr, Options2 options2) {
@@ -44,7 +44,7 @@ public abstract class JsonReader2 implements Closeable {
         }
 
         /* JADX WARN: Removed duplicated region for block: B:19:0x003a A[Catch: IOException -> 0x006b, TryCatch #0 {IOException -> 0x006b, blocks: (B:2:0x0000, B:3:0x000a, B:5:0x000d, B:7:0x001e, B:9:0x0026, B:21:0x0042, B:19:0x003a, B:20:0x003d, B:23:0x0047, B:24:0x004a, B:25:0x0059), top: B:30:0x0000 }] */
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         /*
             Code decompiled incorrectly, please refer to instructions dump.
         */
@@ -96,8 +96,8 @@ public abstract class JsonReader2 implements Closeable {
         }
     }
 
-    /* compiled from: JsonReader.java */
-    /* renamed from: b.c.a.a0.i0.c$b */
+    /* JADX INFO: renamed from: b.c.a.a0.i0.c$b */
+    /* JADX INFO: compiled from: JsonReader.java */
     public enum b {
         BEGIN_ARRAY,
         END_ARRAY,
@@ -125,35 +125,35 @@ public abstract class JsonReader2 implements Closeable {
         strArr[12] = "\\f";
     }
 
-    /* renamed from: A */
+    /* JADX INFO: renamed from: A */
     public abstract void mo600A() throws IOException;
 
-    /* renamed from: C */
+    /* JADX INFO: renamed from: C */
     public abstract void mo601C() throws IOException;
 
-    /* renamed from: D */
+    /* JADX INFO: renamed from: D */
     public final JsonEncodingException m602D(String str) throws JsonEncodingException {
         StringBuilder sbM836X = outline.m836X(str, " at path ");
         sbM836X.append(getPath());
         throw new JsonEncodingException(sbM836X.toString());
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public abstract void mo603a() throws IOException;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public abstract void mo604b() throws IOException;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public abstract void mo605c() throws IOException;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public abstract void mo606d() throws IOException;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public abstract boolean mo607e() throws IOException;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public abstract boolean mo608f() throws IOException;
 
     public final String getPath() {
@@ -178,22 +178,22 @@ public abstract class JsonReader2 implements Closeable {
         return sbM829Q.toString();
     }
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public abstract double mo609n() throws IOException;
 
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     public abstract int mo610q() throws IOException;
 
-    /* renamed from: s */
+    /* JADX INFO: renamed from: s */
     public abstract String mo611s() throws IOException;
 
-    /* renamed from: t */
+    /* JADX INFO: renamed from: t */
     public abstract String mo612t() throws IOException;
 
-    /* renamed from: u */
+    /* JADX INFO: renamed from: u */
     public abstract b mo613u() throws IOException;
 
-    /* renamed from: x */
+    /* JADX INFO: renamed from: x */
     public final void m614x(int i) {
         int i2 = this.f2237k;
         int[] iArr = this.f2238l;
@@ -215,6 +215,6 @@ public abstract class JsonReader2 implements Closeable {
         iArr3[i3] = i;
     }
 
-    /* renamed from: y */
+    /* JADX INFO: renamed from: y */
     public abstract int mo615y(a aVar) throws IOException;
 }

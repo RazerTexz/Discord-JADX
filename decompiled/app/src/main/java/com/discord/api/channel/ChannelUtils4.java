@@ -3,9 +3,9 @@ package com.discord.api.channel;
 import com.discord.api.channel.Channel;
 import java.util.Comparator;
 
-/* compiled from: ChannelUtils.kt */
-/* renamed from: com.discord.api.channel.ChannelUtils$getSortByNameAndType$1, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: com.discord.api.channel.ChannelUtils$getSortByNameAndType$1, reason: use source file name */
+/* JADX INFO: compiled from: ChannelUtils.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class ChannelUtils4<T> implements Comparator<Channel> {
     public final /* synthetic */ Channel.Companion $this_getSortByNameAndType;
 

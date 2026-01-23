@@ -27,15 +27,15 @@ import p658rx.Observable;
 import p658rx.Subscription;
 import p658rx.subjects.PublishSubject;
 
-/* compiled from: DiffCreator.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: DiffCreator.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class DiffCreator<T extends List<? extends DiffKeyProvider>, VH extends RecyclerView.ViewHolder> {
     private static final int EXPENSIVE_DIFF_THRESHOLD = 225;
     private Subscription asyncDiffSubscription;
     private final AppComponent asyncDiffSubscriptionScope;
     private final PublishSubject<UpdateRequest<T, VH>> updateRequestsSubject = PublishSubject.m11133k0();
 
-    /* compiled from: DiffCreator.kt */
+    /* JADX INFO: compiled from: DiffCreator.kt */
     public static final /* data */ class UpdateRequest<T, VH extends RecyclerView.ViewHolder> {
         private final RecyclerView.Adapter<VH> adapter;
         private final T newItems;
@@ -143,8 +143,8 @@ public final class DiffCreator<T extends List<? extends DiffKeyProvider>, VH ext
         }
     }
 
-    /* compiled from: DiffCreator.kt */
-    /* renamed from: com.discord.utilities.recycler.DiffCreator$createDiffUtilCallback$1 */
+    /* JADX INFO: renamed from: com.discord.utilities.recycler.DiffCreator$createDiffUtilCallback$1 */
+    /* JADX INFO: compiled from: DiffCreator.kt */
     public static final class C68461 extends DiffUtil.Callback {
         public final /* synthetic */ List $newItems;
         public final /* synthetic */ List $oldItems;
@@ -175,8 +175,8 @@ public final class DiffCreator<T extends List<? extends DiffKeyProvider>, VH ext
         }
     }
 
-    /* compiled from: DiffCreator.kt */
-    /* renamed from: com.discord.utilities.recycler.DiffCreator$subscribeToAsyncUpdateRequests$1 */
+    /* JADX INFO: renamed from: com.discord.utilities.recycler.DiffCreator$subscribeToAsyncUpdateRequests$1 */
+    /* JADX INFO: compiled from: DiffCreator.kt */
     public static final class C68471<T, R> implements Func1<UpdateRequest<T, VH>, Tuples2<? extends UpdateRequest<T, VH>, ? extends DiffUtil.DiffResult>> {
         public C68471() {
         }
@@ -192,8 +192,8 @@ public final class DiffCreator<T extends List<? extends DiffKeyProvider>, VH ext
         }
     }
 
-    /* compiled from: DiffCreator.kt */
-    /* renamed from: com.discord.utilities.recycler.DiffCreator$subscribeToAsyncUpdateRequests$2 */
+    /* JADX INFO: renamed from: com.discord.utilities.recycler.DiffCreator$subscribeToAsyncUpdateRequests$2 */
+    /* JADX INFO: compiled from: DiffCreator.kt */
     public static final class C68482 extends Lambda implements Function1<Subscription, Unit> {
         public C68482() {
             super(1);
@@ -205,15 +205,15 @@ public final class DiffCreator<T extends List<? extends DiffKeyProvider>, VH ext
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Subscription subscription) {
             Intrinsics3.checkNotNullParameter(subscription, Traits.Payment.Type.SUBSCRIPTION);
             DiffCreator.access$setAsyncDiffSubscription$p(DiffCreator.this, subscription);
         }
     }
 
-    /* compiled from: DiffCreator.kt */
-    /* renamed from: com.discord.utilities.recycler.DiffCreator$subscribeToAsyncUpdateRequests$3 */
+    /* JADX INFO: renamed from: com.discord.utilities.recycler.DiffCreator$subscribeToAsyncUpdateRequests$3 */
+    /* JADX INFO: compiled from: DiffCreator.kt */
     public static final class C68493 extends Lambda implements Function1<Tuples2<? extends UpdateRequest<T, VH>, ? extends DiffUtil.DiffResult>, Unit> {
         public C68493() {
             super(1);

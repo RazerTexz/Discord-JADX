@@ -18,56 +18,56 @@ import p658rx.Subscription;
 import p658rx.functions.Action0;
 import p658rx.subscriptions.CompositeSubscription;
 
-/* compiled from: CachedThreadScheduler.java */
-/* renamed from: j0.l.c.a, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: j0.l.c.a, reason: use source file name */
+/* JADX INFO: compiled from: CachedThreadScheduler.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class CachedThreadScheduler extends Scheduler implements SchedulerLifecycle {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final long f27166a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static final TimeUnit f27167b = TimeUnit.SECONDS;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public static final c f27168c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public static final a f27169d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final ThreadFactory f27170e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final AtomicReference<a> f27171f;
 
-    /* compiled from: CachedThreadScheduler.java */
-    /* renamed from: j0.l.c.a$a */
+    /* JADX INFO: renamed from: j0.l.c.a$a */
+    /* JADX INFO: compiled from: CachedThreadScheduler.java */
     public static final class a {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final ThreadFactory f27172a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final long f27173b;
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public final ConcurrentLinkedQueue<c> f27174c;
 
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         public final CompositeSubscription f27175d;
 
-        /* renamed from: e */
+        /* JADX INFO: renamed from: e */
         public final ScheduledExecutorService f27176e;
 
-        /* renamed from: f */
+        /* JADX INFO: renamed from: f */
         public final Future<?> f27177f;
 
-        /* compiled from: CachedThreadScheduler.java */
-        /* renamed from: j0.l.c.a$a$a, reason: collision with other inner class name */
+        /* JADX INFO: renamed from: j0.l.c.a$a$a, reason: collision with other inner class name */
+        /* JADX INFO: compiled from: CachedThreadScheduler.java */
         public class ThreadFactoryC13351a implements ThreadFactory {
 
-            /* renamed from: j */
+            /* JADX INFO: renamed from: j */
             public final /* synthetic */ ThreadFactory f27178j;
 
             public ThreadFactoryC13351a(a aVar, ThreadFactory threadFactory) {
@@ -82,8 +82,8 @@ public final class CachedThreadScheduler extends Scheduler implements SchedulerL
             }
         }
 
-        /* compiled from: CachedThreadScheduler.java */
-        /* renamed from: j0.l.c.a$a$b */
+        /* JADX INFO: renamed from: j0.l.c.a$a$b */
+        /* JADX INFO: compiled from: CachedThreadScheduler.java */
         public class b implements Runnable {
             public b() {
             }
@@ -106,7 +106,7 @@ public final class CachedThreadScheduler extends Scheduler implements SchedulerL
             }
         }
 
-        public a(ThreadFactory threadFactory, long j, TimeUnit timeUnit) throws SecurityException {
+        public a(ThreadFactory threadFactory, long j, TimeUnit timeUnit) {
             ScheduledFuture<?> scheduledFutureScheduleWithFixedDelay;
             this.f27172a = threadFactory;
             long nanos = timeUnit != null ? timeUnit.toNanos(j) : 0L;
@@ -125,7 +125,7 @@ public final class CachedThreadScheduler extends Scheduler implements SchedulerL
             this.f27177f = scheduledFutureScheduleWithFixedDelay;
         }
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public void m10800a() {
             try {
                 Future<?> future = this.f27177f;
@@ -142,27 +142,27 @@ public final class CachedThreadScheduler extends Scheduler implements SchedulerL
         }
     }
 
-    /* compiled from: CachedThreadScheduler.java */
-    /* renamed from: j0.l.c.a$b */
+    /* JADX INFO: renamed from: j0.l.c.a$b */
+    /* JADX INFO: compiled from: CachedThreadScheduler.java */
     public static final class b extends Scheduler.Worker implements Action0 {
 
-        /* renamed from: k */
+        /* JADX INFO: renamed from: k */
         public final a f27181k;
 
-        /* renamed from: l */
+        /* JADX INFO: renamed from: l */
         public final c f27182l;
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public final CompositeSubscription f27180j = new CompositeSubscription();
 
-        /* renamed from: m */
+        /* JADX INFO: renamed from: m */
         public final AtomicBoolean f27183m = new AtomicBoolean();
 
-        /* compiled from: CachedThreadScheduler.java */
-        /* renamed from: j0.l.c.a$b$a */
+        /* JADX INFO: renamed from: j0.l.c.a$b$a */
+        /* JADX INFO: compiled from: CachedThreadScheduler.java */
         public class a implements Action0 {
 
-            /* renamed from: j */
+            /* JADX INFO: renamed from: j */
             public final /* synthetic */ Action0 f27184j;
 
             public a(Action0 action0) {
@@ -203,13 +203,13 @@ public final class CachedThreadScheduler extends Scheduler implements SchedulerL
         }
 
         @Override // rx.Scheduler.Worker
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public Subscription mo10740a(Action0 action0) {
             return mo10741b(action0, 0L, null);
         }
 
         @Override // rx.Scheduler.Worker
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public Subscription mo10741b(Action0 action0, long j, TimeUnit timeUnit) {
             if (this.f27180j.f27656k) {
                 return Subscriptions.f27422a;
@@ -243,11 +243,11 @@ public final class CachedThreadScheduler extends Scheduler implements SchedulerL
         }
     }
 
-    /* compiled from: CachedThreadScheduler.java */
-    /* renamed from: j0.l.c.a$c */
+    /* JADX INFO: renamed from: j0.l.c.a$c */
+    /* JADX INFO: compiled from: CachedThreadScheduler.java */
     public static final class c extends NewThreadWorker {
 
-        /* renamed from: r */
+        /* JADX INFO: renamed from: r */
         public long f27186r;
 
         public c(ThreadFactory threadFactory) {
@@ -279,7 +279,7 @@ public final class CachedThreadScheduler extends Scheduler implements SchedulerL
     }
 
     @Override // p658rx.Scheduler
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public Scheduler.Worker mo10739a() {
         return new b(this.f27171f.get());
     }

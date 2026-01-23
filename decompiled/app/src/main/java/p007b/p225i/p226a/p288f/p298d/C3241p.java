@@ -7,16 +7,16 @@ import android.util.Log;
 import androidx.annotation.Nullable;
 import com.google.android.gms.cloudmessaging.zza;
 
-/* compiled from: com.google.android.gms:play-services-cloud-messaging@@16.0.0 */
-/* renamed from: b.i.a.f.d.p */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.d.p */
+/* JADX INFO: compiled from: com.google.android.gms:play-services-cloud-messaging@@16.0.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public final class C3241p {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     @Nullable
     public final Messenger f9277a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     @Nullable
     public final zza f9278b;
 

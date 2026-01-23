@@ -13,22 +13,22 @@ import p507d0.p513e0.p514p.p515d.p517m0.p521c.PropertyDescriptor;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: KProperty2Impl.kt */
-/* renamed from: d0.e0.p.d.r, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.r, reason: use source file name */
+/* JADX INFO: compiled from: KProperty2Impl.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public class KProperty2Impl2<D, E, V> extends KPropertyImpl<V> implements KProperty, Function2 {
 
-    /* renamed from: u */
+    /* JADX INFO: renamed from: u */
     public final ReflectProperties.b<a<D, E, V>> f25045u;
 
-    /* renamed from: v */
+    /* JADX INFO: renamed from: v */
     public final Lazy<Field> f25046v;
 
-    /* compiled from: KProperty2Impl.kt */
-    /* renamed from: d0.e0.p.d.r$a */
+    /* JADX INFO: renamed from: d0.e0.p.d.r$a */
+    /* JADX INFO: compiled from: KProperty2Impl.kt */
     public static final class a<D, E, V> extends KPropertyImpl.c<V> implements KProperty.Getter, Function2 {
 
-        /* renamed from: q */
+        /* JADX INFO: renamed from: q */
         public final KProperty2Impl2<D, E, V> f25047q;
 
         /* JADX WARN: Multi-variable type inference failed */
@@ -53,8 +53,8 @@ public class KProperty2Impl2<D, E, V> extends KPropertyImpl<V> implements KPrope
         }
     }
 
-    /* compiled from: KProperty2Impl.kt */
-    /* renamed from: d0.e0.p.d.r$b */
+    /* JADX INFO: renamed from: d0.e0.p.d.r$b */
+    /* JADX INFO: compiled from: KProperty2Impl.kt */
     public static final class b extends Lambda implements Function0<a<D, E, ? extends V>> {
         public b() {
             super(0);
@@ -71,8 +71,8 @@ public class KProperty2Impl2<D, E, V> extends KPropertyImpl<V> implements KPrope
         }
     }
 
-    /* compiled from: KProperty2Impl.kt */
-    /* renamed from: d0.e0.p.d.r$c */
+    /* JADX INFO: renamed from: d0.e0.p.d.r$c */
+    /* JADX INFO: compiled from: KProperty2Impl.kt */
     public static final class c extends Lambda implements Function0<Field> {
         public c() {
             super(0);
@@ -84,7 +84,7 @@ public class KProperty2Impl2<D, E, V> extends KPropertyImpl<V> implements KPrope
         }
 
         @Override // kotlin.jvm.functions.Function0
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final Field invoke2() {
             return KProperty2Impl2.this.m10056c();
         }
@@ -106,7 +106,7 @@ public class KProperty2Impl2<D, E, V> extends KPropertyImpl<V> implements KPrope
     }
 
     @Override // p507d0.p513e0.p514p.p515d.KPropertyImpl, kotlin.reflect.KProperty6
-    /* renamed from: getGetter */
+    /* JADX INFO: renamed from: getGetter */
     public /* bridge */ /* synthetic */ KPropertyImpl.c mo11489getGetter() {
         return mo11489getGetter();
     }
@@ -117,7 +117,7 @@ public class KProperty2Impl2<D, E, V> extends KPropertyImpl<V> implements KPrope
     }
 
     @Override // p507d0.p513e0.p514p.p515d.KPropertyImpl, kotlin.reflect.KProperty6
-    /* renamed from: getGetter */
+    /* JADX INFO: renamed from: getGetter */
     public a<D, E, V> mo11489getGetter() {
         a<D, E, V> aVarInvoke = this.f25045u.invoke();
         Intrinsics3.checkNotNullExpressionValue(aVarInvoke, "_getter()");

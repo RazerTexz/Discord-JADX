@@ -21,7 +21,7 @@ import lombok.core.configuration.ConfigurationKey;
 import lombok.core.debug.HistogramTracker;
 import lombok.permit.Permit;
 
-/* loaded from: discord-126021.apk:lombok/core/AST.SCL.lombok */
+/* JADX INFO: loaded from: discord-126021.apk:lombok/core/AST.SCL.lombok */
 public abstract class AST<A extends AST<A, L, N>, L extends LombokNode<A, L, N>, N> {
     private L top;
     private final String fileName;
@@ -35,7 +35,7 @@ public abstract class AST<A extends AST<A, L, N>, L extends LombokNode<A, L, N>,
     private static final HistogramTracker configTracker;
     private static final ConcurrentMap<Class<?>, FieldAccess[]> fieldsOfASTClasses;
 
-    /* loaded from: discord-126021.apk:lombok/core/AST$Kind.SCL.lombok */
+    /* JADX INFO: loaded from: discord-126021.apk:lombok/core/AST$Kind.SCL.lombok */
     public enum Kind {
         COMPILATION_UNIT,
         TYPE,
@@ -48,7 +48,7 @@ public abstract class AST<A extends AST<A, L, N>, L extends LombokNode<A, L, N>,
         STATEMENT,
         TYPE_USE;
 
-        /* renamed from: values, reason: to resolve conflict with enum method */
+        /* JADX INFO: renamed from: values, reason: to resolve conflict with enum method */
         public static Kind[] valuesCustom() {
             Kind[] kindArrValuesCustom = values();
             int length = kindArrValuesCustom.length;
@@ -159,7 +159,7 @@ public abstract class AST<A extends AST<A, L, N>, L extends LombokNode<A, L, N>,
         return targetNode;
     }
 
-    /* loaded from: discord-126021.apk:lombok/core/AST$FieldAccess.SCL.lombok */
+    /* JADX INFO: loaded from: discord-126021.apk:lombok/core/AST$FieldAccess.SCL.lombok */
     protected static class FieldAccess {
         public final Field field;
         public final int dim;
@@ -170,7 +170,7 @@ public abstract class AST<A extends AST<A, L, N>, L extends LombokNode<A, L, N>,
         }
     }
 
-    protected FieldAccess[] fieldsOf(Class<?> c) throws SecurityException {
+    protected FieldAccess[] fieldsOf(Class<?> c) {
         FieldAccess[] fields = fieldsOfASTClasses.get(c);
         if (fields != null) {
             return fields;
@@ -181,7 +181,7 @@ public abstract class AST<A extends AST<A, L, N>, L extends LombokNode<A, L, N>,
         return fieldsOfASTClasses.get(c);
     }
 
-    private void getFields(Class<?> c, Collection<FieldAccess> fields) throws SecurityException {
+    private void getFields(Class<?> c, Collection<FieldAccess> fields) {
         if (c == Object.class || c == null) {
             return;
         }
@@ -226,13 +226,13 @@ public abstract class AST<A extends AST<A, L, N>, L extends LombokNode<A, L, N>,
         return false;
     }
 
-    protected Collection<L> buildWithField(Class<L> nodeType, N statement, FieldAccess fa) throws IllegalArgumentException {
+    protected Collection<L> buildWithField(Class<L> nodeType, N statement, FieldAccess fa) {
         List<L> list = new ArrayList<>();
         buildWithField0(nodeType, statement, fa, list);
         return list;
     }
 
-    protected boolean replaceStatementInNode(N statement, N oldN, N newN) throws SecurityException {
+    protected boolean replaceStatementInNode(N statement, N oldN, N newN) {
         for (FieldAccess fa : fieldsOf(statement.getClass())) {
             if (replaceStatementInField(fa, statement, oldN, newN)) {
                 return true;
@@ -241,7 +241,7 @@ public abstract class AST<A extends AST<A, L, N>, L extends LombokNode<A, L, N>,
         return false;
     }
 
-    private boolean replaceStatementInField(FieldAccess fa, N statement, N oldN, N newN) throws IllegalArgumentException {
+    private boolean replaceStatementInField(FieldAccess fa, N statement, N oldN, N newN) {
         try {
             Object o = fa.field.get(statement);
             if (o == null) {
@@ -297,7 +297,7 @@ public abstract class AST<A extends AST<A, L, N>, L extends LombokNode<A, L, N>,
         }
     }
 
-    private boolean replaceStatementInArray(Object array, N oldN, N newN) throws ArrayIndexOutOfBoundsException, IllegalArgumentException {
+    private boolean replaceStatementInArray(Object array, N oldN, N newN) {
         if (array == null) {
             return false;
         }
@@ -319,7 +319,7 @@ public abstract class AST<A extends AST<A, L, N>, L extends LombokNode<A, L, N>,
     }
 
     /* JADX WARN: Multi-variable type inference failed */
-    private void buildWithField0(Class<L> nodeType, N child, FieldAccess fa, Collection<L> list) throws IllegalArgumentException {
+    private void buildWithField0(Class<L> nodeType, N child, FieldAccess fa, Collection<L> list) {
         try {
             Object o = fa.field.get(child);
             if (o == null) {

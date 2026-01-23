@@ -8,40 +8,40 @@ import androidx.viewbinding.ViewBinding;
 import com.discord.views.VoiceUserView;
 import com.discord.views.calls.SpeakerPulseView;
 
-/* compiled from: ViewStageChannelSpeakerBinding.java */
-/* renamed from: b.a.i.w3, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.a.i.w3, reason: use source file name */
+/* JADX INFO: compiled from: ViewStageChannelSpeakerBinding.java */
+/* JADX INFO: loaded from: classes.dex */
 public final class ViewStageChannelSpeakerBinding implements ViewBinding {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     @NonNull
     public final View f1348a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     @NonNull
     public final VoiceUserView f1349b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     @NonNull
     public final ImageView f1350c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     @NonNull
     public final ImageView f1351d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     @NonNull
     public final ImageView f1352e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     @NonNull
     public final ImageView f1353f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     @NonNull
     public final TextView f1354g;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     @NonNull
     public final SpeakerPulseView f1355h;
 

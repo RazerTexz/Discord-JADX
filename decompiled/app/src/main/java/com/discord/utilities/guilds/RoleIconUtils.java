@@ -5,8 +5,8 @@ import com.discord.api.role.GuildRole;
 import com.discord.models.guild.Guild;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: RoleIconUtils.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: RoleIconUtils.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class RoleIconUtils {
     public static final RoleIconUtils INSTANCE = new RoleIconUtils();
 

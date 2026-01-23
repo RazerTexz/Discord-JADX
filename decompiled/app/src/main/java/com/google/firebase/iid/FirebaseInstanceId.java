@@ -43,42 +43,42 @@ import p007b.p225i.p361c.p400t.Provider2;
 import p007b.p225i.p361c.p401u.InterfaceC4843g;
 import p007b.p225i.p361c.p407x.UserAgentPublisher;
 
-/* compiled from: com.google.firebase:firebase-iid@@21.0.0 */
+/* JADX INFO: compiled from: com.google.firebase:firebase-iid@@21.0.0 */
+/* JADX INFO: loaded from: classes3.dex */
 @Deprecated
-/* loaded from: classes3.dex */
 public class FirebaseInstanceId {
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static C4832w f21433b;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public static ScheduledExecutorService f21435d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final Executor f21436e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final FirebaseApp2 f21437f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public final C4826q f21438g;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public final C4823n f21439h;
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public final C4830u f21440i;
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final InterfaceC4843g f21441j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public boolean f21442k;
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final long f21432a = TimeUnit.HOURS.toSeconds(8);
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public static final Pattern f21434c = Pattern.compile("\\AA[\\w-]{38}\\z");
 
     public FirebaseInstanceId(FirebaseApp2 firebaseApp2, Provider2<UserAgentPublisher> provider2, Provider2<HeartBeatInfo> provider22, InterfaceC4843g interfaceC4843g) {
@@ -104,7 +104,7 @@ public class FirebaseInstanceId {
         this.f21441j = interfaceC4843g;
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static <T> T m9177a(@NonNull Task<T> task) throws InterruptedException {
         AnimatableValueParser.m595z(task, "Task must not be null");
         CountDownLatch countDownLatch = new CountDownLatch(1);
@@ -122,7 +122,7 @@ public class FirebaseInstanceId {
         throw new IllegalThreadStateException("Firebase Installations getId Task has timed out.");
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public static void m9178c(@NonNull FirebaseApp2 firebaseApp2) {
         firebaseApp2.m6330a();
         AnimatableValueParser.m579v(firebaseApp2.f12120f.f12140g, "Please set your project ID. A valid Firebase project ID is required to communicate with Firebase server APIs: It identifies your project with Google.");
@@ -146,7 +146,7 @@ public class FirebaseInstanceId {
         return firebaseInstanceId;
     }
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public static boolean m9179l() {
         if (Log.isLoggable("FirebaseInstanceId", 3)) {
             return true;
@@ -154,7 +154,7 @@ public class FirebaseInstanceId {
         return Build.VERSION.SDK_INT == 23 && Log.isLoggable("FirebaseInstanceId", 3);
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public String m9180b() throws IOException {
         String strM6730b = C4826q.m6730b(this.f21437f);
         m9178c(this.f21437f);
@@ -182,7 +182,7 @@ public class FirebaseInstanceId {
         }
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public void m9181d(Runnable runnable, long j) {
         synchronized (FirebaseInstanceId.class) {
             if (f21435d == null) {
@@ -192,7 +192,7 @@ public class FirebaseInstanceId {
         }
     }
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public String m9182e() {
         try {
             C4832w c4832w = f21433b;
@@ -208,13 +208,13 @@ public class FirebaseInstanceId {
 
     @NonNull
     @Deprecated
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public Task<InterfaceC4824o> m9183f() {
         m9178c(this.f21437f);
         return m9184g(C4826q.m6730b(this.f21437f), "*");
     }
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public final Task<InterfaceC4824o> m9184g(String str, String str2) {
         if (str2.isEmpty() || str2.equalsIgnoreCase("fcm") || str2.equalsIgnoreCase("gcm")) {
             str2 = "*";
@@ -222,7 +222,7 @@ public class FirebaseInstanceId {
         return C3404f.m4264Z(null).mo6015j(this.f21436e, new C4818i(this, str, str2));
     }
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public final String m9185h() {
         FirebaseApp2 firebaseApp2 = this.f21437f;
         firebaseApp2.m6330a();
@@ -231,7 +231,7 @@ public class FirebaseInstanceId {
 
     @Nullable
     @Deprecated
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public String m9186i() {
         m9178c(this.f21437f);
         C4832w.a aVarM9187j = m9187j();
@@ -250,13 +250,13 @@ public class FirebaseInstanceId {
     }
 
     @Nullable
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public C4832w.a m9187j() {
         return m9188k(C4826q.m6730b(this.f21437f), "*");
     }
 
     @Nullable
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public C4832w.a m9188k(String str, String str2) {
         C4832w.a aVarM6743b;
         C4832w c4832w = f21433b;
@@ -267,7 +267,7 @@ public class FirebaseInstanceId {
         return aVarM6743b;
     }
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public final Task m9189m(String str, String str2) throws Exception {
         Task<InterfaceC4824o> taskMo6015j;
         String strM9182e = m9182e();
@@ -302,18 +302,18 @@ public class FirebaseInstanceId {
         return taskMo6015j;
     }
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public synchronized void m9190n(boolean z2) {
         this.f21442k = z2;
     }
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public synchronized void m9191o(long j) {
         m9181d(new RunnableC4833x(this, Math.min(Math.max(30L, j << 1), f21432a)), j);
         this.f21442k = true;
     }
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public boolean m9192p(@Nullable C4832w.a aVar) {
         if (aVar != null) {
             if (!(System.currentTimeMillis() > aVar.f12908e + C4832w.a.f12904a || !this.f21438g.m6731a().equals(aVar.f12907d))) {

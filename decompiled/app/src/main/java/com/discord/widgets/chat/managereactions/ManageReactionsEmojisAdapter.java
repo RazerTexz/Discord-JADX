@@ -21,13 +21,13 @@ import kotlin.jvm.functions.Function1;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ManageReactionsEmojisAdapter.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: ManageReactionsEmojisAdapter.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class ManageReactionsEmojisAdapter extends MGRecyclerAdapterSimple<ReactionEmojiItem> {
     private static final int TYPE_REACTION_EMOJI_ITEM = 0;
     private Function1<? super String, Unit> onEmojiSelectedListener;
 
-    /* compiled from: ManageReactionsEmojisAdapter.kt */
+    /* JADX INFO: compiled from: ManageReactionsEmojisAdapter.kt */
     public static final /* data */ class ReactionEmojiItem implements MGRecyclerDataPayload {
         private final boolean isSelected;
         private final String key;
@@ -51,12 +51,12 @@ public final class ManageReactionsEmojisAdapter extends MGRecyclerAdapterSimple<
             return reactionEmojiItem.copy(messageReaction, z2);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final MessageReaction getReaction() {
             return this.reaction;
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final boolean getIsSelected() {
             return this.isSelected;
         }
@@ -92,15 +92,18 @@ public final class ManageReactionsEmojisAdapter extends MGRecyclerAdapterSimple<
         }
 
         /* JADX WARN: Multi-variable type inference failed */
+        /* JADX WARN: Type inference failed for: r1v1, types: [int] */
+        /* JADX WARN: Type inference failed for: r1v2 */
+        /* JADX WARN: Type inference failed for: r1v3 */
         public int hashCode() {
             MessageReaction messageReaction = this.reaction;
             int iHashCode = (messageReaction != null ? messageReaction.hashCode() : 0) * 31;
             boolean z2 = this.isSelected;
-            int i = z2;
-            if (z2 != 0) {
-                i = 1;
+            ?? r1 = z2;
+            if (z2) {
+                r1 = 1;
             }
-            return iHashCode + i;
+            return iHashCode + r1;
         }
 
         public final boolean isSelected() {
@@ -115,7 +118,7 @@ public final class ManageReactionsEmojisAdapter extends MGRecyclerAdapterSimple<
         }
     }
 
-    /* compiled from: ManageReactionsEmojisAdapter.kt */
+    /* JADX INFO: compiled from: ManageReactionsEmojisAdapter.kt */
     public static final class ReactionEmojiViewHolder extends MGRecyclerViewHolder<ManageReactionsEmojisAdapter, ReactionEmojiItem> {
         private static final int emojiSizePx = DimenUtils.dpToPixels(20);
         private final WidgetManageReactionsEmojiBinding binding;
@@ -157,7 +160,7 @@ public final class ManageReactionsEmojisAdapter extends MGRecyclerAdapterSimple<
             onConfigure2(i, reactionEmojiItem);
         }
 
-        /* renamed from: onConfigure, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: onConfigure, reason: avoid collision after fix types in other method */
         public void onConfigure2(int position, ReactionEmojiItem data) {
             Intrinsics3.checkNotNullParameter(data, "data");
             super.onConfigure(position, data);

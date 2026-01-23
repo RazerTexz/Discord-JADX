@@ -8,8 +8,8 @@ import android.view.Gravity;
 import androidx.annotation.NonNull;
 import androidx.annotation.RequiresApi;
 
+/* JADX INFO: loaded from: classes.dex */
 @RequiresApi(21)
-/* loaded from: classes.dex */
 public class RoundedBitmapDrawable21 extends RoundedBitmapDrawable {
     public RoundedBitmapDrawable21(Resources resources, Bitmap bitmap) {
         super(resources, bitmap);

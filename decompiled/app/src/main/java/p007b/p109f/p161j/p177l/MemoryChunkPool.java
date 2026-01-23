@@ -5,12 +5,12 @@ import com.facebook.imagepipeline.memory.BasePool;
 import java.util.Objects;
 import p007b.p109f.p115d.p122g.MemoryTrimmableRegistry;
 
-/* compiled from: MemoryChunkPool.java */
-/* renamed from: b.f.j.l.s, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.f.j.l.s, reason: use source file name */
+/* JADX INFO: compiled from: MemoryChunkPool.java */
+/* JADX INFO: loaded from: classes3.dex */
 public abstract class MemoryChunkPool extends BasePool<MemoryChunk> {
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final int[] f3952k;
 
     public MemoryChunkPool(MemoryTrimmableRegistry memoryTrimmableRegistry, PoolParams poolParams, PoolStatsTracker poolStatsTracker) {
@@ -32,19 +32,19 @@ public abstract class MemoryChunkPool extends BasePool<MemoryChunk> {
     }
 
     @Override // com.facebook.imagepipeline.memory.BasePool
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public /* bridge */ /* synthetic */ MemoryChunk mo1382e(int i) {
         return mo1393s(i);
     }
 
     @Override // com.facebook.imagepipeline.memory.BasePool
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public void mo1383g(MemoryChunk memoryChunk) {
         memoryChunk.close();
     }
 
     @Override // com.facebook.imagepipeline.memory.BasePool
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public int mo1384i(int i) {
         if (i <= 0) {
             throw new BasePool.InvalidSizeException(Integer.valueOf(i));
@@ -58,23 +58,23 @@ public abstract class MemoryChunkPool extends BasePool<MemoryChunk> {
     }
 
     @Override // com.facebook.imagepipeline.memory.BasePool
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public int mo1385j(MemoryChunk memoryChunk) {
         return memoryChunk.getSize();
     }
 
     @Override // com.facebook.imagepipeline.memory.BasePool
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public int mo1386k(int i) {
         return i;
     }
 
     @Override // com.facebook.imagepipeline.memory.BasePool
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public boolean mo1388o(MemoryChunk memoryChunk) {
         return !memoryChunk.isClosed();
     }
 
-    /* renamed from: s */
+    /* JADX INFO: renamed from: s */
     public abstract MemoryChunk mo1393s(int i);
 }

@@ -8,16 +8,16 @@ import p507d0.p513e0.p514p.p515d.p517m0.p566m.storage5;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: LazyScopeAdapter.kt */
-/* renamed from: d0.e0.p.d.m0.k.a0.h, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.k.a0.h, reason: use source file name */
+/* JADX INFO: compiled from: LazyScopeAdapter.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class LazyScopeAdapter extends AbstractScopeAdapter {
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final storage5<MemberScope3> f24368b;
 
-    /* compiled from: LazyScopeAdapter.kt */
-    /* renamed from: d0.e0.p.d.m0.k.a0.h$a */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.k.a0.h$a */
+    /* JADX INFO: compiled from: LazyScopeAdapter.kt */
     public static final class a extends Lambda implements Function0<MemberScope3> {
         public final /* synthetic */ Function0<MemberScope3> $getScope;
 
@@ -57,7 +57,7 @@ public final class LazyScopeAdapter extends AbstractScopeAdapter {
     }
 
     @Override // p507d0.p513e0.p514p.p515d.p517m0.p552k.p553a0.AbstractScopeAdapter
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public MemberScope3 mo9910a() {
         return this.f24368b.invoke();
     }

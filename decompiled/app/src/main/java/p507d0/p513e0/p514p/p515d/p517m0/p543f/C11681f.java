@@ -20,15 +20,15 @@ import p507d0.p513e0.p514p.p515d.p517m0.p550i.MessageLite;
 import p507d0.p513e0.p514p.p515d.p517m0.p550i.MessageLiteOrBuilder;
 import p507d0.p513e0.p514p.p515d.p517m0.p550i.Parser2;
 
-/* compiled from: ProtoBuf.java */
-/* renamed from: d0.e0.p.d.m0.f.f */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.f.f */
+/* JADX INFO: compiled from: ProtoBuf.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class C11681f extends GeneratedMessageLite implements MessageLiteOrBuilder {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static final C11681f f23797j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public static Parser2<C11681f> f23798k = new a();
     private int bitField0_;
     private C11683h conclusionOfConditionalEffect_;
@@ -39,8 +39,8 @@ public final class C11681f extends GeneratedMessageLite implements MessageLiteOr
     private int memoizedSerializedSize;
     private final ByteString3 unknownFields;
 
-    /* compiled from: ProtoBuf.java */
-    /* renamed from: d0.e0.p.d.m0.f.f$a */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.f.f$a */
+    /* JADX INFO: compiled from: ProtoBuf.java */
     public static class a extends AbstractParser<C11681f> {
         @Override // p507d0.p513e0.p514p.p515d.p517m0.p550i.Parser2
         public /* bridge */ /* synthetic */ Object parsePartialFrom(CodedInputStream codedInputStream, ExtensionRegistryLite extensionRegistryLite) throws InvalidProtocolBufferException {
@@ -53,23 +53,23 @@ public final class C11681f extends GeneratedMessageLite implements MessageLiteOr
         }
     }
 
-    /* compiled from: ProtoBuf.java */
-    /* renamed from: d0.e0.p.d.m0.f.f$b */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.f.f$b */
+    /* JADX INFO: compiled from: ProtoBuf.java */
     public static final class b extends GeneratedMessageLite.b<C11681f, b> implements MessageLiteOrBuilder {
 
-        /* renamed from: k */
+        /* JADX INFO: renamed from: k */
         public int f23799k;
 
-        /* renamed from: l */
+        /* JADX INFO: renamed from: l */
         public c f23800l = c.RETURNS_CONSTANT;
 
-        /* renamed from: m */
+        /* JADX INFO: renamed from: m */
         public List<C11683h> f23801m = Collections.emptyList();
 
-        /* renamed from: n */
+        /* JADX INFO: renamed from: n */
         public C11683h f23802n = C11683h.getDefaultInstance();
 
-        /* renamed from: o */
+        /* JADX INFO: renamed from: o */
         public d f23803o = d.AT_MOST_ONCE;
 
         @Override // p507d0.p513e0.p514p.p515d.p517m0.p550i.MessageLite.a
@@ -100,7 +100,7 @@ public final class C11681f extends GeneratedMessageLite implements MessageLiteOr
         }
 
         @Override // p507d0.p513e0.p514p.p515d.p517m0.p550i.GeneratedMessageLite.b
-        /* renamed from: clone */
+        /* JADX INFO: renamed from: clone */
         public /* bridge */ /* synthetic */ Object mo11465clone() throws CloneNotSupportedException {
             return clone();
         }
@@ -228,8 +228,8 @@ public final class C11681f extends GeneratedMessageLite implements MessageLiteOr
         }
     }
 
-    /* compiled from: ProtoBuf.java */
-    /* renamed from: d0.e0.p.d.m0.f.f$c */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.f.f$c */
+    /* JADX INFO: compiled from: ProtoBuf.java */
     public enum c implements Internal.a {
         RETURNS_CONSTANT(0),
         CALLS(1),
@@ -260,8 +260,8 @@ public final class C11681f extends GeneratedMessageLite implements MessageLiteOr
         }
     }
 
-    /* compiled from: ProtoBuf.java */
-    /* renamed from: d0.e0.p.d.m0.f.f$d */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.f.f$d */
+    /* JADX INFO: compiled from: ProtoBuf.java */
     public enum d implements Internal.a {
         AT_MOST_ONCE(0),
         EXACTLY_ONCE(1),
@@ -305,42 +305,42 @@ public final class C11681f extends GeneratedMessageLite implements MessageLiteOr
         this.unknownFields = bVar.getUnknownFields();
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static /* synthetic */ c m9651a(C11681f c11681f, c cVar) {
         c11681f.effectType_ = cVar;
         return cVar;
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static /* synthetic */ List m9652b(C11681f c11681f) {
         return c11681f.effectConstructorArgument_;
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public static /* synthetic */ List m9653c(C11681f c11681f, List list) {
         c11681f.effectConstructorArgument_ = list;
         return list;
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public static /* synthetic */ C11683h m9654d(C11681f c11681f, C11683h c11683h) {
         c11681f.conclusionOfConditionalEffect_ = c11683h;
         return c11683h;
     }
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public static /* synthetic */ d m9655e(C11681f c11681f, d dVar) {
         c11681f.kind_ = dVar;
         return dVar;
     }
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public static /* synthetic */ int m9656f(C11681f c11681f, int i) {
         c11681f.bitField0_ = i;
         return i;
     }
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public static /* synthetic */ ByteString3 m9657g(C11681f c11681f) {
         return c11681f.unknownFields;
     }
@@ -394,7 +394,7 @@ public final class C11681f extends GeneratedMessageLite implements MessageLiteOr
         return size;
     }
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public final void m9658h() {
         this.effectType_ = c.RETURNS_CONSTANT;
         this.effectConstructorArgument_ = Collections.emptyList();

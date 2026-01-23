@@ -4,12 +4,12 @@ import com.discord.rtcconnection.RtcConnection;
 import p507d0.p592z.p594d.Intrinsics3;
 import p658rx.functions.Action1;
 
-/* compiled from: RtcConnection.kt */
-/* renamed from: b.a.q.p */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.a.q.p */
+/* JADX INFO: compiled from: RtcConnection.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class C1258p<T> implements Action1<Boolean> {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final /* synthetic */ RtcConnection f1868j;
 
     public C1258p(RtcConnection rtcConnection) {

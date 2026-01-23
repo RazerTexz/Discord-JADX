@@ -14,35 +14,35 @@ import p507d0.p579g0.CharJVM;
 import p507d0.p592z.p594d.FunctionReferenceImpl;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: Xml.kt */
-/* renamed from: b.a.t.a.v, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.a.t.a.v, reason: use source file name */
+/* JADX INFO: compiled from: Xml.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class Xml {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final Pattern f1973a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static final Pattern f1974b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public static final Xml f1975c = new Xml();
 
-    /* compiled from: Xml.kt */
-    /* renamed from: b.a.t.a.v$a */
+    /* JADX INFO: renamed from: b.a.t.a.v$a */
+    /* JADX INFO: compiled from: Xml.kt */
     public static final class a<RC> extends Node.C5655a<RC> {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final String f1976a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final String f1977b;
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public final CodeStyleProviders<RC> f1978c;
 
-        /* compiled from: Xml.kt */
-        /* renamed from: b.a.t.a.v$a$a, reason: collision with other inner class name */
+        /* JADX INFO: renamed from: b.a.t.a.v$a$a, reason: collision with other inner class name */
+        /* JADX INFO: compiled from: Xml.kt */
         public static final /* synthetic */ class C13217a extends FunctionReferenceImpl implements Function1<RC, Iterable<?>> {
             public C13217a(StyleNode.InterfaceC5656a interfaceC5656a) {
                 super(1, interfaceC5656a, StyleNode.InterfaceC5656a.class, "get", "get(Ljava/lang/Object;)Ljava/lang/Iterable;", 0);

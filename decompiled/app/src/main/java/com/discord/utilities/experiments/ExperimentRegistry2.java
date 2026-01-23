@@ -5,9 +5,9 @@ import java.util.List;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ExperimentRegistry.kt */
-/* renamed from: com.discord.utilities.experiments.RegisteredExperiment, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.utilities.experiments.RegisteredExperiment, reason: use source file name */
+/* JADX INFO: compiled from: ExperimentRegistry.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final /* data */ class ExperimentRegistry2 {
     private final List<String> buckets;
     private final boolean cacheExperiment;
@@ -15,8 +15,8 @@ public final /* data */ class ExperimentRegistry2 {
     private final String readableName;
     private final Type type;
 
-    /* compiled from: ExperimentRegistry.kt */
-    /* renamed from: com.discord.utilities.experiments.RegisteredExperiment$Type */
+    /* JADX INFO: renamed from: com.discord.utilities.experiments.RegisteredExperiment$Type */
+    /* JADX INFO: compiled from: ExperimentRegistry.kt */
     public enum Type {
         GUILD,
         USER
@@ -34,6 +34,7 @@ public final /* data */ class ExperimentRegistry2 {
         this.cacheExperiment = z2;
     }
 
+    /* JADX WARN: Multi-variable type inference failed */
     public static /* synthetic */ ExperimentRegistry2 copy$default(ExperimentRegistry2 experimentRegistry2, String str, String str2, Type type, List list, boolean z2, int i, Object obj) {
         if ((i & 1) != 0) {
             str = experimentRegistry2.readableName;
@@ -56,17 +57,17 @@ public final /* data */ class ExperimentRegistry2 {
         return experimentRegistry2.copy(str, str3, type2, list2, z2);
     }
 
-    /* renamed from: component1, reason: from getter */
+    /* JADX INFO: renamed from: component1, reason: from getter */
     public final String getReadableName() {
         return this.readableName;
     }
 
-    /* renamed from: component2, reason: from getter */
+    /* JADX INFO: renamed from: component2, reason: from getter */
     public final String getName() {
         return this.name;
     }
 
-    /* renamed from: component3, reason: from getter */
+    /* JADX INFO: renamed from: component3, reason: from getter */
     public final Type getType() {
         return this.type;
     }
@@ -75,7 +76,7 @@ public final /* data */ class ExperimentRegistry2 {
         return this.buckets;
     }
 
-    /* renamed from: component5, reason: from getter */
+    /* JADX INFO: renamed from: component5, reason: from getter */
     public final boolean getCacheExperiment() {
         return this.cacheExperiment;
     }
@@ -120,6 +121,9 @@ public final /* data */ class ExperimentRegistry2 {
     }
 
     /* JADX WARN: Multi-variable type inference failed */
+    /* JADX WARN: Type inference failed for: r1v3, types: [int] */
+    /* JADX WARN: Type inference failed for: r1v4 */
+    /* JADX WARN: Type inference failed for: r1v6 */
     public int hashCode() {
         String str = this.readableName;
         int iHashCode = (str != null ? str.hashCode() : 0) * 31;
@@ -130,11 +134,11 @@ public final /* data */ class ExperimentRegistry2 {
         List<String> list = this.buckets;
         int iHashCode4 = (iHashCode3 + (list != null ? list.hashCode() : 0)) * 31;
         boolean z2 = this.cacheExperiment;
-        int i = z2;
-        if (z2 != 0) {
-            i = 1;
+        ?? r1 = z2;
+        if (z2) {
+            r1 = 1;
         }
-        return iHashCode4 + i;
+        return iHashCode4 + r1;
     }
 
     public String toString() {

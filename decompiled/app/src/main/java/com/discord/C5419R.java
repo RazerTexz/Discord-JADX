@@ -1,10 +1,10 @@
 package com.discord;
 
-/* renamed from: com.discord.R */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: com.discord.R */
+/* JADX INFO: loaded from: classes.dex */
 public final class C5419R {
 
-    /* renamed from: com.discord.R$a */
+    /* JADX INFO: renamed from: com.discord.R$a */
     public static final class a {
         public static final int AcceptTermsStepCard_image_src = 0;
         public static final int AcceptTermsStepCard_step_description = 1;
@@ -1878,7 +1878,7 @@ public final class C5419R {
         public static final int StyledPlayerView_use_artwork = 32;
         public static final int StyledPlayerView_use_controller = 33;
 
-        /* renamed from: SwipeRefreshLayout_swipeRefreshLayoutProgressSpinnerBackgroundColor */
+        /* JADX INFO: renamed from: SwipeRefreshLayout_swipeRefreshLayoutProgressSpinnerBackgroundColor */
         public static final int f14575xaa980688 = 0;
         public static final int SwitchCompat_android_textOff = 1;
         public static final int SwitchCompat_android_textOn = 0;
@@ -2383,7 +2383,7 @@ public final class C5419R {
     }
 
     /* JADX INFO: Added by JADX */
-    /* renamed from: com.discord.R$anim */
+    /* JADX INFO: renamed from: com.discord.R$anim */
     public static final class anim {
 
         /* JADX INFO: Added by JADX */
@@ -2640,7 +2640,7 @@ public final class C5419R {
     }
 
     /* JADX INFO: Added by JADX */
-    /* renamed from: com.discord.R$animator */
+    /* JADX INFO: renamed from: com.discord.R$animator */
     public static final class animator {
 
         /* JADX INFO: Added by JADX */
@@ -2753,7 +2753,7 @@ public final class C5419R {
     }
 
     /* JADX INFO: Added by JADX */
-    /* renamed from: com.discord.R$array */
+    /* JADX INFO: renamed from: com.discord.R$array */
     public static final class array {
 
         /* JADX INFO: Added by JADX */
@@ -2779,7 +2779,7 @@ public final class C5419R {
     }
 
     /* JADX INFO: Added by JADX */
-    /* renamed from: com.discord.R$attr */
+    /* JADX INFO: renamed from: com.discord.R$attr */
     public static final class attr {
 
         /* JADX INFO: Added by JADX */
@@ -8409,7 +8409,7 @@ public final class C5419R {
     }
 
     /* JADX INFO: Added by JADX */
-    /* renamed from: com.discord.R$bool */
+    /* JADX INFO: renamed from: com.discord.R$bool */
     public static final class bool {
 
         /* JADX INFO: Added by JADX */
@@ -8444,7 +8444,7 @@ public final class C5419R {
     }
 
     /* JADX INFO: Added by JADX */
-    /* renamed from: com.discord.R$color */
+    /* JADX INFO: renamed from: com.discord.R$color */
     public static final class color {
 
         /* JADX INFO: Added by JADX */
@@ -11101,7 +11101,7 @@ public final class C5419R {
     }
 
     /* JADX INFO: Added by JADX */
-    /* renamed from: com.discord.R$dimen */
+    /* JADX INFO: renamed from: com.discord.R$dimen */
     public static final class dimen {
 
         /* JADX INFO: Added by JADX */
@@ -12963,7 +12963,7 @@ public final class C5419R {
     }
 
     /* JADX INFO: Added by JADX */
-    /* renamed from: com.discord.R$drawable */
+    /* JADX INFO: renamed from: com.discord.R$drawable */
     public static final class drawable {
 
         /* JADX INFO: Added by JADX */
@@ -18521,7 +18521,7 @@ public final class C5419R {
     }
 
     /* JADX INFO: Added by JADX */
-    /* renamed from: com.discord.R$font */
+    /* JADX INFO: renamed from: com.discord.R$font */
     public static final class font {
 
         /* JADX INFO: Added by JADX */
@@ -18550,7 +18550,7 @@ public final class C5419R {
     }
 
     /* JADX INFO: Added by JADX */
-    /* renamed from: com.discord.R$id */
+    /* JADX INFO: renamed from: com.discord.R$id */
     public static final class id {
 
         /* JADX INFO: Added by JADX */
@@ -27037,8 +27037,8 @@ public final class C5419R {
         /* JADX INFO: Added by JADX */
         public static final int omnibox_url_section = 2131364619;
 
-        /* renamed from: on */
         /* JADX INFO: Added by JADX */
+        /* JADX INFO: renamed from: on */
         public static final int f14576on = 2131364620;
 
         /* JADX INFO: Added by JADX */
@@ -30998,8 +30998,8 @@ public final class C5419R {
         /* JADX INFO: Added by JADX */
         public static final int unread_message_count = 2131365939;
 
-        /* renamed from: up */
         /* JADX INFO: Added by JADX */
+        /* JADX INFO: renamed from: up */
         public static final int f14577up = 2131365940;
 
         /* JADX INFO: Added by JADX */
@@ -32063,7 +32063,7 @@ public final class C5419R {
     }
 
     /* JADX INFO: Added by JADX */
-    /* renamed from: com.discord.R$integer */
+    /* JADX INFO: renamed from: com.discord.R$integer */
     public static final class integer {
 
         /* JADX INFO: Added by JADX */
@@ -32185,7 +32185,7 @@ public final class C5419R {
     }
 
     /* JADX INFO: Added by JADX */
-    /* renamed from: com.discord.R$interpolator */
+    /* JADX INFO: renamed from: com.discord.R$interpolator */
     public static final class interpolator {
 
         /* JADX INFO: Added by JADX */
@@ -32223,7 +32223,7 @@ public final class C5419R {
     }
 
     /* JADX INFO: Added by JADX */
-    /* renamed from: com.discord.R$layout */
+    /* JADX INFO: renamed from: com.discord.R$layout */
     public static final class layout {
 
         /* JADX INFO: Added by JADX */
@@ -35300,7 +35300,7 @@ public final class C5419R {
     }
 
     /* JADX INFO: Added by JADX */
-    /* renamed from: com.discord.R$menu */
+    /* JADX INFO: renamed from: com.discord.R$menu */
     public static final class menu {
 
         /* JADX INFO: Added by JADX */
@@ -35413,7 +35413,7 @@ public final class C5419R {
     }
 
     /* JADX INFO: Added by JADX */
-    /* renamed from: com.discord.R$mipmap */
+    /* JADX INFO: renamed from: com.discord.R$mipmap */
     public static final class mipmap {
 
         /* JADX INFO: Added by JADX */
@@ -35454,7 +35454,7 @@ public final class C5419R {
     }
 
     /* JADX INFO: Added by JADX */
-    /* renamed from: com.discord.R$plurals */
+    /* JADX INFO: renamed from: com.discord.R$plurals */
     public static final class plurals {
 
         /* JADX INFO: Added by JADX */
@@ -36683,7 +36683,7 @@ public final class C5419R {
     }
 
     /* JADX INFO: Added by JADX */
-    /* renamed from: com.discord.R$raw */
+    /* JADX INFO: renamed from: com.discord.R$raw */
     public static final class raw {
 
         /* JADX INFO: Added by JADX */
@@ -47356,7 +47356,7 @@ public final class C5419R {
     }
 
     /* JADX INFO: Added by JADX */
-    /* renamed from: com.discord.R$string */
+    /* JADX INFO: renamed from: com.discord.R$string */
     public static final class string {
 
         /* JADX INFO: Added by JADX */
@@ -47596,8 +47596,8 @@ public final class C5419R {
         /* JADX INFO: Added by JADX */
         public static final int accessibility_settings_sync_forced_colors_description = 2131886187;
 
-        /* renamed from: accessibility_settings_sync_forced_colors_description_with_feedback */
         /* JADX INFO: Added by JADX */
+        /* JADX INFO: renamed from: accessibility_settings_sync_forced_colors_description_with_feedback */
         public static final int f14653x728e7f39 = 2131886188;
 
         /* JADX INFO: Added by JADX */
@@ -49016,8 +49016,8 @@ public final class C5419R {
         /* JADX INFO: Added by JADX */
         public static final int application_store_gift_purchase_gift_recipient_section_label = 2131886673;
 
-        /* renamed from: application_store_gift_purchase_gift_recipient_select_placeholder */
         /* JADX INFO: Added by JADX */
+        /* JADX INFO: renamed from: application_store_gift_purchase_gift_recipient_select_placeholder */
         public static final int f14654x4d009ce9 = 2131886674;
 
         /* JADX INFO: Added by JADX */
@@ -49491,8 +49491,8 @@ public final class C5419R {
         /* JADX INFO: Added by JADX */
         public static final int application_store_the_game_awards_winner = 2131886831;
 
-        /* renamed from: application_store_warning_dlc_requires_base_application_description */
         /* JADX INFO: Added by JADX */
+        /* JADX INFO: renamed from: application_store_warning_dlc_requires_base_application_description */
         public static final int f14655x8b3323fc = 2131886832;
 
         /* JADX INFO: Added by JADX */
@@ -50068,8 +50068,8 @@ public final class C5419R {
         /* JADX INFO: Added by JADX */
         public static final int beta = 2131887026;
 
-        /* renamed from: bg */
         /* JADX INFO: Added by JADX */
+        /* JADX INFO: renamed from: bg */
         public static final int f14656bg = 2131887027;
 
         /* JADX INFO: Added by JADX */
@@ -50366,12 +50366,12 @@ public final class C5419R {
         /* JADX INFO: Added by JADX */
         public static final int billing_payment_table_header_description = 2131887125;
 
-        /* renamed from: billing_plan_select_description_premium_tier_1_premium_guild_bundle */
         /* JADX INFO: Added by JADX */
+        /* JADX INFO: renamed from: billing_plan_select_description_premium_tier_1_premium_guild_bundle */
         public static final int f14657x807c55a5 = 2131887126;
 
-        /* renamed from: billing_plan_select_description_premium_tier_2_premium_guild_bundle */
         /* JADX INFO: Added by JADX */
+        /* JADX INFO: renamed from: billing_plan_select_description_premium_tier_2_premium_guild_bundle */
         public static final int f14658x7021044 = 2131887127;
 
         /* JADX INFO: Added by JADX */
@@ -53794,8 +53794,8 @@ public final class C5419R {
         /* JADX INFO: Added by JADX */
         public static final int crop = 2131888290;
 
-        /* renamed from: cs */
         /* JADX INFO: Added by JADX */
+        /* JADX INFO: renamed from: cs */
         public static final int f14659cs = 2131888291;
 
         /* JADX INFO: Added by JADX */
@@ -53882,8 +53882,8 @@ public final class C5419R {
         /* JADX INFO: Added by JADX */
         public static final int cut = 2131888321;
 
-        /* renamed from: da */
         /* JADX INFO: Added by JADX */
+        /* JADX INFO: renamed from: da */
         public static final int f14660da = 2131888322;
 
         /* JADX INFO: Added by JADX */
@@ -53979,8 +53979,8 @@ public final class C5419R {
         /* JADX INFO: Added by JADX */
         public static final int day = 2131888353;
 
-        /* renamed from: de */
         /* JADX INFO: Added by JADX */
+        /* JADX INFO: renamed from: de */
         public static final int f14661de = 2131888354;
 
         /* JADX INFO: Added by JADX */
@@ -54613,8 +54613,8 @@ public final class C5419R {
         /* JADX INFO: Added by JADX */
         public static final int display_submit_button = 2131888571;
 
-        /* renamed from: dm */
         /* JADX INFO: Added by JADX */
+        /* JADX INFO: renamed from: dm */
         public static final int f14662dm = 2131888572;
 
         /* JADX INFO: Added by JADX */
@@ -54842,8 +54842,8 @@ public final class C5419R {
         /* JADX INFO: Added by JADX */
         public static final int education_new_feature_try_it = 2131888649;
 
-        /* renamed from: el */
         /* JADX INFO: Added by JADX */
+        /* JADX INFO: renamed from: el */
         public static final int f14663el = 2131888650;
 
         /* JADX INFO: Added by JADX */
@@ -54897,12 +54897,12 @@ public final class C5419R {
         /* JADX INFO: Added by JADX */
         public static final int embedded_activities_careful = 2131888670;
 
-        /* renamed from: embedded_activities_concurrent_activities_limited_upsell_modal_body */
         /* JADX INFO: Added by JADX */
+        /* JADX INFO: renamed from: embedded_activities_concurrent_activities_limited_upsell_modal_body */
         public static final int f14664xe825b5da = 2131888671;
 
-        /* renamed from: embedded_activities_concurrent_activities_unlimited_upsell_modal_body */
         /* JADX INFO: Added by JADX */
+        /* JADX INFO: renamed from: embedded_activities_concurrent_activities_unlimited_upsell_modal_body */
         public static final int f14665xe1036b21 = 2131888672;
 
         /* JADX INFO: Added by JADX */
@@ -55280,8 +55280,8 @@ public final class C5419R {
         /* JADX INFO: Added by JADX */
         public static final int empty_voice_channel_title = 2131888820;
 
-        /* renamed from: en */
         /* JADX INFO: Added by JADX */
+        /* JADX INFO: renamed from: en */
         public static final int f14666en = 2131888821;
 
         /* JADX INFO: Added by JADX */
@@ -55860,8 +55860,8 @@ public final class C5419R {
         /* JADX INFO: Added by JADX */
         public static final int feedback_need_more_help = 2131889019;
 
-        /* renamed from: fi */
         /* JADX INFO: Added by JADX */
+        /* JADX INFO: renamed from: fi */
         public static final int f14667fi = 2131889020;
 
         /* JADX INFO: Added by JADX */
@@ -57007,8 +57007,8 @@ public final class C5419R {
         /* JADX INFO: Added by JADX */
         public static final int forum_upsell_modal_header = 2131889434;
 
-        /* renamed from: fr */
         /* JADX INFO: Added by JADX */
+        /* JADX INFO: renamed from: fr */
         public static final int f14668fr = 2131889435;
 
         /* JADX INFO: Added by JADX */
@@ -59657,8 +59657,8 @@ public final class C5419R {
         /* JADX INFO: Added by JADX */
         public static final int guild_role_manage_subscription_manage_options_label = 2131890409;
 
-        /* renamed from: guild_role_manage_subscription_manage_options_restart_subscription */
         /* JADX INFO: Added by JADX */
+        /* JADX INFO: renamed from: guild_role_manage_subscription_manage_options_restart_subscription */
         public static final int f14669x55353a63 = 2131890410;
 
         /* JADX INFO: Added by JADX */
@@ -59709,8 +59709,8 @@ public final class C5419R {
         /* JADX INFO: Added by JADX */
         public static final int guild_role_subscription_benefit_import_select_role = 2131890426;
 
-        /* renamed from: guild_role_subscription_benefit_intangible_description_placeholder */
         /* JADX INFO: Added by JADX */
+        /* JADX INFO: renamed from: guild_role_subscription_benefit_intangible_description_placeholder */
         public static final int f14670x9d8bc2db = 2131890427;
 
         /* JADX INFO: Added by JADX */
@@ -59779,8 +59779,8 @@ public final class C5419R {
         /* JADX INFO: Added by JADX */
         public static final int guild_role_subscription_create_tier_details_title = 2131890449;
 
-        /* renamed from: guild_role_subscription_create_tier_intangible_benefits_description */
         /* JADX INFO: Added by JADX */
+        /* JADX INFO: renamed from: guild_role_subscription_create_tier_intangible_benefits_description */
         public static final int f14671x2e4f7edc = 2131890450;
 
         /* JADX INFO: Added by JADX */
@@ -59801,8 +59801,8 @@ public final class C5419R {
         /* JADX INFO: Added by JADX */
         public static final int guild_role_subscription_earnings_edit_payment_method_link = 2131890456;
 
-        /* renamed from: guild_role_subscription_earnings_free_trial_converted_users_metrics_sub_label */
         /* JADX INFO: Added by JADX */
+        /* JADX INFO: renamed from: guild_role_subscription_earnings_free_trial_converted_users_metrics_sub_label */
         public static final int f14672x25752e2a = 2131890457;
 
         /* JADX INFO: Added by JADX */
@@ -59817,8 +59817,8 @@ public final class C5419R {
         /* JADX INFO: Added by JADX */
         public static final int guild_role_subscription_earnings_insights_notice_text = 2131890461;
 
-        /* renamed from: guild_role_subscription_earnings_metric_converted_to_paid_members */
         /* JADX INFO: Added by JADX */
+        /* JADX INFO: renamed from: guild_role_subscription_earnings_metric_converted_to_paid_members */
         public static final int f14673x9ea4af3f = 2131890462;
 
         /* JADX INFO: Added by JADX */
@@ -59920,12 +59920,12 @@ public final class C5419R {
         /* JADX INFO: Added by JADX */
         public static final int guild_role_subscription_empty_title = 2131890495;
 
-        /* renamed from: guild_role_subscription_enable_monetization_unavailable_mobile_description */
         /* JADX INFO: Added by JADX */
+        /* JADX INFO: renamed from: guild_role_subscription_enable_monetization_unavailable_mobile_description */
         public static final int f14674x43086a8d = 2131890496;
 
-        /* renamed from: guild_role_subscription_enable_monetization_unavailable_mobile_title */
         /* JADX INFO: Added by JADX */
+        /* JADX INFO: renamed from: guild_role_subscription_enable_monetization_unavailable_mobile_title */
         public static final int f14675x27f789a9 = 2131890497;
 
         /* JADX INFO: Added by JADX */
@@ -59964,12 +59964,12 @@ public final class C5419R {
         /* JADX INFO: Added by JADX */
         public static final int guild_role_subscription_import_benefits_modal_header = 2131890509;
 
-        /* renamed from: guild_role_subscription_import_benefits_select_all_channel_benefits */
         /* JADX INFO: Added by JADX */
+        /* JADX INFO: renamed from: guild_role_subscription_import_benefits_select_all_channel_benefits */
         public static final int f14676xd925924b = 2131890510;
 
-        /* renamed from: guild_role_subscription_import_benefits_select_all_intangible_benefits */
         /* JADX INFO: Added by JADX */
+        /* JADX INFO: renamed from: guild_role_subscription_import_benefits_select_all_intangible_benefits */
         public static final int f14677x5c32c5ab = 2131890511;
 
         /* JADX INFO: Added by JADX */
@@ -59978,12 +59978,12 @@ public final class C5419R {
         /* JADX INFO: Added by JADX */
         public static final int guild_role_subscription_info_description_description = 2131890513;
 
-        /* renamed from: guild_role_subscription_intangible_benefit_description_placeholder */
         /* JADX INFO: Added by JADX */
+        /* JADX INFO: renamed from: guild_role_subscription_intangible_benefit_description_placeholder */
         public static final int f14678xecdcb48b = 2131890514;
 
-        /* renamed from: guild_role_subscription_manage_subscription_page_trial_price_info */
         /* JADX INFO: Added by JADX */
+        /* JADX INFO: renamed from: guild_role_subscription_manage_subscription_page_trial_price_info */
         public static final int f14679x9e169cd0 = 2131890515;
 
         /* JADX INFO: Added by JADX */
@@ -59992,12 +59992,12 @@ public final class C5419R {
         /* JADX INFO: Added by JADX */
         public static final int guild_role_subscription_mobile_subcribe_cta_title = 2131890517;
 
-        /* renamed from: guild_role_subscription_payment_analytics_unavailable_mobile_description */
         /* JADX INFO: Added by JADX */
+        /* JADX INFO: renamed from: guild_role_subscription_payment_analytics_unavailable_mobile_description */
         public static final int f14680x2fda02c5 = 2131890518;
 
-        /* renamed from: guild_role_subscription_payment_analytics_unavailable_mobile_title */
         /* JADX INFO: Added by JADX */
+        /* JADX INFO: renamed from: guild_role_subscription_payment_analytics_unavailable_mobile_title */
         public static final int f14681x170dabe1 = 2131890519;
 
         /* JADX INFO: Added by JADX */
@@ -60048,8 +60048,8 @@ public final class C5419R {
         /* JADX INFO: Added by JADX */
         public static final int guild_role_subscription_purchase_back_to_groups_view_cta = 2131890535;
 
-        /* renamed from: guild_role_subscription_purchase_back_to_subscription_user_setting_cta */
         /* JADX INFO: Added by JADX */
+        /* JADX INFO: renamed from: guild_role_subscription_purchase_back_to_subscription_user_setting_cta */
         public static final int f14682xa02cbeca = 2131890536;
 
         /* JADX INFO: Added by JADX */
@@ -60058,12 +60058,12 @@ public final class C5419R {
         /* JADX INFO: Added by JADX */
         public static final int guild_role_subscription_purchase_group_channel_benefit_preview = 2131890538;
 
-        /* renamed from: guild_role_subscription_purchase_group_intangible_benefit_preview */
         /* JADX INFO: Added by JADX */
+        /* JADX INFO: renamed from: guild_role_subscription_purchase_group_intangible_benefit_preview */
         public static final int f14683x15d2e277 = 2131890539;
 
-        /* renamed from: guild_role_subscription_purchase_modal_confirmation_channel_preview */
         /* JADX INFO: Added by JADX */
+        /* JADX INFO: renamed from: guild_role_subscription_purchase_modal_confirmation_channel_preview */
         public static final int f14684xc9ade10d = 2131890540;
 
         /* JADX INFO: Added by JADX */
@@ -60102,76 +60102,76 @@ public final class C5419R {
         /* JADX INFO: Added by JADX */
         public static final int guild_role_subscription_settings_description = 2131890552;
 
-        /* renamed from: guild_role_subscription_settings_eligibility_requirement_age_description */
         /* JADX INFO: Added by JADX */
+        /* JADX INFO: renamed from: guild_role_subscription_settings_eligibility_requirement_age_description */
         public static final int f14685xe15d9b97 = 2131890553;
 
-        /* renamed from: guild_role_subscription_settings_eligibility_requirement_age_eligible */
         /* JADX INFO: Added by JADX */
+        /* JADX INFO: renamed from: guild_role_subscription_settings_eligibility_requirement_age_eligible */
         public static final int f14686xe742c01c = 2131890554;
 
-        /* renamed from: guild_role_subscription_settings_eligibility_requirement_age_not_eligible */
         /* JADX INFO: Added by JADX */
+        /* JADX INFO: renamed from: guild_role_subscription_settings_eligibility_requirement_age_not_eligible */
         public static final int f14687x57071988 = 2131890555;
 
-        /* renamed from: guild_role_subscription_settings_eligibility_requirement_communicators_description */
         /* JADX INFO: Added by JADX */
+        /* JADX INFO: renamed from: guild_role_subscription_settings_eligibility_requirement_communicators_description */
         public static final int f14688x1112cd16 = 2131890556;
 
-        /* renamed from: guild_role_subscription_settings_eligibility_requirement_communicators_eligible */
         /* JADX INFO: Added by JADX */
+        /* JADX INFO: renamed from: guild_role_subscription_settings_eligibility_requirement_communicators_eligible */
         public static final int f14689xa26c16fd = 2131890557;
 
-        /* renamed from: guild_role_subscription_settings_eligibility_requirement_communicators_not_eligible */
         /* JADX INFO: Added by JADX */
+        /* JADX INFO: renamed from: guild_role_subscription_settings_eligibility_requirement_communicators_not_eligible */
         public static final int f14690x1df817e9 = 2131890558;
 
-        /* renamed from: guild_role_subscription_settings_eligibility_requirement_members_description */
         /* JADX INFO: Added by JADX */
+        /* JADX INFO: renamed from: guild_role_subscription_settings_eligibility_requirement_members_description */
         public static final int f14691x26fcaf31 = 2131890559;
 
-        /* renamed from: guild_role_subscription_settings_eligibility_requirement_members_eligible */
         /* JADX INFO: Added by JADX */
+        /* JADX INFO: renamed from: guild_role_subscription_settings_eligibility_requirement_members_eligible */
         public static final int f14692x95c3e2c2 = 2131890560;
 
-        /* renamed from: guild_role_subscription_settings_eligibility_requirement_members_not_eligible */
         /* JADX INFO: Added by JADX */
+        /* JADX INFO: renamed from: guild_role_subscription_settings_eligibility_requirement_members_not_eligible */
         public static final int f14693xc54a792e = 2131890561;
 
-        /* renamed from: guild_role_subscription_settings_eligibility_requirement_nsfw_content_description */
         /* JADX INFO: Added by JADX */
+        /* JADX INFO: renamed from: guild_role_subscription_settings_eligibility_requirement_nsfw_content_description */
         public static final int f14694x82652c52 = 2131890562;
 
-        /* renamed from: guild_role_subscription_settings_eligibility_requirement_nsfw_content_eligible */
         /* JADX INFO: Added by JADX */
+        /* JADX INFO: renamed from: guild_role_subscription_settings_eligibility_requirement_nsfw_content_eligible */
         public static final int f14695xfcdc6141 = 2131890563;
 
-        /* renamed from: guild_role_subscription_settings_eligibility_requirement_nsfw_content_not_eligible */
         /* JADX INFO: Added by JADX */
+        /* JADX INFO: renamed from: guild_role_subscription_settings_eligibility_requirement_nsfw_content_not_eligible */
         public static final int f14696xd6f1a02d = 2131890564;
 
-        /* renamed from: guild_role_subscription_settings_eligibility_requirement_retention_description */
         /* JADX INFO: Added by JADX */
+        /* JADX INFO: renamed from: guild_role_subscription_settings_eligibility_requirement_retention_description */
         public static final int f14697x89d9faf6 = 2131890565;
 
-        /* renamed from: guild_role_subscription_settings_eligibility_requirement_retention_eligible */
         /* JADX INFO: Added by JADX */
+        /* JADX INFO: renamed from: guild_role_subscription_settings_eligibility_requirement_retention_eligible */
         public static final int f14698x8b46b51d = 2131890566;
 
-        /* renamed from: guild_role_subscription_settings_eligibility_requirement_retention_not_eligible */
         /* JADX INFO: Added by JADX */
+        /* JADX INFO: renamed from: guild_role_subscription_settings_eligibility_requirement_retention_not_eligible */
         public static final int f14699xbe16a609 = 2131890567;
 
-        /* renamed from: guild_role_subscription_settings_eligibility_requirement_violations_description */
         /* JADX INFO: Added by JADX */
+        /* JADX INFO: renamed from: guild_role_subscription_settings_eligibility_requirement_violations_description */
         public static final int f14700xa4da8df0 = 2131890568;
 
-        /* renamed from: guild_role_subscription_settings_eligibility_requirement_violations_eligible */
         /* JADX INFO: Added by JADX */
+        /* JADX INFO: renamed from: guild_role_subscription_settings_eligibility_requirement_violations_eligible */
         public static final int f14701x95059463 = 2131890569;
 
-        /* renamed from: guild_role_subscription_settings_eligibility_requirement_violations_not_eligible */
         /* JADX INFO: Added by JADX */
+        /* JADX INFO: renamed from: guild_role_subscription_settings_eligibility_requirement_violations_not_eligible */
         public static final int f14702x328724f = 2131890570;
 
         /* JADX INFO: Added by JADX */
@@ -60210,8 +60210,8 @@ public final class C5419R {
         /* JADX INFO: Added by JADX */
         public static final int guild_role_subscription_settings_section_basic_info = 2131890582;
 
-        /* renamed from: guild_role_subscription_settings_section_basic_info_needs_application */
         /* JADX INFO: Added by JADX */
+        /* JADX INFO: renamed from: guild_role_subscription_settings_section_basic_info_needs_application */
         public static final int f14703x867567bf = 2131890583;
 
         /* JADX INFO: Added by JADX */
@@ -60229,8 +60229,8 @@ public final class C5419R {
         /* JADX INFO: Added by JADX */
         public static final int guild_role_subscription_setup_channel_benefits_add_button_text = 2131890588;
 
-        /* renamed from: guild_role_subscription_setup_channel_benefits_channels_description */
         /* JADX INFO: Added by JADX */
+        /* JADX INFO: renamed from: guild_role_subscription_setup_channel_benefits_channels_description */
         public static final int f14704x99169d6d = 2131890589;
 
         /* JADX INFO: Added by JADX */
@@ -60314,8 +60314,8 @@ public final class C5419R {
         /* JADX INFO: Added by JADX */
         public static final int guild_role_subscription_setup_initial_tier_name = 2131890616;
 
-        /* renamed from: guild_role_subscription_setup_intangible_benefits_add_button_text */
         /* JADX INFO: Added by JADX */
+        /* JADX INFO: renamed from: guild_role_subscription_setup_intangible_benefits_add_button_text */
         public static final int f14705xd6a6bdd4 = 2131890617;
 
         /* JADX INFO: Added by JADX */
@@ -60324,12 +60324,12 @@ public final class C5419R {
         /* JADX INFO: Added by JADX */
         public static final int guild_role_subscription_setup_intangible_benefits_title = 2131890619;
 
-        /* renamed from: guild_role_subscription_setup_tier_active_trial_user_limit_description */
         /* JADX INFO: Added by JADX */
+        /* JADX INFO: renamed from: guild_role_subscription_setup_tier_active_trial_user_limit_description */
         public static final int f14706x21033570 = 2131890620;
 
-        /* renamed from: guild_role_subscription_setup_tier_active_trial_user_limit_none_option */
         /* JADX INFO: Added by JADX */
+        /* JADX INFO: renamed from: guild_role_subscription_setup_tier_active_trial_user_limit_none_option */
         public static final int f14707x846378d0 = 2131890621;
 
         /* JADX INFO: Added by JADX */
@@ -60398,8 +60398,8 @@ public final class C5419R {
         /* JADX INFO: Added by JADX */
         public static final int guild_role_subscription_setup_tier_symbol_title = 2131890643;
 
-        /* renamed from: guild_role_subscription_setup_tier_trial_time_limit_default_option */
         /* JADX INFO: Added by JADX */
+        /* JADX INFO: renamed from: guild_role_subscription_setup_tier_trial_time_limit_default_option */
         public static final int f14708xa624d60a = 2131890644;
 
         /* JADX INFO: Added by JADX */
@@ -60426,15 +60426,15 @@ public final class C5419R {
         /* JADX INFO: Added by JADX */
         public static final int guild_role_subscription_tier_benefits_include_all_channels_label = 2131890652;
 
-        /* renamed from: guild_role_subscription_tier_benefits_intangible_name_placeholder */
         /* JADX INFO: Added by JADX */
+        /* JADX INFO: renamed from: guild_role_subscription_tier_benefits_intangible_name_placeholder */
         public static final int f14709xf947c396 = 2131890653;
 
         /* JADX INFO: Added by JADX */
         public static final int guild_role_subscription_tier_benefits_remove_from_tier_label = 2131890654;
 
-        /* renamed from: guild_role_subscription_tier_benefits_select_channels_manually_label */
         /* JADX INFO: Added by JADX */
+        /* JADX INFO: renamed from: guild_role_subscription_tier_benefits_select_channels_manually_label */
         public static final int f14710x5072293f = 2131890655;
 
         /* JADX INFO: Added by JADX */
@@ -60455,8 +60455,8 @@ public final class C5419R {
         /* JADX INFO: Added by JADX */
         public static final int guild_role_subscription_tier_design_member_color_label = 2131890661;
 
-        /* renamed from: guild_role_subscription_tier_design_member_preview_placeholder_message */
         /* JADX INFO: Added by JADX */
+        /* JADX INFO: renamed from: guild_role_subscription_tier_design_member_preview_placeholder_message */
         public static final int f14711xdb419408 = 2131890662;
 
         /* JADX INFO: Added by JADX */
@@ -60564,8 +60564,8 @@ public final class C5419R {
         /* JADX INFO: Added by JADX */
         public static final int guild_role_subscription_welcome_get_started_button = 2131890697;
 
-        /* renamed from: guild_role_subscription_welcome_get_started_button_disabled_tooltip */
         /* JADX INFO: Added by JADX */
+        /* JADX INFO: renamed from: guild_role_subscription_welcome_get_started_button_disabled_tooltip */
         public static final int f14712x7500a1e4 = 2131890698;
 
         /* JADX INFO: Added by JADX */
@@ -60598,8 +60598,8 @@ public final class C5419R {
         /* JADX INFO: Added by JADX */
         public static final int guild_role_subscriptions_manage_subscriptions_button = 2131890708;
 
-        /* renamed from: guild_role_subscriptions_manage_subscriptions_page_back_button_cta */
         /* JADX INFO: Added by JADX */
+        /* JADX INFO: renamed from: guild_role_subscriptions_manage_subscriptions_page_back_button_cta */
         public static final int f14713x758940e8 = 2131890709;
 
         /* JADX INFO: Added by JADX */
@@ -60671,8 +60671,8 @@ public final class C5419R {
         /* JADX INFO: Added by JADX */
         public static final int guild_select = 2131890732;
 
-        /* renamed from: guild_settings_action_filter_application_command_permission_update */
         /* JADX INFO: Added by JADX */
+        /* JADX INFO: renamed from: guild_settings_action_filter_application_command_permission_update */
         public static final int f14714xbc12f1a8 = 2131890733;
 
         /* JADX INFO: Added by JADX */
@@ -60849,8 +60849,8 @@ public final class C5419R {
         /* JADX INFO: Added by JADX */
         public static final int guild_settings_audit_log_auto_moderation_block_message = 2131890795;
 
-        /* renamed from: guild_settings_audit_log_auto_moderation_triggered_rule_name_change */
         /* JADX INFO: Added by JADX */
+        /* JADX INFO: renamed from: guild_settings_audit_log_auto_moderation_triggered_rule_name_change */
         public static final int f14715x44d8aa41 = 2131890797;
 
         /* JADX INFO: Added by JADX */
@@ -60883,8 +60883,8 @@ public final class C5419R {
         /* JADX INFO: Added by JADX */
         public static final int guild_settings_audit_log_automod_rule_none = 2131890808;
 
-        /* renamed from: guild_settings_audit_log_automod_rule_trigger_metadata_keywords_update */
         /* JADX INFO: Added by JADX */
+        /* JADX INFO: renamed from: guild_settings_audit_log_automod_rule_trigger_metadata_keywords_update */
         public static final int f14716x34d6e0bd = 2131890809;
 
         /* JADX INFO: Added by JADX */
@@ -60908,12 +60908,12 @@ public final class C5419R {
         /* JADX INFO: Added by JADX */
         public static final int guild_settings_audit_log_channel_category_create = 2131890819;
 
-        /* renamed from: guild_settings_audit_log_channel_default_auto_archive_duration_change */
         /* JADX INFO: Added by JADX */
+        /* JADX INFO: renamed from: guild_settings_audit_log_channel_default_auto_archive_duration_change */
         public static final int f14717x846dabf7 = 2131890820;
 
-        /* renamed from: guild_settings_audit_log_channel_default_auto_archive_duration_create */
         /* JADX INFO: Added by JADX */
+        /* JADX INFO: renamed from: guild_settings_audit_log_channel_default_auto_archive_duration_create */
         public static final int f14718x84fc3943 = 2131890821;
 
         /* JADX INFO: Added by JADX */
@@ -61066,12 +61066,12 @@ public final class C5419R {
         /* JADX INFO: Added by JADX */
         public static final int guild_settings_audit_log_guild_banner_hash_remove = 2131890872;
 
-        /* renamed from: guild_settings_audit_log_guild_default_message_notifications_change_all_messages */
         /* JADX INFO: Added by JADX */
+        /* JADX INFO: renamed from: guild_settings_audit_log_guild_default_message_notifications_change_all_messages */
         public static final int f14719x464da8d1 = 2131890873;
 
-        /* renamed from: guild_settings_audit_log_guild_default_message_notifications_change_only_mentions */
         /* JADX INFO: Added by JADX */
+        /* JADX INFO: renamed from: guild_settings_audit_log_guild_default_message_notifications_change_only_mentions */
         public static final int f14720xa4a33d35 = 2131890874;
 
         /* JADX INFO: Added by JADX */
@@ -61083,15 +61083,15 @@ public final class C5419R {
         /* JADX INFO: Added by JADX */
         public static final int guild_settings_audit_log_guild_discovery_splash_hash_change = 2131890877;
 
-        /* renamed from: guild_settings_audit_log_guild_explicit_content_filter_all_members */
         /* JADX INFO: Added by JADX */
+        /* JADX INFO: renamed from: guild_settings_audit_log_guild_explicit_content_filter_all_members */
         public static final int f14721x46ff686a = 2131890878;
 
         /* JADX INFO: Added by JADX */
         public static final int guild_settings_audit_log_guild_explicit_content_filter_disable = 2131890879;
 
-        /* renamed from: guild_settings_audit_log_guild_explicit_content_filter_members_without_roles */
         /* JADX INFO: Added by JADX */
+        /* JADX INFO: renamed from: guild_settings_audit_log_guild_explicit_content_filter_members_without_roles */
         public static final int f14722xdc84490f = 2131890880;
 
         /* JADX INFO: Added by JADX */
@@ -61112,12 +61112,12 @@ public final class C5419R {
         /* JADX INFO: Added by JADX */
         public static final int guild_settings_audit_log_guild_preferred_locale_change = 2131890894;
 
-        /* renamed from: guild_settings_audit_log_guild_premium_progress_bar_enabled_disabled */
         /* JADX INFO: Added by JADX */
+        /* JADX INFO: renamed from: guild_settings_audit_log_guild_premium_progress_bar_enabled_disabled */
         public static final int f14723xb50841d5 = 2131890895;
 
-        /* renamed from: guild_settings_audit_log_guild_premium_progress_bar_enabled_enabled */
         /* JADX INFO: Added by JADX */
+        /* JADX INFO: renamed from: guild_settings_audit_log_guild_premium_progress_bar_enabled_enabled */
         public static final int f14724x6b92b4c8 = 2131890896;
 
         /* JADX INFO: Added by JADX */
@@ -61141,19 +61141,19 @@ public final class C5419R {
         /* JADX INFO: Added by JADX */
         public static final int guild_settings_audit_log_guild_system_channel_id_disable = 2131890903;
 
-        /* renamed from: guild_settings_audit_log_guild_system_channel_join_notification_replies */
         /* JADX INFO: Added by JADX */
+        /* JADX INFO: renamed from: guild_settings_audit_log_guild_system_channel_join_notification_replies */
         public static final int f14725xfa726b8 = 2131890904;
 
         /* JADX INFO: Added by JADX */
         public static final int guild_settings_audit_log_guild_system_channel_join_notifications = 2131890905;
 
-        /* renamed from: guild_settings_audit_log_guild_system_channel_premium_subscriptions */
         /* JADX INFO: Added by JADX */
+        /* JADX INFO: renamed from: guild_settings_audit_log_guild_system_channel_premium_subscriptions */
         public static final int f14726xda832b9d = 2131890906;
 
-        /* renamed from: guild_settings_audit_log_guild_system_channel_reminder_notifications */
         /* JADX INFO: Added by JADX */
+        /* JADX INFO: renamed from: guild_settings_audit_log_guild_system_channel_reminder_notifications */
         public static final int f14727xc4d9e52c = 2131890907;
 
         /* JADX INFO: Added by JADX */
@@ -61183,8 +61183,8 @@ public final class C5419R {
         /* JADX INFO: Added by JADX */
         public static final int guild_settings_audit_log_guild_verification_level_change_none = 2131890916;
 
-        /* renamed from: guild_settings_audit_log_guild_verification_level_change_very_high */
         /* JADX INFO: Added by JADX */
+        /* JADX INFO: renamed from: guild_settings_audit_log_guild_verification_level_change_very_high */
         public static final int f14728x55e0b00 = 2131890917;
 
         /* JADX INFO: Added by JADX */
@@ -61211,12 +61211,12 @@ public final class C5419R {
         /* JADX INFO: Added by JADX */
         public static final int guild_settings_audit_log_integration_enable_emoticons_on = 2131890925;
 
-        /* renamed from: guild_settings_audit_log_integration_expire_behavior_kick_from_server */
         /* JADX INFO: Added by JADX */
+        /* JADX INFO: renamed from: guild_settings_audit_log_integration_expire_behavior_kick_from_server */
         public static final int f14729xdcd81586 = 2131890926;
 
-        /* renamed from: guild_settings_audit_log_integration_expire_behavior_remove_synced_role */
         /* JADX INFO: Added by JADX */
+        /* JADX INFO: renamed from: guild_settings_audit_log_integration_expire_behavior_remove_synced_role */
         public static final int f14730x5ab68a7 = 2131890927;
 
         /* JADX INFO: Added by JADX */
@@ -61405,8 +61405,8 @@ public final class C5419R {
         /* JADX INFO: Added by JADX */
         public static final int guild_settings_audit_log_scheduled_event_entity_type_none = 2131890989;
 
-        /* renamed from: guild_settings_audit_log_scheduled_event_entity_type_stage_instance */
         /* JADX INFO: Added by JADX */
+        /* JADX INFO: renamed from: guild_settings_audit_log_scheduled_event_entity_type_stage_instance */
         public static final int f14731x99771025 = 2131890990;
 
         /* JADX INFO: Added by JADX */
@@ -61757,8 +61757,8 @@ public final class C5419R {
         /* JADX INFO: Added by JADX */
         public static final int guild_settings_discovery_checklist_communicator_failing_action = 2131891108;
 
-        /* renamed from: guild_settings_discovery_checklist_communicator_failing_action_details */
         /* JADX INFO: Added by JADX */
+        /* JADX INFO: renamed from: guild_settings_discovery_checklist_communicator_failing_action_details */
         public static final int f14732xd2faa46 = 2131891109;
 
         /* JADX INFO: Added by JADX */
@@ -61791,8 +61791,8 @@ public final class C5419R {
         /* JADX INFO: Added by JADX */
         public static final int guild_settings_discovery_checklist_healthy_description_pending = 2131891119;
 
-        /* renamed from: guild_settings_discovery_checklist_healthy_description_pending_size */
         /* JADX INFO: Added by JADX */
+        /* JADX INFO: renamed from: guild_settings_discovery_checklist_healthy_description_pending_size */
         public static final int f14733x15aa2226 = 2131891120;
 
         /* JADX INFO: Added by JADX */
@@ -61822,8 +61822,8 @@ public final class C5419R {
         /* JADX INFO: Added by JADX */
         public static final int guild_settings_discovery_checklist_retention_failing_action = 2131891129;
 
-        /* renamed from: guild_settings_discovery_checklist_retention_failing_action_details_updated */
         /* JADX INFO: Added by JADX */
+        /* JADX INFO: renamed from: guild_settings_discovery_checklist_retention_failing_action_details_updated */
         public static final int f14734x58783449 = 2131891130;
 
         /* JADX INFO: Added by JADX */
@@ -61835,8 +61835,8 @@ public final class C5419R {
         /* JADX INFO: Added by JADX */
         public static final int guild_settings_discovery_checklist_safe_description = 2131891133;
 
-        /* renamed from: guild_settings_discovery_checklist_safe_description_failing_guidelines */
         /* JADX INFO: Added by JADX */
+        /* JADX INFO: renamed from: guild_settings_discovery_checklist_safe_description_failing_guidelines */
         public static final int f14735x52745cfb = 2131891134;
 
         /* JADX INFO: Added by JADX */
@@ -61851,8 +61851,8 @@ public final class C5419R {
         /* JADX INFO: Added by JADX */
         public static final int guild_settings_discovery_checklist_size_description_fail = 2131891138;
 
-        /* renamed from: guild_settings_discovery_checklist_size_description_failing_partners */
         /* JADX INFO: Added by JADX */
+        /* JADX INFO: renamed from: guild_settings_discovery_checklist_size_description_failing_partners */
         public static final int f14736xf0d6aa2f = 2131891139;
 
         /* JADX INFO: Added by JADX */
@@ -61861,8 +61861,8 @@ public final class C5419R {
         /* JADX INFO: Added by JADX */
         public static final int guild_settings_discovery_checklist_visitor_failing_action = 2131891141;
 
-        /* renamed from: guild_settings_discovery_checklist_visitor_failing_action_details */
         /* JADX INFO: Added by JADX */
+        /* JADX INFO: renamed from: guild_settings_discovery_checklist_visitor_failing_action_details */
         public static final int f14737x8a04487d = 2131891142;
 
         /* JADX INFO: Added by JADX */
@@ -61973,12 +61973,12 @@ public final class C5419R {
         /* JADX INFO: Added by JADX */
         public static final int guild_settings_follower_analytics_tooltip = 2131891186;
 
-        /* renamed from: guild_settings_guild_premium_perk_description_tier_1_animated_guild_icon */
         /* JADX INFO: Added by JADX */
+        /* JADX INFO: renamed from: guild_settings_guild_premium_perk_description_tier_1_animated_guild_icon */
         public static final int f14738xe43300c6 = 2131891187;
 
-        /* renamed from: guild_settings_guild_premium_perk_description_tier_1_audio_quality */
         /* JADX INFO: Added by JADX */
+        /* JADX INFO: renamed from: guild_settings_guild_premium_perk_description_tier_1_audio_quality */
         public static final int f14739x8efa6cbb = 2131891188;
 
         /* JADX INFO: Added by JADX */
@@ -61993,15 +61993,15 @@ public final class C5419R {
         /* JADX INFO: Added by JADX */
         public static final int guild_settings_guild_premium_perk_description_tier_1_streaming = 2131891192;
 
-        /* renamed from: guild_settings_guild_premium_perk_description_tier_2_audio_quality */
         /* JADX INFO: Added by JADX */
+        /* JADX INFO: renamed from: guild_settings_guild_premium_perk_description_tier_2_audio_quality */
         public static final int f14740xe8d5d6fc = 2131891193;
 
         /* JADX INFO: Added by JADX */
         public static final int guild_settings_guild_premium_perk_description_tier_2_banner = 2131891194;
 
-        /* renamed from: guild_settings_guild_premium_perk_description_tier_2_custom_role_icons */
         /* JADX INFO: Added by JADX */
+        /* JADX INFO: renamed from: guild_settings_guild_premium_perk_description_tier_2_custom_role_icons */
         public static final int f14741x1ff35605 = 2131891195;
 
         /* JADX INFO: Added by JADX */
@@ -62013,24 +62013,24 @@ public final class C5419R {
         /* JADX INFO: Added by JADX */
         public static final int guild_settings_guild_premium_perk_description_tier_2_streaming = 2131891198;
 
-        /* renamed from: guild_settings_guild_premium_perk_description_tier_2_thread_private */
         /* JADX INFO: Added by JADX */
+        /* JADX INFO: renamed from: guild_settings_guild_premium_perk_description_tier_2_thread_private */
         public static final int f14742x40b353a8 = 2131891199;
 
-        /* renamed from: guild_settings_guild_premium_perk_description_tier_2_upload_limit */
         /* JADX INFO: Added by JADX */
+        /* JADX INFO: renamed from: guild_settings_guild_premium_perk_description_tier_2_upload_limit */
         public static final int f14743x93efa9d7 = 2131891200;
 
-        /* renamed from: guild_settings_guild_premium_perk_description_tier_3_animated_banner */
         /* JADX INFO: Added by JADX */
+        /* JADX INFO: renamed from: guild_settings_guild_premium_perk_description_tier_3_animated_banner */
         public static final int f14744x86b5eb2f = 2131891201;
 
-        /* renamed from: guild_settings_guild_premium_perk_description_tier_3_animated_guild_banner */
         /* JADX INFO: Added by JADX */
+        /* JADX INFO: renamed from: guild_settings_guild_premium_perk_description_tier_3_animated_guild_banner */
         public static final int f14745x2bca96bb = 2131891202;
 
-        /* renamed from: guild_settings_guild_premium_perk_description_tier_3_audio_quality */
         /* JADX INFO: Added by JADX */
+        /* JADX INFO: renamed from: guild_settings_guild_premium_perk_description_tier_3_audio_quality */
         public static final int f14746x42b1413d = 2131891203;
 
         /* JADX INFO: Added by JADX */
@@ -62039,15 +62039,15 @@ public final class C5419R {
         /* JADX INFO: Added by JADX */
         public static final int guild_settings_guild_premium_perk_description_tier_3_sticker = 2131891205;
 
-        /* renamed from: guild_settings_guild_premium_perk_description_tier_3_upload_limit */
         /* JADX INFO: Added by JADX */
+        /* JADX INFO: renamed from: guild_settings_guild_premium_perk_description_tier_3_upload_limit */
         public static final int f14747x75cd7376 = 2131891206;
 
         /* JADX INFO: Added by JADX */
         public static final int guild_settings_guild_premium_perk_description_tier_3_vanity_url = 2131891207;
 
-        /* renamed from: guild_settings_guild_premium_perk_title_tier_1_animated_guild_icon */
         /* JADX INFO: Added by JADX */
+        /* JADX INFO: renamed from: guild_settings_guild_premium_perk_title_tier_1_animated_guild_icon */
         public static final int f14748xa9bebeaa = 2131891208;
 
         /* JADX INFO: Added by JADX */
@@ -62203,28 +62203,28 @@ public final class C5419R {
         /* JADX INFO: Added by JADX */
         public static final int guild_settings_member_verification_edit_warning_title = 2131891259;
 
-        /* renamed from: guild_settings_member_verification_empty_approved_applications_body */
         /* JADX INFO: Added by JADX */
+        /* JADX INFO: renamed from: guild_settings_member_verification_empty_approved_applications_body */
         public static final int f14749xb72961f7 = 2131891260;
 
-        /* renamed from: guild_settings_member_verification_empty_approved_applications_title */
         /* JADX INFO: Added by JADX */
+        /* JADX INFO: renamed from: guild_settings_member_verification_empty_approved_applications_title */
         public static final int f14750x2efe04a3 = 2131891261;
 
-        /* renamed from: guild_settings_member_verification_empty_pending_applications_body */
         /* JADX INFO: Added by JADX */
+        /* JADX INFO: renamed from: guild_settings_member_verification_empty_pending_applications_body */
         public static final int f14751xe2abf435 = 2131891262;
 
-        /* renamed from: guild_settings_member_verification_empty_pending_applications_title */
         /* JADX INFO: Added by JADX */
+        /* JADX INFO: renamed from: guild_settings_member_verification_empty_pending_applications_title */
         public static final int f14752x73cdba25 = 2131891263;
 
-        /* renamed from: guild_settings_member_verification_empty_rejected_applications_body */
         /* JADX INFO: Added by JADX */
+        /* JADX INFO: renamed from: guild_settings_member_verification_empty_rejected_applications_body */
         public static final int f14753x147fcbfe = 2131891264;
 
-        /* renamed from: guild_settings_member_verification_empty_rejected_applications_title */
         /* JADX INFO: Added by JADX */
+        /* JADX INFO: renamed from: guild_settings_member_verification_empty_rejected_applications_title */
         public static final int f14754x7c74db7c = 2131891265;
 
         /* JADX INFO: Added by JADX */
@@ -62311,8 +62311,8 @@ public final class C5419R {
         /* JADX INFO: Added by JADX */
         public static final int guild_settings_member_verification_requirements_intro_button = 2131891293;
 
-        /* renamed from: guild_settings_member_verification_review_application_description */
         /* JADX INFO: Added by JADX */
+        /* JADX INFO: renamed from: guild_settings_member_verification_review_application_description */
         public static final int f14755x872d7775 = 2131891294;
 
         /* JADX INFO: Added by JADX */
@@ -62399,8 +62399,8 @@ public final class C5419R {
         /* JADX INFO: Added by JADX */
         public static final int guild_settings_partner_checklist_healthy_description_pending = 2131891322;
 
-        /* renamed from: guild_settings_partner_checklist_healthy_description_pending_size */
         /* JADX INFO: Added by JADX */
+        /* JADX INFO: renamed from: guild_settings_partner_checklist_healthy_description_pending_size */
         public static final int f14756xe2de00e = 2131891323;
 
         /* JADX INFO: Added by JADX */
@@ -62511,12 +62511,12 @@ public final class C5419R {
         /* JADX INFO: Added by JADX */
         public static final int guild_settings_premium_progress_bar_title = 2131891359;
 
-        /* renamed from: guild_settings_premium_upsell_body_perk_guild_subscription_discount */
         /* JADX INFO: Added by JADX */
+        /* JADX INFO: renamed from: guild_settings_premium_upsell_body_perk_guild_subscription_discount */
         public static final int f14757xf6a2f9e9 = 2131891360;
 
-        /* renamed from: guild_settings_premium_upsell_body_perk_no_free_guild_subscriptions */
         /* JADX INFO: Added by JADX */
+        /* JADX INFO: renamed from: guild_settings_premium_upsell_body_perk_no_free_guild_subscriptions */
         public static final int f14758xe408127 = 2131891361;
 
         /* JADX INFO: Added by JADX */
@@ -62546,8 +62546,8 @@ public final class C5419R {
         /* JADX INFO: Added by JADX */
         public static final int guild_settings_premium_upsell_subheading_extra_ios = 2131891370;
 
-        /* renamed from: guild_settings_premium_upsell_subheading_extra_ios_voiceover_label */
         /* JADX INFO: Added by JADX */
+        /* JADX INFO: renamed from: guild_settings_premium_upsell_subheading_extra_ios_voiceover_label */
         public static final int f14759x2cff2b7 = 2131891371;
 
         /* JADX INFO: Added by JADX */
@@ -62691,8 +62691,8 @@ public final class C5419R {
         /* JADX INFO: Added by JADX */
         public static final int guild_settings_role_subscription_tier_edit_publish_draft_cta = 2131891418;
 
-        /* renamed from: guild_settings_role_subscription_tier_edit_publish_draft_description */
         /* JADX INFO: Added by JADX */
+        /* JADX INFO: renamed from: guild_settings_role_subscription_tier_edit_publish_draft_description */
         public static final int f14760xde911c6d = 2131891419;
 
         /* JADX INFO: Added by JADX */
@@ -63001,8 +63001,8 @@ public final class C5419R {
         /* JADX INFO: Added by JADX */
         public static final int guild_subscription_purchase_modal_activated_description = 2131891525;
 
-        /* renamed from: guild_subscription_purchase_modal_activated_description_generic_guild */
         /* JADX INFO: Added by JADX */
+        /* JADX INFO: renamed from: guild_subscription_purchase_modal_activated_description_generic_guild */
         public static final int f14761x287b4760 = 2131891526;
 
         /* JADX INFO: Added by JADX */
@@ -63011,8 +63011,8 @@ public final class C5419R {
         /* JADX INFO: Added by JADX */
         public static final int guild_subscription_purchase_modal_activated_description_mobile2 = 2131891528;
 
-        /* renamed from: guild_subscription_purchase_modal_activated_description_no_application */
         /* JADX INFO: Added by JADX */
+        /* JADX INFO: renamed from: guild_subscription_purchase_modal_activated_description_no_application */
         public static final int f14762x736db69d = 2131891529;
 
         /* JADX INFO: Added by JADX */
@@ -63051,16 +63051,16 @@ public final class C5419R {
         /* JADX INFO: Added by JADX */
         public static final int guild_subscription_purchase_modal_transferred_description = 2131891541;
 
-        /* renamed from: guild_subscription_purchase_modal_transferred_description_generic_guild */
         /* JADX INFO: Added by JADX */
+        /* JADX INFO: renamed from: guild_subscription_purchase_modal_transferred_description_generic_guild */
         public static final int f14763x690ca095 = 2131891542;
 
-        /* renamed from: guild_subscription_purchase_modal_transferred_description_mobile1 */
         /* JADX INFO: Added by JADX */
+        /* JADX INFO: renamed from: guild_subscription_purchase_modal_transferred_description_mobile1 */
         public static final int f14764xeb628859 = 2131891543;
 
-        /* renamed from: guild_subscription_purchase_modal_transferred_description_mobile2 */
         /* JADX INFO: Added by JADX */
+        /* JADX INFO: renamed from: guild_subscription_purchase_modal_transferred_description_mobile2 */
         public static final int f14765xeb62885a = 2131891544;
 
         /* JADX INFO: Added by JADX */
@@ -63555,8 +63555,8 @@ public final class C5419R {
         /* JADX INFO: Added by JADX */
         public static final int help_singular_permission = 2131891710;
 
-        /* renamed from: hi */
         /* JADX INFO: Added by JADX */
+        /* JADX INFO: renamed from: hi */
         public static final int f14766hi = 2131891711;
 
         /* JADX INFO: Added by JADX */
@@ -63619,12 +63619,12 @@ public final class C5419R {
         /* JADX INFO: Added by JADX */
         public static final int how_to_invite_others = 2131891732;
 
-        /* renamed from: hr */
         /* JADX INFO: Added by JADX */
+        /* JADX INFO: renamed from: hr */
         public static final int f14767hr = 2131891733;
 
-        /* renamed from: hu */
         /* JADX INFO: Added by JADX */
+        /* JADX INFO: renamed from: hu */
         public static final int f14768hu = 2131891734;
 
         /* JADX INFO: Added by JADX */
@@ -64998,8 +64998,8 @@ public final class C5419R {
         /* JADX INFO: Added by JADX */
         public static final int interim_role_permissions_create_private_threads_description = 2131892193;
 
-        /* renamed from: interim_role_permissions_create_private_threads_description_category */
         /* JADX INFO: Added by JADX */
+        /* JADX INFO: renamed from: interim_role_permissions_create_private_threads_description_category */
         public static final int f14769x19ffc831 = 2131892194;
 
         /* JADX INFO: Added by JADX */
@@ -65008,8 +65008,8 @@ public final class C5419R {
         /* JADX INFO: Added by JADX */
         public static final int interim_role_permissions_create_public_threads_description = 2131892196;
 
-        /* renamed from: interim_role_permissions_create_public_threads_description_category */
         /* JADX INFO: Added by JADX */
+        /* JADX INFO: renamed from: interim_role_permissions_create_public_threads_description_category */
         public static final int f14770x8ac810cf = 2131892197;
 
         /* JADX INFO: Added by JADX */
@@ -65018,12 +65018,12 @@ public final class C5419R {
         /* JADX INFO: Added by JADX */
         public static final int interim_role_permissions_send_messages_in_threads_description = 2131892199;
 
-        /* renamed from: interim_role_permissions_send_messages_in_threads_description_category */
         /* JADX INFO: Added by JADX */
+        /* JADX INFO: renamed from: interim_role_permissions_send_messages_in_threads_description_category */
         public static final int f14771x98d4cb90 = 2131892200;
 
-        /* renamed from: interim_role_permissions_send_messages_in_threads_description_text */
         /* JADX INFO: Added by JADX */
+        /* JADX INFO: renamed from: interim_role_permissions_send_messages_in_threads_description_text */
         public static final int f14772xa26a6cbf = 2131892201;
 
         /* JADX INFO: Added by JADX */
@@ -65545,15 +65545,15 @@ public final class C5419R {
         /* JADX INFO: Added by JADX */
         public static final int ipad_no_screenshare_dialog_title = 2131892374;
 
-        /* renamed from: it */
         /* JADX INFO: Added by JADX */
+        /* JADX INFO: renamed from: it */
         public static final int f14773it = 2131892375;
 
         /* JADX INFO: Added by JADX */
         public static final int item_view_role_description = 2131892376;
 
-        /* renamed from: ja */
         /* JADX INFO: Added by JADX */
+        /* JADX INFO: renamed from: ja */
         public static final int f14774ja = 2131892377;
 
         /* JADX INFO: Added by JADX */
@@ -65934,8 +65934,8 @@ public final class C5419R {
         /* JADX INFO: Added by JADX */
         public static final int kick_user_title = 2131892504;
 
-        /* renamed from: ko */
         /* JADX INFO: Added by JADX */
+        /* JADX INFO: renamed from: ko */
         public static final int f14775ko = 2131892505;
 
         /* JADX INFO: Added by JADX */
@@ -66376,8 +66376,8 @@ public final class C5419R {
         /* JADX INFO: Added by JADX */
         public static final int low_quality_image_mode_help = 2131892656;
 
-        /* renamed from: lt */
         /* JADX INFO: Added by JADX */
+        /* JADX INFO: renamed from: lt */
         public static final int f14776lt = 2131892657;
 
         /* JADX INFO: Added by JADX */
@@ -66524,8 +66524,8 @@ public final class C5419R {
         /* JADX INFO: Added by JADX */
         public static final int marketing_refresh_premium_features_go_live_info = 2131892733;
 
-        /* renamed from: marketing_refresh_premium_tier_1_cta_description_with_price_no_info_hook */
         /* JADX INFO: Added by JADX */
+        /* JADX INFO: renamed from: marketing_refresh_premium_tier_1_cta_description_with_price_no_info_hook */
         public static final int f14777x648dec4d = 2131892734;
 
         /* JADX INFO: Added by JADX */
@@ -66642,8 +66642,8 @@ public final class C5419R {
         /* JADX INFO: Added by JADX */
         public static final int maybe_later = 2131892772;
 
-        /* renamed from: me */
         /* JADX INFO: Added by JADX */
+        /* JADX INFO: renamed from: me */
         public static final int f14778me = 2131892773;
 
         /* JADX INFO: Added by JADX */
@@ -66721,8 +66721,8 @@ public final class C5419R {
         /* JADX INFO: Added by JADX */
         public static final int member_verification_application_confirmation_title = 2131892798;
 
-        /* renamed from: member_verification_application_confirmation_title_with_guild_name */
         /* JADX INFO: Added by JADX */
+        /* JADX INFO: renamed from: member_verification_application_confirmation_title_with_guild_name */
         public static final int f14779x4f2133cd = 2131892799;
 
         /* JADX INFO: Added by JADX */
@@ -68006,12 +68006,12 @@ public final class C5419R {
         /* JADX INFO: Added by JADX */
         public static final int nitro_churn_survey_title = 2131893231;
 
-        /* renamed from: nl */
         /* JADX INFO: Added by JADX */
+        /* JADX INFO: renamed from: nl */
         public static final int f14780nl = 2131893232;
 
-        /* renamed from: no */
         /* JADX INFO: Added by JADX */
+        /* JADX INFO: renamed from: no */
         public static final int f14781no = 2131893233;
 
         /* JADX INFO: Added by JADX */
@@ -69445,8 +69445,8 @@ public final class C5419R {
         /* JADX INFO: Added by JADX */
         public static final int payment_waiting_for_purchase_token_authorization_modal_header = 2131893750;
 
-        /* renamed from: payment_waiting_for_purchase_token_authorization_modal_instructions */
         /* JADX INFO: Added by JADX */
+        /* JADX INFO: renamed from: payment_waiting_for_purchase_token_authorization_modal_instructions */
         public static final int f14782x13a082e0 = 2131893751;
 
         /* JADX INFO: Added by JADX */
@@ -69656,8 +69656,8 @@ public final class C5419R {
         /* JADX INFO: Added by JADX */
         public static final int pixel_value_a11y_text = 2131893820;
 
-        /* renamed from: pl */
         /* JADX INFO: Added by JADX */
+        /* JADX INFO: renamed from: pl */
         public static final int f14783pl = 2131893821;
 
         /* JADX INFO: Added by JADX */
@@ -70140,8 +70140,8 @@ public final class C5419R {
         /* JADX INFO: Added by JADX */
         public static final int premium_guild_perks_modal_button_subscribe_this_server = 2131894034;
 
-        /* renamed from: premium_guild_perks_modal_button_upgrade_to_premium_external_error */
         /* JADX INFO: Added by JADX */
+        /* JADX INFO: renamed from: premium_guild_perks_modal_button_upgrade_to_premium_external_error */
         public static final int f14784x25dca4d0 = 2131894035;
 
         /* JADX INFO: Added by JADX */
@@ -70300,8 +70300,8 @@ public final class C5419R {
         /* JADX INFO: Added by JADX */
         public static final int premium_guild_subscription_cancel_button = 2131894087;
 
-        /* renamed from: premium_guild_subscription_cancel_button_disabled_past_due_tooltip */
         /* JADX INFO: Added by JADX */
+        /* JADX INFO: renamed from: premium_guild_subscription_cancel_button_disabled_past_due_tooltip */
         public static final int f14785x3e671c58 = 2131894088;
 
         /* JADX INFO: Added by JADX */
@@ -70385,8 +70385,8 @@ public final class C5419R {
         /* JADX INFO: Added by JADX */
         public static final int premium_guild_subscription_inventory_uncancel_button_mobile = 2131894115;
 
-        /* renamed from: premium_guild_subscription_inventory_uncancel_confirm_description */
         /* JADX INFO: Added by JADX */
+        /* JADX INFO: renamed from: premium_guild_subscription_inventory_uncancel_confirm_description */
         public static final int f14786x8c928042 = 2131894116;
 
         /* JADX INFO: Added by JADX */
@@ -70416,12 +70416,12 @@ public final class C5419R {
         /* JADX INFO: Added by JADX */
         public static final int premium_guild_subscription_marketing_guilds_blurb_without_prompt = 2131894125;
 
-        /* renamed from: premium_guild_subscription_marketing_guilds_empty_description_text */
         /* JADX INFO: Added by JADX */
+        /* JADX INFO: renamed from: premium_guild_subscription_marketing_guilds_empty_description_text */
         public static final int f14787x744a06ba = 2131894126;
 
-        /* renamed from: premium_guild_subscription_marketing_guilds_empty_description_title */
         /* JADX INFO: Added by JADX */
+        /* JADX INFO: renamed from: premium_guild_subscription_marketing_guilds_empty_description_title */
         public static final int f14788x14f8926b = 2131894127;
 
         /* JADX INFO: Added by JADX */
@@ -70463,20 +70463,20 @@ public final class C5419R {
         /* JADX INFO: Added by JADX */
         public static final int premium_guild_subscription_pending_cancelation = 2131894140;
 
-        /* renamed from: premium_guild_subscription_purchase_button_disabled_pending_mutation_plan */
         /* JADX INFO: Added by JADX */
+        /* JADX INFO: renamed from: premium_guild_subscription_purchase_button_disabled_pending_mutation_plan */
         public static final int f14789xc1250bf1 = 2131894141;
 
-        /* renamed from: premium_guild_subscription_purchase_button_disabled_pending_mutation_premium_guild_subscription */
         /* JADX INFO: Added by JADX */
+        /* JADX INFO: renamed from: premium_guild_subscription_purchase_button_disabled_pending_mutation_premium_guild_subscription */
         public static final int f14790xf4d89799 = 2131894142;
 
-        /* renamed from: premium_guild_subscription_purchase_button_disabled_subscription_account_hold */
         /* JADX INFO: Added by JADX */
+        /* JADX INFO: renamed from: premium_guild_subscription_purchase_button_disabled_subscription_account_hold */
         public static final int f14791xe4ed740d = 2131894143;
 
-        /* renamed from: premium_guild_subscription_purchase_button_disabled_subscription_past_due */
         /* JADX INFO: Added by JADX */
+        /* JADX INFO: renamed from: premium_guild_subscription_purchase_button_disabled_subscription_past_due */
         public static final int f14792x127b5ac3 = 2131894144;
 
         /* JADX INFO: Added by JADX */
@@ -70635,12 +70635,12 @@ public final class C5419R {
         /* JADX INFO: Added by JADX */
         public static final int premium_guild_subscriptions_renewal_info_pending_cancelation = 2131894196;
 
-        /* renamed from: premium_guild_subscriptions_renewal_info_pending_cancelation_android */
         /* JADX INFO: Added by JADX */
+        /* JADX INFO: renamed from: premium_guild_subscriptions_renewal_info_pending_cancelation_android */
         public static final int f14793x33f555f6 = 2131894197;
 
-        /* renamed from: premium_guild_subscriptions_renewal_info_pending_cancelation_no_price */
         /* JADX INFO: Added by JADX */
+        /* JADX INFO: renamed from: premium_guild_subscriptions_renewal_info_pending_cancelation_no_price */
         public static final int f14794xbd67dea4 = 2131894198;
 
         /* JADX INFO: Added by JADX */
@@ -70943,8 +70943,8 @@ public final class C5419R {
         /* JADX INFO: Added by JADX */
         public static final int premium_progress_bar_guild_header_tooltip_content = 2131894323;
 
-        /* renamed from: premium_progress_bar_guild_header_tooltip_cta_primary_role_settings */
         /* JADX INFO: Added by JADX */
+        /* JADX INFO: renamed from: premium_progress_bar_guild_header_tooltip_cta_primary_role_settings */
         public static final int f14795x432ffcd4 = 2131894324;
 
         /* JADX INFO: Added by JADX */
@@ -70986,8 +70986,8 @@ public final class C5419R {
         /* JADX INFO: Added by JADX */
         public static final int premium_settings_account_hold_info_price = 2131894337;
 
-        /* renamed from: premium_settings_account_hold_notice_change_payment_method_button */
         /* JADX INFO: Added by JADX */
+        /* JADX INFO: renamed from: premium_settings_account_hold_notice_change_payment_method_button */
         public static final int f14796x97f0c195 = 2131894338;
 
         /* JADX INFO: Added by JADX */
@@ -71089,8 +71089,8 @@ public final class C5419R {
         /* JADX INFO: Added by JADX */
         public static final int premium_subscription_description_tier_1_pending_cancelation = 2131894375;
 
-        /* renamed from: premium_subscription_description_tier_1_pending_cancelation_no_price */
         /* JADX INFO: Added by JADX */
+        /* JADX INFO: renamed from: premium_subscription_description_tier_1_pending_cancelation_no_price */
         public static final int f14797x57a57445 = 2131894376;
 
         /* JADX INFO: Added by JADX */
@@ -71111,8 +71111,8 @@ public final class C5419R {
         /* JADX INFO: Added by JADX */
         public static final int premium_subscription_description_tier_2_pending_cancelation = 2131894382;
 
-        /* renamed from: premium_subscription_description_tier_2_pending_cancelation_no_price */
         /* JADX INFO: Added by JADX */
+        /* JADX INFO: renamed from: premium_subscription_description_tier_2_pending_cancelation_no_price */
         public static final int f14798x58521fe4 = 2131894383;
 
         /* JADX INFO: Added by JADX */
@@ -71124,8 +71124,8 @@ public final class C5419R {
         /* JADX INFO: Added by JADX */
         public static final int premium_subscription_ending_missing_payment_notice_text = 2131894386;
 
-        /* renamed from: premium_subscription_ending_missing_payment_tier_1_notice_button_text */
         /* JADX INFO: Added by JADX */
+        /* JADX INFO: renamed from: premium_subscription_ending_missing_payment_tier_1_notice_button_text */
         public static final int f14799xefde2c8e = 2131894387;
 
         /* JADX INFO: Added by JADX */
@@ -71146,8 +71146,8 @@ public final class C5419R {
         /* JADX INFO: Added by JADX */
         public static final int premium_subscription_ending_what_you_lose_footer_button_cancel = 2131894393;
 
-        /* renamed from: premium_subscription_ending_what_you_lose_footer_button_keep_nitro */
         /* JADX INFO: Added by JADX */
+        /* JADX INFO: renamed from: premium_subscription_ending_what_you_lose_footer_button_keep_nitro */
         public static final int f14800x915e96d2 = 2131894394;
 
         /* JADX INFO: Added by JADX */
@@ -71261,8 +71261,8 @@ public final class C5419R {
         /* JADX INFO: Added by JADX */
         public static final int premium_switch_plan_disabled_pending_mutation_plan = 2131894432;
 
-        /* renamed from: premium_switch_plan_disabled_pending_mutation_premium_guild_subscription */
         /* JADX INFO: Added by JADX */
+        /* JADX INFO: renamed from: premium_switch_plan_disabled_pending_mutation_premium_guild_subscription */
         public static final int f14801xaf33b2f = 2131894433;
 
         /* JADX INFO: Added by JADX */
@@ -72411,8 +72411,8 @@ public final class C5419R {
         /* JADX INFO: Added by JADX */
         public static final int ring_username_a11y_label = 2131894851;
 
-        /* renamed from: ro */
         /* JADX INFO: Added by JADX */
+        /* JADX INFO: renamed from: ro */
         public static final int f14802ro = 2131894852;
 
         /* JADX INFO: Added by JADX */
@@ -73060,16 +73060,16 @@ public final class C5419R {
         /* JADX INFO: Added by JADX */
         public static final int role_permissions_send_messages_description_text = 2131895088;
 
-        /* renamed from: role_permissions_send_messages_in_threads_and_forum_posts_description */
         /* JADX INFO: Added by JADX */
+        /* JADX INFO: renamed from: role_permissions_send_messages_in_threads_and_forum_posts_description */
         public static final int f14803x65c54fa = 2131895089;
 
-        /* renamed from: role_permissions_send_messages_in_threads_and_forum_posts_description_category */
         /* JADX INFO: Added by JADX */
+        /* JADX INFO: renamed from: role_permissions_send_messages_in_threads_and_forum_posts_description_category */
         public static final int f14804x126292a3 = 2131895090;
 
-        /* renamed from: role_permissions_send_messages_in_threads_and_forum_posts_description_text */
         /* JADX INFO: Added by JADX */
+        /* JADX INFO: renamed from: role_permissions_send_messages_in_threads_and_forum_posts_description_text */
         public static final int f14805x9a44b552 = 2131895091;
 
         /* JADX INFO: Added by JADX */
@@ -73090,8 +73090,8 @@ public final class C5419R {
         /* JADX INFO: Added by JADX */
         public static final int role_permissions_send_messages_with_forums_description_text = 2131895097;
 
-        /* renamed from: role_permissions_send_messages_with_forums_description_text_disabled */
         /* JADX INFO: Added by JADX */
+        /* JADX INFO: renamed from: role_permissions_send_messages_with_forums_description_text_disabled */
         public static final int f14806xeedd0cf7 = 2131895098;
 
         /* JADX INFO: Added by JADX */
@@ -73349,8 +73349,8 @@ public final class C5419R {
         /* JADX INFO: Added by JADX */
         public static final int rtc_debug_transport = 2131895184;
 
-        /* renamed from: ru */
         /* JADX INFO: Added by JADX */
+        /* JADX INFO: renamed from: ru */
         public static final int f14807ru = 2131895185;
 
         /* JADX INFO: Added by JADX */
@@ -75213,20 +75213,20 @@ public final class C5419R {
         /* JADX INFO: Added by JADX */
         public static final int stage_discovery_intro_card_body_desktop = 2131895812;
 
-        /* renamed from: stage_discovery_live_stage_tile_friends_guilds_context_audience_1 */
         /* JADX INFO: Added by JADX */
+        /* JADX INFO: renamed from: stage_discovery_live_stage_tile_friends_guilds_context_audience_1 */
         public static final int f14808xf2a1bce = 2131895813;
 
-        /* renamed from: stage_discovery_live_stage_tile_friends_guilds_context_audience_2 */
         /* JADX INFO: Added by JADX */
+        /* JADX INFO: renamed from: stage_discovery_live_stage_tile_friends_guilds_context_audience_2 */
         public static final int f14809xf2a1bcf = 2131895814;
 
-        /* renamed from: stage_discovery_live_stage_tile_friends_guilds_context_audience_3 */
         /* JADX INFO: Added by JADX */
+        /* JADX INFO: renamed from: stage_discovery_live_stage_tile_friends_guilds_context_audience_3 */
         public static final int f14810xf2a1bd0 = 2131895815;
 
-        /* renamed from: stage_discovery_live_stage_tile_friends_guilds_context_audience_3_n */
         /* JADX INFO: Added by JADX */
+        /* JADX INFO: renamed from: stage_discovery_live_stage_tile_friends_guilds_context_audience_3_n */
         public static final int f14811xed1273bf = 2131895816;
 
         /* JADX INFO: Added by JADX */
@@ -75604,8 +75604,8 @@ public final class C5419R {
         /* JADX INFO: Added by JADX */
         public static final int sticker_picker_empty_guild_upsell_no_premium_subscriptions_cta = 2131895941;
 
-        /* renamed from: sticker_picker_empty_guild_upsell_no_premium_subscriptions_description */
         /* JADX INFO: Added by JADX */
+        /* JADX INFO: renamed from: sticker_picker_empty_guild_upsell_no_premium_subscriptions_description */
         public static final int f14812xe07aefb2 = 2131895942;
 
         /* JADX INFO: Added by JADX */
@@ -76706,8 +76706,8 @@ public final class C5419R {
         /* JADX INFO: Added by JADX */
         public static final int textarea_placeholder = 2131896324;
 
-        /* renamed from: th */
         /* JADX INFO: Added by JADX */
+        /* JADX INFO: renamed from: th */
         public static final int f14813th = 2131896325;
 
         /* JADX INFO: Added by JADX */
@@ -77118,8 +77118,8 @@ public final class C5419R {
         /* JADX INFO: Added by JADX */
         public static final int total_results = 2131896465;
 
-        /* renamed from: tr */
         /* JADX INFO: Added by JADX */
+        /* JADX INFO: renamed from: tr */
         public static final int f14814tr = 2131896466;
 
         /* JADX INFO: Added by JADX */
@@ -77389,8 +77389,8 @@ public final class C5419R {
         /* JADX INFO: Added by JADX */
         public static final int ucrop_scale = 2131896556;
 
-        /* renamed from: uk */
         /* JADX INFO: Added by JADX */
+        /* JADX INFO: renamed from: uk */
         public static final int f14815uk = 2131896557;
 
         /* JADX INFO: Added by JADX */
@@ -78896,8 +78896,8 @@ public final class C5419R {
         /* JADX INFO: Added by JADX */
         public static final int very_out_of_date_description = 2131897076;
 
-        /* renamed from: vi */
         /* JADX INFO: Added by JADX */
+        /* JADX INFO: renamed from: vi */
         public static final int f14816vi = 2131897077;
 
         /* JADX INFO: Added by JADX */
@@ -79499,7 +79499,7 @@ public final class C5419R {
     }
 
     /* JADX INFO: Added by JADX */
-    /* renamed from: com.discord.R$style */
+    /* JADX INFO: renamed from: com.discord.R$style */
     public static final class style {
 
         /* JADX INFO: Added by JADX */
@@ -80027,8 +80027,8 @@ public final class C5419R {
         /* JADX INFO: Added by JADX */
         public static final int Base_ThemeOverlay_MaterialComponents_Dialog_Alert_Framework = 2131951790;
 
-        /* renamed from: Base_ThemeOverlay_MaterialComponents_Light_Dialog_Alert_Framework */
         /* JADX INFO: Added by JADX */
+        /* JADX INFO: renamed from: Base_ThemeOverlay_MaterialComponents_Light_Dialog_Alert_Framework */
         public static final int f14817x519bcd25 = 2131951791;
 
         /* JADX INFO: Added by JADX */
@@ -81087,8 +81087,8 @@ public final class C5419R {
         /* JADX INFO: Added by JADX */
         public static final int ShapeAppearanceOverlay_MaterialComponents_Chip = 2131952143;
 
-        /* renamed from: ShapeAppearanceOverlay_MaterialComponents_ExtendedFloatingActionButton */
         /* JADX INFO: Added by JADX */
+        /* JADX INFO: renamed from: ShapeAppearanceOverlay_MaterialComponents_ExtendedFloatingActionButton */
         public static final int f14818x7c26e1f5 = 2131952144;
 
         /* JADX INFO: Added by JADX */
@@ -81097,15 +81097,15 @@ public final class C5419R {
         /* JADX INFO: Added by JADX */
         public static final int ShapeAppearanceOverlay_MaterialComponents_MaterialCalendar_Day = 2131952146;
 
-        /* renamed from: ShapeAppearanceOverlay_MaterialComponents_MaterialCalendar_Window_Fullscreen */
         /* JADX INFO: Added by JADX */
+        /* JADX INFO: renamed from: ShapeAppearanceOverlay_MaterialComponents_MaterialCalendar_Window_Fullscreen */
         public static final int f14819x121af39e = 2131952147;
 
         /* JADX INFO: Added by JADX */
         public static final int ShapeAppearanceOverlay_MaterialComponents_MaterialCalendar_Year = 2131952148;
 
-        /* renamed from: ShapeAppearanceOverlay_MaterialComponents_TextInputLayout_FilledBox */
         /* JADX INFO: Added by JADX */
+        /* JADX INFO: renamed from: ShapeAppearanceOverlay_MaterialComponents_TextInputLayout_FilledBox */
         public static final int f14820xaf44c2a3 = 2131952149;
 
         /* JADX INFO: Added by JADX */
@@ -81132,8 +81132,8 @@ public final class C5419R {
         /* JADX INFO: Added by JADX */
         public static final int TabsHostBottomNavNotificationBadge = 2131952157;
 
-        /* renamed from: Test_ShapeAppearanceOverlay_MaterialComponents_MaterialCalendar_Day */
         /* JADX INFO: Added by JADX */
+        /* JADX INFO: renamed from: Test_ShapeAppearanceOverlay_MaterialComponents_MaterialCalendar_Day */
         public static final int f14821x774f7bdd = 2131952158;
 
         /* JADX INFO: Added by JADX */
@@ -81715,15 +81715,15 @@ public final class C5419R {
         /* JADX INFO: Added by JADX */
         public static final int ThemeOverlay_MaterialComponents_AutoCompleteTextView_FilledBox = 2131952351;
 
-        /* renamed from: ThemeOverlay_MaterialComponents_AutoCompleteTextView_FilledBox_Dense */
         /* JADX INFO: Added by JADX */
+        /* JADX INFO: renamed from: ThemeOverlay_MaterialComponents_AutoCompleteTextView_FilledBox_Dense */
         public static final int f14822x3194dd0e = 2131952352;
 
         /* JADX INFO: Added by JADX */
         public static final int ThemeOverlay_MaterialComponents_AutoCompleteTextView_OutlinedBox = 2131952353;
 
-        /* renamed from: ThemeOverlay_MaterialComponents_AutoCompleteTextView_OutlinedBox_Dense */
         /* JADX INFO: Added by JADX */
+        /* JADX INFO: renamed from: ThemeOverlay_MaterialComponents_AutoCompleteTextView_OutlinedBox_Dense */
         public static final int f14823x2469ccce = 2131952354;
 
         /* JADX INFO: Added by JADX */
@@ -81771,20 +81771,20 @@ public final class C5419R {
         /* JADX INFO: Added by JADX */
         public static final int ThemeOverlay_MaterialComponents_MaterialAlertDialog_Picker_Date = 2131952369;
 
-        /* renamed from: ThemeOverlay_MaterialComponents_MaterialAlertDialog_Picker_Date_Calendar */
         /* JADX INFO: Added by JADX */
+        /* JADX INFO: renamed from: ThemeOverlay_MaterialComponents_MaterialAlertDialog_Picker_Date_Calendar */
         public static final int f14824x8886184a = 2131952370;
 
-        /* renamed from: ThemeOverlay_MaterialComponents_MaterialAlertDialog_Picker_Date_Header_Text */
         /* JADX INFO: Added by JADX */
+        /* JADX INFO: renamed from: ThemeOverlay_MaterialComponents_MaterialAlertDialog_Picker_Date_Header_Text */
         public static final int f14825x9b335733 = 2131952371;
 
-        /* renamed from: ThemeOverlay_MaterialComponents_MaterialAlertDialog_Picker_Date_Header_Text_Day */
         /* JADX INFO: Added by JADX */
+        /* JADX INFO: renamed from: ThemeOverlay_MaterialComponents_MaterialAlertDialog_Picker_Date_Header_Text_Day */
         public static final int f14826x96aac070 = 2131952372;
 
-        /* renamed from: ThemeOverlay_MaterialComponents_MaterialAlertDialog_Picker_Date_Spinner */
         /* JADX INFO: Added by JADX */
+        /* JADX INFO: renamed from: ThemeOverlay_MaterialComponents_MaterialAlertDialog_Picker_Date_Spinner */
         public static final int f14827x7cc1c38d = 2131952373;
 
         /* JADX INFO: Added by JADX */
@@ -81799,15 +81799,15 @@ public final class C5419R {
         /* JADX INFO: Added by JADX */
         public static final int ThemeOverlay_MaterialComponents_TextInputEditText_FilledBox = 2131952377;
 
-        /* renamed from: ThemeOverlay_MaterialComponents_TextInputEditText_FilledBox_Dense */
         /* JADX INFO: Added by JADX */
+        /* JADX INFO: renamed from: ThemeOverlay_MaterialComponents_TextInputEditText_FilledBox_Dense */
         public static final int f14828xb44864b4 = 2131952378;
 
         /* JADX INFO: Added by JADX */
         public static final int ThemeOverlay_MaterialComponents_TextInputEditText_OutlinedBox = 2131952379;
 
-        /* renamed from: ThemeOverlay_MaterialComponents_TextInputEditText_OutlinedBox_Dense */
         /* JADX INFO: Added by JADX */
+        /* JADX INFO: renamed from: ThemeOverlay_MaterialComponents_TextInputEditText_OutlinedBox_Dense */
         public static final int f14829xc85a02f4 = 2131952380;
 
         /* JADX INFO: Added by JADX */
@@ -83055,8 +83055,8 @@ public final class C5419R {
         /* JADX INFO: Added by JADX */
         public static final int Widget_MaterialComponents_MaterialCalendar_HeaderSelection = 2131952795;
 
-        /* renamed from: Widget_MaterialComponents_MaterialCalendar_HeaderSelection_Fullscreen */
         /* JADX INFO: Added by JADX */
+        /* JADX INFO: renamed from: Widget_MaterialComponents_MaterialCalendar_HeaderSelection_Fullscreen */
         public static final int f14830x77b19d4e = 2131952796;
 
         /* JADX INFO: Added by JADX */
@@ -83146,12 +83146,12 @@ public final class C5419R {
         /* JADX INFO: Added by JADX */
         public static final int Widget_MaterialComponents_TextInputLayout_FilledBox_Dense = 2131952825;
 
-        /* renamed from: Widget_MaterialComponents_TextInputLayout_FilledBox_Dense_ExposedDropdownMenu */
         /* JADX INFO: Added by JADX */
+        /* JADX INFO: renamed from: Widget_MaterialComponents_TextInputLayout_FilledBox_Dense_ExposedDropdownMenu */
         public static final int f14831x5c070b9b = 2131952826;
 
-        /* renamed from: Widget_MaterialComponents_TextInputLayout_FilledBox_ExposedDropdownMenu */
         /* JADX INFO: Added by JADX */
+        /* JADX INFO: renamed from: Widget_MaterialComponents_TextInputLayout_FilledBox_ExposedDropdownMenu */
         public static final int f14832x22b53d1b = 2131952827;
 
         /* JADX INFO: Added by JADX */
@@ -83160,12 +83160,12 @@ public final class C5419R {
         /* JADX INFO: Added by JADX */
         public static final int Widget_MaterialComponents_TextInputLayout_OutlinedBox_Dense = 2131952829;
 
-        /* renamed from: Widget_MaterialComponents_TextInputLayout_OutlinedBox_Dense_ExposedDropdownMenu */
         /* JADX INFO: Added by JADX */
+        /* JADX INFO: renamed from: Widget_MaterialComponents_TextInputLayout_OutlinedBox_Dense_ExposedDropdownMenu */
         public static final int f14833xc3fd845b = 2131952830;
 
-        /* renamed from: Widget_MaterialComponents_TextInputLayout_OutlinedBox_ExposedDropdownMenu */
         /* JADX INFO: Added by JADX */
+        /* JADX INFO: renamed from: Widget_MaterialComponents_TextInputLayout_OutlinedBox_ExposedDropdownMenu */
         public static final int f14834x802545db = 2131952831;
 
         /* JADX INFO: Added by JADX */
@@ -83233,7 +83233,7 @@ public final class C5419R {
     }
 
     /* JADX INFO: Added by JADX */
-    /* renamed from: com.discord.R$xml */
+    /* JADX INFO: renamed from: com.discord.R$xml */
     public static final class xml {
 
         /* JADX INFO: Added by JADX */

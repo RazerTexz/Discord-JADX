@@ -13,8 +13,8 @@ import kotlin.jvm.functions.Function2;
 import kotlin.ranges.Ranges2;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: GuildSubscriptionsManager.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: GuildSubscriptionsManager.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class GuildSubscriptionsManager {
     private final HashSet<Long> activityGuilds;
     private final GuildChannelSubscriptionsManager guildChannelSubscriptionsManager;

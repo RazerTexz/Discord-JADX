@@ -11,9 +11,9 @@ import java.util.Map;
 import p507d0.p592z.p594d.Intrinsics3;
 import p658rx.functions.Func4;
 
-/* compiled from: WidgetChatListAdapterItemEmbed.kt */
-/* renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemEmbed$Companion$getModel$2, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemEmbed$Companion$getModel$2, reason: use source file name */
+/* JADX INFO: compiled from: WidgetChatListAdapterItemEmbed.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetChatListAdapterItemEmbed4<T1, T2, T3, T4, R> implements Func4<Long, Map<Long, ? extends String>, HashMap<Long, String>, Map<Long, ? extends GuildRole>, WidgetChatListAdapterItemEmbed.Model> {
     public final /* synthetic */ EmbedEntry $embedEntry;
     public final /* synthetic */ Collection $parsedDescription;
@@ -30,7 +30,7 @@ public final class WidgetChatListAdapterItemEmbed4<T1, T2, T3, T4, R> implements
         return call2(l, (Map<Long, String>) map, map2, (Map<Long, GuildRole>) map3);
     }
 
-    /* renamed from: call, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
     public final WidgetChatListAdapterItemEmbed.Model call2(Long l, Map<Long, String> map, HashMap<Long, String> map2, Map<Long, GuildRole> map3) {
         EmbedEntry embedEntry = this.$embedEntry;
         Collection collection = this.$parsedDescription;

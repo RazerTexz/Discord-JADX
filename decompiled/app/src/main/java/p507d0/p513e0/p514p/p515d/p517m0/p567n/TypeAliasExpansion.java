@@ -13,28 +13,28 @@ import p507d0.p580t.Maps6;
 import p507d0.p580t._Collections;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: TypeAliasExpansion.kt */
-/* renamed from: d0.e0.p.d.m0.n.r0, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.n.r0, reason: use source file name */
+/* JADX INFO: compiled from: TypeAliasExpansion.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class TypeAliasExpansion {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final a f24866a = new a(null);
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final TypeAliasExpansion f24867b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final TypeAliasDescriptor f24868c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final List<TypeProjection> f24869d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final Map<TypeParameterDescriptor, TypeProjection> f24870e;
 
-    /* compiled from: TypeAliasExpansion.kt */
-    /* renamed from: d0.e0.p.d.m0.n.r0$a */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.n.r0$a */
+    /* JADX INFO: compiled from: TypeAliasExpansion.kt */
     public static final class a {
         public a(DefaultConstructorMarker defaultConstructorMarker) {
         }

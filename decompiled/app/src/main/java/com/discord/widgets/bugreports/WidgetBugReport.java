@@ -60,8 +60,8 @@ import p507d0.p592z.p594d.Lambda;
 import p507d0.p592z.p594d.Reflection2;
 import p658rx.functions.Func0;
 
-/* compiled from: WidgetBugReport.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetBugReport.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetBugReport extends AppFragment {
     public static final String INTENT_EXTRA_SCREENSHOT_FILENAME = "extra_screenshot_filename";
     public static final String INTENT_EXTRA_SCREENSHOT_URI = "extra_screenshot_uri";
@@ -70,26 +70,26 @@ public final class WidgetBugReport extends AppFragment {
     public static final int VIEW_INDEX_STATUS = 1;
     private boolean backHandlerAdded;
 
-    /* renamed from: binding$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
     private final BugReportFeatureAdapter featuresAdapter;
     private final MGImages.DistinctChangeDetector imagesChangeDetector;
 
-    /* renamed from: items$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: items$delegate, reason: from kotlin metadata */
     private final Lazy items;
 
-    /* renamed from: validationManager$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: validationManager$delegate, reason: from kotlin metadata */
     private final Lazy validationManager;
 
-    /* renamed from: viewModel$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: viewModel$delegate, reason: from kotlin metadata */
     private final Lazy viewModel;
     public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetBugReport.class, "binding", "getBinding()Lcom/discord/databinding/WidgetBugReportBinding;", 0)};
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private static final List<Priority> priorityLevels = Collections2.listOf((Object[]) new Priority[]{new Priority(C5419R.string.bug_report_priority_critical_title, C5419R.string.bug_report_priority_critical_description, 801497159479722084L), new Priority(C5419R.string.bug_report_priority_high_title, C5419R.string.bug_report_priority_high_description, 410336837563973632L), new Priority(C5419R.string.bug_report_priority_low_title, C5419R.string.bug_report_priority_low_description, 841420679643529296L), new Priority(C5419R.string.bug_report_priority_very_low_title, C5419R.string.bug_report_priority_very_low_description, 827645852352512021L)});
 
-    /* compiled from: WidgetBugReport.kt */
+    /* JADX INFO: compiled from: WidgetBugReport.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -112,8 +112,8 @@ public final class WidgetBugReport extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetBugReport.kt */
-    /* renamed from: com.discord.widgets.bugreports.WidgetBugReport$onViewBound$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.bugreports.WidgetBugReport$onViewBound$1 */
+    /* JADX INFO: compiled from: WidgetBugReport.kt */
     public static final class ViewOnClickListenerC72891 implements View.OnClickListener {
         public ViewOnClickListenerC72891() {
         }
@@ -124,8 +124,8 @@ public final class WidgetBugReport extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetBugReport.kt */
-    /* renamed from: com.discord.widgets.bugreports.WidgetBugReport$onViewBound$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.bugreports.WidgetBugReport$onViewBound$2 */
+    /* JADX INFO: compiled from: WidgetBugReport.kt */
     public static final class C72902 extends Lambda implements Function1<Editable, Unit> {
         public C72902() {
             super(1);
@@ -137,15 +137,15 @@ public final class WidgetBugReport extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Editable editable) {
             Intrinsics3.checkNotNullParameter(editable, "it");
             WidgetBugReport.access$getViewModel$p(WidgetBugReport.this).updateReportName(editable.toString());
         }
     }
 
-    /* compiled from: WidgetBugReport.kt */
-    /* renamed from: com.discord.widgets.bugreports.WidgetBugReport$onViewBound$3 */
+    /* JADX INFO: renamed from: com.discord.widgets.bugreports.WidgetBugReport$onViewBound$3 */
+    /* JADX INFO: compiled from: WidgetBugReport.kt */
     public static final class C72913 extends Lambda implements Function1<Editable, Unit> {
         public C72913() {
             super(1);
@@ -157,15 +157,15 @@ public final class WidgetBugReport extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Editable editable) {
             Intrinsics3.checkNotNullParameter(editable, "it");
             WidgetBugReport.access$getViewModel$p(WidgetBugReport.this).updateReportDescription(editable.toString());
         }
     }
 
-    /* compiled from: WidgetBugReport.kt */
-    /* renamed from: com.discord.widgets.bugreports.WidgetBugReport$onViewBound$4 */
+    /* JADX INFO: renamed from: com.discord.widgets.bugreports.WidgetBugReport$onViewBound$4 */
+    /* JADX INFO: compiled from: WidgetBugReport.kt */
     public static final class C72924 extends Lambda implements Function1<String, Unit> {
         public C72924() {
             super(1);
@@ -177,15 +177,15 @@ public final class WidgetBugReport extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(String str) {
             Intrinsics3.checkNotNullParameter(str, "it");
             WidgetBugReport.access$getViewModel$p(WidgetBugReport.this).m11400filterFeatures(str);
         }
     }
 
-    /* compiled from: WidgetBugReport.kt */
-    /* renamed from: com.discord.widgets.bugreports.WidgetBugReport$onViewBound$5 */
+    /* JADX INFO: renamed from: com.discord.widgets.bugreports.WidgetBugReport$onViewBound$5 */
+    /* JADX INFO: compiled from: WidgetBugReport.kt */
     public static final class ViewOnClickListenerC72935 implements View.OnClickListener {
         public ViewOnClickListenerC72935() {
         }
@@ -196,12 +196,12 @@ public final class WidgetBugReport extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetBugReport.kt */
-    /* renamed from: com.discord.widgets.bugreports.WidgetBugReport$onViewBound$6 */
+    /* JADX INFO: renamed from: com.discord.widgets.bugreports.WidgetBugReport$onViewBound$6 */
+    /* JADX INFO: compiled from: WidgetBugReport.kt */
     public static final class ViewOnClickListenerC72946 implements View.OnClickListener {
 
-        /* compiled from: WidgetBugReport.kt */
-        /* renamed from: com.discord.widgets.bugreports.WidgetBugReport$onViewBound$6$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.widgets.bugreports.WidgetBugReport$onViewBound$6$1, reason: invalid class name */
+        /* JADX INFO: compiled from: WidgetBugReport.kt */
         public static final class AnonymousClass1 extends Lambda implements Function1<Integer, Unit> {
             public AnonymousClass1() {
                 super(1);
@@ -233,8 +233,8 @@ public final class WidgetBugReport extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetBugReport.kt */
-    /* renamed from: com.discord.widgets.bugreports.WidgetBugReport$onViewBound$7 */
+    /* JADX INFO: renamed from: com.discord.widgets.bugreports.WidgetBugReport$onViewBound$7 */
+    /* JADX INFO: compiled from: WidgetBugReport.kt */
     public static final class ViewOnClickListenerC72957 implements View.OnClickListener {
         public ViewOnClickListenerC72957() {
         }
@@ -245,8 +245,8 @@ public final class WidgetBugReport extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetBugReport.kt */
-    /* renamed from: com.discord.widgets.bugreports.WidgetBugReport$onViewBound$8 */
+    /* JADX INFO: renamed from: com.discord.widgets.bugreports.WidgetBugReport$onViewBound$8 */
+    /* JADX INFO: compiled from: WidgetBugReport.kt */
     public static final class ViewOnClickListenerC72968 implements View.OnClickListener {
         public ViewOnClickListenerC72968() {
         }
@@ -257,8 +257,8 @@ public final class WidgetBugReport extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetBugReport.kt */
-    /* renamed from: com.discord.widgets.bugreports.WidgetBugReport$onViewBoundOrOnResume$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.bugreports.WidgetBugReport$onViewBoundOrOnResume$1 */
+    /* JADX INFO: compiled from: WidgetBugReport.kt */
     public static final class C72971 extends Lambda implements Function1<BugReportViewModel.ViewState, Unit> {
         public C72971() {
             super(1);
@@ -270,15 +270,15 @@ public final class WidgetBugReport extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(BugReportViewModel.ViewState viewState) {
             Intrinsics3.checkNotNullParameter(viewState, "viewState");
             WidgetBugReport.this.updateView(viewState);
         }
     }
 
-    /* compiled from: WidgetBugReport.kt */
-    /* renamed from: com.discord.widgets.bugreports.WidgetBugReport$onViewBoundOrOnResume$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.bugreports.WidgetBugReport$onViewBoundOrOnResume$2 */
+    /* JADX INFO: compiled from: WidgetBugReport.kt */
     public static final /* synthetic */ class C72982 extends FunctionReferenceImpl implements Function1<BugReportViewModel.Event, Unit> {
         public C72982(WidgetBugReport widgetBugReport) {
             super(1, widgetBugReport, WidgetBugReport.class, "handleEvent", "handleEvent(Lcom/discord/widgets/bugreports/BugReportViewModel$Event;)V", 0);
@@ -290,19 +290,19 @@ public final class WidgetBugReport extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(BugReportViewModel.Event event) {
             Intrinsics3.checkNotNullParameter(event, "p1");
             WidgetBugReport.access$handleEvent((WidgetBugReport) this.receiver, event);
         }
     }
 
-    /* compiled from: WidgetBugReport.kt */
-    /* renamed from: com.discord.widgets.bugreports.WidgetBugReport$updateView$4 */
+    /* JADX INFO: renamed from: com.discord.widgets.bugreports.WidgetBugReport$updateView$4 */
+    /* JADX INFO: compiled from: WidgetBugReport.kt */
     public static final class C72994<R> implements Func0<Boolean> {
 
-        /* compiled from: WidgetBugReport.kt */
-        /* renamed from: com.discord.widgets.bugreports.WidgetBugReport$updateView$4$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.widgets.bugreports.WidgetBugReport$updateView$4$1, reason: invalid class name */
+        /* JADX INFO: compiled from: WidgetBugReport.kt */
         public static final class AnonymousClass1<R> implements Func0<Boolean> {
             public static final AnonymousClass1 INSTANCE = new AnonymousClass1();
 

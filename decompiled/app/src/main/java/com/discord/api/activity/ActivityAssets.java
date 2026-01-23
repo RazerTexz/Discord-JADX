@@ -3,8 +3,8 @@ package com.discord.api.activity;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ActivityAssets.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: ActivityAssets.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class ActivityAssets {
     private final String largeImage;
     private final String largeText;
@@ -18,22 +18,22 @@ public final /* data */ class ActivityAssets {
         this.smallText = str4;
     }
 
-    /* renamed from: a, reason: from getter */
+    /* JADX INFO: renamed from: a, reason: from getter */
     public final String getLargeImage() {
         return this.largeImage;
     }
 
-    /* renamed from: b, reason: from getter */
+    /* JADX INFO: renamed from: b, reason: from getter */
     public final String getLargeText() {
         return this.largeText;
     }
 
-    /* renamed from: c, reason: from getter */
+    /* JADX INFO: renamed from: c, reason: from getter */
     public final String getSmallImage() {
         return this.smallImage;
     }
 
-    /* renamed from: d, reason: from getter */
+    /* JADX INFO: renamed from: d, reason: from getter */
     public final String getSmallText() {
         return this.smallText;
     }

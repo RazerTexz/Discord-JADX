@@ -6,14 +6,14 @@ import kotlin.Unit;
 import kotlin.jvm.functions.Function1;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: OnPressListener.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: OnPressListener.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class OnPressListener implements View.OnTouchListener {
     private final OnPress onPress;
     private boolean pressed;
 
-    /* compiled from: OnPressListener.kt */
-    /* renamed from: com.discord.utilities.press.OnPressListener$1 */
+    /* JADX INFO: renamed from: com.discord.utilities.press.OnPressListener$1 */
+    /* JADX INFO: compiled from: OnPressListener.kt */
     public static final class C68421 implements OnPress {
         public final /* synthetic */ Function1 $onPress;
 
@@ -27,7 +27,7 @@ public final class OnPressListener implements View.OnTouchListener {
         }
     }
 
-    /* compiled from: OnPressListener.kt */
+    /* JADX INFO: compiled from: OnPressListener.kt */
     public interface OnPress {
         void onPress(boolean pressed);
     }

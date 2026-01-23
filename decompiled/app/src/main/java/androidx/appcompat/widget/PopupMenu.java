@@ -19,7 +19,7 @@ import androidx.appcompat.view.menu.MenuBuilder;
 import androidx.appcompat.view.menu.MenuPopupHelper;
 import androidx.appcompat.view.menu.ShowableListMenu;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class PopupMenu {
     private final View mAnchor;
     private final Context mContext;
@@ -29,7 +29,7 @@ public class PopupMenu {
     public OnDismissListener mOnDismissListener;
     public final MenuPopupHelper mPopup;
 
-    /* renamed from: androidx.appcompat.widget.PopupMenu$1 */
+    /* JADX INFO: renamed from: androidx.appcompat.widget.PopupMenu$1 */
     public class C01121 implements MenuBuilder.Callback {
         public C01121() {
         }
@@ -48,7 +48,7 @@ public class PopupMenu {
         }
     }
 
-    /* renamed from: androidx.appcompat.widget.PopupMenu$2 */
+    /* JADX INFO: renamed from: androidx.appcompat.widget.PopupMenu$2 */
     public class C01132 implements PopupWindow.OnDismissListener {
         public C01132() {
         }
@@ -63,7 +63,7 @@ public class PopupMenu {
         }
     }
 
-    /* renamed from: androidx.appcompat.widget.PopupMenu$3 */
+    /* JADX INFO: renamed from: androidx.appcompat.widget.PopupMenu$3 */
     public class C01143 extends ForwardingListener {
         public C01143(View view) {
             super(view);

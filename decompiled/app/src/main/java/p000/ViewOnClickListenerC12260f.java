@@ -16,18 +16,18 @@ import p007b.p008a.p018d.AppToast;
 import p007b.p008a.p062y.OverlayMenuView4;
 import p007b.p008a.p062y.OverlayMenuView5;
 
-/* compiled from: java-style lambda group */
-/* renamed from: f */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: f */
+/* JADX INFO: compiled from: java-style lambda group */
+/* JADX INFO: loaded from: classes.dex */
 public final class ViewOnClickListenerC12260f implements View.OnClickListener {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final /* synthetic */ int f25350j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final /* synthetic */ Object f25351k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final /* synthetic */ Object f25352l;
 
     public ViewOnClickListenerC12260f(int i, Object obj, Object obj2) {

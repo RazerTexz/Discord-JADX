@@ -1,6 +1,6 @@
 package com.google.android.gms.nearby.messages;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public class MessageListener {
     public void onBleSignalChanged(Message message, BleSignal bleSignal) {
     }

@@ -7,14 +7,14 @@ import kotlin.jvm.internal.DefaultConstructorMarker;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: InviteSuggestionItemV2.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: InviteSuggestionItemV2.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public abstract class InviteSuggestionItemV2 implements MGRecyclerDataPayload {
     public static final int TYPE_CHANNEL = 3;
     public static final int TYPE_EMPTY_SEARCH_RESULTS = 1;
     public static final int TYPE_USER = 2;
 
-    /* compiled from: InviteSuggestionItemV2.kt */
+    /* JADX INFO: compiled from: InviteSuggestionItemV2.kt */
     public static final /* data */ class ChannelItem extends InviteSuggestionItemV2 {
         private final Channel channel;
         private final boolean hasSent;
@@ -50,17 +50,17 @@ public abstract class InviteSuggestionItemV2 implements MGRecyclerDataPayload {
             return channelItem.copy(channel, z2, str);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final Channel getChannel() {
             return this.channel;
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final boolean getHasSent() {
             return this.hasSent;
         }
 
-        /* renamed from: component3, reason: from getter */
+        /* JADX INFO: renamed from: component3, reason: from getter */
         public final String getSearchQuery() {
             return this.searchQuery;
         }
@@ -110,17 +110,20 @@ public abstract class InviteSuggestionItemV2 implements MGRecyclerDataPayload {
         }
 
         /* JADX WARN: Multi-variable type inference failed */
+        /* JADX WARN: Type inference failed for: r2v1, types: [int] */
+        /* JADX WARN: Type inference failed for: r2v3 */
+        /* JADX WARN: Type inference failed for: r2v4 */
         public int hashCode() {
             Channel channel = this.channel;
             int iHashCode = (channel != null ? channel.hashCode() : 0) * 31;
             boolean z2 = this.hasSent;
-            int i = z2;
-            if (z2 != 0) {
-                i = 1;
+            ?? r2 = z2;
+            if (z2) {
+                r2 = 1;
             }
-            int i2 = (iHashCode + i) * 31;
+            int i = (iHashCode + r2) * 31;
             String str = this.searchQuery;
-            return i2 + (str != null ? str.hashCode() : 0);
+            return i + (str != null ? str.hashCode() : 0);
         }
 
         public String toString() {
@@ -133,7 +136,7 @@ public abstract class InviteSuggestionItemV2 implements MGRecyclerDataPayload {
         }
     }
 
-    /* compiled from: InviteSuggestionItemV2.kt */
+    /* JADX INFO: compiled from: InviteSuggestionItemV2.kt */
     public static final class SearchNoResultsItem extends InviteSuggestionItemV2 {
         public static final SearchNoResultsItem INSTANCE = new SearchNoResultsItem();
         private static final int type = 1;
@@ -159,7 +162,7 @@ public abstract class InviteSuggestionItemV2 implements MGRecyclerDataPayload {
         }
     }
 
-    /* compiled from: InviteSuggestionItemV2.kt */
+    /* JADX INFO: compiled from: InviteSuggestionItemV2.kt */
     public static final /* data */ class UserItem extends InviteSuggestionItemV2 {
         private final boolean hasSent;
         private final String key;
@@ -195,17 +198,17 @@ public abstract class InviteSuggestionItemV2 implements MGRecyclerDataPayload {
             return userItem.copy(user, z2, str);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final User getUser() {
             return this.user;
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final boolean getHasSent() {
             return this.hasSent;
         }
 
-        /* renamed from: component3, reason: from getter */
+        /* JADX INFO: renamed from: component3, reason: from getter */
         public final String getSearchQuery() {
             return this.searchQuery;
         }
@@ -255,17 +258,20 @@ public abstract class InviteSuggestionItemV2 implements MGRecyclerDataPayload {
         }
 
         /* JADX WARN: Multi-variable type inference failed */
+        /* JADX WARN: Type inference failed for: r2v1, types: [int] */
+        /* JADX WARN: Type inference failed for: r2v3 */
+        /* JADX WARN: Type inference failed for: r2v4 */
         public int hashCode() {
             User user = this.user;
             int iHashCode = (user != null ? user.hashCode() : 0) * 31;
             boolean z2 = this.hasSent;
-            int i = z2;
-            if (z2 != 0) {
-                i = 1;
+            ?? r2 = z2;
+            if (z2) {
+                r2 = 1;
             }
-            int i2 = (iHashCode + i) * 31;
+            int i = (iHashCode + r2) * 31;
             String str = this.searchQuery;
-            return i2 + (str != null ? str.hashCode() : 0);
+            return i + (str != null ? str.hashCode() : 0);
         }
 
         public String toString() {

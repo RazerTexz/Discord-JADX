@@ -11,11 +11,11 @@ import p001a0.p002a.p003a.C0002b;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: EmbeddedActivity.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: EmbeddedActivity.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class EmbeddedActivity {
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private final long applicationId;
     private final ActivityAssets assets;
@@ -30,7 +30,7 @@ public final /* data */ class EmbeddedActivity {
     private final String url;
     private final List<Long> userIds;
 
-    /* compiled from: EmbeddedActivity.kt */
+    /* JADX INFO: compiled from: EmbeddedActivity.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -77,11 +77,12 @@ public final /* data */ class EmbeddedActivity {
         this.guildId = j2;
     }
 
+    /* JADX WARN: Multi-variable type inference failed */
     public static /* synthetic */ EmbeddedActivity copy$default(EmbeddedActivity embeddedActivity, long j, ActivityAssets activityAssets, Long l, String str, String str2, ActivitySecrets activitySecrets, String str3, ActivityTimestamps activityTimestamps, ActivityType activityType, List list, String str4, long j2, int i, Object obj) {
         return embeddedActivity.copy((i & 1) != 0 ? embeddedActivity.applicationId : j, (i & 2) != 0 ? embeddedActivity.assets : activityAssets, (i & 4) != 0 ? embeddedActivity.createdAt : l, (i & 8) != 0 ? embeddedActivity.details : str, (i & 16) != 0 ? embeddedActivity.name : str2, (i & 32) != 0 ? embeddedActivity.secrets : activitySecrets, (i & 64) != 0 ? embeddedActivity.state : str3, (i & 128) != 0 ? embeddedActivity.timestamps : activityTimestamps, (i & 256) != 0 ? embeddedActivity.type : activityType, (i & 512) != 0 ? embeddedActivity.userIds : list, (i & 1024) != 0 ? embeddedActivity.url : str4, (i & 2048) != 0 ? embeddedActivity.guildId : j2);
     }
 
-    /* renamed from: component1, reason: from getter */
+    /* JADX INFO: renamed from: component1, reason: from getter */
     public final long getApplicationId() {
         return this.applicationId;
     }
@@ -90,52 +91,52 @@ public final /* data */ class EmbeddedActivity {
         return this.userIds;
     }
 
-    /* renamed from: component11, reason: from getter */
+    /* JADX INFO: renamed from: component11, reason: from getter */
     public final String getUrl() {
         return this.url;
     }
 
-    /* renamed from: component12, reason: from getter */
+    /* JADX INFO: renamed from: component12, reason: from getter */
     public final long getGuildId() {
         return this.guildId;
     }
 
-    /* renamed from: component2, reason: from getter */
+    /* JADX INFO: renamed from: component2, reason: from getter */
     public final ActivityAssets getAssets() {
         return this.assets;
     }
 
-    /* renamed from: component3, reason: from getter */
+    /* JADX INFO: renamed from: component3, reason: from getter */
     public final Long getCreatedAt() {
         return this.createdAt;
     }
 
-    /* renamed from: component4, reason: from getter */
+    /* JADX INFO: renamed from: component4, reason: from getter */
     public final String getDetails() {
         return this.details;
     }
 
-    /* renamed from: component5, reason: from getter */
+    /* JADX INFO: renamed from: component5, reason: from getter */
     public final String getName() {
         return this.name;
     }
 
-    /* renamed from: component6, reason: from getter */
+    /* JADX INFO: renamed from: component6, reason: from getter */
     public final ActivitySecrets getSecrets() {
         return this.secrets;
     }
 
-    /* renamed from: component7, reason: from getter */
+    /* JADX INFO: renamed from: component7, reason: from getter */
     public final String getState() {
         return this.state;
     }
 
-    /* renamed from: component8, reason: from getter */
+    /* JADX INFO: renamed from: component8, reason: from getter */
     public final ActivityTimestamps getTimestamps() {
         return this.timestamps;
     }
 
-    /* renamed from: component9, reason: from getter */
+    /* JADX INFO: renamed from: component9, reason: from getter */
     public final ActivityType getType() {
         return this.type;
     }

@@ -10,8 +10,8 @@ import java.util.List;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: TrackVideoStreamEnded.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: TrackVideoStreamEnded.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class TrackVideoStreamEnded implements AnalyticsSchema, TrackBase2, TrackNetworkInformationDurations2 {
     private TrackBase trackBase;
     private TrackNetworkInformationDurations trackNetworkInformationDurations;
@@ -176,7 +176,7 @@ public final /* data */ class TrackVideoStreamEnded implements AnalyticsSchema, 
     private final transient String analyticsSchemaTypeName = "video_stream_ended";
 
     @Override // com.discord.api.science.AnalyticsSchema
-    /* renamed from: d, reason: from getter */
+    /* JADX INFO: renamed from: d, reason: from getter */
     public String getAnalyticsSchemaTypeName() {
         return this.analyticsSchemaTypeName;
     }

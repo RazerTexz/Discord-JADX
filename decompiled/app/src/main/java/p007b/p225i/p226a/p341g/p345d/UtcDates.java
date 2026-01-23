@@ -12,22 +12,22 @@ import java.util.Calendar;
 import java.util.Locale;
 import java.util.concurrent.atomic.AtomicReference;
 
-/* compiled from: UtcDates.java */
-/* renamed from: b.i.a.g.d.l, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.g.d.l, reason: use source file name */
+/* JADX INFO: compiled from: UtcDates.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class UtcDates {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static AtomicReference<TimeSource> f11617a = new AtomicReference<>();
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static long m6068a(long j) {
         Calendar calendarM6076i = m6076i();
         calendarM6076i.setTimeInMillis(j);
         return m6071d(calendarM6076i).getTimeInMillis();
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static int m6069b(@NonNull String str, @NonNull String str2, int i, int i2) {
         while (i2 >= 0 && i2 < str.length() && str2.indexOf(str.charAt(i2)) == -1) {
             if (str.charAt(i2) == '\'') {
@@ -44,14 +44,14 @@ public class UtcDates {
     }
 
     @TargetApi(24)
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public static DateFormat m6070c(String str, Locale locale) {
         DateFormat instanceForSkeleton = DateFormat.getInstanceForSkeleton(str, locale);
         instanceForSkeleton.setTimeZone(TimeZone.getTimeZone("UTC"));
         return instanceForSkeleton;
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public static Calendar m6071d(Calendar calendar) {
         Calendar calendarM6077j = m6077j(calendar);
         Calendar calendarM6076i = m6076i();
@@ -59,7 +59,7 @@ public class UtcDates {
         return calendarM6076i;
     }
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public static SimpleDateFormat m6072e() {
         SimpleDateFormat simpleDateFormat = new SimpleDateFormat(((SimpleDateFormat) java.text.DateFormat.getDateInstance(3, Locale.getDefault())).toLocalizedPattern().replaceAll("\\s+", ""), Locale.getDefault());
         simpleDateFormat.setTimeZone(m6074g());
@@ -67,18 +67,18 @@ public class UtcDates {
         return simpleDateFormat;
     }
 
-    /* renamed from: f */
-    public static String m6073f(Resources resources, SimpleDateFormat simpleDateFormat) throws Resources.NotFoundException {
+    /* JADX INFO: renamed from: f */
+    public static String m6073f(Resources resources, SimpleDateFormat simpleDateFormat) {
         String localizedPattern = simpleDateFormat.toLocalizedPattern();
         return localizedPattern.replaceAll("d", resources.getString(C10817R.string.mtrl_picker_text_input_day_abbr)).replaceAll("M", resources.getString(C10817R.string.mtrl_picker_text_input_month_abbr)).replaceAll("y", resources.getString(C10817R.string.mtrl_picker_text_input_year_abbr));
     }
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public static java.util.TimeZone m6074g() {
         return java.util.TimeZone.getTimeZone("UTC");
     }
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public static Calendar m6075h() {
         TimeSource timeSource = f11617a.get();
         if (timeSource == null) {
@@ -98,12 +98,12 @@ public class UtcDates {
         return calendar;
     }
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public static Calendar m6076i() {
         return m6077j(null);
     }
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static Calendar m6077j(@Nullable Calendar calendar) {
         Calendar calendar2 = Calendar.getInstance(m6074g());
         if (calendar == null) {

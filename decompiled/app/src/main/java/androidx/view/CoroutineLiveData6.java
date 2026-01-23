@@ -16,17 +16,17 @@ import p659s.p660a.Dispatchers;
 import p659s.p660a.Job2;
 import p659s.p660a.p661a.MainDispatchers;
 
-/* compiled from: CoroutineLiveData.kt */
-/* renamed from: androidx.lifecycle.EmittedSource, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: androidx.lifecycle.EmittedSource, reason: use source file name */
+/* JADX INFO: compiled from: CoroutineLiveData.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class CoroutineLiveData6 implements Job2 {
     private boolean disposed;
     private final MediatorLiveData<?> mediator;
     private final LiveData<?> source;
 
-    /* compiled from: CoroutineLiveData.kt */
+    /* JADX INFO: renamed from: androidx.lifecycle.EmittedSource$dispose$1 */
+    /* JADX INFO: compiled from: CoroutineLiveData.kt */
     @DebugMetadata(m10084c = "androidx.lifecycle.EmittedSource$dispose$1", m10085f = "CoroutineLiveData.kt", m10086l = {}, m10087m = "invokeSuspend")
-    /* renamed from: androidx.lifecycle.EmittedSource$dispose$1 */
     public static final class C04311 extends ContinuationImpl6 implements Function2<CoroutineScope, Continuation<? super Unit>, Object> {
         public int label;
 
@@ -57,9 +57,9 @@ public final class CoroutineLiveData6 implements Job2 {
         }
     }
 
-    /* compiled from: CoroutineLiveData.kt */
+    /* JADX INFO: renamed from: androidx.lifecycle.EmittedSource$disposeNow$2 */
+    /* JADX INFO: compiled from: CoroutineLiveData.kt */
     @DebugMetadata(m10084c = "androidx.lifecycle.EmittedSource$disposeNow$2", m10085f = "CoroutineLiveData.kt", m10086l = {}, m10087m = "invokeSuspend")
-    /* renamed from: androidx.lifecycle.EmittedSource$disposeNow$2 */
     public static final class C04322 extends ContinuationImpl6 implements Function2<CoroutineScope, Continuation<? super Unit>, Object> {
         public int label;
 

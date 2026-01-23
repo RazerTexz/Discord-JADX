@@ -6,8 +6,8 @@ import kotlin.jvm.functions.Function1;
 import p507d0.p592z.p594d.FunctionReferenceImpl;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: WidgetEditUserOrGuildMemberProfile.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetEditUserOrGuildMemberProfile.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final /* synthetic */ class WidgetEditUserOrGuildMemberProfile$configureBio$renderContext$1 extends FunctionReferenceImpl implements Function1<SpoilerNode<?>, Unit> {
     public WidgetEditUserOrGuildMemberProfile$configureBio$renderContext$1(EditUserOrGuildMemberProfileViewModel2 editUserOrGuildMemberProfileViewModel2) {
         super(1, editUserOrGuildMemberProfileViewModel2, EditUserOrGuildMemberProfileViewModel2.class, "handleBioIndexClicked", "handleBioIndexClicked(Lcom/discord/utilities/textprocessing/node/SpoilerNode;)V", 0);
@@ -19,7 +19,7 @@ public final /* synthetic */ class WidgetEditUserOrGuildMemberProfile$configureB
         return Unit.f27425a;
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final void invoke2(SpoilerNode<?> spoilerNode) {
         Intrinsics3.checkNotNullParameter(spoilerNode, "p1");
         ((EditUserOrGuildMemberProfileViewModel2) this.receiver).handleBioIndexClicked(spoilerNode);

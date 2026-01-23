@@ -18,13 +18,13 @@ import kotlin.jvm.functions.Function1;
 import kotlin.jvm.internal.DefaultConstructorMarker;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: SuggestedFriendView.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: SuggestedFriendView.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class SuggestedFriendView extends ConstraintLayout {
     private final SuggestedFriendViewBinding binding;
 
-    /* compiled from: SuggestedFriendView.kt */
-    /* renamed from: com.discord.widgets.friends.SuggestedFriendView$setOnDeclineClicked$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.friends.SuggestedFriendView$setOnDeclineClicked$1 */
+    /* JADX INFO: compiled from: SuggestedFriendView.kt */
     public static final class ViewOnClickListenerC83761 implements View.OnClickListener {
         public final /* synthetic */ Function0 $onDeclineClicked;
 
@@ -38,8 +38,8 @@ public final class SuggestedFriendView extends ConstraintLayout {
         }
     }
 
-    /* compiled from: SuggestedFriendView.kt */
-    /* renamed from: com.discord.widgets.friends.SuggestedFriendView$setOnSendClicked$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.friends.SuggestedFriendView$setOnSendClicked$1 */
+    /* JADX INFO: compiled from: SuggestedFriendView.kt */
     public static final class ViewOnClickListenerC83771 implements View.OnClickListener {
         public final /* synthetic */ Function0 $onSendClicked;
 

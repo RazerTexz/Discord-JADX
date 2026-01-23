@@ -4,9 +4,9 @@ import java.io.Serializable;
 import java.util.Objects;
 import p007b.p100d.p104b.p105a.outline;
 
-/* compiled from: NamedType.java */
-/* renamed from: b.g.a.c.e0.b, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.g.a.c.e0.b, reason: use source file name */
+/* JADX INFO: compiled from: NamedType.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class NamedType implements Serializable {
     private static final long serialVersionUID = 1;
     public final Class<?> _class;
@@ -19,7 +19,7 @@ public final class NamedType implements Serializable {
         this._name = (str == null || str.isEmpty()) ? null : str;
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public boolean m1944a() {
         return this._name != null;
     }

@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class Flow extends VirtualLayout {
     public static final int HORIZONTAL_ALIGN_CENTER = 2;
     public static final int HORIZONTAL_ALIGN_END = 1;

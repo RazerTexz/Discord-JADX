@@ -32,31 +32,31 @@ import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.FunctionReferenceImpl;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ImageUploadFailedDialog.kt */
-/* renamed from: b.a.a.c, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.a.a.c, reason: use source file name */
+/* JADX INFO: compiled from: ImageUploadFailedDialog.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class ImageUploadFailedDialog extends AppDialog {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static final /* synthetic */ KProperty[] f307j = {outline.m846d0(ImageUploadFailedDialog.class, "binding", "getBinding()Lcom/discord/databinding/ImageUploadFailedDialogBinding;", 0)};
 
-    /* renamed from: k, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: k, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
 
-    /* renamed from: l, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: l, reason: from kotlin metadata */
     public final FragmentViewBindingDelegate binding;
 
-    /* renamed from: m, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: m, reason: from kotlin metadata */
     public Function0<Unit> onResendCompressed;
 
-    /* compiled from: java-style lambda group */
-    /* renamed from: b.a.a.c$a */
+    /* JADX INFO: renamed from: b.a.a.c$a */
+    /* JADX INFO: compiled from: java-style lambda group */
     public static final class a implements View.OnClickListener {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public final /* synthetic */ int f311j;
 
-        /* renamed from: k */
+        /* JADX INFO: renamed from: k */
         public final /* synthetic */ Object f312k;
 
         public a(int i, Object obj) {
@@ -102,13 +102,13 @@ public final class ImageUploadFailedDialog extends AppDialog {
         }
     }
 
-    /* compiled from: ImageUploadFailedDialog.kt */
-    /* renamed from: b.a.a.c$b, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: b.a.a.c$b, reason: from kotlin metadata */
+    /* JADX INFO: compiled from: ImageUploadFailedDialog.kt */
     public static final class Companion {
         public Companion(DefaultConstructorMarker defaultConstructorMarker) {
         }
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final void m123a(FragmentManager fragmentManager, boolean z2, int i, float f, float f2, Function0<Unit> function0, int i2, boolean z3, boolean z4, boolean z5) {
             Intrinsics3.checkNotNullParameter(fragmentManager, "fragmentManager");
             float f3 = 1048576;
@@ -124,11 +124,11 @@ public final class ImageUploadFailedDialog extends AppDialog {
         }
     }
 
-    /* compiled from: ImageUploadFailedDialog.kt */
-    /* renamed from: b.a.a.c$c */
+    /* JADX INFO: renamed from: b.a.a.c$c */
+    /* JADX INFO: compiled from: ImageUploadFailedDialog.kt */
     public static final /* synthetic */ class c extends FunctionReferenceImpl implements Function1<View, ImageUploadFailedDialogBinding> {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public static final c f313j = new c();
 
         public c() {
@@ -192,11 +192,11 @@ public final class ImageUploadFailedDialog extends AppDialog {
         }
     }
 
-    /* compiled from: ImageUploadFailedDialog.kt */
-    /* renamed from: b.a.a.c$d */
+    /* JADX INFO: renamed from: b.a.a.c$d */
+    /* JADX INFO: compiled from: ImageUploadFailedDialog.kt */
     public static final class d implements CompoundButton.OnCheckedChangeListener {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public static final d f314a = new d();
 
         @Override // android.widget.CompoundButton.OnCheckedChangeListener
@@ -210,7 +210,7 @@ public final class ImageUploadFailedDialog extends AppDialog {
         this.binding = FragmentViewBindingDelegate3.viewBinding$default(this, c.f313j, null, 2, null);
     }
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public final ImageUploadFailedDialogBinding m122g() {
         return (ImageUploadFailedDialogBinding) this.binding.getValue((Fragment) this, f307j[0]);
     }

@@ -5,32 +5,32 @@ import com.facebook.common.references.CloseableReference;
 import java.util.Objects;
 import p007b.p109f.p115d.p122g.MemoryTrimmable;
 
-/* compiled from: CountingMemoryCache.java */
-/* renamed from: b.f.j.c.m, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.f.j.c.m, reason: use source file name */
+/* JADX INFO: compiled from: CountingMemoryCache.java */
+/* JADX INFO: loaded from: classes.dex */
 public interface CountingMemoryCache<K, V> extends MemoryCache<K, V>, MemoryTrimmable {
 
-    /* compiled from: CountingMemoryCache.java */
+    /* JADX INFO: renamed from: b.f.j.c.m$a */
+    /* JADX INFO: compiled from: CountingMemoryCache.java */
     @VisibleForTesting
-    /* renamed from: b.f.j.c.m$a */
     public static class a<K, V> {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final K f3678a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final CloseableReference<V> f3679b;
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public int f3680c;
 
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         public boolean f3681d;
 
-        /* renamed from: e */
+        /* JADX INFO: renamed from: e */
         public final b<K> f3682e;
 
-        /* renamed from: f */
+        /* JADX INFO: renamed from: f */
         public int f3683f;
 
         public a(K k, CloseableReference<V> closeableReference, b<K> bVar, int i) {
@@ -46,14 +46,14 @@ public interface CountingMemoryCache<K, V> extends MemoryCache<K, V>, MemoryTrim
         }
     }
 
-    /* compiled from: CountingMemoryCache.java */
-    /* renamed from: b.f.j.c.m$b */
+    /* JADX INFO: renamed from: b.f.j.c.m$b */
+    /* JADX INFO: compiled from: CountingMemoryCache.java */
     public interface b<K> {
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     CloseableReference<V> mo1227b(K k);
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     CloseableReference<V> mo1228c(K k, CloseableReference<V> closeableReference, b<K> bVar);
 }

@@ -10,25 +10,25 @@ import p007b.p225i.p226a.p242c.p257e3.BandwidthMeter;
 import p007b.p225i.p226a.p242c.p259f3.Clock4;
 import p007b.p225i.p355b.p357b.ImmutableList2;
 
-/* compiled from: AdaptiveTrackSelection.java */
-/* renamed from: b.i.a.c.c3.f, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.c3.f, reason: use source file name */
+/* JADX INFO: compiled from: AdaptiveTrackSelection.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class AdaptiveTrackSelection extends BaseTrackSelection {
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final BandwidthMeter f6182f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public final Clock4 f6183g;
 
-    /* compiled from: AdaptiveTrackSelection.java */
-    /* renamed from: b.i.a.c.c3.f$a */
+    /* JADX INFO: renamed from: b.i.a.c.c3.f$a */
+    /* JADX INFO: compiled from: AdaptiveTrackSelection.java */
     public static final class a {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final long f6184a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final long f6185b;
 
         public a(long j, long j2) {
@@ -52,11 +52,11 @@ public class AdaptiveTrackSelection extends BaseTrackSelection {
         }
     }
 
-    /* compiled from: AdaptiveTrackSelection.java */
-    /* renamed from: b.i.a.c.c3.f$b */
+    /* JADX INFO: renamed from: b.i.a.c.c3.f$b */
+    /* JADX INFO: compiled from: AdaptiveTrackSelection.java */
     public static class b implements ExoTrackSelection2.b {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final Clock4 f6186a = Clock4.f6720a;
     }
 
@@ -70,7 +70,7 @@ public class AdaptiveTrackSelection extends BaseTrackSelection {
         this.f6183g = clock4;
     }
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public static void m2722m(List<ImmutableList2.a<a>> list, long[] jArr) {
         long j = 0;
         for (long j2 : jArr) {
@@ -85,25 +85,25 @@ public class AdaptiveTrackSelection extends BaseTrackSelection {
     }
 
     @Override // p007b.p225i.p226a.p242c.p255c3.ExoTrackSelection2
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public int mo2723b() {
         return 0;
     }
 
     @Override // p007b.p225i.p226a.p242c.p255c3.BaseTrackSelection, p007b.p225i.p226a.p242c.p255c3.ExoTrackSelection2
     @CallSuper
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public void mo2724e() {
     }
 
     @Override // p007b.p225i.p226a.p242c.p255c3.BaseTrackSelection, p007b.p225i.p226a.p242c.p255c3.ExoTrackSelection2
     @CallSuper
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public void mo2725g() {
     }
 
     @Override // p007b.p225i.p226a.p242c.p255c3.BaseTrackSelection, p007b.p225i.p226a.p242c.p255c3.ExoTrackSelection2
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public void mo2726i(float f) {
     }
 }

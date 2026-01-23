@@ -16,116 +16,116 @@ import java.util.Arrays;
 import p007b.p085c.p086a.p087a0.AnimatableValueParser;
 import p007b.p109f.p161j.p183r.FrescoSystrace;
 
-/* compiled from: RoundedDrawable.java */
-/* renamed from: b.f.g.e.n, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.f.g.e.n, reason: use source file name */
+/* JADX INFO: compiled from: RoundedDrawable.java */
+/* JADX INFO: loaded from: classes.dex */
 public abstract class RoundedDrawable extends Drawable implements Rounded, TransformAwareDrawable {
 
-    /* renamed from: E */
+    /* JADX INFO: renamed from: E */
     @Nullable
     @VisibleForTesting
     public Matrix f3410E;
 
-    /* renamed from: F */
+    /* JADX INFO: renamed from: F */
     @Nullable
     @VisibleForTesting
     public Matrix f3411F;
 
-    /* renamed from: L */
+    /* JADX INFO: renamed from: L */
     @Nullable
     public TransformCallback f3417L;
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final Drawable f3418j;
 
-    /* renamed from: t */
+    /* JADX INFO: renamed from: t */
     @Nullable
     @VisibleForTesting
     public float[] f3428t;
 
-    /* renamed from: y */
+    /* JADX INFO: renamed from: y */
     @Nullable
     @VisibleForTesting
     public RectF f3433y;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public boolean f3419k = false;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public boolean f3420l = false;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public float f3421m = 0.0f;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public final Path f3422n = new Path();
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public boolean f3423o = true;
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public int f3424p = 0;
 
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     public final Path f3425q = new Path();
 
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     public final float[] f3426r = new float[8];
 
-    /* renamed from: s */
+    /* JADX INFO: renamed from: s */
     @VisibleForTesting
     public final float[] f3427s = new float[8];
 
-    /* renamed from: u */
+    /* JADX INFO: renamed from: u */
     @VisibleForTesting
     public final RectF f3429u = new RectF();
 
-    /* renamed from: v */
+    /* JADX INFO: renamed from: v */
     @VisibleForTesting
     public final RectF f3430v = new RectF();
 
-    /* renamed from: w */
+    /* JADX INFO: renamed from: w */
     @VisibleForTesting
     public final RectF f3431w = new RectF();
 
-    /* renamed from: x */
+    /* JADX INFO: renamed from: x */
     @VisibleForTesting
     public final RectF f3432x = new RectF();
 
-    /* renamed from: z */
+    /* JADX INFO: renamed from: z */
     @VisibleForTesting
     public final Matrix f3434z = new Matrix();
 
-    /* renamed from: A */
+    /* JADX INFO: renamed from: A */
     @VisibleForTesting
     public final Matrix f3406A = new Matrix();
 
-    /* renamed from: B */
+    /* JADX INFO: renamed from: B */
     @VisibleForTesting
     public final Matrix f3407B = new Matrix();
 
-    /* renamed from: C */
+    /* JADX INFO: renamed from: C */
     @VisibleForTesting
     public final Matrix f3408C = new Matrix();
 
-    /* renamed from: D */
+    /* JADX INFO: renamed from: D */
     @VisibleForTesting
     public final Matrix f3409D = new Matrix();
 
-    /* renamed from: G */
+    /* JADX INFO: renamed from: G */
     @VisibleForTesting
     public final Matrix f3412G = new Matrix();
 
-    /* renamed from: H */
+    /* JADX INFO: renamed from: H */
     public float f3413H = 0.0f;
 
-    /* renamed from: I */
+    /* JADX INFO: renamed from: I */
     public boolean f3414I = false;
 
-    /* renamed from: J */
+    /* JADX INFO: renamed from: J */
     public boolean f3415J = false;
 
-    /* renamed from: K */
+    /* JADX INFO: renamed from: K */
     public boolean f3416K = true;
 
     public RoundedDrawable(Drawable drawable) {
@@ -133,7 +133,7 @@ public abstract class RoundedDrawable extends Drawable implements Rounded, Trans
     }
 
     @Override // p007b.p109f.p132g.p142e.Rounded
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public void mo1106a(int i, float f) {
         if (this.f3424p == i && this.f3421m == f) {
             return;
@@ -145,13 +145,13 @@ public abstract class RoundedDrawable extends Drawable implements Rounded, Trans
     }
 
     @Override // p007b.p109f.p132g.p142e.TransformAwareDrawable
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public void mo1094b(@Nullable TransformCallback transformCallback) {
         this.f3417L = transformCallback;
     }
 
     @Override // p007b.p109f.p132g.p142e.Rounded
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public void mo1107c(boolean z2) {
         this.f3419k = z2;
         this.f3416K = true;
@@ -164,7 +164,7 @@ public abstract class RoundedDrawable extends Drawable implements Rounded, Trans
     }
 
     @VisibleForTesting
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public boolean mo1113d() {
         return this.f3419k || this.f3420l || this.f3421m > 0.0f;
     }
@@ -177,7 +177,7 @@ public abstract class RoundedDrawable extends Drawable implements Rounded, Trans
     }
 
     @Override // p007b.p109f.p132g.p142e.Rounded
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public void mo1108e(boolean z2) {
         if (this.f3415J != z2) {
             this.f3415J = z2;
@@ -186,7 +186,7 @@ public abstract class RoundedDrawable extends Drawable implements Rounded, Trans
     }
 
     @Override // p007b.p109f.p132g.p142e.Rounded
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public void mo1109f(boolean z2) {
         if (this.f3414I != z2) {
             this.f3414I = z2;
@@ -195,7 +195,7 @@ public abstract class RoundedDrawable extends Drawable implements Rounded, Trans
         }
     }
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public void m1116g() {
         float[] fArr;
         if (this.f3416K) {
@@ -271,7 +271,7 @@ public abstract class RoundedDrawable extends Drawable implements Rounded, Trans
         return this.f3418j.getOpacity();
     }
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public void m1117h() {
         Matrix matrix;
         TransformCallback transformCallback = this.f3417L;
@@ -337,7 +337,7 @@ public abstract class RoundedDrawable extends Drawable implements Rounded, Trans
     }
 
     @Override // p007b.p109f.p132g.p142e.Rounded
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public void mo1110i(float f) {
         if (this.f3413H != f) {
             this.f3413H = f;
@@ -347,7 +347,7 @@ public abstract class RoundedDrawable extends Drawable implements Rounded, Trans
     }
 
     @Override // p007b.p109f.p132g.p142e.Rounded
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public void mo1111j(float f) {
         AnimatableValueParser.m419B(f >= 0.0f);
         Arrays.fill(this.f3426r, f);
@@ -357,7 +357,7 @@ public abstract class RoundedDrawable extends Drawable implements Rounded, Trans
     }
 
     @Override // p007b.p109f.p132g.p142e.Rounded
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public void mo1112m(float[] fArr) {
         if (fArr == null) {
             Arrays.fill(this.f3426r, 0.0f);

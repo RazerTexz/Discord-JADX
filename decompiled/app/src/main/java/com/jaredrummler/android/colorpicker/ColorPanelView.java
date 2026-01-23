@@ -1,7 +1,6 @@
 package com.jaredrummler.android.colorpicker;
 
 import android.content.Context;
-import android.content.res.Resources;
 import android.content.res.TypedArray;
 import android.graphics.Bitmap;
 import android.graphics.BitmapShader;
@@ -27,46 +26,46 @@ import java.util.Locale;
 import p007b.p225i.p226a.p288f.p299e.p308o.C3404f;
 import p007b.p440k.p441a.p442a.AlphaPatternDrawable;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public class ColorPanelView extends View {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public Drawable f21695j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public Paint f21696k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public Paint f21697l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public Paint f21698m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public Paint f21699n;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public Rect f21700o;
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public Rect f21701p;
 
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     public RectF f21702q;
 
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     public boolean f21703r;
 
-    /* renamed from: s */
+    /* JADX INFO: renamed from: s */
     public int f21704s;
 
-    /* renamed from: t */
+    /* JADX INFO: renamed from: t */
     public int f21705t;
 
-    /* renamed from: u */
+    /* JADX INFO: renamed from: u */
     public int f21706u;
 
-    public ColorPanelView(Context context, AttributeSet attributeSet) throws Resources.NotFoundException {
+    public ColorPanelView(Context context, AttributeSet attributeSet) {
         super(context, attributeSet, 0);
         this.f21702q = new RectF();
         this.f21704s = -9539986;
@@ -104,7 +103,7 @@ public class ColorPanelView extends View {
         }
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public void m9266a() {
         int[] iArr = new int[2];
         Rect rect = new Rect();

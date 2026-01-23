@@ -3,9 +3,9 @@ package com.discord.widgets.chat.list;
 import kotlin.jvm.functions.Function5;
 import p658rx.functions.Func5;
 
-/* compiled from: ViewEmbedGameInvite.kt */
-/* renamed from: com.discord.widgets.chat.list.ViewEmbedGameInvite$sam$rx_functions_Func5$0, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.chat.list.ViewEmbedGameInvite$sam$rx_functions_Func5$0, reason: use source file name */
+/* JADX INFO: compiled from: ViewEmbedGameInvite.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class ViewEmbedGameInvite5 implements Func5 {
     private final /* synthetic */ Function5 function;
 

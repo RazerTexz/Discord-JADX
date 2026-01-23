@@ -21,27 +21,27 @@ import org.checkerframework.checker.nullness.compatqual.MonotonicNonNullDecl;
 import org.checkerframework.checker.nullness.compatqual.NullableDecl;
 import p007b.p225i.p226a.p288f.p299e.p308o.C3404f;
 
-/* compiled from: AbstractMapBasedMultimap.java */
-/* renamed from: b.i.b.b.e, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.b.b.e, reason: use source file name */
+/* JADX INFO: compiled from: AbstractMapBasedMultimap.java */
+/* JADX INFO: loaded from: classes3.dex */
 public abstract class AbstractMapBasedMultimap2<K, V> extends AbstractMultimap<K, V> implements Serializable {
     private static final long serialVersionUID = 2447537837011683357L;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public transient Map<K, Collection<V>> f11973m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public transient int f11974n;
 
-    /* compiled from: AbstractMapBasedMultimap.java */
-    /* renamed from: b.i.b.b.e$a */
+    /* JADX INFO: renamed from: b.i.b.b.e$a */
+    /* JADX INFO: compiled from: AbstractMapBasedMultimap.java */
     public class a extends Maps<K, Collection<V>> {
 
-        /* renamed from: l */
+        /* JADX INFO: renamed from: l */
         public final transient Map<K, Collection<V>> f11975l;
 
-        /* compiled from: AbstractMapBasedMultimap.java */
-        /* renamed from: b.i.b.b.e$a$a, reason: collision with other inner class name */
+        /* JADX INFO: renamed from: b.i.b.b.e$a$a, reason: collision with other inner class name */
+        /* JADX INFO: compiled from: AbstractMapBasedMultimap.java */
         public class C13230a extends Maps3<K, Collection<V>> {
             public C13230a() {
             }
@@ -88,14 +88,14 @@ public abstract class AbstractMapBasedMultimap2<K, V> extends AbstractMultimap<K
             }
         }
 
-        /* compiled from: AbstractMapBasedMultimap.java */
-        /* renamed from: b.i.b.b.e$a$b */
+        /* JADX INFO: renamed from: b.i.b.b.e$a$b */
+        /* JADX INFO: compiled from: AbstractMapBasedMultimap.java */
         public class b implements Iterator<Map.Entry<K, Collection<V>>> {
 
-            /* renamed from: j */
+            /* JADX INFO: renamed from: j */
             public final Iterator<Map.Entry<K, Collection<V>>> f11978j;
 
-            /* renamed from: k */
+            /* JADX INFO: renamed from: k */
             @NullableDecl
             public Collection<V> f11979k;
 
@@ -129,7 +129,7 @@ public abstract class AbstractMapBasedMultimap2<K, V> extends AbstractMultimap<K
             this.f11975l = map;
         }
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public Map.Entry<K, Collection<V>> m6221a(Map.Entry<K, Collection<V>> entry) {
             K key = entry.getKey();
             AbstractMapBasedMultimap2 abstractMapBasedMultimap2 = AbstractMapBasedMultimap2.this;
@@ -233,22 +233,22 @@ public abstract class AbstractMapBasedMultimap2<K, V> extends AbstractMultimap<K
         }
     }
 
-    /* compiled from: AbstractMapBasedMultimap.java */
-    /* renamed from: b.i.b.b.e$b */
+    /* JADX INFO: renamed from: b.i.b.b.e$b */
+    /* JADX INFO: compiled from: AbstractMapBasedMultimap.java */
     public abstract class b<T> implements Iterator<T> {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public final Iterator<Map.Entry<K, Collection<V>>> f11981j;
 
-        /* renamed from: k */
+        /* JADX INFO: renamed from: k */
         @NullableDecl
         public K f11982k = null;
 
-        /* renamed from: l */
+        /* JADX INFO: renamed from: l */
         @MonotonicNonNullDecl
         public Collection<V> f11983l = null;
 
-        /* renamed from: m */
+        /* JADX INFO: renamed from: m */
         public Iterator<V> f11984m = Iterators2.INSTANCE;
 
         public b() {
@@ -282,19 +282,19 @@ public abstract class AbstractMapBasedMultimap2<K, V> extends AbstractMultimap<K
         }
     }
 
-    /* compiled from: AbstractMapBasedMultimap.java */
-    /* renamed from: b.i.b.b.e$c */
+    /* JADX INFO: renamed from: b.i.b.b.e$c */
+    /* JADX INFO: compiled from: AbstractMapBasedMultimap.java */
     public class c extends Maps4<K, Collection<V>> {
 
-        /* compiled from: AbstractMapBasedMultimap.java */
-        /* renamed from: b.i.b.b.e$c$a */
+        /* JADX INFO: renamed from: b.i.b.b.e$c$a */
+        /* JADX INFO: compiled from: AbstractMapBasedMultimap.java */
         public class a implements Iterator<K> {
 
-            /* renamed from: j */
+            /* JADX INFO: renamed from: j */
             @NullableDecl
             public Map.Entry<K, Collection<V>> f11987j;
 
-            /* renamed from: k */
+            /* JADX INFO: renamed from: k */
             public final /* synthetic */ Iterator f11988k;
 
             public a(Iterator it) {
@@ -376,21 +376,21 @@ public abstract class AbstractMapBasedMultimap2<K, V> extends AbstractMultimap<K
         }
     }
 
-    /* compiled from: AbstractMapBasedMultimap.java */
-    /* renamed from: b.i.b.b.e$d */
+    /* JADX INFO: renamed from: b.i.b.b.e$d */
+    /* JADX INFO: compiled from: AbstractMapBasedMultimap.java */
     public class d extends AbstractMapBasedMultimap2<K, V>.g implements NavigableMap<K, Collection<V>> {
         public d(NavigableMap<K, Collection<V>> navigableMap) {
             super(navigableMap);
         }
 
         @Override // p007b.p225i.p355b.p357b.AbstractMapBasedMultimap2.g
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public SortedSet mo6222b() {
             return new e(m6227g());
         }
 
         @Override // p007b.p225i.p355b.p357b.AbstractMapBasedMultimap2.g
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public /* bridge */ /* synthetic */ SortedSet mo6223c() {
             return m6225e();
         }
@@ -410,7 +410,7 @@ public abstract class AbstractMapBasedMultimap2<K, V> extends AbstractMultimap<K
         }
 
         @Override // p007b.p225i.p355b.p357b.AbstractMapBasedMultimap2.g
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         public /* bridge */ /* synthetic */ SortedMap mo6224d() {
             return m6227g();
         }
@@ -425,7 +425,7 @@ public abstract class AbstractMapBasedMultimap2<K, V> extends AbstractMultimap<K
             return new d(m6227g().descendingMap());
         }
 
-        /* renamed from: e */
+        /* JADX INFO: renamed from: e */
         public NavigableSet<K> m6225e() {
             SortedSet<K> sortedSetMo6222b = this.f11992n;
             if (sortedSetMo6222b == null) {
@@ -435,7 +435,7 @@ public abstract class AbstractMapBasedMultimap2<K, V> extends AbstractMultimap<K
             return (NavigableSet) sortedSetMo6222b;
         }
 
-        /* renamed from: f */
+        /* JADX INFO: renamed from: f */
         public Map.Entry<K, Collection<V>> m6226f(Iterator<Map.Entry<K, Collection<V>>> it) {
             if (!it.hasNext()) {
                 return null;
@@ -472,7 +472,7 @@ public abstract class AbstractMapBasedMultimap2<K, V> extends AbstractMultimap<K
             return m6227g().floorKey(k);
         }
 
-        /* renamed from: g */
+        /* JADX INFO: renamed from: g */
         public NavigableMap<K, Collection<V>> m6227g() {
             return (NavigableMap) ((SortedMap) this.f11975l);
         }
@@ -565,15 +565,15 @@ public abstract class AbstractMapBasedMultimap2<K, V> extends AbstractMultimap<K
         }
     }
 
-    /* compiled from: AbstractMapBasedMultimap.java */
-    /* renamed from: b.i.b.b.e$e */
+    /* JADX INFO: renamed from: b.i.b.b.e$e */
+    /* JADX INFO: compiled from: AbstractMapBasedMultimap.java */
     public class e extends AbstractMapBasedMultimap2<K, V>.h implements NavigableSet<K> {
         public e(NavigableMap<K, Collection<V>> navigableMap) {
             super(navigableMap);
         }
 
         @Override // p007b.p225i.p355b.p357b.AbstractMapBasedMultimap2.h
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public /* bridge */ /* synthetic */ SortedMap mo6228c() {
             return m6229d();
         }
@@ -583,7 +583,7 @@ public abstract class AbstractMapBasedMultimap2<K, V> extends AbstractMultimap<K
             return m6229d().ceilingKey(k);
         }
 
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         public NavigableMap<K, Collection<V>> m6229d() {
             return (NavigableMap) ((SortedMap) this.f12111j);
         }
@@ -666,19 +666,19 @@ public abstract class AbstractMapBasedMultimap2<K, V> extends AbstractMultimap<K
         }
     }
 
-    /* compiled from: AbstractMapBasedMultimap.java */
-    /* renamed from: b.i.b.b.e$f */
+    /* JADX INFO: renamed from: b.i.b.b.e$f */
+    /* JADX INFO: compiled from: AbstractMapBasedMultimap.java */
     public class f extends AbstractMapBasedMultimap2<K, V>.j implements RandomAccess {
         public f(@NullableDecl AbstractMapBasedMultimap2 abstractMapBasedMultimap2, K k, @NullableDecl List<V> list, AbstractMapBasedMultimap2<K, V>.i iVar) {
             super(k, list, iVar);
         }
     }
 
-    /* compiled from: AbstractMapBasedMultimap.java */
-    /* renamed from: b.i.b.b.e$g */
+    /* JADX INFO: renamed from: b.i.b.b.e$g */
+    /* JADX INFO: compiled from: AbstractMapBasedMultimap.java */
     public class g extends AbstractMapBasedMultimap2<K, V>.a implements SortedMap<K, Collection<V>> {
 
-        /* renamed from: n */
+        /* JADX INFO: renamed from: n */
         @MonotonicNonNullDecl
         public SortedSet<K> f11992n;
 
@@ -686,12 +686,12 @@ public abstract class AbstractMapBasedMultimap2<K, V> extends AbstractMultimap<K
             super(sortedMap);
         }
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public SortedSet<K> mo6222b() {
             return new h(mo6224d());
         }
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public SortedSet<K> mo6223c() {
             SortedSet<K> sortedSet = this.f11992n;
             if (sortedSet != null) {
@@ -707,7 +707,7 @@ public abstract class AbstractMapBasedMultimap2<K, V> extends AbstractMultimap<K
             return mo6224d().comparator();
         }
 
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         public SortedMap<K, Collection<V>> mo6224d() {
             return (SortedMap) this.f11975l;
         }
@@ -740,14 +740,14 @@ public abstract class AbstractMapBasedMultimap2<K, V> extends AbstractMultimap<K
         }
     }
 
-    /* compiled from: AbstractMapBasedMultimap.java */
-    /* renamed from: b.i.b.b.e$h */
+    /* JADX INFO: renamed from: b.i.b.b.e$h */
+    /* JADX INFO: compiled from: AbstractMapBasedMultimap.java */
     public class h extends AbstractMapBasedMultimap2<K, V>.c implements SortedSet<K> {
         public h(SortedMap<K, Collection<V>> sortedMap) {
             super(sortedMap);
         }
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public SortedMap<K, Collection<V>> mo6228c() {
             return (SortedMap) this.f12111j;
         }
@@ -785,21 +785,21 @@ public abstract class AbstractMapBasedMultimap2<K, V> extends AbstractMultimap<K
         this.f11973m = map;
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static /* synthetic */ int m6218b(AbstractMapBasedMultimap2 abstractMapBasedMultimap2) {
         int i2 = abstractMapBasedMultimap2.f11974n;
         abstractMapBasedMultimap2.f11974n = i2 + 1;
         return i2;
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public static /* synthetic */ int m6219c(AbstractMapBasedMultimap2 abstractMapBasedMultimap2) {
         int i2 = abstractMapBasedMultimap2.f11974n;
         abstractMapBasedMultimap2.f11974n = i2 - 1;
         return i2;
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public void m6220d() {
         Iterator<Collection<V>> it = this.f11973m.values().iterator();
         while (it.hasNext()) {
@@ -809,15 +809,15 @@ public abstract class AbstractMapBasedMultimap2<K, V> extends AbstractMultimap<K
         this.f11974n = 0;
     }
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public abstract Collection<V> mo6217e();
 
-    /* compiled from: AbstractMapBasedMultimap.java */
-    /* renamed from: b.i.b.b.e$j */
+    /* JADX INFO: renamed from: b.i.b.b.e$j */
+    /* JADX INFO: compiled from: AbstractMapBasedMultimap.java */
     public class j extends AbstractMapBasedMultimap2<K, V>.i implements List<V> {
 
-        /* compiled from: AbstractMapBasedMultimap.java */
-        /* renamed from: b.i.b.b.e$j$a */
+        /* JADX INFO: renamed from: b.i.b.b.e$j$a */
+        /* JADX INFO: compiled from: AbstractMapBasedMultimap.java */
         public class a extends AbstractMapBasedMultimap2<K, V>.i.a implements ListIterator<V> {
             public a() {
                 super();
@@ -833,7 +833,7 @@ public abstract class AbstractMapBasedMultimap2<K, V> extends AbstractMultimap<K
                 }
             }
 
-            /* renamed from: b */
+            /* JADX INFO: renamed from: b */
             public final ListIterator<V> m6234b() {
                 m6233a();
                 return (ListIterator) this.f12000j;
@@ -962,22 +962,22 @@ public abstract class AbstractMapBasedMultimap2<K, V> extends AbstractMultimap<K
         }
     }
 
-    /* compiled from: AbstractMapBasedMultimap.java */
-    /* renamed from: b.i.b.b.e$i */
+    /* JADX INFO: renamed from: b.i.b.b.e$i */
+    /* JADX INFO: compiled from: AbstractMapBasedMultimap.java */
     public class i extends AbstractCollection<V> {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         @NullableDecl
         public final K f11995j;
 
-        /* renamed from: k */
+        /* JADX INFO: renamed from: k */
         public Collection<V> f11996k;
 
-        /* renamed from: l */
+        /* JADX INFO: renamed from: l */
         @NullableDecl
         public final AbstractMapBasedMultimap2<K, V>.i f11997l;
 
-        /* renamed from: m */
+        /* JADX INFO: renamed from: m */
         @NullableDecl
         public final Collection<V> f11998m;
 
@@ -1020,7 +1020,7 @@ public abstract class AbstractMapBasedMultimap2<K, V> extends AbstractMultimap<K
             return zAddAll;
         }
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public void m6230c() {
             AbstractMapBasedMultimap2<K, V>.i iVar = this.f11997l;
             if (iVar != null) {
@@ -1053,7 +1053,7 @@ public abstract class AbstractMapBasedMultimap2<K, V> extends AbstractMultimap<K
             return this.f11996k.containsAll(collection);
         }
 
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         public void m6231d() {
             Collection<V> collection;
             AbstractMapBasedMultimap2<K, V>.i iVar = this.f11997l;
@@ -1070,7 +1070,7 @@ public abstract class AbstractMapBasedMultimap2<K, V> extends AbstractMultimap<K
             }
         }
 
-        /* renamed from: e */
+        /* JADX INFO: renamed from: e */
         public void m6232e() {
             AbstractMapBasedMultimap2<K, V>.i iVar = this.f11997l;
             if (iVar != null) {
@@ -1154,14 +1154,14 @@ public abstract class AbstractMapBasedMultimap2<K, V> extends AbstractMultimap<K
             return this.f11996k.toString();
         }
 
-        /* compiled from: AbstractMapBasedMultimap.java */
-        /* renamed from: b.i.b.b.e$i$a */
+        /* JADX INFO: renamed from: b.i.b.b.e$i$a */
+        /* JADX INFO: compiled from: AbstractMapBasedMultimap.java */
         public class a implements Iterator<V> {
 
-            /* renamed from: j */
+            /* JADX INFO: renamed from: j */
             public final Iterator<V> f12000j;
 
-            /* renamed from: k */
+            /* JADX INFO: renamed from: k */
             public final Collection<V> f12001k;
 
             public a() {
@@ -1170,7 +1170,7 @@ public abstract class AbstractMapBasedMultimap2<K, V> extends AbstractMultimap<K
                 this.f12000j = collection instanceof List ? ((List) collection).listIterator() : collection.iterator();
             }
 
-            /* renamed from: a */
+            /* JADX INFO: renamed from: a */
             public void m6233a() {
                 i.this.m6231d();
                 if (i.this.f11996k != this.f12001k) {

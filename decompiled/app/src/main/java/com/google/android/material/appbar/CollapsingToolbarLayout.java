@@ -44,7 +44,7 @@ import com.google.android.material.internal.ThemeEnforcement;
 import com.google.android.material.theme.overlay.MaterialThemeOverlay;
 import p007b.p225i.p226a.p341g.p342a.ViewOffsetHelper;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public class CollapsingToolbarLayout extends FrameLayout {
     private static final int DEFAULT_SCRIM_ANIMATION_DURATION = 600;
     private static final int DEF_STYLE_RES = C10817R.style.Widget_Design_CollapsingToolbar;
@@ -84,7 +84,7 @@ public class CollapsingToolbarLayout extends FrameLayout {
     private View toolbarDirectChild;
     private int toolbarId;
 
-    /* renamed from: com.google.android.material.appbar.CollapsingToolbarLayout$a */
+    /* JADX INFO: renamed from: com.google.android.material.appbar.CollapsingToolbarLayout$a */
     public class C10824a implements OnApplyWindowInsetsListener {
         public C10824a() {
         }
@@ -95,7 +95,7 @@ public class CollapsingToolbarLayout extends FrameLayout {
         }
     }
 
-    /* renamed from: com.google.android.material.appbar.CollapsingToolbarLayout$b */
+    /* JADX INFO: renamed from: com.google.android.material.appbar.CollapsingToolbarLayout$b */
     public class C10825b implements ValueAnimator.AnimatorUpdateListener {
         public C10825b() {
         }
@@ -106,7 +106,7 @@ public class CollapsingToolbarLayout extends FrameLayout {
         }
     }
 
-    /* renamed from: com.google.android.material.appbar.CollapsingToolbarLayout$c */
+    /* JADX INFO: renamed from: com.google.android.material.appbar.CollapsingToolbarLayout$c */
     public class C10826c implements AppBarLayout.OnOffsetChangedListener {
         public C10826c() {
         }
@@ -694,7 +694,7 @@ public class CollapsingToolbarLayout extends FrameLayout {
         setScrimsShown(z2, ViewCompat.isLaidOut(this) && !isInEditMode());
     }
 
-    public void setStatusBarScrim(@Nullable Drawable drawable) throws SecurityException {
+    public void setStatusBarScrim(@Nullable Drawable drawable) {
         Drawable drawable2 = this.statusBarScrim;
         if (drawable2 != drawable) {
             if (drawable2 != null) {
@@ -715,11 +715,11 @@ public class CollapsingToolbarLayout extends FrameLayout {
         }
     }
 
-    public void setStatusBarScrimColor(@ColorInt int i) throws SecurityException {
+    public void setStatusBarScrimColor(@ColorInt int i) {
         setStatusBarScrim(new ColorDrawable(i));
     }
 
-    public void setStatusBarScrimResource(@DrawableRes int i) throws SecurityException {
+    public void setStatusBarScrimResource(@DrawableRes int i) {
         setStatusBarScrim(ContextCompat.getDrawable(getContext(), i));
     }
 
@@ -794,7 +794,7 @@ public class CollapsingToolbarLayout extends FrameLayout {
     }
 
     /* JADX WARN: Illegal instructions before constructor call */
-    public CollapsingToolbarLayout(@NonNull Context context, @Nullable AttributeSet attributeSet, int i) throws SecurityException {
+    public CollapsingToolbarLayout(@NonNull Context context, @Nullable AttributeSet attributeSet, int i) {
         int i2 = DEF_STYLE_RES;
         super(MaterialThemeOverlay.wrap(context, attributeSet, i, i2), attributeSet, i);
         this.refreshToolbar = true;

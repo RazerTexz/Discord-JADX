@@ -36,11 +36,11 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 import p658rx.Observable;
 
-/* compiled from: WidgetForumPostStatusViewModel.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetForumPostStatusViewModel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetForumPostStatusViewModel extends AppViewModel<ViewState> {
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private final AppFragment appFragment;
     private boolean followRequestInProgress;
@@ -55,8 +55,8 @@ public final class WidgetForumPostStatusViewModel extends AppViewModel<ViewState
     private final StoreUser storeUser;
     private final WidgetChatListAdapterEventsHandler.UserReactionHandler userReactionHandler;
 
-    /* compiled from: WidgetForumPostStatusViewModel.kt */
-    /* renamed from: com.discord.widgets.status.WidgetForumPostStatusViewModel$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.status.WidgetForumPostStatusViewModel$1 */
+    /* JADX INFO: compiled from: WidgetForumPostStatusViewModel.kt */
     public static final class C100901 extends Lambda implements Function1<StoreState, Unit> {
         public C100901() {
             super(1);
@@ -68,7 +68,7 @@ public final class WidgetForumPostStatusViewModel extends AppViewModel<ViewState
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(StoreState storeState) {
             WidgetForumPostStatusViewModel widgetForumPostStatusViewModel = WidgetForumPostStatusViewModel.this;
             Intrinsics3.checkNotNullExpressionValue(storeState, "storeState");
@@ -76,7 +76,7 @@ public final class WidgetForumPostStatusViewModel extends AppViewModel<ViewState
         }
     }
 
-    /* compiled from: WidgetForumPostStatusViewModel.kt */
+    /* JADX INFO: compiled from: WidgetForumPostStatusViewModel.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -100,10 +100,10 @@ public final class WidgetForumPostStatusViewModel extends AppViewModel<ViewState
         }
     }
 
-    /* compiled from: WidgetForumPostStatusViewModel.kt */
+    /* JADX INFO: compiled from: WidgetForumPostStatusViewModel.kt */
     public static abstract class StoreState {
 
-        /* compiled from: WidgetForumPostStatusViewModel.kt */
+        /* JADX INFO: compiled from: WidgetForumPostStatusViewModel.kt */
         public static final class Invalid extends StoreState {
             public static final Invalid INSTANCE = new Invalid();
 
@@ -112,7 +112,7 @@ public final class WidgetForumPostStatusViewModel extends AppViewModel<ViewState
             }
         }
 
-        /* compiled from: WidgetForumPostStatusViewModel.kt */
+        /* JADX INFO: compiled from: WidgetForumPostStatusViewModel.kt */
         public static final /* data */ class Loaded extends StoreState {
             private final long channelId;
             private final long guildId;
@@ -143,52 +143,52 @@ public final class WidgetForumPostStatusViewModel extends AppViewModel<ViewState
                 return loaded.copy((i & 1) != 0 ? loaded.myUserId : j, (i & 2) != 0 ? loaded.channelId : j2, (i & 4) != 0 ? loaded.guildId : j3, (i & 8) != 0 ? loaded.messageId : l, (i & 16) != 0 ? loaded.isFollowedThread : z2, (i & 32) != 0 ? loaded.isArchivedThread : z3, (i & 64) != 0 ? loaded.messageCount : num, (i & 128) != 0 ? loaded.hasAddReactionPermission : z4, (i & 256) != 0 ? loaded.isDefaultReaction : z5, (i & 512) != 0 ? loaded.mostCommonReaction : messageReaction);
             }
 
-            /* renamed from: component1, reason: from getter */
+            /* JADX INFO: renamed from: component1, reason: from getter */
             public final long getMyUserId() {
                 return this.myUserId;
             }
 
-            /* renamed from: component10, reason: from getter */
+            /* JADX INFO: renamed from: component10, reason: from getter */
             public final MessageReaction getMostCommonReaction() {
                 return this.mostCommonReaction;
             }
 
-            /* renamed from: component2, reason: from getter */
+            /* JADX INFO: renamed from: component2, reason: from getter */
             public final long getChannelId() {
                 return this.channelId;
             }
 
-            /* renamed from: component3, reason: from getter */
+            /* JADX INFO: renamed from: component3, reason: from getter */
             public final long getGuildId() {
                 return this.guildId;
             }
 
-            /* renamed from: component4, reason: from getter */
+            /* JADX INFO: renamed from: component4, reason: from getter */
             public final Long getMessageId() {
                 return this.messageId;
             }
 
-            /* renamed from: component5, reason: from getter */
+            /* JADX INFO: renamed from: component5, reason: from getter */
             public final boolean getIsFollowedThread() {
                 return this.isFollowedThread;
             }
 
-            /* renamed from: component6, reason: from getter */
+            /* JADX INFO: renamed from: component6, reason: from getter */
             public final boolean getIsArchivedThread() {
                 return this.isArchivedThread;
             }
 
-            /* renamed from: component7, reason: from getter */
+            /* JADX INFO: renamed from: component7, reason: from getter */
             public final Integer getMessageCount() {
                 return this.messageCount;
             }
 
-            /* renamed from: component8, reason: from getter */
+            /* JADX INFO: renamed from: component8, reason: from getter */
             public final boolean getHasAddReactionPermission() {
                 return this.hasAddReactionPermission;
             }
 
-            /* renamed from: component9, reason: from getter */
+            /* JADX INFO: renamed from: component9, reason: from getter */
             public final boolean getIsDefaultReaction() {
                 return this.isDefaultReaction;
             }
@@ -237,34 +237,46 @@ public final class WidgetForumPostStatusViewModel extends AppViewModel<ViewState
             }
 
             /* JADX WARN: Multi-variable type inference failed */
+            /* JADX WARN: Type inference failed for: r1v10, types: [int] */
+            /* JADX WARN: Type inference failed for: r1v15, types: [int] */
+            /* JADX WARN: Type inference failed for: r1v18 */
+            /* JADX WARN: Type inference failed for: r1v20 */
+            /* JADX WARN: Type inference failed for: r1v21 */
+            /* JADX WARN: Type inference failed for: r1v23 */
+            /* JADX WARN: Type inference failed for: r1v24 */
+            /* JADX WARN: Type inference failed for: r1v25 */
+            /* JADX WARN: Type inference failed for: r1v8, types: [int] */
+            /* JADX WARN: Type inference failed for: r3v0 */
+            /* JADX WARN: Type inference failed for: r3v1, types: [int] */
+            /* JADX WARN: Type inference failed for: r3v2 */
             public int hashCode() {
                 int iM3a = (C0002b.m3a(this.guildId) + ((C0002b.m3a(this.channelId) + (C0002b.m3a(this.myUserId) * 31)) * 31)) * 31;
                 Long l = this.messageId;
                 int iHashCode = (iM3a + (l != null ? l.hashCode() : 0)) * 31;
                 boolean z2 = this.isFollowedThread;
-                int i = z2;
-                if (z2 != 0) {
-                    i = 1;
+                ?? r1 = z2;
+                if (z2) {
+                    r1 = 1;
                 }
-                int i2 = (iHashCode + i) * 31;
+                int i = (iHashCode + r1) * 31;
                 boolean z3 = this.isArchivedThread;
-                int i3 = z3;
-                if (z3 != 0) {
-                    i3 = 1;
+                ?? r12 = z3;
+                if (z3) {
+                    r12 = 1;
                 }
-                int i4 = (i2 + i3) * 31;
+                int i2 = (i + r12) * 31;
                 Integer num = this.messageCount;
-                int iHashCode2 = (i4 + (num != null ? num.hashCode() : 0)) * 31;
+                int iHashCode2 = (i2 + (num != null ? num.hashCode() : 0)) * 31;
                 boolean z4 = this.hasAddReactionPermission;
-                int i5 = z4;
-                if (z4 != 0) {
-                    i5 = 1;
+                ?? r13 = z4;
+                if (z4) {
+                    r13 = 1;
                 }
-                int i6 = (iHashCode2 + i5) * 31;
+                int i3 = (iHashCode2 + r13) * 31;
                 boolean z5 = this.isDefaultReaction;
-                int i7 = (i6 + (z5 ? 1 : z5 ? 1 : 0)) * 31;
+                int i4 = (i3 + (z5 ? 1 : z5)) * 31;
                 MessageReaction messageReaction = this.mostCommonReaction;
-                return i7 + (messageReaction != null ? messageReaction.hashCode() : 0);
+                return i4 + (messageReaction != null ? messageReaction.hashCode() : 0);
             }
 
             public final boolean isArchivedThread() {
@@ -313,10 +325,10 @@ public final class WidgetForumPostStatusViewModel extends AppViewModel<ViewState
         }
     }
 
-    /* compiled from: WidgetForumPostStatusViewModel.kt */
+    /* JADX INFO: compiled from: WidgetForumPostStatusViewModel.kt */
     public static abstract class ViewState {
 
-        /* compiled from: WidgetForumPostStatusViewModel.kt */
+        /* JADX INFO: compiled from: WidgetForumPostStatusViewModel.kt */
         public static final class Invalid extends ViewState {
             public static final Invalid INSTANCE = new Invalid();
 
@@ -325,7 +337,7 @@ public final class WidgetForumPostStatusViewModel extends AppViewModel<ViewState
             }
         }
 
-        /* compiled from: WidgetForumPostStatusViewModel.kt */
+        /* JADX INFO: compiled from: WidgetForumPostStatusViewModel.kt */
         public static final /* data */ class Valid extends ViewState {
             private final long channelId;
             private final boolean followRequestInProgress;
@@ -358,57 +370,57 @@ public final class WidgetForumPostStatusViewModel extends AppViewModel<ViewState
                 return valid.copy((i2 & 1) != 0 ? valid.myUserId : j, (i2 & 2) != 0 ? valid.channelId : j2, (i2 & 4) != 0 ? valid.guildId : j3, (i2 & 8) != 0 ? valid.isFollowedThread : z2, (i2 & 16) != 0 ? valid.isArchivedThread : z3, (i2 & 32) != 0 ? valid.messageId : l, (i2 & 64) != 0 ? valid.reaction : messageReaction, (i2 & 128) != 0 ? valid.isDefaultReaction : z4, (i2 & 256) != 0 ? valid.messageCount : i, (i2 & 512) != 0 ? valid.hasAddReactionPermission : z5, (i2 & 1024) != 0 ? valid.followRequestInProgress : z6);
             }
 
-            /* renamed from: component1, reason: from getter */
+            /* JADX INFO: renamed from: component1, reason: from getter */
             public final long getMyUserId() {
                 return this.myUserId;
             }
 
-            /* renamed from: component10, reason: from getter */
+            /* JADX INFO: renamed from: component10, reason: from getter */
             public final boolean getHasAddReactionPermission() {
                 return this.hasAddReactionPermission;
             }
 
-            /* renamed from: component11, reason: from getter */
+            /* JADX INFO: renamed from: component11, reason: from getter */
             public final boolean getFollowRequestInProgress() {
                 return this.followRequestInProgress;
             }
 
-            /* renamed from: component2, reason: from getter */
+            /* JADX INFO: renamed from: component2, reason: from getter */
             public final long getChannelId() {
                 return this.channelId;
             }
 
-            /* renamed from: component3, reason: from getter */
+            /* JADX INFO: renamed from: component3, reason: from getter */
             public final long getGuildId() {
                 return this.guildId;
             }
 
-            /* renamed from: component4, reason: from getter */
+            /* JADX INFO: renamed from: component4, reason: from getter */
             public final boolean getIsFollowedThread() {
                 return this.isFollowedThread;
             }
 
-            /* renamed from: component5, reason: from getter */
+            /* JADX INFO: renamed from: component5, reason: from getter */
             public final boolean getIsArchivedThread() {
                 return this.isArchivedThread;
             }
 
-            /* renamed from: component6, reason: from getter */
+            /* JADX INFO: renamed from: component6, reason: from getter */
             public final Long getMessageId() {
                 return this.messageId;
             }
 
-            /* renamed from: component7, reason: from getter */
+            /* JADX INFO: renamed from: component7, reason: from getter */
             public final MessageReaction getReaction() {
                 return this.reaction;
             }
 
-            /* renamed from: component8, reason: from getter */
+            /* JADX INFO: renamed from: component8, reason: from getter */
             public final boolean getIsDefaultReaction() {
                 return this.isDefaultReaction;
             }
 
-            /* renamed from: component9, reason: from getter */
+            /* JADX INFO: renamed from: component9, reason: from getter */
             public final int getMessageCount() {
                 return this.messageCount;
             }
@@ -461,38 +473,53 @@ public final class WidgetForumPostStatusViewModel extends AppViewModel<ViewState
             }
 
             /* JADX WARN: Multi-variable type inference failed */
+            /* JADX WARN: Type inference failed for: r1v13, types: [int] */
+            /* JADX WARN: Type inference failed for: r1v16, types: [int] */
+            /* JADX WARN: Type inference failed for: r1v18 */
+            /* JADX WARN: Type inference failed for: r1v19 */
+            /* JADX WARN: Type inference failed for: r1v21 */
+            /* JADX WARN: Type inference failed for: r1v22 */
+            /* JADX WARN: Type inference failed for: r1v23 */
+            /* JADX WARN: Type inference failed for: r1v24 */
+            /* JADX WARN: Type inference failed for: r1v25 */
+            /* JADX WARN: Type inference failed for: r1v26 */
+            /* JADX WARN: Type inference failed for: r1v5, types: [int] */
+            /* JADX WARN: Type inference failed for: r1v7, types: [int] */
+            /* JADX WARN: Type inference failed for: r2v1 */
+            /* JADX WARN: Type inference failed for: r2v2, types: [int] */
+            /* JADX WARN: Type inference failed for: r2v3 */
             public int hashCode() {
                 int iM3a = (C0002b.m3a(this.guildId) + ((C0002b.m3a(this.channelId) + (C0002b.m3a(this.myUserId) * 31)) * 31)) * 31;
                 boolean z2 = this.isFollowedThread;
-                int i = z2;
-                if (z2 != 0) {
-                    i = 1;
+                ?? r1 = z2;
+                if (z2) {
+                    r1 = 1;
                 }
-                int i2 = (iM3a + i) * 31;
+                int i = (iM3a + r1) * 31;
                 boolean z3 = this.isArchivedThread;
-                int i3 = z3;
-                if (z3 != 0) {
-                    i3 = 1;
+                ?? r12 = z3;
+                if (z3) {
+                    r12 = 1;
                 }
-                int i4 = (i2 + i3) * 31;
+                int i2 = (i + r12) * 31;
                 Long l = this.messageId;
-                int iHashCode = (i4 + (l != null ? l.hashCode() : 0)) * 31;
+                int iHashCode = (i2 + (l != null ? l.hashCode() : 0)) * 31;
                 MessageReaction messageReaction = this.reaction;
                 int iHashCode2 = (iHashCode + (messageReaction != null ? messageReaction.hashCode() : 0)) * 31;
                 boolean z4 = this.isDefaultReaction;
-                int i5 = z4;
-                if (z4 != 0) {
-                    i5 = 1;
+                ?? r13 = z4;
+                if (z4) {
+                    r13 = 1;
                 }
-                int i6 = (((iHashCode2 + i5) * 31) + this.messageCount) * 31;
+                int i3 = (((iHashCode2 + r13) * 31) + this.messageCount) * 31;
                 boolean z5 = this.hasAddReactionPermission;
-                int i7 = z5;
-                if (z5 != 0) {
-                    i7 = 1;
+                ?? r14 = z5;
+                if (z5) {
+                    r14 = 1;
                 }
-                int i8 = (i6 + i7) * 31;
+                int i4 = (i3 + r14) * 31;
                 boolean z6 = this.followRequestInProgress;
-                return i8 + (z6 ? 1 : z6 ? 1 : 0);
+                return i4 + (z6 ? 1 : z6);
             }
 
             public final boolean isArchivedThread() {
@@ -541,8 +568,8 @@ public final class WidgetForumPostStatusViewModel extends AppViewModel<ViewState
         }
     }
 
-    /* compiled from: WidgetForumPostStatusViewModel.kt */
-    /* renamed from: com.discord.widgets.status.WidgetForumPostStatusViewModel$doPress$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.status.WidgetForumPostStatusViewModel$doPress$1 */
+    /* JADX INFO: compiled from: WidgetForumPostStatusViewModel.kt */
     public static final class C100921 extends Lambda implements Function0<Unit> {
         public final /* synthetic */ Context $context;
         public final /* synthetic */ boolean $isArchivedThread;
@@ -562,7 +589,7 @@ public final class WidgetForumPostStatusViewModel extends AppViewModel<ViewState
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             if (this.$isArchivedThread) {
                 AppToast.m169g(this.$context, C5419R.string.thread_archived, 0, null, 12);
@@ -572,8 +599,8 @@ public final class WidgetForumPostStatusViewModel extends AppViewModel<ViewState
         }
     }
 
-    /* compiled from: WidgetForumPostStatusViewModel.kt */
-    /* renamed from: com.discord.widgets.status.WidgetForumPostStatusViewModel$onFollowPress$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.status.WidgetForumPostStatusViewModel$onFollowPress$1 */
+    /* JADX INFO: compiled from: WidgetForumPostStatusViewModel.kt */
     public static final class C100931 extends Lambda implements Function0<Unit> {
         public final /* synthetic */ long $channelId;
         public final /* synthetic */ Context $context;
@@ -593,14 +620,14 @@ public final class WidgetForumPostStatusViewModel extends AppViewModel<ViewState
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             WidgetForumPostStatusViewModel.access$toggleFollowPost(WidgetForumPostStatusViewModel.this, this.$context, this.$channelId, this.$isFollowedThread);
         }
     }
 
-    /* compiled from: WidgetForumPostStatusViewModel.kt */
-    /* renamed from: com.discord.widgets.status.WidgetForumPostStatusViewModel$onReactionLongPress$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.status.WidgetForumPostStatusViewModel$onReactionLongPress$1 */
+    /* JADX INFO: compiled from: WidgetForumPostStatusViewModel.kt */
     public static final class C100941 extends Lambda implements Function0<Unit> {
         public final /* synthetic */ long $channelId;
         public final /* synthetic */ Context $context;
@@ -622,14 +649,14 @@ public final class WidgetForumPostStatusViewModel extends AppViewModel<ViewState
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             WidgetManageReactions.INSTANCE.create(this.$channelId, this.$messageId, this.$context, this.$reaction);
         }
     }
 
-    /* compiled from: WidgetForumPostStatusViewModel.kt */
-    /* renamed from: com.discord.widgets.status.WidgetForumPostStatusViewModel$onReactionPress$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.status.WidgetForumPostStatusViewModel$onReactionPress$1 */
+    /* JADX INFO: compiled from: WidgetForumPostStatusViewModel.kt */
     public static final class C100951 extends Lambda implements Function0<Unit> {
         public final /* synthetic */ long $channelId;
         public final /* synthetic */ boolean $hasAddReactionPermission;
@@ -653,7 +680,7 @@ public final class WidgetForumPostStatusViewModel extends AppViewModel<ViewState
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             if (this.$hasAddReactionPermission) {
                 WidgetForumPostStatusViewModel.access$getUserReactionHandler$p(WidgetForumPostStatusViewModel.this).toggleReaction(this.$myUserId, this.$channelId, this.$messageId, this.$reaction);
@@ -661,8 +688,8 @@ public final class WidgetForumPostStatusViewModel extends AppViewModel<ViewState
         }
     }
 
-    /* compiled from: WidgetForumPostStatusViewModel.kt */
-    /* renamed from: com.discord.widgets.status.WidgetForumPostStatusViewModel$toggleFollowPost$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.status.WidgetForumPostStatusViewModel$toggleFollowPost$1 */
+    /* JADX INFO: compiled from: WidgetForumPostStatusViewModel.kt */
     public static final class C100961 extends Lambda implements Function0<Unit> {
         public final /* synthetic */ ViewState.Valid $viewState;
 
@@ -678,15 +705,15 @@ public final class WidgetForumPostStatusViewModel extends AppViewModel<ViewState
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             WidgetForumPostStatusViewModel.access$setFollowRequestInProgress$p(WidgetForumPostStatusViewModel.this, false);
             WidgetForumPostStatusViewModel.access$updateViewState(WidgetForumPostStatusViewModel.this, ViewState.Valid.copy$default(this.$viewState, 0L, 0L, 0L, false, false, null, null, false, 0, false, false, AudioAttributesCompat.FLAG_ALL, null));
         }
     }
 
-    /* compiled from: WidgetForumPostStatusViewModel.kt */
-    /* renamed from: com.discord.widgets.status.WidgetForumPostStatusViewModel$toggleFollowPost$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.status.WidgetForumPostStatusViewModel$toggleFollowPost$2 */
+    /* JADX INFO: compiled from: WidgetForumPostStatusViewModel.kt */
     public static final class C100972 extends Lambda implements Function1<Void, Unit> {
         public static final C100972 INSTANCE = new C100972();
 
@@ -700,13 +727,13 @@ public final class WidgetForumPostStatusViewModel extends AppViewModel<ViewState
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Void r1) {
         }
     }
 
-    /* compiled from: WidgetForumPostStatusViewModel.kt */
-    /* renamed from: com.discord.widgets.status.WidgetForumPostStatusViewModel$toggleFollowPost$3 */
+    /* JADX INFO: renamed from: com.discord.widgets.status.WidgetForumPostStatusViewModel$toggleFollowPost$3 */
+    /* JADX INFO: compiled from: WidgetForumPostStatusViewModel.kt */
     public static final class C100983 extends Lambda implements Function0<Unit> {
         public final /* synthetic */ ViewState.Valid $viewState;
 
@@ -722,15 +749,15 @@ public final class WidgetForumPostStatusViewModel extends AppViewModel<ViewState
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             WidgetForumPostStatusViewModel.access$setFollowRequestInProgress$p(WidgetForumPostStatusViewModel.this, false);
             WidgetForumPostStatusViewModel.access$updateViewState(WidgetForumPostStatusViewModel.this, ViewState.Valid.copy$default(this.$viewState, 0L, 0L, 0L, false, false, null, null, false, 0, false, false, AudioAttributesCompat.FLAG_ALL, null));
         }
     }
 
-    /* compiled from: WidgetForumPostStatusViewModel.kt */
-    /* renamed from: com.discord.widgets.status.WidgetForumPostStatusViewModel$toggleFollowPost$4 */
+    /* JADX INFO: renamed from: com.discord.widgets.status.WidgetForumPostStatusViewModel$toggleFollowPost$4 */
+    /* JADX INFO: compiled from: WidgetForumPostStatusViewModel.kt */
     public static final class C100994 extends Lambda implements Function1<Void, Unit> {
         public static final C100994 INSTANCE = new C100994();
 
@@ -744,7 +771,7 @@ public final class WidgetForumPostStatusViewModel extends AppViewModel<ViewState
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Void r1) {
         }
     }

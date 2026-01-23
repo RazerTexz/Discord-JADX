@@ -61,11 +61,11 @@ import p507d0.p592z.p594d.Lambda;
 import p658rx.Observable;
 import p658rx.subjects.PublishSubject;
 
-/* compiled from: WidgetContactSyncViewModel.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetContactSyncViewModel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetContactSyncViewModel extends AppViewModel<ViewState> {
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private final Function1<Error, Unit> captchaLauncher;
     private final PublishSubject<Event> eventsSubject;
@@ -73,8 +73,8 @@ public final class WidgetContactSyncViewModel extends AppViewModel<ViewState> {
     private final RestAPI restAPI;
     private final ContactSyncFlowAnalytics tracker;
 
-    /* compiled from: WidgetContactSyncViewModel.kt */
-    /* renamed from: com.discord.widgets.contact_sync.WidgetContactSyncViewModel$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.contact_sync.WidgetContactSyncViewModel$1 */
+    /* JADX INFO: compiled from: WidgetContactSyncViewModel.kt */
     public static final class C82451 extends Lambda implements Function1<StoreState, Unit> {
         public C82451() {
             super(1);
@@ -86,14 +86,14 @@ public final class WidgetContactSyncViewModel extends AppViewModel<ViewState> {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(StoreState storeState) {
             Intrinsics3.checkNotNullParameter(storeState, "storeState");
             WidgetContactSyncViewModel.access$handleStoreState(WidgetContactSyncViewModel.this, storeState);
         }
     }
 
-    /* compiled from: WidgetContactSyncViewModel.kt */
+    /* JADX INFO: compiled from: WidgetContactSyncViewModel.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -113,10 +113,10 @@ public final class WidgetContactSyncViewModel extends AppViewModel<ViewState> {
         }
     }
 
-    /* compiled from: WidgetContactSyncViewModel.kt */
+    /* JADX INFO: compiled from: WidgetContactSyncViewModel.kt */
     public static abstract class Event {
 
-        /* compiled from: WidgetContactSyncViewModel.kt */
+        /* JADX INFO: compiled from: WidgetContactSyncViewModel.kt */
         public static final class AddFriendsFailed extends Event {
             public static final AddFriendsFailed INSTANCE = new AddFriendsFailed();
 
@@ -125,7 +125,7 @@ public final class WidgetContactSyncViewModel extends AppViewModel<ViewState> {
             }
         }
 
-        /* compiled from: WidgetContactSyncViewModel.kt */
+        /* JADX INFO: compiled from: WidgetContactSyncViewModel.kt */
         public static final class AddFriendsFailedPartial extends Event {
             public static final AddFriendsFailedPartial INSTANCE = new AddFriendsFailedPartial();
 
@@ -134,7 +134,7 @@ public final class WidgetContactSyncViewModel extends AppViewModel<ViewState> {
             }
         }
 
-        /* compiled from: WidgetContactSyncViewModel.kt */
+        /* JADX INFO: compiled from: WidgetContactSyncViewModel.kt */
         public static final class Completed extends Event {
             public static final Completed INSTANCE = new Completed();
 
@@ -143,7 +143,7 @@ public final class WidgetContactSyncViewModel extends AppViewModel<ViewState> {
             }
         }
 
-        /* compiled from: WidgetContactSyncViewModel.kt */
+        /* JADX INFO: compiled from: WidgetContactSyncViewModel.kt */
         public static final class ContactsEnableFailed extends Event {
             public static final ContactsEnableFailed INSTANCE = new ContactsEnableFailed();
 
@@ -152,7 +152,7 @@ public final class WidgetContactSyncViewModel extends AppViewModel<ViewState> {
             }
         }
 
-        /* compiled from: WidgetContactSyncViewModel.kt */
+        /* JADX INFO: compiled from: WidgetContactSyncViewModel.kt */
         public static final class ContactsEnabled extends Event {
             public static final ContactsEnabled INSTANCE = new ContactsEnabled();
 
@@ -161,7 +161,7 @@ public final class WidgetContactSyncViewModel extends AppViewModel<ViewState> {
             }
         }
 
-        /* compiled from: WidgetContactSyncViewModel.kt */
+        /* JADX INFO: compiled from: WidgetContactSyncViewModel.kt */
         public static final class MaybeProceedFromLanding extends Event {
             public static final MaybeProceedFromLanding INSTANCE = new MaybeProceedFromLanding();
 
@@ -170,7 +170,7 @@ public final class WidgetContactSyncViewModel extends AppViewModel<ViewState> {
             }
         }
 
-        /* compiled from: WidgetContactSyncViewModel.kt */
+        /* JADX INFO: compiled from: WidgetContactSyncViewModel.kt */
         public static final class PermissionsNeeded extends Event {
             public static final PermissionsNeeded INSTANCE = new PermissionsNeeded();
 
@@ -179,7 +179,7 @@ public final class WidgetContactSyncViewModel extends AppViewModel<ViewState> {
             }
         }
 
-        /* compiled from: WidgetContactSyncViewModel.kt */
+        /* JADX INFO: compiled from: WidgetContactSyncViewModel.kt */
         public static final class PhoneInvalid extends Event {
             public static final PhoneInvalid INSTANCE = new PhoneInvalid();
 
@@ -188,7 +188,7 @@ public final class WidgetContactSyncViewModel extends AppViewModel<ViewState> {
             }
         }
 
-        /* compiled from: WidgetContactSyncViewModel.kt */
+        /* JADX INFO: compiled from: WidgetContactSyncViewModel.kt */
         public static final class RateLimited extends Event {
             public static final RateLimited INSTANCE = new RateLimited();
 
@@ -197,7 +197,7 @@ public final class WidgetContactSyncViewModel extends AppViewModel<ViewState> {
             }
         }
 
-        /* compiled from: WidgetContactSyncViewModel.kt */
+        /* JADX INFO: compiled from: WidgetContactSyncViewModel.kt */
         public static final class UploadFailed extends Event {
             public static final UploadFailed INSTANCE = new UploadFailed();
 
@@ -206,7 +206,7 @@ public final class WidgetContactSyncViewModel extends AppViewModel<ViewState> {
             }
         }
 
-        /* compiled from: WidgetContactSyncViewModel.kt */
+        /* JADX INFO: compiled from: WidgetContactSyncViewModel.kt */
         public static final class VerificationCodeInvalid extends Event {
             public static final VerificationCodeInvalid INSTANCE = new VerificationCodeInvalid();
 
@@ -215,7 +215,7 @@ public final class WidgetContactSyncViewModel extends AppViewModel<ViewState> {
             }
         }
 
-        /* compiled from: WidgetContactSyncViewModel.kt */
+        /* JADX INFO: compiled from: WidgetContactSyncViewModel.kt */
         public static final class VerificationFailed extends Event {
             public static final VerificationFailed INSTANCE = new VerificationFailed();
 
@@ -232,11 +232,11 @@ public final class WidgetContactSyncViewModel extends AppViewModel<ViewState> {
         }
     }
 
-    /* compiled from: WidgetContactSyncViewModel.kt */
+    /* JADX INFO: compiled from: WidgetContactSyncViewModel.kt */
     public static abstract class Item implements MGRecyclerDataPayload {
         private final int type;
 
-        /* compiled from: WidgetContactSyncViewModel.kt */
+        /* JADX INFO: compiled from: WidgetContactSyncViewModel.kt */
         public static final /* data */ class FriendSuggestionItem extends Item {
             private final String key;
             private final boolean selected;
@@ -261,12 +261,12 @@ public final class WidgetContactSyncViewModel extends AppViewModel<ViewState> {
                 return friendSuggestionItem.copy(friendSuggestion, z2);
             }
 
-            /* renamed from: component1, reason: from getter */
+            /* JADX INFO: renamed from: component1, reason: from getter */
             public final FriendSuggestion getSuggestion() {
                 return this.suggestion;
             }
 
-            /* renamed from: component2, reason: from getter */
+            /* JADX INFO: renamed from: component2, reason: from getter */
             public final boolean getSelected() {
                 return this.selected;
             }
@@ -301,15 +301,18 @@ public final class WidgetContactSyncViewModel extends AppViewModel<ViewState> {
             }
 
             /* JADX WARN: Multi-variable type inference failed */
+            /* JADX WARN: Type inference failed for: r1v1, types: [int] */
+            /* JADX WARN: Type inference failed for: r1v2 */
+            /* JADX WARN: Type inference failed for: r1v3 */
             public int hashCode() {
                 FriendSuggestion friendSuggestion = this.suggestion;
                 int iHashCode = (friendSuggestion != null ? friendSuggestion.hashCode() : 0) * 31;
                 boolean z2 = this.selected;
-                int i = z2;
-                if (z2 != 0) {
-                    i = 1;
+                ?? r1 = z2;
+                if (z2) {
+                    r1 = 1;
                 }
-                return iHashCode + i;
+                return iHashCode + r1;
             }
 
             public String toString() {
@@ -334,7 +337,7 @@ public final class WidgetContactSyncViewModel extends AppViewModel<ViewState> {
         }
     }
 
-    /* compiled from: WidgetContactSyncViewModel.kt */
+    /* JADX INFO: compiled from: WidgetContactSyncViewModel.kt */
     public static final /* data */ class StoreState {
         private final ConnectedAccount contactsConnection;
         private final PhoneCountryCode countryCode;
@@ -366,22 +369,22 @@ public final class WidgetContactSyncViewModel extends AppViewModel<ViewState> {
             return storeState.copy(str, str2, phoneCountryCode, connectedAccount);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final String getUserPhone() {
             return this.userPhone;
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final String getUsername() {
             return this.username;
         }
 
-        /* renamed from: component3, reason: from getter */
+        /* JADX INFO: renamed from: component3, reason: from getter */
         public final PhoneCountryCode getCountryCode() {
             return this.countryCode;
         }
 
-        /* renamed from: component4, reason: from getter */
+        /* JADX INFO: renamed from: component4, reason: from getter */
         public final ConnectedAccount getContactsConnection() {
             return this.contactsConnection;
         }
@@ -444,7 +447,7 @@ public final class WidgetContactSyncViewModel extends AppViewModel<ViewState> {
         }
     }
 
-    /* compiled from: WidgetContactSyncViewModel.kt */
+    /* JADX INFO: compiled from: WidgetContactSyncViewModel.kt */
     public static final /* data */ class ToolbarConfig {
         private final boolean showBackButton;
         private final boolean showSkip;
@@ -464,12 +467,12 @@ public final class WidgetContactSyncViewModel extends AppViewModel<ViewState> {
             return toolbarConfig.copy(z2, z3);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final boolean getShowBackButton() {
             return this.showBackButton;
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final boolean getShowSkip() {
             return this.showSkip;
         }
@@ -501,6 +504,9 @@ public final class WidgetContactSyncViewModel extends AppViewModel<ViewState> {
         /* JADX WARN: Type inference failed for: r0v1, types: [int] */
         /* JADX WARN: Type inference failed for: r0v4 */
         /* JADX WARN: Type inference failed for: r0v5 */
+        /* JADX WARN: Type inference failed for: r1v0 */
+        /* JADX WARN: Type inference failed for: r1v1, types: [int] */
+        /* JADX WARN: Type inference failed for: r1v2 */
         public int hashCode() {
             boolean z2 = this.showBackButton;
             ?? r0 = z2;
@@ -509,7 +515,7 @@ public final class WidgetContactSyncViewModel extends AppViewModel<ViewState> {
             }
             int i = r0 * 31;
             boolean z3 = this.showSkip;
-            return i + (z3 ? 1 : z3 ? 1 : 0);
+            return i + (z3 ? 1 : z3);
         }
 
         public String toString() {
@@ -520,7 +526,7 @@ public final class WidgetContactSyncViewModel extends AppViewModel<ViewState> {
         }
     }
 
-    /* compiled from: WidgetContactSyncViewModel.kt */
+    /* JADX INFO: compiled from: WidgetContactSyncViewModel.kt */
     public static final /* data */ class ViewState {
         private final boolean allowEmail;
         private final boolean allowPhone;
@@ -566,31 +572,32 @@ public final class WidgetContactSyncViewModel extends AppViewModel<ViewState> {
             this.toolbarConfig = toolbarConfig;
         }
 
+        /* JADX WARN: Multi-variable type inference failed */
         public static /* synthetic */ ViewState copy$default(ViewState viewState, boolean z2, ContactSyncMode contactSyncMode, String str, ConnectedAccount connectedAccount, PhoneCountryCode phoneCountryCode, String str2, String str3, boolean z3, boolean z4, Views views, boolean z5, boolean z6, String str4, List list, List list2, ToolbarConfig toolbarConfig, int i, Object obj) {
             return viewState.copy((i & 1) != 0 ? viewState.landingNextEnabled : z2, (i & 2) != 0 ? viewState.mode : contactSyncMode, (i & 4) != 0 ? viewState.phoneNumber : str, (i & 8) != 0 ? viewState.existingConnection : connectedAccount, (i & 16) != 0 ? viewState.countryCode : phoneCountryCode, (i & 32) != 0 ? viewState.username : str2, (i & 64) != 0 ? viewState.name : str3, (i & 128) != 0 ? viewState.isSubmitting : z3, (i & 256) != 0 ? viewState.permissionsDenied : z4, (i & 512) != 0 ? viewState.displayedChild : views, (i & 1024) != 0 ? viewState.allowPhone : z5, (i & 2048) != 0 ? viewState.allowEmail : z6, (i & 4096) != 0 ? viewState.bulkAddToken : str4, (i & 8192) != 0 ? viewState.friendSuggestions : list, (i & 16384) != 0 ? viewState.selectedFriendIds : list2, (i & 32768) != 0 ? viewState.toolbarConfig : toolbarConfig);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final boolean getLandingNextEnabled() {
             return this.landingNextEnabled;
         }
 
-        /* renamed from: component10, reason: from getter */
+        /* JADX INFO: renamed from: component10, reason: from getter */
         public final Views getDisplayedChild() {
             return this.displayedChild;
         }
 
-        /* renamed from: component11, reason: from getter */
+        /* JADX INFO: renamed from: component11, reason: from getter */
         public final boolean getAllowPhone() {
             return this.allowPhone;
         }
 
-        /* renamed from: component12, reason: from getter */
+        /* JADX INFO: renamed from: component12, reason: from getter */
         public final boolean getAllowEmail() {
             return this.allowEmail;
         }
 
-        /* renamed from: component13, reason: from getter */
+        /* JADX INFO: renamed from: component13, reason: from getter */
         public final String getBulkAddToken() {
             return this.bulkAddToken;
         }
@@ -603,47 +610,47 @@ public final class WidgetContactSyncViewModel extends AppViewModel<ViewState> {
             return this.selectedFriendIds;
         }
 
-        /* renamed from: component16, reason: from getter */
+        /* JADX INFO: renamed from: component16, reason: from getter */
         public final ToolbarConfig getToolbarConfig() {
             return this.toolbarConfig;
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final ContactSyncMode getMode() {
             return this.mode;
         }
 
-        /* renamed from: component3, reason: from getter */
+        /* JADX INFO: renamed from: component3, reason: from getter */
         public final String getPhoneNumber() {
             return this.phoneNumber;
         }
 
-        /* renamed from: component4, reason: from getter */
+        /* JADX INFO: renamed from: component4, reason: from getter */
         public final ConnectedAccount getExistingConnection() {
             return this.existingConnection;
         }
 
-        /* renamed from: component5, reason: from getter */
+        /* JADX INFO: renamed from: component5, reason: from getter */
         public final PhoneCountryCode getCountryCode() {
             return this.countryCode;
         }
 
-        /* renamed from: component6, reason: from getter */
+        /* JADX INFO: renamed from: component6, reason: from getter */
         public final String getUsername() {
             return this.username;
         }
 
-        /* renamed from: component7, reason: from getter */
+        /* JADX INFO: renamed from: component7, reason: from getter */
         public final String getName() {
             return this.name;
         }
 
-        /* renamed from: component8, reason: from getter */
+        /* JADX INFO: renamed from: component8, reason: from getter */
         public final boolean getIsSubmitting() {
             return this.isSubmitting;
         }
 
-        /* renamed from: component9, reason: from getter */
+        /* JADX INFO: renamed from: component9, reason: from getter */
         public final boolean getPermissionsDenied() {
             return this.permissionsDenied;
         }
@@ -734,9 +741,18 @@ public final class WidgetContactSyncViewModel extends AppViewModel<ViewState> {
         /* JADX WARN: Type inference failed for: r0v1, types: [int] */
         /* JADX WARN: Type inference failed for: r0v32 */
         /* JADX WARN: Type inference failed for: r0v33 */
-        /* JADX WARN: Type inference failed for: r2v18, types: [boolean] */
-        /* JADX WARN: Type inference failed for: r2v20, types: [boolean] */
-        /* JADX WARN: Type inference failed for: r2v25, types: [boolean] */
+        /* JADX WARN: Type inference failed for: r1v0 */
+        /* JADX WARN: Type inference failed for: r1v1, types: [int] */
+        /* JADX WARN: Type inference failed for: r1v15 */
+        /* JADX WARN: Type inference failed for: r2v19, types: [int] */
+        /* JADX WARN: Type inference failed for: r2v21, types: [int] */
+        /* JADX WARN: Type inference failed for: r2v26, types: [int] */
+        /* JADX WARN: Type inference failed for: r2v28 */
+        /* JADX WARN: Type inference failed for: r2v30 */
+        /* JADX WARN: Type inference failed for: r2v31 */
+        /* JADX WARN: Type inference failed for: r2v38 */
+        /* JADX WARN: Type inference failed for: r2v39 */
+        /* JADX WARN: Type inference failed for: r2v40 */
         public int hashCode() {
             boolean z2 = this.landingNextEnabled;
             ?? r0 = z2;
@@ -756,30 +772,30 @@ public final class WidgetContactSyncViewModel extends AppViewModel<ViewState> {
             int iHashCode5 = (iHashCode4 + (str2 != null ? str2.hashCode() : 0)) * 31;
             String str3 = this.name;
             int iHashCode6 = (iHashCode5 + (str3 != null ? str3.hashCode() : 0)) * 31;
-            ?? r2 = this.isSubmitting;
-            int i2 = r2;
-            if (r2 != 0) {
-                i2 = 1;
+            boolean z3 = this.isSubmitting;
+            ?? r2 = z3;
+            if (z3) {
+                r2 = 1;
             }
-            int i3 = (iHashCode6 + i2) * 31;
-            ?? r22 = this.permissionsDenied;
-            int i4 = r22;
-            if (r22 != 0) {
-                i4 = 1;
+            int i2 = (iHashCode6 + r2) * 31;
+            boolean z4 = this.permissionsDenied;
+            ?? r22 = z4;
+            if (z4) {
+                r22 = 1;
             }
-            int i5 = (i3 + i4) * 31;
+            int i3 = (i2 + r22) * 31;
             Views views = this.displayedChild;
-            int iHashCode7 = (i5 + (views != null ? views.hashCode() : 0)) * 31;
-            ?? r23 = this.allowPhone;
-            int i6 = r23;
-            if (r23 != 0) {
-                i6 = 1;
+            int iHashCode7 = (i3 + (views != null ? views.hashCode() : 0)) * 31;
+            boolean z5 = this.allowPhone;
+            ?? r23 = z5;
+            if (z5) {
+                r23 = 1;
             }
-            int i7 = (iHashCode7 + i6) * 31;
-            boolean z3 = this.allowEmail;
-            int i8 = (i7 + (z3 ? 1 : z3 ? 1 : 0)) * 31;
+            int i4 = (iHashCode7 + r23) * 31;
+            boolean z6 = this.allowEmail;
+            int i5 = (i4 + (z6 ? 1 : z6)) * 31;
             String str4 = this.bulkAddToken;
-            int iHashCode8 = (i8 + (str4 != null ? str4.hashCode() : 0)) * 31;
+            int iHashCode8 = (i5 + (str4 != null ? str4.hashCode() : 0)) * 31;
             List<Item> list = this.friendSuggestions;
             int iHashCode9 = (iHashCode8 + (list != null ? list.hashCode() : 0)) * 31;
             List<Long> list2 = this.selectedFriendIds;
@@ -830,7 +846,7 @@ public final class WidgetContactSyncViewModel extends AppViewModel<ViewState> {
         }
     }
 
-    /* compiled from: WidgetContactSyncViewModel.kt */
+    /* JADX INFO: compiled from: WidgetContactSyncViewModel.kt */
     public enum Views {
         VIEW_LANDING("Landing"),
         VIEW_ADD_PHONE("Add Phone Number"),
@@ -880,8 +896,8 @@ public final class WidgetContactSyncViewModel extends AppViewModel<ViewState> {
         }
     }
 
-    /* compiled from: WidgetContactSyncViewModel.kt */
-    /* renamed from: com.discord.widgets.contact_sync.WidgetContactSyncViewModel$onBulkAddFriends$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.contact_sync.WidgetContactSyncViewModel$onBulkAddFriends$1 */
+    /* JADX INFO: compiled from: WidgetContactSyncViewModel.kt */
     public static final class C82461 extends Lambda implements Function1<BulkAddFriendsResponse, TrackNetworkMetadata2> {
         public static final C82461 INSTANCE = new C82461();
 
@@ -894,14 +910,14 @@ public final class WidgetContactSyncViewModel extends AppViewModel<ViewState> {
             return invoke2(bulkAddFriendsResponse);
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final TrackNetworkMetadata2 invoke2(BulkAddFriendsResponse bulkAddFriendsResponse) {
             return new TrackNetworkActionUserBulkRelationshipsUpdate();
         }
     }
 
-    /* compiled from: WidgetContactSyncViewModel.kt */
-    /* renamed from: com.discord.widgets.contact_sync.WidgetContactSyncViewModel$onBulkAddFriends$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.contact_sync.WidgetContactSyncViewModel$onBulkAddFriends$2 */
+    /* JADX INFO: compiled from: WidgetContactSyncViewModel.kt */
     public static final class C82472 extends Lambda implements Function1<BulkAddFriendsResponse, Unit> {
         public C82472() {
             super(1);
@@ -913,15 +929,15 @@ public final class WidgetContactSyncViewModel extends AppViewModel<ViewState> {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(BulkAddFriendsResponse bulkAddFriendsResponse) {
             Intrinsics3.checkNotNullParameter(bulkAddFriendsResponse, "it");
             WidgetContactSyncViewModel.access$handleFriendsAdded(WidgetContactSyncViewModel.this, bulkAddFriendsResponse);
         }
     }
 
-    /* compiled from: WidgetContactSyncViewModel.kt */
-    /* renamed from: com.discord.widgets.contact_sync.WidgetContactSyncViewModel$onBulkAddFriends$3 */
+    /* JADX INFO: renamed from: com.discord.widgets.contact_sync.WidgetContactSyncViewModel$onBulkAddFriends$3 */
+    /* JADX INFO: compiled from: WidgetContactSyncViewModel.kt */
     public static final class C82483 extends Lambda implements Function1<Error, Unit> {
         public C82483() {
             super(1);
@@ -933,15 +949,15 @@ public final class WidgetContactSyncViewModel extends AppViewModel<ViewState> {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Error error) {
             Intrinsics3.checkNotNullParameter(error, "it");
             WidgetContactSyncViewModel.access$handleFriendsAddedError(WidgetContactSyncViewModel.this, error);
         }
     }
 
-    /* compiled from: WidgetContactSyncViewModel.kt */
-    /* renamed from: com.discord.widgets.contact_sync.WidgetContactSyncViewModel$onContactsFetched$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.contact_sync.WidgetContactSyncViewModel$onContactsFetched$1 */
+    /* JADX INFO: compiled from: WidgetContactSyncViewModel.kt */
     public static final class C82491 extends Lambda implements Function1<BulkFriendSuggestions, TrackNetworkMetadata2> {
         public static final C82491 INSTANCE = new C82491();
 
@@ -954,14 +970,14 @@ public final class WidgetContactSyncViewModel extends AppViewModel<ViewState> {
             return invoke2(bulkFriendSuggestions);
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final TrackNetworkMetadata2 invoke2(BulkFriendSuggestions bulkFriendSuggestions) {
             return new TrackNetworkActionUserContactsSync();
         }
     }
 
-    /* compiled from: WidgetContactSyncViewModel.kt */
-    /* renamed from: com.discord.widgets.contact_sync.WidgetContactSyncViewModel$onContactsFetched$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.contact_sync.WidgetContactSyncViewModel$onContactsFetched$2 */
+    /* JADX INFO: compiled from: WidgetContactSyncViewModel.kt */
     public static final class C82502 extends Lambda implements Function1<BulkFriendSuggestions, Unit> {
         public C82502() {
             super(1);
@@ -973,15 +989,15 @@ public final class WidgetContactSyncViewModel extends AppViewModel<ViewState> {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(BulkFriendSuggestions bulkFriendSuggestions) {
             Intrinsics3.checkNotNullParameter(bulkFriendSuggestions, "it");
             WidgetContactSyncViewModel.access$handleFriendSuggestions(WidgetContactSyncViewModel.this, bulkFriendSuggestions);
         }
     }
 
-    /* compiled from: WidgetContactSyncViewModel.kt */
-    /* renamed from: com.discord.widgets.contact_sync.WidgetContactSyncViewModel$onContactsFetched$3 */
+    /* JADX INFO: renamed from: com.discord.widgets.contact_sync.WidgetContactSyncViewModel$onContactsFetched$3 */
+    /* JADX INFO: compiled from: WidgetContactSyncViewModel.kt */
     public static final class C82513 extends Lambda implements Function1<Error, Unit> {
         public C82513() {
             super(1);
@@ -993,15 +1009,15 @@ public final class WidgetContactSyncViewModel extends AppViewModel<ViewState> {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Error error) {
             Intrinsics3.checkNotNullParameter(error, "it");
             WidgetContactSyncViewModel.access$handleUploadError(WidgetContactSyncViewModel.this, error);
         }
     }
 
-    /* compiled from: WidgetContactSyncViewModel.kt */
-    /* renamed from: com.discord.widgets.contact_sync.WidgetContactSyncViewModel$onNameSubmitted$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.contact_sync.WidgetContactSyncViewModel$onNameSubmitted$1 */
+    /* JADX INFO: compiled from: WidgetContactSyncViewModel.kt */
     public static final class C82521 extends Lambda implements Function1<ConnectedAccount, TrackNetworkMetadata2> {
         public final /* synthetic */ String $submittingName;
 
@@ -1016,14 +1032,14 @@ public final class WidgetContactSyncViewModel extends AppViewModel<ViewState> {
             return invoke2(connectedAccount);
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final TrackNetworkMetadata2 invoke2(ConnectedAccount connectedAccount) {
             return new TrackNetworkActionUserConnectionsUpdate(this.$submittingName, Boolean.TRUE, null, null, 12);
         }
     }
 
-    /* compiled from: WidgetContactSyncViewModel.kt */
-    /* renamed from: com.discord.widgets.contact_sync.WidgetContactSyncViewModel$onNameSubmitted$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.contact_sync.WidgetContactSyncViewModel$onNameSubmitted$2 */
+    /* JADX INFO: compiled from: WidgetContactSyncViewModel.kt */
     public static final class C82532 extends Lambda implements Function1<ConnectedAccount, Unit> {
         public C82532() {
             super(1);
@@ -1035,15 +1051,15 @@ public final class WidgetContactSyncViewModel extends AppViewModel<ViewState> {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(ConnectedAccount connectedAccount) {
             Intrinsics3.checkNotNullParameter(connectedAccount, "it");
             WidgetContactSyncViewModel.access$handleContactsEnabled(WidgetContactSyncViewModel.this);
         }
     }
 
-    /* compiled from: WidgetContactSyncViewModel.kt */
-    /* renamed from: com.discord.widgets.contact_sync.WidgetContactSyncViewModel$onNameSubmitted$3 */
+    /* JADX INFO: renamed from: com.discord.widgets.contact_sync.WidgetContactSyncViewModel$onNameSubmitted$3 */
+    /* JADX INFO: compiled from: WidgetContactSyncViewModel.kt */
     public static final class C82543 extends Lambda implements Function1<Error, Unit> {
         public C82543() {
             super(1);
@@ -1055,15 +1071,15 @@ public final class WidgetContactSyncViewModel extends AppViewModel<ViewState> {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Error error) {
             Intrinsics3.checkNotNullParameter(error, "it");
             WidgetContactSyncViewModel.access$handleContactsEnableError(WidgetContactSyncViewModel.this, error);
         }
     }
 
-    /* compiled from: WidgetContactSyncViewModel.kt */
-    /* renamed from: com.discord.widgets.contact_sync.WidgetContactSyncViewModel$onNameSubmitted$4 */
+    /* JADX INFO: renamed from: com.discord.widgets.contact_sync.WidgetContactSyncViewModel$onNameSubmitted$4 */
+    /* JADX INFO: compiled from: WidgetContactSyncViewModel.kt */
     public static final class C82554 extends Lambda implements Function1<ConnectedAccount, Unit> {
         public C82554() {
             super(1);
@@ -1075,15 +1091,15 @@ public final class WidgetContactSyncViewModel extends AppViewModel<ViewState> {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(ConnectedAccount connectedAccount) {
             Intrinsics3.checkNotNullParameter(connectedAccount, "it");
             WidgetContactSyncViewModel.access$handleContactsEnabled(WidgetContactSyncViewModel.this);
         }
     }
 
-    /* compiled from: WidgetContactSyncViewModel.kt */
-    /* renamed from: com.discord.widgets.contact_sync.WidgetContactSyncViewModel$onNameSubmitted$5 */
+    /* JADX INFO: renamed from: com.discord.widgets.contact_sync.WidgetContactSyncViewModel$onNameSubmitted$5 */
+    /* JADX INFO: compiled from: WidgetContactSyncViewModel.kt */
     public static final class C82565 extends Lambda implements Function1<Error, Unit> {
         public C82565() {
             super(1);
@@ -1095,15 +1111,15 @@ public final class WidgetContactSyncViewModel extends AppViewModel<ViewState> {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Error error) {
             Intrinsics3.checkNotNullParameter(error, "it");
             WidgetContactSyncViewModel.access$handleContactsEnableError(WidgetContactSyncViewModel.this, error);
         }
     }
 
-    /* compiled from: WidgetContactSyncViewModel.kt */
-    /* renamed from: com.discord.widgets.contact_sync.WidgetContactSyncViewModel$onNameSubmitted$6 */
+    /* JADX INFO: renamed from: com.discord.widgets.contact_sync.WidgetContactSyncViewModel$onNameSubmitted$6 */
+    /* JADX INFO: compiled from: WidgetContactSyncViewModel.kt */
     public static final class C82576 extends Lambda implements Function1<ModelUserSettings, Unit> {
         public static final C82576 INSTANCE = new C82576();
 
@@ -1117,14 +1133,14 @@ public final class WidgetContactSyncViewModel extends AppViewModel<ViewState> {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(ModelUserSettings modelUserSettings) {
             Intrinsics3.checkNotNullParameter(modelUserSettings, "it");
         }
     }
 
-    /* compiled from: WidgetContactSyncViewModel.kt */
-    /* renamed from: com.discord.widgets.contact_sync.WidgetContactSyncViewModel$onNameSubmitted$7 */
+    /* JADX INFO: renamed from: com.discord.widgets.contact_sync.WidgetContactSyncViewModel$onNameSubmitted$7 */
+    /* JADX INFO: compiled from: WidgetContactSyncViewModel.kt */
     public static final class C82587 extends Lambda implements Function1<Error, Unit> {
         public C82587() {
             super(1);
@@ -1136,15 +1152,15 @@ public final class WidgetContactSyncViewModel extends AppViewModel<ViewState> {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Error error) {
             Intrinsics3.checkNotNullParameter(error, "it");
             WidgetContactSyncViewModel.access$handleContactsEnableError(WidgetContactSyncViewModel.this, error);
         }
     }
 
-    /* compiled from: WidgetContactSyncViewModel.kt */
-    /* renamed from: com.discord.widgets.contact_sync.WidgetContactSyncViewModel$onPhoneNumberSubmitted$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.contact_sync.WidgetContactSyncViewModel$onPhoneNumberSubmitted$1 */
+    /* JADX INFO: compiled from: WidgetContactSyncViewModel.kt */
     public static final class C82591 extends Lambda implements Function1<Void, Unit> {
         public C82591() {
             super(1);
@@ -1156,14 +1172,14 @@ public final class WidgetContactSyncViewModel extends AppViewModel<ViewState> {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Void r1) {
             WidgetContactSyncViewModel.access$handlePhoneSubmitted(WidgetContactSyncViewModel.this);
         }
     }
 
-    /* compiled from: WidgetContactSyncViewModel.kt */
-    /* renamed from: com.discord.widgets.contact_sync.WidgetContactSyncViewModel$onPhoneNumberSubmitted$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.contact_sync.WidgetContactSyncViewModel$onPhoneNumberSubmitted$2 */
+    /* JADX INFO: compiled from: WidgetContactSyncViewModel.kt */
     public static final class C82602 extends Lambda implements Function1<Error, Unit> {
         public C82602() {
             super(1);
@@ -1175,7 +1191,7 @@ public final class WidgetContactSyncViewModel extends AppViewModel<ViewState> {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Error error) {
             Intrinsics3.checkNotNullParameter(error, "error");
             if (GrowthTeamFeatures.INSTANCE.isPhoneVerifyCaptchaEnabled() && WidgetCaptcha4.isCaptchaError(error)) {
@@ -1186,8 +1202,8 @@ public final class WidgetContactSyncViewModel extends AppViewModel<ViewState> {
         }
     }
 
-    /* compiled from: WidgetContactSyncViewModel.kt */
-    /* renamed from: com.discord.widgets.contact_sync.WidgetContactSyncViewModel$onVerifyPhone$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.contact_sync.WidgetContactSyncViewModel$onVerifyPhone$1 */
+    /* JADX INFO: compiled from: WidgetContactSyncViewModel.kt */
     public static final class C82611 extends Lambda implements Function1<Void, Unit> {
         public C82611() {
             super(1);
@@ -1199,14 +1215,14 @@ public final class WidgetContactSyncViewModel extends AppViewModel<ViewState> {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Void r1) {
             WidgetContactSyncViewModel.access$handlePhoneVerified(WidgetContactSyncViewModel.this);
         }
     }
 
-    /* compiled from: WidgetContactSyncViewModel.kt */
-    /* renamed from: com.discord.widgets.contact_sync.WidgetContactSyncViewModel$onVerifyPhone$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.contact_sync.WidgetContactSyncViewModel$onVerifyPhone$2 */
+    /* JADX INFO: compiled from: WidgetContactSyncViewModel.kt */
     public static final class C82622 extends Lambda implements Function1<Error, Unit> {
         public C82622() {
             super(1);
@@ -1218,7 +1234,7 @@ public final class WidgetContactSyncViewModel extends AppViewModel<ViewState> {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Error error) {
             Intrinsics3.checkNotNullParameter(error, "it");
             WidgetContactSyncViewModel.access$handlePhoneVerifiedError(WidgetContactSyncViewModel.this, error);

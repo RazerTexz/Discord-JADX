@@ -7,9 +7,9 @@ import java.util.Set;
 import org.checkerframework.checker.nullness.compatqual.NullableDecl;
 import p007b.p225i.p355b.p357b.MapMakerInternalMap;
 
-/* compiled from: ForwardingMap.java */
-/* renamed from: b.i.b.b.l, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.b.b.l, reason: use source file name */
+/* JADX INFO: compiled from: ForwardingMap.java */
+/* JADX INFO: loaded from: classes3.dex */
 public abstract class ForwardingMap<K, V> extends ForwardingObject implements Map<K, V> {
     @Override // java.util.Map
     public void clear() {

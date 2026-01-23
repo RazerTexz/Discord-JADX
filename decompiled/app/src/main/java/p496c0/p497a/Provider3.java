@@ -1,8 +1,8 @@
 package p496c0.p497a;
 
-/* compiled from: Provider.java */
-/* renamed from: c0.a.a, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: c0.a.a, reason: use source file name */
+/* JADX INFO: compiled from: Provider.java */
+/* JADX INFO: loaded from: classes3.dex */
 public interface Provider3<T> {
     T get();
 }

@@ -18,26 +18,26 @@ import p600f0.HttpUrl;
 import p600f0.p601e0.Util7;
 import p600f0.p601e0.p606h.HttpMethod;
 
-/* compiled from: Request.kt */
-/* loaded from: classes3.dex */
+/* JADX INFO: compiled from: Request.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class Request {
 
-    /* renamed from: a, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: a, reason: from kotlin metadata */
     public CacheControl lazyCacheControl;
 
-    /* renamed from: b, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: b, reason: from kotlin metadata */
     public final HttpUrl url;
 
-    /* renamed from: c, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: c, reason: from kotlin metadata */
     public final String method;
 
-    /* renamed from: d, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: d, reason: from kotlin metadata */
     public final Headers headers;
 
-    /* renamed from: e, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: e, reason: from kotlin metadata */
     public final RequestBody body;
 
-    /* renamed from: f, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: f, reason: from kotlin metadata */
     public final Map<Class<?>, Object> tags;
 
     public Request(HttpUrl httpUrl, String str, Headers headers, RequestBody requestBody, Map<Class<?>, ? extends Object> map) {
@@ -52,7 +52,7 @@ public final class Request {
         this.tags = map;
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final CacheControl m10976a() {
         CacheControl cacheControl = this.lazyCacheControl;
         if (cacheControl != null) {
@@ -63,7 +63,7 @@ public final class Request {
         return cacheControlM10108b;
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final String m10977b(String name) {
         Intrinsics3.checkParameterIsNotNull(name, ModelAuditLogEntry.CHANGE_KEY_NAME);
         return this.headers.m10954c(name);
@@ -105,23 +105,23 @@ public final class Request {
         return string;
     }
 
-    /* compiled from: Request.kt */
-    /* renamed from: okhttp3.Request$a */
+    /* JADX INFO: renamed from: okhttp3.Request$a */
+    /* JADX INFO: compiled from: Request.kt */
     public static class C12935a {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public HttpUrl f27543a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public String f27544b;
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public Headers.C12930a f27545c;
 
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         public RequestBody f27546d;
 
-        /* renamed from: e */
+        /* JADX INFO: renamed from: e */
         public Map<Class<?>, Object> f27547e;
 
         public C12935a() {
@@ -130,7 +130,7 @@ public final class Request {
             this.f27545c = new Headers.C12930a();
         }
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public Request m10978a() {
             HttpUrl httpUrl = this.f27543a;
             if (httpUrl != null) {
@@ -139,7 +139,7 @@ public final class Request {
             throw new IllegalStateException("url == null".toString());
         }
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public C12935a m10979b(String str, String str2) {
             Intrinsics3.checkParameterIsNotNull(str, ModelAuditLogEntry.CHANGE_KEY_NAME);
             Intrinsics3.checkParameterIsNotNull(str2, "value");
@@ -155,7 +155,7 @@ public final class Request {
             return this;
         }
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public C12935a m10980c(String str, RequestBody requestBody) {
             Intrinsics3.checkParameterIsNotNull(str, "method");
             if (!(str.length() > 0)) {
@@ -174,14 +174,14 @@ public final class Request {
             return this;
         }
 
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         public C12935a m10981d(String str) {
             Intrinsics3.checkParameterIsNotNull(str, ModelAuditLogEntry.CHANGE_KEY_NAME);
             this.f27545c.m10961d(str);
             return this;
         }
 
-        /* renamed from: e */
+        /* JADX INFO: renamed from: e */
         public <T> C12935a m10982e(Class<? super T> cls, T t) {
             Intrinsics3.checkParameterIsNotNull(cls, "type");
             if (t == null) {
@@ -200,7 +200,7 @@ public final class Request {
             return this;
         }
 
-        /* renamed from: f */
+        /* JADX INFO: renamed from: f */
         public C12935a m10983f(String str) {
             Intrinsics3.checkParameterIsNotNull(str, "url");
             if (StringsJVM.startsWith(str, "ws:", true)) {
@@ -223,7 +223,7 @@ public final class Request {
             return this;
         }
 
-        /* renamed from: g */
+        /* JADX INFO: renamed from: g */
         public C12935a m10984g(HttpUrl httpUrl) {
             Intrinsics3.checkParameterIsNotNull(httpUrl, "url");
             this.f27543a = httpUrl;

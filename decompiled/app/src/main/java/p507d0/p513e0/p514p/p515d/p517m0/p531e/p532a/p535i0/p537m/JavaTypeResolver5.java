@@ -21,16 +21,16 @@ import p507d0.p580t._Collections;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: JavaTypeResolver.kt */
-/* renamed from: d0.e0.p.d.m0.e.a.i0.m.e, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.e.a.i0.m.e, reason: use source file name */
+/* JADX INFO: compiled from: JavaTypeResolver.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class JavaTypeResolver5 {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final FqName f23431a = new FqName("java.lang.Class");
 
-    /* compiled from: JavaTypeResolver.kt */
-    /* renamed from: d0.e0.p.d.m0.e.a.i0.m.e$a */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.e.a.i0.m.e$a */
+    /* JADX INFO: compiled from: JavaTypeResolver.kt */
     public static final class a extends Lambda implements Function0<KotlinType4> {
         public final /* synthetic */ TypeParameterDescriptor $this_getErasedUpperBound;
 

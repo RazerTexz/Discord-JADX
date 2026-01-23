@@ -2,7 +2,6 @@ package com.discord.widgets.chat.list.adapter;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
-import android.content.res.Resources;
 import android.text.Spannable;
 import android.text.SpannableString;
 import android.text.method.LinkMovementMethod;
@@ -73,8 +72,8 @@ import p507d0.p580t.Collections2;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetChatListAdapterItemMessage.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetChatListAdapterItemMessage.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetChatListAdapterItemMessage extends WidgetChatListItem {
     private static final int MAX_REPLY_AST_NODES = 50;
     private final View backgroundHighlight;
@@ -101,8 +100,8 @@ public final class WidgetChatListAdapterItemMessage extends WidgetChatListItem {
     private final ImageView threadEmbedSpine;
     private final View threadStarterMessageHeader;
 
-    /* compiled from: WidgetChatListAdapterItemMessage.kt */
-    /* renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemMessage$configureReplyInteraction$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemMessage$configureReplyInteraction$1 */
+    /* JADX INFO: compiled from: WidgetChatListAdapterItemMessage.kt */
     public static final class ViewOnClickListenerC80981 implements View.OnClickListener {
         public final /* synthetic */ Message $message;
 
@@ -116,8 +115,8 @@ public final class WidgetChatListAdapterItemMessage extends WidgetChatListItem {
         }
     }
 
-    /* compiled from: WidgetChatListAdapterItemMessage.kt */
-    /* renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemMessage$configureReplyPreview$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemMessage$configureReplyPreview$1 */
+    /* JADX INFO: compiled from: WidgetChatListAdapterItemMessage.kt */
     public static final class ViewOnClickListenerC81001 implements View.OnClickListener {
         public final /* synthetic */ Message $repliedMessage;
 
@@ -131,8 +130,8 @@ public final class WidgetChatListAdapterItemMessage extends WidgetChatListItem {
         }
     }
 
-    /* compiled from: WidgetChatListAdapterItemMessage.kt */
-    /* renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemMessage$getMessageRenderContext$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemMessage$getMessageRenderContext$1 */
+    /* JADX INFO: compiled from: WidgetChatListAdapterItemMessage.kt */
     public static final class C81011 extends Lambda implements Function3<Context, String, String, Unit> {
         public static final C81011 INSTANCE = new C81011();
 
@@ -146,7 +145,7 @@ public final class WidgetChatListAdapterItemMessage extends WidgetChatListItem {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Context context, String str, String str2) {
             Intrinsics3.checkNotNullParameter(context, "clickContext");
             Intrinsics3.checkNotNullParameter(str, "url");
@@ -154,8 +153,8 @@ public final class WidgetChatListAdapterItemMessage extends WidgetChatListItem {
         }
     }
 
-    /* compiled from: WidgetChatListAdapterItemMessage.kt */
-    /* renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemMessage$getMessageRenderContext$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemMessage$getMessageRenderContext$2 */
+    /* JADX INFO: compiled from: WidgetChatListAdapterItemMessage.kt */
     public static final class C81022 extends Lambda implements Function1<String, Unit> {
         public C81022() {
             super(1);
@@ -167,15 +166,15 @@ public final class WidgetChatListAdapterItemMessage extends WidgetChatListItem {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(String str) {
             Intrinsics3.checkNotNullParameter(str, "url");
             WidgetChatListAdapterItemMessage.access$getAdapter$p(WidgetChatListAdapterItemMessage.this).getEventHandler().onUrlLongClicked(str);
         }
     }
 
-    /* compiled from: WidgetChatListAdapterItemMessage.kt */
-    /* renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemMessage$getMessageRenderContext$3 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemMessage$getMessageRenderContext$3 */
+    /* JADX INFO: compiled from: WidgetChatListAdapterItemMessage.kt */
     public static final class C81033 extends Lambda implements Function1<Long, Unit> {
         public C81033() {
             super(1);
@@ -193,8 +192,8 @@ public final class WidgetChatListAdapterItemMessage extends WidgetChatListItem {
         }
     }
 
-    /* compiled from: WidgetChatListAdapterItemMessage.kt */
-    /* renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemMessage$getMessageRenderContext$4 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemMessage$getMessageRenderContext$4 */
+    /* JADX INFO: compiled from: WidgetChatListAdapterItemMessage.kt */
     public static final class C81044 extends Lambda implements Function1<Long, Unit> {
         public final /* synthetic */ Context $context;
 
@@ -215,8 +214,8 @@ public final class WidgetChatListAdapterItemMessage extends WidgetChatListItem {
         }
     }
 
-    /* compiled from: WidgetChatListAdapterItemMessage.kt */
-    /* renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemMessage$getSpoilerClickHandler$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemMessage$getSpoilerClickHandler$1 */
+    /* JADX INFO: compiled from: WidgetChatListAdapterItemMessage.kt */
     public static final class C81051 extends Lambda implements Function1<SpoilerNode<?>, Unit> {
         public final /* synthetic */ Message $message;
 
@@ -232,7 +231,7 @@ public final class WidgetChatListAdapterItemMessage extends WidgetChatListItem {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(SpoilerNode<?> spoilerNode) {
             Intrinsics3.checkNotNullParameter(spoilerNode, "spoilerNode");
             StoreStream.INSTANCE.getMessageState().revealSpoiler(this.$message.getId(), spoilerNode.getId());
@@ -240,8 +239,8 @@ public final class WidgetChatListAdapterItemMessage extends WidgetChatListItem {
         }
     }
 
-    /* compiled from: WidgetChatListAdapterItemMessage.kt */
-    /* renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemMessage$onConfigure$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemMessage$onConfigure$1 */
+    /* JADX INFO: compiled from: WidgetChatListAdapterItemMessage.kt */
     public static final class ViewOnClickListenerC81061 implements View.OnClickListener {
         public final /* synthetic */ Message $message;
 
@@ -255,8 +254,8 @@ public final class WidgetChatListAdapterItemMessage extends WidgetChatListItem {
         }
     }
 
-    /* compiled from: WidgetChatListAdapterItemMessage.kt */
-    /* renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemMessage$onConfigure$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemMessage$onConfigure$2 */
+    /* JADX INFO: compiled from: WidgetChatListAdapterItemMessage.kt */
     public static final class C81072 extends Lambda implements Function1<View, Unit> {
         public final /* synthetic */ Message $message;
 
@@ -272,15 +271,15 @@ public final class WidgetChatListAdapterItemMessage extends WidgetChatListItem {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(View view) {
             Intrinsics3.checkNotNullParameter(view, "it");
             WidgetChatListAdapterItemMessage.access$getAdapter$p(WidgetChatListAdapterItemMessage.this).getEventHandler().onMessageAuthorLongClicked(this.$message, Long.valueOf(WidgetChatListAdapterItemMessage.access$getAdapter$p(WidgetChatListAdapterItemMessage.this).getData().getGuildId()));
         }
     }
 
-    /* compiled from: WidgetChatListAdapterItemMessage.kt */
-    /* renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemMessage$onConfigure$3 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemMessage$onConfigure$3 */
+    /* JADX INFO: compiled from: WidgetChatListAdapterItemMessage.kt */
     public static final class ViewOnClickListenerC81083 implements View.OnClickListener {
         public final /* synthetic */ boolean $isThreadStarterMessage;
         public final /* synthetic */ Message $message;
@@ -296,8 +295,8 @@ public final class WidgetChatListAdapterItemMessage extends WidgetChatListItem {
         }
     }
 
-    /* compiled from: WidgetChatListAdapterItemMessage.kt */
-    /* renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemMessage$onConfigure$4 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemMessage$onConfigure$4 */
+    /* JADX INFO: compiled from: WidgetChatListAdapterItemMessage.kt */
     public static final class C81094 extends Lambda implements Function1<View, Unit> {
         public final /* synthetic */ boolean $isThreadStarterMessage;
         public final /* synthetic */ Message $message;
@@ -315,15 +314,15 @@ public final class WidgetChatListAdapterItemMessage extends WidgetChatListItem {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(View view) {
             Intrinsics3.checkNotNullParameter(view, "it");
             WidgetChatListAdapterItemMessage.access$getAdapter$p(WidgetChatListAdapterItemMessage.this).getEventHandler().onMessageLongClicked(this.$message, WidgetChatListAdapterItemMessage.access$getItemText$p(WidgetChatListAdapterItemMessage.this).getText().subSequence(0, Math.max(WidgetChatListAdapterItemMessage.access$getItemText$p(WidgetChatListAdapterItemMessage.this).getText().length() - 1, 0)), this.$isThreadStarterMessage);
         }
     }
 
-    /* compiled from: WidgetChatListAdapterItemMessage.kt */
-    /* renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemMessage$onConfigure$5 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemMessage$onConfigure$5 */
+    /* JADX INFO: compiled from: WidgetChatListAdapterItemMessage.kt */
     public static final class ViewOnClickListenerC81105 implements View.OnClickListener {
         public final /* synthetic */ Message $message;
 
@@ -337,8 +336,8 @@ public final class WidgetChatListAdapterItemMessage extends WidgetChatListItem {
         }
     }
 
-    /* compiled from: WidgetChatListAdapterItemMessage.kt */
-    /* renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemMessage$onConfigure$6 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemMessage$onConfigure$6 */
+    /* JADX INFO: compiled from: WidgetChatListAdapterItemMessage.kt */
     public static final class C81116 extends Lambda implements Function1<View, Unit> {
         public final /* synthetic */ Message $message;
 
@@ -354,7 +353,7 @@ public final class WidgetChatListAdapterItemMessage extends WidgetChatListItem {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(View view) {
             Intrinsics3.checkNotNullParameter(view, "it");
             WidgetChatListAdapterItemMessage.access$getAdapter$p(WidgetChatListAdapterItemMessage.this).getEventHandler().onMessageAuthorLongClicked(this.$message, Long.valueOf(WidgetChatListAdapterItemMessage.access$getAdapter$p(WidgetChatListAdapterItemMessage.this).getData().getGuildId()));
@@ -813,7 +812,7 @@ public final class WidgetChatListAdapterItemMessage extends WidgetChatListItem {
         return null;
     }
 
-    private final void processMessageText(SimpleDraweeSpanTextView textView, MessageEntry messageEntry) throws Resources.NotFoundException {
+    private final void processMessageText(SimpleDraweeSpanTextView textView, MessageEntry messageEntry) {
         String content;
         Integer type;
         Context context = textView.getContext();
@@ -863,7 +862,7 @@ public final class WidgetChatListAdapterItemMessage extends WidgetChatListItem {
     }
 
     @Override // com.discord.widgets.chat.list.adapter.WidgetChatListItem, com.discord.utilities.mg_recycler.MGRecyclerViewHolder
-    public /* bridge */ /* synthetic */ void onConfigure(int i, ChatListEntry chatListEntry) throws Resources.NotFoundException {
+    public /* bridge */ /* synthetic */ void onConfigure(int i, ChatListEntry chatListEntry) {
         onConfigure(i, chatListEntry);
     }
 
@@ -873,7 +872,7 @@ public final class WidgetChatListAdapterItemMessage extends WidgetChatListItem {
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
-    public void onConfigure(int position, ChatListEntry data) throws Resources.NotFoundException {
+    public void onConfigure(int position, ChatListEntry data) {
         TextView textView;
         List<Long> listEmptyList;
         NullSerializable<String> nullSerializableM8288a;

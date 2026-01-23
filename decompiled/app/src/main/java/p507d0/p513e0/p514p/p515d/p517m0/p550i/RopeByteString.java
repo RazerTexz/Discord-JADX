@@ -11,43 +11,43 @@ import java.util.Stack;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p513e0.p514p.p515d.p517m0.p550i.ByteString3;
 
-/* compiled from: RopeByteString.java */
-/* renamed from: d0.e0.p.d.m0.i.r, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.i.r, reason: use source file name */
+/* JADX INFO: compiled from: RopeByteString.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class RopeByteString extends ByteString3 {
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public static final int[] f24154k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final int f24155l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public final ByteString3 f24156m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public final ByteString3 f24157n;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public final int f24158o;
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public final int f24159p;
 
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     public int f24160q = 0;
 
-    /* compiled from: RopeByteString.java */
-    /* renamed from: d0.e0.p.d.m0.i.r$b */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.i.r$b */
+    /* JADX INFO: compiled from: RopeByteString.java */
     public static class b {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final Stack<ByteString3> f24161a = new Stack<>();
 
         public b(a aVar) {
         }
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final void m9860a(ByteString3 byteString3) {
             if (!byteString3.mo9826g()) {
                 if (!(byteString3 instanceof RopeByteString)) {
@@ -93,14 +93,14 @@ public class RopeByteString extends ByteString3 {
         }
     }
 
-    /* compiled from: RopeByteString.java */
-    /* renamed from: d0.e0.p.d.m0.i.r$c */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.i.r$c */
+    /* JADX INFO: compiled from: RopeByteString.java */
     public static class c implements Iterator<LiteralByteString> {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public final Stack<RopeByteString> f24162j = new Stack<>();
 
-        /* renamed from: k */
+        /* JADX INFO: renamed from: k */
         public LiteralByteString f24163k;
 
         public c(ByteString3 byteString3, a aVar) {
@@ -156,17 +156,17 @@ public class RopeByteString extends ByteString3 {
         }
     }
 
-    /* compiled from: RopeByteString.java */
-    /* renamed from: d0.e0.p.d.m0.i.r$d */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.i.r$d */
+    /* JADX INFO: compiled from: RopeByteString.java */
     public class d implements ByteString3.a {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public final c f24164j;
 
-        /* renamed from: k */
+        /* JADX INFO: renamed from: k */
         public ByteString3.a f24165k;
 
-        /* renamed from: l */
+        /* JADX INFO: renamed from: l */
         public int f24166l;
 
         /* JADX WARN: Type inference failed for: r3v3, types: [d0.e0.p.d.m0.i.c$a] */
@@ -241,7 +241,7 @@ public class RopeByteString extends ByteString3 {
         this.f24159p = Math.max(byteString3.mo9825e(), byteString32.mo9825e()) + 1;
     }
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public static LiteralByteString m9859l(ByteString3 byteString3, ByteString3 byteString32) {
         int size = byteString3.size();
         int size2 = byteString32.size();
@@ -252,7 +252,7 @@ public class RopeByteString extends ByteString3 {
     }
 
     @Override // p507d0.p513e0.p514p.p515d.p517m0.p550i.ByteString3
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public void mo9824d(byte[] bArr, int i, int i2, int i3) {
         int i4 = i + i3;
         int i5 = this.f24158o;
@@ -270,7 +270,7 @@ public class RopeByteString extends ByteString3 {
     }
 
     @Override // p507d0.p513e0.p514p.p515d.p517m0.p550i.ByteString3
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public int mo9825e() {
         return this.f24159p;
     }
@@ -331,13 +331,13 @@ public class RopeByteString extends ByteString3 {
     }
 
     @Override // p507d0.p513e0.p514p.p515d.p517m0.p550i.ByteString3
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public boolean mo9826g() {
         return this.f24155l >= f24154k[this.f24159p];
     }
 
     @Override // p507d0.p513e0.p514p.p515d.p517m0.p550i.ByteString3
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public int mo9827h(int i, int i2, int i3) {
         int i4 = i2 + i3;
         int i5 = this.f24158o;
@@ -365,7 +365,7 @@ public class RopeByteString extends ByteString3 {
     }
 
     @Override // p507d0.p513e0.p514p.p515d.p517m0.p550i.ByteString3
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public int mo9828i(int i, int i2, int i3) {
         int i4 = i2 + i3;
         int i5 = this.f24158o;
@@ -387,19 +387,19 @@ public class RopeByteString extends ByteString3 {
     }
 
     @Override // p507d0.p513e0.p514p.p515d.p517m0.p550i.ByteString3, java.lang.Iterable
-    /* renamed from: iterator, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: iterator, reason: avoid collision after fix types in other method */
     public /* bridge */ /* synthetic */ Iterator<Byte> iterator2() {
         return iterator();
     }
 
     @Override // p507d0.p513e0.p514p.p515d.p517m0.p550i.ByteString3
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public int mo9829j() {
         return this.f24160q;
     }
 
     @Override // p507d0.p513e0.p514p.p515d.p517m0.p550i.ByteString3
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public void mo9830k(OutputStream outputStream, int i, int i2) throws IOException {
         int i3 = i + i2;
         int i4 = this.f24158o;

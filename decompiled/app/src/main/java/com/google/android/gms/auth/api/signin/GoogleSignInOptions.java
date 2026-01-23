@@ -28,64 +28,64 @@ import p007b.p225i.p226a.p288f.p292c.p293a.p296f.C3220e;
 import p007b.p225i.p226a.p288f.p292c.p293a.p296f.C3221f;
 import p007b.p225i.p226a.p288f.p299e.p300h.C3266a;
 
-/* compiled from: com.google.android.gms:play-services-base@@17.3.0 */
-/* loaded from: classes3.dex */
+/* JADX INFO: compiled from: com.google.android.gms:play-services-base@@17.3.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public class GoogleSignInOptions extends AbstractSafeParcelable implements C3266a.d, ReflectedParcelable {
     public static final Parcelable.Creator<GoogleSignInOptions> CREATOR;
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static final Scope f20429j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public static final Scope f20430k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public static final Scope f20431l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public static final Scope f20432m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public static final GoogleSignInOptions f20433n;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public static Comparator<Scope> f20434o;
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public final int f20435p;
 
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     public final ArrayList<Scope> f20436q;
 
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     @Nullable
     public Account f20437r;
 
-    /* renamed from: s */
+    /* JADX INFO: renamed from: s */
     public boolean f20438s;
 
-    /* renamed from: t */
+    /* JADX INFO: renamed from: t */
     public final boolean f20439t;
 
-    /* renamed from: u */
+    /* JADX INFO: renamed from: u */
     public final boolean f20440u;
 
-    /* renamed from: v */
+    /* JADX INFO: renamed from: v */
     @Nullable
     public String f20441v;
 
-    /* renamed from: w */
+    /* JADX INFO: renamed from: w */
     @Nullable
     public String f20442w;
 
-    /* renamed from: x */
+    /* JADX INFO: renamed from: x */
     public ArrayList<GoogleSignInOptionsExtensionParcelable> f20443x;
 
-    /* renamed from: y */
+    /* JADX INFO: renamed from: y */
     @Nullable
     public String f20444y;
 
-    /* renamed from: z */
+    /* JADX INFO: renamed from: z */
     public Map<Integer, GoogleSignInOptionsExtensionParcelable> f20445z;
 
     static {
@@ -133,7 +133,7 @@ public class GoogleSignInOptions extends AbstractSafeParcelable implements C3266
     }
 
     @Nullable
-    /* renamed from: x0 */
+    /* JADX INFO: renamed from: x0 */
     public static GoogleSignInOptions m9012x0(@Nullable String str) throws JSONException {
         if (TextUtils.isEmpty(str)) {
             return null;
@@ -149,7 +149,7 @@ public class GoogleSignInOptions extends AbstractSafeParcelable implements C3266
         return new GoogleSignInOptions(3, new ArrayList(hashSet), !TextUtils.isEmpty(strOptString) ? new Account(strOptString, "com.google") : null, jSONObject.getBoolean("idTokenRequested"), jSONObject.getBoolean("serverAuthRequested"), jSONObject.getBoolean("forceCodeForRefreshToken"), jSONObject.has("serverClientId") ? jSONObject.optString("serverClientId") : null, jSONObject.has("hostedDomain") ? jSONObject.optString("hostedDomain") : null, new HashMap(), null);
     }
 
-    /* renamed from: y0 */
+    /* JADX INFO: renamed from: y0 */
     public static Map<Integer, GoogleSignInOptionsExtensionParcelable> m9013y0(@Nullable List<GoogleSignInOptionsExtensionParcelable> list) {
         HashMap map = new HashMap();
         if (list == null) {
@@ -222,7 +222,7 @@ public class GoogleSignInOptions extends AbstractSafeParcelable implements C3266
         return (iHashCode3 * 31) + (str2 != null ? str2.hashCode() : 0);
     }
 
-    /* renamed from: w0 */
+    /* JADX INFO: renamed from: w0 */
     public ArrayList<Scope> m9014w0() {
         return new ArrayList<>(this.f20436q);
     }
@@ -251,38 +251,38 @@ public class GoogleSignInOptions extends AbstractSafeParcelable implements C3266
         AnimatableValueParser.m418A2(parcel, iM594y2);
     }
 
-    /* compiled from: com.google.android.gms:play-services-base@@17.3.0 */
-    /* renamed from: com.google.android.gms.auth.api.signin.GoogleSignInOptions$a */
+    /* JADX INFO: renamed from: com.google.android.gms.auth.api.signin.GoogleSignInOptions$a */
+    /* JADX INFO: compiled from: com.google.android.gms:play-services-base@@17.3.0 */
     public static final class C10794a {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public Set<Scope> f20446a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public boolean f20447b;
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public boolean f20448c;
 
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         public boolean f20449d;
 
-        /* renamed from: e */
+        /* JADX INFO: renamed from: e */
         @Nullable
         public String f20450e;
 
-        /* renamed from: f */
+        /* JADX INFO: renamed from: f */
         @Nullable
         public Account f20451f;
 
-        /* renamed from: g */
+        /* JADX INFO: renamed from: g */
         @Nullable
         public String f20452g;
 
-        /* renamed from: h */
+        /* JADX INFO: renamed from: h */
         public Map<Integer, GoogleSignInOptionsExtensionParcelable> f20453h;
 
-        /* renamed from: i */
+        /* JADX INFO: renamed from: i */
         @Nullable
         public String f20454i;
 
@@ -291,7 +291,7 @@ public class GoogleSignInOptions extends AbstractSafeParcelable implements C3266
             this.f20453h = new HashMap();
         }
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final GoogleSignInOptions m9015a() {
             if (this.f20446a.contains(GoogleSignInOptions.f20432m)) {
                 Set<Scope> set = this.f20446a;

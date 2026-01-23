@@ -28,13 +28,13 @@ import p637j0.p641k.Func1;
 import p658rx.Observable;
 import p658rx.functions.Func2;
 
-/* compiled from: PrivateCallLaunchUtils.kt */
-/* renamed from: com.discord.widgets.voice.call.PrivateCallLaunchUtilsKt, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: com.discord.widgets.voice.call.PrivateCallLaunchUtilsKt, reason: use source file name */
+/* JADX INFO: compiled from: PrivateCallLaunchUtils.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class PrivateCallLaunchUtils {
 
-    /* compiled from: PrivateCallLaunchUtils.kt */
-    /* renamed from: com.discord.widgets.voice.call.PrivateCallLaunchUtilsKt$callAndLaunch$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.voice.call.PrivateCallLaunchUtilsKt$callAndLaunch$1 */
+    /* JADX INFO: compiled from: PrivateCallLaunchUtils.kt */
     public static final class C104081 extends Lambda implements Function0<Unit> {
         public final /* synthetic */ AppComponent $appComponent;
         public final /* synthetic */ long $channelId;
@@ -43,12 +43,12 @@ public final class PrivateCallLaunchUtils {
         public final /* synthetic */ boolean $isVideo;
         public final /* synthetic */ WeakReference $weakContext;
 
-        /* compiled from: PrivateCallLaunchUtils.kt */
-        /* renamed from: com.discord.widgets.voice.call.PrivateCallLaunchUtilsKt$callAndLaunch$1$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.widgets.voice.call.PrivateCallLaunchUtilsKt$callAndLaunch$1$1, reason: invalid class name */
+        /* JADX INFO: compiled from: PrivateCallLaunchUtils.kt */
         public static final class AnonymousClass1<T, R> implements Func1<RtcConnection.StateChange, Boolean> {
             public static final AnonymousClass1 INSTANCE = new AnonymousClass1();
 
-            /* renamed from: call, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
             public final Boolean call2(RtcConnection.StateChange stateChange) {
                 return Boolean.valueOf(stateChange.state == RtcConnection.State.C5612f.f18814a);
             }
@@ -59,12 +59,12 @@ public final class PrivateCallLaunchUtils {
             }
         }
 
-        /* compiled from: PrivateCallLaunchUtils.kt */
-        /* renamed from: com.discord.widgets.voice.call.PrivateCallLaunchUtilsKt$callAndLaunch$1$2, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.widgets.voice.call.PrivateCallLaunchUtilsKt$callAndLaunch$1$2, reason: invalid class name */
+        /* JADX INFO: compiled from: PrivateCallLaunchUtils.kt */
         public static final class AnonymousClass2<T, R> implements Func1<Channel, Long> {
             public static final AnonymousClass2 INSTANCE = new AnonymousClass2();
 
-            /* renamed from: call, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
             public final Long call2(Channel channel) {
                 return Long.valueOf(channel != null ? channel.getId() : -1L);
             }
@@ -75,12 +75,12 @@ public final class PrivateCallLaunchUtils {
             }
         }
 
-        /* compiled from: PrivateCallLaunchUtils.kt */
-        /* renamed from: com.discord.widgets.voice.call.PrivateCallLaunchUtilsKt$callAndLaunch$1$3, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.widgets.voice.call.PrivateCallLaunchUtilsKt$callAndLaunch$1$3, reason: invalid class name */
+        /* JADX INFO: compiled from: PrivateCallLaunchUtils.kt */
         public static final class AnonymousClass3<T1, T2, R> implements Func2<RtcConnection.StateChange, Long, Long> {
             public static final AnonymousClass3 INSTANCE = new AnonymousClass3();
 
-            /* renamed from: call, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
             public final Long call2(RtcConnection.StateChange stateChange, Long l) {
                 return l;
             }
@@ -91,8 +91,8 @@ public final class PrivateCallLaunchUtils {
             }
         }
 
-        /* compiled from: PrivateCallLaunchUtils.kt */
-        /* renamed from: com.discord.widgets.voice.call.PrivateCallLaunchUtilsKt$callAndLaunch$1$4, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.widgets.voice.call.PrivateCallLaunchUtilsKt$callAndLaunch$1$4, reason: invalid class name */
+        /* JADX INFO: compiled from: PrivateCallLaunchUtils.kt */
         public static final class AnonymousClass4 extends Lambda implements Function1<Long, Boolean> {
             public AnonymousClass4() {
                 super(1);
@@ -103,14 +103,14 @@ public final class PrivateCallLaunchUtils {
                 return Boolean.valueOf(invoke2(l));
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final boolean invoke2(Long l) {
                 return l != null && l.longValue() == C104081.this.$channelId;
             }
         }
 
-        /* compiled from: PrivateCallLaunchUtils.kt */
-        /* renamed from: com.discord.widgets.voice.call.PrivateCallLaunchUtilsKt$callAndLaunch$1$5, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.widgets.voice.call.PrivateCallLaunchUtilsKt$callAndLaunch$1$5, reason: invalid class name */
+        /* JADX INFO: compiled from: PrivateCallLaunchUtils.kt */
         public static final class AnonymousClass5 extends Lambda implements Function1<Long, Unit> {
             public AnonymousClass5() {
                 super(1);
@@ -122,7 +122,7 @@ public final class PrivateCallLaunchUtils {
                 return Unit.f27425a;
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2(Long l) {
                 Context context;
                 if (l.longValue() <= 0 || (context = (Context) C104081.this.$weakContext.get()) == null) {
@@ -139,12 +139,12 @@ public final class PrivateCallLaunchUtils {
             }
         }
 
-        /* compiled from: PrivateCallLaunchUtils.kt */
-        /* renamed from: com.discord.widgets.voice.call.PrivateCallLaunchUtilsKt$callAndLaunch$1$6, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.widgets.voice.call.PrivateCallLaunchUtilsKt$callAndLaunch$1$6, reason: invalid class name */
+        /* JADX INFO: compiled from: PrivateCallLaunchUtils.kt */
         public static final class AnonymousClass6 extends Lambda implements Function0<Unit> {
 
-            /* compiled from: PrivateCallLaunchUtils.kt */
-            /* renamed from: com.discord.widgets.voice.call.PrivateCallLaunchUtilsKt$callAndLaunch$1$6$1, reason: invalid class name */
+            /* JADX INFO: renamed from: com.discord.widgets.voice.call.PrivateCallLaunchUtilsKt$callAndLaunch$1$6$1, reason: invalid class name */
+            /* JADX INFO: compiled from: PrivateCallLaunchUtils.kt */
             public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
                 public static final AnonymousClass1 INSTANCE = new AnonymousClass1();
 
@@ -158,7 +158,7 @@ public final class PrivateCallLaunchUtils {
                     return Unit.f27425a;
                 }
 
-                /* renamed from: invoke, reason: avoid collision after fix types in other method */
+                /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
                 public final void invoke2() {
                     StoreStream.INSTANCE.getMediaEngine().selectVideoInputDevice(null);
                 }
@@ -174,7 +174,7 @@ public final class PrivateCallLaunchUtils {
                 return Unit.f27425a;
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2() {
                 StoreCalls calls = StoreStream.INSTANCE.getCalls();
                 C104081 c104081 = C104081.this;
@@ -182,8 +182,8 @@ public final class PrivateCallLaunchUtils {
             }
         }
 
-        /* compiled from: PrivateCallLaunchUtils.kt */
-        /* renamed from: com.discord.widgets.voice.call.PrivateCallLaunchUtilsKt$callAndLaunch$1$7, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.widgets.voice.call.PrivateCallLaunchUtilsKt$callAndLaunch$1$7, reason: invalid class name */
+        /* JADX INFO: compiled from: PrivateCallLaunchUtils.kt */
         public static final class AnonymousClass7 extends Lambda implements Function1<String, Unit> {
             public final /* synthetic */ AnonymousClass6 $doCall$6;
 
@@ -199,7 +199,7 @@ public final class PrivateCallLaunchUtils {
                 return Unit.f27425a;
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2(String str) {
                 if (str != null) {
                     this.$doCall$6.invoke2();
@@ -226,7 +226,7 @@ public final class PrivateCallLaunchUtils {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             StoreStream.Companion companion = StoreStream.INSTANCE;
             Observable observableM11100Z = Observable.m11076j(companion.getRtcConnection().getConnectionState().m11118y(AnonymousClass1.INSTANCE), companion.getVoiceChannelSelected().observeSelectedChannel().m11083G(AnonymousClass2.INSTANCE), AnonymousClass3.INSTANCE).m11108k(C0879o.m177c(new AnonymousClass4(), -1L, 250L, TimeUnit.MILLISECONDS)).m11100Z(1);
@@ -241,8 +241,8 @@ public final class PrivateCallLaunchUtils {
         }
     }
 
-    /* compiled from: PrivateCallLaunchUtils.kt */
-    /* renamed from: com.discord.widgets.voice.call.PrivateCallLaunchUtilsKt$callAndLaunch$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.voice.call.PrivateCallLaunchUtilsKt$callAndLaunch$2 */
+    /* JADX INFO: compiled from: PrivateCallLaunchUtils.kt */
     public static final /* synthetic */ class C104092 extends FunctionReferenceImpl implements Function0<Unit> {
         public final /* synthetic */ C104081 $onPermissionsGranted$1;
 
@@ -258,14 +258,14 @@ public final class PrivateCallLaunchUtils {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             this.$onPermissionsGranted$1.invoke2();
         }
     }
 
-    /* compiled from: PrivateCallLaunchUtils.kt */
-    /* renamed from: com.discord.widgets.voice.call.PrivateCallLaunchUtilsKt$callAndLaunch$3 */
+    /* JADX INFO: renamed from: com.discord.widgets.voice.call.PrivateCallLaunchUtilsKt$callAndLaunch$3 */
+    /* JADX INFO: compiled from: PrivateCallLaunchUtils.kt */
     public static final /* synthetic */ class C104103 extends FunctionReferenceImpl implements Function0<Unit> {
         public final /* synthetic */ C104081 $onPermissionsGranted$1;
 
@@ -281,7 +281,7 @@ public final class PrivateCallLaunchUtils {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             this.$onPermissionsGranted$1.invoke2();
         }

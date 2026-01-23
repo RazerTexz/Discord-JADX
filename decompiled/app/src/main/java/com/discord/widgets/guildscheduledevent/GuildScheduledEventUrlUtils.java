@@ -3,8 +3,8 @@ package com.discord.widgets.guildscheduledevent;
 import com.discord.BuildConfig;
 import com.discord.widgets.chat.input.MentionUtils;
 
-/* compiled from: GuildScheduledEventUrlUtils.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: GuildScheduledEventUrlUtils.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class GuildScheduledEventUrlUtils {
     public static final GuildScheduledEventUrlUtils INSTANCE = new GuildScheduledEventUrlUtils();
 

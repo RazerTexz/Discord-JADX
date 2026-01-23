@@ -2,7 +2,7 @@ package androidx.room;
 
 import androidx.annotation.RequiresApi;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class FtsOptions {
     public static final String TOKENIZER_ICU = "icu";
     public static final String TOKENIZER_PORTER = "porter";

@@ -4,12 +4,12 @@ import org.webrtc.EncodedImage;
 import org.webrtc.VideoEncoder;
 import org.webrtc.VideoEncoderWrapper;
 
-/* compiled from: lambda */
-/* renamed from: h0.c.c0 */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: h0.c.c0 */
+/* JADX INFO: compiled from: lambda */
+/* JADX INFO: loaded from: classes3.dex */
 public final /* synthetic */ class C12455c0 implements VideoEncoder.Callback {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final /* synthetic */ long f26413a;
 
     public /* synthetic */ C12455c0(long j) {

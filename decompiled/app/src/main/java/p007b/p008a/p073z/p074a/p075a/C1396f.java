@@ -6,12 +6,12 @@ import java.util.Map;
 import p007b.p100d.p104b.p105a.outline;
 import p658rx.functions.Func2;
 
-/* compiled from: lambda */
-/* renamed from: b.a.z.a.a.f */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: b.a.z.a.a.f */
+/* JADX INFO: compiled from: lambda */
+/* JADX INFO: loaded from: classes2.dex */
 public final /* synthetic */ class C1396f implements Func2 {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final /* synthetic */ Map f2091j;
 
     public /* synthetic */ C1396f(Map map) {

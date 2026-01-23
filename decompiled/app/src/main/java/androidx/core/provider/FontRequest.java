@@ -9,7 +9,7 @@ import androidx.core.util.Preconditions;
 import java.util.List;
 import p007b.p100d.p104b.p105a.outline;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public final class FontRequest {
     private final List<List<byte[]>> mCertificates;
     private final int mCertificatesArray;

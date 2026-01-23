@@ -7,12 +7,12 @@ import com.discord.widgets.channels.permissions.WidgetChannelSettingsPermissions
 import java.util.List;
 import p658rx.functions.Func4;
 
-/* compiled from: lambda */
-/* renamed from: b.a.z.a.a.j */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: b.a.z.a.a.j */
+/* JADX INFO: compiled from: lambda */
+/* JADX INFO: loaded from: classes2.dex */
 public final /* synthetic */ class C1400j implements Func4 {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final /* synthetic */ Channel f2099a;
 
     public /* synthetic */ C1400j(Channel channel) {

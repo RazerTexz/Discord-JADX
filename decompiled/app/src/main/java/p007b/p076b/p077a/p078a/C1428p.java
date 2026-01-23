@@ -8,12 +8,12 @@ import com.lytefast.flexinput.fragment.FlexInputFragment;
 import kotlin.reflect.KProperty;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: FlexInputFragment.kt */
-/* renamed from: b.b.a.a.p */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.b.a.a.p */
+/* JADX INFO: compiled from: FlexInputFragment.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class C1428p implements OnApplyWindowInsetsListener {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final /* synthetic */ FlexInputFragment f2140a;
 
     public C1428p(FlexInputFragment flexInputFragment) {

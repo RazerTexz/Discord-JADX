@@ -12,12 +12,12 @@ import p007b.p008a.p062y.p068o0.SpeakersItem;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: SpeakersViewHolder.kt */
-/* renamed from: b.a.y.o0.b, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: b.a.y.o0.b, reason: use source file name */
+/* JADX INFO: compiled from: SpeakersViewHolder.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class SpeakersViewHolder2 extends MGRecyclerViewHolder<SpeakersAdapter, SpeakersItem> {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final WidgetDiscoveryOtherSpeakersCountBinding f2053a;
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */

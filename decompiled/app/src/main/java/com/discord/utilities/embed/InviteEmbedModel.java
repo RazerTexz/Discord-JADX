@@ -17,18 +17,18 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p658rx.Observable;
 import p658rx.functions.Func4;
 
-/* compiled from: InviteEmbedModel.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: InviteEmbedModel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final /* data */ class InviteEmbedModel {
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private final Map<Long, Channel> channels;
     private final Map<String, StoreInstantInvites.InviteState> invites;
     private final Map<Long, StoreRequestedStageChannels.StageInstanceState> requestedInstances;
     private final Map<Long, StageInstance> stageInstances;
 
-    /* compiled from: InviteEmbedModel.kt */
+    /* JADX INFO: compiled from: InviteEmbedModel.kt */
     public static final class Companion {
         private Companion() {
         }

@@ -12,22 +12,22 @@ import java.util.SortedSet;
 import org.checkerframework.checker.nullness.compatqual.NullableDecl;
 import p007b.p225i.p226a.p288f.p299e.p308o.C3404f;
 
-/* compiled from: ImmutableSet.java */
-/* renamed from: b.i.b.b.r, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.b.b.r, reason: use source file name */
+/* JADX INFO: compiled from: ImmutableSet.java */
+/* JADX INFO: loaded from: classes3.dex */
 public abstract class ImmutableSet2<E> extends ImmutableCollection<E> implements Set<E> {
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public static final /* synthetic */ int f12057k = 0;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     @RetainedWith
     @NullableDecl
     @LazyInit
     public transient ImmutableList2<E> f12058l;
 
-    /* compiled from: ImmutableSet.java */
-    /* renamed from: b.i.b.b.r$a */
+    /* JADX INFO: renamed from: b.i.b.b.r$a */
+    /* JADX INFO: compiled from: ImmutableSet.java */
     public static class a implements Serializable {
         private static final long serialVersionUID = 0;
         public final Object[] elements;
@@ -41,7 +41,7 @@ public abstract class ImmutableSet2<E> extends ImmutableCollection<E> implements
         }
     }
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public static int m6279k(int i) {
         int iMax = Math.max(i, 2);
         if (iMax >= 751619276) {
@@ -51,13 +51,13 @@ public abstract class ImmutableSet2<E> extends ImmutableCollection<E> implements
             throw new IllegalArgumentException("collection too large");
         }
         int iHighestOneBit = Integer.highestOneBit(iMax - 1) << 1;
-        while (iHighestOneBit * 0.7d < iMax) {
+        while (((double) iHighestOneBit) * 0.7d < iMax) {
             iHighestOneBit <<= 1;
         }
         return iHighestOneBit;
     }
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public static <E> ImmutableSet2<E> m6280l(int i, Object... objArr) {
         if (i == 0) {
             return RegularImmutableSet.f12032m;
@@ -105,7 +105,7 @@ public abstract class ImmutableSet2<E> extends ImmutableCollection<E> implements
         return new RegularImmutableSet(objArr, i3, objArr2, i2, i4);
     }
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public static <E> ImmutableSet2<E> m6281m(Collection<? extends E> collection) {
         if ((collection instanceof ImmutableSet2) && !(collection instanceof SortedSet)) {
             ImmutableSet2<E> immutableSet2 = (ImmutableSet2) collection;
@@ -117,19 +117,19 @@ public abstract class ImmutableSet2<E> extends ImmutableCollection<E> implements
         return m6280l(array.length, array);
     }
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public static <E> ImmutableSet2<E> m6282n(E[] eArr) {
         int length = eArr.length;
         return length != 0 ? length != 1 ? m6280l(eArr.length, (Object[]) eArr.clone()) : new SingletonImmutableSet(eArr[0]) : RegularImmutableSet.f12032m;
     }
 
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     public static <E> ImmutableSet2<E> m6283r(E e, E e2, E e3) {
         return m6280l(3, e, e2, e3);
     }
 
     @Override // p007b.p225i.p355b.p357b.ImmutableCollection
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public ImmutableList2<E> mo6253c() {
         ImmutableList2<E> immutableList2 = this.f12058l;
         if (immutableList2 != null) {
@@ -175,12 +175,12 @@ public abstract class ImmutableSet2<E> extends ImmutableCollection<E> implements
         return mo6251j();
     }
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public ImmutableList2<E> mo6252o() {
         return ImmutableList2.m6261k(toArray());
     }
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public boolean mo6278p() {
         return this instanceof RegularImmutableSet;
     }

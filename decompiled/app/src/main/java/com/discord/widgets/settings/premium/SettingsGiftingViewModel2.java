@@ -9,9 +9,9 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p637j0.p641k.Func1;
 import p658rx.Observable;
 
-/* compiled from: SettingsGiftingViewModel.kt */
-/* renamed from: com.discord.widgets.settings.premium.SettingsGiftingViewModel$Companion$observeStores$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.settings.premium.SettingsGiftingViewModel$Companion$observeStores$1, reason: use source file name */
+/* JADX INFO: compiled from: SettingsGiftingViewModel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class SettingsGiftingViewModel2<T, R> implements Func1<Long, Observable<? extends List<? extends ModelGift>>> {
     public static final SettingsGiftingViewModel2 INSTANCE = new SettingsGiftingViewModel2();
 
@@ -20,7 +20,7 @@ public final class SettingsGiftingViewModel2<T, R> implements Func1<Long, Observ
         return call2(l);
     }
 
-    /* renamed from: call, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
     public final Observable<? extends List<ModelGift>> call2(Long l) {
         StoreGifting gifting = StoreStream.INSTANCE.getGifting();
         Intrinsics3.checkNotNullExpressionValue(l, "meId");

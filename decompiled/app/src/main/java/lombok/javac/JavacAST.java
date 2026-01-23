@@ -28,7 +28,7 @@ import lombok.core.CleanupTask;
 import lombok.core.LombokNode;
 import lombok.permit.Permit;
 
-/* loaded from: discord-126021.apk:lombok/javac/JavacAST.SCL.lombok */
+/* JADX INFO: loaded from: discord-126021.apk:lombok/javac/JavacAST.SCL.lombok */
 public class JavacAST extends AST<JavacAST, JavacNode, JCTree> {
     private final CleanupRegistry cleanup;
     private final JavacElements elements;
@@ -50,7 +50,7 @@ public class JavacAST extends AST<JavacAST, JavacNode, JCTree> {
     private static final ConcurrentMap<Class<?>, Method> getBodyMethods = new ConcurrentHashMap();
 
     @Override // lombok.core.AST
-    protected /* bridge */ /* synthetic */ void setElementInASTCollection(Field field, Object obj, List list, Collection collection, int i, JCTree jCTree) throws IllegalAccessException, IllegalArgumentException {
+    protected /* bridge */ /* synthetic */ void setElementInASTCollection(Field field, Object obj, List list, Collection collection, int i, JCTree jCTree) throws IllegalAccessException {
         setElementInASTCollection2(field, obj, (List<Collection<?>>) list, (Collection<?>) collection, i, jCTree);
     }
 
@@ -228,7 +228,7 @@ public class JavacAST extends AST<JavacAST, JavacNode, JCTree> {
         return this.javacTypes;
     }
 
-    /* renamed from: buildTree, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: buildTree, reason: avoid collision after fix types in other method */
     protected JavacNode buildTree2(JCTree node, AST.Kind kind) {
         switch ($SWITCH_TABLE$lombok$core$AST$Kind()[kind.ordinal()]) {
             case 1:
@@ -486,7 +486,7 @@ public class JavacAST extends AST<JavacAST, JavacNode, JCTree> {
         }
     }
 
-    private Method getBodyMethod(Class<?> c) throws SecurityException {
+    private Method getBodyMethod(Class<?> c) {
         Method m = getBodyMethods.get(c);
         if (m != null) {
             return m;
@@ -578,8 +578,8 @@ public class JavacAST extends AST<JavacAST, JavacNode, JCTree> {
         new CompilerMessageSuppressor(getContext()).removeAllBetween(self.sourcefile, startPos, endPos);
     }
 
-    /* renamed from: setElementInASTCollection, reason: avoid collision after fix types in other method */
-    protected void setElementInASTCollection2(Field field, Object refField, List<Collection<?>> chain, Collection<?> collection, int idx, JCTree newN) throws IllegalAccessException, IllegalArgumentException {
+    /* JADX INFO: renamed from: setElementInASTCollection, reason: avoid collision after fix types in other method */
+    protected void setElementInASTCollection2(Field field, Object refField, List<Collection<?>> chain, Collection<?> collection, int idx, JCTree newN) throws IllegalAccessException {
         com.sun.tools.javac.util.List<?> list = setElementInConsList(chain, collection, ((List) collection).get(idx), newN);
         field.set(refField, list);
     }
@@ -607,7 +607,7 @@ public class JavacAST extends AST<JavacAST, JavacNode, JCTree> {
         return repl ? com.sun.tools.javac.util.List.from(a) : oldL;
     }
 
-    /* loaded from: discord-126021.apk:lombok/javac/JavacAST$ErrorLog.SCL.lombok */
+    /* JADX INFO: loaded from: discord-126021.apk:lombok/javac/JavacAST$ErrorLog.SCL.lombok */
     static abstract class ErrorLog {
         final Log log;
         private final Messager messager;
@@ -659,7 +659,7 @@ public class JavacAST extends AST<JavacAST, JavacNode, JCTree> {
             }
         }
 
-        static ErrorLog create(Messager messager, Log log) throws SecurityException {
+        static ErrorLog create(Messager messager, Log log) {
             Field errorCount;
             Field warningCount;
             try {
@@ -695,7 +695,7 @@ public class JavacAST extends AST<JavacAST, JavacNode, JCTree> {
         }
     }
 
-    /* loaded from: discord-126021.apk:lombok/javac/JavacAST$JdkBefore9.SCL.lombok */
+    /* JADX INFO: loaded from: discord-126021.apk:lombok/javac/JavacAST$JdkBefore9.SCL.lombok */
     static class JdkBefore9 extends ErrorLog {
         /* synthetic */ JdkBefore9(Log log, Messager messager, Field field, JdkBefore9 jdkBefore9) {
             this(log, messager, field);
@@ -732,7 +732,7 @@ public class JavacAST extends AST<JavacAST, JavacNode, JCTree> {
         }
     }
 
-    /* loaded from: discord-126021.apk:lombok/javac/JavacAST$Jdk9Plus.SCL.lombok */
+    /* JADX INFO: loaded from: discord-126021.apk:lombok/javac/JavacAST$Jdk9Plus.SCL.lombok */
     static class Jdk9Plus extends ErrorLog {
         private static final String PROC_MESSAGER = "proc.messager";
         private Object multiple;

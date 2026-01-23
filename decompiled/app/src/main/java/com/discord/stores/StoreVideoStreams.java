@@ -15,17 +15,17 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 import p658rx.Observable;
 
-/* compiled from: StoreVideoStreams.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: StoreVideoStreams.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class StoreVideoStreams extends StoreV2 {
     private final ObservationDeck observationDeck;
     private final HashMap<Long, UserStreams> userStreamsByUser;
     private Map<Long, UserStreams> userStreamsByUserSnapshot;
 
-    /* compiled from: StoreVideoStreams.kt */
+    /* JADX INFO: compiled from: StoreVideoStreams.kt */
     public static final /* data */ class UserStreams {
 
-        /* renamed from: Companion, reason: from kotlin metadata */
+        /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
         public static final Companion INSTANCE = new Companion(null);
         private static final UserStreams Empty = new UserStreams(null, null, null, null);
         private final Integer applicationStreamId;
@@ -34,7 +34,7 @@ public final class StoreVideoStreams extends StoreV2 {
         private final VideoMetadata callStreamMetadata;
         private final boolean isEmpty = Intrinsics3.areEqual(this, Empty);
 
-        /* compiled from: StoreVideoStreams.kt */
+        /* JADX INFO: compiled from: StoreVideoStreams.kt */
         public static final class Companion {
             private Companion() {
             }
@@ -75,22 +75,22 @@ public final class StoreVideoStreams extends StoreV2 {
             return userStreams.copy(num, videoMetadata, num2, videoMetadata2);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final Integer getCallStreamId() {
             return this.callStreamId;
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final VideoMetadata getCallStreamMetadata() {
             return this.callStreamMetadata;
         }
 
-        /* renamed from: component3, reason: from getter */
+        /* JADX INFO: renamed from: component3, reason: from getter */
         public final Integer getApplicationStreamId() {
             return this.applicationStreamId;
         }
 
-        /* renamed from: component4, reason: from getter */
+        /* JADX INFO: renamed from: component4, reason: from getter */
         public final VideoMetadata getApplicationStreamMetadata() {
             return this.applicationStreamMetadata;
         }
@@ -137,7 +137,7 @@ public final class StoreVideoStreams extends StoreV2 {
             return iHashCode3 + (videoMetadata2 != null ? videoMetadata2.hashCode() : 0);
         }
 
-        /* renamed from: isEmpty, reason: from getter */
+        /* JADX INFO: renamed from: isEmpty, reason: from getter */
         public final boolean getIsEmpty() {
             return this.isEmpty;
         }
@@ -156,8 +156,8 @@ public final class StoreVideoStreams extends StoreV2 {
         }
     }
 
-    /* compiled from: StoreVideoStreams.kt */
-    /* renamed from: com.discord.stores.StoreVideoStreams$observeUserStreams$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreVideoStreams$observeUserStreams$1 */
+    /* JADX INFO: compiled from: StoreVideoStreams.kt */
     public static final class C66171 extends Lambda implements Function0<Map<Long, ? extends UserStreams>> {
         public C66171() {
             super(0);
@@ -169,7 +169,7 @@ public final class StoreVideoStreams extends StoreV2 {
         }
 
         @Override // kotlin.jvm.functions.Function0
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final Map<Long, ? extends UserStreams> invoke2() {
             return StoreVideoStreams.access$getUserStreamsByUserSnapshot$p(StoreVideoStreams.this);
         }

@@ -2,9 +2,9 @@ package p007b.p225i.p361c.p369m.p370d.p387t;
 
 import java.util.HashMap;
 
-/* compiled from: RemoveRepeatsStrategy.java */
-/* renamed from: b.i.c.m.d.t.c, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.c.m.d.t.c, reason: use source file name */
+/* JADX INFO: compiled from: RemoveRepeatsStrategy.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class RemoveRepeatsStrategy implements StackTraceTrimmingStrategy {
     public RemoveRepeatsStrategy(int i) {
     }
@@ -12,7 +12,7 @@ public class RemoveRepeatsStrategy implements StackTraceTrimmingStrategy {
     /* JADX WARN: Removed duplicated region for block: B:19:0x0040  */
     /* JADX WARN: Removed duplicated region for block: B:23:0x0054  */
     @Override // p007b.p225i.p361c.p369m.p370d.p387t.StackTraceTrimmingStrategy
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */

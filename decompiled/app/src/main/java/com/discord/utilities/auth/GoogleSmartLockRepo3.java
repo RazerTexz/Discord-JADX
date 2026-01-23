@@ -3,9 +3,9 @@ package com.discord.utilities.auth;
 import kotlin.jvm.internal.DefaultConstructorMarker;
 import p007b.p100d.p104b.p105a.outline;
 
-/* compiled from: GoogleSmartLockRepo.kt */
-/* renamed from: com.discord.utilities.auth.SmartLockSignInAttempt, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.utilities.auth.SmartLockSignInAttempt, reason: use source file name */
+/* JADX INFO: compiled from: GoogleSmartLockRepo.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final /* data */ class GoogleSmartLockRepo3 {
     private final boolean signedInWithoutError;
     private final boolean usedAutomaticCredentials;
@@ -29,12 +29,12 @@ public final /* data */ class GoogleSmartLockRepo3 {
         return googleSmartLockRepo3.copy(z2, z3);
     }
 
-    /* renamed from: component1, reason: from getter */
+    /* JADX INFO: renamed from: component1, reason: from getter */
     public final boolean getUsedAutomaticCredentials() {
         return this.usedAutomaticCredentials;
     }
 
-    /* renamed from: component2, reason: from getter */
+    /* JADX INFO: renamed from: component2, reason: from getter */
     public final boolean getSignedInWithoutError() {
         return this.signedInWithoutError;
     }
@@ -66,6 +66,9 @@ public final /* data */ class GoogleSmartLockRepo3 {
     /* JADX WARN: Type inference failed for: r0v1, types: [int] */
     /* JADX WARN: Type inference failed for: r0v4 */
     /* JADX WARN: Type inference failed for: r0v5 */
+    /* JADX WARN: Type inference failed for: r1v0 */
+    /* JADX WARN: Type inference failed for: r1v1, types: [int] */
+    /* JADX WARN: Type inference failed for: r1v2 */
     public int hashCode() {
         boolean z2 = this.usedAutomaticCredentials;
         ?? r0 = z2;
@@ -74,7 +77,7 @@ public final /* data */ class GoogleSmartLockRepo3 {
         }
         int i = r0 * 31;
         boolean z3 = this.signedInWithoutError;
-        return i + (z3 ? 1 : z3 ? 1 : 0);
+        return i + (z3 ? 1 : z3);
     }
 
     public String toString() {

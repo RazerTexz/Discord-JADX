@@ -3,11 +3,11 @@ package com.google.android.exoplayer2.p505ui;
 import android.R;
 import com.discord.C5419R;
 
-/* renamed from: com.google.android.exoplayer2.ui.R */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: com.google.android.exoplayer2.ui.R */
+/* JADX INFO: loaded from: classes3.dex */
 public final class C10759R {
 
-    /* renamed from: com.google.android.exoplayer2.ui.R$a */
+    /* JADX INFO: renamed from: com.google.android.exoplayer2.ui.R$a */
     public static final class a {
         public static final int androidx_core_ripple_material_light = 2131099679;
         public static final int androidx_core_secondary_text_default_material_light = 2131099680;
@@ -31,7 +31,7 @@ public final class C10759R {
         }
     }
 
-    /* renamed from: com.google.android.exoplayer2.ui.R$b */
+    /* JADX INFO: renamed from: com.google.android.exoplayer2.ui.R$b */
     public static final class b {
         public static final int exo_controls_fastforward = 2131231376;
         public static final int exo_controls_fullscreen_enter = 2131231377;
@@ -129,7 +129,7 @@ public final class C10759R {
         }
     }
 
-    /* renamed from: com.google.android.exoplayer2.ui.R$c */
+    /* JADX INFO: renamed from: com.google.android.exoplayer2.ui.R$c */
     public static final class c {
         public static final int accessibility_action_clickable_span = 2131361830;
         public static final int accessibility_custom_action_0 = 2131361831;
@@ -279,7 +279,7 @@ public final class C10759R {
         }
     }
 
-    /* renamed from: com.google.android.exoplayer2.ui.R$d */
+    /* JADX INFO: renamed from: com.google.android.exoplayer2.ui.R$d */
     public static final class d {
         public static final int cancel_button_image_alpha = 2131427335;
         public static final int exo_media_button_opacity_percentage_disabled = 2131427340;
@@ -290,7 +290,7 @@ public final class C10759R {
         }
     }
 
-    /* renamed from: com.google.android.exoplayer2.ui.R$e */
+    /* JADX INFO: renamed from: com.google.android.exoplayer2.ui.R$e */
     public static final class e {
         public static final int custom_dialog = 2131558460;
         public static final int exo_list_divider = 2131558493;
@@ -324,7 +324,7 @@ public final class C10759R {
         }
     }
 
-    /* renamed from: com.google.android.exoplayer2.ui.R$f */
+    /* JADX INFO: renamed from: com.google.android.exoplayer2.ui.R$f */
     public static final class f {
         public static final int exo_controls_cc_disabled_description = 2131888906;
         public static final int exo_controls_cc_enabled_description = 2131888907;
@@ -386,7 +386,7 @@ public final class C10759R {
         }
     }
 
-    /* renamed from: com.google.android.exoplayer2.ui.R$g */
+    /* JADX INFO: renamed from: com.google.android.exoplayer2.ui.R$g */
     public static final class g {
         public static final int AspectRatioFrameLayout_resize_mode = 0;
         public static final int Capability_queryPatterns = 0;

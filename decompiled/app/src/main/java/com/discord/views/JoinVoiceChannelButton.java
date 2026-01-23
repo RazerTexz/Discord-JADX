@@ -9,18 +9,18 @@ import com.google.android.material.button.MaterialButton;
 import p007b.p008a.p018d.AppToast;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: JoinVoiceChannelButton.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: JoinVoiceChannelButton.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class JoinVoiceChannelButton extends MaterialButton {
 
-    /* compiled from: JoinVoiceChannelButton.kt */
-    /* renamed from: com.discord.views.JoinVoiceChannelButton$a */
+    /* JADX INFO: renamed from: com.discord.views.JoinVoiceChannelButton$a */
+    /* JADX INFO: compiled from: JoinVoiceChannelButton.kt */
     public static final class ViewOnClickListenerC7078a implements View.OnClickListener {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public final /* synthetic */ MaterialButton f19076j;
 
-        /* renamed from: k */
+        /* JADX INFO: renamed from: k */
         public final /* synthetic */ int f19077k;
 
         public ViewOnClickListenerC7078a(MaterialButton materialButton, int i) {
@@ -41,7 +41,7 @@ public final class JoinVoiceChannelButton extends MaterialButton {
         setText(C5419R.string.connect_to_voice);
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final void m8547a(MaterialButton materialButton, @StringRes int i) {
         materialButton.setAlpha(0.3f);
         materialButton.setOnClickListener(new ViewOnClickListenerC7078a(materialButton, i));

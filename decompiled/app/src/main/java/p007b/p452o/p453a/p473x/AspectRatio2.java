@@ -4,19 +4,19 @@ import androidx.annotation.NonNull;
 import androidx.annotation.VisibleForTesting;
 import java.util.HashMap;
 
-/* compiled from: AspectRatio.java */
-/* renamed from: b.o.a.x.a, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.o.a.x.a, reason: use source file name */
+/* JADX INFO: compiled from: AspectRatio.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class AspectRatio2 implements Comparable<AspectRatio2> {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     @VisibleForTesting
     public static final HashMap<String, AspectRatio2> f14248j = new HashMap<>(16);
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final int f14249k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final int f14250l;
 
     public AspectRatio2(int i, int i2) {
@@ -25,7 +25,7 @@ public class AspectRatio2 implements Comparable<AspectRatio2> {
     }
 
     @NonNull
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public static AspectRatio2 m7447f(int i, int i2) {
         int i3 = i;
         int i4 = i2;
@@ -52,13 +52,13 @@ public class AspectRatio2 implements Comparable<AspectRatio2> {
     }
 
     @NonNull
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public static AspectRatio2 m7448g(@NonNull Size3 size3) {
         return m7447f(size3.f14251j, size3.f14252k);
     }
 
     @NonNull
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public static AspectRatio2 m7449h(@NonNull String str) {
         String[] strArrSplit = str.split(":");
         if (strArrSplit.length == 2) {
@@ -86,7 +86,7 @@ public class AspectRatio2 implements Comparable<AspectRatio2> {
         return Float.floatToIntBits(m7450i());
     }
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public float m7450i() {
         return this.f14249k / this.f14250l;
     }

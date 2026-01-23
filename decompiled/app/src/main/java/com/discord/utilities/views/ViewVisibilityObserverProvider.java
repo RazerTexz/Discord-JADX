@@ -6,8 +6,8 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ViewVisibilityObserverProvider.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: ViewVisibilityObserverProvider.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class ViewVisibilityObserverProvider {
     public static final String INLINE_VOICE_FEATURE = "INLINE_VOICE_FEATURE";
     public static final ViewVisibilityObserverProvider INSTANCE = new ViewVisibilityObserverProvider();

@@ -1,7 +1,6 @@
 package androidx.constraintlayout.motion.widget;
 
 import android.content.Context;
-import android.content.res.Resources;
 import android.content.res.TypedArray;
 import android.content.res.XmlResourceParser;
 import android.graphics.RectF;
@@ -37,7 +36,7 @@ import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserException;
 import p007b.p100d.p104b.p105a.outline;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class MotionScene {
     public static final int ANTICIPATE = 4;
     public static final int BOUNCE = 5;
@@ -75,7 +74,7 @@ public class MotionScene {
     private boolean mIgnoreTouch = false;
     private boolean mMotionOutsideRegion = false;
 
-    /* renamed from: androidx.constraintlayout.motion.widget.MotionScene$1 */
+    /* JADX INFO: renamed from: androidx.constraintlayout.motion.widget.MotionScene$1 */
     public class InterpolatorC01791 implements Interpolator {
         public final /* synthetic */ Easing val$easing;
 
@@ -175,13 +174,13 @@ public class MotionScene {
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
-    private void load(Context context, int i) throws Resources.NotFoundException {
+    private void load(Context context, int i) {
         XmlResourceParser xml = context.getResources().getXml(i);
         Transition transition = null;
         try {
             int eventType = xml.getEventType();
             while (true) {
-                char c = 1;
+                byte b2 = 1;
                 if (eventType == 1) {
                     return;
                 }
@@ -194,11 +193,11 @@ public class MotionScene {
                     }
                     switch (name.hashCode()) {
                         case -1349929691:
-                            c = !name.equals("ConstraintSet") ? (char) 65535 : (char) 5;
+                            b2 = !name.equals("ConstraintSet") ? (byte) -1 : (byte) 5;
                             break;
                         case -1239391468:
                             if (name.equals("KeyFrameSet")) {
-                                c = 6;
+                                b2 = 6;
                                 break;
                             }
                             break;
@@ -209,30 +208,30 @@ public class MotionScene {
                             break;
                         case 312750793:
                             if (name.equals("OnClick")) {
-                                c = 3;
+                                b2 = 3;
                                 break;
                             }
                             break;
                         case 327855227:
                             if (name.equals("OnSwipe")) {
-                                c = 2;
+                                b2 = 2;
                                 break;
                             }
                             break;
                         case 793277014:
                             if (name.equals(TAG)) {
-                                c = 0;
+                                b2 = 0;
                                 break;
                             }
                             break;
                         case 1382829617:
                             if (name.equals("StateSet")) {
-                                c = 4;
+                                b2 = 4;
                                 break;
                             }
                             break;
                     }
-                    switch (c) {
+                    switch (b2) {
                         case 0:
                             parseMotionSceneTags(context, xml);
                             break;
@@ -489,7 +488,7 @@ public class MotionScene {
         return -1;
     }
 
-    public ConstraintSet getConstraintSet(Context context, String str) throws Resources.NotFoundException {
+    public ConstraintSet getConstraintSet(Context context, String str) {
         if (this.DEBUG_DESKTOP) {
             System.out.println("id " + str);
             PrintStream printStream = System.out;
@@ -970,7 +969,7 @@ public class MotionScene {
         return this.mConstraintSetMap.get(i);
     }
 
-    public MotionScene(Context context, MotionLayout motionLayout, int i) throws Resources.NotFoundException {
+    public MotionScene(Context context, MotionLayout motionLayout, int i) {
         this.mMotionLayout = motionLayout;
         load(context, i);
         SparseArray<ConstraintSet> sparseArray = this.mConstraintSetMap;
@@ -1040,15 +1039,13 @@ public class MotionScene {
                 typedArrayObtainStyledAttributes.recycle();
             }
 
-            /* JADX WARN: Multi-variable type inference failed */
-            /* JADX WARN: Type inference failed for: r6v5, types: [android.view.View] */
             public void addOnClickListeners(MotionLayout motionLayout, int i, Transition transition) {
                 int i2 = this.mTargetId;
-                MotionLayout motionLayoutFindViewById = motionLayout;
+                View viewFindViewById = motionLayout;
                 if (i2 != -1) {
-                    motionLayoutFindViewById = motionLayout.findViewById(i2);
+                    viewFindViewById = motionLayout.findViewById(i2);
                 }
-                if (motionLayoutFindViewById == null) {
+                if (viewFindViewById == null) {
                     StringBuilder sbM833U = outline.m833U("OnClick could not find id ");
                     sbM833U.append(this.mTargetId);
                     Log.e(MotionScene.TAG, sbM833U.toString());
@@ -1057,7 +1054,7 @@ public class MotionScene {
                 int iAccess$100 = Transition.access$100(transition);
                 int iAccess$000 = Transition.access$000(transition);
                 if (iAccess$100 == -1) {
-                    motionLayoutFindViewById.setOnClickListener(this);
+                    viewFindViewById.setOnClickListener(this);
                     return;
                 }
                 int i3 = this.mMode;
@@ -1067,7 +1064,7 @@ public class MotionScene {
                     z2 = true;
                 }
                 if (z3 || z2) {
-                    motionLayoutFindViewById.setOnClickListener(this);
+                    viewFindViewById.setOnClickListener(this);
                 }
             }
 

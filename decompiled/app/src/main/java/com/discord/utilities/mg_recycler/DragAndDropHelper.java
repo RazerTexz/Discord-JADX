@@ -5,14 +5,14 @@ import androidx.recyclerview.widget.RecyclerView;
 import kotlin.jvm.internal.DefaultConstructorMarker;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: DragAndDropHelper.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: DragAndDropHelper.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class DragAndDropHelper extends ItemTouchHelper.Callback {
     private static final int DEFAULT_DRAG_SCROLL_SPEED = 15;
     private final Adapter adapter;
     private final int dragScrollSpeed;
 
-    /* compiled from: DragAndDropHelper.kt */
+    /* JADX INFO: compiled from: DragAndDropHelper.kt */
     public interface Adapter {
         boolean isValidMove(int fromPosition, int toPosition);
 
@@ -21,7 +21,7 @@ public final class DragAndDropHelper extends ItemTouchHelper.Callback {
         void onItemMove(int fromPosition, int toPosition);
     }
 
-    /* compiled from: DragAndDropHelper.kt */
+    /* JADX INFO: compiled from: DragAndDropHelper.kt */
     public interface DraggableViewHolder {
         boolean canDrag();
 

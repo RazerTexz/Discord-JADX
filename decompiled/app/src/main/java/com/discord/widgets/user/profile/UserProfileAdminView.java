@@ -18,12 +18,12 @@ import kotlin.jvm.functions.Function0;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: UserProfileAdminView.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: UserProfileAdminView.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class UserProfileAdminView extends LinearLayout {
     private final UserProfileAdminViewBinding binding;
 
-    /* compiled from: UserProfileAdminView.kt */
+    /* JADX INFO: compiled from: UserProfileAdminView.kt */
     public static final /* data */ class ViewState {
         private final boolean isAdminSectionEnabled;
         private final boolean isCommunicationDisabled;
@@ -59,67 +59,67 @@ public final class UserProfileAdminView extends LinearLayout {
             return viewState.copy((i & 1) != 0 ? viewState.showEditMemberButton : z2, (i & 2) != 0 ? viewState.showKickButton : z3, (i & 4) != 0 ? viewState.showDisableCommunicationButton : z4, (i & 8) != 0 ? viewState.isMultiUserDM : z5, (i & 16) != 0 ? viewState.showBanButton : z6, (i & 32) != 0 ? viewState.showServerMuteButton : z7, (i & 64) != 0 ? viewState.isServerMuted : z8, (i & 128) != 0 ? viewState.showServerDeafenButton : z9, (i & 256) != 0 ? viewState.isServerDeafened : z10, (i & 512) != 0 ? viewState.showServerMoveAndDisconnectButtons : z11, (i & 1024) != 0 ? viewState.isAdminSectionEnabled : z12, (i & 2048) != 0 ? viewState.isMe : z13, (i & 4096) != 0 ? viewState.isCommunicationDisabled : z14);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final boolean getShowEditMemberButton() {
             return this.showEditMemberButton;
         }
 
-        /* renamed from: component10, reason: from getter */
+        /* JADX INFO: renamed from: component10, reason: from getter */
         public final boolean getShowServerMoveAndDisconnectButtons() {
             return this.showServerMoveAndDisconnectButtons;
         }
 
-        /* renamed from: component11, reason: from getter */
+        /* JADX INFO: renamed from: component11, reason: from getter */
         public final boolean getIsAdminSectionEnabled() {
             return this.isAdminSectionEnabled;
         }
 
-        /* renamed from: component12, reason: from getter */
+        /* JADX INFO: renamed from: component12, reason: from getter */
         public final boolean getIsMe() {
             return this.isMe;
         }
 
-        /* renamed from: component13, reason: from getter */
+        /* JADX INFO: renamed from: component13, reason: from getter */
         public final boolean getIsCommunicationDisabled() {
             return this.isCommunicationDisabled;
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final boolean getShowKickButton() {
             return this.showKickButton;
         }
 
-        /* renamed from: component3, reason: from getter */
+        /* JADX INFO: renamed from: component3, reason: from getter */
         public final boolean getShowDisableCommunicationButton() {
             return this.showDisableCommunicationButton;
         }
 
-        /* renamed from: component4, reason: from getter */
+        /* JADX INFO: renamed from: component4, reason: from getter */
         public final boolean getIsMultiUserDM() {
             return this.isMultiUserDM;
         }
 
-        /* renamed from: component5, reason: from getter */
+        /* JADX INFO: renamed from: component5, reason: from getter */
         public final boolean getShowBanButton() {
             return this.showBanButton;
         }
 
-        /* renamed from: component6, reason: from getter */
+        /* JADX INFO: renamed from: component6, reason: from getter */
         public final boolean getShowServerMuteButton() {
             return this.showServerMuteButton;
         }
 
-        /* renamed from: component7, reason: from getter */
+        /* JADX INFO: renamed from: component7, reason: from getter */
         public final boolean getIsServerMuted() {
             return this.isServerMuted;
         }
 
-        /* renamed from: component8, reason: from getter */
+        /* JADX INFO: renamed from: component8, reason: from getter */
         public final boolean getShowServerDeafenButton() {
             return this.showServerDeafenButton;
         }
 
-        /* renamed from: component9, reason: from getter */
+        /* JADX INFO: renamed from: component9, reason: from getter */
         public final boolean getIsServerDeafened() {
             return this.isServerDeafened;
         }
@@ -171,17 +171,42 @@ public final class UserProfileAdminView extends LinearLayout {
         /* JADX WARN: Type inference failed for: r0v1, types: [int] */
         /* JADX WARN: Type inference failed for: r0v26 */
         /* JADX WARN: Type inference failed for: r0v27 */
-        /* JADX WARN: Type inference failed for: r2v0, types: [boolean] */
-        /* JADX WARN: Type inference failed for: r2v10, types: [boolean] */
-        /* JADX WARN: Type inference failed for: r2v12, types: [boolean] */
-        /* JADX WARN: Type inference failed for: r2v14, types: [boolean] */
-        /* JADX WARN: Type inference failed for: r2v16, types: [boolean] */
-        /* JADX WARN: Type inference failed for: r2v18, types: [boolean] */
-        /* JADX WARN: Type inference failed for: r2v2, types: [boolean] */
-        /* JADX WARN: Type inference failed for: r2v20, types: [boolean] */
-        /* JADX WARN: Type inference failed for: r2v4, types: [boolean] */
-        /* JADX WARN: Type inference failed for: r2v6, types: [boolean] */
-        /* JADX WARN: Type inference failed for: r2v8, types: [boolean] */
+        /* JADX WARN: Type inference failed for: r1v0 */
+        /* JADX WARN: Type inference failed for: r1v1, types: [int] */
+        /* JADX WARN: Type inference failed for: r1v2 */
+        /* JADX WARN: Type inference failed for: r2v1, types: [int] */
+        /* JADX WARN: Type inference failed for: r2v11, types: [int] */
+        /* JADX WARN: Type inference failed for: r2v13, types: [int] */
+        /* JADX WARN: Type inference failed for: r2v15, types: [int] */
+        /* JADX WARN: Type inference failed for: r2v17, types: [int] */
+        /* JADX WARN: Type inference failed for: r2v19, types: [int] */
+        /* JADX WARN: Type inference failed for: r2v21, types: [int] */
+        /* JADX WARN: Type inference failed for: r2v23 */
+        /* JADX WARN: Type inference failed for: r2v24 */
+        /* JADX WARN: Type inference failed for: r2v25 */
+        /* JADX WARN: Type inference failed for: r2v26 */
+        /* JADX WARN: Type inference failed for: r2v27 */
+        /* JADX WARN: Type inference failed for: r2v28 */
+        /* JADX WARN: Type inference failed for: r2v29 */
+        /* JADX WARN: Type inference failed for: r2v3, types: [int] */
+        /* JADX WARN: Type inference failed for: r2v30 */
+        /* JADX WARN: Type inference failed for: r2v31 */
+        /* JADX WARN: Type inference failed for: r2v32 */
+        /* JADX WARN: Type inference failed for: r2v33 */
+        /* JADX WARN: Type inference failed for: r2v34 */
+        /* JADX WARN: Type inference failed for: r2v35 */
+        /* JADX WARN: Type inference failed for: r2v36 */
+        /* JADX WARN: Type inference failed for: r2v37 */
+        /* JADX WARN: Type inference failed for: r2v38 */
+        /* JADX WARN: Type inference failed for: r2v39 */
+        /* JADX WARN: Type inference failed for: r2v40 */
+        /* JADX WARN: Type inference failed for: r2v41 */
+        /* JADX WARN: Type inference failed for: r2v42 */
+        /* JADX WARN: Type inference failed for: r2v43 */
+        /* JADX WARN: Type inference failed for: r2v44 */
+        /* JADX WARN: Type inference failed for: r2v5, types: [int] */
+        /* JADX WARN: Type inference failed for: r2v7, types: [int] */
+        /* JADX WARN: Type inference failed for: r2v9, types: [int] */
         public int hashCode() {
             boolean z2 = this.showEditMemberButton;
             ?? r0 = z2;
@@ -189,74 +214,74 @@ public final class UserProfileAdminView extends LinearLayout {
                 r0 = 1;
             }
             int i = r0 * 31;
-            ?? r2 = this.showKickButton;
-            int i2 = r2;
-            if (r2 != 0) {
-                i2 = 1;
+            boolean z3 = this.showKickButton;
+            ?? r2 = z3;
+            if (z3) {
+                r2 = 1;
             }
-            int i3 = (i + i2) * 31;
-            ?? r22 = this.showDisableCommunicationButton;
-            int i4 = r22;
-            if (r22 != 0) {
-                i4 = 1;
+            int i2 = (i + r2) * 31;
+            boolean z4 = this.showDisableCommunicationButton;
+            ?? r22 = z4;
+            if (z4) {
+                r22 = 1;
             }
-            int i5 = (i3 + i4) * 31;
-            ?? r23 = this.isMultiUserDM;
-            int i6 = r23;
-            if (r23 != 0) {
-                i6 = 1;
+            int i3 = (i2 + r22) * 31;
+            boolean z5 = this.isMultiUserDM;
+            ?? r23 = z5;
+            if (z5) {
+                r23 = 1;
             }
-            int i7 = (i5 + i6) * 31;
-            ?? r24 = this.showBanButton;
-            int i8 = r24;
-            if (r24 != 0) {
-                i8 = 1;
+            int i4 = (i3 + r23) * 31;
+            boolean z6 = this.showBanButton;
+            ?? r24 = z6;
+            if (z6) {
+                r24 = 1;
             }
-            int i9 = (i7 + i8) * 31;
-            ?? r25 = this.showServerMuteButton;
-            int i10 = r25;
-            if (r25 != 0) {
-                i10 = 1;
+            int i5 = (i4 + r24) * 31;
+            boolean z7 = this.showServerMuteButton;
+            ?? r25 = z7;
+            if (z7) {
+                r25 = 1;
             }
-            int i11 = (i9 + i10) * 31;
-            ?? r26 = this.isServerMuted;
-            int i12 = r26;
-            if (r26 != 0) {
-                i12 = 1;
+            int i6 = (i5 + r25) * 31;
+            boolean z8 = this.isServerMuted;
+            ?? r26 = z8;
+            if (z8) {
+                r26 = 1;
             }
-            int i13 = (i11 + i12) * 31;
-            ?? r27 = this.showServerDeafenButton;
-            int i14 = r27;
-            if (r27 != 0) {
-                i14 = 1;
+            int i7 = (i6 + r26) * 31;
+            boolean z9 = this.showServerDeafenButton;
+            ?? r27 = z9;
+            if (z9) {
+                r27 = 1;
             }
-            int i15 = (i13 + i14) * 31;
-            ?? r28 = this.isServerDeafened;
-            int i16 = r28;
-            if (r28 != 0) {
-                i16 = 1;
+            int i8 = (i7 + r27) * 31;
+            boolean z10 = this.isServerDeafened;
+            ?? r28 = z10;
+            if (z10) {
+                r28 = 1;
             }
-            int i17 = (i15 + i16) * 31;
-            ?? r29 = this.showServerMoveAndDisconnectButtons;
-            int i18 = r29;
-            if (r29 != 0) {
-                i18 = 1;
+            int i9 = (i8 + r28) * 31;
+            boolean z11 = this.showServerMoveAndDisconnectButtons;
+            ?? r29 = z11;
+            if (z11) {
+                r29 = 1;
             }
-            int i19 = (i17 + i18) * 31;
-            ?? r210 = this.isAdminSectionEnabled;
-            int i20 = r210;
-            if (r210 != 0) {
-                i20 = 1;
+            int i10 = (i9 + r29) * 31;
+            boolean z12 = this.isAdminSectionEnabled;
+            ?? r210 = z12;
+            if (z12) {
+                r210 = 1;
             }
-            int i21 = (i19 + i20) * 31;
-            ?? r211 = this.isMe;
-            int i22 = r211;
-            if (r211 != 0) {
-                i22 = 1;
+            int i11 = (i10 + r210) * 31;
+            boolean z13 = this.isMe;
+            ?? r211 = z13;
+            if (z13) {
+                r211 = 1;
             }
-            int i23 = (i21 + i22) * 31;
-            boolean z3 = this.isCommunicationDisabled;
-            return i23 + (z3 ? 1 : z3 ? 1 : 0);
+            int i12 = (i11 + r211) * 31;
+            boolean z14 = this.isCommunicationDisabled;
+            return i12 + (z14 ? 1 : z14);
         }
 
         public final boolean isAdminSectionEnabled() {
@@ -313,8 +338,8 @@ public final class UserProfileAdminView extends LinearLayout {
         }
     }
 
-    /* compiled from: UserProfileAdminView.kt */
-    /* renamed from: com.discord.widgets.user.profile.UserProfileAdminView$setOnBan$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.user.profile.UserProfileAdminView$setOnBan$1 */
+    /* JADX INFO: compiled from: UserProfileAdminView.kt */
     public static final class ViewOnClickListenerC102841 implements View.OnClickListener {
         public final /* synthetic */ Function0 $onBan;
 
@@ -328,8 +353,8 @@ public final class UserProfileAdminView extends LinearLayout {
         }
     }
 
-    /* compiled from: UserProfileAdminView.kt */
-    /* renamed from: com.discord.widgets.user.profile.UserProfileAdminView$setOnDisableCommunication$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.user.profile.UserProfileAdminView$setOnDisableCommunication$1 */
+    /* JADX INFO: compiled from: UserProfileAdminView.kt */
     public static final class ViewOnClickListenerC102851 implements View.OnClickListener {
         public final /* synthetic */ Function0 $onDisableCommunication;
 
@@ -343,8 +368,8 @@ public final class UserProfileAdminView extends LinearLayout {
         }
     }
 
-    /* compiled from: UserProfileAdminView.kt */
-    /* renamed from: com.discord.widgets.user.profile.UserProfileAdminView$setOnDisconnect$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.user.profile.UserProfileAdminView$setOnDisconnect$1 */
+    /* JADX INFO: compiled from: UserProfileAdminView.kt */
     public static final class ViewOnClickListenerC102861 implements View.OnClickListener {
         public final /* synthetic */ Function0 $onDisconnect;
 
@@ -358,8 +383,8 @@ public final class UserProfileAdminView extends LinearLayout {
         }
     }
 
-    /* compiled from: UserProfileAdminView.kt */
-    /* renamed from: com.discord.widgets.user.profile.UserProfileAdminView$setOnEditMember$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.user.profile.UserProfileAdminView$setOnEditMember$1 */
+    /* JADX INFO: compiled from: UserProfileAdminView.kt */
     public static final class ViewOnClickListenerC102871 implements View.OnClickListener {
         public final /* synthetic */ Function0 $onEditMember;
 
@@ -373,8 +398,8 @@ public final class UserProfileAdminView extends LinearLayout {
         }
     }
 
-    /* compiled from: UserProfileAdminView.kt */
-    /* renamed from: com.discord.widgets.user.profile.UserProfileAdminView$setOnKick$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.user.profile.UserProfileAdminView$setOnKick$1 */
+    /* JADX INFO: compiled from: UserProfileAdminView.kt */
     public static final class ViewOnClickListenerC102881 implements View.OnClickListener {
         public final /* synthetic */ Function0 $onKick;
 
@@ -388,8 +413,8 @@ public final class UserProfileAdminView extends LinearLayout {
         }
     }
 
-    /* compiled from: UserProfileAdminView.kt */
-    /* renamed from: com.discord.widgets.user.profile.UserProfileAdminView$setOnServerDeafen$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.user.profile.UserProfileAdminView$setOnServerDeafen$1 */
+    /* JADX INFO: compiled from: UserProfileAdminView.kt */
     public static final class ViewOnClickListenerC102891 implements View.OnClickListener {
         public final /* synthetic */ Function0 $onServerDeafen;
 
@@ -403,8 +428,8 @@ public final class UserProfileAdminView extends LinearLayout {
         }
     }
 
-    /* compiled from: UserProfileAdminView.kt */
-    /* renamed from: com.discord.widgets.user.profile.UserProfileAdminView$setOnServerMove$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.user.profile.UserProfileAdminView$setOnServerMove$1 */
+    /* JADX INFO: compiled from: UserProfileAdminView.kt */
     public static final class ViewOnClickListenerC102901 implements View.OnClickListener {
         public final /* synthetic */ Function0 $onServerMove;
 
@@ -418,8 +443,8 @@ public final class UserProfileAdminView extends LinearLayout {
         }
     }
 
-    /* compiled from: UserProfileAdminView.kt */
-    /* renamed from: com.discord.widgets.user.profile.UserProfileAdminView$setOnServerMute$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.user.profile.UserProfileAdminView$setOnServerMute$1 */
+    /* JADX INFO: compiled from: UserProfileAdminView.kt */
     public static final class ViewOnClickListenerC102911 implements View.OnClickListener {
         public final /* synthetic */ Function0 $onServerMute;
 

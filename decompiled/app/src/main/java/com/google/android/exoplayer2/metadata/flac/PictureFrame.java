@@ -11,35 +11,35 @@ import p007b.p225i.p226a.p242c.MediaMetadata;
 import p007b.p225i.p226a.p242c.p259f3.Util2;
 import p007b.p225i.p226a.p242c.p279z2.Metadata2;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public final class PictureFrame implements Metadata.Entry {
     public static final Parcelable.Creator<PictureFrame> CREATOR = new C10722a();
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final int f19947j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final String f19948k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final String f19949l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public final int f19950m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public final int f19951n;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public final int f19952o;
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public final int f19953p;
 
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     public final byte[] f19954q;
 
-    /* renamed from: com.google.android.exoplayer2.metadata.flac.PictureFrame$a */
+    /* JADX INFO: renamed from: com.google.android.exoplayer2.metadata.flac.PictureFrame$a */
     public class C10722a implements Parcelable.Creator<PictureFrame> {
         @Override // android.os.Parcelable.Creator
         public PictureFrame createFromParcel(Parcel parcel) {
@@ -84,13 +84,13 @@ public final class PictureFrame implements Metadata.Entry {
     }
 
     @Override // com.google.android.exoplayer2.metadata.Metadata.Entry
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public void mo8878n(MediaMetadata.b bVar) {
         bVar.m3346b(this.f19954q, this.f19947j);
     }
 
     @Override // com.google.android.exoplayer2.metadata.Metadata.Entry
-    /* renamed from: o0 */
+    /* JADX INFO: renamed from: o0 */
     public /* synthetic */ byte[] mo8879o0() {
         return Metadata2.m3892a(this);
     }
@@ -114,7 +114,7 @@ public final class PictureFrame implements Metadata.Entry {
     }
 
     @Override // com.google.android.exoplayer2.metadata.Metadata.Entry
-    /* renamed from: y */
+    /* JADX INFO: renamed from: y */
     public /* synthetic */ Format2 mo8880y() {
         return Metadata2.m3893b(this);
     }

@@ -41,7 +41,7 @@ import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.util.BitSet;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public class MaterialShapeDrawable extends Drawable implements TintAwareDrawable, Shapeable {
     public static final int SHADOW_COMPAT_MODE_ALWAYS = 2;
     public static final int SHADOW_COMPAT_MODE_DEFAULT = 0;
@@ -85,7 +85,7 @@ public class MaterialShapeDrawable extends Drawable implements TintAwareDrawable
     public @interface CompatibilityShadowMode {
     }
 
-    /* renamed from: com.google.android.material.shape.MaterialShapeDrawable$a */
+    /* JADX INFO: renamed from: com.google.android.material.shape.MaterialShapeDrawable$a */
     public class C10965a implements ShapeAppearancePathProvider.PathListener {
         public C10965a() {
         }
@@ -103,10 +103,10 @@ public class MaterialShapeDrawable extends Drawable implements TintAwareDrawable
         }
     }
 
-    /* renamed from: com.google.android.material.shape.MaterialShapeDrawable$b */
+    /* JADX INFO: renamed from: com.google.android.material.shape.MaterialShapeDrawable$b */
     public class C10966b implements ShapeAppearanceModel.CornerSizeUnaryOperator {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final /* synthetic */ float f21069a;
 
         public C10966b(MaterialShapeDrawable materialShapeDrawable, float f) {
@@ -473,13 +473,11 @@ public class MaterialShapeDrawable extends Drawable implements TintAwareDrawable
     }
 
     public int getShadowOffsetX() {
-        C10967c c10967c = this.drawableState;
-        return (int) (Math.sin(Math.toRadians(c10967c.f21089t)) * c10967c.f21088s);
+        return (int) (Math.sin(Math.toRadians(r0.f21089t)) * ((double) this.drawableState.f21088s));
     }
 
     public int getShadowOffsetY() {
-        C10967c c10967c = this.drawableState;
-        return (int) (Math.cos(Math.toRadians(c10967c.f21089t)) * c10967c.f21088s);
+        return (int) (Math.cos(Math.toRadians(r0.f21089t)) * ((double) this.drawableState.f21088s));
     }
 
     public int getShadowRadius() {
@@ -907,82 +905,82 @@ public class MaterialShapeDrawable extends Drawable implements TintAwareDrawable
         this.pathShadowListener = new C10965a();
     }
 
-    /* renamed from: com.google.android.material.shape.MaterialShapeDrawable$c */
+    /* JADX INFO: renamed from: com.google.android.material.shape.MaterialShapeDrawable$c */
     public static final class C10967c extends Drawable.ConstantState {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         @NonNull
         public ShapeAppearanceModel f21070a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         @Nullable
         public ElevationOverlayProvider f21071b;
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         @Nullable
         public ColorFilter f21072c;
 
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         @Nullable
         public ColorStateList f21073d;
 
-        /* renamed from: e */
+        /* JADX INFO: renamed from: e */
         @Nullable
         public ColorStateList f21074e;
 
-        /* renamed from: f */
+        /* JADX INFO: renamed from: f */
         @Nullable
         public ColorStateList f21075f;
 
-        /* renamed from: g */
+        /* JADX INFO: renamed from: g */
         @Nullable
         public ColorStateList f21076g;
 
-        /* renamed from: h */
+        /* JADX INFO: renamed from: h */
         @Nullable
         public PorterDuff.Mode f21077h;
 
-        /* renamed from: i */
+        /* JADX INFO: renamed from: i */
         @Nullable
         public Rect f21078i;
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public float f21079j;
 
-        /* renamed from: k */
+        /* JADX INFO: renamed from: k */
         public float f21080k;
 
-        /* renamed from: l */
+        /* JADX INFO: renamed from: l */
         public float f21081l;
 
-        /* renamed from: m */
+        /* JADX INFO: renamed from: m */
         public int f21082m;
 
-        /* renamed from: n */
+        /* JADX INFO: renamed from: n */
         public float f21083n;
 
-        /* renamed from: o */
+        /* JADX INFO: renamed from: o */
         public float f21084o;
 
-        /* renamed from: p */
+        /* JADX INFO: renamed from: p */
         public float f21085p;
 
-        /* renamed from: q */
+        /* JADX INFO: renamed from: q */
         public int f21086q;
 
-        /* renamed from: r */
+        /* JADX INFO: renamed from: r */
         public int f21087r;
 
-        /* renamed from: s */
+        /* JADX INFO: renamed from: s */
         public int f21088s;
 
-        /* renamed from: t */
+        /* JADX INFO: renamed from: t */
         public int f21089t;
 
-        /* renamed from: u */
+        /* JADX INFO: renamed from: u */
         public boolean f21090u;
 
-        /* renamed from: v */
+        /* JADX INFO: renamed from: v */
         public Paint.Style f21091v;
 
         public C10967c(ShapeAppearanceModel shapeAppearanceModel, ElevationOverlayProvider elevationOverlayProvider) {

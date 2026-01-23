@@ -15,24 +15,24 @@ import p507d0.p579g0.Strings4;
 import p507d0.p591y.Utils7;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: DefaultConstraint.kt */
-/* renamed from: b0.a.a.e.c, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b0.a.a.e.c, reason: use source file name */
+/* JADX INFO: compiled from: DefaultConstraint.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class DefaultConstraint implements Constraint2 {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public boolean f14506a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final int f14507b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final int f14508c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final Bitmap.CompressFormat f14509d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final int f14510e;
 
     public DefaultConstraint(int i, int i2, Bitmap.CompressFormat compressFormat, int i3) {
@@ -45,7 +45,7 @@ public final class DefaultConstraint implements Constraint2 {
 
     /* JADX WARN: Removed duplicated region for block: B:36:0x010c  */
     @Override // p492b0.p493a.p494a.p495e.Constraint2
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
@@ -162,7 +162,7 @@ public final class DefaultConstraint implements Constraint2 {
     }
 
     @Override // p492b0.p493a.p494a.p495e.Constraint2
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public boolean mo7490b(File file) {
         Intrinsics3.checkParameterIsNotNull(file, "imageFile");
         return this.f14506a;

@@ -6,12 +6,12 @@ import p007b.p109f.p161j.p169d.ResizeOptions;
 import p007b.p109f.p161j.p169d.RotationOptions;
 import p007b.p109f.p161j.p175j.EncodedImage2;
 
-/* compiled from: JpegTranscoderUtils.java */
-/* renamed from: b.f.j.s.d, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.f.j.s.d, reason: use source file name */
+/* JADX INFO: compiled from: JpegTranscoderUtils.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class JpegTranscoderUtils {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final ImmutableList<Integer> f4268a;
 
     static {
@@ -20,7 +20,7 @@ public class JpegTranscoderUtils {
         f4268a = immutableList;
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static int m1532a(RotationOptions rotationOptions, EncodedImage2 encodedImage2) {
         encodedImage2.m1347x();
         int i = encodedImage2.f3895n;
@@ -32,7 +32,7 @@ public class JpegTranscoderUtils {
         throw new IllegalArgumentException("Only accepts inverted exif orientations");
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static int m1533b(RotationOptions rotationOptions, EncodedImage2 encodedImage2) {
         int i = 0;
         if (!rotationOptions.m1250b()) {
@@ -47,7 +47,7 @@ public class JpegTranscoderUtils {
         return rotationOptions.m1251c() ? i : (rotationOptions.m1249a() + i) % 360;
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public static int m1534c(RotationOptions rotationOptions, ResizeOptions resizeOptions, EncodedImage2 encodedImage2, boolean z2) {
         int i;
         int i2;

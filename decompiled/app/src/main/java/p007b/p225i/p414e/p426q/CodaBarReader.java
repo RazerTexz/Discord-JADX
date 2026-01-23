@@ -9,30 +9,30 @@ import p007b.p225i.p414e.DecodeHintType;
 import p007b.p225i.p414e.ResultPoint;
 import p007b.p225i.p414e.p418n.BitArray;
 
-/* compiled from: CodaBarReader.java */
-/* renamed from: b.i.e.q.a, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.e.q.a, reason: use source file name */
+/* JADX INFO: compiled from: CodaBarReader.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class CodaBarReader extends OneDReader {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final char[] f13352a = "0123456789-$:/.+ABCD".toCharArray();
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static final int[] f13353b = {3, 6, 9, 96, 18, 66, 33, 36, 48, 72, 12, 24, 69, 81, 84, 21, 26, 41, 11, 14};
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public static final char[] f13354c = {'A', 'B', 'C', 'D'};
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final StringBuilder f13355d = new StringBuilder(20);
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public int[] f13356e = new int[80];
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public int f13357f = 0;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public static boolean m6982g(char[] cArr, char c) {
         if (cArr != null) {
             for (char c2 : cArr) {
@@ -49,7 +49,7 @@ public final class CodaBarReader extends OneDReader {
         throw com.google.zxing.NotFoundException.f21665l;
      */
     @Override // p007b.p225i.p414e.p426q.OneDReader
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
@@ -191,7 +191,7 @@ public final class CodaBarReader extends OneDReader {
         throw NotFoundException.f21665l;
     }
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public final void m6984h(int i) {
         int[] iArr = this.f13356e;
         int i2 = this.f13357f;
@@ -205,7 +205,7 @@ public final class CodaBarReader extends OneDReader {
         }
     }
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public final int m6985i(int i) {
         int i2 = i + 7;
         if (i2 >= this.f13357f) {

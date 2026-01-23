@@ -6,9 +6,9 @@ import p001a0.p002a.p003a.C0002b;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: VoiceQuality.kt */
-/* renamed from: co.discord.media_engine.InboundAudio, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: co.discord.media_engine.InboundAudio, reason: use source file name */
+/* JADX INFO: compiled from: VoiceQuality.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class VoiceQuality3 {
     private final VoiceQuality4 bufferStats;
     private final VoiceQuality5 frameOpStats;
@@ -37,42 +37,42 @@ public final /* data */ class VoiceQuality3 {
         return voiceQuality3.copy((i2 & 1) != 0 ? voiceQuality3.packetsReceived : j, (i2 & 2) != 0 ? voiceQuality3.packetsLost : j2, (i2 & 4) != 0 ? voiceQuality3.mos : d, (i2 & 8) != 0 ? voiceQuality3.mosSum : d2, (i2 & 16) != 0 ? voiceQuality3.mosCount : i, (i2 & 32) != 0 ? voiceQuality3.mosBuckets : numArr, (i2 & 64) != 0 ? voiceQuality3.bufferStats : voiceQuality4, (i2 & 128) != 0 ? voiceQuality3.frameOpStats : voiceQuality5);
     }
 
-    /* renamed from: component1, reason: from getter */
+    /* JADX INFO: renamed from: component1, reason: from getter */
     public final long getPacketsReceived() {
         return this.packetsReceived;
     }
 
-    /* renamed from: component2, reason: from getter */
+    /* JADX INFO: renamed from: component2, reason: from getter */
     public final long getPacketsLost() {
         return this.packetsLost;
     }
 
-    /* renamed from: component3, reason: from getter */
+    /* JADX INFO: renamed from: component3, reason: from getter */
     public final double getMos() {
         return this.mos;
     }
 
-    /* renamed from: component4, reason: from getter */
+    /* JADX INFO: renamed from: component4, reason: from getter */
     public final double getMosSum() {
         return this.mosSum;
     }
 
-    /* renamed from: component5, reason: from getter */
+    /* JADX INFO: renamed from: component5, reason: from getter */
     public final int getMosCount() {
         return this.mosCount;
     }
 
-    /* renamed from: component6, reason: from getter */
+    /* JADX INFO: renamed from: component6, reason: from getter */
     public final Integer[] getMosBuckets() {
         return this.mosBuckets;
     }
 
-    /* renamed from: component7, reason: from getter */
+    /* JADX INFO: renamed from: component7, reason: from getter */
     public final VoiceQuality4 getBufferStats() {
         return this.bufferStats;
     }
 
-    /* renamed from: component8, reason: from getter */
+    /* JADX INFO: renamed from: component8, reason: from getter */
     public final VoiceQuality5 getFrameOpStats() {
         return this.frameOpStats;
     }

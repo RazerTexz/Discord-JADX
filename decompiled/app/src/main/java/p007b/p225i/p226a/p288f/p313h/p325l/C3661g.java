@@ -28,53 +28,53 @@ import p007b.p225i.p226a.p288f.p299e.p310p.C3411b;
 import p007b.p225i.p226a.p288f.p330i.p331a.C3967a;
 import p007b.p225i.p226a.p288f.p330i.p332b.InterfaceC4258z5;
 
-/* compiled from: com.google.android.gms:play-services-measurement-sdk-api@@18.0.0 */
-/* renamed from: b.i.a.f.h.l.g */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.h.l.g */
+/* JADX INFO: compiled from: com.google.android.gms:play-services-measurement-sdk-api@@18.0.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public class C3661g {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static volatile C3661g f9946a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static Boolean f9947b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final String f9948c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final InterfaceC3400b f9949d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final ExecutorService f9950e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final C3967a f9951f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     @GuardedBy("listenerList")
     public final List<Pair<InterfaceC4258z5, c>> f9952g;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public int f9953h;
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public boolean f9954i;
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public volatile InterfaceC3646ec f9955j;
 
-    /* compiled from: com.google.android.gms:play-services-measurement-sdk-api@@18.0.0 */
-    /* renamed from: b.i.a.f.h.l.g$a */
+    /* JADX INFO: renamed from: b.i.a.f.h.l.g$a */
+    /* JADX INFO: compiled from: com.google.android.gms:play-services-measurement-sdk-api@@18.0.0 */
     public abstract class a implements Runnable {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public final long f9956j;
 
-        /* renamed from: k */
+        /* JADX INFO: renamed from: k */
         public final long f9957k;
 
-        /* renamed from: l */
+        /* JADX INFO: renamed from: l */
         public final boolean f9958l;
 
         public a(boolean z2) {
@@ -85,10 +85,10 @@ public class C3661g {
             this.f9958l = z2;
         }
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public abstract void mo4521a() throws RemoteException;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public void mo4887b() {
         }
 
@@ -107,8 +107,8 @@ public class C3661g {
         }
     }
 
-    /* compiled from: com.google.android.gms:play-services-measurement-sdk-api@@18.0.0 */
-    /* renamed from: b.i.a.f.h.l.g$b */
+    /* JADX INFO: renamed from: b.i.a.f.h.l.g$b */
+    /* JADX INFO: compiled from: com.google.android.gms:play-services-measurement-sdk-api@@18.0.0 */
     public class b implements Application.ActivityLifecycleCallbacks {
         public b() {
         }
@@ -161,11 +161,11 @@ public class C3661g {
         }
     }
 
-    /* compiled from: com.google.android.gms:play-services-measurement-sdk-api@@18.0.0 */
-    /* renamed from: b.i.a.f.h.l.g$c */
+    /* JADX INFO: renamed from: b.i.a.f.h.l.g$c */
+    /* JADX INFO: compiled from: com.google.android.gms:play-services-measurement-sdk-api@@18.0.0 */
     public static class c extends AbstractBinderC3591b {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final InterfaceC4258z5 f9961a;
 
         public c(InterfaceC4258z5 interfaceC4258z5) {
@@ -173,13 +173,13 @@ public class C3661g {
         }
 
         @Override // p007b.p225i.p226a.p288f.p313h.p325l.InterfaceC3605c
-        /* renamed from: Z */
+        /* JADX INFO: renamed from: Z */
         public final void mo4572Z(String str, String str2, Bundle bundle, long j) {
             this.f9961a.mo5979a(str, str2, bundle, j);
         }
 
         @Override // p007b.p225i.p226a.p288f.p313h.p325l.InterfaceC3605c
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final int mo4573a() {
             return System.identityHashCode(this.f9961a);
         }
@@ -236,7 +236,7 @@ public class C3661g {
         }
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static C3661g m4882a(Context context, String str, String str2, String str3, Bundle bundle) {
         Objects.requireNonNull(context, "null reference");
         if (f9946a == null) {
@@ -249,7 +249,7 @@ public class C3661g {
         return f9946a;
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public static void m4883d(Context context) {
         ApplicationInfo applicationInfoM4373a;
         Bundle bundle;
@@ -280,7 +280,7 @@ public class C3661g {
         }
     }
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public static boolean m4884e(String str, String str2) {
         boolean z2;
         if (str2 != null && str != null) {
@@ -297,7 +297,7 @@ public class C3661g {
         return false;
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final void m4885b(Exception exc, boolean z2, boolean z3) {
         this.f9954i |= z2;
         if (z2) {
@@ -310,7 +310,7 @@ public class C3661g {
         Log.w(this.f9948c, "Error with data collection. Data lost.", exc);
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final void m4886c(String str, String str2, Bundle bundle, boolean z2, boolean z3, Long l) {
         this.f9950e.execute(new C3606c0(this, null, str, str2, bundle, z2, z3));
     }

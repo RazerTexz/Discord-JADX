@@ -13,7 +13,6 @@ import com.discord.utilities.p501rx.ObservableExtensionsKt;
 import com.discord.utilities.rest.RestAPI;
 import com.discord.utilities.time.Clock;
 import com.google.gson.Gson;
-import com.google.gson.JsonIOException;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collection;
@@ -39,8 +38,8 @@ import p658rx.Observable;
 import p658rx.subjects.PublishSubject;
 import retrofit2.HttpException;
 
-/* compiled from: StoreGooglePlayPurchases.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: StoreGooglePlayPurchases.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class StoreGooglePlayPurchases extends StoreV2 {
     private static final long CACHED_ANALYTICS_TTL = 259200000;
     private static final String CACHE_KEY_PAYMENT_FLOW_ANALYTICS = "CACHE_KEY_PAYMENT_FLOW_ANALYTICS";
@@ -57,7 +56,7 @@ public final class StoreGooglePlayPurchases extends StoreV2 {
     private State storeState;
     private State storeStateSnapshot;
 
-    /* compiled from: StoreGooglePlayPurchases.kt */
+    /* JADX INFO: compiled from: StoreGooglePlayPurchases.kt */
     public static final /* data */ class AnalyticsTrait {
         private final Traits.Location locationTrait;
         private final Traits.Payment paymentTrait;
@@ -80,27 +79,27 @@ public final class StoreGooglePlayPurchases extends StoreV2 {
             return analyticsTrait.copy((i & 1) != 0 ? analyticsTrait.skuId : j, (i & 2) != 0 ? analyticsTrait.timestamp : j2, (i & 4) != 0 ? analyticsTrait.locationTrait : location, (i & 8) != 0 ? analyticsTrait.storeSkuTrait : storeSku, (i & 16) != 0 ? analyticsTrait.paymentTrait : payment);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final long getSkuId() {
             return this.skuId;
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final long getTimestamp() {
             return this.timestamp;
         }
 
-        /* renamed from: component3, reason: from getter */
+        /* JADX INFO: renamed from: component3, reason: from getter */
         public final Traits.Location getLocationTrait() {
             return this.locationTrait;
         }
 
-        /* renamed from: component4, reason: from getter */
+        /* JADX INFO: renamed from: component4, reason: from getter */
         public final Traits.StoreSku getStoreSkuTrait() {
             return this.storeSkuTrait;
         }
 
-        /* renamed from: component5, reason: from getter */
+        /* JADX INFO: renamed from: component5, reason: from getter */
         public final Traits.Payment getPaymentTrait() {
             return this.paymentTrait;
         }
@@ -169,10 +168,10 @@ public final class StoreGooglePlayPurchases extends StoreV2 {
         }
     }
 
-    /* compiled from: StoreGooglePlayPurchases.kt */
+    /* JADX INFO: compiled from: StoreGooglePlayPurchases.kt */
     public static abstract class Event {
 
-        /* compiled from: StoreGooglePlayPurchases.kt */
+        /* JADX INFO: compiled from: StoreGooglePlayPurchases.kt */
         public static final /* data */ class PurchaseQueryFailure extends Event {
             private final String newSkuName;
 
@@ -190,7 +189,7 @@ public final class StoreGooglePlayPurchases extends StoreV2 {
                 return purchaseQueryFailure.copy(str);
             }
 
-            /* renamed from: component1, reason: from getter */
+            /* JADX INFO: renamed from: component1, reason: from getter */
             public final String getNewSkuName() {
                 return this.newSkuName;
             }
@@ -224,7 +223,7 @@ public final class StoreGooglePlayPurchases extends StoreV2 {
             }
         }
 
-        /* compiled from: StoreGooglePlayPurchases.kt */
+        /* JADX INFO: compiled from: StoreGooglePlayPurchases.kt */
         public static final /* data */ class PurchaseQuerySuccess extends Event {
             private final String giftCode;
             private final String newSkuName;
@@ -251,22 +250,22 @@ public final class StoreGooglePlayPurchases extends StoreV2 {
                 return purchaseQuerySuccess.copy(str, l, l2, str2);
             }
 
-            /* renamed from: component1, reason: from getter */
+            /* JADX INFO: renamed from: component1, reason: from getter */
             public final String getNewSkuName() {
                 return this.newSkuName;
             }
 
-            /* renamed from: component2, reason: from getter */
+            /* JADX INFO: renamed from: component2, reason: from getter */
             public final Long getSkuId() {
                 return this.skuId;
             }
 
-            /* renamed from: component3, reason: from getter */
+            /* JADX INFO: renamed from: component3, reason: from getter */
             public final Long getSubscriptionPlanId() {
                 return this.subscriptionPlanId;
             }
 
-            /* renamed from: component4, reason: from getter */
+            /* JADX INFO: renamed from: component4, reason: from getter */
             public final String getGiftCode() {
                 return this.giftCode;
             }
@@ -344,10 +343,10 @@ public final class StoreGooglePlayPurchases extends StoreV2 {
         }
     }
 
-    /* compiled from: StoreGooglePlayPurchases.kt */
+    /* JADX INFO: compiled from: StoreGooglePlayPurchases.kt */
     public static abstract class QueryState {
 
-        /* compiled from: StoreGooglePlayPurchases.kt */
+        /* JADX INFO: compiled from: StoreGooglePlayPurchases.kt */
         public static final class InProgress extends QueryState {
             public static final InProgress INSTANCE = new InProgress();
 
@@ -356,7 +355,7 @@ public final class StoreGooglePlayPurchases extends StoreV2 {
             }
         }
 
-        /* compiled from: StoreGooglePlayPurchases.kt */
+        /* JADX INFO: compiled from: StoreGooglePlayPurchases.kt */
         public static final class NotInProgress extends QueryState {
             public static final NotInProgress INSTANCE = new NotInProgress();
 
@@ -373,10 +372,10 @@ public final class StoreGooglePlayPurchases extends StoreV2 {
         }
     }
 
-    /* compiled from: StoreGooglePlayPurchases.kt */
+    /* JADX INFO: compiled from: StoreGooglePlayPurchases.kt */
     public static abstract class State {
 
-        /* compiled from: StoreGooglePlayPurchases.kt */
+        /* JADX INFO: compiled from: StoreGooglePlayPurchases.kt */
         public static final class Uninitialized extends State {
             public static final Uninitialized INSTANCE = new Uninitialized();
 
@@ -388,7 +387,7 @@ public final class StoreGooglePlayPurchases extends StoreV2 {
         private State() {
         }
 
-        /* compiled from: StoreGooglePlayPurchases.kt */
+        /* JADX INFO: compiled from: StoreGooglePlayPurchases.kt */
         public static final /* data */ class Loaded extends State {
             private final List<Purchase> iapPurchases;
             private final StoreGooglePlayPurchases2 pendingDowngrade;
@@ -420,7 +419,7 @@ public final class StoreGooglePlayPurchases extends StoreV2 {
                 return this.iapPurchases;
             }
 
-            /* renamed from: component3, reason: from getter */
+            /* JADX INFO: renamed from: component3, reason: from getter */
             public final StoreGooglePlayPurchases2 getPendingDowngrade() {
                 return this.pendingDowngrade;
             }
@@ -495,7 +494,7 @@ public final class StoreGooglePlayPurchases extends StoreV2 {
         }
     }
 
-    /* compiled from: StoreGooglePlayPurchases.kt */
+    /* JADX INFO: compiled from: StoreGooglePlayPurchases.kt */
     public static final /* data */ class VerificationResult {
         private final RestAPIParams.VerifyPurchaseResponse apiResponse;
         private final Purchase purchase;
@@ -516,12 +515,12 @@ public final class StoreGooglePlayPurchases extends StoreV2 {
             return verificationResult.copy(purchase, verifyPurchaseResponse);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final Purchase getPurchase() {
             return this.purchase;
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final RestAPIParams.VerifyPurchaseResponse getApiResponse() {
             return this.apiResponse;
         }
@@ -567,8 +566,8 @@ public final class StoreGooglePlayPurchases extends StoreV2 {
         }
     }
 
-    /* compiled from: StoreGooglePlayPurchases.kt */
-    /* renamed from: com.discord.stores.StoreGooglePlayPurchases$doDowngrade$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreGooglePlayPurchases$doDowngrade$1 */
+    /* JADX INFO: compiled from: StoreGooglePlayPurchases.kt */
     public static final /* synthetic */ class C60021 extends FunctionReferenceImpl implements Function1<Throwable, Boolean> {
         public C60021(StoreGooglePlayPurchases storeGooglePlayPurchases) {
             super(1, storeGooglePlayPurchases, StoreGooglePlayPurchases.class, "shouldRetryDowngrade", "shouldRetryDowngrade(Ljava/lang/Throwable;)Z", 0);
@@ -579,20 +578,20 @@ public final class StoreGooglePlayPurchases extends StoreV2 {
             return Boolean.valueOf(invoke2(th));
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final boolean invoke2(Throwable th) {
             Intrinsics3.checkNotNullParameter(th, "p1");
             return StoreGooglePlayPurchases.access$shouldRetryDowngrade((StoreGooglePlayPurchases) this.receiver, th);
         }
     }
 
-    /* compiled from: StoreGooglePlayPurchases.kt */
-    /* renamed from: com.discord.stores.StoreGooglePlayPurchases$doDowngrade$2 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreGooglePlayPurchases$doDowngrade$2 */
+    /* JADX INFO: compiled from: StoreGooglePlayPurchases.kt */
     public static final class C60032 extends Lambda implements Function1<Object, Unit> {
         public final /* synthetic */ String $newSkuName;
 
-        /* compiled from: StoreGooglePlayPurchases.kt */
-        /* renamed from: com.discord.stores.StoreGooglePlayPurchases$doDowngrade$2$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.stores.StoreGooglePlayPurchases$doDowngrade$2$1, reason: invalid class name */
+        /* JADX INFO: compiled from: StoreGooglePlayPurchases.kt */
         public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
             public AnonymousClass1() {
                 super(0);
@@ -604,7 +603,7 @@ public final class StoreGooglePlayPurchases extends StoreV2 {
                 return Unit.f27425a;
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2() {
                 C60032 c60032 = C60032.this;
                 StoreGooglePlayPurchases.access$handleDowngradeSuccess(StoreGooglePlayPurchases.this, c60032.$newSkuName);
@@ -623,19 +622,19 @@ public final class StoreGooglePlayPurchases extends StoreV2 {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Object obj) {
             StoreGooglePlayPurchases.access$getDispatcher$p(StoreGooglePlayPurchases.this).schedule(new AnonymousClass1());
         }
     }
 
-    /* compiled from: StoreGooglePlayPurchases.kt */
-    /* renamed from: com.discord.stores.StoreGooglePlayPurchases$doDowngrade$3 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreGooglePlayPurchases$doDowngrade$3 */
+    /* JADX INFO: compiled from: StoreGooglePlayPurchases.kt */
     public static final class C60043 extends Lambda implements Function1<Error, Unit> {
         public final /* synthetic */ String $newSkuName;
 
-        /* compiled from: StoreGooglePlayPurchases.kt */
-        /* renamed from: com.discord.stores.StoreGooglePlayPurchases$doDowngrade$3$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.stores.StoreGooglePlayPurchases$doDowngrade$3$1, reason: invalid class name */
+        /* JADX INFO: compiled from: StoreGooglePlayPurchases.kt */
         public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
             public AnonymousClass1() {
                 super(0);
@@ -647,7 +646,7 @@ public final class StoreGooglePlayPurchases extends StoreV2 {
                 return Unit.f27425a;
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2() {
                 C60043 c60043 = C60043.this;
                 StoreGooglePlayPurchases.access$handleDowngradeFailure(StoreGooglePlayPurchases.this, c60043.$newSkuName);
@@ -666,15 +665,15 @@ public final class StoreGooglePlayPurchases extends StoreV2 {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Error error) {
             Intrinsics3.checkNotNullParameter(error, "it");
             StoreGooglePlayPurchases.access$getDispatcher$p(StoreGooglePlayPurchases.this).schedule(new AnonymousClass1());
         }
     }
 
-    /* compiled from: StoreGooglePlayPurchases.kt */
-    /* renamed from: com.discord.stores.StoreGooglePlayPurchases$downgradePurchase$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreGooglePlayPurchases$downgradePurchase$1 */
+    /* JADX INFO: compiled from: StoreGooglePlayPurchases.kt */
     public static final class C60051 extends Lambda implements Function0<Unit> {
         public C60051() {
             super(0);
@@ -686,7 +685,7 @@ public final class StoreGooglePlayPurchases extends StoreV2 {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             State stateAccess$getStoreState$p = StoreGooglePlayPurchases.access$getStoreState$p(StoreGooglePlayPurchases.this);
             if (stateAccess$getStoreState$p instanceof State.Loaded) {
@@ -700,8 +699,8 @@ public final class StoreGooglePlayPurchases extends StoreV2 {
         }
     }
 
-    /* compiled from: StoreGooglePlayPurchases.kt */
-    /* renamed from: com.discord.stores.StoreGooglePlayPurchases$observeQueryState$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreGooglePlayPurchases$observeQueryState$1 */
+    /* JADX INFO: compiled from: StoreGooglePlayPurchases.kt */
     public static final class C60071 extends Lambda implements Function0<QueryState> {
         public C60071() {
             super(0);
@@ -719,8 +718,8 @@ public final class StoreGooglePlayPurchases extends StoreV2 {
         }
     }
 
-    /* compiled from: StoreGooglePlayPurchases.kt */
-    /* renamed from: com.discord.stores.StoreGooglePlayPurchases$observeState$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreGooglePlayPurchases$observeState$1 */
+    /* JADX INFO: compiled from: StoreGooglePlayPurchases.kt */
     public static final class C60081 extends Lambda implements Function0<State> {
         public C60081() {
             super(0);
@@ -738,8 +737,8 @@ public final class StoreGooglePlayPurchases extends StoreV2 {
         }
     }
 
-    /* compiled from: StoreGooglePlayPurchases.kt */
-    /* renamed from: com.discord.stores.StoreGooglePlayPurchases$onVerificationFailure$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreGooglePlayPurchases$onVerificationFailure$1 */
+    /* JADX INFO: compiled from: StoreGooglePlayPurchases.kt */
     public static final class C60091 extends Lambda implements Function0<Unit> {
         public final /* synthetic */ VerificationResult $verificationResult;
 
@@ -755,7 +754,7 @@ public final class StoreGooglePlayPurchases extends StoreV2 {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             ArrayList<String> arrayListM7498b = this.$verificationResult.getPurchase().m7498b();
             Intrinsics3.checkNotNullExpressionValue(arrayListM7498b, "verificationResult.purchase.skus");
@@ -769,8 +768,8 @@ public final class StoreGooglePlayPurchases extends StoreV2 {
         }
     }
 
-    /* compiled from: StoreGooglePlayPurchases.kt */
-    /* renamed from: com.discord.stores.StoreGooglePlayPurchases$onVerificationStart$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreGooglePlayPurchases$onVerificationStart$1 */
+    /* JADX INFO: compiled from: StoreGooglePlayPurchases.kt */
     public static final class C60101 extends Lambda implements Function0<Unit> {
         public C60101() {
             super(0);
@@ -782,21 +781,21 @@ public final class StoreGooglePlayPurchases extends StoreV2 {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             StoreGooglePlayPurchases.access$setQueryState$p(StoreGooglePlayPurchases.this, QueryState.InProgress.INSTANCE);
             StoreGooglePlayPurchases.this.markChanged();
         }
     }
 
-    /* compiled from: StoreGooglePlayPurchases.kt */
-    /* renamed from: com.discord.stores.StoreGooglePlayPurchases$processPurchases$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreGooglePlayPurchases$processPurchases$1 */
+    /* JADX INFO: compiled from: StoreGooglePlayPurchases.kt */
     public static final class C60121 extends Lambda implements Function0<Unit> {
         public final /* synthetic */ List $purchases;
         public final /* synthetic */ String $skuType;
 
-        /* compiled from: StoreGooglePlayPurchases.kt */
-        /* renamed from: com.discord.stores.StoreGooglePlayPurchases$processPurchases$1$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.stores.StoreGooglePlayPurchases$processPurchases$1$1, reason: invalid class name */
+        /* JADX INFO: compiled from: StoreGooglePlayPurchases.kt */
         public static final class AnonymousClass1 extends Lambda implements Function1<QueryState, Unit> {
             public AnonymousClass1() {
                 super(1);
@@ -808,7 +807,7 @@ public final class StoreGooglePlayPurchases extends StoreV2 {
                 return Unit.f27425a;
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2(QueryState queryState) {
                 if (queryState instanceof QueryState.NotInProgress) {
                     BillingUtils.INSTANCE.verifyPurchases(C60121.this.$purchases);
@@ -829,15 +828,15 @@ public final class StoreGooglePlayPurchases extends StoreV2 {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             StoreGooglePlayPurchases.access$handlePurchases(StoreGooglePlayPurchases.this, this.$purchases, this.$skuType);
             ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.takeSingleUntilTimeout$default(StoreGooglePlayPurchases.this.observeQueryState(), 0L, false, 3, null), StoreGooglePlayPurchases.this.getClass(), (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new AnonymousClass1(), 62, (Object) null);
         }
     }
 
-    /* compiled from: StoreGooglePlayPurchases.kt */
-    /* renamed from: com.discord.stores.StoreGooglePlayPurchases$updatePendingDowngrade$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreGooglePlayPurchases$updatePendingDowngrade$1 */
+    /* JADX INFO: compiled from: StoreGooglePlayPurchases.kt */
     public static final class C60131 extends Lambda implements Function0<Unit> {
         public final /* synthetic */ StoreGooglePlayPurchases2 $newPendingDowngrade;
 
@@ -853,7 +852,7 @@ public final class StoreGooglePlayPurchases extends StoreV2 {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             StoreGooglePlayPurchases storeGooglePlayPurchases = StoreGooglePlayPurchases.this;
             StoreGooglePlayPurchases.access$setStoreState$p(storeGooglePlayPurchases, new State.Loaded(StoreGooglePlayPurchases.access$getSubscriptionPurchases$p(storeGooglePlayPurchases), StoreGooglePlayPurchases.access$getIapPurchases$p(StoreGooglePlayPurchases.this), this.$newPendingDowngrade));
@@ -935,11 +934,11 @@ public final class StoreGooglePlayPurchases extends StoreV2 {
         return storeGooglePlayPurchases.shouldRetryDowngrade(th);
     }
 
-    private final void cacheAnalyticsTraits(Map<String, AnalyticsTrait> analyticsTraitsMap) throws JsonIOException {
+    private final void cacheAnalyticsTraits(Map<String, AnalyticsTrait> analyticsTraitsMap) {
         getPrefs().edit().putString(CACHE_KEY_PAYMENT_FLOW_ANALYTICS, this.gson.m9209m(analyticsTraitsMap)).apply();
     }
 
-    private final void clearAnalyticsTraits(String paymentGatewaySkuId) throws JsonIOException {
+    private final void clearAnalyticsTraits(String paymentGatewaySkuId) {
         Map<String, AnalyticsTrait> cachedAnalyticsTraitsMap = getCachedAnalyticsTraitsMap();
         cachedAnalyticsTraitsMap.remove(paymentGatewaySkuId);
         cacheAnalyticsTraits(cachedAnalyticsTraitsMap);
@@ -978,7 +977,7 @@ public final class StoreGooglePlayPurchases extends StoreV2 {
         return iapPurchases != null ? iapPurchases : Collections2.emptyList();
     }
 
-    private final AnalyticsTrait getOrClearAnalyticsTraits(String paymentGatewaySkuId) throws JsonIOException {
+    private final AnalyticsTrait getOrClearAnalyticsTraits(String paymentGatewaySkuId) {
         AnalyticsTrait analyticsTrait = getCachedAnalyticsTraitsMap().get(paymentGatewaySkuId);
         if (analyticsTrait == null) {
             return null;
@@ -1080,12 +1079,12 @@ public final class StoreGooglePlayPurchases extends StoreV2 {
         this.dispatcher.schedule(new C60051());
     }
 
-    /* renamed from: getQueryState, reason: from getter */
+    /* JADX INFO: renamed from: getQueryState, reason: from getter */
     public final QueryState getQueryStateSnapshot() {
         return this.queryStateSnapshot;
     }
 
-    /* renamed from: getState, reason: from getter */
+    /* JADX INFO: renamed from: getState, reason: from getter */
     public final State getStoreStateSnapshot() {
         return this.storeStateSnapshot;
     }
@@ -1154,7 +1153,7 @@ public final class StoreGooglePlayPurchases extends StoreV2 {
         this.queryStateSnapshot = this.queryState;
     }
 
-    public final void trackPaymentFlowCompleted(String paymentGatewaySkuId) throws JsonIOException {
+    public final void trackPaymentFlowCompleted(String paymentGatewaySkuId) {
         Intrinsics3.checkNotNullParameter(paymentGatewaySkuId, "paymentGatewaySkuId");
         AnalyticsTrait orClearAnalyticsTraits = getOrClearAnalyticsTraits(paymentGatewaySkuId);
         if (orClearAnalyticsTraits != null) {
@@ -1172,7 +1171,7 @@ public final class StoreGooglePlayPurchases extends StoreV2 {
         }
     }
 
-    public final void trackPaymentFlowStarted(String paymentGatewaySkuId, long skuId, Traits.Location locationTrait, Traits.StoreSku storeSkuTrait, Traits.Payment paymentTrait) throws JsonIOException {
+    public final void trackPaymentFlowStarted(String paymentGatewaySkuId, long skuId, Traits.Location locationTrait, Traits.StoreSku storeSkuTrait, Traits.Payment paymentTrait) {
         Intrinsics3.checkNotNullParameter(paymentGatewaySkuId, "paymentGatewaySkuId");
         Intrinsics3.checkNotNullParameter(locationTrait, "locationTrait");
         Intrinsics3.checkNotNullParameter(storeSkuTrait, "storeSkuTrait");
@@ -1184,7 +1183,7 @@ public final class StoreGooglePlayPurchases extends StoreV2 {
         AnalyticsTracker.paymentFlowStarted$default(this.analyticsTracker, analyticsTrait.getLocationTrait(), null, analyticsTrait.getStoreSkuTrait(), analyticsTrait.getPaymentTrait(), 2, null);
     }
 
-    public final void trackPaymentFlowStep(String paymentGatewaySkuId, String fromStep, String toStep) throws JsonIOException {
+    public final void trackPaymentFlowStep(String paymentGatewaySkuId, String fromStep, String toStep) {
         outline.m872q0(paymentGatewaySkuId, "paymentGatewaySkuId", fromStep, "fromStep", toStep, "toStep");
         AnalyticsTrait orClearAnalyticsTraits = getOrClearAnalyticsTraits(paymentGatewaySkuId);
         if (orClearAnalyticsTraits != null) {

@@ -24,8 +24,8 @@ import p507d0.p580t.Collections2;
 import p507d0.p580t._Collections;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: PrivateCallGridView.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: PrivateCallGridView.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class PrivateCallGridView extends TableLayout {
     private static final Companion Companion = new Companion(null);
 
@@ -40,7 +40,7 @@ public final class PrivateCallGridView extends TableLayout {
     private final LinkedHashMap<Long, VoiceUserView> callUserViews;
     private List<StoreVoiceParticipants.VoiceUser> callUsers;
 
-    /* compiled from: PrivateCallGridView.kt */
+    /* JADX INFO: compiled from: PrivateCallGridView.kt */
     public static final class Companion {
         private Companion() {
         }

@@ -8,55 +8,55 @@ import p007b.p008a.p021f.p022h.ViewChipDefaultBinding;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: Chip.kt */
-/* renamed from: b.a.f.a */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.a.f.a */
+/* JADX INFO: compiled from: Chip.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class ViewOnClickListenerC0895a<K, T extends ChipsView.InterfaceC5465a> implements View.OnClickListener {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public ViewChipDefaultBinding f601j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public boolean f602k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public String f603l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public String f604m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public final K f605n;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public final T f606o;
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public final a f607p;
 
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     public final ChipsView<K, T> f608q;
 
-    /* compiled from: Chip.kt */
-    /* renamed from: b.a.f.a$a */
+    /* JADX INFO: renamed from: b.a.f.a$a */
+    /* JADX INFO: compiled from: Chip.kt */
     public static final class a {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final int f609a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final int f610b;
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public final int f611c;
 
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         public final int f612d;
 
-        /* renamed from: e */
+        /* JADX INFO: renamed from: e */
         public final int f613e;
 
-        /* renamed from: f */
+        /* JADX INFO: renamed from: f */
         public final int f614f;
 
         public a(int i, float f, int i2, int i3, int i4, int i5, int i6, int i7, int i8, int i9) {

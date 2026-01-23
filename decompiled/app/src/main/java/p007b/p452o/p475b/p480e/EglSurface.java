@@ -14,21 +14,21 @@ import p007b.p452o.p475b.p478c.egl4;
 import p007b.p452o.p475b.p478c.egl5;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: EglSurface.kt */
-/* renamed from: b.o.b.e.a, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.o.b.e.a, reason: use source file name */
+/* JADX INFO: compiled from: EglSurface.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public abstract class EglSurface {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public EglCore f14327a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public egl5 f14328b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public int f14329c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public int f14330d;
 
     public EglSurface(EglCore eglCore, egl5 egl5Var) {
@@ -42,7 +42,7 @@ public abstract class EglSurface {
         this.f14330d = -1;
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final void m7460a(OutputStream outputStream, Bitmap.CompressFormat compressFormat) {
         Intrinsics3.checkNotNullParameter(outputStream, "stream");
         Intrinsics3.checkNotNullParameter(compressFormat, "format");

@@ -6,9 +6,9 @@ import com.discord.widgets.mobile_reports.MobileReportsViewModel;
 import p507d0.p592z.p594d.Intrinsics3;
 import p658rx.functions.Action1;
 
-/* compiled from: ReportsMenuNode.kt */
-/* renamed from: com.discord.widgets.mobile_reports.ReportsMenuNode$setupCheckbox$$inlined$forEach$lambda$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.mobile_reports.ReportsMenuNode$setupCheckbox$$inlined$forEach$lambda$1, reason: use source file name */
+/* JADX INFO: compiled from: ReportsMenuNode.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class ReportsMenuNode2<T> implements Action1<Boolean> {
     public final /* synthetic */ MobileReportsViewModel.CheckboxElement $checkboxData$inlined;
     public final /* synthetic */ ReportNodeElementData $entry$inlined;
@@ -25,7 +25,7 @@ public final class ReportsMenuNode2<T> implements Action1<Boolean> {
         call2(bool);
     }
 
-    /* renamed from: call, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
     public final void call2(Boolean bool) {
         Intrinsics3.checkNotNullExpressionValue(bool, "isChecked");
         if (bool.booleanValue()) {

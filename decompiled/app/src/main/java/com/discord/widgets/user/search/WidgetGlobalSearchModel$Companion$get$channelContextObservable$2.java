@@ -9,8 +9,8 @@ import kotlin.jvm.functions.Function2;
 import p507d0.p580t.Maps6;
 import p637j0.p641k.Func1;
 
-/* compiled from: WidgetGlobalSearchModel.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: WidgetGlobalSearchModel.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class WidgetGlobalSearchModel$Companion$get$channelContextObservable$2<T, R> implements Func1<WidgetGlobalSearchModel.ChannelContext, WidgetGlobalSearchModel.ChannelContext> {
     public final /* synthetic */ Function2 $permissionsPredicate;
 
@@ -23,7 +23,7 @@ public final class WidgetGlobalSearchModel$Companion$get$channelContextObservabl
         return call2(channelContext);
     }
 
-    /* renamed from: call, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
     public final WidgetGlobalSearchModel.ChannelContext call2(WidgetGlobalSearchModel.ChannelContext channelContext) {
         Map mapPlus = Maps6.plus(channelContext.getChannels(), channelContext.getActiveJoinedThreads());
         LinkedHashMap linkedHashMap = new LinkedHashMap();

@@ -17,7 +17,7 @@ import p007b.p109f.p132g.p133a.p134a.PipelineDraweeControllerBuilder;
 import p007b.p109f.p132g.p147j.GenericDraweeView;
 import p007b.p109f.p161j.p183r.FrescoSystrace;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class SimpleDraweeView extends GenericDraweeView {
     private static Supplier<? extends AbstractDraweeControllerBuilder> sDraweecontrollerbuildersupplier;
     private AbstractDraweeControllerBuilder mControllerBuilder;

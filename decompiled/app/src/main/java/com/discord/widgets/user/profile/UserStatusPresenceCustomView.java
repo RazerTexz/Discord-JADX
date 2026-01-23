@@ -27,13 +27,13 @@ import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: UserStatusPresenceCustomView.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: UserStatusPresenceCustomView.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class UserStatusPresenceCustomView extends LinearLayout {
     private final ViewUserStatusPresenceCustomBinding binding;
     private static final GrayscalePostprocessor CUSTOM_EMOJI_PLACEHOLDER_POSTPROCESSOR = new GrayscalePostprocessor();
 
-    /* compiled from: UserStatusPresenceCustomView.kt */
+    /* JADX INFO: compiled from: UserStatusPresenceCustomView.kt */
     public static final /* data */ class Emoji {
         private final String id;
         private final boolean isAnimated;
@@ -58,17 +58,17 @@ public final class UserStatusPresenceCustomView extends LinearLayout {
             return emoji.copy(str, str2, z2);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final String getId() {
             return this.id;
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final String getName() {
             return this.name;
         }
 
-        /* renamed from: component3, reason: from getter */
+        /* JADX INFO: renamed from: component3, reason: from getter */
         public final boolean getIsAnimated() {
             return this.isAnimated;
         }
@@ -97,17 +97,20 @@ public final class UserStatusPresenceCustomView extends LinearLayout {
         }
 
         /* JADX WARN: Multi-variable type inference failed */
+        /* JADX WARN: Type inference failed for: r1v3, types: [int] */
+        /* JADX WARN: Type inference failed for: r1v4 */
+        /* JADX WARN: Type inference failed for: r1v6 */
         public int hashCode() {
             String str = this.id;
             int iHashCode = (str != null ? str.hashCode() : 0) * 31;
             String str2 = this.name;
             int iHashCode2 = (iHashCode + (str2 != null ? str2.hashCode() : 0)) * 31;
             boolean z2 = this.isAnimated;
-            int i = z2;
-            if (z2 != 0) {
-                i = 1;
+            ?? r1 = z2;
+            if (z2) {
+                r1 = 1;
             }
-            return iHashCode2 + i;
+            return iHashCode2 + r1;
         }
 
         public final boolean isAnimated() {
@@ -124,10 +127,10 @@ public final class UserStatusPresenceCustomView extends LinearLayout {
         }
     }
 
-    /* compiled from: UserStatusPresenceCustomView.kt */
+    /* JADX INFO: compiled from: UserStatusPresenceCustomView.kt */
     public static abstract class ViewState {
 
-        /* compiled from: UserStatusPresenceCustomView.kt */
+        /* JADX INFO: compiled from: UserStatusPresenceCustomView.kt */
         public static final /* data */ class WithPlaceholder extends ViewState {
             private final ModelEmojiUnicode placeholderEmoji;
 
@@ -145,7 +148,7 @@ public final class UserStatusPresenceCustomView extends LinearLayout {
                 return withPlaceholder.copy(modelEmojiUnicode);
             }
 
-            /* renamed from: component1, reason: from getter */
+            /* JADX INFO: renamed from: component1, reason: from getter */
             public final ModelEmojiUnicode getPlaceholderEmoji() {
                 return this.placeholderEmoji;
             }
@@ -182,7 +185,7 @@ public final class UserStatusPresenceCustomView extends LinearLayout {
             }
         }
 
-        /* compiled from: UserStatusPresenceCustomView.kt */
+        /* JADX INFO: compiled from: UserStatusPresenceCustomView.kt */
         public static final /* data */ class WithStatus extends ViewState {
             private final Emoji emoji;
             private final String statusText;
@@ -203,12 +206,12 @@ public final class UserStatusPresenceCustomView extends LinearLayout {
                 return withStatus.copy(emoji, str);
             }
 
-            /* renamed from: component1, reason: from getter */
+            /* JADX INFO: renamed from: component1, reason: from getter */
             public final Emoji getEmoji() {
                 return this.emoji;
             }
 
-            /* renamed from: component2, reason: from getter */
+            /* JADX INFO: renamed from: component2, reason: from getter */
             public final String getStatusText() {
                 return this.statusText;
             }
@@ -259,8 +262,8 @@ public final class UserStatusPresenceCustomView extends LinearLayout {
         }
     }
 
-    /* compiled from: UserStatusPresenceCustomView.kt */
-    /* renamed from: com.discord.widgets.user.profile.UserStatusPresenceCustomView$configurePlaceholderEmoji$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.user.profile.UserStatusPresenceCustomView$configurePlaceholderEmoji$1 */
+    /* JADX INFO: compiled from: UserStatusPresenceCustomView.kt */
     public static final class C103121 extends Lambda implements Function1<ImageRequestBuilder, Unit> {
         public static final C103121 INSTANCE = new C103121();
 
@@ -274,15 +277,15 @@ public final class UserStatusPresenceCustomView extends LinearLayout {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(ImageRequestBuilder imageRequestBuilder) {
             Intrinsics3.checkNotNullParameter(imageRequestBuilder, "it");
             imageRequestBuilder.f19623l = UserStatusPresenceCustomView.access$getCUSTOM_EMOJI_PLACEHOLDER_POSTPROCESSOR$cp();
         }
     }
 
-    /* compiled from: UserStatusPresenceCustomView.kt */
-    /* renamed from: com.discord.widgets.user.profile.UserStatusPresenceCustomView$setOnClear$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.user.profile.UserStatusPresenceCustomView$setOnClear$1 */
+    /* JADX INFO: compiled from: UserStatusPresenceCustomView.kt */
     public static final class ViewOnClickListenerC103131 implements View.OnClickListener {
         public final /* synthetic */ Function0 $onClear;
 

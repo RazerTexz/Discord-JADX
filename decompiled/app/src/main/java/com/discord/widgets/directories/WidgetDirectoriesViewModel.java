@@ -45,17 +45,17 @@ import p507d0.p592z.p594d.Lambda;
 import p637j0.p641k.Func1;
 import p658rx.Observable;
 
-/* compiled from: WidgetDirectoriesViewModel.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetDirectoriesViewModel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetDirectoriesViewModel extends AppViewModel<ViewState> {
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private final StoreDirectories directoriesStore;
     private final RestAPI restAPI;
 
-    /* compiled from: WidgetDirectoriesViewModel.kt */
-    /* renamed from: com.discord.widgets.directories.WidgetDirectoriesViewModel$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.directories.WidgetDirectoriesViewModel$1 */
+    /* JADX INFO: compiled from: WidgetDirectoriesViewModel.kt */
     public static final class C82801<T, R> implements Func1<ViewState, Boolean> {
         public static final C82801 INSTANCE = new C82801();
 
@@ -64,15 +64,15 @@ public final class WidgetDirectoriesViewModel extends AppViewModel<ViewState> {
             return call2(viewState);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final Boolean call2(ViewState viewState) {
             Channel channel = viewState.getChannel();
             return Boolean.valueOf(channel != null && ChannelUtils.m7691o(channel));
         }
     }
 
-    /* compiled from: WidgetDirectoriesViewModel.kt */
-    /* renamed from: com.discord.widgets.directories.WidgetDirectoriesViewModel$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.directories.WidgetDirectoriesViewModel$2 */
+    /* JADX INFO: compiled from: WidgetDirectoriesViewModel.kt */
     public static final /* synthetic */ class C82812 extends FunctionReferenceImpl implements Function1<ViewState, Unit> {
         public C82812(WidgetDirectoriesViewModel widgetDirectoriesViewModel) {
             super(1, widgetDirectoriesViewModel, WidgetDirectoriesViewModel.class, "updateViewState", "updateViewState(Ljava/lang/Object;)V", 0);
@@ -84,15 +84,15 @@ public final class WidgetDirectoriesViewModel extends AppViewModel<ViewState> {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(ViewState viewState) {
             Intrinsics3.checkNotNullParameter(viewState, "p1");
             WidgetDirectoriesViewModel.access$updateViewState((WidgetDirectoriesViewModel) this.receiver, viewState);
         }
     }
 
-    /* compiled from: WidgetDirectoriesViewModel.kt */
-    /* renamed from: com.discord.widgets.directories.WidgetDirectoriesViewModel$3 */
+    /* JADX INFO: renamed from: com.discord.widgets.directories.WidgetDirectoriesViewModel$3 */
+    /* JADX INFO: compiled from: WidgetDirectoriesViewModel.kt */
     public static final class C82823<T, R> implements Func1<Channel, Boolean> {
         public static final C82823 INSTANCE = new C82823();
 
@@ -101,14 +101,14 @@ public final class WidgetDirectoriesViewModel extends AppViewModel<ViewState> {
             return call2(channel);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final Boolean call2(Channel channel) {
             return Boolean.valueOf(channel != null && ChannelUtils.m7691o(channel));
         }
     }
 
-    /* compiled from: WidgetDirectoriesViewModel.kt */
-    /* renamed from: com.discord.widgets.directories.WidgetDirectoriesViewModel$4 */
+    /* JADX INFO: renamed from: com.discord.widgets.directories.WidgetDirectoriesViewModel$4 */
+    /* JADX INFO: compiled from: WidgetDirectoriesViewModel.kt */
     public static final class C82834 extends Lambda implements Function1<Channel, Unit> {
         public C82834() {
             super(1);
@@ -120,7 +120,7 @@ public final class WidgetDirectoriesViewModel extends AppViewModel<ViewState> {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Channel channel) {
             WidgetDirectoriesViewModel.access$getDirectoriesStore$p(WidgetDirectoriesViewModel.this).fetchDirectoriesForChannel(channel.getId());
             WidgetDirectoriesViewModel.access$getDirectoriesStore$p(WidgetDirectoriesViewModel.this).fetchEntryCountsForChannel(channel.getId());
@@ -128,8 +128,8 @@ public final class WidgetDirectoriesViewModel extends AppViewModel<ViewState> {
         }
     }
 
-    /* compiled from: WidgetDirectoriesViewModel.kt */
-    /* renamed from: com.discord.widgets.directories.WidgetDirectoriesViewModel$5 */
+    /* JADX INFO: renamed from: com.discord.widgets.directories.WidgetDirectoriesViewModel$5 */
+    /* JADX INFO: compiled from: WidgetDirectoriesViewModel.kt */
     public static final class C82845<T, R> implements Func1<Long, Boolean> {
         public final /* synthetic */ StoreChannels $channelsStore;
 
@@ -142,7 +142,7 @@ public final class WidgetDirectoriesViewModel extends AppViewModel<ViewState> {
             return call2(l);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final Boolean call2(Long l) {
             StoreChannels storeChannels = this.$channelsStore;
             Intrinsics3.checkNotNullExpressionValue(l, ModelAuditLogEntry.CHANGE_KEY_ID);
@@ -151,8 +151,8 @@ public final class WidgetDirectoriesViewModel extends AppViewModel<ViewState> {
         }
     }
 
-    /* compiled from: WidgetDirectoriesViewModel.kt */
-    /* renamed from: com.discord.widgets.directories.WidgetDirectoriesViewModel$6 */
+    /* JADX INFO: renamed from: com.discord.widgets.directories.WidgetDirectoriesViewModel$6 */
+    /* JADX INFO: compiled from: WidgetDirectoriesViewModel.kt */
     public static final class C82856 extends Lambda implements Function1<Long, Unit> {
         public final /* synthetic */ StoreReadStates $readStatesStore;
 
@@ -168,13 +168,13 @@ public final class WidgetDirectoriesViewModel extends AppViewModel<ViewState> {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Long l) {
             this.$readStatesStore.markAsRead(l);
         }
     }
 
-    /* compiled from: WidgetDirectoriesViewModel.kt */
+    /* JADX INFO: compiled from: WidgetDirectoriesViewModel.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -192,8 +192,8 @@ public final class WidgetDirectoriesViewModel extends AppViewModel<ViewState> {
         }
     }
 
-    /* compiled from: WidgetDirectoriesViewModel.kt */
-    /* renamed from: com.discord.widgets.directories.WidgetDirectoriesViewModel$joinGuild$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.directories.WidgetDirectoriesViewModel$joinGuild$1 */
+    /* JADX INFO: compiled from: WidgetDirectoriesViewModel.kt */
     public static final class C82861 extends Lambda implements Function1<Guild, Unit> {
         public static final C82861 INSTANCE = new C82861();
 
@@ -207,7 +207,7 @@ public final class WidgetDirectoriesViewModel extends AppViewModel<ViewState> {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Guild guild) {
             Intrinsics3.checkNotNullParameter(guild, "it");
         }
@@ -264,22 +264,22 @@ public final class WidgetDirectoriesViewModel extends AppViewModel<ViewState> {
         this.directoriesStore.removeServerFromDirectory(directoryChannelId, id2);
     }
 
-    /* compiled from: WidgetDirectoriesViewModel.kt */
+    /* JADX INFO: compiled from: WidgetDirectoriesViewModel.kt */
     public static final /* data */ class ViewState {
         private final Set<Long> adminGuildIds;
 
-        /* renamed from: allDirectoryEntryData$delegate, reason: from kotlin metadata */
+        /* JADX INFO: renamed from: allDirectoryEntryData$delegate, reason: from kotlin metadata */
         private final Lazy allDirectoryEntryData;
         private final Channel channel;
         private final RestCallState<List<DirectoryEntryGuild>> directories;
 
-        /* renamed from: directoryEntryData$delegate, reason: from kotlin metadata */
+        /* JADX INFO: renamed from: directoryEntryData$delegate, reason: from kotlin metadata */
         private final Lazy directoryEntryData;
         private final com.discord.models.guild.Guild guild;
         private final boolean hasAddGuildPermissions;
         private final Set<Long> joinedGuildIds;
 
-        /* renamed from: mappedTabs$delegate, reason: from kotlin metadata */
+        /* JADX INFO: renamed from: mappedTabs$delegate, reason: from kotlin metadata */
         private final Lazy mappedTabs;
         private final RestCallState<Map<Integer, Integer>> tabs;
 
@@ -305,6 +305,7 @@ public final class WidgetDirectoriesViewModel extends AppViewModel<ViewState> {
             this.mappedTabs = LazyJVM.lazy(new WidgetDirectoriesViewModel5(this));
         }
 
+        /* JADX WARN: Multi-variable type inference failed */
         public static /* synthetic */ ViewState copy$default(ViewState viewState, com.discord.models.guild.Guild guild, Channel channel, Set set, Set set2, boolean z2, RestCallState restCallState, RestCallState restCallState2, int i, Object obj) {
             if ((i & 1) != 0) {
                 guild = viewState.guild;
@@ -335,12 +336,12 @@ public final class WidgetDirectoriesViewModel extends AppViewModel<ViewState> {
             return viewState.copy(guild, channel2, set3, set4, z3, restCallState3, restCallState2);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final com.discord.models.guild.Guild getGuild() {
             return this.guild;
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final Channel getChannel() {
             return this.channel;
         }
@@ -353,7 +354,7 @@ public final class WidgetDirectoriesViewModel extends AppViewModel<ViewState> {
             return this.adminGuildIds;
         }
 
-        /* renamed from: component5, reason: from getter */
+        /* JADX INFO: renamed from: component5, reason: from getter */
         public final boolean getHasAddGuildPermissions() {
             return this.hasAddGuildPermissions;
         }
@@ -426,6 +427,9 @@ public final class WidgetDirectoriesViewModel extends AppViewModel<ViewState> {
         }
 
         /* JADX WARN: Multi-variable type inference failed */
+        /* JADX WARN: Type inference failed for: r2v10, types: [int] */
+        /* JADX WARN: Type inference failed for: r2v16 */
+        /* JADX WARN: Type inference failed for: r2v20 */
         public int hashCode() {
             com.discord.models.guild.Guild guild = this.guild;
             int iHashCode = (guild != null ? guild.hashCode() : 0) * 31;
@@ -436,13 +440,13 @@ public final class WidgetDirectoriesViewModel extends AppViewModel<ViewState> {
             Set<Long> set2 = this.adminGuildIds;
             int iHashCode4 = (iHashCode3 + (set2 != null ? set2.hashCode() : 0)) * 31;
             boolean z2 = this.hasAddGuildPermissions;
-            int i = z2;
-            if (z2 != 0) {
-                i = 1;
+            ?? r2 = z2;
+            if (z2) {
+                r2 = 1;
             }
-            int i2 = (iHashCode4 + i) * 31;
+            int i = (iHashCode4 + r2) * 31;
             RestCallState<List<DirectoryEntryGuild>> restCallState = this.directories;
-            int iHashCode5 = (i2 + (restCallState != null ? restCallState.hashCode() : 0)) * 31;
+            int iHashCode5 = (i + (restCallState != null ? restCallState.hashCode() : 0)) * 31;
             RestCallState<Map<Integer, Integer>> restCallState2 = this.tabs;
             return iHashCode5 + (restCallState2 != null ? restCallState2.hashCode() : 0);
         }

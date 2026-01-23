@@ -5,12 +5,12 @@ import androidx.annotation.RecentlyNullable;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 
-/* compiled from: com.google.android.gms:play-services-basement@@17.6.0 */
-/* renamed from: b.i.a.f.e.o.a */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.e.o.a */
+/* JADX INFO: compiled from: com.google.android.gms:play-services-basement@@17.6.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public class C3399a {
     @RecentlyNullable
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static MessageDigest m4185a(@RecentlyNonNull String str) {
         MessageDigest messageDigest;
         for (int i = 0; i < 2; i++) {

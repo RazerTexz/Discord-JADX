@@ -6,17 +6,17 @@ import com.google.android.gms.common.internal.safeparcel.AbstractSafeParcelable;
 import p007b.p085c.p086a.p087a0.AnimatableValueParser;
 import p007b.p225i.p226a.p288f.p336k.C4329c;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public class HarmfulAppsData extends AbstractSafeParcelable {
     public static final Parcelable.Creator<HarmfulAppsData> CREATOR = new C4329c();
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final String f20818j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final byte[] f20819k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final int f20820l;
 
     public HarmfulAppsData(String str, byte[] bArr, int i) {

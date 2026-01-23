@@ -29,13 +29,13 @@ import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: StageChannelUtils.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: StageChannelUtils.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class StageChannelUtils {
     public static final StageChannelUtils INSTANCE = new StageChannelUtils();
 
-    /* compiled from: StageChannelUtils.kt */
-    /* renamed from: com.discord.utilities.stage.StageChannelUtils$connectToStageChannel$2 */
+    /* JADX INFO: renamed from: com.discord.utilities.stage.StageChannelUtils$connectToStageChannel$2 */
+    /* JADX INFO: compiled from: StageChannelUtils.kt */
     public static final class C69172 extends Lambda implements Function0<Unit> {
         public final /* synthetic */ Channel $channel;
         public final /* synthetic */ Context $context;
@@ -55,7 +55,7 @@ public final class StageChannelUtils {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             StageChannelJoinHelper.connectToStage$default(StageChannelJoinHelper.INSTANCE, this.$context, this.$fragmentManager, this.$channel.getId(), false, false, null, null, null, null, null, PointerIconCompat.TYPE_TOP_RIGHT_DIAGONAL_DOUBLE_ARROW, null);
         }

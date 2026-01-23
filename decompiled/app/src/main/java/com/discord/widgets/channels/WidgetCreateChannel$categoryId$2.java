@@ -4,8 +4,8 @@ import com.discord.utilities.intent.IntentUtilsKt;
 import kotlin.jvm.functions.Function0;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetCreateChannel.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetCreateChannel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetCreateChannel$categoryId$2 extends Lambda implements Function0<Long> {
     public final /* synthetic */ WidgetCreateChannel this$0;
 

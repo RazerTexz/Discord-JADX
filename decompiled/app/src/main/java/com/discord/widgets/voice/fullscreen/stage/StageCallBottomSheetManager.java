@@ -12,8 +12,8 @@ import java.util.Map;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: StageCallBottomSheetManager.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: StageCallBottomSheetManager.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class StageCallBottomSheetManager {
     public final boolean configureBottomSheet(FragmentManager fragmentManager, Channel channel) {
         Intrinsics3.checkNotNullParameter(fragmentManager, "fragmentManager");

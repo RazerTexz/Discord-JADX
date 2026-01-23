@@ -41,29 +41,29 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 import p507d0.p592z.p594d.Reflection2;
 
-/* compiled from: WidgetModeratorStartStage.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetModeratorStartStage.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetModeratorStartStage extends AppFragment {
     public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetModeratorStartStage.class, "binding", "getBinding()Lcom/discord/databinding/WidgetModeratorStartStageBinding;", 0)};
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private ModeratorStartStageAdapter adapter;
 
-    /* renamed from: binding$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
 
-    /* renamed from: channelId$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: channelId$delegate, reason: from kotlin metadata */
     private final Lazy channelId;
 
-    /* renamed from: guildId$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: guildId$delegate, reason: from kotlin metadata */
     private final Lazy guildId;
     private final ActivityResultLauncher<Intent> previewLauncher;
 
-    /* renamed from: viewModel$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: viewModel$delegate, reason: from kotlin metadata */
     private final Lazy viewModel;
 
-    /* compiled from: WidgetModeratorStartStage.kt */
+    /* JADX INFO: compiled from: WidgetModeratorStartStage.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -81,8 +81,8 @@ public final class WidgetModeratorStartStage extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetModeratorStartStage.kt */
-    /* renamed from: com.discord.widgets.stage.start.WidgetModeratorStartStage$handleListItemClick$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.stage.start.WidgetModeratorStartStage$handleListItemClick$1 */
+    /* JADX INFO: compiled from: WidgetModeratorStartStage.kt */
     public static final class C100711 extends Lambda implements Function0<Unit> {
         public C100711() {
             super(0);
@@ -94,15 +94,15 @@ public final class WidgetModeratorStartStage extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             WidgetModeratorStartStage widgetModeratorStartStage = WidgetModeratorStartStage.this;
             WidgetModeratorStartStage.access$launchStageCall(widgetModeratorStartStage, WidgetModeratorStartStage.access$getChannelId$p(widgetModeratorStartStage));
         }
     }
 
-    /* compiled from: WidgetModeratorStartStage.kt */
-    /* renamed from: com.discord.widgets.stage.start.WidgetModeratorStartStage$onViewBound$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.stage.start.WidgetModeratorStartStage$onViewBound$1 */
+    /* JADX INFO: compiled from: WidgetModeratorStartStage.kt */
     public static final /* synthetic */ class C100721 extends FunctionReferenceImpl implements Function1<ModeratorStartStageItem, Unit> {
         public C100721(WidgetModeratorStartStage widgetModeratorStartStage) {
             super(1, widgetModeratorStartStage, WidgetModeratorStartStage.class, "handleListItemClick", "handleListItemClick(Lcom/discord/widgets/stage/start/ModeratorStartStageItem;)V", 0);
@@ -114,15 +114,15 @@ public final class WidgetModeratorStartStage extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(ModeratorStartStageItem moderatorStartStageItem) {
             Intrinsics3.checkNotNullParameter(moderatorStartStageItem, "p1");
             WidgetModeratorStartStage.access$handleListItemClick((WidgetModeratorStartStage) this.receiver, moderatorStartStageItem);
         }
     }
 
-    /* compiled from: WidgetModeratorStartStage.kt */
-    /* renamed from: com.discord.widgets.stage.start.WidgetModeratorStartStage$onViewBound$3 */
+    /* JADX INFO: renamed from: com.discord.widgets.stage.start.WidgetModeratorStartStage$onViewBound$3 */
+    /* JADX INFO: compiled from: WidgetModeratorStartStage.kt */
     public static final class ViewOnClickListenerC100733 implements View.OnClickListener {
         public ViewOnClickListenerC100733() {
         }
@@ -137,8 +137,8 @@ public final class WidgetModeratorStartStage extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetModeratorStartStage.kt */
-    /* renamed from: com.discord.widgets.stage.start.WidgetModeratorStartStage$onViewBoundOrOnResume$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.stage.start.WidgetModeratorStartStage$onViewBoundOrOnResume$1 */
+    /* JADX INFO: compiled from: WidgetModeratorStartStage.kt */
     public static final /* synthetic */ class C100741 extends FunctionReferenceImpl implements Function1<ModeratorStartStageViewModel.ViewState, Unit> {
         public C100741(WidgetModeratorStartStage widgetModeratorStartStage) {
             super(1, widgetModeratorStartStage, WidgetModeratorStartStage.class, "configureUi", "configureUi(Lcom/discord/widgets/stage/start/ModeratorStartStageViewModel$ViewState;)V", 0);
@@ -150,7 +150,7 @@ public final class WidgetModeratorStartStage extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(ModeratorStartStageViewModel.ViewState viewState) {
             Intrinsics3.checkNotNullParameter(viewState, "p1");
             WidgetModeratorStartStage.access$configureUi((WidgetModeratorStartStage) this.receiver, viewState);

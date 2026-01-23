@@ -50,12 +50,12 @@ import p507d0.p592z.p594d.Lambda;
 import p637j0.p642l.p647e.ScalarSynchronousObservable;
 import p658rx.Observable;
 
-/* compiled from: WidgetAuthPhoneVerify.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetAuthPhoneVerify.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetAuthPhoneVerify extends AppFragment {
     public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetAuthPhoneVerify.class, "binding", "getBinding()Lcom/discord/databinding/WidgetAuthPhoneVerifyBinding;", 0)};
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private static final String INTENT_EXTRA_PHONE = "INTENT_EXTRA_PHONE";
     private static final String INTENT_EXTRA_SUBTITLE = "INTENT_EXTRA_SUBTITLE";
@@ -63,13 +63,13 @@ public final class WidgetAuthPhoneVerify extends AppFragment {
     private static final int RESULT_BACK_TO_EMAIL = 2;
     private static final String RESULT_EXTRA_TOKEN = "RESULT_EXTRA_TOKEN";
 
-    /* renamed from: binding$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
     private boolean ignoreAutopaste;
     private final AppLogger2 loggingConfig;
     private String phone;
 
-    /* compiled from: WidgetAuthPhoneVerify.kt */
+    /* JADX INFO: compiled from: WidgetAuthPhoneVerify.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -100,10 +100,10 @@ public final class WidgetAuthPhoneVerify extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetAuthPhoneVerify.kt */
+    /* JADX INFO: compiled from: WidgetAuthPhoneVerify.kt */
     public static abstract class Result {
 
-        /* compiled from: WidgetAuthPhoneVerify.kt */
+        /* JADX INFO: compiled from: WidgetAuthPhoneVerify.kt */
         public static final class Cancelled extends Result {
             public static final Cancelled INSTANCE = new Cancelled();
 
@@ -112,7 +112,7 @@ public final class WidgetAuthPhoneVerify extends AppFragment {
             }
         }
 
-        /* compiled from: WidgetAuthPhoneVerify.kt */
+        /* JADX INFO: compiled from: WidgetAuthPhoneVerify.kt */
         public static final /* data */ class Token extends Result {
             private final String token;
 
@@ -130,7 +130,7 @@ public final class WidgetAuthPhoneVerify extends AppFragment {
                 return token.copy(str);
             }
 
-            /* renamed from: component1, reason: from getter */
+            /* JADX INFO: renamed from: component1, reason: from getter */
             public final String getToken() {
                 return this.token;
             }
@@ -172,8 +172,8 @@ public final class WidgetAuthPhoneVerify extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetAuthPhoneVerify.kt */
-    /* renamed from: com.discord.widgets.auth.WidgetAuthPhoneVerify$evaluateCode$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.auth.WidgetAuthPhoneVerify$evaluateCode$1 */
+    /* JADX INFO: compiled from: WidgetAuthPhoneVerify.kt */
     public static final class C72071 extends Lambda implements Function1<ModelPhoneVerificationToken, TrackNetworkMetadata2> {
         public static final C72071 INSTANCE = new C72071();
 
@@ -186,14 +186,14 @@ public final class WidgetAuthPhoneVerify extends AppFragment {
             return invoke2(modelPhoneVerificationToken);
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final TrackNetworkMetadata2 invoke2(ModelPhoneVerificationToken modelPhoneVerificationToken) {
             return new TrackNetworkActionUserVerifyPhone();
         }
     }
 
-    /* compiled from: WidgetAuthPhoneVerify.kt */
-    /* renamed from: com.discord.widgets.auth.WidgetAuthPhoneVerify$evaluateCode$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.auth.WidgetAuthPhoneVerify$evaluateCode$2 */
+    /* JADX INFO: compiled from: WidgetAuthPhoneVerify.kt */
     public static final class C72082 extends Lambda implements Function1<ModelPhoneVerificationToken, Unit> {
         public C72082() {
             super(1);
@@ -205,7 +205,7 @@ public final class WidgetAuthPhoneVerify extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(ModelPhoneVerificationToken modelPhoneVerificationToken) {
             Intrinsics3.checkNotNullParameter(modelPhoneVerificationToken, "it");
             Intent intent = new Intent();
@@ -221,8 +221,8 @@ public final class WidgetAuthPhoneVerify extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetAuthPhoneVerify.kt */
-    /* renamed from: com.discord.widgets.auth.WidgetAuthPhoneVerify$evaluateCode$3 */
+    /* JADX INFO: renamed from: com.discord.widgets.auth.WidgetAuthPhoneVerify$evaluateCode$3 */
+    /* JADX INFO: compiled from: WidgetAuthPhoneVerify.kt */
     public static final class C72093 extends Lambda implements Function1<Error, Unit> {
         public C72093() {
             super(1);
@@ -234,7 +234,7 @@ public final class WidgetAuthPhoneVerify extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Error error) {
             Intrinsics3.checkNotNullParameter(error, "it");
             RegistrationFlowRepo.INSTANCE.getINSTANCE().trackTransition("Phone Verification", "response_error", CollectionsJVM.listOf(ModelAuditLogEntry.CHANGE_KEY_CODE));
@@ -242,8 +242,8 @@ public final class WidgetAuthPhoneVerify extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetAuthPhoneVerify.kt */
-    /* renamed from: com.discord.widgets.auth.WidgetAuthPhoneVerify$inputCode$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.auth.WidgetAuthPhoneVerify$inputCode$1 */
+    /* JADX INFO: compiled from: WidgetAuthPhoneVerify.kt */
     public static final class C72101 extends Lambda implements Function1<String, Unit> {
         public static final C72101 INSTANCE = new C72101();
 
@@ -257,14 +257,14 @@ public final class WidgetAuthPhoneVerify extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(String str) {
             Intrinsics3.checkNotNullParameter(str, "it");
         }
     }
 
-    /* compiled from: WidgetAuthPhoneVerify.kt */
-    /* renamed from: com.discord.widgets.auth.WidgetAuthPhoneVerify$inputCode$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.auth.WidgetAuthPhoneVerify$inputCode$2 */
+    /* JADX INFO: compiled from: WidgetAuthPhoneVerify.kt */
     public static final /* synthetic */ class C72112 extends FunctionReferenceImpl implements Function1<String, Unit> {
         public C72112(WidgetAuthPhoneVerify widgetAuthPhoneVerify) {
             super(1, widgetAuthPhoneVerify, WidgetAuthPhoneVerify.class, "evaluateCode", "evaluateCode(Ljava/lang/String;)V", 0);
@@ -276,15 +276,15 @@ public final class WidgetAuthPhoneVerify extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(String str) {
             Intrinsics3.checkNotNullParameter(str, "p1");
             WidgetAuthPhoneVerify.access$evaluateCode((WidgetAuthPhoneVerify) this.receiver, str);
         }
     }
 
-    /* compiled from: WidgetAuthPhoneVerify.kt */
-    /* renamed from: com.discord.widgets.auth.WidgetAuthPhoneVerify$inputCode$3 */
+    /* JADX INFO: renamed from: com.discord.widgets.auth.WidgetAuthPhoneVerify$inputCode$3 */
+    /* JADX INFO: compiled from: WidgetAuthPhoneVerify.kt */
     public static final class C72123 extends Lambda implements Function1<Long, Unit> {
         public C72123() {
             super(1);
@@ -296,15 +296,15 @@ public final class WidgetAuthPhoneVerify extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Long l) {
             WidgetAuthPhoneVerify widgetAuthPhoneVerify = WidgetAuthPhoneVerify.this;
             WidgetAuthPhoneVerify.access$evaluateCode(widgetAuthPhoneVerify, WidgetAuthPhoneVerify.access$getBinding$p(widgetAuthPhoneVerify).f15697c.getCom.discord.models.domain.ModelAuditLogEntry.CHANGE_KEY_CODE java.lang.String());
         }
     }
 
-    /* compiled from: WidgetAuthPhoneVerify.kt */
-    /* renamed from: com.discord.widgets.auth.WidgetAuthPhoneVerify$onResume$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.auth.WidgetAuthPhoneVerify$onResume$1 */
+    /* JADX INFO: compiled from: WidgetAuthPhoneVerify.kt */
     public static final class C72131 extends Lambda implements Function1<Unit, Unit> {
         public C72131() {
             super(1);
@@ -316,14 +316,14 @@ public final class WidgetAuthPhoneVerify extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Unit unit) {
             WidgetAuthPhoneVerify.access$tryPasteCodeFromClipboard(WidgetAuthPhoneVerify.this);
         }
     }
 
-    /* compiled from: WidgetAuthPhoneVerify.kt */
-    /* renamed from: com.discord.widgets.auth.WidgetAuthPhoneVerify$onViewBound$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.auth.WidgetAuthPhoneVerify$onViewBound$1 */
+    /* JADX INFO: compiled from: WidgetAuthPhoneVerify.kt */
     public static final class ViewOnClickListenerC72141 implements View.OnClickListener {
         public ViewOnClickListenerC72141() {
         }
@@ -334,8 +334,8 @@ public final class WidgetAuthPhoneVerify extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetAuthPhoneVerify.kt */
-    /* renamed from: com.discord.widgets.auth.WidgetAuthPhoneVerify$onViewBound$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.auth.WidgetAuthPhoneVerify$onViewBound$2 */
+    /* JADX INFO: compiled from: WidgetAuthPhoneVerify.kt */
     public static final class ViewOnClickListenerC72152 implements View.OnClickListener {
         public ViewOnClickListenerC72152() {
         }
@@ -346,8 +346,8 @@ public final class WidgetAuthPhoneVerify extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetAuthPhoneVerify.kt */
-    /* renamed from: com.discord.widgets.auth.WidgetAuthPhoneVerify$onViewBound$3 */
+    /* JADX INFO: renamed from: com.discord.widgets.auth.WidgetAuthPhoneVerify$onViewBound$3 */
+    /* JADX INFO: compiled from: WidgetAuthPhoneVerify.kt */
     public static final class C72163 extends Lambda implements Function1<String, Unit> {
         public C72163() {
             super(1);
@@ -359,15 +359,15 @@ public final class WidgetAuthPhoneVerify extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(String str) {
             Intrinsics3.checkNotNullParameter(str, ModelAuditLogEntry.CHANGE_KEY_CODE);
             WidgetAuthPhoneVerify.access$evaluateCode(WidgetAuthPhoneVerify.this, str);
         }
     }
 
-    /* compiled from: WidgetAuthPhoneVerify.kt */
-    /* renamed from: com.discord.widgets.auth.WidgetAuthPhoneVerify$onViewBound$4 */
+    /* JADX INFO: renamed from: com.discord.widgets.auth.WidgetAuthPhoneVerify$onViewBound$4 */
+    /* JADX INFO: compiled from: WidgetAuthPhoneVerify.kt */
     public static final /* synthetic */ class C72174 extends FunctionReferenceImpl implements Function1<String, Unit> {
         public C72174(WidgetAuthPhoneVerify widgetAuthPhoneVerify) {
             super(1, widgetAuthPhoneVerify, WidgetAuthPhoneVerify.class, "inputCode", "inputCode(Ljava/lang/String;)V", 0);
@@ -379,15 +379,15 @@ public final class WidgetAuthPhoneVerify extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(String str) {
             Intrinsics3.checkNotNullParameter(str, "p1");
             WidgetAuthPhoneVerify.access$inputCode((WidgetAuthPhoneVerify) this.receiver, str);
         }
     }
 
-    /* compiled from: WidgetAuthPhoneVerify.kt */
-    /* renamed from: com.discord.widgets.auth.WidgetAuthPhoneVerify$resendCode$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.auth.WidgetAuthPhoneVerify$resendCode$1 */
+    /* JADX INFO: compiled from: WidgetAuthPhoneVerify.kt */
     public static final class C72181 extends Lambda implements Function1<Void, Unit> {
         public C72181() {
             super(1);
@@ -399,14 +399,14 @@ public final class WidgetAuthPhoneVerify extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Void r1) {
             WidgetAuthPhoneVerify.access$getBinding$p(WidgetAuthPhoneVerify.this).f15697c.m8538b();
         }
     }
 
-    /* compiled from: WidgetAuthPhoneVerify.kt */
-    /* renamed from: com.discord.widgets.auth.WidgetAuthPhoneVerify$resendCode$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.auth.WidgetAuthPhoneVerify$resendCode$2 */
+    /* JADX INFO: compiled from: WidgetAuthPhoneVerify.kt */
     public static final class C72192 extends Lambda implements Function1<Error, Unit> {
         public C72192() {
             super(1);
@@ -418,7 +418,7 @@ public final class WidgetAuthPhoneVerify extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Error error) {
             Intrinsics3.checkNotNullParameter(error, "it");
             WidgetAuthPhoneVerify.access$getBinding$p(WidgetAuthPhoneVerify.this).f15697c.m8538b();

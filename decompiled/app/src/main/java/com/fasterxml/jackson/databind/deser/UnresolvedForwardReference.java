@@ -6,7 +6,7 @@ import java.util.List;
 import p007b.p195g.p196a.p205c.p206a0.UnresolvedId;
 import p007b.p195g.p196a.p205c.p206a0.p207k.ReadableObjectId;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public class UnresolvedForwardReference extends JsonMappingException {
     private static final long serialVersionUID = 1;
     private ReadableObjectId _roid;

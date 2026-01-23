@@ -6,9 +6,9 @@ import java.util.Objects;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: Codecs.kt */
-/* renamed from: co.discord.media_engine.AudioDecoder, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: co.discord.media_engine.AudioDecoder, reason: use source file name */
+/* JADX INFO: compiled from: Codecs.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class Codecs2 {
     private final int channels;
     private final int freq;
@@ -34,6 +34,7 @@ public final /* data */ class Codecs2 {
         this.paramsValues = (String[]) array2;
     }
 
+    /* JADX WARN: Multi-variable type inference failed */
     public static /* synthetic */ Codecs2 copy$default(Codecs2 codecs2, int i, String str, int i2, int i3, Map map, int i4, Object obj) {
         if ((i4 & 1) != 0) {
             i = codecs2.type;
@@ -56,22 +57,22 @@ public final /* data */ class Codecs2 {
         return codecs2.copy(i, str2, i5, i6, map);
     }
 
-    /* renamed from: component1, reason: from getter */
+    /* JADX INFO: renamed from: component1, reason: from getter */
     public final int getType() {
         return this.type;
     }
 
-    /* renamed from: component2, reason: from getter */
+    /* JADX INFO: renamed from: component2, reason: from getter */
     public final String getName() {
         return this.name;
     }
 
-    /* renamed from: component3, reason: from getter */
+    /* JADX INFO: renamed from: component3, reason: from getter */
     public final int getFreq() {
         return this.freq;
     }
 
-    /* renamed from: component4, reason: from getter */
+    /* JADX INFO: renamed from: component4, reason: from getter */
     public final int getChannels() {
         return this.channels;
     }

@@ -7,22 +7,22 @@ import com.otaliastudios.cameraview.CameraView;
 import p007b.p100d.p104b.p105a.outline;
 import p007b.p452o.p453a.p466q.GestureFinder;
 
-/* compiled from: PinchGestureFinder.java */
-/* renamed from: b.o.a.q.e, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.o.a.q.e, reason: use source file name */
+/* JADX INFO: compiled from: PinchGestureFinder.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class PinchGestureFinder extends GestureFinder {
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public ScaleGestureDetector f14087d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public boolean f14088e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public float f14089f;
 
-    /* compiled from: PinchGestureFinder.java */
-    /* renamed from: b.o.a.q.e$a */
+    /* JADX INFO: renamed from: b.o.a.q.e$a */
+    /* JADX INFO: compiled from: PinchGestureFinder.java */
     public class a extends ScaleGestureDetector.SimpleOnScaleGestureListener {
         public a() {
         }
@@ -46,12 +46,12 @@ public class PinchGestureFinder extends GestureFinder {
     }
 
     @Override // p007b.p452o.p453a.p466q.GestureFinder
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public float mo7393b(float f, float f2, float f3) {
         return outline.m839a(f3, f2, this.f14089f, f);
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public boolean m7394c(@NonNull MotionEvent motionEvent) {
         boolean z2 = false;
         if (motionEvent.getAction() == 0) {

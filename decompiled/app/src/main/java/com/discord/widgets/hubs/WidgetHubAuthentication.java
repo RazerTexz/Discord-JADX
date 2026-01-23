@@ -37,22 +37,22 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 import p507d0.p592z.p594d.Reflection2;
 
-/* compiled from: WidgetHubAuthentication.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetHubAuthentication.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetHubAuthentication extends AppFragment {
     public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetHubAuthentication.class, "binding", "getBinding()Lcom/discord/databinding/WidgetHubAuthenticationBinding;", 0)};
 
-    /* renamed from: args$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: args$delegate, reason: from kotlin metadata */
     private final Lazy args;
 
-    /* renamed from: binding$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
 
-    /* renamed from: viewModel$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: viewModel$delegate, reason: from kotlin metadata */
     private final Lazy viewModel;
 
-    /* compiled from: WidgetHubAuthentication.kt */
-    /* renamed from: com.discord.widgets.hubs.WidgetHubAuthentication$configureUi$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.hubs.WidgetHubAuthentication$configureUi$1 */
+    /* JADX INFO: compiled from: WidgetHubAuthentication.kt */
     public static final class C90001 extends Lambda implements Function1<RestCallState6<? extends EmailVerification2>, Unit> {
         public C90001() {
             super(1);
@@ -64,7 +64,7 @@ public final class WidgetHubAuthentication extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(RestCallState6<EmailVerification2> restCallState6) {
             Intrinsics3.checkNotNullParameter(restCallState6, "response");
             WidgetHubAuthentication widgetHubAuthentication = WidgetHubAuthentication.this;
@@ -83,8 +83,8 @@ public final class WidgetHubAuthentication extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetHubAuthentication.kt */
-    /* renamed from: com.discord.widgets.hubs.WidgetHubAuthentication$configureUi$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.hubs.WidgetHubAuthentication$configureUi$2 */
+    /* JADX INFO: compiled from: WidgetHubAuthentication.kt */
     public static final class C90012 extends Lambda implements Function1<RestCallState6<? extends EmailVerification>, Unit> {
         public C90012() {
             super(1);
@@ -96,15 +96,15 @@ public final class WidgetHubAuthentication extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(RestCallState6<EmailVerification> restCallState6) {
             Intrinsics3.checkNotNullParameter(restCallState6, "it");
             AppToast.m171i(WidgetHubAuthentication.this, C5419R.string.member_verification_email_verification_email_sent, 0, 4);
         }
     }
 
-    /* compiled from: WidgetHubAuthentication.kt */
-    /* renamed from: com.discord.widgets.hubs.WidgetHubAuthentication$onViewBound$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.hubs.WidgetHubAuthentication$onViewBound$1 */
+    /* JADX INFO: compiled from: WidgetHubAuthentication.kt */
     public static final class C90021 extends Lambda implements Function1<String, Unit> {
         public C90021() {
             super(1);
@@ -116,19 +116,19 @@ public final class WidgetHubAuthentication extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(String str) {
             Intrinsics3.checkNotNullParameter(str, ModelAuditLogEntry.CHANGE_KEY_CODE);
             WidgetHubAuthentication.access$getViewModel$p(WidgetHubAuthentication.this).verifyCode(str);
         }
     }
 
-    /* compiled from: WidgetHubAuthentication.kt */
-    /* renamed from: com.discord.widgets.hubs.WidgetHubAuthentication$onViewBound$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.hubs.WidgetHubAuthentication$onViewBound$2 */
+    /* JADX INFO: compiled from: WidgetHubAuthentication.kt */
     public static final class C90032 extends Lambda implements Function1<RenderContext, Unit> {
 
-        /* compiled from: WidgetHubAuthentication.kt */
-        /* renamed from: com.discord.widgets.hubs.WidgetHubAuthentication$onViewBound$2$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.widgets.hubs.WidgetHubAuthentication$onViewBound$2$1, reason: invalid class name */
+        /* JADX INFO: compiled from: WidgetHubAuthentication.kt */
         public static final class AnonymousClass1 extends Lambda implements Function1<View, Unit> {
             public AnonymousClass1() {
                 super(1);
@@ -140,7 +140,7 @@ public final class WidgetHubAuthentication extends AppFragment {
                 return Unit.f27425a;
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2(View view) {
                 Intrinsics3.checkNotNullParameter(view, "it");
                 WidgetHubAuthentication.access$getViewModel$p(WidgetHubAuthentication.this).resendEmail();
@@ -157,15 +157,15 @@ public final class WidgetHubAuthentication extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(RenderContext renderContext) {
             Intrinsics3.checkNotNullParameter(renderContext, "$receiver");
             renderContext.m8423b("onClick", new AnonymousClass1());
         }
     }
 
-    /* compiled from: WidgetHubAuthentication.kt */
-    /* renamed from: com.discord.widgets.hubs.WidgetHubAuthentication$onViewBoundOrOnResume$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.hubs.WidgetHubAuthentication$onViewBoundOrOnResume$1 */
+    /* JADX INFO: compiled from: WidgetHubAuthentication.kt */
     public static final /* synthetic */ class C90041 extends FunctionReferenceImpl implements Function1<WidgetHubAuthenticationlViewModel3, Unit> {
         public C90041(WidgetHubAuthentication widgetHubAuthentication) {
             super(1, widgetHubAuthentication, WidgetHubAuthentication.class, "configureUi", "configureUi(Lcom/discord/widgets/hubs/HubAuthenticationState;)V", 0);
@@ -177,7 +177,7 @@ public final class WidgetHubAuthentication extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(WidgetHubAuthenticationlViewModel3 widgetHubAuthenticationlViewModel3) {
             Intrinsics3.checkNotNullParameter(widgetHubAuthenticationlViewModel3, "p1");
             WidgetHubAuthentication.access$configureUi((WidgetHubAuthentication) this.receiver, widgetHubAuthenticationlViewModel3);

@@ -4,9 +4,9 @@ import java.util.Iterator;
 import java.util.List;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ApplicationCommandData.kt */
-/* renamed from: com.discord.widgets.chat.input.models.ApplicationCommandDataKt, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.chat.input.models.ApplicationCommandDataKt, reason: use source file name */
+/* JADX INFO: compiled from: ApplicationCommandData.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class ApplicationCommandData4 {
     /* JADX WARN: Removed duplicated region for block: B:29:0x0058  */
     /*

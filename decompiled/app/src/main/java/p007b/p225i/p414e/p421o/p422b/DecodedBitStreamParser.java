@@ -3,24 +3,24 @@ package p007b.p225i.p414e.p421o.p422b;
 import com.discord.widgets.chat.input.MentionUtils;
 import org.objectweb.asm.Opcodes;
 
-/* compiled from: DecodedBitStreamParser.java */
-/* renamed from: b.i.e.o.b.c, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.e.o.b.c, reason: use source file name */
+/* JADX INFO: compiled from: DecodedBitStreamParser.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class DecodedBitStreamParser {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final char[] f13324a = {'*', '*', '*', ' ', '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'};
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static final char[] f13325b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public static final char[] f13326c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public static final char[] f13327d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public static final char[] f13328e;
 
     static {
@@ -31,7 +31,7 @@ public final class DecodedBitStreamParser {
         f13328e = new char[]{'`', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', '{', '|', '}', '~', 127};
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static void m6971a(int i, int i2, int[] iArr) {
         int i3 = ((i << 8) + i2) - 1;
         int i4 = i3 / 1600;
@@ -42,7 +42,7 @@ public final class DecodedBitStreamParser {
         iArr[2] = i5 - (i6 * 40);
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static int m6972b(int i, int i2) {
         int i3 = i - (((i2 * Opcodes.FCMPL) % 255) + 1);
         return i3 >= 0 ? i3 : i3 + 256;

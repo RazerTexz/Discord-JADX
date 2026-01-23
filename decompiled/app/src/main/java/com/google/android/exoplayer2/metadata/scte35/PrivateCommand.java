@@ -4,20 +4,20 @@ import android.os.Parcel;
 import android.os.Parcelable;
 import p007b.p225i.p226a.p242c.p259f3.Util2;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public final class PrivateCommand extends SpliceCommand {
     public static final Parcelable.Creator<PrivateCommand> CREATOR = new C10742a();
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final long f20019j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final long f20020k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final byte[] f20021l;
 
-    /* renamed from: com.google.android.exoplayer2.metadata.scte35.PrivateCommand$a */
+    /* JADX INFO: renamed from: com.google.android.exoplayer2.metadata.scte35.PrivateCommand$a */
     public class C10742a implements Parcelable.Creator<PrivateCommand> {
         @Override // android.os.Parcelable.Creator
         public PrivateCommand createFromParcel(Parcel parcel) {

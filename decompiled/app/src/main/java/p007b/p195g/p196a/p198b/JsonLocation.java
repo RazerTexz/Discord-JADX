@@ -5,12 +5,12 @@ import java.io.Serializable;
 import java.nio.charset.Charset;
 import p007b.p100d.p104b.p105a.outline;
 
-/* compiled from: JsonLocation.java */
-/* renamed from: b.g.a.b.e, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.g.a.b.e, reason: use source file name */
+/* JADX INFO: compiled from: JsonLocation.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class JsonLocation implements Serializable {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static final JsonLocation f4478j = new JsonLocation(null, -1, -1, -1, -1);
     private static final long serialVersionUID = 1;
     public final int _columnNr;
@@ -18,7 +18,7 @@ public class JsonLocation implements Serializable {
     public final long _totalBytes;
     public final long _totalChars;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final transient Object f4479k = null;
 
     public JsonLocation(Object obj, long j, long j2, int i, int i2) {
@@ -28,7 +28,7 @@ public class JsonLocation implements Serializable {
         this._columnNr = i2;
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final int m1670a(StringBuilder sb, String str) {
         sb.append('\"');
         sb.append(str);

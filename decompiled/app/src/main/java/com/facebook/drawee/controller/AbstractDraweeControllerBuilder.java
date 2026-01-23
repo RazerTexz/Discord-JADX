@@ -21,52 +21,52 @@ import p007b.p109f.p148h.p158b.p159a.ControllerListener2;
 import p007b.p109f.p148h.p158b.p159a.ForwardingControllerListener2;
 import p007b.p109f.p161j.p183r.FrescoSystrace;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public abstract class AbstractDraweeControllerBuilder<BUILDER extends AbstractDraweeControllerBuilder<BUILDER, REQUEST, IMAGE, INFO>, REQUEST, IMAGE, INFO> {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final ControllerListener<Object> f19477a = new C10642a();
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static final NullPointerException f19478b = new NullPointerException("No image request was specified!");
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public static final AtomicLong f19479c = new AtomicLong();
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final Context f19480d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final Set<ControllerListener> f19481e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final Set<ControllerListener2> f19482f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public Object f19483g = null;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public REQUEST f19484h = null;
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public REQUEST[] f19485i = null;
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public boolean f19486j = true;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public ControllerListener<? super INFO> f19487k = null;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public boolean f19488l = false;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public boolean f19489m = false;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public DraweeController f19490n = null;
 
-    /* renamed from: com.facebook.drawee.controller.AbstractDraweeControllerBuilder$a */
+    /* JADX INFO: renamed from: com.facebook.drawee.controller.AbstractDraweeControllerBuilder$a */
     public static class C10642a extends BaseControllerListener<Object> {
         @Override // p007b.p109f.p132g.p139c.BaseControllerListener, com.facebook.drawee.controller.ControllerListener
         public void onFinalImageSet(String str, Object obj, Animatable animatable) {
@@ -76,7 +76,7 @@ public abstract class AbstractDraweeControllerBuilder<BUILDER extends AbstractDr
         }
     }
 
-    /* renamed from: com.facebook.drawee.controller.AbstractDraweeControllerBuilder$b */
+    /* JADX INFO: renamed from: com.facebook.drawee.controller.AbstractDraweeControllerBuilder$b */
     public enum EnumC10643b {
         FULL_FETCH,
         DISK_CACHE,
@@ -89,7 +89,7 @@ public abstract class AbstractDraweeControllerBuilder<BUILDER extends AbstractDr
         this.f19482f = set2;
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public AbstractDraweeController m8667a() {
         AnimatableValueParser.m423C(this.f19485i == null || this.f19484h == null, "Cannot specify both ImageRequest and FirstAvailableImageRequests!");
         AnimatableValueParser.m423C(true, "Cannot specify DataSourceSupplier with other ImageRequests! Use one or the other.");
@@ -139,18 +139,18 @@ public abstract class AbstractDraweeControllerBuilder<BUILDER extends AbstractDr
         return abstractDraweeControllerMo1057d;
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public abstract DataSource<IMAGE> mo1056b(DraweeController draweeController, String str, REQUEST request, Object obj, EnumC10643b enumC10643b);
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public Supplier<DataSource<IMAGE>> m8668c(DraweeController draweeController, String str, REQUEST request) {
         return new AbstractDraweeControllerBuilder2(this, draweeController, str, request, this.f19483g, EnumC10643b.FULL_FETCH);
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public abstract AbstractDraweeController mo1057d();
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public Supplier<DataSource<IMAGE>> m8669e(DraweeController draweeController, String str) {
         Supplier<DataSource<IMAGE>> firstAvailableDataSourceSupplier;
         REQUEST request = this.f19484h;

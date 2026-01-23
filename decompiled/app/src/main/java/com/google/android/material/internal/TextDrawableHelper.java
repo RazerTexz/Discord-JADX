@@ -10,8 +10,8 @@ import com.google.android.material.resources.TextAppearance;
 import com.google.android.material.resources.TextAppearanceFontCallback;
 import java.lang.ref.WeakReference;
 
+/* JADX INFO: loaded from: classes3.dex */
 @RestrictTo({RestrictTo.Scope.LIBRARY_GROUP})
-/* loaded from: classes3.dex */
 public class TextDrawableHelper {
 
     @Nullable
@@ -33,7 +33,7 @@ public class TextDrawableHelper {
         void onTextSizeChange();
     }
 
-    /* renamed from: com.google.android.material.internal.TextDrawableHelper$a */
+    /* JADX INFO: renamed from: com.google.android.material.internal.TextDrawableHelper$a */
     public class C10946a extends TextAppearanceFontCallback {
         public C10946a() {
         }

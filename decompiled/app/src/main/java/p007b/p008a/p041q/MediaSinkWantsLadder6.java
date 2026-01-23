@@ -3,24 +3,24 @@ package p007b.p008a.p041q;
 import p001a0.p002a.p003a.C0001a;
 import p007b.p100d.p104b.p105a.outline;
 
-/* compiled from: MediaSinkWantsLadder.kt */
-/* renamed from: b.a.q.n, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.a.q.n, reason: use source file name */
+/* JADX INFO: compiled from: MediaSinkWantsLadder.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class MediaSinkWantsLadder6 {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final int f1758a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final int f1759b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final double f1760c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final int f1761d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final int f1762e;
 
     public MediaSinkWantsLadder6(int i, int i2, double d, int i3, int i4) {

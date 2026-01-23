@@ -5,8 +5,8 @@ import android.os.Parcelable;
 import com.google.android.gms.safetynet.zzf;
 import p007b.p085c.p086a.p087a0.AnimatableValueParser;
 
-/* renamed from: b.i.a.f.k.e */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.k.e */
+/* JADX INFO: loaded from: classes3.dex */
 public final class C4331e implements Parcelable.Creator<zzf> {
     @Override // android.os.Parcelable.Creator
     public final zzf createFromParcel(Parcel parcel) {

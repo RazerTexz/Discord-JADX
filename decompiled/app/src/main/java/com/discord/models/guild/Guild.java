@@ -23,8 +23,8 @@ import p507d0.p580t.Sets5;
 import p507d0.p580t._Collections;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: Guild.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: Guild.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class Guild {
     private final Long afkChannelId;
     private final int afkTimeout;
@@ -113,6 +113,7 @@ public final /* data */ class Guild {
         this.shortName = GuildUtils.computeShortName(str);
     }
 
+    /* JADX WARN: Multi-variable type inference failed */
     public static /* synthetic */ Guild copy$default(Guild guild, List list, List list2, List list3, String str, String str2, int i, long j, String str3, long j2, String str4, GuildVerificationLevel guildVerificationLevel, GuildExplicitContentFilter guildExplicitContentFilter, boolean z2, int i2, int i3, Long l, Long l2, Set set, int i4, String str5, String str6, int i5, int i6, int i7, String str7, Long l3, Long l4, String str8, GuildWelcomeScreen guildWelcomeScreen, GuildMaxVideoChannelUsers guildMaxVideoChannelUsers, String str9, int i8, boolean z3, GuildHubType guildHubType, int i9, int i10, Object obj) {
         return guild.copy((i9 & 1) != 0 ? guild.roles : list, (i9 & 2) != 0 ? guild.emojis : list2, (i9 & 4) != 0 ? guild.stickers : list3, (i9 & 8) != 0 ? guild.name : str, (i9 & 16) != 0 ? guild.description : str2, (i9 & 32) != 0 ? guild.defaultMessageNotifications : i, (i9 & 64) != 0 ? guild.id : j, (i9 & 128) != 0 ? guild.region : str3, (i9 & 256) != 0 ? guild.ownerId : j2, (i9 & 512) != 0 ? guild.icon : str4, (i9 & 1024) != 0 ? guild.verificationLevel : guildVerificationLevel, (i9 & 2048) != 0 ? guild.explicitContentFilter : guildExplicitContentFilter, (i9 & 4096) != 0 ? guild.unavailable : z2, (i9 & 8192) != 0 ? guild.mfaLevel : i2, (i9 & 16384) != 0 ? guild.afkTimeout : i3, (i9 & 32768) != 0 ? guild.afkChannelId : l, (i9 & 65536) != 0 ? guild.systemChannelId : l2, (i9 & 131072) != 0 ? guild.features : set, (i9 & 262144) != 0 ? guild.memberCount : i4, (i9 & 524288) != 0 ? guild.banner : str5, (i9 & 1048576) != 0 ? guild.splash : str6, (i9 & 2097152) != 0 ? guild.premiumTier : i5, (i9 & 4194304) != 0 ? guild.premiumSubscriptionCount : i6, (i9 & 8388608) != 0 ? guild.systemChannelFlags : i7, (i9 & 16777216) != 0 ? guild.joinedAt : str7, (i9 & 33554432) != 0 ? guild.rulesChannelId : l3, (i9 & 67108864) != 0 ? guild.publicUpdatesChannelId : l4, (i9 & 134217728) != 0 ? guild.preferredLocale : str8, (i9 & 268435456) != 0 ? guild.welcomeScreen : guildWelcomeScreen, (i9 & 536870912) != 0 ? guild.maxVideoChannelUsers : guildMaxVideoChannelUsers, (i9 & BasicMeasure.EXACTLY) != 0 ? guild.vanityUrlCode : str9, (i9 & Integer.MIN_VALUE) != 0 ? guild.approximatePresenceCount : i8, (i10 & 1) != 0 ? guild.nsfw : z3, (i10 & 2) != 0 ? guild.hubType : guildHubType);
     }
@@ -137,42 +138,42 @@ public final /* data */ class Guild {
         return this.roles;
     }
 
-    /* renamed from: component10, reason: from getter */
+    /* JADX INFO: renamed from: component10, reason: from getter */
     public final String getIcon() {
         return this.icon;
     }
 
-    /* renamed from: component11, reason: from getter */
+    /* JADX INFO: renamed from: component11, reason: from getter */
     public final GuildVerificationLevel getVerificationLevel() {
         return this.verificationLevel;
     }
 
-    /* renamed from: component12, reason: from getter */
+    /* JADX INFO: renamed from: component12, reason: from getter */
     public final GuildExplicitContentFilter getExplicitContentFilter() {
         return this.explicitContentFilter;
     }
 
-    /* renamed from: component13, reason: from getter */
+    /* JADX INFO: renamed from: component13, reason: from getter */
     public final boolean getUnavailable() {
         return this.unavailable;
     }
 
-    /* renamed from: component14, reason: from getter */
+    /* JADX INFO: renamed from: component14, reason: from getter */
     public final int getMfaLevel() {
         return this.mfaLevel;
     }
 
-    /* renamed from: component15, reason: from getter */
+    /* JADX INFO: renamed from: component15, reason: from getter */
     public final int getAfkTimeout() {
         return this.afkTimeout;
     }
 
-    /* renamed from: component16, reason: from getter */
+    /* JADX INFO: renamed from: component16, reason: from getter */
     public final Long getAfkChannelId() {
         return this.afkChannelId;
     }
 
-    /* renamed from: component17, reason: from getter */
+    /* JADX INFO: renamed from: component17, reason: from getter */
     public final Long getSystemChannelId() {
         return this.systemChannelId;
     }
@@ -181,7 +182,7 @@ public final /* data */ class Guild {
         return this.features;
     }
 
-    /* renamed from: component19, reason: from getter */
+    /* JADX INFO: renamed from: component19, reason: from getter */
     public final int getMemberCount() {
         return this.memberCount;
     }
@@ -190,52 +191,52 @@ public final /* data */ class Guild {
         return this.emojis;
     }
 
-    /* renamed from: component20, reason: from getter */
+    /* JADX INFO: renamed from: component20, reason: from getter */
     public final String getBanner() {
         return this.banner;
     }
 
-    /* renamed from: component21, reason: from getter */
+    /* JADX INFO: renamed from: component21, reason: from getter */
     public final String getSplash() {
         return this.splash;
     }
 
-    /* renamed from: component22, reason: from getter */
+    /* JADX INFO: renamed from: component22, reason: from getter */
     public final int getPremiumTier() {
         return this.premiumTier;
     }
 
-    /* renamed from: component23, reason: from getter */
+    /* JADX INFO: renamed from: component23, reason: from getter */
     public final int getPremiumSubscriptionCount() {
         return this.premiumSubscriptionCount;
     }
 
-    /* renamed from: component24, reason: from getter */
+    /* JADX INFO: renamed from: component24, reason: from getter */
     public final int getSystemChannelFlags() {
         return this.systemChannelFlags;
     }
 
-    /* renamed from: component25, reason: from getter */
+    /* JADX INFO: renamed from: component25, reason: from getter */
     public final String getJoinedAt() {
         return this.joinedAt;
     }
 
-    /* renamed from: component26, reason: from getter */
+    /* JADX INFO: renamed from: component26, reason: from getter */
     public final Long getRulesChannelId() {
         return this.rulesChannelId;
     }
 
-    /* renamed from: component27, reason: from getter */
+    /* JADX INFO: renamed from: component27, reason: from getter */
     public final Long getPublicUpdatesChannelId() {
         return this.publicUpdatesChannelId;
     }
 
-    /* renamed from: component28, reason: from getter */
+    /* JADX INFO: renamed from: component28, reason: from getter */
     public final String getPreferredLocale() {
         return this.preferredLocale;
     }
 
-    /* renamed from: component29, reason: from getter */
+    /* JADX INFO: renamed from: component29, reason: from getter */
     public final GuildWelcomeScreen getWelcomeScreen() {
         return this.welcomeScreen;
     }
@@ -244,57 +245,57 @@ public final /* data */ class Guild {
         return this.stickers;
     }
 
-    /* renamed from: component30, reason: from getter */
+    /* JADX INFO: renamed from: component30, reason: from getter */
     public final GuildMaxVideoChannelUsers getMaxVideoChannelUsers() {
         return this.maxVideoChannelUsers;
     }
 
-    /* renamed from: component31, reason: from getter */
+    /* JADX INFO: renamed from: component31, reason: from getter */
     public final String getVanityUrlCode() {
         return this.vanityUrlCode;
     }
 
-    /* renamed from: component32, reason: from getter */
+    /* JADX INFO: renamed from: component32, reason: from getter */
     public final int getApproximatePresenceCount() {
         return this.approximatePresenceCount;
     }
 
-    /* renamed from: component33, reason: from getter */
+    /* JADX INFO: renamed from: component33, reason: from getter */
     public final boolean getNsfw() {
         return this.nsfw;
     }
 
-    /* renamed from: component34, reason: from getter */
+    /* JADX INFO: renamed from: component34, reason: from getter */
     public final GuildHubType getHubType() {
         return this.hubType;
     }
 
-    /* renamed from: component4, reason: from getter */
+    /* JADX INFO: renamed from: component4, reason: from getter */
     public final String getName() {
         return this.name;
     }
 
-    /* renamed from: component5, reason: from getter */
+    /* JADX INFO: renamed from: component5, reason: from getter */
     public final String getDescription() {
         return this.description;
     }
 
-    /* renamed from: component6, reason: from getter */
+    /* JADX INFO: renamed from: component6, reason: from getter */
     public final int getDefaultMessageNotifications() {
         return this.defaultMessageNotifications;
     }
 
-    /* renamed from: component7, reason: from getter */
+    /* JADX INFO: renamed from: component7, reason: from getter */
     public final long getId() {
         return this.id;
     }
 
-    /* renamed from: component8, reason: from getter */
+    /* JADX INFO: renamed from: component8, reason: from getter */
     public final String getRegion() {
         return this.region;
     }
 
-    /* renamed from: component9, reason: from getter */
+    /* JADX INFO: renamed from: component9, reason: from getter */
     public final long getOwnerId() {
         return this.ownerId;
     }
@@ -473,6 +474,12 @@ public final /* data */ class Guild {
     }
 
     /* JADX WARN: Multi-variable type inference failed */
+    /* JADX WARN: Type inference failed for: r2v29, types: [int] */
+    /* JADX WARN: Type inference failed for: r2v87 */
+    /* JADX WARN: Type inference failed for: r2v95 */
+    /* JADX WARN: Type inference failed for: r3v1 */
+    /* JADX WARN: Type inference failed for: r3v2, types: [int] */
+    /* JADX WARN: Type inference failed for: r3v3 */
     public int hashCode() {
         List<GuildRole> list = this.roles;
         int iHashCode = (list != null ? list.hashCode() : 0) * 31;
@@ -493,13 +500,13 @@ public final /* data */ class Guild {
         GuildExplicitContentFilter guildExplicitContentFilter = this.explicitContentFilter;
         int iHashCode7 = (iHashCode6 + (guildExplicitContentFilter != null ? guildExplicitContentFilter.hashCode() : 0)) * 31;
         boolean z2 = this.unavailable;
-        int i = z2;
-        if (z2 != 0) {
-            i = 1;
+        ?? r2 = z2;
+        if (z2) {
+            r2 = 1;
         }
-        int i2 = (((((iHashCode7 + i) * 31) + this.mfaLevel) * 31) + this.afkTimeout) * 31;
+        int i = (((((iHashCode7 + r2) * 31) + this.mfaLevel) * 31) + this.afkTimeout) * 31;
         Long l = this.afkChannelId;
-        int iHashCode8 = (i2 + (l != null ? l.hashCode() : 0)) * 31;
+        int iHashCode8 = (i + (l != null ? l.hashCode() : 0)) * 31;
         Long l2 = this.systemChannelId;
         int iHashCode9 = (iHashCode8 + (l2 != null ? l2.hashCode() : 0)) * 31;
         Set<GuildFeature> set = this.features;
@@ -523,9 +530,9 @@ public final /* data */ class Guild {
         String str9 = this.vanityUrlCode;
         int iHashCode19 = (((iHashCode18 + (str9 != null ? str9.hashCode() : 0)) * 31) + this.approximatePresenceCount) * 31;
         boolean z3 = this.nsfw;
-        int i3 = (iHashCode19 + (z3 ? 1 : z3 ? 1 : 0)) * 31;
+        int i2 = (iHashCode19 + (z3 ? 1 : z3)) * 31;
         GuildHubType guildHubType = this.hubType;
-        return i3 + (guildHubType != null ? guildHubType.hashCode() : 0);
+        return i2 + (guildHubType != null ? guildHubType.hashCode() : 0);
     }
 
     public final boolean isHub() {

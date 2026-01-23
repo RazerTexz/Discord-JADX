@@ -7,8 +7,8 @@ import com.discord.widgets.channels.list.items.ChannelListItemInvite;
 import com.discord.widgets.guilds.invite.WidgetGuildInviteShare;
 import p007b.p100d.p104b.p105a.outline;
 
-/* compiled from: WidgetChannelsListAdapter.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetChannelsListAdapter.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetChannelsListAdapter$ItemInvite$onConfigure$1 implements View.OnClickListener {
     public final /* synthetic */ ChannelListItem $data;
     public final /* synthetic */ WidgetChannelsListAdapter.ItemInvite this$0;

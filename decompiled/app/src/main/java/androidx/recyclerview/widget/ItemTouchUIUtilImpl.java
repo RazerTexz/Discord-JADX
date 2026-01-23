@@ -5,7 +5,7 @@ import android.view.View;
 import androidx.core.view.ViewCompat;
 import androidx.recyclerview.C0534R;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class ItemTouchUIUtilImpl implements ItemTouchUIUtil {
     public static final ItemTouchUIUtil INSTANCE = new ItemTouchUIUtilImpl();
 

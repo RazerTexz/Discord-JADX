@@ -5,33 +5,33 @@ import java.io.IOException;
 import p007b.p085c.p086a.p087a0.AnimatableValueParser;
 import p007b.p225i.p226a.p242c.p267x2.TrackOutput2;
 
-/* compiled from: TrueHdSampleRechunker.java */
-/* renamed from: b.i.a.c.x2.x, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.x2.x, reason: use source file name */
+/* JADX INFO: compiled from: TrueHdSampleRechunker.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class TrueHdSampleRechunker {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final byte[] f9004a = new byte[10];
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public boolean f9005b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public int f9006c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public long f9007d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public int f9008e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public int f9009f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public int f9010g;
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public void m3819a(TrackOutput2 trackOutput2, @Nullable TrackOutput2.a aVar) {
         if (this.f9006c > 0) {
             trackOutput2.mo2525d(this.f9007d, this.f9008e, this.f9009f, this.f9010g, aVar);
@@ -39,7 +39,7 @@ public final class TrueHdSampleRechunker {
         }
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public void m3820b(TrackOutput2 trackOutput2, long j, int i, int i2, int i3, @Nullable TrackOutput2.a aVar) {
         AnimatableValueParser.m429E(this.f9010g <= i2 + i3, "TrueHD chunk samples must be contiguous in the sample queue.");
         if (this.f9005b) {
@@ -59,7 +59,7 @@ public final class TrueHdSampleRechunker {
         }
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public void m3821c(ExtractorInput extractorInput) throws IOException {
         if (this.f9005b) {
             return;

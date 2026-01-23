@@ -2,15 +2,15 @@ package p007b.p452o.p453a.p473x;
 
 import androidx.annotation.NonNull;
 
-/* compiled from: Size.java */
-/* renamed from: b.o.a.x.b, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.o.a.x.b, reason: use source file name */
+/* JADX INFO: compiled from: Size.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class Size3 implements Comparable<Size3> {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final int f14251j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final int f14252k;
 
     public Size3(int i, int i2) {
@@ -38,7 +38,7 @@ public class Size3 implements Comparable<Size3> {
         return this.f14251j == size3.f14251j && this.f14252k == size3.f14252k;
     }
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public Size3 m7451f() {
         return new Size3(this.f14252k, this.f14251j);
     }

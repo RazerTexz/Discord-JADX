@@ -3,9 +3,9 @@ package com.discord.widgets.guildscheduledevent;
 import android.view.View;
 import kotlin.jvm.functions.Function0;
 
-/* compiled from: GuildEventPromptListView.kt */
-/* renamed from: com.discord.widgets.guildscheduledevent.GuildEventPromptListView$configure$$inlined$apply$lambda$2, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.guildscheduledevent.GuildEventPromptListView$configure$$inlined$apply$lambda$2, reason: use source file name */
+/* JADX INFO: compiled from: GuildEventPromptListView.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class GuildEventPromptListView3 implements View.OnClickListener {
     public final /* synthetic */ Function0 $onCreateEventClick$inlined;
 

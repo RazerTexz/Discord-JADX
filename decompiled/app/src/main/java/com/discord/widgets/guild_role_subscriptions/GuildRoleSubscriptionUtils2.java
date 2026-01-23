@@ -23,12 +23,12 @@ import kotlin.NoWhenBranchMatchedException;
 import p507d0.p580t._Collections;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: GuildRoleSubscriptionUtils.kt */
-/* renamed from: com.discord.widgets.guild_role_subscriptions.GuildRoleSubscriptionUtilsKt, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.guild_role_subscriptions.GuildRoleSubscriptionUtilsKt, reason: use source file name */
+/* JADX INFO: compiled from: GuildRoleSubscriptionUtils.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class GuildRoleSubscriptionUtils2 {
 
-    /* renamed from: com.discord.widgets.guild_role_subscriptions.GuildRoleSubscriptionUtilsKt$WhenMappings */
+    /* JADX INFO: renamed from: com.discord.widgets.guild_role_subscriptions.GuildRoleSubscriptionUtilsKt$WhenMappings */
     public final /* synthetic */ class WhenMappings {
         public static final /* synthetic */ int[] $EnumSwitchMapping$0;
         public static final /* synthetic */ int[] $EnumSwitchMapping$1;

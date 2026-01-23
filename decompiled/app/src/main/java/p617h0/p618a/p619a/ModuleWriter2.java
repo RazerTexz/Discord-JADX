@@ -1,59 +1,59 @@
 package p617h0.p618a.p619a;
 
-/* compiled from: ModuleWriter.java */
-/* renamed from: h0.a.a.s, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: h0.a.a.s, reason: use source file name */
+/* JADX INFO: compiled from: ModuleWriter.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class ModuleWriter2 {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final SymbolTable2 f26316a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final int f26317b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final int f26318c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final int f26319d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public int f26320e;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public int f26322g;
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public int f26324i;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public int f26326k;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public int f26328m;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public int f26330o;
 
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     public int f26332q;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final ByteVector2 f26321f = new ByteVector2();
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public final ByteVector2 f26323h = new ByteVector2();
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final ByteVector2 f26325j = new ByteVector2();
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final ByteVector2 f26327l = new ByteVector2();
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public final ByteVector2 f26329n = new ByteVector2();
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public final ByteVector2 f26331p = new ByteVector2();
 
     public ModuleWriter2(SymbolTable2 symbolTable2, int i, int i2, int i3) {

@@ -17,8 +17,8 @@ import kotlin.jvm.functions.Function1;
 import p507d0.p592z.p594d.FunctionReferenceImpl;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: WidgetCreateChannel.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetCreateChannel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final /* synthetic */ class WidgetCreateChannel$binding$2 extends FunctionReferenceImpl implements Function1<View, WidgetCreateChannelBinding> {
     public static final WidgetCreateChannel$binding$2 INSTANCE = new WidgetCreateChannel$binding$2();
 
@@ -31,7 +31,7 @@ public final /* synthetic */ class WidgetCreateChannel$binding$2 extends Functio
         return invoke2(view);
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final WidgetCreateChannelBinding invoke2(View view) {
         Intrinsics3.checkNotNullParameter(view, "p1");
         int i = C5419R.id.create_channel_announcements_container;

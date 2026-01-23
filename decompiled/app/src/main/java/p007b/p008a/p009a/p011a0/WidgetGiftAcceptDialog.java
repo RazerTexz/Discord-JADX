@@ -68,32 +68,32 @@ import p507d0.p592z.p594d.Reflection2;
 import p658rx.Observable;
 import p658rx.functions.Func2;
 
-/* compiled from: WidgetGiftAcceptDialog.kt */
-/* renamed from: b.a.a.a0.c, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.a.a.a0.c, reason: use source file name */
+/* JADX INFO: compiled from: WidgetGiftAcceptDialog.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class WidgetGiftAcceptDialog extends AppDialog {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static final /* synthetic */ KProperty[] f232j = {outline.m846d0(WidgetGiftAcceptDialog.class, "binding", "getBinding()Lcom/discord/databinding/WidgetAcceptGiftDialogBinding;", 0)};
 
-    /* renamed from: k, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: k, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
 
-    /* renamed from: l, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: l, reason: from kotlin metadata */
     public final FragmentViewBindingDelegate binding;
 
-    /* compiled from: WidgetGiftAcceptDialog.kt */
-    /* renamed from: b.a.a.a0.c$a, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: b.a.a.a0.c$a, reason: from kotlin metadata */
+    /* JADX INFO: compiled from: WidgetGiftAcceptDialog.kt */
     public static final class Companion {
 
-        /* compiled from: WidgetGiftAcceptDialog.kt */
-        /* renamed from: b.a.a.a0.c$a$a, reason: collision with other inner class name */
+        /* JADX INFO: renamed from: b.a.a.a0.c$a$a, reason: collision with other inner class name */
+        /* JADX INFO: compiled from: WidgetGiftAcceptDialog.kt */
         public static final class C13206a {
 
-            /* renamed from: a */
+            /* JADX INFO: renamed from: a */
             public final StoreGifting.GiftState f235a;
 
-            /* renamed from: b */
+            /* JADX INFO: renamed from: b */
             public final boolean f236b;
 
             public C13206a(StoreGifting.GiftState giftState, boolean z2) {
@@ -114,15 +114,18 @@ public final class WidgetGiftAcceptDialog extends AppDialog {
             }
 
             /* JADX WARN: Multi-variable type inference failed */
+            /* JADX WARN: Type inference failed for: r1v1, types: [int] */
+            /* JADX WARN: Type inference failed for: r1v2 */
+            /* JADX WARN: Type inference failed for: r1v3 */
             public int hashCode() {
                 StoreGifting.GiftState giftState = this.f235a;
                 int iHashCode = (giftState != null ? giftState.hashCode() : 0) * 31;
                 boolean z2 = this.f236b;
-                int i = z2;
-                if (z2 != 0) {
-                    i = 1;
+                ?? r1 = z2;
+                if (z2) {
+                    r1 = 1;
                 }
-                return iHashCode + i;
+                return iHashCode + r1;
             }
 
             public String toString() {
@@ -133,8 +136,8 @@ public final class WidgetGiftAcceptDialog extends AppDialog {
             }
         }
 
-        /* compiled from: WidgetGiftAcceptDialog.kt */
-        /* renamed from: b.a.a.a0.c$a$b */
+        /* JADX INFO: renamed from: b.a.a.a0.c$a$b */
+        /* JADX INFO: compiled from: WidgetGiftAcceptDialog.kt */
         public static final class b extends Lambda implements Function1<FragmentActivity, Boolean> {
             public final /* synthetic */ long $channelId;
             public final /* synthetic */ String $giftCode;
@@ -167,7 +170,7 @@ public final class WidgetGiftAcceptDialog extends AppDialog {
         public Companion(DefaultConstructorMarker defaultConstructorMarker) {
         }
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final void m107a(String str, String str2, long j) {
             Intrinsics3.checkNotNullParameter(str, "giftCode");
             Intrinsics3.checkNotNullParameter(str2, "source");
@@ -179,11 +182,11 @@ public final class WidgetGiftAcceptDialog extends AppDialog {
         }
     }
 
-    /* compiled from: WidgetGiftAcceptDialog.kt */
-    /* renamed from: b.a.a.a0.c$b */
+    /* JADX INFO: renamed from: b.a.a.a0.c$b */
+    /* JADX INFO: compiled from: WidgetGiftAcceptDialog.kt */
     public static final /* synthetic */ class b extends FunctionReferenceImpl implements Function1<View, WidgetAcceptGiftDialogBinding> {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public static final b f237j = new b();
 
         public b() {
@@ -239,9 +242,9 @@ public final class WidgetGiftAcceptDialog extends AppDialog {
         }
     }
 
-    /* compiled from: WidgetGiftAcceptDialog.kt */
+    /* JADX INFO: renamed from: b.a.a.a0.c$c */
+    /* JADX INFO: compiled from: WidgetGiftAcceptDialog.kt */
     @DebugMetadata(m10084c = "com.discord.dialogs.gifting.WidgetGiftAcceptDialog$configureUI$1$1", m10085f = "WidgetGiftAcceptDialog.kt", m10086l = {118}, m10087m = "invokeSuspend")
-    /* renamed from: b.a.a.a0.c$c */
     public static final class c extends ContinuationImpl6 implements Function2<CoroutineScope, Continuation<? super Unit>, Object> {
         public final /* synthetic */ RLottieImageView $this_apply;
         public int label;
@@ -286,11 +289,11 @@ public final class WidgetGiftAcceptDialog extends AppDialog {
         }
     }
 
-    /* compiled from: WidgetGiftAcceptDialog.kt */
-    /* renamed from: b.a.a.a0.c$d */
+    /* JADX INFO: renamed from: b.a.a.a0.c$d */
+    /* JADX INFO: compiled from: WidgetGiftAcceptDialog.kt */
     public static final class d<T1, T2, R> implements Func2<StoreGifting.GiftState, Boolean, Companion.C13206a> {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public static final d f238j = new d();
 
         @Override // p658rx.functions.Func2
@@ -303,8 +306,8 @@ public final class WidgetGiftAcceptDialog extends AppDialog {
         }
     }
 
-    /* compiled from: WidgetGiftAcceptDialog.kt */
-    /* renamed from: b.a.a.a0.c$e */
+    /* JADX INFO: renamed from: b.a.a.a0.c$e */
+    /* JADX INFO: compiled from: WidgetGiftAcceptDialog.kt */
     public static final class e extends Lambda implements Function1<Companion.C13206a, Unit> {
         public e() {
             super(1);
@@ -448,8 +451,8 @@ public final class WidgetGiftAcceptDialog extends AppDialog {
         }
     }
 
-    /* compiled from: WidgetGiftAcceptDialog.kt */
-    /* renamed from: b.a.a.a0.c$f */
+    /* JADX INFO: renamed from: b.a.a.a0.c$f */
+    /* JADX INFO: compiled from: WidgetGiftAcceptDialog.kt */
     public static final class f extends Lambda implements Function1<Error, Unit> {
         public f() {
             super(1);
@@ -468,7 +471,7 @@ public final class WidgetGiftAcceptDialog extends AppDialog {
         this.binding = FragmentViewBindingDelegate3.viewBinding$default(this, b.f237j, null, 2, null);
     }
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public final void m104g(ModelGift gift, Companion.C13206a uiState) {
         ModelSku sku;
         Application application;
@@ -526,12 +529,12 @@ public final class WidgetGiftAcceptDialog extends AppDialog {
         progressBar.setVisibility(8);
     }
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public final WidgetAcceptGiftDialogBinding m105h() {
         return (WidgetAcceptGiftDialogBinding) this.binding.getValue((Fragment) this, f232j[0]);
     }
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public final CharSequence m106i(ModelGift gift) {
         int i;
         SubscriptionPlan subscriptionPlan = gift.getSubscriptionPlan();

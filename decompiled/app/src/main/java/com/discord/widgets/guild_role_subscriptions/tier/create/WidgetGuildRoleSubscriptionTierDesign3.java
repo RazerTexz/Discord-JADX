@@ -5,9 +5,9 @@ import com.discord.utilities.color.ColorCompat;
 import kotlin.jvm.functions.Function0;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetGuildRoleSubscriptionTierDesign.kt */
-/* renamed from: com.discord.widgets.guild_role_subscriptions.tier.create.WidgetGuildRoleSubscriptionTierDesign$defaultColor$2, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.guild_role_subscriptions.tier.create.WidgetGuildRoleSubscriptionTierDesign$defaultColor$2, reason: use source file name */
+/* JADX INFO: compiled from: WidgetGuildRoleSubscriptionTierDesign.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetGuildRoleSubscriptionTierDesign3 extends Lambda implements Function0<Integer> {
     public final /* synthetic */ WidgetGuildRoleSubscriptionTierDesign this$0;
 
@@ -22,7 +22,7 @@ public final class WidgetGuildRoleSubscriptionTierDesign3 extends Lambda impleme
         return Integer.valueOf(invoke2());
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final int invoke2() {
         return ColorCompat.getColor(this.this$0, C5419R.color.primary_300);
     }

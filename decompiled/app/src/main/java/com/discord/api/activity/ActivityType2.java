@@ -9,9 +9,9 @@ import java.util.Objects;
 import p007b.p085c.p086a.p087a0.AnimatableValueParser;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ActivityType.kt */
-/* renamed from: com.discord.api.activity.ActivityTypeTypeAdapter, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: com.discord.api.activity.ActivityTypeTypeAdapter, reason: use source file name */
+/* JADX INFO: compiled from: ActivityType.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class ActivityType2 extends TypeAdapter<ActivityType> {
     @Override // com.google.gson.TypeAdapter
     public ActivityType read(JsonReader jsonReader) throws IOException {

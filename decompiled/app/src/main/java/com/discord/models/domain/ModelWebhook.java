@@ -4,13 +4,13 @@ import com.discord.models.domain.Model;
 import java.io.IOException;
 import p007b.p100d.p104b.p105a.outline;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class ModelWebhook implements Model {
     private String avatar;
     private long channelId;
     private long guildId;
 
-    /* renamed from: id */
+    /* JADX INFO: renamed from: id */
     private long f18586id;
     private String name;
 

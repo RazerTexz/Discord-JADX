@@ -14,15 +14,15 @@ import java.util.Arrays;
 import p007b.p085c.p086a.p087a0.AnimatableValueParser;
 import p007b.p100d.p104b.p105a.outline;
 
-/* compiled from: DirectorySoSource.java */
-/* renamed from: b.f.m.c, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.f.m.c, reason: use source file name */
+/* JADX INFO: compiled from: DirectorySoSource.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class DirectorySoSource extends SoSource {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final File f4319a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final int f4320b;
 
     public DirectorySoSource(File file, int i) {
@@ -31,12 +31,12 @@ public class DirectorySoSource extends SoSource {
     }
 
     @Override // p007b.p109f.p190m.SoSource
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public int mo1568a(String str, int i, StrictMode.ThreadPolicy threadPolicy) throws IOException {
         return m1572c(str, i, this.f4319a, threadPolicy);
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public int m1572c(String str, int i, File file, StrictMode.ThreadPolicy threadPolicy) throws Throwable {
         File file2 = new File(file, str);
         if (!file2.exists()) {

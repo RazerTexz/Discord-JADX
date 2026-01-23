@@ -5,7 +5,7 @@ import java.util.List;
 import java.util.Map;
 import org.webrtc.MediaStreamTrack;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public class RtpParameters {
     public final List<Codec> codecs;
 
@@ -80,7 +80,7 @@ public class RtpParameters {
     public static class HeaderExtension {
         private final boolean encrypted;
 
-        /* renamed from: id */
+        /* JADX INFO: renamed from: id */
         private final int f27615id;
         private final String uri;
 

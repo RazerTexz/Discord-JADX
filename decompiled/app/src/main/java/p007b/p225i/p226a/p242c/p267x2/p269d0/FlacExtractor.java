@@ -23,52 +23,52 @@ import p007b.p225i.p226a.p242c.p267x2.SeekMap;
 import p007b.p225i.p226a.p242c.p267x2.TrackOutput2;
 import p007b.p225i.p355b.p356a.Charsets;
 
-/* compiled from: FlacExtractor.java */
-/* renamed from: b.i.a.c.x2.d0.d, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.x2.d0.d, reason: use source file name */
+/* JADX INFO: compiled from: FlacExtractor.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class FlacExtractor implements Extractor {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final byte[] f8100a = new byte[42];
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final ParsableByteArray f8101b = new ParsableByteArray(new byte[32768], 0);
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final boolean f8102c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final FlacFrameReader.a f8103d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public ExtractorOutput f8104e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public TrackOutput2 f8105f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public int f8106g;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     @Nullable
     public Metadata f8107h;
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public FlacStreamMetadata f8108i;
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public int f8109j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public int f8110k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public FlacBinarySearchSeeker f8111l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public int f8112m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public long f8113n;
 
     static {
@@ -81,16 +81,16 @@ public final class FlacExtractor implements Extractor {
         this.f8106g = 0;
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final void m3641a() {
         long j = this.f8113n * 1000000;
         FlacStreamMetadata flacStreamMetadata = this.f8108i;
         int i = Util2.f6708a;
-        this.f8105f.mo2525d(j / flacStreamMetadata.f8974e, 1, this.f8112m, 0, null);
+        this.f8105f.mo2525d(j / ((long) flacStreamMetadata.f8974e), 1, this.f8112m, 0, null);
     }
 
     @Override // p007b.p225i.p226a.p242c.p267x2.Extractor
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public boolean mo3633b(ExtractorInput extractorInput) throws IOException {
         AnimatableValueParser.m593y1(extractorInput, false);
         byte[] bArr = new byte[4];
@@ -103,7 +103,7 @@ public final class FlacExtractor implements Extractor {
     /* JADX WARN: Type inference failed for: r4v15 */
     /* JADX WARN: Type inference failed for: r4v8, types: [boolean, int] */
     @Override // p007b.p225i.p226a.p242c.p267x2.Extractor
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public int mo3635e(ExtractorInput extractorInput, PositionHolder positionHolder) throws IOException {
         boolean z2;
         FlacStreamMetadata flacStreamMetadata;
@@ -132,8 +132,9 @@ public final class FlacExtractor implements Extractor {
         int i2 = 4;
         int i3 = 3;
         if (i == 2) {
-            extractorInput.readFully(new byte[4], 0, 4);
-            if ((((r10[0] & 255) << 24) | ((r10[1] & 255) << 16) | ((r10[2] & 255) << 8) | (r10[3] & 255)) != 1716281667) {
+            byte[] bArr2 = new byte[4];
+            extractorInput.readFully(bArr2, 0, 4);
+            if ((((((long) bArr2[0]) & 255) << 24) | ((((long) bArr2[1]) & 255) << 16) | ((((long) bArr2[2]) & 255) << 8) | (((long) bArr2[3]) & 255)) != 1716281667) {
                 throw ParserException.m8755a("Failed to read FLAC stream marker.", null);
             }
             this.f8106g = 3;
@@ -150,9 +151,9 @@ public final class FlacExtractor implements Extractor {
                 int iM3067g = parsableBitArray.m3067g(i);
                 int iM3067g2 = parsableBitArray.m3067g(24) + i2;
                 if (iM3067g == 0) {
-                    byte[] bArr2 = new byte[38];
-                    extractorInput.readFully(bArr2, r4, 38);
-                    flacStreamMetadataM3809b = new FlacStreamMetadata(bArr2, i2);
+                    byte[] bArr3 = new byte[38];
+                    extractorInput.readFully(bArr3, r4, 38);
+                    flacStreamMetadataM3809b = new FlacStreamMetadata(bArr3, i2);
                 } else {
                     if (flacStreamMetadataM3809b == null) {
                         throw new IllegalArgumentException();
@@ -182,10 +183,10 @@ public final class FlacExtractor implements Extractor {
                                 int iM3086f4 = parsableByteArray3.m3086f();
                                 int iM3086f5 = parsableByteArray3.m3086f();
                                 int iM3086f6 = parsableByteArray3.m3086f();
-                                byte[] bArr3 = new byte[iM3086f6];
-                                System.arraycopy(parsableByteArray3.f6793a, parsableByteArray3.f6794b, bArr3, 0, iM3086f6);
+                                byte[] bArr4 = new byte[iM3086f6];
+                                System.arraycopy(parsableByteArray3.f6793a, parsableByteArray3.f6794b, bArr4, 0, iM3086f6);
                                 parsableByteArray3.f6794b += iM3086f6;
-                                flacStreamMetadata = new FlacStreamMetadata(flacStreamMetadataM3809b.f8970a, flacStreamMetadataM3809b.f8971b, flacStreamMetadataM3809b.f8972c, flacStreamMetadataM3809b.f8973d, flacStreamMetadataM3809b.f8974e, flacStreamMetadataM3809b.f8976g, flacStreamMetadataM3809b.f8977h, flacStreamMetadataM3809b.f8979j, flacStreamMetadataM3809b.f8980k, flacStreamMetadataM3809b.m3812f(FlacStreamMetadata.m3806a(Collections.emptyList(), Collections.singletonList(new PictureFrame(iM3086f, strM3098r, strM3097q, iM3086f2, iM3086f3, iM3086f4, iM3086f5, bArr3)))));
+                                flacStreamMetadata = new FlacStreamMetadata(flacStreamMetadataM3809b.f8970a, flacStreamMetadataM3809b.f8971b, flacStreamMetadataM3809b.f8972c, flacStreamMetadataM3809b.f8973d, flacStreamMetadataM3809b.f8974e, flacStreamMetadataM3809b.f8976g, flacStreamMetadataM3809b.f8977h, flacStreamMetadataM3809b.f8979j, flacStreamMetadataM3809b.f8980k, flacStreamMetadataM3809b.m3812f(FlacStreamMetadata.m3806a(Collections.emptyList(), Collections.singletonList(new PictureFrame(iM3086f, strM3098r, strM3097q, iM3086f2, iM3086f3, iM3086f4, iM3086f5, bArr4)))));
                             } else {
                                 extractorInput.mo3650l(iM3067g2);
                                 int i4 = Util2.f6708a;
@@ -227,9 +228,9 @@ public final class FlacExtractor implements Extractor {
         long j2 = 0;
         if (i == 4) {
             extractorInput.mo3649k();
-            byte[] bArr4 = new byte[2];
-            extractorInput.mo3652o(bArr4, 0, 2);
-            int i6 = (bArr4[1] & 255) | ((bArr4[0] & 255) << 8);
+            byte[] bArr5 = new byte[2];
+            extractorInput.mo3652o(bArr5, 0, 2);
+            int i6 = (bArr5[1] & 255) | ((bArr5[0] & 255) << 8);
             if ((i6 >> 2) != 16382) {
                 extractorInput.mo3649k();
                 throw ParserException.m8755a("First frame does not start with sync code.", null);
@@ -268,9 +269,9 @@ public final class FlacExtractor implements Extractor {
             FlacStreamMetadata flacStreamMetadata3 = this.f8108i;
             extractorInput.mo3649k();
             extractorInput.mo3646g(1);
-            byte[] bArr5 = new byte[1];
-            extractorInput.mo3652o(bArr5, 0, 1);
-            boolean z5 = (bArr5[0] & 1) == 1;
+            byte[] bArr6 = new byte[1];
+            extractorInput.mo3652o(bArr6, 0, 1);
+            boolean z5 = (bArr6[0] & 1) == 1;
             extractorInput.mo3646g(2);
             i = z5 ? 7 : 6;
             ParsableByteArray parsableByteArray4 = new ParsableByteArray(i);
@@ -279,7 +280,7 @@ public final class FlacExtractor implements Extractor {
             try {
                 long jM3106z = parsableByteArray4.m3106z();
                 if (!z5) {
-                    jM3106z *= flacStreamMetadata3.f8971b;
+                    jM3106z *= (long) flacStreamMetadata3.f8971b;
                 }
                 j2 = jM3106z;
             } catch (NumberFormatException unused) {
@@ -369,15 +370,15 @@ public final class FlacExtractor implements Extractor {
         }
         int iM3081a = this.f8101b.m3081a();
         ParsableByteArray parsableByteArray9 = this.f8101b;
-        byte[] bArr6 = parsableByteArray9.f6793a;
-        System.arraycopy(bArr6, parsableByteArray9.f6794b, bArr6, 0, iM3081a);
+        byte[] bArr7 = parsableByteArray9.f6793a;
+        System.arraycopy(bArr7, parsableByteArray9.f6794b, bArr7, 0, iM3081a);
         this.f8101b.m3079E(0);
         this.f8101b.m3078D(iM3081a);
         return 0;
     }
 
     @Override // p007b.p225i.p226a.p242c.p267x2.Extractor
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public void mo3636f(ExtractorOutput extractorOutput) {
         this.f8104e = extractorOutput;
         this.f8105f = extractorOutput.mo2492p(0, 1);
@@ -385,7 +386,7 @@ public final class FlacExtractor implements Extractor {
     }
 
     @Override // p007b.p225i.p226a.p242c.p267x2.Extractor
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public void mo3637g(long j, long j2) {
         if (j == 0) {
             this.f8106g = 0;

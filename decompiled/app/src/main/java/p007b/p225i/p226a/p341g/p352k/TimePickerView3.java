@@ -5,12 +5,12 @@ import android.view.MotionEvent;
 import com.google.android.material.timepicker.MaterialTimePicker;
 import com.google.android.material.timepicker.TimePickerView;
 
-/* compiled from: TimePickerView.java */
-/* renamed from: b.i.a.g.k.l, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.g.k.l, reason: use source file name */
+/* JADX INFO: compiled from: TimePickerView.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class TimePickerView3 extends GestureDetector.SimpleOnGestureListener {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final /* synthetic */ TimePickerView f11892j;
 
     public TimePickerView3(TimePickerView timePickerView) {

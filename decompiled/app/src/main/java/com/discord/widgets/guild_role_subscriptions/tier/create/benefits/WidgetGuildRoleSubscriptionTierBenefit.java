@@ -55,12 +55,12 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 import p507d0.p592z.p594d.Reflection2;
 
-/* compiled from: WidgetGuildRoleSubscriptionTierBenefit.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetGuildRoleSubscriptionTierBenefit.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetGuildRoleSubscriptionTierBenefit extends AppFragment {
     public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetGuildRoleSubscriptionTierBenefit.class, "binding", "getBinding()Lcom/discord/databinding/WidgetGuildRoleSubscriptionTierBenefitBinding;", 0)};
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private static final String INTENT_EXTRA_BENEFIT_TYPE = "INTENT_EXTRA_BENEFIT_TYPE";
     private static final String INTENT_EXTRA_EXISTING_BENEFIT = "INTENT_EXTRA_EXISTING_BENEFIT";
@@ -70,26 +70,26 @@ public final class WidgetGuildRoleSubscriptionTierBenefit extends AppFragment {
     private static final String RESULT_EXTRA_BENEFIT = "RESULT_EXTRA_BENEFIT";
     private static final String RESULT_EXTRA_EXISTING_BENEFIT = "RESULT_EXTRA_EXISTING_BENEFIT";
 
-    /* renamed from: benefitType$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: benefitType$delegate, reason: from kotlin metadata */
     private final Lazy benefitType;
 
-    /* renamed from: binding$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
     private final ActivityResultLauncher<Intent> createChannelLauncher;
 
-    /* renamed from: existingBenefit$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: existingBenefit$delegate, reason: from kotlin metadata */
     private final Lazy existingBenefit;
 
-    /* renamed from: guildId$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: guildId$delegate, reason: from kotlin metadata */
     private final Lazy guildId;
 
-    /* renamed from: tierName$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: tierName$delegate, reason: from kotlin metadata */
     private final Lazy tierName;
 
-    /* renamed from: viewModel$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: viewModel$delegate, reason: from kotlin metadata */
     private final Lazy viewModel;
 
-    /* compiled from: WidgetGuildRoleSubscriptionTierBenefit.kt */
+    /* JADX INFO: compiled from: WidgetGuildRoleSubscriptionTierBenefit.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -137,13 +137,13 @@ public final class WidgetGuildRoleSubscriptionTierBenefit extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetGuildRoleSubscriptionTierBenefit.kt */
-    /* renamed from: com.discord.widgets.guild_role_subscriptions.tier.create.benefits.WidgetGuildRoleSubscriptionTierBenefit$configureUI$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.guild_role_subscriptions.tier.create.benefits.WidgetGuildRoleSubscriptionTierBenefit$configureUI$1 */
+    /* JADX INFO: compiled from: WidgetGuildRoleSubscriptionTierBenefit.kt */
     public static final class ViewOnClickListenerC85281 implements View.OnClickListener {
         public final /* synthetic */ GuildRoleSubscriptionTierBenefitViewModel.ViewState $viewState;
 
-        /* compiled from: WidgetGuildRoleSubscriptionTierBenefit.kt */
-        /* renamed from: com.discord.widgets.guild_role_subscriptions.tier.create.benefits.WidgetGuildRoleSubscriptionTierBenefit$configureUI$1$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.widgets.guild_role_subscriptions.tier.create.benefits.WidgetGuildRoleSubscriptionTierBenefit$configureUI$1$1, reason: invalid class name */
+        /* JADX INFO: compiled from: WidgetGuildRoleSubscriptionTierBenefit.kt */
         public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
             public AnonymousClass1() {
                 super(0);
@@ -155,7 +155,7 @@ public final class WidgetGuildRoleSubscriptionTierBenefit extends AppFragment {
                 return Unit.f27425a;
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2() {
                 AppFragment.hideKeyboard$default(WidgetGuildRoleSubscriptionTierBenefit.this, null, 1, null);
             }
@@ -173,8 +173,8 @@ public final class WidgetGuildRoleSubscriptionTierBenefit extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetGuildRoleSubscriptionTierBenefit.kt */
-    /* renamed from: com.discord.widgets.guild_role_subscriptions.tier.create.benefits.WidgetGuildRoleSubscriptionTierBenefit$configureUIForChannelBenefit$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.guild_role_subscriptions.tier.create.benefits.WidgetGuildRoleSubscriptionTierBenefit$configureUIForChannelBenefit$1 */
+    /* JADX INFO: compiled from: WidgetGuildRoleSubscriptionTierBenefit.kt */
     public static final class C85291 extends Lambda implements Function3<Long, String, Integer, Unit> {
         public C85291() {
             super(3);
@@ -192,8 +192,8 @@ public final class WidgetGuildRoleSubscriptionTierBenefit extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetGuildRoleSubscriptionTierBenefit.kt */
-    /* renamed from: com.discord.widgets.guild_role_subscriptions.tier.create.benefits.WidgetGuildRoleSubscriptionTierBenefit$configureUIForChannelBenefit$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.guild_role_subscriptions.tier.create.benefits.WidgetGuildRoleSubscriptionTierBenefit$configureUIForChannelBenefit$2 */
+    /* JADX INFO: compiled from: WidgetGuildRoleSubscriptionTierBenefit.kt */
     public static final class C85302 extends Lambda implements Function0<Unit> {
         public C85302() {
             super(0);
@@ -205,14 +205,14 @@ public final class WidgetGuildRoleSubscriptionTierBenefit extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             WidgetCreateChannel.Companion.launch$default(WidgetCreateChannel.INSTANCE, WidgetGuildRoleSubscriptionTierBenefit.this.requireContext(), WidgetGuildRoleSubscriptionTierBenefit.access$getCreateChannelLauncher$p(WidgetGuildRoleSubscriptionTierBenefit.this), WidgetGuildRoleSubscriptionTierBenefit.access$getGuildId$p(WidgetGuildRoleSubscriptionTierBenefit.this), 0, null, true, true, true, true, 24, null);
         }
     }
 
-    /* compiled from: WidgetGuildRoleSubscriptionTierBenefit.kt */
-    /* renamed from: com.discord.widgets.guild_role_subscriptions.tier.create.benefits.WidgetGuildRoleSubscriptionTierBenefit$configureUIForIntangibleBenefit$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.guild_role_subscriptions.tier.create.benefits.WidgetGuildRoleSubscriptionTierBenefit$configureUIForIntangibleBenefit$1 */
+    /* JADX INFO: compiled from: WidgetGuildRoleSubscriptionTierBenefit.kt */
     public static final class C85311 extends Lambda implements Function1<Editable, Unit> {
         public C85311() {
             super(1);
@@ -224,15 +224,15 @@ public final class WidgetGuildRoleSubscriptionTierBenefit extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Editable editable) {
             Intrinsics3.checkNotNullParameter(editable, "it");
             WidgetGuildRoleSubscriptionTierBenefit.access$getViewModel$p(WidgetGuildRoleSubscriptionTierBenefit.this).updateName(editable.toString());
         }
     }
 
-    /* compiled from: WidgetGuildRoleSubscriptionTierBenefit.kt */
-    /* renamed from: com.discord.widgets.guild_role_subscriptions.tier.create.benefits.WidgetGuildRoleSubscriptionTierBenefit$onViewBound$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.guild_role_subscriptions.tier.create.benefits.WidgetGuildRoleSubscriptionTierBenefit$onViewBound$1 */
+    /* JADX INFO: compiled from: WidgetGuildRoleSubscriptionTierBenefit.kt */
     public static final class ViewOnClickListenerC85321 implements View.OnClickListener {
         public ViewOnClickListenerC85321() {
         }
@@ -243,8 +243,8 @@ public final class WidgetGuildRoleSubscriptionTierBenefit extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetGuildRoleSubscriptionTierBenefit.kt */
-    /* renamed from: com.discord.widgets.guild_role_subscriptions.tier.create.benefits.WidgetGuildRoleSubscriptionTierBenefit$onViewBound$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.guild_role_subscriptions.tier.create.benefits.WidgetGuildRoleSubscriptionTierBenefit$onViewBound$2 */
+    /* JADX INFO: compiled from: WidgetGuildRoleSubscriptionTierBenefit.kt */
     public static final class ViewOnClickListenerC85332 implements View.OnClickListener {
         public ViewOnClickListenerC85332() {
         }
@@ -255,12 +255,12 @@ public final class WidgetGuildRoleSubscriptionTierBenefit extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetGuildRoleSubscriptionTierBenefit.kt */
-    /* renamed from: com.discord.widgets.guild_role_subscriptions.tier.create.benefits.WidgetGuildRoleSubscriptionTierBenefit$onViewBound$3 */
+    /* JADX INFO: renamed from: com.discord.widgets.guild_role_subscriptions.tier.create.benefits.WidgetGuildRoleSubscriptionTierBenefit$onViewBound$3 */
+    /* JADX INFO: compiled from: WidgetGuildRoleSubscriptionTierBenefit.kt */
     public static final class ViewOnClickListenerC85343 implements View.OnClickListener {
 
-        /* compiled from: WidgetGuildRoleSubscriptionTierBenefit.kt */
-        /* renamed from: com.discord.widgets.guild_role_subscriptions.tier.create.benefits.WidgetGuildRoleSubscriptionTierBenefit$onViewBound$3$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.widgets.guild_role_subscriptions.tier.create.benefits.WidgetGuildRoleSubscriptionTierBenefit$onViewBound$3$1, reason: invalid class name */
+        /* JADX INFO: compiled from: WidgetGuildRoleSubscriptionTierBenefit.kt */
         public static final class AnonymousClass1 implements EmojiPickerListener {
             public AnonymousClass1() {
             }
@@ -273,8 +273,8 @@ public final class WidgetGuildRoleSubscriptionTierBenefit extends AppFragment {
             }
         }
 
-        /* compiled from: WidgetGuildRoleSubscriptionTierBenefit.kt */
-        /* renamed from: com.discord.widgets.guild_role_subscriptions.tier.create.benefits.WidgetGuildRoleSubscriptionTierBenefit$onViewBound$3$2, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.widgets.guild_role_subscriptions.tier.create.benefits.WidgetGuildRoleSubscriptionTierBenefit$onViewBound$3$2, reason: invalid class name */
+        /* JADX INFO: compiled from: WidgetGuildRoleSubscriptionTierBenefit.kt */
         public static final class AnonymousClass2 extends Lambda implements Function0<Unit> {
             public AnonymousClass2() {
                 super(0);
@@ -286,7 +286,7 @@ public final class WidgetGuildRoleSubscriptionTierBenefit extends AppFragment {
                 return Unit.f27425a;
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2() {
                 AppFragment.hideKeyboard$default(WidgetGuildRoleSubscriptionTierBenefit.this, null, 1, null);
             }
@@ -303,8 +303,8 @@ public final class WidgetGuildRoleSubscriptionTierBenefit extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetGuildRoleSubscriptionTierBenefit.kt */
-    /* renamed from: com.discord.widgets.guild_role_subscriptions.tier.create.benefits.WidgetGuildRoleSubscriptionTierBenefit$onViewBound$4 */
+    /* JADX INFO: renamed from: com.discord.widgets.guild_role_subscriptions.tier.create.benefits.WidgetGuildRoleSubscriptionTierBenefit$onViewBound$4 */
+    /* JADX INFO: compiled from: WidgetGuildRoleSubscriptionTierBenefit.kt */
     public static final class C85354 extends Lambda implements Function1<Editable, Unit> {
         public C85354() {
             super(1);
@@ -316,15 +316,15 @@ public final class WidgetGuildRoleSubscriptionTierBenefit extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Editable editable) {
             Intrinsics3.checkNotNullParameter(editable, "it");
             WidgetGuildRoleSubscriptionTierBenefit.access$getViewModel$p(WidgetGuildRoleSubscriptionTierBenefit.this).updateDescription(editable.toString());
         }
     }
 
-    /* compiled from: WidgetGuildRoleSubscriptionTierBenefit.kt */
-    /* renamed from: com.discord.widgets.guild_role_subscriptions.tier.create.benefits.WidgetGuildRoleSubscriptionTierBenefit$onViewBound$5 */
+    /* JADX INFO: renamed from: com.discord.widgets.guild_role_subscriptions.tier.create.benefits.WidgetGuildRoleSubscriptionTierBenefit$onViewBound$5 */
+    /* JADX INFO: compiled from: WidgetGuildRoleSubscriptionTierBenefit.kt */
     public static final class ViewOnClickListenerC85365 implements View.OnClickListener {
         public ViewOnClickListenerC85365() {
         }
@@ -340,8 +340,8 @@ public final class WidgetGuildRoleSubscriptionTierBenefit extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetGuildRoleSubscriptionTierBenefit.kt */
-    /* renamed from: com.discord.widgets.guild_role_subscriptions.tier.create.benefits.WidgetGuildRoleSubscriptionTierBenefit$onViewBoundOrOnResume$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.guild_role_subscriptions.tier.create.benefits.WidgetGuildRoleSubscriptionTierBenefit$onViewBoundOrOnResume$1 */
+    /* JADX INFO: compiled from: WidgetGuildRoleSubscriptionTierBenefit.kt */
     public static final class C85371 extends Lambda implements Function1<GuildRoleSubscriptionTierBenefitViewModel.ViewState, Unit> {
         public C85371() {
             super(1);
@@ -353,15 +353,15 @@ public final class WidgetGuildRoleSubscriptionTierBenefit extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(GuildRoleSubscriptionTierBenefitViewModel.ViewState viewState) {
             Intrinsics3.checkNotNullParameter(viewState, "it");
             WidgetGuildRoleSubscriptionTierBenefit.access$configureUI(WidgetGuildRoleSubscriptionTierBenefit.this, viewState);
         }
     }
 
-    /* compiled from: WidgetGuildRoleSubscriptionTierBenefit.kt */
-    /* renamed from: com.discord.widgets.guild_role_subscriptions.tier.create.benefits.WidgetGuildRoleSubscriptionTierBenefit$onViewBoundOrOnResume$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.guild_role_subscriptions.tier.create.benefits.WidgetGuildRoleSubscriptionTierBenefit$onViewBoundOrOnResume$2 */
+    /* JADX INFO: compiled from: WidgetGuildRoleSubscriptionTierBenefit.kt */
     public static final class C85382 extends Lambda implements Function1<GuildRoleSubscriptionTierBenefitViewModel.Event, Unit> {
         public C85382() {
             super(1);
@@ -373,7 +373,7 @@ public final class WidgetGuildRoleSubscriptionTierBenefit extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(GuildRoleSubscriptionTierBenefitViewModel.Event event) {
             Intrinsics3.checkNotNullParameter(event, "it");
             WidgetGuildRoleSubscriptionTierBenefit.access$handleEvent(WidgetGuildRoleSubscriptionTierBenefit.this, event);

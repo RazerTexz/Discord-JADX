@@ -8,16 +8,16 @@ import java.util.Set;
 import p007b.p225i.p226a.p288f.p299e.p308o.C3404f;
 import p658rx.Subscription;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public final class CompositeSubscription implements Subscription {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public Set<Subscription> f27655j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public volatile boolean f27656k;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public static void m11135d(Collection<Subscription> collection) {
         if (collection == null) {
             return;
@@ -37,7 +37,7 @@ public final class CompositeSubscription implements Subscription {
         C3404f.m4321n1(arrayList);
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public void m11136a(Subscription subscription) {
         if (subscription.isUnsubscribed()) {
             return;
@@ -56,7 +56,7 @@ public final class CompositeSubscription implements Subscription {
         subscription.unsubscribe();
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public void m11137b() {
         Set<Subscription> set;
         if (this.f27656k) {
@@ -70,7 +70,7 @@ public final class CompositeSubscription implements Subscription {
         }
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public void m11138c(Subscription subscription) {
         Set<Subscription> set;
         if (this.f27656k) {

@@ -12,30 +12,30 @@ import p007b.p085c.p086a.p087a0.AnimatableValueParser;
 import p007b.p225i.p226a.p288f.p299e.p304k.C3361j;
 import p007b.p225i.p226a.p288f.p299e.p308o.C3406h;
 
-/* compiled from: FirebaseOptions.java */
-/* renamed from: b.i.c.i, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.c.i, reason: use source file name */
+/* JADX INFO: compiled from: FirebaseOptions.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class FirebaseOptions {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final String f12134a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final String f12135b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final String f12136c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final String f12137d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final String f12138e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final String f12139f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public final String f12140g;
 
     public FirebaseOptions(@NonNull String str, @NonNull String str2, @Nullable String str3, @Nullable String str4, @Nullable String str5, @Nullable String str6, @Nullable String str7) {
@@ -50,8 +50,8 @@ public final class FirebaseOptions {
     }
 
     @Nullable
-    /* renamed from: a */
-    public static FirebaseOptions m6337a(@NonNull Context context) throws Resources.NotFoundException {
+    /* JADX INFO: renamed from: a */
+    public static FirebaseOptions m6337a(@NonNull Context context) {
         Objects.requireNonNull(context, "null reference");
         Resources resources = context.getResources();
         String resourcePackageName = resources.getResourcePackageName(C10800R.a.common_google_play_services_unknown_issue);

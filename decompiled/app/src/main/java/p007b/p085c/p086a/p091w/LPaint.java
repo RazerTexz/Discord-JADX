@@ -6,9 +6,9 @@ import android.graphics.PorterDuffXfermode;
 import android.os.LocaleList;
 import androidx.annotation.NonNull;
 
-/* compiled from: LPaint.java */
-/* renamed from: b.c.a.w.a, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.c.a.w.a, reason: use source file name */
+/* JADX INFO: compiled from: LPaint.java */
+/* JADX INFO: loaded from: classes.dex */
 public class LPaint extends Paint {
     public LPaint() {
     }

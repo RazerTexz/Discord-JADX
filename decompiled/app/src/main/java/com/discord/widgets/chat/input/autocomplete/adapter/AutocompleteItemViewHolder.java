@@ -53,14 +53,14 @@ import p507d0.p579g0.Strings4;
 import p507d0.p579g0.StringsJVM;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: AutocompleteItemViewHolder.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: AutocompleteItemViewHolder.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class AutocompleteItemViewHolder extends RecyclerView.ViewHolder {
     private final WidgetChatInputAutocompleteItemBinding binding;
     private final int defaultItemTextColor;
     private final Function1<Autocompletable, Unit> onItemSelected;
 
-    /* compiled from: AutocompleteItemViewHolder.kt */
+    /* JADX INFO: compiled from: AutocompleteItemViewHolder.kt */
     public final class EmojiAutocompleteRenderContext implements EmojiNode.RenderContext {
         private final Context context;
         private final boolean isAnimationEnabled;
@@ -79,7 +79,7 @@ public final class AutocompleteItemViewHolder extends RecyclerView.ViewHolder {
         }
 
         @Override // com.discord.utilities.textprocessing.node.EmojiNode.RenderContext
-        /* renamed from: isAnimationEnabled, reason: from getter */
+        /* JADX INFO: renamed from: isAnimationEnabled, reason: from getter */
         public boolean getIsAnimationEnabled() {
             return this.isAnimationEnabled;
         }
@@ -91,8 +91,8 @@ public final class AutocompleteItemViewHolder extends RecyclerView.ViewHolder {
         }
     }
 
-    /* compiled from: AutocompleteItemViewHolder.kt */
-    /* renamed from: com.discord.widgets.chat.input.autocomplete.adapter.AutocompleteItemViewHolder$bind$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.input.autocomplete.adapter.AutocompleteItemViewHolder$bind$1 */
+    /* JADX INFO: compiled from: AutocompleteItemViewHolder.kt */
     public static final class ViewOnClickListenerC77921 implements View.OnClickListener {
         public final /* synthetic */ Autocompletable $autocompletable;
 
@@ -144,7 +144,7 @@ public final class AutocompleteItemViewHolder extends RecyclerView.ViewHolder {
         this.binding.f16088b.setColorFilter(color, PorterDuff.Mode.SRC_ATOP);
     }
 
-    public final void bind(Autocompletable autocompletable) throws Resources.NotFoundException {
+    public final void bind(Autocompletable autocompletable) {
         Intrinsics3.checkNotNullParameter(autocompletable, "autocompletable");
         clearBinding();
         if (autocompletable instanceof ApplicationCommandChoiceAutocompletable) {
@@ -168,7 +168,7 @@ public final class AutocompleteItemViewHolder extends RecyclerView.ViewHolder {
         this.binding.f16087a.setOnClickListener(new ViewOnClickListenerC77921(autocompletable));
     }
 
-    public final void bindCommand(ApplicationCommandAutocompletable commandAutocompletable) throws Resources.NotFoundException {
+    public final void bindCommand(ApplicationCommandAutocompletable commandAutocompletable) {
         String name;
         Intrinsics3.checkNotNullParameter(commandAutocompletable, "commandAutocompletable");
         ApplicationCommand command = commandAutocompletable.getCommand();
@@ -284,7 +284,7 @@ public final class AutocompleteItemViewHolder extends RecyclerView.ViewHolder {
         this.binding.f16090d.setDraweeSpanStringBuilder(draweeSpanStringBuilderRender);
     }
 
-    public final void bindGlobalRole(GlobalRoleAutocompletable roleAutocompletable) throws Resources.NotFoundException {
+    public final void bindGlobalRole(GlobalRoleAutocompletable roleAutocompletable) {
         Intrinsics3.checkNotNullParameter(roleAutocompletable, "roleAutocompletable");
         TextView textView = this.binding.f16091e;
         Intrinsics3.checkNotNullExpressionValue(textView, "binding.chatInputItemName");
@@ -314,7 +314,7 @@ public final class AutocompleteItemViewHolder extends RecyclerView.ViewHolder {
         }
     }
 
-    public final void bindRole(RoleAutocompletable roleAutocompletable) throws Resources.NotFoundException {
+    public final void bindRole(RoleAutocompletable roleAutocompletable) {
         Intrinsics3.checkNotNullParameter(roleAutocompletable, "roleAutocompletable");
         GuildRole role = roleAutocompletable.getRole();
         TextView textView = this.binding.f16091e;

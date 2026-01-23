@@ -7,26 +7,26 @@ import android.content.res.Resources;
 import android.os.Bundle;
 import java.util.Locale;
 
-/* renamed from: b.i.a.f.h.j.a1 */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.h.j.a1 */
+/* JADX INFO: loaded from: classes3.dex */
 public final class C3499a1 extends AbstractC3509e {
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public String f9666l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public String f9667m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public boolean f9668n;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public int f9669o;
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public boolean f9670p;
 
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     public boolean f9671q;
 
     public C3499a1(C3515g c3515g) {
@@ -34,7 +34,7 @@ public final class C3499a1 extends AbstractC3509e {
     }
 
     @Override // p007b.p225i.p226a.p288f.p313h.p323j.AbstractC3509e
-    /* renamed from: L */
+    /* JADX INFO: renamed from: L */
     public final void mo4414L() {
         ApplicationInfo applicationInfo;
         int i;

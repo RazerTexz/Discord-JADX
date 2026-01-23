@@ -15,33 +15,33 @@ import p007b.p225i.p226a.p288f.p313h.p325l.C3677h1;
 import p007b.p225i.p226a.p288f.p313h.p325l.C3899y0;
 import p007b.p225i.p226a.p288f.p313h.p325l.C3912z0;
 
-/* compiled from: com.google.android.gms:play-services-measurement@@18.0.0 */
-/* renamed from: b.i.a.f.i.b.da */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.i.b.da */
+/* JADX INFO: compiled from: com.google.android.gms:play-services-measurement@@18.0.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public final class C4015da {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public String f10672a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public boolean f10673b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public C3663g1 f10674c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public BitSet f10675d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public BitSet f10676e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public Map<Integer, Long> f10677f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public Map<Integer, List<Long>> f10678g;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public final /* synthetic */ C3991ba f10679h;
 
     public C4015da(C3991ba c3991ba, String str, C3979aa c3979aa) {
@@ -59,7 +59,7 @@ public final class C4015da {
     /* JADX WARN: Type inference failed for: r1v15, types: [java.lang.Iterable] */
     /* JADX WARN: Type inference failed for: r1v19, types: [java.util.List] */
     @NonNull
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final C3899y0 m5586a(int i) {
         ArrayList arrayList;
         ?? arrayList2;
@@ -160,7 +160,7 @@ public final class C4015da {
         return (C3899y0) ((AbstractC3851u4) aVarM5363F.m5320p());
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final void m5587b(@NonNull AbstractC4027ea abstractC4027ea) {
         int iMo5593a = abstractC4027ea.mo5593a();
         Boolean bool = abstractC4027ea.f10700c;

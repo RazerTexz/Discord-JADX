@@ -31,9 +31,9 @@ import p507d0.p513e0.p514p.p515d.p517m0.p576p.JavaTypeEnhancementState;
 import p507d0.p580t.Collections2;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: RuntimeModuleData.kt */
-/* renamed from: d0.e0.p.d.m0.c.k1.a.l, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.c.k1.a.l, reason: use source file name */
+/* JADX INFO: compiled from: RuntimeModuleData.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class RuntimeModuleData2 {
     public static final DeserializationComponentsForJava makeDeserializationComponentsForJava(ModuleDescriptor2 moduleDescriptor2, StorageManager storageManager, NotFoundClasses notFoundClasses, LazyJavaPackageFragmentProvider lazyJavaPackageFragmentProvider, KotlinClassFinder kotlinClassFinder, DeserializedDescriptorResolver deserializedDescriptorResolver) {
         Intrinsics3.checkNotNullParameter(moduleDescriptor2, "module");

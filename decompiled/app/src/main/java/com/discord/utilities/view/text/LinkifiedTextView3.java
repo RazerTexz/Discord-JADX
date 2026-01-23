@@ -19,10 +19,10 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p659s.p660a.Dispatchers;
 import p659s.p660a.p661a.MainDispatchers;
 
-/* compiled from: LinkifiedTextView.kt */
+/* JADX INFO: renamed from: com.discord.utilities.view.text.LinkifiedTextView$ClickableSpanOnTouchListener$onTouch$newJob$1, reason: use source file name */
+/* JADX INFO: compiled from: LinkifiedTextView.kt */
+/* JADX INFO: loaded from: classes2.dex */
 @DebugMetadata(m10084c = "com.discord.utilities.view.text.LinkifiedTextView$ClickableSpanOnTouchListener$onTouch$newJob$1", m10085f = "LinkifiedTextView.kt", m10086l = {Opcodes.D2I}, m10087m = "invokeSuspend")
-/* renamed from: com.discord.utilities.view.text.LinkifiedTextView$ClickableSpanOnTouchListener$onTouch$newJob$1, reason: use source file name */
-/* loaded from: classes2.dex */
 public final class LinkifiedTextView3 extends ContinuationImpl6 implements Function2<CoroutineScope, Continuation<? super Unit>, Object> {
     public final /* synthetic */ Ref$ObjectRef $clickableSpan;
     public final /* synthetic */ WeakReference $weakView;

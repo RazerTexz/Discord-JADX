@@ -19,19 +19,19 @@ import p658rx.exceptions.MissingBackpressureException;
 import p658rx.functions.Action1;
 import p658rx.subscriptions.SerialSubscription;
 
-/* compiled from: OnSubscribeCreate.java */
-/* renamed from: j0.l.a.i, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: j0.l.a.i, reason: use source file name */
+/* JADX INFO: compiled from: OnSubscribeCreate.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class OnSubscribeCreate<T> implements Observable.InterfaceC13005a<T> {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final Action1<Emitter<T>> f26845j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final Emitter.BackpressureMode f26846k;
 
-    /* compiled from: OnSubscribeCreate.java */
-    /* renamed from: j0.l.a.i$a */
+    /* JADX INFO: renamed from: j0.l.a.i$a */
+    /* JADX INFO: compiled from: OnSubscribeCreate.java */
     public static abstract class a<T> extends AtomicLong implements Emitter<T>, Producer, Subscription {
         private static final long serialVersionUID = 7326289992464377023L;
         public final Subscriber<? super T> actual;
@@ -41,11 +41,11 @@ public final class OnSubscribeCreate<T> implements Observable.InterfaceC13005a<T
             this.actual = subscriber;
         }
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public void mo10757a() {
         }
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public void mo10758b() {
         }
 
@@ -55,7 +55,7 @@ public final class OnSubscribeCreate<T> implements Observable.InterfaceC13005a<T
         }
 
         @Override // p658rx.Producer
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public final void mo10704j(long j) {
             if (C3404f.m4191A1(j)) {
                 C3404f.m4276c0(this, j);
@@ -94,8 +94,8 @@ public final class OnSubscribeCreate<T> implements Observable.InterfaceC13005a<T
         }
     }
 
-    /* compiled from: OnSubscribeCreate.java */
-    /* renamed from: j0.l.a.i$b */
+    /* JADX INFO: renamed from: j0.l.a.i$b */
+    /* JADX INFO: compiled from: OnSubscribeCreate.java */
     public static final class b<T> extends a<T> {
         private static final long serialVersionUID = 2427151001689639875L;
         public volatile boolean done;
@@ -110,20 +110,20 @@ public final class OnSubscribeCreate<T> implements Observable.InterfaceC13005a<T
         }
 
         @Override // p637j0.p642l.p643a.OnSubscribeCreate.a
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public void mo10757a() {
             m10759c();
         }
 
         @Override // p637j0.p642l.p643a.OnSubscribeCreate.a
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public void mo10758b() {
             if (this.wip.getAndIncrement() == 0) {
                 this.queue.clear();
             }
         }
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public void m10759c() {
             if (this.wip.getAndIncrement() != 0) {
                 return;
@@ -207,8 +207,8 @@ public final class OnSubscribeCreate<T> implements Observable.InterfaceC13005a<T
         }
     }
 
-    /* compiled from: OnSubscribeCreate.java */
-    /* renamed from: j0.l.a.i$c */
+    /* JADX INFO: renamed from: j0.l.a.i$c */
+    /* JADX INFO: compiled from: OnSubscribeCreate.java */
     public static final class c<T> extends f<T> {
         private static final long serialVersionUID = 8360058422307496563L;
 
@@ -217,13 +217,13 @@ public final class OnSubscribeCreate<T> implements Observable.InterfaceC13005a<T
         }
 
         @Override // p637j0.p642l.p643a.OnSubscribeCreate.f
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public void mo10760c() {
         }
     }
 
-    /* compiled from: OnSubscribeCreate.java */
-    /* renamed from: j0.l.a.i$d */
+    /* JADX INFO: renamed from: j0.l.a.i$d */
+    /* JADX INFO: compiled from: OnSubscribeCreate.java */
     public static final class d<T> extends f<T> {
         private static final long serialVersionUID = 338953216916120960L;
         private boolean done;
@@ -233,7 +233,7 @@ public final class OnSubscribeCreate<T> implements Observable.InterfaceC13005a<T
         }
 
         @Override // p637j0.p642l.p643a.OnSubscribeCreate.f
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public void mo10760c() {
             onError(new MissingBackpressureException("create: could not emit value due to lack of requests"));
         }
@@ -266,8 +266,8 @@ public final class OnSubscribeCreate<T> implements Observable.InterfaceC13005a<T
         }
     }
 
-    /* compiled from: OnSubscribeCreate.java */
-    /* renamed from: j0.l.a.i$e */
+    /* JADX INFO: renamed from: j0.l.a.i$e */
+    /* JADX INFO: compiled from: OnSubscribeCreate.java */
     public static final class e<T> extends a<T> {
         private static final long serialVersionUID = 4023437720691792495L;
         public volatile boolean done;
@@ -282,13 +282,13 @@ public final class OnSubscribeCreate<T> implements Observable.InterfaceC13005a<T
         }
 
         @Override // p637j0.p642l.p643a.OnSubscribeCreate.a
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public void mo10757a() {
             m10761c();
         }
 
         @Override // p637j0.p642l.p643a.OnSubscribeCreate.a
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public void mo10758b() {
             if (this.wip.getAndIncrement() == 0) {
                 this.queue.lazySet(null);
@@ -367,7 +367,7 @@ public final class OnSubscribeCreate<T> implements Observable.InterfaceC13005a<T
         
             return;
          */
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         /*
             Code decompiled incorrectly, please refer to instructions dump.
         */
@@ -436,8 +436,8 @@ public final class OnSubscribeCreate<T> implements Observable.InterfaceC13005a<T
         }
     }
 
-    /* compiled from: OnSubscribeCreate.java */
-    /* renamed from: j0.l.a.i$f */
+    /* JADX INFO: renamed from: j0.l.a.i$f */
+    /* JADX INFO: compiled from: OnSubscribeCreate.java */
     public static abstract class f<T> extends a<T> {
         private static final long serialVersionUID = 4127754106204442833L;
 
@@ -445,7 +445,7 @@ public final class OnSubscribeCreate<T> implements Observable.InterfaceC13005a<T
             super(subscriber);
         }
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public abstract void mo10760c();
 
         public void onNext(T t) {
@@ -461,8 +461,8 @@ public final class OnSubscribeCreate<T> implements Observable.InterfaceC13005a<T
         }
     }
 
-    /* compiled from: OnSubscribeCreate.java */
-    /* renamed from: j0.l.a.i$g */
+    /* JADX INFO: renamed from: j0.l.a.i$g */
+    /* JADX INFO: compiled from: OnSubscribeCreate.java */
     public static final class g<T> extends a<T> {
         private static final long serialVersionUID = 3776720187248809713L;
 

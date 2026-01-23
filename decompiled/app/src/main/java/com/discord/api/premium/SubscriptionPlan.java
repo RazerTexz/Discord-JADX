@@ -4,8 +4,8 @@ import com.discord.models.domain.ModelAuditLogEntry;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: SubscriptionPlan.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: SubscriptionPlan.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class SubscriptionPlan {
     private final long id;
     private final SubscriptionInterval interval;
@@ -13,22 +13,22 @@ public final /* data */ class SubscriptionPlan {
     private final String name;
     private final int price;
 
-    /* renamed from: a, reason: from getter */
+    /* JADX INFO: renamed from: a, reason: from getter */
     public final long getId() {
         return this.id;
     }
 
-    /* renamed from: b, reason: from getter */
+    /* JADX INFO: renamed from: b, reason: from getter */
     public final SubscriptionInterval getInterval() {
         return this.interval;
     }
 
-    /* renamed from: c, reason: from getter */
+    /* JADX INFO: renamed from: c, reason: from getter */
     public final int getIntervalCount() {
         return this.intervalCount;
     }
 
-    /* renamed from: d, reason: from getter */
+    /* JADX INFO: renamed from: d, reason: from getter */
     public final int getPrice() {
         return this.price;
     }

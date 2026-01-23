@@ -11,23 +11,23 @@ import p007b.p225i.p226a.p242c.MediaMetadata;
 import p007b.p225i.p226a.p242c.p259f3.Util2;
 import p007b.p225i.p226a.p242c.p279z2.Metadata2;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public final class MdtaMetadataEntry implements Metadata.Entry {
     public static final Parcelable.Creator<MdtaMetadataEntry> CREATOR = new C10737a();
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final String f20004j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final byte[] f20005k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final int f20006l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public final int f20007m;
 
-    /* renamed from: com.google.android.exoplayer2.metadata.mp4.MdtaMetadataEntry$a */
+    /* JADX INFO: renamed from: com.google.android.exoplayer2.metadata.mp4.MdtaMetadataEntry$a */
     public class C10737a implements Parcelable.Creator<MdtaMetadataEntry> {
         @Override // android.os.Parcelable.Creator
         public MdtaMetadataEntry createFromParcel(Parcel parcel) {
@@ -68,13 +68,13 @@ public final class MdtaMetadataEntry implements Metadata.Entry {
     }
 
     @Override // com.google.android.exoplayer2.metadata.Metadata.Entry
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public /* synthetic */ void mo8878n(MediaMetadata.b bVar) {
         Metadata2.m3894c(this, bVar);
     }
 
     @Override // com.google.android.exoplayer2.metadata.Metadata.Entry
-    /* renamed from: o0 */
+    /* JADX INFO: renamed from: o0 */
     public /* synthetic */ byte[] mo8879o0() {
         return Metadata2.m3892a(this);
     }
@@ -93,7 +93,7 @@ public final class MdtaMetadataEntry implements Metadata.Entry {
     }
 
     @Override // com.google.android.exoplayer2.metadata.Metadata.Entry
-    /* renamed from: y */
+    /* JADX INFO: renamed from: y */
     public /* synthetic */ Format2 mo8880y() {
         return Metadata2.m3893b(this);
     }

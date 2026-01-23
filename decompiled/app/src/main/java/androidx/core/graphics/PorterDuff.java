@@ -6,9 +6,9 @@ import android.graphics.PorterDuffXfermode;
 import com.discord.models.domain.ModelAuditLogEntry;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: PorterDuff.kt */
-/* renamed from: androidx.core.graphics.PorterDuffKt, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: androidx.core.graphics.PorterDuffKt, reason: use source file name */
+/* JADX INFO: compiled from: PorterDuff.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class PorterDuff {
     public static final PorterDuffColorFilter toColorFilter(PorterDuff.Mode mode, int i) {
         Intrinsics3.checkNotNullParameter(mode, "<this>");

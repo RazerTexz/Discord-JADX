@@ -19,8 +19,8 @@ import java.nio.charset.Charset;
 import java.util.Set;
 import p007b.p100d.p104b.p105a.outline;
 
+/* JADX INFO: loaded from: classes.dex */
 @RestrictTo({RestrictTo.Scope.LIBRARY})
-/* loaded from: classes.dex */
 public class VersionedParcelStream extends VersionedParcel {
     private static final int TYPE_BOOLEAN = 5;
     private static final int TYPE_BOOLEAN_ARRAY = 6;
@@ -129,7 +129,7 @@ public class VersionedParcelStream extends VersionedParcel {
         }
     }
 
-    private void writeObject(Object obj) throws IllegalArgumentException {
+    private void writeObject(Object obj) {
         if (obj == null) {
             writeInt(0);
             return;
@@ -506,7 +506,7 @@ public class VersionedParcelStream extends VersionedParcel {
         this.mCurrentOutput = dataOutputStream;
     }
 
-    /* renamed from: androidx.versionedparcelable.VersionedParcelStream$1 */
+    /* JADX INFO: renamed from: androidx.versionedparcelable.VersionedParcelStream$1 */
     public class C06831 extends FilterInputStream {
         public C06831(InputStream inputStream) {
             super(inputStream);

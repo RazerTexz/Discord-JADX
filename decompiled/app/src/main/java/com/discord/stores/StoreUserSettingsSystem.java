@@ -19,15 +19,15 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 import p658rx.Observable;
 
-/* compiled from: StoreUserSettingsSystem.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: StoreUserSettingsSystem.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class StoreUserSettingsSystem extends StoreV2 {
     private static final boolean DEFAULT_IS_CLIENT_SYNC_ENABLED = true;
     private final Dispatcher dispatcher;
     private final Function1<Integer, Unit> onFontScaleUpdated;
     private Settings settings;
 
-    /* compiled from: StoreUserSettingsSystem.kt */
+    /* JADX INFO: compiled from: StoreUserSettingsSystem.kt */
     public static final /* data */ class Settings {
         private final String _locale;
         private final int fontScale;
@@ -53,17 +53,17 @@ public final class StoreUserSettingsSystem extends StoreV2 {
             return settings.copy(str, str2, i);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final String getTheme() {
             return this.theme;
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final String get_locale() {
             return this._locale;
         }
 
-        /* renamed from: component3, reason: from getter */
+        /* JADX INFO: renamed from: component3, reason: from getter */
         public final int getFontScale() {
             return this.fontScale;
         }
@@ -123,8 +123,8 @@ public final class StoreUserSettingsSystem extends StoreV2 {
         }
     }
 
-    /* compiled from: StoreUserSettingsSystem.kt */
-    /* renamed from: com.discord.stores.StoreUserSettingsSystem$observeSettings$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreUserSettingsSystem$observeSettings$1 */
+    /* JADX INFO: compiled from: StoreUserSettingsSystem.kt */
     public static final class C66041 extends Lambda implements Function0<Settings> {
         public C66041() {
             super(0);
@@ -142,8 +142,8 @@ public final class StoreUserSettingsSystem extends StoreV2 {
         }
     }
 
-    /* compiled from: StoreUserSettingsSystem.kt */
-    /* renamed from: com.discord.stores.StoreUserSettingsSystem$setFontScale$2 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreUserSettingsSystem$setFontScale$2 */
+    /* JADX INFO: compiled from: StoreUserSettingsSystem.kt */
     public static final class C66052 extends Lambda implements Function0<Unit> {
         public final /* synthetic */ int $fontScale;
 
@@ -159,7 +159,7 @@ public final class StoreUserSettingsSystem extends StoreV2 {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             StoreUserSettingsSystem storeUserSettingsSystem = StoreUserSettingsSystem.this;
             StoreUserSettingsSystem.access$setSettings$p(storeUserSettingsSystem, Settings.copy$default(StoreUserSettingsSystem.access$getSettings$p(storeUserSettingsSystem), null, null, this.$fontScale, 3, null));
@@ -168,8 +168,8 @@ public final class StoreUserSettingsSystem extends StoreV2 {
         }
     }
 
-    /* compiled from: StoreUserSettingsSystem.kt */
-    /* renamed from: com.discord.stores.StoreUserSettingsSystem$setTheme$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreUserSettingsSystem$setTheme$1 */
+    /* JADX INFO: compiled from: StoreUserSettingsSystem.kt */
     public static final class C66061 extends Lambda implements Function0<Unit> {
         public final /* synthetic */ boolean $apiSync;
         public final /* synthetic */ Function0 $onRequestApiSync;
@@ -189,7 +189,7 @@ public final class StoreUserSettingsSystem extends StoreV2 {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             StoreUserSettingsSystem.access$setThemeInternal(StoreUserSettingsSystem.this, this.$theme, this.$apiSync, this.$onRequestApiSync);
         }

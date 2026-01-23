@@ -42,8 +42,8 @@ import p507d0.p580t.Iterators4;
 import p507d0.p580t._Arrays;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: IconUtils.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: IconUtils.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class IconUtils {
     public static final String ANIMATED_IMAGE_EXTENSION = "gif";
     public static final String DEFAULT_ICON = "asset://asset/images/default_icon.jpg";
@@ -451,7 +451,8 @@ public final class IconUtils {
 
     public final String getDefaultForGroupDM(long id2) {
         long j = (id2 >>> 22) + SnowflakeUtils.DISCORD_EPOCH;
-        return GROUP_DM_DEFAULT_ICONS.get((int) (j % r0.size()));
+        List<String> list = GROUP_DM_DEFAULT_ICONS;
+        return list.get((int) (j % ((long) list.size())));
     }
 
     public final String getForGuildMember(GuildMember guildMember, Integer sizePx, boolean animated) {

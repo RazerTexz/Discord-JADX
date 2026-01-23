@@ -4,8 +4,8 @@ import com.discord.nullserializable.NullSerializable;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: PatchUserBody.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: PatchUserBody.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class PatchUserBody {
     private final NullSerializable<String> avatar;
     private final NullSerializable<String> banner;

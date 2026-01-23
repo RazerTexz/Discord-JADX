@@ -6,25 +6,25 @@ import java.util.List;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ThreadListing.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: ThreadListing.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class ThreadListing {
     private final List<Message> firstMessages;
     private final boolean hasMore;
     private final List<ThreadMember> members;
     private final List<Channel> threads;
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final List<Message> m8256a() {
         return this.firstMessages;
     }
 
-    /* renamed from: b, reason: from getter */
+    /* JADX INFO: renamed from: b, reason: from getter */
     public final boolean getHasMore() {
         return this.hasMore;
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final List<Channel> m8258c() {
         return this.threads;
     }
@@ -41,17 +41,20 @@ public final /* data */ class ThreadListing {
     }
 
     /* JADX WARN: Multi-variable type inference failed */
+    /* JADX WARN: Type inference failed for: r2v1, types: [int] */
+    /* JADX WARN: Type inference failed for: r2v7 */
+    /* JADX WARN: Type inference failed for: r2v8 */
     public int hashCode() {
         List<Channel> list = this.threads;
         int iHashCode = (list != null ? list.hashCode() : 0) * 31;
         boolean z2 = this.hasMore;
-        int i = z2;
-        if (z2 != 0) {
-            i = 1;
+        ?? r2 = z2;
+        if (z2) {
+            r2 = 1;
         }
-        int i2 = (iHashCode + i) * 31;
+        int i = (iHashCode + r2) * 31;
         List<ThreadMember> list2 = this.members;
-        int iHashCode2 = (i2 + (list2 != null ? list2.hashCode() : 0)) * 31;
+        int iHashCode2 = (i + (list2 != null ? list2.hashCode() : 0)) * 31;
         List<Message> list3 = this.firstMessages;
         return iHashCode2 + (list3 != null ? list3.hashCode() : 0);
     }

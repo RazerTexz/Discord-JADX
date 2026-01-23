@@ -5,25 +5,25 @@ import java.util.HashMap;
 import java.util.Map;
 import p507d0.p513e0.p514p.p515d.p517m0.p550i.GeneratedMessageLite;
 
-/* compiled from: ExtensionRegistryLite.java */
-/* renamed from: d0.e0.p.d.m0.i.e, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.i.e, reason: use source file name */
+/* JADX INFO: compiled from: ExtensionRegistryLite.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class ExtensionRegistryLite {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final ExtensionRegistryLite f24117a = new ExtensionRegistryLite(true);
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final Map<a, GeneratedMessageLite.f<?, ?>> f24118b;
 
-    /* compiled from: ExtensionRegistryLite.java */
-    /* renamed from: d0.e0.p.d.m0.i.e$a */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.i.e$a */
+    /* JADX INFO: compiled from: ExtensionRegistryLite.java */
     public static final class a {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final Object f24119a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final int f24120b;
 
         public a(Object obj, int i) {

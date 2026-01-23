@@ -21,18 +21,18 @@ import java.util.Comparator;
 import java.util.List;
 import p007b.p100d.p104b.p105a.outline;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class FontProvider {
     private static final Comparator<byte[]> sByteArrayComparator = new C02471();
 
-    /* renamed from: androidx.core.provider.FontProvider$1 */
+    /* JADX INFO: renamed from: androidx.core.provider.FontProvider$1 */
     public class C02471 implements Comparator<byte[]> {
         @Override // java.util.Comparator
         public /* bridge */ /* synthetic */ int compare(byte[] bArr, byte[] bArr2) {
             return compare2(bArr, bArr2);
         }
 
-        /* renamed from: compare, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: compare, reason: avoid collision after fix types in other method */
         public int compare2(byte[] bArr, byte[] bArr2) {
             int length;
             int length2;

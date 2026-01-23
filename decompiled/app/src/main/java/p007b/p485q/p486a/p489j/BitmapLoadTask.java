@@ -33,27 +33,27 @@ import p615g0.BufferedSource;
 import p615g0.JvmOkio2;
 import p615g0.Timeout2;
 
-/* compiled from: BitmapLoadTask.java */
-/* renamed from: b.q.a.j.b, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.q.a.j.b, reason: use source file name */
+/* JADX INFO: compiled from: BitmapLoadTask.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class BitmapLoadTask extends AsyncTask<Void, Void, a> {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final Context f14426a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public Uri f14427b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public Uri f14428c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final int f14429d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final int f14430e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final BitmapLoadCallback f14431f;
 
     public BitmapLoadTask(@NonNull Context context, @NonNull Uri uri, @Nullable Uri uri2, int i, int i2, BitmapLoadCallback bitmapLoadCallback) {
@@ -65,7 +65,7 @@ public class BitmapLoadTask extends AsyncTask<Void, Void, a> {
         this.f14431f = bitmapLoadCallback;
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final void m7472a(@NonNull Uri uri, @Nullable Uri uri2) throws Throwable {
         InputStream inputStreamOpenInputStream;
         Log.d("BitmapWorkerTask", "copyFile");
@@ -126,7 +126,7 @@ public class BitmapLoadTask extends AsyncTask<Void, Void, a> {
 
     /* JADX WARN: Removed duplicated region for block: B:47:0x0085 A[EXC_TOP_SPLITTER, SYNTHETIC] */
     /* JADX WARN: Removed duplicated region for block: B:53:0x0080 A[EXC_TOP_SPLITTER, SYNTHETIC] */
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
@@ -224,7 +224,7 @@ public class BitmapLoadTask extends AsyncTask<Void, Void, a> {
         }
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final void m7474c() throws IOException, NullPointerException {
         String scheme = this.f14427b.getScheme();
         Log.d("BitmapWorkerTask", "Uri scheme: " + scheme);
@@ -363,8 +363,12 @@ public class BitmapLoadTask extends AsyncTask<Void, Void, a> {
                         sbM833U3.append(uri.toString());
                         Log.e("BitmapLoadUtils", sbM833U3.toString(), e3);
                     }
-                    if (inputStreamOpenInputStream == null) {
-                        iM7475a = 0;
+                    if (inputStreamOpenInputStream != null) {
+                        iM7475a = new ImageHeaderParser(inputStreamOpenInputStream).m7475a();
+                        try {
+                            inputStreamOpenInputStream.close();
+                        } catch (IOException unused3) {
+                        }
                         switch (iM7475a) {
                             case 3:
                             case 4:
@@ -406,11 +410,7 @@ public class BitmapLoadTask extends AsyncTask<Void, Void, a> {
                         }
                         return new a(bitmapDecodeStream, exifInfo);
                     }
-                    iM7475a = new ImageHeaderParser(inputStreamOpenInputStream).m7475a();
-                    try {
-                        inputStreamOpenInputStream.close();
-                    } catch (IOException unused3) {
-                    }
+                    iM7475a = 0;
                     switch (iM7475a) {
                     }
                     if (iM7475a != 2) {
@@ -470,17 +470,17 @@ public class BitmapLoadTask extends AsyncTask<Void, Void, a> {
         transformImageView2.setImageBitmap(bitmap);
     }
 
-    /* compiled from: BitmapLoadTask.java */
-    /* renamed from: b.q.a.j.b$a */
+    /* JADX INFO: renamed from: b.q.a.j.b$a */
+    /* JADX INFO: compiled from: BitmapLoadTask.java */
     public static class a {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public Bitmap f14432a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public ExifInfo f14433b;
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public Exception f14434c;
 
         public a(@NonNull Bitmap bitmap, @NonNull ExifInfo exifInfo) {

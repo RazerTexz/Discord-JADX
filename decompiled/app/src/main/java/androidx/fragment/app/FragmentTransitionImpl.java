@@ -15,12 +15,12 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
+/* JADX INFO: loaded from: classes.dex */
 @SuppressLint({"UnknownNullness"})
 @RestrictTo({RestrictTo.Scope.LIBRARY_GROUP_PREFIX})
-/* loaded from: classes.dex */
 public abstract class FragmentTransitionImpl {
 
-    /* renamed from: androidx.fragment.app.FragmentTransitionImpl$1 */
+    /* JADX INFO: renamed from: androidx.fragment.app.FragmentTransitionImpl$1 */
     public class RunnableC04061 implements Runnable {
         public final /* synthetic */ ArrayList val$inNames;
         public final /* synthetic */ int val$numSharedElements;
@@ -45,7 +45,7 @@ public abstract class FragmentTransitionImpl {
         }
     }
 
-    /* renamed from: androidx.fragment.app.FragmentTransitionImpl$2 */
+    /* JADX INFO: renamed from: androidx.fragment.app.FragmentTransitionImpl$2 */
     public class RunnableC04072 implements Runnable {
         public final /* synthetic */ Map val$nameOverrides;
         public final /* synthetic */ ArrayList val$sharedElementsIn;
@@ -68,7 +68,7 @@ public abstract class FragmentTransitionImpl {
         }
     }
 
-    /* renamed from: androidx.fragment.app.FragmentTransitionImpl$3 */
+    /* JADX INFO: renamed from: androidx.fragment.app.FragmentTransitionImpl$3 */
     public class RunnableC04083 implements Runnable {
         public final /* synthetic */ Map val$nameOverrides;
         public final /* synthetic */ ArrayList val$sharedElementsIn;

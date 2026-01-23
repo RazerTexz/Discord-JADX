@@ -13,21 +13,21 @@ import android.util.Log;
 import androidx.constraintlayout.solver.widgets.analyzer.BasicMeasure;
 import java.util.concurrent.atomic.AtomicInteger;
 
-/* compiled from: com.google.firebase:firebase-messaging@@21.0.0 */
-/* renamed from: b.i.c.w.a */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.c.w.a */
+/* JADX INFO: compiled from: com.google.firebase:firebase-messaging@@21.0.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public final class C4863a {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final AtomicInteger f13012a = new AtomicInteger((int) SystemClock.elapsedRealtime());
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static PendingIntent m6814a(Context context, Intent intent) {
         return PendingIntent.getBroadcast(context, f13012a.incrementAndGet(), new Intent("com.google.firebase.MESSAGING_EVENT").setComponent(new ComponentName(context, "com.google.firebase.iid.FirebaseInstanceIdReceiver")).putExtra("wrapped_intent", intent), BasicMeasure.EXACTLY);
     }
 
     @TargetApi(26)
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static boolean m6815b(Resources resources, int i) {
         if (Build.VERSION.SDK_INT != 26) {
             return true;

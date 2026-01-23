@@ -6,9 +6,9 @@ import java.util.List;
 import kotlin.jvm.functions.Function0;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetHubEmailViewModel.kt */
-/* renamed from: com.discord.widgets.hubs.HubEmailState$hasMultipleDomains$2, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.hubs.HubEmailState$hasMultipleDomains$2, reason: use source file name */
+/* JADX INFO: compiled from: WidgetHubEmailViewModel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetHubEmailViewModel5 extends Lambda implements Function0<Boolean> {
     public final /* synthetic */ WidgetHubEmailViewModel4 this$0;
 
@@ -23,7 +23,7 @@ public final class WidgetHubEmailViewModel5 extends Lambda implements Function0<
         return Boolean.valueOf(invoke2());
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final boolean invoke2() {
         List<EmailVerification3> listM7998a;
         EmailVerification emailVerificationInvoke = this.this$0.getVerifyEmailAsync().invoke();

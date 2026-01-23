@@ -4,12 +4,12 @@ import com.discord.models.domain.Model;
 import java.io.IOException;
 import p007b.p100d.p104b.p105a.outline;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class ModelVoiceRegion implements Model {
     private boolean deprecated;
     private boolean hidden;
 
-    /* renamed from: id */
+    /* JADX INFO: renamed from: id */
     private String f18585id;
     private String name;
     private boolean optimal;

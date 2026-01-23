@@ -3,9 +3,9 @@ package com.discord.widgets.voice.fullscreen;
 import kotlin.jvm.functions.Function0;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetCallPreviewFullscreen.kt */
-/* renamed from: com.discord.widgets.voice.fullscreen.WidgetCallPreviewFullscreen$viewModel$2, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: com.discord.widgets.voice.fullscreen.WidgetCallPreviewFullscreen$viewModel$2, reason: use source file name */
+/* JADX INFO: compiled from: WidgetCallPreviewFullscreen.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class WidgetCallPreviewFullscreen3 extends Lambda implements Function0<WidgetCallPreviewFullscreenViewModel> {
     public final /* synthetic */ WidgetCallPreviewFullscreen this$0;
 

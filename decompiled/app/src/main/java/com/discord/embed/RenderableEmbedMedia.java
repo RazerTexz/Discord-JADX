@@ -3,17 +3,17 @@ package com.discord.embed;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: RenderableEmbedMedia.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: RenderableEmbedMedia.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class RenderableEmbedMedia {
 
-    /* renamed from: a, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: a, reason: from kotlin metadata */
     public final String url;
 
-    /* renamed from: b, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: b, reason: from kotlin metadata */
     public final Integer width;
 
-    /* renamed from: c, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: c, reason: from kotlin metadata */
     public final Integer height;
 
     public RenderableEmbedMedia(String str, Integer num, Integer num2) {

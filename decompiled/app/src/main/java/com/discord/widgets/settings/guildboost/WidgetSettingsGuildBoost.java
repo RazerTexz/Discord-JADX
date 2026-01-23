@@ -51,26 +51,26 @@ import p507d0.p592z.p594d.Lambda;
 import p507d0.p592z.p594d.Reflection2;
 import p658rx.Observable;
 
-/* compiled from: WidgetSettingsGuildBoost.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetSettingsGuildBoost.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetSettingsGuildBoost extends AppFragment {
     public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetSettingsGuildBoost.class, "binding", "getBinding()Lcom/discord/databinding/WidgetSettingsBoostBinding;", 0)};
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     public static final int VIEW_INDEX_FAILURE = 1;
     public static final int VIEW_INDEX_LOADED = 2;
     public static final int VIEW_INDEX_LOADING = 0;
 
-    /* renamed from: binding$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
     private WidgetSettingsGuildBoostSubscriptionAdapter guildBoostSubscriptionsAdapter;
     private SettingsGuildBoostSampleGuildAdapter sampleGuildsAdapter;
 
-    /* renamed from: viewModel$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: viewModel$delegate, reason: from kotlin metadata */
     private final Lazy viewModel;
 
-    /* compiled from: WidgetSettingsGuildBoost.kt */
+    /* JADX INFO: compiled from: WidgetSettingsGuildBoost.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -85,8 +85,8 @@ public final class WidgetSettingsGuildBoost extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetSettingsGuildBoost.kt */
-    /* renamed from: com.discord.widgets.settings.guildboost.WidgetSettingsGuildBoost$onViewBound$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.guildboost.WidgetSettingsGuildBoost$onViewBound$1 */
+    /* JADX INFO: compiled from: WidgetSettingsGuildBoost.kt */
     public static final class ViewOnClickListenerC98561 implements View.OnClickListener {
         public final /* synthetic */ String $helpdeskArticleUrl;
 
@@ -100,8 +100,8 @@ public final class WidgetSettingsGuildBoost extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetSettingsGuildBoost.kt */
-    /* renamed from: com.discord.widgets.settings.guildboost.WidgetSettingsGuildBoost$onViewBound$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.guildboost.WidgetSettingsGuildBoost$onViewBound$2 */
+    /* JADX INFO: compiled from: WidgetSettingsGuildBoost.kt */
     public static final class ViewOnClickListenerC98572 implements View.OnClickListener {
         public ViewOnClickListenerC98572() {
         }
@@ -112,8 +112,8 @@ public final class WidgetSettingsGuildBoost extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetSettingsGuildBoost.kt */
-    /* renamed from: com.discord.widgets.settings.guildboost.WidgetSettingsGuildBoost$onViewBound$3 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.guildboost.WidgetSettingsGuildBoost$onViewBound$3 */
+    /* JADX INFO: compiled from: WidgetSettingsGuildBoost.kt */
     public static final class C98583 extends Lambda implements Function2<Long, String, Unit> {
         public C98583() {
             super(2);
@@ -131,8 +131,8 @@ public final class WidgetSettingsGuildBoost extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetSettingsGuildBoost.kt */
-    /* renamed from: com.discord.widgets.settings.guildboost.WidgetSettingsGuildBoost$onViewBoundOrOnResume$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.guildboost.WidgetSettingsGuildBoost$onViewBoundOrOnResume$1 */
+    /* JADX INFO: compiled from: WidgetSettingsGuildBoost.kt */
     public static final class C98591 extends Lambda implements Function1<SettingsGuildBoostViewModel.ViewState, Unit> {
         public C98591() {
             super(1);
@@ -144,7 +144,7 @@ public final class WidgetSettingsGuildBoost extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(SettingsGuildBoostViewModel.ViewState viewState) {
             if (viewState instanceof SettingsGuildBoostViewModel.ViewState.Loaded) {
                 WidgetSettingsGuildBoost.access$showContent(WidgetSettingsGuildBoost.this, (SettingsGuildBoostViewModel.ViewState.Loaded) viewState);
@@ -156,8 +156,8 @@ public final class WidgetSettingsGuildBoost extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetSettingsGuildBoost.kt */
-    /* renamed from: com.discord.widgets.settings.guildboost.WidgetSettingsGuildBoost$showContent$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.guildboost.WidgetSettingsGuildBoost$showContent$1 */
+    /* JADX INFO: compiled from: WidgetSettingsGuildBoost.kt */
     public static final class C98601 extends Lambda implements Function2<ModelGuildBoostSlot, Long, Unit> {
         public C98601() {
             super(2);
@@ -176,8 +176,8 @@ public final class WidgetSettingsGuildBoost extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetSettingsGuildBoost.kt */
-    /* renamed from: com.discord.widgets.settings.guildboost.WidgetSettingsGuildBoost$showContent$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.guildboost.WidgetSettingsGuildBoost$showContent$2 */
+    /* JADX INFO: compiled from: WidgetSettingsGuildBoost.kt */
     public static final class C98612 extends Lambda implements Function2<Long, Boolean, Unit> {
         public C98612() {
             super(2);
@@ -194,8 +194,8 @@ public final class WidgetSettingsGuildBoost extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetSettingsGuildBoost.kt */
-    /* renamed from: com.discord.widgets.settings.guildboost.WidgetSettingsGuildBoost$showContent$3 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.guildboost.WidgetSettingsGuildBoost$showContent$3 */
+    /* JADX INFO: compiled from: WidgetSettingsGuildBoost.kt */
     public static final class C98623 extends Lambda implements Function1<Long, Unit> {
         public C98623() {
             super(1);
@@ -213,8 +213,8 @@ public final class WidgetSettingsGuildBoost extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetSettingsGuildBoost.kt */
-    /* renamed from: com.discord.widgets.settings.guildboost.WidgetSettingsGuildBoost$showContent$4 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.guildboost.WidgetSettingsGuildBoost$showContent$4 */
+    /* JADX INFO: compiled from: WidgetSettingsGuildBoost.kt */
     public static final /* synthetic */ class C98634 extends FunctionReferenceImpl implements Function1<Long, Unit> {
         public C98634(WidgetSettingsGuildBoost widgetSettingsGuildBoost) {
             super(1, widgetSettingsGuildBoost, WidgetSettingsGuildBoost.class, "handleSampleGuildSelected", "handleSampleGuildSelected(J)V", 0);
@@ -231,8 +231,8 @@ public final class WidgetSettingsGuildBoost extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetSettingsGuildBoost.kt */
-    /* renamed from: com.discord.widgets.settings.guildboost.WidgetSettingsGuildBoost$showContent$7 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.guildboost.WidgetSettingsGuildBoost$showContent$7 */
+    /* JADX INFO: compiled from: WidgetSettingsGuildBoost.kt */
     public static final class C98647 extends Lambda implements Function0<Unit> {
         public C98647() {
             super(0);
@@ -244,7 +244,7 @@ public final class WidgetSettingsGuildBoost extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             WidgetSettingsPremium.Companion.launch$default(WidgetSettingsPremium.INSTANCE, WidgetSettingsGuildBoost.this.requireContext(), null, null, 6, null);
         }

@@ -19,34 +19,34 @@ import p007b.p085c.p086a.p087a0.AnimatableValueParser;
 import p007b.p225i.p226a.p288f.p299e.p307n.C3398a;
 import p007b.p225i.p226a.p288f.p313h.p319f.HandlerC3480a;
 
-/* compiled from: com.google.android.gms:play-services-cloud-messaging@@16.0.0 */
-/* renamed from: b.i.a.f.d.g */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.d.g */
+/* JADX INFO: compiled from: com.google.android.gms:play-services-cloud-messaging@@16.0.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public final class ServiceConnectionC3232g implements ServiceConnection {
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public C3241p f9265l;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public final /* synthetic */ C3231f f9268o;
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public int f9263j = 0;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final Messenger f9264k = new Messenger(new HandlerC3480a(Looper.getMainLooper(), new C3235j(this)));
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public final Queue<AbstractC3242q<?>> f9266m = new ArrayDeque();
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public final SparseArray<AbstractC3242q<?>> f9267n = new SparseArray<>();
 
     public ServiceConnectionC3232g(C3231f c3231f, C3233h c3233h) {
         this.f9268o = c3231f;
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final synchronized void m4003a(int i, @Nullable String str) {
         if (Log.isLoggable("MessengerIpcClient", 3)) {
             String strValueOf = String.valueOf(str);
@@ -88,7 +88,7 @@ public final class ServiceConnectionC3232g implements ServiceConnection {
         this.f9267n.clear();
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final synchronized boolean m4004b(AbstractC3242q<?> abstractC3242q) {
         int i = this.f9263j;
         if (i == 0) {
@@ -126,7 +126,7 @@ public final class ServiceConnectionC3232g implements ServiceConnection {
         return false;
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final synchronized void m4005c() {
         if (this.f9263j == 2 && this.f9266m.isEmpty() && this.f9267n.size() == 0) {
             if (Log.isLoggable("MessengerIpcClient", 2)) {

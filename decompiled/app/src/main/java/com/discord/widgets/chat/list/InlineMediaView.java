@@ -61,8 +61,8 @@ import p658rx.subjects.Subject;
 import p658rx.subscriptions.CompositeSubscription;
 import p659s.p660a.p664d2.Flow3;
 
-/* compiled from: InlineMediaView.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: InlineMediaView.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class InlineMediaView extends CardView implements View.OnAttachStateChangeListener, AppComponent {
     private AppMediaPlayer appMediaPlayer;
     private final InlineMediaViewBinding binding;
@@ -72,7 +72,7 @@ public final class InlineMediaView extends CardView implements View.OnAttachStat
     private final Subject<Void, Void> unsubscribeSignal;
     private ViewParams viewParams;
 
-    /* compiled from: InlineMediaView.kt */
+    /* JADX INFO: compiled from: InlineMediaView.kt */
     public static final /* data */ class ViewParams {
         private final boolean autoPlayGifs;
         private final EmbedType embedType;
@@ -116,32 +116,32 @@ public final class InlineMediaView extends CardView implements View.OnAttachStat
             return viewParams.copy(renderableEmbedMedia, str2, embedType2, num3, num4, z2);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final RenderableEmbedMedia getPreviewImage() {
             return this.previewImage;
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final String getProgressiveMediaUri() {
             return this.progressiveMediaUri;
         }
 
-        /* renamed from: component3, reason: from getter */
+        /* JADX INFO: renamed from: component3, reason: from getter */
         public final EmbedType getEmbedType() {
             return this.embedType;
         }
 
-        /* renamed from: component4, reason: from getter */
+        /* JADX INFO: renamed from: component4, reason: from getter */
         public final Integer getTargetWidth() {
             return this.targetWidth;
         }
 
-        /* renamed from: component5, reason: from getter */
+        /* JADX INFO: renamed from: component5, reason: from getter */
         public final Integer getTargetHeight() {
             return this.targetHeight;
         }
 
-        /* renamed from: component6, reason: from getter */
+        /* JADX INFO: renamed from: component6, reason: from getter */
         public final boolean getAutoPlayGifs() {
             return this.autoPlayGifs;
         }
@@ -186,6 +186,9 @@ public final class InlineMediaView extends CardView implements View.OnAttachStat
         }
 
         /* JADX WARN: Multi-variable type inference failed */
+        /* JADX WARN: Type inference failed for: r1v3, types: [int] */
+        /* JADX WARN: Type inference failed for: r1v4 */
+        /* JADX WARN: Type inference failed for: r1v6 */
         public int hashCode() {
             RenderableEmbedMedia renderableEmbedMedia = this.previewImage;
             int iHashCode = (renderableEmbedMedia != null ? renderableEmbedMedia.hashCode() : 0) * 31;
@@ -198,11 +201,11 @@ public final class InlineMediaView extends CardView implements View.OnAttachStat
             Integer num2 = this.targetHeight;
             int iHashCode5 = (iHashCode4 + (num2 != null ? num2.hashCode() : 0)) * 31;
             boolean z2 = this.autoPlayGifs;
-            int i = z2;
-            if (z2 != 0) {
-                i = 1;
+            ?? r1 = z2;
+            if (z2) {
+                r1 = 1;
             }
-            return iHashCode5 + i;
+            return iHashCode5 + r1;
         }
 
         public String toString() {
@@ -234,14 +237,14 @@ public final class InlineMediaView extends CardView implements View.OnAttachStat
         }
     }
 
-    /* compiled from: InlineMediaView.kt */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.list.InlineMediaView$onViewAttachedToWindow$1 */
+    /* JADX INFO: compiled from: InlineMediaView.kt */
     @DebugMetadata(m10084c = "com.discord.widgets.chat.list.InlineMediaView$onViewAttachedToWindow$1", m10085f = "InlineMediaView.kt", m10086l = {89, 416}, m10087m = "invokeSuspend")
-    /* renamed from: com.discord.widgets.chat.list.InlineMediaView$onViewAttachedToWindow$1 */
     public static final class C79331 extends ContinuationImpl6 implements Function2<CoroutineScope, Continuation<? super Unit>, Object> {
         public int label;
 
-        /* compiled from: InlineMediaView.kt */
-        /* renamed from: com.discord.widgets.chat.list.InlineMediaView$onViewAttachedToWindow$1$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.widgets.chat.list.InlineMediaView$onViewAttachedToWindow$1$1, reason: invalid class name */
+        /* JADX INFO: compiled from: InlineMediaView.kt */
         public static final class AnonymousClass1<T1, T2, R> implements Func2<PanelState, PanelState, Boolean> {
             public static final AnonymousClass1 INSTANCE = new AnonymousClass1();
 
@@ -250,7 +253,7 @@ public final class InlineMediaView extends CardView implements View.OnAttachStat
                 return call2(panelState, panelState2);
             }
 
-            /* renamed from: call, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
             public final Boolean call2(PanelState panelState, PanelState panelState2) {
                 PanelState.C5580c c5580c = PanelState.C5580c.f18642a;
                 return Boolean.valueOf(Intrinsics3.areEqual(panelState, c5580c) || Intrinsics3.areEqual(panelState2, c5580c));
@@ -305,8 +308,8 @@ public final class InlineMediaView extends CardView implements View.OnAttachStat
         }
     }
 
-    /* compiled from: InlineMediaView.kt */
-    /* renamed from: com.discord.widgets.chat.list.InlineMediaView$updateUI$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.list.InlineMediaView$updateUI$1 */
+    /* JADX INFO: compiled from: InlineMediaView.kt */
     public static final class C79351 extends Lambda implements Function1<Subscription, Unit> {
         public C79351() {
             super(1);
@@ -318,20 +321,20 @@ public final class InlineMediaView extends CardView implements View.OnAttachStat
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Subscription subscription) {
             Intrinsics3.checkNotNullParameter(subscription, Traits.Payment.Type.SUBSCRIPTION);
             InlineMediaView.access$getCompositeSubscription$p(InlineMediaView.this).m11136a(subscription);
         }
     }
 
-    /* compiled from: InlineMediaView.kt */
-    /* renamed from: com.discord.widgets.chat.list.InlineMediaView$updateUI$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.list.InlineMediaView$updateUI$2 */
+    /* JADX INFO: compiled from: InlineMediaView.kt */
     public static final class C79362 extends Lambda implements Function1<Float, Unit> {
         public final /* synthetic */ AppMediaPlayer $player;
 
-        /* compiled from: InlineMediaView.kt */
-        /* renamed from: com.discord.widgets.chat.list.InlineMediaView$updateUI$2$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.widgets.chat.list.InlineMediaView$updateUI$2$1, reason: invalid class name */
+        /* JADX INFO: compiled from: InlineMediaView.kt */
         public static final class AnonymousClass1 implements View.OnClickListener {
             public final /* synthetic */ boolean $isVolumeOn;
 
@@ -368,8 +371,8 @@ public final class InlineMediaView extends CardView implements View.OnAttachStat
         }
     }
 
-    /* compiled from: InlineMediaView.kt */
-    /* renamed from: com.discord.widgets.chat.list.InlineMediaView$updateUI$3 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.list.InlineMediaView$updateUI$3 */
+    /* JADX INFO: compiled from: InlineMediaView.kt */
     public static final class C79373 extends Lambda implements Function1<Subscription, Unit> {
         public C79373() {
             super(1);
@@ -381,15 +384,15 @@ public final class InlineMediaView extends CardView implements View.OnAttachStat
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Subscription subscription) {
             Intrinsics3.checkNotNullParameter(subscription, Traits.Payment.Type.SUBSCRIPTION);
             InlineMediaView.access$getCompositeSubscription$p(InlineMediaView.this).m11136a(subscription);
         }
     }
 
-    /* compiled from: InlineMediaView.kt */
-    /* renamed from: com.discord.widgets.chat.list.InlineMediaView$updateUI$4 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.list.InlineMediaView$updateUI$4 */
+    /* JADX INFO: compiled from: InlineMediaView.kt */
     public static final class C79384 extends Lambda implements Function1<AppMediaPlayer.Event, Unit> {
         public C79384() {
             super(1);
@@ -401,15 +404,15 @@ public final class InlineMediaView extends CardView implements View.OnAttachStat
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(AppMediaPlayer.Event event) {
             Intrinsics3.checkNotNullParameter(event, "event");
             InlineMediaView.access$handlePlayerEvent(InlineMediaView.this, event);
         }
     }
 
-    /* compiled from: InlineMediaView.kt */
-    /* renamed from: com.discord.widgets.chat.list.InlineMediaView$updateUI$5 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.list.InlineMediaView$updateUI$5 */
+    /* JADX INFO: compiled from: InlineMediaView.kt */
     public static final class ViewOnClickListenerC79395 implements View.OnClickListener {
         public final /* synthetic */ MediaSource $mediaSource;
 

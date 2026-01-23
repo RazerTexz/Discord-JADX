@@ -11,31 +11,31 @@ import p007b.p100d.p104b.p105a.outline;
 import p007b.p225i.p226a.p288f.p299e.p308o.C3404f;
 import p007b.p225i.p361c.FirebaseApp2;
 
-/* compiled from: com.google.firebase:firebase-iid@@21.0.0 */
-/* renamed from: b.i.c.s.q */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.c.s.q */
+/* JADX INFO: compiled from: com.google.firebase:firebase-iid@@21.0.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public class C4826q {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final Context f12885a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public String f12886b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public String f12887c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public int f12888d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public int f12889e = 0;
 
     public C4826q(Context context) {
         this.f12885a = context;
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static String m6730b(FirebaseApp2 firebaseApp2) {
         firebaseApp2.m6330a();
         String str = firebaseApp2.f12120f.f12138e;
@@ -58,7 +58,7 @@ public class C4826q {
         return str3;
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public synchronized String m6731a() {
         if (this.f12886b == null) {
             m6734e();
@@ -66,7 +66,7 @@ public class C4826q {
         return this.f12886b;
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final PackageInfo m6732c(String str) {
         try {
             return this.f12885a.getPackageManager().getPackageInfo(str, 0);
@@ -78,7 +78,7 @@ public class C4826q {
     }
 
     /* JADX WARN: Removed duplicated region for block: B:22:0x0048 A[Catch: all -> 0x007f, TRY_ENTER, TryCatch #0 {, blocks: (B:3:0x0001, B:8:0x000a, B:10:0x001b, B:13:0x0025, B:15:0x002b, B:17:0x003d, B:19:0x0043, B:22:0x0048, B:24:0x005b, B:26:0x0061, B:29:0x0066, B:31:0x0073, B:33:0x0078, B:32:0x0076), top: B:41:0x0001 }] */
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
@@ -121,7 +121,7 @@ public class C4826q {
         return i != 0;
     }
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final synchronized void m6734e() {
         PackageInfo packageInfoM6732c = m6732c(this.f12885a.getPackageName());
         if (packageInfoM6732c != null) {

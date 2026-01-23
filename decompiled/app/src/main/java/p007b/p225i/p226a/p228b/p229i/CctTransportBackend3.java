@@ -47,43 +47,43 @@ import p007b.p225i.p361c.p393p.DataEncoder;
 import p007b.p225i.p361c.p393p.p395h.JsonDataEncoderBuilder4;
 import p007b.p225i.p361c.p393p.p395h.JsonDataEncoderBuilder5;
 
-/* compiled from: CctTransportBackend.java */
-/* renamed from: b.i.a.b.i.d, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.b.i.d, reason: use source file name */
+/* JADX INFO: compiled from: CctTransportBackend.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class CctTransportBackend3 implements TransportBackend {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final DataEncoder f5132a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final ConnectivityManager f5133b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final Context f5134c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final URL f5135d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final Clock3 f5136e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final Clock3 f5137f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public final int f5138g;
 
-    /* compiled from: CctTransportBackend.java */
-    /* renamed from: b.i.a.b.i.d$a */
+    /* JADX INFO: renamed from: b.i.a.b.i.d$a */
+    /* JADX INFO: compiled from: CctTransportBackend.java */
     public static final class a {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final URL f5139a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final BatchedLogRequest f5140b;
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         @Nullable
         public final String f5141c;
 
@@ -94,18 +94,18 @@ public final class CctTransportBackend3 implements TransportBackend {
         }
     }
 
-    /* compiled from: CctTransportBackend.java */
-    /* renamed from: b.i.a.b.i.d$b */
+    /* JADX INFO: renamed from: b.i.a.b.i.d$b */
+    /* JADX INFO: compiled from: CctTransportBackend.java */
     public static final class b {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final int f5142a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         @Nullable
         public final URL f5143b;
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public final long f5144c;
 
         public b(int i, @Nullable URL url, long j) {
@@ -128,7 +128,7 @@ public final class CctTransportBackend3 implements TransportBackend {
         this.f5138g = 40000;
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public static URL m2296c(String str) {
         try {
             return new URL(str);
@@ -138,7 +138,7 @@ public final class CctTransportBackend3 implements TransportBackend {
     }
 
     @Override // p007b.p225i.p226a.p228b.p231j.p232q.TransportBackend
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public BackendResponse mo2297a(BackendRequest backendRequest) {
         BackendResponse.a aVar;
         Integer numValueOf;
@@ -277,7 +277,7 @@ public final class CctTransportBackend3 implements TransportBackend {
     }
 
     @Override // p007b.p225i.p226a.p228b.p231j.p232q.TransportBackend
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public EventInternal mo2298b(EventInternal eventInternal) {
         int subtype;
         NetworkInfo activeNetworkInfo = this.f5133b.getActiveNetworkInfo();

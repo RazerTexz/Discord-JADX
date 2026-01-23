@@ -19,17 +19,17 @@ import p007b.p008a.p018d.AppViewModel;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetHubAuthenticationlViewModel.kt */
-/* renamed from: com.discord.widgets.hubs.WidgetHubAuthenticationViewModel, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.hubs.WidgetHubAuthenticationViewModel, reason: use source file name */
+/* JADX INFO: compiled from: WidgetHubAuthenticationlViewModel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetHubAuthenticationlViewModel4 extends AppViewModel<WidgetHubAuthenticationlViewModel3> {
     private final String email;
     private final Long guildId;
     private final boolean multiDomainEnabled;
     private final RestAPI restAPI;
 
-    /* compiled from: WidgetHubAuthenticationlViewModel.kt */
-    /* renamed from: com.discord.widgets.hubs.WidgetHubAuthenticationViewModel$resendEmail$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.hubs.WidgetHubAuthenticationViewModel$resendEmail$1 */
+    /* JADX INFO: compiled from: WidgetHubAuthenticationlViewModel.kt */
     public static final class C90051 extends Lambda implements Function1<EmailVerification, TrackNetworkMetadata2> {
         public static final C90051 INSTANCE = new C90051();
 
@@ -42,14 +42,14 @@ public final class WidgetHubAuthenticationlViewModel4 extends AppViewModel<Widge
             return invoke2(emailVerification);
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final TrackNetworkMetadata2 invoke2(EmailVerification emailVerification) {
             return new TrackNetworkActionHubEmailVerifySend(emailVerification != null ? Boolean.valueOf(emailVerification.getHasMatchingGuild()) : null);
         }
     }
 
-    /* compiled from: WidgetHubAuthenticationlViewModel.kt */
-    /* renamed from: com.discord.widgets.hubs.WidgetHubAuthenticationViewModel$resendEmail$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.hubs.WidgetHubAuthenticationViewModel$resendEmail$2 */
+    /* JADX INFO: compiled from: WidgetHubAuthenticationlViewModel.kt */
     public static final class C90062 extends Lambda implements Function1<RestCallState<? extends EmailVerification>, Unit> {
         public C90062() {
             super(1);
@@ -61,7 +61,7 @@ public final class WidgetHubAuthenticationlViewModel4 extends AppViewModel<Widge
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(RestCallState<EmailVerification> restCallState) {
             Intrinsics3.checkNotNullParameter(restCallState, "it");
             WidgetHubAuthenticationlViewModel4 widgetHubAuthenticationlViewModel4 = WidgetHubAuthenticationlViewModel4.this;
@@ -69,8 +69,8 @@ public final class WidgetHubAuthenticationlViewModel4 extends AppViewModel<Widge
         }
     }
 
-    /* compiled from: WidgetHubAuthenticationlViewModel.kt */
-    /* renamed from: com.discord.widgets.hubs.WidgetHubAuthenticationViewModel$verifyCode$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.hubs.WidgetHubAuthenticationViewModel$verifyCode$1 */
+    /* JADX INFO: compiled from: WidgetHubAuthenticationlViewModel.kt */
     public static final class C90071 extends Lambda implements Function1<EmailVerification2, TrackNetworkMetadata2> {
         public static final C90071 INSTANCE = new C90071();
 
@@ -83,14 +83,14 @@ public final class WidgetHubAuthenticationlViewModel4 extends AppViewModel<Widge
             return invoke2(emailVerification2);
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final TrackNetworkMetadata2 invoke2(EmailVerification2 emailVerification2) {
             return new TrackNetworkActionHubEmailVerify();
         }
     }
 
-    /* compiled from: WidgetHubAuthenticationlViewModel.kt */
-    /* renamed from: com.discord.widgets.hubs.WidgetHubAuthenticationViewModel$verifyCode$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.hubs.WidgetHubAuthenticationViewModel$verifyCode$2 */
+    /* JADX INFO: compiled from: WidgetHubAuthenticationlViewModel.kt */
     public static final class C90082 extends Lambda implements Function1<RestCallState<? extends EmailVerification2>, Unit> {
         public C90082() {
             super(1);
@@ -102,7 +102,7 @@ public final class WidgetHubAuthenticationlViewModel4 extends AppViewModel<Widge
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(RestCallState<EmailVerification2> restCallState) {
             Intrinsics3.checkNotNullParameter(restCallState, "response");
             WidgetHubAuthenticationlViewModel4 widgetHubAuthenticationlViewModel4 = WidgetHubAuthenticationlViewModel4.this;

@@ -12,8 +12,8 @@ import kotlin.jvm.internal.DefaultConstructorMarker;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: StageCallItem.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: StageCallItem.kt */
+/* JADX INFO: loaded from: classes.dex */
 public abstract class StageCallItem implements MGRecyclerDataPayload {
     public static final int TYPE_AUDIENCE = 3;
     public static final int TYPE_AUDIENCE_HEADER = 2;
@@ -25,7 +25,7 @@ public abstract class StageCallItem implements MGRecyclerDataPayload {
     private final String key;
     private final int type;
 
-    /* compiled from: StageCallItem.kt */
+    /* JADX INFO: compiled from: StageCallItem.kt */
     public static final /* data */ class AudienceHeaderItem extends StageCallItem {
         private final int audienceSize;
 
@@ -41,7 +41,7 @@ public abstract class StageCallItem implements MGRecyclerDataPayload {
             return audienceHeaderItem.copy(i);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final int getAudienceSize() {
             return this.audienceSize;
         }
@@ -70,7 +70,7 @@ public abstract class StageCallItem implements MGRecyclerDataPayload {
         }
     }
 
-    /* compiled from: StageCallItem.kt */
+    /* JADX INFO: compiled from: StageCallItem.kt */
     public static final /* data */ class AudienceItem extends StageCallItem implements StageCallItem2, Comparable<AudienceItem> {
         private final Channel channel;
         private final GuildRole hoistedGuildRole;
@@ -117,12 +117,12 @@ public abstract class StageCallItem implements MGRecyclerDataPayload {
             return getChannel();
         }
 
-        /* renamed from: component3, reason: from getter */
+        /* JADX INFO: renamed from: component3, reason: from getter */
         public final GuildRole getHoistedGuildRole() {
             return this.hoistedGuildRole;
         }
 
-        /* renamed from: component4, reason: from getter */
+        /* JADX INFO: renamed from: component4, reason: from getter */
         public final boolean getIsBlocked() {
             return this.isBlocked;
         }
@@ -159,6 +159,9 @@ public abstract class StageCallItem implements MGRecyclerDataPayload {
         }
 
         /* JADX WARN: Multi-variable type inference failed */
+        /* JADX WARN: Type inference failed for: r1v3, types: [int] */
+        /* JADX WARN: Type inference failed for: r1v4 */
+        /* JADX WARN: Type inference failed for: r1v6 */
         public int hashCode() {
             StoreVoiceParticipants.VoiceUser voiceUser = getVoiceUser();
             int iHashCode = (voiceUser != null ? voiceUser.hashCode() : 0) * 31;
@@ -167,11 +170,11 @@ public abstract class StageCallItem implements MGRecyclerDataPayload {
             GuildRole guildRole = this.hoistedGuildRole;
             int iHashCode3 = (iHashCode2 + (guildRole != null ? guildRole.hashCode() : 0)) * 31;
             boolean z2 = this.isBlocked;
-            int i = z2;
-            if (z2 != 0) {
-                i = 1;
+            ?? r1 = z2;
+            if (z2) {
+                r1 = 1;
             }
-            return iHashCode3 + i;
+            return iHashCode3 + r1;
         }
 
         public final boolean isBlocked() {
@@ -189,14 +192,14 @@ public abstract class StageCallItem implements MGRecyclerDataPayload {
             return outline.m827O(sbM833U, this.isBlocked, ")");
         }
 
-        /* renamed from: compareTo, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: compareTo, reason: avoid collision after fix types in other method */
         public int compareTo2(AudienceItem other) {
             Intrinsics3.checkNotNullParameter(other, "other");
             return RoleUtils.getROLE_COMPARATOR().compare(this.hoistedGuildRole, other.hoistedGuildRole);
         }
     }
 
-    /* compiled from: StageCallItem.kt */
+    /* JADX INFO: compiled from: StageCallItem.kt */
     public static final /* data */ class DetailsItem extends StageCallItem {
         private final String displayName;
         private final boolean isPublic;
@@ -249,37 +252,37 @@ public abstract class StageCallItem implements MGRecyclerDataPayload {
             return detailsItem.copy(str, str3, i6, i7, i8, i9, z2);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final String getTopic() {
             return this.topic;
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final String getDisplayName() {
             return this.displayName;
         }
 
-        /* renamed from: component3, reason: from getter */
+        /* JADX INFO: renamed from: component3, reason: from getter */
         public final int getNumUsersConnected() {
             return this.numUsersConnected;
         }
 
-        /* renamed from: component4, reason: from getter */
+        /* JADX INFO: renamed from: component4, reason: from getter */
         public final int getNumSpeakers() {
             return this.numSpeakers;
         }
 
-        /* renamed from: component5, reason: from getter */
+        /* JADX INFO: renamed from: component5, reason: from getter */
         public final int getNumAudience() {
             return this.numAudience;
         }
 
-        /* renamed from: component6, reason: from getter */
+        /* JADX INFO: renamed from: component6, reason: from getter */
         public final int getNumBlocked() {
             return this.numBlocked;
         }
 
-        /* renamed from: component7, reason: from getter */
+        /* JADX INFO: renamed from: component7, reason: from getter */
         public final boolean getIsPublic() {
             return this.isPublic;
         }
@@ -325,17 +328,20 @@ public abstract class StageCallItem implements MGRecyclerDataPayload {
         }
 
         /* JADX WARN: Multi-variable type inference failed */
+        /* JADX WARN: Type inference failed for: r1v10 */
+        /* JADX WARN: Type inference failed for: r1v7, types: [int] */
+        /* JADX WARN: Type inference failed for: r1v8 */
         public int hashCode() {
             String str = this.topic;
             int iHashCode = (str != null ? str.hashCode() : 0) * 31;
             String str2 = this.displayName;
             int iHashCode2 = (((((((((iHashCode + (str2 != null ? str2.hashCode() : 0)) * 31) + this.numUsersConnected) * 31) + this.numSpeakers) * 31) + this.numAudience) * 31) + this.numBlocked) * 31;
             boolean z2 = this.isPublic;
-            int i = z2;
-            if (z2 != 0) {
-                i = 1;
+            ?? r1 = z2;
+            if (z2) {
+                r1 = 1;
             }
-            return iHashCode2 + i;
+            return iHashCode2 + r1;
         }
 
         public final boolean isPublic() {
@@ -360,7 +366,7 @@ public abstract class StageCallItem implements MGRecyclerDataPayload {
         }
     }
 
-    /* compiled from: StageCallItem.kt */
+    /* JADX INFO: compiled from: StageCallItem.kt */
     public static final class DividerItem extends StageCallItem {
         public static final DividerItem INSTANCE = new DividerItem();
 
@@ -369,7 +375,7 @@ public abstract class StageCallItem implements MGRecyclerDataPayload {
         }
     }
 
-    /* compiled from: StageCallItem.kt */
+    /* JADX INFO: compiled from: StageCallItem.kt */
     public static final /* data */ class MediaItem extends StageCallItem implements StageCallItem2 {
         private final Channel channel;
         private final boolean isBlocked;
@@ -429,22 +435,22 @@ public abstract class StageCallItem implements MGRecyclerDataPayload {
             return getChannel();
         }
 
-        /* renamed from: component3, reason: from getter */
+        /* JADX INFO: renamed from: component3, reason: from getter */
         public final boolean getIsModerator() {
             return this.isModerator;
         }
 
-        /* renamed from: component4, reason: from getter */
+        /* JADX INFO: renamed from: component4, reason: from getter */
         public final boolean getIsBlocked() {
             return this.isBlocked;
         }
 
-        /* renamed from: component5, reason: from getter */
+        /* JADX INFO: renamed from: component5, reason: from getter */
         public final MediaType getMediaType() {
             return this.mediaType;
         }
 
-        /* renamed from: component6, reason: from getter */
+        /* JADX INFO: renamed from: component6, reason: from getter */
         public final CallParticipant.UserOrStreamParticipant getUserOrStreamParticipant() {
             return this.userOrStreamParticipant;
         }
@@ -491,21 +497,27 @@ public abstract class StageCallItem implements MGRecyclerDataPayload {
         }
 
         /* JADX WARN: Multi-variable type inference failed */
+        /* JADX WARN: Type inference failed for: r2v11 */
+        /* JADX WARN: Type inference failed for: r2v13 */
+        /* JADX WARN: Type inference failed for: r2v4, types: [int] */
+        /* JADX WARN: Type inference failed for: r3v0 */
+        /* JADX WARN: Type inference failed for: r3v1, types: [int] */
+        /* JADX WARN: Type inference failed for: r3v2 */
         public int hashCode() {
             StoreVoiceParticipants.VoiceUser voiceUser = getVoiceUser();
             int iHashCode = (voiceUser != null ? voiceUser.hashCode() : 0) * 31;
             Channel channel = getChannel();
             int iHashCode2 = (iHashCode + (channel != null ? channel.hashCode() : 0)) * 31;
             boolean z2 = this.isModerator;
-            int i = z2;
-            if (z2 != 0) {
-                i = 1;
+            ?? r2 = z2;
+            if (z2) {
+                r2 = 1;
             }
-            int i2 = (iHashCode2 + i) * 31;
+            int i = (iHashCode2 + r2) * 31;
             boolean z3 = this.isBlocked;
-            int i3 = (i2 + (z3 ? 1 : z3 ? 1 : 0)) * 31;
+            int i2 = (i + (z3 ? 1 : z3)) * 31;
             MediaType mediaType = this.mediaType;
-            int iHashCode3 = (i3 + (mediaType != null ? mediaType.hashCode() : 0)) * 31;
+            int iHashCode3 = (i2 + (mediaType != null ? mediaType.hashCode() : 0)) * 31;
             CallParticipant.UserOrStreamParticipant userOrStreamParticipant = this.userOrStreamParticipant;
             return iHashCode3 + (userOrStreamParticipant != null ? userOrStreamParticipant.hashCode() : 0);
         }
@@ -536,13 +548,13 @@ public abstract class StageCallItem implements MGRecyclerDataPayload {
         }
     }
 
-    /* compiled from: StageCallItem.kt */
+    /* JADX INFO: compiled from: StageCallItem.kt */
     public enum MediaType {
         USER,
         STREAM
     }
 
-    /* compiled from: StageCallItem.kt */
+    /* JADX INFO: compiled from: StageCallItem.kt */
     public static final /* data */ class PreStartDetailsItem extends StageCallItem {
         private final int numAudience;
         private final int numSpeakers;
@@ -576,22 +588,22 @@ public abstract class StageCallItem implements MGRecyclerDataPayload {
             return preStartDetailsItem.copy(str, str2, i, i2);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final String getTitle() {
             return this.title;
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final String getSubtitle() {
             return this.subtitle;
         }
 
-        /* renamed from: component3, reason: from getter */
+        /* JADX INFO: renamed from: component3, reason: from getter */
         public final int getNumSpeakers() {
             return this.numSpeakers;
         }
 
-        /* renamed from: component4, reason: from getter */
+        /* JADX INFO: renamed from: component4, reason: from getter */
         public final int getNumAudience() {
             return this.numAudience;
         }
@@ -648,7 +660,7 @@ public abstract class StageCallItem implements MGRecyclerDataPayload {
         }
     }
 
-    /* compiled from: StageCallItem.kt */
+    /* JADX INFO: compiled from: StageCallItem.kt */
     public static final /* data */ class SpeakerItem extends StageCallItem implements StageCallItem2 {
         private final Channel channel;
         private final boolean isBlocked;
@@ -705,22 +717,22 @@ public abstract class StageCallItem implements MGRecyclerDataPayload {
             return getChannel();
         }
 
-        /* renamed from: component3, reason: from getter */
+        /* JADX INFO: renamed from: component3, reason: from getter */
         public final boolean getIsModerator() {
             return this.isModerator;
         }
 
-        /* renamed from: component4, reason: from getter */
+        /* JADX INFO: renamed from: component4, reason: from getter */
         public final String getPositionKey() {
             return this.positionKey;
         }
 
-        /* renamed from: component5, reason: from getter */
+        /* JADX INFO: renamed from: component5, reason: from getter */
         public final int getSpeakersPerRow() {
             return this.speakersPerRow;
         }
 
-        /* renamed from: component6, reason: from getter */
+        /* JADX INFO: renamed from: component6, reason: from getter */
         public final boolean getIsBlocked() {
             return this.isBlocked;
         }
@@ -762,21 +774,27 @@ public abstract class StageCallItem implements MGRecyclerDataPayload {
         }
 
         /* JADX WARN: Multi-variable type inference failed */
+        /* JADX WARN: Type inference failed for: r2v4, types: [int] */
+        /* JADX WARN: Type inference failed for: r2v6 */
+        /* JADX WARN: Type inference failed for: r2v8 */
+        /* JADX WARN: Type inference failed for: r3v0 */
+        /* JADX WARN: Type inference failed for: r3v1, types: [int] */
+        /* JADX WARN: Type inference failed for: r3v2 */
         public int hashCode() {
             StoreVoiceParticipants.VoiceUser voiceUser = getVoiceUser();
             int iHashCode = (voiceUser != null ? voiceUser.hashCode() : 0) * 31;
             Channel channel = getChannel();
             int iHashCode2 = (iHashCode + (channel != null ? channel.hashCode() : 0)) * 31;
             boolean z2 = this.isModerator;
-            int i = z2;
-            if (z2 != 0) {
-                i = 1;
+            ?? r2 = z2;
+            if (z2) {
+                r2 = 1;
             }
-            int i2 = (iHashCode2 + i) * 31;
+            int i = (iHashCode2 + r2) * 31;
             String str = this.positionKey;
-            int iHashCode3 = (((i2 + (str != null ? str.hashCode() : 0)) * 31) + this.speakersPerRow) * 31;
+            int iHashCode3 = (((i + (str != null ? str.hashCode() : 0)) * 31) + this.speakersPerRow) * 31;
             boolean z3 = this.isBlocked;
-            return iHashCode3 + (z3 ? 1 : z3 ? 1 : 0);
+            return iHashCode3 + (z3 ? 1 : z3);
         }
 
         public final boolean isBlocked() {

@@ -16,45 +16,45 @@ import p007b.p109f.p161j.p162a.p165c.AnimatedFrameCache;
 import p007b.p109f.p161j.p168c.CountingMemoryCache;
 import p007b.p109f.p161j.p168c.MemoryCache;
 
-/* compiled from: LruCountingMemoryCache.java */
-/* renamed from: b.f.j.c.v, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.f.j.c.v, reason: use source file name */
+/* JADX INFO: compiled from: LruCountingMemoryCache.java */
+/* JADX INFO: loaded from: classes.dex */
 public class LruCountingMemoryCache2<K, V> implements CountingMemoryCache<K, V>, MemoryCache<K, V> {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final CountingMemoryCache.b<K> f3692a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     @VisibleForTesting
     public final CountingLruMap<K, CountingMemoryCache.a<K, V>> f3693b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     @VisibleForTesting
     public final CountingLruMap<K, CountingMemoryCache.a<K, V>> f3694c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final ValueDescriptor<V> f3695d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final Supplier<MemoryCacheParams> f3696e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public MemoryCacheParams f3697f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public long f3698g;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public final boolean f3699h;
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public final boolean f3700i;
 
-    /* compiled from: LruCountingMemoryCache.java */
-    /* renamed from: b.f.j.c.v$a */
+    /* JADX INFO: renamed from: b.f.j.c.v$a */
+    /* JADX INFO: compiled from: LruCountingMemoryCache.java */
     public class a implements ResourceReleaser<V> {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final /* synthetic */ CountingMemoryCache.a f3701a;
 
         public a(CountingMemoryCache.a aVar) {
@@ -121,7 +121,7 @@ public class LruCountingMemoryCache2<K, V> implements CountingMemoryCache<K, V>,
         this.f3700i = z3;
     }
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public static <K, V> void m1237k(CountingMemoryCache.a<K, V> aVar) {
         CountingMemoryCache.b<K> bVar;
         if (aVar == null || (bVar = aVar.f3682e) == null) {
@@ -131,13 +131,13 @@ public class LruCountingMemoryCache2<K, V> implements CountingMemoryCache<K, V>,
     }
 
     @Override // p007b.p109f.p161j.p168c.MemoryCache
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public CloseableReference<V> mo1235a(K k, CloseableReference<V> closeableReference) {
         return mo1228c(k, closeableReference, this.f3692a);
     }
 
     @Override // p007b.p109f.p161j.p168c.CountingMemoryCache
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public CloseableReference<V> mo1227b(K k) {
         CountingMemoryCache.a<K, V> aVarM1225e;
         boolean z2;
@@ -164,7 +164,7 @@ public class LruCountingMemoryCache2<K, V> implements CountingMemoryCache<K, V>,
     /* JADX WARN: Removed duplicated region for block: B:18:0x004f  */
     /* JADX WARN: Removed duplicated region for block: B:28:0x006f  */
     @Override // p007b.p109f.p161j.p168c.CountingMemoryCache
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
@@ -224,7 +224,7 @@ public class LruCountingMemoryCache2<K, V> implements CountingMemoryCache<K, V>,
     }
 
     @Override // p007b.p109f.p161j.p168c.MemoryCache
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public int mo1236d(Predicate2<K> predicate2) {
         ArrayList<CountingMemoryCache.a<K, V>> arrayListM1226f;
         ArrayList<CountingMemoryCache.a<K, V>> arrayListM1226f2;
@@ -240,17 +240,17 @@ public class LruCountingMemoryCache2<K, V> implements CountingMemoryCache<K, V>,
         return arrayListM1226f2.size();
     }
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public synchronized int m1238e() {
         return this.f3694c.m1221a() - this.f3693b.m1221a();
     }
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public synchronized int m1239f() {
         return this.f3694c.m1222b() - this.f3693b.m1222b();
     }
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public final synchronized void m1240g(CountingMemoryCache.a<K, V> aVar) {
         Objects.requireNonNull(aVar);
         AnimatableValueParser.m419B(!aVar.f3681d);
@@ -278,7 +278,7 @@ public class LruCountingMemoryCache2<K, V> implements CountingMemoryCache<K, V>,
         return closeableReferenceM1246n;
     }
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public final synchronized void m1241h(ArrayList<CountingMemoryCache.a<K, V>> arrayList) {
         if (arrayList != null) {
             Iterator<CountingMemoryCache.a<K, V>> it = arrayList.iterator();
@@ -288,7 +288,7 @@ public class LruCountingMemoryCache2<K, V> implements CountingMemoryCache<K, V>,
         }
     }
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public final void m1242i(ArrayList<CountingMemoryCache.a<K, V>> arrayList) {
         if (arrayList != null) {
             Iterator<CountingMemoryCache.a<K, V>> it = arrayList.iterator();
@@ -298,7 +298,7 @@ public class LruCountingMemoryCache2<K, V> implements CountingMemoryCache<K, V>,
         }
     }
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public void m1243j() {
         ArrayList<CountingMemoryCache.a<K, V>> arrayListM1248p;
         synchronized (this) {
@@ -312,7 +312,7 @@ public class LruCountingMemoryCache2<K, V> implements CountingMemoryCache<K, V>,
         m1244l(arrayListM1248p);
     }
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final void m1244l(ArrayList<CountingMemoryCache.a<K, V>> arrayList) {
         if (arrayList != null) {
             Iterator<CountingMemoryCache.a<K, V>> it = arrayList.iterator();
@@ -322,7 +322,7 @@ public class LruCountingMemoryCache2<K, V> implements CountingMemoryCache<K, V>,
         }
     }
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public final synchronized void m1245m() {
         if (this.f3698g + this.f3697f.f19547f > SystemClock.uptimeMillis()) {
             return;
@@ -333,7 +333,7 @@ public class LruCountingMemoryCache2<K, V> implements CountingMemoryCache<K, V>,
         this.f3697f = memoryCacheParams;
     }
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public final synchronized CloseableReference<V> m1246n(CountingMemoryCache.a<K, V> aVar) {
         synchronized (this) {
             AnimatableValueParser.m419B(!aVar.f3681d);
@@ -343,7 +343,7 @@ public class LruCountingMemoryCache2<K, V> implements CountingMemoryCache<K, V>,
         return CloseableReference.m8633D(aVar.f3679b.m8642u(), new a(aVar));
     }
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public final synchronized CloseableReference<V> m1247o(CountingMemoryCache.a<K, V> aVar) {
         Objects.requireNonNull(aVar);
         return (aVar.f3681d && aVar.f3680c == 0) ? aVar.f3679b : null;
@@ -377,7 +377,7 @@ public class LruCountingMemoryCache2<K, V> implements CountingMemoryCache<K, V>,
     
         throw new java.lang.IllegalStateException(java.lang.String.format("key is null, but exclusiveEntries count: %d, size: %d", java.lang.Integer.valueOf(r5.f3693b.m1221a()), java.lang.Integer.valueOf(r5.f3693b.m1222b())));
      */
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */

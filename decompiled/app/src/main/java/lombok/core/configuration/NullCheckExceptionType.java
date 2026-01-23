@@ -5,8 +5,8 @@ import lombok.core.handlers.HandlerUtil;
 
 /* JADX WARN: Failed to restore enum class, 'enum' modifier and super class removed */
 /* JADX WARN: Unknown enum class pattern. Please report as an issue! */
+/* JADX INFO: loaded from: discord-126021.apk:lombok/core/configuration/NullCheckExceptionType.SCL.lombok */
 @ExampleValueString("[NullPointerException | IllegalArgumentException | Assertion | JDK | Guava]")
-/* loaded from: discord-126021.apk:lombok/core/configuration/NullCheckExceptionType.SCL.lombok */
 public abstract class NullCheckExceptionType {
     public static final NullCheckExceptionType ILLEGAL_ARGUMENT_EXCEPTION = new C128331("ILLEGAL_ARGUMENT_EXCEPTION", 0);
     public static final NullCheckExceptionType NULL_POINTER_EXCEPTION = new C128342("NULL_POINTER_EXCEPTION", 1);
@@ -33,8 +33,8 @@ public abstract class NullCheckExceptionType {
         return (NullCheckExceptionType) Enum.valueOf(NullCheckExceptionType.class, str);
     }
 
-    /* renamed from: lombok.core.configuration.NullCheckExceptionType$1 */
-    /* loaded from: discord-126021.apk:lombok/core/configuration/NullCheckExceptionType$1.SCL.lombok */
+    /* JADX INFO: renamed from: lombok.core.configuration.NullCheckExceptionType$1 */
+    /* JADX INFO: loaded from: discord-126021.apk:lombok/core/configuration/NullCheckExceptionType$1.SCL.lombok */
     enum C128331 extends NullCheckExceptionType {
         C128331(String str, int i) {
             super(str, i, null);
@@ -58,8 +58,8 @@ public abstract class NullCheckExceptionType {
         this(str, i);
     }
 
-    /* renamed from: lombok.core.configuration.NullCheckExceptionType$2 */
-    /* loaded from: discord-126021.apk:lombok/core/configuration/NullCheckExceptionType$2.SCL.lombok */
+    /* JADX INFO: renamed from: lombok.core.configuration.NullCheckExceptionType$2 */
+    /* JADX INFO: loaded from: discord-126021.apk:lombok/core/configuration/NullCheckExceptionType$2.SCL.lombok */
     enum C128342 extends NullCheckExceptionType {
         C128342(String str, int i) {
             super(str, i, null);
@@ -76,8 +76,8 @@ public abstract class NullCheckExceptionType {
         }
     }
 
-    /* renamed from: lombok.core.configuration.NullCheckExceptionType$3 */
-    /* loaded from: discord-126021.apk:lombok/core/configuration/NullCheckExceptionType$3.SCL.lombok */
+    /* JADX INFO: renamed from: lombok.core.configuration.NullCheckExceptionType$3 */
+    /* JADX INFO: loaded from: discord-126021.apk:lombok/core/configuration/NullCheckExceptionType$3.SCL.lombok */
     enum C128353 extends NullCheckExceptionType {
         C128353(String str, int i) {
             super(str, i, null);
@@ -94,8 +94,8 @@ public abstract class NullCheckExceptionType {
         }
     }
 
-    /* renamed from: lombok.core.configuration.NullCheckExceptionType$4 */
-    /* loaded from: discord-126021.apk:lombok/core/configuration/NullCheckExceptionType$4.SCL.lombok */
+    /* JADX INFO: renamed from: lombok.core.configuration.NullCheckExceptionType$4 */
+    /* JADX INFO: loaded from: discord-126021.apk:lombok/core/configuration/NullCheckExceptionType$4.SCL.lombok */
     enum C128364 extends NullCheckExceptionType {
         C128364(String str, int i) {
             super(str, i, null);
@@ -112,8 +112,8 @@ public abstract class NullCheckExceptionType {
         }
     }
 
-    /* renamed from: lombok.core.configuration.NullCheckExceptionType$5 */
-    /* loaded from: discord-126021.apk:lombok/core/configuration/NullCheckExceptionType$5.SCL.lombok */
+    /* JADX INFO: renamed from: lombok.core.configuration.NullCheckExceptionType$5 */
+    /* JADX INFO: loaded from: discord-126021.apk:lombok/core/configuration/NullCheckExceptionType$5.SCL.lombok */
     enum C128375 extends NullCheckExceptionType {
         C128375(String str, int i) {
             super(str, i, null);

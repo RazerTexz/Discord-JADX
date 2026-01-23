@@ -56,18 +56,18 @@ import p507d0.p579g0.StringsJVM;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: ThreadBrowserThreadView.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: ThreadBrowserThreadView.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class ThreadBrowserThreadView extends FrameLayout {
     private final ThreadBrowserThreadViewBinding binding;
 
-    /* compiled from: ThreadBrowserThreadView.kt */
+    /* JADX INFO: compiled from: ThreadBrowserThreadView.kt */
     public static abstract class ThreadData {
         private final Channel channel;
         private final Map<Long, GuildMember> guildMembers;
         private final User owner;
 
-        /* compiled from: ThreadBrowserThreadView.kt */
+        /* JADX INFO: compiled from: ThreadBrowserThreadView.kt */
         public static final /* data */ class ActiveThread extends ThreadData {
             private final Channel channel;
             private final Map<Long, String> channelNames;
@@ -95,6 +95,7 @@ public final class ThreadBrowserThreadView extends FrameLayout {
                 this.isMessageBlocked = z2;
             }
 
+            /* JADX WARN: Multi-variable type inference failed */
             public static /* synthetic */ ActiveThread copy$default(ActiveThread activeThread, Channel channel, User user, Message message, long j, Map map, Map map2, Map map3, boolean z2, int i, Object obj) {
                 return activeThread.copy((i & 1) != 0 ? activeThread.getChannel() : channel, (i & 2) != 0 ? activeThread.getOwner() : user, (i & 4) != 0 ? activeThread.message : message, (i & 8) != 0 ? activeThread.myUserId : j, (i & 16) != 0 ? activeThread.getGuildMembers() : map, (i & 32) != 0 ? activeThread.guildRoles : map2, (i & 64) != 0 ? activeThread.channelNames : map3, (i & 128) != 0 ? activeThread.isMessageBlocked : z2);
             }
@@ -107,12 +108,12 @@ public final class ThreadBrowserThreadView extends FrameLayout {
                 return getOwner();
             }
 
-            /* renamed from: component3, reason: from getter */
+            /* JADX INFO: renamed from: component3, reason: from getter */
             public final Message getMessage() {
                 return this.message;
             }
 
-            /* renamed from: component4, reason: from getter */
+            /* JADX INFO: renamed from: component4, reason: from getter */
             public final long getMyUserId() {
                 return this.myUserId;
             }
@@ -129,7 +130,7 @@ public final class ThreadBrowserThreadView extends FrameLayout {
                 return this.channelNames;
             }
 
-            /* renamed from: component8, reason: from getter */
+            /* JADX INFO: renamed from: component8, reason: from getter */
             public final boolean getIsMessageBlocked() {
                 return this.isMessageBlocked;
             }
@@ -185,6 +186,9 @@ public final class ThreadBrowserThreadView extends FrameLayout {
             }
 
             /* JADX WARN: Multi-variable type inference failed */
+            /* JADX WARN: Type inference failed for: r0v16, types: [int] */
+            /* JADX WARN: Type inference failed for: r0v17 */
+            /* JADX WARN: Type inference failed for: r0v21 */
             public int hashCode() {
                 Channel channel = getChannel();
                 int iHashCode = (channel != null ? channel.hashCode() : 0) * 31;
@@ -199,11 +203,11 @@ public final class ThreadBrowserThreadView extends FrameLayout {
                 Map<Long, String> map2 = this.channelNames;
                 int iHashCode5 = (iHashCode4 + (map2 != null ? map2.hashCode() : 0)) * 31;
                 boolean z2 = this.isMessageBlocked;
-                int i = z2;
-                if (z2 != 0) {
-                    i = 1;
+                ?? r0 = z2;
+                if (z2) {
+                    r0 = 1;
                 }
-                return iHashCode5 + i;
+                return iHashCode5 + r0;
             }
 
             public final boolean isMessageBlocked() {
@@ -230,7 +234,7 @@ public final class ThreadBrowserThreadView extends FrameLayout {
             }
         }
 
-        /* compiled from: ThreadBrowserThreadView.kt */
+        /* JADX INFO: compiled from: ThreadBrowserThreadView.kt */
         public static final /* data */ class ArchivedThread extends ThreadData {
             private final Channel channel;
             private final Map<Long, GuildMember> guildMembers;
@@ -278,7 +282,7 @@ public final class ThreadBrowserThreadView extends FrameLayout {
                 return getOwner();
             }
 
-            /* renamed from: component4, reason: from getter */
+            /* JADX INFO: renamed from: component4, reason: from getter */
             public final TimestampMode getTimestampMode() {
                 return this.timestampMode;
             }
@@ -368,7 +372,7 @@ public final class ThreadBrowserThreadView extends FrameLayout {
         }
     }
 
-    /* compiled from: ThreadBrowserThreadView.kt */
+    /* JADX INFO: compiled from: ThreadBrowserThreadView.kt */
     public enum TimestampMode {
         ArchivedAt,
         CreatedAt
@@ -394,14 +398,14 @@ public final class ThreadBrowserThreadView extends FrameLayout {
         }
     }
 
-    /* compiled from: ThreadBrowserThreadView.kt */
-    /* renamed from: com.discord.widgets.channels.threads.browser.ThreadBrowserThreadView$setThreadData$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.channels.threads.browser.ThreadBrowserThreadView$setThreadData$1 */
+    /* JADX INFO: compiled from: ThreadBrowserThreadView.kt */
     public static final class C76311 extends Lambda implements Function1<RenderContext, Unit> {
         public final /* synthetic */ GuildMember $creatorMember;
         public final /* synthetic */ String $creatorName;
 
-        /* compiled from: ThreadBrowserThreadView.kt */
-        /* renamed from: com.discord.widgets.channels.threads.browser.ThreadBrowserThreadView$setThreadData$1$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.widgets.channels.threads.browser.ThreadBrowserThreadView$setThreadData$1$1, reason: invalid class name */
+        /* JADX INFO: compiled from: ThreadBrowserThreadView.kt */
         public static final class AnonymousClass1 extends Lambda implements Function1<Hook, Unit> {
             public AnonymousClass1() {
                 super(1);
@@ -413,7 +417,7 @@ public final class ThreadBrowserThreadView extends FrameLayout {
                 return Unit.f27425a;
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2(Hook hook) {
                 Intrinsics3.checkNotNullParameter(hook, "$receiver");
                 C76311 c76311 = C76311.this;
@@ -435,7 +439,7 @@ public final class ThreadBrowserThreadView extends FrameLayout {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(RenderContext renderContext) {
             Intrinsics3.checkNotNullParameter(renderContext, "$receiver");
             renderContext.m8422a("authorHook", new AnonymousClass1());

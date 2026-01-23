@@ -28,36 +28,36 @@ import p007b.p225i.p226a.p242c.p279z2.MetadataInputBuffer;
 import p007b.p225i.p226a.p242c.p279z2.SimpleMetadataDecoder;
 import p007b.p225i.p226a.p288f.p299e.p308o.C3404f;
 
-/* compiled from: Id3Decoder.java */
-/* renamed from: b.i.a.c.z2.k.b, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.z2.k.b, reason: use source file name */
+/* JADX INFO: compiled from: Id3Decoder.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class Id3Decoder extends SimpleMetadataDecoder {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final /* synthetic */ int f9154a = 0;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     @Nullable
     public final a f9155b;
 
-    /* compiled from: Id3Decoder.java */
-    /* renamed from: b.i.a.c.z2.k.b$a */
+    /* JADX INFO: renamed from: b.i.a.c.z2.k.b$a */
+    /* JADX INFO: compiled from: Id3Decoder.java */
     public interface a {
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         boolean mo3688a(int i, int i2, int i3, int i4, int i5);
     }
 
-    /* compiled from: Id3Decoder.java */
-    /* renamed from: b.i.a.c.z2.k.b$b */
+    /* JADX INFO: renamed from: b.i.a.c.z2.k.b$b */
+    /* JADX INFO: compiled from: Id3Decoder.java */
     public static final class b {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final int f9156a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final boolean f9157b;
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public final int f9158c;
 
         public b(int i, boolean z2, int i2) {
@@ -71,12 +71,12 @@ public final class Id3Decoder extends SimpleMetadataDecoder {
         this.f9155b = null;
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public static byte[] m3900c(byte[] bArr, int i, int i2) {
         return i2 <= i ? Util2.f6713f : Arrays.copyOfRange(bArr, i, i2);
     }
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public static ApicFrame m3901e(ParsableByteArray parsableByteArray, int i, int i2) throws UnsupportedEncodingException {
         int iM3919w;
         String strConcat;
@@ -105,7 +105,7 @@ public final class Id3Decoder extends SimpleMetadataDecoder {
         return new ApicFrame(strConcat, new String(bArr, i5, iM3918v - i5, strM3916t), i4, m3900c(bArr, m3915s(iM3100t) + iM3918v, i3));
     }
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public static BinaryFrame m3902f(ParsableByteArray parsableByteArray, int i, String str) {
         byte[] bArr = new byte[i];
         System.arraycopy(parsableByteArray.f6793a, parsableByteArray.f6794b, bArr, 0, i);
@@ -113,7 +113,7 @@ public final class Id3Decoder extends SimpleMetadataDecoder {
         return new BinaryFrame(str, bArr);
     }
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public static ChapterFrame m3903g(ParsableByteArray parsableByteArray, int i, int i2, boolean z2, int i3, @Nullable a aVar) throws UnsupportedEncodingException {
         int i4 = parsableByteArray.f6794b;
         int iM3919w = m3919w(parsableByteArray.f6793a, i4);
@@ -136,7 +136,7 @@ public final class Id3Decoder extends SimpleMetadataDecoder {
         return new ChapterFrame(str, iM3086f, iM3086f2, j, j2, (Id3Frame[]) arrayList.toArray(new Id3Frame[0]));
     }
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public static ChapterTocFrame m3904h(ParsableByteArray parsableByteArray, int i, int i2, boolean z2, int i3, @Nullable a aVar) throws UnsupportedEncodingException {
         int i4 = parsableByteArray.f6794b;
         int iM3919w = m3919w(parsableByteArray.f6793a, i4);
@@ -165,7 +165,7 @@ public final class Id3Decoder extends SimpleMetadataDecoder {
     }
 
     @Nullable
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public static CommentFrame m3905i(ParsableByteArray parsableByteArray, int i) throws UnsupportedEncodingException {
         if (i < 4) {
             return null;
@@ -191,7 +191,7 @@ public final class Id3Decoder extends SimpleMetadataDecoder {
     /* JADX WARN: Removed duplicated region for block: B:151:0x01d3  */
     /* JADX WARN: Removed duplicated region for block: B:157:0x01e2 A[Catch: all -> 0x0126, UnsupportedEncodingException -> 0x021a, TryCatch #1 {UnsupportedEncodingException -> 0x021a, blocks: (B:91:0x0114, B:159:0x01ec, B:93:0x011c, B:102:0x0135, B:104:0x013d, B:112:0x0157, B:121:0x016f, B:132:0x018a, B:139:0x019c, B:145:0x01ab, B:150:0x01c3, B:156:0x01dd, B:157:0x01e2), top: B:169:0x010a, outer: #0 }] */
     @Nullable
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
@@ -331,7 +331,7 @@ public final class Id3Decoder extends SimpleMetadataDecoder {
         }
     }
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public static GeobFrame m3907k(ParsableByteArray parsableByteArray, int i) throws UnsupportedEncodingException {
         int iM3100t = parsableByteArray.m3100t();
         String strM3916t = m3916t(iM3100t);
@@ -349,7 +349,7 @@ public final class Id3Decoder extends SimpleMetadataDecoder {
         return new GeobFrame(str, strM3910n, m3910n(bArr, iM3915s, iM3918v2, strM3916t), m3900c(bArr, m3915s(iM3100t) + iM3918v2, i2));
     }
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public static MlltFrame m3908l(ParsableByteArray parsableByteArray, int i) {
         int iM3105y = parsableByteArray.m3105y();
         int iM3102v = parsableByteArray.m3102v();
@@ -371,7 +371,7 @@ public final class Id3Decoder extends SimpleMetadataDecoder {
         return new MlltFrame(iM3105y, iM3102v, iM3102v2, iArr, iArr2);
     }
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public static PrivFrame m3909m(ParsableByteArray parsableByteArray, int i) throws UnsupportedEncodingException {
         byte[] bArr = new byte[i];
         System.arraycopy(parsableByteArray.f6793a, parsableByteArray.f6794b, bArr, 0, i);
@@ -380,13 +380,13 @@ public final class Id3Decoder extends SimpleMetadataDecoder {
         return new PrivFrame(new String(bArr, 0, iM3919w, "ISO-8859-1"), m3900c(bArr, iM3919w + 1, i));
     }
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public static String m3910n(byte[] bArr, int i, int i2, String str) throws UnsupportedEncodingException {
         return (i2 <= i || i2 > bArr.length) ? "" : new String(bArr, i, i2 - i, str);
     }
 
     @Nullable
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public static TextInformationFrame m3911o(ParsableByteArray parsableByteArray, int i, String str) throws UnsupportedEncodingException {
         if (i < 1) {
             return null;
@@ -401,7 +401,7 @@ public final class Id3Decoder extends SimpleMetadataDecoder {
     }
 
     @Nullable
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public static TextInformationFrame m3912p(ParsableByteArray parsableByteArray, int i) throws UnsupportedEncodingException {
         if (i < 1) {
             return null;
@@ -418,7 +418,7 @@ public final class Id3Decoder extends SimpleMetadataDecoder {
         return new TextInformationFrame("TXXX", str, m3910n(bArr, iM3915s, m3918v(bArr, iM3915s, iM3100t), strM3916t));
     }
 
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     public static UrlLinkFrame m3913q(ParsableByteArray parsableByteArray, int i, String str) throws UnsupportedEncodingException {
         byte[] bArr = new byte[i];
         System.arraycopy(parsableByteArray.f6793a, parsableByteArray.f6794b, bArr, 0, i);
@@ -427,7 +427,7 @@ public final class Id3Decoder extends SimpleMetadataDecoder {
     }
 
     @Nullable
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     public static UrlLinkFrame m3914r(ParsableByteArray parsableByteArray, int i) throws UnsupportedEncodingException {
         if (i < 1) {
             return null;
@@ -444,22 +444,22 @@ public final class Id3Decoder extends SimpleMetadataDecoder {
         return new UrlLinkFrame("WXXX", str, m3910n(bArr, iM3915s, m3919w(bArr, iM3915s), "ISO-8859-1"));
     }
 
-    /* renamed from: s */
+    /* JADX INFO: renamed from: s */
     public static int m3915s(int i) {
         return (i == 0 || i == 3) ? 1 : 2;
     }
 
-    /* renamed from: t */
+    /* JADX INFO: renamed from: t */
     public static String m3916t(int i) {
         return i != 1 ? i != 2 ? i != 3 ? "ISO-8859-1" : Constants.ENCODING : "UTF-16BE" : "UTF-16";
     }
 
-    /* renamed from: u */
+    /* JADX INFO: renamed from: u */
     public static String m3917u(int i, int i2, int i3, int i4, int i5) {
         return i == 2 ? String.format(Locale.US, "%c%c%c", Integer.valueOf(i2), Integer.valueOf(i3), Integer.valueOf(i4)) : String.format(Locale.US, "%c%c%c%c", Integer.valueOf(i2), Integer.valueOf(i3), Integer.valueOf(i4), Integer.valueOf(i5));
     }
 
-    /* renamed from: v */
+    /* JADX INFO: renamed from: v */
     public static int m3918v(byte[] bArr, int i, int i2) {
         int iM3919w = m3919w(bArr, i);
         if (i2 == 0 || i2 == 3) {
@@ -474,7 +474,7 @@ public final class Id3Decoder extends SimpleMetadataDecoder {
         return bArr.length;
     }
 
-    /* renamed from: w */
+    /* JADX INFO: renamed from: w */
     public static int m3919w(byte[] bArr, int i) {
         while (i < bArr.length) {
             if (bArr[i] == 0) {
@@ -485,7 +485,7 @@ public final class Id3Decoder extends SimpleMetadataDecoder {
         return bArr.length;
     }
 
-    /* renamed from: x */
+    /* JADX INFO: renamed from: x */
     public static int m3920x(ParsableByteArray parsableByteArray, int i) {
         byte[] bArr = parsableByteArray.f6793a;
         int i2 = parsableByteArray.f6794b;
@@ -503,7 +503,7 @@ public final class Id3Decoder extends SimpleMetadataDecoder {
         }
     }
 
-    /* renamed from: y */
+    /* JADX INFO: renamed from: y */
     public static boolean m3921y(ParsableByteArray parsableByteArray, int i, int i2, boolean z2) {
         int iM3102v;
         long jM3102v;
@@ -567,7 +567,7 @@ public final class Id3Decoder extends SimpleMetadataDecoder {
 
     @Override // p007b.p225i.p226a.p242c.p279z2.SimpleMetadataDecoder
     @Nullable
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public Metadata mo3899b(MetadataInputBuffer metadataInputBuffer, ByteBuffer byteBuffer) {
         return m3922d(byteBuffer.array(), byteBuffer.limit());
     }
@@ -576,7 +576,7 @@ public final class Id3Decoder extends SimpleMetadataDecoder {
     /* JADX WARN: Removed duplicated region for block: B:50:0x00c1 A[RETURN] */
     /* JADX WARN: Removed duplicated region for block: B:51:0x00c2  */
     @Nullable
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */

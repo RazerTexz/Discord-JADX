@@ -4,21 +4,21 @@ import p007b.p225i.p226a.p288f.p299e.p308o.C3404f;
 import p658rx.Subscriber;
 
 /* JADX INFO: Add missing generic type declarations: [T] */
-/* compiled from: OperatorScan.java */
-/* renamed from: j0.l.a.p1, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: j0.l.a.p1, reason: use source file name */
+/* JADX INFO: compiled from: OperatorScan.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class OperatorScan2<T> extends Subscriber<T> {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public boolean f26981j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public R f26982k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final /* synthetic */ Subscriber f26983l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public final /* synthetic */ OperatorScan f26984m;
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */

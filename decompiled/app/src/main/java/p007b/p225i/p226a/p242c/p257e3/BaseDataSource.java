@@ -6,21 +6,21 @@ import java.util.Map;
 import java.util.Objects;
 import p007b.p225i.p226a.p242c.p259f3.Util2;
 
-/* compiled from: BaseDataSource.java */
-/* renamed from: b.i.a.c.e3.g, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.e3.g, reason: use source file name */
+/* JADX INFO: compiled from: BaseDataSource.java */
+/* JADX INFO: loaded from: classes3.dex */
 public abstract class BaseDataSource implements DataSource3 {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final boolean f6528a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final ArrayList<TransferListener> f6529b = new ArrayList<>(1);
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public int f6530c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     @Nullable
     public DataSpec f6531d;
 
@@ -29,7 +29,7 @@ public abstract class BaseDataSource implements DataSource3 {
     }
 
     @Override // p007b.p225i.p226a.p242c.p257e3.DataSource3
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final void mo2587d(TransferListener transferListener) {
         Objects.requireNonNull(transferListener);
         if (this.f6529b.contains(transferListener)) {
@@ -40,12 +40,12 @@ public abstract class BaseDataSource implements DataSource3 {
     }
 
     @Override // p007b.p225i.p226a.p242c.p257e3.DataSource3
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public /* synthetic */ Map mo2588j() {
         return DataSource2.m2853a(this);
     }
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public final void m2848p(int i) {
         DataSpec dataSpec = this.f6531d;
         int i2 = Util2.f6708a;
@@ -54,7 +54,7 @@ public abstract class BaseDataSource implements DataSource3 {
         }
     }
 
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     public final void m2849q() {
         DataSpec dataSpec = this.f6531d;
         int i = Util2.f6708a;
@@ -64,14 +64,14 @@ public abstract class BaseDataSource implements DataSource3 {
         this.f6531d = null;
     }
 
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     public final void m2850r(DataSpec dataSpec) {
         for (int i = 0; i < this.f6530c; i++) {
             this.f6529b.get(i).mo2776g(this, dataSpec, this.f6528a);
         }
     }
 
-    /* renamed from: s */
+    /* JADX INFO: renamed from: s */
     public final void m2851s(DataSpec dataSpec) {
         this.f6531d = dataSpec;
         for (int i = 0; i < this.f6530c; i++) {

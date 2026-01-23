@@ -23,21 +23,21 @@ import p507d0.LazyJVM;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Reflection2;
 
-/* compiled from: WidgetHubAddServerConfirmationDialog.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetHubAddServerConfirmationDialog.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetHubAddServerConfirmationDialog extends AppDialog {
     public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetHubAddServerConfirmationDialog.class, "binding", "getBinding()Lcom/discord/databinding/HubAddServerConfirmationDialogBinding;", 0)};
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
 
-    /* renamed from: args$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: args$delegate, reason: from kotlin metadata */
     private final Lazy args;
 
-    /* renamed from: binding$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
 
-    /* compiled from: WidgetHubAddServerConfirmationDialog.kt */
+    /* JADX INFO: compiled from: WidgetHubAddServerConfirmationDialog.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -56,8 +56,8 @@ public final class WidgetHubAddServerConfirmationDialog extends AppDialog {
         }
     }
 
-    /* compiled from: WidgetHubAddServerConfirmationDialog.kt */
-    /* renamed from: com.discord.widgets.hubs.WidgetHubAddServerConfirmationDialog$onViewBoundOrOnResume$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.hubs.WidgetHubAddServerConfirmationDialog$onViewBoundOrOnResume$1 */
+    /* JADX INFO: compiled from: WidgetHubAddServerConfirmationDialog.kt */
     public static final class ViewOnClickListenerC89981 implements View.OnClickListener {
         public ViewOnClickListenerC89981() {
         }

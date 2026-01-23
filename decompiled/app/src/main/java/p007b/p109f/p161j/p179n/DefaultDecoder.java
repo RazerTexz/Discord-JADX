@@ -26,22 +26,22 @@ import p007b.p109f.p161j.p167b.SimpleBitmapReleaser;
 import p007b.p109f.p161j.p175j.EncodedImage2;
 import p007b.p109f.p161j.p177l.BitmapPool;
 
-/* compiled from: DefaultDecoder.java */
+/* JADX INFO: renamed from: b.f.j.n.b, reason: use source file name */
+/* JADX INFO: compiled from: DefaultDecoder.java */
+/* JADX INFO: loaded from: classes3.dex */
 @TargetApi(11)
-/* renamed from: b.f.j.n.b, reason: use source file name */
-/* loaded from: classes3.dex */
 public abstract class DefaultDecoder implements PlatformDecoder {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final byte[] f3982a = {-1, ExifInterface.MARKER_EOI};
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final BitmapPool f3983b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final PreverificationHelper f3984c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     @VisibleForTesting
     public final Pools.SynchronizedPool<ByteBuffer> f3985d;
 
@@ -54,7 +54,7 @@ public abstract class DefaultDecoder implements PlatformDecoder {
         }
     }
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public static BitmapFactory.Options m1413e(EncodedImage2 encodedImage2, Bitmap.Config config) {
         BitmapFactory.Options options = new BitmapFactory.Options();
         options.inSampleSize = encodedImage2.f3898q;
@@ -71,7 +71,7 @@ public abstract class DefaultDecoder implements PlatformDecoder {
     }
 
     @Override // p007b.p109f.p161j.p179n.PlatformDecoder
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public CloseableReference<Bitmap> mo1414a(EncodedImage2 encodedImage2, Bitmap.Config config, Rect rect, ColorSpace colorSpace) {
         BitmapFactory.Options optionsM1413e = m1413e(encodedImage2, config);
         boolean z2 = optionsM1413e.inPreferredConfig != Bitmap.Config.ARGB_8888;
@@ -89,7 +89,7 @@ public abstract class DefaultDecoder implements PlatformDecoder {
 
     /* JADX WARN: Removed duplicated region for block: B:14:0x0032  */
     @Override // p007b.p109f.p161j.p179n.PlatformDecoder
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
@@ -137,7 +137,7 @@ public abstract class DefaultDecoder implements PlatformDecoder {
 
     /* JADX WARN: Removed duplicated region for block: B:45:0x009e A[Catch: all -> 0x00c8, RuntimeException -> 0x00ca, IllegalArgumentException -> 0x00d3, TryCatch #8 {IllegalArgumentException -> 0x00d3, RuntimeException -> 0x00ca, blocks: (B:29:0x006b, B:34:0x0082, B:49:0x00a5, B:41:0x0096, B:45:0x009e, B:46:0x00a1), top: B:80:0x006b, outer: #5 }] */
     /* JADX WARN: Removed duplicated region for block: B:49:0x00a5 A[Catch: all -> 0x00c8, RuntimeException -> 0x00ca, IllegalArgumentException -> 0x00d3, TRY_LEAVE, TryCatch #8 {IllegalArgumentException -> 0x00d3, RuntimeException -> 0x00ca, blocks: (B:29:0x006b, B:34:0x0082, B:49:0x00a5, B:41:0x0096, B:45:0x009e, B:46:0x00a1), top: B:80:0x006b, outer: #5 }] */
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
@@ -257,6 +257,6 @@ public abstract class DefaultDecoder implements PlatformDecoder {
         }
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public abstract int mo1412d(int i, int i2, BitmapFactory.Options options);
 }

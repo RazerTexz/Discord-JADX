@@ -3,8 +3,8 @@ package com.discord.utilities.buildutils;
 import kotlin.text.Regex;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: BuildUtils.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: BuildUtils.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class BuildUtils {
     public static final BuildUtils INSTANCE = new BuildUtils();
 

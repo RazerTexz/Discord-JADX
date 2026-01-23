@@ -15,9 +15,9 @@ import p007b.p008a.p027k.FormatUtils;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: StickerAdapterViewHolders.kt */
-/* renamed from: com.discord.widgets.chat.input.sticker.OwnedHeaderViewHolder, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.chat.input.sticker.OwnedHeaderViewHolder, reason: use source file name */
+/* JADX INFO: compiled from: StickerAdapterViewHolders.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class StickerAdapterViewHolders extends MGRecyclerViewHolder<WidgetStickerAdapter, MGRecyclerDataPayload> implements WidgetExpressionPickerAdapter.StickyHeaderViewHolder {
     private final ExpressionPickerHeaderItemBinding binding;
 
@@ -51,7 +51,7 @@ public final class StickerAdapterViewHolders extends MGRecyclerViewHolder<Widget
         onConfigure2(i, mGRecyclerDataPayload);
     }
 
-    /* renamed from: onConfigure, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: onConfigure, reason: avoid collision after fix types in other method */
     public void onConfigure2(int position, MGRecyclerDataPayload data) {
         StickerAdapterItems2 headerType;
         Intrinsics3.checkNotNullParameter(data, "data");

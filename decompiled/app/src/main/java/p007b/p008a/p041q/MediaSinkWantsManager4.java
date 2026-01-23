@@ -10,9 +10,9 @@ import kotlin.jvm.functions.Function0;
 import p507d0.p580t.Iterables2;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: MediaSinkWantsManager.kt */
-/* renamed from: b.a.q.i, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.a.q.i, reason: use source file name */
+/* JADX INFO: compiled from: MediaSinkWantsManager.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class MediaSinkWantsManager4 extends Lambda implements Function0<Unit> {
     public final /* synthetic */ MediaEngineConnection $connection;
     public final /* synthetic */ MediaSinkWantsManager this$0;

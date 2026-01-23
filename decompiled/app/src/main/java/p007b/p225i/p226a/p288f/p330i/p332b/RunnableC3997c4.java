@@ -9,28 +9,28 @@ import java.util.List;
 import java.util.Map;
 import p007b.p085c.p086a.p087a0.AnimatableValueParser;
 
-/* compiled from: com.google.android.gms:play-services-measurement@@18.0.0 */
+/* JADX INFO: renamed from: b.i.a.f.i.b.c4 */
+/* JADX INFO: compiled from: com.google.android.gms:play-services-measurement@@18.0.0 */
+/* JADX INFO: loaded from: classes3.dex */
 @WorkerThread
-/* renamed from: b.i.a.f.i.b.c4 */
-/* loaded from: classes3.dex */
 public final class RunnableC3997c4 implements Runnable {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final URL f10586j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final byte[] f10587k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final InterfaceC4256z3 f10588l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public final String f10589m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public final Map<String, String> f10590n;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public final /* synthetic */ C4234x3 f10591o;
 
     public RunnableC3997c4(C4234x3 c4234x3, String str, URL url, byte[] bArr, Map<String, String> map, InterfaceC4256z3 interfaceC4256z3) {

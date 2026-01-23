@@ -5,11 +5,11 @@ import androidx.annotation.Nullable;
 import org.webrtc.EglBase;
 import org.webrtc.Predicate;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public class HardwareVideoDecoderFactory extends MediaCodecVideoDecoderFactory {
     private static final Predicate<MediaCodecInfo> defaultAllowedPredicate = new C129661();
 
-    /* renamed from: org.webrtc.HardwareVideoDecoderFactory$1 */
+    /* JADX INFO: renamed from: org.webrtc.HardwareVideoDecoderFactory$1 */
     public class C129661 implements Predicate<MediaCodecInfo> {
         @Override // org.webrtc.Predicate
         public /* synthetic */ Predicate<MediaCodecInfo> and(Predicate<? super MediaCodecInfo> predicate) {
@@ -22,7 +22,7 @@ public class HardwareVideoDecoderFactory extends MediaCodecVideoDecoderFactory {
         }
 
         @Override // org.webrtc.Predicate
-        /* renamed from: or */
+        /* JADX INFO: renamed from: or */
         public /* synthetic */ Predicate<MediaCodecInfo> mo11025or(Predicate<? super MediaCodecInfo> predicate) {
             return Predicate.CC.m11037c(this, predicate);
         }
@@ -32,7 +32,7 @@ public class HardwareVideoDecoderFactory extends MediaCodecVideoDecoderFactory {
             return test2(mediaCodecInfo);
         }
 
-        /* renamed from: test, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: test, reason: avoid collision after fix types in other method */
         public boolean test2(MediaCodecInfo mediaCodecInfo) {
             return MediaCodecUtils.isHardwareAccelerated(mediaCodecInfo);
         }

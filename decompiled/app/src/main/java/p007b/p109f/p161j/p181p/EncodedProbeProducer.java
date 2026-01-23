@@ -10,49 +10,49 @@ import p007b.p109f.p161j.p168c.DefaultCacheKeyFactory;
 import p007b.p109f.p161j.p175j.EncodedImage2;
 import p007b.p109f.p161j.p183r.FrescoSystrace;
 
-/* compiled from: EncodedProbeProducer.java */
-/* renamed from: b.f.j.p.w, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.f.j.p.w, reason: use source file name */
+/* JADX INFO: compiled from: EncodedProbeProducer.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class EncodedProbeProducer implements Producer2<EncodedImage2> {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final BufferedDiskCache2 f4246a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final BufferedDiskCache2 f4247b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final CacheKeyFactory f4248c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final Producer2<EncodedImage2> f4249d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final BoundedLinkedHashSet<CacheKey> f4250e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final BoundedLinkedHashSet<CacheKey> f4251f;
 
-    /* compiled from: EncodedProbeProducer.java */
-    /* renamed from: b.f.j.p.w$a */
+    /* JADX INFO: renamed from: b.f.j.p.w$a */
+    /* JADX INFO: compiled from: EncodedProbeProducer.java */
     public static class a extends DelegatingConsumer<EncodedImage2, EncodedImage2> {
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public final ProducerContext f4252c;
 
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         public final BufferedDiskCache2 f4253d;
 
-        /* renamed from: e */
+        /* JADX INFO: renamed from: e */
         public final BufferedDiskCache2 f4254e;
 
-        /* renamed from: f */
+        /* JADX INFO: renamed from: f */
         public final CacheKeyFactory f4255f;
 
-        /* renamed from: g */
+        /* JADX INFO: renamed from: g */
         public final BoundedLinkedHashSet<CacheKey> f4256g;
 
-        /* renamed from: h */
+        /* JADX INFO: renamed from: h */
         public final BoundedLinkedHashSet<CacheKey> f4257h;
 
         public a(Consumer2<EncodedImage2> consumer2, ProducerContext producerContext, BufferedDiskCache2 bufferedDiskCache2, BufferedDiskCache2 bufferedDiskCache22, CacheKeyFactory cacheKeyFactory, BoundedLinkedHashSet<CacheKey> boundedLinkedHashSet, BoundedLinkedHashSet<CacheKey> boundedLinkedHashSet2) {
@@ -66,7 +66,7 @@ public class EncodedProbeProducer implements Producer2<EncodedImage2> {
         }
 
         @Override // p007b.p109f.p161j.p181p.BaseConsumer
-        /* renamed from: i */
+        /* JADX INFO: renamed from: i */
         public void mo1320i(Object obj, int i) {
             EncodedImage2 encodedImage2 = (EncodedImage2) obj;
             try {
@@ -108,7 +108,7 @@ public class EncodedProbeProducer implements Producer2<EncodedImage2> {
     }
 
     @Override // p007b.p109f.p161j.p181p.Producer2
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public void mo1417b(Consumer2<EncodedImage2> consumer2, ProducerContext producerContext) {
         try {
             FrescoSystrace.m1527b();

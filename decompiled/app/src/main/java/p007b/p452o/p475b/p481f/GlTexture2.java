@@ -7,30 +7,30 @@ import p507d0.UInt;
 import p507d0.UIntArray;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: GlTexture.kt */
-/* renamed from: b.o.b.f.b, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.o.b.f.b, reason: use source file name */
+/* JADX INFO: compiled from: GlTexture.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class GlTexture2 {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final int f14331a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final int f14332b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final Integer f14333c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final Integer f14334d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final Integer f14335e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final Integer f14336f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public final int f14337g;
 
     public GlTexture2(int i, int i2, Integer num) {
@@ -66,14 +66,14 @@ public final class GlTexture2 {
         }
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public void m7461a() {
         GLES20.glActiveTexture(UInt.m11482constructorimpl(this.f14331a));
         GLES20.glBindTexture(UInt.m11482constructorimpl(this.f14332b), UInt.m11482constructorimpl(this.f14337g));
         Egloo.m7457b("bind");
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public void m7462b() {
         GLES20.glBindTexture(UInt.m11482constructorimpl(this.f14332b), UInt.m11482constructorimpl(0));
         GLES20.glActiveTexture(gl.f14293c);

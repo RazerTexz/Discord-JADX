@@ -43,112 +43,112 @@ import p007b.p109f.p161j.p181p.NetworkFetcher2;
 import p007b.p109f.p161j.p183r.FrescoSystrace;
 import p007b.p109f.p161j.p184s.ImageTranscoderFactory;
 
-/* compiled from: ImagePipelineConfig.java */
-/* renamed from: b.f.j.e.j, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.f.j.e.j, reason: use source file name */
+/* JADX INFO: compiled from: ImagePipelineConfig.java */
+/* JADX INFO: loaded from: classes.dex */
 public class ImagePipelineConfig2 implements ImagePipelineConfigInterface {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static b f3745a = new b(null);
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final Supplier<MemoryCacheParams> f3746b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final MemoryCache.a f3747c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final CacheKeyFactory f3748d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final Context f3749e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final boolean f3750f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public final FileCacheFactory f3751g;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public final Supplier<MemoryCacheParams> f3752h;
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public final ExecutorSupplier f3753i;
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final ImageCacheStatsTracker f3754j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final Supplier<Boolean> f3755k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final DiskCacheConfig f3756l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public final MemoryTrimmableRegistry f3757m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public final NetworkFetcher2 f3758n;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public final int f3759o;
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public final PoolFactory f3760p;
 
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     public final ProgressiveJpegConfig f3761q;
 
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     public final Set<RequestListener> f3762r;
 
-    /* renamed from: s */
+    /* JADX INFO: renamed from: s */
     public final Set<RequestListener2> f3763s;
 
-    /* renamed from: t */
+    /* JADX INFO: renamed from: t */
     public final boolean f3764t;
 
-    /* renamed from: u */
+    /* JADX INFO: renamed from: u */
     public final DiskCacheConfig f3765u;
 
-    /* renamed from: v */
+    /* JADX INFO: renamed from: v */
     public final ImagePipelineExperiments f3766v;
 
-    /* renamed from: w */
+    /* JADX INFO: renamed from: w */
     public final boolean f3767w;
 
-    /* renamed from: x */
+    /* JADX INFO: renamed from: x */
     public final NoOpCloseableReferenceLeakTracker f3768x;
 
-    /* renamed from: y */
+    /* JADX INFO: renamed from: y */
     public final BitmapMemoryCacheFactory f3769y;
 
-    /* compiled from: ImagePipelineConfig.java */
-    /* renamed from: b.f.j.e.j$a */
+    /* JADX INFO: renamed from: b.f.j.e.j$a */
+    /* JADX INFO: compiled from: ImagePipelineConfig.java */
     public static class a {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public Supplier<MemoryCacheParams> f3770a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final Context f3771b;
 
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         public DiskCacheConfig f3773d;
 
-        /* renamed from: e */
+        /* JADX INFO: renamed from: e */
         public DiskCacheConfig f3774e;
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public boolean f3772c = false;
 
-        /* renamed from: f */
+        /* JADX INFO: renamed from: f */
         public final ImagePipelineExperiments.b f3775f = new ImagePipelineExperiments.b(this);
 
-        /* renamed from: g */
+        /* JADX INFO: renamed from: g */
         public boolean f3776g = true;
 
-        /* renamed from: h */
+        /* JADX INFO: renamed from: h */
         public NoOpCloseableReferenceLeakTracker f3777h = new NoOpCloseableReferenceLeakTracker();
 
         public a(Context context, ImagePipelineConfig imagePipelineConfig) {
@@ -157,8 +157,8 @@ public class ImagePipelineConfig2 implements ImagePipelineConfigInterface {
         }
     }
 
-    /* compiled from: ImagePipelineConfig.java */
-    /* renamed from: b.f.j.e.j$b */
+    /* JADX INFO: renamed from: b.f.j.e.j$b */
+    /* JADX INFO: compiled from: ImagePipelineConfig.java */
     public static class b {
         public b(ImagePipelineConfig imagePipelineConfig) {
         }
@@ -231,67 +231,67 @@ public class ImagePipelineConfig2 implements ImagePipelineConfigInterface {
     }
 
     @Override // p007b.p109f.p161j.p170e.ImagePipelineConfigInterface
-    /* renamed from: A */
+    /* JADX INFO: renamed from: A */
     public Supplier<MemoryCacheParams> mo1264A() {
         return this.f3746b;
     }
 
     @Override // p007b.p109f.p161j.p170e.ImagePipelineConfigInterface
-    /* renamed from: B */
+    /* JADX INFO: renamed from: B */
     public ImageDecoder2 mo1265B() {
         return null;
     }
 
     @Override // p007b.p109f.p161j.p170e.ImagePipelineConfigInterface
-    /* renamed from: C */
+    /* JADX INFO: renamed from: C */
     public Supplier<MemoryCacheParams> mo1266C() {
         return this.f3752h;
     }
 
     @Override // p007b.p109f.p161j.p170e.ImagePipelineConfigInterface
-    /* renamed from: D */
+    /* JADX INFO: renamed from: D */
     public ExecutorSupplier mo1267D() {
         return this.f3753i;
     }
 
     @Override // p007b.p109f.p161j.p170e.ImagePipelineConfigInterface
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public PoolFactory mo1268a() {
         return this.f3760p;
     }
 
     @Override // p007b.p109f.p161j.p170e.ImagePipelineConfigInterface
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public Set<RequestListener2> mo1269b() {
         return Collections.unmodifiableSet(this.f3763s);
     }
 
     @Override // p007b.p109f.p161j.p170e.ImagePipelineConfigInterface
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public int mo1270c() {
         return 0;
     }
 
     @Override // p007b.p109f.p161j.p170e.ImagePipelineConfigInterface
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public Supplier<Boolean> mo1271d() {
         return this.f3755k;
     }
 
     @Override // p007b.p109f.p161j.p170e.ImagePipelineConfigInterface
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public FileCacheFactory mo1272e() {
         return this.f3751g;
     }
 
     @Override // p007b.p109f.p161j.p170e.ImagePipelineConfigInterface
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public NoOpCloseableReferenceLeakTracker mo1273f() {
         return this.f3768x;
     }
 
     @Override // p007b.p109f.p161j.p170e.ImagePipelineConfigInterface
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public BitmapMemoryCacheFactory mo1274g() {
         return this.f3769y;
     }
@@ -307,115 +307,115 @@ public class ImagePipelineConfig2 implements ImagePipelineConfigInterface {
     }
 
     @Override // p007b.p109f.p161j.p170e.ImagePipelineConfigInterface
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public NetworkFetcher2 mo1275h() {
         return this.f3758n;
     }
 
     @Override // p007b.p109f.p161j.p170e.ImagePipelineConfigInterface
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public MemoryCache<CacheKey, PooledByteBuffer> mo1276i() {
         return null;
     }
 
     @Override // p007b.p109f.p161j.p170e.ImagePipelineConfigInterface
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public DiskCacheConfig mo1277j() {
         return this.f3756l;
     }
 
     @Override // p007b.p109f.p161j.p170e.ImagePipelineConfigInterface
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public Set<RequestListener> mo1278k() {
         return Collections.unmodifiableSet(this.f3762r);
     }
 
     @Override // p007b.p109f.p161j.p170e.ImagePipelineConfigInterface
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public CacheKeyFactory mo1279l() {
         return this.f3748d;
     }
 
     @Override // p007b.p109f.p161j.p170e.ImagePipelineConfigInterface
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public boolean mo1280m() {
         return this.f3764t;
     }
 
     @Override // p007b.p109f.p161j.p170e.ImagePipelineConfigInterface
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public MemoryCache.a mo1281n() {
         return this.f3747c;
     }
 
     @Override // p007b.p109f.p161j.p170e.ImagePipelineConfigInterface
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public ProgressiveJpegConfig mo1282o() {
         return this.f3761q;
     }
 
     @Override // p007b.p109f.p161j.p170e.ImagePipelineConfigInterface
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public DiskCacheConfig mo1283p() {
         return this.f3765u;
     }
 
     @Override // p007b.p109f.p161j.p170e.ImagePipelineConfigInterface
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     public ImageCacheStatsTracker mo1284q() {
         return this.f3754j;
     }
 
     @Override // p007b.p109f.p161j.p170e.ImagePipelineConfigInterface
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     public CountingMemoryCache.b<CacheKey> mo1285r() {
         return null;
     }
 
     @Override // p007b.p109f.p161j.p170e.ImagePipelineConfigInterface
-    /* renamed from: s */
+    /* JADX INFO: renamed from: s */
     public boolean mo1286s() {
         return this.f3750f;
     }
 
     @Override // p007b.p109f.p161j.p170e.ImagePipelineConfigInterface
-    /* renamed from: t */
+    /* JADX INFO: renamed from: t */
     public SerialExecutorService mo1287t() {
         return null;
     }
 
     @Override // p007b.p109f.p161j.p170e.ImagePipelineConfigInterface
-    /* renamed from: u */
+    /* JADX INFO: renamed from: u */
     public Integer mo1288u() {
         return null;
     }
 
     @Override // p007b.p109f.p161j.p170e.ImagePipelineConfigInterface
-    /* renamed from: v */
+    /* JADX INFO: renamed from: v */
     public ImageTranscoderFactory mo1289v() {
         return null;
     }
 
     @Override // p007b.p109f.p161j.p170e.ImagePipelineConfigInterface
-    /* renamed from: w */
+    /* JADX INFO: renamed from: w */
     public MemoryTrimmableRegistry mo1290w() {
         return this.f3757m;
     }
 
     @Override // p007b.p109f.p161j.p170e.ImagePipelineConfigInterface
-    /* renamed from: x */
+    /* JADX INFO: renamed from: x */
     public ImageDecoderConfig mo1291x() {
         return null;
     }
 
     @Override // p007b.p109f.p161j.p170e.ImagePipelineConfigInterface
-    /* renamed from: y */
+    /* JADX INFO: renamed from: y */
     public boolean mo1292y() {
         return this.f3767w;
     }
 
     @Override // p007b.p109f.p161j.p170e.ImagePipelineConfigInterface
-    /* renamed from: z */
+    /* JADX INFO: renamed from: z */
     public CallerContextVerifier mo1293z() {
         return null;
     }

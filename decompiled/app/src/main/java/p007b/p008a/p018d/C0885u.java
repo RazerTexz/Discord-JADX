@@ -7,9 +7,9 @@ import p507d0.p592z.p594d.FunctionReferenceImpl;
 import p658rx.functions.Action1;
 
 /* JADX INFO: Add missing generic type declarations: [T] */
-/* compiled from: AppTransformers.kt */
-/* renamed from: b.a.d.u */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.a.d.u */
+/* JADX INFO: compiled from: AppTransformers.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* synthetic */ class C0885u<T> extends FunctionReferenceImpl implements Function1<T, Unit> {
     public C0885u(Action1 action1) {
         super(1, action1, Action1.class, NotificationCompat.CATEGORY_CALL, "call(Ljava/lang/Object;)V", 0);

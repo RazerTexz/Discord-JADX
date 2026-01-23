@@ -5,12 +5,12 @@ import p007b.p452o.p453a.p455n.CameraEngine;
 import p007b.p452o.p453a.p455n.p463v.CameraOrchestrator;
 import p007b.p452o.p453a.p467r.WorkerHandler;
 
-/* compiled from: CameraOrchestrator.java */
-/* renamed from: b.o.a.n.v.b, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.o.a.n.v.b, reason: use source file name */
+/* JADX INFO: compiled from: CameraOrchestrator.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class CameraOrchestrator2 implements Runnable {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final /* synthetic */ CameraOrchestrator f14016j;
 
     public CameraOrchestrator2(CameraOrchestrator cameraOrchestrator) {

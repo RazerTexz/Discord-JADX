@@ -9,36 +9,36 @@ import android.view.Display;
 import androidx.annotation.BinderThread;
 import org.objectweb.asm.Opcodes;
 
-/* compiled from: OrientationListener.java */
-/* renamed from: b.i.a.c.g3.z.g, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.g3.z.g, reason: use source file name */
+/* JADX INFO: compiled from: OrientationListener.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class OrientationListener implements SensorEventListener {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final float[] f6972a = new float[16];
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final float[] f6973b = new float[16];
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final float[] f6974c = new float[16];
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final float[] f6975d = new float[3];
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final Display f6976e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final a[] f6977f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public boolean f6978g;
 
-    /* compiled from: OrientationListener.java */
-    /* renamed from: b.i.a.c.g3.z.g$a */
+    /* JADX INFO: renamed from: b.i.a.c.g3.z.g$a */
+    /* JADX INFO: compiled from: OrientationListener.java */
     public interface a {
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         void mo3199a(float[] fArr, float f);
     }
 

@@ -8,16 +8,16 @@ import java.util.List;
 import java.util.Map;
 import p007b.p452o.p453a.CameraLogger;
 
-/* compiled from: FpsRangeValidator.java */
+/* JADX INFO: renamed from: b.o.a.r.b, reason: use source file name */
+/* JADX INFO: compiled from: FpsRangeValidator.java */
+/* JADX INFO: loaded from: classes3.dex */
 @RequiresApi(21)
-/* renamed from: b.o.a.r.b, reason: use source file name */
-/* loaded from: classes3.dex */
 public class FpsRangeValidator {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final CameraLogger f14103a = new CameraLogger("FpsRangeValidator");
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static final Map<String, List<Range<Integer>>> f14104b;
 
     static {

@@ -6,8 +6,8 @@ import java.util.List;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ModelEmojiGuild.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: ModelEmojiGuild.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class ModelEmojiGuild {
     private final boolean animated;
     private final boolean available;
@@ -32,21 +32,22 @@ public final /* data */ class ModelEmojiGuild {
         this.available = z5;
     }
 
+    /* JADX WARN: Multi-variable type inference failed */
     public static /* synthetic */ ModelEmojiGuild copy$default(ModelEmojiGuild modelEmojiGuild, long j, String str, boolean z2, List list, boolean z3, User user, boolean z4, boolean z5, int i, Object obj) {
         return modelEmojiGuild.copy((i & 1) != 0 ? modelEmojiGuild.id : j, (i & 2) != 0 ? modelEmojiGuild.name : str, (i & 4) != 0 ? modelEmojiGuild.managed : z2, (i & 8) != 0 ? modelEmojiGuild.roles : list, (i & 16) != 0 ? modelEmojiGuild.requiredColons : z3, (i & 32) != 0 ? modelEmojiGuild.user : user, (i & 64) != 0 ? modelEmojiGuild.animated : z4, (i & 128) != 0 ? modelEmojiGuild.available : z5);
     }
 
-    /* renamed from: component1, reason: from getter */
+    /* JADX INFO: renamed from: component1, reason: from getter */
     public final long getId() {
         return this.id;
     }
 
-    /* renamed from: component2, reason: from getter */
+    /* JADX INFO: renamed from: component2, reason: from getter */
     public final String getName() {
         return this.name;
     }
 
-    /* renamed from: component3, reason: from getter */
+    /* JADX INFO: renamed from: component3, reason: from getter */
     public final boolean getManaged() {
         return this.managed;
     }
@@ -55,22 +56,22 @@ public final /* data */ class ModelEmojiGuild {
         return this.roles;
     }
 
-    /* renamed from: component5, reason: from getter */
+    /* JADX INFO: renamed from: component5, reason: from getter */
     public final boolean getRequiredColons() {
         return this.requiredColons;
     }
 
-    /* renamed from: component6, reason: from getter */
+    /* JADX INFO: renamed from: component6, reason: from getter */
     public final User getUser() {
         return this.user;
     }
 
-    /* renamed from: component7, reason: from getter */
+    /* JADX INFO: renamed from: component7, reason: from getter */
     public final boolean getAnimated() {
         return this.animated;
     }
 
-    /* renamed from: component8, reason: from getter */
+    /* JADX INFO: renamed from: component8, reason: from getter */
     public final boolean getAvailable() {
         return this.available;
     }
@@ -126,35 +127,47 @@ public final /* data */ class ModelEmojiGuild {
     }
 
     /* JADX WARN: Multi-variable type inference failed */
+    /* JADX WARN: Type inference failed for: r0v11, types: [int] */
+    /* JADX WARN: Type inference failed for: r0v14, types: [int] */
+    /* JADX WARN: Type inference failed for: r0v16 */
+    /* JADX WARN: Type inference failed for: r0v17 */
+    /* JADX WARN: Type inference failed for: r0v19 */
+    /* JADX WARN: Type inference failed for: r0v21 */
+    /* JADX WARN: Type inference failed for: r0v22 */
+    /* JADX WARN: Type inference failed for: r0v23 */
+    /* JADX WARN: Type inference failed for: r0v6, types: [int] */
+    /* JADX WARN: Type inference failed for: r3v0 */
+    /* JADX WARN: Type inference failed for: r3v1, types: [int] */
+    /* JADX WARN: Type inference failed for: r3v2 */
     public int hashCode() {
         long j = this.id;
         int i = ((int) (j ^ (j >>> 32))) * 31;
         String str = this.name;
         int iHashCode = (i + (str != null ? str.hashCode() : 0)) * 31;
         boolean z2 = this.managed;
-        int i2 = z2;
-        if (z2 != 0) {
-            i2 = 1;
+        ?? r0 = z2;
+        if (z2) {
+            r0 = 1;
         }
-        int i3 = (iHashCode + i2) * 31;
+        int i2 = (iHashCode + r0) * 31;
         List<Long> list = this.roles;
-        int iHashCode2 = (i3 + (list != null ? list.hashCode() : 0)) * 31;
+        int iHashCode2 = (i2 + (list != null ? list.hashCode() : 0)) * 31;
         boolean z3 = this.requiredColons;
-        int i4 = z3;
-        if (z3 != 0) {
-            i4 = 1;
+        ?? r02 = z3;
+        if (z3) {
+            r02 = 1;
         }
-        int i5 = (iHashCode2 + i4) * 31;
+        int i3 = (iHashCode2 + r02) * 31;
         User user = this.user;
-        int iHashCode3 = (i5 + (user != null ? user.hashCode() : 0)) * 31;
+        int iHashCode3 = (i3 + (user != null ? user.hashCode() : 0)) * 31;
         boolean z4 = this.animated;
-        int i6 = z4;
-        if (z4 != 0) {
-            i6 = 1;
+        ?? r03 = z4;
+        if (z4) {
+            r03 = 1;
         }
-        int i7 = (iHashCode3 + i6) * 31;
+        int i4 = (iHashCode3 + r03) * 31;
         boolean z5 = this.available;
-        return i7 + (z5 ? 1 : z5 ? 1 : 0);
+        return i4 + (z5 ? 1 : z5);
     }
 
     public String toString() {

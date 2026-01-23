@@ -42,8 +42,8 @@ import p659s.p660a.CoroutineScope2;
 import p659s.p660a.Dispatchers;
 import p659s.p660a.p661a.MainDispatchers;
 
-/* compiled from: StoreRequestedStageChannels.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: StoreRequestedStageChannels.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class StoreRequestedStageChannels extends StoreV2 {
     private static final long ENQUEUE_DEBOUNCE_DELAY_MS = 22;
     private final Dispatcher dispatcher;
@@ -54,14 +54,14 @@ public final class StoreRequestedStageChannels extends StoreV2 {
     private Map<Long, StageInstanceState> requestedStageChannelsSnapshot;
     private final RestAPI restAPI;
 
-    /* compiled from: StoreRequestedStageChannels.kt */
+    /* JADX INFO: compiled from: StoreRequestedStageChannels.kt */
     public enum FetchStatus {
         ERROR,
         LOADING,
         LOADED
     }
 
-    /* compiled from: StoreRequestedStageChannels.kt */
+    /* JADX INFO: compiled from: StoreRequestedStageChannels.kt */
     public static final /* data */ class StageInstanceState {
         private final RecommendedStageInstance stageInstance;
         private final FetchStatus status;
@@ -82,12 +82,12 @@ public final class StoreRequestedStageChannels extends StoreV2 {
             return stageInstanceState.copy(recommendedStageInstance, fetchStatus);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final RecommendedStageInstance getStageInstance() {
             return this.stageInstance;
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final FetchStatus getStatus() {
             return this.status;
         }
@@ -145,9 +145,9 @@ public final class StoreRequestedStageChannels extends StoreV2 {
         }
     }
 
-    /* compiled from: StoreRequestedStageChannels.kt */
+    /* JADX INFO: renamed from: com.discord.stores.StoreRequestedStageChannels$enqueueStageChannelFetch$1 */
+    /* JADX INFO: compiled from: StoreRequestedStageChannels.kt */
     @DebugMetadata(m10084c = "com.discord.stores.StoreRequestedStageChannels$enqueueStageChannelFetch$1", m10085f = "StoreRequestedStageChannels.kt", m10086l = {60}, m10087m = "invokeSuspend")
-    /* renamed from: com.discord.stores.StoreRequestedStageChannels$enqueueStageChannelFetch$1 */
     public static final class C63531 extends ContinuationImpl6 implements Function2<CoroutineScope, Continuation<? super Unit>, Object> {
         public int label;
 
@@ -189,18 +189,18 @@ public final class StoreRequestedStageChannels extends StoreV2 {
         }
     }
 
-    /* compiled from: StoreRequestedStageChannels.kt */
-    /* renamed from: com.discord.stores.StoreRequestedStageChannels$fetchStageChannels$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreRequestedStageChannels$fetchStageChannels$1 */
+    /* JADX INFO: compiled from: StoreRequestedStageChannels.kt */
     public static final class C63541 extends Lambda implements Function0<Unit> {
         public final /* synthetic */ Set $channelIds;
 
-        /* compiled from: StoreRequestedStageChannels.kt */
-        /* renamed from: com.discord.stores.StoreRequestedStageChannels$fetchStageChannels$1$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.stores.StoreRequestedStageChannels$fetchStageChannels$1$1, reason: invalid class name */
+        /* JADX INFO: compiled from: StoreRequestedStageChannels.kt */
         public static final class AnonymousClass1 extends Lambda implements Function1<Error, Unit> {
             public final /* synthetic */ Set $channelIdsToRequest;
 
-            /* compiled from: StoreRequestedStageChannels.kt */
-            /* renamed from: com.discord.stores.StoreRequestedStageChannels$fetchStageChannels$1$1$1, reason: invalid class name and collision with other inner class name */
+            /* JADX INFO: renamed from: com.discord.stores.StoreRequestedStageChannels$fetchStageChannels$1$1$1, reason: invalid class name and collision with other inner class name */
+            /* JADX INFO: compiled from: StoreRequestedStageChannels.kt */
             public static final class C132621 extends Lambda implements Function0<Unit> {
                 public C132621() {
                     super(0);
@@ -212,7 +212,7 @@ public final class StoreRequestedStageChannels extends StoreV2 {
                     return Unit.f27425a;
                 }
 
-                /* renamed from: invoke, reason: avoid collision after fix types in other method */
+                /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
                 public final void invoke2() {
                     AnonymousClass1 anonymousClass1 = AnonymousClass1.this;
                     StoreRequestedStageChannels.access$updateStatus(StoreRequestedStageChannels.this, anonymousClass1.$channelIdsToRequest, FetchStatus.ERROR);
@@ -231,20 +231,20 @@ public final class StoreRequestedStageChannels extends StoreV2 {
                 return Unit.f27425a;
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2(Error error) {
                 Intrinsics3.checkNotNullParameter(error, "it");
                 StoreRequestedStageChannels.access$getDispatcher$p(StoreRequestedStageChannels.this).schedule(new C132621());
             }
         }
 
-        /* compiled from: StoreRequestedStageChannels.kt */
-        /* renamed from: com.discord.stores.StoreRequestedStageChannels$fetchStageChannels$1$2, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.stores.StoreRequestedStageChannels$fetchStageChannels$1$2, reason: invalid class name */
+        /* JADX INFO: compiled from: StoreRequestedStageChannels.kt */
         public static final class AnonymousClass2 extends Lambda implements Function1<List<? extends RecommendedStageInstance>, Unit> {
             public final /* synthetic */ Set $channelIdsToRequest;
 
-            /* compiled from: StoreRequestedStageChannels.kt */
-            /* renamed from: com.discord.stores.StoreRequestedStageChannels$fetchStageChannels$1$2$1, reason: invalid class name */
+            /* JADX INFO: renamed from: com.discord.stores.StoreRequestedStageChannels$fetchStageChannels$1$2$1, reason: invalid class name */
+            /* JADX INFO: compiled from: StoreRequestedStageChannels.kt */
             public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
                 public final /* synthetic */ List $stageInstances;
 
@@ -260,7 +260,7 @@ public final class StoreRequestedStageChannels extends StoreV2 {
                     return Unit.f27425a;
                 }
 
-                /* renamed from: invoke, reason: avoid collision after fix types in other method */
+                /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
                 public final void invoke2() {
                     AnonymousClass2 anonymousClass2 = AnonymousClass2.this;
                     StoreRequestedStageChannels.access$onLoaded(StoreRequestedStageChannels.this, anonymousClass2.$channelIdsToRequest, this.$stageInstances);
@@ -279,7 +279,7 @@ public final class StoreRequestedStageChannels extends StoreV2 {
                 return Unit.f27425a;
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2(List<RecommendedStageInstance> list) {
                 Intrinsics3.checkNotNullParameter(list, "stageInstances");
                 StoreRequestedStageChannels.access$getDispatcher$p(StoreRequestedStageChannels.this).schedule(new AnonymousClass1(list));
@@ -298,7 +298,7 @@ public final class StoreRequestedStageChannels extends StoreV2 {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             Set set = this.$channelIds;
             ArrayList arrayList = new ArrayList();
@@ -320,8 +320,8 @@ public final class StoreRequestedStageChannels extends StoreV2 {
         }
     }
 
-    /* compiled from: StoreRequestedStageChannels.kt */
-    /* renamed from: com.discord.stores.StoreRequestedStageChannels$observeRequestedStageChannel$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreRequestedStageChannels$observeRequestedStageChannel$1 */
+    /* JADX INFO: compiled from: StoreRequestedStageChannels.kt */
     public static final class C63551<T, R> implements Func1<Map<Long, ? extends StageInstanceState>, StageInstanceState> {
         public final /* synthetic */ long $channelId;
 
@@ -334,14 +334,14 @@ public final class StoreRequestedStageChannels extends StoreV2 {
             return call2((Map<Long, StageInstanceState>) map);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final StageInstanceState call2(Map<Long, StageInstanceState> map) {
             return map.get(Long.valueOf(this.$channelId));
         }
     }
 
-    /* compiled from: StoreRequestedStageChannels.kt */
-    /* renamed from: com.discord.stores.StoreRequestedStageChannels$observeRequestedStageChannels$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreRequestedStageChannels$observeRequestedStageChannels$1 */
+    /* JADX INFO: compiled from: StoreRequestedStageChannels.kt */
     public static final class C63561 extends Lambda implements Function0<Map<Long, ? extends StageInstanceState>> {
         public C63561() {
             super(0);
@@ -353,7 +353,7 @@ public final class StoreRequestedStageChannels extends StoreV2 {
         }
 
         @Override // kotlin.jvm.functions.Function0
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final Map<Long, ? extends StageInstanceState> invoke2() {
             return StoreRequestedStageChannels.this.getRequestedInstanceStatesByChannel();
         }

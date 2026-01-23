@@ -12,34 +12,34 @@ import com.google.android.material.progressindicator.BaseProgressIndicatorSpec;
 import com.google.android.material.progressindicator.LinearProgressIndicatorSpec;
 import java.util.Arrays;
 
-/* compiled from: LinearIndeterminateContiguousAnimatorDelegate.java */
-/* renamed from: b.i.a.g.g.j, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.g.g.j, reason: use source file name */
+/* JADX INFO: compiled from: LinearIndeterminateContiguousAnimatorDelegate.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class LinearIndeterminateContiguousAnimatorDelegate2 extends IndeterminateAnimatorDelegate<ObjectAnimator> {
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public static final Property<LinearIndeterminateContiguousAnimatorDelegate2, Float> f11743d = new a(Float.class, "animationFraction");
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public ObjectAnimator f11744e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public FastOutSlowInInterpolator f11745f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public final BaseProgressIndicatorSpec f11746g;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public int f11747h;
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public boolean f11748i;
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public float f11749j;
 
-    /* compiled from: LinearIndeterminateContiguousAnimatorDelegate.java */
-    /* renamed from: b.i.a.g.g.j$a */
+    /* JADX INFO: renamed from: b.i.a.g.g.j$a */
+    /* JADX INFO: compiled from: LinearIndeterminateContiguousAnimatorDelegate.java */
     public static class a extends Property<LinearIndeterminateContiguousAnimatorDelegate2, Float> {
         public a(Class cls, String str) {
             super(cls, str);
@@ -86,7 +86,7 @@ public final class LinearIndeterminateContiguousAnimatorDelegate2 extends Indete
     }
 
     @Override // p007b.p225i.p226a.p341g.p348g.IndeterminateAnimatorDelegate
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public void mo6123a() {
         ObjectAnimator objectAnimator = this.f11744e;
         if (objectAnimator != null) {
@@ -95,23 +95,23 @@ public final class LinearIndeterminateContiguousAnimatorDelegate2 extends Indete
     }
 
     @Override // p007b.p225i.p226a.p341g.p348g.IndeterminateAnimatorDelegate
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public void mo6124c() {
         m6132h();
     }
 
     @Override // p007b.p225i.p226a.p341g.p348g.IndeterminateAnimatorDelegate
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public void mo6125d(@Nullable Animatable2Compat.AnimationCallback animationCallback) {
     }
 
     @Override // p007b.p225i.p226a.p341g.p348g.IndeterminateAnimatorDelegate
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public void mo6126e() {
     }
 
     @Override // p007b.p225i.p226a.p341g.p348g.IndeterminateAnimatorDelegate
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public void mo6127f() {
         if (this.f11744e == null) {
             ObjectAnimator objectAnimatorOfFloat = ObjectAnimator.ofFloat(this, f11743d, 0.0f, 1.0f);
@@ -126,12 +126,12 @@ public final class LinearIndeterminateContiguousAnimatorDelegate2 extends Indete
     }
 
     @Override // p007b.p225i.p226a.p341g.p348g.IndeterminateAnimatorDelegate
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public void mo6128g() {
     }
 
     @VisibleForTesting
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public void m6132h() {
         this.f11748i = true;
         this.f11747h = 1;

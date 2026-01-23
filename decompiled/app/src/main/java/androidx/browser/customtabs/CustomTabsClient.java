@@ -23,14 +23,14 @@ import java.util.List;
 import p668x.p669a.p670a.ICustomTabsCallback;
 import p668x.p669a.p670a.ICustomTabsService;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class CustomTabsClient {
     private static final String TAG = "CustomTabsClient";
     private final Context mApplicationContext;
     private final ICustomTabsService mService;
     private final ComponentName mServiceComponentName;
 
-    /* renamed from: androidx.browser.customtabs.CustomTabsClient$1 */
+    /* JADX INFO: renamed from: androidx.browser.customtabs.CustomTabsClient$1 */
     public class C01511 extends CustomTabsServiceConnection {
         public final /* synthetic */ Context val$applicationContext;
 
@@ -49,12 +49,12 @@ public class CustomTabsClient {
         }
     }
 
-    /* renamed from: androidx.browser.customtabs.CustomTabsClient$2 */
+    /* JADX INFO: renamed from: androidx.browser.customtabs.CustomTabsClient$2 */
     public class BinderC01522 extends ICustomTabsCallback.a {
         private Handler mHandler = new Handler(Looper.getMainLooper());
         public final /* synthetic */ CustomTabsCallback val$callback;
 
-        /* renamed from: androidx.browser.customtabs.CustomTabsClient$2$1, reason: invalid class name */
+        /* JADX INFO: renamed from: androidx.browser.customtabs.CustomTabsClient$2$1, reason: invalid class name */
         public class AnonymousClass1 implements Runnable {
             public final /* synthetic */ Bundle val$extras;
             public final /* synthetic */ int val$navigationEvent;
@@ -70,7 +70,7 @@ public class CustomTabsClient {
             }
         }
 
-        /* renamed from: androidx.browser.customtabs.CustomTabsClient$2$2, reason: invalid class name */
+        /* JADX INFO: renamed from: androidx.browser.customtabs.CustomTabsClient$2$2, reason: invalid class name */
         public class AnonymousClass2 implements Runnable {
             public final /* synthetic */ Bundle val$args;
             public final /* synthetic */ String val$callbackName;
@@ -86,7 +86,7 @@ public class CustomTabsClient {
             }
         }
 
-        /* renamed from: androidx.browser.customtabs.CustomTabsClient$2$3, reason: invalid class name */
+        /* JADX INFO: renamed from: androidx.browser.customtabs.CustomTabsClient$2$3, reason: invalid class name */
         public class AnonymousClass3 implements Runnable {
             public final /* synthetic */ Bundle val$extras;
 
@@ -100,7 +100,7 @@ public class CustomTabsClient {
             }
         }
 
-        /* renamed from: androidx.browser.customtabs.CustomTabsClient$2$4, reason: invalid class name */
+        /* JADX INFO: renamed from: androidx.browser.customtabs.CustomTabsClient$2$4, reason: invalid class name */
         public class AnonymousClass4 implements Runnable {
             public final /* synthetic */ Bundle val$extras;
             public final /* synthetic */ String val$message;
@@ -116,7 +116,7 @@ public class CustomTabsClient {
             }
         }
 
-        /* renamed from: androidx.browser.customtabs.CustomTabsClient$2$5, reason: invalid class name */
+        /* JADX INFO: renamed from: androidx.browser.customtabs.CustomTabsClient$2$5, reason: invalid class name */
         public class AnonymousClass5 implements Runnable {
             public final /* synthetic */ Bundle val$extras;
             public final /* synthetic */ int val$relation;
@@ -298,7 +298,7 @@ public class CustomTabsClient {
     public static String getPackageName(@NonNull Context context, @Nullable List<String> list, boolean z2) {
         ResolveInfo resolveInfoResolveActivity;
         PackageManager packageManager = context.getPackageManager();
-        List<String> arrayList = list == null ? new ArrayList<>() : list;
+        List<String> arrayList = list == null ? new ArrayList() : list;
         Intent intent = new Intent("android.intent.action.VIEW", Uri.parse("http://"));
         if (!z2 && (resolveInfoResolveActivity = packageManager.resolveActivity(intent, 0)) != null) {
             String str = resolveInfoResolveActivity.activityInfo.packageName;

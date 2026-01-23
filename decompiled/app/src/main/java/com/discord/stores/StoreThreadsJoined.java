@@ -28,8 +28,8 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 import p658rx.Observable;
 
-/* compiled from: StoreThreadsJoined.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: StoreThreadsJoined.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class StoreThreadsJoined extends StoreV2 {
     public static final int ALL_FLAGS = 15;
     public static final int NOTIFICATION_FLAGS = 14;
@@ -38,7 +38,7 @@ public final class StoreThreadsJoined extends StoreV2 {
     private final ObservationDeck observationDeck;
     private final StoreUser storeUser;
 
-    /* compiled from: StoreThreadsJoined.kt */
+    /* JADX INFO: compiled from: StoreThreadsJoined.kt */
     public static final /* data */ class JoinedThread {
         private final int flags;
         private final long guildId;
@@ -62,32 +62,32 @@ public final class StoreThreadsJoined extends StoreV2 {
             return joinedThread.copy((i2 & 1) != 0 ? joinedThread.threadId : j, (i2 & 2) != 0 ? joinedThread.guildId : j2, (i2 & 4) != 0 ? joinedThread.flags : i, (i2 & 8) != 0 ? joinedThread.muted : z2, (i2 & 16) != 0 ? joinedThread.muteConfig : modelMuteConfig, (i2 & 32) != 0 ? joinedThread.joinTimestamp : utcDateTime);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final long getThreadId() {
             return this.threadId;
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final long getGuildId() {
             return this.guildId;
         }
 
-        /* renamed from: component3, reason: from getter */
+        /* JADX INFO: renamed from: component3, reason: from getter */
         public final int getFlags() {
             return this.flags;
         }
 
-        /* renamed from: component4, reason: from getter */
+        /* JADX INFO: renamed from: component4, reason: from getter */
         public final boolean getMuted() {
             return this.muted;
         }
 
-        /* renamed from: component5, reason: from getter */
+        /* JADX INFO: renamed from: component5, reason: from getter */
         public final ModelMuteConfig getMuteConfig() {
             return this.muteConfig;
         }
 
-        /* renamed from: component6, reason: from getter */
+        /* JADX INFO: renamed from: component6, reason: from getter */
         public final UtcDateTime getJoinTimestamp() {
             return this.joinTimestamp;
         }
@@ -134,16 +134,19 @@ public final class StoreThreadsJoined extends StoreV2 {
         }
 
         /* JADX WARN: Multi-variable type inference failed */
+        /* JADX WARN: Type inference failed for: r0v11 */
+        /* JADX WARN: Type inference failed for: r0v12 */
+        /* JADX WARN: Type inference failed for: r0v5, types: [int] */
         public int hashCode() {
             int iM3a = (((C0002b.m3a(this.guildId) + (C0002b.m3a(this.threadId) * 31)) * 31) + this.flags) * 31;
             boolean z2 = this.muted;
-            int i = z2;
-            if (z2 != 0) {
-                i = 1;
+            ?? r0 = z2;
+            if (z2) {
+                r0 = 1;
             }
-            int i2 = (iM3a + i) * 31;
+            int i = (iM3a + r0) * 31;
             ModelMuteConfig modelMuteConfig = this.muteConfig;
-            int iHashCode = (i2 + (modelMuteConfig != null ? modelMuteConfig.hashCode() : 0)) * 31;
+            int iHashCode = (i + (modelMuteConfig != null ? modelMuteConfig.hashCode() : 0)) * 31;
             UtcDateTime utcDateTime = this.joinTimestamp;
             return iHashCode + (utcDateTime != null ? utcDateTime.hashCode() : 0);
         }
@@ -166,8 +169,8 @@ public final class StoreThreadsJoined extends StoreV2 {
         }
     }
 
-    /* compiled from: StoreThreadsJoined.kt */
-    /* renamed from: com.discord.stores.StoreThreadsJoined$observeJoinedThread$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreThreadsJoined$observeJoinedThread$1 */
+    /* JADX INFO: compiled from: StoreThreadsJoined.kt */
     public static final class C65471 extends Lambda implements Function0<JoinedThread> {
         public final /* synthetic */ long $threadId;
 
@@ -189,8 +192,8 @@ public final class StoreThreadsJoined extends StoreV2 {
         }
     }
 
-    /* compiled from: StoreThreadsJoined.kt */
-    /* renamed from: com.discord.stores.StoreThreadsJoined$observeJoinedThreads$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreThreadsJoined$observeJoinedThreads$1 */
+    /* JADX INFO: compiled from: StoreThreadsJoined.kt */
     public static final class C65481 extends Lambda implements Function0<Map<Long, ? extends JoinedThread>> {
         public C65481() {
             super(0);
@@ -202,7 +205,7 @@ public final class StoreThreadsJoined extends StoreV2 {
         }
 
         @Override // kotlin.jvm.functions.Function0
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final Map<Long, ? extends JoinedThread> invoke2() {
             return StoreThreadsJoined.access$getAllJoinedThreads(StoreThreadsJoined.this);
         }
@@ -333,7 +336,6 @@ public final class StoreThreadsJoined extends StoreV2 {
         }
     }
 
-    /* JADX WARN: Multi-variable type inference failed */
     @Store3
     public final void handleThreadMembersUpdate(ThreadMembersUpdate payload) {
         List<Long> listM8278d;
@@ -345,6 +347,7 @@ public final class StoreThreadsJoined extends StoreV2 {
         }
         List<AugmentedThreadMember> listM8275a = payload.m8275a();
         AugmentedThreadMember augmentedThreadMember = null;
+        Object obj = null;
         if (listM8275a != null) {
             Iterator<T> it = listM8275a.iterator();
             while (true) {
@@ -353,11 +356,11 @@ public final class StoreThreadsJoined extends StoreV2 {
                 }
                 Object next = it.next();
                 if (((AugmentedThreadMember) next).getUserId() == id2) {
-                    augmentedThreadMember = next;
+                    obj = next;
                     break;
                 }
             }
-            augmentedThreadMember = augmentedThreadMember;
+            augmentedThreadMember = (AugmentedThreadMember) obj;
         }
         if (augmentedThreadMember != null) {
             this.joinedThreads.put(Long.valueOf(payload.getId()), new JoinedThread(payload.getId(), payload.getGuildId(), augmentedThreadMember.getFlags(), augmentedThreadMember.getMuted(), new ModelMuteConfig(augmentedThreadMember.getMuteConfig()), augmentedThreadMember.getJoinTimestamp()));

@@ -2,9 +2,9 @@ package p007b.p195g.p196a.p205c.p218h0;
 
 import p007b.p195g.p196a.p205c.JavaType;
 
-/* compiled from: ResolvedRecursiveType.java */
-/* renamed from: b.g.a.c.h0.j, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.g.a.c.h0.j, reason: use source file name */
+/* JADX INFO: compiled from: ResolvedRecursiveType.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class ResolvedRecursiveType extends TypeBase {
     private static final long serialVersionUID = 1;
     public JavaType _referencedType;
@@ -14,37 +14,37 @@ public class ResolvedRecursiveType extends TypeBase {
     }
 
     @Override // p007b.p195g.p196a.p205c.JavaType
-    /* renamed from: C */
+    /* JADX INFO: renamed from: C */
     public JavaType mo2093C(Class<?> cls, TypeBindings typeBindings, JavaType javaType, JavaType[] javaTypeArr) {
         return null;
     }
 
     @Override // p007b.p195g.p196a.p205c.JavaType
-    /* renamed from: D */
+    /* JADX INFO: renamed from: D */
     public JavaType mo2094D(JavaType javaType) {
         return this;
     }
 
     @Override // p007b.p195g.p196a.p205c.JavaType
-    /* renamed from: E */
+    /* JADX INFO: renamed from: E */
     public JavaType mo2095E(Object obj) {
         return this;
     }
 
     @Override // p007b.p195g.p196a.p205c.JavaType
-    /* renamed from: G */
+    /* JADX INFO: renamed from: G */
     public JavaType mo2096G() {
         return this;
     }
 
     @Override // p007b.p195g.p196a.p205c.JavaType
-    /* renamed from: H */
+    /* JADX INFO: renamed from: H */
     public JavaType mo2097H(Object obj) {
         return this;
     }
 
     @Override // p007b.p195g.p196a.p205c.JavaType
-    /* renamed from: I */
+    /* JADX INFO: renamed from: I */
     public JavaType mo2098I(Object obj) {
         return this;
     }
@@ -60,21 +60,21 @@ public class ResolvedRecursiveType extends TypeBase {
     }
 
     @Override // p007b.p195g.p196a.p205c.p218h0.TypeBase, p007b.p195g.p196a.p205c.JavaType
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public TypeBindings mo2136j() {
         JavaType javaType = this._referencedType;
         return javaType != null ? javaType.mo2136j() : this._bindings;
     }
 
     @Override // p007b.p195g.p196a.p205c.JavaType
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public StringBuilder mo2100l(StringBuilder sb) {
         JavaType javaType = this._referencedType;
         return javaType != null ? javaType.mo2100l(sb) : sb;
     }
 
     @Override // p007b.p195g.p196a.p205c.JavaType
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public StringBuilder mo2101m(StringBuilder sb) {
         JavaType javaType = this._referencedType;
         if (javaType != null) {
@@ -85,7 +85,7 @@ public class ResolvedRecursiveType extends TypeBase {
     }
 
     @Override // p007b.p195g.p196a.p205c.p218h0.TypeBase, p007b.p195g.p196a.p205c.JavaType
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     public JavaType mo2137q() {
         JavaType javaType = this._referencedType;
         return javaType != null ? javaType.mo2137q() : this._superClass;
@@ -104,7 +104,7 @@ public class ResolvedRecursiveType extends TypeBase {
     }
 
     @Override // p007b.p195g.p196a.p205c.JavaType
-    /* renamed from: v */
+    /* JADX INFO: renamed from: v */
     public boolean mo2104v() {
         return false;
     }

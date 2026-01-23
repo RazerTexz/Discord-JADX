@@ -27,8 +27,8 @@ import p658rx.Observable;
 import p658rx.functions.Action1;
 import p658rx.functions.Func0;
 
-/* compiled from: SearchFetcher.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: SearchFetcher.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public class SearchFetcher {
     private AtomicInteger indexingRetryCount = new AtomicInteger(0);
 
@@ -44,8 +44,8 @@ public class SearchFetcher {
         }
     }
 
-    /* compiled from: SearchFetcher.kt */
-    /* renamed from: com.discord.utilities.search.network.SearchFetcher$getRestObservable$1 */
+    /* JADX INFO: renamed from: com.discord.utilities.search.network.SearchFetcher$getRestObservable$1 */
+    /* JADX INFO: compiled from: SearchFetcher.kt */
     public static final class C69041 extends Lambda implements Function1<AtomicInteger, Integer> {
         public static final C69041 INSTANCE = new C69041();
 
@@ -58,7 +58,7 @@ public class SearchFetcher {
             return invoke2(atomicInteger);
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final Integer invoke2(AtomicInteger atomicInteger) {
             Intrinsics3.checkNotNullParameter(atomicInteger, "$this$getNullIfZero");
             int i = atomicInteger.get();
@@ -69,8 +69,8 @@ public class SearchFetcher {
         }
     }
 
-    /* compiled from: SearchFetcher.kt */
-    /* renamed from: com.discord.utilities.search.network.SearchFetcher$getRestObservable$2 */
+    /* JADX INFO: renamed from: com.discord.utilities.search.network.SearchFetcher$getRestObservable$2 */
+    /* JADX INFO: compiled from: SearchFetcher.kt */
     public static final class C69052<R> implements Func0<Observable<Integer>> {
         public C69052() {
         }
@@ -86,8 +86,8 @@ public class SearchFetcher {
         }
     }
 
-    /* compiled from: SearchFetcher.kt */
-    /* renamed from: com.discord.utilities.search.network.SearchFetcher$getRestObservable$3 */
+    /* JADX INFO: renamed from: com.discord.utilities.search.network.SearchFetcher$getRestObservable$3 */
+    /* JADX INFO: compiled from: SearchFetcher.kt */
     public static final class C69063<T, R> implements Func1<Integer, Observable<? extends ModelSearchResponse>> {
         public final /* synthetic */ Long $oldestMessageId;
         public final /* synthetic */ Map $queryParams;
@@ -106,7 +106,7 @@ public class SearchFetcher {
             return call2(num);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final Observable<? extends ModelSearchResponse> call2(Integer num) {
             int iOrdinal = this.$searchTarget.getType().ordinal();
             if (iOrdinal == 0) {
@@ -119,8 +119,8 @@ public class SearchFetcher {
         }
     }
 
-    /* compiled from: SearchFetcher.kt */
-    /* renamed from: com.discord.utilities.search.network.SearchFetcher$makeQuery$1 */
+    /* JADX INFO: renamed from: com.discord.utilities.search.network.SearchFetcher$makeQuery$1 */
+    /* JADX INFO: compiled from: SearchFetcher.kt */
     public static final class C69071<T> implements Action1<ModelSearchResponse> {
         public final /* synthetic */ AtomicLong $resubscribeDelayMillis;
 
@@ -133,7 +133,7 @@ public class SearchFetcher {
             call2(modelSearchResponse);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final void call2(ModelSearchResponse modelSearchResponse) {
             SearchFetcher searchFetcher = SearchFetcher.this;
             Intrinsics3.checkNotNullExpressionValue(modelSearchResponse, "searchResponse");
@@ -144,13 +144,13 @@ public class SearchFetcher {
         }
     }
 
-    /* compiled from: SearchFetcher.kt */
-    /* renamed from: com.discord.utilities.search.network.SearchFetcher$makeQuery$2 */
+    /* JADX INFO: renamed from: com.discord.utilities.search.network.SearchFetcher$makeQuery$2 */
+    /* JADX INFO: compiled from: SearchFetcher.kt */
     public static final class C69082<T, R> implements Func1<Observable<? extends Void>, Observable<?>> {
         public final /* synthetic */ AtomicLong $resubscribeDelayMillis;
 
-        /* compiled from: SearchFetcher.kt */
-        /* renamed from: com.discord.utilities.search.network.SearchFetcher$makeQuery$2$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.utilities.search.network.SearchFetcher$makeQuery$2$1, reason: invalid class name */
+        /* JADX INFO: compiled from: SearchFetcher.kt */
         public static final class AnonymousClass1<T, R> implements Func1<Void, Observable<? extends Long>> {
             public AnonymousClass1() {
             }
@@ -160,7 +160,7 @@ public class SearchFetcher {
                 return call2(r1);
             }
 
-            /* renamed from: call, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
             public final Observable<? extends Long> call2(Void r3) {
                 return Observable.m11068d0(C69082.this.$resubscribeDelayMillis.get(), TimeUnit.MILLISECONDS);
             }
@@ -175,14 +175,14 @@ public class SearchFetcher {
             return call2(observable);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final Observable<?> call2(Observable<? extends Void> observable) {
             return observable.m11082A(new AnonymousClass1());
         }
     }
 
-    /* compiled from: SearchFetcher.kt */
-    /* renamed from: com.discord.utilities.search.network.SearchFetcher$makeQuery$3 */
+    /* JADX INFO: renamed from: com.discord.utilities.search.network.SearchFetcher$makeQuery$3 */
+    /* JADX INFO: compiled from: SearchFetcher.kt */
     public static final class C69093<T, R> implements Func1<ModelSearchResponse, Boolean> {
         public C69093() {
         }
@@ -192,7 +192,7 @@ public class SearchFetcher {
             return call2(modelSearchResponse);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final Boolean call2(ModelSearchResponse modelSearchResponse) {
             SearchFetcher searchFetcher = SearchFetcher.this;
             Intrinsics3.checkNotNullExpressionValue(modelSearchResponse, "it");

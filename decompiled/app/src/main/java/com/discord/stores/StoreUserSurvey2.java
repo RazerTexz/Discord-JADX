@@ -5,9 +5,9 @@ import java.util.ArrayList;
 import java.util.Set;
 import p507d0.p580t._Collections;
 
-/* compiled from: StoreUserSurvey.kt */
-/* renamed from: com.discord.stores.StoreUserSurveyKt, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.stores.StoreUserSurveyKt, reason: use source file name */
+/* JADX INFO: compiled from: StoreUserSurvey.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class StoreUserSurvey2 {
     private static final Set<String> IMPLEMENTED_GUILD_REQUIREMENTS;
 

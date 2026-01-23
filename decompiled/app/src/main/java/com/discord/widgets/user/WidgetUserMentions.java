@@ -89,31 +89,31 @@ import p658rx.Subscription;
 import p658rx.functions.Action2;
 import p658rx.subjects.BehaviorSubject;
 
-/* compiled from: WidgetUserMentions.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: WidgetUserMentions.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class WidgetUserMentions extends AppFragment implements OnTabSelectedListener {
     public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetUserMentions.class, "binding", "getBinding()Lcom/discord/databinding/WidgetUserMentionsBinding;", 0)};
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private static final String EXTRA_IS_EMBEDDED = "EXTRA_HIDE_TITLE";
 
-    /* renamed from: binding$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
 
-    /* renamed from: dismissViewModel$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: dismissViewModel$delegate, reason: from kotlin metadata */
     private final Lazy dismissViewModel;
 
-    /* renamed from: isEmbedded$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: isEmbedded$delegate, reason: from kotlin metadata */
     private final Lazy isEmbedded;
     private WidgetChatListAdapter mentionsAdapter;
     private final Model.MessageLoader mentionsLoader;
     private final StoreTabsNavigation storeTabsNavigation;
 
-    /* renamed from: viewModel$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: viewModel$delegate, reason: from kotlin metadata */
     private final Lazy viewModel;
 
-    /* compiled from: WidgetUserMentions.kt */
+    /* JADX INFO: compiled from: WidgetUserMentions.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -136,10 +136,10 @@ public final class WidgetUserMentions extends AppFragment implements OnTabSelect
         }
     }
 
-    /* compiled from: WidgetUserMentions.kt */
+    /* JADX INFO: compiled from: WidgetUserMentions.kt */
     public static final /* data */ class Model implements WidgetChatListAdapter.Data {
 
-        /* renamed from: Companion, reason: from kotlin metadata */
+        /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
         public static final Companion INSTANCE = new Companion(null);
         private final boolean animateEmojis;
         private final long channelId;
@@ -155,7 +155,7 @@ public final class WidgetUserMentions extends AppFragment implements OnTabSelect
         private final NavigationTab selectedTab;
         private final long userId;
 
-        /* compiled from: WidgetUserMentions.kt */
+        /* JADX INFO: compiled from: WidgetUserMentions.kt */
         public static final class Companion {
             private Companion() {
             }
@@ -175,7 +175,7 @@ public final class WidgetUserMentions extends AppFragment implements OnTabSelect
             }
         }
 
-        /* compiled from: WidgetUserMentions.kt */
+        /* JADX INFO: compiled from: WidgetUserMentions.kt */
         public static final class MessageLoader {
             private StoreChat.InteractionState interactionState;
             private boolean isFocused;
@@ -190,7 +190,7 @@ public final class WidgetUserMentions extends AppFragment implements OnTabSelect
             private LoadingState mentionsLoadingState = new LoadingState(false, false, null, 7, null);
             private Filters filters = new Filters(0, false, false, false, 15, null);
 
-            /* compiled from: WidgetUserMentions.kt */
+            /* JADX INFO: compiled from: WidgetUserMentions.kt */
             public static final /* data */ class Filters {
                 private final boolean allGuilds;
                 private final long guildId;
@@ -227,22 +227,22 @@ public final class WidgetUserMentions extends AppFragment implements OnTabSelect
                     return filters.copy(j2, z5, z6, z4);
                 }
 
-                /* renamed from: component1, reason: from getter */
+                /* JADX INFO: renamed from: component1, reason: from getter */
                 public final long getGuildId() {
                     return this.guildId;
                 }
 
-                /* renamed from: component2, reason: from getter */
+                /* JADX INFO: renamed from: component2, reason: from getter */
                 public final boolean getAllGuilds() {
                     return this.allGuilds;
                 }
 
-                /* renamed from: component3, reason: from getter */
+                /* JADX INFO: renamed from: component3, reason: from getter */
                 public final boolean getIncludeEveryone() {
                     return this.includeEveryone;
                 }
 
-                /* renamed from: component4, reason: from getter */
+                /* JADX INFO: renamed from: component4, reason: from getter */
                 public final boolean getIncludeRoles() {
                     return this.includeRoles;
                 }
@@ -279,22 +279,31 @@ public final class WidgetUserMentions extends AppFragment implements OnTabSelect
                 }
 
                 /* JADX WARN: Multi-variable type inference failed */
+                /* JADX WARN: Type inference failed for: r1v1, types: [int] */
+                /* JADX WARN: Type inference failed for: r1v3, types: [int] */
+                /* JADX WARN: Type inference failed for: r1v5 */
+                /* JADX WARN: Type inference failed for: r1v6 */
+                /* JADX WARN: Type inference failed for: r1v7 */
+                /* JADX WARN: Type inference failed for: r1v8 */
+                /* JADX WARN: Type inference failed for: r2v0 */
+                /* JADX WARN: Type inference failed for: r2v1, types: [int] */
+                /* JADX WARN: Type inference failed for: r2v2 */
                 public int hashCode() {
                     int iM3a = C0002b.m3a(this.guildId) * 31;
                     boolean z2 = this.allGuilds;
-                    int i = z2;
-                    if (z2 != 0) {
-                        i = 1;
+                    ?? r1 = z2;
+                    if (z2) {
+                        r1 = 1;
                     }
-                    int i2 = (iM3a + i) * 31;
+                    int i = (iM3a + r1) * 31;
                     boolean z3 = this.includeEveryone;
-                    int i3 = z3;
-                    if (z3 != 0) {
-                        i3 = 1;
+                    ?? r12 = z3;
+                    if (z3) {
+                        r12 = 1;
                     }
-                    int i4 = (i2 + i3) * 31;
+                    int i2 = (i + r12) * 31;
                     boolean z4 = this.includeRoles;
-                    return i4 + (z4 ? 1 : z4 ? 1 : 0);
+                    return i2 + (z4 ? 1 : z4);
                 }
 
                 public String toString() {
@@ -313,7 +322,7 @@ public final class WidgetUserMentions extends AppFragment implements OnTabSelect
                 }
             }
 
-            /* compiled from: WidgetUserMentions.kt */
+            /* JADX INFO: compiled from: WidgetUserMentions.kt */
             public static final /* data */ class LoadingState {
                 private final boolean isAllLoaded;
                 private final boolean isLoading;
@@ -344,12 +353,12 @@ public final class WidgetUserMentions extends AppFragment implements OnTabSelect
                     return loadingState.copy(z2, z3, list);
                 }
 
-                /* renamed from: component1, reason: from getter */
+                /* JADX INFO: renamed from: component1, reason: from getter */
                 public final boolean getIsLoading() {
                     return this.isLoading;
                 }
 
-                /* renamed from: component2, reason: from getter */
+                /* JADX INFO: renamed from: component2, reason: from getter */
                 public final boolean getIsAllLoaded() {
                     return this.isAllLoaded;
                 }
@@ -382,6 +391,9 @@ public final class WidgetUserMentions extends AppFragment implements OnTabSelect
                 /* JADX WARN: Type inference failed for: r0v1, types: [int] */
                 /* JADX WARN: Type inference failed for: r0v6 */
                 /* JADX WARN: Type inference failed for: r0v7 */
+                /* JADX WARN: Type inference failed for: r1v0 */
+                /* JADX WARN: Type inference failed for: r1v1, types: [int] */
+                /* JADX WARN: Type inference failed for: r1v6 */
                 public int hashCode() {
                     boolean z2 = this.isLoading;
                     ?? r0 = z2;
@@ -390,7 +402,7 @@ public final class WidgetUserMentions extends AppFragment implements OnTabSelect
                     }
                     int i = r0 * 31;
                     boolean z3 = this.isAllLoaded;
-                    int i2 = (i + (z3 ? 1 : z3 ? 1 : 0)) * 31;
+                    int i2 = (i + (z3 ? 1 : z3)) * 31;
                     List<Message> list = this.mentions;
                     return i2 + (list != null ? list.hashCode() : 0);
                 }
@@ -561,6 +573,7 @@ public final class WidgetUserMentions extends AppFragment implements OnTabSelect
             this.selectedTab = navigationTab;
         }
 
+        /* JADX WARN: Multi-variable type inference failed */
         public static /* synthetic */ Model copy$default(Model model, long j, long j2, Guild guild, long j3, Map map, long j4, List list, Set set, long j5, boolean z2, boolean z3, String str, NavigationTab navigationTab, int i, Object obj) {
             return model.copy((i & 1) != 0 ? model.getUserId() : j, (i & 2) != 0 ? model.getChannelId() : j2, (i & 4) != 0 ? model.getGuild() : guild, (i & 8) != 0 ? model.getGuildId() : j3, (i & 16) != 0 ? model.getChannelNames() : map, (i & 32) != 0 ? model.getOldestMessageId() : j4, (i & 64) != 0 ? model.getList() : list, (i & 128) != 0 ? model.getMyRoleIds() : set, (i & 256) != 0 ? model.getNewMessagesMarkerMessageId() : j5, (i & 512) != 0 ? model.getIsSpoilerClickAllowed() : z2, (i & 1024) != 0 ? model.animateEmojis : z3, (i & 2048) != 0 ? model.guildName : str, (i & 4096) != 0 ? model.selectedTab : navigationTab);
         }
@@ -573,17 +586,17 @@ public final class WidgetUserMentions extends AppFragment implements OnTabSelect
             return getIsSpoilerClickAllowed();
         }
 
-        /* renamed from: component11, reason: from getter */
+        /* JADX INFO: renamed from: component11, reason: from getter */
         public final boolean getAnimateEmojis() {
             return this.animateEmojis;
         }
 
-        /* renamed from: component12, reason: from getter */
+        /* JADX INFO: renamed from: component12, reason: from getter */
         public final String getGuildName() {
             return this.guildName;
         }
 
-        /* renamed from: component13, reason: from getter */
+        /* JADX INFO: renamed from: component13, reason: from getter */
         public final NavigationTab getSelectedTab() {
             return this.selectedTab;
         }
@@ -696,6 +709,13 @@ public final class WidgetUserMentions extends AppFragment implements OnTabSelect
             return this.userId;
         }
 
+        /* JADX WARN: Multi-variable type inference failed */
+        /* JADX WARN: Type inference failed for: r1v17, types: [int] */
+        /* JADX WARN: Type inference failed for: r1v24 */
+        /* JADX WARN: Type inference failed for: r1v26 */
+        /* JADX WARN: Type inference failed for: r3v3 */
+        /* JADX WARN: Type inference failed for: r3v4, types: [int] */
+        /* JADX WARN: Type inference failed for: r3v5 */
         public int hashCode() {
             int iM3a = (C0002b.m3a(getChannelId()) + (C0002b.m3a(getUserId()) * 31)) * 31;
             Guild guild = getGuild();
@@ -707,21 +727,21 @@ public final class WidgetUserMentions extends AppFragment implements OnTabSelect
             Set<Long> myRoleIds = getMyRoleIds();
             int iM3a4 = (C0002b.m3a(getNewMessagesMarkerMessageId()) + ((iHashCode + (myRoleIds != null ? myRoleIds.hashCode() : 0)) * 31)) * 31;
             boolean isSpoilerClickAllowed = getIsSpoilerClickAllowed();
-            int i = isSpoilerClickAllowed;
+            ?? r1 = isSpoilerClickAllowed;
             if (isSpoilerClickAllowed) {
-                i = 1;
+                r1 = 1;
             }
-            int i2 = (iM3a4 + i) * 31;
+            int i = (iM3a4 + r1) * 31;
             boolean z2 = this.animateEmojis;
-            int i3 = (i2 + (z2 ? 1 : z2 ? 1 : 0)) * 31;
+            int i2 = (i + (z2 ? 1 : z2)) * 31;
             String str = this.guildName;
-            int iHashCode2 = (i3 + (str != null ? str.hashCode() : 0)) * 31;
+            int iHashCode2 = (i2 + (str != null ? str.hashCode() : 0)) * 31;
             NavigationTab navigationTab = this.selectedTab;
             return iHashCode2 + (navigationTab != null ? navigationTab.hashCode() : 0);
         }
 
         @Override // com.discord.widgets.chat.list.adapter.WidgetChatListAdapter.Data
-        /* renamed from: isSpoilerClickAllowed, reason: from getter */
+        /* JADX INFO: renamed from: isSpoilerClickAllowed, reason: from getter */
         public boolean getIsSpoilerClickAllowed() {
             return this.isSpoilerClickAllowed;
         }
@@ -762,7 +782,7 @@ public final class WidgetUserMentions extends AppFragment implements OnTabSelect
         }
     }
 
-    /* compiled from: WidgetUserMentions.kt */
+    /* JADX INFO: compiled from: WidgetUserMentions.kt */
     public static final class UserMentionsAdapterEventHandler implements WidgetChatListAdapter.EventHandler {
         private final ChannelSelector channelSelector;
         private final Function1<StoreChat.InteractionState, Unit> interactionStateUpdated;
@@ -961,20 +981,20 @@ public final class WidgetUserMentions extends AppFragment implements OnTabSelect
         }
     }
 
-    /* compiled from: WidgetUserMentions.kt */
+    /* JADX INFO: compiled from: WidgetUserMentions.kt */
     public static final class WidgetUserMentionFilter extends AppBottomSheet {
         public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetUserMentionFilter.class, "binding", "getBinding()Lcom/discord/databinding/WidgetUserMentionsFilterBinding;", 0)};
 
-        /* renamed from: Companion, reason: from kotlin metadata */
+        /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
         public static final Companion INSTANCE = new Companion(null);
 
-        /* renamed from: binding$delegate, reason: from kotlin metadata */
+        /* JADX INFO: renamed from: binding$delegate, reason: from kotlin metadata */
         private final FragmentViewBindingDelegate binding;
         private Model.MessageLoader.Filters filters;
         private String guildName;
         private Function1<? super Model.MessageLoader.Filters, Unit> onFiltersUpdated;
 
-        /* compiled from: WidgetUserMentions.kt */
+        /* JADX INFO: compiled from: WidgetUserMentions.kt */
         public static final class Companion {
             private Companion() {
             }
@@ -1120,13 +1140,13 @@ public final class WidgetUserMentions extends AppFragment implements OnTabSelect
         }
     }
 
-    /* compiled from: WidgetUserMentions.kt */
-    /* renamed from: com.discord.widgets.user.WidgetUserMentions$configureToolbar$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.user.WidgetUserMentions$configureToolbar$1 */
+    /* JADX INFO: compiled from: WidgetUserMentions.kt */
     public static final class C102101<T1, T2> implements Action2<MenuItem, Context> {
         public final /* synthetic */ String $guildName;
 
-        /* compiled from: WidgetUserMentions.kt */
-        /* renamed from: com.discord.widgets.user.WidgetUserMentions$configureToolbar$1$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.widgets.user.WidgetUserMentions$configureToolbar$1$1, reason: invalid class name */
+        /* JADX INFO: compiled from: WidgetUserMentions.kt */
         public static final class AnonymousClass1 extends Lambda implements Function1<Model.MessageLoader.Filters, Unit> {
             public AnonymousClass1() {
                 super(1);
@@ -1138,7 +1158,7 @@ public final class WidgetUserMentions extends AppFragment implements OnTabSelect
                 return Unit.f27425a;
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2(Model.MessageLoader.Filters filters) {
                 Intrinsics3.checkNotNullParameter(filters, "filters");
                 WidgetUserMentions.access$getMentionsLoader$p(WidgetUserMentions.this).setFilters(filters);
@@ -1154,7 +1174,7 @@ public final class WidgetUserMentions extends AppFragment implements OnTabSelect
             call2(menuItem, context);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final void call2(MenuItem menuItem, Context context) {
             Intrinsics3.checkNotNullExpressionValue(menuItem, "menuItem");
             if (menuItem.getItemId() == C5419R.id.menu_user_mentions_filter) {
@@ -1166,8 +1186,8 @@ public final class WidgetUserMentions extends AppFragment implements OnTabSelect
         }
     }
 
-    /* compiled from: WidgetUserMentions.kt */
-    /* renamed from: com.discord.widgets.user.WidgetUserMentions$observeModel$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.user.WidgetUserMentions$observeModel$1 */
+    /* JADX INFO: compiled from: WidgetUserMentions.kt */
     public static final class C102111<T, R> implements Func1<NavigationTab, Observable<? extends Model>> {
         public C102111() {
         }
@@ -1177,7 +1197,7 @@ public final class WidgetUserMentions extends AppFragment implements OnTabSelect
             return call2(navigationTab);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final Observable<? extends Model> call2(NavigationTab navigationTab) {
             if (navigationTab == NavigationTab.MENTIONS) {
                 return Model.INSTANCE.get(WidgetUserMentions.access$getMentionsLoader$p(WidgetUserMentions.this), navigationTab);
@@ -1189,8 +1209,8 @@ public final class WidgetUserMentions extends AppFragment implements OnTabSelect
         }
     }
 
-    /* compiled from: WidgetUserMentions.kt */
-    /* renamed from: com.discord.widgets.user.WidgetUserMentions$onViewBound$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.user.WidgetUserMentions$onViewBound$1 */
+    /* JADX INFO: compiled from: WidgetUserMentions.kt */
     public static final class ViewOnClickListenerC102121 implements View.OnClickListener {
         public ViewOnClickListenerC102121() {
         }
@@ -1201,8 +1221,8 @@ public final class WidgetUserMentions extends AppFragment implements OnTabSelect
         }
     }
 
-    /* compiled from: WidgetUserMentions.kt */
-    /* renamed from: com.discord.widgets.user.WidgetUserMentions$onViewBound$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.user.WidgetUserMentions$onViewBound$2 */
+    /* JADX INFO: compiled from: WidgetUserMentions.kt */
     public static final /* synthetic */ class C102132 extends FunctionReferenceImpl implements Function1<StoreChat.InteractionState, Unit> {
         public C102132(Model.MessageLoader messageLoader) {
             super(1, messageLoader, Model.MessageLoader.class, "setInteractionState", "setInteractionState(Lcom/discord/stores/StoreChat$InteractionState;)V", 0);
@@ -1214,15 +1234,15 @@ public final class WidgetUserMentions extends AppFragment implements OnTabSelect
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(StoreChat.InteractionState interactionState) {
             Intrinsics3.checkNotNullParameter(interactionState, "p1");
             ((Model.MessageLoader) this.receiver).setInteractionState(interactionState);
         }
     }
 
-    /* compiled from: WidgetUserMentions.kt */
-    /* renamed from: com.discord.widgets.user.WidgetUserMentions$onViewBoundOrOnResume$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.user.WidgetUserMentions$onViewBoundOrOnResume$1 */
+    /* JADX INFO: compiled from: WidgetUserMentions.kt */
     public static final class C102141 extends Lambda implements Function1<Model, Unit> {
         public C102141() {
             super(1);
@@ -1234,7 +1254,7 @@ public final class WidgetUserMentions extends AppFragment implements OnTabSelect
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Model model) {
             Intrinsics3.checkNotNullParameter(model, "it");
             WidgetUserMentions.access$configureUI(WidgetUserMentions.this, model);

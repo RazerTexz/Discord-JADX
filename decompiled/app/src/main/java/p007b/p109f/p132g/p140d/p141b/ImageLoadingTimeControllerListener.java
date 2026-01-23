@@ -4,18 +4,18 @@ import android.graphics.drawable.Animatable;
 import p007b.p109f.p132g.p139c.BaseControllerListener;
 import p007b.p109f.p132g.p140d.DebugControllerOverlayDrawable;
 
-/* compiled from: ImageLoadingTimeControllerListener.java */
-/* renamed from: b.f.g.d.b.a, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.f.g.d.b.a, reason: use source file name */
+/* JADX INFO: compiled from: ImageLoadingTimeControllerListener.java */
+/* JADX INFO: loaded from: classes.dex */
 public class ImageLoadingTimeControllerListener extends BaseControllerListener {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public long f3320a = -1;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public long f3321b = -1;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public ImageLoadingTimeListener f3322c;
 
     public ImageLoadingTimeControllerListener(ImageLoadingTimeListener imageLoadingTimeListener) {

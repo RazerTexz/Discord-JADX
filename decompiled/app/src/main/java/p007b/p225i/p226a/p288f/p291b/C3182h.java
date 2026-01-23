@@ -6,11 +6,11 @@ import java.util.concurrent.FutureTask;
 import p007b.p225i.p226a.p288f.p291b.C3180f;
 
 /* JADX INFO: Add missing generic type declarations: [T] */
-/* renamed from: b.i.a.f.b.h */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.b.h */
+/* JADX INFO: loaded from: classes3.dex */
 public final class C3182h<T> extends FutureTask<T> {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final /* synthetic */ C3180f.a f9202j;
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */

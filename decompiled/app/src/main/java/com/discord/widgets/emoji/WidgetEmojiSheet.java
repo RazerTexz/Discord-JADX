@@ -58,29 +58,29 @@ import p507d0.p592z.p594d.Lambda;
 import p507d0.p592z.p594d.Reflection2;
 import p658rx.subscriptions.CompositeSubscription;
 
-/* compiled from: WidgetEmojiSheet.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetEmojiSheet.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetEmojiSheet extends AppBottomSheet {
     public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetEmojiSheet.class, "binding", "getBinding()Lcom/discord/databinding/WidgetEmojiSheetBinding;", 0)};
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private static final String EXTRA_EMOJI_ID_AND_TYPE = "EXTRA_EMOJI_ID_AND_TYPE";
     private static final int FLIPPER_INDEX_CONTENT = 0;
     private static final int FLIPPER_INDEX_LOADING = 1;
 
-    /* renamed from: binding$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
 
-    /* renamed from: emojiIdAndType$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: emojiIdAndType$delegate, reason: from kotlin metadata */
     private final Lazy emojiIdAndType;
     private final int emojiSizePx;
     private final MGImages.DistinctChangeDetector imageChangeDetector;
 
-    /* renamed from: viewModel$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: viewModel$delegate, reason: from kotlin metadata */
     private final Lazy viewModel;
 
-    /* compiled from: WidgetEmojiSheet.kt */
+    /* JADX INFO: compiled from: WidgetEmojiSheet.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -112,8 +112,8 @@ public final class WidgetEmojiSheet extends AppBottomSheet {
         }
     }
 
-    /* compiled from: WidgetEmojiSheet.kt */
-    /* renamed from: com.discord.widgets.emoji.WidgetEmojiSheet$bindSubscriptions$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.emoji.WidgetEmojiSheet$bindSubscriptions$1 */
+    /* JADX INFO: compiled from: WidgetEmojiSheet.kt */
     public static final class C83111 extends Lambda implements Function1<EmojiSheetViewModel.ViewState, Unit> {
         public C83111() {
             super(1);
@@ -125,7 +125,7 @@ public final class WidgetEmojiSheet extends AppBottomSheet {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(EmojiSheetViewModel.ViewState viewState) {
             Unit unit;
             Intrinsics3.checkNotNullParameter(viewState, "it");

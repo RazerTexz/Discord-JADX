@@ -5,8 +5,8 @@ import android.content.DialogInterface;
 import android.os.Bundle;
 import androidx.annotation.NonNull;
 
+/* JADX INFO: loaded from: classes.dex */
 @Deprecated
-/* loaded from: classes.dex */
 public class ListPreferenceDialogFragment extends PreferenceDialogFragment {
     private static final String SAVE_STATE_ENTRIES = "ListPreferenceDialogFragment.entries";
     private static final String SAVE_STATE_ENTRY_VALUES = "ListPreferenceDialogFragment.entryValues";
@@ -15,7 +15,7 @@ public class ListPreferenceDialogFragment extends PreferenceDialogFragment {
     private CharSequence[] mEntries;
     private CharSequence[] mEntryValues;
 
-    /* renamed from: androidx.preference.ListPreferenceDialogFragment$1 */
+    /* JADX INFO: renamed from: androidx.preference.ListPreferenceDialogFragment$1 */
     public class DialogInterfaceOnClickListenerC05051 implements DialogInterface.OnClickListener {
         public DialogInterfaceOnClickListenerC05051() {
         }

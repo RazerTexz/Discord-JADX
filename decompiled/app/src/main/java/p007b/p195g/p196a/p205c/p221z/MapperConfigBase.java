@@ -21,15 +21,15 @@ import p007b.p195g.p196a.p205c.p221z.ConfigOverride;
 import p007b.p195g.p196a.p205c.p221z.ContextAttributes;
 import p007b.p195g.p196a.p205c.p221z.MapperConfigBase;
 
-/* compiled from: MapperConfigBase.java */
-/* renamed from: b.g.a.c.z.m, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.g.a.c.z.m, reason: use source file name */
+/* JADX INFO: compiled from: MapperConfigBase.java */
+/* JADX INFO: loaded from: classes3.dex */
 public abstract class MapperConfigBase<CFG extends ConfigFeature, T extends MapperConfigBase<CFG, T>> extends MapperConfig<T> implements Serializable {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static final int f5095j = MapperConfig.m2264c(MapperFeature.class);
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public static final int f5096k = (((MapperFeature.AUTO_DETECT_FIELDS.mo2091g() | MapperFeature.AUTO_DETECT_GETTERS.mo2091g()) | MapperFeature.AUTO_DETECT_IS_GETTERS.mo2091g()) | MapperFeature.AUTO_DETECT_SETTERS.mo2091g()) | MapperFeature.AUTO_DETECT_CREATORS.mo2091g();
     public final ContextAttributes _attributes;
     public final ConfigOverrides _configOverrides;
@@ -51,20 +51,20 @@ public abstract class MapperConfigBase<CFG extends ConfigFeature, T extends Mapp
     }
 
     @Override // p007b.p195g.p196a.p205c.p210c0.ClassIntrospector.a
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final Class<?> mo1885a(Class<?> cls) {
         return this._mixIns.mo1885a(cls);
     }
 
     @Override // p007b.p195g.p196a.p205c.p221z.MapperConfig
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final ConfigOverride mo2268f(Class<?> cls) {
         ConfigOverride configOverrideM2263a = this._configOverrides.m2263a(cls);
         return configOverrideM2263a == null ? ConfigOverride.a.f5081a : configOverrideM2263a;
     }
 
     @Override // p007b.p195g.p196a.p205c.p221z.MapperConfig
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public final JsonInclude.b mo2269g(Class<?> cls, Class<?> cls2) {
         this._configOverrides.m2263a(cls2);
         JsonInclude.b bVarMo2272j = mo2272j(cls);
@@ -75,13 +75,13 @@ public abstract class MapperConfigBase<CFG extends ConfigFeature, T extends Mapp
     }
 
     @Override // p007b.p195g.p196a.p205c.p221z.MapperConfig
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public Boolean mo2270h() {
         return this._configOverrides._defaultMergeable;
     }
 
     @Override // p007b.p195g.p196a.p205c.p221z.MapperConfig
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public final JsonFormat.d mo2271i(Class<?> cls) {
         ConfigOverrides configOverrides = this._configOverrides;
         Map<Class<?>, ?> map = configOverrides._overrides;
@@ -95,7 +95,7 @@ public abstract class MapperConfigBase<CFG extends ConfigFeature, T extends Mapp
     }
 
     @Override // p007b.p195g.p196a.p205c.p221z.MapperConfig
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final JsonInclude.b mo2272j(Class<?> cls) {
         this._configOverrides.m2263a(cls);
         JsonInclude.b bVar = this._configOverrides._defaultInclusion;
@@ -106,13 +106,13 @@ public abstract class MapperConfigBase<CFG extends ConfigFeature, T extends Mapp
     }
 
     @Override // p007b.p195g.p196a.p205c.p221z.MapperConfig
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final JsonSetter.a mo2274l() {
         return this._configOverrides._defaultSetterInfo;
     }
 
     @Override // p007b.p195g.p196a.p205c.p221z.MapperConfig
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public final VisibilityChecker<?> mo2275m(Class<?> cls, AnnotatedClass annotatedClass) {
         JsonAutoDetect.a aVar = JsonAutoDetect.a.NONE;
         VisibilityChecker<?> visibilityChecker = this._configOverrides._visibilityChecker;
@@ -179,10 +179,10 @@ public abstract class MapperConfigBase<CFG extends ConfigFeature, T extends Mapp
         return aVar17;
     }
 
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     public abstract T mo1969r(int i);
 
-    /* renamed from: s */
+    /* JADX INFO: renamed from: s */
     public final JsonIgnoreProperties.a m2280s(Class<?> cls, AnnotatedClass annotatedClass) {
         AnnotationIntrospector annotationIntrospectorM2267e = m2267e();
         JsonIgnoreProperties.a aVarMo1800x = annotationIntrospectorM2267e == null ? null : annotationIntrospectorM2267e.mo1800x(this, annotatedClass);
@@ -194,7 +194,7 @@ public abstract class MapperConfigBase<CFG extends ConfigFeature, T extends Mapp
         return aVarMo1800x;
     }
 
-    /* renamed from: t */
+    /* JADX INFO: renamed from: t */
     public final T m2281t(MapperFeature... mapperFeatureArr) {
         int i = this._mapperFeatures;
         for (MapperFeature mapperFeature : mapperFeatureArr) {

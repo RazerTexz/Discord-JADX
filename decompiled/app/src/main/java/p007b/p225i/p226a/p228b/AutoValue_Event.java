@@ -3,15 +3,15 @@ package p007b.p225i.p226a.p228b;
 import androidx.annotation.Nullable;
 import java.util.Objects;
 
-/* compiled from: AutoValue_Event.java */
-/* renamed from: b.i.a.b.a, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.b.a, reason: use source file name */
+/* JADX INFO: compiled from: AutoValue_Event.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class AutoValue_Event<T> extends Event2<T> {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final T f5116a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final Priority3 f5117b;
 
     public AutoValue_Event(@Nullable Integer num, T t, Priority3 priority3) {
@@ -23,19 +23,19 @@ public final class AutoValue_Event<T> extends Event2<T> {
 
     @Override // p007b.p225i.p226a.p228b.Event2
     @Nullable
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public Integer mo2286a() {
         return null;
     }
 
     @Override // p007b.p225i.p226a.p228b.Event2
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public T mo2287b() {
         return this.f5116a;
     }
 
     @Override // p007b.p225i.p226a.p228b.Event2
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public Priority3 mo2288c() {
         return this.f5117b;
     }

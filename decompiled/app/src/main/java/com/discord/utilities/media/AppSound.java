@@ -4,15 +4,15 @@ import com.discord.C5419R;
 import kotlin.jvm.internal.DefaultConstructorMarker;
 import p007b.p100d.p104b.p105a.outline;
 
-/* compiled from: AppSound.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: AppSound.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final /* data */ class AppSound {
     private final int contentType;
     private final int resId;
     private final boolean shouldLoop;
     private final int usage;
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private static final AppSound SOUND_DEAFEN = new AppSound(C5419R.raw.deafen, false, 4, 13, 2, null);
     private static final AppSound SOUND_UNDEAFEN = new AppSound(C5419R.raw.undeafen, false, 4, 13, 2, null);
@@ -29,7 +29,7 @@ public final /* data */ class AppSound {
     private static final AppSound SOUND_USER_LEFT = new AppSound(C5419R.raw.user_leave, false, 4, 13, 2, null);
     private static final AppSound SOUND_USER_MOVED = new AppSound(C5419R.raw.user_moved, false, 4, 13, 2, null);
 
-    /* compiled from: AppSound.kt */
+    /* JADX INFO: compiled from: AppSound.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -174,22 +174,22 @@ public final /* data */ class AppSound {
         return appSound.copy(i, z2, i2, i3);
     }
 
-    /* renamed from: component1, reason: from getter */
+    /* JADX INFO: renamed from: component1, reason: from getter */
     public final int getResId() {
         return this.resId;
     }
 
-    /* renamed from: component2, reason: from getter */
+    /* JADX INFO: renamed from: component2, reason: from getter */
     public final boolean getShouldLoop() {
         return this.shouldLoop;
     }
 
-    /* renamed from: component3, reason: from getter */
+    /* JADX INFO: renamed from: component3, reason: from getter */
     public final int getContentType() {
         return this.contentType;
     }
 
-    /* renamed from: component4, reason: from getter */
+    /* JADX INFO: renamed from: component4, reason: from getter */
     public final int getUsage() {
         return this.usage;
     }
@@ -226,14 +226,17 @@ public final /* data */ class AppSound {
     }
 
     /* JADX WARN: Multi-variable type inference failed */
+    /* JADX WARN: Type inference failed for: r1v1, types: [int] */
+    /* JADX WARN: Type inference failed for: r1v4 */
+    /* JADX WARN: Type inference failed for: r1v5 */
     public int hashCode() {
         int i = this.resId * 31;
         boolean z2 = this.shouldLoop;
-        int i2 = z2;
-        if (z2 != 0) {
-            i2 = 1;
+        ?? r1 = z2;
+        if (z2) {
+            r1 = 1;
         }
-        return ((((i + i2) * 31) + this.contentType) * 31) + this.usage;
+        return ((((i + r1) * 31) + this.contentType) * 31) + this.usage;
     }
 
     public String toString() {

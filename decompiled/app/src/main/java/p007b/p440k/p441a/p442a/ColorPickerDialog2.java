@@ -12,12 +12,12 @@ import com.jaredrummler.android.colorpicker.ColorPanelView;
 import com.jaredrummler.android.colorpicker.ColorPickerDialog;
 import java.util.Locale;
 
-/* compiled from: ColorPickerDialog.java */
-/* renamed from: b.k.a.a.e, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.k.a.a.e, reason: use source file name */
+/* JADX INFO: compiled from: ColorPickerDialog.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class ColorPickerDialog2 implements SeekBar.OnSeekBarChangeListener {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final /* synthetic */ ColorPickerDialog f13617a;
 
     public ColorPickerDialog2(ColorPickerDialog colorPickerDialog) {
@@ -27,7 +27,7 @@ public class ColorPickerDialog2 implements SeekBar.OnSeekBarChangeListener {
     @Override // android.widget.SeekBar.OnSeekBarChangeListener
     public void onProgressChanged(SeekBar seekBar, int i, boolean z2) {
         ColorPaletteAdapter colorPaletteAdapter;
-        this.f13617a.f21731w.setText(String.format(Locale.ENGLISH, "%d%%", Integer.valueOf((int) ((i * 100.0d) / 255.0d))));
+        this.f13617a.f21731w.setText(String.format(Locale.ENGLISH, "%d%%", Integer.valueOf((int) ((((double) i) * 100.0d) / 255.0d))));
         int i2 = 255 - i;
         int i3 = 0;
         while (true) {

@@ -16,27 +16,27 @@ import p507d0.p513e0.p514p.p515d.p517m0.p567n.p570n1.InterfaceC11974c;
 import p507d0.p580t.Collections2;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: NewCapturedType.kt */
-/* renamed from: d0.e0.p.d.m0.n.l1.i, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.n.l1.i, reason: use source file name */
+/* JADX INFO: compiled from: NewCapturedType.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class NewCapturedType extends KotlinType4 implements InterfaceC11974c {
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final EnumC11973b f24809k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final NewCapturedType2 f24810l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public final KotlinType3 f24811m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public final Annotations4 f24812n;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public final boolean f24813o;
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public final boolean f24814p;
 
     public /* synthetic */ NewCapturedType(EnumC11973b enumC11973b, NewCapturedType2 newCapturedType2, KotlinType3 kotlinType3, Annotations4 annotations4, boolean z2, boolean z3, int i, DefaultConstructorMarker defaultConstructorMarker) {

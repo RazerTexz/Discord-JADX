@@ -13,8 +13,8 @@ import kotlin.jvm.internal.DefaultConstructorMarker;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ModeratorStartStageItem.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: ModeratorStartStageItem.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public abstract class ModeratorStartStageItem implements MGRecyclerDataPayload {
     public static final String KEY_SCHEDULE_EVENT = "KEY_SCHEDULE_EVENT";
     public static final String KEY_START_STAGE = "KEY_START_STAGE";
@@ -23,7 +23,7 @@ public abstract class ModeratorStartStageItem implements MGRecyclerDataPayload {
     public static final int TYPE_LIST_ITEM = 1;
     public static final int TYPE_WAITING = 3;
 
-    /* compiled from: ModeratorStartStageItem.kt */
+    /* JADX INFO: compiled from: ModeratorStartStageItem.kt */
     public static final /* data */ class Continue extends ModeratorStartStageItem {
         private final String key;
         private final int type;
@@ -104,7 +104,7 @@ public abstract class ModeratorStartStageItem implements MGRecyclerDataPayload {
         }
     }
 
-    /* compiled from: ModeratorStartStageItem.kt */
+    /* JADX INFO: compiled from: ModeratorStartStageItem.kt */
     public static final /* data */ class Header extends ModeratorStartStageItem {
         private final String key;
         private final int type;
@@ -185,14 +185,14 @@ public abstract class ModeratorStartStageItem implements MGRecyclerDataPayload {
         }
     }
 
-    /* compiled from: ModeratorStartStageItem.kt */
+    /* JADX INFO: compiled from: ModeratorStartStageItem.kt */
     public static abstract class ListItem extends ModeratorStartStageItem {
         private final int iconBgColorRes;
         private final int iconRes;
         private final String key;
         private final int type;
 
-        /* compiled from: ModeratorStartStageItem.kt */
+        /* JADX INFO: compiled from: ModeratorStartStageItem.kt */
         public static final /* data */ class Event extends ListItem {
             private final GuildScheduledEvent event;
 
@@ -210,7 +210,7 @@ public abstract class ModeratorStartStageItem implements MGRecyclerDataPayload {
                 return event.copy(guildScheduledEvent);
             }
 
-            /* renamed from: component1, reason: from getter */
+            /* JADX INFO: renamed from: component1, reason: from getter */
             public final GuildScheduledEvent getEvent() {
                 return this.event;
             }
@@ -247,7 +247,7 @@ public abstract class ModeratorStartStageItem implements MGRecyclerDataPayload {
             }
         }
 
-        /* compiled from: ModeratorStartStageItem.kt */
+        /* JADX INFO: compiled from: ModeratorStartStageItem.kt */
         public static abstract class StaticOption extends ListItem {
             private final int iconBgColorRes;
             private final int iconRes;
@@ -255,7 +255,7 @@ public abstract class ModeratorStartStageItem implements MGRecyclerDataPayload {
             private final int subtitleRes;
             private final int titleRes;
 
-            /* compiled from: ModeratorStartStageItem.kt */
+            /* JADX INFO: compiled from: ModeratorStartStageItem.kt */
             public static final /* data */ class ScheduleEvent extends StaticOption {
                 private final String key;
 
@@ -318,7 +318,7 @@ public abstract class ModeratorStartStageItem implements MGRecyclerDataPayload {
                 }
             }
 
-            /* compiled from: ModeratorStartStageItem.kt */
+            /* JADX INFO: compiled from: ModeratorStartStageItem.kt */
             public static final /* data */ class StartStage extends StaticOption {
                 private final String key;
 
@@ -449,7 +449,7 @@ public abstract class ModeratorStartStageItem implements MGRecyclerDataPayload {
         }
     }
 
-    /* compiled from: ModeratorStartStageItem.kt */
+    /* JADX INFO: compiled from: ModeratorStartStageItem.kt */
     public static final /* data */ class Waiting extends ModeratorStartStageItem {
         private final String key;
         private final int type;

@@ -7,19 +7,19 @@ import androidx.annotation.RequiresApi;
 import java.util.Objects;
 import p007b.p225i.p226a.p242c.p259f3.Util2;
 
-/* compiled from: DrmUtil.java */
+/* JADX INFO: renamed from: b.i.a.c.w2.w, reason: use source file name */
+/* JADX INFO: compiled from: DrmUtil.java */
+/* JADX INFO: loaded from: classes3.dex */
 @RequiresApi(21)
-/* renamed from: b.i.a.c.w2.w, reason: use source file name */
-/* loaded from: classes3.dex */
 public final class DrmUtil2 {
     @DoNotInline
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static boolean m3603a(@Nullable Throwable th) {
         return th instanceof MediaDrm.MediaDrmStateException;
     }
 
     @DoNotInline
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static int m3604b(Throwable th) {
         String[] strArrSplit;
         int length;

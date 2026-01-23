@@ -33,8 +33,8 @@ import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserException;
 import p007b.p100d.p104b.p105a.outline;
 
+/* JADX INFO: loaded from: classes.dex */
 @RestrictTo({RestrictTo.Scope.LIBRARY_GROUP_PREFIX})
-/* loaded from: classes.dex */
 public class SupportMenuInflater extends MenuInflater {
     public static final Class<?>[] ACTION_PROVIDER_CONSTRUCTOR_SIGNATURE;
     public static final Class<?>[] ACTION_VIEW_CONSTRUCTOR_SIGNATURE;

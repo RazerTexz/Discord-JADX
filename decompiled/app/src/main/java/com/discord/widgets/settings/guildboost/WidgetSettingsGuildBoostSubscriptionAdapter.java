@@ -45,8 +45,8 @@ import p007b.p100d.p104b.p105a.outline;
 import p507d0.p579g0.StringsJVM;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: WidgetSettingsGuildBoostSubscriptionAdapter.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetSettingsGuildBoostSubscriptionAdapter.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetSettingsGuildBoostSubscriptionAdapter extends MGRecyclerAdapterSimple<Item> {
     private boolean canCancelBoosts;
     private boolean canUncancelBoosts;
@@ -54,7 +54,7 @@ public final class WidgetSettingsGuildBoostSubscriptionAdapter extends MGRecycle
     private Function1<? super Long, Unit> subscribeListener;
     private Function2<? super ModelGuildBoostSlot, ? super Long, Unit> transferListener;
 
-    /* compiled from: WidgetSettingsGuildBoostSubscriptionAdapter.kt */
+    /* JADX INFO: compiled from: WidgetSettingsGuildBoostSubscriptionAdapter.kt */
     public static final class GuildBoostListItem extends MGRecyclerViewHolder<WidgetSettingsGuildBoostSubscriptionAdapter, Item> {
         private final ViewSettingsBoostedBoostListitemBinding binding;
 
@@ -118,7 +118,7 @@ public final class WidgetSettingsGuildBoostSubscriptionAdapter extends MGRecycle
             onConfigure2(i, item);
         }
 
-        /* renamed from: onConfigure, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: onConfigure, reason: avoid collision after fix types in other method */
         public void onConfigure2(int position, Item data) throws Exception {
             CharSequence string;
             String str;
@@ -214,7 +214,7 @@ public final class WidgetSettingsGuildBoostSubscriptionAdapter extends MGRecycle
         }
     }
 
-    /* compiled from: WidgetSettingsGuildBoostSubscriptionAdapter.kt */
+    /* JADX INFO: compiled from: WidgetSettingsGuildBoostSubscriptionAdapter.kt */
     public static final class GuildListItem extends MGRecyclerViewHolder<WidgetSettingsGuildBoostSubscriptionAdapter, Item> {
         private final ViewSettingsBoostedGuildListitemBinding binding;
 
@@ -259,7 +259,7 @@ public final class WidgetSettingsGuildBoostSubscriptionAdapter extends MGRecycle
             onConfigure2(i, item);
         }
 
-        /* renamed from: onConfigure, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: onConfigure, reason: avoid collision after fix types in other method */
         public void onConfigure2(int position, Item data) throws Exception {
             Intrinsics3.checkNotNullParameter(data, "data");
             super.onConfigure(position, data);
@@ -304,7 +304,7 @@ public final class WidgetSettingsGuildBoostSubscriptionAdapter extends MGRecycle
         }
     }
 
-    /* compiled from: WidgetSettingsGuildBoostSubscriptionAdapter.kt */
+    /* JADX INFO: compiled from: WidgetSettingsGuildBoostSubscriptionAdapter.kt */
     public static final class HeaderListItem extends MGRecyclerViewHolder<WidgetSettingsGuildBoostSubscriptionAdapter, Item> {
         private final ViewSettingsBoostedHeaderListitemBinding binding;
 
@@ -325,7 +325,7 @@ public final class WidgetSettingsGuildBoostSubscriptionAdapter extends MGRecycle
             onConfigure2(i, item);
         }
 
-        /* renamed from: onConfigure, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: onConfigure, reason: avoid collision after fix types in other method */
         public void onConfigure2(int position, Item data) throws Exception {
             Intrinsics3.checkNotNullParameter(data, "data");
             super.onConfigure(position, data);
@@ -340,13 +340,13 @@ public final class WidgetSettingsGuildBoostSubscriptionAdapter extends MGRecycle
         }
     }
 
-    /* compiled from: WidgetSettingsGuildBoostSubscriptionAdapter.kt */
+    /* JADX INFO: compiled from: WidgetSettingsGuildBoostSubscriptionAdapter.kt */
     public static abstract class Item implements MGRecyclerDataPayload {
         public static final int TYPE_GUILD = 0;
         public static final int TYPE_GUILD_BOOST = 1;
         public static final int TYPE_HEADER = 2;
 
-        /* compiled from: WidgetSettingsGuildBoostSubscriptionAdapter.kt */
+        /* JADX INFO: compiled from: WidgetSettingsGuildBoostSubscriptionAdapter.kt */
         public static final /* data */ class GuildBoostItem extends Item {
             private final String boostEndsAt;
             private final ModelGuildBoostSlot boostSlot;
@@ -373,12 +373,12 @@ public final class WidgetSettingsGuildBoostSubscriptionAdapter extends MGRecycle
                 return guildBoostItem.copy(modelGuildBoostSlot, str);
             }
 
-            /* renamed from: component1, reason: from getter */
+            /* JADX INFO: renamed from: component1, reason: from getter */
             public final ModelGuildBoostSlot getBoostSlot() {
                 return this.boostSlot;
             }
 
-            /* renamed from: component2, reason: from getter */
+            /* JADX INFO: renamed from: component2, reason: from getter */
             public final String getBoostEndsAt() {
                 return this.boostEndsAt;
             }
@@ -432,7 +432,7 @@ public final class WidgetSettingsGuildBoostSubscriptionAdapter extends MGRecycle
             }
         }
 
-        /* compiled from: WidgetSettingsGuildBoostSubscriptionAdapter.kt */
+        /* JADX INFO: compiled from: WidgetSettingsGuildBoostSubscriptionAdapter.kt */
         public static final /* data */ class GuildItem extends Item {
             private final int boostCount;
             private final Guild guild;
@@ -456,12 +456,12 @@ public final class WidgetSettingsGuildBoostSubscriptionAdapter extends MGRecycle
                 return guildItem.copy(guild, i);
             }
 
-            /* renamed from: component1, reason: from getter */
+            /* JADX INFO: renamed from: component1, reason: from getter */
             public final Guild getGuild() {
                 return this.guild;
             }
 
-            /* renamed from: component2, reason: from getter */
+            /* JADX INFO: renamed from: component2, reason: from getter */
             public final int getBoostCount() {
                 return this.boostCount;
             }
@@ -512,7 +512,7 @@ public final class WidgetSettingsGuildBoostSubscriptionAdapter extends MGRecycle
             }
         }
 
-        /* compiled from: WidgetSettingsGuildBoostSubscriptionAdapter.kt */
+        /* JADX INFO: compiled from: WidgetSettingsGuildBoostSubscriptionAdapter.kt */
         public static final /* data */ class HeaderItem extends Item {
             private final int headerStringId;
             private final String key;
@@ -532,7 +532,7 @@ public final class WidgetSettingsGuildBoostSubscriptionAdapter extends MGRecycle
                 return headerItem.copy(i);
             }
 
-            /* renamed from: component1, reason: from getter */
+            /* JADX INFO: renamed from: component1, reason: from getter */
             public final int getHeaderStringId() {
                 return this.headerStringId;
             }

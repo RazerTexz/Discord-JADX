@@ -3,12 +3,12 @@ package p007b.p225i.p226a.p341g.p348g;
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
 
-/* compiled from: CircularIndeterminateAnimatorDelegate.java */
-/* renamed from: b.i.a.g.g.b, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.g.g.b, reason: use source file name */
+/* JADX INFO: compiled from: CircularIndeterminateAnimatorDelegate.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class CircularIndeterminateAnimatorDelegate extends AnimatorListenerAdapter {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final /* synthetic */ CircularIndeterminateAnimatorDelegate3 f11717a;
 
     public CircularIndeterminateAnimatorDelegate(CircularIndeterminateAnimatorDelegate3 circularIndeterminateAnimatorDelegate3) {

@@ -5,9 +5,9 @@ import kotlin.Unit;
 import kotlin.jvm.functions.Function0;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: TypingDots.kt */
-/* renamed from: b.a.y.r0.a, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: b.a.y.r0.a, reason: use source file name */
+/* JADX INFO: compiled from: TypingDots.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class TypingDots2 extends Lambda implements Function0<Unit> {
     public final /* synthetic */ TypingDots this$0;
 

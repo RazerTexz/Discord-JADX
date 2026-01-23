@@ -10,9 +10,9 @@ import kotlin.ranges.Ranges2;
 import p507d0.p592z.p594d.Intrinsics3;
 import p658rx.functions.Action1;
 
-/* compiled from: ModelGuildMemberListUpdate.kt */
-/* renamed from: com.discord.models.domain.ModelGuildMemberListUpdate$Operation$Parser$parse$1, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: com.discord.models.domain.ModelGuildMemberListUpdate$Operation$Parser$parse$1, reason: use source file name */
+/* JADX INFO: compiled from: ModelGuildMemberListUpdate.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class ModelGuildMemberListUpdate4<T> implements Action1<String> {
     public final /* synthetic */ Ref$ObjectRef $index;
     public final /* synthetic */ Ref$ObjectRef $item;
@@ -21,8 +21,8 @@ public final class ModelGuildMemberListUpdate4<T> implements Action1<String> {
     public final /* synthetic */ Model.JsonReader $reader;
     public final /* synthetic */ Ref$ObjectRef $type;
 
-    /* compiled from: ModelGuildMemberListUpdate.kt */
-    /* renamed from: com.discord.models.domain.ModelGuildMemberListUpdate$Operation$Parser$parse$1$1 */
+    /* JADX INFO: renamed from: com.discord.models.domain.ModelGuildMemberListUpdate$Operation$Parser$parse$1$1 */
+    /* JADX INFO: compiled from: ModelGuildMemberListUpdate.kt */
     public static final class C55361<T> implements Model.JsonReader.ItemFactory<Integer> {
         public C55361() {
         }
@@ -39,8 +39,8 @@ public final class ModelGuildMemberListUpdate4<T> implements Action1<String> {
         }
     }
 
-    /* compiled from: ModelGuildMemberListUpdate.kt */
-    /* renamed from: com.discord.models.domain.ModelGuildMemberListUpdate$Operation$Parser$parse$1$3 */
+    /* JADX INFO: renamed from: com.discord.models.domain.ModelGuildMemberListUpdate$Operation$Parser$parse$1$3 */
+    /* JADX INFO: compiled from: ModelGuildMemberListUpdate.kt */
     public static final class C55373<T> implements Model.JsonReader.ItemFactory<ModelGuildMemberListUpdate.Operation.Item> {
         public C55373() {
         }
@@ -71,14 +71,8 @@ public final class ModelGuildMemberListUpdate4<T> implements Action1<String> {
         call2(str);
     }
 
-    /* JADX WARN: Failed to restore switch over string. Please report as a decompilation issue
-    java.lang.NullPointerException: Cannot invoke "java.util.List.iterator()" because the return value of "jadx.core.dex.visitors.regions.SwitchOverStringVisitor$SwitchData.getNewCases()" is null
-    	at jadx.core.dex.visitors.regions.SwitchOverStringVisitor.restoreSwitchOverString(SwitchOverStringVisitor.java:109)
-    	at jadx.core.dex.visitors.regions.SwitchOverStringVisitor.visitRegion(SwitchOverStringVisitor.java:66)
-    	at jadx.core.dex.visitors.regions.DepthRegionTraversal.traverseIterativeStepInternal(DepthRegionTraversal.java:77)
-    	at jadx.core.dex.visitors.regions.DepthRegionTraversal.traverseIterativeStepInternal(DepthRegionTraversal.java:82)
-     */
-    /* renamed from: call, reason: avoid collision after fix types in other method */
+    /* JADX WARN: Failed to restore switch over string. Please report as a decompilation issue */
+    /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
     public final void call2(String str) throws IOException {
         if (str != null) {
             switch (str.hashCode()) {

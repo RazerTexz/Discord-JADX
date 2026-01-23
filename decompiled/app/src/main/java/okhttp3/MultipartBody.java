@@ -16,50 +16,50 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p600f0.p601e0.Util7;
 import p615g0.Buffer3;
 
-/* compiled from: MultipartBody.kt */
-/* loaded from: classes3.dex */
+/* JADX INFO: compiled from: MultipartBody.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class MultipartBody extends RequestBody {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final MediaType f27521a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static final MediaType f27522b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public static final byte[] f27523c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public static final byte[] f27524d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public static final byte[] f27525e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public static final C12934b f27526f = new C12934b(null);
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public final MediaType f27527g;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public long f27528h;
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public final ByteString f27529i;
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final MediaType f27530j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final List<Part> f27531k;
 
-    /* compiled from: MultipartBody.kt */
+    /* JADX INFO: compiled from: MultipartBody.kt */
     public static final class Part {
 
-        /* renamed from: a, reason: from kotlin metadata */
+        /* JADX INFO: renamed from: a, reason: from kotlin metadata */
         public final Headers headers;
 
-        /* renamed from: b, reason: from kotlin metadata */
+        /* JADX INFO: renamed from: b, reason: from kotlin metadata */
         public final RequestBody body;
 
         public Part(Headers headers, RequestBody requestBody, DefaultConstructorMarker defaultConstructorMarker) {
@@ -67,7 +67,7 @@ public final class MultipartBody extends RequestBody {
             this.body = requestBody;
         }
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public static final Part m10970a(Headers headers, RequestBody requestBody) {
             Intrinsics3.checkParameterIsNotNull(requestBody, "body");
             if (!(headers.m10954c("Content-Type") == null)) {
@@ -79,7 +79,7 @@ public final class MultipartBody extends RequestBody {
             throw new IllegalArgumentException("Unexpected header: Content-Length".toString());
         }
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public static final Part m10971b(String str, String str2, RequestBody requestBody) {
             Intrinsics3.checkParameterIsNotNull(str, ModelAuditLogEntry.CHANGE_KEY_NAME);
             Intrinsics3.checkParameterIsNotNull(requestBody, "body");
@@ -117,17 +117,17 @@ public final class MultipartBody extends RequestBody {
         }
     }
 
-    /* compiled from: MultipartBody.kt */
-    /* renamed from: okhttp3.MultipartBody$a */
+    /* JADX INFO: renamed from: okhttp3.MultipartBody$a */
+    /* JADX INFO: compiled from: MultipartBody.kt */
     public static final class C12933a {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final ByteString f27534a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public MediaType f27535b;
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public final List<Part> f27536c;
 
         public C12933a() {
@@ -139,14 +139,14 @@ public final class MultipartBody extends RequestBody {
             this.f27536c = new ArrayList();
         }
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final C12933a m10972a(Part part) {
             Intrinsics3.checkParameterIsNotNull(part, "part");
             this.f27536c.add(part);
             return this;
         }
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final MultipartBody m10973b() {
             if (!this.f27536c.isEmpty()) {
                 return new MultipartBody(this.f27534a, this.f27535b, Util7.m10145z(this.f27536c));
@@ -154,7 +154,7 @@ public final class MultipartBody extends RequestBody {
             throw new IllegalStateException("Multipart body must have at least one part.".toString());
         }
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public final C12933a m10974c(MediaType mediaType) {
             Intrinsics3.checkParameterIsNotNull(mediaType, "type");
             if (Intrinsics3.areEqual(mediaType.type, "multipart")) {
@@ -165,13 +165,13 @@ public final class MultipartBody extends RequestBody {
         }
     }
 
-    /* compiled from: MultipartBody.kt */
-    /* renamed from: okhttp3.MultipartBody$b */
+    /* JADX INFO: renamed from: okhttp3.MultipartBody$b */
+    /* JADX INFO: compiled from: MultipartBody.kt */
     public static final class C12934b {
         public C12934b(DefaultConstructorMarker defaultConstructorMarker) {
         }
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final void m10975a(StringBuilder sb, String str) {
             Intrinsics3.checkParameterIsNotNull(sb, "$this$appendQuotedString");
             Intrinsics3.checkParameterIsNotNull(str, "key");
@@ -219,7 +219,7 @@ public final class MultipartBody extends RequestBody {
     }
 
     /* JADX WARN: Multi-variable type inference failed */
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final long m10969a(BufferedSink bufferedSink, boolean z2) throws IOException {
         Buffer3 buffer3;
         if (z2) {
@@ -290,7 +290,7 @@ public final class MultipartBody extends RequestBody {
     }
 
     @Override // okhttp3.RequestBody
-    /* renamed from: contentLength */
+    /* JADX INFO: renamed from: contentLength */
     public long getSize() throws IOException {
         long j = this.f27528h;
         if (j != -1) {

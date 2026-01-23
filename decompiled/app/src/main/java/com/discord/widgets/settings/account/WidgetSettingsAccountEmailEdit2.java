@@ -13,9 +13,9 @@ import kotlin.jvm.functions.Function1;
 import p507d0.p592z.p594d.FunctionReferenceImpl;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: WidgetSettingsAccountEmailEdit.kt */
-/* renamed from: com.discord.widgets.settings.account.WidgetSettingsAccountEmailEdit$binding$2, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.settings.account.WidgetSettingsAccountEmailEdit$binding$2, reason: use source file name */
+/* JADX INFO: compiled from: WidgetSettingsAccountEmailEdit.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final /* synthetic */ class WidgetSettingsAccountEmailEdit2 extends FunctionReferenceImpl implements Function1<View, WidgetSettingsAccountEmailEditBinding> {
     public static final WidgetSettingsAccountEmailEdit2 INSTANCE = new WidgetSettingsAccountEmailEdit2();
 
@@ -28,7 +28,7 @@ public final /* synthetic */ class WidgetSettingsAccountEmailEdit2 extends Funct
         return invoke2(view);
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final WidgetSettingsAccountEmailEditBinding invoke2(View view) {
         Intrinsics3.checkNotNullParameter(view, "p1");
         int i = C5419R.id.dimmer_view;

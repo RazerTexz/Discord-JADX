@@ -2,27 +2,27 @@ package p007b.p109f.p111b.p113b;
 
 import com.facebook.cache.common.CacheKey;
 
-/* compiled from: SettableCacheEvent.java */
-/* renamed from: b.f.b.b.i, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.f.b.b.i, reason: use source file name */
+/* JADX INFO: compiled from: SettableCacheEvent.java */
+/* JADX INFO: loaded from: classes.dex */
 public class SettableCacheEvent {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final Object f3072a = new Object();
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static SettableCacheEvent f3073b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public static int f3074c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public CacheKey f3075d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public SettableCacheEvent f3076e;
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static SettableCacheEvent m961a() {
         synchronized (f3072a) {
             SettableCacheEvent settableCacheEvent = f3073b;
@@ -36,7 +36,7 @@ public class SettableCacheEvent {
         }
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public void m962b() {
         synchronized (f3072a) {
             int i = f3074c;

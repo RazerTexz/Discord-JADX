@@ -3,8 +3,8 @@ package com.google.firebase;
 import androidx.annotation.RecentlyNonNull;
 import p007b.p085c.p086a.p087a0.AnimatableValueParser;
 
-/* compiled from: com.google.android.gms:play-services-basement@@17.6.0 */
-/* loaded from: classes3.dex */
+/* JADX INFO: compiled from: com.google.android.gms:play-services-basement@@17.6.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public class FirebaseException extends Exception {
     @Deprecated
     public FirebaseException() {

@@ -3,9 +3,9 @@ package com.discord.widgets.channels;
 import kotlin.jvm.functions.Function0;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetChannelPickerBottomSheet.kt */
-/* renamed from: com.discord.widgets.channels.WidgetChannelPickerBottomSheet$hideAnnouncementChannels$2, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.channels.WidgetChannelPickerBottomSheet$hideAnnouncementChannels$2, reason: use source file name */
+/* JADX INFO: compiled from: WidgetChannelPickerBottomSheet.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetChannelPickerBottomSheet5 extends Lambda implements Function0<Boolean> {
     public final /* synthetic */ WidgetChannelPickerBottomSheet this$0;
 
@@ -20,7 +20,7 @@ public final class WidgetChannelPickerBottomSheet5 extends Lambda implements Fun
         return Boolean.valueOf(invoke2());
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final boolean invoke2() {
         return WidgetChannelPickerBottomSheet.access$getArgumentsOrDefault$p(this.this$0).getBoolean("ARG_HIDE_ANNOUNCEMENT_CHANNELS", false);
     }

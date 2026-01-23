@@ -29,13 +29,13 @@ import p507d0.p579g0.StringsJVM;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: RoleIconView.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: RoleIconView.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class RoleIconView extends FrameLayout {
     private final RoleIconViewBinding binding;
 
-    /* compiled from: RoleIconView.kt */
-    /* renamed from: com.discord.widgets.roles.RoleIconView$setRole$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.roles.RoleIconView$setRole$1 */
+    /* JADX INFO: compiled from: RoleIconView.kt */
     public static final class ViewOnClickListenerC91241 implements View.OnClickListener {
         public final /* synthetic */ GuildRole $role;
 
@@ -52,8 +52,8 @@ public final class RoleIconView extends FrameLayout {
         }
     }
 
-    /* compiled from: RoleIconView.kt */
-    /* renamed from: com.discord.widgets.roles.RoleIconView$showRoleIconToast$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.roles.RoleIconView$showRoleIconToast$1 */
+    /* JADX INFO: compiled from: RoleIconView.kt */
     public static final class C91251 extends Lambda implements Function3<Boolean, Integer, Context, String> {
         public final /* synthetic */ GuildRole $role;
 

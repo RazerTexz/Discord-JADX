@@ -6,7 +6,7 @@ import java.util.UUID;
 import p007b.p225i.p226a.p242c.p265v2.CryptoConfig;
 import p007b.p225i.p226a.p242c.p266w2.DrmSessionEventListener;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public interface DrmSession {
 
     public static class DrmSessionException extends IOException {
@@ -18,27 +18,27 @@ public interface DrmSession {
         }
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     void mo3606a(@Nullable DrmSessionEventListener.a aVar);
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     void mo3607b(@Nullable DrmSessionEventListener.a aVar);
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     UUID mo3608c();
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     boolean mo3609d();
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     boolean mo3610e(String str);
 
     @Nullable
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     DrmSessionException mo3611f();
 
     @Nullable
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     CryptoConfig mo3612g();
 
     int getState();

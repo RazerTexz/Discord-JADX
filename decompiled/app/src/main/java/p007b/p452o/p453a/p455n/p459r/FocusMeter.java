@@ -12,13 +12,13 @@ import p007b.p452o.p453a.CameraLogger;
 import p007b.p452o.p453a.p455n.Camera2Engine;
 import p007b.p452o.p453a.p455n.p456o.ActionHolder;
 
-/* compiled from: FocusMeter.java */
+/* JADX INFO: renamed from: b.o.a.n.r.e, reason: use source file name */
+/* JADX INFO: compiled from: FocusMeter.java */
+/* JADX INFO: loaded from: classes3.dex */
 @RequiresApi(21)
-/* renamed from: b.o.a.n.r.e, reason: use source file name */
-/* loaded from: classes3.dex */
 public class FocusMeter extends BaseMeter {
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public static final CameraLogger f13974i = new CameraLogger(FocusMeter.class.getSimpleName());
 
     public FocusMeter(@NonNull List<MeteringRectangle> list, boolean z2) {
@@ -26,7 +26,7 @@ public class FocusMeter extends BaseMeter {
     }
 
     @Override // p007b.p452o.p453a.p455n.p456o.BaseAction, p007b.p452o.p453a.p455n.p456o.Action2
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public void mo7248b(@NonNull ActionHolder actionHolder, @NonNull CaptureRequest captureRequest, @NonNull TotalCaptureResult totalCaptureResult) {
         Integer num = (Integer) totalCaptureResult.get(CaptureResult.CONTROL_AF_STATE);
         f13974i.m7159a(1, "onCaptureCompleted:", "afState:", num);
@@ -47,13 +47,13 @@ public class FocusMeter extends BaseMeter {
     }
 
     @Override // p007b.p452o.p453a.p455n.p456o.BaseAction
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public void mo7339i(@NonNull ActionHolder actionHolder) {
         ((Camera2Engine) actionHolder).f13807i0.set(CaptureRequest.CONTROL_AF_TRIGGER, null);
     }
 
     @Override // p007b.p452o.p453a.p455n.p459r.BaseMeter
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public boolean mo7349m(@NonNull ActionHolder actionHolder) {
         Integer num = (Integer) ((Camera2Engine) actionHolder).f13807i0.get(CaptureRequest.CONTROL_AF_MODE);
         boolean z2 = num != null && (num.intValue() == 1 || num.intValue() == 4 || num.intValue() == 3 || num.intValue() == 2);
@@ -62,7 +62,7 @@ public class FocusMeter extends BaseMeter {
     }
 
     @Override // p007b.p452o.p453a.p455n.p459r.BaseMeter
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public boolean mo7350n(@NonNull ActionHolder actionHolder) {
         TotalCaptureResult totalCaptureResult = ((Camera2Engine) actionHolder).f13808j0;
         if (totalCaptureResult == null) {
@@ -76,7 +76,7 @@ public class FocusMeter extends BaseMeter {
     }
 
     @Override // p007b.p452o.p453a.p455n.p459r.BaseMeter
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public void mo7351o(@NonNull ActionHolder actionHolder, @NonNull List<MeteringRectangle> list) {
         f13974i.m7159a(1, "onStarted:", "with areas:", list);
         ((Camera2Engine) actionHolder).f13807i0.set(CaptureRequest.CONTROL_AF_TRIGGER, 1);

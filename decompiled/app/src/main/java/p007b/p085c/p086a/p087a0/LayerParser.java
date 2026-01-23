@@ -20,18 +20,18 @@ import p007b.p085c.p086a.p095y.p097l.ContentModel2;
 import p007b.p085c.p086a.p095y.p097l.Mask;
 import p007b.p085c.p086a.p095y.p098m.Layer2;
 
-/* compiled from: LayerParser.java */
-/* renamed from: b.c.a.a0.s, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.c.a.a0.s, reason: use source file name */
+/* JADX INFO: compiled from: LayerParser.java */
+/* JADX INFO: loaded from: classes.dex */
 public class LayerParser {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final JsonReader2.a f2280a = JsonReader2.a.m616a("nm", "ind", "refId", "ty", "parent", "sw", "sh", "sc", "ks", "tt", "masksProperties", "shapes", "t", "ef", "sr", "st", "w", "h", "ip", "op", "tm", "cl", "hd");
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static final JsonReader2.a f2281b = JsonReader2.a.m616a("d", "a");
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public static final JsonReader2.a f2282c = JsonReader2.a.m616a("nm");
 
     /* JADX WARN: Failed to find 'out' block for switch in B:6:0x0055. Please report as an issue. */
@@ -41,7 +41,7 @@ public class LayerParser {
     /* JADX WARN: Removed duplicated region for block: B:149:0x02b4  */
     /* JADX WARN: Removed duplicated region for block: B:159:0x02e4  */
     /* JADX WARN: Type inference failed for: r6v11 */
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
@@ -51,8 +51,8 @@ public class LayerParser {
         String str;
         String str2;
         long j;
-        char c;
-        char c2;
+        byte b2;
+        byte b3;
         String str3;
         ArrayList arrayList3 = new ArrayList();
         ArrayList arrayList4 = new ArrayList();
@@ -160,23 +160,23 @@ public class LayerParser {
                             if (iHashCode != 111) {
                                 if (iHashCode != 3588) {
                                     if (iHashCode != 104433) {
-                                        c = (iHashCode == 3357091 && strMo611s.equals("mode")) ? (char) 3 : (char) 65535;
+                                        b2 = (iHashCode == 3357091 && strMo611s.equals("mode")) ? (byte) 3 : (byte) -1;
                                     } else if (strMo611s.equals("inv")) {
-                                        c = 2;
+                                        b2 = 2;
                                     }
                                 } else if (strMo611s.equals("pt")) {
-                                    c = 1;
+                                    b2 = 1;
                                 }
                             } else if (strMo611s.equals("o")) {
-                                c = 0;
+                                b2 = 0;
                             }
-                            if (c == 0) {
+                            if (b2 == 0) {
                                 animatableIntegerValueM569s1 = AnimatableValueParser.m569s1(jsonReader2, lottieComposition);
-                            } else if (c == 1) {
+                            } else if (b2 == 1) {
                                 animatableShapeValue2 = new AnimatableShapeValue(KeyframesParser.m632a(jsonReader2, lottieComposition, Utils.m659c(), ShapeDataParser.f2211a));
-                            } else if (c == 2) {
+                            } else if (b2 == 2) {
                                 zMo608f2 = jsonReader2.mo608f();
-                            } else if (c != 3) {
+                            } else if (b2 != 3) {
                                 jsonReader2.mo601C();
                             } else {
                                 String strMo612t4 = jsonReader2.mo612t();
@@ -184,27 +184,27 @@ public class LayerParser {
                                 int iHashCode2 = strMo612t4.hashCode();
                                 if (iHashCode2 == 97) {
                                     if (strMo612t4.equals("a")) {
-                                        c2 = 0;
+                                        b3 = 0;
                                     }
-                                    if (c2 != 0) {
+                                    if (b3 != 0) {
                                     }
                                     i3 = 1;
                                 } else if (iHashCode2 == 105) {
                                     if (strMo612t4.equals("i")) {
-                                        c2 = 1;
+                                        b3 = 1;
                                     }
-                                    if (c2 != 0) {
+                                    if (b3 != 0) {
                                     }
                                     i3 = 1;
                                 } else if (iHashCode2 != 110) {
-                                    c2 = (iHashCode2 == 115 && strMo612t4.equals("s")) ? (char) 3 : (char) 65535;
-                                    if (c2 != 0) {
-                                        if (c2 == 1) {
+                                    b3 = (iHashCode2 == 115 && strMo612t4.equals("s")) ? (byte) 3 : (byte) -1;
+                                    if (b3 != 0) {
+                                        if (b3 == 1) {
                                             lottieComposition.m669a("Animation contains intersect masks. They are not supported but will be treated like add masks.");
                                             i3 = 3;
-                                        } else if (c2 == 2) {
+                                        } else if (b3 == 2) {
                                             i3 = 4;
-                                        } else if (c2 != 3) {
+                                        } else if (b3 != 3) {
                                             Logger2.m640b("Unknown mask mode " + strMo611s + ". Defaulting to Add.");
                                         } else {
                                             i3 = 2;
@@ -213,9 +213,9 @@ public class LayerParser {
                                     i3 = 1;
                                 } else {
                                     if (strMo612t4.equals("n")) {
-                                        c2 = 2;
+                                        b3 = 2;
                                     }
-                                    if (c2 != 0) {
+                                    if (b3 != 0) {
                                     }
                                     i3 = 1;
                                 }

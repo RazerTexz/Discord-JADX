@@ -15,14 +15,14 @@ import kotlin.jvm.functions.Function2;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: StageCallViewHolder.kt */
-/* renamed from: com.discord.widgets.voice.fullscreen.stage.MediaViewHolder, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: com.discord.widgets.voice.fullscreen.stage.MediaViewHolder, reason: use source file name */
+/* JADX INFO: compiled from: StageCallViewHolder.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class StageCallViewHolder6 extends StageCallViewHolder {
     private final WidgetStageChannelSpeakerMediaBinding binding;
 
-    /* compiled from: StageCallViewHolder.kt */
-    /* renamed from: com.discord.widgets.voice.fullscreen.stage.MediaViewHolder$onConfigure$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.voice.fullscreen.stage.MediaViewHolder$onConfigure$1 */
+    /* JADX INFO: compiled from: StageCallViewHolder.kt */
     public static final class ViewOnClickListenerC105561 implements View.OnClickListener {
         public final /* synthetic */ StageCallItem.MediaItem $item;
 
@@ -36,8 +36,8 @@ public final class StageCallViewHolder6 extends StageCallViewHolder {
         }
     }
 
-    /* compiled from: StageCallViewHolder.kt */
-    /* renamed from: com.discord.widgets.voice.fullscreen.stage.MediaViewHolder$onConfigure$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.voice.fullscreen.stage.MediaViewHolder$onConfigure$2 */
+    /* JADX INFO: compiled from: StageCallViewHolder.kt */
     public static final class C105572 extends Lambda implements Function1<View, Unit> {
         public final /* synthetic */ StageCallItem.MediaItem $item;
 
@@ -53,7 +53,7 @@ public final class StageCallViewHolder6 extends StageCallViewHolder {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(View view) {
             Intrinsics3.checkNotNullParameter(view, "it");
             StageCallViewHolder6.access$getAdapter$p(StageCallViewHolder6.this).getOnMediaParticipantLongClicked().invoke(this.$item.getUserOrStreamParticipant());
@@ -83,7 +83,7 @@ public final class StageCallViewHolder6 extends StageCallViewHolder {
         onConfigure2(i, stageCallItem);
     }
 
-    /* renamed from: onConfigure, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: onConfigure, reason: avoid collision after fix types in other method */
     public void onConfigure2(int position, StageCallItem data) {
         Intrinsics3.checkNotNullParameter(data, "data");
         super.onConfigure(position, data);

@@ -7,18 +7,18 @@ import androidx.viewbinding.ViewBinding;
 import com.google.android.material.chip.Chip;
 import me.dm7.barcodescanner.zxing.ZXingScannerView;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public final class WidgetQrScannerBinding implements ViewBinding {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     @NonNull
     public final FrameLayout f17395a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     @NonNull
     public final ZXingScannerView f17396b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     @NonNull
     public final Chip f17397c;
 

@@ -3,12 +3,12 @@ package p659s.p660a;
 import java.util.Objects;
 import kotlinx.coroutines.Job;
 
-/* compiled from: JobSupport.kt */
-/* renamed from: s.a.g1 */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: s.a.g1 */
+/* JADX INFO: compiled from: JobSupport.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public abstract class AbstractC13113g1<J extends Job> extends CompletionHandler2 implements Job2, InterfaceC13169z0 {
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public final J f27845m;
 
     public AbstractC13113g1(J j) {
@@ -16,7 +16,7 @@ public abstract class AbstractC13113g1<J extends Job> extends CompletionHandler2
     }
 
     @Override // p659s.p660a.InterfaceC13169z0
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public boolean mo11281a() {
         return true;
     }

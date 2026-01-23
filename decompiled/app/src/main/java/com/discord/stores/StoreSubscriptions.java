@@ -19,8 +19,8 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 import p658rx.Observable;
 
-/* compiled from: StoreSubscriptions.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: StoreSubscriptions.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class StoreSubscriptions extends StoreV2 {
     private final Dispatcher dispatcher;
     private final ObservationDeck observationDeck;
@@ -28,10 +28,10 @@ public final class StoreSubscriptions extends StoreV2 {
     private SubscriptionsState subscriptionsState;
     private SubscriptionsState subscriptionsStateSnapshot;
 
-    /* compiled from: StoreSubscriptions.kt */
+    /* JADX INFO: compiled from: StoreSubscriptions.kt */
     public static abstract class SubscriptionsState {
 
-        /* compiled from: StoreSubscriptions.kt */
+        /* JADX INFO: compiled from: StoreSubscriptions.kt */
         public static final class Failure extends SubscriptionsState {
             public static final Failure INSTANCE = new Failure();
 
@@ -40,7 +40,7 @@ public final class StoreSubscriptions extends StoreV2 {
             }
         }
 
-        /* compiled from: StoreSubscriptions.kt */
+        /* JADX INFO: compiled from: StoreSubscriptions.kt */
         public static final /* data */ class Loaded extends SubscriptionsState {
             private final List<ModelSubscription> subscriptions;
 
@@ -108,7 +108,7 @@ public final class StoreSubscriptions extends StoreV2 {
             }
         }
 
-        /* compiled from: StoreSubscriptions.kt */
+        /* JADX INFO: compiled from: StoreSubscriptions.kt */
         public static final class Loading extends SubscriptionsState {
             public static final Loading INSTANCE = new Loading();
 
@@ -117,7 +117,7 @@ public final class StoreSubscriptions extends StoreV2 {
             }
         }
 
-        /* compiled from: StoreSubscriptions.kt */
+        /* JADX INFO: compiled from: StoreSubscriptions.kt */
         public static final class Unfetched extends SubscriptionsState {
             public static final Unfetched INSTANCE = new Unfetched();
 
@@ -134,16 +134,16 @@ public final class StoreSubscriptions extends StoreV2 {
         }
     }
 
-    /* compiled from: StoreSubscriptions.kt */
-    /* renamed from: com.discord.stores.StoreSubscriptions$fetchSubscriptions$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreSubscriptions$fetchSubscriptions$1 */
+    /* JADX INFO: compiled from: StoreSubscriptions.kt */
     public static final class C65241 extends Lambda implements Function0<Unit> {
 
-        /* compiled from: StoreSubscriptions.kt */
-        /* renamed from: com.discord.stores.StoreSubscriptions$fetchSubscriptions$1$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.stores.StoreSubscriptions$fetchSubscriptions$1$1, reason: invalid class name */
+        /* JADX INFO: compiled from: StoreSubscriptions.kt */
         public static final class AnonymousClass1 extends Lambda implements Function1<List<? extends ModelSubscription>, Unit> {
 
-            /* compiled from: StoreSubscriptions.kt */
-            /* renamed from: com.discord.stores.StoreSubscriptions$fetchSubscriptions$1$1$1, reason: invalid class name and collision with other inner class name */
+            /* JADX INFO: renamed from: com.discord.stores.StoreSubscriptions$fetchSubscriptions$1$1$1, reason: invalid class name and collision with other inner class name */
+            /* JADX INFO: compiled from: StoreSubscriptions.kt */
             public static final class C132641 extends Lambda implements Function0<Unit> {
                 public final /* synthetic */ List $subscriptions;
 
@@ -159,7 +159,7 @@ public final class StoreSubscriptions extends StoreV2 {
                     return Unit.f27425a;
                 }
 
-                /* renamed from: invoke, reason: avoid collision after fix types in other method */
+                /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
                 public final void invoke2() {
                     StoreSubscriptions.access$handleSubscriptionsFetchSuccess(StoreSubscriptions.this, this.$subscriptions);
                 }
@@ -175,19 +175,19 @@ public final class StoreSubscriptions extends StoreV2 {
                 return Unit.f27425a;
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2(List<ModelSubscription> list) {
                 Intrinsics3.checkNotNullParameter(list, "subscriptions");
                 StoreSubscriptions.access$getDispatcher$p(StoreSubscriptions.this).schedule(new C132641(list));
             }
         }
 
-        /* compiled from: StoreSubscriptions.kt */
-        /* renamed from: com.discord.stores.StoreSubscriptions$fetchSubscriptions$1$2, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.stores.StoreSubscriptions$fetchSubscriptions$1$2, reason: invalid class name */
+        /* JADX INFO: compiled from: StoreSubscriptions.kt */
         public static final class AnonymousClass2 extends Lambda implements Function1<Error, Unit> {
 
-            /* compiled from: StoreSubscriptions.kt */
-            /* renamed from: com.discord.stores.StoreSubscriptions$fetchSubscriptions$1$2$1, reason: invalid class name */
+            /* JADX INFO: renamed from: com.discord.stores.StoreSubscriptions$fetchSubscriptions$1$2$1, reason: invalid class name */
+            /* JADX INFO: compiled from: StoreSubscriptions.kt */
             public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
                 public AnonymousClass1() {
                     super(0);
@@ -199,7 +199,7 @@ public final class StoreSubscriptions extends StoreV2 {
                     return Unit.f27425a;
                 }
 
-                /* renamed from: invoke, reason: avoid collision after fix types in other method */
+                /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
                 public final void invoke2() {
                     StoreSubscriptions.access$handleSubscriptionsFetchFailure(StoreSubscriptions.this);
                 }
@@ -215,7 +215,7 @@ public final class StoreSubscriptions extends StoreV2 {
                 return Unit.f27425a;
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2(Error error) {
                 Intrinsics3.checkNotNullParameter(error, "it");
                 StoreSubscriptions.access$getDispatcher$p(StoreSubscriptions.this).schedule(new AnonymousClass1());
@@ -232,7 +232,7 @@ public final class StoreSubscriptions extends StoreV2 {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             if (StoreSubscriptions.access$getSubscriptionsState$p(StoreSubscriptions.this) instanceof SubscriptionsState.Loading) {
                 return;
@@ -242,8 +242,8 @@ public final class StoreSubscriptions extends StoreV2 {
         }
     }
 
-    /* compiled from: StoreSubscriptions.kt */
-    /* renamed from: com.discord.stores.StoreSubscriptions$observeSubscriptions$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreSubscriptions$observeSubscriptions$1 */
+    /* JADX INFO: compiled from: StoreSubscriptions.kt */
     public static final class C65251 extends Lambda implements Function0<SubscriptionsState> {
         public C65251() {
             super(0);
@@ -323,7 +323,7 @@ public final class StoreSubscriptions extends StoreV2 {
         this.dispatcher.schedule(new C65241());
     }
 
-    /* renamed from: getSubscriptions, reason: from getter */
+    /* JADX INFO: renamed from: getSubscriptions, reason: from getter */
     public final SubscriptionsState getSubscriptionsStateSnapshot() {
         return this.subscriptionsStateSnapshot;
     }

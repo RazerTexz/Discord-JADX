@@ -6,25 +6,25 @@ import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
 import p007b.p109f.p161j.p175j.CloseableImage;
 
-/* compiled from: DelayProducer.java */
-/* renamed from: b.f.j.p.o, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.f.j.p.o, reason: use source file name */
+/* JADX INFO: compiled from: DelayProducer.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class DelayProducer implements Producer2<CloseableReference<CloseableImage>> {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final Producer2<CloseableReference<CloseableImage>> f4174a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final ScheduledExecutorService f4175b;
 
-    /* compiled from: DelayProducer.java */
-    /* renamed from: b.f.j.p.o$a */
+    /* JADX INFO: renamed from: b.f.j.p.o$a */
+    /* JADX INFO: compiled from: DelayProducer.java */
     public class a implements Runnable {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public final /* synthetic */ Consumer2 f4176j;
 
-        /* renamed from: k */
+        /* JADX INFO: renamed from: k */
         public final /* synthetic */ ProducerContext f4177k;
 
         public a(Consumer2 consumer2, ProducerContext producerContext) {
@@ -44,7 +44,7 @@ public class DelayProducer implements Producer2<CloseableReference<CloseableImag
     }
 
     @Override // p007b.p109f.p161j.p181p.Producer2
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public void mo1417b(Consumer2<CloseableReference<CloseableImage>> consumer2, ProducerContext producerContext) {
         ImageRequest imageRequestMo1447e = producerContext.mo1447e();
         ScheduledExecutorService scheduledExecutorService = this.f4175b;

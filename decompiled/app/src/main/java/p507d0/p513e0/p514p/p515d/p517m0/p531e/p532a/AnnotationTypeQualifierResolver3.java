@@ -5,9 +5,9 @@ import p507d0.p513e0.p514p.p515d.p517m0.p552k.p557v.C11818j;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: AnnotationTypeQualifierResolver.kt */
-/* renamed from: d0.e0.p.d.m0.e.a.e, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.e.a.e, reason: use source file name */
+/* JADX INFO: compiled from: AnnotationTypeQualifierResolver.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class AnnotationTypeQualifierResolver3 extends Lambda implements Function2<C11818j, AnnotationQualifierApplicabilityType, Boolean> {
     public final /* synthetic */ AnnotationTypeQualifierResolver this$0;
 
@@ -22,7 +22,7 @@ public final class AnnotationTypeQualifierResolver3 extends Lambda implements Fu
         return Boolean.valueOf(invoke2(c11818j, annotationQualifierApplicabilityType));
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final boolean invoke2(C11818j c11818j, AnnotationQualifierApplicabilityType annotationQualifierApplicabilityType) {
         Intrinsics3.checkNotNullParameter(c11818j, "<this>");
         Intrinsics3.checkNotNullParameter(annotationQualifierApplicabilityType, "it");

@@ -13,42 +13,42 @@ import androidx.core.view.ViewCompat;
 import com.jaredrummler.android.colorpicker.C11167R;
 import com.jaredrummler.android.colorpicker.ColorPanelView;
 
-/* compiled from: ColorPaletteAdapter.java */
-/* renamed from: b.k.a.a.b, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.k.a.a.b, reason: use source file name */
+/* JADX INFO: compiled from: ColorPaletteAdapter.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class ColorPaletteAdapter extends BaseAdapter {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final a f13605j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final int[] f13606k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public int f13607l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public int f13608m;
 
-    /* compiled from: ColorPaletteAdapter.java */
-    /* renamed from: b.k.a.a.b$a */
+    /* JADX INFO: renamed from: b.k.a.a.b$a */
+    /* JADX INFO: compiled from: ColorPaletteAdapter.java */
     public interface a {
     }
 
-    /* compiled from: ColorPaletteAdapter.java */
-    /* renamed from: b.k.a.a.b$b */
+    /* JADX INFO: renamed from: b.k.a.a.b$b */
+    /* JADX INFO: compiled from: ColorPaletteAdapter.java */
     public final class b {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public View f13609a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public ColorPanelView f13610b;
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public ImageView f13611c;
 
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         public int f13612d;
 
         public b(Context context) {

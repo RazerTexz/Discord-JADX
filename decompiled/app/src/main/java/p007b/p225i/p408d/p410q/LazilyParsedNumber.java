@@ -3,9 +3,9 @@ package p007b.p225i.p408d.p410q;
 import java.io.ObjectStreamException;
 import java.math.BigDecimal;
 
-/* compiled from: LazilyParsedNumber.java */
-/* renamed from: b.i.d.q.q, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.d.q.q, reason: use source file name */
+/* JADX INFO: compiled from: LazilyParsedNumber.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class LazilyParsedNumber extends Number {
     private final String value;
 

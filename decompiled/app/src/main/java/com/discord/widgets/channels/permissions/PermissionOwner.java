@@ -7,12 +7,12 @@ import kotlin.jvm.internal.DefaultConstructorMarker;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: PermissionOwner.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: PermissionOwner.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public abstract class PermissionOwner implements Serializable {
     private final long entityId;
 
-    /* compiled from: PermissionOwner.kt */
+    /* JADX INFO: compiled from: PermissionOwner.kt */
     public static final /* data */ class Member extends PermissionOwner {
         private final boolean isOwner;
         private final String nickname;
@@ -40,17 +40,17 @@ public abstract class PermissionOwner implements Serializable {
             return member.copy(user, str, z2);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final User getUser() {
             return this.user;
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final String getNickname() {
             return this.nickname;
         }
 
-        /* renamed from: component3, reason: from getter */
+        /* JADX INFO: renamed from: component3, reason: from getter */
         public final boolean getIsOwner() {
             return this.isOwner;
         }
@@ -80,17 +80,20 @@ public abstract class PermissionOwner implements Serializable {
         }
 
         /* JADX WARN: Multi-variable type inference failed */
+        /* JADX WARN: Type inference failed for: r1v3, types: [int] */
+        /* JADX WARN: Type inference failed for: r1v4 */
+        /* JADX WARN: Type inference failed for: r1v6 */
         public int hashCode() {
             User user = this.user;
             int iHashCode = (user != null ? user.hashCode() : 0) * 31;
             String str = this.nickname;
             int iHashCode2 = (iHashCode + (str != null ? str.hashCode() : 0)) * 31;
             boolean z2 = this.isOwner;
-            int i = z2;
-            if (z2 != 0) {
-                i = 1;
+            ?? r1 = z2;
+            if (z2) {
+                r1 = 1;
             }
-            return iHashCode2 + i;
+            return iHashCode2 + r1;
         }
 
         public final boolean isOwner() {
@@ -107,7 +110,7 @@ public abstract class PermissionOwner implements Serializable {
         }
     }
 
-    /* compiled from: PermissionOwner.kt */
+    /* JADX INFO: compiled from: PermissionOwner.kt */
     public static final /* data */ class Role extends PermissionOwner {
         private final GuildRole role;
 
@@ -125,7 +128,7 @@ public abstract class PermissionOwner implements Serializable {
             return role.copy(guildRole);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final GuildRole getRole() {
             return this.role;
         }

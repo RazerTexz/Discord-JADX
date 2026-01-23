@@ -8,30 +8,30 @@ import androidx.viewbinding.ViewBinding;
 import com.discord.widgets.user.profile.UserStatusPresenceCustomView;
 import p007b.p008a.p025i.ViewUserStatusPresenceBinding;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public final class WidgetUserStatusUpdateBinding implements ViewBinding {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     @NonNull
     public final NestedScrollView f18431a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     @NonNull
     public final UserStatusPresenceCustomView f18432b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     @NonNull
     public final ViewUserStatusPresenceBinding f18433c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     @NonNull
     public final ViewUserStatusPresenceBinding f18434d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     @NonNull
     public final ViewUserStatusPresenceBinding f18435e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     @NonNull
     public final ViewUserStatusPresenceBinding f18436f;
 

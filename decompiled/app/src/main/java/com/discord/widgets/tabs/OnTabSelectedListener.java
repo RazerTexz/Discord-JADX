@@ -1,8 +1,8 @@
 package com.discord.widgets.tabs;
 
 
-/* compiled from: OnTabSelectedListener.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: OnTabSelectedListener.kt */
+/* JADX INFO: loaded from: classes.dex */
 public interface OnTabSelectedListener {
     void onTabSelected();
 }

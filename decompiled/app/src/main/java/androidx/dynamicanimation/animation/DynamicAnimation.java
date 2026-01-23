@@ -13,7 +13,7 @@ import androidx.dynamicanimation.animation.AnimationHandler;
 import androidx.dynamicanimation.animation.DynamicAnimation;
 import java.util.ArrayList;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public abstract class DynamicAnimation<T extends DynamicAnimation<T>> implements AnimationHandler.AnimationFrameCallback {
 
     @SuppressLint({"MinMaxConstant"})
@@ -50,19 +50,19 @@ public abstract class DynamicAnimation<T extends DynamicAnimation<T>> implements
     public static final ViewProperty ROTATION_X = new C03387(Key.ROTATION_X);
     public static final ViewProperty ROTATION_Y = new C03398(Key.ROTATION_Y);
 
-    /* renamed from: X */
+    /* JADX INFO: renamed from: X */
     public static final ViewProperty f139X = new C03409("x");
 
-    /* renamed from: Y */
+    /* JADX INFO: renamed from: Y */
     public static final ViewProperty f140Y = new C032710("y");
 
-    /* renamed from: Z */
+    /* JADX INFO: renamed from: Z */
     public static final ViewProperty f141Z = new C032811("z");
     public static final ViewProperty ALPHA = new C032912(Key.ALPHA);
     public static final ViewProperty SCROLL_X = new C033013("scrollX");
     public static final ViewProperty SCROLL_Y = new C033114("scrollY");
 
-    /* renamed from: androidx.dynamicanimation.animation.DynamicAnimation$1 */
+    /* JADX INFO: renamed from: androidx.dynamicanimation.animation.DynamicAnimation$1 */
     public static class C03261 extends ViewProperty {
         public C03261(String str) {
             super(str, null);
@@ -78,18 +78,18 @@ public abstract class DynamicAnimation<T extends DynamicAnimation<T>> implements
             setValue2(view, f);
         }
 
-        /* renamed from: getValue, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: getValue, reason: avoid collision after fix types in other method */
         public float getValue2(View view) {
             return view.getTranslationX();
         }
 
-        /* renamed from: setValue, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: setValue, reason: avoid collision after fix types in other method */
         public void setValue2(View view, float f) {
             view.setTranslationX(f);
         }
     }
 
-    /* renamed from: androidx.dynamicanimation.animation.DynamicAnimation$10 */
+    /* JADX INFO: renamed from: androidx.dynamicanimation.animation.DynamicAnimation$10 */
     public static class C032710 extends ViewProperty {
         public C032710(String str) {
             super(str, null);
@@ -105,18 +105,18 @@ public abstract class DynamicAnimation<T extends DynamicAnimation<T>> implements
             setValue2(view, f);
         }
 
-        /* renamed from: getValue, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: getValue, reason: avoid collision after fix types in other method */
         public float getValue2(View view) {
             return view.getY();
         }
 
-        /* renamed from: setValue, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: setValue, reason: avoid collision after fix types in other method */
         public void setValue2(View view, float f) {
             view.setY(f);
         }
     }
 
-    /* renamed from: androidx.dynamicanimation.animation.DynamicAnimation$11 */
+    /* JADX INFO: renamed from: androidx.dynamicanimation.animation.DynamicAnimation$11 */
     public static class C032811 extends ViewProperty {
         public C032811(String str) {
             super(str, null);
@@ -132,18 +132,18 @@ public abstract class DynamicAnimation<T extends DynamicAnimation<T>> implements
             setValue2(view, f);
         }
 
-        /* renamed from: getValue, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: getValue, reason: avoid collision after fix types in other method */
         public float getValue2(View view) {
             return ViewCompat.getZ(view);
         }
 
-        /* renamed from: setValue, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: setValue, reason: avoid collision after fix types in other method */
         public void setValue2(View view, float f) {
             ViewCompat.setZ(view, f);
         }
     }
 
-    /* renamed from: androidx.dynamicanimation.animation.DynamicAnimation$12 */
+    /* JADX INFO: renamed from: androidx.dynamicanimation.animation.DynamicAnimation$12 */
     public static class C032912 extends ViewProperty {
         public C032912(String str) {
             super(str, null);
@@ -159,18 +159,18 @@ public abstract class DynamicAnimation<T extends DynamicAnimation<T>> implements
             setValue2(view, f);
         }
 
-        /* renamed from: getValue, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: getValue, reason: avoid collision after fix types in other method */
         public float getValue2(View view) {
             return view.getAlpha();
         }
 
-        /* renamed from: setValue, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: setValue, reason: avoid collision after fix types in other method */
         public void setValue2(View view, float f) {
             view.setAlpha(f);
         }
     }
 
-    /* renamed from: androidx.dynamicanimation.animation.DynamicAnimation$13 */
+    /* JADX INFO: renamed from: androidx.dynamicanimation.animation.DynamicAnimation$13 */
     public static class C033013 extends ViewProperty {
         public C033013(String str) {
             super(str, null);
@@ -186,18 +186,18 @@ public abstract class DynamicAnimation<T extends DynamicAnimation<T>> implements
             setValue2(view, f);
         }
 
-        /* renamed from: getValue, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: getValue, reason: avoid collision after fix types in other method */
         public float getValue2(View view) {
             return view.getScrollX();
         }
 
-        /* renamed from: setValue, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: setValue, reason: avoid collision after fix types in other method */
         public void setValue2(View view, float f) {
             view.setScrollX((int) f);
         }
     }
 
-    /* renamed from: androidx.dynamicanimation.animation.DynamicAnimation$14 */
+    /* JADX INFO: renamed from: androidx.dynamicanimation.animation.DynamicAnimation$14 */
     public static class C033114 extends ViewProperty {
         public C033114(String str) {
             super(str, null);
@@ -213,18 +213,18 @@ public abstract class DynamicAnimation<T extends DynamicAnimation<T>> implements
             setValue2(view, f);
         }
 
-        /* renamed from: getValue, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: getValue, reason: avoid collision after fix types in other method */
         public float getValue2(View view) {
             return view.getScrollY();
         }
 
-        /* renamed from: setValue, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: setValue, reason: avoid collision after fix types in other method */
         public void setValue2(View view, float f) {
             view.setScrollY((int) f);
         }
     }
 
-    /* renamed from: androidx.dynamicanimation.animation.DynamicAnimation$15 */
+    /* JADX INFO: renamed from: androidx.dynamicanimation.animation.DynamicAnimation$15 */
     public class C033215 extends FloatPropertyCompat {
         public final /* synthetic */ FloatValueHolder val$floatValueHolder;
 
@@ -245,7 +245,7 @@ public abstract class DynamicAnimation<T extends DynamicAnimation<T>> implements
         }
     }
 
-    /* renamed from: androidx.dynamicanimation.animation.DynamicAnimation$2 */
+    /* JADX INFO: renamed from: androidx.dynamicanimation.animation.DynamicAnimation$2 */
     public static class C03332 extends ViewProperty {
         public C03332(String str) {
             super(str, null);
@@ -261,18 +261,18 @@ public abstract class DynamicAnimation<T extends DynamicAnimation<T>> implements
             setValue2(view, f);
         }
 
-        /* renamed from: getValue, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: getValue, reason: avoid collision after fix types in other method */
         public float getValue2(View view) {
             return view.getTranslationY();
         }
 
-        /* renamed from: setValue, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: setValue, reason: avoid collision after fix types in other method */
         public void setValue2(View view, float f) {
             view.setTranslationY(f);
         }
     }
 
-    /* renamed from: androidx.dynamicanimation.animation.DynamicAnimation$3 */
+    /* JADX INFO: renamed from: androidx.dynamicanimation.animation.DynamicAnimation$3 */
     public static class C03343 extends ViewProperty {
         public C03343(String str) {
             super(str, null);
@@ -288,18 +288,18 @@ public abstract class DynamicAnimation<T extends DynamicAnimation<T>> implements
             setValue2(view, f);
         }
 
-        /* renamed from: getValue, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: getValue, reason: avoid collision after fix types in other method */
         public float getValue2(View view) {
             return ViewCompat.getTranslationZ(view);
         }
 
-        /* renamed from: setValue, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: setValue, reason: avoid collision after fix types in other method */
         public void setValue2(View view, float f) {
             ViewCompat.setTranslationZ(view, f);
         }
     }
 
-    /* renamed from: androidx.dynamicanimation.animation.DynamicAnimation$4 */
+    /* JADX INFO: renamed from: androidx.dynamicanimation.animation.DynamicAnimation$4 */
     public static class C03354 extends ViewProperty {
         public C03354(String str) {
             super(str, null);
@@ -315,18 +315,18 @@ public abstract class DynamicAnimation<T extends DynamicAnimation<T>> implements
             setValue2(view, f);
         }
 
-        /* renamed from: getValue, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: getValue, reason: avoid collision after fix types in other method */
         public float getValue2(View view) {
             return view.getScaleX();
         }
 
-        /* renamed from: setValue, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: setValue, reason: avoid collision after fix types in other method */
         public void setValue2(View view, float f) {
             view.setScaleX(f);
         }
     }
 
-    /* renamed from: androidx.dynamicanimation.animation.DynamicAnimation$5 */
+    /* JADX INFO: renamed from: androidx.dynamicanimation.animation.DynamicAnimation$5 */
     public static class C03365 extends ViewProperty {
         public C03365(String str) {
             super(str, null);
@@ -342,18 +342,18 @@ public abstract class DynamicAnimation<T extends DynamicAnimation<T>> implements
             setValue2(view, f);
         }
 
-        /* renamed from: getValue, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: getValue, reason: avoid collision after fix types in other method */
         public float getValue2(View view) {
             return view.getScaleY();
         }
 
-        /* renamed from: setValue, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: setValue, reason: avoid collision after fix types in other method */
         public void setValue2(View view, float f) {
             view.setScaleY(f);
         }
     }
 
-    /* renamed from: androidx.dynamicanimation.animation.DynamicAnimation$6 */
+    /* JADX INFO: renamed from: androidx.dynamicanimation.animation.DynamicAnimation$6 */
     public static class C03376 extends ViewProperty {
         public C03376(String str) {
             super(str, null);
@@ -369,18 +369,18 @@ public abstract class DynamicAnimation<T extends DynamicAnimation<T>> implements
             setValue2(view, f);
         }
 
-        /* renamed from: getValue, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: getValue, reason: avoid collision after fix types in other method */
         public float getValue2(View view) {
             return view.getRotation();
         }
 
-        /* renamed from: setValue, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: setValue, reason: avoid collision after fix types in other method */
         public void setValue2(View view, float f) {
             view.setRotation(f);
         }
     }
 
-    /* renamed from: androidx.dynamicanimation.animation.DynamicAnimation$7 */
+    /* JADX INFO: renamed from: androidx.dynamicanimation.animation.DynamicAnimation$7 */
     public static class C03387 extends ViewProperty {
         public C03387(String str) {
             super(str, null);
@@ -396,18 +396,18 @@ public abstract class DynamicAnimation<T extends DynamicAnimation<T>> implements
             setValue2(view, f);
         }
 
-        /* renamed from: getValue, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: getValue, reason: avoid collision after fix types in other method */
         public float getValue2(View view) {
             return view.getRotationX();
         }
 
-        /* renamed from: setValue, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: setValue, reason: avoid collision after fix types in other method */
         public void setValue2(View view, float f) {
             view.setRotationX(f);
         }
     }
 
-    /* renamed from: androidx.dynamicanimation.animation.DynamicAnimation$8 */
+    /* JADX INFO: renamed from: androidx.dynamicanimation.animation.DynamicAnimation$8 */
     public static class C03398 extends ViewProperty {
         public C03398(String str) {
             super(str, null);
@@ -423,18 +423,18 @@ public abstract class DynamicAnimation<T extends DynamicAnimation<T>> implements
             setValue2(view, f);
         }
 
-        /* renamed from: getValue, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: getValue, reason: avoid collision after fix types in other method */
         public float getValue2(View view) {
             return view.getRotationY();
         }
 
-        /* renamed from: setValue, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: setValue, reason: avoid collision after fix types in other method */
         public void setValue2(View view, float f) {
             view.setRotationY(f);
         }
     }
 
-    /* renamed from: androidx.dynamicanimation.animation.DynamicAnimation$9 */
+    /* JADX INFO: renamed from: androidx.dynamicanimation.animation.DynamicAnimation$9 */
     public static class C03409 extends ViewProperty {
         public C03409(String str) {
             super(str, null);
@@ -450,12 +450,12 @@ public abstract class DynamicAnimation<T extends DynamicAnimation<T>> implements
             setValue2(view, f);
         }
 
-        /* renamed from: getValue, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: getValue, reason: avoid collision after fix types in other method */
         public float getValue2(View view) {
             return view.getX();
         }
 
-        /* renamed from: setValue, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: setValue, reason: avoid collision after fix types in other method */
         public void setValue2(View view, float f) {
             view.setX(f);
         }

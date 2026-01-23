@@ -8,9 +8,9 @@ import kotlin.jvm.functions.Function1;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetChatListAdapterItemSystemMessage.kt */
-/* renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemSystemMessage$getSystemMessage$usernameRenderContext$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemSystemMessage$getSystemMessage$usernameRenderContext$1, reason: use source file name */
+/* JADX INFO: compiled from: WidgetChatListAdapterItemSystemMessage.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetChatListAdapterItemSystemMessage5 extends Lambda implements Function1<RenderContext, Unit> {
     public final /* synthetic */ int $authorRoleColor;
     public final /* synthetic */ int $otherRoleColor;
@@ -28,14 +28,14 @@ public final class WidgetChatListAdapterItemSystemMessage5 extends Lambda implem
         return Unit.f27425a;
     }
 
-    /* compiled from: WidgetChatListAdapterItemSystemMessage.kt */
-    /* renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemSystemMessage$getSystemMessage$usernameRenderContext$1$1, reason: invalid class name */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemSystemMessage$getSystemMessage$usernameRenderContext$1$1, reason: invalid class name */
+    /* JADX INFO: compiled from: WidgetChatListAdapterItemSystemMessage.kt */
     public static final class AnonymousClass1 extends Lambda implements Function1<Hook, Unit> {
         public AnonymousClass1() {
             super(1);
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Hook hook) {
             Intrinsics3.checkNotNullParameter(hook, "$receiver");
             hook.styles.add(new FontColorSpan(WidgetChatListAdapterItemSystemMessage5.this.$authorRoleColor));
@@ -48,14 +48,14 @@ public final class WidgetChatListAdapterItemSystemMessage5 extends Lambda implem
         }
     }
 
-    /* compiled from: WidgetChatListAdapterItemSystemMessage.kt */
-    /* renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemSystemMessage$getSystemMessage$usernameRenderContext$1$2, reason: invalid class name */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemSystemMessage$getSystemMessage$usernameRenderContext$1$2, reason: invalid class name */
+    /* JADX INFO: compiled from: WidgetChatListAdapterItemSystemMessage.kt */
     public static final class AnonymousClass2 extends Lambda implements Function1<Hook, Unit> {
         public AnonymousClass2() {
             super(1);
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Hook hook) {
             Intrinsics3.checkNotNullParameter(hook, "$receiver");
             hook.styles.add(new FontColorSpan(WidgetChatListAdapterItemSystemMessage5.this.$otherRoleColor));
@@ -68,7 +68,7 @@ public final class WidgetChatListAdapterItemSystemMessage5 extends Lambda implem
         }
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final void invoke2(RenderContext renderContext) {
         Intrinsics3.checkNotNullParameter(renderContext, "$receiver");
         renderContext.m8422a("usernameOnClick", new AnonymousClass1());

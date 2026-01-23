@@ -4,9 +4,9 @@ import android.view.View;
 import com.discord.widgets.guilds.invite.GuildInviteShareSheetViewModel;
 import p007b.p100d.p104b.p105a.outline;
 
-/* compiled from: WidgetGuildInviteShareSheet.kt */
-/* renamed from: com.discord.widgets.guilds.invite.WidgetGuildInviteShareSheet$configureNormalUI$$inlined$with$lambda$2 */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.guilds.invite.WidgetGuildInviteShareSheet$configureNormalUI$$inlined$with$lambda$2 */
+/* JADX INFO: compiled from: WidgetGuildInviteShareSheet.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class ViewOnClickListenerC8702xecba64c5 implements View.OnClickListener {
     public final /* synthetic */ GuildInvite $invite;
     public final /* synthetic */ String $searchQuery$inlined;

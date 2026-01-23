@@ -5,7 +5,7 @@ import java.util.Queue;
 import java.util.concurrent.ConcurrentLinkedQueue;
 import p007b.p100d.p104b.p105a.outline;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public interface KryoPool {
 
     public static class Builder {

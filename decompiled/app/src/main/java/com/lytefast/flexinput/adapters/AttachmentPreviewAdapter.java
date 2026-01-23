@@ -1,7 +1,6 @@
 package com.lytefast.flexinput.adapters;
 
 import android.content.Context;
-import android.content.res.Resources;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -30,24 +29,24 @@ import p007b.p109f.p161j.p169d.RotationOptions;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: AttachmentPreviewAdapter.kt */
-/* loaded from: classes3.dex */
+/* JADX INFO: compiled from: AttachmentPreviewAdapter.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class AttachmentPreviewAdapter<T extends Attachment<? extends Object>> extends RecyclerView.Adapter<AttachmentPreviewAdapter<T>.C11172b> {
 
-    /* renamed from: a, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: a, reason: from kotlin metadata */
     public final SelectionAggregator<T> selectionAggregator;
 
-    /* renamed from: b, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: b, reason: from kotlin metadata */
     public final boolean useBottomSheet;
 
-    /* renamed from: c, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: c, reason: from kotlin metadata */
     public final Function2<SelectionAggregator<T>, T, Unit> onAttachmentSelected;
 
-    /* compiled from: AttachmentPreviewAdapter.kt */
-    /* renamed from: com.lytefast.flexinput.adapters.AttachmentPreviewAdapter$a */
+    /* JADX INFO: renamed from: com.lytefast.flexinput.adapters.AttachmentPreviewAdapter$a */
+    /* JADX INFO: compiled from: AttachmentPreviewAdapter.kt */
     public static final class C11171a extends Lambda implements Function2<SelectionAggregator<T>, T, Unit> {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public static final C11171a f22017j = new C11171a();
 
         public C11171a() {
@@ -66,17 +65,17 @@ public final class AttachmentPreviewAdapter<T extends Attachment<? extends Objec
         }
     }
 
-    /* compiled from: AttachmentPreviewAdapter.kt */
-    /* renamed from: com.lytefast.flexinput.adapters.AttachmentPreviewAdapter$b */
+    /* JADX INFO: renamed from: com.lytefast.flexinput.adapters.AttachmentPreviewAdapter$b */
+    /* JADX INFO: compiled from: AttachmentPreviewAdapter.kt */
     public final class C11172b extends ThumbnailViewHolder {
 
-        /* renamed from: p */
+        /* JADX INFO: renamed from: p */
         public final ViewAttachmentPreviewItemBinding f22018p;
 
-        /* renamed from: q */
+        /* JADX INFO: renamed from: q */
         public final Function2<SelectionAggregator<T>, T, Unit> f22019q;
 
-        /* renamed from: r */
+        /* JADX INFO: renamed from: r */
         public final /* synthetic */ AttachmentPreviewAdapter f22020r;
 
         /* JADX WARN: Illegal instructions before constructor call */
@@ -97,7 +96,7 @@ public final class AttachmentPreviewAdapter<T extends Attachment<? extends Objec
         }
 
         @Override // p007b.p076b.p077a.p079d.ThumbnailViewHolder
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public SimpleDraweeView mo401a() {
             SimpleDraweeView simpleDraweeView = this.f22018p.f2190b;
             Intrinsics3.checkNotNullExpressionValue(simpleDraweeView, "binding.attachmentItem");
@@ -124,7 +123,7 @@ public final class AttachmentPreviewAdapter<T extends Attachment<? extends Objec
 
     /* JADX WARN: Type inference failed for: r2v3, types: [REQUEST, com.facebook.imagepipeline.request.ImageRequest] */
     @Override // androidx.recyclerview.widget.RecyclerView.Adapter
-    public void onBindViewHolder(RecyclerView.ViewHolder viewHolder, int i) throws Resources.NotFoundException {
+    public void onBindViewHolder(RecyclerView.ViewHolder viewHolder, int i) {
         C11172b c11172b = (C11172b) viewHolder;
         Intrinsics3.checkNotNullParameter(c11172b, "holder");
         Attachment attachment = this.selectionAggregator.get(i);

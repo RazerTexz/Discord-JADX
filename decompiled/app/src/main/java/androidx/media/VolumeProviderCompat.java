@@ -9,7 +9,7 @@ import androidx.annotation.RestrictTo;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public abstract class VolumeProviderCompat {
     public static final int VOLUME_CONTROL_ABSOLUTE = 2;
     public static final int VOLUME_CONTROL_FIXED = 0;
@@ -21,7 +21,7 @@ public abstract class VolumeProviderCompat {
     private final int mMaxVolume;
     private VolumeProvider mVolumeProviderFwk;
 
-    /* renamed from: androidx.media.VolumeProviderCompat$1 */
+    /* JADX INFO: renamed from: androidx.media.VolumeProviderCompat$1 */
     public class C05001 extends VolumeProvider {
         public C05001(int i, int i2, int i3, String str) {
             super(i, i2, i3, str);
@@ -38,7 +38,7 @@ public abstract class VolumeProviderCompat {
         }
     }
 
-    /* renamed from: androidx.media.VolumeProviderCompat$2 */
+    /* JADX INFO: renamed from: androidx.media.VolumeProviderCompat$2 */
     public class C05012 extends VolumeProvider {
         public C05012(int i, int i2, int i3) {
             super(i, i2, i3);

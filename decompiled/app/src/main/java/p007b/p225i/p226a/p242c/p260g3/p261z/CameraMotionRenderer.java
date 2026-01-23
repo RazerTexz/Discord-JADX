@@ -9,25 +9,25 @@ import p007b.p225i.p226a.p242c.Format2;
 import p007b.p225i.p226a.p242c.p259f3.ParsableByteArray;
 import p007b.p225i.p226a.p242c.p259f3.Util2;
 
-/* compiled from: CameraMotionRenderer.java */
-/* renamed from: b.i.a.c.g3.z.e, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.g3.z.e, reason: use source file name */
+/* JADX INFO: compiled from: CameraMotionRenderer.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class CameraMotionRenderer extends BaseRenderer {
 
-    /* renamed from: u */
+    /* JADX INFO: renamed from: u */
     public final DecoderInputBuffer f6963u;
 
-    /* renamed from: v */
+    /* JADX INFO: renamed from: v */
     public final ParsableByteArray f6964v;
 
-    /* renamed from: w */
+    /* JADX INFO: renamed from: w */
     public long f6965w;
 
-    /* renamed from: x */
+    /* JADX INFO: renamed from: x */
     @Nullable
     public CameraMotionListener f6966x;
 
-    /* renamed from: y */
+    /* JADX INFO: renamed from: y */
     public long f6967y;
 
     public CameraMotionRenderer() {
@@ -37,7 +37,7 @@ public final class CameraMotionRenderer extends BaseRenderer {
     }
 
     @Override // p007b.p225i.p226a.p242c.BaseRenderer
-    /* renamed from: B */
+    /* JADX INFO: renamed from: B */
     public void mo2621B() {
         CameraMotionListener cameraMotionListener = this.f6966x;
         if (cameraMotionListener != null) {
@@ -46,7 +46,7 @@ public final class CameraMotionRenderer extends BaseRenderer {
     }
 
     @Override // p007b.p225i.p226a.p242c.BaseRenderer
-    /* renamed from: D */
+    /* JADX INFO: renamed from: D */
     public void mo2622D(long j, boolean z2) {
         this.f6967y = Long.MIN_VALUE;
         CameraMotionListener cameraMotionListener = this.f6966x;
@@ -56,25 +56,25 @@ public final class CameraMotionRenderer extends BaseRenderer {
     }
 
     @Override // p007b.p225i.p226a.p242c.BaseRenderer
-    /* renamed from: H */
+    /* JADX INFO: renamed from: H */
     public void mo2623H(Format2[] format2Arr, long j, long j2) {
         this.f6965w = j2;
     }
 
     @Override // p007b.p225i.p226a.p242c.RendererCapabilities
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public int mo2630a(Format2 format2) {
         return "application/x-camera-motion".equals(format2.f7155w) ? 4 : 0;
     }
 
     @Override // p007b.p225i.p226a.p242c.Renderer2
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public boolean mo2631b() {
         return mo2935j();
     }
 
     @Override // p007b.p225i.p226a.p242c.Renderer2
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public boolean mo2632d() {
         return true;
     }
@@ -85,7 +85,7 @@ public final class CameraMotionRenderer extends BaseRenderer {
     }
 
     @Override // p007b.p225i.p226a.p242c.Renderer2
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     public void mo2633q(long j, long j2) {
         float[] fArr;
         while (!mo2935j() && this.f6967y < 100000 + j) {
@@ -118,7 +118,7 @@ public final class CameraMotionRenderer extends BaseRenderer {
     }
 
     @Override // p007b.p225i.p226a.p242c.BaseRenderer, p007b.p225i.p226a.p242c.PlayerMessage.b
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     public void mo2603r(int i, @Nullable Object obj) throws ExoPlaybackException {
         if (i == 8) {
             this.f6966x = (CameraMotionListener) obj;

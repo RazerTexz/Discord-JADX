@@ -52,19 +52,19 @@ import p507d0.p592z.p594d.FunctionReferenceImpl;
 import p507d0.p592z.p594d.Intrinsics3;
 import p658rx.Observable;
 
-/* compiled from: WidgetSearchResults.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetSearchResults.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetSearchResults extends AppFragment {
     public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetSearchResults.class, "binding", "getBinding()Lcom/discord/databinding/WidgetSearchResultsBinding;", 0)};
     private WidgetChatListAdapter adapter;
 
-    /* renamed from: binding$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
 
-    /* compiled from: WidgetSearchResults.kt */
+    /* JADX INFO: compiled from: WidgetSearchResults.kt */
     public static final /* data */ class Model implements WidgetChatListAdapter.Data {
 
-        /* renamed from: Companion, reason: from kotlin metadata */
+        /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
         public static final Companion INSTANCE = new Companion(null);
         private final long channelId;
         private final Map<Long, String> channelNames;
@@ -77,7 +77,7 @@ public final class WidgetSearchResults extends AppFragment {
         private final long oldestMessageId;
         private final long userId;
 
-        /* compiled from: WidgetSearchResults.kt */
+        /* JADX INFO: compiled from: WidgetSearchResults.kt */
         public static final class Companion {
             private Companion() {
             }
@@ -105,6 +105,7 @@ public final class WidgetSearchResults extends AppFragment {
             this.myRoleIds = set;
         }
 
+        /* JADX WARN: Multi-variable type inference failed */
         public static /* synthetic */ Model copy$default(Model model, List list, long j, Map map, long j2, Set set, int i, Object obj) {
             if ((i & 1) != 0) {
                 list = model.getList();
@@ -220,7 +221,7 @@ public final class WidgetSearchResults extends AppFragment {
         }
 
         @Override // com.discord.widgets.chat.list.adapter.WidgetChatListAdapter.Data
-        /* renamed from: isSpoilerClickAllowed, reason: from getter */
+        /* JADX INFO: renamed from: isSpoilerClickAllowed, reason: from getter */
         public boolean getIsSpoilerClickAllowed() {
             return this.isSpoilerClickAllowed;
         }
@@ -245,7 +246,7 @@ public final class WidgetSearchResults extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetSearchResults.kt */
+    /* JADX INFO: compiled from: WidgetSearchResults.kt */
     public static final class SearchResultAdapterEventHandler implements WidgetChatListAdapter.EventHandler {
         private final ChannelSelector channelSelector;
         private final Context context;
@@ -443,8 +444,8 @@ public final class WidgetSearchResults extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetSearchResults.kt */
-    /* renamed from: com.discord.widgets.search.results.WidgetSearchResults$onViewBoundOrOnResume$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.search.results.WidgetSearchResults$onViewBoundOrOnResume$1 */
+    /* JADX INFO: compiled from: WidgetSearchResults.kt */
     public static final /* synthetic */ class C91351 extends FunctionReferenceImpl implements Function1<Model, Unit> {
         public C91351(WidgetSearchResults widgetSearchResults) {
             super(1, widgetSearchResults, WidgetSearchResults.class, "configureUI", "configureUI(Lcom/discord/widgets/search/results/WidgetSearchResults$Model;)V", 0);
@@ -456,7 +457,7 @@ public final class WidgetSearchResults extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Model model) {
             Intrinsics3.checkNotNullParameter(model, "p1");
             WidgetSearchResults.access$configureUI((WidgetSearchResults) this.receiver, model);

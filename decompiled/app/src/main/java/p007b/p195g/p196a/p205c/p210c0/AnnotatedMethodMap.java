@@ -4,12 +4,12 @@ import java.util.Collections;
 import java.util.Iterator;
 import java.util.Map;
 
-/* compiled from: AnnotatedMethodMap.java */
-/* renamed from: b.g.a.c.c0.l, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.g.a.c.c0.l, reason: use source file name */
+/* JADX INFO: compiled from: AnnotatedMethodMap.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class AnnotatedMethodMap implements Iterable<AnnotatedMethod> {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public Map<MemberKey, AnnotatedMethod> f4724j;
 
     public AnnotatedMethodMap() {

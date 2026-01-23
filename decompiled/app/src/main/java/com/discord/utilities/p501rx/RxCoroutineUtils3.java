@@ -6,9 +6,9 @@ import kotlinx.coroutines.CancellableContinuation;
 import p507d0.Result2;
 import p658rx.functions.Action1;
 
-/* compiled from: RxCoroutineUtils.kt */
-/* renamed from: com.discord.utilities.rx.RxCoroutineUtilsKt$awaitSingle$2$subscription$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.utilities.rx.RxCoroutineUtilsKt$awaitSingle$2$subscription$1, reason: use source file name */
+/* JADX INFO: compiled from: RxCoroutineUtils.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class RxCoroutineUtils3<T> implements Action1<T> {
     public final /* synthetic */ CancellableContinuation $cont;
 

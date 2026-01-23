@@ -37,16 +37,16 @@ import p659s.p660a.C13116h1;
 import p659s.p660a.CoroutineScope2;
 import p659s.p660a.Dispatchers;
 
-/* compiled from: LinkifiedTextView.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: LinkifiedTextView.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class LinkifiedTextView extends SimpleDraweeSpanTextView {
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private static final Lazy logger$delegate = LazyJVM.lazy(LinkifiedTextView5.INSTANCE);
     private static Function2<? super View, ? super String, Unit> onURLSpanClicked;
 
-    /* compiled from: LinkifiedTextView.kt */
+    /* JADX INFO: compiled from: LinkifiedTextView.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -136,7 +136,7 @@ public final class LinkifiedTextView extends SimpleDraweeSpanTextView {
         setOnTouchListener(new ClickableSpanOnTouchListener(0L, onURLSpanClicked, 1, null));
     }
 
-    /* compiled from: LinkifiedTextView.kt */
+    /* JADX INFO: compiled from: LinkifiedTextView.kt */
     public static final class ClickableSpanOnTouchListener implements View.OnTouchListener {
         private AtomicBoolean isClickHandled;
         private AtomicReference<Job> job;

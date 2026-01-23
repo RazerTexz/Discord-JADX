@@ -2,11 +2,11 @@ package p007b.p225i.p226a.p242c.p257e3;
 
 import java.io.IOException;
 
-/* compiled from: DataSink.java */
-/* renamed from: b.i.a.c.e3.j, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.e3.j, reason: use source file name */
+/* JADX INFO: compiled from: DataSink.java */
+/* JADX INFO: loaded from: classes3.dex */
 public interface DataSink {
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     void mo2852a(DataSpec dataSpec) throws IOException;
 
     void close() throws IOException;

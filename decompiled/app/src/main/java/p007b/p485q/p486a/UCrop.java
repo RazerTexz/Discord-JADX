@@ -5,15 +5,15 @@ import android.net.Uri;
 import android.os.Bundle;
 import androidx.annotation.NonNull;
 
-/* compiled from: UCrop.java */
-/* renamed from: b.q.a.a, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.q.a.a, reason: use source file name */
+/* JADX INFO: compiled from: UCrop.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class UCrop {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public Intent f14387a = new Intent();
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public Bundle f14388b;
 
     public UCrop(@NonNull Uri uri, @NonNull Uri uri2) {

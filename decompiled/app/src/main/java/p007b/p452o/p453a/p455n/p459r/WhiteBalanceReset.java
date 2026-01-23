@@ -10,13 +10,13 @@ import p007b.p452o.p453a.CameraLogger;
 import p007b.p452o.p453a.p455n.Camera2Engine;
 import p007b.p452o.p453a.p455n.p456o.ActionHolder;
 
-/* compiled from: WhiteBalanceReset.java */
+/* JADX INFO: renamed from: b.o.a.n.r.j, reason: use source file name */
+/* JADX INFO: compiled from: WhiteBalanceReset.java */
+/* JADX INFO: loaded from: classes3.dex */
 @RequiresApi(21)
-/* renamed from: b.o.a.n.r.j, reason: use source file name */
-/* loaded from: classes3.dex */
 public class WhiteBalanceReset extends BaseReset {
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public static final CameraLogger f13984f = new CameraLogger(WhiteBalanceReset.class.getSimpleName());
 
     public WhiteBalanceReset() {
@@ -24,7 +24,7 @@ public class WhiteBalanceReset extends BaseReset {
     }
 
     @Override // p007b.p452o.p453a.p455n.p459r.BaseReset
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public void mo7352m(@NonNull ActionHolder actionHolder, @Nullable MeteringRectangle meteringRectangle) {
         f13984f.m7159a(2, "onStarted:", "with area:", meteringRectangle);
         int iIntValue = ((Integer) m7340k(CameraCharacteristics.CONTROL_MAX_REGIONS_AWB, 0)).intValue();

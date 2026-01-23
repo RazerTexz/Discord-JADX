@@ -3,12 +3,12 @@ package p007b.p225i.p226a.p242c.p278y2;
 import android.os.HandlerThread;
 import p007b.p225i.p355b.p356a.Supplier2;
 
-/* compiled from: lambda */
-/* renamed from: b.i.a.c.y2.b */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.y2.b */
+/* JADX INFO: compiled from: lambda */
+/* JADX INFO: loaded from: classes3.dex */
 public final /* synthetic */ class C3130b implements Supplier2 {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final /* synthetic */ int f9046j;
 
     public /* synthetic */ C3130b(int i) {

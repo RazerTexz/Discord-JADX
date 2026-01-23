@@ -40,43 +40,43 @@ import p007b.p109f.p190m.SoSource;
 import p007b.p109f.p190m.UnpackingSoSource;
 import p007b.p109f.p190m.p191n.NativeLoader;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public class SoLoader {
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static SoFileLoader f19642b;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public static UnpackingSoSource[] f19646f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public static ApplicationSoSource f19647g;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public static int f19651k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public static boolean f19652l;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public static final ReentrantReadWriteLock f19643c = new ReentrantReadWriteLock();
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public static SoSource[] f19644d = null;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public static volatile int f19645e = 0;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public static final HashSet<String> f19648h = new HashSet<>();
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public static final Map<String, Object> f19649i = new HashMap();
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static final Set<String> f19650j = Collections.newSetFromMap(new ConcurrentHashMap());
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final boolean f19641a = true;
 
     @DoNotOptimize
@@ -85,7 +85,7 @@ public class SoLoader {
         private Api14Utils() {
         }
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public static String m8732a() {
             ClassLoader classLoader = SoLoader.class.getClassLoader();
             if (classLoader == null || (classLoader instanceof BaseDexClassLoader)) {
@@ -102,22 +102,22 @@ public class SoLoader {
         }
     }
 
-    /* renamed from: com.facebook.soloader.SoLoader$a */
+    /* JADX INFO: renamed from: com.facebook.soloader.SoLoader$a */
     public static class C10674a implements SoFileLoader {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final /* synthetic */ boolean f19653a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final /* synthetic */ String f19654b;
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public final /* synthetic */ String f19655c;
 
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         public final /* synthetic */ Runtime f19656d;
 
-        /* renamed from: e */
+        /* JADX INFO: renamed from: e */
         public final /* synthetic */ Method f19657e;
 
         public C10674a(boolean z2, String str, String str2, Runtime runtime, Method method) {
@@ -128,7 +128,7 @@ public class SoLoader {
             this.f19657e = method;
         }
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final String m8733a(String str) {
             try {
                 File file = new File(str);
@@ -167,7 +167,7 @@ public class SoLoader {
         }
 
         /* JADX WARN: Removed duplicated region for block: B:47:0x0094  */
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         /*
             Code decompiled incorrectly, please refer to instructions dump.
         */
@@ -251,7 +251,7 @@ public class SoLoader {
         }
     }
 
-    /* renamed from: com.facebook.soloader.SoLoader$b */
+    /* JADX INFO: renamed from: com.facebook.soloader.SoLoader$b */
     public static final class C10675b extends UnsatisfiedLinkError {
         /* JADX WARN: Illegal instructions before constructor call */
         public C10675b(Throwable th, String str) {
@@ -264,10 +264,6 @@ public class SoLoader {
         }
     }
 
-    /* JADX WARN: Code restructure failed: missing block: B:103:?, code lost:
-    
-        return;
-     */
     /* JADX WARN: Code restructure failed: missing block: B:22:0x0047, code lost:
     
         android.util.Log.d("SoLoader", "Trying backup SoSource for " + r11);
@@ -396,32 +392,18 @@ public class SoLoader {
     
         r12 = th;
      */
-    /* JADX WARN: Code restructure failed: missing block: B:69:0x011e, code lost:
-    
-        android.os.Trace.endSection();
-     */
-    /* JADX WARN: Code restructure failed: missing block: B:71:0x0123, code lost:
-    
-        android.os.StrictMode.setThreadPolicy(r13);
-     */
     /* JADX WARN: Code restructure failed: missing block: B:75:0x012b, code lost:
     
         return;
      */
-    /* JADX WARN: Code restructure failed: missing block: B:78:0x0138, code lost:
-    
-        r13 = r12.toString();
-     */
-    /* JADX WARN: Removed duplicated region for block: B:69:0x011e  */
-    /* JADX WARN: Removed duplicated region for block: B:71:0x0123  */
-    /* JADX WARN: Removed duplicated region for block: B:78:0x0138  */
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
     public static void m8728a(String str, int i, StrictMode.ThreadPolicy threadPolicy) throws UnsatisfiedLinkError {
         boolean z2;
         int iMo1568a;
+        int i2;
         ReentrantReadWriteLock reentrantReadWriteLock = f19643c;
         reentrantReadWriteLock.readLock().lock();
         try {
@@ -430,7 +412,7 @@ public class SoLoader {
                 throw new UnsatisfiedLinkError("couldn't find DSO to load: " + str);
             }
             reentrantReadWriteLock.readLock().unlock();
-            int i2 = 0;
+            int i3 = 0;
             if (threadPolicy == null) {
                 threadPolicy = StrictMode.allowThreadDiskReads();
                 z2 = true;
@@ -443,55 +425,61 @@ public class SoLoader {
             try {
                 reentrantReadWriteLock.readLock().lock();
                 iMo1568a = 0;
-                int i3 = 0;
-                while (true) {
-                    if (iMo1568a == 0) {
-                        try {
-                            SoSource[] soSourceArr = f19644d;
-                            if (i3 < soSourceArr.length) {
-                                iMo1568a = soSourceArr[i3].mo1568a(str, i, threadPolicy);
-                                if (iMo1568a == 3 && f19646f != null) {
-                                    break;
-                                } else {
-                                    i3++;
-                                }
+                i2 = 0;
+            } catch (Throwable th) {
+                th = th;
+                iMo1568a = i3;
+            }
+            while (true) {
+                if (iMo1568a == 0) {
+                    try {
+                        SoSource[] soSourceArr = f19644d;
+                        if (i2 < soSourceArr.length) {
+                            iMo1568a = soSourceArr[i2].mo1568a(str, i, threadPolicy);
+                            if (iMo1568a == 3 && f19646f != null) {
+                                break;
+                            } else {
+                                i2++;
                             }
-                        } catch (Throwable th) {
-                            i2 = iMo1568a;
-                            throw th;
+                            th = th;
+                            iMo1568a = i3;
+                            if (f19641a) {
+                                Trace.endSection();
+                            }
+                            if (z2) {
+                                StrictMode.setThreadPolicy(threadPolicy);
+                            }
+                            if (iMo1568a == 0 || iMo1568a == 3) {
+                                StringBuilder sbM836X = outline.m836X("couldn't find DSO to load: ", str);
+                                String message = th.getMessage();
+                                if (message == null) {
+                                    message = th.toString();
+                                }
+                                sbM836X.append(" caused by: ");
+                                sbM836X.append(message);
+                                th.printStackTrace();
+                                sbM836X.append(" result: ");
+                                sbM836X.append(iMo1568a);
+                                String string = sbM836X.toString();
+                                Log.e("SoLoader", string);
+                                UnsatisfiedLinkError unsatisfiedLinkError = new UnsatisfiedLinkError(string);
+                                unsatisfiedLinkError.initCause(th);
+                                throw unsatisfiedLinkError;
+                            }
+                            return;
                         }
+                    } catch (Throwable th2) {
+                        i3 = iMo1568a;
+                        throw th2;
                     }
                 }
-            } catch (Throwable th2) {
-                th = th2;
-                iMo1568a = i2;
-                if (f19641a) {
-                }
-                if (z2) {
-                }
-                if (iMo1568a != 0) {
-                }
-                StringBuilder sbM836X = outline.m836X("couldn't find DSO to load: ", str);
-                String message = th.getMessage();
-                if (message == null) {
-                }
-                sbM836X.append(" caused by: ");
-                sbM836X.append(message);
-                th.printStackTrace();
-                sbM836X.append(" result: ");
-                sbM836X.append(iMo1568a);
-                String string = sbM836X.toString();
-                Log.e("SoLoader", string);
-                UnsatisfiedLinkError unsatisfiedLinkError = new UnsatisfiedLinkError(string);
-                unsatisfiedLinkError.initCause(th);
-                throw unsatisfiedLinkError;
             }
         } finally {
             f19643c.readLock().unlock();
         }
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static synchronized void m8729b(SoFileLoader soFileLoader) {
         Method declaredMethod;
         String strJoin;
@@ -509,6 +497,7 @@ public class SoLoader {
                 declaredMethod.setAccessible(true);
             } catch (NoSuchMethodException | SecurityException e) {
                 Log.w("SoLoader", "Cannot get nativeLoad method", e);
+                declaredMethod = null;
             }
         }
         boolean z2 = declaredMethod != null;
@@ -528,7 +517,7 @@ public class SoLoader {
         f19642b = new C10674a(z2, strM8732a, strJoin, runtime, declaredMethod);
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public static void m8730c(Context context, int i) throws IOException {
         int i2;
         boolean zIs64Bit;
@@ -632,7 +621,7 @@ public class SoLoader {
     /* JADX WARN: Removed duplicated region for block: B:53:0x00b8 A[Catch: all -> 0x0137, PHI: r3
       0x00b8: PHI (r3v5 boolean) = (r3v2 boolean), (r3v3 boolean), (r3v3 boolean) binds: [B:22:0x0044, B:33:0x005b, B:38:0x0091] A[DONT_GENERATE, DONT_INLINE], TryCatch #5 {, blocks: (B:23:0x0046, B:28:0x0050, B:34:0x005d, B:35:0x0076, B:41:0x0094, B:43:0x0096, B:45:0x009c, B:47:0x00a4, B:48:0x00b3, B:49:0x00b4, B:52:0x00b7, B:53:0x00b8, B:55:0x00bc, B:57:0x00c2, B:62:0x00cf, B:64:0x00d3, B:72:0x0124, B:74:0x0128, B:75:0x012b, B:76:0x012c, B:36:0x0077, B:37:0x0090, B:24:0x0047, B:27:0x004f, B:32:0x005a, B:65:0x00da, B:66:0x00fc, B:70:0x0100, B:71:0x0123), top: B:96:0x0046, outer: #6, inners: #0, #2, #3, #7 }] */
     /* JADX WARN: Removed duplicated region for block: B:55:0x00bc A[Catch: all -> 0x0137, TryCatch #5 {, blocks: (B:23:0x0046, B:28:0x0050, B:34:0x005d, B:35:0x0076, B:41:0x0094, B:43:0x0096, B:45:0x009c, B:47:0x00a4, B:48:0x00b3, B:49:0x00b4, B:52:0x00b7, B:53:0x00b8, B:55:0x00bc, B:57:0x00c2, B:62:0x00cf, B:64:0x00d3, B:72:0x0124, B:74:0x0128, B:75:0x012b, B:76:0x012c, B:36:0x0077, B:37:0x0090, B:24:0x0047, B:27:0x004f, B:32:0x005a, B:65:0x00da, B:66:0x00fc, B:70:0x0100, B:71:0x0123), top: B:96:0x0046, outer: #6, inners: #0, #2, #3, #7 }] */
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */

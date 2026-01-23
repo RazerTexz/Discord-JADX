@@ -20,11 +20,11 @@ import p007b.p008a.p025i.ViewStreamPreviewBinding;
 import p007b.p008a.p027k.FormatUtils;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: StreamPreviewView.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: StreamPreviewView.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class StreamPreviewView extends FrameLayout {
 
-    /* renamed from: j, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: j, reason: from kotlin metadata */
     public final ViewStreamPreviewBinding binding;
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -72,7 +72,7 @@ public final class StreamPreviewView extends FrameLayout {
     }
 
     @MainThread
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final void m8557a(StoreApplicationStreamPreviews.StreamPreview preview, StreamContext.Joinability joinability, boolean isAlreadyWatchingStream) {
         Intrinsics3.checkNotNullParameter(preview, "preview");
         Intrinsics3.checkNotNullParameter(joinability, "joinability");

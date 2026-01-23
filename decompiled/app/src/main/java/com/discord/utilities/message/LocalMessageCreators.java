@@ -26,9 +26,9 @@ import p507d0.p580t.Iterables2;
 import p507d0.p580t._Collections;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: LocalMessageCreators.kt */
-/* renamed from: com.discord.utilities.message.LocalMessageCreatorsKt, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.utilities.message.LocalMessageCreatorsKt, reason: use source file name */
+/* JADX INFO: compiled from: LocalMessageCreators.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class LocalMessageCreators {
     public static final Message createInvalidAttachmentsMessage(long j, User user, Clock clock, List<LocalAttachment> list) {
         Intrinsics3.checkNotNullParameter(user, "author");

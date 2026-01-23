@@ -10,8 +10,8 @@ import com.discord.api.science.AnalyticsSchema;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: TrackNetworkActionBugReportSubmit.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: TrackNetworkActionBugReportSubmit.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class TrackNetworkActionBugReportSubmit implements AnalyticsSchema, TrackBase2, TrackLocationMetadata2, TrackNetworkMetadata2 {
     private TrackBase trackBase;
     private TrackLocationMetadata trackLocationMetadata;
@@ -21,13 +21,13 @@ public final /* data */ class TrackNetworkActionBugReportSubmit implements Analy
     private final transient String analyticsSchemaTypeName = "network_action_bug_report_submit";
 
     @Override // com.discord.analytics.generated.traits.TrackNetworkMetadata2
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public void mo7529b(TrackNetworkMetadata trackNetworkMetadata) {
         this.trackNetworkMetadata = trackNetworkMetadata;
     }
 
     @Override // com.discord.api.science.AnalyticsSchema
-    /* renamed from: d, reason: from getter */
+    /* JADX INFO: renamed from: d, reason: from getter */
     public String getAnalyticsSchemaTypeName() {
         return this.analyticsSchemaTypeName;
     }

@@ -1,7 +1,6 @@
 package androidx.room;
 
 import android.database.Cursor;
-import android.database.SQLException;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.annotation.RestrictTo;
@@ -13,8 +12,8 @@ import java.util.Iterator;
 import java.util.List;
 import p007b.p100d.p104b.p105a.outline;
 
+/* JADX INFO: loaded from: classes.dex */
 @RestrictTo({RestrictTo.Scope.LIBRARY_GROUP_PREFIX})
-/* loaded from: classes.dex */
 public class RoomOpenHelper extends SupportSQLiteOpenHelper.Callback {
 
     @Nullable
@@ -84,7 +83,7 @@ public class RoomOpenHelper extends SupportSQLiteOpenHelper.Callback {
         this.mLegacyHash = str2;
     }
 
-    private void checkIdentity(SupportSQLiteDatabase supportSQLiteDatabase) throws SQLException {
+    private void checkIdentity(SupportSQLiteDatabase supportSQLiteDatabase) {
         if (!hasRoomMasterTable(supportSQLiteDatabase)) {
             ValidationResult validationResultOnValidateSchema = this.mDelegate.onValidateSchema(supportSQLiteDatabase);
             if (validationResultOnValidateSchema.isValid) {
@@ -110,7 +109,7 @@ public class RoomOpenHelper extends SupportSQLiteOpenHelper.Callback {
         }
     }
 
-    private void createMasterTableIfNotExists(SupportSQLiteDatabase supportSQLiteDatabase) throws SQLException {
+    private void createMasterTableIfNotExists(SupportSQLiteDatabase supportSQLiteDatabase) {
         supportSQLiteDatabase.execSQL(RoomMasterTable.CREATE_QUERY);
     }
 
@@ -144,7 +143,7 @@ public class RoomOpenHelper extends SupportSQLiteOpenHelper.Callback {
         }
     }
 
-    private void updateIdentity(SupportSQLiteDatabase supportSQLiteDatabase) throws SQLException {
+    private void updateIdentity(SupportSQLiteDatabase supportSQLiteDatabase) {
         createMasterTableIfNotExists(supportSQLiteDatabase);
         supportSQLiteDatabase.execSQL(RoomMasterTable.createInsertQuery(this.mIdentityHash));
     }
@@ -155,7 +154,7 @@ public class RoomOpenHelper extends SupportSQLiteOpenHelper.Callback {
     }
 
     @Override // androidx.sqlite.db.SupportSQLiteOpenHelper.Callback
-    public void onCreate(SupportSQLiteDatabase supportSQLiteDatabase) throws SQLException {
+    public void onCreate(SupportSQLiteDatabase supportSQLiteDatabase) {
         boolean zHasEmptySchema = hasEmptySchema(supportSQLiteDatabase);
         this.mDelegate.createAllTables(supportSQLiteDatabase);
         if (!zHasEmptySchema) {
@@ -171,12 +170,12 @@ public class RoomOpenHelper extends SupportSQLiteOpenHelper.Callback {
     }
 
     @Override // androidx.sqlite.db.SupportSQLiteOpenHelper.Callback
-    public void onDowngrade(SupportSQLiteDatabase supportSQLiteDatabase, int i, int i2) throws SQLException {
+    public void onDowngrade(SupportSQLiteDatabase supportSQLiteDatabase, int i, int i2) {
         onUpgrade(supportSQLiteDatabase, i, i2);
     }
 
     @Override // androidx.sqlite.db.SupportSQLiteOpenHelper.Callback
-    public void onOpen(SupportSQLiteDatabase supportSQLiteDatabase) throws SQLException {
+    public void onOpen(SupportSQLiteDatabase supportSQLiteDatabase) {
         super.onOpen(supportSQLiteDatabase);
         checkIdentity(supportSQLiteDatabase);
         this.mDelegate.onOpen(supportSQLiteDatabase);
@@ -184,7 +183,7 @@ public class RoomOpenHelper extends SupportSQLiteOpenHelper.Callback {
     }
 
     @Override // androidx.sqlite.db.SupportSQLiteOpenHelper.Callback
-    public void onUpgrade(SupportSQLiteDatabase supportSQLiteDatabase, int i, int i2) throws SQLException {
+    public void onUpgrade(SupportSQLiteDatabase supportSQLiteDatabase, int i, int i2) {
         boolean z2;
         List<Migration> listFindMigrationPath;
         DatabaseConfiguration databaseConfiguration = this.mConfiguration;

@@ -7,7 +7,7 @@ import com.adjust.sdk.scheduler.TimerOnce;
 import java.lang.ref.WeakReference;
 import org.json.JSONObject;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class AttributionHandler implements IAttributionHandler {
     private static final String ATTRIBUTION_TIMER_NAME = "Attribution timer";
     private WeakReference<IActivityHandler> activityHandlerWeakRef;
@@ -19,7 +19,7 @@ public class AttributionHandler implements IAttributionHandler {
     private ThreadScheduler scheduler = new SingleThreadCachedScheduler("AttributionHandler");
     private TimerOnce timer = new TimerOnce(new RunnableC53731(), ATTRIBUTION_TIMER_NAME);
 
-    /* renamed from: com.adjust.sdk.AttributionHandler$1 */
+    /* JADX INFO: renamed from: com.adjust.sdk.AttributionHandler$1 */
     public class RunnableC53731 implements Runnable {
         public RunnableC53731() {
         }
@@ -30,7 +30,7 @@ public class AttributionHandler implements IAttributionHandler {
         }
     }
 
-    /* renamed from: com.adjust.sdk.AttributionHandler$2 */
+    /* JADX INFO: renamed from: com.adjust.sdk.AttributionHandler$2 */
     public class RunnableC53742 implements Runnable {
         public RunnableC53742() {
         }
@@ -42,7 +42,7 @@ public class AttributionHandler implements IAttributionHandler {
         }
     }
 
-    /* renamed from: com.adjust.sdk.AttributionHandler$3 */
+    /* JADX INFO: renamed from: com.adjust.sdk.AttributionHandler$3 */
     public class RunnableC53753 implements Runnable {
         public final /* synthetic */ SessionResponseData val$sessionResponseData;
 
@@ -60,7 +60,7 @@ public class AttributionHandler implements IAttributionHandler {
         }
     }
 
-    /* renamed from: com.adjust.sdk.AttributionHandler$4 */
+    /* JADX INFO: renamed from: com.adjust.sdk.AttributionHandler$4 */
     public class RunnableC53764 implements Runnable {
         public final /* synthetic */ SdkClickResponseData val$sdkClickResponseData;
 
@@ -78,7 +78,7 @@ public class AttributionHandler implements IAttributionHandler {
         }
     }
 
-    /* renamed from: com.adjust.sdk.AttributionHandler$5 */
+    /* JADX INFO: renamed from: com.adjust.sdk.AttributionHandler$5 */
     public class RunnableC53775 implements Runnable {
         public final /* synthetic */ AttributionResponseData val$attributionResponseData;
 
@@ -96,7 +96,7 @@ public class AttributionHandler implements IAttributionHandler {
         }
     }
 
-    /* renamed from: com.adjust.sdk.AttributionHandler$6 */
+    /* JADX INFO: renamed from: com.adjust.sdk.AttributionHandler$6 */
     public class RunnableC53786 implements Runnable {
         public RunnableC53786() {
         }

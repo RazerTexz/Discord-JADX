@@ -41,7 +41,7 @@ import androidx.appcompat.view.menu.ShowableListMenu;
 import androidx.core.view.TintableBackgroundView;
 import androidx.core.view.ViewCompat;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class AppCompatSpinner extends Spinner implements TintableBackgroundView {
     private static final int[] ATTRS_ANDROID_SPINNERMODE = {R.attr.spinnerMode};
     private static final int MAX_ITEMS_MEASURED = 15;
@@ -58,7 +58,7 @@ public class AppCompatSpinner extends Spinner implements TintableBackgroundView 
     private SpinnerAdapter mTempAdapter;
     public final Rect mTempRect;
 
-    /* renamed from: androidx.appcompat.widget.AppCompatSpinner$1 */
+    /* JADX INFO: renamed from: androidx.appcompat.widget.AppCompatSpinner$1 */
     public class C01021 extends ForwardingListener {
         public final /* synthetic */ DropdownPopup val$popup;
 
@@ -84,7 +84,7 @@ public class AppCompatSpinner extends Spinner implements TintableBackgroundView 
         }
     }
 
-    /* renamed from: androidx.appcompat.widget.AppCompatSpinner$2 */
+    /* JADX INFO: renamed from: androidx.appcompat.widget.AppCompatSpinner$2 */
     public class ViewTreeObserverOnGlobalLayoutListenerC01032 implements ViewTreeObserver.OnGlobalLayoutListener {
         public ViewTreeObserverOnGlobalLayoutListenerC01032() {
         }
@@ -344,7 +344,7 @@ public class AppCompatSpinner extends Spinner implements TintableBackgroundView 
         private int mOriginalHorizontalOffset;
         private final Rect mVisibleRect;
 
-        /* renamed from: androidx.appcompat.widget.AppCompatSpinner$DropdownPopup$1 */
+        /* JADX INFO: renamed from: androidx.appcompat.widget.AppCompatSpinner$DropdownPopup$1 */
         public class C01041 implements AdapterView.OnItemClickListener {
             public final /* synthetic */ AppCompatSpinner val$this$0;
 
@@ -363,13 +363,13 @@ public class AppCompatSpinner extends Spinner implements TintableBackgroundView 
             }
         }
 
-        /* renamed from: androidx.appcompat.widget.AppCompatSpinner$DropdownPopup$2 */
+        /* JADX INFO: renamed from: androidx.appcompat.widget.AppCompatSpinner$DropdownPopup$2 */
         public class ViewTreeObserverOnGlobalLayoutListenerC01052 implements ViewTreeObserver.OnGlobalLayoutListener {
             public ViewTreeObserverOnGlobalLayoutListenerC01052() {
             }
 
             @Override // android.view.ViewTreeObserver.OnGlobalLayoutListener
-            public void onGlobalLayout() throws IllegalArgumentException {
+            public void onGlobalLayout() {
                 DropdownPopup dropdownPopup = DropdownPopup.this;
                 if (!dropdownPopup.isVisibleToUser(AppCompatSpinner.this)) {
                     DropdownPopup.this.dismiss();
@@ -380,7 +380,7 @@ public class AppCompatSpinner extends Spinner implements TintableBackgroundView 
             }
         }
 
-        /* renamed from: androidx.appcompat.widget.AppCompatSpinner$DropdownPopup$3 */
+        /* JADX INFO: renamed from: androidx.appcompat.widget.AppCompatSpinner$DropdownPopup$3 */
         public class C01063 implements PopupWindow.OnDismissListener {
             public final /* synthetic */ ViewTreeObserver.OnGlobalLayoutListener val$layoutListener;
 
@@ -406,7 +406,7 @@ public class AppCompatSpinner extends Spinner implements TintableBackgroundView 
             setOnItemClickListener(new C01041(AppCompatSpinner.this));
         }
 
-        public static /* synthetic */ void access$001(DropdownPopup dropdownPopup) throws IllegalArgumentException {
+        public static /* synthetic */ void access$001(DropdownPopup dropdownPopup) {
             super.show();
         }
 
@@ -474,7 +474,7 @@ public class AppCompatSpinner extends Spinner implements TintableBackgroundView 
         }
 
         @Override // androidx.appcompat.widget.AppCompatSpinner.SpinnerPopup
-        public void show(int i, int i2) throws IllegalArgumentException {
+        public void show(int i, int i2) {
             ViewTreeObserver viewTreeObserver;
             boolean zIsShowing = isShowing();
             computeContentWidth();
@@ -498,7 +498,7 @@ public class AppCompatSpinner extends Spinner implements TintableBackgroundView 
         public static final Parcelable.Creator<SavedState> CREATOR = new C01071();
         public boolean mShowDropdown;
 
-        /* renamed from: androidx.appcompat.widget.AppCompatSpinner$SavedState$1 */
+        /* JADX INFO: renamed from: androidx.appcompat.widget.AppCompatSpinner$SavedState$1 */
         public class C01071 implements Parcelable.Creator<SavedState> {
             @Override // android.os.Parcelable.Creator
             public /* bridge */ /* synthetic */ SavedState createFromParcel(Parcel parcel) {
@@ -879,6 +879,9 @@ public class AppCompatSpinner extends Spinner implements TintableBackgroundView 
     /* JADX WARN: Type inference failed for: r11v3 */
     /* JADX WARN: Type inference failed for: r11v4 */
     /* JADX WARN: Type inference failed for: r11v7, types: [android.content.res.TypedArray] */
+    /* JADX WARN: Type inference failed for: r2v2 */
+    /* JADX WARN: Type inference failed for: r2v3 */
+    /* JADX WARN: Type inference failed for: r2v4, types: [android.content.res.TypedArray] */
     /* JADX WARN: Type inference failed for: r6v0, types: [android.view.View, android.widget.Spinner, androidx.appcompat.widget.AppCompatSpinner] */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
@@ -903,7 +906,7 @@ public class AppCompatSpinner extends Spinner implements TintableBackgroundView 
             }
         }
         ?? r11 = -1;
-        TypedArray typedArray = null;
+        ?? r2 = 0;
         try {
             if (i2 == -1) {
                 try {
@@ -920,7 +923,6 @@ public class AppCompatSpinner extends Spinner implements TintableBackgroundView 
                         Log.i(TAG, "Could not read android:spinnerMode", e);
                         r11 = typedArrayObtainStyledAttributes;
                         if (typedArrayObtainStyledAttributes != null) {
-                            r11.recycle();
                         }
                         if (i2 != 0) {
                         }
@@ -939,8 +941,8 @@ public class AppCompatSpinner extends Spinner implements TintableBackgroundView 
                     typedArrayObtainStyledAttributes = null;
                 } catch (Throwable th) {
                     th = th;
-                    if (typedArray != null) {
-                        typedArray.recycle();
+                    if (r2 != 0) {
+                        r2.recycle();
                     }
                     throw th;
                 }
@@ -976,7 +978,7 @@ public class AppCompatSpinner extends Spinner implements TintableBackgroundView 
             this.mBackgroundTintHelper.loadFromAttributes(attributeSet, i);
         } catch (Throwable th2) {
             th = th2;
-            typedArray = r11;
+            r2 = r11;
         }
     }
 }

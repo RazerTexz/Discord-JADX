@@ -4,7 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.view.ClassesInfoCache;
 import androidx.view.Lifecycle;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class ReflectiveGenericLifecycleObserver implements LifecycleEventObserver {
     private final ClassesInfoCache.CallbackInfo mInfo;
     private final Object mWrapped;
@@ -15,7 +15,7 @@ public class ReflectiveGenericLifecycleObserver implements LifecycleEventObserve
     }
 
     @Override // androidx.view.LifecycleEventObserver
-    public void onStateChanged(@NonNull LifecycleOwner lifecycleOwner, @NonNull Lifecycle.Event event) throws IllegalArgumentException {
+    public void onStateChanged(@NonNull LifecycleOwner lifecycleOwner, @NonNull Lifecycle.Event event) {
         this.mInfo.invokeCallbacks(lifecycleOwner, event, this.mWrapped);
     }
 }

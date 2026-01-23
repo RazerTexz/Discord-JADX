@@ -2,8 +2,8 @@ package com.discord.widgets.settings;
 
 import android.view.View;
 
-/* compiled from: WidgetSettingsVoice.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetSettingsVoice.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetSettingsVoice$onViewBound$$inlined$let$lambda$1 implements Runnable {
     public final /* synthetic */ View $view$inlined;
     public final /* synthetic */ WidgetSettingsVoice this$0;

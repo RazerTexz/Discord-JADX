@@ -5,9 +5,9 @@ import kotlin.jvm.functions.Function2;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetOauth2Authorize.kt */
-/* renamed from: com.discord.widgets.auth.WidgetOauth2Authorize$Companion$createOauthAuthorize$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.auth.WidgetOauth2Authorize$Companion$createOauthAuthorize$1, reason: use source file name */
+/* JADX INFO: compiled from: WidgetOauth2Authorize.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetOauth2Authorize2 extends Lambda implements Function2<Uri, String, String> {
     public static final WidgetOauth2Authorize2 INSTANCE = new WidgetOauth2Authorize2();
 
@@ -20,7 +20,7 @@ public final class WidgetOauth2Authorize2 extends Lambda implements Function2<Ur
         return invoke2(uri, str);
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final String invoke2(Uri uri, String str) {
         Intrinsics3.checkNotNullParameter(uri, "$this$getQueryParameterOrThrow");
         Intrinsics3.checkNotNullParameter(str, "parameterName");

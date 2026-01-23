@@ -1,8 +1,8 @@
 package com.discord.widgets.chat.list.entries;
 
 
-/* compiled from: DividerEntry.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: DividerEntry.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class DividerEntry extends ChatListEntry {
     private final int type = 15;
     private final String key = String.valueOf(getType());

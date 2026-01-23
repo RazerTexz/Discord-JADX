@@ -13,10 +13,10 @@ import p507d0.p584w.p586i.p587a.ContinuationImpl5;
 import p507d0.p584w.p586i.p587a.DebugMetadata;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ViewGroup.kt */
+/* JADX INFO: renamed from: androidx.core.view.ViewGroupKt$descendants$1, reason: use source file name */
+/* JADX INFO: compiled from: ViewGroup.kt */
+/* JADX INFO: loaded from: classes.dex */
 @DebugMetadata(m10084c = "androidx.core.view.ViewGroupKt$descendants$1", m10085f = "ViewGroup.kt", m10086l = {97, 99}, m10087m = "invokeSuspend")
-/* renamed from: androidx.core.view.ViewGroupKt$descendants$1, reason: use source file name */
-/* loaded from: classes.dex */
 public final class ViewGroup3 extends ContinuationImpl5 implements Function2<SequenceBuilder2<? super View>, Continuation<? super Unit>, Object> {
     public final /* synthetic */ ViewGroup $this_descendants;
     public int I$0;
@@ -39,7 +39,7 @@ public final class ViewGroup3 extends ContinuationImpl5 implements Function2<Seq
         return viewGroup3;
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final Object invoke2(SequenceBuilder2<? super View> sequenceBuilder2, Continuation<? super Unit> continuation) {
         return ((ViewGroup3) create(sequenceBuilder2, continuation)).invokeSuspend(Unit.f27425a);
     }

@@ -3,10 +3,10 @@ package com.google.android.exoplayer2.upstream;
 import androidx.annotation.Nullable;
 import java.io.IOException;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public class DataSourceException extends IOException {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static final /* synthetic */ int f20224j = 0;
     public final int reason;
 

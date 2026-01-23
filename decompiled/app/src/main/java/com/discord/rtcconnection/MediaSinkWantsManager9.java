@@ -2,9 +2,9 @@ package com.discord.rtcconnection;
 
 import kotlin.jvm.internal.DefaultConstructorMarker;
 
-/* compiled from: MediaSinkWantsManager.kt */
-/* renamed from: com.discord.rtcconnection.EncodeQuality, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: com.discord.rtcconnection.EncodeQuality, reason: use source file name */
+/* JADX INFO: compiled from: MediaSinkWantsManager.kt */
+/* JADX INFO: loaded from: classes.dex */
 public enum MediaSinkWantsManager9 {
     Zero(0),
     Ten(10),
@@ -19,12 +19,12 @@ public enum MediaSinkWantsManager9 {
     Hundred(100);
 
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private final int value;
 
-    /* compiled from: MediaSinkWantsManager.kt */
-    /* renamed from: com.discord.rtcconnection.EncodeQuality$a, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: com.discord.rtcconnection.EncodeQuality$a, reason: from kotlin metadata */
+    /* JADX INFO: compiled from: MediaSinkWantsManager.kt */
     public static final class Companion {
         public Companion(DefaultConstructorMarker defaultConstructorMarker) {
         }

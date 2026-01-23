@@ -4,12 +4,12 @@ import android.content.SharedPreferences;
 import p007b.p445m.p446a.SyncResponseCache;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: SharedPreferenceSyncResponseCache.kt */
-/* renamed from: b.m.a.g.c, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.m.a.g.c, reason: use source file name */
+/* JADX INFO: compiled from: SharedPreferenceSyncResponseCache.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class SharedPreferenceSyncResponseCache implements SyncResponseCache {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final SharedPreferences f13648a;
 
     public SharedPreferenceSyncResponseCache(SharedPreferences sharedPreferences) {
@@ -18,19 +18,19 @@ public final class SharedPreferenceSyncResponseCache implements SyncResponseCach
     }
 
     @Override // p007b.p445m.p446a.SyncResponseCache
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public void mo7133a(long j) {
         this.f13648a.edit().putLong("com.lyft.kronos.cached_elapsed_time", j).apply();
     }
 
     @Override // p007b.p445m.p446a.SyncResponseCache
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public void mo7134b(long j) {
         this.f13648a.edit().putLong("com.lyft.kronos.cached_offset", j).apply();
     }
 
     @Override // p007b.p445m.p446a.SyncResponseCache
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public long mo7135c() {
         return this.f13648a.getLong("com.lyft.kronos.cached_elapsed_time", 0L);
     }
@@ -41,19 +41,19 @@ public final class SharedPreferenceSyncResponseCache implements SyncResponseCach
     }
 
     @Override // p007b.p445m.p446a.SyncResponseCache
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public long mo7136d() {
         return this.f13648a.getLong("com.lyft.kronos.cached_offset", 0L);
     }
 
     @Override // p007b.p445m.p446a.SyncResponseCache
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public long mo7137e() {
         return this.f13648a.getLong("com.lyft.kronos.cached_current_time", 0L);
     }
 
     @Override // p007b.p445m.p446a.SyncResponseCache
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public void mo7138f(long j) {
         this.f13648a.edit().putLong("com.lyft.kronos.cached_current_time", j).apply();
     }

@@ -3,8 +3,8 @@ package com.discord.widgets.chat.list.entries;
 import p001a0.p002a.p003a.C0002b;
 import p007b.p100d.p104b.p105a.outline;
 
-/* compiled from: SpacerEntry.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: SpacerEntry.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final /* data */ class SpacerEntry extends ChatListEntry {
     private final long channelId;
     private final String key;
@@ -18,7 +18,7 @@ public final /* data */ class SpacerEntry extends ChatListEntry {
         this.key = sb.toString();
     }
 
-    /* renamed from: component1, reason: from getter */
+    /* JADX INFO: renamed from: component1, reason: from getter */
     private final long getChannelId() {
         return this.channelId;
     }

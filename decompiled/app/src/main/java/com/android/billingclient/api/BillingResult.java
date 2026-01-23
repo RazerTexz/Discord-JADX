@@ -1,12 +1,12 @@
 package com.android.billingclient.api;
 
-/* compiled from: com.android.billingclient:billing@@4.0.0 */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: com.android.billingclient:billing@@4.0.0 */
+/* JADX INFO: loaded from: classes.dex */
 public final class BillingResult {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public int f14557a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public String f14558b;
 }

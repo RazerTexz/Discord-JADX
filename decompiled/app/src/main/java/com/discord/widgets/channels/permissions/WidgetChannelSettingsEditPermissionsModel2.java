@@ -20,14 +20,14 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 import p658rx.functions.Func7;
 
-/* compiled from: WidgetChannelSettingsEditPermissionsModel.kt */
-/* renamed from: com.discord.widgets.channels.permissions.WidgetChannelSettingsEditPermissionsModel$Companion$getForRole$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.channels.permissions.WidgetChannelSettingsEditPermissionsModel$Companion$getForRole$1, reason: use source file name */
+/* JADX INFO: compiled from: WidgetChannelSettingsEditPermissionsModel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetChannelSettingsEditPermissionsModel2<T1, T2, T3, T4, T5, T6, T7, R> implements Func7<Channel, MeUser, Guild, Long, Map<Long, ? extends GuildRole>, Map<Long, ? extends GuildMember>, Boolean, WidgetChannelSettingsEditPermissionsModel> {
     public final /* synthetic */ long $targetRoleId;
 
-    /* compiled from: WidgetChannelSettingsEditPermissionsModel.kt */
-    /* renamed from: com.discord.widgets.channels.permissions.WidgetChannelSettingsEditPermissionsModel$Companion$getForRole$1$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.channels.permissions.WidgetChannelSettingsEditPermissionsModel$Companion$getForRole$1$1 */
+    /* JADX INFO: compiled from: WidgetChannelSettingsEditPermissionsModel.kt */
     public static final class C75431 extends Lambda implements Function1<PermissionOverwrite, Boolean> {
         public C75431() {
             super(1);
@@ -38,14 +38,14 @@ public final class WidgetChannelSettingsEditPermissionsModel2<T1, T2, T3, T4, T5
             return Boolean.valueOf(invoke2(permissionOverwrite));
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final boolean invoke2(PermissionOverwrite permissionOverwrite) {
             return permissionOverwrite.getId() == WidgetChannelSettingsEditPermissionsModel2.this.$targetRoleId;
         }
     }
 
-    /* compiled from: WidgetChannelSettingsEditPermissionsModel.kt */
-    /* renamed from: com.discord.widgets.channels.permissions.WidgetChannelSettingsEditPermissionsModel$Companion$getForRole$1$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.channels.permissions.WidgetChannelSettingsEditPermissionsModel$Companion$getForRole$1$2 */
+    /* JADX INFO: compiled from: WidgetChannelSettingsEditPermissionsModel.kt */
     public static final class C75442 extends Lambda implements Function1<PermissionOverwrite, Boolean> {
         public C75442() {
             super(1);
@@ -56,7 +56,7 @@ public final class WidgetChannelSettingsEditPermissionsModel2<T1, T2, T3, T4, T5
             return Boolean.valueOf(invoke2(permissionOverwrite));
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final boolean invoke2(PermissionOverwrite permissionOverwrite) {
             return permissionOverwrite.getId() == WidgetChannelSettingsEditPermissionsModel2.this.$targetRoleId;
         }
@@ -71,7 +71,7 @@ public final class WidgetChannelSettingsEditPermissionsModel2<T1, T2, T3, T4, T5
         return call2(channel, meUser, guild, l, (Map<Long, GuildRole>) map, (Map<Long, GuildMember>) map2, bool);
     }
 
-    /* renamed from: call, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
     public final WidgetChannelSettingsEditPermissionsModel call2(Channel channel, MeUser meUser, Guild guild, Long l, Map<Long, GuildRole> map, Map<Long, GuildMember> map2, Boolean bool) {
         GuildMember guildMember;
         List<Long> roles;

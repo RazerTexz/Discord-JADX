@@ -13,54 +13,54 @@ import p007b.p225i.p226a.p242c.p245b3.SimpleSubtitleDecoder2;
 import p007b.p225i.p226a.p242c.p245b3.SubtitleInputBuffer;
 import p007b.p225i.p226a.p242c.p265v2.DecoderOutputBuffer;
 
-/* compiled from: SimpleDecoder.java */
-/* renamed from: b.i.a.c.v2.h, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.v2.h, reason: use source file name */
+/* JADX INFO: compiled from: SimpleDecoder.java */
+/* JADX INFO: loaded from: classes3.dex */
 public abstract class SimpleDecoder<I extends DecoderInputBuffer, O extends DecoderOutputBuffer, E extends DecoderException> implements Decoder<I, O, E> {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final Thread f7931a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final Object f7932b = new Object();
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final ArrayDeque<I> f7933c = new ArrayDeque<>();
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final ArrayDeque<O> f7934d = new ArrayDeque<>();
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final I[] f7935e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final O[] f7936f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public int f7937g;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public int f7938h;
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     @Nullable
     public I f7939i;
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     @Nullable
     public E f7940j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public boolean f7941k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public boolean f7942l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public int f7943m;
 
-    /* compiled from: SimpleDecoder.java */
-    /* renamed from: b.i.a.c.v2.h$a */
+    /* JADX INFO: renamed from: b.i.a.c.v2.h$a */
+    /* JADX INFO: compiled from: SimpleDecoder.java */
     public class a extends Thread {
         public a(String str) {
             super(str);
@@ -97,7 +97,7 @@ public abstract class SimpleDecoder<I extends DecoderInputBuffer, O extends Deco
 
     @Override // p007b.p225i.p226a.p242c.p265v2.Decoder
     @Nullable
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public Object mo2608b() throws DecoderException {
         O oRemoveFirst;
         synchronized (this.f7932b) {
@@ -109,7 +109,7 @@ public abstract class SimpleDecoder<I extends DecoderInputBuffer, O extends Deco
 
     @Override // p007b.p225i.p226a.p242c.p265v2.Decoder
     @Nullable
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public Object mo2609c() throws DecoderException {
         I i;
         synchronized (this.f7932b) {
@@ -130,7 +130,7 @@ public abstract class SimpleDecoder<I extends DecoderInputBuffer, O extends Deco
     }
 
     @Override // p007b.p225i.p226a.p242c.p265v2.Decoder
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public void mo2610d(Object obj) throws DecoderException {
         DecoderInputBuffer decoderInputBuffer = (DecoderInputBuffer) obj;
         synchronized (this.f7932b) {
@@ -143,15 +143,10 @@ public abstract class SimpleDecoder<I extends DecoderInputBuffer, O extends Deco
     }
 
     @Nullable
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public abstract E mo2616e(I i, O o, boolean z2);
 
-    /* JADX WARN: Removed duplicated region for block: B:34:0x006b  */
-    /* JADX WARN: Removed duplicated region for block: B:62:0x0078 A[EXC_TOP_SPLITTER, SYNTHETIC] */
-    /* renamed from: f */
-    /*
-        Code decompiled incorrectly, please refer to instructions dump.
-    */
+    /* JADX INFO: renamed from: f */
     public final boolean m3557f() throws InterruptedException {
         SubtitleDecoderException subtitleDecoderException;
         SubtitleDecoderException subtitleDecoderException2;
@@ -183,17 +178,9 @@ public abstract class SimpleDecoder<I extends DecoderInputBuffer, O extends Deco
                 } catch (OutOfMemoryError e) {
                     subtitleDecoderException = new SubtitleDecoderException("Unexpected decode error", e);
                     subtitleDecoderException2 = subtitleDecoderException;
-                    if (subtitleDecoderException2 != null) {
-                    }
-                    synchronized (this.f7932b) {
-                    }
                 } catch (RuntimeException e2) {
                     subtitleDecoderException = new SubtitleDecoderException("Unexpected decode error", e2);
                     subtitleDecoderException2 = subtitleDecoderException;
-                    if (subtitleDecoderException2 != null) {
-                    }
-                    synchronized (this.f7932b) {
-                    }
                 }
                 if (subtitleDecoderException2 != null) {
                     synchronized (this.f7932b) {
@@ -237,7 +224,7 @@ public abstract class SimpleDecoder<I extends DecoderInputBuffer, O extends Deco
         }
     }
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public final void m3558g() {
         if (!this.f7933c.isEmpty() && this.f7938h > 0) {
             this.f7932b.notify();
@@ -245,7 +232,7 @@ public abstract class SimpleDecoder<I extends DecoderInputBuffer, O extends Deco
     }
 
     /* JADX INFO: Thrown type has an unknown type hierarchy: E extends com.google.android.exoplayer2.decoder.DecoderException */
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public final void m3559h() throws E, DecoderException {
         E e = this.f7940j;
         if (e != null) {
@@ -253,7 +240,7 @@ public abstract class SimpleDecoder<I extends DecoderInputBuffer, O extends Deco
         }
     }
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public final void m3560i(I i) {
         i.mo3856p();
         I[] iArr = this.f7935e;

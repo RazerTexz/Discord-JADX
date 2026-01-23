@@ -8,30 +8,30 @@ import java.util.Iterator;
 import java.util.Set;
 import java.util.concurrent.CopyOnWriteArraySet;
 
-/* compiled from: CameraLogger.java */
-/* renamed from: b.o.a.b, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.o.a.b, reason: use source file name */
+/* JADX INFO: compiled from: CameraLogger.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class CameraLogger {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static int f13678a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static Set<b> f13679b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     @VisibleForTesting
     public static b f13680c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     @NonNull
     public String f13681d;
 
-    /* compiled from: CameraLogger.java */
-    /* renamed from: b.o.a.b$a */
+    /* JADX INFO: renamed from: b.o.a.b$a */
+    /* JADX INFO: compiled from: CameraLogger.java */
     public class a implements b {
         @Override // p007b.p452o.p453a.CameraLogger.b
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public void mo7160a(int i, @NonNull String str, @NonNull String str2, @Nullable Throwable th) {
             if (i == 0) {
                 Log.v(str, str2, th);
@@ -50,10 +50,10 @@ public final class CameraLogger {
         }
     }
 
-    /* compiled from: CameraLogger.java */
-    /* renamed from: b.o.a.b$b */
+    /* JADX INFO: renamed from: b.o.a.b$b */
+    /* JADX INFO: compiled from: CameraLogger.java */
     public interface b {
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         void mo7160a(int i, @NonNull String str, @NonNull String str2, @Nullable Throwable th);
     }
 
@@ -71,7 +71,7 @@ public final class CameraLogger {
     }
 
     @Nullable
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final String m7159a(int i, @NonNull Object... objArr) {
         Throwable th = null;
         if (!(f13678a <= i && f13679b.size() > 0)) {

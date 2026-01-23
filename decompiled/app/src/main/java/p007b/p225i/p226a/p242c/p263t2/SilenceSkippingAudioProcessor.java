@@ -5,45 +5,45 @@ import java.nio.ByteBuffer;
 import p007b.p085c.p086a.p087a0.AnimatableValueParser;
 import p007b.p225i.p226a.p242c.p259f3.Util2;
 
-/* compiled from: SilenceSkippingAudioProcessor.java */
-/* renamed from: b.i.a.c.t2.c0, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.t2.c0, reason: use source file name */
+/* JADX INFO: compiled from: SilenceSkippingAudioProcessor.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class SilenceSkippingAudioProcessor extends BaseAudioProcessor {
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public final long f7688i;
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final long f7689j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final short f7690k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public int f7691l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public boolean f7692m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public byte[] f7693n;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public byte[] f7694o;
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public int f7695p;
 
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     public int f7696q;
 
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     public int f7697r;
 
-    /* renamed from: s */
+    /* JADX INFO: renamed from: s */
     public boolean f7698s;
 
-    /* renamed from: t */
+    /* JADX INFO: renamed from: t */
     public long f7699t;
 
     public SilenceSkippingAudioProcessor() {
@@ -57,13 +57,13 @@ public final class SilenceSkippingAudioProcessor extends BaseAudioProcessor {
     }
 
     @Override // p007b.p225i.p226a.p242c.p263t2.BaseAudioProcessor, com.google.android.exoplayer2.audio.AudioProcessor
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public boolean mo3472a() {
         return this.f7692m;
     }
 
     @Override // com.google.android.exoplayer2.audio.AudioProcessor
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public void mo3470c(ByteBuffer byteBuffer) {
         int iPosition;
         while (byteBuffer.hasRemaining() && !this.f7842g.hasRemaining()) {
@@ -112,9 +112,9 @@ public final class SilenceSkippingAudioProcessor extends BaseAudioProcessor {
                     if (i5 == bArr2.length) {
                         if (this.f7698s) {
                             m3477l(bArr2, this.f7697r);
-                            this.f7699t += (this.f7696q - (this.f7697r * 2)) / this.f7691l;
+                            this.f7699t += (long) ((this.f7696q - (this.f7697r * 2)) / this.f7691l);
                         } else {
-                            this.f7699t += (i5 - this.f7697r) / this.f7691l;
+                            this.f7699t += (long) ((i5 - this.f7697r) / this.f7691l);
                         }
                         m3478m(byteBuffer, this.f7693n, this.f7696q);
                         this.f7696q = 0;
@@ -133,7 +133,7 @@ public final class SilenceSkippingAudioProcessor extends BaseAudioProcessor {
                 int iLimit4 = byteBuffer.limit();
                 int iM3476k2 = m3476k(byteBuffer);
                 byteBuffer.limit(iM3476k2);
-                this.f7699t += byteBuffer.remaining() / this.f7691l;
+                this.f7699t += (long) (byteBuffer.remaining() / this.f7691l);
                 m3478m(byteBuffer, this.f7694o, this.f7697r);
                 if (iM3476k2 < iLimit4) {
                     m3477l(this.f7694o, this.f7697r);
@@ -145,7 +145,7 @@ public final class SilenceSkippingAudioProcessor extends BaseAudioProcessor {
     }
 
     @Override // p007b.p225i.p226a.p242c.p263t2.BaseAudioProcessor
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public AudioProcessor.C10685a mo3471f(AudioProcessor.C10685a c10685a) throws AudioProcessor.UnhandledAudioFormatException {
         if (c10685a.f19698d == 2) {
             return this.f7692m ? c10685a : AudioProcessor.C10685a.f19695a;
@@ -154,7 +154,7 @@ public final class SilenceSkippingAudioProcessor extends BaseAudioProcessor {
     }
 
     @Override // p007b.p225i.p226a.p242c.p263t2.BaseAudioProcessor
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public void mo3473g() {
         if (this.f7692m) {
             AudioProcessor.C10685a c10685a = this.f7837b;
@@ -179,7 +179,7 @@ public final class SilenceSkippingAudioProcessor extends BaseAudioProcessor {
     }
 
     @Override // p007b.p225i.p226a.p242c.p263t2.BaseAudioProcessor
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public void mo3474h() {
         int i = this.f7696q;
         if (i > 0) {
@@ -188,11 +188,11 @@ public final class SilenceSkippingAudioProcessor extends BaseAudioProcessor {
         if (this.f7698s) {
             return;
         }
-        this.f7699t += this.f7697r / this.f7691l;
+        this.f7699t += (long) (this.f7697r / this.f7691l);
     }
 
     @Override // p007b.p225i.p226a.p242c.p263t2.BaseAudioProcessor
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public void mo3475i() {
         this.f7692m = false;
         this.f7697r = 0;
@@ -201,7 +201,7 @@ public final class SilenceSkippingAudioProcessor extends BaseAudioProcessor {
         this.f7694o = bArr;
     }
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final int m3476k(ByteBuffer byteBuffer) {
         for (int iPosition = byteBuffer.position(); iPosition < byteBuffer.limit(); iPosition += 2) {
             if (Math.abs((int) byteBuffer.getShort(iPosition)) > this.f7690k) {
@@ -212,7 +212,7 @@ public final class SilenceSkippingAudioProcessor extends BaseAudioProcessor {
         return byteBuffer.limit();
     }
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final void m3477l(byte[] bArr, int i) {
         m3511j(i).put(bArr, 0, i).flip();
         if (i > 0) {
@@ -220,7 +220,7 @@ public final class SilenceSkippingAudioProcessor extends BaseAudioProcessor {
         }
     }
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public final void m3478m(ByteBuffer byteBuffer, byte[] bArr, int i) {
         int iMin = Math.min(byteBuffer.remaining(), this.f7697r);
         int i2 = this.f7697r - iMin;

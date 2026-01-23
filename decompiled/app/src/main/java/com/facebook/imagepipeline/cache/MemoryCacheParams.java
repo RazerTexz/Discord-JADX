@@ -1,24 +1,24 @@
 package com.facebook.imagepipeline.cache;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class MemoryCacheParams {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final int f19542a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final int f19543b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final int f19544c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final int f19545d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final int f19546e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final long f19547f;
 
     public MemoryCacheParams(int i, int i2, int i3, int i4, int i5, long j) {

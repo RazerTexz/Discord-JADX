@@ -4,12 +4,12 @@ import java.io.File;
 import java.io.FilenameFilter;
 import java.nio.charset.Charset;
 
-/* compiled from: CrashlyticsReportPersistence.java */
-/* renamed from: b.i.c.m.d.o.c, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.c.m.d.o.c, reason: use source file name */
+/* JADX INFO: compiled from: CrashlyticsReportPersistence.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final /* synthetic */ class CrashlyticsReportPersistence3 implements FilenameFilter {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final CrashlyticsReportPersistence3 f12668a = new CrashlyticsReportPersistence3();
 
     @Override // java.io.FilenameFilter

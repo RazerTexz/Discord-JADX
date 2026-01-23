@@ -5,14 +5,14 @@ import java.util.Comparator;
 import kotlin.jvm.functions.Function0;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: ForumBrowserItem.kt */
-/* renamed from: com.discord.widgets.forums.ForumBrowserItem$Companion$postItemComparatorByMostRecent$2, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.forums.ForumBrowserItem$Companion$postItemComparatorByMostRecent$2, reason: use source file name */
+/* JADX INFO: compiled from: ForumBrowserItem.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class ForumBrowserItem2 extends Lambda implements Function0<Comparator<ForumBrowserItem.PostItem>> {
     public static final ForumBrowserItem2 INSTANCE = new ForumBrowserItem2();
 
-    /* compiled from: ForumBrowserItem.kt */
-    /* renamed from: com.discord.widgets.forums.ForumBrowserItem$Companion$postItemComparatorByMostRecent$2$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.forums.ForumBrowserItem$Companion$postItemComparatorByMostRecent$2$1 */
+    /* JADX INFO: compiled from: ForumBrowserItem.kt */
     public static final class C83211<T> implements Comparator<ForumBrowserItem.PostItem> {
         public static final C83211 INSTANCE = new C83211();
 
@@ -21,7 +21,7 @@ public final class ForumBrowserItem2 extends Lambda implements Function0<Compara
             return compare2(postItem, postItem2);
         }
 
-        /* renamed from: compare, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: compare, reason: avoid collision after fix types in other method */
         public final int compare2(ForumBrowserItem.PostItem postItem, ForumBrowserItem.PostItem postItem2) {
             Long mostRecentMessageTimestamp = postItem.getPost().getMostRecentMessageTimestamp();
             Long mostRecentMessageTimestamp2 = postItem2.getPost().getMostRecentMessageTimestamp();
@@ -46,7 +46,7 @@ public final class ForumBrowserItem2 extends Lambda implements Function0<Compara
     }
 
     @Override // kotlin.jvm.functions.Function0
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final Comparator<ForumBrowserItem.PostItem> invoke2() {
         return C83211.INSTANCE;
     }

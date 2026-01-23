@@ -30,13 +30,13 @@ import p507d0.p580t.MapsJVM;
 import p507d0.p580t._Collections;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: GuildMemberListItemGenerator.kt */
-/* renamed from: com.discord.widgets.channels.memberlist.GuildMemberListItemGeneratorKt, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.channels.memberlist.GuildMemberListItemGeneratorKt, reason: use source file name */
+/* JADX INFO: compiled from: GuildMemberListItemGenerator.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class GuildMemberListItemGenerator {
     private static final List<ChannelMembersListAdapter.Item.PlaceholderMember> PLACEHOLDER_INSTANCES = Collections2.listOf((Object[]) new ChannelMembersListAdapter.Item.PlaceholderMember[]{new ChannelMembersListAdapter.Item.PlaceholderMember(0.7f), new ChannelMembersListAdapter.Item.PlaceholderMember(0.3f), new ChannelMembersListAdapter.Item.PlaceholderMember(0.6f), new ChannelMembersListAdapter.Item.PlaceholderMember(0.4f), new ChannelMembersListAdapter.Item.PlaceholderMember(0.6f), new ChannelMembersListAdapter.Item.PlaceholderMember(0.8f), new ChannelMembersListAdapter.Item.PlaceholderMember(0.3f), new ChannelMembersListAdapter.Item.PlaceholderMember(0.5f), new ChannelMembersListAdapter.Item.PlaceholderMember(0.7f), new ChannelMembersListAdapter.Item.PlaceholderMember(0.4f)});
 
-    /* renamed from: com.discord.widgets.channels.memberlist.GuildMemberListItemGeneratorKt$WhenMappings */
+    /* JADX INFO: renamed from: com.discord.widgets.channels.memberlist.GuildMemberListItemGeneratorKt$WhenMappings */
     public final /* synthetic */ class WhenMappings {
         public static final /* synthetic */ int[] $EnumSwitchMapping$0;
 

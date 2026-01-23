@@ -9,9 +9,9 @@ import java.util.Iterator;
 import java.util.Map;
 import java.util.concurrent.Callable;
 
-/* compiled from: EmojiSheetViewModel.kt */
-/* renamed from: com.discord.widgets.emoji.EmojiSheetViewModel$Companion$getGuildForCustomEmoji$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.emoji.EmojiSheetViewModel$Companion$getGuildForCustomEmoji$1, reason: use source file name */
+/* JADX INFO: compiled from: EmojiSheetViewModel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class EmojiSheetViewModel2<V> implements Callable<Guild> {
     public final /* synthetic */ EmojiNode.EmojiIdAndType.Custom $emoji;
     public final /* synthetic */ StoreEmojiCustom $storeEmojiCustom;

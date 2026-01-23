@@ -3,18 +3,17 @@ package com.discord.stores.authentication;
 import android.content.SharedPreferences;
 import com.discord.models.authentication.AuthState;
 import com.google.gson.Gson;
-import com.google.gson.JsonIOException;
 import p007b.p225i.p226a.p288f.p299e.p308o.C3404f;
 import p507d0.p580t.Sets5;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: AuthStateCache.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: AuthStateCache.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class AuthStateCache {
     private final Gson gson;
     private final SharedPreferences prefs;
 
-    /* compiled from: AuthStateCache.kt */
+    /* JADX INFO: compiled from: AuthStateCache.kt */
     public static final class Keys {
         public static final String AUTH_STATE = "STORE_AUTH_STATE";
         public static final Keys INSTANCE = new Keys();
@@ -30,7 +29,7 @@ public final class AuthStateCache {
         this.gson = new Gson();
     }
 
-    public final void cacheAuthState(AuthState authState) throws JsonIOException {
+    public final void cacheAuthState(AuthState authState) {
         if (authState == null) {
             SharedPreferences.Editor editorEdit = this.prefs.edit();
             Intrinsics3.checkNotNullExpressionValue(editorEdit, "editor");

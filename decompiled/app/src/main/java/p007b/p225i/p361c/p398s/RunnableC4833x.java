@@ -16,35 +16,35 @@ import p007b.p100d.p104b.p105a.outline;
 import p007b.p225i.p361c.FirebaseApp2;
 import p007b.p225i.p361c.p398s.C4832w;
 
-/* compiled from: com.google.firebase:firebase-iid@@21.0.0 */
-/* renamed from: b.i.c.s.x */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.c.s.x */
+/* JADX INFO: compiled from: com.google.firebase:firebase-iid@@21.0.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public class RunnableC4833x implements Runnable {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final long f12909j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final PowerManager.WakeLock f12910k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final FirebaseInstanceId f12911l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public ExecutorService f12912m = C4817h.m6726a();
 
-    /* compiled from: com.google.firebase:firebase-iid@@21.0.0 */
-    /* renamed from: b.i.c.s.x$a */
+    /* JADX INFO: renamed from: b.i.c.s.x$a */
+    /* JADX INFO: compiled from: com.google.firebase:firebase-iid@@21.0.0 */
     public static class a extends BroadcastReceiver {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public RunnableC4833x f12913a;
 
         public a(RunnableC4833x runnableC4833x) {
             this.f12913a = runnableC4833x;
         }
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public void m6748a() {
             if (FirebaseInstanceId.m9179l()) {
                 Log.d("FirebaseInstanceId", "Connectivity change received registered");
@@ -75,14 +75,14 @@ public class RunnableC4833x implements Runnable {
         wakeLockNewWakeLock.setReferenceCounted(false);
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public Context m6744a() {
         FirebaseApp2 firebaseApp2 = this.f12911l.f21437f;
         firebaseApp2.m6330a();
         return firebaseApp2.f12118d;
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final void m6745b(String str) {
         FirebaseApp2 firebaseApp2 = this.f12911l.f21437f;
         firebaseApp2.m6330a();
@@ -99,14 +99,14 @@ public class RunnableC4833x implements Runnable {
         }
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public boolean m6746c() {
         ConnectivityManager connectivityManager = (ConnectivityManager) m6744a().getSystemService("connectivity");
         NetworkInfo activeNetworkInfo = connectivityManager != null ? connectivityManager.getActiveNetworkInfo() : null;
         return activeNetworkInfo != null && activeNetworkInfo.isConnected();
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public boolean m6747d() throws IOException {
         C4832w.a aVarM9187j = this.f12911l.m9187j();
         boolean z2 = true;

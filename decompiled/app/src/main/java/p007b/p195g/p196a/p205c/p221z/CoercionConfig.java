@@ -3,12 +3,12 @@ package p007b.p195g.p196a.p205c.p221z;
 import java.io.Serializable;
 import p007b.p085c.p086a.p095y.C1563b;
 
-/* compiled from: CoercionConfig.java */
-/* renamed from: b.g.a.c.z.c, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.g.a.c.z.c, reason: use source file name */
+/* JADX INFO: compiled from: CoercionConfig.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class CoercionConfig implements Serializable {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static final int f5080j;
     private static final long serialVersionUID = 1;
     public final CoercionAction[] _coercionsByShape = new CoercionAction[f5080j];

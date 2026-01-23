@@ -3,9 +3,9 @@ package p007b.p195g.p196a.p205c;
 import p007b.p195g.p196a.p198b.JsonFactory;
 import p007b.p195g.p196a.p198b.ObjectCodec;
 
-/* compiled from: MappingJsonFactory.java */
-/* renamed from: b.g.a.c.q, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.g.a.c.q, reason: use source file name */
+/* JADX INFO: compiled from: MappingJsonFactory.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class MappingJsonFactory extends JsonFactory {
     private static final long serialVersionUID = -1;
 
@@ -15,7 +15,7 @@ public class MappingJsonFactory extends JsonFactory {
     }
 
     @Override // p007b.p195g.p196a.p198b.JsonFactory
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public ObjectCodec mo1627b() {
         return (ObjectMapper) this._objectCodec;
     }

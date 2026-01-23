@@ -16,8 +16,8 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 import com.google.android.material.C10817R;
 
+/* JADX INFO: loaded from: classes3.dex */
 @RestrictTo({RestrictTo.Scope.LIBRARY_GROUP})
-/* loaded from: classes3.dex */
 public class ScrimInsetsFrameLayout extends FrameLayout {
     private boolean drawBottomInsetForeground;
     private boolean drawTopInsetForeground;
@@ -27,7 +27,7 @@ public class ScrimInsetsFrameLayout extends FrameLayout {
     public Rect insets;
     private Rect tempRect;
 
-    /* renamed from: com.google.android.material.internal.ScrimInsetsFrameLayout$a */
+    /* JADX INFO: renamed from: com.google.android.material.internal.ScrimInsetsFrameLayout$a */
     public class C10943a implements OnApplyWindowInsetsListener {
         public C10943a() {
         }

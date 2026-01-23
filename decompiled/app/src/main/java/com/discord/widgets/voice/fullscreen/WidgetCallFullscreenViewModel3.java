@@ -7,9 +7,9 @@ import java.util.Set;
 import kotlin.jvm.functions.Function0;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetCallFullscreenViewModel.kt */
-/* renamed from: com.discord.widgets.voice.fullscreen.WidgetCallFullscreenViewModel$ViewState$Valid$menuItems$2, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: com.discord.widgets.voice.fullscreen.WidgetCallFullscreenViewModel$ViewState$Valid$menuItems$2, reason: use source file name */
+/* JADX INFO: compiled from: WidgetCallFullscreenViewModel.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class WidgetCallFullscreenViewModel3 extends Lambda implements Function0<Set<? extends WidgetCallFullscreenViewModel.MenuItem>> {
     public final /* synthetic */ WidgetCallFullscreenViewModel.ViewState.Valid this$0;
 
@@ -25,7 +25,7 @@ public final class WidgetCallFullscreenViewModel3 extends Lambda implements Func
     }
 
     @Override // kotlin.jvm.functions.Function0
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final Set<? extends WidgetCallFullscreenViewModel.MenuItem> invoke2() {
         WidgetCallFullscreenViewModel.ViewState.Valid valid = this.this$0;
         return WidgetCallFullscreenViewModel.ViewState.Valid.access$computeMenuItems(valid, PermissionUtils.can(16L, valid.getCallModel().getChannelPermissions()), this.this$0.getCallModel().isConnected(), ChannelUtils.m7669D(this.this$0.getCallModel().getChannel()), this.this$0.getCallModel().getSelectedVideoDevice(), this.this$0.getCallModel().getVideoDevices(), this.this$0.isTextInVoiceEnabled());

@@ -1,7 +1,6 @@
 package com.discord.widgets.stage.sheet;
 
 import android.content.Context;
-import android.content.res.Resources;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
@@ -30,8 +29,8 @@ import kotlin.jvm.internal.DefaultConstructorMarker;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: WidgetStageRaisedHandsBottomSheetAdapter.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetStageRaisedHandsBottomSheetAdapter.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetStageRaisedHandsBottomSheetAdapter extends MGRecyclerAdapterSimple<ListItem> {
     private static final int MILLIS_PER_DAY = 86400000;
     private static final int NEW_USER_DAYS_THRESOLD = 7;
@@ -40,10 +39,10 @@ public final class WidgetStageRaisedHandsBottomSheetAdapter extends MGRecyclerAd
     private Function1<? super StoreVoiceParticipants.VoiceUser, Unit> onInviteToSpeak;
     private Function1<? super StoreVoiceParticipants.VoiceUser, Unit> onViewProfile;
 
-    /* compiled from: WidgetStageRaisedHandsBottomSheetAdapter.kt */
+    /* JADX INFO: compiled from: WidgetStageRaisedHandsBottomSheetAdapter.kt */
     public static abstract class ListItem implements MGRecyclerDataPayload {
 
-        /* compiled from: WidgetStageRaisedHandsBottomSheetAdapter.kt */
+        /* JADX INFO: compiled from: WidgetStageRaisedHandsBottomSheetAdapter.kt */
         public static final /* data */ class Participant extends ListItem {
             private final String key;
             private final GuildMember member;
@@ -79,22 +78,22 @@ public final class WidgetStageRaisedHandsBottomSheetAdapter extends MGRecyclerAd
                 return participant.copy(voiceUser, utcDateTime, guildMember, guildRole);
             }
 
-            /* renamed from: component1, reason: from getter */
+            /* JADX INFO: renamed from: component1, reason: from getter */
             public final StoreVoiceParticipants.VoiceUser getParticipant() {
                 return this.participant;
             }
 
-            /* renamed from: component2, reason: from getter */
+            /* JADX INFO: renamed from: component2, reason: from getter */
             public final UtcDateTime getRequestToSpeakTimestamp() {
                 return this.requestToSpeakTimestamp;
             }
 
-            /* renamed from: component3, reason: from getter */
+            /* JADX INFO: renamed from: component3, reason: from getter */
             public final GuildMember getMember() {
                 return this.member;
             }
 
-            /* renamed from: component4, reason: from getter */
+            /* JADX INFO: renamed from: component4, reason: from getter */
             public final GuildRole getRole() {
                 return this.role;
             }
@@ -174,7 +173,7 @@ public final class WidgetStageRaisedHandsBottomSheetAdapter extends MGRecyclerAd
         }
     }
 
-    /* compiled from: WidgetStageRaisedHandsBottomSheetAdapter.kt */
+    /* JADX INFO: compiled from: WidgetStageRaisedHandsBottomSheetAdapter.kt */
     public static final class ViewHolderParticipant extends MGRecyclerViewHolder<WidgetStageRaisedHandsBottomSheetAdapter, ListItem> {
         private final StageRaisedHandsItemUserBinding binding;
 
@@ -252,12 +251,12 @@ public final class WidgetStageRaisedHandsBottomSheetAdapter extends MGRecyclerAd
         }
 
         @Override // com.discord.utilities.mg_recycler.MGRecyclerViewHolder
-        public /* bridge */ /* synthetic */ void onConfigure(int i, ListItem listItem) throws Resources.NotFoundException {
+        public /* bridge */ /* synthetic */ void onConfigure(int i, ListItem listItem) {
             onConfigure2(i, listItem);
         }
 
-        /* renamed from: onConfigure, reason: avoid collision after fix types in other method */
-        public void onConfigure2(int position, ListItem data) throws Resources.NotFoundException {
+        /* JADX INFO: renamed from: onConfigure, reason: avoid collision after fix types in other method */
+        public void onConfigure2(int position, ListItem data) {
             Intrinsics3.checkNotNullParameter(data, "data");
             super.onConfigure(position, data);
             ListItem.Participant participant = (ListItem.Participant) data;

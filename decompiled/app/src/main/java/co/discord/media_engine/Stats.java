@@ -5,8 +5,8 @@ import java.util.Map;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: Statistics.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: Statistics.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class Stats {
     private final Map<String, InboundRtpAudio> inboundRtpAudio;
     private final Map<String, InboundRtpVideo> inboundRtpVideo;
@@ -24,6 +24,7 @@ public final /* data */ class Stats {
         this.inboundRtpVideo = map2;
     }
 
+    /* JADX WARN: Multi-variable type inference failed */
     public static /* synthetic */ Stats copy$default(Stats stats, Transport transport, OutboundRtpAudio outboundRtpAudio, OutboundRtpVideo outboundRtpVideo, Map map, Map map2, int i, Object obj) {
         if ((i & 1) != 0) {
             transport = stats.transport;
@@ -46,17 +47,17 @@ public final /* data */ class Stats {
         return stats.copy(transport, outboundRtpAudio2, outboundRtpVideo2, map3, map2);
     }
 
-    /* renamed from: component1, reason: from getter */
+    /* JADX INFO: renamed from: component1, reason: from getter */
     public final Transport getTransport() {
         return this.transport;
     }
 
-    /* renamed from: component2, reason: from getter */
+    /* JADX INFO: renamed from: component2, reason: from getter */
     public final OutboundRtpAudio getOutboundRtpAudio() {
         return this.outboundRtpAudio;
     }
 
-    /* renamed from: component3, reason: from getter */
+    /* JADX INFO: renamed from: component3, reason: from getter */
     public final OutboundRtpVideo getOutboundRtpVideo() {
         return this.outboundRtpVideo;
     }

@@ -15,27 +15,27 @@ import p507d0.p580t.MutableCollectionsJVM;
 import p507d0.p580t._Arrays;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: Options.kt */
-/* renamed from: g0.o, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: g0.o, reason: use source file name */
+/* JADX INFO: compiled from: Options.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class Options2 extends AbstractList<ByteString> implements RandomAccess {
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public static final a f26106k = new a(null);
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final ByteString[] f26107l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public final int[] f26108m;
 
-    /* compiled from: Options.kt */
-    /* renamed from: g0.o$a */
+    /* JADX INFO: renamed from: g0.o$a */
+    /* JADX INFO: compiled from: Options.kt */
     public static final class a {
         public a(DefaultConstructorMarker defaultConstructorMarker) {
         }
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final void m10489a(long j, Buffer3 buffer3, int i, List<? extends ByteString> list, int i2, int i3, List<Integer> list2) throws IOException {
             int i4;
             int i5;
@@ -70,7 +70,7 @@ public final class Options2 extends AbstractList<ByteString> implements RandomAc
                 for (int i12 = i8; i12 < iMin && byteString.mo10505m(i12) == byteString2.mo10505m(i12); i12++) {
                     i11++;
                 }
-                long jM10490b = m10490b(buffer3) + j + 2 + i11 + 1;
+                long jM10490b = m10490b(buffer3) + j + ((long) 2) + ((long) i11) + 1;
                 buffer3.m10447W(-i11);
                 buffer3.m10447W(i5);
                 int i13 = i8 + i11;
@@ -98,7 +98,7 @@ public final class Options2 extends AbstractList<ByteString> implements RandomAc
                     i14++;
                 }
             }
-            long jM10490b2 = m10490b(buffer3) + j + 2 + (i14 * 2);
+            long jM10490b2 = m10490b(buffer3) + j + ((long) 2) + ((long) (i14 * 2));
             buffer3.m10447W(i14);
             buffer3.m10447W(i5);
             for (int i16 = i4; i16 < i3; i16++) {
@@ -140,16 +140,16 @@ public final class Options2 extends AbstractList<ByteString> implements RandomAc
             buffer3.mo10440P(buffer34);
         }
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final long m10490b(Buffer3 buffer3) {
-            return buffer3.f26080k / 4;
+            return buffer3.f26080k / ((long) 4);
         }
 
         /* JADX WARN: Code restructure failed: missing block: B:59:0x00fa, code lost:
         
             continue;
          */
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         /*
             Code decompiled incorrectly, please refer to instructions dump.
         */

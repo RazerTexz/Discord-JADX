@@ -8,8 +8,8 @@ import com.discord.analytics.generated.traits.TrackGuild;
 import com.discord.analytics.generated.traits.TrackGuild2;
 import com.discord.api.science.AnalyticsSchema;
 
-/* compiled from: TrackCreatorMonetizationEnableRequestCreated.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: TrackCreatorMonetizationEnableRequestCreated.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class TrackCreatorMonetizationEnableRequestCreated implements AnalyticsSchema, TrackBase2, TrackGuild2, TrackCreatorMonetizationEnableRequest2 {
     private final transient String analyticsSchemaTypeName = "creator_monetization_enable_request_created";
     private TrackBase trackBase;
@@ -17,19 +17,19 @@ public final class TrackCreatorMonetizationEnableRequestCreated implements Analy
     private TrackGuild trackGuild;
 
     @Override // com.discord.analytics.generated.traits.TrackGuild2
-    /* renamed from: a, reason: from getter */
+    /* JADX INFO: renamed from: a, reason: from getter */
     public TrackGuild getTrackGuild() {
         return this.trackGuild;
     }
 
     @Override // com.discord.analytics.generated.traits.TrackGuild2
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public void mo7508c(TrackGuild trackGuild) {
         this.trackGuild = trackGuild;
     }
 
     @Override // com.discord.api.science.AnalyticsSchema
-    /* renamed from: d, reason: from getter */
+    /* JADX INFO: renamed from: d, reason: from getter */
     public String getAnalyticsSchemaTypeName() {
         return this.analyticsSchemaTypeName;
     }

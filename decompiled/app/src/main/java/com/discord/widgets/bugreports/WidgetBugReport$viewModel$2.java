@@ -5,8 +5,8 @@ import kotlin.jvm.functions.Function0;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetBugReport.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetBugReport.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetBugReport$viewModel$2 extends Lambda implements Function0<BugReportViewModel> {
     public final /* synthetic */ WidgetBugReport this$0;
 

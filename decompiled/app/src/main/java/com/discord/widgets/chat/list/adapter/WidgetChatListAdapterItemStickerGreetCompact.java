@@ -15,13 +15,13 @@ import p007b.p008a.p027k.FormatUtils;
 import p507d0.p592z.p594d.Intrinsics3;
 import p658rx.Subscription;
 
-/* compiled from: WidgetChatListAdapterItemStickerGreetCompact.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetChatListAdapterItemStickerGreetCompact.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetChatListAdapterItemStickerGreetCompact extends WidgetChatListItem {
     private final WidgetChatListAdapterItemStickerGreetCompactBinding binding;
 
-    /* compiled from: WidgetChatListAdapterItemStickerGreetCompact.kt */
-    /* renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemStickerGreetCompact$onConfigure$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemStickerGreetCompact$onConfigure$1 */
+    /* JADX INFO: compiled from: WidgetChatListAdapterItemStickerGreetCompact.kt */
     public static final class ViewOnClickListenerC81291 implements View.OnClickListener {
         public final /* synthetic */ long $channelId;
         public final /* synthetic */ int $channelType;

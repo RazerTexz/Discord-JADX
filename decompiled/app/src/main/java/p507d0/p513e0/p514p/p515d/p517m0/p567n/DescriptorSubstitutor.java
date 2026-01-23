@@ -7,11 +7,11 @@ import p507d0.p513e0.p514p.p515d.p517m0.p521c.SourceElement;
 import p507d0.p513e0.p514p.p515d.p517m0.p521c.TypeParameterDescriptor;
 import p507d0.p513e0.p514p.p515d.p517m0.p521c.p524i1.TypeParameterDescriptorImpl;
 
-/* compiled from: DescriptorSubstitutor.java */
-/* renamed from: d0.e0.p.d.m0.n.o, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.n.o, reason: use source file name */
+/* JADX INFO: compiled from: DescriptorSubstitutor.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class DescriptorSubstitutor {
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static /* synthetic */ void m10022a(int i) {
         String str = i != 4 ? "Argument for @NotNull parameter '%s' of %s.%s must not be null" : "@NotNull method %s.%s must not return null";
         Object[] objArr = new Object[i != 4 ? 3 : 2];

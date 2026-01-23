@@ -4,11 +4,11 @@ import android.content.ActivityNotFoundException;
 import android.content.DialogInterface;
 import android.util.Log;
 
-/* compiled from: com.google.android.gms:play-services-base@@17.3.0 */
-/* renamed from: b.i.a.f.e.k.n */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.e.k.n */
+/* JADX INFO: compiled from: com.google.android.gms:play-services-base@@17.3.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public abstract class AbstractDialogInterfaceOnClickListenerC3369n implements DialogInterface.OnClickListener {
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public abstract void mo4173a();
 
     @Override // android.content.DialogInterface.OnClickListener

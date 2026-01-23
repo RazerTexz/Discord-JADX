@@ -53,119 +53,119 @@ import p007b.p225i.p355b.p357b.AbstractIndexedListIterator;
 import p007b.p225i.p355b.p357b.ImmutableList2;
 import p007b.p225i.p355b.p357b.RegularImmutableList;
 
-/* compiled from: ExoPlayerImpl.java */
-/* renamed from: b.i.a.c.f1, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.f1, reason: use source file name */
+/* JADX INFO: compiled from: ExoPlayerImpl.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class ExoPlayerImpl extends BasePlayer {
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static final /* synthetic */ int f6651b = 0;
 
-    /* renamed from: A */
+    /* JADX INFO: renamed from: A */
     public int f6652A;
 
-    /* renamed from: B */
+    /* JADX INFO: renamed from: B */
     public ShuffleOrder f6653B;
 
-    /* renamed from: C */
+    /* JADX INFO: renamed from: C */
     public Player2.b f6654C;
 
-    /* renamed from: D */
+    /* JADX INFO: renamed from: D */
     public MediaMetadata f6655D;
 
-    /* renamed from: E */
+    /* JADX INFO: renamed from: E */
     public MediaMetadata f6656E;
 
-    /* renamed from: F */
+    /* JADX INFO: renamed from: F */
     public PlaybackInfo f6657F;
 
-    /* renamed from: G */
+    /* JADX INFO: renamed from: G */
     public int f6658G;
 
-    /* renamed from: H */
+    /* JADX INFO: renamed from: H */
     public long f6659H;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final TrackSelectorResult f6660c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final Player2.b f6661d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final Renderer2[] f6662e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final TrackSelector f6663f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public final HandlerWrapper f6664g;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public final ExoPlayerImplInternal2.e f6665h;
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public final ExoPlayerImplInternal2 f6666i;
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final ListenerSet<Player2.c> f6667j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final CopyOnWriteArraySet<ExoPlayer2.a> f6668k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final Timeline.b f6669l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public final List<a> f6670m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public final boolean f6671n;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public final MediaSourceFactory f6672o;
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     @Nullable
     public final AnalyticsCollector f6673p;
 
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     public final Looper f6674q;
 
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     public final BandwidthMeter f6675r;
 
-    /* renamed from: s */
+    /* JADX INFO: renamed from: s */
     public final long f6676s;
 
-    /* renamed from: t */
+    /* JADX INFO: renamed from: t */
     public final long f6677t;
 
-    /* renamed from: u */
+    /* JADX INFO: renamed from: u */
     public final Clock4 f6678u;
 
-    /* renamed from: v */
+    /* JADX INFO: renamed from: v */
     public int f6679v;
 
-    /* renamed from: w */
+    /* JADX INFO: renamed from: w */
     public boolean f6680w;
 
-    /* renamed from: x */
+    /* JADX INFO: renamed from: x */
     public int f6681x;
 
-    /* renamed from: y */
+    /* JADX INFO: renamed from: y */
     public int f6682y;
 
-    /* renamed from: z */
+    /* JADX INFO: renamed from: z */
     public boolean f6683z;
 
-    /* compiled from: ExoPlayerImpl.java */
-    /* renamed from: b.i.a.c.f1$a */
+    /* JADX INFO: renamed from: b.i.a.c.f1$a */
+    /* JADX INFO: compiled from: ExoPlayerImpl.java */
     public static final class a implements MediaSourceInfoHolder {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final Object f6684a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public Timeline f6685b;
 
         public a(Object obj, Timeline timeline) {
@@ -174,7 +174,7 @@ public final class ExoPlayerImpl extends BasePlayer {
         }
 
         @Override // p007b.p225i.p226a.p242c.MediaSourceInfoHolder
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public Timeline mo2931a() {
             return this.f6685b;
         }
@@ -269,7 +269,7 @@ public final class ExoPlayerImpl extends BasePlayer {
         this.f6666i = new ExoPlayerImplInternal2(renderer2Arr, trackSelector, this.f6660c, loadControl, bandwidthMeter, this.f6679v, this.f6680w, analyticsCollector, seekParameters, livePlaybackSpeedControl, j3, z3, looper, clock4, c2962w);
     }
 
-    /* renamed from: j0 */
+    /* JADX INFO: renamed from: j0 */
     public static long m2877j0(PlaybackInfo playbackInfo) {
         Timeline.c cVar = new Timeline.c();
         Timeline.b bVar = new Timeline.b();
@@ -278,20 +278,20 @@ public final class ExoPlayerImpl extends BasePlayer {
         return j == -9223372036854775807L ? playbackInfo.f7947b.m3330n(bVar.f7340l, cVar).f7365z : bVar.f7342n + j;
     }
 
-    /* renamed from: k0 */
+    /* JADX INFO: renamed from: k0 */
     public static boolean m2878k0(PlaybackInfo playbackInfo) {
         return playbackInfo.f7951f == 3 && playbackInfo.f7958m && playbackInfo.f7959n == 0;
     }
 
     @Override // p007b.p225i.p226a.p242c.Player2
-    /* renamed from: A */
+    /* JADX INFO: renamed from: A */
     public List mo2879A() {
         AbstractIndexedListIterator<Object> abstractIndexedListIterator = ImmutableList2.f12045k;
         return RegularImmutableList.f12012l;
     }
 
     @Override // p007b.p225i.p226a.p242c.Player2
-    /* renamed from: B */
+    /* JADX INFO: renamed from: B */
     public int mo2880B() {
         if (mo2900f()) {
             return this.f6657F.f7948c.f5733b;
@@ -300,7 +300,7 @@ public final class ExoPlayerImpl extends BasePlayer {
     }
 
     @Override // p007b.p225i.p226a.p242c.Player2
-    /* renamed from: C */
+    /* JADX INFO: renamed from: C */
     public int mo2881C() {
         int iM2905h0 = m2905h0();
         if (iM2905h0 == -1) {
@@ -310,7 +310,7 @@ public final class ExoPlayerImpl extends BasePlayer {
     }
 
     @Override // p007b.p225i.p226a.p242c.Player2
-    /* renamed from: E */
+    /* JADX INFO: renamed from: E */
     public void mo2882E(int i) {
         if (this.f6679v != i) {
             this.f6679v = i;
@@ -322,30 +322,30 @@ public final class ExoPlayerImpl extends BasePlayer {
     }
 
     @Override // p007b.p225i.p226a.p242c.Player2
-    /* renamed from: F */
+    /* JADX INFO: renamed from: F */
     public void mo2883F(@Nullable SurfaceView surfaceView) {
     }
 
     @Override // p007b.p225i.p226a.p242c.Player2
-    /* renamed from: G */
+    /* JADX INFO: renamed from: G */
     public int mo2884G() {
         return this.f6657F.f7959n;
     }
 
     @Override // p007b.p225i.p226a.p242c.Player2
-    /* renamed from: H */
+    /* JADX INFO: renamed from: H */
     public TracksInfo mo2885H() {
         return this.f6657F.f7955j.f6329d;
     }
 
     @Override // p007b.p225i.p226a.p242c.Player2
-    /* renamed from: I */
+    /* JADX INFO: renamed from: I */
     public int mo2886I() {
         return this.f6679v;
     }
 
     @Override // p007b.p225i.p226a.p242c.Player2
-    /* renamed from: J */
+    /* JADX INFO: renamed from: J */
     public long mo2887J() {
         if (mo2900f()) {
             PlaybackInfo playbackInfo = this.f6657F;
@@ -361,25 +361,25 @@ public final class ExoPlayerImpl extends BasePlayer {
     }
 
     @Override // p007b.p225i.p226a.p242c.Player2
-    /* renamed from: K */
+    /* JADX INFO: renamed from: K */
     public Timeline mo2888K() {
         return this.f6657F.f7947b;
     }
 
     @Override // p007b.p225i.p226a.p242c.Player2
-    /* renamed from: L */
+    /* JADX INFO: renamed from: L */
     public Looper mo2889L() {
         return this.f6674q;
     }
 
     @Override // p007b.p225i.p226a.p242c.Player2
-    /* renamed from: M */
+    /* JADX INFO: renamed from: M */
     public boolean mo2890M() {
         return this.f6680w;
     }
 
     @Override // p007b.p225i.p226a.p242c.Player2
-    /* renamed from: N */
+    /* JADX INFO: renamed from: N */
     public long mo2891N() {
         if (this.f6657F.f7947b.m3331q()) {
             return this.f6659H;
@@ -400,30 +400,30 @@ public final class ExoPlayerImpl extends BasePlayer {
     }
 
     @Override // p007b.p225i.p226a.p242c.Player2
-    /* renamed from: Q */
+    /* JADX INFO: renamed from: Q */
     public void mo2892Q(@Nullable TextureView textureView) {
     }
 
     @Override // p007b.p225i.p226a.p242c.Player2
-    /* renamed from: S */
+    /* JADX INFO: renamed from: S */
     public MediaMetadata mo2893S() {
         return this.f6655D;
     }
 
     @Override // p007b.p225i.p226a.p242c.Player2
-    /* renamed from: T */
+    /* JADX INFO: renamed from: T */
     public long mo2894T() {
         return Util2.m2992M(m2903g0(this.f6657F));
     }
 
     @Override // p007b.p225i.p226a.p242c.Player2
-    /* renamed from: U */
+    /* JADX INFO: renamed from: U */
     public long mo2895U() {
         return this.f6676s;
     }
 
     @Override // p007b.p225i.p226a.p242c.Player2
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public void mo2896a() {
         PlaybackInfo playbackInfo = this.f6657F;
         if (playbackInfo.f7951f != 1) {
@@ -437,12 +437,12 @@ public final class ExoPlayerImpl extends BasePlayer {
     }
 
     @Override // p007b.p225i.p226a.p242c.Player2
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public PlaybackParameters mo2897c() {
         return this.f6657F.f7960o;
     }
 
-    /* renamed from: d0 */
+    /* JADX INFO: renamed from: d0 */
     public void m2898d0(Player2.c cVar) {
         ListenerSet<Player2.c> listenerSet = this.f6667j;
         if (listenerSet.f6742g) {
@@ -452,7 +452,7 @@ public final class ExoPlayerImpl extends BasePlayer {
         listenerSet.f6739d.add(new ListenerSet.c<>(cVar));
     }
 
-    /* renamed from: e0 */
+    /* JADX INFO: renamed from: e0 */
     public final MediaMetadata m2899e0() {
         Timeline timelineMo2888K = mo2888K();
         MediaItem2 mediaItem2 = timelineMo2888K.m3331q() ? null : timelineMo2888K.m3330n(mo2881C(), this.f7863a).f7355p;
@@ -593,29 +593,29 @@ public final class ExoPlayerImpl extends BasePlayer {
     }
 
     @Override // p007b.p225i.p226a.p242c.Player2
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public boolean mo2900f() {
         return this.f6657F.f7948c.m2593a();
     }
 
-    /* renamed from: f0 */
+    /* JADX INFO: renamed from: f0 */
     public PlayerMessage m2901f0(PlayerMessage.b bVar) {
         return new PlayerMessage(this.f6666i, bVar, this.f6657F.f7947b, mo2881C(), this.f6678u, this.f6666i.f7085s);
     }
 
     @Override // p007b.p225i.p226a.p242c.Player2
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public long mo2902g() {
         return Util2.m2992M(this.f6657F.f7964s);
     }
 
-    /* renamed from: g0 */
+    /* JADX INFO: renamed from: g0 */
     public final long m2903g0(PlaybackInfo playbackInfo) {
         return playbackInfo.f7947b.m3331q() ? Util2.m2981B(this.f6659H) : playbackInfo.f7948c.m2593a() ? playbackInfo.f7965t : m2913m0(playbackInfo.f7947b, playbackInfo.f7948c, playbackInfo.f7965t);
     }
 
     @Override // p007b.p225i.p226a.p242c.Player2
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public void mo2904h(int i, long j) {
         Timeline timeline = this.f6657F.f7947b;
         if (i < 0 || (!timeline.m3331q() && i >= timeline.mo2557p())) {
@@ -637,7 +637,7 @@ public final class ExoPlayerImpl extends BasePlayer {
         m2924s0(playbackInfoM2911l0, 0, 1, true, true, 1, m2903g0(playbackInfoM2911l0), iMo2881C);
     }
 
-    /* renamed from: h0 */
+    /* JADX INFO: renamed from: h0 */
     public final int m2905h0() {
         if (this.f6657F.f7947b.m3331q()) {
             return this.f6658G;
@@ -647,13 +647,13 @@ public final class ExoPlayerImpl extends BasePlayer {
     }
 
     @Override // p007b.p225i.p226a.p242c.Player2
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public Player2.b mo2906i() {
         return this.f6654C;
     }
 
     @Nullable
-    /* renamed from: i0 */
+    /* JADX INFO: renamed from: i0 */
     public final Pair<Object, Long> m2907i0(Timeline timeline, int i, long j) {
         if (timeline.m3331q()) {
             this.f6658G = i;
@@ -671,13 +671,13 @@ public final class ExoPlayerImpl extends BasePlayer {
     }
 
     @Override // p007b.p225i.p226a.p242c.Player2
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public boolean mo2908j() {
         return this.f6657F.f7958m;
     }
 
     @Override // p007b.p225i.p226a.p242c.Player2
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public void mo2909k(boolean z2) {
         if (this.f6680w != z2) {
             this.f6680w = z2;
@@ -689,12 +689,12 @@ public final class ExoPlayerImpl extends BasePlayer {
     }
 
     @Override // p007b.p225i.p226a.p242c.Player2
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public long mo2910l() {
         return 3000L;
     }
 
-    /* renamed from: l0 */
+    /* JADX INFO: renamed from: l0 */
     public final PlaybackInfo m2911l0(PlaybackInfo playbackInfo, Timeline timeline, @Nullable Pair<Object, Long> pair) {
         MediaSource2.a aVar;
         TrackSelectorResult trackSelectorResult;
@@ -765,7 +765,7 @@ public final class ExoPlayerImpl extends BasePlayer {
     }
 
     @Override // p007b.p225i.p226a.p242c.Player2
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public int mo2912m() {
         if (this.f6657F.f7947b.m3331q()) {
             return 0;
@@ -774,18 +774,18 @@ public final class ExoPlayerImpl extends BasePlayer {
         return playbackInfo.f7947b.mo2554b(playbackInfo.f7948c.f5732a);
     }
 
-    /* renamed from: m0 */
+    /* JADX INFO: renamed from: m0 */
     public final long m2913m0(Timeline timeline, MediaSource2.a aVar, long j) {
         timeline.mo3327h(aVar.f5732a, this.f6669l);
         return j + this.f6669l.f7342n;
     }
 
     @Override // p007b.p225i.p226a.p242c.Player2
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public void mo2914n(@Nullable TextureView textureView) {
     }
 
-    /* renamed from: n0 */
+    /* JADX INFO: renamed from: n0 */
     public void m2915n0() {
         String str;
         boolean z2;
@@ -845,12 +845,12 @@ public final class ExoPlayerImpl extends BasePlayer {
     }
 
     @Override // p007b.p225i.p226a.p242c.Player2
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public VideoSize mo2916o() {
         return VideoSize.f6954j;
     }
 
-    /* renamed from: o0 */
+    /* JADX INFO: renamed from: o0 */
     public void m2917o0(Player2.c cVar) {
         ListenerSet<Player2.c> listenerSet = this.f6667j;
         for (ListenerSet.c<Player2.c> cVar2 : listenerSet.f6739d) {
@@ -866,12 +866,12 @@ public final class ExoPlayerImpl extends BasePlayer {
     }
 
     @Override // p007b.p225i.p226a.p242c.Player2
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public void mo2918p(Player2.e eVar) {
         m2917o0(eVar);
     }
 
-    /* renamed from: p0 */
+    /* JADX INFO: renamed from: p0 */
     public final void m2919p0(int i, int i2) {
         for (int i3 = i2 - 1; i3 >= i; i3--) {
             this.f6670m.remove(i3);
@@ -880,7 +880,7 @@ public final class ExoPlayerImpl extends BasePlayer {
     }
 
     @Override // p007b.p225i.p226a.p242c.Player2
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     public int mo2920q() {
         if (mo2900f()) {
             return this.f6657F.f7948c.f5734c;
@@ -888,7 +888,7 @@ public final class ExoPlayerImpl extends BasePlayer {
         return -1;
     }
 
-    /* renamed from: q0 */
+    /* JADX INFO: renamed from: q0 */
     public void m2921q0(boolean z2, int i, int i2) {
         PlaybackInfo playbackInfo = this.f6657F;
         if (playbackInfo.f7958m == z2 && playbackInfo.f7959n == i) {
@@ -901,11 +901,11 @@ public final class ExoPlayerImpl extends BasePlayer {
     }
 
     @Override // p007b.p225i.p226a.p242c.Player2
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     public void mo2922r(@Nullable SurfaceView surfaceView) {
     }
 
-    /* renamed from: r0 */
+    /* JADX INFO: renamed from: r0 */
     public final void m2923r0() {
         Player2.b bVar = this.f6654C;
         Player2.b bVar2 = this.f6661d;
@@ -932,7 +932,7 @@ public final class ExoPlayerImpl extends BasePlayer {
     /* JADX WARN: Removed duplicated region for block: B:74:0x023b  */
     /* JADX WARN: Removed duplicated region for block: B:77:0x0253  */
     /* JADX WARN: Removed duplicated region for block: B:78:0x0260  */
-    /* renamed from: s0 */
+    /* JADX INFO: renamed from: s0 */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
@@ -1164,25 +1164,25 @@ public final class ExoPlayerImpl extends BasePlayer {
 
     @Override // p007b.p225i.p226a.p242c.Player2
     @Nullable
-    /* renamed from: t */
+    /* JADX INFO: renamed from: t */
     public PlaybackException mo2925t() {
         return this.f6657F.f7952g;
     }
 
     @Override // p007b.p225i.p226a.p242c.Player2
-    /* renamed from: u */
+    /* JADX INFO: renamed from: u */
     public void mo2926u(boolean z2) {
         m2921q0(z2, 0, 1);
     }
 
     @Override // p007b.p225i.p226a.p242c.Player2
-    /* renamed from: v */
+    /* JADX INFO: renamed from: v */
     public long mo2927v() {
         return this.f6677t;
     }
 
     @Override // p007b.p225i.p226a.p242c.Player2
-    /* renamed from: w */
+    /* JADX INFO: renamed from: w */
     public long mo2928w() {
         if (!mo2900f()) {
             return mo2894T();
@@ -1194,13 +1194,13 @@ public final class ExoPlayerImpl extends BasePlayer {
     }
 
     @Override // p007b.p225i.p226a.p242c.Player2
-    /* renamed from: x */
+    /* JADX INFO: renamed from: x */
     public void mo2929x(Player2.e eVar) {
         m2898d0(eVar);
     }
 
     @Override // p007b.p225i.p226a.p242c.Player2
-    /* renamed from: y */
+    /* JADX INFO: renamed from: y */
     public int mo2930y() {
         return this.f6657F.f7951f;
     }

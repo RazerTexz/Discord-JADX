@@ -6,9 +6,9 @@ import com.discord.widgets.guilds.profile.WidgetGuildProfileSheetViewModel;
 import p507d0.p592z.p594d.Intrinsics3;
 import p658rx.functions.Action1;
 
-/* compiled from: WidgetGuildProfileSheet.kt */
-/* renamed from: com.discord.widgets.guilds.profile.WidgetGuildProfileSheet$configureGuildActions$$inlined$apply$lambda$5 */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.guilds.profile.WidgetGuildProfileSheet$configureGuildActions$$inlined$apply$lambda$5 */
+/* JADX INFO: compiled from: WidgetGuildProfileSheet.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class C8784x6f508c58<T> implements Action1<Boolean> {
     public final /* synthetic */ WidgetGuildProfileSheetViewModel.Actions $actions$inlined;
     public final /* synthetic */ long $guildId$inlined;
@@ -25,7 +25,7 @@ public final class C8784x6f508c58<T> implements Action1<Boolean> {
         call2(bool);
     }
 
-    /* renamed from: call, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
     public final void call2(Boolean bool) {
         WidgetGuildProfileSheetViewModel widgetGuildProfileSheetViewModelAccess$getViewModel$p = WidgetGuildProfileSheet.access$getViewModel$p(this.this$0);
         AppActivity appActivity = this.this$0.getAppActivity();

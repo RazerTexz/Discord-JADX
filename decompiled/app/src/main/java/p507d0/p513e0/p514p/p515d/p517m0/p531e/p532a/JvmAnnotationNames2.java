@@ -7,48 +7,48 @@ import p507d0.p513e0.p514p.p515d.p517m0.p548g.FqName;
 import p507d0.p580t.Collections2;
 import p507d0.p580t._Sets;
 
-/* compiled from: JvmAnnotationNames.kt */
-/* renamed from: d0.e0.p.d.m0.e.a.b0, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.e.a.b0, reason: use source file name */
+/* JADX INFO: compiled from: JvmAnnotationNames.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class JvmAnnotationNames2 {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final FqName f23174a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static final FqName f23175b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public static final FqName f23176c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public static final List<FqName> f23177d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public static final FqName f23178e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public static final FqName f23179f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public static final List<FqName> f23180g;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public static final FqName f23181h;
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public static final FqName f23182i;
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static final FqName f23183j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public static final FqName f23184k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public static final List<FqName> f23185l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public static final List<FqName> f23186m;
 
     static {

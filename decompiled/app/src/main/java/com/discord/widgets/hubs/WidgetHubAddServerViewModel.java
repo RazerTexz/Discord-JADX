@@ -21,15 +21,15 @@ import p507d0.p592z.p594d.FunctionReferenceImpl;
 import p507d0.p592z.p594d.Intrinsics3;
 import p658rx.Observable;
 
-/* compiled from: WidgetHubAddServerViewModel.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetHubAddServerViewModel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetHubAddServerViewModel extends AppViewModel<WidgetHubAddServerViewModel2> {
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
 
-    /* compiled from: WidgetHubAddServerViewModel.kt */
-    /* renamed from: com.discord.widgets.hubs.WidgetHubAddServerViewModel$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.hubs.WidgetHubAddServerViewModel$1 */
+    /* JADX INFO: compiled from: WidgetHubAddServerViewModel.kt */
     public static final /* synthetic */ class C89991 extends FunctionReferenceImpl implements Function1<WidgetHubAddServerViewModel2, Unit> {
         public C89991(WidgetHubAddServerViewModel widgetHubAddServerViewModel) {
             super(1, widgetHubAddServerViewModel, WidgetHubAddServerViewModel.class, "handleStoreUpdate", "handleStoreUpdate(Lcom/discord/widgets/hubs/HubAddServerState;)V", 0);
@@ -41,14 +41,14 @@ public final class WidgetHubAddServerViewModel extends AppViewModel<WidgetHubAdd
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(WidgetHubAddServerViewModel2 widgetHubAddServerViewModel2) {
             Intrinsics3.checkNotNullParameter(widgetHubAddServerViewModel2, "p1");
             WidgetHubAddServerViewModel.access$handleStoreUpdate((WidgetHubAddServerViewModel) this.receiver, widgetHubAddServerViewModel2);
         }
     }
 
-    /* compiled from: WidgetHubAddServerViewModel.kt */
+    /* JADX INFO: compiled from: WidgetHubAddServerViewModel.kt */
     public static final class Companion {
         private Companion() {
         }

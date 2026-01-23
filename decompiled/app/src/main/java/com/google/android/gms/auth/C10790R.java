@@ -1,7 +1,7 @@
 package com.google.android.gms.auth;
 
-/* renamed from: com.google.android.gms.auth.R */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: com.google.android.gms.auth.R */
+/* JADX INFO: loaded from: classes3.dex */
 public final class C10790R {
     private C10790R() {
     }

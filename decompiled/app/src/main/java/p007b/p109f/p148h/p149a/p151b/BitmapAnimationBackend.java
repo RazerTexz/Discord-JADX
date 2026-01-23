@@ -23,42 +23,42 @@ import p007b.p109f.p148h.p149a.p151b.p154f.AnimatedDrawableBackendFrameRenderer;
 import p007b.p109f.p161j.p162a.p165c.AnimatedDrawableBackendImpl;
 import p007b.p109f.p161j.p162a.p165c.AnimatedImageCompositor;
 
-/* compiled from: BitmapAnimationBackend.java */
-/* renamed from: b.f.h.a.b.a, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.f.h.a.b.a, reason: use source file name */
+/* JADX INFO: compiled from: BitmapAnimationBackend.java */
+/* JADX INFO: loaded from: classes.dex */
 public class BitmapAnimationBackend implements AnimationBackend, AnimationBackendDelegateWithInactivityCheck.b {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final PlatformBitmapFactory f3496a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final BitmapFrameCache f3497b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final AnimationInformation f3498c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final BitmapFrameRenderer f3499d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final BitmapFramePreparationStrategy f3500e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final BitmapFramePreparer f3501f;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public Rect f3503h;
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public int f3504i;
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public int f3505j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public Bitmap.Config f3506k = Bitmap.Config.ARGB_8888;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public final Paint f3502g = new Paint(6);
 
     public BitmapAnimationBackend(PlatformBitmapFactory platformBitmapFactory, BitmapFrameCache bitmapFrameCache, AnimationInformation animationInformation, BitmapFrameRenderer bitmapFrameRenderer, BitmapFramePreparationStrategy bitmapFramePreparationStrategy, BitmapFramePreparer bitmapFramePreparer) {
@@ -72,19 +72,19 @@ public class BitmapAnimationBackend implements AnimationBackend, AnimationBacken
     }
 
     @Override // p007b.p109f.p148h.p149a.p150a.AnimationInformation
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public int mo1142a() {
         return this.f3498c.mo1142a();
     }
 
     @Override // p007b.p109f.p148h.p149a.p150a.AnimationInformation
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public int mo1143b() {
         return this.f3498c.mo1143b();
     }
 
     @Override // p007b.p109f.p148h.p149a.p150a.AnimationBackendDelegateWithInactivityCheck.b
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public void mo1146c() {
         this.f3497b.clear();
     }
@@ -95,31 +95,31 @@ public class BitmapAnimationBackend implements AnimationBackend, AnimationBacken
     }
 
     @Override // p007b.p109f.p148h.p149a.p150a.AnimationBackend
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public void mo1136d(ColorFilter colorFilter) {
         this.f3502g.setColorFilter(colorFilter);
     }
 
     @Override // p007b.p109f.p148h.p149a.p150a.AnimationInformation
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public int mo1144e(int i) {
         return this.f3498c.mo1144e(i);
     }
 
     @Override // p007b.p109f.p148h.p149a.p150a.AnimationBackend
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public void mo1137f(@IntRange(from = 0, m76to = 255) int i) {
         this.f3502g.setAlpha(i);
     }
 
     @Override // p007b.p109f.p148h.p149a.p150a.AnimationBackend
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public int mo1138g() {
         return this.f3505j;
     }
 
     @Override // p007b.p109f.p148h.p149a.p150a.AnimationBackend
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public void mo1139h(Rect rect) {
         this.f3503h = rect;
         AnimatedDrawableBackendFrameRenderer animatedDrawableBackendFrameRenderer = (AnimatedDrawableBackendFrameRenderer) this.f3499d;
@@ -135,13 +135,13 @@ public class BitmapAnimationBackend implements AnimationBackend, AnimationBacken
     }
 
     @Override // p007b.p109f.p148h.p149a.p150a.AnimationBackend
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public int mo1140i() {
         return this.f3504i;
     }
 
     @Override // p007b.p109f.p148h.p149a.p150a.AnimationBackend
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public boolean mo1141j(Drawable drawable, Canvas canvas, int i) {
         BitmapFramePreparer bitmapFramePreparer;
         int i2 = i;
@@ -175,7 +175,7 @@ public class BitmapAnimationBackend implements AnimationBackend, AnimationBacken
         return zM1148l;
     }
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final boolean m1147k(int i, CloseableReference<Bitmap> closeableReference, Canvas canvas, int i2) {
         if (!CloseableReference.m8640y(closeableReference)) {
             return false;
@@ -192,7 +192,7 @@ public class BitmapAnimationBackend implements AnimationBackend, AnimationBacken
         return true;
     }
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final boolean m1148l(Canvas canvas, int i, int i2) {
         CloseableReference closeableReferenceMo1154d;
         boolean zM1147k;
@@ -246,7 +246,7 @@ public class BitmapAnimationBackend implements AnimationBackend, AnimationBacken
         }
     }
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public final boolean m1149m(int i, CloseableReference<Bitmap> closeableReference) {
         if (!CloseableReference.m8640y(closeableReference)) {
             return false;
@@ -258,7 +258,7 @@ public class BitmapAnimationBackend implements AnimationBackend, AnimationBacken
         return zM1161a;
     }
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public final void m1150n() {
         int width = ((AnimatedDrawableBackendImpl) ((AnimatedDrawableBackendFrameRenderer) this.f3499d).f3528b).f3626c.getWidth();
         this.f3504i = width;

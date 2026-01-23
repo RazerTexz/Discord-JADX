@@ -15,26 +15,26 @@ import p507d0.p513e0.p514p.p515d.p517m0.p552k.OverridingStrategy;
 import p507d0.p513e0.p514p.p515d.p517m0.p552k.OverridingUtil;
 import p507d0.p513e0.p514p.p515d.p517m0.p562l.p563b.ErrorReporter;
 
-/* compiled from: DescriptorResolverUtils.java */
-/* renamed from: d0.e0.p.d.m0.e.a.g0.a, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.e.a.g0.a, reason: use source file name */
+/* JADX INFO: compiled from: DescriptorResolverUtils.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class DescriptorResolverUtils {
 
-    /* compiled from: DescriptorResolverUtils.java */
-    /* renamed from: d0.e0.p.d.m0.e.a.g0.a$a */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.e.a.g0.a$a */
+    /* JADX INFO: compiled from: DescriptorResolverUtils.java */
     public static class a extends OverridingStrategy {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final /* synthetic */ ErrorReporter f23219a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final /* synthetic */ Set f23220b;
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public final /* synthetic */ boolean f23221c;
 
-        /* compiled from: DescriptorResolverUtils.java */
-        /* renamed from: d0.e0.p.d.m0.e.a.g0.a$a$a, reason: collision with other inner class name */
+        /* JADX INFO: renamed from: d0.e0.p.d.m0.e.a.g0.a$a$a, reason: collision with other inner class name */
+        /* JADX INFO: compiled from: DescriptorResolverUtils.java */
         public class C13310a implements Function1<CallableMemberDescriptor, Unit> {
             public C13310a() {
             }
@@ -44,7 +44,7 @@ public final class DescriptorResolverUtils {
                 return invoke2(callableMemberDescriptor);
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public Unit invoke2(CallableMemberDescriptor callableMemberDescriptor) {
                 if (callableMemberDescriptor == null) {
                     throw new IllegalArgumentException(String.format("Argument for @NotNull parameter '%s' of %s.%s must not be null", "descriptor", "kotlin/reflect/jvm/internal/impl/load/java/components/DescriptorResolverUtils$1$1", "invoke"));
@@ -60,7 +60,7 @@ public final class DescriptorResolverUtils {
             this.f23221c = z2;
         }
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public static /* synthetic */ void m9452a(int i) {
             Object[] objArr = new Object[3];
             if (i == 1) {
@@ -124,7 +124,7 @@ public final class DescriptorResolverUtils {
         }
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static /* synthetic */ void m9450a(int i) {
         String str = i != 18 ? "Argument for @NotNull parameter '%s' of %s.%s must not be null" : "@NotNull method %s.%s must not return null";
         Object[] objArr = new Object[i != 18 ? 3 : 2];
@@ -205,7 +205,7 @@ public final class DescriptorResolverUtils {
         }
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static <D extends CallableMemberDescriptor> Collection<D> m9451b(Name name, Collection<D> collection, Collection<D> collection2, ClassDescriptor classDescriptor, ErrorReporter errorReporter, OverridingUtil overridingUtil, boolean z2) {
         if (name == null) {
             m9450a(12);

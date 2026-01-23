@@ -4,18 +4,18 @@ import java.util.List;
 import java.util.Set;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ModuleDescriptorImpl.kt */
-/* renamed from: d0.e0.p.d.m0.c.i1.x, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.c.i1.x, reason: use source file name */
+/* JADX INFO: compiled from: ModuleDescriptorImpl.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class ModuleDescriptorImpl2 implements ModuleDescriptorImpl {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final List<ModuleDescriptorImpl3> f22987a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final Set<ModuleDescriptorImpl3> f22988b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final List<ModuleDescriptorImpl3> f22989c;
 
     public ModuleDescriptorImpl2(List<ModuleDescriptorImpl3> list, Set<ModuleDescriptorImpl3> set, List<ModuleDescriptorImpl3> list2, Set<ModuleDescriptorImpl3> set2) {

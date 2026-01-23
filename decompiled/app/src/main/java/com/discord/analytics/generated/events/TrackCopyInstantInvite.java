@@ -9,8 +9,8 @@ import com.discord.models.domain.ModelAuditLogEntry;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: TrackCopyInstantInvite.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: TrackCopyInstantInvite.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class TrackCopyInstantInvite implements AnalyticsSchema, TrackBase2, TrackOverlayClientMetadata2 {
     private TrackBase trackBase;
     private TrackOverlayClientMetadata trackOverlayClientMetadata;
@@ -23,7 +23,7 @@ public final /* data */ class TrackCopyInstantInvite implements AnalyticsSchema,
     private final transient String analyticsSchemaTypeName = "copy_instant_invite";
 
     @Override // com.discord.api.science.AnalyticsSchema
-    /* renamed from: d, reason: from getter */
+    /* JADX INFO: renamed from: d, reason: from getter */
     public String getAnalyticsSchemaTypeName() {
         return this.analyticsSchemaTypeName;
     }

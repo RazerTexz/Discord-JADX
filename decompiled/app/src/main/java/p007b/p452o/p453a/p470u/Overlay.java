@@ -1,12 +1,12 @@
 package p007b.p452o.p453a.p470u;
 
-/* compiled from: Overlay.java */
-/* renamed from: b.o.a.u.a, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.o.a.u.a, reason: use source file name */
+/* JADX INFO: compiled from: Overlay.java */
+/* JADX INFO: loaded from: classes3.dex */
 public interface Overlay {
 
-    /* compiled from: Overlay.java */
-    /* renamed from: b.o.a.u.a$a */
+    /* JADX INFO: renamed from: b.o.a.u.a$a */
+    /* JADX INFO: compiled from: Overlay.java */
     public enum a {
         PREVIEW,
         PICTURE_SNAPSHOT,

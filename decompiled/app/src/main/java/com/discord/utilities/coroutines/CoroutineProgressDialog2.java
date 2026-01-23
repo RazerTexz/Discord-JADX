@@ -22,17 +22,17 @@ import p507d0.p584w.p586i.p587a.ContinuationImpl6;
 import p507d0.p584w.p586i.p587a.DebugMetadata;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: CoroutineProgressDialog.kt */
+/* JADX INFO: renamed from: com.discord.utilities.coroutines.CoroutineProgressDialog$withCancellableProgressDialog$dialog$1, reason: use source file name */
+/* JADX INFO: compiled from: CoroutineProgressDialog.kt */
+/* JADX INFO: loaded from: classes2.dex */
 @DebugMetadata(m10084c = "com.discord.utilities.coroutines.CoroutineProgressDialog$withCancellableProgressDialog$dialog$1", m10085f = "CoroutineProgressDialog.kt", m10086l = {}, m10087m = "invokeSuspend")
-/* renamed from: com.discord.utilities.coroutines.CoroutineProgressDialog$withCancellableProgressDialog$dialog$1, reason: use source file name */
-/* loaded from: classes2.dex */
 public final class CoroutineProgressDialog2 extends ContinuationImpl6 implements Function2<CoroutineScope, Continuation<? super AlertDialog>, Object> {
     public final /* synthetic */ Context $context;
     public final /* synthetic */ CoroutineContext $myCoroutineContext;
     public int label;
 
-    /* compiled from: CoroutineProgressDialog.kt */
-    /* renamed from: com.discord.utilities.coroutines.CoroutineProgressDialog$withCancellableProgressDialog$dialog$1$1 */
+    /* JADX INFO: renamed from: com.discord.utilities.coroutines.CoroutineProgressDialog$withCancellableProgressDialog$dialog$1$1 */
+    /* JADX INFO: compiled from: CoroutineProgressDialog.kt */
     public static final class DialogInterfaceOnCancelListenerC67391 implements DialogInterface.OnCancelListener {
         public DialogInterfaceOnCancelListenerC67391() {
         }

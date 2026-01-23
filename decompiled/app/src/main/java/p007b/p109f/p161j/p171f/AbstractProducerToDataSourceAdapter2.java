@@ -6,15 +6,15 @@ import p007b.p109f.p161j.p181p.Producer2;
 import p007b.p109f.p161j.p181p.SettableProducerContext;
 import p007b.p109f.p161j.p183r.FrescoSystrace;
 
-/* compiled from: AbstractProducerToDataSourceAdapter.java */
-/* renamed from: b.f.j.f.b, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.f.j.f.b, reason: use source file name */
+/* JADX INFO: compiled from: AbstractProducerToDataSourceAdapter.java */
+/* JADX INFO: loaded from: classes.dex */
 public abstract class AbstractProducerToDataSourceAdapter2<T> extends AbstractDataSource3<T> {
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public final SettableProducerContext f3866h;
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public final RequestListener2 f3867i;
 
     public AbstractProducerToDataSourceAdapter2(Producer2<T> producer2, SettableProducerContext settableProducerContext, RequestListener2 requestListener2) {

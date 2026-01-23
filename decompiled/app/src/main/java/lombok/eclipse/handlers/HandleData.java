@@ -12,7 +12,7 @@ import lombok.eclipse.handlers.HandleConstructor;
 import org.eclipse.jdt.internal.compiler.ast.Annotation;
 import org.eclipse.jdt.internal.compiler.ast.TypeDeclaration;
 
-/* loaded from: discord-126021.apk:lombok/eclipse/handlers/HandleData.SCL.lombok */
+/* JADX INFO: loaded from: discord-126021.apk:lombok/eclipse/handlers/HandleData.SCL.lombok */
 public class HandleData extends EclipseAnnotationHandler<Data> {
     private HandleGetter handleGetter = new HandleGetter();
     private HandleSetter handleSetter = new HandleSetter();
@@ -21,7 +21,7 @@ public class HandleData extends EclipseAnnotationHandler<Data> {
     private HandleConstructor handleConstructor = new HandleConstructor();
 
     @Override // lombok.eclipse.EclipseAnnotationHandler
-    public void handle(AnnotationValues<Data> annotation, Annotation ast, EclipseNode annotationNode) throws SecurityException, IllegalArgumentException {
+    public void handle(AnnotationValues<Data> annotation, Annotation ast, EclipseNode annotationNode) {
         HandlerUtil.handleFlagUsage(annotationNode, ConfigurationKeys.DATA_FLAG_USAGE, "@Data");
         Data ann = annotation.getInstance();
         EclipseNode typeNode = annotationNode.m10925up();

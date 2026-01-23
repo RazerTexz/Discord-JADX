@@ -6,9 +6,9 @@ import android.os.IBinder;
 import com.discord.utilities.voice.VoiceEngineForegroundService;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: VoiceEngineForegroundService.kt */
-/* renamed from: com.discord.utilities.voice.VoiceEngineForegroundService$Connection$connection$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.utilities.voice.VoiceEngineForegroundService$Connection$connection$1, reason: use source file name */
+/* JADX INFO: compiled from: VoiceEngineForegroundService.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class VoiceEngineForegroundService5 implements ServiceConnection {
     public final /* synthetic */ VoiceEngineForegroundService.Connection this$0;
 

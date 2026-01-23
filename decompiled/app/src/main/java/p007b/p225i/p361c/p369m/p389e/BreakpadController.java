@@ -15,21 +15,21 @@ import p007b.p225i.p361c.p369m.p370d.Logger3;
 import p007b.p225i.p361c.p369m.p370d.p373k.CommonUtils;
 import p007b.p225i.p361c.p369m.p389e.SessionFiles;
 
-/* compiled from: BreakpadController.java */
-/* renamed from: b.i.c.m.e.a, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.c.m.e.a, reason: use source file name */
+/* JADX INFO: compiled from: BreakpadController.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class BreakpadController implements NativeComponentController {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final Charset f12784a = Charset.forName(Constants.ENCODING);
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final Context f12785b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final NativeApi f12786c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final NdkCrashFilesManager f12787d;
 
     public BreakpadController(Context context, NativeApi nativeApi, NdkCrashFilesManager ndkCrashFilesManager) {
@@ -39,7 +39,7 @@ public class BreakpadController implements NativeComponentController {
     }
 
     @Nullable
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static File m6698b(File file, String str) {
         File[] fileArrListFiles = file.listFiles();
         if (fileArrListFiles == null) {
@@ -54,7 +54,7 @@ public class BreakpadController implements NativeComponentController {
     }
 
     @NonNull
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public SessionFiles m6699a(String str) {
         File fileM6702a = this.f12787d.m6702a(str);
         File file = new File(fileM6702a, "pending");
@@ -78,7 +78,7 @@ public class BreakpadController implements NativeComponentController {
         return new SessionFiles(bVar, null);
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final void m6700c(String str, String str2, String str3) throws Throwable {
         File file = new File(this.f12787d.m6702a(str), str3);
         BufferedWriter bufferedWriter = null;

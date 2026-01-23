@@ -17,44 +17,44 @@ import org.webrtc.VideoFrameDrawer;
 import p507d0.p508a0.MathJVM;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ThumbnailEmitter.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: ThumbnailEmitter.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class ThumbnailEmitter {
 
-    /* renamed from: a, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: a, reason: from kotlin metadata */
     public long lastTimestampNs;
 
-    /* renamed from: b, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: b, reason: from kotlin metadata */
     public final ByteBuffer outputByteBuffer;
 
-    /* renamed from: c, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: c, reason: from kotlin metadata */
     public final GlRectDrawer rectDrawer;
 
-    /* renamed from: d, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: d, reason: from kotlin metadata */
     public final VideoFrameDrawer frameDrawer;
 
-    /* renamed from: e, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: e, reason: from kotlin metadata */
     public final long initializationTimeMs;
 
-    /* renamed from: f, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: f, reason: from kotlin metadata */
     public final Matrix renderMatrix;
 
-    /* renamed from: g, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: g, reason: from kotlin metadata */
     public final int width;
 
-    /* renamed from: h, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: h, reason: from kotlin metadata */
     public final int height;
 
-    /* renamed from: i, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: i, reason: from kotlin metadata */
     public final long periodMs;
 
-    /* renamed from: j, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: j, reason: from kotlin metadata */
     public final long initialDelayMs;
 
-    /* renamed from: k, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: k, reason: from kotlin metadata */
     public final Clock clock;
 
-    /* renamed from: l, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: l, reason: from kotlin metadata */
     public final Function1<Bitmap, Unit> onNextThumbnail;
 
     public ThumbnailEmitter(int i, int i2, long j, long j2, Clock clock, Function1 function1, int i3) {
@@ -81,7 +81,7 @@ public final class ThumbnailEmitter {
         this.renderMatrix = matrix;
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final Bitmap m8502a(VideoFrame frame) {
         GlTextureFrameBuffer glTextureFrameBuffer = new GlTextureFrameBuffer(6408);
         glTextureFrameBuffer.setSize(this.width, this.height);

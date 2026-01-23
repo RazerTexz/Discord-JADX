@@ -10,12 +10,12 @@ import p007b.p225i.p361c.p369m.p370d.p384s.p385h.FeaturesSettingsData;
 import p007b.p225i.p361c.p369m.p370d.p384s.p385h.SessionSettingsData;
 import p007b.p225i.p361c.p369m.p370d.p384s.p385h.SettingsData;
 
-/* compiled from: SettingsV3JsonTransform.java */
-/* renamed from: b.i.c.m.d.s.g, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.c.m.d.s.g, reason: use source file name */
+/* JADX INFO: compiled from: SettingsV3JsonTransform.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class SettingsV3JsonTransform implements SettingsJsonTransform {
     @Override // p007b.p225i.p361c.p369m.p370d.p384s.SettingsJsonTransform
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public SettingsData mo6682a(SystemCurrentTimeProvider systemCurrentTimeProvider, JSONObject jSONObject) throws JSONException {
         long jCurrentTimeMillis;
         int iOptInt = jSONObject.optInt("settings_version", 0);

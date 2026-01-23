@@ -4,9 +4,9 @@ import java.lang.ref.WeakReference;
 import kotlin.jvm.functions.Function0;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetMobileReports.kt */
-/* renamed from: com.discord.widgets.mobile_reports.WidgetMobileReports$viewModel$2, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.mobile_reports.WidgetMobileReports$viewModel$2, reason: use source file name */
+/* JADX INFO: compiled from: WidgetMobileReports.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetMobileReports5 extends Lambda implements Function0<MobileReportsViewModel> {
     public final /* synthetic */ WidgetMobileReports this$0;
 

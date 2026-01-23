@@ -8,36 +8,36 @@ import p007b.p109f.p148h.p149a.p151b.BitmapFrameRenderer;
 import p007b.p109f.p161j.p162a.p163a.AnimatedDrawableBackend;
 import p007b.p109f.p161j.p162a.p165c.AnimatedImageCompositor;
 
-/* compiled from: AnimatedDrawableBackendFrameRenderer.java */
-/* renamed from: b.f.h.a.b.f.b, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.f.h.a.b.f.b, reason: use source file name */
+/* JADX INFO: compiled from: AnimatedDrawableBackendFrameRenderer.java */
+/* JADX INFO: loaded from: classes.dex */
 public class AnimatedDrawableBackendFrameRenderer implements BitmapFrameRenderer {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final BitmapFrameCache f3527a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public AnimatedDrawableBackend f3528b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public AnimatedImageCompositor f3529c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final AnimatedImageCompositor.a f3530d;
 
-    /* compiled from: AnimatedDrawableBackendFrameRenderer.java */
-    /* renamed from: b.f.h.a.b.f.b$a */
+    /* JADX INFO: renamed from: b.f.h.a.b.f.b$a */
+    /* JADX INFO: compiled from: AnimatedDrawableBackendFrameRenderer.java */
     public class a implements AnimatedImageCompositor.a {
         public a() {
         }
 
         @Override // p007b.p109f.p161j.p162a.p165c.AnimatedImageCompositor.a
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public void mo1162a(int i, Bitmap bitmap) {
         }
 
         @Override // p007b.p109f.p161j.p162a.p165c.AnimatedImageCompositor.a
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public CloseableReference<Bitmap> mo1163b(int i) {
             return AnimatedDrawableBackendFrameRenderer.this.f3527a.mo1154d(i);
         }
@@ -51,7 +51,7 @@ public class AnimatedDrawableBackendFrameRenderer implements BitmapFrameRenderer
         this.f3529c = new AnimatedImageCompositor(animatedDrawableBackend, aVar);
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public boolean m1161a(int i, Bitmap bitmap) {
         try {
             this.f3529c.m1205d(i, bitmap);

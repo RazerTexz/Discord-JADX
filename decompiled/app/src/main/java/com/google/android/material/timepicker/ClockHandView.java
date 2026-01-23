@@ -23,62 +23,62 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public class ClockHandView extends View {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static final /* synthetic */ int f21197j = 0;
 
-    /* renamed from: A */
+    /* JADX INFO: renamed from: A */
     public int f21198A;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public ValueAnimator f21199k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public boolean f21200l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public float f21201m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public float f21202n;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public boolean f21203o;
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public int f21204p;
 
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     public final List<OnRotateListener> f21205q;
 
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     public final int f21206r;
 
-    /* renamed from: s */
+    /* JADX INFO: renamed from: s */
     public final float f21207s;
 
-    /* renamed from: t */
+    /* JADX INFO: renamed from: t */
     public final Paint f21208t;
 
-    /* renamed from: u */
+    /* JADX INFO: renamed from: u */
     public final RectF f21209u;
 
-    /* renamed from: v */
+    /* JADX INFO: renamed from: v */
     @Px
     public final int f21210v;
 
-    /* renamed from: w */
+    /* JADX INFO: renamed from: w */
     public float f21211w;
 
-    /* renamed from: x */
+    /* JADX INFO: renamed from: x */
     public boolean f21212x;
 
-    /* renamed from: y */
+    /* JADX INFO: renamed from: y */
     public OnActionUpListener f21213y;
 
-    /* renamed from: z */
+    /* JADX INFO: renamed from: z */
     public double f21214z;
 
     public interface OnActionUpListener {
@@ -89,7 +89,7 @@ public class ClockHandView extends View {
         void onRotate(@FloatRange(from = 0.0d, m75to = 360.0d) float f, boolean z2);
     }
 
-    /* renamed from: com.google.android.material.timepicker.ClockHandView$a */
+    /* JADX INFO: renamed from: com.google.android.material.timepicker.ClockHandView$a */
     public class C11021a implements ValueAnimator.AnimatorUpdateListener {
         public C11021a() {
         }
@@ -103,7 +103,7 @@ public class ClockHandView extends View {
         }
     }
 
-    /* renamed from: com.google.android.material.timepicker.ClockHandView$b */
+    /* JADX INFO: renamed from: com.google.android.material.timepicker.ClockHandView$b */
     public class C11022b extends AnimatorListenerAdapter {
         public C11022b(ClockHandView clockHandView) {
         }
@@ -136,13 +136,13 @@ public class ClockHandView extends View {
         typedArrayObtainStyledAttributes.recycle();
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final int m9157a(float f, float f2) {
         int degrees = ((int) Math.toDegrees(Math.atan2(f2 - (getHeight() / 2), f - (getWidth() / 2)))) + 90;
         return degrees < 0 ? degrees + 360 : degrees;
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public void m9158b(@FloatRange(from = 0.0d, m75to = 360.0d) float f, boolean z2) {
         ValueAnimator valueAnimator = this.f21199k;
         if (valueAnimator != null) {
@@ -170,7 +170,7 @@ public class ClockHandView extends View {
         this.f21199k.start();
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final void m9159c(@FloatRange(from = 0.0d, m75to = 360.0d) float f, boolean z2) {
         float f2 = f % 360.0f;
         this.f21211w = f2;

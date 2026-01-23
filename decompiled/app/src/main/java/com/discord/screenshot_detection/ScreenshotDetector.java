@@ -15,38 +15,38 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 import p658rx.subjects.PublishSubject;
 
-/* compiled from: ScreenshotDetector.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: ScreenshotDetector.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class ScreenshotDetector {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static ScreenshotDetector f18938a;
 
-    /* renamed from: b, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: b, reason: from kotlin metadata */
     public final PublishSubject<Screenshot> publishSubject;
 
-    /* renamed from: c, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: c, reason: from kotlin metadata */
     public final ScreenshotContentObserver screenshotContentObserver;
 
-    /* renamed from: d, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: d, reason: from kotlin metadata */
     public final ScreenshotDetector2 activityCallbacks;
 
-    /* renamed from: e, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: e, reason: from kotlin metadata */
     public boolean enabled;
 
-    /* renamed from: f, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: f, reason: from kotlin metadata */
     public final Logger logger;
 
-    /* renamed from: g, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: g, reason: from kotlin metadata */
     public final SharedPreferences cache;
 
-    /* compiled from: ScreenshotDetector.kt */
+    /* JADX INFO: compiled from: ScreenshotDetector.kt */
     public static final /* data */ class Screenshot {
 
-        /* renamed from: a, reason: from kotlin metadata */
+        /* JADX INFO: renamed from: a, reason: from kotlin metadata */
         public final Uri uri;
 
-        /* renamed from: b, reason: from kotlin metadata */
+        /* JADX INFO: renamed from: b, reason: from kotlin metadata */
         public final String filename;
 
         public Screenshot(Uri uri, String str) {
@@ -82,8 +82,8 @@ public final class ScreenshotDetector {
         }
     }
 
-    /* compiled from: ScreenshotDetector.kt */
-    /* renamed from: com.discord.screenshot_detection.ScreenshotDetector$a */
+    /* JADX INFO: renamed from: com.discord.screenshot_detection.ScreenshotDetector$a */
+    /* JADX INFO: compiled from: ScreenshotDetector.kt */
     public static final class C5652a extends Lambda implements Function2<Uri, String, Unit> {
         public C5652a() {
             super(2);
@@ -124,7 +124,7 @@ public final class ScreenshotDetector {
         screenshotDetector2.m364a(this.enabled);
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final void m8505a(boolean z2) {
         this.enabled = z2;
         SharedPreferences.Editor editorEdit = this.cache.edit();

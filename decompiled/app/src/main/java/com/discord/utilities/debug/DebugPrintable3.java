@@ -10,12 +10,12 @@ import java.util.Map;
 import kotlin.jvm.internal.DefaultConstructorMarker;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: DebugPrintable.kt */
-/* renamed from: com.discord.utilities.debug.DebugPrintableCollection, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.utilities.debug.DebugPrintableCollection, reason: use source file name */
+/* JADX INFO: compiled from: DebugPrintable.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class DebugPrintable3 {
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private static String libdiscordVersion = null;
     private static final int maxDebugPrintableStringLength = 524288;
@@ -23,8 +23,8 @@ public final class DebugPrintable3 {
     private final Map<Long, DebugPrintable5> collection = new LinkedHashMap();
     private final Object sync = new Object();
 
-    /* compiled from: DebugPrintable.kt */
-    /* renamed from: com.discord.utilities.debug.DebugPrintableCollection$Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: com.discord.utilities.debug.DebugPrintableCollection$Companion, reason: from kotlin metadata */
+    /* JADX INFO: compiled from: DebugPrintable.kt */
     public static final class Companion {
         private Companion() {
         }

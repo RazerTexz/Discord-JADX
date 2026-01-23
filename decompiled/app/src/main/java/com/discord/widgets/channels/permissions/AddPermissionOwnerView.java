@@ -11,8 +11,8 @@ import com.discord.databinding.ViewAddPermissionOwnerBinding;
 import kotlin.jvm.internal.DefaultConstructorMarker;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: AddPermissionOwnerView.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: AddPermissionOwnerView.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class AddPermissionOwnerView extends ConstraintLayout {
     private final ViewAddPermissionOwnerBinding binding;
 

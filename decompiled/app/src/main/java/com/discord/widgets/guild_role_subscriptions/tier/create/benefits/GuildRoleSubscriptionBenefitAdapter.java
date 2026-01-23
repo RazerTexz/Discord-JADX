@@ -36,8 +36,8 @@ import p507d0.p580t.Collections2;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: GuildRoleSubscriptionBenefitAdapter.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: GuildRoleSubscriptionBenefitAdapter.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class GuildRoleSubscriptionBenefitAdapter extends RecyclerView.Adapter<GuildRoleSubscriptionBenefitViewHolder> implements StickyHeaderItemDecoration.StickyHeaderAdapter {
     private static final int VIEW_TYPE_ADD_ITEM = 3;
     private static final int VIEW_TYPE_BENEFIT = 0;
@@ -49,7 +49,7 @@ public final class GuildRoleSubscriptionBenefitAdapter extends RecyclerView.Adap
     private final Listener listener;
     private StickyHeadersManager stickyHeaderManager;
 
-    /* compiled from: GuildRoleSubscriptionBenefitAdapter.kt */
+    /* JADX INFO: compiled from: GuildRoleSubscriptionBenefitAdapter.kt */
     public interface Listener {
         void onActiveTrialUserLimitClick();
 
@@ -62,7 +62,7 @@ public final class GuildRoleSubscriptionBenefitAdapter extends RecyclerView.Adap
         void onTrialIntervalClick();
     }
 
-    /* compiled from: GuildRoleSubscriptionBenefitAdapter.kt */
+    /* JADX INFO: compiled from: GuildRoleSubscriptionBenefitAdapter.kt */
     public static final class StickyHeadersManager {
         private final View currentStickyHeaderView;
         private final GuildRoleSubscriptionBenefitViewHolder.HeaderViewHolder stickyHeaderHolder;
@@ -92,8 +92,8 @@ public final class GuildRoleSubscriptionBenefitAdapter extends RecyclerView.Adap
         }
     }
 
-    /* compiled from: GuildRoleSubscriptionBenefitAdapter.kt */
-    /* renamed from: com.discord.widgets.guild_role_subscriptions.tier.create.benefits.GuildRoleSubscriptionBenefitAdapter$setItems$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.guild_role_subscriptions.tier.create.benefits.GuildRoleSubscriptionBenefitAdapter$setItems$1 */
+    /* JADX INFO: compiled from: GuildRoleSubscriptionBenefitAdapter.kt */
     public static final class C85181 extends Lambda implements Function1<List<? extends GuildRoleSubscriptionBenefitAdapterItem>, Unit> {
         public C85181() {
             super(1);
@@ -105,7 +105,7 @@ public final class GuildRoleSubscriptionBenefitAdapter extends RecyclerView.Adap
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(List<? extends GuildRoleSubscriptionBenefitAdapterItem> list) {
             Intrinsics3.checkNotNullParameter(list, "itemsToDispatch");
             GuildRoleSubscriptionBenefitAdapter.access$setItems$p(GuildRoleSubscriptionBenefitAdapter.this, list);

@@ -2,7 +2,6 @@ package com.discord.utilities.kryo;
 
 import com.discord.utilities.collections.SnowflakePartitionMap;
 import com.esotericsoftware.kryo.Kryo;
-import com.esotericsoftware.kryo.KryoException;
 import com.esotericsoftware.kryo.Serializer;
 import com.esotericsoftware.kryo.p502io.Input;
 import com.esotericsoftware.kryo.p502io.Output;
@@ -12,8 +11,8 @@ import p507d0.p512d0._Ranges;
 import p507d0.p580t.Iterators4;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: SnowflakePartitionMapSerializer.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: SnowflakePartitionMapSerializer.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class SnowflakePartitionMapSerializer extends Serializer<SnowflakePartitionMap<?>> {
     @Override // com.esotericsoftware.kryo.Serializer
     public /* bridge */ /* synthetic */ SnowflakePartitionMap<?> read(Kryo kryo, Input input, Class<SnowflakePartitionMap<?>> cls) {
@@ -21,13 +20,13 @@ public final class SnowflakePartitionMapSerializer extends Serializer<SnowflakeP
     }
 
     @Override // com.esotericsoftware.kryo.Serializer
-    public /* bridge */ /* synthetic */ void write(Kryo kryo, Output output, SnowflakePartitionMap<?> snowflakePartitionMap) throws KryoException {
+    public /* bridge */ /* synthetic */ void write(Kryo kryo, Output output, SnowflakePartitionMap<?> snowflakePartitionMap) {
         write2(kryo, output, snowflakePartitionMap);
     }
 
     /* JADX WARN: Can't rename method to resolve collision */
     @Override // com.esotericsoftware.kryo.Serializer
-    public SnowflakePartitionMap<?> read(Kryo kryo, Input input, Class<SnowflakePartitionMap<?>> type) throws KryoException {
+    public SnowflakePartitionMap<?> read(Kryo kryo, Input input, Class<SnowflakePartitionMap<?>> type) {
         Intrinsics3.checkNotNullParameter(kryo, "kryo");
         Intrinsics3.checkNotNullParameter(input, "input");
         Intrinsics3.checkNotNullParameter(type, "type");
@@ -42,8 +41,8 @@ public final class SnowflakePartitionMapSerializer extends Serializer<SnowflakeP
         return snowflakePartitionMap;
     }
 
-    /* renamed from: write, reason: avoid collision after fix types in other method */
-    public void write2(Kryo kryo, Output output, SnowflakePartitionMap<?> target) throws KryoException {
+    /* JADX INFO: renamed from: write, reason: avoid collision after fix types in other method */
+    public void write2(Kryo kryo, Output output, SnowflakePartitionMap<?> target) {
         Intrinsics3.checkNotNullParameter(kryo, "kryo");
         Intrinsics3.checkNotNullParameter(output, "output");
         Intrinsics3.checkNotNullParameter(target, "target");

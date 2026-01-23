@@ -4,28 +4,28 @@ import androidx.annotation.Nullable;
 import java.io.File;
 import p007b.p100d.p104b.p105a.outline;
 
-/* compiled from: CacheSpan.java */
-/* renamed from: b.i.a.c.e3.b0.h, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.e3.b0.h, reason: use source file name */
+/* JADX INFO: compiled from: CacheSpan.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class CacheSpan implements Comparable<CacheSpan> {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final String f6465j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final long f6466k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final long f6467l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public final boolean f6468m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     @Nullable
     public final File f6469n;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public final long f6470o;
 
     public CacheSpan(String str, long j, long j2, long j3, @Nullable File file) {
@@ -42,7 +42,7 @@ public class CacheSpan implements Comparable<CacheSpan> {
         return m2791f(cacheSpan);
     }
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public int m2791f(CacheSpan cacheSpan) {
         if (!this.f6465j.equals(cacheSpan.f6465j)) {
             return this.f6465j.compareTo(cacheSpan.f6465j);

@@ -5,15 +5,15 @@ import p007b.p225i.p361c.p396q.Publisher;
 import p007b.p225i.p361c.p400t.Provider2;
 import p007b.p225i.p361c.p405v.DataCollectionConfigStorage;
 
-/* compiled from: FirebaseApp.java */
-/* renamed from: b.i.c.b, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.c.b, reason: use source file name */
+/* JADX INFO: compiled from: FirebaseApp.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final /* synthetic */ class FirebaseApp implements Provider2 {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final FirebaseApp2 f12113a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final Context f12114b;
 
     public FirebaseApp(FirebaseApp2 firebaseApp2, Context context) {

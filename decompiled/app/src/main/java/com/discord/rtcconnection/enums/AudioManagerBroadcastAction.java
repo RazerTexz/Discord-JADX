@@ -3,8 +3,8 @@ package com.discord.rtcconnection.enums;
 import android.os.Build;
 import kotlin.jvm.internal.DefaultConstructorMarker;
 
-/* compiled from: AudioManagerBroadcastAction.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: AudioManagerBroadcastAction.kt */
+/* JADX INFO: loaded from: classes.dex */
 public enum AudioManagerBroadcastAction {
     AudioBecomingNoisy("android.media.AUDIO_BECOMING_NOISY"),
     HeadsetPlug("android.intent.action.HEADSET_PLUG"),
@@ -13,12 +13,12 @@ public enum AudioManagerBroadcastAction {
     SpeakerphoneStateChanged("android.media.action.SPEAKERPHONE_STATE_CHANGED");
 
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE;
     private final String action;
 
-    /* compiled from: AudioManagerBroadcastAction.kt */
-    /* renamed from: com.discord.rtcconnection.enums.AudioManagerBroadcastAction$a, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: com.discord.rtcconnection.enums.AudioManagerBroadcastAction$a, reason: from kotlin metadata */
+    /* JADX INFO: compiled from: AudioManagerBroadcastAction.kt */
     public static final class Companion {
         public Companion(DefaultConstructorMarker defaultConstructorMarker) {
         }

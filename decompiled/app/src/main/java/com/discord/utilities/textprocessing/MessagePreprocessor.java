@@ -26,8 +26,8 @@ import p507d0.p580t._Collections;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.TypeIntrinsics;
 
-/* compiled from: MessagePreprocessor.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: MessagePreprocessor.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class MessagePreprocessor implements NodeProcessor {
     private static final int MAX_JUMBO_EMOJI_COUNT = 27;
     private int customEmojiCount;
@@ -39,7 +39,7 @@ public final class MessagePreprocessor implements NodeProcessor {
     private List<SpoilerNode<?>> spoilers;
     private final Collection<Integer> visibleSpoilerNodeIndices;
 
-    /* compiled from: MessagePreprocessor.kt */
+    /* JADX INFO: compiled from: MessagePreprocessor.kt */
     public static final /* data */ class ConstrainState {
         private int limit;
 
@@ -54,7 +54,7 @@ public final class MessagePreprocessor implements NodeProcessor {
             return constrainState.copy(i);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final int getLimit() {
             return this.limit;
         }
@@ -87,8 +87,8 @@ public final class MessagePreprocessor implements NodeProcessor {
         }
     }
 
-    /* compiled from: MessagePreprocessor.kt */
-    /* renamed from: com.discord.utilities.textprocessing.MessagePreprocessor$process$1 */
+    /* JADX INFO: renamed from: com.discord.utilities.textprocessing.MessagePreprocessor$process$1 */
+    /* JADX INFO: compiled from: MessagePreprocessor.kt */
     public static final class C69441 implements NodeProcessor {
         public static final C69441 INSTANCE = new C69441();
 
@@ -100,8 +100,8 @@ public final class MessagePreprocessor implements NodeProcessor {
         }
     }
 
-    /* compiled from: MessagePreprocessor.kt */
-    /* renamed from: com.discord.utilities.textprocessing.MessagePreprocessor$processQuoteChildren$1 */
+    /* JADX INFO: renamed from: com.discord.utilities.textprocessing.MessagePreprocessor$processQuoteChildren$1 */
+    /* JADX INFO: compiled from: MessagePreprocessor.kt */
     public static final class C69451 implements NodeProcessor {
         public C69451() {
         }

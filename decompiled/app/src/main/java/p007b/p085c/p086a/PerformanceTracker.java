@@ -6,24 +6,24 @@ import java.util.Map;
 import java.util.Set;
 import p007b.p085c.p086a.p089b0.MeanCalculator;
 
-/* compiled from: PerformanceTracker.java */
-/* renamed from: b.c.a.s, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.c.a.s, reason: use source file name */
+/* JADX INFO: compiled from: PerformanceTracker.java */
+/* JADX INFO: loaded from: classes.dex */
 public class PerformanceTracker {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public boolean f2458a = false;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final Set<a> f2459b = new ArraySet();
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final Map<String, MeanCalculator> f2460c = new HashMap();
 
-    /* compiled from: PerformanceTracker.java */
-    /* renamed from: b.c.a.s$a */
+    /* JADX INFO: renamed from: b.c.a.s$a */
+    /* JADX INFO: compiled from: PerformanceTracker.java */
     public interface a {
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         void m708a(float f);
     }
 }

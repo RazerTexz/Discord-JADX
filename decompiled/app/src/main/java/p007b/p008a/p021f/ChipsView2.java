@@ -3,12 +3,12 @@ package p007b.p008a.p021f;
 import android.view.View;
 import com.discord.chips_view.ChipsView;
 
-/* compiled from: ChipsView.kt */
-/* renamed from: b.a.f.f, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.a.f.f, reason: use source file name */
+/* JADX INFO: compiled from: ChipsView.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class ChipsView2 implements View.OnFocusChangeListener {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final /* synthetic */ ChipsView f621j;
 
     public ChipsView2(ChipsView chipsView) {

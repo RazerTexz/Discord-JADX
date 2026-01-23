@@ -7,9 +7,9 @@ import p507d0.p513e0.p514p.p515d.p517m0.p550i.MessageLite;
 import p507d0.p580t.Collections2;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: MemberDeserializer.kt */
-/* renamed from: d0.e0.p.d.m0.l.b.v, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.l.b.v, reason: use source file name */
+/* JADX INFO: compiled from: MemberDeserializer.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class MemberDeserializer2 extends Lambda implements Function0<List<? extends AnnotationDescriptor>> {
     public final /* synthetic */ AnnotatedCallableKind $kind;
     public final /* synthetic */ MessageLite $proto;
@@ -29,7 +29,7 @@ public final class MemberDeserializer2 extends Lambda implements Function0<List<
     }
 
     @Override // kotlin.jvm.functions.Function0
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final List<? extends AnnotationDescriptor> invoke2() {
         List<AnnotationDescriptor> listLoadExtensionReceiverParameterAnnotations;
         MemberDeserializer memberDeserializer = this.this$0;

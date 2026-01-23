@@ -6,22 +6,22 @@ import java.util.List;
 import java.util.ListIterator;
 import java.util.RandomAccess;
 
-/* compiled from: UnmodifiableLazyStringList.java */
-/* renamed from: d0.e0.p.d.m0.i.u, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.i.u, reason: use source file name */
+/* JADX INFO: compiled from: UnmodifiableLazyStringList.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class UnmodifiableLazyStringList extends AbstractList<String> implements RandomAccess, LazyStringList {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final LazyStringList f24183j;
 
-    /* compiled from: UnmodifiableLazyStringList.java */
-    /* renamed from: d0.e0.p.d.m0.i.u$a */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.i.u$a */
+    /* JADX INFO: compiled from: UnmodifiableLazyStringList.java */
     public class a implements ListIterator<String> {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public ListIterator<String> f24184j;
 
-        /* renamed from: k */
+        /* JADX INFO: renamed from: k */
         public final /* synthetic */ int f24185k;
 
         public a(int i) {
@@ -74,7 +74,7 @@ public class UnmodifiableLazyStringList extends AbstractList<String> implements 
             set2(str);
         }
 
-        /* renamed from: add, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: add, reason: avoid collision after fix types in other method */
         public void add2(String str) {
             throw new UnsupportedOperationException();
         }
@@ -85,22 +85,22 @@ public class UnmodifiableLazyStringList extends AbstractList<String> implements 
         }
 
         @Override // java.util.ListIterator
-        /* renamed from: previous, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: previous, reason: avoid collision after fix types in other method */
         public String previous2() {
             return this.f24184j.previous();
         }
 
-        /* renamed from: set, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: set, reason: avoid collision after fix types in other method */
         public void set2(String str) {
             throw new UnsupportedOperationException();
         }
     }
 
-    /* compiled from: UnmodifiableLazyStringList.java */
-    /* renamed from: d0.e0.p.d.m0.i.u$b */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.i.u$b */
+    /* JADX INFO: compiled from: UnmodifiableLazyStringList.java */
     public class b implements Iterator<String> {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public Iterator<String> f24187j;
 
         public b() {
@@ -123,7 +123,7 @@ public class UnmodifiableLazyStringList extends AbstractList<String> implements 
         }
 
         @Override // java.util.Iterator
-        /* renamed from: next, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: next, reason: avoid collision after fix types in other method */
         public String next2() {
             return this.f24187j.next();
         }

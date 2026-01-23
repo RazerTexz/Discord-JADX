@@ -12,42 +12,42 @@ import com.google.android.material.button.MaterialButton;
 import p007b.p008a.p025i.LayoutVoiceBottomSheetEmptyBinding;
 import p007b.p008a.p025i.LayoutVoiceBottomSheetHeaderBinding;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public final class WidgetVoiceBottomSheetBinding implements ViewBinding {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     @NonNull
     public final CoordinatorLayout f18437a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     @NonNull
     public final LayoutVoiceBottomSheetEmptyBinding f18438b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     @NonNull
     public final LayoutVoiceBottomSheetHeaderBinding f18439c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     @NonNull
     public final MaterialButton f18440d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     @NonNull
     public final RelativeLayout f18441e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     @NonNull
     public final AnchoredVoiceControlsView f18442f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     @NonNull
     public final MaterialButton f18443g;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     @NonNull
     public final RecyclerView f18444h;
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     @NonNull
     public final CoordinatorLayout f18445i;
 

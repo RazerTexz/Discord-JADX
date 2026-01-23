@@ -8,8 +8,8 @@ import com.google.android.gms.nearby.messages.internal.zzaf;
 import com.google.android.gms.nearby.messages.internal.zzce;
 import p007b.p085c.p086a.p087a0.AnimatableValueParser;
 
-/* renamed from: b.i.a.f.j.b.e.i0 */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.j.b.e.i0 */
+/* JADX INFO: loaded from: classes3.dex */
 public final class C4287i0 implements Parcelable.Creator<zzce> {
     @Override // android.os.Parcelable.Creator
     public final zzce createFromParcel(Parcel parcel) {

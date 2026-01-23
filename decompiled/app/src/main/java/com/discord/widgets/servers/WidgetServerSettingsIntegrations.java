@@ -36,23 +36,23 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 import p658rx.Observable;
 
-/* compiled from: WidgetServerSettingsIntegrations.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetServerSettingsIntegrations.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetServerSettingsIntegrations extends AppFragment {
     public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetServerSettingsIntegrations.class, "binding", "getBinding()Lcom/discord/databinding/WidgetServerSettingsIntegrationsBinding;", 0)};
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private static final String INTENT_EXTRA_GUILD_ID = "INTENT_EXTRA_GUILD_ID";
     private static final int VIEW_INDEX_INTEGRATION_LIST = 0;
     private static final int VIEW_INDEX_NO_INTEGRATIONS = 1;
     private Adapter adapter;
 
-    /* renamed from: binding$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
     private final AppLogger2 loggingConfig;
 
-    /* compiled from: WidgetServerSettingsIntegrations.kt */
+    /* JADX INFO: compiled from: WidgetServerSettingsIntegrations.kt */
     public static final class Adapter extends MGRecyclerAdapterSimple<Model.IntegrationItem> {
         private Function1<? super Long, Unit> onIntegrationSelectedListener;
 
@@ -90,7 +90,7 @@ public final class WidgetServerSettingsIntegrations extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetServerSettingsIntegrations.kt */
+    /* JADX INFO: compiled from: WidgetServerSettingsIntegrations.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -108,16 +108,16 @@ public final class WidgetServerSettingsIntegrations extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetServerSettingsIntegrations.kt */
+    /* JADX INFO: compiled from: WidgetServerSettingsIntegrations.kt */
     public static final /* data */ class Model {
 
-        /* renamed from: Companion, reason: from kotlin metadata */
+        /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
         public static final Companion INSTANCE = new Companion(null);
         private final long guildId;
         private final String guildName;
         private final List<IntegrationItem> integrations;
 
-        /* compiled from: WidgetServerSettingsIntegrations.kt */
+        /* JADX INFO: compiled from: WidgetServerSettingsIntegrations.kt */
         public static final class Companion {
             private Companion() {
             }
@@ -136,7 +136,7 @@ public final class WidgetServerSettingsIntegrations extends AppFragment {
             }
         }
 
-        /* compiled from: WidgetServerSettingsIntegrations.kt */
+        /* JADX INFO: compiled from: WidgetServerSettingsIntegrations.kt */
         public static final /* data */ class IntegrationItem implements MGRecyclerDataPayload {
             public static final int TYPE_INTEGRATION = 0;
             private final long guildId;
@@ -161,12 +161,12 @@ public final class WidgetServerSettingsIntegrations extends AppFragment {
                 return integrationItem.copy(modelGuildIntegration, j);
             }
 
-            /* renamed from: component1, reason: from getter */
+            /* JADX INFO: renamed from: component1, reason: from getter */
             public final ModelGuildIntegration getIntegration() {
                 return this.integration;
             }
 
-            /* renamed from: component2, reason: from getter */
+            /* JADX INFO: renamed from: component2, reason: from getter */
             public final long getGuildId() {
                 return this.guildId;
             }
@@ -240,12 +240,12 @@ public final class WidgetServerSettingsIntegrations extends AppFragment {
             return model.copy(j, str, list);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final long getGuildId() {
             return this.guildId;
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final String getGuildName() {
             return this.guildName;
         }
@@ -301,8 +301,8 @@ public final class WidgetServerSettingsIntegrations extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetServerSettingsIntegrations.kt */
-    /* renamed from: com.discord.widgets.servers.WidgetServerSettingsIntegrations$configureUI$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.WidgetServerSettingsIntegrations$configureUI$1 */
+    /* JADX INFO: compiled from: WidgetServerSettingsIntegrations.kt */
     public static final class C92631 extends Lambda implements Function1<Long, Unit> {
         public final /* synthetic */ Model $model;
 
@@ -323,8 +323,8 @@ public final class WidgetServerSettingsIntegrations extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetServerSettingsIntegrations.kt */
-    /* renamed from: com.discord.widgets.servers.WidgetServerSettingsIntegrations$onResume$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.WidgetServerSettingsIntegrations$onResume$1 */
+    /* JADX INFO: compiled from: WidgetServerSettingsIntegrations.kt */
     public static final /* synthetic */ class C92641 extends FunctionReferenceImpl implements Function1<Model, Unit> {
         public C92641(WidgetServerSettingsIntegrations widgetServerSettingsIntegrations) {
             super(1, widgetServerSettingsIntegrations, WidgetServerSettingsIntegrations.class, "configureUI", "configureUI(Lcom/discord/widgets/servers/WidgetServerSettingsIntegrations$Model;)V", 0);
@@ -336,7 +336,7 @@ public final class WidgetServerSettingsIntegrations extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Model model) {
             WidgetServerSettingsIntegrations.access$configureUI((WidgetServerSettingsIntegrations) this.receiver, model);
         }

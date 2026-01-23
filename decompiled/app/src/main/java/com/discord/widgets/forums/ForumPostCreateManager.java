@@ -35,14 +35,14 @@ import p658rx.Observable;
 import p658rx.functions.Func2;
 import p658rx.subjects.BehaviorSubject;
 
-/* compiled from: ForumPostCreateManager.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: ForumPostCreateManager.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class ForumPostCreateManager {
     public static final ForumPostCreateManager INSTANCE = new ForumPostCreateManager();
     private static final BehaviorSubject<Boolean> isCreateInProgressBehaviorSubject = BehaviorSubject.m11130l0(Boolean.FALSE);
 
-    /* compiled from: ForumPostCreateManager.kt */
-    /* renamed from: com.discord.widgets.forums.ForumPostCreateManager$createForumPostWithMessage$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.forums.ForumPostCreateManager$createForumPostWithMessage$1 */
+    /* JADX INFO: compiled from: ForumPostCreateManager.kt */
     public static final class C83221<T, R> implements Func1<Channel, Observable<? extends Channel>> {
         public static final C83221 INSTANCE = new C83221();
 
@@ -51,7 +51,7 @@ public final class ForumPostCreateManager {
             return call2(channel);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final Observable<? extends Channel> call2(Channel channel) {
             Observable<R> observableM11083G = StoreStream.INSTANCE.getChannels().observeChannel(channel.getId()).m11118y(ObservableExtensionsKt.C68871.INSTANCE).m11083G(ObservableExtensionsKt.C68882.INSTANCE);
             Intrinsics3.checkNotNullExpressionValue(observableM11083G, "filter { it != null }.map { it!! }");
@@ -59,8 +59,8 @@ public final class ForumPostCreateManager {
         }
     }
 
-    /* compiled from: ForumPostCreateManager.kt */
-    /* renamed from: com.discord.widgets.forums.ForumPostCreateManager$createForumPostWithMessage$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.forums.ForumPostCreateManager$createForumPostWithMessage$2 */
+    /* JADX INFO: compiled from: ForumPostCreateManager.kt */
     public static final class C83232 extends Lambda implements Function1<Channel, Unit> {
         public final /* synthetic */ long $forumChannelId;
 
@@ -76,15 +76,15 @@ public final class ForumPostCreateManager {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Channel channel) {
             StoreStream.INSTANCE.getSlowMode().onThreadCreated(this.$forumChannelId);
             ChannelSelector.selectChannel$default(ChannelSelector.INSTANCE.getInstance(), channel, null, null, 6, null);
         }
     }
 
-    /* compiled from: ForumPostCreateManager.kt */
-    /* renamed from: com.discord.widgets.forums.ForumPostCreateManager$createForumPostWithMessage$3 */
+    /* JADX INFO: renamed from: com.discord.widgets.forums.ForumPostCreateManager$createForumPostWithMessage$3 */
+    /* JADX INFO: compiled from: ForumPostCreateManager.kt */
     public static final class C83243 extends Lambda implements Function1<Error, Unit> {
         public final /* synthetic */ Context $context;
         public final /* synthetic */ long $forumChannelId;
@@ -102,15 +102,15 @@ public final class ForumPostCreateManager {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Error error) {
             Intrinsics3.checkNotNullParameter(error, "error");
             ThreadUtils.INSTANCE.handleThreadCreateError(this.$context, error, this.$forumChannelId);
         }
     }
 
-    /* compiled from: ForumPostCreateManager.kt */
-    /* renamed from: com.discord.widgets.forums.ForumPostCreateManager$createForumPostWithMessage$4 */
+    /* JADX INFO: renamed from: com.discord.widgets.forums.ForumPostCreateManager$createForumPostWithMessage$4 */
+    /* JADX INFO: compiled from: ForumPostCreateManager.kt */
     public static final class C83254 extends Lambda implements Function0<Unit> {
         public static final C83254 INSTANCE = new C83254();
 
@@ -124,14 +124,14 @@ public final class ForumPostCreateManager {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             ForumPostCreateManager.access$isCreateInProgressBehaviorSubject$p(ForumPostCreateManager.INSTANCE).onNext(Boolean.FALSE);
         }
     }
 
-    /* compiled from: ForumPostCreateManager.kt */
-    /* renamed from: com.discord.widgets.forums.ForumPostCreateManager$observeIsForumPostCreateInProgress$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.forums.ForumPostCreateManager$observeIsForumPostCreateInProgress$1 */
+    /* JADX INFO: compiled from: ForumPostCreateManager.kt */
     public static final class C83261<T1, T2, R> implements Func2<Boolean, Boolean, Boolean> {
         public static final C83261 INSTANCE = new C83261();
 
@@ -141,7 +141,7 @@ public final class ForumPostCreateManager {
         }
 
         /* JADX WARN: Removed duplicated region for block: B:7:0x0018  */
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         /*
             Code decompiled incorrectly, please refer to instructions dump.
         */
@@ -156,8 +156,8 @@ public final class ForumPostCreateManager {
         }
     }
 
-    /* compiled from: ForumPostCreateManager.kt */
-    /* renamed from: com.discord.widgets.forums.ForumPostCreateManager$sendCreateForumPostWithMessageRequest$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.forums.ForumPostCreateManager$sendCreateForumPostWithMessageRequest$1 */
+    /* JADX INFO: compiled from: ForumPostCreateManager.kt */
     public static final class C83291<T, R> implements Func1<SendUtils.SendPayload.ReadyToSend, Observable<? extends Channel>> {
         public final /* synthetic */ List $appliedTags;
         public final /* synthetic */ int $autoArchiveDuration;
@@ -178,7 +178,7 @@ public final class ForumPostCreateManager {
             return call2(readyToSend);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final Observable<? extends Channel> call2(SendUtils.SendPayload.ReadyToSend readyToSend) {
             List<SendUtils.FileUpload> uploads = readyToSend.getUploads();
             ArrayList arrayList = new ArrayList(Iterables2.collectionSizeOrDefault(uploads, 10));
@@ -210,6 +210,7 @@ public final class ForumPostCreateManager {
         return isCreateInProgressBehaviorSubject;
     }
 
+    /* JADX WARN: Multi-variable type inference failed */
     public static /* synthetic */ void createForumPostWithMessage$default(ForumPostCreateManager forumPostCreateManager, Context context, MessageManager messageManager, long j, int i, String str, StoreThreadDraft.ThreadDraftState threadDraftState, MessageManager.AttachmentsRequest attachmentsRequest, Function2 function2, Function2 function22, int i2, Object obj) {
         forumPostCreateManager.createForumPostWithMessage(context, messageManager, j, i, str, threadDraftState, (i2 & 64) != 0 ? null : attachmentsRequest, (i2 & 128) != 0 ? null : function2, (i2 & 256) != 0 ? null : function22);
     }

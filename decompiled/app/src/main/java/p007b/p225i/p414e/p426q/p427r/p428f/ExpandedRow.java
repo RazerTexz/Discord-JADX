@@ -4,18 +4,18 @@ import java.util.ArrayList;
 import java.util.List;
 import p007b.p100d.p104b.p105a.outline;
 
-/* compiled from: ExpandedRow.java */
-/* renamed from: b.i.e.q.r.f.b, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.e.q.r.f.b, reason: use source file name */
+/* JADX INFO: compiled from: ExpandedRow.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class ExpandedRow {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final List<ExpandedPair> f13424a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final int f13425b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final boolean f13426c;
 
     public ExpandedRow(List<ExpandedPair> list, int i, boolean z2) {

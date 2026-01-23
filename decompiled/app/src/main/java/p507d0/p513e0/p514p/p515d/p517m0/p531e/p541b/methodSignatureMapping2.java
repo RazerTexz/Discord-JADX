@@ -10,12 +10,12 @@ import p507d0.p513e0.p514p.p515d.p517m0.p552k.p560y.JvmPrimitiveType;
 import p507d0.p579g0.Strings4;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: methodSignatureMapping.kt */
-/* renamed from: d0.e0.p.d.m0.e.b.m, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.e.b.m, reason: use source file name */
+/* JADX INFO: compiled from: methodSignatureMapping.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class methodSignatureMapping2 implements typeSignatureMapping3<methodSignatureMapping> {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final methodSignatureMapping2 f23629a = new methodSignatureMapping2();
 
     @Override // p507d0.p513e0.p514p.p515d.p517m0.p531e.p541b.typeSignatureMapping3
@@ -29,7 +29,7 @@ public final class methodSignatureMapping2 implements typeSignatureMapping3<meth
     }
 
     @Override // p507d0.p513e0.p514p.p515d.p517m0.p531e.p541b.typeSignatureMapping3
-    /* renamed from: createObjectType, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: createObjectType, reason: avoid collision after fix types in other method */
     public /* bridge */ /* synthetic */ methodSignatureMapping createObjectType2(String str) {
         return createObjectType(str);
     }
@@ -49,7 +49,7 @@ public final class methodSignatureMapping2 implements typeSignatureMapping3<meth
         return toString2(methodsignaturemapping);
     }
 
-    /* renamed from: boxType, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: boxType, reason: avoid collision after fix types in other method */
     public methodSignatureMapping boxType2(methodSignatureMapping methodsignaturemapping) {
         Intrinsics3.checkNotNullParameter(methodsignaturemapping, "possiblyPrimitiveType");
         if (!(methodsignaturemapping instanceof methodSignatureMapping.d)) {
@@ -144,7 +144,7 @@ public final class methodSignatureMapping2 implements typeSignatureMapping3<meth
         return createObjectType("java/lang/Class");
     }
 
-    /* renamed from: toString, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: toString, reason: avoid collision after fix types in other method */
     public String toString2(methodSignatureMapping methodsignaturemapping) {
         String desc;
         Intrinsics3.checkNotNullParameter(methodsignaturemapping, "type");

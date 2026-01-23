@@ -8,9 +8,9 @@ import kotlin.jvm.functions.Function1;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: StickerView.kt */
-/* renamed from: b.a.y.q0.c, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: b.a.y.q0.c, reason: use source file name */
+/* JADX INFO: compiled from: StickerView.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class StickerView4 extends Lambda implements Function1<View, Unit> {
     public final /* synthetic */ DownloadUtils.DownloadState $downloadState;
     public final /* synthetic */ StickerView5 this$0;

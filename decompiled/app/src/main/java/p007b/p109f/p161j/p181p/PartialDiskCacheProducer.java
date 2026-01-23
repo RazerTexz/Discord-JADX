@@ -10,24 +10,24 @@ import p007b.p109f.p161j.p175j.EncodedImage2;
 import p686z.Continuation3;
 import p686z.Task6;
 
-/* compiled from: PartialDiskCacheProducer.java */
-/* renamed from: b.f.j.p.p0, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.f.j.p.p0, reason: use source file name */
+/* JADX INFO: compiled from: PartialDiskCacheProducer.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class PartialDiskCacheProducer implements Continuation3<EncodedImage2, Void> {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final /* synthetic */ ProducerListener2 f4180a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final /* synthetic */ ProducerContext f4181b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final /* synthetic */ Consumer2 f4182c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final /* synthetic */ CacheKey f4183d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final /* synthetic */ PartialDiskCacheProducer3 f4184e;
 
     public PartialDiskCacheProducer(PartialDiskCacheProducer3 partialDiskCacheProducer3, ProducerListener2 producerListener2, ProducerContext producerContext, Consumer2 consumer2, CacheKey cacheKey) {
@@ -39,7 +39,7 @@ public class PartialDiskCacheProducer implements Continuation3<EncodedImage2, Vo
     }
 
     @Override // p686z.Continuation3
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public Void mo1510a(Task6<EncodedImage2> task6) throws Exception {
         boolean z2;
         EncodedImage2 encodedImage2;

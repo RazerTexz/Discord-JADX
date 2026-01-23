@@ -28,83 +28,83 @@ import p007b.p225i.p226a.p242c.p260g3.p261z.OrientationListener;
 import p007b.p225i.p226a.p242c.p260g3.p261z.ProjectionRenderer;
 import p007b.p225i.p226a.p242c.p260g3.p261z.TouchTracker;
 
-/* compiled from: SphericalGLSurfaceView.java */
-/* renamed from: b.i.a.c.g3.z.k, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.g3.z.k, reason: use source file name */
+/* JADX INFO: compiled from: SphericalGLSurfaceView.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class SphericalGLSurfaceView extends GLSurfaceView {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final CopyOnWriteArrayList<b> f7021j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final SensorManager f7022k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     @Nullable
     public final Sensor f7023l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public final OrientationListener f7024m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public final Handler f7025n;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public final TouchTracker f7026o;
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public final SceneRenderer f7027p;
 
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     @Nullable
     public SurfaceTexture f7028q;
 
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     @Nullable
     public Surface f7029r;
 
-    /* renamed from: s */
+    /* JADX INFO: renamed from: s */
     public boolean f7030s;
 
-    /* renamed from: t */
+    /* JADX INFO: renamed from: t */
     public boolean f7031t;
 
-    /* renamed from: u */
+    /* JADX INFO: renamed from: u */
     public boolean f7032u;
 
-    /* compiled from: SphericalGLSurfaceView.java */
+    /* JADX INFO: renamed from: b.i.a.c.g3.z.k$a */
+    /* JADX INFO: compiled from: SphericalGLSurfaceView.java */
     @VisibleForTesting
-    /* renamed from: b.i.a.c.g3.z.k$a */
     public final class a implements GLSurfaceView.Renderer, TouchTracker.a, OrientationListener.a {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public final SceneRenderer f7033j;
 
-        /* renamed from: m */
+        /* JADX INFO: renamed from: m */
         public final float[] f7036m;
 
-        /* renamed from: n */
+        /* JADX INFO: renamed from: n */
         public final float[] f7037n;
 
-        /* renamed from: o */
+        /* JADX INFO: renamed from: o */
         public final float[] f7038o;
 
-        /* renamed from: p */
+        /* JADX INFO: renamed from: p */
         public float f7039p;
 
-        /* renamed from: q */
+        /* JADX INFO: renamed from: q */
         public float f7040q;
 
-        /* renamed from: k */
+        /* JADX INFO: renamed from: k */
         public final float[] f7034k = new float[16];
 
-        /* renamed from: l */
+        /* JADX INFO: renamed from: l */
         public final float[] f7035l = new float[16];
 
-        /* renamed from: r */
+        /* JADX INFO: renamed from: r */
         public final float[] f7041r = new float[16];
 
-        /* renamed from: s */
+        /* JADX INFO: renamed from: s */
         public final float[] f7042s = new float[16];
 
         public a(SceneRenderer sceneRenderer) {
@@ -123,7 +123,7 @@ public final class SphericalGLSurfaceView extends GLSurfaceView {
 
         @Override // p007b.p225i.p226a.p242c.p260g3.p261z.OrientationListener.a
         @BinderThread
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public synchronized void mo3199a(float[] fArr, float f) {
             float[] fArr2 = this.f7036m;
             System.arraycopy(fArr, 0, fArr2, 0, fArr2.length);
@@ -132,7 +132,7 @@ public final class SphericalGLSurfaceView extends GLSurfaceView {
         }
 
         @AnyThread
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final void m3203b() {
             Matrix.setRotateM(this.f7037n, 0, -this.f7039p, (float) Math.cos(this.f7040q), (float) Math.sin(this.f7040q), 0.0f);
         }
@@ -240,7 +240,7 @@ public final class SphericalGLSurfaceView extends GLSurfaceView {
         public void onSurfaceChanged(GL10 gl10, int i, int i2) {
             GLES20.glViewport(0, 0, i, i2);
             float f = i / i2;
-            Matrix.perspectiveM(this.f7034k, 0, f > 1.0f ? (float) (Math.toDegrees(Math.atan(Math.tan(Math.toRadians(45.0d)) / f)) * 2.0d) : 90.0f, f, 0.1f, 100.0f);
+            Matrix.perspectiveM(this.f7034k, 0, f > 1.0f ? (float) (Math.toDegrees(Math.atan(Math.tan(Math.toRadians(45.0d)) / ((double) f))) * 2.0d) : 90.0f, f, 0.1f, 100.0f);
         }
 
         @Override // android.opengl.GLSurfaceView.Renderer
@@ -250,13 +250,13 @@ public final class SphericalGLSurfaceView extends GLSurfaceView {
         }
     }
 
-    /* compiled from: SphericalGLSurfaceView.java */
-    /* renamed from: b.i.a.c.g3.z.k$b */
+    /* JADX INFO: renamed from: b.i.a.c.g3.z.k$b */
+    /* JADX INFO: compiled from: SphericalGLSurfaceView.java */
     public interface b {
-        /* renamed from: q */
+        /* JADX INFO: renamed from: q */
         void mo3204q(Surface surface);
 
-        /* renamed from: u */
+        /* JADX INFO: renamed from: u */
         void mo3205u(Surface surface);
     }
 
@@ -284,7 +284,7 @@ public final class SphericalGLSurfaceView extends GLSurfaceView {
         setOnTouchListener(touchTracker);
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final void m3202a() {
         boolean z2 = this.f7030s && this.f7031t;
         Sensor sensor = this.f7023l;

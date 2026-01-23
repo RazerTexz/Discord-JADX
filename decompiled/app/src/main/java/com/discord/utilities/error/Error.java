@@ -43,7 +43,7 @@ import p658rx.functions.Action1;
 import p658rx.functions.Action3;
 import retrofit2.HttpException;
 
-/* loaded from: classes2.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class Error {
     private static Action3<String, Throwable, Map<String, String>> onUnhandledError = null;
     private static boolean unexpectedExceptionsCrashDebug = true;
@@ -69,7 +69,7 @@ public class Error {
     @NonNull
     private final AtomicBoolean shouldLog = new AtomicBoolean(true);
 
-    /* renamed from: com.discord.utilities.error.Error$1 */
+    /* JADX INFO: renamed from: com.discord.utilities.error.Error$1 */
     public static /* synthetic */ class C67441 {
         public static final /* synthetic */ int[] $SwitchMap$com$discord$utilities$error$Error$Type;
 

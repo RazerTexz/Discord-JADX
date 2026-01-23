@@ -4,8 +4,8 @@ import p001a0.p002a.p003a.C0002b;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: GuildWelcomeEntry.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: GuildWelcomeEntry.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final /* data */ class GuildWelcomeEntry extends ChatListEntry {
     private final boolean canInvite;
     private final boolean guildHasIcon;
@@ -51,27 +51,27 @@ public final /* data */ class GuildWelcomeEntry extends ChatListEntry {
         return guildWelcomeEntry.copy(z2, z5, z6, j2, str);
     }
 
-    /* renamed from: component1, reason: from getter */
+    /* JADX INFO: renamed from: component1, reason: from getter */
     public final boolean getIsOwner() {
         return this.isOwner;
     }
 
-    /* renamed from: component2, reason: from getter */
+    /* JADX INFO: renamed from: component2, reason: from getter */
     public final boolean getGuildHasIcon() {
         return this.guildHasIcon;
     }
 
-    /* renamed from: component3, reason: from getter */
+    /* JADX INFO: renamed from: component3, reason: from getter */
     public final boolean getCanInvite() {
         return this.canInvite;
     }
 
-    /* renamed from: component4, reason: from getter */
+    /* JADX INFO: renamed from: component4, reason: from getter */
     public final long getGuildId() {
         return this.guildId;
     }
 
-    /* renamed from: component5, reason: from getter */
+    /* JADX INFO: renamed from: component5, reason: from getter */
     public final String getGuildName() {
         return this.guildName;
     }
@@ -122,7 +122,12 @@ public final /* data */ class GuildWelcomeEntry extends ChatListEntry {
     /* JADX WARN: Type inference failed for: r0v1, types: [int] */
     /* JADX WARN: Type inference failed for: r0v11 */
     /* JADX WARN: Type inference failed for: r0v12 */
-    /* JADX WARN: Type inference failed for: r2v0, types: [boolean] */
+    /* JADX WARN: Type inference failed for: r1v0 */
+    /* JADX WARN: Type inference failed for: r1v1, types: [int] */
+    /* JADX WARN: Type inference failed for: r1v7 */
+    /* JADX WARN: Type inference failed for: r2v1, types: [int] */
+    /* JADX WARN: Type inference failed for: r2v3 */
+    /* JADX WARN: Type inference failed for: r2v4 */
     public int hashCode() {
         boolean z2 = this.isOwner;
         ?? r0 = z2;
@@ -130,14 +135,14 @@ public final /* data */ class GuildWelcomeEntry extends ChatListEntry {
             r0 = 1;
         }
         int i = r0 * 31;
-        ?? r2 = this.guildHasIcon;
-        int i2 = r2;
-        if (r2 != 0) {
-            i2 = 1;
+        boolean z3 = this.guildHasIcon;
+        ?? r2 = z3;
+        if (z3) {
+            r2 = 1;
         }
-        int i3 = (i + i2) * 31;
-        boolean z3 = this.canInvite;
-        int iM3a = (C0002b.m3a(this.guildId) + ((i3 + (z3 ? 1 : z3 ? 1 : 0)) * 31)) * 31;
+        int i2 = (i + r2) * 31;
+        boolean z4 = this.canInvite;
+        int iM3a = (C0002b.m3a(this.guildId) + ((i2 + (z4 ? 1 : z4)) * 31)) * 31;
         String str = this.guildName;
         return iM3a + (str != null ? str.hashCode() : 0);
     }

@@ -34,44 +34,44 @@ import p007b.p109f.p161j.p175j.CloseableImage;
 import p007b.p109f.p161j.p175j.EncodedImage2;
 import p007b.p109f.p161j.p175j.QualityInfo;
 
+/* JADX INFO: loaded from: classes.dex */
 @DoNotStrip
-/* loaded from: classes.dex */
 public class AnimatedFactoryV2Impl implements AnimatedFactory {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final PlatformBitmapFactory f19531a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final ExecutorSupplier f19532b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final CountingMemoryCache<CacheKey, CloseableImage> f19533c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final boolean f19534d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public AnimatedImageFactory f19535e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public AnimatedDrawableBackendProvider f19536f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public AnimatedDrawableUtil f19537g;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public DrawableFactory f19538h;
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public SerialExecutorService f19539i;
 
-    /* renamed from: com.facebook.fresco.animation.factory.AnimatedFactoryV2Impl$a */
+    /* JADX INFO: renamed from: com.facebook.fresco.animation.factory.AnimatedFactoryV2Impl$a */
     public class C10650a implements ImageDecoder2 {
         public C10650a() {
         }
 
         @Override // p007b.p109f.p161j.p173h.ImageDecoder2
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public CloseableImage mo1322a(EncodedImage2 encodedImage2, int i, QualityInfo qualityInfo, ImageDecodeOptions imageDecodeOptions) {
             AnimatedFactoryV2Impl animatedFactoryV2Impl = AnimatedFactoryV2Impl.this;
             if (animatedFactoryV2Impl.f19535e == null) {
@@ -95,13 +95,13 @@ public class AnimatedFactoryV2Impl implements AnimatedFactory {
         }
     }
 
-    /* renamed from: com.facebook.fresco.animation.factory.AnimatedFactoryV2Impl$b */
+    /* JADX INFO: renamed from: com.facebook.fresco.animation.factory.AnimatedFactoryV2Impl$b */
     public class C10651b implements ImageDecoder2 {
         public C10651b() {
         }
 
         @Override // p007b.p109f.p161j.p173h.ImageDecoder2
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public CloseableImage mo1322a(EncodedImage2 encodedImage2, int i, QualityInfo qualityInfo, ImageDecodeOptions imageDecodeOptions) {
             AnimatedFactoryV2Impl animatedFactoryV2Impl = AnimatedFactoryV2Impl.this;
             if (animatedFactoryV2Impl.f19535e == null) {
@@ -135,7 +135,7 @@ public class AnimatedFactoryV2Impl implements AnimatedFactory {
     }
 
     @Override // p007b.p109f.p161j.p162a.p164b.AnimatedFactory
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public DrawableFactory mo1189a(Context context) {
         if (this.f19538h == null) {
             AnimatedFactoryV2Impl2 animatedFactoryV2Impl2 = new AnimatedFactoryV2Impl2(this);
@@ -159,13 +159,13 @@ public class AnimatedFactoryV2Impl implements AnimatedFactory {
     }
 
     @Override // p007b.p109f.p161j.p162a.p164b.AnimatedFactory
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public ImageDecoder2 mo1190b() {
         return new C10650a();
     }
 
     @Override // p007b.p109f.p161j.p162a.p164b.AnimatedFactory
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public ImageDecoder2 mo1191c() {
         return new C10651b();
     }

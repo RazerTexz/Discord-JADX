@@ -19,12 +19,12 @@ import p007b.p008a.p018d.AppHelpDesk;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: NotificationHighlightsSettingsView.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: NotificationHighlightsSettingsView.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class NotificationHighlightsSettingsView extends LinearLayout {
     private final NotificationHighlightsSettingsViewBinding binding;
 
-    /* compiled from: NotificationHighlightsSettingsView.kt */
+    /* JADX INFO: compiled from: NotificationHighlightsSettingsView.kt */
     public static final /* data */ class ViewState {
         private final boolean isMuted;
         private final int notifyHighlights;
@@ -49,17 +49,17 @@ public final class NotificationHighlightsSettingsView extends LinearLayout {
             return viewState.copy(z2, i, z3);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final boolean getIsMuted() {
             return this.isMuted;
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final int getNotifyHighlights() {
             return this.notifyHighlights;
         }
 
-        /* renamed from: component3, reason: from getter */
+        /* JADX INFO: renamed from: component3, reason: from getter */
         public final boolean getServerTooLarge() {
             return this.serverTooLarge;
         }
@@ -91,6 +91,9 @@ public final class NotificationHighlightsSettingsView extends LinearLayout {
         /* JADX WARN: Type inference failed for: r0v1, types: [int] */
         /* JADX WARN: Type inference failed for: r0v6 */
         /* JADX WARN: Type inference failed for: r0v7 */
+        /* JADX WARN: Type inference failed for: r1v0 */
+        /* JADX WARN: Type inference failed for: r1v1, types: [int] */
+        /* JADX WARN: Type inference failed for: r1v2 */
         public int hashCode() {
             boolean z2 = this.isMuted;
             ?? r0 = z2;
@@ -99,7 +102,7 @@ public final class NotificationHighlightsSettingsView extends LinearLayout {
             }
             int i = ((r0 * 31) + this.notifyHighlights) * 31;
             boolean z3 = this.serverTooLarge;
-            return i + (z3 ? 1 : z3 ? 1 : 0);
+            return i + (z3 ? 1 : z3);
         }
 
         public final boolean isMuted() {
@@ -116,8 +119,8 @@ public final class NotificationHighlightsSettingsView extends LinearLayout {
         }
     }
 
-    /* compiled from: NotificationHighlightsSettingsView.kt */
-    /* renamed from: com.discord.widgets.servers.NotificationHighlightsSettingsView$updateView$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.NotificationHighlightsSettingsView$updateView$1 */
+    /* JADX INFO: compiled from: NotificationHighlightsSettingsView.kt */
     public static final class ViewOnClickListenerC91451 implements View.OnClickListener {
         public final /* synthetic */ int $notifyHighlights;
         public final /* synthetic */ Function1 $onToggled;
@@ -139,8 +142,8 @@ public final class NotificationHighlightsSettingsView extends LinearLayout {
         }
     }
 
-    /* compiled from: NotificationHighlightsSettingsView.kt */
-    /* renamed from: com.discord.widgets.servers.NotificationHighlightsSettingsView$updateView$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.NotificationHighlightsSettingsView$updateView$2 */
+    /* JADX INFO: compiled from: NotificationHighlightsSettingsView.kt */
     public static final class ViewOnClickListenerC91462 implements View.OnClickListener {
         public ViewOnClickListenerC91462() {
         }

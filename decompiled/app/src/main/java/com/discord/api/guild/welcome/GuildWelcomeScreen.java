@@ -5,18 +5,18 @@ import java.util.List;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: GuildWelcomeScreen.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: GuildWelcomeScreen.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class GuildWelcomeScreen {
     private final String description;
     private final List<GuildWelcomeChannel> welcomeChannels;
 
-    /* renamed from: a, reason: from getter */
+    /* JADX INFO: renamed from: a, reason: from getter */
     public final String getDescription() {
         return this.description;
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final List<GuildWelcomeChannel> m7899b() {
         return this.welcomeChannels;
     }

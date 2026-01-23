@@ -8,13 +8,13 @@ import kotlin.jvm.functions.Function2;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: ViewPager2Extensions.kt */
-/* renamed from: com.discord.utilities.view.recycler.ViewPager2ExtensionsKt, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.utilities.view.recycler.ViewPager2ExtensionsKt, reason: use source file name */
+/* JADX INFO: compiled from: ViewPager2Extensions.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class ViewPager2Extensions {
 
-    /* compiled from: ViewPager2Extensions.kt */
-    /* renamed from: com.discord.utilities.view.recycler.ViewPager2ExtensionsKt$setUpWithViewPager2$1 */
+    /* JADX INFO: renamed from: com.discord.utilities.view.recycler.ViewPager2ExtensionsKt$setUpWithViewPager2$1 */
+    /* JADX INFO: compiled from: ViewPager2Extensions.kt */
     public static final class C70081 extends Lambda implements Function2<TabLayout.Tab, Integer, Unit> {
         public static final C70081 INSTANCE = new C70081();
 

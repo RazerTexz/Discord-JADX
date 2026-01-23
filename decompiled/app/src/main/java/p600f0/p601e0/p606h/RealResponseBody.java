@@ -5,18 +5,18 @@ import okhttp3.ResponseBody;
 import p507d0.p592z.p594d.Intrinsics3;
 import p615g0.BufferedSource;
 
-/* compiled from: RealResponseBody.kt */
-/* renamed from: f0.e0.h.h, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: f0.e0.h.h, reason: use source file name */
+/* JADX INFO: compiled from: RealResponseBody.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class RealResponseBody extends ResponseBody {
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final String f25540l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public final long f25541m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public final BufferedSource f25542n;
 
     public RealResponseBody(String str, long j, BufferedSource bufferedSource) {
@@ -27,13 +27,13 @@ public final class RealResponseBody extends ResponseBody {
     }
 
     @Override // okhttp3.ResponseBody
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public long mo10103a() {
         return this.f25541m;
     }
 
     @Override // okhttp3.ResponseBody
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public MediaType mo10104b() {
         String str = this.f25540l;
         if (str == null) {
@@ -44,7 +44,7 @@ public final class RealResponseBody extends ResponseBody {
     }
 
     @Override // okhttp3.ResponseBody
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public BufferedSource mo10105c() {
         return this.f25542n;
     }

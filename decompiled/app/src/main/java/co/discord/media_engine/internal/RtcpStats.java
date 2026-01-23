@@ -3,8 +3,8 @@ package co.discord.media_engine.internal;
 import p001a0.p002a.p003a.C0002b;
 import p007b.p100d.p104b.p105a.outline;
 
-/* compiled from: NativeStatistics.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: NativeStatistics.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class RtcpStats {
     private final long firPackets;
     private final int fractionLost;
@@ -28,37 +28,37 @@ public final /* data */ class RtcpStats {
         return rtcpStats.copy((i3 & 1) != 0 ? rtcpStats.fractionLost : i, (i3 & 2) != 0 ? rtcpStats.packetsLost : i2, (i3 & 4) != 0 ? rtcpStats.firPackets : j, (i3 & 8) != 0 ? rtcpStats.nackPackets : j2, (i3 & 16) != 0 ? rtcpStats.nackRequests : j3, (i3 & 32) != 0 ? rtcpStats.pliPackets : j4, (i3 & 64) != 0 ? rtcpStats.uniqueNackRequests : j5);
     }
 
-    /* renamed from: component1, reason: from getter */
+    /* JADX INFO: renamed from: component1, reason: from getter */
     public final int getFractionLost() {
         return this.fractionLost;
     }
 
-    /* renamed from: component2, reason: from getter */
+    /* JADX INFO: renamed from: component2, reason: from getter */
     public final int getPacketsLost() {
         return this.packetsLost;
     }
 
-    /* renamed from: component3, reason: from getter */
+    /* JADX INFO: renamed from: component3, reason: from getter */
     public final long getFirPackets() {
         return this.firPackets;
     }
 
-    /* renamed from: component4, reason: from getter */
+    /* JADX INFO: renamed from: component4, reason: from getter */
     public final long getNackPackets() {
         return this.nackPackets;
     }
 
-    /* renamed from: component5, reason: from getter */
+    /* JADX INFO: renamed from: component5, reason: from getter */
     public final long getNackRequests() {
         return this.nackRequests;
     }
 
-    /* renamed from: component6, reason: from getter */
+    /* JADX INFO: renamed from: component6, reason: from getter */
     public final long getPliPackets() {
         return this.pliPackets;
     }
 
-    /* renamed from: component7, reason: from getter */
+    /* JADX INFO: renamed from: component7, reason: from getter */
     public final long getUniqueNackRequests() {
         return this.uniqueNackRequests;
     }

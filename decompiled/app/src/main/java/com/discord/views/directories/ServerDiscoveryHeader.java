@@ -13,11 +13,11 @@ import com.discord.models.domain.ModelAuditLogEntry;
 import p007b.p008a.p025i.ViewServerDiscoveryHeaderBinding;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ServerDiscoveryHeader.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: ServerDiscoveryHeader.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class ServerDiscoveryHeader extends ConstraintLayout {
 
-    /* renamed from: j, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: j, reason: from kotlin metadata */
     public final ViewServerDiscoveryHeaderBinding binding;
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */

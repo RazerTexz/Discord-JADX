@@ -6,7 +6,7 @@ import android.util.AttributeSet;
 import androidx.core.content.res.TypedArrayUtils;
 import androidx.core.view.accessibility.AccessibilityNodeInfoCompat;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class PreferenceCategory extends PreferenceGroup {
     public PreferenceCategory(Context context, AttributeSet attributeSet, int i, int i2) {
         super(context, attributeSet, i, i2);

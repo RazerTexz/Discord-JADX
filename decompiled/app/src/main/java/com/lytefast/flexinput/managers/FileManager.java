@@ -4,12 +4,12 @@ import android.content.Context;
 import android.net.Uri;
 import java.io.File;
 
-/* compiled from: FileManager.kt */
-/* loaded from: classes3.dex */
+/* JADX INFO: compiled from: FileManager.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public interface FileManager {
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     Uri mo408a(Context context, File file);
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     File mo409b();
 }

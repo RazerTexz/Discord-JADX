@@ -9,7 +9,7 @@ import java.util.List;
 import p007b.p106e.p107a.Log;
 import p007b.p106e.p108b.FieldAccess2;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public final class FieldSerializerUnsafeUtilImpl implements FieldSerializerUnsafeUtil {
     private FieldSerializer serializer;
 
@@ -55,7 +55,7 @@ public final class FieldSerializerUnsafeUtilImpl implements FieldSerializerUnsaf
                 i2 = size;
                 int iM911h = intArray.get(i + i3) == 1 ? ((FieldAccess2) this.serializer.access).m911h(field2.getName()) : -1;
                 long jObjectFieldOffset = UnsafeUtil.unsafe().objectFieldOffset(field2);
-                long jFieldSizeOf = jObjectFieldOffset + fieldSizeOf(field2.getType());
+                long jFieldSizeOf = jObjectFieldOffset + ((long) fieldSizeOf(field2.getType()));
                 if (field2.getType().isPrimitive() && z2) {
                     if (i4 > 1) {
                         Log.a aVar = Log.f3007a;
@@ -84,7 +84,7 @@ public final class FieldSerializerUnsafeUtilImpl implements FieldSerializerUnsaf
                 i2 = size;
             }
             long jObjectFieldOffset2 = UnsafeUtil.unsafe().objectFieldOffset(field2);
-            long jFieldSizeOf2 = jObjectFieldOffset2 + fieldSizeOf(field2.getType());
+            long jFieldSizeOf2 = jObjectFieldOffset2 + ((long) fieldSizeOf(field2.getType()));
             if (field2.getType().isPrimitive()) {
                 if (field2.getType().isPrimitive()) {
                 }

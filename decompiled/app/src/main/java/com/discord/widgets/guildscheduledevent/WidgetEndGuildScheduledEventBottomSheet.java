@@ -27,28 +27,28 @@ import p507d0.Tuples;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetEndGuildScheduledEventBottomSheet.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetEndGuildScheduledEventBottomSheet.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetEndGuildScheduledEventBottomSheet extends AppBottomSheet {
     public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetEndGuildScheduledEventBottomSheet.class, "binding", "getBinding()Lcom/discord/databinding/WidgetEndStageBottomSheetBinding;", 0)};
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private static final String EXTRA_REQUEST_KEY = "INTENT_EXTRA_REQUEST_KEY";
 
-    /* renamed from: binding$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
 
-    /* renamed from: guildId$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: guildId$delegate, reason: from kotlin metadata */
     private final Lazy guildId;
 
-    /* renamed from: guildScheduledEventId$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: guildScheduledEventId$delegate, reason: from kotlin metadata */
     private final Lazy guildScheduledEventId;
 
-    /* renamed from: requestKey$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: requestKey$delegate, reason: from kotlin metadata */
     private final Lazy requestKey;
 
-    /* compiled from: WidgetEndGuildScheduledEventBottomSheet.kt */
+    /* JADX INFO: compiled from: WidgetEndGuildScheduledEventBottomSheet.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -73,8 +73,8 @@ public final class WidgetEndGuildScheduledEventBottomSheet extends AppBottomShee
         }
     }
 
-    /* compiled from: WidgetEndGuildScheduledEventBottomSheet.kt */
-    /* renamed from: com.discord.widgets.guildscheduledevent.WidgetEndGuildScheduledEventBottomSheet$onConfirmEnd$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.guildscheduledevent.WidgetEndGuildScheduledEventBottomSheet$onConfirmEnd$1 */
+    /* JADX INFO: compiled from: WidgetEndGuildScheduledEventBottomSheet.kt */
     public static final class C88411 extends Lambda implements Function1<Unit, Unit> {
         public static final C88411 INSTANCE = new C88411();
 
@@ -88,14 +88,14 @@ public final class WidgetEndGuildScheduledEventBottomSheet extends AppBottomShee
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Unit unit) {
             Intrinsics3.checkNotNullParameter(unit, "it");
         }
     }
 
-    /* compiled from: WidgetEndGuildScheduledEventBottomSheet.kt */
-    /* renamed from: com.discord.widgets.guildscheduledevent.WidgetEndGuildScheduledEventBottomSheet$onViewCreated$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.guildscheduledevent.WidgetEndGuildScheduledEventBottomSheet$onViewCreated$1 */
+    /* JADX INFO: compiled from: WidgetEndGuildScheduledEventBottomSheet.kt */
     public static final class ViewOnClickListenerC88421 implements View.OnClickListener {
         public ViewOnClickListenerC88421() {
         }
@@ -107,8 +107,8 @@ public final class WidgetEndGuildScheduledEventBottomSheet extends AppBottomShee
         }
     }
 
-    /* compiled from: WidgetEndGuildScheduledEventBottomSheet.kt */
-    /* renamed from: com.discord.widgets.guildscheduledevent.WidgetEndGuildScheduledEventBottomSheet$onViewCreated$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.guildscheduledevent.WidgetEndGuildScheduledEventBottomSheet$onViewCreated$2 */
+    /* JADX INFO: compiled from: WidgetEndGuildScheduledEventBottomSheet.kt */
     public static final class ViewOnClickListenerC88432 implements View.OnClickListener {
         public ViewOnClickListenerC88432() {
         }

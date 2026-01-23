@@ -33,8 +33,8 @@ import p658rx.functions.Func3;
 import p658rx.functions.Func4;
 import p658rx.subjects.BehaviorSubject;
 
-/* compiled from: ForumPostReadStateManager.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: ForumPostReadStateManager.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class ForumPostReadStateManager {
     public static final ForumPostReadStateManager INSTANCE = new ForumPostReadStateManager();
     private static final BehaviorSubject<StoreMessageAck.Ack> forumChannelAckBeforeChannelSelect;
@@ -44,7 +44,7 @@ public final class ForumPostReadStateManager {
     private static long lastSelectedChannelId;
     private static long lastSyncedGuildId;
 
-    /* compiled from: ForumPostReadStateManager.kt */
+    /* JADX INFO: compiled from: ForumPostReadStateManager.kt */
     public static final /* data */ class ManagerInitializeState {
         private final Map<Long, StoreMessageAck.Ack> messageAcks;
         private final StoreChannelsSelected.ResolvedSelectedChannel resolvedSelectedChannel;
@@ -77,7 +77,7 @@ public final class ForumPostReadStateManager {
             return this.messageAcks;
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final StoreChannelsSelected.ResolvedSelectedChannel getResolvedSelectedChannel() {
             return this.resolvedSelectedChannel;
         }
@@ -135,8 +135,8 @@ public final class ForumPostReadStateManager {
         }
     }
 
-    /* compiled from: ForumPostReadStateManager.kt */
-    /* renamed from: com.discord.widgets.forums.ForumPostReadStateManager$initialize$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.forums.ForumPostReadStateManager$initialize$1 */
+    /* JADX INFO: compiled from: ForumPostReadStateManager.kt */
     public static final class C83301<T1, T2, T3, R> implements Func3<Map<Long, ? extends StoreMessageAck.Ack>, StoreChannelsSelected.ResolvedSelectedChannel, Set<? extends Long>, ManagerInitializeState> {
         public static final C83301 INSTANCE = new C83301();
 
@@ -145,7 +145,7 @@ public final class ForumPostReadStateManager {
             return call2((Map<Long, StoreMessageAck.Ack>) map, resolvedSelectedChannel, (Set<Long>) set);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final ManagerInitializeState call2(Map<Long, StoreMessageAck.Ack> map, StoreChannelsSelected.ResolvedSelectedChannel resolvedSelectedChannel, Set<Long> set) {
             Intrinsics3.checkNotNullExpressionValue(map, "messageAcks");
             Intrinsics3.checkNotNullExpressionValue(resolvedSelectedChannel, "resolvedSelectedChannel");
@@ -154,8 +154,8 @@ public final class ForumPostReadStateManager {
         }
     }
 
-    /* compiled from: ForumPostReadStateManager.kt */
-    /* renamed from: com.discord.widgets.forums.ForumPostReadStateManager$initialize$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.forums.ForumPostReadStateManager$initialize$2 */
+    /* JADX INFO: compiled from: ForumPostReadStateManager.kt */
     public static final /* synthetic */ class C83312 extends FunctionReferenceImpl implements Function1<Subscription, Unit> {
         public C83312(ForumPostReadStateManager forumPostReadStateManager) {
             super(1, forumPostReadStateManager, ForumPostReadStateManager.class, "handleSubscription", "handleSubscription(Lrx/Subscription;)V", 0);
@@ -167,15 +167,15 @@ public final class ForumPostReadStateManager {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Subscription subscription) {
             Intrinsics3.checkNotNullParameter(subscription, "p1");
             ForumPostReadStateManager.access$handleSubscription((ForumPostReadStateManager) this.receiver, subscription);
         }
     }
 
-    /* compiled from: ForumPostReadStateManager.kt */
-    /* renamed from: com.discord.widgets.forums.ForumPostReadStateManager$initialize$3 */
+    /* JADX INFO: renamed from: com.discord.widgets.forums.ForumPostReadStateManager$initialize$3 */
+    /* JADX INFO: compiled from: ForumPostReadStateManager.kt */
     public static final class C83323 extends Lambda implements Function1<ManagerInitializeState, Unit> {
         public static final C83323 INSTANCE = new C83323();
 
@@ -189,7 +189,7 @@ public final class ForumPostReadStateManager {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(ManagerInitializeState managerInitializeState) {
             Map<Long, StoreMessageAck.Ack> mapComponent1 = managerInitializeState.component1();
             StoreChannelsSelected.ResolvedSelectedChannel resolvedSelectedChannel = managerInitializeState.getResolvedSelectedChannel();
@@ -215,13 +215,13 @@ public final class ForumPostReadStateManager {
         }
     }
 
-    /* compiled from: ForumPostReadStateManager.kt */
-    /* renamed from: com.discord.widgets.forums.ForumPostReadStateManager$observeForumPostReadStates$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.forums.ForumPostReadStateManager$observeForumPostReadStates$1 */
+    /* JADX INFO: compiled from: ForumPostReadStateManager.kt */
     public static final class C83331<T1, T2, T3, T4, R> implements Func4<Map<Long, ? extends Channel>, Set<? extends Long>, Set<? extends Long>, StoreMessageAck.Ack, Map<Long, ? extends ForumPostReadState>> {
         public static final C83331 INSTANCE = new C83331();
 
-        /* compiled from: ForumPostReadStateManager.kt */
-        /* renamed from: com.discord.widgets.forums.ForumPostReadStateManager$observeForumPostReadStates$1$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.widgets.forums.ForumPostReadStateManager$observeForumPostReadStates$1$1, reason: invalid class name */
+        /* JADX INFO: compiled from: ForumPostReadStateManager.kt */
         public static final class AnonymousClass1 extends Lambda implements Function1<Long, ForumPostReadState> {
             public final /* synthetic */ StoreMessageAck.Ack $forumChannelAck;
             public final /* synthetic */ Set $persistedThreadIds;
@@ -263,7 +263,7 @@ public final class ForumPostReadStateManager {
             return call2((Map<Long, Channel>) map, (Set<Long>) set, (Set<Long>) set2, ack);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final Map<Long, ForumPostReadState> call2(Map<Long, Channel> map, Set<Long> set, Set<Long> set2, StoreMessageAck.Ack ack) {
             Sequence map2 = _Sequences2.map(_Collections.asSequence(map.keySet()), new AnonymousClass1(ack, set, set2));
             LinkedHashMap linkedHashMap = new LinkedHashMap();

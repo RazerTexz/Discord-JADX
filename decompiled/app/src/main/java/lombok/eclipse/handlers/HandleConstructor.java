@@ -51,18 +51,18 @@ import org.eclipse.jdt.internal.compiler.ast.TypeDeclaration;
 import org.eclipse.jdt.internal.compiler.ast.TypeReference;
 import org.eclipse.jdt.internal.compiler.lookup.TypeConstants;
 
-/* loaded from: discord-126021.apk:lombok/eclipse/handlers/HandleConstructor.SCL.lombok */
+/* JADX INFO: loaded from: discord-126021.apk:lombok/eclipse/handlers/HandleConstructor.SCL.lombok */
 public class HandleConstructor {
     private static final char[][] JAVA_BEANS_CONSTRUCTORPROPERTIES = {"java".toCharArray(), "beans".toCharArray(), "ConstructorProperties".toCharArray()};
     private static final char[] DEFAULT_PREFIX = {'$', 'd', 'e', 'f', 'a', 'u', 'l', 't', '$'};
 
-    /* loaded from: discord-126021.apk:lombok/eclipse/handlers/HandleConstructor$SkipIfConstructorExists.SCL.lombok */
+    /* JADX INFO: loaded from: discord-126021.apk:lombok/eclipse/handlers/HandleConstructor$SkipIfConstructorExists.SCL.lombok */
     public enum SkipIfConstructorExists {
         YES,
         NO,
         I_AM_BUILDER;
 
-        /* renamed from: values, reason: to resolve conflict with enum method */
+        /* JADX INFO: renamed from: values, reason: to resolve conflict with enum method */
         public static SkipIfConstructorExists[] valuesCustom() {
             SkipIfConstructorExists[] skipIfConstructorExistsArrValuesCustom = values();
             int length = skipIfConstructorExistsArrValuesCustom.length;
@@ -72,7 +72,7 @@ public class HandleConstructor {
         }
     }
 
-    /* loaded from: discord-126021.apk:lombok/eclipse/handlers/HandleConstructor$HandleNoArgsConstructor.SCL.lombok */
+    /* JADX INFO: loaded from: discord-126021.apk:lombok/eclipse/handlers/HandleConstructor$HandleNoArgsConstructor.SCL.lombok */
     public static class HandleNoArgsConstructor extends EclipseAnnotationHandler<NoArgsConstructor> {
         private static final String NAME = NoArgsConstructor.class.getSimpleName();
         private HandleConstructor handleConstructor = new HandleConstructor();
@@ -95,7 +95,7 @@ public class HandleConstructor {
         }
     }
 
-    /* loaded from: discord-126021.apk:lombok/eclipse/handlers/HandleConstructor$HandleRequiredArgsConstructor.SCL.lombok */
+    /* JADX INFO: loaded from: discord-126021.apk:lombok/eclipse/handlers/HandleConstructor$HandleRequiredArgsConstructor.SCL.lombok */
     public static class HandleRequiredArgsConstructor extends EclipseAnnotationHandler<RequiredArgsConstructor> {
         private static final String NAME = RequiredArgsConstructor.class.getSimpleName();
         private HandleConstructor handleConstructor = new HandleConstructor();
@@ -161,7 +161,7 @@ public class HandleConstructor {
         return fields;
     }
 
-    /* loaded from: discord-126021.apk:lombok/eclipse/handlers/HandleConstructor$HandleAllArgsConstructor.SCL.lombok */
+    /* JADX INFO: loaded from: discord-126021.apk:lombok/eclipse/handlers/HandleConstructor$HandleAllArgsConstructor.SCL.lombok */
     public static class HandleAllArgsConstructor extends EclipseAnnotationHandler<AllArgsConstructor> {
         private static final String NAME = AllArgsConstructor.class.getSimpleName();
         private HandleConstructor handleConstructor = new HandleConstructor();
@@ -197,7 +197,7 @@ public class HandleConstructor {
         return true;
     }
 
-    public void generateExtraNoArgsConstructor(EclipseNode typeNode, EclipseNode sourceNode) throws SecurityException {
+    public void generateExtraNoArgsConstructor(EclipseNode typeNode, EclipseNode sourceNode) {
         Boolean v;
         if (EclipseHandlerUtil.isDirectDescendantOfObject(typeNode) && (v = (Boolean) typeNode.getAst().readConfiguration(ConfigurationKeys.NO_ARGS_CONSTRUCTOR_EXTRA_PRIVATE)) != null && v.booleanValue()) {
             generate(typeNode, AccessLevel.PRIVATE, Collections.emptyList(), true, null, SkipIfConstructorExists.NO, Collections.emptyList(), sourceNode, true);
@@ -216,7 +216,7 @@ public class HandleConstructor {
         generate(typeNode, level, fieldsToParam, forceDefaults, staticName, skipIfConstructorExists, onConstructor, sourceNode, false);
     }
 
-    public void generate(EclipseNode typeNode, AccessLevel level, List<EclipseNode> fieldsToParam, boolean forceDefaults, String staticName, SkipIfConstructorExists skipIfConstructorExists, List<Annotation> onConstructor, EclipseNode sourceNode, boolean noArgs) throws SecurityException {
+    public void generate(EclipseNode typeNode, AccessLevel level, List<EclipseNode> fieldsToParam, boolean forceDefaults, String staticName, SkipIfConstructorExists skipIfConstructorExists, List<Annotation> onConstructor, EclipseNode sourceNode, boolean noArgs) {
         ASTNode source = sourceNode.get();
         boolean staticConstrRequired = (staticName == null || staticName.equals("")) ? false : true;
         if (skipIfConstructorExists != SkipIfConstructorExists.NO) {
@@ -280,13 +280,13 @@ public class HandleConstructor {
         return false;
     }
 
-    public static Annotation[] createConstructorProperties(ASTNode source, Collection<EclipseNode> fields) throws SecurityException {
+    public static Annotation[] createConstructorProperties(ASTNode source, Collection<EclipseNode> fields) {
         if (fields.isEmpty()) {
             return null;
         }
         int pS = source.sourceStart;
         int pE = source.sourceEnd;
-        long p = (pS << 32) | pE;
+        long p = (((long) pS) << 32) | ((long) pE);
         long[] poss = new long[3];
         Arrays.fill(poss, p);
         QualifiedTypeReference constructorPropertiesType = new QualifiedTypeReference(JAVA_BEANS_CONSTRUCTORPROPERTIES, poss);
@@ -319,12 +319,12 @@ public class HandleConstructor {
 
     /* JADX WARN: Type inference failed for: r2v20, types: [org.eclipse.jdt.internal.compiler.ast.Annotation[], org.eclipse.jdt.internal.compiler.ast.Annotation[][]] */
     /* JADX WARN: Type inference failed for: r2v55, types: [org.eclipse.jdt.internal.compiler.ast.Annotation[], org.eclipse.jdt.internal.compiler.ast.Annotation[][]] */
-    public static ConstructorDeclaration createConstructor(AccessLevel level, EclipseNode type, Collection<EclipseNode> fieldsToParam, boolean forceDefaults, EclipseNode sourceNode, List<Annotation> onConstructor) throws SecurityException {
+    public static ConstructorDeclaration createConstructor(AccessLevel level, EclipseNode type, Collection<EclipseNode> fieldsToParam, boolean forceDefaults, EclipseNode sourceNode, List<Annotation> onConstructor) {
         boolean addConstructorProperties;
         Statement nullCheck;
         ASTNode source = sourceNode.get();
         TypeDeclaration typeDeclaration = type.get();
-        long p = (source.sourceStart << 32) | source.sourceEnd;
+        long p = (((long) source.sourceStart) << 32) | ((long) source.sourceEnd);
         boolean isEnum = (type.get().modifiers & 16384) != 0;
         if (isEnum) {
             level = AccessLevel.PRIVATE;
@@ -370,7 +370,7 @@ public class HandleConstructor {
             assignment.statementEnd = i3;
             assignment.sourceEnd = i3;
             arrayList.add(assignment);
-            long fieldPos = (field.sourceStart << 32) | field.sourceEnd;
+            long fieldPos = (((long) field.sourceStart) << 32) | ((long) field.sourceEnd);
             Argument parameter = new Argument(fieldName, fieldPos, EclipseHandlerUtil.copyType(field.type, source), 16);
             Annotation[] copyableAnnotations = EclipseHandlerUtil.findCopyableAnnotations(fieldNode);
             if (EclipseHandlerUtil.hasNonNullAnnotations(fieldNode) && (nullCheck = EclipseHandlerUtil.generateNullCheck(parameter, sourceNode, null)) != null) {
@@ -494,7 +494,7 @@ public class HandleConstructor {
     public MethodDeclaration createStaticConstructor(AccessLevel level, String name, EclipseNode type, Collection<EclipseNode> fields, ASTNode source) {
         int pS = source.sourceStart;
         int pE = source.sourceEnd;
-        long p = (pS << 32) | pE;
+        long p = (((long) pS) << 32) | ((long) pE);
         MethodDeclaration constructor = new MethodDeclaration(type.top().get().compilationResult);
         constructor.modifiers = EclipseHandlerUtil.toEclipseModifier(level) | 8;
         TypeDeclaration typeDecl = type.get();
@@ -525,7 +525,7 @@ public class HandleConstructor {
         statement.type = EclipseHandlerUtil.copyType(constructor.returnType, source);
         for (EclipseNode fieldNode : fields) {
             FieldDeclaration field = fieldNode.get();
-            long fieldPos = (field.sourceStart << 32) | field.sourceEnd;
+            long fieldPos = (((long) field.sourceStart) << 32) | ((long) field.sourceEnd);
             SingleNameReference nameRef = new SingleNameReference(field.name, fieldPos);
             assigns.add(nameRef);
             Argument parameter = new Argument(field.name, fieldPos, EclipseHandlerUtil.copyType(field.type, source), 16);

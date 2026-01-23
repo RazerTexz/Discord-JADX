@@ -32,12 +32,12 @@ import org.eclipse.jdt.internal.compiler.ast.StringLiteral;
 import org.eclipse.jdt.internal.compiler.ast.TypeDeclaration;
 import org.eclipse.jdt.internal.compiler.ast.TypeReference;
 
-/* loaded from: discord-126021.apk:lombok/eclipse/handlers/HandleLog.SCL.lombok */
+/* JADX INFO: loaded from: discord-126021.apk:lombok/eclipse/handlers/HandleLog.SCL.lombok */
 public class HandleLog {
     private static final IdentifierName LOG = IdentifierName.valueOf("log");
     private static /* synthetic */ int[] $SWITCH_TABLE$lombok$core$AST$Kind;
 
-    /* renamed from: $SWITCH_TABLE$lombok$core$configuration$LogDeclaration$LogFactoryParameter */
+    /* JADX INFO: renamed from: $SWITCH_TABLE$lombok$core$configuration$LogDeclaration$LogFactoryParameter */
     private static /* synthetic */ int[] f27472xeb5c83f5;
 
     static /* synthetic */ int[] $SWITCH_TABLE$lombok$core$AST$Kind() {
@@ -90,7 +90,7 @@ public class HandleLog {
         return iArr2;
     }
 
-    /* renamed from: $SWITCH_TABLE$lombok$core$configuration$LogDeclaration$LogFactoryParameter */
+    /* JADX INFO: renamed from: $SWITCH_TABLE$lombok$core$configuration$LogDeclaration$LogFactoryParameter */
     static /* synthetic */ int[] m10932xeb5c83f5() {
         int[] iArr = f27472xeb5c83f5;
         if (iArr != null) {
@@ -164,7 +164,7 @@ public class HandleLog {
     public static ClassLiteralAccess selfType(EclipseNode type, org.eclipse.jdt.internal.compiler.ast.Annotation source) {
         int pS = source.sourceStart;
         int pE = source.sourceEnd;
-        long p = (pS << 32) | pE;
+        long p = (((long) pS) << 32) | ((long) pE);
         TypeDeclaration typeDeclaration = type.get();
         SingleTypeReference singleTypeReference = new SingleTypeReference(typeDeclaration.name, p);
         EclipseHandlerUtil.setGeneratedBy(singleTypeReference, source);
@@ -176,7 +176,7 @@ public class HandleLog {
     private static FieldDeclaration createField(LoggingFramework framework, org.eclipse.jdt.internal.compiler.ast.Annotation source, ClassLiteralAccess loggingType, String logFieldName, boolean useStatic, Expression loggerTopic) {
         int pS = source.sourceStart;
         int pE = source.sourceEnd;
-        long p = (pS << 32) | pE;
+        long p = (((long) pS) << 32) | ((long) pE);
         FieldDeclaration fieldDecl = new FieldDeclaration(logFieldName.toCharArray(), 0, -1);
         EclipseHandlerUtil.setGeneratedBy(fieldDecl, source);
         fieldDecl.declarationSourceEnd = -1;
@@ -208,7 +208,7 @@ public class HandleLog {
                     expressions[i] = createFactoryTypeParameter(loggingType, source);
                     break;
                 case 2:
-                    long p = (pS << 32) | pE;
+                    long p = (((long) pS) << 32) | ((long) pE);
                     MessageSend factoryParameterCall = new MessageSend();
                     EclipseHandlerUtil.setGeneratedBy(factoryParameterCall, source);
                     factoryParameterCall.receiver = createFactoryTypeParameter(loggingType, source);
@@ -232,14 +232,14 @@ public class HandleLog {
         return expressions;
     }
 
-    private static final Expression createFactoryTypeParameter(ClassLiteralAccess loggingType, org.eclipse.jdt.internal.compiler.ast.Annotation source) throws IllegalArgumentException {
+    private static final Expression createFactoryTypeParameter(ClassLiteralAccess loggingType, org.eclipse.jdt.internal.compiler.ast.Annotation source) {
         TypeReference copy = EclipseHandlerUtil.copyType(loggingType.type, source);
         ClassLiteralAccess result = new ClassLiteralAccess(source.sourceEnd, copy);
         EclipseHandlerUtil.setGeneratedBy(result, source);
         return result;
     }
 
-    /* loaded from: discord-126021.apk:lombok/eclipse/handlers/HandleLog$HandleCommonsLog.SCL.lombok */
+    /* JADX INFO: loaded from: discord-126021.apk:lombok/eclipse/handlers/HandleLog$HandleCommonsLog.SCL.lombok */
     public static class HandleCommonsLog extends EclipseAnnotationHandler<CommonsLog> {
         @Override // lombok.eclipse.EclipseAnnotationHandler
         public void handle(AnnotationValues<CommonsLog> annotation, org.eclipse.jdt.internal.compiler.ast.Annotation source, EclipseNode annotationNode) {
@@ -248,7 +248,7 @@ public class HandleLog {
         }
     }
 
-    /* loaded from: discord-126021.apk:lombok/eclipse/handlers/HandleLog$HandleJulLog.SCL.lombok */
+    /* JADX INFO: loaded from: discord-126021.apk:lombok/eclipse/handlers/HandleLog$HandleJulLog.SCL.lombok */
     public static class HandleJulLog extends EclipseAnnotationHandler<Log> {
         @Override // lombok.eclipse.EclipseAnnotationHandler
         public void handle(AnnotationValues<Log> annotation, org.eclipse.jdt.internal.compiler.ast.Annotation source, EclipseNode annotationNode) {
@@ -257,7 +257,7 @@ public class HandleLog {
         }
     }
 
-    /* loaded from: discord-126021.apk:lombok/eclipse/handlers/HandleLog$HandleLog4jLog.SCL.lombok */
+    /* JADX INFO: loaded from: discord-126021.apk:lombok/eclipse/handlers/HandleLog$HandleLog4jLog.SCL.lombok */
     public static class HandleLog4jLog extends EclipseAnnotationHandler<Log4j> {
         @Override // lombok.eclipse.EclipseAnnotationHandler
         public void handle(AnnotationValues<Log4j> annotation, org.eclipse.jdt.internal.compiler.ast.Annotation source, EclipseNode annotationNode) {
@@ -266,7 +266,7 @@ public class HandleLog {
         }
     }
 
-    /* loaded from: discord-126021.apk:lombok/eclipse/handlers/HandleLog$HandleLog4j2Log.SCL.lombok */
+    /* JADX INFO: loaded from: discord-126021.apk:lombok/eclipse/handlers/HandleLog$HandleLog4j2Log.SCL.lombok */
     public static class HandleLog4j2Log extends EclipseAnnotationHandler<Log4j2> {
         @Override // lombok.eclipse.EclipseAnnotationHandler
         public void handle(AnnotationValues<Log4j2> annotation, org.eclipse.jdt.internal.compiler.ast.Annotation source, EclipseNode annotationNode) {
@@ -275,7 +275,7 @@ public class HandleLog {
         }
     }
 
-    /* loaded from: discord-126021.apk:lombok/eclipse/handlers/HandleLog$HandleSlf4jLog.SCL.lombok */
+    /* JADX INFO: loaded from: discord-126021.apk:lombok/eclipse/handlers/HandleLog$HandleSlf4jLog.SCL.lombok */
     public static class HandleSlf4jLog extends EclipseAnnotationHandler<Slf4j> {
         @Override // lombok.eclipse.EclipseAnnotationHandler
         public void handle(AnnotationValues<Slf4j> annotation, org.eclipse.jdt.internal.compiler.ast.Annotation source, EclipseNode annotationNode) {
@@ -284,7 +284,7 @@ public class HandleLog {
         }
     }
 
-    /* loaded from: discord-126021.apk:lombok/eclipse/handlers/HandleLog$HandleXSlf4jLog.SCL.lombok */
+    /* JADX INFO: loaded from: discord-126021.apk:lombok/eclipse/handlers/HandleLog$HandleXSlf4jLog.SCL.lombok */
     public static class HandleXSlf4jLog extends EclipseAnnotationHandler<XSlf4j> {
         @Override // lombok.eclipse.EclipseAnnotationHandler
         public void handle(AnnotationValues<XSlf4j> annotation, org.eclipse.jdt.internal.compiler.ast.Annotation source, EclipseNode annotationNode) {
@@ -293,7 +293,7 @@ public class HandleLog {
         }
     }
 
-    /* loaded from: discord-126021.apk:lombok/eclipse/handlers/HandleLog$HandleJBossLog.SCL.lombok */
+    /* JADX INFO: loaded from: discord-126021.apk:lombok/eclipse/handlers/HandleLog$HandleJBossLog.SCL.lombok */
     public static class HandleJBossLog extends EclipseAnnotationHandler<JBossLog> {
         @Override // lombok.eclipse.EclipseAnnotationHandler
         public void handle(AnnotationValues<JBossLog> annotation, org.eclipse.jdt.internal.compiler.ast.Annotation source, EclipseNode annotationNode) {
@@ -302,7 +302,7 @@ public class HandleLog {
         }
     }
 
-    /* loaded from: discord-126021.apk:lombok/eclipse/handlers/HandleLog$HandleFloggerLog.SCL.lombok */
+    /* JADX INFO: loaded from: discord-126021.apk:lombok/eclipse/handlers/HandleLog$HandleFloggerLog.SCL.lombok */
     public static class HandleFloggerLog extends EclipseAnnotationHandler<Flogger> {
         @Override // lombok.eclipse.EclipseAnnotationHandler
         public void handle(AnnotationValues<Flogger> annotation, org.eclipse.jdt.internal.compiler.ast.Annotation source, EclipseNode annotationNode) {
@@ -311,7 +311,7 @@ public class HandleLog {
         }
     }
 
-    /* loaded from: discord-126021.apk:lombok/eclipse/handlers/HandleLog$HandleCustomLog.SCL.lombok */
+    /* JADX INFO: loaded from: discord-126021.apk:lombok/eclipse/handlers/HandleLog$HandleCustomLog.SCL.lombok */
     public static class HandleCustomLog extends EclipseAnnotationHandler<CustomLog> {
         @Override // lombok.eclipse.EclipseAnnotationHandler
         public void handle(AnnotationValues<CustomLog> annotation, org.eclipse.jdt.internal.compiler.ast.Annotation source, EclipseNode annotationNode) {

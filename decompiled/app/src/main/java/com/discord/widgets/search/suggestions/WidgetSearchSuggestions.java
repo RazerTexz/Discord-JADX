@@ -38,26 +38,26 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 import p658rx.Observable;
 
-/* compiled from: WidgetSearchSuggestions.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetSearchSuggestions.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetSearchSuggestions extends AppFragment {
     public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetSearchSuggestions.class, "binding", "getBinding()Lcom/discord/databinding/WidgetSearchSuggestionsBinding;", 0)};
     private WidgetSearchSuggestionsAdapter adapter;
 
-    /* renamed from: binding$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
     private SearchStringProvider searchStringProvider;
 
-    /* compiled from: WidgetSearchSuggestions.kt */
+    /* JADX INFO: compiled from: WidgetSearchSuggestions.kt */
     public static final /* data */ class Model {
 
-        /* renamed from: Companion, reason: from kotlin metadata */
+        /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
         public static final Companion INSTANCE = new Companion(null);
         private final List<QueryNode> query;
         private final List<SearchSuggestion> suggestionEntries;
         private final List<MGRecyclerDataPayload> suggestionItems;
 
-        /* compiled from: WidgetSearchSuggestions.kt */
+        /* JADX INFO: compiled from: WidgetSearchSuggestions.kt */
         public static final class Companion {
             private Companion() {
             }
@@ -197,8 +197,8 @@ public final class WidgetSearchSuggestions extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetSearchSuggestions.kt */
-    /* renamed from: com.discord.widgets.search.suggestions.WidgetSearchSuggestions$configureUI$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.search.suggestions.WidgetSearchSuggestions$configureUI$1 */
+    /* JADX INFO: compiled from: WidgetSearchSuggestions.kt */
     public static final class C91361 extends Lambda implements Function1<FilterType, Unit> {
         public final /* synthetic */ Model $model;
 
@@ -214,15 +214,15 @@ public final class WidgetSearchSuggestions extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(FilterType filterType) {
             Intrinsics3.checkNotNullParameter(filterType, "filterType");
             StoreStream.INSTANCE.getSearch().getStoreSearchInput().onFilterClicked(filterType, WidgetSearchSuggestions.access$getSearchStringProvider$p(WidgetSearchSuggestions.this), this.$model.getQuery());
         }
     }
 
-    /* compiled from: WidgetSearchSuggestions.kt */
-    /* renamed from: com.discord.widgets.search.suggestions.WidgetSearchSuggestions$configureUI$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.search.suggestions.WidgetSearchSuggestions$configureUI$2 */
+    /* JADX INFO: compiled from: WidgetSearchSuggestions.kt */
     public static final class C91372 extends Lambda implements Function1<UserSuggestion, Unit> {
         public final /* synthetic */ Model $model;
 
@@ -238,7 +238,7 @@ public final class WidgetSearchSuggestions extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(UserSuggestion userSuggestion) {
             Intrinsics3.checkNotNullParameter(userSuggestion, "userSuggestion");
             int iOrdinal = userSuggestion.getTargetType().ordinal();
@@ -255,8 +255,8 @@ public final class WidgetSearchSuggestions extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetSearchSuggestions.kt */
-    /* renamed from: com.discord.widgets.search.suggestions.WidgetSearchSuggestions$configureUI$3 */
+    /* JADX INFO: renamed from: com.discord.widgets.search.suggestions.WidgetSearchSuggestions$configureUI$3 */
+    /* JADX INFO: compiled from: WidgetSearchSuggestions.kt */
     public static final class C91383 extends Lambda implements Function1<ChannelSuggestion, Unit> {
         public final /* synthetic */ Model $model;
 
@@ -272,15 +272,15 @@ public final class WidgetSearchSuggestions extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(ChannelSuggestion channelSuggestion) {
             Intrinsics3.checkNotNullParameter(channelSuggestion, "channelSuggestion");
             StoreStream.INSTANCE.getSearch().getStoreSearchInput().onInChannelClicked(channelSuggestion, WidgetSearchSuggestions.access$getSearchStringProvider$p(WidgetSearchSuggestions.this).getInFilterString(), this.$model.getQuery());
         }
     }
 
-    /* compiled from: WidgetSearchSuggestions.kt */
-    /* renamed from: com.discord.widgets.search.suggestions.WidgetSearchSuggestions$configureUI$4 */
+    /* JADX INFO: renamed from: com.discord.widgets.search.suggestions.WidgetSearchSuggestions$configureUI$4 */
+    /* JADX INFO: compiled from: WidgetSearchSuggestions.kt */
     public static final class C91394 extends Lambda implements Function1<HasNode2, Unit> {
         public final /* synthetic */ Model $model;
 
@@ -296,15 +296,15 @@ public final class WidgetSearchSuggestions extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(HasNode2 hasNode2) {
             Intrinsics3.checkNotNullParameter(hasNode2, "hasAnswerOption");
             StoreStream.INSTANCE.getSearch().getStoreSearchInput().onHasClicked(hasNode2, WidgetSearchSuggestions.access$getSearchStringProvider$p(WidgetSearchSuggestions.this).getHasFilterString(), hasNode2.getLocalizedInputText(WidgetSearchSuggestions.access$getSearchStringProvider$p(WidgetSearchSuggestions.this)), this.$model.getQuery());
         }
     }
 
-    /* compiled from: WidgetSearchSuggestions.kt */
-    /* renamed from: com.discord.widgets.search.suggestions.WidgetSearchSuggestions$configureUI$5 */
+    /* JADX INFO: renamed from: com.discord.widgets.search.suggestions.WidgetSearchSuggestions$configureUI$5 */
+    /* JADX INFO: compiled from: WidgetSearchSuggestions.kt */
     public static final class C91405 extends Lambda implements Function1<List<? extends QueryNode>, Unit> {
         public static final C91405 INSTANCE = new C91405();
 
@@ -318,15 +318,15 @@ public final class WidgetSearchSuggestions extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(List<? extends QueryNode> list) {
             Intrinsics3.checkNotNullParameter(list, "queryNodes");
             StoreStream.INSTANCE.getSearch().getStoreSearchInput().onQueryClicked(list);
         }
     }
 
-    /* compiled from: WidgetSearchSuggestions.kt */
-    /* renamed from: com.discord.widgets.search.suggestions.WidgetSearchSuggestions$configureUI$6 */
+    /* JADX INFO: renamed from: com.discord.widgets.search.suggestions.WidgetSearchSuggestions$configureUI$6 */
+    /* JADX INFO: compiled from: WidgetSearchSuggestions.kt */
     public static final class C91416 extends Lambda implements Function0<Unit> {
         public static final C91416 INSTANCE = new C91416();
 
@@ -340,14 +340,14 @@ public final class WidgetSearchSuggestions extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             StoreStream.INSTANCE.getSearch().clearHistory();
         }
     }
 
-    /* compiled from: WidgetSearchSuggestions.kt */
-    /* renamed from: com.discord.widgets.search.suggestions.WidgetSearchSuggestions$onViewBoundOrOnResume$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.search.suggestions.WidgetSearchSuggestions$onViewBoundOrOnResume$1 */
+    /* JADX INFO: compiled from: WidgetSearchSuggestions.kt */
     public static final class C91421 extends Lambda implements Function1<Model, Unit> {
         public C91421() {
             super(1);
@@ -359,7 +359,7 @@ public final class WidgetSearchSuggestions extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Model model) {
             Intrinsics3.checkNotNullParameter(model, "model");
             WidgetSearchSuggestions.access$configureUI(WidgetSearchSuggestions.this, model);

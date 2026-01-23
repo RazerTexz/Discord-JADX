@@ -3,37 +3,37 @@ package com.discord.p687native.engine;
 import com.discord.models.domain.ModelAuditLogEntry;
 import org.webrtc.VideoCapturer;
 
-/* compiled from: NativeConnection.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: NativeConnection.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class NativeConnection {
     private final long nativeInstance;
 
-    /* compiled from: NativeConnection.kt */
+    /* JADX INFO: compiled from: NativeConnection.kt */
     public interface GetEncryptionModesCallback {
         void onEncryptionModes(String[] modes);
     }
 
-    /* compiled from: NativeConnection.kt */
+    /* JADX INFO: compiled from: NativeConnection.kt */
     public interface GetStatsCallback {
         void onStats(String stats);
     }
 
-    /* compiled from: NativeConnection.kt */
+    /* JADX INFO: compiled from: NativeConnection.kt */
     public interface OnPingCallback {
         void onPing(int ping, String server, int port, int seq);
     }
 
-    /* compiled from: NativeConnection.kt */
+    /* JADX INFO: compiled from: NativeConnection.kt */
     public interface OnPingTimeoutCallback {
         void onPingTimeout(String server, int port, int seq, int timeout);
     }
 
-    /* compiled from: NativeConnection.kt */
+    /* JADX INFO: compiled from: NativeConnection.kt */
     public interface OnSpeakingCallback {
         void onSpeaking(String userId, int speakingFlags);
     }
 
-    /* compiled from: NativeConnection.kt */
+    /* JADX INFO: compiled from: NativeConnection.kt */
     public interface OnVideoCallback {
         void onVideo(String userId, long ssrc, String streamId, String videoStreamParametersJson);
     }

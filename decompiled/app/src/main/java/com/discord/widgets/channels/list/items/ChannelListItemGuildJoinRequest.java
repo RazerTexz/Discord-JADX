@@ -5,8 +5,8 @@ import com.discord.models.member.GuildMember;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ChannelListItemGuildJoinRequest.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: ChannelListItemGuildJoinRequest.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final /* data */ class ChannelListItemGuildJoinRequest implements ChannelListItem {
     private final GuildJoinRequest guildJoinRequest;
     private final String key;
@@ -32,12 +32,12 @@ public final /* data */ class ChannelListItemGuildJoinRequest implements Channel
         return channelListItemGuildJoinRequest.copy(guildJoinRequest, guildMember);
     }
 
-    /* renamed from: component1, reason: from getter */
+    /* JADX INFO: renamed from: component1, reason: from getter */
     public final GuildJoinRequest getGuildJoinRequest() {
         return this.guildJoinRequest;
     }
 
-    /* renamed from: component2, reason: from getter */
+    /* JADX INFO: renamed from: component2, reason: from getter */
     public final GuildMember getMember() {
         return this.member;
     }

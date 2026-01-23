@@ -7,9 +7,9 @@ import kotlin.jvm.functions.Function0;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: RtcConnection.kt */
-/* renamed from: b.a.q.u */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.a.q.u */
+/* JADX INFO: compiled from: RtcConnection.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class C1263u extends Lambda implements Function0<Unit> {
     public final /* synthetic */ Throwable $throwable;
     public final /* synthetic */ C1264v this$0;

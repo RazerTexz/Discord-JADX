@@ -7,24 +7,24 @@ import p007b.p195g.p196a.p205c.JavaType;
 import p007b.p195g.p196a.p205c.JsonSerializer;
 import p007b.p195g.p196a.p205c.PropertyName;
 
-/* compiled from: ObjectIdWriter.java */
-/* renamed from: b.g.a.c.g0.t.j, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.g.a.c.g0.t.j, reason: use source file name */
+/* JADX INFO: compiled from: ObjectIdWriter.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class ObjectIdWriter {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final JavaType f4818a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final SerializableString f4819b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final ObjectIdGenerator<?> f4820c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final JsonSerializer<Object> f4821d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final boolean f4822e;
 
     public ObjectIdWriter(JavaType javaType, SerializableString serializableString, ObjectIdGenerator<?> objectIdGenerator, JsonSerializer<?> jsonSerializer, boolean z2) {
@@ -35,7 +35,7 @@ public final class ObjectIdWriter {
         this.f4822e = z2;
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static ObjectIdWriter m2031a(JavaType javaType, PropertyName propertyName, ObjectIdGenerator<?> objectIdGenerator, boolean z2) {
         String str = propertyName == null ? null : propertyName._simpleName;
         return new ObjectIdWriter(javaType, str != null ? new SerializedString(str) : null, objectIdGenerator, null, z2);

@@ -5,19 +5,19 @@ import p007b.p225i.p226a.p242c.p259f3.TimestampAdjuster;
 import p007b.p225i.p226a.p242c.p259f3.Util2;
 import p007b.p225i.p226a.p242c.p267x2.BinarySearchSeeker;
 
-/* compiled from: PsBinarySearchSeeker.java */
-/* renamed from: b.i.a.c.x2.k0.z, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.x2.k0.z, reason: use source file name */
+/* JADX INFO: compiled from: PsBinarySearchSeeker.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class PsBinarySearchSeeker extends BinarySearchSeeker {
 
-    /* compiled from: PsBinarySearchSeeker.java */
-    /* renamed from: b.i.a.c.x2.k0.z$b */
+    /* JADX INFO: renamed from: b.i.a.c.x2.k0.z$b */
+    /* JADX INFO: compiled from: PsBinarySearchSeeker.java */
     public static final class b implements BinarySearchSeeker.f {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final TimestampAdjuster f8923a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final ParsableByteArray f8924b = new ParsableByteArray();
 
         public b(TimestampAdjuster timestampAdjuster, a aVar) {
@@ -25,7 +25,7 @@ public final class PsBinarySearchSeeker extends BinarySearchSeeker {
         }
 
         @Override // p007b.p225i.p226a.p242c.p267x2.BinarySearchSeeker.f
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public void mo3627a() {
             this.f8924b.m3076B(Util2.f6713f);
         }
@@ -37,19 +37,19 @@ public final class PsBinarySearchSeeker extends BinarySearchSeeker {
             	at jadx.core.dex.visitors.regions.maker.LoopRegionMaker.process(LoopRegionMaker.java:63)
             	at jadx.core.dex.visitors.regions.maker.RegionMaker.traverse(RegionMaker.java:89)
             	at jadx.core.dex.visitors.regions.maker.RegionMaker.makeRegion(RegionMaker.java:66)
-            	at jadx.core.dex.visitors.regions.maker.IfRegionMaker.process(IfRegionMaker.java:101)
+            	at jadx.core.dex.visitors.regions.maker.IfRegionMaker.process(IfRegionMaker.java:102)
             	at jadx.core.dex.visitors.regions.maker.RegionMaker.traverse(RegionMaker.java:106)
             	at jadx.core.dex.visitors.regions.maker.RegionMaker.makeRegion(RegionMaker.java:66)
-            	at jadx.core.dex.visitors.regions.maker.IfRegionMaker.process(IfRegionMaker.java:101)
+            	at jadx.core.dex.visitors.regions.maker.IfRegionMaker.process(IfRegionMaker.java:102)
             	at jadx.core.dex.visitors.regions.maker.RegionMaker.traverse(RegionMaker.java:106)
             	at jadx.core.dex.visitors.regions.maker.RegionMaker.makeRegion(RegionMaker.java:66)
-            	at jadx.core.dex.visitors.regions.maker.IfRegionMaker.process(IfRegionMaker.java:101)
+            	at jadx.core.dex.visitors.regions.maker.IfRegionMaker.process(IfRegionMaker.java:102)
             	at jadx.core.dex.visitors.regions.maker.RegionMaker.traverse(RegionMaker.java:106)
             	at jadx.core.dex.visitors.regions.maker.RegionMaker.makeRegion(RegionMaker.java:66)
-            	at jadx.core.dex.visitors.regions.maker.IfRegionMaker.process(IfRegionMaker.java:101)
+            	at jadx.core.dex.visitors.regions.maker.IfRegionMaker.process(IfRegionMaker.java:102)
             	at jadx.core.dex.visitors.regions.maker.RegionMaker.traverse(RegionMaker.java:106)
             	at jadx.core.dex.visitors.regions.maker.RegionMaker.makeRegion(RegionMaker.java:66)
-            	at jadx.core.dex.visitors.regions.maker.IfRegionMaker.process(IfRegionMaker.java:101)
+            	at jadx.core.dex.visitors.regions.maker.IfRegionMaker.process(IfRegionMaker.java:102)
             	at jadx.core.dex.visitors.regions.maker.RegionMaker.traverse(RegionMaker.java:106)
             	at jadx.core.dex.visitors.regions.maker.RegionMaker.makeRegion(RegionMaker.java:66)
             	at jadx.core.dex.visitors.regions.maker.LoopRegionMaker.process(LoopRegionMaker.java:125)
@@ -59,7 +59,7 @@ public final class PsBinarySearchSeeker extends BinarySearchSeeker {
             	at jadx.core.dex.visitors.regions.RegionMakerVisitor.visit(RegionMakerVisitor.java:25)
             */
         @Override // p007b.p225i.p226a.p242c.p267x2.BinarySearchSeeker.f
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public p007b.p225i.p226a.p242c.p267x2.BinarySearchSeeker.e mo3628b(p007b.p225i.p226a.p242c.p267x2.ExtractorInput r17, long r18) throws java.io.IOException {
             /*
                 Method dump skipped, instruction units count: 284
@@ -73,7 +73,7 @@ public final class PsBinarySearchSeeker extends BinarySearchSeeker {
         super(new BinarySearchSeeker.b(), new b(timestampAdjuster, null), j, 0L, j + 1, 0L, j2, 188L, 1000);
     }
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public static int m3794g(byte[] bArr, int i) {
         return (bArr[i + 3] & 255) | ((bArr[i] & 255) << 24) | ((bArr[i + 1] & 255) << 16) | ((bArr[i + 2] & 255) << 8);
     }

@@ -5,14 +5,14 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.List;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: GuildsDragAndDropCallback.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: GuildsDragAndDropCallback.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class GuildsDragAndDropCallback extends ItemTouchHelper.Callback {
     private static final int DEFAULT_DRAG_SCROLL_SPEED = 20;
     private static final float MOVE_THRESHOLD = 0.2f;
     private final Controller controller;
 
-    /* compiled from: GuildsDragAndDropCallback.kt */
+    /* JADX INFO: compiled from: GuildsDragAndDropCallback.kt */
     public interface Controller {
         RecyclerView.ViewHolder chooseDropTarget(RecyclerView.ViewHolder selected, List<RecyclerView.ViewHolder> dropTargets, int curX, int curY);
 
@@ -23,7 +23,7 @@ public final class GuildsDragAndDropCallback extends ItemTouchHelper.Callback {
         boolean onMove(RecyclerView recyclerView, RecyclerView.ViewHolder source, RecyclerView.ViewHolder target);
     }
 
-    /* compiled from: GuildsDragAndDropCallback.kt */
+    /* JADX INFO: compiled from: GuildsDragAndDropCallback.kt */
     public interface DraggableViewHolder {
         boolean canDrag();
     }

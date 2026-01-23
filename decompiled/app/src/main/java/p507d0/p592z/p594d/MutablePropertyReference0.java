@@ -6,9 +6,9 @@ import kotlin.reflect.KProperty4;
 import kotlin.reflect.KProperty5;
 import kotlin.reflect.KProperty6;
 
-/* compiled from: MutablePropertyReference0.java */
-/* renamed from: d0.z.d.p, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.z.d.p, reason: use source file name */
+/* JADX INFO: compiled from: MutablePropertyReference0.java */
+/* JADX INFO: loaded from: classes3.dex */
 public abstract class MutablePropertyReference0 extends MutablePropertyReference implements KProperty5 {
     public MutablePropertyReference0() {
     }
@@ -41,13 +41,13 @@ public abstract class MutablePropertyReference0 extends MutablePropertyReference
     }
 
     @Override // kotlin.reflect.KProperty6
-    /* renamed from: getGetter, reason: collision with other method in class */
+    /* JADX INFO: renamed from: getGetter, reason: collision with other method in class */
     public KProperty6.Getter mo11489getGetter() {
         return ((KProperty5) getReflected()).mo11489getGetter();
     }
 
     @Override // kotlin.reflect.KProperty5
-    /* renamed from: getSetter, reason: collision with other method in class */
+    /* JADX INFO: renamed from: getSetter, reason: collision with other method in class */
     public KProperty5.Setter mo11490getSetter() {
         return ((KProperty5) getReflected()).mo11490getSetter();
     }

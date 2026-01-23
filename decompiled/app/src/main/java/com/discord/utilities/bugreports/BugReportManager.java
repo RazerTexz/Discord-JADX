@@ -22,23 +22,23 @@ import p507d0.p592z.p594d.Lambda;
 import p637j0.p641k.Func1;
 import p658rx.Observable;
 
-/* compiled from: BugReportManager.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: BugReportManager.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class BugReportManager {
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     public static final String PREFS_SS_BUG_REPORTING_SETTINGS_ENABLED = "prefs_ss_bug_reporting_enabled";
     private static BugReportManager bugReportManager;
     private final SharedPreferences cache;
     private boolean isStaff;
 
-    /* renamed from: screenshotDetector$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: screenshotDetector$delegate, reason: from kotlin metadata */
     private final Lazy screenshotDetector;
     private boolean settingsEnabled;
     private final StoreUser storeUser;
 
-    /* compiled from: BugReportManager.kt */
+    /* JADX INFO: compiled from: BugReportManager.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -65,8 +65,8 @@ public final class BugReportManager {
         }
     }
 
-    /* compiled from: BugReportManager.kt */
-    /* renamed from: com.discord.utilities.bugreports.BugReportManager$setupSubscriptions$1 */
+    /* JADX INFO: renamed from: com.discord.utilities.bugreports.BugReportManager$setupSubscriptions$1 */
+    /* JADX INFO: compiled from: BugReportManager.kt */
     public static final class C67101<T, R> implements Func1<MeUser, Boolean> {
         public static final C67101 INSTANCE = new C67101();
 
@@ -75,7 +75,7 @@ public final class BugReportManager {
             return call2(meUser);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final Boolean call2(MeUser meUser) {
             UserUtils userUtils = UserUtils.INSTANCE;
             Intrinsics3.checkNotNullExpressionValue(meUser, "it");
@@ -83,8 +83,8 @@ public final class BugReportManager {
         }
     }
 
-    /* compiled from: BugReportManager.kt */
-    /* renamed from: com.discord.utilities.bugreports.BugReportManager$setupSubscriptions$2 */
+    /* JADX INFO: renamed from: com.discord.utilities.bugreports.BugReportManager$setupSubscriptions$2 */
+    /* JADX INFO: compiled from: BugReportManager.kt */
     public static final class C67112 extends Lambda implements Function1<Boolean, Unit> {
         public C67112() {
             super(1);
@@ -96,7 +96,7 @@ public final class BugReportManager {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Boolean bool) {
             BugReportManager bugReportManager = BugReportManager.this;
             Intrinsics3.checkNotNullExpressionValue(bool, "isStaff");
@@ -134,7 +134,7 @@ public final class BugReportManager {
         return this.storeUser;
     }
 
-    /* renamed from: isBugReportSettingEnabled, reason: from getter */
+    /* JADX INFO: renamed from: isBugReportSettingEnabled, reason: from getter */
     public final boolean getSettingsEnabled() {
         return this.settingsEnabled;
     }

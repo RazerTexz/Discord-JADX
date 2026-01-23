@@ -8,15 +8,15 @@ import androidx.work.impl.model.WorkSpec;
 import java.util.HashMap;
 import java.util.Map;
 
+/* JADX INFO: loaded from: classes.dex */
 @RestrictTo({RestrictTo.Scope.LIBRARY_GROUP})
-/* loaded from: classes.dex */
 public class DelayedWorkTracker {
     public static final String TAG = Logger.tagWithPrefix("DelayedWorkTracker");
     public final GreedyScheduler mGreedyScheduler;
     private final RunnableScheduler mRunnableScheduler;
     private final Map<String, Runnable> mRunnables = new HashMap();
 
-    /* renamed from: androidx.work.impl.background.greedy.DelayedWorkTracker$1 */
+    /* JADX INFO: renamed from: androidx.work.impl.background.greedy.DelayedWorkTracker$1 */
     public class RunnableC07351 implements Runnable {
         public final /* synthetic */ WorkSpec val$workSpec;
 

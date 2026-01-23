@@ -3,8 +3,8 @@ package com.discord.gateway;
 import com.discord.utilities.websocket.RawMessageHandler;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: GatewaySocket.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: GatewaySocket.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class GatewaySocket$connect$$inlined$apply$lambda$4 implements RawMessageHandler {
     public final /* synthetic */ String $gatewayUrl$inlined;
     public final /* synthetic */ GatewaySocket this$0;

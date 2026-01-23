@@ -3,9 +3,9 @@ package p617h0.p620b.p621a.p624d;
 import java.lang.reflect.InvocationTargetException;
 import org.objenesis.ObjenesisException;
 
-/* compiled from: GCJInstantiator.java */
-/* renamed from: h0.b.a.d.a, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: h0.b.a.d.a, reason: use source file name */
+/* JADX INFO: compiled from: GCJInstantiator.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class GCJInstantiator<T> extends GCJInstantiatorBase<T> {
     public GCJInstantiator(Class<T> cls) {
         super(cls);

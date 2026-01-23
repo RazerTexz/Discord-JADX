@@ -18,58 +18,58 @@ import p007b.p225i.p226a.p242c.p259f3.TimedValueQueue;
 import p007b.p225i.p226a.p242c.p260g3.VideoFrameMetadataListener;
 import p007b.p225i.p226a.p242c.p260g3.p261z.Projection;
 
-/* compiled from: SceneRenderer.java */
-/* renamed from: b.i.a.c.g3.z.j, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.g3.z.j, reason: use source file name */
+/* JADX INFO: compiled from: SceneRenderer.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class SceneRenderer implements VideoFrameMetadataListener, CameraMotionListener {
 
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     public int f7016r;
 
-    /* renamed from: s */
+    /* JADX INFO: renamed from: s */
     public SurfaceTexture f7017s;
 
-    /* renamed from: v */
+    /* JADX INFO: renamed from: v */
     @Nullable
     public byte[] f7020v;
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final AtomicBoolean f7008j = new AtomicBoolean();
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final AtomicBoolean f7009k = new AtomicBoolean(true);
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final ProjectionRenderer f7010l = new ProjectionRenderer();
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public final FrameRotationQueue f7011m = new FrameRotationQueue();
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public final TimedValueQueue<Long> f7012n = new TimedValueQueue<>();
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public final TimedValueQueue<Projection> f7013o = new TimedValueQueue<>();
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public final float[] f7014p = new float[16];
 
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     public final float[] f7015q = new float[16];
 
-    /* renamed from: t */
+    /* JADX INFO: renamed from: t */
     public volatile int f7018t = 0;
 
-    /* renamed from: u */
+    /* JADX INFO: renamed from: u */
     public int f7019u = -1;
 
     @Override // p007b.p225i.p226a.p242c.p260g3.p261z.CameraMotionListener
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public void mo3196a(long j, float[] fArr) {
         this.f7011m.f6970c.m2966a(j, fArr);
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public SurfaceTexture m3201b() {
         GLES20.glClearColor(0.5f, 0.5f, 0.5f, 1.0f);
         GlUtil.m8945a();
@@ -99,7 +99,7 @@ public final class SceneRenderer implements VideoFrameMetadataListener, CameraMo
     }
 
     @Override // p007b.p225i.p226a.p242c.p260g3.p261z.CameraMotionListener
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public void mo3197c() {
         this.f7012n.m2967b();
         FrameRotationQueue frameRotationQueue = this.f7011m;
@@ -109,7 +109,7 @@ public final class SceneRenderer implements VideoFrameMetadataListener, CameraMo
     }
 
     @Override // p007b.p225i.p226a.p242c.p260g3.VideoFrameMetadataListener
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public void mo3177e(long j, long j2, Format2 format2, @Nullable MediaFormat mediaFormat) {
         float f;
         float f2;

@@ -13,28 +13,28 @@ import p007b.p225i.p414e.p418n.DefaultGridSampler;
 import p007b.p225i.p414e.p418n.PerspectiveTransform;
 import p007b.p225i.p414e.p418n.p419k.WhiteRectangleDetector;
 
-/* compiled from: Detector.java */
-/* renamed from: b.i.e.o.c.a, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.e.o.c.a, reason: use source file name */
+/* JADX INFO: compiled from: Detector.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class Detector2 {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final BitMatrix f13342a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final WhiteRectangleDetector f13343b;
 
-    /* compiled from: Detector.java */
-    /* renamed from: b.i.e.o.c.a$b */
+    /* JADX INFO: renamed from: b.i.e.o.c.a$b */
+    /* JADX INFO: compiled from: Detector.java */
     public static final class b {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final ResultPoint f13344a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final ResultPoint f13345b;
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public final int f13346c;
 
         public b(ResultPoint resultPoint, ResultPoint resultPoint2, int i, a aVar) {
@@ -48,8 +48,8 @@ public final class Detector2 {
         }
     }
 
-    /* compiled from: Detector.java */
-    /* renamed from: b.i.e.o.c.a$c */
+    /* JADX INFO: renamed from: b.i.e.o.c.a$c */
+    /* JADX INFO: compiled from: Detector.java */
     public static final class c implements Serializable, Comparator<b> {
         public c(a aVar) {
         }
@@ -65,25 +65,25 @@ public final class Detector2 {
         this.f13343b = new WhiteRectangleDetector(bitMatrix, 10, bitMatrix.f13229j / 2, bitMatrix.f13230k / 2);
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static int m6974a(ResultPoint resultPoint, ResultPoint resultPoint2) {
         return C3404f.m4265Z0(C3404f.m4237Q(resultPoint.f13207a, resultPoint.f13208b, resultPoint2.f13207a, resultPoint2.f13208b));
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static void m6975b(Map<ResultPoint, Integer> map, ResultPoint resultPoint) {
         Integer num = map.get(resultPoint);
         map.put(resultPoint, Integer.valueOf(num != null ? 1 + num.intValue() : 1));
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public static BitMatrix m6976d(BitMatrix bitMatrix, ResultPoint resultPoint, ResultPoint resultPoint2, ResultPoint resultPoint3, ResultPoint resultPoint4, int i, int i2) throws NotFoundException {
         float f = i - 0.5f;
         float f2 = i2 - 0.5f;
         return DefaultGridSampler.f13274a.m6951a(bitMatrix, i, i2, PerspectiveTransform.m6954a(0.5f, 0.5f, f, 0.5f, f, f2, 0.5f, f2, resultPoint.f13207a, resultPoint.f13208b, resultPoint4.f13207a, resultPoint4.f13208b, resultPoint3.f13207a, resultPoint3.f13208b, resultPoint2.f13207a, resultPoint2.f13208b));
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final boolean m6977c(ResultPoint resultPoint) {
         float f = resultPoint.f13207a;
         if (f < 0.0f) {
@@ -97,7 +97,7 @@ public final class Detector2 {
         return f2 > 0.0f && f2 < ((float) bitMatrix.f13230k);
     }
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final b m6978e(ResultPoint resultPoint, ResultPoint resultPoint2) {
         Detector2 detector2 = this;
         int i = (int) resultPoint.f13207a;

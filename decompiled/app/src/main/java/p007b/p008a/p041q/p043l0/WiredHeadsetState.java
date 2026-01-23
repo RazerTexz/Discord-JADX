@@ -5,19 +5,19 @@ import kotlin.jvm.internal.DefaultConstructorMarker;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: WiredHeadsetState.kt */
-/* renamed from: b.a.q.l0.a, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.a.q.l0.a, reason: use source file name */
+/* JADX INFO: compiled from: WiredHeadsetState.kt */
+/* JADX INFO: loaded from: classes.dex */
 public abstract class WiredHeadsetState {
 
-    /* compiled from: WiredHeadsetState.kt */
-    /* renamed from: b.a.q.l0.a$a */
+    /* JADX INFO: renamed from: b.a.q.l0.a$a */
+    /* JADX INFO: compiled from: WiredHeadsetState.kt */
     public static final class a extends WiredHeadsetState {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final String f1667a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final boolean f1668b;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -40,15 +40,18 @@ public abstract class WiredHeadsetState {
         }
 
         /* JADX WARN: Multi-variable type inference failed */
+        /* JADX WARN: Type inference failed for: r1v1, types: [int] */
+        /* JADX WARN: Type inference failed for: r1v2 */
+        /* JADX WARN: Type inference failed for: r1v3 */
         public int hashCode() {
             String str = this.f1667a;
             int iHashCode = (str != null ? str.hashCode() : 0) * 31;
             boolean z2 = this.f1668b;
-            int i = z2;
-            if (z2 != 0) {
-                i = 1;
+            ?? r1 = z2;
+            if (z2) {
+                r1 = 1;
             }
-            return iHashCode + i;
+            return iHashCode + r1;
         }
 
         public String toString() {
@@ -59,11 +62,11 @@ public abstract class WiredHeadsetState {
         }
     }
 
-    /* compiled from: WiredHeadsetState.kt */
-    /* renamed from: b.a.q.l0.a$b */
+    /* JADX INFO: renamed from: b.a.q.l0.a$b */
+    /* JADX INFO: compiled from: WiredHeadsetState.kt */
     public static final class b extends WiredHeadsetState {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public static final b f1669a = new b();
 
         public b() {

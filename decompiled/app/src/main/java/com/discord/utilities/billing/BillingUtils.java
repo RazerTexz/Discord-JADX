@@ -16,13 +16,13 @@ import kotlin.jvm.functions.Function1;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: BillingUtils.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: BillingUtils.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class BillingUtils {
     public static final BillingUtils INSTANCE = new BillingUtils();
 
-    /* compiled from: BillingUtils.kt */
-    /* renamed from: com.discord.utilities.billing.BillingUtils$createPendingPurchaseMetadata$1 */
+    /* JADX INFO: renamed from: com.discord.utilities.billing.BillingUtils$createPendingPurchaseMetadata$1 */
+    /* JADX INFO: compiled from: BillingUtils.kt */
     public static final class C67021 extends Lambda implements Function1<Unit, Unit> {
         public final /* synthetic */ Function0 $onSuccess;
 
@@ -38,14 +38,14 @@ public final class BillingUtils {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Unit unit) {
             this.$onSuccess.invoke();
         }
     }
 
-    /* compiled from: BillingUtils.kt */
-    /* renamed from: com.discord.utilities.billing.BillingUtils$createPendingPurchaseMetadata$2 */
+    /* JADX INFO: renamed from: com.discord.utilities.billing.BillingUtils$createPendingPurchaseMetadata$2 */
+    /* JADX INFO: compiled from: BillingUtils.kt */
     public static final class C67032 extends Lambda implements Function1<Error, Unit> {
         public final /* synthetic */ Function0 $onFailure;
 
@@ -61,15 +61,15 @@ public final class BillingUtils {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Error error) {
             Intrinsics3.checkNotNullParameter(error, "it");
             this.$onFailure.invoke();
         }
     }
 
-    /* compiled from: BillingUtils.kt */
-    /* renamed from: com.discord.utilities.billing.BillingUtils$verifyPurchase$1 */
+    /* JADX INFO: renamed from: com.discord.utilities.billing.BillingUtils$verifyPurchase$1 */
+    /* JADX INFO: compiled from: BillingUtils.kt */
     public static final class C67041 extends Lambda implements Function1<RestAPIParams.VerifyPurchaseResponse, Unit> {
         public final /* synthetic */ Purchase $purchase;
         public final /* synthetic */ String $sku;
@@ -87,7 +87,7 @@ public final class BillingUtils {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(RestAPIParams.VerifyPurchaseResponse verifyPurchaseResponse) {
             StoreStream.INSTANCE.getGooglePlayPurchases().onVerificationSuccess(new StoreGooglePlayPurchases.VerificationResult(this.$purchase, verifyPurchaseResponse));
             GooglePlayInAppSku inAppSku = GooglePlayInAppSku3.INSTANCE.getInAppSku(this.$sku);
@@ -97,8 +97,8 @@ public final class BillingUtils {
         }
     }
 
-    /* compiled from: BillingUtils.kt */
-    /* renamed from: com.discord.utilities.billing.BillingUtils$verifyPurchase$2 */
+    /* JADX INFO: renamed from: com.discord.utilities.billing.BillingUtils$verifyPurchase$2 */
+    /* JADX INFO: compiled from: BillingUtils.kt */
     public static final class C67052 extends Lambda implements Function1<Error, Unit> {
         public final /* synthetic */ Purchase $purchase;
         public final /* synthetic */ String $sku;
@@ -116,7 +116,7 @@ public final class BillingUtils {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Error error) {
             Intrinsics3.checkNotNullParameter(error, "it");
             StoreStream.Companion companion = StoreStream.INSTANCE;

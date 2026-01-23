@@ -9,12 +9,12 @@ import androidx.sqlite.p006db.SupportSQLiteStatement;
 import androidx.view.LiveData;
 import java.util.concurrent.Callable;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public final class PreferenceDao_Impl implements PreferenceDao {
     private final RoomDatabase __db;
     private final EntityInsertionAdapter<Preference> __insertionAdapterOfPreference;
 
-    /* renamed from: androidx.work.impl.model.PreferenceDao_Impl$1 */
+    /* JADX INFO: renamed from: androidx.work.impl.model.PreferenceDao_Impl$1 */
     public class C07471 extends EntityInsertionAdapter<Preference> {
         public C07471(RoomDatabase roomDatabase) {
             super(roomDatabase);
@@ -30,7 +30,7 @@ public final class PreferenceDao_Impl implements PreferenceDao {
             return "INSERT OR REPLACE INTO `Preference` (`key`,`long_value`) VALUES (?,?)";
         }
 
-        /* renamed from: bind, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: bind, reason: avoid collision after fix types in other method */
         public void bind2(SupportSQLiteStatement supportSQLiteStatement, Preference preference) {
             String str = preference.mKey;
             if (str == null) {
@@ -47,7 +47,7 @@ public final class PreferenceDao_Impl implements PreferenceDao {
         }
     }
 
-    /* renamed from: androidx.work.impl.model.PreferenceDao_Impl$2 */
+    /* JADX INFO: renamed from: androidx.work.impl.model.PreferenceDao_Impl$2 */
     public class CallableC07482 implements Callable<Long> {
         public final /* synthetic */ RoomSQLiteQuery val$_statement;
 

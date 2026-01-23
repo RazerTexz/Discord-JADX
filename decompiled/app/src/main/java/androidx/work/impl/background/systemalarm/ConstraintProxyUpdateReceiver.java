@@ -11,7 +11,7 @@ import androidx.work.impl.WorkManagerImpl;
 import androidx.work.impl.background.systemalarm.ConstraintProxy;
 import androidx.work.impl.utils.PackageManagerHelper;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class ConstraintProxyUpdateReceiver extends BroadcastReceiver {
     public static final String ACTION = "androidx.work.impl.background.systemalarm.UpdateProxies";
     public static final String KEY_BATTERY_CHARGING_PROXY_ENABLED = "KEY_BATTERY_CHARGING_PROXY_ENABLED";
@@ -20,7 +20,7 @@ public class ConstraintProxyUpdateReceiver extends BroadcastReceiver {
     public static final String KEY_STORAGE_NOT_LOW_PROXY_ENABLED = "KEY_STORAGE_NOT_LOW_PROXY_ENABLED";
     public static final String TAG = Logger.tagWithPrefix("ConstrntProxyUpdtRecvr");
 
-    /* renamed from: androidx.work.impl.background.systemalarm.ConstraintProxyUpdateReceiver$1 */
+    /* JADX INFO: renamed from: androidx.work.impl.background.systemalarm.ConstraintProxyUpdateReceiver$1 */
     public class RunnableC07361 implements Runnable {
         public final /* synthetic */ Context val$context;
         public final /* synthetic */ Intent val$intent;

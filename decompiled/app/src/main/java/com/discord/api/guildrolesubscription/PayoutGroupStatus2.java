@@ -8,9 +8,9 @@ import java.io.IOException;
 import java.util.Objects;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: PayoutGroupStatus.kt */
-/* renamed from: com.discord.api.guildrolesubscription.PayoutGroupStatusTypeAdapter, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: com.discord.api.guildrolesubscription.PayoutGroupStatusTypeAdapter, reason: use source file name */
+/* JADX INFO: compiled from: PayoutGroupStatus.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class PayoutGroupStatus2 extends TypeAdapter<PayoutGroupStatus> {
     @Override // com.google.gson.TypeAdapter
     public PayoutGroupStatus read(JsonReader jsonReader) throws IOException {

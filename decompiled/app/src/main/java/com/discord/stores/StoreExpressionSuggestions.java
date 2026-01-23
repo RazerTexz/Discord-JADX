@@ -11,8 +11,8 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 import p658rx.Observable;
 
-/* compiled from: StoreExpressionSuggestions.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: StoreExpressionSuggestions.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class StoreExpressionSuggestions extends StoreV2 {
     public static final long TRACKED_EXPRESSION_SUGGESTIONS_DISPLAYED_THROTTLE_WINDOW = 60000;
     private final Clock clock;
@@ -22,8 +22,8 @@ public final class StoreExpressionSuggestions extends StoreV2 {
     private final ObservationDeck observationDeck;
     private boolean suggestionsEnabled;
 
-    /* compiled from: StoreExpressionSuggestions.kt */
-    /* renamed from: com.discord.stores.StoreExpressionSuggestions$observeSuggestionsEnabled$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreExpressionSuggestions$observeSuggestionsEnabled$1 */
+    /* JADX INFO: compiled from: StoreExpressionSuggestions.kt */
     public static final class C59291 extends Lambda implements Function0<Boolean> {
         public C59291() {
             super(0);
@@ -34,14 +34,14 @@ public final class StoreExpressionSuggestions extends StoreV2 {
             return Boolean.valueOf(invoke2());
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final boolean invoke2() {
             return StoreExpressionSuggestions.access$getSuggestionsEnabled$p(StoreExpressionSuggestions.this);
         }
     }
 
-    /* compiled from: StoreExpressionSuggestions.kt */
-    /* renamed from: com.discord.stores.StoreExpressionSuggestions$setExpressionSuggestionsEnabled$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreExpressionSuggestions$setExpressionSuggestionsEnabled$1 */
+    /* JADX INFO: compiled from: StoreExpressionSuggestions.kt */
     public static final class C59301 extends Lambda implements Function0<Unit> {
         public final /* synthetic */ boolean $enable;
 
@@ -57,7 +57,7 @@ public final class StoreExpressionSuggestions extends StoreV2 {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             StoreExpressionSuggestions.access$setSuggestionsEnabled$p(StoreExpressionSuggestions.this, this.$enable);
             StoreExpressionSuggestions.this.markChanged();

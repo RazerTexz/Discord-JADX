@@ -32,7 +32,7 @@ import java.util.Map;
 import java.util.Set;
 import p007b.p100d.p104b.p105a.outline;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class ShortcutInfoCompat {
     private static final String EXTRA_LOCUS_ID = "extraLocusId";
     private static final String EXTRA_LONG_LIVED = "extraLongLived";

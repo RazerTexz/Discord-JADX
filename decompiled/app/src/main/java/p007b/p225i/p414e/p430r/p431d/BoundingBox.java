@@ -4,36 +4,36 @@ import com.google.zxing.NotFoundException;
 import p007b.p225i.p414e.ResultPoint;
 import p007b.p225i.p414e.p418n.BitMatrix;
 
-/* compiled from: BoundingBox.java */
-/* renamed from: b.i.e.r.d.c, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.e.r.d.c, reason: use source file name */
+/* JADX INFO: compiled from: BoundingBox.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class BoundingBox {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final BitMatrix f13470a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final ResultPoint f13471b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final ResultPoint f13472c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final ResultPoint f13473d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final ResultPoint f13474e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final int f13475f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public final int f13476g;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public final int f13477h;
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public final int f13478i;
 
     public BoundingBox(BitMatrix bitMatrix, ResultPoint resultPoint, ResultPoint resultPoint2, ResultPoint resultPoint3, ResultPoint resultPoint4) throws NotFoundException {

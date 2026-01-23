@@ -7,9 +7,9 @@ import p007b.p008a.p009a.p010a.GuildBoostUncancelViewModel3;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: GuildBoostUncancelViewModel.kt */
-/* renamed from: b.a.a.a.l, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.a.a.a.l, reason: use source file name */
+/* JADX INFO: compiled from: GuildBoostUncancelViewModel.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class GuildBoostUncancelViewModel4 extends Lambda implements Function1<GuildBoostUtils.ModifyGuildBoostSlotResult, Unit> {
     public final /* synthetic */ GuildBoostUncancelViewModel3.c.b $loadedViewState;
     public final /* synthetic */ GuildBoostUncancelViewModel3 this$0;

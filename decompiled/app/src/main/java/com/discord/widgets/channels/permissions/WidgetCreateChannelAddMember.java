@@ -36,23 +36,23 @@ import p507d0.p592z.p594d.Lambda;
 import p658rx.functions.Action2;
 import p658rx.subjects.BehaviorSubject;
 
-/* compiled from: WidgetCreateChannelAddMember.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetCreateChannelAddMember.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetCreateChannelAddMember extends AppFragment {
     public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetCreateChannelAddMember.class, "binding", "getBinding()Lcom/discord/databinding/WidgetCreateChannelAddMemberBinding;", 0)};
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
 
-    /* renamed from: binding$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
 
-    /* renamed from: channelId$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: channelId$delegate, reason: from kotlin metadata */
     private final Lazy channelId;
     private WidgetChannelSettingsAddMemberFragment fragment;
     private final AppLogger2 loggingConfig;
 
-    /* compiled from: WidgetCreateChannelAddMember.kt */
+    /* JADX INFO: compiled from: WidgetCreateChannelAddMember.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -69,8 +69,8 @@ public final class WidgetCreateChannelAddMember extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetCreateChannelAddMember.kt */
-    /* renamed from: com.discord.widgets.channels.permissions.WidgetCreateChannelAddMember$addPermissionOverwrites$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.channels.permissions.WidgetCreateChannelAddMember$addPermissionOverwrites$1 */
+    /* JADX INFO: compiled from: WidgetCreateChannelAddMember.kt */
     public static final class C75571 extends Lambda implements Function1<List<? extends Void>, Unit> {
         public C75571() {
             super(1);
@@ -82,7 +82,7 @@ public final class WidgetCreateChannelAddMember extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(List<Void> list) {
             Intrinsics3.checkNotNullParameter(list, "it");
             FragmentActivity activity = WidgetCreateChannelAddMember.this.getActivity();
@@ -92,8 +92,8 @@ public final class WidgetCreateChannelAddMember extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetCreateChannelAddMember.kt */
-    /* renamed from: com.discord.widgets.channels.permissions.WidgetCreateChannelAddMember$onViewBound$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.channels.permissions.WidgetCreateChannelAddMember$onViewBound$1 */
+    /* JADX INFO: compiled from: WidgetCreateChannelAddMember.kt */
     public static final class C75581 extends Lambda implements Function1<Channel, Unit> {
         public C75581() {
             super(1);
@@ -105,18 +105,18 @@ public final class WidgetCreateChannelAddMember extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Channel channel) {
             WidgetCreateChannelAddMember.access$configureUI(WidgetCreateChannelAddMember.this, channel);
         }
     }
 
-    /* compiled from: WidgetCreateChannelAddMember.kt */
-    /* renamed from: com.discord.widgets.channels.permissions.WidgetCreateChannelAddMember$onViewBound$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.channels.permissions.WidgetCreateChannelAddMember$onViewBound$2 */
+    /* JADX INFO: compiled from: WidgetCreateChannelAddMember.kt */
     public static final class C75592 extends Lambda implements Function1<Map<Long, ? extends PermissionOverwrite.Type>, Unit> {
 
-        /* compiled from: WidgetCreateChannelAddMember.kt */
-        /* renamed from: com.discord.widgets.channels.permissions.WidgetCreateChannelAddMember$onViewBound$2$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.widgets.channels.permissions.WidgetCreateChannelAddMember$onViewBound$2$1, reason: invalid class name */
+        /* JADX INFO: compiled from: WidgetCreateChannelAddMember.kt */
         public static final class AnonymousClass1<T1, T2> implements Action2<MenuItem, Context> {
             public final /* synthetic */ Map $selected;
 
@@ -129,7 +129,7 @@ public final class WidgetCreateChannelAddMember extends AppFragment {
                 call2(menuItem, context);
             }
 
-            /* renamed from: call, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
             public final void call2(MenuItem menuItem, Context context) {
                 Intrinsics3.checkNotNullExpressionValue(menuItem, "menuItem");
                 if (menuItem.getItemId() != C5419R.id.menu_continue) {
@@ -152,7 +152,7 @@ public final class WidgetCreateChannelAddMember extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Map<Long, ? extends PermissionOverwrite.Type> map) {
             AppFragment.setActionBarOptionsMenu$default(WidgetCreateChannelAddMember.this, C5419R.menu.menu_add_member_continue, new AnonymousClass1(map), null, 4, null);
         }

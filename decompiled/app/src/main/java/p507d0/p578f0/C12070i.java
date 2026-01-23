@@ -9,31 +9,31 @@ import kotlin.sequences.Sequence;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.p595g0.KMarkers;
 
-/* compiled from: Sequences.kt */
-/* renamed from: d0.f0.i */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.f0.i */
+/* JADX INFO: compiled from: Sequences.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class C12070i<T> implements Sequence<T> {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final Function0<T> f25095a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final Function1<T, T> f25096b;
 
-    /* compiled from: Sequences.kt */
-    /* renamed from: d0.f0.i$a */
+    /* JADX INFO: renamed from: d0.f0.i$a */
+    /* JADX INFO: compiled from: Sequences.kt */
     public static final class a implements Iterator<T>, KMarkers {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public T f25097j;
 
-        /* renamed from: k */
+        /* JADX INFO: renamed from: k */
         public int f25098k = -2;
 
         public a() {
         }
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final void m10063a() {
             T t;
             if (this.f25098k == -2) {

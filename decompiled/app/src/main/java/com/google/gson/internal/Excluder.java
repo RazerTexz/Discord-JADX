@@ -15,44 +15,44 @@ import p007b.p225i.p408d.TypeAdapterFactory2;
 import p007b.p225i.p408d.p409p.Since2;
 import p007b.p225i.p408d.p409p.Until;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public final class Excluder implements TypeAdapterFactory2, Cloneable {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static final Excluder f21483j = new Excluder();
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public double f21484k = -1.0d;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public int f21485l = Opcodes.L2I;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public boolean f21486m = true;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public List<ExclusionStrategy> f21487n = Collections.emptyList();
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public List<ExclusionStrategy> f21488o = Collections.emptyList();
 
     /* JADX INFO: Add missing generic type declarations: [T] */
-    /* renamed from: com.google.gson.internal.Excluder$1 */
+    /* JADX INFO: renamed from: com.google.gson.internal.Excluder$1 */
     public class C111001<T> extends TypeAdapter<T> {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public TypeAdapter<T> f21489a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final /* synthetic */ boolean f21490b;
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public final /* synthetic */ boolean f21491c;
 
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         public final /* synthetic */ Gson f21492d;
 
-        /* renamed from: e */
+        /* JADX INFO: renamed from: e */
         public final /* synthetic */ TypeToken f21493e;
 
         public C111001(boolean z2, boolean z3, Gson gson, TypeToken typeToken) {
@@ -91,7 +91,7 @@ public final class Excluder implements TypeAdapterFactory2, Cloneable {
         }
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final boolean m9217b(Class<?> cls) {
         if (this.f21484k == -1.0d || m9221i((Since2) cls.getAnnotation(Since2.class), (Until) cls.getAnnotation(Until.class))) {
             return (!this.f21486m && m9220h(cls)) || m9219g(cls);
@@ -119,7 +119,7 @@ public final class Excluder implements TypeAdapterFactory2, Cloneable {
         return null;
     }
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final boolean m9218f(Class<?> cls, boolean z2) {
         Iterator<ExclusionStrategy> it = (z2 ? this.f21487n : this.f21488o).iterator();
         while (it.hasNext()) {
@@ -130,12 +130,12 @@ public final class Excluder implements TypeAdapterFactory2, Cloneable {
         return false;
     }
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public final boolean m9219g(Class<?> cls) {
         return !Enum.class.isAssignableFrom(cls) && (cls.isAnonymousClass() || cls.isLocalClass());
     }
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public final boolean m9220h(Class<?> cls) {
         if (cls.isMemberClass()) {
             if (!((cls.getModifiers() & 8) != 0)) {
@@ -145,7 +145,7 @@ public final class Excluder implements TypeAdapterFactory2, Cloneable {
         return false;
     }
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public final boolean m9221i(Since2 since2, Until until) {
         if (since2 == null || since2.value() <= this.f21484k) {
             return until == null || (until.value() > this.f21484k ? 1 : (until.value() == this.f21484k ? 0 : -1)) > 0;
@@ -153,7 +153,7 @@ public final class Excluder implements TypeAdapterFactory2, Cloneable {
         return false;
     }
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public Excluder m9222j(int... iArr) {
         try {
             Excluder excluder = (Excluder) super.clone();

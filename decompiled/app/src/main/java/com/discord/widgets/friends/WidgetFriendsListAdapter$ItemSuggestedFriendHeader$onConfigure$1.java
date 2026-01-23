@@ -7,8 +7,8 @@ import kotlin.jvm.functions.Function1;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetFriendsListAdapter.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetFriendsListAdapter.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetFriendsListAdapter$ItemSuggestedFriendHeader$onConfigure$1 extends Lambda implements Function1<RenderContext, Unit> {
     public final /* synthetic */ FriendsListViewModel.Item $data;
 
@@ -18,7 +18,7 @@ public final class WidgetFriendsListAdapter$ItemSuggestedFriendHeader$onConfigur
         this.$data = item;
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final void invoke2(RenderContext renderContext) {
         Intrinsics3.checkNotNullParameter(renderContext, "$receiver");
         renderContext.args.put("count", String.valueOf(((FriendsListViewModel.Item.SuggestedFriendsHeader) this.$data).getCount()));

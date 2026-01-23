@@ -27,9 +27,9 @@ import p637j0.p642l.p647e.ScalarSynchronousObservable;
 import p658rx.Observable;
 import p658rx.functions.Func4;
 
-/* compiled from: WidgetThreadBrowserArchivedViewModel.kt */
-/* renamed from: com.discord.widgets.channels.threads.browser.WidgetThreadBrowserArchivedViewModel$Companion$observeStoreState$2, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.channels.threads.browser.WidgetThreadBrowserArchivedViewModel$Companion$observeStoreState$2, reason: use source file name */
+/* JADX INFO: compiled from: WidgetThreadBrowserArchivedViewModel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetThreadBrowserArchivedViewModel3<T, R> implements Func1<Tuples2<? extends ArchivedThreadsStore.ThreadListingState, ? extends Channel>, Observable<? extends WidgetThreadBrowserArchivedViewModel.StoreState>> {
     public final /* synthetic */ long $guildId;
     public final /* synthetic */ StoreGuilds $storeGuilds;
@@ -37,8 +37,8 @@ public final class WidgetThreadBrowserArchivedViewModel3<T, R> implements Func1<
     public final /* synthetic */ StoreUser $storeUser;
     public final /* synthetic */ WidgetThreadBrowserArchivedViewModel.ViewMode $viewMode;
 
-    /* compiled from: WidgetThreadBrowserArchivedViewModel.kt */
-    /* renamed from: com.discord.widgets.channels.threads.browser.WidgetThreadBrowserArchivedViewModel$Companion$observeStoreState$2$1, reason: invalid class name */
+    /* JADX INFO: renamed from: com.discord.widgets.channels.threads.browser.WidgetThreadBrowserArchivedViewModel$Companion$observeStoreState$2$1, reason: invalid class name */
+    /* JADX INFO: compiled from: WidgetThreadBrowserArchivedViewModel.kt */
     public static final class AnonymousClass1<T, R> implements Func1<Map<Long, ? extends Map<Long, ? extends GuildMember>>, Map<Long, ? extends GuildMember>> {
         public AnonymousClass1() {
         }
@@ -48,15 +48,15 @@ public final class WidgetThreadBrowserArchivedViewModel3<T, R> implements Func1<
             return call2((Map<Long, ? extends Map<Long, GuildMember>>) map);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final Map<Long, GuildMember> call2(Map<Long, ? extends Map<Long, GuildMember>> map) {
             Map<Long, GuildMember> map2 = map.get(Long.valueOf(WidgetThreadBrowserArchivedViewModel3.this.$guildId));
             return map2 != null ? map2 : Maps6.emptyMap();
         }
     }
 
-    /* compiled from: WidgetThreadBrowserArchivedViewModel.kt */
-    /* renamed from: com.discord.widgets.channels.threads.browser.WidgetThreadBrowserArchivedViewModel$Companion$observeStoreState$2$2, reason: invalid class name */
+    /* JADX INFO: renamed from: com.discord.widgets.channels.threads.browser.WidgetThreadBrowserArchivedViewModel$Companion$observeStoreState$2$2, reason: invalid class name */
+    /* JADX INFO: compiled from: WidgetThreadBrowserArchivedViewModel.kt */
     public static final class AnonymousClass2<T1, T2, T3, T4, R> implements Func4<Map<Long, ? extends GuildMember>, Guild, Map<Long, ? extends User>, Long, WidgetThreadBrowserArchivedViewModel.StoreState> {
         public final /* synthetic */ Channel $channel;
         public final /* synthetic */ ArchivedThreadsStore.ThreadListingState $listingState;
@@ -71,7 +71,7 @@ public final class WidgetThreadBrowserArchivedViewModel3<T, R> implements Func1<
             return call2((Map<Long, GuildMember>) map, guild, map2, l);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final WidgetThreadBrowserArchivedViewModel.StoreState call2(Map<Long, GuildMember> map, Guild guild, Map<Long, ? extends User> map2, Long l) {
             boolean zCanViewAllPrivateThreads = ThreadUtils.INSTANCE.canViewAllPrivateThreads(l);
             WidgetThreadBrowserArchivedViewModel.ViewMode viewMode = WidgetThreadBrowserArchivedViewModel3.this.$viewMode;
@@ -96,7 +96,7 @@ public final class WidgetThreadBrowserArchivedViewModel3<T, R> implements Func1<
         return call2((Tuples2<? extends ArchivedThreadsStore.ThreadListingState, Channel>) tuples2);
     }
 
-    /* renamed from: call, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
     public final Observable<? extends WidgetThreadBrowserArchivedViewModel.StoreState> call2(Tuples2<? extends ArchivedThreadsStore.ThreadListingState, Channel> tuples2) {
         Observable<Map<Long, User>> scalarSynchronousObservable;
         ArchivedThreadsStore.ThreadListingState threadListingStateComponent1 = tuples2.component1();

@@ -2,11 +2,11 @@ package androidx.legacy.coreui;
 
 import com.discord.C5419R;
 
-/* renamed from: androidx.legacy.coreui.R */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: androidx.legacy.coreui.R */
+/* JADX INFO: loaded from: classes.dex */
 public final class C0421R {
 
-    /* renamed from: androidx.legacy.coreui.R$attr */
+    /* JADX INFO: renamed from: androidx.legacy.coreui.R$attr */
     public static final class attr {
         public static final int alpha = 2130968635;
         public static final int coordinatorLayoutStyle = 2130969117;
@@ -34,7 +34,7 @@ public final class C0421R {
         }
     }
 
-    /* renamed from: androidx.legacy.coreui.R$color */
+    /* JADX INFO: renamed from: androidx.legacy.coreui.R$color */
     public static final class color {
         public static final int notification_action_color_filter = 2131100115;
         public static final int notification_icon_bg_color = 2131100116;
@@ -45,7 +45,7 @@ public final class C0421R {
         }
     }
 
-    /* renamed from: androidx.legacy.coreui.R$dimen */
+    /* JADX INFO: renamed from: androidx.legacy.coreui.R$dimen */
     public static final class dimen {
         public static final int compat_button_inset_horizontal_material = 2131165325;
         public static final int compat_button_inset_vertical_material = 2131165326;
@@ -74,7 +74,7 @@ public final class C0421R {
         }
     }
 
-    /* renamed from: androidx.legacy.coreui.R$drawable */
+    /* JADX INFO: renamed from: androidx.legacy.coreui.R$drawable */
     public static final class drawable {
         public static final int notification_action_background = 2131232491;
         public static final int notification_bg = 2131232492;
@@ -93,7 +93,7 @@ public final class C0421R {
         }
     }
 
-    /* renamed from: androidx.legacy.coreui.R$id */
+    /* JADX INFO: renamed from: androidx.legacy.coreui.R$id */
     public static final class id {
         public static final int action_container = 2131361885;
         public static final int action_divider = 2131361888;
@@ -135,7 +135,7 @@ public final class C0421R {
         }
     }
 
-    /* renamed from: androidx.legacy.coreui.R$integer */
+    /* JADX INFO: renamed from: androidx.legacy.coreui.R$integer */
     public static final class integer {
         public static final int status_bar_notification_info_maxnum = 2131427355;
 
@@ -143,7 +143,7 @@ public final class C0421R {
         }
     }
 
-    /* renamed from: androidx.legacy.coreui.R$layout */
+    /* JADX INFO: renamed from: androidx.legacy.coreui.R$layout */
     public static final class layout {
         public static final int notification_action = 2131558626;
         public static final int notification_action_tombstone = 2131558627;
@@ -156,7 +156,7 @@ public final class C0421R {
         }
     }
 
-    /* renamed from: androidx.legacy.coreui.R$string */
+    /* JADX INFO: renamed from: androidx.legacy.coreui.R$string */
     public static final class string {
         public static final int status_bar_notification_info_overflow = 2131895909;
 
@@ -164,7 +164,7 @@ public final class C0421R {
         }
     }
 
-    /* renamed from: androidx.legacy.coreui.R$style */
+    /* JADX INFO: renamed from: androidx.legacy.coreui.R$style */
     public static final class style {
         public static final int TextAppearance_Compat_Notification = 2131952217;
         public static final int TextAppearance_Compat_Notification_Info = 2131952218;
@@ -179,7 +179,7 @@ public final class C0421R {
         }
     }
 
-    /* renamed from: androidx.legacy.coreui.R$styleable */
+    /* JADX INFO: renamed from: androidx.legacy.coreui.R$styleable */
     public static final class styleable {
         public static final int ColorStateListItem_alpha = 2;
         public static final int ColorStateListItem_android_alpha = 1;

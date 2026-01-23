@@ -13,7 +13,7 @@ import java.lang.annotation.RetentionPolicy;
 import p007b.p225i.p226a.p341g.p348g.LinearIndeterminateContiguousAnimatorDelegate2;
 import p007b.p225i.p226a.p341g.p348g.LinearIndeterminateDisjointAnimatorDelegate2;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public final class LinearProgressIndicator extends BaseProgressIndicator<LinearProgressIndicatorSpec> {
     public static final int DEF_STYLE_RES = C10817R.style.Widget_MaterialComponents_LinearProgressIndicator;
     public static final int INDETERMINATE_ANIMATION_TYPE_CONTIGUOUS = 0;

@@ -6,8 +6,8 @@ import java.util.List;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: Presence.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: Presence.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class Presence {
     private final List<Activity> activities;
     private final ClientStatuses clientStatus;
@@ -26,7 +26,7 @@ public final /* data */ class Presence {
         this.guildId = l2;
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static Presence m8152a(Presence presence, ClientStatus clientStatus, List list, ClientStatuses clientStatuses, User user, Long l, Long l2, int i) {
         ClientStatus clientStatus2 = (i & 1) != 0 ? presence.status : null;
         List<Activity> list2 = (i & 2) != 0 ? presence.activities : null;
@@ -41,22 +41,22 @@ public final /* data */ class Presence {
         return new Presence(clientStatus2, list2, clientStatuses2, user2, l3, l4);
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final List<Activity> m8153b() {
         return this.activities;
     }
 
-    /* renamed from: c, reason: from getter */
+    /* JADX INFO: renamed from: c, reason: from getter */
     public final ClientStatuses getClientStatus() {
         return this.clientStatus;
     }
 
-    /* renamed from: d, reason: from getter */
+    /* JADX INFO: renamed from: d, reason: from getter */
     public final Long getGuildId() {
         return this.guildId;
     }
 
-    /* renamed from: e, reason: from getter */
+    /* JADX INFO: renamed from: e, reason: from getter */
     public final ClientStatus getStatus() {
         return this.status;
     }
@@ -72,12 +72,12 @@ public final /* data */ class Presence {
         return Intrinsics3.areEqual(this.status, presence.status) && Intrinsics3.areEqual(this.activities, presence.activities) && Intrinsics3.areEqual(this.clientStatus, presence.clientStatus) && Intrinsics3.areEqual(this.user, presence.user) && Intrinsics3.areEqual(this.userId, presence.userId) && Intrinsics3.areEqual(this.guildId, presence.guildId);
     }
 
-    /* renamed from: f, reason: from getter */
+    /* JADX INFO: renamed from: f, reason: from getter */
     public final User getUser() {
         return this.user;
     }
 
-    /* renamed from: g, reason: from getter */
+    /* JADX INFO: renamed from: g, reason: from getter */
     public final Long getUserId() {
         return this.userId;
     }

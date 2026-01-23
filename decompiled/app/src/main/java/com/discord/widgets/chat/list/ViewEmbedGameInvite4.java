@@ -9,15 +9,15 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p637j0.p641k.Func1;
 import p658rx.Observable;
 
-/* compiled from: ViewEmbedGameInvite.kt */
-/* renamed from: com.discord.widgets.chat.list.ViewEmbedGameInvite$Model$Companion$getForShare$activityObs$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.chat.list.ViewEmbedGameInvite$Model$Companion$getForShare$activityObs$1, reason: use source file name */
+/* JADX INFO: compiled from: ViewEmbedGameInvite.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class ViewEmbedGameInvite4<T, R> implements Func1<Long, Observable<? extends Activity>> {
     public final /* synthetic */ Long $applicationId;
     public final /* synthetic */ String $partyId;
 
-    /* compiled from: ViewEmbedGameInvite.kt */
-    /* renamed from: com.discord.widgets.chat.list.ViewEmbedGameInvite$Model$Companion$getForShare$activityObs$1$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.list.ViewEmbedGameInvite$Model$Companion$getForShare$activityObs$1$1 */
+    /* JADX INFO: compiled from: ViewEmbedGameInvite.kt */
     public static final class C79511<T, R> implements Func1<Activity, Boolean> {
         public C79511() {
         }
@@ -28,7 +28,7 @@ public final class ViewEmbedGameInvite4<T, R> implements Func1<Long, Observable<
         }
 
         /* JADX WARN: Removed duplicated region for block: B:10:0x001a  */
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         /*
             Code decompiled incorrectly, please refer to instructions dump.
         */
@@ -56,7 +56,7 @@ public final class ViewEmbedGameInvite4<T, R> implements Func1<Long, Observable<
         return call2(l);
     }
 
-    /* renamed from: call, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
     public final Observable<? extends Activity> call2(Long l) {
         StoreUserPresence presences = StoreStream.INSTANCE.getPresences();
         Intrinsics3.checkNotNullExpressionValue(l, "authorId");

@@ -32,8 +32,8 @@ import p658rx.functions.Func2;
 import p658rx.subjects.BehaviorSubject;
 import p658rx.subjects.SerializedSubject;
 
-/* compiled from: StoreCalls.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: StoreCalls.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class StoreCalls {
     private final HashMap<Long, ModelCall> calls;
     private final SerializedSubject<HashMap<Long, ModelCall>, HashMap<Long, ModelCall>> callsSubject;
@@ -42,8 +42,8 @@ public final class StoreCalls {
     private long selectedGuildId;
     private final StoreStream stream;
 
-    /* compiled from: StoreCalls.kt */
-    /* renamed from: com.discord.stores.StoreCalls$call$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreCalls$call$1 */
+    /* JADX INFO: compiled from: StoreCalls.kt */
     public static final class C57961 extends Lambda implements Function1<Boolean, Unit> {
         public final /* synthetic */ long $channelId;
 
@@ -67,8 +67,8 @@ public final class StoreCalls {
         }
     }
 
-    /* compiled from: StoreCalls.kt */
-    /* renamed from: com.discord.stores.StoreCalls$call$2 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreCalls$call$2 */
+    /* JADX INFO: compiled from: StoreCalls.kt */
     public static final class C57972 extends Lambda implements Function1<Long, Unit> {
         public final /* synthetic */ AppComponent $appComponent;
         public final /* synthetic */ long $channelId;
@@ -77,12 +77,12 @@ public final class StoreCalls {
         public final /* synthetic */ FragmentManager $fragmentManager;
         public final /* synthetic */ Function0 $onError;
 
-        /* compiled from: StoreCalls.kt */
-        /* renamed from: com.discord.stores.StoreCalls$call$2$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.stores.StoreCalls$call$2$1, reason: invalid class name */
+        /* JADX INFO: compiled from: StoreCalls.kt */
         public static final class AnonymousClass1<T, R> implements Func1<Integer, Observable<? extends Boolean>> {
 
-            /* compiled from: StoreCalls.kt */
-            /* renamed from: com.discord.stores.StoreCalls$call$2$1$1, reason: invalid class name and collision with other inner class name */
+            /* JADX INFO: renamed from: com.discord.stores.StoreCalls$call$2$1$1, reason: invalid class name and collision with other inner class name */
+            /* JADX INFO: compiled from: StoreCalls.kt */
             public static final class C132501<T, R> implements Func1<ModelCall.Ringable, Boolean> {
                 public static final C132501 INSTANCE = new C132501();
 
@@ -91,7 +91,7 @@ public final class StoreCalls {
                     return call2(ringable);
                 }
 
-                /* renamed from: call, reason: avoid collision after fix types in other method */
+                /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
                 public final Boolean call2(ModelCall.Ringable ringable) {
                     Intrinsics3.checkNotNullExpressionValue(ringable, "it");
                     return Boolean.valueOf(ringable.isRingable());
@@ -106,14 +106,14 @@ public final class StoreCalls {
                 return call2(num);
             }
 
-            /* renamed from: call, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
             public final Observable<? extends Boolean> call2(Integer num) {
                 return (num != null && num.intValue() == 1) ? new ScalarSynchronousObservable(Boolean.TRUE) : ObservableExtensionsKt.restSubscribeOn$default(RestAPI.INSTANCE.getApi().call(C57972.this.$channelId), false, 1, null).m11083G(C132501.INSTANCE);
             }
         }
 
-        /* compiled from: StoreCalls.kt */
-        /* renamed from: com.discord.stores.StoreCalls$call$2$2, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.stores.StoreCalls$call$2$2, reason: invalid class name */
+        /* JADX INFO: compiled from: StoreCalls.kt */
         public static final class AnonymousClass2 extends Lambda implements Function1<Boolean, Unit> {
             public AnonymousClass2() {
                 super(1);
@@ -125,7 +125,7 @@ public final class StoreCalls {
                 return Unit.f27425a;
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2(Boolean bool) {
                 C57961 c57961 = C57972.this.$doCall$1;
                 Intrinsics3.checkNotNullExpressionValue(bool, "isRingable");
@@ -133,8 +133,8 @@ public final class StoreCalls {
             }
         }
 
-        /* compiled from: StoreCalls.kt */
-        /* renamed from: com.discord.stores.StoreCalls$call$2$3, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.stores.StoreCalls$call$2$3, reason: invalid class name */
+        /* JADX INFO: compiled from: StoreCalls.kt */
         public static final class AnonymousClass3 extends Lambda implements Function1<Error, Unit> {
             public final /* synthetic */ long $userId;
 
@@ -150,7 +150,7 @@ public final class StoreCalls {
                 return Unit.f27425a;
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2(Error error) {
                 Intrinsics3.checkNotNullParameter(error, "error");
                 Function0 function0 = C57972.this.$onError;
@@ -191,8 +191,8 @@ public final class StoreCalls {
         }
     }
 
-    /* compiled from: StoreCalls.kt */
-    /* renamed from: com.discord.stores.StoreCalls$call$3 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreCalls$call$3 */
+    /* JADX INFO: compiled from: StoreCalls.kt */
     public static final class C57983 extends Lambda implements Function1<Channel, Boolean> {
         public static final C57983 INSTANCE = new C57983();
 
@@ -205,14 +205,14 @@ public final class StoreCalls {
             return Boolean.valueOf(invoke2(channel));
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final boolean invoke2(Channel channel) {
             return channel != null;
         }
     }
 
-    /* compiled from: StoreCalls.kt */
-    /* renamed from: com.discord.stores.StoreCalls$call$4 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreCalls$call$4 */
+    /* JADX INFO: compiled from: StoreCalls.kt */
     public static final class C57994<T1, T2, R> implements Func2<Channel, Map<Long, ? extends VoiceState>, Tuples2<? extends Channel, ? extends Map<Long, ? extends VoiceState>>> {
         public static final C57994 INSTANCE = new C57994();
 
@@ -221,14 +221,14 @@ public final class StoreCalls {
             return call2(channel, (Map<Long, VoiceState>) map);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final Tuples2<Channel, Map<Long, VoiceState>> call2(Channel channel, Map<Long, VoiceState> map) {
             return new Tuples2<>(channel, map);
         }
     }
 
-    /* compiled from: StoreCalls.kt */
-    /* renamed from: com.discord.stores.StoreCalls$call$5 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreCalls$call$5 */
+    /* JADX INFO: compiled from: StoreCalls.kt */
     public static final class C58005 extends Lambda implements Function1<Tuples2<? extends Channel, ? extends Map<Long, ? extends VoiceState>>, Unit> {
         public final /* synthetic */ C57961 $doCall$1;
         public final /* synthetic */ C57972 $doCallIfCallable$2;
@@ -246,7 +246,7 @@ public final class StoreCalls {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Tuples2<Channel, ? extends Map<Long, VoiceState>> tuples2) {
             Channel channelComponent1 = tuples2.component1();
             Map<Long, VoiceState> mapComponent2 = tuples2.component2();
@@ -259,8 +259,8 @@ public final class StoreCalls {
         }
     }
 
-    /* compiled from: StoreCalls.kt */
-    /* renamed from: com.discord.stores.StoreCalls$findCall$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreCalls$findCall$1 */
+    /* JADX INFO: compiled from: StoreCalls.kt */
     public static final class C58011 extends Lambda implements Function1<ModelCall, Boolean> {
         public static final C58011 INSTANCE = new C58011();
 
@@ -273,14 +273,14 @@ public final class StoreCalls {
             return Boolean.valueOf(invoke2(modelCall));
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final boolean invoke2(ModelCall modelCall) {
             return modelCall != null;
         }
     }
 
-    /* compiled from: StoreCalls.kt */
-    /* renamed from: com.discord.stores.StoreCalls$get$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreCalls$get$1 */
+    /* JADX INFO: compiled from: StoreCalls.kt */
     public static final class C58021<T, R> implements Func1<HashMap<Long, ModelCall>, ModelCall> {
         public final /* synthetic */ long $channelId;
 
@@ -293,19 +293,19 @@ public final class StoreCalls {
             return call2(map);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final ModelCall call2(HashMap<Long, ModelCall> map) {
             return map.get(Long.valueOf(this.$channelId));
         }
     }
 
-    /* compiled from: StoreCalls.kt */
-    /* renamed from: com.discord.stores.StoreCalls$ring$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreCalls$ring$1 */
+    /* JADX INFO: compiled from: StoreCalls.kt */
     public static final class C58031 extends Lambda implements Function1<ModelCall, Unit> {
         public final /* synthetic */ List $recipients;
 
-        /* compiled from: StoreCalls.kt */
-        /* renamed from: com.discord.stores.StoreCalls$ring$1$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.stores.StoreCalls$ring$1$1, reason: invalid class name */
+        /* JADX INFO: compiled from: StoreCalls.kt */
         public static final class AnonymousClass1 extends Lambda implements Function1<Void, Unit> {
             public static final AnonymousClass1 INSTANCE = new AnonymousClass1();
 
@@ -319,7 +319,7 @@ public final class StoreCalls {
                 return Unit.f27425a;
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2(Void r1) {
             }
         }
@@ -336,7 +336,7 @@ public final class StoreCalls {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(ModelCall modelCall) {
             if (modelCall != null) {
                 ObservableExtensionsKt.appSubscribe$default(RestAPI.INSTANCE.getApi().ring(modelCall.getChannelId(), modelCall.getMessageId(), this.$recipients), StoreCalls.this.getClass(), (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, AnonymousClass1.INSTANCE, 62, (Object) null);
@@ -344,14 +344,14 @@ public final class StoreCalls {
         }
     }
 
-    /* compiled from: StoreCalls.kt */
-    /* renamed from: com.discord.stores.StoreCalls$stopRinging$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreCalls$stopRinging$1 */
+    /* JADX INFO: compiled from: StoreCalls.kt */
     public static final class C58041 extends Lambda implements Function1<ModelCall, Unit> {
         public final /* synthetic */ long $channelId;
         public final /* synthetic */ List $recipients;
 
-        /* compiled from: StoreCalls.kt */
-        /* renamed from: com.discord.stores.StoreCalls$stopRinging$1$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.stores.StoreCalls$stopRinging$1$1, reason: invalid class name */
+        /* JADX INFO: compiled from: StoreCalls.kt */
         public static final class AnonymousClass1 extends Lambda implements Function1<Void, Unit> {
             public static final AnonymousClass1 INSTANCE = new AnonymousClass1();
 
@@ -365,7 +365,7 @@ public final class StoreCalls {
                 return Unit.f27425a;
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2(Void r1) {
             }
         }
@@ -383,7 +383,7 @@ public final class StoreCalls {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(ModelCall modelCall) {
             if (modelCall == null) {
                 StoreCalls.access$getStream$p(StoreCalls.this).getCallsIncoming().removeIncomingCall(this.$channelId);
@@ -404,6 +404,7 @@ public final class StoreCalls {
         return storeCalls.stream;
     }
 
+    /* JADX WARN: Multi-variable type inference failed */
     public static /* synthetic */ void call$default(StoreCalls storeCalls, AppComponent appComponent, Context context, FragmentManager fragmentManager, long j, Function0 function0, int i, Object obj) {
         if ((i & 16) != 0) {
             function0 = null;

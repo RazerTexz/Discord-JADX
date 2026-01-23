@@ -7,22 +7,22 @@ import android.os.SystemClock;
 import androidx.annotation.VisibleForTesting;
 import java.util.Objects;
 
-/* compiled from: AutoRotateDrawable.java */
-/* renamed from: b.f.g.e.c, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.f.g.e.c, reason: use source file name */
+/* JADX INFO: compiled from: AutoRotateDrawable.java */
+/* JADX INFO: loaded from: classes.dex */
 public class AutoRotateDrawable extends ForwardingDrawable implements Runnable {
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public int f3335n;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public boolean f3336o;
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     @VisibleForTesting
     public float f3337p;
 
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     public boolean f3338q;
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */

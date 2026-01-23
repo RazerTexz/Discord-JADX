@@ -7,17 +7,17 @@ import kotlin.jvm.internal.DefaultConstructorMarker;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ChannelSettings.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: ChannelSettings.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final /* data */ class ChannelSettings {
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private final Channel channel;
     private final boolean isMuted;
     private final String muteEndTime;
 
-    /* compiled from: ChannelSettings.kt */
+    /* JADX INFO: compiled from: ChannelSettings.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -68,17 +68,17 @@ public final /* data */ class ChannelSettings {
         return channelSettings.copy(channel, z2, str);
     }
 
-    /* renamed from: component1, reason: from getter */
+    /* JADX INFO: renamed from: component1, reason: from getter */
     public final Channel getChannel() {
         return this.channel;
     }
 
-    /* renamed from: component2, reason: from getter */
+    /* JADX INFO: renamed from: component2, reason: from getter */
     public final boolean getIsMuted() {
         return this.isMuted;
     }
 
-    /* renamed from: component3, reason: from getter */
+    /* JADX INFO: renamed from: component3, reason: from getter */
     public final String getMuteEndTime() {
         return this.muteEndTime;
     }
@@ -108,17 +108,20 @@ public final /* data */ class ChannelSettings {
     }
 
     /* JADX WARN: Multi-variable type inference failed */
+    /* JADX WARN: Type inference failed for: r2v1, types: [int] */
+    /* JADX WARN: Type inference failed for: r2v3 */
+    /* JADX WARN: Type inference failed for: r2v4 */
     public int hashCode() {
         Channel channel = this.channel;
         int iHashCode = (channel != null ? channel.hashCode() : 0) * 31;
         boolean z2 = this.isMuted;
-        int i = z2;
-        if (z2 != 0) {
-            i = 1;
+        ?? r2 = z2;
+        if (z2) {
+            r2 = 1;
         }
-        int i2 = (iHashCode + i) * 31;
+        int i = (iHashCode + r2) * 31;
         String str = this.muteEndTime;
-        return i2 + (str != null ? str.hashCode() : 0);
+        return i + (str != null ? str.hashCode() : 0);
     }
 
     public final boolean isMuted() {

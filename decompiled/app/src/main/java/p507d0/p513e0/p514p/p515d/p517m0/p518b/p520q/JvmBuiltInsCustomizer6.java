@@ -10,12 +10,12 @@ import p507d0.p513e0.p514p.p515d.p517m0.p567n.KotlinType;
 import p507d0.p513e0.p514p.p515d.p517m0.p576p.DFS;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: JvmBuiltInsCustomizer.kt */
-/* renamed from: d0.e0.p.d.m0.b.q.k, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.b.q.k, reason: use source file name */
+/* JADX INFO: compiled from: JvmBuiltInsCustomizer.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class JvmBuiltInsCustomizer6 implements DFS.c<ClassDescriptor> {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final /* synthetic */ JvmBuiltInsCustomizer2 f22662a;
 
     public JvmBuiltInsCustomizer6(JvmBuiltInsCustomizer2 jvmBuiltInsCustomizer2) {
@@ -27,7 +27,7 @@ public final class JvmBuiltInsCustomizer6 implements DFS.c<ClassDescriptor> {
         return getNeighbors2(classDescriptor);
     }
 
-    /* renamed from: getNeighbors, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: getNeighbors, reason: avoid collision after fix types in other method */
     public final Iterable<ClassDescriptor> getNeighbors2(ClassDescriptor classDescriptor) {
         Collection<KotlinType> supertypes = classDescriptor.getTypeConstructor().getSupertypes();
         Intrinsics3.checkNotNullExpressionValue(supertypes, "it.typeConstructor.supertypes");

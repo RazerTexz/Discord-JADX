@@ -1,14 +1,14 @@
 package p007b.p100d.p101a.p102a;
 
-/* compiled from: com.android.billingclient:billing@@4.0.0 */
-/* renamed from: b.d.a.a.x */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.d.a.a.x */
+/* JADX INFO: compiled from: com.android.billingclient:billing@@4.0.0 */
+/* JADX INFO: loaded from: classes.dex */
 public final /* synthetic */ class RunnableC1639x implements Runnable {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final /* synthetic */ InterfaceC1620e f3003j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final /* synthetic */ C1619d f3004k;
 
     public /* synthetic */ RunnableC1639x(InterfaceC1620e interfaceC1620e, C1619d c1619d) {

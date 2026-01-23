@@ -34,7 +34,7 @@ import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserException;
 import p007b.p100d.p104b.p105a.outline;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class ConstraintSet {
     private static final int ALPHA = 43;
     private static final int ANIMATE_RELATIVE_TO = 64;
@@ -355,7 +355,7 @@ public class ConstraintSet {
             layoutParams.validate();
         }
 
-        /* renamed from: clone, reason: collision with other method in class */
+        /* JADX INFO: renamed from: clone, reason: collision with other method in class */
         public /* bridge */ /* synthetic */ Object m11379clone() throws CloneNotSupportedException {
             return clone();
         }
@@ -636,7 +636,7 @@ public class ConstraintSet {
             this.mBarrierAllowsGoneWidgets = layout.mBarrierAllowsGoneWidgets;
         }
 
-        public void dump(MotionScene motionScene, StringBuilder sb) throws IllegalArgumentException {
+        public void dump(MotionScene motionScene, StringBuilder sb) {
             Field[] declaredFields = getClass().getDeclaredFields();
             sb.append("\n");
             for (Field field : declaredFields) {
@@ -2132,7 +2132,7 @@ public class ConstraintSet {
         connect(iArr[iArr.length - 1], 4, i3, i4, 0);
     }
 
-    public void dump(MotionScene motionScene, int... iArr) throws IllegalArgumentException {
+    public void dump(MotionScene motionScene, int... iArr) {
         HashSet hashSet;
         Set<Integer> setKeySet = this.mConstraints.keySet();
         if (iArr.length != 0) {
@@ -2762,6 +2762,7 @@ public class ConstraintSet {
     
         continue;
      */
+    /* JADX WARN: Failed to restore switch over string. Please report as a decompilation issue */
     /* JADX WARN: Removed duplicated region for block: B:44:0x0090  */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
@@ -2773,16 +2774,16 @@ public class ConstraintSet {
             Constraint constraint = null;
             while (eventType != 1) {
                 if (eventType != 0) {
-                    char c = 3;
+                    byte b2 = 3;
                     if (eventType == 2) {
                         String name = xmlPullParser.getName();
                         switch (name.hashCode()) {
                             case -2025855158:
-                                c = !name.equals("Layout") ? (char) 65535 : (char) 5;
+                                b2 = !name.equals("Layout") ? (byte) -1 : (byte) 5;
                                 break;
                             case -1984451626:
                                 if (name.equals("Motion")) {
-                                    c = 6;
+                                    b2 = 6;
                                     break;
                                 }
                                 break;
@@ -2793,38 +2794,38 @@ public class ConstraintSet {
                                 break;
                             case -1238332596:
                                 if (name.equals("Transform")) {
-                                    c = 4;
+                                    b2 = 4;
                                     break;
                                 }
                                 break;
                             case -71750448:
                                 if (name.equals("Guideline")) {
-                                    c = 1;
+                                    b2 = 1;
                                     break;
                                 }
                                 break;
                             case 1331510167:
                                 if (name.equals("Barrier")) {
-                                    c = 2;
+                                    b2 = 2;
                                     break;
                                 }
                                 break;
                             case 1791837707:
                                 if (name.equals("CustomAttribute")) {
-                                    c = 7;
+                                    b2 = 7;
                                     break;
                                 }
                                 break;
                             case 1803088381:
                                 if (name.equals("Constraint")) {
-                                    c = 0;
+                                    b2 = 0;
                                     break;
                                 }
                                 break;
                             default:
                                 break;
                         }
-                        switch (c) {
+                        switch (b2) {
                             case 0:
                                 constraintFillFromAttributeList = fillFromAttributeList(context, Xml.asAttributeSet(xmlPullParser));
                                 break;

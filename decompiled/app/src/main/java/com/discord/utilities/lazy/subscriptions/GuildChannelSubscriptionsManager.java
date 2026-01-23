@@ -12,8 +12,8 @@ import kotlin.ranges.Ranges2;
 import p507d0.p580t.Maps6;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: GuildChannelSubscriptionsManager.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: GuildChannelSubscriptionsManager.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class GuildChannelSubscriptionsManager {
     private final Function2<Long, Map<Long, ? extends List<Ranges2>>, Unit> changeHandler;
     private final HashMap<Long, LruCache<Long, List<Ranges2>>> subscriptions;

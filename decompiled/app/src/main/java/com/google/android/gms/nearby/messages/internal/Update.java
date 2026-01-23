@@ -20,32 +20,32 @@ import p007b.p100d.p104b.p105a.outline;
 import p007b.p225i.p226a.p288f.p313h.p326m.C3928e;
 import p007b.p225i.p226a.p288f.p333j.p334b.p335e.C4291k0;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public class Update extends AbstractSafeParcelable implements ReflectedParcelable {
     public static final Parcelable.Creator<Update> CREATOR = new C4291k0();
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final int f20764j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final int f20765k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final Message f20766l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     @Nullable
     public final zze f20767m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     @Nullable
     public final zza f20768n;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     @Nullable
     public final zzgs f20769o;
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     @Nullable
     public final byte[] f20770p;
 
@@ -200,25 +200,19 @@ public class Update extends AbstractSafeParcelable implements ReflectedParcelabl
                 e = e3;
                 String strValueOf62 = String.valueOf(Arrays.toString(bArr));
                 Log.w("BleRecord", strValueOf62.length() == 0 ? "Unable to parse scan record: ".concat(strValueOf62) : new String("Unable to parse scan record: "), e);
-                String strValueOf72 = String.valueOf(c3928e);
-                StringBuilder sbM831S2 = outline.m831S(strValueOf72.length() + str.length() + strValueOf4.length() + strValueOf3.length() + strValueOf2.length() + strValueOf.length() + 68, "Update{types=", strValueOf, ", message=", strValueOf2);
-                outline.m876s0(sbM831S2, ", distance=", strValueOf3, ", bleSignal=", strValueOf4);
-                outline.m876s0(sbM831S2, ", device=", str, ", bleRecord=", strValueOf72);
-                sbM831S2.append("}");
-                return sbM831S2.toString();
             }
             str = strValueOf5;
             bArr = bArr2;
         }
-        String strValueOf722 = String.valueOf(c3928e);
-        StringBuilder sbM831S22 = outline.m831S(strValueOf722.length() + str.length() + strValueOf4.length() + strValueOf3.length() + strValueOf2.length() + strValueOf.length() + 68, "Update{types=", strValueOf, ", message=", strValueOf2);
-        outline.m876s0(sbM831S22, ", distance=", strValueOf3, ", bleSignal=", strValueOf4);
-        outline.m876s0(sbM831S22, ", device=", str, ", bleRecord=", strValueOf722);
-        sbM831S22.append("}");
-        return sbM831S22.toString();
+        String strValueOf72 = String.valueOf(c3928e);
+        StringBuilder sbM831S2 = outline.m831S(strValueOf72.length() + str.length() + strValueOf4.length() + strValueOf3.length() + strValueOf2.length() + strValueOf.length() + 68, "Update{types=", strValueOf, ", message=", strValueOf2);
+        outline.m876s0(sbM831S2, ", distance=", strValueOf3, ", bleSignal=", strValueOf4);
+        outline.m876s0(sbM831S2, ", device=", str, ", bleRecord=", strValueOf72);
+        sbM831S2.append("}");
+        return sbM831S2.toString();
     }
 
-    /* renamed from: w0 */
+    /* JADX INFO: renamed from: w0 */
     public final boolean m9123w0(int i) {
         return (i & this.f20765k) != 0;
     }

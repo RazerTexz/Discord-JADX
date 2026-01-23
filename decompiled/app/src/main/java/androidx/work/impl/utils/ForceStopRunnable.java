@@ -26,8 +26,8 @@ import androidx.work.impl.model.WorkSpecDao;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
+/* JADX INFO: loaded from: classes.dex */
 @RestrictTo({RestrictTo.Scope.LIBRARY_GROUP})
-/* loaded from: classes.dex */
 public class ForceStopRunnable implements Runnable {
 
     @VisibleForTesting

@@ -20,7 +20,7 @@ import androidx.core.view.ViewPropertyAnimatorCompat;
 import androidx.core.widget.ListViewAutoScrollHelper;
 import java.lang.reflect.Field;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class DropDownListView extends ListView {
     public static final int INVALID_POSITION = -1;
     public static final int NO_POSITION = -1;
@@ -157,7 +157,7 @@ public class DropDownListView extends ListView {
         selector.draw(canvas);
     }
 
-    private void positionSelectorCompat(int i, View view) throws IllegalArgumentException {
+    private void positionSelectorCompat(int i, View view) {
         Rect rect = this.mSelectorRect;
         rect.set(view.getLeft(), view.getTop(), view.getRight(), view.getBottom());
         rect.left -= this.mSelectionLeftPadding;
@@ -177,7 +177,7 @@ public class DropDownListView extends ListView {
         }
     }
 
-    private void positionSelectorLikeFocusCompat(int i, View view) throws IllegalArgumentException {
+    private void positionSelectorLikeFocusCompat(int i, View view) {
         Drawable selector = getSelector();
         boolean z2 = (selector == null || i == -1) ? false : true;
         if (z2) {
@@ -193,7 +193,7 @@ public class DropDownListView extends ListView {
         }
     }
 
-    private void positionSelectorLikeTouchCompat(int i, View view, float f, float f2) throws IllegalArgumentException {
+    private void positionSelectorLikeTouchCompat(int i, View view, float f, float f2) {
         positionSelectorLikeFocusCompat(i, view);
         Drawable selector = getSelector();
         if (selector == null || i == -1) {
@@ -202,7 +202,7 @@ public class DropDownListView extends ListView {
         DrawableCompat.setHotspot(selector, f, f2);
     }
 
-    private void setPressedItem(View view, int i, float f, float f2) throws IllegalArgumentException {
+    private void setPressedItem(View view, int i, float f, float f2) {
         View childAt;
         this.mDrawsInPressedState = true;
         drawableHotspotChanged(f, f2);
@@ -368,7 +368,7 @@ public class DropDownListView extends ListView {
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
-    public boolean onForwardedEvent(MotionEvent motionEvent, int i) throws IllegalArgumentException {
+    public boolean onForwardedEvent(MotionEvent motionEvent, int i) {
         boolean z2;
         boolean z3;
         int actionMasked = motionEvent.getActionMasked();

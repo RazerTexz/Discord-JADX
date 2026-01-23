@@ -5,22 +5,22 @@ import p007b.p225i.p226a.p242c.p267x2.SeekMap;
 import p007b.p225i.p226a.p242c.p267x2.SeekPoint;
 import p007b.p225i.p226a.p242c.p267x2.TrackOutput2;
 
-/* compiled from: StartOffsetExtractorOutput.java */
-/* renamed from: b.i.a.c.x2.f0.d, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.x2.f0.d, reason: use source file name */
+/* JADX INFO: compiled from: StartOffsetExtractorOutput.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class StartOffsetExtractorOutput implements ExtractorOutput {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final long f8172j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final ExtractorOutput f8173k;
 
-    /* compiled from: StartOffsetExtractorOutput.java */
-    /* renamed from: b.i.a.c.x2.f0.d$a */
+    /* JADX INFO: renamed from: b.i.a.c.x2.f0.d$a */
+    /* JADX INFO: compiled from: StartOffsetExtractorOutput.java */
     public class a implements SeekMap {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final /* synthetic */ SeekMap f8174a;
 
         public a(SeekMap seekMap) {
@@ -28,13 +28,13 @@ public final class StartOffsetExtractorOutput implements ExtractorOutput {
         }
 
         @Override // p007b.p225i.p226a.p242c.p267x2.SeekMap
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public boolean mo3619c() {
             return this.f8174a.mo3619c();
         }
 
         @Override // p007b.p225i.p226a.p242c.p267x2.SeekMap
-        /* renamed from: h */
+        /* JADX INFO: renamed from: h */
         public SeekMap.a mo3620h(long j) {
             SeekMap.a aVarMo3620h = this.f8174a.mo3620h(j);
             SeekPoint seekPoint = aVarMo3620h.f8993a;
@@ -47,7 +47,7 @@ public final class StartOffsetExtractorOutput implements ExtractorOutput {
         }
 
         @Override // p007b.p225i.p226a.p242c.p267x2.SeekMap
-        /* renamed from: i */
+        /* JADX INFO: renamed from: i */
         public long mo3621i() {
             return this.f8174a.mo3621i();
         }
@@ -59,19 +59,19 @@ public final class StartOffsetExtractorOutput implements ExtractorOutput {
     }
 
     @Override // p007b.p225i.p226a.p242c.p267x2.ExtractorOutput
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public void mo2477a(SeekMap seekMap) {
         this.f8173k.mo2477a(new a(seekMap));
     }
 
     @Override // p007b.p225i.p226a.p242c.p267x2.ExtractorOutput
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public void mo2486j() {
         this.f8173k.mo2486j();
     }
 
     @Override // p007b.p225i.p226a.p242c.p267x2.ExtractorOutput
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public TrackOutput2 mo2492p(int i, int i2) {
         return this.f8173k.mo2492p(i, i2);
     }

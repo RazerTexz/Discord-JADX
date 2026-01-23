@@ -15,7 +15,7 @@ import android.graphics.drawable.Drawable;
 import androidx.annotation.Nullable;
 import androidx.cardview.C0159R;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class RoundRectDrawableWithShadow extends Drawable {
     private static final double COS_45 = Math.cos(Math.toRadians(45.0d));
     private static final float SHADOW_MULTIPLIER = 1.5f;
@@ -100,14 +100,14 @@ public class RoundRectDrawableWithShadow extends Drawable {
         if (!z2) {
             return f;
         }
-        return (float) (((1.0d - COS_45) * f2) + f);
+        return (float) (((1.0d - COS_45) * ((double) f2)) + ((double) f));
     }
 
     public static float calculateVerticalPadding(float f, float f2, boolean z2) {
         if (!z2) {
             return f * 1.5f;
         }
-        return (float) (((1.0d - COS_45) * f2) + (f * 1.5f));
+        return (float) (((1.0d - COS_45) * ((double) f2)) + ((double) (f * 1.5f)));
     }
 
     private void drawShadow(Canvas canvas) {

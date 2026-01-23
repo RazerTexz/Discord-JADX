@@ -6,8 +6,8 @@ import com.discord.models.domain.ModelAuditLogEntry;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: DirectoryEntryGuild.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: DirectoryEntryGuild.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class DirectoryEntryGuild {
     private final long authorId;
     private final UtcDateTime createdAt;
@@ -17,27 +17,27 @@ public final /* data */ class DirectoryEntryGuild {
     private final GuildPreview guild;
     private final int primaryCategoryId;
 
-    /* renamed from: a, reason: from getter */
+    /* JADX INFO: renamed from: a, reason: from getter */
     public final UtcDateTime getCreatedAt() {
         return this.createdAt;
     }
 
-    /* renamed from: b, reason: from getter */
+    /* JADX INFO: renamed from: b, reason: from getter */
     public final String getDescription() {
         return this.description;
     }
 
-    /* renamed from: c, reason: from getter */
+    /* JADX INFO: renamed from: c, reason: from getter */
     public final long getDirectoryChannelId() {
         return this.directoryChannelId;
     }
 
-    /* renamed from: d, reason: from getter */
+    /* JADX INFO: renamed from: d, reason: from getter */
     public final long getEntityId() {
         return this.entityId;
     }
 
-    /* renamed from: e, reason: from getter */
+    /* JADX INFO: renamed from: e, reason: from getter */
     public final GuildPreview getGuild() {
         return this.guild;
     }
@@ -53,7 +53,7 @@ public final /* data */ class DirectoryEntryGuild {
         return this.directoryChannelId == directoryEntryGuild.directoryChannelId && this.entityId == directoryEntryGuild.entityId && this.authorId == directoryEntryGuild.authorId && Intrinsics3.areEqual(this.description, directoryEntryGuild.description) && this.primaryCategoryId == directoryEntryGuild.primaryCategoryId && Intrinsics3.areEqual(this.guild, directoryEntryGuild.guild) && Intrinsics3.areEqual(this.createdAt, directoryEntryGuild.createdAt);
     }
 
-    /* renamed from: f, reason: from getter */
+    /* JADX INFO: renamed from: f, reason: from getter */
     public final int getPrimaryCategoryId() {
         return this.primaryCategoryId;
     }

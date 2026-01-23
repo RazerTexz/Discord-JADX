@@ -12,27 +12,27 @@ import androidx.annotation.Nullable;
 import com.google.android.material.shape.MaterialShapeDrawable;
 import com.google.android.material.shape.ShapeAppearanceModel;
 
-/* compiled from: CutoutDrawable.java */
-/* renamed from: b.i.a.g.j.g, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.g.j.g, reason: use source file name */
+/* JADX INFO: compiled from: CutoutDrawable.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class CutoutDrawable extends MaterialShapeDrawable {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     @NonNull
     public final Paint f11788j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     @NonNull
     public final RectF f11789k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public int f11790l;
 
     public CutoutDrawable() {
         this(null);
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public void m6149a(float f, float f2, float f3, float f4) {
         RectF rectF = this.f11789k;
         if (f == rectF.left && f2 == rectF.top && f3 == rectF.right && f4 == rectF.bottom) {

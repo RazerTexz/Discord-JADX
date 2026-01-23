@@ -3,12 +3,12 @@ package p007b.p225i.p226a.p242c.p266w2;
 import p007b.p225i.p226a.p242c.p259f3.Consumer3;
 import p007b.p225i.p226a.p242c.p266w2.DrmSessionEventListener;
 
-/* compiled from: lambda */
-/* renamed from: b.i.a.c.w2.c */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.w2.c */
+/* JADX INFO: compiled from: lambda */
+/* JADX INFO: loaded from: classes3.dex */
 public final /* synthetic */ class C2969c implements Consumer3 {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final /* synthetic */ int f7976a;
 
     public /* synthetic */ C2969c(int i) {

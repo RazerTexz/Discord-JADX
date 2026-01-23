@@ -30,20 +30,20 @@ import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetStickerPackDetailsDialog.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: WidgetStickerPackDetailsDialog.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class WidgetStickerPackDetailsDialog extends AppDialog {
     public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetStickerPackDetailsDialog.class, "binding", "getBinding()Lcom/discord/databinding/StickerPackDetailsDialogBinding;", 0)};
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private static final String EXTRA_Y_POSITION = "EXTRA_Y_POSITION";
 
-    /* renamed from: binding$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
     private Long stickerPackId;
 
-    /* compiled from: WidgetStickerPackDetailsDialog.kt */
+    /* JADX INFO: compiled from: WidgetStickerPackDetailsDialog.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -73,8 +73,8 @@ public final class WidgetStickerPackDetailsDialog extends AppDialog {
         }
     }
 
-    /* compiled from: WidgetStickerPackDetailsDialog.kt */
-    /* renamed from: com.discord.widgets.stickers.WidgetStickerPackDetailsDialog$onViewBound$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.stickers.WidgetStickerPackDetailsDialog$onViewBound$1 */
+    /* JADX INFO: compiled from: WidgetStickerPackDetailsDialog.kt */
     public static final class ViewOnClickListenerC101341 implements View.OnClickListener {
         public ViewOnClickListenerC101341() {
         }
@@ -85,8 +85,8 @@ public final class WidgetStickerPackDetailsDialog extends AppDialog {
         }
     }
 
-    /* compiled from: WidgetStickerPackDetailsDialog.kt */
-    /* renamed from: com.discord.widgets.stickers.WidgetStickerPackDetailsDialog$onViewBoundOrOnResume$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.stickers.WidgetStickerPackDetailsDialog$onViewBoundOrOnResume$1 */
+    /* JADX INFO: compiled from: WidgetStickerPackDetailsDialog.kt */
     public static final class C101351 extends Lambda implements Function1<StoreStickers.StickerPackState, Unit> {
         public C101351() {
             super(1);
@@ -98,7 +98,7 @@ public final class WidgetStickerPackDetailsDialog extends AppDialog {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(StoreStickers.StickerPackState stickerPackState) {
             Intrinsics3.checkNotNullParameter(stickerPackState, "it");
             WidgetStickerPackDetailsDialog.access$configureUI(WidgetStickerPackDetailsDialog.this, stickerPackState);

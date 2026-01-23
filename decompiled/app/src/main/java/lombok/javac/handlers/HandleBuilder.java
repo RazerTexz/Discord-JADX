@@ -33,8 +33,8 @@ import lombok.javac.handlers.HandleConstructor;
 import lombok.javac.handlers.JavacHandlerUtil;
 import lombok.javac.handlers.JavacSingularsRecipes;
 
+/* JADX INFO: loaded from: discord-126021.apk:lombok/javac/handlers/HandleBuilder.SCL.lombok */
 @HandlerPriority(-1024)
-/* loaded from: discord-126021.apk:lombok/javac/handlers/HandleBuilder.SCL.lombok */
 public class HandleBuilder extends JavacAnnotationHandler<Builder> {
     private HandleConstructor handleConstructor = new HandleConstructor();
     static final String CLEAN_FIELD_NAME = "$lombokUnclean";
@@ -46,10 +46,10 @@ public class HandleBuilder extends JavacAnnotationHandler<Builder> {
     static final String BUILDER_TEMP_VAR = "builder";
     static final String TO_BUILDER_NOT_SUPPORTED = "@Builder(toBuilder=true) is only supported if you return your own type.";
 
-    /* renamed from: $SWITCH_TABLE$lombok$javac$handlers$JavacHandlerUtil$MemberExistsResult */
+    /* JADX INFO: renamed from: $SWITCH_TABLE$lombok$javac$handlers$JavacHandlerUtil$MemberExistsResult */
     private static /* synthetic */ int[] f27481x2486df07;
 
-    /* renamed from: $SWITCH_TABLE$lombok$javac$handlers$JavacHandlerUtil$MemberExistsResult */
+    /* JADX INFO: renamed from: $SWITCH_TABLE$lombok$javac$handlers$JavacHandlerUtil$MemberExistsResult */
     static /* synthetic */ int[] m10941x2486df07() {
         int[] iArr = f27481x2486df07;
         if (iArr != null) {
@@ -86,7 +86,7 @@ public class HandleBuilder extends JavacAnnotationHandler<Builder> {
         return ((Boolean) expr).booleanValue();
     }
 
-    /* loaded from: discord-126021.apk:lombok/javac/handlers/HandleBuilder$BuilderJob.SCL.lombok */
+    /* JADX INFO: loaded from: discord-126021.apk:lombok/javac/handlers/HandleBuilder$BuilderJob.SCL.lombok */
     static class BuilderJob {
         CheckerFrameworkVersion checkerFramework;
         JavacNode parentType;
@@ -173,7 +173,7 @@ public class HandleBuilder extends JavacAnnotationHandler<Builder> {
         }
     }
 
-    /* loaded from: discord-126021.apk:lombok/javac/handlers/HandleBuilder$BuilderFieldData.SCL.lombok */
+    /* JADX INFO: loaded from: discord-126021.apk:lombok/javac/handlers/HandleBuilder$BuilderFieldData.SCL.lombok */
     static class BuilderFieldData {
         List<JCTree.JCAnnotation> annotations;
         JCTree.JCExpression type;

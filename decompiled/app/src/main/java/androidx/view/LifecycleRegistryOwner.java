@@ -2,8 +2,8 @@ package androidx.view;
 
 import androidx.annotation.NonNull;
 
+/* JADX INFO: loaded from: classes.dex */
 @Deprecated
-/* loaded from: classes.dex */
 public interface LifecycleRegistryOwner extends LifecycleOwner {
     @Override // androidx.view.LifecycleOwner
     @NonNull

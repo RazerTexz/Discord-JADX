@@ -5,21 +5,21 @@ import p007b.p109f.p161j.p175j.EncodedImage2;
 import p686z.Continuation3;
 import p686z.Task6;
 
-/* compiled from: DiskCacheReadProducer.java */
-/* renamed from: b.f.j.p.q, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.f.j.p.q, reason: use source file name */
+/* JADX INFO: compiled from: DiskCacheReadProducer.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class DiskCacheReadProducer implements Continuation3<EncodedImage2, Void> {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final /* synthetic */ ProducerListener2 f4185a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final /* synthetic */ ProducerContext f4186b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final /* synthetic */ Consumer2 f4187c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final /* synthetic */ DiskCacheReadProducer3 f4188d;
 
     public DiskCacheReadProducer(DiskCacheReadProducer3 diskCacheReadProducer3, ProducerListener2 producerListener2, ProducerContext producerContext, Consumer2 consumer2) {
@@ -30,7 +30,7 @@ public class DiskCacheReadProducer implements Continuation3<EncodedImage2, Void>
     }
 
     @Override // p686z.Continuation3
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public Void mo1510a(Task6<EncodedImage2> task6) throws Exception {
         boolean z2;
         EncodedImage2 encodedImage2;

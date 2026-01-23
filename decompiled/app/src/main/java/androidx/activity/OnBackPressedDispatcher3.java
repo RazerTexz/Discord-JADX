@@ -2,9 +2,9 @@ package androidx.activity;
 
 import kotlin.jvm.functions.Function1;
 
-/* compiled from: OnBackPressedDispatcher.kt */
-/* renamed from: androidx.activity.OnBackPressedDispatcherKt$addCallback$callback$1, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: androidx.activity.OnBackPressedDispatcherKt$addCallback$callback$1, reason: use source file name */
+/* JADX INFO: compiled from: OnBackPressedDispatcher.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class OnBackPressedDispatcher3 extends OnBackPressedCallback {
     public final /* synthetic */ boolean $enabled;
     public final /* synthetic */ Function1 $onBackPressed;

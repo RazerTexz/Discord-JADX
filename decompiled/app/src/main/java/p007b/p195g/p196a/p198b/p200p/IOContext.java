@@ -2,24 +2,24 @@ package p007b.p195g.p196a.p198b.p200p;
 
 import p007b.p195g.p196a.p198b.p204t.BufferRecycler;
 
-/* compiled from: IOContext.java */
-/* renamed from: b.g.a.b.p.c, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.g.a.b.p.c, reason: use source file name */
+/* JADX INFO: compiled from: IOContext.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class IOContext {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final Object f4545a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final boolean f4546b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final BufferRecycler f4547c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public byte[] f4548d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public char[] f4549e;
 
     public IOContext(BufferRecycler bufferRecycler, Object obj, boolean z2) {
@@ -28,7 +28,7 @@ public class IOContext {
         this.f4546b = z2;
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public void m1695a(byte[] bArr) {
         byte[] bArr2 = this.f4548d;
         if (bArr != bArr2 && bArr.length < bArr2.length) {

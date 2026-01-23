@@ -9,12 +9,12 @@ import okhttp3.ResponseBody;
 import p630i0.Converter2;
 import p630i0.Retrofit2;
 
-/* compiled from: GsonConverterFactory.java */
-/* renamed from: i0.e0.a.a, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: i0.e0.a.a, reason: use source file name */
+/* JADX INFO: compiled from: GsonConverterFactory.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class GsonConverterFactory extends Converter2.a {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final Gson f26510a;
 
     public GsonConverterFactory(Gson gson) {

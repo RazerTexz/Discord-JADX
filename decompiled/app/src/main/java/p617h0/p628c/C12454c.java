@@ -4,12 +4,12 @@ import org.webrtc.Camera1Session;
 import org.webrtc.VideoFrame;
 import org.webrtc.VideoSink;
 
-/* compiled from: lambda */
-/* renamed from: h0.c.c */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: h0.c.c */
+/* JADX INFO: compiled from: lambda */
+/* JADX INFO: loaded from: classes3.dex */
 public final /* synthetic */ class C12454c implements VideoSink {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final /* synthetic */ Camera1Session f26412j;
 
     public /* synthetic */ C12454c(Camera1Session camera1Session) {

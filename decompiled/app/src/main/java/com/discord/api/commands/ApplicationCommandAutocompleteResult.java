@@ -4,18 +4,18 @@ import java.util.List;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ApplicationCommandAutocompleteResult.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: ApplicationCommandAutocompleteResult.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class ApplicationCommandAutocompleteResult {
     private final List<ApplicationCommandAutocompleteChoice> choices;
     private final String nonce;
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final List<ApplicationCommandAutocompleteChoice> m7722a() {
         return this.choices;
     }
 
-    /* renamed from: b, reason: from getter */
+    /* JADX INFO: renamed from: b, reason: from getter */
     public final String getNonce() {
         return this.nonce;
     }

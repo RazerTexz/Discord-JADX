@@ -38,7 +38,7 @@ import java.util.ArrayList;
 import java.util.List;
 import p007b.p100d.p104b.p105a.outline;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class DrawerLayout extends ViewGroup {
     private static final boolean ALLOW_EDGE_LOCK = false;
     private static final boolean CHILDREN_DISALLOW_INTERCEPT = true;
@@ -100,7 +100,7 @@ public class DrawerLayout extends ViewGroup {
     public static final boolean CAN_HIDE_DESCENDANTS = true;
     private static final boolean SET_DRAWER_SHADOW_FROM_ELEVATION = true;
 
-    /* renamed from: androidx.drawerlayout.widget.DrawerLayout$1 */
+    /* JADX INFO: renamed from: androidx.drawerlayout.widget.DrawerLayout$1 */
     public class ViewOnApplyWindowInsetsListenerC03201 implements View.OnApplyWindowInsetsListener {
         public ViewOnApplyWindowInsetsListenerC03201() {
         }
@@ -248,7 +248,7 @@ public class DrawerLayout extends ViewGroup {
         private ViewDragHelper mDragger;
         private final Runnable mPeekRunnable = new RunnableC03221();
 
-        /* renamed from: androidx.drawerlayout.widget.DrawerLayout$ViewDragCallback$1 */
+        /* JADX INFO: renamed from: androidx.drawerlayout.widget.DrawerLayout$ViewDragCallback$1 */
         public class RunnableC03221 implements Runnable {
             public RunnableC03221() {
             }
@@ -457,7 +457,7 @@ public class DrawerLayout extends ViewGroup {
         return this.mChildHitRect.contains((int) f, (int) f2);
     }
 
-    private boolean mirror(Drawable drawable, int i) throws SecurityException {
+    private boolean mirror(Drawable drawable, int i) {
         if (drawable == null || !DrawableCompat.isAutoMirrored(drawable)) {
             return false;
         }
@@ -465,7 +465,7 @@ public class DrawerLayout extends ViewGroup {
         return true;
     }
 
-    private Drawable resolveLeftShadow() throws SecurityException {
+    private Drawable resolveLeftShadow() {
         int layoutDirection = ViewCompat.getLayoutDirection(this);
         if (layoutDirection == 0) {
             Drawable drawable = this.mShadowStart;
@@ -483,7 +483,7 @@ public class DrawerLayout extends ViewGroup {
         return this.mShadowLeft;
     }
 
-    private Drawable resolveRightShadow() throws SecurityException {
+    private Drawable resolveRightShadow() {
         int layoutDirection = ViewCompat.getLayoutDirection(this);
         if (layoutDirection == 0) {
             Drawable drawable = this.mShadowEnd;
@@ -1602,7 +1602,7 @@ public class DrawerLayout extends ViewGroup {
         public int lockModeStart;
         public int openDrawerGravity;
 
-        /* renamed from: androidx.drawerlayout.widget.DrawerLayout$SavedState$1 */
+        /* JADX INFO: renamed from: androidx.drawerlayout.widget.DrawerLayout$SavedState$1 */
         public static class C03211 implements Parcelable.ClassLoaderCreator<SavedState> {
             @Override // android.os.Parcelable.Creator
             public /* bridge */ /* synthetic */ Object createFromParcel(Parcel parcel) {

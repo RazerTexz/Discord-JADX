@@ -42,20 +42,20 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p658rx.Observable;
 import p658rx.Subscription;
 
-/* compiled from: StickerView.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: StickerView.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class StickerView extends FrameLayout {
 
-    /* renamed from: j, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: j, reason: from kotlin metadata */
     public final StickerViewBinding binding;
 
-    /* renamed from: k, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: k, reason: from kotlin metadata */
     public BaseSticker sticker;
 
-    /* renamed from: l, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: l, reason: from kotlin metadata */
     public Subscription subscription;
 
-    /* renamed from: m, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: m, reason: from kotlin metadata */
     public Job apngLoadingJob;
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -82,7 +82,7 @@ public final class StickerView extends FrameLayout {
         throw new NullPointerException("Missing required view with ID: ".concat(getResources().getResourceName(i)));
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final Job m8612a(StickerView stickerView, File file, boolean z2) {
         Objects.requireNonNull(stickerView);
         ApngUtils apngUtils = ApngUtils.INSTANCE;
@@ -92,13 +92,13 @@ public final class StickerView extends FrameLayout {
         return apngUtils.renderApngFromFile(file, simpleDraweeView, Integer.valueOf(stickerUtils.getDEFAULT_STICKER_SIZE_PX()), Integer.valueOf(stickerUtils.getDEFAULT_STICKER_SIZE_PX()), z2);
     }
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public static /* synthetic */ void m8613e(StickerView stickerView, BaseSticker baseSticker, Integer num, int i) {
         int i2 = i & 2;
         stickerView.m8616d(baseSticker, null);
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final void m8614b() {
         SimpleDraweeView simpleDraweeView = this.binding.f1177b;
         Intrinsics3.checkNotNullExpressionValue(simpleDraweeView, "binding.stickerViewImageview");
@@ -108,7 +108,7 @@ public final class StickerView extends FrameLayout {
         rLottieImageView.setBackground(null);
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final CharSequence m8615c(BaseSticker sticker) {
         if (!(sticker instanceof Sticker)) {
             if (!(sticker instanceof StickerPartial)) {
@@ -128,7 +128,7 @@ public final class StickerView extends FrameLayout {
         return FormatUtils.m216h(context2, C5419R.string.sticker_a11y_label, new Object[]{sb.toString()}, null, 4);
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final void m8616d(BaseSticker sticker, Integer stickerAnimationSettings) {
         Intrinsics3.checkNotNullParameter(sticker, "sticker");
         BaseSticker baseSticker = this.sticker;

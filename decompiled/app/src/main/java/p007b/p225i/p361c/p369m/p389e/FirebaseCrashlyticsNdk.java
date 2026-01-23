@@ -14,12 +14,12 @@ import p007b.p225i.p361c.p369m.p370d.CrashlyticsNativeComponent;
 import p007b.p225i.p361c.p369m.p370d.Logger3;
 import p007b.p225i.p361c.p369m.p370d.NativeSessionFileProvider;
 
-/* compiled from: FirebaseCrashlyticsNdk.java */
-/* renamed from: b.i.c.m.e.c, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.c.m.e.c, reason: use source file name */
+/* JADX INFO: compiled from: FirebaseCrashlyticsNdk.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class FirebaseCrashlyticsNdk implements CrashlyticsNativeComponent {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final NativeComponentController f12789a;
 
     public FirebaseCrashlyticsNdk(@NonNull NativeComponentController nativeComponentController) {
@@ -27,7 +27,7 @@ public class FirebaseCrashlyticsNdk implements CrashlyticsNativeComponent {
     }
 
     @Override // p007b.p225i.p361c.p369m.p370d.CrashlyticsNativeComponent
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public boolean mo6362a(@NonNull String str) {
         NdkCrashFilesManager ndkCrashFilesManager = ((BreakpadController) this.f12789a).f12787d;
         Objects.requireNonNull(ndkCrashFilesManager);
@@ -37,13 +37,13 @@ public class FirebaseCrashlyticsNdk implements CrashlyticsNativeComponent {
 
     @Override // p007b.p225i.p361c.p369m.p370d.CrashlyticsNativeComponent
     @NonNull
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public NativeSessionFileProvider mo6363b(@NonNull String str) {
         return new SessionFilesProvider(((BreakpadController) this.f12789a).m6699a(str));
     }
 
     @Override // p007b.p225i.p361c.p369m.p370d.CrashlyticsNativeComponent
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public void mo6364c(@NonNull String str, int i, @NonNull String str2, int i2, long j, long j2, boolean z2, int i3, @NonNull String str3, @NonNull String str4) throws Throwable {
         BreakpadController breakpadController = (BreakpadController) this.f12789a;
         Objects.requireNonNull(breakpadController);
@@ -61,7 +61,7 @@ public class FirebaseCrashlyticsNdk implements CrashlyticsNativeComponent {
     }
 
     @Override // p007b.p225i.p361c.p369m.p370d.CrashlyticsNativeComponent
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public void mo6365d(@NonNull String str, @NonNull String str2, long j) throws Throwable {
         BreakpadController breakpadController = (BreakpadController) this.f12789a;
         Objects.requireNonNull(breakpadController);
@@ -73,7 +73,7 @@ public class FirebaseCrashlyticsNdk implements CrashlyticsNativeComponent {
     }
 
     @Override // p007b.p225i.p361c.p369m.p370d.CrashlyticsNativeComponent
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public boolean mo6366e(@NonNull String str) {
         File file;
         BreakpadController breakpadController = (BreakpadController) this.f12789a;
@@ -83,7 +83,7 @@ public class FirebaseCrashlyticsNdk implements CrashlyticsNativeComponent {
     }
 
     @Override // p007b.p225i.p361c.p369m.p370d.CrashlyticsNativeComponent
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public void mo6367f(@NonNull String str, @NonNull String str2, @NonNull String str3, @NonNull String str4, @NonNull String str5, int i, @NonNull String str6) throws Throwable {
         BreakpadController breakpadController = (BreakpadController) this.f12789a;
         Objects.requireNonNull(breakpadController);
@@ -101,7 +101,7 @@ public class FirebaseCrashlyticsNdk implements CrashlyticsNativeComponent {
     }
 
     @Override // p007b.p225i.p361c.p369m.p370d.CrashlyticsNativeComponent
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public void mo6368g(@NonNull String str, @NonNull String str2, @NonNull String str3, boolean z2) throws Throwable {
         BreakpadController breakpadController = (BreakpadController) this.f12789a;
         Objects.requireNonNull(breakpadController);
@@ -113,7 +113,7 @@ public class FirebaseCrashlyticsNdk implements CrashlyticsNativeComponent {
     }
 
     @Override // p007b.p225i.p361c.p369m.p370d.CrashlyticsNativeComponent
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public boolean mo6369h(String str) {
         BreakpadController breakpadController = (BreakpadController) this.f12789a;
         File fileM6702a = breakpadController.f12787d.m6702a(str);

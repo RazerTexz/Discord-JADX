@@ -6,8 +6,8 @@ import com.google.android.gms.nearby.messages.internal.ClientAppContext;
 import com.google.android.gms.nearby.messages.internal.zzj;
 import p007b.p085c.p086a.p087a0.AnimatableValueParser;
 
-/* renamed from: b.i.a.f.j.b.e.n0 */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.j.b.e.n0 */
+/* JADX INFO: loaded from: classes3.dex */
 public final class C4297n0 implements Parcelable.Creator<zzj> {
     @Override // android.os.Parcelable.Creator
     public final zzj createFromParcel(Parcel parcel) {

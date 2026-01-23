@@ -71,8 +71,8 @@ import p637j0.p642l.p647e.ScalarSynchronousObservable;
 import p658rx.Observable;
 import p658rx.functions.Action1;
 
-/* compiled from: StickerUtils.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: StickerUtils.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class StickerUtils {
     public static final int MAXIMUM_LENGTH_STICKER_TEXT_SUGGESTIONS = 50;
     private static final int MAXIMUM_WORD_COUNT_STICKER_TEXT_SUGGESTIONS = 5;
@@ -81,10 +81,10 @@ public final class StickerUtils {
     private static final long STICKER_APPLICATION_ID = 710982414301790216L;
     public static final StickerUtils INSTANCE = new StickerUtils();
 
-    /* renamed from: DEFAULT_STICKER_SIZE_PX$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: DEFAULT_STICKER_SIZE_PX$delegate, reason: from kotlin metadata */
     private static final Lazy DEFAULT_STICKER_SIZE_PX = LazyJVM.lazy(StickerUtils2.INSTANCE);
 
-    /* compiled from: StickerUtils.kt */
+    /* JADX INFO: compiled from: StickerUtils.kt */
     public enum StickerSendability {
         SENDABLE,
         SENDABLE_WITH_PREMIUM,
@@ -110,8 +110,8 @@ public final class StickerUtils {
         }
     }
 
-    /* compiled from: StickerUtils.kt */
-    /* renamed from: com.discord.utilities.stickers.StickerUtils$getGuildOrStandardSticker$1 */
+    /* JADX INFO: renamed from: com.discord.utilities.stickers.StickerUtils$getGuildOrStandardSticker$1 */
+    /* JADX INFO: compiled from: StickerUtils.kt */
     public static final class C69251<T> implements Action1<Sticker> {
         public static final C69251 INSTANCE = new C69251();
 
@@ -120,7 +120,7 @@ public final class StickerUtils {
             call2(sticker);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final void call2(Sticker sticker) {
             StoreStream.Companion companion = StoreStream.INSTANCE;
             companion.getStickers().handleFetchedSticker(sticker);
@@ -128,8 +128,8 @@ public final class StickerUtils {
         }
     }
 
-    /* compiled from: StickerUtils.kt */
-    /* renamed from: com.discord.utilities.stickers.StickerUtils$getStickerPackPremiumPriceLabel$1 */
+    /* JADX INFO: renamed from: com.discord.utilities.stickers.StickerUtils$getStickerPackPremiumPriceLabel$1 */
+    /* JADX INFO: compiled from: StickerUtils.kt */
     public static final class C69261 extends Lambda implements Function1<RenderContext, Unit> {
         public final /* synthetic */ Context $context;
 
@@ -145,15 +145,15 @@ public final class StickerUtils {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(RenderContext renderContext) {
             Intrinsics3.checkNotNullParameter(renderContext, "$receiver");
             renderContext.strikethroughColor = Integer.valueOf(ColorCompat.getColor(this.$context, C5419R.color.white));
         }
     }
 
-    /* compiled from: StickerUtils.kt */
-    /* renamed from: com.discord.utilities.stickers.StickerUtils$getStickerPackPremiumPriceLabel$2 */
+    /* JADX INFO: renamed from: com.discord.utilities.stickers.StickerUtils$getStickerPackPremiumPriceLabel$2 */
+    /* JADX INFO: compiled from: StickerUtils.kt */
     public static final class C69272 extends Lambda implements Function1<RenderContext, Unit> {
         public final /* synthetic */ Context $context;
 
@@ -169,7 +169,7 @@ public final class StickerUtils {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(RenderContext renderContext) {
             Intrinsics3.checkNotNullParameter(renderContext, "$receiver");
             renderContext.strikethroughColor = Integer.valueOf(ColorCompat.getColor(this.$context, C5419R.color.white));
@@ -465,9 +465,9 @@ public final class StickerUtils {
             return StringResourceUtils.getI18nPluralString(context, C5419R.plurals.duration_days_days, daysFromMillis, Integer.valueOf(daysFromMillis));
         }
         int hoursFromMillis = timeUtils.getHoursFromMillis(unpublishedAtDate);
-        long j = unpublishedAtDate - (hoursFromMillis * 3600000);
+        long j = unpublishedAtDate - (((long) hoursFromMillis) * 3600000);
         int minutesFromMillis = timeUtils.getMinutesFromMillis(j);
-        int secondsFromMillis = timeUtils.getSecondsFromMillis(j - (minutesFromMillis * 60000));
+        int secondsFromMillis = timeUtils.getSecondsFromMillis(j - (((long) minutesFromMillis) * 60000));
         return (hoursFromMillis < 0 || minutesFromMillis < 0 || secondsFromMillis < 0) ? FormatUtils.m216h(context, C5419R.string.sticker_picker_pack_expiring_soon, new Object[0], null, 4) : FormatUtils.m216h(context, C5419R.string.duration_hours_minutes_seconds, new Object[]{outline.m828P(new Object[]{Integer.valueOf(hoursFromMillis)}, 1, "%02d", "java.lang.String.format(format, *args)"), outline.m828P(new Object[]{Integer.valueOf(minutesFromMillis)}, 1, "%02d", "java.lang.String.format(format, *args)"), outline.m828P(new Object[]{Integer.valueOf(secondsFromMillis)}, 1, "%02d", "java.lang.String.format(format, *args)")}, null, 4);
     }
 
@@ -549,7 +549,7 @@ public final class StickerUtils {
         return z2 || (stickerPackPriceForPremiumTier != null && stickerPackPriceForPremiumTier.intValue() == 0);
     }
 
-    public final Sticker parseFromMessageNotificationJson(String data) throws NumberFormatException {
+    public final Sticker parseFromMessageNotificationJson(String data) {
         if (data == null) {
             return null;
         }

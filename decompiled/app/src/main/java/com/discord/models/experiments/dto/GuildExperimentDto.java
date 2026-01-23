@@ -8,8 +8,8 @@ import p007b.p100d.p104b.p105a.outline;
 import p507d0.p580t.Collections2;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: GuildExperimentDto.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: GuildExperimentDto.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class GuildExperimentDto {
     private final long experimentIdHash;
     private final String hashKey;
@@ -17,7 +17,7 @@ public final /* data */ class GuildExperimentDto {
     private final List<GuildExperimentPopulationDto> populations;
     private final int revision;
 
-    /* compiled from: GuildExperimentDto.kt */
+    /* JADX INFO: compiled from: GuildExperimentDto.kt */
     public static final class Parser {
         public static final Parser INSTANCE = new Parser();
 
@@ -62,6 +62,7 @@ public final /* data */ class GuildExperimentDto {
         this.overrides = list2;
     }
 
+    /* JADX WARN: Multi-variable type inference failed */
     public static /* synthetic */ GuildExperimentDto copy$default(GuildExperimentDto guildExperimentDto, long j, String str, int i, List list, List list2, int i2, Object obj) {
         if ((i2 & 1) != 0) {
             j = guildExperimentDto.experimentIdHash;
@@ -85,17 +86,17 @@ public final /* data */ class GuildExperimentDto {
         return guildExperimentDto.copy(j2, str2, i3, list3, list2);
     }
 
-    /* renamed from: component1, reason: from getter */
+    /* JADX INFO: renamed from: component1, reason: from getter */
     public final long getExperimentIdHash() {
         return this.experimentIdHash;
     }
 
-    /* renamed from: component2, reason: from getter */
+    /* JADX INFO: renamed from: component2, reason: from getter */
     public final String getHashKey() {
         return this.hashKey;
     }
 
-    /* renamed from: component3, reason: from getter */
+    /* JADX INFO: renamed from: component3, reason: from getter */
     public final int getRevision() {
         return this.revision;
     }

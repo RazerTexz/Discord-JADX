@@ -8,9 +8,9 @@ import p507d0.p508a0.MathJVM;
 import p507d0.p512d0._Ranges;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: DurationUtils.kt */
-/* renamed from: com.discord.utilities.duration.DurationUtilsKt, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.utilities.duration.DurationUtilsKt, reason: use source file name */
+/* JADX INFO: compiled from: DurationUtils.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class DurationUtils {
     private static final int FEW_SECONDS_BOUNDARY = 30;
 

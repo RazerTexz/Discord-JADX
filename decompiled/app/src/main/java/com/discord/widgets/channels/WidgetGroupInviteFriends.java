@@ -67,12 +67,12 @@ import p658rx.Observable;
 import p658rx.functions.Func2;
 import p658rx.subjects.BehaviorSubject;
 
-/* compiled from: WidgetGroupInviteFriends.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetGroupInviteFriends.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetGroupInviteFriends extends AppFragment {
     public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetGroupInviteFriends.class, "binding", "getBinding()Lcom/discord/databinding/WidgetGroupInviteFriendsBinding;", 0)};
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private static final String INTENT_EXTRA_CHANNEL_ID = "INTENT_EXTRA_CHANNEL_ID";
     private static final int MAX_GROUP_MEMBERS = 10;
@@ -85,11 +85,11 @@ public final class WidgetGroupInviteFriends extends AppFragment {
     private final LinkedTreeMap<Long, User> addedUsers;
     private final BehaviorSubject<Collection<User>> addedUsersPublisher;
 
-    /* renamed from: binding$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
     private final BehaviorSubject<String> filterPublisher;
 
-    /* compiled from: WidgetGroupInviteFriends.kt */
+    /* JADX INFO: compiled from: WidgetGroupInviteFriends.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -115,10 +115,10 @@ public final class WidgetGroupInviteFriends extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetGroupInviteFriends.kt */
+    /* JADX INFO: compiled from: WidgetGroupInviteFriends.kt */
     public static final /* data */ class Model {
 
-        /* renamed from: Companion, reason: from kotlin metadata */
+        /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
         public static final Companion INSTANCE = new Companion(null);
         public static final int MODE_ADD = 1;
         public static final int MODE_CREATE = 0;
@@ -129,10 +129,10 @@ public final class WidgetGroupInviteFriends extends AppFragment {
         private final List<FriendItem> potentialAdditions;
         private final Collection<User> selectedUsers;
 
-        /* compiled from: WidgetGroupInviteFriends.kt */
+        /* JADX INFO: compiled from: WidgetGroupInviteFriends.kt */
         public static final class Companion {
 
-            /* compiled from: WidgetGroupInviteFriends.kt */
+            /* JADX INFO: compiled from: WidgetGroupInviteFriends.kt */
             public static final /* data */ class AddedUsersInput {
                 private final Collection<User> addedUsers;
                 private final String filter;
@@ -160,7 +160,7 @@ public final class WidgetGroupInviteFriends extends AppFragment {
                     return this.addedUsers;
                 }
 
-                /* renamed from: component2, reason: from getter */
+                /* JADX INFO: renamed from: component2, reason: from getter */
                 public final String getFilter() {
                     return this.filter;
                 }
@@ -260,7 +260,7 @@ public final class WidgetGroupInviteFriends extends AppFragment {
             }
         }
 
-        /* compiled from: WidgetGroupInviteFriends.kt */
+        /* JADX INFO: compiled from: WidgetGroupInviteFriends.kt */
         public static final /* data */ class ModelAppUserRelationship {
             private final Map<Long, Presence> presences;
             private final Map<Long, Integer> relationships;
@@ -382,6 +382,7 @@ public final class WidgetGroupInviteFriends extends AppFragment {
             this.maxGroupMemberCount = i2;
         }
 
+        /* JADX WARN: Multi-variable type inference failed */
         public static /* synthetic */ Model copy$default(Model model, Channel channel, String str, Collection collection, List list, int i, int i2, int i3, Object obj) {
             if ((i3 & 1) != 0) {
                 channel = model.channel;
@@ -408,12 +409,12 @@ public final class WidgetGroupInviteFriends extends AppFragment {
             return model.copy(channel, str2, collection2, list2, i4, i2);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final Channel getChannel() {
             return this.channel;
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final String getFilterText() {
             return this.filterText;
         }
@@ -426,12 +427,12 @@ public final class WidgetGroupInviteFriends extends AppFragment {
             return this.potentialAdditions;
         }
 
-        /* renamed from: component5, reason: from getter */
+        /* JADX INFO: renamed from: component5, reason: from getter */
         public final int getMode() {
             return this.mode;
         }
 
-        /* renamed from: component6, reason: from getter */
+        /* JADX INFO: renamed from: component6, reason: from getter */
         public final int getMaxGroupMemberCount() {
             return this.maxGroupMemberCount;
         }
@@ -513,10 +514,10 @@ public final class WidgetGroupInviteFriends extends AppFragment {
             return outline.m814B(sbM833U, this.maxGroupMemberCount, ")");
         }
 
-        /* compiled from: WidgetGroupInviteFriends.kt */
+        /* JADX INFO: compiled from: WidgetGroupInviteFriends.kt */
         public static final /* data */ class FriendItem implements MGRecyclerDataPayload {
 
-            /* renamed from: Companion, reason: from kotlin metadata */
+            /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
             public static final Companion INSTANCE = new Companion(null);
             public static final int TYPE_FRIEND = 0;
             private final boolean isApplicationStreaming;
@@ -526,7 +527,7 @@ public final class WidgetGroupInviteFriends extends AppFragment {
             private final int type;
             private final User user;
 
-            /* compiled from: WidgetGroupInviteFriends.kt */
+            /* JADX INFO: compiled from: WidgetGroupInviteFriends.kt */
             public static final class Companion {
                 private Companion() {
                 }
@@ -583,22 +584,22 @@ public final class WidgetGroupInviteFriends extends AppFragment {
                 return friendItem.copy(user, presence, z2, z3);
             }
 
-            /* renamed from: component1, reason: from getter */
+            /* JADX INFO: renamed from: component1, reason: from getter */
             public final User getUser() {
                 return this.user;
             }
 
-            /* renamed from: component2, reason: from getter */
+            /* JADX INFO: renamed from: component2, reason: from getter */
             public final Presence getPresence() {
                 return this.presence;
             }
 
-            /* renamed from: component3, reason: from getter */
+            /* JADX INFO: renamed from: component3, reason: from getter */
             public final boolean getIsSelected() {
                 return this.isSelected;
             }
 
-            /* renamed from: component4, reason: from getter */
+            /* JADX INFO: renamed from: component4, reason: from getter */
             public final boolean getIsApplicationStreaming() {
                 return this.isApplicationStreaming;
             }
@@ -637,19 +638,25 @@ public final class WidgetGroupInviteFriends extends AppFragment {
             }
 
             /* JADX WARN: Multi-variable type inference failed */
+            /* JADX WARN: Type inference failed for: r1v3, types: [int] */
+            /* JADX WARN: Type inference failed for: r1v5 */
+            /* JADX WARN: Type inference failed for: r1v7 */
+            /* JADX WARN: Type inference failed for: r2v1 */
+            /* JADX WARN: Type inference failed for: r2v2, types: [int] */
+            /* JADX WARN: Type inference failed for: r2v3 */
             public int hashCode() {
                 User user = this.user;
                 int iHashCode = (user != null ? user.hashCode() : 0) * 31;
                 Presence presence = this.presence;
                 int iHashCode2 = (iHashCode + (presence != null ? presence.hashCode() : 0)) * 31;
                 boolean z2 = this.isSelected;
-                int i = z2;
-                if (z2 != 0) {
-                    i = 1;
+                ?? r1 = z2;
+                if (z2) {
+                    r1 = 1;
                 }
-                int i2 = (iHashCode2 + i) * 31;
+                int i = (iHashCode2 + r1) * 31;
                 boolean z3 = this.isApplicationStreaming;
-                return i2 + (z3 ? 1 : z3 ? 1 : 0);
+                return i + (z3 ? 1 : z3);
             }
 
             public final boolean isApplicationStreaming() {
@@ -681,7 +688,7 @@ public final class WidgetGroupInviteFriends extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetGroupInviteFriends.kt */
+    /* JADX INFO: compiled from: WidgetGroupInviteFriends.kt */
     public static final class UserDataContract implements ChipsView.InterfaceC5465a {
         private final String displayString;
         private final User modelUser;
@@ -701,8 +708,8 @@ public final class WidgetGroupInviteFriends extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetGroupInviteFriends.kt */
-    /* renamed from: com.discord.widgets.channels.WidgetGroupInviteFriends$configureUI$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.channels.WidgetGroupInviteFriends$configureUI$1 */
+    /* JADX INFO: compiled from: WidgetGroupInviteFriends.kt */
     public static final class C73851 extends Lambda implements Function2<User, Boolean, Unit> {
         public final /* synthetic */ Model $data;
 
@@ -730,8 +737,8 @@ public final class WidgetGroupInviteFriends extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetGroupInviteFriends.kt */
-    /* renamed from: com.discord.widgets.channels.WidgetGroupInviteFriends$onViewBoundOrOnResume$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.channels.WidgetGroupInviteFriends$onViewBoundOrOnResume$1 */
+    /* JADX INFO: compiled from: WidgetGroupInviteFriends.kt */
     public static final class C73861 extends Lambda implements Function1<UserDataContract, Unit> {
         public C73861() {
             super(1);
@@ -743,7 +750,7 @@ public final class WidgetGroupInviteFriends extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(UserDataContract userDataContract) {
             User modelUser;
             if (userDataContract == null || (modelUser = userDataContract.getModelUser()) == null) {
@@ -753,8 +760,8 @@ public final class WidgetGroupInviteFriends extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetGroupInviteFriends.kt */
-    /* renamed from: com.discord.widgets.channels.WidgetGroupInviteFriends$onViewBoundOrOnResume$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.channels.WidgetGroupInviteFriends$onViewBoundOrOnResume$2 */
+    /* JADX INFO: compiled from: WidgetGroupInviteFriends.kt */
     public static final class C73872 extends Lambda implements Function1<Object, Unit> {
         public C73872() {
             super(1);
@@ -766,14 +773,14 @@ public final class WidgetGroupInviteFriends extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Object obj) {
             WidgetGroupInviteFriends.access$getFilterPublisher$p(WidgetGroupInviteFriends.this).onNext(String.valueOf(obj));
         }
     }
 
-    /* compiled from: WidgetGroupInviteFriends.kt */
-    /* renamed from: com.discord.widgets.channels.WidgetGroupInviteFriends$onViewBoundOrOnResume$3 */
+    /* JADX INFO: renamed from: com.discord.widgets.channels.WidgetGroupInviteFriends$onViewBoundOrOnResume$3 */
+    /* JADX INFO: compiled from: WidgetGroupInviteFriends.kt */
     public static final /* synthetic */ class C73883 extends FunctionReferenceImpl implements Function1<Collection<? extends User>, Unit> {
         public C73883(BehaviorSubject behaviorSubject) {
             super(1, behaviorSubject, BehaviorSubject.class, "onNext", "onNext(Ljava/lang/Object;)V", 0);
@@ -785,33 +792,33 @@ public final class WidgetGroupInviteFriends extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Collection<? extends User> collection) {
             ((BehaviorSubject) this.receiver).onNext(collection);
         }
     }
 
-    /* compiled from: WidgetGroupInviteFriends.kt */
-    /* renamed from: com.discord.widgets.channels.WidgetGroupInviteFriends$onViewBoundOrOnResume$4 */
+    /* JADX INFO: renamed from: com.discord.widgets.channels.WidgetGroupInviteFriends$onViewBoundOrOnResume$4 */
+    /* JADX INFO: compiled from: WidgetGroupInviteFriends.kt */
     public static final /* synthetic */ class C73894 extends FunctionReferenceImpl implements Function1<Model, Unit> {
         public C73894(WidgetGroupInviteFriends widgetGroupInviteFriends) {
             super(1, widgetGroupInviteFriends, WidgetGroupInviteFriends.class, "configureUI", "configureUI(Lcom/discord/widgets/channels/WidgetGroupInviteFriends$Model;)V", 0);
         }
 
         @Override // kotlin.jvm.functions.Function1
-        public /* bridge */ /* synthetic */ Unit invoke(Model model) throws Resources.NotFoundException {
+        public /* bridge */ /* synthetic */ Unit invoke(Model model) {
             invoke2(model);
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
-        public final void invoke2(Model model) throws Resources.NotFoundException {
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
+        public final void invoke2(Model model) {
             WidgetGroupInviteFriends.access$configureUI((WidgetGroupInviteFriends) this.receiver, model);
         }
     }
 
-    /* compiled from: WidgetGroupInviteFriends.kt */
-    /* renamed from: com.discord.widgets.channels.WidgetGroupInviteFriends$setupFAB$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.channels.WidgetGroupInviteFriends$setupFAB$1 */
+    /* JADX INFO: compiled from: WidgetGroupInviteFriends.kt */
     public static final class ViewOnClickListenerC73901 implements View.OnClickListener {
         public ViewOnClickListenerC73901() {
         }
@@ -822,13 +829,13 @@ public final class WidgetGroupInviteFriends extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetGroupInviteFriends.kt */
-    /* renamed from: com.discord.widgets.channels.WidgetGroupInviteFriends$setupFAB$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.channels.WidgetGroupInviteFriends$setupFAB$2 */
+    /* JADX INFO: compiled from: WidgetGroupInviteFriends.kt */
     public static final class ViewOnClickListenerC73912 implements View.OnClickListener {
         public final /* synthetic */ Model $data;
 
-        /* compiled from: WidgetGroupInviteFriends.kt */
-        /* renamed from: com.discord.widgets.channels.WidgetGroupInviteFriends$setupFAB$2$2, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.widgets.channels.WidgetGroupInviteFriends$setupFAB$2$2, reason: invalid class name */
+        /* JADX INFO: compiled from: WidgetGroupInviteFriends.kt */
         public static final class AnonymousClass2<T1, T2, R> implements Func2<Channel, Long, Tuples2<? extends Channel, ? extends Long>> {
             public static final AnonymousClass2 INSTANCE = new AnonymousClass2();
 
@@ -837,18 +844,18 @@ public final class WidgetGroupInviteFriends extends AppFragment {
                 return call2(channel, l);
             }
 
-            /* renamed from: call, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
             public final Tuples2<Channel, Long> call2(Channel channel, Long l) {
                 return Tuples.m10073to(channel, l);
             }
         }
 
-        /* compiled from: WidgetGroupInviteFriends.kt */
-        /* renamed from: com.discord.widgets.channels.WidgetGroupInviteFriends$setupFAB$2$3, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.widgets.channels.WidgetGroupInviteFriends$setupFAB$2$3, reason: invalid class name */
+        /* JADX INFO: compiled from: WidgetGroupInviteFriends.kt */
         public static final class AnonymousClass3 extends Lambda implements Function1<Tuples2<? extends Channel, ? extends Long>, Unit> {
 
-            /* compiled from: WidgetGroupInviteFriends.kt */
-            /* renamed from: com.discord.widgets.channels.WidgetGroupInviteFriends$setupFAB$2$3$2, reason: invalid class name */
+            /* JADX INFO: renamed from: com.discord.widgets.channels.WidgetGroupInviteFriends$setupFAB$2$3$2, reason: invalid class name */
+            /* JADX INFO: compiled from: WidgetGroupInviteFriends.kt */
             public static final class AnonymousClass2 extends Lambda implements Function0<Unit> {
                 public static final AnonymousClass2 INSTANCE = new AnonymousClass2();
 
@@ -862,7 +869,7 @@ public final class WidgetGroupInviteFriends extends AppFragment {
                     return Unit.f27425a;
                 }
 
-                /* renamed from: invoke, reason: avoid collision after fix types in other method */
+                /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
                 public final void invoke2() {
                     StoreStream.INSTANCE.getMediaEngine().selectVideoInputDevice(null);
                 }
@@ -878,7 +885,7 @@ public final class WidgetGroupInviteFriends extends AppFragment {
                 return Unit.f27425a;
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2(Tuples2<Channel, Long> tuples2) throws Exception {
                 Channel channelComponent1 = tuples2.component1();
                 Long lComponent2 = tuples2.component2();
@@ -950,7 +957,7 @@ public final class WidgetGroupInviteFriends extends AppFragment {
         this.addedUsersPublisher = BehaviorSubject.m11130l0(new ArrayList());
     }
 
-    public static final /* synthetic */ void access$configureUI(WidgetGroupInviteFriends widgetGroupInviteFriends, Model model) throws Resources.NotFoundException {
+    public static final /* synthetic */ void access$configureUI(WidgetGroupInviteFriends widgetGroupInviteFriends, Model model) {
         widgetGroupInviteFriends.configureUI(model);
     }
 
@@ -966,7 +973,7 @@ public final class WidgetGroupInviteFriends extends AppFragment {
         widgetGroupInviteFriends.unselectUser(user);
     }
 
-    private final void configureUI(Model data) throws Resources.NotFoundException {
+    private final void configureUI(Model data) {
         int size;
         List<com.discord.api.user.User> listM7659z;
         if (data == null || (data.getMode() == 1 && data.getChannel() == null)) {
@@ -1052,7 +1059,7 @@ public final class WidgetGroupInviteFriends extends AppFragment {
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
-    private final void setupToolbar(Model data) throws Resources.NotFoundException {
+    private final void setupToolbar(Model data) {
         CharSequence quantityString;
         if (data.getChannel() != null) {
             setActionBarTitle(FormatUtils.m219k(this, C5419R.string.group_dm_invite_with_name, new Object[]{ChannelUtils.m7681e(data.getChannel(), requireContext(), false, 2)}, null, 4));

@@ -3,12 +3,12 @@ package p007b.p225i.p361c.p369m.p370d.p373k;
 import java.util.concurrent.Callable;
 import p007b.p225i.p361c.p369m.p370d.Logger3;
 
-/* compiled from: CrashlyticsCore.java */
-/* renamed from: b.i.c.m.d.k.l0, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.c.m.d.k.l0, reason: use source file name */
+/* JADX INFO: compiled from: CrashlyticsCore.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class CrashlyticsCore4 implements Callable<Boolean> {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final /* synthetic */ CrashlyticsCore3 f12346j;
 
     public CrashlyticsCore4(CrashlyticsCore3 crashlyticsCore3) {

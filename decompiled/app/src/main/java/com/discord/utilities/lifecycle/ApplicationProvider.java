@@ -3,8 +3,8 @@ package com.discord.utilities.lifecycle;
 import android.app.Application;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ApplicationProvider.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: ApplicationProvider.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class ApplicationProvider {
     public static final ApplicationProvider INSTANCE = new ApplicationProvider();
     private static Application application;

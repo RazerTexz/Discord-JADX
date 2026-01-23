@@ -7,24 +7,24 @@ import androidx.core.widget.NestedScrollView;
 import androidx.viewbinding.ViewBinding;
 import com.discord.utilities.view.text.LinkifiedTextView;
 
-/* compiled from: WidgetHubEmailFlowConfirmationBinding.java */
-/* renamed from: b.a.i.o5, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.a.i.o5, reason: use source file name */
+/* JADX INFO: compiled from: WidgetHubEmailFlowConfirmationBinding.java */
+/* JADX INFO: loaded from: classes.dex */
 public final class WidgetHubEmailFlowConfirmationBinding implements ViewBinding {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     @NonNull
     public final NestedScrollView f1117a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     @NonNull
     public final LinkifiedTextView f1118b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     @NonNull
     public final TextView f1119c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     @NonNull
     public final LinkifiedTextView f1120d;
 

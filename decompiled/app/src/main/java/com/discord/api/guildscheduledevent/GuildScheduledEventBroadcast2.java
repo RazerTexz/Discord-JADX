@@ -3,9 +3,9 @@ package com.discord.api.guildscheduledevent;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: GuildScheduledEventBroadcast.kt */
-/* renamed from: com.discord.api.guildscheduledevent.GuildScheduledEventBroadcastBody, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: com.discord.api.guildscheduledevent.GuildScheduledEventBroadcastBody, reason: use source file name */
+/* JADX INFO: compiled from: GuildScheduledEventBroadcast.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class GuildScheduledEventBroadcast2 {
     private final Long entityId;
     private final int type;

@@ -6,18 +6,18 @@ import kotlin.jvm.internal.DefaultConstructorMarker;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: InAppReportsMenu.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: InAppReportsMenu.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class ReportNodeElement {
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private final List<ReportNodeElementData> data;
     private final String name;
     private final boolean should_submit_data;
     private final String type;
 
-    /* compiled from: InAppReportsMenu.kt */
+    /* JADX INFO: compiled from: InAppReportsMenu.kt */
     public static final class Companion {
         public Companion() {
         }
@@ -26,17 +26,17 @@ public final /* data */ class ReportNodeElement {
         }
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final List<ReportNodeElementData> m8182a() {
         return this.data;
     }
 
-    /* renamed from: b, reason: from getter */
+    /* JADX INFO: renamed from: b, reason: from getter */
     public final String getName() {
         return this.name;
     }
 
-    /* renamed from: c, reason: from getter */
+    /* JADX INFO: renamed from: c, reason: from getter */
     public final String getType() {
         return this.type;
     }
@@ -53,6 +53,9 @@ public final /* data */ class ReportNodeElement {
     }
 
     /* JADX WARN: Multi-variable type inference failed */
+    /* JADX WARN: Type inference failed for: r1v3, types: [int] */
+    /* JADX WARN: Type inference failed for: r1v4 */
+    /* JADX WARN: Type inference failed for: r1v6 */
     public int hashCode() {
         String str = this.type;
         int iHashCode = (str != null ? str.hashCode() : 0) * 31;
@@ -61,11 +64,11 @@ public final /* data */ class ReportNodeElement {
         List<ReportNodeElementData> list = this.data;
         int iHashCode3 = (iHashCode2 + (list != null ? list.hashCode() : 0)) * 31;
         boolean z2 = this.should_submit_data;
-        int i = z2;
-        if (z2 != 0) {
-            i = 1;
+        ?? r1 = z2;
+        if (z2) {
+            r1 = 1;
         }
-        return iHashCode3 + i;
+        return iHashCode3 + r1;
     }
 
     public String toString() {

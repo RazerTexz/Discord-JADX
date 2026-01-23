@@ -7,9 +7,9 @@ import com.discord.api.science.AnalyticsSchema;
 import kotlin.jvm.functions.Function0;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetCreateChannelAddMember.kt */
-/* renamed from: com.discord.widgets.channels.permissions.WidgetCreateChannelAddMember$loggingConfig$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.channels.permissions.WidgetCreateChannelAddMember$loggingConfig$1, reason: use source file name */
+/* JADX INFO: compiled from: WidgetCreateChannelAddMember.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetCreateChannelAddMember4 extends Lambda implements Function0<AnalyticsSchema> {
     public static final WidgetCreateChannelAddMember4 INSTANCE = new WidgetCreateChannelAddMember4();
 

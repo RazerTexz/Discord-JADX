@@ -10,17 +10,17 @@ import java.util.Locale;
 import p007b.p085c.p086a.p087a0.AnimatableValueParser;
 import p007b.p225i.p226a.p288f.p333j.p334b.p335e.C4295m0;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public final class zze extends AbstractSafeParcelable implements Distance {
     public static final Parcelable.Creator<zze> CREATOR = new C4295m0();
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final int f20812j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final int f20813k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final double f20814l;
 
     public zze() {
@@ -56,7 +56,7 @@ public final class zze extends AbstractSafeParcelable implements Distance {
     }
 
     @Override // com.google.android.gms.nearby.messages.Distance
-    /* renamed from: r0 */
+    /* JADX INFO: renamed from: r0 */
     public final double mo9120r0() {
         return this.f20814l;
     }
@@ -69,7 +69,7 @@ public final class zze extends AbstractSafeParcelable implements Distance {
         return String.format(locale, "(%.1fm, %s)", objArr);
     }
 
-    /* renamed from: w0 */
+    /* JADX INFO: renamed from: w0 */
     public final int m9124w0(@NonNull Distance distance) {
         if (Double.isNaN(this.f20814l) && Double.isNaN(distance.mo9120r0())) {
             return 0;

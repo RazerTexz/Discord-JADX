@@ -15,20 +15,20 @@ import p007b.p008a.p025i.ViewGuildBinding;
 import p007b.p109f.p132g.p143f.RoundingParams;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: GuildView.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: GuildView.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class GuildView extends FrameLayout {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static final /* synthetic */ int f19071j = 0;
 
-    /* renamed from: k, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: k, reason: from kotlin metadata */
     public final ViewGuildBinding binding;
 
-    /* renamed from: l, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: l, reason: from kotlin metadata */
     public int targetImageSize;
 
-    /* renamed from: m, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: m, reason: from kotlin metadata */
     public int textSize;
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -78,7 +78,7 @@ public final class GuildView extends FrameLayout {
         hierarchy.m8683s(roundingParams);
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final void m8545a(String iconUrl, String shortGuildName) {
         boolean z2 = iconUrl != null;
         int i = this.targetImageSize;
@@ -97,7 +97,7 @@ public final class GuildView extends FrameLayout {
         textView2.setText(shortGuildName);
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final void m8546b() {
         RoundingParams roundingParamsM1124a = RoundingParams.m1124a(getResources().getDimensionPixelSize(C5419R.dimen.guild_icon_radius));
         Intrinsics3.checkNotNullExpressionValue(roundingParamsM1124a, "RoundingParams.fromCorne…d_icon_radius).toFloat())");

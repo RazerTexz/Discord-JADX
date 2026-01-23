@@ -13,14 +13,14 @@ import com.discord.utilities.mg_recycler.MGRecyclerViewHolder;
 import com.discord.widgets.chat.list.entries.ChatListEntry;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: WidgetChatListItem.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetChatListItem.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public class WidgetChatListItem extends MGRecyclerViewHolder<WidgetChatListAdapter, ChatListEntry> {
     private final Drawable backgroundBlockedExpanded;
     private Drawable defaultBackground;
 
-    /* compiled from: WidgetChatListItem.kt */
-    /* renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListItem$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListItem$1 */
+    /* JADX INFO: compiled from: WidgetChatListItem.kt */
     public static final class ViewOnTouchListenerC81581 implements View.OnTouchListener {
         public final /* synthetic */ WidgetChatListAdapter $adapter;
         private final GestureDetector tapGestureDetector;

@@ -7,9 +7,9 @@ import com.discord.widgets.auth.WidgetAgeVerifyViewModel;
 import p507d0.p592z.p594d.Intrinsics3;
 import p658rx.functions.Func3;
 
-/* compiled from: WidgetAgeVerifyViewModel.kt */
-/* renamed from: com.discord.widgets.auth.WidgetAgeVerifyViewModel$Companion$observeStores$2, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.auth.WidgetAgeVerifyViewModel$Companion$observeStores$2, reason: use source file name */
+/* JADX INFO: compiled from: WidgetAgeVerifyViewModel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetAgeVerifyViewModel3<T1, T2, T3, R> implements Func3<MeUser, Boolean, Channel, WidgetAgeVerifyViewModel.StoreState> {
     public static final WidgetAgeVerifyViewModel3 INSTANCE = new WidgetAgeVerifyViewModel3();
 

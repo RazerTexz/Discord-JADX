@@ -13,11 +13,11 @@ import p007b.p008a.p041q.p044m0.Codec2;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: MediaEngineConnection.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: MediaEngineConnection.kt */
+/* JADX INFO: loaded from: classes.dex */
 public interface MediaEngineConnection {
 
-    /* compiled from: MediaEngineConnection.kt */
+    /* JADX INFO: compiled from: MediaEngineConnection.kt */
     public enum ConnectionState {
         DISCONNECTED,
         CONNECTING,
@@ -25,11 +25,11 @@ public interface MediaEngineConnection {
         NO_ROUTE
     }
 
-    /* compiled from: MediaEngineConnection.kt */
+    /* JADX INFO: compiled from: MediaEngineConnection.kt */
     public static final class FailedConnectionException extends Exception {
         private final FailureType type;
 
-        /* compiled from: MediaEngineConnection.kt */
+        /* JADX INFO: compiled from: MediaEngineConnection.kt */
         public enum FailureType {
             DISCONNECTED_BEFORE_CONNECTION_ESTABLISHED,
             TIMEOUT,
@@ -39,11 +39,11 @@ public interface MediaEngineConnection {
             UNKNOWN;
 
 
-            /* renamed from: Companion, reason: from kotlin metadata */
+            /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
             public static final Companion INSTANCE = new Companion(null);
 
-            /* compiled from: MediaEngineConnection.kt */
-            /* renamed from: com.discord.rtcconnection.mediaengine.MediaEngineConnection$FailedConnectionException$FailureType$a, reason: from kotlin metadata */
+            /* JADX INFO: renamed from: com.discord.rtcconnection.mediaengine.MediaEngineConnection$FailedConnectionException$FailureType$a, reason: from kotlin metadata */
+            /* JADX INFO: compiled from: MediaEngineConnection.kt */
             public static final class Companion {
                 public Companion(DefaultConstructorMarker defaultConstructorMarker) {
                 }
@@ -57,24 +57,24 @@ public interface MediaEngineConnection {
             this.type = failureType;
         }
 
-        /* renamed from: a, reason: from getter */
+        /* JADX INFO: renamed from: a, reason: from getter */
         public final FailureType getType() {
             return this.type;
         }
     }
 
-    /* compiled from: MediaEngineConnection.kt */
+    /* JADX INFO: compiled from: MediaEngineConnection.kt */
     public enum InputMode {
         VOICE_ACTIVITY(1),
         PUSH_TO_TALK(2);
 
 
-        /* renamed from: Companion, reason: from kotlin metadata */
+        /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
         public static final Companion INSTANCE = new Companion(null);
         private final int numeral;
 
-        /* compiled from: MediaEngineConnection.kt */
-        /* renamed from: com.discord.rtcconnection.mediaengine.MediaEngineConnection$InputMode$a, reason: from kotlin metadata */
+        /* JADX INFO: renamed from: com.discord.rtcconnection.mediaengine.MediaEngineConnection$InputMode$a, reason: from kotlin metadata */
+        /* JADX INFO: compiled from: MediaEngineConnection.kt */
         public static final class Companion {
             public Companion(DefaultConstructorMarker defaultConstructorMarker) {
             }
@@ -89,19 +89,19 @@ public interface MediaEngineConnection {
         }
     }
 
-    /* compiled from: MediaEngineConnection.kt */
+    /* JADX INFO: compiled from: MediaEngineConnection.kt */
     public static final /* data */ class TransportInfo {
 
-        /* renamed from: a, reason: from kotlin metadata */
+        /* JADX INFO: renamed from: a, reason: from kotlin metadata */
         public final String address;
 
-        /* renamed from: b, reason: from kotlin metadata */
+        /* JADX INFO: renamed from: b, reason: from kotlin metadata */
         public final int port;
 
-        /* renamed from: c, reason: from kotlin metadata */
+        /* JADX INFO: renamed from: c, reason: from kotlin metadata */
         public final Protocol protocol;
 
-        /* compiled from: MediaEngineConnection.kt */
+        /* JADX INFO: compiled from: MediaEngineConnection.kt */
         public enum Protocol {
             UDP,
             TCP
@@ -145,14 +145,14 @@ public interface MediaEngineConnection {
         }
     }
 
-    /* compiled from: MediaEngineConnection.kt */
+    /* JADX INFO: compiled from: MediaEngineConnection.kt */
     public enum Type {
         DEFAULT,
         STREAM
     }
 
-    /* compiled from: MediaEngineConnection.kt */
-    /* renamed from: com.discord.rtcconnection.mediaengine.MediaEngineConnection$a */
+    /* JADX INFO: renamed from: com.discord.rtcconnection.mediaengine.MediaEngineConnection$a */
+    /* JADX INFO: compiled from: MediaEngineConnection.kt */
     public static abstract class AbstractC5645a implements InterfaceC5648d {
         @Override // com.discord.rtcconnection.mediaengine.MediaEngineConnection.InterfaceC5648d
         public void onConnected(MediaEngineConnection mediaEngineConnection, TransportInfo transportInfo, List<Codec2> list) {
@@ -211,26 +211,26 @@ public interface MediaEngineConnection {
         }
     }
 
-    /* compiled from: MediaEngineConnection.kt */
-    /* renamed from: com.discord.rtcconnection.mediaengine.MediaEngineConnection$b */
+    /* JADX INFO: renamed from: com.discord.rtcconnection.mediaengine.MediaEngineConnection$b */
+    /* JADX INFO: compiled from: MediaEngineConnection.kt */
     public static final class C5646b {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final int f18905a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final int f18906b;
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public final int f18907c;
 
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         public final int f18908d;
 
-        /* renamed from: e */
+        /* JADX INFO: renamed from: e */
         public final int f18909e;
 
-        /* renamed from: f */
+        /* JADX INFO: renamed from: f */
         public final int f18910f;
 
         public C5646b(int i, int i2, int i3, int i4, int i5, int i6) {
@@ -273,26 +273,26 @@ public interface MediaEngineConnection {
         }
     }
 
-    /* compiled from: MediaEngineConnection.kt */
-    /* renamed from: com.discord.rtcconnection.mediaengine.MediaEngineConnection$c */
+    /* JADX INFO: renamed from: com.discord.rtcconnection.mediaengine.MediaEngineConnection$c */
+    /* JADX INFO: compiled from: MediaEngineConnection.kt */
     public static final class C5647c {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final int f18911a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final int f18912b;
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public final int f18913c;
 
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         public final boolean f18914d;
 
-        /* renamed from: e */
+        /* JADX INFO: renamed from: e */
         public final boolean f18915e;
 
-        /* renamed from: f */
+        /* JADX INFO: renamed from: f */
         public final int f18916f;
 
         public C5647c() {
@@ -320,16 +320,22 @@ public interface MediaEngineConnection {
         }
 
         /* JADX WARN: Multi-variable type inference failed */
+        /* JADX WARN: Type inference failed for: r1v3, types: [int] */
+        /* JADX WARN: Type inference failed for: r1v6 */
+        /* JADX WARN: Type inference failed for: r1v7 */
+        /* JADX WARN: Type inference failed for: r2v0 */
+        /* JADX WARN: Type inference failed for: r2v1, types: [int] */
+        /* JADX WARN: Type inference failed for: r2v2 */
         public int hashCode() {
             int i = ((((this.f18911a * 31) + this.f18912b) * 31) + this.f18913c) * 31;
             boolean z2 = this.f18914d;
-            int i2 = z2;
-            if (z2 != 0) {
-                i2 = 1;
+            ?? r1 = z2;
+            if (z2) {
+                r1 = 1;
             }
-            int i3 = (i + i2) * 31;
+            int i2 = (i + r1) * 31;
             boolean z3 = this.f18915e;
-            return ((i3 + (z3 ? 1 : z3 ? 1 : 0)) * 31) + this.f18916f;
+            return ((i2 + (z3 ? 1 : z3)) * 31) + this.f18916f;
         }
 
         public String toString() {
@@ -363,8 +369,8 @@ public interface MediaEngineConnection {
         }
     }
 
-    /* compiled from: MediaEngineConnection.kt */
-    /* renamed from: com.discord.rtcconnection.mediaengine.MediaEngineConnection$d */
+    /* JADX INFO: renamed from: com.discord.rtcconnection.mediaengine.MediaEngineConnection$d */
+    /* JADX INFO: compiled from: MediaEngineConnection.kt */
     public interface InterfaceC5648d {
         void onConnected(MediaEngineConnection mediaEngineConnection, TransportInfo transportInfo, List<Codec2> list);
 
@@ -389,76 +395,76 @@ public interface MediaEngineConnection {
         void onVideo(long j, Integer num, int i, int i2, int i3, StreamParameters[] streamParametersArr);
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     void mo295a(Intent permission, ThumbnailEmitter thumbnailEmitter);
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     boolean mo296b();
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     void mo297c(boolean selfMute);
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     void mo298d(long userId, boolean offScreen);
 
     void destroy();
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     void mo299e(long userId, float volume);
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     void mo300f(KrispOveruseDetector.Status status);
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     boolean mo301g(long userId);
 
     Type getType();
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     void mo302h();
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     void mo303i(long userId, boolean disabled);
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     void mo304j(boolean isVideoBroadcast);
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     void mo305k(InputMode inputMode, C5647c inputModeOptions);
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     void mo306l(InterfaceC5648d listener);
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     void mo307m(C5646b quality);
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     void mo308n(Function1<? super Stats, Unit> onStats);
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     void mo309o(InterfaceC5648d listener);
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     boolean mo310p(long userId);
 
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     void mo311q(boolean active);
 
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     void mo312r(String audioCodec, String videoCodec);
 
-    /* renamed from: s */
+    /* JADX INFO: renamed from: s */
     void mo313s(long userId, int audioSsrc, Integer videoSsrc, boolean isMuted, float volume);
 
-    /* renamed from: t */
+    /* JADX INFO: renamed from: t */
     void mo314t(String mode, int[] secretKey);
 
-    /* renamed from: u */
+    /* JADX INFO: renamed from: u */
     boolean mo315u(long userId);
 
-    /* renamed from: v */
+    /* JADX INFO: renamed from: v */
     void mo316v(boolean selfDeaf);
 
-    /* renamed from: w */
+    /* JADX INFO: renamed from: w */
     void mo317w(long userId, boolean mute);
 }

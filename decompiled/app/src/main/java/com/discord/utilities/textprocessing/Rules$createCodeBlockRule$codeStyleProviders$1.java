@@ -9,8 +9,8 @@ import com.discord.utilities.textprocessing.node.BasicRenderContext;
 import p507d0.p580t.Collections2;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: Rules.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: Rules.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class Rules$createCodeBlockRule$codeStyleProviders$1<RC> implements StyleNode.InterfaceC5656a<RC> {
     public static final Rules$createCodeBlockRule$codeStyleProviders$1 INSTANCE = new Rules$createCodeBlockRule$codeStyleProviders$1();
 

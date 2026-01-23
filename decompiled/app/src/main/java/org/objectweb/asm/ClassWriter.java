@@ -3,7 +3,7 @@ package org.objectweb.asm;
 import com.discord.widgets.chat.input.MentionUtils;
 import org.objectweb.asm.Attribute;
 
-/* loaded from: discord-126021.apk:org/objectweb/asm/ClassWriter.SCL.lombok */
+/* JADX INFO: loaded from: discord-126021.apk:org/objectweb/asm/ClassWriter.SCL.lombok */
 public class ClassWriter extends ClassVisitor {
     public static final int COMPUTE_MAXS = 1;
     public static final int COMPUTE_FRAMES = 2;

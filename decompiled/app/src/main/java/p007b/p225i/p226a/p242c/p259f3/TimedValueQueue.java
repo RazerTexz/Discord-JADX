@@ -5,24 +5,24 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.Arrays;
 import p007b.p085c.p086a.p087a0.AnimatableValueParser;
 
-/* compiled from: TimedValueQueue.java */
-/* renamed from: b.i.a.c.f3.c0, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.f3.c0, reason: use source file name */
+/* JADX INFO: compiled from: TimedValueQueue.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class TimedValueQueue<V> {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public long[] f6695a = new long[10];
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public V[] f6696b = (V[]) new Object[10];
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public int f6697c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public int f6698d;
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public synchronized void m2966a(long j, V v) {
         if (this.f6698d > 0) {
             if (j <= this.f6695a[((this.f6697c + r0) - 1) % this.f6696b.length]) {
@@ -39,14 +39,14 @@ public final class TimedValueQueue<V> {
         this.f6698d = i2 + 1;
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public synchronized void m2967b() {
         this.f6697c = 0;
         this.f6698d = 0;
         Arrays.fill(this.f6696b, (Object) null);
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final void m2968c() {
         int length = this.f6696b.length;
         if (this.f6698d < length) {
@@ -70,7 +70,7 @@ public final class TimedValueQueue<V> {
     }
 
     @Nullable
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final V m2969d(long j, boolean z2) {
         V vM2971f = null;
         long j2 = RecyclerView.FOREVER_NS;
@@ -86,13 +86,13 @@ public final class TimedValueQueue<V> {
     }
 
     @Nullable
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public synchronized V m2970e(long j) {
         return m2969d(j, true);
     }
 
     @Nullable
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final V m2971f() {
         AnimatableValueParser.m426D(this.f6698d > 0);
         V[] vArr = this.f6696b;

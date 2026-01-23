@@ -2,11 +2,11 @@ package p637j0;
 
 import p658rx.Subscription;
 
-/* compiled from: CompletableSubscriber.java */
-/* renamed from: j0.e, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: j0.e, reason: use source file name */
+/* JADX INFO: compiled from: CompletableSubscriber.java */
+/* JADX INFO: loaded from: classes3.dex */
 public interface CompletableSubscriber {
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     void m10732a(Subscription subscription);
 
     void onCompleted();

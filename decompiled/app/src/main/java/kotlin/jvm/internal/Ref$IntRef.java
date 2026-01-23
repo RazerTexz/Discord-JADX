@@ -2,7 +2,7 @@ package kotlin.jvm.internal;
 
 import java.io.Serializable;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public final class Ref$IntRef implements Serializable {
     public int element;
 

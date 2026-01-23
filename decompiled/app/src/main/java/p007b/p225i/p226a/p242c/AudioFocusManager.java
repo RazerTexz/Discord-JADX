@@ -12,42 +12,42 @@ import p007b.p225i.p226a.p242c.SimpleExoPlayer;
 import p007b.p225i.p226a.p242c.p259f3.Util2;
 import p007b.p225i.p226a.p242c.p263t2.AudioAttributes;
 
-/* compiled from: AudioFocusManager.java */
-/* renamed from: b.i.a.c.t0, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.t0, reason: use source file name */
+/* JADX INFO: compiled from: AudioFocusManager.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class AudioFocusManager {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final AudioManager f7658a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final a f7659b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     @Nullable
     public b f7660c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     @Nullable
     public AudioAttributes f7661d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public int f7662e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public int f7663f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public float f7664g = 1.0f;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public AudioFocusRequest f7665h;
 
-    /* compiled from: AudioFocusManager.java */
-    /* renamed from: b.i.a.c.t0$a */
+    /* JADX INFO: renamed from: b.i.a.c.t0$a */
+    /* JADX INFO: compiled from: AudioFocusManager.java */
     public class a implements AudioManager.OnAudioFocusChangeListener {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public final Handler f7666j;
 
         public a(Handler handler) {
@@ -60,8 +60,8 @@ public final class AudioFocusManager {
         }
     }
 
-    /* compiled from: AudioFocusManager.java */
-    /* renamed from: b.i.a.c.t0$b */
+    /* JADX INFO: renamed from: b.i.a.c.t0$b */
+    /* JADX INFO: compiled from: AudioFocusManager.java */
     public interface b {
     }
 
@@ -74,7 +74,7 @@ public final class AudioFocusManager {
         this.f7662e = 0;
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final void m3460a() {
         if (this.f7662e == 0) {
             return;
@@ -90,7 +90,7 @@ public final class AudioFocusManager {
         m3463d(0);
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final void m3461b(int i) {
         b bVar = this.f7660c;
         if (bVar != null) {
@@ -100,7 +100,7 @@ public final class AudioFocusManager {
         }
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public void m3462c(@Nullable AudioAttributes audioAttributes) {
         if (Util2.m2993a(this.f7661d, null)) {
             return;
@@ -110,7 +110,7 @@ public final class AudioFocusManager {
         AnimatableValueParser.m543m(true, "Automatic handling of audio focus is only available for USAGE_MEDIA and USAGE_GAME.");
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final void m3463d(int i) {
         if (this.f7662e == i) {
             return;
@@ -128,7 +128,7 @@ public final class AudioFocusManager {
         }
     }
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public int m3464e(boolean z2, int i) {
         int iRequestAudioFocus;
         int i2 = 1;

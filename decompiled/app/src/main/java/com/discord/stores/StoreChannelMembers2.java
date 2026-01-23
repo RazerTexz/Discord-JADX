@@ -5,9 +5,9 @@ import kotlin.jvm.functions.Function1;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: StoreChannelMembers.kt */
-/* renamed from: com.discord.stores.StoreChannelMembers$MemberListUpdateLogger$logUpdate$groupLog$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.stores.StoreChannelMembers$MemberListUpdateLogger$logUpdate$groupLog$1, reason: use source file name */
+/* JADX INFO: compiled from: StoreChannelMembers.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class StoreChannelMembers2 extends Lambda implements Function1<ModelGuildMemberListUpdate.Group, CharSequence> {
     public static final StoreChannelMembers2 INSTANCE = new StoreChannelMembers2();
 
@@ -20,7 +20,7 @@ public final class StoreChannelMembers2 extends Lambda implements Function1<Mode
         return invoke2(group);
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final CharSequence invoke2(ModelGuildMemberListUpdate.Group group) {
         Intrinsics3.checkNotNullParameter(group, "it");
         return String.valueOf(group.getCount());

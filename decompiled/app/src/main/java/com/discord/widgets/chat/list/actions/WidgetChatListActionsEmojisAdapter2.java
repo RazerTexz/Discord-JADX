@@ -6,16 +6,16 @@ import kotlin.jvm.internal.DefaultConstructorMarker;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: WidgetChatListActionsEmojisAdapter.kt */
-/* renamed from: com.discord.widgets.chat.list.actions.EmojiItem, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.chat.list.actions.EmojiItem, reason: use source file name */
+/* JADX INFO: compiled from: WidgetChatListActionsEmojisAdapter.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public abstract class WidgetChatListActionsEmojisAdapter2 implements MGRecyclerDataPayload {
     public static final int TYPE_EMOJI = 0;
     public static final int TYPE_MORE_EMOJIS = 1;
     private final int type;
 
-    /* compiled from: WidgetChatListActionsEmojisAdapter.kt */
-    /* renamed from: com.discord.widgets.chat.list.actions.EmojiItem$EmojiData */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.list.actions.EmojiItem$EmojiData */
+    /* JADX INFO: compiled from: WidgetChatListActionsEmojisAdapter.kt */
     public static final /* data */ class EmojiData extends WidgetChatListActionsEmojisAdapter2 {
         private final Emoji emoji;
         private final String key;
@@ -35,7 +35,7 @@ public abstract class WidgetChatListActionsEmojisAdapter2 implements MGRecyclerD
             return emojiData.copy(emoji);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final Emoji getEmoji() {
             return this.emoji;
         }
@@ -77,8 +77,8 @@ public abstract class WidgetChatListActionsEmojisAdapter2 implements MGRecyclerD
         }
     }
 
-    /* compiled from: WidgetChatListActionsEmojisAdapter.kt */
-    /* renamed from: com.discord.widgets.chat.list.actions.EmojiItem$MoreEmoji */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.list.actions.EmojiItem$MoreEmoji */
+    /* JADX INFO: compiled from: WidgetChatListActionsEmojisAdapter.kt */
     public static final class MoreEmoji extends WidgetChatListActionsEmojisAdapter2 {
         public static final MoreEmoji INSTANCE;
         private static final String key;

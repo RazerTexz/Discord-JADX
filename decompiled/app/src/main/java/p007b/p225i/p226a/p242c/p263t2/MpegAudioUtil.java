@@ -4,59 +4,59 @@ import androidx.annotation.Nullable;
 import com.discord.restapi.RestAPIAbortCodes;
 import org.objectweb.asm.Opcodes;
 
-/* compiled from: MpegAudioUtil.java */
-/* renamed from: b.i.a.c.t2.a0, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.t2.a0, reason: use source file name */
+/* JADX INFO: compiled from: MpegAudioUtil.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class MpegAudioUtil {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final String[] f7670a = {"audio/mpeg-L1", "audio/mpeg-L2", "audio/mpeg"};
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static final int[] f7671b = {44100, 48000, 32000};
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public static final int[] f7672c = {32000, 64000, 96000, 128000, 160000, 192000, 224000, 256000, 288000, 320000, 352000, 384000, 416000, 448000};
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public static final int[] f7673d = {32000, 48000, 56000, 64000, RestAPIAbortCodes.RELATIONSHIP_INCOMING_DISABLED, 96000, 112000, 128000, 144000, 160000, 176000, 192000, 224000, 256000};
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public static final int[] f7674e = {32000, 48000, 56000, 64000, RestAPIAbortCodes.RELATIONSHIP_INCOMING_DISABLED, 96000, 112000, 128000, 160000, 192000, 224000, 256000, 320000, 384000};
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public static final int[] f7675f = {32000, 40000, 48000, 56000, 64000, RestAPIAbortCodes.RELATIONSHIP_INCOMING_DISABLED, 96000, 112000, 128000, 160000, 192000, 224000, 256000, 320000};
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public static final int[] f7676g = {8000, 16000, 24000, 32000, 40000, 48000, 56000, 64000, RestAPIAbortCodes.RELATIONSHIP_INCOMING_DISABLED, 96000, 112000, 128000, 144000, 160000};
 
-    /* compiled from: MpegAudioUtil.java */
-    /* renamed from: b.i.a.c.t2.a0$a */
+    /* JADX INFO: renamed from: b.i.a.c.t2.a0$a */
+    /* JADX INFO: compiled from: MpegAudioUtil.java */
     public static final class a {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public int f7677a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         @Nullable
         public String f7678b;
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public int f7679c;
 
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         public int f7680d;
 
-        /* renamed from: e */
+        /* JADX INFO: renamed from: e */
         public int f7681e;
 
-        /* renamed from: f */
+        /* JADX INFO: renamed from: f */
         public int f7682f;
 
-        /* renamed from: g */
+        /* JADX INFO: renamed from: g */
         public int f7683g;
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public boolean m3469a(int i) {
             int i2;
             int i3;
@@ -100,7 +100,7 @@ public final class MpegAudioUtil {
         }
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static int m3465a(int i) {
         int i2;
         int i3;
@@ -130,7 +130,7 @@ public final class MpegAudioUtil {
         return ((i9 * i8) / i6) + i7;
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static int m3466b(int i, int i2) {
         if (i2 == 1) {
             return i == 3 ? 1152 : 576;
@@ -144,12 +144,12 @@ public final class MpegAudioUtil {
         throw new IllegalArgumentException();
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public static boolean m3467c(int i) {
         return (i & (-2097152)) == -2097152;
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public static int m3468d(int i) {
         int i2;
         int i3;

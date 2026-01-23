@@ -29,27 +29,27 @@ import p507d0.p592z.p594d.Lambda;
 import p507d0.p592z.p594d.Reflection2;
 import p658rx.subscriptions.CompositeSubscription;
 
-/* compiled from: WidgetThreadBrowserFilterSheet.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetThreadBrowserFilterSheet.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetThreadBrowserFilterSheet extends AppBottomSheet {
     public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetThreadBrowserFilterSheet.class, "binding", "getBinding()Lcom/discord/databinding/WidgetThreadBrowserFilterSheetBinding;", 0)};
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
 
-    /* renamed from: binding$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
 
-    /* renamed from: channelId$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: channelId$delegate, reason: from kotlin metadata */
     private final Lazy channelId;
 
-    /* renamed from: guildId$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: guildId$delegate, reason: from kotlin metadata */
     private final Lazy guildId;
 
-    /* renamed from: viewModel$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: viewModel$delegate, reason: from kotlin metadata */
     private final Lazy viewModel;
 
-    /* compiled from: WidgetThreadBrowserFilterSheet.kt */
+    /* JADX INFO: compiled from: WidgetThreadBrowserFilterSheet.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -68,8 +68,8 @@ public final class WidgetThreadBrowserFilterSheet extends AppBottomSheet {
         }
     }
 
-    /* compiled from: WidgetThreadBrowserFilterSheet.kt */
-    /* renamed from: com.discord.widgets.channels.threads.browser.WidgetThreadBrowserFilterSheet$bindSubscriptions$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.channels.threads.browser.WidgetThreadBrowserFilterSheet$bindSubscriptions$1 */
+    /* JADX INFO: compiled from: WidgetThreadBrowserFilterSheet.kt */
     public static final class C76651 extends Lambda implements Function1<WidgetThreadBrowserArchivedViewModel.ViewState, Unit> {
         public C76651() {
             super(1);
@@ -81,15 +81,15 @@ public final class WidgetThreadBrowserFilterSheet extends AppBottomSheet {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(WidgetThreadBrowserArchivedViewModel.ViewState viewState) {
             Intrinsics3.checkNotNullParameter(viewState, "viewState");
             WidgetThreadBrowserFilterSheet.access$configureUI(WidgetThreadBrowserFilterSheet.this, viewState);
         }
     }
 
-    /* compiled from: WidgetThreadBrowserFilterSheet.kt */
-    /* renamed from: com.discord.widgets.channels.threads.browser.WidgetThreadBrowserFilterSheet$configureUI$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.channels.threads.browser.WidgetThreadBrowserFilterSheet$configureUI$1 */
+    /* JADX INFO: compiled from: WidgetThreadBrowserFilterSheet.kt */
     public static final class ViewOnClickListenerC76661 implements View.OnClickListener {
         public ViewOnClickListenerC76661() {
         }
@@ -104,8 +104,8 @@ public final class WidgetThreadBrowserFilterSheet extends AppBottomSheet {
         }
     }
 
-    /* compiled from: WidgetThreadBrowserFilterSheet.kt */
-    /* renamed from: com.discord.widgets.channels.threads.browser.WidgetThreadBrowserFilterSheet$onResume$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.channels.threads.browser.WidgetThreadBrowserFilterSheet$onResume$1 */
+    /* JADX INFO: compiled from: WidgetThreadBrowserFilterSheet.kt */
     public static final class ViewOnClickListenerC76671 implements View.OnClickListener {
         public ViewOnClickListenerC76671() {
         }
@@ -116,8 +116,8 @@ public final class WidgetThreadBrowserFilterSheet extends AppBottomSheet {
         }
     }
 
-    /* compiled from: WidgetThreadBrowserFilterSheet.kt */
-    /* renamed from: com.discord.widgets.channels.threads.browser.WidgetThreadBrowserFilterSheet$onResume$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.channels.threads.browser.WidgetThreadBrowserFilterSheet$onResume$2 */
+    /* JADX INFO: compiled from: WidgetThreadBrowserFilterSheet.kt */
     public static final class ViewOnClickListenerC76682 implements View.OnClickListener {
         public ViewOnClickListenerC76682() {
         }

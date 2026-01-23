@@ -23,42 +23,42 @@ import kotlin.jvm.internal.DefaultConstructorMarker;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: AppPermissions.kt */
-/* renamed from: b.a.d.h, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.a.d.h, reason: use source file name */
+/* JADX INFO: compiled from: AppPermissions.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class AppPermissions implements AppPermissions2 {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     @Deprecated
     public static final HashMap<Integer, String[]> f508j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public static final a f509k = new a(null);
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public Function0<Unit> f510l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public Function1<? super Map<String, Boolean>, Unit> f511m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public long f512n;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public final ActivityResultLauncher<String[]> f513o;
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public final ComponentActivity f514p;
 
-    /* compiled from: AppPermissions.kt */
-    /* renamed from: b.a.d.h$a */
+    /* JADX INFO: renamed from: b.a.d.h$a */
+    /* JADX INFO: compiled from: AppPermissions.kt */
     public static final class a {
         public a(DefaultConstructorMarker defaultConstructorMarker) {
         }
     }
 
-    /* compiled from: AppPermissions.kt */
-    /* renamed from: b.a.d.h$b */
+    /* JADX INFO: renamed from: b.a.d.h$b */
+    /* JADX INFO: compiled from: AppPermissions.kt */
     public static final class b<O> implements ActivityResultCallback<Map<String, Boolean>> {
         public b() {
         }
@@ -85,8 +85,8 @@ public final class AppPermissions implements AppPermissions2 {
         }
     }
 
-    /* compiled from: AppPermissions.kt */
-    /* renamed from: b.a.d.h$c */
+    /* JADX INFO: renamed from: b.a.d.h$c */
+    /* JADX INFO: compiled from: AppPermissions.kt */
     public static final class c extends Lambda implements Function1<Map<String, ? extends Boolean>, Unit> {
         public final /* synthetic */ Function0 $onFailure;
 
@@ -107,8 +107,8 @@ public final class AppPermissions implements AppPermissions2 {
         }
     }
 
-    /* compiled from: AppPermissions.kt */
-    /* renamed from: b.a.d.h$d */
+    /* JADX INFO: renamed from: b.a.d.h$d */
+    /* JADX INFO: compiled from: AppPermissions.kt */
     public static final class d extends Lambda implements Function1<Map<String, ? extends Boolean>, Unit> {
         public final /* synthetic */ Function0 $onFailure;
 
@@ -126,8 +126,8 @@ public final class AppPermissions implements AppPermissions2 {
         }
     }
 
-    /* compiled from: AppPermissions.kt */
-    /* renamed from: b.a.d.h$e */
+    /* JADX INFO: renamed from: b.a.d.h$e */
+    /* JADX INFO: compiled from: AppPermissions.kt */
     public static final class e extends Lambda implements Function1<Map<String, ? extends Boolean>, Unit> {
         public e() {
             super(1);
@@ -141,8 +141,8 @@ public final class AppPermissions implements AppPermissions2 {
         }
     }
 
-    /* compiled from: AppPermissions.kt */
-    /* renamed from: b.a.d.h$f */
+    /* JADX INFO: renamed from: b.a.d.h$f */
+    /* JADX INFO: compiled from: AppPermissions.kt */
     public static final class f extends Lambda implements Function1<Map<String, ? extends Boolean>, Unit> {
         public f() {
             super(1);
@@ -156,8 +156,8 @@ public final class AppPermissions implements AppPermissions2 {
         }
     }
 
-    /* compiled from: AppPermissions.kt */
-    /* renamed from: b.a.d.h$g */
+    /* JADX INFO: renamed from: b.a.d.h$g */
+    /* JADX INFO: compiled from: AppPermissions.kt */
     public static final class g extends Lambda implements Function0<Unit> {
         public final /* synthetic */ boolean $hadPermissions;
         public final /* synthetic */ Function0 $onSuccess;
@@ -180,8 +180,8 @@ public final class AppPermissions implements AppPermissions2 {
         }
     }
 
-    /* compiled from: AppPermissions.kt */
-    /* renamed from: b.a.d.h$h */
+    /* JADX INFO: renamed from: b.a.d.h$h */
+    /* JADX INFO: compiled from: AppPermissions.kt */
     public static final class h extends Lambda implements Function1<Map<String, ? extends Boolean>, Unit> {
         public final /* synthetic */ Function0 $onFailure;
 
@@ -202,8 +202,8 @@ public final class AppPermissions implements AppPermissions2 {
         }
     }
 
-    /* compiled from: AppPermissions.kt */
-    /* renamed from: b.a.d.h$i */
+    /* JADX INFO: renamed from: b.a.d.h$i */
+    /* JADX INFO: compiled from: AppPermissions.kt */
     public static final class i extends Lambda implements Function1<Map<String, ? extends Boolean>, Unit> {
         public i() {
             super(1);
@@ -253,13 +253,13 @@ public final class AppPermissions implements AppPermissions2 {
         this.f513o = activityResultLauncherRegisterForActivityResult;
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final void m151a(AppPermissions appPermissions, int i2) {
         AppToast.m169g(appPermissions.f514p, i2, 0, null, 12);
     }
 
     /* JADX WARN: Removed duplicated region for block: B:15:0x0035  */
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
@@ -298,7 +298,7 @@ public final class AppPermissions implements AppPermissions2 {
         return true;
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final void m153c(int i2, Function0<Unit> function0, Function1<? super Map<String, Boolean>, Unit> function1) {
         String[] strArr = f508j.get(Integer.valueOf(i2));
         if (strArr != null) {

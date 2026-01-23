@@ -1,6 +1,5 @@
 package com.discord.widgets.forums;
 
-import android.content.res.Resources;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
@@ -22,14 +21,14 @@ import kotlin.jvm.functions.Function1;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: WidgetForumBrowserAdapter.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetForumBrowserAdapter.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetForumBrowserAdapter extends MGRecyclerAdapterSimple<ForumBrowserItem> {
     private final RecyclerView.ItemDecoration itemDecoration;
     private final Function1<Channel, Unit> onPostClick;
     private final Function1<Channel, Unit> onPostLongClick;
 
-    /* compiled from: WidgetForumBrowserAdapter.kt */
+    /* JADX INFO: compiled from: WidgetForumBrowserAdapter.kt */
     public static final class HeaderItem extends MGRecyclerViewHolder<WidgetForumBrowserAdapter, ForumBrowserItem> {
         private final ForumBrowserHeaderItemBinding binding;
 
@@ -52,7 +51,7 @@ public final class WidgetForumBrowserAdapter extends MGRecyclerAdapterSimple<For
             onConfigure2(i, forumBrowserItem);
         }
 
-        /* renamed from: onConfigure, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: onConfigure, reason: avoid collision after fix types in other method */
         public void onConfigure2(int position, ForumBrowserItem data) {
             Intrinsics3.checkNotNullParameter(data, "data");
             super.onConfigure(position, data);
@@ -60,7 +59,7 @@ public final class WidgetForumBrowserAdapter extends MGRecyclerAdapterSimple<For
         }
     }
 
-    /* compiled from: WidgetForumBrowserAdapter.kt */
+    /* JADX INFO: compiled from: WidgetForumBrowserAdapter.kt */
     public static final class LoadingItem extends MGRecyclerViewHolder<WidgetForumBrowserAdapter, ForumBrowserItem> {
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
         public LoadingItem(WidgetForumBrowserAdapter widgetForumBrowserAdapter) {
@@ -69,7 +68,7 @@ public final class WidgetForumBrowserAdapter extends MGRecyclerAdapterSimple<For
         }
     }
 
-    /* compiled from: WidgetForumBrowserAdapter.kt */
+    /* JADX INFO: compiled from: WidgetForumBrowserAdapter.kt */
     public static final class PostItem extends MGRecyclerViewHolder<WidgetForumBrowserAdapter, ForumBrowserItem> {
         private final ForumBrowserPostItemBinding binding;
 
@@ -90,12 +89,12 @@ public final class WidgetForumBrowserAdapter extends MGRecyclerAdapterSimple<For
         }
 
         @Override // com.discord.utilities.mg_recycler.MGRecyclerViewHolder
-        public /* bridge */ /* synthetic */ void onConfigure(int i, ForumBrowserItem forumBrowserItem) throws Resources.NotFoundException {
+        public /* bridge */ /* synthetic */ void onConfigure(int i, ForumBrowserItem forumBrowserItem) {
             onConfigure2(i, forumBrowserItem);
         }
 
-        /* renamed from: onConfigure, reason: avoid collision after fix types in other method */
-        public void onConfigure2(int position, ForumBrowserItem data) throws Resources.NotFoundException {
+        /* JADX INFO: renamed from: onConfigure, reason: avoid collision after fix types in other method */
+        public void onConfigure2(int position, ForumBrowserItem data) {
             Intrinsics3.checkNotNullParameter(data, "data");
             super.onConfigure(position, data);
             ForumBrowserItem.PostItem postItem = (ForumBrowserItem.PostItem) data;

@@ -6,26 +6,26 @@ import java.util.Arrays;
 import java.util.Objects;
 import p007b.p085c.p086a.p087a0.AnimatableValueParser;
 
-/* compiled from: com.google.android.gms:play-services-basement@@17.6.0 */
-/* renamed from: b.i.a.f.e.k.q0 */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.e.k.q0 */
+/* JADX INFO: compiled from: com.google.android.gms:play-services-basement@@17.6.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public final class C3376q0 {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final Uri f9546a = new Uri.Builder().scheme("content").authority("com.google.android.gms.chimera").build();
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     @Nullable
     public final String f9547b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     @Nullable
     public final String f9548c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final int f9549d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final boolean f9550e;
 
     public C3376q0(String str, String str2, int i, boolean z2) {

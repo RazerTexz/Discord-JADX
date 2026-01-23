@@ -1,20 +1,20 @@
 package p007b.p225i.p361c.p369m.p370d.p387t;
 
-/* compiled from: TrimmedThrowableData.java */
-/* renamed from: b.i.c.m.d.t.e, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.c.m.d.t.e, reason: use source file name */
+/* JADX INFO: compiled from: TrimmedThrowableData.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class TrimmedThrowableData {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final String f12777a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final String f12778b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final StackTraceElement[] f12779c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final TrimmedThrowableData f12780d;
 
     public TrimmedThrowableData(Throwable th, StackTraceTrimmingStrategy stackTraceTrimmingStrategy) {

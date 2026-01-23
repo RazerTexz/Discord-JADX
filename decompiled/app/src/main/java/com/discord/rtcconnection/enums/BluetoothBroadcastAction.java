@@ -2,8 +2,8 @@ package com.discord.rtcconnection.enums;
 
 import kotlin.jvm.internal.DefaultConstructorMarker;
 
-/* compiled from: BluetoothBroadcastAction.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: BluetoothBroadcastAction.kt */
+/* JADX INFO: loaded from: classes.dex */
 public enum BluetoothBroadcastAction {
     HeadsetConnectionStateChanged("android.bluetooth.headset.profile.action.CONNECTION_STATE_CHANGED"),
     HeadsetAudioStateChanged("android.bluetooth.headset.profile.action.AUDIO_STATE_CHANGED"),
@@ -12,12 +12,12 @@ public enum BluetoothBroadcastAction {
     ActiveDeviceChanged("android.bluetooth.headset.profile.action.ACTIVE_DEVICE_CHANGED");
 
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private final String action;
 
-    /* compiled from: BluetoothBroadcastAction.kt */
-    /* renamed from: com.discord.rtcconnection.enums.BluetoothBroadcastAction$a, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: com.discord.rtcconnection.enums.BluetoothBroadcastAction$a, reason: from kotlin metadata */
+    /* JADX INFO: compiled from: BluetoothBroadcastAction.kt */
     public static final class Companion {
         public Companion(DefaultConstructorMarker defaultConstructorMarker) {
         }

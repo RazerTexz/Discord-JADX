@@ -21,31 +21,31 @@ import p007b.p225i.p226a.p288f.p292c.p293a.p296f.p297b.C3210m;
 import p007b.p225i.p226a.p288f.p292c.p293a.p296f.p297b.C3217t;
 import p007b.p225i.p226a.p288f.p299e.p300h.AbstractC3268c;
 
-/* compiled from: com.google.android.gms:play-services-auth@@19.0.0 */
+/* JADX INFO: compiled from: com.google.android.gms:play-services-auth@@19.0.0 */
+/* JADX INFO: loaded from: classes3.dex */
 @KeepName
-/* loaded from: classes3.dex */
 public class SignInHubActivity extends FragmentActivity {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static boolean f20463j = false;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public boolean f20464k = false;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public SignInConfiguration f20465l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public boolean f20466m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public int f20467n;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public Intent f20468o;
 
-    /* compiled from: com.google.android.gms:play-services-auth@@19.0.0 */
-    /* renamed from: com.google.android.gms.auth.api.signin.internal.SignInHubActivity$a */
+    /* JADX INFO: renamed from: com.google.android.gms.auth.api.signin.internal.SignInHubActivity$a */
+    /* JADX INFO: compiled from: com.google.android.gms:play-services-auth@@19.0.0 */
     public class C10795a implements LoaderManager.LoaderCallbacks<Void> {
         public C10795a(C3217t c3217t) {
         }
@@ -71,7 +71,7 @@ public class SignInHubActivity extends FragmentActivity {
         }
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final void m9016a(int i) {
         Status status = new Status(i, null);
         Intent intent = new Intent();

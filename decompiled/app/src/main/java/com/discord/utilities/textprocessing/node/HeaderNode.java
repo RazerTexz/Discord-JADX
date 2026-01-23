@@ -13,8 +13,8 @@ import java.util.Collection;
 import java.util.Iterator;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: HeaderNode.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: HeaderNode.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class HeaderNode<T extends BasicRenderContext> extends Node<T> {
     private final int numHeaderIndicators;
 

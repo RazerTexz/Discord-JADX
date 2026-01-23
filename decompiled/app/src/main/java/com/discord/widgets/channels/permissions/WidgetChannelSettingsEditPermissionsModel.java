@@ -24,18 +24,18 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p637j0.p642l.p647e.ScalarSynchronousObservable;
 import p658rx.Observable;
 
-/* compiled from: WidgetChannelSettingsEditPermissionsModel.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetChannelSettingsEditPermissionsModel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public abstract class WidgetChannelSettingsEditPermissionsModel {
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private final Channel channel;
     private final long targetId;
     private final int type;
     private final boolean useNewThreadsPermissions;
 
-    /* compiled from: WidgetChannelSettingsEditPermissionsModel.kt */
+    /* JADX INFO: compiled from: WidgetChannelSettingsEditPermissionsModel.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -84,7 +84,7 @@ public abstract class WidgetChannelSettingsEditPermissionsModel {
         }
     }
 
-    /* compiled from: WidgetChannelSettingsEditPermissionsModel.kt */
+    /* JADX INFO: compiled from: WidgetChannelSettingsEditPermissionsModel.kt */
     public static final /* data */ class ModelForRole extends WidgetChannelSettingsEditPermissionsModel {
         private final Channel channel;
         private final GuildRole guildRole;
@@ -128,12 +128,12 @@ public abstract class WidgetChannelSettingsEditPermissionsModel {
             return getChannel();
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final long getMyPermissionsForChannel() {
             return this.myPermissionsForChannel;
         }
 
-        /* renamed from: component3, reason: from getter */
+        /* JADX INFO: renamed from: component3, reason: from getter */
         public final GuildRole getGuildRole() {
             return this.guildRole;
         }
@@ -142,22 +142,22 @@ public abstract class WidgetChannelSettingsEditPermissionsModel {
             return getTargetId();
         }
 
-        /* renamed from: component5, reason: from getter */
+        /* JADX INFO: renamed from: component5, reason: from getter */
         public final long getMyPermissionsWithRoleNeutral() {
             return this.myPermissionsWithRoleNeutral;
         }
 
-        /* renamed from: component6, reason: from getter */
+        /* JADX INFO: renamed from: component6, reason: from getter */
         public final long getMyPermissionsWithRoleDenied() {
             return this.myPermissionsWithRoleDenied;
         }
 
-        /* renamed from: component7, reason: from getter */
+        /* JADX INFO: renamed from: component7, reason: from getter */
         public final boolean getMeHasRole() {
             return this.meHasRole;
         }
 
-        /* renamed from: component8, reason: from getter */
+        /* JADX INFO: renamed from: component8, reason: from getter */
         public final boolean getIsEveryoneRole() {
             return this.isEveryoneRole;
         }
@@ -219,25 +219,34 @@ public abstract class WidgetChannelSettingsEditPermissionsModel {
         }
 
         /* JADX WARN: Multi-variable type inference failed */
+        /* JADX WARN: Type inference failed for: r1v11 */
+        /* JADX WARN: Type inference failed for: r1v12 */
+        /* JADX WARN: Type inference failed for: r1v14 */
+        /* JADX WARN: Type inference failed for: r1v15 */
+        /* JADX WARN: Type inference failed for: r1v7, types: [int] */
+        /* JADX WARN: Type inference failed for: r1v9, types: [int] */
+        /* JADX WARN: Type inference failed for: r2v7 */
+        /* JADX WARN: Type inference failed for: r2v8, types: [int] */
+        /* JADX WARN: Type inference failed for: r2v9 */
         public int hashCode() {
             Channel channel = getChannel();
             int iM3a = (C0002b.m3a(this.myPermissionsForChannel) + ((channel != null ? channel.hashCode() : 0) * 31)) * 31;
             GuildRole guildRole = this.guildRole;
             int iM3a2 = (C0002b.m3a(this.myPermissionsWithRoleDenied) + ((C0002b.m3a(this.myPermissionsWithRoleNeutral) + ((C0002b.m3a(getTargetId()) + ((iM3a + (guildRole != null ? guildRole.hashCode() : 0)) * 31)) * 31)) * 31)) * 31;
             boolean z2 = this.meHasRole;
-            int i = z2;
-            if (z2 != 0) {
-                i = 1;
+            ?? r1 = z2;
+            if (z2) {
+                r1 = 1;
             }
-            int i2 = (iM3a2 + i) * 31;
+            int i = (iM3a2 + r1) * 31;
             boolean z3 = this.isEveryoneRole;
-            int i3 = z3;
-            if (z3 != 0) {
-                i3 = 1;
+            ?? r12 = z3;
+            if (z3) {
+                r12 = 1;
             }
-            int i4 = (i2 + i3) * 31;
+            int i2 = (i + r12) * 31;
             boolean useNewThreadsPermissions = getUseNewThreadsPermissions();
-            return i4 + (useNewThreadsPermissions ? 1 : useNewThreadsPermissions);
+            return i2 + (useNewThreadsPermissions ? 1 : useNewThreadsPermissions);
         }
 
         public final boolean isEveryoneRole() {
@@ -268,7 +277,7 @@ public abstract class WidgetChannelSettingsEditPermissionsModel {
         }
     }
 
-    /* compiled from: WidgetChannelSettingsEditPermissionsModel.kt */
+    /* JADX INFO: compiled from: WidgetChannelSettingsEditPermissionsModel.kt */
     public static final /* data */ class ModelForUser extends WidgetChannelSettingsEditPermissionsModel {
         private final Channel channel;
         private final GuildMember guildMember;
@@ -320,22 +329,22 @@ public abstract class WidgetChannelSettingsEditPermissionsModel {
             return getChannel();
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final long getMyPermissionsForChannel() {
             return this.myPermissionsForChannel;
         }
 
-        /* renamed from: component3, reason: from getter */
+        /* JADX INFO: renamed from: component3, reason: from getter */
         public final boolean getIsMe() {
             return this.isMe;
         }
 
-        /* renamed from: component4, reason: from getter */
+        /* JADX INFO: renamed from: component4, reason: from getter */
         public final User getUser() {
             return this.user;
         }
 
-        /* renamed from: component5, reason: from getter */
+        /* JADX INFO: renamed from: component5, reason: from getter */
         public final GuildMember getGuildMember() {
             return this.guildMember;
         }
@@ -384,17 +393,23 @@ public abstract class WidgetChannelSettingsEditPermissionsModel {
         }
 
         /* JADX WARN: Multi-variable type inference failed */
+        /* JADX WARN: Type inference failed for: r0v12 */
+        /* JADX WARN: Type inference failed for: r0v14 */
+        /* JADX WARN: Type inference failed for: r0v5, types: [int] */
+        /* JADX WARN: Type inference failed for: r3v0 */
+        /* JADX WARN: Type inference failed for: r3v1, types: [int] */
+        /* JADX WARN: Type inference failed for: r3v2 */
         public int hashCode() {
             Channel channel = getChannel();
             int iM3a = (C0002b.m3a(this.myPermissionsForChannel) + ((channel != null ? channel.hashCode() : 0) * 31)) * 31;
             boolean z2 = this.isMe;
-            int i = z2;
-            if (z2 != 0) {
-                i = 1;
+            ?? r0 = z2;
+            if (z2) {
+                r0 = 1;
             }
-            int i2 = (iM3a + i) * 31;
+            int i = (iM3a + r0) * 31;
             User user = this.user;
-            int iHashCode = (i2 + (user != null ? user.hashCode() : 0)) * 31;
+            int iHashCode = (i + (user != null ? user.hashCode() : 0)) * 31;
             GuildMember guildMember = this.guildMember;
             int iHashCode2 = (iHashCode + (guildMember != null ? guildMember.hashCode() : 0)) * 31;
             boolean useNewThreadsPermissions = getUseNewThreadsPermissions();

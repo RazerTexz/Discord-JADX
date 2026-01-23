@@ -14,7 +14,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.Arrays;
 import p007b.p100d.p104b.p105a.outline;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class GridLayoutManager extends LinearLayoutManager {
     private static final boolean DEBUG = false;
     public static final int DEFAULT_SPAN_COUNT = -1;

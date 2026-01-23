@@ -8,11 +8,11 @@ import kotlin.NoWhenBranchMatchedException;
 import p007b.p008a.p025i.OauthTokenPermissionListItemBinding;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: OAuthPermissionViews.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: OAuthPermissionViews.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class OAuthPermissionViews {
 
-    /* compiled from: OAuthPermissionViews.kt */
+    /* JADX INFO: compiled from: OAuthPermissionViews.kt */
     public static final class InvalidScopeException extends IllegalArgumentException {
         private final String scope;
 
@@ -23,17 +23,17 @@ public final class OAuthPermissionViews {
             this.scope = str;
         }
 
-        /* renamed from: a, reason: from getter */
+        /* JADX INFO: renamed from: a, reason: from getter */
         public final String getScope() {
             return this.scope;
         }
     }
 
-    /* compiled from: OAuthPermissionViews.kt */
-    /* renamed from: com.discord.views.OAuthPermissionViews$a */
+    /* JADX INFO: renamed from: com.discord.views.OAuthPermissionViews$a */
+    /* JADX INFO: compiled from: OAuthPermissionViews.kt */
     public static final class C7080a extends SimpleRecyclerAdapter.ViewHolder<OAuthScope> {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final OauthTokenPermissionListItemBinding f19092a;
 
         /* JADX WARN: Illegal instructions before constructor call */
@@ -46,7 +46,7 @@ public final class OAuthPermissionViews {
         }
 
         @Override // com.discord.utilities.views.SimpleRecyclerAdapter.ViewHolder
-        public void bind(OAuthScope oAuthScope) throws InvalidScopeException {
+        public void bind(OAuthScope oAuthScope) {
             OAuthScope oAuthScope2 = oAuthScope;
             Intrinsics3.checkNotNullParameter(oAuthScope2, "data");
             TextView textView = this.f19092a.f1367a;
@@ -55,7 +55,7 @@ public final class OAuthPermissionViews {
         }
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final void m8548a(TextView textView, OAuthScope oAuthScope) throws InvalidScopeException {
         int i;
         Intrinsics3.checkNotNullParameter(textView, "$this$setScopePermissionText");

@@ -7,7 +7,7 @@ import java.text.DecimalFormat;
 import java.util.concurrent.ScheduledFuture;
 import java.util.concurrent.TimeUnit;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class TimerCycle {
     private Runnable command;
     private long cycleDelay;
@@ -18,7 +18,7 @@ public class TimerCycle {
     private FutureScheduler scheduler;
     private ScheduledFuture waitingTask;
 
-    /* renamed from: com.adjust.sdk.scheduler.TimerCycle$1 */
+    /* JADX INFO: renamed from: com.adjust.sdk.scheduler.TimerCycle$1 */
     public class RunnableC54041 implements Runnable {
         public RunnableC54041() {
         }

@@ -7,7 +7,7 @@ import java.util.List;
 import p007b.p008a.p033m.p034a.C1135c0;
 import p007b.p100d.p104b.p105a.outline;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class ModelSession implements Model {
     private boolean active;
     private List<Activity> activities;
@@ -20,7 +20,7 @@ public class ModelSession implements Model {
         private String client;
         private int number;
 
-        /* renamed from: os */
+        /* JADX INFO: renamed from: os */
         private String f18578os;
 
         @Override // com.discord.models.domain.Model

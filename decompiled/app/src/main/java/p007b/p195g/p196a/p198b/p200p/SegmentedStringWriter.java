@@ -5,12 +5,12 @@ import java.io.Writer;
 import p007b.p195g.p196a.p198b.p204t.BufferRecycler;
 import p007b.p195g.p196a.p198b.p204t.TextBuffer;
 
-/* compiled from: SegmentedStringWriter.java */
-/* renamed from: b.g.a.b.p.i, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.g.a.b.p.i, reason: use source file name */
+/* JADX INFO: compiled from: SegmentedStringWriter.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class SegmentedStringWriter extends Writer {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final TextBuffer f4557j;
 
     public SegmentedStringWriter(BufferRecycler bufferRecycler) {

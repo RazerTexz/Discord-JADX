@@ -4,9 +4,9 @@ import com.discord.widgets.servers.WidgetServerSettingsChannels;
 import kotlin.jvm.functions.Function0;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetServerSettingsInstantInvites.kt */
-/* renamed from: com.discord.widgets.servers.settings.invites.WidgetServerSettingsInstantInvites$guildId$2, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.servers.settings.invites.WidgetServerSettingsInstantInvites$guildId$2, reason: use source file name */
+/* JADX INFO: compiled from: WidgetServerSettingsInstantInvites.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetServerSettingsInstantInvites6 extends Lambda implements Function0<Long> {
     public final /* synthetic */ WidgetServerSettingsInstantInvites this$0;
 
@@ -21,7 +21,7 @@ public final class WidgetServerSettingsInstantInvites6 extends Lambda implements
         return Long.valueOf(invoke2());
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final long invoke2() {
         return this.this$0.getMostRecentIntent().getLongExtra(WidgetServerSettingsChannels.INTENT_EXTRA_GUILD_ID, -1L);
     }

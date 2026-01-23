@@ -3,9 +3,9 @@ package p507d0.p591y;
 import java.io.IOException;
 import p507d0.Exceptions;
 
-/* compiled from: Closeable.kt */
-/* renamed from: d0.y.b, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.y.b, reason: use source file name */
+/* JADX INFO: compiled from: Closeable.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class Closeable {
     public static final void closeFinally(java.io.Closeable closeable, Throwable th) throws IOException {
         if (closeable == null) {

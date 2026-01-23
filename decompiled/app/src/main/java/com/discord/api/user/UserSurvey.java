@@ -4,8 +4,8 @@ import java.util.List;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: UserSurvey.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: UserSurvey.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class UserSurvey {
     private final String cta;
     private final List<Long> guild_permissions;
@@ -15,27 +15,27 @@ public final /* data */ class UserSurvey {
     private final String prompt;
     private final String url;
 
-    /* renamed from: a, reason: from getter */
+    /* JADX INFO: renamed from: a, reason: from getter */
     public final String getCta() {
         return this.cta;
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final List<Long> m8315b() {
         return this.guild_permissions;
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final List<String> m8316c() {
         return this.guild_requirements;
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final List<Integer> m8317d() {
         return this.guild_size;
     }
 
-    /* renamed from: e, reason: from getter */
+    /* JADX INFO: renamed from: e, reason: from getter */
     public final String getKey() {
         return this.key;
     }
@@ -51,12 +51,12 @@ public final /* data */ class UserSurvey {
         return Intrinsics3.areEqual(this.prompt, userSurvey.prompt) && Intrinsics3.areEqual(this.cta, userSurvey.cta) && Intrinsics3.areEqual(this.url, userSurvey.url) && Intrinsics3.areEqual(this.key, userSurvey.key) && Intrinsics3.areEqual(this.guild_requirements, userSurvey.guild_requirements) && Intrinsics3.areEqual(this.guild_size, userSurvey.guild_size) && Intrinsics3.areEqual(this.guild_permissions, userSurvey.guild_permissions);
     }
 
-    /* renamed from: f, reason: from getter */
+    /* JADX INFO: renamed from: f, reason: from getter */
     public final String getPrompt() {
         return this.prompt;
     }
 
-    /* renamed from: g, reason: from getter */
+    /* JADX INFO: renamed from: g, reason: from getter */
     public final String getUrl() {
         return this.url;
     }

@@ -4,24 +4,24 @@ import androidx.annotation.Nullable;
 import java.util.regex.Pattern;
 import p007b.p225i.p226a.p242c.p259f3.ParsableByteArray;
 
-/* compiled from: WebvttCssParser.java */
-/* renamed from: b.i.a.c.b3.v.e, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.b3.v.e, reason: use source file name */
+/* JADX INFO: compiled from: WebvttCssParser.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class WebvttCssParser {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final Pattern f6110a = Pattern.compile("\\[voice=\"([^\"]*)\"\\]");
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static final Pattern f6111b = Pattern.compile("^((?:[0-9]*\\.)?[0-9]+)(px|em|%)$");
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final ParsableByteArray f6112c = new ParsableByteArray();
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final StringBuilder f6113d = new StringBuilder();
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static String m2705a(ParsableByteArray parsableByteArray, StringBuilder sb) {
         boolean z2 = false;
         sb.setLength(0);
@@ -41,7 +41,7 @@ public final class WebvttCssParser {
     }
 
     @Nullable
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static String m2706b(ParsableByteArray parsableByteArray, StringBuilder sb) {
         m2707c(parsableByteArray);
         if (parsableByteArray.m3081a() == 0) {
@@ -58,7 +58,7 @@ public final class WebvttCssParser {
     }
 
     /* JADX WARN: Removed duplicated region for block: B:35:0x0064  */
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */

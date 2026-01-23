@@ -6,8 +6,8 @@ import android.view.ViewOverlay;
 import androidx.annotation.NonNull;
 import androidx.annotation.RequiresApi;
 
+/* JADX INFO: loaded from: classes.dex */
 @RequiresApi(18)
-/* loaded from: classes.dex */
 public class ViewOverlayApi18 implements ViewOverlayImpl {
     private final ViewOverlay mViewOverlay;
 

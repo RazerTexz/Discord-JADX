@@ -4,18 +4,18 @@ import p007b.p225i.p226a.p242c.MediaItem2;
 import p007b.p225i.p226a.p242c.p259f3.ListenerSet;
 import p007b.p225i.p226a.p242c.p262s2.AnalyticsListener;
 
-/* compiled from: lambda */
-/* renamed from: b.i.a.c.s2.q */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.s2.q */
+/* JADX INFO: compiled from: lambda */
+/* JADX INFO: loaded from: classes3.dex */
 public final /* synthetic */ class C2888q implements ListenerSet.a {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final /* synthetic */ AnalyticsListener.a f7613a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final /* synthetic */ MediaItem2 f7614b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final /* synthetic */ int f7615c;
 
     public /* synthetic */ C2888q(AnalyticsListener.a aVar, MediaItem2 mediaItem2, int i) {

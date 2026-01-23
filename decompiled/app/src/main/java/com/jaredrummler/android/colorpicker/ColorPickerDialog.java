@@ -46,98 +46,98 @@ import p007b.p440k.p441a.p442a.ColorPaletteAdapter;
 import p007b.p440k.p441a.p442a.ColorPickerDialog2;
 import p007b.p440k.p441a.p442a.ColorPickerDialogListener;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public class ColorPickerDialog extends DialogFragment implements ColorPickerView.InterfaceC11166c, TextWatcher {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static final int[] f21707j = {-769226, -1499549, -54125, -6543440, -10011977, -12627531, -14575885, -16537100, -16728876, -16738680, -11751600, -7617718, -3285959, -5317, -16121, -26624, -8825528, -10453621, -6381922};
 
-    /* renamed from: A */
+    /* JADX INFO: renamed from: A */
     public EditText f21708A;
 
-    /* renamed from: B */
+    /* JADX INFO: renamed from: B */
     public View f21709B;
 
-    /* renamed from: C */
+    /* JADX INFO: renamed from: C */
     public TextView f21710C;
 
-    /* renamed from: D */
+    /* JADX INFO: renamed from: D */
     public Button f21711D;
 
-    /* renamed from: E */
+    /* JADX INFO: renamed from: E */
     public Button f21712E;
 
-    /* renamed from: F */
+    /* JADX INFO: renamed from: F */
     public TextView f21713F;
 
-    /* renamed from: G */
+    /* JADX INFO: renamed from: G */
     public boolean f21714G;
 
-    /* renamed from: H */
+    /* JADX INFO: renamed from: H */
     public int f21715H;
 
-    /* renamed from: I */
+    /* JADX INFO: renamed from: I */
     public boolean f21716I;
 
-    /* renamed from: J */
+    /* JADX INFO: renamed from: J */
     public int f21717J;
 
-    /* renamed from: K */
+    /* JADX INFO: renamed from: K */
     public final View.OnTouchListener f21718K = new ViewOnTouchListenerC11154b();
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public ColorPickerDialogListener f21719k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public View f21720l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public FrameLayout f21721m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public int[] f21722n;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     @ColorInt
     public int f21723o;
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public int f21724p;
 
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     public int f21725q;
 
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     public boolean f21726r;
 
-    /* renamed from: s */
+    /* JADX INFO: renamed from: s */
     public int f21727s;
 
-    /* renamed from: t */
+    /* JADX INFO: renamed from: t */
     public ColorPaletteAdapter f21728t;
 
-    /* renamed from: u */
+    /* JADX INFO: renamed from: u */
     public LinearLayout f21729u;
 
-    /* renamed from: v */
+    /* JADX INFO: renamed from: v */
     public SeekBar f21730v;
 
-    /* renamed from: w */
+    /* JADX INFO: renamed from: w */
     public TextView f21731w;
 
-    /* renamed from: x */
+    /* JADX INFO: renamed from: x */
     public ColorPickerView f21732x;
 
-    /* renamed from: y */
+    /* JADX INFO: renamed from: y */
     public ColorPanelView f21733y;
 
-    /* renamed from: z */
+    /* JADX INFO: renamed from: z */
     public EditText f21734z;
 
-    /* renamed from: com.jaredrummler.android.colorpicker.ColorPickerDialog$a */
+    /* JADX INFO: renamed from: com.jaredrummler.android.colorpicker.ColorPickerDialog$a */
     public class ViewOnLongClickListenerC11153a implements View.OnLongClickListener {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public final /* synthetic */ ColorPanelView f21735j;
 
         public ViewOnLongClickListenerC11153a(ColorPickerDialog colorPickerDialog, ColorPanelView colorPanelView) {
@@ -151,7 +151,7 @@ public class ColorPickerDialog extends DialogFragment implements ColorPickerView
         }
     }
 
-    /* renamed from: com.jaredrummler.android.colorpicker.ColorPickerDialog$b */
+    /* JADX INFO: renamed from: com.jaredrummler.android.colorpicker.ColorPickerDialog$b */
     public class ViewOnTouchListenerC11154b implements View.OnTouchListener {
         public ViewOnTouchListenerC11154b() {
         }
@@ -169,7 +169,7 @@ public class ColorPickerDialog extends DialogFragment implements ColorPickerView
         }
     }
 
-    /* renamed from: com.jaredrummler.android.colorpicker.ColorPickerDialog$c */
+    /* JADX INFO: renamed from: com.jaredrummler.android.colorpicker.ColorPickerDialog$c */
     public class ViewOnClickListenerC11155c implements View.OnClickListener {
         public ViewOnClickListenerC11155c() {
         }
@@ -182,7 +182,7 @@ public class ColorPickerDialog extends DialogFragment implements ColorPickerView
         }
     }
 
-    /* renamed from: com.jaredrummler.android.colorpicker.ColorPickerDialog$d */
+    /* JADX INFO: renamed from: com.jaredrummler.android.colorpicker.ColorPickerDialog$d */
     public class ViewOnClickListenerC11156d implements View.OnClickListener {
         public ViewOnClickListenerC11156d() {
         }
@@ -204,7 +204,7 @@ public class ColorPickerDialog extends DialogFragment implements ColorPickerView
         }
     }
 
-    /* renamed from: com.jaredrummler.android.colorpicker.ColorPickerDialog$e */
+    /* JADX INFO: renamed from: com.jaredrummler.android.colorpicker.ColorPickerDialog$e */
     public class ViewOnClickListenerC11157e implements View.OnClickListener {
         public ViewOnClickListenerC11157e() {
         }
@@ -241,7 +241,7 @@ public class ColorPickerDialog extends DialogFragment implements ColorPickerView
         }
     }
 
-    /* renamed from: com.jaredrummler.android.colorpicker.ColorPickerDialog$f */
+    /* JADX INFO: renamed from: com.jaredrummler.android.colorpicker.ColorPickerDialog$f */
     public class ViewOnClickListenerC11158f implements View.OnClickListener {
         public ViewOnClickListenerC11158f() {
         }
@@ -258,7 +258,7 @@ public class ColorPickerDialog extends DialogFragment implements ColorPickerView
         }
     }
 
-    /* renamed from: com.jaredrummler.android.colorpicker.ColorPickerDialog$g */
+    /* JADX INFO: renamed from: com.jaredrummler.android.colorpicker.ColorPickerDialog$g */
     public class ViewOnFocusChangeListenerC11159g implements View.OnFocusChangeListener {
         public ViewOnFocusChangeListenerC11159g() {
         }
@@ -271,19 +271,19 @@ public class ColorPickerDialog extends DialogFragment implements ColorPickerView
         }
     }
 
-    /* renamed from: com.jaredrummler.android.colorpicker.ColorPickerDialog$h */
+    /* JADX INFO: renamed from: com.jaredrummler.android.colorpicker.ColorPickerDialog$h */
     public class C11160h implements ColorPaletteAdapter.a {
         public C11160h() {
         }
     }
 
-    /* renamed from: com.jaredrummler.android.colorpicker.ColorPickerDialog$i */
+    /* JADX INFO: renamed from: com.jaredrummler.android.colorpicker.ColorPickerDialog$i */
     public class RunnableC11161i implements Runnable {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public final /* synthetic */ ColorPanelView f21743j;
 
-        /* renamed from: k */
+        /* JADX INFO: renamed from: k */
         public final /* synthetic */ int f21744k;
 
         public RunnableC11161i(ColorPickerDialog colorPickerDialog, ColorPanelView colorPanelView, int i) {
@@ -297,10 +297,10 @@ public class ColorPickerDialog extends DialogFragment implements ColorPickerView
         }
     }
 
-    /* renamed from: com.jaredrummler.android.colorpicker.ColorPickerDialog$j */
+    /* JADX INFO: renamed from: com.jaredrummler.android.colorpicker.ColorPickerDialog$j */
     public class ViewOnClickListenerC11162j implements View.OnClickListener {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public final /* synthetic */ ColorPanelView f21745j;
 
         public ViewOnClickListenerC11162j(ColorPanelView colorPanelView) {
@@ -334,106 +334,106 @@ public class ColorPickerDialog extends DialogFragment implements ColorPickerView
         }
     }
 
-    /* renamed from: com.jaredrummler.android.colorpicker.ColorPickerDialog$k */
+    /* JADX INFO: renamed from: com.jaredrummler.android.colorpicker.ColorPickerDialog$k */
     public static final class C11163k {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         @StringRes
         public int f21747a = C11167R.e.cpv_default_title;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         @StringRes
         public int f21748b = C11167R.e.cpv_presets;
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         @StringRes
         public int f21749c = C11167R.e.cpv_custom;
 
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         @StringRes
         public int f21750d = C11167R.e.cpv_select;
 
-        /* renamed from: e */
+        /* JADX INFO: renamed from: e */
         @StringRes
         public int f21751e = 0;
 
-        /* renamed from: f */
+        /* JADX INFO: renamed from: f */
         public int f21752f = 1;
 
-        /* renamed from: g */
+        /* JADX INFO: renamed from: g */
         public int[] f21753g = ColorPickerDialog.f21707j;
 
-        /* renamed from: h */
+        /* JADX INFO: renamed from: h */
         @ColorInt
         public int f21754h = ViewCompat.MEASURED_STATE_MASK;
 
-        /* renamed from: i */
+        /* JADX INFO: renamed from: i */
         public boolean f21755i = false;
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public boolean f21756j = true;
 
-        /* renamed from: k */
+        /* JADX INFO: renamed from: k */
         public boolean f21757k = true;
 
-        /* renamed from: l */
+        /* JADX INFO: renamed from: l */
         public boolean f21758l = true;
 
-        /* renamed from: m */
+        /* JADX INFO: renamed from: m */
         public boolean f21759m = true;
 
-        /* renamed from: n */
+        /* JADX INFO: renamed from: n */
         public int f21760n = 1;
 
-        /* renamed from: o */
+        /* JADX INFO: renamed from: o */
         @ColorInt
         public int f21761o = 0;
 
-        /* renamed from: p */
+        /* JADX INFO: renamed from: p */
         @ColorInt
         public int f21762p = 0;
 
-        /* renamed from: q */
+        /* JADX INFO: renamed from: q */
         @ColorInt
         public int f21763q = 0;
 
-        /* renamed from: r */
+        /* JADX INFO: renamed from: r */
         @ColorInt
         public int f21764r = 0;
 
-        /* renamed from: s */
+        /* JADX INFO: renamed from: s */
         @ColorInt
         public int f21765s = 0;
 
-        /* renamed from: t */
+        /* JADX INFO: renamed from: t */
         @ColorInt
         public int f21766t = 0;
 
-        /* renamed from: u */
+        /* JADX INFO: renamed from: u */
         @DrawableRes
         public int f21767u = 0;
 
-        /* renamed from: v */
+        /* JADX INFO: renamed from: v */
         @ColorInt
         public int f21768v = 0;
 
-        /* renamed from: w */
+        /* JADX INFO: renamed from: w */
         @ColorInt
         public int f21769w = 0;
 
-        /* renamed from: x */
+        /* JADX INFO: renamed from: x */
         @FontRes
         public int f21770x = 0;
 
-        /* renamed from: y */
+        /* JADX INFO: renamed from: y */
         @FontRes
         public int f21771y = 0;
 
-        /* renamed from: z */
+        /* JADX INFO: renamed from: z */
         @FontRes
         public int f21772z = 0;
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public ColorPickerDialog m9275a() {
             ColorPickerDialog colorPickerDialog = new ColorPickerDialog();
             Bundle bundle = new Bundle();
@@ -469,7 +469,7 @@ public class ColorPickerDialog extends DialogFragment implements ColorPickerView
         }
     }
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public static void m9267g(ColorPickerDialog colorPickerDialog, int i) {
         if (colorPickerDialog.f21719k != null) {
             Log.w("ColorPickerDialog", "Using deprecated listener which may be remove in future releases");
@@ -489,7 +489,7 @@ public class ColorPickerDialog extends DialogFragment implements ColorPickerView
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
-    public void afterTextChanged(Editable editable) throws NumberFormatException {
+    public void afterTextChanged(Editable editable) {
         int i;
         int i2;
         int i3;
@@ -587,7 +587,7 @@ public class ColorPickerDialog extends DialogFragment implements ColorPickerView
     public void beforeTextChanged(CharSequence charSequence, int i, int i2, int i3) {
     }
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public void m9268h(@ColorInt int i) {
         int i2 = 0;
         int[] iArr = {m9273m(i, 0.9d), m9273m(i, 0.7d), m9273m(i, 0.5d), m9273m(i, 0.333d), m9273m(i, 0.166d), m9273m(i, -0.125d), m9273m(i, -0.25d), m9273m(i, -0.375d), m9273m(i, -0.5d), m9273m(i, -0.675d), m9273m(i, -0.7d), m9273m(i, -0.775d)};
@@ -621,7 +621,7 @@ public class ColorPickerDialog extends DialogFragment implements ColorPickerView
         }
     }
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public View m9269i() {
         View viewInflate = View.inflate(getActivity(), C11167R.d.cpv_dialog_color_picker, null);
         this.f21732x = (ColorPickerView) viewInflate.findViewById(C11167R.c.cpv_color_picker_view);
@@ -658,7 +658,7 @@ public class ColorPickerDialog extends DialogFragment implements ColorPickerView
         return viewInflate;
     }
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public View m9270j() {
         boolean z2;
         View viewInflate = View.inflate(getActivity(), C11167R.d.cpv_dialog_presets, null);
@@ -753,7 +753,7 @@ public class ColorPickerDialog extends DialogFragment implements ColorPickerView
             int iAlpha2 = 255 - Color.alpha(this.f21723o);
             this.f21730v.setMax(255);
             this.f21730v.setProgress(iAlpha2);
-            this.f21731w.setText(String.format(Locale.ENGLISH, "%d%%", Integer.valueOf((int) ((iAlpha2 * 100.0d) / 255.0d))));
+            this.f21731w.setText(String.format(Locale.ENGLISH, "%d%%", Integer.valueOf((int) ((((double) iAlpha2) * 100.0d) / 255.0d))));
             this.f21730v.setOnSeekBarChangeListener(new ColorPickerDialog2(this));
         } else {
             viewInflate.findViewById(C11167R.c.transparency_layout).setVisibility(8);
@@ -762,7 +762,7 @@ public class ColorPickerDialog extends DialogFragment implements ColorPickerView
         return viewInflate;
     }
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public void m9271k(int i) {
         this.f21723o = i;
         ColorPanelView colorPanelView = this.f21733y;
@@ -779,7 +779,7 @@ public class ColorPickerDialog extends DialogFragment implements ColorPickerView
         this.f21716I = false;
     }
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final void m9272l(int i) {
         if (this.f21714G) {
             this.f21708A.setText(String.format("%08X", Integer.valueOf(i)));
@@ -788,8 +788,8 @@ public class ColorPickerDialog extends DialogFragment implements ColorPickerView
         }
     }
 
-    /* renamed from: m */
-    public final int m9273m(@ColorInt int i, double d) throws NumberFormatException {
+    /* JADX INFO: renamed from: m */
+    public final int m9273m(@ColorInt int i, double d) {
         long j = Long.parseLong(String.format("#%06X", Integer.valueOf(16777215 & i)).substring(1), 16);
         double d2 = d >= 0.0d ? 255.0d : 0.0d;
         if (d < 0.0d) {
@@ -801,7 +801,7 @@ public class ColorPickerDialog extends DialogFragment implements ColorPickerView
         return Color.argb(Color.alpha(i), (int) (Math.round((d2 - j2) * d) + j2), (int) (Math.round((d2 - j3) * d) + j3), (int) (Math.round((d2 - j4) * d) + j4));
     }
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public final int[] m9274n(int[] iArr, int i) {
         boolean z2;
         int length = iArr.length;

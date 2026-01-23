@@ -7,7 +7,7 @@ import androidx.annotation.NonNull;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class CanvasUtils {
     private static Method sInorderBarrierMethod;
     private static boolean sOrderMethodsFetched;
@@ -17,7 +17,7 @@ public class CanvasUtils {
     }
 
     @SuppressLint({"SoonBlockedPrivateApi"})
-    public static void enableZ(@NonNull Canvas canvas, boolean z2) throws SecurityException, IllegalArgumentException {
+    public static void enableZ(@NonNull Canvas canvas, boolean z2) {
         Method method;
         int i = Build.VERSION.SDK_INT;
         if (i >= 29) {

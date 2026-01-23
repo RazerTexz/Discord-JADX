@@ -21,18 +21,18 @@ import p007b.p100d.p104b.p105a.outline;
 import p007b.p445m.p446a.AndroidClockFactory;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: RemoteIntentService.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: RemoteIntentService.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public abstract class RemoteIntentService extends IntentService {
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private static final String MESSENGER_KEY = "com.discord.utilities.analytics.RemoteIntentService.MESSENGER_KEY";
     private static final String TAG = "RemoteIntentService";
     private static final int WHAT_CALLBACK_RESULT = 1;
     private final String name;
 
-    /* compiled from: RemoteIntentService.kt */
+    /* JADX INFO: compiled from: RemoteIntentService.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -78,7 +78,7 @@ public abstract class RemoteIntentService extends IntentService {
         }
     }
 
-    /* compiled from: RemoteIntentService.kt */
+    /* JADX INFO: compiled from: RemoteIntentService.kt */
     public static abstract class IpcCallback {
         private final Handler handler;
         private final String name;

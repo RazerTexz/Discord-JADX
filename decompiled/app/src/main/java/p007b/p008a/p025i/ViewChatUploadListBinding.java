@@ -6,24 +6,24 @@ import androidx.annotation.NonNull;
 import androidx.viewbinding.ViewBinding;
 import com.discord.views.FailedUploadView;
 
-/* compiled from: ViewChatUploadListBinding.java */
-/* renamed from: b.a.i.d2, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.a.i.d2, reason: use source file name */
+/* JADX INFO: compiled from: ViewChatUploadListBinding.java */
+/* JADX INFO: loaded from: classes.dex */
 public final class ViewChatUploadListBinding implements ViewBinding {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     @NonNull
     public final LinearLayout f778a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     @NonNull
     public final FailedUploadView f779b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     @NonNull
     public final FailedUploadView f780c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     @NonNull
     public final FailedUploadView f781d;
 

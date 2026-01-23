@@ -13,86 +13,86 @@ import p507d0.p580t.Collections2;
 import p507d0.p580t._Collections;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: MemberScope.kt */
-/* renamed from: d0.e0.p.d.m0.k.a0.d, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.k.a0.d, reason: use source file name */
+/* JADX INFO: compiled from: MemberScope.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class MemberScope2 {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final a f24339a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static int f24340b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public static final int f24341c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public static final int f24342d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public static final int f24343e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public static final int f24344f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public static final int f24345g;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public static final int f24346h;
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public static final int f24347i;
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static final int f24348j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public static final int f24349k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public static final int f24350l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public static final MemberScope2 f24351m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public static final MemberScope2 f24352n;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public static final MemberScope2 f24353o;
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public static final MemberScope2 f24354p;
 
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     public static final MemberScope2 f24355q;
 
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     public static final List<a.C13327a> f24356r;
 
-    /* renamed from: s */
+    /* JADX INFO: renamed from: s */
     public static final List<a.C13327a> f24357s;
 
-    /* renamed from: t */
+    /* JADX INFO: renamed from: t */
     public final List<MemberScope> f24358t;
 
-    /* renamed from: u */
+    /* JADX INFO: renamed from: u */
     public final int f24359u;
 
-    /* compiled from: MemberScope.kt */
-    /* renamed from: d0.e0.p.d.m0.k.a0.d$a */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.k.a0.d$a */
+    /* JADX INFO: compiled from: MemberScope.kt */
     public static final class a {
 
-        /* compiled from: MemberScope.kt */
-        /* renamed from: d0.e0.p.d.m0.k.a0.d$a$a, reason: collision with other inner class name */
+        /* JADX INFO: renamed from: d0.e0.p.d.m0.k.a0.d$a$a, reason: collision with other inner class name */
+        /* JADX INFO: compiled from: MemberScope.kt */
         public static final class C13327a {
 
-            /* renamed from: a */
+            /* JADX INFO: renamed from: a */
             public final int f24360a;
 
-            /* renamed from: b */
+            /* JADX INFO: renamed from: b */
             public final String f24361b;
 
             public C13327a(int i, String str) {

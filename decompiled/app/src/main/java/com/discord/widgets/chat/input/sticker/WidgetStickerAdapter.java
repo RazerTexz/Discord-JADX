@@ -18,8 +18,8 @@ import p507d0.p580t._Collections;
 import p507d0.p592z.p594d.Intrinsics3;
 import p658rx.subjects.BehaviorSubject;
 
-/* compiled from: WidgetStickerAdapter.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetStickerAdapter.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetStickerAdapter extends WidgetExpressionPickerAdapter {
     public static final int DEFAULT_NUM_COLUMNS = 4;
     public static final int ITEM_TYPE_OWNED_HEADER = 0;
@@ -33,8 +33,8 @@ public final class WidgetStickerAdapter extends WidgetExpressionPickerAdapter {
     private final BehaviorSubject<Boolean> recyclerScrollingWithinThresholdSubject;
     private final boolean showStickerPackDescriptions;
 
-    /* compiled from: WidgetStickerAdapter.kt */
-    /* renamed from: com.discord.widgets.chat.input.sticker.WidgetStickerAdapter$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.input.sticker.WidgetStickerAdapter$1 */
+    /* JADX INFO: compiled from: WidgetStickerAdapter.kt */
     public static final class C79011 extends GridLayoutManager.SpanSizeLookup {
         public C79011() {
         }

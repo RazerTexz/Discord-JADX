@@ -7,9 +7,9 @@ import com.discord.widgets.user.usersheet.WidgetUserSheetViewModel;
 import p007b.p008a.p018d.AppToast;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: WidgetUserSheet.kt */
-/* renamed from: com.discord.widgets.user.usersheet.WidgetUserSheet$configureDeveloperSection$$inlined$apply$lambda$1 */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: com.discord.widgets.user.usersheet.WidgetUserSheet$configureDeveloperSection$$inlined$apply$lambda$1 */
+/* JADX INFO: compiled from: WidgetUserSheet.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class ViewOnClickListenerC10347x347522d0 implements View.OnClickListener {
     public final /* synthetic */ TextView $this_apply;
     public final /* synthetic */ WidgetUserSheetViewModel.ViewState.Loaded $viewState$inlined;

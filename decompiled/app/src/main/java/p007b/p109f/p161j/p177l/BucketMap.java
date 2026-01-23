@@ -5,37 +5,37 @@ import androidx.annotation.VisibleForTesting;
 import java.util.LinkedList;
 import p007b.p100d.p104b.p105a.outline;
 
-/* compiled from: BucketMap.java */
-/* renamed from: b.f.j.l.g, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.f.j.l.g, reason: use source file name */
+/* JADX INFO: compiled from: BucketMap.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class BucketMap<T> {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final SparseArray<b<T>> f3931a = new SparseArray<>();
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     @VisibleForTesting
     public b<T> f3932b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     @VisibleForTesting
     public b<T> f3933c;
 
-    /* compiled from: BucketMap.java */
+    /* JADX INFO: renamed from: b.f.j.l.g$b */
+    /* JADX INFO: compiled from: BucketMap.java */
     @VisibleForTesting
-    /* renamed from: b.f.j.l.g$b */
     public static class b<I> {
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public int f3935b;
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public LinkedList<I> f3936c;
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public b<I> f3934a = null;
 
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         public b<I> f3937d = null;
 
         public b(b bVar, int i, LinkedList linkedList, b bVar2, a aVar) {
@@ -49,7 +49,7 @@ public class BucketMap<T> {
     }
 
     /* JADX WARN: Multi-variable type inference failed */
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final void m1380a(b<T> bVar) {
         if (this.f3932b == bVar) {
             return;
@@ -66,7 +66,7 @@ public class BucketMap<T> {
         }
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final synchronized void m1381b(b<T> bVar) {
         b bVar2 = (b<T>) bVar.f3934a;
         b bVar3 = (b<T>) bVar.f3937d;

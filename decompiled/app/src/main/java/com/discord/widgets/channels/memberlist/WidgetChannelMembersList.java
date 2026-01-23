@@ -34,21 +34,21 @@ import p507d0.p592z.p594d.Reflection2;
 import p658rx.Observable;
 import p658rx.subjects.PublishSubject;
 
-/* compiled from: WidgetChannelMembersList.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetChannelMembersList.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetChannelMembersList extends AppFragment {
     private static final String SOURCE = "WidgetChannelMembersList";
     private ChannelMembersListAdapter adapter;
     private int memberCellHeightPx;
 
-    /* renamed from: recycler$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: recycler$delegate, reason: from kotlin metadata */
     private final Lazy recycler;
     private final RxOnScrollListener scrollListener;
 
-    /* renamed from: viewModel$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: viewModel$delegate, reason: from kotlin metadata */
     private final Lazy viewModel;
 
-    /* compiled from: WidgetChannelMembersList.kt */
+    /* JADX INFO: compiled from: WidgetChannelMembersList.kt */
     public static final class RxOnScrollListener extends RecyclerView.OnScrollListener {
         private final PublishSubject<Unit> scrollYSubject = PublishSubject.m11133k0();
 
@@ -67,8 +67,8 @@ public final class WidgetChannelMembersList extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetChannelMembersList.kt */
-    /* renamed from: com.discord.widgets.channels.memberlist.WidgetChannelMembersList$configureLoadedUI$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.channels.memberlist.WidgetChannelMembersList$configureLoadedUI$1 */
+    /* JADX INFO: compiled from: WidgetChannelMembersList.kt */
     public static final class C74881 extends Lambda implements Function1<Long, Unit> {
         public final /* synthetic */ WidgetChannelMembersListViewModel.ViewState.Loaded $viewState;
 
@@ -93,8 +93,8 @@ public final class WidgetChannelMembersList extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetChannelMembersList.kt */
-    /* renamed from: com.discord.widgets.channels.memberlist.WidgetChannelMembersList$configureLoadedUI$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.channels.memberlist.WidgetChannelMembersList$configureLoadedUI$2 */
+    /* JADX INFO: compiled from: WidgetChannelMembersList.kt */
     public static final class C74892 extends Lambda implements Function0<Unit> {
         public final /* synthetic */ WidgetChannelMembersListViewModel.ViewState.Loaded $viewState;
 
@@ -110,14 +110,14 @@ public final class WidgetChannelMembersList extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             ChannelInviteLaunchUtils.inviteToChannel$default(ChannelInviteLaunchUtils.INSTANCE, WidgetChannelMembersList.this, this.$viewState.getChannel(), WidgetChannelMembersList.SOURCE, null, null, 24, null);
         }
     }
 
-    /* compiled from: WidgetChannelMembersList.kt */
-    /* renamed from: com.discord.widgets.channels.memberlist.WidgetChannelMembersList$configureLoadedUI$3 */
+    /* JADX INFO: renamed from: com.discord.widgets.channels.memberlist.WidgetChannelMembersList$configureLoadedUI$3 */
+    /* JADX INFO: compiled from: WidgetChannelMembersList.kt */
     public static final class C74903 extends Lambda implements Function0<Unit> {
         public final /* synthetic */ WidgetChannelMembersListViewModel.ViewState.Loaded $viewState;
 
@@ -133,14 +133,14 @@ public final class WidgetChannelMembersList extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             WidgetChannelMembersList.access$getViewModel$p(WidgetChannelMembersList.this).onThreadJoinLeaveClicked(this.$viewState.getChannel().getId(), this.$viewState.isThreadJoined());
         }
     }
 
-    /* compiled from: WidgetChannelMembersList.kt */
-    /* renamed from: com.discord.widgets.channels.memberlist.WidgetChannelMembersList$onViewBoundOrOnResume$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.channels.memberlist.WidgetChannelMembersList$onViewBoundOrOnResume$1 */
+    /* JADX INFO: compiled from: WidgetChannelMembersList.kt */
     public static final class C74911 extends Lambda implements Function1<WidgetChannelMembersListViewModel.ViewState, Unit> {
         public C74911() {
             super(1);
@@ -152,15 +152,15 @@ public final class WidgetChannelMembersList extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(WidgetChannelMembersListViewModel.ViewState viewState) {
             Intrinsics3.checkNotNullParameter(viewState, "viewState");
             WidgetChannelMembersList.access$configureUI(WidgetChannelMembersList.this, viewState);
         }
     }
 
-    /* compiled from: WidgetChannelMembersList.kt */
-    /* renamed from: com.discord.widgets.channels.memberlist.WidgetChannelMembersList$onViewBoundOrOnResume$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.channels.memberlist.WidgetChannelMembersList$onViewBoundOrOnResume$2 */
+    /* JADX INFO: compiled from: WidgetChannelMembersList.kt */
     public static final class C74922 extends Lambda implements Function1<WidgetChannelMembersListViewModel.Event, Unit> {
         public C74922() {
             super(1);
@@ -172,7 +172,7 @@ public final class WidgetChannelMembersList extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(WidgetChannelMembersListViewModel.Event event) {
             Intrinsics3.checkNotNullParameter(event, "event");
             if (Intrinsics3.areEqual(event, WidgetChannelMembersListViewModel.Event.ScrollToTop.INSTANCE)) {
@@ -185,8 +185,8 @@ public final class WidgetChannelMembersList extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetChannelMembersList.kt */
-    /* renamed from: com.discord.widgets.channels.memberlist.WidgetChannelMembersList$onViewBoundOrOnResume$3 */
+    /* JADX INFO: renamed from: com.discord.widgets.channels.memberlist.WidgetChannelMembersList$onViewBoundOrOnResume$3 */
+    /* JADX INFO: compiled from: WidgetChannelMembersList.kt */
     public static final class C74933 extends Lambda implements Function1<Unit, Unit> {
         public C74933() {
             super(1);
@@ -198,7 +198,7 @@ public final class WidgetChannelMembersList extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Unit unit) {
             WidgetChannelMembersList.access$updateRanges(WidgetChannelMembersList.this);
         }

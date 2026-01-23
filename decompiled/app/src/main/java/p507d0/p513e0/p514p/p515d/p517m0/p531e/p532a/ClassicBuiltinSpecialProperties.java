@@ -10,16 +10,16 @@ import p507d0.p580t._Collections;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: ClassicBuiltinSpecialProperties.kt */
-/* renamed from: d0.e0.p.d.m0.e.a.k, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.e.a.k, reason: use source file name */
+/* JADX INFO: compiled from: ClassicBuiltinSpecialProperties.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class ClassicBuiltinSpecialProperties {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final ClassicBuiltinSpecialProperties f23436a = new ClassicBuiltinSpecialProperties();
 
-    /* compiled from: ClassicBuiltinSpecialProperties.kt */
-    /* renamed from: d0.e0.p.d.m0.e.a.k$a */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.e.a.k$a */
+    /* JADX INFO: compiled from: ClassicBuiltinSpecialProperties.kt */
     public static final class a extends Lambda implements Function1<CallableMemberDescriptor, Boolean> {
         public a() {
             super(1);
@@ -30,7 +30,7 @@ public final class ClassicBuiltinSpecialProperties {
             return Boolean.valueOf(invoke2(callableMemberDescriptor));
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final boolean invoke2(CallableMemberDescriptor callableMemberDescriptor) {
             Intrinsics3.checkNotNullParameter(callableMemberDescriptor, "it");
             return ClassicBuiltinSpecialProperties.this.hasBuiltinSpecialPropertyFqName(callableMemberDescriptor);

@@ -15,8 +15,8 @@ import java.util.Iterator;
 import java.util.List;
 import p007b.p100d.p104b.p105a.outline;
 
+/* JADX INFO: loaded from: classes.dex */
 @RestrictTo({RestrictTo.Scope.LIBRARY_GROUP_PREFIX})
-/* loaded from: classes.dex */
 public class ShareTargetXmlParser {
     private static final String ATTR_HOST = "host";
     private static final String ATTR_MIME_TYPE = "mimeType";

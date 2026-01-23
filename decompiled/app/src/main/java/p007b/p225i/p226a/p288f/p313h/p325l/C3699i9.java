@@ -1,11 +1,11 @@
 package p007b.p225i.p226a.p288f.p313h.p325l;
 
-/* compiled from: com.google.android.gms:play-services-measurement-impl@@18.0.0 */
-/* renamed from: b.i.a.f.h.l.i9 */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.h.l.i9 */
+/* JADX INFO: compiled from: com.google.android.gms:play-services-measurement-impl@@18.0.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public final class C3699i9 implements InterfaceC3713j9 {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final AbstractC3732l2<Boolean> f10012a;
 
     static {
@@ -15,13 +15,13 @@ public final class C3699i9 implements InterfaceC3713j9 {
     }
 
     @Override // p007b.p225i.p226a.p288f.p313h.p325l.InterfaceC3713j9
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final boolean mo4962a() {
         return true;
     }
 
     @Override // p007b.p225i.p226a.p288f.p313h.p325l.InterfaceC3713j9
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final boolean mo4963b() {
         return f10012a.m5050d().booleanValue();
     }

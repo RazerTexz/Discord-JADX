@@ -16,35 +16,35 @@ import p600f0.p601e0.p604f.TaskRunner;
 import p600f0.p601e0.p605g.RealCall;
 import p600f0.p601e0.p609k.Platform2;
 
-/* compiled from: RealConnectionPool.kt */
-/* renamed from: f0.e0.g.k, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: f0.e0.g.k, reason: use source file name */
+/* JADX INFO: compiled from: RealConnectionPool.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class RealConnectionPool {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final long f25507a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final TaskQueue2 f25508b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final a f25509c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final ConcurrentLinkedQueue<RealConnection4> f25510d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final int f25511e;
 
-    /* compiled from: RealConnectionPool.kt */
-    /* renamed from: f0.e0.g.k$a */
+    /* JADX INFO: renamed from: f0.e0.g.k$a */
+    /* JADX INFO: compiled from: RealConnectionPool.kt */
     public static final class a extends Task2 {
         public a(String str) {
             super(str, true);
         }
 
         @Override // p600f0.p601e0.p604f.Task2
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public long mo10150a() {
             RealConnectionPool realConnectionPool = RealConnectionPool.this;
             long jNanoTime = System.nanoTime();
@@ -112,7 +112,7 @@ public final class RealConnectionPool {
         }
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final boolean m10207a(Address address, RealCall realCall, List<Route> list, boolean z2) {
         Intrinsics3.checkParameterIsNotNull(address, "address");
         Intrinsics3.checkParameterIsNotNull(realCall, NotificationCompat.CATEGORY_CALL);
@@ -132,7 +132,7 @@ public final class RealConnectionPool {
         return false;
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final int m10208b(RealConnection4 realConnection4, long j) {
         byte[] bArr = Util7.f25397a;
         List<Reference<RealCall>> list = realConnection4.f25504o;

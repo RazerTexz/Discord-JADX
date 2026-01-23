@@ -9,18 +9,18 @@ import p007b.p225i.p226a.p242c.p245b3.Cue;
 import p007b.p225i.p226a.p242c.p245b3.Subtitle;
 import p007b.p225i.p226a.p242c.p259f3.Util2;
 
-/* compiled from: WebvttSubtitle.java */
-/* renamed from: b.i.a.c.b3.v.k, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.b3.v.k, reason: use source file name */
+/* JADX INFO: compiled from: WebvttSubtitle.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class WebvttSubtitle implements Subtitle {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final List<WebvttCueInfo> f6160j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final long[] f6161k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final long[] f6162l;
 
     public WebvttSubtitle(List<WebvttCueInfo> list) {
@@ -40,7 +40,7 @@ public final class WebvttSubtitle implements Subtitle {
     }
 
     @Override // p007b.p225i.p226a.p242c.p245b3.Subtitle
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public int mo2612f(long j) {
         int iM2994b = Util2.m2994b(this.f6162l, j, false, false);
         if (iM2994b < this.f6162l.length) {
@@ -50,7 +50,7 @@ public final class WebvttSubtitle implements Subtitle {
     }
 
     @Override // p007b.p225i.p226a.p242c.p245b3.Subtitle
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public long mo2613g(int i) {
         AnimatableValueParser.m531j(i >= 0);
         AnimatableValueParser.m531j(i < this.f6162l.length);
@@ -58,7 +58,7 @@ public final class WebvttSubtitle implements Subtitle {
     }
 
     @Override // p007b.p225i.p226a.p242c.p245b3.Subtitle
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public List<Cue> mo2614h(long j) {
         ArrayList arrayList = new ArrayList();
         ArrayList arrayList2 = new ArrayList();
@@ -86,7 +86,7 @@ public final class WebvttSubtitle implements Subtitle {
     }
 
     @Override // p007b.p225i.p226a.p242c.p245b3.Subtitle
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public int mo2615i() {
         return this.f6162l.length;
     }

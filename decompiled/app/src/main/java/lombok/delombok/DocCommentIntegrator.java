@@ -13,7 +13,7 @@ import lombok.javac.Javac;
 import lombok.javac.PackageName;
 import lombok.javac.handlers.JavacHandlerUtil;
 
-/* loaded from: discord-126021.apk:lombok/delombok/DocCommentIntegrator.SCL.lombok */
+/* JADX INFO: loaded from: discord-126021.apk:lombok/delombok/DocCommentIntegrator.SCL.lombok */
 public class DocCommentIntegrator {
     private static final Pattern CONTENT_STRIPPER = Pattern.compile("^(?:\\s*\\*)?(.*?)$", 8);
 
@@ -68,13 +68,13 @@ public class DocCommentIntegrator {
         return false;
     }
 
-    /* loaded from: discord-126021.apk:lombok/delombok/DocCommentIntegrator$CommentAttacher_8.SCL.lombok */
+    /* JADX INFO: loaded from: discord-126021.apk:lombok/delombok/DocCommentIntegrator$CommentAttacher_8.SCL.lombok */
     private static class CommentAttacher_8 {
         private CommentAttacher_8() {
         }
 
-        /* renamed from: lombok.delombok.DocCommentIntegrator$CommentAttacher_8$1 */
-        /* loaded from: discord-126021.apk:lombok/delombok/DocCommentIntegrator$CommentAttacher_8$1.SCL.lombok */
+        /* JADX INFO: renamed from: lombok.delombok.DocCommentIntegrator$CommentAttacher_8$1 */
+        /* JADX INFO: loaded from: discord-126021.apk:lombok/delombok/DocCommentIntegrator$CommentAttacher_8$1.SCL.lombok */
         class C128451 implements Tokens.Comment {
             private final /* synthetic */ String val$docCommentContent_;
             private final /* synthetic */ JCTree val$node;

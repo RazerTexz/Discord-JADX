@@ -7,9 +7,9 @@ import java.util.List;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ChannelListItemActiveEvent.kt */
-/* renamed from: com.discord.widgets.channels.list.items.ChannelListItemActiveEventData, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.channels.list.items.ChannelListItemActiveEventData, reason: use source file name */
+/* JADX INFO: compiled from: ChannelListItemActiveEvent.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final /* data */ class ChannelListItemActiveEvent2 {
     private final int audienceSize;
     private final boolean connected;
@@ -31,6 +31,7 @@ public final /* data */ class ChannelListItemActiveEvent2 {
         this.eventId = l;
     }
 
+    /* JADX WARN: Multi-variable type inference failed */
     public static /* synthetic */ ChannelListItemActiveEvent2 copy$default(ChannelListItemActiveEvent2 channelListItemActiveEvent2, String str, GuildScheduledEventLocationInfo guildScheduledEventLocationInfo, int i, List list, boolean z2, boolean z3, Long l, int i2, Object obj) {
         if ((i2 & 1) != 0) {
             str = channelListItemActiveEvent2.topic;
@@ -61,17 +62,17 @@ public final /* data */ class ChannelListItemActiveEvent2 {
         return channelListItemActiveEvent2.copy(str, guildScheduledEventLocationInfo2, i3, list2, z4, z5, l);
     }
 
-    /* renamed from: component1, reason: from getter */
+    /* JADX INFO: renamed from: component1, reason: from getter */
     public final String getTopic() {
         return this.topic;
     }
 
-    /* renamed from: component2, reason: from getter */
+    /* JADX INFO: renamed from: component2, reason: from getter */
     public final GuildScheduledEventLocationInfo getLocationInfo() {
         return this.locationInfo;
     }
 
-    /* renamed from: component3, reason: from getter */
+    /* JADX INFO: renamed from: component3, reason: from getter */
     public final int getAudienceSize() {
         return this.audienceSize;
     }
@@ -80,17 +81,17 @@ public final /* data */ class ChannelListItemActiveEvent2 {
         return this.speakers;
     }
 
-    /* renamed from: component5, reason: from getter */
+    /* JADX INFO: renamed from: component5, reason: from getter */
     public final boolean getConnected() {
         return this.connected;
     }
 
-    /* renamed from: component6, reason: from getter */
+    /* JADX INFO: renamed from: component6, reason: from getter */
     public final boolean getIsSpeaker() {
         return this.isSpeaker;
     }
 
-    /* renamed from: component7, reason: from getter */
+    /* JADX INFO: renamed from: component7, reason: from getter */
     public final Long getEventId() {
         return this.eventId;
     }
@@ -137,6 +138,12 @@ public final /* data */ class ChannelListItemActiveEvent2 {
     }
 
     /* JADX WARN: Multi-variable type inference failed */
+    /* JADX WARN: Type inference failed for: r2v11 */
+    /* JADX WARN: Type inference failed for: r2v14 */
+    /* JADX WARN: Type inference failed for: r2v8, types: [int] */
+    /* JADX WARN: Type inference failed for: r3v0 */
+    /* JADX WARN: Type inference failed for: r3v1, types: [int] */
+    /* JADX WARN: Type inference failed for: r3v2 */
     public int hashCode() {
         String str = this.topic;
         int iHashCode = (str != null ? str.hashCode() : 0) * 31;
@@ -145,15 +152,15 @@ public final /* data */ class ChannelListItemActiveEvent2 {
         List<UserGuildMember> list = this.speakers;
         int iHashCode3 = (iHashCode2 + (list != null ? list.hashCode() : 0)) * 31;
         boolean z2 = this.connected;
-        int i = z2;
-        if (z2 != 0) {
-            i = 1;
+        ?? r2 = z2;
+        if (z2) {
+            r2 = 1;
         }
-        int i2 = (iHashCode3 + i) * 31;
+        int i = (iHashCode3 + r2) * 31;
         boolean z3 = this.isSpeaker;
-        int i3 = (i2 + (z3 ? 1 : z3 ? 1 : 0)) * 31;
+        int i2 = (i + (z3 ? 1 : z3)) * 31;
         Long l = this.eventId;
-        return i3 + (l != null ? l.hashCode() : 0);
+        return i2 + (l != null ? l.hashCode() : 0);
     }
 
     public final boolean isSpeaker() {

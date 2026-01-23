@@ -11,24 +11,24 @@ import p007b.p100d.p104b.p105a.outline;
 import p007b.p225i.p226a.p242c.C;
 import p007b.p225i.p226a.p242c.p259f3.Util2;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public final class DrmInitData implements Comparator<SchemeData>, Parcelable {
     public static final Parcelable.Creator<DrmInitData> CREATOR = new C10711a();
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final SchemeData[] f19847j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public int f19848k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     @Nullable
     public final String f19849l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public final int f19850m;
 
-    /* renamed from: com.google.android.exoplayer2.drm.DrmInitData$a */
+    /* JADX INFO: renamed from: com.google.android.exoplayer2.drm.DrmInitData$a */
     public class C10711a implements Parcelable.Creator<DrmInitData> {
         @Override // android.os.Parcelable.Creator
         public DrmInitData createFromParcel(Parcel parcel) {
@@ -49,7 +49,7 @@ public final class DrmInitData implements Comparator<SchemeData>, Parcelable {
         Arrays.sort(schemeDataArr, this);
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public DrmInitData m8835a(@Nullable String str) {
         return Util2.m2993a(this.f19849l, str) ? this : new DrmInitData(str, false, this.f19847j);
     }
@@ -96,24 +96,24 @@ public final class DrmInitData implements Comparator<SchemeData>, Parcelable {
     public static final class SchemeData implements Parcelable {
         public static final Parcelable.Creator<SchemeData> CREATOR = new C10710a();
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public int f19851j;
 
-        /* renamed from: k */
+        /* JADX INFO: renamed from: k */
         public final UUID f19852k;
 
-        /* renamed from: l */
+        /* JADX INFO: renamed from: l */
         @Nullable
         public final String f19853l;
 
-        /* renamed from: m */
+        /* JADX INFO: renamed from: m */
         public final String f19854m;
 
-        /* renamed from: n */
+        /* JADX INFO: renamed from: n */
         @Nullable
         public final byte[] f19855n;
 
-        /* renamed from: com.google.android.exoplayer2.drm.DrmInitData$SchemeData$a */
+        /* JADX INFO: renamed from: com.google.android.exoplayer2.drm.DrmInitData$SchemeData$a */
         public class C10710a implements Parcelable.Creator<SchemeData> {
             @Override // android.os.Parcelable.Creator
             public SchemeData createFromParcel(Parcel parcel) {
@@ -135,7 +135,7 @@ public final class DrmInitData implements Comparator<SchemeData>, Parcelable {
             this.f19855n = bArr;
         }
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public boolean m8836a(UUID uuid) {
             return C.f8021a.equals(this.f19852k) || uuid.equals(this.f19852k);
         }

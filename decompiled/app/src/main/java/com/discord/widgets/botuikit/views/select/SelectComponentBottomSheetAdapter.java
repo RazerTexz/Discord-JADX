@@ -20,8 +20,8 @@ import kotlin.jvm.functions.Function2;
 import p507d0.p580t.Collections2;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: SelectComponentBottomSheetAdapter.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: SelectComponentBottomSheetAdapter.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class SelectComponentBottomSheetAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
     private List<SelectComponentBottomSheetAdapter2> data;
     private boolean emojiAnimationsEnabled;
@@ -41,7 +41,7 @@ public final class SelectComponentBottomSheetAdapter extends RecyclerView.Adapte
     }
 
     @Override // androidx.recyclerview.widget.RecyclerView.Adapter
-    /* renamed from: getItemCount */
+    /* JADX INFO: renamed from: getItemCount */
     public int getPageSize() {
         return this.data.size();
     }

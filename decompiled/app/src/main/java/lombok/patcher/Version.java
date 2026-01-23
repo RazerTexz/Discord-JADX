@@ -1,6 +1,6 @@
 package lombok.patcher;
 
-/* loaded from: discord-126021.apk:lombok/patcher/Version.SCL.lombok */
+/* JADX INFO: loaded from: discord-126021.apk:lombok/patcher/Version.SCL.lombok */
 public class Version {
     private static final String VERSION = "0.40";
 

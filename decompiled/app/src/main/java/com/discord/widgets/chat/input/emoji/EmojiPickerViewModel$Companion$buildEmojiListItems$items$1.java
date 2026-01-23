@@ -5,8 +5,8 @@ import kotlin.jvm.functions.Function1;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: EmojiPickerViewModel.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: EmojiPickerViewModel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class EmojiPickerViewModel$Companion$buildEmojiListItems$items$1 extends Lambda implements Function1<Emoji, Boolean> {
     public final /* synthetic */ boolean $includeUnavailable;
 
@@ -21,7 +21,7 @@ public final class EmojiPickerViewModel$Companion$buildEmojiListItems$items$1 ex
         return Boolean.valueOf(invoke2(emoji));
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final boolean invoke2(Emoji emoji) {
         Intrinsics3.checkNotNullParameter(emoji, "emoji");
         if (this.$includeUnavailable) {

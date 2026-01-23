@@ -3,7 +3,7 @@ package androidx.constraintlayout.motion.utils;
 import java.util.Arrays;
 import p007b.p100d.p104b.p105a.outline;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class Oscillator {
     public static final int BOUNCE = 6;
     public static final int COS_WAVE = 5;
@@ -52,7 +52,7 @@ public class Oscillator {
         double d2 = fArr[i] - fArr[i2];
         double[] dArr = this.mPosition;
         double d3 = d2 / (dArr[i] - dArr[i2]);
-        return (fArr[i2] - (d3 * dArr[i2])) + (d * d3);
+        return (((double) fArr[i2]) - (d3 * dArr[i2])) + (d * d3);
     }
 
     public double getP(double d) {
@@ -74,7 +74,7 @@ public class Oscillator {
         double d2 = fArr[i] - fArr[i2];
         double[] dArr = this.mPosition;
         double d3 = d2 / (dArr[i] - dArr[i2]);
-        return ((((d * d) - (dArr[i2] * dArr[i2])) * d3) / 2.0d) + ((d - dArr[i2]) * (fArr[i2] - (dArr[i2] * d3))) + this.mArea[i2];
+        return ((((d * d) - (dArr[i2] * dArr[i2])) * d3) / 2.0d) + ((d - dArr[i2]) * (((double) fArr[i2]) - (dArr[i2] * d3))) + this.mArea[i2];
     }
 
     public double getSlope(double d) {
@@ -125,48 +125,49 @@ public class Oscillator {
         double d = 0.0d;
         int i = 0;
         while (true) {
-            if (i >= this.mPeriod.length) {
+            float[] fArr = this.mPeriod;
+            if (i >= fArr.length) {
                 break;
             }
-            d += r7[i];
+            d += (double) fArr[i];
             i++;
         }
         double d2 = 0.0d;
         int i2 = 1;
         while (true) {
-            float[] fArr = this.mPeriod;
-            if (i2 >= fArr.length) {
+            float[] fArr2 = this.mPeriod;
+            if (i2 >= fArr2.length) {
                 break;
             }
             int i3 = i2 - 1;
-            float f = (fArr[i3] + fArr[i2]) / 2.0f;
+            float f = (fArr2[i3] + fArr2[i2]) / 2.0f;
             double[] dArr = this.mPosition;
-            d2 += (dArr[i2] - dArr[i3]) * f;
+            d2 += (dArr[i2] - dArr[i3]) * ((double) f);
             i2++;
         }
         int i4 = 0;
         while (true) {
-            float[] fArr2 = this.mPeriod;
-            if (i4 >= fArr2.length) {
+            float[] fArr3 = this.mPeriod;
+            if (i4 >= fArr3.length) {
                 break;
             }
-            fArr2[i4] = (float) (fArr2[i4] * (d / d2));
+            fArr3[i4] = (float) (((double) fArr3[i4]) * (d / d2));
             i4++;
         }
         this.mArea[0] = 0.0d;
         int i5 = 1;
         while (true) {
-            float[] fArr3 = this.mPeriod;
-            if (i5 >= fArr3.length) {
+            float[] fArr4 = this.mPeriod;
+            if (i5 >= fArr4.length) {
                 this.mNormalized = true;
                 return;
             }
             int i6 = i5 - 1;
-            float f2 = (fArr3[i6] + fArr3[i5]) / 2.0f;
+            float f2 = (fArr4[i6] + fArr4[i5]) / 2.0f;
             double[] dArr2 = this.mPosition;
             double d3 = dArr2[i5] - dArr2[i6];
             double[] dArr3 = this.mArea;
-            dArr3[i5] = (d3 * f2) + dArr3[i6];
+            dArr3[i5] = (d3 * ((double) f2)) + dArr3[i6];
             i5++;
         }
     }

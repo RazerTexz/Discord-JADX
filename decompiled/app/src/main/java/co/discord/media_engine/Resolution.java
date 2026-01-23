@@ -2,8 +2,8 @@ package co.discord.media_engine;
 
 import p007b.p100d.p104b.p105a.outline;
 
-/* compiled from: Statistics.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: Statistics.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class Resolution {
     private final int height;
     private final int width;
@@ -23,12 +23,12 @@ public final /* data */ class Resolution {
         return resolution.copy(i, i2);
     }
 
-    /* renamed from: component1, reason: from getter */
+    /* JADX INFO: renamed from: component1, reason: from getter */
     public final int getWidth() {
         return this.width;
     }
 
-    /* renamed from: component2, reason: from getter */
+    /* JADX INFO: renamed from: component2, reason: from getter */
     public final int getHeight() {
         return this.height;
     }

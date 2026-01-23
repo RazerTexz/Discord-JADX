@@ -20,9 +20,9 @@ import p637j0.p642l.p647e.ScalarSynchronousObservable;
 import p658rx.Observable;
 import p658rx.functions.Func5;
 
-/* compiled from: WidgetForumPostStatusViewModel.kt */
-/* renamed from: com.discord.widgets.status.WidgetForumPostStatusViewModel$Companion$observeStoreState$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.status.WidgetForumPostStatusViewModel$Companion$observeStoreState$1, reason: use source file name */
+/* JADX INFO: compiled from: WidgetForumPostStatusViewModel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetForumPostStatusViewModel2<T, R> implements Func1<Channel, Observable<? extends WidgetForumPostStatusViewModel.StoreState>> {
     public final /* synthetic */ StoreEmoji $storeEmoji;
     public final /* synthetic */ StoreForumPostMessages $storeForumPostMessages;
@@ -31,8 +31,8 @@ public final class WidgetForumPostStatusViewModel2<T, R> implements Func1<Channe
     public final /* synthetic */ StoreThreadsJoined $storeThreadsJoined;
     public final /* synthetic */ StoreUser $storeUser;
 
-    /* compiled from: WidgetForumPostStatusViewModel.kt */
-    /* renamed from: com.discord.widgets.status.WidgetForumPostStatusViewModel$Companion$observeStoreState$1$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.status.WidgetForumPostStatusViewModel$Companion$observeStoreState$1$1 */
+    /* JADX INFO: compiled from: WidgetForumPostStatusViewModel.kt */
     public static final class C100911<T1, T2, T3, T4, T5, R> implements Func5<Long, StoreThreadsJoined.JoinedThread, Message, StoreThreadMessages.ThreadState, Long, WidgetForumPostStatusViewModel.StoreState.Loaded> {
         public final /* synthetic */ Channel $channel;
 
@@ -45,7 +45,7 @@ public final class WidgetForumPostStatusViewModel2<T, R> implements Func1<Channe
             return call2(l, joinedThread, message, threadState, l2);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final WidgetForumPostStatusViewModel.StoreState.Loaded call2(Long l, StoreThreadsJoined.JoinedThread joinedThread, Message message, StoreThreadMessages.ThreadState threadState, Long l2) {
             boolean zCan = PermissionUtils.can(64L, l2);
             ForumUtils forumUtils = ForumUtils.INSTANCE;
@@ -80,7 +80,7 @@ public final class WidgetForumPostStatusViewModel2<T, R> implements Func1<Channe
         return call2(channel);
     }
 
-    /* renamed from: call, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
     public final Observable<? extends WidgetForumPostStatusViewModel.StoreState> call2(Channel channel) {
         return channel == null ? new ScalarSynchronousObservable(WidgetForumPostStatusViewModel.StoreState.Invalid.INSTANCE) : Observable.m11072g(this.$storeUser.observeMeId(), this.$storeThreadsJoined.observeJoinedThread(channel.getId()), this.$storeForumPostMessages.observeForumPostFirstMessage(channel.getParentId(), channel.getId(), true), this.$storeThreadMessages.observeThreadCountAndLatestMessage(channel.getId()), this.$storePermissions.observePermissionsForChannel(channel.getId()), new C100911(channel));
     }

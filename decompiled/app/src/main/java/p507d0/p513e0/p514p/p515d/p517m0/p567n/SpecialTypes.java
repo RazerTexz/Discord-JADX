@@ -4,15 +4,15 @@ import p507d0.p513e0.p514p.p515d.p517m0.p521c.p522g1.Annotations4;
 import p507d0.p513e0.p514p.p515d.p517m0.p567n.p568l1.KotlinTypeRefiner;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: SpecialTypes.kt */
-/* renamed from: d0.e0.p.d.m0.n.a, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.n.a, reason: use source file name */
+/* JADX INFO: compiled from: SpecialTypes.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class SpecialTypes extends SpecialTypes4 {
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final KotlinType4 f24737k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final KotlinType4 f24738l;
 
     public SpecialTypes(KotlinType4 kotlinType4, KotlinType4 kotlinType42) {

@@ -3,33 +3,33 @@ package p007b.p225i.p226a.p288f.p340n;
 import androidx.annotation.NonNull;
 import java.util.concurrent.ExecutionException;
 
-/* compiled from: com.google.android.gms:play-services-tasks@@17.2.1 */
-/* renamed from: b.i.a.f.n.j */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.n.j */
+/* JADX INFO: compiled from: com.google.android.gms:play-services-tasks@@17.2.1 */
+/* JADX INFO: loaded from: classes3.dex */
 public final class C4366j implements InterfaceC4365i {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final Object f11482a = new Object();
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final int f11483b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final C4358c0<Void> f11484c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public int f11485d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public int f11486e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public int f11487f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public Exception f11488g;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public boolean f11489h;
 
     public C4366j(int i, C4358c0<Void> c4358c0) {
@@ -37,7 +37,7 @@ public final class C4366j implements InterfaceC4365i {
         this.f11484c = c4358c0;
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final void m6029a() {
         int i = this.f11485d;
         int i2 = this.f11486e;
@@ -64,7 +64,7 @@ public final class C4366j implements InterfaceC4365i {
     }
 
     @Override // p007b.p225i.p226a.p288f.p340n.InterfaceC4355b
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final void mo6005b() {
         synchronized (this.f11482a) {
             this.f11487f++;

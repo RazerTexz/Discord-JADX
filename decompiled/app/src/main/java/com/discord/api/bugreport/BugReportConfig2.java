@@ -4,9 +4,9 @@ import com.discord.models.domain.ModelAuditLogEntry;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: BugReportConfig.kt */
-/* renamed from: com.discord.api.bugreport.Feature, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: com.discord.api.bugreport.Feature, reason: use source file name */
+/* JADX INFO: compiled from: BugReportConfig.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class BugReportConfig2 {
     private final Long asanaInboxId;
     private final String name;
@@ -20,17 +20,17 @@ public final /* data */ class BugReportConfig2 {
         this.asanaInboxId = l;
     }
 
-    /* renamed from: a, reason: from getter */
+    /* JADX INFO: renamed from: a, reason: from getter */
     public final Long getAsanaInboxId() {
         return this.asanaInboxId;
     }
 
-    /* renamed from: b, reason: from getter */
+    /* JADX INFO: renamed from: b, reason: from getter */
     public final String getName() {
         return this.name;
     }
 
-    /* renamed from: c, reason: from getter */
+    /* JADX INFO: renamed from: c, reason: from getter */
     public final String getSquad() {
         return this.squad;
     }

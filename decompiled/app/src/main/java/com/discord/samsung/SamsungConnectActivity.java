@@ -20,29 +20,29 @@ import p007b.p449n.p450a.p451a.ISAService;
 import p507d0.p579g0.StringsJVM;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: SamsungConnectActivity.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: SamsungConnectActivity.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class SamsungConnectActivity extends AppCompatActivity {
 
-    /* renamed from: j, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: j, reason: from kotlin metadata */
     public ISACallback samsungAccountServiceCallback;
 
-    /* renamed from: k, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: k, reason: from kotlin metadata */
     public boolean serviceBound;
 
-    /* renamed from: l, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: l, reason: from kotlin metadata */
     public final ServiceConnectionC5650a serviceConnection = new ServiceConnectionC5650a();
 
-    /* compiled from: SamsungConnectActivity.kt */
+    /* JADX INFO: compiled from: SamsungConnectActivity.kt */
     public static abstract class Result {
 
-        /* compiled from: SamsungConnectActivity.kt */
+        /* JADX INFO: compiled from: SamsungConnectActivity.kt */
         public static final /* data */ class Failure extends Result {
 
-            /* renamed from: a, reason: from kotlin metadata */
+            /* JADX INFO: renamed from: a, reason: from kotlin metadata */
             public final boolean isRetryAllowed;
 
-            /* renamed from: b, reason: from kotlin metadata */
+            /* JADX INFO: renamed from: b, reason: from kotlin metadata */
             public final int attemptCount;
 
             public Failure(boolean z2, int i) {
@@ -91,13 +91,13 @@ public final class SamsungConnectActivity extends AppCompatActivity {
             }
         }
 
-        /* compiled from: SamsungConnectActivity.kt */
+        /* JADX INFO: compiled from: SamsungConnectActivity.kt */
         public static final /* data */ class Success extends Result {
 
-            /* renamed from: a, reason: from kotlin metadata */
+            /* JADX INFO: renamed from: a, reason: from kotlin metadata */
             public final String authCode;
 
-            /* renamed from: b, reason: from kotlin metadata */
+            /* JADX INFO: renamed from: b, reason: from kotlin metadata */
             public final String serverUrl;
 
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -142,8 +142,8 @@ public final class SamsungConnectActivity extends AppCompatActivity {
         }
     }
 
-    /* compiled from: SamsungConnectActivity.kt */
-    /* renamed from: com.discord.samsung.SamsungConnectActivity$a */
+    /* JADX INFO: renamed from: com.discord.samsung.SamsungConnectActivity$a */
+    /* JADX INFO: compiled from: SamsungConnectActivity.kt */
     public static final class ServiceConnectionC5650a implements ServiceConnection {
         public ServiceConnectionC5650a() {
         }
@@ -196,7 +196,7 @@ public final class SamsungConnectActivity extends AppCompatActivity {
     }
 
     /* JADX WARN: Removed duplicated region for block: B:18:0x0034  */
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
@@ -219,7 +219,7 @@ public final class SamsungConnectActivity extends AppCompatActivity {
         samsungConnectActivity.finish();
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static final void m8504b(Context context, ActivityResultLauncher<Intent> activityResultLauncher, int i) {
         Intrinsics3.checkNotNullParameter(context, "context");
         Intrinsics3.checkNotNullParameter(activityResultLauncher, "launcher");

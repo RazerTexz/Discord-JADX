@@ -9,14 +9,14 @@ import com.discord.utilities.viewbinding.FragmentViewBindingDelegate;
 import p507d0.p592z.p594d.Intrinsics3;
 import p677y.p685c.DefaultLifecycleObserver2;
 
-/* compiled from: FragmentViewBindingDelegate.kt */
-/* renamed from: com.discord.utilities.viewbinding.FragmentViewBindingDelegate$addOnDestroyObserver$1$onCreate$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.utilities.viewbinding.FragmentViewBindingDelegate$addOnDestroyObserver$1$onCreate$1, reason: use source file name */
+/* JADX INFO: compiled from: FragmentViewBindingDelegate.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class FragmentViewBindingDelegate2<T> implements Observer<LifecycleOwner> {
     public final /* synthetic */ FragmentViewBindingDelegate.C70141 this$0;
 
-    /* compiled from: FragmentViewBindingDelegate.kt */
-    /* renamed from: com.discord.utilities.viewbinding.FragmentViewBindingDelegate$addOnDestroyObserver$1$onCreate$1$1 */
+    /* JADX INFO: renamed from: com.discord.utilities.viewbinding.FragmentViewBindingDelegate$addOnDestroyObserver$1$onCreate$1$1 */
+    /* JADX INFO: compiled from: FragmentViewBindingDelegate.kt */
     public static final class C70151 implements DefaultLifecycleObserver {
         public C70151() {
         }
@@ -66,7 +66,7 @@ public final class FragmentViewBindingDelegate2<T> implements Observer<Lifecycle
         onChanged2(lifecycleOwner);
     }
 
-    /* renamed from: onChanged, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: onChanged, reason: avoid collision after fix types in other method */
     public final void onChanged2(LifecycleOwner lifecycleOwner) {
         Intrinsics3.checkNotNullExpressionValue(lifecycleOwner, "viewLifecycleOwner");
         lifecycleOwner.getLifecycle().addObserver(new C70151());

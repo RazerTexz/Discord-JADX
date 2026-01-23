@@ -9,13 +9,13 @@ import androidx.annotation.RequiresApi;
 import p007b.p452o.p453a.p455n.p456o.ActionHolder;
 import p007b.p452o.p453a.p455n.p456o.BaseAction;
 
-/* compiled from: BaseReset.java */
+/* JADX INFO: renamed from: b.o.a.n.r.b, reason: use source file name */
+/* JADX INFO: compiled from: BaseReset.java */
+/* JADX INFO: loaded from: classes3.dex */
 @RequiresApi(21)
-/* renamed from: b.o.a.n.r.b, reason: use source file name */
-/* loaded from: classes3.dex */
 public abstract class BaseReset extends BaseAction {
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public boolean f13969e;
 
     public BaseReset(boolean z2) {
@@ -23,12 +23,12 @@ public abstract class BaseReset extends BaseAction {
     }
 
     @Override // p007b.p452o.p453a.p455n.p456o.BaseAction
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final void mo7249j(@NonNull ActionHolder actionHolder) {
         this.f13939c = actionHolder;
         mo7352m(actionHolder, this.f13969e ? new MeteringRectangle((Rect) m7340k(CameraCharacteristics.SENSOR_INFO_ACTIVE_ARRAY_SIZE, new Rect()), 0) : null);
     }
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public abstract void mo7352m(@NonNull ActionHolder actionHolder, @Nullable MeteringRectangle meteringRectangle);
 }

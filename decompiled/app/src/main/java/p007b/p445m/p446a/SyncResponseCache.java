@@ -1,26 +1,26 @@
 package p007b.p445m.p446a;
 
-/* compiled from: SyncResponseCache.kt */
-/* renamed from: b.m.a.f, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.m.a.f, reason: use source file name */
+/* JADX INFO: compiled from: SyncResponseCache.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public interface SyncResponseCache {
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     void mo7133a(long j);
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     void mo7134b(long j);
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     long mo7135c();
 
     void clear();
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     long mo7136d();
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     long mo7137e();
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     void mo7138f(long j);
 }

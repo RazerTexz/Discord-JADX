@@ -8,20 +8,20 @@ import p007b.p195g.p196a.p198b.p203s.WritableTypeId;
 import p007b.p195g.p196a.p198b.p204t.VersionUtil;
 import p007b.p195g.p196a.p205c.BeanProperty;
 
-/* compiled from: TypeSerializer.java */
-/* renamed from: b.g.a.c.e0.g, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.g.a.c.e0.g, reason: use source file name */
+/* JADX INFO: compiled from: TypeSerializer.java */
+/* JADX INFO: loaded from: classes3.dex */
 public abstract class TypeSerializer {
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public abstract TypeSerializer mo1955a(BeanProperty beanProperty);
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public abstract String mo1956b();
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public abstract JsonTypeInfo.a mo1957c();
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public WritableTypeId m1958d(Object obj, JsonToken2 jsonToken2) {
         WritableTypeId writableTypeId = new WritableTypeId(obj, jsonToken2);
         int iOrdinal = mo1957c().ordinal();
@@ -46,9 +46,9 @@ public abstract class TypeSerializer {
         return writableTypeId;
     }
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public abstract WritableTypeId mo1959e(JsonGenerator jsonGenerator, WritableTypeId writableTypeId) throws IOException;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public abstract WritableTypeId mo1960f(JsonGenerator jsonGenerator, WritableTypeId writableTypeId) throws IOException;
 }

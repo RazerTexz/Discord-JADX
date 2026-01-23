@@ -9,18 +9,18 @@ import p007b.p225i.p226a.p242c.p267x2.ExtractorOutput;
 import p007b.p225i.p226a.p242c.p267x2.TrackOutput2;
 import p007b.p225i.p226a.p242c.p267x2.p276k0.TsPayloadReader;
 
-/* compiled from: PassthroughSectionPayloadReader.java */
-/* renamed from: b.i.a.c.x2.k0.x, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.x2.k0.x, reason: use source file name */
+/* JADX INFO: compiled from: PassthroughSectionPayloadReader.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class PassthroughSectionPayloadReader implements SectionPayloadReader {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public Format2 f8908a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public TimestampAdjuster f8909b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public TrackOutput2 f8910c;
 
     public PassthroughSectionPayloadReader(String str) {
@@ -30,7 +30,7 @@ public final class PassthroughSectionPayloadReader implements SectionPayloadRead
     }
 
     @Override // p007b.p225i.p226a.p242c.p267x2.p276k0.SectionPayloadReader
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public void mo3752a(TimestampAdjuster timestampAdjuster, ExtractorOutput extractorOutput, TsPayloadReader.d dVar) {
         this.f8909b = timestampAdjuster;
         dVar.m3765a();
@@ -40,7 +40,7 @@ public final class PassthroughSectionPayloadReader implements SectionPayloadRead
     }
 
     @Override // p007b.p225i.p226a.p242c.p267x2.p276k0.SectionPayloadReader
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public void mo3753b(ParsableByteArray parsableByteArray) {
         long jM2974c;
         AnimatableValueParser.m438H(this.f8909b);

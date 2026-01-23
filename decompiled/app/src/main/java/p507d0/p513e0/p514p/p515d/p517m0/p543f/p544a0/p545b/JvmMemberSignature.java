@@ -5,19 +5,19 @@ import com.discord.widgets.chat.input.MentionUtils;
 import kotlin.jvm.internal.DefaultConstructorMarker;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: JvmMemberSignature.kt */
-/* renamed from: d0.e0.p.d.m0.f.a0.b.e, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.f.a0.b.e, reason: use source file name */
+/* JADX INFO: compiled from: JvmMemberSignature.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public abstract class JvmMemberSignature {
 
-    /* compiled from: JvmMemberSignature.kt */
-    /* renamed from: d0.e0.p.d.m0.f.a0.b.e$a */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.f.a0.b.e$a */
+    /* JADX INFO: compiled from: JvmMemberSignature.kt */
     public static final class a extends JvmMemberSignature {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final String f23707a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final String f23708b;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -68,14 +68,14 @@ public abstract class JvmMemberSignature {
         }
     }
 
-    /* compiled from: JvmMemberSignature.kt */
-    /* renamed from: d0.e0.p.d.m0.f.a0.b.e$b */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.f.a0.b.e$b */
+    /* JADX INFO: compiled from: JvmMemberSignature.kt */
     public static final class b extends JvmMemberSignature {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final String f23709a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final String f23710b;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */

@@ -67,23 +67,23 @@ import p658rx.Observable;
 import p658rx.functions.Action1;
 import p658rx.functions.Action2;
 
-/* compiled from: WidgetTextChannelSettings.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetTextChannelSettings.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetTextChannelSettings extends AppFragment {
     public static final int ONE_DAY = 86400;
     public static final int ONE_HOUR = 3600;
     public static final int ONE_MINUTE = 60;
 
-    /* renamed from: binding$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
     private final StatefulViews state;
     public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetTextChannelSettings.class, "binding", "getBinding()Lcom/discord/databinding/WidgetTextChannelSettingsBinding;", 0)};
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private static final List<Integer> SLOWMODE_COOLDOWN_VALUES = Collections2.listOf((Object[]) new Integer[]{0, 5, 10, 15, 30, 60, 120, 300, 600, 900, Integer.valueOf(ModelInvite.Settings.HALF_HOUR), 3600, 7200, Integer.valueOf(ModelInvite.Settings.SIX_HOURS)});
 
-    /* compiled from: WidgetTextChannelSettings.kt */
+    /* JADX INFO: compiled from: WidgetTextChannelSettings.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -131,10 +131,10 @@ public final class WidgetTextChannelSettings extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetTextChannelSettings.kt */
+    /* JADX INFO: compiled from: WidgetTextChannelSettings.kt */
     public static final /* data */ class Model {
 
-        /* renamed from: Companion, reason: from kotlin metadata */
+        /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
         public static final Companion INSTANCE = new Companion(null);
         private final boolean canManageChannel;
         private final boolean canManagePermissions;
@@ -145,7 +145,7 @@ public final class WidgetTextChannelSettings extends AppFragment {
         private final boolean isPublicGuildRulesChannel;
         private final boolean isPublicGuildUpdatesChannel;
 
-        /* compiled from: WidgetTextChannelSettings.kt */
+        /* JADX INFO: compiled from: WidgetTextChannelSettings.kt */
         public static final class Companion {
             private Companion() {
             }
@@ -180,42 +180,42 @@ public final class WidgetTextChannelSettings extends AppFragment {
             return model.copy((i & 1) != 0 ? model.guild : guild, (i & 2) != 0 ? model.channel : channel, (i & 4) != 0 ? model.canManageChannel : z2, (i & 8) != 0 ? model.canManagePermissions : z3, (i & 16) != 0 ? model.isPinsEnabled : z4, (i & 32) != 0 ? model.isPublicGuildRulesChannel : z5, (i & 64) != 0 ? model.isPublicGuildUpdatesChannel : z6, (i & 128) != 0 ? model.isCommunityGuild : z7);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final Guild getGuild() {
             return this.guild;
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final Channel getChannel() {
             return this.channel;
         }
 
-        /* renamed from: component3, reason: from getter */
+        /* JADX INFO: renamed from: component3, reason: from getter */
         public final boolean getCanManageChannel() {
             return this.canManageChannel;
         }
 
-        /* renamed from: component4, reason: from getter */
+        /* JADX INFO: renamed from: component4, reason: from getter */
         public final boolean getCanManagePermissions() {
             return this.canManagePermissions;
         }
 
-        /* renamed from: component5, reason: from getter */
+        /* JADX INFO: renamed from: component5, reason: from getter */
         public final boolean getIsPinsEnabled() {
             return this.isPinsEnabled;
         }
 
-        /* renamed from: component6, reason: from getter */
+        /* JADX INFO: renamed from: component6, reason: from getter */
         public final boolean getIsPublicGuildRulesChannel() {
             return this.isPublicGuildRulesChannel;
         }
 
-        /* renamed from: component7, reason: from getter */
+        /* JADX INFO: renamed from: component7, reason: from getter */
         public final boolean getIsPublicGuildUpdatesChannel() {
             return this.isPublicGuildUpdatesChannel;
         }
 
-        /* renamed from: component8, reason: from getter */
+        /* JADX INFO: renamed from: component8, reason: from getter */
         public final boolean getIsCommunityGuild() {
             return this.isCommunityGuild;
         }
@@ -254,43 +254,61 @@ public final class WidgetTextChannelSettings extends AppFragment {
         }
 
         /* JADX WARN: Multi-variable type inference failed */
+        /* JADX WARN: Type inference failed for: r1v11, types: [int] */
+        /* JADX WARN: Type inference failed for: r1v13 */
+        /* JADX WARN: Type inference failed for: r1v14 */
+        /* JADX WARN: Type inference failed for: r1v15 */
+        /* JADX WARN: Type inference failed for: r1v16 */
+        /* JADX WARN: Type inference failed for: r1v17 */
+        /* JADX WARN: Type inference failed for: r1v19 */
+        /* JADX WARN: Type inference failed for: r1v20 */
+        /* JADX WARN: Type inference failed for: r1v21 */
+        /* JADX WARN: Type inference failed for: r1v22 */
+        /* JADX WARN: Type inference failed for: r1v23 */
+        /* JADX WARN: Type inference failed for: r1v3, types: [int] */
+        /* JADX WARN: Type inference failed for: r1v5, types: [int] */
+        /* JADX WARN: Type inference failed for: r1v7, types: [int] */
+        /* JADX WARN: Type inference failed for: r1v9, types: [int] */
+        /* JADX WARN: Type inference failed for: r2v1 */
+        /* JADX WARN: Type inference failed for: r2v2, types: [int] */
+        /* JADX WARN: Type inference failed for: r2v3 */
         public int hashCode() {
             Guild guild = this.guild;
             int iHashCode = (guild != null ? guild.hashCode() : 0) * 31;
             Channel channel = this.channel;
             int iHashCode2 = (iHashCode + (channel != null ? channel.hashCode() : 0)) * 31;
             boolean z2 = this.canManageChannel;
-            int i = z2;
-            if (z2 != 0) {
-                i = 1;
+            ?? r1 = z2;
+            if (z2) {
+                r1 = 1;
             }
-            int i2 = (iHashCode2 + i) * 31;
+            int i = (iHashCode2 + r1) * 31;
             boolean z3 = this.canManagePermissions;
-            int i3 = z3;
-            if (z3 != 0) {
-                i3 = 1;
+            ?? r12 = z3;
+            if (z3) {
+                r12 = 1;
             }
-            int i4 = (i2 + i3) * 31;
+            int i2 = (i + r12) * 31;
             boolean z4 = this.isPinsEnabled;
-            int i5 = z4;
-            if (z4 != 0) {
-                i5 = 1;
+            ?? r13 = z4;
+            if (z4) {
+                r13 = 1;
             }
-            int i6 = (i4 + i5) * 31;
+            int i3 = (i2 + r13) * 31;
             boolean z5 = this.isPublicGuildRulesChannel;
-            int i7 = z5;
-            if (z5 != 0) {
-                i7 = 1;
+            ?? r14 = z5;
+            if (z5) {
+                r14 = 1;
             }
-            int i8 = (i6 + i7) * 31;
+            int i4 = (i3 + r14) * 31;
             boolean z6 = this.isPublicGuildUpdatesChannel;
-            int i9 = z6;
-            if (z6 != 0) {
-                i9 = 1;
+            ?? r15 = z6;
+            if (z6) {
+                r15 = 1;
             }
-            int i10 = (i8 + i9) * 31;
+            int i5 = (i4 + r15) * 31;
             boolean z7 = this.isCommunityGuild;
-            return i10 + (z7 ? 1 : z7 ? 1 : 0);
+            return i5 + (z7 ? 1 : z7);
         }
 
         public final boolean isCommunityGuild() {
@@ -329,8 +347,8 @@ public final class WidgetTextChannelSettings extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetTextChannelSettings.kt */
-    /* renamed from: com.discord.widgets.channels.settings.WidgetTextChannelSettings$cannotDeleteWarn$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.channels.settings.WidgetTextChannelSettings$cannotDeleteWarn$1 */
+    /* JADX INFO: compiled from: WidgetTextChannelSettings.kt */
     public static final class ViewOnClickListenerC75911 implements View.OnClickListener {
         public final /* synthetic */ AlertDialog $dialog;
 
@@ -344,8 +362,8 @@ public final class WidgetTextChannelSettings extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetTextChannelSettings.kt */
-    /* renamed from: com.discord.widgets.channels.settings.WidgetTextChannelSettings$configureUI$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.channels.settings.WidgetTextChannelSettings$configureUI$1 */
+    /* JADX INFO: compiled from: WidgetTextChannelSettings.kt */
     public static final class C75921<T1, T2> implements Action2<MenuItem, Context> {
         public final /* synthetic */ Model $this_configureUI;
 
@@ -358,7 +376,7 @@ public final class WidgetTextChannelSettings extends AppFragment {
             call2(menuItem, context);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final void call2(MenuItem menuItem, Context context) {
             Intrinsics3.checkNotNullExpressionValue(menuItem, "menuItem");
             switch (menuItem.getItemId()) {
@@ -378,8 +396,8 @@ public final class WidgetTextChannelSettings extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetTextChannelSettings.kt */
-    /* renamed from: com.discord.widgets.channels.settings.WidgetTextChannelSettings$configureUI$10 */
+    /* JADX INFO: renamed from: com.discord.widgets.channels.settings.WidgetTextChannelSettings$configureUI$10 */
+    /* JADX INFO: compiled from: WidgetTextChannelSettings.kt */
     public static final class ViewOnClickListenerC759310 implements View.OnClickListener {
         public final /* synthetic */ Map $durationsMap;
 
@@ -395,8 +413,8 @@ public final class WidgetTextChannelSettings extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetTextChannelSettings.kt */
-    /* renamed from: com.discord.widgets.channels.settings.WidgetTextChannelSettings$configureUI$11 */
+    /* JADX INFO: renamed from: com.discord.widgets.channels.settings.WidgetTextChannelSettings$configureUI$11 */
+    /* JADX INFO: compiled from: WidgetTextChannelSettings.kt */
     public static final class ViewOnClickListenerC759411 implements View.OnClickListener {
         public final /* synthetic */ Map $durationsMap;
 
@@ -412,8 +430,8 @@ public final class WidgetTextChannelSettings extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetTextChannelSettings.kt */
-    /* renamed from: com.discord.widgets.channels.settings.WidgetTextChannelSettings$configureUI$12 */
+    /* JADX INFO: renamed from: com.discord.widgets.channels.settings.WidgetTextChannelSettings$configureUI$12 */
+    /* JADX INFO: compiled from: WidgetTextChannelSettings.kt */
     public static final class ViewOnClickListenerC759512 implements View.OnClickListener {
         public final /* synthetic */ Map $durationsMap;
 
@@ -429,8 +447,8 @@ public final class WidgetTextChannelSettings extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetTextChannelSettings.kt */
-    /* renamed from: com.discord.widgets.channels.settings.WidgetTextChannelSettings$configureUI$13 */
+    /* JADX INFO: renamed from: com.discord.widgets.channels.settings.WidgetTextChannelSettings$configureUI$13 */
+    /* JADX INFO: compiled from: WidgetTextChannelSettings.kt */
     public static final class ViewOnClickListenerC759613 implements View.OnClickListener {
         public final /* synthetic */ Map $durationsMap;
 
@@ -446,8 +464,8 @@ public final class WidgetTextChannelSettings extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetTextChannelSettings.kt */
-    /* renamed from: com.discord.widgets.channels.settings.WidgetTextChannelSettings$configureUI$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.channels.settings.WidgetTextChannelSettings$configureUI$2 */
+    /* JADX INFO: compiled from: WidgetTextChannelSettings.kt */
     public static final class C75972<T> implements Action1<Menu> {
         public final /* synthetic */ Model $this_configureUI;
 
@@ -460,7 +478,7 @@ public final class WidgetTextChannelSettings extends AppFragment {
             call2(menu);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final void call2(Menu menu) {
             MenuItem menuItemFindItem = menu.findItem(C5419R.id.menu_channel_settings_delete);
             Intrinsics3.checkNotNullExpressionValue(menuItemFindItem, "it.findItem(R.id.menu_channel_settings_delete)");
@@ -468,8 +486,8 @@ public final class WidgetTextChannelSettings extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetTextChannelSettings.kt */
-    /* renamed from: com.discord.widgets.channels.settings.WidgetTextChannelSettings$configureUI$3 */
+    /* JADX INFO: renamed from: com.discord.widgets.channels.settings.WidgetTextChannelSettings$configureUI$3 */
+    /* JADX INFO: compiled from: WidgetTextChannelSettings.kt */
     public static final class ViewOnClickListenerC75983 implements View.OnClickListener {
         public final /* synthetic */ Model $this_configureUI;
 
@@ -496,8 +514,8 @@ public final class WidgetTextChannelSettings extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetTextChannelSettings.kt */
-    /* renamed from: com.discord.widgets.channels.settings.WidgetTextChannelSettings$configureUI$5 */
+    /* JADX INFO: renamed from: com.discord.widgets.channels.settings.WidgetTextChannelSettings$configureUI$5 */
+    /* JADX INFO: compiled from: WidgetTextChannelSettings.kt */
     public static final class ViewOnClickListenerC75995 implements View.OnClickListener {
         public final /* synthetic */ Model $this_configureUI;
 
@@ -511,8 +529,8 @@ public final class WidgetTextChannelSettings extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetTextChannelSettings.kt */
-    /* renamed from: com.discord.widgets.channels.settings.WidgetTextChannelSettings$configureUI$6 */
+    /* JADX INFO: renamed from: com.discord.widgets.channels.settings.WidgetTextChannelSettings$configureUI$6 */
+    /* JADX INFO: compiled from: WidgetTextChannelSettings.kt */
     public static final class ViewOnClickListenerC76006 implements View.OnClickListener {
         public static final ViewOnClickListenerC76006 INSTANCE = new ViewOnClickListenerC76006();
 
@@ -523,8 +541,8 @@ public final class WidgetTextChannelSettings extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetTextChannelSettings.kt */
-    /* renamed from: com.discord.widgets.channels.settings.WidgetTextChannelSettings$configureUI$7 */
+    /* JADX INFO: renamed from: com.discord.widgets.channels.settings.WidgetTextChannelSettings$configureUI$7 */
+    /* JADX INFO: compiled from: WidgetTextChannelSettings.kt */
     public static final class ViewOnClickListenerC76017 implements View.OnClickListener {
         public final /* synthetic */ Model $this_configureUI;
 
@@ -538,8 +556,8 @@ public final class WidgetTextChannelSettings extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetTextChannelSettings.kt */
-    /* renamed from: com.discord.widgets.channels.settings.WidgetTextChannelSettings$configureUI$8 */
+    /* JADX INFO: renamed from: com.discord.widgets.channels.settings.WidgetTextChannelSettings$configureUI$8 */
+    /* JADX INFO: compiled from: WidgetTextChannelSettings.kt */
     public static final class ViewOnClickListenerC76028 implements View.OnClickListener {
         public final /* synthetic */ Model $this_configureUI;
 
@@ -557,8 +575,8 @@ public final class WidgetTextChannelSettings extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetTextChannelSettings.kt */
-    /* renamed from: com.discord.widgets.channels.settings.WidgetTextChannelSettings$configureUI$9 */
+    /* JADX INFO: renamed from: com.discord.widgets.channels.settings.WidgetTextChannelSettings$configureUI$9 */
+    /* JADX INFO: compiled from: WidgetTextChannelSettings.kt */
     public static final class ViewOnClickListenerC76039 implements View.OnClickListener {
         public final /* synthetic */ Model $this_configureUI;
 
@@ -575,8 +593,8 @@ public final class WidgetTextChannelSettings extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetTextChannelSettings.kt */
-    /* renamed from: com.discord.widgets.channels.settings.WidgetTextChannelSettings$confirmDelete$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.channels.settings.WidgetTextChannelSettings$confirmDelete$1 */
+    /* JADX INFO: compiled from: WidgetTextChannelSettings.kt */
     public static final class ViewOnClickListenerC76041 implements View.OnClickListener {
         public final /* synthetic */ AlertDialog $dialog;
 
@@ -590,13 +608,13 @@ public final class WidgetTextChannelSettings extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetTextChannelSettings.kt */
-    /* renamed from: com.discord.widgets.channels.settings.WidgetTextChannelSettings$confirmDelete$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.channels.settings.WidgetTextChannelSettings$confirmDelete$2 */
+    /* JADX INFO: compiled from: WidgetTextChannelSettings.kt */
     public static final class ViewOnClickListenerC76052 implements View.OnClickListener {
         public final /* synthetic */ Channel $channel;
 
-        /* compiled from: WidgetTextChannelSettings.kt */
-        /* renamed from: com.discord.widgets.channels.settings.WidgetTextChannelSettings$confirmDelete$2$2, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.widgets.channels.settings.WidgetTextChannelSettings$confirmDelete$2$2, reason: invalid class name */
+        /* JADX INFO: compiled from: WidgetTextChannelSettings.kt */
         public static final class AnonymousClass2 extends Lambda implements Function1<Channel, Unit> {
             public AnonymousClass2() {
                 super(1);
@@ -608,7 +626,7 @@ public final class WidgetTextChannelSettings extends AppFragment {
                 return Unit.f27425a;
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2(Channel channel) {
                 Intrinsics3.checkNotNullParameter(channel, "channel");
                 Integer numM7678b = ChannelUtils.m7678b(channel);
@@ -630,8 +648,8 @@ public final class WidgetTextChannelSettings extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetTextChannelSettings.kt */
-    /* renamed from: com.discord.widgets.channels.settings.WidgetTextChannelSettings$onViewBound$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.channels.settings.WidgetTextChannelSettings$onViewBound$1 */
+    /* JADX INFO: compiled from: WidgetTextChannelSettings.kt */
     public static final class C76061 extends OnSeekBarChangeListenerAdapter {
         public C76061() {
         }
@@ -652,8 +670,8 @@ public final class WidgetTextChannelSettings extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetTextChannelSettings.kt */
-    /* renamed from: com.discord.widgets.channels.settings.WidgetTextChannelSettings$onViewBoundOrOnResume$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.channels.settings.WidgetTextChannelSettings$onViewBoundOrOnResume$1 */
+    /* JADX INFO: compiled from: WidgetTextChannelSettings.kt */
     public static final class C76071 extends Lambda implements Function1<Model, Unit> {
         public C76071() {
             super(1);
@@ -665,14 +683,14 @@ public final class WidgetTextChannelSettings extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Model model) {
             WidgetTextChannelSettings.access$configureUI(WidgetTextChannelSettings.this, model);
         }
     }
 
-    /* compiled from: WidgetTextChannelSettings.kt */
-    /* renamed from: com.discord.widgets.channels.settings.WidgetTextChannelSettings$saveChannel$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.channels.settings.WidgetTextChannelSettings$saveChannel$1 */
+    /* JADX INFO: compiled from: WidgetTextChannelSettings.kt */
     public static final class C76081 extends Lambda implements Function1<Channel, Unit> {
         public C76081() {
             super(1);
@@ -684,7 +702,7 @@ public final class WidgetTextChannelSettings extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Channel channel) {
             Context context = WidgetTextChannelSettings.this.getContext();
             Intrinsics3.checkNotNullExpressionValue(channel, "it");

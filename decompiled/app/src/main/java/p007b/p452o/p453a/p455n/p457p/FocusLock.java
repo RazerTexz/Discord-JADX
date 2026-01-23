@@ -10,17 +10,17 @@ import p007b.p452o.p453a.CameraLogger;
 import p007b.p452o.p453a.p455n.Camera2Engine;
 import p007b.p452o.p453a.p455n.p456o.ActionHolder;
 
-/* compiled from: FocusLock.java */
+/* JADX INFO: renamed from: b.o.a.n.p.c, reason: use source file name */
+/* JADX INFO: compiled from: FocusLock.java */
+/* JADX INFO: loaded from: classes3.dex */
 @RequiresApi(21)
-/* renamed from: b.o.a.n.p.c, reason: use source file name */
-/* loaded from: classes3.dex */
 public class FocusLock extends BaseLock {
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public static final CameraLogger f13953e = new CameraLogger(FocusLock.class.getSimpleName());
 
     @Override // p007b.p452o.p453a.p455n.p456o.BaseAction, p007b.p452o.p453a.p455n.p456o.Action2
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public void mo7248b(@NonNull ActionHolder actionHolder, @NonNull CaptureRequest captureRequest, @NonNull TotalCaptureResult totalCaptureResult) {
         Integer num = (Integer) totalCaptureResult.get(CaptureResult.CONTROL_AF_STATE);
         Integer num2 = (Integer) totalCaptureResult.get(CaptureResult.CONTROL_AF_MODE);
@@ -35,7 +35,7 @@ public class FocusLock extends BaseLock {
     }
 
     @Override // p007b.p452o.p453a.p455n.p457p.BaseLock
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public boolean mo7343m(@NonNull ActionHolder actionHolder) {
         for (int i : (int[]) m7340k(CameraCharacteristics.CONTROL_AF_AVAILABLE_MODES, new int[0])) {
             if (i == 1) {
@@ -46,7 +46,7 @@ public class FocusLock extends BaseLock {
     }
 
     @Override // p007b.p452o.p453a.p455n.p457p.BaseLock
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public boolean mo7344n(@NonNull ActionHolder actionHolder) {
         TotalCaptureResult totalCaptureResult = ((Camera2Engine) actionHolder).f13808j0;
         if (totalCaptureResult == null) {
@@ -62,7 +62,7 @@ public class FocusLock extends BaseLock {
     }
 
     @Override // p007b.p452o.p453a.p455n.p457p.BaseLock
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public void mo7345o(@NonNull ActionHolder actionHolder) {
         ((Camera2Engine) actionHolder).f13807i0.set(CaptureRequest.CONTROL_AF_MODE, 1);
         Camera2Engine camera2Engine = (Camera2Engine) actionHolder;

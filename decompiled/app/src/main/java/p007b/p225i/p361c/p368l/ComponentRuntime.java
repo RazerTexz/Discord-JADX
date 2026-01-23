@@ -2,15 +2,15 @@ package p007b.p225i.p361c.p368l;
 
 import p007b.p225i.p361c.p400t.Provider2;
 
-/* compiled from: ComponentRuntime.java */
-/* renamed from: b.i.c.l.h, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.c.l.h, reason: use source file name */
+/* JADX INFO: compiled from: ComponentRuntime.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final /* synthetic */ class ComponentRuntime implements Provider2 {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final ComponentRuntime4 f12187a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final Component4 f12188b;
 
     public ComponentRuntime(ComponentRuntime4 componentRuntime4, Component4 component4) {

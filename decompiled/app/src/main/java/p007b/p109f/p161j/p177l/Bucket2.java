@@ -7,25 +7,25 @@ import java.util.Queue;
 import p007b.p085c.p086a.p087a0.AnimatableValueParser;
 import p007b.p109f.p115d.p120e.FLog;
 
-/* compiled from: Bucket.java */
+/* JADX INFO: renamed from: b.f.j.l.f, reason: use source file name */
+/* JADX INFO: compiled from: Bucket.java */
+/* JADX INFO: loaded from: classes3.dex */
 @VisibleForTesting
-/* renamed from: b.f.j.l.f, reason: use source file name */
-/* loaded from: classes3.dex */
 public class Bucket2<V> {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final int f3926a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final int f3927b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final Queue f3928c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final boolean f3929d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public int f3930e;
 
     public Bucket2(int i, int i2, int i3, boolean z2) {
@@ -39,23 +39,23 @@ public class Bucket2<V> {
         this.f3929d = z2;
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public void m1376a(V v) {
         this.f3928c.add(v);
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public void m1377b() {
         AnimatableValueParser.m419B(this.f3930e > 0);
         this.f3930e--;
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public V m1378c() {
         return (V) this.f3928c.poll();
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public void m1379d(V v) {
         if (this.f3929d) {
             AnimatableValueParser.m419B(this.f3930e > 0);

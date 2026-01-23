@@ -24,8 +24,8 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 import p658rx.Observable;
 
-/* compiled from: StoreGuildsNsfw.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: StoreGuildsNsfw.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class StoreGuildsNsfw extends StoreV2 {
     private static final Companion Companion = new Companion(null);
 
@@ -37,7 +37,7 @@ public final class StoreGuildsNsfw extends StoreV2 {
     private final ObservationDeck observationDeck;
     private final StoreChannels storeChannels;
 
-    /* compiled from: StoreGuildsNsfw.kt */
+    /* JADX INFO: compiled from: StoreGuildsNsfw.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -47,8 +47,8 @@ public final class StoreGuildsNsfw extends StoreV2 {
         }
     }
 
-    /* compiled from: StoreGuildsNsfw.kt */
-    /* renamed from: com.discord.stores.StoreGuildsNsfw$allow$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreGuildsNsfw$allow$1 */
+    /* JADX INFO: compiled from: StoreGuildsNsfw.kt */
     public static final class C61151 extends Lambda implements Function0<Unit> {
         public final /* synthetic */ long $guildId;
 
@@ -64,15 +64,15 @@ public final class StoreGuildsNsfw extends StoreV2 {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             StoreGuildsNsfw.access$getGuildIdsAllowed$p(StoreGuildsNsfw.this).add(Long.valueOf(this.$guildId));
             StoreGuildsNsfw.this.markChanged();
         }
     }
 
-    /* compiled from: StoreGuildsNsfw.kt */
-    /* renamed from: com.discord.stores.StoreGuildsNsfw$deny$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreGuildsNsfw$deny$1 */
+    /* JADX INFO: compiled from: StoreGuildsNsfw.kt */
     public static final class C61161 extends Lambda implements Function1<Channel, Unit> {
         public static final C61161 INSTANCE = new C61161();
 
@@ -86,7 +86,7 @@ public final class StoreGuildsNsfw extends StoreV2 {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Channel channel) {
             if (channel == null || channel.getNsfw()) {
                 ChannelSelector.selectChannel$default(ChannelSelector.INSTANCE.getInstance(), 0L, 0L, null, null, 12, null);
@@ -96,8 +96,8 @@ public final class StoreGuildsNsfw extends StoreV2 {
         }
     }
 
-    /* compiled from: StoreGuildsNsfw.kt */
-    /* renamed from: com.discord.stores.StoreGuildsNsfw$observeIsGuildNsfwGateAgreed$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreGuildsNsfw$observeIsGuildNsfwGateAgreed$1 */
+    /* JADX INFO: compiled from: StoreGuildsNsfw.kt */
     public static final class C61171 extends Lambda implements Function0<Boolean> {
         public final /* synthetic */ long $guildId;
 
@@ -112,7 +112,7 @@ public final class StoreGuildsNsfw extends StoreV2 {
             return Boolean.valueOf(invoke2());
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final boolean invoke2() {
             return StoreGuildsNsfw.this.isGuildNsfwGateAgreed(this.$guildId);
         }

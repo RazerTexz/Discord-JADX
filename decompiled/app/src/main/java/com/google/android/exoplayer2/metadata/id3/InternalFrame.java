@@ -6,20 +6,20 @@ import androidx.annotation.Nullable;
 import p007b.p100d.p104b.p105a.outline;
 import p007b.p225i.p226a.p242c.p259f3.Util2;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public final class InternalFrame extends Id3Frame {
     public static final Parcelable.Creator<InternalFrame> CREATOR = new C10732a();
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final String f19990k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final String f19991l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public final String f19992m;
 
-    /* renamed from: com.google.android.exoplayer2.metadata.id3.InternalFrame$a */
+    /* JADX INFO: renamed from: com.google.android.exoplayer2.metadata.id3.InternalFrame$a */
     public class C10732a implements Parcelable.Creator<InternalFrame> {
         @Override // android.os.Parcelable.Creator
         public InternalFrame createFromParcel(Parcel parcel) {

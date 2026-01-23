@@ -7,12 +7,12 @@ import p507d0.p580t.AbstractMutableSet;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.p595g0.KMarkers5;
 
-/* compiled from: MapBuilder.kt */
-/* renamed from: d0.t.q0.e, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.t.q0.e, reason: use source file name */
+/* JADX INFO: compiled from: MapBuilder.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class MapBuilder4<E> extends AbstractMutableSet<E> implements Set<E>, KMarkers5 {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final MapBuilder2<E, ?> f25217j;
 
     public MapBuilder4(MapBuilder2<E, ?> mapBuilder2) {

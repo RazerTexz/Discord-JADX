@@ -13,55 +13,55 @@ import p007b.p109f.p161j.p168c.MemoryCache;
 import p007b.p109f.p161j.p175j.CloseableImage;
 import p007b.p109f.p161j.p183r.FrescoSystrace;
 
-/* compiled from: BitmapProbeProducer.java */
-/* renamed from: b.f.j.p.j, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.f.j.p.j, reason: use source file name */
+/* JADX INFO: compiled from: BitmapProbeProducer.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class BitmapProbeProducer implements Producer2<CloseableReference<CloseableImage>> {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final MemoryCache<CacheKey, PooledByteBuffer> f4089a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final BufferedDiskCache2 f4090b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final BufferedDiskCache2 f4091c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final CacheKeyFactory f4092d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final Producer2<CloseableReference<CloseableImage>> f4093e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final BoundedLinkedHashSet<CacheKey> f4094f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public final BoundedLinkedHashSet<CacheKey> f4095g;
 
-    /* compiled from: BitmapProbeProducer.java */
-    /* renamed from: b.f.j.p.j$a */
+    /* JADX INFO: renamed from: b.f.j.p.j$a */
+    /* JADX INFO: compiled from: BitmapProbeProducer.java */
     public static class a extends DelegatingConsumer<CloseableReference<CloseableImage>, CloseableReference<CloseableImage>> {
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public final ProducerContext f4096c;
 
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         public final MemoryCache<CacheKey, PooledByteBuffer> f4097d;
 
-        /* renamed from: e */
+        /* JADX INFO: renamed from: e */
         public final BufferedDiskCache2 f4098e;
 
-        /* renamed from: f */
+        /* JADX INFO: renamed from: f */
         public final BufferedDiskCache2 f4099f;
 
-        /* renamed from: g */
+        /* JADX INFO: renamed from: g */
         public final CacheKeyFactory f4100g;
 
-        /* renamed from: h */
+        /* JADX INFO: renamed from: h */
         public final BoundedLinkedHashSet<CacheKey> f4101h;
 
-        /* renamed from: i */
+        /* JADX INFO: renamed from: i */
         public final BoundedLinkedHashSet<CacheKey> f4102i;
 
         public a(Consumer2<CloseableReference<CloseableImage>> consumer2, ProducerContext producerContext, MemoryCache<CacheKey, PooledByteBuffer> memoryCache, BufferedDiskCache2 bufferedDiskCache2, BufferedDiskCache2 bufferedDiskCache22, CacheKeyFactory cacheKeyFactory, BoundedLinkedHashSet<CacheKey> boundedLinkedHashSet, BoundedLinkedHashSet<CacheKey> boundedLinkedHashSet2) {
@@ -76,7 +76,7 @@ public class BitmapProbeProducer implements Producer2<CloseableReference<Closeab
         }
 
         @Override // p007b.p109f.p161j.p181p.BaseConsumer
-        /* renamed from: i */
+        /* JADX INFO: renamed from: i */
         public void mo1320i(Object obj, int i) {
             CloseableReference closeableReference = (CloseableReference) obj;
             try {
@@ -110,7 +110,7 @@ public class BitmapProbeProducer implements Producer2<CloseableReference<Closeab
     }
 
     @Override // p007b.p109f.p161j.p181p.Producer2
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public void mo1417b(Consumer2<CloseableReference<CloseableImage>> consumer2, ProducerContext producerContext) {
         try {
             FrescoSystrace.m1527b();

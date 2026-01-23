@@ -26,17 +26,17 @@ import p507d0.p579g0.Appendable;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: _Collections.kt */
-/* renamed from: d0.t.u, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.t.u, reason: use source file name */
+/* JADX INFO: compiled from: _Collections.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public class _Collections extends _CollectionsJvm {
 
     /* JADX INFO: Add missing generic type declarations: [T] */
-    /* compiled from: Sequences.kt */
-    /* renamed from: d0.t.u$a */
+    /* JADX INFO: renamed from: d0.t.u$a */
+    /* JADX INFO: compiled from: Sequences.kt */
     public static final class a<T> implements Sequence<T> {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final /* synthetic */ Iterable f25219a;
 
         public a(Iterable iterable) {
@@ -50,8 +50,8 @@ public class _Collections extends _CollectionsJvm {
     }
 
     /* JADX INFO: Add missing generic type declarations: [T] */
-    /* compiled from: _Collections.kt */
-    /* renamed from: d0.t.u$b */
+    /* JADX INFO: renamed from: d0.t.u$b */
+    /* JADX INFO: compiled from: _Collections.kt */
     public static final class b<T> extends Lambda implements Function1<Integer, T> {
         public final /* synthetic */ int $index;
 
@@ -72,8 +72,8 @@ public class _Collections extends _CollectionsJvm {
     }
 
     /* JADX INFO: Add missing generic type declarations: [T] */
-    /* compiled from: _Collections.kt */
-    /* renamed from: d0.t.u$c */
+    /* JADX INFO: renamed from: d0.t.u$c */
+    /* JADX INFO: compiled from: _Collections.kt */
     public static final class c<T> extends Lambda implements Function0<Iterator<? extends T>> {
         public final /* synthetic */ Iterable $this_withIndex;
 
@@ -129,7 +129,7 @@ public class _Collections extends _CollectionsJvm {
         if (i == 0) {
             return Double.NaN;
         }
-        return dLongValue / i;
+        return dLongValue / ((double) i);
     }
 
     public static final <T> List<List<T>> chunked(Iterable<? extends T> iterable, int i) {
@@ -441,7 +441,7 @@ public class _Collections extends _CollectionsJvm {
         return arrayList;
     }
 
-    /* renamed from: maxOrNull, reason: collision with other method in class */
+    /* JADX INFO: renamed from: maxOrNull, reason: collision with other method in class */
     public static final Float m11488maxOrNull(Iterable<Float> iterable) {
         Intrinsics3.checkNotNullParameter(iterable, "$this$maxOrNull");
         Iterator<Float> it = iterable.iterator();
@@ -471,7 +471,6 @@ public class _Collections extends _CollectionsJvm {
         return next;
     }
 
-    /* JADX WARN: Multi-variable type inference failed */
     public static final <T> T minWithOrNull(Iterable<? extends T> iterable, Comparator<? super T> comparator) {
         Intrinsics3.checkNotNullParameter(iterable, "$this$minWithOrNull");
         Intrinsics3.checkNotNullParameter(comparator, "comparator");
@@ -479,14 +478,14 @@ public class _Collections extends _CollectionsJvm {
         if (!it.hasNext()) {
             return null;
         }
-        Object obj = (T) it.next();
+        T next = it.next();
         while (it.hasNext()) {
-            Object obj2 = (T) it.next();
-            if (comparator.compare(obj, obj2) > 0) {
-                obj = (T) obj2;
+            T next2 = it.next();
+            if (comparator.compare(next, next2) > 0) {
+                next = next2;
             }
         }
-        return (T) obj;
+        return next;
     }
 
     public static final <T> List<T> minus(Iterable<? extends T> iterable, T t) {

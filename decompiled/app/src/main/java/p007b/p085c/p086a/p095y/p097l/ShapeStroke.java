@@ -10,40 +10,40 @@ import p007b.p085c.p086a.p095y.p096k.AnimatableFloatValue;
 import p007b.p085c.p086a.p095y.p096k.AnimatableIntegerValue;
 import p007b.p085c.p086a.p095y.p098m.BaseLayer2;
 
-/* compiled from: ShapeStroke.java */
-/* renamed from: b.c.a.y.l.o, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.c.a.y.l.o, reason: use source file name */
+/* JADX INFO: compiled from: ShapeStroke.java */
+/* JADX INFO: loaded from: classes.dex */
 public class ShapeStroke implements ContentModel2 {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final String f2819a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     @Nullable
     public final AnimatableFloatValue f2820b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final List<AnimatableFloatValue> f2821c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final AnimatableColorValue f2822d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final AnimatableIntegerValue f2823e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final AnimatableFloatValue f2824f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public final int f2825g;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public final int f2826h;
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public final float f2827i;
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final boolean f2828j;
 
     /* JADX WARN: Incorrect types in method signature: (Ljava/lang/String;Lb/c/a/y/k/b;Ljava/util/List<Lb/c/a/y/k/b;>;Lb/c/a/y/k/a;Lb/c/a/y/k/d;Lb/c/a/y/k/b;Ljava/lang/Object;Ljava/lang/Object;FZ)V */
@@ -61,7 +61,7 @@ public class ShapeStroke implements ContentModel2 {
     }
 
     @Override // p007b.p085c.p086a.p095y.p097l.ContentModel2
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public Content2 mo775a(LottieDrawable lottieDrawable, BaseLayer2 baseLayer2) {
         return new StrokeContent(lottieDrawable, baseLayer2, this);
     }

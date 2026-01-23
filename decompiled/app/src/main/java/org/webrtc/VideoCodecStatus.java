@@ -1,6 +1,6 @@
 package org.webrtc;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public enum VideoCodecStatus {
     REQUEST_SLI(2),
     NO_OUTPUT(1),

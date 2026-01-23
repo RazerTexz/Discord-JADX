@@ -82,12 +82,12 @@ import p637j0.p641k.Func1;
 import p658rx.Observable;
 import p658rx.functions.Action1;
 
-/* compiled from: WidgetServerSettingsOverview.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetServerSettingsOverview.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetServerSettingsOverview extends AppFragment {
     public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetServerSettingsOverview.class, "binding", "getBinding()Lcom/discord/databinding/WidgetServerSettingsOverviewBinding;", 0)};
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private static final String INTENT_EXTRA_GUILD_ID = "INTENT_EXTRA_GUILD_ID";
     private static final String INTENT_EXTRA_OPEN_AVATAR_PICKER = "INTENT_EXTRA_OPEN_AVATAR_PICKER";
@@ -95,18 +95,18 @@ public final class WidgetServerSettingsOverview extends AppFragment {
     private static final String REQUEST_KEY_SYSTEM_CHANNEL = "REQUEST_KEY_SYSTEM_CHANNEL";
     private static final int STATE_ID_NOTIFICATION_DEFAULT = 90001;
 
-    /* renamed from: binding$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
     private boolean hasOpenedAvatarPicker;
     private Action1<String> imageSelectedResult;
     private final AppLogger2 loggingConfig;
     private final StatefulViews state;
 
-    /* compiled from: WidgetServerSettingsOverview.kt */
+    /* JADX INFO: compiled from: WidgetServerSettingsOverview.kt */
     public static final class AfkBottomSheet extends AppBottomSheet {
         public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(AfkBottomSheet.class, "binding", "getBinding()Lcom/discord/databinding/WidgetServerSettingsOverviewAfkTimeoutBinding;", 0)};
 
-        /* renamed from: binding$delegate, reason: from kotlin metadata */
+        /* JADX INFO: renamed from: binding$delegate, reason: from kotlin metadata */
         private final FragmentViewBindingDelegate binding;
 
         public AfkBottomSheet() {
@@ -138,7 +138,7 @@ public final class WidgetServerSettingsOverview extends AppFragment {
         }
 
         @Override // com.discord.app.AppBottomSheet, androidx.fragment.app.Fragment
-        public void onViewCreated(View view, Bundle savedInstanceState) throws NumberFormatException {
+        public void onViewCreated(View view, Bundle savedInstanceState) {
             Intrinsics3.checkNotNullParameter(view, "view");
             super.onViewCreated(view, savedInstanceState);
             Fragment parentFragment = getParentFragment();
@@ -164,7 +164,7 @@ public final class WidgetServerSettingsOverview extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetServerSettingsOverview.kt */
+    /* JADX INFO: compiled from: WidgetServerSettingsOverview.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -189,10 +189,10 @@ public final class WidgetServerSettingsOverview extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetServerSettingsOverview.kt */
+    /* JADX INFO: compiled from: WidgetServerSettingsOverview.kt */
     public static final class Model {
 
-        /* renamed from: Companion, reason: from kotlin metadata */
+        /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
         public static final Companion INSTANCE = new Companion(null);
         private final Channel afkChannelModel;
         private final Integer approximateMemberCount;
@@ -202,7 +202,7 @@ public final class WidgetServerSettingsOverview extends AppFragment {
         private final boolean isOwner;
         private final Channel systemChannelModel;
 
-        /* compiled from: WidgetServerSettingsOverview.kt */
+        /* JADX INFO: compiled from: WidgetServerSettingsOverview.kt */
         public static final class Companion {
             private Companion() {
             }
@@ -285,19 +285,19 @@ public final class WidgetServerSettingsOverview extends AppFragment {
             return this.systemChannelModel;
         }
 
-        /* renamed from: isAboveNotifyAllSize, reason: from getter */
+        /* JADX INFO: renamed from: isAboveNotifyAllSize, reason: from getter */
         public final boolean getIsAboveNotifyAllSize() {
             return this.isAboveNotifyAllSize;
         }
 
-        /* renamed from: isOwner, reason: from getter */
+        /* JADX INFO: renamed from: isOwner, reason: from getter */
         public final boolean getIsOwner() {
             return this.isOwner;
         }
     }
 
-    /* compiled from: WidgetServerSettingsOverview.kt */
-    /* renamed from: com.discord.widgets.servers.WidgetServerSettingsOverview$configureAnimatedBannerUpsellSection$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.WidgetServerSettingsOverview$configureAnimatedBannerUpsellSection$1 */
+    /* JADX INFO: compiled from: WidgetServerSettingsOverview.kt */
     public static final class ViewOnClickListenerC92751 implements View.OnClickListener {
         public final /* synthetic */ Guild $guild;
 
@@ -311,13 +311,13 @@ public final class WidgetServerSettingsOverview extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetServerSettingsOverview.kt */
-    /* renamed from: com.discord.widgets.servers.WidgetServerSettingsOverview$configureBannerImage$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.WidgetServerSettingsOverview$configureBannerImage$1 */
+    /* JADX INFO: compiled from: WidgetServerSettingsOverview.kt */
     public static final class ViewOnClickListenerC92761 implements View.OnClickListener {
         public final /* synthetic */ String $bannerOriginalUrl;
 
-        /* compiled from: WidgetServerSettingsOverview.kt */
-        /* renamed from: com.discord.widgets.servers.WidgetServerSettingsOverview$configureBannerImage$1$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.widgets.servers.WidgetServerSettingsOverview$configureBannerImage$1$1, reason: invalid class name */
+        /* JADX INFO: compiled from: WidgetServerSettingsOverview.kt */
         public static final class AnonymousClass1<T> implements Action1<String> {
             public AnonymousClass1() {
             }
@@ -327,15 +327,15 @@ public final class WidgetServerSettingsOverview extends AppFragment {
                 call2(str);
             }
 
-            /* renamed from: call, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
             public final void call2(String str) {
                 ViewOnClickListenerC92761 viewOnClickListenerC92761 = ViewOnClickListenerC92761.this;
                 WidgetServerSettingsOverview.access$configureBannerImage(WidgetServerSettingsOverview.this, viewOnClickListenerC92761.$bannerOriginalUrl, str, true);
             }
         }
 
-        /* compiled from: WidgetServerSettingsOverview.kt */
-        /* renamed from: com.discord.widgets.servers.WidgetServerSettingsOverview$configureBannerImage$1$2, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.widgets.servers.WidgetServerSettingsOverview$configureBannerImage$1$2, reason: invalid class name */
+        /* JADX INFO: compiled from: WidgetServerSettingsOverview.kt */
         public static final class AnonymousClass2 extends Lambda implements Function0<Unit> {
             public AnonymousClass2() {
                 super(0);
@@ -347,7 +347,7 @@ public final class WidgetServerSettingsOverview extends AppFragment {
                 return Unit.f27425a;
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2() {
                 WidgetServerSettingsOverview.this.openMediaChooser();
             }
@@ -364,8 +364,8 @@ public final class WidgetServerSettingsOverview extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetServerSettingsOverview.kt */
-    /* renamed from: com.discord.widgets.servers.WidgetServerSettingsOverview$configureBannerImage$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.WidgetServerSettingsOverview$configureBannerImage$2 */
+    /* JADX INFO: compiled from: WidgetServerSettingsOverview.kt */
     public static final class ViewOnClickListenerC92772 implements View.OnClickListener {
         public final /* synthetic */ String $bannerOriginalUrl;
 
@@ -379,13 +379,13 @@ public final class WidgetServerSettingsOverview extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetServerSettingsOverview.kt */
-    /* renamed from: com.discord.widgets.servers.WidgetServerSettingsOverview$configureBannerSection$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.WidgetServerSettingsOverview$configureBannerSection$1 */
+    /* JADX INFO: compiled from: WidgetServerSettingsOverview.kt */
     public static final class C92781 extends Lambda implements Function1<RenderContext, Unit> {
         public final /* synthetic */ Guild $guild;
 
-        /* compiled from: WidgetServerSettingsOverview.kt */
-        /* renamed from: com.discord.widgets.servers.WidgetServerSettingsOverview$configureBannerSection$1$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.widgets.servers.WidgetServerSettingsOverview$configureBannerSection$1$1, reason: invalid class name */
+        /* JADX INFO: compiled from: WidgetServerSettingsOverview.kt */
         public static final class AnonymousClass1 extends Lambda implements Function1<View, Unit> {
             public AnonymousClass1() {
                 super(1);
@@ -397,7 +397,7 @@ public final class WidgetServerSettingsOverview extends AppFragment {
                 return Unit.f27425a;
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2(View view) {
                 Intrinsics3.checkNotNullParameter(view, "view");
                 WidgetGuildBoost.Companion companion = WidgetGuildBoost.INSTANCE;
@@ -419,15 +419,15 @@ public final class WidgetServerSettingsOverview extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(RenderContext renderContext) {
             Intrinsics3.checkNotNullParameter(renderContext, "$receiver");
             renderContext.m8423b("tierStatus", new AnonymousClass1());
         }
     }
 
-    /* compiled from: WidgetServerSettingsOverview.kt */
-    /* renamed from: com.discord.widgets.servers.WidgetServerSettingsOverview$configureBannerSection$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.WidgetServerSettingsOverview$configureBannerSection$2 */
+    /* JADX INFO: compiled from: WidgetServerSettingsOverview.kt */
     public static final class ViewOnClickListenerC92792 implements View.OnClickListener {
         public final /* synthetic */ Guild $guild;
 
@@ -441,8 +441,8 @@ public final class WidgetServerSettingsOverview extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetServerSettingsOverview.kt */
-    /* renamed from: com.discord.widgets.servers.WidgetServerSettingsOverview$configureIcon$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.WidgetServerSettingsOverview$configureIcon$1 */
+    /* JADX INFO: compiled from: WidgetServerSettingsOverview.kt */
     public static final class ViewOnClickListenerC92801 implements View.OnClickListener {
         public final /* synthetic */ String $guildShortName;
         public final /* synthetic */ String $iconOriginal;
@@ -458,8 +458,8 @@ public final class WidgetServerSettingsOverview extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetServerSettingsOverview.kt */
-    /* renamed from: com.discord.widgets.servers.WidgetServerSettingsOverview$configureIcon$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.WidgetServerSettingsOverview$configureIcon$2 */
+    /* JADX INFO: compiled from: WidgetServerSettingsOverview.kt */
     public static final class ViewOnClickListenerC92812 implements View.OnClickListener {
         public final /* synthetic */ String $guildShortName;
         public final /* synthetic */ String $iconOriginal;
@@ -475,13 +475,13 @@ public final class WidgetServerSettingsOverview extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetServerSettingsOverview.kt */
-    /* renamed from: com.discord.widgets.servers.WidgetServerSettingsOverview$configureSplashImage$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.WidgetServerSettingsOverview$configureSplashImage$1 */
+    /* JADX INFO: compiled from: WidgetServerSettingsOverview.kt */
     public static final class ViewOnClickListenerC92831 implements View.OnClickListener {
         public final /* synthetic */ String $splashOriginalUrl;
 
-        /* compiled from: WidgetServerSettingsOverview.kt */
-        /* renamed from: com.discord.widgets.servers.WidgetServerSettingsOverview$configureSplashImage$1$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.widgets.servers.WidgetServerSettingsOverview$configureSplashImage$1$1, reason: invalid class name */
+        /* JADX INFO: compiled from: WidgetServerSettingsOverview.kt */
         public static final class AnonymousClass1<T> implements Action1<String> {
             public AnonymousClass1() {
             }
@@ -491,7 +491,7 @@ public final class WidgetServerSettingsOverview extends AppFragment {
                 call2(str);
             }
 
-            /* renamed from: call, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
             public final void call2(String str) {
                 ViewOnClickListenerC92831 viewOnClickListenerC92831 = ViewOnClickListenerC92831.this;
                 WidgetServerSettingsOverview.access$configureSplashImage(WidgetServerSettingsOverview.this, viewOnClickListenerC92831.$splashOriginalUrl, str, true);
@@ -509,8 +509,8 @@ public final class WidgetServerSettingsOverview extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetServerSettingsOverview.kt */
-    /* renamed from: com.discord.widgets.servers.WidgetServerSettingsOverview$configureSplashImage$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.WidgetServerSettingsOverview$configureSplashImage$2 */
+    /* JADX INFO: compiled from: WidgetServerSettingsOverview.kt */
     public static final class ViewOnClickListenerC92842 implements View.OnClickListener {
         public final /* synthetic */ String $splashOriginalUrl;
 
@@ -524,13 +524,13 @@ public final class WidgetServerSettingsOverview extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetServerSettingsOverview.kt */
-    /* renamed from: com.discord.widgets.servers.WidgetServerSettingsOverview$configureSplashSection$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.WidgetServerSettingsOverview$configureSplashSection$1 */
+    /* JADX INFO: compiled from: WidgetServerSettingsOverview.kt */
     public static final class C92851 extends Lambda implements Function1<RenderContext, Unit> {
         public final /* synthetic */ Guild $guild;
 
-        /* compiled from: WidgetServerSettingsOverview.kt */
-        /* renamed from: com.discord.widgets.servers.WidgetServerSettingsOverview$configureSplashSection$1$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.widgets.servers.WidgetServerSettingsOverview$configureSplashSection$1$1, reason: invalid class name */
+        /* JADX INFO: compiled from: WidgetServerSettingsOverview.kt */
         public static final class AnonymousClass1 extends Lambda implements Function1<View, Unit> {
             public AnonymousClass1() {
                 super(1);
@@ -542,7 +542,7 @@ public final class WidgetServerSettingsOverview extends AppFragment {
                 return Unit.f27425a;
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2(View view) {
                 Intrinsics3.checkNotNullParameter(view, "view");
                 WidgetGuildBoost.Companion companion = WidgetGuildBoost.INSTANCE;
@@ -564,15 +564,15 @@ public final class WidgetServerSettingsOverview extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(RenderContext renderContext) {
             Intrinsics3.checkNotNullParameter(renderContext, "$receiver");
             renderContext.m8423b("tierInfo", new AnonymousClass1());
         }
     }
 
-    /* compiled from: WidgetServerSettingsOverview.kt */
-    /* renamed from: com.discord.widgets.servers.WidgetServerSettingsOverview$configureSplashSection$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.WidgetServerSettingsOverview$configureSplashSection$2 */
+    /* JADX INFO: compiled from: WidgetServerSettingsOverview.kt */
     public static final class ViewOnClickListenerC92862 implements View.OnClickListener {
         public final /* synthetic */ Guild $guild;
 
@@ -586,8 +586,8 @@ public final class WidgetServerSettingsOverview extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetServerSettingsOverview.kt */
-    /* renamed from: com.discord.widgets.servers.WidgetServerSettingsOverview$configureUI$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.WidgetServerSettingsOverview$configureUI$1 */
+    /* JADX INFO: compiled from: WidgetServerSettingsOverview.kt */
     public static final class ViewOnClickListenerC92871 implements View.OnClickListener {
         public final /* synthetic */ Model $this_configureUI;
 
@@ -601,8 +601,8 @@ public final class WidgetServerSettingsOverview extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetServerSettingsOverview.kt */
-    /* renamed from: com.discord.widgets.servers.WidgetServerSettingsOverview$configureUI$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.WidgetServerSettingsOverview$configureUI$2 */
+    /* JADX INFO: compiled from: WidgetServerSettingsOverview.kt */
     public static final class ViewOnClickListenerC92882 implements View.OnClickListener {
         public ViewOnClickListenerC92882() {
         }
@@ -616,8 +616,8 @@ public final class WidgetServerSettingsOverview extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetServerSettingsOverview.kt */
-    /* renamed from: com.discord.widgets.servers.WidgetServerSettingsOverview$configureUI$3 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.WidgetServerSettingsOverview$configureUI$3 */
+    /* JADX INFO: compiled from: WidgetServerSettingsOverview.kt */
     public static final class ViewOnClickListenerC92893 implements View.OnClickListener {
         public final /* synthetic */ Model $this_configureUI;
 
@@ -631,8 +631,8 @@ public final class WidgetServerSettingsOverview extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetServerSettingsOverview.kt */
-    /* renamed from: com.discord.widgets.servers.WidgetServerSettingsOverview$configureUI$4 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.WidgetServerSettingsOverview$configureUI$4 */
+    /* JADX INFO: compiled from: WidgetServerSettingsOverview.kt */
     public static final class ViewOnClickListenerC92904 implements View.OnClickListener {
         public ViewOnClickListenerC92904() {
         }
@@ -654,8 +654,8 @@ public final class WidgetServerSettingsOverview extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetServerSettingsOverview.kt */
-    /* renamed from: com.discord.widgets.servers.WidgetServerSettingsOverview$configureUI$5 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.WidgetServerSettingsOverview$configureUI$5 */
+    /* JADX INFO: compiled from: WidgetServerSettingsOverview.kt */
     public static final class ViewOnClickListenerC92915 implements View.OnClickListener {
         public ViewOnClickListenerC92915() {
         }
@@ -677,8 +677,8 @@ public final class WidgetServerSettingsOverview extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetServerSettingsOverview.kt */
-    /* renamed from: com.discord.widgets.servers.WidgetServerSettingsOverview$configureUI$6 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.WidgetServerSettingsOverview$configureUI$6 */
+    /* JADX INFO: compiled from: WidgetServerSettingsOverview.kt */
     public static final class ViewOnClickListenerC92926 implements View.OnClickListener {
         public ViewOnClickListenerC92926() {
         }
@@ -700,13 +700,13 @@ public final class WidgetServerSettingsOverview extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetServerSettingsOverview.kt */
-    /* renamed from: com.discord.widgets.servers.WidgetServerSettingsOverview$configureUI$7 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.WidgetServerSettingsOverview$configureUI$7 */
+    /* JADX INFO: compiled from: WidgetServerSettingsOverview.kt */
     public static final class ViewOnClickListenerC92937 implements View.OnClickListener {
         public final /* synthetic */ Model $this_configureUI;
 
-        /* compiled from: WidgetServerSettingsOverview.kt */
-        /* renamed from: com.discord.widgets.servers.WidgetServerSettingsOverview$configureUI$7$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.widgets.servers.WidgetServerSettingsOverview$configureUI$7$1, reason: invalid class name */
+        /* JADX INFO: compiled from: WidgetServerSettingsOverview.kt */
         public static final class AnonymousClass1<T, R> implements Func1<com.discord.api.guild.Guild, Observable<? extends Guild>> {
             public static final AnonymousClass1 INSTANCE = new AnonymousClass1();
 
@@ -715,7 +715,7 @@ public final class WidgetServerSettingsOverview extends AppFragment {
                 return call2(guild);
             }
 
-            /* renamed from: call, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
             public final Observable<? extends Guild> call2(com.discord.api.guild.Guild guild) {
                 Observable<R> observableM11083G = StoreStream.INSTANCE.getGuilds().observeGuild(guild.getId()).m11118y(ObservableExtensionsKt.C68871.INSTANCE).m11083G(ObservableExtensionsKt.C68882.INSTANCE);
                 Intrinsics3.checkNotNullExpressionValue(observableM11083G, "filter { it != null }.map { it!! }");
@@ -723,8 +723,8 @@ public final class WidgetServerSettingsOverview extends AppFragment {
             }
         }
 
-        /* compiled from: WidgetServerSettingsOverview.kt */
-        /* renamed from: com.discord.widgets.servers.WidgetServerSettingsOverview$configureUI$7$2, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.widgets.servers.WidgetServerSettingsOverview$configureUI$7$2, reason: invalid class name */
+        /* JADX INFO: compiled from: WidgetServerSettingsOverview.kt */
         public static final class AnonymousClass2<T, R> implements Func1<Guild, Observable<? extends Model>> {
             public static final AnonymousClass2 INSTANCE = new AnonymousClass2();
 
@@ -733,25 +733,25 @@ public final class WidgetServerSettingsOverview extends AppFragment {
                 return call2(guild);
             }
 
-            /* renamed from: call, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
             public final Observable<? extends Model> call2(Guild guild) {
                 return Model.INSTANCE.get(guild.getId());
             }
         }
 
-        /* compiled from: WidgetServerSettingsOverview.kt */
-        /* renamed from: com.discord.widgets.servers.WidgetServerSettingsOverview$configureUI$7$3, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.widgets.servers.WidgetServerSettingsOverview$configureUI$7$3, reason: invalid class name */
+        /* JADX INFO: compiled from: WidgetServerSettingsOverview.kt */
         public static final class AnonymousClass3<T> implements Action1<Model> {
             public AnonymousClass3() {
             }
 
             @Override // p658rx.functions.Action1
-            public /* bridge */ /* synthetic */ void call(Model model) throws Resources.NotFoundException {
+            public /* bridge */ /* synthetic */ void call(Model model) {
                 call2(model);
             }
 
-            /* renamed from: call, reason: avoid collision after fix types in other method */
-            public final void call2(Model model) throws Resources.NotFoundException {
+            /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
+            public final void call2(Model model) {
                 WidgetServerSettingsOverview.access$configureUpdatedGuild(WidgetServerSettingsOverview.this, model);
             }
         }
@@ -827,8 +827,8 @@ public final class WidgetServerSettingsOverview extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetServerSettingsOverview.kt */
-    /* renamed from: com.discord.widgets.servers.WidgetServerSettingsOverview$onViewBound$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.WidgetServerSettingsOverview$onViewBound$1 */
+    /* JADX INFO: compiled from: WidgetServerSettingsOverview.kt */
     public static final class C92941 extends Lambda implements Function2<Long, String, Unit> {
         public C92941() {
             super(2);
@@ -849,8 +849,8 @@ public final class WidgetServerSettingsOverview extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetServerSettingsOverview.kt */
-    /* renamed from: com.discord.widgets.servers.WidgetServerSettingsOverview$onViewBound$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.WidgetServerSettingsOverview$onViewBound$2 */
+    /* JADX INFO: compiled from: WidgetServerSettingsOverview.kt */
     public static final class C92952 extends Lambda implements Function2<Long, String, Unit> {
         public C92952() {
             super(2);
@@ -871,27 +871,27 @@ public final class WidgetServerSettingsOverview extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetServerSettingsOverview.kt */
-    /* renamed from: com.discord.widgets.servers.WidgetServerSettingsOverview$onViewBoundOrOnResume$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.WidgetServerSettingsOverview$onViewBoundOrOnResume$1 */
+    /* JADX INFO: compiled from: WidgetServerSettingsOverview.kt */
     public static final class C92961 extends Lambda implements Function1<Model, Unit> {
         public C92961() {
             super(1);
         }
 
         @Override // kotlin.jvm.functions.Function1
-        public /* bridge */ /* synthetic */ Unit invoke(Model model) throws Resources.NotFoundException {
+        public /* bridge */ /* synthetic */ Unit invoke(Model model) {
             invoke2(model);
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
-        public final void invoke2(Model model) throws Resources.NotFoundException {
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
+        public final void invoke2(Model model) {
             WidgetServerSettingsOverview.access$configureUI(WidgetServerSettingsOverview.this, model);
         }
     }
 
-    /* compiled from: WidgetServerSettingsOverview.kt */
-    /* renamed from: com.discord.widgets.servers.WidgetServerSettingsOverview$openAvatarPicker$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.WidgetServerSettingsOverview$openAvatarPicker$1 */
+    /* JADX INFO: compiled from: WidgetServerSettingsOverview.kt */
     public static final class C92971<T> implements Action1<String> {
         public final /* synthetic */ String $guildShortName;
         public final /* synthetic */ String $iconOriginal;
@@ -906,7 +906,7 @@ public final class WidgetServerSettingsOverview extends AppFragment {
             call2(str);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final void call2(String str) {
             WidgetServerSettingsOverview.access$configureIcon(WidgetServerSettingsOverview.this, this.$guildShortName, this.$iconOriginal, str, true);
         }
@@ -943,11 +943,11 @@ public final class WidgetServerSettingsOverview extends AppFragment {
         widgetServerSettingsOverview.configureSystemChannel(channel);
     }
 
-    public static final /* synthetic */ void access$configureUI(WidgetServerSettingsOverview widgetServerSettingsOverview, Model model) throws Resources.NotFoundException {
+    public static final /* synthetic */ void access$configureUI(WidgetServerSettingsOverview widgetServerSettingsOverview, Model model) {
         widgetServerSettingsOverview.configureUI(model);
     }
 
-    public static final /* synthetic */ void access$configureUpdatedGuild(WidgetServerSettingsOverview widgetServerSettingsOverview, Model model) throws Resources.NotFoundException {
+    public static final /* synthetic */ void access$configureUpdatedGuild(WidgetServerSettingsOverview widgetServerSettingsOverview, Model model) {
         widgetServerSettingsOverview.configureUpdatedGuild(model);
     }
 
@@ -1021,7 +1021,7 @@ public final class WidgetServerSettingsOverview extends AppFragment {
         this.state.configureSaveActionView(getBinding().f17734e);
     }
 
-    private final void configureBannerSection(Guild guild) throws Resources.NotFoundException {
+    private final void configureBannerSection(Guild guild) {
         boolean z2 = true;
         if (!guild.canHaveBanner()) {
             TextView textView = getBinding().f17737h.f1084h;
@@ -1172,7 +1172,7 @@ public final class WidgetServerSettingsOverview extends AppFragment {
         this.state.configureSaveActionView(getBinding().f17734e);
     }
 
-    private final void configureSplashSection(Guild guild) throws Resources.NotFoundException {
+    private final void configureSplashSection(Guild guild) {
         boolean z2 = true;
         if (!guild.canHaveSplash()) {
             TextView textView = getBinding().f17738i.f1112g;
@@ -1230,7 +1230,7 @@ public final class WidgetServerSettingsOverview extends AppFragment {
         configureChannel(textView, selectedChannel, C5419R.string.no_system_channel, C5419R.drawable.ic_channel_text_16dp);
     }
 
-    private final void configureUI(Model model) throws Resources.NotFoundException {
+    private final void configureUI(Model model) {
         if (model == null || !model.getCanManage()) {
             AppActivity appActivity = getAppActivity();
             if (appActivity != null) {
@@ -1316,7 +1316,7 @@ public final class WidgetServerSettingsOverview extends AppFragment {
         getBinding().f17734e.setOnClickListener(new ViewOnClickListenerC92937(model));
     }
 
-    private final void configureUpdatedGuild(Model model) throws Resources.NotFoundException {
+    private final void configureUpdatedGuild(Model model) {
         StatefulViews.clear$default(this.state, false, 1, null);
         AppFragment.hideKeyboard$default(this, null, 1, null);
         getBinding().f17735f.fullScroll(33);

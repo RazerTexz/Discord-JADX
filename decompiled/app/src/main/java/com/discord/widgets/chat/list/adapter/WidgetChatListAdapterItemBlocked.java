@@ -16,13 +16,13 @@ import p007b.p008a.p027k.FormatUtils;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: WidgetChatListAdapterItemBlocked.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetChatListAdapterItemBlocked.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetChatListAdapterItemBlocked extends WidgetChatListItem {
     private final WidgetChatListAdapterItemBlockedBinding binding;
 
-    /* compiled from: WidgetChatListAdapterItemBlocked.kt */
-    /* renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemBlocked$onConfigure$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemBlocked$onConfigure$1 */
+    /* JADX INFO: compiled from: WidgetChatListAdapterItemBlocked.kt */
     public static final class ViewOnClickListenerC80371 implements View.OnClickListener {
         public final /* synthetic */ Message $message;
 

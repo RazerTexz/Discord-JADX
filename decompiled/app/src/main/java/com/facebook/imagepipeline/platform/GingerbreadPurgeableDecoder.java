@@ -20,21 +20,21 @@ import p007b.p109f.p115d.p125j.LimitedInputStream;
 import p007b.p109f.p115d.p128m.WebpBitmapFactory;
 import p007b.p109f.p115d.p128m.WebpSupportStatus;
 
+/* JADX INFO: loaded from: classes3.dex */
 @DoNotStrip
-/* loaded from: classes3.dex */
 public class GingerbreadPurgeableDecoder extends DalvikPurgeableDecoder {
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public static Method f19574c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final WebpBitmapFactory f19575d = WebpSupportStatus.m1015c();
 
     @DoNotStrip
     public GingerbreadPurgeableDecoder() {
     }
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public static MemoryFile m8715g(CloseableReference<PooledByteBuffer> closeableReference, int i, byte[] bArr) throws Throwable {
         OutputStream outputStream;
         LimitedInputStream limitedInputStream;
@@ -91,19 +91,19 @@ public class GingerbreadPurgeableDecoder extends DalvikPurgeableDecoder {
     }
 
     @Override // com.facebook.imagepipeline.nativecode.DalvikPurgeableDecoder
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public Bitmap mo8710c(CloseableReference<PooledByteBuffer> closeableReference, BitmapFactory.Options options) {
         return m8716h(closeableReference, closeableReference.m8642u().size(), null, options);
     }
 
     @Override // com.facebook.imagepipeline.nativecode.DalvikPurgeableDecoder
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public Bitmap mo8711d(CloseableReference<PooledByteBuffer> closeableReference, int i, BitmapFactory.Options options) {
         return m8716h(closeableReference, i, DalvikPurgeableDecoder.m8709e(closeableReference, i) ? null : DalvikPurgeableDecoder.f19566a, options);
     }
 
     /* JADX WARN: Removed duplicated region for block: B:24:0x003c  */
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
@@ -149,7 +149,7 @@ public class GingerbreadPurgeableDecoder extends DalvikPurgeableDecoder {
         }
     }
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public final synchronized Method m8717i() {
         if (f19574c == null) {
             try {
@@ -162,7 +162,7 @@ public class GingerbreadPurgeableDecoder extends DalvikPurgeableDecoder {
         return f19574c;
     }
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final FileDescriptor m8718j(MemoryFile memoryFile) throws Throwable {
         try {
             Object objInvoke = m8717i().invoke(memoryFile, new Object[0]);

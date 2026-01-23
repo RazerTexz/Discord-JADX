@@ -8,7 +8,7 @@ import java.io.OutputStream;
 import java.nio.ByteBuffer;
 import java.nio.ByteOrder;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public final class UnsafeMemoryOutput extends ByteBufferOutput {
     private static final boolean isLittleEndian = ByteOrder.nativeOrder().equals(ByteOrder.LITTLE_ENDIAN);
     private long bufaddress;
@@ -21,7 +21,7 @@ public final class UnsafeMemoryOutput extends ByteBufferOutput {
         this.bufaddress = this.niobuffer.address();
     }
 
-    private final void writeLittleEndianInt(int i) throws KryoException {
+    private final void writeLittleEndianInt(int i) {
         if (isLittleEndian) {
             writeInt(i);
         } else {
@@ -29,7 +29,7 @@ public final class UnsafeMemoryOutput extends ByteBufferOutput {
         }
     }
 
-    private final void writeLittleEndianLong(long j) throws KryoException {
+    private final void writeLittleEndianLong(long j) {
         if (isLittleEndian) {
             writeLong(j);
         } else {
@@ -66,7 +66,7 @@ public final class UnsafeMemoryOutput extends ByteBufferOutput {
     @Override // com.esotericsoftware.kryo.p502io.ByteBufferOutput, com.esotericsoftware.kryo.p502io.Output
     public final void writeChar(char c) throws KryoException {
         require(2);
-        UnsafeUtil.unsafe().putChar(this.bufaddress + this.position, c);
+        UnsafeUtil.unsafe().putChar(this.bufaddress + ((long) this.position), c);
         this.position += 2;
     }
 
@@ -78,7 +78,7 @@ public final class UnsafeMemoryOutput extends ByteBufferOutput {
     @Override // com.esotericsoftware.kryo.p502io.ByteBufferOutput, com.esotericsoftware.kryo.p502io.Output
     public final void writeDouble(double d) throws KryoException {
         require(8);
-        UnsafeUtil.unsafe().putDouble(this.bufaddress + this.position, d);
+        UnsafeUtil.unsafe().putDouble(this.bufaddress + ((long) this.position), d);
         this.position += 8;
     }
 
@@ -90,7 +90,7 @@ public final class UnsafeMemoryOutput extends ByteBufferOutput {
     @Override // com.esotericsoftware.kryo.p502io.ByteBufferOutput, com.esotericsoftware.kryo.p502io.Output
     public final void writeFloat(float f) throws KryoException {
         require(4);
-        UnsafeUtil.unsafe().putFloat(this.bufaddress + this.position, f);
+        UnsafeUtil.unsafe().putFloat(this.bufaddress + ((long) this.position), f);
         this.position += 4;
     }
 
@@ -102,7 +102,7 @@ public final class UnsafeMemoryOutput extends ByteBufferOutput {
     @Override // com.esotericsoftware.kryo.p502io.ByteBufferOutput, com.esotericsoftware.kryo.p502io.Output
     public final void writeInt(int i) throws KryoException {
         require(4);
-        UnsafeUtil.unsafe().putInt(this.bufaddress + this.position, i);
+        UnsafeUtil.unsafe().putInt(this.bufaddress + ((long) this.position), i);
         this.position += 4;
     }
 
@@ -118,7 +118,7 @@ public final class UnsafeMemoryOutput extends ByteBufferOutput {
     @Override // com.esotericsoftware.kryo.p502io.ByteBufferOutput, com.esotericsoftware.kryo.p502io.Output
     public final void writeLong(long j) throws KryoException {
         require(8);
-        UnsafeUtil.unsafe().putLong(this.bufaddress + this.position, j);
+        UnsafeUtil.unsafe().putLong(this.bufaddress + ((long) this.position), j);
         this.position += 8;
     }
 
@@ -134,7 +134,7 @@ public final class UnsafeMemoryOutput extends ByteBufferOutput {
     @Override // com.esotericsoftware.kryo.p502io.ByteBufferOutput, com.esotericsoftware.kryo.p502io.Output
     public final void writeShort(int i) throws KryoException {
         require(2);
-        UnsafeUtil.unsafe().putShort(this.bufaddress + this.position, (short) i);
+        UnsafeUtil.unsafe().putShort(this.bufaddress + ((long) this.position), (short) i);
         this.position += 2;
     }
 
@@ -190,28 +190,28 @@ public final class UnsafeMemoryOutput extends ByteBufferOutput {
             writeByte(i);
             return 1;
         }
-        int i2 = (int) (i | 128 | ((j3 & 127) << 8));
+        int i2 = (int) (((long) (i | 128)) | ((j3 & 127) << 8));
         long j4 = j3 >>> 7;
         if (j4 == 0) {
             writeLittleEndianInt(i2);
             this.position -= 2;
             return 2;
         }
-        int i3 = (int) (i2 | 32768 | ((j4 & 127) << 16));
+        int i3 = (int) (((long) (i2 | 32768)) | ((j4 & 127) << 16));
         long j5 = j4 >>> 7;
         if (j5 == 0) {
             writeLittleEndianInt(i3);
             this.position--;
             return 3;
         }
-        int i4 = (int) (i3 | 8388608 | ((j5 & 127) << 24));
+        int i4 = (int) (((long) (i3 | 8388608)) | ((j5 & 127) << 24));
         long j6 = j5 >>> 7;
         if (j6 == 0) {
             writeLittleEndianInt(i4);
             this.position += 0;
             return 4;
         }
-        long j7 = (((int) (i4 | Permission.USE_APPLICATION_COMMANDS)) & 4294967295L) | ((j6 & 127) << 32);
+        long j7 = (((long) ((int) (((long) i4) | Permission.USE_APPLICATION_COMMANDS))) & 4294967295L) | ((j6 & 127) << 32);
         long j8 = j6 >>> 7;
         if (j8 == 0) {
             writeLittleEndianLong(j7);
@@ -269,7 +269,7 @@ public final class UnsafeMemoryOutput extends ByteBufferOutput {
         long j5 = j2;
         while (true) {
             long j6 = iMin;
-            UnsafeUtil.unsafe().copyMemory(obj, j + j5, (Object) null, this.bufaddress + this.position, j6);
+            UnsafeUtil.unsafe().copyMemory(obj, j + j5, (Object) null, this.bufaddress + ((long) this.position), j6);
             this.position += iMin;
             j4 -= j6;
             if (j4 == 0) {

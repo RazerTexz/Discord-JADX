@@ -11,8 +11,8 @@ import p507d0.p579g0.StringNumberConversions;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: RouteHandlers.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: RouteHandlers.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class RouteHandlers$selectFeature$settingMap$12 extends Lambda implements Function1<FragmentActivity, Unit> {
     public final /* synthetic */ Uri $uri;
 
@@ -28,7 +28,7 @@ public final class RouteHandlers$selectFeature$settingMap$12 extends Lambda impl
         return Unit.f27425a;
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final void invoke2(FragmentActivity fragmentActivity) {
         Intrinsics3.checkNotNullParameter(fragmentActivity, "ctx");
         String queryParameter = this.$uri.getQueryParameter(ModelAuditLogEntry.CHANGE_KEY_CHANNEL_ID);

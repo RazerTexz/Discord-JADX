@@ -8,8 +8,8 @@ import androidx.appcompat.view.menu.MenuView;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+/* JADX INFO: loaded from: classes3.dex */
 @RestrictTo({RestrictTo.Scope.LIBRARY_GROUP})
-/* loaded from: classes3.dex */
 public class NavigationMenuView extends RecyclerView implements MenuView {
     public NavigationMenuView(Context context) {
         this(context, null);

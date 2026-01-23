@@ -5,8 +5,8 @@ import p001a0.p002a.p003a.C0002b;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: CurrentMonthEarningMetrics.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: CurrentMonthEarningMetrics.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final /* data */ class CurrentMonthEarningMetrics {
     private final Long monthOverMonthRevenueChangePercent;
     private final Long monthOverMonthSubscriberCountChange;
@@ -32,32 +32,32 @@ public final /* data */ class CurrentMonthEarningMetrics {
         return currentMonthEarningMetrics.copy((i & 1) != 0 ? currentMonthEarningMetrics.revenue : j, (i & 2) != 0 ? currentMonthEarningMetrics.monthOverMonthRevenueChangePercent : l, (i & 4) != 0 ? currentMonthEarningMetrics.subscriberCount : j2, (i & 8) != 0 ? currentMonthEarningMetrics.monthOverMonthSubscriberCountChange : l2, (i & 16) != 0 ? currentMonthEarningMetrics.nextPaymentDate : str, (i & 32) != 0 ? currentMonthEarningMetrics.revenueSinceDate : str2);
     }
 
-    /* renamed from: component1, reason: from getter */
+    /* JADX INFO: renamed from: component1, reason: from getter */
     public final long getRevenue() {
         return this.revenue;
     }
 
-    /* renamed from: component2, reason: from getter */
+    /* JADX INFO: renamed from: component2, reason: from getter */
     public final Long getMonthOverMonthRevenueChangePercent() {
         return this.monthOverMonthRevenueChangePercent;
     }
 
-    /* renamed from: component3, reason: from getter */
+    /* JADX INFO: renamed from: component3, reason: from getter */
     public final long getSubscriberCount() {
         return this.subscriberCount;
     }
 
-    /* renamed from: component4, reason: from getter */
+    /* JADX INFO: renamed from: component4, reason: from getter */
     public final Long getMonthOverMonthSubscriberCountChange() {
         return this.monthOverMonthSubscriberCountChange;
     }
 
-    /* renamed from: component5, reason: from getter */
+    /* JADX INFO: renamed from: component5, reason: from getter */
     public final String getNextPaymentDate() {
         return this.nextPaymentDate;
     }
 
-    /* renamed from: component6, reason: from getter */
+    /* JADX INFO: renamed from: component6, reason: from getter */
     public final String getRevenueSinceDate() {
         return this.revenueSinceDate;
     }

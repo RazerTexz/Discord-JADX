@@ -49,13 +49,13 @@ import p658rx.functions.Func7;
 import p658rx.functions.FuncN;
 import p658rx.subjects.BehaviorSubject;
 
-/* compiled from: StoreVoiceParticipants.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: StoreVoiceParticipants.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class StoreVoiceParticipants extends Store {
     private final BehaviorSubject<Long> selectedParticipantSubject;
     private final StoreStream stream;
 
-    /* compiled from: StoreVoiceParticipants.kt */
+    /* JADX INFO: compiled from: StoreVoiceParticipants.kt */
     public static final /* data */ class VoiceUser {
         private final boolean _isSpeaking;
         private final ModelApplicationStream applicationStream;
@@ -129,12 +129,12 @@ public final class StoreVoiceParticipants extends Store {
             this.isInvitedToSpeak = AnimatableValueParser.m592y0(voiceState) == StageRequestToSpeakState.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK;
         }
 
-        /* renamed from: component10, reason: from getter */
+        /* JADX INFO: renamed from: component10, reason: from getter */
         private final StoreMediaSettings.VoiceConfiguration getVoiceConfiguration() {
             return this.voiceConfiguration;
         }
 
-        /* renamed from: component11, reason: from getter */
+        /* JADX INFO: renamed from: component11, reason: from getter */
         private final boolean get_isSpeaking() {
             return this._isSpeaking;
         }
@@ -143,47 +143,47 @@ public final class StoreVoiceParticipants extends Store {
             return voiceUser.copy((i & 1) != 0 ? voiceUser.user : user, (i & 2) != 0 ? voiceUser.voiceState : voiceState, (i & 4) != 0 ? voiceUser.isRinging : z2, (i & 8) != 0 ? voiceUser.streams : userStreams, (i & 16) != 0 ? voiceUser.isMe : z3, (i & 32) != 0 ? voiceUser.guildMember : guildMember, (i & 64) != 0 ? voiceUser.watchingStream : str, (i & 128) != 0 ? voiceUser.streamContext : streamContext, (i & 256) != 0 ? voiceUser.isBooster : z4, (i & 512) != 0 ? voiceUser.voiceConfiguration : voiceConfiguration, (i & 1024) != 0 ? voiceUser._isSpeaking : z5);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final User getUser() {
             return this.user;
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final VoiceState getVoiceState() {
             return this.voiceState;
         }
 
-        /* renamed from: component3, reason: from getter */
+        /* JADX INFO: renamed from: component3, reason: from getter */
         public final boolean getIsRinging() {
             return this.isRinging;
         }
 
-        /* renamed from: component4, reason: from getter */
+        /* JADX INFO: renamed from: component4, reason: from getter */
         public final StoreVideoStreams.UserStreams getStreams() {
             return this.streams;
         }
 
-        /* renamed from: component5, reason: from getter */
+        /* JADX INFO: renamed from: component5, reason: from getter */
         public final boolean getIsMe() {
             return this.isMe;
         }
 
-        /* renamed from: component6, reason: from getter */
+        /* JADX INFO: renamed from: component6, reason: from getter */
         public final GuildMember getGuildMember() {
             return this.guildMember;
         }
 
-        /* renamed from: component7, reason: from getter */
+        /* JADX INFO: renamed from: component7, reason: from getter */
         public final String getWatchingStream() {
             return this.watchingStream;
         }
 
-        /* renamed from: component8, reason: from getter */
+        /* JADX INFO: renamed from: component8, reason: from getter */
         public final StreamContext getStreamContext() {
             return this.streamContext;
         }
 
-        /* renamed from: component9, reason: from getter */
+        /* JADX INFO: renamed from: component9, reason: from getter */
         public final boolean getIsBooster() {
             return this.isBooster;
         }
@@ -250,41 +250,53 @@ public final class StoreVoiceParticipants extends Store {
         }
 
         /* JADX WARN: Multi-variable type inference failed */
+        /* JADX WARN: Type inference failed for: r2v20, types: [int] */
+        /* JADX WARN: Type inference failed for: r2v22 */
+        /* JADX WARN: Type inference failed for: r2v26 */
+        /* JADX WARN: Type inference failed for: r2v28 */
+        /* JADX WARN: Type inference failed for: r2v30 */
+        /* JADX WARN: Type inference failed for: r2v31 */
+        /* JADX WARN: Type inference failed for: r2v32 */
+        /* JADX WARN: Type inference failed for: r2v4, types: [int] */
+        /* JADX WARN: Type inference failed for: r2v9, types: [int] */
+        /* JADX WARN: Type inference failed for: r3v0 */
+        /* JADX WARN: Type inference failed for: r3v1, types: [int] */
+        /* JADX WARN: Type inference failed for: r3v2 */
         public int hashCode() {
             User user = this.user;
             int iHashCode = (user != null ? user.hashCode() : 0) * 31;
             VoiceState voiceState = this.voiceState;
             int iHashCode2 = (iHashCode + (voiceState != null ? voiceState.hashCode() : 0)) * 31;
             boolean z2 = this.isRinging;
-            int i = z2;
-            if (z2 != 0) {
-                i = 1;
+            ?? r2 = z2;
+            if (z2) {
+                r2 = 1;
             }
-            int i2 = (iHashCode2 + i) * 31;
+            int i = (iHashCode2 + r2) * 31;
             StoreVideoStreams.UserStreams userStreams = this.streams;
-            int iHashCode3 = (i2 + (userStreams != null ? userStreams.hashCode() : 0)) * 31;
+            int iHashCode3 = (i + (userStreams != null ? userStreams.hashCode() : 0)) * 31;
             boolean z3 = this.isMe;
-            int i3 = z3;
-            if (z3 != 0) {
-                i3 = 1;
+            ?? r22 = z3;
+            if (z3) {
+                r22 = 1;
             }
-            int i4 = (iHashCode3 + i3) * 31;
+            int i2 = (iHashCode3 + r22) * 31;
             GuildMember guildMember = this.guildMember;
-            int iHashCode4 = (i4 + (guildMember != null ? guildMember.hashCode() : 0)) * 31;
+            int iHashCode4 = (i2 + (guildMember != null ? guildMember.hashCode() : 0)) * 31;
             String str = this.watchingStream;
             int iHashCode5 = (iHashCode4 + (str != null ? str.hashCode() : 0)) * 31;
             StreamContext streamContext = this.streamContext;
             int iHashCode6 = (iHashCode5 + (streamContext != null ? streamContext.hashCode() : 0)) * 31;
             boolean z4 = this.isBooster;
-            int i5 = z4;
-            if (z4 != 0) {
-                i5 = 1;
+            ?? r23 = z4;
+            if (z4) {
+                r23 = 1;
             }
-            int i6 = (iHashCode6 + i5) * 31;
+            int i3 = (iHashCode6 + r23) * 31;
             StoreMediaSettings.VoiceConfiguration voiceConfiguration = this.voiceConfiguration;
-            int iHashCode7 = (i6 + (voiceConfiguration != null ? voiceConfiguration.hashCode() : 0)) * 31;
+            int iHashCode7 = (i3 + (voiceConfiguration != null ? voiceConfiguration.hashCode() : 0)) * 31;
             boolean z5 = this._isSpeaking;
-            return iHashCode7 + (z5 ? 1 : z5 ? 1 : 0);
+            return iHashCode7 + (z5 ? 1 : z5);
         }
 
         public final boolean isBooster() {
@@ -295,12 +307,12 @@ public final class StoreVoiceParticipants extends Store {
             return this.voiceState != null;
         }
 
-        /* renamed from: isDeafened, reason: from getter */
+        /* JADX INFO: renamed from: isDeafened, reason: from getter */
         public final boolean getIsDeafened() {
             return this.isDeafened;
         }
 
-        /* renamed from: isInvitedToSpeak, reason: from getter */
+        /* JADX INFO: renamed from: isInvitedToSpeak, reason: from getter */
         public final boolean getIsInvitedToSpeak() {
             return this.isInvitedToSpeak;
         }
@@ -309,12 +321,12 @@ public final class StoreVoiceParticipants extends Store {
             return this.isMe;
         }
 
-        /* renamed from: isMuted, reason: from getter */
+        /* JADX INFO: renamed from: isMuted, reason: from getter */
         public final boolean getIsMuted() {
             return this.isMuted;
         }
 
-        /* renamed from: isRequestingToSpeak, reason: from getter */
+        /* JADX INFO: renamed from: isRequestingToSpeak, reason: from getter */
         public final boolean getIsRequestingToSpeak() {
             return this.isRequestingToSpeak;
         }
@@ -323,7 +335,7 @@ public final class StoreVoiceParticipants extends Store {
             return this.isRinging;
         }
 
-        /* renamed from: isSpeaking, reason: from getter */
+        /* JADX INFO: renamed from: isSpeaking, reason: from getter */
         public final boolean getIsSpeaking() {
             return this.isSpeaking;
         }
@@ -354,19 +366,19 @@ public final class StoreVoiceParticipants extends Store {
         }
     }
 
-    /* compiled from: StoreVoiceParticipants.kt */
-    /* renamed from: com.discord.stores.StoreVoiceParticipants$get$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreVoiceParticipants$get$1 */
+    /* JADX INFO: compiled from: StoreVoiceParticipants.kt */
     public static final class C66231<T, R> implements Func1<Channel, Observable<? extends Map<Long, ? extends VoiceUser>>> {
         public final /* synthetic */ long $channelId;
 
-        /* compiled from: StoreVoiceParticipants.kt */
-        /* renamed from: com.discord.stores.StoreVoiceParticipants$get$1$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.stores.StoreVoiceParticipants$get$1$1, reason: invalid class name */
+        /* JADX INFO: compiled from: StoreVoiceParticipants.kt */
         public static final class AnonymousClass1<T, R> implements Func1<Map<Long, ? extends VoiceState>, Observable<? extends Map<Long, ? extends VoiceUser>>> {
             public final /* synthetic */ Channel $channel;
             public final /* synthetic */ long $guildId;
 
-            /* compiled from: StoreVoiceParticipants.kt */
-            /* renamed from: com.discord.stores.StoreVoiceParticipants$get$1$1$1, reason: invalid class name and collision with other inner class name */
+            /* JADX INFO: renamed from: com.discord.stores.StoreVoiceParticipants$get$1$1$1, reason: invalid class name and collision with other inner class name */
+            /* JADX INFO: compiled from: StoreVoiceParticipants.kt */
             public static final class C132671<T1, T2, R> implements Func2<MeUser, Collection<? extends User>, Tuples2<? extends MeUser, ? extends Collection<? extends User>>> {
                 public static final C132671 INSTANCE = new C132671();
 
@@ -375,19 +387,19 @@ public final class StoreVoiceParticipants extends Store {
                     return call2(meUser, collection);
                 }
 
-                /* renamed from: call, reason: avoid collision after fix types in other method */
+                /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
                 public final Tuples2<MeUser, Collection<User>> call2(MeUser meUser, Collection<? extends User> collection) {
                     return Tuples.m10073to(meUser, collection);
                 }
             }
 
-            /* compiled from: StoreVoiceParticipants.kt */
-            /* renamed from: com.discord.stores.StoreVoiceParticipants$get$1$1$2, reason: invalid class name */
+            /* JADX INFO: renamed from: com.discord.stores.StoreVoiceParticipants$get$1$1$2, reason: invalid class name */
+            /* JADX INFO: compiled from: StoreVoiceParticipants.kt */
             public static final class AnonymousClass2<T, R> implements Func1<Tuples2<? extends MeUser, ? extends Collection<? extends User>>, Observable<? extends Map<Long, ? extends VoiceUser>>> {
                 public final /* synthetic */ Map $voiceStates;
 
-                /* compiled from: StoreVoiceParticipants.kt */
-                /* renamed from: com.discord.stores.StoreVoiceParticipants$get$1$1$2$1, reason: invalid class name and collision with other inner class name */
+                /* JADX INFO: renamed from: com.discord.stores.StoreVoiceParticipants$get$1$1$2$1, reason: invalid class name and collision with other inner class name */
+                /* JADX INFO: compiled from: StoreVoiceParticipants.kt */
                 public static final class C132681<T, R> implements Func1<ModelCall, List<? extends Long>> {
                     public static final C132681 INSTANCE = new C132681();
 
@@ -396,15 +408,15 @@ public final class StoreVoiceParticipants extends Store {
                         return call2(modelCall);
                     }
 
-                    /* renamed from: call, reason: avoid collision after fix types in other method */
+                    /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
                     public final List<Long> call2(ModelCall modelCall) {
                         List<Long> ringing;
                         return (modelCall == null || (ringing = modelCall.getRinging()) == null) ? Collections2.emptyList() : ringing;
                     }
                 }
 
-                /* compiled from: StoreVoiceParticipants.kt */
-                /* renamed from: com.discord.stores.StoreVoiceParticipants$get$1$1$2$2, reason: invalid class name and collision with other inner class name */
+                /* JADX INFO: renamed from: com.discord.stores.StoreVoiceParticipants$get$1$1$2$2, reason: invalid class name and collision with other inner class name */
+                /* JADX INFO: compiled from: StoreVoiceParticipants.kt */
                 public static final class C132692<T1, T2, T3, T4, T5, T6, T7, R> implements Func7<Set<? extends Long>, List<? extends Long>, Map<Long, ? extends StoreVideoStreams.UserStreams>, Map<Long, ? extends GuildMember>, Map<String, ? extends List<? extends Long>>, StoreMediaSettings.VoiceConfiguration, Map<Long, ? extends StreamContext>, Map<Long, ? extends VoiceUser>> {
                     public final /* synthetic */ MeUser $meUser;
                     public final /* synthetic */ Collection $otherUsers;
@@ -419,7 +431,7 @@ public final class StoreVoiceParticipants extends Store {
                         return call2((Set<Long>) set, (List<Long>) list, (Map<Long, StoreVideoStreams.UserStreams>) map, (Map<Long, GuildMember>) map2, (Map<String, ? extends List<Long>>) map3, voiceConfiguration, (Map<Long, StreamContext>) map4);
                     }
 
-                    /* renamed from: call, reason: avoid collision after fix types in other method */
+                    /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
                     public final Map<Long, VoiceUser> call2(Set<Long> set, List<Long> list, Map<Long, StoreVideoStreams.UserStreams> map, Map<Long, GuildMember> map2, Map<String, ? extends List<Long>> map3, StoreMediaSettings.VoiceConfiguration voiceConfiguration, Map<Long, StreamContext> map4) {
                         StoreVoiceParticipants storeVoiceParticipants = StoreVoiceParticipants.this;
                         MeUser meUser = this.$meUser;
@@ -448,7 +460,7 @@ public final class StoreVoiceParticipants extends Store {
                     return call2((Tuples2<MeUser, ? extends Collection<? extends User>>) tuples2);
                 }
 
-                /* renamed from: call, reason: avoid collision after fix types in other method */
+                /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
                 public final Observable<? extends Map<Long, VoiceUser>> call2(Tuples2<MeUser, ? extends Collection<? extends User>> tuples2) {
                     MeUser meUserComponent1 = tuples2.component1();
                     Collection<? extends User> collectionComponent2 = tuples2.component2();
@@ -472,7 +484,7 @@ public final class StoreVoiceParticipants extends Store {
                 return call2((Map<Long, VoiceState>) map);
             }
 
-            /* renamed from: call, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
             public final Observable<? extends Map<Long, VoiceUser>> call2(Map<Long, VoiceState> map) {
                 Observable observableObserveMe$default = StoreUser.observeMe$default(StoreVoiceParticipants.this.getStream().getUsers(), false, 1, null);
                 StoreVoiceParticipants storeVoiceParticipants = StoreVoiceParticipants.this;
@@ -491,7 +503,7 @@ public final class StoreVoiceParticipants extends Store {
             return call2(channel);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final Observable<? extends Map<Long, VoiceUser>> call2(Channel channel) {
             if (channel == null) {
                 return new ScalarSynchronousObservable(Maps6.emptyMap());
@@ -501,14 +513,14 @@ public final class StoreVoiceParticipants extends Store {
         }
     }
 
-    /* compiled from: StoreVoiceParticipants.kt */
-    /* renamed from: com.discord.stores.StoreVoiceParticipants$getOtherVoiceUsers$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreVoiceParticipants$getOtherVoiceUsers$1 */
+    /* JADX INFO: compiled from: StoreVoiceParticipants.kt */
     public static final class C66241<T, R> implements Func1<Long, Observable<? extends Collection<? extends User>>> {
         public final /* synthetic */ Channel $channel;
         public final /* synthetic */ Map $voiceStates;
 
-        /* compiled from: StoreVoiceParticipants.kt */
-        /* renamed from: com.discord.stores.StoreVoiceParticipants$getOtherVoiceUsers$1$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.stores.StoreVoiceParticipants$getOtherVoiceUsers$1$1, reason: invalid class name */
+        /* JADX INFO: compiled from: StoreVoiceParticipants.kt */
         public static final class AnonymousClass1<T, R> implements Func1<Map<Long, ? extends GuildMember>, Set<? extends Long>> {
             public static final AnonymousClass1 INSTANCE = new AnonymousClass1();
 
@@ -517,14 +529,14 @@ public final class StoreVoiceParticipants extends Store {
                 return call2((Map<Long, GuildMember>) map);
             }
 
-            /* renamed from: call, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
             public final Set<Long> call2(Map<Long, GuildMember> map) {
                 return map.keySet();
             }
         }
 
-        /* compiled from: StoreVoiceParticipants.kt */
-        /* renamed from: com.discord.stores.StoreVoiceParticipants$getOtherVoiceUsers$1$2, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.stores.StoreVoiceParticipants$getOtherVoiceUsers$1$2, reason: invalid class name */
+        /* JADX INFO: compiled from: StoreVoiceParticipants.kt */
         public static final class AnonymousClass2<T, R> implements Func1<Set<? extends Long>, List<? extends Long>> {
             public final /* synthetic */ Long $meId;
 
@@ -537,7 +549,7 @@ public final class StoreVoiceParticipants extends Store {
                 return call2((Set<Long>) set);
             }
 
-            /* renamed from: call, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
             public final List<Long> call2(Set<Long> set) {
                 Intrinsics3.checkNotNullExpressionValue(set, "memberIds");
                 ArrayList arrayList = new ArrayList();
@@ -552,12 +564,12 @@ public final class StoreVoiceParticipants extends Store {
             }
         }
 
-        /* compiled from: StoreVoiceParticipants.kt */
-        /* renamed from: com.discord.stores.StoreVoiceParticipants$getOtherVoiceUsers$1$3, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.stores.StoreVoiceParticipants$getOtherVoiceUsers$1$3, reason: invalid class name */
+        /* JADX INFO: compiled from: StoreVoiceParticipants.kt */
         public static final class AnonymousClass3<T, R> implements Func1<List<? extends Long>, Observable<? extends Collection<? extends User>>> {
 
-            /* compiled from: StoreVoiceParticipants.kt */
-            /* renamed from: com.discord.stores.StoreVoiceParticipants$getOtherVoiceUsers$1$3$1, reason: invalid class name */
+            /* JADX INFO: renamed from: com.discord.stores.StoreVoiceParticipants$getOtherVoiceUsers$1$3$1, reason: invalid class name */
+            /* JADX INFO: compiled from: StoreVoiceParticipants.kt */
             public static final class AnonymousClass1<T> implements Action1<Map<Long, ? extends User>> {
                 public AnonymousClass1() {
                 }
@@ -567,7 +579,7 @@ public final class StoreVoiceParticipants extends Store {
                     call2(map);
                 }
 
-                /* renamed from: call, reason: avoid collision after fix types in other method */
+                /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
                 public final void call2(Map<Long, ? extends User> map) {
                     StoreStream.Companion companion = StoreStream.INSTANCE;
                     StageInstance stageInstanceForChannel = companion.getStageInstances().getStageInstanceForChannel(C66241.this.$channel.getId());
@@ -586,8 +598,8 @@ public final class StoreVoiceParticipants extends Store {
                 }
             }
 
-            /* compiled from: StoreVoiceParticipants.kt */
-            /* renamed from: com.discord.stores.StoreVoiceParticipants$getOtherVoiceUsers$1$3$2, reason: invalid class name */
+            /* JADX INFO: renamed from: com.discord.stores.StoreVoiceParticipants$getOtherVoiceUsers$1$3$2, reason: invalid class name */
+            /* JADX INFO: compiled from: StoreVoiceParticipants.kt */
             public static final class AnonymousClass2<T, R> implements Func1<Map<Long, ? extends User>, Collection<? extends User>> {
                 public static final AnonymousClass2 INSTANCE = new AnonymousClass2();
 
@@ -596,7 +608,7 @@ public final class StoreVoiceParticipants extends Store {
                     return call2(map);
                 }
 
-                /* renamed from: call, reason: avoid collision after fix types in other method */
+                /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
                 public final Collection<User> call2(Map<Long, ? extends User> map) {
                     return map.values();
                 }
@@ -610,7 +622,7 @@ public final class StoreVoiceParticipants extends Store {
                 return call2((List<Long>) list);
             }
 
-            /* renamed from: call, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
             public final Observable<? extends Collection<User>> call2(List<Long> list) {
                 StoreUser users = StoreStream.INSTANCE.getUsers();
                 Intrinsics3.checkNotNullExpressionValue(list, "otherMemberIds");
@@ -628,14 +640,14 @@ public final class StoreVoiceParticipants extends Store {
             return call2(l);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final Observable<? extends Collection<User>> call2(Long l) {
             return StoreStream.INSTANCE.getGuilds().observeComputed(this.$channel.getGuildId()).m11083G(AnonymousClass1.INSTANCE).m11083G(new AnonymousClass2(l)).m11099Y(new AnonymousClass3());
         }
     }
 
-    /* compiled from: StoreVoiceParticipants.kt */
-    /* renamed from: com.discord.stores.StoreVoiceParticipants$getStreamContextsForUsers$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreVoiceParticipants$getStreamContextsForUsers$1 */
+    /* JADX INFO: compiled from: StoreVoiceParticipants.kt */
     public static final class C66251<R> implements FuncN<Map<Long, ? extends StreamContext>> {
         public final /* synthetic */ List $userIds;
 
@@ -649,7 +661,7 @@ public final class StoreVoiceParticipants extends Store {
         }
 
         @Override // p658rx.functions.FuncN
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final Map<Long, ? extends StreamContext> call2(Object[] objArr) {
             LinkedHashMap linkedHashMap = new LinkedHashMap();
             int i = 0;
@@ -665,8 +677,8 @@ public final class StoreVoiceParticipants extends Store {
         }
     }
 
-    /* compiled from: StoreVoiceParticipants.kt */
-    /* renamed from: com.discord.stores.StoreVoiceParticipants$init$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreVoiceParticipants$init$1 */
+    /* JADX INFO: compiled from: StoreVoiceParticipants.kt */
     public static final class C66261 extends Lambda implements Function1<Long, Unit> {
         public C66261() {
             super(1);

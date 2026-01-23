@@ -5,15 +5,15 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.Objects;
 
-/* compiled from: com.google.firebase:firebase-messaging@@21.0.0 */
-/* renamed from: b.i.a.f.h.i.d */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.h.i.d */
+/* JADX INFO: compiled from: com.google.firebase:firebase-messaging@@21.0.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public final class C3490d extends FilterInputStream {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public long f9654j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public long f9655k;
 
     public C3490d(InputStream inputStream) {
@@ -73,7 +73,7 @@ public final class C3490d extends FilterInputStream {
         }
         int i3 = ((FilterInputStream) this).in.read(bArr, i, (int) Math.min(i2, j));
         if (i3 != -1) {
-            this.f9654j -= i3;
+            this.f9654j -= (long) i3;
         }
         return i3;
     }

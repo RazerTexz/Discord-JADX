@@ -19,71 +19,71 @@ import p615g0.Sink;
 import p615g0.Source2;
 import p615g0.Timeout2;
 
-/* compiled from: Http2Stream.kt */
-/* renamed from: f0.e0.j.n, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: f0.e0.j.n, reason: use source file name */
+/* JADX INFO: compiled from: Http2Stream.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class Http2Stream {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public long f25712a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public long f25713b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public long f25714c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public long f25715d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final ArrayDeque<Headers> f25716e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public boolean f25717f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public final b f25718g;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public final a f25719h;
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public final c f25720i;
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final c f25721j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public ErrorCode2 f25722k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public IOException f25723l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public final int f25724m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public final Http2Connection f25725n;
 
-    /* compiled from: Http2Stream.kt */
-    /* renamed from: f0.e0.j.n$a */
+    /* JADX INFO: renamed from: f0.e0.j.n$a */
+    /* JADX INFO: compiled from: Http2Stream.kt */
     public final class a implements Sink {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public final Buffer3 f25726j = new Buffer3();
 
-        /* renamed from: k */
+        /* JADX INFO: renamed from: k */
         public boolean f25727k;
 
-        /* renamed from: l */
+        /* JADX INFO: renamed from: l */
         public boolean f25728l;
 
         public a(boolean z2) {
             this.f25728l = z2;
         }
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final void m10294a(boolean z2) throws IOException {
             long jMin;
             boolean z3;
@@ -172,23 +172,23 @@ public final class Http2Stream {
         }
     }
 
-    /* compiled from: Http2Stream.kt */
-    /* renamed from: f0.e0.j.n$b */
+    /* JADX INFO: renamed from: f0.e0.j.n$b */
+    /* JADX INFO: compiled from: Http2Stream.kt */
     public final class b implements Source2 {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public final Buffer3 f25730j = new Buffer3();
 
-        /* renamed from: k */
+        /* JADX INFO: renamed from: k */
         public final Buffer3 f25731k = new Buffer3();
 
-        /* renamed from: l */
+        /* JADX INFO: renamed from: l */
         public boolean f25732l;
 
-        /* renamed from: m */
+        /* JADX INFO: renamed from: m */
         public final long f25733m;
 
-        /* renamed from: n */
+        /* JADX INFO: renamed from: n */
         public boolean f25734n;
 
         public b(long j, boolean z2) {
@@ -196,7 +196,7 @@ public final class Http2Stream {
             this.f25734n = z2;
         }
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final void m10295a(long j) {
             Http2Stream http2Stream = Http2Stream.this;
             byte[] bArr = Util7.f25397a;
@@ -224,7 +224,7 @@ public final class Http2Stream {
         }
 
         @Override // p615g0.Source2
-        /* renamed from: i0 */
+        /* JADX INFO: renamed from: i0 */
         public long mo10176i0(Buffer3 buffer3, long j) throws Throwable {
             long jMo10176i0;
             boolean z2;
@@ -296,14 +296,14 @@ public final class Http2Stream {
         }
     }
 
-    /* compiled from: Http2Stream.kt */
-    /* renamed from: f0.e0.j.n$c */
+    /* JADX INFO: renamed from: f0.e0.j.n$c */
+    /* JADX INFO: compiled from: Http2Stream.kt */
     public final class c extends AsyncTimeout {
         public c() {
         }
 
         @Override // p615g0.AsyncTimeout
-        /* renamed from: k */
+        /* JADX INFO: renamed from: k */
         public IOException mo10296k(IOException iOException) {
             SocketTimeoutException socketTimeoutException = new SocketTimeoutException("timeout");
             if (iOException != null) {
@@ -313,7 +313,7 @@ public final class Http2Stream {
         }
 
         @Override // p615g0.AsyncTimeout
-        /* renamed from: l */
+        /* JADX INFO: renamed from: l */
         public void mo10191l() {
             Http2Stream.this.m10286e(ErrorCode2.CANCEL);
             Http2Connection http2Connection = Http2Stream.this.f25725n;
@@ -324,14 +324,14 @@ public final class Http2Stream {
                     return;
                 }
                 http2Connection.f25644z = j2 + 1;
-                http2Connection.f25619C = System.nanoTime() + 1000000000;
+                http2Connection.f25619C = System.nanoTime() + ((long) 1000000000);
                 TaskQueue2 taskQueue2 = http2Connection.f25638t;
                 String strM822J = outline.m822J(new StringBuilder(), http2Connection.f25633o, " ping");
                 taskQueue2.m10154c(new TaskQueue8(strM822J, true, strM822J, true, http2Connection), 0L);
             }
         }
 
-        /* renamed from: m */
+        /* JADX INFO: renamed from: m */
         public final void m10297m() throws IOException {
             if (m10425j()) {
                 throw new SocketTimeoutException("timeout");
@@ -363,7 +363,7 @@ public final class Http2Stream {
     }
 
     /* JADX WARN: Removed duplicated region for block: B:13:0x0019  */
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
@@ -394,7 +394,7 @@ public final class Http2Stream {
         }
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final void m10283b() throws IOException {
         a aVar = this.f25719h;
         if (aVar.f25727k) {
@@ -416,7 +416,7 @@ public final class Http2Stream {
         }
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final void m10284c(ErrorCode2 errorCode2, IOException iOException) throws IOException {
         Intrinsics3.checkParameterIsNotNull(errorCode2, "rstStatusCode");
         if (m10285d(errorCode2, iOException)) {
@@ -428,7 +428,7 @@ public final class Http2Stream {
         }
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final boolean m10285d(ErrorCode2 errorCode2, IOException iOException) {
         byte[] bArr = Util7.f25397a;
         synchronized (this) {
@@ -446,7 +446,7 @@ public final class Http2Stream {
         }
     }
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final void m10286e(ErrorCode2 errorCode2) {
         Intrinsics3.checkParameterIsNotNull(errorCode2, "errorCode");
         if (m10285d(errorCode2, null)) {
@@ -454,12 +454,12 @@ public final class Http2Stream {
         }
     }
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final synchronized ErrorCode2 m10287f() {
         return this.f25722k;
     }
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public final Sink m10288g() {
         synchronized (this) {
             if (!(this.f25717f || m10289h())) {
@@ -469,12 +469,12 @@ public final class Http2Stream {
         return this.f25719h;
     }
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public final boolean m10289h() {
         return this.f25725n.f25630l == ((this.f25724m & 1) == 1);
     }
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public final synchronized boolean m10290i() {
         if (this.f25722k != null) {
             return false;
@@ -491,7 +491,7 @@ public final class Http2Stream {
         return true;
     }
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final void m10291j(Headers headers, boolean z2) {
         boolean zM10290i;
         Intrinsics3.checkParameterIsNotNull(headers, "headers");
@@ -515,7 +515,7 @@ public final class Http2Stream {
         this.f25725n.m10261d(this.f25724m);
     }
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final synchronized void m10292k(ErrorCode2 errorCode2) {
         Intrinsics3.checkParameterIsNotNull(errorCode2, "errorCode");
         if (this.f25722k == null) {
@@ -524,7 +524,7 @@ public final class Http2Stream {
         }
     }
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final void m10293l() throws InterruptedIOException {
         try {
             wait();

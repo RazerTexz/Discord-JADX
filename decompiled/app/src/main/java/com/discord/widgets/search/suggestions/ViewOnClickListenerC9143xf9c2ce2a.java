@@ -3,9 +3,9 @@ package com.discord.widgets.search.suggestions;
 import android.view.View;
 import com.discord.widgets.search.suggestions.WidgetSearchSuggestionsAdapter;
 
-/* compiled from: WidgetSearchSuggestionsAdapter.kt */
-/* renamed from: com.discord.widgets.search.suggestions.WidgetSearchSuggestionsAdapter$HistoryHeaderViewHolder$onConfigure$1 */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.search.suggestions.WidgetSearchSuggestionsAdapter$HistoryHeaderViewHolder$onConfigure$1 */
+/* JADX INFO: compiled from: WidgetSearchSuggestionsAdapter.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class ViewOnClickListenerC9143xf9c2ce2a implements View.OnClickListener {
     public final /* synthetic */ WidgetSearchSuggestionsAdapter.HistoryHeaderViewHolder this$0;
 

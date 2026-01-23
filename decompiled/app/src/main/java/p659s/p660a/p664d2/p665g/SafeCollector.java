@@ -4,19 +4,19 @@ import kotlin.coroutines.CoroutineContext;
 import kotlin.jvm.functions.Function2;
 import kotlin.jvm.internal.DefaultConstructorMarker;
 
-/* compiled from: SafeCollector.kt */
-/* renamed from: s.a.d2.g.c, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: s.a.d2.g.c, reason: use source file name */
+/* JADX INFO: compiled from: SafeCollector.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class SafeCollector implements CoroutineContext.Element {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static final a f27788j = new a(null);
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final Throwable f27789k;
 
-    /* compiled from: SafeCollector.kt */
-    /* renamed from: s.a.d2.g.c$a */
+    /* JADX INFO: renamed from: s.a.d2.g.c$a */
+    /* JADX INFO: compiled from: SafeCollector.kt */
     public static final class a implements CoroutineContext.Key<SafeCollector> {
         public a(DefaultConstructorMarker defaultConstructorMarker) {
         }

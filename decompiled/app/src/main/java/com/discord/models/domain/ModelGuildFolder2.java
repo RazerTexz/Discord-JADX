@@ -6,9 +6,9 @@ import java.io.IOException;
 import kotlin.jvm.internal.Ref$ObjectRef;
 import p658rx.functions.Action1;
 
-/* compiled from: ModelGuildFolder.kt */
-/* renamed from: com.discord.models.domain.ModelGuildFolder$Parser$parse$1, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: com.discord.models.domain.ModelGuildFolder$Parser$parse$1, reason: use source file name */
+/* JADX INFO: compiled from: ModelGuildFolder.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class ModelGuildFolder2<T> implements Action1<String> {
     public final /* synthetic */ Ref$ObjectRef $color;
     public final /* synthetic */ Ref$ObjectRef $guildIds;
@@ -16,8 +16,8 @@ public final class ModelGuildFolder2<T> implements Action1<String> {
     public final /* synthetic */ Ref$ObjectRef $name;
     public final /* synthetic */ Model.JsonReader $reader;
 
-    /* compiled from: ModelGuildFolder.kt */
-    /* renamed from: com.discord.models.domain.ModelGuildFolder$Parser$parse$1$1 */
+    /* JADX INFO: renamed from: com.discord.models.domain.ModelGuildFolder$Parser$parse$1$1 */
+    /* JADX INFO: compiled from: ModelGuildFolder.kt */
     public static final class C55351<T> implements Model.JsonReader.ItemFactory<Long> {
         public C55351() {
         }
@@ -47,7 +47,7 @@ public final class ModelGuildFolder2<T> implements Action1<String> {
         call2(str);
     }
 
-    /* renamed from: call, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
     public final void call2(String str) throws IOException {
         if (str != null) {
             int iHashCode = str.hashCode();

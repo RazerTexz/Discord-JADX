@@ -10,7 +10,7 @@ import androidx.constraintlayout.widget.C0201R;
 import androidx.constraintlayout.widget.ConstraintHelper;
 import androidx.constraintlayout.widget.ConstraintLayout;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class MotionHelper extends ConstraintHelper implements Animatable, MotionLayout.TransitionListener {
     private float mProgress;
     private boolean mUseOnHide;

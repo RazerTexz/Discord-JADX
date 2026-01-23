@@ -14,17 +14,17 @@ import java.lang.annotation.RetentionPolicy;
 import p007b.p100d.p104b.p105a.outline;
 import p007b.p225i.p226a.p341g.p353l.p354l.MaterialVisibility2;
 
+/* JADX INFO: loaded from: classes3.dex */
 @RequiresApi(21)
-/* loaded from: classes3.dex */
 public final class MaterialSharedAxis extends MaterialVisibility2<VisibilityAnimatorProvider> {
 
-    /* renamed from: X */
+    /* JADX INFO: renamed from: X */
     public static final int f21393X = 0;
 
-    /* renamed from: Y */
+    /* JADX INFO: renamed from: Y */
     public static final int f21394Y = 1;
 
-    /* renamed from: Z */
+    /* JADX INFO: renamed from: Z */
     public static final int f21395Z = 2;
     private final int axis;
     private final boolean forward;

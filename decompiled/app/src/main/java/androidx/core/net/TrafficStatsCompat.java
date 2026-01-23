@@ -8,7 +8,7 @@ import java.net.DatagramSocket;
 import java.net.Socket;
 import java.net.SocketException;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public final class TrafficStatsCompat {
     private TrafficStatsCompat() {
     }

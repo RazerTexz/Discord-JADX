@@ -3,12 +3,12 @@ package p007b.p452o.p453a;
 import com.otaliastudios.cameraview.CameraView;
 import java.util.Iterator;
 
-/* compiled from: CameraView.java */
-/* renamed from: b.o.a.g, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.o.a.g, reason: use source file name */
+/* JADX INFO: compiled from: CameraView.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class CameraView3 implements Runnable {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final /* synthetic */ CameraView.C11195b f13708j;
 
     public CameraView3(CameraView.C11195b c11195b) {

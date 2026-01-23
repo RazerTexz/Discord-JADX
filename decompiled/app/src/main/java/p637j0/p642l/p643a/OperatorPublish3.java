@@ -3,12 +3,12 @@ package p637j0.p642l.p643a;
 import p637j0.p642l.p643a.OperatorPublish2;
 import p658rx.functions.Action0;
 
-/* compiled from: OperatorPublish.java */
-/* renamed from: j0.l.a.i1, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: j0.l.a.i1, reason: use source file name */
+/* JADX INFO: compiled from: OperatorPublish.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class OperatorPublish3 implements Action0 {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final /* synthetic */ OperatorPublish2.b f26850j;
 
     public OperatorPublish3(OperatorPublish2.b bVar) {

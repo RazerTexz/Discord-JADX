@@ -6,15 +6,15 @@ import java.util.concurrent.atomic.AtomicReference;
 import p637j0.p638j.p639a.RxAndroidPlugins;
 import p658rx.Scheduler;
 
-/* compiled from: AndroidSchedulers.java */
-/* renamed from: j0.j.b.a, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: j0.j.b.a, reason: use source file name */
+/* JADX INFO: compiled from: AndroidSchedulers.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class AndroidSchedulers {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final AtomicReference<AndroidSchedulers> f26701a = new AtomicReference<>();
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final Scheduler f26702b;
 
     public AndroidSchedulers() {
@@ -22,7 +22,7 @@ public final class AndroidSchedulers {
         this.f26702b = new LooperScheduler(Looper.getMainLooper());
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static Scheduler m10738a() {
         AtomicReference<AndroidSchedulers> atomicReference;
         AndroidSchedulers androidSchedulers;

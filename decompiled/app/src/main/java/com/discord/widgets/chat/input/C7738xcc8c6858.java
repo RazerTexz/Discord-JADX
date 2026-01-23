@@ -5,9 +5,9 @@ import androidx.fragment.app.Fragment;
 import com.discord.widgets.chat.input.WidgetChatInputAttachments;
 import p007b.p076b.p077a.p079d.AddContentPagerAdapter4;
 
-/* compiled from: WidgetChatInputAttachments.kt */
-/* renamed from: com.discord.widgets.chat.input.WidgetChatInputAttachments$configureFlexInputContentPages$1$pageArray$1 */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.chat.input.WidgetChatInputAttachments$configureFlexInputContentPages$1$pageArray$1 */
+/* JADX INFO: compiled from: WidgetChatInputAttachments.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class C7738xcc8c6858 extends AddContentPagerAdapter4.a {
     public final /* synthetic */ Context $context;
 

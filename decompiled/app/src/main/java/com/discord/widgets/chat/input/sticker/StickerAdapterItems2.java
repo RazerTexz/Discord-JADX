@@ -6,13 +6,13 @@ import kotlin.jvm.internal.DefaultConstructorMarker;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: StickerAdapterItems.kt */
-/* renamed from: com.discord.widgets.chat.input.sticker.HeaderType, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.chat.input.sticker.HeaderType, reason: use source file name */
+/* JADX INFO: compiled from: StickerAdapterItems.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public abstract class StickerAdapterItems2 {
 
-    /* compiled from: StickerAdapterItems.kt */
-    /* renamed from: com.discord.widgets.chat.input.sticker.HeaderType$GuildItem */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.input.sticker.HeaderType$GuildItem */
+    /* JADX INFO: compiled from: StickerAdapterItems.kt */
     public static final /* data */ class GuildItem extends StickerAdapterItems2 {
         private final Guild guild;
 
@@ -30,7 +30,7 @@ public abstract class StickerAdapterItems2 {
             return guildItem.copy(guild);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final Guild getGuild() {
             return this.guild;
         }
@@ -72,8 +72,8 @@ public abstract class StickerAdapterItems2 {
         }
     }
 
-    /* compiled from: StickerAdapterItems.kt */
-    /* renamed from: com.discord.widgets.chat.input.sticker.HeaderType$PackItem */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.input.sticker.HeaderType$PackItem */
+    /* JADX INFO: compiled from: StickerAdapterItems.kt */
     public static final /* data */ class PackItem extends StickerAdapterItems2 {
         private final ModelStickerPack pack;
 
@@ -91,7 +91,7 @@ public abstract class StickerAdapterItems2 {
             return packItem.copy(modelStickerPack);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final ModelStickerPack getPack() {
             return this.pack;
         }
@@ -135,8 +135,8 @@ public abstract class StickerAdapterItems2 {
         }
     }
 
-    /* compiled from: StickerAdapterItems.kt */
-    /* renamed from: com.discord.widgets.chat.input.sticker.HeaderType$Recent */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.input.sticker.HeaderType$Recent */
+    /* JADX INFO: compiled from: StickerAdapterItems.kt */
     public static final class Recent extends StickerAdapterItems2 {
         public static final Recent INSTANCE = new Recent();
 

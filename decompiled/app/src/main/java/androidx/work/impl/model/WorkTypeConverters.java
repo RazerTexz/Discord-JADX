@@ -14,10 +14,10 @@ import java.io.ObjectOutputStream;
 import java.util.Iterator;
 import p007b.p100d.p104b.p105a.outline;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class WorkTypeConverters {
 
-    /* renamed from: androidx.work.impl.model.WorkTypeConverters$1 */
+    /* JADX INFO: renamed from: androidx.work.impl.model.WorkTypeConverters$1 */
     public static /* synthetic */ class C07701 {
         public static final /* synthetic */ int[] $SwitchMap$androidx$work$BackoffPolicy;
         public static final /* synthetic */ int[] $SwitchMap$androidx$work$NetworkType;
@@ -165,7 +165,6 @@ public class WorkTypeConverters {
                             }
                         }
                         byteArrayInputStream.close();
-                        return contentUriTriggers;
                     }
                 } catch (Throwable th2) {
                     th = th2;
@@ -202,14 +201,24 @@ public class WorkTypeConverters {
     }
 
     /* JADX WARN: Multi-variable type inference failed */
+    /* JADX WARN: Type inference failed for: r1v0 */
+    /* JADX WARN: Type inference failed for: r1v1 */
+    /* JADX WARN: Type inference failed for: r1v14 */
+    /* JADX WARN: Type inference failed for: r1v16 */
+    /* JADX WARN: Type inference failed for: r1v17 */
+    /* JADX WARN: Type inference failed for: r1v18 */
+    /* JADX WARN: Type inference failed for: r1v2 */
+    /* JADX WARN: Type inference failed for: r1v3, types: [java.io.ObjectOutputStream] */
+    /* JADX WARN: Type inference failed for: r1v5 */
+    /* JADX WARN: Type inference failed for: r1v7 */
     /* JADX WARN: Unsupported multi-entry loop pattern (BACK_EDGE: B:34:0x0067 -> B:35:0x006a). Please report as a decompilation issue!!! */
     @TypeConverter
     public static byte[] contentUriTriggersToByteArray(ContentUriTriggers contentUriTriggers) throws Throwable {
         ObjectOutputStream objectOutputStream;
         boolean zHasNext;
+        ?? r1 = 0;
         ObjectOutputStream objectOutputStream2 = null;
-        ObjectOutputStream objectOutputStream3 = null;
-        objectOutputStream2 = null;
+        r1 = 0;
         if (contentUriTriggers.size() == 0) {
             return null;
         }
@@ -224,61 +233,60 @@ public class WorkTypeConverters {
             } catch (IOException e) {
                 e = e;
             }
-        } catch (IOException e2) {
-            e2.printStackTrace();
-            objectOutputStream2 = objectOutputStream2;
-        }
-        try {
-            objectOutputStream.writeInt(contentUriTriggers.size());
-            Iterator<ContentUriTriggers.Trigger> it = contentUriTriggers.getTriggers().iterator();
-            while (true) {
-                zHasNext = it.hasNext();
-                if (zHasNext != 0) {
-                    ContentUriTriggers.Trigger next = it.next();
-                    objectOutputStream.writeUTF(next.getUri().toString());
-                    objectOutputStream.writeBoolean(next.shouldTriggerForDescendants());
-                } else {
-                    try {
-                        break;
-                    } catch (IOException e3) {
-                        e3.printStackTrace();
+            try {
+                objectOutputStream.writeInt(contentUriTriggers.size());
+                Iterator<ContentUriTriggers.Trigger> it = contentUriTriggers.getTriggers().iterator();
+                while (true) {
+                    zHasNext = it.hasNext();
+                    if (zHasNext) {
+                        ContentUriTriggers.Trigger next = it.next();
+                        objectOutputStream.writeUTF(next.getUri().toString());
+                        objectOutputStream.writeBoolean(next.shouldTriggerForDescendants());
+                    } else {
+                        try {
+                            break;
+                        } catch (IOException e2) {
+                            e2.printStackTrace();
+                        }
                     }
                 }
-            }
-            objectOutputStream.close();
-            byteArrayOutputStream.close();
-            objectOutputStream2 = zHasNext;
-        } catch (IOException e4) {
-            e = e4;
-            objectOutputStream3 = objectOutputStream;
-            e.printStackTrace();
-            if (objectOutputStream3 != null) {
-                try {
-                    objectOutputStream3.close();
-                } catch (IOException e5) {
-                    e5.printStackTrace();
+                objectOutputStream.close();
+                byteArrayOutputStream.close();
+                r1 = zHasNext;
+            } catch (IOException e3) {
+                e = e3;
+                objectOutputStream2 = objectOutputStream;
+                e.printStackTrace();
+                if (objectOutputStream2 != null) {
+                    try {
+                        objectOutputStream2.close();
+                    } catch (IOException e4) {
+                        e4.printStackTrace();
+                    }
                 }
-            }
-            byteArrayOutputStream.close();
-            objectOutputStream2 = objectOutputStream3;
-            return byteArrayOutputStream.toByteArray();
-        } catch (Throwable th2) {
-            th = th2;
-            objectOutputStream2 = objectOutputStream;
-            if (objectOutputStream2 != null) {
+                byteArrayOutputStream.close();
+                r1 = objectOutputStream2;
+            } catch (Throwable th2) {
+                th = th2;
+                r1 = objectOutputStream;
+                if (r1 != 0) {
+                    try {
+                        r1.close();
+                    } catch (IOException e5) {
+                        e5.printStackTrace();
+                    }
+                }
                 try {
-                    objectOutputStream2.close();
+                    byteArrayOutputStream.close();
+                    throw th;
                 } catch (IOException e6) {
                     e6.printStackTrace();
+                    throw th;
                 }
             }
-            try {
-                byteArrayOutputStream.close();
-                throw th;
-            } catch (IOException e7) {
-                e7.printStackTrace();
-                throw th;
-            }
+        } catch (IOException e7) {
+            e7.printStackTrace();
+            r1 = r1;
         }
         return byteArrayOutputStream.toByteArray();
     }

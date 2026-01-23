@@ -4,8 +4,8 @@ import com.discord.models.domain.ModelAuditLogEntry;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ActivityEmoji.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: ActivityEmoji.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class ActivityEmoji {
     private final boolean animated;
     private final String id;
@@ -17,17 +17,17 @@ public final /* data */ class ActivityEmoji {
         this.animated = z2;
     }
 
-    /* renamed from: a, reason: from getter */
+    /* JADX INFO: renamed from: a, reason: from getter */
     public final boolean getAnimated() {
         return this.animated;
     }
 
-    /* renamed from: b, reason: from getter */
+    /* JADX INFO: renamed from: b, reason: from getter */
     public final String getId() {
         return this.id;
     }
 
-    /* renamed from: c, reason: from getter */
+    /* JADX INFO: renamed from: c, reason: from getter */
     public final String getName() {
         return this.name;
     }
@@ -44,17 +44,20 @@ public final /* data */ class ActivityEmoji {
     }
 
     /* JADX WARN: Multi-variable type inference failed */
+    /* JADX WARN: Type inference failed for: r1v3, types: [int] */
+    /* JADX WARN: Type inference failed for: r1v4 */
+    /* JADX WARN: Type inference failed for: r1v6 */
     public int hashCode() {
         String str = this.id;
         int iHashCode = (str != null ? str.hashCode() : 0) * 31;
         String str2 = this.name;
         int iHashCode2 = (iHashCode + (str2 != null ? str2.hashCode() : 0)) * 31;
         boolean z2 = this.animated;
-        int i = z2;
-        if (z2 != 0) {
-            i = 1;
+        ?? r1 = z2;
+        if (z2) {
+            r1 = 1;
         }
-        return iHashCode2 + i;
+        return iHashCode2 + r1;
     }
 
     public String toString() {

@@ -15,15 +15,15 @@ import p007b.p195g.p196a.p205c.p212e0.NamedType;
 import p007b.p195g.p196a.p205c.p212e0.SubtypeResolver;
 import p007b.p195g.p196a.p205c.p221z.MapperConfig;
 
-/* compiled from: StdSubtypeResolver.java */
-/* renamed from: b.g.a.c.e0.h.i, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.g.a.c.e0.h.i, reason: use source file name */
+/* JADX INFO: compiled from: StdSubtypeResolver.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class StdSubtypeResolver extends SubtypeResolver implements Serializable {
     private static final long serialVersionUID = 1;
     public LinkedHashSet<NamedType> _registeredSubtypes;
 
     @Override // p007b.p195g.p196a.p205c.p212e0.SubtypeResolver
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public Collection<NamedType> mo1945a(MapperConfig<?> mapperConfig, AnnotatedMember annotatedMember, JavaType javaType) {
         List<NamedType> listMo1758N;
         AnnotationIntrospector annotationIntrospectorM2267e = mapperConfig.m2267e();
@@ -46,7 +46,7 @@ public class StdSubtypeResolver extends SubtypeResolver implements Serializable 
         return new ArrayList(map.values());
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public void m1965b(AnnotatedClass annotatedClass, NamedType namedType, MapperConfig<?> mapperConfig, AnnotationIntrospector annotationIntrospector, HashMap<NamedType, NamedType> map) {
         String strMo1759O;
         if (!namedType.m1944a() && (strMo1759O = annotationIntrospector.mo1759O(annotatedClass)) != null) {

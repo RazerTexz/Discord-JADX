@@ -9,19 +9,19 @@ import kotlin.jvm.internal.Ref$ObjectRef;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ModelCustomStatusSetting.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: ModelCustomStatusSetting.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class ModelCustomStatusSetting {
     private final Long emojiId;
     private final String emojiName;
     private final String expiresAt;
     private final String text;
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private static final ModelCustomStatusSetting CLEAR = new ModelCustomStatusSetting(null, null, null, null);
 
-    /* compiled from: ModelCustomStatusSetting.kt */
+    /* JADX INFO: compiled from: ModelCustomStatusSetting.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -35,7 +35,7 @@ public final /* data */ class ModelCustomStatusSetting {
         }
     }
 
-    /* compiled from: ModelCustomStatusSetting.kt */
+    /* JADX INFO: compiled from: ModelCustomStatusSetting.kt */
     public static final class Parser implements Model.Parser<ModelCustomStatusSetting> {
         public static final Parser INSTANCE = new Parser();
 
@@ -95,22 +95,22 @@ public final /* data */ class ModelCustomStatusSetting {
         return modelCustomStatusSetting.copy(str, l, str2, str3);
     }
 
-    /* renamed from: component1, reason: from getter */
+    /* JADX INFO: renamed from: component1, reason: from getter */
     public final String getText() {
         return this.text;
     }
 
-    /* renamed from: component2, reason: from getter */
+    /* JADX INFO: renamed from: component2, reason: from getter */
     public final Long getEmojiId() {
         return this.emojiId;
     }
 
-    /* renamed from: component3, reason: from getter */
+    /* JADX INFO: renamed from: component3, reason: from getter */
     public final String getEmojiName() {
         return this.emojiName;
     }
 
-    /* renamed from: component4, reason: from getter */
+    /* JADX INFO: renamed from: component4, reason: from getter */
     public final String getExpiresAt() {
         return this.expiresAt;
     }

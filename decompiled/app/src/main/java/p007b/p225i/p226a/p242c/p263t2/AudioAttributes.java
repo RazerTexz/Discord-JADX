@@ -6,27 +6,27 @@ import androidx.annotation.RequiresApi;
 import p007b.p225i.p226a.p242c.Bundleable;
 import p007b.p225i.p226a.p242c.p259f3.Util2;
 
-/* compiled from: AudioAttributes.java */
-/* renamed from: b.i.a.c.t2.o, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.t2.o, reason: use source file name */
+/* JADX INFO: compiled from: AudioAttributes.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class AudioAttributes implements Bundleable {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static final AudioAttributes f7779j = new AudioAttributes(0, 0, 1, 1, null);
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final int f7780k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final int f7781l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public final int f7782m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public final int f7783n;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     @Nullable
     public android.media.AudioAttributes f7784o;
 
@@ -38,7 +38,7 @@ public final class AudioAttributes implements Bundleable {
     }
 
     @RequiresApi(21)
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public android.media.AudioAttributes m3494a() {
         if (this.f7784o == null) {
             AudioAttributes.Builder usage = new AudioAttributes.Builder().setContentType(this.f7780k).setFlags(this.f7781l).setUsage(this.f7782m);

@@ -2,9 +2,9 @@ package com.discord.widgets.chat.input.autocomplete.sources;
 
 import com.discord.api.channel.Channel;
 
-/* compiled from: UserMentionableSource.kt */
-/* renamed from: com.discord.widgets.chat.input.autocomplete.sources.UserMentionableSourceKt, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.chat.input.autocomplete.sources.UserMentionableSourceKt, reason: use source file name */
+/* JADX INFO: compiled from: UserMentionableSource.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class UserMentionableSource3 {
     public static final /* synthetic */ boolean access$isDmOrGroupDm(Channel channel) {
         return isDmOrGroupDm(channel);

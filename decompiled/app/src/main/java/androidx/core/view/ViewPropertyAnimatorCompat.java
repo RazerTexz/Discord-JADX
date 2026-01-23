@@ -8,7 +8,7 @@ import android.view.View;
 import android.view.animation.Interpolator;
 import java.lang.ref.WeakReference;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public final class ViewPropertyAnimatorCompat {
     public static final int LISTENER_TAG_ID = 2113929216;
     private WeakReference<View> mView;
@@ -16,7 +16,7 @@ public final class ViewPropertyAnimatorCompat {
     public Runnable mEndAction = null;
     public int mOldLayerType = -1;
 
-    /* renamed from: androidx.core.view.ViewPropertyAnimatorCompat$1 */
+    /* JADX INFO: renamed from: androidx.core.view.ViewPropertyAnimatorCompat$1 */
     public class C02931 extends AnimatorListenerAdapter {
         public final /* synthetic */ ViewPropertyAnimatorListener val$listener;
         public final /* synthetic */ View val$view;
@@ -42,7 +42,7 @@ public final class ViewPropertyAnimatorCompat {
         }
     }
 
-    /* renamed from: androidx.core.view.ViewPropertyAnimatorCompat$2 */
+    /* JADX INFO: renamed from: androidx.core.view.ViewPropertyAnimatorCompat$2 */
     public class C02942 implements ValueAnimator.AnimatorUpdateListener {
         public final /* synthetic */ ViewPropertyAnimatorUpdateListener val$listener;
         public final /* synthetic */ View val$view;
@@ -376,7 +376,7 @@ public final class ViewPropertyAnimatorCompat {
         return this;
     }
 
-    /* renamed from: x */
+    /* JADX INFO: renamed from: x */
     public ViewPropertyAnimatorCompat m90x(float f) {
         View view = this.mView.get();
         if (view != null) {
@@ -393,7 +393,7 @@ public final class ViewPropertyAnimatorCompat {
         return this;
     }
 
-    /* renamed from: y */
+    /* JADX INFO: renamed from: y */
     public ViewPropertyAnimatorCompat m91y(float f) {
         View view = this.mView.get();
         if (view != null) {
@@ -410,7 +410,7 @@ public final class ViewPropertyAnimatorCompat {
         return this;
     }
 
-    /* renamed from: z */
+    /* JADX INFO: renamed from: z */
     public ViewPropertyAnimatorCompat m92z(float f) {
         View view = this.mView.get();
         if (view != null) {

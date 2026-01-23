@@ -3,8 +3,8 @@ package com.discord.api.presence;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ClientStatuses.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: ClientStatuses.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class ClientStatuses {
     private final ClientStatus desktop;
     private final ClientStatus mobile;
@@ -16,19 +16,19 @@ public final /* data */ class ClientStatuses {
         this.mobile = clientStatus3;
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final ClientStatus m8149a() {
         ClientStatus clientStatus = this.desktop;
         return clientStatus != null ? clientStatus : ClientStatus.OFFLINE;
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final ClientStatus m8150b() {
         ClientStatus clientStatus = this.mobile;
         return clientStatus != null ? clientStatus : ClientStatus.OFFLINE;
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final ClientStatus m8151c() {
         ClientStatus clientStatus = this.web;
         return clientStatus != null ? clientStatus : ClientStatus.OFFLINE;

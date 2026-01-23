@@ -4,48 +4,48 @@ import com.adjust.sdk.Constants;
 import com.discord.widgets.chat.input.MentionUtils;
 import p007b.p100d.p104b.p105a.outline;
 
-/* compiled from: Type.java */
-/* renamed from: h0.a.a.w, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: h0.a.a.w, reason: use source file name */
+/* JADX INFO: compiled from: Type.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class Type2 {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final Type2 f26361a = new Type2(0, "VZCBSIFJD", 0, 1);
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static final Type2 f26362b = new Type2(1, "VZCBSIFJD", 1, 2);
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public static final Type2 f26363c = new Type2(2, "VZCBSIFJD", 2, 3);
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public static final Type2 f26364d = new Type2(3, "VZCBSIFJD", 3, 4);
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public static final Type2 f26365e = new Type2(4, "VZCBSIFJD", 4, 5);
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public static final Type2 f26366f = new Type2(5, "VZCBSIFJD", 5, 6);
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public static final Type2 f26367g = new Type2(6, "VZCBSIFJD", 6, 7);
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public static final Type2 f26368h = new Type2(7, "VZCBSIFJD", 7, 8);
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public static final Type2 f26369i = new Type2(8, "VZCBSIFJD", 8, 9);
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final int f26370j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final String f26371k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final int f26372l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public final int f26373m;
 
     public Type2(int i, String str, int i2, int i3) {
@@ -55,7 +55,7 @@ public final class Type2 {
         this.f26373m = i3;
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static Type2[] m10644a(String str) {
         int i = 0;
         int iIndexOf = 1;
@@ -86,7 +86,7 @@ public final class Type2 {
         return type2Arr;
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static int m10645b(String str) {
         char cCharAt = str.charAt(1);
         int i = 1;
@@ -115,7 +115,7 @@ public final class Type2 {
         return (i2 << 2) | ((cCharAt2 == 'J' || cCharAt2 == 'D') ? 2 : 1);
     }
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public static String m10646e(Class<?> cls) {
         char c;
         StringBuilder sb = new StringBuilder();
@@ -163,12 +163,12 @@ public final class Type2 {
         return sb.toString();
     }
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public static Type2 m10647h(String str) {
         return new Type2(str.charAt(0) == '[' ? 9 : 12, str, 0, str.length());
     }
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static Type2 m10648j(Class<?> cls) {
         if (!cls.isPrimitive()) {
             String strM10646e = m10646e(cls);
@@ -204,7 +204,7 @@ public final class Type2 {
         throw new AssertionError();
     }
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public static Type2 m10649k(String str, int i, int i2) {
         char cCharAt = str.charAt(i);
         if (cCharAt == '(') {
@@ -246,7 +246,7 @@ public final class Type2 {
         }
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public String m10650c() {
         switch (this.f26370j) {
             case 0:
@@ -282,7 +282,7 @@ public final class Type2 {
         }
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public String m10651d() {
         int i = this.f26370j;
         if (i == 10) {
@@ -329,7 +329,7 @@ public final class Type2 {
         return true;
     }
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public int m10652f() {
         int i = 1;
         while (this.f26371k.charAt(this.f26372l + i) == '[') {
@@ -338,7 +338,7 @@ public final class Type2 {
         return i;
     }
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public String m10653g() {
         return this.f26371k.substring(this.f26372l, this.f26373m);
     }
@@ -355,7 +355,7 @@ public final class Type2 {
         return iCharAt;
     }
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public int m10654i() {
         int i = this.f26370j;
         if (i == 12) {

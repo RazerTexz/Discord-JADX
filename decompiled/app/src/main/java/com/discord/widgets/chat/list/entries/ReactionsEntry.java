@@ -4,8 +4,8 @@ import com.discord.models.message.Message;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ReactionsEntry.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: ReactionsEntry.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final /* data */ class ReactionsEntry extends ChatListEntry {
     private final boolean animateEmojis;
     private final boolean canAddReactions;
@@ -44,22 +44,22 @@ public final /* data */ class ReactionsEntry extends ChatListEntry {
         return reactionsEntry.copy(message, z2, z3, z4);
     }
 
-    /* renamed from: component1, reason: from getter */
+    /* JADX INFO: renamed from: component1, reason: from getter */
     public final Message getMessage() {
         return this.message;
     }
 
-    /* renamed from: component2, reason: from getter */
+    /* JADX INFO: renamed from: component2, reason: from getter */
     public final boolean getCanAddReactions() {
         return this.canAddReactions;
     }
 
-    /* renamed from: component3, reason: from getter */
+    /* JADX INFO: renamed from: component3, reason: from getter */
     public final boolean getCanCreateReactions() {
         return this.canCreateReactions;
     }
 
-    /* renamed from: component4, reason: from getter */
+    /* JADX INFO: renamed from: component4, reason: from getter */
     public final boolean getAnimateEmojis() {
         return this.animateEmojis;
     }
@@ -107,23 +107,32 @@ public final /* data */ class ReactionsEntry extends ChatListEntry {
     }
 
     /* JADX WARN: Multi-variable type inference failed */
+    /* JADX WARN: Type inference failed for: r1v1, types: [int] */
+    /* JADX WARN: Type inference failed for: r1v3, types: [int] */
+    /* JADX WARN: Type inference failed for: r1v5 */
+    /* JADX WARN: Type inference failed for: r1v6 */
+    /* JADX WARN: Type inference failed for: r1v7 */
+    /* JADX WARN: Type inference failed for: r1v8 */
+    /* JADX WARN: Type inference failed for: r2v0 */
+    /* JADX WARN: Type inference failed for: r2v1, types: [int] */
+    /* JADX WARN: Type inference failed for: r2v2 */
     public int hashCode() {
         Message message = this.message;
         int iHashCode = (message != null ? message.hashCode() : 0) * 31;
         boolean z2 = this.canAddReactions;
-        int i = z2;
-        if (z2 != 0) {
-            i = 1;
+        ?? r1 = z2;
+        if (z2) {
+            r1 = 1;
         }
-        int i2 = (iHashCode + i) * 31;
+        int i = (iHashCode + r1) * 31;
         boolean z3 = this.canCreateReactions;
-        int i3 = z3;
-        if (z3 != 0) {
-            i3 = 1;
+        ?? r12 = z3;
+        if (z3) {
+            r12 = 1;
         }
-        int i4 = (i2 + i3) * 31;
+        int i2 = (i + r12) * 31;
         boolean z4 = this.animateEmojis;
-        return i4 + (z4 ? 1 : z4 ? 1 : 0);
+        return i2 + (z4 ? 1 : z4);
     }
 
     public String toString() {

@@ -3,30 +3,30 @@ package com.discord.api.message.role_subscription;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: RoleSubscriptionData.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: RoleSubscriptionData.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class RoleSubscriptionData {
     private final boolean isRenewal;
     private final long roleSubscriptionListingId;
     private final String tierName;
     private final int totalMonthsSubscribed;
 
-    /* renamed from: a, reason: from getter */
+    /* JADX INFO: renamed from: a, reason: from getter */
     public final long getRoleSubscriptionListingId() {
         return this.roleSubscriptionListingId;
     }
 
-    /* renamed from: b, reason: from getter */
+    /* JADX INFO: renamed from: b, reason: from getter */
     public final String getTierName() {
         return this.tierName;
     }
 
-    /* renamed from: c, reason: from getter */
+    /* JADX INFO: renamed from: c, reason: from getter */
     public final int getTotalMonthsSubscribed() {
         return this.totalMonthsSubscribed;
     }
 
-    /* renamed from: d, reason: from getter */
+    /* JADX INFO: renamed from: d, reason: from getter */
     public final boolean getIsRenewal() {
         return this.isRenewal;
     }
@@ -43,17 +43,20 @@ public final /* data */ class RoleSubscriptionData {
     }
 
     /* JADX WARN: Multi-variable type inference failed */
+    /* JADX WARN: Type inference failed for: r0v10 */
+    /* JADX WARN: Type inference failed for: r0v7, types: [int] */
+    /* JADX WARN: Type inference failed for: r0v8 */
     public int hashCode() {
         long j = this.roleSubscriptionListingId;
         int i = ((int) (j ^ (j >>> 32))) * 31;
         String str = this.tierName;
         int iHashCode = (((i + (str != null ? str.hashCode() : 0)) * 31) + this.totalMonthsSubscribed) * 31;
         boolean z2 = this.isRenewal;
-        int i2 = z2;
-        if (z2 != 0) {
-            i2 = 1;
+        ?? r0 = z2;
+        if (z2) {
+            r0 = 1;
         }
-        return iHashCode + i2;
+        return iHashCode + r0;
     }
 
     public String toString() {

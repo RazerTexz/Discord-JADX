@@ -90,136 +90,136 @@ import p507d0.p580t.Maps6;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: TypeAdapterRegistrar.kt */
-/* renamed from: b.a.b.a, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: b.a.b.a, reason: use source file name */
+/* JADX INFO: compiled from: TypeAdapterRegistrar.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class TypeAdapterRegistrar {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final Map<Class<? extends Object>, Function0<Object>> f454a = Maps6.mapOf(Tuples.m10073to(ActivityPlatform.class, b.f495j), Tuples.m10073to(ActivityType.class, a.f459D), Tuples.m10073to(ActivityType.class, a.f470O), Tuples.m10073to(AllowedInSuggestionsType.class, a.f471P), Tuples.m10073to(ApplicationCommandPermission2.class, a.f472Q), Tuples.m10073to(ApplicationCommandType.class, a.f473R), Tuples.m10073to(ApplicationStatus.class, a.f474S), Tuples.m10073to(ApplicationType.class, a.f475T), Tuples.m10073to(ButtonComponent2.class, a.f476U), Tuples.m10073to(Component6.class, a.f477j), Tuples.m10073to(EmbedType.class, a.f478k), Tuples.m10073to(FriendSuggestionReasonType.class, a.f479l), Tuples.m10073to(GuildExplicitContentFilter.class, a.f480m), Tuples.m10073to(GuildHubType.class, a.f481n), Tuples.m10073to(GuildMaxVideoChannelUsers.class, a.f482o), Tuples.m10073to(GuildRoleSubscriptionBenefitType.class, a.f483p), Tuples.m10073to(GuildScheduledEventEntityType.class, a.f484q), Tuples.m10073to(GuildScheduledEventStatus.class, a.f485r), Tuples.m10073to(GuildVerificationLevel.class, a.f486s), Tuples.m10073to(LocalizedString.class, a.f487t), Tuples.m10073to(MessageActivityType.class, a.f488u), Tuples.m10073to(NsfwAllowance.class, a.f489v), Tuples.m10073to(OAuthScope.class, a.f490w), Tuples.m10073to(PayoutGroupStatus.class, a.f491x), Tuples.m10073to(PayoutGroupType.class, a.f492y), Tuples.m10073to(PayoutStatus.class, a.f493z), Tuples.m10073to(Phone.class, a.f456A), Tuples.m10073to(PremiumTier.class, a.f457B), Tuples.m10073to(PriceTierType.class, a.f458C), Tuples.m10073to(ReportNodeBottomButton.class, a.f460E), Tuples.m10073to(ReportNodeChild.class, a.f461F), Tuples.m10073to(ReportNodeElementData.class, a.f462G), Tuples.m10073to(RequiredAction.class, a.f463H), Tuples.m10073to(Science.Event.SchemaObject.class, a.f464I), Tuples.m10073to(StageInstancePrivacyLevel.class, a.f465J), Tuples.m10073to(StickerFormatType.class, a.f466K), Tuples.m10073to(StickerType.class, a.f467L), Tuples.m10073to(TextComponent2.class, a.f468M), Tuples.m10073to(UtcDateTime.class, a.f469N));
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static final List<TypeAdapterFactory2> f455b = Collections2.listOf((Object[]) new TypeAdapterFactory2[]{ComponentRuntimeTypeAdapter.INSTANCE.m7624a(), new NullSerializable3()});
 
-    /* compiled from: kotlin-style lambda group */
-    /* renamed from: b.a.b.a$a */
+    /* JADX INFO: renamed from: b.a.b.a$a */
+    /* JADX INFO: compiled from: kotlin-style lambda group */
     public static final class a extends Lambda implements Function0<Object> {
 
-        /* renamed from: V */
+        /* JADX INFO: renamed from: V */
         public final /* synthetic */ int f494V;
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public static final a f477j = new a(0);
 
-        /* renamed from: k */
+        /* JADX INFO: renamed from: k */
         public static final a f478k = new a(1);
 
-        /* renamed from: l */
+        /* JADX INFO: renamed from: l */
         public static final a f479l = new a(2);
 
-        /* renamed from: m */
+        /* JADX INFO: renamed from: m */
         public static final a f480m = new a(3);
 
-        /* renamed from: n */
+        /* JADX INFO: renamed from: n */
         public static final a f481n = new a(4);
 
-        /* renamed from: o */
+        /* JADX INFO: renamed from: o */
         public static final a f482o = new a(5);
 
-        /* renamed from: p */
+        /* JADX INFO: renamed from: p */
         public static final a f483p = new a(6);
 
-        /* renamed from: q */
+        /* JADX INFO: renamed from: q */
         public static final a f484q = new a(7);
 
-        /* renamed from: r */
+        /* JADX INFO: renamed from: r */
         public static final a f485r = new a(8);
 
-        /* renamed from: s */
+        /* JADX INFO: renamed from: s */
         public static final a f486s = new a(9);
 
-        /* renamed from: t */
+        /* JADX INFO: renamed from: t */
         public static final a f487t = new a(10);
 
-        /* renamed from: u */
+        /* JADX INFO: renamed from: u */
         public static final a f488u = new a(11);
 
-        /* renamed from: v */
+        /* JADX INFO: renamed from: v */
         public static final a f489v = new a(12);
 
-        /* renamed from: w */
+        /* JADX INFO: renamed from: w */
         public static final a f490w = new a(13);
 
-        /* renamed from: x */
+        /* JADX INFO: renamed from: x */
         public static final a f491x = new a(14);
 
-        /* renamed from: y */
+        /* JADX INFO: renamed from: y */
         public static final a f492y = new a(15);
 
-        /* renamed from: z */
+        /* JADX INFO: renamed from: z */
         public static final a f493z = new a(16);
 
-        /* renamed from: A */
+        /* JADX INFO: renamed from: A */
         public static final a f456A = new a(17);
 
-        /* renamed from: B */
+        /* JADX INFO: renamed from: B */
         public static final a f457B = new a(18);
 
-        /* renamed from: C */
+        /* JADX INFO: renamed from: C */
         public static final a f458C = new a(19);
 
-        /* renamed from: D */
+        /* JADX INFO: renamed from: D */
         public static final a f459D = new a(20);
 
-        /* renamed from: E */
+        /* JADX INFO: renamed from: E */
         public static final a f460E = new a(21);
 
-        /* renamed from: F */
+        /* JADX INFO: renamed from: F */
         public static final a f461F = new a(22);
 
-        /* renamed from: G */
+        /* JADX INFO: renamed from: G */
         public static final a f462G = new a(23);
 
-        /* renamed from: H */
+        /* JADX INFO: renamed from: H */
         public static final a f463H = new a(24);
 
-        /* renamed from: I */
+        /* JADX INFO: renamed from: I */
         public static final a f464I = new a(25);
 
-        /* renamed from: J */
+        /* JADX INFO: renamed from: J */
         public static final a f465J = new a(26);
 
-        /* renamed from: K */
+        /* JADX INFO: renamed from: K */
         public static final a f466K = new a(27);
 
-        /* renamed from: L */
+        /* JADX INFO: renamed from: L */
         public static final a f467L = new a(28);
 
-        /* renamed from: M */
+        /* JADX INFO: renamed from: M */
         public static final a f468M = new a(29);
 
-        /* renamed from: N */
+        /* JADX INFO: renamed from: N */
         public static final a f469N = new a(30);
 
-        /* renamed from: O */
+        /* JADX INFO: renamed from: O */
         public static final a f470O = new a(31);
 
-        /* renamed from: P */
+        /* JADX INFO: renamed from: P */
         public static final a f471P = new a(32);
 
-        /* renamed from: Q */
+        /* JADX INFO: renamed from: Q */
         public static final a f472Q = new a(33);
 
-        /* renamed from: R */
+        /* JADX INFO: renamed from: R */
         public static final a f473R = new a(34);
 
-        /* renamed from: S */
+        /* JADX INFO: renamed from: S */
         public static final a f474S = new a(35);
 
-        /* renamed from: T */
+        /* JADX INFO: renamed from: T */
         public static final a f475T = new a(36);
 
-        /* renamed from: U */
+        /* JADX INFO: renamed from: U */
         public static final a f476U = new a(37);
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -313,11 +313,11 @@ public final class TypeAdapterRegistrar {
         }
     }
 
-    /* compiled from: TypeAdapterRegistrar.kt */
-    /* renamed from: b.a.b.a$b */
+    /* JADX INFO: renamed from: b.a.b.a$b */
+    /* JADX INFO: compiled from: TypeAdapterRegistrar.kt */
     public static final class b extends Lambda implements Function0<ActivityPlatform2> {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public static final b f495j = new b();
 
         public b() {
@@ -330,7 +330,7 @@ public final class TypeAdapterRegistrar {
         }
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final GsonBuilder m147a(GsonBuilder gsonBuilder) {
         Intrinsics3.checkNotNullParameter(gsonBuilder, "$this$registerDiscordApiTypeAdapters");
         for (Map.Entry<Class<? extends Object>, Function0<Object>> entry : f454a.entrySet()) {

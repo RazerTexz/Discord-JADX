@@ -43,11 +43,11 @@ import p637j0.p642l.p647e.ScalarSynchronousObservable;
 import p658rx.Observable;
 import p658rx.subjects.PublishSubject;
 
-/* compiled from: SettingsPremiumViewModel.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: SettingsPremiumViewModel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class SettingsPremiumViewModel extends AppViewModel<ViewState> {
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private final PublishSubject<Event> eventSubject;
     private final RestAPI restAPI;
@@ -56,8 +56,8 @@ public final class SettingsPremiumViewModel extends AppViewModel<ViewState> {
     private final StorePaymentSources storePaymentsSources;
     private final StoreSubscriptions storeSubscriptions;
 
-    /* compiled from: SettingsPremiumViewModel.kt */
-    /* renamed from: com.discord.widgets.settings.premium.SettingsPremiumViewModel$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.premium.SettingsPremiumViewModel$1 */
+    /* JADX INFO: compiled from: SettingsPremiumViewModel.kt */
     public static final class C98861 extends Lambda implements Function1<StoreState, Unit> {
         public C98861() {
             super(1);
@@ -69,14 +69,14 @@ public final class SettingsPremiumViewModel extends AppViewModel<ViewState> {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(StoreState storeState) {
             Intrinsics3.checkNotNullParameter(storeState, "storeState");
             SettingsPremiumViewModel.access$handleStoreState(SettingsPremiumViewModel.this, storeState);
         }
     }
 
-    /* compiled from: SettingsPremiumViewModel.kt */
+    /* JADX INFO: compiled from: SettingsPremiumViewModel.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -118,10 +118,10 @@ public final class SettingsPremiumViewModel extends AppViewModel<ViewState> {
         }
     }
 
-    /* compiled from: SettingsPremiumViewModel.kt */
+    /* JADX INFO: compiled from: SettingsPremiumViewModel.kt */
     public static abstract class Event {
 
-        /* compiled from: SettingsPremiumViewModel.kt */
+        /* JADX INFO: compiled from: SettingsPremiumViewModel.kt */
         public static final /* data */ class ErrorToast extends Event {
             private final int errorStringResId;
 
@@ -137,7 +137,7 @@ public final class SettingsPremiumViewModel extends AppViewModel<ViewState> {
                 return errorToast.copy(i);
             }
 
-            /* renamed from: component1, reason: from getter */
+            /* JADX INFO: renamed from: component1, reason: from getter */
             public final int getErrorStringResId() {
                 return this.errorStringResId;
             }
@@ -174,10 +174,10 @@ public final class SettingsPremiumViewModel extends AppViewModel<ViewState> {
         }
     }
 
-    /* compiled from: SettingsPremiumViewModel.kt */
+    /* JADX INFO: compiled from: SettingsPremiumViewModel.kt */
     public static abstract class InvoicePreviewFetch {
 
-        /* compiled from: SettingsPremiumViewModel.kt */
+        /* JADX INFO: compiled from: SettingsPremiumViewModel.kt */
         public static final class Error extends InvoicePreviewFetch {
             public static final Error INSTANCE = new Error();
 
@@ -186,7 +186,7 @@ public final class SettingsPremiumViewModel extends AppViewModel<ViewState> {
             }
         }
 
-        /* compiled from: SettingsPremiumViewModel.kt */
+        /* JADX INFO: compiled from: SettingsPremiumViewModel.kt */
         public static final /* data */ class Invoice extends InvoicePreviewFetch {
             private final ModelInvoicePreview modelInvoicePreview;
 
@@ -202,7 +202,7 @@ public final class SettingsPremiumViewModel extends AppViewModel<ViewState> {
                 return invoice.copy(modelInvoicePreview);
             }
 
-            /* renamed from: component1, reason: from getter */
+            /* JADX INFO: renamed from: component1, reason: from getter */
             public final ModelInvoicePreview getModelInvoicePreview() {
                 return this.modelInvoicePreview;
             }
@@ -246,7 +246,7 @@ public final class SettingsPremiumViewModel extends AppViewModel<ViewState> {
         }
     }
 
-    /* compiled from: SettingsPremiumViewModel.kt */
+    /* JADX INFO: compiled from: SettingsPremiumViewModel.kt */
     public static final /* data */ class StoreState {
         private final InvoicePreviewFetch currentInvoicePreviewFetch;
         private final StoreEntitlements.State entitlementState;
@@ -280,42 +280,42 @@ public final class SettingsPremiumViewModel extends AppViewModel<ViewState> {
             return storeState.copy((i & 1) != 0 ? storeState.paymentSourcesState : paymentSourcesState, (i & 2) != 0 ? storeState.subscriptionsState : subscriptionsState, (i & 4) != 0 ? storeState.entitlementState : state, (i & 8) != 0 ? storeState.guildBoostState : state2, (i & 16) != 0 ? storeState.renewalInvoicePreviewFetch : invoicePreviewFetch, (i & 32) != 0 ? storeState.currentInvoicePreviewFetch : invoicePreviewFetch2, (i & 64) != 0 ? storeState.skuDetailsState : state3, (i & 128) != 0 ? storeState.purchaseState : state4);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final StorePaymentSources.PaymentSourcesState getPaymentSourcesState() {
             return this.paymentSourcesState;
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final StoreSubscriptions.SubscriptionsState getSubscriptionsState() {
             return this.subscriptionsState;
         }
 
-        /* renamed from: component3, reason: from getter */
+        /* JADX INFO: renamed from: component3, reason: from getter */
         public final StoreEntitlements.State getEntitlementState() {
             return this.entitlementState;
         }
 
-        /* renamed from: component4, reason: from getter */
+        /* JADX INFO: renamed from: component4, reason: from getter */
         public final StoreGuildBoost.State getGuildBoostState() {
             return this.guildBoostState;
         }
 
-        /* renamed from: component5, reason: from getter */
+        /* JADX INFO: renamed from: component5, reason: from getter */
         public final InvoicePreviewFetch getRenewalInvoicePreviewFetch() {
             return this.renewalInvoicePreviewFetch;
         }
 
-        /* renamed from: component6, reason: from getter */
+        /* JADX INFO: renamed from: component6, reason: from getter */
         public final InvoicePreviewFetch getCurrentInvoicePreviewFetch() {
             return this.currentInvoicePreviewFetch;
         }
 
-        /* renamed from: component7, reason: from getter */
+        /* JADX INFO: renamed from: component7, reason: from getter */
         public final StoreGooglePlaySkuDetails.State getSkuDetailsState() {
             return this.skuDetailsState;
         }
 
-        /* renamed from: component8, reason: from getter */
+        /* JADX INFO: renamed from: component8, reason: from getter */
         public final StoreGooglePlayPurchases.State getPurchaseState() {
             return this.purchaseState;
         }
@@ -416,7 +416,7 @@ public final class SettingsPremiumViewModel extends AppViewModel<ViewState> {
         }
     }
 
-    /* compiled from: SettingsPremiumViewModel.kt */
+    /* JADX INFO: compiled from: SettingsPremiumViewModel.kt */
     public static final /* data */ class SubscriptionAndInvoice {
         private final InvoicePreviewFetch invoicePreviewFetch;
         private final StoreSubscriptions.SubscriptionsState subscriptionsState;
@@ -438,12 +438,12 @@ public final class SettingsPremiumViewModel extends AppViewModel<ViewState> {
             return subscriptionAndInvoice.copy(subscriptionsState, invoicePreviewFetch);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final StoreSubscriptions.SubscriptionsState getSubscriptionsState() {
             return this.subscriptionsState;
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final InvoicePreviewFetch getInvoicePreviewFetch() {
             return this.invoicePreviewFetch;
         }
@@ -490,10 +490,10 @@ public final class SettingsPremiumViewModel extends AppViewModel<ViewState> {
         }
     }
 
-    /* compiled from: SettingsPremiumViewModel.kt */
+    /* JADX INFO: compiled from: SettingsPremiumViewModel.kt */
     public static abstract class ViewState {
 
-        /* compiled from: SettingsPremiumViewModel.kt */
+        /* JADX INFO: compiled from: SettingsPremiumViewModel.kt */
         public static final class Failure extends ViewState {
             public static final Failure INSTANCE = new Failure();
 
@@ -502,7 +502,7 @@ public final class SettingsPremiumViewModel extends AppViewModel<ViewState> {
             }
         }
 
-        /* compiled from: SettingsPremiumViewModel.kt */
+        /* JADX INFO: compiled from: SettingsPremiumViewModel.kt */
         public static final /* data */ class Loaded extends ViewState {
             private final ModelInvoicePreview currentInvoicePreview;
             private final List<ModelEntitlement> entitlements;
@@ -538,11 +538,12 @@ public final class SettingsPremiumViewModel extends AppViewModel<ViewState> {
                 this.pastDueGracePeriodDays = i;
             }
 
+            /* JADX WARN: Multi-variable type inference failed */
             public static /* synthetic */ Loaded copy$default(Loaded loaded, ModelSubscription modelSubscription, List list, boolean z2, List list2, Map map, boolean z3, ModelInvoicePreview modelInvoicePreview, ModelInvoicePreview modelInvoicePreview2, Map map2, List list3, int i, int i2, Object obj) {
                 return loaded.copy((i2 & 1) != 0 ? loaded.premiumSubscription : modelSubscription, (i2 & 2) != 0 ? loaded.paymentSources : list, (i2 & 4) != 0 ? loaded.isBusy : z2, (i2 & 8) != 0 ? loaded.entitlements : list2, (i2 & 16) != 0 ? loaded.guildSubscriptions : map, (i2 & 32) != 0 ? loaded.hasAnyGuildBoosts : z3, (i2 & 64) != 0 ? loaded.renewalInvoicePreview : modelInvoicePreview, (i2 & 128) != 0 ? loaded.currentInvoicePreview : modelInvoicePreview2, (i2 & 256) != 0 ? loaded.skuDetails : map2, (i2 & 512) != 0 ? loaded.purchases : list3, (i2 & 1024) != 0 ? loaded.pastDueGracePeriodDays : i);
             }
 
-            /* renamed from: component1, reason: from getter */
+            /* JADX INFO: renamed from: component1, reason: from getter */
             public final ModelSubscription getPremiumSubscription() {
                 return this.premiumSubscription;
             }
@@ -551,7 +552,7 @@ public final class SettingsPremiumViewModel extends AppViewModel<ViewState> {
                 return this.purchases;
             }
 
-            /* renamed from: component11, reason: from getter */
+            /* JADX INFO: renamed from: component11, reason: from getter */
             public final int getPastDueGracePeriodDays() {
                 return this.pastDueGracePeriodDays;
             }
@@ -560,7 +561,7 @@ public final class SettingsPremiumViewModel extends AppViewModel<ViewState> {
                 return this.paymentSources;
             }
 
-            /* renamed from: component3, reason: from getter */
+            /* JADX INFO: renamed from: component3, reason: from getter */
             public final boolean getIsBusy() {
                 return this.isBusy;
             }
@@ -573,17 +574,17 @@ public final class SettingsPremiumViewModel extends AppViewModel<ViewState> {
                 return this.guildSubscriptions;
             }
 
-            /* renamed from: component6, reason: from getter */
+            /* JADX INFO: renamed from: component6, reason: from getter */
             public final boolean getHasAnyGuildBoosts() {
                 return this.hasAnyGuildBoosts;
             }
 
-            /* renamed from: component7, reason: from getter */
+            /* JADX INFO: renamed from: component7, reason: from getter */
             public final ModelInvoicePreview getRenewalInvoicePreview() {
                 return this.renewalInvoicePreview;
             }
 
-            /* renamed from: component8, reason: from getter */
+            /* JADX INFO: renamed from: component8, reason: from getter */
             public final ModelInvoicePreview getCurrentInvoicePreview() {
                 return this.currentInvoicePreview;
             }
@@ -653,25 +654,31 @@ public final class SettingsPremiumViewModel extends AppViewModel<ViewState> {
             }
 
             /* JADX WARN: Multi-variable type inference failed */
+            /* JADX WARN: Type inference failed for: r2v27 */
+            /* JADX WARN: Type inference failed for: r2v29 */
+            /* JADX WARN: Type inference failed for: r2v4, types: [int] */
+            /* JADX WARN: Type inference failed for: r3v0 */
+            /* JADX WARN: Type inference failed for: r3v1, types: [int] */
+            /* JADX WARN: Type inference failed for: r3v2 */
             public int hashCode() {
                 ModelSubscription modelSubscription = this.premiumSubscription;
                 int iHashCode = (modelSubscription != null ? modelSubscription.hashCode() : 0) * 31;
                 List<ModelPaymentSource> list = this.paymentSources;
                 int iHashCode2 = (iHashCode + (list != null ? list.hashCode() : 0)) * 31;
                 boolean z2 = this.isBusy;
-                int i = z2;
-                if (z2 != 0) {
-                    i = 1;
+                ?? r2 = z2;
+                if (z2) {
+                    r2 = 1;
                 }
-                int i2 = (iHashCode2 + i) * 31;
+                int i = (iHashCode2 + r2) * 31;
                 List<ModelEntitlement> list2 = this.entitlements;
-                int iHashCode3 = (i2 + (list2 != null ? list2.hashCode() : 0)) * 31;
+                int iHashCode3 = (i + (list2 != null ? list2.hashCode() : 0)) * 31;
                 Map<Long, ModelGuildBoostSlot> map = this.guildSubscriptions;
                 int iHashCode4 = (iHashCode3 + (map != null ? map.hashCode() : 0)) * 31;
                 boolean z3 = this.hasAnyGuildBoosts;
-                int i3 = (iHashCode4 + (z3 ? 1 : z3 ? 1 : 0)) * 31;
+                int i2 = (iHashCode4 + (z3 ? 1 : z3)) * 31;
                 ModelInvoicePreview modelInvoicePreview = this.renewalInvoicePreview;
-                int iHashCode5 = (i3 + (modelInvoicePreview != null ? modelInvoicePreview.hashCode() : 0)) * 31;
+                int iHashCode5 = (i2 + (modelInvoicePreview != null ? modelInvoicePreview.hashCode() : 0)) * 31;
                 ModelInvoicePreview modelInvoicePreview2 = this.currentInvoicePreview;
                 int iHashCode6 = (iHashCode5 + (modelInvoicePreview2 != null ? modelInvoicePreview2.hashCode() : 0)) * 31;
                 Map<String, SkuDetails> map2 = this.skuDetails;
@@ -710,7 +717,7 @@ public final class SettingsPremiumViewModel extends AppViewModel<ViewState> {
             }
         }
 
-        /* compiled from: SettingsPremiumViewModel.kt */
+        /* JADX INFO: compiled from: SettingsPremiumViewModel.kt */
         public static final class Loading extends ViewState {
             public static final Loading INSTANCE = new Loading();
 
@@ -727,8 +734,8 @@ public final class SettingsPremiumViewModel extends AppViewModel<ViewState> {
         }
     }
 
-    /* compiled from: SettingsPremiumViewModel.kt */
-    /* renamed from: com.discord.widgets.settings.premium.SettingsPremiumViewModel$cancelSubscription$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.premium.SettingsPremiumViewModel$cancelSubscription$1 */
+    /* JADX INFO: compiled from: SettingsPremiumViewModel.kt */
     public static final class C98891 extends Lambda implements Function1<Void, Unit> {
         public C98891() {
             super(1);
@@ -740,14 +747,14 @@ public final class SettingsPremiumViewModel extends AppViewModel<ViewState> {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Void r1) {
             SettingsPremiumViewModel.access$fetchData(SettingsPremiumViewModel.this);
         }
     }
 
-    /* compiled from: SettingsPremiumViewModel.kt */
-    /* renamed from: com.discord.widgets.settings.premium.SettingsPremiumViewModel$cancelSubscription$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.premium.SettingsPremiumViewModel$cancelSubscription$2 */
+    /* JADX INFO: compiled from: SettingsPremiumViewModel.kt */
     public static final class C98902 extends Lambda implements Function1<Error, Unit> {
         public C98902() {
             super(1);
@@ -759,7 +766,7 @@ public final class SettingsPremiumViewModel extends AppViewModel<ViewState> {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Error error) {
             Intrinsics3.checkNotNullParameter(error, "it");
             SettingsPremiumViewModel.access$onCancelError(SettingsPremiumViewModel.this);

@@ -2,24 +2,24 @@ package p007b.p225i.p226a.p228b.p231j.p236t.p238i;
 
 import p007b.p100d.p104b.p105a.outline;
 
-/* compiled from: AutoValue_EventStoreConfig.java */
-/* renamed from: b.i.a.b.j.t.i.a, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.b.j.t.i.a, reason: use source file name */
+/* JADX INFO: compiled from: AutoValue_EventStoreConfig.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class AutoValue_EventStoreConfig extends EventStoreConfig {
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final long f5409b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final int f5410c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final int f5411d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final long f5412e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final int f5413f;
 
     public AutoValue_EventStoreConfig(long j, int i, int i2, long j2, int i3, a aVar) {
@@ -31,31 +31,31 @@ public final class AutoValue_EventStoreConfig extends EventStoreConfig {
     }
 
     @Override // p007b.p225i.p226a.p228b.p231j.p236t.p238i.EventStoreConfig
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public int mo2386a() {
         return this.f5411d;
     }
 
     @Override // p007b.p225i.p226a.p228b.p231j.p236t.p238i.EventStoreConfig
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public long mo2387b() {
         return this.f5412e;
     }
 
     @Override // p007b.p225i.p226a.p228b.p231j.p236t.p238i.EventStoreConfig
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public int mo2388c() {
         return this.f5410c;
     }
 
     @Override // p007b.p225i.p226a.p228b.p231j.p236t.p238i.EventStoreConfig
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public int mo2389d() {
         return this.f5413f;
     }
 
     @Override // p007b.p225i.p226a.p228b.p231j.p236t.p238i.EventStoreConfig
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public long mo2390e() {
         return this.f5409b;
     }

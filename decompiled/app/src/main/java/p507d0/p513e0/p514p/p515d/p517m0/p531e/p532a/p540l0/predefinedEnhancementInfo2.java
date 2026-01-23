@@ -5,15 +5,15 @@ import kotlin.jvm.internal.DefaultConstructorMarker;
 import p507d0.p580t.Collections2;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: predefinedEnhancementInfo.kt */
-/* renamed from: d0.e0.p.d.m0.e.a.l0.k, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.e.a.l0.k, reason: use source file name */
+/* JADX INFO: compiled from: predefinedEnhancementInfo.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class predefinedEnhancementInfo2 {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final predefinedEnhancementInfo4 f23470a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final List<predefinedEnhancementInfo4> f23471b;
 
     public predefinedEnhancementInfo2() {

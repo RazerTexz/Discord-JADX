@@ -5,11 +5,11 @@ import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
-/* compiled from: JsonFilter.java */
+/* JADX INFO: renamed from: b.g.a.a.h, reason: use source file name */
+/* JADX INFO: compiled from: JsonFilter.java */
+/* JADX INFO: loaded from: classes3.dex */
 @Target({ElementType.ANNOTATION_TYPE, ElementType.TYPE, ElementType.METHOD, ElementType.FIELD, ElementType.PARAMETER})
 @Retention(RetentionPolicy.RUNTIME)
-/* renamed from: b.g.a.a.h, reason: use source file name */
-/* loaded from: classes3.dex */
 public @interface JsonFilter {
     String value();
 }

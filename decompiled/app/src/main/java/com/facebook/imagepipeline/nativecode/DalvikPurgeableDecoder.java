@@ -24,14 +24,14 @@ import p007b.p109f.p186k.BitmapUtil;
 import p007b.p109f.p190m.DoNotOptimize;
 import p007b.p109f.p190m.p191n.NativeLoader;
 
+/* JADX INFO: loaded from: classes3.dex */
 @DoNotStrip
-/* loaded from: classes3.dex */
 public abstract class DalvikPurgeableDecoder implements PlatformDecoder {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final byte[] f19566a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final BitmapCounter f19567b;
 
     @DoNotOptimize
@@ -58,7 +58,7 @@ public abstract class DalvikPurgeableDecoder implements PlatformDecoder {
     }
 
     @VisibleForTesting
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public static boolean m8709e(CloseableReference<PooledByteBuffer> closeableReference, int i) {
         PooledByteBuffer pooledByteBufferM8642u = closeableReference.m8642u();
         return i >= 2 && pooledByteBufferM8642u.mo1395h(i + (-2)) == -1 && pooledByteBufferM8642u.mo1395h(i - 1) == -39;
@@ -68,7 +68,7 @@ public abstract class DalvikPurgeableDecoder implements PlatformDecoder {
     private static native void nativePinBitmap(Bitmap bitmap);
 
     @Override // p007b.p109f.p161j.p179n.PlatformDecoder
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public CloseableReference<Bitmap> mo1414a(EncodedImage2 encodedImage2, Bitmap.Config config, Rect rect, ColorSpace colorSpace) {
         int i = encodedImage2.f3898q;
         BitmapFactory.Options options = new BitmapFactory.Options();
@@ -91,7 +91,7 @@ public abstract class DalvikPurgeableDecoder implements PlatformDecoder {
     }
 
     @Override // p007b.p109f.p161j.p179n.PlatformDecoder
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public CloseableReference<Bitmap> mo1415b(EncodedImage2 encodedImage2, Bitmap.Config config, Rect rect, int i, ColorSpace colorSpace) {
         int i2 = encodedImage2.f3898q;
         BitmapFactory.Options options = new BitmapFactory.Options();
@@ -113,13 +113,13 @@ public abstract class DalvikPurgeableDecoder implements PlatformDecoder {
         }
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public abstract Bitmap mo8710c(CloseableReference<PooledByteBuffer> closeableReference, BitmapFactory.Options options);
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public abstract Bitmap mo8711d(CloseableReference<PooledByteBuffer> closeableReference, int i, BitmapFactory.Options options);
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public CloseableReference<Bitmap> m8712f(Bitmap bitmap) throws Throwable {
         boolean z2;
         int i;
@@ -133,7 +133,7 @@ public abstract class DalvikPurgeableDecoder implements PlatformDecoder {
                 int iM1541d = BitmapUtil.m1541d(bitmap);
                 int i3 = bitmapCounter.f3917a;
                 if (i3 < bitmapCounter.f3919c) {
-                    long j2 = bitmapCounter.f3918b + iM1541d;
+                    long j2 = bitmapCounter.f3918b + ((long) iM1541d);
                     if (j2 > bitmapCounter.f3920d) {
                         z2 = false;
                     } else {

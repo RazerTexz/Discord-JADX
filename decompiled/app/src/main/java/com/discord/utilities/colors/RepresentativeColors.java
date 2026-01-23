@@ -40,21 +40,21 @@ import p659s.p660a.CoroutineScope2;
 import p659s.p660a.Dispatchers;
 import p659s.p660a.p661a.MainDispatchers;
 
-/* compiled from: RepresentativeColors.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: RepresentativeColors.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class RepresentativeColors<T> {
     private final HashMap<T, Integer> representativeColors = new HashMap<>();
     private final BehaviorSubject<Map<T, Integer>> representativeColorsSubject = BehaviorSubject.m11129k0();
     private static final int BLURPLE = Color.parseColor("#5865f2");
 
-    /* compiled from: RepresentativeColors.kt */
+    /* JADX INFO: compiled from: RepresentativeColors.kt */
     public static final class NoSwatchesFoundException extends RuntimeException {
     }
 
-    /* compiled from: RepresentativeColors.kt */
+    /* JADX INFO: compiled from: RepresentativeColors.kt */
     public static abstract class RepresentativeColorResult {
 
-        /* compiled from: RepresentativeColors.kt */
+        /* JADX INFO: compiled from: RepresentativeColors.kt */
         public static final /* data */ class Failure extends RepresentativeColorResult {
             private final Exception exception;
 
@@ -72,7 +72,7 @@ public final class RepresentativeColors<T> {
                 return failure.copy(exc);
             }
 
-            /* renamed from: component1, reason: from getter */
+            /* JADX INFO: renamed from: component1, reason: from getter */
             public final Exception getException() {
                 return this.exception;
             }
@@ -109,7 +109,7 @@ public final class RepresentativeColors<T> {
             }
         }
 
-        /* compiled from: RepresentativeColors.kt */
+        /* JADX INFO: compiled from: RepresentativeColors.kt */
         public static final /* data */ class Success extends RepresentativeColorResult {
             private final int color;
 
@@ -125,7 +125,7 @@ public final class RepresentativeColors<T> {
                 return success.copy(i);
             }
 
-            /* renamed from: component1, reason: from getter */
+            /* JADX INFO: renamed from: component1, reason: from getter */
             public final int getColor() {
                 return this.color;
             }
@@ -162,9 +162,9 @@ public final class RepresentativeColors<T> {
         }
     }
 
-    /* compiled from: RepresentativeColors.kt */
+    /* JADX INFO: renamed from: com.discord.utilities.colors.RepresentativeColors$getRepresentativeColorAsync$2 */
+    /* JADX INFO: compiled from: RepresentativeColors.kt */
     @DebugMetadata(m10084c = "com.discord.utilities.colors.RepresentativeColors$getRepresentativeColorAsync$2", m10085f = "RepresentativeColors.kt", m10086l = {}, m10087m = "invokeSuspend")
-    /* renamed from: com.discord.utilities.colors.RepresentativeColors$getRepresentativeColorAsync$2 */
     public static final class C67342 extends ContinuationImpl6 implements Function2<CoroutineScope, Continuation<? super RepresentativeColorResult>, Object> {
         public final /* synthetic */ Bitmap $bitmap;
         public int label;
@@ -197,9 +197,9 @@ public final class RepresentativeColors<T> {
         }
     }
 
-    /* compiled from: RepresentativeColors.kt */
+    /* JADX INFO: renamed from: com.discord.utilities.colors.RepresentativeColors$handleBitmap$1 */
+    /* JADX INFO: compiled from: RepresentativeColors.kt */
     @DebugMetadata(m10084c = "com.discord.utilities.colors.RepresentativeColors$handleBitmap$1", m10085f = "RepresentativeColors.kt", m10086l = {59}, m10087m = "invokeSuspend")
-    /* renamed from: com.discord.utilities.colors.RepresentativeColors$handleBitmap$1 */
     public static final class C67351 extends ContinuationImpl6 implements Function2<CoroutineScope, Continuation<? super Unit>, Object> {
         public final /* synthetic */ Bitmap $bitmap;
         public final /* synthetic */ Object $id;
@@ -286,8 +286,8 @@ public final class RepresentativeColors<T> {
         }
     }
 
-    /* compiled from: RepresentativeColors.kt */
-    /* renamed from: com.discord.utilities.colors.RepresentativeColors$observeRepresentativeColor$1 */
+    /* JADX INFO: renamed from: com.discord.utilities.colors.RepresentativeColors$observeRepresentativeColor$1 */
+    /* JADX INFO: compiled from: RepresentativeColors.kt */
     public static final class C67361<T, R> implements Func1<Map<T, ? extends Integer>, Integer> {
         public final /* synthetic */ Object $id;
 

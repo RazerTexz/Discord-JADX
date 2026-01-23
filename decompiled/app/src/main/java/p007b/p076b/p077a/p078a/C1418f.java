@@ -4,12 +4,12 @@ import androidx.viewpager.widget.ViewPager;
 import com.lytefast.flexinput.fragment.FlexInputFragment;
 import com.lytefast.flexinput.viewmodel.FlexInputViewModel;
 
-/* compiled from: FlexInputFragment.kt */
-/* renamed from: b.b.a.a.f */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.b.a.a.f */
+/* JADX INFO: compiled from: FlexInputFragment.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class C1418f implements ViewPager.OnPageChangeListener {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final /* synthetic */ FlexInputFragment f2133a;
 
     public C1418f(FlexInputFragment flexInputFragment) {

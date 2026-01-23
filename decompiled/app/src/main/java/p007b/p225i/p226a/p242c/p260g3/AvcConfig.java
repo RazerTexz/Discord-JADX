@@ -8,27 +8,27 @@ import p007b.p225i.p226a.p242c.p259f3.CodecSpecificDataUtil;
 import p007b.p225i.p226a.p242c.p259f3.NalUnitUtil;
 import p007b.p225i.p226a.p242c.p259f3.ParsableByteArray;
 
-/* compiled from: AvcConfig.java */
-/* renamed from: b.i.a.c.g3.m, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.g3.m, reason: use source file name */
+/* JADX INFO: compiled from: AvcConfig.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class AvcConfig {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final List<byte[]> f6837a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final int f6838b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final int f6839c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final int f6840d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final float f6841e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     @Nullable
     public final String f6842f;
 
@@ -41,7 +41,7 @@ public final class AvcConfig {
         this.f6842f = str;
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static byte[] m3121a(ParsableByteArray parsableByteArray) {
         int iM3105y = parsableByteArray.m3105y();
         int i = parsableByteArray.f6794b;
@@ -54,7 +54,7 @@ public final class AvcConfig {
         return bArr3;
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static AvcConfig m3122b(ParsableByteArray parsableByteArray) throws ParserException {
         String strM3022a;
         int i;

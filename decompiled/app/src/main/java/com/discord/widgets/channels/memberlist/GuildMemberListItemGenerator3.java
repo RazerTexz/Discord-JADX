@@ -8,9 +8,9 @@ import java.util.SortedMap;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: GuildMemberListItemGenerator.kt */
-/* renamed from: com.discord.widgets.channels.memberlist.GuildMemberListItems, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.channels.memberlist.GuildMemberListItems, reason: use source file name */
+/* JADX INFO: compiled from: GuildMemberListItemGenerator.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final /* data */ class GuildMemberListItemGenerator3 implements WidgetChannelMembersListViewModel.MemberList {
     private final SortedMap<Integer, String> groupIndices;
     private final String listId;

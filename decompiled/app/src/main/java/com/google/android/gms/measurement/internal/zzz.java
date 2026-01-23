@@ -6,42 +6,42 @@ import com.google.android.gms.common.internal.safeparcel.AbstractSafeParcelable;
 import p007b.p085c.p086a.p087a0.AnimatableValueParser;
 import p007b.p225i.p226a.p288f.p330i.p332b.C4075ia;
 
-/* compiled from: com.google.android.gms:play-services-measurement-impl@@18.0.0 */
-/* loaded from: classes3.dex */
+/* JADX INFO: compiled from: com.google.android.gms:play-services-measurement-impl@@18.0.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public final class zzz extends AbstractSafeParcelable {
     public static final Parcelable.Creator<zzz> CREATOR = new C4075ia();
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public String f20700j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public String f20701k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public zzku f20702l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public long f20703m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public boolean f20704n;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public String f20705o;
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public zzaq f20706p;
 
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     public long f20707q;
 
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     public zzaq f20708r;
 
-    /* renamed from: s */
+    /* JADX INFO: renamed from: s */
     public long f20709s;
 
-    /* renamed from: t */
+    /* JADX INFO: renamed from: t */
     public zzaq f20710t;
 
     public zzz(zzz zzzVar) {

@@ -6,12 +6,12 @@ import java.util.Objects;
 import p007b.p109f.p115d.p122g.ByteArrayPool;
 import p007b.p109f.p115d.p122g.MemoryTrimmableRegistry;
 
-/* compiled from: GenericByteArrayPool.java */
-/* renamed from: b.f.j.l.o, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.f.j.l.o, reason: use source file name */
+/* JADX INFO: compiled from: GenericByteArrayPool.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class GenericByteArrayPool extends BasePool<byte[]> implements ByteArrayPool {
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final int[] f3944k;
 
     public GenericByteArrayPool(MemoryTrimmableRegistry memoryTrimmableRegistry, PoolParams poolParams, PoolStatsTracker poolStatsTracker) {
@@ -26,18 +26,18 @@ public class GenericByteArrayPool extends BasePool<byte[]> implements ByteArrayP
     }
 
     @Override // com.facebook.imagepipeline.memory.BasePool
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public byte[] mo1382e(int i) {
         return new byte[i];
     }
 
     @Override // com.facebook.imagepipeline.memory.BasePool
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public void mo1383g(byte[] bArr) {
     }
 
     @Override // com.facebook.imagepipeline.memory.BasePool
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public int mo1384i(int i) {
         if (i <= 0) {
             throw new BasePool.InvalidSizeException(Integer.valueOf(i));
@@ -51,13 +51,13 @@ public class GenericByteArrayPool extends BasePool<byte[]> implements ByteArrayP
     }
 
     @Override // com.facebook.imagepipeline.memory.BasePool
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public int mo1385j(byte[] bArr) {
         return bArr.length;
     }
 
     @Override // com.facebook.imagepipeline.memory.BasePool
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public int mo1386k(int i) {
         return i;
     }

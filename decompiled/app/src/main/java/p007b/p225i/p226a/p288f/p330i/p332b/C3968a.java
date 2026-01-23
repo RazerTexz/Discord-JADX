@@ -6,18 +6,18 @@ import androidx.collection.ArrayMap;
 import java.util.Iterator;
 import java.util.Map;
 
-/* compiled from: com.google.android.gms:play-services-measurement-impl@@18.0.0 */
-/* renamed from: b.i.a.f.i.b.a */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.i.b.a */
+/* JADX INFO: compiled from: com.google.android.gms:play-services-measurement-impl@@18.0.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public final class C3968a extends C4254z1 {
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final Map<String, Long> f10501b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final Map<String, Integer> f10502c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public long f10503d;
 
     public C3968a(C4202u4 c4202u4) {
@@ -27,7 +27,7 @@ public final class C3968a extends C4254z1 {
     }
 
     @WorkerThread
-    /* renamed from: t */
+    /* JADX INFO: renamed from: t */
     public final void m5440t(long j) {
         C4072i7 c4072i7M5656w = m5972q().m5656w(false);
         for (String str : this.f10501b.keySet()) {
@@ -40,7 +40,7 @@ public final class C3968a extends C4254z1 {
     }
 
     @WorkerThread
-    /* renamed from: u */
+    /* JADX INFO: renamed from: u */
     public final void m5441u(long j, C4072i7 c4072i7) {
         if (c4072i7 == null) {
             mo5726g().f11149n.m5860a("Not logging ad exposure. No active activity");
@@ -56,8 +56,8 @@ public final class C3968a extends C4254z1 {
         m5969n().m5545H("am", "_xa", bundle);
     }
 
-    /* renamed from: v */
-    public final void m5442v(String str, long j) throws IllegalStateException {
+    /* JADX INFO: renamed from: v */
+    public final void m5442v(String str, long j) {
         if (str == null || str.length() == 0) {
             mo5726g().f11141f.m5860a("Ad unit id must be a non-empty string");
         } else {
@@ -66,7 +66,7 @@ public final class C3968a extends C4254z1 {
     }
 
     @WorkerThread
-    /* renamed from: w */
+    /* JADX INFO: renamed from: w */
     public final void m5443w(String str, long j, C4072i7 c4072i7) {
         if (c4072i7 == null) {
             mo5726g().f11149n.m5860a("Not logging ad unit exposure. No active activity");
@@ -84,7 +84,7 @@ public final class C3968a extends C4254z1 {
     }
 
     @WorkerThread
-    /* renamed from: x */
+    /* JADX INFO: renamed from: x */
     public final void m5444x(long j) {
         Iterator<String> it = this.f10501b.keySet().iterator();
         while (it.hasNext()) {
@@ -96,8 +96,8 @@ public final class C3968a extends C4254z1 {
         this.f10503d = j;
     }
 
-    /* renamed from: y */
-    public final void m5445y(String str, long j) throws IllegalStateException {
+    /* JADX INFO: renamed from: y */
+    public final void m5445y(String str, long j) {
         if (str == null || str.length() == 0) {
             mo5726g().f11141f.m5860a("Ad unit id must be a non-empty string");
         } else {

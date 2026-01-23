@@ -7,8 +7,8 @@ import p001a0.p002a.p003a.C0002b;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: TotalPayoutsForPeriod.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: TotalPayoutsForPeriod.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final /* data */ class TotalPayoutsForPeriod {
     private final Map<Long, PayoutGroup> payoutGroups;
     private final String periodStartingAt;
@@ -23,6 +23,7 @@ public final /* data */ class TotalPayoutsForPeriod {
         this.payoutGroups = map;
     }
 
+    /* JADX WARN: Multi-variable type inference failed */
     public static /* synthetic */ TotalPayoutsForPeriod copy$default(TotalPayoutsForPeriod totalPayoutsForPeriod, String str, long j, long j2, Map map, int i, Object obj) {
         if ((i & 1) != 0) {
             str = totalPayoutsForPeriod.periodStartingAt;
@@ -41,17 +42,17 @@ public final /* data */ class TotalPayoutsForPeriod {
         return totalPayoutsForPeriod.copy(str, j3, j4, map);
     }
 
-    /* renamed from: component1, reason: from getter */
+    /* JADX INFO: renamed from: component1, reason: from getter */
     public final String getPeriodStartingAt() {
         return this.periodStartingAt;
     }
 
-    /* renamed from: component2, reason: from getter */
+    /* JADX INFO: renamed from: component2, reason: from getter */
     public final long getSubscriberCount() {
         return this.subscriberCount;
     }
 
-    /* renamed from: component3, reason: from getter */
+    /* JADX INFO: renamed from: component3, reason: from getter */
     public final long getRevenue() {
         return this.revenue;
     }

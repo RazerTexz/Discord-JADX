@@ -27,8 +27,8 @@ import androidx.core.graphics.drawable.DrawableCompat;
 import androidx.core.internal.view.SupportMenuItem;
 import androidx.core.view.ActionProvider;
 
+/* JADX INFO: loaded from: classes.dex */
 @RestrictTo({RestrictTo.Scope.LIBRARY_GROUP_PREFIX})
-/* loaded from: classes.dex */
 public final class MenuItemImpl implements SupportMenuItem {
     private static final int CHECKABLE = 1;
     private static final int CHECKED = 2;
@@ -71,7 +71,7 @@ public final class MenuItemImpl implements SupportMenuItem {
     private int mFlags = 16;
     private boolean mIsActionViewExpanded = false;
 
-    /* renamed from: androidx.appcompat.view.menu.MenuItemImpl$1 */
+    /* JADX INFO: renamed from: androidx.appcompat.view.menu.MenuItemImpl$1 */
     public class C00851 implements ActionProvider.VisibilityListener {
         public C00851() {
         }

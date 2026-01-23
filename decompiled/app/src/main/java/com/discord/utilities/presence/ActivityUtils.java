@@ -35,9 +35,9 @@ import p507d0.p579g0.StringsJVM;
 import p507d0.p580t.Collections2;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ActivityUtils.kt */
-/* renamed from: com.discord.utilities.presence.ActivityUtilsKt, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.utilities.presence.ActivityUtilsKt, reason: use source file name */
+/* JADX INFO: compiled from: ActivityUtils.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class ActivityUtils {
     private static final long STAGE_PRESENCE_APPLICATION_ID = 834488117758001152L;
     private static final long STAGE_PRESENCE_FLAG_GUILD_IS_PARTNERED = 2;
@@ -205,7 +205,7 @@ public final class ActivityUtils {
         return activity.getPlatform() == ActivityPlatform.XBOX || ((applicationId = activity.getApplicationId()) != null && applicationId.longValue() == XBOX_APPLICATION_ID);
     }
 
-    /* renamed from: packStageChannelPartyId-hLOU_GE, reason: not valid java name */
+    /* JADX INFO: renamed from: packStageChannelPartyId-hLOU_GE, reason: not valid java name */
     private static final String m11398packStageChannelPartyIdhLOU_GE(Channel channel, Guild guild, StageRoles stageRoles, StageInstance stageInstance) {
         String string = Long.toString((stageRoles == null || !StageRoles.m11410isSpeakerimpl(stageRoles.m11412unboximpl())) ? guild.hasFeature(GuildFeature.PARTNERED) ? 2L : guild.hasFeature(GuildFeature.VERIFIED) ? 4L : 0L : 1L, CharJVM.checkRadix(16));
         Intrinsics3.checkNotNullExpressionValue(string, "java.lang.Long.toString(this, checkRadix(radix))");

@@ -11,9 +11,9 @@ import com.discord.widgets.auth.WidgetOauth2AuthorizeSamsung;
 import p007b.p008a.p018d.AppToast;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: WidgetOauth2AuthorizeSamsung.kt */
-/* renamed from: com.discord.widgets.auth.WidgetOauth2AuthorizeSamsung$samsungDisclaimerLauncher$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.auth.WidgetOauth2AuthorizeSamsung$samsungDisclaimerLauncher$1, reason: use source file name */
+/* JADX INFO: compiled from: WidgetOauth2AuthorizeSamsung.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetOauth2AuthorizeSamsung6<O> implements ActivityResultCallback<ActivityResult> {
     public final /* synthetic */ WidgetOauth2AuthorizeSamsung this$0;
 
@@ -26,7 +26,7 @@ public final class WidgetOauth2AuthorizeSamsung6<O> implements ActivityResultCal
         onActivityResult2(activityResult);
     }
 
-    /* renamed from: onActivityResult, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: onActivityResult, reason: avoid collision after fix types in other method */
     public final void onActivityResult2(ActivityResult activityResult) {
         Bundle extras;
         Bundle extras2;

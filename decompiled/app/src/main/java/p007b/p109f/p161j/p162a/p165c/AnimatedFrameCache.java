@@ -9,30 +9,30 @@ import p007b.p109f.p115d.p119d.Objects2;
 import p007b.p109f.p161j.p168c.CountingMemoryCache;
 import p007b.p109f.p161j.p175j.CloseableImage;
 
-/* compiled from: AnimatedFrameCache.java */
-/* renamed from: b.f.j.a.c.c, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: b.f.j.a.c.c, reason: use source file name */
+/* JADX INFO: compiled from: AnimatedFrameCache.java */
+/* JADX INFO: loaded from: classes2.dex */
 public class AnimatedFrameCache {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final CacheKey f3634a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final CountingMemoryCache<CacheKey, CloseableImage> f3635b;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final LinkedHashSet<CacheKey> f3637d = new LinkedHashSet<>();
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final CountingMemoryCache.b<CacheKey> f3636c = new a();
 
-    /* compiled from: AnimatedFrameCache.java */
-    /* renamed from: b.f.j.a.c.c$a */
+    /* JADX INFO: renamed from: b.f.j.a.c.c$a */
+    /* JADX INFO: compiled from: AnimatedFrameCache.java */
     public class a implements CountingMemoryCache.b<CacheKey> {
         public a() {
         }
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public void m1201a(Object obj, boolean z2) {
             CacheKey cacheKey = (CacheKey) obj;
             AnimatedFrameCache animatedFrameCache = AnimatedFrameCache.this;
@@ -46,15 +46,15 @@ public class AnimatedFrameCache {
         }
     }
 
-    /* compiled from: AnimatedFrameCache.java */
+    /* JADX INFO: renamed from: b.f.j.a.c.c$b */
+    /* JADX INFO: compiled from: AnimatedFrameCache.java */
     @VisibleForTesting
-    /* renamed from: b.f.j.a.c.c$b */
     public static class b implements CacheKey {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final CacheKey f3639a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final int f3640b;
 
         public b(CacheKey cacheKey, int i) {
@@ -63,13 +63,13 @@ public class AnimatedFrameCache {
         }
 
         @Override // com.facebook.cache.common.CacheKey
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public boolean mo929a() {
             return false;
         }
 
         @Override // com.facebook.cache.common.CacheKey
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public String mo930b() {
             return null;
         }

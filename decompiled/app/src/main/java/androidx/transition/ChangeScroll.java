@@ -9,7 +9,7 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class ChangeScroll extends Transition {
     private static final String PROPNAME_SCROLL_X = "android:changeScroll:x";
     private static final String PROPNAME_SCROLL_Y = "android:changeScroll:y";

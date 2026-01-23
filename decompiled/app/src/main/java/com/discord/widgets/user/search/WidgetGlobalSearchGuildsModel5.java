@@ -5,9 +5,9 @@ import java.util.Map;
 import kotlin.jvm.functions.Function1;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetGlobalSearchGuildsModel.kt */
-/* renamed from: com.discord.widgets.user.search.WidgetGlobalSearchGuildsModel$Companion$create$guildItems$1, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: com.discord.widgets.user.search.WidgetGlobalSearchGuildsModel$Companion$create$guildItems$1, reason: use source file name */
+/* JADX INFO: compiled from: WidgetGlobalSearchGuildsModel.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class WidgetGlobalSearchGuildsModel5 extends Lambda implements Function1<Long, Guild> {
     public final /* synthetic */ Map $guilds;
 

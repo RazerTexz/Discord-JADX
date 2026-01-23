@@ -3,8 +3,8 @@ package com.discord.widgets.settings;
 import android.view.View;
 import com.discord.stores.StoreStream;
 
-/* compiled from: WidgetSettings.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetSettings.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetSettings$onViewBound$1$27 implements View.OnClickListener {
     public static final WidgetSettings$onViewBound$1$27 INSTANCE = new WidgetSettings$onViewBound$1$27();
 

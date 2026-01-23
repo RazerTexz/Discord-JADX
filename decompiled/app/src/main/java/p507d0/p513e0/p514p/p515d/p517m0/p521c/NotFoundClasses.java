@@ -35,31 +35,31 @@ import p507d0.p580t._Collections;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: NotFoundClasses.kt */
-/* renamed from: d0.e0.p.d.m0.c.d0, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.c.d0, reason: use source file name */
+/* JADX INFO: compiled from: NotFoundClasses.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class NotFoundClasses {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final StorageManager f22685a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final ModuleDescriptor2 f22686b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final storage3<FqName, PackageFragmentDescriptor> f22687c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final storage3<a, ClassDescriptor> f22688d;
 
-    /* compiled from: NotFoundClasses.kt */
-    /* renamed from: d0.e0.p.d.m0.c.d0$a */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.c.d0$a */
+    /* JADX INFO: compiled from: NotFoundClasses.kt */
     public static final class a {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final ClassId f22689a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final List<Integer> f22690b;
 
         public a(ClassId classId, List<Integer> list) {
@@ -102,17 +102,17 @@ public final class NotFoundClasses {
         }
     }
 
-    /* compiled from: NotFoundClasses.kt */
-    /* renamed from: d0.e0.p.d.m0.c.d0$b */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.c.d0$b */
+    /* JADX INFO: compiled from: NotFoundClasses.kt */
     public static final class b extends ClassDescriptorBase {
 
-        /* renamed from: r */
+        /* JADX INFO: renamed from: r */
         public final boolean f22691r;
 
-        /* renamed from: s */
+        /* JADX INFO: renamed from: s */
         public final List<TypeParameterDescriptor> f22692s;
 
-        /* renamed from: t */
+        /* JADX INFO: renamed from: t */
         public final ClassTypeConstructorImpl f22693t;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -259,8 +259,8 @@ public final class NotFoundClasses {
         }
     }
 
-    /* compiled from: NotFoundClasses.kt */
-    /* renamed from: d0.e0.p.d.m0.c.d0$c */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.c.d0$c */
+    /* JADX INFO: compiled from: NotFoundClasses.kt */
     public static final class c extends Lambda implements Function1<a, ClassDescriptor> {
         public c() {
             super(1);
@@ -271,7 +271,7 @@ public final class NotFoundClasses {
             return invoke2(aVar);
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final ClassDescriptor invoke2(a aVar) {
             Intrinsics3.checkNotNullParameter(aVar, "$dstr$classId$typeParametersCount");
             ClassId classIdComponent1 = aVar.component1();
@@ -297,8 +297,8 @@ public final class NotFoundClasses {
         }
     }
 
-    /* compiled from: NotFoundClasses.kt */
-    /* renamed from: d0.e0.p.d.m0.c.d0$d */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.c.d0$d */
+    /* JADX INFO: compiled from: NotFoundClasses.kt */
     public static final class d extends Lambda implements Function1<FqName, PackageFragmentDescriptor> {
         public d() {
             super(1);
@@ -309,7 +309,7 @@ public final class NotFoundClasses {
             return invoke2(fqName);
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final PackageFragmentDescriptor invoke2(FqName fqName) {
             Intrinsics3.checkNotNullParameter(fqName, "fqName");
             return new EmptyPackageFragmentDesciptor(NotFoundClasses.access$getModule$p(NotFoundClasses.this), fqName);

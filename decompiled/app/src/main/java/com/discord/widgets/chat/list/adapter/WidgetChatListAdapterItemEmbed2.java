@@ -4,9 +4,9 @@ import android.view.View;
 import com.discord.utilities.uri.UriHandler;
 import p007b.p100d.p104b.p105a.outline;
 
-/* compiled from: WidgetChatListAdapterItemEmbed.kt */
-/* renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemEmbed$Companion$bindUrlOnClick$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemEmbed$Companion$bindUrlOnClick$1, reason: use source file name */
+/* JADX INFO: compiled from: WidgetChatListAdapterItemEmbed.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetChatListAdapterItemEmbed2 implements View.OnClickListener {
     public final /* synthetic */ String $mask;
     public final /* synthetic */ String $url;

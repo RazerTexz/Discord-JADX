@@ -6,8 +6,8 @@ import kotlin.jvm.internal.DefaultConstructorMarker;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: InputCommandContext.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: InputCommandContext.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final /* data */ class InputCommandContext {
     private final boolean isCommand;
     private final Application selectedApplication;
@@ -33,12 +33,12 @@ public final /* data */ class InputCommandContext {
         return inputCommandContext.copy(application, applicationCommand);
     }
 
-    /* renamed from: component1, reason: from getter */
+    /* JADX INFO: renamed from: component1, reason: from getter */
     public final Application getSelectedApplication() {
         return this.selectedApplication;
     }
 
-    /* renamed from: component2, reason: from getter */
+    /* JADX INFO: renamed from: component2, reason: from getter */
     public final ApplicationCommand getSelectedCommand() {
         return this.selectedCommand;
     }
@@ -73,7 +73,7 @@ public final /* data */ class InputCommandContext {
         return iHashCode + (applicationCommand != null ? applicationCommand.hashCode() : 0);
     }
 
-    /* renamed from: isCommand, reason: from getter */
+    /* JADX INFO: renamed from: isCommand, reason: from getter */
     public final boolean getIsCommand() {
         return this.isCommand;
     }

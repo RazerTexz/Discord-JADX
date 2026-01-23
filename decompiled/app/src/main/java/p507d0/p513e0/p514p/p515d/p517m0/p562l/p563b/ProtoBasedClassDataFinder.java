@@ -16,21 +16,21 @@ import p507d0.p580t.Iterables2;
 import p507d0.p580t.MapsJVM;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ProtoBasedClassDataFinder.kt */
-/* renamed from: d0.e0.p.d.m0.l.b.x, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.l.b.x, reason: use source file name */
+/* JADX INFO: compiled from: ProtoBasedClassDataFinder.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class ProtoBasedClassDataFinder implements ClassDataFinder {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final NameResolver f24687a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final BinaryVersion f24688b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final Function1<ClassId, SourceElement> f24689c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final Map<ClassId, C11678c> f24690d;
 
     /* JADX WARN: Multi-variable type inference failed */

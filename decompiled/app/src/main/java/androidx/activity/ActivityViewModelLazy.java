@@ -11,13 +11,13 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 import p507d0.p592z.p594d.Reflection2;
 
-/* compiled from: ActivityViewModelLazy.kt */
-/* renamed from: androidx.activity.ActivityViewModelLazyKt, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: androidx.activity.ActivityViewModelLazyKt, reason: use source file name */
+/* JADX INFO: compiled from: ActivityViewModelLazy.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class ActivityViewModelLazy {
 
-    /* compiled from: ActivityViewModelLazy.kt */
-    /* renamed from: androidx.activity.ActivityViewModelLazyKt$viewModels$1 */
+    /* JADX INFO: renamed from: androidx.activity.ActivityViewModelLazyKt$viewModels$1 */
+    /* JADX INFO: compiled from: ActivityViewModelLazy.kt */
     public static final class C00321 extends Lambda implements Function0<ViewModelStore> {
         public final /* synthetic */ ComponentActivity $this_viewModels;
 

@@ -3,8 +3,8 @@ package com.discord.widgets.guild_role_subscriptions.setup;
 import kotlin.jvm.functions.Function0;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetGuildRoleSubscriptionPlanSetup.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetGuildRoleSubscriptionPlanSetup.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetGuildRoleSubscriptionPlanSetup$setupViewModel$2 extends Lambda implements Function0<GuildRoleSubscriptionPlanSetupViewModel> {
     public final /* synthetic */ WidgetGuildRoleSubscriptionPlanSetup this$0;
 

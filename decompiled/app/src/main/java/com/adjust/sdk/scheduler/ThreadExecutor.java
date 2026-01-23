@@ -1,6 +1,6 @@
 package com.adjust.sdk.scheduler;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public interface ThreadExecutor {
     void submit(Runnable runnable);
 

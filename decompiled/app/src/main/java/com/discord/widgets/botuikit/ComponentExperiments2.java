@@ -7,18 +7,18 @@ import kotlin.NoWhenBranchMatchedException;
 import kotlin.jvm.internal.DefaultConstructorMarker;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ComponentExperiments.kt */
-/* renamed from: com.discord.widgets.botuikit.BotComponentExperiments, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.botuikit.BotComponentExperiments, reason: use source file name */
+/* JADX INFO: compiled from: ComponentExperiments.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class ComponentExperiments2 implements ComponentExperiments {
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private static ComponentExperiments2 botComponentExperiments;
     private final StoreExperiments storeExperiments;
 
-    /* compiled from: ComponentExperiments.kt */
-    /* renamed from: com.discord.widgets.botuikit.BotComponentExperiments$Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: com.discord.widgets.botuikit.BotComponentExperiments$Companion, reason: from kotlin metadata */
+    /* JADX INFO: compiled from: ComponentExperiments.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -47,7 +47,7 @@ public final class ComponentExperiments2 implements ComponentExperiments {
         }
     }
 
-    /* renamed from: com.discord.widgets.botuikit.BotComponentExperiments$WhenMappings */
+    /* JADX INFO: renamed from: com.discord.widgets.botuikit.BotComponentExperiments$WhenMappings */
     public final /* synthetic */ class WhenMappings {
         public static final /* synthetic */ int[] $EnumSwitchMapping$0;
 

@@ -2,7 +2,7 @@ package androidx.sqlite.p006db;
 
 import java.io.Closeable;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public interface SupportSQLiteProgram extends Closeable {
     void bindBlob(int i, byte[] bArr);
 

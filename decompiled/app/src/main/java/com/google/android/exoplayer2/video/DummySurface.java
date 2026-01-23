@@ -21,43 +21,43 @@ import p007b.p085c.p086a.p087a0.AnimatableValueParser;
 import p007b.p225i.p226a.p242c.p259f3.Log2;
 import p007b.p225i.p226a.p242c.p259f3.Util2;
 
+/* JADX INFO: loaded from: classes3.dex */
 @RequiresApi(17)
-/* loaded from: classes3.dex */
 public final class DummySurface extends Surface {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static int f20281j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public static boolean f20282k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final boolean f20283l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public final HandlerThreadC10778b f20284m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public boolean f20285n;
 
-    /* renamed from: com.google.android.exoplayer2.video.DummySurface$b */
+    /* JADX INFO: renamed from: com.google.android.exoplayer2.video.DummySurface$b */
     public static class HandlerThreadC10778b extends HandlerThread implements Handler.Callback {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public EGLSurfaceTexture f20286j;
 
-        /* renamed from: k */
+        /* JADX INFO: renamed from: k */
         public Handler f20287k;
 
-        /* renamed from: l */
+        /* JADX INFO: renamed from: l */
         @Nullable
         public Error f20288l;
 
-        /* renamed from: m */
+        /* JADX INFO: renamed from: m */
         @Nullable
         public RuntimeException f20289m;
 
-        /* renamed from: n */
+        /* JADX INFO: renamed from: n */
         @Nullable
         public DummySurface f20290n;
 
@@ -65,7 +65,7 @@ public final class DummySurface extends Surface {
             super("ExoPlayer:DummySurface");
         }
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final void m8953a(int i) {
             EGLSurface eGLSurfaceEglCreatePbufferSurface;
             Objects.requireNonNull(this.f20286j);
@@ -116,7 +116,7 @@ public final class DummySurface extends Surface {
         }
 
         /* JADX WARN: Multi-variable type inference failed */
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final void m8954b() {
             Objects.requireNonNull(this.f20286j);
             EGLSurfaceTexture eGLSurfaceTexture = this.f20286j;
@@ -168,7 +168,6 @@ public final class DummySurface extends Surface {
                         m8954b();
                     } finally {
                         try {
-                            return true;
                         } finally {
                         }
                     }
@@ -208,7 +207,7 @@ public final class DummySurface extends Surface {
         this.f20283l = z2;
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static int m8950a(Context context) {
         String strEglQueryString;
         String strEglQueryString2;
@@ -223,7 +222,7 @@ public final class DummySurface extends Surface {
         return z2 ? 1 : 2;
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static synchronized boolean m8951b(Context context) {
         if (!f20282k) {
             f20281j = m8950a(context);
@@ -232,7 +231,7 @@ public final class DummySurface extends Surface {
         return f20281j != 0;
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public static DummySurface m8952c(Context context, boolean z2) {
         boolean z3 = false;
         AnimatableValueParser.m426D(!z2 || m8951b(context));

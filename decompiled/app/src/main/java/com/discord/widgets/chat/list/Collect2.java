@@ -7,9 +7,9 @@ import kotlin.coroutines.Continuation;
 import p507d0.p592z.p594d.Intrinsics3;
 import p659s.p660a.p664d2.FlowCollector;
 
-/* compiled from: Collect.kt */
-/* renamed from: com.discord.widgets.chat.list.InlineMediaView$onViewAttachedToWindow$1$invokeSuspend$$inlined$collect$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.chat.list.InlineMediaView$onViewAttachedToWindow$1$invokeSuspend$$inlined$collect$1, reason: use source file name */
+/* JADX INFO: compiled from: Collect.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class Collect2 implements FlowCollector<Boolean> {
     public final /* synthetic */ InlineMediaView.C79331 this$0;
 

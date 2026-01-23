@@ -8,8 +8,8 @@ import p007b.p100d.p104b.p105a.outline;
 import p507d0.LazyJVM;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ForumBrowserItem.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: ForumBrowserItem.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public abstract class ForumBrowserItem implements MGRecyclerDataPayload {
     public static final int TYPE_HEADER = 0;
     public static final int TYPE_LOADING = 2;
@@ -17,11 +17,11 @@ public abstract class ForumBrowserItem implements MGRecyclerDataPayload {
     private final String key;
     private final int type;
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private static final Lazy postItemComparatorByMostRecent$delegate = LazyJVM.lazy(ForumBrowserItem2.INSTANCE);
 
-    /* compiled from: ForumBrowserItem.kt */
+    /* JADX INFO: compiled from: ForumBrowserItem.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -37,7 +37,7 @@ public abstract class ForumBrowserItem implements MGRecyclerDataPayload {
         }
     }
 
-    /* compiled from: ForumBrowserItem.kt */
+    /* JADX INFO: compiled from: ForumBrowserItem.kt */
     public static final /* data */ class HeaderItem extends ForumBrowserItem {
         private final int stringResId;
 
@@ -53,7 +53,7 @@ public abstract class ForumBrowserItem implements MGRecyclerDataPayload {
             return headerItem.copy(i);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final int getStringResId() {
             return this.stringResId;
         }
@@ -82,7 +82,7 @@ public abstract class ForumBrowserItem implements MGRecyclerDataPayload {
         }
     }
 
-    /* compiled from: ForumBrowserItem.kt */
+    /* JADX INFO: compiled from: ForumBrowserItem.kt */
     public static final class LoadingItem extends ForumBrowserItem {
         public static final LoadingItem INSTANCE = new LoadingItem();
 
@@ -91,7 +91,7 @@ public abstract class ForumBrowserItem implements MGRecyclerDataPayload {
         }
     }
 
-    /* compiled from: ForumBrowserItem.kt */
+    /* JADX INFO: compiled from: ForumBrowserItem.kt */
     public static final /* data */ class PostItem extends ForumBrowserItem {
         private final PostData post;
 
@@ -109,7 +109,7 @@ public abstract class ForumBrowserItem implements MGRecyclerDataPayload {
             return postItem.copy(postData);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final PostData getPost() {
             return this.post;
         }

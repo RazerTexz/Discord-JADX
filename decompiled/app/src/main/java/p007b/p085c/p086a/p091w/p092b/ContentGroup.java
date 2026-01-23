@@ -21,43 +21,43 @@ import p007b.p085c.p086a.p095y.p097l.ContentModel2;
 import p007b.p085c.p086a.p095y.p097l.ShapeGroup;
 import p007b.p085c.p086a.p095y.p098m.BaseLayer2;
 
-/* compiled from: ContentGroup.java */
-/* renamed from: b.c.a.w.b.d, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.c.a.w.b.d, reason: use source file name */
+/* JADX INFO: compiled from: ContentGroup.java */
+/* JADX INFO: loaded from: classes.dex */
 public class ContentGroup implements DrawingContent, PathContent, BaseKeyframeAnimation.b, KeyPathElement {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public Paint f2482a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public RectF f2483b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final Matrix f2484c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final Path f2485d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final RectF f2486e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final String f2487f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public final boolean f2488g;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public final List<Content2> f2489h;
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public final LottieDrawable f2490i;
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     @Nullable
     public List<PathContent> f2491j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     @Nullable
     public TransformKeyframeAnimation f2492k;
 
@@ -91,13 +91,13 @@ public class ContentGroup implements DrawingContent, PathContent, BaseKeyframeAn
     }
 
     @Override // p007b.p085c.p086a.p091w.p093c.BaseKeyframeAnimation.b
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public void mo709a() {
         this.f2490i.invalidateSelf();
     }
 
     @Override // p007b.p085c.p086a.p091w.p092b.Content2
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public void mo710b(List<Content2> list, List<Content2> list2) {
         ArrayList arrayList = new ArrayList(this.f2489h.size() + list.size());
         arrayList.addAll(list);
@@ -109,7 +109,7 @@ public class ContentGroup implements DrawingContent, PathContent, BaseKeyframeAn
     }
 
     @Override // p007b.p085c.p086a.p095y.KeyPathElement
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public void mo711c(KeyPath keyPath, int i, List<KeyPath> list, KeyPath keyPath2) {
         if (keyPath.m770e(this.f2487f, i)) {
             if (!"__container".equals(this.f2487f)) {
@@ -131,7 +131,7 @@ public class ContentGroup implements DrawingContent, PathContent, BaseKeyframeAn
     }
 
     @Override // p007b.p085c.p086a.p091w.p092b.DrawingContent
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public void mo712d(RectF rectF, Matrix matrix, boolean z2) {
         this.f2484c.set(matrix);
         TransformKeyframeAnimation transformKeyframeAnimation = this.f2492k;
@@ -148,7 +148,7 @@ public class ContentGroup implements DrawingContent, PathContent, BaseKeyframeAn
         }
     }
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public List<PathContent> m716e() {
         if (this.f2491j == null) {
             this.f2491j = new ArrayList();
@@ -163,7 +163,7 @@ public class ContentGroup implements DrawingContent, PathContent, BaseKeyframeAn
     }
 
     @Override // p007b.p085c.p086a.p091w.p092b.DrawingContent
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public void mo713f(Canvas canvas, Matrix matrix, int i) {
         boolean z2;
         if (this.f2488g) {
@@ -216,7 +216,7 @@ public class ContentGroup implements DrawingContent, PathContent, BaseKeyframeAn
     }
 
     @Override // p007b.p085c.p086a.p095y.KeyPathElement
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public <T> void mo714g(T t, @Nullable LottieValueCallback<T> lottieValueCallback) {
         TransformKeyframeAnimation transformKeyframeAnimation = this.f2492k;
         if (transformKeyframeAnimation != null) {

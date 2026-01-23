@@ -11,36 +11,36 @@ import java.util.concurrent.Semaphore;
 import java.util.concurrent.atomic.AtomicLong;
 import java.util.concurrent.atomic.AtomicReference;
 
-/* compiled from: com.google.android.gms:play-services-measurement-impl@@18.0.0 */
-/* renamed from: b.i.a.f.i.b.r4 */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.i.b.r4 */
+/* JADX INFO: compiled from: com.google.android.gms:play-services-measurement-impl@@18.0.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public final class C4169r4 extends AbstractC4170r5 {
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public static final AtomicLong f11167c = new AtomicLong(Long.MIN_VALUE);
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public C4213v4 f11168d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public C4213v4 f11169e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final PriorityBlockingQueue<C4180s4<?>> f11170f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public final BlockingQueue<C4180s4<?>> f11171g;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public final Thread.UncaughtExceptionHandler f11172h;
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public final Thread.UncaughtExceptionHandler f11173i;
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final Object f11174j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final Semaphore f11175k;
 
     public C4169r4(C4202u4 c4202u4) {
@@ -54,7 +54,7 @@ public final class C4169r4 extends AbstractC4170r5 {
     }
 
     @Override // p007b.p225i.p226a.p288f.p330i.p332b.C4181s5
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final void mo5847a() {
         if (Thread.currentThread() != this.f11169e) {
             throw new IllegalStateException("Call expected from network thread");
@@ -62,7 +62,7 @@ public final class C4169r4 extends AbstractC4170r5 {
     }
 
     @Override // p007b.p225i.p226a.p288f.p330i.p332b.C4181s5
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final void mo5848b() {
         if (Thread.currentThread() != this.f11168d) {
             throw new IllegalStateException("Call expected from worker thread");
@@ -70,12 +70,12 @@ public final class C4169r4 extends AbstractC4170r5 {
     }
 
     @Override // p007b.p225i.p226a.p288f.p330i.p332b.AbstractC4170r5
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     public final boolean mo5574r() {
         return false;
     }
 
-    /* renamed from: s */
+    /* JADX INFO: renamed from: s */
     public final <T> T m5849s(AtomicReference<T> atomicReference, long j, String str, Runnable runnable) {
         synchronized (atomicReference) {
             mo5725f().m5852v(runnable);
@@ -93,7 +93,7 @@ public final class C4169r4 extends AbstractC4170r5 {
         return t;
     }
 
-    /* renamed from: t */
+    /* JADX INFO: renamed from: t */
     public final <V> Future<V> m5850t(Callable<V> callable) throws IllegalStateException {
         m5857o();
         C4180s4<?> c4180s4 = new C4180s4<>(this, (Callable<?>) callable, false, "Task exception on worker thread");
@@ -108,7 +108,7 @@ public final class C4169r4 extends AbstractC4170r5 {
         return c4180s4;
     }
 
-    /* renamed from: u */
+    /* JADX INFO: renamed from: u */
     public final void m5851u(C4180s4<?> c4180s4) {
         synchronized (this.f11174j) {
             this.f11170f.add(c4180s4);
@@ -126,20 +126,20 @@ public final class C4169r4 extends AbstractC4170r5 {
         }
     }
 
-    /* renamed from: v */
+    /* JADX INFO: renamed from: v */
     public final void m5852v(Runnable runnable) throws IllegalStateException {
         m5857o();
         Objects.requireNonNull(runnable, "null reference");
         m5851u(new C4180s4<>(this, runnable, false, "Task exception on worker thread"));
     }
 
-    /* renamed from: w */
+    /* JADX INFO: renamed from: w */
     public final void m5853w(Runnable runnable) throws IllegalStateException {
         m5857o();
         m5851u(new C4180s4<>(this, runnable, true, "Task exception on worker thread"));
     }
 
-    /* renamed from: x */
+    /* JADX INFO: renamed from: x */
     public final void m5854x(Runnable runnable) throws IllegalStateException {
         m5857o();
         C4180s4<?> c4180s4 = new C4180s4<>(this, runnable, false, "Task exception on network thread");
@@ -159,7 +159,7 @@ public final class C4169r4 extends AbstractC4170r5 {
         }
     }
 
-    /* renamed from: y */
+    /* JADX INFO: renamed from: y */
     public final boolean m5855y() {
         return Thread.currentThread() == this.f11168d;
     }

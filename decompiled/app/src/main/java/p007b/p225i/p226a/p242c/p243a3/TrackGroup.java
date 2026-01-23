@@ -8,21 +8,21 @@ import p007b.p225i.p226a.p242c.Bundleable;
 import p007b.p225i.p226a.p242c.Format2;
 import p007b.p225i.p226a.p242c.p259f3.Log2;
 
-/* compiled from: TrackGroup.java */
-/* renamed from: b.i.a.c.a3.n0, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.a3.n0, reason: use source file name */
+/* JADX INFO: compiled from: TrackGroup.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class TrackGroup implements Bundleable {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static final /* synthetic */ int f5660j = 0;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final int f5661k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final Format2[] f5662l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public int f5663m;
 
     public TrackGroup(Format2... format2Arr) {
@@ -54,7 +54,7 @@ public final class TrackGroup implements Bundleable {
         }
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static void m2565a(String str, @Nullable String str2, @Nullable String str3, int i) {
         StringBuilder sbM831S = outline.m831S(outline.m841b(str3, outline.m841b(str2, str.length() + 78)), "Different ", str, " combined in one TrackGroup: '", str2);
         sbM831S.append("' (track 0) and '");

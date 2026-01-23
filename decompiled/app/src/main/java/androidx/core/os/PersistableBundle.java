@@ -5,9 +5,9 @@ import androidx.annotation.RequiresApi;
 import kotlin.Tuples2;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: PersistableBundle.kt */
-/* renamed from: androidx.core.os.PersistableBundleKt, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: androidx.core.os.PersistableBundleKt, reason: use source file name */
+/* JADX INFO: compiled from: PersistableBundle.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class PersistableBundle {
     @RequiresApi(21)
     public static final android.os.PersistableBundle persistableBundleOf(Tuples2<String, ? extends Object>... tuples2Arr) {

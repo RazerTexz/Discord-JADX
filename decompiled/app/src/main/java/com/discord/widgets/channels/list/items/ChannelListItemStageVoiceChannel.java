@@ -5,8 +5,8 @@ import com.discord.api.stageinstance.StageInstance;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ChannelListItemStageVoiceChannel.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: ChannelListItemStageVoiceChannel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final /* data */ class ChannelListItemStageVoiceChannel implements ChannelListItem, ChannelListVocalItem {
     private final Channel channel;
     private final boolean hasSpeakers;
@@ -46,17 +46,17 @@ public final /* data */ class ChannelListItemStageVoiceChannel implements Channe
         return getChannel();
     }
 
-    /* renamed from: component2, reason: from getter */
+    /* JADX INFO: renamed from: component2, reason: from getter */
     public final boolean getSelected() {
         return this.selected;
     }
 
-    /* renamed from: component3, reason: from getter */
+    /* JADX INFO: renamed from: component3, reason: from getter */
     public final Long getPermission() {
         return this.permission;
     }
 
-    /* renamed from: component4, reason: from getter */
+    /* JADX INFO: renamed from: component4, reason: from getter */
     public final boolean getIsLocked() {
         return this.isLocked;
     }
@@ -65,22 +65,22 @@ public final /* data */ class ChannelListItemStageVoiceChannel implements Channe
         return getNumUsersConnected();
     }
 
-    /* renamed from: component6, reason: from getter */
+    /* JADX INFO: renamed from: component6, reason: from getter */
     public final StageInstance getStageInstance() {
         return this.stageInstance;
     }
 
-    /* renamed from: component7, reason: from getter */
+    /* JADX INFO: renamed from: component7, reason: from getter */
     public final boolean getHasSpeakers() {
         return this.hasSpeakers;
     }
 
-    /* renamed from: component8, reason: from getter */
+    /* JADX INFO: renamed from: component8, reason: from getter */
     public final boolean getIsGuildRoleSubscriptionLockedChannel() {
         return this.isGuildRoleSubscriptionLockedChannel;
     }
 
-    /* renamed from: component9, reason: from getter */
+    /* JADX INFO: renamed from: component9, reason: from getter */
     public final boolean getIsGuildRoleSubscriptionChannel() {
         return this.isGuildRoleSubscriptionChannel;
     }
@@ -142,39 +142,54 @@ public final /* data */ class ChannelListItemStageVoiceChannel implements Channe
     }
 
     /* JADX WARN: Multi-variable type inference failed */
+    /* JADX WARN: Type inference failed for: r0v12, types: [int] */
+    /* JADX WARN: Type inference failed for: r0v14, types: [int] */
+    /* JADX WARN: Type inference failed for: r0v16 */
+    /* JADX WARN: Type inference failed for: r0v17 */
+    /* JADX WARN: Type inference failed for: r0v19 */
+    /* JADX WARN: Type inference failed for: r0v20 */
+    /* JADX WARN: Type inference failed for: r2v1, types: [int] */
+    /* JADX WARN: Type inference failed for: r2v17 */
+    /* JADX WARN: Type inference failed for: r2v19 */
+    /* JADX WARN: Type inference failed for: r2v20 */
+    /* JADX WARN: Type inference failed for: r2v21 */
+    /* JADX WARN: Type inference failed for: r2v6, types: [int] */
+    /* JADX WARN: Type inference failed for: r3v0 */
+    /* JADX WARN: Type inference failed for: r3v1, types: [int] */
+    /* JADX WARN: Type inference failed for: r3v2 */
     public int hashCode() {
         Channel channel = getChannel();
         int iHashCode = (channel != null ? channel.hashCode() : 0) * 31;
         boolean z2 = this.selected;
-        int i = z2;
-        if (z2 != 0) {
-            i = 1;
+        ?? r2 = z2;
+        if (z2) {
+            r2 = 1;
         }
-        int i2 = (iHashCode + i) * 31;
+        int i = (iHashCode + r2) * 31;
         Long l = this.permission;
-        int iHashCode2 = (i2 + (l != null ? l.hashCode() : 0)) * 31;
+        int iHashCode2 = (i + (l != null ? l.hashCode() : 0)) * 31;
         boolean z3 = this.isLocked;
-        int i3 = z3;
-        if (z3 != 0) {
-            i3 = 1;
+        ?? r22 = z3;
+        if (z3) {
+            r22 = 1;
         }
-        int numUsersConnected = (getNumUsersConnected() + ((iHashCode2 + i3) * 31)) * 31;
+        int numUsersConnected = (getNumUsersConnected() + ((iHashCode2 + r22) * 31)) * 31;
         StageInstance stageInstance = this.stageInstance;
         int iHashCode3 = (numUsersConnected + (stageInstance != null ? stageInstance.hashCode() : 0)) * 31;
         boolean z4 = this.hasSpeakers;
-        int i4 = z4;
-        if (z4 != 0) {
-            i4 = 1;
+        ?? r0 = z4;
+        if (z4) {
+            r0 = 1;
         }
-        int i5 = (iHashCode3 + i4) * 31;
+        int i2 = (iHashCode3 + r0) * 31;
         boolean z5 = this.isGuildRoleSubscriptionLockedChannel;
-        int i6 = z5;
-        if (z5 != 0) {
-            i6 = 1;
+        ?? r02 = z5;
+        if (z5) {
+            r02 = 1;
         }
-        int i7 = (i5 + i6) * 31;
+        int i3 = (i2 + r02) * 31;
         boolean z6 = this.isGuildRoleSubscriptionChannel;
-        return i7 + (z6 ? 1 : z6 ? 1 : 0);
+        return i3 + (z6 ? 1 : z6);
     }
 
     public final boolean isGuildRoleSubscriptionChannel() {

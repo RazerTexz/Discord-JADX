@@ -7,12 +7,12 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p600f0.p601e0.p609k.p610i.AndroidSocketAdapter2;
 import p600f0.p601e0.p609k.p610i.DeferredSocketAdapter;
 
-/* compiled from: AndroidSocketAdapter.kt */
-/* renamed from: f0.e0.k.i.e, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: f0.e0.k.i.e, reason: use source file name */
+/* JADX INFO: compiled from: AndroidSocketAdapter.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class AndroidSocketAdapter implements DeferredSocketAdapter.a {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final /* synthetic */ String f25792a;
 
     public AndroidSocketAdapter(String str) {
@@ -20,7 +20,7 @@ public final class AndroidSocketAdapter implements DeferredSocketAdapter.a {
     }
 
     @Override // p600f0.p601e0.p609k.p610i.DeferredSocketAdapter.a
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public boolean mo10339a(SSLSocket sSLSocket) {
         Intrinsics3.checkParameterIsNotNull(sSLSocket, "sslSocket");
         String name = sSLSocket.getClass().getName();
@@ -29,7 +29,7 @@ public final class AndroidSocketAdapter implements DeferredSocketAdapter.a {
     }
 
     @Override // p600f0.p601e0.p609k.p610i.DeferredSocketAdapter.a
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public SocketAdapter mo10340b(SSLSocket sSLSocket) {
         Intrinsics3.checkParameterIsNotNull(sSLSocket, "sslSocket");
         AndroidSocketAdapter2.a aVar = AndroidSocketAdapter2.f25794b;

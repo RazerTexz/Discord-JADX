@@ -30,8 +30,8 @@ import p507d0.p580t.Collections2;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: GuildRoleSubscriptionTierAdapter.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: GuildRoleSubscriptionTierAdapter.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class GuildRoleSubscriptionTierAdapter extends RecyclerView.Adapter<GuildRoleSubscriptionTierViewHolder> {
     public static final int VIEW_TYPE_ALL_CHANNELS_ACCESS_BENEFIT = 5;
     public static final int VIEW_TYPE_PLAN_DETAILS = 4;
@@ -42,8 +42,8 @@ public final class GuildRoleSubscriptionTierAdapter extends RecyclerView.Adapter
     private final DiffCreator<List<GuildRoleSubscriptionTierAdapterItem>, GuildRoleSubscriptionTierViewHolder> diffCreator;
     private List<? extends GuildRoleSubscriptionTierAdapterItem> items;
 
-    /* compiled from: GuildRoleSubscriptionTierAdapter.kt */
-    /* renamed from: com.discord.widgets.guild_role_subscriptions.tier.GuildRoleSubscriptionTierAdapter$setItems$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.guild_role_subscriptions.tier.GuildRoleSubscriptionTierAdapter$setItems$1 */
+    /* JADX INFO: compiled from: GuildRoleSubscriptionTierAdapter.kt */
     public static final class C84751 extends Lambda implements Function1<List<? extends GuildRoleSubscriptionTierAdapterItem>, Unit> {
         public C84751() {
             super(1);
@@ -55,7 +55,7 @@ public final class GuildRoleSubscriptionTierAdapter extends RecyclerView.Adapter
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(List<? extends GuildRoleSubscriptionTierAdapterItem> list) {
             Intrinsics3.checkNotNullParameter(list, "items");
             GuildRoleSubscriptionTierAdapter.access$setItems$p(GuildRoleSubscriptionTierAdapter.this, list);
@@ -75,7 +75,7 @@ public final class GuildRoleSubscriptionTierAdapter extends RecyclerView.Adapter
     }
 
     @Override // androidx.recyclerview.widget.RecyclerView.Adapter
-    /* renamed from: getItemCount */
+    /* JADX INFO: renamed from: getItemCount */
     public int getPageSize() {
         return this.items.size();
     }

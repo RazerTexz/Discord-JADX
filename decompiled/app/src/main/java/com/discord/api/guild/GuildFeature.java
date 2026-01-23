@@ -1,8 +1,8 @@
 package com.discord.api.guild;
 
 
-/* compiled from: GuildFeature.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: GuildFeature.kt */
+/* JADX INFO: loaded from: classes.dex */
 public enum GuildFeature {
     VIP_REGIONS,
     INVITE_SPLASH,

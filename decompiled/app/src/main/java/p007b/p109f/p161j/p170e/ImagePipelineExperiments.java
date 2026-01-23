@@ -5,43 +5,43 @@ import java.util.Objects;
 import p007b.p109f.p115d.p119d.Suppliers;
 import p007b.p109f.p161j.p170e.ImagePipelineConfig2;
 
-/* compiled from: ImagePipelineExperiments.java */
-/* renamed from: b.f.j.e.l, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.f.j.e.l, reason: use source file name */
+/* JADX INFO: compiled from: ImagePipelineExperiments.java */
+/* JADX INFO: loaded from: classes.dex */
 public class ImagePipelineExperiments {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final int f3778a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final d f3779b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final boolean f3780c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final Supplier<Boolean> f3781d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public boolean f3782e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final boolean f3783f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public final int f3784g;
 
-    /* compiled from: ImagePipelineExperiments.java */
-    /* renamed from: b.f.j.e.l$b */
+    /* JADX INFO: renamed from: b.f.j.e.l$b */
+    /* JADX INFO: compiled from: ImagePipelineExperiments.java */
     public static class b {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final ImagePipelineConfig2.a f3785a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public boolean f3786b;
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public Supplier<Boolean> f3787c = new Suppliers(Boolean.FALSE);
 
         public b(ImagePipelineConfig2.a aVar) {
@@ -49,13 +49,13 @@ public class ImagePipelineExperiments {
         }
     }
 
-    /* compiled from: ImagePipelineExperiments.java */
-    /* renamed from: b.f.j.e.l$c */
+    /* JADX INFO: renamed from: b.f.j.e.l$c */
+    /* JADX INFO: compiled from: ImagePipelineExperiments.java */
     public static class c implements d {
     }
 
-    /* compiled from: ImagePipelineExperiments.java */
-    /* renamed from: b.f.j.e.l$d */
+    /* JADX INFO: renamed from: b.f.j.e.l$d */
+    /* JADX INFO: compiled from: ImagePipelineExperiments.java */
     public interface d {
     }
 

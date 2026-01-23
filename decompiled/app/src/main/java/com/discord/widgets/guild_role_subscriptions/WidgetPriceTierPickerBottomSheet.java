@@ -1,7 +1,6 @@
 package com.discord.widgets.guild_role_subscriptions;
 
 import android.content.Context;
-import android.content.res.Resources;
 import android.os.Bundle;
 import android.view.View;
 import androidx.core.os.Bundle2;
@@ -36,8 +35,8 @@ import p507d0.p592z.p594d.Reflection2;
 import p658rx.Observable;
 import p658rx.subscriptions.CompositeSubscription;
 
-/* compiled from: WidgetPriceTierPickerBottomSheet.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetPriceTierPickerBottomSheet.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetPriceTierPickerBottomSheet extends AppBottomSheet {
     private static final String ARG_REQUEST_KEY = "INTENT_EXTRA_REQUEST_CODE";
     private static final int PRICE_TIER_PICKER_VIEW_FLIPPER_LOADING_STATE = 0;
@@ -45,18 +44,18 @@ public final class WidgetPriceTierPickerBottomSheet extends AppBottomSheet {
     private static final String RESULT_EXTRA_PRICE_TIER = "RESULT_EXTRA_PRICE_TIER";
     private WidgetPriceTierPickerBottomSheet2 adapter;
 
-    /* renamed from: binding$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
     private final Function1<Integer, Unit> itemClickListener;
 
-    /* renamed from: viewModel$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: viewModel$delegate, reason: from kotlin metadata */
     private final Lazy viewModel;
     public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetPriceTierPickerBottomSheet.class, "binding", "getBinding()Lcom/discord/databinding/WidgetPriceTierPickerBottomSheetBinding;", 0)};
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
 
-    /* compiled from: WidgetPriceTierPickerBottomSheet.kt */
+    /* JADX INFO: compiled from: WidgetPriceTierPickerBottomSheet.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -83,8 +82,8 @@ public final class WidgetPriceTierPickerBottomSheet extends AppBottomSheet {
         }
     }
 
-    /* compiled from: WidgetPriceTierPickerBottomSheet.kt */
-    /* renamed from: com.discord.widgets.guild_role_subscriptions.WidgetPriceTierPickerBottomSheet$bindSubscriptions$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.guild_role_subscriptions.WidgetPriceTierPickerBottomSheet$bindSubscriptions$1 */
+    /* JADX INFO: compiled from: WidgetPriceTierPickerBottomSheet.kt */
     public static final class C84421 extends Lambda implements Function1<PriceTierPickerBottomSheetViewModel.ViewState, Unit> {
         public C84421() {
             super(1);
@@ -96,7 +95,7 @@ public final class WidgetPriceTierPickerBottomSheet extends AppBottomSheet {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(PriceTierPickerBottomSheetViewModel.ViewState viewState) {
             WidgetPriceTierPickerBottomSheet widgetPriceTierPickerBottomSheet = WidgetPriceTierPickerBottomSheet.this;
             Intrinsics3.checkNotNullExpressionValue(viewState, "it");
@@ -169,7 +168,7 @@ public final class WidgetPriceTierPickerBottomSheet extends AppBottomSheet {
     }
 
     @Override // com.discord.app.AppBottomSheet, androidx.fragment.app.Fragment
-    public void onViewCreated(View view, Bundle savedInstanceState) throws Resources.NotFoundException {
+    public void onViewCreated(View view, Bundle savedInstanceState) {
         Intrinsics3.checkNotNullParameter(view, "view");
         super.onViewCreated(view, savedInstanceState);
         this.adapter = new WidgetPriceTierPickerBottomSheet2(this.itemClickListener);

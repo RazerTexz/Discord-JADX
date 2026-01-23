@@ -18,7 +18,7 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class ActionBarDrawerToggle implements DrawerLayout.DrawerListener {
     private final Delegate mActivityImpl;
     private final int mCloseDrawerContentDescRes;
@@ -32,7 +32,7 @@ public class ActionBarDrawerToggle implements DrawerLayout.DrawerListener {
     public View.OnClickListener mToolbarNavigationClickListener;
     private boolean mWarnedForDisplayHomeAsUp;
 
-    /* renamed from: androidx.appcompat.app.ActionBarDrawerToggle$1 */
+    /* JADX INFO: renamed from: androidx.appcompat.app.ActionBarDrawerToggle$1 */
     public class ViewOnClickListenerC00521 implements View.OnClickListener {
         public ViewOnClickListenerC00521() {
         }

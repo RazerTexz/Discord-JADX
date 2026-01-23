@@ -4,16 +4,16 @@ import p637j0.p651n.SerializedObserver;
 import p658rx.Observable;
 import p658rx.Subscriber;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public class SerializedSubject<T, R> extends Subject<T, R> {
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final SerializedObserver<T> f27653k;
 
-    /* renamed from: rx.subjects.SerializedSubject$a */
+    /* JADX INFO: renamed from: rx.subjects.SerializedSubject$a */
     public class C13017a implements Observable.InterfaceC13005a<R> {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public final /* synthetic */ Subject f27654j;
 
         public C13017a(Subject subject) {

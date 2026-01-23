@@ -5,8 +5,8 @@ import kotlin.jvm.functions.Function0;
 import kotlin.jvm.functions.Function1;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetUserMentions.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: WidgetUserMentions.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class WidgetUserMentions$Model$MessageLoader$retry$2 extends Lambda implements Function1<Long, Unit> {
     public final /* synthetic */ Function0 $retryAction;
 
@@ -22,7 +22,7 @@ public final class WidgetUserMentions$Model$MessageLoader$retry$2 extends Lambda
         return Unit.f27425a;
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final void invoke2(Long l) {
         this.$retryAction.invoke();
     }

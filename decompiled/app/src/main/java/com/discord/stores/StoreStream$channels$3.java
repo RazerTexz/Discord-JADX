@@ -3,8 +3,8 @@ package com.discord.stores;
 import kotlin.jvm.functions.Function0;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: StoreStream.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: StoreStream.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class StoreStream$channels$3 extends Lambda implements Function0<Boolean> {
     public final /* synthetic */ StoreStream this$0;
 
@@ -19,7 +19,7 @@ public final class StoreStream$channels$3 extends Lambda implements Function0<Bo
         return Boolean.valueOf(invoke2());
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final boolean invoke2() {
         return this.this$0.getAuthentication().isAuthed();
     }

@@ -6,9 +6,9 @@ import com.discord.models.guild.Guild;
 import com.discord.stores.StoreGuilds;
 import java.util.concurrent.Callable;
 
-/* compiled from: GuildStickerSheetViewModel.kt */
-/* renamed from: com.discord.widgets.stickers.GuildStickerSheetViewModel$Companion$getGuildForGuildSticker$1, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: com.discord.widgets.stickers.GuildStickerSheetViewModel$Companion$getGuildForGuildSticker$1, reason: use source file name */
+/* JADX INFO: compiled from: GuildStickerSheetViewModel.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class GuildStickerSheetViewModel2<V> implements Callable<Guild> {
     public final /* synthetic */ Sticker $sticker;
     public final /* synthetic */ StoreGuilds $storeGuilds;

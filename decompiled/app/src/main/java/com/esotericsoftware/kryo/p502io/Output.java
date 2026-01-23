@@ -6,7 +6,7 @@ import java.io.OutputStream;
 import org.objectweb.asm.Opcodes;
 import p007b.p100d.p104b.p105a.outline;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class Output extends OutputStream {
     public byte[] buffer;
     public int capacity;
@@ -84,7 +84,7 @@ public class Output extends OutputStream {
         }
     }
 
-    private void writeString_slow(CharSequence charSequence, int i, int i2) throws KryoException {
+    private void writeString_slow(CharSequence charSequence, int i, int i2) {
         while (i2 < i) {
             int i3 = this.position;
             int i4 = this.capacity;
@@ -125,7 +125,7 @@ public class Output extends OutputStream {
         }
     }
 
-    private void writeUtf8Length(int i) throws KryoException {
+    private void writeUtf8Length(int i) {
         int i2 = i >>> 6;
         if (i2 == 0) {
             require(1);
@@ -225,7 +225,7 @@ public class Output extends OutputStream {
         try {
             outputStream.write(this.buffer, 0, this.position);
             this.outputStream.flush();
-            this.total += this.position;
+            this.total += (long) this.position;
             this.position = 0;
         } catch (IOException e) {
             throw new KryoException(e);
@@ -305,7 +305,7 @@ public class Output extends OutputStream {
     }
 
     public long total() {
-        return this.total + this.position;
+        return this.total + ((long) this.position);
     }
 
     @Override // java.io.OutputStream

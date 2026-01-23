@@ -36,30 +36,30 @@ import p659s.p660a.p661a.LockFreeLinkedList2;
 import p659s.p660a.p661a.LockFreeLinkedList3;
 import p659s.p660a.p661a.Symbol3;
 
-/* compiled from: JobSupport.kt */
-/* renamed from: s.a.h1 */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: s.a.h1 */
+/* JADX INFO: compiled from: JobSupport.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public class C13116h1 implements Job, Job6, Job5 {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static final AtomicReferenceFieldUpdater f27846j = AtomicReferenceFieldUpdater.newUpdater(C13116h1.class, Object.class, "_state");
     public volatile Object _parentHandle;
     public volatile Object _state;
 
-    /* compiled from: JobSupport.kt */
-    /* renamed from: s.a.h1$a */
+    /* JADX INFO: renamed from: s.a.h1$a */
+    /* JADX INFO: compiled from: JobSupport.kt */
     public static final class a extends AbstractC13113g1<Job> {
 
-        /* renamed from: n */
+        /* JADX INFO: renamed from: n */
         public final C13116h1 f27847n;
 
-        /* renamed from: o */
+        /* JADX INFO: renamed from: o */
         public final b f27848o;
 
-        /* renamed from: p */
+        /* JADX INFO: renamed from: p */
         public final C13141q f27849p;
 
-        /* renamed from: q */
+        /* JADX INFO: renamed from: q */
         public final Object f27850q;
 
         public a(C13116h1 c13116h1, b bVar, C13141q c13141q, Object obj) {
@@ -77,7 +77,7 @@ public class C13116h1 implements Job, Job6, Job5 {
         }
 
         @Override // p659s.p660a.CompletionHandler2
-        /* renamed from: q */
+        /* JADX INFO: renamed from: q */
         public void mo11198q(Throwable th) {
             C13116h1 c13116h1 = this.f27847n;
             b bVar = this.f27848o;
@@ -100,14 +100,14 @@ public class C13116h1 implements Job, Job6, Job5 {
         }
     }
 
-    /* compiled from: JobSupport.kt */
-    /* renamed from: s.a.h1$b */
+    /* JADX INFO: renamed from: s.a.h1$b */
+    /* JADX INFO: compiled from: JobSupport.kt */
     public static final class b implements InterfaceC13169z0 {
         public volatile Object _exceptionsHolder = null;
         public volatile int _isCompleting;
         public volatile Object _rootCause;
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public final C13131m1 f27851j;
 
         public b(C13131m1 c13131m1, boolean z2, Throwable th) {
@@ -117,13 +117,13 @@ public class C13116h1 implements Job, Job6, Job5 {
         }
 
         @Override // p659s.p660a.InterfaceC13169z0
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public boolean mo11281a() {
             return ((Throwable) this._rootCause) == null;
         }
 
         /* JADX WARN: Multi-variable type inference failed */
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final void m11309b(Throwable th) {
             Throwable th2 = (Throwable) this._rootCause;
             if (th2 == null) {
@@ -154,30 +154,29 @@ public class C13116h1 implements Job, Job6, Job5 {
             }
         }
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public final ArrayList<Throwable> m11310c() {
             return new ArrayList<>(4);
         }
 
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         public final boolean m11311d() {
             return ((Throwable) this._rootCause) != null;
         }
 
-        /* renamed from: e */
+        /* JADX INFO: renamed from: e */
         public final boolean m11312e() {
             return this._exceptionsHolder == C13119i1.f27861e;
         }
 
-        /* JADX WARN: Multi-variable type inference failed */
-        /* renamed from: f */
+        /* JADX INFO: renamed from: f */
         public final List<Throwable> m11313f(Throwable th) {
-            ArrayList<Throwable> arrayListM11310c;
+            ArrayList arrayListM11310c;
             Object obj = this._exceptionsHolder;
             if (obj == null) {
                 arrayListM11310c = m11310c();
             } else if (obj instanceof Throwable) {
-                ArrayList<Throwable> arrayListM11310c2 = m11310c();
+                ArrayList arrayListM11310c2 = m11310c();
                 arrayListM11310c2.add(obj);
                 arrayListM11310c = arrayListM11310c2;
             } else {
@@ -220,14 +219,14 @@ public class C13116h1 implements Job, Job6, Job5 {
         }
     }
 
-    /* compiled from: LockFreeLinkedList.kt */
-    /* renamed from: s.a.h1$c */
+    /* JADX INFO: renamed from: s.a.h1$c */
+    /* JADX INFO: compiled from: LockFreeLinkedList.kt */
     public static final class c extends LockFreeLinkedList3.a {
 
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         public final /* synthetic */ C13116h1 f27852d;
 
-        /* renamed from: e */
+        /* JADX INFO: renamed from: e */
         public final /* synthetic */ Object f27853e;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -238,7 +237,7 @@ public class C13116h1 implements Job, Job6, Job5 {
         }
 
         @Override // p659s.p660a.p661a.Atomic2
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public Object mo11144c(LockFreeLinkedList3 lockFreeLinkedList3) {
             if (this.f27852d.m11292M() == this.f27853e) {
                 return null;
@@ -247,9 +246,9 @@ public class C13116h1 implements Job, Job6, Job5 {
         }
     }
 
-    /* compiled from: JobSupport.kt */
+    /* JADX INFO: renamed from: s.a.h1$d */
+    /* JADX INFO: compiled from: JobSupport.kt */
     @DebugMetadata(m10084c = "kotlinx.coroutines.JobSupport$children$1", m10085f = "JobSupport.kt", m10086l = {949, 951}, m10087m = "invokeSuspend")
-    /* renamed from: s.a.h1$d */
     public static final class d extends ContinuationImpl5 implements Function2<SequenceBuilder2<? super Job6>, Continuation<? super Unit>, Object> {
         public Object L$0;
         public Object L$1;
@@ -259,7 +258,7 @@ public class C13116h1 implements Job, Job6, Job5 {
         public Object L$5;
         public int label;
 
-        /* renamed from: p$ */
+        /* JADX INFO: renamed from: p$ */
         private SequenceBuilder2 f27854p$;
 
         public d(Continuation continuation) {
@@ -362,14 +361,14 @@ public class C13116h1 implements Job, Job6, Job5 {
         this._parentHandle = null;
     }
 
-    /* renamed from: b0 */
+    /* JADX INFO: renamed from: b0 */
     public static /* synthetic */ CancellationException m11284b0(C13116h1 c13116h1, Throwable th, String str, int i, Object obj) {
         int i2 = i & 1;
         return c13116h1.m11301a0(th, null);
     }
 
     @Override // p659s.p660a.Job5
-    /* renamed from: A */
+    /* JADX INFO: renamed from: A */
     public CancellationException mo11285A() {
         Throwable th;
         Object objM11292M = m11292M();
@@ -392,20 +391,20 @@ public class C13116h1 implements Job, Job6, Job5 {
         return new Exceptions7(sbM833U.toString(), th, this);
     }
 
-    /* renamed from: B */
+    /* JADX INFO: renamed from: B */
     public String mo11182B() {
         return "Job was cancelled";
     }
 
     @Override // kotlinx.coroutines.Job
-    /* renamed from: D */
+    /* JADX INFO: renamed from: D */
     public final Job4 mo10909D(Job6 job6) {
         Job2 job2M4356w0 = C3404f.m4356w0(this, true, false, new C13141q(this, job6), 2, null);
         Objects.requireNonNull(job2M4356w0, "null cannot be cast to non-null type kotlinx.coroutines.ChildHandle");
         return (Job4) job2M4356w0;
     }
 
-    /* renamed from: E */
+    /* JADX INFO: renamed from: E */
     public boolean mo11286E(Throwable th) {
         if (th instanceof CancellationException) {
             return true;
@@ -413,7 +412,7 @@ public class C13116h1 implements Job, Job6, Job5 {
         return m11306w(th) && mo11279J();
     }
 
-    /* renamed from: F */
+    /* JADX INFO: renamed from: F */
     public final void m11287F(InterfaceC13169z0 interfaceC13169z0, Object obj) throws Throwable {
         Job4 job4 = (Job4) this._parentHandle;
         if (job4 != null) {
@@ -459,7 +458,7 @@ public class C13116h1 implements Job, Job6, Job5 {
         }
     }
 
-    /* renamed from: G */
+    /* JADX INFO: renamed from: G */
     public final Throwable m11288G(Object obj) {
         if (obj != null ? obj instanceof Throwable : true) {
             return obj != null ? (Throwable) obj : new Exceptions7(mo11182B(), null, this);
@@ -468,7 +467,7 @@ public class C13116h1 implements Job, Job6, Job5 {
         return ((Job5) obj).mo11285A();
     }
 
-    /* renamed from: H */
+    /* JADX INFO: renamed from: H */
     public final Object m11289H(b bVar, Object obj) throws Throwable {
         Throwable thM11290I;
         CompletionState2 completionState2 = (CompletionState2) (!(obj instanceof CompletionState2) ? null : obj);
@@ -501,7 +500,7 @@ public class C13116h1 implements Job, Job6, Job5 {
         return obj;
     }
 
-    /* renamed from: I */
+    /* JADX INFO: renamed from: I */
     public final Throwable m11290I(b bVar, List<? extends Throwable> list) {
         Object next;
         Object obj = null;
@@ -548,17 +547,17 @@ public class C13116h1 implements Job, Job6, Job5 {
         return th2;
     }
 
-    /* renamed from: J */
+    /* JADX INFO: renamed from: J */
     public boolean mo11279J() {
         return true;
     }
 
-    /* renamed from: K */
+    /* JADX INFO: renamed from: K */
     public boolean mo11280K() {
         return false;
     }
 
-    /* renamed from: L */
+    /* JADX INFO: renamed from: L */
     public final C13131m1 m11291L(InterfaceC13169z0 interfaceC13169z0) {
         C13131m1 list = interfaceC13169z0.getList();
         if (list != null) {
@@ -574,7 +573,7 @@ public class C13116h1 implements Job, Job6, Job5 {
         throw new IllegalStateException(("State should have list: " + interfaceC13169z0).toString());
     }
 
-    /* renamed from: M */
+    /* JADX INFO: renamed from: M */
     public final Object m11292M() {
         while (true) {
             Object obj = this._state;
@@ -585,17 +584,17 @@ public class C13116h1 implements Job, Job6, Job5 {
         }
     }
 
-    /* renamed from: N */
+    /* JADX INFO: renamed from: N */
     public boolean mo11293N(Throwable th) {
         return false;
     }
 
-    /* renamed from: O */
+    /* JADX INFO: renamed from: O */
     public void mo11183O(Throwable th) throws Throwable {
         throw th;
     }
 
-    /* renamed from: P */
+    /* JADX INFO: renamed from: P */
     public final void m11294P(Job job) {
         if (job == null) {
             this._parentHandle = Job3.f27880j;
@@ -610,12 +609,12 @@ public class C13116h1 implements Job, Job6, Job5 {
         }
     }
 
-    /* renamed from: Q */
+    /* JADX INFO: renamed from: Q */
     public boolean mo11171Q() {
         return this instanceof Builders4;
     }
 
-    /* renamed from: R */
+    /* JADX INFO: renamed from: R */
     public final Object m11295R(Object obj) throws Throwable {
         Object objM11302c0;
         do {
@@ -632,7 +631,7 @@ public class C13116h1 implements Job, Job6, Job5 {
         return objM11302c0;
     }
 
-    /* renamed from: S */
+    /* JADX INFO: renamed from: S */
     public final AbstractC13113g1<?> m11296S(Function1<? super Throwable, Unit> function1, boolean z2) {
         if (z2) {
             AbstractC13094e1 abstractC13094e1 = (AbstractC13094e1) (function1 instanceof AbstractC13094e1 ? function1 : null);
@@ -642,12 +641,12 @@ public class C13116h1 implements Job, Job6, Job5 {
         return abstractC13113g1 != null ? abstractC13113g1 : new C13078d1(this, function1);
     }
 
-    /* renamed from: T */
+    /* JADX INFO: renamed from: T */
     public String mo11184T() {
         return getClass().getSimpleName();
     }
 
-    /* renamed from: U */
+    /* JADX INFO: renamed from: U */
     public final C13141q m11297U(LockFreeLinkedList3 lockFreeLinkedList3) {
         while (lockFreeLinkedList3.mo11150m()) {
             lockFreeLinkedList3 = lockFreeLinkedList3.m11157k();
@@ -665,7 +664,7 @@ public class C13116h1 implements Job, Job6, Job5 {
         }
     }
 
-    /* renamed from: V */
+    /* JADX INFO: renamed from: V */
     public final void m11298V(C13131m1 c13131m1, Throwable th) throws Throwable {
         CompletionHandlerException completionHandlerException = null;
         Object objM11155i = c13131m1.m11155i();
@@ -690,15 +689,15 @@ public class C13116h1 implements Job, Job6, Job5 {
         m11308z(th);
     }
 
-    /* renamed from: W */
+    /* JADX INFO: renamed from: W */
     public void mo11185W(Object obj) {
     }
 
-    /* renamed from: X */
+    /* JADX INFO: renamed from: X */
     public void mo11186X() {
     }
 
-    /* renamed from: Y */
+    /* JADX INFO: renamed from: Y */
     public final void m11299Y(AbstractC13113g1<?> abstractC13113g1) {
         C13131m1 c13131m1 = new C13131m1();
         LockFreeLinkedList3.f27685k.lazySet(c13131m1, abstractC13113g1);
@@ -714,7 +713,7 @@ public class C13116h1 implements Job, Job6, Job5 {
         f27846j.compareAndSet(this, abstractC13113g1, abstractC13113g1.m11156j());
     }
 
-    /* renamed from: Z */
+    /* JADX INFO: renamed from: Z */
     public final String m11300Z(Object obj) {
         if (!(obj instanceof b)) {
             return obj instanceof InterfaceC13169z0 ? ((InterfaceC13169z0) obj).mo11281a() ? "Active" : "New" : obj instanceof CompletionState2 ? "Cancelled" : "Completed";
@@ -724,13 +723,13 @@ public class C13116h1 implements Job, Job6, Job5 {
     }
 
     @Override // kotlinx.coroutines.Job
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public boolean mo10910a() {
         Object objM11292M = m11292M();
         return (objM11292M instanceof InterfaceC13169z0) && ((InterfaceC13169z0) objM11292M).mo11281a();
     }
 
-    /* renamed from: a0 */
+    /* JADX INFO: renamed from: a0 */
     public final CancellationException m11301a0(Throwable th, String str) {
         CancellationException exceptions7 = (CancellationException) (!(th instanceof CancellationException) ? null : th);
         if (exceptions7 == null) {
@@ -743,7 +742,7 @@ public class C13116h1 implements Job, Job6, Job5 {
     }
 
     @Override // kotlinx.coroutines.Job
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public void mo10911b(CancellationException cancellationException) throws Throwable {
         if (cancellationException == null) {
             cancellationException = new Exceptions7(mo11182B(), null, this);
@@ -751,7 +750,7 @@ public class C13116h1 implements Job, Job6, Job5 {
         m11307x(cancellationException);
     }
 
-    /* renamed from: c0 */
+    /* JADX INFO: renamed from: c0 */
     public final Object m11302c0(Object obj, Object obj2) throws Throwable {
         if (!(obj instanceof InterfaceC13169z0)) {
             return C13119i1.f27857a;
@@ -810,7 +809,7 @@ public class C13116h1 implements Job, Job6, Job5 {
         }
     }
 
-    /* renamed from: d0 */
+    /* JADX INFO: renamed from: d0 */
     public final boolean m11303d0(b bVar, C13141q c13141q, Object obj) {
         while (C3404f.m4356w0(c13141q.f27882n, false, false, new a(this, bVar, c13141q, obj), 1, null) == Job3.f27880j) {
             c13141q = m11297U(c13141q);
@@ -822,7 +821,7 @@ public class C13116h1 implements Job, Job6, Job5 {
     }
 
     @Override // kotlinx.coroutines.Job
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final Sequence<Job> mo10912e() {
         return SequenceBuilder3.sequence(new d(null));
     }
@@ -847,12 +846,10 @@ public class C13116h1 implements Job, Job6, Job5 {
         return CoroutineContext.Element.C12790a.minusKey(this, key);
     }
 
-    /* JADX WARN: Multi-variable type inference failed */
     /* JADX WARN: Removed duplicated region for block: B:55:0x008e  */
     /* JADX WARN: Removed duplicated region for block: B:83:0x0088 A[SYNTHETIC] */
-    /* JADX WARN: Type inference failed for: r4v3, types: [s.a.y0] */
     @Override // kotlinx.coroutines.Job
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
@@ -872,10 +869,11 @@ public class C13116h1 implements Job, Job6, Job5 {
                     }
                 } else {
                     C13131m1 c13131m1 = new C13131m1();
+                    Object c13166y0 = c13131m1;
                     if (!c13139p0.f27881j) {
-                        c13131m1 = new C13166y0(c13131m1);
+                        c13166y0 = new C13166y0(c13131m1);
                     }
-                    f27846j.compareAndSet(this, c13139p0, c13131m1);
+                    f27846j.compareAndSet(this, c13139p0, c13166y0);
                 }
             } else {
                 if (!(objM11292M instanceof InterfaceC13169z0)) {
@@ -937,7 +935,7 @@ public class C13116h1 implements Job, Job6, Job5 {
     }
 
     @Override // kotlinx.coroutines.Job
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     public final CancellationException mo10914q() {
         Object objM11292M = m11292M();
         if (objM11292M instanceof b) {
@@ -957,7 +955,7 @@ public class C13116h1 implements Job, Job6, Job5 {
     }
 
     @Override // p659s.p660a.Job6
-    /* renamed from: s */
+    /* JADX INFO: renamed from: s */
     public final void mo11304s(Job5 job5) throws Throwable {
         m11306w(job5);
     }
@@ -968,31 +966,31 @@ public class C13116h1 implements Job, Job6, Job5 {
         Code decompiled incorrectly, please refer to instructions dump.
     */
     public final boolean start() {
-        char c2;
+        byte b2;
         do {
             Object objM11292M = m11292M();
-            c2 = 65535;
+            b2 = -1;
             if (objM11292M instanceof C13139p0) {
                 if (((C13139p0) objM11292M).f27881j) {
-                    c2 = 0;
+                    b2 = 0;
                 } else if (f27846j.compareAndSet(this, objM11292M, C13119i1.f27863g)) {
                     mo11186X();
-                    c2 = 1;
+                    b2 = 1;
                 }
             } else if (objM11292M instanceof C13166y0) {
                 if (f27846j.compareAndSet(this, objM11292M, ((C13166y0) objM11292M).f27921j)) {
                     mo11186X();
-                    c2 = 1;
+                    b2 = 1;
                 }
             }
-            if (c2 == 0) {
+            if (b2 == 0) {
                 return false;
             }
-        } while (c2 != 1);
+        } while (b2 != 1);
         return true;
     }
 
-    /* renamed from: t */
+    /* JADX INFO: renamed from: t */
     public final boolean m11305t(Object obj, C13131m1 c13131m1, AbstractC13113g1<?> abstractC13113g1) {
         int iM11160p;
         c cVar = new c(abstractC13113g1, abstractC13113g1, this, obj);
@@ -1014,17 +1012,17 @@ public class C13116h1 implements Job, Job6, Job5 {
     }
 
     @Override // kotlinx.coroutines.Job
-    /* renamed from: u */
+    /* JADX INFO: renamed from: u */
     public final Job2 mo10915u(Function1<? super Throwable, Unit> function1) {
         return mo10913n(false, true, function1);
     }
 
-    /* renamed from: v */
+    /* JADX INFO: renamed from: v */
     public void mo11173v(Object obj) {
     }
 
     /* JADX WARN: Removed duplicated region for block: B:60:0x00b6  */
-    /* renamed from: w */
+    /* JADX INFO: renamed from: w */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
@@ -1114,12 +1112,12 @@ public class C13116h1 implements Job, Job6, Job5 {
         return true;
     }
 
-    /* renamed from: x */
+    /* JADX INFO: renamed from: x */
     public void m11307x(Throwable th) throws Throwable {
         m11306w(th);
     }
 
-    /* renamed from: z */
+    /* JADX INFO: renamed from: z */
     public final boolean m11308z(Throwable th) {
         if (mo11171Q()) {
             return true;

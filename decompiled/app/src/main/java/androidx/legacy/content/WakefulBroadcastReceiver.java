@@ -8,8 +8,8 @@ import android.os.PowerManager;
 import android.util.Log;
 import android.util.SparseArray;
 
+/* JADX INFO: loaded from: classes.dex */
 @Deprecated
-/* loaded from: classes.dex */
 public abstract class WakefulBroadcastReceiver extends BroadcastReceiver {
     private static final String EXTRA_WAKE_LOCK_ID = "androidx.contentpager.content.wakelockid";
     private static final SparseArray<PowerManager.WakeLock> sActiveWakeLocks = new SparseArray<>();

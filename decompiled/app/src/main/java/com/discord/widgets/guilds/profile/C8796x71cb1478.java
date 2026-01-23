@@ -6,9 +6,9 @@ import kotlin.jvm.functions.Function1;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetGuildProfileSheet.kt */
-/* renamed from: com.discord.widgets.guilds.profile.WidgetGuildProfileSheet$configureTabItems$$inlined$apply$lambda$4 */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.guilds.profile.WidgetGuildProfileSheet$configureTabItems$$inlined$apply$lambda$4 */
+/* JADX INFO: compiled from: WidgetGuildProfileSheet.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class C8796x71cb1478 extends Lambda implements Function1<View, Unit> {
     public final /* synthetic */ boolean $ableToInstantInvite$inlined;
     public final /* synthetic */ long $guildId$inlined;
@@ -30,7 +30,7 @@ public final class C8796x71cb1478 extends Lambda implements Function1<View, Unit
         return Unit.f27425a;
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final void invoke2(View view) {
         Intrinsics3.checkNotNullParameter(view, "view");
         WidgetGuildProfileSheet.access$launchInvite(this.this$0, this.$guildId$inlined);

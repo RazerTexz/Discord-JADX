@@ -10,14 +10,14 @@ import androidx.recyclerview.widget.RecyclerView;
 import kotlin.jvm.internal.DefaultConstructorMarker;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: SwipeableItemTouchHelper.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: SwipeableItemTouchHelper.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public abstract class SwipeableItemTouchHelper extends ItemTouchHelper.SimpleCallback {
     private final ColorDrawable background;
     private final SwipeRevealConfiguration endConfiguration;
     private final SwipeRevealConfiguration startConfiguration;
 
-    /* compiled from: SwipeableItemTouchHelper.kt */
+    /* JADX INFO: compiled from: SwipeableItemTouchHelper.kt */
     public static final class SwipeRevealConfiguration {
         private final int backgroundColor;
         private final Drawable icon;

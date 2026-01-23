@@ -37,19 +37,19 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 import p658rx.Observable;
 
-/* compiled from: WidgetDisableDeleteAccountDialog.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetDisableDeleteAccountDialog.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetDisableDeleteAccountDialog extends AppDialog {
     public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetDisableDeleteAccountDialog.class, "binding", "getBinding()Lcom/discord/databinding/WidgetDisableDeleteAccountDialogBinding;", 0)};
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private static final String EXTRA_MODE = "extra_mode";
 
-    /* renamed from: binding$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
 
-    /* compiled from: WidgetDisableDeleteAccountDialog.kt */
+    /* JADX INFO: compiled from: WidgetDisableDeleteAccountDialog.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -73,7 +73,7 @@ public final class WidgetDisableDeleteAccountDialog extends AppDialog {
         }
     }
 
-    /* compiled from: WidgetDisableDeleteAccountDialog.kt */
+    /* JADX INFO: compiled from: WidgetDisableDeleteAccountDialog.kt */
     public enum Mode {
         DISABLE(C5419R.string.disable_account, C5419R.string.disable_account_body, C5419R.string.disable),
         DELETE(C5419R.string.delete_account, C5419R.string.delete_account_body, C5419R.string.delete);
@@ -113,8 +113,8 @@ public final class WidgetDisableDeleteAccountDialog extends AppDialog {
         }
     }
 
-    /* compiled from: WidgetDisableDeleteAccountDialog.kt */
-    /* renamed from: com.discord.widgets.settings.account.WidgetDisableDeleteAccountDialog$onDisableClicked$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.account.WidgetDisableDeleteAccountDialog$onDisableClicked$1 */
+    /* JADX INFO: compiled from: WidgetDisableDeleteAccountDialog.kt */
     public static final class C97061 extends Lambda implements Function1<Error, Unit> {
         public C97061() {
             super(1);
@@ -126,7 +126,7 @@ public final class WidgetDisableDeleteAccountDialog extends AppDialog {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Error error) {
             Intrinsics3.checkNotNullParameter(error, "it");
             WidgetDisableDeleteAccountDialog.access$getBinding$p(WidgetDisableDeleteAccountDialog.this).f16471e.setIsLoading(false);
@@ -156,8 +156,8 @@ public final class WidgetDisableDeleteAccountDialog extends AppDialog {
         }
     }
 
-    /* compiled from: WidgetDisableDeleteAccountDialog.kt */
-    /* renamed from: com.discord.widgets.settings.account.WidgetDisableDeleteAccountDialog$onDisableClicked$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.account.WidgetDisableDeleteAccountDialog$onDisableClicked$2 */
+    /* JADX INFO: compiled from: WidgetDisableDeleteAccountDialog.kt */
     public static final class C97072 extends Lambda implements Function1<Void, Unit> {
         public static final C97072 INSTANCE = new C97072();
 
@@ -171,14 +171,14 @@ public final class WidgetDisableDeleteAccountDialog extends AppDialog {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Void r1) {
             StoreStream.INSTANCE.getAuthentication().logout();
         }
     }
 
-    /* compiled from: WidgetDisableDeleteAccountDialog.kt */
-    /* renamed from: com.discord.widgets.settings.account.WidgetDisableDeleteAccountDialog$onResume$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.account.WidgetDisableDeleteAccountDialog$onResume$1 */
+    /* JADX INFO: compiled from: WidgetDisableDeleteAccountDialog.kt */
     public static final /* synthetic */ class C97081 extends FunctionReferenceImpl implements Function1<MeUser, Unit> {
         public C97081(WidgetDisableDeleteAccountDialog widgetDisableDeleteAccountDialog) {
             super(1, widgetDisableDeleteAccountDialog, WidgetDisableDeleteAccountDialog.class, "configureUI", "configureUI(Lcom/discord/models/user/MeUser;)V", 0);
@@ -190,15 +190,15 @@ public final class WidgetDisableDeleteAccountDialog extends AppDialog {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(MeUser meUser) {
             Intrinsics3.checkNotNullParameter(meUser, "p1");
             WidgetDisableDeleteAccountDialog.access$configureUI((WidgetDisableDeleteAccountDialog) this.receiver, meUser);
         }
     }
 
-    /* compiled from: WidgetDisableDeleteAccountDialog.kt */
-    /* renamed from: com.discord.widgets.settings.account.WidgetDisableDeleteAccountDialog$onViewBound$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.account.WidgetDisableDeleteAccountDialog$onViewBound$1 */
+    /* JADX INFO: compiled from: WidgetDisableDeleteAccountDialog.kt */
     public static final class ViewOnClickListenerC97091 implements View.OnClickListener {
         public ViewOnClickListenerC97091() {
         }
@@ -209,8 +209,8 @@ public final class WidgetDisableDeleteAccountDialog extends AppDialog {
         }
     }
 
-    /* compiled from: WidgetDisableDeleteAccountDialog.kt */
-    /* renamed from: com.discord.widgets.settings.account.WidgetDisableDeleteAccountDialog$onViewBound$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.account.WidgetDisableDeleteAccountDialog$onViewBound$2 */
+    /* JADX INFO: compiled from: WidgetDisableDeleteAccountDialog.kt */
     public static final class C97102 extends Lambda implements Function1<Editable, Unit> {
         public C97102() {
             super(1);
@@ -222,7 +222,7 @@ public final class WidgetDisableDeleteAccountDialog extends AppDialog {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Editable editable) {
             Intrinsics3.checkNotNullParameter(editable, "it");
             TextInputLayout textInputLayout = WidgetDisableDeleteAccountDialog.access$getBinding$p(WidgetDisableDeleteAccountDialog.this).f16470d;
@@ -231,8 +231,8 @@ public final class WidgetDisableDeleteAccountDialog extends AppDialog {
         }
     }
 
-    /* compiled from: WidgetDisableDeleteAccountDialog.kt */
-    /* renamed from: com.discord.widgets.settings.account.WidgetDisableDeleteAccountDialog$onViewBound$3 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.account.WidgetDisableDeleteAccountDialog$onViewBound$3 */
+    /* JADX INFO: compiled from: WidgetDisableDeleteAccountDialog.kt */
     public static final class C97113 extends Lambda implements Function1<Editable, Unit> {
         public C97113() {
             super(1);
@@ -244,7 +244,7 @@ public final class WidgetDisableDeleteAccountDialog extends AppDialog {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Editable editable) {
             Intrinsics3.checkNotNullParameter(editable, "it");
             TextInputLayout textInputLayout = WidgetDisableDeleteAccountDialog.access$getBinding$p(WidgetDisableDeleteAccountDialog.this).f16473g;
@@ -253,8 +253,8 @@ public final class WidgetDisableDeleteAccountDialog extends AppDialog {
         }
     }
 
-    /* compiled from: WidgetDisableDeleteAccountDialog.kt */
-    /* renamed from: com.discord.widgets.settings.account.WidgetDisableDeleteAccountDialog$onViewBound$4 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.account.WidgetDisableDeleteAccountDialog$onViewBound$4 */
+    /* JADX INFO: compiled from: WidgetDisableDeleteAccountDialog.kt */
     public static final class ViewOnClickListenerC97124 implements View.OnClickListener {
         public final /* synthetic */ Mode $mode;
 

@@ -5,8 +5,8 @@ import java.util.List;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: RecommendedStageInstance.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: RecommendedStageInstance.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class RecommendedStageInstance {
     private final RecommendedStageInstanceGuild guild;
     private final StageInstance instance;
@@ -16,22 +16,22 @@ public final /* data */ class RecommendedStageInstance {
     private final int source;
     private final List<Long> speakers;
 
-    /* renamed from: a, reason: from getter */
+    /* JADX INFO: renamed from: a, reason: from getter */
     public final StageInstance getInstance() {
         return this.instance;
     }
 
-    /* renamed from: b, reason: from getter */
+    /* JADX INFO: renamed from: b, reason: from getter */
     public final int getParticipantCount() {
         return this.participantCount;
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final List<GuildMember> m8219c() {
         return this.sampleSpeakerMembers;
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final List<Long> m8220d() {
         return this.speakers;
     }

@@ -7,28 +7,28 @@ import p007b.p100d.p104b.p105a.outline;
 import p658rx.Producer;
 import p658rx.Subscriber;
 
-/* compiled from: DeferredScalarSubscriber.java */
-/* renamed from: j0.l.a.a, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: j0.l.a.a, reason: use source file name */
+/* JADX INFO: compiled from: DeferredScalarSubscriber.java */
+/* JADX INFO: loaded from: classes3.dex */
 public abstract class DeferredScalarSubscriber<T, R> extends Subscriber<T> {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final Subscriber<? super R> f26719j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public boolean f26720k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public R f26721l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public final AtomicInteger f26722m = new AtomicInteger();
 
-    /* compiled from: DeferredScalarSubscriber.java */
-    /* renamed from: j0.l.a.a$a */
+    /* JADX INFO: renamed from: j0.l.a.a$a */
+    /* JADX INFO: compiled from: DeferredScalarSubscriber.java */
     public static final class a implements Producer {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public final DeferredScalarSubscriber<?, ?> f26723j;
 
         public a(DeferredScalarSubscriber<?, ?> deferredScalarSubscriber) {
@@ -36,7 +36,7 @@ public abstract class DeferredScalarSubscriber<T, R> extends Subscriber<T> {
         }
 
         @Override // p658rx.Producer
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public void mo10704j(long j) {
             DeferredScalarSubscriber<?, ?> deferredScalarSubscriber = this.f26723j;
             Objects.requireNonNull(deferredScalarSubscriber);

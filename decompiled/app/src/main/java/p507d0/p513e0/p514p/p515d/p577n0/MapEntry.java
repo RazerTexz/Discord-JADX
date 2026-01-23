@@ -2,9 +2,9 @@ package p507d0.p513e0.p514p.p515d.p577n0;
 
 import java.io.Serializable;
 
-/* compiled from: MapEntry.java */
-/* renamed from: d0.e0.p.d.n0.e, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.n0.e, reason: use source file name */
+/* JADX INFO: compiled from: MapEntry.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class MapEntry<K, V> implements Serializable {
     public final K key;
     public final V value;

@@ -6,33 +6,33 @@ import p007b.p225i.p226a.p242c.p259f3.Clock4;
 import p007b.p225i.p226a.p242c.p259f3.MediaClock;
 import p007b.p225i.p226a.p242c.p259f3.StandaloneMediaClock;
 
-/* compiled from: DefaultMediaClock.java */
-/* renamed from: b.i.a.c.a1, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.a1, reason: use source file name */
+/* JADX INFO: compiled from: DefaultMediaClock.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class DefaultMediaClock implements MediaClock {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final StandaloneMediaClock f5467j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final a f5468k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     @Nullable
     public Renderer2 f5469l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     @Nullable
     public MediaClock f5470m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public boolean f5471n = true;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public boolean f5472o;
 
-    /* compiled from: DefaultMediaClock.java */
-    /* renamed from: b.i.a.c.a1$a */
+    /* JADX INFO: renamed from: b.i.a.c.a1$a */
+    /* JADX INFO: compiled from: DefaultMediaClock.java */
     public interface a {
     }
 
@@ -42,14 +42,14 @@ public final class DefaultMediaClock implements MediaClock {
     }
 
     @Override // p007b.p225i.p226a.p242c.p259f3.MediaClock
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public PlaybackParameters mo2416c() {
         MediaClock mediaClock = this.f5470m;
         return mediaClock != null ? mediaClock.mo2416c() : this.f5467j.f6804n;
     }
 
     @Override // p007b.p225i.p226a.p242c.p259f3.MediaClock
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public long mo2417e() {
         if (this.f5471n) {
             return this.f5467j.mo2417e();
@@ -60,7 +60,7 @@ public final class DefaultMediaClock implements MediaClock {
     }
 
     @Override // p007b.p225i.p226a.p242c.p259f3.MediaClock
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public void mo2418i(PlaybackParameters playbackParameters) {
         MediaClock mediaClock = this.f5470m;
         if (mediaClock != null) {

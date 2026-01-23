@@ -2,18 +2,18 @@ package p007b.p225i.p226a.p242c.p267x2.p274i0;
 
 import java.util.UUID;
 
-/* compiled from: PsshAtomUtil.java */
-/* renamed from: b.i.a.c.x2.i0.j, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.x2.i0.j, reason: use source file name */
+/* JADX INFO: compiled from: PsshAtomUtil.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class PsshAtomUtil {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final UUID f8449a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final int f8450b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final byte[] f8451c;
 
     public PsshAtomUtil(UUID uuid, int i, byte[] bArr) {

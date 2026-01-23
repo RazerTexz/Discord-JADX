@@ -11,16 +11,16 @@ import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 import p658rx.Observable;
 
-/* compiled from: ModelRichPresence.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: ModelRichPresence.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class ModelRichPresence {
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private final Presence presence;
     private final Application primaryApplication;
 
-    /* compiled from: ModelRichPresence.kt */
+    /* JADX INFO: compiled from: ModelRichPresence.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -64,12 +64,12 @@ public final /* data */ class ModelRichPresence {
         return INSTANCE.get(j, storeUserPresence);
     }
 
-    /* renamed from: component1, reason: from getter */
+    /* JADX INFO: renamed from: component1, reason: from getter */
     public final Presence getPresence() {
         return this.presence;
     }
 
-    /* renamed from: component2, reason: from getter */
+    /* JADX INFO: renamed from: component2, reason: from getter */
     public final Application getPrimaryApplication() {
         return this.primaryApplication;
     }

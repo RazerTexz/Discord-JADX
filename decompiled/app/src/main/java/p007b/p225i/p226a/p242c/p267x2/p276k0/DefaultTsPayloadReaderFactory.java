@@ -13,15 +13,15 @@ import p007b.p225i.p355b.p357b.AbstractIndexedListIterator;
 import p007b.p225i.p355b.p357b.ImmutableList2;
 import p007b.p225i.p355b.p357b.RegularImmutableList;
 
-/* compiled from: DefaultTsPayloadReaderFactory.java */
-/* renamed from: b.i.a.c.x2.k0.l, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.x2.k0.l, reason: use source file name */
+/* JADX INFO: compiled from: DefaultTsPayloadReaderFactory.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class DefaultTsPayloadReaderFactory implements TsPayloadReader.c {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final int f8721a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final List<Format2> f8722b;
 
     public DefaultTsPayloadReaderFactory(int i) {
@@ -33,7 +33,7 @@ public final class DefaultTsPayloadReaderFactory implements TsPayloadReader.c {
 
     @Override // p007b.p225i.p226a.p242c.p267x2.p276k0.TsPayloadReader.c
     @Nullable
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public TsPayloadReader mo3764a(int i, TsPayloadReader.b bVar) {
         if (i != 2) {
             if (i == 3 || i == 4) {
@@ -99,14 +99,14 @@ public final class DefaultTsPayloadReaderFactory implements TsPayloadReader.c {
         return new PesReader(new H262Reader(new UserDataReader(m3776c(bVar))));
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public SparseArray<TsPayloadReader> m3775b() {
         return new SparseArray<>();
     }
 
     /* JADX WARN: Multi-variable type inference failed */
     /* JADX WARN: Type inference failed for: r1v2 */
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final List<Format2> m3776c(TsPayloadReader.b bVar) {
         String str;
         int i;
@@ -169,7 +169,7 @@ public final class DefaultTsPayloadReaderFactory implements TsPayloadReader.c {
         return arrayList;
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final boolean m3777d(int i) {
         return (i & this.f8721a) != 0;
     }

@@ -4,8 +4,8 @@ import com.discord.models.domain.ModelAuditLogEntry;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ModelBillingAddress.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: ModelBillingAddress.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class ModelBillingAddress {
     private final String city;
     private final String country;
@@ -62,37 +62,37 @@ public final /* data */ class ModelBillingAddress {
         return modelBillingAddress.copy(str, str8, str9, str10, str11, str12, str7);
     }
 
-    /* renamed from: component1, reason: from getter */
+    /* JADX INFO: renamed from: component1, reason: from getter */
     public final String getName() {
         return this.name;
     }
 
-    /* renamed from: component2, reason: from getter */
+    /* JADX INFO: renamed from: component2, reason: from getter */
     public final String getLine_1() {
         return this.line_1;
     }
 
-    /* renamed from: component3, reason: from getter */
+    /* JADX INFO: renamed from: component3, reason: from getter */
     public final String getLine_2() {
         return this.line_2;
     }
 
-    /* renamed from: component4, reason: from getter */
+    /* JADX INFO: renamed from: component4, reason: from getter */
     public final String getCity() {
         return this.city;
     }
 
-    /* renamed from: component5, reason: from getter */
+    /* JADX INFO: renamed from: component5, reason: from getter */
     public final String getState() {
         return this.state;
     }
 
-    /* renamed from: component6, reason: from getter */
+    /* JADX INFO: renamed from: component6, reason: from getter */
     public final String getCountry() {
         return this.country;
     }
 
-    /* renamed from: component7, reason: from getter */
+    /* JADX INFO: renamed from: component7, reason: from getter */
     public final String getPostalCode() {
         return this.postalCode;
     }

@@ -15,7 +15,7 @@ import androidx.core.graphics.drawable.DrawableCompat;
 import androidx.core.view.ViewCompat;
 import androidx.core.widget.CompoundButtonCompat;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class AppCompatCompoundButtonHelper {
     private ColorStateList mButtonTintList = null;
     private PorterDuff.Mode mButtonTintMode = null;
@@ -80,6 +80,7 @@ public class AppCompatCompoundButtonHelper {
                     compoundButton2.setButtonDrawable(AppCompatResources.getDrawable(compoundButton2.getContext(), resourceId2));
                     z2 = true;
                 } catch (Resources.NotFoundException unused) {
+                    z2 = false;
                 }
             }
             if (!z2) {

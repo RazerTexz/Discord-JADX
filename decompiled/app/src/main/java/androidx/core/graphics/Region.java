@@ -10,13 +10,13 @@ import kotlin.jvm.functions.Function1;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.p595g0.KMarkers;
 
-/* compiled from: Region.kt */
-/* renamed from: androidx.core.graphics.RegionKt, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: androidx.core.graphics.RegionKt, reason: use source file name */
+/* JADX INFO: compiled from: Region.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class Region {
 
-    /* compiled from: Region.kt */
-    /* renamed from: androidx.core.graphics.RegionKt$iterator$1 */
+    /* JADX INFO: renamed from: androidx.core.graphics.RegionKt$iterator$1 */
+    /* JADX INFO: compiled from: Region.kt */
     public static final class C02261 implements Iterator<Rect>, KMarkers {
         public final /* synthetic */ android.graphics.Region $this_iterator;
         private boolean hasMore;
@@ -107,7 +107,7 @@ public final class Region {
         return region2;
     }
 
-    /* renamed from: or */
+    /* JADX INFO: renamed from: or */
     public static final android.graphics.Region m87or(android.graphics.Region region, Rect rect) {
         Intrinsics3.checkNotNullParameter(region, "<this>");
         Intrinsics3.checkNotNullParameter(rect, "r");
@@ -155,7 +155,7 @@ public final class Region {
         return region3;
     }
 
-    /* renamed from: or */
+    /* JADX INFO: renamed from: or */
     public static final android.graphics.Region m88or(android.graphics.Region region, android.graphics.Region region2) {
         Intrinsics3.checkNotNullParameter(region, "<this>");
         Intrinsics3.checkNotNullParameter(region2, "r");

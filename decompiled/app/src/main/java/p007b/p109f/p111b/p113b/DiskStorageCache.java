@@ -31,65 +31,65 @@ import p007b.p109f.p115d.p124i.StatFsHelper;
 import p007b.p109f.p115d.p126k.Clock2;
 import p007b.p109f.p115d.p126k.SystemClock;
 
-/* compiled from: DiskStorageCache.java */
-/* renamed from: b.f.b.b.d, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.f.b.b.d, reason: use source file name */
+/* JADX INFO: compiled from: DiskStorageCache.java */
+/* JADX INFO: loaded from: classes.dex */
 public class DiskStorageCache implements FileCache {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final long f3041a = TimeUnit.HOURS.toMillis(2);
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static final long f3042b = TimeUnit.MINUTES.toMillis(30);
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final long f3043c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final long f3044d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final CountDownLatch f3045e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public long f3046f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public final CacheEventListener f3047g;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     @VisibleForTesting
     public final Set<String> f3048h;
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public long f3049i;
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final StatFsHelper f3050j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final DiskStorage f3051k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final EntryEvictionComparatorSupplier f3052l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public final CacheErrorLogger f3053m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public final boolean f3054n;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public final b f3055o;
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public final Clock2 f3056p;
 
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     public final Object f3057q = new Object();
 
-    /* compiled from: DiskStorageCache.java */
-    /* renamed from: b.f.b.b.d$a */
+    /* JADX INFO: renamed from: b.f.b.b.d$a */
+    /* JADX INFO: compiled from: DiskStorageCache.java */
     public class a implements Runnable {
         public a() {
         }
@@ -104,26 +104,26 @@ public class DiskStorageCache implements FileCache {
         }
     }
 
-    /* compiled from: DiskStorageCache.java */
+    /* JADX INFO: renamed from: b.f.b.b.d$b */
+    /* JADX INFO: compiled from: DiskStorageCache.java */
     @VisibleForTesting
-    /* renamed from: b.f.b.b.d$b */
     public static class b {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public boolean f3059a = false;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public long f3060b = -1;
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public long f3061c = -1;
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public synchronized long m957a() {
             return this.f3060b;
         }
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public synchronized void m958b(long j, long j2) {
             if (this.f3059a) {
                 this.f3060b += j;
@@ -132,17 +132,17 @@ public class DiskStorageCache implements FileCache {
         }
     }
 
-    /* compiled from: DiskStorageCache.java */
-    /* renamed from: b.f.b.b.d$c */
+    /* JADX INFO: renamed from: b.f.b.b.d$c */
+    /* JADX INFO: compiled from: DiskStorageCache.java */
     public static class c {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final long f3062a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final long f3063b;
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public final long f3064c;
 
         public c(long j, long j2, long j3) {
@@ -183,7 +183,7 @@ public class DiskStorageCache implements FileCache {
         }
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final void m949a(long j, int i) throws IOException {
         try {
             Collection<DiskStorage.a> collectionM951c = m951c(this.f3051k.mo936e());
@@ -215,7 +215,7 @@ public class DiskStorageCache implements FileCache {
         }
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public FileBinaryResource m950b(CacheKey cacheKey) {
         FileBinaryResource fileBinaryResourceMo935d;
         SettableCacheEvent settableCacheEventM961a = SettableCacheEvent.m961a();
@@ -252,7 +252,7 @@ public class DiskStorageCache implements FileCache {
         }
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final Collection<DiskStorage.a> m951c(Collection<DiskStorage.a> collection) {
         Objects.requireNonNull((SystemClock) this.f3056p);
         long jCurrentTimeMillis = System.currentTimeMillis() + f3041a;
@@ -270,7 +270,7 @@ public class DiskStorageCache implements FileCache {
         return arrayList;
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public FileBinaryResource m952d(CacheKey cacheKey, WriterCallback writerCallback) throws IOException {
         String strM485W1;
         FileBinaryResource fileBinaryResourceM947b;
@@ -325,7 +325,7 @@ public class DiskStorageCache implements FileCache {
         }
     }
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final boolean m953e() {
         boolean z2;
         long j;
@@ -399,7 +399,7 @@ public class DiskStorageCache implements FileCache {
         }
     }
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public void m954f(CacheKey cacheKey) {
         synchronized (this.f3057q) {
             try {
@@ -423,7 +423,7 @@ public class DiskStorageCache implements FileCache {
         }
     }
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public final DiskStorage.b m955g(String str, CacheKey cacheKey) throws IOException {
         synchronized (this.f3057q) {
             boolean zM953e = m953e();
@@ -446,7 +446,7 @@ public class DiskStorageCache implements FileCache {
         return this.f3051k.mo933b(str, cacheKey);
     }
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public final void m956h() {
         boolean z2 = true;
         char c2 = this.f3051k.isExternal() ? (char) 2 : (char) 1;

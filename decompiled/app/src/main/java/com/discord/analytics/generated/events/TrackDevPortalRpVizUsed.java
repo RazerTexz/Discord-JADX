@@ -6,8 +6,8 @@ import com.discord.api.science.AnalyticsSchema;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: TrackDevPortalRpVizUsed.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: TrackDevPortalRpVizUsed.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class TrackDevPortalRpVizUsed implements AnalyticsSchema, TrackBase2 {
     private TrackBase trackBase;
     private final Long applicationId = null;
@@ -21,7 +21,7 @@ public final /* data */ class TrackDevPortalRpVizUsed implements AnalyticsSchema
     private final transient String analyticsSchemaTypeName = "dev_portal_rp_viz_used";
 
     @Override // com.discord.api.science.AnalyticsSchema
-    /* renamed from: d, reason: from getter */
+    /* JADX INFO: renamed from: d, reason: from getter */
     public String getAnalyticsSchemaTypeName() {
         return this.analyticsSchemaTypeName;
     }

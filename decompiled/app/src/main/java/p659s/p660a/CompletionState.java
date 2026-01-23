@@ -4,12 +4,12 @@ import java.util.concurrent.CancellationException;
 import java.util.concurrent.atomic.AtomicIntegerFieldUpdater;
 import kotlin.coroutines.Continuation;
 
-/* compiled from: CompletionState.kt */
-/* renamed from: s.a.n, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: s.a.n, reason: use source file name */
+/* JADX INFO: compiled from: CompletionState.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class CompletionState extends CompletionState2 {
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public static final AtomicIntegerFieldUpdater f27875c = AtomicIntegerFieldUpdater.newUpdater(CompletionState.class, "_resumed");
     public volatile int _resumed;
 

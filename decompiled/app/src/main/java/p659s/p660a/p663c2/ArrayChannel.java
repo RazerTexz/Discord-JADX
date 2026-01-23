@@ -11,24 +11,24 @@ import p507d0.p580t._ArraysJvm;
 import p507d0.p592z.p594d.Intrinsics3;
 import p659s.p660a.p661a.Symbol3;
 
-/* compiled from: ArrayChannel.kt */
-/* renamed from: s.a.c2.d, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: s.a.c2.d, reason: use source file name */
+/* JADX INFO: compiled from: ArrayChannel.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public class ArrayChannel<E> extends AbstractChannel<E> {
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public final ReentrantLock f27750m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public Object[] f27751n;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public int f27752o;
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public final int f27753p;
 
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     public final BufferOverflow f27754q;
     public volatile int size;
 
@@ -47,7 +47,7 @@ public class ArrayChannel<E> extends AbstractChannel<E> {
     }
 
     @Override // p659s.p660a.p663c2.AbstractChannel3
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public Object mo11214c(AbstractChannel7 abstractChannel7) {
         ReentrantLock reentrantLock = this.f27750m;
         reentrantLock.lock();
@@ -59,7 +59,7 @@ public class ArrayChannel<E> extends AbstractChannel<E> {
     }
 
     @Override // p659s.p660a.p663c2.AbstractChannel3
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public String mo11215d() {
         StringBuilder sbM833U = outline.m833U("(buffer:capacity=");
         sbM833U.append(this.f27753p);
@@ -68,13 +68,13 @@ public class ArrayChannel<E> extends AbstractChannel<E> {
     }
 
     @Override // p659s.p660a.p663c2.AbstractChannel3
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public final boolean mo11219h() {
         return false;
     }
 
     @Override // p659s.p660a.p663c2.AbstractChannel3
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public final boolean mo11220i() {
         return this.size == this.f27753p && this.f27754q == BufferOverflow.SUSPEND;
     }
@@ -82,7 +82,7 @@ public class ArrayChannel<E> extends AbstractChannel<E> {
     /* JADX WARN: Removed duplicated region for block: B:21:0x0038 A[DONT_GENERATE] */
     /* JADX WARN: Removed duplicated region for block: B:23:0x003c  */
     @Override // p659s.p660a.p663c2.AbstractChannel3
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
@@ -142,7 +142,7 @@ public class ArrayChannel<E> extends AbstractChannel<E> {
     }
 
     @Override // p659s.p660a.p663c2.AbstractChannel
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     public boolean mo11202r(AbstractChannel5<? super E> abstractChannel5) {
         ReentrantLock reentrantLock = this.f27750m;
         reentrantLock.lock();
@@ -154,19 +154,19 @@ public class ArrayChannel<E> extends AbstractChannel<E> {
     }
 
     @Override // p659s.p660a.p663c2.AbstractChannel
-    /* renamed from: s */
+    /* JADX INFO: renamed from: s */
     public final boolean mo11203s() {
         return false;
     }
 
     @Override // p659s.p660a.p663c2.AbstractChannel
-    /* renamed from: t */
+    /* JADX INFO: renamed from: t */
     public final boolean mo11204t() {
         return this.size == 0;
     }
 
     @Override // p659s.p660a.p663c2.AbstractChannel
-    /* renamed from: u */
+    /* JADX INFO: renamed from: u */
     public void mo11205u(boolean z2) {
         Function1<E, Unit> function1 = this.f27747l;
         ReentrantLock reentrantLock = this.f27750m;
@@ -197,7 +197,7 @@ public class ArrayChannel<E> extends AbstractChannel<E> {
     }
 
     @Override // p659s.p660a.p663c2.AbstractChannel
-    /* renamed from: v */
+    /* JADX INFO: renamed from: v */
     public Object mo11206v() {
         ReentrantLock reentrantLock = this.f27750m;
         reentrantLock.lock();
@@ -255,7 +255,7 @@ public class ArrayChannel<E> extends AbstractChannel<E> {
         }
     }
 
-    /* renamed from: w */
+    /* JADX INFO: renamed from: w */
     public final void m11231w(int i, E e) {
         int i2 = this.f27753p;
         if (i >= i2) {

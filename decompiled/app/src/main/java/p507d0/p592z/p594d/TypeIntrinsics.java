@@ -33,9 +33,9 @@ import p507d0.p592z.p594d.p595g0.KMarkers3;
 import p507d0.p592z.p594d.p595g0.KMarkers4;
 import p507d0.p592z.p594d.p595g0.KMarkers5;
 
-/* compiled from: TypeIntrinsics.java */
-/* renamed from: d0.z.d.e0, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.z.d.e0, reason: use source file name */
+/* JADX INFO: compiled from: TypeIntrinsics.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class TypeIntrinsics {
     public static Collection asMutableCollection(Object obj) {
         if ((obj instanceof KMarkers) && !(obj instanceof KMarkers2)) {

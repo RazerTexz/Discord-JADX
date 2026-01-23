@@ -42,25 +42,25 @@ import p507d0.p592z.p594d.FunctionReferenceImpl;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Reflection2;
 
-/* compiled from: WidgetStickerPackStoreSheet.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetStickerPackStoreSheet.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetStickerPackStoreSheet extends AppBottomSheet {
     private static final String ANALYTICS_LOCATION = "widget_sticker_pack_Store_sheet_analytics_location";
     private static final String ANALYTICS_LOCATION_SECTION = "widget_sticker_pack_Store_sheet_analytics_location_section";
     private static final String VIEW_TYPE = "widget_sticker_pack_store_sheet_view_type";
     private WidgetStickerAdapter adapter;
 
-    /* renamed from: binding$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
 
-    /* renamed from: viewModel$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: viewModel$delegate, reason: from kotlin metadata */
     private final Lazy viewModel;
     public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetStickerPackStoreSheet.class, "binding", "getBinding()Lcom/discord/databinding/WidgetStickerPackStoreSheetBinding;", 0)};
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
 
-    /* compiled from: WidgetStickerPackStoreSheet.kt */
+    /* JADX INFO: compiled from: WidgetStickerPackStoreSheet.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -91,8 +91,8 @@ public final class WidgetStickerPackStoreSheet extends AppBottomSheet {
         }
     }
 
-    /* compiled from: WidgetStickerPackStoreSheet.kt */
-    /* renamed from: com.discord.widgets.chat.input.sticker.WidgetStickerPackStoreSheet$configureUI$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.input.sticker.WidgetStickerPackStoreSheet$configureUI$1 */
+    /* JADX INFO: compiled from: WidgetStickerPackStoreSheet.kt */
     public static final class ViewOnClickListenerC79021 implements View.OnClickListener {
         public final /* synthetic */ StickerPackStoreSheetViewModel.ViewState $viewState;
 
@@ -112,8 +112,8 @@ public final class WidgetStickerPackStoreSheet extends AppBottomSheet {
         }
     }
 
-    /* compiled from: WidgetStickerPackStoreSheet.kt */
-    /* renamed from: com.discord.widgets.chat.input.sticker.WidgetStickerPackStoreSheet$onResume$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.input.sticker.WidgetStickerPackStoreSheet$onResume$1 */
+    /* JADX INFO: compiled from: WidgetStickerPackStoreSheet.kt */
     public static final /* synthetic */ class C79031 extends FunctionReferenceImpl implements Function1<StickerPackStoreSheetViewModel.ViewState, Unit> {
         public C79031(WidgetStickerPackStoreSheet widgetStickerPackStoreSheet) {
             super(1, widgetStickerPackStoreSheet, WidgetStickerPackStoreSheet.class, "configureUI", "configureUI(Lcom/discord/widgets/chat/input/sticker/StickerPackStoreSheetViewModel$ViewState;)V", 0);
@@ -125,14 +125,14 @@ public final class WidgetStickerPackStoreSheet extends AppBottomSheet {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(StickerPackStoreSheetViewModel.ViewState viewState) {
             WidgetStickerPackStoreSheet.access$configureUI((WidgetStickerPackStoreSheet) this.receiver, viewState);
         }
     }
 
-    /* compiled from: WidgetStickerPackStoreSheet.kt */
-    /* renamed from: com.discord.widgets.chat.input.sticker.WidgetStickerPackStoreSheet$onViewCreated$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.input.sticker.WidgetStickerPackStoreSheet$onViewCreated$1 */
+    /* JADX INFO: compiled from: WidgetStickerPackStoreSheet.kt */
     public static final /* synthetic */ class C79041 extends FunctionReferenceImpl implements Function1<StickerAdapterItems3, Unit> {
         public C79041(WidgetStickerPackStoreSheet widgetStickerPackStoreSheet) {
             super(1, widgetStickerPackStoreSheet, WidgetStickerPackStoreSheet.class, "onStickerItemSelected", "onStickerItemSelected(Lcom/discord/widgets/chat/input/sticker/StickerItem;)V", 0);
@@ -144,15 +144,15 @@ public final class WidgetStickerPackStoreSheet extends AppBottomSheet {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(StickerAdapterItems3 stickerAdapterItems3) {
             Intrinsics3.checkNotNullParameter(stickerAdapterItems3, "p1");
             WidgetStickerPackStoreSheet.access$onStickerItemSelected((WidgetStickerPackStoreSheet) this.receiver, stickerAdapterItems3);
         }
     }
 
-    /* compiled from: WidgetStickerPackStoreSheet.kt */
-    /* renamed from: com.discord.widgets.chat.input.sticker.WidgetStickerPackStoreSheet$onViewCreated$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.input.sticker.WidgetStickerPackStoreSheet$onViewCreated$2 */
+    /* JADX INFO: compiled from: WidgetStickerPackStoreSheet.kt */
     public static final /* synthetic */ class C79052 extends FunctionReferenceImpl implements Function1<StickerAdapterItems4, Unit> {
         public C79052(WidgetStickerPackStoreSheet widgetStickerPackStoreSheet) {
             super(1, widgetStickerPackStoreSheet, WidgetStickerPackStoreSheet.class, "onStickerHeaderItemsClicked", "onStickerHeaderItemsClicked(Lcom/discord/widgets/chat/input/sticker/StoreHeaderItem;)V", 0);
@@ -164,7 +164,7 @@ public final class WidgetStickerPackStoreSheet extends AppBottomSheet {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(StickerAdapterItems4 stickerAdapterItems4) {
             Intrinsics3.checkNotNullParameter(stickerAdapterItems4, "p1");
             WidgetStickerPackStoreSheet.access$onStickerHeaderItemsClicked((WidgetStickerPackStoreSheet) this.receiver, stickerAdapterItems4);

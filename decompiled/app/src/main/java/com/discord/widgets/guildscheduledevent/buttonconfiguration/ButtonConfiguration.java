@@ -3,8 +3,8 @@ package com.discord.widgets.guildscheduledevent.buttonconfiguration;
 import android.content.Context;
 import android.view.View;
 
-/* compiled from: ButtonConfiguration.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: ButtonConfiguration.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public interface ButtonConfiguration {
     View.OnClickListener getExtrasButtonOnClickListener();
 

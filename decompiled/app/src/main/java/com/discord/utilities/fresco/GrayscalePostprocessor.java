@@ -10,8 +10,8 @@ import p007b.p109f.p111b.p112a.SimpleCacheKey;
 import p007b.p109f.p161j.p182q.BasePostprocessor;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: GrayscalePostprocessor.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: GrayscalePostprocessor.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class GrayscalePostprocessor extends BasePostprocessor {
     @Override // p007b.p109f.p161j.p182q.BasePostprocessor, p007b.p109f.p161j.p182q.Postprocessor
     public String getName() {
@@ -26,7 +26,7 @@ public final class GrayscalePostprocessor extends BasePostprocessor {
     }
 
     @Override // p007b.p109f.p161j.p182q.BasePostprocessor
-    public void process(Bitmap destBitmap, Bitmap sourceBitmap) throws IllegalArgumentException {
+    public void process(Bitmap destBitmap, Bitmap sourceBitmap) {
         super.process(destBitmap, sourceBitmap);
         if (destBitmap == null || sourceBitmap == null) {
             return;

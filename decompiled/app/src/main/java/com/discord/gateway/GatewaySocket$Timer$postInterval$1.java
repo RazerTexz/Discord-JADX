@@ -4,8 +4,8 @@ import androidx.core.app.NotificationCompat;
 import kotlin.jvm.functions.Function0;
 import p658rx.functions.Action1;
 
-/* compiled from: GatewaySocket.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: GatewaySocket.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class GatewaySocket$Timer$postInterval$1<T> implements Action1<Long> {
     public final /* synthetic */ Function0 $callback;
 
@@ -18,7 +18,7 @@ public final class GatewaySocket$Timer$postInterval$1<T> implements Action1<Long
         call2(l);
     }
 
-    /* renamed from: call, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
     public final void call2(Long l) {
         this.$callback.invoke();
     }

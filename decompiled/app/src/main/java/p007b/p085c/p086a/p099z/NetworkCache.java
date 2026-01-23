@@ -8,19 +8,19 @@ import java.io.InputStream;
 import java.util.Objects;
 import p007b.p100d.p104b.p105a.outline;
 
-/* compiled from: NetworkCache.java */
-/* renamed from: b.c.a.z.b, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.c.a.z.b, reason: use source file name */
+/* JADX INFO: compiled from: NetworkCache.java */
+/* JADX INFO: loaded from: classes.dex */
 public class NetworkCache {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final Context f2927a;
 
     public NetworkCache(Context context) {
         this.f2927a = context.getApplicationContext();
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static String m793a(String str, FileExtension fileExtension, boolean z2) {
         String str2;
         StringBuilder sbM833U = outline.m833U("lottie_cache_");
@@ -35,7 +35,7 @@ public class NetworkCache {
         return sbM833U.toString();
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final File m794b() {
         File file = new File(this.f2927a.getCacheDir(), "lottie_network_cache");
         if (file.isFile()) {
@@ -47,7 +47,7 @@ public class NetworkCache {
         return file;
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public File m795c(String str, InputStream inputStream, FileExtension fileExtension) throws IOException {
         File file = new File(m794b(), m793a(str, fileExtension, true));
         try {

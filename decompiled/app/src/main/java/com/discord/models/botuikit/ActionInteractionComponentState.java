@@ -5,11 +5,11 @@ import org.webrtc.PeerConnectionFactory;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ActionInteractionComponentState.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: ActionInteractionComponentState.kt */
+/* JADX INFO: loaded from: classes.dex */
 public abstract class ActionInteractionComponentState {
 
-    /* compiled from: ActionInteractionComponentState.kt */
+    /* JADX INFO: compiled from: ActionInteractionComponentState.kt */
     public static final class Disabled extends ActionInteractionComponentState {
         public static final Disabled INSTANCE = new Disabled();
 
@@ -18,7 +18,7 @@ public abstract class ActionInteractionComponentState {
         }
     }
 
-    /* compiled from: ActionInteractionComponentState.kt */
+    /* JADX INFO: compiled from: ActionInteractionComponentState.kt */
     public static final class Enabled extends ActionInteractionComponentState {
         public static final Enabled INSTANCE = new Enabled();
 
@@ -27,7 +27,7 @@ public abstract class ActionInteractionComponentState {
         }
     }
 
-    /* compiled from: ActionInteractionComponentState.kt */
+    /* JADX INFO: compiled from: ActionInteractionComponentState.kt */
     public static final /* data */ class Failed extends ActionInteractionComponentState {
         private final String errorMessage;
 
@@ -43,7 +43,7 @@ public abstract class ActionInteractionComponentState {
             return failed.copy(str);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final String getErrorMessage() {
             return this.errorMessage;
         }
@@ -76,7 +76,7 @@ public abstract class ActionInteractionComponentState {
         }
     }
 
-    /* compiled from: ActionInteractionComponentState.kt */
+    /* JADX INFO: compiled from: ActionInteractionComponentState.kt */
     public static final class Loading extends ActionInteractionComponentState {
         public static final Loading INSTANCE = new Loading();
 

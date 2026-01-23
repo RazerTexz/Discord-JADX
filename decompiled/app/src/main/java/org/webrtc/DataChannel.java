@@ -2,7 +2,7 @@ package org.webrtc;
 
 import java.nio.ByteBuffer;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public class DataChannel {
     private long nativeDataChannel;
     private long nativeObserver;
@@ -25,7 +25,7 @@ public class DataChannel {
         public int maxRetransmits = -1;
         public String protocol = "";
 
-        /* renamed from: id */
+        /* JADX INFO: renamed from: id */
         public int f27611id = -1;
 
         @CalledByNative("Init")
@@ -130,7 +130,7 @@ public class DataChannel {
         return this.nativeDataChannel;
     }
 
-    /* renamed from: id */
+    /* JADX INFO: renamed from: id */
     public int m11016id() {
         checkDataChannelExists();
         return nativeId();

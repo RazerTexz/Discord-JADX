@@ -4,9 +4,9 @@ import com.discord.models.domain.billing.ModelBillingAddress;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ModelPaymentSource.kt */
-/* renamed from: com.discord.models.domain.PatchPaymentSourceRaw, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: com.discord.models.domain.PatchPaymentSourceRaw, reason: use source file name */
+/* JADX INFO: compiled from: ModelPaymentSource.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class ModelPaymentSource2 {
     private final ModelBillingAddress billingAddress;
     private final boolean default;
@@ -27,12 +27,12 @@ public final /* data */ class ModelPaymentSource2 {
         return modelPaymentSource2.copy(modelBillingAddress, z2);
     }
 
-    /* renamed from: component1, reason: from getter */
+    /* JADX INFO: renamed from: component1, reason: from getter */
     public final ModelBillingAddress getBillingAddress() {
         return this.billingAddress;
     }
 
-    /* renamed from: component2, reason: from getter */
+    /* JADX INFO: renamed from: component2, reason: from getter */
     public final boolean getDefault() {
         return this.default;
     }
@@ -62,15 +62,18 @@ public final /* data */ class ModelPaymentSource2 {
     }
 
     /* JADX WARN: Multi-variable type inference failed */
+    /* JADX WARN: Type inference failed for: r1v1, types: [int] */
+    /* JADX WARN: Type inference failed for: r1v2 */
+    /* JADX WARN: Type inference failed for: r1v3 */
     public int hashCode() {
         ModelBillingAddress modelBillingAddress = this.billingAddress;
         int iHashCode = (modelBillingAddress != null ? modelBillingAddress.hashCode() : 0) * 31;
         boolean z2 = this.default;
-        int i = z2;
-        if (z2 != 0) {
-            i = 1;
+        ?? r1 = z2;
+        if (z2) {
+            r1 = 1;
         }
-        return iHashCode + i;
+        return iHashCode + r1;
     }
 
     public String toString() {

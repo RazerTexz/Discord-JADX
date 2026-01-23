@@ -5,9 +5,9 @@ import kotlin.Unit;
 import kotlin.jvm.functions.Function1;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: OnDelayedEmissionHandler.kt */
-/* renamed from: com.discord.utilities.rx.OnDelayedEmissionHandler$call$wrappedSubscriber$1$tryFinish$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.utilities.rx.OnDelayedEmissionHandler$call$wrappedSubscriber$1$tryFinish$1, reason: use source file name */
+/* JADX INFO: compiled from: OnDelayedEmissionHandler.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class OnDelayedEmissionHandler3 extends Lambda implements Function1<Object, Unit> {
     public final /* synthetic */ OnDelayedEmissionHandler2 this$0;
 
@@ -23,7 +23,7 @@ public final class OnDelayedEmissionHandler3 extends Lambda implements Function1
         return Unit.f27425a;
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final void invoke2(Object obj) {
         if (OnDelayedEmissionHandler.access$getHasFinished$p(this.this$0.this$0).getAndSet(true)) {
             return;

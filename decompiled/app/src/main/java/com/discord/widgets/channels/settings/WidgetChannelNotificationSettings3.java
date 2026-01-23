@@ -16,9 +16,9 @@ import com.discord.widgets.channels.settings.WidgetChannelNotificationSettings;
 import p507d0.p592z.p594d.Intrinsics3;
 import p658rx.functions.Func6;
 
-/* compiled from: WidgetChannelNotificationSettings.kt */
-/* renamed from: com.discord.widgets.channels.settings.WidgetChannelNotificationSettings$Model$Companion$get$1$$special$$inlined$let$lambda$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.channels.settings.WidgetChannelNotificationSettings$Model$Companion$get$1$$special$$inlined$let$lambda$1, reason: use source file name */
+/* JADX INFO: compiled from: WidgetChannelNotificationSettings.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetChannelNotificationSettings3<T1, T2, T3, T4, T5, T6, R> implements Func6<StoreThreadsJoined.JoinedThread, Channel, Guild, ModelNotificationSettings, StoreGuildProfiles.GuildProfileData, Boolean, WidgetChannelNotificationSettings.Model> {
     public final /* synthetic */ Channel $channel$inlined;
 
@@ -31,7 +31,7 @@ public final class WidgetChannelNotificationSettings3<T1, T2, T3, T4, T5, T6, R>
         return call2(joinedThread, channel, guild, modelNotificationSettings, guildProfileData, bool);
     }
 
-    /* renamed from: call, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
     public final WidgetChannelNotificationSettings.Model call2(StoreThreadsJoined.JoinedThread joinedThread, Channel channel, Guild guild, ModelNotificationSettings modelNotificationSettings, StoreGuildProfiles.GuildProfileData guildProfileData, Boolean bool) {
         int iComputeNotificationSetting;
         String muteEndTime;

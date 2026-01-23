@@ -2,9 +2,9 @@ package p007b.p195g.p196a.p205c;
 
 import p007b.p195g.p196a.p205c.p221z.ConfigFeature;
 
-/* compiled from: SerializationFeature.java */
-/* renamed from: b.g.a.c.w, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.g.a.c.w, reason: use source file name */
+/* JADX INFO: compiled from: SerializationFeature.java */
+/* JADX INFO: loaded from: classes3.dex */
 public enum SerializationFeature implements ConfigFeature {
     WRAP_ROOT_VALUE(false),
     INDENT_OUTPUT(false),
@@ -40,18 +40,18 @@ public enum SerializationFeature implements ConfigFeature {
     }
 
     @Override // p007b.p195g.p196a.p205c.p221z.ConfigFeature
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public boolean mo2090f() {
         return this._defaultState;
     }
 
     @Override // p007b.p195g.p196a.p205c.p221z.ConfigFeature
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public int mo2091g() {
         return this._mask;
     }
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public boolean m2238h(int i) {
         return (i & this._mask) != 0;
     }

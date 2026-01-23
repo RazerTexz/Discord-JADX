@@ -5,14 +5,14 @@ import androidx.annotation.RestrictTo;
 import java.util.List;
 import p007b.p085c.p086a.p090c0.LottieValueCallback;
 
-/* compiled from: KeyPathElement.java */
+/* JADX INFO: renamed from: b.c.a.y.g, reason: use source file name */
+/* JADX INFO: compiled from: KeyPathElement.java */
+/* JADX INFO: loaded from: classes.dex */
 @RestrictTo({RestrictTo.Scope.LIBRARY})
-/* renamed from: b.c.a.y.g, reason: use source file name */
-/* loaded from: classes.dex */
 public interface KeyPathElement {
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     void mo711c(KeyPath keyPath, int i, List<KeyPath> list, KeyPath keyPath2);
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     <T> void mo714g(T t, @Nullable LottieValueCallback<T> lottieValueCallback);
 }

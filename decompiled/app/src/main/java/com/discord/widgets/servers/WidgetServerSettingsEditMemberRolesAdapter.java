@@ -20,12 +20,12 @@ import kotlin.jvm.functions.Function1;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: WidgetServerSettingsEditMemberRolesAdapter.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetServerSettingsEditMemberRolesAdapter.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetServerSettingsEditMemberRolesAdapter extends MGRecyclerAdapterSimple<RoleItem> {
     private Function1<? super Long, Unit> roleClickListener;
 
-    /* compiled from: WidgetServerSettingsEditMemberRolesAdapter.kt */
+    /* JADX INFO: compiled from: WidgetServerSettingsEditMemberRolesAdapter.kt */
     public static final class RoleListItem extends MGRecyclerViewHolder<WidgetServerSettingsEditMemberRolesAdapter, RoleItem> {
         private final ViewCheckableRoleListItemBinding binding;
 
@@ -50,7 +50,7 @@ public final class WidgetServerSettingsEditMemberRolesAdapter extends MGRecycler
             onConfigure2(i, roleItem);
         }
 
-        /* renamed from: onConfigure, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: onConfigure, reason: avoid collision after fix types in other method */
         public void onConfigure2(int position, RoleItem data) {
             Intrinsics3.checkNotNullParameter(data, "data");
             super.onConfigure(position, data);
@@ -110,7 +110,7 @@ public final class WidgetServerSettingsEditMemberRolesAdapter extends MGRecycler
         throw invalidViewTypeException(viewType);
     }
 
-    /* compiled from: WidgetServerSettingsEditMemberRolesAdapter.kt */
+    /* JADX INFO: compiled from: WidgetServerSettingsEditMemberRolesAdapter.kt */
     public static final /* data */ class RoleItem implements MGRecyclerDataPayload {
         public static final int TYPE_ROLE = 1;
         private final boolean isManageable;
@@ -141,17 +141,17 @@ public final class WidgetServerSettingsEditMemberRolesAdapter extends MGRecycler
             return roleItem.copy(guildRole, z2, z3);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final GuildRole getRole() {
             return this.role;
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final boolean getIsUserHasRole() {
             return this.isUserHasRole;
         }
 
-        /* renamed from: component3, reason: from getter */
+        /* JADX INFO: renamed from: component3, reason: from getter */
         public final boolean getIsManageable() {
             return this.isManageable;
         }
@@ -187,17 +187,23 @@ public final class WidgetServerSettingsEditMemberRolesAdapter extends MGRecycler
         }
 
         /* JADX WARN: Multi-variable type inference failed */
+        /* JADX WARN: Type inference failed for: r1v1, types: [int] */
+        /* JADX WARN: Type inference failed for: r1v3 */
+        /* JADX WARN: Type inference failed for: r1v4 */
+        /* JADX WARN: Type inference failed for: r2v0 */
+        /* JADX WARN: Type inference failed for: r2v1, types: [int] */
+        /* JADX WARN: Type inference failed for: r2v2 */
         public int hashCode() {
             GuildRole guildRole = this.role;
             int iHashCode = (guildRole != null ? guildRole.hashCode() : 0) * 31;
             boolean z2 = this.isUserHasRole;
-            int i = z2;
-            if (z2 != 0) {
-                i = 1;
+            ?? r1 = z2;
+            if (z2) {
+                r1 = 1;
             }
-            int i2 = (iHashCode + i) * 31;
+            int i = (iHashCode + r1) * 31;
             boolean z3 = this.isManageable;
-            return i2 + (z3 ? 1 : z3 ? 1 : 0);
+            return i + (z3 ? 1 : z3);
         }
 
         public final boolean isManageable() {

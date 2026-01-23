@@ -8,18 +8,18 @@ import java.util.regex.Pattern;
 import p007b.p085c.p086a.p087a0.AnimatableValueParser;
 import p007b.p225i.p226a.p242c.p259f3.Util2;
 
-/* compiled from: SimpleCacheSpan.java */
-/* renamed from: b.i.a.c.e3.b0.s, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.e3.b0.s, reason: use source file name */
+/* JADX INFO: compiled from: SimpleCacheSpan.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class SimpleCacheSpan extends CacheSpan {
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public static final Pattern f6517p = Pattern.compile("^(.+)\\.(\\d+)\\.(\\d+)\\.v1\\.exo$", 32);
 
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     public static final Pattern f6518q = Pattern.compile("^(.+)\\.(\\d+)\\.(\\d+)\\.v2\\.exo$", 32);
 
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     public static final Pattern f6519r = Pattern.compile("^(\\d+)\\.(\\d+)\\.(\\d+)\\.v3\\.exo$", 32);
 
     public SimpleCacheSpan(String str, long j, long j2, long j3, @Nullable File file) {
@@ -33,11 +33,11 @@ public final class SimpleCacheSpan extends CacheSpan {
     /* JADX WARN: Removed duplicated region for block: B:35:0x00d6 A[RETURN] */
     /* JADX WARN: Removed duplicated region for block: B:36:0x00d7  */
     @Nullable
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
-    public static SimpleCacheSpan m2842g(File file, long j, long j2, CachedContentIndex cachedContentIndex) throws NumberFormatException {
+    public static SimpleCacheSpan m2842g(File file, long j, long j2, CachedContentIndex cachedContentIndex) {
         File file2;
         long j3;
         String strGroup;
@@ -137,7 +137,7 @@ public final class SimpleCacheSpan extends CacheSpan {
         return new SimpleCacheSpan(str, j5, length2, j3, file2);
     }
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public static File m2843h(File file, int i, long j, long j2) {
         StringBuilder sb = new StringBuilder(60);
         sb.append(i);

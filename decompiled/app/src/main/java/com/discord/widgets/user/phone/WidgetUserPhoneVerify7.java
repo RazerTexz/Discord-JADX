@@ -3,9 +3,9 @@ package com.discord.widgets.user.phone;
 import android.view.View;
 import androidx.fragment.app.FragmentActivity;
 
-/* compiled from: WidgetUserPhoneVerify.kt */
-/* renamed from: com.discord.widgets.user.phone.WidgetUserPhoneVerify$onViewBound$$inlined$with$lambda$1, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: com.discord.widgets.user.phone.WidgetUserPhoneVerify$onViewBound$$inlined$with$lambda$1, reason: use source file name */
+/* JADX INFO: compiled from: WidgetUserPhoneVerify.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class WidgetUserPhoneVerify7 implements View.OnClickListener {
     public final /* synthetic */ WidgetUserPhoneVerify this$0;
 

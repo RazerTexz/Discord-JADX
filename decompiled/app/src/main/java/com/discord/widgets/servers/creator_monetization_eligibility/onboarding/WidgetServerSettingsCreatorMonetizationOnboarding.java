@@ -60,40 +60,40 @@ import p507d0.p592z.p594d.Lambda;
 import p507d0.p592z.p594d.Reflection2;
 import p658rx.Observable;
 
-/* compiled from: WidgetServerSettingsCreatorMonetizationOnboarding.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetServerSettingsCreatorMonetizationOnboarding.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetServerSettingsCreatorMonetizationOnboarding extends AppFragment {
     public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetServerSettingsCreatorMonetizationOnboarding.class, "binding", "getBinding()Lcom/discord/databinding/WidgetServerSettingsCreatorMonetizationOnboardingBinding;", 0)};
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private static final int VIEW_FLIPPER_ACCEPT_TERMS_STATE = 3;
     private static final int VIEW_FLIPPER_CREATE_REQUEST_STATE = 2;
     private static final int VIEW_FLIPPER_ERROR_STATE = 1;
     private static final int VIEW_FLIPPER_LOADING_STATE = 0;
 
-    /* renamed from: acceptTermsBinding$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: acceptTermsBinding$delegate, reason: from kotlin metadata */
     private final Lazy acceptTermsBinding;
 
-    /* renamed from: acceptTermsOnlyGuildOwnerNotice$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: acceptTermsOnlyGuildOwnerNotice$delegate, reason: from kotlin metadata */
     private final Lazy acceptTermsOnlyGuildOwnerNotice;
 
-    /* renamed from: binding$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
 
-    /* renamed from: createRequestBinding$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: createRequestBinding$delegate, reason: from kotlin metadata */
     private final Lazy createRequestBinding;
 
-    /* renamed from: createRequestOnlyGuildOwnerNotice$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: createRequestOnlyGuildOwnerNotice$delegate, reason: from kotlin metadata */
     private final Lazy createRequestOnlyGuildOwnerNotice;
 
-    /* renamed from: guildId$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: guildId$delegate, reason: from kotlin metadata */
     private final Lazy guildId;
 
-    /* renamed from: viewModel$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: viewModel$delegate, reason: from kotlin metadata */
     private final Lazy viewModel;
 
-    /* compiled from: WidgetServerSettingsCreatorMonetizationOnboarding.kt */
+    /* JADX INFO: compiled from: WidgetServerSettingsCreatorMonetizationOnboarding.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -125,8 +125,8 @@ public final class WidgetServerSettingsCreatorMonetizationOnboarding extends App
         }
     }
 
-    /* compiled from: WidgetServerSettingsCreatorMonetizationOnboarding.kt */
-    /* renamed from: com.discord.widgets.servers.creator_monetization_eligibility.onboarding.WidgetServerSettingsCreatorMonetizationOnboarding$configureCreateRequestState$4 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.creator_monetization_eligibility.onboarding.WidgetServerSettingsCreatorMonetizationOnboarding$configureCreateRequestState$4 */
+    /* JADX INFO: compiled from: WidgetServerSettingsCreatorMonetizationOnboarding.kt */
     public static final class C94304 extends Lambda implements Function1<RenderContext, Unit> {
         public C94304() {
             super(1);
@@ -138,14 +138,14 @@ public final class WidgetServerSettingsCreatorMonetizationOnboarding extends App
             return Unit.f27425a;
         }
 
-        /* compiled from: WidgetServerSettingsCreatorMonetizationOnboarding.kt */
-        /* renamed from: com.discord.widgets.servers.creator_monetization_eligibility.onboarding.WidgetServerSettingsCreatorMonetizationOnboarding$configureCreateRequestState$4$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.widgets.servers.creator_monetization_eligibility.onboarding.WidgetServerSettingsCreatorMonetizationOnboarding$configureCreateRequestState$4$1, reason: invalid class name */
+        /* JADX INFO: compiled from: WidgetServerSettingsCreatorMonetizationOnboarding.kt */
         public static final class AnonymousClass1 extends Lambda implements Function1<Hook, Unit> {
             public AnonymousClass1() {
                 super(1);
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2(Hook hook) {
                 Intrinsics3.checkNotNullParameter(hook, "$receiver");
                 hook.styles.add(new FontColorSpan(ColorCompat2.getColor(WidgetServerSettingsCreatorMonetizationOnboarding.this, C5419R.color.status_red_500)));
@@ -158,15 +158,15 @@ public final class WidgetServerSettingsCreatorMonetizationOnboarding extends App
             }
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(RenderContext renderContext) {
             Intrinsics3.checkNotNullParameter(renderContext, "$receiver");
             renderContext.m8422a("doesNotHook", new AnonymousClass1());
         }
     }
 
-    /* compiled from: WidgetServerSettingsCreatorMonetizationOnboarding.kt */
-    /* renamed from: com.discord.widgets.servers.creator_monetization_eligibility.onboarding.WidgetServerSettingsCreatorMonetizationOnboarding$onViewBoundOrOnResume$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.creator_monetization_eligibility.onboarding.WidgetServerSettingsCreatorMonetizationOnboarding$onViewBoundOrOnResume$1 */
+    /* JADX INFO: compiled from: WidgetServerSettingsCreatorMonetizationOnboarding.kt */
     public static final class C94341 extends Lambda implements Function1<ServerSettingsCreatorMonetizationOnboardingViewModel.ViewState, Unit> {
         public C94341() {
             super(1);
@@ -178,7 +178,7 @@ public final class WidgetServerSettingsCreatorMonetizationOnboarding extends App
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(ServerSettingsCreatorMonetizationOnboardingViewModel.ViewState viewState) {
             WidgetServerSettingsCreatorMonetizationOnboarding widgetServerSettingsCreatorMonetizationOnboarding = WidgetServerSettingsCreatorMonetizationOnboarding.this;
             Intrinsics3.checkNotNullExpressionValue(viewState, "it");
@@ -187,8 +187,8 @@ public final class WidgetServerSettingsCreatorMonetizationOnboarding extends App
         }
     }
 
-    /* compiled from: WidgetServerSettingsCreatorMonetizationOnboarding.kt */
-    /* renamed from: com.discord.widgets.servers.creator_monetization_eligibility.onboarding.WidgetServerSettingsCreatorMonetizationOnboarding$onViewBoundOrOnResume$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.creator_monetization_eligibility.onboarding.WidgetServerSettingsCreatorMonetizationOnboarding$onViewBoundOrOnResume$2 */
+    /* JADX INFO: compiled from: WidgetServerSettingsCreatorMonetizationOnboarding.kt */
     public static final class C94352 extends Lambda implements Function1<ServerSettingsCreatorMonetizationOnboardingViewModel.Event, Unit> {
         public C94352() {
             super(1);
@@ -200,7 +200,7 @@ public final class WidgetServerSettingsCreatorMonetizationOnboarding extends App
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(ServerSettingsCreatorMonetizationOnboardingViewModel.Event event) throws Throwable {
             Intrinsics3.checkNotNullParameter(event, "it");
             WidgetServerSettingsCreatorMonetizationOnboarding.access$handleEvent(WidgetServerSettingsCreatorMonetizationOnboarding.this, event);
@@ -454,8 +454,8 @@ public final class WidgetServerSettingsCreatorMonetizationOnboarding extends App
         ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.bindToComponentLifecycle$default(getViewModel().listenForEvents(), this, null, 2, null), WidgetServerSettingsCreatorMonetizationOnboarding.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new C94352(), 62, (Object) null);
     }
 
-    /* compiled from: WidgetServerSettingsCreatorMonetizationOnboarding.kt */
-    /* renamed from: com.discord.widgets.servers.creator_monetization_eligibility.onboarding.WidgetServerSettingsCreatorMonetizationOnboarding$configureCreateRequestState$3 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.creator_monetization_eligibility.onboarding.WidgetServerSettingsCreatorMonetizationOnboarding$configureCreateRequestState$3 */
+    /* JADX INFO: compiled from: WidgetServerSettingsCreatorMonetizationOnboarding.kt */
     public static final class C94293 extends Lambda implements Function1<RenderContext, Unit> {
         public static final C94293 INSTANCE = new C94293();
 
@@ -463,7 +463,7 @@ public final class WidgetServerSettingsCreatorMonetizationOnboarding extends App
             super(1);
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(RenderContext renderContext) {
             Intrinsics3.checkNotNullParameter(renderContext, "$receiver");
             renderContext.args.put("faqUrl", "https://support.discord.com/hc/en-us/articles/5371495812631");
@@ -476,8 +476,8 @@ public final class WidgetServerSettingsCreatorMonetizationOnboarding extends App
         }
     }
 
-    /* compiled from: WidgetServerSettingsCreatorMonetizationOnboarding.kt */
-    /* renamed from: com.discord.widgets.servers.creator_monetization_eligibility.onboarding.WidgetServerSettingsCreatorMonetizationOnboarding$toChecklistRequirements$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.creator_monetization_eligibility.onboarding.WidgetServerSettingsCreatorMonetizationOnboarding$toChecklistRequirements$2 */
+    /* JADX INFO: compiled from: WidgetServerSettingsCreatorMonetizationOnboarding.kt */
     public static final class C94372 extends Lambda implements Function1<RenderContext, Unit> {
         public final /* synthetic */ CreatorMonetizationEligibilityRequirements $this_toChecklistRequirements;
 
@@ -487,7 +487,7 @@ public final class WidgetServerSettingsCreatorMonetizationOnboarding extends App
             this.$this_toChecklistRequirements = creatorMonetizationEligibilityRequirements;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(RenderContext renderContext) {
             Intrinsics3.checkNotNullParameter(renderContext, "$receiver");
             renderContext.args.put("minimumAge", WidgetServerSettingsCreatorMonetizationOnboarding.access$formatDurationFromDays(WidgetServerSettingsCreatorMonetizationOnboarding.this, this.$this_toChecklistRequirements.getMinimumAgeInDays()).toString());
@@ -500,8 +500,8 @@ public final class WidgetServerSettingsCreatorMonetizationOnboarding extends App
         }
     }
 
-    /* compiled from: WidgetServerSettingsCreatorMonetizationOnboarding.kt */
-    /* renamed from: com.discord.widgets.servers.creator_monetization_eligibility.onboarding.WidgetServerSettingsCreatorMonetizationOnboarding$toChecklistRequirements$3 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.creator_monetization_eligibility.onboarding.WidgetServerSettingsCreatorMonetizationOnboarding$toChecklistRequirements$3 */
+    /* JADX INFO: compiled from: WidgetServerSettingsCreatorMonetizationOnboarding.kt */
     public static final class C94383 extends Lambda implements Function1<RenderContext, Unit> {
         public static final C94383 INSTANCE = new C94383();
 
@@ -509,7 +509,7 @@ public final class WidgetServerSettingsCreatorMonetizationOnboarding extends App
             super(1);
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(RenderContext renderContext) {
             Intrinsics3.checkNotNullParameter(renderContext, "$receiver");
             renderContext.args.put("communityGuidelinesUrl", "https://support.discord.com/hc/en-us/articles/360035969312");
@@ -522,8 +522,8 @@ public final class WidgetServerSettingsCreatorMonetizationOnboarding extends App
         }
     }
 
-    /* compiled from: WidgetServerSettingsCreatorMonetizationOnboarding.kt */
-    /* renamed from: com.discord.widgets.servers.creator_monetization_eligibility.onboarding.WidgetServerSettingsCreatorMonetizationOnboarding$toChecklistRequirements$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.creator_monetization_eligibility.onboarding.WidgetServerSettingsCreatorMonetizationOnboarding$toChecklistRequirements$1 */
+    /* JADX INFO: compiled from: WidgetServerSettingsCreatorMonetizationOnboarding.kt */
     public static final class C94361 extends Lambda implements Function1<RenderContext, Unit> {
         public final /* synthetic */ CreatorMonetizationEligibilityRequirements $this_toChecklistRequirements;
 
@@ -533,7 +533,7 @@ public final class WidgetServerSettingsCreatorMonetizationOnboarding extends App
             this.$this_toChecklistRequirements = creatorMonetizationEligibilityRequirements;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(RenderContext renderContext) {
             Intrinsics3.checkNotNullParameter(renderContext, "$receiver");
             renderContext.args.put("minimumSize", StringResourceUtils.getI18nPluralString(WidgetServerSettingsCreatorMonetizationOnboarding.this.requireContext(), C5419R.plurals.guild_role_subscription_settings_eligibility_requirement_members_description_minimumSize, this.$this_toChecklistRequirements.getMinimumSize(), Integer.valueOf(this.$this_toChecklistRequirements.getMinimumSize())).toString());

@@ -10,9 +10,9 @@ import kotlin.jvm.internal.DefaultConstructorMarker;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: WidgetHubDescriptionViewModel.kt */
-/* renamed from: com.discord.widgets.hubs.HubDescriptionState, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.hubs.HubDescriptionState, reason: use source file name */
+/* JADX INFO: compiled from: WidgetHubDescriptionViewModel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final /* data */ class WidgetHubDescriptionViewModel3 {
     private final RestCallState<DirectoryEntryGuild> addServerAsync;
     private final Channel channel;
@@ -49,17 +49,17 @@ public final /* data */ class WidgetHubDescriptionViewModel3 {
         return widgetHubDescriptionViewModel3.copy(channel, num, str, restCallState);
     }
 
-    /* renamed from: component1, reason: from getter */
+    /* JADX INFO: renamed from: component1, reason: from getter */
     public final Channel getChannel() {
         return this.channel;
     }
 
-    /* renamed from: component2, reason: from getter */
+    /* JADX INFO: renamed from: component2, reason: from getter */
     public final Integer getPrimaryCategoryId() {
         return this.primaryCategoryId;
     }
 
-    /* renamed from: component3, reason: from getter */
+    /* JADX INFO: renamed from: component3, reason: from getter */
     public final String getGuildName() {
         return this.guildName;
     }

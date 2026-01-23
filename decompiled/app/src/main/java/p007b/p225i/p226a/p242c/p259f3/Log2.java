@@ -6,12 +6,12 @@ import androidx.annotation.Nullable;
 import java.net.UnknownHostException;
 import org.checkerframework.dataflow.qual.Pure;
 
-/* compiled from: Log.java */
-/* renamed from: b.i.a.c.f3.q, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.f3.q, reason: use source file name */
+/* JADX INFO: compiled from: Log.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class Log2 {
     @Pure
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static String m3038a(String str, @Nullable Throwable th) {
         boolean z2;
         String strReplace;
@@ -46,13 +46,13 @@ public final class Log2 {
     }
 
     @Pure
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static void m3039b(String str, String str2, @Nullable Throwable th) {
         Log.e(str, m3038a(str2, th));
     }
 
     @Pure
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public static void m3040c(String str, String str2, @Nullable Throwable th) {
         Log.w(str, m3038a(str2, th));
     }

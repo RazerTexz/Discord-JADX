@@ -5,24 +5,24 @@ import p007b.p225i.p226a.p242c.RendererConfiguration;
 import p007b.p225i.p226a.p242c.TracksInfo;
 import p007b.p225i.p226a.p242c.p259f3.Util2;
 
-/* compiled from: TrackSelectorResult.java */
-/* renamed from: b.i.a.c.c3.r, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.c3.r, reason: use source file name */
+/* JADX INFO: compiled from: TrackSelectorResult.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class TrackSelectorResult {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final int f6326a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final RendererConfiguration[] f6327b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final ExoTrackSelection2[] f6328c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final TracksInfo f6329d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     @Nullable
     public final Object f6330e;
 
@@ -34,12 +34,12 @@ public final class TrackSelectorResult {
         this.f6326a = rendererConfigurationArr.length;
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public boolean m2755a(@Nullable TrackSelectorResult trackSelectorResult, int i) {
         return trackSelectorResult != null && Util2.m2993a(this.f6327b[i], trackSelectorResult.f6327b[i]) && Util2.m2993a(this.f6328c[i], trackSelectorResult.f6328c[i]);
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public boolean m2756b(int i) {
         return this.f6327b[i] != null;
     }

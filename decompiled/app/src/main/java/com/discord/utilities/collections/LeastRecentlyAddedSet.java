@@ -12,8 +12,8 @@ import p507d0.p592z.p594d.CollectionToArray;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.p595g0.KMarkers5;
 
-/* compiled from: LeastRecentlyAddedSet.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: LeastRecentlyAddedSet.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class LeastRecentlyAddedSet<E> implements Set<E>, KMarkers5 {
     private final LinkedHashSet<E> _set;
     private final int maxSize;

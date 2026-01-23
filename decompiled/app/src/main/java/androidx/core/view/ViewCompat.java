@@ -65,8 +65,8 @@ import java.util.WeakHashMap;
 import java.util.concurrent.atomic.AtomicInteger;
 import p007b.p100d.p104b.p105a.outline;
 
+/* JADX INFO: loaded from: classes.dex */
 @SuppressLint({"PrivateConstructorForUtilityClass"})
-/* loaded from: classes.dex */
 public class ViewCompat {
     public static final int ACCESSIBILITY_LIVE_REGION_ASSERTIVE = 2;
     public static final int ACCESSIBILITY_LIVE_REGION_NONE = 0;
@@ -139,7 +139,7 @@ public class ViewCompat {
     private static final OnReceiveContentViewBehavior NO_OP_ON_RECEIVE_CONTENT_VIEW_BEHAVIOR = new C02811();
     private static AccessibilityPaneVisibilityManager sAccessibilityPaneVisibilityManager = new AccessibilityPaneVisibilityManager();
 
-    /* renamed from: androidx.core.view.ViewCompat$1 */
+    /* JADX INFO: renamed from: androidx.core.view.ViewCompat$1 */
     public class C02811 implements OnReceiveContentViewBehavior {
         @Override // androidx.core.view.OnReceiveContentViewBehavior
         public ContentInfoCompat onReceiveContent(@NonNull ContentInfoCompat contentInfoCompat) {
@@ -147,7 +147,7 @@ public class ViewCompat {
         }
     }
 
-    /* renamed from: androidx.core.view.ViewCompat$2 */
+    /* JADX INFO: renamed from: androidx.core.view.ViewCompat$2 */
     public class C02822 extends AccessibilityViewProperty<Boolean> {
         public C02822(int i, Class cls, int i2) {
             super(i, cls, i2);
@@ -178,18 +178,18 @@ public class ViewCompat {
         }
 
         @RequiresApi(28)
-        /* renamed from: frameworkSet, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: frameworkSet, reason: avoid collision after fix types in other method */
         public void frameworkSet2(View view, Boolean bool) {
             view.setScreenReaderFocusable(bool.booleanValue());
         }
 
-        /* renamed from: shouldUpdate, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: shouldUpdate, reason: avoid collision after fix types in other method */
         public boolean shouldUpdate2(Boolean bool, Boolean bool2) {
             return !booleanNullToFalseEquals(bool, bool2);
         }
     }
 
-    /* renamed from: androidx.core.view.ViewCompat$3 */
+    /* JADX INFO: renamed from: androidx.core.view.ViewCompat$3 */
     public class C02833 extends AccessibilityViewProperty<CharSequence> {
         public C02833(int i, Class cls, int i2, int i3) {
             super(i, cls, i2, i3);
@@ -220,18 +220,18 @@ public class ViewCompat {
         }
 
         @RequiresApi(28)
-        /* renamed from: frameworkSet, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: frameworkSet, reason: avoid collision after fix types in other method */
         public void frameworkSet2(View view, CharSequence charSequence) {
             view.setAccessibilityPaneTitle(charSequence);
         }
 
-        /* renamed from: shouldUpdate, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: shouldUpdate, reason: avoid collision after fix types in other method */
         public boolean shouldUpdate2(CharSequence charSequence, CharSequence charSequence2) {
             return !TextUtils.equals(charSequence, charSequence2);
         }
     }
 
-    /* renamed from: androidx.core.view.ViewCompat$4 */
+    /* JADX INFO: renamed from: androidx.core.view.ViewCompat$4 */
     public class C02844 extends AccessibilityViewProperty<CharSequence> {
         public C02844(int i, Class cls, int i2, int i3) {
             super(i, cls, i2, i3);
@@ -262,18 +262,18 @@ public class ViewCompat {
         }
 
         @RequiresApi(30)
-        /* renamed from: frameworkSet, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: frameworkSet, reason: avoid collision after fix types in other method */
         public void frameworkSet2(View view, CharSequence charSequence) {
             view.setStateDescription(charSequence);
         }
 
-        /* renamed from: shouldUpdate, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: shouldUpdate, reason: avoid collision after fix types in other method */
         public boolean shouldUpdate2(CharSequence charSequence, CharSequence charSequence2) {
             return !TextUtils.equals(charSequence, charSequence2);
         }
     }
 
-    /* renamed from: androidx.core.view.ViewCompat$5 */
+    /* JADX INFO: renamed from: androidx.core.view.ViewCompat$5 */
     public class C02855 extends AccessibilityViewProperty<Boolean> {
         public C02855(int i, Class cls, int i2) {
             super(i, cls, i2);
@@ -304,12 +304,12 @@ public class ViewCompat {
         }
 
         @RequiresApi(28)
-        /* renamed from: frameworkSet, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: frameworkSet, reason: avoid collision after fix types in other method */
         public void frameworkSet2(View view, Boolean bool) {
             view.setAccessibilityHeading(bool.booleanValue());
         }
 
-        /* renamed from: shouldUpdate, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: shouldUpdate, reason: avoid collision after fix types in other method */
         public boolean shouldUpdate2(Boolean bool, Boolean bool2) {
             return !booleanNullToFalseEquals(bool, bool2);
         }
@@ -439,7 +439,7 @@ public class ViewCompat {
     @RequiresApi(21)
     public static class Api21Impl {
 
-        /* renamed from: androidx.core.view.ViewCompat$Api21Impl$1 */
+        /* JADX INFO: renamed from: androidx.core.view.ViewCompat$Api21Impl$1 */
         public class ViewOnApplyWindowInsetsListenerC02861 implements View.OnApplyWindowInsetsListener {
             public WindowInsetsCompat mLastInsets = null;
             public final /* synthetic */ OnApplyWindowInsetsListener val$listener;
@@ -552,7 +552,7 @@ public class ViewCompat {
     @RequiresApi(28)
     public static class CompatImplApi28 {
 
-        /* renamed from: androidx.core.view.ViewCompat$CompatImplApi28$1 */
+        /* JADX INFO: renamed from: androidx.core.view.ViewCompat$CompatImplApi28$1 */
         public class ViewOnUnhandledKeyEventListenerC02871 implements View.OnUnhandledKeyEventListener {
             public final /* synthetic */ OnUnhandledKeyEventListenerCompat val$listener;
 
@@ -633,7 +633,7 @@ public class ViewCompat {
         private SparseArray<WeakReference<View>> mCapturedKeys = null;
         private WeakReference<KeyEvent> mLastDispatchedPreViewKeyEvent = null;
 
-        /* renamed from: at */
+        /* JADX INFO: renamed from: at */
         public static UnhandledKeyEventManager m89at(View view) {
             int i = C0205R.id.tag_unhandled_key_event_manager;
             UnhandledKeyEventManager unhandledKeyEventManager = (UnhandledKeyEventManager) view.getTag(i);

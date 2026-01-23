@@ -1,7 +1,6 @@
 package com.discord.widgets.voice.fullscreen.stage;
 
 import android.content.Context;
-import android.content.res.Resources;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
@@ -26,9 +25,9 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p658rx.Observable;
 import p658rx.Subscription;
 
-/* compiled from: StageCallViewHolder.kt */
-/* renamed from: com.discord.widgets.voice.fullscreen.stage.SpeakerViewHolder, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: com.discord.widgets.voice.fullscreen.stage.SpeakerViewHolder, reason: use source file name */
+/* JADX INFO: compiled from: StageCallViewHolder.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class StageCallViewHolder8 extends StageCallViewHolder {
     private final WidgetStageChannelSpeakerBinding binding;
 
@@ -47,12 +46,12 @@ public final class StageCallViewHolder8 extends StageCallViewHolder {
     }
 
     @Override // com.discord.utilities.mg_recycler.MGRecyclerViewHolder
-    public /* bridge */ /* synthetic */ void onConfigure(int i, StageCallItem stageCallItem) throws Resources.NotFoundException {
+    public /* bridge */ /* synthetic */ void onConfigure(int i, StageCallItem stageCallItem) {
         onConfigure2(i, stageCallItem);
     }
 
-    /* renamed from: onConfigure, reason: avoid collision after fix types in other method */
-    public void onConfigure2(int position, StageCallItem data) throws Resources.NotFoundException {
+    /* JADX INFO: renamed from: onConfigure, reason: avoid collision after fix types in other method */
+    public void onConfigure2(int position, StageCallItem data) {
         int dimensionPixelSize;
         Intrinsics3.checkNotNullParameter(data, "data");
         super.onConfigure(position, data);

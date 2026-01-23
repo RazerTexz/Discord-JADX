@@ -18,7 +18,7 @@ import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import org.xmlpull.v1.XmlPullParser;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class Slide extends Visibility {
     private static final String PROPNAME_SCREEN_POSITION = "android:slide:screenPosition";
     private CalculateSlide mSlideCalculator;
@@ -32,7 +32,7 @@ public class Slide extends Visibility {
     private static final CalculateSlide sCalculateEnd = new C06635();
     private static final CalculateSlide sCalculateBottom = new C06646();
 
-    /* renamed from: androidx.transition.Slide$1 */
+    /* JADX INFO: renamed from: androidx.transition.Slide$1 */
     public static class C06591 extends CalculateSlideHorizontal {
         public C06591() {
             super(null);
@@ -44,7 +44,7 @@ public class Slide extends Visibility {
         }
     }
 
-    /* renamed from: androidx.transition.Slide$2 */
+    /* JADX INFO: renamed from: androidx.transition.Slide$2 */
     public static class C06602 extends CalculateSlideHorizontal {
         public C06602() {
             super(null);
@@ -56,7 +56,7 @@ public class Slide extends Visibility {
         }
     }
 
-    /* renamed from: androidx.transition.Slide$3 */
+    /* JADX INFO: renamed from: androidx.transition.Slide$3 */
     public static class C06613 extends CalculateSlideVertical {
         public C06613() {
             super(null);
@@ -68,7 +68,7 @@ public class Slide extends Visibility {
         }
     }
 
-    /* renamed from: androidx.transition.Slide$4 */
+    /* JADX INFO: renamed from: androidx.transition.Slide$4 */
     public static class C06624 extends CalculateSlideHorizontal {
         public C06624() {
             super(null);
@@ -80,7 +80,7 @@ public class Slide extends Visibility {
         }
     }
 
-    /* renamed from: androidx.transition.Slide$5 */
+    /* JADX INFO: renamed from: androidx.transition.Slide$5 */
     public static class C06635 extends CalculateSlideHorizontal {
         public C06635() {
             super(null);
@@ -92,7 +92,7 @@ public class Slide extends Visibility {
         }
     }
 
-    /* renamed from: androidx.transition.Slide$6 */
+    /* JADX INFO: renamed from: androidx.transition.Slide$6 */
     public static class C06646 extends CalculateSlideVertical {
         public C06646() {
             super(null);

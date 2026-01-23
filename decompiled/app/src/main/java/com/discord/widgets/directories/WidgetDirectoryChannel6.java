@@ -8,9 +8,9 @@ import com.discord.widgets.guilds.invite.WidgetGuildInviteShare;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: WidgetDirectoryChannel.kt */
-/* renamed from: com.discord.widgets.directories.WidgetDirectoryChannel$configureUi$$inlined$let$lambda$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.directories.WidgetDirectoryChannel$configureUi$$inlined$let$lambda$1, reason: use source file name */
+/* JADX INFO: compiled from: WidgetDirectoryChannel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetDirectoryChannel6 implements View.OnClickListener {
     public final /* synthetic */ Guild $guild;
     public final /* synthetic */ WidgetDirectoryChannel this$0;

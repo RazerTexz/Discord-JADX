@@ -7,9 +7,9 @@ import p007b.p008a.p027k.FormatUtils;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: DurationUtils.kt */
-/* renamed from: com.discord.utilities.resources.DurationUtilsKt, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.utilities.resources.DurationUtilsKt, reason: use source file name */
+/* JADX INFO: compiled from: DurationUtils.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class DurationUtils3 {
     public static final CharSequence formatDuration(Context context, DurationUtils2 durationUtils2, int i) {
         Intrinsics3.checkNotNullParameter(context, "$this$formatDuration");

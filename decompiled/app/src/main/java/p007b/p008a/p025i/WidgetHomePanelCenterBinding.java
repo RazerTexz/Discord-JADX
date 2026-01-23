@@ -6,24 +6,24 @@ import androidx.fragment.app.FragmentContainerView;
 import androidx.viewbinding.ViewBinding;
 import com.discord.utilities.view.rounded.RoundedRelativeLayout;
 
-/* compiled from: WidgetHomePanelCenterBinding.java */
-/* renamed from: b.a.i.i5, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.a.i.i5, reason: use source file name */
+/* JADX INFO: compiled from: WidgetHomePanelCenterBinding.java */
+/* JADX INFO: loaded from: classes.dex */
 public final class WidgetHomePanelCenterBinding implements ViewBinding {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     @NonNull
     public final RoundedRelativeLayout f960a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     @NonNull
     public final FragmentContainerView f961b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     @NonNull
     public final WidgetHomePanelCenterChatBinding f962c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     @NonNull
     public final FragmentContainerView f963d;
 

@@ -7,21 +7,21 @@ import java.util.zip.Inflater;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: InflaterSource.kt */
-/* renamed from: g0.m, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: g0.m, reason: use source file name */
+/* JADX INFO: compiled from: InflaterSource.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class InflaterSource implements Source2 {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public int f26100j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public boolean f26101k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final BufferedSource f26102l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public final Inflater f26103m;
 
     public InflaterSource(Source2 source2, Inflater inflater) {
@@ -35,7 +35,7 @@ public final class InflaterSource implements Source2 {
         this.f26103m = inflater;
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final long m10488a(Buffer3 buffer3, long j) throws IOException {
         Intrinsics3.checkParameterIsNotNull(buffer3, "sink");
         if (!(j >= 0)) {
@@ -95,7 +95,7 @@ public final class InflaterSource implements Source2 {
     }
 
     @Override // p615g0.Source2
-    /* renamed from: i0 */
+    /* JADX INFO: renamed from: i0 */
     public long mo10176i0(Buffer3 buffer3, long j) throws IOException {
         Intrinsics3.checkParameterIsNotNull(buffer3, "sink");
         do {

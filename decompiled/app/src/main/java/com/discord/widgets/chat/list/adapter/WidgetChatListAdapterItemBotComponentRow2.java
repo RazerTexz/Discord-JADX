@@ -9,9 +9,9 @@ import java.util.Objects;
 import p507d0.p580t.Collections2;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: WidgetChatListAdapterItemBotComponentRow.kt */
-/* renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemBotComponentRowKt, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemBotComponentRowKt, reason: use source file name */
+/* JADX INFO: compiled from: WidgetChatListAdapterItemBotComponentRow.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetChatListAdapterItemBotComponentRow2 {
     public static final void replaceViews(ViewGroup viewGroup, List<? extends ComponentView<? extends MessageComponent>> list) {
         Intrinsics3.checkNotNullParameter(viewGroup, "$this$replaceViews");

@@ -5,8 +5,8 @@ import android.view.ViewGroup;
 import java.util.Objects;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: View.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: View.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class GroupInviteFriendsSheet$resizeSheetHeight$$inlined$doOnLayout$1 implements View.OnLayoutChangeListener {
     public final /* synthetic */ GroupInviteFriendsSheet this$0;
 

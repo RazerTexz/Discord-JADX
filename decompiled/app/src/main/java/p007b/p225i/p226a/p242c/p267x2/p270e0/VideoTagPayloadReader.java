@@ -9,27 +9,27 @@ import p007b.p225i.p226a.p242c.p259f3.ParsableByteArray;
 import p007b.p225i.p226a.p242c.p260g3.AvcConfig;
 import p007b.p225i.p226a.p242c.p267x2.TrackOutput2;
 
-/* compiled from: VideoTagPayloadReader.java */
-/* renamed from: b.i.a.c.x2.e0.e, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.x2.e0.e, reason: use source file name */
+/* JADX INFO: compiled from: VideoTagPayloadReader.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class VideoTagPayloadReader extends TagPayloadReader {
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final ParsableByteArray f8145b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final ParsableByteArray f8146c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public int f8147d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public boolean f8148e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public boolean f8149f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public int f8150g;
 
     public VideoTagPayloadReader(TrackOutput2 trackOutput2) {
@@ -39,7 +39,7 @@ public final class VideoTagPayloadReader extends TagPayloadReader {
     }
 
     @Override // com.google.android.exoplayer2.extractor.flv.TagPayloadReader
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public boolean mo3657b(ParsableByteArray parsableByteArray) throws TagPayloadReader.UnsupportedFormatException {
         int iM3100t = parsableByteArray.m3100t();
         int i = (iM3100t >> 4) & 15;
@@ -52,7 +52,7 @@ public final class VideoTagPayloadReader extends TagPayloadReader {
     }
 
     @Override // com.google.android.exoplayer2.extractor.flv.TagPayloadReader
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public boolean mo3658c(ParsableByteArray parsableByteArray, long j) throws ParserException {
         int iM3100t = parsableByteArray.m3100t();
         byte[] bArr = parsableByteArray.f6793a;
@@ -64,7 +64,7 @@ public final class VideoTagPayloadReader extends TagPayloadReader {
         parsableByteArray.f6794b = i4;
         int i5 = i3 | ((bArr[i2] & 255) << 8);
         parsableByteArray.f6794b = i4 + 1;
-        long j2 = (((bArr[i4] & 255) | i5) * 1000) + j;
+        long j2 = (((long) ((bArr[i4] & 255) | i5)) * 1000) + j;
         if (iM3100t == 0 && !this.f8148e) {
             ParsableByteArray parsableByteArray2 = new ParsableByteArray(new byte[parsableByteArray.m3081a()]);
             parsableByteArray.m3085e(parsableByteArray2.f6793a, 0, parsableByteArray.m3081a());

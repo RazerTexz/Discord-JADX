@@ -9,24 +9,24 @@ import p507d0.p580t.Collections2;
 import p507d0.p580t._Collections;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ErrorType.kt */
-/* renamed from: d0.e0.p.d.m0.n.s, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.n.s, reason: use source file name */
+/* JADX INFO: compiled from: ErrorType.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public class ErrorType2 extends KotlinType4 {
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final TypeConstructor f24871k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final MemberScope3 f24872l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public final List<TypeProjection> f24873m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public final boolean f24874n;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public final String f24875o;
 
     /* JADX WARN: 'this' call moved to the top of the method (can break code semantics) */

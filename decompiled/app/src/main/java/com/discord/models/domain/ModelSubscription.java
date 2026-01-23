@@ -10,8 +10,8 @@ import kotlin.jvm.internal.DefaultConstructorMarker;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ModelSubscription.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: ModelSubscription.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class ModelSubscription extends ModelSubscription2 {
     private final String canceledAt;
     private final String createdAt;
@@ -28,7 +28,7 @@ public final /* data */ class ModelSubscription extends ModelSubscription2 {
     private final String trialId;
     private final int type;
 
-    /* compiled from: ModelSubscription.kt */
+    /* JADX INFO: compiled from: ModelSubscription.kt */
     public enum PaymentGateway {
         STRIPE(1),
         BRAINTREE(2),
@@ -37,11 +37,11 @@ public final /* data */ class ModelSubscription extends ModelSubscription2 {
         UNKNOWN(null);
 
 
-        /* renamed from: Companion, reason: from kotlin metadata */
+        /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
         public static final Companion INSTANCE = new Companion(null);
         private final Integer intRepresentation;
 
-        /* compiled from: ModelSubscription.kt */
+        /* JADX INFO: compiled from: ModelSubscription.kt */
         public static final class Companion {
             private Companion() {
             }
@@ -78,7 +78,7 @@ public final /* data */ class ModelSubscription extends ModelSubscription2 {
         }
     }
 
-    /* compiled from: ModelSubscription.kt */
+    /* JADX INFO: compiled from: ModelSubscription.kt */
     public enum Status {
         UNPAID(0),
         ACTIVE(1),
@@ -88,11 +88,11 @@ public final /* data */ class ModelSubscription extends ModelSubscription2 {
         ACCOUNT_HOLD(6);
 
 
-        /* renamed from: Companion, reason: from kotlin metadata */
+        /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
         public static final Companion INSTANCE = new Companion(null);
         private final int intRepresentation;
 
-        /* compiled from: ModelSubscription.kt */
+        /* JADX INFO: compiled from: ModelSubscription.kt */
         public static final class Companion {
             private Companion() {
             }
@@ -140,7 +140,7 @@ public final /* data */ class ModelSubscription extends ModelSubscription2 {
         }
     }
 
-    /* compiled from: ModelSubscription.kt */
+    /* JADX INFO: compiled from: ModelSubscription.kt */
     public static final /* data */ class SubscriptionAdditionalPlan {
         private final long planId;
         private final int quantity;
@@ -160,12 +160,12 @@ public final /* data */ class ModelSubscription extends ModelSubscription2 {
             return subscriptionAdditionalPlan.copy(j, i);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final long getPlanId() {
             return this.planId;
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final int getQuantity() {
             return this.quantity;
         }
@@ -206,7 +206,7 @@ public final /* data */ class ModelSubscription extends ModelSubscription2 {
         }
     }
 
-    /* compiled from: ModelSubscription.kt */
+    /* JADX INFO: compiled from: ModelSubscription.kt */
     public static final /* data */ class SubscriptionItem {
         private final long id;
         private final long planId;
@@ -233,17 +233,17 @@ public final /* data */ class ModelSubscription extends ModelSubscription2 {
             return subscriptionItem.copy(j3, j4, i);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final long getId() {
             return this.id;
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final long getPlanId() {
             return this.planId;
         }
 
-        /* renamed from: component3, reason: from getter */
+        /* JADX INFO: renamed from: component3, reason: from getter */
         public final int getQuantity() {
             return this.quantity;
         }
@@ -292,7 +292,7 @@ public final /* data */ class ModelSubscription extends ModelSubscription2 {
         }
     }
 
-    /* compiled from: ModelSubscription.kt */
+    /* JADX INFO: compiled from: ModelSubscription.kt */
     public static final /* data */ class SubscriptionRenewalMutations extends ModelSubscription2 {
         private final List<SubscriptionItem> items;
         private final String paymentGatewayPlanId;
@@ -318,7 +318,7 @@ public final /* data */ class ModelSubscription extends ModelSubscription2 {
             return getItems();
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final String getPaymentGatewayPlanId() {
             return this.paymentGatewayPlanId;
         }
@@ -363,16 +363,16 @@ public final /* data */ class ModelSubscription extends ModelSubscription2 {
         }
     }
 
-    /* compiled from: ModelSubscription.kt */
+    /* JADX INFO: compiled from: ModelSubscription.kt */
     public enum Type {
         PREMIUM,
         GUILD;
 
 
-        /* renamed from: Companion, reason: from kotlin metadata */
+        /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
         public static final Companion INSTANCE = new Companion(null);
 
-        /* compiled from: ModelSubscription.kt */
+        /* JADX INFO: compiled from: ModelSubscription.kt */
         public static final class Companion {
             private Companion() {
             }
@@ -415,26 +415,27 @@ public final /* data */ class ModelSubscription extends ModelSubscription2 {
         this.type = i2;
     }
 
-    /* renamed from: component13, reason: from getter */
+    /* JADX INFO: renamed from: component13, reason: from getter */
     private final int getStatus() {
         return this.status;
     }
 
-    /* renamed from: component14, reason: from getter */
+    /* JADX INFO: renamed from: component14, reason: from getter */
     private final int getType() {
         return this.type;
     }
 
+    /* JADX WARN: Multi-variable type inference failed */
     public static /* synthetic */ ModelSubscription copy$default(ModelSubscription modelSubscription, String str, String str2, String str3, String str4, String str5, String str6, Integer num, String str7, String str8, SubscriptionRenewalMutations subscriptionRenewalMutations, List list, String str9, int i, int i2, int i3, Object obj) {
         return modelSubscription.copy((i3 & 1) != 0 ? modelSubscription.id : str, (i3 & 2) != 0 ? modelSubscription.createdAt : str2, (i3 & 4) != 0 ? modelSubscription.canceledAt : str3, (i3 & 8) != 0 ? modelSubscription.currentPeriodStart : str4, (i3 & 16) != 0 ? modelSubscription.currentPeriodEnd : str5, (i3 & 32) != 0 ? modelSubscription.paymentSourceId : str6, (i3 & 64) != 0 ? modelSubscription.paymentGateway : num, (i3 & 128) != 0 ? modelSubscription.trialId : str7, (i3 & 256) != 0 ? modelSubscription.trialEndsAt : str8, (i3 & 512) != 0 ? modelSubscription.renewalMutations : subscriptionRenewalMutations, (i3 & 1024) != 0 ? modelSubscription.getItems() : list, (i3 & 2048) != 0 ? modelSubscription.paymentGatewayPlanId : str9, (i3 & 4096) != 0 ? modelSubscription.status : i, (i3 & 8192) != 0 ? modelSubscription.type : i2);
     }
 
-    /* renamed from: component1, reason: from getter */
+    /* JADX INFO: renamed from: component1, reason: from getter */
     public final String getId() {
         return this.id;
     }
 
-    /* renamed from: component10, reason: from getter */
+    /* JADX INFO: renamed from: component10, reason: from getter */
     public final SubscriptionRenewalMutations getRenewalMutations() {
         return this.renewalMutations;
     }
@@ -443,47 +444,47 @@ public final /* data */ class ModelSubscription extends ModelSubscription2 {
         return getItems();
     }
 
-    /* renamed from: component12, reason: from getter */
+    /* JADX INFO: renamed from: component12, reason: from getter */
     public final String getPaymentGatewayPlanId() {
         return this.paymentGatewayPlanId;
     }
 
-    /* renamed from: component2, reason: from getter */
+    /* JADX INFO: renamed from: component2, reason: from getter */
     public final String getCreatedAt() {
         return this.createdAt;
     }
 
-    /* renamed from: component3, reason: from getter */
+    /* JADX INFO: renamed from: component3, reason: from getter */
     public final String getCanceledAt() {
         return this.canceledAt;
     }
 
-    /* renamed from: component4, reason: from getter */
+    /* JADX INFO: renamed from: component4, reason: from getter */
     public final String getCurrentPeriodStart() {
         return this.currentPeriodStart;
     }
 
-    /* renamed from: component5, reason: from getter */
+    /* JADX INFO: renamed from: component5, reason: from getter */
     public final String getCurrentPeriodEnd() {
         return this.currentPeriodEnd;
     }
 
-    /* renamed from: component6, reason: from getter */
+    /* JADX INFO: renamed from: component6, reason: from getter */
     public final String getPaymentSourceId() {
         return this.paymentSourceId;
     }
 
-    /* renamed from: component7, reason: from getter */
+    /* JADX INFO: renamed from: component7, reason: from getter */
     public final Integer getPaymentGateway() {
         return this.paymentGateway;
     }
 
-    /* renamed from: component8, reason: from getter */
+    /* JADX INFO: renamed from: component8, reason: from getter */
     public final String getTrialId() {
         return this.trialId;
     }
 
-    /* renamed from: component9, reason: from getter */
+    /* JADX INFO: renamed from: component9, reason: from getter */
     public final String getTrialEndsAt() {
         return this.trialEndsAt;
     }

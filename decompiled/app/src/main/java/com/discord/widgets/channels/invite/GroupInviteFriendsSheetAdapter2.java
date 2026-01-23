@@ -6,9 +6,9 @@ import com.discord.widgets.channels.invite.GroupInviteFriendsSheetAdapter;
 import com.google.android.material.checkbox.MaterialCheckBox;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: GroupInviteFriendsSheetAdapter.kt */
-/* renamed from: com.discord.widgets.channels.invite.GroupInviteFriendsSheetAdapter$GroupInviteFriendsListItem$onConfigure$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.channels.invite.GroupInviteFriendsSheetAdapter$GroupInviteFriendsListItem$onConfigure$1, reason: use source file name */
+/* JADX INFO: compiled from: GroupInviteFriendsSheetAdapter.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class GroupInviteFriendsSheetAdapter2 implements View.OnClickListener {
     public final /* synthetic */ User $modelUser;
     public final /* synthetic */ GroupInviteFriendsSheetAdapter.GroupInviteFriendsListItem this$0;

@@ -4,17 +4,17 @@ import kotlin.jvm.internal.DefaultConstructorMarker;
 import p001a0.p002a.p003a.C0002b;
 import p007b.p100d.p104b.p105a.outline;
 
-/* compiled from: ForumPostReadState.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: ForumPostReadState.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final /* data */ class ForumPostReadState {
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private final long channelId;
     private final boolean hasSeenBefore;
     private final boolean hasUnread;
 
-    /* compiled from: ForumPostReadState.kt */
+    /* JADX INFO: compiled from: ForumPostReadState.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -47,17 +47,17 @@ public final /* data */ class ForumPostReadState {
         return forumPostReadState.copy(j, z2, z3);
     }
 
-    /* renamed from: component1, reason: from getter */
+    /* JADX INFO: renamed from: component1, reason: from getter */
     public final long getChannelId() {
         return this.channelId;
     }
 
-    /* renamed from: component2, reason: from getter */
+    /* JADX INFO: renamed from: component2, reason: from getter */
     public final boolean getHasSeenBefore() {
         return this.hasSeenBefore;
     }
 
-    /* renamed from: component3, reason: from getter */
+    /* JADX INFO: renamed from: component3, reason: from getter */
     public final boolean getHasUnread() {
         return this.hasUnread;
     }
@@ -90,16 +90,22 @@ public final /* data */ class ForumPostReadState {
     }
 
     /* JADX WARN: Multi-variable type inference failed */
+    /* JADX WARN: Type inference failed for: r1v1, types: [int] */
+    /* JADX WARN: Type inference failed for: r1v3 */
+    /* JADX WARN: Type inference failed for: r1v4 */
+    /* JADX WARN: Type inference failed for: r2v0 */
+    /* JADX WARN: Type inference failed for: r2v1, types: [int] */
+    /* JADX WARN: Type inference failed for: r2v2 */
     public int hashCode() {
         int iM3a = C0002b.m3a(this.channelId) * 31;
         boolean z2 = this.hasSeenBefore;
-        int i = z2;
-        if (z2 != 0) {
-            i = 1;
+        ?? r1 = z2;
+        if (z2) {
+            r1 = 1;
         }
-        int i2 = (iM3a + i) * 31;
+        int i = (iM3a + r1) * 31;
         boolean z3 = this.hasUnread;
-        return i2 + (z3 ? 1 : z3 ? 1 : 0);
+        return i + (z3 ? 1 : z3);
     }
 
     public String toString() {

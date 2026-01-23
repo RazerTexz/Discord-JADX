@@ -1,8 +1,8 @@
 package com.discord.api.friendsuggestions;
 
 
-/* compiled from: AllowedInSuggestionsType.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: AllowedInSuggestionsType.kt */
+/* JADX INFO: loaded from: classes.dex */
 public enum AllowedInSuggestionsType {
     DISABLED(-1),
     MUTUAL_CONTACT_INFO_ONLY(1),

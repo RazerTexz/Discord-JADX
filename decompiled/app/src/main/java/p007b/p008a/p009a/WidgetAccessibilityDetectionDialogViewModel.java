@@ -8,26 +8,26 @@ import kotlin.jvm.internal.DefaultConstructorMarker;
 import p007b.p008a.p018d.AppViewModel;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: WidgetAccessibilityDetectionDialogViewModel.kt */
-/* renamed from: b.a.a.p, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.a.a.p, reason: use source file name */
+/* JADX INFO: compiled from: WidgetAccessibilityDetectionDialogViewModel.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class WidgetAccessibilityDetectionDialogViewModel extends AppViewModel<a> {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final StoreUserSettings f419j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final StoreNotices f420k;
 
-    /* compiled from: WidgetAccessibilityDetectionDialogViewModel.kt */
-    /* renamed from: b.a.a.p$a */
+    /* JADX INFO: renamed from: b.a.a.p$a */
+    /* JADX INFO: compiled from: WidgetAccessibilityDetectionDialogViewModel.kt */
     public static abstract class a {
 
-        /* compiled from: WidgetAccessibilityDetectionDialogViewModel.kt */
-        /* renamed from: b.a.a.p$a$a, reason: collision with other inner class name */
+        /* JADX INFO: renamed from: b.a.a.p$a$a, reason: collision with other inner class name */
+        /* JADX INFO: compiled from: WidgetAccessibilityDetectionDialogViewModel.kt */
         public static final class C13209a extends a {
 
-            /* renamed from: a */
+            /* JADX INFO: renamed from: a */
             public static final C13209a f421a = new C13209a();
 
             public C13209a() {

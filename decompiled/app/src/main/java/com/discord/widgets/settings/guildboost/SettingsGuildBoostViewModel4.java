@@ -3,9 +3,9 @@ package com.discord.widgets.settings.guildboost;
 import kotlin.jvm.functions.Function4;
 import p658rx.functions.Func4;
 
-/* compiled from: SettingsGuildBoostViewModel.kt */
-/* renamed from: com.discord.widgets.settings.guildboost.SettingsGuildBoostViewModel$sam$rx_functions_Func4$0, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.settings.guildboost.SettingsGuildBoostViewModel$sam$rx_functions_Func4$0, reason: use source file name */
+/* JADX INFO: compiled from: SettingsGuildBoostViewModel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class SettingsGuildBoostViewModel4 implements Func4 {
     private final /* synthetic */ Function4 function;
 

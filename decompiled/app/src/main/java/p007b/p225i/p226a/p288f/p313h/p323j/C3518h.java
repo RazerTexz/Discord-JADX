@@ -2,11 +2,11 @@ package p007b.p225i.p226a.p288f.p313h.p323j;
 
 import java.lang.Thread;
 
-/* renamed from: b.i.a.f.h.j.h */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.h.j.h */
+/* JADX INFO: loaded from: classes3.dex */
 public final class C3518h implements Thread.UncaughtExceptionHandler {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final /* synthetic */ C3515g f9732a;
 
     public C3518h(C3515g c3515g) {

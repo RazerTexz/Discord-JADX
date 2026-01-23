@@ -16,41 +16,41 @@ import org.objectweb.asm.Opcodes;
 import p007b.p085c.p086a.p087a0.AnimatableValueParser;
 import p007b.p225i.p226a.p288f.p299e.p303j.C3342a;
 
-/* compiled from: com.google.android.gms:play-services-base@@17.3.0 */
+/* JADX INFO: compiled from: com.google.android.gms:play-services-base@@17.3.0 */
+/* JADX INFO: loaded from: classes3.dex */
 @KeepName
-/* loaded from: classes3.dex */
 public final class DataHolder extends AbstractSafeParcelable implements Closeable {
     public static final Parcelable.Creator<DataHolder> CREATOR = new C3342a();
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final int f20512j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final String[] f20513k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public Bundle f20514l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public final CursorWindow[] f20515m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public final int f20516n;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     @Nullable
     public final Bundle f20517o;
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public int[] f20518p;
 
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     public boolean f20519q = false;
 
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     public boolean f20520r = true;
 
-    /* compiled from: com.google.android.gms:play-services-base@@17.3.0 */
+    /* JADX INFO: compiled from: com.google.android.gms:play-services-base@@17.3.0 */
     public static class zaa extends RuntimeException {
     }
 

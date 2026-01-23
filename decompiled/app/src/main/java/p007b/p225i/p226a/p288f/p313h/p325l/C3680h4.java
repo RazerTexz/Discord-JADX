@@ -5,31 +5,31 @@ import java.util.HashMap;
 import java.util.Map;
 import p007b.p225i.p226a.p288f.p313h.p325l.AbstractC3851u4;
 
-/* compiled from: com.google.android.gms:play-services-measurement-base@@18.0.0 */
-/* renamed from: b.i.a.f.h.l.h4 */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.h.l.h4 */
+/* JADX INFO: compiled from: com.google.android.gms:play-services-measurement-base@@18.0.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public class C3680h4 {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static volatile C3680h4 f9984a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static volatile C3680h4 f9985b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public static final C3680h4 f9986c = new C3680h4(true);
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final Map<a, AbstractC3851u4.f<?, ?>> f9987d;
 
-    /* compiled from: com.google.android.gms:play-services-measurement-base@@18.0.0 */
-    /* renamed from: b.i.a.f.h.l.h4$a */
+    /* JADX INFO: renamed from: b.i.a.f.h.l.h4$a */
+    /* JADX INFO: compiled from: com.google.android.gms:play-services-measurement-base@@18.0.0 */
     public static final class a {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final Object f9988a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final int f9989b;
 
         public a(Object obj, int i) {
@@ -54,7 +54,7 @@ public class C3680h4 {
         this.f9987d = new HashMap();
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static C3680h4 m4933a() {
         C3680h4 c3680h4 = f9984a;
         if (c3680h4 == null) {

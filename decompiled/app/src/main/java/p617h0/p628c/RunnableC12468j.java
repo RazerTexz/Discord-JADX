@@ -3,18 +3,18 @@ package p617h0.p628c;
 import org.webrtc.EglBase;
 import org.webrtc.EglRenderer;
 
-/* compiled from: lambda */
-/* renamed from: h0.c.j */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: h0.c.j */
+/* JADX INFO: compiled from: lambda */
+/* JADX INFO: loaded from: classes3.dex */
 public final /* synthetic */ class RunnableC12468j implements Runnable {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final /* synthetic */ EglRenderer f26439j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final /* synthetic */ EglBase.Context f26440k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final /* synthetic */ int[] f26441l;
 
     public /* synthetic */ RunnableC12468j(EglRenderer eglRenderer, EglBase.Context context, int[] iArr) {

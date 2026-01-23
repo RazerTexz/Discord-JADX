@@ -24,15 +24,15 @@ import p659s.p660a.CancellableContinuationImpl5;
 import p659s.p660a.CompletableJob;
 import p659s.p660a.Dispatchers;
 
-/* compiled from: CoroutineWorker.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: CoroutineWorker.kt */
+/* JADX INFO: loaded from: classes.dex */
 public abstract class CoroutineWorker extends ListenableWorker {
     private final CoroutineDispatcher coroutineContext;
     private final SettableFuture<ListenableWorker.Result> future;
     private final CompletableJob job;
 
-    /* compiled from: CoroutineWorker.kt */
-    /* renamed from: androidx.work.CoroutineWorker$1 */
+    /* JADX INFO: renamed from: androidx.work.CoroutineWorker$1 */
+    /* JADX INFO: compiled from: CoroutineWorker.kt */
     public static final class RunnableC07111 implements Runnable {
         public RunnableC07111() {
         }
@@ -45,14 +45,14 @@ public abstract class CoroutineWorker extends ListenableWorker {
         }
     }
 
-    /* compiled from: CoroutineWorker.kt */
+    /* JADX INFO: renamed from: androidx.work.CoroutineWorker$startWork$1 */
+    /* JADX INFO: compiled from: CoroutineWorker.kt */
     @DebugMetadata(m10084c = "androidx.work.CoroutineWorker$startWork$1", m10085f = "CoroutineWorker.kt", m10086l = {68}, m10087m = "invokeSuspend")
-    /* renamed from: androidx.work.CoroutineWorker$startWork$1 */
     public static final class C07141 extends ContinuationImpl6 implements Function2<CoroutineScope, Continuation<? super Unit>, Object> {
         public Object L$0;
         public int label;
 
-        /* renamed from: p$ */
+        /* JADX INFO: renamed from: p$ */
         private CoroutineScope f162p$;
 
         public C07141(Continuation continuation) {
@@ -130,7 +130,7 @@ public abstract class CoroutineWorker extends ListenableWorker {
         return this.future;
     }
 
-    /* renamed from: getJob$work_runtime_ktx_release, reason: from getter */
+    /* JADX INFO: renamed from: getJob$work_runtime_ktx_release, reason: from getter */
     public final CompletableJob getJob() {
         return this.job;
     }

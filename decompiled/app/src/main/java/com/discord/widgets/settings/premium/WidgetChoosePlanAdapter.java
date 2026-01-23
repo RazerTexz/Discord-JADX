@@ -28,12 +28,12 @@ import p007b.p008a.p027k.FormatUtils;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: WidgetChoosePlanAdapter.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetChoosePlanAdapter.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetChoosePlanAdapter extends MGRecyclerAdapterSimple<Item> {
     private Function3<? super GooglePlaySku, ? super String, ? super SkuDetails, Unit> onClickPlan;
 
-    /* compiled from: WidgetChoosePlanAdapter.kt */
+    /* JADX INFO: compiled from: WidgetChoosePlanAdapter.kt */
     public static final class DividerViewHolder extends MGRecyclerViewHolder<WidgetChoosePlanAdapter, Item> {
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
         public DividerViewHolder(WidgetChoosePlanAdapter widgetChoosePlanAdapter) {
@@ -42,7 +42,7 @@ public final class WidgetChoosePlanAdapter extends MGRecyclerAdapterSimple<Item>
         }
     }
 
-    /* compiled from: WidgetChoosePlanAdapter.kt */
+    /* JADX INFO: compiled from: WidgetChoosePlanAdapter.kt */
     public static final class HeaderViewHolder extends MGRecyclerViewHolder<WidgetChoosePlanAdapter, Item> {
         private final WidgetChoosePlanAdapterHeaderItemBinding binding;
 
@@ -65,7 +65,7 @@ public final class WidgetChoosePlanAdapter extends MGRecyclerAdapterSimple<Item>
             onConfigure2(i, item);
         }
 
-        /* renamed from: onConfigure, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: onConfigure, reason: avoid collision after fix types in other method */
         public void onConfigure2(int position, Item data) {
             Intrinsics3.checkNotNullParameter(data, "data");
             super.onConfigure(position, data);
@@ -75,14 +75,14 @@ public final class WidgetChoosePlanAdapter extends MGRecyclerAdapterSimple<Item>
         }
     }
 
-    /* compiled from: WidgetChoosePlanAdapter.kt */
+    /* JADX INFO: compiled from: WidgetChoosePlanAdapter.kt */
     public static abstract class Item implements MGRecyclerDataPayload {
         public static final int TYPE_DIVIDER = 2;
         public static final int TYPE_HEADER = 0;
         public static final int TYPE_PLAN = 1;
         private final int type;
 
-        /* compiled from: WidgetChoosePlanAdapter.kt */
+        /* JADX INFO: compiled from: WidgetChoosePlanAdapter.kt */
         public static final class Divider extends Item {
             private final String key;
 
@@ -97,7 +97,7 @@ public final class WidgetChoosePlanAdapter extends MGRecyclerAdapterSimple<Item>
             }
         }
 
-        /* compiled from: WidgetChoosePlanAdapter.kt */
+        /* JADX INFO: compiled from: WidgetChoosePlanAdapter.kt */
         public static final /* data */ class Header extends Item {
             private final String key;
             private final int titleStringResId;
@@ -115,7 +115,7 @@ public final class WidgetChoosePlanAdapter extends MGRecyclerAdapterSimple<Item>
                 return header.copy(i);
             }
 
-            /* renamed from: component1, reason: from getter */
+            /* JADX INFO: renamed from: component1, reason: from getter */
             public final int getTitleStringResId() {
                 return this.titleStringResId;
             }
@@ -149,7 +149,7 @@ public final class WidgetChoosePlanAdapter extends MGRecyclerAdapterSimple<Item>
             }
         }
 
-        /* compiled from: WidgetChoosePlanAdapter.kt */
+        /* JADX INFO: compiled from: WidgetChoosePlanAdapter.kt */
         public static final /* data */ class Plan extends Item {
             private final GooglePlaySku displaySku;
             private final boolean isCurrentPlan;
@@ -189,32 +189,32 @@ public final class WidgetChoosePlanAdapter extends MGRecyclerAdapterSimple<Item>
                 return plan.copy(googlePlaySku, skuDetails3, googlePlaySku3, str2, skuDetails4, z2);
             }
 
-            /* renamed from: component1, reason: from getter */
+            /* JADX INFO: renamed from: component1, reason: from getter */
             public final GooglePlaySku getDisplaySku() {
                 return this.displaySku;
             }
 
-            /* renamed from: component2, reason: from getter */
+            /* JADX INFO: renamed from: component2, reason: from getter */
             public final SkuDetails getSkuDetails() {
                 return this.skuDetails;
             }
 
-            /* renamed from: component3, reason: from getter */
+            /* JADX INFO: renamed from: component3, reason: from getter */
             public final GooglePlaySku getPurchaseSku() {
                 return this.purchaseSku;
             }
 
-            /* renamed from: component4, reason: from getter */
+            /* JADX INFO: renamed from: component4, reason: from getter */
             public final String getOldSkuName() {
                 return this.oldSkuName;
             }
 
-            /* renamed from: component5, reason: from getter */
+            /* JADX INFO: renamed from: component5, reason: from getter */
             public final SkuDetails getUpgradeSkuDetails() {
                 return this.upgradeSkuDetails;
             }
 
-            /* renamed from: component6, reason: from getter */
+            /* JADX INFO: renamed from: component6, reason: from getter */
             public final boolean getIsCurrentPlan() {
                 return this.isCurrentPlan;
             }
@@ -262,6 +262,9 @@ public final class WidgetChoosePlanAdapter extends MGRecyclerAdapterSimple<Item>
             }
 
             /* JADX WARN: Multi-variable type inference failed */
+            /* JADX WARN: Type inference failed for: r1v3, types: [int] */
+            /* JADX WARN: Type inference failed for: r1v4 */
+            /* JADX WARN: Type inference failed for: r1v6 */
             public int hashCode() {
                 GooglePlaySku googlePlaySku = this.displaySku;
                 int iHashCode = (googlePlaySku != null ? googlePlaySku.hashCode() : 0) * 31;
@@ -274,11 +277,11 @@ public final class WidgetChoosePlanAdapter extends MGRecyclerAdapterSimple<Item>
                 SkuDetails skuDetails2 = this.upgradeSkuDetails;
                 int iHashCode5 = (iHashCode4 + (skuDetails2 != null ? skuDetails2.hashCode() : 0)) * 31;
                 boolean z2 = this.isCurrentPlan;
-                int i = z2;
-                if (z2 != 0) {
-                    i = 1;
+                ?? r1 = z2;
+                if (z2) {
+                    r1 = 1;
                 }
-                return iHashCode5 + i;
+                return iHashCode5 + r1;
             }
 
             public final boolean isCurrentPlan() {
@@ -329,7 +332,7 @@ public final class WidgetChoosePlanAdapter extends MGRecyclerAdapterSimple<Item>
         }
     }
 
-    /* compiled from: WidgetChoosePlanAdapter.kt */
+    /* JADX INFO: compiled from: WidgetChoosePlanAdapter.kt */
     public static final class PlanViewHeader extends MGRecyclerViewHolder<WidgetChoosePlanAdapter, Item> {
         private final WidgetChoosePlanAdapterPlanItemBinding binding;
 
@@ -351,7 +354,7 @@ public final class WidgetChoosePlanAdapter extends MGRecyclerAdapterSimple<Item>
             onConfigure2(i, item);
         }
 
-        /* renamed from: onConfigure, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: onConfigure, reason: avoid collision after fix types in other method */
         public void onConfigure2(int position, Item data) {
             Intrinsics3.checkNotNullParameter(data, "data");
             super.onConfigure(position, data);

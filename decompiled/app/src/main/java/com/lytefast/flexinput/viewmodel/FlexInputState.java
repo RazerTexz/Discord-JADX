@@ -7,47 +7,47 @@ import p007b.p100d.p104b.p105a.outline;
 import p507d0.p580t.Collections2;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: FlexInputState.kt */
-/* loaded from: classes3.dex */
+/* JADX INFO: compiled from: FlexInputState.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final /* data */ class FlexInputState {
 
-    /* renamed from: a, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: a, reason: from kotlin metadata */
     public final String inputText;
 
-    /* renamed from: b, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: b, reason: from kotlin metadata */
     public final boolean showExpandedButtons;
 
-    /* renamed from: c, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: c, reason: from kotlin metadata */
     public final List<Attachment<Object>> attachments;
 
-    /* renamed from: d, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: d, reason: from kotlin metadata */
     public final boolean attachmentViewEnabled;
 
-    /* renamed from: e, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: e, reason: from kotlin metadata */
     public final boolean singleSelectMode;
 
-    /* renamed from: f, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: f, reason: from kotlin metadata */
     public final Integer showContentDialogIndex;
 
-    /* renamed from: g, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: g, reason: from kotlin metadata */
     public final boolean ableToSendMessages;
 
-    /* renamed from: h, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: h, reason: from kotlin metadata */
     public final boolean ableToAttachFiles;
 
-    /* renamed from: i, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: i, reason: from kotlin metadata */
     public final boolean showExpressionTray;
 
-    /* renamed from: j, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: j, reason: from kotlin metadata */
     public final boolean showExpressionTrayButtonBadge;
 
-    /* renamed from: k, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: k, reason: from kotlin metadata */
     public final boolean expressionSuggestionsEnabled;
 
-    /* renamed from: l, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: l, reason: from kotlin metadata */
     public final Long channelId;
 
-    /* renamed from: m, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: m, reason: from kotlin metadata */
     public final Long guildId;
 
     public FlexInputState() {
@@ -73,7 +73,7 @@ public final /* data */ class FlexInputState {
         this.guildId = l2;
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static FlexInputState m9302a(FlexInputState flexInputState, String str, boolean z2, List list, boolean z3, boolean z4, Integer num, boolean z5, boolean z6, boolean z7, boolean z8, boolean z9, Long l, Long l2, int i) {
         String str2 = (i & 1) != 0 ? flexInputState.inputText : str;
         boolean z10 = (i & 2) != 0 ? flexInputState.showExpandedButtons : z2;
@@ -106,59 +106,83 @@ public final /* data */ class FlexInputState {
     }
 
     /* JADX WARN: Multi-variable type inference failed */
+    /* JADX WARN: Type inference failed for: r2v1, types: [int] */
+    /* JADX WARN: Type inference failed for: r2v13, types: [int] */
+    /* JADX WARN: Type inference failed for: r2v15, types: [int] */
+    /* JADX WARN: Type inference failed for: r2v17, types: [int] */
+    /* JADX WARN: Type inference failed for: r2v19, types: [int] */
+    /* JADX WARN: Type inference failed for: r2v26 */
+    /* JADX WARN: Type inference failed for: r2v27 */
+    /* JADX WARN: Type inference failed for: r2v28 */
+    /* JADX WARN: Type inference failed for: r2v29 */
+    /* JADX WARN: Type inference failed for: r2v31 */
+    /* JADX WARN: Type inference failed for: r2v32 */
+    /* JADX WARN: Type inference failed for: r2v34 */
+    /* JADX WARN: Type inference failed for: r2v35 */
+    /* JADX WARN: Type inference failed for: r2v36 */
+    /* JADX WARN: Type inference failed for: r2v37 */
+    /* JADX WARN: Type inference failed for: r2v38 */
+    /* JADX WARN: Type inference failed for: r2v39 */
+    /* JADX WARN: Type inference failed for: r2v40 */
+    /* JADX WARN: Type inference failed for: r2v41 */
+    /* JADX WARN: Type inference failed for: r2v6, types: [int] */
+    /* JADX WARN: Type inference failed for: r2v8, types: [int] */
+    /* JADX WARN: Type inference failed for: r3v0 */
+    /* JADX WARN: Type inference failed for: r3v1, types: [int] */
+    /* JADX WARN: Type inference failed for: r3v2 */
     public int hashCode() {
         String str = this.inputText;
         int iHashCode = (str != null ? str.hashCode() : 0) * 31;
         boolean z2 = this.showExpandedButtons;
-        int i = z2;
-        if (z2 != 0) {
-            i = 1;
+        ?? r2 = z2;
+        if (z2) {
+            r2 = 1;
         }
-        int i2 = (iHashCode + i) * 31;
+        int i = (iHashCode + r2) * 31;
         List<Attachment<Object>> list = this.attachments;
-        int iHashCode2 = (i2 + (list != null ? list.hashCode() : 0)) * 31;
+        int iHashCode2 = (i + (list != null ? list.hashCode() : 0)) * 31;
         boolean z3 = this.attachmentViewEnabled;
-        int i3 = z3;
-        if (z3 != 0) {
-            i3 = 1;
+        ?? r22 = z3;
+        if (z3) {
+            r22 = 1;
         }
-        int i4 = (iHashCode2 + i3) * 31;
+        int i2 = (iHashCode2 + r22) * 31;
         boolean z4 = this.singleSelectMode;
-        int i5 = z4;
-        if (z4 != 0) {
-            i5 = 1;
+        ?? r23 = z4;
+        if (z4) {
+            r23 = 1;
         }
-        int i6 = (i4 + i5) * 31;
+        int i3 = (i2 + r23) * 31;
         Integer num = this.showContentDialogIndex;
-        int iHashCode3 = (i6 + (num != null ? num.hashCode() : 0)) * 31;
+        int iHashCode3 = (i3 + (num != null ? num.hashCode() : 0)) * 31;
         boolean z5 = this.ableToSendMessages;
-        int i7 = z5;
-        if (z5 != 0) {
-            i7 = 1;
+        ?? r24 = z5;
+        if (z5) {
+            r24 = 1;
         }
-        int i8 = (iHashCode3 + i7) * 31;
+        int i4 = (iHashCode3 + r24) * 31;
         boolean z6 = this.ableToAttachFiles;
-        int i9 = z6;
-        if (z6 != 0) {
-            i9 = 1;
+        ?? r25 = z6;
+        if (z6) {
+            r25 = 1;
         }
-        int i10 = (i8 + i9) * 31;
+        int i5 = (i4 + r25) * 31;
         boolean z7 = this.showExpressionTray;
-        int i11 = z7;
-        if (z7 != 0) {
-            i11 = 1;
+        ?? r26 = z7;
+        if (z7) {
+            r26 = 1;
         }
-        int i12 = (i10 + i11) * 31;
+        int i6 = (i5 + r26) * 31;
         boolean z8 = this.showExpressionTrayButtonBadge;
-        int i13 = z8;
-        if (z8 != 0) {
-            i13 = 1;
+        ?? r27 = z8;
+        if (z8) {
+            r27 = 1;
         }
-        int i14 = (i12 + i13) * 31;
+        int i7 = (i6 + r27) * 31;
         boolean z9 = this.expressionSuggestionsEnabled;
-        int i15 = (i14 + (z9 ? 1 : z9 ? 1 : 0)) * 31;
+        int i8 = (i7 + (z9 ? 1 : z9)) * 31;
         Long l = this.channelId;
-        int iHashCode4 = (i15 + (l != null ? l.hashCode() : 0)) * 31;
+        int iHashCode4 = (i8 + (l != null ? l.hashCode() : 0)) * 31;
         Long l2 = this.guildId;
         return iHashCode4 + (l2 != null ? l2.hashCode() : 0);
     }

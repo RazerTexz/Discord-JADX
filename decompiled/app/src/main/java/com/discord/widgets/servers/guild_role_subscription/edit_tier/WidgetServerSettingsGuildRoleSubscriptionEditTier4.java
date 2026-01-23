@@ -3,9 +3,9 @@ package com.discord.widgets.servers.guild_role_subscription.edit_tier;
 import kotlin.jvm.functions.Function0;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetServerSettingsGuildRoleSubscriptionEditTier.kt */
-/* renamed from: com.discord.widgets.servers.guild_role_subscription.edit_tier.WidgetServerSettingsGuildRoleSubscriptionEditTier$guildId$2, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.servers.guild_role_subscription.edit_tier.WidgetServerSettingsGuildRoleSubscriptionEditTier$guildId$2, reason: use source file name */
+/* JADX INFO: compiled from: WidgetServerSettingsGuildRoleSubscriptionEditTier.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetServerSettingsGuildRoleSubscriptionEditTier4 extends Lambda implements Function0<Long> {
     public final /* synthetic */ WidgetServerSettingsGuildRoleSubscriptionEditTier this$0;
 
@@ -20,7 +20,7 @@ public final class WidgetServerSettingsGuildRoleSubscriptionEditTier4 extends La
         return Long.valueOf(invoke2());
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final long invoke2() {
         return this.this$0.getMostRecentIntent().getLongExtra("com.discord.intent.extra.EXTRA_GUILD_ID", -1L);
     }

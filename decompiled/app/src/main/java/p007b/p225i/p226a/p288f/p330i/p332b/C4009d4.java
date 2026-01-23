@@ -5,93 +5,93 @@ import android.util.Pair;
 import androidx.annotation.WorkerThread;
 import com.discord.stores.StoreGuildScheduledEvents;
 
-/* compiled from: com.google.android.gms:play-services-measurement-impl@@18.0.0 */
-/* renamed from: b.i.a.f.i.b.d4 */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.i.b.d4 */
+/* JADX INFO: compiled from: com.google.android.gms:play-services-measurement-impl@@18.0.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public final class C4009d4 extends AbstractC4170r5 {
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public static final Pair<String, Long> f10629c = new Pair<>("", 0L);
 
-    /* renamed from: A */
+    /* JADX INFO: renamed from: A */
     public final C4081j4 f10630A;
 
-    /* renamed from: B */
+    /* JADX INFO: renamed from: B */
     public final C4081j4 f10631B;
 
-    /* renamed from: C */
+    /* JADX INFO: renamed from: C */
     public final C4057h4 f10632C;
 
-    /* renamed from: D */
+    /* JADX INFO: renamed from: D */
     public final C4069i4 f10633D;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public SharedPreferences f10634d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public C4092k4 f10635e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final C4057h4 f10636f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public final C4057h4 f10637g;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public final C4057h4 f10638h;
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public final C4057h4 f10639i;
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final C4057h4 f10640j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final C4057h4 f10641k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final C4057h4 f10642l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public final C4081j4 f10643m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public String f10644n;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public boolean f10645o;
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public long f10646p;
 
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     public final C4057h4 f10647q;
 
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     public final C4057h4 f10648r;
 
-    /* renamed from: s */
+    /* JADX INFO: renamed from: s */
     public final C4033f4 f10649s;
 
-    /* renamed from: t */
+    /* JADX INFO: renamed from: t */
     public final C4081j4 f10650t;
 
-    /* renamed from: u */
+    /* JADX INFO: renamed from: u */
     public final C4033f4 f10651u;
 
-    /* renamed from: v */
+    /* JADX INFO: renamed from: v */
     public final C4057h4 f10652v;
 
-    /* renamed from: w */
+    /* JADX INFO: renamed from: w */
     public boolean f10653w;
 
-    /* renamed from: x */
+    /* JADX INFO: renamed from: x */
     public C4033f4 f10654x;
 
-    /* renamed from: y */
+    /* JADX INFO: renamed from: y */
     public C4033f4 f10655y;
 
-    /* renamed from: z */
+    /* JADX INFO: renamed from: z */
     public C4057h4 f10656z;
 
     public C4009d4(C4202u4 c4202u4) {
@@ -121,7 +121,7 @@ public final class C4009d4 extends AbstractC4170r5 {
 
     @Override // p007b.p225i.p226a.p288f.p330i.p332b.AbstractC4170r5
     @WorkerThread
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public final void mo5573m() {
         SharedPreferences sharedPreferences = this.f11202a.f11254b.getSharedPreferences("com.google.android.gms.measurement.prefs", 0);
         this.f10634d = sharedPreferences;
@@ -136,13 +136,13 @@ public final class C4009d4 extends AbstractC4170r5 {
     }
 
     @Override // p007b.p225i.p226a.p288f.p330i.p332b.AbstractC4170r5
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     public final boolean mo5574r() {
         return true;
     }
 
     @WorkerThread
-    /* renamed from: s */
+    /* JADX INFO: renamed from: s */
     public final void m5575s(Boolean bool) {
         mo5848b();
         SharedPreferences.Editor editorEdit = m5579w().edit();
@@ -155,18 +155,18 @@ public final class C4009d4 extends AbstractC4170r5 {
     }
 
     @WorkerThread
-    /* renamed from: t */
+    /* JADX INFO: renamed from: t */
     public final boolean m5576t(int i) {
         return C4004d.m5565e(i, m5579w().getInt("consent_source", 100));
     }
 
-    /* renamed from: u */
+    /* JADX INFO: renamed from: u */
     public final boolean m5577u(long j) {
         return j - this.f10648r.m5648a() > this.f10652v.m5648a();
     }
 
     @WorkerThread
-    /* renamed from: v */
+    /* JADX INFO: renamed from: v */
     public final void m5578v(boolean z2) {
         mo5848b();
         mo5726g().f11149n.m5861b("App measurement setting deferred collection", Boolean.valueOf(z2));
@@ -176,7 +176,7 @@ public final class C4009d4 extends AbstractC4170r5 {
     }
 
     @WorkerThread
-    /* renamed from: w */
+    /* JADX INFO: renamed from: w */
     public final SharedPreferences m5579w() {
         mo5848b();
         m5857o();
@@ -184,7 +184,7 @@ public final class C4009d4 extends AbstractC4170r5 {
     }
 
     @WorkerThread
-    /* renamed from: x */
+    /* JADX INFO: renamed from: x */
     public final Boolean m5580x() {
         mo5848b();
         if (m5579w().contains("measurement_enabled")) {
@@ -194,7 +194,7 @@ public final class C4009d4 extends AbstractC4170r5 {
     }
 
     @WorkerThread
-    /* renamed from: y */
+    /* JADX INFO: renamed from: y */
     public final C4004d m5581y() {
         mo5848b();
         return C4004d.m5563b(m5579w().getString("consent_settings", "G1"));

@@ -9,21 +9,21 @@ import androidx.annotation.NonNull;
 import com.google.android.material.color.MaterialColors;
 import com.google.android.material.progressindicator.CircularProgressIndicatorSpec;
 
-/* compiled from: CircularDrawingDelegate.java */
-/* renamed from: b.i.a.g.g.a, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.g.g.a, reason: use source file name */
+/* JADX INFO: compiled from: CircularDrawingDelegate.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class CircularDrawingDelegate extends DrawingDelegate<CircularProgressIndicatorSpec> {
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public int f11713c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public float f11714d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public float f11715e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public float f11716f;
 
     public CircularDrawingDelegate(@NonNull CircularProgressIndicatorSpec circularProgressIndicatorSpec) {
@@ -32,7 +32,7 @@ public final class CircularDrawingDelegate extends DrawingDelegate<CircularProgr
     }
 
     @Override // p007b.p225i.p226a.p341g.p348g.DrawingDelegate
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public void mo6117a(@NonNull Canvas canvas, @FloatRange(from = 0.0d, m75to = 1.0d) float f) {
         S s2 = this.f11734a;
         float f2 = (((CircularProgressIndicatorSpec) s2).indicatorSize / 2.0f) + ((CircularProgressIndicatorSpec) s2).indicatorInset;
@@ -52,7 +52,7 @@ public final class CircularDrawingDelegate extends DrawingDelegate<CircularProgr
     }
 
     @Override // p007b.p225i.p226a.p341g.p348g.DrawingDelegate
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public void mo6118b(@NonNull Canvas canvas, @NonNull Paint paint, @FloatRange(from = 0.0d, m75to = 1.0d) float f, @FloatRange(from = 0.0d, m75to = 1.0d) float f2, @ColorInt int i) {
         if (f == f2) {
             return;
@@ -83,7 +83,7 @@ public final class CircularDrawingDelegate extends DrawingDelegate<CircularProgr
     }
 
     @Override // p007b.p225i.p226a.p341g.p348g.DrawingDelegate
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public void mo6119c(@NonNull Canvas canvas, @NonNull Paint paint) {
         int iCompositeARGBWithAlpha = MaterialColors.compositeARGBWithAlpha(((CircularProgressIndicatorSpec) this.f11734a).trackColor, this.f11735b.getAlpha());
         paint.setStyle(Paint.Style.STROKE);
@@ -97,20 +97,20 @@ public final class CircularDrawingDelegate extends DrawingDelegate<CircularProgr
     }
 
     @Override // p007b.p225i.p226a.p341g.p348g.DrawingDelegate
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public int mo6120d() {
         CircularProgressIndicatorSpec circularProgressIndicatorSpec = (CircularProgressIndicatorSpec) this.f11734a;
         return (circularProgressIndicatorSpec.indicatorInset * 2) + circularProgressIndicatorSpec.indicatorSize;
     }
 
     @Override // p007b.p225i.p226a.p341g.p348g.DrawingDelegate
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public int mo6121e() {
         CircularProgressIndicatorSpec circularProgressIndicatorSpec = (CircularProgressIndicatorSpec) this.f11734a;
         return (circularProgressIndicatorSpec.indicatorInset * 2) + circularProgressIndicatorSpec.indicatorSize;
     }
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final void m6122f(Canvas canvas, Paint paint, float f, float f2, float f3, boolean z2, RectF rectF) {
         float f4 = z2 ? -1.0f : 1.0f;
         canvas.save();

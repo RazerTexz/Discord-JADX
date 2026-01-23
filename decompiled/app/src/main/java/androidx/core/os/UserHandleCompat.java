@@ -9,8 +9,8 @@ import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 
+/* JADX INFO: loaded from: classes.dex */
 @RequiresApi(17)
-/* loaded from: classes.dex */
 public class UserHandleCompat {
 
     @Nullable
@@ -33,7 +33,7 @@ public class UserHandleCompat {
     private UserHandleCompat() {
     }
 
-    private static Method getGetUserIdMethod() throws NoSuchMethodException, SecurityException {
+    private static Method getGetUserIdMethod() throws NoSuchMethodException {
         if (sGetUserIdMethod == null) {
             Method declaredMethod = UserHandle.class.getDeclaredMethod("getUserId", Integer.TYPE);
             sGetUserIdMethod = declaredMethod;
@@ -42,7 +42,7 @@ public class UserHandleCompat {
         return sGetUserIdMethod;
     }
 
-    private static Constructor<UserHandle> getUserHandleConstructor() throws NoSuchMethodException, SecurityException {
+    private static Constructor<UserHandle> getUserHandleConstructor() throws NoSuchMethodException {
         if (sUserHandleConstructor == null) {
             Constructor<UserHandle> declaredConstructor = UserHandle.class.getDeclaredConstructor(Integer.TYPE);
             sUserHandleConstructor = declaredConstructor;

@@ -32,8 +32,8 @@ import java.util.WeakHashMap;
 import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserException;
 
+/* JADX INFO: loaded from: classes.dex */
 @RestrictTo({RestrictTo.Scope.LIBRARY_GROUP_PREFIX})
-/* loaded from: classes.dex */
 public final class ResourceManagerInternal {
     private static final boolean DEBUG = false;
     private static ResourceManagerInternal INSTANCE = null;
@@ -168,10 +168,10 @@ public final class ResourceManagerInternal {
     }
 
     private static long createCacheKey(TypedValue typedValue) {
-        return (typedValue.assetCookie << 32) | typedValue.data;
+        return (((long) typedValue.assetCookie) << 32) | ((long) typedValue.data);
     }
 
-    private Drawable createDrawableIfNeeded(@NonNull Context context, @DrawableRes int i) throws Resources.NotFoundException {
+    private Drawable createDrawableIfNeeded(@NonNull Context context, @DrawableRes int i) {
         if (this.mTypedValue == null) {
             this.mTypedValue = new TypedValue();
         }
@@ -255,7 +255,7 @@ public final class ResourceManagerInternal {
         return (drawable instanceof VectorDrawableCompat) || PLATFORM_VD_CLAZZ.equals(drawable.getClass().getName());
     }
 
-    private Drawable loadDrawableFromDelegates(@NonNull Context context, @DrawableRes int i) throws Resources.NotFoundException {
+    private Drawable loadDrawableFromDelegates(@NonNull Context context, @DrawableRes int i) {
         int next;
         SimpleArrayMap<String, InflateDelegate> simpleArrayMap = this.mDelegates;
         if (simpleArrayMap == null || simpleArrayMap.isEmpty()) {

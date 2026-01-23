@@ -6,12 +6,12 @@ import okhttp3.WebSocket;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: RtcControlSocket.kt */
-/* renamed from: b.a.q.n0.d, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.a.q.n0.d, reason: use source file name */
+/* JADX INFO: compiled from: RtcControlSocket.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class RtcControlSocket4 extends Lambda implements Function1<WebSocket, Unit> {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static final RtcControlSocket4 f1803j = new RtcControlSocket4();
 
     public RtcControlSocket4() {

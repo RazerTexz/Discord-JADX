@@ -5,9 +5,9 @@ import com.discord.widgets.stage.StageRoles;
 import com.discord.widgets.voice.model.CallModel;
 import kotlin.jvm.functions.Function0;
 
-/* compiled from: VoiceControlsSheetView.kt */
-/* renamed from: com.discord.widgets.voice.controls.VoiceControlsSheetView$configureRaiseHandButton$$inlined$apply$lambda$1, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: com.discord.widgets.voice.controls.VoiceControlsSheetView$configureRaiseHandButton$$inlined$apply$lambda$1, reason: use source file name */
+/* JADX INFO: compiled from: VoiceControlsSheetView.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class VoiceControlsSheetView4 implements View.OnClickListener {
     public final /* synthetic */ boolean $isUpdatingRequestToSpeak$inlined;
     public final /* synthetic */ CallModel $model$inlined;

@@ -2,7 +2,7 @@ package org.webrtc;
 
 import android.media.MediaRecorder;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public interface CameraVideoCapturer extends VideoCapturer {
 
     public interface CameraEventsHandler {
@@ -29,7 +29,7 @@ public interface CameraVideoCapturer extends VideoCapturer {
         private int freezePeriodCount;
         private final SurfaceTextureHelper surfaceTextureHelper;
 
-        /* renamed from: org.webrtc.CameraVideoCapturer$CameraStatistics$1 */
+        /* JADX INFO: renamed from: org.webrtc.CameraVideoCapturer$CameraStatistics$1 */
         public class RunnableC129591 implements Runnable {
             public RunnableC129591() {
             }

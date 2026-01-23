@@ -15,8 +15,8 @@ import com.discord.utilities.mg_recycler.MGRecyclerAdapter;
 import com.discord.utilities.mg_recycler.MGRecyclerViewHolder;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: WidgetUserProfileEmptyListItem.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: WidgetUserProfileEmptyListItem.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class WidgetUserProfileEmptyListItem<T extends MGRecyclerAdapter<D>, D> extends MGRecyclerViewHolder<T, D> {
     private final WidgetUserProfileAdapterItemEmptyBinding binding;
 

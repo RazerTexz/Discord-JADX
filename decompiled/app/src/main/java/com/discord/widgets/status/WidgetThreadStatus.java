@@ -34,21 +34,21 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 import p507d0.p592z.p594d.Reflection2;
 
-/* compiled from: WidgetThreadStatus.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetThreadStatus.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetThreadStatus extends AppFragment {
     public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetThreadStatus.class, "binding", "getBinding()Lcom/discord/databinding/WidgetThreadStatusBinding;", 0)};
 
-    /* renamed from: binding$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
 
-    /* renamed from: viewModel$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: viewModel$delegate, reason: from kotlin metadata */
     private final Lazy viewModel;
 
-    /* compiled from: WidgetThreadStatus.kt */
+    /* JADX INFO: compiled from: WidgetThreadStatus.kt */
     public static abstract class Event {
 
-        /* compiled from: WidgetThreadStatus.kt */
+        /* JADX INFO: compiled from: WidgetThreadStatus.kt */
         public static final /* data */ class Error extends Event {
             private final int code;
 
@@ -64,7 +64,7 @@ public final class WidgetThreadStatus extends AppFragment {
                 return error.copy(i);
             }
 
-            /* renamed from: component1, reason: from getter */
+            /* JADX INFO: renamed from: component1, reason: from getter */
             public final int getCode() {
                 return this.code;
             }
@@ -101,8 +101,8 @@ public final class WidgetThreadStatus extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetThreadStatus.kt */
-    /* renamed from: com.discord.widgets.status.WidgetThreadStatus$onViewBoundOrOnResume$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.status.WidgetThreadStatus$onViewBoundOrOnResume$1 */
+    /* JADX INFO: compiled from: WidgetThreadStatus.kt */
     public static final class C101111 extends Lambda implements Function1<WidgetThreadStatusViewModel.ViewState, Unit> {
         public C101111() {
             super(1);
@@ -114,15 +114,15 @@ public final class WidgetThreadStatus extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(WidgetThreadStatusViewModel.ViewState viewState) {
             Intrinsics3.checkNotNullParameter(viewState, "viewState");
             WidgetThreadStatus.access$updateView(WidgetThreadStatus.this, viewState);
         }
     }
 
-    /* compiled from: WidgetThreadStatus.kt */
-    /* renamed from: com.discord.widgets.status.WidgetThreadStatus$onViewBoundOrOnResume$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.status.WidgetThreadStatus$onViewBoundOrOnResume$2 */
+    /* JADX INFO: compiled from: WidgetThreadStatus.kt */
     public static final /* synthetic */ class C101122 extends FunctionReferenceImpl implements Function1<Event, Unit> {
         public C101122(WidgetThreadStatus widgetThreadStatus) {
             super(1, widgetThreadStatus, WidgetThreadStatus.class, "handleEvent", "handleEvent(Lcom/discord/widgets/status/WidgetThreadStatus$Event;)V", 0);
@@ -134,15 +134,15 @@ public final class WidgetThreadStatus extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Event event) {
             Intrinsics3.checkNotNullParameter(event, "p1");
             WidgetThreadStatus.access$handleEvent((WidgetThreadStatus) this.receiver, event);
         }
     }
 
-    /* compiled from: WidgetThreadStatus.kt */
-    /* renamed from: com.discord.widgets.status.WidgetThreadStatus$updateView$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.status.WidgetThreadStatus$updateView$1 */
+    /* JADX INFO: compiled from: WidgetThreadStatus.kt */
     public static final class ViewOnClickListenerC101131 implements View.OnClickListener {
         public ViewOnClickListenerC101131() {
         }
@@ -153,8 +153,8 @@ public final class WidgetThreadStatus extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetThreadStatus.kt */
-    /* renamed from: com.discord.widgets.status.WidgetThreadStatus$updateView$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.status.WidgetThreadStatus$updateView$2 */
+    /* JADX INFO: compiled from: WidgetThreadStatus.kt */
     public static final class ViewOnClickListenerC101142 implements View.OnClickListener {
         public ViewOnClickListenerC101142() {
         }

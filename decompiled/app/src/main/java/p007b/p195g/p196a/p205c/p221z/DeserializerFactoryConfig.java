@@ -8,24 +8,24 @@ import p007b.p195g.p196a.p205c.p206a0.KeyDeserializers;
 import p007b.p195g.p196a.p205c.p206a0.ValueInstantiators;
 import p007b.p195g.p196a.p205c.p206a0.p208l.StdKeyDeserializers;
 
-/* compiled from: DeserializerFactoryConfig.java */
-/* renamed from: b.g.a.c.z.j, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.g.a.c.z.j, reason: use source file name */
+/* JADX INFO: compiled from: DeserializerFactoryConfig.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class DeserializerFactoryConfig implements Serializable {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static final Deserializers[] f5090j = new Deserializers[0];
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public static final BeanDeserializerModifier[] f5091k = new BeanDeserializerModifier[0];
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public static final AbstractTypeResolver[] f5092l = new AbstractTypeResolver[0];
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public static final ValueInstantiators[] f5093m = new ValueInstantiators[0];
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public static final KeyDeserializers[] f5094n = {new StdKeyDeserializers()};
     private static final long serialVersionUID = 1;
     public final Deserializers[] _additionalDeserializers = f5090j;

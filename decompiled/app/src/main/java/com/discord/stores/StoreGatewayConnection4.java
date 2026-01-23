@@ -4,9 +4,9 @@ import com.discord.gateway.GatewaySocket;
 import kotlin.jvm.functions.Function0;
 import p507d0.p592z.p594d.FunctionReferenceImpl;
 
-/* compiled from: StoreGatewayConnection.kt */
-/* renamed from: com.discord.stores.StoreGatewayConnection$buildGatewaySocket$socket$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.stores.StoreGatewayConnection$buildGatewaySocket$socket$1, reason: use source file name */
+/* JADX INFO: compiled from: StoreGatewayConnection.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final /* synthetic */ class StoreGatewayConnection4 extends FunctionReferenceImpl implements Function0<GatewaySocket.IdentifyData> {
     public StoreGatewayConnection4(StoreGatewayConnection storeGatewayConnection) {
         super(0, storeGatewayConnection, StoreGatewayConnection.class, "getIdentifyData", "getIdentifyData()Lcom/discord/gateway/GatewaySocket$IdentifyData;", 0);

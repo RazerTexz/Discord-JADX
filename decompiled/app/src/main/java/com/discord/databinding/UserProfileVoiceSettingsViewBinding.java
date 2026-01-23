@@ -8,26 +8,26 @@ import androidx.viewbinding.ViewBinding;
 import com.discord.views.calls.VolumeSliderView;
 import com.google.android.material.switchmaterial.SwitchMaterial;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public final class UserProfileVoiceSettingsViewBinding implements ViewBinding {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     @NonNull
     public final LinearLayout f15355a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     @NonNull
     public final SwitchMaterial f15356b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     @NonNull
     public final SwitchMaterial f15357c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     @NonNull
     public final TextView f15358d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     @NonNull
     public final VolumeSliderView f15359e;
 

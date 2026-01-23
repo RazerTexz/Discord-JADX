@@ -101,12 +101,12 @@ import p658rx.functions.Action1;
 import p658rx.functions.Func2;
 import p658rx.subjects.BehaviorSubject;
 
-/* compiled from: AutocompleteViewModel.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: AutocompleteViewModel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class AutocompleteViewModel extends AppViewModel<AutocompleteViewModel7> {
     public static final String COMMAND_DISCOVER_TOKEN = "/";
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     public static final int DEFAULT_PLACEHOLDER_COUNT = 3;
     private final BehaviorSubject<AutocompleteInputSelectionModel> autocompleteInputSelectionModelSubject;
@@ -131,8 +131,8 @@ public final class AutocompleteViewModel extends AppViewModel<AutocompleteViewMo
     private final StoreExperiments storeExperiments;
     private StoreState storeState;
 
-    /* compiled from: AutocompleteViewModel.kt */
-    /* renamed from: com.discord.widgets.chat.input.autocomplete.AutocompleteViewModel$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.input.autocomplete.AutocompleteViewModel$1 */
+    /* JADX INFO: compiled from: AutocompleteViewModel.kt */
     public static final class C77631<T> implements Action1<Throwable> {
         public static final C77631 INSTANCE = new C77631();
 
@@ -141,14 +141,14 @@ public final class AutocompleteViewModel extends AppViewModel<AutocompleteViewMo
             call2(th);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final void call2(Throwable th) {
             Logger.e$default(AppLog.f14950g, "Autocomplete Store Error", th, null, 4, null);
         }
     }
 
-    /* compiled from: AutocompleteViewModel.kt */
-    /* renamed from: com.discord.widgets.chat.input.autocomplete.AutocompleteViewModel$10 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.input.autocomplete.AutocompleteViewModel$10 */
+    /* JADX INFO: compiled from: AutocompleteViewModel.kt */
     public static final class C776410<T> implements Action1<Tuples2<? extends ApplicationCommandOption, ? extends String>> {
         public C776410() {
         }
@@ -158,14 +158,14 @@ public final class AutocompleteViewModel extends AppViewModel<AutocompleteViewMo
             call2((Tuples2<ApplicationCommandOption, String>) tuples2);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final void call2(Tuples2<ApplicationCommandOption, String> tuples2) {
             AutocompleteViewModel.this.getStoreApplicationCommands().setAutocompleteLoading(tuples2.getFirst().getName(), tuples2.getSecond());
         }
     }
 
-    /* compiled from: AutocompleteViewModel.kt */
-    /* renamed from: com.discord.widgets.chat.input.autocomplete.AutocompleteViewModel$11 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.input.autocomplete.AutocompleteViewModel$11 */
+    /* JADX INFO: compiled from: AutocompleteViewModel.kt */
     public static final class C776511 extends Lambda implements Function1<Tuples2<? extends ApplicationCommandOption, ? extends String>, Unit> {
         public C776511() {
             super(1);
@@ -177,14 +177,14 @@ public final class AutocompleteViewModel extends AppViewModel<AutocompleteViewMo
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Tuples2<ApplicationCommandOption, String> tuples2) {
             AutocompleteViewModel.access$getEvents$p(AutocompleteViewModel.this).onNext(new AutocompleteViewModel5.RequestAutocompleteData(tuples2.getFirst()));
         }
     }
 
-    /* compiled from: AutocompleteViewModel.kt */
-    /* renamed from: com.discord.widgets.chat.input.autocomplete.AutocompleteViewModel$12 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.input.autocomplete.AutocompleteViewModel$12 */
+    /* JADX INFO: compiled from: AutocompleteViewModel.kt */
     public static final class C776612<T, R> implements Func1<AutocompleteInputSelectionModel, String> {
         public static final C776612 INSTANCE = new C776612();
 
@@ -193,7 +193,7 @@ public final class AutocompleteViewModel extends AppViewModel<AutocompleteViewMo
             return call2(autocompleteInputSelectionModel);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final String call2(AutocompleteInputSelectionModel autocompleteInputSelectionModel) {
             MentionToken autocompleteToken = autocompleteInputSelectionModel.getAutocompleteToken();
             if (autocompleteToken != null) {
@@ -203,8 +203,8 @@ public final class AutocompleteViewModel extends AppViewModel<AutocompleteViewMo
         }
     }
 
-    /* compiled from: AutocompleteViewModel.kt */
-    /* renamed from: com.discord.widgets.chat.input.autocomplete.AutocompleteViewModel$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.input.autocomplete.AutocompleteViewModel$2 */
+    /* JADX INFO: compiled from: AutocompleteViewModel.kt */
     public static final /* synthetic */ class C77672 extends FunctionReferenceImpl implements Function1<StoreState, Unit> {
         public C77672(AutocompleteViewModel autocompleteViewModel) {
             super(1, autocompleteViewModel, AutocompleteViewModel.class, "handleStoreState", "handleStoreState(Lcom/discord/widgets/chat/input/autocomplete/AutocompleteViewModel$StoreState;)V", 0);
@@ -216,15 +216,15 @@ public final class AutocompleteViewModel extends AppViewModel<AutocompleteViewMo
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(StoreState storeState) {
             Intrinsics3.checkNotNullParameter(storeState, "p1");
             AutocompleteViewModel.access$handleStoreState((AutocompleteViewModel) this.receiver, storeState);
         }
     }
 
-    /* compiled from: AutocompleteViewModel.kt */
-    /* renamed from: com.discord.widgets.chat.input.autocomplete.AutocompleteViewModel$3 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.input.autocomplete.AutocompleteViewModel$3 */
+    /* JADX INFO: compiled from: AutocompleteViewModel.kt */
     public static final class C77683<T1, T2, R> implements Func2<SelectionState, MentionInputModel, InputSelectionModel> {
         public C77683() {
         }
@@ -234,7 +234,7 @@ public final class AutocompleteViewModel extends AppViewModel<AutocompleteViewMo
             return call2(selectionState, mentionInputModel);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final InputSelectionModel call2(SelectionState selectionState, MentionInputModel mentionInputModel) {
             if (!Intrinsics3.areEqual(selectionState.getInput(), mentionInputModel.getInput().toString())) {
                 return null;
@@ -246,8 +246,8 @@ public final class AutocompleteViewModel extends AppViewModel<AutocompleteViewMo
         }
     }
 
-    /* compiled from: AutocompleteViewModel.kt */
-    /* renamed from: com.discord.widgets.chat.input.autocomplete.AutocompleteViewModel$4 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.input.autocomplete.AutocompleteViewModel$4 */
+    /* JADX INFO: compiled from: AutocompleteViewModel.kt */
     public static final class C77694<T> implements Action1<Throwable> {
         public static final C77694 INSTANCE = new C77694();
 
@@ -256,14 +256,14 @@ public final class AutocompleteViewModel extends AppViewModel<AutocompleteViewMo
             call2(th);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final void call2(Throwable th) {
             Logger.e$default(AppLog.f14950g, "Autocomplete Input Selection Model Error", th, null, 4, null);
         }
     }
 
-    /* compiled from: AutocompleteViewModel.kt */
-    /* renamed from: com.discord.widgets.chat.input.autocomplete.AutocompleteViewModel$5 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.input.autocomplete.AutocompleteViewModel$5 */
+    /* JADX INFO: compiled from: AutocompleteViewModel.kt */
     public static final /* synthetic */ class C77705 extends FunctionReferenceImpl implements Function1<InputSelectionModel, Unit> {
         public C77705(AutocompleteViewModel autocompleteViewModel) {
             super(1, autocompleteViewModel, AutocompleteViewModel.class, "handleInputSelectionModel", "handleInputSelectionModel(Lcom/discord/widgets/chat/input/models/InputSelectionModel;)V", 0);
@@ -275,15 +275,15 @@ public final class AutocompleteViewModel extends AppViewModel<AutocompleteViewMo
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(InputSelectionModel inputSelectionModel) throws IOException {
             Intrinsics3.checkNotNullParameter(inputSelectionModel, "p1");
             AutocompleteViewModel.access$handleInputSelectionModel((AutocompleteViewModel) this.receiver, inputSelectionModel);
         }
     }
 
-    /* compiled from: AutocompleteViewModel.kt */
-    /* renamed from: com.discord.widgets.chat.input.autocomplete.AutocompleteViewModel$6 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.input.autocomplete.AutocompleteViewModel$6 */
+    /* JADX INFO: compiled from: AutocompleteViewModel.kt */
     public static final class C77716<T> implements Action1<Throwable> {
         public static final C77716 INSTANCE = new C77716();
 
@@ -292,14 +292,14 @@ public final class AutocompleteViewModel extends AppViewModel<AutocompleteViewMo
             call2(th);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final void call2(Throwable th) {
             Logger.e$default(AppLog.f14950g, "Full Autocomplete Model Error", th, null, 4, null);
         }
     }
 
-    /* compiled from: AutocompleteViewModel.kt */
-    /* renamed from: com.discord.widgets.chat.input.autocomplete.AutocompleteViewModel$7 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.input.autocomplete.AutocompleteViewModel$7 */
+    /* JADX INFO: compiled from: AutocompleteViewModel.kt */
     public static final /* synthetic */ class C77727 extends FunctionReferenceImpl implements Function1<AutocompleteInputSelectionModel, Unit> {
         public C77727(AutocompleteViewModel autocompleteViewModel) {
             super(1, autocompleteViewModel, AutocompleteViewModel.class, "handleAutocompleteInputSelectionModel", "handleAutocompleteInputSelectionModel(Lcom/discord/widgets/chat/input/models/AutocompleteInputSelectionModel;)V", 0);
@@ -311,15 +311,15 @@ public final class AutocompleteViewModel extends AppViewModel<AutocompleteViewMo
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(AutocompleteInputSelectionModel autocompleteInputSelectionModel) {
             Intrinsics3.checkNotNullParameter(autocompleteInputSelectionModel, "p1");
             AutocompleteViewModel.access$handleAutocompleteInputSelectionModel((AutocompleteViewModel) this.receiver, autocompleteInputSelectionModel);
         }
     }
 
-    /* compiled from: AutocompleteViewModel.kt */
-    /* renamed from: com.discord.widgets.chat.input.autocomplete.AutocompleteViewModel$8 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.input.autocomplete.AutocompleteViewModel$8 */
+    /* JADX INFO: compiled from: AutocompleteViewModel.kt */
     public static final class C77738<T> implements Action1<Throwable> {
         public static final C77738 INSTANCE = new C77738();
 
@@ -328,14 +328,14 @@ public final class AutocompleteViewModel extends AppViewModel<AutocompleteViewMo
             call2(th);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final void call2(Throwable th) {
             Logger.e$default(AppLog.f14950g, "Full Autocomplete Model Error", th, null, 4, null);
         }
     }
 
-    /* compiled from: AutocompleteViewModel.kt */
-    /* renamed from: com.discord.widgets.chat.input.autocomplete.AutocompleteViewModel$9 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.input.autocomplete.AutocompleteViewModel$9 */
+    /* JADX INFO: compiled from: AutocompleteViewModel.kt */
     public static final class C77749<T, R> implements Func1<AutocompleteInputSelectionModel, Tuples2<? extends ApplicationCommandOption, ? extends String>> {
         public static final C77749 INSTANCE = new C77749();
 
@@ -344,7 +344,7 @@ public final class AutocompleteViewModel extends AppViewModel<AutocompleteViewMo
             return call2(autocompleteInputSelectionModel);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final Tuples2<ApplicationCommandOption, String> call2(AutocompleteInputSelectionModel autocompleteInputSelectionModel) {
             ApplicationCommandOption selectedCommandOption;
             InputSelectionModel inputSelectionModel = autocompleteInputSelectionModel.getInputSelectionModel();
@@ -360,7 +360,7 @@ public final class AutocompleteViewModel extends AppViewModel<AutocompleteViewMo
         }
     }
 
-    /* compiled from: AutocompleteViewModel.kt */
+    /* JADX INFO: compiled from: AutocompleteViewModel.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -388,7 +388,7 @@ public final class AutocompleteViewModel extends AppViewModel<AutocompleteViewMo
         }
     }
 
-    /* compiled from: AutocompleteViewModel.kt */
+    /* JADX INFO: compiled from: AutocompleteViewModel.kt */
     public static final /* data */ class InputState {
         private Map<Long, Integer> applicationsPosition;
         private final CharSequence currentInput;
@@ -412,6 +412,7 @@ public final class AutocompleteViewModel extends AppViewModel<AutocompleteViewMo
             this.inputAutocompleteMap = map2;
         }
 
+        /* JADX WARN: Multi-variable type inference failed */
         public static /* synthetic */ InputState copy$default(InputState inputState, CharSequence charSequence, ApplicationCommand applicationCommand, Map map, ApplicationCommandOption applicationCommandOption, Map map2, int i, Object obj) {
             if ((i & 1) != 0) {
                 charSequence = inputState.currentInput;
@@ -434,12 +435,12 @@ public final class AutocompleteViewModel extends AppViewModel<AutocompleteViewMo
             return inputState.copy(charSequence, applicationCommand2, map3, applicationCommandOption2, map2);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final CharSequence getCurrentInput() {
             return this.currentInput;
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final ApplicationCommand getSelectedCommand() {
             return this.selectedCommand;
         }
@@ -448,7 +449,7 @@ public final class AutocompleteViewModel extends AppViewModel<AutocompleteViewMo
             return this.applicationsPosition;
         }
 
-        /* renamed from: component4, reason: from getter */
+        /* JADX INFO: renamed from: component4, reason: from getter */
         public final ApplicationCommandOption getShowErrorForOption() {
             return this.showErrorForOption;
         }
@@ -531,7 +532,7 @@ public final class AutocompleteViewModel extends AppViewModel<AutocompleteViewMo
         }
     }
 
-    /* compiled from: AutocompleteViewModel.kt */
+    /* JADX INFO: compiled from: AutocompleteViewModel.kt */
     public static final /* data */ class SelectionState {
         private final String input;
         private final Ranges2 selection;
@@ -553,12 +554,12 @@ public final class AutocompleteViewModel extends AppViewModel<AutocompleteViewMo
             return selectionState.copy(str, ranges2);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final String getInput() {
             return this.input;
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final Ranges2 getSelection() {
             return this.selection;
         }
@@ -605,7 +606,7 @@ public final class AutocompleteViewModel extends AppViewModel<AutocompleteViewMo
         }
     }
 
-    /* compiled from: AutocompleteViewModel.kt */
+    /* JADX INFO: compiled from: AutocompleteViewModel.kt */
     public static final /* data */ class StoreState {
         private final List<Application> applications;
         private final Map<LeadingIdentifier, Set<Autocompletable>> autocompletables;
@@ -640,11 +641,12 @@ public final class AutocompleteViewModel extends AppViewModel<AutocompleteViewMo
             this.frecencyCommands = list5;
         }
 
+        /* JADX WARN: Multi-variable type inference failed */
         public static /* synthetic */ StoreState copy$default(StoreState storeState, long j, List list, Channel channel, List list2, List list3, Map map, Map map2, WidgetChatInputDiscoveryCommandsModel widgetChatInputDiscoveryCommandsModel, List list4, List list5, int i, Object obj) {
             return storeState.copy((i & 1) != 0 ? storeState.userId : j, (i & 2) != 0 ? storeState.userRoles : list, (i & 4) != 0 ? storeState.channel : channel, (i & 8) != 0 ? storeState.queriedCommands : list2, (i & 16) != 0 ? storeState.applications : list3, (i & 32) != 0 ? storeState.commandOptionAutocompleteItems : map, (i & 64) != 0 ? storeState.autocompletables : map2, (i & 128) != 0 ? storeState.browserCommands : widgetChatInputDiscoveryCommandsModel, (i & 256) != 0 ? storeState.frecencyCommandIds : list4, (i & 512) != 0 ? storeState.frecencyCommands : list5);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final long getUserId() {
             return this.userId;
         }
@@ -657,7 +659,7 @@ public final class AutocompleteViewModel extends AppViewModel<AutocompleteViewMo
             return this.userRoles;
         }
 
-        /* renamed from: component3, reason: from getter */
+        /* JADX INFO: renamed from: component3, reason: from getter */
         public final Channel getChannel() {
             return this.channel;
         }
@@ -678,7 +680,7 @@ public final class AutocompleteViewModel extends AppViewModel<AutocompleteViewMo
             return this.autocompletables;
         }
 
-        /* renamed from: component8, reason: from getter */
+        /* JADX INFO: renamed from: component8, reason: from getter */
         public final WidgetChatInputDiscoveryCommandsModel getBrowserCommands() {
             return this.browserCommands;
         }
@@ -1690,19 +1692,17 @@ public final class AutocompleteViewModel extends AppViewModel<AutocompleteViewMo
         return new MessageContent(strReplaceAutocompleteDataWithServerValues.subSequence(i, length + 1).toString(), arrayList);
     }
 
-    /* JADX WARN: Multi-variable type inference failed */
-    /* JADX WARN: Type inference failed for: r2v13, types: [java.lang.CharSequence] */
     @MainThread
     public final void selectAutocompleteItem(Autocompletable autocompletable) {
         MentionToken autocompleteToken;
         InputSelectionModel inputSelectionModel;
         MentionInputModel inputModel;
-        ?? input;
+        CharSequence input;
         Ranges2 value;
         MentionInputModel inputModel2;
         CharSequence input2;
         Intrinsics3.checkNotNullParameter(autocompletable, "autocompletable");
-        String str = "";
+        CharSequence charSequence = "";
         if (autocompletable instanceof ApplicationCommandAutocompletable) {
             StringBuilder sb = new StringBuilder();
             sb.append(autocompletable.leadingIdentifier().getIdentifier());
@@ -1720,20 +1720,20 @@ public final class AutocompleteViewModel extends AppViewModel<AutocompleteViewMo
         if (!(inputSelectionModel3 instanceof InputSelectionModel.CommandInputSelectionModel)) {
             if ((inputSelectionModel3 instanceof InputSelectionModel.MessageInputSelectionModel) || inputSelectionModel3 == null) {
                 AutocompleteInputSelectionModel autocompleteInputSelectionModel = this.lastAutocompleteInputSelectionModel;
-                if (autocompleteInputSelectionModel != null && (inputSelectionModel = autocompleteInputSelectionModel.getInputSelectionModel()) != null && (inputModel = inputSelectionModel.getInputModel()) != null && (input = inputModel.getInput()) != 0) {
-                    str = input;
+                if (autocompleteInputSelectionModel != null && (inputSelectionModel = autocompleteInputSelectionModel.getInputSelectionModel()) != null && (inputModel = inputSelectionModel.getInputModel()) != null && (input = inputModel.getInput()) != null) {
+                    charSequence = input;
                 }
                 AutocompleteInputSelectionModel autocompleteInputSelectionModel2 = this.lastAutocompleteInputSelectionModel;
                 autocompleteToken = autocompleteInputSelectionModel2 != null ? autocompleteInputSelectionModel2.getAutocompleteToken() : null;
                 if (!autocompletable.getInputTextMatchers().isEmpty()) {
-                    Ranges2 ranges2 = autocompleteToken != null ? new Ranges2(autocompleteToken.getStartIndex(), autocompleteToken.getToken().length() + autocompleteToken.getStartIndex()) : new Ranges2(str.length(), str.length());
-                    String str2 = (String) _Collections.first((List) autocompletable.getInputTextMatchers());
-                    String str3 = str2 + ' ';
+                    Ranges2 ranges2 = autocompleteToken != null ? new Ranges2(autocompleteToken.getStartIndex(), autocompleteToken.getToken().length() + autocompleteToken.getStartIndex()) : new Ranges2(charSequence.length(), charSequence.length());
+                    String str = (String) _Collections.first((List) autocompletable.getInputTextMatchers());
+                    String str2 = str + ' ';
                     InputState inputState = this.inputState;
                     Map mutableMap = Maps6.toMutableMap(inputState.getInputAutocompleteMap());
-                    mutableMap.put(new Ranges2(ranges2.getFirst(), str2.length() + ranges2.getFirst()), autocompletable);
+                    mutableMap.put(new Ranges2(ranges2.getFirst(), str.length() + ranges2.getFirst()), autocompletable);
                     this.inputState = InputState.copy$default(inputState, null, null, null, null, mutableMap, 15, null);
-                    this.editTextAction.onNext(new InputEditTextAction.InsertText(str, str3, ranges2, str3.length() + ranges2.getFirst()));
+                    this.editTextAction.onNext(new InputEditTextAction.InsertText(charSequence, str2, ranges2, str2.length() + ranges2.getFirst()));
                     return;
                 }
                 return;
@@ -1747,8 +1747,8 @@ public final class AutocompleteViewModel extends AppViewModel<AutocompleteViewMo
         if (!(!autocompletable.getInputTextMatchers().isEmpty()) || selectedCommandOption == null || optionRange == null) {
             return;
         }
-        String str4 = (String) _Collections.first((List) autocompletable.getInputTextMatchers());
-        String str5 = str4 + ' ';
+        String str3 = (String) _Collections.first((List) autocompletable.getInputTextMatchers());
+        String str4 = str3 + ' ';
         Ranges2 selection = inputSelectionModel3.getSelection();
         if (InputSelectionModel2.hasSelectedFreeformInput(inputSelectionModel3)) {
             AutocompleteInputSelectionModel autocompleteInputSelectionModel3 = this.lastAutocompleteInputSelectionModel;
@@ -1759,10 +1759,10 @@ public final class AutocompleteViewModel extends AppViewModel<AutocompleteViewMo
         }
         InputState inputState2 = this.inputState;
         Map mutableMap2 = Maps6.toMutableMap(inputState2.getInputAutocompleteMap());
-        mutableMap2.put(new Ranges2(optionRange.getValue().getFirst(), str4.length() + optionRange.getValue().getFirst()), autocompletable);
+        mutableMap2.put(new Ranges2(optionRange.getValue().getFirst(), str3.length() + optionRange.getValue().getFirst()), autocompletable);
         this.inputState = InputState.copy$default(inputState2, null, null, null, null, mutableMap2, 15, null);
         InputSelectionModel.CommandInputSelectionModel commandInputSelectionModel2 = (InputSelectionModel.CommandInputSelectionModel) inputSelectionModel3;
-        this.editTextAction.onNext(new InputEditTextAction.InsertText(commandInputSelectionModel2.getInputModel().getInput(), str5, value, (str5.length() + commandInputSelectionModel2.getInputModel().getInput().length()) - (value.getLast() - value.getFirst())));
+        this.editTextAction.onNext(new InputEditTextAction.InsertText(commandInputSelectionModel2.getInputModel().getInput(), str4, value, (str4.length() + commandInputSelectionModel2.getInputModel().getInput().length()) - (value.getLast() - value.getFirst())));
     }
 
     public final void selectCommandBrowserApplication(Application application) {

@@ -11,29 +11,29 @@ import p507d0.p580t.Sets5;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: MemberScope.kt */
-/* renamed from: d0.e0.p.d.m0.k.a0.i, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.k.a0.i, reason: use source file name */
+/* JADX INFO: compiled from: MemberScope.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public interface MemberScope3 extends ResolutionScope {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final a f24369a = a.f24370a;
 
-    /* compiled from: MemberScope.kt */
-    /* renamed from: d0.e0.p.d.m0.k.a0.i$a */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.k.a0.i$a */
+    /* JADX INFO: compiled from: MemberScope.kt */
     public static final class a {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public static final /* synthetic */ a f24370a = new a();
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public static final Function1<Name, Boolean> f24371b = C13328a.f24372j;
 
-        /* compiled from: MemberScope.kt */
-        /* renamed from: d0.e0.p.d.m0.k.a0.i$a$a, reason: collision with other inner class name */
+        /* JADX INFO: renamed from: d0.e0.p.d.m0.k.a0.i$a$a, reason: collision with other inner class name */
+        /* JADX INFO: compiled from: MemberScope.kt */
         public static final class C13328a extends Lambda implements Function1<Name, Boolean> {
 
-            /* renamed from: j */
+            /* JADX INFO: renamed from: j */
             public static final C13328a f24372j = new C13328a();
 
             public C13328a() {
@@ -45,7 +45,7 @@ public interface MemberScope3 extends ResolutionScope {
                 return Boolean.valueOf(invoke2(name));
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final boolean invoke2(Name name) {
                 Intrinsics3.checkNotNullParameter(name, "it");
                 return true;
@@ -57,11 +57,11 @@ public interface MemberScope3 extends ResolutionScope {
         }
     }
 
-    /* compiled from: MemberScope.kt */
-    /* renamed from: d0.e0.p.d.m0.k.a0.i$b */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.k.a0.i$b */
+    /* JADX INFO: compiled from: MemberScope.kt */
     public static final class b extends MemberScopeImpl {
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public static final b f24373b = new b();
 
         @Override // p507d0.p513e0.p514p.p515d.p517m0.p552k.p553a0.MemberScopeImpl, p507d0.p513e0.p514p.p515d.p517m0.p552k.p553a0.MemberScope3

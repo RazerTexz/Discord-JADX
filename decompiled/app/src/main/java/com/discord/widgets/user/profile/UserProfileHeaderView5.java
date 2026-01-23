@@ -4,9 +4,9 @@ import kotlin.Unit;
 import kotlin.jvm.functions.Function1;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: UserProfileHeaderView.kt */
-/* renamed from: com.discord.widgets.user.profile.UserProfileHeaderView$onAvatarRepresentativeColorUpdated$1, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: com.discord.widgets.user.profile.UserProfileHeaderView$onAvatarRepresentativeColorUpdated$1, reason: use source file name */
+/* JADX INFO: compiled from: UserProfileHeaderView.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class UserProfileHeaderView5 extends Lambda implements Function1<Integer, Unit> {
     public static final UserProfileHeaderView5 INSTANCE = new UserProfileHeaderView5();
 

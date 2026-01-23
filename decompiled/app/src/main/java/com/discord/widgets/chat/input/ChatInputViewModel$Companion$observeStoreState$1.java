@@ -31,8 +31,8 @@ import p637j0.p641k.Func1;
 import p637j0.p642l.p647e.ScalarSynchronousObservable;
 import p658rx.Observable;
 
-/* compiled from: ChatInputViewModel.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: ChatInputViewModel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class ChatInputViewModel$Companion$observeStoreState$1<T, R> implements Func1<StoreChannelsSelected.ResolvedSelectedChannel, Observable<? extends ChatInputViewModel.StoreState>> {
     public final /* synthetic */ StoreChat $storeChat;
     public final /* synthetic */ StoreGuildJoinRequest $storeGuildJoinRequest;
@@ -45,8 +45,8 @@ public final class ChatInputViewModel$Companion$observeStoreState$1<T, R> implem
     public final /* synthetic */ StoreUserRelationships $storeUserRelationships;
     public final /* synthetic */ StoreUser $storeUsers;
 
-    /* compiled from: ChatInputViewModel.kt */
-    /* renamed from: com.discord.widgets.chat.input.ChatInputViewModel$Companion$observeStoreState$1$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.input.ChatInputViewModel$Companion$observeStoreState$1$1 */
+    /* JADX INFO: compiled from: ChatInputViewModel.kt */
     public static final class C76871 extends Lambda implements Function13<MeUser, StoreChat.EditingMessage, Integer, Long, GuildVerificationLevel, Boolean, Boolean, Guild, ChatInputViewModel.StoreState.Loaded.PendingReply, GuildMember, GuildJoinRequest, StoreThreadDraft.ThreadDraftState, Boolean, ChatInputViewModel.StoreState.Loaded> {
         public final /* synthetic */ Channel $channel;
         public final /* synthetic */ StoreChannelsSelected.ResolvedSelectedChannel $selectedChannel;
@@ -96,7 +96,7 @@ public final class ChatInputViewModel$Companion$observeStoreState$1<T, R> implem
         return call2(resolvedSelectedChannel);
     }
 
-    /* renamed from: call, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
     public final Observable<? extends ChatInputViewModel.StoreState> call2(StoreChannelsSelected.ResolvedSelectedChannel resolvedSelectedChannel) {
         Channel channelOrParent = resolvedSelectedChannel.getChannelOrParent();
         if (channelOrParent == null) {

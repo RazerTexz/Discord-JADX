@@ -10,18 +10,18 @@ import p007b.p100d.p104b.p105a.outline;
 import p007b.p225i.p226a.p242c.MediaMetadata;
 import p007b.p225i.p226a.p242c.p259f3.Util2;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public final class TextInformationFrame extends Id3Frame {
     public static final Parcelable.Creator<TextInformationFrame> CREATOR = new C10735a();
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     @Nullable
     public final String f20000k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final String f20001l;
 
-    /* renamed from: com.google.android.exoplayer2.metadata.id3.TextInformationFrame$a */
+    /* JADX INFO: renamed from: com.google.android.exoplayer2.metadata.id3.TextInformationFrame$a */
     public class C10735a implements Parcelable.Creator<TextInformationFrame> {
         @Override // android.os.Parcelable.Creator
         public TextInformationFrame createFromParcel(Parcel parcel) {
@@ -40,7 +40,7 @@ public final class TextInformationFrame extends Id3Frame {
         this.f20001l = str3;
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static List<Integer> m8882a(String str) {
         ArrayList arrayList = new ArrayList();
         try {
@@ -81,127 +81,127 @@ public final class TextInformationFrame extends Id3Frame {
 
     /* JADX WARN: Failed to restore switch over string. Please report as a decompilation issue */
     @Override // com.google.android.exoplayer2.metadata.id3.Id3Frame, com.google.android.exoplayer2.metadata.Metadata.Entry
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public void mo8878n(MediaMetadata.b bVar) {
         String str = this.f19989j;
         str.hashCode();
-        char c = 65535;
+        byte b2 = -1;
         switch (str.hashCode()) {
             case 82815:
                 if (str.equals("TAL")) {
-                    c = 0;
+                    b2 = 0;
                 }
                 break;
             case 82878:
                 if (str.equals("TCM")) {
-                    c = 1;
+                    b2 = 1;
                 }
                 break;
             case 82897:
                 if (str.equals("TDA")) {
-                    c = 2;
+                    b2 = 2;
                 }
                 break;
             case 83253:
                 if (str.equals("TP1")) {
-                    c = 3;
+                    b2 = 3;
                 }
                 break;
             case 83254:
                 if (str.equals("TP2")) {
-                    c = 4;
+                    b2 = 4;
                 }
                 break;
             case 83255:
                 if (str.equals("TP3")) {
-                    c = 5;
+                    b2 = 5;
                 }
                 break;
             case 83341:
                 if (str.equals("TRK")) {
-                    c = 6;
+                    b2 = 6;
                 }
                 break;
             case 83378:
                 if (str.equals("TT2")) {
-                    c = 7;
+                    b2 = 7;
                 }
                 break;
             case 83536:
                 if (str.equals("TXT")) {
-                    c = '\b';
+                    b2 = 8;
                 }
                 break;
             case 83552:
                 if (str.equals("TYE")) {
-                    c = '\t';
+                    b2 = 9;
                 }
                 break;
             case 2567331:
                 if (str.equals("TALB")) {
-                    c = '\n';
+                    b2 = 10;
                 }
                 break;
             case 2569357:
                 if (str.equals("TCOM")) {
-                    c = 11;
+                    b2 = 11;
                 }
                 break;
             case 2569891:
                 if (str.equals("TDAT")) {
-                    c = '\f';
+                    b2 = 12;
                 }
                 break;
             case 2570401:
                 if (str.equals("TDRC")) {
-                    c = '\r';
+                    b2 = 13;
                 }
                 break;
             case 2570410:
                 if (str.equals("TDRL")) {
-                    c = 14;
+                    b2 = 14;
                 }
                 break;
             case 2571565:
                 if (str.equals("TEXT")) {
-                    c = 15;
+                    b2 = 15;
                 }
                 break;
             case 2575251:
                 if (str.equals("TIT2")) {
-                    c = 16;
+                    b2 = 16;
                 }
                 break;
             case 2581512:
                 if (str.equals("TPE1")) {
-                    c = 17;
+                    b2 = 17;
                 }
                 break;
             case 2581513:
                 if (str.equals("TPE2")) {
-                    c = 18;
+                    b2 = 18;
                 }
                 break;
             case 2581514:
                 if (str.equals("TPE3")) {
-                    c = 19;
+                    b2 = 19;
                 }
                 break;
             case 2583398:
                 if (str.equals("TRCK")) {
-                    c = 20;
+                    b2 = 20;
                 }
                 break;
             case 2590194:
                 if (str.equals("TYER")) {
-                    c = 21;
+                    b2 = 21;
                 }
                 break;
         }
         try {
-            switch (c) {
+            switch (b2) {
                 case 0:
-                case '\n':
+                case 10:
                     bVar.f7409c = this.f20001l;
                     break;
                 case 1:
@@ -209,7 +209,7 @@ public final class TextInformationFrame extends Id3Frame {
                     bVar.f7431y = this.f20001l;
                     break;
                 case 2:
-                case '\f':
+                case 12:
                     int i = Integer.parseInt(this.f20001l.substring(2, 4));
                     int i2 = Integer.parseInt(this.f20001l.substring(0, 2));
                     bVar.f7425s = Integer.valueOf(i);
@@ -239,15 +239,15 @@ public final class TextInformationFrame extends Id3Frame {
                 case 16:
                     bVar.f7407a = this.f20001l;
                     break;
-                case '\b':
+                case 8:
                 case 15:
                     bVar.f7430x = this.f20001l;
                     break;
-                case '\t':
+                case 9:
                 case 21:
                     bVar.f7424r = Integer.valueOf(Integer.parseInt(this.f20001l));
                     break;
-                case '\r':
+                case 13:
                     ArrayList arrayList = (ArrayList) m8882a(this.f20001l);
                     int size = arrayList.size();
                     if (size != 1) {

@@ -4,12 +4,12 @@ import java.io.File;
 import java.nio.charset.Charset;
 import java.util.Comparator;
 
-/* compiled from: CrashlyticsReportPersistence.java */
-/* renamed from: b.i.c.m.d.o.d, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.c.m.d.o.d, reason: use source file name */
+/* JADX INFO: compiled from: CrashlyticsReportPersistence.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final /* synthetic */ class CrashlyticsReportPersistence4 implements Comparator {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static final CrashlyticsReportPersistence4 f12669j = new CrashlyticsReportPersistence4();
 
     @Override // java.util.Comparator

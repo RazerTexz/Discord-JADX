@@ -13,36 +13,36 @@ import org.objectweb.asm.Opcodes;
 import p007b.p100d.p104b.p105a.outline;
 import p007b.p225i.p226a.p288f.p299e.p308o.C3402d;
 
-/* renamed from: b.i.a.f.h.m.e */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.h.m.e */
+/* JADX INFO: loaded from: classes3.dex */
 public final class C3928e {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final ParcelUuid f10450a = ParcelUuid.fromString("00000000-0000-1000-8000-00805F9B34FB");
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final int f10451b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     @Nullable
     public final List<ParcelUuid> f10452c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     @Nullable
     public final SparseArray<byte[]> f10453d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     @Nullable
     public final Map<ParcelUuid, byte[]> f10454e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final int f10455f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     @Nullable
     public final String f10456g;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public final byte[] f10457h;
 
     public C3928e(@Nullable List<ParcelUuid> list, @Nullable SparseArray<byte[]> sparseArray, @Nullable Map<ParcelUuid, byte[]> map, int i, int i2, @Nullable String str, byte[] bArr) {
@@ -55,7 +55,7 @@ public final class C3928e {
         this.f10457h = bArr;
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static int m5403a(byte[] bArr, int i, int i2, int i3, List<ParcelUuid> list) {
         while (i2 > 0) {
             list.add(m5405c(m5404b(bArr, i, i3)));
@@ -65,14 +65,14 @@ public final class C3928e {
         return i;
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static byte[] m5404b(byte[] bArr, int i, int i2) {
         byte[] bArr2 = new byte[i2];
         System.arraycopy(bArr, i, bArr2, 0, i2);
         return bArr2;
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public static ParcelUuid m5405c(byte[] bArr) {
         long j;
         int length = bArr.length;
@@ -84,9 +84,9 @@ public final class C3928e {
             return new ParcelUuid(new UUID(byteBufferOrder.getLong(8), byteBufferOrder.getLong(0)));
         }
         if (length == 2) {
-            j = (bArr[0] & 255) + ((bArr[1] & 255) << 8);
+            j = ((long) (bArr[0] & 255)) + ((long) ((bArr[1] & 255) << 8));
         } else {
-            j = ((bArr[3] & 255) << 24) + (bArr[0] & 255) + ((bArr[1] & 255) << 8) + ((bArr[2] & 255) << 16);
+            j = ((long) ((bArr[3] & 255) << 24)) + ((long) (bArr[0] & 255)) + ((long) ((bArr[1] & 255) << 8)) + ((long) ((bArr[2] & 255) << 16));
         }
         ParcelUuid parcelUuid = f10450a;
         return new ParcelUuid(new UUID(parcelUuid.getUuid().getMostSignificantBits() + (j << 32), parcelUuid.getUuid().getLeastSignificantBits()));

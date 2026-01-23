@@ -22,8 +22,8 @@ import androidx.annotation.NonNull;
 import androidx.annotation.RestrictTo;
 import androidx.preference.DialogPreference;
 
+/* JADX INFO: loaded from: classes.dex */
 @Deprecated
-/* loaded from: classes.dex */
 public abstract class PreferenceDialogFragment extends DialogFragment implements DialogInterface.OnClickListener {
 
     @Deprecated

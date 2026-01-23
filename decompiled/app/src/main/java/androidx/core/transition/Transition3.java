@@ -5,9 +5,9 @@ import kotlin.Unit;
 import kotlin.jvm.functions.Function1;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: Transition.kt */
-/* renamed from: androidx.core.transition.TransitionKt$addListener$listener$1, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: androidx.core.transition.TransitionKt$addListener$listener$1, reason: use source file name */
+/* JADX INFO: compiled from: Transition.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class Transition3 implements Transition.TransitionListener {
     public final /* synthetic */ Function1<Transition, Unit> $onCancel;
     public final /* synthetic */ Function1<Transition, Unit> $onEnd;

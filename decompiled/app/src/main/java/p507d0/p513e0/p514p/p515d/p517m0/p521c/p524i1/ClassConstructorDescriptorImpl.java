@@ -25,15 +25,15 @@ import p507d0.p513e0.p514p.p515d.p517m0.p521c.p522g1.Annotations4;
 import p507d0.p513e0.p514p.p515d.p517m0.p548g.Name;
 import p507d0.p513e0.p514p.p515d.p517m0.p567n.TypeSubstitutor2;
 
-/* compiled from: ClassConstructorDescriptorImpl.java */
-/* renamed from: d0.e0.p.d.m0.c.i1.g, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.c.i1.g, reason: use source file name */
+/* JADX INFO: compiled from: ClassConstructorDescriptorImpl.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class ClassConstructorDescriptorImpl extends FunctionDescriptorImpl implements ClassConstructorDescriptor {
 
-    /* renamed from: M */
+    /* JADX INFO: renamed from: M */
     public static final Name f22873M = Name.special("<init>");
 
-    /* renamed from: N */
+    /* JADX INFO: renamed from: N */
     public final boolean f22874N;
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -60,7 +60,7 @@ public class ClassConstructorDescriptorImpl extends FunctionDescriptorImpl imple
 
     /* JADX WARN: Removed duplicated region for block: B:13:0x001a  */
     /* JADX WARN: Removed duplicated region for block: B:7:0x000e  */
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
@@ -240,7 +240,7 @@ public class ClassConstructorDescriptorImpl extends FunctionDescriptorImpl imple
     }
 
     @Override // p507d0.p513e0.p514p.p515d.p517m0.p521c.p524i1.FunctionDescriptorImpl
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public /* bridge */ /* synthetic */ FunctionDescriptorImpl mo9373b(DeclarationDescriptor declarationDescriptor, FunctionDescriptor functionDescriptor, CallableMemberDescriptor.a aVar, Name name, Annotations4 annotations4, SourceElement sourceElement) {
         return mo9408e(declarationDescriptor, functionDescriptor, aVar, name, annotations4, sourceElement);
     }
@@ -262,7 +262,7 @@ public class ClassConstructorDescriptorImpl extends FunctionDescriptorImpl imple
         return copy(declarationDescriptor, modality, descriptorVisibility2, aVar, z2);
     }
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public ClassConstructorDescriptorImpl mo9408e(DeclarationDescriptor declarationDescriptor, FunctionDescriptor functionDescriptor, CallableMemberDescriptor.a aVar, Name name, Annotations4 annotations4, SourceElement sourceElement) {
         if (declarationDescriptor == null) {
             m9407a(21);

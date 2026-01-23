@@ -6,8 +6,8 @@ import com.discord.api.science.AnalyticsSchema;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: TrackInstantInviteOptionClicked.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: TrackInstantInviteOptionClicked.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class TrackInstantInviteOptionClicked implements AnalyticsSchema, TrackBase2 {
     private TrackBase trackBase;
     private final CharSequence inviteType = null;
@@ -19,7 +19,7 @@ public final /* data */ class TrackInstantInviteOptionClicked implements Analyti
     private final transient String analyticsSchemaTypeName = "instant_invite_option_clicked";
 
     @Override // com.discord.api.science.AnalyticsSchema
-    /* renamed from: d, reason: from getter */
+    /* JADX INFO: renamed from: d, reason: from getter */
     public String getAnalyticsSchemaTypeName() {
         return this.analyticsSchemaTypeName;
     }

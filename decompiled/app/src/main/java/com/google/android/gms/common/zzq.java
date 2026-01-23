@@ -7,18 +7,18 @@ import p007b.p085c.p086a.p087a0.AnimatableValueParser;
 import p007b.p225i.p226a.p288f.p299e.C3259d0;
 import p007b.p225i.p226a.p288f.p299e.p308o.C3404f;
 
-/* compiled from: com.google.android.gms:play-services-basement@@17.6.0 */
-/* loaded from: classes3.dex */
+/* JADX INFO: compiled from: com.google.android.gms:play-services-basement@@17.6.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public final class zzq extends AbstractSafeParcelable {
     public static final Parcelable.Creator<zzq> CREATOR = new C3259d0();
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final boolean f20564j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final String f20565k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final int f20566l;
 
     public zzq(boolean z2, String str, int i) {

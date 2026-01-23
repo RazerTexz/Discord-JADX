@@ -11,8 +11,8 @@ import com.discord.C5419R;
 import com.discord.widgets.chat.list.adapter.WidgetChatListAdapter;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ThreadSpineItemDecoration.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: ThreadSpineItemDecoration.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class ThreadSpineItemDecoration extends RecyclerView.ItemDecoration {
     private final WidgetChatListAdapter adapter;
     private final Context context;

@@ -13,15 +13,15 @@ import p507d0.p513e0.KClass;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Reflection2;
 
-/* compiled from: OAuthScopeTypeAdapter.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: OAuthScopeTypeAdapter.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class OAuthScopeTypeAdapter extends TypeAdapter<OAuthScope> {
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private static final HashMap<String, OAuthScope> nameToScopeMap;
 
-    /* compiled from: OAuthScopeTypeAdapter.kt */
+    /* JADX INFO: compiled from: OAuthScopeTypeAdapter.kt */
     public static final class Companion {
         public Companion() {
         }
@@ -43,7 +43,7 @@ public final class OAuthScopeTypeAdapter extends TypeAdapter<OAuthScope> {
         nameToScopeMap = map;
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final /* synthetic */ HashMap m7584a() {
         return nameToScopeMap;
     }

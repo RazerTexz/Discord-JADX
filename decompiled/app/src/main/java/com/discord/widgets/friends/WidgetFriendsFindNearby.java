@@ -68,25 +68,25 @@ import p658rx.Observable;
 import p658rx.functions.Action1;
 import p658rx.functions.Func2;
 
-/* compiled from: WidgetFriendsFindNearby.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetFriendsFindNearby.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetFriendsFindNearby extends AppFragment {
     public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetFriendsFindNearby.class, "binding", "getBinding()Lcom/discord/databinding/WidgetFriendsNearbyBinding;", 0)};
 
-    /* renamed from: binding$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
     private final ActivityResultLauncher<Intent> captchaLauncher;
     private Long meUserId;
     private final NearbyManager nearbyManager;
     private WidgetFriendsAddUserAdapter resultsAdapter;
 
-    /* renamed from: viewModel$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: viewModel$delegate, reason: from kotlin metadata */
     private final Lazy viewModel;
 
-    /* compiled from: WidgetFriendsFindNearby.kt */
+    /* JADX INFO: compiled from: WidgetFriendsFindNearby.kt */
     public static abstract class Model {
 
-        /* compiled from: WidgetFriendsFindNearby.kt */
+        /* JADX INFO: compiled from: WidgetFriendsFindNearby.kt */
         public static final class Empty extends Model {
             public static final Empty INSTANCE = new Empty();
 
@@ -95,7 +95,7 @@ public final class WidgetFriendsFindNearby extends AppFragment {
             }
         }
 
-        /* compiled from: WidgetFriendsFindNearby.kt */
+        /* JADX INFO: compiled from: WidgetFriendsFindNearby.kt */
         public static final /* data */ class Error extends Model {
             private final Integer errorCode;
 
@@ -111,7 +111,7 @@ public final class WidgetFriendsFindNearby extends AppFragment {
                 return error.copy(num);
             }
 
-            /* renamed from: component1, reason: from getter */
+            /* JADX INFO: renamed from: component1, reason: from getter */
             public final Integer getErrorCode() {
                 return this.errorCode;
             }
@@ -144,7 +144,7 @@ public final class WidgetFriendsFindNearby extends AppFragment {
             }
         }
 
-        /* compiled from: WidgetFriendsFindNearby.kt */
+        /* JADX INFO: compiled from: WidgetFriendsFindNearby.kt */
         public static final /* data */ class NearbyUsers extends Model {
             private final List<WidgetFriendsAddUserAdapter.ItemUser> items;
 
@@ -196,7 +196,7 @@ public final class WidgetFriendsFindNearby extends AppFragment {
             }
         }
 
-        /* compiled from: WidgetFriendsFindNearby.kt */
+        /* JADX INFO: compiled from: WidgetFriendsFindNearby.kt */
         public static final class Uninitialized extends Model {
             public static final Uninitialized INSTANCE = new Uninitialized();
 
@@ -213,7 +213,7 @@ public final class WidgetFriendsFindNearby extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetFriendsFindNearby.kt */
+    /* JADX INFO: compiled from: WidgetFriendsFindNearby.kt */
     public static final class ModelProvider {
         public static final ModelProvider INSTANCE = new ModelProvider();
 
@@ -239,8 +239,8 @@ public final class WidgetFriendsFindNearby extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetFriendsFindNearby.kt */
-    /* renamed from: com.discord.widgets.friends.WidgetFriendsFindNearby$acceptFriendRequest$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.friends.WidgetFriendsFindNearby$acceptFriendRequest$1 */
+    /* JADX INFO: compiled from: WidgetFriendsFindNearby.kt */
     public static final class C83861 extends Lambda implements Function1<Void, Unit> {
         public C83861() {
             super(1);
@@ -252,14 +252,14 @@ public final class WidgetFriendsFindNearby extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Void r5) {
             AppToast.m169g(WidgetFriendsFindNearby.this.getContext(), C5419R.string.accept_request_button_after, 0, null, 12);
         }
     }
 
-    /* compiled from: WidgetFriendsFindNearby.kt */
-    /* renamed from: com.discord.widgets.friends.WidgetFriendsFindNearby$declineFriendRequest$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.friends.WidgetFriendsFindNearby$declineFriendRequest$1 */
+    /* JADX INFO: compiled from: WidgetFriendsFindNearby.kt */
     public static final class C83871 extends Lambda implements Function1<Void, Unit> {
         public final /* synthetic */ int $successMessageStringRes;
 
@@ -275,14 +275,14 @@ public final class WidgetFriendsFindNearby extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Void r5) {
             AppToast.m169g(WidgetFriendsFindNearby.this.getContext(), this.$successMessageStringRes, 0, null, 12);
         }
     }
 
-    /* compiled from: WidgetFriendsFindNearby.kt */
-    /* renamed from: com.discord.widgets.friends.WidgetFriendsFindNearby$onViewBound$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.friends.WidgetFriendsFindNearby$onViewBound$1 */
+    /* JADX INFO: compiled from: WidgetFriendsFindNearby.kt */
     public static final class C83881 extends Lambda implements Function2<String, Integer, Unit> {
         public C83881() {
             super(2);
@@ -300,8 +300,8 @@ public final class WidgetFriendsFindNearby extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetFriendsFindNearby.kt */
-    /* renamed from: com.discord.widgets.friends.WidgetFriendsFindNearby$onViewBound$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.friends.WidgetFriendsFindNearby$onViewBound$2 */
+    /* JADX INFO: compiled from: WidgetFriendsFindNearby.kt */
     public static final class C83892 extends Lambda implements Function1<Long, Unit> {
         public C83892() {
             super(1);
@@ -318,8 +318,8 @@ public final class WidgetFriendsFindNearby extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetFriendsFindNearby.kt */
-    /* renamed from: com.discord.widgets.friends.WidgetFriendsFindNearby$onViewBound$3 */
+    /* JADX INFO: renamed from: com.discord.widgets.friends.WidgetFriendsFindNearby$onViewBound$3 */
+    /* JADX INFO: compiled from: WidgetFriendsFindNearby.kt */
     public static final class C83903 extends Lambda implements Function2<Long, Boolean, Unit> {
         public C83903() {
             super(2);
@@ -336,8 +336,8 @@ public final class WidgetFriendsFindNearby extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetFriendsFindNearby.kt */
-    /* renamed from: com.discord.widgets.friends.WidgetFriendsFindNearby$onViewBound$4 */
+    /* JADX INFO: renamed from: com.discord.widgets.friends.WidgetFriendsFindNearby$onViewBound$4 */
+    /* JADX INFO: compiled from: WidgetFriendsFindNearby.kt */
     public static final class C83914 extends Lambda implements Function1<Long, Unit> {
         public C83914() {
             super(1);
@@ -357,8 +357,8 @@ public final class WidgetFriendsFindNearby extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetFriendsFindNearby.kt */
-    /* renamed from: com.discord.widgets.friends.WidgetFriendsFindNearby$onViewBound$5 */
+    /* JADX INFO: renamed from: com.discord.widgets.friends.WidgetFriendsFindNearby$onViewBound$5 */
+    /* JADX INFO: compiled from: WidgetFriendsFindNearby.kt */
     public static final class ViewOnClickListenerC83925 implements View.OnClickListener {
         public ViewOnClickListenerC83925() {
         }
@@ -369,8 +369,8 @@ public final class WidgetFriendsFindNearby extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetFriendsFindNearby.kt */
-    /* renamed from: com.discord.widgets.friends.WidgetFriendsFindNearby$onViewBound$6 */
+    /* JADX INFO: renamed from: com.discord.widgets.friends.WidgetFriendsFindNearby$onViewBound$6 */
+    /* JADX INFO: compiled from: WidgetFriendsFindNearby.kt */
     public static final class ViewOnClickListenerC83936 implements View.OnClickListener {
         public static final ViewOnClickListenerC83936 INSTANCE = new ViewOnClickListenerC83936();
 
@@ -380,8 +380,8 @@ public final class WidgetFriendsFindNearby extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetFriendsFindNearby.kt */
-    /* renamed from: com.discord.widgets.friends.WidgetFriendsFindNearby$onViewBoundOrOnResume$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.friends.WidgetFriendsFindNearby$onViewBoundOrOnResume$1 */
+    /* JADX INFO: compiled from: WidgetFriendsFindNearby.kt */
     public static final class C83941 extends Lambda implements Function1<WidgetFriendsAddUserRequestsModel, Unit> {
         public C83941() {
             super(1);
@@ -393,14 +393,14 @@ public final class WidgetFriendsFindNearby extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(WidgetFriendsAddUserRequestsModel widgetFriendsAddUserRequestsModel) {
             WidgetFriendsFindNearby.access$getResultsAdapter$p(WidgetFriendsFindNearby.this).addFriendRequestUserIds(widgetFriendsAddUserRequestsModel.outgoingIds, widgetFriendsAddUserRequestsModel.incomingIds);
         }
     }
 
-    /* compiled from: WidgetFriendsFindNearby.kt */
-    /* renamed from: com.discord.widgets.friends.WidgetFriendsFindNearby$onViewBoundOrOnResume$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.friends.WidgetFriendsFindNearby$onViewBoundOrOnResume$2 */
+    /* JADX INFO: compiled from: WidgetFriendsFindNearby.kt */
     public static final class C83952 extends Lambda implements Function1<Model, Unit> {
         public C83952() {
             super(1);
@@ -412,15 +412,15 @@ public final class WidgetFriendsFindNearby extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Model model) {
             Intrinsics3.checkNotNullParameter(model, "it");
             WidgetFriendsFindNearby.access$configureUI(WidgetFriendsFindNearby.this, model);
         }
     }
 
-    /* compiled from: WidgetFriendsFindNearby.kt */
-    /* renamed from: com.discord.widgets.friends.WidgetFriendsFindNearby$sendFriendRequest$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.friends.WidgetFriendsFindNearby$sendFriendRequest$1 */
+    /* JADX INFO: compiled from: WidgetFriendsFindNearby.kt */
     public static final class C83961<T> implements Action1<Void> {
         public final /* synthetic */ String $username;
 
@@ -433,7 +433,7 @@ public final class WidgetFriendsFindNearby extends AppFragment {
             call2(r1);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final void call2(Void r7) {
             Context context = WidgetFriendsFindNearby.this.getContext();
             Context context2 = WidgetFriendsFindNearby.this.getContext();
@@ -441,14 +441,14 @@ public final class WidgetFriendsFindNearby extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetFriendsFindNearby.kt */
-    /* renamed from: com.discord.widgets.friends.WidgetFriendsFindNearby$sendFriendRequest$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.friends.WidgetFriendsFindNearby$sendFriendRequest$2 */
+    /* JADX INFO: compiled from: WidgetFriendsFindNearby.kt */
     public static final class C83972<T> implements Action1<Error> {
         public final /* synthetic */ int $discriminator;
         public final /* synthetic */ String $username;
 
-        /* compiled from: WidgetFriendsFindNearby.kt */
-        /* renamed from: com.discord.widgets.friends.WidgetFriendsFindNearby$sendFriendRequest$2$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.widgets.friends.WidgetFriendsFindNearby$sendFriendRequest$2$1, reason: invalid class name */
+        /* JADX INFO: compiled from: WidgetFriendsFindNearby.kt */
         public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
             public final /* synthetic */ Error $error;
 
@@ -464,7 +464,7 @@ public final class WidgetFriendsFindNearby extends AppFragment {
                 return Unit.f27425a;
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2() {
                 Error error = this.$error;
                 Intrinsics3.checkNotNullExpressionValue(error, "error");
@@ -495,7 +495,7 @@ public final class WidgetFriendsFindNearby extends AppFragment {
             call2(error);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final void call2(Error error) {
             RestAPIAbortMessages restAPIAbortMessages = RestAPIAbortMessages.INSTANCE;
             Intrinsics3.checkNotNullExpressionValue(error, "error");

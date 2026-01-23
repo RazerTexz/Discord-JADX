@@ -26,9 +26,9 @@ import p507d0.p580t._Collections;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: GuildScheduledEventListViewModel.kt */
-/* renamed from: com.discord.widgets.guildscheduledevent.GuildScheduledEventListViewModel$Companion$observeStores$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.guildscheduledevent.GuildScheduledEventListViewModel$Companion$observeStores$1, reason: use source file name */
+/* JADX INFO: compiled from: GuildScheduledEventListViewModel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class GuildScheduledEventListViewModel2 extends Lambda implements Function0<GuildScheduledEventListViewModel.StoreState> {
     public final /* synthetic */ Long $channelId;
     public final /* synthetic */ StoreChannels $channelStore;

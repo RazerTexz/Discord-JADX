@@ -20,38 +20,38 @@ import p007b.p225i.p226a.p288f.p299e.p308o.C3404f;
 import p007b.p225i.p408d.JsonPrimitive;
 import p007b.p225i.p408d.TypeAdapterFactory2;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public final class RuntimeTypeAdapterFactory<T> implements TypeAdapterFactory2 {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final Class<?> f18533j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final String f18534k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final Map<String, Class<?>> f18535l = new LinkedHashMap();
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public final Map<Class<?>, String> f18536m = new LinkedHashMap();
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public final boolean f18537n;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public final Class<?> f18538o;
 
     /* JADX INFO: Add missing generic type declarations: [R] */
-    /* renamed from: com.discord.gsonutils.RuntimeTypeAdapterFactory$1 */
+    /* JADX INFO: renamed from: com.discord.gsonutils.RuntimeTypeAdapterFactory$1 */
     public class C55231<R> extends TypeAdapter<R> {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final /* synthetic */ Map f18539a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final /* synthetic */ TypeAdapter f18540b;
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public final /* synthetic */ Map f18541c;
 
         public C55231(Map map, TypeAdapter typeAdapter, Map map2) {
@@ -61,7 +61,7 @@ public final class RuntimeTypeAdapterFactory<T> implements TypeAdapterFactory2 {
         }
 
         @Override // com.google.gson.TypeAdapter
-        public R read(JsonReader jsonReader) throws JsonParseException, IOException {
+        public R read(JsonReader jsonReader) throws IOException {
             JsonElement jsonElementRemove;
             JsonElement jsonElementM4244S0 = C3404f.m4244S0(jsonReader);
             if (RuntimeTypeAdapterFactory.this.f18537n) {

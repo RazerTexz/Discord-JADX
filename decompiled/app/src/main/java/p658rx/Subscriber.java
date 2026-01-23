@@ -5,7 +5,7 @@ import p007b.p100d.p104b.p105a.outline;
 import p637j0.Observer2;
 import p658rx.internal.util.SubscriptionList;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public abstract class Subscriber<T> implements Observer2<T>, Subscription {
     private static final long NOT_SET = Long.MIN_VALUE;
     private Producer producer;

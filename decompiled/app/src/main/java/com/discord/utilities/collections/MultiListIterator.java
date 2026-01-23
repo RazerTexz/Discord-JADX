@@ -6,8 +6,8 @@ import java.util.List;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.p595g0.KMarkers;
 
-/* compiled from: MultiListIterator.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: MultiListIterator.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class MultiListIterator<T> implements Iterator<T>, KMarkers {
     private Iterator<? extends T> curIterator;
     private int listIndex;

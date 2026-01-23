@@ -1,6 +1,6 @@
 package p658rx.exceptions;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public final class AssemblyStackTraceException extends RuntimeException {
     private static final long serialVersionUID = 2038859767182585852L;
 

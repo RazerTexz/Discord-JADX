@@ -4,12 +4,12 @@ import kotlin.coroutines.CoroutineContext;
 import kotlinx.coroutines.CoroutineScope;
 import p007b.p100d.p104b.p105a.outline;
 
-/* compiled from: Scopes.kt */
-/* renamed from: s.a.a.f, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: s.a.a.f, reason: use source file name */
+/* JADX INFO: compiled from: Scopes.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class Scopes implements CoroutineScope {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final CoroutineContext f27674j;
 
     public Scopes(CoroutineContext coroutineContext) {

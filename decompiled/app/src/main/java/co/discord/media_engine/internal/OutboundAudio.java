@@ -5,8 +5,8 @@ import p001a0.p002a.p003a.C0002b;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: NativeStatistics.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: NativeStatistics.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class OutboundAudio {
     private final int audioLevel;
     private final long bytesSent;
@@ -65,122 +65,122 @@ public final /* data */ class OutboundAudio {
         return outboundAudio.copy((i7 & 1) != 0 ? outboundAudio.audioLevel : i, (i7 & 2) != 0 ? outboundAudio.bytesSent : j, (i7 & 4) != 0 ? outboundAudio.codecName : str, (i7 & 8) != 0 ? outboundAudio.codecPayloadType : i2, (i7 & 16) != 0 ? outboundAudio.delayMedian : i3, (i7 & 32) != 0 ? outboundAudio.delayStd : i4, (i7 & 64) != 0 ? outboundAudio.echoReturnLoss : d, (i7 & 128) != 0 ? outboundAudio.echoReturnLossEnchancement : d2, (i7 & 256) != 0 ? outboundAudio.fractionLost : f, (i7 & 512) != 0 ? outboundAudio.jitter : i5, (i7 & 1024) != 0 ? outboundAudio.packetsLost : i6, (i7 & 2048) != 0 ? outboundAudio.packetsSent : j2, (i7 & 4096) != 0 ? outboundAudio.residualEchoLikelihood : d3, (i7 & 8192) != 0 ? outboundAudio.residualEchoLikelihoodRecentMax : d4, (i7 & 16384) != 0 ? outboundAudio.rtt : j3, (i7 & 32768) != 0 ? outboundAudio.speaking : j4, (i7 & 65536) != 0 ? outboundAudio.ssrc : j5, (i7 & 131072) != 0 ? outboundAudio.typingNoiseDetected : z2, (262144 & i7) != 0 ? outboundAudio.framesCaptured : j6, (i7 & 524288) != 0 ? outboundAudio.framesRendered : j7, (i7 & 1048576) != 0 ? outboundAudio.noiseCancellerIsEnabled : bool, (2097152 & i7) != 0 ? outboundAudio.noiseCancellerProcessTime : l, (i7 & 4194304) != 0 ? outboundAudio.voiceActivityDetectorIsEnabled : bool2, (i7 & 8388608) != 0 ? outboundAudio.voiceActivityDetectorProcessTime : l2);
     }
 
-    /* renamed from: component1, reason: from getter */
+    /* JADX INFO: renamed from: component1, reason: from getter */
     public final int getAudioLevel() {
         return this.audioLevel;
     }
 
-    /* renamed from: component10, reason: from getter */
+    /* JADX INFO: renamed from: component10, reason: from getter */
     public final int getJitter() {
         return this.jitter;
     }
 
-    /* renamed from: component11, reason: from getter */
+    /* JADX INFO: renamed from: component11, reason: from getter */
     public final int getPacketsLost() {
         return this.packetsLost;
     }
 
-    /* renamed from: component12, reason: from getter */
+    /* JADX INFO: renamed from: component12, reason: from getter */
     public final long getPacketsSent() {
         return this.packetsSent;
     }
 
-    /* renamed from: component13, reason: from getter */
+    /* JADX INFO: renamed from: component13, reason: from getter */
     public final double getResidualEchoLikelihood() {
         return this.residualEchoLikelihood;
     }
 
-    /* renamed from: component14, reason: from getter */
+    /* JADX INFO: renamed from: component14, reason: from getter */
     public final double getResidualEchoLikelihoodRecentMax() {
         return this.residualEchoLikelihoodRecentMax;
     }
 
-    /* renamed from: component15, reason: from getter */
+    /* JADX INFO: renamed from: component15, reason: from getter */
     public final long getRtt() {
         return this.rtt;
     }
 
-    /* renamed from: component16, reason: from getter */
+    /* JADX INFO: renamed from: component16, reason: from getter */
     public final long getSpeaking() {
         return this.speaking;
     }
 
-    /* renamed from: component17, reason: from getter */
+    /* JADX INFO: renamed from: component17, reason: from getter */
     public final long getSsrc() {
         return this.ssrc;
     }
 
-    /* renamed from: component18, reason: from getter */
+    /* JADX INFO: renamed from: component18, reason: from getter */
     public final boolean getTypingNoiseDetected() {
         return this.typingNoiseDetected;
     }
 
-    /* renamed from: component19, reason: from getter */
+    /* JADX INFO: renamed from: component19, reason: from getter */
     public final long getFramesCaptured() {
         return this.framesCaptured;
     }
 
-    /* renamed from: component2, reason: from getter */
+    /* JADX INFO: renamed from: component2, reason: from getter */
     public final long getBytesSent() {
         return this.bytesSent;
     }
 
-    /* renamed from: component20, reason: from getter */
+    /* JADX INFO: renamed from: component20, reason: from getter */
     public final long getFramesRendered() {
         return this.framesRendered;
     }
 
-    /* renamed from: component21, reason: from getter */
+    /* JADX INFO: renamed from: component21, reason: from getter */
     public final Boolean getNoiseCancellerIsEnabled() {
         return this.noiseCancellerIsEnabled;
     }
 
-    /* renamed from: component22, reason: from getter */
+    /* JADX INFO: renamed from: component22, reason: from getter */
     public final Long getNoiseCancellerProcessTime() {
         return this.noiseCancellerProcessTime;
     }
 
-    /* renamed from: component23, reason: from getter */
+    /* JADX INFO: renamed from: component23, reason: from getter */
     public final Boolean getVoiceActivityDetectorIsEnabled() {
         return this.voiceActivityDetectorIsEnabled;
     }
 
-    /* renamed from: component24, reason: from getter */
+    /* JADX INFO: renamed from: component24, reason: from getter */
     public final Long getVoiceActivityDetectorProcessTime() {
         return this.voiceActivityDetectorProcessTime;
     }
 
-    /* renamed from: component3, reason: from getter */
+    /* JADX INFO: renamed from: component3, reason: from getter */
     public final String getCodecName() {
         return this.codecName;
     }
 
-    /* renamed from: component4, reason: from getter */
+    /* JADX INFO: renamed from: component4, reason: from getter */
     public final int getCodecPayloadType() {
         return this.codecPayloadType;
     }
 
-    /* renamed from: component5, reason: from getter */
+    /* JADX INFO: renamed from: component5, reason: from getter */
     public final int getDelayMedian() {
         return this.delayMedian;
     }
 
-    /* renamed from: component6, reason: from getter */
+    /* JADX INFO: renamed from: component6, reason: from getter */
     public final int getDelayStd() {
         return this.delayStd;
     }
 
-    /* renamed from: component7, reason: from getter */
+    /* JADX INFO: renamed from: component7, reason: from getter */
     public final double getEchoReturnLoss() {
         return this.echoReturnLoss;
     }
 
-    /* renamed from: component8, reason: from getter */
+    /* JADX INFO: renamed from: component8, reason: from getter */
     public final double getEchoReturnLossEnchancement() {
         return this.echoReturnLossEnchancement;
     }
 
-    /* renamed from: component9, reason: from getter */
+    /* JADX INFO: renamed from: component9, reason: from getter */
     public final float getFractionLost() {
         return this.fractionLost;
     }
@@ -298,16 +298,19 @@ public final /* data */ class OutboundAudio {
     }
 
     /* JADX WARN: Multi-variable type inference failed */
+    /* JADX WARN: Type inference failed for: r1v27, types: [int] */
+    /* JADX WARN: Type inference failed for: r1v44 */
+    /* JADX WARN: Type inference failed for: r1v45 */
     public int hashCode() {
         int iM3a = (C0002b.m3a(this.bytesSent) + (this.audioLevel * 31)) * 31;
         String str = this.codecName;
         int iM3a2 = (C0002b.m3a(this.ssrc) + ((C0002b.m3a(this.speaking) + ((C0002b.m3a(this.rtt) + ((C0001a.m2a(this.residualEchoLikelihoodRecentMax) + ((C0001a.m2a(this.residualEchoLikelihood) + ((C0002b.m3a(this.packetsSent) + ((((((Float.floatToIntBits(this.fractionLost) + ((C0001a.m2a(this.echoReturnLossEnchancement) + ((C0001a.m2a(this.echoReturnLoss) + ((((((((iM3a + (str != null ? str.hashCode() : 0)) * 31) + this.codecPayloadType) * 31) + this.delayMedian) * 31) + this.delayStd) * 31)) * 31)) * 31)) * 31) + this.jitter) * 31) + this.packetsLost) * 31)) * 31)) * 31)) * 31)) * 31)) * 31)) * 31;
         boolean z2 = this.typingNoiseDetected;
-        int i = z2;
-        if (z2 != 0) {
-            i = 1;
+        ?? r1 = z2;
+        if (z2) {
+            r1 = 1;
         }
-        int iM3a3 = (C0002b.m3a(this.framesRendered) + ((C0002b.m3a(this.framesCaptured) + ((iM3a2 + i) * 31)) * 31)) * 31;
+        int iM3a3 = (C0002b.m3a(this.framesRendered) + ((C0002b.m3a(this.framesCaptured) + ((iM3a2 + r1) * 31)) * 31)) * 31;
         Boolean bool = this.noiseCancellerIsEnabled;
         int iHashCode = (iM3a3 + (bool != null ? bool.hashCode() : 0)) * 31;
         Long l = this.noiseCancellerProcessTime;

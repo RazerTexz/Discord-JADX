@@ -9,14 +9,14 @@ import kotlin.jvm.functions.Function4;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: LruCache.kt */
-/* renamed from: androidx.core.util.LruCacheKt, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: androidx.core.util.LruCacheKt, reason: use source file name */
+/* JADX INFO: compiled from: LruCache.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class LruCache3 {
 
     /* JADX INFO: Add missing generic type declarations: [V, K] */
-    /* compiled from: LruCache.kt */
-    /* renamed from: androidx.core.util.LruCacheKt$lruCache$1 */
+    /* JADX INFO: renamed from: androidx.core.util.LruCacheKt$lruCache$1 */
+    /* JADX INFO: compiled from: LruCache.kt */
     public static final class C02641<K, V> extends Lambda implements Function2<K, V, Integer> {
         public static final C02641 INSTANCE = new C02641();
 
@@ -24,7 +24,7 @@ public final class LruCache3 {
             super(2);
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final int invoke2(K k, V v) {
             Intrinsics3.checkNotNullParameter(k, "$noName_0");
             Intrinsics3.checkNotNullParameter(v, "$noName_1");
@@ -39,8 +39,8 @@ public final class LruCache3 {
     }
 
     /* JADX INFO: Add missing generic type declarations: [V, K] */
-    /* compiled from: LruCache.kt */
-    /* renamed from: androidx.core.util.LruCacheKt$lruCache$2 */
+    /* JADX INFO: renamed from: androidx.core.util.LruCacheKt$lruCache$2 */
+    /* JADX INFO: compiled from: LruCache.kt */
     public static final class C02652<K, V> extends Lambda implements Function1<K, V> {
         public static final C02652 INSTANCE = new C02652();
 
@@ -56,8 +56,8 @@ public final class LruCache3 {
     }
 
     /* JADX INFO: Add missing generic type declarations: [V, K] */
-    /* compiled from: LruCache.kt */
-    /* renamed from: androidx.core.util.LruCacheKt$lruCache$3 */
+    /* JADX INFO: renamed from: androidx.core.util.LruCacheKt$lruCache$3 */
+    /* JADX INFO: compiled from: LruCache.kt */
     public static final class C02663<K, V> extends Lambda implements Function4<Boolean, K, V, V, Unit> {
         public static final C02663 INSTANCE = new C02663();
 
@@ -79,8 +79,8 @@ public final class LruCache3 {
     }
 
     /* JADX INFO: Add missing generic type declarations: [V, K] */
-    /* compiled from: LruCache.kt */
-    /* renamed from: androidx.core.util.LruCacheKt$lruCache$4 */
+    /* JADX INFO: renamed from: androidx.core.util.LruCacheKt$lruCache$4 */
+    /* JADX INFO: compiled from: LruCache.kt */
     public static final class C02674<K, V> extends LruCache<K, V> {
         public final /* synthetic */ Function1<K, V> $create;
         public final /* synthetic */ int $maxSize;

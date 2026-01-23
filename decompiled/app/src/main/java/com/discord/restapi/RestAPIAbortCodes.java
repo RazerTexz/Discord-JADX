@@ -1,8 +1,8 @@
 package com.discord.restapi;
 
 
-/* compiled from: RestAPIAbortCodes.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: RestAPIAbortCodes.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class RestAPIAbortCodes {
     public static final int ACCOUNT_DISABLED = 20013;
     public static final int ACCOUNT_SCHEDULED_FOR_DELETION = 20011;

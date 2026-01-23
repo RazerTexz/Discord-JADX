@@ -2,7 +2,6 @@ package com.discord.widgets.guilds;
 
 import android.content.Context;
 import android.content.Intent;
-import android.content.res.Resources;
 import android.graphics.Color;
 import android.graphics.PorterDuff;
 import android.graphics.PorterDuffColorFilter;
@@ -55,22 +54,22 @@ import p507d0.p592z.p594d.Reflection2;
 import p600f0.p601e0.Util7;
 import p658rx.Observable;
 
-/* compiled from: WidgetGuildFolderSettings.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetGuildFolderSettings.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetGuildFolderSettings extends AppFragment {
     public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetGuildFolderSettings.class, "binding", "getBinding()Lcom/discord/databinding/WidgetGuildFolderSettingsBinding;", 0)};
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private static final String DIALOG_TAG_COLOR_PICKER = "DIALOG_TAG_COLOR_PICKER";
 
-    /* renamed from: binding$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
 
-    /* renamed from: viewModel$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: viewModel$delegate, reason: from kotlin metadata */
     private final Lazy viewModel;
 
-    /* compiled from: WidgetGuildFolderSettings.kt */
+    /* JADX INFO: compiled from: WidgetGuildFolderSettings.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -85,8 +84,8 @@ public final class WidgetGuildFolderSettings extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetGuildFolderSettings.kt */
-    /* renamed from: com.discord.widgets.guilds.WidgetGuildFolderSettings$configureUI$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.guilds.WidgetGuildFolderSettings$configureUI$1 */
+    /* JADX INFO: compiled from: WidgetGuildFolderSettings.kt */
     public static final class C85721 extends Lambda implements Function1<Editable, Unit> {
         public C85721() {
             super(1);
@@ -98,15 +97,15 @@ public final class WidgetGuildFolderSettings extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Editable editable) {
             Intrinsics3.checkNotNullParameter(editable, "editable");
             WidgetGuildFolderSettings.access$getViewModel$p(WidgetGuildFolderSettings.this).setName(editable.toString());
         }
     }
 
-    /* compiled from: WidgetGuildFolderSettings.kt */
-    /* renamed from: com.discord.widgets.guilds.WidgetGuildFolderSettings$configureUI$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.guilds.WidgetGuildFolderSettings$configureUI$2 */
+    /* JADX INFO: compiled from: WidgetGuildFolderSettings.kt */
     public static final class ViewOnClickListenerC85732 implements View.OnClickListener {
         public final /* synthetic */ WidgetGuildFolderSettingsViewModel.ViewState $state;
 
@@ -120,8 +119,8 @@ public final class WidgetGuildFolderSettings extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetGuildFolderSettings.kt */
-    /* renamed from: com.discord.widgets.guilds.WidgetGuildFolderSettings$configureUI$3 */
+    /* JADX INFO: renamed from: com.discord.widgets.guilds.WidgetGuildFolderSettings$configureUI$3 */
+    /* JADX INFO: compiled from: WidgetGuildFolderSettings.kt */
     public static final class ViewOnClickListenerC85743 implements View.OnClickListener {
         public ViewOnClickListenerC85743() {
         }
@@ -132,8 +131,8 @@ public final class WidgetGuildFolderSettings extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetGuildFolderSettings.kt */
-    /* renamed from: com.discord.widgets.guilds.WidgetGuildFolderSettings$launchColorPicker$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.guilds.WidgetGuildFolderSettings$launchColorPicker$1 */
+    /* JADX INFO: compiled from: WidgetGuildFolderSettings.kt */
     public static final class C85751 implements ColorPickerDialogListener {
         public C85751() {
         }
@@ -153,8 +152,8 @@ public final class WidgetGuildFolderSettings extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetGuildFolderSettings.kt */
-    /* renamed from: com.discord.widgets.guilds.WidgetGuildFolderSettings$onViewBoundOrOnResume$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.guilds.WidgetGuildFolderSettings$onViewBoundOrOnResume$1 */
+    /* JADX INFO: compiled from: WidgetGuildFolderSettings.kt */
     public static final /* synthetic */ class C85761 extends FunctionReferenceImpl implements Function1<WidgetGuildFolderSettingsViewModel.ViewState, Unit> {
         public C85761(WidgetGuildFolderSettings widgetGuildFolderSettings) {
             super(1, widgetGuildFolderSettings, WidgetGuildFolderSettings.class, "configureUI", "configureUI(Lcom/discord/widgets/guilds/WidgetGuildFolderSettingsViewModel$ViewState;)V", 0);
@@ -166,15 +165,15 @@ public final class WidgetGuildFolderSettings extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(WidgetGuildFolderSettingsViewModel.ViewState viewState) {
             Intrinsics3.checkNotNullParameter(viewState, "p1");
             WidgetGuildFolderSettings.access$configureUI((WidgetGuildFolderSettings) this.receiver, viewState);
         }
     }
 
-    /* compiled from: WidgetGuildFolderSettings.kt */
-    /* renamed from: com.discord.widgets.guilds.WidgetGuildFolderSettings$onViewBoundOrOnResume$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.guilds.WidgetGuildFolderSettings$onViewBoundOrOnResume$2 */
+    /* JADX INFO: compiled from: WidgetGuildFolderSettings.kt */
     public static final /* synthetic */ class C85772 extends FunctionReferenceImpl implements Function1<WidgetGuildFolderSettingsViewModel.Event, Unit> {
         public C85772(WidgetGuildFolderSettings widgetGuildFolderSettings) {
             super(1, widgetGuildFolderSettings, WidgetGuildFolderSettings.class, "handleEvent", "handleEvent(Lcom/discord/widgets/guilds/WidgetGuildFolderSettingsViewModel$Event;)V", 0);
@@ -186,7 +185,7 @@ public final class WidgetGuildFolderSettings extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(WidgetGuildFolderSettingsViewModel.Event event) {
             Intrinsics3.checkNotNullParameter(event, "p1");
             WidgetGuildFolderSettings.access$handleEvent((WidgetGuildFolderSettings) this.receiver, event);
@@ -294,7 +293,7 @@ public final class WidgetGuildFolderSettings extends AppFragment {
     }
 
     @ColorInt
-    private final int[] getColorsToDisplay(@ColorInt int currentColor) throws Resources.NotFoundException {
+    private final int[] getColorsToDisplay(@ColorInt int currentColor) {
         int[] intArray = getResources().getIntArray(C5419R.array.color_picker_palette);
         Intrinsics3.checkNotNullExpressionValue(intArray, "resources.getIntArray(R.…ray.color_picker_palette)");
         ArrayList arrayList = new ArrayList();
@@ -369,7 +368,7 @@ public final class WidgetGuildFolderSettings extends AppFragment {
 
     private final Integer rgbColorToARGB(Integer color) {
         if (color != null) {
-            return Integer.valueOf((int) (color.intValue() + 4278190080L));
+            return Integer.valueOf((int) (((long) color.intValue()) + 4278190080L));
         }
         return null;
     }

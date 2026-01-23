@@ -5,8 +5,8 @@ import com.discord.api.role.GuildRole;
 import com.discord.widgets.channels.WidgetCreateChannel;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: WidgetCreateChannel.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetCreateChannel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetCreateChannel$RolesAdapter$RoleListItem$onConfigure$1 implements View.OnClickListener {
     public final /* synthetic */ GuildRole $role;
     public final /* synthetic */ WidgetCreateChannel.RolesAdapter.RoleListItem this$0;

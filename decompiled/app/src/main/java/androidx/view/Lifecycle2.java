@@ -13,14 +13,14 @@ import p507d0.p584w.p586i.p587a.ContinuationImpl6;
 import p507d0.p584w.p586i.p587a.DebugMetadata;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: Lifecycle.kt */
-/* renamed from: androidx.lifecycle.LifecycleCoroutineScope, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: androidx.lifecycle.LifecycleCoroutineScope, reason: use source file name */
+/* JADX INFO: compiled from: Lifecycle.kt */
+/* JADX INFO: loaded from: classes.dex */
 public abstract class Lifecycle2 implements CoroutineScope {
 
-    /* compiled from: Lifecycle.kt */
+    /* JADX INFO: renamed from: androidx.lifecycle.LifecycleCoroutineScope$launchWhenCreated$1 */
+    /* JADX INFO: compiled from: Lifecycle.kt */
     @DebugMetadata(m10084c = "androidx.lifecycle.LifecycleCoroutineScope$launchWhenCreated$1", m10085f = "Lifecycle.kt", m10086l = {74}, m10087m = "invokeSuspend")
-    /* renamed from: androidx.lifecycle.LifecycleCoroutineScope$launchWhenCreated$1 */
     public static final class C04381 extends ContinuationImpl6 implements Function2<CoroutineScope, Continuation<? super Unit>, Object> {
         public final /* synthetic */ Function2 $block;
         public int label;
@@ -64,9 +64,9 @@ public abstract class Lifecycle2 implements CoroutineScope {
         }
     }
 
-    /* compiled from: Lifecycle.kt */
+    /* JADX INFO: renamed from: androidx.lifecycle.LifecycleCoroutineScope$launchWhenResumed$1 */
+    /* JADX INFO: compiled from: Lifecycle.kt */
     @DebugMetadata(m10084c = "androidx.lifecycle.LifecycleCoroutineScope$launchWhenResumed$1", m10085f = "Lifecycle.kt", m10086l = {99}, m10087m = "invokeSuspend")
-    /* renamed from: androidx.lifecycle.LifecycleCoroutineScope$launchWhenResumed$1 */
     public static final class C04391 extends ContinuationImpl6 implements Function2<CoroutineScope, Continuation<? super Unit>, Object> {
         public final /* synthetic */ Function2 $block;
         public int label;
@@ -110,9 +110,9 @@ public abstract class Lifecycle2 implements CoroutineScope {
         }
     }
 
-    /* compiled from: Lifecycle.kt */
+    /* JADX INFO: renamed from: androidx.lifecycle.LifecycleCoroutineScope$launchWhenStarted$1 */
+    /* JADX INFO: compiled from: Lifecycle.kt */
     @DebugMetadata(m10084c = "androidx.lifecycle.LifecycleCoroutineScope$launchWhenStarted$1", m10085f = "Lifecycle.kt", m10086l = {87}, m10087m = "invokeSuspend")
-    /* renamed from: androidx.lifecycle.LifecycleCoroutineScope$launchWhenStarted$1 */
     public static final class C04401 extends ContinuationImpl6 implements Function2<CoroutineScope, Continuation<? super Unit>, Object> {
         public final /* synthetic */ Function2 $block;
         public int label;
@@ -159,7 +159,7 @@ public abstract class Lifecycle2 implements CoroutineScope {
     @Override // kotlinx.coroutines.CoroutineScope
     public abstract /* synthetic */ CoroutineContext getCoroutineContext();
 
-    /* renamed from: getLifecycle$lifecycle_runtime_ktx_release */
+    /* JADX INFO: renamed from: getLifecycle$lifecycle_runtime_ktx_release */
     public abstract Lifecycle getLifecycle();
 
     public final Job launchWhenCreated(Function2<? super CoroutineScope, ? super Continuation<? super Unit>, ? extends Object> block) {

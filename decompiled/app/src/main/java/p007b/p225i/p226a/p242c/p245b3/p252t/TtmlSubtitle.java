@@ -18,24 +18,24 @@ import p007b.p225i.p226a.p242c.p245b3.Cue;
 import p007b.p225i.p226a.p242c.p245b3.Subtitle;
 import p007b.p225i.p226a.p242c.p259f3.Util2;
 
-/* compiled from: TtmlSubtitle.java */
-/* renamed from: b.i.a.c.b3.t.g, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.b3.t.g, reason: use source file name */
+/* JADX INFO: compiled from: TtmlSubtitle.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class TtmlSubtitle implements Subtitle {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final TtmlNode f6092j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final long[] f6093k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final Map<String, TtmlStyle> f6094l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public final Map<String, TtmlRegion> f6095m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public final Map<String, String> f6096n;
 
     public TtmlSubtitle(TtmlNode ttmlNode, Map<String, TtmlStyle> map, Map<String, TtmlRegion> map2, Map<String, String> map3) {
@@ -56,7 +56,7 @@ public final class TtmlSubtitle implements Subtitle {
     }
 
     @Override // p007b.p225i.p226a.p242c.p245b3.Subtitle
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public int mo2612f(long j) {
         int iM2994b = Util2.m2994b(this.f6093k, j, false, false);
         if (iM2994b < this.f6093k.length) {
@@ -66,13 +66,13 @@ public final class TtmlSubtitle implements Subtitle {
     }
 
     @Override // p007b.p225i.p226a.p242c.p245b3.Subtitle
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public long mo2613g(int i) {
         return this.f6093k[i];
     }
 
     @Override // p007b.p225i.p226a.p242c.p245b3.Subtitle
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public List<Cue> mo2614h(long j) {
         TtmlNode ttmlNode = this.f6092j;
         Map<String, TtmlStyle> map = this.f6094l;
@@ -161,7 +161,7 @@ public final class TtmlSubtitle implements Subtitle {
     }
 
     @Override // p007b.p225i.p226a.p242c.p245b3.Subtitle
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public int mo2615i() {
         return this.f6093k.length;
     }

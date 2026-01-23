@@ -4,12 +4,12 @@ import org.webrtc.VideoDecoder;
 import org.webrtc.VideoDecoderWrapper;
 import org.webrtc.VideoFrame;
 
-/* compiled from: lambda */
-/* renamed from: h0.c.b0 */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: h0.c.b0 */
+/* JADX INFO: compiled from: lambda */
+/* JADX INFO: loaded from: classes3.dex */
 public final /* synthetic */ class C12453b0 implements VideoDecoder.Callback {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final /* synthetic */ long f26411a;
 
     public /* synthetic */ C12453b0(long j) {

@@ -8,7 +8,7 @@ import androidx.annotation.RequiresApi;
 import androidx.collection.SimpleArrayMap;
 import java.util.ArrayList;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class AnimationHandler {
     private static final long FRAME_DELAY_MS = 10;
     public static final ThreadLocal<AnimationHandler> sAnimatorHandler = new ThreadLocal<>();
@@ -52,7 +52,7 @@ public class AnimationHandler {
         public long mLastFrameTime;
         private final Runnable mRunnable;
 
-        /* renamed from: androidx.dynamicanimation.animation.AnimationHandler$FrameCallbackProvider14$1 */
+        /* JADX INFO: renamed from: androidx.dynamicanimation.animation.AnimationHandler$FrameCallbackProvider14$1 */
         public class RunnableC03241 implements Runnable {
             public RunnableC03241() {
             }
@@ -82,7 +82,7 @@ public class AnimationHandler {
         private final Choreographer mChoreographer;
         private final Choreographer.FrameCallback mChoreographerCallback;
 
-        /* renamed from: androidx.dynamicanimation.animation.AnimationHandler$FrameCallbackProvider16$1 */
+        /* JADX INFO: renamed from: androidx.dynamicanimation.animation.AnimationHandler$FrameCallbackProvider16$1 */
         public class ChoreographerFrameCallbackC03251 implements Choreographer.FrameCallback {
             public ChoreographerFrameCallbackC03251() {
             }

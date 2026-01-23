@@ -3,11 +3,11 @@ package androidx.dynamicanimation.animation;
 import android.util.FloatProperty;
 import androidx.annotation.RequiresApi;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public abstract class FloatPropertyCompat<T> {
     public final String mPropertyName;
 
-    /* renamed from: androidx.dynamicanimation.animation.FloatPropertyCompat$1 */
+    /* JADX INFO: renamed from: androidx.dynamicanimation.animation.FloatPropertyCompat$1 */
     public static class C03411 extends FloatPropertyCompat<T> {
         public final /* synthetic */ FloatProperty val$property;
 

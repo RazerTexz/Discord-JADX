@@ -3,37 +3,37 @@ package p007b.p195g.p196a.p198b;
 import com.discord.widgets.chat.input.autocomplete.AutocompleteViewModel;
 import p007b.p195g.p196a.p198b.p200p.CharTypes;
 
-/* compiled from: JsonStreamContext.java */
-/* renamed from: b.g.a.b.g, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.g.a.b.g, reason: use source file name */
+/* JADX INFO: compiled from: JsonStreamContext.java */
+/* JADX INFO: loaded from: classes3.dex */
 public abstract class JsonStreamContext {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public int f4503a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public int f4504b;
 
     public JsonStreamContext() {
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public abstract String mo1673a();
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final boolean m1674b() {
         return this.f4503a == 1;
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final boolean m1675c() {
         return this.f4503a == 2;
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public abstract void mo1676d(Object obj);
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public String m1677e() {
         int i = this.f4503a;
         return i != 0 ? i != 1 ? i != 2 ? "?" : "Object" : "Array" : "root";

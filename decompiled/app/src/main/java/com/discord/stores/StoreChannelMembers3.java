@@ -4,9 +4,9 @@ import com.discord.utilities.lazy.memberlist.MemberListRow;
 import kotlin.jvm.functions.Function1;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: StoreChannelMembers.kt */
-/* renamed from: com.discord.stores.StoreChannelMembers$handleGuildRoleCreateOrUpdate$$inlined$forEach$lambda$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.stores.StoreChannelMembers$handleGuildRoleCreateOrUpdate$$inlined$forEach$lambda$1, reason: use source file name */
+/* JADX INFO: compiled from: StoreChannelMembers.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class StoreChannelMembers3 extends Lambda implements Function1<Long, MemberListRow> {
     public final /* synthetic */ boolean $allowOwnerIndicator$inlined;
     public final /* synthetic */ long $guildId$inlined;

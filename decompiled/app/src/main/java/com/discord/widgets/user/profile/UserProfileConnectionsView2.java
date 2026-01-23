@@ -5,9 +5,9 @@ import kotlin.jvm.functions.Function3;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: UserProfileConnectionsView.kt */
-/* renamed from: com.discord.widgets.user.profile.UserProfileConnectionsView$ConnectedAccountsAdapter$onConnectedAccountClick$1, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: com.discord.widgets.user.profile.UserProfileConnectionsView$ConnectedAccountsAdapter$onConnectedAccountClick$1, reason: use source file name */
+/* JADX INFO: compiled from: UserProfileConnectionsView.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class UserProfileConnectionsView2 extends Lambda implements Function3<String, Integer, String, Unit> {
     public static final UserProfileConnectionsView2 INSTANCE = new UserProfileConnectionsView2();
 

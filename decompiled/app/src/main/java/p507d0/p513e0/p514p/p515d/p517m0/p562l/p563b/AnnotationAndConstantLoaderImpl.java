@@ -25,15 +25,15 @@ import p507d0.p580t.Collections2;
 import p507d0.p580t.Iterables2;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: AnnotationAndConstantLoaderImpl.kt */
-/* renamed from: d0.e0.p.d.m0.l.b.d, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.l.b.d, reason: use source file name */
+/* JADX INFO: compiled from: AnnotationAndConstantLoaderImpl.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class AnnotationAndConstantLoaderImpl implements AnnotationAndConstantLoader<AnnotationDescriptor, AbstractC11815g<?>> {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final SerializerExtensionProtocol f24513a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final AnnotationDeserializer f24514b;
 
     public AnnotationAndConstantLoaderImpl(ModuleDescriptor2 moduleDescriptor2, NotFoundClasses notFoundClasses, SerializerExtensionProtocol serializerExtensionProtocol) {

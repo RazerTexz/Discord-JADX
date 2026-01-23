@@ -25,35 +25,35 @@ import p007b.p452o.p453a.p455n.p456o.ActionHolder;
 import p007b.p452o.p453a.p455n.p456o.BaseAction;
 import p007b.p452o.p453a.p467r.WorkerHandler;
 
-/* compiled from: Full2PictureRecorder.java */
+/* JADX INFO: renamed from: b.o.a.v.b, reason: use source file name */
+/* JADX INFO: compiled from: Full2PictureRecorder.java */
+/* JADX INFO: loaded from: classes3.dex */
 @RequiresApi(21)
-/* renamed from: b.o.a.v.b, reason: use source file name */
-/* loaded from: classes3.dex */
 public class Full2PictureRecorder extends FullPictureRecorder implements ImageReader.OnImageAvailableListener {
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public final ActionHolder f14165n;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public final Action2 f14166o;
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public final ImageReader f14167p;
 
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     public final CaptureRequest.Builder f14168q;
 
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     public DngCreator f14169r;
 
-    /* compiled from: Full2PictureRecorder.java */
-    /* renamed from: b.o.a.v.b$a */
+    /* JADX INFO: renamed from: b.o.a.v.b$a */
+    /* JADX INFO: compiled from: Full2PictureRecorder.java */
     public class a extends BaseAction {
         public a() {
         }
 
         @Override // p007b.p452o.p453a.p455n.p456o.BaseAction, p007b.p452o.p453a.p455n.p456o.Action2
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public void mo7248b(@NonNull ActionHolder actionHolder, @NonNull CaptureRequest captureRequest, @NonNull TotalCaptureResult totalCaptureResult) {
             int i;
             Full2PictureRecorder full2PictureRecorder = Full2PictureRecorder.this;
@@ -85,7 +85,7 @@ public class Full2PictureRecorder extends FullPictureRecorder implements ImageRe
         }
 
         @Override // p007b.p452o.p453a.p455n.p456o.BaseAction, p007b.p452o.p453a.p455n.p456o.Action2
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public void mo7331c(@NonNull ActionHolder actionHolder, @NonNull CaptureRequest captureRequest) {
             if (this.f13940d) {
                 mo7249j(actionHolder);
@@ -99,7 +99,7 @@ public class Full2PictureRecorder extends FullPictureRecorder implements ImageRe
         }
 
         @Override // p007b.p452o.p453a.p455n.p456o.BaseAction
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public void mo7249j(@NonNull ActionHolder actionHolder) {
             this.f13939c = actionHolder;
             Full2PictureRecorder full2PictureRecorder = Full2PictureRecorder.this;
@@ -134,12 +134,12 @@ public class Full2PictureRecorder extends FullPictureRecorder implements ImageRe
     }
 
     @Override // p007b.p452o.p453a.p471v.PictureRecorder
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public void mo7417c() {
         this.f14166o.mo7333e(this.f14165n);
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final void m7418d(@NonNull Image image) {
         int i = 0;
         ByteBuffer buffer = image.getPlanes()[0].getBuffer();
@@ -170,7 +170,7 @@ public class Full2PictureRecorder extends FullPictureRecorder implements ImageRe
         }
     }
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final void m7419e(@NonNull Image image) {
         ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
         BufferedOutputStream bufferedOutputStream = new BufferedOutputStream(byteArrayOutputStream);

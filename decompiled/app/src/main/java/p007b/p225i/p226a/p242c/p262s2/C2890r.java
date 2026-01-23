@@ -4,21 +4,21 @@ import p007b.p225i.p226a.p242c.Player2;
 import p007b.p225i.p226a.p242c.p259f3.ListenerSet;
 import p007b.p225i.p226a.p242c.p262s2.AnalyticsListener;
 
-/* compiled from: lambda */
-/* renamed from: b.i.a.c.s2.r */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.s2.r */
+/* JADX INFO: compiled from: lambda */
+/* JADX INFO: loaded from: classes3.dex */
 public final /* synthetic */ class C2890r implements ListenerSet.a {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final /* synthetic */ AnalyticsListener.a f7618a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final /* synthetic */ int f7619b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final /* synthetic */ Player2.f f7620c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final /* synthetic */ Player2.f f7621d;
 
     public /* synthetic */ C2890r(AnalyticsListener.a aVar, int i, Player2.f fVar, Player2.f fVar2) {

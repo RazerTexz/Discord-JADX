@@ -3,7 +3,7 @@ package com.adjust.sdk;
 import androidx.core.os.EnvironmentCompat;
 import com.discord.utilities.analytics.Traits;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public enum ActivityKind {
     UNKNOWN,
     SESSION,
@@ -18,7 +18,7 @@ public enum ActivityKind {
     DISABLE_THIRD_PARTY_SHARING,
     SUBSCRIPTION;
 
-    /* renamed from: com.adjust.sdk.ActivityKind$1 */
+    /* JADX INFO: renamed from: com.adjust.sdk.ActivityKind$1 */
     public static /* synthetic */ class C53601 {
         public static final /* synthetic */ int[] $SwitchMap$com$adjust$sdk$ActivityKind;
 

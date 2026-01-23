@@ -6,7 +6,7 @@ import java.util.HashMap;
 import org.webrtc.VideoEncoderFactory;
 import p617h0.p628c.VideoEncoderFactory2;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public class SoftwareVideoEncoderFactory implements VideoEncoderFactory {
     public static VideoCodecInfo[] supportedCodecs() {
         ArrayList arrayList = new ArrayList();

@@ -3,8 +3,8 @@ package com.discord.widgets.servers.creator_monetization_eligibility.onboarding;
 import kotlin.jvm.functions.Function0;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetServerSettingsCreatorMonetizationOnboarding.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetServerSettingsCreatorMonetizationOnboarding.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetServerSettingsCreatorMonetizationOnboarding$guildId$2 extends Lambda implements Function0<Long> {
     public final /* synthetic */ WidgetServerSettingsCreatorMonetizationOnboarding this$0;
 
@@ -19,7 +19,7 @@ public final class WidgetServerSettingsCreatorMonetizationOnboarding$guildId$2 e
         return Long.valueOf(invoke2());
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final long invoke2() {
         return this.this$0.getMostRecentIntent().getLongExtra("com.discord.intent.extra.EXTRA_GUILD_ID", -1L);
     }

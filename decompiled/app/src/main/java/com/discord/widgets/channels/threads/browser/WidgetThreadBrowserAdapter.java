@@ -25,13 +25,13 @@ import p007b.p008a.p027k.FormatUtils;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: WidgetThreadBrowserAdapter.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetThreadBrowserAdapter.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetThreadBrowserAdapter extends MGRecyclerAdapterSimple<Item> {
     private final Function1<Channel, Unit> onOpenThread;
     private final Function1<Channel, Unit> onThreadSettings;
 
-    /* compiled from: WidgetThreadBrowserAdapter.kt */
+    /* JADX INFO: compiled from: WidgetThreadBrowserAdapter.kt */
     public static final class HeaderItem extends MGRecyclerViewHolder<WidgetThreadBrowserAdapter, Item> {
         private final ThreadBrowserItemHeaderBinding binding;
 
@@ -54,7 +54,7 @@ public final class WidgetThreadBrowserAdapter extends MGRecyclerAdapterSimple<It
             onConfigure2(i, item);
         }
 
-        /* renamed from: onConfigure, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: onConfigure, reason: avoid collision after fix types in other method */
         public void onConfigure2(int position, Item data) {
             Intrinsics3.checkNotNullParameter(data, "data");
             super.onConfigure(position, data);
@@ -65,10 +65,10 @@ public final class WidgetThreadBrowserAdapter extends MGRecyclerAdapterSimple<It
         }
     }
 
-    /* compiled from: WidgetThreadBrowserAdapter.kt */
+    /* JADX INFO: compiled from: WidgetThreadBrowserAdapter.kt */
     public static abstract class Item implements MGRecyclerDataPayload {
 
-        /* compiled from: WidgetThreadBrowserAdapter.kt */
+        /* JADX INFO: compiled from: WidgetThreadBrowserAdapter.kt */
         public static final /* data */ class Header extends Item {
             private final int count;
             private final String key;
@@ -102,12 +102,12 @@ public final class WidgetThreadBrowserAdapter extends MGRecyclerAdapterSimple<It
                 return getKey();
             }
 
-            /* renamed from: component2, reason: from getter */
+            /* JADX INFO: renamed from: component2, reason: from getter */
             public final int getStringResId() {
                 return this.stringResId;
             }
 
-            /* renamed from: component3, reason: from getter */
+            /* JADX INFO: renamed from: component3, reason: from getter */
             public final int getCount() {
                 return this.count;
             }
@@ -161,7 +161,7 @@ public final class WidgetThreadBrowserAdapter extends MGRecyclerAdapterSimple<It
             }
         }
 
-        /* compiled from: WidgetThreadBrowserAdapter.kt */
+        /* JADX INFO: compiled from: WidgetThreadBrowserAdapter.kt */
         public static final /* data */ class Loading extends Item {
             private final String key;
             private final int type;
@@ -231,7 +231,7 @@ public final class WidgetThreadBrowserAdapter extends MGRecyclerAdapterSimple<It
             }
         }
 
-        /* compiled from: WidgetThreadBrowserAdapter.kt */
+        /* JADX INFO: compiled from: WidgetThreadBrowserAdapter.kt */
         public static final /* data */ class Thread extends Item {
             private final String key;
             private final ThreadBrowserThreadView.ThreadData threadData;
@@ -253,7 +253,7 @@ public final class WidgetThreadBrowserAdapter extends MGRecyclerAdapterSimple<It
                 return thread.copy(threadData);
             }
 
-            /* renamed from: component1, reason: from getter */
+            /* JADX INFO: renamed from: component1, reason: from getter */
             public final ThreadBrowserThreadView.ThreadData getThreadData() {
                 return this.threadData;
             }
@@ -300,7 +300,7 @@ public final class WidgetThreadBrowserAdapter extends MGRecyclerAdapterSimple<It
             }
         }
 
-        /* compiled from: WidgetThreadBrowserAdapter.kt */
+        /* JADX INFO: compiled from: WidgetThreadBrowserAdapter.kt */
         public static final /* data */ class Warning extends Item {
             private final String key;
             private final int type;
@@ -378,7 +378,7 @@ public final class WidgetThreadBrowserAdapter extends MGRecyclerAdapterSimple<It
         }
     }
 
-    /* compiled from: WidgetThreadBrowserAdapter.kt */
+    /* JADX INFO: compiled from: WidgetThreadBrowserAdapter.kt */
     public enum ItemType {
         WARNING,
         THREAD,
@@ -386,11 +386,11 @@ public final class WidgetThreadBrowserAdapter extends MGRecyclerAdapterSimple<It
         LOADING;
 
 
-        /* renamed from: Companion, reason: from kotlin metadata */
+        /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
         public static final Companion INSTANCE = new Companion(null);
         private static final ItemType[] cachedValues = values();
 
-        /* compiled from: WidgetThreadBrowserAdapter.kt */
+        /* JADX INFO: compiled from: WidgetThreadBrowserAdapter.kt */
         public static final class Companion {
             private Companion() {
             }
@@ -409,7 +409,7 @@ public final class WidgetThreadBrowserAdapter extends MGRecyclerAdapterSimple<It
         }
     }
 
-    /* compiled from: WidgetThreadBrowserAdapter.kt */
+    /* JADX INFO: compiled from: WidgetThreadBrowserAdapter.kt */
     public static final class LoadingItem extends MGRecyclerViewHolder<WidgetThreadBrowserAdapter, Item> {
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
         public LoadingItem(WidgetThreadBrowserAdapter widgetThreadBrowserAdapter) {
@@ -418,7 +418,7 @@ public final class WidgetThreadBrowserAdapter extends MGRecyclerAdapterSimple<It
         }
     }
 
-    /* compiled from: WidgetThreadBrowserAdapter.kt */
+    /* JADX INFO: compiled from: WidgetThreadBrowserAdapter.kt */
     public static final class ThreadItem extends MGRecyclerViewHolder<WidgetThreadBrowserAdapter, Item> {
         private final ThreadBrowserItemThreadBinding binding;
 
@@ -443,7 +443,7 @@ public final class WidgetThreadBrowserAdapter extends MGRecyclerAdapterSimple<It
             onConfigure2(i, item);
         }
 
-        /* renamed from: onConfigure, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: onConfigure, reason: avoid collision after fix types in other method */
         public void onConfigure2(int position, Item data) {
             Intrinsics3.checkNotNullParameter(data, "data");
             super.onConfigure(position, data);
@@ -454,7 +454,7 @@ public final class WidgetThreadBrowserAdapter extends MGRecyclerAdapterSimple<It
         }
     }
 
-    /* compiled from: WidgetThreadBrowserAdapter.kt */
+    /* JADX INFO: compiled from: WidgetThreadBrowserAdapter.kt */
     public static final class WarningItem extends MGRecyclerViewHolder<WidgetThreadBrowserAdapter, Item> {
         private final ThreadBrowserItemWarningBinding binding;
 
@@ -477,7 +477,7 @@ public final class WidgetThreadBrowserAdapter extends MGRecyclerAdapterSimple<It
             onConfigure2(i, item);
         }
 
-        /* renamed from: onConfigure, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: onConfigure, reason: avoid collision after fix types in other method */
         public void onConfigure2(int position, Item data) {
             Intrinsics3.checkNotNullParameter(data, "data");
             super.onConfigure(position, data);

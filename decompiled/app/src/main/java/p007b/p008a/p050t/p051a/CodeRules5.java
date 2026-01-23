@@ -14,27 +14,27 @@ import p507d0.p580t._Arrays;
 import p507d0.p580t._Collections;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: CodeRules.kt */
-/* renamed from: b.a.t.a.e, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.a.t.a.e, reason: use source file name */
+/* JADX INFO: compiled from: CodeRules.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class CodeRules5 {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final Pattern f1900a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static final Pattern f1901b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public static final Pattern f1902c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public static final Pattern f1903d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public static final Pattern f1904e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public static final CodeRules5 f1905f = new CodeRules5();
 
     static {
@@ -55,12 +55,12 @@ public final class CodeRules5 {
         f1904e = patternCompile5;
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static /* synthetic */ List m366b(CodeRules5 codeRules5, CodeStyleProviders codeStyleProviders, List list, String[] strArr, String[] strArr2, String[] strArr3, String[] strArr4, int i) {
         return codeRules5.m368a(codeStyleProviders, list, strArr, strArr2, strArr3, (i & 32) != 0 ? new String[]{" "} : null);
     }
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public static Rule m367e(CodeRules5 codeRules5, Pattern pattern, int i, StyleNode.InterfaceC5656a interfaceC5656a, int i2) {
         if ((i2 & 1) != 0) {
             i = 0;
@@ -72,7 +72,7 @@ public final class CodeRules5 {
         return new CodeRules4(pattern, i, interfaceC5656a, pattern);
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final <R, S> List<Rule<R, Node<R>, S>> m368a(CodeStyleProviders<R> codeStyleProviders, List<? extends Rule<R, Node<R>, S>> list, String[] strArr, String[] strArr2, String[] strArr3, String[] strArr4) {
         String[] strArr5 = (String[]) Arrays.copyOf(strArr, strArr.length);
         Intrinsics3.checkNotNullParameter(codeStyleProviders, "codeStyleProviders");
@@ -91,12 +91,12 @@ public final class CodeRules5 {
         return _Collections.plus((Collection) list, (Iterable) Collections2.listOf((Object[]) new Rule[]{new CodeRules2(codeStyleProviders, strArr5, patternCompile), m367e(this, patternM370d, 0, codeStyleProviders.f1912g, 1), m367e(this, patternM370d2, 0, codeStyleProviders.f1909d, 1), m367e(this, patternM370d3, 0, codeStyleProviders.f1911f, 1), m367e(this, f1904e, 0, codeStyleProviders.f1908c, 1), m367e(this, f1902c, 0, null, 3), m367e(this, f1903d, 0, null, 3)}));
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final Pattern m369c(String str) {
         return Pattern.compile("^(?:" + str + ".*?(?=\\n|$))");
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final Pattern m370d(String... strArr) {
         Intrinsics3.checkNotNullParameter(strArr, "words");
         StringBuilder sbM833U = outline.m833U("^\\b(?:");

@@ -10,8 +10,8 @@ import p007b.p100d.p104b.p105a.outline;
 import p507d0.p580t.Sets5;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: UserNode.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: UserNode.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final /* data */ class UserNode extends AnswerNode {
     private final int discriminator;
     private final String userName;
@@ -34,7 +34,7 @@ public final /* data */ class UserNode extends AnswerNode {
         this.discriminator = i;
     }
 
-    /* renamed from: component2, reason: from getter */
+    /* JADX INFO: renamed from: component2, reason: from getter */
     private final int getDiscriminator() {
         return this.discriminator;
     }
@@ -49,7 +49,7 @@ public final /* data */ class UserNode extends AnswerNode {
         return userNode.copy(str, i);
     }
 
-    /* renamed from: component1, reason: from getter */
+    /* JADX INFO: renamed from: component1, reason: from getter */
     public final String getUserName() {
         return this.userName;
     }

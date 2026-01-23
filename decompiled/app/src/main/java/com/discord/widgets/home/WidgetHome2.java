@@ -22,9 +22,9 @@ import p007b.p008a.p025i.WidgetHomePanelRightBinding;
 import p507d0.p592z.p594d.FunctionReferenceImpl;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: WidgetHome.kt */
-/* renamed from: com.discord.widgets.home.WidgetHome$binding$2, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.home.WidgetHome$binding$2, reason: use source file name */
+/* JADX INFO: compiled from: WidgetHome.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final /* synthetic */ class WidgetHome2 extends FunctionReferenceImpl implements Function1<View, WidgetHomeBinding> {
     public static final WidgetHome2 INSTANCE = new WidgetHome2();
 
@@ -32,7 +32,7 @@ public final /* synthetic */ class WidgetHome2 extends FunctionReferenceImpl imp
         super(1, WidgetHomeBinding.class, "bind", "bind(Landroid/view/View;)Lcom/discord/databinding/WidgetHomeBinding;", 0);
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final WidgetHomeBinding invoke2(View view) {
         Intrinsics3.checkNotNullParameter(view, "p1");
         int i = C5419R.id.loading;

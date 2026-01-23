@@ -2,12 +2,12 @@ package p007b.p225i.p226a.p341g.p351j;
 
 import android.widget.AutoCompleteTextView;
 
-/* compiled from: DropdownMenuEndIconDelegate.java */
-/* renamed from: b.i.a.g.j.k, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.g.j.k, reason: use source file name */
+/* JADX INFO: compiled from: DropdownMenuEndIconDelegate.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class DropdownMenuEndIconDelegate4 implements AutoCompleteTextView.OnDismissListener {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final /* synthetic */ DropdownMenuEndIconDelegate f11817a;
 
     public DropdownMenuEndIconDelegate4(DropdownMenuEndIconDelegate dropdownMenuEndIconDelegate) {

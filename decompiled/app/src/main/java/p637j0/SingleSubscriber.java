@@ -3,18 +3,18 @@ package p637j0;
 import p658rx.Subscription;
 import p658rx.internal.util.SubscriptionList;
 
-/* compiled from: SingleSubscriber.java */
-/* renamed from: j0.i, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: j0.i, reason: use source file name */
+/* JADX INFO: compiled from: SingleSubscriber.java */
+/* JADX INFO: loaded from: classes3.dex */
 public abstract class SingleSubscriber<T> implements Subscription {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final SubscriptionList f26697j = new SubscriptionList();
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public abstract void m10735a(Throwable th);
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public abstract void m10736b(T t);
 
     @Override // p658rx.Subscription

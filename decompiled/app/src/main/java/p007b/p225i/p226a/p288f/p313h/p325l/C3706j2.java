@@ -6,18 +6,18 @@ import android.net.Uri;
 import android.util.Log;
 import org.objectweb.asm.Opcodes;
 
-/* compiled from: com.google.android.gms:play-services-measurement-impl@@18.0.0 */
-/* renamed from: b.i.a.f.h.l.j2 */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.h.l.j2 */
+/* JADX INFO: compiled from: com.google.android.gms:play-services-measurement-impl@@18.0.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public final class C3706j2 {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static volatile AbstractC3888x2<Boolean> f10029a = C3875w2.f10378j;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static final Object f10030b = new Object();
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static boolean m4968a(Context context, Uri uri) {
         ProviderInfo providerInfoResolveContentProvider;
         String authority = uri.getAuthority();

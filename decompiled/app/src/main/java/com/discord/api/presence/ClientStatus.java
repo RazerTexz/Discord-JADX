@@ -1,8 +1,8 @@
 package com.discord.api.presence;
 
 
-/* compiled from: ClientStatus.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: ClientStatus.kt */
+/* JADX INFO: loaded from: classes.dex */
 public enum ClientStatus {
     ONLINE,
     IDLE,

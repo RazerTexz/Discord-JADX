@@ -5,8 +5,8 @@ import android.os.Parcelable;
 import com.google.android.gms.safetynet.HarmfulAppsData;
 import p007b.p085c.p086a.p087a0.AnimatableValueParser;
 
-/* renamed from: b.i.a.f.k.c */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.k.c */
+/* JADX INFO: loaded from: classes3.dex */
 public final class C4329c implements Parcelable.Creator<HarmfulAppsData> {
     @Override // android.os.Parcelable.Creator
     public final HarmfulAppsData createFromParcel(Parcel parcel) {

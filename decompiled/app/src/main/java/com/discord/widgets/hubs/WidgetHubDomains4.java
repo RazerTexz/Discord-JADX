@@ -10,15 +10,15 @@ import kotlin.Unit;
 import kotlin.jvm.functions.Function1;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: WidgetHubDomains.kt */
-/* renamed from: com.discord.widgets.hubs.HubDomainViewHolder, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.hubs.HubDomainViewHolder, reason: use source file name */
+/* JADX INFO: compiled from: WidgetHubDomains.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetHubDomains4 extends SimpleRecyclerAdapter.ViewHolder<WidgetHubDomains2> {
     private final DiscordHubAddServerListItemBinding binding;
     private final Function1<WidgetHubDomains2, Unit> onClickListener;
 
-    /* compiled from: WidgetHubDomains.kt */
-    /* renamed from: com.discord.widgets.hubs.HubDomainViewHolder$bind$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.hubs.HubDomainViewHolder$bind$1 */
+    /* JADX INFO: compiled from: WidgetHubDomains.kt */
     public static final class ViewOnClickListenerC89851 implements View.OnClickListener {
         public final /* synthetic */ WidgetHubDomains2 $data;
 
@@ -57,7 +57,7 @@ public final class WidgetHubDomains4 extends SimpleRecyclerAdapter.ViewHolder<Wi
         return this.onClickListener;
     }
 
-    /* renamed from: bind, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: bind, reason: avoid collision after fix types in other method */
     public void bind2(WidgetHubDomains2 data) {
         Intrinsics3.checkNotNullParameter(data, "data");
         this.binding.f15047b.m8546b();

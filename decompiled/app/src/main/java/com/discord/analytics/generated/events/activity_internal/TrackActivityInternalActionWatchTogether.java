@@ -8,8 +8,8 @@ import com.discord.api.science.AnalyticsSchema;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: TrackActivityInternalActionWatchTogether.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: TrackActivityInternalActionWatchTogether.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class TrackActivityInternalActionWatchTogether implements AnalyticsSchema, TrackBase2, TrackActivityInternalMetadata2 {
     private TrackActivityInternalMetadata trackActivityInternalMetadata;
     private TrackBase trackBase;
@@ -25,7 +25,7 @@ public final /* data */ class TrackActivityInternalActionWatchTogether implement
     private final transient String analyticsSchemaTypeName = "activity_internal_action_watch_together";
 
     @Override // com.discord.api.science.AnalyticsSchema
-    /* renamed from: d, reason: from getter */
+    /* JADX INFO: renamed from: d, reason: from getter */
     public String getAnalyticsSchemaTypeName() {
         return this.analyticsSchemaTypeName;
     }

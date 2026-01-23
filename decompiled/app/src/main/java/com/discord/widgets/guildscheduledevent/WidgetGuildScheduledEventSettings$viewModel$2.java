@@ -7,8 +7,8 @@ import java.util.Objects;
 import kotlin.jvm.functions.Function0;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetGuildScheduledEventSettings.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetGuildScheduledEventSettings.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetGuildScheduledEventSettings$viewModel$2 extends Lambda implements Function0<GuildScheduledEventSettingsViewModel> {
     public final /* synthetic */ WidgetGuildScheduledEventSettings this$0;
 

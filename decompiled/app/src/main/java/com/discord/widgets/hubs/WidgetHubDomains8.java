@@ -4,9 +4,9 @@ import android.content.Context;
 import android.view.View;
 import p007b.p008a.p018d.AppScreen2;
 
-/* compiled from: WidgetHubDomains.kt */
-/* renamed from: com.discord.widgets.hubs.WidgetHubDomains$onViewBound$$inlined$apply$lambda$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.hubs.WidgetHubDomains$onViewBound$$inlined$apply$lambda$1, reason: use source file name */
+/* JADX INFO: compiled from: WidgetHubDomains.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetHubDomains8 implements View.OnClickListener {
     public final /* synthetic */ Context $context;
     public final /* synthetic */ WidgetHubDomains this$0;

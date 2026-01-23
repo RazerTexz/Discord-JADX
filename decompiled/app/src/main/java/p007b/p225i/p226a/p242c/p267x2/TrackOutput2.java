@@ -7,25 +7,25 @@ import p007b.p225i.p226a.p242c.Format2;
 import p007b.p225i.p226a.p242c.p257e3.DataReader;
 import p007b.p225i.p226a.p242c.p259f3.ParsableByteArray;
 
-/* compiled from: TrackOutput.java */
-/* renamed from: b.i.a.c.x2.w, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.x2.w, reason: use source file name */
+/* JADX INFO: compiled from: TrackOutput.java */
+/* JADX INFO: loaded from: classes3.dex */
 public interface TrackOutput2 {
 
-    /* compiled from: TrackOutput.java */
-    /* renamed from: b.i.a.c.x2.w$a */
+    /* JADX INFO: renamed from: b.i.a.c.x2.w$a */
+    /* JADX INFO: compiled from: TrackOutput.java */
     public static final class a {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final int f9000a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final byte[] f9001b;
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public final int f9002c;
 
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         public final int f9003d;
 
         public a(int i, byte[] bArr, int i2, int i3) {
@@ -51,21 +51,21 @@ public interface TrackOutput2 {
         }
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     int mo2522a(DataReader dataReader, int i, boolean z2, int i2) throws IOException;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     int mo2523b(DataReader dataReader, int i, boolean z2) throws IOException;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     void mo2524c(ParsableByteArray parsableByteArray, int i);
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     void mo2525d(long j, int i, int i2, int i3, @Nullable a aVar);
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     void mo2526e(Format2 format2);
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     void mo2527f(ParsableByteArray parsableByteArray, int i, int i2);
 }

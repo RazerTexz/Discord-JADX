@@ -11,14 +11,14 @@ import p637j0.p641k.Func1;
 import p637j0.p642l.p647e.ScalarSynchronousObservable;
 import p658rx.Observable;
 
-/* compiled from: SurveyUtils.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: SurveyUtils.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class SurveyUtils {
     public static final SurveyUtils INSTANCE = new SurveyUtils();
     private static final long MIN_APP_INSTALL_TIME = 604800000;
     private static Application applicationContext;
 
-    /* compiled from: SurveyUtils.kt */
+    /* JADX INFO: compiled from: SurveyUtils.kt */
     public static class Survey {
         private final String noticeKey;
         private final String surveyBody;
@@ -26,7 +26,7 @@ public final class SurveyUtils {
         private final String surveyTitle;
         private final String surveyURL;
 
-        /* compiled from: SurveyUtils.kt */
+        /* JADX INFO: compiled from: SurveyUtils.kt */
         public static final class None extends Survey {
             public static final None INSTANCE = new None();
 
@@ -69,8 +69,8 @@ public final class SurveyUtils {
         }
     }
 
-    /* compiled from: SurveyUtils.kt */
-    /* renamed from: com.discord.utilities.surveys.SurveyUtils$getSurveyToShow$1 */
+    /* JADX INFO: renamed from: com.discord.utilities.surveys.SurveyUtils$getSurveyToShow$1 */
+    /* JADX INFO: compiled from: SurveyUtils.kt */
     public static final class C69321<T, R> implements Func1<UserSurvey, Survey> {
         public static final C69321 INSTANCE = new C69321();
 
@@ -79,7 +79,7 @@ public final class SurveyUtils {
             return call2(userSurvey);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final Survey call2(UserSurvey userSurvey) {
             if (userSurvey != null) {
                 return new Survey(userSurvey.getKey(), userSurvey.getUrl(), userSurvey.getKey(), userSurvey.getPrompt(), userSurvey.getCta());

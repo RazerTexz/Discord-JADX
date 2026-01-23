@@ -4,10 +4,10 @@ import android.view.View;
 import androidx.annotation.NonNull;
 import androidx.viewbinding.ViewBinding;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public final class ViewMobileReportsBreadcrumbsBinding implements ViewBinding {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     @NonNull
     public final View f15517a;
 

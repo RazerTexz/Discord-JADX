@@ -3,7 +3,6 @@ package com.discord.utilities.media;
 import android.app.Application;
 import android.content.Context;
 import android.content.res.AssetFileDescriptor;
-import android.content.res.Resources;
 import android.media.AudioAttributes;
 import android.media.MediaPlayer;
 import com.discord.app.AppLog;
@@ -20,17 +19,17 @@ import p507d0.Result3;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: AppSoundManager.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: AppSoundManager.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class AppSoundManager {
     private final Context context;
     private Map<Integer, SoundPlayer> soundPlayers;
 
-    /* compiled from: AppSoundManager.kt */
+    /* JADX INFO: compiled from: AppSoundManager.kt */
     public static final class Provider {
         public static final Provider INSTANCE = new Provider();
 
-        /* renamed from: INSTANCE$delegate, reason: from kotlin metadata */
+        /* JADX INFO: renamed from: INSTANCE$delegate, reason: from kotlin metadata */
         private static final Lazy INSTANCE = LazyJVM.lazy(AppSoundManager2.INSTANCE);
 
         private Provider() {
@@ -45,11 +44,11 @@ public final class AppSoundManager {
         }
     }
 
-    /* compiled from: AppSoundManager.kt */
+    /* JADX INFO: compiled from: AppSoundManager.kt */
     public static final class SoundPlayer {
         private MediaPlayer mediaPlayer;
 
-        public SoundPlayer(Context context, AppSound appSound, Function0<Unit> function0) throws IllegalStateException, Resources.NotFoundException, IOException, IllegalArgumentException {
+        public SoundPlayer(Context context, AppSound appSound, Function0<Unit> function0) throws IOException {
             Intrinsics3.checkNotNullParameter(context, "context");
             Intrinsics3.checkNotNullParameter(appSound, "sound");
             Intrinsics3.checkNotNullParameter(function0, "onCompletion");
@@ -151,8 +150,8 @@ public final class AppSoundManager {
         }
     }
 
-    /* compiled from: AppSoundManager.kt */
-    /* renamed from: com.discord.utilities.media.AppSoundManager$play$1 */
+    /* JADX INFO: renamed from: com.discord.utilities.media.AppSoundManager$play$1 */
+    /* JADX INFO: compiled from: AppSoundManager.kt */
     public static final class C67931 extends Lambda implements Function0<Unit> {
         public final /* synthetic */ AppSound $sound;
 
@@ -168,7 +167,7 @@ public final class AppSoundManager {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             if (this.$sound.getShouldLoop()) {
                 return;

@@ -3,9 +3,9 @@ package com.discord.utilities.presence;
 import p001a0.p002a.p003a.C0002b;
 import p007b.p100d.p104b.p105a.outline;
 
-/* compiled from: ActivityUtils.kt */
-/* renamed from: com.discord.utilities.presence.StageCallRichPresencePartyData, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.utilities.presence.StageCallRichPresencePartyData, reason: use source file name */
+/* JADX INFO: compiled from: ActivityUtils.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final /* data */ class ActivityUtils2 {
     private final long audienceSize;
     private final long channelId;
@@ -31,42 +31,42 @@ public final /* data */ class ActivityUtils2 {
         return activityUtils2.copy((i & 1) != 0 ? activityUtils2.stageInstanceId : j, (i & 2) != 0 ? activityUtils2.channelId : j2, (i & 4) != 0 ? activityUtils2.userIsSpeaker : z2, (i & 8) != 0 ? activityUtils2.guildId : j3, (i & 16) != 0 ? activityUtils2.guildIsPartnered : z3, (i & 32) != 0 ? activityUtils2.guildIsVerified : z4, (i & 64) != 0 ? activityUtils2.speakerCount : j4, (i & 128) != 0 ? activityUtils2.audienceSize : j5);
     }
 
-    /* renamed from: component1, reason: from getter */
+    /* JADX INFO: renamed from: component1, reason: from getter */
     public final long getStageInstanceId() {
         return this.stageInstanceId;
     }
 
-    /* renamed from: component2, reason: from getter */
+    /* JADX INFO: renamed from: component2, reason: from getter */
     public final long getChannelId() {
         return this.channelId;
     }
 
-    /* renamed from: component3, reason: from getter */
+    /* JADX INFO: renamed from: component3, reason: from getter */
     public final boolean getUserIsSpeaker() {
         return this.userIsSpeaker;
     }
 
-    /* renamed from: component4, reason: from getter */
+    /* JADX INFO: renamed from: component4, reason: from getter */
     public final long getGuildId() {
         return this.guildId;
     }
 
-    /* renamed from: component5, reason: from getter */
+    /* JADX INFO: renamed from: component5, reason: from getter */
     public final boolean getGuildIsPartnered() {
         return this.guildIsPartnered;
     }
 
-    /* renamed from: component6, reason: from getter */
+    /* JADX INFO: renamed from: component6, reason: from getter */
     public final boolean getGuildIsVerified() {
         return this.guildIsVerified;
     }
 
-    /* renamed from: component7, reason: from getter */
+    /* JADX INFO: renamed from: component7, reason: from getter */
     public final long getSpeakerCount() {
         return this.speakerCount;
     }
 
-    /* renamed from: component8, reason: from getter */
+    /* JADX INFO: renamed from: component8, reason: from getter */
     public final long getAudienceSize() {
         return this.audienceSize;
     }
@@ -119,22 +119,31 @@ public final /* data */ class ActivityUtils2 {
     }
 
     /* JADX WARN: Multi-variable type inference failed */
+    /* JADX WARN: Type inference failed for: r0v14 */
+    /* JADX WARN: Type inference failed for: r0v15 */
+    /* JADX WARN: Type inference failed for: r0v4, types: [int] */
+    /* JADX WARN: Type inference failed for: r1v13 */
+    /* JADX WARN: Type inference failed for: r1v14 */
+    /* JADX WARN: Type inference failed for: r1v7, types: [int] */
+    /* JADX WARN: Type inference failed for: r2v0 */
+    /* JADX WARN: Type inference failed for: r2v1, types: [int] */
+    /* JADX WARN: Type inference failed for: r2v3 */
     public int hashCode() {
         int iM3a = (C0002b.m3a(this.channelId) + (C0002b.m3a(this.stageInstanceId) * 31)) * 31;
         boolean z2 = this.userIsSpeaker;
-        int i = z2;
-        if (z2 != 0) {
-            i = 1;
+        ?? r0 = z2;
+        if (z2) {
+            r0 = 1;
         }
-        int iM3a2 = (C0002b.m3a(this.guildId) + ((iM3a + i) * 31)) * 31;
+        int iM3a2 = (C0002b.m3a(this.guildId) + ((iM3a + r0) * 31)) * 31;
         boolean z3 = this.guildIsPartnered;
-        int i2 = z3;
-        if (z3 != 0) {
-            i2 = 1;
+        ?? r1 = z3;
+        if (z3) {
+            r1 = 1;
         }
-        int i3 = (iM3a2 + i2) * 31;
+        int i = (iM3a2 + r1) * 31;
         boolean z4 = this.guildIsVerified;
-        return C0002b.m3a(this.audienceSize) + ((C0002b.m3a(this.speakerCount) + ((i3 + (z4 ? 1 : z4 ? 1 : 0)) * 31)) * 31);
+        return C0002b.m3a(this.audienceSize) + ((C0002b.m3a(this.speakerCount) + ((i + (z4 ? 1 : z4)) * 31)) * 31);
     }
 
     public String toString() {

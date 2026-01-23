@@ -36,7 +36,7 @@ import androidx.core.view.NestedScrollingParentHelper;
 import androidx.core.view.ViewCompat;
 import androidx.core.widget.ListViewCompat;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class SwipeRefreshLayout extends ViewGroup implements NestedScrollingParent3, NestedScrollingParent2, NestedScrollingChild3, NestedScrollingChild2, NestedScrollingParent, NestedScrollingChild {
     private static final int ALPHA_ANIMATION_DURATION = 300;
     private static final int ANIMATE_TO_START_DURATION = 200;
@@ -103,7 +103,7 @@ public class SwipeRefreshLayout extends ViewGroup implements NestedScrollingPare
     private static final String LOG_TAG = SwipeRefreshLayout.class.getSimpleName();
     private static final int[] LAYOUT_ATTRS = {R.attr.enabled};
 
-    /* renamed from: androidx.swiperefreshlayout.widget.SwipeRefreshLayout$1 */
+    /* JADX INFO: renamed from: androidx.swiperefreshlayout.widget.SwipeRefreshLayout$1 */
     public class AnimationAnimationListenerC06241 implements Animation.AnimationListener {
         public AnimationAnimationListenerC06241() {
         }
@@ -135,7 +135,7 @@ public class SwipeRefreshLayout extends ViewGroup implements NestedScrollingPare
         }
     }
 
-    /* renamed from: androidx.swiperefreshlayout.widget.SwipeRefreshLayout$2 */
+    /* JADX INFO: renamed from: androidx.swiperefreshlayout.widget.SwipeRefreshLayout$2 */
     public class C06252 extends Animation {
         public C06252() {
         }
@@ -146,7 +146,7 @@ public class SwipeRefreshLayout extends ViewGroup implements NestedScrollingPare
         }
     }
 
-    /* renamed from: androidx.swiperefreshlayout.widget.SwipeRefreshLayout$3 */
+    /* JADX INFO: renamed from: androidx.swiperefreshlayout.widget.SwipeRefreshLayout$3 */
     public class C06263 extends Animation {
         public C06263() {
         }
@@ -157,7 +157,7 @@ public class SwipeRefreshLayout extends ViewGroup implements NestedScrollingPare
         }
     }
 
-    /* renamed from: androidx.swiperefreshlayout.widget.SwipeRefreshLayout$4 */
+    /* JADX INFO: renamed from: androidx.swiperefreshlayout.widget.SwipeRefreshLayout$4 */
     public class C06274 extends Animation {
         public final /* synthetic */ int val$endingAlpha;
         public final /* synthetic */ int val$startingAlpha;
@@ -173,7 +173,7 @@ public class SwipeRefreshLayout extends ViewGroup implements NestedScrollingPare
         }
     }
 
-    /* renamed from: androidx.swiperefreshlayout.widget.SwipeRefreshLayout$5 */
+    /* JADX INFO: renamed from: androidx.swiperefreshlayout.widget.SwipeRefreshLayout$5 */
     public class AnimationAnimationListenerC06285 implements Animation.AnimationListener {
         public AnimationAnimationListenerC06285() {
         }
@@ -196,7 +196,7 @@ public class SwipeRefreshLayout extends ViewGroup implements NestedScrollingPare
         }
     }
 
-    /* renamed from: androidx.swiperefreshlayout.widget.SwipeRefreshLayout$6 */
+    /* JADX INFO: renamed from: androidx.swiperefreshlayout.widget.SwipeRefreshLayout$6 */
     public class C06296 extends Animation {
         public C06296() {
         }
@@ -211,7 +211,7 @@ public class SwipeRefreshLayout extends ViewGroup implements NestedScrollingPare
         }
     }
 
-    /* renamed from: androidx.swiperefreshlayout.widget.SwipeRefreshLayout$7 */
+    /* JADX INFO: renamed from: androidx.swiperefreshlayout.widget.SwipeRefreshLayout$7 */
     public class C06307 extends Animation {
         public C06307() {
         }
@@ -222,7 +222,7 @@ public class SwipeRefreshLayout extends ViewGroup implements NestedScrollingPare
         }
     }
 
-    /* renamed from: androidx.swiperefreshlayout.widget.SwipeRefreshLayout$8 */
+    /* JADX INFO: renamed from: androidx.swiperefreshlayout.widget.SwipeRefreshLayout$8 */
     public class C06318 extends Animation {
         public C06318() {
         }
@@ -316,7 +316,7 @@ public class SwipeRefreshLayout extends ViewGroup implements NestedScrollingPare
     private void moveSpinner(float f) {
         this.mProgress.setArrowEnabled(true);
         float fMin = Math.min(1.0f, Math.abs(f / this.mTotalDragDistance));
-        float fMax = (((float) Math.max(fMin - 0.4d, 0.0d)) * 5.0f) / 3.0f;
+        float fMax = (((float) Math.max(((double) fMin) - 0.4d, 0.0d)) * 5.0f) / 3.0f;
         float fAbs = Math.abs(f) - this.mTotalDragDistance;
         int i = this.mCustomSlingshotDistance;
         if (i <= 0) {
@@ -886,7 +886,7 @@ public class SwipeRefreshLayout extends ViewGroup implements NestedScrollingPare
         public static final Parcelable.Creator<SavedState> CREATOR = new C06321();
         public final boolean mRefreshing;
 
-        /* renamed from: androidx.swiperefreshlayout.widget.SwipeRefreshLayout$SavedState$1 */
+        /* JADX INFO: renamed from: androidx.swiperefreshlayout.widget.SwipeRefreshLayout$SavedState$1 */
         public class C06321 implements Parcelable.Creator<SavedState> {
             @Override // android.os.Parcelable.Creator
             public /* bridge */ /* synthetic */ SavedState createFromParcel(Parcel parcel) {

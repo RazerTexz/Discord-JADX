@@ -1,10 +1,10 @@
 package p659s.p660a;
 
-/* compiled from: DefaultExecutor.kt */
-/* renamed from: s.a.e0, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: s.a.e0, reason: use source file name */
+/* JADX INFO: compiled from: DefaultExecutor.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class DefaultExecutor2 {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final Delay f27793a = DefaultExecutor.f27779q;
 }

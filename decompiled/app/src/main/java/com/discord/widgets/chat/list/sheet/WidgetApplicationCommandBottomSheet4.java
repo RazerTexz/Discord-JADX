@@ -4,9 +4,9 @@ import android.os.Bundle;
 import kotlin.jvm.functions.Function0;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetApplicationCommandBottomSheet.kt */
-/* renamed from: com.discord.widgets.chat.list.sheet.WidgetApplicationCommandBottomSheet$viewModel$2, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.chat.list.sheet.WidgetApplicationCommandBottomSheet$viewModel$2, reason: use source file name */
+/* JADX INFO: compiled from: WidgetApplicationCommandBottomSheet.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetApplicationCommandBottomSheet4 extends Lambda implements Function0<WidgetApplicationCommandBottomSheetViewModel> {
     public final /* synthetic */ WidgetApplicationCommandBottomSheet this$0;
 

@@ -7,9 +7,9 @@ import kotlin.jvm.functions.Function1;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: HookNode.kt */
-/* renamed from: b.a.k.f.b, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.a.k.f.b, reason: use source file name */
+/* JADX INFO: compiled from: HookNode.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class HookNode extends Lambda implements Function1<View, Unit> {
     public final /* synthetic */ Hook.C5524a $clickHandler;
     public final /* synthetic */ HookNode2 this$0;

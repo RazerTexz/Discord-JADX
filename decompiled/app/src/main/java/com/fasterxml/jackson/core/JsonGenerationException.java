@@ -3,11 +3,11 @@ package com.fasterxml.jackson.core;
 import p007b.p195g.p196a.p198b.JsonGenerator;
 import p007b.p195g.p196a.p198b.JsonLocation;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public class JsonGenerationException extends JsonProcessingException {
     private static final long serialVersionUID = 123;
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public transient JsonGenerator f19660j;
 
     public JsonGenerationException(String str, JsonGenerator jsonGenerator) {
@@ -16,7 +16,7 @@ public class JsonGenerationException extends JsonProcessingException {
     }
 
     @Override // com.fasterxml.jackson.core.JsonProcessingException
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public Object mo8737c() {
         return this.f19660j;
     }

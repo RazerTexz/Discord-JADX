@@ -4,30 +4,30 @@ import com.discord.api.guildmember.GuildMember;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: TypingUser.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: TypingUser.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class TypingUser {
     private final long channelId;
     private final long guildId;
     private final GuildMember member;
     private final long userId;
 
-    /* renamed from: a, reason: from getter */
+    /* JADX INFO: renamed from: a, reason: from getter */
     public final long getChannelId() {
         return this.channelId;
     }
 
-    /* renamed from: b, reason: from getter */
+    /* JADX INFO: renamed from: b, reason: from getter */
     public final long getGuildId() {
         return this.guildId;
     }
 
-    /* renamed from: c, reason: from getter */
+    /* JADX INFO: renamed from: c, reason: from getter */
     public final GuildMember getMember() {
         return this.member;
     }
 
-    /* renamed from: d, reason: from getter */
+    /* JADX INFO: renamed from: d, reason: from getter */
     public final long getUserId() {
         return this.userId;
     }

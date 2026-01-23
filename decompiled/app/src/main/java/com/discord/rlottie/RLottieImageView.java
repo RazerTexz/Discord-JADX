@@ -11,17 +11,17 @@ import com.discord.rlottie.RLottieDrawable;
 import kotlin.TypeCastException;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: RLottieImageView.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: RLottieImageView.kt */
+/* JADX INFO: loaded from: classes.dex */
 public class RLottieImageView extends AppCompatImageView {
 
-    /* renamed from: j, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: j, reason: from kotlin metadata */
     public RLottieDrawable drawable;
 
-    /* renamed from: k, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: k, reason: from kotlin metadata */
     public boolean attachedToWindow;
 
-    /* renamed from: l, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: l, reason: from kotlin metadata */
     public boolean playing;
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -32,7 +32,7 @@ public class RLottieImageView extends AppCompatImageView {
     }
 
     @SuppressLint({"AnnotateVersionCheck"})
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final Display m8448a(Context context) {
         if (Build.VERSION.SDK_INT >= 30) {
             Display display = context.getDisplay();
@@ -51,7 +51,7 @@ public class RLottieImageView extends AppCompatImageView {
         return defaultDisplay;
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final void m8449b() {
         RLottieDrawable rLottieDrawable = this.drawable;
         if (rLottieDrawable == null) {
@@ -64,7 +64,7 @@ public class RLottieImageView extends AppCompatImageView {
         rLottieDrawable.start();
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final void m8450c(int resId, int w, int h) {
         RLottieDrawable.PlaybackMode playbackMode = RLottieDrawable.PlaybackMode.LOOP;
         Intrinsics3.checkParameterIsNotNull(playbackMode, "playbackMode");

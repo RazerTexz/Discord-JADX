@@ -5,8 +5,8 @@ import android.view.View;
 import androidx.annotation.NonNull;
 import androidx.annotation.RequiresApi;
 
+/* JADX INFO: loaded from: classes.dex */
 @RequiresApi(19)
-/* loaded from: classes.dex */
 public class ViewUtilsApi19 extends ViewUtilsBase {
     private static boolean sTryHiddenTransitionAlpha = true;
 

@@ -14,17 +14,17 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p658rx.Observable;
 import p658rx.subjects.PublishSubject;
 
-/* compiled from: GuildRoleSubscriptionTierBenefitViewModel.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: GuildRoleSubscriptionTierBenefitViewModel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class GuildRoleSubscriptionTierBenefitViewModel extends AppViewModel<ViewState> {
     private final GuildRoleSubscriptionBenefitType benefitType;
     private final PublishSubject<Event> eventSubject;
     private final String tierName;
 
-    /* compiled from: GuildRoleSubscriptionTierBenefitViewModel.kt */
+    /* JADX INFO: compiled from: GuildRoleSubscriptionTierBenefitViewModel.kt */
     public static abstract class Event {
 
-        /* compiled from: GuildRoleSubscriptionTierBenefitViewModel.kt */
+        /* JADX INFO: compiled from: GuildRoleSubscriptionTierBenefitViewModel.kt */
         public static final /* data */ class SendResult extends Event {
             private final Benefit benefit;
 
@@ -42,7 +42,7 @@ public final class GuildRoleSubscriptionTierBenefitViewModel extends AppViewMode
                 return sendResult.copy(benefit);
             }
 
-            /* renamed from: component1, reason: from getter */
+            /* JADX INFO: renamed from: component1, reason: from getter */
             public final Benefit getBenefit() {
                 return this.benefit;
             }
@@ -87,7 +87,7 @@ public final class GuildRoleSubscriptionTierBenefitViewModel extends AppViewMode
         }
     }
 
-    /* compiled from: GuildRoleSubscriptionTierBenefitViewModel.kt */
+    /* JADX INFO: compiled from: GuildRoleSubscriptionTierBenefitViewModel.kt */
     public static final /* data */ class ViewState {
         private final boolean canSubmitResult;
         private final Long channelId;
@@ -141,37 +141,37 @@ public final class GuildRoleSubscriptionTierBenefitViewModel extends AppViewMode
             return viewState.copy(z2, str4, str5, num2, emoji2, str6, l);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final boolean getCanSubmitResult() {
             return this.canSubmitResult;
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final String getName() {
             return this.name;
         }
 
-        /* renamed from: component3, reason: from getter */
+        /* JADX INFO: renamed from: component3, reason: from getter */
         public final String getTierName() {
             return this.tierName;
         }
 
-        /* renamed from: component4, reason: from getter */
+        /* JADX INFO: renamed from: component4, reason: from getter */
         public final Integer getLeadingNameIconResId() {
             return this.leadingNameIconResId;
         }
 
-        /* renamed from: component5, reason: from getter */
+        /* JADX INFO: renamed from: component5, reason: from getter */
         public final Emoji getEmoji() {
             return this.emoji;
         }
 
-        /* renamed from: component6, reason: from getter */
+        /* JADX INFO: renamed from: component6, reason: from getter */
         public final String getDescription() {
             return this.description;
         }
 
-        /* renamed from: component7, reason: from getter */
+        /* JADX INFO: renamed from: component7, reason: from getter */
         public final Long getChannelId() {
             return this.channelId;
         }
@@ -391,7 +391,7 @@ public final class GuildRoleSubscriptionTierBenefitViewModel extends AppViewMode
     }
 
     /* JADX WARN: Removed duplicated region for block: B:17:0x002d  */
-    /* renamed from: updateViewState, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: updateViewState, reason: avoid collision after fix types in other method */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */

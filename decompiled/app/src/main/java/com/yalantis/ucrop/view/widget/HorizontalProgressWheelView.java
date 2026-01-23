@@ -11,51 +11,51 @@ import androidx.annotation.ColorInt;
 import androidx.core.content.ContextCompat;
 import com.yalantis.ucrop.C11199R;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public class HorizontalProgressWheelView extends View {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final Rect f22250j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public InterfaceC11207a f22251k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public float f22252l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public Paint f22253m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public Paint f22254n;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public int f22255o;
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public int f22256p;
 
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     public int f22257q;
 
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     public boolean f22258r;
 
-    /* renamed from: s */
+    /* JADX INFO: renamed from: s */
     public float f22259s;
 
-    /* renamed from: t */
+    /* JADX INFO: renamed from: t */
     public int f22260t;
 
-    /* renamed from: com.yalantis.ucrop.view.widget.HorizontalProgressWheelView$a */
+    /* JADX INFO: renamed from: com.yalantis.ucrop.view.widget.HorizontalProgressWheelView$a */
     public interface InterfaceC11207a {
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         void mo7468a();
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         void mo7469b(float f, float f2);
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         void mo7470c();
     }
 

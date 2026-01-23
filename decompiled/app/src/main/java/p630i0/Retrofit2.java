@@ -16,30 +16,30 @@ import p630i0.BuiltInConverters;
 import p630i0.CallAdapter;
 import p630i0.Converter2;
 
-/* compiled from: Retrofit.java */
-/* renamed from: i0.y, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: i0.y, reason: use source file name */
+/* JADX INFO: compiled from: Retrofit.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class Retrofit2 {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final Map<Method, ServiceMethod<?>> f26673a = new ConcurrentHashMap();
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final Call2.a f26674b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final HttpUrl f26675c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final List<Converter2.a> f26676d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final List<CallAdapter.a> f26677e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final Executor f26678f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public final boolean f26679g;
 
     public Retrofit2(Call2.a aVar, HttpUrl httpUrl, List<Converter2.a> list, List<CallAdapter.a> list2, Executor executor, boolean z2) {
@@ -51,7 +51,7 @@ public final class Retrofit2 {
         this.f26679g = z2;
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public CallAdapter<?, ?> m10725a(Type type, Annotation[] annotationArr) {
         Objects.requireNonNull(type, "returnType == null");
         Objects.requireNonNull(annotationArr, "annotations == null");
@@ -76,7 +76,7 @@ public final class Retrofit2 {
         throw new IllegalArgumentException(sb.toString());
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public ServiceMethod<?> m10726b(Method method) {
         ServiceMethod<?> serviceMethodM10730b;
         ServiceMethod<?> serviceMethod = this.f26673a.get(method);
@@ -93,7 +93,7 @@ public final class Retrofit2 {
         return serviceMethodM10730b;
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public <T> Converter2<T, RequestBody> m10727c(Type type, Annotation[] annotationArr, Annotation[] annotationArr2) {
         Objects.requireNonNull(type, "type == null");
         Objects.requireNonNull(annotationArr, "parameterAnnotations == null");
@@ -119,7 +119,7 @@ public final class Retrofit2 {
         throw new IllegalArgumentException(sb.toString());
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public <T> Converter2<ResponseBody, T> m10728d(Type type, Annotation[] annotationArr) {
         Objects.requireNonNull(type, "type == null");
         Objects.requireNonNull(annotationArr, "annotations == null");
@@ -144,7 +144,7 @@ public final class Retrofit2 {
         throw new IllegalArgumentException(sb.toString());
     }
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public <T> Converter2<T, String> m10729e(Type type, Annotation[] annotationArr) {
         Objects.requireNonNull(type, "type == null");
         Objects.requireNonNull(annotationArr, "annotations == null");

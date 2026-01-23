@@ -28,8 +28,8 @@ import p507d0.p579g0.Charsets2;
 import p507d0.p579g0.StringsJVM;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: UserUtils.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: UserUtils.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class UserUtils {
     public static final long CLYDE_BOT_USER_ID = -1;
     private static final int GUILD_VERIFICATION_ACCOUNT_AGE_THRESHOLD = 300000;

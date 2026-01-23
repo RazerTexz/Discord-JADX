@@ -13,36 +13,36 @@ jadx.core.utils.exceptions.JadxRuntimeException: Init of enum field 'j' uses ext
 	at jadx.core.dex.visitors.EnumVisitor.visit(EnumVisitor.java:100)
  */
 /* JADX WARN: Failed to restore enum class, 'enum' modifier and super class removed */
-/* compiled from: GestureAction.java */
-/* renamed from: b.o.a.q.b, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.o.a.q.b, reason: use source file name */
+/* JADX INFO: compiled from: GestureAction.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class GestureAction {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static final GestureAction f14072j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public static final GestureAction f14073k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public static final GestureAction f14074l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public static final GestureAction f14075m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public static final GestureAction f14076n;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public static final GestureAction f14077o;
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public static final GestureAction f14078p;
 
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     public static final GestureAction f14079q;
 
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     public static final /* synthetic */ GestureAction[] f14080r;
     private GestureType type;
     private int value;
@@ -75,7 +75,7 @@ public final class GestureAction {
     }
 
     @Nullable
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public static GestureAction m7389f(int i) {
         GestureAction[] gestureActionArrValues = values();
         for (int i2 = 0; i2 < 8; i2++) {
@@ -96,12 +96,12 @@ public final class GestureAction {
     }
 
     @NonNull
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public GestureType m7390g() {
         return this.type;
     }
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public int m7391h() {
         return this.value;
     }

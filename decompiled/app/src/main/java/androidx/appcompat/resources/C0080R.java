@@ -2,11 +2,11 @@ package androidx.appcompat.resources;
 
 import com.discord.C5419R;
 
-/* renamed from: androidx.appcompat.resources.R */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: androidx.appcompat.resources.R */
+/* JADX INFO: loaded from: classes.dex */
 public final class C0080R {
 
-    /* renamed from: androidx.appcompat.resources.R$attr */
+    /* JADX INFO: renamed from: androidx.appcompat.resources.R$attr */
     public static final class attr {
         public static final int alpha = 2130968635;
         public static final int font = 2130969378;
@@ -25,7 +25,7 @@ public final class C0080R {
         }
     }
 
-    /* renamed from: androidx.appcompat.resources.R$color */
+    /* JADX INFO: renamed from: androidx.appcompat.resources.R$color */
     public static final class color {
         public static final int notification_action_color_filter = 2131100115;
         public static final int notification_icon_bg_color = 2131100116;
@@ -36,7 +36,7 @@ public final class C0080R {
         }
     }
 
-    /* renamed from: androidx.appcompat.resources.R$dimen */
+    /* JADX INFO: renamed from: androidx.appcompat.resources.R$dimen */
     public static final class dimen {
         public static final int compat_button_inset_horizontal_material = 2131165325;
         public static final int compat_button_inset_vertical_material = 2131165326;
@@ -65,7 +65,7 @@ public final class C0080R {
         }
     }
 
-    /* renamed from: androidx.appcompat.resources.R$drawable */
+    /* JADX INFO: renamed from: androidx.appcompat.resources.R$drawable */
     public static final class drawable {
         public static final int abc_vector_test = 2131230944;
         public static final int notification_action_background = 2131232491;
@@ -85,7 +85,7 @@ public final class C0080R {
         }
     }
 
-    /* renamed from: androidx.appcompat.resources.R$id */
+    /* JADX INFO: renamed from: androidx.appcompat.resources.R$id */
     public static final class id {
         public static final int accessibility_action_clickable_span = 2131361830;
         public static final int accessibility_custom_action_0 = 2131361831;
@@ -159,7 +159,7 @@ public final class C0080R {
         }
     }
 
-    /* renamed from: androidx.appcompat.resources.R$integer */
+    /* JADX INFO: renamed from: androidx.appcompat.resources.R$integer */
     public static final class integer {
         public static final int status_bar_notification_info_maxnum = 2131427355;
 
@@ -167,7 +167,7 @@ public final class C0080R {
         }
     }
 
-    /* renamed from: androidx.appcompat.resources.R$layout */
+    /* JADX INFO: renamed from: androidx.appcompat.resources.R$layout */
     public static final class layout {
         public static final int custom_dialog = 2131558460;
         public static final int notification_action = 2131558626;
@@ -181,7 +181,7 @@ public final class C0080R {
         }
     }
 
-    /* renamed from: androidx.appcompat.resources.R$string */
+    /* JADX INFO: renamed from: androidx.appcompat.resources.R$string */
     public static final class string {
         public static final int status_bar_notification_info_overflow = 2131895909;
 
@@ -189,7 +189,7 @@ public final class C0080R {
         }
     }
 
-    /* renamed from: androidx.appcompat.resources.R$style */
+    /* JADX INFO: renamed from: androidx.appcompat.resources.R$style */
     public static final class style {
         public static final int TextAppearance_Compat_Notification = 2131952217;
         public static final int TextAppearance_Compat_Notification_Info = 2131952218;
@@ -203,7 +203,7 @@ public final class C0080R {
         }
     }
 
-    /* renamed from: androidx.appcompat.resources.R$styleable */
+    /* JADX INFO: renamed from: androidx.appcompat.resources.R$styleable */
     public static final class styleable {
         public static final int AnimatedStateListDrawableCompat_android_constantSize = 3;
         public static final int AnimatedStateListDrawableCompat_android_dither = 0;

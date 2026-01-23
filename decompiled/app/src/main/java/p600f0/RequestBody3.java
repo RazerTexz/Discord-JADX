@@ -11,15 +11,15 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p615g0.JvmOkio;
 import p615g0.Timeout2;
 
-/* compiled from: RequestBody.kt */
-/* renamed from: f0.z, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: f0.z, reason: use source file name */
+/* JADX INFO: compiled from: RequestBody.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class RequestBody3 extends RequestBody {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final /* synthetic */ File f26063a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final /* synthetic */ MediaType f26064b;
 
     public RequestBody3(File file, MediaType mediaType) {

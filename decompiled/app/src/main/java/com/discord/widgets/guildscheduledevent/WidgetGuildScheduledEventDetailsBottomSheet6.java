@@ -5,9 +5,9 @@ import kotlin.jvm.functions.Function0;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetGuildScheduledEventDetailsBottomSheet.kt */
-/* renamed from: com.discord.widgets.guildscheduledevent.WidgetGuildScheduledEventDetailsBottomSheet$descriptionParser$2, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.guildscheduledevent.WidgetGuildScheduledEventDetailsBottomSheet$descriptionParser$2, reason: use source file name */
+/* JADX INFO: compiled from: WidgetGuildScheduledEventDetailsBottomSheet.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetGuildScheduledEventDetailsBottomSheet6 extends Lambda implements Function0<GuildScheduledEventDescriptionParser> {
     public final /* synthetic */ WidgetGuildScheduledEventDetailsBottomSheet this$0;
 

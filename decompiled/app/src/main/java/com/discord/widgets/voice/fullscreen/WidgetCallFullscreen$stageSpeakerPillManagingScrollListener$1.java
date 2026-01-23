@@ -9,8 +9,8 @@ import java.util.List;
 import p507d0.p580t.Collections2;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: WidgetCallFullscreen.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: WidgetCallFullscreen.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class WidgetCallFullscreen$stageSpeakerPillManagingScrollListener$1 extends RecyclerView.OnScrollListener {
     private List<StoreVoiceParticipants.VoiceUser> activeSpeakers = Collections2.emptyList();
     public final /* synthetic */ WidgetCallFullscreen this$0;

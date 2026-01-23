@@ -14,55 +14,55 @@ import p007b.p109f.p161j.p169d.RotationOptions;
 import p007b.p109f.p161j.p176k.RequestListener;
 import p007b.p109f.p161j.p182q.Postprocessor;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public class ImageRequestBuilder {
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public RequestListener f19625n;
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public int f19627p;
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public Uri f19612a = null;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public ImageRequest.EnumC10667c f19613b = ImageRequest.EnumC10667c.FULL_FETCH;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public int f19614c = 0;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public ResizeOptions f19615d = null;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public RotationOptions f19616e = null;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public ImageDecodeOptions f19617f = ImageDecodeOptions.f3706a;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public ImageRequest.EnumC10666b f19618g = ImageRequest.EnumC10666b.DEFAULT;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public boolean f19619h = false;
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public boolean f19620i = false;
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public boolean f19621j = false;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public Priority2 f19622k = Priority2.HIGH;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public Postprocessor f19623l = null;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public Boolean f19624m = null;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public BytesRange f19626o = null;
 
     public static class BuilderException extends RuntimeException {
@@ -71,7 +71,7 @@ public class ImageRequestBuilder {
         }
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static ImageRequestBuilder m8723b(Uri uri) {
         ImageRequestBuilder imageRequestBuilder = new ImageRequestBuilder();
         Objects.requireNonNull(uri);
@@ -79,7 +79,7 @@ public class ImageRequestBuilder {
         return imageRequestBuilder;
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public ImageRequest m8724a() {
         Uri uri = this.f19612a;
         if (uri == null) {

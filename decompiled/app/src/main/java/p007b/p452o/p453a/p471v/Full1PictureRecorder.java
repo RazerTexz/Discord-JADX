@@ -12,19 +12,19 @@ import p007b.p452o.p453a.p455n.p463v.CameraState2;
 import p007b.p452o.p453a.p465p.ByteBufferFrameManager;
 import p007b.p452o.p453a.p473x.Size3;
 
-/* compiled from: Full1PictureRecorder.java */
-/* renamed from: b.o.a.v.a, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.o.a.v.a, reason: use source file name */
+/* JADX INFO: compiled from: Full1PictureRecorder.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class Full1PictureRecorder extends FullPictureRecorder {
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public final Camera f14161n;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public final Camera1Engine2 f14162o;
 
-    /* compiled from: Full1PictureRecorder.java */
-    /* renamed from: b.o.a.v.a$a */
+    /* JADX INFO: renamed from: b.o.a.v.a$a */
+    /* JADX INFO: compiled from: Full1PictureRecorder.java */
     public class a implements Camera.ShutterCallback {
         public a() {
         }
@@ -36,8 +36,8 @@ public class Full1PictureRecorder extends FullPictureRecorder {
         }
     }
 
-    /* compiled from: Full1PictureRecorder.java */
-    /* renamed from: b.o.a.v.a$b */
+    /* JADX INFO: renamed from: b.o.a.v.a$b */
+    /* JADX INFO: compiled from: Full1PictureRecorder.java */
     public class b implements Camera.PictureCallback {
         public b() {
         }
@@ -92,14 +92,14 @@ public class Full1PictureRecorder extends FullPictureRecorder {
     }
 
     @Override // p007b.p452o.p453a.p471v.PictureRecorder
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public void mo7416b() {
         FullPictureRecorder.f14171m.m7159a(1, "dispatching result. Thread:", Thread.currentThread());
         super.mo7416b();
     }
 
     @Override // p007b.p452o.p453a.p471v.PictureRecorder
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public void mo7417c() {
         CameraLogger cameraLogger = FullPictureRecorder.f14171m;
         cameraLogger.m7159a(1, "take() called.");

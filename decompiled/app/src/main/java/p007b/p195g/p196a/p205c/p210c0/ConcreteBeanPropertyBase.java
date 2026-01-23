@@ -8,9 +8,9 @@ import p007b.p195g.p196a.p205c.BeanProperty;
 import p007b.p195g.p196a.p205c.PropertyMetadata;
 import p007b.p195g.p196a.p205c.p221z.MapperConfig;
 
-/* compiled from: ConcreteBeanPropertyBase.java */
-/* renamed from: b.g.a.c.c0.v, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.g.a.c.c0.v, reason: use source file name */
+/* JADX INFO: compiled from: ConcreteBeanPropertyBase.java */
+/* JADX INFO: loaded from: classes3.dex */
 public abstract class ConcreteBeanPropertyBase implements BeanProperty, Serializable {
     private static final long serialVersionUID = 1;
     public final PropertyMetadata _metadata;
@@ -20,7 +20,7 @@ public abstract class ConcreteBeanPropertyBase implements BeanProperty, Serializ
     }
 
     @Override // p007b.p195g.p196a.p205c.BeanProperty
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public JsonFormat.d mo1928a(MapperConfig<?> mapperConfig, Class<?> cls) {
         AnnotatedMember member;
         JsonFormat.d dVarMo2271i = mapperConfig.mo2271i(cls);
@@ -30,7 +30,7 @@ public abstract class ConcreteBeanPropertyBase implements BeanProperty, Serializ
     }
 
     @Override // p007b.p195g.p196a.p205c.BeanProperty
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public JsonInclude.b mo1929b(MapperConfig<?> mapperConfig, Class<?> cls) {
         AnnotationIntrospector annotationIntrospectorM2267e = mapperConfig.m2267e();
         AnnotatedMember member = getMember();

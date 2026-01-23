@@ -27,8 +27,8 @@ import java.util.HashMap;
 import java.util.Map;
 import p007b.p100d.p104b.p105a.outline;
 
+/* JADX INFO: loaded from: classes.dex */
 @RestrictTo({RestrictTo.Scope.LIBRARY_GROUP_PREFIX})
-/* loaded from: classes.dex */
 public class TypefaceCompatUtil {
     private static final String CACHE_FILE_PREFIX = ".font";
     private static final String TAG = "TypefaceCompatUtil";

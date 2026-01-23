@@ -60,25 +60,25 @@ import p507d0.p580t.Iterables2;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: AbstractBinaryClassAnnotationAndConstantLoader.kt */
-/* renamed from: d0.e0.p.d.m0.e.b.a, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.e.b.a, reason: use source file name */
+/* JADX INFO: compiled from: AbstractBinaryClassAnnotationAndConstantLoader.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public abstract class AbstractBinaryClassAnnotationAndConstantLoader<A, C> implements AnnotationAndConstantLoader<A, C> {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final KotlinClassFinder f23533a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final storage3<KotlinJvmBinaryClass, b<A, C>> f23534b;
 
-    /* compiled from: AbstractBinaryClassAnnotationAndConstantLoader.kt */
-    /* renamed from: d0.e0.p.d.m0.e.b.a$a */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.e.b.a$a */
+    /* JADX INFO: compiled from: AbstractBinaryClassAnnotationAndConstantLoader.kt */
     public enum a {
         PROPERTY,
         BACKING_FIELD,
         DELEGATE_FIELD;
 
-        /* renamed from: values, reason: to resolve conflict with enum method */
+        /* JADX INFO: renamed from: values, reason: to resolve conflict with enum method */
         public static a[] valuesCustom() {
             a[] aVarArrValuesCustom = values();
             a[] aVarArr = new a[aVarArrValuesCustom.length];
@@ -87,14 +87,14 @@ public abstract class AbstractBinaryClassAnnotationAndConstantLoader<A, C> imple
         }
     }
 
-    /* compiled from: AbstractBinaryClassAnnotationAndConstantLoader.kt */
-    /* renamed from: d0.e0.p.d.m0.e.b.a$b */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.e.b.a$b */
+    /* JADX INFO: compiled from: AbstractBinaryClassAnnotationAndConstantLoader.kt */
     public static final class b<A, C> {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final Map<MemberSignature, List<A>> f23539a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final Map<MemberSignature, C> f23540b;
 
         /* JADX WARN: Multi-variable type inference failed */
@@ -114,14 +114,14 @@ public abstract class AbstractBinaryClassAnnotationAndConstantLoader<A, C> imple
         }
     }
 
-    /* compiled from: AbstractBinaryClassAnnotationAndConstantLoader.kt */
-    /* renamed from: d0.e0.p.d.m0.e.b.a$c */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.e.b.a$c */
+    /* JADX INFO: compiled from: AbstractBinaryClassAnnotationAndConstantLoader.kt */
     public static final class c implements KotlinJvmBinaryClass.c {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final /* synthetic */ AbstractBinaryClassAnnotationAndConstantLoader<A, C> f23541a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final /* synthetic */ ArrayList<A> f23542b;
 
         public c(AbstractBinaryClassAnnotationAndConstantLoader<A, C> abstractBinaryClassAnnotationAndConstantLoader, ArrayList<A> arrayList) {
@@ -141,8 +141,8 @@ public abstract class AbstractBinaryClassAnnotationAndConstantLoader<A, C> imple
         }
     }
 
-    /* compiled from: AbstractBinaryClassAnnotationAndConstantLoader.kt */
-    /* renamed from: d0.e0.p.d.m0.e.b.a$d */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.e.b.a$d */
+    /* JADX INFO: compiled from: AbstractBinaryClassAnnotationAndConstantLoader.kt */
     public static final class d extends Lambda implements Function1<KotlinJvmBinaryClass, b<? extends A, ? extends C>> {
         public final /* synthetic */ AbstractBinaryClassAnnotationAndConstantLoader<A, C> this$0;
 
@@ -157,7 +157,7 @@ public abstract class AbstractBinaryClassAnnotationAndConstantLoader<A, C> imple
             return invoke2(kotlinJvmBinaryClass);
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final b<A, C> invoke2(KotlinJvmBinaryClass kotlinJvmBinaryClass) {
             Intrinsics3.checkNotNullParameter(kotlinJvmBinaryClass, "kotlinClass");
             return AbstractBinaryClassAnnotationAndConstantLoader.access$loadAnnotationsAndInitializers(this.this$0, kotlinJvmBinaryClass);
@@ -189,22 +189,22 @@ public abstract class AbstractBinaryClassAnnotationAndConstantLoader<A, C> imple
         return new b(map, map2);
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static /* synthetic */ List m9528b(AbstractBinaryClassAnnotationAndConstantLoader abstractBinaryClassAnnotationAndConstantLoader, ProtoContainer protoContainer, MemberSignature memberSignature, boolean z2, boolean z3, Boolean bool, boolean z4, int i, Object obj) {
         return abstractBinaryClassAnnotationAndConstantLoader.m9531a(protoContainer, memberSignature, (i & 4) != 0 ? false : z2, (i & 8) != 0 ? false : z3, (i & 16) != 0 ? null : bool, (i & 32) != 0 ? false : z4);
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public static /* synthetic */ MemberSignature m9529d(AbstractBinaryClassAnnotationAndConstantLoader abstractBinaryClassAnnotationAndConstantLoader, MessageLite messageLite, NameResolver nameResolver, TypeTable typeTable, AnnotatedCallableKind annotatedCallableKind, boolean z2, int i, Object obj) {
         return abstractBinaryClassAnnotationAndConstantLoader.m9532c(messageLite, nameResolver, typeTable, annotatedCallableKind, (i & 16) != 0 ? false : z2);
     }
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public static /* synthetic */ MemberSignature m9530f(AbstractBinaryClassAnnotationAndConstantLoader abstractBinaryClassAnnotationAndConstantLoader, C11689n c11689n, NameResolver nameResolver, TypeTable typeTable, boolean z2, boolean z3, boolean z4, int i, Object obj) {
         return abstractBinaryClassAnnotationAndConstantLoader.m9533e(c11689n, nameResolver, typeTable, (i & 8) != 0 ? false : z2, (i & 16) != 0 ? false : z3, (i & 32) != 0 ? true : z4);
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final List<A> m9531a(ProtoContainer protoContainer, MemberSignature memberSignature, boolean z2, boolean z3, Boolean bool, boolean z4) {
         KotlinJvmBinaryClass kotlinJvmBinaryClassM9534g = m9534g(protoContainer, z2, z3, bool, z4);
         if (kotlinJvmBinaryClassM9534g == null) {
@@ -217,7 +217,7 @@ public abstract class AbstractBinaryClassAnnotationAndConstantLoader<A, C> imple
         return list == null ? Collections2.emptyList() : list;
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final MemberSignature m9532c(MessageLite messageLite, NameResolver nameResolver, TypeTable typeTable, AnnotatedCallableKind annotatedCallableKind, boolean z2) {
         if (messageLite instanceof C11679d) {
             MemberSignature.a aVar = MemberSignature.f23633a;
@@ -266,7 +266,7 @@ public abstract class AbstractBinaryClassAnnotationAndConstantLoader<A, C> imple
         return aVar4.fromMethod(nameResolver, setter);
     }
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final MemberSignature m9533e(C11689n c11689n, NameResolver nameResolver, TypeTable typeTable, boolean z2, boolean z3, boolean z4) {
         GeneratedMessageLite.f<C11689n, JvmProtoBuf.d> fVar = JvmProtoBuf.f23654d;
         Intrinsics3.checkNotNullExpressionValue(fVar, "propertySignature");
@@ -290,7 +290,7 @@ public abstract class AbstractBinaryClassAnnotationAndConstantLoader<A, C> imple
         return aVar.fromMethod(nameResolver, syntheticMethod);
     }
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public final KotlinJvmBinaryClass m9534g(ProtoContainer protoContainer, boolean z2, boolean z3, Boolean bool, boolean z4) {
         ProtoContainer.a outerClass;
         C11678c.c cVar = C11678c.c.INTERFACE;
@@ -337,10 +337,10 @@ public abstract class AbstractBinaryClassAnnotationAndConstantLoader<A, C> imple
         return knownJvmBinaryClass == null ? KotlinClassFinder2.findKotlinClass(this.f23533a, jvmPackagePartSource2.getClassId()) : knownJvmBinaryClass;
     }
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public abstract KotlinJvmBinaryClass.a mo9535h(ClassId classId, SourceElement sourceElement, List<A> list);
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public final List<A> m9536i(ProtoContainer protoContainer, C11689n c11689n, a aVar) {
         Boolean bool = Flags2.f24055z.get(c11689n.getFlags());
         Intrinsics3.checkNotNullExpressionValue(bool, "IS_CONST.get(proto.flags)");
@@ -358,7 +358,7 @@ public abstract class AbstractBinaryClassAnnotationAndConstantLoader<A, C> imple
         return Strings4.contains$default((CharSequence) memberSignatureM9530f2.getSignature(), (CharSequence) "$delegate", false, 2, (Object) null) != (aVar == a.DELEGATE_FIELD) ? Collections2.emptyList() : m9531a(protoContainer, memberSignatureM9530f2, true, true, Boolean.valueOf(zBooleanValue), zIsMovedFromInterfaceCompanion);
     }
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final KotlinJvmBinaryClass m9537j(ProtoContainer.a aVar) {
         SourceElement source = aVar.getSource();
         KotlinJvmBinarySourceElement kotlinJvmBinarySourceElement = source instanceof KotlinJvmBinarySourceElement ? (KotlinJvmBinarySourceElement) source : null;
@@ -461,7 +461,7 @@ public abstract class AbstractBinaryClassAnnotationAndConstantLoader<A, C> imple
             }
             c11834z = new C11834z(((C11827s) c3).getValue().longValue());
         }
-        return c11834z;
+        return (C) c11834z;
     }
 
     @Override // p507d0.p513e0.p514p.p515d.p517m0.p562l.p563b.AnnotationAndConstantLoader

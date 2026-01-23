@@ -31,8 +31,8 @@ import p007b.p225i.p361c.p406w.C4878p;
 import p007b.p225i.p361c.p406w.C4879q;
 import p007b.p225i.p361c.p406w.C4880r;
 
-/* compiled from: com.google.firebase:firebase-messaging@@21.0.0 */
-/* loaded from: classes3.dex */
+/* JADX INFO: compiled from: com.google.firebase:firebase-messaging@@21.0.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public class FirebaseMessagingService extends EnhancedIntentService {
     public static final String ACTION_DIRECT_BOOT_REMOTE_INTENT = "com.google.firebase.messaging.RECEIVE_DIRECT_BOOT";
     private static final Queue<String> recentlyReceivedMessageIds = new ArrayDeque(10);

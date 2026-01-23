@@ -4,8 +4,8 @@ import androidx.annotation.RestrictTo;
 import androidx.media.AudioAttributesImplApi21;
 import androidx.versionedparcelable.VersionedParcel;
 
+/* JADX INFO: loaded from: classes.dex */
 @RestrictTo({RestrictTo.Scope.LIBRARY})
-/* loaded from: classes.dex */
 public final class AudioAttributesImplApi21Parcelizer extends androidx.media.AudioAttributesImplApi21Parcelizer {
     public static AudioAttributesImplApi21 read(VersionedParcel versionedParcel) {
         return androidx.media.AudioAttributesImplApi21Parcelizer.read(versionedParcel);

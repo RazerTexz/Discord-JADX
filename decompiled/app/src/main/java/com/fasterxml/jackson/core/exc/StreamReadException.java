@@ -5,18 +5,18 @@ import p007b.p100d.p104b.p105a.outline;
 import p007b.p195g.p196a.p198b.JsonParser;
 import p007b.p195g.p196a.p198b.p204t.RequestPayload;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public abstract class StreamReadException extends JsonProcessingException {
     public static final long serialVersionUID = 1;
     public RequestPayload _requestPayload;
 
     @Override // com.fasterxml.jackson.core.JsonProcessingException
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public /* bridge */ /* synthetic */ Object mo8737c() {
         return mo8738d();
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public JsonParser mo8738d() {
         return null;
     }

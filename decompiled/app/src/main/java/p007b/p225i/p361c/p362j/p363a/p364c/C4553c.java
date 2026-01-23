@@ -7,27 +7,27 @@ import java.util.List;
 import java.util.Set;
 import p007b.p225i.p226a.p288f.p330i.p332b.C4236x5;
 
-/* compiled from: com.google.android.gms:play-services-measurement-api@@18.0.0 */
-/* renamed from: b.i.c.j.a.c.c */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.c.j.a.c.c */
+/* JADX INFO: compiled from: com.google.android.gms:play-services-measurement-api@@18.0.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public final class C4553c {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final Set<String> f12149a = new HashSet(Arrays.asList("_in", "_xa", "_xu", "_aq", "_aa", "_ai", "_ac", "campaign_details", "_ug", "_iapx", "_exp_set", "_exp_clear", "_exp_activate", "_exp_timeout", "_exp_expire"));
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static final List<String> f12150b = Arrays.asList("_e", "_f", "_iap", "_s", "_au", "_ui", "_cd");
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public static final List<String> f12151c = Arrays.asList("auto", "app", "am");
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public static final List<String> f12152d = Arrays.asList("_r", "_dbg");
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public static final List<String> f12153e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public static final List<String> f12154f;
 
     static {
@@ -48,7 +48,7 @@ public final class C4553c {
         f12154f = Arrays.asList("^_ltv_[A-Z]{3}$", "^_cc[1-5]{1}$");
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static boolean m6342a(@NonNull String str) {
         return !f12151c.contains(str);
     }

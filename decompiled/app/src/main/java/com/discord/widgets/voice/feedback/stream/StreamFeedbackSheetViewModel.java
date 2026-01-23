@@ -27,11 +27,11 @@ import p507d0.p592z.p594d.Lambda;
 import p658rx.Observable;
 import p658rx.subjects.PublishSubject;
 
-/* compiled from: StreamFeedbackSheetViewModel.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: StreamFeedbackSheetViewModel.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class StreamFeedbackSheetViewModel extends AppViewModel<FeedbackSheetViewModel.ViewState> implements FeedbackSheetViewModel {
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private static final List<FeedbackIssue> ISSUES_UI_OPTIONS = Collections2.listOf((Object[]) new FeedbackIssue[]{FeedbackIssue.STREAM_REPORT_ENDED_BLACK, FeedbackIssue.STREAM_REPORT_ENDED_BLURRY, FeedbackIssue.STREAM_REPORT_ENDED_LAGGING, FeedbackIssue.STREAM_REPORT_ENDED_OUT_OF_SYNC, FeedbackIssue.STREAM_REPORT_ENDED_AUDIO_MISSING, FeedbackIssue.STREAM_REPORT_ENDED_AUDIO_POOR, FeedbackIssue.STREAM_REPORT_ENDED_STREAM_STOPPED_UNEXPECTEDLY});
     private final PublishSubject<FeedbackSheetViewModel.Event> eventSubject;
@@ -44,8 +44,8 @@ public final class StreamFeedbackSheetViewModel extends AppViewModel<FeedbackShe
     private boolean submitOnDismiss;
     private boolean submitted;
 
-    /* compiled from: StreamFeedbackSheetViewModel.kt */
-    /* renamed from: com.discord.widgets.voice.feedback.stream.StreamFeedbackSheetViewModel$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.voice.feedback.stream.StreamFeedbackSheetViewModel$1 */
+    /* JADX INFO: compiled from: StreamFeedbackSheetViewModel.kt */
     public static final class C104561 extends Lambda implements Function1<StoreState, Unit> {
         public C104561() {
             super(1);
@@ -57,14 +57,14 @@ public final class StreamFeedbackSheetViewModel extends AppViewModel<FeedbackShe
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(StoreState storeState) {
             Intrinsics3.checkNotNullParameter(storeState, "storeState");
             StreamFeedbackSheetViewModel.access$setMostRecentStoreState$p(StreamFeedbackSheetViewModel.this, storeState);
         }
     }
 
-    /* compiled from: StreamFeedbackSheetViewModel.kt */
+    /* JADX INFO: compiled from: StreamFeedbackSheetViewModel.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -88,7 +88,7 @@ public final class StreamFeedbackSheetViewModel extends AppViewModel<FeedbackShe
         }
     }
 
-    /* compiled from: StreamFeedbackSheetViewModel.kt */
+    /* JADX INFO: compiled from: StreamFeedbackSheetViewModel.kt */
     public static final /* data */ class StoreState {
         private final boolean shouldShowCxLinkForIssueDetails;
 
@@ -103,7 +103,7 @@ public final class StreamFeedbackSheetViewModel extends AppViewModel<FeedbackShe
             return storeState.copy(z2);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final boolean getShouldShowCxLinkForIssueDetails() {
             return this.shouldShowCxLinkForIssueDetails;
         }

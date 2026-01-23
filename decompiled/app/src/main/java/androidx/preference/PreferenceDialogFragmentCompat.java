@@ -21,7 +21,7 @@ import androidx.fragment.app.DialogFragment;
 import androidx.fragment.app.FragmentActivity;
 import androidx.preference.DialogPreference;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public abstract class PreferenceDialogFragmentCompat extends DialogFragment implements DialogInterface.OnClickListener {
     public static final String ARG_KEY = "key";
     private static final String SAVE_STATE_ICON = "PreferenceDialogFragment.icon";

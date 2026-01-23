@@ -8,22 +8,22 @@ import p507d0.p513e0.p514p.p515d.p517m0.p567n.p568l1.KotlinTypeRefiner;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: SpecialTypes.kt */
-/* renamed from: d0.e0.p.d.m0.n.f0, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.n.f0, reason: use source file name */
+/* JADX INFO: compiled from: SpecialTypes.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class SpecialTypes2 extends KotlinType5 {
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final StorageManager f24769k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final Function0<KotlinType> f24770l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public final storage5<KotlinType> f24771m;
 
-    /* compiled from: SpecialTypes.kt */
-    /* renamed from: d0.e0.p.d.m0.n.f0$a */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.n.f0$a */
+    /* JADX INFO: compiled from: SpecialTypes.kt */
     public static final class a extends Lambda implements Function0<KotlinType> {
         public final /* synthetic */ KotlinTypeRefiner $kotlinTypeRefiner;
         public final /* synthetic */ SpecialTypes2 this$0;
@@ -61,7 +61,7 @@ public final class SpecialTypes2 extends KotlinType5 {
     }
 
     @Override // p507d0.p513e0.p514p.p515d.p517m0.p567n.KotlinType5
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public KotlinType mo10011a() {
         return this.f24771m.invoke();
     }

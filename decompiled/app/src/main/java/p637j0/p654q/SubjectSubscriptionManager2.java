@@ -11,9 +11,9 @@ import p658rx.Observable;
 import p658rx.Subscriber;
 import p658rx.functions.Action1;
 
-/* compiled from: SubjectSubscriptionManager.java */
-/* renamed from: j0.q.c, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: j0.q.c, reason: use source file name */
+/* JADX INFO: compiled from: SubjectSubscriptionManager.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class SubjectSubscriptionManager2<T> extends AtomicReference<a<T>> implements Observable.InterfaceC13005a<T> {
     private static final long serialVersionUID = 6035251036011671568L;
     public boolean active;
@@ -22,23 +22,23 @@ public final class SubjectSubscriptionManager2<T> extends AtomicReference<a<T>> 
     public Action1<b<T>> onStart;
     public Action1<b<T>> onTerminated;
 
-    /* compiled from: SubjectSubscriptionManager.java */
-    /* renamed from: j0.q.c$a */
+    /* JADX INFO: renamed from: j0.q.c$a */
+    /* JADX INFO: compiled from: SubjectSubscriptionManager.java */
     public static final class a<T> {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public static final b[] f27409a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public static final a f27410b;
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public static final a f27411c;
 
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         public final boolean f27412d;
 
-        /* renamed from: e */
+        /* JADX INFO: renamed from: e */
         public final b[] f27413e;
 
         static {
@@ -54,30 +54,30 @@ public final class SubjectSubscriptionManager2<T> extends AtomicReference<a<T>> 
         }
     }
 
-    /* compiled from: SubjectSubscriptionManager.java */
-    /* renamed from: j0.q.c$b */
+    /* JADX INFO: renamed from: j0.q.c$b */
+    /* JADX INFO: compiled from: SubjectSubscriptionManager.java */
     public static final class b<T> implements Observer2<T> {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public final Subscriber<? super T> f27414j;
 
-        /* renamed from: k */
+        /* JADX INFO: renamed from: k */
         public boolean f27415k = true;
 
-        /* renamed from: l */
+        /* JADX INFO: renamed from: l */
         public boolean f27416l;
 
-        /* renamed from: m */
+        /* JADX INFO: renamed from: m */
         public List<Object> f27417m;
 
-        /* renamed from: n */
+        /* JADX INFO: renamed from: n */
         public boolean f27418n;
 
         public b(Subscriber<? super T> subscriber) {
             this.f27414j = subscriber;
         }
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public void m10880a(Object obj) {
             if (!this.f27418n) {
                 synchronized (this) {
@@ -120,7 +120,7 @@ public final class SubjectSubscriptionManager2<T> extends AtomicReference<a<T>> 
         this.onTerminated = aVar;
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public void m10878a(b<T> bVar) {
         a<T> aVar;
         a<T> aVar2;
@@ -169,7 +169,7 @@ public final class SubjectSubscriptionManager2<T> extends AtomicReference<a<T>> 
         } while (!compareAndSet(aVar, aVar2));
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public b<T>[] m10879b(Object obj) {
         this.latest = obj;
         this.active = false;

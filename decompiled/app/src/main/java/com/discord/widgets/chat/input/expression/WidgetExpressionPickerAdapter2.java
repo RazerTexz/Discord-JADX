@@ -4,9 +4,9 @@ import kotlin.Unit;
 import kotlin.jvm.functions.Function1;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetExpressionPickerAdapter.kt */
-/* renamed from: com.discord.widgets.chat.input.expression.WidgetExpressionPickerAdapter$onScrollPositionListener$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.chat.input.expression.WidgetExpressionPickerAdapter$onScrollPositionListener$1, reason: use source file name */
+/* JADX INFO: compiled from: WidgetExpressionPickerAdapter.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetExpressionPickerAdapter2 extends Lambda implements Function1<Integer, Unit> {
     public static final WidgetExpressionPickerAdapter2 INSTANCE = new WidgetExpressionPickerAdapter2();
 

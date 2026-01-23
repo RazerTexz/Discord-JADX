@@ -4,18 +4,18 @@ import java.io.IOException;
 import p630i0.DefaultCallAdapterFactory;
 import retrofit2.Response;
 
-/* compiled from: lambda */
-/* renamed from: i0.b */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: i0.b */
+/* JADX INFO: compiled from: lambda */
+/* JADX INFO: loaded from: classes3.dex */
 public final /* synthetic */ class RunnableC12500b implements Runnable {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final /* synthetic */ DefaultCallAdapterFactory.b.a f26479j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final /* synthetic */ Callback3 f26480k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final /* synthetic */ Response f26481l;
 
     public /* synthetic */ RunnableC12500b(DefaultCallAdapterFactory.b.a aVar, Callback3 callback3, Response response) {

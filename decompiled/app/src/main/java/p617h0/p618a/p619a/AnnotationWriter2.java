@@ -2,30 +2,30 @@ package p617h0.p618a.p619a;
 
 import java.util.Objects;
 
-/* compiled from: AnnotationWriter.java */
-/* renamed from: h0.a.a.a, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: h0.a.a.a, reason: use source file name */
+/* JADX INFO: compiled from: AnnotationWriter.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class AnnotationWriter2 {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final SymbolTable2 f26141a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final boolean f26142b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final ByteVector2 f26143c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final int f26144d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public int f26145e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final AnnotationWriter2 f26146f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public AnnotationWriter2 f26147g;
 
     public AnnotationWriter2(SymbolTable2 symbolTable2, boolean z2, ByteVector2 byteVector2, AnnotationWriter2 annotationWriter2) {
@@ -40,7 +40,7 @@ public final class AnnotationWriter2 {
         }
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static int m10516b(String str, AnnotationWriter2[] annotationWriter2Arr, int i) {
         int iM10518a = (i * 2) + 7;
         for (int i2 = 0; i2 < i; i2++) {
@@ -49,7 +49,7 @@ public final class AnnotationWriter2 {
         return iM10518a;
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public static void m10517d(int i, AnnotationWriter2[] annotationWriter2Arr, int i2, ByteVector2 byteVector2) {
         int iM10518a = (i2 * 2) + 1;
         for (int i3 = 0; i3 < i2; i3++) {
@@ -75,7 +75,7 @@ public final class AnnotationWriter2 {
         }
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public int m10518a(String str) {
         if (str != null) {
             this.f26141a.m10637l(str);
@@ -87,7 +87,7 @@ public final class AnnotationWriter2 {
         return i;
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public void m10519c(int i, ByteVector2 byteVector2) {
         int i2 = 2;
         int i3 = 0;
@@ -108,7 +108,7 @@ public final class AnnotationWriter2 {
         }
     }
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public void m10520e(String str, Object obj) {
         this.f26145e++;
         if (this.f26142b) {
@@ -231,7 +231,7 @@ public final class AnnotationWriter2 {
         }
     }
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public AnnotationWriter2 m10521f(String str) {
         this.f26145e++;
         if (this.f26142b) {
@@ -241,7 +241,7 @@ public final class AnnotationWriter2 {
         return new AnnotationWriter2(this.f26141a, false, this.f26143c, null);
     }
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public void m10522g() {
         int i = this.f26144d;
         if (i != -1) {

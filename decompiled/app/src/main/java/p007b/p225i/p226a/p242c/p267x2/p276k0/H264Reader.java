@@ -16,165 +16,165 @@ import p007b.p225i.p226a.p242c.p267x2.ExtractorOutput;
 import p007b.p225i.p226a.p242c.p267x2.TrackOutput2;
 import p007b.p225i.p226a.p242c.p267x2.p276k0.TsPayloadReader;
 
-/* compiled from: H264Reader.java */
-/* renamed from: b.i.a.c.x2.k0.r, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.x2.k0.r, reason: use source file name */
+/* JADX INFO: compiled from: H264Reader.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class H264Reader implements ElementaryStreamReader {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final SeiReader f8788a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final boolean f8789b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final boolean f8790c;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public long f8794g;
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public String f8796i;
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public TrackOutput2 f8797j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public b f8798k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public boolean f8799l;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public boolean f8801n;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public final boolean[] f8795h = new boolean[3];
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final NalUnitTargetBuffer f8791d = new NalUnitTargetBuffer(7, 128);
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final NalUnitTargetBuffer f8792e = new NalUnitTargetBuffer(8, 128);
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final NalUnitTargetBuffer f8793f = new NalUnitTargetBuffer(6, 128);
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public long f8800m = -9223372036854775807L;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public final ParsableByteArray f8802o = new ParsableByteArray();
 
-    /* compiled from: H264Reader.java */
-    /* renamed from: b.i.a.c.x2.k0.r$b */
+    /* JADX INFO: renamed from: b.i.a.c.x2.k0.r$b */
+    /* JADX INFO: compiled from: H264Reader.java */
     public static final class b {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final TrackOutput2 f8803a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final boolean f8804b;
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public final boolean f8805c;
 
-        /* renamed from: f */
+        /* JADX INFO: renamed from: f */
         public final ParsableNalUnitBitArray f8808f;
 
-        /* renamed from: g */
+        /* JADX INFO: renamed from: g */
         public byte[] f8809g;
 
-        /* renamed from: h */
+        /* JADX INFO: renamed from: h */
         public int f8810h;
 
-        /* renamed from: i */
+        /* JADX INFO: renamed from: i */
         public int f8811i;
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public long f8812j;
 
-        /* renamed from: l */
+        /* JADX INFO: renamed from: l */
         public long f8814l;
 
-        /* renamed from: p */
+        /* JADX INFO: renamed from: p */
         public long f8818p;
 
-        /* renamed from: q */
+        /* JADX INFO: renamed from: q */
         public long f8819q;
 
-        /* renamed from: r */
+        /* JADX INFO: renamed from: r */
         public boolean f8820r;
 
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         public final SparseArray<NalUnitUtil.c> f8806d = new SparseArray<>();
 
-        /* renamed from: e */
+        /* JADX INFO: renamed from: e */
         public final SparseArray<NalUnitUtil.b> f8807e = new SparseArray<>();
 
-        /* renamed from: m */
+        /* JADX INFO: renamed from: m */
         public a f8815m = new a(null);
 
-        /* renamed from: n */
+        /* JADX INFO: renamed from: n */
         public a f8816n = new a(null);
 
-        /* renamed from: k */
+        /* JADX INFO: renamed from: k */
         public boolean f8813k = false;
 
-        /* renamed from: o */
+        /* JADX INFO: renamed from: o */
         public boolean f8817o = false;
 
-        /* compiled from: H264Reader.java */
-        /* renamed from: b.i.a.c.x2.k0.r$b$a */
+        /* JADX INFO: renamed from: b.i.a.c.x2.k0.r$b$a */
+        /* JADX INFO: compiled from: H264Reader.java */
         public static final class a {
 
-            /* renamed from: a */
+            /* JADX INFO: renamed from: a */
             public boolean f8821a;
 
-            /* renamed from: b */
+            /* JADX INFO: renamed from: b */
             public boolean f8822b;
 
-            /* renamed from: c */
+            /* JADX INFO: renamed from: c */
             @Nullable
             public NalUnitUtil.c f8823c;
 
-            /* renamed from: d */
+            /* JADX INFO: renamed from: d */
             public int f8824d;
 
-            /* renamed from: e */
+            /* JADX INFO: renamed from: e */
             public int f8825e;
 
-            /* renamed from: f */
+            /* JADX INFO: renamed from: f */
             public int f8826f;
 
-            /* renamed from: g */
+            /* JADX INFO: renamed from: g */
             public int f8827g;
 
-            /* renamed from: h */
+            /* JADX INFO: renamed from: h */
             public boolean f8828h;
 
-            /* renamed from: i */
+            /* JADX INFO: renamed from: i */
             public boolean f8829i;
 
-            /* renamed from: j */
+            /* JADX INFO: renamed from: j */
             public boolean f8830j;
 
-            /* renamed from: k */
+            /* JADX INFO: renamed from: k */
             public boolean f8831k;
 
-            /* renamed from: l */
+            /* JADX INFO: renamed from: l */
             public int f8832l;
 
-            /* renamed from: m */
+            /* JADX INFO: renamed from: m */
             public int f8833m;
 
-            /* renamed from: n */
+            /* JADX INFO: renamed from: n */
             public int f8834n;
 
-            /* renamed from: o */
+            /* JADX INFO: renamed from: o */
             public int f8835o;
 
-            /* renamed from: p */
+            /* JADX INFO: renamed from: p */
             public int f8836p;
 
             public a(a aVar) {
@@ -207,7 +207,7 @@ public final class H264Reader implements ElementaryStreamReader {
     /* JADX WARN: Removed duplicated region for block: B:65:0x0141  */
     /* JADX WARN: Removed duplicated region for block: B:77:0x0171  */
     @RequiresNonNull({"sampleReader"})
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
@@ -398,7 +398,7 @@ public final class H264Reader implements ElementaryStreamReader {
     /* JADX WARN: Removed duplicated region for block: B:84:0x01ee  */
     /* JADX WARN: Removed duplicated region for block: B:87:0x01f3  */
     @Override // p007b.p225i.p226a.p242c.p267x2.p276k0.ElementaryStreamReader
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
@@ -417,7 +417,7 @@ public final class H264Reader implements ElementaryStreamReader {
         int i8 = parsableByteArray.f6794b;
         int i9 = parsableByteArray.f6795c;
         byte[] bArr2 = parsableByteArray.f6793a;
-        this.f8794g += parsableByteArray.m3081a();
+        this.f8794g += (long) parsableByteArray.m3081a();
         this.f8797j.mo2524c(parsableByteArray, parsableByteArray.m3081a());
         while (true) {
             int iM3055b = NalUnitUtil.m3055b(bArr2, i8, i9, this.f8795h);
@@ -432,7 +432,7 @@ public final class H264Reader implements ElementaryStreamReader {
                 m3783a(bArr2, i8, iM3055b);
             }
             int i13 = i9 - iM3055b;
-            long j = this.f8794g - i13;
+            long j = this.f8794g - ((long) i13);
             int i14 = i12 < 0 ? -i12 : 0;
             long j2 = this.f8800m;
             if (!this.f8799l || this.f8798k.f8805c) {
@@ -576,7 +576,7 @@ public final class H264Reader implements ElementaryStreamReader {
     }
 
     @Override // p007b.p225i.p226a.p242c.p267x2.p276k0.ElementaryStreamReader
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public void mo3759c() {
         this.f8794g = 0L;
         this.f8801n = false;
@@ -596,12 +596,12 @@ public final class H264Reader implements ElementaryStreamReader {
     }
 
     @Override // p007b.p225i.p226a.p242c.p267x2.p276k0.ElementaryStreamReader
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public void mo3760d() {
     }
 
     @Override // p007b.p225i.p226a.p242c.p267x2.p276k0.ElementaryStreamReader
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public void mo3761e(ExtractorOutput extractorOutput, TsPayloadReader.d dVar) {
         dVar.m3765a();
         this.f8796i = dVar.m3766b();
@@ -612,7 +612,7 @@ public final class H264Reader implements ElementaryStreamReader {
     }
 
     @Override // p007b.p225i.p226a.p242c.p267x2.p276k0.ElementaryStreamReader
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public void mo3762f(long j, int i) {
         if (j != -9223372036854775807L) {
             this.f8800m = j;

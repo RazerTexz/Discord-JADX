@@ -8,9 +8,9 @@ import kotlin.jvm.functions.Function1;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetChatInputAttachments.kt */
-/* renamed from: com.discord.widgets.chat.input.WidgetChatInputAttachments$configureFlexInputFragment$1$$special$$inlined$apply$lambda$2 */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.chat.input.WidgetChatInputAttachments$configureFlexInputFragment$1$$special$$inlined$apply$lambda$2 */
+/* JADX INFO: compiled from: WidgetChatInputAttachments.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class C7743xe5e506b3 extends Lambda implements Function1<InputContentInfoCompat, Unit> {
     public final /* synthetic */ WidgetChatInputAttachments.C77411 this$0;
 
@@ -26,7 +26,7 @@ public final class C7743xe5e506b3 extends Lambda implements Function1<InputConte
         return Unit.f27425a;
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final void invoke2(InputContentInfoCompat inputContentInfoCompat) {
         Intrinsics3.checkNotNullParameter(inputContentInfoCompat, "it");
         WidgetChatInputAttachments widgetChatInputAttachments = WidgetChatInputAttachments.this;

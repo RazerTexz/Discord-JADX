@@ -6,9 +6,9 @@ import com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemGuildWelco
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ModelUserConsents.kt */
-/* renamed from: com.discord.models.domain.Harvest, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: com.discord.models.domain.Harvest, reason: use source file name */
+/* JADX INFO: compiled from: ModelUserConsents.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class ModelUserConsents3 {
     private final String completedAt;
     private final String createdAt;
@@ -57,22 +57,22 @@ public final /* data */ class ModelUserConsents3 {
         return now > nextAvailableRequestInMillis();
     }
 
-    /* renamed from: component1, reason: from getter */
+    /* JADX INFO: renamed from: component1, reason: from getter */
     public final String getId() {
         return this.id;
     }
 
-    /* renamed from: component2, reason: from getter */
+    /* JADX INFO: renamed from: component2, reason: from getter */
     public final long getUserId() {
         return this.userId;
     }
 
-    /* renamed from: component3, reason: from getter */
+    /* JADX INFO: renamed from: component3, reason: from getter */
     public final String getCreatedAt() {
         return this.createdAt;
     }
 
-    /* renamed from: component4, reason: from getter */
+    /* JADX INFO: renamed from: component4, reason: from getter */
     public final String getCompletedAt() {
         return this.completedAt;
     }

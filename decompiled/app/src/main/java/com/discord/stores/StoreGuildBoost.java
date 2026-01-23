@@ -25,18 +25,18 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 import p658rx.Observable;
 
-/* compiled from: StoreGuildBoost.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: StoreGuildBoost.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class StoreGuildBoost extends StoreV2 {
     private final Dispatcher dispatcher;
     private final ObservationDeck observationDeck;
     private State state;
     private State stateSnapshot;
 
-    /* compiled from: StoreGuildBoost.kt */
+    /* JADX INFO: compiled from: StoreGuildBoost.kt */
     public static abstract class State {
 
-        /* compiled from: StoreGuildBoost.kt */
+        /* JADX INFO: compiled from: StoreGuildBoost.kt */
         public static final class Failure extends State {
             public static final Failure INSTANCE = new Failure();
 
@@ -45,7 +45,7 @@ public final class StoreGuildBoost extends StoreV2 {
             }
         }
 
-        /* compiled from: StoreGuildBoost.kt */
+        /* JADX INFO: compiled from: StoreGuildBoost.kt */
         public static final /* data */ class Loaded extends State {
             private final Map<Long, ModelGuildBoostSlot> boostSlotMap;
 
@@ -115,7 +115,7 @@ public final class StoreGuildBoost extends StoreV2 {
             }
         }
 
-        /* compiled from: StoreGuildBoost.kt */
+        /* JADX INFO: compiled from: StoreGuildBoost.kt */
         public static final class Loading extends State {
             public static final Loading INSTANCE = new Loading();
 
@@ -132,8 +132,8 @@ public final class StoreGuildBoost extends StoreV2 {
         }
     }
 
-    /* compiled from: StoreGuildBoost.kt */
-    /* renamed from: com.discord.stores.StoreGuildBoost$fetchUserGuildBoostState$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreGuildBoost$fetchUserGuildBoostState$1 */
+    /* JADX INFO: compiled from: StoreGuildBoost.kt */
     public static final class C60171 extends Lambda implements Function0<Unit> {
         public C60171() {
             super(0);
@@ -145,18 +145,18 @@ public final class StoreGuildBoost extends StoreV2 {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             StoreGuildBoost.this.handleFetchingState();
         }
     }
 
-    /* compiled from: StoreGuildBoost.kt */
-    /* renamed from: com.discord.stores.StoreGuildBoost$fetchUserGuildBoostState$2 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreGuildBoost$fetchUserGuildBoostState$2 */
+    /* JADX INFO: compiled from: StoreGuildBoost.kt */
     public static final class C60182 extends Lambda implements Function1<Error, Unit> {
 
-        /* compiled from: StoreGuildBoost.kt */
-        /* renamed from: com.discord.stores.StoreGuildBoost$fetchUserGuildBoostState$2$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.stores.StoreGuildBoost$fetchUserGuildBoostState$2$1, reason: invalid class name */
+        /* JADX INFO: compiled from: StoreGuildBoost.kt */
         public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
             public AnonymousClass1() {
                 super(0);
@@ -168,7 +168,7 @@ public final class StoreGuildBoost extends StoreV2 {
                 return Unit.f27425a;
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2() {
                 StoreGuildBoost.this.handleFetchError();
             }
@@ -184,19 +184,19 @@ public final class StoreGuildBoost extends StoreV2 {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Error error) {
             Intrinsics3.checkNotNullParameter(error, "it");
             StoreGuildBoost.this.getDispatcher().schedule(new AnonymousClass1());
         }
     }
 
-    /* compiled from: StoreGuildBoost.kt */
-    /* renamed from: com.discord.stores.StoreGuildBoost$fetchUserGuildBoostState$3 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreGuildBoost$fetchUserGuildBoostState$3 */
+    /* JADX INFO: compiled from: StoreGuildBoost.kt */
     public static final class C60193 extends Lambda implements Function1<List<? extends ModelGuildBoostSlot>, Unit> {
 
-        /* compiled from: StoreGuildBoost.kt */
-        /* renamed from: com.discord.stores.StoreGuildBoost$fetchUserGuildBoostState$3$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.stores.StoreGuildBoost$fetchUserGuildBoostState$3$1, reason: invalid class name */
+        /* JADX INFO: compiled from: StoreGuildBoost.kt */
         public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
             public final /* synthetic */ List $subscriptionsSlots;
 
@@ -212,7 +212,7 @@ public final class StoreGuildBoost extends StoreV2 {
                 return Unit.f27425a;
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2() {
                 StoreGuildBoost.this.handleFetchStateSuccess(this.$subscriptionsSlots);
             }
@@ -228,15 +228,15 @@ public final class StoreGuildBoost extends StoreV2 {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(List<ModelGuildBoostSlot> list) {
             Intrinsics3.checkNotNullParameter(list, "subscriptionsSlots");
             StoreGuildBoost.this.getDispatcher().schedule(new AnonymousClass1(list));
         }
     }
 
-    /* compiled from: StoreGuildBoost.kt */
-    /* renamed from: com.discord.stores.StoreGuildBoost$observeGuildBoostState$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreGuildBoost$observeGuildBoostState$1 */
+    /* JADX INFO: compiled from: StoreGuildBoost.kt */
     public static final class C60201 extends Lambda implements Function0<State> {
         public final /* synthetic */ Long $guildId;
 
@@ -259,8 +259,8 @@ public final class StoreGuildBoost extends StoreV2 {
         }
     }
 
-    /* compiled from: StoreGuildBoost.kt */
-    /* renamed from: com.discord.stores.StoreGuildBoost$updateGuildBoostSlot$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreGuildBoost$updateGuildBoostSlot$1 */
+    /* JADX INFO: compiled from: StoreGuildBoost.kt */
     public static final class C60211 extends Lambda implements Function0<Unit> {
         public final /* synthetic */ ModelGuildBoostSlot $newSlot;
 
@@ -276,7 +276,7 @@ public final class StoreGuildBoost extends StoreV2 {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             State stateAccess$getState$p = StoreGuildBoost.access$getState$p(StoreGuildBoost.this);
             if (stateAccess$getState$p instanceof State.Loaded) {
@@ -336,7 +336,7 @@ public final class StoreGuildBoost extends StoreV2 {
         return this.observationDeck;
     }
 
-    /* renamed from: getState, reason: from getter */
+    /* JADX INFO: renamed from: getState, reason: from getter */
     public final State getStateSnapshot() {
         return this.stateSnapshot;
     }

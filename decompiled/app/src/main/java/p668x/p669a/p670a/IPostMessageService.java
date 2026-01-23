@@ -8,26 +8,26 @@ import android.os.Parcel;
 import android.os.RemoteException;
 import p668x.p669a.p670a.ICustomTabsCallback;
 
-/* compiled from: IPostMessageService.java */
-/* renamed from: x.a.a.c, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: x.a.a.c, reason: use source file name */
+/* JADX INFO: compiled from: IPostMessageService.java */
+/* JADX INFO: loaded from: classes.dex */
 public interface IPostMessageService extends IInterface {
 
-    /* compiled from: IPostMessageService.java */
-    /* renamed from: x.a.a.c$a */
+    /* JADX INFO: renamed from: x.a.a.c$a */
+    /* JADX INFO: compiled from: IPostMessageService.java */
     public static abstract class a extends Binder implements IPostMessageService {
         private static final String DESCRIPTOR = "android.support.customtabs.IPostMessageService";
         public static final int TRANSACTION_onMessageChannelReady = 2;
         public static final int TRANSACTION_onPostMessage = 3;
 
-        /* compiled from: IPostMessageService.java */
-        /* renamed from: x.a.a.c$a$a, reason: collision with other inner class name */
+        /* JADX INFO: renamed from: x.a.a.c$a$a, reason: collision with other inner class name */
+        /* JADX INFO: compiled from: IPostMessageService.java */
         public static class C13357a implements IPostMessageService {
 
-            /* renamed from: a */
+            /* JADX INFO: renamed from: a */
             public static IPostMessageService f27935a;
 
-            /* renamed from: b */
+            /* JADX INFO: renamed from: b */
             public IBinder f27936b;
 
             public C13357a(IBinder iBinder) {

@@ -43,8 +43,8 @@ import lombok.javac.JavacTransformer;
 import lombok.javac.handlers.JavacHandlerUtil;
 import lombok.permit.Permit;
 
+/* JADX INFO: loaded from: discord-126021.apk:lombok/javac/apt/LombokProcessor.SCL.lombok */
 @SupportedAnnotationTypes({"*"})
-/* loaded from: discord-126021.apk:lombok/javac/apt/LombokProcessor.SCL.lombok */
 public class LombokProcessor extends AbstractProcessor {
     private ProcessingEnvironment processingEnv;
     private JavacProcessingEnvironment javacProcessingEnv;
@@ -203,8 +203,8 @@ public class LombokProcessor extends AbstractProcessor {
         }
     }
 
-    /* renamed from: lombok.javac.apt.LombokProcessor$1 */
-    /* loaded from: discord-126021.apk:lombok/javac/apt/LombokProcessor$1.SCL.lombok */
+    /* JADX INFO: renamed from: lombok.javac.apt.LombokProcessor$1 */
+    /* JADX INFO: loaded from: discord-126021.apk:lombok/javac/apt/LombokProcessor$1.SCL.lombok */
     class C128911 extends ClassLoader {
         private final /* synthetic */ ClassLoader val$parent;
 

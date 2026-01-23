@@ -11,9 +11,9 @@ import p658rx.subjects.BehaviorSubject;
 import p658rx.subjects.PublishSubject;
 import p658rx.subjects.Subject;
 
-/* compiled from: AppViewModel.kt */
-/* renamed from: b.a.d.d0, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.a.d.d0, reason: use source file name */
+/* JADX INFO: compiled from: AppViewModel.kt */
+/* JADX INFO: loaded from: classes.dex */
 public abstract class AppViewModel<V> extends ViewModel implements AppComponent {
     private final Subject<Void, Void> unsubscribeSignal;
     private final BehaviorSubject<V> viewStateSubject;

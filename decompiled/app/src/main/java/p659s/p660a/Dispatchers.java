@@ -4,15 +4,15 @@ import java.util.Objects;
 import kotlinx.coroutines.CoroutineDispatcher;
 import p659s.p660a.p666e2.Dispatcher3;
 
-/* compiled from: Dispatchers.kt */
-/* renamed from: s.a.k0, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: s.a.k0, reason: use source file name */
+/* JADX INFO: compiled from: Dispatchers.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class Dispatchers {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final CoroutineDispatcher f27866a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static final CoroutineDispatcher f27867b;
 
     static {

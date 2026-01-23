@@ -5,13 +5,13 @@ import com.discord.utilities.error.Error;
 import kotlin.jvm.internal.DefaultConstructorMarker;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: MessageQueue.kt */
-/* renamed from: com.discord.utilities.messagesend.MessageResult, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.utilities.messagesend.MessageResult, reason: use source file name */
+/* JADX INFO: compiled from: MessageQueue.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public abstract class MessageQueue4 {
 
-    /* compiled from: MessageQueue.kt */
-    /* renamed from: com.discord.utilities.messagesend.MessageResult$AutoModBlock */
+    /* JADX INFO: renamed from: com.discord.utilities.messagesend.MessageResult$AutoModBlock */
+    /* JADX INFO: compiled from: MessageQueue.kt */
     public static final class AutoModBlock extends MessageQueue4 {
         private final Error error;
         private final Message message;
@@ -33,8 +33,8 @@ public abstract class MessageQueue4 {
         }
     }
 
-    /* compiled from: MessageQueue.kt */
-    /* renamed from: com.discord.utilities.messagesend.MessageResult$CaptchaRequired */
+    /* JADX INFO: renamed from: com.discord.utilities.messagesend.MessageResult$CaptchaRequired */
+    /* JADX INFO: compiled from: MessageQueue.kt */
     public static final class CaptchaRequired extends MessageQueue4 {
         private final long channelId;
         private final Error error;
@@ -62,8 +62,8 @@ public abstract class MessageQueue4 {
         }
     }
 
-    /* compiled from: MessageQueue.kt */
-    /* renamed from: com.discord.utilities.messagesend.MessageResult$NetworkFailure */
+    /* JADX INFO: renamed from: com.discord.utilities.messagesend.MessageResult$NetworkFailure */
+    /* JADX INFO: compiled from: MessageQueue.kt */
     public static final class NetworkFailure extends MessageQueue4 {
         public static final NetworkFailure INSTANCE = new NetworkFailure();
 
@@ -72,8 +72,8 @@ public abstract class MessageQueue4 {
         }
     }
 
-    /* compiled from: MessageQueue.kt */
-    /* renamed from: com.discord.utilities.messagesend.MessageResult$NoValidContent */
+    /* JADX INFO: renamed from: com.discord.utilities.messagesend.MessageResult$NoValidContent */
+    /* JADX INFO: compiled from: MessageQueue.kt */
     public static final class NoValidContent extends MessageQueue4 {
         public static final NoValidContent INSTANCE = new NoValidContent();
 
@@ -82,8 +82,8 @@ public abstract class MessageQueue4 {
         }
     }
 
-    /* compiled from: MessageQueue.kt */
-    /* renamed from: com.discord.utilities.messagesend.MessageResult$RateLimited */
+    /* JADX INFO: renamed from: com.discord.utilities.messagesend.MessageResult$RateLimited */
+    /* JADX INFO: compiled from: MessageQueue.kt */
     public static final class RateLimited extends MessageQueue4 {
         private final long retryAfterMs;
 
@@ -97,8 +97,8 @@ public abstract class MessageQueue4 {
         }
     }
 
-    /* compiled from: MessageQueue.kt */
-    /* renamed from: com.discord.utilities.messagesend.MessageResult$Slowmode */
+    /* JADX INFO: renamed from: com.discord.utilities.messagesend.MessageResult$Slowmode */
+    /* JADX INFO: compiled from: MessageQueue.kt */
     public static final class Slowmode extends MessageQueue4 {
         private final long cooldownMs;
 
@@ -112,8 +112,8 @@ public abstract class MessageQueue4 {
         }
     }
 
-    /* compiled from: MessageQueue.kt */
-    /* renamed from: com.discord.utilities.messagesend.MessageResult$Success */
+    /* JADX INFO: renamed from: com.discord.utilities.messagesend.MessageResult$Success */
+    /* JADX INFO: compiled from: MessageQueue.kt */
     public static final class Success extends MessageQueue4 {
         private final com.discord.api.message.Message message;
 
@@ -129,8 +129,8 @@ public abstract class MessageQueue4 {
         }
     }
 
-    /* compiled from: MessageQueue.kt */
-    /* renamed from: com.discord.utilities.messagesend.MessageResult$Timeout */
+    /* JADX INFO: renamed from: com.discord.utilities.messagesend.MessageResult$Timeout */
+    /* JADX INFO: compiled from: MessageQueue.kt */
     public static final class Timeout extends MessageQueue4 {
         public static final Timeout INSTANCE = new Timeout();
 
@@ -139,8 +139,8 @@ public abstract class MessageQueue4 {
         }
     }
 
-    /* compiled from: MessageQueue.kt */
-    /* renamed from: com.discord.utilities.messagesend.MessageResult$UnknownFailure */
+    /* JADX INFO: renamed from: com.discord.utilities.messagesend.MessageResult$UnknownFailure */
+    /* JADX INFO: compiled from: MessageQueue.kt */
     public static final class UnknownFailure extends MessageQueue4 {
         private final Error error;
 
@@ -156,8 +156,8 @@ public abstract class MessageQueue4 {
         }
     }
 
-    /* compiled from: MessageQueue.kt */
-    /* renamed from: com.discord.utilities.messagesend.MessageResult$UserCancelled */
+    /* JADX INFO: renamed from: com.discord.utilities.messagesend.MessageResult$UserCancelled */
+    /* JADX INFO: compiled from: MessageQueue.kt */
     public static final class UserCancelled extends MessageQueue4 {
         public static final UserCancelled INSTANCE = new UserCancelled();
 
@@ -166,8 +166,8 @@ public abstract class MessageQueue4 {
         }
     }
 
-    /* compiled from: MessageQueue.kt */
-    /* renamed from: com.discord.utilities.messagesend.MessageResult$ValidationError */
+    /* JADX INFO: renamed from: com.discord.utilities.messagesend.MessageResult$ValidationError */
+    /* JADX INFO: compiled from: MessageQueue.kt */
     public static final class ValidationError extends MessageQueue4 {
         private final String message;
 

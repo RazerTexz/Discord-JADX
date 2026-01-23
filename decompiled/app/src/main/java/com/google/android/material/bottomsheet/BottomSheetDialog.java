@@ -23,7 +23,7 @@ import androidx.core.view.accessibility.AccessibilityNodeInfoCompat;
 import com.google.android.material.C10817R;
 import com.google.android.material.bottomsheet.BottomSheetBehavior;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public class BottomSheetDialog extends AppCompatDialog {
     private BottomSheetBehavior<FrameLayout> behavior;
 
@@ -35,7 +35,7 @@ public class BottomSheetDialog extends AppCompatDialog {
     private FrameLayout container;
     public boolean dismissWithAnimation;
 
-    /* renamed from: com.google.android.material.bottomsheet.BottomSheetDialog$a */
+    /* JADX INFO: renamed from: com.google.android.material.bottomsheet.BottomSheetDialog$a */
     public class ViewOnClickListenerC10859a implements View.OnClickListener {
         public ViewOnClickListenerC10859a() {
         }
@@ -49,7 +49,7 @@ public class BottomSheetDialog extends AppCompatDialog {
         }
     }
 
-    /* renamed from: com.google.android.material.bottomsheet.BottomSheetDialog$b */
+    /* JADX INFO: renamed from: com.google.android.material.bottomsheet.BottomSheetDialog$b */
     public class C10860b extends AccessibilityDelegateCompat {
         public C10860b() {
         }
@@ -78,7 +78,7 @@ public class BottomSheetDialog extends AppCompatDialog {
         }
     }
 
-    /* renamed from: com.google.android.material.bottomsheet.BottomSheetDialog$c */
+    /* JADX INFO: renamed from: com.google.android.material.bottomsheet.BottomSheetDialog$c */
     public class ViewOnTouchListenerC10861c implements View.OnTouchListener {
         public ViewOnTouchListenerC10861c(BottomSheetDialog bottomSheetDialog) {
         }
@@ -89,7 +89,7 @@ public class BottomSheetDialog extends AppCompatDialog {
         }
     }
 
-    /* renamed from: com.google.android.material.bottomsheet.BottomSheetDialog$d */
+    /* JADX INFO: renamed from: com.google.android.material.bottomsheet.BottomSheetDialog$d */
     public class C10862d extends BottomSheetBehavior.BottomSheetCallback {
         public C10862d() {
         }

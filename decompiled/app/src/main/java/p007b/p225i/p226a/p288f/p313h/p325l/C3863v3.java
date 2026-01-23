@@ -3,18 +3,18 @@ package p007b.p225i.p226a.p288f.p313h.p325l;
 import java.util.Iterator;
 import java.util.NoSuchElementException;
 
-/* compiled from: com.google.android.gms:play-services-measurement-base@@18.0.0 */
-/* renamed from: b.i.a.f.h.l.v3 */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.h.l.v3 */
+/* JADX INFO: compiled from: com.google.android.gms:play-services-measurement-base@@18.0.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public final class C3863v3 implements Iterator {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public int f10360j = 0;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final int f10361k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final /* synthetic */ AbstractC3837t3 f10362l;
 
     public C3863v3(AbstractC3837t3 abstractC3837t3) {
@@ -22,7 +22,7 @@ public final class C3863v3 implements Iterator {
         this.f10361k = abstractC3837t3.mo5282d();
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final byte m5332a() {
         int i = this.f10360j;
         if (i >= this.f10361k) {

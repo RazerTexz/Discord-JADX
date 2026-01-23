@@ -4,9 +4,9 @@ import android.animation.Animator;
 import android.view.View;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ViewExtensions.kt */
-/* renamed from: com.discord.utilities.view.extensions.CleanupViewAnimationListener, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.utilities.view.extensions.CleanupViewAnimationListener, reason: use source file name */
+/* JADX INFO: compiled from: ViewExtensions.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class ViewExtensions2 implements Animator.AnimatorListener {
     private final View view;
 

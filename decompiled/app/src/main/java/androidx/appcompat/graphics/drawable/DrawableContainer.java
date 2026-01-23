@@ -18,8 +18,8 @@ import androidx.annotation.RestrictTo;
 import androidx.core.graphics.drawable.DrawableCompat;
 import org.objectweb.asm.Opcodes;
 
+/* JADX INFO: loaded from: classes.dex */
 @RestrictTo({RestrictTo.Scope.LIBRARY_GROUP_PREFIX})
-/* loaded from: classes.dex */
 public class DrawableContainer extends Drawable implements Drawable.Callback {
     private static final boolean DEBUG = false;
     private static final boolean DEFAULT_DITHER = true;
@@ -37,7 +37,7 @@ public class DrawableContainer extends Drawable implements Drawable.Callback {
     private int mAlpha = 255;
     private int mCurIndex = -1;
 
-    /* renamed from: androidx.appcompat.graphics.drawable.DrawableContainer$1 */
+    /* JADX INFO: renamed from: androidx.appcompat.graphics.drawable.DrawableContainer$1 */
     public class RunnableC00791 implements Runnable {
         public RunnableC00791() {
         }
@@ -946,7 +946,7 @@ public class DrawableContainer extends Drawable implements Drawable.Callback {
             Drawable drawable2 = this.mCurrDrawable;
             if (drawable2 != null) {
                 this.mLastDrawable = drawable2;
-                this.mExitAnimationEnd = this.mDrawableContainerState.mExitFadeDuration + jUptimeMillis;
+                this.mExitAnimationEnd = ((long) this.mDrawableContainerState.mExitFadeDuration) + jUptimeMillis;
             } else {
                 this.mLastDrawable = null;
                 this.mExitAnimationEnd = 0L;
@@ -966,7 +966,7 @@ public class DrawableContainer extends Drawable implements Drawable.Callback {
                 if (child != null) {
                     int i2 = this.mDrawableContainerState.mEnterFadeDuration;
                     if (i2 > 0) {
-                        this.mEnterAnimationEnd = jUptimeMillis + i2;
+                        this.mEnterAnimationEnd = jUptimeMillis + ((long) i2);
                     }
                     initializeDrawableForDisplay(child);
                 }

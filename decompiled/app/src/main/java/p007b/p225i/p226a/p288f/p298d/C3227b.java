@@ -26,39 +26,39 @@ import p007b.p100d.p104b.p105a.outline;
 import p007b.p225i.p226a.p288f.p340n.C4358c0;
 import p007b.p225i.p226a.p288f.p340n.C4374r;
 
-/* compiled from: com.google.android.gms:play-services-cloud-messaging@@16.0.0 */
-/* renamed from: b.i.a.f.d.b */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.d.b */
+/* JADX INFO: compiled from: com.google.android.gms:play-services-cloud-messaging@@16.0.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public class C3227b {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static int f9243a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static PendingIntent f9244b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public static final Executor f9245c = ExecutorC3251z.f9295j;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final Context f9247e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final C3243r f9248f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public final ScheduledExecutorService f9249g;
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public Messenger f9251i;
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public zza f9252j;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final SimpleArrayMap<String, TaskCompletionSource<Bundle>> f9246d = new SimpleArrayMap<>();
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public Messenger f9250h = new Messenger(new HandlerC3250y(this, Looper.getMainLooper()));
 
     public C3227b(@NonNull Context context) {
@@ -70,7 +70,7 @@ public class C3227b {
         this.f9249g = scheduledThreadPoolExecutor;
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final void m3999a(String str, @Nullable Bundle bundle) {
         synchronized (this.f9246d) {
             TaskCompletionSource<Bundle> taskCompletionSourceRemove = this.f9246d.remove(str);
@@ -83,8 +83,13 @@ public class C3227b {
         }
     }
 
+    /* JADX WARN: Removed duplicated region for block: B:39:0x00de  */
+    /* JADX WARN: Removed duplicated region for block: B:40:0x00e4  */
     @AnyThread
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
+    /*
+        Code decompiled incorrectly, please refer to instructions dump.
+    */
     public final Task<Bundle> m4000b(Bundle bundle) {
         String string;
         synchronized (C3227b.class) {
@@ -138,8 +143,10 @@ public class C3227b {
                 if (Log.isLoggable("Rpc", 3)) {
                     Log.d("Rpc", "Messenger failed, fallback to startService");
                 }
+                if (this.f9248f.m4010a() != 2) {
+                }
             }
-        } else if (this.f9248f.m4010a() == 2) {
+        } else if (this.f9248f.m4010a() != 2) {
             this.f9247e.sendBroadcast(intent);
         } else {
             this.f9247e.startService(intent);

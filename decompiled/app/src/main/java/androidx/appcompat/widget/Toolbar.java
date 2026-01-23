@@ -47,7 +47,7 @@ import androidx.customview.view.AbsSavedState;
 import java.util.ArrayList;
 import java.util.List;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class Toolbar extends ViewGroup {
     private static final String TAG = "Toolbar";
     private MenuPresenter.Callback mActionMenuPresenterCallback;
@@ -92,7 +92,7 @@ public class Toolbar extends ViewGroup {
     private TextView mTitleTextView;
     private ToolbarWidgetWrapper mWrapper;
 
-    /* renamed from: androidx.appcompat.widget.Toolbar$1 */
+    /* JADX INFO: renamed from: androidx.appcompat.widget.Toolbar$1 */
     public class C01291 implements ActionMenuView.OnMenuItemClickListener {
         public C01291() {
         }
@@ -107,7 +107,7 @@ public class Toolbar extends ViewGroup {
         }
     }
 
-    /* renamed from: androidx.appcompat.widget.Toolbar$2 */
+    /* JADX INFO: renamed from: androidx.appcompat.widget.Toolbar$2 */
     public class RunnableC01302 implements Runnable {
         public RunnableC01302() {
         }
@@ -118,7 +118,7 @@ public class Toolbar extends ViewGroup {
         }
     }
 
-    /* renamed from: androidx.appcompat.widget.Toolbar$3 */
+    /* JADX INFO: renamed from: androidx.appcompat.widget.Toolbar$3 */
     public class ViewOnClickListenerC01313 implements View.OnClickListener {
         public ViewOnClickListenerC01313() {
         }
@@ -276,7 +276,7 @@ public class Toolbar extends ViewGroup {
         public int expandedMenuItemId;
         public boolean isOverflowOpen;
 
-        /* renamed from: androidx.appcompat.widget.Toolbar$SavedState$1 */
+        /* JADX INFO: renamed from: androidx.appcompat.widget.Toolbar$SavedState$1 */
         public class C01321 implements Parcelable.ClassLoaderCreator<SavedState> {
             @Override // android.os.Parcelable.Creator
             public /* bridge */ /* synthetic */ Object createFromParcel(Parcel parcel) {

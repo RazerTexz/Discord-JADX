@@ -4,8 +4,8 @@ import kotlin.Unit;
 import kotlin.jvm.functions.Function2;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetSettingsGiftingAdapter.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetSettingsGiftingAdapter.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetSettingsGiftingAdapter$onGenerateClickListener$1 extends Lambda implements Function2<Long, Long, Unit> {
     public static final WidgetSettingsGiftingAdapter$onGenerateClickListener$1 INSTANCE = new WidgetSettingsGiftingAdapter$onGenerateClickListener$1();
 

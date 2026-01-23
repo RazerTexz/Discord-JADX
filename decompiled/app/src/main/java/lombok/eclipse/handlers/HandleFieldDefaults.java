@@ -22,8 +22,8 @@ import org.eclipse.jdt.internal.compiler.ast.SingleTypeReference;
 import org.eclipse.jdt.internal.compiler.ast.TypeDeclaration;
 import org.eclipse.jdt.internal.compiler.ast.TypeReference;
 
+/* JADX INFO: loaded from: discord-126021.apk:lombok/eclipse/handlers/HandleFieldDefaults.SCL.lombok */
 @HandlerPriority(-2048)
-/* loaded from: discord-126021.apk:lombok/eclipse/handlers/HandleFieldDefaults.SCL.lombok */
 public class HandleFieldDefaults extends EclipseASTAdapter {
     private static final char[] FIELD_DEFAULTS = "FieldDefaults".toCharArray();
 
@@ -69,7 +69,7 @@ public class HandleFieldDefaults extends EclipseASTAdapter {
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
-    public void visitType(EclipseNode typeNode, TypeDeclaration type) throws SecurityException {
+    public void visitType(EclipseNode typeNode, TypeDeclaration type) {
         AnnotationValues<FieldDefaults> fieldDefaults = null;
         EclipseNode source = typeNode;
         boolean levelIsExplicit = false;

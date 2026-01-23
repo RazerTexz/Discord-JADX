@@ -11,16 +11,16 @@ import p007b.p225i.p355b.p357b.ImmutableList2;
 import p007b.p225i.p355b.p357b.ImmutableMap2;
 import p007b.p225i.p355b.p357b.RegularImmutableList;
 
-/* compiled from: lambda */
-/* renamed from: b.i.a.c.c3.d */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.c3.d */
+/* JADX INFO: compiled from: lambda */
+/* JADX INFO: loaded from: classes3.dex */
 public final /* synthetic */ class C2638d implements Bundleable.a {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final /* synthetic */ C2638d f6180a = new C2638d();
 
     @Override // p007b.p225i.p226a.p242c.Bundleable.a
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final Bundleable mo2576a(Bundle bundle) {
         TrackSelectionOverrides trackSelectionOverrides = TrackSelectionOverrides.f6270j;
         int i = TrackSelectionOverrides.a.f6273j;

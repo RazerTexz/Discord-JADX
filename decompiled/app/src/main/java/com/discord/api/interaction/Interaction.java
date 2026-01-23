@@ -5,8 +5,8 @@ import com.discord.models.domain.ModelAuditLogEntry;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: Interaction.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: Interaction.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class Interaction {
     public static final int TYPE_INTERACTION_APPLICATION_COMMAND = 2;
     public static final int TYPE_INTERACTION_PING = 1;
@@ -24,17 +24,17 @@ public final /* data */ class Interaction {
         this.member = null;
     }
 
-    /* renamed from: a, reason: from getter */
+    /* JADX INFO: renamed from: a, reason: from getter */
     public final Long getId() {
         return this.id;
     }
 
-    /* renamed from: b, reason: from getter */
+    /* JADX INFO: renamed from: b, reason: from getter */
     public final String getName() {
         return this.name;
     }
 
-    /* renamed from: c, reason: from getter */
+    /* JADX INFO: renamed from: c, reason: from getter */
     public final User getUser() {
         return this.user;
     }

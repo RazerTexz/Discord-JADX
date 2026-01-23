@@ -9,7 +9,7 @@ import java.util.List;
 import java.util.concurrent.atomic.AtomicBoolean;
 import lombok.core.Version;
 
-/* loaded from: discord-126021.apk:lombok/installer/OsUtils.SCL.lombok */
+/* JADX INFO: loaded from: discord-126021.apk:lombok/installer/OsUtils.SCL.lombok */
 public final class OsUtils {
     private static final AtomicBoolean windowsDriveInfoLibLoaded = new AtomicBoolean(false);
 
@@ -85,8 +85,8 @@ public final class OsUtils {
         return drives;
     }
 
-    /* renamed from: lombok.installer.OsUtils$OS */
-    /* loaded from: discord-126021.apk:lombok/installer/OsUtils$OS.SCL.lombok */
+    /* JADX INFO: renamed from: lombok.installer.OsUtils$OS */
+    /* JADX INFO: loaded from: discord-126021.apk:lombok/installer/OsUtils$OS.SCL.lombok */
     public enum EnumC12884OS {
         MAC_OS_X("\n"),
         WINDOWS("\r\n"),
@@ -94,7 +94,7 @@ public final class OsUtils {
 
         private final String lineEnding;
 
-        /* renamed from: values, reason: to resolve conflict with enum method */
+        /* JADX INFO: renamed from: values, reason: to resolve conflict with enum method */
         public static EnumC12884OS[] valuesCustom() {
             EnumC12884OS[] enumC12884OSArrValuesCustom = values();
             int length = enumC12884OSArrValuesCustom.length;

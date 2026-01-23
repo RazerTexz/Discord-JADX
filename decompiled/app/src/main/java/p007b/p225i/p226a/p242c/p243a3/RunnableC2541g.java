@@ -1,11 +1,11 @@
 package p007b.p225i.p226a.p242c.p243a3;
 
-/* compiled from: lambda */
-/* renamed from: b.i.a.c.a3.g */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.a3.g */
+/* JADX INFO: compiled from: lambda */
+/* JADX INFO: loaded from: classes3.dex */
 public final /* synthetic */ class RunnableC2541g implements Runnable {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final /* synthetic */ ProgressiveMediaPeriod f5577j;
 
     public /* synthetic */ RunnableC2541g(ProgressiveMediaPeriod progressiveMediaPeriod) {

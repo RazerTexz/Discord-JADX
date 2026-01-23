@@ -6,12 +6,12 @@ import kotlin.jvm.functions.Function2;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: VoiceUserView.kt */
-/* renamed from: b.a.y.g0, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: b.a.y.g0, reason: use source file name */
+/* JADX INFO: compiled from: VoiceUserView.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class VoiceUserView2 extends Lambda implements Function2<Bitmap, String, Unit> {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static final VoiceUserView2 f2025j = new VoiceUserView2();
 
     public VoiceUserView2() {

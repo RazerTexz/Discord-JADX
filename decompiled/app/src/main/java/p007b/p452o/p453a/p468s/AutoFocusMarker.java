@@ -7,17 +7,17 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
-/* compiled from: AutoFocusMarker.java */
-/* renamed from: b.o.a.s.a, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.o.a.s.a, reason: use source file name */
+/* JADX INFO: compiled from: AutoFocusMarker.java */
+/* JADX INFO: loaded from: classes3.dex */
 public interface AutoFocusMarker {
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     void m7405a(@NonNull AutoFocusTrigger autoFocusTrigger, @NonNull PointF pointF);
 
     @Nullable
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     View m7406b(@NonNull Context context, @NonNull ViewGroup viewGroup);
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     void m7407c(@NonNull AutoFocusTrigger autoFocusTrigger, boolean z2, @NonNull PointF pointF);
 }

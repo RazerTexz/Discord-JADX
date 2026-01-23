@@ -24,9 +24,9 @@ import p507d0.p513e0.p514p.p515d.p517m0.p567n.p568l1.NewKotlinTypeChecker;
 import p507d0.p580t.Collections2;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: JvmBuiltInsPackageFragmentProvider.kt */
-/* renamed from: d0.e0.p.d.m0.b.q.o, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.b.q.o, reason: use source file name */
+/* JADX INFO: compiled from: JvmBuiltInsPackageFragmentProvider.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class JvmBuiltInsPackageFragmentProvider extends AbstractDeserializedPackageFragmentProvider {
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public JvmBuiltInsPackageFragmentProvider(StorageManager storageManager, KotlinClassFinder kotlinClassFinder, ModuleDescriptor2 moduleDescriptor2, NotFoundClasses notFoundClasses, AdditionalClassPartsProvider additionalClassPartsProvider, PlatformDependentDeclarationFilter platformDependentDeclarationFilter, DeserializationConfiguration deserializationConfiguration, NewKotlinTypeChecker newKotlinTypeChecker, SamConversionResolver samConversionResolver) {

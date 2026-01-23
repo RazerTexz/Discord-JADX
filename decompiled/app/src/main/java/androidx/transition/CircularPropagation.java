@@ -3,7 +3,7 @@ package androidx.transition;
 import android.graphics.Rect;
 import android.view.ViewGroup;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class CircularPropagation extends VisibilityPropagation {
     private float mPropagationSpeed = 3.0f;
 
@@ -44,7 +44,7 @@ public class CircularPropagation extends VisibilityPropagation {
         if (duration < 0) {
             duration = 300;
         }
-        return Math.round(((duration * i) / this.mPropagationSpeed) * fDistance);
+        return Math.round(((duration * ((long) i)) / this.mPropagationSpeed) * fDistance);
     }
 
     public void setPropagationSpeed(float f) {

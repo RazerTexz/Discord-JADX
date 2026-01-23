@@ -4,7 +4,7 @@ import java.io.IOException;
 import java.io.OutputStream;
 import java.nio.ByteBuffer;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class ByteBufferOutputStream extends OutputStream {
     private ByteBuffer byteBuffer;
 

@@ -21,11 +21,11 @@ import com.facebook.drawee.view.SimpleDraweeView;
 import java.util.Objects;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: WidgetCollapsedUsersListAdapter.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetCollapsedUsersListAdapter.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetCollapsedUsersListAdapter extends MGRecyclerAdapterSimple<CollapsedUser> {
 
-    /* compiled from: WidgetCollapsedUsersListAdapter.kt */
+    /* JADX INFO: compiled from: WidgetCollapsedUsersListAdapter.kt */
     public static final class OverlapDecoration extends RecyclerView.ItemDecoration {
         private final int offset;
 
@@ -45,7 +45,7 @@ public final class WidgetCollapsedUsersListAdapter extends MGRecyclerAdapterSimp
         }
     }
 
-    /* compiled from: WidgetCollapsedUsersListAdapter.kt */
+    /* JADX INFO: compiled from: WidgetCollapsedUsersListAdapter.kt */
     public static final class WidgetCollapsedUserListItem extends MGRecyclerViewHolder<WidgetCollapsedUsersListAdapter, CollapsedUser> {
         private final WidgetCollapsedVoiceUserListItemBinding binding;
 
@@ -74,7 +74,7 @@ public final class WidgetCollapsedUsersListAdapter extends MGRecyclerAdapterSimp
             onConfigure2(i, collapsedUser);
         }
 
-        /* renamed from: onConfigure, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: onConfigure, reason: avoid collision after fix types in other method */
         public void onConfigure2(int position, CollapsedUser data) {
             Intrinsics3.checkNotNullParameter(data, "data");
             super.onConfigure(position, data);

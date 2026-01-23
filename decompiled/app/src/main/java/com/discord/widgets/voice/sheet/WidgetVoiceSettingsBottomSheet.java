@@ -38,26 +38,26 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 import p507d0.p592z.p594d.Reflection2;
 
-/* compiled from: WidgetVoiceSettingsBottomSheet.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: WidgetVoiceSettingsBottomSheet.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class WidgetVoiceSettingsBottomSheet extends AppBottomSheet {
     private static final String ANALYTICS_SOURCE = "Voice Call";
     private static final String ARG_CHANNEL_ID = "ARG_CHANNEL_ID";
 
-    /* renamed from: binding$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
 
-    /* renamed from: channelId$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: channelId$delegate, reason: from kotlin metadata */
     private final Lazy channelId;
 
-    /* renamed from: viewModel$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: viewModel$delegate, reason: from kotlin metadata */
     private final Lazy viewModel;
     public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetVoiceSettingsBottomSheet.class, "binding", "getBinding()Lcom/discord/databinding/WidgetVoiceSettingsBottomSheetBinding;", 0)};
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
 
-    /* compiled from: WidgetVoiceSettingsBottomSheet.kt */
+    /* JADX INFO: compiled from: WidgetVoiceSettingsBottomSheet.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -85,7 +85,7 @@ public final class WidgetVoiceSettingsBottomSheet extends AppBottomSheet {
         }
     }
 
-    /* compiled from: WidgetVoiceSettingsBottomSheet.kt */
+    /* JADX INFO: compiled from: WidgetVoiceSettingsBottomSheet.kt */
     public interface ViewState {
         Channel getChannel();
 
@@ -104,8 +104,8 @@ public final class WidgetVoiceSettingsBottomSheet extends AppBottomSheet {
         boolean getShowVoiceParticipantsToggle();
     }
 
-    /* compiled from: WidgetVoiceSettingsBottomSheet.kt */
-    /* renamed from: com.discord.widgets.voice.sheet.WidgetVoiceSettingsBottomSheet$configureUI$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.voice.sheet.WidgetVoiceSettingsBottomSheet$configureUI$1 */
+    /* JADX INFO: compiled from: WidgetVoiceSettingsBottomSheet.kt */
     public static final class ViewOnClickListenerC106071 implements View.OnClickListener {
         public final /* synthetic */ ViewState $viewState;
 
@@ -120,8 +120,8 @@ public final class WidgetVoiceSettingsBottomSheet extends AppBottomSheet {
         }
     }
 
-    /* compiled from: WidgetVoiceSettingsBottomSheet.kt */
-    /* renamed from: com.discord.widgets.voice.sheet.WidgetVoiceSettingsBottomSheet$configureUI$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.voice.sheet.WidgetVoiceSettingsBottomSheet$configureUI$2 */
+    /* JADX INFO: compiled from: WidgetVoiceSettingsBottomSheet.kt */
     public static final class ViewOnClickListenerC106082 implements View.OnClickListener {
         public ViewOnClickListenerC106082() {
         }
@@ -132,8 +132,8 @@ public final class WidgetVoiceSettingsBottomSheet extends AppBottomSheet {
         }
     }
 
-    /* compiled from: WidgetVoiceSettingsBottomSheet.kt */
-    /* renamed from: com.discord.widgets.voice.sheet.WidgetVoiceSettingsBottomSheet$configureUI$3 */
+    /* JADX INFO: renamed from: com.discord.widgets.voice.sheet.WidgetVoiceSettingsBottomSheet$configureUI$3 */
+    /* JADX INFO: compiled from: WidgetVoiceSettingsBottomSheet.kt */
     public static final class ViewOnClickListenerC106093 implements View.OnClickListener {
         public ViewOnClickListenerC106093() {
         }
@@ -148,8 +148,8 @@ public final class WidgetVoiceSettingsBottomSheet extends AppBottomSheet {
         }
     }
 
-    /* compiled from: WidgetVoiceSettingsBottomSheet.kt */
-    /* renamed from: com.discord.widgets.voice.sheet.WidgetVoiceSettingsBottomSheet$configureUI$4 */
+    /* JADX INFO: renamed from: com.discord.widgets.voice.sheet.WidgetVoiceSettingsBottomSheet$configureUI$4 */
+    /* JADX INFO: compiled from: WidgetVoiceSettingsBottomSheet.kt */
     public static final class ViewOnClickListenerC106104 implements View.OnClickListener {
         public final /* synthetic */ ViewState $viewState;
 
@@ -167,8 +167,8 @@ public final class WidgetVoiceSettingsBottomSheet extends AppBottomSheet {
         }
     }
 
-    /* compiled from: WidgetVoiceSettingsBottomSheet.kt */
-    /* renamed from: com.discord.widgets.voice.sheet.WidgetVoiceSettingsBottomSheet$configureUI$5 */
+    /* JADX INFO: renamed from: com.discord.widgets.voice.sheet.WidgetVoiceSettingsBottomSheet$configureUI$5 */
+    /* JADX INFO: compiled from: WidgetVoiceSettingsBottomSheet.kt */
     public static final class ViewOnClickListenerC106115 implements View.OnClickListener {
         public ViewOnClickListenerC106115() {
         }
@@ -185,8 +185,8 @@ public final class WidgetVoiceSettingsBottomSheet extends AppBottomSheet {
         }
     }
 
-    /* compiled from: WidgetVoiceSettingsBottomSheet.kt */
-    /* renamed from: com.discord.widgets.voice.sheet.WidgetVoiceSettingsBottomSheet$configureUI$7 */
+    /* JADX INFO: renamed from: com.discord.widgets.voice.sheet.WidgetVoiceSettingsBottomSheet$configureUI$7 */
+    /* JADX INFO: compiled from: WidgetVoiceSettingsBottomSheet.kt */
     public static final class ViewOnClickListenerC106127 implements View.OnClickListener {
         public ViewOnClickListenerC106127() {
         }
@@ -197,8 +197,8 @@ public final class WidgetVoiceSettingsBottomSheet extends AppBottomSheet {
         }
     }
 
-    /* compiled from: WidgetVoiceSettingsBottomSheet.kt */
-    /* renamed from: com.discord.widgets.voice.sheet.WidgetVoiceSettingsBottomSheet$configureUI$8 */
+    /* JADX INFO: renamed from: com.discord.widgets.voice.sheet.WidgetVoiceSettingsBottomSheet$configureUI$8 */
+    /* JADX INFO: compiled from: WidgetVoiceSettingsBottomSheet.kt */
     public static final class ViewOnClickListenerC106138 implements View.OnClickListener {
         public final /* synthetic */ ViewState $viewState;
 
@@ -215,8 +215,8 @@ public final class WidgetVoiceSettingsBottomSheet extends AppBottomSheet {
         }
     }
 
-    /* compiled from: WidgetVoiceSettingsBottomSheet.kt */
-    /* renamed from: com.discord.widgets.voice.sheet.WidgetVoiceSettingsBottomSheet$onResume$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.voice.sheet.WidgetVoiceSettingsBottomSheet$onResume$1 */
+    /* JADX INFO: compiled from: WidgetVoiceSettingsBottomSheet.kt */
     public static final class C106141 extends Lambda implements Function1<WidgetVoiceSettingsBottomSheetViewModel.ViewState, Unit> {
         public C106141() {
             super(1);
@@ -228,7 +228,7 @@ public final class WidgetVoiceSettingsBottomSheet extends AppBottomSheet {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(WidgetVoiceSettingsBottomSheetViewModel.ViewState viewState) {
             Intrinsics3.checkNotNullParameter(viewState, "viewState");
             WidgetVoiceSettingsBottomSheet.access$configureUI(WidgetVoiceSettingsBottomSheet.this, viewState);

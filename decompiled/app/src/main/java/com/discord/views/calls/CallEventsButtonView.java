@@ -22,24 +22,24 @@ import p007b.p008a.p025i.ViewCallEventsButtonBinding;
 import p007b.p008a.p027k.FormatUtils;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: CallEventsButtonView.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: CallEventsButtonView.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class CallEventsButtonView extends ConstraintLayout {
 
-    /* renamed from: j, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: j, reason: from kotlin metadata */
     public final ViewCallEventsButtonBinding binding;
 
-    /* compiled from: CallEventsButtonView.kt */
-    /* renamed from: com.discord.views.calls.CallEventsButtonView$a */
+    /* JADX INFO: renamed from: com.discord.views.calls.CallEventsButtonView$a */
+    /* JADX INFO: compiled from: CallEventsButtonView.kt */
     public static final class ViewOnClickListenerC7100a implements View.OnClickListener {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public final /* synthetic */ FragmentManager f19207j;
 
-        /* renamed from: k */
+        /* JADX INFO: renamed from: k */
         public final /* synthetic */ long f19208k;
 
-        /* renamed from: l */
+        /* JADX INFO: renamed from: l */
         public final /* synthetic */ long f19209l;
 
         public ViewOnClickListenerC7100a(FragmentManager fragmentManager, long j, long j2) {
@@ -82,7 +82,7 @@ public final class CallEventsButtonView extends ConstraintLayout {
         ColorCompat2.tintWithColor(imageView, color);
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final void m8573a(FragmentManager fragmentManager, long guildId, long channelId, List<GuildScheduledEvent> events) {
         Intrinsics3.checkNotNullParameter(fragmentManager, "fragmentManager");
         Intrinsics3.checkNotNullParameter(events, "events");

@@ -32,19 +32,19 @@ import p637j0.p653p.Schedulers2;
 import p658rx.Observable;
 import p658rx.subjects.BehaviorSubject;
 
-/* compiled from: GifSearchViewModel.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: GifSearchViewModel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class GifSearchViewModel extends AppViewModel<ViewState> {
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private final MessageManager messageManager;
     private final BehaviorSubject<String> searchSubject;
     private final StoreAnalytics storeAnalytics;
     private final StoreGifPicker storeGifPicker;
 
-    /* compiled from: GifSearchViewModel.kt */
-    /* renamed from: com.discord.widgets.chat.input.gifpicker.GifSearchViewModel$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.input.gifpicker.GifSearchViewModel$1 */
+    /* JADX INFO: compiled from: GifSearchViewModel.kt */
     public static final class C78711 extends Lambda implements Function1<StoreState, Unit> {
         public C78711() {
             super(1);
@@ -56,14 +56,14 @@ public final class GifSearchViewModel extends AppViewModel<ViewState> {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(StoreState storeState) {
             Intrinsics3.checkNotNullParameter(storeState, "storeState");
             GifSearchViewModel.access$handleStoreState(GifSearchViewModel.this, storeState);
         }
     }
 
-    /* compiled from: GifSearchViewModel.kt */
+    /* JADX INFO: compiled from: GifSearchViewModel.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -94,11 +94,11 @@ public final class GifSearchViewModel extends AppViewModel<ViewState> {
         }
     }
 
-    /* compiled from: GifSearchViewModel.kt */
+    /* JADX INFO: compiled from: GifSearchViewModel.kt */
     public static abstract class StoreState {
         private final List<String> trendingSearchTerms;
 
-        /* compiled from: GifSearchViewModel.kt */
+        /* JADX INFO: compiled from: GifSearchViewModel.kt */
         public static final /* data */ class SearchResults extends StoreState {
             private final List<ModelGif> gifs;
             private final String searchQuery;
@@ -146,7 +146,7 @@ public final class GifSearchViewModel extends AppViewModel<ViewState> {
                 return this.trending;
             }
 
-            /* renamed from: component4, reason: from getter */
+            /* JADX INFO: renamed from: component4, reason: from getter */
             public final String getSearchQuery() {
                 return this.searchQuery;
             }
@@ -208,7 +208,7 @@ public final class GifSearchViewModel extends AppViewModel<ViewState> {
             }
         }
 
-        /* compiled from: GifSearchViewModel.kt */
+        /* JADX INFO: compiled from: GifSearchViewModel.kt */
         public static final /* data */ class TrendingSearchTermsResults extends StoreState {
             private final List<String> trending;
 
@@ -273,14 +273,14 @@ public final class GifSearchViewModel extends AppViewModel<ViewState> {
         }
     }
 
-    /* compiled from: GifSearchViewModel.kt */
+    /* JADX INFO: compiled from: GifSearchViewModel.kt */
     public static abstract class ViewState {
 
-        /* compiled from: GifSearchViewModel.kt */
+        /* JADX INFO: compiled from: GifSearchViewModel.kt */
         public static final /* data */ class Loaded extends ViewState {
             private final List<GifAdapterItem> adapterItems;
 
-            /* renamed from: gifCount$delegate, reason: from kotlin metadata */
+            /* JADX INFO: renamed from: gifCount$delegate, reason: from kotlin metadata */
             private final Lazy gifCount;
 
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -337,7 +337,7 @@ public final class GifSearchViewModel extends AppViewModel<ViewState> {
             }
         }
 
-        /* compiled from: GifSearchViewModel.kt */
+        /* JADX INFO: compiled from: GifSearchViewModel.kt */
         public static final class LoadingSearchResults extends ViewState {
             public static final LoadingSearchResults INSTANCE = new LoadingSearchResults();
 

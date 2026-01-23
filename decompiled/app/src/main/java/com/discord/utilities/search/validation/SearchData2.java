@@ -12,9 +12,9 @@ import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: SearchData.kt */
-/* renamed from: com.discord.utilities.search.validation.SearchData$Builder$buildForChannel$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.utilities.search.validation.SearchData$Builder$buildForChannel$1, reason: use source file name */
+/* JADX INFO: compiled from: SearchData.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class SearchData2 extends Lambda implements Function1<User, Unit> {
     public final /* synthetic */ Map $guildMembers;
     public final /* synthetic */ HashMap $usernameAndDiscriminatorIndex;
@@ -36,7 +36,7 @@ public final class SearchData2 extends Lambda implements Function1<User, Unit> {
         return Unit.f27425a;
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final void invoke2(User user) {
         Intrinsics3.checkNotNullParameter(user, "recipient");
         this.$users.put(Long.valueOf(user.getId()), new UserGuildMember(user, (GuildMember) outline.m849f(user, this.$guildMembers)));

@@ -12,7 +12,7 @@ import org.webrtc.CameraVideoCapturer;
 import p007b.p100d.p104b.p105a.outline;
 import p617h0.p628c.CameraVideoCapturer2;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public abstract class CameraCapturer implements CameraVideoCapturer {
     private static final int MAX_OPEN_CAMERA_ATTEMPTS = 3;
     private static final int OPEN_CAMERA_DELAY_MS = 500;
@@ -52,7 +52,7 @@ public abstract class CameraCapturer implements CameraVideoCapturer {
     private final Object stateLock = new Object();
     private SwitchState switchState = SwitchState.IDLE;
 
-    /* renamed from: org.webrtc.CameraCapturer$1 */
+    /* JADX INFO: renamed from: org.webrtc.CameraCapturer$1 */
     public class C129481 implements CameraSession.CreateSessionCallback {
         public C129481() {
         }
@@ -119,7 +119,7 @@ public abstract class CameraCapturer implements CameraVideoCapturer {
         }
     }
 
-    /* renamed from: org.webrtc.CameraCapturer$2 */
+    /* JADX INFO: renamed from: org.webrtc.CameraCapturer$2 */
     public class C129492 implements CameraSession.Events {
         public C129492() {
         }
@@ -192,7 +192,7 @@ public abstract class CameraCapturer implements CameraVideoCapturer {
         }
     }
 
-    /* renamed from: org.webrtc.CameraCapturer$3 */
+    /* JADX INFO: renamed from: org.webrtc.CameraCapturer$3 */
     public class RunnableC129503 implements Runnable {
         public RunnableC129503() {
         }
@@ -203,7 +203,7 @@ public abstract class CameraCapturer implements CameraVideoCapturer {
         }
     }
 
-    /* renamed from: org.webrtc.CameraCapturer$4 */
+    /* JADX INFO: renamed from: org.webrtc.CameraCapturer$4 */
     public class C129514 implements CameraVideoCapturer.CameraEventsHandler {
         public C129514() {
         }
@@ -233,7 +233,7 @@ public abstract class CameraCapturer implements CameraVideoCapturer {
         }
     }
 
-    /* renamed from: org.webrtc.CameraCapturer$5 */
+    /* JADX INFO: renamed from: org.webrtc.CameraCapturer$5 */
     public class RunnableC129525 implements Runnable {
         public RunnableC129525() {
         }
@@ -245,7 +245,7 @@ public abstract class CameraCapturer implements CameraVideoCapturer {
         }
     }
 
-    /* renamed from: org.webrtc.CameraCapturer$6 */
+    /* JADX INFO: renamed from: org.webrtc.CameraCapturer$6 */
     public class RunnableC129536 implements Runnable {
         public final /* synthetic */ CameraSession val$oldSession;
 
@@ -259,7 +259,7 @@ public abstract class CameraCapturer implements CameraVideoCapturer {
         }
     }
 
-    /* renamed from: org.webrtc.CameraCapturer$7 */
+    /* JADX INFO: renamed from: org.webrtc.CameraCapturer$7 */
     public class RunnableC129547 implements Runnable {
         public final /* synthetic */ CameraVideoCapturer.CameraSwitchHandler val$switchEventsHandler;
 
@@ -278,7 +278,7 @@ public abstract class CameraCapturer implements CameraVideoCapturer {
         }
     }
 
-    /* renamed from: org.webrtc.CameraCapturer$8 */
+    /* JADX INFO: renamed from: org.webrtc.CameraCapturer$8 */
     public class RunnableC129558 implements Runnable {
         public final /* synthetic */ String val$cameraName;
         public final /* synthetic */ CameraVideoCapturer.CameraSwitchHandler val$switchEventsHandler;
@@ -294,7 +294,7 @@ public abstract class CameraCapturer implements CameraVideoCapturer {
         }
     }
 
-    /* renamed from: org.webrtc.CameraCapturer$9 */
+    /* JADX INFO: renamed from: org.webrtc.CameraCapturer$9 */
     public class RunnableC129569 implements Runnable {
         public final /* synthetic */ CameraSession val$oldSession;
 

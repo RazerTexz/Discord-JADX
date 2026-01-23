@@ -9,9 +9,9 @@ import kotlin.jvm.functions.Function1;
 import p507d0.p592z.p594d.FunctionReferenceImpl;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: WidgetServerSettingsOverview.kt */
-/* renamed from: com.discord.widgets.servers.WidgetServerSettingsOverview$AfkBottomSheet$binding$2, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.servers.WidgetServerSettingsOverview$AfkBottomSheet$binding$2, reason: use source file name */
+/* JADX INFO: compiled from: WidgetServerSettingsOverview.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final /* synthetic */ class WidgetServerSettingsOverview2 extends FunctionReferenceImpl implements Function1<View, WidgetServerSettingsOverviewAfkTimeoutBinding> {
     public static final WidgetServerSettingsOverview2 INSTANCE = new WidgetServerSettingsOverview2();
 
@@ -19,7 +19,7 @@ public final /* synthetic */ class WidgetServerSettingsOverview2 extends Functio
         super(1, WidgetServerSettingsOverviewAfkTimeoutBinding.class, "bind", "bind(Landroid/view/View;)Lcom/discord/databinding/WidgetServerSettingsOverviewAfkTimeoutBinding;", 0);
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final WidgetServerSettingsOverviewAfkTimeoutBinding invoke2(View view) {
         Intrinsics3.checkNotNullParameter(view, "p1");
         int i = C5419R.id.guild_actions_overview_header_tv;

@@ -6,8 +6,8 @@ import androidx.core.os.ConfigurationCompat;
 import java.util.Locale;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: LocaleManager.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: LocaleManager.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class LocaleManager {
     public final Locale getPrimaryLocale(Context context) {
         if (context == null) {

@@ -14,33 +14,33 @@ import p007b.p225i.p226a.p242c.p267x2.FlacStreamMetadata;
 import p007b.p225i.p226a.p242c.p267x2.SeekMap;
 import p007b.p225i.p226a.p242c.p267x2.p275j0.StreamReader;
 
-/* compiled from: FlacReader.java */
-/* renamed from: b.i.a.c.x2.j0.c, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.x2.j0.c, reason: use source file name */
+/* JADX INFO: compiled from: FlacReader.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class FlacReader extends StreamReader {
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     @Nullable
     public FlacStreamMetadata f8516n;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     @Nullable
     public a f8517o;
 
-    /* compiled from: FlacReader.java */
-    /* renamed from: b.i.a.c.x2.j0.c$a */
+    /* JADX INFO: renamed from: b.i.a.c.x2.j0.c$a */
+    /* JADX INFO: compiled from: FlacReader.java */
     public static final class a implements OggSeeker {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public FlacStreamMetadata f8518a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public FlacStreamMetadata.a f8519b;
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public long f8520c = -1;
 
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         public long f8521d = -1;
 
         public a(FlacStreamMetadata flacStreamMetadata, FlacStreamMetadata.a aVar) {
@@ -49,14 +49,14 @@ public final class FlacReader extends StreamReader {
         }
 
         @Override // p007b.p225i.p226a.p242c.p267x2.p275j0.OggSeeker
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public SeekMap mo3734a() {
             AnimatableValueParser.m426D(this.f8520c != -1);
             return new FlacSeekTableSeekMap(this.f8518a, this.f8520c);
         }
 
         @Override // p007b.p225i.p226a.p242c.p267x2.p275j0.OggSeeker
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public long mo3735b(ExtractorInput extractorInput) {
             long j = this.f8521d;
             if (j < 0) {
@@ -68,7 +68,7 @@ public final class FlacReader extends StreamReader {
         }
 
         @Override // p007b.p225i.p226a.p242c.p267x2.p275j0.OggSeeker
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public void mo3736c(long j) {
             long[] jArr = this.f8519b.f8982a;
             this.f8521d = jArr[Util2.m2997e(jArr, j, true, true)];
@@ -76,7 +76,7 @@ public final class FlacReader extends StreamReader {
     }
 
     @Override // p007b.p225i.p226a.p242c.p267x2.p275j0.StreamReader
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public long mo3737c(ParsableByteArray parsableByteArray) {
         byte[] bArr = parsableByteArray.f6793a;
         if (!(bArr[0] == -1)) {
@@ -94,7 +94,7 @@ public final class FlacReader extends StreamReader {
 
     @Override // p007b.p225i.p226a.p242c.p267x2.p275j0.StreamReader
     @EnsuresNonNullIf(expression = {"#3.format"}, result = false)
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public boolean mo3738d(ParsableByteArray parsableByteArray, long j, StreamReader.b bVar) {
         byte[] bArr = parsableByteArray.f6793a;
         FlacStreamMetadata flacStreamMetadata = this.f8516n;
@@ -124,7 +124,7 @@ public final class FlacReader extends StreamReader {
     }
 
     @Override // p007b.p225i.p226a.p242c.p267x2.p275j0.StreamReader
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public void mo3739e(boolean z2) {
         super.mo3739e(z2);
         if (z2) {

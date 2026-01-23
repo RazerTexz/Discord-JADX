@@ -8,9 +8,9 @@ import p637j0.p641k.Func1;
 import p637j0.p642l.p647e.ScalarSynchronousObservable;
 import p658rx.Observable;
 
-/* compiled from: WidgetFriendsFindNearby.kt */
-/* renamed from: com.discord.widgets.friends.WidgetFriendsFindNearby$ModelProvider$get$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.friends.WidgetFriendsFindNearby$ModelProvider$get$1, reason: use source file name */
+/* JADX INFO: compiled from: WidgetFriendsFindNearby.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetFriendsFindNearby2<T, R> implements Func1<NearbyManager.NearbyState, Observable<? extends WidgetFriendsFindNearby.Model>> {
     public static final WidgetFriendsFindNearby2 INSTANCE = new WidgetFriendsFindNearby2();
 
@@ -19,7 +19,7 @@ public final class WidgetFriendsFindNearby2<T, R> implements Func1<NearbyManager
         return call2(nearbyState);
     }
 
-    /* renamed from: call, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
     public final Observable<? extends WidgetFriendsFindNearby.Model> call2(NearbyManager.NearbyState nearbyState) {
         ScalarSynchronousObservable scalarSynchronousObservable;
         if (nearbyState instanceof NearbyManager.NearbyState.Disconnected) {

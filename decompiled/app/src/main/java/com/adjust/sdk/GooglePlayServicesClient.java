@@ -13,7 +13,7 @@ import java.io.IOException;
 import java.util.concurrent.LinkedBlockingQueue;
 import java.util.concurrent.TimeUnit;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class GooglePlayServicesClient {
 
     public static final class GooglePlayServicesConnection implements ServiceConnection {

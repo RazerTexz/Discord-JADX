@@ -5,18 +5,18 @@ import androidx.appcompat.widget.Toolbar;
 import p658rx.functions.Action1;
 import p658rx.functions.Action2;
 
-/* compiled from: AppActivity.kt */
-/* renamed from: b.a.d.b, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.a.d.b, reason: use source file name */
+/* JADX INFO: compiled from: AppActivity.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class AppActivity2 implements Toolbar.OnMenuItemClickListener {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final /* synthetic */ Toolbar f502a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final /* synthetic */ Action2 f503b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final /* synthetic */ Action1 f504c;
 
     public AppActivity2(Toolbar toolbar, int i, Action2 action2, Action1 action1) {

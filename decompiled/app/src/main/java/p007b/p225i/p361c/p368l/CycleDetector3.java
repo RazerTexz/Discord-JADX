@@ -1,14 +1,14 @@
 package p007b.p225i.p361c.p368l;
 
-/* compiled from: CycleDetector.java */
-/* renamed from: b.i.c.l.n, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.c.l.n, reason: use source file name */
+/* JADX INFO: compiled from: CycleDetector.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class CycleDetector3 {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final Class<?> f12199a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final boolean f12200b;
 
     public CycleDetector3(Class cls, boolean z2, CycleDetector cycleDetector) {

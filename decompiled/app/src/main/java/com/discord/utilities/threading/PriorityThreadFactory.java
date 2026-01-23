@@ -3,8 +3,8 @@ package com.discord.utilities.threading;
 import java.util.concurrent.ThreadFactory;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: PriorityThreadFactory.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: PriorityThreadFactory.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class PriorityThreadFactory implements ThreadFactory {
     private final int threadPriority;
 

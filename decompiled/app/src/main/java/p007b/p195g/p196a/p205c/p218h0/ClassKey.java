@@ -2,9 +2,9 @@ package p007b.p195g.p196a.p205c.p218h0;
 
 import java.io.Serializable;
 
-/* compiled from: ClassKey.java */
-/* renamed from: b.g.a.c.h0.b, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.g.a.c.h0.b, reason: use source file name */
+/* JADX INFO: compiled from: ClassKey.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class ClassKey implements Comparable<ClassKey>, Serializable {
     private static final long serialVersionUID = 1;
     private Class<?> _class;

@@ -4,12 +4,12 @@ import java.lang.ref.ReferenceQueue;
 import java.lang.ref.WeakReference;
 import java.util.Objects;
 
-/* compiled from: com.google.firebase:firebase-messaging@@21.0.0 */
-/* renamed from: b.i.a.f.h.i.i */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.h.i.i */
+/* JADX INFO: compiled from: com.google.firebase:firebase-messaging@@21.0.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public final class C3495i extends WeakReference<Throwable> {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final int f9660a;
 
     public C3495i(Throwable th, ReferenceQueue<Throwable> referenceQueue) {

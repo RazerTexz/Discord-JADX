@@ -2,9 +2,9 @@ package com.discord.utilities.guilds;
 
 import com.discord.utilities.premium.GuildBoostTierAmounts;
 
-/* compiled from: GuildConstants.kt */
-/* renamed from: com.discord.utilities.guilds.GuildConstantsKt, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.utilities.guilds.GuildConstantsKt, reason: use source file name */
+/* JADX INFO: compiled from: GuildConstants.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class GuildConstants {
     public static final int FILE_SIZE_STANDARD_8MB = 8;
     public static final int GLOBAL_SEARCH_LARGE_GUILD_THRESHOLD = 200;
@@ -19,10 +19,10 @@ public final class GuildConstants {
     public static final int SYSTEM_CHANNEL_FLAG_SUPPRESS_JOIN = 1;
     public static final int SYSTEM_CHANNEL_FLAG_SUPPRESS_JOIN_REPLIES = 8;
 
-    /* renamed from: SYSTEM_CHANNEL_FLAG_SUPPRESS_ROLE_SUBSCRIPTION_PURCHASE_NOTIFICATIONS */
+    /* JADX INFO: renamed from: SYSTEM_CHANNEL_FLAG_SUPPRESS_ROLE_SUBSCRIPTION_PURCHASE_NOTIFICATIONS */
     public static final int f18986x5d587f46 = 16;
 
-    /* renamed from: SYSTEM_CHANNEL_FLAG_SUPPRESS_ROLE_SUBSCRIPTION_PURCHASE_NOTIFICATION_REPLIES */
+    /* JADX INFO: renamed from: SYSTEM_CHANNEL_FLAG_SUPPRESS_ROLE_SUBSCRIPTION_PURCHASE_NOTIFICATION_REPLIES */
     public static final int f18987xd7135d56 = 32;
     private static final GuildBoostTierAmounts GUILD_BOOST_TIER_AMOUNTS = new GuildBoostTierAmounts(2, 7, 14);
     private static final GuildBoostTierAmounts GUILD_BOOST_TIER_AMOUNTS_EXP_SMALL_GUILDS = new GuildBoostTierAmounts(2, 3, 4);

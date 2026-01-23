@@ -4,9 +4,9 @@ import androidx.core.app.NotificationCompat;
 import p507d0.p592z.p594d.Intrinsics3;
 import p658rx.functions.Func2;
 
-/* compiled from: WidgetSettingsVoice.kt */
-/* renamed from: com.discord.widgets.settings.WidgetSettingsVoice$Model$Companion$get$shouldListenForSensitivity$1 */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.settings.WidgetSettingsVoice$Model$Companion$get$shouldListenForSensitivity$1 */
+/* JADX INFO: compiled from: WidgetSettingsVoice.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class C9689x8d464d17<T1, T2, R> implements Func2<Boolean, Boolean, Boolean> {
     public static final C9689x8d464d17 INSTANCE = new C9689x8d464d17();
 
@@ -16,7 +16,7 @@ public final class C9689x8d464d17<T1, T2, R> implements Func2<Boolean, Boolean, 
     }
 
     /* JADX WARN: Removed duplicated region for block: B:8:0x001a  */
-    /* renamed from: call, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */

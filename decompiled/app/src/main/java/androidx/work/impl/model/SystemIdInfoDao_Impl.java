@@ -9,13 +9,13 @@ import androidx.room.util.CursorUtil;
 import androidx.room.util.DBUtil;
 import androidx.sqlite.p006db.SupportSQLiteStatement;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public final class SystemIdInfoDao_Impl implements SystemIdInfoDao {
     private final RoomDatabase __db;
     private final EntityInsertionAdapter<SystemIdInfo> __insertionAdapterOfSystemIdInfo;
     private final SharedSQLiteStatement __preparedStmtOfRemoveSystemIdInfo;
 
-    /* renamed from: androidx.work.impl.model.SystemIdInfoDao_Impl$1 */
+    /* JADX INFO: renamed from: androidx.work.impl.model.SystemIdInfoDao_Impl$1 */
     public class C07501 extends EntityInsertionAdapter<SystemIdInfo> {
         public C07501(RoomDatabase roomDatabase) {
             super(roomDatabase);
@@ -31,7 +31,7 @@ public final class SystemIdInfoDao_Impl implements SystemIdInfoDao {
             return "INSERT OR REPLACE INTO `SystemIdInfo` (`work_spec_id`,`system_id`) VALUES (?,?)";
         }
 
-        /* renamed from: bind, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: bind, reason: avoid collision after fix types in other method */
         public void bind2(SupportSQLiteStatement supportSQLiteStatement, SystemIdInfo systemIdInfo) {
             String str = systemIdInfo.workSpecId;
             if (str == null) {
@@ -43,7 +43,7 @@ public final class SystemIdInfoDao_Impl implements SystemIdInfoDao {
         }
     }
 
-    /* renamed from: androidx.work.impl.model.SystemIdInfoDao_Impl$2 */
+    /* JADX INFO: renamed from: androidx.work.impl.model.SystemIdInfoDao_Impl$2 */
     public class C07512 extends SharedSQLiteStatement {
         public C07512(RoomDatabase roomDatabase) {
             super(roomDatabase);

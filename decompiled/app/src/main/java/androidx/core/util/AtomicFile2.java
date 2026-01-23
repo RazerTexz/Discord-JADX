@@ -11,9 +11,9 @@ import p507d0.p579g0.Charsets2;
 import p507d0.p592z.p594d.InlineMarker;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: AtomicFile.kt */
-/* renamed from: androidx.core.util.AtomicFileKt, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: androidx.core.util.AtomicFileKt, reason: use source file name */
+/* JADX INFO: compiled from: AtomicFile.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class AtomicFile2 {
     @RequiresApi(17)
     public static final byte[] readBytes(android.util.AtomicFile atomicFile) throws IOException {

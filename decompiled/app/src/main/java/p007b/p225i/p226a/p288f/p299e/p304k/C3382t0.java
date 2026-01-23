@@ -8,27 +8,27 @@ import p007b.p085c.p086a.p087a0.AnimatableValueParser;
 import p007b.p225i.p226a.p288f.p299e.p307n.C3398a;
 import p007b.p225i.p226a.p288f.p313h.p320g.HandlerC3484d;
 
-/* compiled from: com.google.android.gms:play-services-basement@@17.6.0 */
-/* renamed from: b.i.a.f.e.k.t0 */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.e.k.t0 */
+/* JADX INFO: compiled from: com.google.android.gms:play-services-basement@@17.6.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public final class C3382t0 extends AbstractC3351e {
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final Context f9565d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final Handler f9566e;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final HashMap<C3376q0, ServiceConnectionC3378r0> f9564c = new HashMap<>();
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final C3398a f9567f = C3398a.m4181b();
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public final long f9568g = 5000;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public final long f9569h = 300000;
 
     public C3382t0(Context context) {
@@ -37,7 +37,7 @@ public final class C3382t0 extends AbstractC3351e {
     }
 
     @Override // p007b.p225i.p226a.p288f.p299e.p304k.AbstractC3351e
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final boolean mo4154c(C3376q0 c3376q0, ServiceConnection serviceConnection, String str) {
         boolean z2;
         AnimatableValueParser.m595z(serviceConnection, "ServiceConnection must not be null");

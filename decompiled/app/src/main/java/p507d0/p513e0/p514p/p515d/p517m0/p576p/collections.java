@@ -14,11 +14,11 @@ import p507d0.p580t.CollectionsJVM;
 import p507d0.p580t._Collections;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: collections.kt */
-/* renamed from: d0.e0.p.d.m0.p.a, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.p.a, reason: use source file name */
+/* JADX INFO: compiled from: collections.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class collections {
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final int m10042a(int i) {
         if (i < 3) {
             return 3;

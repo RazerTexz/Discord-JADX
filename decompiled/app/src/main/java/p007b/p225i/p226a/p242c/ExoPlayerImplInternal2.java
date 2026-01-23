@@ -58,150 +58,150 @@ import p007b.p225i.p355b.p357b.ImmutableCollection;
 import p007b.p225i.p355b.p357b.ImmutableList2;
 import p007b.p225i.p355b.p357b.RegularImmutableList;
 
-/* compiled from: ExoPlayerImplInternal.java */
-/* renamed from: b.i.a.c.h1, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.h1, reason: use source file name */
+/* JADX INFO: compiled from: ExoPlayerImplInternal.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class ExoPlayerImplInternal2 implements Handler.Callback, MediaPeriod.a, MediaSourceList.d, DefaultMediaClock.a, PlayerMessage.a {
 
-    /* renamed from: A */
+    /* JADX INFO: renamed from: A */
     public final e f7052A;
 
-    /* renamed from: B */
+    /* JADX INFO: renamed from: B */
     public final MediaPeriodQueue f7053B;
 
-    /* renamed from: C */
+    /* JADX INFO: renamed from: C */
     public final MediaSourceList f7054C;
 
-    /* renamed from: D */
+    /* JADX INFO: renamed from: D */
     public final LivePlaybackSpeedControl f7055D;
 
-    /* renamed from: E */
+    /* JADX INFO: renamed from: E */
     public final long f7056E;
 
-    /* renamed from: F */
+    /* JADX INFO: renamed from: F */
     public SeekParameters f7057F;
 
-    /* renamed from: G */
+    /* JADX INFO: renamed from: G */
     public PlaybackInfo f7058G;
 
-    /* renamed from: H */
+    /* JADX INFO: renamed from: H */
     public d f7059H;
 
-    /* renamed from: I */
+    /* JADX INFO: renamed from: I */
     public boolean f7060I;
 
-    /* renamed from: J */
+    /* JADX INFO: renamed from: J */
     public boolean f7061J;
 
-    /* renamed from: K */
+    /* JADX INFO: renamed from: K */
     public boolean f7062K;
 
-    /* renamed from: L */
+    /* JADX INFO: renamed from: L */
     public boolean f7063L;
 
-    /* renamed from: M */
+    /* JADX INFO: renamed from: M */
     public boolean f7064M;
 
-    /* renamed from: N */
+    /* JADX INFO: renamed from: N */
     public int f7065N;
 
-    /* renamed from: O */
+    /* JADX INFO: renamed from: O */
     public boolean f7066O;
 
-    /* renamed from: P */
+    /* JADX INFO: renamed from: P */
     public boolean f7067P;
 
-    /* renamed from: Q */
+    /* JADX INFO: renamed from: Q */
     public boolean f7068Q;
 
-    /* renamed from: R */
+    /* JADX INFO: renamed from: R */
     public boolean f7069R;
 
-    /* renamed from: S */
+    /* JADX INFO: renamed from: S */
     public int f7070S;
 
-    /* renamed from: T */
+    /* JADX INFO: renamed from: T */
     @Nullable
     public g f7071T;
 
-    /* renamed from: U */
+    /* JADX INFO: renamed from: U */
     public long f7072U;
 
-    /* renamed from: V */
+    /* JADX INFO: renamed from: V */
     public int f7073V;
 
-    /* renamed from: W */
+    /* JADX INFO: renamed from: W */
     public boolean f7074W;
 
-    /* renamed from: X */
+    /* JADX INFO: renamed from: X */
     @Nullable
     public ExoPlaybackException f7075X;
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final Renderer2[] f7076j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final Set<Renderer2> f7077k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final RendererCapabilities[] f7078l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public final TrackSelector f7079m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public final TrackSelectorResult f7080n;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public final LoadControl f7081o;
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public final BandwidthMeter f7082p;
 
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     public final HandlerWrapper f7083q;
 
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     public final HandlerThread f7084r;
 
-    /* renamed from: s */
+    /* JADX INFO: renamed from: s */
     public final Looper f7085s;
 
-    /* renamed from: t */
+    /* JADX INFO: renamed from: t */
     public final Timeline.c f7086t;
 
-    /* renamed from: u */
+    /* JADX INFO: renamed from: u */
     public final Timeline.b f7087u;
 
-    /* renamed from: v */
+    /* JADX INFO: renamed from: v */
     public final long f7088v;
 
-    /* renamed from: w */
+    /* JADX INFO: renamed from: w */
     public final boolean f7089w;
 
-    /* renamed from: x */
+    /* JADX INFO: renamed from: x */
     public final DefaultMediaClock f7090x;
 
-    /* renamed from: y */
+    /* JADX INFO: renamed from: y */
     public final ArrayList<c> f7091y;
 
-    /* renamed from: z */
+    /* JADX INFO: renamed from: z */
     public final Clock4 f7092z;
 
-    /* compiled from: ExoPlayerImplInternal.java */
-    /* renamed from: b.i.a.c.h1$a */
+    /* JADX INFO: renamed from: b.i.a.c.h1$a */
+    /* JADX INFO: compiled from: ExoPlayerImplInternal.java */
     public static final class a {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final List<MediaSourceList.c> f7093a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final ShuffleOrder f7094b;
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public final int f7095c;
 
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         public final long f7096d;
 
         public a(List list, ShuffleOrder shuffleOrder, int i, long j, ExoPlayerImplInternal exoPlayerImplInternal) {
@@ -212,25 +212,25 @@ public final class ExoPlayerImplInternal2 implements Handler.Callback, MediaPeri
         }
     }
 
-    /* compiled from: ExoPlayerImplInternal.java */
-    /* renamed from: b.i.a.c.h1$b */
+    /* JADX INFO: renamed from: b.i.a.c.h1$b */
+    /* JADX INFO: compiled from: ExoPlayerImplInternal.java */
     public static class b {
     }
 
-    /* compiled from: ExoPlayerImplInternal.java */
-    /* renamed from: b.i.a.c.h1$c */
+    /* JADX INFO: renamed from: b.i.a.c.h1$c */
+    /* JADX INFO: compiled from: ExoPlayerImplInternal.java */
     public static final class c implements Comparable<c> {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public final PlayerMessage f7097j;
 
-        /* renamed from: k */
+        /* JADX INFO: renamed from: k */
         public int f7098k;
 
-        /* renamed from: l */
+        /* JADX INFO: renamed from: l */
         public long f7099l;
 
-        /* renamed from: m */
+        /* JADX INFO: renamed from: m */
         @Nullable
         public Object f7100m;
 
@@ -267,7 +267,7 @@ public final class ExoPlayerImplInternal2 implements Handler.Callback, MediaPeri
             return i;
         }
 
-        /* renamed from: f */
+        /* JADX INFO: renamed from: f */
         public void m3270f(int i, long j, Object obj) {
             this.f7098k = i;
             this.f7099l = j;
@@ -275,67 +275,67 @@ public final class ExoPlayerImplInternal2 implements Handler.Callback, MediaPeri
         }
     }
 
-    /* compiled from: ExoPlayerImplInternal.java */
-    /* renamed from: b.i.a.c.h1$d */
+    /* JADX INFO: renamed from: b.i.a.c.h1$d */
+    /* JADX INFO: compiled from: ExoPlayerImplInternal.java */
     public static final class d {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public boolean f7101a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public PlaybackInfo f7102b;
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public int f7103c;
 
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         public boolean f7104d;
 
-        /* renamed from: e */
+        /* JADX INFO: renamed from: e */
         public int f7105e;
 
-        /* renamed from: f */
+        /* JADX INFO: renamed from: f */
         public boolean f7106f;
 
-        /* renamed from: g */
+        /* JADX INFO: renamed from: g */
         public int f7107g;
 
         public d(PlaybackInfo playbackInfo) {
             this.f7102b = playbackInfo;
         }
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public void m3271a(int i) {
             this.f7101a |= i > 0;
             this.f7103c += i;
         }
     }
 
-    /* compiled from: ExoPlayerImplInternal.java */
-    /* renamed from: b.i.a.c.h1$e */
+    /* JADX INFO: renamed from: b.i.a.c.h1$e */
+    /* JADX INFO: compiled from: ExoPlayerImplInternal.java */
     public interface e {
     }
 
-    /* compiled from: ExoPlayerImplInternal.java */
-    /* renamed from: b.i.a.c.h1$f */
+    /* JADX INFO: renamed from: b.i.a.c.h1$f */
+    /* JADX INFO: compiled from: ExoPlayerImplInternal.java */
     public static final class f {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final MediaSource2.a f7108a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final long f7109b;
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public final long f7110c;
 
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         public final boolean f7111d;
 
-        /* renamed from: e */
+        /* JADX INFO: renamed from: e */
         public final boolean f7112e;
 
-        /* renamed from: f */
+        /* JADX INFO: renamed from: f */
         public final boolean f7113f;
 
         public f(MediaSource2.a aVar, long j, long j2, boolean z2, boolean z3, boolean z4) {
@@ -348,17 +348,17 @@ public final class ExoPlayerImplInternal2 implements Handler.Callback, MediaPeri
         }
     }
 
-    /* compiled from: ExoPlayerImplInternal.java */
-    /* renamed from: b.i.a.c.h1$g */
+    /* JADX INFO: renamed from: b.i.a.c.h1$g */
+    /* JADX INFO: compiled from: ExoPlayerImplInternal.java */
     public static final class g {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final Timeline f7114a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final int f7115b;
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public final long f7116c;
 
         public g(Timeline timeline, int i, long j) {
@@ -410,7 +410,7 @@ public final class ExoPlayerImplInternal2 implements Handler.Callback, MediaPeri
         this.f7083q = clock4.mo2950b(looper2, this);
     }
 
-    /* renamed from: K */
+    /* JADX INFO: renamed from: K */
     public static boolean m3206K(c cVar, Timeline timeline, Timeline timeline2, int i, boolean z2, Timeline.c cVar2, Timeline.b bVar) {
         Object obj = cVar.f7100m;
         if (obj == null) {
@@ -441,7 +441,7 @@ public final class ExoPlayerImplInternal2 implements Handler.Callback, MediaPeri
     }
 
     @Nullable
-    /* renamed from: M */
+    /* JADX INFO: renamed from: M */
     public static Pair<Object, Long> m3207M(Timeline timeline, g gVar, boolean z2, int i, boolean z3, Timeline.c cVar, Timeline.b bVar) {
         Pair<Object, Long> pairM3328j;
         Object objM3208N;
@@ -467,7 +467,7 @@ public final class ExoPlayerImplInternal2 implements Handler.Callback, MediaPeri
     }
 
     @Nullable
-    /* renamed from: N */
+    /* JADX INFO: renamed from: N */
     public static Object m3208N(Timeline.c cVar, Timeline.b bVar, int i, boolean z2, Object obj, Timeline timeline, Timeline timeline2) {
         int iMo2554b = timeline.mo2554b(obj);
         int iMo2555i = timeline.mo2555i();
@@ -486,7 +486,7 @@ public final class ExoPlayerImplInternal2 implements Handler.Callback, MediaPeri
         return timeline2.mo2556m(iMo2554b2);
     }
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public static Format2[] m3209i(ExoTrackSelection2 exoTrackSelection2) {
         int length = exoTrackSelection2 != null ? exoTrackSelection2.length() : 0;
         Format2[] format2Arr = new Format2[length];
@@ -496,19 +496,19 @@ public final class ExoPlayerImplInternal2 implements Handler.Callback, MediaPeri
         return format2Arr;
     }
 
-    /* renamed from: w */
+    /* JADX INFO: renamed from: w */
     public static boolean m3210w(Renderer2 renderer2) {
         return renderer2.getState() != 0;
     }
 
-    /* renamed from: y */
+    /* JADX INFO: renamed from: y */
     public static boolean m3211y(PlaybackInfo playbackInfo, Timeline.b bVar) {
         MediaSource2.a aVar = playbackInfo.f7948c;
         Timeline timeline = playbackInfo.f7947b;
         return timeline.m3331q() || timeline.mo3327h(aVar.f5732a, bVar).f7343o;
     }
 
-    /* renamed from: A */
+    /* JADX INFO: renamed from: A */
     public final void m3212A() {
         d dVar = this.f7059H;
         PlaybackInfo playbackInfo = this.f7058G;
@@ -522,12 +522,12 @@ public final class ExoPlayerImplInternal2 implements Handler.Callback, MediaPeri
         }
     }
 
-    /* renamed from: B */
+    /* JADX INFO: renamed from: B */
     public final void m3213B() throws Throwable {
         m3263r(this.f7054C.m3537c(), true);
     }
 
-    /* renamed from: C */
+    /* JADX INFO: renamed from: C */
     public final void m3214C(b bVar) throws Throwable {
         this.f7059H.m3271a(1);
         MediaSourceList mediaSourceList = this.f7054C;
@@ -538,7 +538,7 @@ public final class ExoPlayerImplInternal2 implements Handler.Callback, MediaPeri
         m3263r(mediaSourceList.m3537c(), false);
     }
 
-    /* renamed from: D */
+    /* JADX INFO: renamed from: D */
     public final void m3215D() {
         this.f7059H.m3271a(1);
         m3219H(false, false, false, true);
@@ -557,7 +557,7 @@ public final class ExoPlayerImplInternal2 implements Handler.Callback, MediaPeri
         this.f7083q.mo2959f(2);
     }
 
-    /* renamed from: E */
+    /* JADX INFO: renamed from: E */
     public final void m3216E() {
         m3219H(true, false, true, false);
         this.f7081o.mo3313e();
@@ -569,7 +569,7 @@ public final class ExoPlayerImplInternal2 implements Handler.Callback, MediaPeri
         }
     }
 
-    /* renamed from: F */
+    /* JADX INFO: renamed from: F */
     public final void m3217F(int i, int i2, ShuffleOrder shuffleOrder) throws Throwable {
         this.f7059H.m3271a(1);
         MediaSourceList mediaSourceList = this.f7054C;
@@ -580,7 +580,7 @@ public final class ExoPlayerImplInternal2 implements Handler.Callback, MediaPeri
         m3263r(mediaSourceList.m3537c(), false);
     }
 
-    /* renamed from: G */
+    /* JADX INFO: renamed from: G */
     public final void m3218G() throws ExoPlaybackException {
         boolean z2;
         float f2 = this.f7090x.mo2416c().f8027k;
@@ -661,7 +661,7 @@ public final class ExoPlayerImplInternal2 implements Handler.Callback, MediaPeri
       0x00b4: PHI (r4v4 b.i.a.c.a3.a0$a) = (r4v3 b.i.a.c.a3.a0$a), (r4v10 b.i.a.c.a3.a0$a) binds: [B:33:0x0087, B:35:0x00ac] A[DONT_GENERATE, DONT_INLINE]
       0x00b4: PHI (r5v2 long) = (r5v1 long), (r5v7 long) binds: [B:33:0x0087, B:35:0x00ac] A[DONT_GENERATE, DONT_INLINE]
       0x00b4: PHI (r7v3 long) = (r7v2 long), (r7v6 long) binds: [B:33:0x0087, B:35:0x00ac] A[DONT_GENERATE, DONT_INLINE]] */
-    /* renamed from: H */
+    /* JADX INFO: renamed from: H */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
@@ -752,13 +752,13 @@ public final class ExoPlayerImplInternal2 implements Handler.Callback, MediaPeri
         }
     }
 
-    /* renamed from: I */
+    /* JADX INFO: renamed from: I */
     public final void m3220I() {
         MediaPeriodHolder mediaPeriodHolder = this.f7053B.f7493h;
         this.f7062K = mediaPeriodHolder != null && mediaPeriodHolder.f7447f.f7472h && this.f7061J;
     }
 
-    /* renamed from: J */
+    /* JADX INFO: renamed from: J */
     public final void m3221J(long j) throws ExoPlaybackException {
         MediaPeriodHolder mediaPeriodHolder = this.f7053B.f7493h;
         long j2 = j + (mediaPeriodHolder == null ? 1000000000000L : mediaPeriodHolder.f7456o);
@@ -778,7 +778,7 @@ public final class ExoPlayerImplInternal2 implements Handler.Callback, MediaPeri
         }
     }
 
-    /* renamed from: L */
+    /* JADX INFO: renamed from: L */
     public final void m3222L(Timeline timeline, Timeline timeline2) {
         if (timeline.m3331q() && timeline2.m3331q()) {
             return;
@@ -796,13 +796,13 @@ public final class ExoPlayerImplInternal2 implements Handler.Callback, MediaPeri
         }
     }
 
-    /* renamed from: O */
+    /* JADX INFO: renamed from: O */
     public final void m3223O(long j, long j2) {
         this.f7083q.mo2961h(2);
         this.f7083q.mo2960g(2, j + j2);
     }
 
-    /* renamed from: P */
+    /* JADX INFO: renamed from: P */
     public final void m3224P(boolean z2) throws ExoPlaybackException {
         MediaSource2.a aVar = this.f7053B.f7493h.f7447f.f7465a;
         long jM3227S = m3227S(aVar, this.f7058G.f7965t, true, false);
@@ -814,7 +814,7 @@ public final class ExoPlayerImplInternal2 implements Handler.Callback, MediaPeri
 
     /* JADX WARN: Removed duplicated region for block: B:24:0x00ab A[Catch: all -> 0x0145, TryCatch #1 {all -> 0x0145, blocks: (B:22:0x00a1, B:24:0x00ab, B:27:0x00b1, B:29:0x00b7, B:30:0x00ba, B:32:0x00c0, B:34:0x00ca, B:36:0x00d0, B:40:0x00d8, B:42:0x00e2, B:44:0x00f2, B:48:0x00fc, B:52:0x010e, B:56:0x0117), top: B:74:0x00a1 }] */
     /* JADX WARN: Removed duplicated region for block: B:25:0x00ae  */
-    /* renamed from: Q */
+    /* JADX INFO: renamed from: Q */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
@@ -909,13 +909,13 @@ public final class ExoPlayerImplInternal2 implements Handler.Callback, MediaPeri
         j3 = j;
     }
 
-    /* renamed from: R */
+    /* JADX INFO: renamed from: R */
     public final long m3226R(MediaSource2.a aVar, long j, boolean z2) throws ExoPlaybackException {
         MediaPeriodQueue mediaPeriodQueue = this.f7053B;
         return m3227S(aVar, j, mediaPeriodQueue.f7493h != mediaPeriodQueue.f7494i, z2);
     }
 
-    /* renamed from: S */
+    /* JADX INFO: renamed from: S */
     public final long m3227S(MediaSource2.a aVar, long j, boolean z2, boolean z3) throws ExoPlaybackException {
         MediaPeriodQueue mediaPeriodQueue;
         m3253k0();
@@ -965,7 +965,7 @@ public final class ExoPlayerImplInternal2 implements Handler.Callback, MediaPeri
         return j;
     }
 
-    /* renamed from: T */
+    /* JADX INFO: renamed from: T */
     public final void m3228T(PlayerMessage playerMessage) throws ExoPlaybackException {
         if (playerMessage.f5748g != this.f7085s) {
             ((SystemHandlerWrapper.b) this.f7083q.mo2962i(15, playerMessage)).m2965b();
@@ -978,7 +978,7 @@ public final class ExoPlayerImplInternal2 implements Handler.Callback, MediaPeri
         }
     }
 
-    /* renamed from: U */
+    /* JADX INFO: renamed from: U */
     public final void m3229U(PlayerMessage playerMessage) {
         Looper looper = playerMessage.f5748g;
         if (looper.getThread().isAlive()) {
@@ -989,7 +989,7 @@ public final class ExoPlayerImplInternal2 implements Handler.Callback, MediaPeri
         }
     }
 
-    /* renamed from: V */
+    /* JADX INFO: renamed from: V */
     public final void m3230V(Renderer2 renderer2, long j) {
         renderer2.mo2937l();
         if (renderer2 instanceof TextRenderer) {
@@ -999,7 +999,7 @@ public final class ExoPlayerImplInternal2 implements Handler.Callback, MediaPeri
         }
     }
 
-    /* renamed from: W */
+    /* JADX INFO: renamed from: W */
     public final void m3231W(boolean z2, @Nullable AtomicBoolean atomicBoolean) {
         if (this.f7067P != z2) {
             this.f7067P = z2;
@@ -1019,7 +1019,7 @@ public final class ExoPlayerImplInternal2 implements Handler.Callback, MediaPeri
         }
     }
 
-    /* renamed from: X */
+    /* JADX INFO: renamed from: X */
     public final void m3232X(a aVar) throws Throwable {
         this.f7059H.m3271a(1);
         if (aVar.f7095c != -1) {
@@ -1032,7 +1032,7 @@ public final class ExoPlayerImplInternal2 implements Handler.Callback, MediaPeri
         m3263r(mediaSourceList.m3535a(mediaSourceList.f7864a.size(), list, shuffleOrder), false);
     }
 
-    /* renamed from: Y */
+    /* JADX INFO: renamed from: Y */
     public final void m3233Y(boolean z2) {
         if (z2 == this.f7069R) {
             return;
@@ -1047,7 +1047,7 @@ public final class ExoPlayerImplInternal2 implements Handler.Callback, MediaPeri
         }
     }
 
-    /* renamed from: Z */
+    /* JADX INFO: renamed from: Z */
     public final void m3234Z(boolean z2) throws ExoPlaybackException {
         this.f7061J = z2;
         m3220I();
@@ -1061,12 +1061,12 @@ public final class ExoPlayerImplInternal2 implements Handler.Callback, MediaPeri
     }
 
     @Override // p007b.p225i.p226a.p242c.p243a3.SequenceableLoader.a
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public void mo2542a(SequenceableLoader sequenceableLoader) {
         ((SystemHandlerWrapper.b) this.f7083q.mo2962i(9, (MediaPeriod) sequenceableLoader)).m2965b();
     }
 
-    /* renamed from: a0 */
+    /* JADX INFO: renamed from: a0 */
     public final void m3235a0(boolean z2, int i, boolean z3, int i2) throws ExoPlaybackException {
         this.f7059H.m3271a(z3 ? 1 : 0);
         d dVar = this.f7059H;
@@ -1097,19 +1097,19 @@ public final class ExoPlayerImplInternal2 implements Handler.Callback, MediaPeri
     }
 
     @Override // p007b.p225i.p226a.p242c.p243a3.MediaPeriod.a
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public void mo2563b(MediaPeriod mediaPeriod) {
         ((SystemHandlerWrapper.b) this.f7083q.mo2962i(8, mediaPeriod)).m2965b();
     }
 
-    /* renamed from: b0 */
+    /* JADX INFO: renamed from: b0 */
     public final void m3236b0(PlaybackParameters playbackParameters) throws ExoPlaybackException {
         this.f7090x.mo2418i(playbackParameters);
         PlaybackParameters playbackParametersMo2416c = this.f7090x.mo2416c();
         m3265t(playbackParametersMo2416c, playbackParametersMo2416c.f8027k, true, true);
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final void m3237c(a aVar, int i) throws Throwable {
         this.f7059H.m3271a(1);
         MediaSourceList mediaSourceList = this.f7054C;
@@ -1119,7 +1119,7 @@ public final class ExoPlayerImplInternal2 implements Handler.Callback, MediaPeri
         m3263r(mediaSourceList.m3535a(i, aVar.f7093a, aVar.f7094b), false);
     }
 
-    /* renamed from: c0 */
+    /* JADX INFO: renamed from: c0 */
     public final void m3238c0(int i) throws ExoPlaybackException {
         this.f7065N = i;
         MediaPeriodQueue mediaPeriodQueue = this.f7053B;
@@ -1131,7 +1131,7 @@ public final class ExoPlayerImplInternal2 implements Handler.Callback, MediaPeri
         m3262q(false);
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final void m3239d(PlayerMessage playerMessage) throws ExoPlaybackException {
         playerMessage.m2598b();
         try {
@@ -1141,7 +1141,7 @@ public final class ExoPlayerImplInternal2 implements Handler.Callback, MediaPeri
         }
     }
 
-    /* renamed from: d0 */
+    /* JADX INFO: renamed from: d0 */
     public final void m3240d0(boolean z2) throws ExoPlaybackException {
         this.f7066O = z2;
         MediaPeriodQueue mediaPeriodQueue = this.f7053B;
@@ -1153,7 +1153,7 @@ public final class ExoPlayerImplInternal2 implements Handler.Callback, MediaPeri
         m3262q(false);
     }
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final void m3241e(Renderer2 renderer2) throws ExoPlaybackException {
         if (renderer2.getState() != 0) {
             DefaultMediaClock defaultMediaClock = this.f7090x;
@@ -1170,7 +1170,7 @@ public final class ExoPlayerImplInternal2 implements Handler.Callback, MediaPeri
         }
     }
 
-    /* renamed from: e0 */
+    /* JADX INFO: renamed from: e0 */
     public final void m3242e0(ShuffleOrder shuffleOrder) throws Throwable {
         this.f7059H.m3271a(1);
         MediaSourceList mediaSourceList = this.f7054C;
@@ -1185,7 +1185,7 @@ public final class ExoPlayerImplInternal2 implements Handler.Callback, MediaPeri
     /* JADX WARN: Removed duplicated region for block: B:297:0x0476  */
     /* JADX WARN: Removed duplicated region for block: B:303:0x048b  */
     /* JADX WARN: Removed duplicated region for block: B:81:0x014e  */
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
@@ -1533,7 +1533,7 @@ public final class ExoPlayerImplInternal2 implements Handler.Callback, MediaPeri
         AnimatableValueParser.m508d0();
     }
 
-    /* renamed from: f0 */
+    /* JADX INFO: renamed from: f0 */
     public final void m3244f0(int i) {
         PlaybackInfo playbackInfo = this.f7058G;
         if (playbackInfo.f7951f != i) {
@@ -1541,18 +1541,18 @@ public final class ExoPlayerImplInternal2 implements Handler.Callback, MediaPeri
         }
     }
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public final void m3245g() throws ExoPlaybackException {
         m3247h(new boolean[this.f7076j.length]);
     }
 
-    /* renamed from: g0 */
+    /* JADX INFO: renamed from: g0 */
     public final boolean m3246g0() {
         PlaybackInfo playbackInfo = this.f7058G;
         return playbackInfo.f7958m && playbackInfo.f7959n == 0;
     }
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public final void m3247h(boolean[] zArr) throws ExoPlaybackException {
         MediaClock mediaClock;
         MediaPeriodHolder mediaPeriodHolder = this.f7053B.f7494i;
@@ -1601,7 +1601,7 @@ public final class ExoPlayerImplInternal2 implements Handler.Callback, MediaPeri
         mediaPeriodHolder.f7448g = true;
     }
 
-    /* renamed from: h0 */
+    /* JADX INFO: renamed from: h0 */
     public final boolean m3248h0(Timeline timeline, MediaSource2.a aVar) {
         if (aVar.m2593a() || timeline.m3331q()) {
             return false;
@@ -1749,7 +1749,7 @@ public final class ExoPlayerImplInternal2 implements Handler.Callback, MediaPeri
         return true;
     }
 
-    /* renamed from: i0 */
+    /* JADX INFO: renamed from: i0 */
     public final void m3249i0() throws ExoPlaybackException {
         this.f7063L = false;
         DefaultMediaClock defaultMediaClock = this.f7090x;
@@ -1762,7 +1762,7 @@ public final class ExoPlayerImplInternal2 implements Handler.Callback, MediaPeri
         }
     }
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final long m3250j(Timeline timeline, Object obj, long j) {
         timeline.m3330n(timeline.mo3327h(obj, this.f7087u).f7340l, this.f7086t);
         Timeline.c cVar = this.f7086t;
@@ -1777,7 +1777,7 @@ public final class ExoPlayerImplInternal2 implements Handler.Callback, MediaPeri
         return -9223372036854775807L;
     }
 
-    /* renamed from: j0 */
+    /* JADX INFO: renamed from: j0 */
     public final void m3251j0(boolean z2, boolean z3) {
         m3219H(z2 || !this.f7067P, false, true, false);
         this.f7059H.m3271a(z3 ? 1 : 0);
@@ -1785,7 +1785,7 @@ public final class ExoPlayerImplInternal2 implements Handler.Callback, MediaPeri
         m3244f0(1);
     }
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final long m3252k() {
         MediaPeriodHolder mediaPeriodHolder = this.f7053B.f7494i;
         if (mediaPeriodHolder == null) {
@@ -1812,7 +1812,7 @@ public final class ExoPlayerImplInternal2 implements Handler.Callback, MediaPeri
         }
     }
 
-    /* renamed from: k0 */
+    /* JADX INFO: renamed from: k0 */
     public final void m3253k0() throws ExoPlaybackException {
         DefaultMediaClock defaultMediaClock = this.f7090x;
         defaultMediaClock.f5472o = false;
@@ -1828,7 +1828,7 @@ public final class ExoPlayerImplInternal2 implements Handler.Callback, MediaPeri
         }
     }
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final Pair<MediaSource2.a, Long> m3254l(Timeline timeline) {
         if (timeline.m3331q()) {
             MediaSource2.a aVar = PlaybackInfo.f7946a;
@@ -1844,7 +1844,7 @@ public final class ExoPlayerImplInternal2 implements Handler.Callback, MediaPeri
         return Pair.create(aVarM3379o, Long.valueOf(jLongValue));
     }
 
-    /* renamed from: l0 */
+    /* JADX INFO: renamed from: l0 */
     public final void m3255l0() {
         MediaPeriodHolder mediaPeriodHolder = this.f7053B.f7495j;
         boolean z2 = this.f7064M || (mediaPeriodHolder != null && mediaPeriodHolder.f7442a.mo2484h());
@@ -1854,12 +1854,12 @@ public final class ExoPlayerImplInternal2 implements Handler.Callback, MediaPeri
         }
     }
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public final long m3256m() {
         return m3258n(this.f7058G.f7963r);
     }
 
-    /* renamed from: m0 */
+    /* JADX INFO: renamed from: m0 */
     public final void m3257m0(Timeline timeline, MediaSource2.a aVar, Timeline timeline2, MediaSource2.a aVar2, long j) {
         if (timeline.m3331q() || !m3248h0(timeline, aVar)) {
             float f2 = this.f7090x.mo2416c().f8027k;
@@ -1904,7 +1904,7 @@ public final class ExoPlayerImplInternal2 implements Handler.Callback, MediaPeri
         }
     }
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public final long m3258n(long j) {
         MediaPeriodHolder mediaPeriodHolder = this.f7053B.f7495j;
         if (mediaPeriodHolder == null) {
@@ -1918,7 +1918,7 @@ public final class ExoPlayerImplInternal2 implements Handler.Callback, MediaPeri
         r6 = null;
      */
     /* JADX WARN: Removed duplicated region for block: B:46:0x00bd  */
-    /* renamed from: n0 */
+    /* JADX INFO: renamed from: n0 */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
@@ -2116,7 +2116,7 @@ public final class ExoPlayerImplInternal2 implements Handler.Callback, MediaPeri
         }
     }
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public final void m3260o(MediaPeriod mediaPeriod) {
         MediaPeriodQueue mediaPeriodQueue = this.f7053B;
         MediaPeriodHolder mediaPeriodHolder = mediaPeriodQueue.f7495j;
@@ -2126,7 +2126,7 @@ public final class ExoPlayerImplInternal2 implements Handler.Callback, MediaPeri
         }
     }
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public final void m3261p(IOException iOException, int i) {
         ExoPlaybackException exoPlaybackException = new ExoPlaybackException(0, iOException, i);
         MediaPeriodHolder mediaPeriodHolder = this.f7053B.f7493h;
@@ -2138,7 +2138,7 @@ public final class ExoPlayerImplInternal2 implements Handler.Callback, MediaPeri
         this.f7058G = this.f7058G.m3566e(exoPlaybackException);
     }
 
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     public final void m3262q(boolean z2) {
         MediaPeriodHolder mediaPeriodHolder = this.f7053B.f7495j;
         MediaSource2.a aVar = mediaPeriodHolder == null ? this.f7058G.f7948c : mediaPeriodHolder.f7447f.f7465a;
@@ -2154,7 +2154,7 @@ public final class ExoPlayerImplInternal2 implements Handler.Callback, MediaPeri
         }
     }
 
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     public final void m3263r(Timeline timeline, boolean z2) throws Throwable {
         Object obj;
         MediaSource2.a aVar;
@@ -2431,7 +2431,7 @@ public final class ExoPlayerImplInternal2 implements Handler.Callback, MediaPeri
         }
     }
 
-    /* renamed from: s */
+    /* JADX INFO: renamed from: s */
     public final void m3264s(MediaPeriod mediaPeriod) throws ExoPlaybackException {
         MediaPeriodHolder mediaPeriodHolder = this.f7053B.f7495j;
         if (mediaPeriodHolder != null && mediaPeriodHolder.f7442a == mediaPeriod) {
@@ -2464,7 +2464,7 @@ public final class ExoPlayerImplInternal2 implements Handler.Callback, MediaPeri
         }
     }
 
-    /* renamed from: t */
+    /* JADX INFO: renamed from: t */
     public final void m3265t(PlaybackParameters playbackParameters, float f2, boolean z2, boolean z3) throws ExoPlaybackException {
         int i;
         ExoPlayerImplInternal2 exoPlayerImplInternal2 = this;
@@ -2506,7 +2506,7 @@ public final class ExoPlayerImplInternal2 implements Handler.Callback, MediaPeri
     }
 
     @CheckResult
-    /* renamed from: u */
+    /* JADX INFO: renamed from: u */
     public final PlaybackInfo m3266u(MediaSource2.a aVar, long j, long j2, long j3, boolean z2, int i) {
         TrackGroupArray trackGroupArray;
         TrackSelectorResult trackSelectorResult;
@@ -2602,7 +2602,7 @@ public final class ExoPlayerImplInternal2 implements Handler.Callback, MediaPeri
         return this.f7058G.m3563b(aVar, j, j2, j3, m3256m(), trackGroupArray, trackSelectorResult, list);
     }
 
-    /* renamed from: v */
+    /* JADX INFO: renamed from: v */
     public final boolean m3267v() {
         MediaPeriodHolder mediaPeriodHolder = this.f7053B.f7495j;
         if (mediaPeriodHolder == null) {
@@ -2611,14 +2611,14 @@ public final class ExoPlayerImplInternal2 implements Handler.Callback, MediaPeri
         return (!mediaPeriodHolder.f7445d ? 0L : mediaPeriodHolder.f7442a.mo2479c()) != Long.MIN_VALUE;
     }
 
-    /* renamed from: x */
+    /* JADX INFO: renamed from: x */
     public final boolean m3268x() {
         MediaPeriodHolder mediaPeriodHolder = this.f7053B.f7493h;
         long j = mediaPeriodHolder.f7447f.f7469e;
         return mediaPeriodHolder.f7445d && (j == -9223372036854775807L || this.f7058G.f7965t < j || !m3246g0());
     }
 
-    /* renamed from: z */
+    /* JADX INFO: renamed from: z */
     public final void m3269z() {
         long j;
         long j2;

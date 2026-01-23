@@ -17,9 +17,9 @@ import kotlin.jvm.functions.Function1;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetChatListAdapterItemMessage.kt */
-/* renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemMessage$configureReplyInteraction$content$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemMessage$configureReplyInteraction$content$1, reason: use source file name */
+/* JADX INFO: compiled from: WidgetChatListAdapterItemMessage.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetChatListAdapterItemMessage2 extends Lambda implements Function1<RenderContext, Unit> {
     public final /* synthetic */ Interaction $interaction;
     public final /* synthetic */ User $interactionUser;
@@ -41,18 +41,18 @@ public final class WidgetChatListAdapterItemMessage2 extends Lambda implements F
         return Unit.f27425a;
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final void invoke2(RenderContext renderContext) {
         Intrinsics3.checkNotNullParameter(renderContext, "$receiver");
         renderContext.m8422a("commandNameOnClick", new AnonymousClass1());
     }
 
-    /* compiled from: WidgetChatListAdapterItemMessage.kt */
-    /* renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemMessage$configureReplyInteraction$content$1$1, reason: invalid class name */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemMessage$configureReplyInteraction$content$1$1, reason: invalid class name */
+    /* JADX INFO: compiled from: WidgetChatListAdapterItemMessage.kt */
     public static final class AnonymousClass1 extends Lambda implements Function1<Hook, Unit> {
 
-        /* compiled from: WidgetChatListAdapterItemMessage.kt */
-        /* renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemMessage$configureReplyInteraction$content$1$1$1, reason: invalid class name and collision with other inner class name */
+        /* JADX INFO: renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemMessage$configureReplyInteraction$content$1$1$1, reason: invalid class name and collision with other inner class name */
+        /* JADX INFO: compiled from: WidgetChatListAdapterItemMessage.kt */
         public static final class C132791 extends Lambda implements Function1<View, Unit> {
             public C132791() {
                 super(1);
@@ -64,7 +64,7 @@ public final class WidgetChatListAdapterItemMessage2 extends Lambda implements F
                 return Unit.f27425a;
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2(View view) {
                 Intrinsics3.checkNotNullParameter(view, "it");
                 Guild guild = WidgetChatListAdapterItemMessage.access$getAdapter$p(WidgetChatListAdapterItemMessage2.this.this$0).getData().getGuild();
@@ -93,7 +93,7 @@ public final class WidgetChatListAdapterItemMessage2 extends Lambda implements F
             super(1);
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Hook hook) {
             Intrinsics3.checkNotNullParameter(hook, "$receiver");
             hook.styles.add(new StyleSpan(1));

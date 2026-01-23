@@ -20,8 +20,8 @@ import p507d0.p580t._Collections;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetGlobalSearchModel.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: WidgetGlobalSearchModel.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class WidgetGlobalSearchModel$Companion$create$2 extends Lambda implements Function3<User, String, Channel, WidgetGlobalSearchModel.ItemUser> {
     public final /* synthetic */ WidgetGlobalSearchModel.ChannelContext $channelContext;
     public final /* synthetic */ WidgetGlobalSearchModel.SearchContext $searchContext;
@@ -48,7 +48,7 @@ public final class WidgetGlobalSearchModel$Companion$create$2 extends Lambda imp
     }
 
     @SuppressLint({"DefaultLocale"})
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final WidgetGlobalSearchModel.ItemUser invoke2(User user, String str, Channel channel) {
         String username;
         Integer num;

@@ -4,13 +4,13 @@ import com.discord.api.message.Message;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ForumPostFirstMessages.kt */
-/* renamed from: com.discord.api.forum.ForumPostFirstMessage, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: com.discord.api.forum.ForumPostFirstMessage, reason: use source file name */
+/* JADX INFO: compiled from: ForumPostFirstMessages.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class ForumPostFirstMessages2 {
     private final Message firstMessage;
 
-    /* renamed from: a, reason: from getter */
+    /* JADX INFO: renamed from: a, reason: from getter */
     public final Message getFirstMessage() {
         return this.firstMessage;
     }

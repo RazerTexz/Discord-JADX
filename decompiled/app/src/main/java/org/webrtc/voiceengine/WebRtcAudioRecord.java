@@ -10,7 +10,7 @@ import org.webrtc.Logging;
 import org.webrtc.ThreadUtils;
 import p007b.p100d.p104b.p105a.outline;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public class WebRtcAudioRecord {
     private static final long AUDIO_RECORD_THREAD_JOIN_TIMEOUT_MS = 2000;
     private static final int BITS_PER_SAMPLE = 16;
@@ -55,7 +55,7 @@ public class WebRtcAudioRecord {
         }
 
         @Override // java.lang.Thread, java.lang.Runnable
-        public void run() throws SecurityException, IllegalArgumentException {
+        public void run() {
             Process.setThreadPriority(-19);
             Logging.m11027d(WebRtcAudioRecord.TAG, "AudioRecordThread" + WebRtcAudioUtils.getThreadInfo());
             WebRtcAudioRecord.access$100(WebRtcAudioRecord.access$000(WebRtcAudioRecord.this).getRecordingState() == 3);

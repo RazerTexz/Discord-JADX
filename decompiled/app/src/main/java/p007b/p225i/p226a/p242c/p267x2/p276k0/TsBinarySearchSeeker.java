@@ -9,25 +9,25 @@ import p007b.p225i.p226a.p242c.p259f3.Util2;
 import p007b.p225i.p226a.p242c.p267x2.BinarySearchSeeker;
 import p007b.p225i.p226a.p242c.p267x2.ExtractorInput;
 
-/* compiled from: TsBinarySearchSeeker.java */
-/* renamed from: b.i.a.c.x2.k0.f0, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.x2.k0.f0, reason: use source file name */
+/* JADX INFO: compiled from: TsBinarySearchSeeker.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class TsBinarySearchSeeker extends BinarySearchSeeker {
 
-    /* compiled from: TsBinarySearchSeeker.java */
-    /* renamed from: b.i.a.c.x2.k0.f0$a */
+    /* JADX INFO: renamed from: b.i.a.c.x2.k0.f0$a */
+    /* JADX INFO: compiled from: TsBinarySearchSeeker.java */
     public static final class a implements BinarySearchSeeker.f {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final TimestampAdjuster f8607a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final ParsableByteArray f8608b = new ParsableByteArray();
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public final int f8609c;
 
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         public final int f8610d;
 
         public a(int i, TimestampAdjuster timestampAdjuster, int i2) {
@@ -37,13 +37,13 @@ public final class TsBinarySearchSeeker extends BinarySearchSeeker {
         }
 
         @Override // p007b.p225i.p226a.p242c.p267x2.BinarySearchSeeker.f
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public void mo3627a() {
             this.f8608b.m3076B(Util2.f6713f);
         }
 
         @Override // p007b.p225i.p226a.p242c.p267x2.BinarySearchSeeker.f
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public BinarySearchSeeker.e mo3628b(ExtractorInput extractorInput, long j) throws IOException {
             long position = extractorInput.getPosition();
             int iMin = (int) Math.min(this.f8610d, extractorInput.mo3642b() - position);
@@ -71,7 +71,7 @@ public final class TsBinarySearchSeeker extends BinarySearchSeeker {
                         return j4 == -9223372036854775807L ? BinarySearchSeeker.e.m3624a(jM2973b, position) : BinarySearchSeeker.e.m3625b(position + j3);
                     }
                     if (100000 + jM2973b > j) {
-                        return BinarySearchSeeker.e.m3625b(position + i2);
+                        return BinarySearchSeeker.e.m3625b(position + ((long) i2));
                     }
                     j4 = jM2973b;
                     j3 = i2;

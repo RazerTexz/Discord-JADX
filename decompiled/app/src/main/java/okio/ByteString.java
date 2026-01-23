@@ -21,31 +21,31 @@ import p615g0.Buffer3;
 import p615g0.C12384a;
 import p615g0.p616z.ByteString4;
 
-/* compiled from: ByteString.kt */
-/* loaded from: classes3.dex */
+/* JADX INFO: compiled from: ByteString.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public class ByteString implements Serializable, Comparable<ByteString> {
     private static final long serialVersionUID = 1;
     private final byte[] data;
 
-    /* renamed from: l, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: l, reason: from kotlin metadata */
     public transient int hashCode;
 
-    /* renamed from: m, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: m, reason: from kotlin metadata */
     public transient String utf8;
 
-    /* renamed from: k, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: k, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static final ByteString f27592j = new ByteString(new byte[0]);
 
-    /* compiled from: ByteString.kt */
-    /* renamed from: okio.ByteString$a, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: okio.ByteString$a, reason: from kotlin metadata */
+    /* JADX INFO: compiled from: ByteString.kt */
     public static final class Companion {
         public Companion(DefaultConstructorMarker defaultConstructorMarker) {
         }
 
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         public static ByteString m11009d(Companion companion, byte[] bArr, int i, int i2, int i3) {
             if ((i3 & 1) != 0) {
                 i = 0;
@@ -58,7 +58,7 @@ public class ByteString implements Serializable, Comparable<ByteString> {
             return new ByteString(_ArraysJvm.copyOfRange(bArr, i, i2 + i));
         }
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final ByteString m11010a(String str) {
             Intrinsics3.checkParameterIsNotNull(str, "$this$decodeHex");
             if (!(str.length() % 2 == 0)) {
@@ -73,7 +73,7 @@ public class ByteString implements Serializable, Comparable<ByteString> {
             return new ByteString(bArr);
         }
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final ByteString m11011b(String str, Charset charset) {
             Intrinsics3.checkParameterIsNotNull(str, "$this$encode");
             Intrinsics3.checkParameterIsNotNull(charset, "charset");
@@ -82,7 +82,7 @@ public class ByteString implements Serializable, Comparable<ByteString> {
             return new ByteString(bytes);
         }
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public final ByteString m11012c(String str) {
             Intrinsics3.checkParameterIsNotNull(str, "$this$encodeUtf8");
             Intrinsics3.checkParameterIsNotNull(str, "$this$asUtf8ToByteArray");
@@ -99,7 +99,7 @@ public class ByteString implements Serializable, Comparable<ByteString> {
         this.data = bArr;
     }
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public static final ByteString m11006h(String str) {
         Intrinsics3.checkParameterIsNotNull(str, "$this$encodeUtf8");
         Intrinsics3.checkParameterIsNotNull(str, "$this$asUtf8ToByteArray");
@@ -110,7 +110,7 @@ public class ByteString implements Serializable, Comparable<ByteString> {
         return byteString;
     }
 
-    private final void readObject(ObjectInputStream in) throws IllegalAccessException, NoSuchFieldException, IOException, IllegalArgumentException {
+    private final void readObject(ObjectInputStream in) throws IllegalAccessException, NoSuchFieldException, IOException {
         int i = in.readInt();
         Intrinsics3.checkParameterIsNotNull(in, "$this$readByteString");
         int i2 = 0;
@@ -178,7 +178,7 @@ public class ByteString implements Serializable, Comparable<ByteString> {
         return false;
     }
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public String mo10500f() {
         byte[] bArr = this.data;
         byte[] bArr2 = C12384a.f26067a;
@@ -231,7 +231,7 @@ public class ByteString implements Serializable, Comparable<ByteString> {
         return new String(bArr4, Charsets2.f25136a);
     }
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public ByteString mo10501g(String algorithm) {
         Intrinsics3.checkParameterIsNotNull(algorithm, "algorithm");
         byte[] bArrDigest = MessageDigest.getInstance(algorithm).digest(this.data);
@@ -249,17 +249,17 @@ public class ByteString implements Serializable, Comparable<ByteString> {
         return iHashCode;
     }
 
-    /* renamed from: i, reason: from getter */
+    /* JADX INFO: renamed from: i, reason: from getter */
     public final byte[] getData() {
         return this.data;
     }
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public int mo10502j() {
         return this.data.length;
     }
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public String mo10503k() {
         byte[] bArr = this.data;
         char[] cArr = new char[bArr.length * 2];
@@ -274,23 +274,23 @@ public class ByteString implements Serializable, Comparable<ByteString> {
         return new String(cArr);
     }
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public byte[] mo10504l() {
         return this.data;
     }
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public byte mo10505m(int pos) {
         return this.data[pos];
     }
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public boolean mo10506n(int offset, ByteString other, int otherOffset, int byteCount) {
         Intrinsics3.checkParameterIsNotNull(other, "other");
         return other.mo10507o(otherOffset, this.data, offset, byteCount);
     }
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public boolean mo10507o(int offset, byte[] other, int otherOffset, int byteCount) {
         Intrinsics3.checkParameterIsNotNull(other, "other");
         if (offset >= 0) {
@@ -302,7 +302,7 @@ public class ByteString implements Serializable, Comparable<ByteString> {
         return false;
     }
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public ByteString mo10508p() {
         byte b2;
         int i = 0;
@@ -329,7 +329,7 @@ public class ByteString implements Serializable, Comparable<ByteString> {
         }
     }
 
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     public String m11008q() {
         String str = this.utf8;
         if (str != null) {
@@ -342,13 +342,13 @@ public class ByteString implements Serializable, Comparable<ByteString> {
         return str2;
     }
 
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     public void mo10509r(OutputStream out) throws IOException {
         Intrinsics3.checkParameterIsNotNull(out, "out");
         out.write(this.data);
     }
 
-    /* renamed from: s */
+    /* JADX INFO: renamed from: s */
     public void mo10510s(Buffer3 buffer, int offset, int byteCount) {
         Intrinsics3.checkParameterIsNotNull(buffer, "buffer");
         Intrinsics3.checkParameterIsNotNull(this, "$this$commonWrite");

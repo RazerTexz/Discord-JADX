@@ -8,12 +8,12 @@ import p007b.p195g.p196a.p198b.PrettyPrinter2;
 import p007b.p195g.p196a.p198b.SerializableString;
 import p007b.p195g.p196a.p198b.p200p.SerializedString;
 
-/* compiled from: DefaultPrettyPrinter.java */
-/* renamed from: b.g.a.b.t.d, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.g.a.b.t.d, reason: use source file name */
+/* JADX INFO: compiled from: DefaultPrettyPrinter.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class DefaultPrettyPrinter implements PrettyPrinter2, Instantiatable<DefaultPrettyPrinter>, Serializable {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static final SerializedString f4599j = new SerializedString(" ");
     private static final long serialVersionUID = 1;
     public b _arrayIndenter;
@@ -23,18 +23,18 @@ public class DefaultPrettyPrinter implements PrettyPrinter2, Instantiatable<Defa
     public Separators _separators;
     public boolean _spacesInObjectEntries;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public transient int f4600k;
 
-    /* compiled from: DefaultPrettyPrinter.java */
-    /* renamed from: b.g.a.b.t.d$a */
+    /* JADX INFO: renamed from: b.g.a.b.t.d$a */
+    /* JADX INFO: compiled from: DefaultPrettyPrinter.java */
     public static class a extends c {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public static final a f4601j = new a();
 
         @Override // p007b.p195g.p196a.p198b.p204t.DefaultPrettyPrinter.b
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public void mo1731a(JsonGenerator jsonGenerator, int i) throws IOException {
             jsonGenerator.mo1640R(' ');
         }
@@ -45,17 +45,17 @@ public class DefaultPrettyPrinter implements PrettyPrinter2, Instantiatable<Defa
         }
     }
 
-    /* compiled from: DefaultPrettyPrinter.java */
-    /* renamed from: b.g.a.b.t.d$b */
+    /* JADX INFO: renamed from: b.g.a.b.t.d$b */
+    /* JADX INFO: compiled from: DefaultPrettyPrinter.java */
     public interface b {
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         void mo1731a(JsonGenerator jsonGenerator, int i) throws IOException;
 
         boolean isInline();
     }
 
-    /* compiled from: DefaultPrettyPrinter.java */
-    /* renamed from: b.g.a.b.t.d$c */
+    /* JADX INFO: renamed from: b.g.a.b.t.d$c */
+    /* JADX INFO: compiled from: DefaultPrettyPrinter.java */
     public static class c implements b, Serializable {
         @Override // p007b.p195g.p196a.p198b.p204t.DefaultPrettyPrinter.b
         public boolean isInline() {
@@ -78,7 +78,7 @@ public class DefaultPrettyPrinter implements PrettyPrinter2, Instantiatable<Defa
     }
 
     @Override // p007b.p195g.p196a.p198b.PrettyPrinter2
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public void mo1678a(JsonGenerator jsonGenerator) throws IOException {
         jsonGenerator.mo1640R('{');
         if (this._objectIndenter.isInline()) {
@@ -88,7 +88,7 @@ public class DefaultPrettyPrinter implements PrettyPrinter2, Instantiatable<Defa
     }
 
     @Override // p007b.p195g.p196a.p198b.PrettyPrinter2
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public void mo1679b(JsonGenerator jsonGenerator) throws IOException {
         SerializableString serializableString = this._rootSeparator;
         if (serializableString != null) {
@@ -97,20 +97,20 @@ public class DefaultPrettyPrinter implements PrettyPrinter2, Instantiatable<Defa
     }
 
     @Override // p007b.p195g.p196a.p198b.PrettyPrinter2
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public void mo1680c(JsonGenerator jsonGenerator) throws IOException {
         jsonGenerator.mo1640R(this._separators.m1736a());
         this._arrayIndenter.mo1731a(jsonGenerator, this.f4600k);
     }
 
     @Override // p007b.p195g.p196a.p198b.PrettyPrinter2
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public void mo1681d(JsonGenerator jsonGenerator) throws IOException {
         this._objectIndenter.mo1731a(jsonGenerator, this.f4600k);
     }
 
     @Override // p007b.p195g.p196a.p198b.p204t.Instantiatable
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public DefaultPrettyPrinter mo1732e() {
         if (DefaultPrettyPrinter.class == DefaultPrettyPrinter.class) {
             return new DefaultPrettyPrinter(this);
@@ -119,7 +119,7 @@ public class DefaultPrettyPrinter implements PrettyPrinter2, Instantiatable<Defa
     }
 
     @Override // p007b.p195g.p196a.p198b.PrettyPrinter2
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public void mo1682f(JsonGenerator jsonGenerator, int i) throws IOException {
         if (!this._objectIndenter.isInline()) {
             this.f4600k--;
@@ -133,7 +133,7 @@ public class DefaultPrettyPrinter implements PrettyPrinter2, Instantiatable<Defa
     }
 
     @Override // p007b.p195g.p196a.p198b.PrettyPrinter2
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public void mo1683g(JsonGenerator jsonGenerator) throws IOException {
         if (!this._arrayIndenter.isInline()) {
             this.f4600k++;
@@ -142,20 +142,20 @@ public class DefaultPrettyPrinter implements PrettyPrinter2, Instantiatable<Defa
     }
 
     @Override // p007b.p195g.p196a.p198b.PrettyPrinter2
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public void mo1684h(JsonGenerator jsonGenerator) throws IOException {
         this._arrayIndenter.mo1731a(jsonGenerator, this.f4600k);
     }
 
     @Override // p007b.p195g.p196a.p198b.PrettyPrinter2
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public void mo1685i(JsonGenerator jsonGenerator) throws IOException {
         jsonGenerator.mo1640R(this._separators.m1737b());
         this._objectIndenter.mo1731a(jsonGenerator, this.f4600k);
     }
 
     @Override // p007b.p195g.p196a.p198b.PrettyPrinter2
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public void mo1686j(JsonGenerator jsonGenerator, int i) throws IOException {
         if (!this._arrayIndenter.isInline()) {
             this.f4600k--;
@@ -169,7 +169,7 @@ public class DefaultPrettyPrinter implements PrettyPrinter2, Instantiatable<Defa
     }
 
     @Override // p007b.p195g.p196a.p198b.PrettyPrinter2
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public void mo1687k(JsonGenerator jsonGenerator) throws IOException {
         if (this._spacesInObjectEntries) {
             jsonGenerator.mo1642T(this._objectFieldValueSeparatorWithSpaces);

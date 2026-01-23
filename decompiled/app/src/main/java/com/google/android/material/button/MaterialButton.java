@@ -51,7 +51,7 @@ import java.util.LinkedHashSet;
 import java.util.Objects;
 import p007b.p225i.p226a.p341g.p343b.MaterialButtonHelper;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public class MaterialButton extends AppCompatButton implements Checkable, Shapeable {
     private static final int[] CHECKABLE_STATE_SET = {R.attr.state_checkable};
     private static final int[] CHECKED_STATE_SET = {R.attr.state_checked};
@@ -108,10 +108,10 @@ public class MaterialButton extends AppCompatButton implements Checkable, Shapea
     public static class SavedState extends AbsSavedState {
         public static final Parcelable.Creator<SavedState> CREATOR = new C10865a();
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public boolean f20940j;
 
-        /* renamed from: com.google.android.material.button.MaterialButton$SavedState$a */
+        /* JADX INFO: renamed from: com.google.android.material.button.MaterialButton$SavedState$a */
         public static class C10865a implements Parcelable.ClassLoaderCreator<SavedState> {
             @Override // android.os.Parcelable.ClassLoaderCreator
             @NonNull
@@ -151,7 +151,7 @@ public class MaterialButton extends AppCompatButton implements Checkable, Shapea
         }
     }
 
-    /* renamed from: com.google.android.material.button.MaterialButton$a */
+    /* JADX INFO: renamed from: com.google.android.material.button.MaterialButton$a */
     public interface InterfaceC10866a {
     }
 

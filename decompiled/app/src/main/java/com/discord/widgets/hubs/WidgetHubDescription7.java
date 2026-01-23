@@ -15,14 +15,14 @@ import p007b.p008a.p027k.FormatUtils;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetHubDescription.kt */
-/* renamed from: com.discord.widgets.hubs.WidgetHubDescription$validationManager$2, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.hubs.WidgetHubDescription$validationManager$2, reason: use source file name */
+/* JADX INFO: compiled from: WidgetHubDescription.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetHubDescription7 extends Lambda implements Function0<ValidationManager> {
     public final /* synthetic */ WidgetHubDescription this$0;
 
-    /* compiled from: WidgetHubDescription.kt */
-    /* renamed from: com.discord.widgets.hubs.WidgetHubDescription$validationManager$2$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.hubs.WidgetHubDescription$validationManager$2$1 */
+    /* JADX INFO: compiled from: WidgetHubDescription.kt */
     public static final class C90121 implements InputValidator<LinearLayout> {
         public C90121() {
         }
@@ -32,7 +32,7 @@ public final class WidgetHubDescription7 extends Lambda implements Function0<Val
             return getErrorMessage2(linearLayout);
         }
 
-        /* renamed from: getErrorMessage, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: getErrorMessage, reason: avoid collision after fix types in other method */
         public CharSequence getErrorMessage2(LinearLayout view) {
             Intrinsics3.checkNotNullParameter(view, "view");
             if (WidgetHubDescription7.this.this$0.getViewModel().getCategory() != null) {
@@ -42,8 +42,8 @@ public final class WidgetHubDescription7 extends Lambda implements Function0<Val
         }
     }
 
-    /* compiled from: WidgetHubDescription.kt */
-    /* renamed from: com.discord.widgets.hubs.WidgetHubDescription$validationManager$2$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.hubs.WidgetHubDescription$validationManager$2$2 */
+    /* JADX INFO: compiled from: WidgetHubDescription.kt */
     public static final class C90132 extends Lambda implements Function2<LinearLayout, CharSequence, Boolean> {
         public C90132() {
             super(2);
@@ -54,7 +54,7 @@ public final class WidgetHubDescription7 extends Lambda implements Function0<Val
             return Boolean.valueOf(invoke2(linearLayout, charSequence));
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final boolean invoke2(LinearLayout linearLayout, CharSequence charSequence) {
             Intrinsics3.checkNotNullParameter(linearLayout, "<anonymous parameter 0>");
             Intrinsics3.checkNotNullParameter(charSequence, "errorMessage");

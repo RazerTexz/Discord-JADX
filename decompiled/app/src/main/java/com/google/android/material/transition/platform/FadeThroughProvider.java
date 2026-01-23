@@ -11,27 +11,27 @@ import androidx.annotation.Nullable;
 import androidx.annotation.RequiresApi;
 import p007b.p225i.p226a.p341g.p353l.p354l.TransitionUtils5;
 
+/* JADX INFO: loaded from: classes3.dex */
 @RequiresApi(21)
-/* loaded from: classes3.dex */
 public final class FadeThroughProvider implements VisibilityAnimatorProvider {
     public static final float PROGRESS_THRESHOLD = 0.35f;
 
-    /* renamed from: com.google.android.material.transition.platform.FadeThroughProvider$a */
+    /* JADX INFO: renamed from: com.google.android.material.transition.platform.FadeThroughProvider$a */
     public static class C11053a implements ValueAnimator.AnimatorUpdateListener {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final /* synthetic */ View f21333a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final /* synthetic */ float f21334b;
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public final /* synthetic */ float f21335c;
 
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         public final /* synthetic */ float f21336d;
 
-        /* renamed from: e */
+        /* JADX INFO: renamed from: e */
         public final /* synthetic */ float f21337e;
 
         public C11053a(View view, float f, float f2, float f3, float f4) {
@@ -48,13 +48,13 @@ public final class FadeThroughProvider implements VisibilityAnimatorProvider {
         }
     }
 
-    /* renamed from: com.google.android.material.transition.platform.FadeThroughProvider$b */
+    /* JADX INFO: renamed from: com.google.android.material.transition.platform.FadeThroughProvider$b */
     public static class C11054b extends AnimatorListenerAdapter {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final /* synthetic */ View f21338a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final /* synthetic */ float f21339b;
 
         public C11054b(View view, float f) {

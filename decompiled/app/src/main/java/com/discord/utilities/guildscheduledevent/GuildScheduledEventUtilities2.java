@@ -1,9 +1,9 @@
 package com.discord.utilities.guildscheduledevent;
 
 
-/* compiled from: GuildScheduledEventUtilities.kt */
-/* renamed from: com.discord.utilities.guildscheduledevent.GuildScheduledEventTiming, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.utilities.guildscheduledevent.GuildScheduledEventTiming, reason: use source file name */
+/* JADX INFO: compiled from: GuildScheduledEventUtilities.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public enum GuildScheduledEventUtilities2 {
     LATER,
     TOMORROW,
@@ -13,7 +13,7 @@ public enum GuildScheduledEventUtilities2 {
     LIVE,
     EXPIRED;
 
-    /* renamed from: com.discord.utilities.guildscheduledevent.GuildScheduledEventTiming$WhenMappings */
+    /* JADX INFO: renamed from: com.discord.utilities.guildscheduledevent.GuildScheduledEventTiming$WhenMappings */
     public final /* synthetic */ class WhenMappings {
         public static final /* synthetic */ int[] $EnumSwitchMapping$0;
         public static final /* synthetic */ int[] $EnumSwitchMapping$1;

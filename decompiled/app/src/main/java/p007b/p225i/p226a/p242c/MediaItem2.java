@@ -19,79 +19,79 @@ import p007b.p225i.p355b.p357b.ImmutableMap2;
 import p007b.p225i.p355b.p357b.RegularImmutableList;
 import p007b.p225i.p355b.p357b.RegularImmutableMap;
 
-/* compiled from: MediaItem.java */
-/* renamed from: b.i.a.c.o1, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.o1, reason: use source file name */
+/* JADX INFO: compiled from: MediaItem.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class MediaItem2 implements Bundleable {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static final Bundleable.a<MediaItem2> f7261j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final String f7262k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     @Nullable
     public final h f7263l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public final g f7264m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public final MediaMetadata f7265n;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public final d f7266o;
 
-    /* compiled from: MediaItem.java */
-    /* renamed from: b.i.a.c.o1$b */
+    /* JADX INFO: renamed from: b.i.a.c.o1$b */
+    /* JADX INFO: compiled from: MediaItem.java */
     public static final class b {
     }
 
-    /* compiled from: MediaItem.java */
-    /* renamed from: b.i.a.c.o1$c */
+    /* JADX INFO: renamed from: b.i.a.c.o1$c */
+    /* JADX INFO: compiled from: MediaItem.java */
     public static final class c {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         @Nullable
         public String f7267a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         @Nullable
         public Uri f7268b;
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         @Nullable
         public String f7269c;
 
-        /* renamed from: g */
+        /* JADX INFO: renamed from: g */
         @Nullable
         public String f7273g;
 
-        /* renamed from: i */
+        /* JADX INFO: renamed from: i */
         @Nullable
         public Object f7275i;
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         @Nullable
         public MediaMetadata f7276j;
 
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         public d.a f7270d = new d.a();
 
-        /* renamed from: e */
+        /* JADX INFO: renamed from: e */
         public f.a f7271e = new f.a(null);
 
-        /* renamed from: f */
+        /* JADX INFO: renamed from: f */
         public List<?> f7272f = Collections.emptyList();
 
-        /* renamed from: h */
+        /* JADX INFO: renamed from: h */
         public ImmutableList2<k> f7274h = RegularImmutableList.f12012l;
 
-        /* renamed from: k */
+        /* JADX INFO: renamed from: k */
         public g.a f7277k = new g.a();
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public MediaItem2 m3320a() {
             i iVar;
             f.a aVar = this.f7271e;
@@ -121,50 +121,50 @@ public final class MediaItem2 implements Bundleable {
         }
     }
 
-    /* compiled from: MediaItem.java */
-    /* renamed from: b.i.a.c.o1$d */
+    /* JADX INFO: renamed from: b.i.a.c.o1$d */
+    /* JADX INFO: compiled from: MediaItem.java */
     public static class d implements Bundleable {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public static final Bundleable.a<e> f7278j;
 
-        /* renamed from: k */
+        /* JADX INFO: renamed from: k */
         @IntRange(from = 0)
         public final long f7279k;
 
-        /* renamed from: l */
+        /* JADX INFO: renamed from: l */
         public final long f7280l;
 
-        /* renamed from: m */
+        /* JADX INFO: renamed from: m */
         public final boolean f7281m;
 
-        /* renamed from: n */
+        /* JADX INFO: renamed from: n */
         public final boolean f7282n;
 
-        /* renamed from: o */
+        /* JADX INFO: renamed from: o */
         public final boolean f7283o;
 
-        /* compiled from: MediaItem.java */
-        /* renamed from: b.i.a.c.o1$d$a */
+        /* JADX INFO: renamed from: b.i.a.c.o1$d$a */
+        /* JADX INFO: compiled from: MediaItem.java */
         public static final class a {
 
-            /* renamed from: a */
+            /* JADX INFO: renamed from: a */
             public long f7284a;
 
-            /* renamed from: b */
+            /* JADX INFO: renamed from: b */
             public long f7285b = Long.MIN_VALUE;
 
-            /* renamed from: c */
+            /* JADX INFO: renamed from: c */
             public boolean f7286c;
 
-            /* renamed from: d */
+            /* JADX INFO: renamed from: d */
             public boolean f7287d;
 
-            /* renamed from: e */
+            /* JADX INFO: renamed from: e */
             public boolean f7288e;
 
             @Deprecated
-            /* renamed from: a */
+            /* JADX INFO: renamed from: a */
             public e m3322a() {
                 return new e(this, null);
             }
@@ -183,7 +183,7 @@ public final class MediaItem2 implements Bundleable {
             this.f7283o = aVar.f7288e;
         }
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public static String m3321a(int i) {
             return Integer.toString(i, 36);
         }
@@ -207,12 +207,12 @@ public final class MediaItem2 implements Bundleable {
         }
     }
 
-    /* compiled from: MediaItem.java */
+    /* JADX INFO: renamed from: b.i.a.c.o1$e */
+    /* JADX INFO: compiled from: MediaItem.java */
     @Deprecated
-    /* renamed from: b.i.a.c.o1$e */
     public static final class e extends d {
 
-        /* renamed from: p */
+        /* JADX INFO: renamed from: p */
         public static final e f7289p = new d.a().m3322a();
 
         public e(d.a aVar, a aVar2) {
@@ -220,64 +220,64 @@ public final class MediaItem2 implements Bundleable {
         }
     }
 
-    /* compiled from: MediaItem.java */
-    /* renamed from: b.i.a.c.o1$f */
+    /* JADX INFO: renamed from: b.i.a.c.o1$f */
+    /* JADX INFO: compiled from: MediaItem.java */
     public static final class f {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final UUID f7290a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         @Nullable
         public final Uri f7291b;
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public final ImmutableMap2<String, String> f7292c;
 
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         public final boolean f7293d;
 
-        /* renamed from: e */
+        /* JADX INFO: renamed from: e */
         public final boolean f7294e;
 
-        /* renamed from: f */
+        /* JADX INFO: renamed from: f */
         public final boolean f7295f;
 
-        /* renamed from: g */
+        /* JADX INFO: renamed from: g */
         public final ImmutableList2<Integer> f7296g;
 
-        /* renamed from: h */
+        /* JADX INFO: renamed from: h */
         @Nullable
         public final byte[] f7297h;
 
-        /* compiled from: MediaItem.java */
-        /* renamed from: b.i.a.c.o1$f$a */
+        /* JADX INFO: renamed from: b.i.a.c.o1$f$a */
+        /* JADX INFO: compiled from: MediaItem.java */
         public static final class a {
 
-            /* renamed from: a */
+            /* JADX INFO: renamed from: a */
             @Nullable
             public UUID f7298a;
 
-            /* renamed from: b */
+            /* JADX INFO: renamed from: b */
             @Nullable
             public Uri f7299b;
 
-            /* renamed from: c */
+            /* JADX INFO: renamed from: c */
             public ImmutableMap2<String, String> f7300c = RegularImmutableMap.f12015m;
 
-            /* renamed from: d */
+            /* JADX INFO: renamed from: d */
             public boolean f7301d;
 
-            /* renamed from: e */
+            /* JADX INFO: renamed from: e */
             public boolean f7302e;
 
-            /* renamed from: f */
+            /* JADX INFO: renamed from: f */
             public boolean f7303f;
 
-            /* renamed from: g */
+            /* JADX INFO: renamed from: g */
             public ImmutableList2<Integer> f7304g;
 
-            /* renamed from: h */
+            /* JADX INFO: renamed from: h */
             @Nullable
             public byte[] f7305h;
 
@@ -320,32 +320,32 @@ public final class MediaItem2 implements Bundleable {
         }
     }
 
-    /* compiled from: MediaItem.java */
-    /* renamed from: b.i.a.c.o1$h */
+    /* JADX INFO: renamed from: b.i.a.c.o1$h */
+    /* JADX INFO: compiled from: MediaItem.java */
     public static class h {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final Uri f7318a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         @Nullable
         public final String f7319b;
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         @Nullable
         public final f f7320c;
 
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         public final List<?> f7321d;
 
-        /* renamed from: e */
+        /* JADX INFO: renamed from: e */
         @Nullable
         public final String f7322e;
 
-        /* renamed from: f */
+        /* JADX INFO: renamed from: f */
         public final ImmutableList2<k> f7323f;
 
-        /* renamed from: g */
+        /* JADX INFO: renamed from: g */
         @Nullable
         public final Object f7324g;
 
@@ -400,71 +400,71 @@ public final class MediaItem2 implements Bundleable {
         }
     }
 
-    /* compiled from: MediaItem.java */
+    /* JADX INFO: renamed from: b.i.a.c.o1$i */
+    /* JADX INFO: compiled from: MediaItem.java */
     @Deprecated
-    /* renamed from: b.i.a.c.o1$i */
     public static final class i extends h {
         public i(Uri uri, String str, f fVar, b bVar, List list, String str2, ImmutableList2 immutableList2, Object obj, a aVar) {
             super(uri, str, fVar, null, list, str2, immutableList2, obj, null);
         }
     }
 
-    /* compiled from: MediaItem.java */
+    /* JADX INFO: renamed from: b.i.a.c.o1$j */
+    /* JADX INFO: compiled from: MediaItem.java */
     @Deprecated
-    /* renamed from: b.i.a.c.o1$j */
     public static final class j extends k {
         public j(k.a aVar, a aVar2) {
             super(aVar, null);
         }
     }
 
-    /* compiled from: MediaItem.java */
-    /* renamed from: b.i.a.c.o1$k */
+    /* JADX INFO: renamed from: b.i.a.c.o1$k */
+    /* JADX INFO: compiled from: MediaItem.java */
     public static class k {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final Uri f7325a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         @Nullable
         public final String f7326b;
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         @Nullable
         public final String f7327c;
 
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         public final int f7328d;
 
-        /* renamed from: e */
+        /* JADX INFO: renamed from: e */
         public final int f7329e;
 
-        /* renamed from: f */
+        /* JADX INFO: renamed from: f */
         @Nullable
         public final String f7330f;
 
-        /* compiled from: MediaItem.java */
-        /* renamed from: b.i.a.c.o1$k$a */
+        /* JADX INFO: renamed from: b.i.a.c.o1$k$a */
+        /* JADX INFO: compiled from: MediaItem.java */
         public static final class a {
 
-            /* renamed from: a */
+            /* JADX INFO: renamed from: a */
             public Uri f7331a;
 
-            /* renamed from: b */
+            /* JADX INFO: renamed from: b */
             @Nullable
             public String f7332b;
 
-            /* renamed from: c */
+            /* JADX INFO: renamed from: c */
             @Nullable
             public String f7333c;
 
-            /* renamed from: d */
+            /* JADX INFO: renamed from: d */
             public int f7334d;
 
-            /* renamed from: e */
+            /* JADX INFO: renamed from: e */
             public int f7335e;
 
-            /* renamed from: f */
+            /* JADX INFO: renamed from: f */
             @Nullable
             public String f7336f;
 
@@ -522,7 +522,7 @@ public final class MediaItem2 implements Bundleable {
         this.f7266o = eVar;
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static String m3319a(int i2) {
         return Integer.toString(i2, 36);
     }
@@ -552,51 +552,51 @@ public final class MediaItem2 implements Bundleable {
         this.f7266o = eVar;
     }
 
-    /* compiled from: MediaItem.java */
-    /* renamed from: b.i.a.c.o1$g */
+    /* JADX INFO: renamed from: b.i.a.c.o1$g */
+    /* JADX INFO: compiled from: MediaItem.java */
     public static final class g implements Bundleable {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public static final g f7306j = new a().m3324a();
 
-        /* renamed from: k */
+        /* JADX INFO: renamed from: k */
         public static final Bundleable.a<g> f7307k = C2810j0.f7124a;
 
-        /* renamed from: l */
+        /* JADX INFO: renamed from: l */
         public final long f7308l;
 
-        /* renamed from: m */
+        /* JADX INFO: renamed from: m */
         public final long f7309m;
 
-        /* renamed from: n */
+        /* JADX INFO: renamed from: n */
         public final long f7310n;
 
-        /* renamed from: o */
+        /* JADX INFO: renamed from: o */
         public final float f7311o;
 
-        /* renamed from: p */
+        /* JADX INFO: renamed from: p */
         public final float f7312p;
 
-        /* compiled from: MediaItem.java */
-        /* renamed from: b.i.a.c.o1$g$a */
+        /* JADX INFO: renamed from: b.i.a.c.o1$g$a */
+        /* JADX INFO: compiled from: MediaItem.java */
         public static final class a {
 
-            /* renamed from: a */
+            /* JADX INFO: renamed from: a */
             public long f7313a = -9223372036854775807L;
 
-            /* renamed from: b */
+            /* JADX INFO: renamed from: b */
             public long f7314b = -9223372036854775807L;
 
-            /* renamed from: c */
+            /* JADX INFO: renamed from: c */
             public long f7315c = -9223372036854775807L;
 
-            /* renamed from: d */
+            /* JADX INFO: renamed from: d */
             public float f7316d = -3.4028235E38f;
 
-            /* renamed from: e */
+            /* JADX INFO: renamed from: e */
             public float f7317e = -3.4028235E38f;
 
-            /* renamed from: a */
+            /* JADX INFO: renamed from: a */
             public g m3324a() {
                 return new g(this, null);
             }
@@ -615,7 +615,7 @@ public final class MediaItem2 implements Bundleable {
             this.f7312p = f2;
         }
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public static String m3323a(int i) {
             return Integer.toString(i, 36);
         }

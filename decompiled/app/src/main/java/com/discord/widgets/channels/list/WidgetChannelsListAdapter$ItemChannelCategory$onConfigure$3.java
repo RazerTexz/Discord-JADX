@@ -5,8 +5,8 @@ import androidx.core.view.AccessibilityDelegateCompat;
 import androidx.core.view.accessibility.AccessibilityNodeInfoCompat;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: WidgetChannelsListAdapter.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetChannelsListAdapter.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetChannelsListAdapter$ItemChannelCategory$onConfigure$3 extends AccessibilityDelegateCompat {
     @Override // androidx.core.view.AccessibilityDelegateCompat
     public void onInitializeAccessibilityNodeInfo(View host, AccessibilityNodeInfoCompat info) {

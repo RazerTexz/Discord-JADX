@@ -2,8 +2,8 @@ package com.discord.widgets.stage.sheet;
 
 import com.discord.utilities.cache.SharedPreferencesProvider;
 
-/* compiled from: WidgetStageAudienceNoticeManager.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetStageAudienceNoticeManager.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetStageAudienceNoticeManager {
     public static final WidgetStageAudienceNoticeManager INSTANCE = new WidgetStageAudienceNoticeManager();
     private static final String STAGE_AUDIENCE_NOTICE_SHOWN_KEY = "STAGE_AUDIENCE_NOTICE_SHOWN_KEY";

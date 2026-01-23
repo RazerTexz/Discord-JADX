@@ -32,15 +32,15 @@ import p507d0.p580t.Iterables2;
 import p507d0.p580t._Collections;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: suspendFunctionTypes.kt */
-/* renamed from: d0.e0.p.d.m0.b.l, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.b.l, reason: use source file name */
+/* JADX INFO: compiled from: suspendFunctionTypes.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class suspendFunctionTypes {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final MutableClassDescriptor f22572a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static final MutableClassDescriptor f22573b;
 
     static {

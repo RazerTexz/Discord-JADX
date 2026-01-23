@@ -5,15 +5,15 @@ import p507d0.p509b0.ObservableProperty;
 import p507d0.p592z.p594d.Intrinsics3;
 
 /* JADX INFO: Add missing generic type declarations: [T] */
-/* compiled from: Delegates.kt */
-/* renamed from: d0.e0.p.d.m0.j.j, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.j.j, reason: use source file name */
+/* JADX INFO: compiled from: Delegates.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class Delegates2<T> extends ObservableProperty<T> {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final /* synthetic */ Object f24312a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final /* synthetic */ DescriptorRendererOptionsImpl f24313b;
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */

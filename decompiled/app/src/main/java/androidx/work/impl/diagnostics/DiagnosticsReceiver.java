@@ -11,7 +11,7 @@ import androidx.work.OneTimeWorkRequest;
 import androidx.work.WorkManager;
 import androidx.work.impl.workers.DiagnosticsWorker;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class DiagnosticsReceiver extends BroadcastReceiver {
     private static final String TAG = Logger.tagWithPrefix("DiagnosticsRcvr");
 

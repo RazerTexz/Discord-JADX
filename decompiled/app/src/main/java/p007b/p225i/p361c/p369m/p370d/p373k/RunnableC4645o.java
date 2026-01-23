@@ -8,21 +8,21 @@ import p007b.p225i.p361c.p369m.p370d.Logger3;
 import p007b.p225i.p361c.p369m.p370d.p379p.ClsFileOutputStream;
 import p007b.p225i.p361c.p369m.p370d.p379p.CodedOutputStream2;
 
-/* compiled from: CrashlyticsController.java */
-/* renamed from: b.i.c.m.d.k.o */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.c.m.d.k.o */
+/* JADX INFO: compiled from: CrashlyticsController.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class RunnableC4645o implements Runnable {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final /* synthetic */ Date f12359j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final /* synthetic */ Throwable f12360k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final /* synthetic */ Thread f12361l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public final /* synthetic */ C4663x f12362m;
 
     public RunnableC4645o(C4663x c4663x, Date date, Throwable th, Thread thread) {
@@ -103,51 +103,44 @@ public class RunnableC4645o implements Runnable {
             throw th;
         }
         try {
+            c4663x.m6485y(codedOutputStream2M6646i, thread2, th2, time, "error", false);
+            clsFileOutputStream3 = clsFileOutputStream2;
+            codedOutputStream2 = codedOutputStream2M6646i;
+            i = 6;
+        } catch (Exception e3) {
+            e = e3;
+            codedOutputStream2 = codedOutputStream2M6646i;
+            i = i2;
             try {
-                c4663x.m6485y(codedOutputStream2M6646i, thread2, th2, time, "error", false);
-                clsFileOutputStream3 = clsFileOutputStream2;
-                codedOutputStream2 = codedOutputStream2M6646i;
-                i = 6;
-            } catch (Exception e3) {
-                e = e3;
-                codedOutputStream2 = codedOutputStream2M6646i;
-                i = i2;
-                try {
-                    if (Logger3.f12227a.m6370a(i)) {
-                        Log.e("FirebaseCrashlytics", "An error occurred in the non-fatal exception logger", e);
-                    }
-                    clsFileOutputStream3 = clsFileOutputStream2;
-                    CommonUtils.m6414h(codedOutputStream2, str);
-                    CommonUtils.m6409c(clsFileOutputStream3, "Failed to close non-fatal file output stream.");
-                    c4663x.m6483v(strM6474i, 64);
-                    return;
-                } catch (Throwable th5) {
-                    th = th5;
-                    codedOutputStream2M6646i = codedOutputStream2;
-                    clsFileOutputStream = clsFileOutputStream2;
-                    codedOutputStream2 = codedOutputStream2M6646i;
-                    CommonUtils.m6414h(codedOutputStream2, str);
-                    CommonUtils.m6409c(clsFileOutputStream, "Failed to close non-fatal file output stream.");
-                    throw th;
+                if (Logger3.f12227a.m6370a(i)) {
+                    Log.e("FirebaseCrashlytics", "An error occurred in the non-fatal exception logger", e);
                 }
-            } catch (Throwable th6) {
-                th = th6;
+                clsFileOutputStream3 = clsFileOutputStream2;
+            } catch (Throwable th5) {
+                th = th5;
+                codedOutputStream2M6646i = codedOutputStream2;
                 clsFileOutputStream = clsFileOutputStream2;
                 codedOutputStream2 = codedOutputStream2M6646i;
                 CommonUtils.m6414h(codedOutputStream2, str);
                 CommonUtils.m6409c(clsFileOutputStream, "Failed to close non-fatal file output stream.");
                 throw th;
             }
-            c4663x.m6483v(strM6474i, 64);
-            return;
-        } catch (Exception e4) {
-            if (Logger3.f12227a.m6370a(i)) {
-                Log.e("FirebaseCrashlytics", "An error occurred when trimming non-fatal files.", e4);
-                return;
-            }
-            return;
+        } catch (Throwable th6) {
+            th = th6;
+            clsFileOutputStream = clsFileOutputStream2;
+            codedOutputStream2 = codedOutputStream2M6646i;
+            CommonUtils.m6414h(codedOutputStream2, str);
+            CommonUtils.m6409c(clsFileOutputStream, "Failed to close non-fatal file output stream.");
+            throw th;
         }
         CommonUtils.m6414h(codedOutputStream2, str);
         CommonUtils.m6409c(clsFileOutputStream3, "Failed to close non-fatal file output stream.");
+        try {
+            c4663x.m6483v(strM6474i, 64);
+        } catch (Exception e4) {
+            if (Logger3.f12227a.m6370a(i)) {
+                Log.e("FirebaseCrashlytics", "An error occurred when trimming non-fatal files.", e4);
+            }
+        }
     }
 }

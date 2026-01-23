@@ -7,19 +7,19 @@ import p007b.p109f.p161j.p169d.ResizeOptions;
 import p007b.p109f.p161j.p169d.RotationOptions;
 import p007b.p109f.p161j.p175j.EncodedImage2;
 
-/* compiled from: ImageTranscoder.java */
-/* renamed from: b.f.j.s.b, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.f.j.s.b, reason: use source file name */
+/* JADX INFO: compiled from: ImageTranscoder.java */
+/* JADX INFO: loaded from: classes3.dex */
 public interface ImageTranscoder {
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     String mo1528a();
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     boolean mo1529b(EncodedImage2 encodedImage2, RotationOptions rotationOptions, ResizeOptions resizeOptions);
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     ImageTranscodeResult mo1530c(EncodedImage2 encodedImage2, OutputStream outputStream, RotationOptions rotationOptions, ResizeOptions resizeOptions, ImageFormat imageFormat, Integer num) throws IOException;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     boolean mo1531d(ImageFormat imageFormat);
 }

@@ -120,12 +120,12 @@ import p658rx.functions.Func2;
 import p658rx.functions.Func6;
 import p658rx.subjects.BehaviorSubject;
 
-/* compiled from: WidgetIncomingShare.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetIncomingShare.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetIncomingShare extends AppFragment {
     public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetIncomingShare.class, "binding", "getBinding()Lcom/discord/databinding/WidgetIncomingShareBinding;", 0)};
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private static final String EXTRA_RECIPIENT = "EXTRA_RECIPIENT";
     private static final int FLIPPER_RESULTS = 0;
@@ -133,7 +133,7 @@ public final class WidgetIncomingShare extends AppFragment {
     private static final int FLIPPER_SEARCH = 0;
     private static final int FLIPPER_SELECTED = 1;
 
-    /* renamed from: binding$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
     private final BehaviorSubject<String> commentPublisher;
     private final BehaviorSubject<ContentModel> contentPublisher;
@@ -143,14 +143,14 @@ public final class WidgetIncomingShare extends AppFragment {
     private final BehaviorSubject<String> searchQueryPublisher;
     private final BehaviorSubject<WidgetGlobalSearchModel.ItemDataPayload> selectedReceiverPublisher;
 
-    /* compiled from: WidgetIncomingShare.kt */
+    /* JADX INFO: compiled from: WidgetIncomingShare.kt */
     public final class Adapter extends RecyclerView.Adapter<ViewHolder> {
         private ContentModel inputModel;
         private Function1<? super Uri, Unit> onItemClickListener;
         public final /* synthetic */ WidgetIncomingShare this$0;
 
-        /* compiled from: WidgetIncomingShare.kt */
-        /* renamed from: com.discord.widgets.share.WidgetIncomingShare$Adapter$1 */
+        /* JADX INFO: renamed from: com.discord.widgets.share.WidgetIncomingShare$Adapter$1 */
+        /* JADX INFO: compiled from: WidgetIncomingShare.kt */
         public static final class C99851 extends Lambda implements Function1<Uri, Unit> {
             public static final C99851 INSTANCE = new C99851();
 
@@ -164,12 +164,12 @@ public final class WidgetIncomingShare extends AppFragment {
                 return Unit.f27425a;
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2(Uri uri) {
             }
         }
 
-        /* compiled from: WidgetIncomingShare.kt */
+        /* JADX INFO: compiled from: WidgetIncomingShare.kt */
         public final class ViewHolder extends RecyclerView.ViewHolder {
             private final ViewImageBinding binding;
             public final /* synthetic */ Adapter this$0;
@@ -205,7 +205,7 @@ public final class WidgetIncomingShare extends AppFragment {
         }
 
         @Override // androidx.recyclerview.widget.RecyclerView.Adapter
-        /* renamed from: getItemCount */
+        /* JADX INFO: renamed from: getItemCount */
         public int getPageSize() {
             List<Uri> uris = this.inputModel.getUris();
             if (uris != null) {
@@ -252,7 +252,7 @@ public final class WidgetIncomingShare extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetIncomingShare.kt */
+    /* JADX INFO: compiled from: WidgetIncomingShare.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -279,10 +279,10 @@ public final class WidgetIncomingShare extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetIncomingShare.kt */
+    /* JADX INFO: compiled from: WidgetIncomingShare.kt */
     public static final /* data */ class ContentModel {
 
-        /* renamed from: Companion, reason: from kotlin metadata */
+        /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
         public static final Companion INSTANCE = new Companion(null);
         private final Activity activity;
         private final Uri activityActionUri;
@@ -291,7 +291,7 @@ public final class WidgetIncomingShare extends AppFragment {
         private final CharSequence sharedText;
         private final List<Uri> uris;
 
-        /* compiled from: WidgetIncomingShare.kt */
+        /* JADX INFO: compiled from: WidgetIncomingShare.kt */
         public static final class Companion {
             private Companion() {
             }
@@ -326,6 +326,7 @@ public final class WidgetIncomingShare extends AppFragment {
             this.activity = activity;
         }
 
+        /* JADX WARN: Multi-variable type inference failed */
         public static /* synthetic */ ContentModel copy$default(ContentModel contentModel, CharSequence charSequence, List list, Long l, String str, Uri uri, Activity activity, int i, Object obj) {
             if ((i & 1) != 0) {
                 charSequence = contentModel.sharedText;
@@ -352,7 +353,7 @@ public final class WidgetIncomingShare extends AppFragment {
             return contentModel.copy(charSequence, list2, l2, str2, uri2, activity);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final CharSequence getSharedText() {
             return this.sharedText;
         }
@@ -361,22 +362,22 @@ public final class WidgetIncomingShare extends AppFragment {
             return this.uris;
         }
 
-        /* renamed from: component3, reason: from getter */
+        /* JADX INFO: renamed from: component3, reason: from getter */
         public final Long getPreselectedRecipientChannel() {
             return this.preselectedRecipientChannel;
         }
 
-        /* renamed from: component4, reason: from getter */
+        /* JADX INFO: renamed from: component4, reason: from getter */
         public final String getRecipient() {
             return this.recipient;
         }
 
-        /* renamed from: component5, reason: from getter */
+        /* JADX INFO: renamed from: component5, reason: from getter */
         public final Uri getActivityActionUri() {
             return this.activityActionUri;
         }
 
-        /* renamed from: component6, reason: from getter */
+        /* JADX INFO: renamed from: component6, reason: from getter */
         public final Activity getActivity() {
             return this.activity;
         }
@@ -457,7 +458,7 @@ public final class WidgetIncomingShare extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetIncomingShare.kt */
+    /* JADX INFO: compiled from: WidgetIncomingShare.kt */
     public static final class Model {
         private final String comment;
         private final ContentModel contentModel;
@@ -505,19 +506,19 @@ public final class WidgetIncomingShare extends AppFragment {
             return this.searchModel;
         }
 
-        /* renamed from: isOnCooldown, reason: from getter */
+        /* JADX INFO: renamed from: isOnCooldown, reason: from getter */
         public final boolean getIsOnCooldown() {
             return this.isOnCooldown;
         }
 
-        /* renamed from: isUserPremium, reason: from getter */
+        /* JADX INFO: renamed from: isUserPremium, reason: from getter */
         public final boolean getIsUserPremium() {
             return this.isUserPremium;
         }
     }
 
-    /* compiled from: WidgetIncomingShare.kt */
-    /* renamed from: com.discord.widgets.share.WidgetIncomingShare$configureUi$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.share.WidgetIncomingShare$configureUi$1 */
+    /* JADX INFO: compiled from: WidgetIncomingShare.kt */
     public static final class C99871 extends Lambda implements Function3<TextView, Integer, KeyEvent, Boolean> {
         public final /* synthetic */ Model $this_configureUi;
 
@@ -547,8 +548,8 @@ public final class WidgetIncomingShare extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetIncomingShare.kt */
-    /* renamed from: com.discord.widgets.share.WidgetIncomingShare$configureUi$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.share.WidgetIncomingShare$configureUi$2 */
+    /* JADX INFO: compiled from: WidgetIncomingShare.kt */
     public static final class C99882<T1, T2> implements Action2<MenuItem, Context> {
         public final /* synthetic */ Model $this_configureUi;
 
@@ -561,7 +562,7 @@ public final class WidgetIncomingShare extends AppFragment {
             call2(menuItem, context);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final void call2(MenuItem menuItem, Context context) {
             Intrinsics3.checkNotNullExpressionValue(menuItem, "menuItem");
             if (menuItem.getItemId() != C5419R.id.menu_send) {
@@ -573,8 +574,8 @@ public final class WidgetIncomingShare extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetIncomingShare.kt */
-    /* renamed from: com.discord.widgets.share.WidgetIncomingShare$configureUi$5 */
+    /* JADX INFO: renamed from: com.discord.widgets.share.WidgetIncomingShare$configureUi$5 */
+    /* JADX INFO: compiled from: WidgetIncomingShare.kt */
     public static final class C99895 extends Lambda implements Function1<Uri, Unit> {
         public final /* synthetic */ ContentModel $this_configureUi;
 
@@ -590,7 +591,7 @@ public final class WidgetIncomingShare extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Uri uri) {
             ArrayList arrayList;
             ContentModel contentModel = this.$this_configureUi;
@@ -609,8 +610,8 @@ public final class WidgetIncomingShare extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetIncomingShare.kt */
-    /* renamed from: com.discord.widgets.share.WidgetIncomingShare$onSendClicked$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.share.WidgetIncomingShare$onSendClicked$1 */
+    /* JADX INFO: compiled from: WidgetIncomingShare.kt */
     public static final class C99901<T1, T2, R> implements Func2<MeUser, Channel, Tuples2<? extends MeUser, ? extends Channel>> {
         public static final C99901 INSTANCE = new C99901();
 
@@ -619,14 +620,14 @@ public final class WidgetIncomingShare extends AppFragment {
             return call2(meUser, channel);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final Tuples2<MeUser, Channel> call2(MeUser meUser, Channel channel) {
             return Tuples.m10073to(meUser, channel);
         }
     }
 
-    /* compiled from: WidgetIncomingShare.kt */
-    /* renamed from: com.discord.widgets.share.WidgetIncomingShare$onSendClicked$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.share.WidgetIncomingShare$onSendClicked$2 */
+    /* JADX INFO: compiled from: WidgetIncomingShare.kt */
     public static final class C99912<T, R> implements Func1<Tuples2<? extends MeUser, ? extends Channel>, Observable<? extends Tuples2<? extends MeUser, ? extends MessageQueue4>>> {
         public final /* synthetic */ CaptchaHelper.CaptchaPayload $captchaPayload;
         public final /* synthetic */ List $data;
@@ -643,7 +644,7 @@ public final class WidgetIncomingShare extends AppFragment {
             return call2((Tuples2<MeUser, Channel>) tuples2);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final Observable<? extends Tuples2<MeUser, MessageQueue4>> call2(Tuples2<MeUser, Channel> tuples2) {
             MeUser meUserComponent1 = tuples2.component1();
             Channel channelComponent2 = tuples2.component2();
@@ -666,8 +667,8 @@ public final class WidgetIncomingShare extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetIncomingShare.kt */
-    /* renamed from: com.discord.widgets.share.WidgetIncomingShare$onSendClicked$3 */
+    /* JADX INFO: renamed from: com.discord.widgets.share.WidgetIncomingShare$onSendClicked$3 */
+    /* JADX INFO: compiled from: WidgetIncomingShare.kt */
     public static final class C99933 extends Lambda implements Function1<Tuples2<? extends MeUser, ? extends MessageQueue4>, Unit> {
         public final /* synthetic */ ContentModel $contentModel;
         public final /* synthetic */ Context $context;
@@ -681,8 +682,8 @@ public final class WidgetIncomingShare extends AppFragment {
         public final /* synthetic */ int $maxFileSizeMB;
         public final /* synthetic */ WidgetGlobalSearchModel.ItemDataPayload $receiver;
 
-        /* compiled from: WidgetIncomingShare.kt */
-        /* renamed from: com.discord.widgets.share.WidgetIncomingShare$onSendClicked$3$2, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.widgets.share.WidgetIncomingShare$onSendClicked$3$2, reason: invalid class name */
+        /* JADX INFO: compiled from: WidgetIncomingShare.kt */
         public static final class AnonymousClass2 extends Lambda implements Function2<AppFragment, CaptchaHelper.CaptchaPayload, Unit> {
             public AnonymousClass2() {
                 super(2);
@@ -694,7 +695,7 @@ public final class WidgetIncomingShare extends AppFragment {
                 return Unit.f27425a;
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2(AppFragment appFragment, CaptchaHelper.CaptchaPayload captchaPayload) {
                 Intrinsics3.checkNotNullParameter(appFragment, "<anonymous parameter 0>");
                 Intrinsics3.checkNotNullParameter(captchaPayload, "captchaPayload");
@@ -703,8 +704,8 @@ public final class WidgetIncomingShare extends AppFragment {
             }
         }
 
-        /* compiled from: WidgetIncomingShare.kt */
-        /* renamed from: com.discord.widgets.share.WidgetIncomingShare$onSendClicked$3$3, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.widgets.share.WidgetIncomingShare$onSendClicked$3$3, reason: invalid class name */
+        /* JADX INFO: compiled from: WidgetIncomingShare.kt */
         public static final class AnonymousClass3 extends Lambda implements Function0<Unit> {
             public final /* synthetic */ MeUser $me;
 
@@ -720,7 +721,7 @@ public final class WidgetIncomingShare extends AppFragment {
                 return Unit.f27425a;
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2() {
                 Guild guild;
                 WidgetGlobalSearchModel.ItemDataPayload itemDataPayload = C99933.this.$receiver;
@@ -766,7 +767,7 @@ public final class WidgetIncomingShare extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Tuples2<MeUser, ? extends MessageQueue4> tuples2) {
             MeUser meUserComponent1 = tuples2.component1();
             MessageQueue4 messageQueue4Component2 = tuples2.component2();
@@ -805,8 +806,8 @@ public final class WidgetIncomingShare extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetIncomingShare.kt */
-    /* renamed from: com.discord.widgets.share.WidgetIncomingShare$onViewBound$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.share.WidgetIncomingShare$onViewBound$1 */
+    /* JADX INFO: compiled from: WidgetIncomingShare.kt */
     public static final class C99941 extends Lambda implements Function1<Editable, Unit> {
         public C99941() {
             super(1);
@@ -818,15 +819,15 @@ public final class WidgetIncomingShare extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Editable editable) {
             Intrinsics3.checkNotNullParameter(editable, "editable");
             WidgetIncomingShare.access$getCommentPublisher$p(WidgetIncomingShare.this).onNext(editable.toString());
         }
     }
 
-    /* compiled from: WidgetIncomingShare.kt */
-    /* renamed from: com.discord.widgets.share.WidgetIncomingShare$onViewBound$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.share.WidgetIncomingShare$onViewBound$2 */
+    /* JADX INFO: compiled from: WidgetIncomingShare.kt */
     public static final class C99952 extends Lambda implements Function1<Editable, Unit> {
         public C99952() {
             super(1);
@@ -838,15 +839,15 @@ public final class WidgetIncomingShare extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Editable editable) {
             Intrinsics3.checkNotNullParameter(editable, "editable");
             WidgetIncomingShare.access$getSearchQueryPublisher$p(WidgetIncomingShare.this).onNext(editable.toString());
         }
     }
 
-    /* compiled from: WidgetIncomingShare.kt */
-    /* renamed from: com.discord.widgets.share.WidgetIncomingShare$onViewBound$3 */
+    /* JADX INFO: renamed from: com.discord.widgets.share.WidgetIncomingShare$onViewBound$3 */
+    /* JADX INFO: compiled from: WidgetIncomingShare.kt */
     public static final class ViewOnFocusChangeListenerC99963 implements View.OnFocusChangeListener {
         public ViewOnFocusChangeListenerC99963() {
         }
@@ -862,13 +863,13 @@ public final class WidgetIncomingShare extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetIncomingShare.kt */
-    /* renamed from: com.discord.widgets.share.WidgetIncomingShare$onViewBound$4 */
+    /* JADX INFO: renamed from: com.discord.widgets.share.WidgetIncomingShare$onViewBound$4 */
+    /* JADX INFO: compiled from: WidgetIncomingShare.kt */
     public static final class ViewOnClickListenerC99974 implements View.OnClickListener {
 
-        /* compiled from: WidgetIncomingShare.kt */
+        /* JADX INFO: renamed from: com.discord.widgets.share.WidgetIncomingShare$onViewBound$4$1, reason: invalid class name */
+        /* JADX INFO: compiled from: WidgetIncomingShare.kt */
         @DebugMetadata(m10084c = "com.discord.widgets.share.WidgetIncomingShare$onViewBound$4$1", m10085f = "WidgetIncomingShare.kt", m10086l = {Opcodes.L2D}, m10087m = "invokeSuspend")
-        /* renamed from: com.discord.widgets.share.WidgetIncomingShare$onViewBound$4$1, reason: invalid class name */
         public static final class AnonymousClass1 extends ContinuationImpl6 implements Function2<CoroutineScope, Continuation<? super Unit>, Object> {
             public int label;
 
@@ -923,8 +924,8 @@ public final class WidgetIncomingShare extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetIncomingShare.kt */
-    /* renamed from: com.discord.widgets.share.WidgetIncomingShare$onViewBound$5 */
+    /* JADX INFO: renamed from: com.discord.widgets.share.WidgetIncomingShare$onViewBound$5 */
+    /* JADX INFO: compiled from: WidgetIncomingShare.kt */
     public static final class C99985 extends Lambda implements Function1<Intent, Unit> {
         public C99985() {
             super(1);
@@ -936,7 +937,7 @@ public final class WidgetIncomingShare extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Intent intent) {
             Intrinsics3.checkNotNullParameter(intent, "it");
             WidgetIncomingShare.access$initialize(WidgetIncomingShare.this, ContentModel.INSTANCE.get(intent));
@@ -944,12 +945,12 @@ public final class WidgetIncomingShare extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetIncomingShare.kt */
-    /* renamed from: com.discord.widgets.share.WidgetIncomingShare$onViewBoundOrOnResume$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.share.WidgetIncomingShare$onViewBoundOrOnResume$1 */
+    /* JADX INFO: compiled from: WidgetIncomingShare.kt */
     public static final class C99991<T, R> implements Func1<WidgetGlobalSearchModel.ItemDataPayload, Observable<? extends Model>> {
 
-        /* compiled from: WidgetIncomingShare.kt */
-        /* renamed from: com.discord.widgets.share.WidgetIncomingShare$onViewBoundOrOnResume$1$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.widgets.share.WidgetIncomingShare$onViewBoundOrOnResume$1$1, reason: invalid class name */
+        /* JADX INFO: compiled from: WidgetIncomingShare.kt */
         public static final class AnonymousClass1<T, R> implements Func1<ContentModel, Observable<? extends ViewEmbedGameInvite.Model>> {
             public static final AnonymousClass1 INSTANCE = new AnonymousClass1();
 
@@ -958,14 +959,14 @@ public final class WidgetIncomingShare extends AppFragment {
                 return call2(contentModel);
             }
 
-            /* renamed from: call, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
             public final Observable<? extends ViewEmbedGameInvite.Model> call2(ContentModel contentModel) {
                 return ViewEmbedGameInvite.Model.INSTANCE.getForShare(ClockFactory.get(), contentModel.getActivityActionUri(), contentModel.getActivity());
             }
         }
 
-        /* compiled from: WidgetIncomingShare.kt */
-        /* renamed from: com.discord.widgets.share.WidgetIncomingShare$onViewBoundOrOnResume$1$2, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.widgets.share.WidgetIncomingShare$onViewBoundOrOnResume$1$2, reason: invalid class name */
+        /* JADX INFO: compiled from: WidgetIncomingShare.kt */
         public static final class AnonymousClass2<T, R> implements Func1<Integer, Boolean> {
             public static final AnonymousClass2 INSTANCE = new AnonymousClass2();
 
@@ -974,14 +975,14 @@ public final class WidgetIncomingShare extends AppFragment {
                 return call2(num);
             }
 
-            /* renamed from: call, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
             public final Boolean call2(Integer num) {
                 return Boolean.valueOf(num.intValue() > 0);
             }
         }
 
-        /* compiled from: WidgetIncomingShare.kt */
-        /* renamed from: com.discord.widgets.share.WidgetIncomingShare$onViewBoundOrOnResume$1$3, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.widgets.share.WidgetIncomingShare$onViewBoundOrOnResume$1$3, reason: invalid class name */
+        /* JADX INFO: compiled from: WidgetIncomingShare.kt */
         public static final class AnonymousClass3<T1, T2, T3, T4, T5, T6, R> implements Func6<ContentModel, ViewEmbedGameInvite.Model, String, WidgetGlobalSearchModel, Boolean, MeUser, Model> {
             public final /* synthetic */ WidgetGlobalSearchModel.ItemDataPayload $receiver;
 
@@ -994,7 +995,7 @@ public final class WidgetIncomingShare extends AppFragment {
                 return call2(contentModel, model, str, widgetGlobalSearchModel, bool, meUser);
             }
 
-            /* renamed from: call, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
             public final Model call2(ContentModel contentModel, ViewEmbedGameInvite.Model model, String str, WidgetGlobalSearchModel widgetGlobalSearchModel, Boolean bool, MeUser meUser) {
                 Guild guild;
                 WidgetGlobalSearchModel.ItemDataPayload itemDataPayload = this.$receiver;
@@ -1024,7 +1025,7 @@ public final class WidgetIncomingShare extends AppFragment {
             return call2(itemDataPayload);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final Observable<? extends Model> call2(WidgetGlobalSearchModel.ItemDataPayload itemDataPayload) {
             Channel channel;
             BehaviorSubject behaviorSubjectAccess$getContentPublisher$p = WidgetIncomingShare.access$getContentPublisher$p(WidgetIncomingShare.this);
@@ -1041,8 +1042,8 @@ public final class WidgetIncomingShare extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetIncomingShare.kt */
-    /* renamed from: com.discord.widgets.share.WidgetIncomingShare$onViewBoundOrOnResume$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.share.WidgetIncomingShare$onViewBoundOrOnResume$2 */
+    /* JADX INFO: compiled from: WidgetIncomingShare.kt */
     public static final class C100002 extends Lambda implements Function1<Model, Unit> {
         public final /* synthetic */ Clock $clock;
 
@@ -1058,7 +1059,7 @@ public final class WidgetIncomingShare extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Model model) {
             WidgetIncomingShare widgetIncomingShare = WidgetIncomingShare.this;
             Intrinsics3.checkNotNullExpressionValue(model, "it");

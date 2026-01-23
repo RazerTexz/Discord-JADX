@@ -8,9 +8,9 @@ import com.discord.views.LoadingButton;
 import java.util.Objects;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: WidgetTosReportViolation.kt */
-/* renamed from: com.discord.widgets.tos.WidgetTosReportViolation$handleLoaded$$inlined$forEach$lambda$1, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: com.discord.widgets.tos.WidgetTosReportViolation$handleLoaded$$inlined$forEach$lambda$1, reason: use source file name */
+/* JADX INFO: compiled from: WidgetTosReportViolation.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class WidgetTosReportViolation4 implements View.OnClickListener {
     public final /* synthetic */ ReportReason $reason$inlined;
     public final /* synthetic */ WidgetTosReportViolationReasonView $reasonView$inlined;

@@ -64,14 +64,14 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p658rx.Observable;
 import retrofit2.HttpException;
 
-/* compiled from: InviteJoinHelper.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: InviteJoinHelper.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class InviteJoinHelper {
     public static final InviteJoinHelper INSTANCE = new InviteJoinHelper();
 
-    /* compiled from: InviteJoinHelper.kt */
+    /* JADX INFO: renamed from: com.discord.widgets.guilds.invite.InviteJoinHelper$joinViaInvite$1 */
+    /* JADX INFO: compiled from: InviteJoinHelper.kt */
     @DebugMetadata(m10084c = "com.discord.widgets.guilds.invite.InviteJoinHelper$joinViaInvite$1", m10085f = "InviteJoinHelper.kt", m10086l = {}, m10087m = "invokeSuspend")
-    /* renamed from: com.discord.widgets.guilds.invite.InviteJoinHelper$joinViaInvite$1 */
     public static final class C86321 extends ContinuationImpl6 implements Function2<Error, Continuation<? super Unit>, Object> {
         public int label;
 
@@ -101,9 +101,9 @@ public final class InviteJoinHelper {
         }
     }
 
-    /* compiled from: InviteJoinHelper.kt */
+    /* JADX INFO: renamed from: com.discord.widgets.guilds.invite.InviteJoinHelper$joinViaInvite$2 */
+    /* JADX INFO: compiled from: InviteJoinHelper.kt */
     @DebugMetadata(m10084c = "com.discord.widgets.guilds.invite.InviteJoinHelper$joinViaInvite$2", m10085f = "InviteJoinHelper.kt", m10086l = {}, m10087m = "invokeSuspend")
-    /* renamed from: com.discord.widgets.guilds.invite.InviteJoinHelper$joinViaInvite$2 */
     public static final class C86332 extends ContinuationImpl6 implements Function2<ModelInvite, Continuation<? super Unit>, Object> {
         public int label;
 
@@ -133,9 +133,9 @@ public final class InviteJoinHelper {
         }
     }
 
-    /* compiled from: InviteJoinHelper.kt */
+    /* JADX INFO: renamed from: com.discord.widgets.guilds.invite.InviteJoinHelper$joinViaInvite$3 */
+    /* JADX INFO: compiled from: InviteJoinHelper.kt */
     @DebugMetadata(m10084c = "com.discord.widgets.guilds.invite.InviteJoinHelper$joinViaInvite$3", m10085f = "InviteJoinHelper.kt", m10086l = {}, m10087m = "invokeSuspend")
-    /* renamed from: com.discord.widgets.guilds.invite.InviteJoinHelper$joinViaInvite$3 */
     public static final class C86343 extends ContinuationImpl6 implements Function2<ModelInvite, Continuation<? super Unit>, Object> {
         public int label;
 
@@ -165,9 +165,9 @@ public final class InviteJoinHelper {
         }
     }
 
-    /* compiled from: InviteJoinHelper.kt */
+    /* JADX INFO: renamed from: com.discord.widgets.guilds.invite.InviteJoinHelper$joinViaInvite$4 */
+    /* JADX INFO: compiled from: InviteJoinHelper.kt */
     @DebugMetadata(m10084c = "com.discord.widgets.guilds.invite.InviteJoinHelper$joinViaInvite$4", m10085f = "InviteJoinHelper.kt", m10086l = {79, 104, 117, 118, Opcodes.IINC, Opcodes.LOOKUPSWITCH, 200}, m10087m = "invokeSuspend")
-    /* renamed from: com.discord.widgets.guilds.invite.InviteJoinHelper$joinViaInvite$4 */
     public static final class C86354 extends ContinuationImpl6 implements Function2<CoroutineScope, Continuation<? super Unit>, Object> {
         public final /* synthetic */ CaptchaHelper.CaptchaPayload $captchaPayload;
         public final /* synthetic */ AppFragment $fragment;
@@ -354,26 +354,20 @@ public final class InviteJoinHelper {
                                 e = e2;
                                 modelInvite2 = modelInvite4;
                                 Throwable cause = e.getCause();
-                                if (cause instanceof HttpException) {
-                                    GuildCaptchaUtils.handleHttpException(e.getError(), this.$fragment, new InviteArgs(this.$invite, this.$javaClass, this.$location, this.$onInvitePostError, this.$onInvitePostSuccess, this.$onInviteFlowFinished));
-                                    modelInvite = modelInvite2;
-                                    ref$ObjectRef = ref$ObjectRef2;
-                                    channel = this.$invite.getChannel();
-                                    if (channel != null) {
+                                if (!(cause instanceof HttpException)) {
+                                    Function2 function23 = this.$onInvitePostError;
+                                    Error errorCreate = cause != null ? Error.create(cause) : null;
+                                    this.L$0 = null;
+                                    this.L$1 = null;
+                                    this.L$2 = null;
+                                    this.L$3 = null;
+                                    this.label = 5;
+                                    if (function23.invoke(errorCreate, this) == coroutine_suspended) {
+                                        return coroutine_suspended;
                                     }
                                     return Unit.f27425a;
                                 }
-                                Function2 function23 = this.$onInvitePostError;
-                                Error errorCreate = cause != null ? Error.create(cause) : null;
-                                this.L$0 = null;
-                                this.L$1 = null;
-                                this.L$2 = null;
-                                this.L$3 = null;
-                                this.label = 5;
-                                if (function23.invoke(errorCreate, this) == coroutine_suspended) {
-                                    return coroutine_suspended;
-                                }
-                                return Unit.f27425a;
+                                GuildCaptchaUtils.handleHttpException(e.getError(), this.$fragment, new InviteArgs(this.$invite, this.$javaClass, this.$location, this.$onInvitePostError, this.$onInvitePostSuccess, this.$onInviteFlowFinished));
                             }
                             if (function22.invoke(modelInvite4, this) != coroutine_suspended) {
                                 return coroutine_suspended;
@@ -382,7 +376,7 @@ public final class InviteJoinHelper {
                             modelInvite = modelInvite2;
                             ref$ObjectRef = ref$ObjectRef2;
                             channel = this.$invite.getChannel();
-                            if (channel != null) {
+                            if (channel == null) {
                             }
                             break;
                         } else {
@@ -400,7 +394,7 @@ public final class InviteJoinHelper {
                             ref$ObjectRef3 = ref$ObjectRef2;
                             ref$ObjectRef = ref$ObjectRef3;
                             channel = this.$invite.getChannel();
-                            if (channel != null) {
+                            if (channel == null) {
                                 Intrinsics3.checkNotNullExpressionValue(channel, "channel");
                                 if (ChannelUtils.m7699w(channel)) {
                                     Long l = StoreStream.INSTANCE.getPermissions().getPermissionsByChannel().get(boxing.boxLong(channel.getId()));
@@ -506,7 +500,7 @@ public final class InviteJoinHelper {
                     Result3.throwOnFailure(obj);
                     ref$ObjectRef = ref$ObjectRef3;
                     channel = this.$invite.getChannel();
-                    if (channel != null) {
+                    if (channel == null) {
                     }
                     return Unit.f27425a;
                 case 3:
@@ -528,7 +522,7 @@ public final class InviteJoinHelper {
                     modelInvite = modelInvite2;
                     ref$ObjectRef = ref$ObjectRef2;
                     channel = this.$invite.getChannel();
-                    if (channel != null) {
+                    if (channel == null) {
                     }
                     return Unit.f27425a;
                 case 5:
@@ -572,6 +566,7 @@ public final class InviteJoinHelper {
         inviteJoinHelper.navigateToGuild(modelInvite);
     }
 
+    /* JADX WARN: Multi-variable type inference failed */
     public static /* synthetic */ Job joinViaInvite$default(InviteJoinHelper inviteJoinHelper, ModelInvite modelInvite, Class cls, AppFragment appFragment, String str, Function2 function2, Function2 function22, Function2 function23, CaptchaHelper.CaptchaPayload captchaPayload, int i, Object obj) {
         return inviteJoinHelper.joinViaInvite(modelInvite, cls, appFragment, str, (i & 16) != 0 ? new C86321(null) : function2, (i & 32) != 0 ? new C86332(null) : function22, (i & 64) != 0 ? new C86343(null) : function23, (i & 128) != 0 ? null : captchaPayload);
     }

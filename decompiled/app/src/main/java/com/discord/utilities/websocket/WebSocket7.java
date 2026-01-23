@@ -6,9 +6,9 @@ import kotlin.jvm.functions.Function2;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WebSocket.kt */
-/* renamed from: com.discord.utilities.websocket.WebSocket$onMessage$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.utilities.websocket.WebSocket$onMessage$1, reason: use source file name */
+/* JADX INFO: compiled from: WebSocket.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WebSocket7 extends Lambda implements Function2<InputStreamReader, Integer, Unit> {
     public static final WebSocket7 INSTANCE = new WebSocket7();
 

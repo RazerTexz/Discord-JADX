@@ -1,8 +1,8 @@
 package com.discord.widgets.channels.list.items;
 
 
-/* compiled from: ChannelListItemEventsSeparator.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: ChannelListItemEventsSeparator.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class ChannelListItemEventsSeparator implements ChannelListItem {
     private final String key;
     private final int type = 14;

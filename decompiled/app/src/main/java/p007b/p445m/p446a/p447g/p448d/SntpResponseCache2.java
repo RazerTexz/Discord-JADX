@@ -5,15 +5,15 @@ import p007b.p445m.p446a.SyncResponseCache;
 import p007b.p445m.p446a.p447g.p448d.SntpClient;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: SntpResponseCache.kt */
-/* renamed from: b.m.a.g.d.g, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.m.a.g.d.g, reason: use source file name */
+/* JADX INFO: compiled from: SntpResponseCache.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class SntpResponseCache2 implements SntpResponseCache {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final SyncResponseCache f13656a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final Clock5 f13657b;
 
     public SntpResponseCache2(SyncResponseCache syncResponseCache, Clock5 clock5) {
@@ -24,7 +24,7 @@ public final class SntpResponseCache2 implements SntpResponseCache {
     }
 
     @Override // p007b.p445m.p446a.p447g.p448d.SntpResponseCache
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public void mo7149a(SntpClient.b bVar) {
         Intrinsics3.checkParameterIsNotNull(bVar, "response");
         this.f13656a.mo7138f(bVar.f13652a);

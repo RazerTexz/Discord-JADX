@@ -14,11 +14,11 @@ import p000.ViewOnClickListenerC11208d;
 import p007b.p008a.p025i.PrivateChannelSideBarActionsViewBinding;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: PrivateChannelSideBarActionsView.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: PrivateChannelSideBarActionsView.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class PrivateChannelSideBarActionsView extends LinearLayout {
 
-    /* renamed from: j, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: j, reason: from kotlin metadata */
     public final PrivateChannelSideBarActionsViewBinding binding;
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -50,7 +50,7 @@ public final class PrivateChannelSideBarActionsView extends LinearLayout {
         throw new NullPointerException("Missing required view with ID: ".concat(getResources().getResourceName(i)));
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final void m8590a(View.OnClickListener onCallClicked, View.OnClickListener onVideoClicked, View.OnClickListener onNotificationsClicked, View.OnClickListener onSearchClicked, boolean channelIsMuted) {
         Intrinsics3.checkNotNullParameter(onCallClicked, "onCallClicked");
         Intrinsics3.checkNotNullParameter(onVideoClicked, "onVideoClicked");

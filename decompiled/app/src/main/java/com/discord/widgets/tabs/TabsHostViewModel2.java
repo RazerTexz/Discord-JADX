@@ -8,9 +8,9 @@ import java.util.Map;
 import p507d0.p592z.p594d.Intrinsics3;
 import p658rx.functions.Func6;
 
-/* compiled from: TabsHostViewModel.kt */
-/* renamed from: com.discord.widgets.tabs.TabsHostViewModel$Companion$observeStoreState$1, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: com.discord.widgets.tabs.TabsHostViewModel$Companion$observeStoreState$1, reason: use source file name */
+/* JADX INFO: compiled from: TabsHostViewModel.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class TabsHostViewModel2<T1, T2, T3, T4, T5, T6, R> implements Func6<PanelState, NavigationTab, Long, Map<Long, ? extends Guild>, Integer, Map<Long, ? extends Integer>, TabsHostViewModel.StoreState> {
     public static final TabsHostViewModel2 INSTANCE = new TabsHostViewModel2();
 
@@ -19,7 +19,7 @@ public final class TabsHostViewModel2<T1, T2, T3, T4, T5, T6, R> implements Func
         return call2(panelState, navigationTab, l, (Map<Long, Guild>) map, num, (Map<Long, Integer>) map2);
     }
 
-    /* renamed from: call, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
     public final TabsHostViewModel.StoreState call2(PanelState panelState, NavigationTab navigationTab, Long l, Map<Long, Guild> map, Integer num, Map<Long, Integer> map2) {
         Intrinsics3.checkNotNullExpressionValue(panelState, "leftPanelState");
         Intrinsics3.checkNotNullExpressionValue(navigationTab, "selectedTab");

@@ -9,14 +9,14 @@ import com.discord.models.phone.PhoneCountryCode;
 import com.discord.utilities.phone.PhoneUtils;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: PhoneCountryCodeAdapterItem.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: PhoneCountryCodeAdapterItem.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class PhoneCountryCodeAdapterItem extends RecyclerView.ViewHolder {
     private final PhoneCountryCodeAdapter adapter;
     private final WidgetPhoneCountryCodeListItemBinding binding;
 
-    /* compiled from: PhoneCountryCodeAdapterItem.kt */
-    /* renamed from: com.discord.widgets.phone.PhoneCountryCodeAdapterItem$bind$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.phone.PhoneCountryCodeAdapterItem$bind$1 */
+    /* JADX INFO: compiled from: PhoneCountryCodeAdapterItem.kt */
     public static final class ViewOnClickListenerC91151 implements View.OnClickListener {
         public final /* synthetic */ PhoneCountryCode $data;
 

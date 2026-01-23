@@ -2,12 +2,12 @@ package p007b.p225i.p226a.p242c.p257e3;
 
 import p007b.p225i.p226a.p242c.p259f3.NetworkTypeObserver;
 
-/* compiled from: lambda */
-/* renamed from: b.i.a.c.e3.b */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.e3.b */
+/* JADX INFO: compiled from: lambda */
+/* JADX INFO: loaded from: classes3.dex */
 public final /* synthetic */ class C2681b implements NetworkTypeObserver.b {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final /* synthetic */ DefaultBandwidthMeter f6435a;
 
     public /* synthetic */ C2681b(DefaultBandwidthMeter defaultBandwidthMeter) {
@@ -15,7 +15,7 @@ public final /* synthetic */ class C2681b implements NetworkTypeObserver.b {
     }
 
     @Override // p007b.p225i.p226a.p242c.p259f3.NetworkTypeObserver.b
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final void mo2777a(int i) {
         DefaultBandwidthMeter defaultBandwidthMeter = this.f6435a;
         synchronized (defaultBandwidthMeter) {

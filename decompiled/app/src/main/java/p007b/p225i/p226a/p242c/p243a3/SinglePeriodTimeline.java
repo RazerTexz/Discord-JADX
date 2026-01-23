@@ -13,28 +13,28 @@ import p007b.p225i.p226a.p242c.p243a3.p244p0.AdPlaybackState;
 import p007b.p225i.p355b.p357b.ImmutableList2;
 import p007b.p225i.p355b.p357b.RegularImmutableList;
 
-/* compiled from: SinglePeriodTimeline.java */
-/* renamed from: b.i.a.c.a3.l0, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.a3.l0, reason: use source file name */
+/* JADX INFO: compiled from: SinglePeriodTimeline.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class SinglePeriodTimeline extends Timeline {
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public static final Object f5639k = new Object();
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final long f5640l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public final long f5641m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public final boolean f5642n;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     @Nullable
     public final MediaItem2 f5643o;
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     @Nullable
     public final MediaItem2.g f5644p;
 
@@ -65,13 +65,13 @@ public final class SinglePeriodTimeline extends Timeline {
     }
 
     @Override // p007b.p225i.p226a.p242c.Timeline
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public int mo2554b(Object obj) {
         return f5639k.equals(obj) ? 0 : -1;
     }
 
     @Override // p007b.p225i.p226a.p242c.Timeline
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public Timeline.b mo2513g(int i, Timeline.b bVar, boolean z2) {
         AnimatableValueParser.m571t(i, 0, 1);
         Object obj = z2 ? f5639k : null;
@@ -82,20 +82,20 @@ public final class SinglePeriodTimeline extends Timeline {
     }
 
     @Override // p007b.p225i.p226a.p242c.Timeline
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public int mo2555i() {
         return 1;
     }
 
     @Override // p007b.p225i.p226a.p242c.Timeline
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public Object mo2556m(int i) {
         AnimatableValueParser.m571t(i, 0, 1);
         return f5639k;
     }
 
     @Override // p007b.p225i.p226a.p242c.Timeline
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public Timeline.c mo2514o(int i, Timeline.c cVar, long j) {
         AnimatableValueParser.m571t(i, 0, 1);
         cVar.m3342e(Timeline.c.f7345j, this.f5643o, null, -9223372036854775807L, -9223372036854775807L, -9223372036854775807L, this.f5642n, false, this.f5644p, 0L, this.f5641m, 0, 0, 0L);
@@ -103,7 +103,7 @@ public final class SinglePeriodTimeline extends Timeline {
     }
 
     @Override // p007b.p225i.p226a.p242c.Timeline
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public int mo2557p() {
         return 1;
     }

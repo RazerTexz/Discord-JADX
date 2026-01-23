@@ -7,8 +7,8 @@ import kotlin.jvm.functions.Function1;
 import kotlin.jvm.functions.Function2;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: ChatInputViewModel.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: ChatInputViewModel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class ChatInputViewModel$sendMessage$sendMessage$1 extends Lambda implements Function1<Long, Unit> {
     public final /* synthetic */ MessageManager.AttachmentsRequest $attachmentsRequest;
     public final /* synthetic */ MessageContent $messageContent;

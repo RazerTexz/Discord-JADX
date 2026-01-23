@@ -27,15 +27,15 @@ import com.discord.widgets.servers.settings.invites.WidgetServerSettingsInstantI
 import java.util.Arrays;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: WidgetServerSettingsInstantInvitesListItem.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetServerSettingsInstantInvitesListItem.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetServerSettingsInstantInvitesListItem extends MGRecyclerViewHolder<WidgetServerSettingsInstantInvites.Adapter, WidgetServerSettingsInstantInvites.Model.InviteItem> {
     private final WidgetServerSettingsInstantInviteListItemBinding binding;
     private CountDownTimer countdownTimer;
     private String currentInviteCode;
 
-    /* compiled from: WidgetServerSettingsInstantInvitesListItem.kt */
-    /* renamed from: com.discord.widgets.servers.settings.invites.WidgetServerSettingsInstantInvitesListItem$onConfigure$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.settings.invites.WidgetServerSettingsInstantInvitesListItem$onConfigure$1 */
+    /* JADX INFO: compiled from: WidgetServerSettingsInstantInvitesListItem.kt */
     public static final class ViewOnClickListenerC95871 implements View.OnClickListener {
         public final /* synthetic */ WidgetServerSettingsInstantInvites.Model.InviteItem $data;
 
@@ -49,8 +49,8 @@ public final class WidgetServerSettingsInstantInvitesListItem extends MGRecycler
         }
     }
 
-    /* compiled from: WidgetServerSettingsInstantInvitesListItem.kt */
-    /* renamed from: com.discord.widgets.servers.settings.invites.WidgetServerSettingsInstantInvitesListItem$setupExpirationTime$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.settings.invites.WidgetServerSettingsInstantInvitesListItem$setupExpirationTime$1 */
+    /* JADX INFO: compiled from: WidgetServerSettingsInstantInvitesListItem.kt */
     public static final class CountDownTimerC95881 extends CountDownTimer {
         public final /* synthetic */ ModelInvite $invite;
 
@@ -208,7 +208,7 @@ public final class WidgetServerSettingsInstantInvitesListItem extends MGRecycler
         onConfigure2(i, inviteItem);
     }
 
-    /* renamed from: onConfigure, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: onConfigure, reason: avoid collision after fix types in other method */
     public void onConfigure2(int position, WidgetServerSettingsInstantInvites.Model.InviteItem data) {
         String strM7680d;
         Intrinsics3.checkNotNullParameter(data, "data");

@@ -20,14 +20,14 @@ import p507d0.p592z.p594d.Lambda;
 import p637j0.p641k.Func1;
 import p658rx.Observable;
 
-/* compiled from: MGPreferenceSearchHistoryCache.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: MGPreferenceSearchHistoryCache.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class MGPreferenceSearchHistoryCache implements SearchHistoryCache {
     private final int MAX_SEARCH_TARGETS = 10;
     private final int MAX_QUERIES_PER_TARGET = 5;
     private final Persister<LinkedList<TargetHistory>> backingCache = new Persister<>("SEARCH_HISTORY_V2", new LinkedList());
 
-    /* compiled from: MGPreferenceSearchHistoryCache.kt */
+    /* JADX INFO: compiled from: MGPreferenceSearchHistoryCache.kt */
     public static final /* data */ class TargetHistory {
         private final LinkedList<List<QueryNode>> recentQueries;
         private final StoreSearch.SearchTarget searchTarget;
@@ -50,7 +50,7 @@ public final class MGPreferenceSearchHistoryCache implements SearchHistoryCache 
             return targetHistory.copy(searchTarget, linkedList);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final StoreSearch.SearchTarget getSearchTarget() {
             return this.searchTarget;
         }
@@ -101,8 +101,8 @@ public final class MGPreferenceSearchHistoryCache implements SearchHistoryCache 
         }
     }
 
-    /* compiled from: MGPreferenceSearchHistoryCache.kt */
-    /* renamed from: com.discord.utilities.search.history.MGPreferenceSearchHistoryCache$clear$1 */
+    /* JADX INFO: renamed from: com.discord.utilities.search.history.MGPreferenceSearchHistoryCache$clear$1 */
+    /* JADX INFO: compiled from: MGPreferenceSearchHistoryCache.kt */
     public static final class C68991<T, R> implements Func1<LinkedList<TargetHistory>, LinkedList<TargetHistory>> {
         public final /* synthetic */ StoreSearch.SearchTarget $searchTarget;
 
@@ -115,7 +115,7 @@ public final class MGPreferenceSearchHistoryCache implements SearchHistoryCache 
             return call2(linkedList);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final LinkedList<TargetHistory> call2(LinkedList<TargetHistory> linkedList) {
             MGPreferenceSearchHistoryCache mGPreferenceSearchHistoryCache = MGPreferenceSearchHistoryCache.this;
             Intrinsics3.checkNotNullExpressionValue(linkedList, "it");
@@ -123,8 +123,8 @@ public final class MGPreferenceSearchHistoryCache implements SearchHistoryCache 
         }
     }
 
-    /* compiled from: MGPreferenceSearchHistoryCache.kt */
-    /* renamed from: com.discord.utilities.search.history.MGPreferenceSearchHistoryCache$clear$2 */
+    /* JADX INFO: renamed from: com.discord.utilities.search.history.MGPreferenceSearchHistoryCache$clear$2 */
+    /* JADX INFO: compiled from: MGPreferenceSearchHistoryCache.kt */
     public static final class C69002 extends Lambda implements Function1<LinkedList<TargetHistory>, Unit> {
         public C69002() {
             super(1);
@@ -136,7 +136,7 @@ public final class MGPreferenceSearchHistoryCache implements SearchHistoryCache 
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(LinkedList<TargetHistory> linkedList) {
             Persister persisterAccess$getBackingCache$p = MGPreferenceSearchHistoryCache.access$getBackingCache$p(MGPreferenceSearchHistoryCache.this);
             Intrinsics3.checkNotNullExpressionValue(linkedList, "it");
@@ -144,8 +144,8 @@ public final class MGPreferenceSearchHistoryCache implements SearchHistoryCache 
         }
     }
 
-    /* compiled from: MGPreferenceSearchHistoryCache.kt */
-    /* renamed from: com.discord.utilities.search.history.MGPreferenceSearchHistoryCache$getHistory$1 */
+    /* JADX INFO: renamed from: com.discord.utilities.search.history.MGPreferenceSearchHistoryCache$getHistory$1 */
+    /* JADX INFO: compiled from: MGPreferenceSearchHistoryCache.kt */
     public static final class C69011<T, R> implements Func1<LinkedList<TargetHistory>, Collection<? extends List<? extends QueryNode>>> {
         public final /* synthetic */ StoreSearch.SearchTarget $searchTarget;
 
@@ -158,7 +158,7 @@ public final class MGPreferenceSearchHistoryCache implements SearchHistoryCache 
             return call2(linkedList);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final Collection<List<QueryNode>> call2(LinkedList<TargetHistory> linkedList) {
             MGPreferenceSearchHistoryCache mGPreferenceSearchHistoryCache = MGPreferenceSearchHistoryCache.this;
             Intrinsics3.checkNotNullExpressionValue(linkedList, "it");
@@ -166,8 +166,8 @@ public final class MGPreferenceSearchHistoryCache implements SearchHistoryCache 
         }
     }
 
-    /* compiled from: MGPreferenceSearchHistoryCache.kt */
-    /* renamed from: com.discord.utilities.search.history.MGPreferenceSearchHistoryCache$persistQuery$1 */
+    /* JADX INFO: renamed from: com.discord.utilities.search.history.MGPreferenceSearchHistoryCache$persistQuery$1 */
+    /* JADX INFO: compiled from: MGPreferenceSearchHistoryCache.kt */
     public static final class C69021<T, R> implements Func1<LinkedList<TargetHistory>, LinkedList<TargetHistory>> {
         public final /* synthetic */ List $query;
         public final /* synthetic */ StoreSearch.SearchTarget $searchTarget;
@@ -182,7 +182,7 @@ public final class MGPreferenceSearchHistoryCache implements SearchHistoryCache 
             return call2(linkedList);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final LinkedList<TargetHistory> call2(LinkedList<TargetHistory> linkedList) {
             MGPreferenceSearchHistoryCache mGPreferenceSearchHistoryCache = MGPreferenceSearchHistoryCache.this;
             Intrinsics3.checkNotNullExpressionValue(linkedList, "it");
@@ -190,8 +190,8 @@ public final class MGPreferenceSearchHistoryCache implements SearchHistoryCache 
         }
     }
 
-    /* compiled from: MGPreferenceSearchHistoryCache.kt */
-    /* renamed from: com.discord.utilities.search.history.MGPreferenceSearchHistoryCache$persistQuery$2 */
+    /* JADX INFO: renamed from: com.discord.utilities.search.history.MGPreferenceSearchHistoryCache$persistQuery$2 */
+    /* JADX INFO: compiled from: MGPreferenceSearchHistoryCache.kt */
     public static final class C69032 extends Lambda implements Function1<LinkedList<TargetHistory>, Unit> {
         public C69032() {
             super(1);
@@ -203,7 +203,7 @@ public final class MGPreferenceSearchHistoryCache implements SearchHistoryCache 
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(LinkedList<TargetHistory> linkedList) {
             Persister persisterAccess$getBackingCache$p = MGPreferenceSearchHistoryCache.access$getBackingCache$p(MGPreferenceSearchHistoryCache.this);
             Intrinsics3.checkNotNullExpressionValue(linkedList, "it");

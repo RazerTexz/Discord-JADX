@@ -25,8 +25,8 @@ import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: MessageRenderContext.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: MessageRenderContext.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final /* data */ class MessageRenderContext implements BasicRenderContext, UserMentionNode.RenderContext, EmojiNode.RenderContext, ChannelMentionNode.RenderContext, RoleMentionNode.RenderContext, UrlNode.RenderContext, SpoilerNode.RenderContext, TimestampNode.RenderContext {
     private final Function1<Long, Unit> channelMentionOnClick;
     private final Map<Long, String> channelNames;
@@ -43,8 +43,8 @@ public final /* data */ class MessageRenderContext implements BasicRenderContext
     private final Function1<Long, Unit> userMentionOnClick;
     private final Map<Long, String> userNames;
 
-    /* compiled from: MessageRenderContext.kt */
-    /* renamed from: com.discord.utilities.textprocessing.MessageRenderContext$1 */
+    /* JADX INFO: renamed from: com.discord.utilities.textprocessing.MessageRenderContext$1 */
+    /* JADX INFO: compiled from: MessageRenderContext.kt */
     public static final class C69461 extends Lambda implements Function3<Context, String, String, Unit> {
         public static final C69461 INSTANCE = new C69461();
 
@@ -58,7 +58,7 @@ public final /* data */ class MessageRenderContext implements BasicRenderContext
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Context context, String str, String str2) {
             Intrinsics3.checkNotNullParameter(context, "clickContext");
             Intrinsics3.checkNotNullParameter(str, "url");
@@ -66,8 +66,8 @@ public final /* data */ class MessageRenderContext implements BasicRenderContext
         }
     }
 
-    /* compiled from: MessageRenderContext.kt */
-    /* renamed from: com.discord.utilities.textprocessing.MessageRenderContext$2 */
+    /* JADX INFO: renamed from: com.discord.utilities.textprocessing.MessageRenderContext$2 */
+    /* JADX INFO: compiled from: MessageRenderContext.kt */
     public static final class C69472 extends Lambda implements Function1<String, Unit> {
         public static final C69472 INSTANCE = new C69472();
 
@@ -81,7 +81,7 @@ public final /* data */ class MessageRenderContext implements BasicRenderContext
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(String str) {
             Intrinsics3.checkNotNullParameter(str, "it");
         }
@@ -152,6 +152,7 @@ public final /* data */ class MessageRenderContext implements BasicRenderContext
         this.channelMentionOnClick = function14;
     }
 
+    /* JADX WARN: Multi-variable type inference failed */
     public static /* synthetic */ MessageRenderContext copy$default(MessageRenderContext messageRenderContext, Context context, long j, boolean z2, Map map, Map map2, Map map3, int i, Function3 function3, Function1 function1, int i2, int i3, Function1 function12, Function1 function13, Function1 function14, int i4, Object obj) {
         return messageRenderContext.copy((i4 & 1) != 0 ? messageRenderContext.getContext() : context, (i4 & 2) != 0 ? messageRenderContext.getMyId() : j, (i4 & 4) != 0 ? messageRenderContext.getIsAnimationEnabled() : z2, (i4 & 8) != 0 ? messageRenderContext.getUserNames() : map, (i4 & 16) != 0 ? messageRenderContext.getChannelNames() : map2, (i4 & 32) != 0 ? messageRenderContext.getRoles() : map3, (i4 & 64) != 0 ? messageRenderContext.getLinkColorAttrResId() : i, (i4 & 128) != 0 ? messageRenderContext.getOnClickUrl() : function3, (i4 & 256) != 0 ? messageRenderContext.getOnLongPressUrl() : function1, (i4 & 512) != 0 ? messageRenderContext.getSpoilerColorRes() : i2, (i4 & 1024) != 0 ? messageRenderContext.getSpoilerRevealedColorRes() : i3, (i4 & 2048) != 0 ? messageRenderContext.getSpoilerOnClick() : function12, (i4 & 4096) != 0 ? messageRenderContext.getUserMentionOnClick() : function13, (i4 & 8192) != 0 ? messageRenderContext.getChannelMentionOnClick() : function14);
     }
@@ -295,17 +296,21 @@ public final /* data */ class MessageRenderContext implements BasicRenderContext
         return this.userNames;
     }
 
+    /* JADX WARN: Multi-variable type inference failed */
+    /* JADX WARN: Type inference failed for: r0v33 */
+    /* JADX WARN: Type inference failed for: r0v35 */
+    /* JADX WARN: Type inference failed for: r0v5, types: [int] */
     public int hashCode() {
         Context context = getContext();
         int iM3a = (C0002b.m3a(getMyId()) + ((context != null ? context.hashCode() : 0) * 31)) * 31;
         boolean isAnimationEnabled = getIsAnimationEnabled();
-        int i = isAnimationEnabled;
+        ?? r0 = isAnimationEnabled;
         if (isAnimationEnabled) {
-            i = 1;
+            r0 = 1;
         }
-        int i2 = (iM3a + i) * 31;
+        int i = (iM3a + r0) * 31;
         Map<Long, String> userNames = getUserNames();
-        int iHashCode = (i2 + (userNames != null ? userNames.hashCode() : 0)) * 31;
+        int iHashCode = (i + (userNames != null ? userNames.hashCode() : 0)) * 31;
         Map<Long, String> channelNames = getChannelNames();
         int iHashCode2 = (iHashCode + (channelNames != null ? channelNames.hashCode() : 0)) * 31;
         Map<Long, GuildRole> roles = getRoles();
@@ -323,7 +328,7 @@ public final /* data */ class MessageRenderContext implements BasicRenderContext
     }
 
     @Override // com.discord.utilities.textprocessing.node.EmojiNode.RenderContext
-    /* renamed from: isAnimationEnabled, reason: from getter */
+    /* JADX INFO: renamed from: isAnimationEnabled, reason: from getter */
     public boolean getIsAnimationEnabled() {
         return this.isAnimationEnabled;
     }

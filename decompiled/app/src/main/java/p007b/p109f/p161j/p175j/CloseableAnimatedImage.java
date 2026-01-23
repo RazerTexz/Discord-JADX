@@ -4,15 +4,15 @@ import android.graphics.Bitmap;
 import com.facebook.common.references.CloseableReference;
 import p007b.p109f.p161j.p162a.p163a.AnimatedImageResult;
 
-/* compiled from: CloseableAnimatedImage.java */
-/* renamed from: b.f.j.j.a, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.f.j.j.a, reason: use source file name */
+/* JADX INFO: compiled from: CloseableAnimatedImage.java */
+/* JADX INFO: loaded from: classes.dex */
 public class CloseableAnimatedImage extends CloseableImage {
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public AnimatedImageResult f3882l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public boolean f3883m = true;
 
     public CloseableAnimatedImage(AnimatedImageResult animatedImageResult) {
@@ -20,7 +20,7 @@ public class CloseableAnimatedImage extends CloseableImage {
     }
 
     @Override // p007b.p109f.p161j.p175j.CloseableImage
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public synchronized int mo1330c() {
         AnimatedImageResult animatedImageResult;
         animatedImageResult = this.f3882l;
@@ -49,7 +49,7 @@ public class CloseableAnimatedImage extends CloseableImage {
     }
 
     @Override // p007b.p109f.p161j.p175j.CloseableImage
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public boolean mo1331d() {
         return this.f3883m;
     }

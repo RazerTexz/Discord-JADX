@@ -11,21 +11,21 @@ import p007b.p109f.p161j.p169d.ImageDecodeOptions;
 import p007b.p109f.p161j.p175j.CloseableAnimatedImage;
 import p007b.p109f.p161j.p175j.CloseableImage;
 
-/* compiled from: AnimatedImageFactoryImpl.java */
-/* renamed from: b.f.j.a.b.e, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: b.f.j.a.b.e, reason: use source file name */
+/* JADX INFO: compiled from: AnimatedImageFactoryImpl.java */
+/* JADX INFO: loaded from: classes2.dex */
 public class AnimatedImageFactoryImpl implements AnimatedImageFactory {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static AnimatedImageDecoder f3620a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static AnimatedImageDecoder f3621b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final AnimatedDrawableBackendProvider f3622c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final PlatformBitmapFactory f3623d;
 
     static {
@@ -49,7 +49,7 @@ public class AnimatedImageFactoryImpl implements AnimatedImageFactory {
         this.f3623d = platformBitmapFactory;
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final CloseableImage m1194a(ImageDecodeOptions imageDecodeOptions, AnimatedImage animatedImage, Bitmap.Config config) {
         try {
             Objects.requireNonNull(imageDecodeOptions);

@@ -12,15 +12,15 @@ import androidx.annotation.RestrictTo;
 import androidx.room.IMultiInstanceInvalidationService;
 import java.util.HashMap;
 
+/* JADX INFO: loaded from: classes.dex */
 @RestrictTo({RestrictTo.Scope.LIBRARY_GROUP_PREFIX})
-/* loaded from: classes.dex */
 public class MultiInstanceInvalidationService extends Service {
     public int mMaxClientId = 0;
     public final HashMap<Integer, String> mClientNames = new HashMap<>();
     public final RemoteCallbackList<IMultiInstanceInvalidationCallback> mCallbackList = new RemoteCallbackListC05901();
     private final IMultiInstanceInvalidationService.Stub mBinder = new BinderC05912();
 
-    /* renamed from: androidx.room.MultiInstanceInvalidationService$1 */
+    /* JADX INFO: renamed from: androidx.room.MultiInstanceInvalidationService$1 */
     public class RemoteCallbackListC05901 extends RemoteCallbackList<IMultiInstanceInvalidationCallback> {
         public RemoteCallbackListC05901() {
         }
@@ -35,7 +35,7 @@ public class MultiInstanceInvalidationService extends Service {
         }
     }
 
-    /* renamed from: androidx.room.MultiInstanceInvalidationService$2 */
+    /* JADX INFO: renamed from: androidx.room.MultiInstanceInvalidationService$2 */
     public class BinderC05912 extends IMultiInstanceInvalidationService.Stub {
         public BinderC05912() {
         }

@@ -17,9 +17,9 @@ import p507d0.p580t.MapsJVM;
 import p507d0.p592z.p594d.Intrinsics3;
 import p658rx.functions.Func3;
 
-/* compiled from: WidgetServerNotifications.kt */
-/* renamed from: com.discord.widgets.servers.WidgetServerNotifications$Companion$getNotificationOverrides$2, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.servers.WidgetServerNotifications$Companion$getNotificationOverrides$2, reason: use source file name */
+/* JADX INFO: compiled from: WidgetServerNotifications.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetServerNotifications3<T1, T2, T3, R> implements Func3<List<ModelNotificationSettings.ChannelOverride>, Map<Long, ? extends Channel>, GuildChannelsInfo, List<? extends NotificationsOverridesAdapter.Item>> {
     public static final WidgetServerNotifications3 INSTANCE = new WidgetServerNotifications3();
 
@@ -28,7 +28,7 @@ public final class WidgetServerNotifications3<T1, T2, T3, R> implements Func3<Li
         return call2(list, (Map<Long, Channel>) map, guildChannelsInfo);
     }
 
-    /* renamed from: call, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
     public final List<NotificationsOverridesAdapter.Item> call2(List<ModelNotificationSettings.ChannelOverride> list, Map<Long, Channel> map, GuildChannelsInfo guildChannelsInfo) {
         Intrinsics3.checkNotNullExpressionValue(map, "guildChannels");
         List<Channel> sortedVisibleChannels = guildChannelsInfo.getSortedVisibleChannels(map);

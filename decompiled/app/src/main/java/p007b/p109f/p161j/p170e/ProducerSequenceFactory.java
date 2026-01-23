@@ -60,104 +60,104 @@ import p007b.p109f.p161j.p181p.ThumbnailProducer;
 import p007b.p109f.p161j.p183r.FrescoSystrace;
 import p007b.p109f.p161j.p184s.ImageTranscoderFactory;
 
-/* compiled from: ProducerSequenceFactory.java */
-/* renamed from: b.f.j.e.q, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.f.j.e.q, reason: use source file name */
+/* JADX INFO: compiled from: ProducerSequenceFactory.java */
+/* JADX INFO: loaded from: classes.dex */
 public class ProducerSequenceFactory {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final ContentResolver f3840a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final ProducerFactory f3841b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final NetworkFetcher2 f3842c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final boolean f3843d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final boolean f3844e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final ThreadHandoffProducerQueue f3845f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public final boolean f3846g;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public final boolean f3847h;
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public final boolean f3848i;
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final ImageTranscoderFactory f3849j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final boolean f3850k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final boolean f3851l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public final boolean f3852m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     @Nullable
     @VisibleForTesting
     public Producer2<CloseableReference<CloseableImage>> f3853n;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     @Nullable
     public Producer2<EncodedImage2> f3854o;
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     @Nullable
     @VisibleForTesting
     public Producer2<CloseableReference<CloseableImage>> f3855p;
 
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     @Nullable
     @VisibleForTesting
     public Producer2<CloseableReference<CloseableImage>> f3856q;
 
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     @Nullable
     @VisibleForTesting
     public Producer2<CloseableReference<CloseableImage>> f3857r;
 
-    /* renamed from: s */
+    /* JADX INFO: renamed from: s */
     @Nullable
     @VisibleForTesting
     public Producer2<CloseableReference<CloseableImage>> f3858s;
 
-    /* renamed from: t */
+    /* JADX INFO: renamed from: t */
     @Nullable
     @VisibleForTesting
     public Producer2<CloseableReference<CloseableImage>> f3859t;
 
-    /* renamed from: u */
+    /* JADX INFO: renamed from: u */
     @Nullable
     @VisibleForTesting
     public Producer2<CloseableReference<CloseableImage>> f3860u;
 
-    /* renamed from: v */
+    /* JADX INFO: renamed from: v */
     @Nullable
     @VisibleForTesting
     public Producer2<CloseableReference<CloseableImage>> f3861v;
 
-    /* renamed from: w */
+    /* JADX INFO: renamed from: w */
     @Nullable
     @VisibleForTesting
     public Producer2<CloseableReference<CloseableImage>> f3862w;
 
-    /* renamed from: x */
+    /* JADX INFO: renamed from: x */
     @VisibleForTesting
     public Map<Producer2<CloseableReference<CloseableImage>>, Producer2<CloseableReference<CloseableImage>>> f3863x = new HashMap();
 
-    /* renamed from: y */
+    /* JADX INFO: renamed from: y */
     @VisibleForTesting
     public Map<Producer2<CloseableReference<CloseableImage>>, Producer2<CloseableReference<CloseableImage>>> f3864y;
 
@@ -179,7 +179,7 @@ public class ProducerSequenceFactory {
         this.f3852m = z10;
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final synchronized Producer2<EncodedImage2> m1305a() {
         FrescoSystrace.m1527b();
         if (this.f3854o == null) {
@@ -194,7 +194,7 @@ public class ProducerSequenceFactory {
         return this.f3854o;
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final synchronized Producer2<CloseableReference<CloseableImage>> m1306b() {
         if (this.f3860u == null) {
             DataFetchProducer dataFetchProducer = new DataFetchProducer(this.f3841b.f3825k);
@@ -204,7 +204,7 @@ public class ProducerSequenceFactory {
         return this.f3860u;
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public Producer2<CloseableReference<CloseableImage>> m1307c(ImageRequest imageRequest) {
         Producer2<CloseableReference<CloseableImage>> producer2M1311g;
         DelayProducer delayProducer;
@@ -322,7 +322,7 @@ public class ProducerSequenceFactory {
         }
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final synchronized Producer2<CloseableReference<CloseableImage>> m1308d() {
         if (this.f3859t == null) {
             ProducerFactory producerFactory = this.f3841b;
@@ -331,7 +331,7 @@ public class ProducerSequenceFactory {
         return this.f3859t;
     }
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final synchronized Producer2<CloseableReference<CloseableImage>> m1309e() {
         if (this.f3857r == null) {
             ProducerFactory producerFactory = this.f3841b;
@@ -344,7 +344,7 @@ public class ProducerSequenceFactory {
         return this.f3857r;
     }
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final synchronized Producer2<CloseableReference<CloseableImage>> m1310f() {
         if (this.f3858s == null) {
             ProducerFactory producerFactory = this.f3841b;
@@ -353,7 +353,7 @@ public class ProducerSequenceFactory {
         return this.f3858s;
     }
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public final synchronized Producer2<CloseableReference<CloseableImage>> m1311g() {
         if (this.f3856q == null) {
             ProducerFactory producerFactory = this.f3841b;
@@ -362,7 +362,7 @@ public class ProducerSequenceFactory {
         return this.f3856q;
     }
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public final synchronized Producer2<CloseableReference<CloseableImage>> m1312h() {
         if (this.f3862w == null) {
             ProducerFactory producerFactory = this.f3841b;
@@ -371,7 +371,7 @@ public class ProducerSequenceFactory {
         return this.f3862w;
     }
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public final Producer2<CloseableReference<CloseableImage>> m1313i(Producer2<CloseableReference<CloseableImage>> producer2) {
         ProducerFactory producerFactory = this.f3841b;
         MemoryCache<CacheKey, CloseableImage> memoryCache = producerFactory.f3829o;
@@ -391,7 +391,7 @@ public class ProducerSequenceFactory {
         return new BitmapProbeProducer(producerFactory4.f3828n, producerFactory4.f3826l, producerFactory4.f3827m, cacheKeyFactory2, producerFactory4.f3831q, producerFactory4.f3832r, new BitmapMemoryCacheGetProducer(memoryCache2, cacheKeyFactory2, threadHandoffProducer));
     }
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final Producer2<CloseableReference<CloseableImage>> m1314j(Producer2<EncodedImage2> producer2) {
         FrescoSystrace.m1527b();
         ProducerFactory producerFactory = this.f3841b;
@@ -400,20 +400,20 @@ public class ProducerSequenceFactory {
         return producer2M1313i;
     }
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final Producer2<CloseableReference<CloseableImage>> m1315k(Producer2<EncodedImage2> producer2) {
         ProducerFactory producerFactory = this.f3841b;
         return m1316l(producer2, new ThumbnailProducer[]{new LocalExifThumbnailProducer(producerFactory.f3824j.mo1259f(), producerFactory.f3825k, producerFactory.f3815a)});
     }
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final Producer2<CloseableReference<CloseableImage>> m1316l(Producer2<EncodedImage2> producer2, ThumbnailProducer<EncodedImage2>[] thumbnailProducerArr) {
         ThrottlingProducer throttlingProducer = new ThrottlingProducer(5, this.f3841b.f3824j.mo1255b(), this.f3841b.m1304a(new AddImageTransformMetaDataProducer(m1317m(producer2)), true, this.f3849j));
         Objects.requireNonNull(this.f3841b);
         return m1314j(new BranchOnSeparateImagesProducer(this.f3841b.m1304a(new ThumbnailBranchProducer(thumbnailProducerArr), true, this.f3849j), throttlingProducer));
     }
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public final Producer2<EncodedImage2> m1317m(Producer2<EncodedImage2> producer2) {
         DiskCacheWriteProducer diskCacheWriteProducer;
         WebpBitmapFactory webpBitmapFactory = WebpSupportStatus.f3139a;

@@ -30,8 +30,8 @@ import p507d0.p592z.p594d.Lambda;
 import p658rx.Observable;
 import p658rx.Subscription;
 
-/* compiled from: ArchivedThreadsStore.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: ArchivedThreadsStore.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class ArchivedThreadsStore extends StoreV2 {
     private final Dispatcher dispatcher;
     private Map<Tuples2<Long, ThreadListingType>, Subscription> fetchSubscriptions;
@@ -41,10 +41,10 @@ public final class ArchivedThreadsStore extends StoreV2 {
     private final StoreForumPostMessages storeForumPostMessages;
     private final StoreStream storeStream;
 
-    /* compiled from: ArchivedThreadsStore.kt */
+    /* JADX INFO: compiled from: ArchivedThreadsStore.kt */
     public static abstract class ThreadListingState {
 
-        /* compiled from: ArchivedThreadsStore.kt */
+        /* JADX INFO: compiled from: ArchivedThreadsStore.kt */
         public static final class Error extends ThreadListingState {
             public static final Error INSTANCE = new Error();
 
@@ -53,7 +53,7 @@ public final class ArchivedThreadsStore extends StoreV2 {
             }
         }
 
-        /* compiled from: ArchivedThreadsStore.kt */
+        /* JADX INFO: compiled from: ArchivedThreadsStore.kt */
         public static final /* data */ class Listing extends ThreadListingState {
             private final boolean hasMore;
             private final boolean isLoadingMore;
@@ -86,12 +86,12 @@ public final class ArchivedThreadsStore extends StoreV2 {
                 return this.threads;
             }
 
-            /* renamed from: component2, reason: from getter */
+            /* JADX INFO: renamed from: component2, reason: from getter */
             public final boolean getHasMore() {
                 return this.hasMore;
             }
 
-            /* renamed from: component3, reason: from getter */
+            /* JADX INFO: renamed from: component3, reason: from getter */
             public final boolean getIsLoadingMore() {
                 return this.isLoadingMore;
             }
@@ -121,17 +121,23 @@ public final class ArchivedThreadsStore extends StoreV2 {
             }
 
             /* JADX WARN: Multi-variable type inference failed */
+            /* JADX WARN: Type inference failed for: r1v1, types: [int] */
+            /* JADX WARN: Type inference failed for: r1v3 */
+            /* JADX WARN: Type inference failed for: r1v4 */
+            /* JADX WARN: Type inference failed for: r2v0 */
+            /* JADX WARN: Type inference failed for: r2v1, types: [int] */
+            /* JADX WARN: Type inference failed for: r2v2 */
             public int hashCode() {
                 List<Channel> list = this.threads;
                 int iHashCode = (list != null ? list.hashCode() : 0) * 31;
                 boolean z2 = this.hasMore;
-                int i = z2;
-                if (z2 != 0) {
-                    i = 1;
+                ?? r1 = z2;
+                if (z2) {
+                    r1 = 1;
                 }
-                int i2 = (iHashCode + i) * 31;
+                int i = (iHashCode + r1) * 31;
                 boolean z3 = this.isLoadingMore;
-                return i2 + (z3 ? 1 : z3 ? 1 : 0);
+                return i + (z3 ? 1 : z3);
             }
 
             public final boolean isLoadingMore() {
@@ -148,7 +154,7 @@ public final class ArchivedThreadsStore extends StoreV2 {
             }
         }
 
-        /* compiled from: ArchivedThreadsStore.kt */
+        /* JADX INFO: compiled from: ArchivedThreadsStore.kt */
         public static final class Uninitialized extends ThreadListingState {
             public static final Uninitialized INSTANCE = new Uninitialized();
 
@@ -167,17 +173,17 @@ public final class ArchivedThreadsStore extends StoreV2 {
 
     /* JADX WARN: Failed to restore enum class, 'enum' modifier and super class removed */
     /* JADX WARN: Unknown enum class pattern. Please report as an issue! */
-    /* compiled from: ArchivedThreadsStore.kt */
+    /* JADX INFO: compiled from: ArchivedThreadsStore.kt */
     public static final class ThreadListingType {
         private static final /* synthetic */ ThreadListingType[] $VALUES;
         public static final ThreadListingType ALL_ARCHIVED_PRIVATE_THREADS;
         public static final ThreadListingType ALL_ARCHIVED_PUBLIC_THREADS;
 
-        /* renamed from: Companion, reason: from kotlin metadata */
+        /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
         public static final Companion INSTANCE;
         public static final ThreadListingType MY_ARCHIVED_PRIVATE_THREADS;
 
-        /* compiled from: ArchivedThreadsStore.kt */
+        /* JADX INFO: compiled from: ArchivedThreadsStore.kt */
         public static final class ALL_ARCHIVED_PRIVATE_THREADS extends ThreadListingType {
             public ALL_ARCHIVED_PRIVATE_THREADS(String str, int i) {
                 super(str, i, null);
@@ -196,7 +202,7 @@ public final class ArchivedThreadsStore extends StoreV2 {
             }
         }
 
-        /* compiled from: ArchivedThreadsStore.kt */
+        /* JADX INFO: compiled from: ArchivedThreadsStore.kt */
         public static final class ALL_ARCHIVED_PUBLIC_THREADS extends ThreadListingType {
             public ALL_ARCHIVED_PUBLIC_THREADS(String str, int i) {
                 super(str, i, null);
@@ -215,7 +221,7 @@ public final class ArchivedThreadsStore extends StoreV2 {
             }
         }
 
-        /* compiled from: ArchivedThreadsStore.kt */
+        /* JADX INFO: compiled from: ArchivedThreadsStore.kt */
         public static final class Companion {
             private Companion() {
             }
@@ -241,7 +247,7 @@ public final class ArchivedThreadsStore extends StoreV2 {
             }
         }
 
-        /* compiled from: ArchivedThreadsStore.kt */
+        /* JADX INFO: compiled from: ArchivedThreadsStore.kt */
         public static final class MY_ARCHIVED_PRIVATE_THREADS extends ThreadListingType {
             public MY_ARCHIVED_PRIVATE_THREADS(String str, int i) {
                 super(str, i, null);
@@ -284,16 +290,16 @@ public final class ArchivedThreadsStore extends StoreV2 {
         }
     }
 
-    /* compiled from: ArchivedThreadsStore.kt */
-    /* renamed from: com.discord.stores.ArchivedThreadsStore$fetchListing$1 */
+    /* JADX INFO: renamed from: com.discord.stores.ArchivedThreadsStore$fetchListing$1 */
+    /* JADX INFO: compiled from: ArchivedThreadsStore.kt */
     public static final class C56591 extends Lambda implements Function0<Unit> {
         public final /* synthetic */ long $channelId;
         public final /* synthetic */ Function0 $onTerminated;
         public final /* synthetic */ boolean $reload;
         public final /* synthetic */ ThreadListingType $threadListingType;
 
-        /* compiled from: ArchivedThreadsStore.kt */
-        /* renamed from: com.discord.stores.ArchivedThreadsStore$fetchListing$1$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.stores.ArchivedThreadsStore$fetchListing$1$1, reason: invalid class name */
+        /* JADX INFO: compiled from: ArchivedThreadsStore.kt */
         public static final class AnonymousClass1 extends Lambda implements Function1<Subscription, Unit> {
             public final /* synthetic */ Tuples2 $key;
 
@@ -309,20 +315,20 @@ public final class ArchivedThreadsStore extends StoreV2 {
                 return Unit.f27425a;
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2(Subscription subscription) {
                 Intrinsics3.checkNotNullParameter(subscription, Traits.Payment.Type.SUBSCRIPTION);
                 ArchivedThreadsStore.access$getFetchSubscriptions$p(ArchivedThreadsStore.this).put(this.$key, subscription);
             }
         }
 
-        /* compiled from: ArchivedThreadsStore.kt */
-        /* renamed from: com.discord.stores.ArchivedThreadsStore$fetchListing$1$2, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.stores.ArchivedThreadsStore$fetchListing$1$2, reason: invalid class name */
+        /* JADX INFO: compiled from: ArchivedThreadsStore.kt */
         public static final class AnonymousClass2 extends Lambda implements Function1<Error, Unit> {
             public final /* synthetic */ Tuples2 $key;
 
-            /* compiled from: ArchivedThreadsStore.kt */
-            /* renamed from: com.discord.stores.ArchivedThreadsStore$fetchListing$1$2$1, reason: invalid class name */
+            /* JADX INFO: renamed from: com.discord.stores.ArchivedThreadsStore$fetchListing$1$2$1, reason: invalid class name */
+            /* JADX INFO: compiled from: ArchivedThreadsStore.kt */
             public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
                 public AnonymousClass1() {
                     super(0);
@@ -334,7 +340,7 @@ public final class ArchivedThreadsStore extends StoreV2 {
                     return Unit.f27425a;
                 }
 
-                /* renamed from: invoke, reason: avoid collision after fix types in other method */
+                /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
                 public final void invoke2() {
                     ArchivedThreadsStore.access$getListings$p(ArchivedThreadsStore.this).put(AnonymousClass2.this.$key, ThreadListingState.Error.INSTANCE);
                     ArchivedThreadsStore.this.markChanged();
@@ -353,15 +359,15 @@ public final class ArchivedThreadsStore extends StoreV2 {
                 return Unit.f27425a;
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2(Error error) {
                 Intrinsics3.checkNotNullParameter(error, "it");
                 ArchivedThreadsStore.access$getDispatcher$p(ArchivedThreadsStore.this).schedule(new AnonymousClass1());
             }
         }
 
-        /* compiled from: ArchivedThreadsStore.kt */
-        /* renamed from: com.discord.stores.ArchivedThreadsStore$fetchListing$1$3, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.stores.ArchivedThreadsStore$fetchListing$1$3, reason: invalid class name */
+        /* JADX INFO: compiled from: ArchivedThreadsStore.kt */
         public static final class AnonymousClass3 extends Lambda implements Function0<Unit> {
             public AnonymousClass3() {
                 super(0);
@@ -373,7 +379,7 @@ public final class ArchivedThreadsStore extends StoreV2 {
                 return Unit.f27425a;
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2() {
                 Function0 function0 = C56591.this.$onTerminated;
                 if (function0 != null) {
@@ -381,14 +387,14 @@ public final class ArchivedThreadsStore extends StoreV2 {
             }
         }
 
-        /* compiled from: ArchivedThreadsStore.kt */
-        /* renamed from: com.discord.stores.ArchivedThreadsStore$fetchListing$1$4, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.stores.ArchivedThreadsStore$fetchListing$1$4, reason: invalid class name */
+        /* JADX INFO: compiled from: ArchivedThreadsStore.kt */
         public static final class AnonymousClass4 extends Lambda implements Function1<ThreadListing, Unit> {
             public final /* synthetic */ List $currentThreads;
             public final /* synthetic */ Tuples2 $key;
 
-            /* compiled from: ArchivedThreadsStore.kt */
-            /* renamed from: com.discord.stores.ArchivedThreadsStore$fetchListing$1$4$1, reason: invalid class name */
+            /* JADX INFO: renamed from: com.discord.stores.ArchivedThreadsStore$fetchListing$1$4$1, reason: invalid class name */
+            /* JADX INFO: compiled from: ArchivedThreadsStore.kt */
             public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
                 public final /* synthetic */ ThreadListing $result;
 
@@ -404,7 +410,7 @@ public final class ArchivedThreadsStore extends StoreV2 {
                     return Unit.f27425a;
                 }
 
-                /* renamed from: invoke, reason: avoid collision after fix types in other method */
+                /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
                 public final void invoke2() {
                     Iterator<T> it = this.$result.m8258c().iterator();
                     while (it.hasNext()) {
@@ -434,7 +440,7 @@ public final class ArchivedThreadsStore extends StoreV2 {
                 return Unit.f27425a;
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2(ThreadListing threadListing) {
                 Intrinsics3.checkNotNullParameter(threadListing, "result");
                 ArchivedThreadsStore.access$getDispatcher$p(ArchivedThreadsStore.this).schedule(new AnonymousClass1(threadListing));
@@ -456,7 +462,7 @@ public final class ArchivedThreadsStore extends StoreV2 {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             Tuples2 tuples2 = new Tuples2(Long.valueOf(this.$channelId), this.$threadListingType);
             ThreadListingState threadListingState = (ThreadListingState) ArchivedThreadsStore.access$getListings$p(ArchivedThreadsStore.this).get(tuples2);
@@ -472,8 +478,8 @@ public final class ArchivedThreadsStore extends StoreV2 {
         }
     }
 
-    /* compiled from: ArchivedThreadsStore.kt */
-    /* renamed from: com.discord.stores.ArchivedThreadsStore$loadAndObserveThreadListing$1 */
+    /* JADX INFO: renamed from: com.discord.stores.ArchivedThreadsStore$loadAndObserveThreadListing$1 */
+    /* JADX INFO: compiled from: ArchivedThreadsStore.kt */
     public static final class C56601 extends Lambda implements Function0<ThreadListingState> {
         public final /* synthetic */ long $channelId;
         public final /* synthetic */ ThreadListingType $threadListingType;
@@ -498,8 +504,8 @@ public final class ArchivedThreadsStore extends StoreV2 {
         }
     }
 
-    /* compiled from: ArchivedThreadsStore.kt */
-    /* renamed from: com.discord.stores.ArchivedThreadsStore$observeGuildForumThreadListing$1 */
+    /* JADX INFO: renamed from: com.discord.stores.ArchivedThreadsStore$observeGuildForumThreadListing$1 */
+    /* JADX INFO: compiled from: ArchivedThreadsStore.kt */
     public static final class C56611 extends Lambda implements Function0<ThreadListingState> {
         public final /* synthetic */ long $channelId;
 
@@ -573,6 +579,7 @@ public final class ArchivedThreadsStore extends StoreV2 {
         archivedThreadsStore.fetchGuildForumThreadListing(j, z2, function0);
     }
 
+    /* JADX WARN: Multi-variable type inference failed */
     public static /* synthetic */ void fetchListing$default(ArchivedThreadsStore archivedThreadsStore, long j, ThreadListingType threadListingType, boolean z2, Function0 function0, int i, Object obj) {
         boolean z3 = (i & 4) != 0 ? false : z2;
         if ((i & 8) != 0) {

@@ -41,8 +41,8 @@ import p507d0.p592z.p594d.FunctionReferenceImpl;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: ViewInviteSettingsSheet.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: ViewInviteSettingsSheet.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class ViewInviteSettingsSheet extends NestedScrollView {
     private final ViewGuildInviteBottomSheetBinding binding;
     private final ChannelsSpinnerAdapter channelsSpinnerAdapter;
@@ -51,8 +51,8 @@ public final class ViewInviteSettingsSheet extends NestedScrollView {
     private Function1<? super ModelInvite.Settings, Unit> updateSettings;
     public WidgetGuildInviteShareViewModel viewModel;
 
-    /* compiled from: ViewInviteSettingsSheet.kt */
-    /* renamed from: com.discord.widgets.guilds.invite.ViewInviteSettingsSheet$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.guilds.invite.ViewInviteSettingsSheet$1 */
+    /* JADX INFO: compiled from: ViewInviteSettingsSheet.kt */
     public static final class C86391 extends Lambda implements Function1<Integer, CharSequence> {
         public C86391() {
             super(1);
@@ -70,8 +70,8 @@ public final class ViewInviteSettingsSheet extends NestedScrollView {
         }
     }
 
-    /* compiled from: ViewInviteSettingsSheet.kt */
-    /* renamed from: com.discord.widgets.guilds.invite.ViewInviteSettingsSheet$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.guilds.invite.ViewInviteSettingsSheet$2 */
+    /* JADX INFO: compiled from: ViewInviteSettingsSheet.kt */
     public static final /* synthetic */ class C86402 extends FunctionReferenceImpl implements Function1<Integer, String> {
         public C86402(ViewInviteSettingsSheet viewInviteSettingsSheet) {
             super(1, viewInviteSettingsSheet, ViewInviteSettingsSheet.class, "getMaxUsesString", "getMaxUsesString(I)Ljava/lang/String;", 0);
@@ -87,7 +87,7 @@ public final class ViewInviteSettingsSheet extends NestedScrollView {
         }
     }
 
-    /* compiled from: ViewInviteSettingsSheet.kt */
+    /* JADX INFO: compiled from: ViewInviteSettingsSheet.kt */
     public static final class ChannelsSpinnerAdapter extends ArrayAdapter<Channel> {
         private Channel[] channels;
 
@@ -154,8 +154,8 @@ public final class ViewInviteSettingsSheet extends NestedScrollView {
         }
     }
 
-    /* compiled from: ViewInviteSettingsSheet.kt */
-    /* renamed from: com.discord.widgets.guilds.invite.ViewInviteSettingsSheet$configureUi$10 */
+    /* JADX INFO: renamed from: com.discord.widgets.guilds.invite.ViewInviteSettingsSheet$configureUi$10 */
+    /* JADX INFO: compiled from: ViewInviteSettingsSheet.kt */
     public static final class ViewOnClickListenerC864110 implements View.OnClickListener {
         public final /* synthetic */ WidgetInviteModel $data;
 
@@ -177,8 +177,8 @@ public final class ViewInviteSettingsSheet extends NestedScrollView {
         }
     }
 
-    /* compiled from: ViewInviteSettingsSheet.kt */
-    /* renamed from: com.discord.widgets.guilds.invite.ViewInviteSettingsSheet$configureUi$4 */
+    /* JADX INFO: renamed from: com.discord.widgets.guilds.invite.ViewInviteSettingsSheet$configureUi$4 */
+    /* JADX INFO: compiled from: ViewInviteSettingsSheet.kt */
     public static final class C86424 implements RadioGroup.OnCheckedChangeListener {
         public C86424() {
         }
@@ -191,8 +191,8 @@ public final class ViewInviteSettingsSheet extends NestedScrollView {
         }
     }
 
-    /* compiled from: ViewInviteSettingsSheet.kt */
-    /* renamed from: com.discord.widgets.guilds.invite.ViewInviteSettingsSheet$configureUi$8 */
+    /* JADX INFO: renamed from: com.discord.widgets.guilds.invite.ViewInviteSettingsSheet$configureUi$8 */
+    /* JADX INFO: compiled from: ViewInviteSettingsSheet.kt */
     public static final class C86438 implements RadioGroup.OnCheckedChangeListener {
         public C86438() {
         }
@@ -205,8 +205,8 @@ public final class ViewInviteSettingsSheet extends NestedScrollView {
         }
     }
 
-    /* compiled from: ViewInviteSettingsSheet.kt */
-    /* renamed from: com.discord.widgets.guilds.invite.ViewInviteSettingsSheet$configureUi$9 */
+    /* JADX INFO: renamed from: com.discord.widgets.guilds.invite.ViewInviteSettingsSheet$configureUi$9 */
+    /* JADX INFO: compiled from: ViewInviteSettingsSheet.kt */
     public static final class ViewOnClickListenerC86449 implements View.OnClickListener {
         public ViewOnClickListenerC86449() {
         }
@@ -228,8 +228,8 @@ public final class ViewInviteSettingsSheet extends NestedScrollView {
         }
     }
 
-    /* compiled from: ViewInviteSettingsSheet.kt */
-    /* renamed from: com.discord.widgets.guilds.invite.ViewInviteSettingsSheet$setOnItemSelected$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.guilds.invite.ViewInviteSettingsSheet$setOnItemSelected$1 */
+    /* JADX INFO: compiled from: ViewInviteSettingsSheet.kt */
     public static final class C86451 implements AdapterView.OnItemSelectedListener {
         public C86451() {
         }

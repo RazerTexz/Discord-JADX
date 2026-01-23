@@ -7,9 +7,9 @@ import kotlin.jvm.functions.Function1;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetForumBrowserViewModel.kt */
-/* renamed from: com.discord.widgets.forums.WidgetForumBrowserViewModel$setupListViewState$archivedPostItems$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.forums.WidgetForumBrowserViewModel$setupListViewState$archivedPostItems$1, reason: use source file name */
+/* JADX INFO: compiled from: WidgetForumBrowserViewModel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetForumBrowserViewModel4 extends Lambda implements Function1<Channel, ForumBrowserItem.PostItem> {
     public final /* synthetic */ WidgetForumBrowserViewModel.C83511 $convertChannelToPostItem$1;
 
@@ -24,7 +24,7 @@ public final class WidgetForumBrowserViewModel4 extends Lambda implements Functi
         return invoke2(channel);
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final ForumBrowserItem.PostItem invoke2(Channel channel) {
         Intrinsics3.checkNotNullParameter(channel, "channel");
         return this.$convertChannelToPostItem$1.invoke2(channel);

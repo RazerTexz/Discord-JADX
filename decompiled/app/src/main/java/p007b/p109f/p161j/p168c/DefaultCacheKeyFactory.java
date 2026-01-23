@@ -5,25 +5,25 @@ import com.facebook.imagepipeline.request.ImageRequest;
 import p007b.p109f.p111b.p112a.SimpleCacheKey;
 import p007b.p109f.p161j.p182q.Postprocessor;
 
-/* compiled from: DefaultCacheKeyFactory.java */
-/* renamed from: b.f.j.c.n, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.f.j.c.n, reason: use source file name */
+/* JADX INFO: compiled from: DefaultCacheKeyFactory.java */
+/* JADX INFO: loaded from: classes.dex */
 public class DefaultCacheKeyFactory implements CacheKeyFactory {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static DefaultCacheKeyFactory f3684a;
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public CacheKey m1229a(ImageRequest imageRequest, Object obj) {
         return new BitmapMemoryCacheKey(imageRequest.f19585c.toString(), imageRequest.f19592j, imageRequest.f19593k, imageRequest.f19591i, null, null, obj);
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public CacheKey m1230b(ImageRequest imageRequest, Object obj) {
         return new SimpleCacheKey(imageRequest.f19585c.toString());
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public CacheKey m1231c(ImageRequest imageRequest, Object obj) {
         CacheKey cacheKey;
         String name;

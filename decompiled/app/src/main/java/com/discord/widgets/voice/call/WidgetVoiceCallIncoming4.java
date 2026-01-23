@@ -14,9 +14,9 @@ import kotlin.jvm.functions.Function1;
 import p507d0.p592z.p594d.FunctionReferenceImpl;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: WidgetVoiceCallIncoming.kt */
-/* renamed from: com.discord.widgets.voice.call.WidgetVoiceCallIncoming$binding$2, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: com.discord.widgets.voice.call.WidgetVoiceCallIncoming$binding$2, reason: use source file name */
+/* JADX INFO: compiled from: WidgetVoiceCallIncoming.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* synthetic */ class WidgetVoiceCallIncoming4 extends FunctionReferenceImpl implements Function1<View, WidgetVoiceCallIncomingBinding> {
     public static final WidgetVoiceCallIncoming4 INSTANCE = new WidgetVoiceCallIncoming4();
 
@@ -29,7 +29,7 @@ public final /* synthetic */ class WidgetVoiceCallIncoming4 extends FunctionRefe
         return invoke2(view);
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final WidgetVoiceCallIncomingBinding invoke2(View view) {
         Intrinsics3.checkNotNullParameter(view, "p1");
         int i = C5419R.id.incoming_call_accept_alt_container;

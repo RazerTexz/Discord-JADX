@@ -8,16 +8,16 @@ import p007b.p100d.p104b.p105a.outline;
 import p507d0.p579g0.Strings4;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: HasSuggestion.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: HasSuggestion.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final /* data */ class HasSuggestion implements SearchSuggestion {
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private final SearchSuggestion.Category category;
     private final HasNode2 hasAnswerOption;
 
-    /* compiled from: HasSuggestion.kt */
+    /* JADX INFO: compiled from: HasSuggestion.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -47,7 +47,7 @@ public final /* data */ class HasSuggestion implements SearchSuggestion {
         return hasSuggestion.copy(hasNode2);
     }
 
-    /* renamed from: component1, reason: from getter */
+    /* JADX INFO: renamed from: component1, reason: from getter */
     public final HasNode2 getHasAnswerOption() {
         return this.hasAnswerOption;
     }

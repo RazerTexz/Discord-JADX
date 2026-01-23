@@ -7,12 +7,12 @@ import com.yalantis.ucrop.view.GestureCropImageView;
 import com.yalantis.ucrop.view.widget.AspectRatioTextView;
 import java.util.Iterator;
 
-/* compiled from: UCropActivity.java */
-/* renamed from: b.q.a.b, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.q.a.b, reason: use source file name */
+/* JADX INFO: compiled from: UCropActivity.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class UCropActivity2 implements View.OnClickListener {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final /* synthetic */ UCropActivity f14389j;
 
     public UCropActivity2(UCropActivity uCropActivity) {

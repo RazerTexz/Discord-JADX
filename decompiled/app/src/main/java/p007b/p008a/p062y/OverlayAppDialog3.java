@@ -6,12 +6,12 @@ import kotlin.jvm.functions.Function1;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: OverlayAppDialog.kt */
-/* renamed from: b.a.y.m, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: b.a.y.m, reason: use source file name */
+/* JADX INFO: compiled from: OverlayAppDialog.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class OverlayAppDialog3 extends Lambda implements Function1<OverlayDialog, Unit> {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static final OverlayAppDialog3 f2048j = new OverlayAppDialog3();
 
     public OverlayAppDialog3() {

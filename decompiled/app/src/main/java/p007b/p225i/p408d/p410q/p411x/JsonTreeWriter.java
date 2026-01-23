@@ -12,28 +12,28 @@ import p007b.p225i.p408d.JsonArray;
 import p007b.p225i.p408d.JsonNull;
 import p007b.p225i.p408d.JsonPrimitive;
 
-/* compiled from: JsonTreeWriter.java */
-/* renamed from: b.i.d.q.x.b, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.d.q.x.b, reason: use source file name */
+/* JADX INFO: compiled from: JsonTreeWriter.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class JsonTreeWriter extends JsonWriter {
 
-    /* renamed from: u */
+    /* JADX INFO: renamed from: u */
     public static final Writer f13136u = new a();
 
-    /* renamed from: v */
+    /* JADX INFO: renamed from: v */
     public static final JsonPrimitive f13137v = new JsonPrimitive("closed");
 
-    /* renamed from: w */
+    /* JADX INFO: renamed from: w */
     public final List<JsonElement> f13138w;
 
-    /* renamed from: x */
+    /* JADX INFO: renamed from: x */
     public String f13139x;
 
-    /* renamed from: y */
+    /* JADX INFO: renamed from: y */
     public JsonElement f13140y;
 
-    /* compiled from: JsonTreeWriter.java */
-    /* renamed from: b.i.d.q.x.b$a */
+    /* JADX INFO: renamed from: b.i.d.q.x.b$a */
+    /* JADX INFO: compiled from: JsonTreeWriter.java */
     public class a extends Writer {
         @Override // java.io.Writer, java.io.Closeable, java.lang.AutoCloseable
         public void close() throws IOException {
@@ -58,14 +58,14 @@ public final class JsonTreeWriter extends JsonWriter {
     }
 
     @Override // com.google.gson.stream.JsonWriter
-    /* renamed from: A */
+    /* JADX INFO: renamed from: A */
     public JsonWriter mo6892A(long j) throws IOException {
         m6899O(new JsonPrimitive(Long.valueOf(j)));
         return this;
     }
 
     @Override // com.google.gson.stream.JsonWriter
-    /* renamed from: C */
+    /* JADX INFO: renamed from: C */
     public JsonWriter mo6893C(Boolean bool) throws IOException {
         if (bool == null) {
             m6899O(JsonNull.f13106a);
@@ -76,7 +76,7 @@ public final class JsonTreeWriter extends JsonWriter {
     }
 
     @Override // com.google.gson.stream.JsonWriter
-    /* renamed from: D */
+    /* JADX INFO: renamed from: D */
     public JsonWriter mo6894D(Number number) throws IOException {
         if (number == null) {
             m6899O(JsonNull.f13106a);
@@ -93,7 +93,7 @@ public final class JsonTreeWriter extends JsonWriter {
     }
 
     @Override // com.google.gson.stream.JsonWriter
-    /* renamed from: H */
+    /* JADX INFO: renamed from: H */
     public JsonWriter mo6895H(String str) throws IOException {
         if (str == null) {
             m6899O(JsonNull.f13106a);
@@ -104,13 +104,13 @@ public final class JsonTreeWriter extends JsonWriter {
     }
 
     @Override // com.google.gson.stream.JsonWriter
-    /* renamed from: I */
+    /* JADX INFO: renamed from: I */
     public JsonWriter mo6896I(boolean z2) throws IOException {
         m6899O(new JsonPrimitive(Boolean.valueOf(z2)));
         return this;
     }
 
-    /* renamed from: L */
+    /* JADX INFO: renamed from: L */
     public JsonElement m6897L() {
         if (this.f13138w.isEmpty()) {
             return this.f13140y;
@@ -120,12 +120,12 @@ public final class JsonTreeWriter extends JsonWriter {
         throw new IllegalStateException(sbM833U.toString());
     }
 
-    /* renamed from: N */
+    /* JADX INFO: renamed from: N */
     public final JsonElement m6898N() {
         return this.f13138w.get(r0.size() - 1);
     }
 
-    /* renamed from: O */
+    /* JADX INFO: renamed from: O */
     public final void m6899O(JsonElement jsonElement) {
         if (this.f13139x != null) {
             if (!(jsonElement instanceof JsonNull) || this.f21662t) {
@@ -147,7 +147,7 @@ public final class JsonTreeWriter extends JsonWriter {
     }
 
     @Override // com.google.gson.stream.JsonWriter
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public JsonWriter mo6900b() throws IOException {
         JsonArray jsonArray = new JsonArray();
         m6899O(jsonArray);
@@ -156,7 +156,7 @@ public final class JsonTreeWriter extends JsonWriter {
     }
 
     @Override // com.google.gson.stream.JsonWriter
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public JsonWriter mo6901c() throws IOException {
         JsonObject jsonObject = new JsonObject();
         m6899O(jsonObject);
@@ -173,7 +173,7 @@ public final class JsonTreeWriter extends JsonWriter {
     }
 
     @Override // com.google.gson.stream.JsonWriter
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public JsonWriter mo6902e() throws IOException {
         if (this.f13138w.isEmpty() || this.f13139x != null) {
             throw new IllegalStateException();
@@ -186,7 +186,7 @@ public final class JsonTreeWriter extends JsonWriter {
     }
 
     @Override // com.google.gson.stream.JsonWriter
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public JsonWriter mo6903f() throws IOException {
         if (this.f13138w.isEmpty() || this.f13139x != null) {
             throw new IllegalStateException();
@@ -203,7 +203,7 @@ public final class JsonTreeWriter extends JsonWriter {
     }
 
     @Override // com.google.gson.stream.JsonWriter
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public JsonWriter mo6904n(String str) throws IOException {
         if (this.f13138w.isEmpty() || this.f13139x != null) {
             throw new IllegalStateException();
@@ -216,7 +216,7 @@ public final class JsonTreeWriter extends JsonWriter {
     }
 
     @Override // com.google.gson.stream.JsonWriter
-    /* renamed from: s */
+    /* JADX INFO: renamed from: s */
     public JsonWriter mo6905s() throws IOException {
         m6899O(JsonNull.f13106a);
         return this;

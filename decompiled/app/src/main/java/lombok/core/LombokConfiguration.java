@@ -11,14 +11,14 @@ import lombok.core.configuration.ConfigurationResolver;
 import lombok.core.configuration.ConfigurationResolverFactory;
 import lombok.core.configuration.FileSystemSourceCache;
 
-/* loaded from: discord-126021.apk:lombok/core/LombokConfiguration.SCL.lombok */
+/* JADX INFO: loaded from: discord-126021.apk:lombok/core/LombokConfiguration.SCL.lombok */
 public class LombokConfiguration {
     private static final ConfigurationResolver NULL_RESOLVER = new C128131();
     private static FileSystemSourceCache cache = new FileSystemSourceCache();
     private static ConfigurationResolverFactory configurationResolverFactory;
 
-    /* renamed from: lombok.core.LombokConfiguration$1 */
-    /* loaded from: discord-126021.apk:lombok/core/LombokConfiguration$1.SCL.lombok */
+    /* JADX INFO: renamed from: lombok.core.LombokConfiguration$1 */
+    /* JADX INFO: loaded from: discord-126021.apk:lombok/core/LombokConfiguration$1.SCL.lombok */
     class C128131 implements ConfigurationResolver {
         C128131() {
         }
@@ -48,8 +48,8 @@ public class LombokConfiguration {
         return cache;
     }
 
-    /* renamed from: lombok.core.LombokConfiguration$2 */
-    /* loaded from: discord-126021.apk:lombok/core/LombokConfiguration$2.SCL.lombok */
+    /* JADX INFO: renamed from: lombok.core.LombokConfiguration$2 */
+    /* JADX INFO: loaded from: discord-126021.apk:lombok/core/LombokConfiguration$2.SCL.lombok */
     class C128142 implements ConfigurationResolverFactory {
         C128142() {
         }
@@ -75,8 +75,8 @@ public class LombokConfiguration {
         return (T) configurationResolverFactory.createResolver(uri).resolve(configurationKey);
     }
 
-    /* renamed from: lombok.core.LombokConfiguration$3 */
-    /* loaded from: discord-126021.apk:lombok/core/LombokConfiguration$3.SCL.lombok */
+    /* JADX INFO: renamed from: lombok.core.LombokConfiguration$3 */
+    /* JADX INFO: loaded from: discord-126021.apk:lombok/core/LombokConfiguration$3.SCL.lombok */
     class C128153 implements ConfigurationResolverFactory {
         private final /* synthetic */ ConfigurationFileToSource val$fileToSource;
 

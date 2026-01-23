@@ -28,8 +28,8 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 import p658rx.Observable;
 
-/* compiled from: StoreApplicationStreaming.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: StoreApplicationStreaming.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class StoreApplicationStreaming extends StoreV2 {
     private ActiveApplicationStream activeApplicationStream;
     private final ArrayDeque<String> breadCrumbs;
@@ -46,12 +46,12 @@ public final class StoreApplicationStreaming extends StoreV2 {
     private final StoreUser userStore;
     private final StoreVoiceChannelSelected voiceChannelSelectedStore;
 
-    /* compiled from: StoreApplicationStreaming.kt */
+    /* JADX INFO: compiled from: StoreApplicationStreaming.kt */
     public static final /* data */ class ActiveApplicationStream {
         private final State state;
         private final ModelApplicationStream stream;
 
-        /* compiled from: StoreApplicationStreaming.kt */
+        /* JADX INFO: compiled from: StoreApplicationStreaming.kt */
         public enum State {
             CONNECTING,
             ACTIVE,
@@ -65,7 +65,7 @@ public final class StoreApplicationStreaming extends StoreV2 {
             private static final List<State> ACTIVE_STATES;
             private static final Companion Companion;
 
-            /* compiled from: StoreApplicationStreaming.kt */
+            /* JADX INFO: compiled from: StoreApplicationStreaming.kt */
             public static final class Companion {
                 private Companion() {
                 }
@@ -114,12 +114,12 @@ public final class StoreApplicationStreaming extends StoreV2 {
             return activeApplicationStream.copy(state, modelApplicationStream);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final State getState() {
             return this.state;
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final ModelApplicationStream getStream() {
             return this.stream;
         }
@@ -166,7 +166,7 @@ public final class StoreApplicationStreaming extends StoreV2 {
         }
     }
 
-    /* compiled from: StoreApplicationStreaming.kt */
+    /* JADX INFO: compiled from: StoreApplicationStreaming.kt */
     public static final class StreamViewerTracker {
         private final Map<String, Integer> maxViewersByStream = new HashMap();
 
@@ -191,8 +191,8 @@ public final class StoreApplicationStreaming extends StoreV2 {
         }
     }
 
-    /* compiled from: StoreApplicationStreaming.kt */
-    /* renamed from: com.discord.stores.StoreApplicationStreaming$createStream$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreApplicationStreaming$createStream$1 */
+    /* JADX INFO: compiled from: StoreApplicationStreaming.kt */
     public static final class C57441 extends Lambda implements Function0<Unit> {
         public final /* synthetic */ long $channelId;
         public final /* synthetic */ Long $guildId;
@@ -212,7 +212,7 @@ public final class StoreApplicationStreaming extends StoreV2 {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             ActiveApplicationStream.State state;
             ActiveApplicationStream.State state2;
@@ -249,8 +249,8 @@ public final class StoreApplicationStreaming extends StoreV2 {
         }
     }
 
-    /* compiled from: StoreApplicationStreaming.kt */
-    /* renamed from: com.discord.stores.StoreApplicationStreaming$observeActiveStream$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreApplicationStreaming$observeActiveStream$1 */
+    /* JADX INFO: compiled from: StoreApplicationStreaming.kt */
     public static final class C57451 extends Lambda implements Function0<ActiveApplicationStream> {
         public C57451() {
             super(0);
@@ -268,8 +268,8 @@ public final class StoreApplicationStreaming extends StoreV2 {
         }
     }
 
-    /* compiled from: StoreApplicationStreaming.kt */
-    /* renamed from: com.discord.stores.StoreApplicationStreaming$observeStreamSpectators$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreApplicationStreaming$observeStreamSpectators$1 */
+    /* JADX INFO: compiled from: StoreApplicationStreaming.kt */
     public static final class C57461 extends Lambda implements Function0<Map<String, ? extends List<? extends Long>>> {
         public C57461() {
             super(0);
@@ -281,14 +281,14 @@ public final class StoreApplicationStreaming extends StoreV2 {
         }
 
         @Override // kotlin.jvm.functions.Function0
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final Map<String, ? extends List<? extends Long>> invoke2() {
             return StoreApplicationStreaming.access$getStreamSpectatorsSnapshot$p(StoreApplicationStreaming.this);
         }
     }
 
-    /* compiled from: StoreApplicationStreaming.kt */
-    /* renamed from: com.discord.stores.StoreApplicationStreaming$observeStreamsByUser$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreApplicationStreaming$observeStreamsByUser$1 */
+    /* JADX INFO: compiled from: StoreApplicationStreaming.kt */
     public static final class C57471 extends Lambda implements Function0<Map<Long, ? extends ModelApplicationStream>> {
         public C57471() {
             super(0);
@@ -300,14 +300,14 @@ public final class StoreApplicationStreaming extends StoreV2 {
         }
 
         @Override // kotlin.jvm.functions.Function0
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final Map<Long, ? extends ModelApplicationStream> invoke2() {
             return StoreApplicationStreaming.this.getStreamsByUser();
         }
     }
 
-    /* compiled from: StoreApplicationStreaming.kt */
-    /* renamed from: com.discord.stores.StoreApplicationStreaming$observeStreamsForGuild$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreApplicationStreaming$observeStreamsForGuild$1 */
+    /* JADX INFO: compiled from: StoreApplicationStreaming.kt */
     public static final class C57481 extends Lambda implements Function0<Map<Long, ? extends ModelApplicationStream>> {
         public final /* synthetic */ long $guildId;
 
@@ -323,7 +323,7 @@ public final class StoreApplicationStreaming extends StoreV2 {
         }
 
         @Override // kotlin.jvm.functions.Function0
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final Map<Long, ? extends ModelApplicationStream> invoke2() {
             Map mapAccess$getStreamsByUserSnapshot$p = StoreApplicationStreaming.access$getStreamsByUserSnapshot$p(StoreApplicationStreaming.this);
             LinkedHashMap linkedHashMap = new LinkedHashMap();
@@ -337,8 +337,8 @@ public final class StoreApplicationStreaming extends StoreV2 {
         }
     }
 
-    /* compiled from: StoreApplicationStreaming.kt */
-    /* renamed from: com.discord.stores.StoreApplicationStreaming$observeStreamsForUser$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreApplicationStreaming$observeStreamsForUser$1 */
+    /* JADX INFO: compiled from: StoreApplicationStreaming.kt */
     public static final class C57491 extends Lambda implements Function0<ModelApplicationStream> {
         public final /* synthetic */ long $userId;
 
@@ -360,8 +360,8 @@ public final class StoreApplicationStreaming extends StoreV2 {
         }
     }
 
-    /* compiled from: StoreApplicationStreaming.kt */
-    /* renamed from: com.discord.stores.StoreApplicationStreaming$stopStream$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreApplicationStreaming$stopStream$1 */
+    /* JADX INFO: compiled from: StoreApplicationStreaming.kt */
     public static final class C57501 extends Lambda implements Function0<Unit> {
         public final /* synthetic */ String $streamKey;
 
@@ -377,14 +377,14 @@ public final class StoreApplicationStreaming extends StoreV2 {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             StoreApplicationStreaming.access$stopStreamInternal(StoreApplicationStreaming.this, this.$streamKey);
         }
     }
 
-    /* compiled from: StoreApplicationStreaming.kt */
-    /* renamed from: com.discord.stores.StoreApplicationStreaming$targetStream$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreApplicationStreaming$targetStream$1 */
+    /* JADX INFO: compiled from: StoreApplicationStreaming.kt */
     public static final class C57511 extends Lambda implements Function0<Unit> {
         public final /* synthetic */ boolean $force;
         public final /* synthetic */ String $streamKey;
@@ -402,7 +402,7 @@ public final class StoreApplicationStreaming extends StoreV2 {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             ActiveApplicationStream.State state;
             ModelApplicationStream stream;
@@ -524,7 +524,7 @@ public final class StoreApplicationStreaming extends StoreV2 {
     }
 
     @Store3
-    /* renamed from: getActiveApplicationStreamKeyInternal$app_productionGoogleRelease */
+    /* JADX INFO: renamed from: getActiveApplicationStreamKeyInternal$app_productionGoogleRelease */
     public final String m8507xb25617db() {
         ModelApplicationStream stream;
         ActiveApplicationStream activeApplicationStream = this.activeApplicationStream;

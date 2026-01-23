@@ -68,59 +68,59 @@ import p507d0.p592z.p594d.Lambda;
 import p507d0.p592z.p594d.PropertyReference1Impl;
 import p507d0.p592z.p594d.Reflection2;
 
-/* compiled from: KClassImpl.kt */
-/* renamed from: d0.e0.p.d.h, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.h, reason: use source file name */
+/* JADX INFO: compiled from: KClassImpl.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class KClassImpl<T> extends KDeclarationContainerImpl implements KClass<T>, KTypeParameterOwnerImpl {
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public final ReflectProperties.b<KClassImpl<T>.a> f22361m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public final Class<T> f22362n;
 
-    /* compiled from: KClassImpl.kt */
-    /* renamed from: d0.e0.p.d.h$a */
+    /* JADX INFO: renamed from: d0.e0.p.d.h$a */
+    /* JADX INFO: compiled from: KClassImpl.kt */
     public final class a extends KDeclarationContainerImpl.b {
 
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         public static final /* synthetic */ KProperty[] f22363d = {Reflection2.property1(new PropertyReference1Impl(Reflection2.getOrCreateKotlinClass(a.class), "descriptor", "getDescriptor()Lorg/jetbrains/kotlin/descriptors/ClassDescriptor;")), Reflection2.property1(new PropertyReference1Impl(Reflection2.getOrCreateKotlinClass(a.class), "annotations", "getAnnotations()Ljava/util/List;")), Reflection2.property1(new PropertyReference1Impl(Reflection2.getOrCreateKotlinClass(a.class), "simpleName", "getSimpleName()Ljava/lang/String;")), Reflection2.property1(new PropertyReference1Impl(Reflection2.getOrCreateKotlinClass(a.class), "qualifiedName", "getQualifiedName()Ljava/lang/String;")), Reflection2.property1(new PropertyReference1Impl(Reflection2.getOrCreateKotlinClass(a.class), "constructors", "getConstructors()Ljava/util/Collection;")), Reflection2.property1(new PropertyReference1Impl(Reflection2.getOrCreateKotlinClass(a.class), "nestedClasses", "getNestedClasses()Ljava/util/Collection;")), Reflection2.property1(new PropertyReference1Impl(Reflection2.getOrCreateKotlinClass(a.class), "objectInstance", "getObjectInstance()Ljava/lang/Object;")), Reflection2.property1(new PropertyReference1Impl(Reflection2.getOrCreateKotlinClass(a.class), "typeParameters", "getTypeParameters()Ljava/util/List;")), Reflection2.property1(new PropertyReference1Impl(Reflection2.getOrCreateKotlinClass(a.class), "supertypes", "getSupertypes()Ljava/util/List;")), Reflection2.property1(new PropertyReference1Impl(Reflection2.getOrCreateKotlinClass(a.class), "sealedSubclasses", "getSealedSubclasses()Ljava/util/List;")), Reflection2.property1(new PropertyReference1Impl(Reflection2.getOrCreateKotlinClass(a.class), "declaredNonStaticMembers", "getDeclaredNonStaticMembers()Ljava/util/Collection;")), Reflection2.property1(new PropertyReference1Impl(Reflection2.getOrCreateKotlinClass(a.class), "declaredStaticMembers", "getDeclaredStaticMembers()Ljava/util/Collection;")), Reflection2.property1(new PropertyReference1Impl(Reflection2.getOrCreateKotlinClass(a.class), "inheritedNonStaticMembers", "getInheritedNonStaticMembers()Ljava/util/Collection;")), Reflection2.property1(new PropertyReference1Impl(Reflection2.getOrCreateKotlinClass(a.class), "inheritedStaticMembers", "getInheritedStaticMembers()Ljava/util/Collection;")), Reflection2.property1(new PropertyReference1Impl(Reflection2.getOrCreateKotlinClass(a.class), "allNonStaticMembers", "getAllNonStaticMembers()Ljava/util/Collection;")), Reflection2.property1(new PropertyReference1Impl(Reflection2.getOrCreateKotlinClass(a.class), "allStaticMembers", "getAllStaticMembers()Ljava/util/Collection;")), Reflection2.property1(new PropertyReference1Impl(Reflection2.getOrCreateKotlinClass(a.class), "declaredMembers", "getDeclaredMembers()Ljava/util/Collection;")), Reflection2.property1(new PropertyReference1Impl(Reflection2.getOrCreateKotlinClass(a.class), "allMembers", "getAllMembers()Ljava/util/Collection;"))};
 
-        /* renamed from: e */
+        /* JADX INFO: renamed from: e */
         public final ReflectProperties.a f22364e;
 
-        /* renamed from: f */
+        /* JADX INFO: renamed from: f */
         public final ReflectProperties.a f22365f;
 
-        /* renamed from: g */
+        /* JADX INFO: renamed from: g */
         public final ReflectProperties.a f22366g;
 
-        /* renamed from: h */
+        /* JADX INFO: renamed from: h */
         public final ReflectProperties.b f22367h;
 
-        /* renamed from: i */
+        /* JADX INFO: renamed from: i */
         public final ReflectProperties.a f22368i;
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public final ReflectProperties.a f22369j;
 
-        /* renamed from: k */
+        /* JADX INFO: renamed from: k */
         public final ReflectProperties.a f22370k;
 
-        /* renamed from: l */
+        /* JADX INFO: renamed from: l */
         public final ReflectProperties.a f22371l;
 
-        /* renamed from: m */
+        /* JADX INFO: renamed from: m */
         public final ReflectProperties.a f22372m;
 
-        /* renamed from: n */
+        /* JADX INFO: renamed from: n */
         public final ReflectProperties.a f22373n;
 
-        /* renamed from: o */
+        /* JADX INFO: renamed from: o */
         public final ReflectProperties.a f22374o;
 
-        /* compiled from: KClassImpl.kt */
-        /* renamed from: d0.e0.p.d.h$a$a, reason: collision with other inner class name */
+        /* JADX INFO: renamed from: d0.e0.p.d.h$a$a, reason: collision with other inner class name */
+        /* JADX INFO: compiled from: KClassImpl.kt */
         public static final class C13302a extends Lambda implements Function0<List<? extends KCallableImpl<?>>> {
             public C13302a() {
                 super(0);
@@ -132,14 +132,14 @@ public final class KClassImpl<T> extends KDeclarationContainerImpl implements KC
             }
 
             @Override // kotlin.jvm.functions.Function0
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final List<? extends KCallableImpl<?>> invoke2() {
                 return _Collections.plus((Collection) a.this.getAllNonStaticMembers(), (Iterable) a.this.getAllStaticMembers());
             }
         }
 
-        /* compiled from: KClassImpl.kt */
-        /* renamed from: d0.e0.p.d.h$a$b */
+        /* JADX INFO: renamed from: d0.e0.p.d.h$a$b */
+        /* JADX INFO: compiled from: KClassImpl.kt */
         public static final class b extends Lambda implements Function0<List<? extends KCallableImpl<?>>> {
             public b() {
                 super(0);
@@ -151,14 +151,14 @@ public final class KClassImpl<T> extends KDeclarationContainerImpl implements KC
             }
 
             @Override // kotlin.jvm.functions.Function0
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final List<? extends KCallableImpl<?>> invoke2() {
                 return _Collections.plus((Collection) a.this.getDeclaredNonStaticMembers(), (Iterable) a.access$getInheritedNonStaticMembers$p(a.this));
             }
         }
 
-        /* compiled from: KClassImpl.kt */
-        /* renamed from: d0.e0.p.d.h$a$c */
+        /* JADX INFO: renamed from: d0.e0.p.d.h$a$c */
+        /* JADX INFO: compiled from: KClassImpl.kt */
         public static final class c extends Lambda implements Function0<List<? extends KCallableImpl<?>>> {
             public c() {
                 super(0);
@@ -170,14 +170,14 @@ public final class KClassImpl<T> extends KDeclarationContainerImpl implements KC
             }
 
             @Override // kotlin.jvm.functions.Function0
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final List<? extends KCallableImpl<?>> invoke2() {
                 return _Collections.plus(a.access$getDeclaredStaticMembers$p(a.this), (Iterable) a.access$getInheritedStaticMembers$p(a.this));
             }
         }
 
-        /* compiled from: KClassImpl.kt */
-        /* renamed from: d0.e0.p.d.h$a$d */
+        /* JADX INFO: renamed from: d0.e0.p.d.h$a$d */
+        /* JADX INFO: compiled from: KClassImpl.kt */
         public static final class d extends Lambda implements Function0<List<? extends Annotation>> {
             public d() {
                 super(0);
@@ -189,14 +189,14 @@ public final class KClassImpl<T> extends KDeclarationContainerImpl implements KC
             }
 
             @Override // kotlin.jvm.functions.Function0
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final List<? extends Annotation> invoke2() {
                 return util2.computeAnnotations(a.this.getDescriptor());
             }
         }
 
-        /* compiled from: KClassImpl.kt */
-        /* renamed from: d0.e0.p.d.h$a$e */
+        /* JADX INFO: renamed from: d0.e0.p.d.h$a$e */
+        /* JADX INFO: compiled from: KClassImpl.kt */
         public static final class e extends Lambda implements Function0<List<? extends KFunction<? extends T>>> {
             public e() {
                 super(0);
@@ -219,8 +219,8 @@ public final class KClassImpl<T> extends KDeclarationContainerImpl implements KC
             }
         }
 
-        /* compiled from: KClassImpl.kt */
-        /* renamed from: d0.e0.p.d.h$a$f */
+        /* JADX INFO: renamed from: d0.e0.p.d.h$a$f */
+        /* JADX INFO: compiled from: KClassImpl.kt */
         public static final class f extends Lambda implements Function0<List<? extends KCallableImpl<?>>> {
             public f() {
                 super(0);
@@ -232,14 +232,14 @@ public final class KClassImpl<T> extends KDeclarationContainerImpl implements KC
             }
 
             @Override // kotlin.jvm.functions.Function0
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final List<? extends KCallableImpl<?>> invoke2() {
                 return _Collections.plus((Collection) a.this.getDeclaredNonStaticMembers(), (Iterable) a.access$getDeclaredStaticMembers$p(a.this));
             }
         }
 
-        /* compiled from: KClassImpl.kt */
-        /* renamed from: d0.e0.p.d.h$a$g */
+        /* JADX INFO: renamed from: d0.e0.p.d.h$a$g */
+        /* JADX INFO: compiled from: KClassImpl.kt */
         public static final class g extends Lambda implements Function0<Collection<? extends KCallableImpl<?>>> {
             public g() {
                 super(0);
@@ -251,15 +251,15 @@ public final class KClassImpl<T> extends KDeclarationContainerImpl implements KC
             }
 
             @Override // kotlin.jvm.functions.Function0
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final Collection<? extends KCallableImpl<?>> invoke2() {
                 KClassImpl kClassImpl = KClassImpl.this;
                 return kClassImpl.m9341b(kClassImpl.getMemberScope$kotlin_reflection(), KDeclarationContainerImpl.c.DECLARED);
             }
         }
 
-        /* compiled from: KClassImpl.kt */
-        /* renamed from: d0.e0.p.d.h$a$h */
+        /* JADX INFO: renamed from: d0.e0.p.d.h$a$h */
+        /* JADX INFO: compiled from: KClassImpl.kt */
         public static final class h extends Lambda implements Function0<Collection<? extends KCallableImpl<?>>> {
             public h() {
                 super(0);
@@ -271,15 +271,15 @@ public final class KClassImpl<T> extends KDeclarationContainerImpl implements KC
             }
 
             @Override // kotlin.jvm.functions.Function0
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final Collection<? extends KCallableImpl<?>> invoke2() {
                 KClassImpl kClassImpl = KClassImpl.this;
                 return kClassImpl.m9341b(kClassImpl.getStaticScope$kotlin_reflection(), KDeclarationContainerImpl.c.DECLARED);
             }
         }
 
-        /* compiled from: KClassImpl.kt */
-        /* renamed from: d0.e0.p.d.h$a$i */
+        /* JADX INFO: renamed from: d0.e0.p.d.h$a$i */
+        /* JADX INFO: compiled from: KClassImpl.kt */
         public static final class i extends Lambda implements Function0<ClassDescriptor> {
             public i() {
                 super(0);
@@ -304,8 +304,8 @@ public final class KClassImpl<T> extends KDeclarationContainerImpl implements KC
             }
         }
 
-        /* compiled from: KClassImpl.kt */
-        /* renamed from: d0.e0.p.d.h$a$j */
+        /* JADX INFO: renamed from: d0.e0.p.d.h$a$j */
+        /* JADX INFO: compiled from: KClassImpl.kt */
         public static final class j extends Lambda implements Function0<Collection<? extends KCallableImpl<?>>> {
             public j() {
                 super(0);
@@ -317,15 +317,15 @@ public final class KClassImpl<T> extends KDeclarationContainerImpl implements KC
             }
 
             @Override // kotlin.jvm.functions.Function0
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final Collection<? extends KCallableImpl<?>> invoke2() {
                 KClassImpl kClassImpl = KClassImpl.this;
                 return kClassImpl.m9341b(kClassImpl.getMemberScope$kotlin_reflection(), KDeclarationContainerImpl.c.INHERITED);
             }
         }
 
-        /* compiled from: KClassImpl.kt */
-        /* renamed from: d0.e0.p.d.h$a$k */
+        /* JADX INFO: renamed from: d0.e0.p.d.h$a$k */
+        /* JADX INFO: compiled from: KClassImpl.kt */
         public static final class k extends Lambda implements Function0<Collection<? extends KCallableImpl<?>>> {
             public k() {
                 super(0);
@@ -337,15 +337,15 @@ public final class KClassImpl<T> extends KDeclarationContainerImpl implements KC
             }
 
             @Override // kotlin.jvm.functions.Function0
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final Collection<? extends KCallableImpl<?>> invoke2() {
                 KClassImpl kClassImpl = KClassImpl.this;
                 return kClassImpl.m9341b(kClassImpl.getStaticScope$kotlin_reflection(), KDeclarationContainerImpl.c.INHERITED);
             }
         }
 
-        /* compiled from: KClassImpl.kt */
-        /* renamed from: d0.e0.p.d.h$a$l */
+        /* JADX INFO: renamed from: d0.e0.p.d.h$a$l */
+        /* JADX INFO: compiled from: KClassImpl.kt */
         public static final class l extends Lambda implements Function0<List<? extends KClassImpl<? extends Object>>> {
             public l() {
                 super(0);
@@ -357,7 +357,7 @@ public final class KClassImpl<T> extends KDeclarationContainerImpl implements KC
             }
 
             @Override // kotlin.jvm.functions.Function0
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final List<? extends KClassImpl<? extends Object>> invoke2() {
                 Collection contributedDescriptors$default = ResolutionScope.a.getContributedDescriptors$default(a.this.getDescriptor().getUnsubstitutedInnerClassesScope(), null, null, 3, null);
                 ArrayList<DeclarationDescriptor> arrayList = new ArrayList();
@@ -379,8 +379,8 @@ public final class KClassImpl<T> extends KDeclarationContainerImpl implements KC
             }
         }
 
-        /* compiled from: KClassImpl.kt */
-        /* renamed from: d0.e0.p.d.h$a$m */
+        /* JADX INFO: renamed from: d0.e0.p.d.h$a$m */
+        /* JADX INFO: compiled from: KClassImpl.kt */
         public static final class m extends Lambda implements Function0<T> {
             public m() {
                 super(0);
@@ -398,8 +398,8 @@ public final class KClassImpl<T> extends KDeclarationContainerImpl implements KC
             }
         }
 
-        /* compiled from: KClassImpl.kt */
-        /* renamed from: d0.e0.p.d.h$a$n */
+        /* JADX INFO: renamed from: d0.e0.p.d.h$a$n */
+        /* JADX INFO: compiled from: KClassImpl.kt */
         public static final class n extends Lambda implements Function0<String> {
             public n() {
                 super(0);
@@ -411,7 +411,7 @@ public final class KClassImpl<T> extends KDeclarationContainerImpl implements KC
             }
 
             @Override // kotlin.jvm.functions.Function0
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final String invoke2() {
                 if (KClassImpl.this.getJClass().isAnonymousClass()) {
                     return null;
@@ -424,8 +424,8 @@ public final class KClassImpl<T> extends KDeclarationContainerImpl implements KC
             }
         }
 
-        /* compiled from: KClassImpl.kt */
-        /* renamed from: d0.e0.p.d.h$a$o */
+        /* JADX INFO: renamed from: d0.e0.p.d.h$a$o */
+        /* JADX INFO: compiled from: KClassImpl.kt */
         public static final class o extends Lambda implements Function0<List<? extends KClassImpl<? extends T>>> {
             public o() {
                 super(0);
@@ -453,8 +453,8 @@ public final class KClassImpl<T> extends KDeclarationContainerImpl implements KC
             }
         }
 
-        /* compiled from: KClassImpl.kt */
-        /* renamed from: d0.e0.p.d.h$a$p */
+        /* JADX INFO: renamed from: d0.e0.p.d.h$a$p */
+        /* JADX INFO: compiled from: KClassImpl.kt */
         public static final class p extends Lambda implements Function0<String> {
             public p() {
                 super(0);
@@ -466,7 +466,7 @@ public final class KClassImpl<T> extends KDeclarationContainerImpl implements KC
             }
 
             @Override // kotlin.jvm.functions.Function0
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final String invoke2() {
                 if (KClassImpl.this.getJClass().isAnonymousClass()) {
                     return null;
@@ -482,12 +482,12 @@ public final class KClassImpl<T> extends KDeclarationContainerImpl implements KC
             }
         }
 
-        /* compiled from: KClassImpl.kt */
-        /* renamed from: d0.e0.p.d.h$a$q */
+        /* JADX INFO: renamed from: d0.e0.p.d.h$a$q */
+        /* JADX INFO: compiled from: KClassImpl.kt */
         public static final class q extends Lambda implements Function0<List<? extends KTypeImpl>> {
 
-            /* compiled from: KClassImpl.kt */
-            /* renamed from: d0.e0.p.d.h$a$q$a, reason: collision with other inner class name */
+            /* JADX INFO: renamed from: d0.e0.p.d.h$a$q$a, reason: collision with other inner class name */
+            /* JADX INFO: compiled from: KClassImpl.kt */
             public static final class C13303a extends Lambda implements Function0<Type> {
                 public final /* synthetic */ KotlinType $kotlinType;
                 public final /* synthetic */ q this$0;
@@ -505,7 +505,7 @@ public final class KClassImpl<T> extends KDeclarationContainerImpl implements KC
                 }
 
                 @Override // kotlin.jvm.functions.Function0
-                /* renamed from: invoke, reason: avoid collision after fix types in other method */
+                /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
                 public final Type invoke2() {
                     ClassifierDescriptor declarationDescriptor = this.$kotlinType.getConstructor().getDeclarationDescriptor();
                     if (!(declarationDescriptor instanceof ClassDescriptor)) {
@@ -540,11 +540,11 @@ public final class KClassImpl<T> extends KDeclarationContainerImpl implements KC
                 }
             }
 
-            /* compiled from: KClassImpl.kt */
-            /* renamed from: d0.e0.p.d.h$a$q$b */
+            /* JADX INFO: renamed from: d0.e0.p.d.h$a$q$b */
+            /* JADX INFO: compiled from: KClassImpl.kt */
             public static final class b extends Lambda implements Function0<Type> {
 
-                /* renamed from: j */
+                /* JADX INFO: renamed from: j */
                 public static final b f22376j = new b();
 
                 public b() {
@@ -557,7 +557,7 @@ public final class KClassImpl<T> extends KDeclarationContainerImpl implements KC
                 }
 
                 @Override // kotlin.jvm.functions.Function0
-                /* renamed from: invoke, reason: avoid collision after fix types in other method */
+                /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
                 public final Type invoke2() {
                     return Object.class;
                 }
@@ -574,7 +574,7 @@ public final class KClassImpl<T> extends KDeclarationContainerImpl implements KC
 
             /* JADX WARN: Removed duplicated region for block: B:23:0x0090  */
             @Override // kotlin.jvm.functions.Function0
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             /*
                 Code decompiled incorrectly, please refer to instructions dump.
             */
@@ -617,8 +617,8 @@ public final class KClassImpl<T> extends KDeclarationContainerImpl implements KC
             }
         }
 
-        /* compiled from: KClassImpl.kt */
-        /* renamed from: d0.e0.p.d.h$a$r */
+        /* JADX INFO: renamed from: d0.e0.p.d.h$a$r */
+        /* JADX INFO: compiled from: KClassImpl.kt */
         public static final class r extends Lambda implements Function0<List<? extends KTypeParameterImpl>> {
             public r() {
                 super(0);
@@ -630,7 +630,7 @@ public final class KClassImpl<T> extends KDeclarationContainerImpl implements KC
             }
 
             @Override // kotlin.jvm.functions.Function0
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final List<? extends KTypeParameterImpl> invoke2() {
                 List<TypeParameterDescriptor> declaredTypeParameters = a.this.getDescriptor().getDeclaredTypeParameters();
                 Intrinsics3.checkNotNullExpressionValue(declaredTypeParameters, "descriptor.declaredTypeParameters");
@@ -728,8 +728,8 @@ public final class KClassImpl<T> extends KDeclarationContainerImpl implements KC
         }
     }
 
-    /* compiled from: KClassImpl.kt */
-    /* renamed from: d0.e0.p.d.h$b */
+    /* JADX INFO: renamed from: d0.e0.p.d.h$b */
+    /* JADX INFO: compiled from: KClassImpl.kt */
     public static final class b extends Lambda implements Function0<KClassImpl<T>.a> {
         public b() {
             super(0);
@@ -746,11 +746,11 @@ public final class KClassImpl<T> extends KDeclarationContainerImpl implements KC
         }
     }
 
-    /* compiled from: KClassImpl.kt */
-    /* renamed from: d0.e0.p.d.h$c */
+    /* JADX INFO: renamed from: d0.e0.p.d.h$c */
+    /* JADX INFO: compiled from: KClassImpl.kt */
     public static final /* synthetic */ class c extends FunctionReference implements Function2<MemberDeserializer, C11689n, PropertyDescriptor> {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public static final c f22377j = new c();
 
         public c() {
@@ -777,7 +777,7 @@ public final class KClassImpl<T> extends KDeclarationContainerImpl implements KC
             return invoke2(memberDeserializer, c11689n);
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final PropertyDescriptor invoke2(MemberDeserializer memberDeserializer, C11689n c11689n) {
             Intrinsics3.checkNotNullParameter(memberDeserializer, "p1");
             Intrinsics3.checkNotNullParameter(c11689n, "p2");

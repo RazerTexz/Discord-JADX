@@ -16,10 +16,10 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
-/* compiled from: MaterialVisibility.java */
+/* JADX INFO: renamed from: b.i.a.g.l.l.h, reason: use source file name */
+/* JADX INFO: compiled from: MaterialVisibility.java */
+/* JADX INFO: loaded from: classes3.dex */
 @RequiresApi(21)
-/* renamed from: b.i.a.g.l.l.h, reason: use source file name */
-/* loaded from: classes3.dex */
 public abstract class MaterialVisibility2<P extends VisibilityAnimatorProvider> extends Visibility {
     private final List<VisibilityAnimatorProvider> additionalAnimatorProviders = new ArrayList();
     private final P primaryAnimatorProvider;

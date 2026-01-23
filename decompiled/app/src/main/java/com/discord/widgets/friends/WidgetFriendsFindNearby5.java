@@ -6,9 +6,9 @@ import kotlin.jvm.functions.Function1;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetFriendsFindNearby.kt */
-/* renamed from: com.discord.widgets.friends.WidgetFriendsFindNearby$captchaLauncher$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.friends.WidgetFriendsFindNearby$captchaLauncher$1, reason: use source file name */
+/* JADX INFO: compiled from: WidgetFriendsFindNearby.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetFriendsFindNearby5 extends Lambda implements Function1<CaptchaHelper.CaptchaPayload, Unit> {
     public final /* synthetic */ WidgetFriendsFindNearby this$0;
 
@@ -24,7 +24,7 @@ public final class WidgetFriendsFindNearby5 extends Lambda implements Function1<
         return Unit.f27425a;
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final void invoke2(CaptchaHelper.CaptchaPayload captchaPayload) {
         Integer discriminator;
         Intrinsics3.checkNotNullParameter(captchaPayload, "token");

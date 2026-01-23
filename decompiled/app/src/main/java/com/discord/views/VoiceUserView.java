@@ -34,42 +34,42 @@ import p007b.p008a.p062y.VoiceUserView4;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: VoiceUserView.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: VoiceUserView.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class VoiceUserView extends FrameLayout {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static final /* synthetic */ int f19182j = 0;
 
-    /* renamed from: k, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: k, reason: from kotlin metadata */
     public int defaultVoiceStateBackground;
 
-    /* renamed from: l, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: l, reason: from kotlin metadata */
     public final ViewVoiceUserBinding binding;
 
-    /* renamed from: m, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: m, reason: from kotlin metadata */
     public EnumC7097a displayVoiceState;
 
-    /* renamed from: n, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: n, reason: from kotlin metadata */
     public final RingAnimator ringAnimator;
 
-    /* renamed from: o, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: o, reason: from kotlin metadata */
     public StoreVoiceParticipants.VoiceUser voiceUser;
 
-    /* renamed from: p, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: p, reason: from kotlin metadata */
     public Function2<? super Bitmap, ? super String, Unit> onBitmapLoadedListener;
 
-    /* renamed from: q, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: q, reason: from kotlin metadata */
     public String prevAvatarUrl;
 
-    /* renamed from: r, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: r, reason: from kotlin metadata */
     public boolean fadeWhenDisconnected;
 
-    /* renamed from: s, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: s, reason: from kotlin metadata */
     public boolean animateAvatarWhenRinging;
 
-    /* compiled from: VoiceUserView.kt */
-    /* renamed from: com.discord.views.VoiceUserView$a */
+    /* JADX INFO: renamed from: com.discord.views.VoiceUserView$a */
+    /* JADX INFO: compiled from: VoiceUserView.kt */
     public enum EnumC7097a {
         CONNECTED,
         SPEAKING,
@@ -78,8 +78,8 @@ public final class VoiceUserView extends FrameLayout {
         DISCONNECTED
     }
 
-    /* compiled from: VoiceUserView.kt */
-    /* renamed from: com.discord.views.VoiceUserView$b */
+    /* JADX INFO: renamed from: com.discord.views.VoiceUserView$b */
+    /* JADX INFO: compiled from: VoiceUserView.kt */
     public static final class C7098b extends Lambda implements Function1<View, Unit> {
         public final /* synthetic */ int $avatarSize;
 
@@ -95,7 +95,7 @@ public final class VoiceUserView extends FrameLayout {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(View view) {
             Intrinsics3.checkNotNullParameter(view, "$this$resizeLayoutParams");
             if (view.getLayoutParams().width == this.$avatarSize && view.getLayoutParams().height == this.$avatarSize) {
@@ -109,8 +109,8 @@ public final class VoiceUserView extends FrameLayout {
         }
     }
 
-    /* compiled from: VoiceUserView.kt */
-    /* renamed from: com.discord.views.VoiceUserView$c */
+    /* JADX INFO: renamed from: com.discord.views.VoiceUserView$c */
+    /* JADX INFO: compiled from: VoiceUserView.kt */
     public static final class C7099c extends Lambda implements Function1<ImageRequestBuilder, Unit> {
         public final /* synthetic */ String $newAvatarUrl;
 
@@ -178,7 +178,7 @@ public final class VoiceUserView extends FrameLayout {
     }
 
     @MainThread
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final void m8570a(StoreVoiceParticipants.VoiceUser voiceUser, @DimenRes int sizeDimenRes) {
         Intrinsics3.checkNotNullParameter(voiceUser, "voiceUser");
         if (Intrinsics3.areEqual(this.voiceUser, voiceUser)) {

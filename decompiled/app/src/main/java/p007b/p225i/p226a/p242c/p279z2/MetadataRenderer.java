@@ -14,42 +14,42 @@ import p007b.p225i.p226a.p242c.Format2;
 import p007b.p225i.p226a.p242c.FormatHolder;
 import p007b.p225i.p226a.p242c.p259f3.Util2;
 
-/* compiled from: MetadataRenderer.java */
-/* renamed from: b.i.a.c.z2.f, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.z2.f, reason: use source file name */
+/* JADX INFO: compiled from: MetadataRenderer.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class MetadataRenderer extends BaseRenderer implements Handler.Callback {
 
-    /* renamed from: A */
+    /* JADX INFO: renamed from: A */
     public boolean f9138A;
 
-    /* renamed from: B */
+    /* JADX INFO: renamed from: B */
     public long f9139B;
 
-    /* renamed from: C */
+    /* JADX INFO: renamed from: C */
     public long f9140C;
 
-    /* renamed from: D */
+    /* JADX INFO: renamed from: D */
     @Nullable
     public Metadata f9141D;
 
-    /* renamed from: u */
+    /* JADX INFO: renamed from: u */
     public final MetadataDecoderFactory f9142u;
 
-    /* renamed from: v */
+    /* JADX INFO: renamed from: v */
     public final MetadataOutput f9143v;
 
-    /* renamed from: w */
+    /* JADX INFO: renamed from: w */
     @Nullable
     public final Handler f9144w;
 
-    /* renamed from: x */
+    /* JADX INFO: renamed from: x */
     public final MetadataInputBuffer f9145x;
 
-    /* renamed from: y */
+    /* JADX INFO: renamed from: y */
     @Nullable
     public MetadataDecoder f9146y;
 
-    /* renamed from: z */
+    /* JADX INFO: renamed from: z */
     public boolean f9147z;
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -72,7 +72,7 @@ public final class MetadataRenderer extends BaseRenderer implements Handler.Call
     }
 
     @Override // p007b.p225i.p226a.p242c.BaseRenderer
-    /* renamed from: B */
+    /* JADX INFO: renamed from: B */
     public void mo2621B() {
         this.f9141D = null;
         this.f9140C = -9223372036854775807L;
@@ -80,7 +80,7 @@ public final class MetadataRenderer extends BaseRenderer implements Handler.Call
     }
 
     @Override // p007b.p225i.p226a.p242c.BaseRenderer
-    /* renamed from: D */
+    /* JADX INFO: renamed from: D */
     public void mo2622D(long j, boolean z2) {
         this.f9141D = null;
         this.f9140C = -9223372036854775807L;
@@ -89,12 +89,12 @@ public final class MetadataRenderer extends BaseRenderer implements Handler.Call
     }
 
     @Override // p007b.p225i.p226a.p242c.BaseRenderer
-    /* renamed from: H */
+    /* JADX INFO: renamed from: H */
     public void mo2623H(Format2[] format2Arr, long j, long j2) {
         this.f9146y = this.f9142u.mo3897b(format2Arr[0]);
     }
 
-    /* renamed from: J */
+    /* JADX INFO: renamed from: J */
     public final void m3898J(Metadata metadata, List<Metadata.Entry> list) {
         int i = 0;
         while (true) {
@@ -125,7 +125,7 @@ public final class MetadataRenderer extends BaseRenderer implements Handler.Call
     }
 
     @Override // p007b.p225i.p226a.p242c.RendererCapabilities
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public int mo2630a(Format2 format2) {
         if (this.f9142u.mo3896a(format2)) {
             return (format2.f7142P == 0 ? 4 : 2) | 0 | 0;
@@ -134,13 +134,13 @@ public final class MetadataRenderer extends BaseRenderer implements Handler.Call
     }
 
     @Override // p007b.p225i.p226a.p242c.Renderer2
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public boolean mo2631b() {
         return this.f9138A;
     }
 
     @Override // p007b.p225i.p226a.p242c.Renderer2
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public boolean mo2632d() {
         return true;
     }
@@ -160,7 +160,7 @@ public final class MetadataRenderer extends BaseRenderer implements Handler.Call
     }
 
     @Override // p007b.p225i.p226a.p242c.Renderer2
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     public void mo2633q(long j, long j2) {
         boolean z2 = true;
         while (z2) {

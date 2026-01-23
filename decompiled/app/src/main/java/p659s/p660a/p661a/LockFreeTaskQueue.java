@@ -2,12 +2,12 @@ package p659s.p660a.p661a;
 
 import java.util.concurrent.atomic.AtomicReferenceFieldUpdater;
 
-/* compiled from: LockFreeTaskQueue.kt */
-/* renamed from: s.a.a.l, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: s.a.a.l, reason: use source file name */
+/* JADX INFO: compiled from: LockFreeTaskQueue.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public class LockFreeTaskQueue<E> {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final AtomicReferenceFieldUpdater f27689a = AtomicReferenceFieldUpdater.newUpdater(LockFreeTaskQueue.class, Object.class, "_cur");
     public volatile Object _cur;
 
@@ -15,7 +15,7 @@ public class LockFreeTaskQueue<E> {
         this._cur = new LockFreeTaskQueue2(8, z2);
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final boolean m11161a(E e) {
         while (true) {
             LockFreeTaskQueue2 lockFreeTaskQueue2 = (LockFreeTaskQueue2) this._cur;
@@ -31,7 +31,7 @@ public class LockFreeTaskQueue<E> {
         }
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final void m11162b() {
         while (true) {
             LockFreeTaskQueue2 lockFreeTaskQueue2 = (LockFreeTaskQueue2) this._cur;
@@ -43,13 +43,13 @@ public class LockFreeTaskQueue<E> {
         }
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final int m11163c() {
         long j = ((LockFreeTaskQueue2) this._cur)._state;
         return 1073741823 & (((int) ((j & 1152921503533105152L) >> 30)) - ((int) ((1073741823 & j) >> 0)));
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final E m11164d() {
         while (true) {
             LockFreeTaskQueue2 lockFreeTaskQueue2 = (LockFreeTaskQueue2) this._cur;

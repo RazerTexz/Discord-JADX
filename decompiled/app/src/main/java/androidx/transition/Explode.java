@@ -11,7 +11,7 @@ import android.view.animation.AccelerateInterpolator;
 import android.view.animation.DecelerateInterpolator;
 import androidx.annotation.NonNull;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class Explode extends Visibility {
     private static final String PROPNAME_SCREEN_BOUNDS = "android:explode:screenBounds";
     private int[] mTempLoc;

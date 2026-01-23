@@ -6,36 +6,36 @@ import java.io.PrintWriter;
 import java.io.StringWriter;
 import p007b.p100d.p104b.p105a.outline;
 
-/* compiled from: BaseConsumer.java */
-/* renamed from: b.f.j.p.b, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.f.j.p.b, reason: use source file name */
+/* JADX INFO: compiled from: BaseConsumer.java */
+/* JADX INFO: loaded from: classes3.dex */
 public abstract class BaseConsumer<T> implements Consumer2<T> {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public boolean f3993a = false;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public static boolean m1419e(int i) {
         return (i & 1) == 1;
     }
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public static boolean m1420f(int i) {
         return !m1419e(i);
     }
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public static boolean m1421l(int i, int i2) {
         return (i & i2) != 0;
     }
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public static boolean m1422m(int i, int i2) {
         return (i & i2) == i2;
     }
 
     @Override // p007b.p109f.p161j.p181p.Consumer2
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public synchronized void mo1423a(float f) {
         if (this.f3993a) {
             return;
@@ -48,7 +48,7 @@ public abstract class BaseConsumer<T> implements Consumer2<T> {
     }
 
     @Override // p007b.p109f.p161j.p181p.Consumer2
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public synchronized void mo1424b(T t, int i) {
         if (this.f3993a) {
             return;
@@ -62,7 +62,7 @@ public abstract class BaseConsumer<T> implements Consumer2<T> {
     }
 
     @Override // p007b.p109f.p161j.p181p.Consumer2
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public synchronized void mo1425c(Throwable th) {
         if (this.f3993a) {
             return;
@@ -76,7 +76,7 @@ public abstract class BaseConsumer<T> implements Consumer2<T> {
     }
 
     @Override // p007b.p109f.p161j.p181p.Consumer2
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public synchronized void mo1426d() {
         if (this.f3993a) {
             return;
@@ -89,19 +89,19 @@ public abstract class BaseConsumer<T> implements Consumer2<T> {
         }
     }
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public abstract void mo1318g();
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public abstract void mo1319h(Throwable th);
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public abstract void mo1320i(T t, int i);
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public abstract void mo1321j(float f);
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public void m1427k(Exception exc) {
         String strM886y = outline.m886y(EnvironmentCompat.MEDIA_UNKNOWN, ":", getClass().getSimpleName());
         StringBuilder sb = new StringBuilder();

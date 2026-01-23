@@ -11,7 +11,7 @@ import com.google.android.material.C10817R;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public final class CircularProgressIndicator extends BaseProgressIndicator<CircularProgressIndicatorSpec> {
     public static final int DEF_STYLE_RES = C10817R.style.Widget_MaterialComponents_CircularProgressIndicator;
     public static final int INDICATOR_DIRECTION_CLOCKWISE = 0;

@@ -6,9 +6,9 @@ import kotlin.jvm.functions.Function1;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: ChatInputViewModel.kt */
-/* renamed from: com.discord.widgets.chat.input.ChatInputViewModel$sendMessage$sendMessage$1$synchronousValidationSucceeded$1 */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.chat.input.ChatInputViewModel$sendMessage$sendMessage$1$synchronousValidationSucceeded$1 */
+/* JADX INFO: compiled from: ChatInputViewModel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class C7699x68c0d97b extends Lambda implements Function1<MessageManager.MessageSendResult, Unit> {
     public final /* synthetic */ ChatInputViewModel$sendMessage$sendMessage$1 this$0;
 
@@ -24,7 +24,7 @@ public final class C7699x68c0d97b extends Lambda implements Function1<MessageMan
         return Unit.f27425a;
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final void invoke2(MessageManager.MessageSendResult messageSendResult) {
         Intrinsics3.checkNotNullParameter(messageSendResult, "messageSendResult");
         this.this$0.$messageSendResultHandler.invoke(messageSendResult.getMessageResult(), messageSendResult.getGuild());

@@ -9,24 +9,24 @@ import p507d0.p513e0.p514p.p515d.p517m0.p567n.ErrorUtils;
 import p507d0.p513e0.p514p.p515d.p517m0.p567n.p568l1.KotlinTypeRefiner;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: KotlinTypeFactory.kt */
-/* renamed from: d0.e0.p.d.m0.n.k0, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.n.k0, reason: use source file name */
+/* JADX INFO: compiled from: KotlinTypeFactory.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class KotlinTypeFactory5 extends KotlinType4 {
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final TypeConstructor f24791k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final List<TypeProjection> f24792l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public final boolean f24793m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public final MemberScope3 f24794n;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public final Function1<KotlinTypeRefiner, KotlinType4> f24795o;
 
     /* JADX WARN: Multi-variable type inference failed */

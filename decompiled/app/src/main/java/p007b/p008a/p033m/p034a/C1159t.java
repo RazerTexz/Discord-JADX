@@ -3,15 +3,15 @@ package p007b.p008a.p033m.p034a;
 import com.discord.models.domain.Model;
 import com.discord.models.domain.ModelPayload;
 
-/* compiled from: lambda */
-/* renamed from: b.a.m.a.t */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.a.m.a.t */
+/* JADX INFO: compiled from: lambda */
+/* JADX INFO: loaded from: classes.dex */
 public final /* synthetic */ class C1159t implements Model.JsonReader.ItemFactory {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final /* synthetic */ ModelPayload.VersionedModel f1539a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final /* synthetic */ Model.JsonReader f1540b;
 
     public /* synthetic */ C1159t(ModelPayload.VersionedModel versionedModel, Model.JsonReader jsonReader) {

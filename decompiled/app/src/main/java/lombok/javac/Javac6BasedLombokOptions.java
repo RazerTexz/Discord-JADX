@@ -7,7 +7,7 @@ import java.lang.reflect.Method;
 import lombok.Lombok;
 import lombok.permit.Permit;
 
-/* loaded from: discord-126021.apk:lombok/javac/Javac6BasedLombokOptions.SCL.lombok */
+/* JADX INFO: loaded from: discord-126021.apk:lombok/javac/Javac6BasedLombokOptions.SCL.lombok */
 public class Javac6BasedLombokOptions extends LombokOptions {
     private static final Method optionName_valueOf;
     private static final Method options_put;
@@ -35,7 +35,7 @@ public class Javac6BasedLombokOptions extends LombokOptions {
     }
 
     @Override // lombok.javac.LombokOptions
-    public void putJavacOption(String optionName, String value) throws IllegalArgumentException {
+    public void putJavacOption(String optionName, String value) {
         try {
             options_put.invoke(this, optionName_valueOf.invoke(null, optionName), value);
         } catch (IllegalAccessException e) {

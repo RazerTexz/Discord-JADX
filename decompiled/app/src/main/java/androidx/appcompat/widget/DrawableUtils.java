@@ -17,9 +17,9 @@ import androidx.core.graphics.drawable.DrawableCompat;
 import androidx.core.graphics.drawable.WrappedDrawable;
 import java.lang.reflect.Field;
 
+/* JADX INFO: loaded from: classes.dex */
 @SuppressLint({"RestrictedAPI"})
 @RestrictTo({RestrictTo.Scope.LIBRARY_GROUP_PREFIX})
-/* loaded from: classes.dex */
 public class DrawableUtils {
     private static final int[] CHECKED_STATE_SET = {R.attr.state_checked};
     private static final int[] EMPTY_STATE_SET = new int[0];
@@ -99,36 +99,36 @@ public class DrawableUtils {
                     Rect rect2 = new Rect();
                     for (Field field : sInsetsClazz.getFields()) {
                         String name = field.getName();
-                        char c = 65535;
+                        byte b2 = -1;
                         switch (name.hashCode()) {
                             case -1383228885:
                                 if (name.equals("bottom")) {
-                                    c = 3;
+                                    b2 = 3;
                                 }
                                 break;
                             case 115029:
                                 if (name.equals("top")) {
-                                    c = 1;
+                                    b2 = 1;
                                 }
                                 break;
                             case 3317767:
                                 if (name.equals("left")) {
-                                    c = 0;
+                                    b2 = 0;
                                 }
                                 break;
                             case 108511772:
                                 if (name.equals("right")) {
-                                    c = 2;
+                                    b2 = 2;
                                 }
                                 break;
                         }
-                        if (c == 0) {
+                        if (b2 == 0) {
                             rect2.left = field.getInt(objInvoke);
-                        } else if (c == 1) {
+                        } else if (b2 == 1) {
                             rect2.top = field.getInt(objInvoke);
-                        } else if (c == 2) {
+                        } else if (b2 == 2) {
                             rect2.right = field.getInt(objInvoke);
-                        } else if (c == 3) {
+                        } else if (b2 == 3) {
                             rect2.bottom = field.getInt(objInvoke);
                         }
                     }

@@ -36,120 +36,120 @@ import p007b.p225i.p226a.p242c.p267x2.TrackOutput2;
 import p007b.p225i.p226a.p242c.p267x2.p274i0.Atom;
 import p007b.p225i.p226a.p242c.p279z2.p281i.EventMessageEncoder;
 
-/* compiled from: FragmentedMp4Extractor.java */
-/* renamed from: b.i.a.c.x2.i0.g, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.x2.i0.g, reason: use source file name */
+/* JADX INFO: compiled from: FragmentedMp4Extractor.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class FragmentedMp4Extractor implements Extractor {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final byte[] f8371a = {-94, 57, 79, 82, 90, -101, 79, 20, -94, 68, 108, 66, 124, 100, -115, -12};
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static final Format2 f8372b;
 
-    /* renamed from: A */
+    /* JADX INFO: renamed from: A */
     public int f8373A;
 
-    /* renamed from: B */
+    /* JADX INFO: renamed from: B */
     public int f8374B;
 
-    /* renamed from: C */
+    /* JADX INFO: renamed from: C */
     public boolean f8375C;
 
-    /* renamed from: D */
+    /* JADX INFO: renamed from: D */
     public ExtractorOutput f8376D;
 
-    /* renamed from: E */
+    /* JADX INFO: renamed from: E */
     public TrackOutput2[] f8377E;
 
-    /* renamed from: F */
+    /* JADX INFO: renamed from: F */
     public TrackOutput2[] f8378F;
 
-    /* renamed from: G */
+    /* JADX INFO: renamed from: G */
     public boolean f8379G;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final int f8380c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final List<Format2> f8381d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final SparseArray<b> f8382e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final ParsableByteArray f8383f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public final ParsableByteArray f8384g;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public final ParsableByteArray f8385h;
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public final byte[] f8386i;
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final ParsableByteArray f8387j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final EventMessageEncoder f8388k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final ParsableByteArray f8389l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public final ArrayDeque<Atom.a> f8390m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public final ArrayDeque<a> f8391n;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public int f8392o;
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public int f8393p;
 
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     public long f8394q;
 
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     public int f8395r;
 
-    /* renamed from: s */
+    /* JADX INFO: renamed from: s */
     @Nullable
     public ParsableByteArray f8396s;
 
-    /* renamed from: t */
+    /* JADX INFO: renamed from: t */
     public long f8397t;
 
-    /* renamed from: u */
+    /* JADX INFO: renamed from: u */
     public int f8398u;
 
-    /* renamed from: v */
+    /* JADX INFO: renamed from: v */
     public long f8399v;
 
-    /* renamed from: w */
+    /* JADX INFO: renamed from: w */
     public long f8400w;
 
-    /* renamed from: x */
+    /* JADX INFO: renamed from: x */
     public long f8401x;
 
-    /* renamed from: y */
+    /* JADX INFO: renamed from: y */
     @Nullable
     public b f8402y;
 
-    /* renamed from: z */
+    /* JADX INFO: renamed from: z */
     public int f8403z;
 
-    /* compiled from: FragmentedMp4Extractor.java */
-    /* renamed from: b.i.a.c.x2.i0.g$a */
+    /* JADX INFO: renamed from: b.i.a.c.x2.i0.g$a */
+    /* JADX INFO: compiled from: FragmentedMp4Extractor.java */
     public static final class a {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final long f8404a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final int f8405b;
 
         public a(long j, int i) {
@@ -158,44 +158,44 @@ public class FragmentedMp4Extractor implements Extractor {
         }
     }
 
-    /* compiled from: FragmentedMp4Extractor.java */
-    /* renamed from: b.i.a.c.x2.i0.g$b */
+    /* JADX INFO: renamed from: b.i.a.c.x2.i0.g$b */
+    /* JADX INFO: compiled from: FragmentedMp4Extractor.java */
     public static final class b {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final TrackOutput2 f8406a;
 
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         public TrackSampleTable f8409d;
 
-        /* renamed from: e */
+        /* JADX INFO: renamed from: e */
         public DefaultSampleValues f8410e;
 
-        /* renamed from: f */
+        /* JADX INFO: renamed from: f */
         public int f8411f;
 
-        /* renamed from: g */
+        /* JADX INFO: renamed from: g */
         public int f8412g;
 
-        /* renamed from: h */
+        /* JADX INFO: renamed from: h */
         public int f8413h;
 
-        /* renamed from: i */
+        /* JADX INFO: renamed from: i */
         public int f8414i;
 
-        /* renamed from: l */
+        /* JADX INFO: renamed from: l */
         public boolean f8417l;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final TrackFragment f8407b = new TrackFragment();
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public final ParsableByteArray f8408c = new ParsableByteArray();
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public final ParsableByteArray f8415j = new ParsableByteArray(1);
 
-        /* renamed from: k */
+        /* JADX INFO: renamed from: k */
         public final ParsableByteArray f8416k = new ParsableByteArray();
 
         public b(TrackOutput2 trackOutput2, TrackSampleTable trackSampleTable, DefaultSampleValues defaultSampleValues) {
@@ -208,13 +208,13 @@ public class FragmentedMp4Extractor implements Extractor {
             m3720e();
         }
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public long m3716a() {
             return !this.f8417l ? this.f8409d.f8495c[this.f8411f] : this.f8407b.f8481f[this.f8413h];
         }
 
         @Nullable
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public TrackEncryptionBox m3717b() {
             if (!this.f8417l) {
                 return null;
@@ -233,7 +233,7 @@ public class FragmentedMp4Extractor implements Extractor {
             return trackEncryptionBoxM3731a;
         }
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public boolean m3718c() {
             this.f8411f++;
             if (!this.f8417l) {
@@ -251,7 +251,7 @@ public class FragmentedMp4Extractor implements Extractor {
             return false;
         }
 
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         public int m3719d(int i, int i2) {
             ParsableByteArray parsableByteArray;
             TrackEncryptionBox trackEncryptionBoxM3717b = m3717b();
@@ -315,7 +315,7 @@ public class FragmentedMp4Extractor implements Extractor {
             return length + 1 + i4;
         }
 
-        /* renamed from: e */
+        /* JADX INFO: renamed from: e */
         public void m3720e() {
             TrackFragment trackFragment = this.f8407b;
             trackFragment.f8479d = 0;
@@ -361,7 +361,7 @@ public class FragmentedMp4Extractor implements Extractor {
         this.f8378F = new TrackOutput2[0];
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static int m3710a(int i) throws ParserException {
         if (i >= 0) {
             return i;
@@ -370,7 +370,7 @@ public class FragmentedMp4Extractor implements Extractor {
     }
 
     @Nullable
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public static DrmInitData m3711h(List<Atom.b> list) {
         int size = list.size();
         ArrayList arrayList = null;
@@ -396,7 +396,7 @@ public class FragmentedMp4Extractor implements Extractor {
         return new DrmInitData(null, false, (DrmInitData.SchemeData[]) arrayList.toArray(new DrmInitData.SchemeData[0]));
     }
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public static void m3712i(ParsableByteArray parsableByteArray, int i, TrackFragment trackFragment) throws ParserException {
         parsableByteArray.m3079E(i + 8);
         int iM3086f = parsableByteArray.m3086f() & ViewCompat.MEASURED_SIZE_MASK;
@@ -431,18 +431,18 @@ public class FragmentedMp4Extractor implements Extractor {
     }
 
     @Override // p007b.p225i.p226a.p242c.p267x2.Extractor
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public boolean mo3633b(ExtractorInput extractorInput) throws IOException {
         return Sniffer2.m3730a(extractorInput, true, false);
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final void m3713c() {
         this.f8392o = 0;
         this.f8395r = 0;
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final DefaultSampleValues m3714d(SparseArray<DefaultSampleValues> sparseArray, int i) {
         if (sparseArray.size() == 1) {
             return sparseArray.valueAt(0);
@@ -476,7 +476,7 @@ public class FragmentedMp4Extractor implements Extractor {
     /* JADX WARN: Removed duplicated region for block: B:75:0x015c  */
     /* JADX WARN: Removed duplicated region for block: B:96:0x01ca  */
     @Override // p007b.p225i.p226a.p242c.p267x2.Extractor
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
@@ -545,7 +545,7 @@ public class FragmentedMp4Extractor implements Extractor {
                                 jM2985F3 = Util2.m2985F(j4, 1000000L, jM3101u2);
                                 jArr4[i7] = jM2985F3 - jArr5[i7];
                                 parsableByteArray.m3080F(4);
-                                j3 += iArr[i7];
+                                j3 += (long) iArr[i7];
                                 i6 = i7 + 1;
                                 jArr2 = jArr4;
                                 jArr3 = jArr5;
@@ -864,13 +864,13 @@ public class FragmentedMp4Extractor implements Extractor {
                         jMo3642b = this.f8390m.peek().f8350b;
                     }
                     if (jMo3642b != -1) {
-                        this.f8394q = (jMo3642b - extractorInput.getPosition()) + this.f8395r;
+                        this.f8394q = (jMo3642b - extractorInput.getPosition()) + ((long) this.f8395r);
                     }
                 }
                 if (this.f8394q >= this.f8395r) {
                     throw ParserException.m8756b("Atom size less than header length (unsupported).");
                 }
-                long position4 = extractorInput.getPosition() - this.f8395r;
+                long position4 = extractorInput.getPosition() - ((long) this.f8395r);
                 int i21 = this.f8393p;
                 if ((i21 == 1836019558 || i21 == 1835295092) && !this.f8379G) {
                     this.f8376D.mo2477a(new SeekMap.b(this.f8400w, position4));
@@ -940,7 +940,7 @@ public class FragmentedMp4Extractor implements Extractor {
     }
 
     @Override // p007b.p225i.p226a.p242c.p267x2.Extractor
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public void mo3636f(ExtractorOutput extractorOutput) {
         int i;
         this.f8376D = extractorOutput;
@@ -972,7 +972,7 @@ public class FragmentedMp4Extractor implements Extractor {
     }
 
     @Override // p007b.p225i.p226a.p242c.p267x2.Extractor
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public void mo3637g(long j, long j2) {
         int size = this.f8382e.size();
         for (int i = 0; i < size; i++) {
@@ -988,7 +988,7 @@ public class FragmentedMp4Extractor implements Extractor {
     /* JADX WARN: Removed duplicated region for block: B:141:0x035d  */
     /* JADX WARN: Removed duplicated region for block: B:144:0x0370  */
     /* JADX WARN: Removed duplicated region for block: B:281:0x0680  */
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
@@ -1208,7 +1208,7 @@ public class FragmentedMp4Extractor implements Extractor {
                                             aVar2 = aVarPop;
                                             bArr3 = bArr4;
                                             i6 = i28;
-                                            jArr[i30] = jArr[i30] + parsableByteArray7.m3086f();
+                                            jArr[i30] = jArr[i30] + ((long) parsableByteArray7.m3086f());
                                         } else {
                                             bArr3 = bArr4;
                                             i6 = i28;
@@ -1275,7 +1275,7 @@ public class FragmentedMp4Extractor implements Extractor {
                                                     z6 = z12;
                                                     iM3086f4 = 0;
                                                 }
-                                                jArr3[i12] = Util2.m2985F((iM3086f4 + j5) - j2, 1000000L, j4);
+                                                jArr3[i12] = Util2.m2985F((((long) iM3086f4) + j5) - j2, 1000000L, j4);
                                                 if (trackFragment5.f8492q) {
                                                     i13 = i11;
                                                     parsableByteArray = parsableByteArray7;
@@ -1286,7 +1286,7 @@ public class FragmentedMp4Extractor implements Extractor {
                                                 }
                                                 iArr[i12] = iM3086f2;
                                                 zArr[i12] = ((iM3086f3 >> 16) & 1) == 0 && (!z13 || i12 == 0);
-                                                j5 += iM3086f;
+                                                j5 += (long) iM3086f;
                                                 i12++;
                                                 i11 = i13;
                                                 parsableByteArray7 = parsableByteArray;

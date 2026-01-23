@@ -6,10 +6,10 @@ import java.util.Map;
 import java.util.TreeMap;
 import p007b.p225i.p226a.p288f.p291b.AbstractC3179e;
 
-/* renamed from: b.i.a.f.b.e */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.b.e */
+/* JADX INFO: loaded from: classes3.dex */
 public abstract class AbstractC3179e<T extends AbstractC3179e> {
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static String m3966a(Object obj, int i) {
         if (i > 10) {
             return "ERROR: Recursive toString calls";

@@ -10,27 +10,27 @@ import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 import java.lang.reflect.Field;
 
-/* compiled from: ReflectiveTypeAdapterFactory.java */
-/* renamed from: b.i.d.q.x.c, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.d.q.x.c, reason: use source file name */
+/* JADX INFO: compiled from: ReflectiveTypeAdapterFactory.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class ReflectiveTypeAdapterFactory2 extends ReflectiveTypeAdapterFactory.AbstractC11109a {
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final /* synthetic */ Field f13141d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final /* synthetic */ boolean f13142e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final /* synthetic */ TypeAdapter f13143f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public final /* synthetic */ Gson f13144g;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public final /* synthetic */ TypeToken f13145h;
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public final /* synthetic */ boolean f13146i;
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -45,8 +45,8 @@ public class ReflectiveTypeAdapterFactory2 extends ReflectiveTypeAdapterFactory.
     }
 
     @Override // com.google.gson.internal.bind.ReflectiveTypeAdapterFactory.AbstractC11109a
-    /* renamed from: a */
-    public void mo6906a(JsonReader jsonReader, Object obj) throws IllegalAccessException, IOException, IllegalArgumentException {
+    /* JADX INFO: renamed from: a */
+    public void mo6906a(JsonReader jsonReader, Object obj) throws IllegalAccessException, IOException {
         Object obj2 = this.f13143f.read(jsonReader);
         if (obj2 == null && this.f13146i) {
             return;
@@ -55,13 +55,13 @@ public class ReflectiveTypeAdapterFactory2 extends ReflectiveTypeAdapterFactory.
     }
 
     @Override // com.google.gson.internal.bind.ReflectiveTypeAdapterFactory.AbstractC11109a
-    /* renamed from: b */
-    public void mo6907b(JsonWriter jsonWriter, Object obj) throws IllegalAccessException, IOException, IllegalArgumentException {
+    /* JADX INFO: renamed from: b */
+    public void mo6907b(JsonWriter jsonWriter, Object obj) throws IllegalAccessException, IOException {
         (this.f13142e ? this.f13143f : new TypeAdapterRuntimeTypeWrapper(this.f13144g, this.f13143f, this.f13145h.getType())).write(jsonWriter, this.f13141d.get(obj));
     }
 
     @Override // com.google.gson.internal.bind.ReflectiveTypeAdapterFactory.AbstractC11109a
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public boolean mo6908c(Object obj) throws IllegalAccessException, IOException {
         return this.f21535b && this.f13141d.get(obj) != obj;
     }

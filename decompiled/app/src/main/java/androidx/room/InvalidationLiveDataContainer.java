@@ -7,7 +7,7 @@ import java.util.IdentityHashMap;
 import java.util.Set;
 import java.util.concurrent.Callable;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class InvalidationLiveDataContainer {
     private final RoomDatabase mDatabase;
 

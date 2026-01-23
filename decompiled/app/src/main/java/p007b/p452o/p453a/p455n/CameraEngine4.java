@@ -5,12 +5,12 @@ import com.otaliastudios.cameraview.CameraException;
 import java.util.concurrent.Callable;
 import p007b.p452o.p453a.CameraOptions;
 
-/* compiled from: CameraEngine.java */
-/* renamed from: b.o.a.n.l, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.o.a.n.l, reason: use source file name */
+/* JADX INFO: compiled from: CameraEngine.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class CameraEngine4 implements Callable<Task<CameraOptions>> {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final /* synthetic */ CameraEngine f13933j;
 
     public CameraEngine4(CameraEngine cameraEngine) {

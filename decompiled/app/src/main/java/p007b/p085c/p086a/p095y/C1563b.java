@@ -4,125 +4,125 @@ import android.graphics.Paint;
 import androidx.browser.trusted.sharing.ShareTarget;
 import p007b.p225i.p361c.p369m.p370d.p384s.p385h.AppSettingsData;
 
-/* renamed from: b.c.a.y.b */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.c.a.y.b */
+/* JADX INFO: loaded from: classes.dex */
 public /* synthetic */ class C1563b {
 
-    /* renamed from: A */
+    /* JADX INFO: renamed from: A */
     public static /* synthetic */ int[] f2655A;
 
-    /* renamed from: B */
+    /* JADX INFO: renamed from: B */
     public static /* synthetic */ int[] f2656B;
 
-    /* renamed from: C */
+    /* JADX INFO: renamed from: C */
     public static /* synthetic */ int[] f2657C;
 
-    /* renamed from: D */
+    /* JADX INFO: renamed from: D */
     public static /* synthetic */ int[] f2658D;
 
-    /* renamed from: E */
+    /* JADX INFO: renamed from: E */
     public static /* synthetic */ int[] f2659E;
 
-    /* renamed from: F */
+    /* JADX INFO: renamed from: F */
     public static /* synthetic */ int[] f2660F;
 
-    /* renamed from: G */
+    /* JADX INFO: renamed from: G */
     public static /* synthetic */ int[] f2661G;
 
-    /* renamed from: H */
+    /* JADX INFO: renamed from: H */
     public static /* synthetic */ int[] f2662H;
 
-    /* renamed from: I */
+    /* JADX INFO: renamed from: I */
     public static /* synthetic */ int[] f2663I;
 
-    /* renamed from: J */
+    /* JADX INFO: renamed from: J */
     public static /* synthetic */ int[] f2664J;
 
-    /* renamed from: K */
+    /* JADX INFO: renamed from: K */
     public static /* synthetic */ int[] f2665K;
 
-    /* renamed from: L */
+    /* JADX INFO: renamed from: L */
     public static /* synthetic */ int[] f2666L;
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static /* synthetic */ int[] f2667a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static /* synthetic */ int[] f2668b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public static /* synthetic */ int[] f2669c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public static /* synthetic */ int[] f2670d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public static /* synthetic */ int[] f2671e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public static /* synthetic */ int[] f2672f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public static /* synthetic */ int[] f2673g;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public static /* synthetic */ int[] f2674h;
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public static /* synthetic */ int[] f2675i;
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static /* synthetic */ int[] f2676j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public static /* synthetic */ int[] f2677k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public static /* synthetic */ int[] f2678l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public static /* synthetic */ int[] f2679m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public static /* synthetic */ int[] f2680n;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public static /* synthetic */ int[] f2681o;
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public static /* synthetic */ int[] f2682p;
 
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     public static /* synthetic */ int[] f2683q;
 
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     public static /* synthetic */ int[] f2684r;
 
-    /* renamed from: s */
+    /* JADX INFO: renamed from: s */
     public static /* synthetic */ int[] f2685s;
 
-    /* renamed from: t */
+    /* JADX INFO: renamed from: t */
     public static /* synthetic */ int[] f2686t;
 
-    /* renamed from: u */
+    /* JADX INFO: renamed from: u */
     public static /* synthetic */ int[] f2687u;
 
-    /* renamed from: v */
+    /* JADX INFO: renamed from: v */
     public static /* synthetic */ int[] f2688v;
 
-    /* renamed from: w */
+    /* JADX INFO: renamed from: w */
     public static /* synthetic */ int[] f2689w;
 
-    /* renamed from: x */
+    /* JADX INFO: renamed from: x */
     public static /* synthetic */ int[] f2690x;
 
-    /* renamed from: y */
+    /* JADX INFO: renamed from: y */
     public static /* synthetic */ int[] f2691y;
 
-    /* renamed from: z */
+    /* JADX INFO: renamed from: z */
     public static /* synthetic */ int[] f2692z;
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static synchronized /* synthetic */ int[] m750a() {
         if (f2667a == null) {
             f2667a = m759i(3);
@@ -130,7 +130,7 @@ public /* synthetic */ class C1563b {
         return f2667a;
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static synchronized /* synthetic */ int[] m751b() {
         if (f2670d == null) {
             f2670d = m759i(3);
@@ -138,7 +138,7 @@ public /* synthetic */ class C1563b {
         return f2670d;
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public static synchronized /* synthetic */ int[] m752c() {
         if (f2671e == null) {
             f2671e = m759i(3);
@@ -154,7 +154,7 @@ public /* synthetic */ class C1563b {
         return (int[]) m751b().clone();
     }
 
-    /* renamed from: com$airbnb$lottie$model$content$ShapeStroke$LineJoinType$s$values */
+    /* JADX INFO: renamed from: com$airbnb$lottie$model$content$ShapeStroke$LineJoinType$s$values */
     public static int[] m753x4b958c1e() {
         return (int[]) m752c().clone();
     }
@@ -171,7 +171,7 @@ public /* synthetic */ class C1563b {
         return (int[]) m756f().clone();
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public static synchronized /* synthetic */ int[] m754d() {
         if (f2673g == null) {
             f2673g = m759i(4);
@@ -179,7 +179,7 @@ public /* synthetic */ class C1563b {
         return f2673g;
     }
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public static synchronized /* synthetic */ int[] m755e() {
         if (f2688v == null) {
             f2688v = m759i(10);
@@ -187,7 +187,7 @@ public /* synthetic */ class C1563b {
         return f2688v;
     }
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public static synchronized /* synthetic */ int[] m756f() {
         if (f2689w == null) {
             f2689w = m759i(13);
@@ -195,7 +195,7 @@ public /* synthetic */ class C1563b {
         return f2689w;
     }
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public static /* synthetic */ boolean m757g(int i, int i2) {
         if (i != 0) {
             return i == i2;
@@ -203,7 +203,7 @@ public /* synthetic */ class C1563b {
         throw null;
     }
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public static /* synthetic */ int m758h(int i) {
         if (i != 0) {
             return i - 1;
@@ -211,7 +211,7 @@ public /* synthetic */ class C1563b {
         throw null;
     }
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public static /* synthetic */ int[] m759i(int i) {
         int[] iArr = new int[i];
         int i2 = 0;
@@ -223,20 +223,20 @@ public /* synthetic */ class C1563b {
         return iArr;
     }
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static /* synthetic */ void m760j(int i) {
         if (i == 0) {
             throw null;
         }
     }
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public static Paint.Cap m761k(int i) {
         int iM758h = m758h(i);
         return iM758h != 0 ? iM758h != 1 ? Paint.Cap.SQUARE : Paint.Cap.ROUND : Paint.Cap.BUTT;
     }
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public static Paint.Join m762l(int i) {
         int iM758h = m758h(i);
         if (iM758h == 0) {
@@ -251,7 +251,7 @@ public /* synthetic */ class C1563b {
         return Paint.Join.BEVEL;
     }
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public static int m763m(AppSettingsData appSettingsData) {
         boolean z2 = appSettingsData.f12755g == 2;
         boolean z3 = appSettingsData.f12756h == 2;
@@ -261,7 +261,7 @@ public /* synthetic */ class C1563b {
         return 1;
     }
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public static /* synthetic */ String m764n(int i) {
         if (i == 1) {
             return ShareTarget.METHOD_GET;

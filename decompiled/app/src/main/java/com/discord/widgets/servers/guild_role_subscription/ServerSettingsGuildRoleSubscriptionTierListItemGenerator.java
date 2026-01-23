@@ -7,9 +7,9 @@ import com.discord.widgets.servers.guild_role_subscription.ServerSettingsGuildRo
 import java.util.ArrayList;
 import java.util.List;
 
-/* compiled from: ServerSettingsGuildRoleSubscriptionTierListItemGenerator.kt */
-/* renamed from: com.discord.widgets.servers.guild_role_subscription.ServerSettingsGuildRoleSubscriptionTierListItemGeneratorKt, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.servers.guild_role_subscription.ServerSettingsGuildRoleSubscriptionTierListItemGeneratorKt, reason: use source file name */
+/* JADX INFO: compiled from: ServerSettingsGuildRoleSubscriptionTierListItemGenerator.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class ServerSettingsGuildRoleSubscriptionTierListItemGenerator {
     public static final List<ServerSettingsGuildRoleSubscriptionTierAdapter2> generateServerSettingsGuildRoleSubscriptionTierListItems(List<GuildRoleSubscriptionTierListing> list, int i) {
         ArrayList arrayList = new ArrayList();

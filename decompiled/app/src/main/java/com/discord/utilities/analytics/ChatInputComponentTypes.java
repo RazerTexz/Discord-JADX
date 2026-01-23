@@ -2,8 +2,8 @@ package com.discord.utilities.analytics;
 
 import com.discord.widgets.chat.AutocompleteUtils;
 
-/* compiled from: ChatInputComponentTypes.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: ChatInputComponentTypes.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class ChatInputComponentTypes {
     public static final String CAMERA = "camera";
     public static final String EMOJI = "emoji";

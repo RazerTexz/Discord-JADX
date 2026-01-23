@@ -7,9 +7,9 @@ import com.discord.models.guild.Guild;
 import com.discord.widgets.channels.threads.browser.WidgetThreadBrowserViewModel;
 import p658rx.functions.Func3;
 
-/* compiled from: WidgetThreadBrowserViewModel.kt */
-/* renamed from: com.discord.widgets.channels.threads.browser.WidgetThreadBrowserViewModel$Companion$observeStoreState$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.channels.threads.browser.WidgetThreadBrowserViewModel$Companion$observeStoreState$1, reason: use source file name */
+/* JADX INFO: compiled from: WidgetThreadBrowserViewModel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetThreadBrowserViewModel2<T1, T2, T3, R> implements Func3<Channel, Guild, Long, WidgetThreadBrowserViewModel.StoreState> {
     public static final WidgetThreadBrowserViewModel2 INSTANCE = new WidgetThreadBrowserViewModel2();
 
@@ -18,7 +18,7 @@ public final class WidgetThreadBrowserViewModel2<T1, T2, T3, R> implements Func3
         return call2(channel, guild, l);
     }
 
-    /* renamed from: call, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
     public final WidgetThreadBrowserViewModel.StoreState call2(Channel channel, Guild guild, Long l) {
         return new WidgetThreadBrowserViewModel.StoreState(channel, guild, l);
     }

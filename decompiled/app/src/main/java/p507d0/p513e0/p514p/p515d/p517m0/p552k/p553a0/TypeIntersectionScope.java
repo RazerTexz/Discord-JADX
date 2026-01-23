@@ -23,19 +23,19 @@ import p507d0.p580t._Collections;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: TypeIntersectionScope.kt */
-/* renamed from: d0.e0.p.d.m0.k.a0.o, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.k.a0.o, reason: use source file name */
+/* JADX INFO: compiled from: TypeIntersectionScope.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class TypeIntersectionScope extends AbstractScopeAdapter {
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static final a f24381b = new a(null);
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final MemberScope3 f24382c;
 
-    /* compiled from: TypeIntersectionScope.kt */
-    /* renamed from: d0.e0.p.d.m0.k.a0.o$a */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.k.a0.o$a */
+    /* JADX INFO: compiled from: TypeIntersectionScope.kt */
     public static final class a {
         public a(DefaultConstructorMarker defaultConstructorMarker) {
         }
@@ -54,18 +54,18 @@ public final class TypeIntersectionScope extends AbstractScopeAdapter {
         }
     }
 
-    /* compiled from: TypeIntersectionScope.kt */
-    /* renamed from: d0.e0.p.d.m0.k.a0.o$b */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.k.a0.o$b */
+    /* JADX INFO: compiled from: TypeIntersectionScope.kt */
     public static final class b extends Lambda implements Function1<CallableDescriptor, CallableDescriptor> {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public static final b f24383j = new b();
 
         public b() {
             super(1);
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final CallableDescriptor invoke2(CallableDescriptor callableDescriptor) {
             Intrinsics3.checkNotNullParameter(callableDescriptor, "<this>");
             return callableDescriptor;
@@ -77,18 +77,18 @@ public final class TypeIntersectionScope extends AbstractScopeAdapter {
         }
     }
 
-    /* compiled from: TypeIntersectionScope.kt */
-    /* renamed from: d0.e0.p.d.m0.k.a0.o$c */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.k.a0.o$c */
+    /* JADX INFO: compiled from: TypeIntersectionScope.kt */
     public static final class c extends Lambda implements Function1<SimpleFunctionDescriptor, CallableDescriptor> {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public static final c f24384j = new c();
 
         public c() {
             super(1);
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final CallableDescriptor invoke2(SimpleFunctionDescriptor simpleFunctionDescriptor) {
             Intrinsics3.checkNotNullParameter(simpleFunctionDescriptor, "<this>");
             return simpleFunctionDescriptor;
@@ -100,18 +100,18 @@ public final class TypeIntersectionScope extends AbstractScopeAdapter {
         }
     }
 
-    /* compiled from: TypeIntersectionScope.kt */
-    /* renamed from: d0.e0.p.d.m0.k.a0.o$d */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.k.a0.o$d */
+    /* JADX INFO: compiled from: TypeIntersectionScope.kt */
     public static final class d extends Lambda implements Function1<PropertyDescriptor, CallableDescriptor> {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public static final d f24385j = new d();
 
         public d() {
             super(1);
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final CallableDescriptor invoke2(PropertyDescriptor propertyDescriptor) {
             Intrinsics3.checkNotNullParameter(propertyDescriptor, "<this>");
             return propertyDescriptor;
@@ -132,7 +132,7 @@ public final class TypeIntersectionScope extends AbstractScopeAdapter {
     }
 
     @Override // p507d0.p513e0.p514p.p515d.p517m0.p552k.p553a0.AbstractScopeAdapter
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public MemberScope3 mo9910a() {
         return this.f24382c;
     }

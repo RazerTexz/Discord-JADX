@@ -7,9 +7,9 @@ import kotlin.jvm.functions.Function1;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: VideoCallGridViewHolder.kt */
-/* renamed from: com.discord.widgets.voice.fullscreen.grid.VideoCallGridViewHolder$UserOrStream$configure$2, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: com.discord.widgets.voice.fullscreen.grid.VideoCallGridViewHolder$UserOrStream$configure$2, reason: use source file name */
+/* JADX INFO: compiled from: VideoCallGridViewHolder.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class VideoCallGridViewHolder4 extends Lambda implements Function1<View, Unit> {
     public final /* synthetic */ CallParticipant.UserOrStreamParticipant $callParticipant;
     public final /* synthetic */ Function1 $onLongClicked;
@@ -27,7 +27,7 @@ public final class VideoCallGridViewHolder4 extends Lambda implements Function1<
         return Unit.f27425a;
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final void invoke2(View view) {
         Intrinsics3.checkNotNullParameter(view, "it");
         this.$onLongClicked.invoke(this.$callParticipant);

@@ -10,35 +10,35 @@ import p007b.p225i.p226a.p242c.MediaMetadata;
 import p007b.p225i.p226a.p242c.p259f3.Util2;
 import p007b.p225i.p226a.p242c.p279z2.Metadata2;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public final class EventMessage implements Metadata.Entry {
     public static final Parcelable.Creator<EventMessage> CREATOR;
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static final Format2 f19939j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public static final Format2 f19940k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final String f19941l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public final String f19942m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public final long f19943n;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public final long f19944o;
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public final byte[] f19945p;
 
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     public int f19946q;
 
-    /* renamed from: com.google.android.exoplayer2.metadata.emsg.EventMessage$a */
+    /* JADX INFO: renamed from: com.google.android.exoplayer2.metadata.emsg.EventMessage$a */
     public class C10721a implements Parcelable.Creator<EventMessage> {
         @Override // android.os.Parcelable.Creator
         public EventMessage createFromParcel(Parcel parcel) {
@@ -100,14 +100,14 @@ public final class EventMessage implements Metadata.Entry {
     }
 
     @Override // com.google.android.exoplayer2.metadata.Metadata.Entry
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public /* synthetic */ void mo8878n(MediaMetadata.b bVar) {
         Metadata2.m3894c(this, bVar);
     }
 
     @Override // com.google.android.exoplayer2.metadata.Metadata.Entry
     @Nullable
-    /* renamed from: o0 */
+    /* JADX INFO: renamed from: o0 */
     public byte[] mo8879o0() {
         if (mo8880y() != null) {
             return this.f19945p;
@@ -143,7 +143,7 @@ public final class EventMessage implements Metadata.Entry {
 
     @Override // com.google.android.exoplayer2.metadata.Metadata.Entry
     @Nullable
-    /* renamed from: y */
+    /* JADX INFO: renamed from: y */
     public Format2 mo8880y() {
         String str = this.f19941l;
         str.hashCode();

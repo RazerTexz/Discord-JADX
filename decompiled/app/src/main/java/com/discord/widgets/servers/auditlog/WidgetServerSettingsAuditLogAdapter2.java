@@ -7,9 +7,9 @@ import com.discord.widgets.servers.auditlog.WidgetServerSettingsAuditLogAdapter;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function2;
 
-/* compiled from: WidgetServerSettingsAuditLogAdapter.kt */
-/* renamed from: com.discord.widgets.servers.auditlog.WidgetServerSettingsAuditLogAdapter$AuditLogEntryViewHolder$onConfigure$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.servers.auditlog.WidgetServerSettingsAuditLogAdapter$AuditLogEntryViewHolder$onConfigure$1, reason: use source file name */
+/* JADX INFO: compiled from: WidgetServerSettingsAuditLogAdapter.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetServerSettingsAuditLogAdapter2 implements View.OnClickListener {
     public final /* synthetic */ GuildMember $guildMember;
     public final /* synthetic */ User $user;

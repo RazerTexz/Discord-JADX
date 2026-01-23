@@ -1,7 +1,6 @@
 package com.discord.widgets.chat.input.gifpicker;
 
 import android.content.Context;
-import android.content.res.Resources;
 import android.view.View;
 import android.widget.TextView;
 import androidx.core.app.NotificationCompat;
@@ -43,25 +42,25 @@ import p507d0.p592z.p594d.Lambda;
 import p507d0.p592z.p594d.Reflection2;
 import p658rx.functions.Func0;
 
-/* compiled from: WidgetGifCategory.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetGifCategory.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetGifCategory extends AppFragment {
     public static final String ARG_GIF_CATEGORY_ITEM = "GIF_CATEGORY_ITEM";
 
-    /* renamed from: binding$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
 
-    /* renamed from: expressionTrayViewModel$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: expressionTrayViewModel$delegate, reason: from kotlin metadata */
     private final Lazy expressionTrayViewModel;
     private GifAdapter gifAdapter;
 
-    /* renamed from: gifCategoryViewModel$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: gifCategoryViewModel$delegate, reason: from kotlin metadata */
     private final Lazy gifCategoryViewModel;
     private Function0<Unit> onGifSelected;
     public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetGifCategory.class, "binding", "getBinding()Lcom/discord/databinding/WidgetGifCategoryBinding;", 0)};
 
-    /* compiled from: WidgetGifCategory.kt */
-    /* renamed from: com.discord.widgets.chat.input.gifpicker.WidgetGifCategory$onViewBoundOrOnResume$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.input.gifpicker.WidgetGifCategory$onViewBoundOrOnResume$1 */
+    /* JADX INFO: compiled from: WidgetGifCategory.kt */
     public static final class C78761 extends Lambda implements Function1<GifCategoryViewModel.ViewState, Unit> {
         public C78761() {
             super(1);
@@ -73,15 +72,15 @@ public final class WidgetGifCategory extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(GifCategoryViewModel.ViewState viewState) {
             Intrinsics3.checkNotNullParameter(viewState, "viewState");
             WidgetGifCategory.access$handleViewState(WidgetGifCategory.this, viewState);
         }
     }
 
-    /* compiled from: WidgetGifCategory.kt */
-    /* renamed from: com.discord.widgets.chat.input.gifpicker.WidgetGifCategory$setUpBackBehavior$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.input.gifpicker.WidgetGifCategory$setUpBackBehavior$1 */
+    /* JADX INFO: compiled from: WidgetGifCategory.kt */
     public static final class C78771<R> implements Func0<Boolean> {
         public C78771() {
         }
@@ -98,8 +97,8 @@ public final class WidgetGifCategory extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetGifCategory.kt */
-    /* renamed from: com.discord.widgets.chat.input.gifpicker.WidgetGifCategory$setUpBackBehavior$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.input.gifpicker.WidgetGifCategory$setUpBackBehavior$2 */
+    /* JADX INFO: compiled from: WidgetGifCategory.kt */
     public static final class ViewOnClickListenerC78782 implements View.OnClickListener {
         public ViewOnClickListenerC78782() {
         }
@@ -110,8 +109,8 @@ public final class WidgetGifCategory extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetGifCategory.kt */
-    /* renamed from: com.discord.widgets.chat.input.gifpicker.WidgetGifCategory$setUpGifRecycler$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.input.gifpicker.WidgetGifCategory$setUpGifRecycler$1 */
+    /* JADX INFO: compiled from: WidgetGifCategory.kt */
     public static final /* synthetic */ class C78791 extends FunctionReferenceImpl implements Function1<GifAdapterItem.GifItem, Unit> {
         public C78791(WidgetGifCategory widgetGifCategory) {
             super(1, widgetGifCategory, WidgetGifCategory.class, "selectGif", "selectGif(Lcom/discord/widgets/chat/input/gifpicker/GifAdapterItem$GifItem;)V", 0);
@@ -123,15 +122,15 @@ public final class WidgetGifCategory extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(GifAdapterItem.GifItem gifItem) {
             Intrinsics3.checkNotNullParameter(gifItem, "p1");
             WidgetGifCategory.access$selectGif((WidgetGifCategory) this.receiver, gifItem);
         }
     }
 
-    /* compiled from: WidgetGifCategory.kt */
-    /* renamed from: com.discord.widgets.chat.input.gifpicker.WidgetGifCategory$setWindowInsetsListeners$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.input.gifpicker.WidgetGifCategory$setWindowInsetsListeners$1 */
+    /* JADX INFO: compiled from: WidgetGifCategory.kt */
     public static final class C78801 implements OnApplyWindowInsetsListener {
         public static final C78801 INSTANCE = new C78801();
 
@@ -144,8 +143,8 @@ public final class WidgetGifCategory extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetGifCategory.kt */
-    /* renamed from: com.discord.widgets.chat.input.gifpicker.WidgetGifCategory$setWindowInsetsListeners$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.input.gifpicker.WidgetGifCategory$setWindowInsetsListeners$2 */
+    /* JADX INFO: compiled from: WidgetGifCategory.kt */
     public static final class C78812 implements OnApplyWindowInsetsListener {
         public C78812() {
         }
@@ -258,7 +257,7 @@ public final class WidgetGifCategory extends AppFragment {
         getBinding().f16695c.addItemDecoration(new GifStaggeredGridItemDecoration(iDpToPixels, categoryColumnsCount));
     }
 
-    private final void setUpTitle() throws Resources.NotFoundException {
+    private final void setUpTitle() {
         String string;
         GifCategoryItem gifCategory = getGifCategory();
         TextView textView = getBinding().f16697e;
@@ -280,7 +279,7 @@ public final class WidgetGifCategory extends AppFragment {
     }
 
     @Override // com.discord.app.AppFragment
-    public void onViewBound(View view) throws Resources.NotFoundException {
+    public void onViewBound(View view) {
         Intrinsics3.checkNotNullParameter(view, "view");
         super.onViewBound(view);
         GifAdapter.Companion companion = GifAdapter.INSTANCE;

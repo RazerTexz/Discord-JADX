@@ -3,12 +3,12 @@ package p007b.p008a.p062y;
 import android.view.View;
 import com.discord.views.CodeVerificationView;
 
-/* compiled from: CodeVerificationView.kt */
-/* renamed from: b.a.y.b, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: b.a.y.b, reason: use source file name */
+/* JADX INFO: compiled from: CodeVerificationView.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class CodeVerificationView2 implements View.OnFocusChangeListener {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final /* synthetic */ CodeVerificationView f2007j;
 
     public CodeVerificationView2(CodeVerificationView codeVerificationView) {

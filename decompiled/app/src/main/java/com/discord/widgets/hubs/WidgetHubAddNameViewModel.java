@@ -17,16 +17,16 @@ import p007b.p008a.p018d.AppViewModel;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetHubAddNameViewModel.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetHubAddNameViewModel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetHubAddNameViewModel extends AppViewModel<WidgetHubAddNameViewModel2> {
     private final long guildId;
     private final StoreGuilds guildStore;
     private final RestAPI restAPI;
     private final StoreUser userStore;
 
-    /* compiled from: WidgetHubAddNameViewModel.kt */
-    /* renamed from: com.discord.widgets.hubs.WidgetHubAddNameViewModel$setName$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.hubs.WidgetHubAddNameViewModel$setName$2 */
+    /* JADX INFO: compiled from: WidgetHubAddNameViewModel.kt */
     public static final class C89902 extends Lambda implements Function1<RestCallState<? extends Void>, Unit> {
         public C89902() {
             super(1);
@@ -38,7 +38,7 @@ public final class WidgetHubAddNameViewModel extends AppViewModel<WidgetHubAddNa
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(RestCallState<Void> restCallState) {
             Intrinsics3.checkNotNullParameter(restCallState, "async");
             WidgetHubAddNameViewModel2 widgetHubAddNameViewModel2Access$getViewState$p = WidgetHubAddNameViewModel.access$getViewState$p(WidgetHubAddNameViewModel.this);

@@ -8,12 +8,12 @@ import p007b.p085c.p086a.p087a0.p088i0.JsonReader2;
 import p007b.p085c.p086a.p089b0.MiscUtils;
 import p007b.p085c.p086a.p095y.p097l.GradientColor;
 
-/* compiled from: GradientColorParser.java */
-/* renamed from: b.c.a.a0.l, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.c.a.a0.l, reason: use source file name */
+/* JADX INFO: compiled from: GradientColorParser.java */
+/* JADX INFO: loaded from: classes.dex */
 public class GradientColorParser implements ValueParser<GradientColor> {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public int f2268a;
 
     public GradientColorParser(int i) {
@@ -21,7 +21,7 @@ public class GradientColorParser implements ValueParser<GradientColor> {
     }
 
     @Override // p007b.p085c.p086a.p087a0.ValueParser
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public GradientColor mo413a(JsonReader2 jsonReader2, float f) throws IOException {
         int i;
         double d;

@@ -24,17 +24,17 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 import p507d0.p592z.p594d.p595g0.KMarkers;
 
-/* compiled from: _Sequences.kt */
-/* renamed from: d0.f0.q, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.f0.q, reason: use source file name */
+/* JADX INFO: compiled from: _Sequences.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public class _Sequences2 extends _SequencesJvm {
 
     /* JADX INFO: Add missing generic type declarations: [T] */
-    /* compiled from: Iterables.kt */
-    /* renamed from: d0.f0.q$a */
+    /* JADX INFO: renamed from: d0.f0.q$a */
+    /* JADX INFO: compiled from: Iterables.kt */
     public static final class a<T> implements Iterable<T>, KMarkers {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public final /* synthetic */ Sequence f25109j;
 
         public a(Sequence sequence) {
@@ -48,11 +48,11 @@ public class _Sequences2 extends _SequencesJvm {
     }
 
     /* JADX INFO: Add missing generic type declarations: [T] */
-    /* compiled from: _Sequences.kt */
-    /* renamed from: d0.f0.q$b */
+    /* JADX INFO: renamed from: d0.f0.q$b */
+    /* JADX INFO: compiled from: _Sequences.kt */
     public static final class b<T> extends Lambda implements Function1<T, T> {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public static final b f25110j = new b();
 
         public b() {
@@ -66,11 +66,11 @@ public class _Sequences2 extends _SequencesJvm {
     }
 
     /* JADX INFO: Add missing generic type declarations: [T] */
-    /* compiled from: _Sequences.kt */
-    /* renamed from: d0.f0.q$c */
+    /* JADX INFO: renamed from: d0.f0.q$c */
+    /* JADX INFO: compiled from: _Sequences.kt */
     public static final class c<T> extends Lambda implements Function1<T, Boolean> {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public static final c f25111j = new c();
 
         public c() {
@@ -83,18 +83,18 @@ public class _Sequences2 extends _SequencesJvm {
             return Boolean.valueOf(invoke2(obj));
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final boolean invoke2(T t) {
             return t == null;
         }
     }
 
     /* JADX INFO: Add missing generic type declarations: [R] */
-    /* compiled from: _Sequences.kt */
-    /* renamed from: d0.f0.q$d */
+    /* JADX INFO: renamed from: d0.f0.q$d */
+    /* JADX INFO: compiled from: _Sequences.kt */
     public static final /* synthetic */ class d<R> extends FunctionReferenceImpl implements Function1<Sequence<? extends R>, Iterator<? extends R>> {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public static final d f25112j = new d();
 
         public d() {
@@ -113,11 +113,11 @@ public class _Sequences2 extends _SequencesJvm {
     }
 
     /* JADX INFO: Add missing generic type declarations: [T] */
-    /* compiled from: _Sequences.kt */
-    /* renamed from: d0.f0.q$e */
+    /* JADX INFO: renamed from: d0.f0.q$e */
+    /* JADX INFO: compiled from: _Sequences.kt */
     public static final class e<T> implements Sequence<T> {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final /* synthetic */ Sequence f25113a;
 
         public e(Sequence<? extends T> sequence) {
@@ -133,14 +133,14 @@ public class _Sequences2 extends _SequencesJvm {
     }
 
     /* JADX INFO: Add missing generic type declarations: [T] */
-    /* compiled from: _Sequences.kt */
-    /* renamed from: d0.f0.q$f */
+    /* JADX INFO: renamed from: d0.f0.q$f */
+    /* JADX INFO: compiled from: _Sequences.kt */
     public static final class f<T> implements Sequence<T> {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final /* synthetic */ Sequence f25114a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final /* synthetic */ Comparator f25115b;
 
         public f(Sequence<? extends T> sequence, Comparator comparator) {

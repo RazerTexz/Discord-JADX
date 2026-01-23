@@ -26,25 +26,25 @@ import p658rx.Observable;
 import p658rx.subjects.PublishSubject;
 import p658rx.subjects.Subject;
 
-/* compiled from: OverlayVoiceBubble.kt */
-/* renamed from: b.a.y.w, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: b.a.y.w, reason: use source file name */
+/* JADX INFO: compiled from: OverlayVoiceBubble.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class OverlayVoiceBubble2 extends OverlayBubbleWrap implements AppComponent {
 
-    /* renamed from: x */
+    /* JADX INFO: renamed from: x */
     public static final /* synthetic */ int f2073x = 0;
 
-    /* renamed from: y */
+    /* JADX INFO: renamed from: y */
     public final OverlayVoiceBubbleBinding f2074y;
 
-    /* renamed from: z */
+    /* JADX INFO: renamed from: z */
     public final Subject<Void, Void> f2075z;
 
-    /* compiled from: OverlayVoiceBubble.kt */
-    /* renamed from: b.a.y.w$a */
+    /* JADX INFO: renamed from: b.a.y.w$a */
+    /* JADX INFO: compiled from: OverlayVoiceBubble.kt */
     public static final class a<T, R> implements Func1<Long, Observable<? extends StoreVoiceParticipants.VoiceUser>> {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public static final a f2076j = new a();
 
         @Override // p637j0.p641k.Func1
@@ -59,8 +59,8 @@ public final class OverlayVoiceBubble2 extends OverlayBubbleWrap implements AppC
         }
     }
 
-    /* compiled from: OverlayVoiceBubble.kt */
-    /* renamed from: b.a.y.w$b */
+    /* JADX INFO: renamed from: b.a.y.w$b */
+    /* JADX INFO: compiled from: OverlayVoiceBubble.kt */
     public static final class b extends Lambda implements Function1<StoreVoiceParticipants.VoiceUser, Unit> {
         public b() {
             super(1);
@@ -98,21 +98,21 @@ public final class OverlayVoiceBubble2 extends OverlayBubbleWrap implements AppC
     }
 
     @Override // com.discord.overlay.views.OverlayBubbleWrap
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public void mo389a(boolean z2) {
         m392h();
         super.mo389a(z2);
     }
 
     @Override // com.discord.overlay.views.OverlayBubbleWrap
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public void mo390b(View view) {
         Intrinsics3.checkNotNullParameter(view, "targetView");
         super.mo390b(view);
         m391g();
     }
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public final void m391g() {
         getImageView$app_productionGoogleRelease().animate().setDuration(100L).alpha(1.0f).start();
     }
@@ -128,7 +128,7 @@ public final class OverlayVoiceBubble2 extends OverlayBubbleWrap implements AppC
         return this.f2075z;
     }
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public final void m392h() {
         getImageView$app_productionGoogleRelease().animate().setDuration(200L).alpha(0.5f).start();
     }

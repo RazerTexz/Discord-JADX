@@ -17,62 +17,62 @@ import p507d0.p513e0.p514p.p515d.p517m0.p573o.ModuleVisibilityHelper;
 import p507d0.p513e0.p514p.p515d.p517m0.p576p.collections;
 import p507d0.p580t.Sets5;
 
-/* compiled from: DescriptorVisibilities.java */
-/* renamed from: d0.e0.p.d.m0.c.t, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.c.t, reason: use source file name */
+/* JADX INFO: compiled from: DescriptorVisibilities.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class DescriptorVisibilities {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final DescriptorVisibility2 f23083a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static final DescriptorVisibility2 f23084b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public static final DescriptorVisibility2 f23085c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public static final DescriptorVisibility2 f23086d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public static final DescriptorVisibility2 f23087e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public static final DescriptorVisibility2 f23088f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public static final DescriptorVisibility2 f23089g;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public static final DescriptorVisibility2 f23090h;
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public static final DescriptorVisibility2 f23091i;
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static final Map<DescriptorVisibility2, Integer> f23092j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public static final DescriptorVisibility2 f23093k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public static final ReceiverValue f23094l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public static final ReceiverValue f23095m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     @Deprecated
     public static final ReceiverValue f23096n;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public static final ModuleVisibilityHelper f23097o;
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public static final Map<Visibility2, DescriptorVisibility2> f23098p;
 
-    /* compiled from: DescriptorVisibilities.java */
-    /* renamed from: d0.e0.p.d.m0.c.t$a */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.c.t$a */
+    /* JADX INFO: compiled from: DescriptorVisibilities.java */
     public static class a implements ReceiverValue {
         @Override // p507d0.p513e0.p514p.p515d.p517m0.p552k.p553a0.p554p.ReceiverValue
         public KotlinType getType() {
@@ -80,8 +80,8 @@ public class DescriptorVisibilities {
         }
     }
 
-    /* compiled from: DescriptorVisibilities.java */
-    /* renamed from: d0.e0.p.d.m0.c.t$b */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.c.t$b */
+    /* JADX INFO: compiled from: DescriptorVisibilities.java */
     public static class b implements ReceiverValue {
         @Override // p507d0.p513e0.p514p.p515d.p517m0.p552k.p553a0.p554p.ReceiverValue
         public KotlinType getType() {
@@ -89,8 +89,8 @@ public class DescriptorVisibilities {
         }
     }
 
-    /* compiled from: DescriptorVisibilities.java */
-    /* renamed from: d0.e0.p.d.m0.c.t$c */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.c.t$c */
+    /* JADX INFO: compiled from: DescriptorVisibilities.java */
     public static class c implements ReceiverValue {
         @Override // p507d0.p513e0.p514p.p515d.p517m0.p552k.p553a0.p554p.ReceiverValue
         public KotlinType getType() {
@@ -98,14 +98,14 @@ public class DescriptorVisibilities {
         }
     }
 
-    /* compiled from: DescriptorVisibilities.java */
-    /* renamed from: d0.e0.p.d.m0.c.t$d */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.c.t$d */
+    /* JADX INFO: compiled from: DescriptorVisibilities.java */
     public static class d extends DescriptorVisibility {
         public d(Visibility2 visibility2) {
             super(visibility2);
         }
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public static /* synthetic */ void m9439a(int i) {
             Object[] objArr = new Object[3];
             if (i == 1) {
@@ -125,10 +125,6 @@ public class DescriptorVisibilities {
         }
 
         /* JADX WARN: Multi-variable type inference failed */
-        /* JADX WARN: Type inference failed for: r5v0, types: [d0.e0.p.d.m0.c.m, d0.e0.p.d.m0.c.q] */
-        /* JADX WARN: Type inference failed for: r5v2, types: [d0.e0.p.d.m0.c.m] */
-        /* JADX WARN: Type inference failed for: r5v3, types: [d0.e0.p.d.m0.c.m] */
-        /* JADX WARN: Type inference failed for: r5v4, types: [d0.e0.p.d.m0.c.m] */
         @Override // p507d0.p513e0.p514p.p515d.p517m0.p521c.DescriptorVisibility2
         public boolean isVisible(ReceiverValue receiverValue, DeclarationDescriptorWithVisibility declarationDescriptorWithVisibility, DeclarationDescriptor declarationDescriptor) {
             if (declarationDescriptorWithVisibility == 0) {
@@ -168,7 +164,7 @@ public class DescriptorVisibilities {
                     return true;
                 }
                 if (declarationDescriptor instanceof PackageFragmentDescriptor) {
-                    return (declarationDescriptorWithVisibility instanceof PackageFragmentDescriptor) && declarationDescriptorWithVisibility.getFqName().equals(((PackageFragmentDescriptor) declarationDescriptor).getFqName()) && DescriptorUtils.areInSameModule(declarationDescriptor, declarationDescriptorWithVisibility);
+                    return (declarationDescriptorWithVisibility instanceof PackageFragmentDescriptor) && ((PackageFragmentDescriptor) declarationDescriptorWithVisibility).getFqName().equals(((PackageFragmentDescriptor) declarationDescriptor).getFqName()) && DescriptorUtils.areInSameModule(declarationDescriptor, declarationDescriptorWithVisibility);
                 }
                 declarationDescriptor = declarationDescriptor.getContainingDeclaration();
             }
@@ -176,14 +172,14 @@ public class DescriptorVisibilities {
         }
     }
 
-    /* compiled from: DescriptorVisibilities.java */
-    /* renamed from: d0.e0.p.d.m0.c.t$e */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.c.t$e */
+    /* JADX INFO: compiled from: DescriptorVisibilities.java */
     public static class e extends DescriptorVisibility {
         public e(Visibility2 visibility2) {
             super(visibility2);
         }
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public static /* synthetic */ void m9440a(int i) {
             Object[] objArr = new Object[3];
             if (i != 1) {
@@ -219,14 +215,14 @@ public class DescriptorVisibilities {
         }
     }
 
-    /* compiled from: DescriptorVisibilities.java */
-    /* renamed from: d0.e0.p.d.m0.c.t$f */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.c.t$f */
+    /* JADX INFO: compiled from: DescriptorVisibilities.java */
     public static class f extends DescriptorVisibility {
         public f(Visibility2 visibility2) {
             super(visibility2);
         }
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public static /* synthetic */ void m9441a(int i) {
             Object[] objArr = new Object[3];
             if (i == 1) {
@@ -299,14 +295,14 @@ public class DescriptorVisibilities {
         }
     }
 
-    /* compiled from: DescriptorVisibilities.java */
-    /* renamed from: d0.e0.p.d.m0.c.t$g */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.c.t$g */
+    /* JADX INFO: compiled from: DescriptorVisibilities.java */
     public static class g extends DescriptorVisibility {
         public g(Visibility2 visibility2) {
             super(visibility2);
         }
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public static /* synthetic */ void m9442a(int i) {
             Object[] objArr = new Object[3];
             if (i != 1) {
@@ -336,14 +332,14 @@ public class DescriptorVisibilities {
         }
     }
 
-    /* compiled from: DescriptorVisibilities.java */
-    /* renamed from: d0.e0.p.d.m0.c.t$h */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.c.t$h */
+    /* JADX INFO: compiled from: DescriptorVisibilities.java */
     public static class h extends DescriptorVisibility {
         public h(Visibility2 visibility2) {
             super(visibility2);
         }
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public static /* synthetic */ void m9443a(int i) {
             Object[] objArr = new Object[3];
             if (i != 1) {
@@ -370,14 +366,14 @@ public class DescriptorVisibilities {
         }
     }
 
-    /* compiled from: DescriptorVisibilities.java */
-    /* renamed from: d0.e0.p.d.m0.c.t$i */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.c.t$i */
+    /* JADX INFO: compiled from: DescriptorVisibilities.java */
     public static class i extends DescriptorVisibility {
         public i(Visibility2 visibility2) {
             super(visibility2);
         }
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public static /* synthetic */ void m9444a(int i) {
             Object[] objArr = new Object[3];
             if (i != 1) {
@@ -404,14 +400,14 @@ public class DescriptorVisibilities {
         }
     }
 
-    /* compiled from: DescriptorVisibilities.java */
-    /* renamed from: d0.e0.p.d.m0.c.t$j */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.c.t$j */
+    /* JADX INFO: compiled from: DescriptorVisibilities.java */
     public static class j extends DescriptorVisibility {
         public j(Visibility2 visibility2) {
             super(visibility2);
         }
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public static /* synthetic */ void m9445a(int i) {
             Object[] objArr = new Object[3];
             if (i != 1) {
@@ -438,14 +434,14 @@ public class DescriptorVisibilities {
         }
     }
 
-    /* compiled from: DescriptorVisibilities.java */
-    /* renamed from: d0.e0.p.d.m0.c.t$k */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.c.t$k */
+    /* JADX INFO: compiled from: DescriptorVisibilities.java */
     public static class k extends DescriptorVisibility {
         public k(Visibility2 visibility2) {
             super(visibility2);
         }
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public static /* synthetic */ void m9446a(int i) {
             Object[] objArr = new Object[3];
             if (i != 1) {
@@ -472,14 +468,14 @@ public class DescriptorVisibilities {
         }
     }
 
-    /* compiled from: DescriptorVisibilities.java */
-    /* renamed from: d0.e0.p.d.m0.c.t$l */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.c.t$l */
+    /* JADX INFO: compiled from: DescriptorVisibilities.java */
     public static class l extends DescriptorVisibility {
         public l(Visibility2 visibility2) {
             super(visibility2);
         }
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public static /* synthetic */ void m9447a(int i) {
             Object[] objArr = new Object[3];
             if (i != 1) {
@@ -552,7 +548,7 @@ public class DescriptorVisibilities {
     }
 
     /* JADX WARN: Removed duplicated region for block: B:23:0x003a  */
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
@@ -633,7 +629,7 @@ public class DescriptorVisibilities {
         }
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static void m9438b(DescriptorVisibility2 descriptorVisibility2) {
         f23098p.put(descriptorVisibility2.getDelegate(), descriptorVisibility2);
     }

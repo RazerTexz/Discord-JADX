@@ -3,9 +3,9 @@ package com.discord.widgets.chat.input.applicationcommands;
 import android.view.View;
 import com.discord.models.commands.ApplicationCommandOption;
 
-/* compiled from: SelectedApplicationCommandAdapter.kt */
-/* renamed from: com.discord.widgets.chat.input.applicationcommands.SelectedAppCommandOptionAdapterItem$onConfigure$$inlined$let$lambda$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.chat.input.applicationcommands.SelectedAppCommandOptionAdapterItem$onConfigure$$inlined$let$lambda$1, reason: use source file name */
+/* JADX INFO: compiled from: SelectedApplicationCommandAdapter.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class SelectedApplicationCommandAdapter3 implements View.OnClickListener {
     public final /* synthetic */ SelectedApplicationCommandAdapter8 $data$inlined;
     public final /* synthetic */ ApplicationCommandOption $option;

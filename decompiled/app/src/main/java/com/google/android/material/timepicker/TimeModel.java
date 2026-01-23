@@ -6,32 +6,32 @@ import android.os.Parcelable;
 import java.util.Arrays;
 import p007b.p225i.p226a.p341g.p352k.MaxInputValidator;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public class TimeModel implements Parcelable {
     public static final Parcelable.Creator<TimeModel> CREATOR = new C11027a();
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final MaxInputValidator f21220j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final MaxInputValidator f21221k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final int f21222l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public int f21223m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public int f21224n;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public int f21225o;
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public int f21226p;
 
-    /* renamed from: com.google.android.material.timepicker.TimeModel$a */
+    /* JADX INFO: renamed from: com.google.android.material.timepicker.TimeModel$a */
     public static class C11027a implements Parcelable.Creator<TimeModel> {
         @Override // android.os.Parcelable.Creator
         public TimeModel createFromParcel(Parcel parcel) {
@@ -48,12 +48,12 @@ public class TimeModel implements Parcelable {
         this(0, 0, 10, 0);
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static String m9160a(Resources resources, CharSequence charSequence, String str) {
         return String.format(resources.getConfiguration().locale, str, Integer.valueOf(Integer.parseInt(String.valueOf(charSequence))));
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public int m9161b() {
         if (this.f21222l == 1) {
             return this.f21223m % 24;
@@ -65,7 +65,7 @@ public class TimeModel implements Parcelable {
         return this.f21226p == 1 ? i - 12 : i;
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public void m9162c(int i) {
         if (this.f21222l == 1) {
             this.f21223m = i;
@@ -74,7 +74,7 @@ public class TimeModel implements Parcelable {
         }
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public void m9163d(int i) {
         if (i != this.f21226p) {
             this.f21226p = i;

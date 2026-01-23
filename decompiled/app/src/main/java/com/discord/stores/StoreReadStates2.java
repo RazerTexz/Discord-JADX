@@ -3,9 +3,9 @@ package com.discord.stores;
 import kotlin.jvm.functions.Function9;
 import p658rx.functions.Func9;
 
-/* compiled from: StoreReadStates.kt */
-/* renamed from: com.discord.stores.StoreReadStates$sam$rx_functions_Func9$0, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.stores.StoreReadStates$sam$rx_functions_Func9$0, reason: use source file name */
+/* JADX INFO: compiled from: StoreReadStates.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class StoreReadStates2 implements Func9 {
     private final /* synthetic */ Function9 function;
 

@@ -24,8 +24,8 @@ import p507d0.p580t.MutableCollections;
 import p507d0.p580t._Collections;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: MobileReportsBreadcrumbs.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: MobileReportsBreadcrumbs.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class MobileReportsBreadcrumbs extends LinearLayout {
     private final ViewMobileReportsBreadcrumbsBinding binding;
 

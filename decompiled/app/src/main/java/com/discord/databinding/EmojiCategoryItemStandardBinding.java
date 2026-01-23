@@ -7,18 +7,18 @@ import androidx.annotation.NonNull;
 import androidx.viewbinding.ViewBinding;
 import p007b.p008a.p025i.ExpressionPickerCategorySelectionOverlineViewBinding;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public final class EmojiCategoryItemStandardBinding implements ViewBinding {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     @NonNull
     public final FrameLayout f15053a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     @NonNull
     public final ImageView f15054b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     @NonNull
     public final ExpressionPickerCategorySelectionOverlineViewBinding f15055c;
 

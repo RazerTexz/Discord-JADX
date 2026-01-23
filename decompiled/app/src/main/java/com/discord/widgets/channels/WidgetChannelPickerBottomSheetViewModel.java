@@ -24,11 +24,11 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 import p658rx.Observable;
 
-/* compiled from: WidgetChannelPickerBottomSheetViewModel.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetChannelPickerBottomSheetViewModel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetChannelPickerBottomSheetViewModel extends AppViewModel<ViewState> {
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private StoreState currentStoreState;
     private final long guildId;
@@ -36,8 +36,8 @@ public final class WidgetChannelPickerBottomSheetViewModel extends AppViewModel<
     private String searchQuery;
     private final long selectedChannelId;
 
-    /* compiled from: WidgetChannelPickerBottomSheetViewModel.kt */
-    /* renamed from: com.discord.widgets.channels.WidgetChannelPickerBottomSheetViewModel$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.channels.WidgetChannelPickerBottomSheetViewModel$1 */
+    /* JADX INFO: compiled from: WidgetChannelPickerBottomSheetViewModel.kt */
     public static final class C73341 extends Lambda implements Function1<StoreState, Unit> {
         public C73341() {
             super(1);
@@ -49,7 +49,7 @@ public final class WidgetChannelPickerBottomSheetViewModel extends AppViewModel<
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(StoreState storeState) {
             WidgetChannelPickerBottomSheetViewModel widgetChannelPickerBottomSheetViewModel = WidgetChannelPickerBottomSheetViewModel.this;
             Intrinsics3.checkNotNullExpressionValue(storeState, "storeState");
@@ -57,7 +57,7 @@ public final class WidgetChannelPickerBottomSheetViewModel extends AppViewModel<
         }
     }
 
-    /* compiled from: WidgetChannelPickerBottomSheetViewModel.kt */
+    /* JADX INFO: compiled from: WidgetChannelPickerBottomSheetViewModel.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -75,10 +75,10 @@ public final class WidgetChannelPickerBottomSheetViewModel extends AppViewModel<
         }
     }
 
-    /* compiled from: WidgetChannelPickerBottomSheetViewModel.kt */
+    /* JADX INFO: compiled from: WidgetChannelPickerBottomSheetViewModel.kt */
     public static abstract class StoreState {
 
-        /* compiled from: WidgetChannelPickerBottomSheetViewModel.kt */
+        /* JADX INFO: compiled from: WidgetChannelPickerBottomSheetViewModel.kt */
         public static final class Invalid extends StoreState {
             public static final Invalid INSTANCE = new Invalid();
 
@@ -87,7 +87,7 @@ public final class WidgetChannelPickerBottomSheetViewModel extends AppViewModel<
             }
         }
 
-        /* compiled from: WidgetChannelPickerBottomSheetViewModel.kt */
+        /* JADX INFO: compiled from: WidgetChannelPickerBottomSheetViewModel.kt */
         public static final /* data */ class Loaded extends StoreState {
             private final List<Channel> channels;
 
@@ -147,10 +147,10 @@ public final class WidgetChannelPickerBottomSheetViewModel extends AppViewModel<
         }
     }
 
-    /* compiled from: WidgetChannelPickerBottomSheetViewModel.kt */
+    /* JADX INFO: compiled from: WidgetChannelPickerBottomSheetViewModel.kt */
     public static abstract class ViewState {
 
-        /* compiled from: WidgetChannelPickerBottomSheetViewModel.kt */
+        /* JADX INFO: compiled from: WidgetChannelPickerBottomSheetViewModel.kt */
         public static final /* data */ class Loaded extends ViewState {
             private final List<WidgetChannelPickerAdapter> adapterItems;
 
@@ -203,7 +203,7 @@ public final class WidgetChannelPickerBottomSheetViewModel extends AppViewModel<
             }
         }
 
-        /* compiled from: WidgetChannelPickerBottomSheetViewModel.kt */
+        /* JADX INFO: compiled from: WidgetChannelPickerBottomSheetViewModel.kt */
         public static final class Loading extends ViewState {
             public static final Loading INSTANCE = new Loading();
 

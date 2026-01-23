@@ -1,9 +1,9 @@
 package com.discord.widgets.chat;
 
 
-/* compiled from: AutocompleteUtils.kt */
-/* renamed from: com.discord.widgets.chat.AutocompleteTypes, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.chat.AutocompleteTypes, reason: use source file name */
+/* JADX INFO: compiled from: AutocompleteUtils.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class AutocompleteUtils2 {
     public static final String CHANNELS = "CHANNELS";
     public static final String CHOICE = "CHOICE";

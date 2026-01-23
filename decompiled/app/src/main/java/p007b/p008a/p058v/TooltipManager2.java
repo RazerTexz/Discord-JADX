@@ -8,9 +8,9 @@ import kotlin.jvm.functions.Function1;
 import p507d0.p580t.Maps6;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: TooltipManager.kt */
-/* renamed from: b.a.v.e, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: b.a.v.e, reason: use source file name */
+/* JADX INFO: compiled from: TooltipManager.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class TooltipManager2 extends Lambda implements Function1<Integer, Unit> {
     public final /* synthetic */ TooltipManager this$0;
 

@@ -52,24 +52,24 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p658rx.Observable;
 import p658rx.functions.Func0;
 
-/* compiled from: WidgetVoiceCallIncoming.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: WidgetVoiceCallIncoming.kt */
+/* JADX INFO: loaded from: classes.dex */
 public class WidgetVoiceCallIncoming extends AppFragment {
     public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetVoiceCallIncoming.class, "binding", "getBinding()Lcom/discord/databinding/WidgetVoiceCallIncomingBinding;", 0)};
 
-    /* renamed from: binding$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
 
-    /* compiled from: WidgetVoiceCallIncoming.kt */
+    /* JADX INFO: compiled from: WidgetVoiceCallIncoming.kt */
     public static final /* data */ class Model {
 
-        /* renamed from: Companion, reason: from kotlin metadata */
+        /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
         public static final Companion INSTANCE = new Companion(null);
         private final CallModel callModel;
         private final int numIncomingCalls;
         private final List<StoreVoiceParticipants.VoiceUser> privateCallUserListItems;
 
-        /* compiled from: WidgetVoiceCallIncoming.kt */
+        /* JADX INFO: compiled from: WidgetVoiceCallIncoming.kt */
         public static final class Companion {
             private Companion() {
             }
@@ -109,7 +109,7 @@ public class WidgetVoiceCallIncoming extends AppFragment {
             return model.copy(callModel, list, i);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final CallModel getCallModel() {
             return this.callModel;
         }
@@ -118,7 +118,7 @@ public class WidgetVoiceCallIncoming extends AppFragment {
             return this.privateCallUserListItems;
         }
 
-        /* renamed from: component3, reason: from getter */
+        /* JADX INFO: renamed from: component3, reason: from getter */
         public final int getNumIncomingCalls() {
             return this.numIncomingCalls;
         }
@@ -173,7 +173,7 @@ public class WidgetVoiceCallIncoming extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetVoiceCallIncoming.kt */
+    /* JADX INFO: compiled from: WidgetVoiceCallIncoming.kt */
     public static final class SystemCallIncoming extends WidgetVoiceCallIncoming {
         private AtomicLong cachedChannelId = new AtomicLong(0);
 
@@ -229,8 +229,8 @@ public class WidgetVoiceCallIncoming extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetVoiceCallIncoming.kt */
-    /* renamed from: com.discord.widgets.voice.call.WidgetVoiceCallIncoming$configureUI$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.voice.call.WidgetVoiceCallIncoming$configureUI$1 */
+    /* JADX INFO: compiled from: WidgetVoiceCallIncoming.kt */
     public static final class C104161<R> implements Func0<Boolean> {
         public final /* synthetic */ Model $model;
 
@@ -250,8 +250,8 @@ public class WidgetVoiceCallIncoming extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetVoiceCallIncoming.kt */
-    /* renamed from: com.discord.widgets.voice.call.WidgetVoiceCallIncoming$configureUI$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.voice.call.WidgetVoiceCallIncoming$configureUI$2 */
+    /* JADX INFO: compiled from: WidgetVoiceCallIncoming.kt */
     public static final class ViewOnClickListenerC104172 implements View.OnClickListener {
         public final /* synthetic */ Model $model;
 
@@ -265,8 +265,8 @@ public class WidgetVoiceCallIncoming extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetVoiceCallIncoming.kt */
-    /* renamed from: com.discord.widgets.voice.call.WidgetVoiceCallIncoming$configureUI$3 */
+    /* JADX INFO: renamed from: com.discord.widgets.voice.call.WidgetVoiceCallIncoming$configureUI$3 */
+    /* JADX INFO: compiled from: WidgetVoiceCallIncoming.kt */
     public static final class ViewOnClickListenerC104183 implements View.OnClickListener {
         public final /* synthetic */ Model $model;
 
@@ -280,8 +280,8 @@ public class WidgetVoiceCallIncoming extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetVoiceCallIncoming.kt */
-    /* renamed from: com.discord.widgets.voice.call.WidgetVoiceCallIncoming$configureUI$4 */
+    /* JADX INFO: renamed from: com.discord.widgets.voice.call.WidgetVoiceCallIncoming$configureUI$4 */
+    /* JADX INFO: compiled from: WidgetVoiceCallIncoming.kt */
     public static final class ViewOnClickListenerC104194 implements View.OnClickListener {
         public final /* synthetic */ Model $model;
 
@@ -295,8 +295,8 @@ public class WidgetVoiceCallIncoming extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetVoiceCallIncoming.kt */
-    /* renamed from: com.discord.widgets.voice.call.WidgetVoiceCallIncoming$onViewBound$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.voice.call.WidgetVoiceCallIncoming$onViewBound$1 */
+    /* JADX INFO: compiled from: WidgetVoiceCallIncoming.kt */
     public static final class C104201 implements OnApplyWindowInsetsListener {
         public static final C104201 INSTANCE = new C104201();
 
@@ -306,8 +306,8 @@ public class WidgetVoiceCallIncoming extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetVoiceCallIncoming.kt */
-    /* renamed from: com.discord.widgets.voice.call.WidgetVoiceCallIncoming$onViewBoundOrOnResume$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.voice.call.WidgetVoiceCallIncoming$onViewBoundOrOnResume$1 */
+    /* JADX INFO: compiled from: WidgetVoiceCallIncoming.kt */
     public static final /* synthetic */ class C104211 extends FunctionReferenceImpl implements Function1<Model, Unit> {
         public C104211(WidgetVoiceCallIncoming widgetVoiceCallIncoming) {
             super(1, widgetVoiceCallIncoming, WidgetVoiceCallIncoming.class, "configureUI", "configureUI(Lcom/discord/widgets/voice/call/WidgetVoiceCallIncoming$Model;)V", 0);
@@ -319,7 +319,7 @@ public class WidgetVoiceCallIncoming extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Model model) {
             ((WidgetVoiceCallIncoming) this.receiver).configureUI(model);
         }

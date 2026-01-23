@@ -3,9 +3,9 @@ package com.discord.widgets.servers.creator_monetization_eligibility.onboarding;
 import android.view.View;
 import com.discord.widgets.servers.creator_monetization_eligibility.onboarding.ServerSettingsCreatorMonetizationOnboardingViewModel;
 
-/* compiled from: WidgetServerSettingsCreatorMonetizationOnboarding.kt */
-/* renamed from: com.discord.widgets.servers.creator_monetization_eligibility.onboarding.WidgetServerSettingsCreatorMonetizationOnboarding$configureAcceptTermsState$$inlined$apply$lambda$2 */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.servers.creator_monetization_eligibility.onboarding.WidgetServerSettingsCreatorMonetizationOnboarding$configureAcceptTermsState$$inlined$apply$lambda$2 */
+/* JADX INFO: compiled from: WidgetServerSettingsCreatorMonetizationOnboarding.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class ViewOnClickListenerC9426xd1ebfe5e implements View.OnClickListener {
     public final /* synthetic */ ServerSettingsCreatorMonetizationOnboardingViewModel.ViewState.AcceptTerms $viewState$inlined;
     public final /* synthetic */ WidgetServerSettingsCreatorMonetizationOnboarding this$0;

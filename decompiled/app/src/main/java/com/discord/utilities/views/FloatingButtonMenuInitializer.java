@@ -20,21 +20,21 @@ import java.util.Map;
 import java.util.Objects;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: FloatingButtonMenuInitializer.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: FloatingButtonMenuInitializer.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class FloatingButtonMenuInitializer {
     private final AnimatorFactory<View> animatorFactoryFadeIn;
     private final AnimatorFactory<View> animatorFactorySlideUp;
     private final Context context;
     private final Map<Integer, View.OnClickListener> onClickListenerMap;
 
-    /* compiled from: FloatingButtonMenuInitializer.kt */
+    /* JADX INFO: compiled from: FloatingButtonMenuInitializer.kt */
     public interface AnimatorFactory<T extends View> {
         Animator createAnimator(T view);
     }
 
-    /* compiled from: FloatingButtonMenuInitializer.kt */
-    /* renamed from: com.discord.utilities.views.FloatingButtonMenuInitializer$getAnimatorFactoryScaleUp$1 */
+    /* JADX INFO: renamed from: com.discord.utilities.views.FloatingButtonMenuInitializer$getAnimatorFactoryScaleUp$1 */
+    /* JADX INFO: compiled from: FloatingButtonMenuInitializer.kt */
     public static final class C70241 implements AnimatorFactory<ViewGroup> {
         public final /* synthetic */ View $mainFab;
 
@@ -55,8 +55,8 @@ public final class FloatingButtonMenuInitializer {
         }
     }
 
-    /* compiled from: FloatingButtonMenuInitializer.kt */
-    /* renamed from: com.discord.utilities.views.FloatingButtonMenuInitializer$getMenuAnimators$1 */
+    /* JADX INFO: renamed from: com.discord.utilities.views.FloatingButtonMenuInitializer$getMenuAnimators$1 */
+    /* JADX INFO: compiled from: FloatingButtonMenuInitializer.kt */
     public static final class C70251 extends AnimatorListenerAdapter {
         public final /* synthetic */ ViewGroup $row;
 
@@ -71,8 +71,8 @@ public final class FloatingButtonMenuInitializer {
         }
     }
 
-    /* compiled from: FloatingButtonMenuInitializer.kt */
-    /* renamed from: com.discord.utilities.views.FloatingButtonMenuInitializer$initialize$1 */
+    /* JADX INFO: renamed from: com.discord.utilities.views.FloatingButtonMenuInitializer$initialize$1 */
+    /* JADX INFO: compiled from: FloatingButtonMenuInitializer.kt */
     public static final class ViewTreeObserverOnGlobalLayoutListenerC70261 implements ViewTreeObserver.OnGlobalLayoutListener {
         public final /* synthetic */ View $mainFab;
         public final /* synthetic */ ViewGroup $menuContainer;

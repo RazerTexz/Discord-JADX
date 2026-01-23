@@ -1,8 +1,8 @@
 package com.discord.widgets.chat.list.entries;
 
 
-/* compiled from: SearchEmptyEntry.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: SearchEmptyEntry.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class SearchEmptyEntry extends ChatListEntry {
     private final int type = 13;
     private final String key = String.valueOf(getType());

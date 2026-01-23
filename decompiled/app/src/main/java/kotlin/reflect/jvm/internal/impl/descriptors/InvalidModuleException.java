@@ -2,8 +2,8 @@ package kotlin.reflect.jvm.internal.impl.descriptors;
 
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: InvalidModuleException.kt */
-/* loaded from: classes3.dex */
+/* JADX INFO: compiled from: InvalidModuleException.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class InvalidModuleException extends IllegalStateException {
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public InvalidModuleException(String str) {

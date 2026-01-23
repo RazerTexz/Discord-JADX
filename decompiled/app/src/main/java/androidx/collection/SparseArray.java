@@ -9,13 +9,13 @@ import p507d0.p580t.Iterators4;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.p595g0.KMarkers;
 
-/* compiled from: SparseArray.kt */
-/* renamed from: androidx.collection.SparseArrayKt, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: androidx.collection.SparseArrayKt, reason: use source file name */
+/* JADX INFO: compiled from: SparseArray.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class SparseArray {
 
-    /* compiled from: SparseArray.kt */
-    /* renamed from: androidx.collection.SparseArrayKt$keyIterator$1 */
+    /* JADX INFO: renamed from: androidx.collection.SparseArrayKt$keyIterator$1 */
+    /* JADX INFO: compiled from: SparseArray.kt */
     public static final class C01711 extends Iterators4 {
         public final /* synthetic */ SparseArrayCompat $this_keyIterator;
         private int index;
@@ -47,8 +47,8 @@ public final class SparseArray {
     }
 
     /* JADX INFO: Add missing generic type declarations: [T] */
-    /* compiled from: SparseArray.kt */
-    /* renamed from: androidx.collection.SparseArrayKt$valueIterator$1 */
+    /* JADX INFO: renamed from: androidx.collection.SparseArrayKt$valueIterator$1 */
+    /* JADX INFO: compiled from: SparseArray.kt */
     public static final class C01721<T> implements Iterator<T>, KMarkers {
         public final /* synthetic */ SparseArrayCompat $this_valueIterator;
         private int index;

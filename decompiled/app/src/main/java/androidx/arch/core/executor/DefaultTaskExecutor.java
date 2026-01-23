@@ -12,8 +12,8 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.ThreadFactory;
 import java.util.concurrent.atomic.AtomicInteger;
 
+/* JADX INFO: loaded from: classes.dex */
 @RestrictTo({RestrictTo.Scope.LIBRARY_GROUP_PREFIX})
-/* loaded from: classes.dex */
 public class DefaultTaskExecutor extends TaskExecutor {
 
     @Nullable
@@ -21,7 +21,7 @@ public class DefaultTaskExecutor extends TaskExecutor {
     private final Object mLock = new Object();
     private final ExecutorService mDiskIO = Executors.newFixedThreadPool(4, new ThreadFactoryC01401());
 
-    /* renamed from: androidx.arch.core.executor.DefaultTaskExecutor$1 */
+    /* JADX INFO: renamed from: androidx.arch.core.executor.DefaultTaskExecutor$1 */
     public class ThreadFactoryC01401 implements ThreadFactory {
         private static final String THREAD_NAME_STEM = "arch_disk_io_%d";
         private final AtomicInteger mThreadId = new AtomicInteger(0);

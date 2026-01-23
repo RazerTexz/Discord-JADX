@@ -22,8 +22,8 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 import p658rx.Observable;
 
-/* compiled from: StoreGuildSelected.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: StoreGuildSelected.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class StoreGuildSelected extends StoreV2 {
     private static final int MAX_SAVED_GUILD_IDS = 5;
     public static final long UNSELECTED = 0;
@@ -36,8 +36,8 @@ public final class StoreGuildSelected extends StoreV2 {
     private List<Long> selectedGuildIdsSnapshot;
     private final StoreStream stream;
 
-    /* compiled from: StoreGuildSelected.kt */
-    /* renamed from: com.discord.stores.StoreGuildSelected$dispatchSampleGuildIdSelected$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreGuildSelected$dispatchSampleGuildIdSelected$1 */
+    /* JADX INFO: compiled from: StoreGuildSelected.kt */
     public static final class C60711 extends Lambda implements Function0<Unit> {
         public final /* synthetic */ long $guildId;
 
@@ -53,14 +53,14 @@ public final class StoreGuildSelected extends StoreV2 {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             StoreGuildSelected.access$getStream$p(StoreGuildSelected.this).handleSamplePremiumGuildSelected(this.$guildId);
         }
     }
 
-    /* compiled from: StoreGuildSelected.kt */
-    /* renamed from: com.discord.stores.StoreGuildSelected$handleConnectionOpen$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreGuildSelected$handleConnectionOpen$1 */
+    /* JADX INFO: compiled from: StoreGuildSelected.kt */
     public static final class C60721 extends Lambda implements Function1<Long, Boolean> {
         public final /* synthetic */ ModelPayload $payload;
 
@@ -106,8 +106,8 @@ public final class StoreGuildSelected extends StoreV2 {
         }
     }
 
-    /* compiled from: StoreGuildSelected.kt */
-    /* renamed from: com.discord.stores.StoreGuildSelected$observeRecentSelectedGuildIds$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreGuildSelected$observeRecentSelectedGuildIds$1 */
+    /* JADX INFO: compiled from: StoreGuildSelected.kt */
     public static final class C60731 extends Lambda implements Function0<List<? extends Long>> {
         public C60731() {
             super(0);
@@ -119,14 +119,14 @@ public final class StoreGuildSelected extends StoreV2 {
         }
 
         @Override // kotlin.jvm.functions.Function0
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final List<? extends Long> invoke2() {
             return StoreGuildSelected.this.getRecentlySelectedGuildIds();
         }
     }
 
-    /* compiled from: StoreGuildSelected.kt */
-    /* renamed from: com.discord.stores.StoreGuildSelected$observeSelectedGuild$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreGuildSelected$observeSelectedGuild$1 */
+    /* JADX INFO: compiled from: StoreGuildSelected.kt */
     public static final class C60741 extends Lambda implements Function0<com.discord.models.guild.Guild> {
         public C60741() {
             super(0);
@@ -144,8 +144,8 @@ public final class StoreGuildSelected extends StoreV2 {
         }
     }
 
-    /* compiled from: StoreGuildSelected.kt */
-    /* renamed from: com.discord.stores.StoreGuildSelected$observeSelectedGuildId$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreGuildSelected$observeSelectedGuildId$1 */
+    /* JADX INFO: compiled from: StoreGuildSelected.kt */
     public static final class C60751 extends Lambda implements Function0<Long> {
         public C60751() {
             super(0);
@@ -156,14 +156,14 @@ public final class StoreGuildSelected extends StoreV2 {
             return Long.valueOf(invoke2());
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final long invoke2() {
             return StoreGuildSelected.this.getSelectedGuildId();
         }
     }
 
-    /* compiled from: StoreGuildSelected.kt */
-    /* renamed from: com.discord.stores.StoreGuildSelected$set$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreGuildSelected$set$1 */
+    /* JADX INFO: compiled from: StoreGuildSelected.kt */
     public static final class C60761 extends Lambda implements Function0<Unit> {
         public final /* synthetic */ long $guildId;
 
@@ -179,7 +179,7 @@ public final class StoreGuildSelected extends StoreV2 {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             StoreGuildSelected.access$getStream$p(StoreGuildSelected.this).handleGuildSelected(this.$guildId);
         }

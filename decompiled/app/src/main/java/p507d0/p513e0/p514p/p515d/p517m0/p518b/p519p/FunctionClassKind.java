@@ -18,43 +18,43 @@ jadx.core.utils.exceptions.JadxRuntimeException: Init of enum field 'm' uses ext
 	at jadx.core.dex.visitors.EnumVisitor.visit(EnumVisitor.java:100)
  */
 /* JADX WARN: Failed to restore enum class, 'enum' modifier and super class removed */
-/* compiled from: FunctionClassKind.kt */
-/* renamed from: d0.e0.p.d.m0.b.p.c, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.b.p.c, reason: use source file name */
+/* JADX INFO: compiled from: FunctionClassKind.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class FunctionClassKind {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static final a f22601j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public static final FunctionClassKind f22602k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public static final FunctionClassKind f22603l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public static final FunctionClassKind f22604m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public static final FunctionClassKind f22605n;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public static final /* synthetic */ FunctionClassKind[] f22606o;
     private final String classNamePrefix;
     private final FqName packageFqName;
 
-    /* compiled from: FunctionClassKind.kt */
-    /* renamed from: d0.e0.p.d.m0.b.p.c$a */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.b.p.c$a */
+    /* JADX INFO: compiled from: FunctionClassKind.kt */
     public static final class a {
 
-        /* compiled from: FunctionClassKind.kt */
-        /* renamed from: d0.e0.p.d.m0.b.p.c$a$a, reason: collision with other inner class name */
+        /* JADX INFO: renamed from: d0.e0.p.d.m0.b.p.c$a$a, reason: collision with other inner class name */
+        /* JADX INFO: compiled from: FunctionClassKind.kt */
         public static final class C13305a {
 
-            /* renamed from: a */
+            /* JADX INFO: renamed from: a */
             public final FunctionClassKind f22607a;
 
-            /* renamed from: b */
+            /* JADX INFO: renamed from: b */
             public final int f22608b;
 
             public C13305a(FunctionClassKind functionClassKind, int i) {

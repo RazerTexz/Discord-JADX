@@ -3,8 +3,8 @@ package com.discord.widgets.settings;
 import android.view.View;
 import com.discord.utilities.notifications.NotificationUtils;
 
-/* compiled from: WidgetSettings.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetSettings.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetSettings$onViewBound$$inlined$with$lambda$5 implements View.OnClickListener {
     public final /* synthetic */ WidgetSettings this$0;
 

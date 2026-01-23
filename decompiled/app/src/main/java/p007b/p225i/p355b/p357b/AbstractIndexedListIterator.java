@@ -5,15 +5,15 @@ import java.util.NoSuchElementException;
 import p007b.p225i.p226a.p288f.p299e.p308o.C3404f;
 import p007b.p225i.p355b.p357b.ImmutableList2;
 
-/* compiled from: AbstractIndexedListIterator.java */
-/* renamed from: b.i.b.b.a, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.b.b.a, reason: use source file name */
+/* JADX INFO: compiled from: AbstractIndexedListIterator.java */
+/* JADX INFO: loaded from: classes3.dex */
 public abstract class AbstractIndexedListIterator<E> implements ListIterator {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final int f11966j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public int f11967k;
 
     public AbstractIndexedListIterator(int i, int i2) {

@@ -12,7 +12,7 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import p007b.p100d.p104b.p105a.outline;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class SdkClickHandler implements ISdkClickHandler {
     private static final double MILLISECONDS_TO_SECONDS_DIVISOR = 1000.0d;
     private static final String SCHEDULED_EXECUTOR_SOURCE = "SdkClickHandler";
@@ -26,7 +26,7 @@ public class SdkClickHandler implements ISdkClickHandler {
     private boolean paused;
     private ThreadScheduler scheduler;
 
-    /* renamed from: com.adjust.sdk.SdkClickHandler$1 */
+    /* JADX INFO: renamed from: com.adjust.sdk.SdkClickHandler$1 */
     public class RunnableC53891 implements Runnable {
         public final /* synthetic */ ActivityPackage val$sdkClick;
 
@@ -43,7 +43,7 @@ public class SdkClickHandler implements ISdkClickHandler {
         }
     }
 
-    /* renamed from: com.adjust.sdk.SdkClickHandler$2 */
+    /* JADX INFO: renamed from: com.adjust.sdk.SdkClickHandler$2 */
     public class RunnableC53902 implements Runnable {
         public RunnableC53902() {
         }
@@ -74,7 +74,7 @@ public class SdkClickHandler implements ISdkClickHandler {
         }
     }
 
-    /* renamed from: com.adjust.sdk.SdkClickHandler$3 */
+    /* JADX INFO: renamed from: com.adjust.sdk.SdkClickHandler$3 */
     public class RunnableC53913 implements Runnable {
         public RunnableC53913() {
         }
@@ -85,7 +85,7 @@ public class SdkClickHandler implements ISdkClickHandler {
         }
     }
 
-    /* renamed from: com.adjust.sdk.SdkClickHandler$4 */
+    /* JADX INFO: renamed from: com.adjust.sdk.SdkClickHandler$4 */
     public class RunnableC53924 implements Runnable {
         public final /* synthetic */ ActivityPackage val$sdkClickPackage;
 

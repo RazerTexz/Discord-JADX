@@ -6,8 +6,8 @@ import android.transition.PathMotion;
 import androidx.annotation.NonNull;
 import androidx.annotation.RequiresApi;
 
+/* JADX INFO: loaded from: classes3.dex */
 @RequiresApi(21)
-/* loaded from: classes3.dex */
 public final class MaterialArcMotion extends PathMotion {
     private static PointF getControlPoint(float f, float f2, float f3, float f4) {
         return f2 > f4 ? new PointF(f3, f2) : new PointF(f, f4);

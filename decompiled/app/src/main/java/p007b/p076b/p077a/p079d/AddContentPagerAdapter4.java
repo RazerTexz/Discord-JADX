@@ -7,16 +7,16 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentStatePagerAdapter;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: AddContentPagerAdapter.kt */
-/* renamed from: b.b.a.d.d, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.b.a.d.d, reason: use source file name */
+/* JADX INFO: compiled from: AddContentPagerAdapter.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class AddContentPagerAdapter4 extends FragmentStatePagerAdapter {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final a[] f2141a;
 
-    /* compiled from: AddContentPagerAdapter.kt */
-    /* renamed from: b.b.a.d.d$a */
+    /* JADX INFO: renamed from: b.b.a.d.d$a */
+    /* JADX INFO: compiled from: AddContentPagerAdapter.kt */
     public static abstract class a {
         private final int contentDesc;
         private final int icon;

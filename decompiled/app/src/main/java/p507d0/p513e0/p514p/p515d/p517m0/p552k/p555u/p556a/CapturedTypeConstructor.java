@@ -16,21 +16,21 @@ import p507d0.p513e0.p514p.p515d.p517m0.p567n.p570n1.InterfaceC11974c;
 import p507d0.p580t.Collections2;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: CapturedTypeConstructor.kt */
-/* renamed from: d0.e0.p.d.m0.k.u.a.a, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.k.u.a.a, reason: use source file name */
+/* JADX INFO: compiled from: CapturedTypeConstructor.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class CapturedTypeConstructor extends KotlinType4 implements InterfaceC11974c {
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final TypeProjection f24428k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final CapturedTypeConstructor2 f24429l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public final boolean f24430m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public final Annotations4 f24431n;
 
     public /* synthetic */ CapturedTypeConstructor(TypeProjection typeProjection, CapturedTypeConstructor2 capturedTypeConstructor2, boolean z2, Annotations4 annotations4, int i, DefaultConstructorMarker defaultConstructorMarker) {

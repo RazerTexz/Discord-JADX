@@ -4,12 +4,12 @@ import org.webrtc.VideoFrame;
 import org.webrtc.VideoSink;
 import org.webrtc.VideoSource;
 
-/* compiled from: lambda */
-/* renamed from: h0.c.i0 */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: h0.c.i0 */
+/* JADX INFO: compiled from: lambda */
+/* JADX INFO: loaded from: classes3.dex */
 public final /* synthetic */ class C12467i0 implements VideoSink {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final /* synthetic */ VideoSource f26438j;
 
     public /* synthetic */ C12467i0(VideoSource videoSource) {

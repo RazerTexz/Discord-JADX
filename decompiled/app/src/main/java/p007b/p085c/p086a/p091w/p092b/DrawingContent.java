@@ -4,13 +4,13 @@ import android.graphics.Canvas;
 import android.graphics.Matrix;
 import android.graphics.RectF;
 
-/* compiled from: DrawingContent.java */
-/* renamed from: b.c.a.w.b.e, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.c.a.w.b.e, reason: use source file name */
+/* JADX INFO: compiled from: DrawingContent.java */
+/* JADX INFO: loaded from: classes.dex */
 public interface DrawingContent extends Content2 {
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     void mo712d(RectF rectF, Matrix matrix, boolean z2);
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     void mo713f(Canvas canvas, Matrix matrix, int i);
 }

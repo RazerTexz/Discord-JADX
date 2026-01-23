@@ -6,8 +6,8 @@ import java.util.Objects;
 import kotlin.jvm.functions.Function0;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetGuildJoinCaptchaBottomSheet.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetGuildJoinCaptchaBottomSheet.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetGuildJoinCaptchaBottomSheet$captchaErrorBody$2 extends Lambda implements Function0<CaptchaErrorBody> {
     public final /* synthetic */ WidgetGuildJoinCaptchaBottomSheet this$0;
 

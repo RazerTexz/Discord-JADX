@@ -12,8 +12,8 @@ import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Set;
 
+/* JADX INFO: loaded from: classes.dex */
 @RestrictTo({RestrictTo.Scope.LIBRARY_GROUP})
-/* loaded from: classes.dex */
 public abstract class ConstraintTracker<T> {
     private static final String TAG = Logger.tagWithPrefix("ConstraintTracker");
     public final Context mAppContext;
@@ -22,7 +22,7 @@ public abstract class ConstraintTracker<T> {
     private final Object mLock = new Object();
     private final Set<ConstraintListener<T>> mListeners = new LinkedHashSet();
 
-    /* renamed from: androidx.work.impl.constraints.trackers.ConstraintTracker$1 */
+    /* JADX INFO: renamed from: androidx.work.impl.constraints.trackers.ConstraintTracker$1 */
     public class RunnableC07401 implements Runnable {
         public final /* synthetic */ List val$listenersList;
 

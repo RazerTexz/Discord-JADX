@@ -2,11 +2,11 @@ package com.discord.utils;
 
 import com.discord.C5419R;
 
-/* renamed from: com.discord.utils.R */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.utils.R */
+/* JADX INFO: loaded from: classes2.dex */
 public final class C7063R {
 
-    /* renamed from: com.discord.utils.R$a */
+    /* JADX INFO: renamed from: com.discord.utils.R$a */
     public static final class a {
         public static final int abc_action_bar_home_description = 2131886099;
         public static final int abc_action_bar_up_description = 2131886100;
@@ -138,7 +138,7 @@ public final class C7063R {
         }
     }
 
-    /* renamed from: com.discord.utils.R$b */
+    /* JADX INFO: renamed from: com.discord.utils.R$b */
     public static final class b {
         public static final int ActionBarLayout_android_layout_gravity = 0;
         public static final int ActionBar_background = 0;

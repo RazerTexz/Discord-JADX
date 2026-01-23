@@ -7,27 +7,27 @@ import p007b.p085c.p086a.p087a0.AnimatableValueParser;
 import p007b.p109f.p115d.p120e.FLog;
 import p007b.p109f.p115d.p123h.ResourceReleaser;
 
-/* compiled from: PooledByteArrayBufferedInputStream.java */
-/* renamed from: b.f.d.g.f, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.f.d.g.f, reason: use source file name */
+/* JADX INFO: compiled from: PooledByteArrayBufferedInputStream.java */
+/* JADX INFO: loaded from: classes.dex */
 public class PooledByteArrayBufferedInputStream extends InputStream {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final InputStream f3108j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final byte[] f3109k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final ResourceReleaser<byte[]> f3110l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public int f3111m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public int f3112n;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public boolean f3113o;
 
     public PooledByteArrayBufferedInputStream(InputStream inputStream, byte[] bArr, ResourceReleaser<byte[]> resourceReleaser) {
@@ -41,7 +41,7 @@ public class PooledByteArrayBufferedInputStream extends InputStream {
         this.f3113o = false;
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final boolean m991a() throws IOException {
         if (this.f3112n < this.f3111m) {
             return true;
@@ -62,7 +62,7 @@ public class PooledByteArrayBufferedInputStream extends InputStream {
         return this.f3108j.available() + (this.f3111m - this.f3112n);
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final void m992b() throws IOException {
         if (this.f3113o) {
             throw new IOException("stream already closed");
@@ -108,7 +108,7 @@ public class PooledByteArrayBufferedInputStream extends InputStream {
         int i2 = this.f3112n;
         long j2 = i - i2;
         if (j2 >= j) {
-            this.f3112n = (int) (i2 + j);
+            this.f3112n = (int) (((long) i2) + j);
             return j;
         }
         this.f3112n = i;

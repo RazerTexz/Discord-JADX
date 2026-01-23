@@ -12,25 +12,25 @@ import org.checkerframework.checker.nullness.compatqual.MonotonicNonNullDecl;
 import org.checkerframework.checker.nullness.compatqual.NullableDecl;
 import p007b.p225i.p355b.p357b.AbstractMapBasedMultimap2;
 
-/* compiled from: AbstractMultimap.java */
-/* renamed from: b.i.b.b.g, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.b.b.g, reason: use source file name */
+/* JADX INFO: compiled from: AbstractMultimap.java */
+/* JADX INFO: loaded from: classes3.dex */
 public abstract class AbstractMultimap<K, V> implements Multimap<K, V> {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     @MonotonicNonNullDecl
     public transient Set<K> f12006j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     @MonotonicNonNullDecl
     public transient Collection<V> f12007k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     @MonotonicNonNullDecl
     public transient Map<K, Collection<V>> f12008l;
 
-    /* compiled from: AbstractMultimap.java */
-    /* renamed from: b.i.b.b.g$a */
+    /* JADX INFO: renamed from: b.i.b.b.g$a */
+    /* JADX INFO: compiled from: AbstractMultimap.java */
     public class a extends AbstractCollection<V> {
         public a() {
         }
@@ -65,7 +65,7 @@ public abstract class AbstractMultimap<K, V> implements Multimap<K, V> {
     }
 
     @Override // p007b.p225i.p355b.p357b.Multimap
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public Map<K, Collection<V>> mo6216a() {
         Map<K, Collection<V>> dVar = this.f12008l;
         if (dVar == null) {

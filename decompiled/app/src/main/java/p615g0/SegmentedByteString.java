@@ -9,15 +9,15 @@ import p007b.p225i.p226a.p288f.p299e.p308o.C3404f;
 import p507d0.p580t._ArraysJvm;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: SegmentedByteString.kt */
-/* renamed from: g0.u, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: g0.u, reason: use source file name */
+/* JADX INFO: compiled from: SegmentedByteString.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class SegmentedByteString extends ByteString {
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public final transient byte[][] f26129n;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public final transient int[] f26130o;
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -48,13 +48,13 @@ public final class SegmentedByteString extends ByteString {
     }
 
     @Override // okio.ByteString
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public String mo10500f() {
         return m10512u().mo10500f();
     }
 
     @Override // okio.ByteString
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public ByteString mo10501g(String str) throws NoSuchAlgorithmException {
         Intrinsics3.checkParameterIsNotNull(str, "algorithm");
         MessageDigest messageDigest = MessageDigest.getInstance(str);
@@ -102,25 +102,25 @@ public final class SegmentedByteString extends ByteString {
     }
 
     @Override // okio.ByteString
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public int mo10502j() {
         return this.f26130o[this.f26129n.length - 1];
     }
 
     @Override // okio.ByteString
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public String mo10503k() {
         return m10512u().mo10503k();
     }
 
     @Override // okio.ByteString
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public byte[] mo10504l() {
         return m10511t();
     }
 
     @Override // okio.ByteString
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public byte mo10505m(int i) {
         C3404f.m4192B(this.f26130o[this.f26129n.length - 1], i, 1L);
         int iM4269a1 = C3404f.m4269a1(this, i);
@@ -131,7 +131,7 @@ public final class SegmentedByteString extends ByteString {
     }
 
     @Override // okio.ByteString
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public boolean mo10506n(int i, ByteString byteString, int i2, int i3) {
         Intrinsics3.checkParameterIsNotNull(byteString, "other");
         if (i < 0 || i > mo10502j() - i3) {
@@ -156,7 +156,7 @@ public final class SegmentedByteString extends ByteString {
     }
 
     @Override // okio.ByteString
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public boolean mo10507o(int i, byte[] bArr, int i2, int i3) {
         Intrinsics3.checkParameterIsNotNull(bArr, "other");
         if (i < 0 || i > mo10502j() - i3 || i2 < 0 || i2 > bArr.length - i3) {
@@ -181,13 +181,13 @@ public final class SegmentedByteString extends ByteString {
     }
 
     @Override // okio.ByteString
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public ByteString mo10508p() {
         return m10512u().mo10508p();
     }
 
     @Override // okio.ByteString
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     public void mo10509r(OutputStream outputStream) throws IOException {
         Intrinsics3.checkParameterIsNotNull(outputStream, "out");
         int length = this.f26129n.length;
@@ -204,7 +204,7 @@ public final class SegmentedByteString extends ByteString {
     }
 
     @Override // okio.ByteString
-    /* renamed from: s */
+    /* JADX INFO: renamed from: s */
     public void mo10510s(Buffer3 buffer3, int i, int i2) {
         Intrinsics3.checkParameterIsNotNull(buffer3, "buffer");
         int i3 = i2 + i;
@@ -232,10 +232,10 @@ public final class SegmentedByteString extends ByteString {
             i += iMin;
             iM4269a1++;
         }
-        buffer3.f26080k += mo10502j();
+        buffer3.f26080k += (long) mo10502j();
     }
 
-    /* renamed from: t */
+    /* JADX INFO: renamed from: t */
     public byte[] m10511t() {
         byte[] bArr = new byte[mo10502j()];
         int length = this.f26129n.length;
@@ -260,7 +260,7 @@ public final class SegmentedByteString extends ByteString {
         return m10512u().toString();
     }
 
-    /* renamed from: u */
+    /* JADX INFO: renamed from: u */
     public final ByteString m10512u() {
         return new ByteString(m10511t());
     }

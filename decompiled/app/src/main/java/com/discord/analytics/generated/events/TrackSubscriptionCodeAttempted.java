@@ -7,8 +7,8 @@ import com.discord.models.domain.ModelAuditLogEntry;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: TrackSubscriptionCodeAttempted.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: TrackSubscriptionCodeAttempted.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class TrackSubscriptionCodeAttempted implements AnalyticsSchema, TrackBase2 {
     private TrackBase trackBase;
     private final CharSequence code = null;
@@ -16,7 +16,7 @@ public final /* data */ class TrackSubscriptionCodeAttempted implements Analytic
     private final transient String analyticsSchemaTypeName = "subscription_code_attempted";
 
     @Override // com.discord.api.science.AnalyticsSchema
-    /* renamed from: d, reason: from getter */
+    /* JADX INFO: renamed from: d, reason: from getter */
     public String getAnalyticsSchemaTypeName() {
         return this.analyticsSchemaTypeName;
     }

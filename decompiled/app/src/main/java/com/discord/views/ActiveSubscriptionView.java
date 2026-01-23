@@ -26,17 +26,17 @@ import p007b.p008a.p025i.ViewActiveSubscriptionBinding;
 import p007b.p008a.p027k.FormatUtils;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ActiveSubscriptionView.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: ActiveSubscriptionView.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class ActiveSubscriptionView extends FrameLayout {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static final /* synthetic */ int f19003j = 0;
 
-    /* renamed from: k, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: k, reason: from kotlin metadata */
     public final ViewActiveSubscriptionBinding binding;
 
-    /* compiled from: ActiveSubscriptionView.kt */
+    /* JADX INFO: compiled from: ActiveSubscriptionView.kt */
     public enum ActiveSubscriptionType {
         PREMIUM_BASIC(C5419R.attr.img_premium_basic_subscription_header_logo, C5419R.drawable.img_premium_basic_subscription_header, C5419R.drawable.img_premium_subscription_header_resub, C5419R.drawable.img_premium_subscription_header_error, C5419R.drawable.bg_premium_basic_subscription_header, C5419R.drawable.bg_premium_subscription_header_resub, C5419R.drawable.bg_premium_subscription_header_error),
         PREMIUM_CLASSIC(C5419R.attr.img_premium_classic_subscription_header_logo, C5419R.drawable.img_premium_classic_subscription_header, C5419R.drawable.img_premium_classic_subscription_header_resub, C5419R.drawable.img_premium_classic_subscription_header_error, C5419R.drawable.bg_premium_classic_subscription_header, C5419R.drawable.bg_premium_subscription_header_resub, C5419R.drawable.bg_premium_subscription_header_error),
@@ -91,14 +91,14 @@ public final class ActiveSubscriptionView extends FrameLayout {
         }
     }
 
-    /* compiled from: java-style lambda group */
-    /* renamed from: com.discord.views.ActiveSubscriptionView$a */
+    /* JADX INFO: renamed from: com.discord.views.ActiveSubscriptionView$a */
+    /* JADX INFO: compiled from: java-style lambda group */
     public static final class ViewOnClickListenerC7064a implements View.OnClickListener {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public final /* synthetic */ int f19005j;
 
-        /* renamed from: k */
+        /* JADX INFO: renamed from: k */
         public final /* synthetic */ Object f19006k;
 
         public ViewOnClickListenerC7064a(int i, Object obj) {
@@ -177,7 +177,7 @@ public final class ActiveSubscriptionView extends FrameLayout {
         throw new NullPointerException("Missing required view with ID: ".concat(viewInflate.getResources().getResourceName(i)));
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static final ActiveSubscriptionType m8520b(ModelSubscription modelSubscription) {
         Intrinsics3.checkNotNullParameter(modelSubscription, Traits.Payment.Type.SUBSCRIPTION);
         if (modelSubscription.isGoogleSubscription()) {
@@ -214,7 +214,7 @@ public final class ActiveSubscriptionView extends FrameLayout {
 
     /* JADX WARN: Removed duplicated region for block: B:15:0x005c  */
     /* JADX WARN: Removed duplicated region for block: B:8:0x003d  */
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */

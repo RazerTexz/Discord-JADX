@@ -4,9 +4,9 @@ import kotlin.reflect.KCallable;
 import kotlin.reflect.KProperty;
 import kotlin.reflect.KProperty6;
 
-/* compiled from: PropertyReference0.java */
-/* renamed from: d0.z.d.v, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.z.d.v, reason: use source file name */
+/* JADX INFO: compiled from: PropertyReference0.java */
+/* JADX INFO: loaded from: classes3.dex */
 public abstract class PropertyReference0 extends PropertyReference implements KProperty6 {
     public PropertyReference0() {
     }
@@ -35,7 +35,7 @@ public abstract class PropertyReference0 extends PropertyReference implements KP
     }
 
     @Override // kotlin.reflect.KProperty6
-    /* renamed from: getGetter */
+    /* JADX INFO: renamed from: getGetter */
     public KProperty6.Getter mo11489getGetter() {
         return ((KProperty6) getReflected()).mo11489getGetter();
     }

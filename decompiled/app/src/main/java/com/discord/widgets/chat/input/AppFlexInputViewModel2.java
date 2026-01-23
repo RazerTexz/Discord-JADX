@@ -12,14 +12,14 @@ import p637j0.p641k.Func1;
 import p658rx.Observable;
 import p658rx.functions.Func6;
 
-/* compiled from: AppFlexInputViewModel.kt */
-/* renamed from: com.discord.widgets.chat.input.AppFlexInputViewModel$Companion$observeStores$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.chat.input.AppFlexInputViewModel$Companion$observeStores$1, reason: use source file name */
+/* JADX INFO: compiled from: AppFlexInputViewModel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class AppFlexInputViewModel2<T, R> implements Func1<StoreChannelsSelected.ResolvedSelectedChannel, Observable<? extends AppFlexInputViewModel.StoreState>> {
     public static final AppFlexInputViewModel2 INSTANCE = new AppFlexInputViewModel2();
 
-    /* compiled from: AppFlexInputViewModel.kt */
-    /* renamed from: com.discord.widgets.chat.input.AppFlexInputViewModel$Companion$observeStores$1$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.input.AppFlexInputViewModel$Companion$observeStores$1$1 */
+    /* JADX INFO: compiled from: AppFlexInputViewModel.kt */
     public static final class C76781<T1, T2, T3, T4, T5, T6, R> implements Func6<PanelState, PanelState, Long, StoreNotices.Notice, Boolean, Boolean, AppFlexInputViewModel.StoreState> {
         public final /* synthetic */ Channel $channel;
         public final /* synthetic */ StoreChannelsSelected.ResolvedSelectedChannel $selectedChannel;
@@ -35,7 +35,7 @@ public final class AppFlexInputViewModel2<T, R> implements Func1<StoreChannelsSe
         }
 
         /* JADX WARN: Removed duplicated region for block: B:7:0x0028  */
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         /*
             Code decompiled incorrectly, please refer to instructions dump.
         */
@@ -58,7 +58,7 @@ public final class AppFlexInputViewModel2<T, R> implements Func1<StoreChannelsSe
         return call2(resolvedSelectedChannel);
     }
 
-    /* renamed from: call, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
     public final Observable<? extends AppFlexInputViewModel.StoreState> call2(StoreChannelsSelected.ResolvedSelectedChannel resolvedSelectedChannel) {
         Channel channelOrParent = resolvedSelectedChannel.getChannelOrParent();
         StoreStream.Companion companion = StoreStream.INSTANCE;

@@ -7,8 +7,8 @@ import p001a0.p002a.p003a.C0002b;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: BotUiComponentEntry.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: BotUiComponentEntry.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final /* data */ class BotUiComponentEntry extends ChatListEntry {
     private final long applicationId;
     private final Long guildId;
@@ -34,6 +34,7 @@ public final /* data */ class BotUiComponentEntry extends ChatListEntry {
         this.key = sb.toString();
     }
 
+    /* JADX WARN: Multi-variable type inference failed */
     public static /* synthetic */ BotUiComponentEntry copy$default(BotUiComponentEntry botUiComponentEntry, Message message, long j, Long l, List list, int i, Object obj) {
         if ((i & 1) != 0) {
             message = botUiComponentEntry.message;
@@ -52,17 +53,17 @@ public final /* data */ class BotUiComponentEntry extends ChatListEntry {
         return botUiComponentEntry.copy(message, j2, l2, list);
     }
 
-    /* renamed from: component1, reason: from getter */
+    /* JADX INFO: renamed from: component1, reason: from getter */
     public final Message getMessage() {
         return this.message;
     }
 
-    /* renamed from: component2, reason: from getter */
+    /* JADX INFO: renamed from: component2, reason: from getter */
     public final long getApplicationId() {
         return this.applicationId;
     }
 
-    /* renamed from: component3, reason: from getter */
+    /* JADX INFO: renamed from: component3, reason: from getter */
     public final Long getGuildId() {
         return this.guildId;
     }

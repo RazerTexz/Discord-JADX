@@ -5,8 +5,8 @@ import com.discord.api.science.AnalyticsSchema;
 import kotlin.jvm.functions.Function0;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetServerSettingsEmojis.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetServerSettingsEmojis.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetServerSettingsEmojis$loggingConfig$1 extends Lambda implements Function0<AnalyticsSchema> {
     public static final WidgetServerSettingsEmojis$loggingConfig$1 INSTANCE = new WidgetServerSettingsEmojis$loggingConfig$1();
 

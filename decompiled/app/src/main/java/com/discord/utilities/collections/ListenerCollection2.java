@@ -8,9 +8,9 @@ import kotlin.Unit;
 import kotlin.jvm.functions.Function1;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ListenerCollection.kt */
-/* renamed from: com.discord.utilities.collections.ListenerCollectionSubject, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.utilities.collections.ListenerCollectionSubject, reason: use source file name */
+/* JADX INFO: compiled from: ListenerCollection.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class ListenerCollection2<T> implements ListenerCollection<T> {
     private final CopyOnWriteArraySet<T> listeners = new CopyOnWriteArraySet<>();
 

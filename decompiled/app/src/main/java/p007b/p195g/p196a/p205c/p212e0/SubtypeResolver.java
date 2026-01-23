@@ -5,10 +5,10 @@ import p007b.p195g.p196a.p205c.JavaType;
 import p007b.p195g.p196a.p205c.p210c0.AnnotatedMember;
 import p007b.p195g.p196a.p205c.p221z.MapperConfig;
 
-/* compiled from: SubtypeResolver.java */
-/* renamed from: b.g.a.c.e0.d, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.g.a.c.e0.d, reason: use source file name */
+/* JADX INFO: compiled from: SubtypeResolver.java */
+/* JADX INFO: loaded from: classes3.dex */
 public abstract class SubtypeResolver {
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public abstract Collection<NamedType> mo1945a(MapperConfig<?> mapperConfig, AnnotatedMember annotatedMember, JavaType javaType);
 }

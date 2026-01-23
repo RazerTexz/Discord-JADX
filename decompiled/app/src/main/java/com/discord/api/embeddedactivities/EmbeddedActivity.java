@@ -8,8 +8,8 @@ import com.discord.models.domain.ModelAuditLogEntry;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: EmbeddedActivity.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: EmbeddedActivity.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class EmbeddedActivity {
     private final long applicationId;
     private final ActivityAssets assets;
@@ -21,27 +21,27 @@ public final /* data */ class EmbeddedActivity {
     private final ActivityTimestamps timestamps;
     private final ActivityType type;
 
-    /* renamed from: a, reason: from getter */
+    /* JADX INFO: renamed from: a, reason: from getter */
     public final long getApplicationId() {
         return this.applicationId;
     }
 
-    /* renamed from: b, reason: from getter */
+    /* JADX INFO: renamed from: b, reason: from getter */
     public final ActivityAssets getAssets() {
         return this.assets;
     }
 
-    /* renamed from: c, reason: from getter */
+    /* JADX INFO: renamed from: c, reason: from getter */
     public final Long getCreatedAt() {
         return this.createdAt;
     }
 
-    /* renamed from: d, reason: from getter */
+    /* JADX INFO: renamed from: d, reason: from getter */
     public final String getDetails() {
         return this.details;
     }
 
-    /* renamed from: e, reason: from getter */
+    /* JADX INFO: renamed from: e, reason: from getter */
     public final String getName() {
         return this.name;
     }
@@ -57,17 +57,17 @@ public final /* data */ class EmbeddedActivity {
         return this.applicationId == embeddedActivity.applicationId && Intrinsics3.areEqual(this.assets, embeddedActivity.assets) && Intrinsics3.areEqual(this.createdAt, embeddedActivity.createdAt) && Intrinsics3.areEqual(this.details, embeddedActivity.details) && Intrinsics3.areEqual(this.name, embeddedActivity.name) && Intrinsics3.areEqual(this.secrets, embeddedActivity.secrets) && Intrinsics3.areEqual(this.state, embeddedActivity.state) && Intrinsics3.areEqual(this.timestamps, embeddedActivity.timestamps) && Intrinsics3.areEqual(this.type, embeddedActivity.type);
     }
 
-    /* renamed from: f, reason: from getter */
+    /* JADX INFO: renamed from: f, reason: from getter */
     public final ActivitySecrets getSecrets() {
         return this.secrets;
     }
 
-    /* renamed from: g, reason: from getter */
+    /* JADX INFO: renamed from: g, reason: from getter */
     public final String getState() {
         return this.state;
     }
 
-    /* renamed from: h, reason: from getter */
+    /* JADX INFO: renamed from: h, reason: from getter */
     public final ActivityTimestamps getTimestamps() {
         return this.timestamps;
     }
@@ -93,7 +93,7 @@ public final /* data */ class EmbeddedActivity {
         return iHashCode7 + (activityType != null ? activityType.hashCode() : 0);
     }
 
-    /* renamed from: i, reason: from getter */
+    /* JADX INFO: renamed from: i, reason: from getter */
     public final ActivityType getType() {
         return this.type;
     }

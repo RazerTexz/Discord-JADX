@@ -5,7 +5,7 @@ import android.os.Build;
 import android.view.View;
 import androidx.annotation.NonNull;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class DialogCompat {
     private DialogCompat() {
     }

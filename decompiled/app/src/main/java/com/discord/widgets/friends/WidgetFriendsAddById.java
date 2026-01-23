@@ -54,23 +54,23 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 import p658rx.functions.Action1;
 
-/* compiled from: WidgetFriendsAddById.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetFriendsAddById.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetFriendsAddById extends AppFragment {
     public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetFriendsAddById.class, "binding", "getBinding()Lcom/discord/databinding/WidgetFriendsAddByIdBinding;", 0)};
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private static final Regex PATTERN_USERNAME = new Regex("^(.*)#(\\d{4})$");
 
-    /* renamed from: binding$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
     private final ActivityResultLauncher<Intent> captchaLauncher;
 
-    /* compiled from: WidgetFriendsAddById.kt */
+    /* JADX INFO: compiled from: WidgetFriendsAddById.kt */
     public static final class Companion {
 
-        /* compiled from: WidgetFriendsAddById.kt */
+        /* JADX INFO: compiled from: WidgetFriendsAddById.kt */
         public static final /* data */ class UserNameDiscriminator {
             private final Integer discriminator;
             private final String username;
@@ -91,12 +91,12 @@ public final class WidgetFriendsAddById extends AppFragment {
                 return userNameDiscriminator.copy(str, num);
             }
 
-            /* renamed from: component1, reason: from getter */
+            /* JADX INFO: renamed from: component1, reason: from getter */
             public final String getUsername() {
                 return this.username;
             }
 
-            /* renamed from: component2, reason: from getter */
+            /* JADX INFO: renamed from: component2, reason: from getter */
             public final Integer getDiscriminator() {
                 return this.discriminator;
             }
@@ -158,8 +158,8 @@ public final class WidgetFriendsAddById extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetFriendsAddById.kt */
-    /* renamed from: com.discord.widgets.friends.WidgetFriendsAddById$onViewBound$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.friends.WidgetFriendsAddById$onViewBound$1 */
+    /* JADX INFO: compiled from: WidgetFriendsAddById.kt */
     public static final class ViewOnClickListenerC83801 implements View.OnClickListener {
         public ViewOnClickListenerC83801() {
         }
@@ -170,8 +170,8 @@ public final class WidgetFriendsAddById extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetFriendsAddById.kt */
-    /* renamed from: com.discord.widgets.friends.WidgetFriendsAddById$onViewBound$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.friends.WidgetFriendsAddById$onViewBound$2 */
+    /* JADX INFO: compiled from: WidgetFriendsAddById.kt */
     public static final class C83812 extends Lambda implements Function1<Editable, Unit> {
         public C83812() {
             super(1);
@@ -183,7 +183,7 @@ public final class WidgetFriendsAddById extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Editable editable) {
             Intrinsics3.checkNotNullParameter(editable, "editable");
             try {
@@ -208,8 +208,8 @@ public final class WidgetFriendsAddById extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetFriendsAddById.kt */
-    /* renamed from: com.discord.widgets.friends.WidgetFriendsAddById$onViewBound$3 */
+    /* JADX INFO: renamed from: com.discord.widgets.friends.WidgetFriendsAddById$onViewBound$3 */
+    /* JADX INFO: compiled from: WidgetFriendsAddById.kt */
     public static final class C83823 extends Lambda implements Function1<TextView, Unit> {
         public C83823() {
             super(1);
@@ -221,7 +221,7 @@ public final class WidgetFriendsAddById extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(TextView textView) {
             Intrinsics3.checkNotNullParameter(textView, "it");
             WidgetFriendsAddById.extractTargetAndSendFriendRequest$default(WidgetFriendsAddById.this, null, 1, null);
@@ -229,8 +229,8 @@ public final class WidgetFriendsAddById extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetFriendsAddById.kt */
-    /* renamed from: com.discord.widgets.friends.WidgetFriendsAddById$onViewBound$4 */
+    /* JADX INFO: renamed from: com.discord.widgets.friends.WidgetFriendsAddById$onViewBound$4 */
+    /* JADX INFO: compiled from: WidgetFriendsAddById.kt */
     public static final class ViewOnClickListenerC83834 implements View.OnClickListener {
         public ViewOnClickListenerC83834() {
         }
@@ -241,8 +241,8 @@ public final class WidgetFriendsAddById extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetFriendsAddById.kt */
-    /* renamed from: com.discord.widgets.friends.WidgetFriendsAddById$sendFriendRequest$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.friends.WidgetFriendsAddById$sendFriendRequest$1 */
+    /* JADX INFO: compiled from: WidgetFriendsAddById.kt */
     public static final class C83841<T> implements Action1<Void> {
         public final /* synthetic */ String $username;
 
@@ -255,7 +255,7 @@ public final class WidgetFriendsAddById extends AppFragment {
             call2(r1);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final void call2(Void r8) {
             Context context = WidgetFriendsAddById.this.getContext();
             Context context2 = WidgetFriendsAddById.this.getContext();
@@ -267,14 +267,14 @@ public final class WidgetFriendsAddById extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetFriendsAddById.kt */
-    /* renamed from: com.discord.widgets.friends.WidgetFriendsAddById$sendFriendRequest$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.friends.WidgetFriendsAddById$sendFriendRequest$2 */
+    /* JADX INFO: compiled from: WidgetFriendsAddById.kt */
     public static final class C83852<T> implements Action1<Error> {
         public final /* synthetic */ int $discriminator;
         public final /* synthetic */ String $username;
 
-        /* compiled from: WidgetFriendsAddById.kt */
-        /* renamed from: com.discord.widgets.friends.WidgetFriendsAddById$sendFriendRequest$2$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.widgets.friends.WidgetFriendsAddById$sendFriendRequest$2$1, reason: invalid class name */
+        /* JADX INFO: compiled from: WidgetFriendsAddById.kt */
         public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
             public final /* synthetic */ Error $error;
 
@@ -290,7 +290,7 @@ public final class WidgetFriendsAddById extends AppFragment {
                 return Unit.f27425a;
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2() {
                 Error error = this.$error;
                 Intrinsics3.checkNotNullExpressionValue(error, "error");
@@ -322,7 +322,7 @@ public final class WidgetFriendsAddById extends AppFragment {
             call2(error);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final void call2(Error error) {
             RestAPIAbortMessages restAPIAbortMessages = RestAPIAbortMessages.INSTANCE;
             Intrinsics3.checkNotNullExpressionValue(error, "error");

@@ -4,7 +4,6 @@ import android.animation.Animator;
 import android.animation.AnimatorInflater;
 import android.animation.AnimatorSet;
 import android.content.ContentResolver;
-import android.content.res.Resources;
 import android.database.Cursor;
 import android.graphics.Bitmap;
 import android.net.Uri;
@@ -50,24 +49,24 @@ import p507d0.p591y.Closeable;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: FileListAdapter.kt */
-/* loaded from: classes3.dex */
+/* JADX INFO: compiled from: FileListAdapter.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class FileListAdapter extends RecyclerView.Adapter<C11174b> {
 
-    /* renamed from: a, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: a, reason: from kotlin metadata */
     public final SelectionCoordinator<?, ? super Attachment<? extends File>> selectionCoordinator;
 
-    /* renamed from: b, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: b, reason: from kotlin metadata */
     public List<? extends Attachment<? extends File>> files;
 
-    /* renamed from: c, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: c, reason: from kotlin metadata */
     public final ContentResolver contentResolver;
 
-    /* compiled from: FileListAdapter.kt */
-    /* renamed from: com.lytefast.flexinput.adapters.FileListAdapter$a */
+    /* JADX INFO: renamed from: com.lytefast.flexinput.adapters.FileListAdapter$a */
+    /* JADX INFO: compiled from: FileListAdapter.kt */
     public static final class AsyncTaskC11173a extends AsyncTask<File, Boolean, List<? extends Attachment<? extends File>>> {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final FileListAdapter f22025a;
 
         public AsyncTaskC11173a(FileListAdapter fileListAdapter) {
@@ -109,36 +108,36 @@ public final class FileListAdapter extends RecyclerView.Adapter<C11174b> {
         }
     }
 
-    /* compiled from: FileListAdapter.kt */
-    /* renamed from: com.lytefast.flexinput.adapters.FileListAdapter$b */
+    /* JADX INFO: renamed from: com.lytefast.flexinput.adapters.FileListAdapter$b */
+    /* JADX INFO: compiled from: FileListAdapter.kt */
     public class C11174b extends RecyclerView.ViewHolder {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final AnimatorSet f22026a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final AnimatorSet f22027b;
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public SimpleDraweeView f22028c;
 
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         public ImageView f22029d;
 
-        /* renamed from: e */
+        /* JADX INFO: renamed from: e */
         public TextView f22030e;
 
-        /* renamed from: f */
+        /* JADX INFO: renamed from: f */
         public TextView f22031f;
 
-        /* renamed from: g */
+        /* JADX INFO: renamed from: g */
         public Attachment<? extends File> f22032g;
 
-        /* renamed from: h */
+        /* JADX INFO: renamed from: h */
         public final /* synthetic */ FileListAdapter f22033h;
 
-        /* compiled from: FileListAdapter.kt */
-        /* renamed from: com.lytefast.flexinput.adapters.FileListAdapter$b$a */
+        /* JADX INFO: renamed from: com.lytefast.flexinput.adapters.FileListAdapter$b$a */
+        /* JADX INFO: compiled from: FileListAdapter.kt */
         public static final class a implements View.OnClickListener {
             public a() {
             }
@@ -161,8 +160,8 @@ public final class FileListAdapter extends RecyclerView.Adapter<C11174b> {
             }
         }
 
-        /* compiled from: FileListAdapter.kt */
-        /* renamed from: com.lytefast.flexinput.adapters.FileListAdapter$b$b */
+        /* JADX INFO: renamed from: com.lytefast.flexinput.adapters.FileListAdapter$b$b */
+        /* JADX INFO: compiled from: FileListAdapter.kt */
         public static final class b extends Lambda implements Function1<AnimatorSet, Unit> {
             public final /* synthetic */ boolean $isAnimationRequested;
 
@@ -172,7 +171,7 @@ public final class FileListAdapter extends RecyclerView.Adapter<C11174b> {
                 this.$isAnimationRequested = z2;
             }
 
-            /* renamed from: a */
+            /* JADX INFO: renamed from: a */
             public final void m9281a(AnimatorSet animatorSet) {
                 Intrinsics3.checkNotNullParameter(animatorSet, "animation");
                 animatorSet.start();
@@ -190,7 +189,7 @@ public final class FileListAdapter extends RecyclerView.Adapter<C11174b> {
         }
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        public C11174b(FileListAdapter fileListAdapter, View view) throws Resources.NotFoundException {
+        public C11174b(FileListAdapter fileListAdapter, View view) {
             super(view);
             Intrinsics3.checkNotNullParameter(view, "itemView");
             this.f22033h = fileListAdapter;
@@ -222,50 +221,51 @@ public final class FileListAdapter extends RecyclerView.Adapter<C11174b> {
             animatorSet2.setTarget(this.f22028c);
         }
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final void m9279a(File file) throws IOException {
             Bitmap thumbnail;
             Cursor cursorQuery = this.f22033h.contentResolver.query(MediaStore.Images.Media.EXTERNAL_CONTENT_URI, new String[]{"_id", "mini_thumb_magic"}, "_data=?", new String[]{file.getPath()}, null);
             if (cursorQuery != null) {
                 try {
-                    if (!cursorQuery.moveToFirst()) {
-                        Closeable.closeFinally(cursorQuery, null);
-                        return;
-                    }
-                    long j = cursorQuery.getLong(0);
-                    if (cursorQuery.getLong(1) == 0 && (thumbnail = MediaStore.Images.Thumbnails.getThumbnail(this.f22033h.contentResolver, j, 1, null)) != null) {
-                        thumbnail.recycle();
-                    }
-                    cursorQuery = this.f22033h.contentResolver.query(MediaStore.Images.Thumbnails.EXTERNAL_CONTENT_URI, new String[]{"_id"}, "image_id=?", new String[]{String.valueOf(j)}, null);
-                    if (cursorQuery != null) {
-                        try {
-                            if (!cursorQuery.moveToFirst()) {
-                                Closeable.closeFinally(cursorQuery, null);
-                                Closeable.closeFinally(cursorQuery, null);
-                                return;
-                            }
-                            String string = cursorQuery.getString(0);
-                            SimpleDraweeView simpleDraweeView = this.f22028c;
-                            PipelineDraweeControllerBuilder pipelineDraweeControllerBuilderM1037a = Fresco.m1037a();
-                            pipelineDraweeControllerBuilderM1037a.f19490n = this.f22028c.getController();
-                            PipelineDraweeControllerBuilder pipelineDraweeControllerBuilderM1058f = pipelineDraweeControllerBuilderM1037a.m1058f(Uri.withAppendedPath(MediaStore.Images.Thumbnails.EXTERNAL_CONTENT_URI, string));
-                            pipelineDraweeControllerBuilderM1058f.f19488l = true;
-                            simpleDraweeView.setController(pipelineDraweeControllerBuilderM1058f.m8667a());
-                            Closeable.closeFinally(cursorQuery, null);
-                        } finally {
-                        }
-                    }
-                    Closeable.closeFinally(cursorQuery, null);
                 } catch (Throwable th) {
                     try {
                         throw th;
                     } finally {
                     }
                 }
+                if (!cursorQuery.moveToFirst()) {
+                    Closeable.closeFinally(cursorQuery, null);
+                    return;
+                }
+                long j = cursorQuery.getLong(0);
+                if (cursorQuery.getLong(1) == 0 && (thumbnail = MediaStore.Images.Thumbnails.getThumbnail(this.f22033h.contentResolver, j, 1, null)) != null) {
+                    thumbnail.recycle();
+                }
+                cursorQuery = this.f22033h.contentResolver.query(MediaStore.Images.Thumbnails.EXTERNAL_CONTENT_URI, new String[]{"_id"}, "image_id=?", new String[]{String.valueOf(j)}, null);
+                if (cursorQuery != null) {
+                    try {
+                        if (!cursorQuery.moveToFirst()) {
+                            Closeable.closeFinally(cursorQuery, null);
+                            Closeable.closeFinally(cursorQuery, null);
+                            return;
+                        }
+                        String string = cursorQuery.getString(0);
+                        SimpleDraweeView simpleDraweeView = this.f22028c;
+                        PipelineDraweeControllerBuilder pipelineDraweeControllerBuilderM1037a = Fresco.m1037a();
+                        pipelineDraweeControllerBuilderM1037a.f19490n = this.f22028c.getController();
+                        PipelineDraweeControllerBuilder pipelineDraweeControllerBuilderM1058f = pipelineDraweeControllerBuilderM1037a.m1058f(Uri.withAppendedPath(MediaStore.Images.Thumbnails.EXTERNAL_CONTENT_URI, string));
+                        pipelineDraweeControllerBuilderM1058f.f19488l = true;
+                        simpleDraweeView.setController(pipelineDraweeControllerBuilderM1058f.m8667a());
+                        Closeable.closeFinally(cursorQuery, null);
+                    } finally {
+                    }
+                    throw th;
+                }
+                Closeable.closeFinally(cursorQuery, null);
             }
         }
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final void m9280b(boolean z2, boolean z3) {
             View view = this.itemView;
             Intrinsics3.checkNotNullExpressionValue(view, "itemView");

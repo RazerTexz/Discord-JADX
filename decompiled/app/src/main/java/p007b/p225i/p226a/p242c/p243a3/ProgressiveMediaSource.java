@@ -15,57 +15,57 @@ import p007b.p225i.p226a.p242c.p257e3.LoadErrorHandlingPolicy;
 import p007b.p225i.p226a.p242c.p257e3.TransferListener;
 import p007b.p225i.p226a.p242c.p266w2.DrmSessionManager2;
 
-/* compiled from: ProgressiveMediaSource.java */
-/* renamed from: b.i.a.c.a3.f0, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.a3.f0, reason: use source file name */
+/* JADX INFO: compiled from: ProgressiveMediaSource.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class ProgressiveMediaSource extends BaseMediaSource implements ProgressiveMediaPeriod.b {
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public final MediaItem2 f5565g;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public final MediaItem2.h f5566h;
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public final DataSource3.a f5567i;
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final ProgressiveMediaExtractor.a f5568j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final DrmSessionManager2 f5569k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final LoadErrorHandlingPolicy f5570l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public final int f5571m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public boolean f5572n;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public long f5573o;
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public boolean f5574p;
 
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     public boolean f5575q;
 
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     @Nullable
     public TransferListener f5576r;
 
-    /* compiled from: ProgressiveMediaSource.java */
-    /* renamed from: b.i.a.c.a3.f0$a */
+    /* JADX INFO: renamed from: b.i.a.c.a3.f0$a */
+    /* JADX INFO: compiled from: ProgressiveMediaSource.java */
     public class a extends ForwardingTimeline {
         public a(Timeline timeline) {
             super(timeline);
         }
 
         @Override // p007b.p225i.p226a.p242c.Timeline
-        /* renamed from: g */
+        /* JADX INFO: renamed from: g */
         public Timeline.b mo2513g(int i, Timeline.b bVar, boolean z2) {
             this.f5697k.mo2513g(i, bVar, z2);
             bVar.f7343o = true;
@@ -73,7 +73,7 @@ public final class ProgressiveMediaSource extends BaseMediaSource implements Pro
         }
 
         @Override // p007b.p225i.p226a.p242c.Timeline
-        /* renamed from: o */
+        /* JADX INFO: renamed from: o */
         public Timeline.c mo2514o(int i, Timeline.c cVar, long j) {
             this.f5697k.mo2514o(i, cVar, j);
             cVar.f7364y = true;
@@ -96,18 +96,18 @@ public final class ProgressiveMediaSource extends BaseMediaSource implements Pro
     }
 
     @Override // p007b.p225i.p226a.p242c.p243a3.MediaSource2
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public MediaItem2 mo2450e() {
         return this.f5565g;
     }
 
     @Override // p007b.p225i.p226a.p242c.p243a3.MediaSource2
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public void mo2453h() {
     }
 
     @Override // p007b.p225i.p226a.p242c.p243a3.MediaSource2
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public void mo2455j(MediaPeriod mediaPeriod) {
         ProgressiveMediaPeriod progressiveMediaPeriod = (ProgressiveMediaPeriod) mediaPeriod;
         if (progressiveMediaPeriod.f5506G) {
@@ -134,7 +134,7 @@ public final class ProgressiveMediaSource extends BaseMediaSource implements Pro
     }
 
     @Override // p007b.p225i.p226a.p242c.p243a3.MediaSource2
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public MediaPeriod mo2459n(MediaSource2.a aVar, DefaultAllocator defaultAllocator, long j) {
         DataSource3 dataSource3Mo234a = this.f5567i.mo234a();
         TransferListener transferListener = this.f5576r;
@@ -145,7 +145,7 @@ public final class ProgressiveMediaSource extends BaseMediaSource implements Pro
     }
 
     @Override // p007b.p225i.p226a.p242c.p243a3.BaseMediaSource
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     public void mo2509q(@Nullable TransferListener transferListener) {
         this.f5576r = transferListener;
         this.f5569k.mo3597a();
@@ -153,12 +153,12 @@ public final class ProgressiveMediaSource extends BaseMediaSource implements Pro
     }
 
     @Override // p007b.p225i.p226a.p242c.p243a3.BaseMediaSource
-    /* renamed from: s */
+    /* JADX INFO: renamed from: s */
     public void mo2510s() {
         this.f5569k.release();
     }
 
-    /* renamed from: t */
+    /* JADX INFO: renamed from: t */
     public final void m2511t() {
         Timeline singlePeriodTimeline = new SinglePeriodTimeline(this.f5573o, this.f5574p, false, this.f5575q, null, this.f5565g);
         if (this.f5572n) {
@@ -167,7 +167,7 @@ public final class ProgressiveMediaSource extends BaseMediaSource implements Pro
         m2553r(singlePeriodTimeline);
     }
 
-    /* renamed from: u */
+    /* JADX INFO: renamed from: u */
     public void m2512u(long j, boolean z2, boolean z3) {
         if (j == -9223372036854775807L) {
             j = this.f5573o;

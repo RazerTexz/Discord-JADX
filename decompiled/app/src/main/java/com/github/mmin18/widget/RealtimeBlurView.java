@@ -20,64 +20,64 @@ import p007b.p222h.p223a.p224a.BlurImpl;
 import p007b.p222h.p223a.p224a.EmptyBlurImpl;
 import p007b.p222h.p223a.p224a.SupportLibraryBlurImpl;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public class RealtimeBlurView extends View {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static int f19673j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public static int f19674k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public static C10681b f19675l = new C10681b(null);
 
-    /* renamed from: A */
+    /* JADX INFO: renamed from: A */
     public final ViewTreeObserver.OnPreDrawListener f19676A;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public float f19677m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public int f19678n;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public float f19679o;
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public final BlurImpl f19680p;
 
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     public boolean f19681q;
 
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     public Bitmap f19682r;
 
-    /* renamed from: s */
+    /* JADX INFO: renamed from: s */
     public Bitmap f19683s;
 
-    /* renamed from: t */
+    /* JADX INFO: renamed from: t */
     public Canvas f19684t;
 
-    /* renamed from: u */
+    /* JADX INFO: renamed from: u */
     public boolean f19685u;
 
-    /* renamed from: v */
+    /* JADX INFO: renamed from: v */
     public Paint f19686v;
 
-    /* renamed from: w */
+    /* JADX INFO: renamed from: w */
     public final Rect f19687w;
 
-    /* renamed from: x */
+    /* JADX INFO: renamed from: x */
     public final Rect f19688x;
 
-    /* renamed from: y */
+    /* JADX INFO: renamed from: y */
     public View f19689y;
 
-    /* renamed from: z */
+    /* JADX INFO: renamed from: z */
     public boolean f19690z;
 
-    /* renamed from: com.github.mmin18.widget.RealtimeBlurView$a */
+    /* JADX INFO: renamed from: com.github.mmin18.widget.RealtimeBlurView$a */
     public class ViewTreeObserverOnPreDrawListenerC10680a implements ViewTreeObserver.OnPreDrawListener {
         public ViewTreeObserverOnPreDrawListenerC10680a() {
         }
@@ -193,7 +193,7 @@ public class RealtimeBlurView extends View {
         }
     }
 
-    /* renamed from: com.github.mmin18.widget.RealtimeBlurView$b */
+    /* JADX INFO: renamed from: com.github.mmin18.widget.RealtimeBlurView$b */
     public static class C10681b extends RuntimeException {
         public C10681b(ViewTreeObserverOnPreDrawListenerC10680a viewTreeObserverOnPreDrawListenerC10680a) {
         }
@@ -213,20 +213,20 @@ public class RealtimeBlurView extends View {
         this.f19686v = new Paint();
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static /* synthetic */ int m8750a() {
         int i = f19673j;
         f19673j = i - 1;
         return i;
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public void m8751b() {
         m8752c();
         this.f19680p.release();
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final void m8752c() {
         Bitmap bitmap = this.f19682r;
         if (bitmap != null) {

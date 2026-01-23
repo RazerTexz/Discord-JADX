@@ -4,30 +4,30 @@ import android.graphics.Typeface;
 import androidx.annotation.Nullable;
 import androidx.core.view.ViewCompat;
 
-/* compiled from: CaptionStyleCompat.java */
-/* renamed from: b.i.a.c.d3.k, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.d3.k, reason: use source file name */
+/* JADX INFO: compiled from: CaptionStyleCompat.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class CaptionStyleCompat {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final CaptionStyleCompat f6349a = new CaptionStyleCompat(-1, ViewCompat.MEASURED_STATE_MASK, 0, 0, -1, null);
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final int f6350b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final int f6351c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final int f6352d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final int f6353e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final int f6354f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     @Nullable
     public final Typeface f6355g;
 

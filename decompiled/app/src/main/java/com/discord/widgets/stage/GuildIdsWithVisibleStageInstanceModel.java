@@ -21,13 +21,13 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 import p658rx.Observable;
 
-/* compiled from: GuildIdsWithVisibleStageInstanceModel.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: GuildIdsWithVisibleStageInstanceModel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class GuildIdsWithVisibleStageInstanceModel {
     public static final GuildIdsWithVisibleStageInstanceModel INSTANCE = new GuildIdsWithVisibleStageInstanceModel();
 
-    /* compiled from: GuildIdsWithVisibleStageInstanceModel.kt */
-    /* renamed from: com.discord.widgets.stage.GuildIdsWithVisibleStageInstanceModel$compute$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.stage.GuildIdsWithVisibleStageInstanceModel$compute$1 */
+    /* JADX INFO: compiled from: GuildIdsWithVisibleStageInstanceModel.kt */
     public static final class C100011 extends Lambda implements Function1<Map.Entry<? extends Long, ? extends Map<Long, ? extends StageInstance>>, Boolean> {
         public final /* synthetic */ Map $permissionsByChannel;
 
@@ -42,7 +42,7 @@ public final class GuildIdsWithVisibleStageInstanceModel {
             return Boolean.valueOf(invoke2((Map.Entry<Long, ? extends Map<Long, StageInstance>>) entry));
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final boolean invoke2(Map.Entry<Long, ? extends Map<Long, StageInstance>> entry) {
             int i;
             Intrinsics3.checkNotNullParameter(entry, "<name for destructuring parameter 0>");
@@ -63,8 +63,8 @@ public final class GuildIdsWithVisibleStageInstanceModel {
         }
     }
 
-    /* compiled from: GuildIdsWithVisibleStageInstanceModel.kt */
-    /* renamed from: com.discord.widgets.stage.GuildIdsWithVisibleStageInstanceModel$compute$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.stage.GuildIdsWithVisibleStageInstanceModel$compute$2 */
+    /* JADX INFO: compiled from: GuildIdsWithVisibleStageInstanceModel.kt */
     public static final class C100022 extends Lambda implements Function1<Map.Entry<? extends Long, ? extends Map<Long, ? extends StageInstance>>, Long> {
         public static final C100022 INSTANCE = new C100022();
 
@@ -77,15 +77,15 @@ public final class GuildIdsWithVisibleStageInstanceModel {
             return Long.valueOf(invoke2((Map.Entry<Long, ? extends Map<Long, StageInstance>>) entry));
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final long invoke2(Map.Entry<Long, ? extends Map<Long, StageInstance>> entry) {
             Intrinsics3.checkNotNullParameter(entry, "entry");
             return entry.getKey().longValue();
         }
     }
 
-    /* compiled from: GuildIdsWithVisibleStageInstanceModel.kt */
-    /* renamed from: com.discord.widgets.stage.GuildIdsWithVisibleStageInstanceModel$observe$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.stage.GuildIdsWithVisibleStageInstanceModel$observe$1 */
+    /* JADX INFO: compiled from: GuildIdsWithVisibleStageInstanceModel.kt */
     public static final class C100031 extends Lambda implements Function0<Set<? extends Long>> {
         public final /* synthetic */ StorePermissions $storePermissions;
         public final /* synthetic */ StoreStageInstances $storeStageInstances;
@@ -103,7 +103,7 @@ public final class GuildIdsWithVisibleStageInstanceModel {
         }
 
         @Override // kotlin.jvm.functions.Function0
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final Set<? extends Long> invoke2() {
             return GuildIdsWithVisibleStageInstanceModel.INSTANCE.compute(this.$storeStageInstances.getStageInstancesByGuild(), this.$storePermissions.getPermissionsByChannel());
         }

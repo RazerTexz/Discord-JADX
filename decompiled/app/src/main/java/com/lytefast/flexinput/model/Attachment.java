@@ -21,8 +21,8 @@ import p507d0.p579g0.Strings4;
 import p507d0.p591y.Closeable;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: Attachment.kt */
-/* loaded from: classes3.dex */
+/* JADX INFO: compiled from: Attachment.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public class Attachment<T> implements Parcelable {
     private static final String SPOILER_PREFIX = "SPOILER_";
     private final T data;
@@ -31,16 +31,16 @@ public class Attachment<T> implements Parcelable {
     private boolean spoiler;
     private final Uri uri;
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     public static final Parcelable.Creator<Attachment<?>> CREATOR = new C11189a();
 
-    /* compiled from: Attachment.kt */
+    /* JADX INFO: compiled from: Attachment.kt */
     public static final class Companion {
         public Companion() {
         }
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final String m9295a(Attachment<?> attachment) {
             Intrinsics3.checkNotNullParameter(attachment, "$this$getSendName");
             if (!attachment.getSpoiler()) {
@@ -52,12 +52,13 @@ public class Attachment<T> implements Parcelable {
         }
 
         /* JADX WARN: Removed duplicated region for block: B:39:0x00a3  */
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         /*
             Code decompiled incorrectly, please refer to instructions dump.
         */
         public final Attachment<Uri> m9296b(Uri uri, ContentResolver contentResolver) throws IOException {
             String lastPathSegment;
+            Cursor cursorQuery;
             int columnIndex;
             Intrinsics3.checkNotNullParameter(uri, "$this$toAttachment");
             Intrinsics3.checkNotNullParameter(contentResolver, "resolver");
@@ -72,29 +73,33 @@ public class Attachment<T> implements Parcelable {
                 if (iHashCode != 3143036) {
                     if (iHashCode == 951530617 && scheme.equals("content")) {
                         try {
-                            Cursor cursorQuery = contentResolver.query(uri, null, null, null, null);
-                            if (cursorQuery != null) {
-                                try {
-                                    if (!cursorQuery.moveToFirst() || (columnIndex = cursorQuery.getColumnIndex("_display_name")) < 0) {
-                                        Closeable.closeFinally(cursorQuery, null);
-                                        lastPathSegment = uri.getLastPathSegment();
-                                    } else {
-                                        String string = cursorQuery.getString(columnIndex);
-                                        if (string == null) {
-                                            string = uri.getLastPathSegment();
-                                        }
-                                        Closeable.closeFinally(cursorQuery, null);
-                                        lastPathSegment = string;
-                                    }
-                                } finally {
-                                }
-                            } else {
-                                lastPathSegment = uri.getLastPathSegment();
-                            }
+                            cursorQuery = contentResolver.query(uri, null, null, null, null);
                         } catch (NullPointerException e) {
                             StringBuilder sbM833U = outline.m833U("Error getting file name for: ");
                             sbM833U.append(uri.getPath());
                             Log.e("FileUtils", sbM833U.toString(), e);
+                            lastPathSegment = uri.getLastPathSegment();
+                        }
+                        if (cursorQuery != null) {
+                            try {
+                                if (!cursorQuery.moveToFirst() || (columnIndex = cursorQuery.getColumnIndex("_display_name")) < 0) {
+                                    Closeable.closeFinally(cursorQuery, null);
+                                    lastPathSegment = uri.getLastPathSegment();
+                                } else {
+                                    String string = cursorQuery.getString(columnIndex);
+                                    if (string == null) {
+                                        string = uri.getLastPathSegment();
+                                    }
+                                    Closeable.closeFinally(cursorQuery, null);
+                                    lastPathSegment = string;
+                                }
+                            } finally {
+                            }
+                            StringBuilder sbM833U2 = outline.m833U("Error getting file name for: ");
+                            sbM833U2.append(uri.getPath());
+                            Log.e("FileUtils", sbM833U2.toString(), e);
+                            lastPathSegment = uri.getLastPathSegment();
+                        } else {
                             lastPathSegment = uri.getLastPathSegment();
                         }
                     }
@@ -112,7 +117,7 @@ public class Attachment<T> implements Parcelable {
         }
 
         /* JADX WARN: Removed duplicated region for block: B:18:0x006c  */
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         /*
             Code decompiled incorrectly, please refer to instructions dump.
         */
@@ -154,8 +159,8 @@ public class Attachment<T> implements Parcelable {
         }
     }
 
-    /* compiled from: Attachment.kt */
-    /* renamed from: com.lytefast.flexinput.model.Attachment$a */
+    /* JADX INFO: renamed from: com.lytefast.flexinput.model.Attachment$a */
+    /* JADX INFO: compiled from: Attachment.kt */
     public static final class C11189a implements Parcelable.Creator<Attachment<?>> {
         @Override // android.os.Parcelable.Creator
         public Attachment<?> createFromParcel(Parcel parcel) {

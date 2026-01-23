@@ -4,7 +4,7 @@ import android.os.Environment;
 import androidx.annotation.NonNull;
 import java.io.File;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public final class EnvironmentCompat {
     public static final String MEDIA_UNKNOWN = "unknown";
     private static final String TAG = "EnvironmentCompat";

@@ -7,14 +7,14 @@ import androidx.constraintlayout.solver.widgets.analyzer.DependencyNode;
 import androidx.constraintlayout.solver.widgets.analyzer.WidgetRun;
 import p007b.p100d.p104b.p105a.outline;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class HorizontalWidgetRun extends WidgetRun {
     private static int[] tempDimensions = new int[2];
 
-    /* renamed from: androidx.constraintlayout.solver.widgets.analyzer.HorizontalWidgetRun$1 */
+    /* JADX INFO: renamed from: androidx.constraintlayout.solver.widgets.analyzer.HorizontalWidgetRun$1 */
     public static /* synthetic */ class C01921 {
 
-        /* renamed from: $SwitchMap$androidx$constraintlayout$solver$widgets$analyzer$WidgetRun$RunType */
+        /* JADX INFO: renamed from: $SwitchMap$androidx$constraintlayout$solver$widgets$analyzer$WidgetRun$RunType */
         public static final /* synthetic */ int[] f121xbf6f0c8e;
 
         static {

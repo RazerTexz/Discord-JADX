@@ -7,12 +7,12 @@ import java.util.Comparator;
 import java.util.Objects;
 import p507d0.p582u.C12169a;
 
-/* compiled from: Comparisons.kt */
-/* renamed from: b.b.a.d.f */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.b.a.d.f */
+/* JADX INFO: compiled from: Comparisons.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class C1436f<T> implements Comparator {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final /* synthetic */ FileListAdapter.AsyncTaskC11173a f2142j;
 
     public C1436f(FileListAdapter.AsyncTaskC11173a asyncTaskC11173a) {

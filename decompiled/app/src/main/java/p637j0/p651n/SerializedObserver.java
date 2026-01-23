@@ -5,34 +5,34 @@ import p637j0.Observer2;
 import p637j0.p642l.p643a.NotificationLite;
 import p658rx.exceptions.OnErrorThrowable;
 
-/* compiled from: SerializedObserver.java */
-/* renamed from: j0.n.c, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: j0.n.c, reason: use source file name */
+/* JADX INFO: compiled from: SerializedObserver.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class SerializedObserver<T> implements Observer2<T> {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final Observer2<? super T> f27366j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public boolean f27367k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public volatile boolean f27368l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public a f27369m;
 
-    /* compiled from: SerializedObserver.java */
-    /* renamed from: j0.n.c$a */
+    /* JADX INFO: renamed from: j0.n.c$a */
+    /* JADX INFO: compiled from: SerializedObserver.java */
     public static final class a {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public Object[] f27370a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public int f27371b;
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public void m10861a(Object obj) {
             int i = this.f27371b;
             Object[] objArr = this.f27370a;

@@ -3,34 +3,34 @@ package p007b.p008a.p041q.p042k0;
 import kotlin.jvm.internal.DefaultConstructorMarker;
 import p007b.p100d.p104b.p105a.outline;
 
-/* compiled from: EchoCancellation.kt */
-/* renamed from: b.a.q.k0.g, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.a.q.k0.g, reason: use source file name */
+/* JADX INFO: compiled from: EchoCancellation.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class EchoCancellation {
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public volatile boolean f1663d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final boolean f1664e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final boolean f1665f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public final boolean f1666g;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public static final a f1662c = new a(null);
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final EchoCancellation f1660a = new EchoCancellation(true, false, false);
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static final EchoCancellation f1661b = new EchoCancellation(true, false, false);
 
-    /* compiled from: EchoCancellation.kt */
-    /* renamed from: b.a.q.k0.g$a */
+    /* JADX INFO: renamed from: b.a.q.k0.g$a */
+    /* JADX INFO: compiled from: EchoCancellation.kt */
     public static final class a {
         public a(DefaultConstructorMarker defaultConstructorMarker) {
         }
@@ -57,7 +57,12 @@ public final class EchoCancellation {
     /* JADX WARN: Type inference failed for: r0v1, types: [int] */
     /* JADX WARN: Type inference failed for: r0v6 */
     /* JADX WARN: Type inference failed for: r0v7 */
-    /* JADX WARN: Type inference failed for: r2v0, types: [boolean] */
+    /* JADX WARN: Type inference failed for: r1v0 */
+    /* JADX WARN: Type inference failed for: r1v1, types: [int] */
+    /* JADX WARN: Type inference failed for: r1v2 */
+    /* JADX WARN: Type inference failed for: r2v1, types: [int] */
+    /* JADX WARN: Type inference failed for: r2v3 */
+    /* JADX WARN: Type inference failed for: r2v4 */
     public int hashCode() {
         boolean z2 = this.f1664e;
         ?? r0 = z2;
@@ -65,14 +70,14 @@ public final class EchoCancellation {
             r0 = 1;
         }
         int i = r0 * 31;
-        ?? r2 = this.f1665f;
-        int i2 = r2;
-        if (r2 != 0) {
-            i2 = 1;
+        boolean z3 = this.f1665f;
+        ?? r2 = z3;
+        if (z3) {
+            r2 = 1;
         }
-        int i3 = (i + i2) * 31;
-        boolean z3 = this.f1666g;
-        return i3 + (z3 ? 1 : z3 ? 1 : 0);
+        int i2 = (i + r2) * 31;
+        boolean z4 = this.f1666g;
+        return i2 + (z4 ? 1 : z4);
     }
 
     public String toString() {

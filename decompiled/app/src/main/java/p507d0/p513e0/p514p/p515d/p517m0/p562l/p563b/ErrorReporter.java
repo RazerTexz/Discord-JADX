@@ -4,18 +4,18 @@ import java.util.List;
 import p507d0.p513e0.p514p.p515d.p517m0.p521c.CallableMemberDescriptor;
 import p507d0.p513e0.p514p.p515d.p517m0.p521c.ClassDescriptor;
 
-/* compiled from: ErrorReporter.java */
-/* renamed from: d0.e0.p.d.m0.l.b.p, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.l.b.p, reason: use source file name */
+/* JADX INFO: compiled from: ErrorReporter.java */
+/* JADX INFO: loaded from: classes3.dex */
 public interface ErrorReporter {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final ErrorReporter f24676a = new a();
 
-    /* compiled from: ErrorReporter.java */
-    /* renamed from: d0.e0.p.d.m0.l.b.p$a */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.l.b.p$a */
+    /* JADX INFO: compiled from: ErrorReporter.java */
     public static class a implements ErrorReporter {
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public static /* synthetic */ void m9967a(int i) {
             Object[] objArr = new Object[3];
             if (i != 1) {

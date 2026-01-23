@@ -5,9 +5,9 @@ import kotlin.jvm.functions.Function1;
 import p507d0.p592z.p594d.Lambda;
 
 /* JADX INFO: Add missing generic type declarations: [K] */
-/* compiled from: ShallowPartitionMap.kt */
-/* renamed from: com.discord.utilities.collections.ShallowPartitionMap$Companion$getHashCodePartitionStrategy$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.utilities.collections.ShallowPartitionMap$Companion$getHashCodePartitionStrategy$1, reason: use source file name */
+/* JADX INFO: compiled from: ShallowPartitionMap.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class ShallowPartitionMap2<K> extends Lambda implements Function1<K, Integer> {
     public final /* synthetic */ int $numPartitions;
 
@@ -23,7 +23,7 @@ public final class ShallowPartitionMap2<K> extends Lambda implements Function1<K
         return Integer.valueOf(invoke2(obj));
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final int invoke2(K k) {
         int iHashCode = k != null ? k.hashCode() : 0;
         return Math.abs(iHashCode ^ (iHashCode >>> 16)) % this.$numPartitions;

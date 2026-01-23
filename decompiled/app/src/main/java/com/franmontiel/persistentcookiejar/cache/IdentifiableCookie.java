@@ -3,10 +3,10 @@ package com.franmontiel.persistentcookiejar.cache;
 import p007b.p100d.p104b.p105a.outline;
 import p600f0.Cookie;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public class IdentifiableCookie {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public Cookie f19667a;
 
     public IdentifiableCookie(Cookie cookie) {

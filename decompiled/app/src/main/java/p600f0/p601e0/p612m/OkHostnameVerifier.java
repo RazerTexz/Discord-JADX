@@ -20,15 +20,15 @@ import p507d0.p580t.Collections2;
 import p507d0.p592z.p594d.Intrinsics3;
 import p600f0.p601e0.Util7;
 
-/* compiled from: OkHostnameVerifier.kt */
-/* renamed from: f0.e0.m.d, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: f0.e0.m.d, reason: use source file name */
+/* JADX INFO: compiled from: OkHostnameVerifier.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class OkHostnameVerifier implements HostnameVerifier {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final OkHostnameVerifier f25811a = new OkHostnameVerifier();
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final List<String> m10343a(X509Certificate x509Certificate, int i) {
         Object obj;
         try {
@@ -49,7 +49,7 @@ public final class OkHostnameVerifier implements HostnameVerifier {
     }
 
     /* JADX WARN: Removed duplicated region for block: B:84:0x0158  */
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */

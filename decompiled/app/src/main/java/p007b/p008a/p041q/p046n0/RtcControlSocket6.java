@@ -3,12 +3,12 @@ package p007b.p008a.p041q.p046n0;
 import kotlin.jvm.functions.Function0;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: RtcControlSocket.kt */
-/* renamed from: b.a.q.n0.f, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.a.q.n0.f, reason: use source file name */
+/* JADX INFO: compiled from: RtcControlSocket.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class RtcControlSocket6 implements Runnable {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final /* synthetic */ Function0 f1804j;
 
     public RtcControlSocket6(Function0 function0) {

@@ -27,22 +27,22 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 import p507d0.p592z.p594d.MutablePropertyReference0Impl;
 
-/* compiled from: WidgetManageReactions.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetManageReactions.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetManageReactions extends AppFragment {
     public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetManageReactions.class, "binding", "getBinding()Lcom/discord/databinding/WidgetManageReactionsBinding;", 0)};
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private static final String EXTRA_EMOJI_KEY = "com.discord.intent.extra.EXTRA_EMOJI_KEY";
 
-    /* renamed from: binding$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
     private ManageReactionsEmojisAdapter emojisAdapter;
     private ManageReactionsModel2 modelProvider;
     private ManageReactionsResultsAdapter resultsAdapter;
 
-    /* compiled from: WidgetManageReactions.kt */
+    /* JADX INFO: compiled from: WidgetManageReactions.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -67,8 +67,8 @@ public final class WidgetManageReactions extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetManageReactions.kt */
-    /* renamed from: com.discord.widgets.chat.managereactions.WidgetManageReactions$onViewBound$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.managereactions.WidgetManageReactions$onViewBound$1 */
+    /* JADX INFO: compiled from: WidgetManageReactions.kt */
     public final /* synthetic */ class C81821 extends MutablePropertyReference0Impl {
         public C81821(WidgetManageReactions widgetManageReactions) {
             super(widgetManageReactions, WidgetManageReactions.class, "modelProvider", "getModelProvider()Lcom/discord/widgets/chat/managereactions/ManageReactionsModelProvider;", 0);
@@ -85,8 +85,8 @@ public final class WidgetManageReactions extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetManageReactions.kt */
-    /* renamed from: com.discord.widgets.chat.managereactions.WidgetManageReactions$onViewBound$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.managereactions.WidgetManageReactions$onViewBound$2 */
+    /* JADX INFO: compiled from: WidgetManageReactions.kt */
     public static final /* synthetic */ class C81832 extends FunctionReferenceImpl implements Function1<String, Unit> {
         public C81832(ManageReactionsModel2 manageReactionsModel2) {
             super(1, manageReactionsModel2, ManageReactionsModel2.class, "onEmojiTargeted", "onEmojiTargeted(Ljava/lang/String;)V", 0);
@@ -98,15 +98,15 @@ public final class WidgetManageReactions extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(String str) {
             Intrinsics3.checkNotNullParameter(str, "p1");
             ((ManageReactionsModel2) this.receiver).onEmojiTargeted(str);
         }
     }
 
-    /* compiled from: WidgetManageReactions.kt */
-    /* renamed from: com.discord.widgets.chat.managereactions.WidgetManageReactions$onViewBoundOrOnResume$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.managereactions.WidgetManageReactions$onViewBoundOrOnResume$1 */
+    /* JADX INFO: compiled from: WidgetManageReactions.kt */
     public static final class C81841 extends Lambda implements Function1<ManageReactionsModel, Unit> {
         public C81841() {
             super(1);
@@ -118,7 +118,7 @@ public final class WidgetManageReactions extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(ManageReactionsModel manageReactionsModel) {
             WidgetManageReactions.access$configureUI(WidgetManageReactions.this, manageReactionsModel);
         }

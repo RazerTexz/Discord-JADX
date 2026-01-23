@@ -3,15 +3,15 @@ package p007b.p225i.p226a.p242c.p255c3;
 import androidx.annotation.Nullable;
 import java.util.Arrays;
 
-/* compiled from: TrackSelectionArray.java */
-/* renamed from: b.i.a.c.c3.n, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.c3.n, reason: use source file name */
+/* JADX INFO: compiled from: TrackSelectionArray.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class TrackSelectionArray {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final TrackSelection[] f6268a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public int f6269b;
 
     public TrackSelectionArray(TrackSelection... trackSelectionArr) {

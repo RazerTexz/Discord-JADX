@@ -3,12 +3,12 @@ package p630i0;
 import java.io.IOException;
 import java.lang.reflect.Array;
 
-/* compiled from: ParameterHandler.java */
-/* renamed from: i0.s, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: i0.s, reason: use source file name */
+/* JADX INFO: compiled from: ParameterHandler.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class ParameterHandler2 extends ParameterHandler3<Object> {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final /* synthetic */ ParameterHandler3 f26570a;
 
     public ParameterHandler2(ParameterHandler3 parameterHandler3) {
@@ -16,7 +16,7 @@ public class ParameterHandler2 extends ParameterHandler3<Object> {
     }
 
     @Override // p630i0.ParameterHandler3
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public void mo10715a(RequestBuilder requestBuilder, Object obj) throws IOException {
         if (obj == null) {
             return;

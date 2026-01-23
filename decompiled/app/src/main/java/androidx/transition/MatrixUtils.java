@@ -3,11 +3,11 @@ package androidx.transition;
 import android.graphics.Matrix;
 import android.graphics.RectF;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class MatrixUtils {
     public static final Matrix IDENTITY_MATRIX = new C06571();
 
-    /* renamed from: androidx.transition.MatrixUtils$1 */
+    /* JADX INFO: renamed from: androidx.transition.MatrixUtils$1 */
     public static class C06571 extends Matrix {
         public void oops() {
             throw new IllegalStateException("Matrix can not be modified");

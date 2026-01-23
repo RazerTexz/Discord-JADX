@@ -22,15 +22,15 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 import p658rx.Observable;
 
-/* compiled from: UserMutualGuildsManager.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: UserMutualGuildsManager.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class UserMutualGuildsManager {
     private final ObservationDeck observationDeck;
     private final StoreGuilds storeGuilds;
     private final StoreGuildsSorted storeGuildsSorted;
 
-    /* compiled from: UserMutualGuildsManager.kt */
-    /* renamed from: com.discord.widgets.user.UserMutualGuildsManager$observeMutualGuilds$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.user.UserMutualGuildsManager$observeMutualGuilds$1 */
+    /* JADX INFO: compiled from: UserMutualGuildsManager.kt */
     public static final class C101841 extends Lambda implements Function0<Map<Long, ? extends List<? extends Guild>>> {
         public final /* synthetic */ Collection $userIds;
 
@@ -46,7 +46,7 @@ public final class UserMutualGuildsManager {
         }
 
         @Override // kotlin.jvm.functions.Function0
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final Map<Long, ? extends List<? extends Guild>> invoke2() {
             LinkedHashMap<Long, Guild> orderedGuilds = UserMutualGuildsManager.access$getStoreGuildsSorted$p(UserMutualGuildsManager.this).getOrderedGuilds();
             Map<Long, Map<Long, GuildMember>> members = UserMutualGuildsManager.access$getStoreGuilds$p(UserMutualGuildsManager.this).getMembers();

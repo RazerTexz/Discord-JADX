@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import p007b.p100d.p104b.p105a.outline;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class RunGroup {
     public static final int BASELINE = 2;
     public static final int END = 1;
@@ -80,7 +80,7 @@ public class RunGroup {
             if (dependency instanceof DependencyNode) {
                 DependencyNode dependencyNode2 = (DependencyNode) dependency;
                 if (dependencyNode2.run != widgetRun) {
-                    jMin = Math.min(jMin, traverseEnd(dependencyNode2, dependencyNode2.margin + j));
+                    jMin = Math.min(jMin, traverseEnd(dependencyNode2, ((long) dependencyNode2.margin) + j));
                 }
             }
         }
@@ -88,7 +88,7 @@ public class RunGroup {
             return jMin;
         }
         long wrapDimension = j - widgetRun.getWrapDimension();
-        return Math.min(Math.min(jMin, traverseEnd(widgetRun.start, wrapDimension)), wrapDimension - widgetRun.start.margin);
+        return Math.min(Math.min(jMin, traverseEnd(widgetRun.start, wrapDimension)), wrapDimension - ((long) widgetRun.start.margin));
     }
 
     private long traverseStart(DependencyNode dependencyNode, long j) {
@@ -103,7 +103,7 @@ public class RunGroup {
             if (dependency instanceof DependencyNode) {
                 DependencyNode dependencyNode2 = (DependencyNode) dependency;
                 if (dependencyNode2.run != widgetRun) {
-                    jMax = Math.max(jMax, traverseStart(dependencyNode2, dependencyNode2.margin + j));
+                    jMax = Math.max(jMax, traverseStart(dependencyNode2, ((long) dependencyNode2.margin) + j));
                 }
             }
         }
@@ -111,7 +111,7 @@ public class RunGroup {
             return jMax;
         }
         long wrapDimension = j + widgetRun.getWrapDimension();
-        return Math.max(Math.max(jMax, traverseStart(widgetRun.end, wrapDimension)), wrapDimension - widgetRun.end.margin);
+        return Math.max(Math.max(jMax, traverseStart(widgetRun.end, wrapDimension)), wrapDimension - ((long) widgetRun.end.margin));
     }
 
     public void add(WidgetRun widgetRun) {
@@ -139,31 +139,32 @@ public class RunGroup {
         long wrapDimension = this.firstRun.getWrapDimension();
         if (!zContains || !zContains2) {
             if (zContains) {
-                return Math.max(traverseStart(this.firstRun.start, r13.margin), this.firstRun.start.margin + wrapDimension);
+                return Math.max(traverseStart(this.firstRun.start, r13.margin), ((long) this.firstRun.start.margin) + wrapDimension);
             }
             if (zContains2) {
-                return Math.max(-traverseEnd(this.firstRun.end, r13.margin), (-this.firstRun.end.margin) + wrapDimension);
+                return Math.max(-traverseEnd(this.firstRun.end, r13.margin), ((long) (-this.firstRun.end.margin)) + wrapDimension);
             }
-            return (this.firstRun.getWrapDimension() + r13.start.margin) - this.firstRun.end.margin;
+            WidgetRun widgetRun2 = this.firstRun;
+            return (widgetRun2.getWrapDimension() + ((long) widgetRun2.start.margin)) - ((long) this.firstRun.end.margin);
         }
         long jTraverseStart = traverseStart(this.firstRun.start, 0L);
         long jTraverseEnd = traverseEnd(this.firstRun.end, 0L);
         long j = jTraverseStart - wrapDimension;
-        WidgetRun widgetRun2 = this.firstRun;
-        int i2 = widgetRun2.end.margin;
+        WidgetRun widgetRun3 = this.firstRun;
+        int i2 = widgetRun3.end.margin;
         if (j >= (-i2)) {
-            j += i2;
+            j += (long) i2;
         }
-        int i3 = widgetRun2.start.margin;
-        long j2 = ((-jTraverseEnd) - wrapDimension) - i3;
+        int i3 = widgetRun3.start.margin;
+        long j2 = ((-jTraverseEnd) - wrapDimension) - ((long) i3);
         if (j2 >= i3) {
-            j2 -= i3;
+            j2 -= (long) i3;
         }
-        float biasPercent = widgetRun2.widget.getBiasPercent(i);
+        float biasPercent = widgetRun3.widget.getBiasPercent(i);
         float f = biasPercent > 0.0f ? (long) ((j / (1.0f - biasPercent)) + (j2 / biasPercent)) : 0L;
         long jM839a = ((long) ((f * biasPercent) + 0.5f)) + wrapDimension + ((long) outline.m839a(1.0f, biasPercent, f, 0.5f));
-        WidgetRun widgetRun3 = this.firstRun;
-        return (widgetRun3.start.margin + jM839a) - widgetRun3.end.margin;
+        WidgetRun widgetRun4 = this.firstRun;
+        return (((long) widgetRun4.start.margin) + jM839a) - ((long) widgetRun4.end.margin);
     }
 
     public void defineTerminalWidgets(boolean z2, boolean z3) {

@@ -39,20 +39,20 @@ import p507d0.p592z.p594d.Lambda;
 import p596e0.p597a.p598a.p599a.CameraHandlerThread;
 import p596e0.p597a.p598a.p599a.CameraHandlerThread2;
 
-/* compiled from: WidgetQRScanner.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetQRScanner.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetQRScanner extends AppFragment implements ZXingScannerView.InterfaceC12927b {
     public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetQRScanner.class, "binding", "getBinding()Lcom/discord/databinding/WidgetQrScannerBinding;", 0)};
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private static final String EXTRA_SHOW_HELP_CHIP = "SHOW_HELP_CHIP";
     private static final int MAIN_BACK_CAMERA = 0;
 
-    /* renamed from: binding$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
 
-    /* compiled from: WidgetQRScanner.kt */
+    /* JADX INFO: compiled from: WidgetQRScanner.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -76,8 +76,8 @@ public final class WidgetQRScanner extends AppFragment implements ZXingScannerVi
         }
     }
 
-    /* compiled from: WidgetQRScanner.kt */
-    /* renamed from: com.discord.widgets.media.WidgetQRScanner$onViewBoundOrOnResume$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.media.WidgetQRScanner$onViewBoundOrOnResume$1 */
+    /* JADX INFO: compiled from: WidgetQRScanner.kt */
     public static final class C90681 extends Lambda implements Function0<Unit> {
         public C90681() {
             super(0);
@@ -89,7 +89,7 @@ public final class WidgetQRScanner extends AppFragment implements ZXingScannerVi
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             ZXingScannerView zXingScannerView = WidgetQRScanner.access$getBinding$p(WidgetQRScanner.this).f17396b;
             if (zXingScannerView.f25303n == null) {
@@ -101,8 +101,8 @@ public final class WidgetQRScanner extends AppFragment implements ZXingScannerVi
         }
     }
 
-    /* compiled from: WidgetQRScanner.kt */
-    /* renamed from: com.discord.widgets.media.WidgetQRScanner$onViewBoundOrOnResume$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.media.WidgetQRScanner$onViewBoundOrOnResume$2 */
+    /* JADX INFO: compiled from: WidgetQRScanner.kt */
     public static final class C90692 extends Lambda implements Function0<Unit> {
         public C90692() {
             super(0);
@@ -114,7 +114,7 @@ public final class WidgetQRScanner extends AppFragment implements ZXingScannerVi
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             AppActivity appActivity = WidgetQRScanner.this.getAppActivity();
             if (appActivity != null) {

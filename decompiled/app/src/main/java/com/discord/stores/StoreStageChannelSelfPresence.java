@@ -22,8 +22,8 @@ import p658rx.Observable;
 import p658rx.functions.Func2;
 import p658rx.subjects.BehaviorSubject;
 
-/* compiled from: StoreStageChannelSelfPresence.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: StoreStageChannelSelfPresence.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class StoreStageChannelSelfPresence extends StoreV2 {
     private final Dispatcher dispatcher;
     private final ObservationDeck observationDeck;
@@ -35,8 +35,8 @@ public final class StoreStageChannelSelfPresence extends StoreV2 {
     private final StoreUser userStore;
     private final StoreVoiceChannelSelected voiceChannelSelected;
 
-    /* compiled from: StoreStageChannelSelfPresence.kt */
-    /* renamed from: com.discord.stores.StoreStageChannelSelfPresence$init$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreStageChannelSelfPresence$init$1 */
+    /* JADX INFO: compiled from: StoreStageChannelSelfPresence.kt */
     public static final class C64081 extends Lambda implements Function0<Integer> {
         public C64081() {
             super(0);
@@ -47,23 +47,23 @@ public final class StoreStageChannelSelfPresence extends StoreV2 {
             return Integer.valueOf(invoke2());
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final int invoke2() {
             Map<Long, StageRoles> channelRolesInternal = StoreStageChannelSelfPresence.this.getStageChannels().getChannelRolesInternal(StoreStageChannelSelfPresence.this.getVoiceChannelSelected().getSelectedVoiceChannelId());
             return ((channelRolesInternal != null ? channelRolesInternal.size() : 0) / 100) + 1;
         }
     }
 
-    /* compiled from: StoreStageChannelSelfPresence.kt */
-    /* renamed from: com.discord.stores.StoreStageChannelSelfPresence$init$2 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreStageChannelSelfPresence$init$2 */
+    /* JADX INFO: compiled from: StoreStageChannelSelfPresence.kt */
     public static final class C64092<T, R> implements Func1<Integer, Observable<? extends Boolean>> {
 
-        /* compiled from: StoreStageChannelSelfPresence.kt */
-        /* renamed from: com.discord.stores.StoreStageChannelSelfPresence$init$2$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.stores.StoreStageChannelSelfPresence$init$2$1, reason: invalid class name */
+        /* JADX INFO: compiled from: StoreStageChannelSelfPresence.kt */
         public static final class AnonymousClass1<T1, T2, R> implements Func2<Unit, Boolean, Boolean> {
             public static final AnonymousClass1 INSTANCE = new AnonymousClass1();
 
-            /* renamed from: call, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
             public final Boolean call2(Unit unit, Boolean bool) {
                 return bool;
             }
@@ -82,18 +82,18 @@ public final class StoreStageChannelSelfPresence extends StoreV2 {
             return call2(num);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final Observable<? extends Boolean> call2(Integer num) {
             return Observable.m11076j(ObservableExtensionsKt.leadingEdgeThrottle(StoreStageChannelSelfPresence.this.getPublishStateTrigger(), num.intValue(), TimeUnit.SECONDS), StoreStageChannelSelfPresence.this.getUserSettings().observeIsShowCurrentGameEnabled(), AnonymousClass1.INSTANCE);
         }
     }
 
-    /* compiled from: StoreStageChannelSelfPresence.kt */
-    /* renamed from: com.discord.stores.StoreStageChannelSelfPresence$init$3 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreStageChannelSelfPresence$init$3 */
+    /* JADX INFO: compiled from: StoreStageChannelSelfPresence.kt */
     public static final class C64103 extends Lambda implements Function1<Boolean, Unit> {
 
-        /* compiled from: StoreStageChannelSelfPresence.kt */
-        /* renamed from: com.discord.stores.StoreStageChannelSelfPresence$init$3$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.stores.StoreStageChannelSelfPresence$init$3$1, reason: invalid class name */
+        /* JADX INFO: compiled from: StoreStageChannelSelfPresence.kt */
         public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
             public final /* synthetic */ Boolean $showCurrentActivity;
 
@@ -109,7 +109,7 @@ public final class StoreStageChannelSelfPresence extends StoreV2 {
                 return Unit.f27425a;
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2() {
                 StoreUserPresence userPresence = StoreStageChannelSelfPresence.this.getUserPresence();
                 ActivityType activityType = ActivityType.LISTENING;
@@ -133,7 +133,7 @@ public final class StoreStageChannelSelfPresence extends StoreV2 {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Boolean bool) {
             StoreStageChannelSelfPresence.this.getDispatcher().schedule(new AnonymousClass1(bool));
         }

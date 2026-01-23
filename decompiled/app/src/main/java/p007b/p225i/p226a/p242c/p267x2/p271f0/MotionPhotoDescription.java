@@ -2,28 +2,28 @@ package p007b.p225i.p226a.p242c.p267x2.p271f0;
 
 import java.util.List;
 
-/* compiled from: MotionPhotoDescription.java */
-/* renamed from: b.i.a.c.x2.f0.b, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.x2.f0.b, reason: use source file name */
+/* JADX INFO: compiled from: MotionPhotoDescription.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class MotionPhotoDescription {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final long f8165a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final List<a> f8166b;
 
-    /* compiled from: MotionPhotoDescription.java */
-    /* renamed from: b.i.a.c.x2.f0.b$a */
+    /* JADX INFO: renamed from: b.i.a.c.x2.f0.b$a */
+    /* JADX INFO: compiled from: MotionPhotoDescription.java */
     public static final class a {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final String f8167a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final long f8168b;
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public final long f8169c;
 
         public a(String str, String str2, long j, long j2) {

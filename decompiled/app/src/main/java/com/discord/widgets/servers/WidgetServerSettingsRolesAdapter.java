@@ -33,15 +33,15 @@ import p007b.p100d.p104b.p105a.outline;
 import p507d0.p512d0._Ranges;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: WidgetServerSettingsRolesAdapter.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetServerSettingsRolesAdapter.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetServerSettingsRolesAdapter extends DragAndDropAdapter<DragAndDropAdapter.Payload> {
     public static final int TYPE_HELP = 0;
     public static final int TYPE_ROLE = 1;
     private Function1<? super Map<String, Integer>, Unit> roleDropListener;
     private Function1<? super GuildRole, Unit> roleSelectedListener;
 
-    /* compiled from: WidgetServerSettingsRolesAdapter.kt */
+    /* JADX INFO: compiled from: WidgetServerSettingsRolesAdapter.kt */
     public static final /* data */ class HelpItem implements DragAndDropAdapter.Payload {
         private final long guildId;
         private final String key = "key0";
@@ -58,7 +58,7 @@ public final class WidgetServerSettingsRolesAdapter extends DragAndDropAdapter<D
             return helpItem.copy(j);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final long getGuildId() {
             return this.guildId;
         }
@@ -102,7 +102,7 @@ public final class WidgetServerSettingsRolesAdapter extends DragAndDropAdapter<D
         }
     }
 
-    /* compiled from: WidgetServerSettingsRolesAdapter.kt */
+    /* JADX INFO: compiled from: WidgetServerSettingsRolesAdapter.kt */
     public static final class RoleListHelpItem extends MGRecyclerViewHolder<MGRecyclerAdapter<DragAndDropAdapter.Payload>, DragAndDropAdapter.Payload> implements DragAndDropHelper.DraggableViewHolder {
         private final WidgetServerSettingsHelpItemBinding binding;
 
@@ -119,7 +119,7 @@ public final class WidgetServerSettingsRolesAdapter extends DragAndDropAdapter<D
         }
 
         @Override // com.discord.utilities.mg_recycler.DragAndDropHelper.DraggableViewHolder
-        /* renamed from: canDrag */
+        /* JADX INFO: renamed from: canDrag */
         public boolean getCanDrag() {
             return false;
         }
@@ -133,7 +133,7 @@ public final class WidgetServerSettingsRolesAdapter extends DragAndDropAdapter<D
         public void onDragStateChanged(boolean dragging) {
         }
 
-        /* renamed from: onConfigure, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: onConfigure, reason: avoid collision after fix types in other method */
         public void onConfigure2(int position, DragAndDropAdapter.Payload data) {
             Intrinsics3.checkNotNullParameter(data, "data");
             super.onConfigure(position, data);
@@ -143,7 +143,7 @@ public final class WidgetServerSettingsRolesAdapter extends DragAndDropAdapter<D
         }
     }
 
-    /* compiled from: WidgetServerSettingsRolesAdapter.kt */
+    /* JADX INFO: compiled from: WidgetServerSettingsRolesAdapter.kt */
     public static final class RoleListItem extends MGRecyclerViewHolder<MGRecyclerAdapter<DragAndDropAdapter.Payload>, DragAndDropAdapter.Payload> implements DragAndDropHelper.DraggableViewHolder {
         private final WidgetServerSettingsRoleItemBinding binding;
         private boolean canDrag;
@@ -189,7 +189,7 @@ public final class WidgetServerSettingsRolesAdapter extends DragAndDropAdapter<D
         }
 
         @Override // com.discord.utilities.mg_recycler.DragAndDropHelper.DraggableViewHolder
-        /* renamed from: canDrag, reason: from getter */
+        /* JADX INFO: renamed from: canDrag, reason: from getter */
         public boolean getCanDrag() {
             return this.canDrag;
         }
@@ -206,7 +206,7 @@ public final class WidgetServerSettingsRolesAdapter extends DragAndDropAdapter<D
             view.setVisibility(dragging ? 0 : 8);
         }
 
-        /* renamed from: onConfigure, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: onConfigure, reason: avoid collision after fix types in other method */
         public void onConfigure2(int position, DragAndDropAdapter.Payload data) {
             Intrinsics3.checkNotNullParameter(data, "data");
             super.onConfigure(position, data);
@@ -332,7 +332,7 @@ public final class WidgetServerSettingsRolesAdapter extends DragAndDropAdapter<D
         throw invalidViewTypeException(viewType);
     }
 
-    /* compiled from: WidgetServerSettingsRolesAdapter.kt */
+    /* JADX INFO: compiled from: WidgetServerSettingsRolesAdapter.kt */
     public static final /* data */ class RoleItem implements DragAndDropAdapter.Payload {
         private final boolean elevated;
         private final boolean everyoneRole;
@@ -385,32 +385,32 @@ public final class WidgetServerSettingsRolesAdapter extends DragAndDropAdapter<D
             return !this.everyoneRole && !this.locked && this.userAbleToManageRoles && this.elevated;
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final GuildRole getRole() {
             return this.role;
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final boolean getEveryoneRole() {
             return this.everyoneRole;
         }
 
-        /* renamed from: component3, reason: from getter */
+        /* JADX INFO: renamed from: component3, reason: from getter */
         public final boolean getLocked() {
             return this.locked;
         }
 
-        /* renamed from: component4, reason: from getter */
+        /* JADX INFO: renamed from: component4, reason: from getter */
         public final boolean getUserAbleToManageRoles() {
             return this.userAbleToManageRoles;
         }
 
-        /* renamed from: component5, reason: from getter */
+        /* JADX INFO: renamed from: component5, reason: from getter */
         public final boolean getElevated() {
             return this.elevated;
         }
 
-        /* renamed from: component6, reason: from getter */
+        /* JADX INFO: renamed from: component6, reason: from getter */
         public final long getGuildId() {
             return this.guildId;
         }
@@ -471,29 +471,41 @@ public final class WidgetServerSettingsRolesAdapter extends DragAndDropAdapter<D
         }
 
         /* JADX WARN: Multi-variable type inference failed */
+        /* JADX WARN: Type inference failed for: r1v1, types: [int] */
+        /* JADX WARN: Type inference failed for: r1v10 */
+        /* JADX WARN: Type inference failed for: r1v11 */
+        /* JADX WARN: Type inference failed for: r1v12 */
+        /* JADX WARN: Type inference failed for: r1v13 */
+        /* JADX WARN: Type inference failed for: r1v14 */
+        /* JADX WARN: Type inference failed for: r1v15 */
+        /* JADX WARN: Type inference failed for: r1v3, types: [int] */
+        /* JADX WARN: Type inference failed for: r1v5, types: [int] */
+        /* JADX WARN: Type inference failed for: r2v0 */
+        /* JADX WARN: Type inference failed for: r2v1, types: [int] */
+        /* JADX WARN: Type inference failed for: r2v2 */
         public int hashCode() {
             GuildRole guildRole = this.role;
             int iHashCode = (guildRole != null ? guildRole.hashCode() : 0) * 31;
             boolean z2 = this.everyoneRole;
-            int i = z2;
-            if (z2 != 0) {
-                i = 1;
+            ?? r1 = z2;
+            if (z2) {
+                r1 = 1;
             }
-            int i2 = (iHashCode + i) * 31;
+            int i = (iHashCode + r1) * 31;
             boolean z3 = this.locked;
-            int i3 = z3;
-            if (z3 != 0) {
-                i3 = 1;
+            ?? r12 = z3;
+            if (z3) {
+                r12 = 1;
             }
-            int i4 = (i2 + i3) * 31;
+            int i2 = (i + r12) * 31;
             boolean z4 = this.userAbleToManageRoles;
-            int i5 = z4;
-            if (z4 != 0) {
-                i5 = 1;
+            ?? r13 = z4;
+            if (z4) {
+                r13 = 1;
             }
-            int i6 = (i4 + i5) * 31;
+            int i3 = (i2 + r13) * 31;
             boolean z5 = this.elevated;
-            return C0002b.m3a(this.guildId) + ((i6 + (z5 ? 1 : z5 ? 1 : 0)) * 31);
+            return C0002b.m3a(this.guildId) + ((i3 + (z5 ? 1 : z5)) * 31);
         }
 
         public String toString() {

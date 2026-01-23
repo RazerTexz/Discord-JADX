@@ -14,18 +14,18 @@ import com.discord.utilities.color.ColorCompat;
 import java.util.Objects;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: DividerDecoration.kt */
-/* renamed from: b.a.y.f, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: b.a.y.f, reason: use source file name */
+/* JADX INFO: compiled from: DividerDecoration.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class DividerDecoration2 extends DividerItemDecoration {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final int f2021a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final int f2022b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final int f2023c;
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */

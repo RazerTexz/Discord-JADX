@@ -9,15 +9,15 @@ import p007b.p109f.p115d.p122g.PooledByteBufferFactory;
 import p007b.p109f.p115d.p122g.PooledByteBufferOutputStream;
 import p007b.p109f.p115d.p122g.PooledByteStreams;
 
-/* compiled from: MemoryPooledByteBufferFactory.java */
-/* renamed from: b.f.j.l.u, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.f.j.l.u, reason: use source file name */
+/* JADX INFO: compiled from: MemoryPooledByteBufferFactory.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class MemoryPooledByteBufferFactory implements PooledByteBufferFactory {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final PooledByteStreams f3955a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final MemoryChunkPool f3956b;
 
     public MemoryPooledByteBufferFactory(MemoryChunkPool memoryChunkPool, PooledByteStreams pooledByteStreams) {
@@ -26,14 +26,14 @@ public class MemoryPooledByteBufferFactory implements PooledByteBufferFactory {
     }
 
     @Override // p007b.p109f.p115d.p122g.PooledByteBufferFactory
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public PooledByteBufferOutputStream mo993a() {
         MemoryChunkPool memoryChunkPool = this.f3956b;
         return new MemoryPooledByteBufferOutputStream(memoryChunkPool, memoryChunkPool.f3952k[0]);
     }
 
     @Override // p007b.p109f.p115d.p122g.PooledByteBufferFactory
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public PooledByteBuffer mo994b(byte[] bArr) throws Throwable {
         MemoryPooledByteBufferOutputStream memoryPooledByteBufferOutputStream = new MemoryPooledByteBufferOutputStream(this.f3956b, bArr.length);
         try {
@@ -50,7 +50,7 @@ public class MemoryPooledByteBufferFactory implements PooledByteBufferFactory {
     }
 
     @Override // p007b.p109f.p115d.p122g.PooledByteBufferFactory
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public PooledByteBuffer mo995c(InputStream inputStream) throws Throwable {
         MemoryChunkPool memoryChunkPool = this.f3956b;
         MemoryPooledByteBufferOutputStream memoryPooledByteBufferOutputStream = new MemoryPooledByteBufferOutputStream(memoryChunkPool, memoryChunkPool.f3952k[0]);
@@ -63,7 +63,7 @@ public class MemoryPooledByteBufferFactory implements PooledByteBufferFactory {
     }
 
     @Override // p007b.p109f.p115d.p122g.PooledByteBufferFactory
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public PooledByteBuffer mo996d(InputStream inputStream, int i) throws Throwable {
         MemoryPooledByteBufferOutputStream memoryPooledByteBufferOutputStream = new MemoryPooledByteBufferOutputStream(this.f3956b, i);
         try {
@@ -75,7 +75,7 @@ public class MemoryPooledByteBufferFactory implements PooledByteBufferFactory {
     }
 
     @Override // p007b.p109f.p115d.p122g.PooledByteBufferFactory
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public PooledByteBufferOutputStream mo997e(int i) {
         return new MemoryPooledByteBufferOutputStream(this.f3956b, i);
     }

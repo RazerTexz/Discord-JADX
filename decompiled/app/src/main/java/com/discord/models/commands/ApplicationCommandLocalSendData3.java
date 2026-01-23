@@ -9,9 +9,9 @@ import kotlin.jvm.functions.Function1;
 import p507d0.p580t.Iterables2;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ApplicationCommandLocalSendData.kt */
-/* renamed from: com.discord.models.commands.ApplicationCommandLocalSendDataKt, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: com.discord.models.commands.ApplicationCommandLocalSendDataKt, reason: use source file name */
+/* JADX INFO: compiled from: ApplicationCommandLocalSendData.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class ApplicationCommandLocalSendData3 {
     public static final ApplicationCommandData3 toRestParam(ApplicationCommandValue applicationCommandValue, Function1<? super ApplicationCommandData3, ApplicationCommandData3> function1) {
         Intrinsics3.checkNotNullParameter(applicationCommandValue, "$this$toRestParam");

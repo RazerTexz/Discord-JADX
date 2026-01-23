@@ -6,20 +6,20 @@ import androidx.annotation.NonNull;
 import androidx.viewbinding.ViewBinding;
 import com.discord.views.CheckedSetting;
 
-/* compiled from: ViewServerSettingsNotificationsBinding.java */
-/* renamed from: b.a.i.k3, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.a.i.k3, reason: use source file name */
+/* JADX INFO: compiled from: ViewServerSettingsNotificationsBinding.java */
+/* JADX INFO: loaded from: classes.dex */
 public final class ViewServerSettingsNotificationsBinding implements ViewBinding {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     @NonNull
     public final LinearLayout f1001a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     @NonNull
     public final CheckedSetting f1002b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     @NonNull
     public final CheckedSetting f1003c;
 

@@ -16,15 +16,15 @@ import p600f0.p601e0.Util7;
 import p600f0.p601e0.p605g.Exchange;
 import p600f0.p601e0.p613n.RealWebSocket;
 
-/* compiled from: RealWebSocket.kt */
-/* renamed from: f0.e0.n.e, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: f0.e0.n.e, reason: use source file name */
+/* JADX INFO: compiled from: RealWebSocket.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class RealWebSocket2 implements Callback2 {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final /* synthetic */ RealWebSocket f25859a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final /* synthetic */ Request f25860b;
 
     public RealWebSocket2(RealWebSocket realWebSocket, Request request) {
@@ -36,7 +36,7 @@ public final class RealWebSocket2 implements Callback2 {
       0x00e4: PHI (r15v7 java.lang.Integer) = (r15v5 java.lang.Integer), (r15v5 java.lang.Integer), (r15v9 java.lang.Integer) binds: [B:48:0x00d8, B:45:0x00cf, B:29:0x00a3] A[DONT_GENERATE, DONT_INLINE]
       0x00e4: PHI (r16v10 java.lang.Integer) = (r16v5 java.lang.Integer), (r16v7 java.lang.Integer), (r16v5 java.lang.Integer) binds: [B:48:0x00d8, B:45:0x00cf, B:29:0x00a3] A[DONT_GENERATE, DONT_INLINE]] */
     @Override // p600f0.Callback2
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
@@ -156,7 +156,7 @@ public final class RealWebSocket2 implements Callback2 {
     }
 
     @Override // p600f0.Callback2
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public void mo10359b(Call2 call2, IOException iOException) {
         Intrinsics3.checkParameterIsNotNull(call2, NotificationCompat.CATEGORY_CALL);
         Intrinsics3.checkParameterIsNotNull(iOException, "e");

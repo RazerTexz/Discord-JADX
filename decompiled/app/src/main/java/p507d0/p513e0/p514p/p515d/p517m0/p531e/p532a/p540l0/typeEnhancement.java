@@ -8,15 +8,15 @@ import p507d0.p513e0.p514p.p515d.p517m0.p548g.Name;
 import p507d0.p513e0.p514p.p515d.p517m0.p552k.p557v.AbstractC11815g;
 import p507d0.p513e0.p514p.p515d.p517m0.p567n.KotlinType;
 
-/* compiled from: typeEnhancement.kt */
-/* renamed from: d0.e0.p.d.m0.e.a.l0.a, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.e.a.l0.a, reason: use source file name */
+/* JADX INFO: compiled from: typeEnhancement.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class typeEnhancement implements AnnotationDescriptor {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final typeEnhancement f23441a = new typeEnhancement();
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final Void m9505a() {
         throw new IllegalStateException("No methods should be called on this descriptor. Only its presence matters".toString());
     }

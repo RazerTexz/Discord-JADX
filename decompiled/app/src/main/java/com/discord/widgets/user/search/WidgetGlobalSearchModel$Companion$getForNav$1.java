@@ -5,8 +5,8 @@ import kotlin.jvm.functions.Function1;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetGlobalSearchModel.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: WidgetGlobalSearchModel.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class WidgetGlobalSearchModel$Companion$getForNav$1 extends Lambda implements Function1<WidgetGlobalSearchModel.SearchContext, Long> {
     public static final WidgetGlobalSearchModel$Companion$getForNav$1 INSTANCE = new WidgetGlobalSearchModel$Companion$getForNav$1();
 
@@ -19,7 +19,7 @@ public final class WidgetGlobalSearchModel$Companion$getForNav$1 extends Lambda 
         return Long.valueOf(invoke2(searchContext));
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final long invoke2(WidgetGlobalSearchModel.SearchContext searchContext) {
         Intrinsics3.checkNotNullParameter(searchContext, "it");
         return searchContext.getPrevSelectedChannelId();

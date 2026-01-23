@@ -4,9 +4,9 @@ import androidx.exifinterface.media.ExifInterface;
 import kotlin.Tuples2;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ArrayMap.kt */
-/* renamed from: androidx.collection.ArrayMapKt, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: androidx.collection.ArrayMapKt, reason: use source file name */
+/* JADX INFO: compiled from: ArrayMap.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class ArrayMap2 {
     public static final <K, V> ArrayMap<K, V> arrayMapOf() {
         return new ArrayMap<>();

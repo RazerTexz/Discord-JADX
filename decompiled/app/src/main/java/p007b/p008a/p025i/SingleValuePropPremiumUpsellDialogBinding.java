@@ -9,32 +9,32 @@ import androidx.viewbinding.ViewBinding;
 import com.discord.views.premium.ShinyButton;
 import com.google.android.material.button.MaterialButton;
 
-/* compiled from: SingleValuePropPremiumUpsellDialogBinding.java */
-/* renamed from: b.a.i.p1, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.a.i.p1, reason: use source file name */
+/* JADX INFO: compiled from: SingleValuePropPremiumUpsellDialogBinding.java */
+/* JADX INFO: loaded from: classes.dex */
 public final class SingleValuePropPremiumUpsellDialogBinding implements ViewBinding {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     @NonNull
     public final LinearLayout f1124a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     @NonNull
     public final MaterialButton f1125b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     @NonNull
     public final ShinyButton f1126c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     @NonNull
     public final TextView f1127d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     @NonNull
     public final TextView f1128e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     @NonNull
     public final ImageView f1129f;
 

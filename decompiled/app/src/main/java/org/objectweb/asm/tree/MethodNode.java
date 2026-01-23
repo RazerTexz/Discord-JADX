@@ -13,7 +13,7 @@ import org.objectweb.asm.Opcodes;
 import org.objectweb.asm.Type;
 import org.objectweb.asm.TypePath;
 
-/* loaded from: discord-126021.apk:org/objectweb/asm/tree/MethodNode.SCL.lombok */
+/* JADX INFO: loaded from: discord-126021.apk:org/objectweb/asm/tree/MethodNode.SCL.lombok */
 public class MethodNode extends MethodVisitor {
     public int access;
     public String name;
@@ -81,8 +81,8 @@ public class MethodNode extends MethodVisitor {
         this.parameters.add(new ParameterNode(name, access));
     }
 
-    /* renamed from: org.objectweb.asm.tree.MethodNode$1 */
-    /* loaded from: discord-126021.apk:org/objectweb/asm/tree/MethodNode$1.SCL.lombok */
+    /* JADX INFO: renamed from: org.objectweb.asm.tree.MethodNode$1 */
+    /* JADX INFO: loaded from: discord-126021.apk:org/objectweb/asm/tree/MethodNode$1.SCL.lombok */
     class C129431 extends ArrayList<Object> {
         C129431(int x0) {
             super(x0);

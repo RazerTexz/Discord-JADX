@@ -6,9 +6,9 @@ import com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemUploadProg
 import p507d0.p592z.p594d.Intrinsics3;
 import p637j0.p641k.Func1;
 
-/* compiled from: WidgetChatListAdapterItemUploadProgress.kt */
-/* renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemUploadProgress$ModelProvider$getSingleUploadObservable$2 */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemUploadProgress$ModelProvider$getSingleUploadObservable$2 */
+/* JADX INFO: compiled from: WidgetChatListAdapterItemUploadProgress.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class C8153xb525f258<T, R> implements Func1<Integer, WidgetChatListAdapterItemUploadProgress.Model.Single> {
     public final /* synthetic */ SendUtils.FileUpload $upload;
 
@@ -21,7 +21,7 @@ public final class C8153xb525f258<T, R> implements Func1<Integer, WidgetChatList
         return call2(num);
     }
 
-    /* renamed from: call, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
     public final WidgetChatListAdapterItemUploadProgress.Model.Single call2(Integer num) {
         String name = this.$upload.getName();
         String mimeType = this.$upload.getMimeType();

@@ -1,7 +1,7 @@
 package kotlin.reflect;
 
 
-/* compiled from: KDeclarationContainer.kt */
-/* loaded from: classes3.dex */
+/* JADX INFO: compiled from: KDeclarationContainer.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public interface KDeclarationContainer {
 }

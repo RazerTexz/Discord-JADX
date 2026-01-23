@@ -5,24 +5,24 @@ import java.util.Objects;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentMap;
 
-/* compiled from: com.google.android.gms:play-services-measurement-base@@18.0.0 */
-/* renamed from: b.i.a.f.h.l.n6 */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.h.l.n6 */
+/* JADX INFO: compiled from: com.google.android.gms:play-services-measurement-base@@18.0.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public final class C3762n6 {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final C3762n6 f10114a = new C3762n6();
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final ConcurrentMap<Class<?>, InterfaceC3801q6<?>> f10116c = new ConcurrentHashMap();
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final InterfaceC3788p6 f10115b = new C3787p5();
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final <T> InterfaceC3801q6<T> m5138a(Class<T> cls) {
-        InterfaceC3801q6 interfaceC3801q6M4828n;
-        InterfaceC3801q6 c3668g6;
+        InterfaceC3801q6<T> interfaceC3801q6M4828n;
+        C3668g6 c3668g6;
         Class<?> cls2;
         Charset charset = C3877w4.f10379a;
         Objects.requireNonNull(cls, "messageType");
@@ -81,7 +81,7 @@ public final class C3762n6 {
         return interfaceC3801q62 != null ? interfaceC3801q62 : interfaceC3801q6M4828n;
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final <T> InterfaceC3801q6<T> m5139b(T t) {
         return m5138a(t.getClass());
     }

@@ -19,49 +19,49 @@ import p007b.p452o.p453a.p455n.p457p.LockAction;
 import p007b.p452o.p453a.p472w.RendererCameraPreview;
 import p007b.p452o.p453a.p473x.AspectRatio2;
 
-/* compiled from: Snapshot2PictureRecorder.java */
+/* JADX INFO: renamed from: b.o.a.v.f, reason: use source file name */
+/* JADX INFO: compiled from: Snapshot2PictureRecorder.java */
+/* JADX INFO: loaded from: classes3.dex */
 @RequiresApi(21)
-/* renamed from: b.o.a.v.f, reason: use source file name */
-/* loaded from: classes3.dex */
 public class Snapshot2PictureRecorder extends SnapshotGlPictureRecorder {
 
-    /* renamed from: t */
+    /* JADX INFO: renamed from: t */
     public final Action2 f14185t;
 
-    /* renamed from: u */
+    /* JADX INFO: renamed from: u */
     public final ActionHolder f14186u;
 
-    /* renamed from: v */
+    /* JADX INFO: renamed from: v */
     public final boolean f14187v;
 
-    /* renamed from: w */
+    /* JADX INFO: renamed from: w */
     public Integer f14188w;
 
-    /* renamed from: x */
+    /* JADX INFO: renamed from: x */
     public Integer f14189x;
 
-    /* compiled from: Snapshot2PictureRecorder.java */
-    /* renamed from: b.o.a.v.f$a */
+    /* JADX INFO: renamed from: b.o.a.v.f$a */
+    /* JADX INFO: compiled from: Snapshot2PictureRecorder.java */
     public class a extends CompletionCallback {
         public a() {
         }
 
         @Override // p007b.p452o.p453a.p455n.p456o.CompletionCallback
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public void mo7247b(@NonNull Action2 action2) {
             SnapshotPictureRecorder.f14205m.m7159a(1, "Taking picture with super.take().");
             Snapshot2PictureRecorder.m7421d(Snapshot2PictureRecorder.this);
         }
     }
 
-    /* compiled from: Snapshot2PictureRecorder.java */
-    /* renamed from: b.o.a.v.f$b */
+    /* JADX INFO: renamed from: b.o.a.v.f$b */
+    /* JADX INFO: compiled from: Snapshot2PictureRecorder.java */
     public class b extends BaseAction {
         public b(Snapshot2PictureRecorder snapshot2PictureRecorder, a aVar) {
         }
 
         @Override // p007b.p452o.p453a.p455n.p456o.BaseAction, p007b.p452o.p453a.p455n.p456o.Action2
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public void mo7248b(@NonNull ActionHolder actionHolder, @NonNull CaptureRequest captureRequest, @NonNull TotalCaptureResult totalCaptureResult) {
             Integer num = (Integer) totalCaptureResult.get(CaptureResult.FLASH_STATE);
             if (num == null) {
@@ -76,7 +76,7 @@ public class Snapshot2PictureRecorder extends SnapshotGlPictureRecorder {
         }
 
         @Override // p007b.p452o.p453a.p455n.p456o.BaseAction
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public void mo7249j(@NonNull ActionHolder actionHolder) {
             this.f13939c = actionHolder;
             SnapshotPictureRecorder.f14205m.m7159a(1, "FlashAction:", "Parameters locked, opening torch.");
@@ -87,14 +87,14 @@ public class Snapshot2PictureRecorder extends SnapshotGlPictureRecorder {
         }
     }
 
-    /* compiled from: Snapshot2PictureRecorder.java */
-    /* renamed from: b.o.a.v.f$c */
+    /* JADX INFO: renamed from: b.o.a.v.f$c */
+    /* JADX INFO: compiled from: Snapshot2PictureRecorder.java */
     public class c extends BaseAction {
         public c(a aVar) {
         }
 
         @Override // p007b.p452o.p453a.p455n.p456o.BaseAction
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public void mo7249j(@NonNull ActionHolder actionHolder) {
             this.f13939c = actionHolder;
             try {
@@ -131,20 +131,20 @@ public class Snapshot2PictureRecorder extends SnapshotGlPictureRecorder {
         this.f14189x = (Integer) camera2Engine.f13807i0.get(CaptureRequest.FLASH_MODE);
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public static /* synthetic */ void m7421d(Snapshot2PictureRecorder snapshot2PictureRecorder) {
         super.mo7417c();
     }
 
     @Override // p007b.p452o.p453a.p471v.SnapshotGlPictureRecorder, p007b.p452o.p453a.p471v.PictureRecorder
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public void mo7416b() {
         new c(null).mo7333e(this.f14186u);
         super.mo7416b();
     }
 
     @Override // p007b.p452o.p453a.p471v.SnapshotGlPictureRecorder, p007b.p452o.p453a.p471v.PictureRecorder
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public void mo7417c() {
         if (this.f14187v) {
             SnapshotPictureRecorder.f14205m.m7159a(1, "take:", "Engine needs flash. Starting action");

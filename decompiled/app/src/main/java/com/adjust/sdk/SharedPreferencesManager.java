@@ -6,7 +6,7 @@ import android.net.Uri;
 import org.json.JSONArray;
 import org.json.JSONException;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class SharedPreferencesManager {
     private static final int INDEX_CLICK_TIME = 1;
     private static final int INDEX_IS_SENDING = 2;
@@ -201,19 +201,22 @@ public class SharedPreferencesManager {
     }
 
     public synchronized void saveRawReferrer(String str, long j) {
-        if (getRawReferrer(str, j) != null) {
-            return;
+        try {
+            if (getRawReferrer(str, j) != null) {
+                return;
+            }
+            JSONArray rawReferrerArray = getRawReferrerArray();
+            if (rawReferrerArray.length() == 10) {
+                return;
+            }
+            JSONArray jSONArray = new JSONArray();
+            jSONArray.put(0, str);
+            jSONArray.put(1, j);
+            jSONArray.put(2, 0);
+            rawReferrerArray.put(jSONArray);
+            saveRawReferrerArray(rawReferrerArray);
+        } catch (JSONException unused) {
         }
-        JSONArray rawReferrerArray = getRawReferrerArray();
-        if (rawReferrerArray.length() == 10) {
-            return;
-        }
-        JSONArray jSONArray = new JSONArray();
-        jSONArray.put(0, str);
-        jSONArray.put(1, j);
-        jSONArray.put(2, 0);
-        rawReferrerArray.put(jSONArray);
-        saveRawReferrerArray(rawReferrerArray);
     }
 
     public synchronized void saveRawReferrerArray(JSONArray jSONArray) {

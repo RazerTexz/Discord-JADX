@@ -9,11 +9,11 @@ import androidx.work.ListenableWorker;
 import androidx.work.impl.utils.futures.SettableFuture;
 import p007b.p225i.p355b.p359d.p360a.ListenableFuture8;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public abstract class Worker extends ListenableWorker {
     public SettableFuture<ListenableWorker.Result> mFuture;
 
-    /* renamed from: androidx.work.Worker$1 */
+    /* JADX INFO: renamed from: androidx.work.Worker$1 */
     public class RunnableC07201 implements Runnable {
         public RunnableC07201() {
         }

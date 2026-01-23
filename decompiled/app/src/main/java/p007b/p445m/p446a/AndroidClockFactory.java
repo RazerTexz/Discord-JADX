@@ -14,11 +14,11 @@ import p007b.p445m.p446a.p447g.p448d.SntpResponseCache2;
 import p007b.p445m.p446a.p447g.p448d.SntpService2;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: AndroidClockFactory.kt */
-/* renamed from: b.m.a.a, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.m.a.a, reason: use source file name */
+/* JADX INFO: compiled from: AndroidClockFactory.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class AndroidClockFactory {
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static Clock8 m7127a(Context context, SyncListener syncListener, List list, long j, long j2, long j3, int i) {
         List<String> list2;
         long j4;

@@ -13,42 +13,42 @@ import p007b.p008a.p025i.ViewServerSettingsUploadBannerBinding;
 import p007b.p008a.p025i.ViewServerSettingsUploadSplashBinding;
 import p007b.p008a.p025i.WidgetServerSettingsOverviewSectionAfkChannelBinding;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public final class WidgetServerSettingsOverviewBinding implements ViewBinding {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     @NonNull
     public final CoordinatorLayout f17730a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     @NonNull
     public final WidgetServerSettingsOverviewSectionAfkChannelBinding f17731b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     @NonNull
     public final ViewServerSettingsIconNameBinding f17732c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     @NonNull
     public final ViewServerSettingsNotificationsBinding f17733d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     @NonNull
     public final FloatingActionButton f17734e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     @NonNull
     public final ScrollView f17735f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     @NonNull
     public final ViewServerSettingsSystemChannelWrapBinding f17736g;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     @NonNull
     public final ViewServerSettingsUploadBannerBinding f17737h;
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     @NonNull
     public final ViewServerSettingsUploadSplashBinding f17738i;
 

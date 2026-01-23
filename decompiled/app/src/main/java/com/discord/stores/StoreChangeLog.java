@@ -30,8 +30,8 @@ import p507d0.p592z.p594d.Lambda;
 import p659s.p660a.CoroutineScope2;
 import p659s.p660a.Dispatchers;
 
-/* compiled from: StoreChangeLog.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: StoreChangeLog.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class StoreChangeLog extends Store {
     public Application app;
     private final Clock clock;
@@ -41,8 +41,8 @@ public final class StoreChangeLog extends Store {
     private final StoreUserSettingsSystem userSettingsSystem;
     private final StoreUser users;
 
-    /* compiled from: StoreChangeLog.kt */
-    /* renamed from: com.discord.stores.StoreChangeLog$createChangeLogNotice$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreChangeLog$createChangeLogNotice$1 */
+    /* JADX INFO: compiled from: StoreChangeLog.kt */
     public static final class C58081 extends Lambda implements Function1<FragmentActivity, Boolean> {
         public C58081() {
             super(1);
@@ -53,7 +53,7 @@ public final class StoreChangeLog extends Store {
             return Boolean.valueOf(invoke2(fragmentActivity));
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final boolean invoke2(FragmentActivity fragmentActivity) {
             Intrinsics3.checkNotNullParameter(fragmentActivity, "appActivity");
             StoreChangeLog.openChangeLog$default(StoreChangeLog.this, fragmentActivity, false, 2, null);
@@ -61,14 +61,14 @@ public final class StoreChangeLog extends Store {
         }
     }
 
-    /* compiled from: StoreChangeLog.kt */
+    /* JADX INFO: renamed from: com.discord.stores.StoreChangeLog$handleConnectionOpen$1 */
+    /* JADX INFO: compiled from: StoreChangeLog.kt */
     @DebugMetadata(m10084c = "com.discord.stores.StoreChangeLog$handleConnectionOpen$1", m10085f = "StoreChangeLog.kt", m10086l = {}, m10087m = "invokeSuspend")
-    /* renamed from: com.discord.stores.StoreChangeLog$handleConnectionOpen$1 */
     public static final class C58091 extends ContinuationImpl6 implements Function2<CoroutineScope, Continuation<? super Unit>, Object> {
         public int label;
 
-        /* compiled from: StoreChangeLog.kt */
-        /* renamed from: com.discord.stores.StoreChangeLog$handleConnectionOpen$1$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.stores.StoreChangeLog$handleConnectionOpen$1$1, reason: invalid class name */
+        /* JADX INFO: compiled from: StoreChangeLog.kt */
         public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
             public AnonymousClass1() {
                 super(0);
@@ -80,7 +80,7 @@ public final class StoreChangeLog extends Store {
                 return Unit.f27425a;
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2() {
                 StoreChangeLog.this.handlePostConnectionOpen();
             }

@@ -4,9 +4,9 @@ import androidx.core.app.NotificationCompat;
 import org.webrtc.Logging;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ExtensionFunctions.kt */
-/* renamed from: co.discord.media_engine.internal.ExtensionFunctionsKt, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: co.discord.media_engine.internal.ExtensionFunctionsKt, reason: use source file name */
+/* JADX INFO: compiled from: ExtensionFunctions.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class ExtensionFunctions {
     public static final void logi(String str, String str2) {
         Intrinsics3.checkNotNullParameter(str, "tag");

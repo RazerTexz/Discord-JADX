@@ -36,20 +36,20 @@ import p507d0.p592z.p594d.Lambda;
 import p658rx.Observable;
 import p658rx.subjects.BehaviorSubject;
 
-/* compiled from: WidgetServerNotificationsOverrideSelector.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetServerNotificationsOverrideSelector.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetServerNotificationsOverrideSelector extends AppFragment {
     public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetServerNotificationsOverrideSelector.class, "binding", "getBinding()Lcom/discord/databinding/WidgetServerNotificationOverrideSelectorBinding;", 0)};
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
 
-    /* renamed from: binding$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
     private SettingsChannelListAdapter channelsAdapter;
     private final BehaviorSubject<String> filterPublisher;
 
-    /* compiled from: WidgetServerNotificationsOverrideSelector.kt */
+    /* JADX INFO: compiled from: WidgetServerNotificationsOverrideSelector.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -76,8 +76,8 @@ public final class WidgetServerNotificationsOverrideSelector extends AppFragment
         }
     }
 
-    /* compiled from: WidgetServerNotificationsOverrideSelector.kt */
-    /* renamed from: com.discord.widgets.servers.WidgetServerNotificationsOverrideSelector$onViewBound$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.WidgetServerNotificationsOverrideSelector$onViewBound$1 */
+    /* JADX INFO: compiled from: WidgetServerNotificationsOverrideSelector.kt */
     public static final class C91671 extends Lambda implements Function1<Editable, Unit> {
         public C91671() {
             super(1);
@@ -89,15 +89,15 @@ public final class WidgetServerNotificationsOverrideSelector extends AppFragment
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Editable editable) {
             Intrinsics3.checkNotNullParameter(editable, "editable");
             WidgetServerNotificationsOverrideSelector.access$getFilterPublisher$p(WidgetServerNotificationsOverrideSelector.this).onNext(editable.toString());
         }
     }
 
-    /* compiled from: WidgetServerNotificationsOverrideSelector.kt */
-    /* renamed from: com.discord.widgets.servers.WidgetServerNotificationsOverrideSelector$onViewBound$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.WidgetServerNotificationsOverrideSelector$onViewBound$2 */
+    /* JADX INFO: compiled from: WidgetServerNotificationsOverrideSelector.kt */
     public static final class C91682 extends Lambda implements Function1<Long, Unit> {
         public C91682() {
             super(1);
@@ -119,8 +119,8 @@ public final class WidgetServerNotificationsOverrideSelector extends AppFragment
         }
     }
 
-    /* compiled from: WidgetServerNotificationsOverrideSelector.kt */
-    /* renamed from: com.discord.widgets.servers.WidgetServerNotificationsOverrideSelector$onViewBoundOrOnResume$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.WidgetServerNotificationsOverrideSelector$onViewBoundOrOnResume$1 */
+    /* JADX INFO: compiled from: WidgetServerNotificationsOverrideSelector.kt */
     public static final class C91691 extends Lambda implements Function1<List<? extends CategoricalDragAndDropAdapter.Payload>, Unit> {
         public C91691() {
             super(1);
@@ -132,7 +132,7 @@ public final class WidgetServerNotificationsOverrideSelector extends AppFragment
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(List<? extends CategoricalDragAndDropAdapter.Payload> list) {
             SettingsChannelListAdapter settingsChannelListAdapterAccess$getChannelsAdapter$p = WidgetServerNotificationsOverrideSelector.access$getChannelsAdapter$p(WidgetServerNotificationsOverrideSelector.this);
             Intrinsics3.checkNotNullExpressionValue(list, "it");

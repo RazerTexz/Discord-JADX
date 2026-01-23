@@ -6,8 +6,8 @@ import java.util.List;
 import java.util.concurrent.TimeUnit;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ChannelFrecencyTracker.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: ChannelFrecencyTracker.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class ChannelFrecencyTracker extends FrecencyTracker<Long> {
     private final long oldestAllowedDeltaMs;
 

@@ -6,18 +6,18 @@ import com.discord.widgets.chat.input.autocomplete.AutocompleteViewModel;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p579g0.Strings4;
 
-/* compiled from: ClassId.java */
-/* renamed from: d0.e0.p.d.m0.g.a, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.g.a, reason: use source file name */
+/* JADX INFO: compiled from: ClassId.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class ClassId {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final FqName f24076a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final FqName f24077b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final boolean f24078c;
 
     public ClassId(FqName fqName, FqName fqName2, boolean z2) {
@@ -34,7 +34,7 @@ public final class ClassId {
         this.f24078c = z2;
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static /* synthetic */ void m9816a(int i) {
         String str = (i == 5 || i == 6 || i == 7 || i == 9 || i == 13 || i == 14) ? "@NotNull method %s.%s must not return null" : "Argument for @NotNull parameter '%s' of %s.%s must not be null";
         Object[] objArr = new Object[(i == 5 || i == 6 || i == 7 || i == 9 || i == 13 || i == 14) ? 2 : 3];

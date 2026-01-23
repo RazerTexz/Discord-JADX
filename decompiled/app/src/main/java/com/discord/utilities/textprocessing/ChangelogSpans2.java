@@ -8,9 +8,9 @@ import kotlin.jvm.functions.Function0;
 import p507d0.p580t.Collections2;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: ChangelogSpans.kt */
-/* renamed from: com.discord.utilities.textprocessing.ChangelogSpans$createMarkdownBulletSpansProvider$1$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.utilities.textprocessing.ChangelogSpans$createMarkdownBulletSpansProvider$1$1, reason: use source file name */
+/* JADX INFO: compiled from: ChangelogSpans.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class ChangelogSpans2 extends Lambda implements Function0<List<? extends ParagraphStyle>> {
     public final /* synthetic */ int $bulletColor;
     public final /* synthetic */ int $bulletGapWidth;
@@ -30,7 +30,7 @@ public final class ChangelogSpans2 extends Lambda implements Function0<List<? ex
     }
 
     @Override // kotlin.jvm.functions.Function0
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final List<? extends ParagraphStyle> invoke2() {
         int i = this.$bulletVerticalPadding;
         return Collections2.listOf((Object[]) new ParagraphStyle[]{new VerticalPaddingSpan(i, i), new BulletSpan(this.$bulletGapWidth, this.$bulletColor, 8, 0.0f, null, 24, null)});

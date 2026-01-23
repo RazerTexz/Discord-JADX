@@ -4,12 +4,12 @@ import java.util.List;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: GetBackupCodesResponse.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: GetBackupCodesResponse.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class GetBackupCodesResponse {
     private final List<BackupCode> backupCodes;
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final List<BackupCode> m7590a() {
         return this.backupCodes;
     }

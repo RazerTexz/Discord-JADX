@@ -1,8 +1,8 @@
 package p007b.p195g.p196a.p198b;
 
-/* compiled from: JsonToken.java */
-/* renamed from: b.g.a.b.h, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.g.a.b.h, reason: use source file name */
+/* JADX INFO: compiled from: JsonToken.java */
+/* JADX INFO: loaded from: classes3.dex */
 public enum JsonToken2 {
     NOT_AVAILABLE(null, -1),
     START_OBJECT("{", 1),

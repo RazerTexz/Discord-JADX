@@ -15,15 +15,15 @@ import p007b.p225i.p414e.p418n.p420l.GenericGF;
 import p007b.p225i.p414e.p418n.p420l.ReedSolomonDecoder;
 import p007b.p225i.p414e.p434s.p435b.Version3;
 
-/* compiled from: Decoder.java */
-/* renamed from: b.i.e.s.b.e, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.e.s.b.e, reason: use source file name */
+/* JADX INFO: compiled from: Decoder.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class Decoder5 {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final ReedSolomonDecoder f13526a = new ReedSolomonDecoder(GenericGF.f13303e);
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public DecoderResult m7097a(BitMatrix bitMatrix, Map<DecodeHintType, ?> map) throws ChecksumException, FormatException {
         ChecksumException checksumException;
         BitMatrixParser3 bitMatrixParser3 = new BitMatrixParser3(bitMatrix);
@@ -65,7 +65,7 @@ public final class Decoder5 {
         }
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final DecoderResult m7098b(BitMatrixParser3 bitMatrixParser3, Map<DecodeHintType, ?> map) throws ChecksumException, FormatException {
         int iM6949b;
         Mode2 mode2;

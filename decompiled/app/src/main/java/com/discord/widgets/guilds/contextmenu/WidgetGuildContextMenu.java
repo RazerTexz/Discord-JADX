@@ -44,8 +44,8 @@ import p507d0.p592z.p594d.FunctionReferenceImpl;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Reflection2;
 
-/* compiled from: WidgetGuildContextMenu.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetGuildContextMenu.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetGuildContextMenu extends AppFragment {
     private static final String FRAGMENT_TAG = "WidgetGuildContextMenu";
     private static final String VIEW_CONTAINER_TAG = "WidgetGuildContextMenuViewContainer";
@@ -53,24 +53,24 @@ public final class WidgetGuildContextMenu extends AppFragment {
     private AnimationState animationState;
     private Animator animator;
 
-    /* renamed from: binding$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
 
-    /* renamed from: viewModel$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: viewModel$delegate, reason: from kotlin metadata */
     private final Lazy viewModel;
     public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetGuildContextMenu.class, "binding", "getBinding()Lcom/discord/databinding/WidgetGuildContextMenuBinding;", 0)};
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private static final int SCREEN_BOTTOM_BUFFER = DimenUtils.dpToPixels(96);
 
-    /* compiled from: WidgetGuildContextMenu.kt */
+    /* JADX INFO: compiled from: WidgetGuildContextMenu.kt */
     public enum AnimationState {
         ANIMATING_IN,
         ANIMATING_OUT
     }
 
-    /* compiled from: WidgetGuildContextMenu.kt */
+    /* JADX INFO: compiled from: WidgetGuildContextMenu.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -157,8 +157,8 @@ public final class WidgetGuildContextMenu extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetGuildContextMenu.kt */
-    /* renamed from: com.discord.widgets.guilds.contextmenu.WidgetGuildContextMenu$configureValidUI$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.guilds.contextmenu.WidgetGuildContextMenu$configureValidUI$1 */
+    /* JADX INFO: compiled from: WidgetGuildContextMenu.kt */
     public static final class ViewOnClickListenerC85931 implements View.OnClickListener {
         public ViewOnClickListenerC85931() {
         }
@@ -170,8 +170,8 @@ public final class WidgetGuildContextMenu extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetGuildContextMenu.kt */
-    /* renamed from: com.discord.widgets.guilds.contextmenu.WidgetGuildContextMenu$configureValidUI$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.guilds.contextmenu.WidgetGuildContextMenu$configureValidUI$2 */
+    /* JADX INFO: compiled from: WidgetGuildContextMenu.kt */
     public static final class ViewOnClickListenerC85942 implements View.OnClickListener {
         public final /* synthetic */ GuildContextMenuViewModel.ViewState.Valid $viewState;
 
@@ -190,8 +190,8 @@ public final class WidgetGuildContextMenu extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetGuildContextMenu.kt */
-    /* renamed from: com.discord.widgets.guilds.contextmenu.WidgetGuildContextMenu$configureValidUI$3 */
+    /* JADX INFO: renamed from: com.discord.widgets.guilds.contextmenu.WidgetGuildContextMenu$configureValidUI$3 */
+    /* JADX INFO: compiled from: WidgetGuildContextMenu.kt */
     public static final class ViewOnClickListenerC85953 implements View.OnClickListener {
         public final /* synthetic */ GuildContextMenuViewModel.ViewState.Valid $viewState;
 
@@ -209,8 +209,8 @@ public final class WidgetGuildContextMenu extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetGuildContextMenu.kt */
-    /* renamed from: com.discord.widgets.guilds.contextmenu.WidgetGuildContextMenu$configureValidUI$4 */
+    /* JADX INFO: renamed from: com.discord.widgets.guilds.contextmenu.WidgetGuildContextMenu$configureValidUI$4 */
+    /* JADX INFO: compiled from: WidgetGuildContextMenu.kt */
     public static final class ViewOnClickListenerC85964 implements View.OnClickListener {
         public final /* synthetic */ GuildContextMenuViewModel.ViewState.Valid $viewState;
 
@@ -228,8 +228,8 @@ public final class WidgetGuildContextMenu extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetGuildContextMenu.kt */
-    /* renamed from: com.discord.widgets.guilds.contextmenu.WidgetGuildContextMenu$doCircularRemove$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.guilds.contextmenu.WidgetGuildContextMenu$doCircularRemove$1 */
+    /* JADX INFO: compiled from: WidgetGuildContextMenu.kt */
     public static final class C85971 extends AnimatorListenerAdapter {
         public C85971() {
         }
@@ -246,8 +246,8 @@ public final class WidgetGuildContextMenu extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetGuildContextMenu.kt */
-    /* renamed from: com.discord.widgets.guilds.contextmenu.WidgetGuildContextMenu$doCircularReveal$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.guilds.contextmenu.WidgetGuildContextMenu$doCircularReveal$1 */
+    /* JADX INFO: compiled from: WidgetGuildContextMenu.kt */
     public static final class C85981 extends AnimatorListenerAdapter {
         public C85981() {
         }
@@ -259,8 +259,8 @@ public final class WidgetGuildContextMenu extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetGuildContextMenu.kt */
-    /* renamed from: com.discord.widgets.guilds.contextmenu.WidgetGuildContextMenu$onResume$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.guilds.contextmenu.WidgetGuildContextMenu$onResume$1 */
+    /* JADX INFO: compiled from: WidgetGuildContextMenu.kt */
     public static final /* synthetic */ class C85991 extends FunctionReferenceImpl implements Function1<GuildContextMenuViewModel.ViewState, Unit> {
         public C85991(WidgetGuildContextMenu widgetGuildContextMenu) {
             super(1, widgetGuildContextMenu, WidgetGuildContextMenu.class, "configureUI", "configureUI(Lcom/discord/widgets/guilds/contextmenu/GuildContextMenuViewModel$ViewState;)V", 0);
@@ -272,15 +272,15 @@ public final class WidgetGuildContextMenu extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(GuildContextMenuViewModel.ViewState viewState) {
             Intrinsics3.checkNotNullParameter(viewState, "p1");
             WidgetGuildContextMenu.access$configureUI((WidgetGuildContextMenu) this.receiver, viewState);
         }
     }
 
-    /* compiled from: WidgetGuildContextMenu.kt */
-    /* renamed from: com.discord.widgets.guilds.contextmenu.WidgetGuildContextMenu$onResume$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.guilds.contextmenu.WidgetGuildContextMenu$onResume$2 */
+    /* JADX INFO: compiled from: WidgetGuildContextMenu.kt */
     public static final /* synthetic */ class C86002 extends FunctionReferenceImpl implements Function1<GuildContextMenuViewModel.Event, Unit> {
         public C86002(WidgetGuildContextMenu widgetGuildContextMenu) {
             super(1, widgetGuildContextMenu, WidgetGuildContextMenu.class, "handleEvent", "handleEvent(Lcom/discord/widgets/guilds/contextmenu/GuildContextMenuViewModel$Event;)V", 0);
@@ -292,7 +292,7 @@ public final class WidgetGuildContextMenu extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(GuildContextMenuViewModel.Event event) {
             Intrinsics3.checkNotNullParameter(event, "p1");
             WidgetGuildContextMenu.access$handleEvent((WidgetGuildContextMenu) this.receiver, event);

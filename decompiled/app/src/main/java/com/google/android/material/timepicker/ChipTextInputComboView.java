@@ -22,22 +22,22 @@ import com.google.android.material.internal.TextWatcherAdapter;
 import com.google.android.material.textfield.TextInputLayout;
 import java.util.Arrays;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public class ChipTextInputComboView extends FrameLayout implements Checkable {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final Chip f21181j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final TextInputLayout f21182k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final EditText f21183l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public TextWatcher f21184m;
 
-    /* renamed from: com.google.android.material.timepicker.ChipTextInputComboView$b */
+    /* JADX INFO: renamed from: com.google.android.material.timepicker.ChipTextInputComboView$b */
     public class C11020b extends TextWatcherAdapter {
         public C11020b(C11019a c11019a) {
         }
@@ -73,7 +73,7 @@ public class ChipTextInputComboView extends FrameLayout implements Checkable {
         editText.setSaveEnabled(false);
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public void m9152a(InputFilter inputFilter) {
         InputFilter[] filters = this.f21183l.getFilters();
         InputFilter[] inputFilterArr = (InputFilter[]) Arrays.copyOf(filters, filters.length + 1);
@@ -81,7 +81,7 @@ public class ChipTextInputComboView extends FrameLayout implements Checkable {
         this.f21183l.setFilters(inputFilterArr);
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public void m9153b(CharSequence charSequence) {
         this.f21181j.setText(TimeModel.m9160a(getResources(), charSequence, "%02d"));
         if (TextUtils.isEmpty(this.f21183l.getText())) {
@@ -92,7 +92,7 @@ public class ChipTextInputComboView extends FrameLayout implements Checkable {
         this.f21183l.addTextChangedListener(this.f21184m);
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final void m9154c() {
         if (Build.VERSION.SDK_INT >= 24) {
             this.f21183l.setImeHintLocales(getContext().getResources().getConfiguration().getLocales());

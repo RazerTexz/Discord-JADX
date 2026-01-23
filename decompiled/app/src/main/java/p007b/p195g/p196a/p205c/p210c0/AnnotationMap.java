@@ -4,18 +4,18 @@ import java.lang.annotation.Annotation;
 import java.util.HashMap;
 import p007b.p195g.p196a.p205c.p219i0.Annotations;
 
-/* compiled from: AnnotationMap.java */
-/* renamed from: b.g.a.c.c0.p, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.g.a.c.c0.p, reason: use source file name */
+/* JADX INFO: compiled from: AnnotationMap.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class AnnotationMap implements Annotations {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public HashMap<Class<?>, Annotation> f4731j;
 
     public AnnotationMap() {
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public static AnnotationMap m1916c(AnnotationMap annotationMap, AnnotationMap annotationMap2) {
         HashMap<Class<?>, Annotation> map;
         HashMap<Class<?>, Annotation> map2;
@@ -36,7 +36,7 @@ public final class AnnotationMap implements Annotations {
     }
 
     @Override // p007b.p195g.p196a.p205c.p219i0.Annotations
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public <A extends Annotation> A mo1915a(Class<A> cls) {
         HashMap<Class<?>, Annotation> map = this.f4731j;
         if (map == null) {
@@ -45,7 +45,7 @@ public final class AnnotationMap implements Annotations {
         return (A) map.get(cls);
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public boolean m1917b(Class<? extends Annotation>[] clsArr) {
         if (this.f4731j != null) {
             for (Class<? extends Annotation> cls : clsArr) {

@@ -44,13 +44,13 @@ import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetInviteInfo.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetInviteInfo.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetInviteInfo extends ConstraintLayout {
     private final WidgetGuildInviteInfoViewBinding binding;
 
-    /* compiled from: WidgetInviteInfo.kt */
-    /* renamed from: com.discord.widgets.guilds.invite.WidgetInviteInfo$configureUI$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.guilds.invite.WidgetInviteInfo$configureUI$1 */
+    /* JADX INFO: compiled from: WidgetInviteInfo.kt */
     public static final class ViewOnClickListenerC87121 implements View.OnClickListener {
         public final /* synthetic */ Function0 $onAcceptClick;
 
@@ -64,8 +64,8 @@ public final class WidgetInviteInfo extends ConstraintLayout {
         }
     }
 
-    /* compiled from: WidgetInviteInfo.kt */
-    /* renamed from: com.discord.widgets.guilds.invite.WidgetInviteInfo$parseAttributeSet$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.guilds.invite.WidgetInviteInfo$parseAttributeSet$1 */
+    /* JADX INFO: compiled from: WidgetInviteInfo.kt */
     public static final class RunnableC87141 implements Runnable {
         public final /* synthetic */ int $size;
         public final /* synthetic */ int $userSize;
@@ -380,8 +380,8 @@ public final class WidgetInviteInfo extends ConstraintLayout {
         throw new NullPointerException("Missing required view with ID: ".concat(getResources().getResourceName(i2)));
     }
 
-    /* compiled from: WidgetInviteInfo.kt */
-    /* renamed from: com.discord.widgets.guilds.invite.WidgetInviteInfo$configureUIFailure$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.guilds.invite.WidgetInviteInfo$configureUIFailure$1 */
+    /* JADX INFO: compiled from: WidgetInviteInfo.kt */
     public static final class C87131 extends Lambda implements Function1<RenderContext, Unit> {
         public final /* synthetic */ MeUser $meUser;
 
@@ -391,7 +391,7 @@ public final class WidgetInviteInfo extends ConstraintLayout {
             this.$meUser = meUser;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(RenderContext renderContext) {
             Intrinsics3.checkNotNullParameter(renderContext, "$receiver");
             renderContext.args.put("quantity", String.valueOf(UserUtils.INSTANCE.isPremiumTier2(this.$meUser) ? 200 : 100));

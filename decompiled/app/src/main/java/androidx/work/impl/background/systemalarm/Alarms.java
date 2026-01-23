@@ -13,8 +13,8 @@ import androidx.work.impl.model.SystemIdInfo;
 import androidx.work.impl.model.SystemIdInfoDao;
 import androidx.work.impl.utils.IdGenerator;
 
+/* JADX INFO: loaded from: classes.dex */
 @RestrictTo({RestrictTo.Scope.LIBRARY_GROUP})
-/* loaded from: classes.dex */
 public class Alarms {
     private static final String TAG = Logger.tagWithPrefix("Alarms");
 

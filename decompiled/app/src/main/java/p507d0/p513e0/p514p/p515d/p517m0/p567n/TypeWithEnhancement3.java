@@ -4,15 +4,15 @@ import p507d0.p513e0.p514p.p515d.p517m0.p521c.p522g1.Annotations4;
 import p507d0.p513e0.p514p.p515d.p517m0.p567n.p568l1.KotlinTypeRefiner;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: TypeWithEnhancement.kt */
-/* renamed from: d0.e0.p.d.m0.n.l0, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.n.l0, reason: use source file name */
+/* JADX INFO: compiled from: TypeWithEnhancement.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class TypeWithEnhancement3 extends SpecialTypes4 implements TypeWithEnhancement {
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final KotlinType4 f24797k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final KotlinType f24798l;
 
     public TypeWithEnhancement3(KotlinType4 kotlinType4, KotlinType kotlinType) {

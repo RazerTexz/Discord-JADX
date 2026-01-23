@@ -16,14 +16,14 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 import p658rx.Observable;
 
-/* compiled from: RtcCameraConfig.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: RtcCameraConfig.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class RtcCameraConfig {
     public static final RtcCameraConfig INSTANCE = new RtcCameraConfig();
     private static final AtomicBoolean initialized = new AtomicBoolean();
 
-    /* compiled from: RtcCameraConfig.kt */
-    /* renamed from: com.discord.utilities.device.RtcCameraConfig$init$1 */
+    /* JADX INFO: renamed from: com.discord.utilities.device.RtcCameraConfig$init$1 */
+    /* JADX INFO: compiled from: RtcCameraConfig.kt */
     public static final class C67411 extends Lambda implements Function1<Experiment, Unit> {
         public static final C67411 INSTANCE = new C67411();
 
@@ -37,7 +37,7 @@ public final class RtcCameraConfig {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Experiment experiment) {
             Intrinsics3.checkNotNullParameter(experiment, "it");
             CameraEnumeratorProvider.INSTANCE.init(ApplicationProvider.INSTANCE.get(), experiment.getBucket() == 1);

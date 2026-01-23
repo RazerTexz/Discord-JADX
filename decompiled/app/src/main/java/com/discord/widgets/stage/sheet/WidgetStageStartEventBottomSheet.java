@@ -37,25 +37,25 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 import p507d0.p592z.p594d.Reflection2;
 
-/* compiled from: WidgetStageStartEventBottomSheet.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetStageStartEventBottomSheet.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetStageStartEventBottomSheet extends AppBottomSheet {
     public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetStageStartEventBottomSheet.class, "binding", "getBinding()Lcom/discord/databinding/WidgetStageStartEventBottomSheetBinding;", 0)};
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
 
-    /* renamed from: binding$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
 
-    /* renamed from: channelId$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: channelId$delegate, reason: from kotlin metadata */
     private final Lazy channelId;
     private Function0<Unit> onDismiss;
 
-    /* renamed from: viewModel$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: viewModel$delegate, reason: from kotlin metadata */
     private final Lazy viewModel;
 
-    /* compiled from: WidgetStageStartEventBottomSheet.kt */
+    /* JADX INFO: compiled from: WidgetStageStartEventBottomSheet.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -82,8 +82,8 @@ public final class WidgetStageStartEventBottomSheet extends AppBottomSheet {
         }
     }
 
-    /* compiled from: WidgetStageStartEventBottomSheet.kt */
-    /* renamed from: com.discord.widgets.stage.sheet.WidgetStageStartEventBottomSheet$onResume$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.stage.sheet.WidgetStageStartEventBottomSheet$onResume$1 */
+    /* JADX INFO: compiled from: WidgetStageStartEventBottomSheet.kt */
     public static final class C100551 extends Lambda implements Function1<WidgetStageStartEventBottomSheetViewModel.Event, Unit> {
         public C100551() {
             super(1);
@@ -95,15 +95,15 @@ public final class WidgetStageStartEventBottomSheet extends AppBottomSheet {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(WidgetStageStartEventBottomSheetViewModel.Event event) {
             Intrinsics3.checkNotNullParameter(event, "event");
             WidgetStageStartEventBottomSheet.access$handleEvent(WidgetStageStartEventBottomSheet.this, event);
         }
     }
 
-    /* compiled from: WidgetStageStartEventBottomSheet.kt */
-    /* renamed from: com.discord.widgets.stage.sheet.WidgetStageStartEventBottomSheet$onResume$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.stage.sheet.WidgetStageStartEventBottomSheet$onResume$2 */
+    /* JADX INFO: compiled from: WidgetStageStartEventBottomSheet.kt */
     public static final class C100562 extends Lambda implements Function1<WidgetStageStartEventBottomSheetViewModel.ViewState, Unit> {
         public C100562() {
             super(1);
@@ -115,15 +115,15 @@ public final class WidgetStageStartEventBottomSheet extends AppBottomSheet {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(WidgetStageStartEventBottomSheetViewModel.ViewState viewState) {
             Intrinsics3.checkNotNullParameter(viewState, "viewState");
             WidgetStageStartEventBottomSheet.access$configureUI(WidgetStageStartEventBottomSheet.this, viewState);
         }
     }
 
-    /* compiled from: WidgetStageStartEventBottomSheet.kt */
-    /* renamed from: com.discord.widgets.stage.sheet.WidgetStageStartEventBottomSheet$onViewCreated$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.stage.sheet.WidgetStageStartEventBottomSheet$onViewCreated$1 */
+    /* JADX INFO: compiled from: WidgetStageStartEventBottomSheet.kt */
     public static final class C100571 extends Lambda implements Function1<Editable, Unit> {
         public C100571() {
             super(1);
@@ -135,7 +135,7 @@ public final class WidgetStageStartEventBottomSheet extends AppBottomSheet {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Editable editable) {
             Intrinsics3.checkNotNullParameter(editable, "editable");
             TextInputLayout textInputLayout = WidgetStageStartEventBottomSheet.access$getBinding$p(WidgetStageStartEventBottomSheet.this).f18179g;
@@ -145,12 +145,12 @@ public final class WidgetStageStartEventBottomSheet extends AppBottomSheet {
         }
     }
 
-    /* compiled from: WidgetStageStartEventBottomSheet.kt */
-    /* renamed from: com.discord.widgets.stage.sheet.WidgetStageStartEventBottomSheet$onViewCreated$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.stage.sheet.WidgetStageStartEventBottomSheet$onViewCreated$2 */
+    /* JADX INFO: compiled from: WidgetStageStartEventBottomSheet.kt */
     public static final class ViewOnClickListenerC100582 implements View.OnClickListener {
 
-        /* compiled from: WidgetStageStartEventBottomSheet.kt */
-        /* renamed from: com.discord.widgets.stage.sheet.WidgetStageStartEventBottomSheet$onViewCreated$2$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.widgets.stage.sheet.WidgetStageStartEventBottomSheet$onViewCreated$2$1, reason: invalid class name */
+        /* JADX INFO: compiled from: WidgetStageStartEventBottomSheet.kt */
         public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
             public AnonymousClass1() {
                 super(0);
@@ -162,7 +162,7 @@ public final class WidgetStageStartEventBottomSheet extends AppBottomSheet {
                 return Unit.f27425a;
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2() {
                 WidgetStageStartEventBottomSheet.access$getViewModel$p(WidgetStageStartEventBottomSheet.this).openStage(false);
                 Function0<Unit> onDismiss = WidgetStageStartEventBottomSheet.this.getOnDismiss();
@@ -172,8 +172,8 @@ public final class WidgetStageStartEventBottomSheet extends AppBottomSheet {
             }
         }
 
-        /* compiled from: WidgetStageStartEventBottomSheet.kt */
-        /* renamed from: com.discord.widgets.stage.sheet.WidgetStageStartEventBottomSheet$onViewCreated$2$2, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.widgets.stage.sheet.WidgetStageStartEventBottomSheet$onViewCreated$2$2, reason: invalid class name */
+        /* JADX INFO: compiled from: WidgetStageStartEventBottomSheet.kt */
         public static final class AnonymousClass2 extends Lambda implements Function0<Unit> {
             public AnonymousClass2() {
                 super(0);
@@ -185,7 +185,7 @@ public final class WidgetStageStartEventBottomSheet extends AppBottomSheet {
                 return Unit.f27425a;
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2() {
                 WidgetStageStartEventBottomSheet.access$getViewModel$p(WidgetStageStartEventBottomSheet.this).openStage(true);
                 Function0<Unit> onDismiss = WidgetStageStartEventBottomSheet.this.getOnDismiss();

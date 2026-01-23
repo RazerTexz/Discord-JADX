@@ -7,9 +7,9 @@ import com.discord.widgets.chat.list.InlineMediaView;
 import com.discord.widgets.media.WidgetMedia;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: WidgetChatListAdapterItemEmbed.kt */
-/* renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemEmbed$configureInlineEmbed$$inlined$apply$lambda$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemEmbed$configureInlineEmbed$$inlined$apply$lambda$1, reason: use source file name */
+/* JADX INFO: compiled from: WidgetChatListAdapterItemEmbed.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetChatListAdapterItemEmbed9 implements View.OnClickListener {
     public final /* synthetic */ MessageEmbed $embed$inlined;
     public final /* synthetic */ InlineMediaView $this_apply;

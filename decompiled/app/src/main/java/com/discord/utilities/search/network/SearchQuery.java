@@ -16,13 +16,13 @@ import p507d0.p580t.Collections2;
 import p507d0.p580t._Collections;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: SearchQuery.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: SearchQuery.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class SearchQuery {
     private final boolean includeNsfw;
     private final Map<String, List<String>> params;
 
-    /* compiled from: SearchQuery.kt */
+    /* JADX INFO: compiled from: SearchQuery.kt */
     public static final class Builder {
         private boolean includeNsfw;
         private final StringBuilder contentBuilder = new StringBuilder();

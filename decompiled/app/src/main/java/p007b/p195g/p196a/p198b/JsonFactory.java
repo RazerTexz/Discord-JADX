@@ -15,21 +15,21 @@ import p007b.p195g.p196a.p198b.p204t.DefaultPrettyPrinter;
 import p007b.p195g.p196a.p198b.p204t.JacksonFeature;
 import p007b.p195g.p196a.p198b.p204t.ThreadLocalBufferManager;
 
-/* compiled from: JsonFactory.java */
-/* renamed from: b.g.a.b.c, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.g.a.b.c, reason: use source file name */
+/* JADX INFO: compiled from: JsonFactory.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class JsonFactory extends TokenStreamFactory implements Serializable {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static final int f4455j = a.m1628h();
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public static final int f4456k = JsonParser.a.m1672f();
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public static final int f4457l = JsonGenerator.a.m1667f();
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public static final SerializableString f4458m = DefaultPrettyPrinter.f4599j;
     private static final long serialVersionUID = 2;
     public CharacterEscapes _characterEscapes;
@@ -43,8 +43,8 @@ public class JsonFactory extends TokenStreamFactory implements Serializable {
     public final char _quoteChar;
     public SerializableString _rootValueSeparator;
 
-    /* compiled from: JsonFactory.java */
-    /* renamed from: b.g.a.b.c$a */
+    /* JADX INFO: renamed from: b.g.a.b.c$a */
+    /* JADX INFO: compiled from: JsonFactory.java */
     public enum a implements JacksonFeature {
         INTERN_FIELD_NAMES(true),
         CANONICALIZE_FIELD_NAMES(true),
@@ -57,7 +57,7 @@ public class JsonFactory extends TokenStreamFactory implements Serializable {
             this._defaultState = z2;
         }
 
-        /* renamed from: h */
+        /* JADX INFO: renamed from: h */
         public static int m1628h() {
             a[] aVarArrValues = values();
             int iMo1630g = 0;
@@ -71,13 +71,13 @@ public class JsonFactory extends TokenStreamFactory implements Serializable {
         }
 
         @Override // p007b.p195g.p196a.p198b.p204t.JacksonFeature
-        /* renamed from: f */
+        /* JADX INFO: renamed from: f */
         public boolean mo1629f() {
             return this._defaultState;
         }
 
         @Override // p007b.p195g.p196a.p198b.p204t.JacksonFeature
-        /* renamed from: g */
+        /* JADX INFO: renamed from: g */
         public int mo1630g() {
             return 1 << ordinal();
         }
@@ -87,7 +87,7 @@ public class JsonFactory extends TokenStreamFactory implements Serializable {
         this(null);
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public BufferRecycler m1626a() {
         SoftReference<BufferRecycler> softReference;
         if (!((a.USE_THREAD_LOCAL_FOR_BUFFER_RECYCLING.mo1630g() & this._factoryFeatures) != 0)) {
@@ -116,7 +116,7 @@ public class JsonFactory extends TokenStreamFactory implements Serializable {
         return bufferRecycler;
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public ObjectCodec mo1627b() {
         return this._objectCodec;
     }

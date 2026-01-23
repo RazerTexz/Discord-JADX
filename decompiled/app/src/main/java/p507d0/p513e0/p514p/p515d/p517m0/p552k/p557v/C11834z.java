@@ -9,9 +9,9 @@ import p507d0.p513e0.p514p.p515d.p517m0.p567n.KotlinType;
 import p507d0.p513e0.p514p.p515d.p517m0.p567n.KotlinType4;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: constantValues.kt */
-/* renamed from: d0.e0.p.d.m0.k.v.z */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.k.v.z */
+/* JADX INFO: compiled from: constantValues.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class C11834z extends AbstractC11810b0<Long> {
     public C11834z(long j) {
         super(Long.valueOf(j));

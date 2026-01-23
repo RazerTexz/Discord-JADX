@@ -6,9 +6,9 @@ import com.discord.api.guild.Guild;
 import kotlin.jvm.functions.Function1;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetGuildCreateViewModel.kt */
-/* renamed from: com.discord.widgets.guilds.create.WidgetGuildCreateViewModel$createGuild$createGuildRequestObservable$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.guilds.create.WidgetGuildCreateViewModel$createGuild$createGuildRequestObservable$1, reason: use source file name */
+/* JADX INFO: compiled from: WidgetGuildCreateViewModel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetGuildCreateViewModel2 extends Lambda implements Function1<Guild, TrackNetworkMetadata2> {
     public final /* synthetic */ WidgetGuildCreateViewModel this$0;
 
@@ -23,7 +23,7 @@ public final class WidgetGuildCreateViewModel2 extends Lambda implements Functio
         return invoke2(guild);
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final TrackNetworkMetadata2 invoke2(Guild guild) {
         return new TrackNetworkActionGuildCreate(WidgetGuildCreateViewModel.access$getStockGuildTemplate$p(this.this$0).name(), null);
     }

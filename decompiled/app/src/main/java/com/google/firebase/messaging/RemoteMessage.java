@@ -9,15 +9,15 @@ import java.util.Map;
 import p007b.p085c.p086a.p087a0.AnimatableValueParser;
 import p007b.p225i.p361c.p406w.C4881s;
 
-/* compiled from: com.google.firebase:firebase-messaging@@21.0.0 */
-/* loaded from: classes3.dex */
+/* JADX INFO: compiled from: com.google.firebase:firebase-messaging@@21.0.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public final class RemoteMessage extends AbstractSafeParcelable {
     public static final Parcelable.Creator<RemoteMessage> CREATOR = new C4881s();
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public Bundle f21460j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public Map<String, String> f21461k;
 
     public RemoteMessage(Bundle bundle) {

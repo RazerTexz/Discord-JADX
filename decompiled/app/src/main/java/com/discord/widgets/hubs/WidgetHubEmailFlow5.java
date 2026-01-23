@@ -13,14 +13,14 @@ import p507d0.p580t.CollectionsJVM;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetHubEmailFlow.kt */
-/* renamed from: com.discord.widgets.hubs.WidgetHubEmailFlow$onViewCreated$learnMore$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.hubs.WidgetHubEmailFlow$onViewCreated$learnMore$1, reason: use source file name */
+/* JADX INFO: compiled from: WidgetHubEmailFlow.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetHubEmailFlow5 extends Lambda implements Function1<RenderContext, Unit> {
     public final /* synthetic */ WidgetHubEmailFlow this$0;
 
-    /* compiled from: WidgetHubEmailFlow.kt */
-    /* renamed from: com.discord.widgets.hubs.WidgetHubEmailFlow$onViewCreated$learnMore$1$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.hubs.WidgetHubEmailFlow$onViewCreated$learnMore$1$1 */
+    /* JADX INFO: compiled from: WidgetHubEmailFlow.kt */
     public static final class C90381 extends Lambda implements Function1<View, Unit> {
         public C90381() {
             super(1);
@@ -32,7 +32,7 @@ public final class WidgetHubEmailFlow5 extends Lambda implements Function1<Rende
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(View view) {
             Intrinsics3.checkNotNullParameter(view, "it");
             SelectorBottomSheet.Companion companion = SelectorBottomSheet.INSTANCE;
@@ -56,7 +56,7 @@ public final class WidgetHubEmailFlow5 extends Lambda implements Function1<Rende
         return Unit.f27425a;
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final void invoke2(RenderContext renderContext) {
         Intrinsics3.checkNotNullParameter(renderContext, "$receiver");
         renderContext.m8423b("{helpdeskArticle}", new C90381());

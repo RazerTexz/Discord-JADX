@@ -5,24 +5,24 @@ import java.util.List;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: GuildEmojisUpdate.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: GuildEmojisUpdate.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class GuildEmojisUpdate {
     private final List<GuildEmoji> emojis;
     private final GuildHashes guildHashes;
     private final long guildId;
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final List<GuildEmoji> m7816a() {
         return this.emojis;
     }
 
-    /* renamed from: b, reason: from getter */
+    /* JADX INFO: renamed from: b, reason: from getter */
     public final GuildHashes getGuildHashes() {
         return this.guildHashes;
     }
 
-    /* renamed from: c, reason: from getter */
+    /* JADX INFO: renamed from: c, reason: from getter */
     public final long getGuildId() {
         return this.guildId;
     }

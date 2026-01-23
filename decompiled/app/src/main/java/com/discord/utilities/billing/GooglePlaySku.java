@@ -24,13 +24,13 @@ jadx.core.utils.exceptions.JadxRuntimeException: Init of enum field 'PREMIUM_TIE
 	at jadx.core.dex.visitors.EnumVisitor.visit(EnumVisitor.java:100)
  */
 /* JADX WARN: Failed to restore enum class, 'enum' modifier and super class removed */
-/* compiled from: GooglePlaySku.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: GooglePlaySku.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class GooglePlaySku {
     private static final /* synthetic */ GooglePlaySku[] $VALUES;
     private static final List<String> ALL_SKU_NAMES;
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE;
     public static final GooglePlaySku PREMIUM_GUILD_1_MONTHLY;
     public static final GooglePlaySku PREMIUM_GUILD_2_MONTHLY;
@@ -59,7 +59,7 @@ public final class GooglePlaySku {
     private final Type type;
     private final GooglePlaySku upgrade;
 
-    /* compiled from: GooglePlaySku.kt */
+    /* JADX INFO: compiled from: GooglePlaySku.kt */
     public static final class Companion {
 
         public final /* synthetic */ class WhenMappings {
@@ -133,17 +133,17 @@ public final class GooglePlaySku {
         }
     }
 
-    /* compiled from: GooglePlaySku.kt */
+    /* JADX INFO: compiled from: GooglePlaySku.kt */
     public enum Section {
         PREMIUM,
         PREMIUM_AND_PREMIUM_GUILD,
         PREMIUM_GUILD;
 
 
-        /* renamed from: Companion, reason: from kotlin metadata */
+        /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
         public static final Companion INSTANCE = new Companion(null);
 
-        /* compiled from: GooglePlaySku.kt */
+        /* JADX INFO: compiled from: GooglePlaySku.kt */
         public static final class Companion {
 
             public final /* synthetic */ class WhenMappings {
@@ -184,7 +184,7 @@ public final class GooglePlaySku {
         }
     }
 
-    /* compiled from: GooglePlaySku.kt */
+    /* JADX INFO: compiled from: GooglePlaySku.kt */
     public enum Type {
         PREMIUM_TIER_2,
         PREMIUM_TIER_1,

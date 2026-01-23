@@ -12,8 +12,8 @@ import com.discord.api.science.AnalyticsSchema;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: TrackGlPatchFailed.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: TrackGlPatchFailed.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class TrackGlPatchFailed implements AnalyticsSchema, TrackBase2, TrackDispatchBase2, TrackDispatchPatch2, TrackDispatchStats2 {
     private TrackBase trackBase;
     private TrackDispatchBase trackDispatchBase;
@@ -23,7 +23,7 @@ public final /* data */ class TrackGlPatchFailed implements AnalyticsSchema, Tra
     private final transient String analyticsSchemaTypeName = "gl_patch_failed";
 
     @Override // com.discord.api.science.AnalyticsSchema
-    /* renamed from: d, reason: from getter */
+    /* JADX INFO: renamed from: d, reason: from getter */
     public String getAnalyticsSchemaTypeName() {
         return this.analyticsSchemaTypeName;
     }

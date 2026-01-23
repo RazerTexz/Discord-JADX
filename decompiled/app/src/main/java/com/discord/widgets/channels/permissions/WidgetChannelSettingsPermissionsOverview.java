@@ -41,25 +41,25 @@ import p507d0.p592z.p594d.Lambda;
 import p507d0.p592z.p594d.Reflection2;
 import p658rx.Observable;
 
-/* compiled from: WidgetChannelSettingsPermissionsOverview.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetChannelSettingsPermissionsOverview.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetChannelSettingsPermissionsOverview extends AppFragment {
     public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetChannelSettingsPermissionsOverview.class, "viewBinding", "getViewBinding()Lcom/discord/databinding/WidgetChannelSettingsPermissionsOverviewBinding;", 0)};
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private static final int TAB_INDEX_ADVANCED = 1;
     private static final int TAB_INDEX_MODERATOR = 0;
     private static final int VIEW_INDEX_ADVANCED = 1;
     private static final int VIEW_INDEX_STAGE_MODERATOR = 0;
 
-    /* renamed from: viewBinding$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: viewBinding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate viewBinding;
 
-    /* renamed from: viewModel$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: viewModel$delegate, reason: from kotlin metadata */
     private final Lazy viewModel;
 
-    /* compiled from: WidgetChannelSettingsPermissionsOverview.kt */
+    /* JADX INFO: compiled from: WidgetChannelSettingsPermissionsOverview.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -76,10 +76,10 @@ public final class WidgetChannelSettingsPermissionsOverview extends AppFragment 
         }
     }
 
-    /* compiled from: WidgetChannelSettingsPermissionsOverview.kt */
+    /* JADX INFO: compiled from: WidgetChannelSettingsPermissionsOverview.kt */
     public static final /* data */ class Model {
 
-        /* renamed from: Companion, reason: from kotlin metadata */
+        /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
         public static final Companion INSTANCE = new Companion(null);
         private final boolean canManage;
         private final Channel channel;
@@ -88,7 +88,7 @@ public final class WidgetChannelSettingsPermissionsOverview extends AppFragment 
         private final MeUser me;
         private final long myPermissions;
 
-        /* compiled from: WidgetChannelSettingsPermissionsOverview.kt */
+        /* JADX INFO: compiled from: WidgetChannelSettingsPermissionsOverview.kt */
         public static final class Companion {
             private Companion() {
             }
@@ -121,6 +121,7 @@ public final class WidgetChannelSettingsPermissionsOverview extends AppFragment 
             this.canManage = guild.getOwnerId() == meUser.getId() || PermissionUtils.canAndIsElevated(Permission.MANAGE_ROLES, Long.valueOf(j), meUser.getMfaEnabled(), guild.getMfaLevel()) || PermissionUtils.canAndIsElevated(8L, Long.valueOf(j), meUser.getMfaEnabled(), guild.getMfaLevel());
         }
 
+        /* JADX WARN: Multi-variable type inference failed */
         public static /* synthetic */ Model copy$default(Model model, MeUser meUser, Guild guild, Channel channel, long j, Map map, int i, Object obj) {
             if ((i & 1) != 0) {
                 meUser = model.me;
@@ -143,22 +144,22 @@ public final class WidgetChannelSettingsPermissionsOverview extends AppFragment 
             return model.copy(meUser, guild2, channel2, j2, map);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final MeUser getMe() {
             return this.me;
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final Guild getGuild() {
             return this.guild;
         }
 
-        /* renamed from: component3, reason: from getter */
+        /* JADX INFO: renamed from: component3, reason: from getter */
         public final Channel getChannel() {
             return this.channel;
         }
 
-        /* renamed from: component4, reason: from getter */
+        /* JADX INFO: renamed from: component4, reason: from getter */
         public final long getMyPermissions() {
             return this.myPermissions;
         }
@@ -255,8 +256,8 @@ public final class WidgetChannelSettingsPermissionsOverview extends AppFragment 
         }
     }
 
-    /* compiled from: WidgetChannelSettingsPermissionsOverview.kt */
-    /* renamed from: com.discord.widgets.channels.permissions.WidgetChannelSettingsPermissionsOverview$configureTabs$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.channels.permissions.WidgetChannelSettingsPermissionsOverview$configureTabs$1 */
+    /* JADX INFO: compiled from: WidgetChannelSettingsPermissionsOverview.kt */
     public static final class C75541 extends Lambda implements Function1<Integer, Unit> {
         public C75541() {
             super(1);
@@ -282,8 +283,8 @@ public final class WidgetChannelSettingsPermissionsOverview extends AppFragment 
         }
     }
 
-    /* compiled from: WidgetChannelSettingsPermissionsOverview.kt */
-    /* renamed from: com.discord.widgets.channels.permissions.WidgetChannelSettingsPermissionsOverview$onViewBoundOrOnResume$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.channels.permissions.WidgetChannelSettingsPermissionsOverview$onViewBoundOrOnResume$1 */
+    /* JADX INFO: compiled from: WidgetChannelSettingsPermissionsOverview.kt */
     public static final class C75551 extends Lambda implements Function1<Model, Unit> {
         public C75551() {
             super(1);
@@ -295,14 +296,14 @@ public final class WidgetChannelSettingsPermissionsOverview extends AppFragment 
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Model model) {
             WidgetChannelSettingsPermissionsOverview.access$configureUI(WidgetChannelSettingsPermissionsOverview.this, model);
         }
     }
 
-    /* compiled from: WidgetChannelSettingsPermissionsOverview.kt */
-    /* renamed from: com.discord.widgets.channels.permissions.WidgetChannelSettingsPermissionsOverview$onViewBoundOrOnResume$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.channels.permissions.WidgetChannelSettingsPermissionsOverview$onViewBoundOrOnResume$2 */
+    /* JADX INFO: compiled from: WidgetChannelSettingsPermissionsOverview.kt */
     public static final class C75562 extends Lambda implements Function1<WidgetChannelSettingsPermissionsOverviewViewModel.ViewState, Unit> {
         public C75562() {
             super(1);
@@ -314,7 +315,7 @@ public final class WidgetChannelSettingsPermissionsOverview extends AppFragment 
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(WidgetChannelSettingsPermissionsOverviewViewModel.ViewState viewState) {
             Intrinsics3.checkNotNullParameter(viewState, "viewState");
             WidgetChannelSettingsPermissionsOverview.access$configureTabs(WidgetChannelSettingsPermissionsOverview.this, viewState);

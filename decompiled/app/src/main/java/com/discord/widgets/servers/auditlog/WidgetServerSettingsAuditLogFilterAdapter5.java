@@ -4,9 +4,9 @@ import kotlin.Unit;
 import kotlin.jvm.functions.Function2;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetServerSettingsAuditLogFilterAdapter.kt */
-/* renamed from: com.discord.widgets.servers.auditlog.WidgetServerSettingsAuditLogFilterAdapter$onAuditLogAvatarClicked$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.servers.auditlog.WidgetServerSettingsAuditLogFilterAdapter$onAuditLogAvatarClicked$1, reason: use source file name */
+/* JADX INFO: compiled from: WidgetServerSettingsAuditLogFilterAdapter.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetServerSettingsAuditLogFilterAdapter5 extends Lambda implements Function2<Long, Long, Unit> {
     public static final WidgetServerSettingsAuditLogFilterAdapter5 INSTANCE = new WidgetServerSettingsAuditLogFilterAdapter5();
 

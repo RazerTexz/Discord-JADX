@@ -15,7 +15,7 @@ import com.google.android.material.internal.ThemeEnforcement;
 import com.google.android.material.resources.MaterialResources;
 import com.google.android.material.theme.overlay.MaterialThemeOverlay;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public class MaterialRadioButton extends AppCompatRadioButton {
     private static final int DEF_STYLE_RES = C10817R.style.Widget_MaterialComponents_CompoundButton_RadioButton;
     private static final int[][] ENABLED_CHECKED_STATES = {new int[]{R.attr.state_enabled, R.attr.state_checked}, new int[]{R.attr.state_enabled, -16842912}, new int[]{-16842910, R.attr.state_checked}, new int[]{-16842910, -16842912}};

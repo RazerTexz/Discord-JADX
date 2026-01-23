@@ -10,18 +10,18 @@ import androidx.annotation.NonNull;
 import com.google.android.material.color.MaterialColors;
 import com.google.android.material.progressindicator.LinearProgressIndicatorSpec;
 
-/* compiled from: LinearDrawingDelegate.java */
-/* renamed from: b.i.a.g.g.h, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.g.g.h, reason: use source file name */
+/* JADX INFO: compiled from: LinearDrawingDelegate.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class LinearDrawingDelegate extends DrawingDelegate<LinearProgressIndicatorSpec> {
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public float f11739c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public float f11740d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public float f11741e;
 
     public LinearDrawingDelegate(@NonNull LinearProgressIndicatorSpec linearProgressIndicatorSpec) {
@@ -29,7 +29,7 @@ public final class LinearDrawingDelegate extends DrawingDelegate<LinearProgressI
         this.f11739c = 300.0f;
     }
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public static void m6131f(Canvas canvas, Paint paint, float f, float f2, float f3, boolean z2, RectF rectF) {
         canvas.save();
         canvas.translate(f3, 0.0f);
@@ -49,7 +49,7 @@ public final class LinearDrawingDelegate extends DrawingDelegate<LinearProgressI
     }
 
     @Override // p007b.p225i.p226a.p341g.p348g.DrawingDelegate
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public void mo6117a(@NonNull Canvas canvas, @FloatRange(from = 0.0d, m75to = 1.0d) float f) {
         Rect clipBounds = canvas.getClipBounds();
         this.f11739c = clipBounds.width();
@@ -72,7 +72,7 @@ public final class LinearDrawingDelegate extends DrawingDelegate<LinearProgressI
     }
 
     @Override // p007b.p225i.p226a.p341g.p348g.DrawingDelegate
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public void mo6118b(@NonNull Canvas canvas, @NonNull Paint paint, @FloatRange(from = 0.0d, m75to = 1.0d) float f, @FloatRange(from = 0.0d, m75to = 1.0d) float f2, @ColorInt int i) {
         if (f == f2) {
             return;
@@ -96,7 +96,7 @@ public final class LinearDrawingDelegate extends DrawingDelegate<LinearProgressI
     }
 
     @Override // p007b.p225i.p226a.p341g.p348g.DrawingDelegate
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public void mo6119c(@NonNull Canvas canvas, @NonNull Paint paint) {
         int iCompositeARGBWithAlpha = MaterialColors.compositeARGBWithAlpha(((LinearProgressIndicatorSpec) this.f11734a).trackColor, this.f11735b.getAlpha());
         float f = ((-this.f11739c) / 2.0f) + this.f11741e;
@@ -114,13 +114,13 @@ public final class LinearDrawingDelegate extends DrawingDelegate<LinearProgressI
     }
 
     @Override // p007b.p225i.p226a.p341g.p348g.DrawingDelegate
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public int mo6120d() {
         return ((LinearProgressIndicatorSpec) this.f11734a).trackThickness;
     }
 
     @Override // p007b.p225i.p226a.p341g.p348g.DrawingDelegate
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public int mo6121e() {
         return -1;
     }

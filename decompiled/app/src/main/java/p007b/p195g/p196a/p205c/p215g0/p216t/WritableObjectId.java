@@ -6,25 +6,25 @@ import p007b.p195g.p196a.p197a.ObjectIdGenerator;
 import p007b.p195g.p196a.p198b.JsonGenerator;
 import p007b.p195g.p196a.p205c.SerializerProvider;
 
-/* compiled from: WritableObjectId.java */
-/* renamed from: b.g.a.c.g0.t.u, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.g.a.c.g0.t.u, reason: use source file name */
+/* JADX INFO: compiled from: WritableObjectId.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class WritableObjectId {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final ObjectIdGenerator<?> f4847a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public Object f4848b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public boolean f4849c = false;
 
     public WritableObjectId(ObjectIdGenerator<?> objectIdGenerator) {
         this.f4847a = objectIdGenerator;
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public boolean m2043a(JsonGenerator jsonGenerator, SerializerProvider serializerProvider, ObjectIdWriter objectIdWriter) throws IOException {
         if (this.f4848b == null) {
             return false;

@@ -1,9 +1,9 @@
 package com.discord.stores;
 
 
-/* compiled from: StoreContactSync.kt */
-/* renamed from: com.discord.stores.StoreContactSyncKt, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.stores.StoreContactSyncKt, reason: use source file name */
+/* JADX INFO: compiled from: StoreContactSync.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class StoreContactSync2 {
     private static final String DISMISS_STATE_CACHE_KEY = "CONTACT_SYNC_DISMISS_STATE";
     private static final long EXISTING_ACCOUNT_AGE_THRESHOLD = 604800000;

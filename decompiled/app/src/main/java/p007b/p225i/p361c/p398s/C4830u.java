@@ -6,15 +6,15 @@ import com.google.android.gms.tasks.Task;
 import java.util.Map;
 import java.util.concurrent.Executor;
 
-/* compiled from: com.google.firebase:firebase-iid@@21.0.0 */
-/* renamed from: b.i.c.s.u */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.c.s.u */
+/* JADX INFO: compiled from: com.google.firebase:firebase-iid@@21.0.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public class C4830u {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final Executor f12894a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final Map<Pair<String, String>, Task<InterfaceC4824o>> f12895b = new ArrayMap();
 
     public C4830u(Executor executor) {

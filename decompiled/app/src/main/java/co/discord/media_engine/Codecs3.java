@@ -4,9 +4,9 @@ import com.discord.models.domain.ModelAuditLogEntry;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: Codecs.kt */
-/* renamed from: co.discord.media_engine.AudioEncoder, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: co.discord.media_engine.AudioEncoder, reason: use source file name */
+/* JADX INFO: compiled from: Codecs.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class Codecs3 {
     private final int channels;
     private final int freq;
@@ -51,32 +51,32 @@ public final /* data */ class Codecs3 {
         return codecs3.copy(i, str2, i7, i8, i9, i5);
     }
 
-    /* renamed from: component1, reason: from getter */
+    /* JADX INFO: renamed from: component1, reason: from getter */
     public final int getType() {
         return this.type;
     }
 
-    /* renamed from: component2, reason: from getter */
+    /* JADX INFO: renamed from: component2, reason: from getter */
     public final String getName() {
         return this.name;
     }
 
-    /* renamed from: component3, reason: from getter */
+    /* JADX INFO: renamed from: component3, reason: from getter */
     public final int getFreq() {
         return this.freq;
     }
 
-    /* renamed from: component4, reason: from getter */
+    /* JADX INFO: renamed from: component4, reason: from getter */
     public final int getPacsize() {
         return this.pacsize;
     }
 
-    /* renamed from: component5, reason: from getter */
+    /* JADX INFO: renamed from: component5, reason: from getter */
     public final int getChannels() {
         return this.channels;
     }
 
-    /* renamed from: component6, reason: from getter */
+    /* JADX INFO: renamed from: component6, reason: from getter */
     public final int getRate() {
         return this.rate;
     }

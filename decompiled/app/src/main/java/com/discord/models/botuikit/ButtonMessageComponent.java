@@ -8,8 +8,8 @@ import kotlin.jvm.internal.DefaultConstructorMarker;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ButtonMessageComponent.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: ButtonMessageComponent.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class ButtonMessageComponent extends MessageComponent2 {
     private final String customId;
     private final ComponentEmoji emoji;
@@ -41,32 +41,32 @@ public final /* data */ class ButtonMessageComponent extends MessageComponent2 {
         return getStateInteraction();
     }
 
-    /* renamed from: component4, reason: from getter */
+    /* JADX INFO: renamed from: component4, reason: from getter */
     public final String getCustomId() {
         return this.customId;
     }
 
-    /* renamed from: component5, reason: from getter */
+    /* JADX INFO: renamed from: component5, reason: from getter */
     public final String getLabel() {
         return this.label;
     }
 
-    /* renamed from: component6, reason: from getter */
+    /* JADX INFO: renamed from: component6, reason: from getter */
     public final ButtonComponent2 getStyle() {
         return this.style;
     }
 
-    /* renamed from: component7, reason: from getter */
+    /* JADX INFO: renamed from: component7, reason: from getter */
     public final ComponentEmoji getEmoji() {
         return this.emoji;
     }
 
-    /* renamed from: component8, reason: from getter */
+    /* JADX INFO: renamed from: component8, reason: from getter */
     public final String getUrl() {
         return this.url;
     }
 
-    /* renamed from: component9, reason: from getter */
+    /* JADX INFO: renamed from: component9, reason: from getter */
     public final boolean getEmojiAnimationsEnabled() {
         return this.emojiAnimationsEnabled;
     }
@@ -129,6 +129,9 @@ public final /* data */ class ButtonMessageComponent extends MessageComponent2 {
     }
 
     /* JADX WARN: Multi-variable type inference failed */
+    /* JADX WARN: Type inference failed for: r0v21, types: [int] */
+    /* JADX WARN: Type inference failed for: r0v22 */
+    /* JADX WARN: Type inference failed for: r0v29 */
     public int hashCode() {
         Component6 type = getType();
         int index = (getIndex() + ((type != null ? type.hashCode() : 0) * 31)) * 31;
@@ -145,11 +148,11 @@ public final /* data */ class ButtonMessageComponent extends MessageComponent2 {
         String str3 = this.url;
         int iHashCode6 = (iHashCode5 + (str3 != null ? str3.hashCode() : 0)) * 31;
         boolean z2 = this.emojiAnimationsEnabled;
-        int i = z2;
-        if (z2 != 0) {
-            i = 1;
+        ?? r0 = z2;
+        if (z2) {
+            r0 = 1;
         }
-        return iHashCode6 + i;
+        return iHashCode6 + r0;
     }
 
     public String toString() {

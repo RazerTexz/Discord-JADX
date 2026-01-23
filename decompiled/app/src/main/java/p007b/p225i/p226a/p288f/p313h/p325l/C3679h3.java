@@ -4,12 +4,12 @@ import java.lang.ref.ReferenceQueue;
 import java.lang.ref.WeakReference;
 import java.util.Objects;
 
-/* compiled from: com.google.android.gms:play-services-measurement-base@@18.0.0 */
-/* renamed from: b.i.a.f.h.l.h3 */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.h.l.h3 */
+/* JADX INFO: compiled from: com.google.android.gms:play-services-measurement-base@@18.0.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public final class C3679h3 extends WeakReference<Throwable> {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final int f9983a;
 
     public C3679h3(Throwable th, ReferenceQueue<Throwable> referenceQueue) {

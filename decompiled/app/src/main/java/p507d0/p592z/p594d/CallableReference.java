@@ -13,9 +13,9 @@ import p507d0.p513e0.KParameter;
 import p507d0.p513e0.KTypeParameter;
 import p507d0.p592z.KotlinReflectionNotSupportedError;
 
-/* compiled from: CallableReference.java */
-/* renamed from: d0.z.d.d, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.z.d.d, reason: use source file name */
+/* JADX INFO: compiled from: CallableReference.java */
+/* JADX INFO: loaded from: classes3.dex */
 public abstract class CallableReference implements KCallable, Serializable {
     public static final Object NO_RECEIVER = a.f25280j;
     private final boolean isTopLevel;
@@ -25,11 +25,11 @@ public abstract class CallableReference implements KCallable, Serializable {
     private transient KCallable reflected;
     private final String signature;
 
-    /* compiled from: CallableReference.java */
-    /* renamed from: d0.z.d.d$a */
+    /* JADX INFO: renamed from: d0.z.d.d$a */
+    /* JADX INFO: compiled from: CallableReference.java */
     public static class a implements Serializable {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public static final a f25280j = new a();
 
         private Object readResolve() throws ObjectStreamException {

@@ -10,7 +10,7 @@ import androidx.view.LifecycleOwner;
 import java.util.ArrayDeque;
 import java.util.Iterator;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public final class OnBackPressedDispatcher {
 
     @Nullable

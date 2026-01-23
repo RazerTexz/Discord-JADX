@@ -5,8 +5,8 @@ import kotlin.jvm.internal.DefaultConstructorMarker;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: SingleTypePayload.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: SingleTypePayload.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final /* data */ class SingleTypePayload<T> implements MGRecyclerDataPayload {
     private final T data;
     private final String key;

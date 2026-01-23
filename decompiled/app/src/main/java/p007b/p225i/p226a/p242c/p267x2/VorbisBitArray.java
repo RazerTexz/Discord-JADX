@@ -2,21 +2,21 @@ package p007b.p225i.p226a.p242c.p267x2;
 
 import p007b.p085c.p086a.p087a0.AnimatableValueParser;
 
-/* compiled from: VorbisBitArray.java */
-/* renamed from: b.i.a.c.x2.y, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.x2.y, reason: use source file name */
+/* JADX INFO: compiled from: VorbisBitArray.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class VorbisBitArray {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final byte[] f9011a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final int f9012b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public int f9013c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public int f9014d;
 
     public VorbisBitArray(byte[] bArr) {
@@ -24,14 +24,14 @@ public final class VorbisBitArray {
         this.f9012b = bArr.length;
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public boolean m3822a() {
         boolean z2 = (((this.f9011a[this.f9013c] & 255) >> this.f9014d) & 1) == 1;
         m3824c(1);
         return z2;
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public int m3823b(int i) {
         int i2 = this.f9013c;
         int iMin = Math.min(i, 8 - this.f9014d);
@@ -47,7 +47,7 @@ public final class VorbisBitArray {
         return i5;
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public void m3824c(int i) {
         int i2;
         int i3 = i / 8;

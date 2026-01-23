@@ -18,7 +18,6 @@ import com.discord.utilities.KotlinExtensions;
 import com.discord.utilities.logging.Logger;
 import com.discord.utilities.p501rx.ActivityLifecycleCallbacks;
 import com.discord.utilities.p501rx.ObservableExtensionsKt;
-import com.google.gson.JsonIOException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
@@ -46,8 +45,8 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 import p658rx.Observable;
 
-/* compiled from: GooglePlayBillingManager.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: GooglePlayBillingManager.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class GooglePlayBillingManager implements InterfaceC1622g, InterfaceC1616b, InterfaceC1624i, InterfaceC1620e {
     private static final long DEFAULT_BACKOFF_TIME_MS = 1000;
     public static final String PLAY_STORE_SUBSCRIPTION_DEEPLINK_URL = "https://play.google.com/store/account/subscriptions?sku=%s&package=%s";
@@ -58,7 +57,7 @@ public final class GooglePlayBillingManager implements InterfaceC1622g, Interfac
     private static AtomicLong backoffTimeMs = new AtomicLong(1000);
     private static Map<String, InAppSkuToConsume> inAppSkusToConsume = new HashMap();
 
-    /* compiled from: GooglePlayBillingManager.kt */
+    /* JADX INFO: compiled from: GooglePlayBillingManager.kt */
     public static final class GooglePlayBillingManagerLifecycleListener extends ActivityLifecycleCallbacks {
         @Override // com.discord.utilities.p501rx.ActivityLifecycleCallbacks
         public void onActivityCreated(AppActivity activity, Bundle savedInstanceState) {
@@ -97,7 +96,7 @@ public final class GooglePlayBillingManager implements InterfaceC1622g, Interfac
         }
     }
 
-    /* compiled from: GooglePlayBillingManager.kt */
+    /* JADX INFO: compiled from: GooglePlayBillingManager.kt */
     public static final /* data */ class InAppSkuToConsume {
         private final String paymentGatewaySkuId;
         private final Long skuId;
@@ -124,17 +123,17 @@ public final class GooglePlayBillingManager implements InterfaceC1622g, Interfac
             return inAppSkuToConsume.copy(googlePlayInAppSku4, l, str);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final GooglePlayInAppSku4 getType() {
             return this.type;
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final Long getSkuId() {
             return this.skuId;
         }
 
-        /* renamed from: component3, reason: from getter */
+        /* JADX INFO: renamed from: component3, reason: from getter */
         public final String getPaymentGatewaySkuId() {
             return this.paymentGatewaySkuId;
         }
@@ -207,8 +206,8 @@ public final class GooglePlayBillingManager implements InterfaceC1622g, Interfac
         }
     }
 
-    /* compiled from: GooglePlayBillingManager.kt */
-    /* renamed from: com.discord.utilities.billing.GooglePlayBillingManager$init$1 */
+    /* JADX INFO: renamed from: com.discord.utilities.billing.GooglePlayBillingManager$init$1 */
+    /* JADX INFO: compiled from: GooglePlayBillingManager.kt */
     public static final class C67061 extends Lambda implements Function1<Boolean, Unit> {
         public static final C67061 INSTANCE = new C67061();
 
@@ -227,8 +226,8 @@ public final class GooglePlayBillingManager implements InterfaceC1622g, Interfac
         }
     }
 
-    /* compiled from: GooglePlayBillingManager.kt */
-    /* renamed from: com.discord.utilities.billing.GooglePlayBillingManager$onBillingServiceDisconnected$1 */
+    /* JADX INFO: renamed from: com.discord.utilities.billing.GooglePlayBillingManager$onBillingServiceDisconnected$1 */
+    /* JADX INFO: compiled from: GooglePlayBillingManager.kt */
     public static final class C67071 extends Lambda implements Function1<Long, Unit> {
         public final /* synthetic */ long $currentBackoffTimeMs;
 
@@ -244,19 +243,19 @@ public final class GooglePlayBillingManager implements InterfaceC1622g, Interfac
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Long l) {
             GooglePlayBillingManager googlePlayBillingManager = GooglePlayBillingManager.INSTANCE;
             if (GooglePlayBillingManager.access$getBillingClient$p(googlePlayBillingManager).mo802d()) {
                 return;
             }
             GooglePlayBillingManager.access$getBillingClient$p(googlePlayBillingManager).mo806h(googlePlayBillingManager);
-            GooglePlayBillingManager.access$getBackoffTimeMs$p(googlePlayBillingManager).set(this.$currentBackoffTimeMs * 2);
+            GooglePlayBillingManager.access$getBackoffTimeMs$p(googlePlayBillingManager).set(this.$currentBackoffTimeMs * ((long) 2));
         }
     }
 
-    /* compiled from: GooglePlayBillingManager.kt */
-    /* renamed from: com.discord.utilities.billing.GooglePlayBillingManager$queryPurchases$1 */
+    /* JADX INFO: renamed from: com.discord.utilities.billing.GooglePlayBillingManager$queryPurchases$1 */
+    /* JADX INFO: compiled from: GooglePlayBillingManager.kt */
     public static final class C67081 implements InterfaceC1621f {
         public static final C67081 INSTANCE = new C67081();
 
@@ -268,8 +267,8 @@ public final class GooglePlayBillingManager implements InterfaceC1622g, Interfac
         }
     }
 
-    /* compiled from: GooglePlayBillingManager.kt */
-    /* renamed from: com.discord.utilities.billing.GooglePlayBillingManager$queryPurchases$2 */
+    /* JADX INFO: renamed from: com.discord.utilities.billing.GooglePlayBillingManager$queryPurchases$2 */
+    /* JADX INFO: compiled from: GooglePlayBillingManager.kt */
     public static final class C67092 implements InterfaceC1621f {
         public static final C67092 INSTANCE = new C67092();
 
@@ -337,7 +336,7 @@ public final class GooglePlayBillingManager implements InterfaceC1622g, Interfac
         KotlinExtensions.getExhaustive(Unit.f27425a);
     }
 
-    private final void handleConsumeSuccess(String purchaseToken) throws JsonIOException {
+    private final void handleConsumeSuccess(String purchaseToken) {
         InAppSkuToConsume inAppSkuToConsume = inAppSkusToConsume.get(purchaseToken);
         if (inAppSkuToConsume != null) {
             StoreStream.INSTANCE.getGooglePlayPurchases().trackPaymentFlowCompleted(inAppSkuToConsume.getPaymentGatewaySkuId());
@@ -497,7 +496,7 @@ public final class GooglePlayBillingManager implements InterfaceC1622g, Interfac
     }
 
     @Override // p007b.p100d.p101a.p102a.InterfaceC1620e
-    public void onConsumeResponse(BillingResult billingResult, String purchaseToken) throws JsonIOException {
+    public void onConsumeResponse(BillingResult billingResult, String purchaseToken) {
         Intrinsics3.checkNotNullParameter(billingResult, "billingResult");
         Intrinsics3.checkNotNullParameter(purchaseToken, "purchaseToken");
         if (billingResult.f14557a == 0) {

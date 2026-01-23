@@ -1,40 +1,40 @@
 package p007b.p225i.p226a.p242c.p265v2;
 
-/* compiled from: DecoderCounters.java */
-/* renamed from: b.i.a.c.v2.e, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.v2.e, reason: use source file name */
+/* JADX INFO: compiled from: DecoderCounters.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class DecoderCounters {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public int f7914a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public int f7915b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public int f7916c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public int f7917d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public int f7918e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public int f7919f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public int f7920g;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public int f7921h;
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public int f7922i;
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public long f7923j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public int f7924k;
 }

@@ -4,8 +4,8 @@ import com.discord.models.domain.ModelAuditLogEntry;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ModelSpotifyArtist.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: ModelSpotifyArtist.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class ModelSpotifyArtist {
     private final String id;
     private final String name;
@@ -27,12 +27,12 @@ public final /* data */ class ModelSpotifyArtist {
         return modelSpotifyArtist.copy(str, str2);
     }
 
-    /* renamed from: component1, reason: from getter */
+    /* JADX INFO: renamed from: component1, reason: from getter */
     public final String getId() {
         return this.id;
     }
 
-    /* renamed from: component2, reason: from getter */
+    /* JADX INFO: renamed from: component2, reason: from getter */
     public final String getName() {
         return this.name;
     }

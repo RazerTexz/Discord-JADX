@@ -2,15 +2,15 @@ package p637j0.p642l.p647e.p649o;
 
 import java.util.Objects;
 
-/* compiled from: SpscArrayQueue.java */
-/* renamed from: j0.l.e.o.n, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: j0.l.e.o.n, reason: use source file name */
+/* JADX INFO: compiled from: SpscArrayQueue.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class SpscArrayQueue<E> {
     public SpscArrayQueue(int i) {
         super(i);
     }
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public final long m10844i() {
         return UnsafeAccess.f27357a.getLongVolatile(this, SpscArrayQueue2.f27342q);
     }
@@ -19,17 +19,17 @@ public final class SpscArrayQueue<E> {
         return m10845j() == m10844i();
     }
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final long m10845j() {
         return UnsafeAccess.f27357a.getLongVolatile(this, SpscArrayQueue5.f27344p);
     }
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final void m10846k(long j) {
         UnsafeAccess.f27357a.putOrderedLong(this, SpscArrayQueue2.f27342q, j);
     }
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final void m10847l(long j) {
         UnsafeAccess.f27357a.putOrderedLong(this, SpscArrayQueue5.f27344p, j);
     }

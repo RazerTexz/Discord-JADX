@@ -1,7 +1,6 @@
 package com.discord.utilities.textprocessing.node;
 
 import android.content.Context;
-import android.content.res.Resources;
 import android.graphics.Paint;
 import android.text.SpannableStringBuilder;
 import android.text.style.LeadingMarginSpan;
@@ -17,8 +16,8 @@ import java.util.Collection;
 import java.util.Iterator;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: BulletListNode.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: BulletListNode.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class BulletListNode<T extends BasicRenderContext> extends Node<T> {
     private static final int MARKDOWN_BULLET_RADIUS = 8;
     private final boolean includesNewline;
@@ -31,11 +30,11 @@ public final class BulletListNode<T extends BasicRenderContext> extends Node<T> 
     }
 
     @Override // com.discord.simpleast.core.node.Node
-    public /* bridge */ /* synthetic */ void render(SpannableStringBuilder spannableStringBuilder, Object obj) throws Resources.NotFoundException {
+    public /* bridge */ /* synthetic */ void render(SpannableStringBuilder spannableStringBuilder, Object obj) {
         render(spannableStringBuilder, (BasicRenderContext) obj);
     }
 
-    public void render(SpannableStringBuilder builder, T renderContext) throws Resources.NotFoundException {
+    public void render(SpannableStringBuilder builder, T renderContext) {
         Intrinsics3.checkNotNullParameter(builder, "builder");
         Intrinsics3.checkNotNullParameter(renderContext, "renderContext");
         Context context = renderContext.getContext();

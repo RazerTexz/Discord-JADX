@@ -1,7 +1,6 @@
 package com.discord.widgets.guild_role_subscriptions.setup;
 
 import android.content.Context;
-import android.content.res.Resources;
 import android.content.res.TypedArray;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
@@ -15,15 +14,15 @@ import com.google.android.material.radiobutton.MaterialRadioButton;
 import kotlin.jvm.internal.DefaultConstructorMarker;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: GuildRoleSubscriptionPlanFormatRadioButton.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: GuildRoleSubscriptionPlanFormatRadioButton.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class GuildRoleSubscriptionPlanFormatRadioButton extends ConstraintLayout implements Checkable {
     private static final int ENTIRE_SERVER_FORMAT_TYPE = 0;
     private static final int SOME_CHANNELS_FORMAT_TYPE = 1;
     private final ViewGuildRoleSubscriptionPlanFormatRadioButtonBinding binding;
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-    public GuildRoleSubscriptionPlanFormatRadioButton(Context context) throws Resources.NotFoundException {
+    public GuildRoleSubscriptionPlanFormatRadioButton(Context context) {
         super(context);
         Intrinsics3.checkNotNullParameter(context, "context");
         ViewGuildRoleSubscriptionPlanFormatRadioButtonBinding viewGuildRoleSubscriptionPlanFormatRadioButtonBindingM8398a = ViewGuildRoleSubscriptionPlanFormatRadioButtonBinding.m8398a(LayoutInflater.from(getContext()), this);
@@ -47,7 +46,7 @@ public final class GuildRoleSubscriptionPlanFormatRadioButton extends Constraint
         }
     }
 
-    private final void initialize(AttributeSet attrs) throws Resources.NotFoundException {
+    private final void initialize(AttributeSet attrs) {
         int dimensionPixelSize = getResources().getDimensionPixelSize(C5419R.dimen.guild_role_subscription_setup_default_padding);
         setPadding(dimensionPixelSize, dimensionPixelSize, dimensionPixelSize, dimensionPixelSize);
         setBackground(ContextCompat.getDrawable(getContext(), C5419R.drawable.bg_guild_role_subscription_plan_format_radio_button));
@@ -61,7 +60,7 @@ public final class GuildRoleSubscriptionPlanFormatRadioButton extends Constraint
         typedArrayObtainStyledAttributes.recycle();
     }
 
-    public static /* synthetic */ void initialize$default(GuildRoleSubscriptionPlanFormatRadioButton guildRoleSubscriptionPlanFormatRadioButton, AttributeSet attributeSet, int i, Object obj) throws Resources.NotFoundException {
+    public static /* synthetic */ void initialize$default(GuildRoleSubscriptionPlanFormatRadioButton guildRoleSubscriptionPlanFormatRadioButton, AttributeSet attributeSet, int i, Object obj) {
         if ((i & 1) != 0) {
             attributeSet = null;
         }
@@ -92,7 +91,7 @@ public final class GuildRoleSubscriptionPlanFormatRadioButton extends Constraint
     }
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-    public GuildRoleSubscriptionPlanFormatRadioButton(Context context, AttributeSet attributeSet) throws Resources.NotFoundException {
+    public GuildRoleSubscriptionPlanFormatRadioButton(Context context, AttributeSet attributeSet) {
         super(context, attributeSet);
         Intrinsics3.checkNotNullParameter(context, "context");
         ViewGuildRoleSubscriptionPlanFormatRadioButtonBinding viewGuildRoleSubscriptionPlanFormatRadioButtonBindingM8398a = ViewGuildRoleSubscriptionPlanFormatRadioButtonBinding.m8398a(LayoutInflater.from(getContext()), this);
@@ -106,7 +105,7 @@ public final class GuildRoleSubscriptionPlanFormatRadioButton extends Constraint
     }
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-    public GuildRoleSubscriptionPlanFormatRadioButton(Context context, AttributeSet attributeSet, int i) throws Resources.NotFoundException {
+    public GuildRoleSubscriptionPlanFormatRadioButton(Context context, AttributeSet attributeSet, int i) {
         super(context, attributeSet, i);
         Intrinsics3.checkNotNullParameter(context, "context");
         ViewGuildRoleSubscriptionPlanFormatRadioButtonBinding viewGuildRoleSubscriptionPlanFormatRadioButtonBindingM8398a = ViewGuildRoleSubscriptionPlanFormatRadioButtonBinding.m8398a(LayoutInflater.from(getContext()), this);

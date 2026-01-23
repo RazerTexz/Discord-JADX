@@ -48,11 +48,11 @@ import p507d0.p592z.p594d.Lambda;
 import p658rx.Observable;
 import p658rx.subjects.PublishSubject;
 
-/* compiled from: WidgetMemberVerificationViewModel.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetMemberVerificationViewModel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetMemberVerificationViewModel extends AppViewModel<ViewState> {
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private final PublishSubject<Event> eventSubject;
     private final Map<Integer, Object> formUserInputDataMap;
@@ -62,8 +62,8 @@ public final class WidgetMemberVerificationViewModel extends AppViewModel<ViewSt
     private final RestAPI restAPI;
     private final Parser<MessageRenderContext, Node<MessageRenderContext>, MessageParseState> rulesParser;
 
-    /* compiled from: WidgetMemberVerificationViewModel.kt */
-    /* renamed from: com.discord.widgets.servers.member_verification.WidgetMemberVerificationViewModel$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.member_verification.WidgetMemberVerificationViewModel$1 */
+    /* JADX INFO: compiled from: WidgetMemberVerificationViewModel.kt */
     public static final class C95651 extends Lambda implements Function1<StoreState, Unit> {
         public C95651() {
             super(1);
@@ -75,14 +75,14 @@ public final class WidgetMemberVerificationViewModel extends AppViewModel<ViewSt
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(StoreState storeState) {
             Intrinsics3.checkNotNullParameter(storeState, "storeState");
             WidgetMemberVerificationViewModel.access$handleStoreState(WidgetMemberVerificationViewModel.this, storeState);
         }
     }
 
-    /* compiled from: WidgetMemberVerificationViewModel.kt */
+    /* JADX INFO: compiled from: WidgetMemberVerificationViewModel.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -99,10 +99,10 @@ public final class WidgetMemberVerificationViewModel extends AppViewModel<ViewSt
         }
     }
 
-    /* compiled from: WidgetMemberVerificationViewModel.kt */
+    /* JADX INFO: compiled from: WidgetMemberVerificationViewModel.kt */
     public static abstract class Event {
 
-        /* compiled from: WidgetMemberVerificationViewModel.kt */
+        /* JADX INFO: compiled from: WidgetMemberVerificationViewModel.kt */
         public static final class Error extends Event {
             public static final Error INSTANCE = new Error();
 
@@ -111,7 +111,7 @@ public final class WidgetMemberVerificationViewModel extends AppViewModel<ViewSt
             }
         }
 
-        /* compiled from: WidgetMemberVerificationViewModel.kt */
+        /* JADX INFO: compiled from: WidgetMemberVerificationViewModel.kt */
         public static final /* data */ class Success extends Event {
             private final ApplicationStatus applicationStatus;
             private final Long guildId;
@@ -144,22 +144,22 @@ public final class WidgetMemberVerificationViewModel extends AppViewModel<ViewSt
                 return success.copy(l, str, applicationStatus, str2);
             }
 
-            /* renamed from: component1, reason: from getter */
+            /* JADX INFO: renamed from: component1, reason: from getter */
             public final Long getGuildId() {
                 return this.guildId;
             }
 
-            /* renamed from: component2, reason: from getter */
+            /* JADX INFO: renamed from: component2, reason: from getter */
             public final String getGuildName() {
                 return this.guildName;
             }
 
-            /* renamed from: component3, reason: from getter */
+            /* JADX INFO: renamed from: component3, reason: from getter */
             public final ApplicationStatus getApplicationStatus() {
                 return this.applicationStatus;
             }
 
-            /* renamed from: component4, reason: from getter */
+            /* JADX INFO: renamed from: component4, reason: from getter */
             public final String getLastSeen() {
                 return this.lastSeen;
             }
@@ -227,7 +227,7 @@ public final class WidgetMemberVerificationViewModel extends AppViewModel<ViewSt
         }
     }
 
-    /* compiled from: WidgetMemberVerificationViewModel.kt */
+    /* JADX INFO: compiled from: WidgetMemberVerificationViewModel.kt */
     public static final /* data */ class StoreState {
         private final boolean allowAnimatedEmojis;
         private final Map<Long, String> channels;
@@ -248,6 +248,7 @@ public final class WidgetMemberVerificationViewModel extends AppViewModel<ViewSt
             this.allowAnimatedEmojis = z2;
         }
 
+        /* JADX WARN: Multi-variable type inference failed */
         public static /* synthetic */ StoreState copy$default(StoreState storeState, MeUser meUser, Guild guild, StoreGuildMemberVerificationForm.MemberVerificationFormData memberVerificationFormData, Map map, Map map2, boolean z2, int i, Object obj) {
             if ((i & 1) != 0) {
                 meUser = storeState.me;
@@ -274,17 +275,17 @@ public final class WidgetMemberVerificationViewModel extends AppViewModel<ViewSt
             return storeState.copy(meUser, guild2, memberVerificationFormData2, map3, map4, z2);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final MeUser getMe() {
             return this.me;
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final Guild getGuild() {
             return this.guild;
         }
 
-        /* renamed from: component3, reason: from getter */
+        /* JADX INFO: renamed from: component3, reason: from getter */
         public final StoreGuildMemberVerificationForm.MemberVerificationFormData getMemberVerificationFormData() {
             return this.memberVerificationFormData;
         }
@@ -297,7 +298,7 @@ public final class WidgetMemberVerificationViewModel extends AppViewModel<ViewSt
             return this.roles;
         }
 
-        /* renamed from: component6, reason: from getter */
+        /* JADX INFO: renamed from: component6, reason: from getter */
         public final boolean getAllowAnimatedEmojis() {
             return this.allowAnimatedEmojis;
         }
@@ -345,6 +346,9 @@ public final class WidgetMemberVerificationViewModel extends AppViewModel<ViewSt
         }
 
         /* JADX WARN: Multi-variable type inference failed */
+        /* JADX WARN: Type inference failed for: r1v3, types: [int] */
+        /* JADX WARN: Type inference failed for: r1v4 */
+        /* JADX WARN: Type inference failed for: r1v6 */
         public int hashCode() {
             MeUser meUser = this.me;
             int iHashCode = (meUser != null ? meUser.hashCode() : 0) * 31;
@@ -357,11 +361,11 @@ public final class WidgetMemberVerificationViewModel extends AppViewModel<ViewSt
             Map<Long, GuildRole> map2 = this.roles;
             int iHashCode5 = (iHashCode4 + (map2 != null ? map2.hashCode() : 0)) * 31;
             boolean z2 = this.allowAnimatedEmojis;
-            int i = z2;
-            if (z2 != 0) {
-                i = 1;
+            ?? r1 = z2;
+            if (z2) {
+                r1 = 1;
             }
-            return iHashCode5 + i;
+            return iHashCode5 + r1;
         }
 
         public String toString() {
@@ -380,16 +384,16 @@ public final class WidgetMemberVerificationViewModel extends AppViewModel<ViewSt
         }
     }
 
-    /* compiled from: WidgetMemberVerificationViewModel.kt */
+    /* JADX INFO: compiled from: WidgetMemberVerificationViewModel.kt */
     public enum VerificationType {
         PHONE,
         EMAIL
     }
 
-    /* compiled from: WidgetMemberVerificationViewModel.kt */
+    /* JADX INFO: compiled from: WidgetMemberVerificationViewModel.kt */
     public static abstract class ViewState {
 
-        /* compiled from: WidgetMemberVerificationViewModel.kt */
+        /* JADX INFO: compiled from: WidgetMemberVerificationViewModel.kt */
         public static final class Invalid extends ViewState {
             public static final Invalid INSTANCE = new Invalid();
 
@@ -398,7 +402,7 @@ public final class WidgetMemberVerificationViewModel extends AppViewModel<ViewSt
             }
         }
 
-        /* compiled from: WidgetMemberVerificationViewModel.kt */
+        /* JADX INFO: compiled from: WidgetMemberVerificationViewModel.kt */
         public static final /* data */ class Loaded extends ViewState {
             private final boolean allowAnimatedEmojis;
             private final Map<Long, String> channelNames;
@@ -436,51 +440,52 @@ public final class WidgetMemberVerificationViewModel extends AppViewModel<ViewSt
                 this.guild = guild;
             }
 
+            /* JADX WARN: Multi-variable type inference failed */
             public static /* synthetic */ Loaded copy$default(Loaded loaded, boolean z2, boolean z3, boolean z4, VerificationType verificationType, boolean z5, List list, ModelMemberVerificationForm modelMemberVerificationForm, Map map, Map map2, boolean z6, boolean z7, boolean z8, Guild guild, int i, Object obj) {
                 return loaded.copy((i & 1) != 0 ? loaded.isRulesListVisible : z2, (i & 2) != 0 ? loaded.submitting : z3, (i & 4) != 0 ? loaded.disabled : z4, (i & 8) != 0 ? loaded.verificationType : verificationType, (i & 16) != 0 ? loaded.needsAdditionalVerification : z5, (i & 32) != 0 ? loaded.formItems : list, (i & 64) != 0 ? loaded.form : modelMemberVerificationForm, (i & 128) != 0 ? loaded.channelNames : map, (i & 256) != 0 ? loaded.roles : map2, (i & 512) != 0 ? loaded.allowAnimatedEmojis : z6, (i & 1024) != 0 ? loaded.isFormValid : z7, (i & 2048) != 0 ? loaded.isTermsApproved : z8, (i & 4096) != 0 ? loaded.guild : guild);
             }
 
-            /* renamed from: component1, reason: from getter */
+            /* JADX INFO: renamed from: component1, reason: from getter */
             public final boolean getIsRulesListVisible() {
                 return this.isRulesListVisible;
             }
 
-            /* renamed from: component10, reason: from getter */
+            /* JADX INFO: renamed from: component10, reason: from getter */
             public final boolean getAllowAnimatedEmojis() {
                 return this.allowAnimatedEmojis;
             }
 
-            /* renamed from: component11, reason: from getter */
+            /* JADX INFO: renamed from: component11, reason: from getter */
             public final boolean getIsFormValid() {
                 return this.isFormValid;
             }
 
-            /* renamed from: component12, reason: from getter */
+            /* JADX INFO: renamed from: component12, reason: from getter */
             public final boolean getIsTermsApproved() {
                 return this.isTermsApproved;
             }
 
-            /* renamed from: component13, reason: from getter */
+            /* JADX INFO: renamed from: component13, reason: from getter */
             public final Guild getGuild() {
                 return this.guild;
             }
 
-            /* renamed from: component2, reason: from getter */
+            /* JADX INFO: renamed from: component2, reason: from getter */
             public final boolean getSubmitting() {
                 return this.submitting;
             }
 
-            /* renamed from: component3, reason: from getter */
+            /* JADX INFO: renamed from: component3, reason: from getter */
             public final boolean getDisabled() {
                 return this.disabled;
             }
 
-            /* renamed from: component4, reason: from getter */
+            /* JADX INFO: renamed from: component4, reason: from getter */
             public final VerificationType getVerificationType() {
                 return this.verificationType;
             }
 
-            /* renamed from: component5, reason: from getter */
+            /* JADX INFO: renamed from: component5, reason: from getter */
             public final boolean getNeedsAdditionalVerification() {
                 return this.needsAdditionalVerification;
             }
@@ -489,7 +494,7 @@ public final class WidgetMemberVerificationViewModel extends AppViewModel<ViewSt
                 return this.formItems;
             }
 
-            /* renamed from: component7, reason: from getter */
+            /* JADX INFO: renamed from: component7, reason: from getter */
             public final ModelMemberVerificationForm getForm() {
                 return this.form;
             }
@@ -564,11 +569,24 @@ public final class WidgetMemberVerificationViewModel extends AppViewModel<ViewSt
             /* JADX WARN: Type inference failed for: r0v1, types: [int] */
             /* JADX WARN: Type inference failed for: r0v26 */
             /* JADX WARN: Type inference failed for: r0v27 */
-            /* JADX WARN: Type inference failed for: r2v0, types: [boolean] */
-            /* JADX WARN: Type inference failed for: r2v2, types: [boolean] */
-            /* JADX WARN: Type inference failed for: r2v21, types: [boolean] */
-            /* JADX WARN: Type inference failed for: r2v23, types: [boolean] */
-            /* JADX WARN: Type inference failed for: r2v7, types: [boolean] */
+            /* JADX WARN: Type inference failed for: r1v0 */
+            /* JADX WARN: Type inference failed for: r1v1, types: [int] */
+            /* JADX WARN: Type inference failed for: r1v3 */
+            /* JADX WARN: Type inference failed for: r2v1, types: [int] */
+            /* JADX WARN: Type inference failed for: r2v22, types: [int] */
+            /* JADX WARN: Type inference failed for: r2v24, types: [int] */
+            /* JADX WARN: Type inference failed for: r2v26 */
+            /* JADX WARN: Type inference failed for: r2v27 */
+            /* JADX WARN: Type inference failed for: r2v3, types: [int] */
+            /* JADX WARN: Type inference failed for: r2v32 */
+            /* JADX WARN: Type inference failed for: r2v34 */
+            /* JADX WARN: Type inference failed for: r2v35 */
+            /* JADX WARN: Type inference failed for: r2v36 */
+            /* JADX WARN: Type inference failed for: r2v37 */
+            /* JADX WARN: Type inference failed for: r2v38 */
+            /* JADX WARN: Type inference failed for: r2v39 */
+            /* JADX WARN: Type inference failed for: r2v40 */
+            /* JADX WARN: Type inference failed for: r2v8, types: [int] */
             public int hashCode() {
                 boolean z2 = this.isRulesListVisible;
                 ?? r0 = z2;
@@ -576,50 +594,50 @@ public final class WidgetMemberVerificationViewModel extends AppViewModel<ViewSt
                     r0 = 1;
                 }
                 int i = r0 * 31;
-                ?? r2 = this.submitting;
-                int i2 = r2;
-                if (r2 != 0) {
-                    i2 = 1;
+                boolean z3 = this.submitting;
+                ?? r2 = z3;
+                if (z3) {
+                    r2 = 1;
                 }
-                int i3 = (i + i2) * 31;
-                ?? r22 = this.disabled;
-                int i4 = r22;
-                if (r22 != 0) {
-                    i4 = 1;
+                int i2 = (i + r2) * 31;
+                boolean z4 = this.disabled;
+                ?? r22 = z4;
+                if (z4) {
+                    r22 = 1;
                 }
-                int i5 = (i3 + i4) * 31;
+                int i3 = (i2 + r22) * 31;
                 VerificationType verificationType = this.verificationType;
-                int iHashCode = (i5 + (verificationType != null ? verificationType.hashCode() : 0)) * 31;
-                ?? r23 = this.needsAdditionalVerification;
-                int i6 = r23;
-                if (r23 != 0) {
-                    i6 = 1;
+                int iHashCode = (i3 + (verificationType != null ? verificationType.hashCode() : 0)) * 31;
+                boolean z5 = this.needsAdditionalVerification;
+                ?? r23 = z5;
+                if (z5) {
+                    r23 = 1;
                 }
-                int i7 = (iHashCode + i6) * 31;
+                int i4 = (iHashCode + r23) * 31;
                 List<MemberVerificationItem> list = this.formItems;
-                int iHashCode2 = (i7 + (list != null ? list.hashCode() : 0)) * 31;
+                int iHashCode2 = (i4 + (list != null ? list.hashCode() : 0)) * 31;
                 ModelMemberVerificationForm modelMemberVerificationForm = this.form;
                 int iHashCode3 = (iHashCode2 + (modelMemberVerificationForm != null ? modelMemberVerificationForm.hashCode() : 0)) * 31;
                 Map<Long, String> map = this.channelNames;
                 int iHashCode4 = (iHashCode3 + (map != null ? map.hashCode() : 0)) * 31;
                 Map<Long, GuildRole> map2 = this.roles;
                 int iHashCode5 = (iHashCode4 + (map2 != null ? map2.hashCode() : 0)) * 31;
-                ?? r24 = this.allowAnimatedEmojis;
-                int i8 = r24;
-                if (r24 != 0) {
-                    i8 = 1;
+                boolean z6 = this.allowAnimatedEmojis;
+                ?? r24 = z6;
+                if (z6) {
+                    r24 = 1;
                 }
-                int i9 = (iHashCode5 + i8) * 31;
-                ?? r25 = this.isFormValid;
-                int i10 = r25;
-                if (r25 != 0) {
-                    i10 = 1;
+                int i5 = (iHashCode5 + r24) * 31;
+                boolean z7 = this.isFormValid;
+                ?? r25 = z7;
+                if (z7) {
+                    r25 = 1;
                 }
-                int i11 = (i9 + i10) * 31;
-                boolean z3 = this.isTermsApproved;
-                int i12 = (i11 + (z3 ? 1 : z3 ? 1 : 0)) * 31;
+                int i6 = (i5 + r25) * 31;
+                boolean z8 = this.isTermsApproved;
+                int i7 = (i6 + (z8 ? 1 : z8)) * 31;
                 Guild guild = this.guild;
-                return i12 + (guild != null ? guild.hashCode() : 0);
+                return i7 + (guild != null ? guild.hashCode() : 0);
             }
 
             public final boolean isFormValid() {
@@ -666,7 +684,7 @@ public final class WidgetMemberVerificationViewModel extends AppViewModel<ViewSt
             }
         }
 
-        /* compiled from: WidgetMemberVerificationViewModel.kt */
+        /* JADX INFO: compiled from: WidgetMemberVerificationViewModel.kt */
         public static final class Loading extends ViewState {
             public static final Loading INSTANCE = new Loading();
 
@@ -704,8 +722,8 @@ public final class WidgetMemberVerificationViewModel extends AppViewModel<ViewSt
         }
     }
 
-    /* compiled from: WidgetMemberVerificationViewModel.kt */
-    /* renamed from: com.discord.widgets.servers.member_verification.WidgetMemberVerificationViewModel$applyToJoinGuild$3 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.member_verification.WidgetMemberVerificationViewModel$applyToJoinGuild$3 */
+    /* JADX INFO: compiled from: WidgetMemberVerificationViewModel.kt */
     public static final class C95663 extends Lambda implements Function1<Error, Unit> {
         public C95663() {
             super(1);
@@ -717,15 +735,15 @@ public final class WidgetMemberVerificationViewModel extends AppViewModel<ViewSt
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Error error) {
             Intrinsics3.checkNotNullParameter(error, "it");
             WidgetMemberVerificationViewModel.access$handleGuildUpdateError(WidgetMemberVerificationViewModel.this);
         }
     }
 
-    /* compiled from: WidgetMemberVerificationViewModel.kt */
-    /* renamed from: com.discord.widgets.servers.member_verification.WidgetMemberVerificationViewModel$applyToJoinGuild$4 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.member_verification.WidgetMemberVerificationViewModel$applyToJoinGuild$4 */
+    /* JADX INFO: compiled from: WidgetMemberVerificationViewModel.kt */
     public static final class C95674 extends Lambda implements Function1<ModelMemberVerificationFormResponse, Unit> {
         public final /* synthetic */ ViewState.Loaded $currentViewState;
 
@@ -741,7 +759,7 @@ public final class WidgetMemberVerificationViewModel extends AppViewModel<ViewSt
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(ModelMemberVerificationFormResponse modelMemberVerificationFormResponse) {
             Intrinsics3.checkNotNullParameter(modelMemberVerificationFormResponse, "it");
             WidgetMemberVerificationViewModel.access$updateViewState(WidgetMemberVerificationViewModel.this, ViewState.Loaded.copy$default(this.$currentViewState, false, false, false, null, false, null, null, null, null, false, false, false, null, 8189, null));

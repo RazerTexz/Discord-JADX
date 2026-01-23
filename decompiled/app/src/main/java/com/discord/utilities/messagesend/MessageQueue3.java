@@ -15,16 +15,16 @@ import kotlin.jvm.functions.Function2;
 import kotlin.jvm.internal.DefaultConstructorMarker;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: MessageQueue.kt */
-/* renamed from: com.discord.utilities.messagesend.MessageRequest, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.utilities.messagesend.MessageRequest, reason: use source file name */
+/* JADX INFO: compiled from: MessageQueue.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public abstract class MessageQueue3 {
     private final long attemptTimestamp;
     private final Function2<MessageQueue4, Boolean, Unit> onCompleted;
     private final String requestId;
 
-    /* compiled from: MessageQueue.kt */
-    /* renamed from: com.discord.utilities.messagesend.MessageRequest$Edit */
+    /* JADX INFO: renamed from: com.discord.utilities.messagesend.MessageRequest$Edit */
+    /* JADX INFO: compiled from: MessageQueue.kt */
     public static final class Edit extends MessageQueue3 {
         private final MessageAllowedMentions allowedMentions;
         private final long channelId;
@@ -59,8 +59,8 @@ public abstract class MessageQueue3 {
         }
     }
 
-    /* compiled from: MessageQueue.kt */
-    /* renamed from: com.discord.utilities.messagesend.MessageRequest$Send */
+    /* JADX INFO: renamed from: com.discord.utilities.messagesend.MessageRequest$Send */
+    /* JADX INFO: compiled from: MessageQueue.kt */
     public static final class Send extends MessageQueue3 {
         private final Activity activity;
         private final List<Attachment<?>> attachments;
@@ -116,8 +116,8 @@ public abstract class MessageQueue3 {
         }
     }
 
-    /* compiled from: MessageQueue.kt */
-    /* renamed from: com.discord.utilities.messagesend.MessageRequest$SendApplicationCommand */
+    /* JADX INFO: renamed from: com.discord.utilities.messagesend.MessageRequest$SendApplicationCommand */
+    /* JADX INFO: compiled from: MessageQueue.kt */
     public static final class SendApplicationCommand extends MessageQueue3 {
         private final ApplicationCommandLocalSendData applicationCommandSendData;
         private final List<Attachment<?>> attachments;

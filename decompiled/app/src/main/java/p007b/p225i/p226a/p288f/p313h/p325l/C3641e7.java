@@ -6,12 +6,12 @@ import java.util.List;
 import java.util.ListIterator;
 import java.util.RandomAccess;
 
-/* compiled from: com.google.android.gms:play-services-measurement-base@@18.0.0 */
-/* renamed from: b.i.a.f.h.l.e7 */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.h.l.e7 */
+/* JADX INFO: compiled from: com.google.android.gms:play-services-measurement-base@@18.0.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public final class C3641e7 extends AbstractList<String> implements InterfaceC3709j5, RandomAccess {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final InterfaceC3709j5 f9930j;
 
     public C3641e7(InterfaceC3709j5 interfaceC3709j5) {
@@ -19,13 +19,13 @@ public final class C3641e7 extends AbstractList<String> implements InterfaceC370
     }
 
     @Override // p007b.p225i.p226a.p288f.p313h.p325l.InterfaceC3709j5
-    /* renamed from: A */
+    /* JADX INFO: renamed from: A */
     public final Object mo4863A(int i) {
         return this.f9930j.mo4863A(i);
     }
 
     @Override // p007b.p225i.p226a.p288f.p313h.p325l.InterfaceC3709j5
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final List<?> mo4864b() {
         return this.f9930j.mo4864b();
     }
@@ -46,7 +46,7 @@ public final class C3641e7 extends AbstractList<String> implements InterfaceC370
     }
 
     @Override // p007b.p225i.p226a.p288f.p313h.p325l.InterfaceC3709j5
-    /* renamed from: s */
+    /* JADX INFO: renamed from: s */
     public final InterfaceC3709j5 mo4865s() {
         return this;
     }
@@ -57,7 +57,7 @@ public final class C3641e7 extends AbstractList<String> implements InterfaceC370
     }
 
     @Override // p007b.p225i.p226a.p288f.p313h.p325l.InterfaceC3709j5
-    /* renamed from: t */
+    /* JADX INFO: renamed from: t */
     public final void mo4866t(AbstractC3837t3 abstractC3837t3) {
         throw new UnsupportedOperationException();
     }

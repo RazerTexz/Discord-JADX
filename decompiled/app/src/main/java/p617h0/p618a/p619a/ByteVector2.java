@@ -2,22 +2,22 @@ package p617h0.p618a.p619a;
 
 import org.objectweb.asm.Opcodes;
 
-/* compiled from: ByteVector.java */
-/* renamed from: h0.a.a.c, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: h0.a.a.c, reason: use source file name */
+/* JADX INFO: compiled from: ByteVector.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class ByteVector2 {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public byte[] f26153a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public int f26154b;
 
     public ByteVector2() {
         this.f26153a = new byte[64];
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final ByteVector2 m10529a(String str, int i, int i2) {
         int i3;
         int length = str.length();
@@ -70,7 +70,7 @@ public class ByteVector2 {
         return this;
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final void m10530b(int i) {
         byte[] bArr = this.f26153a;
         int length = bArr.length * 2;
@@ -84,7 +84,7 @@ public class ByteVector2 {
         this.f26153a = bArr2;
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final ByteVector2 m10531c(int i, int i2) {
         int i3 = this.f26154b;
         if (i3 + 2 > this.f26153a.length) {
@@ -98,7 +98,7 @@ public class ByteVector2 {
         return this;
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final ByteVector2 m10532d(int i, int i2, int i3) {
         int i4 = this.f26154b;
         if (i4 + 4 > this.f26153a.length) {
@@ -116,7 +116,7 @@ public class ByteVector2 {
         return this;
     }
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final ByteVector2 m10533e(int i, int i2) {
         int i3 = this.f26154b;
         if (i3 + 3 > this.f26153a.length) {
@@ -132,7 +132,7 @@ public class ByteVector2 {
         return this;
     }
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final ByteVector2 m10534f(int i, int i2, int i3) {
         int i4 = this.f26154b;
         if (i4 + 5 > this.f26153a.length) {
@@ -152,7 +152,7 @@ public class ByteVector2 {
         return this;
     }
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public ByteVector2 m10535g(int i) {
         int i2 = this.f26154b;
         int i3 = i2 + 1;
@@ -164,7 +164,7 @@ public class ByteVector2 {
         return this;
     }
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public ByteVector2 m10536h(byte[] bArr, int i, int i2) {
         if (this.f26154b + i2 > this.f26153a.length) {
             m10530b(i2);
@@ -176,7 +176,7 @@ public class ByteVector2 {
         return this;
     }
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public ByteVector2 m10537i(int i) {
         int i2 = this.f26154b;
         if (i2 + 4 > this.f26153a.length) {
@@ -194,7 +194,7 @@ public class ByteVector2 {
         return this;
     }
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public ByteVector2 m10538j(int i) {
         int i2 = this.f26154b;
         if (i2 + 2 > this.f26153a.length) {

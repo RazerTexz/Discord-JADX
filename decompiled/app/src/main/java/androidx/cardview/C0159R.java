@@ -2,11 +2,11 @@ package androidx.cardview;
 
 import com.discord.C5419R;
 
-/* renamed from: androidx.cardview.R */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: androidx.cardview.R */
+/* JADX INFO: loaded from: classes.dex */
 public final class C0159R {
 
-    /* renamed from: androidx.cardview.R$attr */
+    /* JADX INFO: renamed from: androidx.cardview.R$attr */
     public static final class attr {
         public static final int cardBackgroundColor = 2130968825;
         public static final int cardCornerRadius = 2130968826;
@@ -25,7 +25,7 @@ public final class C0159R {
         }
     }
 
-    /* renamed from: androidx.cardview.R$color */
+    /* JADX INFO: renamed from: androidx.cardview.R$color */
     public static final class color {
         public static final int cardview_dark_background = 2131099793;
         public static final int cardview_light_background = 2131099794;
@@ -36,7 +36,7 @@ public final class C0159R {
         }
     }
 
-    /* renamed from: androidx.cardview.R$dimen */
+    /* JADX INFO: renamed from: androidx.cardview.R$dimen */
     public static final class dimen {
         public static final int cardview_compat_inset_shadow = 2131165307;
         public static final int cardview_default_elevation = 2131165308;
@@ -46,7 +46,7 @@ public final class C0159R {
         }
     }
 
-    /* renamed from: androidx.cardview.R$style */
+    /* JADX INFO: renamed from: androidx.cardview.R$style */
     public static final class style {
         public static final int Base_CardView = 2131951690;
         public static final int CardView = 2131951908;
@@ -57,7 +57,7 @@ public final class C0159R {
         }
     }
 
-    /* renamed from: androidx.cardview.R$styleable */
+    /* JADX INFO: renamed from: androidx.cardview.R$styleable */
     public static final class styleable {
         public static final int[] CardView = {android.R.attr.minWidth, android.R.attr.minHeight, C5419R.attr.cardBackgroundColor, C5419R.attr.cardCornerRadius, C5419R.attr.cardElevation, C5419R.attr.cardMaxElevation, C5419R.attr.cardPreventCornerOverlap, C5419R.attr.cardUseCompatPadding, C5419R.attr.contentPadding, C5419R.attr.contentPaddingBottom, C5419R.attr.contentPaddingLeft, C5419R.attr.contentPaddingRight, C5419R.attr.contentPaddingTop};
         public static final int CardView_android_minHeight = 1;

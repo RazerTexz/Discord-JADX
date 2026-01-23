@@ -4,7 +4,7 @@ import android.content.Context;
 import android.net.Uri;
 import org.json.JSONObject;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public interface IActivityHandler {
     void addSessionCallbackParameter(String str, String str2);
 

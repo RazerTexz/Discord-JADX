@@ -17,7 +17,7 @@ import java.lang.ref.WeakReference;
 import java.util.ArrayList;
 import java.util.Iterator;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class FrameMetricsAggregator {
     public static final int ANIMATION_DURATION = 256;
     public static final int ANIMATION_INDEX = 8;
@@ -52,7 +52,7 @@ public class FrameMetricsAggregator {
         private ArrayList<WeakReference<Activity>> mActivities = new ArrayList<>();
         public Window.OnFrameMetricsAvailableListener mListener = new WindowOnFrameMetricsAvailableListenerC02181();
 
-        /* renamed from: androidx.core.app.FrameMetricsAggregator$FrameMetricsApi24Impl$1 */
+        /* JADX INFO: renamed from: androidx.core.app.FrameMetricsAggregator$FrameMetricsApi24Impl$1 */
         public class WindowOnFrameMetricsAvailableListenerC02181 implements Window.OnFrameMetricsAvailableListener {
             public WindowOnFrameMetricsAvailableListenerC02181() {
             }

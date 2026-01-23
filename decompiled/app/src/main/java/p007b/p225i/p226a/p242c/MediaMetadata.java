@@ -7,283 +7,283 @@ import java.util.Arrays;
 import p007b.p225i.p226a.p242c.Bundleable;
 import p007b.p225i.p226a.p242c.p259f3.Util2;
 
-/* compiled from: MediaMetadata.java */
-/* renamed from: b.i.a.c.p1, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.p1, reason: use source file name */
+/* JADX INFO: compiled from: MediaMetadata.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class MediaMetadata implements Bundleable {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static final MediaMetadata f7368j = new b().m3345a();
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public static final Bundleable.a<MediaMetadata> f7369k = C2818l0.f7237a;
 
-    /* renamed from: A */
+    /* JADX INFO: renamed from: A */
     @Nullable
     public final Integer f7370A;
 
-    /* renamed from: B */
+    /* JADX INFO: renamed from: B */
     @Nullable
     public final Boolean f7371B;
 
-    /* renamed from: C */
+    /* JADX INFO: renamed from: C */
     @Nullable
     @Deprecated
     public final Integer f7372C;
 
-    /* renamed from: D */
+    /* JADX INFO: renamed from: D */
     @Nullable
     public final Integer f7373D;
 
-    /* renamed from: E */
+    /* JADX INFO: renamed from: E */
     @Nullable
     public final Integer f7374E;
 
-    /* renamed from: F */
+    /* JADX INFO: renamed from: F */
     @Nullable
     public final Integer f7375F;
 
-    /* renamed from: G */
+    /* JADX INFO: renamed from: G */
     @Nullable
     public final Integer f7376G;
 
-    /* renamed from: H */
+    /* JADX INFO: renamed from: H */
     @Nullable
     public final Integer f7377H;
 
-    /* renamed from: I */
+    /* JADX INFO: renamed from: I */
     @Nullable
     public final Integer f7378I;
 
-    /* renamed from: J */
+    /* JADX INFO: renamed from: J */
     @Nullable
     public final CharSequence f7379J;
 
-    /* renamed from: K */
+    /* JADX INFO: renamed from: K */
     @Nullable
     public final CharSequence f7380K;
 
-    /* renamed from: L */
+    /* JADX INFO: renamed from: L */
     @Nullable
     public final CharSequence f7381L;
 
-    /* renamed from: M */
+    /* JADX INFO: renamed from: M */
     @Nullable
     public final Integer f7382M;
 
-    /* renamed from: N */
+    /* JADX INFO: renamed from: N */
     @Nullable
     public final Integer f7383N;
 
-    /* renamed from: O */
+    /* JADX INFO: renamed from: O */
     @Nullable
     public final CharSequence f7384O;
 
-    /* renamed from: P */
+    /* JADX INFO: renamed from: P */
     @Nullable
     public final CharSequence f7385P;
 
-    /* renamed from: Q */
+    /* JADX INFO: renamed from: Q */
     @Nullable
     public final Bundle f7386Q;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     @Nullable
     public final CharSequence f7387l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     @Nullable
     public final CharSequence f7388m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     @Nullable
     public final CharSequence f7389n;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     @Nullable
     public final CharSequence f7390o;
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     @Nullable
     public final CharSequence f7391p;
 
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     @Nullable
     public final CharSequence f7392q;
 
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     @Nullable
     public final CharSequence f7393r;
 
-    /* renamed from: s */
+    /* JADX INFO: renamed from: s */
     @Nullable
     public final Uri f7394s;
 
-    /* renamed from: t */
+    /* JADX INFO: renamed from: t */
     @Nullable
     public final Rating f7395t;
 
-    /* renamed from: u */
+    /* JADX INFO: renamed from: u */
     @Nullable
     public final Rating f7396u;
 
-    /* renamed from: v */
+    /* JADX INFO: renamed from: v */
     @Nullable
     public final byte[] f7397v;
 
-    /* renamed from: w */
+    /* JADX INFO: renamed from: w */
     @Nullable
     public final Integer f7398w;
 
-    /* renamed from: x */
+    /* JADX INFO: renamed from: x */
     @Nullable
     public final Uri f7399x;
 
-    /* renamed from: y */
+    /* JADX INFO: renamed from: y */
     @Nullable
     public final Integer f7400y;
 
-    /* renamed from: z */
+    /* JADX INFO: renamed from: z */
     @Nullable
     public final Integer f7401z;
 
-    /* compiled from: MediaMetadata.java */
-    /* renamed from: b.i.a.c.p1$b */
+    /* JADX INFO: renamed from: b.i.a.c.p1$b */
+    /* JADX INFO: compiled from: MediaMetadata.java */
     public static final class b {
 
-        /* renamed from: A */
+        /* JADX INFO: renamed from: A */
         @Nullable
         public Integer f7402A;
 
-        /* renamed from: B */
+        /* JADX INFO: renamed from: B */
         @Nullable
         public Integer f7403B;
 
-        /* renamed from: C */
+        /* JADX INFO: renamed from: C */
         @Nullable
         public CharSequence f7404C;
 
-        /* renamed from: D */
+        /* JADX INFO: renamed from: D */
         @Nullable
         public CharSequence f7405D;
 
-        /* renamed from: E */
+        /* JADX INFO: renamed from: E */
         @Nullable
         public Bundle f7406E;
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         @Nullable
         public CharSequence f7407a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         @Nullable
         public CharSequence f7408b;
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         @Nullable
         public CharSequence f7409c;
 
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         @Nullable
         public CharSequence f7410d;
 
-        /* renamed from: e */
+        /* JADX INFO: renamed from: e */
         @Nullable
         public CharSequence f7411e;
 
-        /* renamed from: f */
+        /* JADX INFO: renamed from: f */
         @Nullable
         public CharSequence f7412f;
 
-        /* renamed from: g */
+        /* JADX INFO: renamed from: g */
         @Nullable
         public CharSequence f7413g;
 
-        /* renamed from: h */
+        /* JADX INFO: renamed from: h */
         @Nullable
         public Uri f7414h;
 
-        /* renamed from: i */
+        /* JADX INFO: renamed from: i */
         @Nullable
         public Rating f7415i;
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         @Nullable
         public Rating f7416j;
 
-        /* renamed from: k */
+        /* JADX INFO: renamed from: k */
         @Nullable
         public byte[] f7417k;
 
-        /* renamed from: l */
+        /* JADX INFO: renamed from: l */
         @Nullable
         public Integer f7418l;
 
-        /* renamed from: m */
+        /* JADX INFO: renamed from: m */
         @Nullable
         public Uri f7419m;
 
-        /* renamed from: n */
+        /* JADX INFO: renamed from: n */
         @Nullable
         public Integer f7420n;
 
-        /* renamed from: o */
+        /* JADX INFO: renamed from: o */
         @Nullable
         public Integer f7421o;
 
-        /* renamed from: p */
+        /* JADX INFO: renamed from: p */
         @Nullable
         public Integer f7422p;
 
-        /* renamed from: q */
+        /* JADX INFO: renamed from: q */
         @Nullable
         public Boolean f7423q;
 
-        /* renamed from: r */
+        /* JADX INFO: renamed from: r */
         @Nullable
         public Integer f7424r;
 
-        /* renamed from: s */
+        /* JADX INFO: renamed from: s */
         @Nullable
         public Integer f7425s;
 
-        /* renamed from: t */
+        /* JADX INFO: renamed from: t */
         @Nullable
         public Integer f7426t;
 
-        /* renamed from: u */
+        /* JADX INFO: renamed from: u */
         @Nullable
         public Integer f7427u;
 
-        /* renamed from: v */
+        /* JADX INFO: renamed from: v */
         @Nullable
         public Integer f7428v;
 
-        /* renamed from: w */
+        /* JADX INFO: renamed from: w */
         @Nullable
         public Integer f7429w;
 
-        /* renamed from: x */
+        /* JADX INFO: renamed from: x */
         @Nullable
         public CharSequence f7430x;
 
-        /* renamed from: y */
+        /* JADX INFO: renamed from: y */
         @Nullable
         public CharSequence f7431y;
 
-        /* renamed from: z */
+        /* JADX INFO: renamed from: z */
         @Nullable
         public CharSequence f7432z;
 
         public b() {
         }
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public MediaMetadata m3345a() {
             return new MediaMetadata(this, null);
         }
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public b m3346b(byte[] bArr, int i) {
             if (this.f7417k == null || Util2.m2993a(Integer.valueOf(i), 3) || !Util2.m2993a(this.f7418l, 3)) {
                 this.f7417k = (byte[]) bArr.clone();
@@ -363,12 +363,12 @@ public final class MediaMetadata implements Bundleable {
         this.f7386Q = bVar.f7406E;
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static String m3343b(int i) {
         return Integer.toString(i, 36);
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public b m3344a() {
         return new b(this, null);
     }

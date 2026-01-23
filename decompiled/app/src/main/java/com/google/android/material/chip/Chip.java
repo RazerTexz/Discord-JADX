@@ -65,7 +65,7 @@ import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.util.List;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public class Chip extends AppCompatCheckBox implements ChipDrawable.Delegate, Shapeable {
     private static final String BUTTON_ACCESSIBILITY_CLASS_NAME = "android.widget.Button";
     private static final int CHIP_BODY_VIRTUAL_ID = 0;
@@ -110,7 +110,7 @@ public class Chip extends AppCompatCheckBox implements ChipDrawable.Delegate, Sh
     private static final int[] SELECTED_STATE = {R.attr.state_selected};
     private static final int[] CHECKABLE_STATE_SET = {R.attr.state_checkable};
 
-    /* renamed from: com.google.android.material.chip.Chip$a */
+    /* JADX INFO: renamed from: com.google.android.material.chip.Chip$a */
     public class C10872a extends TextAppearanceFontCallback {
         public C10872a() {
         }
@@ -128,7 +128,7 @@ public class Chip extends AppCompatCheckBox implements ChipDrawable.Delegate, Sh
         }
     }
 
-    /* renamed from: com.google.android.material.chip.Chip$b */
+    /* JADX INFO: renamed from: com.google.android.material.chip.Chip$b */
     public class C10873b extends ViewOutlineProvider {
         public C10873b() {
         }
@@ -144,7 +144,7 @@ public class Chip extends AppCompatCheckBox implements ChipDrawable.Delegate, Sh
         }
     }
 
-    /* renamed from: com.google.android.material.chip.Chip$c */
+    /* JADX INFO: renamed from: com.google.android.material.chip.Chip$c */
     public class C10874c extends ExploreByTouchHelper {
         public C10874c(Chip chip) {
             super(chip);
@@ -334,7 +334,7 @@ public class Chip extends AppCompatCheckBox implements ChipDrawable.Delegate, Sh
     }
 
     @SuppressLint({"PrivateApi"})
-    private boolean handleAccessibilityExit(@NonNull MotionEvent motionEvent) throws SecurityException, IllegalArgumentException {
+    private boolean handleAccessibilityExit(@NonNull MotionEvent motionEvent) {
         if (motionEvent.getAction() == 10) {
             try {
                 Field declaredField = ExploreByTouchHelper.class.getDeclaredField("mHoveredVirtualViewId");

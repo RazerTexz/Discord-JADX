@@ -7,8 +7,8 @@ import java.util.ListIterator;
 import p507d0.p592z.p594d.Intrinsics3;
 import p637j0.p641k.Func1;
 
-/* compiled from: WidgetSettingsPrivacy.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetSettingsPrivacy.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetSettingsPrivacy$Model$Companion$get$1<T, R> implements Func1<StoreUserConnections.State, ConnectedAccount> {
     public static final WidgetSettingsPrivacy$Model$Companion$get$1 INSTANCE = new WidgetSettingsPrivacy$Model$Companion$get$1();
 
@@ -17,7 +17,7 @@ public final class WidgetSettingsPrivacy$Model$Companion$get$1<T, R> implements 
         return call2(state);
     }
 
-    /* renamed from: call, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
     public final ConnectedAccount call2(StoreUserConnections.State state) {
         ConnectedAccount connectedAccountPrevious;
         Intrinsics3.checkNotNullExpressionValue(state, "accounts");

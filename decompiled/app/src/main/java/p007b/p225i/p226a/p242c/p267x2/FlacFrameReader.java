@@ -4,25 +4,25 @@ import org.objectweb.asm.Opcodes;
 import p007b.p225i.p226a.p242c.p259f3.ParsableByteArray;
 import p007b.p225i.p226a.p242c.p259f3.Util2;
 
-/* compiled from: FlacFrameReader.java */
-/* renamed from: b.i.a.c.x2.m, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.x2.m, reason: use source file name */
+/* JADX INFO: compiled from: FlacFrameReader.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class FlacFrameReader {
 
-    /* compiled from: FlacFrameReader.java */
-    /* renamed from: b.i.a.c.x2.m$a */
+    /* JADX INFO: renamed from: b.i.a.c.x2.m$a */
+    /* JADX INFO: compiled from: FlacFrameReader.java */
     public static final class a {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public long f8967a;
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static boolean m3802a(ParsableByteArray parsableByteArray, FlacStreamMetadata flacStreamMetadata, boolean z2, a aVar) {
         try {
             long jM3106z = parsableByteArray.m3106z();
             if (!z2) {
-                jM3106z *= flacStreamMetadata.f8971b;
+                jM3106z *= (long) flacStreamMetadata.f8971b;
             }
             aVar.f8967a = jM3106z;
             return true;
@@ -33,7 +33,7 @@ public final class FlacFrameReader {
 
     /* JADX WARN: Removed duplicated region for block: B:61:0x00ac  */
     /* JADX WARN: Removed duplicated region for block: B:62:0x00ae  */
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
@@ -91,7 +91,7 @@ public final class FlacFrameReader {
         return iM3100t == i10;
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public static int m3804c(ParsableByteArray parsableByteArray, int i) {
         switch (i) {
             case 1:

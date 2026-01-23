@@ -6,15 +6,15 @@ import p007b.p100d.p104b.p105a.outline;
 import p007b.p225i.p226a.p288f.p299e.p308o.C3404f;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: JvmOkio.kt */
-/* renamed from: g0.p, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: g0.p, reason: use source file name */
+/* JADX INFO: compiled from: JvmOkio.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class JvmOkio2 implements Sink {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final OutputStream f26109j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final Timeout2 f26110k;
 
     public JvmOkio2(OutputStream outputStream, Timeout2 timeout2) {

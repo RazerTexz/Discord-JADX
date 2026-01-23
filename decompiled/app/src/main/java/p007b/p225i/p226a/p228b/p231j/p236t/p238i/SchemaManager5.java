@@ -1,31 +1,30 @@
 package p007b.p225i.p226a.p228b.p231j.p236t.p238i;
 
 import android.content.Context;
-import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import java.util.Arrays;
 import java.util.List;
 import p007b.p100d.p104b.p105a.outline;
 
-/* compiled from: SchemaManager.java */
-/* renamed from: b.i.a.b.j.t.i.z, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.b.j.t.i.z, reason: use source file name */
+/* JADX INFO: compiled from: SchemaManager.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class SchemaManager5 extends SQLiteOpenHelper {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static final List<a> f5456j = Arrays.asList(SchemaManager.f5452a, SchemaManager2.f5453a, SchemaManager3.f5454a, SchemaManager4.f5455a);
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final int f5457k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public boolean f5458l;
 
-    /* compiled from: SchemaManager.java */
-    /* renamed from: b.i.a.b.j.t.i.z$a */
+    /* JADX INFO: renamed from: b.i.a.b.j.t.i.z$a */
+    /* JADX INFO: compiled from: SchemaManager.java */
     public interface a {
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         void mo2411a(SQLiteDatabase sQLiteDatabase);
     }
 
@@ -35,7 +34,7 @@ public final class SchemaManager5 extends SQLiteOpenHelper {
         this.f5457k = i;
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final void m2412a(SQLiteDatabase sQLiteDatabase, int i, int i2) {
         List<a> list = f5456j;
         if (i2 <= list.size()) {
@@ -68,7 +67,7 @@ public final class SchemaManager5 extends SQLiteOpenHelper {
     }
 
     @Override // android.database.sqlite.SQLiteOpenHelper
-    public void onDowngrade(SQLiteDatabase sQLiteDatabase, int i, int i2) throws SQLException {
+    public void onDowngrade(SQLiteDatabase sQLiteDatabase, int i, int i2) {
         sQLiteDatabase.execSQL("DROP TABLE events");
         sQLiteDatabase.execSQL("DROP TABLE event_metadata");
         sQLiteDatabase.execSQL("DROP TABLE transport_contexts");

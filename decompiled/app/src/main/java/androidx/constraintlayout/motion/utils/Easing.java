@@ -5,7 +5,7 @@ import com.discord.analytics.utils.RegistrationSteps;
 import java.util.Arrays;
 import p007b.p100d.p104b.p105a.outline;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class Easing {
     private static final String ACCELERATE = "cubic(0.4, 0.05, 0.8, 0.7)";
     private static final String DECELERATE = "cubic(0.0, 0.0, 0.2, 0.95)";
@@ -60,16 +60,16 @@ public class Easing {
         private static double d_error = 1.0E-4d;
         private static double error = 0.01d;
 
-        /* renamed from: x1 */
+        /* JADX INFO: renamed from: x1 */
         public double f92x1;
 
-        /* renamed from: x2 */
+        /* JADX INFO: renamed from: x2 */
         public double f93x2;
 
-        /* renamed from: y1 */
+        /* JADX INFO: renamed from: y1 */
         public double f94y1;
 
-        /* renamed from: y2 */
+        /* JADX INFO: renamed from: y2 */
         public double f95y2;
 
         public CubicEasing(String str) {

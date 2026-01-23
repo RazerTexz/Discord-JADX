@@ -7,22 +7,22 @@ import java.util.Collections;
 import java.util.List;
 import java.util.RandomAccess;
 
-/* compiled from: LazyStringArrayList.java */
-/* renamed from: d0.e0.p.d.m0.i.k, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.i.k, reason: use source file name */
+/* JADX INFO: compiled from: LazyStringArrayList.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class LazyStringArrayList extends AbstractList<String> implements RandomAccess, LazyStringList {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static final LazyStringList f24147j = new LazyStringArrayList().getUnmodifiableView();
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final List<Object> f24148k;
 
     public LazyStringArrayList() {
         this.f24148k = new ArrayList();
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public static String m9856c(Object obj) {
         return obj instanceof String ? (String) obj : obj instanceof ByteString3 ? ((ByteString3) obj).toStringUtf8() : Internal.toStringUtf8((byte[]) obj);
     }

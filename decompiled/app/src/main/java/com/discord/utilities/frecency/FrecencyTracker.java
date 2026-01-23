@@ -14,8 +14,8 @@ import p507d0.p580t._Collections;
 import p507d0.p582u.C12169a;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: FrecencyTracker.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: FrecencyTracker.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public abstract class FrecencyTracker<T> {
     private final int maxSamples;
     private final int minScoreThreshold;
@@ -23,8 +23,8 @@ public abstract class FrecencyTracker<T> {
     private transient boolean dirty = true;
     private transient List<? extends T> sortedKeys = Collections2.emptyList();
 
-    /* compiled from: FrecencyTracker.kt */
-    /* renamed from: com.discord.utilities.frecency.FrecencyTracker$computeScores$1 */
+    /* JADX INFO: renamed from: com.discord.utilities.frecency.FrecencyTracker$computeScores$1 */
+    /* JADX INFO: compiled from: FrecencyTracker.kt */
     public static final class C67571<T> implements Comparator<T> {
         public final /* synthetic */ HashMap $scores;
 

@@ -7,26 +7,26 @@ import p007b.p225i.p226a.p242c.p279z2.p282j.IcyDecoder;
 import p007b.p225i.p226a.p242c.p279z2.p283k.Id3Decoder;
 import p007b.p225i.p226a.p242c.p279z2.p284l.SpliceInfoDecoder;
 
-/* compiled from: MetadataDecoderFactory.java */
-/* renamed from: b.i.a.c.z2.c, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.z2.c, reason: use source file name */
+/* JADX INFO: compiled from: MetadataDecoderFactory.java */
+/* JADX INFO: loaded from: classes3.dex */
 public interface MetadataDecoderFactory {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final MetadataDecoderFactory f9136a = new a();
 
-    /* compiled from: MetadataDecoderFactory.java */
-    /* renamed from: b.i.a.c.z2.c$a */
+    /* JADX INFO: renamed from: b.i.a.c.z2.c$a */
+    /* JADX INFO: compiled from: MetadataDecoderFactory.java */
     public class a implements MetadataDecoderFactory {
         @Override // p007b.p225i.p226a.p242c.p279z2.MetadataDecoderFactory
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public boolean mo3896a(Format2 format2) {
             String str = format2.f7155w;
             return "application/id3".equals(str) || "application/x-emsg".equals(str) || "application/x-scte35".equals(str) || "application/x-icy".equals(str) || "application/vnd.dvb.ait".equals(str);
         }
 
         @Override // p007b.p225i.p226a.p242c.p279z2.MetadataDecoderFactory
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public MetadataDecoder mo3897b(Format2 format2) {
             String str = format2.f7155w;
             if (str != null) {
@@ -48,9 +48,9 @@ public interface MetadataDecoderFactory {
         }
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     boolean mo3896a(Format2 format2);
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     MetadataDecoder mo3897b(Format2 format2);
 }

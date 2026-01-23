@@ -8,9 +8,9 @@ import p507d0.Result2;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: StageChannelJoinHelper.kt */
-/* renamed from: com.discord.widgets.stage.StageChannelJoinHelper$lurkAndJoinStageAsync$2$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.stage.StageChannelJoinHelper$lurkAndJoinStageAsync$2$1, reason: use source file name */
+/* JADX INFO: compiled from: StageChannelJoinHelper.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class StageChannelJoinHelper4 extends Lambda implements Function3<Guild, Long, Boolean, Unit> {
     public final /* synthetic */ CancellableContinuation $continuation;
 

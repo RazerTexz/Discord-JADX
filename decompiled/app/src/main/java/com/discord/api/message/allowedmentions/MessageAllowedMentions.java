@@ -4,8 +4,8 @@ import java.util.List;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: MessageAllowedMentions.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: MessageAllowedMentions.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class MessageAllowedMentions {
     private final List<MessageAllowedMentions2> parse;
     private final Boolean repliedUser;
@@ -27,22 +27,22 @@ public final /* data */ class MessageAllowedMentions {
         this.repliedUser = bool;
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final List<MessageAllowedMentions2> m8060a() {
         return this.parse;
     }
 
-    /* renamed from: b, reason: from getter */
+    /* JADX INFO: renamed from: b, reason: from getter */
     public final Boolean getRepliedUser() {
         return this.repliedUser;
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final List<Long> m8062c() {
         return this.roles;
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final List<Long> m8063d() {
         return this.users;
     }

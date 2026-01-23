@@ -4,8 +4,8 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p658rx.Observable;
 import p658rx.subjects.BehaviorSubject;
 
-/* compiled from: ViewVisibilityObserver.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: ViewVisibilityObserver.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class ViewVisibilityObserver {
     private final BehaviorSubject<Boolean> isVisibleSubject = BehaviorSubject.m11129k0();
 

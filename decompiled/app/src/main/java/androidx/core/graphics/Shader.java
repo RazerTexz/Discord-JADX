@@ -5,9 +5,9 @@ import kotlin.Unit;
 import kotlin.jvm.functions.Function1;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: Shader.kt */
-/* renamed from: androidx.core.graphics.ShaderKt, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: androidx.core.graphics.ShaderKt, reason: use source file name */
+/* JADX INFO: compiled from: Shader.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class Shader {
     public static final void transform(android.graphics.Shader shader, Function1<? super Matrix, Unit> function1) {
         Intrinsics3.checkNotNullParameter(shader, "<this>");

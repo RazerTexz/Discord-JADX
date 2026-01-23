@@ -11,7 +11,7 @@ import android.view.View;
 import androidx.constraintlayout.solver.widgets.ConstraintWidget;
 import androidx.constraintlayout.widget.ConstraintLayout;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class Placeholder extends View {
     private View mContent;
     private int mContentId;

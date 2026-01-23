@@ -8,28 +8,28 @@ import java.util.regex.Pattern;
 import p007b.p225i.p361c.p401u.p402o.PersistedInstallationEntry;
 import p007b.p225i.p361c.p401u.p404q.SystemClock3;
 
-/* compiled from: Utils.java */
-/* renamed from: b.i.c.u.n, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.c.u.n, reason: use source file name */
+/* JADX INFO: compiled from: Utils.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class Utils6 {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final long f12948a = TimeUnit.HOURS.toSeconds(1);
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static final Pattern f12949b = Pattern.compile("\\AA[\\w-]{38}\\z");
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public static Utils6 f12950c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final SystemClock3 f12951d;
 
     public Utils6(SystemClock3 systemClock3) {
         this.f12951d = systemClock3;
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public static Utils6 m6770c() {
         if (SystemClock3.f13007a == null) {
             SystemClock3.f13007a = new SystemClock3();
@@ -41,18 +41,18 @@ public final class Utils6 {
         return f12950c;
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public long m6771a() {
         Objects.requireNonNull(this.f12951d);
         return System.currentTimeMillis();
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public long m6772b() {
         return TimeUnit.MILLISECONDS.toSeconds(m6771a());
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public boolean m6773d(@NonNull PersistedInstallationEntry persistedInstallationEntry) {
         if (TextUtils.isEmpty(persistedInstallationEntry.mo6774a())) {
             return true;

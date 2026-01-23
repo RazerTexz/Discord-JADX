@@ -46,23 +46,23 @@ import p507d0.p592z.p594d.Reflection2;
 import p658rx.Observable;
 import p658rx.subscriptions.CompositeSubscription;
 
-/* compiled from: WidgetGuildStickerSheet.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: WidgetGuildStickerSheet.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class WidgetGuildStickerSheet extends AppBottomSheet {
     public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetGuildStickerSheet.class, "binding", "getBinding()Lcom/discord/databinding/WidgetGuildStickerSheetBinding;", 0)};
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private static final int VIEW_CONTENT = 0;
     private static final int VIEW_LOADING = 1;
 
-    /* renamed from: binding$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
 
-    /* renamed from: viewModel$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: viewModel$delegate, reason: from kotlin metadata */
     private final Lazy viewModel;
 
-    /* compiled from: WidgetGuildStickerSheet.kt */
+    /* JADX INFO: compiled from: WidgetGuildStickerSheet.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -85,8 +85,8 @@ public final class WidgetGuildStickerSheet extends AppBottomSheet {
         }
     }
 
-    /* compiled from: WidgetGuildStickerSheet.kt */
-    /* renamed from: com.discord.widgets.stickers.WidgetGuildStickerSheet$bindSubscriptions$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.stickers.WidgetGuildStickerSheet$bindSubscriptions$1 */
+    /* JADX INFO: compiled from: WidgetGuildStickerSheet.kt */
     public static final class C101331 extends Lambda implements Function1<GuildStickerSheetViewModel.ViewState, Unit> {
         public C101331() {
             super(1);
@@ -98,7 +98,7 @@ public final class WidgetGuildStickerSheet extends AppBottomSheet {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(GuildStickerSheetViewModel.ViewState viewState) {
             if (Intrinsics3.areEqual(viewState, GuildStickerSheetViewModel.ViewState.Loading.INSTANCE)) {
                 WidgetGuildStickerSheet.access$showLoading(WidgetGuildStickerSheet.this);

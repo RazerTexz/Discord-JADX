@@ -5,12 +5,12 @@ import android.widget.FrameLayout;
 import androidx.annotation.NonNull;
 import androidx.viewbinding.ViewBinding;
 
-/* compiled from: ViewGenericLoadingBinding.java */
-/* renamed from: b.a.i.j2, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.a.i.j2, reason: use source file name */
+/* JADX INFO: compiled from: ViewGenericLoadingBinding.java */
+/* JADX INFO: loaded from: classes.dex */
 public final class ViewGenericLoadingBinding implements ViewBinding {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     @NonNull
     public final FrameLayout f972a;
 

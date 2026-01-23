@@ -8,20 +8,20 @@ import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import java.util.Objects;
 
-/* renamed from: b.i.a.f.h.j.n0 */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.h.j.n0 */
+/* JADX INFO: loaded from: classes3.dex */
 public class C3531n0 extends BroadcastReceiver {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final String f9764a = C3531n0.class.getName();
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final C3515g f9765b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public boolean f9766c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public boolean f9767d;
 
     public C3531n0(C3515g c3515g) {
@@ -29,7 +29,7 @@ public class C3531n0 extends BroadcastReceiver {
         this.f9765b = c3515g;
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final void m4466a() {
         if (this.f9766c) {
             this.f9765b.m4451c().m4427C("Unregistering connectivity change receiver");
@@ -43,7 +43,7 @@ public class C3531n0 extends BroadcastReceiver {
         }
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final boolean m4467b() {
         try {
             NetworkInfo activeNetworkInfo = ((ConnectivityManager) this.f9765b.f9722b.getSystemService("connectivity")).getActiveNetworkInfo();

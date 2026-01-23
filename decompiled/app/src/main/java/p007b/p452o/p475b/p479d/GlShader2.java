@@ -8,19 +8,19 @@ import p007b.p452o.p475b.p478c.gl;
 import p507d0.UInt;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: GlShader.kt */
-/* renamed from: b.o.b.d.c, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.o.b.d.c, reason: use source file name */
+/* JADX INFO: compiled from: GlShader.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class GlShader2 {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final a f14316a = new a(null);
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final int f14317b;
 
-    /* compiled from: GlShader.kt */
-    /* renamed from: b.o.b.d.c$a */
+    /* JADX INFO: renamed from: b.o.b.d.c$a */
+    /* JADX INFO: compiled from: GlShader.kt */
     public static final class a {
         public a(DefaultConstructorMarker defaultConstructorMarker) {
         }

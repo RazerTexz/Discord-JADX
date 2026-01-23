@@ -20,7 +20,7 @@ import p007b.p100d.p104b.p105a.outline;
 import p007b.p225i.p355b.p359d.p360a.ListenableFuture8;
 import p677y.p678a.p680b.RunnableC13189c;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public final class TrustedWebActivityServiceConnectionPool {
     private static final String TAG = "TWAConnectionPool";
     private final Map<Uri, ConnectionHolder> mConnections = new HashMap();
@@ -49,7 +49,7 @@ public final class TrustedWebActivityServiceConnectionPool {
         }
 
         @Nullable
-        /* renamed from: doInBackground, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: doInBackground, reason: avoid collision after fix types in other method */
         public Exception doInBackground2(Void... voidArr) {
             try {
                 if (this.mAppContext.bindService(this.mIntent, this.mConnection, FragmentTransaction.TRANSIT_FRAGMENT_OPEN)) {
@@ -63,7 +63,7 @@ public final class TrustedWebActivityServiceConnectionPool {
             }
         }
 
-        /* renamed from: onPostExecute, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: onPostExecute, reason: avoid collision after fix types in other method */
         public void onPostExecute2(Exception exc) {
             if (exc != null) {
                 this.mConnection.cancel(exc);
@@ -131,7 +131,7 @@ public final class TrustedWebActivityServiceConnectionPool {
         return intent3;
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public /* synthetic */ void m79a(Uri uri) {
         this.mConnections.remove(uri);
     }

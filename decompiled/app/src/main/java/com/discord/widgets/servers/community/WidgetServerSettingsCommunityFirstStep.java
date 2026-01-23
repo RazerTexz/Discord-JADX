@@ -33,22 +33,22 @@ import p507d0.p592z.p594d.Lambda;
 import p507d0.p592z.p594d.Reflection2;
 import p658rx.Observable;
 
-/* compiled from: WidgetServerSettingsCommunityFirstStep.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetServerSettingsCommunityFirstStep.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetServerSettingsCommunityFirstStep extends AppFragment {
     public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetServerSettingsCommunityFirstStep.class, "binding", "getBinding()Lcom/discord/databinding/WidgetServerSettingsCommunitySetupFirstStepBinding;", 0)};
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
 
-    /* renamed from: binding$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
     private ToastManager toastManager;
 
-    /* renamed from: viewModel$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: viewModel$delegate, reason: from kotlin metadata */
     private final Lazy viewModel;
 
-    /* compiled from: WidgetServerSettingsCommunityFirstStep.kt */
+    /* JADX INFO: compiled from: WidgetServerSettingsCommunityFirstStep.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -63,14 +63,14 @@ public final class WidgetServerSettingsCommunityFirstStep extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetServerSettingsCommunityFirstStep.kt */
-    /* renamed from: com.discord.widgets.servers.community.WidgetServerSettingsCommunityFirstStep$configureUI$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.community.WidgetServerSettingsCommunityFirstStep$configureUI$1 */
+    /* JADX INFO: compiled from: WidgetServerSettingsCommunityFirstStep.kt */
     public static final class ViewOnClickListenerC93531 implements View.OnClickListener {
         public final /* synthetic */ boolean $guildVerificationLevel;
         public final /* synthetic */ WidgetServerSettingsEnableCommunityViewModel.ViewState.Loaded $viewState;
 
-        /* compiled from: WidgetServerSettingsCommunityFirstStep.kt */
-        /* renamed from: com.discord.widgets.servers.community.WidgetServerSettingsCommunityFirstStep$configureUI$1$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.widgets.servers.community.WidgetServerSettingsCommunityFirstStep$configureUI$1$1, reason: invalid class name */
+        /* JADX INFO: compiled from: WidgetServerSettingsCommunityFirstStep.kt */
         public static final class AnonymousClass1 extends Lambda implements Function1<WidgetServerSettingsEnableCommunityViewModel.CommunityGuildConfig, WidgetServerSettingsEnableCommunityViewModel.CommunityGuildConfig> {
             public AnonymousClass1() {
                 super(1);
@@ -81,7 +81,7 @@ public final class WidgetServerSettingsCommunityFirstStep extends AppFragment {
                 return invoke2(communityGuildConfig);
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final WidgetServerSettingsEnableCommunityViewModel.CommunityGuildConfig invoke2(WidgetServerSettingsEnableCommunityViewModel.CommunityGuildConfig communityGuildConfig) {
                 Intrinsics3.checkNotNullParameter(communityGuildConfig, "it");
                 Intrinsics3.checkNotNullExpressionValue(WidgetServerSettingsCommunityFirstStep.access$getBinding$p(WidgetServerSettingsCommunityFirstStep.this).f17583c, "binding.communitySettingsVerifiedEmailedSwitch");
@@ -104,14 +104,14 @@ public final class WidgetServerSettingsCommunityFirstStep extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetServerSettingsCommunityFirstStep.kt */
-    /* renamed from: com.discord.widgets.servers.community.WidgetServerSettingsCommunityFirstStep$configureUI$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.community.WidgetServerSettingsCommunityFirstStep$configureUI$2 */
+    /* JADX INFO: compiled from: WidgetServerSettingsCommunityFirstStep.kt */
     public static final class ViewOnClickListenerC93542 implements View.OnClickListener {
         public final /* synthetic */ boolean $guildExplicitContentFilter;
         public final /* synthetic */ WidgetServerSettingsEnableCommunityViewModel.ViewState.Loaded $viewState;
 
-        /* compiled from: WidgetServerSettingsCommunityFirstStep.kt */
-        /* renamed from: com.discord.widgets.servers.community.WidgetServerSettingsCommunityFirstStep$configureUI$2$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.widgets.servers.community.WidgetServerSettingsCommunityFirstStep$configureUI$2$1, reason: invalid class name */
+        /* JADX INFO: compiled from: WidgetServerSettingsCommunityFirstStep.kt */
         public static final class AnonymousClass1 extends Lambda implements Function1<WidgetServerSettingsEnableCommunityViewModel.CommunityGuildConfig, WidgetServerSettingsEnableCommunityViewModel.CommunityGuildConfig> {
             public AnonymousClass1() {
                 super(1);
@@ -122,7 +122,7 @@ public final class WidgetServerSettingsCommunityFirstStep extends AppFragment {
                 return invoke2(communityGuildConfig);
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final WidgetServerSettingsEnableCommunityViewModel.CommunityGuildConfig invoke2(WidgetServerSettingsEnableCommunityViewModel.CommunityGuildConfig communityGuildConfig) {
                 Intrinsics3.checkNotNullParameter(communityGuildConfig, "it");
                 Intrinsics3.checkNotNullExpressionValue(WidgetServerSettingsCommunityFirstStep.access$getBinding$p(WidgetServerSettingsCommunityFirstStep.this).f17582b, "binding.communitySettingsScanMessagesSwitch");
@@ -145,8 +145,8 @@ public final class WidgetServerSettingsCommunityFirstStep extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetServerSettingsCommunityFirstStep.kt */
-    /* renamed from: com.discord.widgets.servers.community.WidgetServerSettingsCommunityFirstStep$onViewBoundOrOnResume$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.community.WidgetServerSettingsCommunityFirstStep$onViewBoundOrOnResume$1 */
+    /* JADX INFO: compiled from: WidgetServerSettingsCommunityFirstStep.kt */
     public static final /* synthetic */ class C93571 extends FunctionReferenceImpl implements Function1<WidgetServerSettingsEnableCommunityViewModel.ViewState.Loaded, Unit> {
         public C93571(WidgetServerSettingsCommunityFirstStep widgetServerSettingsCommunityFirstStep) {
             super(1, widgetServerSettingsCommunityFirstStep, WidgetServerSettingsCommunityFirstStep.class, "configureUI", "configureUI(Lcom/discord/widgets/servers/community/WidgetServerSettingsEnableCommunityViewModel$ViewState$Loaded;)V", 0);
@@ -158,7 +158,7 @@ public final class WidgetServerSettingsCommunityFirstStep extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(WidgetServerSettingsEnableCommunityViewModel.ViewState.Loaded loaded) {
             Intrinsics3.checkNotNullParameter(loaded, "p1");
             WidgetServerSettingsCommunityFirstStep.access$configureUI((WidgetServerSettingsCommunityFirstStep) this.receiver, loaded);

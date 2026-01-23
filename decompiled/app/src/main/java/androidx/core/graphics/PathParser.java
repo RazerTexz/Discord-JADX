@@ -6,7 +6,7 @@ import androidx.annotation.Nullable;
 import java.util.ArrayList;
 import p007b.p100d.p104b.p105a.outline;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class PathParser {
     private static final String LOGTAG = "PathParser";
 
@@ -528,7 +528,7 @@ public class PathParser {
             double d15 = d11 * dSin;
             double d16 = d4 * dCos;
             double d17 = (dCos2 * d16) + (dSin2 * d15);
-            double d18 = d9 / iCeil;
+            double d18 = d9 / ((double) iCeil);
             double d19 = d8;
             double d20 = d17;
             double d21 = d14;
@@ -546,14 +546,16 @@ public class PathParser {
                 double d29 = d24 - d19;
                 double dTan = Math.tan(d29 / 2.0d);
                 double dSqrt = ((Math.sqrt(((dTan * 3.0d) * dTan) + 4.0d) - 1.0d) * Math.sin(d29)) / 3.0d;
+                double d30 = dCos;
+                double d31 = dSin;
                 path.rLineTo(0.0f, 0.0f);
                 path.cubicTo((float) ((d21 * dSqrt) + d22), (float) ((d20 * dSqrt) + d23), (float) (d25 - (dSqrt * d27)), (float) (d26 - (dSqrt * d28)), (float) d25, (float) d26);
                 i++;
                 d18 = d18;
-                dSin = dSin;
+                dSin = d31;
                 d22 = d25;
                 d15 = d15;
-                dCos = dCos;
+                dCos = d30;
                 d19 = d24;
                 d20 = d28;
                 d21 = d27;
@@ -575,10 +577,10 @@ public class PathParser {
             double d6 = f5;
             double d7 = ((d5 * dSin) + d4) / d6;
             double d8 = f6;
-            double d9 = ((d5 * dCos) + ((-f) * dSin)) / d8;
+            double d9 = ((d5 * dCos) + (((double) (-f)) * dSin)) / d8;
             double d10 = f4;
-            double d11 = ((d10 * dSin) + (f3 * dCos)) / d6;
-            double d12 = ((d10 * dCos) + ((-f3) * dSin)) / d8;
+            double d11 = ((d10 * dSin) + (((double) f3) * dCos)) / d6;
+            double d12 = ((d10 * dCos) + (((double) (-f3)) * dSin)) / d8;
             double d13 = d7 - d11;
             double d14 = d9 - d12;
             double d15 = (d7 + d11) / 2.0d;

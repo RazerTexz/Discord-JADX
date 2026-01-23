@@ -27,8 +27,8 @@ import p507d0.p580t._Collections;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetChannelListModel.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetChannelListModel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetChannelListModel$Companion$getSelectedGuildChannelList$1 extends Lambda implements Function22<GuildChannelsInfo, Map<Long, ? extends Channel>, Map<Long, ? extends StoreThreadsJoined.JoinedThread>, Map<Long, ? extends Map<Long, ? extends StoreThreadsActiveJoined.ActiveJoinedThread>>, Set<? extends Long>, Channel, Long, Map<Long, ? extends List<? extends ChannelListItemVoiceUser>>, Map<Long, ? extends Integer>, Set<? extends Long>, Set<? extends Long>, StoreNux.NuxState, Map<Long, ? extends StageChannel>, Map<Long, ? extends StageInstance>, List<? extends GuildScheduledEvent>, Boolean, Boolean, Map<Long, ? extends RestCallState<? extends List<? extends DirectoryEntryGuild>>>, Map<Long, ? extends StoreMessageAck.Ack>, Map<Long, ? extends RestCallState<? extends List<? extends DirectoryEntryGuild2>>>, GuildJoinRequest, GuildMember, WidgetChannelListModel> {
     public final /* synthetic */ long $selectedGuildId;
 

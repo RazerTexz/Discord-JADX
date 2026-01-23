@@ -40,23 +40,23 @@ import p507d0.p592z.p594d.Lambda;
 import p507d0.p592z.p594d.Reflection2;
 import p658rx.Observable;
 
-/* compiled from: MemberVerificationPendingDialog.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: MemberVerificationPendingDialog.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class MemberVerificationPendingDialog extends AppDialog {
     public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(MemberVerificationPendingDialog.class, "binding", "getBinding()Lcom/discord/databinding/WidgetMemberVerificationPendingDialogBinding;", 0)};
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private static final String INTENT_EXTRA_DIALOG_STATE = "INTENT_EXTRA_DIALOG_STATE";
     private static final String INTENT_EXTRA_GUILD_ID = "INTENT_EXTRA_GUILD_ID";
 
-    /* renamed from: binding$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
 
-    /* renamed from: viewModel$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: viewModel$delegate, reason: from kotlin metadata */
     private final Lazy viewModel;
 
-    /* compiled from: MemberVerificationPendingDialog.kt */
+    /* JADX INFO: compiled from: MemberVerificationPendingDialog.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -119,8 +119,8 @@ public final class MemberVerificationPendingDialog extends AppDialog {
         }
     }
 
-    /* compiled from: MemberVerificationPendingDialog.kt */
-    /* renamed from: com.discord.widgets.servers.member_verification.MemberVerificationPendingDialog$configureLoadedUI$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.member_verification.MemberVerificationPendingDialog$configureLoadedUI$1 */
+    /* JADX INFO: compiled from: MemberVerificationPendingDialog.kt */
     public static final class ViewOnClickListenerC95251 implements View.OnClickListener {
         public ViewOnClickListenerC95251() {
         }
@@ -131,8 +131,8 @@ public final class MemberVerificationPendingDialog extends AppDialog {
         }
     }
 
-    /* compiled from: MemberVerificationPendingDialog.kt */
-    /* renamed from: com.discord.widgets.servers.member_verification.MemberVerificationPendingDialog$configureLoadedUI$10 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.member_verification.MemberVerificationPendingDialog$configureLoadedUI$10 */
+    /* JADX INFO: compiled from: MemberVerificationPendingDialog.kt */
     public static final class ViewOnClickListenerC952610 implements View.OnClickListener {
         public ViewOnClickListenerC952610() {
         }
@@ -143,8 +143,8 @@ public final class MemberVerificationPendingDialog extends AppDialog {
         }
     }
 
-    /* compiled from: MemberVerificationPendingDialog.kt */
-    /* renamed from: com.discord.widgets.servers.member_verification.MemberVerificationPendingDialog$configureLoadedUI$11 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.member_verification.MemberVerificationPendingDialog$configureLoadedUI$11 */
+    /* JADX INFO: compiled from: MemberVerificationPendingDialog.kt */
     public static final class ViewOnClickListenerC952711 implements View.OnClickListener {
         public ViewOnClickListenerC952711() {
         }
@@ -157,8 +157,8 @@ public final class MemberVerificationPendingDialog extends AppDialog {
         }
     }
 
-    /* compiled from: MemberVerificationPendingDialog.kt */
-    /* renamed from: com.discord.widgets.servers.member_verification.MemberVerificationPendingDialog$configureLoadedUI$12 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.member_verification.MemberVerificationPendingDialog$configureLoadedUI$12 */
+    /* JADX INFO: compiled from: MemberVerificationPendingDialog.kt */
     public static final class ViewOnClickListenerC952812 implements View.OnClickListener {
         public ViewOnClickListenerC952812() {
         }
@@ -169,8 +169,8 @@ public final class MemberVerificationPendingDialog extends AppDialog {
         }
     }
 
-    /* compiled from: MemberVerificationPendingDialog.kt */
-    /* renamed from: com.discord.widgets.servers.member_verification.MemberVerificationPendingDialog$configureLoadedUI$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.member_verification.MemberVerificationPendingDialog$configureLoadedUI$2 */
+    /* JADX INFO: compiled from: MemberVerificationPendingDialog.kt */
     public static final class ViewOnClickListenerC95292 implements View.OnClickListener {
         public ViewOnClickListenerC95292() {
         }
@@ -181,8 +181,8 @@ public final class MemberVerificationPendingDialog extends AppDialog {
         }
     }
 
-    /* compiled from: MemberVerificationPendingDialog.kt */
-    /* renamed from: com.discord.widgets.servers.member_verification.MemberVerificationPendingDialog$configureLoadedUI$3 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.member_verification.MemberVerificationPendingDialog$configureLoadedUI$3 */
+    /* JADX INFO: compiled from: MemberVerificationPendingDialog.kt */
     public static final class ViewOnClickListenerC95303 implements View.OnClickListener {
         public ViewOnClickListenerC95303() {
         }
@@ -193,8 +193,8 @@ public final class MemberVerificationPendingDialog extends AppDialog {
         }
     }
 
-    /* compiled from: MemberVerificationPendingDialog.kt */
-    /* renamed from: com.discord.widgets.servers.member_verification.MemberVerificationPendingDialog$configureLoadedUI$4 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.member_verification.MemberVerificationPendingDialog$configureLoadedUI$4 */
+    /* JADX INFO: compiled from: MemberVerificationPendingDialog.kt */
     public static final class ViewOnClickListenerC95314 implements View.OnClickListener {
         public ViewOnClickListenerC95314() {
         }
@@ -206,8 +206,8 @@ public final class MemberVerificationPendingDialog extends AppDialog {
         }
     }
 
-    /* compiled from: MemberVerificationPendingDialog.kt */
-    /* renamed from: com.discord.widgets.servers.member_verification.MemberVerificationPendingDialog$configureLoadedUI$5 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.member_verification.MemberVerificationPendingDialog$configureLoadedUI$5 */
+    /* JADX INFO: compiled from: MemberVerificationPendingDialog.kt */
     public static final class ViewOnClickListenerC95325 implements View.OnClickListener {
         public ViewOnClickListenerC95325() {
         }
@@ -218,8 +218,8 @@ public final class MemberVerificationPendingDialog extends AppDialog {
         }
     }
 
-    /* compiled from: MemberVerificationPendingDialog.kt */
-    /* renamed from: com.discord.widgets.servers.member_verification.MemberVerificationPendingDialog$configureLoadedUI$7 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.member_verification.MemberVerificationPendingDialog$configureLoadedUI$7 */
+    /* JADX INFO: compiled from: MemberVerificationPendingDialog.kt */
     public static final class ViewOnClickListenerC95337 implements View.OnClickListener {
         public ViewOnClickListenerC95337() {
         }
@@ -230,8 +230,8 @@ public final class MemberVerificationPendingDialog extends AppDialog {
         }
     }
 
-    /* compiled from: MemberVerificationPendingDialog.kt */
-    /* renamed from: com.discord.widgets.servers.member_verification.MemberVerificationPendingDialog$configureLoadedUI$8 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.member_verification.MemberVerificationPendingDialog$configureLoadedUI$8 */
+    /* JADX INFO: compiled from: MemberVerificationPendingDialog.kt */
     public static final class ViewOnClickListenerC95348 implements View.OnClickListener {
         public ViewOnClickListenerC95348() {
         }
@@ -243,8 +243,8 @@ public final class MemberVerificationPendingDialog extends AppDialog {
         }
     }
 
-    /* compiled from: MemberVerificationPendingDialog.kt */
-    /* renamed from: com.discord.widgets.servers.member_verification.MemberVerificationPendingDialog$configureLoadedUI$9 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.member_verification.MemberVerificationPendingDialog$configureLoadedUI$9 */
+    /* JADX INFO: compiled from: MemberVerificationPendingDialog.kt */
     public static final class ViewOnClickListenerC95359 implements View.OnClickListener {
         public final /* synthetic */ MemberVerificationPendingViewModel.ViewState.Loaded $viewState;
 
@@ -263,8 +263,8 @@ public final class MemberVerificationPendingDialog extends AppDialog {
         }
     }
 
-    /* compiled from: MemberVerificationPendingDialog.kt */
-    /* renamed from: com.discord.widgets.servers.member_verification.MemberVerificationPendingDialog$onViewBoundOrOnResume$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.member_verification.MemberVerificationPendingDialog$onViewBoundOrOnResume$1 */
+    /* JADX INFO: compiled from: MemberVerificationPendingDialog.kt */
     public static final /* synthetic */ class C95361 extends FunctionReferenceImpl implements Function1<MemberVerificationPendingViewModel.ViewState, Unit> {
         public C95361(MemberVerificationPendingDialog memberVerificationPendingDialog) {
             super(1, memberVerificationPendingDialog, MemberVerificationPendingDialog.class, "configureUI", "configureUI(Lcom/discord/widgets/servers/member_verification/MemberVerificationPendingViewModel$ViewState;)V", 0);
@@ -276,15 +276,15 @@ public final class MemberVerificationPendingDialog extends AppDialog {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(MemberVerificationPendingViewModel.ViewState viewState) {
             Intrinsics3.checkNotNullParameter(viewState, "p1");
             MemberVerificationPendingDialog.access$configureUI((MemberVerificationPendingDialog) this.receiver, viewState);
         }
     }
 
-    /* compiled from: MemberVerificationPendingDialog.kt */
-    /* renamed from: com.discord.widgets.servers.member_verification.MemberVerificationPendingDialog$onViewBoundOrOnResume$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.member_verification.MemberVerificationPendingDialog$onViewBoundOrOnResume$2 */
+    /* JADX INFO: compiled from: MemberVerificationPendingDialog.kt */
     public static final class C95372 extends Lambda implements Function1<MemberVerificationPendingViewModel.Event, Unit> {
         public C95372() {
             super(1);
@@ -296,7 +296,7 @@ public final class MemberVerificationPendingDialog extends AppDialog {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(MemberVerificationPendingViewModel.Event event) {
             Intrinsics3.checkNotNullParameter(event, "event");
             if (!(event instanceof MemberVerificationPendingViewModel.Event.Success) && (event instanceof MemberVerificationPendingViewModel.Event.Error)) {

@@ -18,8 +18,8 @@ import p615g0.Sink;
 import p658rx.Observable;
 import p658rx.subjects.BehaviorSubject;
 
-/* compiled from: CountingRequestBody.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: CountingRequestBody.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class CountingRequestBody extends RequestBody {
     private final BehaviorSubject<Long> bytesWrittenSubject;
     private final RequestBody delegate;
@@ -27,7 +27,7 @@ public final class CountingRequestBody extends RequestBody {
     private final int ignoreWriteToCount;
     private int numWriteToCalls;
 
-    /* compiled from: CountingRequestBody.kt */
+    /* JADX INFO: compiled from: CountingRequestBody.kt */
     public static final class CountingSink extends ForwardingSink {
         private long bytesWritten;
         private final Function1<Long, Unit> listener;

@@ -2,7 +2,7 @@ package androidx.sqlite.p006db;
 
 import androidx.annotation.Nullable;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public final class SimpleSQLiteQuery implements SupportSQLiteQuery {
 
     @Nullable

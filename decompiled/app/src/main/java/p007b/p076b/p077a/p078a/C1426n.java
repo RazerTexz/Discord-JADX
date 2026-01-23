@@ -4,12 +4,12 @@ import kotlin.jvm.functions.Function1;
 import p507d0.p592z.p594d.Intrinsics3;
 import p658rx.functions.Action1;
 
-/* compiled from: FlexInputFragment.kt */
-/* renamed from: b.b.a.a.n */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.b.a.a.n */
+/* JADX INFO: compiled from: FlexInputFragment.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class C1426n implements Action1 {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final /* synthetic */ Function1 f2138j;
 
     public C1426n(Function1 function1) {

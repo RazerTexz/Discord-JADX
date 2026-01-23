@@ -8,8 +8,8 @@ import kotlin.jvm.functions.Function1;
 import p507d0.p592z.p594d.FunctionReferenceImpl;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: WidgetGuildRoleSubscriptionPlanSetup.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetGuildRoleSubscriptionPlanSetup.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final /* synthetic */ class WidgetGuildRoleSubscriptionPlanSetup$binding$2 extends FunctionReferenceImpl implements Function1<View, WidgetGuildSubscriptionPlanSetupBinding> {
     public static final WidgetGuildRoleSubscriptionPlanSetup$binding$2 INSTANCE = new WidgetGuildRoleSubscriptionPlanSetup$binding$2();
 
@@ -22,7 +22,7 @@ public final /* synthetic */ class WidgetGuildRoleSubscriptionPlanSetup$binding$
         return invoke2(view);
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final WidgetGuildSubscriptionPlanSetupBinding invoke2(View view) {
         Intrinsics3.checkNotNullParameter(view, "p1");
         Objects.requireNonNull(view, "rootView");

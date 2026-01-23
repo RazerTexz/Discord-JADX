@@ -2,12 +2,12 @@ package p007b.p195g.p196a.p205c.p219i0;
 
 import p007b.p100d.p104b.p105a.outline;
 
-/* compiled from: NameTransformer.java */
-/* renamed from: b.g.a.c.i0.m, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.g.a.c.i0.m, reason: use source file name */
+/* JADX INFO: compiled from: NameTransformer.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class NameTransformer3 extends NameTransformer4 {
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final /* synthetic */ String f4960k;
 
     public NameTransformer3(String str) {
@@ -15,7 +15,7 @@ public final class NameTransformer3 extends NameTransformer4 {
     }
 
     @Override // p007b.p195g.p196a.p205c.p219i0.NameTransformer4
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public String mo2202a(String str) {
         StringBuilder sbM833U = outline.m833U(str);
         sbM833U.append(this.f4960k);

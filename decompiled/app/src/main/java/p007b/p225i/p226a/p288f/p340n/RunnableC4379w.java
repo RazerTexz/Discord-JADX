@@ -5,15 +5,15 @@ import com.google.android.gms.tasks.Task;
 import java.util.concurrent.CancellationException;
 import java.util.concurrent.Executor;
 
-/* compiled from: com.google.android.gms:play-services-tasks@@17.2.1 */
-/* renamed from: b.i.a.f.n.w */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.n.w */
+/* JADX INFO: compiled from: com.google.android.gms:play-services-tasks@@17.2.1 */
+/* JADX INFO: loaded from: classes3.dex */
 public final class RunnableC4379w implements Runnable {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final /* synthetic */ Task f11519j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final /* synthetic */ C4380x f11520k;
 
     public RunnableC4379w(C4380x c4380x, Task task) {

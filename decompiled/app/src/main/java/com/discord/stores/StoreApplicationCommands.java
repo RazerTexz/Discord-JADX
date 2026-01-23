@@ -55,8 +55,8 @@ import p507d0.p592z.p594d.Lambda;
 import p658rx.Observable;
 import p658rx.functions.Func2;
 
-/* compiled from: StoreApplicationCommands.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: StoreApplicationCommands.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class StoreApplicationCommands extends StoreV2 {
     public static final int COMMANDS_LIMIT_PER_REQUEST = 20;
     public static final long TYPE_APPLICATION_COMMAND = 2;
@@ -107,7 +107,7 @@ public final class StoreApplicationCommands extends StoreV2 {
     private final StorePermissions storePermissions;
     private final StoreUser storeUsers;
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private static final ObservationDeck.UpdateSource DiscoverCommandsUpdate = new StoreApplicationCommands$Companion$DiscoverCommandsUpdate$1();
     private static final ObservationDeck.UpdateSource QueryCommandsUpdate = new StoreApplicationCommands$Companion$QueryCommandsUpdate$1();
@@ -115,7 +115,7 @@ public final class StoreApplicationCommands extends StoreV2 {
     private static final ObservationDeck.UpdateSource AutocompleteResultsUpdate = new StoreApplicationCommands$Companion$AutocompleteResultsUpdate$1();
     private static final ObservationDeck.UpdateSource FrecencyCommandsUpdate = new StoreApplicationCommands$Companion$FrecencyCommandsUpdate$1();
 
-    /* compiled from: StoreApplicationCommands.kt */
+    /* JADX INFO: compiled from: StoreApplicationCommands.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -145,7 +145,7 @@ public final class StoreApplicationCommands extends StoreV2 {
         }
     }
 
-    /* compiled from: StoreApplicationCommands.kt */
+    /* JADX INFO: compiled from: StoreApplicationCommands.kt */
     public static final /* data */ class FrecencyRequest {
         private final List<String> applicationCommandIds;
         private final Long guildId;
@@ -167,7 +167,7 @@ public final class StoreApplicationCommands extends StoreV2 {
             return frecencyRequest.copy(l, list);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final Long getGuildId() {
             return this.guildId;
         }
@@ -215,8 +215,8 @@ public final class StoreApplicationCommands extends StoreV2 {
         }
     }
 
-    /* compiled from: StoreApplicationCommands.kt */
-    /* renamed from: com.discord.stores.StoreApplicationCommands$clearAutocompleteResults$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreApplicationCommands$clearAutocompleteResults$1 */
+    /* JADX INFO: compiled from: StoreApplicationCommands.kt */
     public static final class C57011 extends Lambda implements Function0<Unit> {
         public C57011() {
             super(0);
@@ -228,15 +228,15 @@ public final class StoreApplicationCommands extends StoreV2 {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             StoreApplicationCommands.access$getAutocompleteOptionResults$p(StoreApplicationCommands.this).clear();
             StoreApplicationCommands.this.markChanged(StoreApplicationCommands.INSTANCE.getAutocompleteResultsUpdate());
         }
     }
 
-    /* compiled from: StoreApplicationCommands.kt */
-    /* renamed from: com.discord.stores.StoreApplicationCommands$clearQueryCommands$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreApplicationCommands$clearQueryCommands$1 */
+    /* JADX INFO: compiled from: StoreApplicationCommands.kt */
     public static final class C57021 extends Lambda implements Function0<Unit> {
         public C57021() {
             super(0);
@@ -248,20 +248,20 @@ public final class StoreApplicationCommands extends StoreV2 {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             StoreApplicationCommands.access$getQueryCommands$p(StoreApplicationCommands.this).clear();
             StoreApplicationCommands.this.markChanged(StoreApplicationCommands.INSTANCE.getQueryCommandsUpdate());
         }
     }
 
-    /* compiled from: StoreApplicationCommands.kt */
-    /* renamed from: com.discord.stores.StoreApplicationCommands$getApplicationCommandsViaRest$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreApplicationCommands$getApplicationCommandsViaRest$1 */
+    /* JADX INFO: compiled from: StoreApplicationCommands.kt */
     public static final class C57031 extends Lambda implements Function1<List<? extends com.discord.api.commands.ApplicationCommand>, Unit> {
         public final /* synthetic */ long $applicationId;
 
-        /* compiled from: StoreApplicationCommands.kt */
-        /* renamed from: com.discord.stores.StoreApplicationCommands$getApplicationCommandsViaRest$1$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.stores.StoreApplicationCommands$getApplicationCommandsViaRest$1$1, reason: invalid class name */
+        /* JADX INFO: compiled from: StoreApplicationCommands.kt */
         public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
             public final /* synthetic */ List $commands;
 
@@ -278,7 +278,7 @@ public final class StoreApplicationCommands extends StoreV2 {
             }
 
             /* JADX WARN: Removed duplicated region for block: B:51:0x0130  */
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             /*
                 Code decompiled incorrectly, please refer to instructions dump.
             */
@@ -401,18 +401,18 @@ public final class StoreApplicationCommands extends StoreV2 {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(List<com.discord.api.commands.ApplicationCommand> list) {
             StoreApplicationCommands.access$getDispatcher$p(StoreApplicationCommands.this).schedule(new AnonymousClass1(list));
         }
     }
 
-    /* compiled from: StoreApplicationCommands.kt */
-    /* renamed from: com.discord.stores.StoreApplicationCommands$getApplicationCommandsViaRest$2 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreApplicationCommands$getApplicationCommandsViaRest$2 */
+    /* JADX INFO: compiled from: StoreApplicationCommands.kt */
     public static final class C57042 extends Lambda implements Function1<Error, Unit> {
 
-        /* compiled from: StoreApplicationCommands.kt */
-        /* renamed from: com.discord.stores.StoreApplicationCommands$getApplicationCommandsViaRest$2$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.stores.StoreApplicationCommands$getApplicationCommandsViaRest$2$1, reason: invalid class name */
+        /* JADX INFO: compiled from: StoreApplicationCommands.kt */
         public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
             public AnonymousClass1() {
                 super(0);
@@ -424,7 +424,7 @@ public final class StoreApplicationCommands extends StoreV2 {
                 return Unit.f27425a;
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2() {
                 StoreApplicationCommands.access$setLoadingDiscoveryCommands$p(StoreApplicationCommands.this, false);
             }
@@ -440,15 +440,15 @@ public final class StoreApplicationCommands extends StoreV2 {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Error error) {
             Intrinsics3.checkNotNullParameter(error, "it");
             StoreApplicationCommands.access$getDispatcher$p(StoreApplicationCommands.this).schedule(new AnonymousClass1());
         }
     }
 
-    /* compiled from: StoreApplicationCommands.kt */
-    /* renamed from: com.discord.stores.StoreApplicationCommands$handleDmUserApplication$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreApplicationCommands$handleDmUserApplication$1 */
+    /* JADX INFO: compiled from: StoreApplicationCommands.kt */
     public static final class C57061 extends Lambda implements Function0<Unit> {
         public final /* synthetic */ User $botUser;
 
@@ -464,7 +464,7 @@ public final class StoreApplicationCommands extends StoreV2 {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             StoreApplicationCommands.access$getFrecencyCommands$p(StoreApplicationCommands.this).put(0L, Collections2.emptyList());
             StoreApplicationCommands.access$setPendingGatewayGuildId$p(StoreApplicationCommands.this, null);
@@ -476,8 +476,8 @@ public final class StoreApplicationCommands extends StoreV2 {
         }
     }
 
-    /* compiled from: StoreApplicationCommands.kt */
-    /* renamed from: com.discord.stores.StoreApplicationCommands$observeAutocompleteResults$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreApplicationCommands$observeAutocompleteResults$1 */
+    /* JADX INFO: compiled from: StoreApplicationCommands.kt */
     public static final class C57071 extends Lambda implements Function0<Map<String, ? extends Map<String, ? extends CommandAutocompleteState>>> {
         public C57071() {
             super(0);
@@ -489,14 +489,14 @@ public final class StoreApplicationCommands extends StoreV2 {
         }
 
         @Override // kotlin.jvm.functions.Function0
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final Map<String, ? extends Map<String, ? extends CommandAutocompleteState>> invoke2() {
             return StoreApplicationCommands.this.getAutocompleteOptionResults();
         }
     }
 
-    /* compiled from: StoreApplicationCommands.kt */
-    /* renamed from: com.discord.stores.StoreApplicationCommands$observeDiscoverCommands$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreApplicationCommands$observeDiscoverCommands$1 */
+    /* JADX INFO: compiled from: StoreApplicationCommands.kt */
     public static final class C57081 extends Lambda implements Function0<DiscoverCommands> {
         public C57081() {
             super(0);
@@ -514,8 +514,8 @@ public final class StoreApplicationCommands extends StoreV2 {
         }
     }
 
-    /* compiled from: StoreApplicationCommands.kt */
-    /* renamed from: com.discord.stores.StoreApplicationCommands$observeDiscoverCommands$2 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreApplicationCommands$observeDiscoverCommands$2 */
+    /* JADX INFO: compiled from: StoreApplicationCommands.kt */
     public static final class C57092<T1, T2, R> implements Func2<DiscoverCommands, Long, DiscoverCommands> {
         public C57092() {
         }
@@ -525,7 +525,7 @@ public final class StoreApplicationCommands extends StoreV2 {
             return call2(discoverCommands, l);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final DiscoverCommands call2(DiscoverCommands discoverCommands, Long l) {
             if (StoreApplicationCommands.access$shouldReturnApplicationCommands(StoreApplicationCommands.this, l)) {
                 return discoverCommands;
@@ -535,8 +535,8 @@ public final class StoreApplicationCommands extends StoreV2 {
         }
     }
 
-    /* compiled from: StoreApplicationCommands.kt */
-    /* renamed from: com.discord.stores.StoreApplicationCommands$observeFrecencyCommands$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreApplicationCommands$observeFrecencyCommands$1 */
+    /* JADX INFO: compiled from: StoreApplicationCommands.kt */
     public static final class C57101 extends Lambda implements Function0<List<? extends ApplicationCommand>> {
         public final /* synthetic */ long $guildId;
 
@@ -552,15 +552,15 @@ public final class StoreApplicationCommands extends StoreV2 {
         }
 
         @Override // kotlin.jvm.functions.Function0
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final List<? extends ApplicationCommand> invoke2() {
             Experiment userExperiment = StoreApplicationCommands.access$getStoreExperiments$p(StoreApplicationCommands.this).getUserExperiment("2021-09_android_app_commands_frecency", false);
             return (userExperiment == null || userExperiment.getBucket() != 1) ? Collections2.emptyList() : _Collections.take(StoreApplicationCommands.this.getFrecencyCommands(this.$guildId), 5);
         }
     }
 
-    /* compiled from: StoreApplicationCommands.kt */
-    /* renamed from: com.discord.stores.StoreApplicationCommands$observeGuildApplications$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreApplicationCommands$observeGuildApplications$1 */
+    /* JADX INFO: compiled from: StoreApplicationCommands.kt */
     public static final class C57111 extends Lambda implements Function0<List<? extends Application>> {
         public final /* synthetic */ long $channelId;
 
@@ -576,7 +576,7 @@ public final class StoreApplicationCommands extends StoreV2 {
         }
 
         @Override // kotlin.jvm.functions.Function0
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final List<? extends Application> invoke2() {
             if (StoreApplicationCommands.access$shouldReturnApplicationCommands(StoreApplicationCommands.this, StoreApplicationCommands.access$getStorePermissions$p(StoreApplicationCommands.this).getPermissionsByChannel().get(Long.valueOf(this.$channelId)))) {
                 return StoreApplicationCommands.this.getApplications();
@@ -592,8 +592,8 @@ public final class StoreApplicationCommands extends StoreV2 {
         }
     }
 
-    /* compiled from: StoreApplicationCommands.kt */
-    /* renamed from: com.discord.stores.StoreApplicationCommands$observeQueryCommands$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreApplicationCommands$observeQueryCommands$1 */
+    /* JADX INFO: compiled from: StoreApplicationCommands.kt */
     public static final class C57121 extends Lambda implements Function0<List<? extends ApplicationCommand>> {
         public final /* synthetic */ long $channelId;
 
@@ -609,7 +609,7 @@ public final class StoreApplicationCommands extends StoreV2 {
         }
 
         @Override // kotlin.jvm.functions.Function0
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final List<? extends ApplicationCommand> invoke2() {
             if (StoreApplicationCommands.access$shouldReturnApplicationCommands(StoreApplicationCommands.this, StoreApplicationCommands.access$getStorePermissions$p(StoreApplicationCommands.this).getPermissionsByChannel().get(Long.valueOf(this.$channelId)))) {
                 return StoreApplicationCommands.this.getQueryCommands();
@@ -625,20 +625,20 @@ public final class StoreApplicationCommands extends StoreV2 {
         }
     }
 
-    /* compiled from: StoreApplicationCommands.kt */
-    /* renamed from: com.discord.stores.StoreApplicationCommands$requestApplicationCommandAutocompleteData$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreApplicationCommands$requestApplicationCommandAutocompleteData$1 */
+    /* JADX INFO: compiled from: StoreApplicationCommands.kt */
     public static final class C57131 extends Lambda implements Function0<Unit> {
         public final /* synthetic */ long $channelId;
         public final /* synthetic */ ApplicationCommandData $data;
         public final /* synthetic */ Long $guildId;
 
-        /* compiled from: StoreApplicationCommands.kt */
-        /* renamed from: com.discord.stores.StoreApplicationCommands$requestApplicationCommandAutocompleteData$1$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.stores.StoreApplicationCommands$requestApplicationCommandAutocompleteData$1$1, reason: invalid class name */
+        /* JADX INFO: compiled from: StoreApplicationCommands.kt */
         public static final class AnonymousClass1 extends Lambda implements Function1<Error, Unit> {
             public final /* synthetic */ ApplicationCommandValue $option;
 
-            /* compiled from: StoreApplicationCommands.kt */
-            /* renamed from: com.discord.stores.StoreApplicationCommands$requestApplicationCommandAutocompleteData$1$1$1, reason: invalid class name and collision with other inner class name */
+            /* JADX INFO: renamed from: com.discord.stores.StoreApplicationCommands$requestApplicationCommandAutocompleteData$1$1$1, reason: invalid class name and collision with other inner class name */
+            /* JADX INFO: compiled from: StoreApplicationCommands.kt */
             public static final class C132481 extends Lambda implements Function0<Unit> {
                 public C132481() {
                     super(0);
@@ -650,7 +650,7 @@ public final class StoreApplicationCommands extends StoreV2 {
                     return Unit.f27425a;
                 }
 
-                /* renamed from: invoke, reason: avoid collision after fix types in other method */
+                /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
                 public final void invoke2() {
                     AnonymousClass1 anonymousClass1 = AnonymousClass1.this;
                     StoreApplicationCommands.this.setAutocompleteFailed(anonymousClass1.$option.getName(), String.valueOf(AnonymousClass1.this.$option.getValue()));
@@ -669,15 +669,15 @@ public final class StoreApplicationCommands extends StoreV2 {
                 return Unit.f27425a;
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2(Error error) {
                 Intrinsics3.checkNotNullParameter(error, "it");
                 StoreApplicationCommands.access$getDispatcher$p(StoreApplicationCommands.this).schedule(new C132481());
             }
         }
 
-        /* compiled from: StoreApplicationCommands.kt */
-        /* renamed from: com.discord.stores.StoreApplicationCommands$requestApplicationCommandAutocompleteData$1$2, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.stores.StoreApplicationCommands$requestApplicationCommandAutocompleteData$1$2, reason: invalid class name */
+        /* JADX INFO: compiled from: StoreApplicationCommands.kt */
         public static final class AnonymousClass2 extends Lambda implements Function1<Void, Unit> {
             public static final AnonymousClass2 INSTANCE = new AnonymousClass2();
 
@@ -691,7 +691,7 @@ public final class StoreApplicationCommands extends StoreV2 {
                 return Unit.f27425a;
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2(Void r1) {
             }
         }
@@ -710,7 +710,7 @@ public final class StoreApplicationCommands extends StoreV2 {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             Object next;
             String strAccess$generateNonce = StoreApplicationCommands.access$generateNonce(StoreApplicationCommands.this);
@@ -741,8 +741,8 @@ public final class StoreApplicationCommands extends StoreV2 {
         }
     }
 
-    /* compiled from: StoreApplicationCommands.kt */
-    /* renamed from: com.discord.stores.StoreApplicationCommands$requestApplicationCommands$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreApplicationCommands$requestApplicationCommands$1 */
+    /* JADX INFO: compiled from: StoreApplicationCommands.kt */
     public static final class C57151 extends Lambda implements Function0<Unit> {
         public final /* synthetic */ Long $applicationId;
         public final /* synthetic */ Long $guildId;
@@ -764,7 +764,7 @@ public final class StoreApplicationCommands extends StoreV2 {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             if (StoreApplicationCommands.access$isLoadingDiscoveryCommands$p(StoreApplicationCommands.this)) {
                 return;
@@ -803,8 +803,8 @@ public final class StoreApplicationCommands extends StoreV2 {
         }
     }
 
-    /* compiled from: StoreApplicationCommands.kt */
-    /* renamed from: com.discord.stores.StoreApplicationCommands$requestApplicationCommandsQuery$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreApplicationCommands$requestApplicationCommandsQuery$1 */
+    /* JADX INFO: compiled from: StoreApplicationCommands.kt */
     public static final class C57161 extends Lambda implements Function0<Unit> {
         public final /* synthetic */ Long $guildId;
         public final /* synthetic */ String $query;
@@ -822,7 +822,7 @@ public final class StoreApplicationCommands extends StoreV2 {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             String strAccess$generateNonce = StoreApplicationCommands.access$generateNonce(StoreApplicationCommands.this);
             StoreApplicationCommands.access$setQueryNonce$p(StoreApplicationCommands.this, strAccess$generateNonce);
@@ -841,8 +841,8 @@ public final class StoreApplicationCommands extends StoreV2 {
         }
     }
 
-    /* compiled from: StoreApplicationCommands.kt */
-    /* renamed from: com.discord.stores.StoreApplicationCommands$requestApplications$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreApplicationCommands$requestApplications$1 */
+    /* JADX INFO: compiled from: StoreApplicationCommands.kt */
     public static final class C57171 extends Lambda implements Function0<Unit> {
         public final /* synthetic */ Long $guildId;
 
@@ -858,7 +858,7 @@ public final class StoreApplicationCommands extends StoreV2 {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             String strAccess$generateNonce = StoreApplicationCommands.access$generateNonce(StoreApplicationCommands.this);
             StoreApplicationCommands.access$setApplicationNonce$p(StoreApplicationCommands.this, strAccess$generateNonce);
@@ -875,8 +875,8 @@ public final class StoreApplicationCommands extends StoreV2 {
         }
     }
 
-    /* compiled from: StoreApplicationCommands.kt */
-    /* renamed from: com.discord.stores.StoreApplicationCommands$requestFrecencyCommands$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreApplicationCommands$requestFrecencyCommands$1 */
+    /* JADX INFO: compiled from: StoreApplicationCommands.kt */
     public static final class C57181 extends Lambda implements Function0<Unit> {
         public final /* synthetic */ String $nonce;
 
@@ -892,14 +892,14 @@ public final class StoreApplicationCommands extends StoreV2 {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             StoreApplicationCommands.access$handleFrecencyCommandsUpdate(StoreApplicationCommands.this, this.$nonce, Collections2.emptyList());
         }
     }
 
-    /* compiled from: StoreApplicationCommands.kt */
-    /* renamed from: com.discord.stores.StoreApplicationCommands$requestFrecencyCommands$2 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreApplicationCommands$requestFrecencyCommands$2 */
+    /* JADX INFO: compiled from: StoreApplicationCommands.kt */
     public static final class C57192 extends Lambda implements Function0<Unit> {
         public final /* synthetic */ String $nonce;
 
@@ -915,7 +915,7 @@ public final class StoreApplicationCommands extends StoreV2 {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             StoreApplicationCommands.access$handleFrecencyCommandsUpdate(StoreApplicationCommands.this, this.$nonce, Collections2.emptyList());
         }
@@ -1362,7 +1362,7 @@ public final class StoreApplicationCommands extends StoreV2 {
         return this.autocompleteOptionResultsSnapshot;
     }
 
-    /* renamed from: getDiscoverCommands, reason: from getter */
+    /* JADX INFO: renamed from: getDiscoverCommands, reason: from getter */
     public final DiscoverCommands getDiscoverCommandsSnapshot() {
         return this.discoverCommandsSnapshot;
     }

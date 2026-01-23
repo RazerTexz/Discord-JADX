@@ -5,9 +5,9 @@ import java.io.File;
 import p507d0.p579g0.Strings4;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: Utils.kt */
-/* renamed from: d0.y.h, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.y.h, reason: use source file name */
+/* JADX INFO: compiled from: Utils.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public class Utils7 extends FileTreeWalk3 {
     public static final boolean deleteRecursively(File file) {
         Intrinsics3.checkNotNullParameter(file, "$this$deleteRecursively");

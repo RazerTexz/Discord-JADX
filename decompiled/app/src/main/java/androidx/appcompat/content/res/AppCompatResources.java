@@ -19,8 +19,8 @@ import androidx.core.content.ContextCompat;
 import androidx.core.content.res.ColorStateListInflaterCompat;
 import java.util.WeakHashMap;
 
+/* JADX INFO: loaded from: classes.dex */
 @SuppressLint({"RestrictedAPI"})
-/* loaded from: classes.dex */
 public final class AppCompatResources {
     private static final String LOG_TAG = "AppCompatResources";
     private static final ThreadLocal<TypedValue> TL_TYPED_VALUE = new ThreadLocal<>();
@@ -67,7 +67,7 @@ public final class AppCompatResources {
         }
     }
 
-    public static ColorStateList getColorStateList(@NonNull Context context, @ColorRes int i) throws Resources.NotFoundException {
+    public static ColorStateList getColorStateList(@NonNull Context context, @ColorRes int i) {
         if (Build.VERSION.SDK_INT >= 23) {
             return context.getColorStateList(i);
         }
@@ -101,7 +101,7 @@ public final class AppCompatResources {
     }
 
     @Nullable
-    private static ColorStateList inflateColorStateList(Context context, int i) throws Resources.NotFoundException {
+    private static ColorStateList inflateColorStateList(Context context, int i) {
         if (isColorInt(context, i)) {
             return null;
         }
@@ -114,7 +114,7 @@ public final class AppCompatResources {
         }
     }
 
-    private static boolean isColorInt(@NonNull Context context, @ColorRes int i) throws Resources.NotFoundException {
+    private static boolean isColorInt(@NonNull Context context, @ColorRes int i) {
         Resources resources = context.getResources();
         TypedValue typedValue = getTypedValue();
         resources.getValue(i, typedValue, true);

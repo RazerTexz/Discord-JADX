@@ -37,47 +37,47 @@ import p507d0.p592z.p594d.Lambda;
 import p507d0.p592z.p594d.PropertyReference1Impl;
 import p507d0.p592z.p594d.Reflection2;
 
-/* compiled from: KFunctionImpl.kt */
-/* renamed from: d0.e0.p.d.j, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.j, reason: use source file name */
+/* JADX INFO: compiled from: KFunctionImpl.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class KFunctionImpl extends KCallableImpl<Object> implements FunctionBase<Object>, KFunction<Object>, FunctionWithAllInvokes {
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public static final /* synthetic */ KProperty[] f22390n = {Reflection2.property1(new PropertyReference1Impl(Reflection2.getOrCreateKotlinClass(KFunctionImpl.class), "descriptor", "getDescriptor()Lorg/jetbrains/kotlin/descriptors/FunctionDescriptor;")), Reflection2.property1(new PropertyReference1Impl(Reflection2.getOrCreateKotlinClass(KFunctionImpl.class), "caller", "getCaller()Lkotlin/reflect/jvm/internal/calls/Caller;")), Reflection2.property1(new PropertyReference1Impl(Reflection2.getOrCreateKotlinClass(KFunctionImpl.class), "defaultCaller", "getDefaultCaller()Lkotlin/reflect/jvm/internal/calls/Caller;"))};
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public final ReflectProperties.a f22391o;
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public final ReflectProperties.b f22392p;
 
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     public final ReflectProperties.b f22393q;
 
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     public final KDeclarationContainerImpl f22394r;
 
-    /* renamed from: s */
+    /* JADX INFO: renamed from: s */
     public final String f22395s;
 
-    /* renamed from: t */
+    /* JADX INFO: renamed from: t */
     public final Object f22396t;
 
-    /* compiled from: KFunctionImpl.kt */
-    /* renamed from: d0.e0.p.d.j$a */
+    /* JADX INFO: renamed from: d0.e0.p.d.j$a */
+    /* JADX INFO: compiled from: KFunctionImpl.kt */
     public static final class a extends Lambda implements Function0<Caller2<? extends Member>> {
         public a() {
             super(0);
         }
 
         @Override // kotlin.jvm.functions.Function0
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public /* bridge */ /* synthetic */ Caller2<? extends Member> invoke2() {
             return invoke();
         }
 
         @Override // kotlin.jvm.functions.Function0
-        public final Caller2<? extends Member> invoke() throws SecurityException {
+        public final Caller2<? extends Member> invoke() {
             Object constructor;
             Caller2 caller2Access$createInstanceMethodCaller;
             AnnotationConstructorCaller.a aVar = AnnotationConstructorCaller.a.POSITIONAL_CALL;
@@ -136,15 +136,15 @@ public final class KFunctionImpl extends KCallableImpl<Object> implements Functi
         }
     }
 
-    /* compiled from: KFunctionImpl.kt */
-    /* renamed from: d0.e0.p.d.j$b */
+    /* JADX INFO: renamed from: d0.e0.p.d.j$b */
+    /* JADX INFO: compiled from: KFunctionImpl.kt */
     public static final class b extends Lambda implements Function0<Caller2<? extends Member>> {
         public b() {
             super(0);
         }
 
         @Override // kotlin.jvm.functions.Function0
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public /* bridge */ /* synthetic */ Caller2<? extends Member> invoke2() {
             return invoke();
         }
@@ -210,8 +210,8 @@ public final class KFunctionImpl extends KCallableImpl<Object> implements Functi
         }
     }
 
-    /* compiled from: KFunctionImpl.kt */
-    /* renamed from: d0.e0.p.d.j$c */
+    /* JADX INFO: renamed from: d0.e0.p.d.j$c */
+    /* JADX INFO: compiled from: KFunctionImpl.kt */
     public static final class c extends Lambda implements Function0<FunctionDescriptor> {
         public final /* synthetic */ String $name;
 

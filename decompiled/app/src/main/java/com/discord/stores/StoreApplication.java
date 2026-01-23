@@ -21,8 +21,8 @@ import p507d0.p592z.p594d.Lambda;
 import p637j0.p642l.p647e.ScalarSynchronousObservable;
 import p658rx.Observable;
 
-/* compiled from: StoreApplication.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: StoreApplication.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class StoreApplication extends StoreV2 {
     private final HashMap<Long, Application> applications;
     private final HashSet<Long> applicationsLoading;
@@ -30,17 +30,17 @@ public final class StoreApplication extends StoreV2 {
     private final Dispatcher dispatcher;
     private final ObservationDeck observationDeck;
 
-    /* compiled from: StoreApplication.kt */
-    /* renamed from: com.discord.stores.StoreApplication$fetchIfNonexisting$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreApplication$fetchIfNonexisting$1 */
+    /* JADX INFO: compiled from: StoreApplication.kt */
     public static final class C56941 extends Lambda implements Function0<Unit> {
         public final /* synthetic */ long $appId;
 
-        /* compiled from: StoreApplication.kt */
-        /* renamed from: com.discord.stores.StoreApplication$fetchIfNonexisting$1$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.stores.StoreApplication$fetchIfNonexisting$1$1, reason: invalid class name */
+        /* JADX INFO: compiled from: StoreApplication.kt */
         public static final class AnonymousClass1 extends Lambda implements Function1<List<? extends Application>, Unit> {
 
-            /* compiled from: StoreApplication.kt */
-            /* renamed from: com.discord.stores.StoreApplication$fetchIfNonexisting$1$1$1, reason: invalid class name and collision with other inner class name */
+            /* JADX INFO: renamed from: com.discord.stores.StoreApplication$fetchIfNonexisting$1$1$1, reason: invalid class name and collision with other inner class name */
+            /* JADX INFO: compiled from: StoreApplication.kt */
             public static final class C132461 extends Lambda implements Function0<Unit> {
                 public final /* synthetic */ List $results;
 
@@ -56,7 +56,7 @@ public final class StoreApplication extends StoreV2 {
                     return Unit.f27425a;
                 }
 
-                /* renamed from: invoke, reason: avoid collision after fix types in other method */
+                /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
                 public final void invoke2() {
                     Object next;
                     StoreApplication.access$getApplicationsLoading$p(StoreApplication.this).remove(Long.valueOf(C56941.this.$appId));
@@ -90,19 +90,19 @@ public final class StoreApplication extends StoreV2 {
                 return Unit.f27425a;
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2(List<Application> list) {
                 Intrinsics3.checkNotNullParameter(list, "results");
                 StoreApplication.access$getDispatcher$p(StoreApplication.this).schedule(new C132461(list));
             }
         }
 
-        /* compiled from: StoreApplication.kt */
-        /* renamed from: com.discord.stores.StoreApplication$fetchIfNonexisting$1$2, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.stores.StoreApplication$fetchIfNonexisting$1$2, reason: invalid class name */
+        /* JADX INFO: compiled from: StoreApplication.kt */
         public static final class AnonymousClass2 extends Lambda implements Function1<Error, Unit> {
 
-            /* compiled from: StoreApplication.kt */
-            /* renamed from: com.discord.stores.StoreApplication$fetchIfNonexisting$1$2$1, reason: invalid class name */
+            /* JADX INFO: renamed from: com.discord.stores.StoreApplication$fetchIfNonexisting$1$2$1, reason: invalid class name */
+            /* JADX INFO: compiled from: StoreApplication.kt */
             public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
                 public AnonymousClass1() {
                     super(0);
@@ -114,7 +114,7 @@ public final class StoreApplication extends StoreV2 {
                     return Unit.f27425a;
                 }
 
-                /* renamed from: invoke, reason: avoid collision after fix types in other method */
+                /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
                 public final void invoke2() {
                     StoreApplication.access$getApplicationsLoading$p(StoreApplication.this).remove(Long.valueOf(C56941.this.$appId));
                 }
@@ -130,7 +130,7 @@ public final class StoreApplication extends StoreV2 {
                 return Unit.f27425a;
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2(Error error) {
                 Intrinsics3.checkNotNullParameter(error, "it");
                 StoreApplication.access$getDispatcher$p(StoreApplication.this).schedule(new AnonymousClass1());
@@ -149,7 +149,7 @@ public final class StoreApplication extends StoreV2 {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             if (StoreApplication.access$getApplications$p(StoreApplication.this).containsKey(Long.valueOf(this.$appId)) || StoreApplication.access$getApplicationsLoading$p(StoreApplication.this).contains(Long.valueOf(this.$appId))) {
                 return;
@@ -159,8 +159,8 @@ public final class StoreApplication extends StoreV2 {
         }
     }
 
-    /* compiled from: StoreApplication.kt */
-    /* renamed from: com.discord.stores.StoreApplication$observeApplication$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreApplication$observeApplication$1 */
+    /* JADX INFO: compiled from: StoreApplication.kt */
     public static final class C56951 extends Lambda implements Function0<Application> {
         public final /* synthetic */ Long $appId;
 
@@ -182,8 +182,8 @@ public final class StoreApplication extends StoreV2 {
         }
     }
 
-    /* compiled from: StoreApplication.kt */
-    /* renamed from: com.discord.stores.StoreApplication$observeApplications$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreApplication$observeApplications$1 */
+    /* JADX INFO: compiled from: StoreApplication.kt */
     public static final class C56961 extends Lambda implements Function0<Map<Long, ? extends Application>> {
         public final /* synthetic */ Collection $applicationIds;
 
@@ -199,7 +199,7 @@ public final class StoreApplication extends StoreV2 {
         }
 
         @Override // kotlin.jvm.functions.Function0
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final Map<Long, ? extends Application> invoke2() {
             HashMap mapAccess$getApplicationsSnapshot$p = StoreApplication.access$getApplicationsSnapshot$p(StoreApplication.this);
             LinkedHashMap linkedHashMap = new LinkedHashMap();

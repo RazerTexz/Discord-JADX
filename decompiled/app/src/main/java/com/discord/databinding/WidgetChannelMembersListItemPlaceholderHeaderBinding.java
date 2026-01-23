@@ -9,10 +9,10 @@ import androidx.annotation.Nullable;
 import androidx.viewbinding.ViewBinding;
 import com.discord.C5419R;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public final class WidgetChannelMembersListItemPlaceholderHeaderBinding implements ViewBinding {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     @NonNull
     public final FrameLayout f15861a;
 
@@ -21,7 +21,7 @@ public final class WidgetChannelMembersListItemPlaceholderHeaderBinding implemen
     }
 
     @NonNull
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static WidgetChannelMembersListItemPlaceholderHeaderBinding m8405a(@NonNull LayoutInflater layoutInflater, @Nullable ViewGroup viewGroup, boolean z2) {
         View viewInflate = layoutInflater.inflate(C5419R.layout.widget_channel_members_list_item_placeholder_header, viewGroup, false);
         if (z2) {

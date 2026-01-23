@@ -15,23 +15,23 @@ import java.util.Iterator;
 import p007b.p225i.p226a.p341g.p345d.MonthAdapter;
 import p007b.p225i.p226a.p341g.p345d.MonthsPagerAdapter2;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public class MonthsPagerAdapter extends RecyclerView.Adapter<ViewHolder> {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final Context f20991a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     @NonNull
     public final CalendarConstraints f20992b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final DateSelector<?> f20993c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final MaterialCalendar.InterfaceC10896l f20994d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final int f20995e;
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
@@ -72,18 +72,18 @@ public class MonthsPagerAdapter extends RecyclerView.Adapter<ViewHolder> {
     }
 
     @NonNull
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public Month m9140a(int i) {
         return this.f20992b.getStart().m9138m(i);
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public int m9141b(@NonNull Month month) {
         return this.f20992b.getStart().m9139o(month);
     }
 
     @Override // androidx.recyclerview.widget.RecyclerView.Adapter
-    /* renamed from: getItemCount */
+    /* JADX INFO: renamed from: getItemCount */
     public int getPageSize() {
         return this.f20992b.getMonthSpan();
     }

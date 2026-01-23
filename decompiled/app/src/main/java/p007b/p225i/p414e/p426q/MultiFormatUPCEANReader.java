@@ -11,12 +11,12 @@ import p007b.p225i.p414e.BarcodeFormat;
 import p007b.p225i.p414e.DecodeHintType;
 import p007b.p225i.p414e.p418n.BitArray;
 
-/* compiled from: MultiFormatUPCEANReader.java */
-/* renamed from: b.i.e.q.j, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.e.q.j, reason: use source file name */
+/* JADX INFO: compiled from: MultiFormatUPCEANReader.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class MultiFormatUPCEANReader extends OneDReader {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final UPCEANReader[] f13379a;
 
     public MultiFormatUPCEANReader(Map<DecodeHintType, ?> map) {
@@ -44,8 +44,8 @@ public final class MultiFormatUPCEANReader extends OneDReader {
     }
 
     @Override // p007b.p225i.p414e.p426q.OneDReader
-    /* renamed from: b */
-    public Result mo6983b(int i, BitArray bitArray, Map<DecodeHintType, ?> map) throws NotFoundException, NumberFormatException {
+    /* JADX INFO: renamed from: b */
+    public Result mo6983b(int i, BitArray bitArray, Map<DecodeHintType, ?> map) throws NotFoundException {
         BarcodeFormat barcodeFormat = BarcodeFormat.UPC_A;
         int[] iArrM7006m = UPCEANReader.m7006m(bitArray);
         for (UPCEANReader uPCEANReader : this.f13379a) {

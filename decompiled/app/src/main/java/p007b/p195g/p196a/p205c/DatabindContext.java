@@ -11,16 +11,16 @@ import p007b.p195g.p196a.p205c.p218h0.TypeFactory;
 import p007b.p195g.p196a.p205c.p219i0.ClassUtil;
 import p007b.p195g.p196a.p205c.p219i0.Converter;
 
-/* compiled from: DatabindContext.java */
-/* renamed from: b.g.a.c.e, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.g.a.c.e, reason: use source file name */
+/* JADX INFO: compiled from: DatabindContext.java */
+/* JADX INFO: loaded from: classes3.dex */
 public abstract class DatabindContext {
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final String m1937a(String str, Object... objArr) {
         return objArr.length > 0 ? String.format(str, objArr) : str;
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public JavaType m1938b(Type type) {
         if (type == null) {
             return null;
@@ -28,7 +28,7 @@ public abstract class DatabindContext {
         return mo1940d().m2160b(null, type, TypeFactory.f4926l);
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public Converter<Object, Object> m1939c(Annotated annotated, Object obj) throws JsonMappingException {
         if (obj == null) {
             return null;
@@ -54,10 +54,10 @@ public abstract class DatabindContext {
         return (Converter) ClassUtil.m2175g(cls, serializationConfig.m2265b());
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public abstract TypeFactory mo1940d();
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public ObjectIdGenerator<?> m1941e(Annotated annotated, ObjectIdInfo objectIdInfo) throws JsonMappingException {
         Class<? extends ObjectIdGenerator<?>> cls = objectIdInfo.f4629c;
         SerializationConfig serializationConfig = ((SerializerProvider) this)._config;
@@ -65,10 +65,10 @@ public abstract class DatabindContext {
         return ((ObjectIdGenerator) ClassUtil.m2175g(cls, serializationConfig.m2265b())).mo1609b(objectIdInfo.f4631e);
     }
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public abstract <T> T mo1942f(JavaType javaType, String str) throws JsonMappingException;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public <T> T m1943g(Class<?> cls, String str) throws JsonMappingException {
         return (T) mo1942f(m1938b(cls), str);
     }

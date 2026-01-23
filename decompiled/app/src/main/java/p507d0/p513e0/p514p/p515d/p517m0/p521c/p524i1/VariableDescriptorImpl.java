@@ -13,12 +13,12 @@ import p507d0.p513e0.p514p.p515d.p517m0.p521c.p522g1.Annotations4;
 import p507d0.p513e0.p514p.p515d.p517m0.p548g.Name;
 import p507d0.p513e0.p514p.p515d.p517m0.p567n.KotlinType;
 
-/* compiled from: VariableDescriptorImpl.java */
-/* renamed from: d0.e0.p.d.m0.c.i1.m0, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.c.i1.m0, reason: use source file name */
+/* JADX INFO: compiled from: VariableDescriptorImpl.java */
+/* JADX INFO: loaded from: classes3.dex */
 public abstract class VariableDescriptorImpl extends DeclarationDescriptorNonRootImpl implements VariableDescriptor {
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public KotlinType f22906n;
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -43,7 +43,7 @@ public abstract class VariableDescriptorImpl extends DeclarationDescriptorNonRoo
         this.f22906n = kotlinType;
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static /* synthetic */ void m9417a(int i) {
         String str;
         int i2;

@@ -4,12 +4,12 @@ import android.net.wifi.p2p.WifiP2pGroup;
 import android.net.wifi.p2p.WifiP2pManager;
 import org.webrtc.NetworkMonitorAutoDetect;
 
-/* compiled from: lambda */
-/* renamed from: h0.c.q */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: h0.c.q */
+/* JADX INFO: compiled from: lambda */
+/* JADX INFO: loaded from: classes3.dex */
 public final /* synthetic */ class C12482q implements WifiP2pManager.GroupInfoListener {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final /* synthetic */ NetworkMonitorAutoDetect.WifiDirectManagerDelegate f26456a;
 
     public /* synthetic */ C12482q(NetworkMonitorAutoDetect.WifiDirectManagerDelegate wifiDirectManagerDelegate) {

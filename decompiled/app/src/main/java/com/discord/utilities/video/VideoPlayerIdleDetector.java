@@ -15,8 +15,8 @@ import p658rx.Observable;
 import p658rx.Scheduler;
 import p658rx.Subscription;
 
-/* compiled from: VideoPlayerIdleDetector.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: VideoPlayerIdleDetector.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class VideoPlayerIdleDetector {
     private final Scheduler backgroundThreadScheduler;
     private final long idleDetectionMs;
@@ -25,8 +25,8 @@ public final class VideoPlayerIdleDetector {
     private boolean isIdle;
     private final Function1<Boolean, Unit> onIdleStateChanged;
 
-    /* compiled from: VideoPlayerIdleDetector.kt */
-    /* renamed from: com.discord.utilities.video.VideoPlayerIdleDetector$beginIdleDetectionTimer$1 */
+    /* JADX INFO: renamed from: com.discord.utilities.video.VideoPlayerIdleDetector$beginIdleDetectionTimer$1 */
+    /* JADX INFO: compiled from: VideoPlayerIdleDetector.kt */
     public static final class C69871 extends Lambda implements Function1<Long, Unit> {
         public C69871() {
             super(1);
@@ -38,14 +38,14 @@ public final class VideoPlayerIdleDetector {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Long l) {
             VideoPlayerIdleDetector.access$setIdle(VideoPlayerIdleDetector.this, true);
         }
     }
 
-    /* compiled from: VideoPlayerIdleDetector.kt */
-    /* renamed from: com.discord.utilities.video.VideoPlayerIdleDetector$beginIdleDetectionTimer$2 */
+    /* JADX INFO: renamed from: com.discord.utilities.video.VideoPlayerIdleDetector$beginIdleDetectionTimer$2 */
+    /* JADX INFO: compiled from: VideoPlayerIdleDetector.kt */
     public static final class C69882 extends Lambda implements Function1<Subscription, Unit> {
         public C69882() {
             super(1);
@@ -57,7 +57,7 @@ public final class VideoPlayerIdleDetector {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Subscription subscription) {
             Intrinsics3.checkNotNullParameter(subscription, "it");
             VideoPlayerIdleDetector.access$setIdleDetectionSubscription$p(VideoPlayerIdleDetector.this, subscription);
@@ -133,7 +133,7 @@ public final class VideoPlayerIdleDetector {
         setIdle(false);
     }
 
-    /* renamed from: isIdle, reason: from getter */
+    /* JADX INFO: renamed from: isIdle, reason: from getter */
     public final boolean getIsIdle() {
         return this.isIdle;
     }

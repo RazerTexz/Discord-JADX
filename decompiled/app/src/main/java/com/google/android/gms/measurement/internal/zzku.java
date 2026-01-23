@@ -7,37 +7,37 @@ import p007b.p085c.p086a.p087a0.AnimatableValueParser;
 import p007b.p225i.p226a.p288f.p330i.p332b.C4185s9;
 import p007b.p225i.p226a.p288f.p330i.p332b.C4207u9;
 
-/* compiled from: com.google.android.gms:play-services-measurement-impl@@18.0.0 */
-/* loaded from: classes3.dex */
+/* JADX INFO: compiled from: com.google.android.gms:play-services-measurement-impl@@18.0.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public final class zzku extends AbstractSafeParcelable {
     public static final Parcelable.Creator<zzku> CREATOR = new C4185s9();
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final int f20670j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final String f20671k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final long f20672l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public final Long f20673m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public final String f20674n;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public final String f20675o;
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public final Double f20676p;
 
     public zzku(C4207u9 c4207u9) {
         this(c4207u9.f11292c, c4207u9.f11293d, c4207u9.f11294e, c4207u9.f11291b);
     }
 
-    /* renamed from: w0 */
+    /* JADX INFO: renamed from: w0 */
     public final Object m9117w0() {
         Long l = this.f20673m;
         if (l != null) {

@@ -6,9 +6,9 @@ import kotlin.Unit;
 import kotlin.jvm.functions.Function0;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: StoreLurking.kt */
-/* renamed from: com.discord.stores.StoreLurking$startLurkingAndNavigate$1$1$jumpToDestination$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.stores.StoreLurking$startLurkingAndNavigate$1$1$jumpToDestination$1, reason: use source file name */
+/* JADX INFO: compiled from: StoreLurking.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class StoreLurking2 extends Lambda implements Function0<Unit> {
     public final /* synthetic */ Long $channelId;
     public final /* synthetic */ StoreLurking.C61551.AnonymousClass1 this$0;
@@ -26,7 +26,7 @@ public final class StoreLurking2 extends Lambda implements Function0<Unit> {
         return Unit.f27425a;
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final void invoke2() {
         Long l;
         Long l2 = this.$channelId;

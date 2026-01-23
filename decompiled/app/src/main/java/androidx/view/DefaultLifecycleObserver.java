@@ -2,7 +2,7 @@ package androidx.view;
 
 import androidx.annotation.NonNull;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public interface DefaultLifecycleObserver extends FullLifecycleObserver {
     @Override // androidx.view.FullLifecycleObserver
     void onCreate(@NonNull LifecycleOwner lifecycleOwner);

@@ -1,9 +1,9 @@
 package p007b.p008a.p062y;
 
-/* compiled from: SelectorBottomSheet.kt */
-/* renamed from: b.a.y.i, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: b.a.y.i, reason: use source file name */
+/* JADX INFO: compiled from: SelectorBottomSheet.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public interface SelectorBottomSheet5 {
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     void mo376c(int i);
 }

@@ -5,8 +5,8 @@ import java.io.Serializable;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ModelStoreAsset.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: ModelStoreAsset.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class ModelStoreAsset implements Serializable {
     private final String filename;
     private final Integer height;
@@ -29,32 +29,32 @@ public final /* data */ class ModelStoreAsset implements Serializable {
         return modelStoreAsset.copy((i2 & 1) != 0 ? modelStoreAsset.id : j, (i2 & 2) != 0 ? modelStoreAsset.size : i, (i2 & 4) != 0 ? modelStoreAsset.mimeType : str, (i2 & 8) != 0 ? modelStoreAsset.filename : str2, (i2 & 16) != 0 ? modelStoreAsset.width : num, (i2 & 32) != 0 ? modelStoreAsset.height : num2);
     }
 
-    /* renamed from: component1, reason: from getter */
+    /* JADX INFO: renamed from: component1, reason: from getter */
     public final long getId() {
         return this.id;
     }
 
-    /* renamed from: component2, reason: from getter */
+    /* JADX INFO: renamed from: component2, reason: from getter */
     public final int getSize() {
         return this.size;
     }
 
-    /* renamed from: component3, reason: from getter */
+    /* JADX INFO: renamed from: component3, reason: from getter */
     public final String getMimeType() {
         return this.mimeType;
     }
 
-    /* renamed from: component4, reason: from getter */
+    /* JADX INFO: renamed from: component4, reason: from getter */
     public final String getFilename() {
         return this.filename;
     }
 
-    /* renamed from: component5, reason: from getter */
+    /* JADX INFO: renamed from: component5, reason: from getter */
     public final Integer getWidth() {
         return this.width;
     }
 
-    /* renamed from: component6, reason: from getter */
+    /* JADX INFO: renamed from: component6, reason: from getter */
     public final Integer getHeight() {
         return this.height;
     }

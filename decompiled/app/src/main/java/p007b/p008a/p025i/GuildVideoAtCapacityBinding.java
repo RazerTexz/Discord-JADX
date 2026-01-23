@@ -6,16 +6,16 @@ import androidx.annotation.NonNull;
 import androidx.viewbinding.ViewBinding;
 import com.google.android.material.button.MaterialButton;
 
-/* compiled from: GuildVideoAtCapacityBinding.java */
-/* renamed from: b.a.i.z, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.a.i.z, reason: use source file name */
+/* JADX INFO: compiled from: GuildVideoAtCapacityBinding.java */
+/* JADX INFO: loaded from: classes.dex */
 public final class GuildVideoAtCapacityBinding implements ViewBinding {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     @NonNull
     public final LinearLayout f1431a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     @NonNull
     public final MaterialButton f1432b;
 

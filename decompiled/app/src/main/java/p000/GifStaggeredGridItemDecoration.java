@@ -8,15 +8,15 @@ import androidx.recyclerview.widget.StaggeredGridLayoutManager;
 import java.util.Objects;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: GifStaggeredGridItemDecoration.kt */
-/* renamed from: u, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: u, reason: use source file name */
+/* JADX INFO: compiled from: GifStaggeredGridItemDecoration.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class GifStaggeredGridItemDecoration extends RecyclerView.ItemDecoration {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final int f27927a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final int f27928b;
 
     public GifStaggeredGridItemDecoration(int i, int i2) {

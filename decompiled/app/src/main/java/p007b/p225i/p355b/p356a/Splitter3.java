@@ -6,37 +6,37 @@ import java.util.List;
 import java.util.Objects;
 import p007b.p225i.p355b.p356a.CharMatcher;
 
-/* compiled from: Splitter.java */
-/* renamed from: b.i.b.a.k, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.b.a.k, reason: use source file name */
+/* JADX INFO: compiled from: Splitter.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class Splitter3 {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final CharMatcher f11958a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final b f11959b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final int f11960c;
 
-    /* compiled from: Splitter.java */
-    /* renamed from: b.i.b.a.k$a */
+    /* JADX INFO: renamed from: b.i.b.a.k$a */
+    /* JADX INFO: compiled from: Splitter.java */
     public static abstract class a extends AbstractIterator<String> {
 
-        /* renamed from: l */
+        /* JADX INFO: renamed from: l */
         public final CharSequence f11961l;
 
-        /* renamed from: m */
+        /* JADX INFO: renamed from: m */
         public final CharMatcher f11962m;
 
-        /* renamed from: p */
+        /* JADX INFO: renamed from: p */
         public int f11965p;
 
-        /* renamed from: o */
+        /* JADX INFO: renamed from: o */
         public int f11964o = 0;
 
-        /* renamed from: n */
+        /* JADX INFO: renamed from: n */
         public final boolean f11963n = false;
 
         public a(Splitter3 splitter3, CharSequence charSequence) {
@@ -46,8 +46,8 @@ public final class Splitter3 {
         }
     }
 
-    /* compiled from: Splitter.java */
-    /* renamed from: b.i.b.a.k$b */
+    /* JADX INFO: renamed from: b.i.b.a.k$b */
+    /* JADX INFO: compiled from: Splitter.java */
     public interface b {
     }
 
@@ -58,7 +58,7 @@ public final class Splitter3 {
         this.f11960c = Integer.MAX_VALUE;
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public List<String> m6215a(CharSequence charSequence) {
         Objects.requireNonNull(charSequence);
         Splitter2 splitter2 = (Splitter2) this.f11959b;

@@ -35,7 +35,7 @@ import com.google.android.material.badge.BadgeDrawable;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public final class ViewPager2 extends ViewGroup {
     public static final int OFFSCREEN_PAGE_LIMIT_DEFAULT = -1;
     public static final int ORIENTATION_HORIZONTAL = 0;
@@ -65,7 +65,7 @@ public final class ViewPager2 extends ViewGroup {
     private final Rect mTmpContainerRect;
     private boolean mUserInputEnabled;
 
-    /* renamed from: androidx.viewpager2.widget.ViewPager2$1 */
+    /* JADX INFO: renamed from: androidx.viewpager2.widget.ViewPager2$1 */
     public class C07031 extends DataSetChangeObserver {
         public C07031() {
             super(null);
@@ -79,7 +79,7 @@ public final class ViewPager2 extends ViewGroup {
         }
     }
 
-    /* renamed from: androidx.viewpager2.widget.ViewPager2$2 */
+    /* JADX INFO: renamed from: androidx.viewpager2.widget.ViewPager2$2 */
     public class C07042 extends OnPageChangeCallback {
         public C07042() {
         }
@@ -101,7 +101,7 @@ public final class ViewPager2 extends ViewGroup {
         }
     }
 
-    /* renamed from: androidx.viewpager2.widget.ViewPager2$3 */
+    /* JADX INFO: renamed from: androidx.viewpager2.widget.ViewPager2$3 */
     public class C07053 extends OnPageChangeCallback {
         public C07053() {
         }
@@ -115,7 +115,7 @@ public final class ViewPager2 extends ViewGroup {
         }
     }
 
-    /* renamed from: androidx.viewpager2.widget.ViewPager2$4 */
+    /* JADX INFO: renamed from: androidx.viewpager2.widget.ViewPager2$4 */
     public class C07064 implements RecyclerView.OnChildAttachStateChangeListener {
         public C07064() {
         }
@@ -347,7 +347,7 @@ public final class ViewPager2 extends ViewGroup {
         private final AccessibilityViewCommand mActionPageForward;
         private RecyclerView.AdapterDataObserver mAdapterDataObserver;
 
-        /* renamed from: androidx.viewpager2.widget.ViewPager2$PageAwareAccessibilityProvider$1 */
+        /* JADX INFO: renamed from: androidx.viewpager2.widget.ViewPager2$PageAwareAccessibilityProvider$1 */
         public class C07071 implements AccessibilityViewCommand {
             public C07071() {
             }
@@ -359,7 +359,7 @@ public final class ViewPager2 extends ViewGroup {
             }
         }
 
-        /* renamed from: androidx.viewpager2.widget.ViewPager2$PageAwareAccessibilityProvider$2 */
+        /* JADX INFO: renamed from: androidx.viewpager2.widget.ViewPager2$PageAwareAccessibilityProvider$2 */
         public class C07082 implements AccessibilityViewCommand {
             public C07082() {
             }
@@ -371,7 +371,7 @@ public final class ViewPager2 extends ViewGroup {
             }
         }
 
-        /* renamed from: androidx.viewpager2.widget.ViewPager2$PageAwareAccessibilityProvider$3 */
+        /* JADX INFO: renamed from: androidx.viewpager2.widget.ViewPager2$PageAwareAccessibilityProvider$3 */
         public class C07093 extends DataSetChangeObserver {
             public C07093() {
                 super(null);
@@ -619,7 +619,7 @@ public final class ViewPager2 extends ViewGroup {
         }
     }
 
-    public ViewPager2(@NonNull Context context) throws IllegalStateException {
+    public ViewPager2(@NonNull Context context) {
         super(context);
         this.mTmpContainerRect = new Rect();
         this.mTmpChildRect = new Rect();
@@ -638,7 +638,7 @@ public final class ViewPager2 extends ViewGroup {
         return new C07064();
     }
 
-    private void initialize(Context context, AttributeSet attributeSet) throws IllegalStateException {
+    private void initialize(Context context, AttributeSet attributeSet) {
         this.mAccessibilityProvider = sFeatureEnhancedA11yEnabled ? new PageAwareAccessibilityProvider() : new BasicAccessibilityProvider();
         RecyclerViewImpl recyclerViewImpl = new RecyclerViewImpl(context);
         this.mRecyclerView = recyclerViewImpl;
@@ -920,7 +920,7 @@ public final class ViewPager2 extends ViewGroup {
         }
         double relativeScrollPosition = this.mScrollEventAdapter.getRelativeScrollPosition();
         int i = (int) relativeScrollPosition;
-        float f = (float) (relativeScrollPosition - i);
+        float f = (float) (relativeScrollPosition - ((double) i));
         this.mPageTransformerAdapter.onPageScrolled(i, f, Math.round(getPageSize() * f));
     }
 
@@ -1057,7 +1057,7 @@ public final class ViewPager2 extends ViewGroup {
         public int mCurrentItem;
         public int mRecyclerViewId;
 
-        /* renamed from: androidx.viewpager2.widget.ViewPager2$SavedState$1 */
+        /* JADX INFO: renamed from: androidx.viewpager2.widget.ViewPager2$SavedState$1 */
         public static class C07101 implements Parcelable.ClassLoaderCreator<SavedState> {
             @Override // android.os.Parcelable.Creator
             public /* bridge */ /* synthetic */ Object createFromParcel(Parcel parcel) {
@@ -1137,7 +1137,7 @@ public final class ViewPager2 extends ViewGroup {
         this.mAccessibilityProvider.onSetOrientation();
     }
 
-    public ViewPager2(@NonNull Context context, @Nullable AttributeSet attributeSet) throws IllegalStateException {
+    public ViewPager2(@NonNull Context context, @Nullable AttributeSet attributeSet) {
         super(context, attributeSet);
         this.mTmpContainerRect = new Rect();
         this.mTmpChildRect = new Rect();
@@ -1152,7 +1152,7 @@ public final class ViewPager2 extends ViewGroup {
         initialize(context, attributeSet);
     }
 
-    public ViewPager2(@NonNull Context context, @Nullable AttributeSet attributeSet, int i) throws IllegalStateException {
+    public ViewPager2(@NonNull Context context, @Nullable AttributeSet attributeSet, int i) {
         super(context, attributeSet, i);
         this.mTmpContainerRect = new Rect();
         this.mTmpChildRect = new Rect();
@@ -1168,7 +1168,7 @@ public final class ViewPager2 extends ViewGroup {
     }
 
     @RequiresApi(21)
-    public ViewPager2(@NonNull Context context, @Nullable AttributeSet attributeSet, int i, int i2) throws IllegalStateException {
+    public ViewPager2(@NonNull Context context, @Nullable AttributeSet attributeSet, int i, int i2) {
         super(context, attributeSet, i, i2);
         this.mTmpContainerRect = new Rect();
         this.mTmpChildRect = new Rect();

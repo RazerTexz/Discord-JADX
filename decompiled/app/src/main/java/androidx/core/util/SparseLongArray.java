@@ -8,13 +8,13 @@ import p507d0.p580t.Iterators4;
 import p507d0.p580t.Iterators5;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: SparseLongArray.kt */
-/* renamed from: androidx.core.util.SparseLongArrayKt, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: androidx.core.util.SparseLongArrayKt, reason: use source file name */
+/* JADX INFO: compiled from: SparseLongArray.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class SparseLongArray {
 
-    /* compiled from: SparseLongArray.kt */
-    /* renamed from: androidx.core.util.SparseLongArrayKt$keyIterator$1 */
+    /* JADX INFO: renamed from: androidx.core.util.SparseLongArrayKt$keyIterator$1 */
+    /* JADX INFO: compiled from: SparseLongArray.kt */
     public static final class C02751 extends Iterators4 {
         public final /* synthetic */ android.util.SparseLongArray $this_keyIterator;
         private int index;
@@ -45,8 +45,8 @@ public final class SparseLongArray {
         }
     }
 
-    /* compiled from: SparseLongArray.kt */
-    /* renamed from: androidx.core.util.SparseLongArrayKt$valueIterator$1 */
+    /* JADX INFO: renamed from: androidx.core.util.SparseLongArrayKt$valueIterator$1 */
+    /* JADX INFO: compiled from: SparseLongArray.kt */
     public static final class C02761 extends Iterators5 {
         public final /* synthetic */ android.util.SparseLongArray $this_valueIterator;
         private int index;

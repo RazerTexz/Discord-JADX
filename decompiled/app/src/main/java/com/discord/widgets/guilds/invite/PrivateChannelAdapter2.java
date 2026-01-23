@@ -3,9 +3,9 @@ package com.discord.widgets.guilds.invite;
 import android.view.View;
 import com.discord.widgets.guilds.invite.PrivateChannelAdapter;
 
-/* compiled from: PrivateChannelAdapter.kt */
-/* renamed from: com.discord.widgets.guilds.invite.PrivateChannelAdapter$Item$onConfigure$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.guilds.invite.PrivateChannelAdapter$Item$onConfigure$1, reason: use source file name */
+/* JADX INFO: compiled from: PrivateChannelAdapter.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class PrivateChannelAdapter2 implements View.OnClickListener {
     public final /* synthetic */ InviteSuggestionItem $data;
     public final /* synthetic */ PrivateChannelAdapter.Item this$0;

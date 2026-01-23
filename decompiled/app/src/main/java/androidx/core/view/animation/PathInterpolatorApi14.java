@@ -5,14 +5,14 @@ import android.graphics.PathMeasure;
 import android.view.animation.Interpolator;
 import p007b.p100d.p104b.p105a.outline;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class PathInterpolatorApi14 implements Interpolator {
     private static final float PRECISION = 0.002f;
 
-    /* renamed from: mX */
+    /* JADX INFO: renamed from: mX */
     private final float[] f137mX;
 
-    /* renamed from: mY */
+    /* JADX INFO: renamed from: mY */
     private final float[] f138mY;
 
     public PathInterpolatorApi14(Path path) {

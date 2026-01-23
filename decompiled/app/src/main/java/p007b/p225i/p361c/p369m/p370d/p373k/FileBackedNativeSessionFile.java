@@ -14,20 +14,20 @@ import p007b.p100d.p104b.p105a.outline;
 import p007b.p225i.p361c.p369m.p370d.p375m.AutoValue_CrashlyticsReport_FilesPayload_File;
 import p007b.p225i.p361c.p369m.p370d.p375m.CrashlyticsReport;
 
-/* compiled from: FileBackedNativeSessionFile.java */
-/* renamed from: b.i.c.m.d.k.u0, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.c.m.d.k.u0, reason: use source file name */
+/* JADX INFO: compiled from: FileBackedNativeSessionFile.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class FileBackedNativeSessionFile implements NativeSessionFile {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     @NonNull
     public final File f12398a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     @NonNull
     public final String f12399b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     @NonNull
     public final String f12400c;
 
@@ -39,7 +39,7 @@ public class FileBackedNativeSessionFile implements NativeSessionFile {
 
     @Override // p007b.p225i.p361c.p369m.p370d.p373k.NativeSessionFile
     @NonNull
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public String mo6392a() {
         return this.f12400c;
     }
@@ -48,7 +48,7 @@ public class FileBackedNativeSessionFile implements NativeSessionFile {
     /* JADX WARN: Removed duplicated region for block: B:37:0x0075 A[ORIG_RETURN, RETURN] */
     @Override // p007b.p225i.p361c.p369m.p370d.p373k.NativeSessionFile
     @Nullable
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
@@ -124,7 +124,7 @@ public class FileBackedNativeSessionFile implements NativeSessionFile {
 
     @Override // p007b.p225i.p361c.p369m.p370d.p373k.NativeSessionFile
     @Nullable
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public InputStream mo6394h() {
         if (this.f12398a.exists() && this.f12398a.isFile()) {
             try {

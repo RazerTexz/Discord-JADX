@@ -4,8 +4,8 @@ import com.discord.widgets.user.WidgetUserMentions;
 import kotlin.Unit;
 import p007b.p008a.p018d.AppViewModel;
 
-/* compiled from: WidgetUserMentionsViewModel.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: WidgetUserMentionsViewModel.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class WidgetUserMentionsViewModel extends AppViewModel<Unit> {
     private WidgetUserMentions.Model model;
 
@@ -13,7 +13,7 @@ public final class WidgetUserMentionsViewModel extends AppViewModel<Unit> {
         super(null, 1, null);
     }
 
-    /* renamed from: getModel$app_productionGoogleRelease, reason: from getter */
+    /* JADX INFO: renamed from: getModel$app_productionGoogleRelease, reason: from getter */
     public final WidgetUserMentions.Model getModel() {
         return this.model;
     }

@@ -25,7 +25,7 @@ import androidx.core.view.ViewCompat;
 import com.discord.models.domain.ModelAuditLogEntry;
 import java.util.Map;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class ChangeBounds extends Transition {
     private boolean mReparent;
     private boolean mResizeClip;
@@ -44,7 +44,7 @@ public class ChangeBounds extends Transition {
     private static final Property<View, PointF> POSITION_PROPERTY = new C06406(PointF.class, ModelAuditLogEntry.CHANGE_KEY_POSITION);
     private static RectEvaluator sRectEvaluator = new RectEvaluator();
 
-    /* renamed from: androidx.transition.ChangeBounds$1 */
+    /* JADX INFO: renamed from: androidx.transition.ChangeBounds$1 */
     public static class C06341 extends Property<Drawable, PointF> {
         private Rect mBounds;
 
@@ -63,14 +63,14 @@ public class ChangeBounds extends Transition {
             set2(drawable, pointF);
         }
 
-        /* renamed from: get, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: get, reason: avoid collision after fix types in other method */
         public PointF get2(Drawable drawable) {
             drawable.copyBounds(this.mBounds);
             Rect rect = this.mBounds;
             return new PointF(rect.left, rect.top);
         }
 
-        /* renamed from: set, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: set, reason: avoid collision after fix types in other method */
         public void set2(Drawable drawable, PointF pointF) {
             drawable.copyBounds(this.mBounds);
             this.mBounds.offsetTo(Math.round(pointF.x), Math.round(pointF.y));
@@ -78,7 +78,7 @@ public class ChangeBounds extends Transition {
         }
     }
 
-    /* renamed from: androidx.transition.ChangeBounds$10 */
+    /* JADX INFO: renamed from: androidx.transition.ChangeBounds$10 */
     public class C063510 extends AnimatorListenerAdapter {
         public final /* synthetic */ BitmapDrawable val$drawable;
         public final /* synthetic */ ViewGroup val$sceneRoot;
@@ -99,13 +99,13 @@ public class ChangeBounds extends Transition {
         }
     }
 
-    /* renamed from: androidx.transition.ChangeBounds$2 */
+    /* JADX INFO: renamed from: androidx.transition.ChangeBounds$2 */
     public static class C06362 extends Property<ViewBounds, PointF> {
         public C06362(Class cls, String str) {
             super(cls, str);
         }
 
-        /* renamed from: get, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: get, reason: avoid collision after fix types in other method */
         public PointF get2(ViewBounds viewBounds) {
             return null;
         }
@@ -116,23 +116,23 @@ public class ChangeBounds extends Transition {
         }
 
         @Override // android.util.Property
-        public /* bridge */ /* synthetic */ void set(ViewBounds viewBounds, PointF pointF) throws SecurityException, IllegalArgumentException {
+        public /* bridge */ /* synthetic */ void set(ViewBounds viewBounds, PointF pointF) {
             set2(viewBounds, pointF);
         }
 
-        /* renamed from: set, reason: avoid collision after fix types in other method */
-        public void set2(ViewBounds viewBounds, PointF pointF) throws SecurityException, IllegalArgumentException {
+        /* JADX INFO: renamed from: set, reason: avoid collision after fix types in other method */
+        public void set2(ViewBounds viewBounds, PointF pointF) {
             viewBounds.setTopLeft(pointF);
         }
     }
 
-    /* renamed from: androidx.transition.ChangeBounds$3 */
+    /* JADX INFO: renamed from: androidx.transition.ChangeBounds$3 */
     public static class C06373 extends Property<ViewBounds, PointF> {
         public C06373(Class cls, String str) {
             super(cls, str);
         }
 
-        /* renamed from: get, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: get, reason: avoid collision after fix types in other method */
         public PointF get2(ViewBounds viewBounds) {
             return null;
         }
@@ -143,23 +143,23 @@ public class ChangeBounds extends Transition {
         }
 
         @Override // android.util.Property
-        public /* bridge */ /* synthetic */ void set(ViewBounds viewBounds, PointF pointF) throws SecurityException, IllegalArgumentException {
+        public /* bridge */ /* synthetic */ void set(ViewBounds viewBounds, PointF pointF) {
             set2(viewBounds, pointF);
         }
 
-        /* renamed from: set, reason: avoid collision after fix types in other method */
-        public void set2(ViewBounds viewBounds, PointF pointF) throws SecurityException, IllegalArgumentException {
+        /* JADX INFO: renamed from: set, reason: avoid collision after fix types in other method */
+        public void set2(ViewBounds viewBounds, PointF pointF) {
             viewBounds.setBottomRight(pointF);
         }
     }
 
-    /* renamed from: androidx.transition.ChangeBounds$4 */
+    /* JADX INFO: renamed from: androidx.transition.ChangeBounds$4 */
     public static class C06384 extends Property<View, PointF> {
         public C06384(Class cls, String str) {
             super(cls, str);
         }
 
-        /* renamed from: get, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: get, reason: avoid collision after fix types in other method */
         public PointF get2(View view) {
             return null;
         }
@@ -170,23 +170,23 @@ public class ChangeBounds extends Transition {
         }
 
         @Override // android.util.Property
-        public /* bridge */ /* synthetic */ void set(View view, PointF pointF) throws SecurityException, IllegalArgumentException {
+        public /* bridge */ /* synthetic */ void set(View view, PointF pointF) {
             set2(view, pointF);
         }
 
-        /* renamed from: set, reason: avoid collision after fix types in other method */
-        public void set2(View view, PointF pointF) throws SecurityException, IllegalArgumentException {
+        /* JADX INFO: renamed from: set, reason: avoid collision after fix types in other method */
+        public void set2(View view, PointF pointF) {
             ViewUtils.setLeftTopRightBottom(view, view.getLeft(), view.getTop(), Math.round(pointF.x), Math.round(pointF.y));
         }
     }
 
-    /* renamed from: androidx.transition.ChangeBounds$5 */
+    /* JADX INFO: renamed from: androidx.transition.ChangeBounds$5 */
     public static class C06395 extends Property<View, PointF> {
         public C06395(Class cls, String str) {
             super(cls, str);
         }
 
-        /* renamed from: get, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: get, reason: avoid collision after fix types in other method */
         public PointF get2(View view) {
             return null;
         }
@@ -197,23 +197,23 @@ public class ChangeBounds extends Transition {
         }
 
         @Override // android.util.Property
-        public /* bridge */ /* synthetic */ void set(View view, PointF pointF) throws SecurityException, IllegalArgumentException {
+        public /* bridge */ /* synthetic */ void set(View view, PointF pointF) {
             set2(view, pointF);
         }
 
-        /* renamed from: set, reason: avoid collision after fix types in other method */
-        public void set2(View view, PointF pointF) throws SecurityException, IllegalArgumentException {
+        /* JADX INFO: renamed from: set, reason: avoid collision after fix types in other method */
+        public void set2(View view, PointF pointF) {
             ViewUtils.setLeftTopRightBottom(view, Math.round(pointF.x), Math.round(pointF.y), view.getRight(), view.getBottom());
         }
     }
 
-    /* renamed from: androidx.transition.ChangeBounds$6 */
+    /* JADX INFO: renamed from: androidx.transition.ChangeBounds$6 */
     public static class C06406 extends Property<View, PointF> {
         public C06406(Class cls, String str) {
             super(cls, str);
         }
 
-        /* renamed from: get, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: get, reason: avoid collision after fix types in other method */
         public PointF get2(View view) {
             return null;
         }
@@ -224,19 +224,19 @@ public class ChangeBounds extends Transition {
         }
 
         @Override // android.util.Property
-        public /* bridge */ /* synthetic */ void set(View view, PointF pointF) throws SecurityException, IllegalArgumentException {
+        public /* bridge */ /* synthetic */ void set(View view, PointF pointF) {
             set2(view, pointF);
         }
 
-        /* renamed from: set, reason: avoid collision after fix types in other method */
-        public void set2(View view, PointF pointF) throws SecurityException, IllegalArgumentException {
+        /* JADX INFO: renamed from: set, reason: avoid collision after fix types in other method */
+        public void set2(View view, PointF pointF) {
             int iRound = Math.round(pointF.x);
             int iRound2 = Math.round(pointF.y);
             ViewUtils.setLeftTopRightBottom(view, iRound, iRound2, view.getWidth() + iRound, view.getHeight() + iRound2);
         }
     }
 
-    /* renamed from: androidx.transition.ChangeBounds$7 */
+    /* JADX INFO: renamed from: androidx.transition.ChangeBounds$7 */
     public class C06417 extends AnimatorListenerAdapter {
         private ViewBounds mViewBounds;
         public final /* synthetic */ ViewBounds val$viewBounds;
@@ -247,7 +247,7 @@ public class ChangeBounds extends Transition {
         }
     }
 
-    /* renamed from: androidx.transition.ChangeBounds$8 */
+    /* JADX INFO: renamed from: androidx.transition.ChangeBounds$8 */
     public class C06428 extends AnimatorListenerAdapter {
         private boolean mIsCanceled;
         public final /* synthetic */ int val$endBottom;
@@ -272,7 +272,7 @@ public class ChangeBounds extends Transition {
         }
 
         @Override // android.animation.AnimatorListenerAdapter, android.animation.Animator.AnimatorListener
-        public void onAnimationEnd(Animator animator) throws SecurityException, IllegalArgumentException {
+        public void onAnimationEnd(Animator animator) {
             if (this.mIsCanceled) {
                 return;
             }
@@ -281,7 +281,7 @@ public class ChangeBounds extends Transition {
         }
     }
 
-    /* renamed from: androidx.transition.ChangeBounds$9 */
+    /* JADX INFO: renamed from: androidx.transition.ChangeBounds$9 */
     public class C06439 extends TransitionListenerAdapter {
         public boolean mCanceled = false;
         public final /* synthetic */ ViewGroup val$parent;
@@ -328,13 +328,13 @@ public class ChangeBounds extends Transition {
             this.mView = view;
         }
 
-        private void setLeftTopRightBottom() throws SecurityException, IllegalArgumentException {
+        private void setLeftTopRightBottom() {
             ViewUtils.setLeftTopRightBottom(this.mView, this.mLeft, this.mTop, this.mRight, this.mBottom);
             this.mTopLeftCalls = 0;
             this.mBottomRightCalls = 0;
         }
 
-        public void setBottomRight(PointF pointF) throws SecurityException, IllegalArgumentException {
+        public void setBottomRight(PointF pointF) {
             this.mRight = Math.round(pointF.x);
             this.mBottom = Math.round(pointF.y);
             int i = this.mBottomRightCalls + 1;
@@ -344,7 +344,7 @@ public class ChangeBounds extends Transition {
             }
         }
 
-        public void setTopLeft(PointF pointF) throws SecurityException, IllegalArgumentException {
+        public void setTopLeft(PointF pointF) {
             this.mLeft = Math.round(pointF.x);
             this.mTop = Math.round(pointF.y);
             int i = this.mTopLeftCalls + 1;
@@ -405,7 +405,7 @@ public class ChangeBounds extends Transition {
 
     @Override // androidx.transition.Transition
     @Nullable
-    public Animator createAnimator(@NonNull ViewGroup viewGroup, @Nullable TransitionValues transitionValues, @Nullable TransitionValues transitionValues2) throws SecurityException, IllegalArgumentException {
+    public Animator createAnimator(@NonNull ViewGroup viewGroup, @Nullable TransitionValues transitionValues, @Nullable TransitionValues transitionValues2) {
         int i;
         View view;
         int i2;

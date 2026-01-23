@@ -28,8 +28,8 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 import p658rx.Observable;
 
-/* compiled from: StoreOutboundPromotions.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: StoreOutboundPromotions.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class StoreOutboundPromotions extends StoreV2 {
     private static final String CONSUMED_ENTITLEMENT_PROMO_ID = "CONSUMED_ENTITLEMENT_CODE";
     private static final String LATEST_SEEN_PROMO_DATE = "LATEST_SEEN_PROMO_DATE";
@@ -42,10 +42,10 @@ public final class StoreOutboundPromotions extends StoreV2 {
     private State state;
     private State stateSnapshot;
 
-    /* compiled from: StoreOutboundPromotions.kt */
+    /* JADX INFO: compiled from: StoreOutboundPromotions.kt */
     public static abstract class State {
 
-        /* compiled from: StoreOutboundPromotions.kt */
+        /* JADX INFO: compiled from: StoreOutboundPromotions.kt */
         public static final class Failed extends State {
             public static final Failed INSTANCE = new Failed();
 
@@ -54,7 +54,7 @@ public final class StoreOutboundPromotions extends StoreV2 {
             }
         }
 
-        /* compiled from: StoreOutboundPromotions.kt */
+        /* JADX INFO: compiled from: StoreOutboundPromotions.kt */
         public static final /* data */ class Loaded extends State {
             private final int unseenCount;
             private final List<OutboundPromotion> validActivePromotions;
@@ -82,7 +82,7 @@ public final class StoreOutboundPromotions extends StoreV2 {
                 return this.validActivePromotions;
             }
 
-            /* renamed from: component2, reason: from getter */
+            /* JADX INFO: renamed from: component2, reason: from getter */
             public final int getUnseenCount() {
                 return this.unseenCount;
             }
@@ -134,7 +134,7 @@ public final class StoreOutboundPromotions extends StoreV2 {
             }
         }
 
-        /* compiled from: StoreOutboundPromotions.kt */
+        /* JADX INFO: compiled from: StoreOutboundPromotions.kt */
         public static final class Loading extends State {
             public static final Loading INSTANCE = new Loading();
 
@@ -155,8 +155,8 @@ public final class StoreOutboundPromotions extends StoreV2 {
         }
     }
 
-    /* compiled from: StoreOutboundPromotions.kt */
-    /* renamed from: com.discord.stores.StoreOutboundPromotions$markSeen$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreOutboundPromotions$markSeen$1 */
+    /* JADX INFO: compiled from: StoreOutboundPromotions.kt */
     public static final class C63191 extends Lambda implements Function0<Unit> {
         public C63191() {
             super(0);
@@ -168,7 +168,7 @@ public final class StoreOutboundPromotions extends StoreV2 {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             List<OutboundPromotion> validActivePromotions;
             State stateAccess$getState$p = StoreOutboundPromotions.access$getState$p(StoreOutboundPromotions.this);
@@ -208,8 +208,8 @@ public final class StoreOutboundPromotions extends StoreV2 {
         }
     }
 
-    /* compiled from: StoreOutboundPromotions.kt */
-    /* renamed from: com.discord.stores.StoreOutboundPromotions$observeState$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreOutboundPromotions$observeState$1 */
+    /* JADX INFO: compiled from: StoreOutboundPromotions.kt */
     public static final class C63201 extends Lambda implements Function0<State> {
         public C63201() {
             super(0);
@@ -227,8 +227,8 @@ public final class StoreOutboundPromotions extends StoreV2 {
         }
     }
 
-    /* compiled from: StoreOutboundPromotions.kt */
-    /* renamed from: com.discord.stores.StoreOutboundPromotions$observeUnseenCount$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreOutboundPromotions$observeUnseenCount$1 */
+    /* JADX INFO: compiled from: StoreOutboundPromotions.kt */
     public static final class C63211 extends Lambda implements Function0<Integer> {
         public C63211() {
             super(0);
@@ -239,7 +239,7 @@ public final class StoreOutboundPromotions extends StoreV2 {
             return Integer.valueOf(invoke2());
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final int invoke2() {
             return StoreOutboundPromotions.this.getUnseenCount();
         }
@@ -277,7 +277,7 @@ public final class StoreOutboundPromotions extends StoreV2 {
         return this.restAPI.getClaimedOutboundPromotions();
     }
 
-    /* renamed from: getState, reason: from getter */
+    /* JADX INFO: renamed from: getState, reason: from getter */
     public final State getStateSnapshot() {
         return this.stateSnapshot;
     }

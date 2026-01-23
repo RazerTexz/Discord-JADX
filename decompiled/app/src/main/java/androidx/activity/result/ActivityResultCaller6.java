@@ -8,15 +8,15 @@ import kotlin.jvm.functions.Function0;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: ActivityResultCaller.kt */
-/* renamed from: androidx.activity.result.ActivityResultCallerLauncher$resultContract$2, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: androidx.activity.result.ActivityResultCallerLauncher$resultContract$2, reason: use source file name */
+/* JADX INFO: compiled from: ActivityResultCaller.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class ActivityResultCaller6 extends Lambda implements Function0<C00451> {
     public final /* synthetic */ ActivityResultCaller5 this$0;
 
     /* JADX INFO: Add missing generic type declarations: [O] */
-    /* compiled from: ActivityResultCaller.kt */
-    /* renamed from: androidx.activity.result.ActivityResultCallerLauncher$resultContract$2$1 */
+    /* JADX INFO: renamed from: androidx.activity.result.ActivityResultCallerLauncher$resultContract$2$1 */
+    /* JADX INFO: compiled from: ActivityResultCaller.kt */
     public static final class C00451<O> extends ActivityResultContract<Unit, O> {
         public C00451() {
         }
@@ -31,7 +31,7 @@ public final class ActivityResultCaller6 extends Lambda implements Function0<C00
             return (O) ActivityResultCaller6.this.this$0.getCallerContract().parseResult(resultCode, intent);
         }
 
-        /* renamed from: createIntent, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: createIntent, reason: avoid collision after fix types in other method */
         public Intent createIntent2(Context context, Unit unit) {
             Intrinsics3.checkNotNullParameter(context, "context");
             Intent intentCreateIntent = ActivityResultCaller6.this.this$0.getCallerContract().createIntent(context, ActivityResultCaller6.this.this$0.getInput());

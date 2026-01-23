@@ -6,8 +6,8 @@ import kotlin.jvm.functions.Function1;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetChannelsListAdapter.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetChannelsListAdapter.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetChannelsListAdapter$onCallChannel$1 extends Lambda implements Function1<Channel, Unit> {
     public static final WidgetChannelsListAdapter$onCallChannel$1 INSTANCE = new WidgetChannelsListAdapter$onCallChannel$1();
 
@@ -21,7 +21,7 @@ public final class WidgetChannelsListAdapter$onCallChannel$1 extends Lambda impl
         return Unit.f27425a;
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final void invoke2(Channel channel) {
         Intrinsics3.checkNotNullParameter(channel, "it");
     }

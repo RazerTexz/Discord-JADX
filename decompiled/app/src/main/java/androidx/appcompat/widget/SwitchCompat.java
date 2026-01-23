@@ -33,7 +33,7 @@ import androidx.core.graphics.drawable.DrawableCompat;
 import androidx.core.view.ViewCompat;
 import androidx.core.widget.TextViewCompat;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class SwitchCompat extends CompoundButton {
     private static final String ACCESSIBILITY_EVENT_CLASS_NAME = "android.widget.Switch";
     private static final int MONOSPACE = 3;
@@ -85,7 +85,7 @@ public class SwitchCompat extends CompoundButton {
     private static final Property<SwitchCompat, Float> THUMB_POS = new C01281(Float.class, "thumbPos");
     private static final int[] CHECKED_STATE_SET = {R.attr.state_checked};
 
-    /* renamed from: androidx.appcompat.widget.SwitchCompat$1 */
+    /* JADX INFO: renamed from: androidx.appcompat.widget.SwitchCompat$1 */
     public class C01281 extends Property<SwitchCompat, Float> {
         public C01281(Class cls, String str) {
             super(cls, str);
@@ -101,12 +101,12 @@ public class SwitchCompat extends CompoundButton {
             set2(switchCompat, f);
         }
 
-        /* renamed from: get, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: get, reason: avoid collision after fix types in other method */
         public Float get2(SwitchCompat switchCompat) {
             return Float.valueOf(switchCompat.mThumbPosition);
         }
 
-        /* renamed from: set, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: set, reason: avoid collision after fix types in other method */
         public void set2(SwitchCompat switchCompat, Float f) {
             switchCompat.setThumbPosition(f.floatValue());
         }

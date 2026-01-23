@@ -63,8 +63,8 @@ import p507d0.p592z.p594d.Reflection2;
 import p658rx.functions.Action1;
 import p658rx.functions.Action2;
 
-/* compiled from: WidgetFriendsList.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetFriendsList.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetFriendsList extends AppFragment implements OnTabSelectedListener {
     private static final String ANALYTICS_SOURCE = "Friends";
     private static final int VIEW_INDEX_EMPTY = 1;
@@ -72,18 +72,18 @@ public final class WidgetFriendsList extends AppFragment implements OnTabSelecte
     private static final int VIEW_INDEX_RECYCLER = 0;
     private WidgetFriendsListAdapter adapter;
 
-    /* renamed from: binding$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
     private WidgetFriendsList5 loadingAdapter;
     private PrivateCallLauncher privateCallLauncher;
     private boolean showContactSyncIcon;
 
-    /* renamed from: viewModel$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: viewModel$delegate, reason: from kotlin metadata */
     private final Lazy viewModel;
     public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetFriendsList.class, "binding", "getBinding()Lcom/discord/databinding/WidgetFriendsListBinding;", 0)};
 
-    /* compiled from: WidgetFriendsList.kt */
-    /* renamed from: com.discord.widgets.friends.WidgetFriendsList$configureToolbar$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.friends.WidgetFriendsList$configureToolbar$1 */
+    /* JADX INFO: compiled from: WidgetFriendsList.kt */
     public static final class C83981<T1, T2> implements Action2<MenuItem, Context> {
         public C83981() {
         }
@@ -93,7 +93,7 @@ public final class WidgetFriendsList extends AppFragment implements OnTabSelecte
             call2(menuItem, context);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final void call2(MenuItem menuItem, Context context) {
             Intrinsics3.checkNotNullExpressionValue(menuItem, "menuItem");
             switch (menuItem.getItemId()) {
@@ -123,8 +123,8 @@ public final class WidgetFriendsList extends AppFragment implements OnTabSelecte
         }
     }
 
-    /* compiled from: WidgetFriendsList.kt */
-    /* renamed from: com.discord.widgets.friends.WidgetFriendsList$configureToolbar$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.friends.WidgetFriendsList$configureToolbar$2 */
+    /* JADX INFO: compiled from: WidgetFriendsList.kt */
     public static final class C83992<T> implements Action1<Menu> {
         public C83992() {
         }
@@ -134,7 +134,7 @@ public final class WidgetFriendsList extends AppFragment implements OnTabSelecte
             call2(menu);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final void call2(Menu menu) {
             MenuItem menuItemFindItem = menu.findItem(C5419R.id.menu_friends_contact_sync);
             if (menuItemFindItem != null) {
@@ -143,8 +143,8 @@ public final class WidgetFriendsList extends AppFragment implements OnTabSelecte
         }
     }
 
-    /* compiled from: WidgetFriendsList.kt */
-    /* renamed from: com.discord.widgets.friends.WidgetFriendsList$handleCaptchaError$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.friends.WidgetFriendsList$handleCaptchaError$1 */
+    /* JADX INFO: compiled from: WidgetFriendsList.kt */
     public static final class C84001 extends Lambda implements Function2<AppFragment, CaptchaHelper.CaptchaPayload, Unit> {
         public final /* synthetic */ FriendsListViewModel.Event.CaptchaError $event;
 
@@ -160,7 +160,7 @@ public final class WidgetFriendsList extends AppFragment implements OnTabSelecte
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(AppFragment appFragment, CaptchaHelper.CaptchaPayload captchaPayload) {
             Intrinsics3.checkNotNullParameter(appFragment, "<anonymous parameter 0>");
             Intrinsics3.checkNotNullParameter(captchaPayload, "captchaPayload");
@@ -168,8 +168,8 @@ public final class WidgetFriendsList extends AppFragment implements OnTabSelecte
         }
     }
 
-    /* compiled from: WidgetFriendsList.kt */
-    /* renamed from: com.discord.widgets.friends.WidgetFriendsList$onViewBound$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.friends.WidgetFriendsList$onViewBound$1 */
+    /* JADX INFO: compiled from: WidgetFriendsList.kt */
     public static final class C84011 extends Lambda implements Function2<View, User, Unit> {
         public C84011() {
             super(2);
@@ -181,7 +181,7 @@ public final class WidgetFriendsList extends AppFragment implements OnTabSelecte
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(View view, User user) {
             Intrinsics3.checkNotNullParameter(view, "<anonymous parameter 0>");
             Intrinsics3.checkNotNullParameter(user, "user");
@@ -193,8 +193,8 @@ public final class WidgetFriendsList extends AppFragment implements OnTabSelecte
         }
     }
 
-    /* compiled from: WidgetFriendsList.kt */
-    /* renamed from: com.discord.widgets.friends.WidgetFriendsList$onViewBound$10 */
+    /* JADX INFO: renamed from: com.discord.widgets.friends.WidgetFriendsList$onViewBound$10 */
+    /* JADX INFO: compiled from: WidgetFriendsList.kt */
     public static final class C840210 extends Lambda implements Function1<User, Unit> {
         public C840210() {
             super(1);
@@ -206,15 +206,15 @@ public final class WidgetFriendsList extends AppFragment implements OnTabSelecte
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(User user) {
             Intrinsics3.checkNotNullParameter(user, "user");
             FriendsListViewModel.acceptFriendSuggestion$default(WidgetFriendsList.access$getViewModel$p(WidgetFriendsList.this), user.getUsername(), user.getDiscriminator(), null, 4, null);
         }
     }
 
-    /* compiled from: WidgetFriendsList.kt */
-    /* renamed from: com.discord.widgets.friends.WidgetFriendsList$onViewBound$11 */
+    /* JADX INFO: renamed from: com.discord.widgets.friends.WidgetFriendsList$onViewBound$11 */
+    /* JADX INFO: compiled from: WidgetFriendsList.kt */
     public static final /* synthetic */ class C840311 extends FunctionReferenceImpl implements Function1<Long, Unit> {
         public C840311(FriendsListViewModel friendsListViewModel) {
             super(1, friendsListViewModel, FriendsListViewModel.class, "ignoreSuggestion", "ignoreSuggestion(J)V", 0);
@@ -231,8 +231,8 @@ public final class WidgetFriendsList extends AppFragment implements OnTabSelecte
         }
     }
 
-    /* compiled from: WidgetFriendsList.kt */
-    /* renamed from: com.discord.widgets.friends.WidgetFriendsList$onViewBound$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.friends.WidgetFriendsList$onViewBound$2 */
+    /* JADX INFO: compiled from: WidgetFriendsList.kt */
     public static final class C84042 extends Lambda implements Function0<Unit> {
         public C84042() {
             super(0);
@@ -244,14 +244,14 @@ public final class WidgetFriendsList extends AppFragment implements OnTabSelecte
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             WidgetFriendsList.access$getViewModel$p(WidgetFriendsList.this).handleClickPendingHeader();
         }
     }
 
-    /* compiled from: WidgetFriendsList.kt */
-    /* renamed from: com.discord.widgets.friends.WidgetFriendsList$onViewBound$3 */
+    /* JADX INFO: renamed from: com.discord.widgets.friends.WidgetFriendsList$onViewBound$3 */
+    /* JADX INFO: compiled from: WidgetFriendsList.kt */
     public static final class C84053 extends Lambda implements Function1<User, Unit> {
         public C84053() {
             super(1);
@@ -263,15 +263,15 @@ public final class WidgetFriendsList extends AppFragment implements OnTabSelecte
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(User user) {
             Intrinsics3.checkNotNullParameter(user, "user");
             WidgetFriendsList.access$getViewModel$p(WidgetFriendsList.this).launchVoiceCall(user.getId());
         }
     }
 
-    /* compiled from: WidgetFriendsList.kt */
-    /* renamed from: com.discord.widgets.friends.WidgetFriendsList$onViewBound$4 */
+    /* JADX INFO: renamed from: com.discord.widgets.friends.WidgetFriendsList$onViewBound$4 */
+    /* JADX INFO: compiled from: WidgetFriendsList.kt */
     public static final class C84064 extends Lambda implements Function1<User, Unit> {
         public C84064() {
             super(1);
@@ -283,7 +283,7 @@ public final class WidgetFriendsList extends AppFragment implements OnTabSelecte
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(User user) {
             Intrinsics3.checkNotNullParameter(user, "user");
             ChannelSelector.INSTANCE.getInstance().findAndSetDirectMessage(WidgetFriendsList.this.requireContext(), user.getId());
@@ -291,8 +291,8 @@ public final class WidgetFriendsList extends AppFragment implements OnTabSelecte
         }
     }
 
-    /* compiled from: WidgetFriendsList.kt */
-    /* renamed from: com.discord.widgets.friends.WidgetFriendsList$onViewBound$5 */
+    /* JADX INFO: renamed from: com.discord.widgets.friends.WidgetFriendsList$onViewBound$5 */
+    /* JADX INFO: compiled from: WidgetFriendsList.kt */
     public static final class C84075 extends Lambda implements Function1<User, Unit> {
         public C84075() {
             super(1);
@@ -304,15 +304,15 @@ public final class WidgetFriendsList extends AppFragment implements OnTabSelecte
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(User user) {
             Intrinsics3.checkNotNullParameter(user, "it");
             WidgetFriendsList.access$getViewModel$p(WidgetFriendsList.this).acceptFriendRequest(user.getId(), user.getUsername());
         }
     }
 
-    /* compiled from: WidgetFriendsList.kt */
-    /* renamed from: com.discord.widgets.friends.WidgetFriendsList$onViewBound$6 */
+    /* JADX INFO: renamed from: com.discord.widgets.friends.WidgetFriendsList$onViewBound$6 */
+    /* JADX INFO: compiled from: WidgetFriendsList.kt */
     public static final class C84086 extends Lambda implements Function2<User, Integer, Unit> {
         public C84086() {
             super(2);
@@ -330,8 +330,8 @@ public final class WidgetFriendsList extends AppFragment implements OnTabSelecte
         }
     }
 
-    /* compiled from: WidgetFriendsList.kt */
-    /* renamed from: com.discord.widgets.friends.WidgetFriendsList$onViewBound$7 */
+    /* JADX INFO: renamed from: com.discord.widgets.friends.WidgetFriendsList$onViewBound$7 */
+    /* JADX INFO: compiled from: WidgetFriendsList.kt */
     public static final class C84097 extends Lambda implements Function0<Unit> {
         public C84097() {
             super(0);
@@ -343,7 +343,7 @@ public final class WidgetFriendsList extends AppFragment implements OnTabSelecte
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             ContactSyncFlowAnalytics.Companion.trackStart$default(ContactSyncFlowAnalytics.INSTANCE, false, MapsJVM.mapOf(Tuples.m10073to("location_page", "Friends List Upsell")), 1, null);
             AnalyticsTracker.INSTANCE.openModal("Contact Sync", new Traits.Location("Friends List Upsell", null, null, null, null, 30, null));
@@ -351,12 +351,12 @@ public final class WidgetFriendsList extends AppFragment implements OnTabSelecte
         }
     }
 
-    /* compiled from: WidgetFriendsList.kt */
-    /* renamed from: com.discord.widgets.friends.WidgetFriendsList$onViewBound$8 */
+    /* JADX INFO: renamed from: com.discord.widgets.friends.WidgetFriendsList$onViewBound$8 */
+    /* JADX INFO: compiled from: WidgetFriendsList.kt */
     public static final class C84108 extends Lambda implements Function1<View, Unit> {
 
-        /* compiled from: WidgetFriendsList.kt */
-        /* renamed from: com.discord.widgets.friends.WidgetFriendsList$onViewBound$8$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.widgets.friends.WidgetFriendsList$onViewBound$8$1, reason: invalid class name */
+        /* JADX INFO: compiled from: WidgetFriendsList.kt */
         public static final class AnonymousClass1 implements MenuItem.OnMenuItemClickListener {
             public AnonymousClass1() {
             }
@@ -378,7 +378,7 @@ public final class WidgetFriendsList extends AppFragment implements OnTabSelecte
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(View view) {
             Intrinsics3.checkNotNullParameter(view, "upsellView");
             PopupMenu popupMenu = new PopupMenu(new ContextThemeWrapper(view.getContext(), 2131951663), view);
@@ -388,8 +388,8 @@ public final class WidgetFriendsList extends AppFragment implements OnTabSelecte
         }
     }
 
-    /* compiled from: WidgetFriendsList.kt */
-    /* renamed from: com.discord.widgets.friends.WidgetFriendsList$onViewBound$9 */
+    /* JADX INFO: renamed from: com.discord.widgets.friends.WidgetFriendsList$onViewBound$9 */
+    /* JADX INFO: compiled from: WidgetFriendsList.kt */
     public static final class C84119 extends Lambda implements Function0<Unit> {
         public C84119() {
             super(0);
@@ -401,14 +401,14 @@ public final class WidgetFriendsList extends AppFragment implements OnTabSelecte
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             WidgetFriendsList.access$getViewModel$p(WidgetFriendsList.this).handleClickSuggestedHeader();
         }
     }
 
-    /* compiled from: WidgetFriendsList.kt */
-    /* renamed from: com.discord.widgets.friends.WidgetFriendsList$onViewBoundOrOnResume$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.friends.WidgetFriendsList$onViewBoundOrOnResume$1 */
+    /* JADX INFO: compiled from: WidgetFriendsList.kt */
     public static final /* synthetic */ class C84121 extends FunctionReferenceImpl implements Function1<FriendsListViewModel.ViewState, Unit> {
         public C84121(WidgetFriendsList widgetFriendsList) {
             super(1, widgetFriendsList, WidgetFriendsList.class, "configureUI", "configureUI(Lcom/discord/widgets/friends/FriendsListViewModel$ViewState;)V", 0);
@@ -420,15 +420,15 @@ public final class WidgetFriendsList extends AppFragment implements OnTabSelecte
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(FriendsListViewModel.ViewState viewState) {
             Intrinsics3.checkNotNullParameter(viewState, "p1");
             WidgetFriendsList.access$configureUI((WidgetFriendsList) this.receiver, viewState);
         }
     }
 
-    /* compiled from: WidgetFriendsList.kt */
-    /* renamed from: com.discord.widgets.friends.WidgetFriendsList$onViewBoundOrOnResume$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.friends.WidgetFriendsList$onViewBoundOrOnResume$2 */
+    /* JADX INFO: compiled from: WidgetFriendsList.kt */
     public static final /* synthetic */ class C84132 extends FunctionReferenceImpl implements Function1<FriendsListViewModel.Event, Unit> {
         public C84132(WidgetFriendsList widgetFriendsList) {
             super(1, widgetFriendsList, WidgetFriendsList.class, "handleEvent", "handleEvent(Lcom/discord/widgets/friends/FriendsListViewModel$Event;)V", 0);
@@ -440,7 +440,7 @@ public final class WidgetFriendsList extends AppFragment implements OnTabSelecte
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(FriendsListViewModel.Event event) {
             Intrinsics3.checkNotNullParameter(event, "p1");
             WidgetFriendsList.access$handleEvent((WidgetFriendsList) this.receiver, event);

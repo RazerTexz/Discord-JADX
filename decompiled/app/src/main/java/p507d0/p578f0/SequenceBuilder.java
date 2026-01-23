@@ -14,24 +14,24 @@ import p507d0.p584w.p586i.p587a.DebugProbes;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.p595g0.KMarkers;
 
-/* compiled from: SequenceBuilder.kt */
-/* renamed from: d0.f0.j, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.f0.j, reason: use source file name */
+/* JADX INFO: compiled from: SequenceBuilder.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class SequenceBuilder<T> extends SequenceBuilder2<T> implements Iterator<T>, Continuation<Unit>, KMarkers {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public int f25100j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public T f25101k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public Iterator<? extends T> f25102l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public Continuation<? super Unit> f25103m;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final Throwable m10064b() {
         int i = this.f25100j;
         if (i == 4) {

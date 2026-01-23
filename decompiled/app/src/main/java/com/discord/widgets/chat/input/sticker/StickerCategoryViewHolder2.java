@@ -4,9 +4,9 @@ import android.view.View;
 import com.discord.widgets.chat.input.sticker.StickerCategoryItem;
 import kotlin.jvm.functions.Function1;
 
-/* compiled from: StickerCategoryViewHolder.kt */
-/* renamed from: com.discord.widgets.chat.input.sticker.StickerCategoryViewHolder$Guild$configure$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.chat.input.sticker.StickerCategoryViewHolder$Guild$configure$1, reason: use source file name */
+/* JADX INFO: compiled from: StickerCategoryViewHolder.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class StickerCategoryViewHolder2 implements View.OnClickListener {
     public final /* synthetic */ StickerCategoryItem.GuildItem $guildItem;
     public final /* synthetic */ Function1 $onGuildClicked;

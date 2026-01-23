@@ -32,7 +32,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public final class PrintHelper {
 
     @SuppressLint({"InlinedApi"})
@@ -55,7 +55,7 @@ public final class PrintHelper {
     public int mColorMode = 2;
     public int mOrientation = 1;
 
-    /* renamed from: androidx.print.PrintHelper$1 */
+    /* JADX INFO: renamed from: androidx.print.PrintHelper$1 */
     public class AsyncTaskC05311 extends AsyncTask<Void, Void, Throwable> {
         public final /* synthetic */ PrintAttributes val$attributes;
         public final /* synthetic */ Bitmap val$bitmap;
@@ -85,7 +85,7 @@ public final class PrintHelper {
             onPostExecute2(th);
         }
 
-        /* renamed from: doInBackground, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: doInBackground, reason: avoid collision after fix types in other method */
         public Throwable doInBackground2(Void... voidArr) {
             RectF rectF;
             try {
@@ -151,7 +151,7 @@ public final class PrintHelper {
             }
         }
 
-        /* renamed from: onPostExecute, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: onPostExecute, reason: avoid collision after fix types in other method */
         public void onPostExecute2(Throwable th) {
             if (this.val$cancellationSignal.isCanceled()) {
                 this.val$writeResultCallback.onWriteCancelled();
@@ -213,14 +213,14 @@ public final class PrintHelper {
         public final String mJobName;
         public AsyncTask<Uri, Boolean, Bitmap> mLoadBitmap;
 
-        /* renamed from: androidx.print.PrintHelper$PrintUriAdapter$1 */
+        /* JADX INFO: renamed from: androidx.print.PrintHelper$PrintUriAdapter$1 */
         public class AsyncTaskC05321 extends AsyncTask<Uri, Boolean, Bitmap> {
             public final /* synthetic */ CancellationSignal val$cancellationSignal;
             public final /* synthetic */ PrintDocumentAdapter.LayoutResultCallback val$layoutResultCallback;
             public final /* synthetic */ PrintAttributes val$newPrintAttributes;
             public final /* synthetic */ PrintAttributes val$oldPrintAttributes;
 
-            /* renamed from: androidx.print.PrintHelper$PrintUriAdapter$1$1, reason: invalid class name */
+            /* JADX INFO: renamed from: androidx.print.PrintHelper$PrintUriAdapter$1$1, reason: invalid class name */
             public class AnonymousClass1 implements CancellationSignal.OnCancelListener {
                 public AnonymousClass1() {
                 }
@@ -259,7 +259,7 @@ public final class PrintHelper {
                 this.val$cancellationSignal.setOnCancelListener(new AnonymousClass1());
             }
 
-            /* renamed from: doInBackground, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: doInBackground, reason: avoid collision after fix types in other method */
             public Bitmap doInBackground2(Uri... uriArr) {
                 try {
                     PrintUriAdapter printUriAdapter = PrintUriAdapter.this;
@@ -269,13 +269,13 @@ public final class PrintHelper {
                 }
             }
 
-            /* renamed from: onCancelled, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: onCancelled, reason: avoid collision after fix types in other method */
             public void onCancelled2(Bitmap bitmap) {
                 this.val$layoutResultCallback.onLayoutCancelled();
                 PrintUriAdapter.this.mLoadBitmap = null;
             }
 
-            /* renamed from: onPostExecute, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: onPostExecute, reason: avoid collision after fix types in other method */
             public void onPostExecute2(Bitmap bitmap) {
                 PrintAttributes.MediaSize mediaSize;
                 super.onPostExecute(bitmap);

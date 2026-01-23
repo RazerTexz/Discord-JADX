@@ -3,15 +3,15 @@ package p507d0.p513e0.p514p.p515d;
 import java.lang.ref.WeakReference;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: moduleByClassLoader.kt */
-/* renamed from: d0.e0.p.d.k0, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.k0, reason: use source file name */
+/* JADX INFO: compiled from: moduleByClassLoader.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class moduleByClassLoader2 {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final WeakReference<ClassLoader> f22400a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final int f22401b;
 
     public moduleByClassLoader2(ClassLoader classLoader) {

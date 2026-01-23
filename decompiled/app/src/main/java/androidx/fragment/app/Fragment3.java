@@ -5,9 +5,9 @@ import androidx.annotation.NonNull;
 import kotlin.jvm.functions.Function2;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: Fragment.kt */
-/* renamed from: androidx.fragment.app.FragmentKt$sam$androidx_fragment_app_FragmentResultListener$0, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: androidx.fragment.app.FragmentKt$sam$androidx_fragment_app_FragmentResultListener$0, reason: use source file name */
+/* JADX INFO: compiled from: Fragment.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class Fragment3 implements FragmentResultListener {
     private final /* synthetic */ Function2 function;
 

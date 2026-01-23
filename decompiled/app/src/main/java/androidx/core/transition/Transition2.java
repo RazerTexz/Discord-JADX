@@ -7,13 +7,13 @@ import kotlin.jvm.functions.Function1;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: Transition.kt */
-/* renamed from: androidx.core.transition.TransitionKt, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: androidx.core.transition.TransitionKt, reason: use source file name */
+/* JADX INFO: compiled from: Transition.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class Transition2 {
 
-    /* compiled from: Transition.kt */
-    /* renamed from: androidx.core.transition.TransitionKt$addListener$1 */
+    /* JADX INFO: renamed from: androidx.core.transition.TransitionKt$addListener$1 */
+    /* JADX INFO: compiled from: Transition.kt */
     public static final class C02571 extends Lambda implements Function1<Transition, Unit> {
         public static final C02571 INSTANCE = new C02571();
 
@@ -27,14 +27,14 @@ public final class Transition2 {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Transition transition) {
             Intrinsics3.checkNotNullParameter(transition, "it");
         }
     }
 
-    /* compiled from: Transition.kt */
-    /* renamed from: androidx.core.transition.TransitionKt$addListener$2 */
+    /* JADX INFO: renamed from: androidx.core.transition.TransitionKt$addListener$2 */
+    /* JADX INFO: compiled from: Transition.kt */
     public static final class C02582 extends Lambda implements Function1<Transition, Unit> {
         public static final C02582 INSTANCE = new C02582();
 
@@ -48,14 +48,14 @@ public final class Transition2 {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Transition transition) {
             Intrinsics3.checkNotNullParameter(transition, "it");
         }
     }
 
-    /* compiled from: Transition.kt */
-    /* renamed from: androidx.core.transition.TransitionKt$addListener$3 */
+    /* JADX INFO: renamed from: androidx.core.transition.TransitionKt$addListener$3 */
+    /* JADX INFO: compiled from: Transition.kt */
     public static final class C02593 extends Lambda implements Function1<Transition, Unit> {
         public static final C02593 INSTANCE = new C02593();
 
@@ -69,14 +69,14 @@ public final class Transition2 {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Transition transition) {
             Intrinsics3.checkNotNullParameter(transition, "it");
         }
     }
 
-    /* compiled from: Transition.kt */
-    /* renamed from: androidx.core.transition.TransitionKt$addListener$4 */
+    /* JADX INFO: renamed from: androidx.core.transition.TransitionKt$addListener$4 */
+    /* JADX INFO: compiled from: Transition.kt */
     public static final class C02604 extends Lambda implements Function1<Transition, Unit> {
         public static final C02604 INSTANCE = new C02604();
 
@@ -90,14 +90,14 @@ public final class Transition2 {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Transition transition) {
             Intrinsics3.checkNotNullParameter(transition, "it");
         }
     }
 
-    /* compiled from: Transition.kt */
-    /* renamed from: androidx.core.transition.TransitionKt$addListener$5 */
+    /* JADX INFO: renamed from: androidx.core.transition.TransitionKt$addListener$5 */
+    /* JADX INFO: compiled from: Transition.kt */
     public static final class C02615 extends Lambda implements Function1<Transition, Unit> {
         public static final C02615 INSTANCE = new C02615();
 
@@ -111,7 +111,7 @@ public final class Transition2 {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Transition transition) {
             Intrinsics3.checkNotNullParameter(transition, "it");
         }

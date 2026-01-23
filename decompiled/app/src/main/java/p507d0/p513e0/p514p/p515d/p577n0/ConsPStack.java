@@ -4,28 +4,28 @@ import java.util.Iterator;
 import java.util.NoSuchElementException;
 import p007b.p100d.p104b.p105a.outline;
 
-/* compiled from: ConsPStack.java */
-/* renamed from: d0.e0.p.d.n0.a, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.n0.a, reason: use source file name */
+/* JADX INFO: compiled from: ConsPStack.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class ConsPStack<E> implements Iterable<E> {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static final ConsPStack<Object> f25018j = new ConsPStack<>();
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final E f25019k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final ConsPStack<E> f25020l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public final int f25021m;
 
-    /* compiled from: ConsPStack.java */
-    /* renamed from: d0.e0.p.d.n0.a$a */
+    /* JADX INFO: renamed from: d0.e0.p.d.n0.a$a */
+    /* JADX INFO: compiled from: ConsPStack.java */
     public static class a<E> implements Iterator<E> {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public ConsPStack<E> f25022j;
 
         public a(ConsPStack<E> consPStack) {
@@ -61,7 +61,7 @@ public final class ConsPStack<E> implements Iterable<E> {
         return (ConsPStack<E>) f25018j;
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final ConsPStack<E> m10049c(Object obj) {
         if (this.f25021m == 0) {
             return this;
@@ -73,7 +73,7 @@ public final class ConsPStack<E> implements Iterable<E> {
         return consPStackM10049c == this.f25020l ? this : new ConsPStack<>(this.f25019k, consPStackM10049c);
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final ConsPStack<E> m10050d(int i) {
         if (i < 0 || i > this.f25021m) {
             throw new IndexOutOfBoundsException();

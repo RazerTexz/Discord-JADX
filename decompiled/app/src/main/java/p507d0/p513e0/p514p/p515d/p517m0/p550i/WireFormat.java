@@ -1,12 +1,12 @@
 package p507d0.p513e0.p514p.p515d.p517m0.p550i;
 
-/* compiled from: WireFormat.java */
-/* renamed from: d0.e0.p.d.m0.i.w, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.i.w, reason: use source file name */
+/* JADX INFO: compiled from: WireFormat.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class WireFormat {
 
-    /* compiled from: WireFormat.java */
-    /* renamed from: d0.e0.p.d.m0.i.w$c */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.i.w$c */
+    /* JADX INFO: compiled from: WireFormat.java */
     public enum c {
         INT(0),
         LONG(0L),
@@ -39,71 +39,71 @@ public final class WireFormat {
     	at jadx.core.dex.visitors.EnumVisitor.visit(EnumVisitor.java:100)
      */
     /* JADX WARN: Failed to restore enum class, 'enum' modifier and super class removed */
-    /* compiled from: WireFormat.java */
-    /* renamed from: d0.e0.p.d.m0.i.w$b */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.i.w$b */
+    /* JADX INFO: compiled from: WireFormat.java */
     public static class b {
 
-        /* renamed from: A */
+        /* JADX INFO: renamed from: A */
         public static final b f24189A;
 
-        /* renamed from: B */
+        /* JADX INFO: renamed from: B */
         public static final /* synthetic */ b[] f24190B;
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public static final b f24191j;
 
-        /* renamed from: k */
+        /* JADX INFO: renamed from: k */
         public static final b f24192k;
 
-        /* renamed from: l */
+        /* JADX INFO: renamed from: l */
         public static final b f24193l;
 
-        /* renamed from: m */
+        /* JADX INFO: renamed from: m */
         public static final b f24194m;
 
-        /* renamed from: n */
+        /* JADX INFO: renamed from: n */
         public static final b f24195n;
 
-        /* renamed from: o */
+        /* JADX INFO: renamed from: o */
         public static final b f24196o;
 
-        /* renamed from: p */
+        /* JADX INFO: renamed from: p */
         public static final b f24197p;
 
-        /* renamed from: q */
+        /* JADX INFO: renamed from: q */
         public static final b f24198q;
 
-        /* renamed from: r */
+        /* JADX INFO: renamed from: r */
         public static final b f24199r;
 
-        /* renamed from: s */
+        /* JADX INFO: renamed from: s */
         public static final b f24200s;
 
-        /* renamed from: t */
+        /* JADX INFO: renamed from: t */
         public static final b f24201t;
 
-        /* renamed from: u */
+        /* JADX INFO: renamed from: u */
         public static final b f24202u;
 
-        /* renamed from: v */
+        /* JADX INFO: renamed from: v */
         public static final b f24203v;
 
-        /* renamed from: w */
+        /* JADX INFO: renamed from: w */
         public static final b f24204w;
 
-        /* renamed from: x */
+        /* JADX INFO: renamed from: x */
         public static final b f24205x;
 
-        /* renamed from: y */
+        /* JADX INFO: renamed from: y */
         public static final b f24206y;
 
-        /* renamed from: z */
+        /* JADX INFO: renamed from: z */
         public static final b f24207z;
         private final c javaType;
         private final int wireType;
 
-        /* compiled from: WireFormat.java */
-        /* renamed from: d0.e0.p.d.m0.i.w$b$a */
+        /* JADX INFO: renamed from: d0.e0.p.d.m0.i.w$b$a */
+        /* JADX INFO: compiled from: WireFormat.java */
         public enum a extends b {
             public a(String str, int i, c cVar, int i2) {
                 super(str, i, cVar, i2, null);
@@ -115,8 +115,8 @@ public final class WireFormat {
             }
         }
 
-        /* compiled from: WireFormat.java */
-        /* renamed from: d0.e0.p.d.m0.i.w$b$b, reason: collision with other inner class name */
+        /* JADX INFO: renamed from: d0.e0.p.d.m0.i.w$b$b, reason: collision with other inner class name */
+        /* JADX INFO: compiled from: WireFormat.java */
         public enum C13326b extends b {
             public C13326b(String str, int i, c cVar, int i2) {
                 super(str, i, cVar, i2, null);
@@ -128,8 +128,8 @@ public final class WireFormat {
             }
         }
 
-        /* compiled from: WireFormat.java */
-        /* renamed from: d0.e0.p.d.m0.i.w$b$c */
+        /* JADX INFO: renamed from: d0.e0.p.d.m0.i.w$b$c */
+        /* JADX INFO: compiled from: WireFormat.java */
         public enum c extends b {
             public c(String str, int i, c cVar, int i2) {
                 super(str, i, cVar, i2, null);
@@ -141,8 +141,8 @@ public final class WireFormat {
             }
         }
 
-        /* compiled from: WireFormat.java */
-        /* renamed from: d0.e0.p.d.m0.i.w$b$d */
+        /* JADX INFO: renamed from: d0.e0.p.d.m0.i.w$b$d */
+        /* JADX INFO: compiled from: WireFormat.java */
         public enum d extends b {
             public d(String str, int i, c cVar, int i2) {
                 super(str, i, cVar, i2, null);

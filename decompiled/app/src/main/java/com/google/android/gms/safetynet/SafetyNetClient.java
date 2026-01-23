@@ -9,7 +9,7 @@ import p007b.p225i.p226a.p288f.p299e.p300h.C3267b;
 import p007b.p225i.p226a.p288f.p299e.p300h.p301j.C3275a;
 import p007b.p225i.p226a.p288f.p336k.C4327a;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public class SafetyNetClient extends C3267b<C3266a.d.c> {
     public SafetyNetClient(@NonNull Activity activity) {
         C3266a<C3266a.d.c> c3266a = C4327a.f11445c;

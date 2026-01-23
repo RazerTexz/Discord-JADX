@@ -7,13 +7,13 @@ import com.google.auto.value.AutoValue;
 import java.io.IOException;
 import java.io.Reader;
 
-/* compiled from: LogResponse.java */
+/* JADX INFO: renamed from: b.i.a.b.i.e.n, reason: use source file name */
+/* JADX INFO: compiled from: LogResponse.java */
+/* JADX INFO: loaded from: classes3.dex */
 @AutoValue
-/* renamed from: b.i.a.b.i.e.n, reason: use source file name */
-/* loaded from: classes3.dex */
 public abstract class LogResponse {
     @NonNull
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static LogResponse m2333a(@NonNull Reader reader) throws IOException {
         JsonReader jsonReader = new JsonReader(reader);
         try {
@@ -30,6 +30,6 @@ public abstract class LogResponse {
         }
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public abstract long mo2330b();
 }

@@ -14,7 +14,7 @@ import p007b.p008a.p033m.p034a.C1140f;
 import p007b.p008a.p033m.p034a.C1142g;
 import p007b.p100d.p104b.p105a.outline;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class ModelAuditLog implements Model {
     private List<ModelAuditLogEntry> auditLogEntries;
     private List<GuildScheduledEvent> guildScheduledEvents;

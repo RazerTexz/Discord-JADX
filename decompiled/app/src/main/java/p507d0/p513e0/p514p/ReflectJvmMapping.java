@@ -6,9 +6,9 @@ import p507d0.p513e0.TypesJVM5;
 import p507d0.p513e0.p514p.p515d.KTypeImpl;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ReflectJvmMapping.kt */
-/* renamed from: d0.e0.p.b, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.b, reason: use source file name */
+/* JADX INFO: compiled from: ReflectJvmMapping.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class ReflectJvmMapping {
     public static final Type getJavaType(KType kType) {
         Intrinsics3.checkNotNullParameter(kType, "$this$javaType");

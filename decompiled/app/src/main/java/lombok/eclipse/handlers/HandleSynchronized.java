@@ -26,9 +26,9 @@ import org.eclipse.jdt.internal.compiler.ast.ThisReference;
 import org.eclipse.jdt.internal.compiler.ast.TypeDeclaration;
 import org.eclipse.jdt.internal.compiler.lookup.TypeConstants;
 
+/* JADX INFO: loaded from: discord-126021.apk:lombok/eclipse/handlers/HandleSynchronized.SCL.lombok */
 @DeferUntilPostDiet
 @HandlerPriority(1024)
-/* loaded from: discord-126021.apk:lombok/eclipse/handlers/HandleSynchronized.SCL.lombok */
 public class HandleSynchronized extends EclipseAnnotationHandler<Synchronized> {
     private static final char[] INSTANCE_LOCK_NAME = "$lock".toCharArray();
     private static final char[] STATIC_LOCK_NAME = "$LOCK".toCharArray();
@@ -115,7 +115,7 @@ public class HandleSynchronized extends EclipseAnnotationHandler<Synchronized> {
         HandlerUtil.handleFlagUsage(annotationNode, ConfigurationKeys.SYNCHRONIZED_FLAG_USAGE, "@Synchronized");
         int p1 = source.sourceStart - 1;
         int p2 = source.sourceStart - 2;
-        long pos = (p1 << 32) | p2;
+        long pos = (((long) p1) << 32) | ((long) p2);
         EclipseNode methodNode = annotationNode.m10925up();
         if (methodNode == null || methodNode.getKind() != AST.Kind.METHOD || !(methodNode.get() instanceof MethodDeclaration)) {
             annotationNode.addError("@Synchronized is legal only on methods.");

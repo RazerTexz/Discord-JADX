@@ -3,9 +3,9 @@ package p007b.p225i.p226a.p288f.p313h.p322i;
 import java.io.OutputStream;
 import java.util.Objects;
 
-/* compiled from: com.google.firebase:firebase-messaging@@21.0.0 */
-/* renamed from: b.i.a.f.h.i.a */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.h.i.a */
+/* JADX INFO: compiled from: com.google.firebase:firebase-messaging@@21.0.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public final class C3487a extends OutputStream {
     public final String toString() {
         return "ByteStreams.nullOutputStream()";

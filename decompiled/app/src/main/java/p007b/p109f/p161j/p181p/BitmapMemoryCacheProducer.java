@@ -12,28 +12,28 @@ import p007b.p109f.p161j.p175j.ImmutableQualityInfo;
 import p007b.p109f.p161j.p175j.QualityInfo;
 import p007b.p109f.p161j.p183r.FrescoSystrace;
 
-/* compiled from: BitmapMemoryCacheProducer.java */
-/* renamed from: b.f.j.p.h, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.f.j.p.h, reason: use source file name */
+/* JADX INFO: compiled from: BitmapMemoryCacheProducer.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class BitmapMemoryCacheProducer implements Producer2<CloseableReference<CloseableImage>> {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final MemoryCache<CacheKey, CloseableImage> f4067a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final CacheKeyFactory f4068b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final Producer2<CloseableReference<CloseableImage>> f4069c;
 
-    /* compiled from: BitmapMemoryCacheProducer.java */
-    /* renamed from: b.f.j.p.h$a */
+    /* JADX INFO: renamed from: b.f.j.p.h$a */
+    /* JADX INFO: compiled from: BitmapMemoryCacheProducer.java */
     public class a extends DelegatingConsumer<CloseableReference<CloseableImage>, CloseableReference<CloseableImage>> {
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public final /* synthetic */ CacheKey f4070c;
 
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         public final /* synthetic */ boolean f4071d;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -48,7 +48,7 @@ public class BitmapMemoryCacheProducer implements Producer2<CloseableReference<C
         /* JADX WARN: Removed duplicated region for block: B:38:0x0095 A[Catch: all -> 0x00a9, TRY_ENTER, TryCatch #0 {all -> 0x00a9, blocks: (B:3:0x0002, B:6:0x000e, B:8:0x0018, B:10:0x0024, B:14:0x0030, B:21:0x0062, B:24:0x006b, B:26:0x0070, B:27:0x0073, B:28:0x0074, B:30:0x0078, B:38:0x0095, B:41:0x009d, B:42:0x00a0, B:43:0x00a1, B:32:0x0084, B:33:0x008b, B:36:0x0090, B:16:0x003c, B:18:0x0057, B:23:0x0066), top: B:49:0x0002, inners: #1, #2 }] */
         /* JADX WARN: Removed duplicated region for block: B:50:0x0084 A[EXC_TOP_SPLITTER, SYNTHETIC] */
         @Override // p007b.p109f.p161j.p181p.BaseConsumer
-        /* renamed from: i */
+        /* JADX INFO: renamed from: i */
         /*
             Code decompiled incorrectly, please refer to instructions dump.
         */
@@ -121,7 +121,7 @@ public class BitmapMemoryCacheProducer implements Producer2<CloseableReference<C
     }
 
     @Override // p007b.p109f.p161j.p181p.Producer2
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public void mo1417b(Consumer2<CloseableReference<CloseableImage>> consumer2, ProducerContext producerContext) {
         try {
             FrescoSystrace.m1527b();
@@ -161,17 +161,17 @@ public class BitmapMemoryCacheProducer implements Producer2<CloseableReference<C
         }
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public String mo1471c() {
         return "pipe_bg";
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public String mo1472d() {
         return "BitmapMemoryCacheProducer";
     }
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public Consumer2<CloseableReference<CloseableImage>> mo1473e(Consumer2<CloseableReference<CloseableImage>> consumer2, CacheKey cacheKey, boolean z2) {
         return new a(consumer2, cacheKey, z2);
     }

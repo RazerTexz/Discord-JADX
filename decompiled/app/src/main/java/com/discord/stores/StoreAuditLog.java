@@ -44,8 +44,8 @@ import p507d0.p592z.p594d.Lambda;
 import p658rx.Observable;
 import p658rx.functions.Action1;
 
-/* compiled from: StoreAuditLog.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: StoreAuditLog.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class StoreAuditLog extends StoreV2 {
     private static final long NO_GUILD = -1;
     private Long cutoffTimestamp;
@@ -55,15 +55,15 @@ public final class StoreAuditLog extends StoreV2 {
     private AuditLogState state;
     private AuditLogState stateSnapshot;
 
-    /* compiled from: StoreAuditLog.kt */
+    /* JADX INFO: compiled from: StoreAuditLog.kt */
     public static final /* data */ class AuditLogFilter {
 
-        /* renamed from: Companion, reason: from kotlin metadata */
+        /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
         public static final Companion INSTANCE = new Companion(null);
         private final int actionFilter;
         private final long userFilter;
 
-        /* compiled from: StoreAuditLog.kt */
+        /* JADX INFO: compiled from: StoreAuditLog.kt */
         public static final class Companion {
             private Companion() {
             }
@@ -92,12 +92,12 @@ public final class StoreAuditLog extends StoreV2 {
             return auditLogFilter.copy(j, i);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final long getUserFilter() {
             return this.userFilter;
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final int getActionFilter() {
             return this.actionFilter;
         }
@@ -137,7 +137,7 @@ public final class StoreAuditLog extends StoreV2 {
         }
     }
 
-    /* compiled from: StoreAuditLog.kt */
+    /* JADX INFO: compiled from: StoreAuditLog.kt */
     public static final /* data */ class AuditLogState {
         private final Map<ModelAuditLogEntry.TargetType, Map<Long, CharSequence>> deletedTargets;
         private final List<ModelAuditLogEntry> entries;
@@ -177,11 +177,12 @@ public final class StoreAuditLog extends StoreV2 {
             this.isLoading = z2;
         }
 
+        /* JADX WARN: Multi-variable type inference failed */
         public static /* synthetic */ AuditLogState copy$default(AuditLogState auditLogState, long j, Map map, List list, List list2, List list3, List list4, List list5, Long l, AuditLogFilter auditLogFilter, Map map2, boolean z2, int i, Object obj) {
             return auditLogState.copy((i & 1) != 0 ? auditLogState.guildId : j, (i & 2) != 0 ? auditLogState.users : map, (i & 4) != 0 ? auditLogState.entries : list, (i & 8) != 0 ? auditLogState.webhooks : list2, (i & 16) != 0 ? auditLogState.integrations : list3, (i & 32) != 0 ? auditLogState.guildScheduledEvents : list4, (i & 64) != 0 ? auditLogState.threads : list5, (i & 128) != 0 ? auditLogState.selectedItemId : l, (i & 256) != 0 ? auditLogState.filter : auditLogFilter, (i & 512) != 0 ? auditLogState.deletedTargets : map2, (i & 1024) != 0 ? auditLogState.isLoading : z2);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final long getGuildId() {
             return this.guildId;
         }
@@ -190,7 +191,7 @@ public final class StoreAuditLog extends StoreV2 {
             return this.deletedTargets;
         }
 
-        /* renamed from: component11, reason: from getter */
+        /* JADX INFO: renamed from: component11, reason: from getter */
         public final boolean getIsLoading() {
             return this.isLoading;
         }
@@ -219,12 +220,12 @@ public final class StoreAuditLog extends StoreV2 {
             return this.threads;
         }
 
-        /* renamed from: component8, reason: from getter */
+        /* JADX INFO: renamed from: component8, reason: from getter */
         public final Long getSelectedItemId() {
             return this.selectedItemId;
         }
 
-        /* renamed from: component9, reason: from getter */
+        /* JADX INFO: renamed from: component9, reason: from getter */
         public final AuditLogFilter getFilter() {
             return this.filter;
         }
@@ -292,6 +293,9 @@ public final class StoreAuditLog extends StoreV2 {
         }
 
         /* JADX WARN: Multi-variable type inference failed */
+        /* JADX WARN: Type inference failed for: r1v26, types: [int] */
+        /* JADX WARN: Type inference failed for: r1v27 */
+        /* JADX WARN: Type inference failed for: r1v36 */
         public int hashCode() {
             int iM3a = C0002b.m3a(this.guildId) * 31;
             Map<Long, User> map = this.users;
@@ -313,11 +317,11 @@ public final class StoreAuditLog extends StoreV2 {
             Map<ModelAuditLogEntry.TargetType, Map<Long, CharSequence>> map2 = this.deletedTargets;
             int iHashCode9 = (iHashCode8 + (map2 != null ? map2.hashCode() : 0)) * 31;
             boolean z2 = this.isLoading;
-            int i = z2;
-            if (z2 != 0) {
-                i = 1;
+            ?? r1 = z2;
+            if (z2) {
+                r1 = 1;
             }
-            return iHashCode9 + i;
+            return iHashCode9 + r1;
         }
 
         public final boolean isLoading() {
@@ -354,8 +358,8 @@ public final class StoreAuditLog extends StoreV2 {
         }
     }
 
-    /* compiled from: StoreAuditLog.kt */
-    /* renamed from: com.discord.stores.StoreAuditLog$clearState$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreAuditLog$clearState$1 */
+    /* JADX INFO: compiled from: StoreAuditLog.kt */
     public static final class C57591 extends Lambda implements Function0<Unit> {
         public C57591() {
             super(0);
@@ -367,14 +371,14 @@ public final class StoreAuditLog extends StoreV2 {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             StoreAuditLog.access$clearStateInternal(StoreAuditLog.this);
         }
     }
 
-    /* compiled from: StoreAuditLog.kt */
-    /* renamed from: com.discord.stores.StoreAuditLog$fetchAuditLogIfNeeded$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreAuditLog$fetchAuditLogIfNeeded$1 */
+    /* JADX INFO: compiled from: StoreAuditLog.kt */
     public static final class C57601 extends Lambda implements Function0<Unit> {
         public final /* synthetic */ long $guildId;
 
@@ -390,7 +394,7 @@ public final class StoreAuditLog extends StoreV2 {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             boolean z2 = this.$guildId != StoreAuditLog.access$getState$p(StoreAuditLog.this).getGuildId();
             boolean z3 = StoreAuditLog.access$getState$p(StoreAuditLog.this).getEntries() == null && !StoreAuditLog.access$getState$p(StoreAuditLog.this).isLoading();
@@ -404,8 +408,8 @@ public final class StoreAuditLog extends StoreV2 {
         }
     }
 
-    /* compiled from: StoreAuditLog.kt */
-    /* renamed from: com.discord.stores.StoreAuditLog$fetchAuditLogs$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreAuditLog$fetchAuditLogs$1 */
+    /* JADX INFO: compiled from: StoreAuditLog.kt */
     public static final class C57611 extends Lambda implements Function1<Error, Unit> {
         public C57611() {
             super(1);
@@ -417,15 +421,15 @@ public final class StoreAuditLog extends StoreV2 {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Error error) {
             Intrinsics3.checkNotNullParameter(error, "it");
             StoreAuditLog.access$handleFetchFailure(StoreAuditLog.this);
         }
     }
 
-    /* compiled from: StoreAuditLog.kt */
-    /* renamed from: com.discord.stores.StoreAuditLog$fetchAuditLogs$2 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreAuditLog$fetchAuditLogs$2 */
+    /* JADX INFO: compiled from: StoreAuditLog.kt */
     public static final class C57622 extends Lambda implements Function1<ModelAuditLog, Unit> {
         public final /* synthetic */ long $guildId;
 
@@ -441,15 +445,15 @@ public final class StoreAuditLog extends StoreV2 {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(ModelAuditLog modelAuditLog) {
             Intrinsics3.checkNotNullParameter(modelAuditLog, "newAuditLog");
             StoreAuditLog.access$handleFetchSuccess(StoreAuditLog.this, this.$guildId, modelAuditLog);
         }
     }
 
-    /* compiled from: StoreAuditLog.kt */
-    /* renamed from: com.discord.stores.StoreAuditLog$fetchMoreAuditLogEntries$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreAuditLog$fetchMoreAuditLogEntries$1 */
+    /* JADX INFO: compiled from: StoreAuditLog.kt */
     public static final class C57631 extends Lambda implements Function0<Unit> {
         public C57631() {
             super(0);
@@ -461,15 +465,15 @@ public final class StoreAuditLog extends StoreV2 {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             StoreAuditLog storeAuditLog = StoreAuditLog.this;
             StoreAuditLog.access$fetchAuditLogs(storeAuditLog, StoreAuditLog.access$getState$p(storeAuditLog).getGuildId(), StoreAuditLog.access$getState$p(StoreAuditLog.this).getFilter());
         }
     }
 
-    /* compiled from: StoreAuditLog.kt */
-    /* renamed from: com.discord.stores.StoreAuditLog$handleFetchFailure$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreAuditLog$handleFetchFailure$1 */
+    /* JADX INFO: compiled from: StoreAuditLog.kt */
     public static final class C57641 extends Lambda implements Function0<Unit> {
         public C57641() {
             super(0);
@@ -481,7 +485,7 @@ public final class StoreAuditLog extends StoreV2 {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             StoreAuditLog storeAuditLog = StoreAuditLog.this;
             StoreAuditLog.access$setState$p(storeAuditLog, AuditLogState.copy$default(StoreAuditLog.access$getState$p(storeAuditLog), 0L, null, null, null, null, null, null, null, null, null, false, AudioAttributesCompat.FLAG_ALL, null));
@@ -489,8 +493,8 @@ public final class StoreAuditLog extends StoreV2 {
         }
     }
 
-    /* compiled from: StoreAuditLog.kt */
-    /* renamed from: com.discord.stores.StoreAuditLog$handleFetchSuccess$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreAuditLog$handleFetchSuccess$1 */
+    /* JADX INFO: compiled from: StoreAuditLog.kt */
     public static final class C57651 extends Lambda implements Function0<Unit> {
         public final /* synthetic */ long $guildId;
         public final /* synthetic */ ModelAuditLog $newAuditLog;
@@ -508,7 +512,7 @@ public final class StoreAuditLog extends StoreV2 {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             if (this.$newAuditLog.getUsers() != null) {
                 Map mutableMap = Maps6.toMutableMap(StoreAuditLog.access$getState$p(StoreAuditLog.this).getUsers());
@@ -577,8 +581,8 @@ public final class StoreAuditLog extends StoreV2 {
         }
     }
 
-    /* compiled from: StoreAuditLog.kt */
-    /* renamed from: com.discord.stores.StoreAuditLog$observeAuditLogState$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreAuditLog$observeAuditLogState$1 */
+    /* JADX INFO: compiled from: StoreAuditLog.kt */
     public static final class C57661 extends Lambda implements Function0<AuditLogState> {
         public final /* synthetic */ long $guildId;
 
@@ -600,8 +604,8 @@ public final class StoreAuditLog extends StoreV2 {
         }
     }
 
-    /* compiled from: StoreAuditLog.kt */
-    /* renamed from: com.discord.stores.StoreAuditLog$observeAuditLogState$2 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreAuditLog$observeAuditLogState$2 */
+    /* JADX INFO: compiled from: StoreAuditLog.kt */
     public static final class C57672<T> implements Action1<AuditLogState> {
         public final /* synthetic */ long $guildId;
 
@@ -614,14 +618,14 @@ public final class StoreAuditLog extends StoreV2 {
             call2(auditLogState);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final void call2(AuditLogState auditLogState) {
             StoreAuditLog.this.fetchAuditLogIfNeeded(this.$guildId);
         }
     }
 
-    /* compiled from: StoreAuditLog.kt */
-    /* renamed from: com.discord.stores.StoreAuditLog$setAuditLogFilterActionId$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreAuditLog$setAuditLogFilterActionId$1 */
+    /* JADX INFO: compiled from: StoreAuditLog.kt */
     public static final class C57681 extends Lambda implements Function0<Unit> {
         public final /* synthetic */ int $actionId;
 
@@ -637,7 +641,7 @@ public final class StoreAuditLog extends StoreV2 {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             if (this.$actionId != StoreAuditLog.access$getState$p(StoreAuditLog.this).getFilter().getActionFilter()) {
                 StoreAuditLog storeAuditLog = StoreAuditLog.this;
@@ -649,8 +653,8 @@ public final class StoreAuditLog extends StoreV2 {
         }
     }
 
-    /* compiled from: StoreAuditLog.kt */
-    /* renamed from: com.discord.stores.StoreAuditLog$setAuditLogFilterUserId$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreAuditLog$setAuditLogFilterUserId$1 */
+    /* JADX INFO: compiled from: StoreAuditLog.kt */
     public static final class C57691 extends Lambda implements Function0<Unit> {
         public final /* synthetic */ long $userId;
 
@@ -666,7 +670,7 @@ public final class StoreAuditLog extends StoreV2 {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             if (this.$userId != StoreAuditLog.access$getState$p(StoreAuditLog.this).getFilter().getUserFilter()) {
                 StoreAuditLog storeAuditLog = StoreAuditLog.this;
@@ -678,8 +682,8 @@ public final class StoreAuditLog extends StoreV2 {
         }
     }
 
-    /* compiled from: StoreAuditLog.kt */
-    /* renamed from: com.discord.stores.StoreAuditLog$toggleSelectedState$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreAuditLog$toggleSelectedState$1 */
+    /* JADX INFO: compiled from: StoreAuditLog.kt */
     public static final class C57701 extends Lambda implements Function0<Unit> {
         public final /* synthetic */ long $selectedItemId;
 
@@ -695,7 +699,7 @@ public final class StoreAuditLog extends StoreV2 {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             StoreAuditLog storeAuditLog = StoreAuditLog.this;
             long j = this.$selectedItemId;
@@ -780,7 +784,7 @@ public final class StoreAuditLog extends StoreV2 {
     private final boolean shouldMergeEntries(ModelAuditLogEntry prevEntry, ModelAuditLogEntry entry, int numMerges, int timeWindowMins, int maxMerges) {
         if (prevEntry != null && prevEntry.getActionTypeId() == entry.getActionTypeId() && prevEntry.getTargetId() == entry.getTargetId() && prevEntry.getUserId() == entry.getUserId() && Intrinsics3.areEqual(prevEntry.getOptions(), entry.getOptions()) && numMerges < maxMerges && entry.getTargetType() != ModelAuditLogEntry.TargetType.INVITE && entry.getActionTypeId() != 72 && entry.getActionTypeId() != 73 && entry.getActionTypeId() != 26 && entry.getActionTypeId() != 27) {
             AuditLogUtils auditLogUtils = AuditLogUtils.INSTANCE;
-            if (Math.abs(auditLogUtils.getTimestampStart(entry) - auditLogUtils.getTimestampStart(prevEntry)) < timeWindowMins * 60000) {
+            if (Math.abs(auditLogUtils.getTimestampStart(entry) - auditLogUtils.getTimestampStart(prevEntry)) < ((long) timeWindowMins) * 60000) {
                 return true;
             }
         }
@@ -791,13 +795,7 @@ public final class StoreAuditLog extends StoreV2 {
         return storeAuditLog.shouldMergeEntries(modelAuditLogEntry, modelAuditLogEntry2, i, (i4 & 8) != 0 ? 30 : i2, (i4 & 16) != 0 ? 50 : i3);
     }
 
-    /* JADX WARN: Failed to restore switch over string. Please report as a decompilation issue
-    java.lang.NullPointerException: Cannot invoke "java.util.List.iterator()" because the return value of "jadx.core.dex.visitors.regions.SwitchOverStringVisitor$SwitchData.getNewCases()" is null
-    	at jadx.core.dex.visitors.regions.SwitchOverStringVisitor.restoreSwitchOverString(SwitchOverStringVisitor.java:109)
-    	at jadx.core.dex.visitors.regions.SwitchOverStringVisitor.visitRegion(SwitchOverStringVisitor.java:66)
-    	at jadx.core.dex.visitors.regions.DepthRegionTraversal.traverseIterativeStepInternal(DepthRegionTraversal.java:77)
-    	at jadx.core.dex.visitors.regions.DepthRegionTraversal.traverseIterativeStepInternal(DepthRegionTraversal.java:82)
-     */
+    /* JADX WARN: Failed to restore switch over string. Please report as a decompilation issue */
     private final List<ModelAuditLogEntry> transformEntries(long guildId, List<? extends ModelAuditLogEntry> rawEntries) {
         ModelAuditLogEntry.Change change;
         ModelAuditLogEntry.Change change2;

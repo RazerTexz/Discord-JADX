@@ -14,12 +14,12 @@ import kotlin.NoWhenBranchMatchedException;
 import p007b.p008a.p018d.AppToast;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: RoleSubscriptionsLinkingUtil.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: RoleSubscriptionsLinkingUtil.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class RoleSubscriptionsLinkingUtil {
     public static final RoleSubscriptionsLinkingUtil INSTANCE = new RoleSubscriptionsLinkingUtil();
 
-    /* compiled from: RoleSubscriptionsLinkingUtil.kt */
+    /* JADX INFO: compiled from: RoleSubscriptionsLinkingUtil.kt */
     public enum HandoffEligibility {
         ELIGIBLE,
         UNKNOWN_GUILD,
@@ -27,7 +27,7 @@ public final class RoleSubscriptionsLinkingUtil {
         INELIGIBLE_FOR_MOBILE_WEB_PURCHASE
     }
 
-    /* compiled from: RoleSubscriptionsLinkingUtil.kt */
+    /* JADX INFO: compiled from: RoleSubscriptionsLinkingUtil.kt */
     public enum HandoffResult {
         SUCCESS,
         FAILURE,

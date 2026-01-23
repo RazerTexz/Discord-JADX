@@ -31,8 +31,8 @@ import p658rx.Observable;
 import p658rx.subjects.BehaviorSubject;
 import p658rx.subjects.SerializedSubject;
 
-/* compiled from: StoreMediaSettings.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: StoreMediaSettings.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class StoreMediaSettings extends Store {
     private final AppSoundManager appSoundManager;
     private boolean canUseVad;
@@ -44,7 +44,7 @@ public final class StoreMediaSettings extends Store {
     private final VoiceConfigurationCache voiceConfigurationCache;
     private final SerializedSubject<VoiceConfiguration, VoiceConfiguration> voiceConfigurationSubject;
 
-    /* compiled from: StoreMediaSettings.kt */
+    /* JADX INFO: compiled from: StoreMediaSettings.kt */
     public enum NoiseProcessing {
         None,
         Suppression,
@@ -52,22 +52,22 @@ public final class StoreMediaSettings extends Store {
         CancellationTemporarilyDisabled
     }
 
-    /* compiled from: StoreMediaSettings.kt */
+    /* JADX INFO: compiled from: StoreMediaSettings.kt */
     public enum SelfMuteFailure {
         CANNOT_USE_VAD
     }
 
-    /* compiled from: StoreMediaSettings.kt */
+    /* JADX INFO: compiled from: StoreMediaSettings.kt */
     public enum VadUseKrisp {
         Disabled,
         Enabled,
         TemporarilyDisabled
     }
 
-    /* compiled from: StoreMediaSettings.kt */
+    /* JADX INFO: compiled from: StoreMediaSettings.kt */
     public static final /* data */ class VoiceConfiguration {
 
-        /* renamed from: Companion, reason: from kotlin metadata */
+        /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
         public static final Companion INSTANCE = new Companion(null);
         private static final int DEFAULT_NOISE_PROCESSING;
         public static final float DEFAULT_OUTPUT_VOLUME = 100.0f;
@@ -89,7 +89,7 @@ public final class StoreMediaSettings extends Store {
         private final VadUseKrisp vadUseKrisp;
         private final boolean voiceParticipantsHidden;
 
-        /* compiled from: StoreMediaSettings.kt */
+        /* JADX INFO: compiled from: StoreMediaSettings.kt */
         public static final class Companion {
             private Companion() {
             }
@@ -149,16 +149,17 @@ public final class StoreMediaSettings extends Store {
             return DEFAULT_VOICE_CONFIG;
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         private final boolean getIsSelfMuted() {
             return this.isSelfMuted;
         }
 
+        /* JADX WARN: Multi-variable type inference failed */
         public static /* synthetic */ VoiceConfiguration copy$default(VoiceConfiguration voiceConfiguration, boolean z2, boolean z3, boolean z4, VadUseKrisp vadUseKrisp, boolean z5, boolean z6, NoiseProcessing noiseProcessing, float f, MediaEngineConnection.InputMode inputMode, float f2, Map map, Map map2, Map map3, boolean z7, boolean z8, int i, Object obj) {
             return voiceConfiguration.copy((i & 1) != 0 ? voiceConfiguration.isSelfMuted : z2, (i & 2) != 0 ? voiceConfiguration.isSelfDeafened : z3, (i & 4) != 0 ? voiceConfiguration.automaticVad : z4, (i & 8) != 0 ? voiceConfiguration.vadUseKrisp : vadUseKrisp, (i & 16) != 0 ? voiceConfiguration.automaticGainControl : z5, (i & 32) != 0 ? voiceConfiguration.echoCancellation : z6, (i & 64) != 0 ? voiceConfiguration.noiseProcessing : noiseProcessing, (i & 128) != 0 ? voiceConfiguration.sensitivity : f, (i & 256) != 0 ? voiceConfiguration.inputMode : inputMode, (i & 512) != 0 ? voiceConfiguration.outputVolume : f2, (i & 1024) != 0 ? voiceConfiguration.mutedUsers : map, (i & 2048) != 0 ? voiceConfiguration.userOutputVolumes : map2, (i & 4096) != 0 ? voiceConfiguration.offScreenUsers : map3, (i & 8192) != 0 ? voiceConfiguration.enableVideoHardwareScaling : z7, (i & 16384) != 0 ? voiceConfiguration.voiceParticipantsHidden : z8);
         }
 
-        /* renamed from: component10, reason: from getter */
+        /* JADX INFO: renamed from: component10, reason: from getter */
         public final float getOutputVolume() {
             return this.outputVolume;
         }
@@ -175,52 +176,52 @@ public final class StoreMediaSettings extends Store {
             return this.offScreenUsers;
         }
 
-        /* renamed from: component14, reason: from getter */
+        /* JADX INFO: renamed from: component14, reason: from getter */
         public final boolean getEnableVideoHardwareScaling() {
             return this.enableVideoHardwareScaling;
         }
 
-        /* renamed from: component15, reason: from getter */
+        /* JADX INFO: renamed from: component15, reason: from getter */
         public final boolean getVoiceParticipantsHidden() {
             return this.voiceParticipantsHidden;
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final boolean getIsSelfDeafened() {
             return this.isSelfDeafened;
         }
 
-        /* renamed from: component3, reason: from getter */
+        /* JADX INFO: renamed from: component3, reason: from getter */
         public final boolean getAutomaticVad() {
             return this.automaticVad;
         }
 
-        /* renamed from: component4, reason: from getter */
+        /* JADX INFO: renamed from: component4, reason: from getter */
         public final VadUseKrisp getVadUseKrisp() {
             return this.vadUseKrisp;
         }
 
-        /* renamed from: component5, reason: from getter */
+        /* JADX INFO: renamed from: component5, reason: from getter */
         public final boolean getAutomaticGainControl() {
             return this.automaticGainControl;
         }
 
-        /* renamed from: component6, reason: from getter */
+        /* JADX INFO: renamed from: component6, reason: from getter */
         public final boolean getEchoCancellation() {
             return this.echoCancellation;
         }
 
-        /* renamed from: component7, reason: from getter */
+        /* JADX INFO: renamed from: component7, reason: from getter */
         public final NoiseProcessing getNoiseProcessing() {
             return this.noiseProcessing;
         }
 
-        /* renamed from: component8, reason: from getter */
+        /* JADX INFO: renamed from: component8, reason: from getter */
         public final float getSensitivity() {
             return this.sensitivity;
         }
 
-        /* renamed from: component9, reason: from getter */
+        /* JADX INFO: renamed from: component9, reason: from getter */
         public final MediaEngineConnection.InputMode getInputMode() {
             return this.inputMode;
         }
@@ -302,11 +303,24 @@ public final class StoreMediaSettings extends Store {
         /* JADX WARN: Type inference failed for: r0v1, types: [int] */
         /* JADX WARN: Type inference failed for: r0v32 */
         /* JADX WARN: Type inference failed for: r0v33 */
-        /* JADX WARN: Type inference failed for: r2v0, types: [boolean] */
-        /* JADX WARN: Type inference failed for: r2v2, types: [boolean] */
-        /* JADX WARN: Type inference failed for: r2v27, types: [boolean] */
-        /* JADX WARN: Type inference failed for: r2v7, types: [boolean] */
-        /* JADX WARN: Type inference failed for: r2v9, types: [boolean] */
+        /* JADX WARN: Type inference failed for: r1v0 */
+        /* JADX WARN: Type inference failed for: r1v1, types: [int] */
+        /* JADX WARN: Type inference failed for: r1v2 */
+        /* JADX WARN: Type inference failed for: r2v1, types: [int] */
+        /* JADX WARN: Type inference failed for: r2v10, types: [int] */
+        /* JADX WARN: Type inference failed for: r2v28, types: [int] */
+        /* JADX WARN: Type inference failed for: r2v3, types: [int] */
+        /* JADX WARN: Type inference failed for: r2v30 */
+        /* JADX WARN: Type inference failed for: r2v34 */
+        /* JADX WARN: Type inference failed for: r2v35 */
+        /* JADX WARN: Type inference failed for: r2v37 */
+        /* JADX WARN: Type inference failed for: r2v38 */
+        /* JADX WARN: Type inference failed for: r2v39 */
+        /* JADX WARN: Type inference failed for: r2v40 */
+        /* JADX WARN: Type inference failed for: r2v41 */
+        /* JADX WARN: Type inference failed for: r2v42 */
+        /* JADX WARN: Type inference failed for: r2v43 */
+        /* JADX WARN: Type inference failed for: r2v8, types: [int] */
         public int hashCode() {
             boolean z2 = this.isSelfMuted;
             ?? r0 = z2;
@@ -314,34 +328,34 @@ public final class StoreMediaSettings extends Store {
                 r0 = 1;
             }
             int i = r0 * 31;
-            ?? r2 = this.isSelfDeafened;
-            int i2 = r2;
-            if (r2 != 0) {
-                i2 = 1;
+            boolean z3 = this.isSelfDeafened;
+            ?? r2 = z3;
+            if (z3) {
+                r2 = 1;
             }
-            int i3 = (i + i2) * 31;
-            ?? r22 = this.automaticVad;
-            int i4 = r22;
-            if (r22 != 0) {
-                i4 = 1;
+            int i2 = (i + r2) * 31;
+            boolean z4 = this.automaticVad;
+            ?? r22 = z4;
+            if (z4) {
+                r22 = 1;
             }
-            int i5 = (i3 + i4) * 31;
+            int i3 = (i2 + r22) * 31;
             VadUseKrisp vadUseKrisp = this.vadUseKrisp;
-            int iHashCode = (i5 + (vadUseKrisp != null ? vadUseKrisp.hashCode() : 0)) * 31;
-            ?? r23 = this.automaticGainControl;
-            int i6 = r23;
-            if (r23 != 0) {
-                i6 = 1;
+            int iHashCode = (i3 + (vadUseKrisp != null ? vadUseKrisp.hashCode() : 0)) * 31;
+            boolean z5 = this.automaticGainControl;
+            ?? r23 = z5;
+            if (z5) {
+                r23 = 1;
             }
-            int i7 = (iHashCode + i6) * 31;
-            ?? r24 = this.echoCancellation;
-            int i8 = r24;
-            if (r24 != 0) {
-                i8 = 1;
+            int i4 = (iHashCode + r23) * 31;
+            boolean z6 = this.echoCancellation;
+            ?? r24 = z6;
+            if (z6) {
+                r24 = 1;
             }
-            int i9 = (i7 + i8) * 31;
+            int i5 = (i4 + r24) * 31;
             NoiseProcessing noiseProcessing = this.noiseProcessing;
-            int iFloatToIntBits = (Float.floatToIntBits(this.sensitivity) + ((i9 + (noiseProcessing != null ? noiseProcessing.hashCode() : 0)) * 31)) * 31;
+            int iFloatToIntBits = (Float.floatToIntBits(this.sensitivity) + ((i5 + (noiseProcessing != null ? noiseProcessing.hashCode() : 0)) * 31)) * 31;
             MediaEngineConnection.InputMode inputMode = this.inputMode;
             int iFloatToIntBits2 = (Float.floatToIntBits(this.outputVolume) + ((iFloatToIntBits + (inputMode != null ? inputMode.hashCode() : 0)) * 31)) * 31;
             Map<Long, Boolean> map = this.mutedUsers;
@@ -350,14 +364,14 @@ public final class StoreMediaSettings extends Store {
             int iHashCode3 = (iHashCode2 + (map2 != null ? map2.hashCode() : 0)) * 31;
             Map<Long, Boolean> map3 = this.offScreenUsers;
             int iHashCode4 = (iHashCode3 + (map3 != null ? map3.hashCode() : 0)) * 31;
-            ?? r25 = this.enableVideoHardwareScaling;
-            int i10 = r25;
-            if (r25 != 0) {
-                i10 = 1;
+            boolean z7 = this.enableVideoHardwareScaling;
+            ?? r25 = z7;
+            if (z7) {
+                r25 = 1;
             }
-            int i11 = (iHashCode4 + i10) * 31;
-            boolean z3 = this.voiceParticipantsHidden;
-            return i11 + (z3 ? 1 : z3 ? 1 : 0);
+            int i6 = (iHashCode4 + r25) * 31;
+            boolean z8 = this.voiceParticipantsHidden;
+            return i6 + (z8 ? 1 : z8);
         }
 
         public final boolean isSelfDeafened() {
@@ -429,8 +443,8 @@ public final class StoreMediaSettings extends Store {
         }
     }
 
-    /* compiled from: StoreMediaSettings.kt */
-    /* renamed from: com.discord.stores.StoreMediaSettings$getInputMode$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreMediaSettings$getInputMode$1 */
+    /* JADX INFO: compiled from: StoreMediaSettings.kt */
     public static final class C61841<T, R> implements Func1<VoiceConfiguration, MediaEngineConnection.InputMode> {
         public static final C61841 INSTANCE = new C61841();
 
@@ -439,14 +453,14 @@ public final class StoreMediaSettings extends Store {
             return call2(voiceConfiguration);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final MediaEngineConnection.InputMode call2(VoiceConfiguration voiceConfiguration) {
             return voiceConfiguration.getInputMode();
         }
     }
 
-    /* compiled from: StoreMediaSettings.kt */
-    /* renamed from: com.discord.stores.StoreMediaSettings$getUsersMuted$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreMediaSettings$getUsersMuted$1 */
+    /* JADX INFO: compiled from: StoreMediaSettings.kt */
     public static final class C61851<T, R> implements Func1<VoiceConfiguration, Map<Long, ? extends Boolean>> {
         public static final C61851 INSTANCE = new C61851();
 
@@ -455,14 +469,14 @@ public final class StoreMediaSettings extends Store {
             return call2(voiceConfiguration);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final Map<Long, Boolean> call2(VoiceConfiguration voiceConfiguration) {
             return voiceConfiguration.getMutedUsers();
         }
     }
 
-    /* compiled from: StoreMediaSettings.kt */
-    /* renamed from: com.discord.stores.StoreMediaSettings$getUsersOffScreen$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreMediaSettings$getUsersOffScreen$1 */
+    /* JADX INFO: compiled from: StoreMediaSettings.kt */
     public static final class C61861<T, R> implements Func1<VoiceConfiguration, Map<Long, ? extends Boolean>> {
         public static final C61861 INSTANCE = new C61861();
 
@@ -471,14 +485,14 @@ public final class StoreMediaSettings extends Store {
             return call2(voiceConfiguration);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final Map<Long, Boolean> call2(VoiceConfiguration voiceConfiguration) {
             return voiceConfiguration.getOffScreenUsers();
         }
     }
 
-    /* compiled from: StoreMediaSettings.kt */
-    /* renamed from: com.discord.stores.StoreMediaSettings$getUsersVolume$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreMediaSettings$getUsersVolume$1 */
+    /* JADX INFO: compiled from: StoreMediaSettings.kt */
     public static final class C61871<T, R> implements Func1<VoiceConfiguration, Map<Long, ? extends Float>> {
         public static final C61871 INSTANCE = new C61871();
 
@@ -487,23 +501,23 @@ public final class StoreMediaSettings extends Store {
             return call2(voiceConfiguration);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final Map<Long, Float> call2(VoiceConfiguration voiceConfiguration) {
             return voiceConfiguration.getUserOutputVolumes();
         }
     }
 
-    /* compiled from: StoreMediaSettings.kt */
-    /* renamed from: com.discord.stores.StoreMediaSettings$init$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreMediaSettings$init$1 */
+    /* JADX INFO: compiled from: StoreMediaSettings.kt */
     public static final class C61881<T, R> implements Func1<Long, Observable<? extends Boolean>> {
 
-        /* compiled from: StoreMediaSettings.kt */
-        /* renamed from: com.discord.stores.StoreMediaSettings$init$1$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.stores.StoreMediaSettings$init$1$1, reason: invalid class name */
+        /* JADX INFO: compiled from: StoreMediaSettings.kt */
         public static final class AnonymousClass1<T, R> implements Func1<Channel, Observable<? extends Boolean>> {
             public final /* synthetic */ Long $id;
 
-            /* compiled from: StoreMediaSettings.kt */
-            /* renamed from: com.discord.stores.StoreMediaSettings$init$1$1$1, reason: invalid class name and collision with other inner class name */
+            /* JADX INFO: renamed from: com.discord.stores.StoreMediaSettings$init$1$1$1, reason: invalid class name and collision with other inner class name */
+            /* JADX INFO: compiled from: StoreMediaSettings.kt */
             public static final class C132611<T, R> implements Func1<Long, Boolean> {
                 public static final C132611 INSTANCE = new C132611();
 
@@ -512,7 +526,7 @@ public final class StoreMediaSettings extends Store {
                     return call2(l);
                 }
 
-                /* renamed from: call, reason: avoid collision after fix types in other method */
+                /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
                 public final Boolean call2(Long l) {
                     return Boolean.valueOf(PermissionUtils.can(Permission.USE_VAD, l));
                 }
@@ -527,7 +541,7 @@ public final class StoreMediaSettings extends Store {
                 return call2(channel);
             }
 
-            /* renamed from: call, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
             public final Observable<? extends Boolean> call2(Channel channel) {
                 if (channel == null || ChannelUtils.m7667B(channel) || ChannelUtils.m7669D(channel)) {
                     return new ScalarSynchronousObservable(Boolean.TRUE);
@@ -547,7 +561,7 @@ public final class StoreMediaSettings extends Store {
             return call2(l);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final Observable<? extends Boolean> call2(Long l) {
             StoreChannels storeChannelsAccess$getStoreChannels$p = StoreMediaSettings.access$getStoreChannels$p(StoreMediaSettings.this);
             Intrinsics3.checkNotNullExpressionValue(l, ModelAuditLogEntry.CHANGE_KEY_ID);
@@ -555,8 +569,8 @@ public final class StoreMediaSettings extends Store {
         }
     }
 
-    /* compiled from: StoreMediaSettings.kt */
-    /* renamed from: com.discord.stores.StoreMediaSettings$init$2 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreMediaSettings$init$2 */
+    /* JADX INFO: compiled from: StoreMediaSettings.kt */
     public static final /* synthetic */ class C61892 extends FunctionReferenceImpl implements Function1<Boolean, Unit> {
         public C61892(StoreMediaSettings storeMediaSettings) {
             super(1, storeMediaSettings, StoreMediaSettings.class, "handleCanUseVad", "handleCanUseVad(Z)V", 0);
@@ -573,8 +587,8 @@ public final class StoreMediaSettings extends Store {
         }
     }
 
-    /* compiled from: StoreMediaSettings.kt */
-    /* renamed from: com.discord.stores.StoreMediaSettings$isSelfDeafened$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreMediaSettings$isSelfDeafened$1 */
+    /* JADX INFO: compiled from: StoreMediaSettings.kt */
     public static final class C61901<T, R> implements Func1<VoiceConfiguration, Boolean> {
         public static final C61901 INSTANCE = new C61901();
 
@@ -583,14 +597,14 @@ public final class StoreMediaSettings extends Store {
             return call2(voiceConfiguration);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final Boolean call2(VoiceConfiguration voiceConfiguration) {
             return Boolean.valueOf(voiceConfiguration.isSelfDeafened());
         }
     }
 
-    /* compiled from: StoreMediaSettings.kt */
-    /* renamed from: com.discord.stores.StoreMediaSettings$isSelfMuted$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreMediaSettings$isSelfMuted$1 */
+    /* JADX INFO: compiled from: StoreMediaSettings.kt */
     public static final class C61911<T, R> implements Func1<VoiceConfiguration, Boolean> {
         public static final C61911 INSTANCE = new C61911();
 
@@ -599,7 +613,7 @@ public final class StoreMediaSettings extends Store {
             return call2(voiceConfiguration);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final Boolean call2(VoiceConfiguration voiceConfiguration) {
             return Boolean.valueOf(voiceConfiguration.isSelfMuted());
         }

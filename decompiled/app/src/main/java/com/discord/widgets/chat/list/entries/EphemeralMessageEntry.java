@@ -3,8 +3,8 @@ package com.discord.widgets.chat.list.entries;
 import com.discord.models.message.Message;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: EphemeralMessageEntry.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: EphemeralMessageEntry.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class EphemeralMessageEntry extends ChatListEntry {
     private final String key;
     private final Message message;

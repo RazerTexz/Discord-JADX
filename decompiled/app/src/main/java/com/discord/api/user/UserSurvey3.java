@@ -3,13 +3,13 @@ package com.discord.api.user;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: UserSurvey.kt */
-/* renamed from: com.discord.api.user.UserSurveyFetchResponse, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: com.discord.api.user.UserSurveyFetchResponse, reason: use source file name */
+/* JADX INFO: compiled from: UserSurvey.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class UserSurvey3 {
     private final UserSurvey survey;
 
-    /* renamed from: a, reason: from getter */
+    /* JADX INFO: renamed from: a, reason: from getter */
     public final UserSurvey getSurvey() {
         return this.survey;
     }

@@ -6,9 +6,9 @@ import com.discord.utilities.time.ClockFactory;
 import kotlin.jvm.functions.Function0;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: AppStartAnalyticsTracker.kt */
-/* renamed from: com.discord.utilities.analytics.AppStartAnalyticsTracker$Companion$instance$2, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.utilities.analytics.AppStartAnalyticsTracker$Companion$instance$2, reason: use source file name */
+/* JADX INFO: compiled from: AppStartAnalyticsTracker.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class AppStartAnalyticsTracker2 extends Lambda implements Function0<AppStartAnalyticsTracker> {
     public static final AppStartAnalyticsTracker2 INSTANCE = new AppStartAnalyticsTracker2();
 

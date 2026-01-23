@@ -24,7 +24,7 @@ import androidx.appcompat.view.menu.MenuView;
 import androidx.appcompat.widget.LinearLayoutCompat;
 import androidx.constraintlayout.solver.widgets.analyzer.BasicMeasure;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class ActionMenuView extends LinearLayoutCompat implements MenuBuilder.ItemInvoker, MenuView {
     public static final int GENERATED_ITEM_PADDING = 4;
     public static final int MIN_CELL_SIZE = 56;
@@ -227,7 +227,7 @@ public class ActionMenuView extends LinearLayoutCompat implements MenuBuilder.It
                 iMax = Math.max(iMax, childAt.getMeasuredHeight());
                 if (iMeasureChildForCells == 1) {
                     i7 = paddingBottom;
-                    j |= 1 << i13;
+                    j |= (long) (1 << i13);
                     i10 = i10;
                 } else {
                     i7 = paddingBottom;
@@ -320,14 +320,14 @@ public class ActionMenuView extends LinearLayoutCompat implements MenuBuilder.It
                     fBitCount -= 0.5f;
                 }
                 int i30 = childCount - 1;
-                if ((j & (1 << i30)) != 0 && !((LayoutParams) getChildAt(i30).getLayoutParams()).preventEdgeOffset) {
+                if ((j & ((long) (1 << i30))) != 0 && !((LayoutParams) getChildAt(i30).getLayoutParams()).preventEdgeOffset) {
                     fBitCount -= 0.5f;
                 }
             }
             int i31 = fBitCount > 0.0f ? (int) ((i10 * i12) / fBitCount) : 0;
             z3 = z2;
             for (int i32 = 0; i32 < childCount; i32++) {
-                if ((j & (1 << i32)) != 0) {
+                if ((j & ((long) (1 << i32))) != 0) {
                     View childAt3 = getChildAt(i32);
                     LayoutParams layoutParams4 = (LayoutParams) childAt3.getLayoutParams();
                     if (childAt3 instanceof ActionMenuItemView) {

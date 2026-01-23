@@ -14,120 +14,120 @@ import android.text.TextPaint;
 import androidx.annotation.Nullable;
 import java.util.Objects;
 
-/* compiled from: SubtitlePainter.java */
-/* renamed from: b.i.a.c.d3.n, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.d3.n, reason: use source file name */
+/* JADX INFO: compiled from: SubtitlePainter.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class SubtitlePainter {
 
-    /* renamed from: A */
+    /* JADX INFO: renamed from: A */
     public int f6366A;
 
-    /* renamed from: B */
+    /* JADX INFO: renamed from: B */
     public int f6367B;
 
-    /* renamed from: C */
+    /* JADX INFO: renamed from: C */
     public int f6368C;
 
-    /* renamed from: D */
+    /* JADX INFO: renamed from: D */
     public int f6369D;
 
-    /* renamed from: E */
+    /* JADX INFO: renamed from: E */
     public StaticLayout f6370E;
 
-    /* renamed from: F */
+    /* JADX INFO: renamed from: F */
     public StaticLayout f6371F;
 
-    /* renamed from: G */
+    /* JADX INFO: renamed from: G */
     public int f6372G;
 
-    /* renamed from: H */
+    /* JADX INFO: renamed from: H */
     public int f6373H;
 
-    /* renamed from: I */
+    /* JADX INFO: renamed from: I */
     public int f6374I;
 
-    /* renamed from: J */
+    /* JADX INFO: renamed from: J */
     public Rect f6375J;
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final float f6376a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final float f6377b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final float f6378c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final float f6379d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final float f6380e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final TextPaint f6381f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public final Paint f6382g;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public final Paint f6383h;
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     @Nullable
     public CharSequence f6384i;
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     @Nullable
     public Layout.Alignment f6385j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     @Nullable
     public Bitmap f6386k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public float f6387l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public int f6388m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public int f6389n;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public float f6390o;
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public int f6391p;
 
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     public float f6392q;
 
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     public float f6393r;
 
-    /* renamed from: s */
+    /* JADX INFO: renamed from: s */
     public int f6394s;
 
-    /* renamed from: t */
+    /* JADX INFO: renamed from: t */
     public int f6395t;
 
-    /* renamed from: u */
+    /* JADX INFO: renamed from: u */
     public int f6396u;
 
-    /* renamed from: v */
+    /* JADX INFO: renamed from: v */
     public int f6397v;
 
-    /* renamed from: w */
+    /* JADX INFO: renamed from: w */
     public int f6398w;
 
-    /* renamed from: x */
+    /* JADX INFO: renamed from: x */
     public float f6399x;
 
-    /* renamed from: y */
+    /* JADX INFO: renamed from: y */
     public float f6400y;
 
-    /* renamed from: z */
+    /* JADX INFO: renamed from: z */
     public float f6401z;
 
     public SubtitlePainter(Context context) {
@@ -153,7 +153,7 @@ public final class SubtitlePainter {
         paint2.setFilterBitmap(true);
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final void m2760a(Canvas canvas, boolean z2) {
         if (!z2) {
             Objects.requireNonNull(this.f6375J);

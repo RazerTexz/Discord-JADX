@@ -26,21 +26,21 @@ import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Reflection2;
 
-/* compiled from: WidgetEnableMFAKey.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetEnableMFAKey.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetEnableMFAKey extends AppFragment {
     public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetEnableMFAKey.class, "binding", "getBinding()Lcom/discord/databinding/WidgetSettingsEnableMfaKeyBinding;", 0)};
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
 
-    /* renamed from: binding$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
 
-    /* renamed from: viewModel$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: viewModel$delegate, reason: from kotlin metadata */
     private final Lazy viewModel;
 
-    /* compiled from: WidgetEnableMFAKey.kt */
+    /* JADX INFO: compiled from: WidgetEnableMFAKey.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -63,8 +63,8 @@ public final class WidgetEnableMFAKey extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetEnableMFAKey.kt */
-    /* renamed from: com.discord.widgets.settings.account.mfa.WidgetEnableMFAKey$onViewBound$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.account.mfa.WidgetEnableMFAKey$onViewBound$1 */
+    /* JADX INFO: compiled from: WidgetEnableMFAKey.kt */
     public static final class ViewOnClickListenerC97911 implements View.OnClickListener {
         public ViewOnClickListenerC97911() {
         }
@@ -79,8 +79,8 @@ public final class WidgetEnableMFAKey extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetEnableMFAKey.kt */
-    /* renamed from: com.discord.widgets.settings.account.mfa.WidgetEnableMFAKey$showLaunchTexts$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.account.mfa.WidgetEnableMFAKey$showLaunchTexts$1 */
+    /* JADX INFO: compiled from: WidgetEnableMFAKey.kt */
     public static final class ViewOnClickListenerC97921 implements View.OnClickListener {
         public final /* synthetic */ PackageManager $pm;
 
@@ -99,8 +99,8 @@ public final class WidgetEnableMFAKey extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetEnableMFAKey.kt */
-    /* renamed from: com.discord.widgets.settings.account.mfa.WidgetEnableMFAKey$showLaunchTexts$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.account.mfa.WidgetEnableMFAKey$showLaunchTexts$2 */
+    /* JADX INFO: compiled from: WidgetEnableMFAKey.kt */
     public static final class ViewOnClickListenerC97932 implements View.OnClickListener {
         public final /* synthetic */ PackageManager $pm;
 

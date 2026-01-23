@@ -6,12 +6,12 @@ import p637j0.p641k.Func1;
 import p658rx.Observable;
 
 /* JADX INFO: Add missing generic type declarations: [V, K, V1] */
-/* compiled from: AppTransformers.kt */
-/* renamed from: b.a.d.s */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.a.d.s */
+/* JADX INFO: compiled from: AppTransformers.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class C0883s<T, R, K, V, V1> implements Func1<Map<K, ? extends V>, Observable<? extends Map<K, V1>>> {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final /* synthetic */ C0879o.c f579j;
 
     public C0883s(C0879o.c cVar) {

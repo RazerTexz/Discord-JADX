@@ -17,18 +17,18 @@ import p007b.p225i.p226a.p242c.p267x2.SeekMap;
 import p007b.p225i.p226a.p242c.p267x2.TrackOutput2;
 import p007b.p225i.p226a.p242c.p267x2.p275j0.StreamReader;
 
-/* compiled from: OggExtractor.java */
-/* renamed from: b.i.a.c.x2.j0.d, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.x2.j0.d, reason: use source file name */
+/* JADX INFO: compiled from: OggExtractor.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class OggExtractor implements Extractor {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public ExtractorOutput f8522a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public StreamReader f8523b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public boolean f8524c;
 
     static {
@@ -36,7 +36,7 @@ public class OggExtractor implements Extractor {
     }
 
     @EnsuresNonNullIf(expression = {"streamReader"}, result = GoogleSmartLockManager.SET_DISCORD_ACCOUNT_DETAILS)
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final boolean m3740a(ExtractorInput extractorInput) throws IOException {
         boolean zM550n2;
         boolean zEquals;
@@ -81,7 +81,7 @@ public class OggExtractor implements Extractor {
     }
 
     @Override // p007b.p225i.p226a.p242c.p267x2.Extractor
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public boolean mo3633b(ExtractorInput extractorInput) throws IOException {
         try {
             return m3740a(extractorInput);
@@ -93,7 +93,7 @@ public class OggExtractor implements Extractor {
     /* JADX WARN: Removed duplicated region for block: B:70:0x0180  */
     /* JADX WARN: Removed duplicated region for block: B:78:? A[RETURN, SYNTHETIC] */
     @Override // p007b.p225i.p226a.p242c.p267x2.Extractor
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
@@ -202,8 +202,9 @@ public class OggExtractor implements Extractor {
                     if (jMo3737c >= 0) {
                         long j2 = streamReader2.f8546g;
                         if (j2 + jMo3737c >= streamReader2.f8544e) {
+                            long j3 = (j2 * 1000000) / ((long) streamReader2.f8548i);
                             streamReader2.f8541b.mo2524c(parsableByteArray3, parsableByteArray3.f6795c);
-                            streamReader2.f8541b.mo2525d((j2 * 1000000) / streamReader2.f8548i, 1, parsableByteArray3.f6795c, 0, null);
+                            streamReader2.f8541b.mo2525d(j3, 1, parsableByteArray3.f6795c, 0, null);
                             streamReader2.f8544e = -1L;
                         }
                     }
@@ -219,13 +220,13 @@ public class OggExtractor implements Extractor {
     }
 
     @Override // p007b.p225i.p226a.p242c.p267x2.Extractor
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public void mo3636f(ExtractorOutput extractorOutput) {
         this.f8522a = extractorOutput;
     }
 
     @Override // p007b.p225i.p226a.p242c.p267x2.Extractor
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public void mo3637g(long j, long j2) {
         StreamReader streamReader = this.f8523b;
         if (streamReader != null) {
@@ -239,7 +240,7 @@ public class OggExtractor implements Extractor {
                 return;
             }
             if (streamReader.f8547h != 0) {
-                long j3 = (streamReader.f8548i * j2) / 1000000;
+                long j3 = (((long) streamReader.f8548i) * j2) / 1000000;
                 streamReader.f8544e = j3;
                 OggSeeker oggSeeker = streamReader.f8543d;
                 int i = Util2.f6708a;

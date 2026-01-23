@@ -16,9 +16,9 @@ import kotlin.jvm.functions.Function2;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetChannelListModel.kt */
-/* renamed from: com.discord.widgets.channels.list.WidgetChannelListModel$Companion$guildListBuilder$$inlined$forEach$lambda$4 */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.channels.list.WidgetChannelListModel$Companion$guildListBuilder$$inlined$forEach$lambda$4 */
+/* JADX INFO: compiled from: WidgetChannelListModel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class C7416x4d8eedc4 extends Lambda implements Function2<Channel, StoreThreadsJoined.JoinedThread, ChannelListItemThread> {
     public final /* synthetic */ WidgetChannelListModel$Companion$guildListBuilder$4 $areAllChildThreadsRead$4$inlined;
     public final /* synthetic */ WidgetChannelListModel$Companion$guildListBuilder$5 $areAnyChildThreadsSelected$5$inlined;
@@ -85,7 +85,7 @@ public final class C7416x4d8eedc4 extends Lambda implements Function2<Channel, S
         return invoke2(channel, joinedThread);
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final ChannelListItemThread invoke2(Channel channel, StoreThreadsJoined.JoinedThread joinedThread) {
         Intrinsics3.checkNotNullParameter(channel, "thread");
         Long l = this.$guild$inlined.getChannelPermissions().get(Long.valueOf(channel.getId()));

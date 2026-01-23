@@ -6,15 +6,15 @@ import com.discord.api.science.AnalyticsSchema;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: TrackRequestRateLimited.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: TrackRequestRateLimited.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class TrackRequestRateLimited implements AnalyticsSchema, TrackBase2 {
     private TrackBase trackBase;
     private final CharSequence bucket = null;
     private final transient String analyticsSchemaTypeName = "request_rate_limited";
 
     @Override // com.discord.api.science.AnalyticsSchema
-    /* renamed from: d, reason: from getter */
+    /* JADX INFO: renamed from: d, reason: from getter */
     public String getAnalyticsSchemaTypeName() {
         return this.analyticsSchemaTypeName;
     }

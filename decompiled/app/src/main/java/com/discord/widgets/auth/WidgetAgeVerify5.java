@@ -3,9 +3,9 @@ package com.discord.widgets.auth;
 import kotlin.jvm.functions.Function0;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetAgeVerify.kt */
-/* renamed from: com.discord.widgets.auth.WidgetAgeVerify$viewModel$2, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.auth.WidgetAgeVerify$viewModel$2, reason: use source file name */
+/* JADX INFO: compiled from: WidgetAgeVerify.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetAgeVerify5 extends Lambda implements Function0<WidgetAgeVerifyViewModel> {
     public static final WidgetAgeVerify5 INSTANCE = new WidgetAgeVerify5();
 

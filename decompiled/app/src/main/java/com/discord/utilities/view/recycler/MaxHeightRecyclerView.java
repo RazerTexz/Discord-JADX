@@ -10,8 +10,8 @@ import kotlin.jvm.internal.DefaultConstructorMarker;
 import p507d0.p508a0.MathJVM;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: MaxHeightRecyclerView.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: MaxHeightRecyclerView.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class MaxHeightRecyclerView extends RecyclerView {
     private int maxHeight;
 

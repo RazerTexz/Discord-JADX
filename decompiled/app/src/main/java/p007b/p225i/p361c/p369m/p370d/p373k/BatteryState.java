@@ -4,15 +4,15 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 
-/* compiled from: BatteryState.java */
-/* renamed from: b.i.c.m.d.k.e, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.c.m.d.k.e, reason: use source file name */
+/* JADX INFO: compiled from: BatteryState.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class BatteryState {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final Float f12283a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final boolean f12284b;
 
     public BatteryState(Float f, boolean z2) {
@@ -20,7 +20,7 @@ public class BatteryState {
         this.f12283a = f;
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static BatteryState m6401a(Context context) {
         Float fValueOf = null;
         Intent intentRegisterReceiver = context.registerReceiver(null, new IntentFilter("android.intent.action.BATTERY_CHANGED"));
@@ -39,7 +39,7 @@ public class BatteryState {
         return new BatteryState(fValueOf, z2);
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public int m6402b() {
         Float f;
         if (!this.f12284b || (f = this.f12283a) == null) {

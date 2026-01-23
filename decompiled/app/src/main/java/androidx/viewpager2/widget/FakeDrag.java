@@ -7,7 +7,7 @@ import android.view.ViewConfiguration;
 import androidx.annotation.UiThread;
 import androidx.recyclerview.widget.RecyclerView;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public final class FakeDrag {
     private int mActualDraggedDistance;
     private long mFakeDragBeginTime;

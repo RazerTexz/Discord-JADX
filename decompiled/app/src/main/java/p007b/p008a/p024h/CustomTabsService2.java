@@ -15,12 +15,12 @@ import p507d0.p580t.Iterables2;
 import p507d0.p580t._Collections;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: CustomTabsService.kt */
-/* renamed from: b.a.h.d, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.a.h.d, reason: use source file name */
+/* JADX INFO: compiled from: CustomTabsService.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class CustomTabsService2 extends CustomTabsServiceConnection {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final List<Uri> f653j;
 
     /* JADX WARN: Multi-variable type inference failed */

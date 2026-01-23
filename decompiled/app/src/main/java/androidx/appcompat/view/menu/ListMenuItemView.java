@@ -22,8 +22,8 @@ import androidx.appcompat.view.menu.MenuView;
 import androidx.appcompat.widget.TintTypedArray;
 import androidx.core.view.ViewCompat;
 
+/* JADX INFO: loaded from: classes.dex */
 @RestrictTo({RestrictTo.Scope.LIBRARY_GROUP_PREFIX})
-/* loaded from: classes.dex */
 public class ListMenuItemView extends LinearLayout implements MenuView.ItemView, AbsListView.SelectionBoundsAdjuster {
     private static final String TAG = "ListMenuItemView";
     private Drawable mBackground;

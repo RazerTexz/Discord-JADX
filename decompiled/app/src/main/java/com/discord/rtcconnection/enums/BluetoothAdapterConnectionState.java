@@ -1,8 +1,8 @@
 package com.discord.rtcconnection.enums;
 
 
-/* compiled from: BluetoothAdapterConnectionState.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: BluetoothAdapterConnectionState.kt */
+/* JADX INFO: loaded from: classes.dex */
 public enum BluetoothAdapterConnectionState {
     Disconnected(0),
     Connecting(1),

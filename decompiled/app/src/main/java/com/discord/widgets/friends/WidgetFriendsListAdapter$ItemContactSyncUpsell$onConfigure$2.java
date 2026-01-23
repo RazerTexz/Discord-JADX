@@ -6,8 +6,8 @@ import kotlin.Unit;
 import kotlin.jvm.functions.Function1;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: WidgetFriendsListAdapter.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetFriendsListAdapter.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetFriendsListAdapter$ItemContactSyncUpsell$onConfigure$2 implements View.OnLongClickListener {
     public final /* synthetic */ WidgetFriendsListAdapter.ItemContactSyncUpsell this$0;
 

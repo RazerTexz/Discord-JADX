@@ -8,22 +8,22 @@ import com.discord.C5419R;
 import com.discord.views.ScreenTitleView;
 import com.google.android.material.button.MaterialButton;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public final class WidgetEndStageBottomSheetBinding implements ViewBinding {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     @NonNull
     public final NestedScrollView f16598a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     @NonNull
     public final MaterialButton f16599b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     @NonNull
     public final MaterialButton f16600c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     @NonNull
     public final ScreenTitleView f16601d;
 
@@ -35,7 +35,7 @@ public final class WidgetEndStageBottomSheetBinding implements ViewBinding {
     }
 
     @NonNull
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static WidgetEndStageBottomSheetBinding m8413a(@NonNull View view) {
         int i = C5419R.id.cancel;
         MaterialButton materialButton = (MaterialButton) view.findViewById(C5419R.id.cancel);

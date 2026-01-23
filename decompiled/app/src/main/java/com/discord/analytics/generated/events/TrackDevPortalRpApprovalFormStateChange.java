@@ -7,8 +7,8 @@ import com.discord.models.domain.ModelAuditLogEntry;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: TrackDevPortalRpApprovalFormStateChange.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: TrackDevPortalRpApprovalFormStateChange.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class TrackDevPortalRpApprovalFormStateChange implements AnalyticsSchema, TrackBase2 {
     private TrackBase trackBase;
     private final Long applicationId = null;
@@ -22,7 +22,7 @@ public final /* data */ class TrackDevPortalRpApprovalFormStateChange implements
     private final transient String analyticsSchemaTypeName = "dev_portal_rp_approval_form_state_change";
 
     @Override // com.discord.api.science.AnalyticsSchema
-    /* renamed from: d, reason: from getter */
+    /* JADX INFO: renamed from: d, reason: from getter */
     public String getAnalyticsSchemaTypeName() {
         return this.analyticsSchemaTypeName;
     }

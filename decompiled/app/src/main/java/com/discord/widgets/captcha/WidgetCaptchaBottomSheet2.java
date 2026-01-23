@@ -18,9 +18,9 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 import p507d0.p592z.p594d.Reflection2;
 
-/* compiled from: WidgetCaptchaBottomSheet.kt */
-/* renamed from: com.discord.widgets.captcha.WidgetCaptchaBottomSheet$Companion$enqueue$captchaNotice$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.captcha.WidgetCaptchaBottomSheet$Companion$enqueue$captchaNotice$1, reason: use source file name */
+/* JADX INFO: compiled from: WidgetCaptchaBottomSheet.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetCaptchaBottomSheet2 extends Lambda implements Function1<FragmentActivity, Boolean> {
     public final /* synthetic */ CaptchaErrorBody $error;
     public final /* synthetic */ Function0 $onCaptchaAttemptFailed;
@@ -41,7 +41,7 @@ public final class WidgetCaptchaBottomSheet2 extends Lambda implements Function1
         return Boolean.valueOf(invoke2(fragmentActivity));
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final boolean invoke2(FragmentActivity fragmentActivity) {
         Object next;
         Intrinsics3.checkNotNullParameter(fragmentActivity, "appActivity");

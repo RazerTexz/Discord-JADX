@@ -1,17 +1,17 @@
 package p007b.p225i.p414e.p426q.p427r.p428f.p429d;
 
-/* compiled from: DecodedInformation.java */
-/* renamed from: b.i.e.q.r.f.d.o, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.e.q.r.f.d.o, reason: use source file name */
+/* JADX INFO: compiled from: DecodedInformation.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class DecodedInformation extends DecodedObject {
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final String f13446b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final int f13447c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final boolean f13448d;
 
     public DecodedInformation(int i, String str) {

@@ -23,58 +23,58 @@ import p007b.p225i.p361c.p369m.p370d.p384s.SettingsController;
 import p007b.p225i.p361c.p369m.p370d.p384s.SettingsDataProvider;
 import p007b.p225i.p361c.p369m.p370d.p384s.p385h.Settings2;
 
-/* compiled from: CrashlyticsCore.java */
-/* renamed from: b.i.c.m.d.k.k0, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.c.m.d.k.k0, reason: use source file name */
+/* JADX INFO: compiled from: CrashlyticsCore.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class CrashlyticsCore3 {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final Context f12329a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final FirebaseApp2 f12330b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final DataCollectionArbiter f12331c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final long f12332d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public CrashlyticsFileMarker f12333e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public CrashlyticsFileMarker f12334f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public boolean f12335g;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public C4663x f12336h;
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public final IdManager f12337i;
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final BreadcrumbSource f12338j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final AnalyticsEventLogger f12339k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public ExecutorService f12340l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public CrashlyticsBackgroundWorker f12341m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public CrashlyticsNativeComponent f12342n;
 
-    /* compiled from: CrashlyticsCore.java */
-    /* renamed from: b.i.c.m.d.k.k0$a */
+    /* JADX INFO: renamed from: b.i.c.m.d.k.k0$a */
+    /* JADX INFO: compiled from: CrashlyticsCore.java */
     public class a implements Runnable {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public final /* synthetic */ SettingsDataProvider f12343j;
 
         public a(SettingsDataProvider settingsDataProvider) {
@@ -87,8 +87,8 @@ public class CrashlyticsCore3 {
         }
     }
 
-    /* compiled from: CrashlyticsCore.java */
-    /* renamed from: b.i.c.m.d.k.k0$b */
+    /* JADX INFO: renamed from: b.i.c.m.d.k.k0$b */
+    /* JADX INFO: compiled from: CrashlyticsCore.java */
     public class b implements Callable<Boolean> {
         public b() {
         }
@@ -122,7 +122,7 @@ public class CrashlyticsCore3 {
         this.f12332d = System.currentTimeMillis();
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static Task m6439a(CrashlyticsCore3 crashlyticsCore3, SettingsDataProvider settingsDataProvider) {
         Task<Void> taskM4261Y;
         crashlyticsCore3.f12341m.m6436a();
@@ -158,7 +158,7 @@ public class CrashlyticsCore3 {
         }
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final void m6440b(SettingsDataProvider settingsDataProvider) {
         Future<?> futureSubmit = this.f12340l.submit(new a(settingsDataProvider));
         Logger3.f12227a.m6371b("Crashlytics detected incomplete initialization on previous app launch. Will initialize synchronously.");
@@ -179,12 +179,12 @@ public class CrashlyticsCore3 {
         }
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public void m6441c() {
         this.f12341m.m6437b(new b());
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public void m6442d(@Nullable Boolean bool) {
         Boolean boolM6449a;
         DataCollectionArbiter dataCollectionArbiter = this.f12331c;
@@ -225,7 +225,7 @@ public class CrashlyticsCore3 {
         }
     }
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public void m6443e(String str, String str2) {
         C4663x c4663x = this.f12336h;
         Objects.requireNonNull(c4663x);

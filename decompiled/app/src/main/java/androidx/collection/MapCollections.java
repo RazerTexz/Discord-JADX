@@ -8,7 +8,7 @@ import java.util.Map;
 import java.util.NoSuchElementException;
 import java.util.Set;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public abstract class MapCollections<K, V> {
 
     @Nullable

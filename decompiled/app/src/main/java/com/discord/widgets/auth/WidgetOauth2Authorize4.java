@@ -13,9 +13,9 @@ import kotlin.jvm.functions.Function2;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetOauth2Authorize.kt */
-/* renamed from: com.discord.widgets.auth.WidgetOauth2Authorize$adapter$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.auth.WidgetOauth2Authorize$adapter$1, reason: use source file name */
+/* JADX INFO: compiled from: WidgetOauth2Authorize.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetOauth2Authorize4 extends Lambda implements Function2<LayoutInflater, ViewGroup, WidgetOauth2Authorize.OAuthPermissionViewHolder> {
     public static final WidgetOauth2Authorize4 INSTANCE = new WidgetOauth2Authorize4();
 
@@ -23,7 +23,7 @@ public final class WidgetOauth2Authorize4 extends Lambda implements Function2<La
         super(2);
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final WidgetOauth2Authorize.OAuthPermissionViewHolder invoke2(LayoutInflater layoutInflater, ViewGroup viewGroup) {
         Intrinsics3.checkNotNullParameter(layoutInflater, "layoutInflater");
         Intrinsics3.checkNotNullParameter(viewGroup, "parent");

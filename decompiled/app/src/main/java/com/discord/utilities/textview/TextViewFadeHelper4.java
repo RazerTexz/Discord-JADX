@@ -3,9 +3,9 @@ package com.discord.utilities.textview;
 import android.view.View;
 import android.widget.TextView;
 
-/* compiled from: TextViewFadeHelper.kt */
-/* renamed from: com.discord.utilities.textview.TextViewFadeHelper$registerFadeHelper$$inlined$apply$lambda$3, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.utilities.textview.TextViewFadeHelper$registerFadeHelper$$inlined$apply$lambda$3, reason: use source file name */
+/* JADX INFO: compiled from: TextViewFadeHelper.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class TextViewFadeHelper4 implements View.OnAttachStateChangeListener {
     public final /* synthetic */ View.OnLayoutChangeListener $layoutListener;
     public final /* synthetic */ TextViewFadeHelper3 $textChangedListener;

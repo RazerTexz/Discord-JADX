@@ -9,15 +9,15 @@ import p007b.p225i.p226a.p288f.p313h.p325l.AbstractBinderC3637e3;
 import p007b.p225i.p226a.p288f.p313h.p325l.C3623d3;
 import p007b.p225i.p226a.p288f.p313h.p325l.InterfaceC3636e2;
 
-/* compiled from: com.google.android.gms:play-services-measurement-impl@@18.0.0 */
-/* renamed from: b.i.a.f.i.b.l4 */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.i.b.l4 */
+/* JADX INFO: compiled from: com.google.android.gms:play-services-measurement-impl@@18.0.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public final class ServiceConnectionC4103l4 implements ServiceConnection {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final String f10940j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final /* synthetic */ C4114m4 f10941k;
 
     public ServiceConnectionC4103l4(C4114m4 c4114m4, String str) {

@@ -14,11 +14,11 @@ import p001a0.p002a.p003a.C0002b;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: Benefit.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: Benefit.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public abstract class Benefit implements Parcelable {
 
-    /* compiled from: Benefit.kt */
+    /* JADX INFO: compiled from: Benefit.kt */
     public static final /* data */ class ChannelBenefit extends Benefit {
         public static final Parcelable.Creator<ChannelBenefit> CREATOR = new Creator();
         private final Integer channelIconResId;
@@ -90,12 +90,12 @@ public abstract class Benefit implements Parcelable {
             return getDescription();
         }
 
-        /* renamed from: component4, reason: from getter */
+        /* JADX INFO: renamed from: component4, reason: from getter */
         public final Integer getChannelIconResId() {
             return this.channelIconResId;
         }
 
-        /* renamed from: component5, reason: from getter */
+        /* JADX INFO: renamed from: component5, reason: from getter */
         public final long getChannelId() {
             return this.channelId;
         }
@@ -213,7 +213,7 @@ public abstract class Benefit implements Parcelable {
         }
     }
 
-    /* compiled from: Benefit.kt */
+    /* JADX INFO: compiled from: Benefit.kt */
     public static final /* data */ class IntangibleBenefit extends Benefit {
         public static final Parcelable.Creator<IntangibleBenefit> CREATOR = new Creator();
         private final String description;

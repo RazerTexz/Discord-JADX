@@ -8,18 +8,18 @@ import p007b.p100d.p104b.p105a.outline;
 import p007b.p225i.p226a.p288f.p299e.p308o.C3404f;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: DeflaterSink.kt */
-/* renamed from: g0.h, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: g0.h, reason: use source file name */
+/* JADX INFO: compiled from: DeflaterSink.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class DeflaterSink implements Sink {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public boolean f26090j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final BufferedSink f26091k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final Deflater f26092l;
 
     public DeflaterSink(Sink sink, Deflater deflater) {
@@ -34,7 +34,7 @@ public final class DeflaterSink implements Sink {
     }
 
     @IgnoreJRERequirement
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final void m10477a(boolean z2) throws IOException {
         Segment2 segment2M10438N;
         int iDeflate;
@@ -54,7 +54,7 @@ public final class DeflaterSink implements Sink {
             }
             if (iDeflate > 0) {
                 segment2M10438N.f26120c += iDeflate;
-                buffer3Mo10457g.f26080k += iDeflate;
+                buffer3Mo10457g.f26080k += (long) iDeflate;
                 this.f26091k.mo10431F();
             } else if (this.f26092l.needsInput()) {
                 break;

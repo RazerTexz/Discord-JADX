@@ -20,9 +20,9 @@ import p659s.p660a.InterfaceC13169z0;
 import p659s.p660a.p663c2.Channels;
 
 /* JADX INFO: Add missing generic type declarations: [T] */
-/* compiled from: RxCoroutineUtils.kt */
-/* renamed from: com.discord.utilities.rx.RxCoroutineUtilsKt$toFlow$2$subscription$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.utilities.rx.RxCoroutineUtilsKt$toFlow$2$subscription$1, reason: use source file name */
+/* JADX INFO: compiled from: RxCoroutineUtils.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class RxCoroutineUtils5<T> implements Observer2<T> {
     public final /* synthetic */ Produce $this_callbackFlow;
 

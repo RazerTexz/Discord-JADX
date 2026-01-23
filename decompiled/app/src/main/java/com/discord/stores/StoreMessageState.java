@@ -21,13 +21,13 @@ import p507d0.p592z.p594d.Lambda;
 import p658rx.Observable;
 import p658rx.subjects.BehaviorSubject;
 
-/* compiled from: StoreMessageState.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: StoreMessageState.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class StoreMessageState {
     private final Dispatcher dispatcher;
     private final BehaviorSubject<Map<Long, State>> messageStateSubject;
 
-    /* compiled from: StoreMessageState.kt */
+    /* JADX INFO: compiled from: StoreMessageState.kt */
     public static final /* data */ class State {
         private final Map<Integer, Set<String>> visibleSpoilerEmbedMap;
         private final Set<Integer> visibleSpoilerNodeIndices;
@@ -107,14 +107,14 @@ public final class StoreMessageState {
         }
     }
 
-    /* compiled from: StoreMessageState.kt */
-    /* renamed from: com.discord.stores.StoreMessageState$revealSpoiler$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreMessageState$revealSpoiler$1 */
+    /* JADX INFO: compiled from: StoreMessageState.kt */
     public static final class C62211 extends Lambda implements Function0<Unit> {
         public final /* synthetic */ long $messageId;
         public final /* synthetic */ int $spoilerIndex;
 
-        /* compiled from: StoreMessageState.kt */
-        /* renamed from: com.discord.stores.StoreMessageState$revealSpoiler$1$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.stores.StoreMessageState$revealSpoiler$1$1, reason: invalid class name */
+        /* JADX INFO: compiled from: StoreMessageState.kt */
         public static final class AnonymousClass1 extends Lambda implements Function1<State, State> {
             public AnonymousClass1() {
                 super(1);
@@ -125,7 +125,7 @@ public final class StoreMessageState {
                 return invoke2(state);
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final State invoke2(State state) {
                 Intrinsics3.checkNotNullParameter(state, "currentState");
                 return State.copy$default(state, _Sets.plus(state.getVisibleSpoilerNodeIndices(), Integer.valueOf(C62211.this.$spoilerIndex)), null, 2, null);
@@ -145,20 +145,20 @@ public final class StoreMessageState {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             StoreMessageState.access$updateState(StoreMessageState.this, this.$messageId, new AnonymousClass1());
         }
     }
 
-    /* compiled from: StoreMessageState.kt */
-    /* renamed from: com.discord.stores.StoreMessageState$revealSpoilerEmbed$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreMessageState$revealSpoilerEmbed$1 */
+    /* JADX INFO: compiled from: StoreMessageState.kt */
     public static final class C62221 extends Lambda implements Function0<Unit> {
         public final /* synthetic */ long $messageId;
         public final /* synthetic */ int $spoilerEmbedIndex;
 
-        /* compiled from: StoreMessageState.kt */
-        /* renamed from: com.discord.stores.StoreMessageState$revealSpoilerEmbed$1$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.stores.StoreMessageState$revealSpoilerEmbed$1$1, reason: invalid class name */
+        /* JADX INFO: compiled from: StoreMessageState.kt */
         public static final class AnonymousClass1 extends Lambda implements Function1<State, State> {
             public AnonymousClass1() {
                 super(1);
@@ -169,7 +169,7 @@ public final class StoreMessageState {
                 return invoke2(state);
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final State invoke2(State state) {
                 Intrinsics3.checkNotNullParameter(state, "currentState");
                 return State.copy$default(state, null, Maps6.plus(state.getVisibleSpoilerEmbedMap(), Tuples.m10073to(Integer.valueOf(C62221.this.$spoilerEmbedIndex), Sets5.emptySet())), 1, null);
@@ -189,21 +189,21 @@ public final class StoreMessageState {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             StoreMessageState.access$updateState(StoreMessageState.this, this.$messageId, new AnonymousClass1());
         }
     }
 
-    /* compiled from: StoreMessageState.kt */
-    /* renamed from: com.discord.stores.StoreMessageState$revealSpoilerEmbedData$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreMessageState$revealSpoilerEmbedData$1 */
+    /* JADX INFO: compiled from: StoreMessageState.kt */
     public static final class C62231 extends Lambda implements Function0<Unit> {
         public final /* synthetic */ String $key;
         public final /* synthetic */ long $messageId;
         public final /* synthetic */ int $spoilerEmbedIndex;
 
-        /* compiled from: StoreMessageState.kt */
-        /* renamed from: com.discord.stores.StoreMessageState$revealSpoilerEmbedData$1$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.stores.StoreMessageState$revealSpoilerEmbedData$1$1, reason: invalid class name */
+        /* JADX INFO: compiled from: StoreMessageState.kt */
         public static final class AnonymousClass1 extends Lambda implements Function1<State, State> {
             public AnonymousClass1() {
                 super(1);
@@ -214,7 +214,7 @@ public final class StoreMessageState {
                 return invoke2(state);
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final State invoke2(State state) {
                 Intrinsics3.checkNotNullParameter(state, "currentState");
                 Set<String> setEmptySet = state.getVisibleSpoilerEmbedMap().get(Integer.valueOf(C62231.this.$spoilerEmbedIndex));
@@ -239,7 +239,7 @@ public final class StoreMessageState {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             StoreMessageState.access$updateState(StoreMessageState.this, this.$messageId, new AnonymousClass1());
         }

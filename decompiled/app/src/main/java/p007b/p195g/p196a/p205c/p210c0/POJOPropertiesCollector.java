@@ -27,69 +27,69 @@ import p007b.p195g.p196a.p205c.p210c0.VisibilityChecker;
 import p007b.p195g.p196a.p205c.p219i0.ClassUtil;
 import p007b.p195g.p196a.p205c.p221z.MapperConfig;
 
-/* compiled from: POJOPropertiesCollector.java */
-/* renamed from: b.g.a.c.c0.b0, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.g.a.c.c0.b0, reason: use source file name */
+/* JADX INFO: compiled from: POJOPropertiesCollector.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class POJOPropertiesCollector {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final MapperConfig<?> f4633a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final AccessorNamingStrategy f4634b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final boolean f4635c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final JavaType f4636d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final AnnotatedClass f4637e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final VisibilityChecker<?> f4638f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public final AnnotationIntrospector f4639g;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public final boolean f4640h;
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public boolean f4641i;
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public LinkedHashMap<String, POJOPropertyBuilder> f4642j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public LinkedList<POJOPropertyBuilder> f4643k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public Map<PropertyName, PropertyName> f4644l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public LinkedList<AnnotatedMember> f4645m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public LinkedList<AnnotatedMember> f4646n;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public LinkedList<AnnotatedMethod> f4647o;
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public LinkedList<AnnotatedMember> f4648p;
 
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     public LinkedList<AnnotatedMember> f4649q;
 
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     public LinkedList<AnnotatedMember> f4650r;
 
-    /* renamed from: s */
+    /* JADX INFO: renamed from: s */
     public HashSet<String> f4651s;
 
-    /* renamed from: t */
+    /* JADX INFO: renamed from: t */
     public LinkedHashMap<Object, AnnotatedMember> f4652t;
 
     public POJOPropertiesCollector(MapperConfig<?> mapperConfig, boolean z2, JavaType javaType, AnnotatedClass annotatedClass, AccessorNamingStrategy accessorNamingStrategy) {
@@ -109,7 +109,7 @@ public class POJOPropertiesCollector {
         mapperConfig.m2279q(MapperFeature.USE_STD_BEAN_NAMING);
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public void m1822a(Map<String, POJOPropertyBuilder> map, AnnotatedParameter annotatedParameter) {
         POJOPropertyBuilder pOJOPropertyBuilderM1827f;
         JsonCreator.a aVarMo1777d;
@@ -142,14 +142,14 @@ public class POJOPropertiesCollector {
         this.f4643k.add(pOJOPropertyBuilderM1827f);
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final String m1823b(String str) {
         PropertyName propertyName;
         Map<PropertyName, PropertyName> map = this.f4644l;
         return (map == null || (propertyName = map.get(m1826e(str))) == null) ? str : propertyName._simpleName;
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public void m1824c(String str) {
         if (this.f4635c || str == null) {
             return;
@@ -160,7 +160,7 @@ public class POJOPropertiesCollector {
         this.f4651s.add(str);
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public void m1825d(JacksonInject.a aVar, AnnotatedMember annotatedMember) {
         if (aVar == null) {
             return;
@@ -176,12 +176,12 @@ public class POJOPropertiesCollector {
         throw new IllegalArgumentException("Duplicate injectable value with id '" + obj + "' (of type " + obj.getClass().getName() + ")");
     }
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final PropertyName m1826e(String str) {
         return PropertyName.m2228b(str, null);
     }
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public POJOPropertyBuilder m1827f(Map<String, POJOPropertyBuilder> map, String str) {
         POJOPropertyBuilder pOJOPropertyBuilder = map.get(str);
         if (pOJOPropertyBuilder != null) {
@@ -192,7 +192,7 @@ public class POJOPropertiesCollector {
         return pOJOPropertyBuilder2;
     }
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public boolean m1828g(POJOPropertyBuilder pOJOPropertyBuilder, List<POJOPropertyBuilder> list) {
         if (list != null) {
             String str = pOJOPropertyBuilder.f4676p._simpleName;
@@ -209,7 +209,7 @@ public class POJOPropertiesCollector {
 
     /* JADX WARN: Removed duplicated region for block: B:179:0x0341  */
     /* JADX WARN: Removed duplicated region for block: B:452:0x087e  */
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
@@ -769,7 +769,7 @@ public class POJOPropertiesCollector {
         this.f4641i = true;
     }
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public void m1830i(String str, Object... objArr) {
         if (objArr.length > 0) {
             str = String.format(str, objArr);

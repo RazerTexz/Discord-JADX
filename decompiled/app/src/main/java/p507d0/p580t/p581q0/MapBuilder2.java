@@ -14,52 +14,52 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.p595g0.KMarkers;
 import p507d0.p592z.p594d.p595g0.KMarkers4;
 
-/* compiled from: MapBuilder.kt */
-/* renamed from: d0.t.q0.c, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.t.q0.c, reason: use source file name */
+/* JADX INFO: compiled from: MapBuilder.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class MapBuilder2<K, V> implements Map<K, V>, KMarkers4 {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static final a f25198j = new a(null);
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public int f25199k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public int f25200l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public MapBuilder4<K> f25201m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public MapBuilder5<V> f25202n;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public MapBuilder3<K, V> f25203o;
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public boolean f25204p;
 
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     public K[] f25205q;
 
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     public V[] f25206r;
 
-    /* renamed from: s */
+    /* JADX INFO: renamed from: s */
     public int[] f25207s;
 
-    /* renamed from: t */
+    /* JADX INFO: renamed from: t */
     public int[] f25208t;
 
-    /* renamed from: u */
+    /* JADX INFO: renamed from: u */
     public int f25209u;
 
-    /* renamed from: v */
+    /* JADX INFO: renamed from: v */
     public int f25210v;
 
-    /* compiled from: MapBuilder.kt */
-    /* renamed from: d0.t.q0.c$a */
+    /* JADX INFO: renamed from: d0.t.q0.c$a */
+    /* JADX INFO: compiled from: MapBuilder.kt */
     public static final class a {
         public a(DefaultConstructorMarker defaultConstructorMarker) {
         }
@@ -75,8 +75,8 @@ public final class MapBuilder2<K, V> implements Map<K, V>, KMarkers4 {
         }
     }
 
-    /* compiled from: MapBuilder.kt */
-    /* renamed from: d0.t.q0.c$b */
+    /* JADX INFO: renamed from: d0.t.q0.c$b */
+    /* JADX INFO: compiled from: MapBuilder.kt */
     public static final class b<K, V> extends d<K, V> implements Iterator<Map.Entry<K, V>>, KMarkers {
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
         public b(MapBuilder2<K, V> mapBuilder2) {
@@ -146,14 +146,14 @@ public final class MapBuilder2<K, V> implements Map<K, V>, KMarkers4 {
         }
     }
 
-    /* compiled from: MapBuilder.kt */
-    /* renamed from: d0.t.q0.c$c */
+    /* JADX INFO: renamed from: d0.t.q0.c$c */
+    /* JADX INFO: compiled from: MapBuilder.kt */
     public static final class c<K, V> implements Map.Entry<K, V>, KMarkers {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public final MapBuilder2<K, V> f25211j;
 
-        /* renamed from: k */
+        /* JADX INFO: renamed from: k */
         public final int f25212k;
 
         public c(MapBuilder2<K, V> mapBuilder2, int i) {
@@ -212,17 +212,17 @@ public final class MapBuilder2<K, V> implements Map<K, V>, KMarkers4 {
         }
     }
 
-    /* compiled from: MapBuilder.kt */
-    /* renamed from: d0.t.q0.c$d */
+    /* JADX INFO: renamed from: d0.t.q0.c$d */
+    /* JADX INFO: compiled from: MapBuilder.kt */
     public static class d<K, V> {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public int f25213j;
 
-        /* renamed from: k */
+        /* JADX INFO: renamed from: k */
         public int f25214k;
 
-        /* renamed from: l */
+        /* JADX INFO: renamed from: l */
         public final MapBuilder2<K, V> f25215l;
 
         public d(MapBuilder2<K, V> mapBuilder2) {
@@ -278,8 +278,8 @@ public final class MapBuilder2<K, V> implements Map<K, V>, KMarkers4 {
         }
     }
 
-    /* compiled from: MapBuilder.kt */
-    /* renamed from: d0.t.q0.c$e */
+    /* JADX INFO: renamed from: d0.t.q0.c$e */
+    /* JADX INFO: compiled from: MapBuilder.kt */
     public static final class e<K, V> extends d<K, V> implements Iterator<K>, KMarkers {
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
         public e(MapBuilder2<K, V> mapBuilder2) {
@@ -301,8 +301,8 @@ public final class MapBuilder2<K, V> implements Map<K, V>, KMarkers4 {
         }
     }
 
-    /* compiled from: MapBuilder.kt */
-    /* renamed from: d0.t.q0.c$f */
+    /* JADX INFO: renamed from: d0.t.q0.c$f */
+    /* JADX INFO: compiled from: MapBuilder.kt */
     public static final class f<K, V> extends d<K, V> implements Iterator<V>, KMarkers {
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
         public f(MapBuilder2<K, V> mapBuilder2) {
@@ -354,7 +354,7 @@ public final class MapBuilder2<K, V> implements Map<K, V>, KMarkers4 {
         mapBuilder2.m10081g(i);
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final V[] m10075a() {
         V[] vArr = this.f25206r;
         if (vArr != null) {
@@ -405,7 +405,7 @@ public final class MapBuilder2<K, V> implements Map<K, V>, KMarkers4 {
         }
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final void m10076b(int i) {
         int i2 = this.f25210v;
         int i3 = i + i2;
@@ -439,7 +439,7 @@ public final class MapBuilder2<K, V> implements Map<K, V>, KMarkers4 {
         return this;
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final int m10077c(K k) {
         int iM10079e = m10079e(k);
         int i = this.f25209u;
@@ -535,7 +535,7 @@ public final class MapBuilder2<K, V> implements Map<K, V>, KMarkers4 {
         return m10078d(obj) >= 0;
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final int m10078d(V v) {
         int i = this.f25210v;
         while (true) {
@@ -553,7 +553,7 @@ public final class MapBuilder2<K, V> implements Map<K, V>, KMarkers4 {
         }
     }
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final int m10079e(K k) {
         return ((k != null ? k.hashCode() : 0) * (-1640531527)) >>> this.f25199k;
     }
@@ -581,7 +581,7 @@ public final class MapBuilder2<K, V> implements Map<K, V>, KMarkers4 {
         return true;
     }
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final void m10080f(int i) {
         boolean z2;
         int i2;
@@ -647,7 +647,7 @@ public final class MapBuilder2<K, V> implements Map<K, V>, KMarkers4 {
 
     /* JADX WARN: Removed duplicated region for block: B:26:0x005b A[SYNTHETIC] */
     /* JADX WARN: Removed duplicated region for block: B:27:? A[LOOP:0: B:3:0x001a->B:27:?, LOOP_END, SYNTHETIC] */
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */

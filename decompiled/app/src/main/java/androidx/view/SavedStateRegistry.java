@@ -13,8 +13,8 @@ import androidx.view.Recreator;
 import java.util.Map;
 import p007b.p100d.p104b.p105a.outline;
 
+/* JADX INFO: loaded from: classes.dex */
 @SuppressLint({"RestrictedApi"})
-/* loaded from: classes.dex */
 public final class SavedStateRegistry {
     private static final String SAVED_COMPONENTS_KEY = "androidx.lifecycle.BundlableSavedStateRegistry.key";
     private Recreator.SavedStateProvider mRecreatorProvider;
@@ -25,7 +25,7 @@ public final class SavedStateRegistry {
     private SafeIterableMap<String, SavedStateProvider> mComponents = new SafeIterableMap<>();
     public boolean mAllowingSavingState = true;
 
-    /* renamed from: androidx.savedstate.SavedStateRegistry$1 */
+    /* JADX INFO: renamed from: androidx.savedstate.SavedStateRegistry$1 */
     public class C06001 implements GenericLifecycleObserver {
         public C06001() {
         }
@@ -107,7 +107,7 @@ public final class SavedStateRegistry {
     }
 
     @MainThread
-    public void runOnNextRecreation(@NonNull Class<? extends AutoRecreated> cls) throws SecurityException {
+    public void runOnNextRecreation(@NonNull Class<? extends AutoRecreated> cls) {
         if (!this.mAllowingSavingState) {
             throw new IllegalStateException("Can not perform this action after onSaveInstanceState");
         }

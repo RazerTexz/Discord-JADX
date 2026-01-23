@@ -3,9 +3,9 @@ package com.discord.widgets.stage.start;
 import android.view.View;
 import com.discord.widgets.stage.start.ModeratorStartStageAdapter;
 
-/* compiled from: ModeratorStartStageAdapter.kt */
-/* renamed from: com.discord.widgets.stage.start.ModeratorStartStageAdapter$CreateStageEventViewHolder$onConfigure$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.stage.start.ModeratorStartStageAdapter$CreateStageEventViewHolder$onConfigure$1, reason: use source file name */
+/* JADX INFO: compiled from: ModeratorStartStageAdapter.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class ModeratorStartStageAdapter2 implements View.OnClickListener {
     public final /* synthetic */ ModeratorStartStageItem $data;
     public final /* synthetic */ ModeratorStartStageAdapter.CreateStageEventViewHolder this$0;

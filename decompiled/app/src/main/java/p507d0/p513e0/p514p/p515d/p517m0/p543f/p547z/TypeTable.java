@@ -8,12 +8,12 @@ import p507d0.p580t.Collections2;
 import p507d0.p580t.Iterables2;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: TypeTable.kt */
-/* renamed from: d0.e0.p.d.m0.f.z.g, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.f.z.g, reason: use source file name */
+/* JADX INFO: compiled from: TypeTable.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class TypeTable {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final List<C11692q> f24061a;
 
     public TypeTable(C11695t c11695t) {

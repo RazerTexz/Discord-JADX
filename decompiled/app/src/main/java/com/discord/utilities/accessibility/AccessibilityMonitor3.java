@@ -5,9 +5,9 @@ import android.net.Uri;
 import android.os.Handler;
 import androidx.core.app.NotificationCompat;
 
-/* compiled from: AccessibilityMonitor.kt */
-/* renamed from: com.discord.utilities.accessibility.AccessibilityMonitor$animationScaleObserver$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.utilities.accessibility.AccessibilityMonitor$animationScaleObserver$1, reason: use source file name */
+/* JADX INFO: compiled from: AccessibilityMonitor.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class AccessibilityMonitor3 extends ContentObserver {
     public final /* synthetic */ AccessibilityMonitor this$0;
 

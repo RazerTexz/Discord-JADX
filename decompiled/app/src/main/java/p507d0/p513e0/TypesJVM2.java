@@ -10,25 +10,25 @@ import p507d0.p580t._Arrays;
 import p507d0.p592z.p594d.FunctionReferenceImpl;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: TypesJVM.kt */
-/* renamed from: d0.e0.k, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.k, reason: use source file name */
+/* JADX INFO: compiled from: TypesJVM.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class TypesJVM2 implements ParameterizedType, Type {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final Type[] f22308j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final Class<?> f22309k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final Type f22310l;
 
-    /* compiled from: TypesJVM.kt */
-    /* renamed from: d0.e0.k$a */
+    /* JADX INFO: renamed from: d0.e0.k$a */
+    /* JADX INFO: compiled from: TypesJVM.kt */
     public static final /* synthetic */ class a extends FunctionReferenceImpl implements Function1<Type, String> {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public static final a f22311j = new a();
 
         public a() {
@@ -40,7 +40,7 @@ public final class TypesJVM2 implements ParameterizedType, Type {
             return invoke2(type);
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final String invoke2(Type type) {
             Intrinsics3.checkNotNullParameter(type, "p1");
             return TypesJVM5.access$typeToString(type);

@@ -16,14 +16,14 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 import p658rx.Observable;
 
-/* compiled from: StoreGuildMemberCounts.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: StoreGuildMemberCounts.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class StoreGuildMemberCounts extends StoreV2 {
     private final HashMap<Long, Integer> guildMemberCounts = new HashMap<>();
     private Map<Long, Integer> guildMemberCountsSnapshot = Maps6.emptyMap();
 
-    /* compiled from: StoreGuildMemberCounts.kt */
-    /* renamed from: com.discord.stores.StoreGuildMemberCounts$observeApproximateMemberCount$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreGuildMemberCounts$observeApproximateMemberCount$1 */
+    /* JADX INFO: compiled from: StoreGuildMemberCounts.kt */
     public static final class C60321 extends Lambda implements Function0<Integer> {
         public final /* synthetic */ long $guildId;
 
@@ -38,7 +38,7 @@ public final class StoreGuildMemberCounts extends StoreV2 {
             return Integer.valueOf(invoke2());
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final int invoke2() {
             Integer num = (Integer) StoreGuildMemberCounts.access$getGuildMemberCountsSnapshot$p(StoreGuildMemberCounts.this).get(Long.valueOf(this.$guildId));
             if (num != null) {

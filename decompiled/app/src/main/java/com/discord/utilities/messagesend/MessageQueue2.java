@@ -12,19 +12,19 @@ import p507d0.p592z.p594d.Lambda;
 import p658rx.Observable;
 import p658rx.Subscription;
 
-/* compiled from: MessageQueue.kt */
-/* renamed from: com.discord.utilities.messagesend.MessageQueue$processNextRequest$listener$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.utilities.messagesend.MessageQueue$processNextRequest$listener$1, reason: use source file name */
+/* JADX INFO: compiled from: MessageQueue.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class MessageQueue2 extends Lambda implements Function1<MessageQueue4, Unit> {
     public final /* synthetic */ MessageQueue3 $request;
     public final /* synthetic */ MessageQueue this$0;
 
-    /* compiled from: MessageQueue.kt */
-    /* renamed from: com.discord.utilities.messagesend.MessageQueue$processNextRequest$listener$1$1 */
+    /* JADX INFO: renamed from: com.discord.utilities.messagesend.MessageQueue$processNextRequest$listener$1$1 */
+    /* JADX INFO: compiled from: MessageQueue.kt */
     public static final class C68111 extends Lambda implements Function1<Long, Unit> {
 
-        /* compiled from: MessageQueue.kt */
-        /* renamed from: com.discord.utilities.messagesend.MessageQueue$processNextRequest$listener$1$1$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.utilities.messagesend.MessageQueue$processNextRequest$listener$1$1$1, reason: invalid class name */
+        /* JADX INFO: compiled from: MessageQueue.kt */
         public static final class AnonymousClass1 implements Runnable {
             public AnonymousClass1() {
             }
@@ -48,14 +48,14 @@ public final class MessageQueue2 extends Lambda implements Function1<MessageQueu
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Long l) {
             MessageQueue.access$getExecutorService$p(MessageQueue2.this.this$0).submit(new AnonymousClass1());
         }
     }
 
-    /* compiled from: MessageQueue.kt */
-    /* renamed from: com.discord.utilities.messagesend.MessageQueue$processNextRequest$listener$1$2 */
+    /* JADX INFO: renamed from: com.discord.utilities.messagesend.MessageQueue$processNextRequest$listener$1$2 */
+    /* JADX INFO: compiled from: MessageQueue.kt */
     public static final class C68122 extends Lambda implements Function1<Subscription, Unit> {
         public C68122() {
             super(1);
@@ -67,23 +67,23 @@ public final class MessageQueue2 extends Lambda implements Function1<MessageQueu
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Subscription subscription) {
             Intrinsics3.checkNotNullParameter(subscription, "it");
             MessageQueue.access$setRetrySubscription$p(MessageQueue2.this.this$0, subscription);
         }
     }
 
-    /* compiled from: MessageQueue.kt */
-    /* renamed from: com.discord.utilities.messagesend.MessageQueue$processNextRequest$listener$1$3 */
+    /* JADX INFO: renamed from: com.discord.utilities.messagesend.MessageQueue$processNextRequest$listener$1$3 */
+    /* JADX INFO: compiled from: MessageQueue.kt */
     public static final class RunnableC68133 implements Runnable {
 
-        /* compiled from: MessageQueue.kt */
-        /* renamed from: com.discord.utilities.messagesend.MessageQueue$processNextRequest$listener$1$3$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.utilities.messagesend.MessageQueue$processNextRequest$listener$1$3$1, reason: invalid class name */
+        /* JADX INFO: compiled from: MessageQueue.kt */
         public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
 
-            /* compiled from: MessageQueue.kt */
-            /* renamed from: com.discord.utilities.messagesend.MessageQueue$processNextRequest$listener$1$3$1$1, reason: invalid class name and collision with other inner class name */
+            /* JADX INFO: renamed from: com.discord.utilities.messagesend.MessageQueue$processNextRequest$listener$1$3$1$1, reason: invalid class name and collision with other inner class name */
+            /* JADX INFO: compiled from: MessageQueue.kt */
             public static final class RunnableC132711 implements Runnable {
                 public RunnableC132711() {
                 }
@@ -104,7 +104,7 @@ public final class MessageQueue2 extends Lambda implements Function1<MessageQueu
                 return Unit.f27425a;
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2() {
                 MessageQueue.access$getExecutorService$p(MessageQueue2.this.this$0).submit(new RunnableC132711());
             }
@@ -121,8 +121,8 @@ public final class MessageQueue2 extends Lambda implements Function1<MessageQueu
         }
     }
 
-    /* compiled from: MessageQueue.kt */
-    /* renamed from: com.discord.utilities.messagesend.MessageQueue$processNextRequest$listener$1$4 */
+    /* JADX INFO: renamed from: com.discord.utilities.messagesend.MessageQueue$processNextRequest$listener$1$4 */
+    /* JADX INFO: compiled from: MessageQueue.kt */
     public static final class RunnableC68144 implements Runnable {
         public final /* synthetic */ MessageQueue4 $result;
 
@@ -152,7 +152,7 @@ public final class MessageQueue2 extends Lambda implements Function1<MessageQueu
         return Unit.f27425a;
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final void invoke2(MessageQueue4 messageQueue4) {
         Intrinsics3.checkNotNullParameter(messageQueue4, "result");
         if (!(messageQueue4 instanceof MessageQueue4.RateLimited)) {

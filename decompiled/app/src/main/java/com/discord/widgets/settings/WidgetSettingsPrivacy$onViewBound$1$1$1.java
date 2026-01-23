@@ -6,8 +6,8 @@ import kotlin.jvm.functions.Function1;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetSettingsPrivacy.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetSettingsPrivacy.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetSettingsPrivacy$onViewBound$1$1$1 extends Lambda implements Function1<ModelUserSettings, Unit> {
     public static final WidgetSettingsPrivacy$onViewBound$1$1$1 INSTANCE = new WidgetSettingsPrivacy$onViewBound$1$1$1();
 
@@ -21,7 +21,7 @@ public final class WidgetSettingsPrivacy$onViewBound$1$1$1 extends Lambda implem
         return Unit.f27425a;
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final void invoke2(ModelUserSettings modelUserSettings) {
         Intrinsics3.checkNotNullParameter(modelUserSettings, "it");
     }

@@ -1,11 +1,11 @@
 package p007b.p225i.p226a.p242c.p245b3;
 
-/* compiled from: SimpleSubtitleDecoder.java */
-/* renamed from: b.i.a.c.b3.e, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.b3.e, reason: use source file name */
+/* JADX INFO: compiled from: SimpleSubtitleDecoder.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class SimpleSubtitleDecoder extends SubtitleOutputBuffer {
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public final /* synthetic */ SimpleSubtitleDecoder2 f5798n;
 
     public SimpleSubtitleDecoder(SimpleSubtitleDecoder2 simpleSubtitleDecoder2) {
@@ -13,7 +13,7 @@ public class SimpleSubtitleDecoder extends SubtitleOutputBuffer {
     }
 
     @Override // p007b.p225i.p226a.p242c.p265v2.DecoderOutputBuffer
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public void mo2611p() {
         SimpleSubtitleDecoder2 simpleSubtitleDecoder2 = this.f5798n;
         synchronized (simpleSubtitleDecoder2.f7932b) {

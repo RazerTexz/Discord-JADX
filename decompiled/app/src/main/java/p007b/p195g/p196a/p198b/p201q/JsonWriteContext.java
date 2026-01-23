@@ -7,27 +7,27 @@ import p007b.p100d.p104b.p105a.outline;
 import p007b.p195g.p196a.p198b.JsonGenerator;
 import p007b.p195g.p196a.p198b.JsonStreamContext;
 
-/* compiled from: JsonWriteContext.java */
-/* renamed from: b.g.a.b.q.c, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.g.a.b.q.c, reason: use source file name */
+/* JADX INFO: compiled from: JsonWriteContext.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class JsonWriteContext extends JsonStreamContext {
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final JsonWriteContext f4570c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public DupDetector f4571d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public JsonWriteContext f4572e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public String f4573f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public Object f4574g;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public boolean f4575h;
 
     public JsonWriteContext(int i, JsonWriteContext jsonWriteContext, DupDetector dupDetector) {
@@ -38,18 +38,18 @@ public class JsonWriteContext extends JsonStreamContext {
     }
 
     @Override // p007b.p195g.p196a.p198b.JsonStreamContext
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final String mo1673a() {
         return this.f4573f;
     }
 
     @Override // p007b.p195g.p196a.p198b.JsonStreamContext
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public void mo1676d(Object obj) {
         this.f4574g = obj;
     }
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public JsonWriteContext m1706f() {
         JsonWriteContext jsonWriteContext = this.f4572e;
         if (jsonWriteContext != null) {
@@ -62,7 +62,7 @@ public class JsonWriteContext extends JsonStreamContext {
         return jsonWriteContext2;
     }
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public JsonWriteContext m1707g(Object obj) {
         JsonWriteContext jsonWriteContext = this.f4572e;
         if (jsonWriteContext != null) {
@@ -75,7 +75,7 @@ public class JsonWriteContext extends JsonStreamContext {
         return jsonWriteContext2;
     }
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public JsonWriteContext m1708h() {
         JsonWriteContext jsonWriteContext = this.f4572e;
         if (jsonWriteContext != null) {
@@ -88,7 +88,7 @@ public class JsonWriteContext extends JsonStreamContext {
         return jsonWriteContext2;
     }
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public JsonWriteContext m1709i(Object obj) {
         JsonWriteContext jsonWriteContext = this.f4572e;
         if (jsonWriteContext != null) {
@@ -101,7 +101,7 @@ public class JsonWriteContext extends JsonStreamContext {
         return jsonWriteContext2;
     }
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public JsonWriteContext m1710j(int i) {
         this.f4503a = i;
         this.f4504b = -1;
@@ -117,7 +117,7 @@ public class JsonWriteContext extends JsonStreamContext {
         return this;
     }
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public JsonWriteContext m1711k(int i, Object obj) {
         this.f4503a = i;
         this.f4504b = -1;
@@ -135,7 +135,7 @@ public class JsonWriteContext extends JsonStreamContext {
 
     /* JADX WARN: Removed duplicated region for block: B:21:0x002f  */
     /* JADX WARN: Removed duplicated region for block: B:27:0x0053  */
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
@@ -180,7 +180,7 @@ public class JsonWriteContext extends JsonStreamContext {
         return this.f4504b < 0 ? 0 : 1;
     }
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public int m1713m() {
         int i = this.f4503a;
         if (i == 2) {

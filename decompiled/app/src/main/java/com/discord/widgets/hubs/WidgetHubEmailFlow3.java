@@ -19,9 +19,9 @@ import p007b.p008a.p025i.WidgetHubEmailFlowWaitlistBinding;
 import p507d0.p592z.p594d.FunctionReferenceImpl;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: WidgetHubEmailFlow.kt */
-/* renamed from: com.discord.widgets.hubs.WidgetHubEmailFlow$binding$2, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.hubs.WidgetHubEmailFlow$binding$2, reason: use source file name */
+/* JADX INFO: compiled from: WidgetHubEmailFlow.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final /* synthetic */ class WidgetHubEmailFlow3 extends FunctionReferenceImpl implements Function1<View, WidgetHubEmailFlowBinding> {
     public static final WidgetHubEmailFlow3 INSTANCE = new WidgetHubEmailFlow3();
 
@@ -34,7 +34,7 @@ public final /* synthetic */ class WidgetHubEmailFlow3 extends FunctionReference
         return invoke2(view);
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final WidgetHubEmailFlowBinding invoke2(View view) {
         Intrinsics3.checkNotNullParameter(view, "p1");
         int i = C5419R.id.discord_hub_email_button_layout;

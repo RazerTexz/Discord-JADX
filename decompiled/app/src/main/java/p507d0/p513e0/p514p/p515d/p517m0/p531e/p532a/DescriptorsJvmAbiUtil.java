@@ -9,11 +9,11 @@ import p507d0.p513e0.p514p.p515d.p517m0.p521c.FieldDescriptor;
 import p507d0.p513e0.p514p.p515d.p517m0.p521c.PropertyDescriptor;
 import p507d0.p513e0.p514p.p515d.p517m0.p552k.DescriptorUtils;
 
-/* compiled from: DescriptorsJvmAbiUtil.java */
-/* renamed from: d0.e0.p.d.m0.e.a.n, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.e.a.n, reason: use source file name */
+/* JADX INFO: compiled from: DescriptorsJvmAbiUtil.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class DescriptorsJvmAbiUtil {
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static /* synthetic */ void m9517a(int i) {
         Object[] objArr = new Object[3];
         if (i == 1 || i == 2) {

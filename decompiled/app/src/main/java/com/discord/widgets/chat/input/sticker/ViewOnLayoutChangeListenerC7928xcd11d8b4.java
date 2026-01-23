@@ -5,9 +5,9 @@ import androidx.core.view.ViewCompat;
 import androidx.recyclerview.widget.RecyclerView;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: View.kt */
-/* renamed from: com.discord.widgets.chat.input.sticker.WidgetStickerPicker$setupForInlineSearchAndScroll$$inlined$doOnLayout$1 */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.chat.input.sticker.WidgetStickerPicker$setupForInlineSearchAndScroll$$inlined$doOnLayout$1 */
+/* JADX INFO: compiled from: View.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class ViewOnLayoutChangeListenerC7928xcd11d8b4 implements View.OnLayoutChangeListener {
     public final /* synthetic */ long $packId$inlined;
     public final /* synthetic */ String $searchText$inlined;

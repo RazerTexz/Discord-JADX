@@ -8,9 +8,9 @@ import com.discord.widgets.hubs.WidgetHubAddServer;
 import p007b.p008a.p018d.AppScreen2;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: WidgetDirectoryCategory.kt */
-/* renamed from: com.discord.widgets.directories.WidgetDirectoryCategory$adapter$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.directories.WidgetDirectoryCategory$adapter$1, reason: use source file name */
+/* JADX INFO: compiled from: WidgetDirectoryCategory.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetDirectoryCategory3 implements DirectoryChannelItemClickInterface {
     public final /* synthetic */ WidgetDirectoryCategory this$0;
 

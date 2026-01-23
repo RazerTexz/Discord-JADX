@@ -11,18 +11,18 @@ import androidx.annotation.Nullable;
 import p007b.p100d.p104b.p105a.outline;
 import p007b.p225i.p226a.p288f.p313h.p327n.C3941a;
 
-/* compiled from: com.android.billingclient:billing@@4.0.0 */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: com.android.billingclient:billing@@4.0.0 */
+/* JADX INFO: loaded from: classes.dex */
 public class ProxyBillingActivity extends Activity {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     @Nullable
     public ResultReceiver f14559j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public boolean f14560k;
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final Intent m7496a() {
         Intent intent = new Intent("com.android.vending.billing.PURCHASES_UPDATED");
         intent.setPackage(getApplicationContext().getPackageName());

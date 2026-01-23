@@ -4,12 +4,12 @@ import android.media.AudioManager;
 import com.discord.rtcconnection.audio.DiscordAudioManager;
 import p007b.p085c.p086a.p087a0.AnimatableValueParser;
 
-/* compiled from: DiscordAudioManager.kt */
-/* renamed from: b.a.q.k0.e, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.a.q.k0.e, reason: use source file name */
+/* JADX INFO: compiled from: DiscordAudioManager.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class DiscordAudioManager2 implements AudioManager.OnAudioFocusChangeListener {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final /* synthetic */ DiscordAudioManager f1658j;
 
     public DiscordAudioManager2(DiscordAudioManager discordAudioManager) {

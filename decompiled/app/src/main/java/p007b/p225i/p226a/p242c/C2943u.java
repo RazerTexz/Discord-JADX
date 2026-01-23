@@ -4,12 +4,12 @@ import p007b.p225i.p226a.p242c.Player2;
 import p007b.p225i.p226a.p242c.p259f3.FlagSet;
 import p007b.p225i.p226a.p242c.p259f3.ListenerSet;
 
-/* compiled from: lambda */
-/* renamed from: b.i.a.c.u */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.u */
+/* JADX INFO: compiled from: lambda */
+/* JADX INFO: loaded from: classes3.dex */
 public final /* synthetic */ class C2943u implements ListenerSet.b {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final /* synthetic */ Player2 f7862a;
 
     public /* synthetic */ C2943u(Player2 player2) {
@@ -17,7 +17,7 @@ public final /* synthetic */ class C2943u implements ListenerSet.b {
     }
 
     @Override // p007b.p225i.p226a.p242c.p259f3.ListenerSet.b
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final void mo3037a(Object obj, FlagSet flagSet) {
         ((Player2.c) obj).mo237E(this.f7862a, new Player2.d(flagSet));
     }

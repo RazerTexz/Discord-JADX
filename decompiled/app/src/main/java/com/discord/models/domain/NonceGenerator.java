@@ -6,15 +6,15 @@ import com.discord.utilities.time.ClockFactory;
 import kotlin.jvm.internal.DefaultConstructorMarker;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: NonceGenerator.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: NonceGenerator.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class NonceGenerator {
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private static long previousNonce;
 
-    /* compiled from: NonceGenerator.kt */
+    /* JADX INFO: compiled from: NonceGenerator.kt */
     public static final class Companion {
         private Companion() {
         }

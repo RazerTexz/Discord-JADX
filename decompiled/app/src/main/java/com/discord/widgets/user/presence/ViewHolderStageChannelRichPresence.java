@@ -26,8 +26,8 @@ import com.facebook.drawee.view.SimpleDraweeView;
 import p007b.p008a.p027k.FormatUtils;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ViewHolderStageChannelRichPresence.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: ViewHolderStageChannelRichPresence.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class ViewHolderStageChannelRichPresence extends ViewHolderUserRichPresence {
     private final TextView richPresenceImageLargeText;
 

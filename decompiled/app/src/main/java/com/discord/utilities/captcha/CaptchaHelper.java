@@ -55,8 +55,8 @@ import p658rx.Emitter;
 import p658rx.Observable;
 import p658rx.functions.Action1;
 
-/* compiled from: CaptchaHelper.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: CaptchaHelper.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class CaptchaHelper {
     public static final String CAPTCHA_KEY = "captcha_key";
     private static final String FAILED_CAPTCHA_EXPIRED = "expired";
@@ -67,7 +67,7 @@ public final class CaptchaHelper {
     private static String captchaRqtoken;
     private static String captchaToken;
 
-    /* compiled from: CaptchaHelper.kt */
+    /* JADX INFO: compiled from: CaptchaHelper.kt */
     public static final /* data */ class CaptchaPayload {
         private final String captchaKey;
         private final String captchaRqtoken;
@@ -88,12 +88,12 @@ public final class CaptchaHelper {
             return captchaPayload.copy(str, str2);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final String getCaptchaKey() {
             return this.captchaKey;
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final String getCaptchaRqtoken() {
             return this.captchaRqtoken;
         }
@@ -141,10 +141,10 @@ public final class CaptchaHelper {
         }
     }
 
-    /* compiled from: CaptchaHelper.kt */
+    /* JADX INFO: compiled from: CaptchaHelper.kt */
     public static abstract class CaptchaRequest {
 
-        /* compiled from: CaptchaHelper.kt */
+        /* JADX INFO: compiled from: CaptchaHelper.kt */
         public static final /* data */ class HCaptcha extends CaptchaRequest {
             private final Activity activity;
             private final String rqdata;
@@ -167,17 +167,17 @@ public final class CaptchaHelper {
                 return hCaptcha.copy(str, activity, str2);
             }
 
-            /* renamed from: component1, reason: from getter */
+            /* JADX INFO: renamed from: component1, reason: from getter */
             public final String getSiteKey() {
                 return this.siteKey;
             }
 
-            /* renamed from: component2, reason: from getter */
+            /* JADX INFO: renamed from: component2, reason: from getter */
             public final Activity getActivity() {
                 return this.activity;
             }
 
-            /* renamed from: component3, reason: from getter */
+            /* JADX INFO: renamed from: component3, reason: from getter */
             public final String getRqdata() {
                 return this.rqdata;
             }
@@ -240,7 +240,7 @@ public final class CaptchaHelper {
             }
         }
 
-        /* compiled from: CaptchaHelper.kt */
+        /* JADX INFO: compiled from: CaptchaHelper.kt */
         public static final /* data */ class ReCaptcha extends CaptchaRequest {
             private final Activity activity;
 
@@ -258,7 +258,7 @@ public final class CaptchaHelper {
                 return reCaptcha.copy(activity);
             }
 
-            /* renamed from: component1, reason: from getter */
+            /* JADX INFO: renamed from: component1, reason: from getter */
             public final Activity getActivity() {
                 return this.activity;
             }
@@ -303,7 +303,7 @@ public final class CaptchaHelper {
         }
     }
 
-    /* compiled from: CaptchaHelper.kt */
+    /* JADX INFO: compiled from: CaptchaHelper.kt */
     public static final /* data */ class Failure extends Throwable {
         private final int errorStringId;
         private final String reasonCode;
@@ -324,12 +324,12 @@ public final class CaptchaHelper {
             return failure.copy(i, str);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final int getErrorStringId() {
             return this.errorStringId;
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final String getReasonCode() {
             return this.reasonCode;
         }
@@ -373,8 +373,8 @@ public final class CaptchaHelper {
         }
     }
 
-    /* compiled from: CaptchaHelper.kt */
-    /* renamed from: com.discord.utilities.captcha.CaptchaHelper$ensurePlayServicesAvailable$1 */
+    /* JADX INFO: renamed from: com.discord.utilities.captcha.CaptchaHelper$ensurePlayServicesAvailable$1 */
+    /* JADX INFO: compiled from: CaptchaHelper.kt */
     public static final class C67131<TResult> implements InterfaceC4361e<Void> {
         public final /* synthetic */ Function0 $onReady;
 
@@ -387,14 +387,14 @@ public final class CaptchaHelper {
             onSuccess2(r1);
         }
 
-        /* renamed from: onSuccess, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: onSuccess, reason: avoid collision after fix types in other method */
         public final void onSuccess2(Void r1) {
             this.$onReady.invoke();
         }
     }
 
-    /* compiled from: CaptchaHelper.kt */
-    /* renamed from: com.discord.utilities.captcha.CaptchaHelper$ensurePlayServicesAvailable$2 */
+    /* JADX INFO: renamed from: com.discord.utilities.captcha.CaptchaHelper$ensurePlayServicesAvailable$2 */
+    /* JADX INFO: compiled from: CaptchaHelper.kt */
     public static final class C67142 implements InterfaceC4359d {
         public final /* synthetic */ Function1 $errorHandler;
 
@@ -408,8 +408,8 @@ public final class CaptchaHelper {
         }
     }
 
-    /* compiled from: CaptchaHelper.kt */
-    /* renamed from: com.discord.utilities.captcha.CaptchaHelper$showCaptcha$1 */
+    /* JADX INFO: renamed from: com.discord.utilities.captcha.CaptchaHelper$showCaptcha$1 */
+    /* JADX INFO: compiled from: CaptchaHelper.kt */
     public static final class C67151<TResult> implements InterfaceC4361e<SafetyNetApi.RecaptchaTokenResponse> {
         public final /* synthetic */ Function1 $onSuccess;
 
@@ -422,7 +422,7 @@ public final class CaptchaHelper {
             onSuccess2(recaptchaTokenResponse);
         }
 
-        /* renamed from: onSuccess, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: onSuccess, reason: avoid collision after fix types in other method */
         public final void onSuccess2(SafetyNetApi.RecaptchaTokenResponse recaptchaTokenResponse) {
             Intrinsics3.checkNotNullExpressionValue(recaptchaTokenResponse, "it");
             String strMo5438C = ((SafetyNetApi.InterfaceC10813a) recaptchaTokenResponse.f9340a).mo5438C();
@@ -434,8 +434,8 @@ public final class CaptchaHelper {
         }
     }
 
-    /* compiled from: CaptchaHelper.kt */
-    /* renamed from: com.discord.utilities.captcha.CaptchaHelper$showCaptcha$2 */
+    /* JADX INFO: renamed from: com.discord.utilities.captcha.CaptchaHelper$showCaptcha$2 */
+    /* JADX INFO: compiled from: CaptchaHelper.kt */
     public static final class C67162 implements InterfaceC4359d {
         public final /* synthetic */ Function1 $errorHandler;
 
@@ -449,13 +449,13 @@ public final class CaptchaHelper {
         }
     }
 
-    /* compiled from: CaptchaHelper.kt */
-    /* renamed from: com.discord.utilities.captcha.CaptchaHelper$tryShowCaptcha$1 */
+    /* JADX INFO: renamed from: com.discord.utilities.captcha.CaptchaHelper$tryShowCaptcha$1 */
+    /* JADX INFO: compiled from: CaptchaHelper.kt */
     public static final class C67171<T> implements Action1<Emitter<String>> {
         public final /* synthetic */ CaptchaRequest $captchaRequest;
 
-        /* compiled from: CaptchaHelper.kt */
-        /* renamed from: com.discord.utilities.captcha.CaptchaHelper$tryShowCaptcha$1$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.utilities.captcha.CaptchaHelper$tryShowCaptcha$1$1, reason: invalid class name */
+        /* JADX INFO: compiled from: CaptchaHelper.kt */
         public static final class AnonymousClass1<TResult> implements InterfaceC5072c<HCaptchaTokenResponse> {
             public final /* synthetic */ Emitter $emitter;
 
@@ -468,7 +468,7 @@ public final class CaptchaHelper {
                 onSuccess2(hCaptchaTokenResponse);
             }
 
-            /* renamed from: onSuccess, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: onSuccess, reason: avoid collision after fix types in other method */
             public final void onSuccess2(HCaptchaTokenResponse hCaptchaTokenResponse) {
                 Emitter emitter = this.$emitter;
                 Intrinsics3.checkNotNullExpressionValue(hCaptchaTokenResponse, "hCaptchaTokenResponse");
@@ -477,8 +477,8 @@ public final class CaptchaHelper {
             }
         }
 
-        /* compiled from: CaptchaHelper.kt */
-        /* renamed from: com.discord.utilities.captcha.CaptchaHelper$tryShowCaptcha$1$2, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.utilities.captcha.CaptchaHelper$tryShowCaptcha$1$2, reason: invalid class name */
+        /* JADX INFO: compiled from: CaptchaHelper.kt */
         public static final class AnonymousClass2 implements InterfaceC5070a {
             public final /* synthetic */ Emitter $emitter;
             public final /* synthetic */ Function1 $errorHandler;
@@ -505,15 +505,15 @@ public final class CaptchaHelper {
             }
         }
 
-        /* compiled from: CaptchaHelper.kt */
-        /* renamed from: com.discord.utilities.captcha.CaptchaHelper$tryShowCaptcha$1$3, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.utilities.captcha.CaptchaHelper$tryShowCaptcha$1$3, reason: invalid class name */
+        /* JADX INFO: compiled from: CaptchaHelper.kt */
         public static final class AnonymousClass3 extends Lambda implements Function0<Unit> {
             public final /* synthetic */ Activity $activity;
             public final /* synthetic */ Emitter $emitter;
             public final /* synthetic */ Function1 $errorHandler;
 
-            /* compiled from: CaptchaHelper.kt */
-            /* renamed from: com.discord.utilities.captcha.CaptchaHelper$tryShowCaptcha$1$3$1, reason: invalid class name */
+            /* JADX INFO: renamed from: com.discord.utilities.captcha.CaptchaHelper$tryShowCaptcha$1$3$1, reason: invalid class name */
+            /* JADX INFO: compiled from: CaptchaHelper.kt */
             public static final class AnonymousClass1 extends Lambda implements Function1<String, Unit> {
                 public AnonymousClass1() {
                     super(1);
@@ -525,7 +525,7 @@ public final class CaptchaHelper {
                     return Unit.f27425a;
                 }
 
-                /* renamed from: invoke, reason: avoid collision after fix types in other method */
+                /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
                 public final void invoke2(String str) {
                     Intrinsics3.checkNotNullParameter(str, "token");
                     AnonymousClass3.this.$emitter.onNext(str);
@@ -547,7 +547,7 @@ public final class CaptchaHelper {
                 return Unit.f27425a;
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2() {
                 CaptchaHelper captchaHelper = CaptchaHelper.INSTANCE;
                 Activity activity = this.$activity;
@@ -567,7 +567,7 @@ public final class CaptchaHelper {
             call2(emitter);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final void call2(Emitter<String> emitter) throws PackageManager.NameNotFoundException {
             CaptchaHelper3 captchaHelper3 = new CaptchaHelper3(emitter);
             CaptchaRequest captchaRequest = this.$captchaRequest;

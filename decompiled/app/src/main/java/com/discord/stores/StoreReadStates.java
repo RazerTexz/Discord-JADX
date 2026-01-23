@@ -48,8 +48,8 @@ import p658rx.functions.Func3;
 import p658rx.subjects.BehaviorSubject;
 import p658rx.subjects.SerializedSubject;
 
-/* compiled from: StoreReadStates.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: StoreReadStates.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class StoreReadStates extends Store {
     private final Clock clock;
     private final SerializedSubject<Boolean, Boolean> markAsRead;
@@ -57,8 +57,8 @@ public final class StoreReadStates extends Store {
     private final SerializedSubject<Set<Long>, Set<Long>> unreadGuildIds;
     private final Persister<Unread> unreadMessageMarker;
 
-    /* compiled from: StoreReadStates.kt */
-    /* renamed from: com.discord.stores.StoreReadStates$clearMarker$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreReadStates$clearMarker$1 */
+    /* JADX INFO: compiled from: StoreReadStates.kt */
     public static final class C63401<T, R> implements Func1<Unread, Unread> {
         public static final C63401 INSTANCE = new C63401();
 
@@ -67,14 +67,14 @@ public final class StoreReadStates extends Store {
             return call2(unread);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final Unread call2(Unread unread) {
             return unread.createWithEmptyCount();
         }
     }
 
-    /* compiled from: StoreReadStates.kt */
-    /* renamed from: com.discord.stores.StoreReadStates$clearMarker$2 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreReadStates$clearMarker$2 */
+    /* JADX INFO: compiled from: StoreReadStates.kt */
     public static final class C63412 extends Lambda implements Function1<Unread, Unit> {
         public C63412() {
             super(1);
@@ -86,7 +86,7 @@ public final class StoreReadStates extends Store {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Unread unread) {
             Persister persisterAccess$getUnreadMessageMarker$p = StoreReadStates.access$getUnreadMessageMarker$p(StoreReadStates.this);
             Intrinsics3.checkNotNullExpressionValue(unread, "newValue");
@@ -94,8 +94,8 @@ public final class StoreReadStates extends Store {
         }
     }
 
-    /* compiled from: StoreReadStates.kt */
-    /* renamed from: com.discord.stores.StoreReadStates$computeUnreadChannelIds$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreReadStates$computeUnreadChannelIds$1 */
+    /* JADX INFO: compiled from: StoreReadStates.kt */
     public static final /* synthetic */ class C63421 extends FunctionReferenceImpl implements Function9<Map<Long, ? extends Long>, Map<Long, ? extends Channel>, Map<Long, ? extends Long>, Map<Long, ? extends ModelNotificationSettings>, Map<Long, ? extends StoreMessageAck.Ack>, Map<Long, ? extends Long>, Long, Map<Long, ? extends Channel>, Map<Long, ? extends StoreThreadsActiveJoined.ActiveJoinedThread>, Tuples2<? extends Set<? extends Long>, ? extends Set<? extends Long>>> {
         public C63421(StoreReadStates storeReadStates) {
             super(9, storeReadStates, StoreReadStates.class, "computeUnreadIds", "computeUnreadIds(Ljava/util/Map;Ljava/util/Map;Ljava/util/Map;Ljava/util/Map;Ljava/util/Map;Ljava/util/Map;JLjava/util/Map;Ljava/util/Map;)Lkotlin/Pair;", 0);
@@ -119,8 +119,8 @@ public final class StoreReadStates extends Store {
         }
     }
 
-    /* compiled from: StoreReadStates.kt */
-    /* renamed from: com.discord.stores.StoreReadStates$computeUnreadChannelIds$2 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreReadStates$computeUnreadChannelIds$2 */
+    /* JADX INFO: compiled from: StoreReadStates.kt */
     public static final class C63432 extends Lambda implements Function1<Tuples2<? extends Set<? extends Long>, ? extends Set<? extends Long>>, Unit> {
         public C63432() {
             super(1);
@@ -132,7 +132,7 @@ public final class StoreReadStates extends Store {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Tuples2<? extends Set<Long>, ? extends Set<Long>> tuples2) {
             Set<Long> setComponent1 = tuples2.component1();
             Set<Long> setComponent2 = tuples2.component2();
@@ -141,13 +141,13 @@ public final class StoreReadStates extends Store {
         }
     }
 
-    /* compiled from: StoreReadStates.kt */
-    /* renamed from: com.discord.stores.StoreReadStates$computeUnreadMarker$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreReadStates$computeUnreadMarker$1 */
+    /* JADX INFO: compiled from: StoreReadStates.kt */
     public static final class C63441 extends Lambda implements Function1<Long, Observable<Unread.Marker>> {
         public static final C63441 INSTANCE = new C63441();
 
-        /* compiled from: StoreReadStates.kt */
-        /* renamed from: com.discord.stores.StoreReadStates$computeUnreadMarker$1$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.stores.StoreReadStates$computeUnreadMarker$1$1, reason: invalid class name */
+        /* JADX INFO: compiled from: StoreReadStates.kt */
         public static final class AnonymousClass1<T, R> implements Func1<Map<Long, ? extends StoreMessageAck.Ack>, StoreMessageAck.Ack> {
             public final /* synthetic */ long $channelId;
 
@@ -160,14 +160,14 @@ public final class StoreReadStates extends Store {
                 return call2((Map<Long, StoreMessageAck.Ack>) map);
             }
 
-            /* renamed from: call, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
             public final StoreMessageAck.Ack call2(Map<Long, StoreMessageAck.Ack> map) {
                 return map.get(Long.valueOf(this.$channelId));
             }
         }
 
-        /* compiled from: StoreReadStates.kt */
-        /* renamed from: com.discord.stores.StoreReadStates$computeUnreadMarker$1$2, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.stores.StoreReadStates$computeUnreadMarker$1$2, reason: invalid class name */
+        /* JADX INFO: compiled from: StoreReadStates.kt */
         public static final class AnonymousClass2<T, R> implements Func1<Map<Long, ? extends StoreMessageAck.Ack>, StoreMessageAck.Ack> {
             public final /* synthetic */ long $channelId;
 
@@ -180,14 +180,14 @@ public final class StoreReadStates extends Store {
                 return call2((Map<Long, StoreMessageAck.Ack>) map);
             }
 
-            /* renamed from: call, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
             public final StoreMessageAck.Ack call2(Map<Long, StoreMessageAck.Ack> map) {
                 return map.get(Long.valueOf(this.$channelId));
             }
         }
 
-        /* compiled from: StoreReadStates.kt */
-        /* renamed from: com.discord.stores.StoreReadStates$computeUnreadMarker$1$3, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.stores.StoreReadStates$computeUnreadMarker$1$3, reason: invalid class name */
+        /* JADX INFO: compiled from: StoreReadStates.kt */
         public static final class AnonymousClass3<T1, T2, T3, R> implements Func3<StoreMessageAck.Ack, StoreMessageAck.Ack, Long, Unread.Marker> {
             public final /* synthetic */ long $channelId;
 
@@ -200,7 +200,7 @@ public final class StoreReadStates extends Store {
                 return call2(ack, ack2, l);
             }
 
-            /* renamed from: call, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
             public final Unread.Marker call2(StoreMessageAck.Ack ack, StoreMessageAck.Ack ack2, Long l) {
                 return (ack2 == null || !ack2.isLockedAck()) ? ack != null ? new Unread.Marker(this.$channelId, ack.getMessageId(), l) : new Unread.Marker(this.$channelId, 0L, l) : new Unread.Marker(this.$channelId, ack2.getMessageId(), l);
             }
@@ -221,8 +221,8 @@ public final class StoreReadStates extends Store {
         }
     }
 
-    /* compiled from: StoreReadStates.kt */
-    /* renamed from: com.discord.stores.StoreReadStates$computeUnreadMarker$2 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreReadStates$computeUnreadMarker$2 */
+    /* JADX INFO: compiled from: StoreReadStates.kt */
     public static final class C63452 extends Lambda implements Function1<Long, Boolean> {
         public static final C63452 INSTANCE = new C63452();
 
@@ -240,8 +240,8 @@ public final class StoreReadStates extends Store {
         }
     }
 
-    /* compiled from: StoreReadStates.kt */
-    /* renamed from: com.discord.stores.StoreReadStates$computeUnreadMarker$3 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreReadStates$computeUnreadMarker$3 */
+    /* JADX INFO: compiled from: StoreReadStates.kt */
     public static final class C63463 extends Lambda implements Function1<Long, Observable<Unread.Marker>> {
         public static final C63463 INSTANCE = new C63463();
 
@@ -261,12 +261,12 @@ public final class StoreReadStates extends Store {
         }
     }
 
-    /* compiled from: StoreReadStates.kt */
-    /* renamed from: com.discord.stores.StoreReadStates$computeUnreadMarker$4 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreReadStates$computeUnreadMarker$4 */
+    /* JADX INFO: compiled from: StoreReadStates.kt */
     public static final class C63474<T, R> implements Func1<Unread.Marker, Observable<? extends Unread>> {
 
-        /* compiled from: StoreReadStates.kt */
-        /* renamed from: com.discord.stores.StoreReadStates$computeUnreadMarker$4$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.stores.StoreReadStates$computeUnreadMarker$4$1, reason: invalid class name */
+        /* JADX INFO: compiled from: StoreReadStates.kt */
         public static final class AnonymousClass1<T, R> implements Func1<List<? extends Message>, Unread> {
             public final /* synthetic */ Unread.Marker $marker;
 
@@ -279,7 +279,7 @@ public final class StoreReadStates extends Store {
                 return call2((List<Message>) list);
             }
 
-            /* renamed from: call, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
             public final Unread call2(List<Message> list) {
                 Unread.Marker marker = this.$marker;
                 Intrinsics3.checkNotNullExpressionValue(list, "messages");
@@ -287,12 +287,12 @@ public final class StoreReadStates extends Store {
             }
         }
 
-        /* compiled from: StoreReadStates.kt */
-        /* renamed from: com.discord.stores.StoreReadStates$computeUnreadMarker$4$2, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.stores.StoreReadStates$computeUnreadMarker$4$2, reason: invalid class name */
+        /* JADX INFO: compiled from: StoreReadStates.kt */
         public static final class AnonymousClass2<T, R> implements Func1<Boolean, Boolean> {
             public static final AnonymousClass2 INSTANCE = new AnonymousClass2();
 
-            /* renamed from: call, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
             public final Boolean call2(Boolean bool) {
                 return bool;
             }
@@ -303,8 +303,8 @@ public final class StoreReadStates extends Store {
             }
         }
 
-        /* compiled from: StoreReadStates.kt */
-        /* renamed from: com.discord.stores.StoreReadStates$computeUnreadMarker$4$3, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.stores.StoreReadStates$computeUnreadMarker$4$3, reason: invalid class name */
+        /* JADX INFO: compiled from: StoreReadStates.kt */
         public static final class AnonymousClass3 implements Action0 {
             public AnonymousClass3() {
             }
@@ -323,7 +323,7 @@ public final class StoreReadStates extends Store {
             return call2(marker);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final Observable<? extends Unread> call2(Unread.Marker marker) {
             Intrinsics3.checkNotNullParameter(marker, "marker");
             Observable<R> observableM11102a0 = StoreStream.INSTANCE.getMessages().observeMessagesForChannel(marker.getChannelId()).m11083G(new AnonymousClass1(marker)).m11102a0(StoreReadStates.access$getMarkAsRead$p(StoreReadStates.this).m11118y(AnonymousClass2.INSTANCE));
@@ -333,8 +333,8 @@ public final class StoreReadStates extends Store {
         }
     }
 
-    /* compiled from: StoreReadStates.kt */
-    /* renamed from: com.discord.stores.StoreReadStates$computeUnreadMarker$5 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreReadStates$computeUnreadMarker$5 */
+    /* JADX INFO: compiled from: StoreReadStates.kt */
     public static final class C63485 extends Lambda implements Function1<Unread, Unit> {
         public C63485() {
             super(1);
@@ -346,7 +346,7 @@ public final class StoreReadStates extends Store {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Unread unread) {
             Persister persisterAccess$getUnreadMessageMarker$p = StoreReadStates.access$getUnreadMessageMarker$p(StoreReadStates.this);
             Intrinsics3.checkNotNullExpressionValue(unread, "newValue");
@@ -354,8 +354,8 @@ public final class StoreReadStates extends Store {
         }
     }
 
-    /* compiled from: StoreReadStates.kt */
-    /* renamed from: com.discord.stores.StoreReadStates$getIsUnread$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreReadStates$getIsUnread$1 */
+    /* JADX INFO: compiled from: StoreReadStates.kt */
     public static final class C63491<T, R> implements Func1<Set<? extends Long>, Boolean> {
         public final /* synthetic */ long $guildId;
 
@@ -368,14 +368,14 @@ public final class StoreReadStates extends Store {
             return call2((Set<Long>) set);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final Boolean call2(Set<Long> set) {
             return Boolean.valueOf(set.contains(Long.valueOf(this.$guildId)));
         }
     }
 
-    /* compiled from: StoreReadStates.kt */
-    /* renamed from: com.discord.stores.StoreReadStates$getUnreadMarker$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreReadStates$getUnreadMarker$1 */
+    /* JADX INFO: compiled from: StoreReadStates.kt */
     public static final class C63501<T, R> implements Func1<Unread, Boolean> {
         public final /* synthetic */ long $channelId;
 
@@ -388,15 +388,15 @@ public final class StoreReadStates extends Store {
             return call2(unread);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final Boolean call2(Unread unread) {
             Intrinsics3.checkNotNullParameter(unread, "marker");
             return Boolean.valueOf(unread.getMarker().getChannelId() == this.$channelId);
         }
     }
 
-    /* compiled from: StoreReadStates.kt */
-    /* renamed from: com.discord.stores.StoreReadStates$observeUnreadCountForChannel$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreReadStates$observeUnreadCountForChannel$1 */
+    /* JADX INFO: compiled from: StoreReadStates.kt */
     public static final class C63511<T, R> implements Func1<Map<Long, ? extends StoreMessageAck.Ack>, StoreMessageAck.Ack> {
         public final /* synthetic */ long $channelId;
 
@@ -409,14 +409,14 @@ public final class StoreReadStates extends Store {
             return call2((Map<Long, StoreMessageAck.Ack>) map);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final StoreMessageAck.Ack call2(Map<Long, StoreMessageAck.Ack> map) {
             return map.get(Long.valueOf(this.$channelId));
         }
     }
 
-    /* compiled from: StoreReadStates.kt */
-    /* renamed from: com.discord.stores.StoreReadStates$observeUnreadCountForChannel$2 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreReadStates$observeUnreadCountForChannel$2 */
+    /* JADX INFO: compiled from: StoreReadStates.kt */
     public static final class C63522<T1, T2, R> implements Func2<List<? extends Message>, StoreMessageAck.Ack, Integer> {
         public final /* synthetic */ UtcDateTime $since;
 
@@ -429,7 +429,7 @@ public final class StoreReadStates extends Store {
             return call2((List<Message>) list, ack);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final Integer call2(List<Message> list, StoreMessageAck.Ack ack) {
             Long lValueOf = ack != null ? Long.valueOf(ack.getMessageId()) : null;
             Intrinsics3.checkNotNullExpressionValue(list, "messages");

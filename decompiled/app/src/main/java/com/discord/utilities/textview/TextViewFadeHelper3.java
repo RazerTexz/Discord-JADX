@@ -3,9 +3,9 @@ package com.discord.utilities.textview;
 import android.text.Editable;
 import android.text.TextWatcher;
 
-/* compiled from: TextViewFadeHelper.kt */
-/* renamed from: com.discord.utilities.textview.TextViewFadeHelper$registerFadeHelper$$inlined$apply$lambda$2, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.utilities.textview.TextViewFadeHelper$registerFadeHelper$$inlined$apply$lambda$2, reason: use source file name */
+/* JADX INFO: compiled from: TextViewFadeHelper.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class TextViewFadeHelper3 implements TextWatcher {
     public final /* synthetic */ TextViewFadeHelper this$0;
 

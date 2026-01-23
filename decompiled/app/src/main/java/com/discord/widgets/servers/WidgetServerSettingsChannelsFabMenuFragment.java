@@ -21,21 +21,21 @@ import p507d0.p580t.Maps6;
 import p507d0.p592z.p594d.Intrinsics3;
 import p658rx.functions.Action0;
 
-/* compiled from: WidgetServerSettingsChannelsFabMenuFragment.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetServerSettingsChannelsFabMenuFragment.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetServerSettingsChannelsFabMenuFragment extends Fragment {
     public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetServerSettingsChannelsFabMenuFragment.class, "binding", "getBinding()Lcom/discord/databinding/WidgetServerSettingsChannelsSortFabMenuBinding;", 0)};
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private static final String INTENT_EXTRA_GUILD_ID = "INTENT_EXTRA_GUILD_ID";
     private static final String TAG = "channels fab menu";
 
-    /* renamed from: binding$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
     private Action0 dismissHandler;
 
-    /* compiled from: WidgetServerSettingsChannelsFabMenuFragment.kt */
+    /* JADX INFO: compiled from: WidgetServerSettingsChannelsFabMenuFragment.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -56,8 +56,8 @@ public final class WidgetServerSettingsChannelsFabMenuFragment extends Fragment 
         }
     }
 
-    /* compiled from: WidgetServerSettingsChannelsFabMenuFragment.kt */
-    /* renamed from: com.discord.widgets.servers.WidgetServerSettingsChannelsFabMenuFragment$createListener$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.WidgetServerSettingsChannelsFabMenuFragment$createListener$1 */
+    /* JADX INFO: compiled from: WidgetServerSettingsChannelsFabMenuFragment.kt */
     public static final class ViewOnClickListenerC92081 implements View.OnClickListener {
         public final /* synthetic */ View.OnClickListener $onClickListener;
 
@@ -75,8 +75,8 @@ public final class WidgetServerSettingsChannelsFabMenuFragment extends Fragment 
         }
     }
 
-    /* compiled from: WidgetServerSettingsChannelsFabMenuFragment.kt */
-    /* renamed from: com.discord.widgets.servers.WidgetServerSettingsChannelsFabMenuFragment$onResume$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.WidgetServerSettingsChannelsFabMenuFragment$onResume$1 */
+    /* JADX INFO: compiled from: WidgetServerSettingsChannelsFabMenuFragment.kt */
     public static final class ViewOnClickListenerC92091 implements View.OnClickListener {
         public ViewOnClickListenerC92091() {
         }
@@ -87,8 +87,8 @@ public final class WidgetServerSettingsChannelsFabMenuFragment extends Fragment 
         }
     }
 
-    /* compiled from: WidgetServerSettingsChannelsFabMenuFragment.kt */
-    /* renamed from: com.discord.widgets.servers.WidgetServerSettingsChannelsFabMenuFragment$onResume$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.WidgetServerSettingsChannelsFabMenuFragment$onResume$2 */
+    /* JADX INFO: compiled from: WidgetServerSettingsChannelsFabMenuFragment.kt */
     public static final class ViewOnClickListenerC92102 implements View.OnClickListener {
         public final /* synthetic */ long $guildId;
 
@@ -105,8 +105,8 @@ public final class WidgetServerSettingsChannelsFabMenuFragment extends Fragment 
         }
     }
 
-    /* compiled from: WidgetServerSettingsChannelsFabMenuFragment.kt */
-    /* renamed from: com.discord.widgets.servers.WidgetServerSettingsChannelsFabMenuFragment$onResume$3 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.WidgetServerSettingsChannelsFabMenuFragment$onResume$3 */
+    /* JADX INFO: compiled from: WidgetServerSettingsChannelsFabMenuFragment.kt */
     public static final class ViewOnClickListenerC92113 implements View.OnClickListener {
         public final /* synthetic */ long $guildId;
 
@@ -123,8 +123,8 @@ public final class WidgetServerSettingsChannelsFabMenuFragment extends Fragment 
         }
     }
 
-    /* compiled from: WidgetServerSettingsChannelsFabMenuFragment.kt */
-    /* renamed from: com.discord.widgets.servers.WidgetServerSettingsChannelsFabMenuFragment$onResume$4 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.WidgetServerSettingsChannelsFabMenuFragment$onResume$4 */
+    /* JADX INFO: compiled from: WidgetServerSettingsChannelsFabMenuFragment.kt */
     public static final class ViewOnClickListenerC92124 implements View.OnClickListener {
         public final /* synthetic */ long $guildId;
 
@@ -141,8 +141,8 @@ public final class WidgetServerSettingsChannelsFabMenuFragment extends Fragment 
         }
     }
 
-    /* compiled from: WidgetServerSettingsChannelsFabMenuFragment.kt */
-    /* renamed from: com.discord.widgets.servers.WidgetServerSettingsChannelsFabMenuFragment$onResume$5 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.WidgetServerSettingsChannelsFabMenuFragment$onResume$5 */
+    /* JADX INFO: compiled from: WidgetServerSettingsChannelsFabMenuFragment.kt */
     public static final class ViewOnClickListenerC92135 implements View.OnClickListener {
         public static final ViewOnClickListenerC92135 INSTANCE = new ViewOnClickListenerC92135();
 
@@ -151,8 +151,8 @@ public final class WidgetServerSettingsChannelsFabMenuFragment extends Fragment 
         }
     }
 
-    /* compiled from: WidgetServerSettingsChannelsFabMenuFragment.kt */
-    /* renamed from: com.discord.widgets.servers.WidgetServerSettingsChannelsFabMenuFragment$onResume$6 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.WidgetServerSettingsChannelsFabMenuFragment$onResume$6 */
+    /* JADX INFO: compiled from: WidgetServerSettingsChannelsFabMenuFragment.kt */
     public static final class ViewOnClickListenerC92146 implements View.OnClickListener {
         public ViewOnClickListenerC92146() {
         }

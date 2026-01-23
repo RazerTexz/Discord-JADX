@@ -10,22 +10,22 @@ import p007b.p452o.p453a.p454m.Facing;
 import p007b.p452o.p453a.p454m.Hdr;
 import p007b.p452o.p453a.p454m.WhiteBalance;
 
-/* compiled from: Camera2Mapper.java */
+/* JADX INFO: renamed from: b.o.a.n.q.b, reason: use source file name */
+/* JADX INFO: compiled from: Camera2Mapper.java */
+/* JADX INFO: loaded from: classes3.dex */
 @RequiresApi(21)
-/* renamed from: b.o.a.n.q.b, reason: use source file name */
-/* loaded from: classes3.dex */
 public class Camera2Mapper {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static Camera2Mapper f13961a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static final Map<Facing, Integer> f13962b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public static final Map<WhiteBalance, Integer> f13963c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public static final Map<Hdr, Integer> f13964d;
 
     static {
@@ -47,7 +47,7 @@ public class Camera2Mapper {
     }
 
     @Nullable
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final <C extends Control, T> C m7348a(@NonNull Map<C, T> map, @NonNull T t) {
         for (C c : map.keySet()) {
             if (t.equals(map.get(c))) {

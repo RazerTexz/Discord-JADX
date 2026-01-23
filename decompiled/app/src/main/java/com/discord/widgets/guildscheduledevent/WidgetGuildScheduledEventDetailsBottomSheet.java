@@ -73,32 +73,32 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 import p507d0.p592z.p594d.Reflection2;
 
-/* compiled from: WidgetGuildScheduledEventDetailsBottomSheet.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetGuildScheduledEventDetailsBottomSheet.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetGuildScheduledEventDetailsBottomSheet extends AppBottomSheet {
     public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetGuildScheduledEventDetailsBottomSheet.class, "binding", "getBinding()Lcom/discord/databinding/WidgetGuildScheduledEventDetailsBottomSheetBinding;", 0)};
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private GuildScheduledEventRsvpUserListAdapter adapter;
 
-    /* renamed from: args$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: args$delegate, reason: from kotlin metadata */
     private final Lazy args;
 
-    /* renamed from: binding$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
 
-    /* renamed from: descriptionParser$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: descriptionParser$delegate, reason: from kotlin metadata */
     private final Lazy descriptionParser;
 
-    /* renamed from: locationParser$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: locationParser$delegate, reason: from kotlin metadata */
     private final Lazy locationParser;
     private final ActivityResultLauncher<Intent> previewLauncher;
 
-    /* renamed from: viewModel$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: viewModel$delegate, reason: from kotlin metadata */
     private final Lazy viewModel;
 
-    /* compiled from: WidgetGuildScheduledEventDetailsBottomSheet.kt */
+    /* JADX INFO: compiled from: WidgetGuildScheduledEventDetailsBottomSheet.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -151,8 +151,8 @@ public final class WidgetGuildScheduledEventDetailsBottomSheet extends AppBottom
         }
     }
 
-    /* compiled from: WidgetGuildScheduledEventDetailsBottomSheet.kt */
-    /* renamed from: com.discord.widgets.guildscheduledevent.WidgetGuildScheduledEventDetailsBottomSheet$configureSegmentControl$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.guildscheduledevent.WidgetGuildScheduledEventDetailsBottomSheet$configureSegmentControl$1 */
+    /* JADX INFO: compiled from: WidgetGuildScheduledEventDetailsBottomSheet.kt */
     public static final class C88591 extends Lambda implements Function1<Integer, Unit> {
         public C88591() {
             super(1);
@@ -169,13 +169,13 @@ public final class WidgetGuildScheduledEventDetailsBottomSheet extends AppBottom
         }
     }
 
-    /* compiled from: WidgetGuildScheduledEventDetailsBottomSheet.kt */
-    /* renamed from: com.discord.widgets.guildscheduledevent.WidgetGuildScheduledEventDetailsBottomSheet$configureUi$4 */
+    /* JADX INFO: renamed from: com.discord.widgets.guildscheduledevent.WidgetGuildScheduledEventDetailsBottomSheet$configureUi$4 */
+    /* JADX INFO: compiled from: WidgetGuildScheduledEventDetailsBottomSheet.kt */
     public static final class C88604 extends Lambda implements Function1<RenderContext, Unit> {
         public final /* synthetic */ UserGuildMember $creator;
 
-        /* compiled from: WidgetGuildScheduledEventDetailsBottomSheet.kt */
-        /* renamed from: com.discord.widgets.guildscheduledevent.WidgetGuildScheduledEventDetailsBottomSheet$configureUi$4$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.widgets.guildscheduledevent.WidgetGuildScheduledEventDetailsBottomSheet$configureUi$4$1, reason: invalid class name */
+        /* JADX INFO: compiled from: WidgetGuildScheduledEventDetailsBottomSheet.kt */
         public static final class AnonymousClass1 extends Lambda implements Function1<Hook, Unit> {
             public AnonymousClass1() {
                 super(1);
@@ -187,7 +187,7 @@ public final class WidgetGuildScheduledEventDetailsBottomSheet extends AppBottom
                 return Unit.f27425a;
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2(Hook hook) {
                 Intrinsics3.checkNotNullParameter(hook, "$receiver");
                 hook.replacementText = C88604.this.$creator.getNickOrUserName();
@@ -216,15 +216,15 @@ public final class WidgetGuildScheduledEventDetailsBottomSheet extends AppBottom
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(RenderContext renderContext) {
             Intrinsics3.checkNotNullParameter(renderContext, "$receiver");
             renderContext.m8422a("usernameHook", new AnonymousClass1());
         }
     }
 
-    /* compiled from: WidgetGuildScheduledEventDetailsBottomSheet.kt */
-    /* renamed from: com.discord.widgets.guildscheduledevent.WidgetGuildScheduledEventDetailsBottomSheet$configureUi$5 */
+    /* JADX INFO: renamed from: com.discord.widgets.guildscheduledevent.WidgetGuildScheduledEventDetailsBottomSheet$configureUi$5 */
+    /* JADX INFO: compiled from: WidgetGuildScheduledEventDetailsBottomSheet.kt */
     public static final class ViewOnClickListenerC88615 implements View.OnClickListener {
         public ViewOnClickListenerC88615() {
         }
@@ -236,13 +236,13 @@ public final class WidgetGuildScheduledEventDetailsBottomSheet extends AppBottom
         }
     }
 
-    /* compiled from: WidgetGuildScheduledEventDetailsBottomSheet.kt */
-    /* renamed from: com.discord.widgets.guildscheduledevent.WidgetGuildScheduledEventDetailsBottomSheet$getButtonConfiguration$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.guildscheduledevent.WidgetGuildScheduledEventDetailsBottomSheet$getButtonConfiguration$1 */
+    /* JADX INFO: compiled from: WidgetGuildScheduledEventDetailsBottomSheet.kt */
     public static final class ViewOnClickListenerC88621 implements View.OnClickListener {
         public final /* synthetic */ GuildScheduledEventDetailsViewModel.ViewState.Initialized $this_getButtonConfiguration;
 
-        /* compiled from: WidgetGuildScheduledEventDetailsBottomSheet.kt */
-        /* renamed from: com.discord.widgets.guildscheduledevent.WidgetGuildScheduledEventDetailsBottomSheet$getButtonConfiguration$1$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.widgets.guildscheduledevent.WidgetGuildScheduledEventDetailsBottomSheet$getButtonConfiguration$1$1, reason: invalid class name */
+        /* JADX INFO: compiled from: WidgetGuildScheduledEventDetailsBottomSheet.kt */
         public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
             public AnonymousClass1() {
                 super(0);
@@ -254,7 +254,7 @@ public final class WidgetGuildScheduledEventDetailsBottomSheet extends AppBottom
                 return Unit.f27425a;
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2() {
                 WidgetGuildScheduledEventDetailsBottomSheet.access$getViewModel$p(WidgetGuildScheduledEventDetailsBottomSheet.this).onRsvpButtonClicked();
             }
@@ -277,12 +277,12 @@ public final class WidgetGuildScheduledEventDetailsBottomSheet extends AppBottom
         }
     }
 
-    /* compiled from: WidgetGuildScheduledEventDetailsBottomSheet.kt */
-    /* renamed from: com.discord.widgets.guildscheduledevent.WidgetGuildScheduledEventDetailsBottomSheet$getButtonConfiguration$10 */
+    /* JADX INFO: renamed from: com.discord.widgets.guildscheduledevent.WidgetGuildScheduledEventDetailsBottomSheet$getButtonConfiguration$10 */
+    /* JADX INFO: compiled from: WidgetGuildScheduledEventDetailsBottomSheet.kt */
     public static final class ViewOnClickListenerC886310 implements View.OnClickListener {
 
-        /* compiled from: WidgetGuildScheduledEventDetailsBottomSheet.kt */
-        /* renamed from: com.discord.widgets.guildscheduledevent.WidgetGuildScheduledEventDetailsBottomSheet$getButtonConfiguration$10$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.widgets.guildscheduledevent.WidgetGuildScheduledEventDetailsBottomSheet$getButtonConfiguration$10$1, reason: invalid class name */
+        /* JADX INFO: compiled from: WidgetGuildScheduledEventDetailsBottomSheet.kt */
         public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
             public AnonymousClass1() {
                 super(0);
@@ -294,7 +294,7 @@ public final class WidgetGuildScheduledEventDetailsBottomSheet extends AppBottom
                 return Unit.f27425a;
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2() {
                 WidgetGuildScheduledEventDetailsBottomSheet.this.dismiss();
             }
@@ -312,8 +312,8 @@ public final class WidgetGuildScheduledEventDetailsBottomSheet extends AppBottom
         }
     }
 
-    /* compiled from: WidgetGuildScheduledEventDetailsBottomSheet.kt */
-    /* renamed from: com.discord.widgets.guildscheduledevent.WidgetGuildScheduledEventDetailsBottomSheet$getButtonConfiguration$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.guildscheduledevent.WidgetGuildScheduledEventDetailsBottomSheet$getButtonConfiguration$2 */
+    /* JADX INFO: compiled from: WidgetGuildScheduledEventDetailsBottomSheet.kt */
     public static final class ViewOnClickListenerC88642 implements View.OnClickListener {
         public ViewOnClickListenerC88642() {
         }
@@ -324,8 +324,8 @@ public final class WidgetGuildScheduledEventDetailsBottomSheet extends AppBottom
         }
     }
 
-    /* compiled from: WidgetGuildScheduledEventDetailsBottomSheet.kt */
-    /* renamed from: com.discord.widgets.guildscheduledevent.WidgetGuildScheduledEventDetailsBottomSheet$getButtonConfiguration$3 */
+    /* JADX INFO: renamed from: com.discord.widgets.guildscheduledevent.WidgetGuildScheduledEventDetailsBottomSheet$getButtonConfiguration$3 */
+    /* JADX INFO: compiled from: WidgetGuildScheduledEventDetailsBottomSheet.kt */
     public static final class ViewOnClickListenerC88653 implements View.OnClickListener {
         public ViewOnClickListenerC88653() {
         }
@@ -336,8 +336,8 @@ public final class WidgetGuildScheduledEventDetailsBottomSheet extends AppBottom
         }
     }
 
-    /* compiled from: WidgetGuildScheduledEventDetailsBottomSheet.kt */
-    /* renamed from: com.discord.widgets.guildscheduledevent.WidgetGuildScheduledEventDetailsBottomSheet$getButtonConfiguration$4 */
+    /* JADX INFO: renamed from: com.discord.widgets.guildscheduledevent.WidgetGuildScheduledEventDetailsBottomSheet$getButtonConfiguration$4 */
+    /* JADX INFO: compiled from: WidgetGuildScheduledEventDetailsBottomSheet.kt */
     public static final class ViewOnClickListenerC88664 implements View.OnClickListener {
         public ViewOnClickListenerC88664() {
         }
@@ -352,8 +352,8 @@ public final class WidgetGuildScheduledEventDetailsBottomSheet extends AppBottom
         }
     }
 
-    /* compiled from: WidgetGuildScheduledEventDetailsBottomSheet.kt */
-    /* renamed from: com.discord.widgets.guildscheduledevent.WidgetGuildScheduledEventDetailsBottomSheet$getButtonConfiguration$5 */
+    /* JADX INFO: renamed from: com.discord.widgets.guildscheduledevent.WidgetGuildScheduledEventDetailsBottomSheet$getButtonConfiguration$5 */
+    /* JADX INFO: compiled from: WidgetGuildScheduledEventDetailsBottomSheet.kt */
     public static final class ViewOnClickListenerC88675 implements View.OnClickListener {
         public final /* synthetic */ GuildScheduledEventDetailsViewModel.ViewState.Initialized $this_getButtonConfiguration;
 
@@ -370,8 +370,8 @@ public final class WidgetGuildScheduledEventDetailsBottomSheet extends AppBottom
         }
     }
 
-    /* compiled from: WidgetGuildScheduledEventDetailsBottomSheet.kt */
-    /* renamed from: com.discord.widgets.guildscheduledevent.WidgetGuildScheduledEventDetailsBottomSheet$getButtonConfiguration$6 */
+    /* JADX INFO: renamed from: com.discord.widgets.guildscheduledevent.WidgetGuildScheduledEventDetailsBottomSheet$getButtonConfiguration$6 */
+    /* JADX INFO: compiled from: WidgetGuildScheduledEventDetailsBottomSheet.kt */
     public static final class ViewOnClickListenerC88686 implements View.OnClickListener {
         public ViewOnClickListenerC88686() {
         }
@@ -382,8 +382,8 @@ public final class WidgetGuildScheduledEventDetailsBottomSheet extends AppBottom
         }
     }
 
-    /* compiled from: WidgetGuildScheduledEventDetailsBottomSheet.kt */
-    /* renamed from: com.discord.widgets.guildscheduledevent.WidgetGuildScheduledEventDetailsBottomSheet$getButtonConfiguration$7 */
+    /* JADX INFO: renamed from: com.discord.widgets.guildscheduledevent.WidgetGuildScheduledEventDetailsBottomSheet$getButtonConfiguration$7 */
+    /* JADX INFO: compiled from: WidgetGuildScheduledEventDetailsBottomSheet.kt */
     public static final class ViewOnClickListenerC88697 implements View.OnClickListener {
         public ViewOnClickListenerC88697() {
         }
@@ -394,8 +394,8 @@ public final class WidgetGuildScheduledEventDetailsBottomSheet extends AppBottom
         }
     }
 
-    /* compiled from: WidgetGuildScheduledEventDetailsBottomSheet.kt */
-    /* renamed from: com.discord.widgets.guildscheduledevent.WidgetGuildScheduledEventDetailsBottomSheet$getButtonConfiguration$8 */
+    /* JADX INFO: renamed from: com.discord.widgets.guildscheduledevent.WidgetGuildScheduledEventDetailsBottomSheet$getButtonConfiguration$8 */
+    /* JADX INFO: compiled from: WidgetGuildScheduledEventDetailsBottomSheet.kt */
     public static final class ViewOnClickListenerC88708 implements View.OnClickListener {
         public ViewOnClickListenerC88708() {
         }
@@ -410,8 +410,8 @@ public final class WidgetGuildScheduledEventDetailsBottomSheet extends AppBottom
         }
     }
 
-    /* compiled from: WidgetGuildScheduledEventDetailsBottomSheet.kt */
-    /* renamed from: com.discord.widgets.guildscheduledevent.WidgetGuildScheduledEventDetailsBottomSheet$getButtonConfiguration$9 */
+    /* JADX INFO: renamed from: com.discord.widgets.guildscheduledevent.WidgetGuildScheduledEventDetailsBottomSheet$getButtonConfiguration$9 */
+    /* JADX INFO: compiled from: WidgetGuildScheduledEventDetailsBottomSheet.kt */
     public static final class ViewOnClickListenerC88719 implements View.OnClickListener {
         public final /* synthetic */ GuildScheduledEventDetailsViewModel.ViewState.Initialized $this_getButtonConfiguration;
 
@@ -429,8 +429,8 @@ public final class WidgetGuildScheduledEventDetailsBottomSheet extends AppBottom
         }
     }
 
-    /* compiled from: WidgetGuildScheduledEventDetailsBottomSheet.kt */
-    /* renamed from: com.discord.widgets.guildscheduledevent.WidgetGuildScheduledEventDetailsBottomSheet$onResume$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.guildscheduledevent.WidgetGuildScheduledEventDetailsBottomSheet$onResume$1 */
+    /* JADX INFO: compiled from: WidgetGuildScheduledEventDetailsBottomSheet.kt */
     public static final /* synthetic */ class C88721 extends FunctionReferenceImpl implements Function1<GuildScheduledEventDetailsViewModel.ViewState, Unit> {
         public C88721(WidgetGuildScheduledEventDetailsBottomSheet widgetGuildScheduledEventDetailsBottomSheet) {
             super(1, widgetGuildScheduledEventDetailsBottomSheet, WidgetGuildScheduledEventDetailsBottomSheet.class, "configureUi", "configureUi(Lcom/discord/widgets/guildscheduledevent/GuildScheduledEventDetailsViewModel$ViewState;)V", 0);
@@ -442,15 +442,15 @@ public final class WidgetGuildScheduledEventDetailsBottomSheet extends AppBottom
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(GuildScheduledEventDetailsViewModel.ViewState viewState) {
             Intrinsics3.checkNotNullParameter(viewState, "p1");
             WidgetGuildScheduledEventDetailsBottomSheet.access$configureUi((WidgetGuildScheduledEventDetailsBottomSheet) this.receiver, viewState);
         }
     }
 
-    /* compiled from: WidgetGuildScheduledEventDetailsBottomSheet.kt */
-    /* renamed from: com.discord.widgets.guildscheduledevent.WidgetGuildScheduledEventDetailsBottomSheet$onViewCreated$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.guildscheduledevent.WidgetGuildScheduledEventDetailsBottomSheet$onViewCreated$1 */
+    /* JADX INFO: compiled from: WidgetGuildScheduledEventDetailsBottomSheet.kt */
     public static final class C88731 extends Lambda implements Function1<Long, Unit> {
         public C88731() {
             super(1);

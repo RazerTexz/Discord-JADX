@@ -1,14 +1,14 @@
 package p507d0.p513e0.p514p.p515d.p517m0.p566m;
 
-/* compiled from: SingleThreadValue.java */
-/* renamed from: d0.e0.p.d.m0.m.m, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.m.m, reason: use source file name */
+/* JADX INFO: compiled from: SingleThreadValue.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class SingleThreadValue<T> {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final T f24735a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final Thread f24736b = Thread.currentThread();
 
     public SingleThreadValue(T t) {

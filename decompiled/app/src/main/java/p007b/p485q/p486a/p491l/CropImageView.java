@@ -14,79 +14,79 @@ import p007b.p225i.p226a.p288f.p299e.p308o.C3404f;
 import p007b.p485q.p486a.p487h.CropBoundsChangeListener;
 import p007b.p485q.p486a.p491l.TransformImageView2;
 
-/* compiled from: CropImageView.java */
-/* renamed from: b.q.a.l.a, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.q.a.l.a, reason: use source file name */
+/* JADX INFO: compiled from: CropImageView.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class CropImageView extends TransformImageView2 {
 
-    /* renamed from: A */
+    /* JADX INFO: renamed from: A */
     public float f14454A;
 
-    /* renamed from: B */
+    /* JADX INFO: renamed from: B */
     public float f14455B;
 
-    /* renamed from: C */
+    /* JADX INFO: renamed from: C */
     public CropBoundsChangeListener f14456C;
 
-    /* renamed from: D */
+    /* JADX INFO: renamed from: D */
     public Runnable f14457D;
 
-    /* renamed from: E */
+    /* JADX INFO: renamed from: E */
     public Runnable f14458E;
 
-    /* renamed from: F */
+    /* JADX INFO: renamed from: F */
     public float f14459F;
 
-    /* renamed from: G */
+    /* JADX INFO: renamed from: G */
     public float f14460G;
 
-    /* renamed from: H */
+    /* JADX INFO: renamed from: H */
     public int f14461H;
 
-    /* renamed from: I */
+    /* JADX INFO: renamed from: I */
     public int f14462I;
 
-    /* renamed from: J */
+    /* JADX INFO: renamed from: J */
     public long f14463J;
 
-    /* renamed from: y */
+    /* JADX INFO: renamed from: y */
     public final RectF f14464y;
 
-    /* renamed from: z */
+    /* JADX INFO: renamed from: z */
     public final Matrix f14465z;
 
-    /* compiled from: CropImageView.java */
-    /* renamed from: b.q.a.l.a$a */
+    /* JADX INFO: renamed from: b.q.a.l.a$a */
+    /* JADX INFO: compiled from: CropImageView.java */
     public static class a implements Runnable {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public final WeakReference<CropImageView> f14466j;
 
-        /* renamed from: k */
+        /* JADX INFO: renamed from: k */
         public final long f14467k;
 
-        /* renamed from: l */
+        /* JADX INFO: renamed from: l */
         public final long f14468l = System.currentTimeMillis();
 
-        /* renamed from: m */
+        /* JADX INFO: renamed from: m */
         public final float f14469m;
 
-        /* renamed from: n */
+        /* JADX INFO: renamed from: n */
         public final float f14470n;
 
-        /* renamed from: o */
+        /* JADX INFO: renamed from: o */
         public final float f14471o;
 
-        /* renamed from: p */
+        /* JADX INFO: renamed from: p */
         public final float f14472p;
 
-        /* renamed from: q */
+        /* JADX INFO: renamed from: q */
         public final float f14473q;
 
-        /* renamed from: r */
+        /* JADX INFO: renamed from: r */
         public final float f14474r;
 
-        /* renamed from: s */
+        /* JADX INFO: renamed from: s */
         public final boolean f14475s;
 
         public a(CropImageView cropImageView, long j, float f, float f2, float f3, float f4, float f5, float f6, boolean z2) {
@@ -129,29 +129,29 @@ public class CropImageView extends TransformImageView2 {
         }
     }
 
-    /* compiled from: CropImageView.java */
-    /* renamed from: b.q.a.l.a$b */
+    /* JADX INFO: renamed from: b.q.a.l.a$b */
+    /* JADX INFO: compiled from: CropImageView.java */
     public static class b implements Runnable {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public final WeakReference<CropImageView> f14476j;
 
-        /* renamed from: k */
+        /* JADX INFO: renamed from: k */
         public final long f14477k;
 
-        /* renamed from: l */
+        /* JADX INFO: renamed from: l */
         public final long f14478l = System.currentTimeMillis();
 
-        /* renamed from: m */
+        /* JADX INFO: renamed from: m */
         public final float f14479m;
 
-        /* renamed from: n */
+        /* JADX INFO: renamed from: n */
         public final float f14480n;
 
-        /* renamed from: o */
+        /* JADX INFO: renamed from: o */
         public final float f14481o;
 
-        /* renamed from: p */
+        /* JADX INFO: renamed from: p */
         public final float f14482p;
 
         public b(CropImageView cropImageView, long j, float f, float f2, float f3, float f4) {
@@ -185,7 +185,7 @@ public class CropImageView extends TransformImageView2 {
     }
 
     @Override // p007b.p485q.p486a.p491l.TransformImageView2
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public void mo7477d() {
         super.mo7477d();
         Drawable drawable = getDrawable();
@@ -231,7 +231,7 @@ public class CropImageView extends TransformImageView2 {
     }
 
     @Override // p007b.p485q.p486a.p491l.TransformImageView2
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public void mo7478f(float f, float f2, float f3) {
         if (f > 1.0f && getCurrentScale() * f <= getMaxScale()) {
             super.mo7478f(f, f2, f3);
@@ -260,20 +260,20 @@ public class CropImageView extends TransformImageView2 {
         return this.f14454A;
     }
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public final void m7479h(float f, float f2) {
         float fMin = Math.min(Math.min(this.f14464y.width() / f, this.f14464y.width() / f2), Math.min(this.f14464y.height() / f2, this.f14464y.height() / f));
         this.f14460G = fMin;
         this.f14459F = fMin * this.f14455B;
     }
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public void m7480i() {
         removeCallbacks(this.f14457D);
         removeCallbacks(this.f14458E);
     }
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public boolean m7481j(float[] fArr) {
         this.f14465z.reset();
         this.f14465z.setRotate(-getCurrentAngle());
@@ -284,12 +284,12 @@ public class CropImageView extends TransformImageView2 {
         return C3404f.m4365y1(fArrCopyOf).contains(C3404f.m4365y1(fArrM4288f0));
     }
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public void m7482k(float f) {
         m7487e(f, this.f14464y.centerX(), this.f14464y.centerY());
     }
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public void m7483l(float f, float f2, float f3) {
         if (f <= getMaxScale()) {
             mo7478f(f / getCurrentScale(), f2, f3);

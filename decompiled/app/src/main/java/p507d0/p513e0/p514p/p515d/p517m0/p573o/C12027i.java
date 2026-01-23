@@ -23,22 +23,22 @@ import p507d0.p580t._Collections;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: modifierChecks.kt */
-/* renamed from: d0.e0.p.d.m0.o.i */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.o.i */
+/* JADX INFO: compiled from: modifierChecks.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class C12027i extends AbstractC12019a {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final C12027i f24917a = new C12027i();
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static final List<C12022d> f24918b;
 
-    /* compiled from: modifierChecks.kt */
-    /* renamed from: d0.e0.p.d.m0.o.i$a */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.o.i$a */
+    /* JADX INFO: compiled from: modifierChecks.kt */
     public static final class a extends Lambda implements Function1<FunctionDescriptor, String> {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public static final a f24919j = new a();
 
         public a() {
@@ -50,7 +50,7 @@ public final class C12027i extends AbstractC12019a {
             return invoke2(functionDescriptor);
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final String invoke2(FunctionDescriptor functionDescriptor) {
             Boolean boolValueOf;
             Intrinsics3.checkNotNullParameter(functionDescriptor, "<this>");
@@ -71,11 +71,11 @@ public final class C12027i extends AbstractC12019a {
         }
     }
 
-    /* compiled from: modifierChecks.kt */
-    /* renamed from: d0.e0.p.d.m0.o.i$b */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.o.i$b */
+    /* JADX INFO: compiled from: modifierChecks.kt */
     public static final class b extends Lambda implements Function1<FunctionDescriptor, String> {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public static final b f24920j = new b();
 
         public b() {
@@ -88,7 +88,7 @@ public final class C12027i extends AbstractC12019a {
         }
 
         /* JADX WARN: Removed duplicated region for block: B:25:0x0062  */
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         /*
             Code decompiled incorrectly, please refer to instructions dump.
         */
@@ -127,11 +127,11 @@ public final class C12027i extends AbstractC12019a {
         }
     }
 
-    /* compiled from: modifierChecks.kt */
-    /* renamed from: d0.e0.p.d.m0.o.i$c */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.o.i$c */
+    /* JADX INFO: compiled from: modifierChecks.kt */
     public static final class c extends Lambda implements Function1<FunctionDescriptor, String> {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public static final c f24921j = new c();
 
         public c() {
@@ -143,7 +143,7 @@ public final class C12027i extends AbstractC12019a {
             return invoke2(functionDescriptor);
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final String invoke2(FunctionDescriptor functionDescriptor) {
             boolean zIsSubtypeOf;
             Intrinsics3.checkNotNullParameter(functionDescriptor, "<this>");

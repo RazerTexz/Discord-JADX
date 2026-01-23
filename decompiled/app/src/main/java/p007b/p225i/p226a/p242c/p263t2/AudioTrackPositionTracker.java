@@ -7,126 +7,126 @@ import java.lang.reflect.Method;
 import java.util.Objects;
 import p007b.p225i.p226a.p242c.p259f3.Util2;
 
-/* compiled from: AudioTrackPositionTracker.java */
-/* renamed from: b.i.a.c.t2.t, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.t2.t, reason: use source file name */
+/* JADX INFO: compiled from: AudioTrackPositionTracker.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class AudioTrackPositionTracker {
 
-    /* renamed from: A */
+    /* JADX INFO: renamed from: A */
     public long f7803A;
 
-    /* renamed from: B */
+    /* JADX INFO: renamed from: B */
     public long f7804B;
 
-    /* renamed from: C */
+    /* JADX INFO: renamed from: C */
     public long f7805C;
 
-    /* renamed from: D */
+    /* JADX INFO: renamed from: D */
     public boolean f7806D;
 
-    /* renamed from: E */
+    /* JADX INFO: renamed from: E */
     public long f7807E;
 
-    /* renamed from: F */
+    /* JADX INFO: renamed from: F */
     public long f7808F;
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final a f7809a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final long[] f7810b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     @Nullable
     public AudioTrack f7811c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public int f7812d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public int f7813e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     @Nullable
     public AudioTimestampPoller f7814f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public int f7815g;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public boolean f7816h;
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public long f7817i;
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public float f7818j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public boolean f7819k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public long f7820l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public long f7821m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     @Nullable
     public Method f7822n;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public long f7823o;
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public boolean f7824p;
 
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     public boolean f7825q;
 
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     public long f7826r;
 
-    /* renamed from: s */
+    /* JADX INFO: renamed from: s */
     public long f7827s;
 
-    /* renamed from: t */
+    /* JADX INFO: renamed from: t */
     public long f7828t;
 
-    /* renamed from: u */
+    /* JADX INFO: renamed from: u */
     public long f7829u;
 
-    /* renamed from: v */
+    /* JADX INFO: renamed from: v */
     public int f7830v;
 
-    /* renamed from: w */
+    /* JADX INFO: renamed from: w */
     public int f7831w;
 
-    /* renamed from: x */
+    /* JADX INFO: renamed from: x */
     public long f7832x;
 
-    /* renamed from: y */
+    /* JADX INFO: renamed from: y */
     public long f7833y;
 
-    /* renamed from: z */
+    /* JADX INFO: renamed from: z */
     public long f7834z;
 
-    /* compiled from: AudioTrackPositionTracker.java */
-    /* renamed from: b.i.a.c.t2.t$a */
+    /* JADX INFO: renamed from: b.i.a.c.t2.t$a */
+    /* JADX INFO: compiled from: AudioTrackPositionTracker.java */
     public interface a {
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         void mo3506a(long j);
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         void mo3507b(int i, long j);
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         void mo3508c(long j);
 
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         void mo3509d(long j, long j2, long j3, long j4);
 
-        /* renamed from: e */
+        /* JADX INFO: renamed from: e */
         void mo3510e(long j, long j2, long j3, long j4);
     }
 
@@ -141,23 +141,23 @@ public final class AudioTrackPositionTracker {
         this.f7810b = new long[10];
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final long m3501a(long j) {
-        return (j * 1000000) / this.f7815g;
+        return (j * 1000000) / ((long) this.f7815g);
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final long m3502b() {
         AudioTrack audioTrack = this.f7811c;
         Objects.requireNonNull(audioTrack);
         if (this.f7832x != -9223372036854775807L) {
-            return Math.min(this.f7803A, this.f7834z + ((((SystemClock.elapsedRealtime() * 1000) - this.f7832x) * this.f7815g) / 1000000));
+            return Math.min(this.f7803A, this.f7834z + ((((SystemClock.elapsedRealtime() * 1000) - this.f7832x) * ((long) this.f7815g)) / 1000000));
         }
         int playState = audioTrack.getPlayState();
         if (playState == 1) {
             return 0L;
         }
-        long playbackHeadPosition = 4294967295L & audioTrack.getPlaybackHeadPosition();
+        long playbackHeadPosition = 4294967295L & ((long) audioTrack.getPlaybackHeadPosition());
         if (this.f7816h) {
             if (playState == 2 && playbackHeadPosition == 0) {
                 this.f7829u = this.f7827s;
@@ -181,7 +181,7 @@ public final class AudioTrackPositionTracker {
     }
 
     /* JADX WARN: Removed duplicated region for block: B:11:0x0026  */
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
@@ -199,7 +199,7 @@ public final class AudioTrackPositionTracker {
         return true;
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public void m3504d() {
         this.f7820l = 0L;
         this.f7831w = 0;
@@ -213,7 +213,7 @@ public final class AudioTrackPositionTracker {
     }
 
     /* JADX WARN: Removed duplicated region for block: B:14:0x0029  */
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */

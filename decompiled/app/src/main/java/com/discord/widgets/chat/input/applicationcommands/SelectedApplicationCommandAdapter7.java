@@ -3,9 +3,9 @@ package com.discord.widgets.chat.input.applicationcommands;
 import android.content.Context;
 import androidx.recyclerview.widget.LinearSmoothScroller;
 
-/* compiled from: SelectedApplicationCommandAdapter.kt */
-/* renamed from: com.discord.widgets.chat.input.applicationcommands.SelectedApplicationCommandAdapter$scroller$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.chat.input.applicationcommands.SelectedApplicationCommandAdapter$scroller$1, reason: use source file name */
+/* JADX INFO: compiled from: SelectedApplicationCommandAdapter.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class SelectedApplicationCommandAdapter7 extends LinearSmoothScroller {
     public final /* synthetic */ SelectedApplicationCommandAdapter this$0;
 

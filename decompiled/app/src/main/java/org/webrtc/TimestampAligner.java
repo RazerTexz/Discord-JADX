@@ -1,6 +1,6 @@
 package org.webrtc;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public class TimestampAligner {
     private volatile long nativeTimestampAligner = nativeCreateTimestampAligner();
 

@@ -4,24 +4,24 @@ import java.util.HashSet;
 import java.util.Set;
 import p007b.p109f.p161j.p177l.BucketMap;
 
-/* compiled from: LruBucketsPoolBackend.java */
-/* renamed from: b.f.j.l.q, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.f.j.l.q, reason: use source file name */
+/* JADX INFO: compiled from: LruBucketsPoolBackend.java */
+/* JADX INFO: loaded from: classes3.dex */
 public abstract class LruBucketsPoolBackend<T> {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final Set<T> f3950a = new HashSet();
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final BucketMap<T> f3951b = new BucketMap<>();
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public abstract T mo1373a(int i);
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public abstract int mo1374b(T t);
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public T m1392c() {
         T t;
         BucketMap<T> bucketMap = this.f3951b;

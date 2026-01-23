@@ -5,15 +5,15 @@ import p007b.p225i.p226a.p242c.p259f3.Util2;
 import p007b.p225i.p226a.p242c.p263t2.AudioRendererEventListener2;
 import p007b.p225i.p226a.p242c.p265v2.DecoderCounters;
 
-/* compiled from: lambda */
-/* renamed from: b.i.a.c.t2.b */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.t2.b */
+/* JADX INFO: compiled from: lambda */
+/* JADX INFO: loaded from: classes3.dex */
 public final /* synthetic */ class RunnableC2913b implements Runnable {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final /* synthetic */ AudioRendererEventListener2.a f7684j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final /* synthetic */ DecoderCounters f7685k;
 
     public /* synthetic */ RunnableC2913b(AudioRendererEventListener2.a aVar, DecoderCounters decoderCounters) {

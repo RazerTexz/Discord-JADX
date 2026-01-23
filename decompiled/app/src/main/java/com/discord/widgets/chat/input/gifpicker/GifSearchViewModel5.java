@@ -9,9 +9,9 @@ import kotlin.jvm.functions.Function0;
 import p507d0.p580t.Collections2;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: GifSearchViewModel.kt */
-/* renamed from: com.discord.widgets.chat.input.gifpicker.GifSearchViewModel$ViewState$Loaded$gifCount$2, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.chat.input.gifpicker.GifSearchViewModel$ViewState$Loaded$gifCount$2, reason: use source file name */
+/* JADX INFO: compiled from: GifSearchViewModel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class GifSearchViewModel5 extends Lambda implements Function0<Integer> {
     public final /* synthetic */ GifSearchViewModel.ViewState.Loaded this$0;
 
@@ -26,7 +26,7 @@ public final class GifSearchViewModel5 extends Lambda implements Function0<Integ
         return Integer.valueOf(invoke2());
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final int invoke2() {
         List<GifAdapterItem> adapterItems = this.this$0.getAdapterItems();
         int i = 0;

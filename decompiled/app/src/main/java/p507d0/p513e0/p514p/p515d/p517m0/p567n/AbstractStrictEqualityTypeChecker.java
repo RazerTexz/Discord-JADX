@@ -7,15 +7,15 @@ import p507d0.p513e0.p514p.p515d.p517m0.p567n.p570n1.InterfaceC11982k;
 import p507d0.p513e0.p514p.p515d.p517m0.p567n.p570n1.InterfaceC11985n;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: AbstractStrictEqualityTypeChecker.kt */
-/* renamed from: d0.e0.p.d.m0.n.d, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.n.d, reason: use source file name */
+/* JADX INFO: compiled from: AbstractStrictEqualityTypeChecker.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class AbstractStrictEqualityTypeChecker {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final AbstractStrictEqualityTypeChecker f24747a = new AbstractStrictEqualityTypeChecker();
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final boolean m10002a(InterfaceC11985n interfaceC11985n, InterfaceC11980i interfaceC11980i, InterfaceC11980i interfaceC11980i2) {
         int iArgumentsCount;
         if (interfaceC11985n.argumentsCount(interfaceC11980i) == interfaceC11985n.argumentsCount(interfaceC11980i2) && interfaceC11985n.isMarkedNullable(interfaceC11980i) == interfaceC11985n.isMarkedNullable(interfaceC11980i2)) {
@@ -44,7 +44,7 @@ public final class AbstractStrictEqualityTypeChecker {
         return false;
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final boolean m10003b(InterfaceC11985n interfaceC11985n, InterfaceC11979h interfaceC11979h, InterfaceC11979h interfaceC11979h2) {
         if (interfaceC11979h == interfaceC11979h2) {
             return true;

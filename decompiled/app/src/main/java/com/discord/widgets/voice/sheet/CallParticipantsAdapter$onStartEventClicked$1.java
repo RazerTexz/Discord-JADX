@@ -6,8 +6,8 @@ import kotlin.jvm.functions.Function1;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: CallParticipantsAdapter.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: CallParticipantsAdapter.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class CallParticipantsAdapter$onStartEventClicked$1 extends Lambda implements Function1<GuildScheduledEvent, Unit> {
     public static final CallParticipantsAdapter$onStartEventClicked$1 INSTANCE = new CallParticipantsAdapter$onStartEventClicked$1();
 
@@ -21,7 +21,7 @@ public final class CallParticipantsAdapter$onStartEventClicked$1 extends Lambda 
         return Unit.f27425a;
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final void invoke2(GuildScheduledEvent guildScheduledEvent) {
         Intrinsics3.checkNotNullParameter(guildScheduledEvent, "it");
     }

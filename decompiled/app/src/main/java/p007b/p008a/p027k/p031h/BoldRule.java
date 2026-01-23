@@ -11,9 +11,9 @@ import p007b.p008a.p027k.p029f.BoldNode;
 import p007b.p008a.p027k.p030g.ParseState;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: BoldRule.kt */
-/* renamed from: b.a.k.h.c, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.a.k.h.c, reason: use source file name */
+/* JADX INFO: compiled from: BoldRule.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class BoldRule extends Rule<RenderContext, Node<RenderContext>, ParseState> {
     public BoldRule(Pattern pattern) {
         super(pattern);

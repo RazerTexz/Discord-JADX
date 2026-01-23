@@ -7,9 +7,9 @@ import kotlin.Unit;
 import kotlinx.coroutines.CancellableContinuation;
 import p507d0.Result2;
 
-/* compiled from: AnimationCoroutineUtils.kt */
-/* renamed from: com.discord.utilities.animations.AnimationCoroutineUtilsKt$await$$inlined$suspendCancellableCoroutine$lambda$2, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.utilities.animations.AnimationCoroutineUtilsKt$await$$inlined$suspendCancellableCoroutine$lambda$2, reason: use source file name */
+/* JADX INFO: compiled from: AnimationCoroutineUtils.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class AnimationCoroutineUtils3 extends AnimatorListenerAdapter {
     public final /* synthetic */ CancellableContinuation $cont;
     public final /* synthetic */ ViewPropertyAnimator $this_await$inlined;

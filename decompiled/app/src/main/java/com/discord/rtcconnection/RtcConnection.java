@@ -63,149 +63,149 @@ import p658rx.Observable;
 import p658rx.Subscription;
 import p658rx.subjects.BehaviorSubject;
 
-/* compiled from: RtcConnection.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: RtcConnection.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class RtcConnection implements DebugPrintable, MediaSinkWantsManager.InterfaceC5602a {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static int f18757j;
 
-    /* renamed from: A, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: A, reason: from kotlin metadata */
     public int pingBadCount;
 
-    /* renamed from: B, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: B, reason: from kotlin metadata */
     public final VideoQuality videoQuality;
 
-    /* renamed from: C, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: C, reason: from kotlin metadata */
     public Long connectStartTime;
 
-    /* renamed from: D, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: D, reason: from kotlin metadata */
     public Long connectCompletedTime;
 
-    /* renamed from: E, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: E, reason: from kotlin metadata */
     public int connectCount;
 
-    /* renamed from: F, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: F, reason: from kotlin metadata */
     public Subscription mediaEnginePrepareSubscription;
 
-    /* renamed from: G, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: G, reason: from kotlin metadata */
     public Long networkLossTime;
 
-    /* renamed from: H, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: H, reason: from kotlin metadata */
     public final MediaSinkWantsManager localMediaSinkWantsManager;
 
-    /* renamed from: I, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: I, reason: from kotlin metadata */
     public final Subscription localMediaSinkWantsSubscription;
 
-    /* renamed from: J, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: J, reason: from kotlin metadata */
     public boolean connected;
 
-    /* renamed from: K, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: K, reason: from kotlin metadata */
     public String mediaSessionId;
 
-    /* renamed from: L, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: L, reason: from kotlin metadata */
     public long videoSsrc;
 
-    /* renamed from: M, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: M, reason: from kotlin metadata */
     public final C1203h0 socketListener;
 
-    /* renamed from: N, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: N, reason: from kotlin metadata */
     public final C1191b0 mediaEngineConnectionListener;
 
-    /* renamed from: O, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: O, reason: from kotlin metadata */
     public final Long guildId;
 
-    /* renamed from: P, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: P, reason: from kotlin metadata */
     public final long channelId;
 
-    /* renamed from: Q, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Q, reason: from kotlin metadata */
     public String sessionId;
 
-    /* renamed from: R, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: R, reason: from kotlin metadata */
     public final boolean isVideoEnabled;
 
-    /* renamed from: S, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: S, reason: from kotlin metadata */
     public final String rtcServerId;
 
-    /* renamed from: T, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: T, reason: from kotlin metadata */
     public final long userId;
 
-    /* renamed from: U, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: U, reason: from kotlin metadata */
     public final MediaEngine mediaEngine;
 
-    /* renamed from: V, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: V, reason: from kotlin metadata */
     public final Logger logger;
 
-    /* renamed from: W, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: W, reason: from kotlin metadata */
     public final Clock clock;
 
-    /* renamed from: X, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: X, reason: from kotlin metadata */
     public final AbstractC5618d rtcConnectionType;
 
-    /* renamed from: Y, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Y, reason: from kotlin metadata */
     public final Map<Long, Boolean> mutedUsers;
 
-    /* renamed from: Z, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Z, reason: from kotlin metadata */
     public final Map<Long, Float> userVolumes;
 
-    /* renamed from: a0, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: a0, reason: from kotlin metadata */
     public final String parentMediaSessionId;
 
-    /* renamed from: b0, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: b0, reason: from kotlin metadata */
     public final boolean enableMediaSinkWants;
 
-    /* renamed from: c0, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: c0, reason: from kotlin metadata */
     public final String loggingTagPrefix;
 
-    /* renamed from: d0, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: d0, reason: from kotlin metadata */
     public final String streamKey;
 
-    /* renamed from: l, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: l, reason: from kotlin metadata */
     public final String loggingTag;
 
-    /* renamed from: m, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: m, reason: from kotlin metadata */
     public final String id;
 
-    /* renamed from: n, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: n, reason: from kotlin metadata */
     public final CopyOnWriteArrayList<InterfaceC5617c> listeners;
 
-    /* renamed from: o, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: o, reason: from kotlin metadata */
     public RtcStatsCollector4 rtcStatsCollector;
 
-    /* renamed from: p, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: p, reason: from kotlin metadata */
     public boolean sentVideo;
 
-    /* renamed from: q, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: q, reason: from kotlin metadata */
     public final Backoff reconnectBackoff;
 
-    /* renamed from: r, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: r, reason: from kotlin metadata */
     public MediaEngineConnection.TransportInfo transportInfo;
 
-    /* renamed from: s, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: s, reason: from kotlin metadata */
     public StateChange connectionStateChange;
 
-    /* renamed from: t, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: t, reason: from kotlin metadata */
     public BehaviorSubject<StateChange> connectionStateSubject;
 
-    /* renamed from: u, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: u, reason: from kotlin metadata */
     public boolean destroyed;
 
-    /* renamed from: v, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: v, reason: from kotlin metadata */
     public List<Long> pings;
 
-    /* renamed from: w, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: w, reason: from kotlin metadata */
     public RtcControlSocket socket;
 
-    /* renamed from: x, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: x, reason: from kotlin metadata */
     public MediaEngineConnection mediaEngineConnection;
 
-    /* renamed from: y, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: y, reason: from kotlin metadata */
     public String hostname;
 
-    /* renamed from: z, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: z, reason: from kotlin metadata */
     public Integer port;
 
-    /* compiled from: RtcConnection.kt */
+    /* JADX INFO: compiled from: RtcConnection.kt */
     public enum AnalyticsEvent {
         VOICE_CONNECTION_SUCCESS,
         VOICE_CONNECTION_FAILURE,
@@ -214,22 +214,22 @@ public final class RtcConnection implements DebugPrintable, MediaSinkWantsManage
         MEDIA_SESSION_JOINED
     }
 
-    /* compiled from: RtcConnection.kt */
+    /* JADX INFO: compiled from: RtcConnection.kt */
     public static final /* data */ class Metadata {
 
-        /* renamed from: a, reason: from kotlin metadata */
+        /* JADX INFO: renamed from: a, reason: from kotlin metadata */
         public final String rtcConnectionId;
 
-        /* renamed from: b, reason: from kotlin metadata */
+        /* JADX INFO: renamed from: b, reason: from kotlin metadata */
         public final String mediaSessionId;
 
-        /* renamed from: c, reason: from kotlin metadata */
+        /* JADX INFO: renamed from: c, reason: from kotlin metadata */
         public final Long channelId;
 
-        /* renamed from: d, reason: from kotlin metadata */
+        /* JADX INFO: renamed from: d, reason: from kotlin metadata */
         public final Long guildId;
 
-        /* renamed from: e, reason: from kotlin metadata */
+        /* JADX INFO: renamed from: e, reason: from kotlin metadata */
         public final String streamKey;
 
         public Metadata(String str, String str2, Long l, Long l2, String str3) {
@@ -279,7 +279,7 @@ public final class RtcConnection implements DebugPrintable, MediaSinkWantsManage
         }
     }
 
-    /* compiled from: RtcConnection.kt */
+    /* JADX INFO: compiled from: RtcConnection.kt */
     public enum Quality {
         UNKNOWN,
         BAD,
@@ -287,25 +287,25 @@ public final class RtcConnection implements DebugPrintable, MediaSinkWantsManage
         FINE;
 
 
-        /* renamed from: Companion, reason: from kotlin metadata */
+        /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
         public static final Companion INSTANCE = new Companion(null);
 
-        /* compiled from: RtcConnection.kt */
-        /* renamed from: com.discord.rtcconnection.RtcConnection$Quality$a, reason: from kotlin metadata */
+        /* JADX INFO: renamed from: com.discord.rtcconnection.RtcConnection$Quality$a, reason: from kotlin metadata */
+        /* JADX INFO: compiled from: RtcConnection.kt */
         public static final class Companion {
             public Companion(DefaultConstructorMarker defaultConstructorMarker) {
             }
         }
     }
 
-    /* compiled from: RtcConnection.kt */
+    /* JADX INFO: compiled from: RtcConnection.kt */
     public static abstract class State {
 
-        /* compiled from: RtcConnection.kt */
-        /* renamed from: com.discord.rtcconnection.RtcConnection$State$a */
+        /* JADX INFO: renamed from: com.discord.rtcconnection.RtcConnection$State$a */
+        /* JADX INFO: compiled from: RtcConnection.kt */
         public static final class C5607a extends State {
 
-            /* renamed from: a */
+            /* JADX INFO: renamed from: a */
             public static final C5607a f18809a = new C5607a();
 
             public C5607a() {
@@ -313,11 +313,11 @@ public final class RtcConnection implements DebugPrintable, MediaSinkWantsManage
             }
         }
 
-        /* compiled from: RtcConnection.kt */
-        /* renamed from: com.discord.rtcconnection.RtcConnection$State$b */
+        /* JADX INFO: renamed from: com.discord.rtcconnection.RtcConnection$State$b */
+        /* JADX INFO: compiled from: RtcConnection.kt */
         public static final class C5608b extends State {
 
-            /* renamed from: a */
+            /* JADX INFO: renamed from: a */
             public static final C5608b f18810a = new C5608b();
 
             public C5608b() {
@@ -325,11 +325,11 @@ public final class RtcConnection implements DebugPrintable, MediaSinkWantsManage
             }
         }
 
-        /* compiled from: RtcConnection.kt */
-        /* renamed from: com.discord.rtcconnection.RtcConnection$State$c */
+        /* JADX INFO: renamed from: com.discord.rtcconnection.RtcConnection$State$c */
+        /* JADX INFO: compiled from: RtcConnection.kt */
         public static final class C5609c extends State {
 
-            /* renamed from: a */
+            /* JADX INFO: renamed from: a */
             public static final C5609c f18811a = new C5609c();
 
             public C5609c() {
@@ -337,11 +337,11 @@ public final class RtcConnection implements DebugPrintable, MediaSinkWantsManage
             }
         }
 
-        /* compiled from: RtcConnection.kt */
-        /* renamed from: com.discord.rtcconnection.RtcConnection$State$d */
+        /* JADX INFO: renamed from: com.discord.rtcconnection.RtcConnection$State$d */
+        /* JADX INFO: compiled from: RtcConnection.kt */
         public static final class C5610d extends State {
 
-            /* renamed from: a */
+            /* JADX INFO: renamed from: a */
             public final boolean f18812a;
 
             public C5610d(boolean z2) {
@@ -370,11 +370,11 @@ public final class RtcConnection implements DebugPrintable, MediaSinkWantsManage
             }
         }
 
-        /* compiled from: RtcConnection.kt */
-        /* renamed from: com.discord.rtcconnection.RtcConnection$State$e */
+        /* JADX INFO: renamed from: com.discord.rtcconnection.RtcConnection$State$e */
+        /* JADX INFO: compiled from: RtcConnection.kt */
         public static final class C5611e extends State {
 
-            /* renamed from: a */
+            /* JADX INFO: renamed from: a */
             public static final C5611e f18813a = new C5611e();
 
             public C5611e() {
@@ -382,11 +382,11 @@ public final class RtcConnection implements DebugPrintable, MediaSinkWantsManage
             }
         }
 
-        /* compiled from: RtcConnection.kt */
-        /* renamed from: com.discord.rtcconnection.RtcConnection$State$f */
+        /* JADX INFO: renamed from: com.discord.rtcconnection.RtcConnection$State$f */
+        /* JADX INFO: compiled from: RtcConnection.kt */
         public static final class C5612f extends State {
 
-            /* renamed from: a */
+            /* JADX INFO: renamed from: a */
             public static final C5612f f18814a = new C5612f();
 
             public C5612f() {
@@ -394,11 +394,11 @@ public final class RtcConnection implements DebugPrintable, MediaSinkWantsManage
             }
         }
 
-        /* compiled from: RtcConnection.kt */
-        /* renamed from: com.discord.rtcconnection.RtcConnection$State$g */
+        /* JADX INFO: renamed from: com.discord.rtcconnection.RtcConnection$State$g */
+        /* JADX INFO: compiled from: RtcConnection.kt */
         public static final class C5613g extends State {
 
-            /* renamed from: a */
+            /* JADX INFO: renamed from: a */
             public static final C5613g f18815a = new C5613g();
 
             public C5613g() {
@@ -406,11 +406,11 @@ public final class RtcConnection implements DebugPrintable, MediaSinkWantsManage
             }
         }
 
-        /* compiled from: RtcConnection.kt */
-        /* renamed from: com.discord.rtcconnection.RtcConnection$State$h */
+        /* JADX INFO: renamed from: com.discord.rtcconnection.RtcConnection$State$h */
+        /* JADX INFO: compiled from: RtcConnection.kt */
         public static final class C5614h extends State {
 
-            /* renamed from: a */
+            /* JADX INFO: renamed from: a */
             public static final C5614h f18816a = new C5614h();
 
             public C5614h() {
@@ -434,13 +434,13 @@ public final class RtcConnection implements DebugPrintable, MediaSinkWantsManage
         }
     }
 
-    /* compiled from: RtcConnection.kt */
+    /* JADX INFO: compiled from: RtcConnection.kt */
     public static final /* data */ class StateChange {
 
-        /* renamed from: a, reason: from kotlin metadata */
+        /* JADX INFO: renamed from: a, reason: from kotlin metadata */
         public final State state;
 
-        /* renamed from: b, reason: from kotlin metadata */
+        /* JADX INFO: renamed from: b, reason: from kotlin metadata */
         public final Metadata metadata;
 
         public StateChange(State state, Metadata metadata) {
@@ -477,8 +477,8 @@ public final class RtcConnection implements DebugPrintable, MediaSinkWantsManage
         }
     }
 
-    /* compiled from: RtcConnection.kt */
-    /* renamed from: com.discord.rtcconnection.RtcConnection$b */
+    /* JADX INFO: renamed from: com.discord.rtcconnection.RtcConnection$b */
+    /* JADX INFO: compiled from: RtcConnection.kt */
     public static abstract class AbstractC5616b implements InterfaceC5617c {
         @Override // com.discord.rtcconnection.RtcConnection.InterfaceC5617c
         public void onAnalyticsEvent(AnalyticsEvent analyticsEvent, Map<String, Object> map) {
@@ -532,8 +532,8 @@ public final class RtcConnection implements DebugPrintable, MediaSinkWantsManage
         }
     }
 
-    /* compiled from: RtcConnection.kt */
-    /* renamed from: com.discord.rtcconnection.RtcConnection$c */
+    /* JADX INFO: renamed from: com.discord.rtcconnection.RtcConnection$c */
+    /* JADX INFO: compiled from: RtcConnection.kt */
     public interface InterfaceC5617c {
         void onAnalyticsEvent(AnalyticsEvent analyticsEvent, Map<String, Object> map);
 
@@ -556,15 +556,15 @@ public final class RtcConnection implements DebugPrintable, MediaSinkWantsManage
         void onVideoStream(long j, Integer num, int i, int i2, int i3);
     }
 
-    /* compiled from: RtcConnection.kt */
-    /* renamed from: com.discord.rtcconnection.RtcConnection$d */
+    /* JADX INFO: renamed from: com.discord.rtcconnection.RtcConnection$d */
+    /* JADX INFO: compiled from: RtcConnection.kt */
     public static abstract class AbstractC5618d {
 
-        /* compiled from: RtcConnection.kt */
-        /* renamed from: com.discord.rtcconnection.RtcConnection$d$a */
+        /* JADX INFO: renamed from: com.discord.rtcconnection.RtcConnection$d$a */
+        /* JADX INFO: compiled from: RtcConnection.kt */
         public static final class a extends AbstractC5618d {
 
-            /* renamed from: a */
+            /* JADX INFO: renamed from: a */
             public static final a f18819a = new a();
 
             public a() {
@@ -572,11 +572,11 @@ public final class RtcConnection implements DebugPrintable, MediaSinkWantsManage
             }
         }
 
-        /* compiled from: RtcConnection.kt */
-        /* renamed from: com.discord.rtcconnection.RtcConnection$d$b */
+        /* JADX INFO: renamed from: com.discord.rtcconnection.RtcConnection$d$b */
+        /* JADX INFO: compiled from: RtcConnection.kt */
         public static final class b extends AbstractC5618d {
 
-            /* renamed from: a */
+            /* JADX INFO: renamed from: a */
             public final long f18820a;
 
             public b(long j) {
@@ -604,8 +604,8 @@ public final class RtcConnection implements DebugPrintable, MediaSinkWantsManage
         }
     }
 
-    /* compiled from: RtcConnection.kt */
-    /* renamed from: com.discord.rtcconnection.RtcConnection$e */
+    /* JADX INFO: renamed from: com.discord.rtcconnection.RtcConnection$e */
+    /* JADX INFO: compiled from: RtcConnection.kt */
     public static final class C5619e extends Lambda implements Function0<Unit> {
         public C5619e() {
             super(0);
@@ -694,7 +694,7 @@ public final class RtcConnection implements DebugPrintable, MediaSinkWantsManage
         this.mediaEngineConnectionListener = new C1191b0(this);
     }
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static void m8459j(RtcConnection rtcConnection, boolean z2, String str, Throwable th, boolean z3, int i) {
         if ((i & 4) != 0) {
             th = null;
@@ -731,7 +731,7 @@ public final class RtcConnection implements DebugPrintable, MediaSinkWantsManage
         rtcConnection.m8465f(str);
     }
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public static void m8460o(RtcConnection rtcConnection, String str, Throwable th, Map map, int i) {
         if ((i & 2) != 0) {
             th = null;
@@ -741,12 +741,12 @@ public final class RtcConnection implements DebugPrintable, MediaSinkWantsManage
     }
 
     @Override // com.discord.rtcconnection.MediaSinkWantsManager.InterfaceC5602a
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public void mo8458a(long userId, long audioSsrc, long videoSSRC, VideoMetadata metadata) {
         m8463d(userId, audioSsrc, videoSSRC, metadata);
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final Map<String, Object> m8461b(Map<String, Object> map) {
         String str = this.hostname;
         if (str != null) {
@@ -759,13 +759,13 @@ public final class RtcConnection implements DebugPrintable, MediaSinkWantsManage
         return map;
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final void m8462c(InterfaceC5617c listener) {
         Intrinsics3.checkNotNullParameter(listener, "listener");
         this.listeners.add(listener);
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final void m8463d(long userId, long audioSsrc, long videoSsrc, VideoMetadata metadata) {
         MediaEngineConnection mediaEngineConnection = this.mediaEngineConnection;
         if (mediaEngineConnection != null) {
@@ -802,12 +802,12 @@ public final class RtcConnection implements DebugPrintable, MediaSinkWantsManage
         dp.appendKeyValue("sentVideo", Boolean.valueOf(this.sentVideo));
     }
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final void m8464e() {
         m8476s(new C5619e());
     }
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final void m8465f(String reason) {
         this.reconnectBackoff.cancel();
         RtcControlSocket rtcControlSocket = this.socket;
@@ -859,7 +859,7 @@ public final class RtcConnection implements DebugPrintable, MediaSinkWantsManage
         this.destroyed = true;
     }
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public final boolean m8466g(long userId) {
         Boolean bool = this.mutedUsers.get(Long.valueOf(userId));
         if (bool != null) {
@@ -868,7 +868,7 @@ public final class RtcConnection implements DebugPrintable, MediaSinkWantsManage
         return false;
     }
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public final float m8467h(long userId) {
         Float f = this.userVolumes.get(Long.valueOf(userId));
         if (f != null) {
@@ -877,12 +877,12 @@ public final class RtcConnection implements DebugPrintable, MediaSinkWantsManage
         return 1.0f;
     }
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public final Metadata m8468i() {
         return new Metadata(this.id, this.mediaSessionId, Long.valueOf(this.channelId), this.guildId, this.streamKey);
     }
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final void m8469k(long senderId, Map<String, ? extends Object> properties) {
         HashMap map = new HashMap();
         Long l = this.guildId;
@@ -896,21 +896,21 @@ public final class RtcConnection implements DebugPrintable, MediaSinkWantsManage
         m8473p(AnalyticsEvent.VIDEO_STREAM_ENDED, map);
     }
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final void m8470l(long senderId, Map<String, ? extends Object> properties) {
         if (properties != null) {
             m8469k(senderId, Maps6.plus(properties, MapsJVM.mapOf(Tuples.m10073to("participant_type", "receiver"))));
         }
     }
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public final void m8471m(long senderId, Map<String, ? extends Object> properties) {
         if (properties != null) {
             m8469k(senderId, Maps6.plus(properties, MapsJVM.mapOf(Tuples.m10073to("participant_type", this.rtcConnectionType instanceof AbstractC5618d.b ? "streamer" : NotificationCompat.MessagingStyle.Message.KEY_SENDER))));
         }
     }
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public final void m8472n(boolean willReconnect, String reason) {
         List<String> list;
         String str;
@@ -991,7 +991,7 @@ public final class RtcConnection implements DebugPrintable, MediaSinkWantsManage
         }
     }
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public final void m8473p(AnalyticsEvent event, Map<String, Object> properties) {
         String str;
         properties.put("rtc_connection_id", this.id);
@@ -1019,7 +1019,7 @@ public final class RtcConnection implements DebugPrintable, MediaSinkWantsManage
         }
     }
 
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     public final void m8474q() {
         this.logger.recordBreadcrumb("reconnect", this.loggingTag);
         if (this.connected) {
@@ -1033,24 +1033,23 @@ public final class RtcConnection implements DebugPrintable, MediaSinkWantsManage
         }
     }
 
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     public final void m8475r(String message) {
         this.logger.recordBreadcrumb(message, this.loggingTag);
     }
 
-    /* JADX WARN: Multi-variable type inference failed */
-    /* JADX WARN: Type inference failed for: r1v0, types: [b.a.q.f0] */
     @AnyThread
-    /* renamed from: s */
+    /* JADX INFO: renamed from: s */
     public final void m8476s(Function0<Unit> action) {
         MediaEngineExecutorService mediaEngineExecutorServiceMo323c = this.mediaEngine.mo323c();
+        Object runnableC1199f0 = action;
         if (action != null) {
-            action = new RunnableC1199f0(action);
+            runnableC1199f0 = new RunnableC1199f0(action);
         }
-        mediaEngineExecutorServiceMo323c.f1609l.execute((Runnable) action);
+        mediaEngineExecutorServiceMo323c.f1609l.execute((Runnable) runnableC1199f0);
     }
 
-    /* renamed from: t */
+    /* JADX INFO: renamed from: t */
     public final void m8477t(Intent intent, ThumbnailEmitter thumbnailEmitter) {
         if (this.rtcConnectionType instanceof AbstractC5618d.b) {
             m8475r("Setting screenshare " + intent + ' ' + this.mediaEngineConnection);
@@ -1065,7 +1064,7 @@ public final class RtcConnection implements DebugPrintable, MediaSinkWantsManage
         }
     }
 
-    /* renamed from: u */
+    /* JADX INFO: renamed from: u */
     public final void m8478u(State state) {
         if (!Intrinsics3.areEqual(this.connectionStateChange.state, state)) {
             StateChange stateChange = new StateChange(state, m8468i());
@@ -1077,7 +1076,7 @@ public final class RtcConnection implements DebugPrintable, MediaSinkWantsManage
         }
     }
 
-    /* renamed from: v */
+    /* JADX INFO: renamed from: v */
     public final void m8479v(long userId, float volume) {
         this.userVolumes.put(Long.valueOf(userId), Float.valueOf(volume));
         MediaEngineConnection mediaEngineConnection = this.mediaEngineConnection;
@@ -1086,7 +1085,7 @@ public final class RtcConnection implements DebugPrintable, MediaSinkWantsManage
         }
     }
 
-    /* renamed from: w */
+    /* JADX INFO: renamed from: w */
     public final void m8480w(Long userId) {
         MediaSinkWantsManager mediaSinkWantsManager = this.localMediaSinkWantsManager;
         if (mediaSinkWantsManager != null) {

@@ -7,12 +7,12 @@ import android.util.Log;
 import com.google.android.gms.cloudmessaging.zzp;
 import java.util.Objects;
 
-/* compiled from: com.google.android.gms:play-services-cloud-messaging@@16.0.0 */
-/* renamed from: b.i.a.f.d.j */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.d.j */
+/* JADX INFO: compiled from: com.google.android.gms:play-services-cloud-messaging@@16.0.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public final /* synthetic */ class C3235j implements Handler.Callback {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final ServiceConnectionC3232g f9270j;
 
     public C3235j(ServiceConnectionC3232g serviceConnectionC3232g) {

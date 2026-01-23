@@ -1,14 +1,14 @@
 package p007b.p225i.p226a.p288f.p313h.p325l;
 
-/* compiled from: com.google.android.gms:play-services-measurement-base@@18.0.0 */
-/* renamed from: b.i.a.f.h.l.q3 */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.h.l.q3 */
+/* JADX INFO: compiled from: com.google.android.gms:play-services-measurement-base@@18.0.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public final class C3798q3 {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final Class<?> f10264a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static final boolean f10265b;
 
     static {
@@ -27,7 +27,7 @@ public final class C3798q3 {
         f10265b = cls2 != null;
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static boolean m5185a() {
         return (f10264a == null || f10265b) ? false : true;
     }

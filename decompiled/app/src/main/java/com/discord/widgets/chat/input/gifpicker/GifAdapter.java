@@ -29,11 +29,11 @@ import p507d0.p580t.Collections2;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: GifAdapter.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: GifAdapter.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class GifAdapter extends RecyclerView.Adapter<GifViewHolder> {
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private static final int DEFAULT_COLUMN_COUNT = 2;
     private static final int MIN_COLUMN_WIDTH_DP = 164;
@@ -43,7 +43,7 @@ public final class GifAdapter extends RecyclerView.Adapter<GifViewHolder> {
     private final Function1<GifAdapterItem.GifItem, Unit> onSelectGif;
     private final Function1<String, Unit> onSelectSuggestedTerm;
 
-    /* compiled from: GifAdapter.kt */
+    /* JADX INFO: compiled from: GifAdapter.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -83,8 +83,8 @@ public final class GifAdapter extends RecyclerView.Adapter<GifViewHolder> {
         }
     }
 
-    /* compiled from: GifAdapter.kt */
-    /* renamed from: com.discord.widgets.chat.input.gifpicker.GifAdapter$setItems$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.input.gifpicker.GifAdapter$setItems$1 */
+    /* JADX INFO: compiled from: GifAdapter.kt */
     public static final class C78651 extends Lambda implements Function1<List<? extends GifAdapterItem>, Unit> {
         public C78651() {
             super(1);
@@ -96,7 +96,7 @@ public final class GifAdapter extends RecyclerView.Adapter<GifViewHolder> {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(List<? extends GifAdapterItem> list) {
             Intrinsics3.checkNotNullParameter(list, "items");
             GifAdapter.access$setItems$p(GifAdapter.this, list);
@@ -120,7 +120,7 @@ public final class GifAdapter extends RecyclerView.Adapter<GifViewHolder> {
     }
 
     @Override // androidx.recyclerview.widget.RecyclerView.Adapter
-    /* renamed from: getItemCount */
+    /* JADX INFO: renamed from: getItemCount */
     public int getPageSize() {
         return this.items.size();
     }

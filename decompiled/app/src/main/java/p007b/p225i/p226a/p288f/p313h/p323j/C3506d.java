@@ -6,11 +6,11 @@ import androidx.exifinterface.media.ExifInterface;
 import java.util.Objects;
 import p007b.p225i.p226a.p288f.p291b.C3180f;
 
-/* renamed from: b.i.a.f.h.j.d */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.h.j.d */
+/* JADX INFO: loaded from: classes3.dex */
 public class C3506d {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final C3515g f9684j;
 
     public C3506d(C3515g c3515g) {
@@ -18,12 +18,12 @@ public class C3506d {
         this.f9684j = c3515g;
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public static String m4424c(Object obj) {
         return obj == null ? "" : obj instanceof String ? (String) obj : obj instanceof Boolean ? obj == Boolean.TRUE ? "true" : "false" : obj instanceof Throwable ? ((Throwable) obj).toString() : obj.toString();
     }
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public static String m4425e(String str, Object obj, Object obj2, Object obj3) {
         String str2 = "";
         if (str == null) {
@@ -56,27 +56,27 @@ public class C3506d {
         return sb.toString();
     }
 
-    /* renamed from: A */
+    /* JADX INFO: renamed from: A */
     public final void m4426A(String str, Object obj) {
         m4430a(6, str, obj, null, null);
     }
 
-    /* renamed from: C */
+    /* JADX INFO: renamed from: C */
     public final void m4427C(String str) {
         m4430a(2, str, null, null, null);
     }
 
-    /* renamed from: D */
+    /* JADX INFO: renamed from: D */
     public final void m4428D(String str) {
         m4430a(5, str, null, null, null);
     }
 
-    /* renamed from: H */
+    /* JADX INFO: renamed from: H */
     public final void m4429H(String str) {
         m4430a(6, str, null, null, null);
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final void m4430a(int i, String str, Object obj, Object obj2, Object obj3) {
         C3515g c3515g = this.f9684j;
         C3535p0 c3535p0 = null;
@@ -129,56 +129,56 @@ public class C3506d {
         }
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final void m4431b(String str, Object obj) {
         m4430a(2, str, obj, null, null);
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final void m4432d(String str, Object obj) {
         m4430a(3, str, obj, null, null);
     }
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final void m4433f(String str, Object obj, Object obj2) {
         m4430a(5, str, obj, obj2, null);
     }
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public final C3529m0 m4434n() {
         return this.f9684j.m4451c();
     }
 
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     public final C3180f m4435q() {
         return this.f9684j.m4452d();
     }
 
-    /* renamed from: s */
+    /* JADX INFO: renamed from: s */
     public final C3497a m4436s() {
         return this.f9684j.m4453e();
     }
 
-    /* renamed from: t */
+    /* JADX INFO: renamed from: t */
     public final C3499a1 m4437t() {
         C3515g c3515g = this.f9684j;
         C3515g.m4449a(c3515g.f9730j);
         return c3515g.f9730j;
     }
 
-    /* renamed from: u */
+    /* JADX INFO: renamed from: u */
     public final C3535p0 m4438u() {
         C3515g c3515g = this.f9684j;
         C3515g.m4449a(c3515g.f9731k);
         return c3515g.f9731k;
     }
 
-    /* renamed from: x */
+    /* JADX INFO: renamed from: x */
     public final void m4439x(String str, Object obj) {
         m4430a(5, str, obj, null, null);
     }
 
-    /* renamed from: y */
+    /* JADX INFO: renamed from: y */
     public final void m4440y(String str, Object obj, Object obj2) {
         m4430a(6, str, obj, obj2, null);
     }

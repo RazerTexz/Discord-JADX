@@ -12,53 +12,53 @@ import p007b.p225i.p226a.p242c.p262s2.AnalyticsCollector;
 import p007b.p225i.p355b.p357b.AbstractIndexedListIterator;
 import p007b.p225i.p355b.p357b.ImmutableList2;
 
-/* compiled from: MediaPeriodQueue.java */
-/* renamed from: b.i.a.c.s1, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.s1, reason: use source file name */
+/* JADX INFO: compiled from: MediaPeriodQueue.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class MediaPeriodQueue {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final Timeline.b f7486a = new Timeline.b();
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final Timeline.c f7487b = new Timeline.c();
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     @Nullable
     public final AnalyticsCollector f7488c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final Handler f7489d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public long f7490e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public int f7491f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public boolean f7492g;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     @Nullable
     public MediaPeriodHolder f7493h;
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     @Nullable
     public MediaPeriodHolder f7494i;
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     @Nullable
     public MediaPeriodHolder f7495j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public int f7496k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     @Nullable
     public Object f7497l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public long f7498m;
 
     public MediaPeriodQueue(@Nullable AnalyticsCollector analyticsCollector, Handler handler) {
@@ -66,7 +66,7 @@ public final class MediaPeriodQueue {
         this.f7489d = handler;
     }
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public static MediaSource2.a m3364p(Timeline timeline, Object obj, long j, long j2, Timeline.b bVar) {
         timeline.mo3327h(obj, bVar);
         AdPlaybackState adPlaybackState = bVar.f7344p;
@@ -95,7 +95,7 @@ public final class MediaPeriodQueue {
     }
 
     @Nullable
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public MediaPeriodHolder m3365a() {
         MediaPeriodHolder mediaPeriodHolder = this.f7493h;
         if (mediaPeriodHolder == null) {
@@ -118,7 +118,7 @@ public final class MediaPeriodQueue {
         return this.f7493h;
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public void m3366b() {
         if (this.f7496k == 0) {
             return;
@@ -140,7 +140,7 @@ public final class MediaPeriodQueue {
     }
 
     @Nullable
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final MediaPeriodInfo m3367c(Timeline timeline, MediaPeriodHolder mediaPeriodHolder, long j) {
         long j2;
         MediaPeriodInfo mediaPeriodInfo = mediaPeriodHolder.f7447f;
@@ -207,13 +207,13 @@ public final class MediaPeriodQueue {
     }
 
     @Nullable
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final MediaPeriodInfo m3368d(Timeline timeline, MediaSource2.a aVar, long j, long j2) {
         timeline.mo3327h(aVar.f5732a, this.f7486a);
         return aVar.m2593a() ? m3369e(timeline, aVar.f5732a, aVar.f5733b, aVar.f5734c, j, aVar.f5735d) : m3370f(timeline, aVar.f5732a, j2, j, aVar.f5735d);
     }
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final MediaPeriodInfo m3369e(Timeline timeline, Object obj, int i, int i2, long j, long j2) {
         MediaSource2.a aVar = new MediaSource2.a(obj, i, i2, j2);
         long jM3332a = timeline.mo3327h(obj, this.f7486a).m3332a(i, i2);
@@ -221,7 +221,7 @@ public final class MediaPeriodQueue {
         return new MediaPeriodInfo(aVar, (jM3332a == -9223372036854775807L || j3 < jM3332a) ? j3 : Math.max(0L, jM3332a - 1), j, -9223372036854775807L, jM3332a, this.f7486a.f7344p.m2578a(i).f5696q, false, false, false);
     }
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final MediaPeriodInfo m3370f(Timeline timeline, Object obj, long j, long j2, long j3) {
         long jMax = j;
         timeline.mo3327h(obj, this.f7486a);
@@ -239,7 +239,7 @@ public final class MediaPeriodQueue {
         return new MediaPeriodInfo(aVar, jMax, j2, jM3334c, j4, z2, zM3373i, zM3375k, zM3374j);
     }
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public final long m3371g(Timeline timeline, Object obj, int i) {
         timeline.mo3327h(obj, this.f7486a);
         long j = this.f7486a.f7344p.m2578a(i).f5690k;
@@ -248,7 +248,7 @@ public final class MediaPeriodQueue {
 
     /* JADX WARN: Removed duplicated region for block: B:22:0x0060  */
     /* JADX WARN: Removed duplicated region for block: B:23:0x006a  */
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
@@ -284,12 +284,12 @@ public final class MediaPeriodQueue {
         return new MediaPeriodInfo(aVar, mediaPeriodInfo.f7466b, mediaPeriodInfo.f7467c, jM3334c, j, zM3336e, zM3373i, zM3375k, zM3374j);
     }
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public final boolean m3373i(MediaSource2.a aVar) {
         return !aVar.m2593a() && aVar.f5736e == -1;
     }
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final boolean m3374j(Timeline timeline, MediaSource2.a aVar, boolean z2) {
         int iMo2554b = timeline.mo2554b(aVar.f5732a);
         if (timeline.m3330n(timeline.m3326f(iMo2554b, this.f7486a).f7340l, this.f7487b).f7361v) {
@@ -298,7 +298,7 @@ public final class MediaPeriodQueue {
         return (timeline.m3325d(iMo2554b, this.f7486a, this.f7487b, this.f7491f, this.f7492g) == -1) && z2;
     }
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final boolean m3375k(Timeline timeline, MediaSource2.a aVar) {
         if (m3373i(aVar)) {
             return timeline.m3330n(timeline.mo3327h(aVar.f5732a, this.f7486a).f7340l, this.f7487b).f7351C == timeline.mo2554b(aVar.f5732a);
@@ -306,7 +306,7 @@ public final class MediaPeriodQueue {
         return false;
     }
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final void m3376l() {
         if (this.f7488c != null) {
             AbstractIndexedListIterator<Object> abstractIndexedListIterator = ImmutableList2.f12045k;
@@ -319,7 +319,7 @@ public final class MediaPeriodQueue {
         }
     }
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public void m3377m(long j) {
         MediaPeriodHolder mediaPeriodHolder = this.f7495j;
         if (mediaPeriodHolder != null) {
@@ -330,7 +330,7 @@ public final class MediaPeriodQueue {
         }
     }
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public boolean m3378n(MediaPeriodHolder mediaPeriodHolder) {
         boolean z2 = false;
         AnimatableValueParser.m426D(mediaPeriodHolder != null);
@@ -360,7 +360,7 @@ public final class MediaPeriodQueue {
         return z2;
     }
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public MediaSource2.a m3379o(Timeline timeline, Object obj, long j) {
         long j2;
         int iMo2554b;
@@ -402,7 +402,7 @@ public final class MediaPeriodQueue {
         return m3364p(timeline, obj, j, j2, this.f7486a);
     }
 
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     public final boolean m3380q(Timeline timeline) {
         MediaPeriodHolder mediaPeriodHolder;
         MediaPeriodHolder mediaPeriodHolder2 = this.f7493h;
@@ -429,7 +429,7 @@ public final class MediaPeriodQueue {
         return !zM3378n;
     }
 
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     public boolean m3381r(Timeline timeline, long j, long j2) {
         boolean zM3378n;
         MediaPeriodInfo mediaPeriodInfoM3372h;

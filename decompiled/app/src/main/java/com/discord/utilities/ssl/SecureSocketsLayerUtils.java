@@ -16,8 +16,8 @@ import javax.net.ssl.TrustManagerFactory;
 import p507d0.p591y.Closeable;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: SecureSocketsLayerUtils.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: SecureSocketsLayerUtils.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class SecureSocketsLayerUtils {
     public static final SecureSocketsLayerUtils INSTANCE = new SecureSocketsLayerUtils();
 

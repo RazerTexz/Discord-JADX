@@ -8,10 +8,10 @@ import java.util.concurrent.Callable;
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.TimeUnit;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public class ThreadUtils {
 
-    /* renamed from: org.webrtc.ThreadUtils$1 */
+    /* JADX INFO: renamed from: org.webrtc.ThreadUtils$1 */
     public class C129911 implements BlockingOperation {
         public final /* synthetic */ Thread val$thread;
 
@@ -25,19 +25,19 @@ public class ThreadUtils {
         }
     }
 
-    /* renamed from: org.webrtc.ThreadUtils$1CaughtException, reason: invalid class name */
+    /* JADX INFO: renamed from: org.webrtc.ThreadUtils$1CaughtException, reason: invalid class name */
     public class C1CaughtException {
 
-        /* renamed from: e */
+        /* JADX INFO: renamed from: e */
         public Exception f27618e;
     }
 
-    /* renamed from: org.webrtc.ThreadUtils$1Result, reason: invalid class name */
+    /* JADX INFO: renamed from: org.webrtc.ThreadUtils$1Result, reason: invalid class name */
     public class C1Result {
         public V value;
     }
 
-    /* renamed from: org.webrtc.ThreadUtils$2 */
+    /* JADX INFO: renamed from: org.webrtc.ThreadUtils$2 */
     public class C129922 implements BlockingOperation {
         public final /* synthetic */ CountDownLatch val$latch;
 
@@ -51,7 +51,7 @@ public class ThreadUtils {
         }
     }
 
-    /* renamed from: org.webrtc.ThreadUtils$3 */
+    /* JADX INFO: renamed from: org.webrtc.ThreadUtils$3 */
     public class RunnableC129933 implements Runnable {
         public final /* synthetic */ CountDownLatch val$barrier;
         public final /* synthetic */ Callable val$callable;
@@ -77,7 +77,7 @@ public class ThreadUtils {
         }
     }
 
-    /* renamed from: org.webrtc.ThreadUtils$4 */
+    /* JADX INFO: renamed from: org.webrtc.ThreadUtils$4 */
     public class CallableC129944 implements Callable<Void> {
         public final /* synthetic */ Runnable val$runner;
 
@@ -91,7 +91,7 @@ public class ThreadUtils {
         }
 
         @Override // java.util.concurrent.Callable
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public Void call2() {
             this.val$runner.run();
             return null;

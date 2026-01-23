@@ -36,19 +36,19 @@ import p507d0.p592z.p594d.Lambda;
 import p507d0.p592z.p594d.Reflection2;
 import p507d0.p592z.p594d.SpreadBuilder;
 
-/* compiled from: ReflectJavaClass.kt */
-/* renamed from: d0.e0.p.d.m0.c.k1.b.j, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.c.k1.b.j, reason: use source file name */
+/* JADX INFO: compiled from: ReflectJavaClass.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class ReflectJavaClass extends ReflectJavaElement implements ReflectJavaAnnotationOwner, ReflectJavaModifierListOwner, InterfaceC11574g {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final Class<?> f23046a;
 
-    /* compiled from: ReflectJavaClass.kt */
-    /* renamed from: d0.e0.p.d.m0.c.k1.b.j$a */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.c.k1.b.j$a */
+    /* JADX INFO: compiled from: ReflectJavaClass.kt */
     public /* synthetic */ class a extends FunctionReference implements Function1<Member, Boolean> {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public static final a f23047j = new a();
 
         public a() {
@@ -75,18 +75,18 @@ public final class ReflectJavaClass extends ReflectJavaElement implements Reflec
             return Boolean.valueOf(invoke2(member));
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final boolean invoke2(Member member) {
             Intrinsics3.checkNotNullParameter(member, "p0");
             return member.isSynthetic();
         }
     }
 
-    /* compiled from: ReflectJavaClass.kt */
-    /* renamed from: d0.e0.p.d.m0.c.k1.b.j$b */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.c.k1.b.j$b */
+    /* JADX INFO: compiled from: ReflectJavaClass.kt */
     public /* synthetic */ class b extends FunctionReference implements Function1<Constructor<?>, ReflectJavaConstructor> {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public static final b f23048j = new b();
 
         public b() {
@@ -113,18 +113,18 @@ public final class ReflectJavaClass extends ReflectJavaElement implements Reflec
             return invoke2(constructor);
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final ReflectJavaConstructor invoke2(Constructor<?> constructor) {
             Intrinsics3.checkNotNullParameter(constructor, "p0");
             return new ReflectJavaConstructor(constructor);
         }
     }
 
-    /* compiled from: ReflectJavaClass.kt */
-    /* renamed from: d0.e0.p.d.m0.c.k1.b.j$c */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.c.k1.b.j$c */
+    /* JADX INFO: compiled from: ReflectJavaClass.kt */
     public /* synthetic */ class c extends FunctionReference implements Function1<Member, Boolean> {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public static final c f23049j = new c();
 
         public c() {
@@ -151,18 +151,18 @@ public final class ReflectJavaClass extends ReflectJavaElement implements Reflec
             return Boolean.valueOf(invoke2(member));
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final boolean invoke2(Member member) {
             Intrinsics3.checkNotNullParameter(member, "p0");
             return member.isSynthetic();
         }
     }
 
-    /* compiled from: ReflectJavaClass.kt */
-    /* renamed from: d0.e0.p.d.m0.c.k1.b.j$d */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.c.k1.b.j$d */
+    /* JADX INFO: compiled from: ReflectJavaClass.kt */
     public /* synthetic */ class d extends FunctionReference implements Function1<Field, ReflectJavaField> {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public static final d f23050j = new d();
 
         public d() {
@@ -189,18 +189,18 @@ public final class ReflectJavaClass extends ReflectJavaElement implements Reflec
             return invoke2(field);
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final ReflectJavaField invoke2(Field field) {
             Intrinsics3.checkNotNullParameter(field, "p0");
             return new ReflectJavaField(field);
         }
     }
 
-    /* compiled from: ReflectJavaClass.kt */
-    /* renamed from: d0.e0.p.d.m0.c.k1.b.j$e */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.c.k1.b.j$e */
+    /* JADX INFO: compiled from: ReflectJavaClass.kt */
     public static final class e extends Lambda implements Function1<Class<?>, Boolean> {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public static final e f23051j = new e();
 
         public e() {
@@ -212,7 +212,7 @@ public final class ReflectJavaClass extends ReflectJavaElement implements Reflec
             return Boolean.valueOf(invoke2(cls));
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final boolean invoke2(Class<?> cls) {
             String simpleName = cls.getSimpleName();
             Intrinsics3.checkNotNullExpressionValue(simpleName, "it.simpleName");
@@ -220,11 +220,11 @@ public final class ReflectJavaClass extends ReflectJavaElement implements Reflec
         }
     }
 
-    /* compiled from: ReflectJavaClass.kt */
-    /* renamed from: d0.e0.p.d.m0.c.k1.b.j$f */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.c.k1.b.j$f */
+    /* JADX INFO: compiled from: ReflectJavaClass.kt */
     public static final class f extends Lambda implements Function1<Class<?>, Name> {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public static final f f23052j = new f();
 
         public f() {
@@ -236,7 +236,7 @@ public final class ReflectJavaClass extends ReflectJavaElement implements Reflec
             return invoke2(cls);
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final Name invoke2(Class<?> cls) {
             String simpleName = cls.getSimpleName();
             if (!Name.isValidIdentifier(simpleName)) {
@@ -249,8 +249,8 @@ public final class ReflectJavaClass extends ReflectJavaElement implements Reflec
         }
     }
 
-    /* compiled from: ReflectJavaClass.kt */
-    /* renamed from: d0.e0.p.d.m0.c.k1.b.j$g */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.c.k1.b.j$g */
+    /* JADX INFO: compiled from: ReflectJavaClass.kt */
     public static final class g extends Lambda implements Function1<Method, Boolean> {
         public g() {
             super(1);
@@ -261,7 +261,7 @@ public final class ReflectJavaClass extends ReflectJavaElement implements Reflec
             return Boolean.valueOf(invoke2(method));
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final boolean invoke2(Method method) {
             if (!method.isSynthetic()) {
                 if (!ReflectJavaClass.this.isEnum()) {
@@ -277,11 +277,11 @@ public final class ReflectJavaClass extends ReflectJavaElement implements Reflec
         }
     }
 
-    /* compiled from: ReflectJavaClass.kt */
-    /* renamed from: d0.e0.p.d.m0.c.k1.b.j$h */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.c.k1.b.j$h */
+    /* JADX INFO: compiled from: ReflectJavaClass.kt */
     public /* synthetic */ class h extends FunctionReference implements Function1<Method, ReflectJavaMethod> {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public static final h f23053j = new h();
 
         public h() {
@@ -308,7 +308,7 @@ public final class ReflectJavaClass extends ReflectJavaElement implements Reflec
             return invoke2(method);
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final ReflectJavaMethod invoke2(Method method) {
             Intrinsics3.checkNotNullParameter(method, "p0");
             return new ReflectJavaMethod(method);
@@ -421,7 +421,7 @@ public final class ReflectJavaClass extends ReflectJavaElement implements Reflec
             return Collections2.emptyList();
         }
         SpreadBuilder spreadBuilder = new SpreadBuilder(2);
-        Object genericSuperclass = this.f23046a.getGenericSuperclass();
+        Type genericSuperclass = this.f23046a.getGenericSuperclass();
         spreadBuilder.add(genericSuperclass != null ? genericSuperclass : Object.class);
         Type[] genericInterfaces = this.f23046a.getGenericInterfaces();
         Intrinsics3.checkNotNullExpressionValue(genericInterfaces, "klass.genericInterfaces");
@@ -523,7 +523,7 @@ public final class ReflectJavaClass extends ReflectJavaElement implements Reflec
     }
 
     @Override // p507d0.p513e0.p514p.p515d.p517m0.p531e.p532a.p539k0.InterfaceC11574g
-    public List<ReflectJavaConstructor> getConstructors() throws SecurityException {
+    public List<ReflectJavaConstructor> getConstructors() {
         Constructor<?>[] declaredConstructors = this.f23046a.getDeclaredConstructors();
         Intrinsics3.checkNotNullExpressionValue(declaredConstructors, "klass.declaredConstructors");
         return _Sequences2.toList(_Sequences2.map(_Sequences2.filterNot(_Arrays.asSequence(declaredConstructors), a.f23047j), b.f23048j));
@@ -549,7 +549,7 @@ public final class ReflectJavaClass extends ReflectJavaElement implements Reflec
     }
 
     @Override // p507d0.p513e0.p514p.p515d.p517m0.p531e.p532a.p539k0.InterfaceC11574g
-    public List<ReflectJavaMethod> getMethods() throws SecurityException {
+    public List<ReflectJavaMethod> getMethods() {
         Method[] declaredMethods = this.f23046a.getDeclaredMethods();
         Intrinsics3.checkNotNullExpressionValue(declaredMethods, "klass.declaredMethods");
         return _Sequences2.toList(_Sequences2.map(_Sequences2.filter(_Arrays.asSequence(declaredMethods), new g()), h.f23053j));

@@ -9,21 +9,21 @@ import okhttp3.ResponseBody;
 import org.codehaus.mojo.animal_sniffer.IgnoreJRERequirement;
 import p630i0.Converter2;
 
-/* compiled from: OptionalConverterFactory.java */
+/* JADX INFO: renamed from: i0.q, reason: use source file name */
+/* JADX INFO: compiled from: OptionalConverterFactory.java */
+/* JADX INFO: loaded from: classes3.dex */
 @IgnoreJRERequirement
-/* renamed from: i0.q, reason: use source file name */
-/* loaded from: classes3.dex */
 public final class OptionalConverterFactory extends Converter2.a {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final Converter2.a f26567a = new OptionalConverterFactory();
 
-    /* compiled from: OptionalConverterFactory.java */
+    /* JADX INFO: renamed from: i0.q$a */
+    /* JADX INFO: compiled from: OptionalConverterFactory.java */
     @IgnoreJRERequirement
-    /* renamed from: i0.q$a */
     public static final class a<T> implements Converter2<ResponseBody, Optional<T>> {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final Converter2<ResponseBody, T> f26568a;
 
         public a(Converter2<ResponseBody, T> converter2) {

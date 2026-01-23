@@ -13,61 +13,61 @@ import javax.microedition.khronos.egl.EGLConfig;
 import javax.microedition.khronos.opengles.GL10;
 import p007b.p225i.p226a.p242c.p265v2.VideoDecoderOutputBuffer;
 
-/* compiled from: VideoDecoderGLSurfaceView.java */
-/* renamed from: b.i.a.c.g3.s, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.g3.s, reason: use source file name */
+/* JADX INFO: compiled from: VideoDecoderGLSurfaceView.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class VideoDecoderGLSurfaceView extends GLSurfaceView implements VideoDecoderOutputBufferRenderer {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final a f6910j;
 
-    /* compiled from: VideoDecoderGLSurfaceView.java */
-    /* renamed from: b.i.a.c.g3.s$a */
+    /* JADX INFO: renamed from: b.i.a.c.g3.s$a */
+    /* JADX INFO: compiled from: VideoDecoderGLSurfaceView.java */
     public static final class a implements GLSurfaceView.Renderer {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public static final float[] f6911j = {1.164f, 1.164f, 1.164f, 0.0f, -0.392f, 2.017f, 1.596f, -0.813f, 0.0f};
 
-        /* renamed from: k */
+        /* JADX INFO: renamed from: k */
         public static final float[] f6912k = {1.164f, 1.164f, 1.164f, 0.0f, -0.213f, 2.112f, 1.793f, -0.533f, 0.0f};
 
-        /* renamed from: l */
+        /* JADX INFO: renamed from: l */
         public static final float[] f6913l = {1.168f, 1.168f, 1.168f, 0.0f, -0.188f, 2.148f, 1.683f, -0.652f, 0.0f};
 
-        /* renamed from: m */
+        /* JADX INFO: renamed from: m */
         public static final String[] f6914m = {"y_tex", "u_tex", "v_tex"};
 
-        /* renamed from: n */
+        /* JADX INFO: renamed from: n */
         public static final FloatBuffer f6915n = GlUtil.m8946b(new float[]{-1.0f, 1.0f, -1.0f, -1.0f, 1.0f, 1.0f, 1.0f, -1.0f});
 
-        /* renamed from: o */
+        /* JADX INFO: renamed from: o */
         public final GLSurfaceView f6916o;
 
-        /* renamed from: p */
+        /* JADX INFO: renamed from: p */
         public final int[] f6917p = new int[3];
 
-        /* renamed from: q */
+        /* JADX INFO: renamed from: q */
         public final int[] f6918q = new int[3];
 
-        /* renamed from: r */
+        /* JADX INFO: renamed from: r */
         public final int[] f6919r = new int[3];
 
-        /* renamed from: s */
+        /* JADX INFO: renamed from: s */
         public final int[] f6920s = new int[3];
 
-        /* renamed from: t */
+        /* JADX INFO: renamed from: t */
         public final AtomicReference<VideoDecoderOutputBuffer> f6921t = new AtomicReference<>();
 
-        /* renamed from: u */
+        /* JADX INFO: renamed from: u */
         public final FloatBuffer[] f6922u = new FloatBuffer[3];
 
-        /* renamed from: v */
+        /* JADX INFO: renamed from: v */
         public GlUtil.C10776a f6923v;
 
-        /* renamed from: w */
+        /* JADX INFO: renamed from: w */
         public int f6924w;
 
-        /* renamed from: x */
+        /* JADX INFO: renamed from: x */
         public VideoDecoderOutputBuffer f6925x;
 
         public a(GLSurfaceView gLSurfaceView) {

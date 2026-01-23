@@ -6,8 +6,8 @@ import android.os.IInterface;
 import android.os.Parcel;
 import android.os.RemoteException;
 
-/* renamed from: b.i.a.f.h.m.b */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.h.m.b */
+/* JADX INFO: loaded from: classes3.dex */
 public class BinderC3925b extends Binder implements IInterface {
     public BinderC3925b(String str) {
         attachInterface(this, str);
@@ -18,7 +18,7 @@ public class BinderC3925b extends Binder implements IInterface {
         return this;
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public boolean mo5400c(int i, Parcel parcel, Parcel parcel2, int i2) throws RemoteException {
         throw null;
     }

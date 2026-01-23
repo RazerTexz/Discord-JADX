@@ -9,9 +9,9 @@ import kotlin.jvm.internal.DefaultConstructorMarker;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: WidgetHubAuthenticationlViewModel.kt */
-/* renamed from: com.discord.widgets.hubs.HubAuthenticationState, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.hubs.HubAuthenticationState, reason: use source file name */
+/* JADX INFO: compiled from: WidgetHubAuthenticationlViewModel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final /* data */ class WidgetHubAuthenticationlViewModel3 {
     private final RestCallState<EmailVerification2> authenticationAsync;
     private final String email;
@@ -43,7 +43,7 @@ public final /* data */ class WidgetHubAuthenticationlViewModel3 {
         return widgetHubAuthenticationlViewModel3.copy(str, restCallState, restCallState2);
     }
 
-    /* renamed from: component1, reason: from getter */
+    /* JADX INFO: renamed from: component1, reason: from getter */
     public final String getEmail() {
         return this.email;
     }

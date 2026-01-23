@@ -3,12 +3,12 @@ package p007b.p452o.p453a.p472w;
 import android.graphics.SurfaceTexture;
 import android.view.TextureView;
 
-/* compiled from: TextureCameraPreview.java */
-/* renamed from: b.o.a.w.i, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.o.a.w.i, reason: use source file name */
+/* JADX INFO: compiled from: TextureCameraPreview.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class TextureCameraPreview implements TextureView.SurfaceTextureListener {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final /* synthetic */ TextureCameraPreview2 f14241j;
 
     public TextureCameraPreview(TextureCameraPreview2 textureCameraPreview2) {

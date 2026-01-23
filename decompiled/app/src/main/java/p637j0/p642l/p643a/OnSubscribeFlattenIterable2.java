@@ -20,52 +20,52 @@ import p658rx.Observable;
 import p658rx.Subscriber;
 import p658rx.exceptions.MissingBackpressureException;
 
-/* compiled from: OnSubscribeFlattenIterable.java */
-/* renamed from: j0.l.a.n, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: j0.l.a.n, reason: use source file name */
+/* JADX INFO: compiled from: OnSubscribeFlattenIterable.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class OnSubscribeFlattenIterable2<T, R> implements Observable.InterfaceC13005a<R> {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final Observable<? extends T> f26916j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final Func1<? super T, ? extends Iterable<? extends R>> f26917k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final int f26918l;
 
-    /* compiled from: OnSubscribeFlattenIterable.java */
-    /* renamed from: j0.l.a.n$a */
+    /* JADX INFO: renamed from: j0.l.a.n$a */
+    /* JADX INFO: compiled from: OnSubscribeFlattenIterable.java */
     public static final class a<T, R> extends Subscriber<T> {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public final Subscriber<? super R> f26919j;
 
-        /* renamed from: k */
+        /* JADX INFO: renamed from: k */
         public final Func1<? super T, ? extends Iterable<? extends R>> f26920k;
 
-        /* renamed from: l */
+        /* JADX INFO: renamed from: l */
         public final long f26921l;
 
-        /* renamed from: m */
+        /* JADX INFO: renamed from: m */
         public final Queue<Object> f26922m;
 
-        /* renamed from: q */
+        /* JADX INFO: renamed from: q */
         public volatile boolean f26926q;
 
-        /* renamed from: r */
+        /* JADX INFO: renamed from: r */
         public long f26927r;
 
-        /* renamed from: s */
+        /* JADX INFO: renamed from: s */
         public Iterator<? extends R> f26928s;
 
-        /* renamed from: n */
+        /* JADX INFO: renamed from: n */
         public final AtomicReference<Throwable> f26923n = new AtomicReference<>();
 
-        /* renamed from: p */
+        /* JADX INFO: renamed from: p */
         public final AtomicInteger f26925p = new AtomicInteger();
 
-        /* renamed from: o */
+        /* JADX INFO: renamed from: o */
         public final AtomicLong f26924o = new AtomicLong();
 
         public a(Subscriber<? super R> subscriber, Func1<? super T, ? extends Iterable<? extends R>> func1, int i) {
@@ -85,7 +85,7 @@ public final class OnSubscribeFlattenIterable2<T, R> implements Observable.Inter
             request(i);
         }
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public boolean m10772a(boolean z2, boolean z3, Subscriber<?> subscriber, Queue<?> queue) {
             if (subscriber.isUnsubscribed()) {
                 queue.clear();
@@ -111,7 +111,7 @@ public final class OnSubscribeFlattenIterable2<T, R> implements Observable.Inter
         }
 
         /* JADX WARN: Removed duplicated region for block: B:26:0x0063  */
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         /*
             Code decompiled incorrectly, please refer to instructions dump.
         */
@@ -241,14 +241,14 @@ public final class OnSubscribeFlattenIterable2<T, R> implements Observable.Inter
         }
     }
 
-    /* compiled from: OnSubscribeFlattenIterable.java */
-    /* renamed from: j0.l.a.n$b */
+    /* JADX INFO: renamed from: j0.l.a.n$b */
+    /* JADX INFO: compiled from: OnSubscribeFlattenIterable.java */
     public static final class b<T, R> implements Observable.InterfaceC13005a<R> {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public final T f26929j;
 
-        /* renamed from: k */
+        /* JADX INFO: renamed from: k */
         public final Func1<? super T, ? extends Iterable<? extends R>> f26930k;
 
         public b(T t, Func1<? super T, ? extends Iterable<? extends R>> func1) {

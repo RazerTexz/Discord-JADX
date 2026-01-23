@@ -5,7 +5,6 @@ import android.app.Notification;
 import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
-import android.content.res.Resources;
 import android.graphics.Rect;
 import android.view.View;
 import android.view.ViewGroup;
@@ -44,8 +43,8 @@ import p507d0.p592z.p594d.Lambda;
 import p637j0.p641k.Func1;
 import p658rx.Observable;
 
-/* compiled from: DiscordOverlayService.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: DiscordOverlayService.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class DiscordOverlayService extends OverlayService {
     private static final String ACTION_CLOSE = "com.discord.actions.OVERLAY_CLOSE";
     private static final String ACTION_OPEN = "com.discord.actions.OVERLAY_OPEN";
@@ -53,11 +52,11 @@ public final class DiscordOverlayService extends OverlayService {
     private static final String ACTION_VOICE = "com.discord.actions.OVERLAY_VOICE";
     private static final int CLOSE_INTENT_REQ_CODE = 1010;
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private static final String LOG_TAG = "OverlayService";
 
-    /* compiled from: DiscordOverlayService.kt */
+    /* JADX INFO: compiled from: DiscordOverlayService.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -120,8 +119,8 @@ public final class DiscordOverlayService extends OverlayService {
         }
     }
 
-    /* compiled from: DiscordOverlayService.kt */
-    /* renamed from: com.discord.utilities.voice.DiscordOverlayService$createMenu$1 */
+    /* JADX INFO: renamed from: com.discord.utilities.voice.DiscordOverlayService$createMenu$1 */
+    /* JADX INFO: compiled from: DiscordOverlayService.kt */
     public static final class C70311 extends Lambda implements Function1<OverlayDialog, Unit> {
         public C70311() {
             super(1);
@@ -133,15 +132,15 @@ public final class DiscordOverlayService extends OverlayService {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(OverlayDialog overlayDialog) {
             Intrinsics3.checkNotNullParameter(overlayDialog, "it");
             DiscordOverlayService.access$getOverlayManager$p(DiscordOverlayService.this).m8433d(overlayDialog);
         }
     }
 
-    /* compiled from: DiscordOverlayService.kt */
-    /* renamed from: com.discord.utilities.voice.DiscordOverlayService$createVoiceBubble$1 */
+    /* JADX INFO: renamed from: com.discord.utilities.voice.DiscordOverlayService$createVoiceBubble$1 */
+    /* JADX INFO: compiled from: DiscordOverlayService.kt */
     public static final class C70321 extends Lambda implements Function1<OverlayBubbleWrap, OverlayBubbleWrap> {
         public final /* synthetic */ String $anchorTag;
 
@@ -156,7 +155,7 @@ public final class DiscordOverlayService extends OverlayService {
             return invoke2(overlayBubbleWrap);
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final OverlayBubbleWrap invoke2(OverlayBubbleWrap overlayBubbleWrap) {
             Rect rect;
             SimpleDraweeView imageView$app_productionGoogleRelease;
@@ -188,8 +187,8 @@ public final class DiscordOverlayService extends OverlayService {
         }
     }
 
-    /* compiled from: DiscordOverlayService.kt */
-    /* renamed from: com.discord.utilities.voice.DiscordOverlayService$createVoiceSelector$1 */
+    /* JADX INFO: renamed from: com.discord.utilities.voice.DiscordOverlayService$createVoiceSelector$1 */
+    /* JADX INFO: compiled from: DiscordOverlayService.kt */
     public static final class C70331 extends Lambda implements Function1<OverlayDialog, Unit> {
         public C70331() {
             super(1);
@@ -201,15 +200,15 @@ public final class DiscordOverlayService extends OverlayService {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(OverlayDialog overlayDialog) {
             Intrinsics3.checkNotNullParameter(overlayDialog, "it");
             DiscordOverlayService.access$getOverlayManager$p(DiscordOverlayService.this).m8433d(overlayDialog);
         }
     }
 
-    /* compiled from: DiscordOverlayService.kt */
-    /* renamed from: com.discord.utilities.voice.DiscordOverlayService$onCreate$1 */
+    /* JADX INFO: renamed from: com.discord.utilities.voice.DiscordOverlayService$onCreate$1 */
+    /* JADX INFO: compiled from: DiscordOverlayService.kt */
     public static final class C70341 extends Lambda implements Function1<View, Unit> {
         public static final C70341 INSTANCE = new C70341();
 
@@ -223,7 +222,7 @@ public final class DiscordOverlayService extends OverlayService {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(View view) {
             Intrinsics3.checkNotNullParameter(view, "it");
             if (view instanceof OverlayVoiceBubble2) {
@@ -232,8 +231,8 @@ public final class DiscordOverlayService extends OverlayService {
         }
     }
 
-    /* compiled from: DiscordOverlayService.kt */
-    /* renamed from: com.discord.utilities.voice.DiscordOverlayService$onCreate$2 */
+    /* JADX INFO: renamed from: com.discord.utilities.voice.DiscordOverlayService$onCreate$2 */
+    /* JADX INFO: compiled from: DiscordOverlayService.kt */
     public static final class C70352 extends Lambda implements Function1<View, Unit> {
         public C70352() {
             super(1);
@@ -245,7 +244,7 @@ public final class DiscordOverlayService extends OverlayService {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(View view) {
             Intrinsics3.checkNotNullParameter(view, "it");
             Logger.v$default(AppLog.f14950g, DiscordOverlayService.LOG_TAG, "removeView: " + view, null, 4, null);
@@ -258,8 +257,8 @@ public final class DiscordOverlayService extends OverlayService {
         }
     }
 
-    /* compiled from: DiscordOverlayService.kt */
-    /* renamed from: com.discord.utilities.voice.DiscordOverlayService$onStartCommand$1 */
+    /* JADX INFO: renamed from: com.discord.utilities.voice.DiscordOverlayService$onStartCommand$1 */
+    /* JADX INFO: compiled from: DiscordOverlayService.kt */
     public static final class C70361<T, R> implements Func1<Boolean, Boolean> {
         public static final C70361 INSTANCE = new C70361();
 
@@ -268,14 +267,14 @@ public final class DiscordOverlayService extends OverlayService {
             return call2(bool);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final Boolean call2(Boolean bool) {
             return Boolean.valueOf(Intrinsics3.areEqual(bool, Boolean.TRUE));
         }
     }
 
-    /* compiled from: DiscordOverlayService.kt */
-    /* renamed from: com.discord.utilities.voice.DiscordOverlayService$onStartCommand$2 */
+    /* JADX INFO: renamed from: com.discord.utilities.voice.DiscordOverlayService$onStartCommand$2 */
+    /* JADX INFO: compiled from: DiscordOverlayService.kt */
     public static final class C70372 extends Lambda implements Function1<Boolean, Unit> {
         public final /* synthetic */ Intent $intent;
         public final /* synthetic */ int $startId;
@@ -293,7 +292,7 @@ public final class DiscordOverlayService extends OverlayService {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Boolean bool) {
             if (!StoreStream.INSTANCE.getUserSettings().getIsMobileOverlayEnabled()) {
                 DiscordOverlayService.this.stopForeground(true);
@@ -334,7 +333,7 @@ public final class DiscordOverlayService extends OverlayService {
         return overlayMenuBubbleDialog;
     }
 
-    private final OverlayBubbleWrap createVoiceBubble() throws Resources.NotFoundException {
+    private final OverlayBubbleWrap createVoiceBubble() {
         int dimensionPixelOffset = getResources().getDimensionPixelOffset(C5419R.dimen.overlay_safe_margin);
         Context applicationContext = getApplicationContext();
         Intrinsics3.checkNotNullExpressionValue(applicationContext, "applicationContext");

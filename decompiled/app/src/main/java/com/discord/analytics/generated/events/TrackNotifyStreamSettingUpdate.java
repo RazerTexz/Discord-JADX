@@ -6,8 +6,8 @@ import com.discord.api.science.AnalyticsSchema;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: TrackNotifyStreamSettingUpdate.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: TrackNotifyStreamSettingUpdate.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class TrackNotifyStreamSettingUpdate implements AnalyticsSchema, TrackBase2 {
     private TrackBase trackBase;
     private final Boolean value = null;
@@ -15,7 +15,7 @@ public final /* data */ class TrackNotifyStreamSettingUpdate implements Analytic
     private final transient String analyticsSchemaTypeName = "notify_stream_setting_update";
 
     @Override // com.discord.api.science.AnalyticsSchema
-    /* renamed from: d, reason: from getter */
+    /* JADX INFO: renamed from: d, reason: from getter */
     public String getAnalyticsSchemaTypeName() {
         return this.analyticsSchemaTypeName;
     }

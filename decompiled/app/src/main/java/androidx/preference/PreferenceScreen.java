@@ -6,7 +6,7 @@ import androidx.annotation.RestrictTo;
 import androidx.core.content.res.TypedArrayUtils;
 import androidx.preference.PreferenceManager;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public final class PreferenceScreen extends PreferenceGroup {
     private boolean mShouldUseGeneratedIds;
 

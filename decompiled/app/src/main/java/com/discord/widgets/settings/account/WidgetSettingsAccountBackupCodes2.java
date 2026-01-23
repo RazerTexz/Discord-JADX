@@ -9,9 +9,9 @@ import com.discord.widgets.settings.account.WidgetSettingsAccountBackupCodes;
 import p007b.p008a.p018d.AppToast;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: WidgetSettingsAccountBackupCodes.kt */
-/* renamed from: com.discord.widgets.settings.account.WidgetSettingsAccountBackupCodes$Adapter$BackupCodeViewHolder$onConfigure$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.settings.account.WidgetSettingsAccountBackupCodes$Adapter$BackupCodeViewHolder$onConfigure$1, reason: use source file name */
+/* JADX INFO: compiled from: WidgetSettingsAccountBackupCodes.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetSettingsAccountBackupCodes2 implements View.OnClickListener {
     public final /* synthetic */ MGRecyclerDataPayload $data;
 

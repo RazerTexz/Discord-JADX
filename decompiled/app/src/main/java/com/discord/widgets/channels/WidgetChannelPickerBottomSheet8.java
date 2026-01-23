@@ -3,9 +3,9 @@ package com.discord.widgets.channels;
 import kotlin.jvm.functions.Function0;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetChannelPickerBottomSheet.kt */
-/* renamed from: com.discord.widgets.channels.WidgetChannelPickerBottomSheet$viewModel$2, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.channels.WidgetChannelPickerBottomSheet$viewModel$2, reason: use source file name */
+/* JADX INFO: compiled from: WidgetChannelPickerBottomSheet.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetChannelPickerBottomSheet8 extends Lambda implements Function0<WidgetChannelPickerBottomSheetViewModel> {
     public final /* synthetic */ WidgetChannelPickerBottomSheet this$0;
 

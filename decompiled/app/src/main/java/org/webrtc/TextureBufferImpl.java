@@ -7,11 +7,11 @@ import org.webrtc.VideoFrame;
 import p617h0.p628c.CallableC12451a0;
 import p617h0.p628c.RunnableC12496z;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public class TextureBufferImpl implements VideoFrame.TextureBuffer {
     private final int height;
 
-    /* renamed from: id */
+    /* JADX INFO: renamed from: id */
     private final int f27617id;
     private final RefCountDelegate refCountDelegate;
     private final RefCountMonitor refCountMonitor;
@@ -23,7 +23,7 @@ public class TextureBufferImpl implements VideoFrame.TextureBuffer {
     private final int width;
     private final YuvConverter yuvConverter;
 
-    /* renamed from: org.webrtc.TextureBufferImpl$1 */
+    /* JADX INFO: renamed from: org.webrtc.TextureBufferImpl$1 */
     public class C129891 implements RefCountMonitor {
         public final /* synthetic */ Runnable val$releaseCallback;
 
@@ -48,7 +48,7 @@ public class TextureBufferImpl implements VideoFrame.TextureBuffer {
         }
     }
 
-    /* renamed from: org.webrtc.TextureBufferImpl$2 */
+    /* JADX INFO: renamed from: org.webrtc.TextureBufferImpl$2 */
     public class C129902 implements RefCountMonitor {
         public C129902() {
         }
@@ -85,7 +85,7 @@ public class TextureBufferImpl implements VideoFrame.TextureBuffer {
         return textureBufferImpl.refCountMonitor;
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public /* synthetic */ VideoFrame.I420Buffer m11048a() {
         return this.yuvConverter.convert(this);
     }

@@ -7,36 +7,36 @@ import java.util.Arrays;
 import p007b.p085c.p086a.p087a0.AnimatableValueParser;
 import p007b.p225i.p226a.p288f.p313h.p324k.C3574s;
 
-/* compiled from: com.google.firebase:firebase-appindexing@@19.1.0 */
-/* loaded from: classes3.dex */
+/* JADX INFO: compiled from: com.google.firebase:firebase-appindexing@@19.1.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public final class zzt extends AbstractSafeParcelable {
     public static final Parcelable.Creator<zzt> CREATOR = new C3574s();
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final String f20602j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final String f20603k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final boolean f20604l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public final int f20605m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public final boolean f20606n;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public final String f20607o;
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public final zzm[] f20608p;
 
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     public final String f20609q;
 
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     public final zzu f20610r;
 
     public zzt(String str, String str2, boolean z2, int i, boolean z3, String str3, zzm[] zzmVarArr, String str4, zzu zzuVar) {

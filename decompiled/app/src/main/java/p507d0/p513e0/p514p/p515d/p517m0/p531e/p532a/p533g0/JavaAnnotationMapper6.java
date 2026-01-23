@@ -22,19 +22,19 @@ import p507d0.p592z.p594d.Lambda;
 import p507d0.p592z.p594d.PropertyReference1Impl;
 import p507d0.p592z.p594d.Reflection2;
 
-/* compiled from: JavaAnnotationMapper.kt */
-/* renamed from: d0.e0.p.d.m0.e.a.g0.i, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.e.a.g0.i, reason: use source file name */
+/* JADX INFO: compiled from: JavaAnnotationMapper.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class JavaAnnotationMapper6 extends JavaAnnotationMapper {
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public static final /* synthetic */ KProperty<Object>[] f23247g = {Reflection2.property1(new PropertyReference1Impl(Reflection2.getOrCreateKotlinClass(JavaAnnotationMapper6.class), "allValueArguments", "getAllValueArguments()Ljava/util/Map;"))};
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public final storage5 f23248h;
 
-    /* compiled from: JavaAnnotationMapper.kt */
-    /* renamed from: d0.e0.p.d.m0.e.a.g0.i$a */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.e.a.g0.i$a */
+    /* JADX INFO: compiled from: JavaAnnotationMapper.kt */
     public static final class a extends Lambda implements Function0<Map<Name, ? extends AbstractC11815g<? extends Object>>> {
         public a() {
             super(0);
@@ -46,7 +46,7 @@ public final class JavaAnnotationMapper6 extends JavaAnnotationMapper {
         }
 
         @Override // kotlin.jvm.functions.Function0
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final Map<Name, ? extends AbstractC11815g<? extends Object>> invoke2() {
             annotationArguments annotationarguments = JavaAnnotationMapper6.this.f23227e;
             AbstractC11815g<?> abstractC11815gMapJavaTargetArguments$descriptors_jvm = annotationarguments instanceof annotationArguments3 ? JavaAnnotationMapper3.f23236a.mapJavaTargetArguments$descriptors_jvm(((annotationArguments3) annotationarguments).getElements()) : annotationarguments instanceof annotationArguments5 ? JavaAnnotationMapper3.f23236a.mapJavaTargetArguments$descriptors_jvm(CollectionsJVM.listOf(annotationarguments)) : null;

@@ -5,12 +5,12 @@ import p007b.p225i.p226a.p242c.p257e3.DefaultBandwidthMeter;
 import p007b.p225i.p355b.p356a.Supplier2;
 import p007b.p225i.p355b.p357b.ImmutableList2;
 
-/* compiled from: lambda */
-/* renamed from: b.i.a.c.e */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.e */
+/* JADX INFO: compiled from: lambda */
+/* JADX INFO: loaded from: classes3.dex */
 public final /* synthetic */ class C2675e implements Supplier2 {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final /* synthetic */ Context f6410j;
 
     public /* synthetic */ C2675e(Context context) {

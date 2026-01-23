@@ -3,12 +3,12 @@ package com.discord.api.fingerprint;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: FingerprintResponse.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: FingerprintResponse.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class FingerprintResponse {
     private final String fingerprint;
 
-    /* renamed from: a, reason: from getter */
+    /* JADX INFO: renamed from: a, reason: from getter */
     public final String getFingerprint() {
         return this.fingerprint;
     }

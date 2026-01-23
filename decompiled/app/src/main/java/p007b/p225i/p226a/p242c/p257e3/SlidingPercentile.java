@@ -3,46 +3,46 @@ package p007b.p225i.p226a.p242c.p257e3;
 import java.util.ArrayList;
 import java.util.Collections;
 
-/* compiled from: SlidingPercentile.java */
-/* renamed from: b.i.a.c.e3.x, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.e3.x, reason: use source file name */
+/* JADX INFO: compiled from: SlidingPercentile.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class SlidingPercentile {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final /* synthetic */ int f6630a = 0;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final int f6631b;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public int f6635f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public int f6636g;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public int f6637h;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final b[] f6633d = new b[5];
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final ArrayList<b> f6632c = new ArrayList<>();
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public int f6634e = -1;
 
-    /* compiled from: SlidingPercentile.java */
-    /* renamed from: b.i.a.c.e3.x$b */
+    /* JADX INFO: renamed from: b.i.a.c.e3.x$b */
+    /* JADX INFO: compiled from: SlidingPercentile.java */
     public static class b {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public int f6638a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public int f6639b;
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public float f6640c;
 
         public b() {
@@ -56,7 +56,7 @@ public class SlidingPercentile {
         this.f6631b = i;
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public void m2875a(int i, float f) {
         b bVar;
         if (this.f6634e != 1) {
@@ -104,7 +104,7 @@ public class SlidingPercentile {
         }
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public float m2876b(float f) {
         if (this.f6634e != 0) {
             Collections.sort(this.f6632c, C2701c.f6520j);

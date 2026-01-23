@@ -15,8 +15,8 @@ import com.discord.utilities.dimen.DimenUtils;
 import kotlin.jvm.internal.DefaultConstructorMarker;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: SpaceBetweenItemDecoration.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: SpaceBetweenItemDecoration.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class SpaceBetweenItemDecoration extends DividerItemDecoration {
     private final RecyclerView.Adapter<?> adapter;
     private final int color;

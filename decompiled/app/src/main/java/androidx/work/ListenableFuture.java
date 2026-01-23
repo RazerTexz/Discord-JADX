@@ -6,9 +6,9 @@ import p007b.p225i.p355b.p359d.p360a.ListenableFuture8;
 import p507d0.Result2;
 import p507d0.Result3;
 
-/* compiled from: ListenableFuture.kt */
-/* renamed from: androidx.work.CoroutineWorker$await$$inlined$suspendCancellableCoroutine$lambda$1, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: androidx.work.CoroutineWorker$await$$inlined$suspendCancellableCoroutine$lambda$1, reason: use source file name */
+/* JADX INFO: compiled from: ListenableFuture.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class ListenableFuture implements Runnable {
     public final /* synthetic */ CancellableContinuation $cancellableContinuation;
     public final /* synthetic */ ListenableFuture8 $this_await$inlined;

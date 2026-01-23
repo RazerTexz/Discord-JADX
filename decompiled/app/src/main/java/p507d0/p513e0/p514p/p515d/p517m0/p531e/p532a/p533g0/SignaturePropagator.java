@@ -9,18 +9,18 @@ import p507d0.p513e0.p514p.p515d.p517m0.p521c.ValueParameterDescriptor;
 import p507d0.p513e0.p514p.p515d.p517m0.p531e.p532a.p539k0.InterfaceC11585r;
 import p507d0.p513e0.p514p.p515d.p517m0.p567n.KotlinType;
 
-/* compiled from: SignaturePropagator.java */
-/* renamed from: d0.e0.p.d.m0.e.a.g0.j, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.e.a.g0.j, reason: use source file name */
+/* JADX INFO: compiled from: SignaturePropagator.java */
+/* JADX INFO: loaded from: classes3.dex */
 public interface SignaturePropagator {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final SignaturePropagator f23249a = new a();
 
-    /* compiled from: SignaturePropagator.java */
-    /* renamed from: d0.e0.p.d.m0.e.a.g0.j$a */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.e.a.g0.j$a */
+    /* JADX INFO: compiled from: SignaturePropagator.java */
     public static class a implements SignaturePropagator {
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public static /* synthetic */ void m9454a(int i) {
             Object[] objArr = new Object[3];
             switch (i) {
@@ -92,26 +92,26 @@ public interface SignaturePropagator {
         }
     }
 
-    /* compiled from: SignaturePropagator.java */
-    /* renamed from: d0.e0.p.d.m0.e.a.g0.j$b */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.e.a.g0.j$b */
+    /* JADX INFO: compiled from: SignaturePropagator.java */
     public static class b {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final KotlinType f23250a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final KotlinType f23251b;
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public final List<ValueParameterDescriptor> f23252c;
 
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         public final List<TypeParameterDescriptor> f23253d;
 
-        /* renamed from: e */
+        /* JADX INFO: renamed from: e */
         public final List<String> f23254e;
 
-        /* renamed from: f */
+        /* JADX INFO: renamed from: f */
         public final boolean f23255f;
 
         public b(KotlinType kotlinType, KotlinType kotlinType2, List<ValueParameterDescriptor> list, List<TypeParameterDescriptor> list2, List<String> list3, boolean z2) {
@@ -139,7 +139,7 @@ public interface SignaturePropagator {
             this.f23255f = z2;
         }
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public static /* synthetic */ void m9455a(int i) {
             String str = (i == 4 || i == 5 || i == 6 || i == 7) ? "@NotNull method %s.%s must not return null" : "Argument for @NotNull parameter '%s' of %s.%s must not be null";
             Object[] objArr = new Object[(i == 4 || i == 5 || i == 6 || i == 7) ? 2 : 3];

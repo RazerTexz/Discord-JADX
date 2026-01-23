@@ -9,8 +9,8 @@ import androidx.annotation.ColorInt;
 import androidx.core.app.NotificationCompat;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: BlockBackgroundSpan.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: BlockBackgroundSpan.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class BlockBackgroundSpan implements LineBackgroundSpan {
     private final Paint fillPaint;
     private final int leftMargin;

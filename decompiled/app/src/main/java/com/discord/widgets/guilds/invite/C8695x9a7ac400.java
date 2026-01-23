@@ -8,9 +8,9 @@ import kotlin.jvm.functions.Function1;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetGuildInviteShareSheet.kt */
-/* renamed from: com.discord.widgets.guilds.invite.WidgetGuildInviteShareSheet$Companion$enqueueNoticeForHomeTab$notice$1 */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.guilds.invite.WidgetGuildInviteShareSheet$Companion$enqueueNoticeForHomeTab$notice$1 */
+/* JADX INFO: compiled from: WidgetGuildInviteShareSheet.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class C8695x9a7ac400 extends Lambda implements Function1<FragmentActivity, Boolean> {
     public final /* synthetic */ Long $channelId;
     public final /* synthetic */ long $guildId;
@@ -33,7 +33,7 @@ public final class C8695x9a7ac400 extends Lambda implements Function1<FragmentAc
         return Boolean.valueOf(invoke2(fragmentActivity));
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final boolean invoke2(FragmentActivity fragmentActivity) {
         Intrinsics3.checkNotNullParameter(fragmentActivity, "fragmentActivity");
         WidgetGuildInviteShareSheet.Companion companion = WidgetGuildInviteShareSheet.INSTANCE;

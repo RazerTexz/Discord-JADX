@@ -8,12 +8,12 @@ import p507d0.p513e0.p514p.p515d.p517m0.p567n.p568l1.KotlinTypeRefiner;
 import p507d0.p513e0.p514p.p515d.p517m0.p567n.p568l1.NewKotlinTypeChecker5;
 import p507d0.p513e0.p514p.p515d.p517m0.p567n.p570n1.InterfaceC11979h;
 
-/* compiled from: KotlinType.kt */
-/* renamed from: d0.e0.p.d.m0.n.c0, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.n.c0, reason: use source file name */
+/* JADX INFO: compiled from: KotlinType.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public abstract class KotlinType implements Annotations3, InterfaceC11979h {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public int f24744j;
 
     public KotlinType() {

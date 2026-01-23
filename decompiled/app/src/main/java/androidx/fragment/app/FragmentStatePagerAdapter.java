@@ -13,8 +13,8 @@ import androidx.viewpager.widget.PagerAdapter;
 import java.util.ArrayList;
 import p007b.p100d.p104b.p105a.outline;
 
+/* JADX INFO: loaded from: classes.dex */
 @Deprecated
-/* loaded from: classes.dex */
 public abstract class FragmentStatePagerAdapter extends PagerAdapter {
     public static final int BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT = 1;
 
@@ -107,7 +107,7 @@ public abstract class FragmentStatePagerAdapter extends PagerAdapter {
     }
 
     @Override // androidx.viewpager.widget.PagerAdapter
-    public void restoreState(@Nullable Parcelable parcelable, @Nullable ClassLoader classLoader) throws NumberFormatException {
+    public void restoreState(@Nullable Parcelable parcelable, @Nullable ClassLoader classLoader) {
         if (parcelable != null) {
             Bundle bundle = (Bundle) parcelable;
             bundle.setClassLoader(classLoader);

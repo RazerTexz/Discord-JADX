@@ -6,15 +6,15 @@ import com.discord.analytics.generated.traits.TrackLocationMetadata;
 import com.discord.analytics.generated.traits.TrackLocationMetadata2;
 import com.discord.api.science.AnalyticsSchema;
 
-/* compiled from: TrackMultiAccountSwitchAttempt.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: TrackMultiAccountSwitchAttempt.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class TrackMultiAccountSwitchAttempt implements AnalyticsSchema, TrackBase2, TrackLocationMetadata2 {
     private final transient String analyticsSchemaTypeName = "multi_account_switch_attempt";
     private TrackBase trackBase;
     private TrackLocationMetadata trackLocationMetadata;
 
     @Override // com.discord.api.science.AnalyticsSchema
-    /* renamed from: d, reason: from getter */
+    /* JADX INFO: renamed from: d, reason: from getter */
     public String getAnalyticsSchemaTypeName() {
         return this.analyticsSchemaTypeName;
     }

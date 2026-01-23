@@ -1,14 +1,14 @@
 package p007b.p225i.p414e.p430r.p431d.p432k;
 
-/* compiled from: ModulusPoly.java */
-/* renamed from: b.i.e.r.d.k.c, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.e.r.d.k.c, reason: use source file name */
+/* JADX INFO: compiled from: ModulusPoly.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class ModulusPoly {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final ModulusGF f13502a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final int[] f13503b;
 
     public ModulusPoly(ModulusGF modulusGF, int[] iArr) {
@@ -34,7 +34,7 @@ public final class ModulusPoly {
         System.arraycopy(iArr, i, iArr2, 0, iArr2.length);
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public ModulusPoly m7071a(ModulusPoly modulusPoly) {
         if (!this.f13502a.equals(modulusPoly.f13502a)) {
             throw new IllegalArgumentException("ModulusPolys do not have same ModulusGF field");
@@ -60,7 +60,7 @@ public final class ModulusPoly {
         return new ModulusPoly(this.f13502a, iArr3);
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public int m7072b(int i) {
         if (i == 0) {
             return m7073c(0);
@@ -82,22 +82,22 @@ public final class ModulusPoly {
         return iM7066a2;
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public int m7073c(int i) {
         return this.f13503b[(r0.length - 1) - i];
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public int m7074d() {
         return this.f13503b.length - 1;
     }
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public boolean m7075e() {
         return this.f13503b[0] == 0;
     }
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public ModulusPoly m7076f(int i) {
         if (i == 0) {
             return this.f13502a.f13500d;
@@ -113,7 +113,7 @@ public final class ModulusPoly {
         return new ModulusPoly(this.f13502a, iArr);
     }
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public ModulusPoly m7077g(ModulusPoly modulusPoly) {
         if (!this.f13502a.equals(modulusPoly.f13502a)) {
             throw new IllegalArgumentException("ModulusPolys do not have same ModulusGF field");
@@ -137,7 +137,7 @@ public final class ModulusPoly {
         return new ModulusPoly(this.f13502a, iArr3);
     }
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public ModulusPoly m7078h() {
         int length = this.f13503b.length;
         int[] iArr = new int[length];
@@ -147,7 +147,7 @@ public final class ModulusPoly {
         return new ModulusPoly(this.f13502a, iArr);
     }
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public ModulusPoly m7079i(ModulusPoly modulusPoly) {
         if (this.f13502a.equals(modulusPoly.f13502a)) {
             return modulusPoly.m7075e() ? this : m7071a(modulusPoly.m7078h());

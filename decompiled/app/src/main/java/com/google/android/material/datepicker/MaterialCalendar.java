@@ -1,7 +1,6 @@
 package com.google.android.material.datepicker;
 
 import android.content.Context;
-import android.content.res.Resources;
 import android.graphics.Canvas;
 import android.os.Bundle;
 import android.view.ContextThemeWrapper;
@@ -33,8 +32,8 @@ import p007b.p225i.p226a.p341g.p345d.PickerFragment;
 import p007b.p225i.p226a.p341g.p345d.SmoothCalendarLayoutManager;
 import p007b.p225i.p226a.p341g.p345d.UtcDates;
 
+/* JADX INFO: loaded from: classes3.dex */
 @RestrictTo({RestrictTo.Scope.LIBRARY_GROUP})
-/* loaded from: classes3.dex */
 public final class MaterialCalendar<S> extends PickerFragment<S> {
     private static final String CALENDAR_CONSTRAINTS_KEY = "CALENDAR_CONSTRAINTS_KEY";
     private static final String CURRENT_MONTH_KEY = "CURRENT_MONTH_KEY";
@@ -72,10 +71,10 @@ public final class MaterialCalendar<S> extends PickerFragment<S> {
     @VisibleForTesting
     public static final Object SELECTOR_TOGGLE_TAG = "SELECTOR_TOGGLE_TAG";
 
-    /* renamed from: com.google.android.material.datepicker.MaterialCalendar$a */
+    /* JADX INFO: renamed from: com.google.android.material.datepicker.MaterialCalendar$a */
     public class RunnableC10885a implements Runnable {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public final /* synthetic */ int f20957j;
 
         public RunnableC10885a(int i) {
@@ -88,7 +87,7 @@ public final class MaterialCalendar<S> extends PickerFragment<S> {
         }
     }
 
-    /* renamed from: com.google.android.material.datepicker.MaterialCalendar$b */
+    /* JADX INFO: renamed from: com.google.android.material.datepicker.MaterialCalendar$b */
     public class C10886b extends AccessibilityDelegateCompat {
         public C10886b(MaterialCalendar materialCalendar) {
         }
@@ -100,10 +99,10 @@ public final class MaterialCalendar<S> extends PickerFragment<S> {
         }
     }
 
-    /* renamed from: com.google.android.material.datepicker.MaterialCalendar$c */
+    /* JADX INFO: renamed from: com.google.android.material.datepicker.MaterialCalendar$c */
     public class C10887c extends SmoothCalendarLayoutManager {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public final /* synthetic */ int f20959j;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -124,19 +123,19 @@ public final class MaterialCalendar<S> extends PickerFragment<S> {
         }
     }
 
-    /* renamed from: com.google.android.material.datepicker.MaterialCalendar$d */
+    /* JADX INFO: renamed from: com.google.android.material.datepicker.MaterialCalendar$d */
     public class C10888d implements InterfaceC10896l {
         public C10888d() {
         }
     }
 
-    /* renamed from: com.google.android.material.datepicker.MaterialCalendar$e */
+    /* JADX INFO: renamed from: com.google.android.material.datepicker.MaterialCalendar$e */
     public class C10889e extends RecyclerView.ItemDecoration {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final Calendar f20962a = UtcDates.m6076i();
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final Calendar f20963b = UtcDates.m6076i();
 
         public C10889e() {
@@ -172,7 +171,7 @@ public final class MaterialCalendar<S> extends PickerFragment<S> {
         }
     }
 
-    /* renamed from: com.google.android.material.datepicker.MaterialCalendar$f */
+    /* JADX INFO: renamed from: com.google.android.material.datepicker.MaterialCalendar$f */
     public class C10890f extends AccessibilityDelegateCompat {
         public C10890f() {
         }
@@ -184,13 +183,13 @@ public final class MaterialCalendar<S> extends PickerFragment<S> {
         }
     }
 
-    /* renamed from: com.google.android.material.datepicker.MaterialCalendar$g */
+    /* JADX INFO: renamed from: com.google.android.material.datepicker.MaterialCalendar$g */
     public class C10891g extends RecyclerView.OnScrollListener {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final /* synthetic */ MonthsPagerAdapter f20966a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final /* synthetic */ MaterialButton f20967b;
 
         public C10891g(MonthsPagerAdapter monthsPagerAdapter, MaterialButton materialButton) {
@@ -215,7 +214,7 @@ public final class MaterialCalendar<S> extends PickerFragment<S> {
         }
     }
 
-    /* renamed from: com.google.android.material.datepicker.MaterialCalendar$h */
+    /* JADX INFO: renamed from: com.google.android.material.datepicker.MaterialCalendar$h */
     public class ViewOnClickListenerC10892h implements View.OnClickListener {
         public ViewOnClickListenerC10892h() {
         }
@@ -226,10 +225,10 @@ public final class MaterialCalendar<S> extends PickerFragment<S> {
         }
     }
 
-    /* renamed from: com.google.android.material.datepicker.MaterialCalendar$i */
+    /* JADX INFO: renamed from: com.google.android.material.datepicker.MaterialCalendar$i */
     public class ViewOnClickListenerC10893i implements View.OnClickListener {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public final /* synthetic */ MonthsPagerAdapter f20970j;
 
         public ViewOnClickListenerC10893i(MonthsPagerAdapter monthsPagerAdapter) {
@@ -245,10 +244,10 @@ public final class MaterialCalendar<S> extends PickerFragment<S> {
         }
     }
 
-    /* renamed from: com.google.android.material.datepicker.MaterialCalendar$j */
+    /* JADX INFO: renamed from: com.google.android.material.datepicker.MaterialCalendar$j */
     public class ViewOnClickListenerC10894j implements View.OnClickListener {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public final /* synthetic */ MonthsPagerAdapter f20972j;
 
         public ViewOnClickListenerC10894j(MonthsPagerAdapter monthsPagerAdapter) {
@@ -264,13 +263,13 @@ public final class MaterialCalendar<S> extends PickerFragment<S> {
         }
     }
 
-    /* renamed from: com.google.android.material.datepicker.MaterialCalendar$k */
+    /* JADX INFO: renamed from: com.google.android.material.datepicker.MaterialCalendar$k */
     public enum EnumC10895k {
         DAY,
         YEAR
     }
 
-    /* renamed from: com.google.android.material.datepicker.MaterialCalendar$l */
+    /* JADX INFO: renamed from: com.google.android.material.datepicker.MaterialCalendar$l */
     public interface InterfaceC10896l {
     }
 
@@ -391,7 +390,7 @@ public final class MaterialCalendar<S> extends PickerFragment<S> {
 
     @Override // androidx.fragment.app.Fragment
     @NonNull
-    public View onCreateView(@NonNull LayoutInflater layoutInflater, @Nullable ViewGroup viewGroup, @Nullable Bundle bundle) throws IllegalStateException, Resources.NotFoundException {
+    public View onCreateView(@NonNull LayoutInflater layoutInflater, @Nullable ViewGroup viewGroup, @Nullable Bundle bundle) {
         int i;
         int i2;
         ContextThemeWrapper contextThemeWrapper = new ContextThemeWrapper(getContext(), this.themeResId);

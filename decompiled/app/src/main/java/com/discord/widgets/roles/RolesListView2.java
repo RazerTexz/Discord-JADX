@@ -8,9 +8,9 @@ import p007b.p008a.p018d.AppToast;
 import p007b.p008a.p027k.FormatUtils;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: RolesListView.kt */
-/* renamed from: com.discord.widgets.roles.RolesListView$updateView$$inlined$forEach$lambda$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.roles.RolesListView$updateView$$inlined$forEach$lambda$1, reason: use source file name */
+/* JADX INFO: compiled from: RolesListView.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class RolesListView2 implements View.OnClickListener {
     public final /* synthetic */ boolean $developerModeEnabled$inlined;
     public final /* synthetic */ long $guildId$inlined;

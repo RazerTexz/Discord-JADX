@@ -13,64 +13,64 @@ import p007b.p109f.p132g.p142e.DrawableProperties;
 import p007b.p109f.p148h.p149a.p150a.AnimationBackend;
 import p007b.p109f.p148h.p149a.p157e.DropFramesFrameScheduler;
 
-/* compiled from: AnimatedDrawable2.java */
-/* renamed from: b.f.h.a.c.a, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.f.h.a.c.a, reason: use source file name */
+/* JADX INFO: compiled from: AnimatedDrawable2.java */
+/* JADX INFO: loaded from: classes.dex */
 public class AnimatedDrawable2 extends Drawable implements Animatable, DrawableWithCaches {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static final Class<?> f3532j = AnimatedDrawable2.class;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public static final BaseAnimationListener f3533k = new BaseAnimationListener();
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public AnimationBackend f3534l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public DropFramesFrameScheduler f3535m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public volatile boolean f3536n;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public long f3537o;
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public long f3538p;
 
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     public long f3539q;
 
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     public int f3540r;
 
-    /* renamed from: s */
+    /* JADX INFO: renamed from: s */
     public long f3541s;
 
-    /* renamed from: t */
+    /* JADX INFO: renamed from: t */
     public long f3542t;
 
-    /* renamed from: u */
+    /* JADX INFO: renamed from: u */
     public int f3543u;
 
-    /* renamed from: v */
+    /* JADX INFO: renamed from: v */
     public long f3544v;
 
-    /* renamed from: w */
+    /* JADX INFO: renamed from: w */
     public int f3545w;
 
-    /* renamed from: x */
+    /* JADX INFO: renamed from: x */
     public volatile BaseAnimationListener f3546x;
 
-    /* renamed from: y */
+    /* JADX INFO: renamed from: y */
     public DrawableProperties f3547y;
 
-    /* renamed from: z */
+    /* JADX INFO: renamed from: z */
     public final Runnable f3548z;
 
-    /* compiled from: AnimatedDrawable2.java */
-    /* renamed from: b.f.h.a.c.a$a */
+    /* JADX INFO: renamed from: b.f.h.a.c.a$a */
+    /* JADX INFO: compiled from: AnimatedDrawable2.java */
     public class a implements Runnable {
         public a() {
         }
@@ -88,7 +88,7 @@ public class AnimatedDrawable2 extends Drawable implements Animatable, DrawableW
     }
 
     @Override // p007b.p109f.p130f.p131a.DrawableWithCaches
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public void mo1034a() {
         AnimationBackend animationBackend = this.f3534l;
         if (animationBackend != null) {
@@ -138,7 +138,7 @@ public class AnimatedDrawable2 extends Drawable implements Animatable, DrawableW
                     int iMo1142a = dropFramesFrameScheduler2.f3561a.mo1142a();
                     long jMo1144e = 0;
                     for (int i = 0; i < iMo1142a && jMo1144e <= j3; i++) {
-                        jMo1144e += dropFramesFrameScheduler2.f3561a.mo1144e(i);
+                        jMo1144e += (long) dropFramesFrameScheduler2.f3561a.mo1144e(i);
                     }
                     j = (jMo1144e - j3) + j2;
                 } else {

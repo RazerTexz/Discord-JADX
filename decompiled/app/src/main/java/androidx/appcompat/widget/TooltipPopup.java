@@ -17,8 +17,8 @@ import androidx.annotation.RestrictTo;
 import androidx.appcompat.C0051R;
 import androidx.core.view.PointerIconCompat;
 
+/* JADX INFO: loaded from: classes.dex */
 @RestrictTo({RestrictTo.Scope.LIBRARY_GROUP_PREFIX})
-/* loaded from: classes.dex */
 public class TooltipPopup {
     private static final String TAG = "TooltipPopup";
     private final View mContentView;
@@ -49,7 +49,7 @@ public class TooltipPopup {
         layoutParams.flags = 24;
     }
 
-    private void computePosition(View view, int i, int i2, boolean z2, WindowManager.LayoutParams layoutParams) throws Resources.NotFoundException {
+    private void computePosition(View view, int i, int i2, boolean z2, WindowManager.LayoutParams layoutParams) {
         int height;
         int i3;
         layoutParams.token = view.getApplicationWindowToken();
@@ -135,7 +135,7 @@ public class TooltipPopup {
         return this.mContentView.getParent() != null;
     }
 
-    public void show(View view, int i, int i2, boolean z2, CharSequence charSequence) throws Resources.NotFoundException {
+    public void show(View view, int i, int i2, boolean z2, CharSequence charSequence) {
         if (isShowing()) {
             hide();
         }

@@ -4,18 +4,18 @@ import java.io.IOException;
 import p007b.p225i.p226a.p242c.p259f3.ParsableByteArray;
 import p007b.p225i.p226a.p242c.p267x2.ExtractorInput;
 
-/* compiled from: Sniffer.java */
-/* renamed from: b.i.a.c.x2.g0.f, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.x2.g0.f, reason: use source file name */
+/* JADX INFO: compiled from: Sniffer.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class Sniffer {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final ParsableByteArray f8300a = new ParsableByteArray(8);
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public int f8301b;
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final long m3684a(ExtractorInput extractorInput) throws IOException {
         int i = 0;
         extractorInput.mo3652o(this.f8300a.f6793a, 0, 1);

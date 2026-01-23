@@ -7,8 +7,8 @@ import androidx.annotation.RestrictTo;
 import androidx.media.AudioAttributesImpl;
 import java.util.Arrays;
 
+/* JADX INFO: loaded from: classes.dex */
 @RestrictTo({RestrictTo.Scope.LIBRARY})
-/* loaded from: classes.dex */
 public class AudioAttributesImplBase implements AudioAttributesImpl {
 
     @RestrictTo({RestrictTo.Scope.LIBRARY})

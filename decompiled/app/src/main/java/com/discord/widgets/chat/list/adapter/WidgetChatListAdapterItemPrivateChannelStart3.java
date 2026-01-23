@@ -4,9 +4,9 @@ import com.discord.models.guild.Guild;
 import kotlin.jvm.functions.Function0;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetChatListAdapterItemPrivateChannelStart.kt */
-/* renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemPrivateChannelStart$onConfigure$1$2, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemPrivateChannelStart$onConfigure$1$2, reason: use source file name */
+/* JADX INFO: compiled from: WidgetChatListAdapterItemPrivateChannelStart.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetChatListAdapterItemPrivateChannelStart3 extends Lambda implements Function0<String> {
     public final /* synthetic */ Guild $it;
 
@@ -22,7 +22,7 @@ public final class WidgetChatListAdapterItemPrivateChannelStart3 extends Lambda 
     }
 
     @Override // kotlin.jvm.functions.Function0
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final String invoke2() {
         return this.$it.getShortName();
     }

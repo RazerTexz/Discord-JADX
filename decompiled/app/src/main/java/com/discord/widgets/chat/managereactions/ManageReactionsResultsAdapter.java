@@ -22,14 +22,14 @@ import p001a0.p002a.p003a.C0002b;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ManageReactionsResultsAdapter.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: ManageReactionsResultsAdapter.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class ManageReactionsResultsAdapter extends MGRecyclerAdapterSimple<MGRecyclerDataPayload> {
     private static final int VIEW_TYPE_ERROR = 2;
     private static final int VIEW_TYPE_LOADING = 1;
     private static final int VIEW_TYPE_USER = 0;
 
-    /* compiled from: ManageReactionsResultsAdapter.kt */
+    /* JADX INFO: compiled from: ManageReactionsResultsAdapter.kt */
     public static final class ErrorItem implements MGRecyclerDataPayload {
         private final long channelId;
         private final MessageReactionEmoji emoji;
@@ -69,7 +69,7 @@ public final class ManageReactionsResultsAdapter extends MGRecyclerAdapterSimple
         }
     }
 
-    /* compiled from: ManageReactionsResultsAdapter.kt */
+    /* JADX INFO: compiled from: ManageReactionsResultsAdapter.kt */
     public static final class ErrorViewHolder extends MGRecyclerViewHolder<ManageReactionsResultsAdapter, MGRecyclerDataPayload> {
         private final WidgetManageReactionsResultErrorBinding binding;
 
@@ -98,7 +98,7 @@ public final class ManageReactionsResultsAdapter extends MGRecyclerAdapterSimple
             onConfigure2(i, mGRecyclerDataPayload);
         }
 
-        /* renamed from: onConfigure, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: onConfigure, reason: avoid collision after fix types in other method */
         public void onConfigure2(int position, MGRecyclerDataPayload data) {
             Intrinsics3.checkNotNullParameter(data, "data");
             super.onConfigure(position, data);
@@ -106,7 +106,7 @@ public final class ManageReactionsResultsAdapter extends MGRecyclerAdapterSimple
         }
     }
 
-    /* compiled from: ManageReactionsResultsAdapter.kt */
+    /* JADX INFO: compiled from: ManageReactionsResultsAdapter.kt */
     public static final class LoadingItem implements MGRecyclerDataPayload {
         private final int type = 1;
         private final String key = String.valueOf(getType());
@@ -122,7 +122,7 @@ public final class ManageReactionsResultsAdapter extends MGRecyclerAdapterSimple
         }
     }
 
-    /* compiled from: ManageReactionsResultsAdapter.kt */
+    /* JADX INFO: compiled from: ManageReactionsResultsAdapter.kt */
     public static final class LoadingViewHolder extends MGRecyclerViewHolder<ManageReactionsResultsAdapter, MGRecyclerDataPayload> {
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
         public LoadingViewHolder(ManageReactionsResultsAdapter manageReactionsResultsAdapter) {
@@ -131,7 +131,7 @@ public final class ManageReactionsResultsAdapter extends MGRecyclerAdapterSimple
         }
     }
 
-    /* compiled from: ManageReactionsResultsAdapter.kt */
+    /* JADX INFO: compiled from: ManageReactionsResultsAdapter.kt */
     public static final /* data */ class ReactionUserItem implements MGRecyclerDataPayload {
         private final boolean canDelete;
         private final long channelId;
@@ -158,32 +158,32 @@ public final class ManageReactionsResultsAdapter extends MGRecyclerAdapterSimple
             return reactionUserItem.copy((i & 1) != 0 ? reactionUserItem.user : user, (i & 2) != 0 ? reactionUserItem.channelId : j, (i & 4) != 0 ? reactionUserItem.messageId : j2, (i & 8) != 0 ? reactionUserItem.emoji : messageReactionEmoji, (i & 16) != 0 ? reactionUserItem.canDelete : z2, (i & 32) != 0 ? reactionUserItem.guildMember : guildMember);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final User getUser() {
             return this.user;
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final long getChannelId() {
             return this.channelId;
         }
 
-        /* renamed from: component3, reason: from getter */
+        /* JADX INFO: renamed from: component3, reason: from getter */
         public final long getMessageId() {
             return this.messageId;
         }
 
-        /* renamed from: component4, reason: from getter */
+        /* JADX INFO: renamed from: component4, reason: from getter */
         public final MessageReactionEmoji getEmoji() {
             return this.emoji;
         }
 
-        /* renamed from: component5, reason: from getter */
+        /* JADX INFO: renamed from: component5, reason: from getter */
         public final boolean getCanDelete() {
             return this.canDelete;
         }
 
-        /* renamed from: component6, reason: from getter */
+        /* JADX INFO: renamed from: component6, reason: from getter */
         public final GuildMember getGuildMember() {
             return this.guildMember;
         }
@@ -240,19 +240,22 @@ public final class ManageReactionsResultsAdapter extends MGRecyclerAdapterSimple
         }
 
         /* JADX WARN: Multi-variable type inference failed */
+        /* JADX WARN: Type inference failed for: r2v10 */
+        /* JADX WARN: Type inference failed for: r2v12 */
+        /* JADX WARN: Type inference failed for: r2v8, types: [int] */
         public int hashCode() {
             User user = this.user;
             int iM3a = (C0002b.m3a(this.messageId) + ((C0002b.m3a(this.channelId) + ((user != null ? user.hashCode() : 0) * 31)) * 31)) * 31;
             MessageReactionEmoji messageReactionEmoji = this.emoji;
             int iHashCode = (iM3a + (messageReactionEmoji != null ? messageReactionEmoji.hashCode() : 0)) * 31;
             boolean z2 = this.canDelete;
-            int i = z2;
-            if (z2 != 0) {
-                i = 1;
+            ?? r2 = z2;
+            if (z2) {
+                r2 = 1;
             }
-            int i2 = (iHashCode + i) * 31;
+            int i = (iHashCode + r2) * 31;
             GuildMember guildMember = this.guildMember;
-            return i2 + (guildMember != null ? guildMember.hashCode() : 0);
+            return i + (guildMember != null ? guildMember.hashCode() : 0);
         }
 
         public String toString() {
@@ -273,7 +276,7 @@ public final class ManageReactionsResultsAdapter extends MGRecyclerAdapterSimple
         }
     }
 
-    /* compiled from: ManageReactionsResultsAdapter.kt */
+    /* JADX INFO: compiled from: ManageReactionsResultsAdapter.kt */
     public static final class ReactionUserViewHolder extends MGRecyclerViewHolder<ManageReactionsResultsAdapter, MGRecyclerDataPayload> {
         private final WidgetManageReactionsResultUserBinding binding;
 
@@ -306,7 +309,7 @@ public final class ManageReactionsResultsAdapter extends MGRecyclerAdapterSimple
             onConfigure2(i, mGRecyclerDataPayload);
         }
 
-        /* renamed from: onConfigure, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: onConfigure, reason: avoid collision after fix types in other method */
         public void onConfigure2(int position, MGRecyclerDataPayload data) {
             String username;
             Intrinsics3.checkNotNullParameter(data, "data");

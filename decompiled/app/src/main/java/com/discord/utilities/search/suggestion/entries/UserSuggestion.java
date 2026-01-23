@@ -13,11 +13,11 @@ import p007b.p100d.p104b.p105a.outline;
 import p507d0.p579g0.Strings4;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: UserSuggestion.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: UserSuggestion.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final /* data */ class UserSuggestion implements SearchSuggestion, Comparable<UserSuggestion> {
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private final SearchSuggestion.Category category;
     private final int discriminator;
@@ -29,7 +29,7 @@ public final /* data */ class UserSuggestion implements SearchSuggestion, Compar
     private final String userName;
     private final String usernameWithDiscriminator;
 
-    /* compiled from: UserSuggestion.kt */
+    /* JADX INFO: compiled from: UserSuggestion.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -64,7 +64,7 @@ public final /* data */ class UserSuggestion implements SearchSuggestion, Compar
         }
     }
 
-    /* compiled from: UserSuggestion.kt */
+    /* JADX INFO: compiled from: UserSuggestion.kt */
     public enum TargetType {
         FROM,
         MENTIONS
@@ -126,17 +126,17 @@ public final /* data */ class UserSuggestion implements SearchSuggestion, Compar
         return compareTo2(userSuggestion);
     }
 
-    /* renamed from: component1, reason: from getter */
+    /* JADX INFO: renamed from: component1, reason: from getter */
     public final User getUser() {
         return this.user;
     }
 
-    /* renamed from: component2, reason: from getter */
+    /* JADX INFO: renamed from: component2, reason: from getter */
     public final TargetType getTargetType() {
         return this.targetType;
     }
 
-    /* renamed from: component3, reason: from getter */
+    /* JADX INFO: renamed from: component3, reason: from getter */
     public final GuildMember getGuildMember() {
         return this.guildMember;
     }
@@ -215,7 +215,7 @@ public final /* data */ class UserSuggestion implements SearchSuggestion, Compar
         return sbM833U.toString();
     }
 
-    /* renamed from: compareTo, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: compareTo, reason: avoid collision after fix types in other method */
     public int compareTo2(UserSuggestion other) {
         Intrinsics3.checkNotNullParameter(other, "other");
         String str = this.nickname;

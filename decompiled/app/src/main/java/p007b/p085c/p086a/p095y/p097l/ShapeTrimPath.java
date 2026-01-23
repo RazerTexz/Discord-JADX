@@ -7,27 +7,27 @@ import p007b.p085c.p086a.p095y.p096k.AnimatableFloatValue;
 import p007b.p085c.p086a.p095y.p098m.BaseLayer2;
 import p007b.p100d.p104b.p105a.outline;
 
-/* compiled from: ShapeTrimPath.java */
-/* renamed from: b.c.a.y.l.p, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.c.a.y.l.p, reason: use source file name */
+/* JADX INFO: compiled from: ShapeTrimPath.java */
+/* JADX INFO: loaded from: classes.dex */
 public class ShapeTrimPath implements ContentModel2 {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final String f2829a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final int f2830b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final AnimatableFloatValue f2831c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final AnimatableFloatValue f2832d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final AnimatableFloatValue f2833e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final boolean f2834f;
 
     public ShapeTrimPath(String str, int i, AnimatableFloatValue animatableFloatValue, AnimatableFloatValue animatableFloatValue2, AnimatableFloatValue animatableFloatValue3, boolean z2) {
@@ -40,7 +40,7 @@ public class ShapeTrimPath implements ContentModel2 {
     }
 
     @Override // p007b.p085c.p086a.p095y.p097l.ContentModel2
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public Content2 mo775a(LottieDrawable lottieDrawable, BaseLayer2 baseLayer2) {
         return new TrimPathContent(baseLayer2, this);
     }

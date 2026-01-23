@@ -13,20 +13,20 @@ import p007b.p100d.p104b.p105a.outline;
 import p007b.p225i.p361c.FirebaseApp2;
 import p007b.p225i.p361c.p401u.p402o.AutoValue_PersistedInstallationEntry;
 
-/* compiled from: PersistedInstallation.java */
-/* renamed from: b.i.c.u.o.c, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.c.u.o.c, reason: use source file name */
+/* JADX INFO: compiled from: PersistedInstallation.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class PersistedInstallation {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final File f12969a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     @NonNull
     public final FirebaseApp2 f12970b;
 
-    /* compiled from: PersistedInstallation.java */
-    /* renamed from: b.i.c.u.o.c$a */
+    /* JADX INFO: renamed from: b.i.c.u.o.c$a */
+    /* JADX INFO: compiled from: PersistedInstallation.java */
     public enum a {
         ATTEMPT_MIGRATION,
         NOT_GENERATED,
@@ -46,9 +46,8 @@ public class PersistedInstallation {
     }
 
     @NonNull
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public PersistedInstallationEntry m6787a(@NonNull PersistedInstallationEntry persistedInstallationEntry) {
-        File fileCreateTempFile;
         try {
             JSONObject jSONObject = new JSONObject();
             jSONObject.put("Fid", persistedInstallationEntry.mo6776c());
@@ -60,20 +59,20 @@ public class PersistedInstallation {
             jSONObject.put("FisError", persistedInstallationEntry.mo6777d());
             FirebaseApp2 firebaseApp2 = this.f12970b;
             firebaseApp2.m6330a();
-            fileCreateTempFile = File.createTempFile("PersistedInstallation", "tmp", firebaseApp2.f12118d.getFilesDir());
+            File fileCreateTempFile = File.createTempFile("PersistedInstallation", "tmp", firebaseApp2.f12118d.getFilesDir());
             FileOutputStream fileOutputStream = new FileOutputStream(fileCreateTempFile);
             fileOutputStream.write(jSONObject.toString().getBytes(Constants.ENCODING));
             fileOutputStream.close();
+            if (!fileCreateTempFile.renameTo(this.f12969a)) {
+                throw new IOException("unable to rename the tmpfile to PersistedInstallation");
+            }
         } catch (IOException | JSONException unused) {
         }
-        if (fileCreateTempFile.renameTo(this.f12969a)) {
-            return persistedInstallationEntry;
-        }
-        throw new IOException("unable to rename the tmpfile to PersistedInstallation");
+        return persistedInstallationEntry;
     }
 
     @NonNull
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public PersistedInstallationEntry m6788b() {
         JSONObject jSONObject;
         ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();

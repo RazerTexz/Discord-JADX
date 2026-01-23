@@ -7,9 +7,9 @@ import androidx.annotation.RestrictTo;
 import androidx.media.AudioAttributesImpl;
 import androidx.media.AudioAttributesImplApi21;
 
+/* JADX INFO: loaded from: classes.dex */
 @RequiresApi(26)
 @RestrictTo({RestrictTo.Scope.LIBRARY})
-/* loaded from: classes.dex */
 public class AudioAttributesImplApi26 extends AudioAttributesImplApi21 {
 
     @RequiresApi(26)

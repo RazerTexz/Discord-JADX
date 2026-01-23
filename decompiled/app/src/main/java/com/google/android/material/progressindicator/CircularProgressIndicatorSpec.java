@@ -1,7 +1,6 @@
 package com.google.android.material.progressindicator;
 
 import android.content.Context;
-import android.content.res.Resources;
 import android.content.res.TypedArray;
 import android.util.AttributeSet;
 import androidx.annotation.AttrRes;
@@ -14,7 +13,7 @@ import com.google.android.material.internal.ThemeEnforcement;
 import com.google.android.material.resources.MaterialResources;
 import p007b.p100d.p104b.p105a.outline;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public final class CircularProgressIndicatorSpec extends BaseProgressIndicatorSpec {
     public int indicatorDirection;
 
@@ -43,7 +42,7 @@ public final class CircularProgressIndicatorSpec extends BaseProgressIndicatorSp
         this(context, attributeSet, i, CircularProgressIndicator.DEF_STYLE_RES);
     }
 
-    public CircularProgressIndicatorSpec(@NonNull Context context, @Nullable AttributeSet attributeSet, @AttrRes int i, @StyleRes int i2) throws Resources.NotFoundException {
+    public CircularProgressIndicatorSpec(@NonNull Context context, @Nullable AttributeSet attributeSet, @AttrRes int i, @StyleRes int i2) {
         super(context, attributeSet, i, i2);
         int dimensionPixelSize = context.getResources().getDimensionPixelSize(C10817R.dimen.mtrl_progress_circular_size_medium);
         int dimensionPixelSize2 = context.getResources().getDimensionPixelSize(C10817R.dimen.mtrl_progress_circular_inset_medium);

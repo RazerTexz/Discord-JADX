@@ -34,22 +34,22 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Reflection2;
 import p658rx.Observable;
 
-/* compiled from: MemberVerificationSuccessDialog.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: MemberVerificationSuccessDialog.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class MemberVerificationSuccessDialog extends AppDialog {
     public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(MemberVerificationSuccessDialog.class, "binding", "getBinding()Lcom/discord/databinding/WidgetMemberVerificationSuccessBinding;", 0)};
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private static final String INTENT_EXTRA_GUILD_ID = "INTENT_EXTRA_GUILD_ID";
 
-    /* renamed from: binding$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
 
-    /* renamed from: viewModel$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: viewModel$delegate, reason: from kotlin metadata */
     private final Lazy viewModel;
 
-    /* compiled from: MemberVerificationSuccessDialog.kt */
+    /* JADX INFO: compiled from: MemberVerificationSuccessDialog.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -65,8 +65,8 @@ public final class MemberVerificationSuccessDialog extends AppDialog {
         }
     }
 
-    /* compiled from: MemberVerificationSuccessDialog.kt */
-    /* renamed from: com.discord.widgets.servers.member_verification.MemberVerificationSuccessDialog$configureLoadedUI$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.member_verification.MemberVerificationSuccessDialog$configureLoadedUI$1 */
+    /* JADX INFO: compiled from: MemberVerificationSuccessDialog.kt */
     public static final class ViewOnClickListenerC95521 implements View.OnClickListener {
         public ViewOnClickListenerC95521() {
         }
@@ -78,8 +78,8 @@ public final class MemberVerificationSuccessDialog extends AppDialog {
         }
     }
 
-    /* compiled from: MemberVerificationSuccessDialog.kt */
-    /* renamed from: com.discord.widgets.servers.member_verification.MemberVerificationSuccessDialog$onViewBoundOrOnResume$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.member_verification.MemberVerificationSuccessDialog$onViewBoundOrOnResume$1 */
+    /* JADX INFO: compiled from: MemberVerificationSuccessDialog.kt */
     public static final /* synthetic */ class C95531 extends FunctionReferenceImpl implements Function1<MemberVerificationSuccessViewModel.ViewState, Unit> {
         public C95531(MemberVerificationSuccessDialog memberVerificationSuccessDialog) {
             super(1, memberVerificationSuccessDialog, MemberVerificationSuccessDialog.class, "configureUI", "configureUI(Lcom/discord/widgets/servers/member_verification/MemberVerificationSuccessViewModel$ViewState;)V", 0);
@@ -91,7 +91,7 @@ public final class MemberVerificationSuccessDialog extends AppDialog {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(MemberVerificationSuccessViewModel.ViewState viewState) {
             Intrinsics3.checkNotNullParameter(viewState, "p1");
             MemberVerificationSuccessDialog.access$configureUI((MemberVerificationSuccessDialog) this.receiver, viewState);

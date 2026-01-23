@@ -7,9 +7,9 @@ import com.discord.models.botuikit.ActionInteractionComponentState;
 import com.discord.widgets.botuikit.ComponentChatListState;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ButtonMessageComponent.kt */
-/* renamed from: com.discord.models.botuikit.ButtonMessageComponentKt, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: com.discord.models.botuikit.ButtonMessageComponentKt, reason: use source file name */
+/* JADX INFO: compiled from: ButtonMessageComponent.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class ButtonMessageComponent2 {
     public static final ButtonMessageComponent mergeToMessageComponent(ButtonComponent buttonComponent, int i, ActionInteractionComponentState actionInteractionComponentState, ComponentChatListState.ComponentStoreState componentStoreState) {
         Intrinsics3.checkNotNullParameter(buttonComponent, "$this$mergeToMessageComponent");

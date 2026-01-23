@@ -7,9 +7,9 @@ import java.time.Duration;
 import java.util.concurrent.TimeUnit;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: PeriodicWorkRequest.kt */
-/* renamed from: androidx.work.PeriodicWorkRequestKt, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: androidx.work.PeriodicWorkRequestKt, reason: use source file name */
+/* JADX INFO: compiled from: PeriodicWorkRequest.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class PeriodicWorkRequest2 {
     public static final /* synthetic */ <W extends ListenableWorker> PeriodicWorkRequest.Builder PeriodicWorkRequestBuilder(long j, TimeUnit timeUnit) {
         Intrinsics3.checkParameterIsNotNull(timeUnit, "repeatIntervalTimeUnit");

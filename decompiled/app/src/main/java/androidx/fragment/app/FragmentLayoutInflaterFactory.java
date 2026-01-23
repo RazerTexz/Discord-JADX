@@ -12,7 +12,7 @@ import androidx.annotation.Nullable;
 import androidx.fragment.C0344R;
 import p007b.p100d.p104b.p105a.outline;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class FragmentLayoutInflaterFactory implements LayoutInflater.Factory2 {
     private static final String TAG = "FragmentManager";
     private final FragmentManager mFragmentManager;

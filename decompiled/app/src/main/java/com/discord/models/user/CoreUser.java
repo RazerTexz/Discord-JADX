@@ -10,11 +10,11 @@ import p007b.p100d.p104b.p105a.outline;
 import p507d0.p579g0.StringNumberConversions;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: CoreUser.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: CoreUser.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class CoreUser implements User {
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private final String avatar;
     private final String banner;
@@ -29,7 +29,7 @@ public final /* data */ class CoreUser implements User {
     private final int publicFlags;
     private final String username;
 
-    /* compiled from: CoreUser.kt */
+    /* JADX INFO: compiled from: CoreUser.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -259,6 +259,13 @@ public final /* data */ class CoreUser implements User {
         return this.username;
     }
 
+    /* JADX WARN: Multi-variable type inference failed */
+    /* JADX WARN: Type inference failed for: r1v10, types: [int] */
+    /* JADX WARN: Type inference failed for: r1v23 */
+    /* JADX WARN: Type inference failed for: r1v27 */
+    /* JADX WARN: Type inference failed for: r3v0 */
+    /* JADX WARN: Type inference failed for: r3v1, types: [int] */
+    /* JADX WARN: Type inference failed for: r3v2 */
     public int hashCode() {
         int iM3a = C0002b.m3a(getId()) * 31;
         String username = getUsername();
@@ -268,13 +275,13 @@ public final /* data */ class CoreUser implements User {
         String banner = getBanner();
         int iHashCode3 = (iHashCode2 + (banner != null ? banner.hashCode() : 0)) * 31;
         boolean isBot = getIsBot();
-        int i = isBot;
+        ?? r1 = isBot;
         if (isBot) {
-            i = 1;
+            r1 = 1;
         }
-        int i2 = (iHashCode3 + i) * 31;
+        int i = (iHashCode3 + r1) * 31;
         boolean isSystemUser = getIsSystemUser();
-        int discriminator = (getDiscriminator() + ((i2 + (isSystemUser ? 1 : isSystemUser)) * 31)) * 31;
+        int discriminator = (getDiscriminator() + ((i + (isSystemUser ? 1 : isSystemUser)) * 31)) * 31;
         PremiumTier premiumTier = getPremiumTier();
         int publicFlags = (getPublicFlags() + ((getFlags() + ((discriminator + (premiumTier != null ? premiumTier.hashCode() : 0)) * 31)) * 31)) * 31;
         String bio = getBio();
@@ -284,13 +291,13 @@ public final /* data */ class CoreUser implements User {
     }
 
     @Override // com.discord.models.user.User
-    /* renamed from: isBot, reason: from getter */
+    /* JADX INFO: renamed from: isBot, reason: from getter */
     public boolean getIsBot() {
         return this.isBot;
     }
 
     @Override // com.discord.models.user.User
-    /* renamed from: isSystemUser, reason: from getter */
+    /* JADX INFO: renamed from: isSystemUser, reason: from getter */
     public boolean getIsSystemUser() {
         return this.isSystemUser;
     }

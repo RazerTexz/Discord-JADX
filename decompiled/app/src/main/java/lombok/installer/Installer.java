@@ -24,7 +24,7 @@ import lombok.core.Version;
 import lombok.installer.OsUtils;
 import lombok.patcher.ClassRootFinder;
 
-/* loaded from: discord-126021.apk:lombok/installer/Installer.SCL.lombok */
+/* JADX INFO: loaded from: discord-126021.apk:lombok/installer/Installer.SCL.lombok */
 public class Installer {
     static final URI ABOUT_LOMBOK_URL = URI.create("https://projectlombok.org");
     static final List<IdeLocationProvider> locationProviders;
@@ -86,7 +86,7 @@ public class Installer {
         return a.equals(b2);
     }
 
-    /* loaded from: discord-126021.apk:lombok/installer/Installer$GraphicalInstallerApp.SCL.lombok */
+    /* JADX INFO: loaded from: discord-126021.apk:lombok/installer/Installer$GraphicalInstallerApp.SCL.lombok */
     public static class GraphicalInstallerApp extends LombokApp {
         @Override // lombok.core.LombokApp
         public String getAppName() {
@@ -109,7 +109,7 @@ public class Installer {
         }
     }
 
-    /* loaded from: discord-126021.apk:lombok/installer/Installer$CommandLineInstallerApp.SCL.lombok */
+    /* JADX INFO: loaded from: discord-126021.apk:lombok/installer/Installer$CommandLineInstallerApp.SCL.lombok */
     public static class CommandLineInstallerApp extends LombokApp {
         @Override // lombok.core.LombokApp
         public String getAppName() {
@@ -127,7 +127,7 @@ public class Installer {
         }
     }
 
-    /* loaded from: discord-126021.apk:lombok/installer/Installer$CommandLineUninstallerApp.SCL.lombok */
+    /* JADX INFO: loaded from: discord-126021.apk:lombok/installer/Installer$CommandLineUninstallerApp.SCL.lombok */
     public static class CommandLineUninstallerApp extends LombokApp {
         @Override // lombok.core.LombokApp
         public String getAppName() {
@@ -181,8 +181,8 @@ public class Installer {
         }
     }
 
-    /* renamed from: lombok.installer.Installer$1 */
-    /* loaded from: discord-126021.apk:lombok/installer/Installer$1.SCL.lombok */
+    /* JADX INFO: renamed from: lombok.installer.Installer$1 */
+    /* JADX INFO: loaded from: discord-126021.apk:lombok/installer/Installer$1.SCL.lombok */
     class RunnableC128691 implements Runnable {
         RunnableC128691() {
         }
@@ -201,7 +201,7 @@ public class Installer {
         }
     }
 
-    /* loaded from: discord-126021.apk:lombok/installer/Installer$CmdArgs.SCL.lombok */
+    /* JADX INFO: loaded from: discord-126021.apk:lombok/installer/Installer$CmdArgs.SCL.lombok */
     private static class CmdArgs {
 
         @Description("Specify paths to a location to install/uninstall. Use 'auto' to apply to all automatically discoverable installations.")
@@ -216,7 +216,7 @@ public class Installer {
         }
     }
 
-    public static int cliInstaller(boolean uninstall, List<String> rawArgs) throws SecurityException, IllegalArgumentException {
+    public static int cliInstaller(boolean uninstall, List<String> rawArgs) {
         CmdReader<CmdArgs> reader = CmdReader.m9327of(CmdArgs.class);
         try {
             CmdArgs args = reader.make((String[]) rawArgs.toArray(new String[0]));

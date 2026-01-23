@@ -12,34 +12,34 @@ import p007b.p109f.p161j.p168c.MemoryCache;
 import p007b.p109f.p161j.p175j.EncodedImage2;
 import p007b.p109f.p161j.p183r.FrescoSystrace;
 
-/* compiled from: EncodedMemoryCacheProducer.java */
-/* renamed from: b.f.j.p.v, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.f.j.p.v, reason: use source file name */
+/* JADX INFO: compiled from: EncodedMemoryCacheProducer.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class EncodedMemoryCacheProducer implements Producer2<EncodedImage2> {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final MemoryCache<CacheKey, PooledByteBuffer> f4238a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final CacheKeyFactory f4239b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final Producer2<EncodedImage2> f4240c;
 
-    /* compiled from: EncodedMemoryCacheProducer.java */
-    /* renamed from: b.f.j.p.v$a */
+    /* JADX INFO: renamed from: b.f.j.p.v$a */
+    /* JADX INFO: compiled from: EncodedMemoryCacheProducer.java */
     public static class a extends DelegatingConsumer<EncodedImage2, EncodedImage2> {
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public final MemoryCache<CacheKey, PooledByteBuffer> f4241c;
 
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         public final CacheKey f4242d;
 
-        /* renamed from: e */
+        /* JADX INFO: renamed from: e */
         public final boolean f4243e;
 
-        /* renamed from: f */
+        /* JADX INFO: renamed from: f */
         public final boolean f4244f;
 
         public a(Consumer2<EncodedImage2> consumer2, MemoryCache<CacheKey, PooledByteBuffer> memoryCache, CacheKey cacheKey, boolean z2, boolean z3) {
@@ -52,7 +52,7 @@ public class EncodedMemoryCacheProducer implements Producer2<EncodedImage2> {
 
         /* JADX WARN: Removed duplicated region for block: B:34:0x0065 A[Catch: all -> 0x0074, TryCatch #1 {all -> 0x0074, blocks: (B:3:0x0002, B:6:0x000d, B:8:0x0015, B:11:0x001f, B:19:0x0036, B:22:0x0043, B:24:0x0052, B:26:0x0057, B:27:0x005a, B:29:0x005c, B:30:0x005f, B:32:0x0061, B:33:0x0064, B:34:0x0065, B:35:0x006b, B:14:0x0026, B:16:0x002a, B:18:0x002e, B:23:0x0046, B:21:0x003b), top: B:43:0x0002, inners: #0, #2, #3 }] */
         @Override // p007b.p109f.p161j.p181p.BaseConsumer
-        /* renamed from: i */
+        /* JADX INFO: renamed from: i */
         /*
             Code decompiled incorrectly, please refer to instructions dump.
         */
@@ -111,7 +111,7 @@ public class EncodedMemoryCacheProducer implements Producer2<EncodedImage2> {
     }
 
     @Override // p007b.p109f.p161j.p181p.Producer2
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public void mo1417b(Consumer2<EncodedImage2> consumer2, ProducerContext producerContext) {
         try {
             FrescoSystrace.m1527b();

@@ -1,8 +1,8 @@
 package com.discord.utilities.voice;
 
 
-/* compiled from: PerceptualVolumeUtils.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: PerceptualVolumeUtils.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class PerceptualVolumeUtils {
     public static final PerceptualVolumeUtils INSTANCE = new PerceptualVolumeUtils();
     private static final float VOLUME_BOOST_DYNAMIC_RANGE_DB = 6.0f;

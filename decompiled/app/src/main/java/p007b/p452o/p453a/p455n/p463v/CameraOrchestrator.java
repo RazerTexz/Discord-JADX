@@ -14,31 +14,31 @@ import p007b.p452o.p453a.CameraLogger;
 import p007b.p452o.p453a.p455n.CameraEngine;
 import p007b.p452o.p453a.p467r.WorkerHandler;
 
-/* compiled from: CameraOrchestrator.java */
-/* renamed from: b.o.a.n.v.a, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.o.a.n.v.a, reason: use source file name */
+/* JADX INFO: compiled from: CameraOrchestrator.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class CameraOrchestrator {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final CameraLogger f14005a = new CameraLogger(CameraOrchestrator.class.getSimpleName());
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final b f14006b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final ArrayDeque<c<?>> f14007c = new ArrayDeque<>();
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public boolean f14008d = false;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final Object f14009e = new Object();
 
-    /* compiled from: CameraOrchestrator.java */
-    /* renamed from: b.o.a.n.v.a$a */
+    /* JADX INFO: renamed from: b.o.a.n.v.a$a */
+    /* JADX INFO: compiled from: CameraOrchestrator.java */
     public class a implements Callable<Task<Void>> {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public final /* synthetic */ Runnable f14010j;
 
         public a(CameraOrchestrator cameraOrchestrator, Runnable runnable) {
@@ -52,28 +52,28 @@ public class CameraOrchestrator {
         }
     }
 
-    /* compiled from: CameraOrchestrator.java */
-    /* renamed from: b.o.a.n.v.a$b */
+    /* JADX INFO: renamed from: b.o.a.n.v.a$b */
+    /* JADX INFO: compiled from: CameraOrchestrator.java */
     public interface b {
     }
 
-    /* compiled from: CameraOrchestrator.java */
-    /* renamed from: b.o.a.n.v.a$c */
+    /* JADX INFO: renamed from: b.o.a.n.v.a$c */
+    /* JADX INFO: compiled from: CameraOrchestrator.java */
     public static class c<T> {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final String f14011a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final TaskCompletionSource<T> f14012b = new TaskCompletionSource<>();
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public final Callable<Task<T>> f14013c;
 
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         public final boolean f14014d;
 
-        /* renamed from: e */
+        /* JADX INFO: renamed from: e */
         public final long f14015e;
 
         public c(String str, Callable callable, boolean z2, long j, a aVar) {
@@ -88,7 +88,7 @@ public class CameraOrchestrator {
         this.f14006b = bVar;
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static void m7362a(CameraOrchestrator cameraOrchestrator, c cVar) {
         if (!cameraOrchestrator.f14008d) {
             StringBuilder sbM833U = outline.m833U("mJobRunning was not true after completing job=");
@@ -102,19 +102,19 @@ public class CameraOrchestrator {
     }
 
     @NonNull
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public Task<Void> m7363b(@NonNull String str, boolean z2, @NonNull Runnable runnable) {
         return m7365d(str, z2, 0L, new a(this, runnable));
     }
 
     @NonNull
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public Task<Void> m7364c(@NonNull String str, boolean z2, long j, @NonNull Runnable runnable) {
         return m7365d(str, z2, j, new a(this, runnable));
     }
 
     @NonNull
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final <T> Task<T> m7365d(@NonNull String str, boolean z2, long j, @NonNull Callable<Task<T>> callable) {
         f14005a.m7159a(1, str.toUpperCase(), "- Scheduling.");
         c<?> cVar = new c<>(str, callable, z2, System.currentTimeMillis() + j, null);
@@ -125,7 +125,7 @@ public class CameraOrchestrator {
         return cVar.f14012b.f20845a;
     }
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public void m7366e(@NonNull String str, int i) {
         synchronized (this.f14009e) {
             ArrayList arrayList = new ArrayList();

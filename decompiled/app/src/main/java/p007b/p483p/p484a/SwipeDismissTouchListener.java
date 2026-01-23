@@ -12,61 +12,61 @@ import android.view.ViewGroup;
 import androidx.annotation.RequiresApi;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: SwipeDismissTouchListener.kt */
-/* renamed from: b.p.a.l, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.p.a.l, reason: use source file name */
+/* JADX INFO: compiled from: SwipeDismissTouchListener.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class SwipeDismissTouchListener implements View.OnTouchListener {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final int f14369j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final int f14370k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final long f14371l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public int f14372m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public float f14373n;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public float f14374o;
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public boolean f14375p;
 
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     public int f14376q;
 
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     public VelocityTracker f14377r;
 
-    /* renamed from: s */
+    /* JADX INFO: renamed from: s */
     public float f14378s;
 
-    /* renamed from: t */
+    /* JADX INFO: renamed from: t */
     public final View f14379t;
 
-    /* renamed from: u */
+    /* JADX INFO: renamed from: u */
     public final a f14380u;
 
-    /* compiled from: SwipeDismissTouchListener.kt */
-    /* renamed from: b.p.a.l$a */
+    /* JADX INFO: renamed from: b.p.a.l$a */
+    /* JADX INFO: compiled from: SwipeDismissTouchListener.kt */
     public interface a {
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         void mo7463a(View view, boolean z2);
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         boolean mo7464b();
 
         void onDismiss(View view);
     }
 
-    /* compiled from: SwipeDismissTouchListener.kt */
-    /* renamed from: b.p.a.l$b */
+    /* JADX INFO: renamed from: b.p.a.l$b */
+    /* JADX INFO: compiled from: SwipeDismissTouchListener.kt */
     public static final class b extends AnimatorListenerAdapter {
         public b(MotionEvent motionEvent, View view) {
         }

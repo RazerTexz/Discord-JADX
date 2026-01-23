@@ -14,13 +14,13 @@ import android.text.TextUtils;
 import java.util.List;
 import p668x.p669a.p672b.p674b.p675a.MediaControllerCompat;
 
-/* compiled from: IMediaControllerCallback.java */
-/* renamed from: x.a.b.b.a.a, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: x.a.b.b.a.a, reason: use source file name */
+/* JADX INFO: compiled from: IMediaControllerCallback.java */
+/* JADX INFO: loaded from: classes.dex */
 public interface IMediaControllerCallback extends IInterface {
 
-    /* compiled from: IMediaControllerCallback.java */
-    /* renamed from: x.a.b.b.a.a$a */
+    /* JADX INFO: renamed from: x.a.b.b.a.a$a */
+    /* JADX INFO: compiled from: IMediaControllerCallback.java */
     public static abstract class a extends Binder implements IMediaControllerCallback {
         public a() {
             attachInterface(this, "android.support.v4.media.session.IMediaControllerCallback");
@@ -105,21 +105,21 @@ public interface IMediaControllerCallback extends IInterface {
         }
     }
 
-    /* renamed from: U */
+    /* JADX INFO: renamed from: U */
     void mo34U(CharSequence charSequence) throws RemoteException;
 
-    /* renamed from: W */
+    /* JADX INFO: renamed from: W */
     void mo35W() throws RemoteException;
 
-    /* renamed from: X */
+    /* JADX INFO: renamed from: X */
     void mo36X(MediaMetadataCompat mediaMetadataCompat) throws RemoteException;
 
-    /* renamed from: s0 */
+    /* JADX INFO: renamed from: s0 */
     void mo37s0(ParcelableVolumeInfo parcelableVolumeInfo) throws RemoteException;
 
-    /* renamed from: y */
+    /* JADX INFO: renamed from: y */
     void mo38y(Bundle bundle) throws RemoteException;
 
-    /* renamed from: z */
+    /* JADX INFO: renamed from: z */
     void mo39z(List<MediaSessionCompat.QueueItem> list) throws RemoteException;
 }

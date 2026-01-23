@@ -1,7 +1,6 @@
 package androidx.browser.browseractions;
 
 import android.content.Context;
-import android.content.res.Resources;
 import android.graphics.Bitmap;
 import android.text.TextUtils;
 import android.view.LayoutInflater;
@@ -18,13 +17,13 @@ import java.util.concurrent.ExecutionException;
 import java.util.concurrent.Executor;
 import p007b.p225i.p355b.p359d.p360a.ListenableFuture8;
 
+/* JADX INFO: loaded from: classes.dex */
 @Deprecated
-/* loaded from: classes.dex */
 public class BrowserActionsFallbackMenuAdapter extends BaseAdapter {
     private final Context mContext;
     private final List<BrowserActionItem> mMenuItems;
 
-    /* renamed from: androidx.browser.browseractions.BrowserActionsFallbackMenuAdapter$1 */
+    /* JADX INFO: renamed from: androidx.browser.browseractions.BrowserActionsFallbackMenuAdapter$1 */
     public class RunnableC01441 implements Runnable {
         public final /* synthetic */ ListenableFuture8 val$bitmapFuture;
         public final /* synthetic */ String val$titleText;
@@ -57,7 +56,7 @@ public class BrowserActionsFallbackMenuAdapter extends BaseAdapter {
         }
     }
 
-    /* renamed from: androidx.browser.browseractions.BrowserActionsFallbackMenuAdapter$2 */
+    /* JADX INFO: renamed from: androidx.browser.browseractions.BrowserActionsFallbackMenuAdapter$2 */
     public class ExecutorC01452 implements Executor {
         public ExecutorC01452() {
         }
@@ -99,7 +98,7 @@ public class BrowserActionsFallbackMenuAdapter extends BaseAdapter {
     }
 
     @Override // android.widget.Adapter
-    public View getView(int i, View view, ViewGroup viewGroup) throws Resources.NotFoundException {
+    public View getView(int i, View view, ViewGroup viewGroup) {
         ViewHolderItem viewHolderItem;
         BrowserActionItem browserActionItem = this.mMenuItems.get(i);
         if (view == null) {

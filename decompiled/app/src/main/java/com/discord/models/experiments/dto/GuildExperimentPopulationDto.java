@@ -8,13 +8,13 @@ import p007b.p100d.p104b.p105a.outline;
 import p507d0.p580t.Collections2;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: GuildExperimentDto.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: GuildExperimentDto.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class GuildExperimentPopulationDto {
     private final List<GuildExperimentBucketDto> buckets;
     private final List<GuildExperimentFilter> filters;
 
-    /* compiled from: GuildExperimentDto.kt */
+    /* JADX INFO: compiled from: GuildExperimentDto.kt */
     public static final class Parser {
         public static final Parser INSTANCE = new Parser();
 

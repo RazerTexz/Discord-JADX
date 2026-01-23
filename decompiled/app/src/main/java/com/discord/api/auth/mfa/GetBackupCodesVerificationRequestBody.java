@@ -2,8 +2,8 @@ package com.discord.api.auth.mfa;
 
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: GetBackupCodesVerificationRequestBody.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: GetBackupCodesVerificationRequestBody.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class GetBackupCodesVerificationRequestBody {
     private final String key;
     private final String nonce;

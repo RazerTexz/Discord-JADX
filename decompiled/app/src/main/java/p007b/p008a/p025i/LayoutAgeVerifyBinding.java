@@ -9,24 +9,24 @@ import com.discord.utilities.view.text.LinkifiedTextView;
 import com.discord.views.LoadingButton;
 import com.google.android.material.textfield.TextInputLayout;
 
-/* compiled from: LayoutAgeVerifyBinding.java */
-/* renamed from: b.a.i.g0, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.a.i.g0, reason: use source file name */
+/* JADX INFO: compiled from: LayoutAgeVerifyBinding.java */
+/* JADX INFO: loaded from: classes.dex */
 public final class LayoutAgeVerifyBinding implements ViewBinding {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     @NonNull
     public final ConstraintLayout f857a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     @NonNull
     public final LinkifiedTextView f858b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     @NonNull
     public final TextInputLayout f859c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     @NonNull
     public final LoadingButton f860d;
 

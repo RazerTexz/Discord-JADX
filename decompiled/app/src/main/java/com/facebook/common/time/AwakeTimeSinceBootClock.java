@@ -4,8 +4,8 @@ import android.os.SystemClock;
 import p007b.p109f.p115d.p119d.DoNotStrip;
 import p007b.p109f.p115d.p126k.MonotonicClock;
 
+/* JADX INFO: loaded from: classes.dex */
 @DoNotStrip
-/* loaded from: classes.dex */
 public class AwakeTimeSinceBootClock implements MonotonicClock {
 
     @DoNotStrip

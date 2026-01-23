@@ -5,21 +5,21 @@ import java.util.Objects;
 import p007b.p225i.p226a.p288f.p299e.p308o.C3401c;
 import p007b.p225i.p226a.p288f.p313h.p325l.HandlerC3604bc;
 
-/* compiled from: com.google.android.gms:play-services-measurement-impl@@18.0.0 */
-/* renamed from: b.i.a.f.i.b.i */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.i.b.i */
+/* JADX INFO: compiled from: com.google.android.gms:play-services-measurement-impl@@18.0.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public abstract class AbstractC4064i {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static volatile Handler f10798a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final InterfaceC4192t5 f10799b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final Runnable f10800c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public volatile long f10801d;
 
     public AbstractC4064i(InterfaceC4192t5 interfaceC4192t5) {
@@ -28,10 +28,10 @@ public abstract class AbstractC4064i {
         this.f10800c = new RunnableC4087k(this, interfaceC4192t5);
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public abstract void mo5560a();
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final void m5663b(long j) {
         m5664c();
         if (j >= 0) {
@@ -44,13 +44,13 @@ public abstract class AbstractC4064i {
         }
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final void m5664c() {
         this.f10801d = 0L;
         m5665d().removeCallbacks(this.f10800c);
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final Handler m5665d() {
         Handler handler;
         if (f10798a != null) {

@@ -1,26 +1,26 @@
 package p507d0.p513e0.p514p.p515d.p577n0;
 
-/* compiled from: IntTree.java */
-/* renamed from: d0.e0.p.d.n0.c, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.n0.c, reason: use source file name */
+/* JADX INFO: compiled from: IntTree.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class IntTree<V> {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final IntTree<Object> f25026a = new IntTree<>();
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final long f25027b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final V f25028c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final IntTree<V> f25029d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final IntTree<V> f25030e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final int f25031f;
 
     public IntTree() {
@@ -31,7 +31,7 @@ public final class IntTree<V> {
         this.f25030e = null;
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public V m10051a(long j) {
         if (this.f25031f == 0) {
             return null;
@@ -40,7 +40,7 @@ public final class IntTree<V> {
         return j < j2 ? this.f25029d.m10051a(j - j2) : j > j2 ? this.f25030e.m10051a(j - j2) : this.f25028c;
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public IntTree<V> m10052b(long j, V v) {
         if (this.f25031f == 0) {
             return new IntTree<>(j, v, this, this);
@@ -49,7 +49,7 @@ public final class IntTree<V> {
         return j < j2 ? m10053c(this.f25029d.m10052b(j - j2, v), this.f25030e) : j > j2 ? m10053c(this.f25029d, this.f25030e.m10052b(j - j2, v)) : v == this.f25028c ? this : new IntTree<>(j, v, this.f25029d, this.f25030e);
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final IntTree<V> m10053c(IntTree<V> intTree, IntTree<V> intTree2) {
         if (intTree == this.f25029d && intTree2 == this.f25030e) {
             return this;
@@ -97,7 +97,7 @@ public final class IntTree<V> {
         return new IntTree<>(j, v, intTree, intTree2);
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final IntTree<V> m10054d(long j) {
         return (this.f25031f == 0 || j == this.f25027b) ? this : new IntTree<>(j, this.f25028c, this.f25029d, this.f25030e);
     }

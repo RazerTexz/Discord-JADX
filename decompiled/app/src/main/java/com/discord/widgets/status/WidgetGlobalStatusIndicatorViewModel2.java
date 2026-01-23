@@ -32,9 +32,9 @@ import p637j0.p641k.Func1;
 import p637j0.p642l.p647e.ScalarSynchronousObservable;
 import p658rx.Observable;
 
-/* compiled from: WidgetGlobalStatusIndicatorViewModel.kt */
-/* renamed from: com.discord.widgets.status.WidgetGlobalStatusIndicatorViewModel$Companion$observeStoreState$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.status.WidgetGlobalStatusIndicatorViewModel$Companion$observeStoreState$1, reason: use source file name */
+/* JADX INFO: compiled from: WidgetGlobalStatusIndicatorViewModel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetGlobalStatusIndicatorViewModel2<T, R> implements Func1<Channel, Observable<? extends WidgetGlobalStatusIndicatorViewModel.StoreState>> {
     public final /* synthetic */ ObservationDeck $observationDeck;
     public final /* synthetic */ StoreChannelsSelected $storeChannelsSelected;
@@ -47,8 +47,8 @@ public final class WidgetGlobalStatusIndicatorViewModel2<T, R> implements Func1<
     public final /* synthetic */ StoreVoiceParticipants $storeVoiceParticipants;
     public final /* synthetic */ StreamContextService $streamContextService;
 
-    /* compiled from: WidgetGlobalStatusIndicatorViewModel.kt */
-    /* renamed from: com.discord.widgets.status.WidgetGlobalStatusIndicatorViewModel$Companion$observeStoreState$1$1, reason: invalid class name */
+    /* JADX INFO: renamed from: com.discord.widgets.status.WidgetGlobalStatusIndicatorViewModel$Companion$observeStoreState$1$1, reason: invalid class name */
+    /* JADX INFO: compiled from: WidgetGlobalStatusIndicatorViewModel.kt */
     public static final /* synthetic */ class AnonymousClass1 extends FunctionReferenceImpl implements Function1<StoreConnectivity.DelayedState, WidgetGlobalStatusIndicatorViewModel.StoreState.ConnectivityState> {
         public static final AnonymousClass1 INSTANCE = new AnonymousClass1();
 
@@ -61,15 +61,15 @@ public final class WidgetGlobalStatusIndicatorViewModel2<T, R> implements Func1<
             return invoke2(delayedState);
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final WidgetGlobalStatusIndicatorViewModel.StoreState.ConnectivityState invoke2(StoreConnectivity.DelayedState delayedState) {
             Intrinsics3.checkNotNullParameter(delayedState, "p1");
             return new WidgetGlobalStatusIndicatorViewModel.StoreState.ConnectivityState(delayedState);
         }
     }
 
-    /* compiled from: WidgetGlobalStatusIndicatorViewModel.kt */
-    /* renamed from: com.discord.widgets.status.WidgetGlobalStatusIndicatorViewModel$Companion$observeStoreState$1$2, reason: invalid class name */
+    /* JADX INFO: renamed from: com.discord.widgets.status.WidgetGlobalStatusIndicatorViewModel$Companion$observeStoreState$1$2, reason: invalid class name */
+    /* JADX INFO: compiled from: WidgetGlobalStatusIndicatorViewModel.kt */
     public static final class AnonymousClass2 extends Lambda implements Function0<Integer> {
         public final /* synthetic */ Channel $channel;
 
@@ -84,7 +84,7 @@ public final class WidgetGlobalStatusIndicatorViewModel2<T, R> implements Func1<
             return Integer.valueOf(invoke2());
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final int invoke2() {
             Map<Long, StageRoles> channelRoles = WidgetGlobalStatusIndicatorViewModel2.this.$storeStageChannels.getChannelRoles(this.$channel.getId());
             Map<Long, Integer> relationships = WidgetGlobalStatusIndicatorViewModel2.this.$storeUserRelationships.getRelationships();
@@ -98,8 +98,8 @@ public final class WidgetGlobalStatusIndicatorViewModel2<T, R> implements Func1<
         }
     }
 
-    /* compiled from: WidgetGlobalStatusIndicatorViewModel.kt */
-    /* renamed from: com.discord.widgets.status.WidgetGlobalStatusIndicatorViewModel$Companion$observeStoreState$1$3, reason: invalid class name */
+    /* JADX INFO: renamed from: com.discord.widgets.status.WidgetGlobalStatusIndicatorViewModel$Companion$observeStoreState$1$3, reason: invalid class name */
+    /* JADX INFO: compiled from: WidgetGlobalStatusIndicatorViewModel.kt */
     public static final /* synthetic */ class AnonymousClass3 extends FunctionReferenceImpl implements Function10<Channel, Channel, RtcConnection.StateChange, RtcConnection.Quality, Guild, Map<Long, ? extends StoreVoiceParticipants.VoiceUser>, StreamContext, StageRequestToSpeakState, Integer, StageInstance, WidgetGlobalStatusIndicatorViewModel.StoreState.CallOngoing> {
         public static final AnonymousClass3 INSTANCE = new AnonymousClass3();
 
@@ -140,9 +140,7 @@ public final class WidgetGlobalStatusIndicatorViewModel2<T, R> implements Func1<
         return call2(channel);
     }
 
-    /* JADX WARN: Multi-variable type inference failed */
-    /* JADX WARN: Type inference failed for: r2v1, types: [com.discord.widgets.status.WidgetGlobalStatusIndicatorViewModel$Companion$observeStoreState$1$1, kotlin.jvm.functions.Function1] */
-    /* renamed from: call, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
     public final Observable<? extends WidgetGlobalStatusIndicatorViewModel.StoreState> call2(Channel channel) {
         if (channel != null) {
             ScalarSynchronousObservable scalarSynchronousObservable = new ScalarSynchronousObservable(channel);
@@ -150,11 +148,11 @@ public final class WidgetGlobalStatusIndicatorViewModel2<T, R> implements Func1<
             return ObservableCombineLatestOverloads2.combineLatest(scalarSynchronousObservable, this.$storeChannelsSelected.observeSelectedChannel(), this.$storeRtcConnection.getConnectionState(), this.$storeRtcConnection.getQuality(), this.$storeGuilds.observeGuild(channel.getGuildId()), this.$storeVoiceParticipants.get(channel.getId()), this.$streamContextService.getForActiveStream(), this.$storeStageChannels.observeMyRequestToSpeakState(channel.getId()), ObservationDeck.connectRx$default(this.$observationDeck, new ObservationDeck.UpdateSource[]{this.$storeUserRelationships, this.$storeStageChannels}, false, null, null, new AnonymousClass2(channel), 14, null), this.$storeStageInstances.observeStageInstanceForChannel(channel.getId()), AnonymousClass3.INSTANCE);
         }
         Observable<StoreConnectivity.DelayedState> observableObserveState = this.$storeConnectivity.observeState();
-        ?? r2 = AnonymousClass1.INSTANCE;
-        WidgetGlobalStatusIndicatorViewModel3 widgetGlobalStatusIndicatorViewModel3 = r2;
-        if (r2 != 0) {
-            widgetGlobalStatusIndicatorViewModel3 = new WidgetGlobalStatusIndicatorViewModel3(r2);
+        AnonymousClass1 anonymousClass1 = AnonymousClass1.INSTANCE;
+        Object widgetGlobalStatusIndicatorViewModel3 = anonymousClass1;
+        if (anonymousClass1 != null) {
+            widgetGlobalStatusIndicatorViewModel3 = new WidgetGlobalStatusIndicatorViewModel3(anonymousClass1);
         }
-        return observableObserveState.m11083G(widgetGlobalStatusIndicatorViewModel3);
+        return observableObserveState.m11083G((Func1) widgetGlobalStatusIndicatorViewModel3);
     }
 }

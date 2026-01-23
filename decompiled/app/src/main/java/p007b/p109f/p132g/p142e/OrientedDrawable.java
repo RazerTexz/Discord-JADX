@@ -7,25 +7,25 @@ import android.graphics.RectF;
 import android.graphics.drawable.Drawable;
 import androidx.annotation.VisibleForTesting;
 
-/* compiled from: OrientedDrawable.java */
-/* renamed from: b.f.g.e.i, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.f.g.e.i, reason: use source file name */
+/* JADX INFO: compiled from: OrientedDrawable.java */
+/* JADX INFO: loaded from: classes.dex */
 public class OrientedDrawable extends ForwardingDrawable {
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     @VisibleForTesting
     public final Matrix f3365n;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public int f3366o;
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public int f3367p;
 
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     public final Matrix f3368q;
 
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     public final RectF f3369r;
 
     public OrientedDrawable(Drawable drawable, int i, int i2) {
@@ -38,7 +38,7 @@ public class OrientedDrawable extends ForwardingDrawable {
     }
 
     @Override // p007b.p109f.p132g.p142e.ForwardingDrawable, p007b.p109f.p132g.p142e.TransformCallback
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public void mo1096d(Matrix matrix) {
         m1103n(matrix);
         if (this.f3365n.isIdentity()) {

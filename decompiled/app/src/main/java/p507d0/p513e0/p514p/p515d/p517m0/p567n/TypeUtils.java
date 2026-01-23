@@ -14,28 +14,28 @@ import p507d0.p513e0.p514p.p515d.p517m0.p567n.p568l1.KotlinTypeRefiner;
 import p507d0.p513e0.p514p.p515d.p517m0.p576p.SmartSet;
 import p507d0.p580t._Collections;
 
-/* compiled from: TypeUtils.java */
-/* renamed from: d0.e0.p.d.m0.n.e1, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.n.e1, reason: use source file name */
+/* JADX INFO: compiled from: TypeUtils.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class TypeUtils {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final KotlinType4 f24753a = ErrorUtils.createErrorTypeWithCustomDebugName("DONT_CARE");
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static final KotlinType4 f24754b = ErrorUtils.createErrorType("Cannot be inferred");
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public static final KotlinType4 f24755c = new a("NO_EXPECTED_TYPE");
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public static final KotlinType4 f24756d = new a("UNIT_EXPECTED_TYPE");
 
-    /* compiled from: TypeUtils.java */
-    /* renamed from: d0.e0.p.d.m0.n.e1$a */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.n.e1$a */
+    /* JADX INFO: compiled from: TypeUtils.java */
     public static class a extends SpecialTypes4 {
 
-        /* renamed from: k */
+        /* JADX INFO: renamed from: k */
         public final String f24757k;
 
         public a(String str) {
@@ -43,7 +43,7 @@ public class TypeUtils {
         }
 
         /* JADX WARN: Removed duplicated region for block: B:20:0x0030  */
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         /*
             Code decompiled incorrectly, please refer to instructions dump.
         */
@@ -159,7 +159,7 @@ public class TypeUtils {
     /* JADX WARN: Removed duplicated region for block: B:33:0x0055  */
     /* JADX WARN: Removed duplicated region for block: B:75:0x0105  */
     /* JADX WARN: Removed duplicated region for block: B:82:0x0120  */
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
@@ -485,7 +485,7 @@ public class TypeUtils {
         return flexibleTypes2.isFlexible(kotlinType) && acceptsNullable(flexibleTypes2.asFlexibleType(kotlinType).getUpperBound());
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static boolean m10009b(KotlinType kotlinType, Function1<KotlinType3, Boolean> function1, SmartSet<KotlinType> smartSet) {
         if (function1 == null) {
             m10008a(44);

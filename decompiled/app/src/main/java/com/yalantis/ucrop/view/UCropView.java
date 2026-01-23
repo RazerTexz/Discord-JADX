@@ -13,13 +13,13 @@ import java.util.Objects;
 import p007b.p485q.p486a.p491l.UCropView2;
 import p007b.p485q.p486a.p491l.UCropView3;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public class UCropView extends FrameLayout {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public GestureCropImageView f22241j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final OverlayView f22242k;
 
     public UCropView(Context context, AttributeSet attributeSet) {

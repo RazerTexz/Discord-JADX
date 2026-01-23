@@ -9,9 +9,9 @@ import p507d0.p580t.Maps6;
 import p507d0.p580t._Arrays;
 import p507d0.p580t._Collections;
 
-/* compiled from: KotlinTarget.kt */
-/* renamed from: d0.e0.p.d.m0.c.g1.n, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.c.g1.n, reason: use source file name */
+/* JADX INFO: compiled from: KotlinTarget.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public enum KotlinTarget {
     CLASS("class", false, 2),
     ANNOTATION_CLASS("annotation class", false, 2),
@@ -56,16 +56,16 @@ public enum KotlinTarget {
     OBJECT_LITERAL("object literal", false);
 
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static final HashMap<String, KotlinTarget> f22779j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public static final Map<AnnotationUseSiteTarget, KotlinTarget> f22780k;
     private final String description;
     private final boolean isDefault;
 
-    /* compiled from: KotlinTarget.kt */
-    /* renamed from: d0.e0.p.d.m0.c.g1.n$a */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.c.g1.n$a */
+    /* JADX INFO: compiled from: KotlinTarget.kt */
     public static final class a {
         public a(DefaultConstructorMarker defaultConstructorMarker) {
         }
@@ -103,7 +103,7 @@ public enum KotlinTarget {
         this.isDefault = z2;
     }
 
-    /* renamed from: values, reason: to resolve conflict with enum method */
+    /* JADX INFO: renamed from: values, reason: to resolve conflict with enum method */
     public static KotlinTarget[] valuesCustom() {
         KotlinTarget[] kotlinTargetArrValuesCustom = values();
         KotlinTarget[] kotlinTargetArr = new KotlinTarget[kotlinTargetArrValuesCustom.length];

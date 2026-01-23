@@ -27,46 +27,46 @@ import p007b.p109f.p161j.p169d.BytesRange;
 import p007b.p109f.p161j.p175j.EncodedImage2;
 import p686z.Task6;
 
-/* compiled from: PartialDiskCacheProducer.java */
-/* renamed from: b.f.j.p.r0, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.f.j.p.r0, reason: use source file name */
+/* JADX INFO: compiled from: PartialDiskCacheProducer.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class PartialDiskCacheProducer3 implements Producer2<EncodedImage2> {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final BufferedDiskCache2 f4191a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final CacheKeyFactory f4192b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final PooledByteBufferFactory f4193c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final ByteArrayPool f4194d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final Producer2<EncodedImage2> f4195e;
 
-    /* compiled from: PartialDiskCacheProducer.java */
-    /* renamed from: b.f.j.p.r0$a */
+    /* JADX INFO: renamed from: b.f.j.p.r0$a */
+    /* JADX INFO: compiled from: PartialDiskCacheProducer.java */
     public static class a extends DelegatingConsumer<EncodedImage2, EncodedImage2> {
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public final BufferedDiskCache2 f4196c;
 
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         public final CacheKey f4197d;
 
-        /* renamed from: e */
+        /* JADX INFO: renamed from: e */
         public final PooledByteBufferFactory f4198e;
 
-        /* renamed from: f */
+        /* JADX INFO: renamed from: f */
         public final ByteArrayPool f4199f;
 
-        /* renamed from: g */
+        /* JADX INFO: renamed from: g */
         public final EncodedImage2 f4200g;
 
-        /* renamed from: h */
+        /* JADX INFO: renamed from: h */
         public final boolean f4201h;
 
         public a(Consumer2 consumer2, BufferedDiskCache2 bufferedDiskCache2, CacheKey cacheKey, PooledByteBufferFactory pooledByteBufferFactory, ByteArrayPool byteArrayPool, EncodedImage2 encodedImage2, boolean z2, PartialDiskCacheProducer partialDiskCacheProducer) {
@@ -86,7 +86,7 @@ public class PartialDiskCacheProducer3 implements Producer2<EncodedImage2> {
         /* JADX WARN: Type inference failed for: r4v2, types: [b.f.j.j.e] */
         /* JADX WARN: Type inference failed for: r4v5, types: [b.f.j.c.f, java.lang.Object] */
         @Override // p007b.p109f.p161j.p181p.BaseConsumer
-        /* renamed from: i */
+        /* JADX INFO: renamed from: i */
         public void mo1320i(Object obj, int i) {
             ?? r4 = (EncodedImage2) obj;
             if (BaseConsumer.m1420f(i)) {
@@ -135,7 +135,7 @@ public class PartialDiskCacheProducer3 implements Producer2<EncodedImage2> {
             this.f4179b.mo1424b(r4, i);
         }
 
-        /* renamed from: n */
+        /* JADX INFO: renamed from: n */
         public final void m1513n(InputStream inputStream, OutputStream outputStream, int i) throws IOException {
             byte[] bArr = this.f4199f.get(16384);
             int i2 = i;
@@ -157,7 +157,7 @@ public class PartialDiskCacheProducer3 implements Producer2<EncodedImage2> {
             }
         }
 
-        /* renamed from: o */
+        /* JADX INFO: renamed from: o */
         public final PooledByteBufferOutputStream m1514o(EncodedImage2 encodedImage2, EncodedImage2 encodedImage22) throws IOException {
             BytesRange bytesRange = encodedImage22.f3900s;
             Objects.requireNonNull(bytesRange);
@@ -168,7 +168,7 @@ public class PartialDiskCacheProducer3 implements Producer2<EncodedImage2> {
             return pooledByteBufferOutputStreamMo997e;
         }
 
-        /* renamed from: p */
+        /* JADX INFO: renamed from: p */
         public final void m1515p(PooledByteBufferOutputStream pooledByteBufferOutputStream) throws Throwable {
             EncodedImage2 encodedImage2;
             Throwable th;
@@ -208,7 +208,7 @@ public class PartialDiskCacheProducer3 implements Producer2<EncodedImage2> {
     }
 
     @VisibleForTesting
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public static Map<String, String> m1511c(ProducerListener2 producerListener2, ProducerContext producerContext, boolean z2, int i) {
         if (producerListener2.mo1360g(producerContext, "PartialDiskCacheProducer")) {
             return z2 ? ImmutableMap.m968of("cached_value_found", String.valueOf(z2), "encodedImageSize", String.valueOf(i)) : ImmutableMap.m967of("cached_value_found", String.valueOf(z2));
@@ -217,7 +217,7 @@ public class PartialDiskCacheProducer3 implements Producer2<EncodedImage2> {
     }
 
     @Override // p007b.p109f.p161j.p181p.Producer2
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public void mo1417b(Consumer2<EncodedImage2> consumer2, ProducerContext producerContext) {
         ImageRequest imageRequestMo1447e = producerContext.mo1447e();
         boolean zM8720b = producerContext.mo1447e().m8720b(16);
@@ -238,7 +238,7 @@ public class PartialDiskCacheProducer3 implements Producer2<EncodedImage2> {
         }
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final void m1512d(Consumer2<EncodedImage2> consumer2, ProducerContext producerContext, CacheKey cacheKey, EncodedImage2 encodedImage2) {
         this.f4195e.mo1417b(new a(consumer2, this.f4191a, cacheKey, this.f4193c, this.f4194d, encodedImage2, producerContext.mo1447e().m8720b(32), null), producerContext);
     }

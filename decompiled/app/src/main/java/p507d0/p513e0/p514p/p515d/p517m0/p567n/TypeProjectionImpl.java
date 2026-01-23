@@ -2,15 +2,15 @@ package p507d0.p513e0.p514p.p515d.p517m0.p567n;
 
 import p507d0.p513e0.p514p.p515d.p517m0.p567n.p568l1.KotlinTypeRefiner;
 
-/* compiled from: TypeProjectionImpl.java */
-/* renamed from: d0.e0.p.d.m0.n.y0, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.n.y0, reason: use source file name */
+/* JADX INFO: compiled from: TypeProjectionImpl.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class TypeProjectionImpl extends TypeProjectionBase {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final Variance f24894a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final KotlinType f24895b;
 
     public TypeProjectionImpl(Variance variance, KotlinType kotlinType) {
@@ -26,7 +26,7 @@ public class TypeProjectionImpl extends TypeProjectionBase {
         this.f24895b = kotlinType;
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static /* synthetic */ void m10039a(int i) {
         String str = (i == 4 || i == 5) ? "@NotNull method %s.%s must not return null" : "Argument for @NotNull parameter '%s' of %s.%s must not be null";
         Object[] objArr = new Object[(i == 4 || i == 5) ? 2 : 3];

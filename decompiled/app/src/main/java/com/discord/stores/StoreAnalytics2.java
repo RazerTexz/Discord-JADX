@@ -10,9 +10,9 @@ import p507d0.p580t.Maps6;
 import p507d0.p580t.MapsJVM;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: StoreAnalytics.kt */
-/* renamed from: com.discord.stores.StoreAnalytics$trackChannelOpened$$inlined$let$lambda$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.stores.StoreAnalytics$trackChannelOpened$$inlined$let$lambda$1, reason: use source file name */
+/* JADX INFO: compiled from: StoreAnalytics.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class StoreAnalytics2 extends Lambda implements Function0<Map<String, ? extends Object>> {
     public final /* synthetic */ StoreChannelsSelected3 $analyticsLocation$inlined;
     public final /* synthetic */ Channel $channel;
@@ -36,7 +36,7 @@ public final class StoreAnalytics2 extends Lambda implements Function0<Map<Strin
     }
 
     @Override // kotlin.jvm.functions.Function0
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final Map<String, ? extends Object> invoke2() {
         Map<String, ? extends Object> mapPlus = Maps6.plus(ChannelUtils.m7673H(this.$channel) ? StoreAnalytics.access$getThreadSnapshotAnalyticsProperties(this.this$0, this.$channel) : StoreAnalytics.access$getChannelSnapshotAnalyticsProperties(this.this$0, this.$channel, true), MapsJVM.mapOf(Tuples.m10073to("channel_view", this.$channelView$inlined.getAnalyticsValue())));
         StoreChannelsSelected3 storeChannelsSelected3 = this.$analyticsLocation$inlined;

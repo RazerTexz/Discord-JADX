@@ -7,11 +7,11 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.ThreadFactory;
 import p007b.p100d.p104b.p105a.outline;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class ThreadFactoryWrapper implements ThreadFactory {
     private String source;
 
-    /* renamed from: com.adjust.sdk.scheduler.ThreadFactoryWrapper$1 */
+    /* JADX INFO: renamed from: com.adjust.sdk.scheduler.ThreadFactoryWrapper$1 */
     public class C54031 implements Thread.UncaughtExceptionHandler {
         public C54031() {
         }

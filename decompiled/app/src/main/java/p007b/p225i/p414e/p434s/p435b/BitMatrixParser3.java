@@ -3,21 +3,21 @@ package p007b.p225i.p414e.p434s.p435b;
 import com.google.zxing.FormatException;
 import p007b.p225i.p414e.p418n.BitMatrix;
 
-/* compiled from: BitMatrixParser.java */
-/* renamed from: b.i.e.s.b.a, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.e.s.b.a, reason: use source file name */
+/* JADX INFO: compiled from: BitMatrixParser.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class BitMatrixParser3 {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final BitMatrix f13510a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public Version3 f13511b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public FormatInformation f13512c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public boolean f13513d;
 
     public BitMatrixParser3(BitMatrix bitMatrix) throws FormatException {
@@ -28,12 +28,12 @@ public final class BitMatrixParser3 {
         this.f13510a = bitMatrix;
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final int m7084a(int i, int i2, int i3) {
         return this.f13513d ? this.f13510a.m6942f(i2, i) : this.f13510a.m6942f(i, i2) ? (i3 << 1) | 1 : i3 << 1;
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public void m7085b() {
         int i = 0;
         while (i < this.f13510a.f13229j) {
@@ -53,7 +53,7 @@ public final class BitMatrixParser3 {
         }
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public FormatInformation m7086c() throws FormatException {
         FormatInformation formatInformation = this.f13512c;
         if (formatInformation != null) {
@@ -87,7 +87,7 @@ public final class BitMatrixParser3 {
         throw FormatException.m9260a();
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public Version3 m7087d() throws FormatException {
         Version3 version3 = this.f13511b;
         if (version3 != null) {
@@ -124,7 +124,7 @@ public final class BitMatrixParser3 {
         return version3M7103b2;
     }
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public void m7088e() {
         if (this.f13512c == null) {
             return;

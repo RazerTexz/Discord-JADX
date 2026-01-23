@@ -27,96 +27,96 @@ import com.google.android.material.textfield.TextInputLayout;
 import java.util.ArrayList;
 import java.util.List;
 
-/* compiled from: IndicatorViewController.java */
-/* renamed from: b.i.a.g.j.n, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.g.j.n, reason: use source file name */
+/* JADX INFO: compiled from: IndicatorViewController.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class IndicatorViewController {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final Context f11822a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     @NonNull
     public final TextInputLayout f11823b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public LinearLayout f11824c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public int f11825d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public FrameLayout f11826e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     @Nullable
     public Animator f11827f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public final float f11828g;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public int f11829h;
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public int f11830i;
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     @Nullable
     public CharSequence f11831j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public boolean f11832k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     @Nullable
     public TextView f11833l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     @Nullable
     public CharSequence f11834m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public int f11835n;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     @Nullable
     public ColorStateList f11836o;
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public CharSequence f11837p;
 
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     public boolean f11838q;
 
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     @Nullable
     public TextView f11839r;
 
-    /* renamed from: s */
+    /* JADX INFO: renamed from: s */
     public int f11840s;
 
-    /* renamed from: t */
+    /* JADX INFO: renamed from: t */
     @Nullable
     public ColorStateList f11841t;
 
-    /* renamed from: u */
+    /* JADX INFO: renamed from: u */
     public Typeface f11842u;
 
-    /* compiled from: IndicatorViewController.java */
-    /* renamed from: b.i.a.g.j.n$a */
+    /* JADX INFO: renamed from: b.i.a.g.j.n$a */
+    /* JADX INFO: compiled from: IndicatorViewController.java */
     public class a extends AnimatorListenerAdapter {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final /* synthetic */ int f11843a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final /* synthetic */ TextView f11844b;
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public final /* synthetic */ int f11845c;
 
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         public final /* synthetic */ TextView f11846d;
 
         public a(int i, TextView textView, int i2, TextView textView2) {
@@ -161,7 +161,7 @@ public final class IndicatorViewController {
         this.f11828g = r0.getResources().getDimensionPixelSize(C10817R.dimen.design_textinput_caption_translate_y);
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public void m6157a(TextView textView, int i) {
         if (this.f11824c == null && this.f11826e == null) {
             LinearLayout linearLayout = new LinearLayout(this.f11822a);
@@ -184,7 +184,7 @@ public final class IndicatorViewController {
         this.f11825d++;
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public void m6158b() {
         if ((this.f11824c == null || this.f11823b.getEditText() == null) ? false : true) {
             EditText editText = this.f11823b.getEditText();
@@ -195,7 +195,7 @@ public final class IndicatorViewController {
         }
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public void m6159c() {
         Animator animator = this.f11827f;
         if (animator != null) {
@@ -203,7 +203,7 @@ public final class IndicatorViewController {
         }
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final void m6160d(@NonNull List<Animator> list, boolean z2, @Nullable TextView textView, int i, int i2, int i3) {
         if (textView == null || !z2) {
             return;
@@ -222,13 +222,13 @@ public final class IndicatorViewController {
         }
     }
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public boolean m6161e() {
         return (this.f11830i != 1 || this.f11833l == null || TextUtils.isEmpty(this.f11831j)) ? false : true;
     }
 
     @Nullable
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final TextView m6162f(int i) {
         if (i == 1) {
             return this.f11833l;
@@ -240,7 +240,7 @@ public final class IndicatorViewController {
     }
 
     @ColorInt
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public int m6163g() {
         TextView textView = this.f11833l;
         if (textView != null) {
@@ -249,12 +249,12 @@ public final class IndicatorViewController {
         return -1;
     }
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public final int m6164h(boolean z2, @DimenRes int i, int i2) {
         return z2 ? this.f11822a.getResources().getDimensionPixelSize(i) : i2;
     }
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public void m6165i() {
         this.f11831j = null;
         m6159c();
@@ -268,7 +268,7 @@ public final class IndicatorViewController {
         m6168l(this.f11829h, this.f11830i, m6167k(this.f11833l, null));
     }
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public void m6166j(TextView textView, int i) {
         FrameLayout frameLayout;
         LinearLayout linearLayout = this.f11824c;
@@ -288,12 +288,12 @@ public final class IndicatorViewController {
         }
     }
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final boolean m6167k(@Nullable TextView textView, @Nullable CharSequence charSequence) {
         return ViewCompat.isLaidOut(this.f11823b) && this.f11823b.isEnabled() && !(this.f11830i == this.f11829h && textView != null && TextUtils.equals(textView.getText(), charSequence));
     }
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final void m6168l(int i, int i2, boolean z2) {
         TextView textViewM6162f;
         TextView textViewM6162f2;

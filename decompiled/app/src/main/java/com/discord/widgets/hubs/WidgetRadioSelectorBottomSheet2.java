@@ -7,16 +7,16 @@ import com.discord.models.domain.ModelAuditLogEntry;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: WidgetRadioSelectorBottomSheet.kt */
-/* renamed from: com.discord.widgets.hubs.RadioSelectorItem, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.hubs.RadioSelectorItem, reason: use source file name */
+/* JADX INFO: compiled from: WidgetRadioSelectorBottomSheet.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final /* data */ class WidgetRadioSelectorBottomSheet2 implements Parcelable {
     public static final Parcelable.Creator<WidgetRadioSelectorBottomSheet2> CREATOR = new Creator();
     private final int id;
     private final boolean selected;
     private final String text;
 
-    /* renamed from: com.discord.widgets.hubs.RadioSelectorItem$Creator */
+    /* JADX INFO: renamed from: com.discord.widgets.hubs.RadioSelectorItem$Creator */
     public static class Creator implements Parcelable.Creator<WidgetRadioSelectorBottomSheet2> {
         /* JADX WARN: Can't rename method to resolve collision */
         @Override // android.os.Parcelable.Creator
@@ -62,17 +62,17 @@ public final /* data */ class WidgetRadioSelectorBottomSheet2 implements Parcela
         return widgetRadioSelectorBottomSheet2.copy(i, str, z2);
     }
 
-    /* renamed from: component1, reason: from getter */
+    /* JADX INFO: renamed from: component1, reason: from getter */
     public final int getId() {
         return this.id;
     }
 
-    /* renamed from: component2, reason: from getter */
+    /* JADX INFO: renamed from: component2, reason: from getter */
     public final String getText() {
         return this.text;
     }
 
-    /* renamed from: component3, reason: from getter */
+    /* JADX INFO: renamed from: component3, reason: from getter */
     public final boolean getSelected() {
         return this.selected;
     }
@@ -111,16 +111,19 @@ public final /* data */ class WidgetRadioSelectorBottomSheet2 implements Parcela
     }
 
     /* JADX WARN: Multi-variable type inference failed */
+    /* JADX WARN: Type inference failed for: r1v4, types: [int] */
+    /* JADX WARN: Type inference failed for: r1v5 */
+    /* JADX WARN: Type inference failed for: r1v7 */
     public int hashCode() {
         int i = this.id * 31;
         String str = this.text;
         int iHashCode = (i + (str != null ? str.hashCode() : 0)) * 31;
         boolean z2 = this.selected;
-        int i2 = z2;
-        if (z2 != 0) {
-            i2 = 1;
+        ?? r1 = z2;
+        if (z2) {
+            r1 = 1;
         }
-        return iHashCode + i2;
+        return iHashCode + r1;
     }
 
     public String toString() {

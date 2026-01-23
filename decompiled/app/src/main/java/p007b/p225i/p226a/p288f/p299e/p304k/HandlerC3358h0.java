@@ -10,12 +10,12 @@ import p007b.p100d.p104b.p105a.outline;
 import p007b.p225i.p226a.p288f.p299e.p304k.AbstractC3345b;
 import p007b.p225i.p226a.p288f.p313h.p320g.HandlerC3484d;
 
-/* compiled from: com.google.android.gms:play-services-basement@@17.6.0 */
-/* renamed from: b.i.a.f.e.k.h0 */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.e.k.h0 */
+/* JADX INFO: compiled from: com.google.android.gms:play-services-basement@@17.6.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public final class HandlerC3358h0 extends HandlerC3484d {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final /* synthetic */ AbstractC3345b f9523a;
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -24,7 +24,7 @@ public final class HandlerC3358h0 extends HandlerC3484d {
         this.f9523a = abstractC3345b;
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final boolean m4158a(Message message) {
         int i = message.what;
         return i == 2 || i == 1 || i == 7;

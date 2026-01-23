@@ -7,15 +7,15 @@ import java.util.Map;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: Challenge.kt */
-/* renamed from: f0.i, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: f0.i, reason: use source file name */
+/* JADX INFO: compiled from: Challenge.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class Challenge {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final Map<String, String> f25907a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final String f25908b;
 
     public Challenge(String str, Map<String, String> map) {

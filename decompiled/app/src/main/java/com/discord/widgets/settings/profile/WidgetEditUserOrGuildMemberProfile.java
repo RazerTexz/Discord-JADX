@@ -76,12 +76,12 @@ import p658rx.functions.Action1;
 import p658rx.functions.Func0;
 import p658rx.subjects.BehaviorSubject;
 
-/* compiled from: WidgetEditUserOrGuildMemberProfile.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetEditUserOrGuildMemberProfile.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetEditUserOrGuildMemberProfile extends AppFragment {
     public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetEditUserOrGuildMemberProfile.class, "binding", "getBinding()Lcom/discord/databinding/WidgetSettingsUserProfileBinding;", 0)};
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     public static final int MAX_AVATAR_SIZE = 1024;
     public static final int MAX_BANNER_FILE_SIZE_MB = 30;
@@ -90,18 +90,18 @@ public final class WidgetEditUserOrGuildMemberProfile extends AppFragment {
     private Function1<? super String, Unit> avatarSelectedResult;
     private Function1<? super String, Unit> bannerSelectedResult;
 
-    /* renamed from: binding$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
     private final AtomicBoolean discardConfirmed;
 
-    /* renamed from: guildId$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: guildId$delegate, reason: from kotlin metadata */
     private final Lazy guildId;
     private Function1<? super String, Unit> imageSelectedResult;
 
-    /* renamed from: viewModel$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: viewModel$delegate, reason: from kotlin metadata */
     private final Lazy viewModel;
 
-    /* compiled from: WidgetEditUserOrGuildMemberProfile.kt */
+    /* JADX INFO: compiled from: WidgetEditUserOrGuildMemberProfile.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -134,8 +134,8 @@ public final class WidgetEditUserOrGuildMemberProfile extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetEditUserOrGuildMemberProfile.kt */
-    /* renamed from: com.discord.widgets.settings.profile.WidgetEditUserOrGuildMemberProfile$configureAvatarSelect$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.profile.WidgetEditUserOrGuildMemberProfile$configureAvatarSelect$1 */
+    /* JADX INFO: compiled from: WidgetEditUserOrGuildMemberProfile.kt */
     public static final class C99691 extends Lambda implements Function1<String, Unit> {
         public final /* synthetic */ EditUserOrGuildMemberProfileViewModel2.ViewState.Loaded $viewState;
 
@@ -151,7 +151,7 @@ public final class WidgetEditUserOrGuildMemberProfile extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(String str) {
             Intrinsics3.checkNotNullParameter(str, "dataUrl");
             if (this.$viewState.getCanHaveAnimatedAvatars() || !IconUtils.INSTANCE.isDataUrlForGif(str)) {
@@ -165,13 +165,13 @@ public final class WidgetEditUserOrGuildMemberProfile extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetEditUserOrGuildMemberProfile.kt */
-    /* renamed from: com.discord.widgets.settings.profile.WidgetEditUserOrGuildMemberProfile$configureAvatarSelect$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.profile.WidgetEditUserOrGuildMemberProfile$configureAvatarSelect$2 */
+    /* JADX INFO: compiled from: WidgetEditUserOrGuildMemberProfile.kt */
     public static final class C99702 extends Lambda implements Function0<Unit> {
         public final /* synthetic */ List $avatarSheetOptions;
 
-        /* compiled from: WidgetEditUserOrGuildMemberProfile.kt */
-        /* renamed from: com.discord.widgets.settings.profile.WidgetEditUserOrGuildMemberProfile$configureAvatarSelect$2$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.widgets.settings.profile.WidgetEditUserOrGuildMemberProfile$configureAvatarSelect$2$1, reason: invalid class name */
+        /* JADX INFO: compiled from: WidgetEditUserOrGuildMemberProfile.kt */
         public static final class AnonymousClass1 extends Lambda implements Function1<Integer, Unit> {
             public AnonymousClass1() {
                 super(1);
@@ -209,7 +209,7 @@ public final class WidgetEditUserOrGuildMemberProfile extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             SelectorBottomSheet.Companion aVar = SelectorBottomSheet.INSTANCE;
             FragmentManager childFragmentManager = WidgetEditUserOrGuildMemberProfile.this.getChildFragmentManager();
@@ -218,8 +218,8 @@ public final class WidgetEditUserOrGuildMemberProfile extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetEditUserOrGuildMemberProfile.kt */
-    /* renamed from: com.discord.widgets.settings.profile.WidgetEditUserOrGuildMemberProfile$configureBannerSelect$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.profile.WidgetEditUserOrGuildMemberProfile$configureBannerSelect$1 */
+    /* JADX INFO: compiled from: WidgetEditUserOrGuildMemberProfile.kt */
     public static final class C99711 extends Lambda implements Function1<String, Unit> {
         public C99711() {
             super(1);
@@ -231,24 +231,24 @@ public final class WidgetEditUserOrGuildMemberProfile extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(String str) {
             Intrinsics3.checkNotNullParameter(str, "dataUrl");
             WidgetEditUserOrGuildMemberProfile.access$getViewModel$p(WidgetEditUserOrGuildMemberProfile.this).updateBannerImage(str);
         }
     }
 
-    /* compiled from: WidgetEditUserOrGuildMemberProfile.kt */
-    /* renamed from: com.discord.widgets.settings.profile.WidgetEditUserOrGuildMemberProfile$configureBannerSelect$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.profile.WidgetEditUserOrGuildMemberProfile$configureBannerSelect$2 */
+    /* JADX INFO: compiled from: WidgetEditUserOrGuildMemberProfile.kt */
     public static final class C99722 extends Lambda implements Function0<Unit> {
         public final /* synthetic */ EditUserOrGuildMemberProfileViewModel2.ViewState.Loaded $viewState;
 
-        /* compiled from: WidgetEditUserOrGuildMemberProfile.kt */
-        /* renamed from: com.discord.widgets.settings.profile.WidgetEditUserOrGuildMemberProfile$configureBannerSelect$2$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.widgets.settings.profile.WidgetEditUserOrGuildMemberProfile$configureBannerSelect$2$1, reason: invalid class name */
+        /* JADX INFO: compiled from: WidgetEditUserOrGuildMemberProfile.kt */
         public static final class AnonymousClass1 extends Lambda implements Function1<String, Unit> {
 
-            /* compiled from: WidgetEditUserOrGuildMemberProfile.kt */
-            /* renamed from: com.discord.widgets.settings.profile.WidgetEditUserOrGuildMemberProfile$configureBannerSelect$2$1$1, reason: invalid class name and collision with other inner class name */
+            /* JADX INFO: renamed from: com.discord.widgets.settings.profile.WidgetEditUserOrGuildMemberProfile$configureBannerSelect$2$1$1, reason: invalid class name and collision with other inner class name */
+            /* JADX INFO: compiled from: WidgetEditUserOrGuildMemberProfile.kt */
             public static final class C132931 extends Lambda implements Function0<Unit> {
                 public C132931() {
                     super(0);
@@ -260,7 +260,7 @@ public final class WidgetEditUserOrGuildMemberProfile extends AppFragment {
                     return Unit.f27425a;
                 }
 
-                /* renamed from: invoke, reason: avoid collision after fix types in other method */
+                /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
                 public final void invoke2() {
                     WidgetEditUserOrGuildMemberProfile widgetEditUserOrGuildMemberProfile = WidgetEditUserOrGuildMemberProfile.this;
                     WidgetEditUserOrGuildMemberProfile.access$setImageSelectedResult$p(widgetEditUserOrGuildMemberProfile, WidgetEditUserOrGuildMemberProfile.access$getBannerSelectedResult$p(widgetEditUserOrGuildMemberProfile));
@@ -268,8 +268,8 @@ public final class WidgetEditUserOrGuildMemberProfile extends AppFragment {
                 }
             }
 
-            /* compiled from: WidgetEditUserOrGuildMemberProfile.kt */
-            /* renamed from: com.discord.widgets.settings.profile.WidgetEditUserOrGuildMemberProfile$configureBannerSelect$2$1$2, reason: invalid class name */
+            /* JADX INFO: renamed from: com.discord.widgets.settings.profile.WidgetEditUserOrGuildMemberProfile$configureBannerSelect$2$1$2, reason: invalid class name */
+            /* JADX INFO: compiled from: WidgetEditUserOrGuildMemberProfile.kt */
             public static final class AnonymousClass2 extends Lambda implements Function0<Unit> {
                 public AnonymousClass2() {
                     super(0);
@@ -281,14 +281,14 @@ public final class WidgetEditUserOrGuildMemberProfile extends AppFragment {
                     return Unit.f27425a;
                 }
 
-                /* renamed from: invoke, reason: avoid collision after fix types in other method */
+                /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
                 public final void invoke2() {
                     WidgetEditUserOrGuildMemberProfile.access$getViewModel$p(WidgetEditUserOrGuildMemberProfile.this).updateBannerImage(null);
                 }
             }
 
-            /* compiled from: WidgetEditUserOrGuildMemberProfile.kt */
-            /* renamed from: com.discord.widgets.settings.profile.WidgetEditUserOrGuildMemberProfile$configureBannerSelect$2$1$3, reason: invalid class name */
+            /* JADX INFO: renamed from: com.discord.widgets.settings.profile.WidgetEditUserOrGuildMemberProfile$configureBannerSelect$2$1$3, reason: invalid class name */
+            /* JADX INFO: compiled from: WidgetEditUserOrGuildMemberProfile.kt */
             public static final class AnonymousClass3 extends Lambda implements Function1<Integer, Unit> {
                 public AnonymousClass3() {
                     super(1);
@@ -300,7 +300,7 @@ public final class WidgetEditUserOrGuildMemberProfile extends AppFragment {
                     return Unit.f27425a;
                 }
 
-                /* renamed from: invoke, reason: avoid collision after fix types in other method */
+                /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
                 public final void invoke2(Integer num) {
                     String colorHexFromColorInt;
                     if (num != null) {
@@ -322,7 +322,7 @@ public final class WidgetEditUserOrGuildMemberProfile extends AppFragment {
                 return Unit.f27425a;
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2(String str) {
                 WidgetEditProfileBannerSheet.Companion companion = WidgetEditProfileBannerSheet.INSTANCE;
                 Long lAccess$getGuildId$p = WidgetEditUserOrGuildMemberProfile.access$getGuildId$p(WidgetEditUserOrGuildMemberProfile.this);
@@ -347,7 +347,7 @@ public final class WidgetEditUserOrGuildMemberProfile extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             Observable observableM11086L = WidgetEditUserOrGuildMemberProfile.access$getAvatarRepresentativeColorHexSubject$p(WidgetEditUserOrGuildMemberProfile.this).m11100Z(1).m11086L();
             Intrinsics3.checkNotNullExpressionValue(observableM11086L, "avatarRepresentativeColo…  .onBackpressureLatest()");
@@ -355,8 +355,8 @@ public final class WidgetEditUserOrGuildMemberProfile extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetEditUserOrGuildMemberProfile.kt */
-    /* renamed from: com.discord.widgets.settings.profile.WidgetEditUserOrGuildMemberProfile$configureUI$3 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.profile.WidgetEditUserOrGuildMemberProfile$configureUI$3 */
+    /* JADX INFO: compiled from: WidgetEditUserOrGuildMemberProfile.kt */
     public static final class C99753<R> implements Func0<Boolean> {
         public final /* synthetic */ EditUserOrGuildMemberProfileViewModel2.ViewState $viewState;
 
@@ -375,8 +375,8 @@ public final class WidgetEditUserOrGuildMemberProfile extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetEditUserOrGuildMemberProfile.kt */
-    /* renamed from: com.discord.widgets.settings.profile.WidgetEditUserOrGuildMemberProfile$handleBackPressed$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.profile.WidgetEditUserOrGuildMemberProfile$handleBackPressed$1 */
+    /* JADX INFO: compiled from: WidgetEditUserOrGuildMemberProfile.kt */
     public static final class ViewOnClickListenerC99761 implements View.OnClickListener {
         public final /* synthetic */ AlertDialog $dialog;
 
@@ -390,8 +390,8 @@ public final class WidgetEditUserOrGuildMemberProfile extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetEditUserOrGuildMemberProfile.kt */
-    /* renamed from: com.discord.widgets.settings.profile.WidgetEditUserOrGuildMemberProfile$handleBackPressed$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.profile.WidgetEditUserOrGuildMemberProfile$handleBackPressed$2 */
+    /* JADX INFO: compiled from: WidgetEditUserOrGuildMemberProfile.kt */
     public static final class ViewOnClickListenerC99772 implements View.OnClickListener {
         public final /* synthetic */ AlertDialog $dialog;
 
@@ -410,8 +410,8 @@ public final class WidgetEditUserOrGuildMemberProfile extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetEditUserOrGuildMemberProfile.kt */
-    /* renamed from: com.discord.widgets.settings.profile.WidgetEditUserOrGuildMemberProfile$onViewBound$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.profile.WidgetEditUserOrGuildMemberProfile$onViewBound$1 */
+    /* JADX INFO: compiled from: WidgetEditUserOrGuildMemberProfile.kt */
     public static final class ViewOnClickListenerC99781 implements View.OnClickListener {
         public final /* synthetic */ View $view;
 
@@ -429,8 +429,8 @@ public final class WidgetEditUserOrGuildMemberProfile extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetEditUserOrGuildMemberProfile.kt */
-    /* renamed from: com.discord.widgets.settings.profile.WidgetEditUserOrGuildMemberProfile$onViewBound$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.profile.WidgetEditUserOrGuildMemberProfile$onViewBound$2 */
+    /* JADX INFO: compiled from: WidgetEditUserOrGuildMemberProfile.kt */
     public static final class C99792 extends Lambda implements Function1<MotionEvent, Boolean> {
         public C99792() {
             super(1);
@@ -441,7 +441,7 @@ public final class WidgetEditUserOrGuildMemberProfile extends AppFragment {
             return Boolean.valueOf(invoke2(motionEvent));
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final boolean invoke2(MotionEvent motionEvent) {
             if (motionEvent == null) {
                 return false;
@@ -472,8 +472,8 @@ public final class WidgetEditUserOrGuildMemberProfile extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetEditUserOrGuildMemberProfile.kt */
-    /* renamed from: com.discord.widgets.settings.profile.WidgetEditUserOrGuildMemberProfile$onViewBound$3 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.profile.WidgetEditUserOrGuildMemberProfile$onViewBound$3 */
+    /* JADX INFO: compiled from: WidgetEditUserOrGuildMemberProfile.kt */
     public static final class ViewOnClickListenerC99803 implements View.OnClickListener {
         public ViewOnClickListenerC99803() {
         }
@@ -484,8 +484,8 @@ public final class WidgetEditUserOrGuildMemberProfile extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetEditUserOrGuildMemberProfile.kt */
-    /* renamed from: com.discord.widgets.settings.profile.WidgetEditUserOrGuildMemberProfile$onViewBound$4 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.profile.WidgetEditUserOrGuildMemberProfile$onViewBound$4 */
+    /* JADX INFO: compiled from: WidgetEditUserOrGuildMemberProfile.kt */
     public static final class C99814 extends Lambda implements Function1<Integer, Unit> {
         public C99814() {
             super(1);
@@ -502,8 +502,8 @@ public final class WidgetEditUserOrGuildMemberProfile extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetEditUserOrGuildMemberProfile.kt */
-    /* renamed from: com.discord.widgets.settings.profile.WidgetEditUserOrGuildMemberProfile$onViewBound$5 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.profile.WidgetEditUserOrGuildMemberProfile$onViewBound$5 */
+    /* JADX INFO: compiled from: WidgetEditUserOrGuildMemberProfile.kt */
     public static final class C99825 extends Lambda implements Function1<Badge, Unit> {
         public C99825() {
             super(1);
@@ -515,7 +515,7 @@ public final class WidgetEditUserOrGuildMemberProfile extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Badge badge) {
             Intrinsics3.checkNotNullParameter(badge, "it");
             Badge.Companion companion = Badge.INSTANCE;
@@ -525,8 +525,8 @@ public final class WidgetEditUserOrGuildMemberProfile extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetEditUserOrGuildMemberProfile.kt */
-    /* renamed from: com.discord.widgets.settings.profile.WidgetEditUserOrGuildMemberProfile$onViewBoundOrOnResume$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.profile.WidgetEditUserOrGuildMemberProfile$onViewBoundOrOnResume$1 */
+    /* JADX INFO: compiled from: WidgetEditUserOrGuildMemberProfile.kt */
     public static final class C99831 extends Lambda implements Function1<EditUserOrGuildMemberProfileViewModel2.ViewState, Unit> {
         public C99831() {
             super(1);
@@ -538,7 +538,7 @@ public final class WidgetEditUserOrGuildMemberProfile extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(EditUserOrGuildMemberProfileViewModel2.ViewState viewState) {
             WidgetEditUserOrGuildMemberProfile widgetEditUserOrGuildMemberProfile = WidgetEditUserOrGuildMemberProfile.this;
             Intrinsics3.checkNotNullExpressionValue(viewState, "viewState");
@@ -546,8 +546,8 @@ public final class WidgetEditUserOrGuildMemberProfile extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetEditUserOrGuildMemberProfile.kt */
-    /* renamed from: com.discord.widgets.settings.profile.WidgetEditUserOrGuildMemberProfile$onViewBoundOrOnResume$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.profile.WidgetEditUserOrGuildMemberProfile$onViewBoundOrOnResume$2 */
+    /* JADX INFO: compiled from: WidgetEditUserOrGuildMemberProfile.kt */
     public static final class C99842 extends Lambda implements Function1<EditUserOrGuildMemberProfileViewModel2.Event, Unit> {
         public C99842() {
             super(1);
@@ -559,7 +559,7 @@ public final class WidgetEditUserOrGuildMemberProfile extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(EditUserOrGuildMemberProfileViewModel2.Event event) {
             Intrinsics3.checkNotNullParameter(event, "event");
             WidgetEditUserOrGuildMemberProfile.access$handleEvent(WidgetEditUserOrGuildMemberProfile.this, event);
@@ -809,8 +809,6 @@ public final class WidgetEditUserOrGuildMemberProfile extends AppFragment {
         hideKeyboard(getBinding().f18079d);
     }
 
-    /* JADX WARN: Multi-variable type inference failed */
-    /* JADX WARN: Type inference failed for: r2v3, types: [com.discord.widgets.settings.profile.WidgetEditUserOrGuildMemberProfile$sam$rx_functions_Action1$0] */
     @Override // com.discord.app.AppFragment
     public void onImageChosen(Uri uri, String mimeType) {
         Intrinsics3.checkNotNullParameter(uri, NotificationCompat.MessagingStyle.Message.KEY_DATA_URI);
@@ -830,24 +828,24 @@ public final class WidgetEditUserOrGuildMemberProfile extends AppFragment {
             return;
         }
         Context context = getContext();
-        Function1<? super String, Unit> widgetEditUserOrGuildMemberProfile$sam$rx_functions_Action1$0 = this.imageSelectedResult;
-        if (widgetEditUserOrGuildMemberProfile$sam$rx_functions_Action1$0 != null) {
-            widgetEditUserOrGuildMemberProfile$sam$rx_functions_Action1$0 = new WidgetEditUserOrGuildMemberProfile$sam$rx_functions_Action1$0(widgetEditUserOrGuildMemberProfile$sam$rx_functions_Action1$0);
+        Function1<? super String, Unit> function1 = this.imageSelectedResult;
+        Object widgetEditUserOrGuildMemberProfile$sam$rx_functions_Action1$0 = function1;
+        if (function1 != null) {
+            widgetEditUserOrGuildMemberProfile$sam$rx_functions_Action1$0 = new WidgetEditUserOrGuildMemberProfile$sam$rx_functions_Action1$0(function1);
         }
         MGImages.requestDataUrl(context, uri, mimeType, (Action1) widgetEditUserOrGuildMemberProfile$sam$rx_functions_Action1$0);
     }
 
-    /* JADX WARN: Multi-variable type inference failed */
-    /* JADX WARN: Type inference failed for: r2v0, types: [com.discord.widgets.settings.profile.WidgetEditUserOrGuildMemberProfile$sam$rx_functions_Action1$0] */
     @Override // com.discord.app.AppFragment
     public void onImageCropped(Uri uri, String mimeType) {
         Intrinsics3.checkNotNullParameter(uri, NotificationCompat.MessagingStyle.Message.KEY_DATA_URI);
         Intrinsics3.checkNotNullParameter(mimeType, "mimeType");
         super.onImageCropped(uri, mimeType);
         Context context = getContext();
-        Function1<? super String, Unit> widgetEditUserOrGuildMemberProfile$sam$rx_functions_Action1$0 = this.imageSelectedResult;
-        if (widgetEditUserOrGuildMemberProfile$sam$rx_functions_Action1$0 != null) {
-            widgetEditUserOrGuildMemberProfile$sam$rx_functions_Action1$0 = new WidgetEditUserOrGuildMemberProfile$sam$rx_functions_Action1$0(widgetEditUserOrGuildMemberProfile$sam$rx_functions_Action1$0);
+        Function1<? super String, Unit> function1 = this.imageSelectedResult;
+        Object widgetEditUserOrGuildMemberProfile$sam$rx_functions_Action1$0 = function1;
+        if (function1 != null) {
+            widgetEditUserOrGuildMemberProfile$sam$rx_functions_Action1$0 = new WidgetEditUserOrGuildMemberProfile$sam$rx_functions_Action1$0(function1);
         }
         MGImages.requestDataUrl(context, uri, mimeType, (Action1) widgetEditUserOrGuildMemberProfile$sam$rx_functions_Action1$0);
     }

@@ -13,40 +13,40 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import p007b.p100d.p104b.p105a.outline;
 
-/* compiled from: QueueFile.java */
-/* renamed from: b.i.c.m.d.l.c, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.c.m.d.l.c, reason: use source file name */
+/* JADX INFO: compiled from: QueueFile.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class QueueFile implements Closeable {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static final Logger f12474j = Logger.getLogger(QueueFile.class.getName());
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final RandomAccessFile f12475k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public int f12476l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public int f12477m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public b f12478n;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public b f12479o;
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public final byte[] f12480p = new byte[16];
 
-    /* compiled from: QueueFile.java */
-    /* renamed from: b.i.c.m.d.l.c$a */
+    /* JADX INFO: renamed from: b.i.c.m.d.l.c$a */
+    /* JADX INFO: compiled from: QueueFile.java */
     public class a implements d {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public boolean f12481a = true;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final /* synthetic */ StringBuilder f12482b;
 
         public a(QueueFile queueFile, StringBuilder sb) {
@@ -54,7 +54,7 @@ public class QueueFile implements Closeable {
         }
 
         @Override // p007b.p225i.p361c.p369m.p370d.p374l.QueueFile.d
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public void mo6512a(InputStream inputStream, int i) throws IOException {
             if (this.f12481a) {
                 this.f12481a = false;
@@ -65,17 +65,17 @@ public class QueueFile implements Closeable {
         }
     }
 
-    /* compiled from: QueueFile.java */
-    /* renamed from: b.i.c.m.d.l.c$b */
+    /* JADX INFO: renamed from: b.i.c.m.d.l.c$b */
+    /* JADX INFO: compiled from: QueueFile.java */
     public static class b {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public static final b f12483a = new b(0, 0);
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final int f12484b;
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public final int f12485c;
 
         public b(int i, int i2) {
@@ -93,10 +93,10 @@ public class QueueFile implements Closeable {
         }
     }
 
-    /* compiled from: QueueFile.java */
-    /* renamed from: b.i.c.m.d.l.c$d */
+    /* JADX INFO: renamed from: b.i.c.m.d.l.c$d */
+    /* JADX INFO: compiled from: QueueFile.java */
     public interface d {
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         void mo6512a(InputStream inputStream, int i) throws IOException;
     }
 
@@ -144,7 +144,7 @@ public class QueueFile implements Closeable {
         this.f12479o = m6506n(iM6499q3);
     }
 
-    /* renamed from: C */
+    /* JADX INFO: renamed from: C */
     public static void m6497C(byte[] bArr, int i, int i2) {
         bArr[i] = (byte) (i2 >> 24);
         bArr[i + 1] = (byte) (i2 >> 16);
@@ -152,18 +152,18 @@ public class QueueFile implements Closeable {
         bArr[i + 3] = (byte) i2;
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static int m6498a(QueueFile queueFile, int i) {
         int i2 = queueFile.f12476l;
         return i < i2 ? i : (i + 16) - i2;
     }
 
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     public static int m6499q(byte[] bArr, int i) {
         return ((bArr[i] & 255) << 24) + ((bArr[i + 1] & 255) << 16) + ((bArr[i + 2] & 255) << 8) + (bArr[i + 3] & 255);
     }
 
-    /* renamed from: A */
+    /* JADX INFO: renamed from: A */
     public final void m6500A(int i, int i2, int i3, int i4) throws IOException {
         byte[] bArr = this.f12480p;
         int[] iArr = {i, i2, i3, i4};
@@ -176,7 +176,7 @@ public class QueueFile implements Closeable {
         this.f12475k.write(this.f12480p);
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public void m6501b(byte[] bArr) throws IOException {
         int iM6511y;
         int length = bArr.length;
@@ -207,7 +207,7 @@ public class QueueFile implements Closeable {
         }
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public synchronized void m6502c() throws IOException {
         m6500A(4096, 0, 0, 0);
         this.f12477m = 0;
@@ -226,7 +226,7 @@ public class QueueFile implements Closeable {
         this.f12475k.close();
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final void m6503d(int i) throws IOException {
         int i2 = i + 4;
         int iM6510x = this.f12476l - m6510x();
@@ -262,7 +262,7 @@ public class QueueFile implements Closeable {
         this.f12476l = i3;
     }
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public synchronized void m6504e(d dVar) throws IOException {
         int iM6511y = this.f12478n.f12484b;
         for (int i = 0; i < this.f12477m; i++) {
@@ -272,12 +272,12 @@ public class QueueFile implements Closeable {
         }
     }
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public synchronized boolean m6505f() {
         return this.f12477m == 0;
     }
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public final b m6506n(int i) throws IOException {
         if (i == 0) {
             return b.f12483a;
@@ -286,7 +286,7 @@ public class QueueFile implements Closeable {
         return new b(i, this.f12475k.readInt());
     }
 
-    /* renamed from: s */
+    /* JADX INFO: renamed from: s */
     public synchronized void m6507s() throws IOException {
         if (m6505f()) {
             throw new NoSuchElementException();
@@ -304,7 +304,7 @@ public class QueueFile implements Closeable {
         }
     }
 
-    /* renamed from: t */
+    /* JADX INFO: renamed from: t */
     public final void m6508t(int i, byte[] bArr, int i2, int i3) throws IOException {
         int i4 = this.f12476l;
         if (i >= i4) {
@@ -344,7 +344,7 @@ public class QueueFile implements Closeable {
         return sb.toString();
     }
 
-    /* renamed from: u */
+    /* JADX INFO: renamed from: u */
     public final void m6509u(int i, byte[] bArr, int i2, int i3) throws IOException {
         int i4 = this.f12476l;
         if (i >= i4) {
@@ -362,7 +362,7 @@ public class QueueFile implements Closeable {
         this.f12475k.write(bArr, i2 + i5, i3 - i5);
     }
 
-    /* renamed from: x */
+    /* JADX INFO: renamed from: x */
     public int m6510x() {
         if (this.f12477m == 0) {
             return 16;
@@ -373,20 +373,20 @@ public class QueueFile implements Closeable {
         return i >= i2 ? (i - i2) + 4 + bVar.f12485c + 16 : (((i + 4) + bVar.f12485c) + this.f12476l) - i2;
     }
 
-    /* renamed from: y */
+    /* JADX INFO: renamed from: y */
     public final int m6511y(int i) {
         int i2 = this.f12476l;
         return i < i2 ? i : (i + 16) - i2;
     }
 
-    /* compiled from: QueueFile.java */
-    /* renamed from: b.i.c.m.d.l.c$c */
+    /* JADX INFO: renamed from: b.i.c.m.d.l.c$c */
+    /* JADX INFO: compiled from: QueueFile.java */
     public final class c extends InputStream {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public int f12486j;
 
-        /* renamed from: k */
+        /* JADX INFO: renamed from: k */
         public int f12487k;
 
         public c(b bVar, a aVar) {

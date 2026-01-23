@@ -2,7 +2,7 @@ package com.facebook.drawee.controller;
 
 import android.graphics.drawable.Animatable;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public interface ControllerListener<INFO> {
     void onFailure(String str, Throwable th);
 

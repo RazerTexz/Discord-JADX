@@ -36,68 +36,68 @@ import p658rx.Observable;
 import p658rx.Subscription;
 import p658rx.functions.Action1;
 
-/* compiled from: ScreenCapturer.kt */
-/* renamed from: b.a.q.m0.b, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.a.q.m0.b, reason: use source file name */
+/* JADX INFO: compiled from: ScreenCapturer.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class ScreenCapturer extends ScreenCapturerAndroid {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static final a f1676j = new a(null);
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final b f1677k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public NativeCapturerObserver f1678l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public SurfaceTextureHelper f1679m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public Context f1680n;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public final SoundshareAudioSource f1681o;
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public int f1682p;
 
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     public int f1683q;
 
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     public Long f1684r;
 
-    /* renamed from: s */
+    /* JADX INFO: renamed from: s */
     public final Rect f1685s;
 
-    /* renamed from: t */
+    /* JADX INFO: renamed from: t */
     public final Rect f1686t;
 
-    /* renamed from: u */
+    /* JADX INFO: renamed from: u */
     public final Point f1687u;
 
-    /* renamed from: v */
+    /* JADX INFO: renamed from: v */
     public int f1688v;
 
-    /* renamed from: w */
+    /* JADX INFO: renamed from: w */
     public Subscription f1689w;
 
-    /* renamed from: x */
+    /* JADX INFO: renamed from: x */
     public final Logger f1690x;
 
-    /* renamed from: y */
+    /* JADX INFO: renamed from: y */
     public final ThumbnailEmitter f1691y;
 
-    /* compiled from: ScreenCapturer.kt */
-    /* renamed from: b.a.q.m0.b$a */
+    /* JADX INFO: renamed from: b.a.q.m0.b$a */
+    /* JADX INFO: compiled from: ScreenCapturer.kt */
     public static final class a {
         public a(DefaultConstructorMarker defaultConstructorMarker) {
         }
     }
 
-    /* compiled from: ScreenCapturer.kt */
-    /* renamed from: b.a.q.m0.b$b */
+    /* JADX INFO: renamed from: b.a.q.m0.b$b */
+    /* JADX INFO: compiled from: ScreenCapturer.kt */
     public final class b implements Runnable {
         public b() {
         }
@@ -123,8 +123,8 @@ public final class ScreenCapturer extends ScreenCapturerAndroid {
         }
     }
 
-    /* compiled from: ScreenCapturer.kt */
-    /* renamed from: b.a.q.m0.b$c */
+    /* JADX INFO: renamed from: b.a.q.m0.b$c */
+    /* JADX INFO: compiled from: ScreenCapturer.kt */
     public static final class c<T> implements Action1<Long> {
         public c() {
         }
@@ -135,11 +135,11 @@ public final class ScreenCapturer extends ScreenCapturerAndroid {
         }
     }
 
-    /* compiled from: ScreenCapturer.kt */
-    /* renamed from: b.a.q.m0.b$d */
+    /* JADX INFO: renamed from: b.a.q.m0.b$d */
+    /* JADX INFO: compiled from: ScreenCapturer.kt */
     public static final class d<T> implements Action1<Throwable> {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public static final d f1694j = new d();
 
         @Override // p658rx.functions.Action1
@@ -162,7 +162,7 @@ public final class ScreenCapturer extends ScreenCapturerAndroid {
         this.f1687u = new Point();
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final synchronized void m290a(Rect rect, int i) {
         Intrinsics3.checkNotNullParameter(rect, "measuredSize");
         int iMax = Math.max(rect.width(), rect.height());
@@ -188,7 +188,7 @@ public final class ScreenCapturer extends ScreenCapturerAndroid {
     }
 
     @RequiresApi(29)
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final AudioRecord m291b() {
         MediaProjection mediaProjection = this.mediaProjection;
         if (mediaProjection == null) {
@@ -204,14 +204,14 @@ public final class ScreenCapturer extends ScreenCapturerAndroid {
         }
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final void m292c() {
         if (this.f1682p > 0) {
             Subscription subscription = this.f1689w;
             if (subscription != null) {
                 subscription.unsubscribe();
             }
-            Observable<Long> observableM11068d0 = Observable.m11068d0(this.f1683q / 1000000, TimeUnit.MILLISECONDS);
+            Observable<Long> observableM11068d0 = Observable.m11068d0(((long) this.f1683q) / 1000000, TimeUnit.MILLISECONDS);
             SurfaceTextureHelper surfaceTextureHelper = this.f1679m;
             if (surfaceTextureHelper == null) {
                 Intrinsics3.throwUninitializedPropertyAccessException("surfaceTextureHelper");
@@ -240,7 +240,7 @@ public final class ScreenCapturer extends ScreenCapturerAndroid {
         }
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final void m293d(int i) {
         if (i <= 0) {
             this.f1682p = 0;

@@ -32,19 +32,19 @@ import p507d0.p580t.Collections2;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetBanUser.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: WidgetBanUser.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class WidgetBanUser extends AppDialog {
     public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetBanUser.class, "binding", "getBinding()Lcom/discord/databinding/WidgetBanUserBinding;", 0)};
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
 
-    /* renamed from: binding$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
     private RadioManager deleteHistoryRadioManager;
 
-    /* compiled from: WidgetBanUser.kt */
+    /* JADX INFO: compiled from: WidgetBanUser.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -68,8 +68,8 @@ public final class WidgetBanUser extends AppDialog {
         }
     }
 
-    /* compiled from: WidgetBanUser.kt */
-    /* renamed from: com.discord.widgets.user.WidgetBanUser$onViewBound$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.user.WidgetBanUser$onViewBound$2 */
+    /* JADX INFO: compiled from: WidgetBanUser.kt */
     public static final class ViewOnClickListenerC101852 implements View.OnClickListener {
         public ViewOnClickListenerC101852() {
         }
@@ -80,15 +80,15 @@ public final class WidgetBanUser extends AppDialog {
         }
     }
 
-    /* compiled from: WidgetBanUser.kt */
-    /* renamed from: com.discord.widgets.user.WidgetBanUser$onViewBound$3 */
+    /* JADX INFO: renamed from: com.discord.widgets.user.WidgetBanUser$onViewBound$3 */
+    /* JADX INFO: compiled from: WidgetBanUser.kt */
     public static final class ViewOnClickListenerC101863 implements View.OnClickListener {
         public final /* synthetic */ long $guildId;
         public final /* synthetic */ long $userId;
         public final /* synthetic */ String $userName;
 
-        /* compiled from: WidgetBanUser.kt */
-        /* renamed from: com.discord.widgets.user.WidgetBanUser$onViewBound$3$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.widgets.user.WidgetBanUser$onViewBound$3$1, reason: invalid class name */
+        /* JADX INFO: compiled from: WidgetBanUser.kt */
         public static final class AnonymousClass1 extends Lambda implements Function1<Void, Unit> {
             public AnonymousClass1() {
                 super(1);
@@ -100,7 +100,7 @@ public final class WidgetBanUser extends AppDialog {
                 return Unit.f27425a;
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2(Void r7) {
                 Context context = WidgetBanUser.this.getContext();
                 Context context2 = WidgetBanUser.this.getContext();

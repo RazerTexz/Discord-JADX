@@ -5,8 +5,8 @@ import com.discord.api.user.User;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ModelGuildTemplate.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: ModelGuildTemplate.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class ModelGuildTemplate {
     private final String code;
     private final String createdAt;
@@ -41,52 +41,52 @@ public final /* data */ class ModelGuildTemplate {
         return modelGuildTemplate.copy((i2 & 1) != 0 ? modelGuildTemplate.creatorId : j, (i2 & 2) != 0 ? modelGuildTemplate.creator : user, (i2 & 4) != 0 ? modelGuildTemplate.sourceGuildId : j2, (i2 & 8) != 0 ? modelGuildTemplate.serializedSourceGuild : guild, (i2 & 16) != 0 ? modelGuildTemplate.createdAt : str, (i2 & 32) != 0 ? modelGuildTemplate.updatedAt : str2, (i2 & 64) != 0 ? modelGuildTemplate.usageCount : i, (i2 & 128) != 0 ? modelGuildTemplate.code : str3, (i2 & 256) != 0 ? modelGuildTemplate.name : str4, (i2 & 512) != 0 ? modelGuildTemplate.description : str5);
     }
 
-    /* renamed from: component1, reason: from getter */
+    /* JADX INFO: renamed from: component1, reason: from getter */
     public final long getCreatorId() {
         return this.creatorId;
     }
 
-    /* renamed from: component10, reason: from getter */
+    /* JADX INFO: renamed from: component10, reason: from getter */
     public final String getDescription() {
         return this.description;
     }
 
-    /* renamed from: component2, reason: from getter */
+    /* JADX INFO: renamed from: component2, reason: from getter */
     public final User getCreator() {
         return this.creator;
     }
 
-    /* renamed from: component3, reason: from getter */
+    /* JADX INFO: renamed from: component3, reason: from getter */
     public final long getSourceGuildId() {
         return this.sourceGuildId;
     }
 
-    /* renamed from: component4, reason: from getter */
+    /* JADX INFO: renamed from: component4, reason: from getter */
     public final Guild getSerializedSourceGuild() {
         return this.serializedSourceGuild;
     }
 
-    /* renamed from: component5, reason: from getter */
+    /* JADX INFO: renamed from: component5, reason: from getter */
     public final String getCreatedAt() {
         return this.createdAt;
     }
 
-    /* renamed from: component6, reason: from getter */
+    /* JADX INFO: renamed from: component6, reason: from getter */
     public final String getUpdatedAt() {
         return this.updatedAt;
     }
 
-    /* renamed from: component7, reason: from getter */
+    /* JADX INFO: renamed from: component7, reason: from getter */
     public final int getUsageCount() {
         return this.usageCount;
     }
 
-    /* renamed from: component8, reason: from getter */
+    /* JADX INFO: renamed from: component8, reason: from getter */
     public final String getCode() {
         return this.code;
     }
 
-    /* renamed from: component9, reason: from getter */
+    /* JADX INFO: renamed from: component9, reason: from getter */
     public final String getName() {
         return this.name;
     }

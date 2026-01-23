@@ -28,24 +28,24 @@ import p007b.p225i.p408d.p410q.JsonReaderInternalAccess;
 import p007b.p225i.p408d.p410q.ObjectConstructor;
 import p007b.p225i.p408d.p410q.p411x.JsonTreeReader;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public final class MapTypeAdapterFactory implements TypeAdapterFactory2 {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final C4922g f21519j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final boolean f21520k;
 
     public final class Adapter<K, V> extends TypeAdapter<Map<K, V>> {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final TypeAdapter<K> f21521a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final TypeAdapter<V> f21522b;
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public final ObjectConstructor<? extends Map<K, V>> f21523c;
 
         public Adapter(Gson gson, Type type, TypeAdapter<K> typeAdapter, Type type2, TypeAdapter<V> typeAdapter2, ObjectConstructor<? extends Map<K, V>> objectConstructor) {

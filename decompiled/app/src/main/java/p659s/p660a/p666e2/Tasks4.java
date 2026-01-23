@@ -1,14 +1,14 @@
 package p659s.p660a.p666e2;
 
-/* compiled from: Tasks.kt */
-/* renamed from: s.a.e2.h, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: s.a.e2.h, reason: use source file name */
+/* JADX INFO: compiled from: Tasks.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public abstract class Tasks4 implements Runnable {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public long f27828j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public Tasks5 f27829k;
 
     public Tasks4(long j, Tasks5 tasks5) {

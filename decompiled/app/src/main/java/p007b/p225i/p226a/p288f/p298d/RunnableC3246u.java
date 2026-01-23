@@ -4,12 +4,12 @@ import android.util.Log;
 import com.google.android.gms.tasks.TaskCompletionSource;
 import java.io.IOException;
 
-/* compiled from: com.google.android.gms:play-services-cloud-messaging@@16.0.0 */
-/* renamed from: b.i.a.f.d.u */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.d.u */
+/* JADX INFO: compiled from: com.google.android.gms:play-services-cloud-messaging@@16.0.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public final /* synthetic */ class RunnableC3246u implements Runnable {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final TaskCompletionSource f9287j;
 
     public RunnableC3246u(TaskCompletionSource taskCompletionSource) {

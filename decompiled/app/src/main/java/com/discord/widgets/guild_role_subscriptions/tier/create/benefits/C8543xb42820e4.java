@@ -10,9 +10,9 @@ import p507d0.p580t.Iterables2;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetGuildRoleSubscriptionTierBenefits.kt */
-/* renamed from: com.discord.widgets.guild_role_subscriptions.tier.create.benefits.WidgetGuildRoleSubscriptionTierBenefits$itemClickListener$1$onActiveTrialUserLimitClick$1 */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.guild_role_subscriptions.tier.create.benefits.WidgetGuildRoleSubscriptionTierBenefits$itemClickListener$1$onActiveTrialUserLimitClick$1 */
+/* JADX INFO: compiled from: WidgetGuildRoleSubscriptionTierBenefits.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class C8543xb42820e4 extends Lambda implements Function1<GuildRoleSubscriptionTierBenefitsViewModel.ViewState, List<? extends WidgetRadioSelectorBottomSheet2>> {
     public final /* synthetic */ WidgetGuildRoleSubscriptionTierBenefits$itemClickListener$1 this$0;
 
@@ -27,7 +27,7 @@ public final class C8543xb42820e4 extends Lambda implements Function1<GuildRoleS
         return invoke2(viewState);
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final List<WidgetRadioSelectorBottomSheet2> invoke2(GuildRoleSubscriptionTierBenefitsViewModel.ViewState viewState) {
         Intrinsics3.checkNotNullParameter(viewState, "it");
         List<Integer> activeTrialUserLimitOptions = viewState.getActiveTrialUserLimitOptions();

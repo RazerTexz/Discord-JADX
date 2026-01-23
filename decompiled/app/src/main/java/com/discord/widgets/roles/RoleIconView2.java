@@ -5,9 +5,9 @@ import android.content.Context;
 import com.discord.utilities.textprocessing.node.EmojiNode;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: RoleIconView.kt */
-/* renamed from: com.discord.widgets.roles.RoleIconView$showRoleIconToast$renderContext$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.roles.RoleIconView$showRoleIconToast$renderContext$1, reason: use source file name */
+/* JADX INFO: compiled from: RoleIconView.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class RoleIconView2 implements EmojiNode.RenderContext {
     public final /* synthetic */ Context $context;
 
@@ -26,7 +26,7 @@ public final class RoleIconView2 implements EmojiNode.RenderContext {
     }
 
     @Override // com.discord.utilities.textprocessing.node.EmojiNode.RenderContext
-    /* renamed from: isAnimationEnabled, reason: from getter */
+    /* JADX INFO: renamed from: isAnimationEnabled, reason: from getter */
     public boolean getIsAnimationEnabled() {
         return this.isAnimationEnabled;
     }

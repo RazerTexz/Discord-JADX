@@ -7,25 +7,25 @@ import java.util.List;
 import p007b.p100d.p104b.p105a.outline;
 import p007b.p225i.p226a.p242c.p259f3.ParsableByteArray;
 
-/* compiled from: Atom.java */
-/* renamed from: b.i.a.c.x2.i0.d, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.x2.i0.d, reason: use source file name */
+/* JADX INFO: compiled from: Atom.java */
+/* JADX INFO: loaded from: classes3.dex */
 public abstract class Atom {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final int f8349a;
 
-    /* compiled from: Atom.java */
-    /* renamed from: b.i.a.c.x2.i0.d$a */
+    /* JADX INFO: renamed from: b.i.a.c.x2.i0.d$a */
+    /* JADX INFO: compiled from: Atom.java */
     public static final class a extends Atom {
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final long f8350b;
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public final List<b> f8351c;
 
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         public final List<a> f8352d;
 
         public a(int i, long j) {
@@ -36,7 +36,7 @@ public abstract class Atom {
         }
 
         @Nullable
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public a m3700b(int i) {
             int size = this.f8352d.size();
             for (int i2 = 0; i2 < size; i2++) {
@@ -49,7 +49,7 @@ public abstract class Atom {
         }
 
         @Nullable
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public b m3701c(int i) {
             int size = this.f8351c.size();
             for (int i2 = 0; i2 < size; i2++) {
@@ -72,11 +72,11 @@ public abstract class Atom {
         }
     }
 
-    /* compiled from: Atom.java */
-    /* renamed from: b.i.a.c.x2.i0.d$b */
+    /* JADX INFO: renamed from: b.i.a.c.x2.i0.d$b */
+    /* JADX INFO: compiled from: Atom.java */
     public static final class b extends Atom {
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final ParsableByteArray f8353b;
 
         public b(int i, ParsableByteArray parsableByteArray) {
@@ -89,7 +89,7 @@ public abstract class Atom {
         this.f8349a = i;
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static String m3699a(int i) {
         StringBuilder sb = new StringBuilder(4);
         sb.append((char) ((i >> 24) & 255));

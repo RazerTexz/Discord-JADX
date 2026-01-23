@@ -7,9 +7,9 @@ import androidx.fragment.app.FragmentActivity;
 import com.discord.stores.StoreStream;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: WidgetHubEmailFlow.kt */
-/* renamed from: com.discord.widgets.hubs.WidgetHubEmailFlow$activityResultHandler$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.hubs.WidgetHubEmailFlow$activityResultHandler$1, reason: use source file name */
+/* JADX INFO: compiled from: WidgetHubEmailFlow.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetHubEmailFlow2<O> implements ActivityResultCallback<ActivityResult> {
     public final /* synthetic */ WidgetHubEmailFlow this$0;
 
@@ -22,7 +22,7 @@ public final class WidgetHubEmailFlow2<O> implements ActivityResultCallback<Acti
         onActivityResult2(activityResult);
     }
 
-    /* renamed from: onActivityResult, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: onActivityResult, reason: avoid collision after fix types in other method */
     public final void onActivityResult2(ActivityResult activityResult) {
         Intent data;
         if (activityResult == null || (data = activityResult.getData()) == null) {

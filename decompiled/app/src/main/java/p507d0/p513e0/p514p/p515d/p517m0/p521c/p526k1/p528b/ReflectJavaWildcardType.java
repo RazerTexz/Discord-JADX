@@ -11,15 +11,15 @@ import p507d0.p580t.Collections2;
 import p507d0.p580t._Arrays;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ReflectJavaWildcardType.kt */
-/* renamed from: d0.e0.p.d.m0.c.k1.b.z, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.c.k1.b.z, reason: use source file name */
+/* JADX INFO: compiled from: ReflectJavaWildcardType.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class ReflectJavaWildcardType extends ReflectJavaType implements javaTypes {
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final WildcardType f23071b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final Collection<InterfaceC11564a> f23072c;
 
     public ReflectJavaWildcardType(WildcardType wildcardType) {

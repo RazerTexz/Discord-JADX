@@ -2,7 +2,7 @@ package org.webrtc;
 
 import androidx.annotation.Nullable;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public interface VideoProcessor extends CapturerObserver {
 
     public static class FrameAdaptationParameters {

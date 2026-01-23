@@ -56,8 +56,8 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p637j0.p642l.p647e.ScalarSynchronousObservable;
 import p658rx.Observable;
 
-/* compiled from: ViewEmbedGameInvite.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: ViewEmbedGameInvite.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class ViewEmbedGameInvite extends LinearLayout {
     private static final long EMBED_LIFETIME_MILLIS = 7200000;
     private static final long MAX_USERS_SHOWN = 4;
@@ -65,10 +65,10 @@ public final class ViewEmbedGameInvite extends LinearLayout {
     private Function2<? super View, ? super Model, Unit> onActionButtonClick;
     private final WidgetCollapsedUsersListAdapter userAdapter;
 
-    /* compiled from: ViewEmbedGameInvite.kt */
+    /* JADX INFO: compiled from: ViewEmbedGameInvite.kt */
     public static final /* data */ class Model {
 
-        /* renamed from: Companion, reason: from kotlin metadata */
+        /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
         public static final Companion INSTANCE = new Companion(null);
         private final Activity activity;
         private final Application application;
@@ -82,7 +82,7 @@ public final class ViewEmbedGameInvite extends LinearLayout {
         private final MessageActivity messageActivity;
         private final List<CollapsedUser> users;
 
-        /* compiled from: ViewEmbedGameInvite.kt */
+        /* JADX INFO: compiled from: ViewEmbedGameInvite.kt */
         public static final class Companion {
             private Companion() {
             }
@@ -204,6 +204,7 @@ public final class ViewEmbedGameInvite extends LinearLayout {
             this.isPartyMatch = zEquals;
         }
 
+        /* JADX WARN: Multi-variable type inference failed */
         public static /* synthetic */ Model copy$default(Model model, MeUser meUser, long j, long j2, Application application, MessageActivity messageActivity, Activity activity, List list, int i, Object obj) {
             return model.copy((i & 1) != 0 ? model.meUser : meUser, (i & 2) != 0 ? model.creatorId : j, (i & 4) != 0 ? model.creationTime : j2, (i & 8) != 0 ? model.application : application, (i & 16) != 0 ? model.messageActivity : messageActivity, (i & 32) != 0 ? model.activity : activity, (i & 64) != 0 ? model.users : list);
         }
@@ -212,32 +213,32 @@ public final class ViewEmbedGameInvite extends LinearLayout {
             return this.messageActivity.getPartyId();
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final MeUser getMeUser() {
             return this.meUser;
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final long getCreatorId() {
             return this.creatorId;
         }
 
-        /* renamed from: component3, reason: from getter */
+        /* JADX INFO: renamed from: component3, reason: from getter */
         public final long getCreationTime() {
             return this.creationTime;
         }
 
-        /* renamed from: component4, reason: from getter */
+        /* JADX INFO: renamed from: component4, reason: from getter */
         public final Application getApplication() {
             return this.application;
         }
 
-        /* renamed from: component5, reason: from getter */
+        /* JADX INFO: renamed from: component5, reason: from getter */
         public final MessageActivity getMessageActivity() {
             return this.messageActivity;
         }
 
-        /* renamed from: component6, reason: from getter */
+        /* JADX INFO: renamed from: component6, reason: from getter */
         public final Activity getActivity() {
             return this.activity;
         }
@@ -322,12 +323,12 @@ public final class ViewEmbedGameInvite extends LinearLayout {
             return now > this.creationTime + ViewEmbedGameInvite.EMBED_LIFETIME_MILLIS;
         }
 
-        /* renamed from: isInParty, reason: from getter */
+        /* JADX INFO: renamed from: isInParty, reason: from getter */
         public final boolean getIsInParty() {
             return this.isInParty;
         }
 
-        /* renamed from: isPartyMatch, reason: from getter */
+        /* JADX INFO: renamed from: isPartyMatch, reason: from getter */
         public final boolean getIsPartyMatch() {
             return this.isPartyMatch;
         }
@@ -350,8 +351,8 @@ public final class ViewEmbedGameInvite extends LinearLayout {
         }
     }
 
-    /* compiled from: ViewEmbedGameInvite.kt */
-    /* renamed from: com.discord.widgets.chat.list.ViewEmbedGameInvite$onConfigureActionButton$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.list.ViewEmbedGameInvite$onConfigureActionButton$1 */
+    /* JADX INFO: compiled from: ViewEmbedGameInvite.kt */
     public static final class ViewOnClickListenerC79521 implements View.OnClickListener {
         public final /* synthetic */ Model $this_onConfigureActionButton;
 

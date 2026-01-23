@@ -5,24 +5,24 @@ import kotlin.jvm.internal.DefaultConstructorMarker;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: Result.kt */
-/* renamed from: d0.k, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.k, reason: use source file name */
+/* JADX INFO: compiled from: Result.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class Result2<T> implements Serializable {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static final a f25169j = new a(null);
     private final Object value;
 
-    /* compiled from: Result.kt */
-    /* renamed from: d0.k$a */
+    /* JADX INFO: renamed from: d0.k$a */
+    /* JADX INFO: compiled from: Result.kt */
     public static final class a {
         public a(DefaultConstructorMarker defaultConstructorMarker) {
         }
     }
 
-    /* compiled from: Result.kt */
-    /* renamed from: d0.k$b */
+    /* JADX INFO: renamed from: d0.k$b */
+    /* JADX INFO: compiled from: Result.kt */
     public static final class b implements Serializable {
         public final Throwable exception;
 
@@ -47,17 +47,17 @@ public final class Result2<T> implements Serializable {
         }
     }
 
-    /* renamed from: constructor-impl, reason: not valid java name */
+    /* JADX INFO: renamed from: constructor-impl, reason: not valid java name */
     public static Object m11474constructorimpl(Object obj) {
         return obj;
     }
 
-    /* renamed from: equals-impl, reason: not valid java name */
+    /* JADX INFO: renamed from: equals-impl, reason: not valid java name */
     public static boolean m11475equalsimpl(Object obj, Object obj2) {
         return (obj2 instanceof Result2) && Intrinsics3.areEqual(obj, ((Result2) obj2).m11481unboximpl());
     }
 
-    /* renamed from: exceptionOrNull-impl, reason: not valid java name */
+    /* JADX INFO: renamed from: exceptionOrNull-impl, reason: not valid java name */
     public static final Throwable m11476exceptionOrNullimpl(Object obj) {
         if (obj instanceof b) {
             return ((b) obj).exception;
@@ -65,7 +65,7 @@ public final class Result2<T> implements Serializable {
         return null;
     }
 
-    /* renamed from: hashCode-impl, reason: not valid java name */
+    /* JADX INFO: renamed from: hashCode-impl, reason: not valid java name */
     public static int m11477hashCodeimpl(Object obj) {
         if (obj != null) {
             return obj.hashCode();
@@ -73,17 +73,17 @@ public final class Result2<T> implements Serializable {
         return 0;
     }
 
-    /* renamed from: isFailure-impl, reason: not valid java name */
+    /* JADX INFO: renamed from: isFailure-impl, reason: not valid java name */
     public static final boolean m11478isFailureimpl(Object obj) {
         return obj instanceof b;
     }
 
-    /* renamed from: isSuccess-impl, reason: not valid java name */
+    /* JADX INFO: renamed from: isSuccess-impl, reason: not valid java name */
     public static final boolean m11479isSuccessimpl(Object obj) {
         return !(obj instanceof b);
     }
 
-    /* renamed from: toString-impl, reason: not valid java name */
+    /* JADX INFO: renamed from: toString-impl, reason: not valid java name */
     public static String m11480toStringimpl(Object obj) {
         if (obj instanceof b) {
             return obj.toString();
@@ -103,7 +103,7 @@ public final class Result2<T> implements Serializable {
         return m11480toStringimpl(this.value);
     }
 
-    /* renamed from: unbox-impl, reason: not valid java name */
+    /* JADX INFO: renamed from: unbox-impl, reason: not valid java name */
     public final /* synthetic */ Object m11481unboximpl() {
         return this.value;
     }

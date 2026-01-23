@@ -39,8 +39,8 @@ import p658rx.functions.Func2;
 import p658rx.subjects.BehaviorSubject;
 import p658rx.subjects.SerializedSubject;
 
-/* compiled from: StoreSearchQuery.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: StoreSearchQuery.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class StoreSearchQuery {
     private static final SearchState SEARCH_STATE_NONE = new SearchState(QueryFetchState.NONE, null, null, null, null, false, 0, 126, null);
     private SearchState currentSearchState;
@@ -48,8 +48,8 @@ public final class StoreSearchQuery {
     private final SearchFetcher searchFetcher;
     private final SerializedSubject<SearchState, SearchState> searchStateSubject;
 
-    /* compiled from: StoreSearchQuery.kt */
-    /* renamed from: com.discord.stores.StoreSearchQuery$makeQuery$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreSearchQuery$makeQuery$1 */
+    /* JADX INFO: compiled from: StoreSearchQuery.kt */
     public static final class C63931 extends Lambda implements Function1<ModelSearchResponse, Unit> {
         public final /* synthetic */ boolean $isInitialLoad;
         public final /* synthetic */ SearchQuery $query;
@@ -67,15 +67,15 @@ public final class StoreSearchQuery {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(ModelSearchResponse modelSearchResponse) {
             Intrinsics3.checkNotNullParameter(modelSearchResponse, "searchResponse");
             StoreSearchQuery.access$handleResponse(StoreSearchQuery.this, this.$query, modelSearchResponse, this.$isInitialLoad);
         }
     }
 
-    /* compiled from: StoreSearchQuery.kt */
-    /* renamed from: com.discord.stores.StoreSearchQuery$makeQuery$2 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreSearchQuery$makeQuery$2 */
+    /* JADX INFO: compiled from: StoreSearchQuery.kt */
     public static final class C63942 extends Lambda implements Function1<Subscription, Unit> {
         public C63942() {
             super(1);
@@ -87,15 +87,15 @@ public final class StoreSearchQuery {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Subscription subscription) {
             Intrinsics3.checkNotNullParameter(subscription, Traits.Payment.Type.SUBSCRIPTION);
             StoreSearchQuery.access$setQuerySubscription$p(StoreSearchQuery.this, subscription);
         }
     }
 
-    /* compiled from: StoreSearchQuery.kt */
-    /* renamed from: com.discord.stores.StoreSearchQuery$makeQuery$3 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreSearchQuery$makeQuery$3 */
+    /* JADX INFO: compiled from: StoreSearchQuery.kt */
     public static final class C63953 extends Lambda implements Function1<Error, Unit> {
         public C63953() {
             super(1);
@@ -107,15 +107,15 @@ public final class StoreSearchQuery {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Error error) {
             Intrinsics3.checkNotNullParameter(error, "it");
             StoreSearchQuery.access$handleError(StoreSearchQuery.this);
         }
     }
 
-    /* compiled from: StoreSearchQuery.kt */
-    /* renamed from: com.discord.stores.StoreSearchQuery$parseAndQuery$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreSearchQuery$parseAndQuery$1 */
+    /* JADX INFO: compiled from: StoreSearchQuery.kt */
     public static final class C63961<T, R> implements Func1<String, List<QueryNode>> {
         public final /* synthetic */ SearchStringProvider $searchStringProvider;
 
@@ -128,7 +128,7 @@ public final class StoreSearchQuery {
             return call2(str);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final List<QueryNode> call2(String str) {
             QueryParser queryParser = new QueryParser(this.$searchStringProvider);
             Intrinsics3.checkNotNullExpressionValue(str, "it");
@@ -136,8 +136,8 @@ public final class StoreSearchQuery {
         }
     }
 
-    /* compiled from: StoreSearchQuery.kt */
-    /* renamed from: com.discord.stores.StoreSearchQuery$parseAndQuery$2 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreSearchQuery$parseAndQuery$2 */
+    /* JADX INFO: compiled from: StoreSearchQuery.kt */
     public static final class C63972<T1, T2, R> implements Func2<List<QueryNode>, SearchData, SearchQuery> {
         public final /* synthetic */ boolean $includeNsfw;
         public final /* synthetic */ StoreSearch $searchStore;
@@ -154,7 +154,7 @@ public final class StoreSearchQuery {
             return call2(list, searchData);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final SearchQuery call2(List<QueryNode> list, SearchData searchData) {
             QueryNode.Companion companion = QueryNode.INSTANCE;
             Intrinsics3.checkNotNullExpressionValue(list, "queryNodes");
@@ -165,8 +165,8 @@ public final class StoreSearchQuery {
         }
     }
 
-    /* compiled from: StoreSearchQuery.kt */
-    /* renamed from: com.discord.stores.StoreSearchQuery$parseAndQuery$3 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreSearchQuery$parseAndQuery$3 */
+    /* JADX INFO: compiled from: StoreSearchQuery.kt */
     public static final class C63983 extends Lambda implements Function1<SearchQuery, Boolean> {
         public static final C63983 INSTANCE = new C63983();
 
@@ -179,14 +179,14 @@ public final class StoreSearchQuery {
             return Boolean.valueOf(invoke2(searchQuery));
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final boolean invoke2(SearchQuery searchQuery) {
             return searchQuery != null && searchQuery.isValid();
         }
     }
 
-    /* compiled from: StoreSearchQuery.kt */
-    /* renamed from: com.discord.stores.StoreSearchQuery$parseAndQuery$4 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreSearchQuery$parseAndQuery$4 */
+    /* JADX INFO: compiled from: StoreSearchQuery.kt */
     public static final class C63994 extends Lambda implements Function1<SearchQuery, Unit> {
         public final /* synthetic */ StoreSearch.SearchTarget $searchTarget;
 
@@ -202,7 +202,7 @@ public final class StoreSearchQuery {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(SearchQuery searchQuery) {
             if (searchQuery == null) {
                 StoreSearchQuery.access$handleError(StoreSearchQuery.this);

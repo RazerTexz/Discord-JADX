@@ -51,12 +51,12 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 import p658rx.functions.Func0;
 
-/* compiled from: WidgetChatInputAttachments.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetChatInputAttachments.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetChatInputAttachments {
     private final FlexInputFragment flexInputFragment;
 
-    /* compiled from: WidgetChatInputAttachments.kt */
+    /* JADX INFO: compiled from: WidgetChatInputAttachments.kt */
     public static final class DiscordFilesFragment extends FilesFragment {
         @Override // com.lytefast.flexinput.fragment.FilesFragment
         public EmptyListAdapter newPermissionsRequestAdapter(View.OnClickListener onClickListener) {
@@ -65,7 +65,7 @@ public final class WidgetChatInputAttachments {
         }
     }
 
-    /* compiled from: WidgetChatInputAttachments.kt */
+    /* JADX INFO: compiled from: WidgetChatInputAttachments.kt */
     public static final class DiscordMediaFragment extends MediaFragment {
         @Override // com.lytefast.flexinput.fragment.MediaFragment
         public EmptyListAdapter newPermissionsRequestAdapter(View.OnClickListener onClickListener) {
@@ -74,7 +74,7 @@ public final class WidgetChatInputAttachments {
         }
     }
 
-    /* compiled from: WidgetChatInputAttachments.kt */
+    /* JADX INFO: compiled from: WidgetChatInputAttachments.kt */
     public static final class PermissionsEmptyListAdapter extends EmptyListAdapter {
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
         public PermissionsEmptyListAdapter(@LayoutRes int i, @IdRes int i2, View.OnClickListener onClickListener) {
@@ -108,8 +108,8 @@ public final class WidgetChatInputAttachments {
         }
     }
 
-    /* compiled from: WidgetChatInputAttachments.kt */
-    /* renamed from: com.discord.widgets.chat.input.WidgetChatInputAttachments$addExternalAttachment$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.input.WidgetChatInputAttachments$addExternalAttachment$1 */
+    /* JADX INFO: compiled from: WidgetChatInputAttachments.kt */
     public static final class C77351 extends Lambda implements Function0<Unit> {
         public final /* synthetic */ Attachment $attachment;
 
@@ -125,14 +125,14 @@ public final class WidgetChatInputAttachments {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             WidgetChatInputAttachments.access$getFlexInputFragment$p(WidgetChatInputAttachments.this).mo397f(this.$attachment);
         }
     }
 
-    /* compiled from: WidgetChatInputAttachments.kt */
-    /* renamed from: com.discord.widgets.chat.input.WidgetChatInputAttachments$configureFlexInputContentPages$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.input.WidgetChatInputAttachments$configureFlexInputContentPages$1 */
+    /* JADX INFO: compiled from: WidgetChatInputAttachments.kt */
     public static final class C77361 extends Lambda implements Function0<Unit> {
         public final /* synthetic */ boolean $canCreateThread;
 
@@ -148,7 +148,7 @@ public final class WidgetChatInputAttachments {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             Context contextRequireContext = WidgetChatInputAttachments.access$getFlexInputFragment$p(WidgetChatInputAttachments.this).requireContext();
             Intrinsics3.checkNotNullExpressionValue(contextRequireContext, "flexInputFragment.requireContext()");
@@ -171,8 +171,8 @@ public final class WidgetChatInputAttachments {
         }
     }
 
-    /* compiled from: WidgetChatInputAttachments.kt */
-    /* renamed from: com.discord.widgets.chat.input.WidgetChatInputAttachments$configureFlexInputFragment$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.input.WidgetChatInputAttachments$configureFlexInputFragment$1 */
+    /* JADX INFO: compiled from: WidgetChatInputAttachments.kt */
     public static final class C77411 extends Lambda implements Function0<Unit> {
         public final /* synthetic */ AppFragment $fragment;
 
@@ -188,7 +188,7 @@ public final class WidgetChatInputAttachments {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             WidgetChatInputAttachments.this.configureFlexInputContentPages(false);
             FlexInputFragment flexInputFragmentAccess$getFlexInputFragment$p = WidgetChatInputAttachments.access$getFlexInputFragment$p(WidgetChatInputAttachments.this);
@@ -223,8 +223,8 @@ public final class WidgetChatInputAttachments {
         }
     }
 
-    /* compiled from: WidgetChatInputAttachments.kt */
-    /* renamed from: com.discord.widgets.chat.input.WidgetChatInputAttachments$configureFlexInputFragment$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.input.WidgetChatInputAttachments$configureFlexInputFragment$2 */
+    /* JADX INFO: compiled from: WidgetChatInputAttachments.kt */
     public static final class C77442<R> implements Func0<Boolean> {
         public C77442() {
         }
@@ -242,8 +242,8 @@ public final class WidgetChatInputAttachments {
         }
     }
 
-    /* compiled from: WidgetChatInputAttachments.kt */
-    /* renamed from: com.discord.widgets.chat.input.WidgetChatInputAttachments$createAndConfigureExpressionFragment$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.input.WidgetChatInputAttachments$createAndConfigureExpressionFragment$1 */
+    /* JADX INFO: compiled from: WidgetChatInputAttachments.kt */
     public static final class C77451 extends Lambda implements Function0<Unit> {
         public C77451() {
             super(0);
@@ -255,7 +255,7 @@ public final class WidgetChatInputAttachments {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             FlexInputViewModel flexInputViewModel = WidgetChatInputAttachments.access$getFlexInputFragment$p(WidgetChatInputAttachments.this).viewModel;
             if (flexInputViewModel != null) {
@@ -265,13 +265,13 @@ public final class WidgetChatInputAttachments {
     }
 
     /* JADX INFO: Add missing generic type declarations: [T] */
-    /* compiled from: WidgetChatInputAttachments.kt */
-    /* renamed from: com.discord.widgets.chat.input.WidgetChatInputAttachments$createPreviewAdapter$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.input.WidgetChatInputAttachments$createPreviewAdapter$1 */
+    /* JADX INFO: compiled from: WidgetChatInputAttachments.kt */
     public static final class C77491<T> extends Lambda implements Function1<AttachmentPreviewAdapter<T>, SelectionAggregator<T>> {
         public final /* synthetic */ Context $context;
 
-        /* compiled from: WidgetChatInputAttachments.kt */
-        /* renamed from: com.discord.widgets.chat.input.WidgetChatInputAttachments$createPreviewAdapter$1$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.widgets.chat.input.WidgetChatInputAttachments$createPreviewAdapter$1$1, reason: invalid class name */
+        /* JADX INFO: compiled from: WidgetChatInputAttachments.kt */
         public static final class AnonymousClass1 extends SelectionAggregator<T> {
             public final /* synthetic */ AttachmentPreviewAdapter $previewAdapter;
 

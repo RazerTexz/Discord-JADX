@@ -7,62 +7,62 @@ import p007b.p100d.p104b.p105a.outline;
 import p007b.p225i.p361c.p401u.p402o.PersistedInstallation;
 import p007b.p225i.p361c.p401u.p402o.PersistedInstallationEntry;
 
-/* compiled from: AutoValue_PersistedInstallationEntry.java */
-/* renamed from: b.i.c.u.o.a, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.c.u.o.a, reason: use source file name */
+/* JADX INFO: compiled from: AutoValue_PersistedInstallationEntry.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class AutoValue_PersistedInstallationEntry extends PersistedInstallationEntry {
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final String f12952b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final PersistedInstallation.a f12953c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final String f12954d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final String f12955e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final long f12956f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public final long f12957g;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public final String f12958h;
 
-    /* compiled from: AutoValue_PersistedInstallationEntry.java */
-    /* renamed from: b.i.c.u.o.a$b */
+    /* JADX INFO: renamed from: b.i.c.u.o.a$b */
+    /* JADX INFO: compiled from: AutoValue_PersistedInstallationEntry.java */
     public static final class b extends PersistedInstallationEntry.a {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public String f12959a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public PersistedInstallation.a f12960b;
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public String f12961c;
 
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         public String f12962d;
 
-        /* renamed from: e */
+        /* JADX INFO: renamed from: e */
         public Long f12963e;
 
-        /* renamed from: f */
+        /* JADX INFO: renamed from: f */
         public Long f12964f;
 
-        /* renamed from: g */
+        /* JADX INFO: renamed from: g */
         public String f12965g;
 
         public b() {
         }
 
         @Override // p007b.p225i.p361c.p401u.p402o.PersistedInstallationEntry.a
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public PersistedInstallationEntry mo6782a() {
             String strM883w = this.f12960b == null ? " registrationStatus" : "";
             if (this.f12963e == null) {
@@ -78,20 +78,20 @@ public final class AutoValue_PersistedInstallationEntry extends PersistedInstall
         }
 
         @Override // p007b.p225i.p361c.p401u.p402o.PersistedInstallationEntry.a
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public PersistedInstallationEntry.a mo6783b(PersistedInstallation.a aVar) {
             Objects.requireNonNull(aVar, "Null registrationStatus");
             this.f12960b = aVar;
             return this;
         }
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public PersistedInstallationEntry.a m6784c(long j) {
             this.f12963e = Long.valueOf(j);
             return this;
         }
 
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         public PersistedInstallationEntry.a m6785d(long j) {
             this.f12964f = Long.valueOf(j);
             return this;
@@ -121,34 +121,34 @@ public final class AutoValue_PersistedInstallationEntry extends PersistedInstall
 
     @Override // p007b.p225i.p361c.p401u.p402o.PersistedInstallationEntry
     @Nullable
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public String mo6774a() {
         return this.f12954d;
     }
 
     @Override // p007b.p225i.p361c.p401u.p402o.PersistedInstallationEntry
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public long mo6775b() {
         return this.f12956f;
     }
 
     @Override // p007b.p225i.p361c.p401u.p402o.PersistedInstallationEntry
     @Nullable
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public String mo6776c() {
         return this.f12952b;
     }
 
     @Override // p007b.p225i.p361c.p401u.p402o.PersistedInstallationEntry
     @Nullable
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public String mo6777d() {
         return this.f12958h;
     }
 
     @Override // p007b.p225i.p361c.p401u.p402o.PersistedInstallationEntry
     @Nullable
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public String mo6778e() {
         return this.f12955e;
     }
@@ -181,13 +181,13 @@ public final class AutoValue_PersistedInstallationEntry extends PersistedInstall
 
     @Override // p007b.p225i.p361c.p401u.p402o.PersistedInstallationEntry
     @NonNull
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public PersistedInstallation.a mo6779f() {
         return this.f12953c;
     }
 
     @Override // p007b.p225i.p361c.p401u.p402o.PersistedInstallationEntry
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public long mo6780g() {
         return this.f12957g;
     }
@@ -208,7 +208,7 @@ public final class AutoValue_PersistedInstallationEntry extends PersistedInstall
     }
 
     @Override // p007b.p225i.p361c.p401u.p402o.PersistedInstallationEntry
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public PersistedInstallationEntry.a mo6781k() {
         return new b(this, null);
     }

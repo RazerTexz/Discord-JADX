@@ -2,18 +2,18 @@ package p630i0;
 
 import p630i0.DefaultCallAdapterFactory;
 
-/* compiled from: lambda */
-/* renamed from: i0.a */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: i0.a */
+/* JADX INFO: compiled from: lambda */
+/* JADX INFO: loaded from: classes3.dex */
 public final /* synthetic */ class RunnableC12498a implements Runnable {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final /* synthetic */ DefaultCallAdapterFactory.b.a f26476j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final /* synthetic */ Callback3 f26477k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final /* synthetic */ Throwable f26478l;
 
     public /* synthetic */ RunnableC12498a(DefaultCallAdapterFactory.b.a aVar, Callback3 callback3, Throwable th) {

@@ -15,16 +15,16 @@ import p637j0.p641k.Func1;
 import p658rx.Observable;
 import p658rx.functions.Func3;
 
-/* compiled from: EditUserOrGuildMemberProfileViewModel.kt */
-/* renamed from: com.discord.widgets.settings.profile.SettingsUserProfileViewModel$Companion$observeStoreState$2, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.settings.profile.SettingsUserProfileViewModel$Companion$observeStoreState$2, reason: use source file name */
+/* JADX INFO: compiled from: EditUserOrGuildMemberProfileViewModel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class EditUserOrGuildMemberProfileViewModel4<T, R> implements Func1<Tuples2<? extends MeUser, ? extends Guild>, Observable<? extends EditUserOrGuildMemberProfileViewModel2.StoreState>> {
     public final /* synthetic */ Long $guildId;
     public final /* synthetic */ StoreGuilds $storeGuilds;
     public final /* synthetic */ StoreUserProfile $storeUserProfile;
 
-    /* compiled from: EditUserOrGuildMemberProfileViewModel.kt */
-    /* renamed from: com.discord.widgets.settings.profile.SettingsUserProfileViewModel$Companion$observeStoreState$2$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.profile.SettingsUserProfileViewModel$Companion$observeStoreState$2$1 */
+    /* JADX INFO: compiled from: EditUserOrGuildMemberProfileViewModel.kt */
     public static final class C99551<T1, T2, T3, R> implements Func3<UserProfile, GuildMember, GuildChannelsInfo, EditUserOrGuildMemberProfileViewModel2.StoreState> {
         public final /* synthetic */ Guild $guild;
         public final /* synthetic */ MeUser $meUser;
@@ -39,7 +39,7 @@ public final class EditUserOrGuildMemberProfileViewModel4<T, R> implements Func1
             return call2(userProfile, guildMember, guildChannelsInfo);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final EditUserOrGuildMemberProfileViewModel2.StoreState call2(UserProfile userProfile, GuildMember guildMember, GuildChannelsInfo guildChannelsInfo) {
             MeUser.Companion companion = MeUser.INSTANCE;
             MeUser meUser = this.$meUser;
@@ -63,7 +63,7 @@ public final class EditUserOrGuildMemberProfileViewModel4<T, R> implements Func1
         return call2((Tuples2<MeUser, Guild>) tuples2);
     }
 
-    /* renamed from: call, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
     public final Observable<? extends EditUserOrGuildMemberProfileViewModel2.StoreState> call2(Tuples2<MeUser, Guild> tuples2) {
         MeUser meUserComponent1 = tuples2.component1();
         Guild guildComponent2 = tuples2.component2();

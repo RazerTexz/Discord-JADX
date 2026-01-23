@@ -10,9 +10,9 @@ import kotlin.jvm.functions.Function0;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: AppSignatureHelper.kt */
-/* renamed from: com.discord.utilities.sms.AppSignatureHelper$appSignatures$2, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.utilities.sms.AppSignatureHelper$appSignatures$2, reason: use source file name */
+/* JADX INFO: compiled from: AppSignatureHelper.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class AppSignatureHelper2 extends Lambda implements Function0<ArrayList<String>> {
     public final /* synthetic */ AppSignatureHelper this$0;
 
@@ -28,7 +28,7 @@ public final class AppSignatureHelper2 extends Lambda implements Function0<Array
     }
 
     @Override // kotlin.jvm.functions.Function0
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final ArrayList<String> invoke2() {
         ArrayList<String> arrayList = new ArrayList<>();
         try {

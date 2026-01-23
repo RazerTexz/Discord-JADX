@@ -10,28 +10,28 @@ import p507d0.p580t._ArraysJvm;
 import p507d0.p580t._Collections;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: BinaryVersion.kt */
-/* renamed from: d0.e0.p.d.m0.f.z.a, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.f.z.a, reason: use source file name */
+/* JADX INFO: compiled from: BinaryVersion.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public abstract class BinaryVersion {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final int[] f24012a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final int f24013b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final int f24014c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final int f24015d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final List<Integer> f24016e;
 
-    /* compiled from: BinaryVersion.kt */
-    /* renamed from: d0.e0.p.d.m0.f.z.a$a */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.f.z.a$a */
+    /* JADX INFO: compiled from: BinaryVersion.kt */
     public static final class a {
         public a(DefaultConstructorMarker defaultConstructorMarker) {
         }
@@ -53,7 +53,7 @@ public abstract class BinaryVersion {
         this.f24016e = iArr.length > 3 ? _Collections.toList(_ArraysJvm.asList(iArr).subList(3, iArr.length)) : Collections2.emptyList();
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final boolean m9813a(BinaryVersion binaryVersion) {
         Intrinsics3.checkNotNullParameter(binaryVersion, "ourVersion");
         int i = this.f24013b;

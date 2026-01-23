@@ -5,9 +5,9 @@ import java.util.List;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ApplicationCommandData.kt */
-/* renamed from: com.discord.api.commands.ApplicationCommandValue, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: com.discord.api.commands.ApplicationCommandValue, reason: use source file name */
+/* JADX INFO: compiled from: ApplicationCommandData.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class ApplicationCommandData3 {
     private final Boolean focused;
     private final String name;
@@ -24,7 +24,7 @@ public final /* data */ class ApplicationCommandData3 {
         this.focused = bool;
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static ApplicationCommandData3 m7739a(ApplicationCommandData3 applicationCommandData3, String str, Object obj, int i, List list, Boolean bool, int i2) {
         String str2 = (i2 & 1) != 0 ? applicationCommandData3.name : null;
         if ((i2 & 2) != 0) {
@@ -41,22 +41,22 @@ public final /* data */ class ApplicationCommandData3 {
         return new ApplicationCommandData3(str2, obj2, i3, list2, bool2);
     }
 
-    /* renamed from: b, reason: from getter */
+    /* JADX INFO: renamed from: b, reason: from getter */
     public final String getName() {
         return this.name;
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final List<ApplicationCommandData3> m7741c() {
         return this.options;
     }
 
-    /* renamed from: d, reason: from getter */
+    /* JADX INFO: renamed from: d, reason: from getter */
     public final int getType() {
         return this.type;
     }
 
-    /* renamed from: e, reason: from getter */
+    /* JADX INFO: renamed from: e, reason: from getter */
     public final Object getValue() {
         return this.value;
     }

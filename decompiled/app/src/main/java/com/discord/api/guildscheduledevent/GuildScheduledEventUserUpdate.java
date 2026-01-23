@@ -2,19 +2,19 @@ package com.discord.api.guildscheduledevent;
 
 import p007b.p100d.p104b.p105a.outline;
 
-/* compiled from: GuildScheduledEventUserUpdate.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: GuildScheduledEventUserUpdate.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class GuildScheduledEventUserUpdate {
     private final long guildId;
     private final long guildScheduledEventId;
     private final long userId;
 
-    /* renamed from: a, reason: from getter */
+    /* JADX INFO: renamed from: a, reason: from getter */
     public final long getGuildScheduledEventId() {
         return this.guildScheduledEventId;
     }
 
-    /* renamed from: b, reason: from getter */
+    /* JADX INFO: renamed from: b, reason: from getter */
     public final long getUserId() {
         return this.userId;
     }

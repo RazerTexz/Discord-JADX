@@ -19,7 +19,7 @@ import p668x.p669a.p670a.ICustomTabsCallback;
 import p668x.p669a.p670a.ICustomTabsService;
 import p677y.p678a.p679a.C13186a;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public abstract class CustomTabsService extends Service {
     public static final String ACTION_CUSTOM_TABS_CONNECTION = "android.support.customtabs.action.CustomTabsService";
     public static final String CATEGORY_COLOR_SCHEME_CUSTOMIZATION = "androidx.browser.customtabs.category.ColorSchemeCustomization";
@@ -39,7 +39,7 @@ public abstract class CustomTabsService extends Service {
     public final SimpleArrayMap<IBinder, IBinder.DeathRecipient> mDeathRecipientMap = new SimpleArrayMap<>();
     private ICustomTabsService.a mBinder = new BinderC01531();
 
-    /* renamed from: androidx.browser.customtabs.CustomTabsService$1 */
+    /* JADX INFO: renamed from: androidx.browser.customtabs.CustomTabsService$1 */
     public class BinderC01531 extends ICustomTabsService.a {
         public BinderC01531() {
         }

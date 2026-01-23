@@ -6,9 +6,9 @@ import kotlin.jvm.functions.Function2;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetServerSettingsMembersAdapter.kt */
-/* renamed from: com.discord.widgets.servers.settings.members.WidgetServerSettingsMembersAdapter$memberSelectedListener$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.servers.settings.members.WidgetServerSettingsMembersAdapter$memberSelectedListener$1, reason: use source file name */
+/* JADX INFO: compiled from: WidgetServerSettingsMembersAdapter.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetServerSettingsMembersAdapter3 extends Lambda implements Function2<Long, List<? extends Long>, Unit> {
     public static final WidgetServerSettingsMembersAdapter3 INSTANCE = new WidgetServerSettingsMembersAdapter3();
 

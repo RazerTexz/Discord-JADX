@@ -4,15 +4,15 @@ import p007b.p225i.p226a.p242c.Player2;
 import p007b.p225i.p226a.p242c.p259f3.ListenerSet;
 import p007b.p225i.p226a.p242c.p262s2.AnalyticsListener;
 
-/* compiled from: lambda */
-/* renamed from: b.i.a.c.s2.a0 */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.s2.a0 */
+/* JADX INFO: compiled from: lambda */
+/* JADX INFO: loaded from: classes3.dex */
 public final /* synthetic */ class C2849a0 implements ListenerSet.a {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final /* synthetic */ AnalyticsListener.a f7501a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final /* synthetic */ Player2.b f7502b;
 
     public /* synthetic */ C2849a0(AnalyticsListener.a aVar, Player2.b bVar) {

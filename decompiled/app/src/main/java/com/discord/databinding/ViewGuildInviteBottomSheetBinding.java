@@ -11,30 +11,30 @@ import com.discord.C5419R;
 import com.discord.views.CheckedSetting;
 import com.google.android.material.button.MaterialButton;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public final class ViewGuildInviteBottomSheetBinding implements ViewBinding {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     @NonNull
     public final View f15452a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     @NonNull
     public final Spinner f15453b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     @NonNull
     public final RadioGroup f15454c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     @NonNull
     public final MaterialButton f15455d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     @NonNull
     public final RadioGroup f15456e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     @NonNull
     public final CheckedSetting f15457f;
 
@@ -48,7 +48,7 @@ public final class ViewGuildInviteBottomSheetBinding implements ViewBinding {
     }
 
     @NonNull
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static ViewGuildInviteBottomSheetBinding m8395a(@NonNull LayoutInflater layoutInflater, @NonNull ViewGroup viewGroup) {
         layoutInflater.inflate(C5419R.layout.view_guild_invite_bottom_sheet, viewGroup);
         int i = C5419R.id.guild_invite_channel_spinner;

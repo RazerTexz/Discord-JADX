@@ -12,19 +12,19 @@ import p007b.p452o.p453a.CameraLogger;
 import p007b.p452o.p453a.p455n.Camera2Engine;
 import p007b.p452o.p453a.p455n.p456o.ActionHolder;
 
-/* compiled from: ExposureMeter.java */
+/* JADX INFO: renamed from: b.o.a.n.r.c, reason: use source file name */
+/* JADX INFO: compiled from: ExposureMeter.java */
+/* JADX INFO: loaded from: classes3.dex */
 @RequiresApi(21)
-/* renamed from: b.o.a.n.r.c, reason: use source file name */
-/* loaded from: classes3.dex */
 public class ExposureMeter extends BaseMeter {
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public static final CameraLogger f13970i = new CameraLogger(ExposureMeter.class.getSimpleName());
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public boolean f13971j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public boolean f13972k;
 
     public ExposureMeter(@NonNull List<MeteringRectangle> list, boolean z2) {
@@ -35,7 +35,7 @@ public class ExposureMeter extends BaseMeter {
 
     /* JADX WARN: Removed duplicated region for block: B:15:0x004e  */
     @Override // p007b.p452o.p453a.p455n.p456o.BaseAction, p007b.p452o.p453a.p455n.p456o.Action2
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
@@ -79,13 +79,13 @@ public class ExposureMeter extends BaseMeter {
     }
 
     @Override // p007b.p452o.p453a.p455n.p456o.BaseAction
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public void mo7339i(@NonNull ActionHolder actionHolder) {
         ((Camera2Engine) actionHolder).f13807i0.set(CaptureRequest.CONTROL_AE_PRECAPTURE_TRIGGER, null);
     }
 
     @Override // p007b.p452o.p453a.p455n.p459r.BaseMeter
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public boolean mo7349m(@NonNull ActionHolder actionHolder) {
         boolean z2 = ((Integer) m7340k(CameraCharacteristics.INFO_SUPPORTED_HARDWARE_LEVEL, -1)).intValue() == 2;
         Integer num = (Integer) ((Camera2Engine) actionHolder).f13807i0.get(CaptureRequest.CONTROL_AE_MODE);
@@ -99,7 +99,7 @@ public class ExposureMeter extends BaseMeter {
     }
 
     @Override // p007b.p452o.p453a.p455n.p459r.BaseMeter
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public boolean mo7350n(@NonNull ActionHolder actionHolder) {
         TotalCaptureResult totalCaptureResult = ((Camera2Engine) actionHolder).f13808j0;
         if (totalCaptureResult == null) {
@@ -113,7 +113,7 @@ public class ExposureMeter extends BaseMeter {
     }
 
     @Override // p007b.p452o.p453a.p455n.p459r.BaseMeter
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public void mo7351o(@NonNull ActionHolder actionHolder, @NonNull List<MeteringRectangle> list) {
         f13970i.m7159a(1, "onStarted:", "with areas:", list);
         if (this.f13971j && !list.isEmpty()) {

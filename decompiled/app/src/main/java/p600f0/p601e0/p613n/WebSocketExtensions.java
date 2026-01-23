@@ -3,27 +3,27 @@ package p600f0.p601e0.p613n;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: WebSocketExtensions.kt */
-/* renamed from: f0.e0.n.f, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: f0.e0.n.f, reason: use source file name */
+/* JADX INFO: compiled from: WebSocketExtensions.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class WebSocketExtensions {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final boolean f25861a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final Integer f25862b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final boolean f25863c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final Integer f25864d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final boolean f25865e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final boolean f25866f;
 
     public WebSocketExtensions() {
@@ -50,8 +50,15 @@ public final class WebSocketExtensions {
     /* JADX WARN: Type inference failed for: r0v1, types: [int] */
     /* JADX WARN: Type inference failed for: r0v12 */
     /* JADX WARN: Type inference failed for: r0v13 */
-    /* JADX WARN: Type inference failed for: r2v3, types: [boolean] */
-    /* JADX WARN: Type inference failed for: r2v6, types: [boolean] */
+    /* JADX WARN: Type inference failed for: r1v0 */
+    /* JADX WARN: Type inference failed for: r1v1, types: [int] */
+    /* JADX WARN: Type inference failed for: r1v2 */
+    /* JADX WARN: Type inference failed for: r2v10 */
+    /* JADX WARN: Type inference failed for: r2v12 */
+    /* JADX WARN: Type inference failed for: r2v13 */
+    /* JADX WARN: Type inference failed for: r2v4, types: [int] */
+    /* JADX WARN: Type inference failed for: r2v7, types: [int] */
+    /* JADX WARN: Type inference failed for: r2v9 */
     public int hashCode() {
         boolean z2 = this.f25861a;
         ?? r0 = z2;
@@ -61,22 +68,22 @@ public final class WebSocketExtensions {
         int i = r0 * 31;
         Integer num = this.f25862b;
         int iHashCode = (i + (num != null ? num.hashCode() : 0)) * 31;
-        ?? r2 = this.f25863c;
-        int i2 = r2;
-        if (r2 != 0) {
-            i2 = 1;
+        boolean z3 = this.f25863c;
+        ?? r2 = z3;
+        if (z3) {
+            r2 = 1;
         }
-        int i3 = (iHashCode + i2) * 31;
+        int i2 = (iHashCode + r2) * 31;
         Integer num2 = this.f25864d;
-        int iHashCode2 = (i3 + (num2 != null ? num2.hashCode() : 0)) * 31;
-        ?? r22 = this.f25865e;
-        int i4 = r22;
-        if (r22 != 0) {
-            i4 = 1;
+        int iHashCode2 = (i2 + (num2 != null ? num2.hashCode() : 0)) * 31;
+        boolean z4 = this.f25865e;
+        ?? r22 = z4;
+        if (z4) {
+            r22 = 1;
         }
-        int i5 = (iHashCode2 + i4) * 31;
-        boolean z3 = this.f25866f;
-        return i5 + (z3 ? 1 : z3 ? 1 : 0);
+        int i3 = (iHashCode2 + r22) * 31;
+        boolean z5 = this.f25866f;
+        return i3 + (z5 ? 1 : z5);
     }
 
     public String toString() {

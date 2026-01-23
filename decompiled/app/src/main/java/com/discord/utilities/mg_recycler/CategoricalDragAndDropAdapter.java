@@ -12,11 +12,11 @@ import kotlin.ranges.Ranges2;
 import p507d0.p580t.Iterators4;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: CategoricalDragAndDropAdapter.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: CategoricalDragAndDropAdapter.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public abstract class CategoricalDragAndDropAdapter<T extends Payload> extends DragAndDropAdapter<T> {
 
-    /* compiled from: CategoricalDragAndDropAdapter.kt */
+    /* JADX INFO: compiled from: CategoricalDragAndDropAdapter.kt */
     public interface Payload extends DragAndDropAdapter.Payload {
         String getCategory();
     }

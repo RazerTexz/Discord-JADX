@@ -3,7 +3,7 @@ package org.objectweb.asm.tree;
 import java.util.List;
 import org.objectweb.asm.ModuleVisitor;
 
-/* loaded from: discord-126021.apk:org/objectweb/asm/tree/ModuleOpenNode.SCL.lombok */
+/* JADX INFO: loaded from: discord-126021.apk:org/objectweb/asm/tree/ModuleOpenNode.SCL.lombok */
 public class ModuleOpenNode {
     public String packaze;
     public int access;

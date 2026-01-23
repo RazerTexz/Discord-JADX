@@ -4,8 +4,8 @@ import com.discord.api.user.User;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: GuildJoinRequest.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: GuildJoinRequest.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class GuildJoinRequest {
     private final String actionedAt;
     private final ApplicationStatus applicationStatus;
@@ -17,27 +17,27 @@ public final /* data */ class GuildJoinRequest {
     private final User user;
     private final long userId;
 
-    /* renamed from: a, reason: from getter */
+    /* JADX INFO: renamed from: a, reason: from getter */
     public final ApplicationStatus getApplicationStatus() {
         return this.applicationStatus;
     }
 
-    /* renamed from: b, reason: from getter */
+    /* JADX INFO: renamed from: b, reason: from getter */
     public final long getGuildId() {
         return this.guildId;
     }
 
-    /* renamed from: c, reason: from getter */
+    /* JADX INFO: renamed from: c, reason: from getter */
     public final String getLastSeen() {
         return this.lastSeen;
     }
 
-    /* renamed from: d, reason: from getter */
+    /* JADX INFO: renamed from: d, reason: from getter */
     public final String getRejectionReason() {
         return this.rejectionReason;
     }
 
-    /* renamed from: e, reason: from getter */
+    /* JADX INFO: renamed from: e, reason: from getter */
     public final long getUserId() {
         return this.userId;
     }

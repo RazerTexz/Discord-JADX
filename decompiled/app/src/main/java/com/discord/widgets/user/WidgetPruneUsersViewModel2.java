@@ -7,9 +7,9 @@ import com.discord.widgets.user.WidgetPruneUsersViewModel;
 import kotlin.jvm.functions.Function0;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetPruneUsersViewModel.kt */
-/* renamed from: com.discord.widgets.user.WidgetPruneUsersViewModel$Companion$observeStoreState$1, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: com.discord.widgets.user.WidgetPruneUsersViewModel$Companion$observeStoreState$1, reason: use source file name */
+/* JADX INFO: compiled from: WidgetPruneUsersViewModel.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class WidgetPruneUsersViewModel2 extends Lambda implements Function0<WidgetPruneUsersViewModel.StoreData> {
     public final /* synthetic */ long $guildId;
     public final /* synthetic */ StoreGuilds $storeGuilds;

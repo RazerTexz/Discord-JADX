@@ -5,9 +5,9 @@ import com.discord.stores.StoreStream;
 import kotlin.ranges.Ranges2;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: LottieAnimationUtils.kt */
-/* renamed from: com.discord.utilities.animations.LottieAnimationUtilsKt, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.utilities.animations.LottieAnimationUtilsKt, reason: use source file name */
+/* JADX INFO: compiled from: LottieAnimationUtils.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class LottieAnimationUtils2 {
     public static final void loopFrom(LottieAnimationView lottieAnimationView, int i, Ranges2 ranges2, boolean z2) {
         Intrinsics3.checkNotNullParameter(lottieAnimationView, "$this$loopFrom");

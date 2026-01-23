@@ -18,8 +18,8 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p658rx.Observable;
 import p658rx.subjects.PublishSubject;
 
-/* compiled from: SelectComponentBottomSheetViewModel.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: SelectComponentBottomSheetViewModel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class SelectComponentBottomSheetViewModel extends AppViewModel<ViewState> {
     private final SelectComponentBottomSheet2 componentContext;
     private final int componentIndex;
@@ -34,10 +34,10 @@ public final class SelectComponentBottomSheetViewModel extends AppViewModel<View
     private final Set<SelectComponent2> selectedItems;
     private final List<SelectComponent2> selectedOptions;
 
-    /* compiled from: SelectComponentBottomSheetViewModel.kt */
+    /* JADX INFO: compiled from: SelectComponentBottomSheetViewModel.kt */
     public static abstract class Event {
 
-        /* compiled from: SelectComponentBottomSheetViewModel.kt */
+        /* JADX INFO: compiled from: SelectComponentBottomSheetViewModel.kt */
         public static final class CloseSheet extends Event {
             public static final CloseSheet INSTANCE = new CloseSheet();
 
@@ -54,7 +54,7 @@ public final class SelectComponentBottomSheetViewModel extends AppViewModel<View
         }
     }
 
-    /* compiled from: SelectComponentBottomSheetViewModel.kt */
+    /* JADX INFO: compiled from: SelectComponentBottomSheetViewModel.kt */
     public static final class ViewState {
         private final boolean emojiAnimationsEnabled;
         private final boolean isMultiSelect;
@@ -101,12 +101,12 @@ public final class SelectComponentBottomSheetViewModel extends AppViewModel<View
             return this.title;
         }
 
-        /* renamed from: isMultiSelect, reason: from getter */
+        /* JADX INFO: renamed from: isMultiSelect, reason: from getter */
         public final boolean getIsMultiSelect() {
             return this.isMultiSelect;
         }
 
-        /* renamed from: isValidSelection, reason: from getter */
+        /* JADX INFO: renamed from: isValidSelection, reason: from getter */
         public final boolean getIsValidSelection() {
             return this.isValidSelection;
         }

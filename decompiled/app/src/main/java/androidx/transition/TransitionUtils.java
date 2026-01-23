@@ -14,7 +14,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import androidx.constraintlayout.solver.widgets.analyzer.BasicMeasure;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class TransitionUtils {
     private static final boolean HAS_IS_ATTACHED_TO_WINDOW;
     private static final boolean HAS_OVERLAY;
@@ -31,7 +31,7 @@ public class TransitionUtils {
             return evaluate2(f, matrix, matrix2);
         }
 
-        /* renamed from: evaluate, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: evaluate, reason: avoid collision after fix types in other method */
         public Matrix evaluate2(float f, Matrix matrix, Matrix matrix2) {
             matrix.getValues(this.mTempStartValues);
             matrix2.getValues(this.mTempEndValues);

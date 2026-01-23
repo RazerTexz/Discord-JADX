@@ -42,9 +42,9 @@ import p658rx.functions.Func3;
 import p658rx.subjects.BehaviorSubject;
 import p658rx.subjects.SerializedSubject;
 
-/* compiled from: ManageReactionsModel.kt */
-/* renamed from: com.discord.widgets.chat.managereactions.ManageReactionsModelProvider, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.chat.managereactions.ManageReactionsModelProvider, reason: use source file name */
+/* JADX INFO: compiled from: ManageReactionsModel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class ManageReactionsModel2 {
     private final long channelId;
     private final long messageId;
@@ -53,12 +53,12 @@ public final class ManageReactionsModel2 {
     private final StoreGuilds storeGuilds;
     private final SerializedSubject<String, String> targetedEmojiKeySubject;
 
-    /* compiled from: ManageReactionsModel.kt */
-    /* renamed from: com.discord.widgets.chat.managereactions.ManageReactionsModelProvider$get$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.managereactions.ManageReactionsModelProvider$get$1 */
+    /* JADX INFO: compiled from: ManageReactionsModel.kt */
     public static final class C81781 extends Lambda implements Function1<Boolean, Observable<Boolean>> {
 
-        /* compiled from: ManageReactionsModel.kt */
-        /* renamed from: com.discord.widgets.chat.managereactions.ManageReactionsModelProvider$get$1$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.widgets.chat.managereactions.ManageReactionsModelProvider$get$1$1, reason: invalid class name */
+        /* JADX INFO: compiled from: ManageReactionsModel.kt */
         public static final class AnonymousClass1<T1, T2, R> implements Func2<Long, Guild, Boolean> {
             public final /* synthetic */ boolean $isMeMfaEnabled;
 
@@ -71,7 +71,7 @@ public final class ManageReactionsModel2 {
                 return call2(l, guild);
             }
 
-            /* renamed from: call, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
             public final Boolean call2(Long l, Guild guild) {
                 return Boolean.valueOf(guild != null && PermissionUtils.canAndIsElevated(Permission.MANAGE_MESSAGES, l, this.$isMeMfaEnabled, guild.getMfaLevel()));
             }
@@ -94,15 +94,15 @@ public final class ManageReactionsModel2 {
         }
     }
 
-    /* compiled from: ManageReactionsModel.kt */
-    /* renamed from: com.discord.widgets.chat.managereactions.ManageReactionsModelProvider$get$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.managereactions.ManageReactionsModelProvider$get$2 */
+    /* JADX INFO: compiled from: ManageReactionsModel.kt */
     public static final class C81792<T, R> implements Func1<MeUser, Observable<? extends ManageReactionsModel>> {
         public final /* synthetic */ C81781 $getCanManageMessagesObs$1;
         public final /* synthetic */ Observable $guildMembersObservable;
         public final /* synthetic */ Observable $reactionsObs;
 
-        /* compiled from: ManageReactionsModel.kt */
-        /* renamed from: com.discord.widgets.chat.managereactions.ManageReactionsModelProvider$get$2$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.widgets.chat.managereactions.ManageReactionsModelProvider$get$2$1, reason: invalid class name */
+        /* JADX INFO: compiled from: ManageReactionsModel.kt */
         public static final class AnonymousClass1<T1, T2, T3, R> implements Func3<Boolean, List<? extends MessageReaction>, Map<Long, ? extends GuildMember>, Tuples3<? extends Boolean, ? extends List<? extends MessageReaction>, ? extends Map<Long, ? extends GuildMember>>> {
             public static final AnonymousClass1 INSTANCE = new AnonymousClass1();
 
@@ -111,19 +111,19 @@ public final class ManageReactionsModel2 {
                 return call2(bool, (List<MessageReaction>) list, (Map<Long, GuildMember>) map);
             }
 
-            /* renamed from: call, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
             public final Tuples3<Boolean, List<MessageReaction>, Map<Long, GuildMember>> call2(Boolean bool, List<MessageReaction> list, Map<Long, GuildMember> map) {
                 return new Tuples3<>(bool, list, map);
             }
         }
 
-        /* compiled from: ManageReactionsModel.kt */
-        /* renamed from: com.discord.widgets.chat.managereactions.ManageReactionsModelProvider$get$2$2, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.widgets.chat.managereactions.ManageReactionsModelProvider$get$2$2, reason: invalid class name */
+        /* JADX INFO: compiled from: ManageReactionsModel.kt */
         public static final class AnonymousClass2<T, R> implements Func1<Tuples3<? extends Boolean, ? extends List<? extends MessageReaction>, ? extends Map<Long, ? extends GuildMember>>, Observable<? extends ManageReactionsModel>> {
             public final /* synthetic */ MeUser $me;
 
-            /* compiled from: ManageReactionsModel.kt */
-            /* renamed from: com.discord.widgets.chat.managereactions.ManageReactionsModelProvider$get$2$2$1, reason: invalid class name */
+            /* JADX INFO: renamed from: com.discord.widgets.chat.managereactions.ManageReactionsModelProvider$get$2$2$1, reason: invalid class name */
+            /* JADX INFO: compiled from: ManageReactionsModel.kt */
             public static final class AnonymousClass1<T, R> implements Func1<String, MessageReactionEmoji> {
                 public final /* synthetic */ List $reactions;
 
@@ -136,7 +136,7 @@ public final class ManageReactionsModel2 {
                     return call2(str);
                 }
 
-                /* renamed from: call, reason: avoid collision after fix types in other method */
+                /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
                 public final MessageReactionEmoji call2(String str) {
                     T next;
                     MessageReactionEmoji emoji;
@@ -163,15 +163,15 @@ public final class ManageReactionsModel2 {
                 }
             }
 
-            /* compiled from: ManageReactionsModel.kt */
-            /* renamed from: com.discord.widgets.chat.managereactions.ManageReactionsModelProvider$get$2$2$2, reason: invalid class name and collision with other inner class name */
+            /* JADX INFO: renamed from: com.discord.widgets.chat.managereactions.ManageReactionsModelProvider$get$2$2$2, reason: invalid class name and collision with other inner class name */
+            /* JADX INFO: compiled from: ManageReactionsModel.kt */
             public static final class C132822<T, R> implements Func1<MessageReactionEmoji, Observable<? extends ManageReactionsModel>> {
                 public final /* synthetic */ Boolean $canManageMessages;
                 public final /* synthetic */ Map $guildMembers;
                 public final /* synthetic */ List $reactions;
 
-                /* compiled from: ManageReactionsModel.kt */
-                /* renamed from: com.discord.widgets.chat.managereactions.ManageReactionsModelProvider$get$2$2$2$1, reason: invalid class name */
+                /* JADX INFO: renamed from: com.discord.widgets.chat.managereactions.ManageReactionsModelProvider$get$2$2$2$1, reason: invalid class name */
+                /* JADX INFO: compiled from: ManageReactionsModel.kt */
                 public static final class AnonymousClass1<T, R> implements Func1<StoreMessageReactions.EmojiResults, ManageReactionsModel> {
                     public final /* synthetic */ MessageReactionEmoji $targetedEmoji;
 
@@ -184,7 +184,7 @@ public final class ManageReactionsModel2 {
                         return call2(emojiResults);
                     }
 
-                    /* renamed from: call, reason: avoid collision after fix types in other method */
+                    /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
                     public final ManageReactionsModel call2(StoreMessageReactions.EmojiResults emojiResults) {
                         C132822 c132822 = C132822.this;
                         ManageReactionsModel2 manageReactionsModel2 = ManageReactionsModel2.this;
@@ -213,7 +213,7 @@ public final class ManageReactionsModel2 {
                     return call2(messageReactionEmoji);
                 }
 
-                /* renamed from: call, reason: avoid collision after fix types in other method */
+                /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
                 public final Observable<? extends ManageReactionsModel> call2(MessageReactionEmoji messageReactionEmoji) {
                     ManageReactionsModel2 manageReactionsModel2 = ManageReactionsModel2.this;
                     Intrinsics3.checkNotNullExpressionValue(messageReactionEmoji, "targetedEmoji");
@@ -230,7 +230,7 @@ public final class ManageReactionsModel2 {
                 return call2((Tuples3<Boolean, ? extends List<MessageReaction>, ? extends Map<Long, GuildMember>>) tuples3);
             }
 
-            /* renamed from: call, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
             public final Observable<? extends ManageReactionsModel> call2(Tuples3<Boolean, ? extends List<MessageReaction>, ? extends Map<Long, GuildMember>> tuples3) {
                 Boolean boolComponent1 = tuples3.component1();
                 List<MessageReaction> listComponent2 = tuples3.component2();
@@ -249,7 +249,7 @@ public final class ManageReactionsModel2 {
             return call2(meUser);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final Observable<? extends ManageReactionsModel> call2(MeUser meUser) {
             return Observable.m11075i(this.$getCanManageMessagesObs$1.invoke(meUser.getMfaEnabled()), this.$reactionsObs, this.$guildMembersObservable, AnonymousClass1.INSTANCE).m11099Y(new AnonymousClass2(meUser));
         }

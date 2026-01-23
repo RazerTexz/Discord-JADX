@@ -14,21 +14,21 @@ import p007b.p085c.p086a.p089b0.MiscUtils;
 import p007b.p085c.p086a.p089b0.Utils;
 import p007b.p085c.p086a.p090c0.Keyframe;
 
-/* compiled from: KeyframeParser.java */
-/* renamed from: b.c.a.a0.q, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.c.a.a0.q, reason: use source file name */
+/* JADX INFO: compiled from: KeyframeParser.java */
+/* JADX INFO: loaded from: classes.dex */
 public class KeyframeParser {
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static SparseArrayCompat<WeakReference<Interpolator>> f2277b;
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final Interpolator f2276a = new LinearInterpolator();
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public static JsonReader2.a f2278c = JsonReader2.a.m616a("t", "s", "e", "o", "i", "h", "to", "ti");
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static <T> Keyframe<T> m631a(JsonReader2 jsonReader2, LottieComposition lottieComposition, float f, ValueParser<T> valueParser, boolean z2) throws IOException {
         Interpolator interpolator;
         T t;

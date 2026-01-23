@@ -20,13 +20,13 @@ import p507d0.p580t.MapsJVM;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: MessageActionDialogs.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: MessageActionDialogs.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class MessageActionDialogs {
     public static final MessageActionDialogs INSTANCE = new MessageActionDialogs();
 
-    /* compiled from: MessageActionDialogs.kt */
-    /* renamed from: com.discord.widgets.chat.list.actions.MessageActionDialogs$showDeleteMessageConfirmation$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.list.actions.MessageActionDialogs$showDeleteMessageConfirmation$1 */
+    /* JADX INFO: compiled from: MessageActionDialogs.kt */
     public static final class C79581 extends Lambda implements Function1<View, Unit> {
         public final /* synthetic */ Message $message;
         public final /* synthetic */ Function0 $onSuccess;
@@ -44,7 +44,7 @@ public final class MessageActionDialogs {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(View view) {
             Intrinsics3.checkNotNullParameter(view, "<anonymous parameter 0>");
             StoreStream.INSTANCE.getMessages().deleteMessage(this.$message);
@@ -52,8 +52,8 @@ public final class MessageActionDialogs {
         }
     }
 
-    /* compiled from: MessageActionDialogs.kt */
-    /* renamed from: com.discord.widgets.chat.list.actions.MessageActionDialogs$showPinMessageConfirmation$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.list.actions.MessageActionDialogs$showPinMessageConfirmation$1 */
+    /* JADX INFO: compiled from: MessageActionDialogs.kt */
     public static final class C79591 extends Lambda implements Function1<View, Unit> {
         public final /* synthetic */ AppComponent $appComponent;
         public final /* synthetic */ Context $context;
@@ -61,8 +61,8 @@ public final class MessageActionDialogs {
         public final /* synthetic */ Message $message;
         public final /* synthetic */ Function0 $onSuccess;
 
-        /* compiled from: MessageActionDialogs.kt */
-        /* renamed from: com.discord.widgets.chat.list.actions.MessageActionDialogs$showPinMessageConfirmation$1$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.widgets.chat.list.actions.MessageActionDialogs$showPinMessageConfirmation$1$1, reason: invalid class name */
+        /* JADX INFO: compiled from: MessageActionDialogs.kt */
         public static final class AnonymousClass1 extends Lambda implements Function1<Void, Unit> {
             public AnonymousClass1() {
                 super(1);
@@ -74,7 +74,7 @@ public final class MessageActionDialogs {
                 return Unit.f27425a;
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2(Void r5) {
                 C79591 c79591 = C79591.this;
                 AppToast.m169g(c79591.$context, c79591.$isPinned ? C5419R.string.message_unpinned : C5419R.string.message_pinned, 0, null, 12);
@@ -98,7 +98,7 @@ public final class MessageActionDialogs {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(View view) {
             Intrinsics3.checkNotNullParameter(view, "view");
             long channelId = this.$message.getChannelId();

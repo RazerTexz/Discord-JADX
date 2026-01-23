@@ -1,8 +1,8 @@
 package com.discord.api.guildjoinrequest;
 
 
-/* compiled from: ApplicationStatus.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: ApplicationStatus.kt */
+/* JADX INFO: loaded from: classes.dex */
 public enum ApplicationStatus {
     STARTED,
     PENDING,

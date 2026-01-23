@@ -10,13 +10,13 @@ import kotlin.sequences.Sequence;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.p595g0.KMarkers;
 
-/* compiled from: Menu.kt */
-/* renamed from: androidx.core.view.MenuKt, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: androidx.core.view.MenuKt, reason: use source file name */
+/* JADX INFO: compiled from: Menu.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class Menu2 {
 
-    /* compiled from: Menu.kt */
-    /* renamed from: androidx.core.view.MenuKt$iterator$1 */
+    /* JADX INFO: renamed from: androidx.core.view.MenuKt$iterator$1 */
+    /* JADX INFO: compiled from: Menu.kt */
     public static final class C02801 implements Iterator<MenuItem>, KMarkers {
         public final /* synthetic */ Menu $this_iterator;
         private int index;

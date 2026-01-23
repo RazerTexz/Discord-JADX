@@ -15,40 +15,40 @@ import com.jaredrummler.android.colorpicker.ColorPickerDialog;
 import p007b.p100d.p104b.p105a.outline;
 import p007b.p440k.p441a.p442a.ColorPickerDialogListener;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public class ColorPreferenceCompat extends Preference implements ColorPickerDialogListener {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public int f21808j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public boolean f21809k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public int f21810l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public int f21811m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public boolean f21812n;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public boolean f21813o;
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public boolean f21814p;
 
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     public boolean f21815q;
 
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     public int f21816r;
 
-    /* renamed from: s */
+    /* JADX INFO: renamed from: s */
     public int[] f21817s;
 
-    /* renamed from: t */
+    /* JADX INFO: renamed from: t */
     public int f21818t;
 
     public ColorPreferenceCompat(Context context, AttributeSet attributeSet) {
@@ -79,7 +79,7 @@ public class ColorPreferenceCompat extends Preference implements ColorPickerDial
         typedArrayObtainStyledAttributes.recycle();
     }
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public FragmentActivity m9278f() {
         Context context = getContext();
         if (context instanceof FragmentActivity) {

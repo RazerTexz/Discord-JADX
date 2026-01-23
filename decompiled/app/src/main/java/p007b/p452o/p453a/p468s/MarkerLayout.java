@@ -7,12 +7,12 @@ import android.widget.FrameLayout;
 import androidx.annotation.NonNull;
 import java.util.HashMap;
 
-/* compiled from: MarkerLayout.java */
-/* renamed from: b.o.a.s.c, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.o.a.s.c, reason: use source file name */
+/* JADX INFO: compiled from: MarkerLayout.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class MarkerLayout extends FrameLayout {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     @SuppressLint({"UseSparseArrays"})
     public final HashMap<Integer, View> f14139j;
 

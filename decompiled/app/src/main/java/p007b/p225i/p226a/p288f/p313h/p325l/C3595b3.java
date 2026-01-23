@@ -6,9 +6,9 @@ import org.checkerframework.checker.nullness.compatqual.NullableDecl;
 import p007b.p100d.p104b.p105a.outline;
 import p007b.p225i.p226a.p288f.p299e.p308o.C3404f;
 
-/* compiled from: com.google.android.gms:play-services-measurement-impl@@18.0.0 */
-/* renamed from: b.i.a.f.h.l.b3 */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.h.l.b3 */
+/* JADX INFO: compiled from: com.google.android.gms:play-services-measurement-impl@@18.0.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public final class C3595b3<T> implements InterfaceC3914z2<T>, Serializable {
 
     @NullableDecl
@@ -19,7 +19,7 @@ public final class C3595b3<T> implements InterfaceC3914z2<T>, Serializable {
     }
 
     @Override // p007b.p225i.p226a.p288f.p313h.p325l.InterfaceC3914z2
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final T mo4555a() {
         return this.zza;
     }

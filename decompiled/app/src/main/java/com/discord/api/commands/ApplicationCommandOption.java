@@ -5,8 +5,8 @@ import java.util.List;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ApplicationCommandOption.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: ApplicationCommandOption.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class ApplicationCommandOption {
     private final boolean autocomplete;
     private final List<Integer> channelTypes;
@@ -20,27 +20,27 @@ public final /* data */ class ApplicationCommandOption {
     private final boolean required;
     private final ApplicationCommandType type;
 
-    /* renamed from: a, reason: from getter */
+    /* JADX INFO: renamed from: a, reason: from getter */
     public final boolean getAutocomplete() {
         return this.autocomplete;
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final List<Integer> m7727b() {
         return this.channelTypes;
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final List<CommandChoice> m7728c() {
         return this.choices;
     }
 
-    /* renamed from: d, reason: from getter */
+    /* JADX INFO: renamed from: d, reason: from getter */
     public final boolean getDefault() {
         return this.default;
     }
 
-    /* renamed from: e, reason: from getter */
+    /* JADX INFO: renamed from: e, reason: from getter */
     public final String getDescription() {
         return this.description;
     }
@@ -56,22 +56,31 @@ public final /* data */ class ApplicationCommandOption {
         return Intrinsics3.areEqual(this.type, applicationCommandOption.type) && Intrinsics3.areEqual(this.name, applicationCommandOption.name) && Intrinsics3.areEqual(this.description, applicationCommandOption.description) && this.required == applicationCommandOption.required && this.default == applicationCommandOption.default && Intrinsics3.areEqual(this.channelTypes, applicationCommandOption.channelTypes) && Intrinsics3.areEqual(this.choices, applicationCommandOption.choices) && Intrinsics3.areEqual(this.options, applicationCommandOption.options) && this.autocomplete == applicationCommandOption.autocomplete && Intrinsics3.areEqual(this.minValue, applicationCommandOption.minValue) && Intrinsics3.areEqual(this.maxValue, applicationCommandOption.maxValue);
     }
 
-    /* renamed from: f, reason: from getter */
+    /* JADX INFO: renamed from: f, reason: from getter */
     public final Number getMaxValue() {
         return this.maxValue;
     }
 
-    /* renamed from: g, reason: from getter */
+    /* JADX INFO: renamed from: g, reason: from getter */
     public final Number getMinValue() {
         return this.minValue;
     }
 
-    /* renamed from: h, reason: from getter */
+    /* JADX INFO: renamed from: h, reason: from getter */
     public final String getName() {
         return this.name;
     }
 
     /* JADX WARN: Multi-variable type inference failed */
+    /* JADX WARN: Type inference failed for: r2v28 */
+    /* JADX WARN: Type inference failed for: r2v29 */
+    /* JADX WARN: Type inference failed for: r2v32 */
+    /* JADX WARN: Type inference failed for: r2v33 */
+    /* JADX WARN: Type inference failed for: r2v7, types: [int] */
+    /* JADX WARN: Type inference failed for: r2v9, types: [int] */
+    /* JADX WARN: Type inference failed for: r3v0 */
+    /* JADX WARN: Type inference failed for: r3v1, types: [int] */
+    /* JADX WARN: Type inference failed for: r3v2 */
     public int hashCode() {
         ApplicationCommandType applicationCommandType = this.type;
         int iHashCode = (applicationCommandType != null ? applicationCommandType.hashCode() : 0) * 31;
@@ -80,42 +89,42 @@ public final /* data */ class ApplicationCommandOption {
         String str2 = this.description;
         int iHashCode3 = (iHashCode2 + (str2 != null ? str2.hashCode() : 0)) * 31;
         boolean z2 = this.required;
-        int i = z2;
-        if (z2 != 0) {
-            i = 1;
+        ?? r2 = z2;
+        if (z2) {
+            r2 = 1;
         }
-        int i2 = (iHashCode3 + i) * 31;
+        int i = (iHashCode3 + r2) * 31;
         boolean z3 = this.default;
-        int i3 = z3;
-        if (z3 != 0) {
-            i3 = 1;
+        ?? r22 = z3;
+        if (z3) {
+            r22 = 1;
         }
-        int i4 = (i2 + i3) * 31;
+        int i2 = (i + r22) * 31;
         List<Integer> list = this.channelTypes;
-        int iHashCode4 = (i4 + (list != null ? list.hashCode() : 0)) * 31;
+        int iHashCode4 = (i2 + (list != null ? list.hashCode() : 0)) * 31;
         List<CommandChoice> list2 = this.choices;
         int iHashCode5 = (iHashCode4 + (list2 != null ? list2.hashCode() : 0)) * 31;
         List<ApplicationCommandOption> list3 = this.options;
         int iHashCode6 = (iHashCode5 + (list3 != null ? list3.hashCode() : 0)) * 31;
         boolean z4 = this.autocomplete;
-        int i5 = (iHashCode6 + (z4 ? 1 : z4 ? 1 : 0)) * 31;
+        int i3 = (iHashCode6 + (z4 ? 1 : z4)) * 31;
         Number number = this.minValue;
-        int iHashCode7 = (i5 + (number != null ? number.hashCode() : 0)) * 31;
+        int iHashCode7 = (i3 + (number != null ? number.hashCode() : 0)) * 31;
         Number number2 = this.maxValue;
         return iHashCode7 + (number2 != null ? number2.hashCode() : 0);
     }
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public final List<ApplicationCommandOption> m7734i() {
         return this.options;
     }
 
-    /* renamed from: j, reason: from getter */
+    /* JADX INFO: renamed from: j, reason: from getter */
     public final boolean getRequired() {
         return this.required;
     }
 
-    /* renamed from: k, reason: from getter */
+    /* JADX INFO: renamed from: k, reason: from getter */
     public final ApplicationCommandType getType() {
         return this.type;
     }

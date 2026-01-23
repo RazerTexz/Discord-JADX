@@ -3,7 +3,7 @@ package androidx.constraintlayout.solver.widgets.analyzer;
 import androidx.constraintlayout.solver.widgets.ConstraintAnchor;
 import androidx.constraintlayout.solver.widgets.ConstraintWidget;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public abstract class WidgetRun implements Dependency {
     public ConstraintWidget.DimensionBehaviour dimensionBehavior;
     public int matchConstraintsType;
@@ -16,10 +16,10 @@ public abstract class WidgetRun implements Dependency {
     public DependencyNode end = new DependencyNode(this);
     public RunType mRunType = RunType.NONE;
 
-    /* renamed from: androidx.constraintlayout.solver.widgets.analyzer.WidgetRun$1 */
+    /* JADX INFO: renamed from: androidx.constraintlayout.solver.widgets.analyzer.WidgetRun$1 */
     public static /* synthetic */ class C01941 {
 
-        /* renamed from: $SwitchMap$androidx$constraintlayout$solver$widgets$ConstraintAnchor$Type */
+        /* JADX INFO: renamed from: $SwitchMap$androidx$constraintlayout$solver$widgets$ConstraintAnchor$Type */
         public static final /* synthetic */ int[] f124x4c44d048;
 
         static {
@@ -254,11 +254,11 @@ public abstract class WidgetRun implements Dependency {
             i2 = this.start.margin - this.end.margin;
         } else {
             if (i != 0) {
-                return j - this.end.margin;
+                return j - ((long) this.end.margin);
             }
             i2 = this.start.margin;
         }
-        return j + i2;
+        return j + ((long) i2);
     }
 
     public final void addTarget(DependencyNode dependencyNode, DependencyNode dependencyNode2, int i, DimensionDependency dimensionDependency) {

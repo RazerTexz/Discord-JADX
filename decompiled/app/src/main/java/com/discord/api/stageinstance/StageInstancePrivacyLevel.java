@@ -1,8 +1,8 @@
 package com.discord.api.stageinstance;
 
 
-/* compiled from: StageInstancePrivacyLevel.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: StageInstancePrivacyLevel.kt */
+/* JADX INFO: loaded from: classes.dex */
 public enum StageInstancePrivacyLevel {
     INVALID(0),
     PUBLIC(1),

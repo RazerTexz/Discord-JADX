@@ -4,9 +4,9 @@ import android.net.Uri;
 import android.view.View;
 import com.discord.widgets.share.WidgetIncomingShare;
 
-/* compiled from: WidgetIncomingShare.kt */
-/* renamed from: com.discord.widgets.share.WidgetIncomingShare$Adapter$ViewHolder$bind$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.share.WidgetIncomingShare$Adapter$ViewHolder$bind$1, reason: use source file name */
+/* JADX INFO: compiled from: WidgetIncomingShare.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetIncomingShare2 implements View.OnClickListener {
     public final /* synthetic */ Uri $uri;
     public final /* synthetic */ WidgetIncomingShare.Adapter.ViewHolder this$0;

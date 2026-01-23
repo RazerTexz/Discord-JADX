@@ -6,11 +6,11 @@ import kotlin.jvm.internal.DefaultConstructorMarker;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: StoreApplicationCommands.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: StoreApplicationCommands.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public abstract class CommandAutocompleteState {
 
-    /* compiled from: StoreApplicationCommands.kt */
+    /* JADX INFO: compiled from: StoreApplicationCommands.kt */
     public static final /* data */ class Choices extends CommandAutocompleteState {
         private final List<ApplicationCommandAutocompleteChoice> choices;
 
@@ -62,7 +62,7 @@ public abstract class CommandAutocompleteState {
         }
     }
 
-    /* compiled from: StoreApplicationCommands.kt */
+    /* JADX INFO: compiled from: StoreApplicationCommands.kt */
     public static final class Failed extends CommandAutocompleteState {
         public static final Failed INSTANCE = new Failed();
 
@@ -71,7 +71,7 @@ public abstract class CommandAutocompleteState {
         }
     }
 
-    /* compiled from: StoreApplicationCommands.kt */
+    /* JADX INFO: compiled from: StoreApplicationCommands.kt */
     public static final class Loading extends CommandAutocompleteState {
         public static final Loading INSTANCE = new Loading();
 

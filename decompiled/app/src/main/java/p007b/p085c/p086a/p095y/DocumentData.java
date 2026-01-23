@@ -4,45 +4,45 @@ import androidx.annotation.ColorInt;
 import androidx.annotation.RestrictTo;
 import p007b.p100d.p104b.p105a.outline;
 
-/* compiled from: DocumentData.java */
+/* JADX INFO: renamed from: b.c.a.y.c, reason: use source file name */
+/* JADX INFO: compiled from: DocumentData.java */
+/* JADX INFO: loaded from: classes.dex */
 @RestrictTo({RestrictTo.Scope.LIBRARY})
-/* renamed from: b.c.a.y.c, reason: use source file name */
-/* loaded from: classes.dex */
 public class DocumentData {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final String f2693a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final String f2694b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final float f2695c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final int f2696d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final int f2697e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final float f2698f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public final float f2699g;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     @ColorInt
     public final int f2700h;
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     @ColorInt
     public final int f2701i;
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final float f2702j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final boolean f2703k;
 
     public DocumentData(String str, String str2, float f, int i, int i2, float f2, float f3, @ColorInt int i3, @ColorInt int i4, float f4, boolean z2) {

@@ -16,12 +16,12 @@ import p007b.p008a.p018d.AppViewModel;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: GuildScheduledEventDirectoryAssociationViewModel.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: GuildScheduledEventDirectoryAssociationViewModel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class GuildScheduledEventDirectoryAssociationViewModel extends AppViewModel<GuildScheduledEventDirectoryAssociationViewModel2> {
 
-    /* compiled from: GuildScheduledEventDirectoryAssociationViewModel.kt */
-    /* renamed from: com.discord.widgets.guildscheduledevent.GuildScheduledEventDirectoryAssociationViewModel$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.guildscheduledevent.GuildScheduledEventDirectoryAssociationViewModel$1 */
+    /* JADX INFO: compiled from: GuildScheduledEventDirectoryAssociationViewModel.kt */
     public static final class C88181 extends Lambda implements Function1<RestCallState<? extends GuildScheduledEventBroadcast>, Unit> {
         public C88181() {
             super(1);
@@ -33,7 +33,7 @@ public final class GuildScheduledEventDirectoryAssociationViewModel extends AppV
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(RestCallState<GuildScheduledEventBroadcast> restCallState) {
             Intrinsics3.checkNotNullParameter(restCallState, "async");
             GuildScheduledEventDirectoryAssociationViewModel2 guildScheduledEventDirectoryAssociationViewModel2Access$getViewState$p = GuildScheduledEventDirectoryAssociationViewModel.access$getViewState$p(GuildScheduledEventDirectoryAssociationViewModel.this);

@@ -8,9 +8,9 @@ import com.discord.utilities.guildscheduledevent.GuildScheduledEventUtilities5;
 import com.discord.widgets.guildscheduledevent.WidgetGuildScheduledEventDetailsBottomSheet;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: WidgetHubEventsPage.kt */
-/* renamed from: com.discord.widgets.hubs.events.WidgetHubEventsPage$listener$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.hubs.events.WidgetHubEventsPage$listener$1, reason: use source file name */
+/* JADX INFO: compiled from: WidgetHubEventsPage.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetHubEventsPage6 implements WidgetHubEventsPage3 {
     public final /* synthetic */ WidgetHubEventsPage this$0;
 

@@ -2,49 +2,49 @@ package p007b.p225i.p361c.p369m.p389e;
 
 import java.io.File;
 
-/* compiled from: SessionFiles.java */
-/* renamed from: b.i.c.m.e.g, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.c.m.e.g, reason: use source file name */
+/* JADX INFO: compiled from: SessionFiles.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class SessionFiles {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final File f12791a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final File f12792b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final File f12793c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final File f12794d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final File f12795e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final File f12796f;
 
-    /* compiled from: SessionFiles.java */
-    /* renamed from: b.i.c.m.e.g$b */
+    /* JADX INFO: renamed from: b.i.c.m.e.g$b */
+    /* JADX INFO: compiled from: SessionFiles.java */
     public static final class b {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public File f12797a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public File f12798b;
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public File f12799c;
 
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         public File f12800d;
 
-        /* renamed from: e */
+        /* JADX INFO: renamed from: e */
         public File f12801e;
 
-        /* renamed from: f */
+        /* JADX INFO: renamed from: f */
         public File f12802f;
     }
 

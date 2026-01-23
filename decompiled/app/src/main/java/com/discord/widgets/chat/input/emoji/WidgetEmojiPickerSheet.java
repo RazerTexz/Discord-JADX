@@ -1,6 +1,7 @@
 package com.discord.widgets.chat.input.emoji;
 
 import android.content.DialogInterface;
+import android.content.res.Resources;
 import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
@@ -16,17 +17,17 @@ import kotlin.jvm.functions.Function0;
 import kotlin.jvm.internal.DefaultConstructorMarker;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: WidgetEmojiPickerSheet.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetEmojiPickerSheet.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetEmojiPickerSheet extends WidgetExpressionPickerSheet implements EmojiPickerListener {
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private View container;
     private WidgetEmojiPicker emojiPickerFragment;
     private EmojiPickerListener emojiPickerListenerDelegate;
 
-    /* compiled from: WidgetEmojiPickerSheet.kt */
+    /* JADX INFO: compiled from: WidgetEmojiPickerSheet.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -56,8 +57,8 @@ public final class WidgetEmojiPickerSheet extends WidgetExpressionPickerSheet im
         }
     }
 
-    /* compiled from: WidgetEmojiPickerSheet.kt */
-    /* renamed from: com.discord.widgets.chat.input.emoji.WidgetEmojiPickerSheet$onViewCreated$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.input.emoji.WidgetEmojiPickerSheet$onViewCreated$2 */
+    /* JADX INFO: compiled from: WidgetEmojiPickerSheet.kt */
     public static final class RunnableC78402 implements Runnable {
         public RunnableC78402() {
         }
@@ -66,8 +67,9 @@ public final class WidgetEmojiPickerSheet extends WidgetExpressionPickerSheet im
         public final void run() {
             ViewGroup.LayoutParams layoutParams = WidgetEmojiPickerSheet.access$getContainer$p(WidgetEmojiPickerSheet.this).getLayoutParams();
             if (layoutParams != null) {
-                Intrinsics3.checkNotNullExpressionValue(WidgetEmojiPickerSheet.this.getResources(), "resources");
-                layoutParams.height = (int) (r1.getDisplayMetrics().heightPixels * 0.9d);
+                Resources resources = WidgetEmojiPickerSheet.this.getResources();
+                Intrinsics3.checkNotNullExpressionValue(resources, "resources");
+                layoutParams.height = (int) (((double) resources.getDisplayMetrics().heightPixels) * 0.9d);
             }
         }
     }

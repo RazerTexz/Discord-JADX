@@ -12,9 +12,9 @@ import com.discord.widgets.settings.SettingsViewModel;
 import kotlin.jvm.functions.Function0;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: SettingsViewModel.kt */
-/* renamed from: com.discord.widgets.settings.SettingsViewModel$Companion$observeStoreState$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.settings.SettingsViewModel$Companion$observeStoreState$1, reason: use source file name */
+/* JADX INFO: compiled from: SettingsViewModel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class SettingsViewModel2 extends Lambda implements Function0<SettingsViewModel.StoreState> {
     public final /* synthetic */ StoreExperiments $experimentsStore;
     public final /* synthetic */ StoreGuilds $guildsStore;

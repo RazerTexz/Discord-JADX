@@ -4,14 +4,14 @@ import androidx.arch.core.util.Function;
 import kotlin.jvm.functions.Function1;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: Transformations.kt */
-/* renamed from: androidx.lifecycle.TransformationsKt, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: androidx.lifecycle.TransformationsKt, reason: use source file name */
+/* JADX INFO: compiled from: Transformations.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class Transformations2 {
 
     /* JADX INFO: Add missing generic type declarations: [X, Y] */
-    /* compiled from: Transformations.kt */
-    /* renamed from: androidx.lifecycle.TransformationsKt$map$1 */
+    /* JADX INFO: renamed from: androidx.lifecycle.TransformationsKt$map$1 */
+    /* JADX INFO: compiled from: Transformations.kt */
     public static final class C04521<I, O, X, Y> implements Function<X, Y> {
         public final /* synthetic */ Function1 $transform;
 
@@ -26,8 +26,8 @@ public final class Transformations2 {
     }
 
     /* JADX INFO: Add missing generic type declarations: [X, Y] */
-    /* compiled from: Transformations.kt */
-    /* renamed from: androidx.lifecycle.TransformationsKt$switchMap$1 */
+    /* JADX INFO: renamed from: androidx.lifecycle.TransformationsKt$switchMap$1 */
+    /* JADX INFO: compiled from: Transformations.kt */
     public static final class C04531<I, O, X, Y> implements Function<X, LiveData<Y>> {
         public final /* synthetic */ Function1 $transform;
 

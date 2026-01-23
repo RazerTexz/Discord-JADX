@@ -40,8 +40,8 @@ import p637j0.p642l.p647e.ScalarSynchronousObservable;
 import p658rx.Observable;
 import p658rx.functions.FuncN;
 
-/* compiled from: StreamContextService.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: StreamContextService.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class StreamContextService {
     private final StoreApplicationStreamPreviews applicationStreamPreviewStore;
     private final StoreApplicationStreaming applicationStreamingStore;
@@ -52,8 +52,8 @@ public final class StreamContextService {
     private final StoreVoiceChannelSelected voiceChannelSelectedStore;
     private final StoreVoiceStates voiceStateStore;
 
-    /* compiled from: StreamContextService.kt */
-    /* renamed from: com.discord.utilities.streams.StreamContextService$getForActiveStream$1 */
+    /* JADX INFO: renamed from: com.discord.utilities.streams.StreamContextService$getForActiveStream$1 */
+    /* JADX INFO: compiled from: StreamContextService.kt */
     public static final class C69281<T, R> implements Func1<StoreApplicationStreaming.ActiveApplicationStream, Observable<? extends StreamContext>> {
         public C69281() {
         }
@@ -63,7 +63,7 @@ public final class StreamContextService {
             return call2(activeApplicationStream);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final Observable<? extends StreamContext> call2(StoreApplicationStreaming.ActiveApplicationStream activeApplicationStream) {
             if (activeApplicationStream == null) {
                 return new ScalarSynchronousObservable(null);
@@ -72,8 +72,8 @@ public final class StreamContextService {
         }
     }
 
-    /* compiled from: StreamContextService.kt */
-    /* renamed from: com.discord.utilities.streams.StreamContextService$getForAllStreamingUsers$1 */
+    /* JADX INFO: renamed from: com.discord.utilities.streams.StreamContextService$getForAllStreamingUsers$1 */
+    /* JADX INFO: compiled from: StreamContextService.kt */
     public static final class C69291<T, R> implements Func1<Map<Long, ? extends ModelApplicationStream>, Collection<? extends ModelApplicationStream>> {
         public static final C69291 INSTANCE = new C69291();
 
@@ -82,18 +82,18 @@ public final class StreamContextService {
             return call2(map);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final Collection<ModelApplicationStream> call2(Map<Long, ? extends ModelApplicationStream> map) {
             return map.values();
         }
     }
 
-    /* compiled from: StreamContextService.kt */
-    /* renamed from: com.discord.utilities.streams.StreamContextService$getForAllStreamingUsers$2 */
+    /* JADX INFO: renamed from: com.discord.utilities.streams.StreamContextService$getForAllStreamingUsers$2 */
+    /* JADX INFO: compiled from: StreamContextService.kt */
     public static final class C69302<T, R> implements Func1<Collection<? extends ModelApplicationStream>, Observable<? extends Map<Long, ? extends StreamContext>>> {
 
-        /* compiled from: StreamContextService.kt */
-        /* renamed from: com.discord.utilities.streams.StreamContextService$getForAllStreamingUsers$2$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.utilities.streams.StreamContextService$getForAllStreamingUsers$2$1, reason: invalid class name */
+        /* JADX INFO: compiled from: StreamContextService.kt */
         public static final class AnonymousClass1<R> implements FuncN<Map<Long, ? extends StreamContext>> {
             public static final AnonymousClass1 INSTANCE = new AnonymousClass1();
 
@@ -103,7 +103,7 @@ public final class StreamContextService {
             }
 
             @Override // p658rx.functions.FuncN
-            /* renamed from: call, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
             public final Map<Long, ? extends StreamContext> call2(Object[] objArr) {
                 Intrinsics3.checkNotNullExpressionValue(objArr, "allUserStreamContexts");
                 ArrayList arrayList = new ArrayList();
@@ -132,7 +132,7 @@ public final class StreamContextService {
             return call2(collection);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final Observable<? extends Map<Long, StreamContext>> call2(Collection<? extends ModelApplicationStream> collection) {
             if (collection.isEmpty()) {
                 return new ScalarSynchronousObservable(Maps6.emptyMap());
@@ -147,14 +147,14 @@ public final class StreamContextService {
         }
     }
 
-    /* compiled from: StreamContextService.kt */
-    /* renamed from: com.discord.utilities.streams.StreamContextService$getForUser$1 */
+    /* JADX INFO: renamed from: com.discord.utilities.streams.StreamContextService$getForUser$1 */
+    /* JADX INFO: compiled from: StreamContextService.kt */
     public static final class C69311<T, R> implements Func1<ModelApplicationStream, Observable<? extends StreamContext>> {
         public final /* synthetic */ boolean $includePreview;
         public final /* synthetic */ long $userId;
 
-        /* compiled from: StreamContextService.kt */
-        /* renamed from: com.discord.utilities.streams.StreamContextService$getForUser$1$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.utilities.streams.StreamContextService$getForUser$1$1, reason: invalid class name */
+        /* JADX INFO: compiled from: StreamContextService.kt */
         public static final class AnonymousClass1<T, R> implements Func1<Map<Long, ? extends GuildMember>, GuildMember> {
             public AnonymousClass1() {
             }
@@ -164,14 +164,14 @@ public final class StreamContextService {
                 return call2((Map<Long, GuildMember>) map);
             }
 
-            /* renamed from: call, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
             public final GuildMember call2(Map<Long, GuildMember> map) {
                 return map.get(Long.valueOf(C69311.this.$userId));
             }
         }
 
-        /* compiled from: StreamContextService.kt */
-        /* renamed from: com.discord.utilities.streams.StreamContextService$getForUser$1$2, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.utilities.streams.StreamContextService$getForUser$1$2, reason: invalid class name */
+        /* JADX INFO: compiled from: StreamContextService.kt */
         public static final class AnonymousClass2<T, R> implements Func1<GuildMember, String> {
             public static final AnonymousClass2 INSTANCE = new AnonymousClass2();
 
@@ -180,7 +180,7 @@ public final class StreamContextService {
                 return call2(guildMember);
             }
 
-            /* renamed from: call, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
             public final String call2(GuildMember guildMember) {
                 if (guildMember != null) {
                     return guildMember.getNick();
@@ -189,8 +189,8 @@ public final class StreamContextService {
             }
         }
 
-        /* compiled from: StreamContextService.kt */
-        /* renamed from: com.discord.utilities.streams.StreamContextService$getForUser$1$3, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.utilities.streams.StreamContextService$getForUser$1$3, reason: invalid class name */
+        /* JADX INFO: compiled from: StreamContextService.kt */
         public static final class AnonymousClass3 extends Lambda implements Function10<Guild, StoreApplicationStreamPreviews.StreamPreview, Long, User, MeUser, String, Map<Long, ? extends VoiceState>, Channel, Long, StoreApplicationStreaming.ActiveApplicationStream, StreamContext> {
             public final /* synthetic */ ModelApplicationStream $stream;
 
@@ -227,7 +227,7 @@ public final class StreamContextService {
             return call2(modelApplicationStream);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final Observable<? extends StreamContext> call2(ModelApplicationStream modelApplicationStream) {
             long guildId;
             if (modelApplicationStream == null) {

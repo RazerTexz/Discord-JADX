@@ -5,16 +5,16 @@ import javax.net.ssl.SSLSocketFactory;
 import kotlin.jvm.internal.DefaultConstructorMarker;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: StandardAndroidSocketAdapter.kt */
-/* renamed from: f0.e0.k.i.l, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: f0.e0.k.i.l, reason: use source file name */
+/* JADX INFO: compiled from: StandardAndroidSocketAdapter.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class StandardAndroidSocketAdapter extends AndroidSocketAdapter2 {
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public static final a f25807h = new a(null);
 
-    /* compiled from: StandardAndroidSocketAdapter.kt */
-    /* renamed from: f0.e0.k.i.l$a */
+    /* JADX INFO: renamed from: f0.e0.k.i.l$a */
+    /* JADX INFO: compiled from: StandardAndroidSocketAdapter.kt */
     public static final class a {
         public a(DefaultConstructorMarker defaultConstructorMarker) {
         }

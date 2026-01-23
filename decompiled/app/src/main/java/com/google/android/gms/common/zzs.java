@@ -17,21 +17,21 @@ import p007b.p225i.p226a.p288f.p299e.p304k.InterfaceC3394z0;
 import p007b.p225i.p226a.p288f.p311f.BinderC3423b;
 import p007b.p225i.p226a.p288f.p311f.InterfaceC3422a;
 
-/* compiled from: com.google.android.gms:play-services-basement@@17.6.0 */
-/* loaded from: classes3.dex */
+/* JADX INFO: compiled from: com.google.android.gms:play-services-basement@@17.6.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public final class zzs extends AbstractSafeParcelable {
     public static final Parcelable.Creator<zzs> CREATOR = new C3261e0();
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final String f20567j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final AbstractBinderC3419x f20568k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final boolean f20569l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public final boolean f20570m;
 
     public zzs(String str, IBinder iBinder, boolean z2, boolean z3) {

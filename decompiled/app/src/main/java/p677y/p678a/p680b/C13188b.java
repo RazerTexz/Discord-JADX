@@ -3,12 +3,12 @@ package p677y.p678a.p680b;
 import androidx.browser.trusted.TokenContents;
 import java.util.Comparator;
 
-/* compiled from: lambda */
-/* renamed from: y.a.b.b */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: y.a.b.b */
+/* JADX INFO: compiled from: lambda */
+/* JADX INFO: loaded from: classes.dex */
 public final /* synthetic */ class C13188b implements Comparator {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static final /* synthetic */ C13188b f27953j = new C13188b();
 
     @Override // java.util.Comparator

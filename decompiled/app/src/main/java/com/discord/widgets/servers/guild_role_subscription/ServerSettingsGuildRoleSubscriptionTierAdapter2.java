@@ -6,13 +6,13 @@ import p001a0.p002a.p003a.C0002b;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ServerSettingsGuildRoleSubscriptionTierAdapter.kt */
-/* renamed from: com.discord.widgets.servers.guild_role_subscription.ServerSettingsGuildRoleSubscriptionTierAdapterItem, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.servers.guild_role_subscription.ServerSettingsGuildRoleSubscriptionTierAdapterItem, reason: use source file name */
+/* JADX INFO: compiled from: ServerSettingsGuildRoleSubscriptionTierAdapter.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public abstract class ServerSettingsGuildRoleSubscriptionTierAdapter2 implements DiffKeyProvider {
 
-    /* compiled from: ServerSettingsGuildRoleSubscriptionTierAdapter.kt */
-    /* renamed from: com.discord.widgets.servers.guild_role_subscription.ServerSettingsGuildRoleSubscriptionTierAdapterItem$AddTier */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.guild_role_subscription.ServerSettingsGuildRoleSubscriptionTierAdapterItem$AddTier */
+    /* JADX INFO: compiled from: ServerSettingsGuildRoleSubscriptionTierAdapter.kt */
     public static final class AddTier extends ServerSettingsGuildRoleSubscriptionTierAdapter2 {
         public static final AddTier INSTANCE = new AddTier();
         private static final String key = "AddTierItem";
@@ -27,8 +27,8 @@ public abstract class ServerSettingsGuildRoleSubscriptionTierAdapter2 implements
         }
     }
 
-    /* compiled from: ServerSettingsGuildRoleSubscriptionTierAdapter.kt */
-    /* renamed from: com.discord.widgets.servers.guild_role_subscription.ServerSettingsGuildRoleSubscriptionTierAdapterItem$Tier */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.guild_role_subscription.ServerSettingsGuildRoleSubscriptionTierAdapterItem$Tier */
+    /* JADX INFO: compiled from: ServerSettingsGuildRoleSubscriptionTierAdapter.kt */
     public static final /* data */ class Tier extends ServerSettingsGuildRoleSubscriptionTierAdapter2 {
         private final long applicationId;
         private final boolean isPublished;
@@ -55,32 +55,32 @@ public abstract class ServerSettingsGuildRoleSubscriptionTierAdapter2 implements
             return tier.copy((i2 & 1) != 0 ? tier.tierListingId : j, (i2 & 2) != 0 ? tier.tierName : str, (i2 & 4) != 0 ? tier.tierPrice : i, (i2 & 8) != 0 ? tier.applicationId : j2, (i2 & 16) != 0 ? tier.isPublished : z2, (i2 & 32) != 0 ? tier.tierImageAssetId : l);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final long getTierListingId() {
             return this.tierListingId;
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final String getTierName() {
             return this.tierName;
         }
 
-        /* renamed from: component3, reason: from getter */
+        /* JADX INFO: renamed from: component3, reason: from getter */
         public final int getTierPrice() {
             return this.tierPrice;
         }
 
-        /* renamed from: component4, reason: from getter */
+        /* JADX INFO: renamed from: component4, reason: from getter */
         public final long getApplicationId() {
             return this.applicationId;
         }
 
-        /* renamed from: component5, reason: from getter */
+        /* JADX INFO: renamed from: component5, reason: from getter */
         public final boolean getIsPublished() {
             return this.isPublished;
         }
 
-        /* renamed from: component6, reason: from getter */
+        /* JADX INFO: renamed from: component6, reason: from getter */
         public final Long getTierImageAssetId() {
             return this.tierImageAssetId;
         }
@@ -127,18 +127,21 @@ public abstract class ServerSettingsGuildRoleSubscriptionTierAdapter2 implements
         }
 
         /* JADX WARN: Multi-variable type inference failed */
+        /* JADX WARN: Type inference failed for: r0v10 */
+        /* JADX WARN: Type inference failed for: r0v11 */
+        /* JADX WARN: Type inference failed for: r0v8, types: [int] */
         public int hashCode() {
             int iM3a = C0002b.m3a(this.tierListingId) * 31;
             String str = this.tierName;
             int iM3a2 = (C0002b.m3a(this.applicationId) + ((((iM3a + (str != null ? str.hashCode() : 0)) * 31) + this.tierPrice) * 31)) * 31;
             boolean z2 = this.isPublished;
-            int i = z2;
-            if (z2 != 0) {
-                i = 1;
+            ?? r0 = z2;
+            if (z2) {
+                r0 = 1;
             }
-            int i2 = (iM3a2 + i) * 31;
+            int i = (iM3a2 + r0) * 31;
             Long l = this.tierImageAssetId;
-            return i2 + (l != null ? l.hashCode() : 0);
+            return i + (l != null ? l.hashCode() : 0);
         }
 
         public final boolean isPublished() {

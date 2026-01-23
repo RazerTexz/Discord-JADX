@@ -13,11 +13,11 @@ import p007b.p225i.p226a.p228b.p231j.p236t.p237h.Uploader;
 import p007b.p225i.p226a.p228b.p231j.p236t.p237h.Uploader6;
 import p007b.p225i.p226a.p228b.p231j.p241w.PriorityMapping;
 
+/* JADX INFO: loaded from: classes3.dex */
 @RequiresApi(api = 21)
-/* loaded from: classes3.dex */
 public class JobInfoSchedulerService extends JobService {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static final /* synthetic */ int f19693j = 0;
 
     @Override // android.app.job.JobService

@@ -6,18 +6,18 @@ import java.lang.reflect.Method;
 import org.objenesis.ObjenesisException;
 import p617h0.p620b.p621a.ObjectInstantiator;
 
-/* compiled from: Android17Instantiator.java */
-/* renamed from: h0.b.a.b.b, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: h0.b.a.b.b, reason: use source file name */
+/* JADX INFO: compiled from: Android17Instantiator.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class Android17Instantiator<T> implements ObjectInstantiator<T> {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final Class<T> f26378a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final Method f26379b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final Integer f26380c;
 
     public Android17Instantiator(Class<T> cls) {

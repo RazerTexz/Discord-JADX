@@ -31,8 +31,8 @@ import p507d0.p580t._Collections;
 import p507d0.p592z.p594d.Intrinsics3;
 import p637j0.p641k.Func1;
 
-/* compiled from: WidgetChannelListModel.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetChannelListModel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetChannelListModel$Companion$getPrivateChannelList$1<T, R> implements Func1<Unit, WidgetChannelListModel> {
     public final /* synthetic */ StoreApplicationStreaming $storeApplicationStreaming;
     public final /* synthetic */ StoreChannels $storeChannels;
@@ -61,7 +61,7 @@ public final class WidgetChannelListModel$Companion$getPrivateChannelList$1<T, R
         return call2(unit);
     }
 
-    /* renamed from: call, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
     public final WidgetChannelListModel call2(Unit unit) {
         Map<Long, Channel> channelsForGuild = this.$storeChannels.getChannelsForGuild(0L);
         Channel.Companion companion = Channel.INSTANCE;

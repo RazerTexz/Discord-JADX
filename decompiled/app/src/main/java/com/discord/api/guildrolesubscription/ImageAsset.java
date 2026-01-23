@@ -4,8 +4,8 @@ import com.discord.models.domain.ModelAuditLogEntry;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ImageAsset.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: ImageAsset.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class ImageAsset {
     private final String filename;
     private final Integer height;
@@ -14,7 +14,7 @@ public final /* data */ class ImageAsset {
     private final Integer size;
     private final Integer width;
 
-    /* renamed from: a, reason: from getter */
+    /* JADX INFO: renamed from: a, reason: from getter */
     public final long getId() {
         return this.id;
     }

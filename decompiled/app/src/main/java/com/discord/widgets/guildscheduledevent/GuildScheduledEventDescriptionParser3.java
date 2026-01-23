@@ -12,17 +12,17 @@ import kotlin.jvm.functions.Function1;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: GuildScheduledEventDescriptionParser.kt */
-/* renamed from: com.discord.widgets.guildscheduledevent.GuildScheduledEventDescriptionParser$configureDescription$$inlined$apply$lambda$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.guildscheduledevent.GuildScheduledEventDescriptionParser$configureDescription$$inlined$apply$lambda$1, reason: use source file name */
+/* JADX INFO: compiled from: GuildScheduledEventDescriptionParser.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class GuildScheduledEventDescriptionParser3 extends Lambda implements Function1<GuildScheduledEventDescriptionParser.MessageRenderContextModel, Unit> {
     public final /* synthetic */ List $descriptionAst$inlined;
     public final /* synthetic */ long $guildId$inlined;
     public final /* synthetic */ LinkifiedTextView $this_apply;
     public final /* synthetic */ GuildScheduledEventDescriptionParser this$0;
 
-    /* compiled from: GuildScheduledEventDescriptionParser.kt */
-    /* renamed from: com.discord.widgets.guildscheduledevent.GuildScheduledEventDescriptionParser$configureDescription$$inlined$apply$lambda$1$1, reason: invalid class name */
+    /* JADX INFO: renamed from: com.discord.widgets.guildscheduledevent.GuildScheduledEventDescriptionParser$configureDescription$$inlined$apply$lambda$1$1, reason: invalid class name */
+    /* JADX INFO: compiled from: GuildScheduledEventDescriptionParser.kt */
     public static final class AnonymousClass1 extends Lambda implements Function1<SpoilerNode<?>, Unit> {
         public AnonymousClass1() {
             super(1);
@@ -34,7 +34,7 @@ public final class GuildScheduledEventDescriptionParser3 extends Lambda implemen
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(SpoilerNode<?> spoilerNode) {
             Intrinsics3.checkNotNullParameter(spoilerNode, "spoilerNode");
             GuildScheduledEventDescriptionParser3 guildScheduledEventDescriptionParser3 = GuildScheduledEventDescriptionParser3.this;
@@ -57,7 +57,7 @@ public final class GuildScheduledEventDescriptionParser3 extends Lambda implemen
         return Unit.f27425a;
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final void invoke2(GuildScheduledEventDescriptionParser.MessageRenderContextModel messageRenderContextModel) {
         Context context = this.$this_apply.getContext();
         Intrinsics3.checkNotNullExpressionValue(context, "context");

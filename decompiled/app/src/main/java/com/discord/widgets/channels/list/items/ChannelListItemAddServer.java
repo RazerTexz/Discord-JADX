@@ -2,8 +2,8 @@ package com.discord.widgets.channels.list.items;
 
 import com.discord.widgets.channels.list.items.ChannelListItem;
 
-/* compiled from: ChannelListItemAddServer.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: ChannelListItemAddServer.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class ChannelListItemAddServer implements ChannelListItem {
     private final int type = 18;
 

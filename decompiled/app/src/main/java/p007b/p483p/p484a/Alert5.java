@@ -4,12 +4,12 @@ import android.util.Log;
 import android.view.ViewGroup;
 import android.view.ViewParent;
 
-/* compiled from: Alert.kt */
-/* renamed from: b.p.a.e, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.p.a.e, reason: use source file name */
+/* JADX INFO: compiled from: Alert.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class Alert5 implements Runnable {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final /* synthetic */ ViewOnClickListenerC5272b f14362j;
 
     public Alert5(ViewOnClickListenerC5272b viewOnClickListenerC5272b) {

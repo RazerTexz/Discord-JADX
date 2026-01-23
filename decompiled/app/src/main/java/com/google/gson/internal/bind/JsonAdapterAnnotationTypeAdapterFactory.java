@@ -10,17 +10,17 @@ import p007b.p225i.p408d.TypeAdapterFactory2;
 import p007b.p225i.p408d.p409p.JsonAdapter;
 import p007b.p225i.p408d.p410q.C4922g;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public final class JsonAdapterAnnotationTypeAdapterFactory implements TypeAdapterFactory2 {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final C4922g f21518j;
 
     public JsonAdapterAnnotationTypeAdapterFactory(C4922g c4922g) {
         this.f21518j = c4922g;
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public TypeAdapter<?> m9232a(C4922g c4922g, Gson gson, TypeToken<?> typeToken, JsonAdapter jsonAdapter) {
         TypeAdapter<?> treeTypeAdapter;
         Object objMo6869a = c4922g.m6870a(TypeToken.get((Class) jsonAdapter.value())).mo6869a();

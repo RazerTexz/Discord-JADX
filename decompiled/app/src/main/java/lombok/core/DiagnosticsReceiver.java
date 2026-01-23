@@ -1,6 +1,6 @@
 package lombok.core;
 
-/* loaded from: discord-126021.apk:lombok/core/DiagnosticsReceiver.SCL.lombok */
+/* JADX INFO: loaded from: discord-126021.apk:lombok/core/DiagnosticsReceiver.SCL.lombok */
 public interface DiagnosticsReceiver {
     public static final DiagnosticsReceiver CONSOLE = new C128121();
 
@@ -8,8 +8,8 @@ public interface DiagnosticsReceiver {
 
     void addWarning(String str);
 
-    /* renamed from: lombok.core.DiagnosticsReceiver$1 */
-    /* loaded from: discord-126021.apk:lombok/core/DiagnosticsReceiver$1.SCL.lombok */
+    /* JADX INFO: renamed from: lombok.core.DiagnosticsReceiver$1 */
+    /* JADX INFO: loaded from: discord-126021.apk:lombok/core/DiagnosticsReceiver$1.SCL.lombok */
     class C128121 implements DiagnosticsReceiver {
         C128121() {
         }

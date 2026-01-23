@@ -3,8 +3,8 @@ package com.discord.utilities.dimen;
 import android.content.res.Resources;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: DimenUtils.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: DimenUtils.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class DimenUtils {
     private static final float DENSITY;
 

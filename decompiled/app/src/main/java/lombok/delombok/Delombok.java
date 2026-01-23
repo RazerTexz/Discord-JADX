@@ -58,7 +58,7 @@ import lombok.javac.LombokOptions;
 import lombok.javac.apt.LombokProcessor;
 import lombok.permit.Permit;
 
-/* loaded from: discord-126021.apk:lombok/delombok/Delombok.SCL.lombok */
+/* JADX INFO: loaded from: discord-126021.apk:lombok/delombok/Delombok.SCL.lombok */
 public class Delombok {
     private Writer presetWriter;
     private boolean verbose;
@@ -85,7 +85,7 @@ public class Delombok {
         this.presetWriter = writer;
     }
 
-    /* loaded from: discord-126021.apk:lombok/delombok/Delombok$CmdArgs.SCL.lombok */
+    /* JADX INFO: loaded from: discord-126021.apk:lombok/delombok/Delombok$CmdArgs.SCL.lombok */
     private static class CmdArgs {
 
         @Excludes({"quiet"})
@@ -285,7 +285,7 @@ public class Delombok {
         }
     }
 
-    public static void main(String[] rawArgs) throws SecurityException, IllegalArgumentException {
+    public static void main(String[] rawArgs) {
         try {
             rawArgs = fileExpand(rawArgs);
         } catch (IOException e) {
@@ -398,8 +398,8 @@ public class Delombok {
         }
     }
 
-    /* renamed from: lombok.delombok.Delombok$1 */
-    /* loaded from: discord-126021.apk:lombok/delombok/Delombok$1.SCL.lombok */
+    /* JADX INFO: renamed from: lombok.delombok.Delombok$1 */
+    /* JADX INFO: loaded from: discord-126021.apk:lombok/delombok/Delombok$1.SCL.lombok */
     class C128431 extends OutputStream {
         C128431() {
         }
@@ -521,7 +521,7 @@ public class Delombok {
         }
     }
 
-    /* loaded from: discord-126021.apk:lombok/delombok/Delombok$InvalidFormatOptionException.SCL.lombok */
+    /* JADX INFO: loaded from: discord-126021.apk:lombok/delombok/Delombok$InvalidFormatOptionException.SCL.lombok */
     public static class InvalidFormatOptionException extends Exception {
         public InvalidFormatOptionException(String msg) {
             super(msg);
@@ -787,7 +787,7 @@ public class Delombok {
         }
     }
 
-    public boolean delombok() throws IOException, IllegalArgumentException {
+    public boolean delombok() throws IOException {
         JavaCompiler delegate;
         Writer rawWriter;
         LombokOptions options = LombokOptionsFactory.getDelombokOptions(this.context);

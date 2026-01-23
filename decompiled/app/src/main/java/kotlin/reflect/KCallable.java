@@ -8,8 +8,8 @@ import p507d0.p513e0.KAnnotatedElement;
 import p507d0.p513e0.KParameter;
 import p507d0.p513e0.KTypeParameter;
 
-/* compiled from: KCallable.kt */
-/* loaded from: classes3.dex */
+/* JADX INFO: compiled from: KCallable.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public interface KCallable<R> extends KAnnotatedElement {
     R call(Object... args);
 

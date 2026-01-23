@@ -3,12 +3,12 @@ package p007b.p225i.p226a.p242c.p260g3;
 import androidx.annotation.Nullable;
 import p007b.p225i.p226a.p242c.p259f3.ParsableByteArray;
 
-/* compiled from: DolbyVisionConfig.java */
-/* renamed from: b.i.a.c.g3.o, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.g3.o, reason: use source file name */
+/* JADX INFO: compiled from: DolbyVisionConfig.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class DolbyVisionConfig {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final String f6849a;
 
     public DolbyVisionConfig(int i, int i2, String str) {
@@ -16,7 +16,7 @@ public final class DolbyVisionConfig {
     }
 
     @Nullable
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static DolbyVisionConfig m3126a(ParsableByteArray parsableByteArray) {
         String str;
         parsableByteArray.m3080F(2);

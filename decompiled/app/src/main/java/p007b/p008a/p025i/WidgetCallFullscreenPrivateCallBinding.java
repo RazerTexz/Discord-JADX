@@ -9,44 +9,44 @@ import androidx.viewbinding.ViewBinding;
 import com.discord.widgets.voice.fullscreen.grid.PrivateCallBlurredGridView;
 import com.discord.widgets.voice.fullscreen.grid.PrivateCallGridView;
 
-/* compiled from: WidgetCallFullscreenPrivateCallBinding.java */
-/* renamed from: b.a.i.q4, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.a.i.q4, reason: use source file name */
+/* JADX INFO: compiled from: WidgetCallFullscreenPrivateCallBinding.java */
+/* JADX INFO: loaded from: classes.dex */
 public final class WidgetCallFullscreenPrivateCallBinding implements ViewBinding {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     @NonNull
     public final RelativeLayout f1151a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     @NonNull
     public final PrivateCallBlurredGridView f1152b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     @NonNull
     public final TextView f1153c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     @NonNull
     public final RelativeLayout f1154d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     @NonNull
     public final LinearLayout f1155e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     @NonNull
     public final PrivateCallGridView f1156f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     @NonNull
     public final TextView f1157g;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     @NonNull
     public final TextView f1158h;
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     @NonNull
     public final TextView f1159i;
 

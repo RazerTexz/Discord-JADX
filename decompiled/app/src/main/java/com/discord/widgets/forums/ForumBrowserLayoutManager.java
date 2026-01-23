@@ -6,8 +6,8 @@ import kotlin.Unit;
 import kotlin.jvm.functions.Function0;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ForumBrowserLayoutManager.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: ForumBrowserLayoutManager.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class ForumBrowserLayoutManager extends LinearLayoutManager {
     private Function0<Unit> onLayoutCompletedCallback;
 

@@ -6,9 +6,9 @@ import com.discord.widgets.user.WidgetUserMutualFriends;
 import com.discord.widgets.user.usersheet.WidgetUserSheet;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: WidgetUserMutualFriends.kt */
-/* renamed from: com.discord.widgets.user.WidgetUserMutualFriends$MutualFriendsAdapter$ViewHolder$onConfigure$1, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: com.discord.widgets.user.WidgetUserMutualFriends$MutualFriendsAdapter$ViewHolder$onConfigure$1, reason: use source file name */
+/* JADX INFO: compiled from: WidgetUserMutualFriends.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class WidgetUserMutualFriends3 implements View.OnClickListener {
     public final /* synthetic */ WidgetUserMutualFriends.Model.Item.MutualFriend $data;
     public final /* synthetic */ WidgetUserMutualFriends.MutualFriendsAdapter.ViewHolder this$0;

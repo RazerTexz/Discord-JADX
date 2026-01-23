@@ -37,21 +37,21 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 import p507d0.p592z.p594d.Reflection2;
 
-/* compiled from: ContactSyncUpsellSheet.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: ContactSyncUpsellSheet.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class ContactSyncUpsellSheet extends AppBottomSheet {
     public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(ContactSyncUpsellSheet.class, "binding", "getBinding()Lcom/discord/databinding/ContactSyncUpsellSheetBinding;", 0)};
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
 
-    /* renamed from: binding$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
 
-    /* renamed from: viewModel$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: viewModel$delegate, reason: from kotlin metadata */
     private final Lazy viewModel;
 
-    /* compiled from: ContactSyncUpsellSheet.kt */
+    /* JADX INFO: compiled from: ContactSyncUpsellSheet.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -68,8 +68,8 @@ public final class ContactSyncUpsellSheet extends AppBottomSheet {
         }
     }
 
-    /* compiled from: ContactSyncUpsellSheet.kt */
-    /* renamed from: com.discord.widgets.contact_sync.ContactSyncUpsellSheet$configureUI$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.contact_sync.ContactSyncUpsellSheet$configureUI$1 */
+    /* JADX INFO: compiled from: ContactSyncUpsellSheet.kt */
     public static final class ViewOnClickListenerC82171 implements View.OnClickListener {
         public final /* synthetic */ boolean $discoverable;
 
@@ -85,8 +85,8 @@ public final class ContactSyncUpsellSheet extends AppBottomSheet {
         }
     }
 
-    /* compiled from: ContactSyncUpsellSheet.kt */
-    /* renamed from: com.discord.widgets.contact_sync.ContactSyncUpsellSheet$configureUI$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.contact_sync.ContactSyncUpsellSheet$configureUI$2 */
+    /* JADX INFO: compiled from: ContactSyncUpsellSheet.kt */
     public static final class C82182 extends Lambda implements Function1<RenderContext, Unit> {
         public C82182() {
             super(1);
@@ -98,12 +98,12 @@ public final class ContactSyncUpsellSheet extends AppBottomSheet {
             return Unit.f27425a;
         }
 
-        /* compiled from: ContactSyncUpsellSheet.kt */
-        /* renamed from: com.discord.widgets.contact_sync.ContactSyncUpsellSheet$configureUI$2$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.widgets.contact_sync.ContactSyncUpsellSheet$configureUI$2$1, reason: invalid class name */
+        /* JADX INFO: compiled from: ContactSyncUpsellSheet.kt */
         public static final class AnonymousClass1 extends Lambda implements Function1<Hook, Unit> {
 
-            /* compiled from: ContactSyncUpsellSheet.kt */
-            /* renamed from: com.discord.widgets.contact_sync.ContactSyncUpsellSheet$configureUI$2$1$1, reason: invalid class name and collision with other inner class name */
+            /* JADX INFO: renamed from: com.discord.widgets.contact_sync.ContactSyncUpsellSheet$configureUI$2$1$1, reason: invalid class name and collision with other inner class name */
+            /* JADX INFO: compiled from: ContactSyncUpsellSheet.kt */
             public static final class C132841 extends Lambda implements Function1<View, Unit> {
                 public C132841() {
                     super(1);
@@ -115,7 +115,7 @@ public final class ContactSyncUpsellSheet extends AppBottomSheet {
                     return Unit.f27425a;
                 }
 
-                /* renamed from: invoke, reason: avoid collision after fix types in other method */
+                /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
                 public final void invoke2(View view) {
                     Intrinsics3.checkNotNullParameter(view, "it");
                     AnalyticsTracker.INSTANCE.openPopout("Contact Sync", new Traits.Location("Contact Sync Learn More", null, null, null, null, 30, null));
@@ -130,7 +130,7 @@ public final class ContactSyncUpsellSheet extends AppBottomSheet {
                 super(1);
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2(Hook hook) {
                 Intrinsics3.checkNotNullParameter(hook, "$receiver");
                 hook.styles.add(new ClickableSpan(Integer.valueOf(ColorCompat.getColor(ContactSyncUpsellSheet.this.getContext(), C5419R.color.link)), false, null, new C132841(), 4, null));
@@ -143,15 +143,15 @@ public final class ContactSyncUpsellSheet extends AppBottomSheet {
             }
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(RenderContext renderContext) {
             Intrinsics3.checkNotNullParameter(renderContext, "$receiver");
             renderContext.m8422a("learnMoreHook", new AnonymousClass1());
         }
     }
 
-    /* compiled from: ContactSyncUpsellSheet.kt */
-    /* renamed from: com.discord.widgets.contact_sync.ContactSyncUpsellSheet$configureUI$3 */
+    /* JADX INFO: renamed from: com.discord.widgets.contact_sync.ContactSyncUpsellSheet$configureUI$3 */
+    /* JADX INFO: compiled from: ContactSyncUpsellSheet.kt */
     public static final class ViewOnClickListenerC82193 implements View.OnClickListener {
         public ViewOnClickListenerC82193() {
         }
@@ -163,8 +163,8 @@ public final class ContactSyncUpsellSheet extends AppBottomSheet {
         }
     }
 
-    /* compiled from: ContactSyncUpsellSheet.kt */
-    /* renamed from: com.discord.widgets.contact_sync.ContactSyncUpsellSheet$configureUI$4 */
+    /* JADX INFO: renamed from: com.discord.widgets.contact_sync.ContactSyncUpsellSheet$configureUI$4 */
+    /* JADX INFO: compiled from: ContactSyncUpsellSheet.kt */
     public static final class ViewOnClickListenerC82204 implements View.OnClickListener {
         public final /* synthetic */ WidgetContactSyncViewModel.ViewState $viewState;
 
@@ -179,8 +179,8 @@ public final class ContactSyncUpsellSheet extends AppBottomSheet {
         }
     }
 
-    /* compiled from: ContactSyncUpsellSheet.kt */
-    /* renamed from: com.discord.widgets.contact_sync.ContactSyncUpsellSheet$onResume$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.contact_sync.ContactSyncUpsellSheet$onResume$1 */
+    /* JADX INFO: compiled from: ContactSyncUpsellSheet.kt */
     public static final class C82211 extends Lambda implements Function1<WidgetContactSyncViewModel.ViewState, Unit> {
         public C82211() {
             super(1);
@@ -192,7 +192,7 @@ public final class ContactSyncUpsellSheet extends AppBottomSheet {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(WidgetContactSyncViewModel.ViewState viewState) {
             Intrinsics3.checkNotNullParameter(viewState, "it");
             ContactSyncUpsellSheet.access$configureUI(ContactSyncUpsellSheet.this, viewState);

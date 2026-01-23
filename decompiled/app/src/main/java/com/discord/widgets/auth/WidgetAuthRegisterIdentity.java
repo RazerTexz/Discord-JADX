@@ -60,28 +60,28 @@ import p507d0.p580t._Collections;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetAuthRegisterIdentity.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetAuthRegisterIdentity.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetAuthRegisterIdentity extends AppFragment {
     public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetAuthRegisterIdentity.class, "binding", "getBinding()Lcom/discord/databinding/WidgetAuthRegisterIdentityBinding;", 0)};
     private static final String IS_PHONE_MODE = "IS_PHONE_MODE";
 
-    /* renamed from: binding$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
     private final ActivityResultLauncher<Intent> captchaLauncher;
 
-    /* renamed from: emailValidationManager$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: emailValidationManager$delegate, reason: from kotlin metadata */
     private final Lazy emailValidationManager;
     private PhoneOrEmailInputView.Mode inputMode;
     private final AppLogger2 loggingConfig;
 
-    /* renamed from: phoneValidationManager$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: phoneValidationManager$delegate, reason: from kotlin metadata */
     private final Lazy phoneValidationManager;
     private final ActivityResultLauncher<Intent> phoneVerifyLauncher;
     private boolean shouldValidateInputs;
 
-    /* compiled from: WidgetAuthRegisterIdentity.kt */
-    /* renamed from: com.discord.widgets.auth.WidgetAuthRegisterIdentity$configurePhoneInput$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.auth.WidgetAuthRegisterIdentity$configurePhoneInput$1 */
+    /* JADX INFO: compiled from: WidgetAuthRegisterIdentity.kt */
     public static final class C72281 extends Lambda implements Function1<TextView, Unit> {
         public C72281() {
             super(1);
@@ -93,15 +93,15 @@ public final class WidgetAuthRegisterIdentity extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(TextView textView) {
             Intrinsics3.checkNotNullParameter(textView, "it");
             WidgetAuthRegisterIdentity.access$handleNext(WidgetAuthRegisterIdentity.this);
         }
     }
 
-    /* compiled from: WidgetAuthRegisterIdentity.kt */
-    /* renamed from: com.discord.widgets.auth.WidgetAuthRegisterIdentity$configureSegmentControl$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.auth.WidgetAuthRegisterIdentity$configureSegmentControl$1 */
+    /* JADX INFO: compiled from: WidgetAuthRegisterIdentity.kt */
     public static final class C72291 extends Lambda implements Function1<Integer, Unit> {
         public C72291() {
             super(1);
@@ -119,8 +119,8 @@ public final class WidgetAuthRegisterIdentity extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetAuthRegisterIdentity.kt */
-    /* renamed from: com.discord.widgets.auth.WidgetAuthRegisterIdentity$configureUI$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.auth.WidgetAuthRegisterIdentity$configureUI$1 */
+    /* JADX INFO: compiled from: WidgetAuthRegisterIdentity.kt */
     public static final class C72301 extends Lambda implements Function0<PhoneCountryCode> {
         public final /* synthetic */ StorePhone $phoneStore;
 
@@ -142,8 +142,8 @@ public final class WidgetAuthRegisterIdentity extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetAuthRegisterIdentity.kt */
-    /* renamed from: com.discord.widgets.auth.WidgetAuthRegisterIdentity$configureUI$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.auth.WidgetAuthRegisterIdentity$configureUI$2 */
+    /* JADX INFO: compiled from: WidgetAuthRegisterIdentity.kt */
     public static final class C72312 extends Lambda implements Function1<PhoneCountryCode, Unit> {
         public C72312() {
             super(1);
@@ -155,15 +155,15 @@ public final class WidgetAuthRegisterIdentity extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(PhoneCountryCode phoneCountryCode) {
             Intrinsics3.checkNotNullParameter(phoneCountryCode, "it");
             WidgetAuthRegisterIdentity.access$getBinding$p(WidgetAuthRegisterIdentity.this).f15711d.setCountryCode(phoneCountryCode);
         }
     }
 
-    /* compiled from: WidgetAuthRegisterIdentity.kt */
-    /* renamed from: com.discord.widgets.auth.WidgetAuthRegisterIdentity$configureUI$3 */
+    /* JADX INFO: renamed from: com.discord.widgets.auth.WidgetAuthRegisterIdentity$configureUI$3 */
+    /* JADX INFO: compiled from: WidgetAuthRegisterIdentity.kt */
     public static final class ViewOnClickListenerC72323 implements View.OnClickListener {
         public ViewOnClickListenerC72323() {
         }
@@ -174,8 +174,8 @@ public final class WidgetAuthRegisterIdentity extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetAuthRegisterIdentity.kt */
-    /* renamed from: com.discord.widgets.auth.WidgetAuthRegisterIdentity$onViewCreated$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.auth.WidgetAuthRegisterIdentity$onViewCreated$1 */
+    /* JADX INFO: compiled from: WidgetAuthRegisterIdentity.kt */
     public static final class C72331 extends Lambda implements Function1<ModelInvite, Unit> {
         public static final C72331 INSTANCE = new C72331();
 
@@ -189,7 +189,7 @@ public final class WidgetAuthRegisterIdentity extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(ModelInvite modelInvite) {
             AnalyticsTracker.INSTANCE.registerViewed(modelInvite);
             RegistrationFlowRepo.Companion companion = RegistrationFlowRepo.INSTANCE;
@@ -198,8 +198,8 @@ public final class WidgetAuthRegisterIdentity extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetAuthRegisterIdentity.kt */
-    /* renamed from: com.discord.widgets.auth.WidgetAuthRegisterIdentity$registerViaPhone$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.auth.WidgetAuthRegisterIdentity$registerViaPhone$1 */
+    /* JADX INFO: compiled from: WidgetAuthRegisterIdentity.kt */
     public static final class C72341 extends Lambda implements Function1<Void, TrackNetworkMetadata2> {
         public static final C72341 INSTANCE = new C72341();
 
@@ -212,14 +212,14 @@ public final class WidgetAuthRegisterIdentity extends AppFragment {
             return invoke2(r1);
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final TrackNetworkMetadata2 invoke2(Void r1) {
             return new TrackNetworkActionUserRegisterPhone();
         }
     }
 
-    /* compiled from: WidgetAuthRegisterIdentity.kt */
-    /* renamed from: com.discord.widgets.auth.WidgetAuthRegisterIdentity$registerViaPhone$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.auth.WidgetAuthRegisterIdentity$registerViaPhone$2 */
+    /* JADX INFO: compiled from: WidgetAuthRegisterIdentity.kt */
     public static final class C72352 extends Lambda implements Function1<Void, Unit> {
         public final /* synthetic */ String $phone;
 
@@ -235,15 +235,15 @@ public final class WidgetAuthRegisterIdentity extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Void r13) {
             RegistrationFlowRepo.trackTransition$default(RegistrationFlowRepo.INSTANCE.getINSTANCE(), "Account Identity", "success", null, 4, null);
             WidgetAuthPhoneVerify.INSTANCE.launch(WidgetAuthRegisterIdentity.this.requireContext(), WidgetAuthRegisterIdentity.access$getPhoneVerifyLauncher$p(WidgetAuthRegisterIdentity.this), WidgetAuthRegisterIdentity.access$getBinding$p(WidgetAuthRegisterIdentity.this).f15711d.getTextOrEmpty(), FormatUtils.m216h(WidgetAuthRegisterIdentity.this.requireContext(), C5419R.string.sms_confirmation_title, new Object[0], null, 4), FormatUtils.m216h(WidgetAuthRegisterIdentity.this.requireContext(), C5419R.string.sms_confirmation_description, new Object[]{this.$phone}, null, 4));
         }
     }
 
-    /* compiled from: WidgetAuthRegisterIdentity.kt */
-    /* renamed from: com.discord.widgets.auth.WidgetAuthRegisterIdentity$registerViaPhone$3 */
+    /* JADX INFO: renamed from: com.discord.widgets.auth.WidgetAuthRegisterIdentity$registerViaPhone$3 */
+    /* JADX INFO: compiled from: WidgetAuthRegisterIdentity.kt */
     public static final class C72363 extends Lambda implements Function1<Error, Unit> {
         public C72363() {
             super(1);
@@ -255,7 +255,7 @@ public final class WidgetAuthRegisterIdentity extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Error error) {
             Intrinsics3.checkNotNullParameter(error, "error");
             if (!GrowthTeamFeatures.INSTANCE.isPhoneVerifyCaptchaEnabled() || !WidgetCaptcha4.isCaptchaError(error)) {

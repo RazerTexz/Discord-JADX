@@ -32,36 +32,36 @@ import p007b.p109f.p161j.p174i.DrawableFactory;
 import p007b.p109f.p161j.p175j.CloseableAnimatedImage;
 import p007b.p109f.p161j.p175j.CloseableImage;
 
-/* compiled from: ExperimentalBitmapAnimationDrawableFactory.java */
-/* renamed from: b.f.h.a.d.e, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.f.h.a.d.e, reason: use source file name */
+/* JADX INFO: compiled from: ExperimentalBitmapAnimationDrawableFactory.java */
+/* JADX INFO: loaded from: classes.dex */
 public class ExperimentalBitmapAnimationDrawableFactory implements DrawableFactory {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final AnimatedDrawableBackendProvider f3552a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final ScheduledExecutorService f3553b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final ExecutorService f3554c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final MonotonicClock f3555d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final PlatformBitmapFactory f3556e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final CountingMemoryCache<CacheKey, CloseableImage> f3557f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public final Supplier<Integer> f3558g;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public final Supplier<Integer> f3559h;
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public final Supplier<Boolean> f3560i;
 
     public ExperimentalBitmapAnimationDrawableFactory(AnimatedDrawableBackendProvider animatedDrawableBackendProvider, ScheduledExecutorService scheduledExecutorService, ExecutorService executorService, MonotonicClock monotonicClock, PlatformBitmapFactory platformBitmapFactory, CountingMemoryCache<CacheKey, CloseableImage> countingMemoryCache, Supplier<Integer> supplier, Supplier<Integer> supplier2, Supplier<Boolean> supplier3) {
@@ -77,7 +77,7 @@ public class ExperimentalBitmapAnimationDrawableFactory implements DrawableFacto
     }
 
     @Override // p007b.p109f.p161j.p174i.DrawableFactory
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public boolean mo1035a(CloseableImage closeableImage) {
         return closeableImage instanceof CloseableAnimatedImage;
     }
@@ -85,7 +85,7 @@ public class ExperimentalBitmapAnimationDrawableFactory implements DrawableFacto
     /* JADX WARN: Removed duplicated region for block: B:30:0x007d  */
     /* JADX WARN: Removed duplicated region for block: B:35:0x0093  */
     @Override // p007b.p109f.p161j.p174i.DrawableFactory
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
@@ -145,7 +145,7 @@ public class ExperimentalBitmapAnimationDrawableFactory implements DrawableFacto
         return new AnimatedDrawable2(new AnimationBackendDelegateWithInactivityCheck(bitmapAnimationBackend2, bitmapAnimationBackend2, this.f3555d, this.f3553b));
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final AnimatedFrameCache m1165c(AnimatedImageResult animatedImageResult) {
         return new AnimatedFrameCache(new AnimationFrameCacheKey(animatedImageResult.hashCode(), Boolean.FALSE.booleanValue()), this.f3557f);
     }

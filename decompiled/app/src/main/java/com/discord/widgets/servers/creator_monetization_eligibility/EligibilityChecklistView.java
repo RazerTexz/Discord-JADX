@@ -1,7 +1,6 @@
 package com.discord.widgets.servers.creator_monetization_eligibility;
 
 import android.content.Context;
-import android.content.res.Resources;
 import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.Drawable;
 import android.util.AttributeSet;
@@ -25,12 +24,12 @@ import p007b.p100d.p104b.p105a.outline;
 import p507d0.p580t.Collections2;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: EligibilityChecklistView.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: EligibilityChecklistView.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class EligibilityChecklistView extends LinearLayout {
     private List<Requirement> lastRequirements;
 
-    /* compiled from: EligibilityChecklistView.kt */
+    /* JADX INFO: compiled from: EligibilityChecklistView.kt */
     public static final /* data */ class Requirement {
         private final CharSequence description;
         private final boolean isMet;
@@ -57,17 +56,17 @@ public final class EligibilityChecklistView extends LinearLayout {
             return requirement.copy(charSequence, charSequence2, z2);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final CharSequence getTitle() {
             return this.title;
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final CharSequence getDescription() {
             return this.description;
         }
 
-        /* renamed from: component3, reason: from getter */
+        /* JADX INFO: renamed from: component3, reason: from getter */
         public final boolean getIsMet() {
             return this.isMet;
         }
@@ -98,17 +97,20 @@ public final class EligibilityChecklistView extends LinearLayout {
         }
 
         /* JADX WARN: Multi-variable type inference failed */
+        /* JADX WARN: Type inference failed for: r1v3, types: [int] */
+        /* JADX WARN: Type inference failed for: r1v4 */
+        /* JADX WARN: Type inference failed for: r1v6 */
         public int hashCode() {
             CharSequence charSequence = this.title;
             int iHashCode = (charSequence != null ? charSequence.hashCode() : 0) * 31;
             CharSequence charSequence2 = this.description;
             int iHashCode2 = (iHashCode + (charSequence2 != null ? charSequence2.hashCode() : 0)) * 31;
             boolean z2 = this.isMet;
-            int i = z2;
-            if (z2 != 0) {
-                i = 1;
+            ?? r1 = z2;
+            if (z2) {
+                r1 = 1;
             }
-            return iHashCode2 + i;
+            return iHashCode2 + r1;
         }
 
         public final boolean isMet() {
@@ -181,7 +183,7 @@ public final class EligibilityChecklistView extends LinearLayout {
     }
 
     @Override // android.view.View
-    public void onFinishInflate() throws Resources.NotFoundException {
+    public void onFinishInflate() {
         super.onFinishInflate();
         setOrientation(1);
         if (isInEditMode()) {

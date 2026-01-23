@@ -6,29 +6,29 @@ import androidx.annotation.Nullable;
 import java.util.Arrays;
 import p007b.p225i.p226a.p242c.p259f3.Util2;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public final class ChapterFrame extends Id3Frame {
     public static final Parcelable.Creator<ChapterFrame> CREATOR = new C10728a();
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final String f19971k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final int f19972l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public final int f19973m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public final long f19974n;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public final long f19975o;
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public final Id3Frame[] f19976p;
 
-    /* renamed from: com.google.android.exoplayer2.metadata.id3.ChapterFrame$a */
+    /* JADX INFO: renamed from: com.google.android.exoplayer2.metadata.id3.ChapterFrame$a */
     public class C10728a implements Parcelable.Creator<ChapterFrame> {
         @Override // android.os.Parcelable.Creator
         public ChapterFrame createFromParcel(Parcel parcel) {

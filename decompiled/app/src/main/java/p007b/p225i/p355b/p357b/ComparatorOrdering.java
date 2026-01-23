@@ -5,9 +5,9 @@ import java.util.Comparator;
 import java.util.Objects;
 import org.checkerframework.checker.nullness.compatqual.NullableDecl;
 
-/* compiled from: ComparatorOrdering.java */
-/* renamed from: b.i.b.b.i, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.b.b.i, reason: use source file name */
+/* JADX INFO: compiled from: ComparatorOrdering.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class ComparatorOrdering<T> extends Ordering<T> implements Serializable {
     private static final long serialVersionUID = 0;
     public final Comparator<T> comparator;

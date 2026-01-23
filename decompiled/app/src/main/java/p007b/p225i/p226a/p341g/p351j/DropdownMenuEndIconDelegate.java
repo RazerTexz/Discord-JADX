@@ -5,7 +5,6 @@ import android.animation.TimeInterpolator;
 import android.animation.ValueAnimator;
 import android.annotation.SuppressLint;
 import android.content.res.ColorStateList;
-import android.content.res.Resources;
 import android.graphics.drawable.Drawable;
 import android.graphics.drawable.LayerDrawable;
 import android.graphics.drawable.RippleDrawable;
@@ -33,61 +32,61 @@ import com.google.android.material.shape.ShapeAppearanceModel;
 import com.google.android.material.textfield.TextInputLayout;
 import java.util.Objects;
 
-/* compiled from: DropdownMenuEndIconDelegate.java */
-/* renamed from: b.i.a.g.j.h, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.g.j.h, reason: use source file name */
+/* JADX INFO: compiled from: DropdownMenuEndIconDelegate.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class DropdownMenuEndIconDelegate extends EndIconDelegate {
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final TextWatcher f11791d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final View.OnFocusChangeListener f11792e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final TextInputLayout.AccessibilityDelegate f11793f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public final TextInputLayout.OnEditTextAttachedListener f11794g;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     @SuppressLint({"ClickableViewAccessibility"})
     public final TextInputLayout.OnEndIconChangedListener f11795h;
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public boolean f11796i;
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public boolean f11797j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public long f11798k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public StateListDrawable f11799l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public MaterialShapeDrawable f11800m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     @Nullable
     public AccessibilityManager f11801n;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public ValueAnimator f11802o;
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public ValueAnimator f11803p;
 
-    /* compiled from: DropdownMenuEndIconDelegate.java */
-    /* renamed from: b.i.a.g.j.h$a */
+    /* JADX INFO: renamed from: b.i.a.g.j.h$a */
+    /* JADX INFO: compiled from: DropdownMenuEndIconDelegate.java */
     public class a extends TextWatcherAdapter {
 
-        /* compiled from: DropdownMenuEndIconDelegate.java */
-        /* renamed from: b.i.a.g.j.h$a$a, reason: collision with other inner class name */
+        /* JADX INFO: renamed from: b.i.a.g.j.h$a$a, reason: collision with other inner class name */
+        /* JADX INFO: compiled from: DropdownMenuEndIconDelegate.java */
         public class RunnableC13229a implements Runnable {
 
-            /* renamed from: j */
+            /* JADX INFO: renamed from: j */
             public final /* synthetic */ AutoCompleteTextView f11805j;
 
             public RunnableC13229a(AutoCompleteTextView autoCompleteTextView) {
@@ -115,8 +114,8 @@ public class DropdownMenuEndIconDelegate extends EndIconDelegate {
         }
     }
 
-    /* compiled from: DropdownMenuEndIconDelegate.java */
-    /* renamed from: b.i.a.g.j.h$b */
+    /* JADX INFO: renamed from: b.i.a.g.j.h$b */
+    /* JADX INFO: compiled from: DropdownMenuEndIconDelegate.java */
     public class b implements View.OnFocusChangeListener {
         public b() {
         }
@@ -132,8 +131,8 @@ public class DropdownMenuEndIconDelegate extends EndIconDelegate {
         }
     }
 
-    /* compiled from: DropdownMenuEndIconDelegate.java */
-    /* renamed from: b.i.a.g.j.h$c */
+    /* JADX INFO: renamed from: b.i.a.g.j.h$c */
+    /* JADX INFO: compiled from: DropdownMenuEndIconDelegate.java */
     public class c extends TextInputLayout.AccessibilityDelegate {
         public c(TextInputLayout textInputLayout) {
             super(textInputLayout);
@@ -160,8 +159,8 @@ public class DropdownMenuEndIconDelegate extends EndIconDelegate {
         }
     }
 
-    /* compiled from: DropdownMenuEndIconDelegate.java */
-    /* renamed from: b.i.a.g.j.h$d */
+    /* JADX INFO: renamed from: b.i.a.g.j.h$d */
+    /* JADX INFO: compiled from: DropdownMenuEndIconDelegate.java */
     public class d implements TextInputLayout.OnEditTextAttachedListener {
         public d() {
         }
@@ -216,15 +215,15 @@ public class DropdownMenuEndIconDelegate extends EndIconDelegate {
         }
     }
 
-    /* compiled from: DropdownMenuEndIconDelegate.java */
-    /* renamed from: b.i.a.g.j.h$e */
+    /* JADX INFO: renamed from: b.i.a.g.j.h$e */
+    /* JADX INFO: compiled from: DropdownMenuEndIconDelegate.java */
     public class e implements TextInputLayout.OnEndIconChangedListener {
 
-        /* compiled from: DropdownMenuEndIconDelegate.java */
-        /* renamed from: b.i.a.g.j.h$e$a */
+        /* JADX INFO: renamed from: b.i.a.g.j.h$e$a */
+        /* JADX INFO: compiled from: DropdownMenuEndIconDelegate.java */
         public class a implements Runnable {
 
-            /* renamed from: j */
+            /* JADX INFO: renamed from: j */
             public final /* synthetic */ AutoCompleteTextView f11811j;
 
             public a(AutoCompleteTextView autoCompleteTextView) {
@@ -255,8 +254,8 @@ public class DropdownMenuEndIconDelegate extends EndIconDelegate {
         }
     }
 
-    /* compiled from: DropdownMenuEndIconDelegate.java */
-    /* renamed from: b.i.a.g.j.h$f */
+    /* JADX INFO: renamed from: b.i.a.g.j.h$f */
+    /* JADX INFO: compiled from: DropdownMenuEndIconDelegate.java */
     public class f implements View.OnClickListener {
         public f() {
         }
@@ -279,7 +278,7 @@ public class DropdownMenuEndIconDelegate extends EndIconDelegate {
         this.f11798k = RecyclerView.FOREVER_NS;
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public static AutoCompleteTextView m6150d(EditText editText) {
         if (editText instanceof AutoCompleteTextView) {
             return (AutoCompleteTextView) editText;
@@ -287,12 +286,12 @@ public class DropdownMenuEndIconDelegate extends EndIconDelegate {
         throw new RuntimeException("EditText needs to be an AutoCompleteTextView if an Exposed Dropdown Menu is being used.");
     }
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public static boolean m6151e(EditText editText) {
         return editText.getKeyListener() != null;
     }
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public static void m6152f(DropdownMenuEndIconDelegate dropdownMenuEndIconDelegate, boolean z2) {
         if (dropdownMenuEndIconDelegate.f11797j != z2) {
             dropdownMenuEndIconDelegate.f11797j = z2;
@@ -301,7 +300,7 @@ public class DropdownMenuEndIconDelegate extends EndIconDelegate {
         }
     }
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public static void m6153g(DropdownMenuEndIconDelegate dropdownMenuEndIconDelegate, AutoCompleteTextView autoCompleteTextView) {
         Objects.requireNonNull(dropdownMenuEndIconDelegate);
         if (autoCompleteTextView == null) {
@@ -330,8 +329,8 @@ public class DropdownMenuEndIconDelegate extends EndIconDelegate {
     }
 
     @Override // p007b.p225i.p226a.p341g.p351j.EndIconDelegate
-    /* renamed from: a */
-    public void mo6146a() throws Resources.NotFoundException {
+    /* JADX INFO: renamed from: a */
+    public void mo6146a() {
         float dimensionPixelOffset = this.f11820b.getResources().getDimensionPixelOffset(C10817R.dimen.mtrl_shape_corner_size_small_component);
         float dimensionPixelOffset2 = this.f11820b.getResources().getDimensionPixelOffset(C10817R.dimen.mtrl_exposed_dropdown_menu_popup_elevation);
         int dimensionPixelOffset3 = this.f11820b.getResources().getDimensionPixelOffset(C10817R.dimen.mtrl_exposed_dropdown_menu_popup_vertical_padding);
@@ -364,12 +363,12 @@ public class DropdownMenuEndIconDelegate extends EndIconDelegate {
     }
 
     @Override // p007b.p225i.p226a.p341g.p351j.EndIconDelegate
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public boolean mo6154b(int i) {
         return i != 0;
     }
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public final MaterialShapeDrawable m6155h(float f2, float f3, float f4, int i) {
         ShapeAppearanceModel shapeAppearanceModelBuild = ShapeAppearanceModel.builder().setTopLeftCornerSize(f2).setTopRightCornerSize(f2).setBottomLeftCornerSize(f3).setBottomRightCornerSize(f3).build();
         MaterialShapeDrawable materialShapeDrawableCreateWithElevationOverlay = MaterialShapeDrawable.createWithElevationOverlay(this.f11820b, f4);
@@ -378,7 +377,7 @@ public class DropdownMenuEndIconDelegate extends EndIconDelegate {
         return materialShapeDrawableCreateWithElevationOverlay;
     }
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public final boolean m6156i() {
         long jCurrentTimeMillis = System.currentTimeMillis() - this.f11798k;
         return jCurrentTimeMillis < 0 || jCurrentTimeMillis > 300;

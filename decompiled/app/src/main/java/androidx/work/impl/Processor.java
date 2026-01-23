@@ -26,8 +26,8 @@ import java.util.Set;
 import java.util.concurrent.ExecutionException;
 import p007b.p225i.p355b.p359d.p360a.ListenableFuture8;
 
+/* JADX INFO: loaded from: classes.dex */
 @RestrictTo({RestrictTo.Scope.LIBRARY_GROUP})
-/* loaded from: classes.dex */
 public class Processor implements ExecutionListener, ForegroundProcessor {
     private static final String FOREGROUND_WAKELOCK_TAG = "ProcessorForegroundLck";
     private static final String TAG = Logger.tagWithPrefix("Processor");

@@ -11,14 +11,14 @@ import p637j0.p642l.p647e.ScalarSynchronousObservable;
 import p658rx.Observable;
 import p658rx.functions.Func2;
 
-/* compiled from: ChannelGroupDMSettingsViewModel.kt */
-/* renamed from: com.discord.widgets.channels.settings.ChannelGroupDMSettingsViewModel$Companion$observeStoreState$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.channels.settings.ChannelGroupDMSettingsViewModel$Companion$observeStoreState$1, reason: use source file name */
+/* JADX INFO: compiled from: ChannelGroupDMSettingsViewModel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class ChannelGroupDMSettingsViewModel2<T, R> implements Func1<Channel, Observable<? extends ChannelGroupDMSettingsViewModel.StoreState>> {
     public final /* synthetic */ StoreUserGuildSettings $storeUserGuildSettings;
 
-    /* compiled from: ChannelGroupDMSettingsViewModel.kt */
-    /* renamed from: com.discord.widgets.channels.settings.ChannelGroupDMSettingsViewModel$Companion$observeStoreState$1$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.channels.settings.ChannelGroupDMSettingsViewModel$Companion$observeStoreState$1$1 */
+    /* JADX INFO: compiled from: ChannelGroupDMSettingsViewModel.kt */
     public static final class C75721<T1, T2, R> implements Func2<Channel, ModelNotificationSettings, ChannelGroupDMSettingsViewModel.StoreState.Valid> {
         public static final C75721 INSTANCE = new C75721();
 
@@ -27,7 +27,7 @@ public final class ChannelGroupDMSettingsViewModel2<T, R> implements Func1<Chann
             return call2(channel, modelNotificationSettings);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final ChannelGroupDMSettingsViewModel.StoreState.Valid call2(Channel channel, ModelNotificationSettings modelNotificationSettings) {
             Intrinsics3.checkNotNullExpressionValue(channel, "channel");
             Intrinsics3.checkNotNullExpressionValue(modelNotificationSettings, "notificationSettings");
@@ -44,7 +44,7 @@ public final class ChannelGroupDMSettingsViewModel2<T, R> implements Func1<Chann
         return call2(channel);
     }
 
-    /* renamed from: call, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
     public final Observable<? extends ChannelGroupDMSettingsViewModel.StoreState> call2(Channel channel) {
         return channel == null ? new ScalarSynchronousObservable(ChannelGroupDMSettingsViewModel.StoreState.Invalid.INSTANCE) : Observable.m11076j(new ScalarSynchronousObservable(channel), this.$storeUserGuildSettings.observeGuildSettings(channel.getGuildId()), C75721.INSTANCE);
     }

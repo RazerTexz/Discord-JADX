@@ -12,26 +12,26 @@ import p007b.p085c.p086a.p087a0.AnimatableValueParser;
 import p007b.p225i.p226a.p288f.p299e.C3412q;
 import p007b.p225i.p226a.p288f.p299e.p304k.C3361j;
 
-/* compiled from: com.google.android.gms:play-services-basement@@17.6.0 */
-/* loaded from: classes3.dex */
+/* JADX INFO: compiled from: com.google.android.gms:play-services-basement@@17.6.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public final class ConnectionResult extends AbstractSafeParcelable {
     public static final int SUCCESS = 0;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final int f20473k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final int f20474l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     @Nullable
     public final PendingIntent f20475m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     @Nullable
     public final String f20476n;
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     @RecentlyNonNull
     public static final ConnectionResult f20472j = new ConnectionResult(0);
 
@@ -53,7 +53,7 @@ public final class ConnectionResult extends AbstractSafeParcelable {
     }
 
     @NonNull
-    /* renamed from: y0 */
+    /* JADX INFO: renamed from: y0 */
     public static String m9018y0(int i) {
         if (i == 99) {
             return "UNFINISHED";
@@ -148,7 +148,7 @@ public final class ConnectionResult extends AbstractSafeParcelable {
         return c3361j.toString();
     }
 
-    /* renamed from: w0 */
+    /* JADX INFO: renamed from: w0 */
     public boolean m9019w0() {
         return (this.f20474l == 0 || this.f20475m == null) ? false : true;
     }
@@ -167,7 +167,7 @@ public final class ConnectionResult extends AbstractSafeParcelable {
         AnimatableValueParser.m418A2(parcel, iM594y2);
     }
 
-    /* renamed from: x0 */
+    /* JADX INFO: renamed from: x0 */
     public boolean m9020x0() {
         return this.f20474l == 0;
     }

@@ -1,8 +1,8 @@
 package com.discord.analytics.utils;
 
 
-/* compiled from: ImpressionGroups.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: ImpressionGroups.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class ImpressionGroups {
     public static final String CHANNEL_ADD_FLOW = "channel_add_flow";
     public static final String CONTACT_SYNC_FLOW = "contact_sync_flow";

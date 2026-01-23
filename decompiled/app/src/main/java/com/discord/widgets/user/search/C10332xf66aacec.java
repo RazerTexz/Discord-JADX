@@ -10,9 +10,9 @@ import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetGlobalSearchModel.kt */
-/* renamed from: com.discord.widgets.user.search.WidgetGlobalSearchModel$Companion$create$filteredResults$channelResults$2 */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: com.discord.widgets.user.search.WidgetGlobalSearchModel$Companion$create$filteredResults$channelResults$2 */
+/* JADX INFO: compiled from: WidgetGlobalSearchModel.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class C10332xf66aacec extends Lambda implements Function1<Channel, WidgetGlobalSearchModel.ItemDataPayload> {
     public final /* synthetic */ String $sanitizedFilter;
     public final /* synthetic */ HashSet $seenUsersIds;
@@ -35,7 +35,7 @@ public final class C10332xf66aacec extends Lambda implements Function1<Channel, 
         return invoke2(channel);
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final WidgetGlobalSearchModel.ItemDataPayload invoke2(Channel channel) {
         Intrinsics3.checkNotNullParameter(channel, "channel");
         User userM7677a = ChannelUtils.m7677a(channel);

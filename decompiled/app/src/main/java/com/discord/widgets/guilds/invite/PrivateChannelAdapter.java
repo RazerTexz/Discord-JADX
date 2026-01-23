@@ -18,12 +18,12 @@ import kotlin.Unit;
 import kotlin.jvm.functions.Function1;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: PrivateChannelAdapter.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: PrivateChannelAdapter.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class PrivateChannelAdapter extends MGRecyclerAdapterSimple<InviteSuggestionItem> {
     private Function1<? super InviteSuggestionItem, Unit> onClick;
 
-    /* compiled from: PrivateChannelAdapter.kt */
+    /* JADX INFO: compiled from: PrivateChannelAdapter.kt */
     public static final class Item extends MGRecyclerViewHolder<PrivateChannelAdapter, InviteSuggestionItem> {
         private final WidgetGuildInviteShareItemBinding binding;
 
@@ -45,7 +45,7 @@ public final class PrivateChannelAdapter extends MGRecyclerAdapterSimple<InviteS
             onConfigure2(i, inviteSuggestionItem);
         }
 
-        /* renamed from: onConfigure, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: onConfigure, reason: avoid collision after fix types in other method */
         public void onConfigure2(int position, InviteSuggestionItem data) {
             Intrinsics3.checkNotNullParameter(data, "data");
             super.onConfigure(position, data);

@@ -20,13 +20,13 @@ import kotlin.jvm.internal.DefaultConstructorMarker;
 import p007b.p008a.p027k.FormatUtils;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: MobileReportsBottomButton.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: MobileReportsBottomButton.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class MobileReportsBottomButton extends LinearLayout {
     private final ViewMobileReportsBottomButtonBinding binding;
 
-    /* compiled from: MobileReportsBottomButton.kt */
-    /* renamed from: com.discord.widgets.mobile_reports.MobileReportsBottomButton$setup$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.mobile_reports.MobileReportsBottomButton$setup$1 */
+    /* JADX INFO: compiled from: MobileReportsBottomButton.kt */
     public static final class ViewOnClickListenerC90701 implements View.OnClickListener {
         public final /* synthetic */ ReportNodeBottomButton $bottomButton;
         public final /* synthetic */ Function1 $handleButtonPress;
@@ -44,8 +44,8 @@ public final class MobileReportsBottomButton extends LinearLayout {
         }
     }
 
-    /* compiled from: MobileReportsBottomButton.kt */
-    /* renamed from: com.discord.widgets.mobile_reports.MobileReportsBottomButton$setup$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.mobile_reports.MobileReportsBottomButton$setup$2 */
+    /* JADX INFO: compiled from: MobileReportsBottomButton.kt */
     public static final class ViewOnClickListenerC90712 implements View.OnClickListener {
         public final /* synthetic */ ReportNodeBottomButton $bottomButton;
         public final /* synthetic */ Function1 $handleButtonPress;
@@ -63,8 +63,8 @@ public final class MobileReportsBottomButton extends LinearLayout {
         }
     }
 
-    /* compiled from: MobileReportsBottomButton.kt */
-    /* renamed from: com.discord.widgets.mobile_reports.MobileReportsBottomButton$setup$3 */
+    /* JADX INFO: renamed from: com.discord.widgets.mobile_reports.MobileReportsBottomButton$setup$3 */
+    /* JADX INFO: compiled from: MobileReportsBottomButton.kt */
     public static final class ViewOnClickListenerC90723 implements View.OnClickListener {
         public final /* synthetic */ ReportNodeBottomButton $bottomButton;
         public final /* synthetic */ Function1 $handleButtonPress;
@@ -82,8 +82,8 @@ public final class MobileReportsBottomButton extends LinearLayout {
         }
     }
 
-    /* compiled from: MobileReportsBottomButton.kt */
-    /* renamed from: com.discord.widgets.mobile_reports.MobileReportsBottomButton$setup$4 */
+    /* JADX INFO: renamed from: com.discord.widgets.mobile_reports.MobileReportsBottomButton$setup$4 */
+    /* JADX INFO: compiled from: MobileReportsBottomButton.kt */
     public static final class ViewOnClickListenerC90734 implements View.OnClickListener {
         public final /* synthetic */ ReportNodeBottomButton $bottomButton;
         public final /* synthetic */ Function1 $handleButtonPress;

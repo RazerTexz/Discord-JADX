@@ -9,28 +9,28 @@ import p007b.p008a.p027k.p030g.FormattingParserProvider;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: Format.kt */
-/* renamed from: b.a.k.a, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.a.k.a, reason: use source file name */
+/* JADX INFO: compiled from: Format.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class Format {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static FormattingParserProvider f1483a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static Function0<Integer> f1484b = a.f1487j;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public static Function2<? super String, ? super View, Unit> f1485c = b.f1488j;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public static final Format f1486d = null;
 
-    /* compiled from: Format.kt */
-    /* renamed from: b.a.k.a$a */
+    /* JADX INFO: renamed from: b.a.k.a$a */
+    /* JADX INFO: compiled from: Format.kt */
     public static final class a extends Lambda implements Function0<Integer> {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public static final a f1487j = new a();
 
         public a() {
@@ -43,11 +43,11 @@ public final class Format {
         }
     }
 
-    /* compiled from: Format.kt */
-    /* renamed from: b.a.k.a$b */
+    /* JADX INFO: renamed from: b.a.k.a$b */
+    /* JADX INFO: compiled from: Format.kt */
     public static final class b extends Lambda implements Function2<String, View, Unit> {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public static final b f1488j = new b();
 
         public b() {

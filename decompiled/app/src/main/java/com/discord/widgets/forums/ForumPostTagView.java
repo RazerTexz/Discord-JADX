@@ -15,8 +15,8 @@ import com.discord.utilities.view.text.SimpleDraweeSpanTextView;
 import kotlin.jvm.internal.DefaultConstructorMarker;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ForumPostTagView.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: ForumPostTagView.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class ForumPostTagView extends LinearLayout {
     private static final int EMOJI_SIZE_PX = DimenUtils.dpToPixels(12);
     private static final int HORIZONTAL_PADDING = DimenUtils.dpToPixels(8);

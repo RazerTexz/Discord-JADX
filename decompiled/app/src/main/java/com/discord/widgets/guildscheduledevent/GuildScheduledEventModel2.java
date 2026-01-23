@@ -5,9 +5,9 @@ import com.discord.api.utcdatetime.UtcDateTime;
 import kotlin.Tuples2;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: GuildScheduledEventModel.kt */
-/* renamed from: com.discord.widgets.guildscheduledevent.GuildScheduledEventModelKt, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.guildscheduledevent.GuildScheduledEventModelKt, reason: use source file name */
+/* JADX INFO: compiled from: GuildScheduledEventModel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class GuildScheduledEventModel2 {
     public static final GuildScheduledEventModel toModel(GuildScheduledEvent guildScheduledEvent) {
         Intrinsics3.checkNotNullParameter(guildScheduledEvent, "$this$toModel");

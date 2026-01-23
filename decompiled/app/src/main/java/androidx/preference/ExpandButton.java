@@ -6,7 +6,7 @@ import androidx.room.RoomDatabase;
 import java.util.ArrayList;
 import java.util.List;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public final class ExpandButton extends Preference {
     private long mId;
 

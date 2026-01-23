@@ -7,9 +7,9 @@ import kotlin.jvm.functions.Function3;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetChoosePlanAdapter.kt */
-/* renamed from: com.discord.widgets.settings.premium.WidgetChoosePlanAdapter$onClickPlan$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.settings.premium.WidgetChoosePlanAdapter$onClickPlan$1, reason: use source file name */
+/* JADX INFO: compiled from: WidgetChoosePlanAdapter.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetChoosePlanAdapter3 extends Lambda implements Function3<GooglePlaySku, String, SkuDetails, Unit> {
     public static final WidgetChoosePlanAdapter3 INSTANCE = new WidgetChoosePlanAdapter3();
 
@@ -23,7 +23,7 @@ public final class WidgetChoosePlanAdapter3 extends Lambda implements Function3<
         return Unit.f27425a;
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final void invoke2(GooglePlaySku googlePlaySku, String str, SkuDetails skuDetails) {
         Intrinsics3.checkNotNullParameter(googlePlaySku, "<anonymous parameter 0>");
     }

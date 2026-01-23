@@ -10,16 +10,16 @@ import kotlin.jvm.functions.Function1;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetChatInputTruncatedHint.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetChatInputTruncatedHint.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetChatInputTruncatedHint {
     private final FlexEditText editText;
     private CharSequence hint;
     private boolean hintIsTruncated;
     private int previousMaxLines;
 
-    /* compiled from: WidgetChatInputTruncatedHint.kt */
-    /* renamed from: com.discord.widgets.chat.input.WidgetChatInputTruncatedHint$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.input.WidgetChatInputTruncatedHint$1 */
+    /* JADX INFO: compiled from: WidgetChatInputTruncatedHint.kt */
     public static final class C77551 extends Lambda implements Function1<Integer, Unit> {
         public C77551() {
             super(1);
@@ -39,8 +39,8 @@ public final class WidgetChatInputTruncatedHint {
         }
     }
 
-    /* compiled from: WidgetChatInputTruncatedHint.kt */
-    /* renamed from: com.discord.widgets.chat.input.WidgetChatInputTruncatedHint$addBindedTextWatcher$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.input.WidgetChatInputTruncatedHint$addBindedTextWatcher$1 */
+    /* JADX INFO: compiled from: WidgetChatInputTruncatedHint.kt */
     public static final class C77561 extends Lambda implements Function1<Editable, Unit> {
         public C77561() {
             super(1);
@@ -52,7 +52,7 @@ public final class WidgetChatInputTruncatedHint {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Editable editable) {
             Intrinsics3.checkNotNullParameter(editable, "it");
             WidgetChatInputTruncatedHint.access$syncHint(WidgetChatInputTruncatedHint.this);

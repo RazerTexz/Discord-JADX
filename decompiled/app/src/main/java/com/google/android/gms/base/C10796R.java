@@ -1,10 +1,10 @@
 package com.google.android.gms.base;
 
-/* renamed from: com.google.android.gms.base.R */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: com.google.android.gms.base.R */
+/* JADX INFO: loaded from: classes3.dex */
 public final class C10796R {
 
-    /* renamed from: com.google.android.gms.base.R$a */
+    /* JADX INFO: renamed from: com.google.android.gms.base.R$a */
     public static final class a {
         public static final int common_full_open_on_phone = 2131231065;
         public static final int common_google_signin_btn_icon_dark = 2131231066;
@@ -32,7 +32,7 @@ public final class C10796R {
         }
     }
 
-    /* renamed from: com.google.android.gms.base.R$b */
+    /* JADX INFO: renamed from: com.google.android.gms.base.R$b */
     public static final class b {
         public static final int common_google_play_services_enable_button = 2131887791;
         public static final int common_google_play_services_enable_text = 2131887792;

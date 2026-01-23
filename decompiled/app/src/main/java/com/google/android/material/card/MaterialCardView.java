@@ -38,7 +38,7 @@ import com.google.android.material.shape.Shapeable;
 import com.google.android.material.theme.overlay.MaterialThemeOverlay;
 import p007b.p225i.p226a.p341g.p344c.MaterialCardViewHelper;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public class MaterialCardView extends CardView implements Checkable, Shapeable {
     private static final String ACCESSIBILITY_CLASS_NAME = "androidx.cardview.widget.CardView";
     private static final String LOG_TAG = "MaterialCardView";

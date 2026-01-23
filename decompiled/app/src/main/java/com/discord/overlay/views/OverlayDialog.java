@@ -6,8 +6,8 @@ import android.util.Log;
 import android.view.WindowManager;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: OverlayDialog.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: OverlayDialog.kt */
+/* JADX INFO: loaded from: classes.dex */
 public class OverlayDialog extends OverlayBubbleWrap {
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public OverlayDialog(Context context) {
@@ -25,7 +25,7 @@ public class OverlayDialog extends OverlayBubbleWrap {
     }
 
     @Override // com.discord.overlay.views.OverlayBubbleWrap
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public boolean mo8437f() {
         return false;
     }

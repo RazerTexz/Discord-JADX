@@ -24,8 +24,8 @@ import p007b.p100d.p104b.p105a.outline;
 import p617h0.p628c.RunnableC12476n;
 import p617h0.p628c.VideoEncoder2;
 
+/* JADX INFO: loaded from: classes3.dex */
 @TargetApi(19)
-/* loaded from: classes3.dex */
 public class HardwareVideoEncoder implements VideoEncoder {
     private static final int DEQUEUE_OUTPUT_BUFFER_TIMEOUT_US = 100000;
     private static final String KEY_BITRATE_MODE = "bitrate-mode";
@@ -83,7 +83,7 @@ public class HardwareVideoEncoder implements VideoEncoder {
     private final VideoFrameDrawer videoFrameDrawer = new VideoFrameDrawer();
     private final BlockingDeque<EncodedImage.Builder> outputBuilders = new LinkedBlockingDeque();
 
-    /* renamed from: org.webrtc.HardwareVideoEncoder$1 */
+    /* JADX INFO: renamed from: org.webrtc.HardwareVideoEncoder$1 */
     public class C129671 extends Thread {
         public C129671() {
         }
@@ -104,7 +104,7 @@ public class HardwareVideoEncoder implements VideoEncoder {
         public static final YuvFormat I420;
         public static final YuvFormat NV12;
 
-        /* renamed from: org.webrtc.HardwareVideoEncoder$YuvFormat$1 */
+        /* JADX INFO: renamed from: org.webrtc.HardwareVideoEncoder$YuvFormat$1 */
         public enum C129681 extends YuvFormat {
             public C129681(String str, int i) {
                 super(str, i, null);
@@ -118,7 +118,7 @@ public class HardwareVideoEncoder implements VideoEncoder {
             }
         }
 
-        /* renamed from: org.webrtc.HardwareVideoEncoder$YuvFormat$2 */
+        /* JADX INFO: renamed from: org.webrtc.HardwareVideoEncoder$YuvFormat$2 */
         public enum C129692 extends YuvFormat {
             public C129692(String str, int i) {
                 super(str, i, null);
@@ -262,19 +262,19 @@ public class HardwareVideoEncoder implements VideoEncoder {
                     if (str == null) {
                         str = "42e01f";
                     }
-                    char c = 65535;
+                    byte b2 = -1;
                     int iHashCode = str.hashCode();
                     if (iHashCode != 1537948542) {
                         if (iHashCode == 1595523974 && str.equals("640c1f")) {
-                            c = 0;
+                            b2 = 0;
                         }
                     } else if (str.equals("42e01f")) {
-                        c = 1;
+                        b2 = 1;
                     }
-                    if (c == 0) {
+                    if (b2 == 0) {
                         mediaFormatCreateVideoFormat.setInteger("profile", 8);
                         mediaFormatCreateVideoFormat.setInteger("level", 256);
-                    } else if (c != 1) {
+                    } else if (b2 != 1) {
                         Logging.m11031w(TAG, "Unknown profile level id: " + str);
                     }
                 }
@@ -377,7 +377,7 @@ public class HardwareVideoEncoder implements VideoEncoder {
         }
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public /* synthetic */ void m11026a(int i) {
         try {
             this.codec.releaseOutputBuffer(i, false);

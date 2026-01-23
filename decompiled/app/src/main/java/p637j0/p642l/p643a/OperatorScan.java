@@ -16,25 +16,25 @@ import p658rx.Subscriber;
 import p658rx.functions.Func0;
 import p658rx.functions.Func2;
 
-/* compiled from: OperatorScan.java */
-/* renamed from: j0.l.a.o1, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: j0.l.a.o1, reason: use source file name */
+/* JADX INFO: compiled from: OperatorScan.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class OperatorScan<R, T> implements Observable.InterfaceC13006b<R, T> {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static final Object f26957j = new Object();
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final Func0<R> f26958k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final Func2<R, ? super T, R> f26959l;
 
-    /* compiled from: OperatorScan.java */
-    /* renamed from: j0.l.a.o1$a */
+    /* JADX INFO: renamed from: j0.l.a.o1$a */
+    /* JADX INFO: compiled from: OperatorScan.java */
     public class a implements Func0<R> {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public final /* synthetic */ Object f26960j;
 
         public a(Object obj) {
@@ -47,35 +47,35 @@ public final class OperatorScan<R, T> implements Observable.InterfaceC13006b<R, 
         }
     }
 
-    /* compiled from: OperatorScan.java */
-    /* renamed from: j0.l.a.o1$b */
+    /* JADX INFO: renamed from: j0.l.a.o1$b */
+    /* JADX INFO: compiled from: OperatorScan.java */
     public static final class b<R> implements Producer, Observer2<R> {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public final Subscriber<? super R> f26961j;
 
-        /* renamed from: k */
+        /* JADX INFO: renamed from: k */
         public final Queue<Object> f26962k;
 
-        /* renamed from: l */
+        /* JADX INFO: renamed from: l */
         public boolean f26963l;
 
-        /* renamed from: m */
+        /* JADX INFO: renamed from: m */
         public boolean f26964m;
 
-        /* renamed from: n */
+        /* JADX INFO: renamed from: n */
         public long f26965n;
 
-        /* renamed from: o */
+        /* JADX INFO: renamed from: o */
         public final AtomicLong f26966o;
 
-        /* renamed from: p */
+        /* JADX INFO: renamed from: p */
         public volatile Producer f26967p;
 
-        /* renamed from: q */
+        /* JADX INFO: renamed from: q */
         public volatile boolean f26968q;
 
-        /* renamed from: r */
+        /* JADX INFO: renamed from: r */
         public Throwable f26969r;
 
         public b(R r, Subscriber<? super R> subscriber) {
@@ -86,7 +86,7 @@ public final class OperatorScan<R, T> implements Observable.InterfaceC13006b<R, 
             this.f26966o = new AtomicLong();
         }
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public boolean m10776a(boolean z2, boolean z3, Subscriber<? super R> subscriber) {
             if (subscriber.isUnsubscribed()) {
                 return true;
@@ -106,7 +106,7 @@ public final class OperatorScan<R, T> implements Observable.InterfaceC13006b<R, 
             return true;
         }
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public void m10777b() {
             synchronized (this) {
                 if (this.f26963l) {
@@ -154,7 +154,7 @@ public final class OperatorScan<R, T> implements Observable.InterfaceC13006b<R, 
         }
 
         @Override // p658rx.Producer
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public void mo10704j(long j) {
             if (j < 0) {
                 throw new IllegalArgumentException(outline.m877t("n >= required but it was ", j));

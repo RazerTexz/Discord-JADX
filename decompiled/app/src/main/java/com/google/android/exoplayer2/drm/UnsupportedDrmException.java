@@ -1,6 +1,6 @@
 package com.google.android.exoplayer2.drm;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public final class UnsupportedDrmException extends Exception {
     public final int reason;
 

@@ -8,8 +8,8 @@ import androidx.work.Operation;
 import androidx.work.impl.utils.futures.SettableFuture;
 import p007b.p225i.p355b.p359d.p360a.ListenableFuture8;
 
+/* JADX INFO: loaded from: classes.dex */
 @RestrictTo({RestrictTo.Scope.LIBRARY_GROUP})
-/* loaded from: classes.dex */
 public class OperationImpl implements Operation {
     private final MutableLiveData<Operation.State> mOperationState = new MutableLiveData<>();
     private final SettableFuture<Operation.State.SUCCESS> mOperationFuture = SettableFuture.create();

@@ -34,16 +34,16 @@ import p007b.p195g.p196a.p205c.p219i0.ClassUtil;
 import p007b.p195g.p196a.p205c.p219i0.IgnorePropertiesUtil;
 import p007b.p195g.p196a.p205c.p220y.JacksonStdImpl;
 
-/* compiled from: MapSerializer.java */
+/* JADX INFO: renamed from: b.g.a.c.g0.u.t, reason: use source file name */
+/* JADX INFO: compiled from: MapSerializer.java */
+/* JADX INFO: loaded from: classes3.dex */
 @JacksonStdImpl
-/* renamed from: b.g.a.c.g0.u.t, reason: use source file name */
-/* loaded from: classes3.dex */
 public class MapSerializer2 extends ContainerSerializer<Map<?, ?>> implements ContextualSerializer {
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public static final JavaType f4864k = TypeFactory.m2158k();
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public static final Object f4865l = JsonInclude.a.NON_EMPTY;
     private static final long serialVersionUID = 1;
     public PropertySerializerMap _dynamicValueSerializers;
@@ -86,7 +86,7 @@ public class MapSerializer2 extends ContainerSerializer<Map<?, ?>> implements Co
         this._inclusionChecker = ignorePropertiesUtil;
     }
 
-    /* renamed from: s */
+    /* JADX INFO: renamed from: s */
     public static MapSerializer2 m2082s(Set<String> set, Set<String> set2, JavaType javaType, boolean z2, TypeSerializer typeSerializer, JsonSerializer<Object> jsonSerializer, JsonSerializer<Object> jsonSerializer2, Object obj) {
         JavaType javaTypeM2158k;
         JavaType javaType2;
@@ -115,7 +115,7 @@ public class MapSerializer2 extends ContainerSerializer<Map<?, ?>> implements Co
     /* JADX WARN: Removed duplicated region for block: B:107:0x0194 A[PHI: r11
       0x0194: PHI (r11v1 java.lang.Object) = (r11v0 java.lang.Object), (r11v0 java.lang.Object), (r11v3 java.lang.Object), (r11v4 java.lang.Object) binds: [B:83:0x0151, B:104:0x018f, B:106:0x0193, B:94:0x0167] A[DONT_GENERATE, DONT_INLINE]] */
     @Override // p007b.p195g.p196a.p205c.p215g0.ContextualSerializer
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
@@ -230,7 +230,7 @@ public class MapSerializer2 extends ContainerSerializer<Map<?, ?>> implements Co
     }
 
     @Override // p007b.p195g.p196a.p205c.JsonSerializer
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public boolean mo2021d(SerializerProvider serializerProvider, Object obj) {
         Map map = (Map) obj;
         if (!map.isEmpty()) {
@@ -279,7 +279,7 @@ public class MapSerializer2 extends ContainerSerializer<Map<?, ?>> implements Co
     }
 
     @Override // p007b.p195g.p196a.p205c.JsonSerializer
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public void mo1807f(Object obj, JsonGenerator jsonGenerator, SerializerProvider serializerProvider) throws IOException {
         Map<?, ?> map = (Map) obj;
         jsonGenerator.mo1653d0(map);
@@ -288,7 +288,7 @@ public class MapSerializer2 extends ContainerSerializer<Map<?, ?>> implements Co
     }
 
     @Override // p007b.p195g.p196a.p205c.JsonSerializer
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public void mo1808g(Object obj, JsonGenerator jsonGenerator, SerializerProvider serializerProvider, TypeSerializer typeSerializer) throws IOException {
         Map<?, ?> map = (Map) obj;
         jsonGenerator.mo1654e(map);
@@ -298,7 +298,7 @@ public class MapSerializer2 extends ContainerSerializer<Map<?, ?>> implements Co
     }
 
     @Override // p007b.p195g.p196a.p205c.p215g0.ContainerSerializer
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public ContainerSerializer mo1995p(TypeSerializer typeSerializer) {
         if (this._valueTypeSerializer == typeSerializer) {
             return this;
@@ -307,7 +307,7 @@ public class MapSerializer2 extends ContainerSerializer<Map<?, ?>> implements Co
         return new MapSerializer2(this, typeSerializer, this._suppressableValue, this._suppressNulls);
     }
 
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     public final JsonSerializer<Object> m2083r(SerializerProvider serializerProvider, Object obj) throws JsonMappingException {
         Class<?> cls = obj.getClass();
         JsonSerializer<Object> jsonSerializerMo2034c = this._dynamicValueSerializers.mo2034c(cls);
@@ -334,7 +334,7 @@ public class MapSerializer2 extends ContainerSerializer<Map<?, ?>> implements Co
         return jsonSerializerM2250n;
     }
 
-    /* renamed from: t */
+    /* JADX INFO: renamed from: t */
     public void m2084t(Map<?, ?> map, JsonGenerator jsonGenerator, SerializerProvider serializerProvider, Object obj) throws IOException {
         JsonSerializer<Object> jsonSerializer;
         JsonSerializer<Object> jsonSerializerM2083r;
@@ -395,7 +395,7 @@ public class MapSerializer2 extends ContainerSerializer<Map<?, ?>> implements Co
       (r7v7 b.g.a.c.n<java.lang.Object>)
       (r7v7 b.g.a.c.n<java.lang.Object>)
      binds: [B:133:0x0194, B:139:0x01a5, B:141:0x01a8, B:143:0x01ae] A[DONT_GENERATE, DONT_INLINE], SYNTHETIC] */
-    /* renamed from: u */
+    /* JADX INFO: renamed from: u */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
@@ -574,7 +574,7 @@ public class MapSerializer2 extends ContainerSerializer<Map<?, ?>> implements Co
         }
     }
 
-    /* renamed from: v */
+    /* JADX INFO: renamed from: v */
     public MapSerializer2 m2086v(Object obj, boolean z2) {
         if (obj == this._suppressableValue && z2 == this._suppressNulls) {
             return this;

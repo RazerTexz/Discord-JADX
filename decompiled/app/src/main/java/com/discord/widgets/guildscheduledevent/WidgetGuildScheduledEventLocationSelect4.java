@@ -4,9 +4,9 @@ import com.discord.utilities.intent.IntentUtilsKt;
 import kotlin.jvm.functions.Function0;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetGuildScheduledEventLocationSelect.kt */
-/* renamed from: com.discord.widgets.guildscheduledevent.WidgetGuildScheduledEventLocationSelect$guildId$2, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.guildscheduledevent.WidgetGuildScheduledEventLocationSelect$guildId$2, reason: use source file name */
+/* JADX INFO: compiled from: WidgetGuildScheduledEventLocationSelect.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetGuildScheduledEventLocationSelect4 extends Lambda implements Function0<Long> {
     public final /* synthetic */ WidgetGuildScheduledEventLocationSelect this$0;
 
@@ -21,7 +21,7 @@ public final class WidgetGuildScheduledEventLocationSelect4 extends Lambda imple
         return Long.valueOf(invoke2());
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final long invoke2() {
         Long longExtraOrNull = IntentUtilsKt.getLongExtraOrNull(this.this$0.getMostRecentIntent(), "com.discord.intent.extra.EXTRA_GUILD_ID");
         if (longExtraOrNull != null) {

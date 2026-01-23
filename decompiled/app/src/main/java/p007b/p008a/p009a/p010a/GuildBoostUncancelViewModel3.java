@@ -17,38 +17,38 @@ import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 import p658rx.Observable;
 
-/* compiled from: GuildBoostUncancelViewModel.kt */
-/* renamed from: b.a.a.a.k, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.a.a.a.k, reason: use source file name */
+/* JADX INFO: compiled from: GuildBoostUncancelViewModel.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class GuildBoostUncancelViewModel3 extends AppViewModel<c> {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static final a f212j = new a(null);
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final long f213k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final StoreSubscriptions f214l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public final StoreGuildBoost f215m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public final RestAPI f216n;
 
-    /* compiled from: GuildBoostUncancelViewModel.kt */
-    /* renamed from: b.a.a.a.k$a */
+    /* JADX INFO: renamed from: b.a.a.a.k$a */
+    /* JADX INFO: compiled from: GuildBoostUncancelViewModel.kt */
     public static final class a {
         public a(DefaultConstructorMarker defaultConstructorMarker) {
         }
     }
 
-    /* compiled from: GuildBoostUncancelViewModel.kt */
-    /* renamed from: b.a.a.a.k$b */
+    /* JADX INFO: renamed from: b.a.a.a.k$b */
+    /* JADX INFO: compiled from: GuildBoostUncancelViewModel.kt */
     public static final class b {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final StoreSubscriptions.SubscriptionsState f217a;
 
         public b(StoreSubscriptions.SubscriptionsState subscriptionsState) {
@@ -79,15 +79,15 @@ public final class GuildBoostUncancelViewModel3 extends AppViewModel<c> {
         }
     }
 
-    /* compiled from: GuildBoostUncancelViewModel.kt */
-    /* renamed from: b.a.a.a.k$c */
+    /* JADX INFO: renamed from: b.a.a.a.k$c */
+    /* JADX INFO: compiled from: GuildBoostUncancelViewModel.kt */
     public static abstract class c {
 
-        /* compiled from: GuildBoostUncancelViewModel.kt */
-        /* renamed from: b.a.a.a.k$c$a */
+        /* JADX INFO: renamed from: b.a.a.a.k$c$a */
+        /* JADX INFO: compiled from: GuildBoostUncancelViewModel.kt */
         public static final class a extends c {
 
-            /* renamed from: a */
+            /* JADX INFO: renamed from: a */
             public final Integer f218a;
 
             public a() {
@@ -125,17 +125,17 @@ public final class GuildBoostUncancelViewModel3 extends AppViewModel<c> {
             }
         }
 
-        /* compiled from: GuildBoostUncancelViewModel.kt */
-        /* renamed from: b.a.a.a.k$c$b */
+        /* JADX INFO: renamed from: b.a.a.a.k$c$b */
+        /* JADX INFO: compiled from: GuildBoostUncancelViewModel.kt */
         public static final class b extends c {
 
-            /* renamed from: a */
+            /* JADX INFO: renamed from: a */
             public final ModelSubscription f219a;
 
-            /* renamed from: b */
+            /* JADX INFO: renamed from: b */
             public final boolean f220b;
 
-            /* renamed from: c */
+            /* JADX INFO: renamed from: c */
             public final boolean f221c;
 
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -147,7 +147,7 @@ public final class GuildBoostUncancelViewModel3 extends AppViewModel<c> {
                 this.f221c = z3;
             }
 
-            /* renamed from: a */
+            /* JADX INFO: renamed from: a */
             public static b m102a(b bVar, ModelSubscription modelSubscription, boolean z2, boolean z3, int i) {
                 ModelSubscription modelSubscription2 = (i & 1) != 0 ? bVar.f219a : null;
                 if ((i & 2) != 0) {
@@ -173,17 +173,23 @@ public final class GuildBoostUncancelViewModel3 extends AppViewModel<c> {
             }
 
             /* JADX WARN: Multi-variable type inference failed */
+            /* JADX WARN: Type inference failed for: r1v1, types: [int] */
+            /* JADX WARN: Type inference failed for: r1v3 */
+            /* JADX WARN: Type inference failed for: r1v4 */
+            /* JADX WARN: Type inference failed for: r2v0 */
+            /* JADX WARN: Type inference failed for: r2v1, types: [int] */
+            /* JADX WARN: Type inference failed for: r2v2 */
             public int hashCode() {
                 ModelSubscription modelSubscription = this.f219a;
                 int iHashCode = (modelSubscription != null ? modelSubscription.hashCode() : 0) * 31;
                 boolean z2 = this.f220b;
-                int i = z2;
-                if (z2 != 0) {
-                    i = 1;
+                ?? r1 = z2;
+                if (z2) {
+                    r1 = 1;
                 }
-                int i2 = (iHashCode + i) * 31;
+                int i = (iHashCode + r1) * 31;
                 boolean z3 = this.f221c;
-                return i2 + (z3 ? 1 : z3 ? 1 : 0);
+                return i + (z3 ? 1 : z3);
             }
 
             public String toString() {
@@ -196,11 +202,11 @@ public final class GuildBoostUncancelViewModel3 extends AppViewModel<c> {
             }
         }
 
-        /* compiled from: GuildBoostUncancelViewModel.kt */
-        /* renamed from: b.a.a.a.k$c$c, reason: collision with other inner class name */
+        /* JADX INFO: renamed from: b.a.a.a.k$c$c, reason: collision with other inner class name */
+        /* JADX INFO: compiled from: GuildBoostUncancelViewModel.kt */
         public static final class C13205c extends c {
 
-            /* renamed from: a */
+            /* JADX INFO: renamed from: a */
             public static final C13205c f222a = new C13205c();
 
             public C13205c() {
@@ -208,11 +214,11 @@ public final class GuildBoostUncancelViewModel3 extends AppViewModel<c> {
             }
         }
 
-        /* compiled from: GuildBoostUncancelViewModel.kt */
-        /* renamed from: b.a.a.a.k$c$d */
+        /* JADX INFO: renamed from: b.a.a.a.k$c$d */
+        /* JADX INFO: compiled from: GuildBoostUncancelViewModel.kt */
         public static final class d extends c {
 
-            /* renamed from: a */
+            /* JADX INFO: renamed from: a */
             public static final d f223a = new d();
 
             public d() {

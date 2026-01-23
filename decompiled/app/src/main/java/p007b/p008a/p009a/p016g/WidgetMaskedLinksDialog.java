@@ -26,31 +26,31 @@ import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.FunctionReferenceImpl;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: WidgetMaskedLinksDialog.kt */
-/* renamed from: b.a.a.g.a, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.a.a.g.a, reason: use source file name */
+/* JADX INFO: compiled from: WidgetMaskedLinksDialog.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class WidgetMaskedLinksDialog extends AppDialog {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static final /* synthetic */ KProperty[] f368j = {outline.m846d0(WidgetMaskedLinksDialog.class, "binding", "getBinding()Lcom/discord/databinding/WidgetMaskedLinksDialogBinding;", 0)};
 
-    /* renamed from: k, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: k, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
 
-    /* renamed from: l, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: l, reason: from kotlin metadata */
     public final FragmentViewBindingDelegate binding;
 
-    /* compiled from: java-style lambda group */
-    /* renamed from: b.a.a.g.a$a */
+    /* JADX INFO: renamed from: b.a.a.g.a$a */
+    /* JADX INFO: compiled from: java-style lambda group */
     public static final class a implements View.OnClickListener {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public final /* synthetic */ int f371j;
 
-        /* renamed from: k */
+        /* JADX INFO: renamed from: k */
         public final /* synthetic */ Object f372k;
 
-        /* renamed from: l */
+        /* JADX INFO: renamed from: l */
         public final /* synthetic */ Object f373l;
 
         public a(int i, Object obj, Object obj2) {
@@ -87,18 +87,18 @@ public final class WidgetMaskedLinksDialog extends AppDialog {
         }
     }
 
-    /* compiled from: WidgetMaskedLinksDialog.kt */
-    /* renamed from: b.a.a.g.a$b, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: b.a.a.g.a$b, reason: from kotlin metadata */
+    /* JADX INFO: compiled from: WidgetMaskedLinksDialog.kt */
     public static final class Companion {
         public Companion(DefaultConstructorMarker defaultConstructorMarker) {
         }
     }
 
-    /* compiled from: WidgetMaskedLinksDialog.kt */
-    /* renamed from: b.a.a.g.a$c */
+    /* JADX INFO: renamed from: b.a.a.g.a$c */
+    /* JADX INFO: compiled from: WidgetMaskedLinksDialog.kt */
     public static final /* synthetic */ class c extends FunctionReferenceImpl implements Function1<View, WidgetMaskedLinksDialogBinding> {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public static final c f374j = new c();
 
         public c() {
@@ -134,8 +134,8 @@ public final class WidgetMaskedLinksDialog extends AppDialog {
         }
     }
 
-    /* compiled from: WidgetMaskedLinksDialog.kt */
-    /* renamed from: b.a.a.g.a$d */
+    /* JADX INFO: renamed from: b.a.a.g.a$d */
+    /* JADX INFO: compiled from: WidgetMaskedLinksDialog.kt */
     public static final class d implements View.OnClickListener {
         public d() {
         }
@@ -151,12 +151,12 @@ public final class WidgetMaskedLinksDialog extends AppDialog {
         this.binding = FragmentViewBindingDelegate3.viewBinding$default(this, c.f374j, null, 2, null);
     }
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public final WidgetMaskedLinksDialogBinding m132g() {
         return (WidgetMaskedLinksDialogBinding) this.binding.getValue((Fragment) this, f368j[0]);
     }
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public final void m133h(Context context, String url) {
         UriHandler.handle$default(UriHandler.INSTANCE, context, url, false, false, null, 28, null);
         dismiss();

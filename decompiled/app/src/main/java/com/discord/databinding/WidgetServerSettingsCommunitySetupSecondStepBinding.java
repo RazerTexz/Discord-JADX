@@ -8,18 +8,18 @@ import androidx.viewbinding.ViewBinding;
 import com.discord.views.ScreenTitleView;
 import com.discord.widgets.servers.community.CommunitySelectorView;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public final class WidgetServerSettingsCommunitySetupSecondStepBinding implements ViewBinding {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     @NonNull
     public final ScrollView f17584a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     @NonNull
     public final CommunitySelectorView f17585b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     @NonNull
     public final CommunitySelectorView f17586c;
 

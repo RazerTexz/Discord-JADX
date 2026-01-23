@@ -4,9 +4,9 @@ import android.os.Bundle;
 import kotlin.jvm.functions.Function0;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetGuildRoleSubscriptionTierDesign.kt */
-/* renamed from: com.discord.widgets.guild_role_subscriptions.tier.create.WidgetGuildRoleSubscriptionTierDesign$hideHeader$2, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.guild_role_subscriptions.tier.create.WidgetGuildRoleSubscriptionTierDesign$hideHeader$2, reason: use source file name */
+/* JADX INFO: compiled from: WidgetGuildRoleSubscriptionTierDesign.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetGuildRoleSubscriptionTierDesign4 extends Lambda implements Function0<Boolean> {
     public final /* synthetic */ WidgetGuildRoleSubscriptionTierDesign this$0;
 
@@ -21,7 +21,7 @@ public final class WidgetGuildRoleSubscriptionTierDesign4 extends Lambda impleme
         return Boolean.valueOf(invoke2());
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final boolean invoke2() {
         Bundle arguments = this.this$0.getArguments();
         if (arguments != null) {

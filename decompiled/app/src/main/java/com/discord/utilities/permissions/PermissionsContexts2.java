@@ -11,12 +11,12 @@ import kotlin.jvm.internal.DefaultConstructorMarker;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: PermissionsContexts.kt */
-/* renamed from: com.discord.utilities.permissions.ManageMessageContext, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.utilities.permissions.ManageMessageContext, reason: use source file name */
+/* JADX INFO: compiled from: PermissionsContexts.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final /* data */ class PermissionsContexts2 {
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private final boolean canAddReactions;
     private final boolean canDelete;
@@ -25,8 +25,8 @@ public final /* data */ class PermissionsContexts2 {
     private final boolean canMarkUnread;
     private final boolean canTogglePinned;
 
-    /* compiled from: PermissionsContexts.kt */
-    /* renamed from: com.discord.utilities.permissions.ManageMessageContext$Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: com.discord.utilities.permissions.ManageMessageContext$Companion, reason: from kotlin metadata */
+    /* JADX INFO: compiled from: PermissionsContexts.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -110,32 +110,32 @@ public final /* data */ class PermissionsContexts2 {
         return INSTANCE.from(message, l, meUser, num, z2, z3, z4);
     }
 
-    /* renamed from: component1, reason: from getter */
+    /* JADX INFO: renamed from: component1, reason: from getter */
     public final boolean getCanManageMessages() {
         return this.canManageMessages;
     }
 
-    /* renamed from: component2, reason: from getter */
+    /* JADX INFO: renamed from: component2, reason: from getter */
     public final boolean getCanEdit() {
         return this.canEdit;
     }
 
-    /* renamed from: component3, reason: from getter */
+    /* JADX INFO: renamed from: component3, reason: from getter */
     public final boolean getCanDelete() {
         return this.canDelete;
     }
 
-    /* renamed from: component4, reason: from getter */
+    /* JADX INFO: renamed from: component4, reason: from getter */
     public final boolean getCanAddReactions() {
         return this.canAddReactions;
     }
 
-    /* renamed from: component5, reason: from getter */
+    /* JADX INFO: renamed from: component5, reason: from getter */
     public final boolean getCanTogglePinned() {
         return this.canTogglePinned;
     }
 
-    /* renamed from: component6, reason: from getter */
+    /* JADX INFO: renamed from: component6, reason: from getter */
     public final boolean getCanMarkUnread() {
         return this.canMarkUnread;
     }
@@ -183,10 +183,21 @@ public final /* data */ class PermissionsContexts2 {
     /* JADX WARN: Type inference failed for: r0v1, types: [int] */
     /* JADX WARN: Type inference failed for: r0v12 */
     /* JADX WARN: Type inference failed for: r0v13 */
-    /* JADX WARN: Type inference failed for: r2v0, types: [boolean] */
-    /* JADX WARN: Type inference failed for: r2v2, types: [boolean] */
-    /* JADX WARN: Type inference failed for: r2v4, types: [boolean] */
-    /* JADX WARN: Type inference failed for: r2v6, types: [boolean] */
+    /* JADX WARN: Type inference failed for: r1v0 */
+    /* JADX WARN: Type inference failed for: r1v1, types: [int] */
+    /* JADX WARN: Type inference failed for: r1v2 */
+    /* JADX WARN: Type inference failed for: r2v1, types: [int] */
+    /* JADX WARN: Type inference failed for: r2v10 */
+    /* JADX WARN: Type inference failed for: r2v11 */
+    /* JADX WARN: Type inference failed for: r2v12 */
+    /* JADX WARN: Type inference failed for: r2v13 */
+    /* JADX WARN: Type inference failed for: r2v14 */
+    /* JADX WARN: Type inference failed for: r2v15 */
+    /* JADX WARN: Type inference failed for: r2v16 */
+    /* JADX WARN: Type inference failed for: r2v3, types: [int] */
+    /* JADX WARN: Type inference failed for: r2v5, types: [int] */
+    /* JADX WARN: Type inference failed for: r2v7, types: [int] */
+    /* JADX WARN: Type inference failed for: r2v9 */
     public int hashCode() {
         boolean z2 = this.canManageMessages;
         ?? r0 = z2;
@@ -194,32 +205,32 @@ public final /* data */ class PermissionsContexts2 {
             r0 = 1;
         }
         int i = r0 * 31;
-        ?? r2 = this.canEdit;
-        int i2 = r2;
-        if (r2 != 0) {
-            i2 = 1;
+        boolean z3 = this.canEdit;
+        ?? r2 = z3;
+        if (z3) {
+            r2 = 1;
         }
-        int i3 = (i + i2) * 31;
-        ?? r22 = this.canDelete;
-        int i4 = r22;
-        if (r22 != 0) {
-            i4 = 1;
+        int i2 = (i + r2) * 31;
+        boolean z4 = this.canDelete;
+        ?? r22 = z4;
+        if (z4) {
+            r22 = 1;
         }
-        int i5 = (i3 + i4) * 31;
-        ?? r23 = this.canAddReactions;
-        int i6 = r23;
-        if (r23 != 0) {
-            i6 = 1;
+        int i3 = (i2 + r22) * 31;
+        boolean z5 = this.canAddReactions;
+        ?? r23 = z5;
+        if (z5) {
+            r23 = 1;
         }
-        int i7 = (i5 + i6) * 31;
-        ?? r24 = this.canTogglePinned;
-        int i8 = r24;
-        if (r24 != 0) {
-            i8 = 1;
+        int i4 = (i3 + r23) * 31;
+        boolean z6 = this.canTogglePinned;
+        ?? r24 = z6;
+        if (z6) {
+            r24 = 1;
         }
-        int i9 = (i7 + i8) * 31;
-        boolean z3 = this.canMarkUnread;
-        return i9 + (z3 ? 1 : z3 ? 1 : 0);
+        int i5 = (i4 + r24) * 31;
+        boolean z7 = this.canMarkUnread;
+        return i5 + (z7 ? 1 : z7);
     }
 
     public String toString() {

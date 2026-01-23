@@ -10,7 +10,7 @@ import androidx.annotation.Nullable;
 import androidx.annotation.RequiresApi;
 import java.lang.reflect.InvocationTargetException;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public final class HandlerCompat {
     private static final String TAG = "HandlerCompat";
 

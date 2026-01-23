@@ -7,8 +7,8 @@ import kotlin.jvm.functions.Function0;
 import kotlin.jvm.functions.Function1;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ForumBrowserScrollListener.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: ForumBrowserScrollListener.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class ForumBrowserScrollListener extends RecyclerView.OnScrollListener {
     private Function0<Unit> onScrollCallback;
     private Function0<Unit> onScrollEndCallback;

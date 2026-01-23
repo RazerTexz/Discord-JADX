@@ -4,8 +4,8 @@ import android.net.Uri;
 import android.util.LogPrinter;
 import androidx.core.app.NotificationCompat;
 
-/* renamed from: b.i.a.f.b.d */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.b.d */
+/* JADX INFO: loaded from: classes3.dex */
 public final class C3178d {
     static {
         Uri.Builder builder = new Uri.Builder();

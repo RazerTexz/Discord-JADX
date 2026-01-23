@@ -8,22 +8,22 @@ import p001a0.p002a.p003a.C0002b;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: WidgetMobileReports.kt */
-/* renamed from: com.discord.widgets.mobile_reports.MobileReportArgs, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.mobile_reports.MobileReportArgs, reason: use source file name */
+/* JADX INFO: compiled from: WidgetMobileReports.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public abstract class WidgetMobileReports2 implements Parcelable {
     private final long channelId;
     private final ReportType reportType;
 
-    /* compiled from: WidgetMobileReports.kt */
-    /* renamed from: com.discord.widgets.mobile_reports.MobileReportArgs$DirectoryServer */
+    /* JADX INFO: renamed from: com.discord.widgets.mobile_reports.MobileReportArgs$DirectoryServer */
+    /* JADX INFO: compiled from: WidgetMobileReports.kt */
     public static final /* data */ class DirectoryServer extends WidgetMobileReports2 {
         public static final Parcelable.Creator<DirectoryServer> CREATOR = new Creator();
         private final long channelId;
         private final long guildId;
         private final long hubId;
 
-        /* renamed from: com.discord.widgets.mobile_reports.MobileReportArgs$DirectoryServer$Creator */
+        /* JADX INFO: renamed from: com.discord.widgets.mobile_reports.MobileReportArgs$DirectoryServer$Creator */
         public static class Creator implements Parcelable.Creator<DirectoryServer> {
             /* JADX WARN: Can't rename method to resolve collision */
             @Override // android.os.Parcelable.Creator
@@ -71,12 +71,12 @@ public abstract class WidgetMobileReports2 implements Parcelable {
             return directoryServer.copy(j4, j5, j3);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final long getGuildId() {
             return this.guildId;
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final long getHubId() {
             return this.hubId;
         }
@@ -142,14 +142,14 @@ public abstract class WidgetMobileReports2 implements Parcelable {
         }
     }
 
-    /* compiled from: WidgetMobileReports.kt */
-    /* renamed from: com.discord.widgets.mobile_reports.MobileReportArgs$GuildScheduledEvent */
+    /* JADX INFO: renamed from: com.discord.widgets.mobile_reports.MobileReportArgs$GuildScheduledEvent */
+    /* JADX INFO: compiled from: WidgetMobileReports.kt */
     public static final /* data */ class GuildScheduledEvent extends WidgetMobileReports2 {
         public static final Parcelable.Creator<GuildScheduledEvent> CREATOR = new Creator();
         private final long eventId;
         private final long guildId;
 
-        /* renamed from: com.discord.widgets.mobile_reports.MobileReportArgs$GuildScheduledEvent$Creator */
+        /* JADX INFO: renamed from: com.discord.widgets.mobile_reports.MobileReportArgs$GuildScheduledEvent$Creator */
         public static class Creator implements Parcelable.Creator<GuildScheduledEvent> {
             /* JADX WARN: Can't rename method to resolve collision */
             @Override // android.os.Parcelable.Creator
@@ -191,12 +191,12 @@ public abstract class WidgetMobileReports2 implements Parcelable {
             return guildScheduledEvent.copy(j, j2);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final long getGuildId() {
             return this.guildId;
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final long getEventId() {
             return this.eventId;
         }
@@ -248,14 +248,14 @@ public abstract class WidgetMobileReports2 implements Parcelable {
         }
     }
 
-    /* compiled from: WidgetMobileReports.kt */
-    /* renamed from: com.discord.widgets.mobile_reports.MobileReportArgs$Message */
+    /* JADX INFO: renamed from: com.discord.widgets.mobile_reports.MobileReportArgs$Message */
+    /* JADX INFO: compiled from: WidgetMobileReports.kt */
     public static final /* data */ class Message extends WidgetMobileReports2 {
         public static final Parcelable.Creator<Message> CREATOR = new Creator();
         private final long channelId;
         private final long messageId;
 
-        /* renamed from: com.discord.widgets.mobile_reports.MobileReportArgs$Message$Creator */
+        /* JADX INFO: renamed from: com.discord.widgets.mobile_reports.MobileReportArgs$Message$Creator */
         public static class Creator implements Parcelable.Creator<Message> {
             /* JADX WARN: Can't rename method to resolve collision */
             @Override // android.os.Parcelable.Creator
@@ -297,7 +297,7 @@ public abstract class WidgetMobileReports2 implements Parcelable {
             return message.copy(j, j2);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final long getMessageId() {
             return this.messageId;
         }
@@ -356,13 +356,13 @@ public abstract class WidgetMobileReports2 implements Parcelable {
         }
     }
 
-    /* compiled from: WidgetMobileReports.kt */
-    /* renamed from: com.discord.widgets.mobile_reports.MobileReportArgs$StageChannel */
+    /* JADX INFO: renamed from: com.discord.widgets.mobile_reports.MobileReportArgs$StageChannel */
+    /* JADX INFO: compiled from: WidgetMobileReports.kt */
     public static final /* data */ class StageChannel extends WidgetMobileReports2 {
         public static final Parcelable.Creator<StageChannel> CREATOR = new Creator();
         private final long channelId;
 
-        /* renamed from: com.discord.widgets.mobile_reports.MobileReportArgs$StageChannel$Creator */
+        /* JADX INFO: renamed from: com.discord.widgets.mobile_reports.MobileReportArgs$StageChannel$Creator */
         public static class Creator implements Parcelable.Creator<StageChannel> {
             /* JADX WARN: Can't rename method to resolve collision */
             @Override // android.os.Parcelable.Creator

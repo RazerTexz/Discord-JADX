@@ -46,24 +46,24 @@ import p637j0.p641k.Func1;
 import p637j0.p642l.p647e.ScalarSynchronousObservable;
 import p658rx.Observable;
 
-/* compiled from: WidgetSearch.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetSearch.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetSearch extends AppFragment {
     public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetSearch.class, "binding", "getBinding()Lcom/discord/databinding/WidgetSearchBinding;", 0)};
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     public static final String INTENT_EXTRA_TARGET_ID = "INTENT_EXTRA_TARGET_ID";
     public static final String INTENT_EXTRA_TARGET_TYPE = "INTENT_EXTRA_SEARCH_TYPE";
     private static final int TARGET_TYPE_CHANNEL = 1;
     private static final int TARGET_TYPE_GUILD = 0;
 
-    /* renamed from: binding$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
     private long targetId;
     private int targetType;
 
-    /* compiled from: WidgetSearch.kt */
+    /* JADX INFO: compiled from: WidgetSearch.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -89,17 +89,17 @@ public final class WidgetSearch extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetSearch.kt */
+    /* JADX INFO: compiled from: WidgetSearch.kt */
     public static final /* data */ class Model {
 
-        /* renamed from: Companion, reason: from kotlin metadata */
+        /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
         public static final Companion INSTANCE = new Companion(null);
         private final Channel channel;
         private final StoreSearch.DisplayState displayState;
         private final Guild guild;
         private final boolean isQueryValid;
 
-        /* compiled from: WidgetSearch.kt */
+        /* JADX INFO: compiled from: WidgetSearch.kt */
         public static final class Companion {
             private Companion() {
             }
@@ -141,22 +141,22 @@ public final class WidgetSearch extends AppFragment {
             return model.copy(guild, channel, displayState, z2);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final Guild getGuild() {
             return this.guild;
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final Channel getChannel() {
             return this.channel;
         }
 
-        /* renamed from: component3, reason: from getter */
+        /* JADX INFO: renamed from: component3, reason: from getter */
         public final StoreSearch.DisplayState getDisplayState() {
             return this.displayState;
         }
 
-        /* renamed from: component4, reason: from getter */
+        /* JADX INFO: renamed from: component4, reason: from getter */
         public final boolean getIsQueryValid() {
             return this.isQueryValid;
         }
@@ -189,6 +189,9 @@ public final class WidgetSearch extends AppFragment {
         }
 
         /* JADX WARN: Multi-variable type inference failed */
+        /* JADX WARN: Type inference failed for: r1v3, types: [int] */
+        /* JADX WARN: Type inference failed for: r1v4 */
+        /* JADX WARN: Type inference failed for: r1v6 */
         public int hashCode() {
             Guild guild = this.guild;
             int iHashCode = (guild != null ? guild.hashCode() : 0) * 31;
@@ -197,11 +200,11 @@ public final class WidgetSearch extends AppFragment {
             StoreSearch.DisplayState displayState = this.displayState;
             int iHashCode3 = (iHashCode2 + (displayState != null ? displayState.hashCode() : 0)) * 31;
             boolean z2 = this.isQueryValid;
-            int i = z2;
-            if (z2 != 0) {
-                i = 1;
+            ?? r1 = z2;
+            if (z2) {
+                r1 = 1;
             }
-            return iHashCode3 + i;
+            return iHashCode3 + r1;
         }
 
         public final boolean isQueryValid() {
@@ -232,8 +235,8 @@ public final class WidgetSearch extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetSearch.kt */
-    /* renamed from: com.discord.widgets.search.WidgetSearch$configureSearchInput$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.search.WidgetSearch$configureSearchInput$1 */
+    /* JADX INFO: compiled from: WidgetSearch.kt */
     public static final class C91261 extends Lambda implements Function3<TextView, Integer, KeyEvent, Boolean> {
         public C91261() {
             super(3);
@@ -261,8 +264,8 @@ public final class WidgetSearch extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetSearch.kt */
-    /* renamed from: com.discord.widgets.search.WidgetSearch$configureSearchInput$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.search.WidgetSearch$configureSearchInput$2 */
+    /* JADX INFO: compiled from: WidgetSearch.kt */
     public static final class C91272 extends Lambda implements Function1<Editable, Unit> {
         public static final C91272 INSTANCE = new C91272();
 
@@ -276,15 +279,15 @@ public final class WidgetSearch extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Editable editable) {
             Intrinsics3.checkNotNullParameter(editable, NotificationCompat.MessagingStyle.Message.KEY_TEXT);
             StoreStream.INSTANCE.getSearch().getStoreSearchInput().updateInput(editable.toString());
         }
     }
 
-    /* compiled from: WidgetSearch.kt */
-    /* renamed from: com.discord.widgets.search.WidgetSearch$configureSearchInput$3 */
+    /* JADX INFO: renamed from: com.discord.widgets.search.WidgetSearch$configureSearchInput$3 */
+    /* JADX INFO: compiled from: WidgetSearch.kt */
     public static final class C91283<T, R> implements Func1<List<? extends QueryNode>, DraweeSpanStringBuilder> {
         public C91283() {
         }
@@ -294,15 +297,15 @@ public final class WidgetSearch extends AppFragment {
             return call2(list);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final DraweeSpanStringBuilder call2(List<? extends QueryNode> list) {
             Intrinsics3.checkNotNullExpressionValue(list, "queryNodes");
             return AstRenderer.render(list, WidgetSearch.this.requireContext());
         }
     }
 
-    /* compiled from: WidgetSearch.kt */
-    /* renamed from: com.discord.widgets.search.WidgetSearch$configureSearchInput$4 */
+    /* JADX INFO: renamed from: com.discord.widgets.search.WidgetSearch$configureSearchInput$4 */
+    /* JADX INFO: compiled from: WidgetSearch.kt */
     public static final class C91294<T, R> implements Func1<DraweeSpanStringBuilder, String> {
         public static final C91294 INSTANCE = new C91294();
 
@@ -311,15 +314,15 @@ public final class WidgetSearch extends AppFragment {
             return call2(draweeSpanStringBuilder);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final String call2(DraweeSpanStringBuilder draweeSpanStringBuilder) {
             Intrinsics3.checkNotNullParameter(draweeSpanStringBuilder, IconCompat.EXTRA_OBJ);
             return draweeSpanStringBuilder.toString();
         }
     }
 
-    /* compiled from: WidgetSearch.kt */
-    /* renamed from: com.discord.widgets.search.WidgetSearch$configureSearchInput$5 */
+    /* JADX INFO: renamed from: com.discord.widgets.search.WidgetSearch$configureSearchInput$5 */
+    /* JADX INFO: compiled from: WidgetSearch.kt */
     public static final class C91305 extends Lambda implements Function1<String, Unit> {
         public C91305() {
             super(1);
@@ -331,7 +334,7 @@ public final class WidgetSearch extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(String str) {
             TextInputLayout textInputLayout = WidgetSearch.access$getBinding$p(WidgetSearch.this).f17421c;
             Intrinsics3.checkNotNullExpressionValue(textInputLayout, "binding.widgetSearchInput");
@@ -342,8 +345,8 @@ public final class WidgetSearch extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetSearch.kt */
-    /* renamed from: com.discord.widgets.search.WidgetSearch$onViewBoundOrOnResume$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.search.WidgetSearch$onViewBoundOrOnResume$1 */
+    /* JADX INFO: compiled from: WidgetSearch.kt */
     public static final class C91311 extends Lambda implements Function1<Model, Unit> {
         public C91311() {
             super(1);
@@ -355,14 +358,14 @@ public final class WidgetSearch extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Model model) {
             WidgetSearch.access$configureUI(WidgetSearch.this, model);
         }
     }
 
-    /* compiled from: WidgetSearch.kt */
-    /* renamed from: com.discord.widgets.search.WidgetSearch$onViewBoundOrOnResume$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.search.WidgetSearch$onViewBoundOrOnResume$2 */
+    /* JADX INFO: compiled from: WidgetSearch.kt */
     public static final class ViewOnClickListenerC91322 implements View.OnClickListener {
         public ViewOnClickListenerC91322() {
         }
@@ -377,8 +380,8 @@ public final class WidgetSearch extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetSearch.kt */
-    /* renamed from: com.discord.widgets.search.WidgetSearch$onViewBoundOrOnResume$3 */
+    /* JADX INFO: renamed from: com.discord.widgets.search.WidgetSearch$onViewBoundOrOnResume$3 */
+    /* JADX INFO: compiled from: WidgetSearch.kt */
     public static final class ViewOnClickListenerC91333 implements View.OnClickListener {
         public ViewOnClickListenerC91333() {
         }

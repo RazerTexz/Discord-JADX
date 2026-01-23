@@ -13,11 +13,11 @@ import com.discord.utilities.logging.Logger;
 import java.util.Objects;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: StepsProgressIndicatorView.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: StepsProgressIndicatorView.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class StepsProgressIndicatorView extends LinearLayout {
 
-    /* renamed from: j, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: j, reason: from kotlin metadata */
     public int totalStepCount;
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -27,7 +27,7 @@ public final class StepsProgressIndicatorView extends LinearLayout {
         setOrientation(0);
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final void m8608a() {
         removeAllViews();
         LayoutInflater layoutInflaterFrom = LayoutInflater.from(getContext());

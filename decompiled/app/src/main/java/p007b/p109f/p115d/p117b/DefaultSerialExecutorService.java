@@ -3,9 +3,9 @@ package p007b.p109f.p115d.p117b;
 import java.util.concurrent.Executor;
 import java.util.concurrent.LinkedBlockingQueue;
 
-/* compiled from: DefaultSerialExecutorService.java */
-/* renamed from: b.f.d.b.c, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.f.d.b.c, reason: use source file name */
+/* JADX INFO: compiled from: DefaultSerialExecutorService.java */
+/* JADX INFO: loaded from: classes.dex */
 public class DefaultSerialExecutorService extends ConstrainedExecutorService implements SerialExecutorService {
     public DefaultSerialExecutorService(Executor executor) {
         super("SerialExecutor", 1, executor, new LinkedBlockingQueue());

@@ -3,24 +3,24 @@ package com.discord.widgets.stage;
 import kotlin.jvm.internal.DefaultConstructorMarker;
 import p007b.p100d.p104b.p105a.outline;
 
-/* compiled from: StageRoles.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: StageRoles.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class StageRoles {
     private static final int AUDIENCE;
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE;
     private static final int IS_INVITED_TO_SPEAK = 4;
     private static final int IS_MODERATOR = 2;
     private static final int IS_SPEAKER = 1;
     private final int rolesFlags;
 
-    /* compiled from: StageRoles.kt */
+    /* JADX INFO: compiled from: StageRoles.kt */
     public static final class Companion {
         private Companion() {
         }
 
-        /* renamed from: invoke-H48EO60$default, reason: not valid java name */
+        /* JADX INFO: renamed from: invoke-H48EO60$default, reason: not valid java name */
         public static /* synthetic */ int m11413invokeH48EO60$default(Companion companion, boolean z2, boolean z3, boolean z4, int i, Object obj) {
             if ((i & 1) != 0) {
                 z2 = false;
@@ -34,12 +34,12 @@ public final class StageRoles {
             return companion.m11415invokeH48EO60(z2, z3, z4);
         }
 
-        /* renamed from: getAUDIENCE-1LxfuJo, reason: not valid java name */
+        /* JADX INFO: renamed from: getAUDIENCE-1LxfuJo, reason: not valid java name */
         public final int m11414getAUDIENCE1LxfuJo() {
             return StageRoles.m11401access$getAUDIENCE$cp1LxfuJo();
         }
 
-        /* renamed from: invoke-H48EO60, reason: not valid java name */
+        /* JADX INFO: renamed from: invoke-H48EO60, reason: not valid java name */
         public final int m11415invokeH48EO60(boolean isSpeaker, boolean isModerator, boolean isInvitedToSpeak) {
             int i = isSpeaker ? 1 : 0;
             if (isModerator) {
@@ -66,57 +66,57 @@ public final class StageRoles {
         this.rolesFlags = i;
     }
 
-    /* renamed from: access$getAUDIENCE$cp-1LxfuJo, reason: not valid java name */
+    /* JADX INFO: renamed from: access$getAUDIENCE$cp-1LxfuJo, reason: not valid java name */
     public static final /* synthetic */ int m11401access$getAUDIENCE$cp1LxfuJo() {
         return AUDIENCE;
     }
 
-    /* renamed from: box-impl, reason: not valid java name */
+    /* JADX INFO: renamed from: box-impl, reason: not valid java name */
     public static final /* synthetic */ StageRoles m11402boximpl(int i) {
         return new StageRoles(i);
     }
 
-    /* renamed from: constructor-impl, reason: not valid java name */
+    /* JADX INFO: renamed from: constructor-impl, reason: not valid java name */
     public static int m11403constructorimpl(int i) {
         return i;
     }
 
-    /* renamed from: equals-impl, reason: not valid java name */
+    /* JADX INFO: renamed from: equals-impl, reason: not valid java name */
     public static boolean m11404equalsimpl(int i, Object obj) {
         return (obj instanceof StageRoles) && i == ((StageRoles) obj).m11412unboximpl();
     }
 
-    /* renamed from: equals-impl0, reason: not valid java name */
+    /* JADX INFO: renamed from: equals-impl0, reason: not valid java name */
     public static final boolean m11405equalsimpl0(int i, int i2) {
         return i == i2;
     }
 
-    /* renamed from: hashCode-impl, reason: not valid java name */
+    /* JADX INFO: renamed from: hashCode-impl, reason: not valid java name */
     public static int m11406hashCodeimpl(int i) {
         return i;
     }
 
-    /* renamed from: isAudience-impl, reason: not valid java name */
+    /* JADX INFO: renamed from: isAudience-impl, reason: not valid java name */
     public static final boolean m11407isAudienceimpl(int i) {
         return (m11410isSpeakerimpl(i) || m11409isModeratorimpl(i)) ? false : true;
     }
 
-    /* renamed from: isInvitedToSpeak-impl, reason: not valid java name */
+    /* JADX INFO: renamed from: isInvitedToSpeak-impl, reason: not valid java name */
     public static final boolean m11408isInvitedToSpeakimpl(int i) {
         return (i & 4) != 0;
     }
 
-    /* renamed from: isModerator-impl, reason: not valid java name */
+    /* JADX INFO: renamed from: isModerator-impl, reason: not valid java name */
     public static final boolean m11409isModeratorimpl(int i) {
         return (i & 2) != 0;
     }
 
-    /* renamed from: isSpeaker-impl, reason: not valid java name */
+    /* JADX INFO: renamed from: isSpeaker-impl, reason: not valid java name */
     public static final boolean m11410isSpeakerimpl(int i) {
         return (i & 1) != 0;
     }
 
-    /* renamed from: toString-impl, reason: not valid java name */
+    /* JADX INFO: renamed from: toString-impl, reason: not valid java name */
     public static String m11411toStringimpl(int i) {
         return outline.m873r("StageRoles(rolesFlags=", i, ")");
     }
@@ -137,7 +137,7 @@ public final class StageRoles {
         return m11411toStringimpl(this.rolesFlags);
     }
 
-    /* renamed from: unbox-impl, reason: not valid java name */
+    /* JADX INFO: renamed from: unbox-impl, reason: not valid java name */
     public final /* synthetic */ int m11412unboximpl() {
         return this.rolesFlags;
     }

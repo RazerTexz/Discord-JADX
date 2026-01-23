@@ -21,12 +21,12 @@ import p007b.p195g.p196a.p205c.p219i0.ClassUtil;
 import p007b.p195g.p196a.p205c.p219i0.Converter;
 import p007b.p195g.p196a.p205c.p221z.ContextAttributes;
 
-/* compiled from: StdSerializer.java */
-/* renamed from: b.g.a.c.g0.u.q0, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.g.a.c.g0.u.q0, reason: use source file name */
+/* JADX INFO: compiled from: StdSerializer.java */
+/* JADX INFO: loaded from: classes3.dex */
 public abstract class StdSerializer<T> extends JsonSerializer<T> implements Serializable {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static final Object f4860j = new Object();
     private static final long serialVersionUID = 1;
     public final Class<T> _handledType;
@@ -35,18 +35,18 @@ public abstract class StdSerializer<T> extends JsonSerializer<T> implements Seri
         this._handledType = cls;
     }
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static final boolean m2072j(Object obj, Object obj2) {
         return (obj == null || obj2 == null) ? false : true;
     }
 
     @Override // p007b.p195g.p196a.p205c.JsonSerializer
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public Class<T> mo2041c() {
         return this._handledType;
     }
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public JsonSerializer<?> m2073k(SerializerProvider serializerProvider, BeanProperty beanProperty, JsonSerializer<?> jsonSerializer) throws JsonMappingException {
         JsonSerializer<?> stdDelegatingSerializer;
         AnnotatedMember member;
@@ -84,19 +84,19 @@ public abstract class StdSerializer<T> extends JsonSerializer<T> implements Seri
         }
     }
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public JsonFormat.d m2074l(SerializerProvider serializerProvider, BeanProperty beanProperty, Class<?> cls) {
         return beanProperty != null ? beanProperty.mo1928a(serializerProvider._config, cls) : serializerProvider._config.mo2271i(cls);
     }
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public PropertyFilter m2075m(SerializerProvider serializerProvider, Object obj, Object obj2) throws JsonMappingException {
         Objects.requireNonNull(serializerProvider._config);
         serializerProvider.m1943g(this._handledType, "Cannot resolve PropertyFilter with id '" + obj + "'; no FilterProvider configured");
         throw null;
     }
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public void m2076n(SerializerProvider serializerProvider, Throwable th, Object obj, int i) throws IOException {
         while ((th instanceof InvocationTargetException) && th.getCause() != null) {
             th = th.getCause();
@@ -113,7 +113,7 @@ public abstract class StdSerializer<T> extends JsonSerializer<T> implements Seri
         throw JsonMappingException.m8741f(th, new JsonMappingException.C10677a(obj, i));
     }
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public void m2077o(SerializerProvider serializerProvider, Throwable th, Object obj, String str) throws IOException {
         while ((th instanceof InvocationTargetException) && th.getCause() != null) {
             th = th.getCause();

@@ -14,25 +14,25 @@ import p507d0.p580t._Collections;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: Regex.kt */
-/* renamed from: d0.g0.g, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.g0.g, reason: use source file name */
+/* JADX INFO: compiled from: Regex.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class Regex3 implements MatchResult {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final MatchResult2 f25152a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public List<String> f25153b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final Matcher f25154c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final CharSequence f25155d;
 
-    /* compiled from: Regex.kt */
-    /* renamed from: d0.g0.g$a */
+    /* JADX INFO: renamed from: d0.g0.g$a */
+    /* JADX INFO: compiled from: Regex.kt */
     public static final class a extends AbstractList<String> {
         public a() {
         }
@@ -90,12 +90,12 @@ public final class Regex3 implements MatchResult {
         }
     }
 
-    /* compiled from: Regex.kt */
-    /* renamed from: d0.g0.g$b */
+    /* JADX INFO: renamed from: d0.g0.g$b */
+    /* JADX INFO: compiled from: Regex.kt */
     public static final class b extends AbstractCollection<Regex2> implements MatchResult2 {
 
-        /* compiled from: Regex.kt */
-        /* renamed from: d0.g0.g$b$a */
+        /* JADX INFO: renamed from: d0.g0.g$b$a */
+        /* JADX INFO: compiled from: Regex.kt */
         public static final class a extends Lambda implements Function1<Integer, Regex2> {
             public a() {
                 super(1);

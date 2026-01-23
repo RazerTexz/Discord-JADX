@@ -3,7 +3,7 @@ package com.esotericsoftware.kryo.serializers;
 import com.esotericsoftware.kryo.serializers.FieldSerializer;
 import p007b.p106e.p107a.Log;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class FieldSerializerConfig implements Cloneable {
     private boolean fixedFieldTypes;
     private boolean fieldsCanBeNull = true;
@@ -19,7 +19,7 @@ public class FieldSerializerConfig implements Cloneable {
         Log.a aVar = Log.f3007a;
     }
 
-    /* renamed from: clone, reason: collision with other method in class */
+    /* JADX INFO: renamed from: clone, reason: collision with other method in class */
     public /* bridge */ /* synthetic */ Object mo11454clone() throws CloneNotSupportedException {
         return clone();
     }

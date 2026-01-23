@@ -10,15 +10,15 @@ import com.discord.C5419R;
 import com.discord.models.domain.ModelAuditLogEntry;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: StickyHeaderItemDecoration.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: StickyHeaderItemDecoration.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class StickyHeaderItemDecoration extends RecyclerView.ItemDecoration {
     private Float actionDownRawX;
     private Float actionDownRawY;
     private final StickyHeaderAdapter adapter;
     private float stickyHeaderBottom;
 
-    /* compiled from: StickyHeaderItemDecoration.kt */
+    /* JADX INFO: compiled from: StickyHeaderItemDecoration.kt */
     public static final class LayoutManager {
         public static final LayoutManager INSTANCE = new LayoutManager();
 
@@ -35,7 +35,7 @@ public final class StickyHeaderItemDecoration extends RecyclerView.ItemDecoratio
         }
     }
 
-    /* compiled from: StickyHeaderItemDecoration.kt */
+    /* JADX INFO: compiled from: StickyHeaderItemDecoration.kt */
     public interface StickyHeaderAdapter {
         View getAndBindHeaderView(int position);
 
@@ -44,8 +44,8 @@ public final class StickyHeaderItemDecoration extends RecyclerView.ItemDecoratio
         boolean isHeader(int position);
     }
 
-    /* compiled from: StickyHeaderItemDecoration.kt */
-    /* renamed from: com.discord.utilities.views.StickyHeaderItemDecoration$blockClicks$1 */
+    /* JADX INFO: renamed from: com.discord.utilities.views.StickyHeaderItemDecoration$blockClicks$1 */
+    /* JADX INFO: compiled from: StickyHeaderItemDecoration.kt */
     public static final class C70271 extends RecyclerView.SimpleOnItemTouchListener {
         public C70271() {
         }

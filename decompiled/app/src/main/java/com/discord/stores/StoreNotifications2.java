@@ -10,9 +10,9 @@ import p507d0.p580t._Collections;
 import p507d0.p592z.p594d.Intrinsics3;
 import p637j0.p641k.Func1;
 
-/* compiled from: StoreNotifications.kt */
-/* renamed from: com.discord.stores.StoreNotifications$configureNotificationClient$completedSettings$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.stores.StoreNotifications$configureNotificationClient$completedSettings$1, reason: use source file name */
+/* JADX INFO: compiled from: StoreNotifications.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class StoreNotifications2<T, R> implements Func1<Map<Long, ? extends Long>, HashSet<Long>> {
     public static final StoreNotifications2 INSTANCE = new StoreNotifications2();
 
@@ -21,7 +21,7 @@ public final class StoreNotifications2<T, R> implements Func1<Map<Long, ? extend
         return call2((Map<Long, Long>) map);
     }
 
-    /* renamed from: call, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
     public final HashSet<Long> call2(Map<Long, Long> map) {
         Intrinsics3.checkNotNullExpressionValue(map, "channelPermissions");
         LinkedHashMap linkedHashMap = new LinkedHashMap();

@@ -3,9 +3,9 @@ package com.discord.stores;
 import kotlin.jvm.functions.Function5;
 import p658rx.functions.Func5;
 
-/* compiled from: StoreGatewayConnection.kt */
-/* renamed from: com.discord.stores.StoreGatewayConnection$sam$rx_functions_Func5$0, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.stores.StoreGatewayConnection$sam$rx_functions_Func5$0, reason: use source file name */
+/* JADX INFO: compiled from: StoreGatewayConnection.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class StoreGatewayConnection6 implements Func5 {
     private final /* synthetic */ Function5 function;
 

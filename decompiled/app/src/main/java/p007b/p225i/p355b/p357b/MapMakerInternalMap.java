@@ -33,52 +33,52 @@ import p007b.p225i.p355b.p357b.MapMakerInternalMap.i;
 import p007b.p225i.p355b.p357b.MapMakerInternalMap.n;
 import p637j0.p642l.p647e.p648n.SpscExactAtomicArrayQueue;
 
-/* compiled from: MapMakerInternalMap.java */
-/* renamed from: b.i.b.b.v, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.b.b.v, reason: use source file name */
+/* JADX INFO: compiled from: MapMakerInternalMap.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class MapMakerInternalMap<K, V, E extends i<K, V, E>, S extends n<K, V, E, S>> extends AbstractMap<K, V> implements ConcurrentMap<K, V>, Serializable {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static final b0<Object, Object, e> f12070j = new a();
     private static final long serialVersionUID = 5;
     public final int concurrencyLevel;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final transient int f12071k;
     public final Equivalence<Object> keyEquivalence;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final transient int f12072l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public final transient n<K, V, E, S>[] f12073m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public final transient j<K, V, E, S> f12074n;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     @MonotonicNonNullDecl
     public transient Set<K> f12075o;
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     @MonotonicNonNullDecl
     public transient Collection<V> f12076p;
 
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     @MonotonicNonNullDecl
     public transient Set<Map.Entry<K, V>> f12077q;
 
-    /* compiled from: MapMakerInternalMap.java */
-    /* renamed from: b.i.b.b.v$a */
+    /* JADX INFO: renamed from: b.i.b.b.v$a */
+    /* JADX INFO: compiled from: MapMakerInternalMap.java */
     public static class a implements b0<Object, Object, e> {
         @Override // p007b.p225i.p355b.p357b.MapMakerInternalMap.b0
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public /* bridge */ /* synthetic */ i mo6292a() {
             return null;
         }
 
         @Override // p007b.p225i.p355b.p357b.MapMakerInternalMap.b0
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public b0 mo6293b(ReferenceQueue<Object> referenceQueue, i iVar) {
             return this;
         }
@@ -93,20 +93,20 @@ public class MapMakerInternalMap<K, V, E extends i<K, V, E>, S extends n<K, V, E
         }
     }
 
-    /* compiled from: MapMakerInternalMap.java */
-    /* renamed from: b.i.b.b.v$a0 */
+    /* JADX INFO: renamed from: b.i.b.b.v$a0 */
+    /* JADX INFO: compiled from: MapMakerInternalMap.java */
     public interface a0<K, V, E extends i<K, V, E>> extends i<K, V, E> {
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         b0<K, V, E> mo6294b();
     }
 
-    /* compiled from: MapMakerInternalMap.java */
-    /* renamed from: b.i.b.b.v$b */
+    /* JADX INFO: renamed from: b.i.b.b.v$b */
+    /* JADX INFO: compiled from: MapMakerInternalMap.java */
     public static abstract class b<K, V> extends ForwardingConcurrentMap<K, V> implements Serializable {
         private static final long serialVersionUID = 3;
         public final int concurrencyLevel;
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public transient ConcurrentMap<K, V> f12078j;
         public final Equivalence<Object> keyEquivalence;
         public final p keyStrength;
@@ -123,13 +123,13 @@ public class MapMakerInternalMap<K, V, E extends i<K, V, E>, S extends n<K, V, E
         }
     }
 
-    /* compiled from: MapMakerInternalMap.java */
-    /* renamed from: b.i.b.b.v$b0 */
+    /* JADX INFO: renamed from: b.i.b.b.v$b0 */
+    /* JADX INFO: compiled from: MapMakerInternalMap.java */
     public interface b0<K, V, E extends i<K, V, E>> {
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         E mo6292a();
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         b0<K, V, E> mo6293b(ReferenceQueue<V> referenceQueue, E e);
 
         void clear();
@@ -138,17 +138,17 @@ public class MapMakerInternalMap<K, V, E extends i<K, V, E>, S extends n<K, V, E
         V get();
     }
 
-    /* compiled from: MapMakerInternalMap.java */
-    /* renamed from: b.i.b.b.v$c */
+    /* JADX INFO: renamed from: b.i.b.b.v$c */
+    /* JADX INFO: compiled from: MapMakerInternalMap.java */
     public static abstract class c<K, V, E extends i<K, V, E>> implements i<K, V, E> {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final K f12079a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final int f12080b;
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         @NullableDecl
         public final E f12081c;
 
@@ -159,13 +159,13 @@ public class MapMakerInternalMap<K, V, E extends i<K, V, E>, S extends n<K, V, E
         }
 
         @Override // p007b.p225i.p355b.p357b.MapMakerInternalMap.i
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public E mo6295a() {
             return this.f12081c;
         }
 
         @Override // p007b.p225i.p355b.p357b.MapMakerInternalMap.i
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public int mo6296c() {
             return this.f12080b;
         }
@@ -176,11 +176,11 @@ public class MapMakerInternalMap<K, V, E extends i<K, V, E>, S extends n<K, V, E
         }
     }
 
-    /* compiled from: MapMakerInternalMap.java */
-    /* renamed from: b.i.b.b.v$c0 */
+    /* JADX INFO: renamed from: b.i.b.b.v$c0 */
+    /* JADX INFO: compiled from: MapMakerInternalMap.java */
     public static final class c0<K, V, E extends i<K, V, E>> extends WeakReference<V> implements b0<K, V, E> {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         @Weak
         public final E f12082a;
 
@@ -190,26 +190,26 @@ public class MapMakerInternalMap<K, V, E extends i<K, V, E>, S extends n<K, V, E
         }
 
         @Override // p007b.p225i.p355b.p357b.MapMakerInternalMap.b0
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public E mo6292a() {
             return this.f12082a;
         }
 
         @Override // p007b.p225i.p355b.p357b.MapMakerInternalMap.b0
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public b0<K, V, E> mo6293b(ReferenceQueue<V> referenceQueue, E e) {
             return new c0(referenceQueue, get(), e);
         }
     }
 
-    /* compiled from: MapMakerInternalMap.java */
-    /* renamed from: b.i.b.b.v$d */
+    /* JADX INFO: renamed from: b.i.b.b.v$d */
+    /* JADX INFO: compiled from: MapMakerInternalMap.java */
     public static abstract class d<K, V, E extends i<K, V, E>> extends WeakReference<K> implements i<K, V, E> {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final int f12083a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         @NullableDecl
         public final E f12084b;
 
@@ -220,13 +220,13 @@ public class MapMakerInternalMap<K, V, E extends i<K, V, E>, S extends n<K, V, E
         }
 
         @Override // p007b.p225i.p355b.p357b.MapMakerInternalMap.i
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public E mo6295a() {
             return this.f12084b;
         }
 
         @Override // p007b.p225i.p355b.p357b.MapMakerInternalMap.i
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public int mo6296c() {
             return this.f12083a;
         }
@@ -237,14 +237,14 @@ public class MapMakerInternalMap<K, V, E extends i<K, V, E>, S extends n<K, V, E
         }
     }
 
-    /* compiled from: MapMakerInternalMap.java */
-    /* renamed from: b.i.b.b.v$d0 */
+    /* JADX INFO: renamed from: b.i.b.b.v$d0 */
+    /* JADX INFO: compiled from: MapMakerInternalMap.java */
     public final class d0 extends AbstractMapEntry<K, V> {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public final K f12085j;
 
-        /* renamed from: k */
+        /* JADX INFO: renamed from: k */
         public V f12086k;
 
         public d0(K k, V v) {
@@ -284,21 +284,21 @@ public class MapMakerInternalMap<K, V, E extends i<K, V, E>, S extends n<K, V, E
         }
     }
 
-    /* compiled from: MapMakerInternalMap.java */
-    /* renamed from: b.i.b.b.v$e */
+    /* JADX INFO: renamed from: b.i.b.b.v$e */
+    /* JADX INFO: compiled from: MapMakerInternalMap.java */
     public static final class e implements i<Object, Object, e> {
         public e() {
             throw new AssertionError();
         }
 
         @Override // p007b.p225i.p355b.p357b.MapMakerInternalMap.i
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public i mo6295a() {
             throw new AssertionError();
         }
 
         @Override // p007b.p225i.p355b.p357b.MapMakerInternalMap.i
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public int mo6296c() {
             throw new AssertionError();
         }
@@ -314,8 +314,8 @@ public class MapMakerInternalMap<K, V, E extends i<K, V, E>, S extends n<K, V, E
         }
     }
 
-    /* compiled from: MapMakerInternalMap.java */
-    /* renamed from: b.i.b.b.v$f */
+    /* JADX INFO: renamed from: b.i.b.b.v$f */
+    /* JADX INFO: compiled from: MapMakerInternalMap.java */
     public final class f extends MapMakerInternalMap<K, V, E, S>.h<Map.Entry<K, V>> {
         public f(MapMakerInternalMap mapMakerInternalMap) {
             super();
@@ -327,8 +327,8 @@ public class MapMakerInternalMap<K, V, E extends i<K, V, E>, S extends n<K, V, E
         }
     }
 
-    /* compiled from: MapMakerInternalMap.java */
-    /* renamed from: b.i.b.b.v$g */
+    /* JADX INFO: renamed from: b.i.b.b.v$g */
+    /* JADX INFO: compiled from: MapMakerInternalMap.java */
     public final class g extends m<Map.Entry<K, V>> {
         public g() {
             super(null);
@@ -370,33 +370,33 @@ public class MapMakerInternalMap<K, V, E extends i<K, V, E>, S extends n<K, V, E
         }
     }
 
-    /* compiled from: MapMakerInternalMap.java */
-    /* renamed from: b.i.b.b.v$h */
+    /* JADX INFO: renamed from: b.i.b.b.v$h */
+    /* JADX INFO: compiled from: MapMakerInternalMap.java */
     public abstract class h<T> implements Iterator<T> {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public int f12089j;
 
-        /* renamed from: k */
+        /* JADX INFO: renamed from: k */
         public int f12090k = -1;
 
-        /* renamed from: l */
+        /* JADX INFO: renamed from: l */
         @MonotonicNonNullDecl
         public n<K, V, E, S> f12091l;
 
-        /* renamed from: m */
+        /* JADX INFO: renamed from: m */
         @MonotonicNonNullDecl
         public AtomicReferenceArray<E> f12092m;
 
-        /* renamed from: n */
+        /* JADX INFO: renamed from: n */
         @NullableDecl
         public E f12093n;
 
-        /* renamed from: o */
+        /* JADX INFO: renamed from: o */
         @NullableDecl
         public MapMakerInternalMap<K, V, E, S>.d0 f12094o;
 
-        /* renamed from: p */
+        /* JADX INFO: renamed from: p */
         @NullableDecl
         public MapMakerInternalMap<K, V, E, S>.d0 f12095p;
 
@@ -405,7 +405,7 @@ public class MapMakerInternalMap<K, V, E extends i<K, V, E>, S extends n<K, V, E
             m6297a();
         }
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final void m6297a() {
             this.f12094o = null;
             if (m6300d() || m6301e()) {
@@ -430,7 +430,7 @@ public class MapMakerInternalMap<K, V, E extends i<K, V, E>, S extends n<K, V, E
             }
         }
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public boolean m6298b(E e) {
             Object value;
             boolean z2;
@@ -453,7 +453,7 @@ public class MapMakerInternalMap<K, V, E extends i<K, V, E>, S extends n<K, V, E
             }
         }
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public MapMakerInternalMap<K, V, E, S>.d0 m6299c() {
             MapMakerInternalMap<K, V, E, S>.d0 d0Var = this.f12094o;
             if (d0Var == null) {
@@ -464,7 +464,7 @@ public class MapMakerInternalMap<K, V, E extends i<K, V, E>, S extends n<K, V, E
             return this.f12095p;
         }
 
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         public boolean m6300d() {
             E e = this.f12093n;
             if (e == null) {
@@ -483,7 +483,7 @@ public class MapMakerInternalMap<K, V, E extends i<K, V, E>, S extends n<K, V, E
             }
         }
 
-        /* renamed from: e */
+        /* JADX INFO: renamed from: e */
         public boolean m6301e() {
             while (true) {
                 int i = this.f12090k;
@@ -513,13 +513,13 @@ public class MapMakerInternalMap<K, V, E extends i<K, V, E>, S extends n<K, V, E
         }
     }
 
-    /* compiled from: MapMakerInternalMap.java */
-    /* renamed from: b.i.b.b.v$i */
+    /* JADX INFO: renamed from: b.i.b.b.v$i */
+    /* JADX INFO: compiled from: MapMakerInternalMap.java */
     public interface i<K, V, E extends i<K, V, E>> {
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         E mo6295a();
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         int mo6296c();
 
         K getKey();
@@ -527,30 +527,30 @@ public class MapMakerInternalMap<K, V, E extends i<K, V, E>, S extends n<K, V, E
         V getValue();
     }
 
-    /* compiled from: MapMakerInternalMap.java */
-    /* renamed from: b.i.b.b.v$j */
+    /* JADX INFO: renamed from: b.i.b.b.v$j */
+    /* JADX INFO: compiled from: MapMakerInternalMap.java */
     public interface j<K, V, E extends i<K, V, E>, S extends n<K, V, E, S>> {
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         E mo6302a(S s2, E e, @NullableDecl E e2);
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         p mo6303b();
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         p mo6304c();
 
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         void mo6305d(S s2, E e, V v);
 
-        /* renamed from: e */
+        /* JADX INFO: renamed from: e */
         S mo6306e(MapMakerInternalMap<K, V, E, S> mapMakerInternalMap, int i, int i2);
 
-        /* renamed from: f */
+        /* JADX INFO: renamed from: f */
         E mo6307f(S s2, K k, int i, @NullableDecl E e);
     }
 
-    /* compiled from: MapMakerInternalMap.java */
-    /* renamed from: b.i.b.b.v$k */
+    /* JADX INFO: renamed from: b.i.b.b.v$k */
+    /* JADX INFO: compiled from: MapMakerInternalMap.java */
     public final class k extends MapMakerInternalMap<K, V, E, S>.h<K> {
         public k(MapMakerInternalMap mapMakerInternalMap) {
             super();
@@ -562,8 +562,8 @@ public class MapMakerInternalMap<K, V, E extends i<K, V, E>, S extends n<K, V, E
         }
     }
 
-    /* compiled from: MapMakerInternalMap.java */
-    /* renamed from: b.i.b.b.v$l */
+    /* JADX INFO: renamed from: b.i.b.b.v$l */
+    /* JADX INFO: compiled from: MapMakerInternalMap.java */
     public final class l extends m<K> {
         public l() {
             super(null);
@@ -600,8 +600,8 @@ public class MapMakerInternalMap<K, V, E extends i<K, V, E>, S extends n<K, V, E
         }
     }
 
-    /* compiled from: MapMakerInternalMap.java */
-    /* renamed from: b.i.b.b.v$m */
+    /* JADX INFO: renamed from: b.i.b.b.v$m */
+    /* JADX INFO: compiled from: MapMakerInternalMap.java */
     public static abstract class m<E> extends AbstractSet<E> {
         public m(a aVar) {
         }
@@ -617,11 +617,11 @@ public class MapMakerInternalMap<K, V, E extends i<K, V, E>, S extends n<K, V, E
         }
     }
 
-    /* compiled from: MapMakerInternalMap.java */
-    /* renamed from: b.i.b.b.v$n */
+    /* JADX INFO: renamed from: b.i.b.b.v$n */
+    /* JADX INFO: compiled from: MapMakerInternalMap.java */
     public static abstract class n<K, V, E extends i<K, V, E>, S extends n<K, V, E, S>> extends ReentrantLock {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public static final /* synthetic */ int f12098j = 0;
         public volatile int count;
 
@@ -647,14 +647,14 @@ public class MapMakerInternalMap<K, V, E extends i<K, V, E>, S extends n<K, V, E
             this.table = atomicReferenceArray;
         }
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public <T> void m6308a(ReferenceQueue<T> referenceQueue) {
             while (referenceQueue.poll() != null) {
             }
         }
 
         @GuardedBy("this")
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public void m6309b(ReferenceQueue<K> referenceQueue) {
             int i = 0;
             do {
@@ -697,7 +697,7 @@ public class MapMakerInternalMap<K, V, E extends i<K, V, E>, S extends n<K, V, E
         }
 
         @GuardedBy("this")
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public void m6310c(ReferenceQueue<V> referenceQueue) {
             int i = 0;
             do {
@@ -743,7 +743,7 @@ public class MapMakerInternalMap<K, V, E extends i<K, V, E>, S extends n<K, V, E
         }
 
         @GuardedBy("this")
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         public void m6311d() {
             AtomicReferenceArray<E> atomicReferenceArray = this.table;
             int length = atomicReferenceArray.length();
@@ -789,7 +789,7 @@ public class MapMakerInternalMap<K, V, E extends i<K, V, E>, S extends n<K, V, E
             this.count = i;
         }
 
-        /* renamed from: e */
+        /* JADX INFO: renamed from: e */
         public E m6312e(Object obj, int i) {
             if (this.count != 0) {
                 for (E e = this.table.get((r0.length() - 1) & i); e != null; e = (E) e.mo6295a()) {
@@ -806,23 +806,23 @@ public class MapMakerInternalMap<K, V, E extends i<K, V, E>, S extends n<K, V, E
             return null;
         }
 
-        /* renamed from: f */
+        /* JADX INFO: renamed from: f */
         public void mo6313f() {
         }
 
         @GuardedBy("this")
-        /* renamed from: g */
+        /* JADX INFO: renamed from: g */
         public void mo6314g() {
         }
 
-        /* renamed from: h */
+        /* JADX INFO: renamed from: h */
         public void m6315h() {
             if ((this.readCount.incrementAndGet() & 63) == 0) {
                 m6318k();
             }
         }
 
-        /* renamed from: i */
+        /* JADX INFO: renamed from: i */
         public V m6316i(K k, int i, V v, boolean z2) {
             lock();
             try {
@@ -865,7 +865,7 @@ public class MapMakerInternalMap<K, V, E extends i<K, V, E>, S extends n<K, V, E
         }
 
         @GuardedBy("this")
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public E m6317j(E e, E e2) {
             int i = this.count;
             E e3 = (E) e2.mo6295a();
@@ -882,7 +882,7 @@ public class MapMakerInternalMap<K, V, E extends i<K, V, E>, S extends n<K, V, E
             return e3;
         }
 
-        /* renamed from: k */
+        /* JADX INFO: renamed from: k */
         public void m6318k() {
             if (tryLock()) {
                 try {
@@ -894,15 +894,15 @@ public class MapMakerInternalMap<K, V, E extends i<K, V, E>, S extends n<K, V, E
             }
         }
 
-        /* renamed from: l */
+        /* JADX INFO: renamed from: l */
         public abstract S mo6319l();
 
-        /* renamed from: m */
+        /* JADX INFO: renamed from: m */
         public void m6320m(E e, V v) {
             this.map.f12074n.mo6305d(mo6319l(), e, v);
         }
 
-        /* renamed from: n */
+        /* JADX INFO: renamed from: n */
         public void m6321n() {
             if (tryLock()) {
                 try {
@@ -914,8 +914,8 @@ public class MapMakerInternalMap<K, V, E extends i<K, V, E>, S extends n<K, V, E
         }
     }
 
-    /* compiled from: MapMakerInternalMap.java */
-    /* renamed from: b.i.b.b.v$o */
+    /* JADX INFO: renamed from: b.i.b.b.v$o */
+    /* JADX INFO: compiled from: MapMakerInternalMap.java */
     public static final class o<K, V> extends b<K, V> {
         private static final long serialVersionUID = 3;
 
@@ -980,42 +980,42 @@ public class MapMakerInternalMap<K, V, E extends i<K, V, E>, S extends n<K, V, E
 
     /* JADX WARN: Failed to restore enum class, 'enum' modifier and super class removed */
     /* JADX WARN: Unknown enum class pattern. Please report as an issue! */
-    /* compiled from: MapMakerInternalMap.java */
-    /* renamed from: b.i.b.b.v$p */
+    /* JADX INFO: renamed from: b.i.b.b.v$p */
+    /* JADX INFO: compiled from: MapMakerInternalMap.java */
     public static abstract class p {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public static final p f12099j;
 
-        /* renamed from: k */
+        /* JADX INFO: renamed from: k */
         public static final p f12100k;
 
-        /* renamed from: l */
+        /* JADX INFO: renamed from: l */
         public static final /* synthetic */ p[] f12101l;
 
-        /* compiled from: MapMakerInternalMap.java */
-        /* renamed from: b.i.b.b.v$p$a */
+        /* JADX INFO: renamed from: b.i.b.b.v$p$a */
+        /* JADX INFO: compiled from: MapMakerInternalMap.java */
         public enum a extends p {
             public a(String str, int i) {
                 super(str, i, null);
             }
 
             @Override // p007b.p225i.p355b.p357b.MapMakerInternalMap.p
-            /* renamed from: f */
+            /* JADX INFO: renamed from: f */
             public Equivalence<Object> mo6322f() {
                 return Equivalence.a.f11948j;
             }
         }
 
-        /* compiled from: MapMakerInternalMap.java */
-        /* renamed from: b.i.b.b.v$p$b */
+        /* JADX INFO: renamed from: b.i.b.b.v$p$b */
+        /* JADX INFO: compiled from: MapMakerInternalMap.java */
         public enum b extends p {
             public b(String str, int i) {
                 super(str, i, null);
             }
 
             @Override // p007b.p225i.p355b.p357b.MapMakerInternalMap.p
-            /* renamed from: f */
+            /* JADX INFO: renamed from: f */
             public Equivalence<Object> mo6322f() {
                 return Equivalence.b.f11949j;
             }
@@ -1040,27 +1040,27 @@ public class MapMakerInternalMap<K, V, E extends i<K, V, E>, S extends n<K, V, E
             return (p[]) f12101l.clone();
         }
 
-        /* renamed from: f */
+        /* JADX INFO: renamed from: f */
         public abstract Equivalence<Object> mo6322f();
     }
 
-    /* compiled from: MapMakerInternalMap.java */
-    /* renamed from: b.i.b.b.v$q */
+    /* JADX INFO: renamed from: b.i.b.b.v$q */
+    /* JADX INFO: compiled from: MapMakerInternalMap.java */
     public static final class q<K, V> extends c<K, V, q<K, V>> implements i {
 
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         @NullableDecl
         public volatile V f12102d;
 
-        /* compiled from: MapMakerInternalMap.java */
-        /* renamed from: b.i.b.b.v$q$a */
+        /* JADX INFO: renamed from: b.i.b.b.v$q$a */
+        /* JADX INFO: compiled from: MapMakerInternalMap.java */
         public static final class a<K, V> implements j<K, V, q<K, V>, r<K, V>> {
 
-            /* renamed from: a */
+            /* JADX INFO: renamed from: a */
             public static final a<?, ?> f12103a = new a<>();
 
             @Override // p007b.p225i.p355b.p357b.MapMakerInternalMap.j
-            /* renamed from: a */
+            /* JADX INFO: renamed from: a */
             public i mo6302a(n nVar, i iVar, @NullableDecl i iVar2) {
                 q qVar = (q) iVar;
                 q qVar2 = new q(qVar.f12079a, qVar.f12080b, (q) iVar2);
@@ -1069,32 +1069,32 @@ public class MapMakerInternalMap<K, V, E extends i<K, V, E>, S extends n<K, V, E
             }
 
             @Override // p007b.p225i.p355b.p357b.MapMakerInternalMap.j
-            /* renamed from: b */
+            /* JADX INFO: renamed from: b */
             public p mo6303b() {
                 return p.f12099j;
             }
 
             @Override // p007b.p225i.p355b.p357b.MapMakerInternalMap.j
-            /* renamed from: c */
+            /* JADX INFO: renamed from: c */
             public p mo6304c() {
                 return p.f12099j;
             }
 
             /* JADX WARN: Multi-variable type inference failed */
             @Override // p007b.p225i.p355b.p357b.MapMakerInternalMap.j
-            /* renamed from: d */
+            /* JADX INFO: renamed from: d */
             public void mo6305d(n nVar, i iVar, Object obj) {
                 ((q) iVar).f12102d = obj;
             }
 
             @Override // p007b.p225i.p355b.p357b.MapMakerInternalMap.j
-            /* renamed from: e */
+            /* JADX INFO: renamed from: e */
             public n mo6306e(MapMakerInternalMap mapMakerInternalMap, int i, int i2) {
                 return new r(mapMakerInternalMap, i, i2);
             }
 
             @Override // p007b.p225i.p355b.p357b.MapMakerInternalMap.j
-            /* renamed from: f */
+            /* JADX INFO: renamed from: f */
             public i mo6307f(n nVar, Object obj, int i, @NullableDecl i iVar) {
                 return new q(obj, i, (q) iVar);
             }
@@ -1112,36 +1112,36 @@ public class MapMakerInternalMap<K, V, E extends i<K, V, E>, S extends n<K, V, E
         }
     }
 
-    /* compiled from: MapMakerInternalMap.java */
-    /* renamed from: b.i.b.b.v$r */
+    /* JADX INFO: renamed from: b.i.b.b.v$r */
+    /* JADX INFO: compiled from: MapMakerInternalMap.java */
     public static final class r<K, V> extends n<K, V, q<K, V>, r<K, V>> {
         public r(MapMakerInternalMap<K, V, q<K, V>, r<K, V>> mapMakerInternalMap, int i, int i2) {
             super(mapMakerInternalMap, i, i2);
         }
 
         @Override // p007b.p225i.p355b.p357b.MapMakerInternalMap.n
-        /* renamed from: l */
+        /* JADX INFO: renamed from: l */
         public n mo6319l() {
             return this;
         }
     }
 
-    /* compiled from: MapMakerInternalMap.java */
-    /* renamed from: b.i.b.b.v$s */
+    /* JADX INFO: renamed from: b.i.b.b.v$s */
+    /* JADX INFO: compiled from: MapMakerInternalMap.java */
     public static final class s<K, V> extends c<K, V, s<K, V>> implements a0<K, V, s<K, V>> {
 
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         public volatile b0<K, V, s<K, V>> f12104d;
 
-        /* compiled from: MapMakerInternalMap.java */
-        /* renamed from: b.i.b.b.v$s$a */
+        /* JADX INFO: renamed from: b.i.b.b.v$s$a */
+        /* JADX INFO: compiled from: MapMakerInternalMap.java */
         public static final class a<K, V> implements j<K, V, s<K, V>, t<K, V>> {
 
-            /* renamed from: a */
+            /* JADX INFO: renamed from: a */
             public static final a<?, ?> f12105a = new a<>();
 
             @Override // p007b.p225i.p355b.p357b.MapMakerInternalMap.j
-            /* renamed from: a */
+            /* JADX INFO: renamed from: a */
             public i mo6302a(n nVar, i iVar, @NullableDecl i iVar2) {
                 t tVar = (t) nVar;
                 s sVar = (s) iVar;
@@ -1157,19 +1157,19 @@ public class MapMakerInternalMap<K, V, E extends i<K, V, E>, S extends n<K, V, E
             }
 
             @Override // p007b.p225i.p355b.p357b.MapMakerInternalMap.j
-            /* renamed from: b */
+            /* JADX INFO: renamed from: b */
             public p mo6303b() {
                 return p.f12099j;
             }
 
             @Override // p007b.p225i.p355b.p357b.MapMakerInternalMap.j
-            /* renamed from: c */
+            /* JADX INFO: renamed from: c */
             public p mo6304c() {
                 return p.f12100k;
             }
 
             @Override // p007b.p225i.p355b.p357b.MapMakerInternalMap.j
-            /* renamed from: d */
+            /* JADX INFO: renamed from: d */
             public void mo6305d(n nVar, i iVar, Object obj) {
                 s sVar = (s) iVar;
                 ReferenceQueue referenceQueueM6323o = t.m6323o((t) nVar);
@@ -1179,13 +1179,13 @@ public class MapMakerInternalMap<K, V, E extends i<K, V, E>, S extends n<K, V, E
             }
 
             @Override // p007b.p225i.p355b.p357b.MapMakerInternalMap.j
-            /* renamed from: e */
+            /* JADX INFO: renamed from: e */
             public n mo6306e(MapMakerInternalMap mapMakerInternalMap, int i, int i2) {
                 return new t(mapMakerInternalMap, i, i2);
             }
 
             @Override // p007b.p225i.p355b.p357b.MapMakerInternalMap.j
-            /* renamed from: f */
+            /* JADX INFO: renamed from: f */
             public i mo6307f(n nVar, Object obj, int i, @NullableDecl i iVar) {
                 return new s(obj, i, (s) iVar);
             }
@@ -1198,7 +1198,7 @@ public class MapMakerInternalMap<K, V, E extends i<K, V, E>, S extends n<K, V, E
         }
 
         @Override // p007b.p225i.p355b.p357b.MapMakerInternalMap.a0
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public b0<K, V, s<K, V>> mo6294b() {
             return this.f12104d;
         }
@@ -1209,8 +1209,8 @@ public class MapMakerInternalMap<K, V, E extends i<K, V, E>, S extends n<K, V, E
         }
     }
 
-    /* compiled from: MapMakerInternalMap.java */
-    /* renamed from: b.i.b.b.v$t */
+    /* JADX INFO: renamed from: b.i.b.b.v$t */
+    /* JADX INFO: compiled from: MapMakerInternalMap.java */
     public static final class t<K, V> extends n<K, V, s<K, V>, t<K, V>> {
         private final ReferenceQueue<V> queueForValues;
 
@@ -1219,32 +1219,32 @@ public class MapMakerInternalMap<K, V, E extends i<K, V, E>, S extends n<K, V, E
             this.queueForValues = new ReferenceQueue<>();
         }
 
-        /* renamed from: o */
+        /* JADX INFO: renamed from: o */
         public static /* synthetic */ ReferenceQueue m6323o(t tVar) {
             return tVar.queueForValues;
         }
 
         @Override // p007b.p225i.p355b.p357b.MapMakerInternalMap.n
-        /* renamed from: f */
+        /* JADX INFO: renamed from: f */
         public void mo6313f() {
             m6308a(this.queueForValues);
         }
 
         @Override // p007b.p225i.p355b.p357b.MapMakerInternalMap.n
-        /* renamed from: g */
+        /* JADX INFO: renamed from: g */
         public void mo6314g() {
             m6310c(this.queueForValues);
         }
 
         @Override // p007b.p225i.p355b.p357b.MapMakerInternalMap.n
-        /* renamed from: l */
+        /* JADX INFO: renamed from: l */
         public n mo6319l() {
             return this;
         }
     }
 
-    /* compiled from: MapMakerInternalMap.java */
-    /* renamed from: b.i.b.b.v$u */
+    /* JADX INFO: renamed from: b.i.b.b.v$u */
+    /* JADX INFO: compiled from: MapMakerInternalMap.java */
     public final class u extends MapMakerInternalMap<K, V, E, S>.h<V> {
         public u(MapMakerInternalMap mapMakerInternalMap) {
             super();
@@ -1256,8 +1256,8 @@ public class MapMakerInternalMap<K, V, E extends i<K, V, E>, S extends n<K, V, E
         }
     }
 
-    /* compiled from: MapMakerInternalMap.java */
-    /* renamed from: b.i.b.b.v$v */
+    /* JADX INFO: renamed from: b.i.b.b.v$v */
+    /* JADX INFO: compiled from: MapMakerInternalMap.java */
     public final class v extends AbstractCollection<V> {
         public v() {
         }
@@ -1298,23 +1298,23 @@ public class MapMakerInternalMap<K, V, E extends i<K, V, E>, S extends n<K, V, E
         }
     }
 
-    /* compiled from: MapMakerInternalMap.java */
-    /* renamed from: b.i.b.b.v$w */
+    /* JADX INFO: renamed from: b.i.b.b.v$w */
+    /* JADX INFO: compiled from: MapMakerInternalMap.java */
     public static final class w<K, V> extends d<K, V, w<K, V>> implements i {
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         @NullableDecl
         public volatile V f12107c;
 
-        /* compiled from: MapMakerInternalMap.java */
-        /* renamed from: b.i.b.b.v$w$a */
+        /* JADX INFO: renamed from: b.i.b.b.v$w$a */
+        /* JADX INFO: compiled from: MapMakerInternalMap.java */
         public static final class a<K, V> implements j<K, V, w<K, V>, x<K, V>> {
 
-            /* renamed from: a */
+            /* JADX INFO: renamed from: a */
             public static final a<?, ?> f12108a = new a<>();
 
             @Override // p007b.p225i.p355b.p357b.MapMakerInternalMap.j
-            /* renamed from: a */
+            /* JADX INFO: renamed from: a */
             public i mo6302a(n nVar, i iVar, @NullableDecl i iVar2) {
                 x xVar = (x) nVar;
                 w wVar = (w) iVar;
@@ -1328,32 +1328,32 @@ public class MapMakerInternalMap<K, V, E extends i<K, V, E>, S extends n<K, V, E
             }
 
             @Override // p007b.p225i.p355b.p357b.MapMakerInternalMap.j
-            /* renamed from: b */
+            /* JADX INFO: renamed from: b */
             public p mo6303b() {
                 return p.f12100k;
             }
 
             @Override // p007b.p225i.p355b.p357b.MapMakerInternalMap.j
-            /* renamed from: c */
+            /* JADX INFO: renamed from: c */
             public p mo6304c() {
                 return p.f12099j;
             }
 
             /* JADX WARN: Multi-variable type inference failed */
             @Override // p007b.p225i.p355b.p357b.MapMakerInternalMap.j
-            /* renamed from: d */
+            /* JADX INFO: renamed from: d */
             public void mo6305d(n nVar, i iVar, Object obj) {
                 ((w) iVar).f12107c = obj;
             }
 
             @Override // p007b.p225i.p355b.p357b.MapMakerInternalMap.j
-            /* renamed from: e */
+            /* JADX INFO: renamed from: e */
             public n mo6306e(MapMakerInternalMap mapMakerInternalMap, int i, int i2) {
                 return new x(mapMakerInternalMap, i, i2);
             }
 
             @Override // p007b.p225i.p355b.p357b.MapMakerInternalMap.j
-            /* renamed from: f */
+            /* JADX INFO: renamed from: f */
             public i mo6307f(n nVar, Object obj, int i, @NullableDecl i iVar) {
                 return new w(x.m6324o((x) nVar), obj, i, (w) iVar);
             }
@@ -1371,8 +1371,8 @@ public class MapMakerInternalMap<K, V, E extends i<K, V, E>, S extends n<K, V, E
         }
     }
 
-    /* compiled from: MapMakerInternalMap.java */
-    /* renamed from: b.i.b.b.v$x */
+    /* JADX INFO: renamed from: b.i.b.b.v$x */
+    /* JADX INFO: compiled from: MapMakerInternalMap.java */
     public static final class x<K, V> extends n<K, V, w<K, V>, x<K, V>> {
         private final ReferenceQueue<K> queueForKeys;
 
@@ -1381,46 +1381,46 @@ public class MapMakerInternalMap<K, V, E extends i<K, V, E>, S extends n<K, V, E
             this.queueForKeys = new ReferenceQueue<>();
         }
 
-        /* renamed from: o */
+        /* JADX INFO: renamed from: o */
         public static /* synthetic */ ReferenceQueue m6324o(x xVar) {
             return xVar.queueForKeys;
         }
 
         @Override // p007b.p225i.p355b.p357b.MapMakerInternalMap.n
-        /* renamed from: f */
+        /* JADX INFO: renamed from: f */
         public void mo6313f() {
             m6308a(this.queueForKeys);
         }
 
         @Override // p007b.p225i.p355b.p357b.MapMakerInternalMap.n
-        /* renamed from: g */
+        /* JADX INFO: renamed from: g */
         public void mo6314g() {
             m6309b(this.queueForKeys);
         }
 
         @Override // p007b.p225i.p355b.p357b.MapMakerInternalMap.n
-        /* renamed from: l */
+        /* JADX INFO: renamed from: l */
         public n mo6319l() {
             return this;
         }
     }
 
-    /* compiled from: MapMakerInternalMap.java */
-    /* renamed from: b.i.b.b.v$y */
+    /* JADX INFO: renamed from: b.i.b.b.v$y */
+    /* JADX INFO: compiled from: MapMakerInternalMap.java */
     public static final class y<K, V> extends d<K, V, y<K, V>> implements a0<K, V, y<K, V>> {
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public volatile b0<K, V, y<K, V>> f12109c;
 
-        /* compiled from: MapMakerInternalMap.java */
-        /* renamed from: b.i.b.b.v$y$a */
+        /* JADX INFO: renamed from: b.i.b.b.v$y$a */
+        /* JADX INFO: compiled from: MapMakerInternalMap.java */
         public static final class a<K, V> implements j<K, V, y<K, V>, z<K, V>> {
 
-            /* renamed from: a */
+            /* JADX INFO: renamed from: a */
             public static final a<?, ?> f12110a = new a<>();
 
             @Override // p007b.p225i.p355b.p357b.MapMakerInternalMap.j
-            /* renamed from: a */
+            /* JADX INFO: renamed from: a */
             public i mo6302a(n nVar, i iVar, @NullableDecl i iVar2) {
                 z zVar = (z) nVar;
                 y yVar = (y) iVar;
@@ -1440,19 +1440,19 @@ public class MapMakerInternalMap<K, V, E extends i<K, V, E>, S extends n<K, V, E
             }
 
             @Override // p007b.p225i.p355b.p357b.MapMakerInternalMap.j
-            /* renamed from: b */
+            /* JADX INFO: renamed from: b */
             public p mo6303b() {
                 return p.f12100k;
             }
 
             @Override // p007b.p225i.p355b.p357b.MapMakerInternalMap.j
-            /* renamed from: c */
+            /* JADX INFO: renamed from: c */
             public p mo6304c() {
                 return p.f12100k;
             }
 
             @Override // p007b.p225i.p355b.p357b.MapMakerInternalMap.j
-            /* renamed from: d */
+            /* JADX INFO: renamed from: d */
             public void mo6305d(n nVar, i iVar, Object obj) {
                 y yVar = (y) iVar;
                 ReferenceQueue referenceQueueM6326p = z.m6326p((z) nVar);
@@ -1462,13 +1462,13 @@ public class MapMakerInternalMap<K, V, E extends i<K, V, E>, S extends n<K, V, E
             }
 
             @Override // p007b.p225i.p355b.p357b.MapMakerInternalMap.j
-            /* renamed from: e */
+            /* JADX INFO: renamed from: e */
             public n mo6306e(MapMakerInternalMap mapMakerInternalMap, int i, int i2) {
                 return new z(mapMakerInternalMap, i, i2);
             }
 
             @Override // p007b.p225i.p355b.p357b.MapMakerInternalMap.j
-            /* renamed from: f */
+            /* JADX INFO: renamed from: f */
             public i mo6307f(n nVar, Object obj, int i, @NullableDecl i iVar) {
                 return new y(z.m6325o((z) nVar), obj, i, (y) iVar);
             }
@@ -1481,7 +1481,7 @@ public class MapMakerInternalMap<K, V, E extends i<K, V, E>, S extends n<K, V, E
         }
 
         @Override // p007b.p225i.p355b.p357b.MapMakerInternalMap.a0
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public b0<K, V, y<K, V>> mo6294b() {
             return this.f12109c;
         }
@@ -1492,8 +1492,8 @@ public class MapMakerInternalMap<K, V, E extends i<K, V, E>, S extends n<K, V, E
         }
     }
 
-    /* compiled from: MapMakerInternalMap.java */
-    /* renamed from: b.i.b.b.v$z */
+    /* JADX INFO: renamed from: b.i.b.b.v$z */
+    /* JADX INFO: compiled from: MapMakerInternalMap.java */
     public static final class z<K, V> extends n<K, V, y<K, V>, z<K, V>> {
         private final ReferenceQueue<K> queueForKeys;
         private final ReferenceQueue<V> queueForValues;
@@ -1504,31 +1504,31 @@ public class MapMakerInternalMap<K, V, E extends i<K, V, E>, S extends n<K, V, E
             this.queueForValues = new ReferenceQueue<>();
         }
 
-        /* renamed from: o */
+        /* JADX INFO: renamed from: o */
         public static /* synthetic */ ReferenceQueue m6325o(z zVar) {
             return zVar.queueForKeys;
         }
 
-        /* renamed from: p */
+        /* JADX INFO: renamed from: p */
         public static /* synthetic */ ReferenceQueue m6326p(z zVar) {
             return zVar.queueForValues;
         }
 
         @Override // p007b.p225i.p355b.p357b.MapMakerInternalMap.n
-        /* renamed from: f */
+        /* JADX INFO: renamed from: f */
         public void mo6313f() {
             m6308a(this.queueForKeys);
         }
 
         @Override // p007b.p225i.p355b.p357b.MapMakerInternalMap.n
-        /* renamed from: g */
+        /* JADX INFO: renamed from: g */
         public void mo6314g() {
             m6309b(this.queueForKeys);
             m6310c(this.queueForValues);
         }
 
         @Override // p007b.p225i.p355b.p357b.MapMakerInternalMap.n
-        /* renamed from: l */
+        /* JADX INFO: renamed from: l */
         public n mo6319l() {
             return this;
         }
@@ -1566,7 +1566,7 @@ public class MapMakerInternalMap<K, V, E extends i<K, V, E>, S extends n<K, V, E
         }
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static ArrayList m6288a(Collection collection) {
         ArrayList arrayList = new ArrayList(collection.size());
         Iterator it = collection.iterator();
@@ -1577,7 +1577,7 @@ public class MapMakerInternalMap<K, V, E extends i<K, V, E>, S extends n<K, V, E
         return arrayList;
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public int m6289b(Object obj) {
         Equivalence<Object> equivalence = this.keyEquivalence;
         Objects.requireNonNull(equivalence);
@@ -1590,7 +1590,7 @@ public class MapMakerInternalMap<K, V, E extends i<K, V, E>, S extends n<K, V, E
         return (i6 >>> 16) ^ i6;
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public n<K, V, E, S> m6290c(int i2) {
         return this.f12073m[(i2 >>> this.f12072l) & this.f12071k];
     }
@@ -1668,7 +1668,7 @@ public class MapMakerInternalMap<K, V, E extends i<K, V, E>, S extends n<K, V, E
                         }
                     }
                 }
-                j3 += nVar.modCount;
+                j3 += (long) nVar.modCount;
             }
             if (j3 == j2) {
                 return false;
@@ -1679,7 +1679,7 @@ public class MapMakerInternalMap<K, V, E extends i<K, V, E>, S extends n<K, V, E
         return false;
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public Equivalence<Object> m6291d() {
         return this.f12074n.mo6304c().mo6322f();
     }
@@ -1723,7 +1723,7 @@ public class MapMakerInternalMap<K, V, E extends i<K, V, E>, S extends n<K, V, E
             if (nVarArr[i2].count != 0) {
                 return false;
             }
-            j2 += nVarArr[i2].modCount;
+            j2 += (long) nVarArr[i2].modCount;
         }
         if (j2 == 0) {
             return true;
@@ -1732,7 +1732,7 @@ public class MapMakerInternalMap<K, V, E extends i<K, V, E>, S extends n<K, V, E
             if (nVarArr[i3].count != 0) {
                 return false;
             }
-            j2 -= nVarArr[i3].modCount;
+            j2 -= (long) nVarArr[i3].modCount;
         }
         return j2 == 0;
     }
@@ -1895,8 +1895,8 @@ public class MapMakerInternalMap<K, V, E extends i<K, V, E>, S extends n<K, V, E
     @Override // java.util.AbstractMap, java.util.Map
     public int size() {
         long j2 = 0;
-        for (int i2 = 0; i2 < this.f12073m.length; i2++) {
-            j2 += r0[i2].count;
+        for (n<K, V, E, S> nVar : this.f12073m) {
+            j2 += (long) nVar.count;
         }
         if (j2 > 2147483647L) {
             return Integer.MAX_VALUE;

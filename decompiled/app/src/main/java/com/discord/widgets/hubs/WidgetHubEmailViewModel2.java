@@ -6,16 +6,16 @@ import kotlin.jvm.internal.DefaultConstructorMarker;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: WidgetHubEmailViewModel.kt */
-/* renamed from: com.discord.widgets.hubs.HubEmailArgs, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.hubs.HubEmailArgs, reason: use source file name */
+/* JADX INFO: compiled from: WidgetHubEmailViewModel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final /* data */ class WidgetHubEmailViewModel2 implements Parcelable {
     public static final Parcelable.Creator<WidgetHubEmailViewModel2> CREATOR = new Creator();
     private final WidgetHubEmailViewModel3 entryPoint;
     private final int guildMemberCount;
     private final String guildName;
 
-    /* renamed from: com.discord.widgets.hubs.HubEmailArgs$Creator */
+    /* JADX INFO: renamed from: com.discord.widgets.hubs.HubEmailArgs$Creator */
     public static class Creator implements Parcelable.Creator<WidgetHubEmailViewModel2> {
         /* JADX WARN: Can't rename method to resolve collision */
         @Override // android.os.Parcelable.Creator
@@ -66,17 +66,17 @@ public final /* data */ class WidgetHubEmailViewModel2 implements Parcelable {
         return widgetHubEmailViewModel2.copy(str, i, widgetHubEmailViewModel3);
     }
 
-    /* renamed from: component1, reason: from getter */
+    /* JADX INFO: renamed from: component1, reason: from getter */
     public final String getGuildName() {
         return this.guildName;
     }
 
-    /* renamed from: component2, reason: from getter */
+    /* JADX INFO: renamed from: component2, reason: from getter */
     public final int getGuildMemberCount() {
         return this.guildMemberCount;
     }
 
-    /* renamed from: component3, reason: from getter */
+    /* JADX INFO: renamed from: component3, reason: from getter */
     public final WidgetHubEmailViewModel3 getEntryPoint() {
         return this.entryPoint;
     }

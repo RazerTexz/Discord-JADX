@@ -30,7 +30,7 @@ import p617h0.p628c.RunnableC12468j;
 import p617h0.p628c.RunnableC12470k;
 import p617h0.p628c.RunnableC12472l;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public class EglRenderer implements VideoSink {
     private static final long LOG_INTERVAL_SEC = 4;
     private static final String TAG = "EglRenderer";
@@ -72,7 +72,7 @@ public class EglRenderer implements VideoSink {
     private long statisticsStartTimeNs;
     private boolean usePresentationTimeStamp;
 
-    /* renamed from: org.webrtc.EglRenderer$1 */
+    /* JADX INFO: renamed from: org.webrtc.EglRenderer$1 */
     public class RunnableC129611 implements Runnable {
         public RunnableC129611() {
         }
@@ -89,7 +89,7 @@ public class EglRenderer implements VideoSink {
         }
     }
 
-    /* renamed from: org.webrtc.EglRenderer$2 */
+    /* JADX INFO: renamed from: org.webrtc.EglRenderer$2 */
     public class RunnableC129622 implements Runnable {
         public RunnableC129622() {
         }
@@ -209,10 +209,10 @@ public class EglRenderer implements VideoSink {
         if (i <= 0) {
             return "NA";
         }
-        return TimeUnit.NANOSECONDS.toMicros(j / i) + " us";
+        return TimeUnit.NANOSECONDS.toMicros(j / ((long) i)) + " us";
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public static /* synthetic */ void m11017c(EglRenderer eglRenderer) throws Throwable {
         eglRenderer.renderFrameOnRenderThread();
     }
@@ -258,7 +258,7 @@ public class EglRenderer implements VideoSink {
         synchronized (this.statisticsLock) {
             long j = jNanoTime - this.statisticsStartTimeNs;
             if (j > 0 && (this.minRenderPeriodNs != RecyclerView.FOREVER_NS || this.framesReceived != 0)) {
-                logD("Duration: " + TimeUnit.NANOSECONDS.toMillis(j) + " ms. Frames received: " + this.framesReceived + ". Dropped: " + this.framesDropped + ". Rendered: " + this.framesRendered + ". Render fps: " + decimalFormat.format((this.framesRendered * TimeUnit.SECONDS.toNanos(1L)) / j) + ". Average render time: " + averageTimeAsString(this.renderTimeNs, this.framesRendered) + ". Average swapBuffer time: " + averageTimeAsString(this.renderSwapBufferTimeNs, this.framesRendered) + ".");
+                logD("Duration: " + TimeUnit.NANOSECONDS.toMillis(j) + " ms. Frames received: " + this.framesReceived + ". Dropped: " + this.framesDropped + ". Rendered: " + this.framesRendered + ". Render fps: " + decimalFormat.format((((long) this.framesRendered) * TimeUnit.SECONDS.toNanos(1L)) / j) + ". Average render time: " + averageTimeAsString(this.renderTimeNs, this.framesRendered) + ". Average swapBuffer time: " + averageTimeAsString(this.renderSwapBufferTimeNs, this.framesRendered) + ".");
                 resetStatistics(jNanoTime);
             }
         }
@@ -412,7 +412,6 @@ public class EglRenderer implements VideoSink {
                             if (!z2) {
                                 return;
                             }
-                            videoFrame.release();
                         } catch (Throwable th) {
                             th = th;
                             z2 = false;
@@ -447,7 +446,7 @@ public class EglRenderer implements VideoSink {
         }
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public /* synthetic */ void m11018a(RendererCommon.GlDrawer glDrawer, FrameListener frameListener, float f, boolean z2) {
         if (glDrawer == null) {
             glDrawer = this.drawer;
@@ -459,7 +458,7 @@ public class EglRenderer implements VideoSink {
         addFrameListener(frameListener, f, null, false);
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public /* synthetic */ void m11019b(float f, float f2, float f3, float f4) {
         clearSurfaceOnRenderThread(f, f2, f3, f4);
     }
@@ -472,7 +471,7 @@ public class EglRenderer implements VideoSink {
         createEglSurfaceInternal(surface);
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public /* synthetic */ void m11020d(EglBase.Context context, int[] iArr) {
         lambda$init$0(context, iArr);
     }
@@ -481,7 +480,7 @@ public class EglRenderer implements VideoSink {
         setFpsReduction(Float.POSITIVE_INFINITY);
     }
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public /* synthetic */ void m11021e(CountDownLatch countDownLatch) {
         synchronized (EglBase.lock) {
             GLES20.glUseProgram(0);
@@ -503,13 +502,13 @@ public class EglRenderer implements VideoSink {
         countDownLatch.countDown();
     }
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public /* synthetic */ void m11022f(Looper looper) {
         logD("Quitting render thread.");
         looper.quit();
     }
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public /* synthetic */ void m11023g(Runnable runnable) {
         EglBase eglBase = this.eglBase;
         if (eglBase != null) {
@@ -519,7 +518,7 @@ public class EglRenderer implements VideoSink {
         runnable.run();
     }
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public /* synthetic */ void m11024h(CountDownLatch countDownLatch, FrameListener frameListener) {
         countDownLatch.countDown();
         Iterator<FrameListenerAndParams> it = this.frameListeners.iterator();

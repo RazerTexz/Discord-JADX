@@ -7,12 +7,12 @@ import p615g0.Buffer3;
 import p615g0.Options2;
 import p615g0.Segment2;
 
-/* compiled from: Buffer.kt */
-/* renamed from: g0.z.a, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: g0.z.a, reason: use source file name */
+/* JADX INFO: compiled from: Buffer.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class Buffer5 {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final byte[] f26137a;
 
     static {
@@ -22,7 +22,7 @@ public final class Buffer5 {
         f26137a = bytes;
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final String m10513a(Buffer3 buffer3, long j) throws EOFException {
         Intrinsics3.checkParameterIsNotNull(buffer3, "$this$readUtf8Line");
         if (j > 0) {
@@ -50,7 +50,7 @@ public final class Buffer5 {
     
         return r10;
      */
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */

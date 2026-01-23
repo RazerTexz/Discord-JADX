@@ -19,37 +19,37 @@ import p658rx.Scheduler;
 import p658rx.Subscription;
 import p658rx.functions.Action0;
 
-/* compiled from: NewThreadWorker.java */
-/* renamed from: j0.l.c.g, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: j0.l.c.g, reason: use source file name */
+/* JADX INFO: compiled from: NewThreadWorker.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class NewThreadWorker extends Scheduler.Worker implements Subscription {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static final boolean f27223j;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public static volatile Object f27227n;
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public final ScheduledExecutorService f27229p;
 
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     public volatile boolean f27230q;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public static final Object f27228o = new Object();
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public static final ConcurrentHashMap<ScheduledThreadPoolExecutor, ScheduledThreadPoolExecutor> f27225l = new ConcurrentHashMap<>();
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public static final AtomicReference<ScheduledExecutorService> f27226m = new AtomicReference<>();
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public static final int f27224k = Integer.getInteger("rx.scheduler.jdk6.purge-frequency-millis", 1000).intValue();
 
-    /* compiled from: NewThreadWorker.java */
-    /* renamed from: j0.l.c.g$a */
+    /* JADX INFO: renamed from: j0.l.c.g$a */
+    /* JADX INFO: compiled from: NewThreadWorker.java */
     public static class a implements Runnable {
         @Override // java.lang.Runnable
         public void run() {
@@ -84,8 +84,8 @@ public class NewThreadWorker extends Scheduler.Worker implements Subscription {
         this.f27229p = scheduledExecutorServiceNewScheduledThreadPool;
     }
 
-    /* renamed from: d */
-    public static Method m10802d(ScheduledExecutorService scheduledExecutorService) throws SecurityException {
+    /* JADX INFO: renamed from: d */
+    public static Method m10802d(ScheduledExecutorService scheduledExecutorService) {
         for (Method method : scheduledExecutorService.getClass().getMethods()) {
             if (method.getName().equals("setRemoveOnCancelPolicy")) {
                 Class<?>[] parameterTypes = method.getParameterTypes();
@@ -97,7 +97,7 @@ public class NewThreadWorker extends Scheduler.Worker implements Subscription {
         return null;
     }
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public static void m10803e(ScheduledThreadPoolExecutor scheduledThreadPoolExecutor) {
         while (true) {
             AtomicReference<ScheduledExecutorService> atomicReference = f27226m;
@@ -116,8 +116,8 @@ public class NewThreadWorker extends Scheduler.Worker implements Subscription {
         f27225l.putIfAbsent(scheduledThreadPoolExecutor, scheduledThreadPoolExecutor);
     }
 
-    /* renamed from: g */
-    public static boolean m10804g(ScheduledExecutorService scheduledExecutorService) throws SecurityException {
+    /* JADX INFO: renamed from: g */
+    public static boolean m10804g(ScheduledExecutorService scheduledExecutorService) {
         Method methodM10802d;
         if (f27223j) {
             if (scheduledExecutorService instanceof ScheduledThreadPoolExecutor) {
@@ -155,18 +155,18 @@ public class NewThreadWorker extends Scheduler.Worker implements Subscription {
     }
 
     @Override // rx.Scheduler.Worker
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public Subscription mo10740a(Action0 action0) {
         return this.f27230q ? Subscriptions.f27422a : m10805f(action0, 0L, null);
     }
 
     @Override // rx.Scheduler.Worker
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public Subscription mo10741b(Action0 action0, long j, TimeUnit timeUnit) {
         return this.f27230q ? Subscriptions.f27422a : m10805f(action0, j, timeUnit);
     }
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public ScheduledAction m10805f(Action0 action0, long j, TimeUnit timeUnit) {
         ScheduledAction scheduledAction = new ScheduledAction(C12774l.m10865d(action0));
         scheduledAction.m10807a(j <= 0 ? this.f27229p.submit(scheduledAction) : this.f27229p.schedule(scheduledAction, j, timeUnit));

@@ -9,19 +9,19 @@ import p007b.p225i.p226a.p242c.p257e3.DefaultAllocator;
 import p007b.p225i.p226a.p242c.p257e3.TransferListener;
 import p007b.p225i.p226a.p242c.p266w2.DrmSessionEventListener;
 
-/* compiled from: MediaSource.java */
-/* renamed from: b.i.a.c.a3.a0, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.a3.a0, reason: use source file name */
+/* JADX INFO: compiled from: MediaSource.java */
+/* JADX INFO: loaded from: classes3.dex */
 public interface MediaSource2 {
 
-    /* compiled from: MediaSource.java */
-    /* renamed from: b.i.a.c.a3.a0$a */
+    /* JADX INFO: renamed from: b.i.a.c.a3.a0$a */
+    /* JADX INFO: compiled from: MediaSource.java */
     public static final class a extends MediaPeriodId {
         public a(Object obj) {
             super(obj);
         }
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public a m2460b(Object obj) {
             return new a(this.f5732a.equals(obj) ? this : new MediaPeriodId(obj, this.f5733b, this.f5734c, this.f5735d, this.f5736e));
         }
@@ -39,53 +39,53 @@ public interface MediaSource2 {
         }
     }
 
-    /* compiled from: MediaSource.java */
-    /* renamed from: b.i.a.c.a3.a0$b */
+    /* JADX INFO: renamed from: b.i.a.c.a3.a0$b */
+    /* JADX INFO: compiled from: MediaSource.java */
     public interface b {
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         void mo2445a(MediaSource2 mediaSource2, Timeline timeline);
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     void mo2446a(b bVar);
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     void mo2447b(Handler handler, MediaSourceEventListener mediaSourceEventListener);
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     void mo2448c(MediaSourceEventListener mediaSourceEventListener);
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     void mo2449d(b bVar);
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     MediaItem2 mo2450e();
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     void mo2451f(Handler handler, DrmSessionEventListener drmSessionEventListener);
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     void mo2452g(DrmSessionEventListener drmSessionEventListener);
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     void mo2453h() throws IOException;
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     boolean mo2454i();
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     void mo2455j(MediaPeriod mediaPeriod);
 
     @Nullable
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     Timeline mo2456k();
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     void mo2457l(b bVar, @Nullable TransferListener transferListener);
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     void mo2458m(b bVar);
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     MediaPeriod mo2459n(a aVar, DefaultAllocator defaultAllocator, long j);
 }

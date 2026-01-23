@@ -21,25 +21,25 @@ import p507d0.p580t.Sets5;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: DescriptorRenderer.kt */
-/* renamed from: d0.e0.p.d.m0.j.c, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.j.c, reason: use source file name */
+/* JADX INFO: compiled from: DescriptorRenderer.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public abstract class DescriptorRenderer2 {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final k f24225a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static final DescriptorRenderer2 f24226b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public static final DescriptorRenderer2 f24227c;
 
-    /* compiled from: DescriptorRenderer.kt */
-    /* renamed from: d0.e0.p.d.m0.j.c$a */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.j.c$a */
+    /* JADX INFO: compiled from: DescriptorRenderer.kt */
     public static final class a extends Lambda implements Function1<DescriptorRenderer4, Unit> {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public static final a f24228j = new a();
 
         public a() {
@@ -52,7 +52,7 @@ public abstract class DescriptorRenderer2 {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(DescriptorRenderer4 descriptorRenderer4) {
             Intrinsics3.checkNotNullParameter(descriptorRenderer4, "<this>");
             descriptorRenderer4.setWithDefinedIn(false);
@@ -60,11 +60,11 @@ public abstract class DescriptorRenderer2 {
         }
     }
 
-    /* compiled from: DescriptorRenderer.kt */
-    /* renamed from: d0.e0.p.d.m0.j.c$b */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.j.c$b */
+    /* JADX INFO: compiled from: DescriptorRenderer.kt */
     public static final class b extends Lambda implements Function1<DescriptorRenderer4, Unit> {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public static final b f24229j = new b();
 
         public b() {
@@ -77,7 +77,7 @@ public abstract class DescriptorRenderer2 {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(DescriptorRenderer4 descriptorRenderer4) {
             Intrinsics3.checkNotNullParameter(descriptorRenderer4, "<this>");
             descriptorRenderer4.setWithDefinedIn(false);
@@ -86,11 +86,11 @@ public abstract class DescriptorRenderer2 {
         }
     }
 
-    /* compiled from: DescriptorRenderer.kt */
-    /* renamed from: d0.e0.p.d.m0.j.c$c */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.j.c$c */
+    /* JADX INFO: compiled from: DescriptorRenderer.kt */
     public static final class c extends Lambda implements Function1<DescriptorRenderer4, Unit> {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public static final c f24230j = new c();
 
         public c() {
@@ -103,18 +103,18 @@ public abstract class DescriptorRenderer2 {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(DescriptorRenderer4 descriptorRenderer4) {
             Intrinsics3.checkNotNullParameter(descriptorRenderer4, "<this>");
             descriptorRenderer4.setWithDefinedIn(false);
         }
     }
 
-    /* compiled from: DescriptorRenderer.kt */
-    /* renamed from: d0.e0.p.d.m0.j.c$d */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.j.c$d */
+    /* JADX INFO: compiled from: DescriptorRenderer.kt */
     public static final class d extends Lambda implements Function1<DescriptorRenderer4, Unit> {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public static final d f24231j = new d();
 
         public d() {
@@ -127,7 +127,7 @@ public abstract class DescriptorRenderer2 {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(DescriptorRenderer4 descriptorRenderer4) {
             Intrinsics3.checkNotNullParameter(descriptorRenderer4, "<this>");
             descriptorRenderer4.setModifiers(Sets5.emptySet());
@@ -136,11 +136,11 @@ public abstract class DescriptorRenderer2 {
         }
     }
 
-    /* compiled from: DescriptorRenderer.kt */
-    /* renamed from: d0.e0.p.d.m0.j.c$e */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.j.c$e */
+    /* JADX INFO: compiled from: DescriptorRenderer.kt */
     public static final class e extends Lambda implements Function1<DescriptorRenderer4, Unit> {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public static final e f24232j = new e();
 
         public e() {
@@ -153,7 +153,7 @@ public abstract class DescriptorRenderer2 {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(DescriptorRenderer4 descriptorRenderer4) {
             Intrinsics3.checkNotNullParameter(descriptorRenderer4, "<this>");
             descriptorRenderer4.setDebugMode(true);
@@ -162,11 +162,11 @@ public abstract class DescriptorRenderer2 {
         }
     }
 
-    /* compiled from: DescriptorRenderer.kt */
-    /* renamed from: d0.e0.p.d.m0.j.c$f */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.j.c$f */
+    /* JADX INFO: compiled from: DescriptorRenderer.kt */
     public static final class f extends Lambda implements Function1<DescriptorRenderer4, Unit> {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public static final f f24233j = new f();
 
         public f() {
@@ -179,18 +179,18 @@ public abstract class DescriptorRenderer2 {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(DescriptorRenderer4 descriptorRenderer4) {
             Intrinsics3.checkNotNullParameter(descriptorRenderer4, "<this>");
             descriptorRenderer4.setModifiers(DescriptorRenderer3.f24244j);
         }
     }
 
-    /* compiled from: DescriptorRenderer.kt */
-    /* renamed from: d0.e0.p.d.m0.j.c$g */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.j.c$g */
+    /* JADX INFO: compiled from: DescriptorRenderer.kt */
     public static final class g extends Lambda implements Function1<DescriptorRenderer4, Unit> {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public static final g f24234j = new g();
 
         public g() {
@@ -203,18 +203,18 @@ public abstract class DescriptorRenderer2 {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(DescriptorRenderer4 descriptorRenderer4) {
             Intrinsics3.checkNotNullParameter(descriptorRenderer4, "<this>");
             descriptorRenderer4.setModifiers(DescriptorRenderer3.f24245k);
         }
     }
 
-    /* compiled from: DescriptorRenderer.kt */
-    /* renamed from: d0.e0.p.d.m0.j.c$h */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.j.c$h */
+    /* JADX INFO: compiled from: DescriptorRenderer.kt */
     public static final class h extends Lambda implements Function1<DescriptorRenderer4, Unit> {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public static final h f24235j = new h();
 
         public h() {
@@ -227,7 +227,7 @@ public abstract class DescriptorRenderer2 {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(DescriptorRenderer4 descriptorRenderer4) {
             Intrinsics3.checkNotNullParameter(descriptorRenderer4, "<this>");
             descriptorRenderer4.setTextFormat(DescriptorRenderer9.f24330k);
@@ -235,11 +235,11 @@ public abstract class DescriptorRenderer2 {
         }
     }
 
-    /* compiled from: DescriptorRenderer.kt */
-    /* renamed from: d0.e0.p.d.m0.j.c$i */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.j.c$i */
+    /* JADX INFO: compiled from: DescriptorRenderer.kt */
     public static final class i extends Lambda implements Function1<DescriptorRenderer4, Unit> {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public static final i f24236j = new i();
 
         public i() {
@@ -252,7 +252,7 @@ public abstract class DescriptorRenderer2 {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(DescriptorRenderer4 descriptorRenderer4) {
             Intrinsics3.checkNotNullParameter(descriptorRenderer4, "<this>");
             descriptorRenderer4.setWithDefinedIn(false);
@@ -267,11 +267,11 @@ public abstract class DescriptorRenderer2 {
         }
     }
 
-    /* compiled from: DescriptorRenderer.kt */
-    /* renamed from: d0.e0.p.d.m0.j.c$j */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.j.c$j */
+    /* JADX INFO: compiled from: DescriptorRenderer.kt */
     public static final class j extends Lambda implements Function1<DescriptorRenderer4, Unit> {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public static final j f24237j = new j();
 
         public j() {
@@ -284,7 +284,7 @@ public abstract class DescriptorRenderer2 {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(DescriptorRenderer4 descriptorRenderer4) {
             Intrinsics3.checkNotNullParameter(descriptorRenderer4, "<this>");
             descriptorRenderer4.setClassifierNamePolicy(ClassifierNamePolicy.b.f24223a);
@@ -292,8 +292,8 @@ public abstract class DescriptorRenderer2 {
         }
     }
 
-    /* compiled from: DescriptorRenderer.kt */
-    /* renamed from: d0.e0.p.d.m0.j.c$k */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.j.c$k */
+    /* JADX INFO: compiled from: DescriptorRenderer.kt */
     public static final class k {
         public k(DefaultConstructorMarker defaultConstructorMarker) {
         }
@@ -341,15 +341,15 @@ public abstract class DescriptorRenderer2 {
         }
     }
 
-    /* compiled from: DescriptorRenderer.kt */
-    /* renamed from: d0.e0.p.d.m0.j.c$l */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.j.c$l */
+    /* JADX INFO: compiled from: DescriptorRenderer.kt */
     public interface l {
 
-        /* compiled from: DescriptorRenderer.kt */
-        /* renamed from: d0.e0.p.d.m0.j.c$l$a */
+        /* JADX INFO: renamed from: d0.e0.p.d.m0.j.c$l$a */
+        /* JADX INFO: compiled from: DescriptorRenderer.kt */
         public static final class a implements l {
 
-            /* renamed from: a */
+            /* JADX INFO: renamed from: a */
             public static final a f24238a = new a();
 
             @Override // p507d0.p513e0.p514p.p515d.p517m0.p551j.DescriptorRenderer2.l

@@ -7,9 +7,9 @@ import kotlin.jvm.functions.Function1;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: AppVideoStreamRenderer.kt */
-/* renamed from: b.a.y.j0.b, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: b.a.y.j0.b, reason: use source file name */
+/* JADX INFO: compiled from: AppVideoStreamRenderer.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class AppVideoStreamRenderer3 extends Lambda implements Function1<Point, Unit> {
     public final /* synthetic */ AppVideoStreamRenderer this$0;
 

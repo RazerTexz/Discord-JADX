@@ -18,7 +18,7 @@ import org.webrtc.VideoFrame;
 import p007b.p100d.p104b.p105a.outline;
 import p617h0.p628c.VideoDecoder2;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public class AndroidVideoDecoder implements VideoDecoder, VideoSink {
     private static final int DEQUEUE_INPUT_TIMEOUT_US = 500000;
     private static final int DEQUEUE_OUTPUT_BUFFER_TIMEOUT_US = 100000;
@@ -71,7 +71,7 @@ public class AndroidVideoDecoder implements VideoDecoder, VideoSink {
     private final Object dimensionLock = new Object();
     private final Object renderedTextureMetadataLock = new Object();
 
-    /* renamed from: org.webrtc.AndroidVideoDecoder$1 */
+    /* JADX INFO: renamed from: org.webrtc.AndroidVideoDecoder$1 */
     public class C129441 extends Thread {
         public C129441(String str) {
             super(str);

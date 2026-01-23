@@ -29,9 +29,9 @@ import p507d0.p580t.MapsJVM;
 import p507d0.p580t._Collections;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: functionTypes.kt */
-/* renamed from: d0.e0.p.d.m0.b.g, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.b.g, reason: use source file name */
+/* JADX INFO: compiled from: functionTypes.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class functionTypes {
     public static final KotlinType4 createFunctionType(KotlinBuiltIns kotlinBuiltIns, Annotations4 annotations4, KotlinType kotlinType, List<? extends KotlinType> list, List<Name> list2, KotlinType kotlinType2, boolean z2) {
         Intrinsics3.checkNotNullParameter(kotlinBuiltIns, "builtIns");

@@ -20,20 +20,20 @@ import p007b.p008a.p025i.ViewUploadProgressBinding;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: UploadProgressView.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: UploadProgressView.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class UploadProgressView extends ConstraintLayout {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static final /* synthetic */ int f19167j = 0;
 
-    /* renamed from: k, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: k, reason: from kotlin metadata */
     public final ViewUploadProgressBinding binding;
 
-    /* renamed from: l, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: l, reason: from kotlin metadata */
     public final Drawable drawableComplete;
 
-    /* renamed from: m, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: m, reason: from kotlin metadata */
     public final Drawable drawableInProgress;
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -67,7 +67,7 @@ public final class UploadProgressView extends ConstraintLayout {
         throw new NullPointerException("Missing required view with ID: ".concat(viewInflate.getResources().getResourceName(i)));
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final void m8565a(CharSequence title, int progress, String subtitle) {
         Intrinsics3.checkNotNullParameter(title, "title");
         ViewUploadProgressBinding viewUploadProgressBinding = this.binding;

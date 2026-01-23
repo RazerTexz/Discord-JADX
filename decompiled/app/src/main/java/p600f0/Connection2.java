@@ -1,7 +1,7 @@
 package p600f0;
 
-/* compiled from: Connection.kt */
-/* renamed from: f0.k, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: f0.k, reason: use source file name */
+/* JADX INFO: compiled from: Connection.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public interface Connection2 {
 }

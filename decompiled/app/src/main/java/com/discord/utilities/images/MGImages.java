@@ -65,13 +65,13 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 import p658rx.functions.Action1;
 
-/* compiled from: MGImages.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: MGImages.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class MGImages {
     public static final MGImages INSTANCE = new MGImages();
     private static final ImageEncoder imageEncoder = new ImageEncoder();
 
-    /* compiled from: MGImages.kt */
+    /* JADX INFO: compiled from: MGImages.kt */
     public static final class AlwaysUpdateChangeDetector implements ChangeDetector {
         public static final AlwaysUpdateChangeDetector INSTANCE = new AlwaysUpdateChangeDetector();
 
@@ -85,12 +85,12 @@ public final class MGImages {
         }
     }
 
-    /* compiled from: MGImages.kt */
+    /* JADX INFO: compiled from: MGImages.kt */
     public interface ChangeDetector {
         boolean track(Object key, Object value);
     }
 
-    /* compiled from: MGImages.kt */
+    /* JADX INFO: compiled from: MGImages.kt */
     public static final class DistinctChangeDetector implements ChangeDetector {
         private final HashMap<Object, Object> dataMap = new HashMap<>();
 
@@ -105,8 +105,8 @@ public final class MGImages {
         }
     }
 
-    /* compiled from: MGImages.kt */
-    /* renamed from: com.discord.utilities.images.MGImages$requestImageCrop$1 */
+    /* JADX INFO: renamed from: com.discord.utilities.images.MGImages$requestImageCrop$1 */
+    /* JADX INFO: compiled from: MGImages.kt */
     public static final class C67741 extends Lambda implements Function1<Exception, Unit> {
         public final /* synthetic */ Context $context;
 
@@ -122,7 +122,7 @@ public final class MGImages {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Exception exc) {
             Intrinsics3.checkNotNullParameter(exc, "e");
             Context context = this.$context;

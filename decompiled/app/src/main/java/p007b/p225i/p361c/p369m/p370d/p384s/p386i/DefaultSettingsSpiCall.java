@@ -14,12 +14,12 @@ import p007b.p225i.p361c.p369m.p370d.p377n.HttpRequestFactory;
 import p007b.p225i.p361c.p369m.p370d.p377n.HttpResponse;
 import p007b.p225i.p361c.p369m.p370d.p384s.p385h.SettingsRequest;
 
-/* compiled from: DefaultSettingsSpiCall.java */
-/* renamed from: b.i.c.m.d.s.i.c, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.c.m.d.s.i.c, reason: use source file name */
+/* JADX INFO: compiled from: DefaultSettingsSpiCall.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class DefaultSettingsSpiCall extends AbstractSpiCall implements SettingsSpiCall {
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public Logger3 f12773f;
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -29,7 +29,7 @@ public class DefaultSettingsSpiCall extends AbstractSpiCall implements SettingsS
         this.f12773f = logger3;
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final HttpRequest m6692d(HttpRequest httpRequest, SettingsRequest settingsRequest) {
         m6693e(httpRequest, "X-CRASHLYTICS-GOOGLE-APP-ID", settingsRequest.f12763a);
         m6693e(httpRequest, "X-CRASHLYTICS-API-CLIENT-TYPE", "android");
@@ -42,14 +42,14 @@ public class DefaultSettingsSpiCall extends AbstractSpiCall implements SettingsS
         return httpRequest;
     }
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final void m6693e(HttpRequest httpRequest, String str, String str2) {
         if (str2 != null) {
             httpRequest.f12661e.put(str, str2);
         }
     }
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final Map<String, String> m6694f(SettingsRequest settingsRequest) {
         HashMap map = new HashMap();
         map.put("build_version", settingsRequest.f12770h);
@@ -62,7 +62,7 @@ public class DefaultSettingsSpiCall extends AbstractSpiCall implements SettingsS
         return map;
     }
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public JSONObject m6695g(HttpResponse httpResponse) {
         int i = httpResponse.f12663a;
         this.f12773f.m6371b("Settings result was: " + i);

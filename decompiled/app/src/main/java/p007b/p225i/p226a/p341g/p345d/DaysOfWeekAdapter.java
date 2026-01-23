@@ -13,22 +13,22 @@ import com.google.android.material.C10817R;
 import java.util.Calendar;
 import java.util.Locale;
 
-/* compiled from: DaysOfWeekAdapter.java */
-/* renamed from: b.i.a.g.d.e, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.g.d.e, reason: use source file name */
+/* JADX INFO: compiled from: DaysOfWeekAdapter.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class DaysOfWeekAdapter extends BaseAdapter {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static final int f11602j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     @NonNull
     public final Calendar f11603k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final int f11604l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public final int f11605m;
 
     static {

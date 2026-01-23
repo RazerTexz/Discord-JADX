@@ -22,11 +22,11 @@ import p507d0.p592z.p594d.Lambda;
 import p658rx.Observable;
 import p658rx.subjects.PublishSubject;
 
-/* compiled from: GuildInviteSettingsViewModel.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: GuildInviteSettingsViewModel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class GuildInviteSettingsViewModel extends AppViewModel<ViewState> {
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private final Long channelId;
     private StoreState currentStoreState;
@@ -37,8 +37,8 @@ public final class GuildInviteSettingsViewModel extends AppViewModel<ViewState> 
     private Channel targetChannel;
     private final TargetChannelSelector targetChannelSelector;
 
-    /* compiled from: GuildInviteSettingsViewModel.kt */
-    /* renamed from: com.discord.widgets.guilds.invite.GuildInviteSettingsViewModel$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.guilds.invite.GuildInviteSettingsViewModel$1 */
+    /* JADX INFO: compiled from: GuildInviteSettingsViewModel.kt */
     public static final class C86171 extends Lambda implements Function1<StoreState, Unit> {
         public C86171() {
             super(1);
@@ -50,14 +50,14 @@ public final class GuildInviteSettingsViewModel extends AppViewModel<ViewState> 
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(StoreState storeState) {
             Intrinsics3.checkNotNullParameter(storeState, "storeState");
             GuildInviteSettingsViewModel.access$handleStoreState(GuildInviteSettingsViewModel.this, storeState);
         }
     }
 
-    /* compiled from: GuildInviteSettingsViewModel.kt */
+    /* JADX INFO: compiled from: GuildInviteSettingsViewModel.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -77,10 +77,10 @@ public final class GuildInviteSettingsViewModel extends AppViewModel<ViewState> 
         }
     }
 
-    /* compiled from: GuildInviteSettingsViewModel.kt */
+    /* JADX INFO: compiled from: GuildInviteSettingsViewModel.kt */
     public static abstract class Event {
 
-        /* compiled from: GuildInviteSettingsViewModel.kt */
+        /* JADX INFO: compiled from: GuildInviteSettingsViewModel.kt */
         public static final class InviteCreationFailure extends Event {
             public static final InviteCreationFailure INSTANCE = new InviteCreationFailure();
 
@@ -89,7 +89,7 @@ public final class GuildInviteSettingsViewModel extends AppViewModel<ViewState> 
             }
         }
 
-        /* compiled from: GuildInviteSettingsViewModel.kt */
+        /* JADX INFO: compiled from: GuildInviteSettingsViewModel.kt */
         public static final /* data */ class InviteCreationSuccess extends Event {
             private final GuildInvite invite;
 
@@ -107,7 +107,7 @@ public final class GuildInviteSettingsViewModel extends AppViewModel<ViewState> 
                 return inviteCreationSuccess.copy(guildInvite);
             }
 
-            /* renamed from: component1, reason: from getter */
+            /* JADX INFO: renamed from: component1, reason: from getter */
             public final GuildInvite getInvite() {
                 return this.invite;
             }
@@ -152,7 +152,7 @@ public final class GuildInviteSettingsViewModel extends AppViewModel<ViewState> 
         }
     }
 
-    /* compiled from: GuildInviteSettingsViewModel.kt */
+    /* JADX INFO: compiled from: GuildInviteSettingsViewModel.kt */
     public static final /* data */ class StoreState {
         private final Map<Long, Channel> invitableChannels;
         private final ModelInvite.Settings inviteSettings;
@@ -175,7 +175,7 @@ public final class GuildInviteSettingsViewModel extends AppViewModel<ViewState> 
             return storeState.copy(settings, map);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final ModelInvite.Settings getInviteSettings() {
             return this.inviteSettings;
         }
@@ -224,7 +224,7 @@ public final class GuildInviteSettingsViewModel extends AppViewModel<ViewState> 
         }
     }
 
-    /* compiled from: GuildInviteSettingsViewModel.kt */
+    /* JADX INFO: compiled from: GuildInviteSettingsViewModel.kt */
     public static final /* data */ class ViewState {
         private final List<Channel> invitableChannels;
         private final ModelInvite.Settings inviteSettings;
@@ -256,12 +256,12 @@ public final class GuildInviteSettingsViewModel extends AppViewModel<ViewState> 
             return this.invitableChannels;
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final ModelInvite.Settings getInviteSettings() {
             return this.inviteSettings;
         }
 
-        /* renamed from: component3, reason: from getter */
+        /* JADX INFO: renamed from: component3, reason: from getter */
         public final Channel getTargetChannel() {
             return this.targetChannel;
         }
@@ -316,8 +316,8 @@ public final class GuildInviteSettingsViewModel extends AppViewModel<ViewState> 
         }
     }
 
-    /* compiled from: GuildInviteSettingsViewModel.kt */
-    /* renamed from: com.discord.widgets.guilds.invite.GuildInviteSettingsViewModel$generateInviteForChannel$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.guilds.invite.GuildInviteSettingsViewModel$generateInviteForChannel$1 */
+    /* JADX INFO: compiled from: GuildInviteSettingsViewModel.kt */
     public static final class C86181 extends Lambda implements Function1<ModelInvite, Unit> {
         public C86181() {
             super(1);
@@ -329,15 +329,15 @@ public final class GuildInviteSettingsViewModel extends AppViewModel<ViewState> 
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(ModelInvite modelInvite) {
             Intrinsics3.checkNotNullParameter(modelInvite, "invite");
             GuildInviteSettingsViewModel.access$handleInviteCreationSuccess(GuildInviteSettingsViewModel.this, modelInvite);
         }
     }
 
-    /* compiled from: GuildInviteSettingsViewModel.kt */
-    /* renamed from: com.discord.widgets.guilds.invite.GuildInviteSettingsViewModel$generateInviteForChannel$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.guilds.invite.GuildInviteSettingsViewModel$generateInviteForChannel$2 */
+    /* JADX INFO: compiled from: GuildInviteSettingsViewModel.kt */
     public static final class C86192 extends Lambda implements Function1<Error, Unit> {
         public C86192() {
             super(1);
@@ -349,7 +349,7 @@ public final class GuildInviteSettingsViewModel extends AppViewModel<ViewState> 
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Error error) {
             Intrinsics3.checkNotNullParameter(error, "it");
             GuildInviteSettingsViewModel.access$handleInviteCreationFailure(GuildInviteSettingsViewModel.this);

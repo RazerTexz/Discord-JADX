@@ -17,20 +17,20 @@ import com.google.android.material.button.MaterialButton;
 import p007b.p008a.p025i.ViewLoadingButtonBinding;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: LoadingButton.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: LoadingButton.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class LoadingButton extends FrameLayout {
 
-    /* renamed from: j, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: j, reason: from kotlin metadata */
     public final ViewLoadingButtonBinding binding;
 
-    /* renamed from: k, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: k, reason: from kotlin metadata */
     public float disabledAlpha;
 
-    /* renamed from: l, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: l, reason: from kotlin metadata */
     public CharSequence buttonText;
 
-    /* renamed from: m, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: m, reason: from kotlin metadata */
     public Drawable buttonIcon;
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */

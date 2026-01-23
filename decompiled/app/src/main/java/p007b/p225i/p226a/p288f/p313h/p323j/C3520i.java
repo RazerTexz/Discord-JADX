@@ -3,14 +3,14 @@ package p007b.p225i.p226a.p288f.p313h.p323j;
 import android.content.Context;
 import p007b.p085c.p086a.p087a0.AnimatableValueParser;
 
-/* renamed from: b.i.a.f.h.j.i */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.h.j.i */
+/* JADX INFO: loaded from: classes3.dex */
 public final class C3520i {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final Context f9735a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final Context f9736b;
 
     public C3520i(Context context) {

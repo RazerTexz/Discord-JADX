@@ -7,7 +7,7 @@ import java.util.Map;
 import p007b.p100d.p104b.p105a.outline;
 import p007b.p225i.p226a.p242c.p257e3.DataSpec;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public final class HttpDataSource$InvalidResponseCodeException extends HttpDataSource$HttpDataSourceException {
     public final Map<String, List<String>> headerFields;
     public final byte[] responseBody;

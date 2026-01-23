@@ -7,8 +7,8 @@ import p007b.p100d.p104b.p105a.outline;
 import p507d0.p580t.CollectionsJVM;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: Autocompletable.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: Autocompletable.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final /* data */ class ApplicationCommandAutocompletable extends Autocompletable {
     private final Application application;
     private final ApplicationCommand command;
@@ -43,22 +43,22 @@ public final /* data */ class ApplicationCommandAutocompletable extends Autocomp
         return applicationCommandAutocompletable.copy(application, applicationCommand, z2, z3);
     }
 
-    /* renamed from: component1, reason: from getter */
+    /* JADX INFO: renamed from: component1, reason: from getter */
     public final Application getApplication() {
         return this.application;
     }
 
-    /* renamed from: component2, reason: from getter */
+    /* JADX INFO: renamed from: component2, reason: from getter */
     public final ApplicationCommand getCommand() {
         return this.command;
     }
 
-    /* renamed from: component3, reason: from getter */
+    /* JADX INFO: renamed from: component3, reason: from getter */
     public final boolean getHasPermissionToUse() {
         return this.hasPermissionToUse;
     }
 
-    /* renamed from: component4, reason: from getter */
+    /* JADX INFO: renamed from: component4, reason: from getter */
     public final boolean getShowAvatar() {
         return this.showAvatar;
     }
@@ -110,19 +110,25 @@ public final /* data */ class ApplicationCommandAutocompletable extends Autocomp
     }
 
     /* JADX WARN: Multi-variable type inference failed */
+    /* JADX WARN: Type inference failed for: r1v3, types: [int] */
+    /* JADX WARN: Type inference failed for: r1v5 */
+    /* JADX WARN: Type inference failed for: r1v7 */
+    /* JADX WARN: Type inference failed for: r2v1 */
+    /* JADX WARN: Type inference failed for: r2v2, types: [int] */
+    /* JADX WARN: Type inference failed for: r2v3 */
     public int hashCode() {
         Application application = this.application;
         int iHashCode = (application != null ? application.hashCode() : 0) * 31;
         ApplicationCommand applicationCommand = this.command;
         int iHashCode2 = (iHashCode + (applicationCommand != null ? applicationCommand.hashCode() : 0)) * 31;
         boolean z2 = this.hasPermissionToUse;
-        int i = z2;
-        if (z2 != 0) {
-            i = 1;
+        ?? r1 = z2;
+        if (z2) {
+            r1 = 1;
         }
-        int i2 = (iHashCode2 + i) * 31;
+        int i = (iHashCode2 + r1) * 31;
         boolean z3 = this.showAvatar;
-        return i2 + (z3 ? 1 : z3 ? 1 : 0);
+        return i + (z3 ? 1 : z3);
     }
 
     @Override // com.discord.widgets.chat.input.autocomplete.Autocompletable

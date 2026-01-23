@@ -20,8 +20,8 @@ import androidx.constraintlayout.solver.widgets.analyzer.BasicMeasure;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.ViewPropertyAnimatorCompat;
 
+/* JADX INFO: loaded from: classes.dex */
 @RestrictTo({RestrictTo.Scope.LIBRARY_GROUP_PREFIX})
-/* loaded from: classes.dex */
 public class ActionBarContextView extends AbsActionBarView {
     private View mClose;
     private int mCloseItemLayout;
@@ -35,7 +35,7 @@ public class ActionBarContextView extends AbsActionBarView {
     private int mTitleStyleRes;
     private TextView mTitleView;
 
-    /* renamed from: androidx.appcompat.widget.ActionBarContextView$1 */
+    /* JADX INFO: renamed from: androidx.appcompat.widget.ActionBarContextView$1 */
     public class ViewOnClickListenerC00901 implements View.OnClickListener {
         public final /* synthetic */ ActionMode val$mode;
 

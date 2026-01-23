@@ -7,15 +7,15 @@ import java.util.Iterator;
 import java.util.Set;
 import p600f0.Cookie;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public class SetCookieCache implements CookieCache {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public Set<IdentifiableCookie> f19668j = new HashSet();
 
     public class SetCookieCacheIterator implements Iterator<Cookie> {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public Iterator<IdentifiableCookie> f19669j;
 
         public SetCookieCacheIterator(SetCookieCache setCookieCache) {

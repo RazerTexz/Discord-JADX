@@ -21,11 +21,11 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 import p658rx.Observable;
 
-/* compiled from: GuildRoleSubscriptionReviewViewModel.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: GuildRoleSubscriptionReviewViewModel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class GuildRoleSubscriptionReviewViewModel extends AppViewModel<ViewState> {
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private Integer guildChannelCount;
     private GuildRoleSubscriptionTier guildRoleSubscriptionTier;
@@ -33,8 +33,8 @@ public final class GuildRoleSubscriptionReviewViewModel extends AppViewModel<Vie
     private String planCoverImage;
     private String planDescription;
 
-    /* compiled from: GuildRoleSubscriptionReviewViewModel.kt */
-    /* renamed from: com.discord.widgets.guild_role_subscriptions.tier.create.GuildRoleSubscriptionReviewViewModel$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.guild_role_subscriptions.tier.create.GuildRoleSubscriptionReviewViewModel$1 */
+    /* JADX INFO: compiled from: GuildRoleSubscriptionReviewViewModel.kt */
     public static final class C84801 extends Lambda implements Function1<StoreState, Unit> {
         public C84801() {
             super(1);
@@ -46,7 +46,7 @@ public final class GuildRoleSubscriptionReviewViewModel extends AppViewModel<Vie
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(StoreState storeState) {
             GuildRoleSubscriptionReviewViewModel guildRoleSubscriptionReviewViewModel = GuildRoleSubscriptionReviewViewModel.this;
             Intrinsics3.checkNotNullExpressionValue(storeState, "storeState");
@@ -54,7 +54,7 @@ public final class GuildRoleSubscriptionReviewViewModel extends AppViewModel<Vie
         }
     }
 
-    /* compiled from: GuildRoleSubscriptionReviewViewModel.kt */
+    /* JADX INFO: compiled from: GuildRoleSubscriptionReviewViewModel.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -72,7 +72,7 @@ public final class GuildRoleSubscriptionReviewViewModel extends AppViewModel<Vie
         }
     }
 
-    /* compiled from: GuildRoleSubscriptionReviewViewModel.kt */
+    /* JADX INFO: compiled from: GuildRoleSubscriptionReviewViewModel.kt */
     public static final /* data */ class StoreState {
         private final int guildChannelCount;
 
@@ -87,7 +87,7 @@ public final class GuildRoleSubscriptionReviewViewModel extends AppViewModel<Vie
             return storeState.copy(i);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final int getGuildChannelCount() {
             return this.guildChannelCount;
         }
@@ -116,7 +116,7 @@ public final class GuildRoleSubscriptionReviewViewModel extends AppViewModel<Vie
         }
     }
 
-    /* compiled from: GuildRoleSubscriptionReviewViewModel.kt */
+    /* JADX INFO: compiled from: GuildRoleSubscriptionReviewViewModel.kt */
     public static final /* data */ class ViewState {
         private final List<GuildRoleSubscriptionTierAdapterItem> items;
 

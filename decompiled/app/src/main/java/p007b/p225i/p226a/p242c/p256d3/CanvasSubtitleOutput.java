@@ -27,27 +27,27 @@ import p007b.p085c.p086a.p087a0.AnimatableValueParser;
 import p007b.p225i.p226a.p242c.p245b3.Cue;
 import p007b.p225i.p226a.p242c.p259f3.Util2;
 
-/* compiled from: CanvasSubtitleOutput.java */
-/* renamed from: b.i.a.c.d3.j, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.d3.j, reason: use source file name */
+/* JADX INFO: compiled from: CanvasSubtitleOutput.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class CanvasSubtitleOutput extends View implements SubtitleView.InterfaceC10760a {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final List<SubtitlePainter> f6343j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public List<Cue> f6344k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public int f6345l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public float f6346m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public CaptionStyleCompat f6347n;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public float f6348o;
 
     public CanvasSubtitleOutput(Context context, @Nullable AttributeSet attributeSet) {
@@ -61,7 +61,7 @@ public final class CanvasSubtitleOutput extends View implements SubtitleView.Int
     }
 
     @Override // com.google.android.exoplayer2.p505ui.SubtitleView.InterfaceC10760a
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public void mo2758a(List<Cue> list, CaptionStyleCompat captionStyleCompat, float f, int i, float f2) {
         this.f6344k = list;
         this.f6347n = captionStyleCompat;

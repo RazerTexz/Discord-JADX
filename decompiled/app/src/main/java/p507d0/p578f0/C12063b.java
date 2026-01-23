@@ -6,18 +6,18 @@ import kotlin.jvm.functions.Function1;
 import p507d0.p580t.AbstractIterator3;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: Sequences.kt */
-/* renamed from: d0.f0.b */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.f0.b */
+/* JADX INFO: compiled from: Sequences.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class C12063b<T, K> extends AbstractIterator3<T> {
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final HashSet<K> f25072l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public final Iterator<T> f25073m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public final Function1<T, K> f25074n;
 
     /* JADX WARN: Multi-variable type inference failed */
@@ -30,7 +30,7 @@ public final class C12063b<T, K> extends AbstractIterator3<T> {
     }
 
     @Override // p507d0.p580t.AbstractIterator3
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public void mo10059a() {
         while (this.f25073m.hasNext()) {
             T next = this.f25073m.next();

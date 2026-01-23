@@ -9,14 +9,14 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.core.view.ViewCompat;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class ViewUtils {
     public static final Property<View, Rect> CLIP_BOUNDS;
     private static final ViewUtilsBase IMPL;
     private static final String TAG = "ViewUtils";
     public static final Property<View, Float> TRANSITION_ALPHA;
 
-    /* renamed from: androidx.transition.ViewUtils$1 */
+    /* JADX INFO: renamed from: androidx.transition.ViewUtils$1 */
     public static class C06711 extends Property<View, Float> {
         public C06711(Class cls, String str) {
             super(cls, str);
@@ -32,18 +32,18 @@ public class ViewUtils {
             set2(view, f);
         }
 
-        /* renamed from: get, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: get, reason: avoid collision after fix types in other method */
         public Float get2(View view) {
             return Float.valueOf(ViewUtils.getTransitionAlpha(view));
         }
 
-        /* renamed from: set, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: set, reason: avoid collision after fix types in other method */
         public void set2(View view, Float f) {
             ViewUtils.setTransitionAlpha(view, f.floatValue());
         }
     }
 
-    /* renamed from: androidx.transition.ViewUtils$2 */
+    /* JADX INFO: renamed from: androidx.transition.ViewUtils$2 */
     public static class C06722 extends Property<View, Rect> {
         public C06722(Class cls, String str) {
             super(cls, str);
@@ -59,12 +59,12 @@ public class ViewUtils {
             set2(view, rect);
         }
 
-        /* renamed from: get, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: get, reason: avoid collision after fix types in other method */
         public Rect get2(View view) {
             return ViewCompat.getClipBounds(view);
         }
 
-        /* renamed from: set, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: set, reason: avoid collision after fix types in other method */
         public void set2(View view, Rect rect) {
             ViewCompat.setClipBounds(view, rect);
         }
@@ -112,7 +112,7 @@ public class ViewUtils {
         IMPL.setAnimationMatrix(view, matrix);
     }
 
-    public static void setLeftTopRightBottom(@NonNull View view, int i, int i2, int i3, int i4) throws SecurityException, IllegalArgumentException {
+    public static void setLeftTopRightBottom(@NonNull View view, int i, int i2, int i3, int i4) {
         IMPL.setLeftTopRightBottom(view, i, i2, i3, i4);
     }
 
@@ -120,7 +120,7 @@ public class ViewUtils {
         IMPL.setTransitionAlpha(view, f);
     }
 
-    public static void setTransitionVisibility(@NonNull View view, int i) throws IllegalArgumentException {
+    public static void setTransitionVisibility(@NonNull View view, int i) {
         IMPL.setTransitionVisibility(view, i);
     }
 

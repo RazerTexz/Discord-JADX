@@ -1,14 +1,14 @@
 package p007b.p225i.p361c.p398s;
 
-/* compiled from: com.google.firebase:firebase-iid@@21.0.0 */
-/* renamed from: b.i.c.s.p */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.c.s.p */
+/* JADX INFO: compiled from: com.google.firebase:firebase-iid@@21.0.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public final class C4825p implements InterfaceC4824o {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final String f12883a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final String f12884b;
 
     public C4825p(String str, String str2) {
@@ -17,7 +17,7 @@ public final class C4825p implements InterfaceC4824o {
     }
 
     @Override // p007b.p225i.p361c.p398s.InterfaceC4824o
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final String mo6729a() {
         return this.f12884b;
     }

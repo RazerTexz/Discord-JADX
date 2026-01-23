@@ -3,15 +3,15 @@ package p507d0.p513e0.p514p.p515d.p517m0.p548g;
 import com.discord.models.domain.ModelAuditLogEntry;
 import p007b.p100d.p104b.p105a.outline;
 
-/* compiled from: Name.java */
-/* renamed from: d0.e0.p.d.m0.g.e, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.g.e, reason: use source file name */
+/* JADX INFO: compiled from: Name.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class Name implements Comparable<Name> {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final String f24089j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final boolean f24090k;
 
     public Name(String str, boolean z2) {
@@ -23,7 +23,7 @@ public final class Name implements Comparable<Name> {
         this.f24090k = z2;
     }
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public static /* synthetic */ void m9820f(int i) {
         String str = (i == 1 || i == 2) ? "@NotNull method %s.%s must not return null" : "Argument for @NotNull parameter '%s' of %s.%s must not be null";
         Object[] objArr = new Object[(i == 1 || i == 2) ? 2 : 3];
@@ -159,7 +159,7 @@ public final class Name implements Comparable<Name> {
         return this.f24089j;
     }
 
-    /* renamed from: compareTo, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: compareTo, reason: avoid collision after fix types in other method */
     public int compareTo2(Name name) {
         return this.f24089j.compareTo(name.f24089j);
     }

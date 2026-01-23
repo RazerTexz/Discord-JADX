@@ -11,9 +11,9 @@ import androidx.annotation.Nullable;
 import androidx.annotation.RequiresApi;
 import androidx.annotation.RestrictTo;
 
+/* JADX INFO: loaded from: classes.dex */
 @RequiresApi(api = 28)
 @RestrictTo({RestrictTo.Scope.LIBRARY_GROUP_PREFIX})
-/* loaded from: classes.dex */
 public class CoreComponentFactory extends android.app.AppComponentFactory {
 
     @RestrictTo({RestrictTo.Scope.LIBRARY_GROUP_PREFIX})

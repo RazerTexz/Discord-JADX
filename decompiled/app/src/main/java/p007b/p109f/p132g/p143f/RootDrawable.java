@@ -11,16 +11,16 @@ import p007b.p109f.p132g.p142e.ForwardingDrawable;
 import p007b.p109f.p132g.p142e.VisibilityAwareDrawable;
 import p007b.p109f.p132g.p142e.VisibilityCallback;
 
-/* compiled from: RootDrawable.java */
-/* renamed from: b.f.g.f.b, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.f.g.f.b, reason: use source file name */
+/* JADX INFO: compiled from: RootDrawable.java */
+/* JADX INFO: loaded from: classes.dex */
 public class RootDrawable extends ForwardingDrawable implements VisibilityAwareDrawable {
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     @VisibleForTesting
     public Drawable f3469n;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public VisibilityCallback f3470o;
 
     public RootDrawable(Drawable drawable) {
@@ -65,7 +65,7 @@ public class RootDrawable extends ForwardingDrawable implements VisibilityAwareD
     }
 
     @Override // p007b.p109f.p132g.p142e.VisibilityAwareDrawable
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public void mo1102k(VisibilityCallback visibilityCallback) {
         this.f3470o = visibilityCallback;
     }

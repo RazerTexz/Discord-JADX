@@ -15,9 +15,9 @@ import kotlin.jvm.internal.Ref$ObjectRef;
 import p507d0.p592z.p594d.Intrinsics3;
 import p658rx.functions.Action1;
 
-/* compiled from: ModelThreadListSync.kt */
-/* renamed from: com.discord.models.thread.dto.ModelThreadListSync$Parser$parse$1, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: com.discord.models.thread.dto.ModelThreadListSync$Parser$parse$1, reason: use source file name */
+/* JADX INFO: compiled from: ModelThreadListSync.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class ModelThreadListSync2<T> implements Action1<String> {
     public final /* synthetic */ Ref$LongRef $guildId;
     public final /* synthetic */ Ref$ObjectRef $members;
@@ -25,8 +25,8 @@ public final class ModelThreadListSync2<T> implements Action1<String> {
     public final /* synthetic */ Model.JsonReader $reader;
     public final /* synthetic */ Ref$ObjectRef $threads;
 
-    /* compiled from: ModelThreadListSync.kt */
-    /* renamed from: com.discord.models.thread.dto.ModelThreadListSync$Parser$parse$1$1 */
+    /* JADX INFO: renamed from: com.discord.models.thread.dto.ModelThreadListSync$Parser$parse$1$1 */
+    /* JADX INFO: compiled from: ModelThreadListSync.kt */
     public static final class C55611<T> implements Model.JsonReader.ItemFactory<Channel> {
         public C55611() {
         }
@@ -43,8 +43,8 @@ public final class ModelThreadListSync2<T> implements Action1<String> {
         }
     }
 
-    /* compiled from: ModelThreadListSync.kt */
-    /* renamed from: com.discord.models.thread.dto.ModelThreadListSync$Parser$parse$1$2 */
+    /* JADX INFO: renamed from: com.discord.models.thread.dto.ModelThreadListSync$Parser$parse$1$2 */
+    /* JADX INFO: compiled from: ModelThreadListSync.kt */
     public static final class C55622<T> implements Model.JsonReader.ItemFactory<ThreadMember> {
         public C55622() {
         }
@@ -61,8 +61,8 @@ public final class ModelThreadListSync2<T> implements Action1<String> {
         }
     }
 
-    /* compiled from: ModelThreadListSync.kt */
-    /* renamed from: com.discord.models.thread.dto.ModelThreadListSync$Parser$parse$1$3 */
+    /* JADX INFO: renamed from: com.discord.models.thread.dto.ModelThreadListSync$Parser$parse$1$3 */
+    /* JADX INFO: compiled from: ModelThreadListSync.kt */
     public static final class C55633<T> implements Action1<String> {
         public C55633() {
         }
@@ -72,7 +72,7 @@ public final class ModelThreadListSync2<T> implements Action1<String> {
             call2(str);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final void call2(String str) {
             ThreadMember threadMember = (ThreadMember) InboundGatewayGsonParser.fromJson(ModelThreadListSync2.this.$reader, ThreadMember.class);
             Intrinsics3.checkNotNullExpressionValue(str, "threadId");
@@ -80,8 +80,8 @@ public final class ModelThreadListSync2<T> implements Action1<String> {
         }
     }
 
-    /* compiled from: ModelThreadListSync.kt */
-    /* renamed from: com.discord.models.thread.dto.ModelThreadListSync$Parser$parse$1$4 */
+    /* JADX INFO: renamed from: com.discord.models.thread.dto.ModelThreadListSync$Parser$parse$1$4 */
+    /* JADX INFO: compiled from: ModelThreadListSync.kt */
     public static final class C55644<T> implements Model.JsonReader.ItemFactory<Message> {
         public C55644() {
         }
@@ -112,7 +112,7 @@ public final class ModelThreadListSync2<T> implements Action1<String> {
     }
 
     /* JADX WARN: Failed to restore switch over string. Please report as a decompilation issue */
-    /* renamed from: call, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
     public final void call2(String str) throws IOException {
         if (str != null) {
             switch (str.hashCode()) {

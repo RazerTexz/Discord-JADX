@@ -12,9 +12,9 @@ import kotlin.jvm.functions.Function1;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: GuildMemberListItemGenerator.kt */
-/* renamed from: com.discord.widgets.channels.memberlist.GuildMemberListItemGeneratorKt$generateGuildMemberListItems$listItems$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.channels.memberlist.GuildMemberListItemGeneratorKt$generateGuildMemberListItems$listItems$1, reason: use source file name */
+/* JADX INFO: compiled from: GuildMemberListItemGenerator.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class GuildMemberListItemGenerator2 extends Lambda implements Function1<MemberListRow, ChannelMembersListAdapter.Item> {
     public final /* synthetic */ Channel $channel;
     public final /* synthetic */ Guild $guild;
@@ -32,7 +32,7 @@ public final class GuildMemberListItemGenerator2 extends Lambda implements Funct
         this.$guildRoles = map;
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final ChannelMembersListAdapter.Item invoke2(MemberListRow memberListRow) {
         ChannelMembersListAdapter.Item roleHeader;
         ChannelMembersListAdapter.Item.Header.Type type;

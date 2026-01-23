@@ -4,15 +4,15 @@ import com.discord.api.user.User;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: GuildScheduledEventMeUser.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: GuildScheduledEventMeUser.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class GuildScheduledEventMeUser {
     private final GuildScheduledEvent guildScheduledEvent;
     private final long guildScheduledEventId;
     private final User user;
     private final long userId;
 
-    /* renamed from: a, reason: from getter */
+    /* JADX INFO: renamed from: a, reason: from getter */
     public final long getGuildScheduledEventId() {
         return this.guildScheduledEventId;
     }

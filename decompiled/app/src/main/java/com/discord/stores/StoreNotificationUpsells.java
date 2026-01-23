@@ -9,14 +9,14 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 import p658rx.Observable;
 
-/* compiled from: StoreNotificationUpsells.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: StoreNotificationUpsells.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class StoreNotificationUpsells extends StoreV2 {
     private final Dispatcher dispatcher;
     private final ObservationDeck observationDeck;
 
-    /* compiled from: StoreNotificationUpsells.kt */
-    /* renamed from: com.discord.stores.StoreNotificationUpsells$dismissPushNotificationsUpsell$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreNotificationUpsells$dismissPushNotificationsUpsell$1 */
+    /* JADX INFO: compiled from: StoreNotificationUpsells.kt */
     public static final class C62911 extends Lambda implements Function0<Unit> {
         public C62911() {
             super(0);
@@ -28,14 +28,14 @@ public final class StoreNotificationUpsells extends StoreV2 {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             StoreNotificationUpsells.this.markChanged();
         }
     }
 
-    /* compiled from: StoreNotificationUpsells.kt */
-    /* renamed from: com.discord.stores.StoreNotificationUpsells$observePushNotificationUpsellDismissed$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreNotificationUpsells$observePushNotificationUpsellDismissed$1 */
+    /* JADX INFO: compiled from: StoreNotificationUpsells.kt */
     public static final class C62921 extends Lambda implements Function0<Boolean> {
         public C62921() {
             super(0);
@@ -46,7 +46,7 @@ public final class StoreNotificationUpsells extends StoreV2 {
             return Boolean.valueOf(invoke2());
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final boolean invoke2() {
             return StoreNotificationUpsells.this.getPushNotificationsUpsellDismissed();
         }

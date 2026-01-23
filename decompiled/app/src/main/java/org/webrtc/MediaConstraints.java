@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 import p007b.p100d.p104b.p105a.outline;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public class MediaConstraints {
     public final List<KeyValuePair> mandatory = new ArrayList();
     public final List<KeyValuePair> optional = new ArrayList();

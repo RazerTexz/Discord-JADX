@@ -7,9 +7,9 @@ import com.google.android.gms.internal.icing.zzt;
 import com.google.android.gms.internal.icing.zzu;
 import p007b.p085c.p086a.p087a0.AnimatableValueParser;
 
-/* compiled from: com.google.firebase:firebase-appindexing@@19.1.0 */
-/* renamed from: b.i.a.f.h.k.s */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.h.k.s */
+/* JADX INFO: compiled from: com.google.firebase:firebase-appindexing@@19.1.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public final class C3574s implements Parcelable.Creator<zzt> {
     @Override // android.os.Parcelable.Creator
     public final zzt createFromParcel(Parcel parcel) {

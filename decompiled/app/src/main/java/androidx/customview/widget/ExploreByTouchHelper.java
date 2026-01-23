@@ -22,7 +22,7 @@ import androidx.customview.widget.FocusStrategy;
 import java.util.ArrayList;
 import java.util.List;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public abstract class ExploreByTouchHelper extends AccessibilityDelegateCompat {
     private static final String DEFAULT_CLASS_NAME = "android.view.View";
     public static final int HOST_ID = -1;
@@ -41,20 +41,20 @@ public abstract class ExploreByTouchHelper extends AccessibilityDelegateCompat {
     public int mKeyboardFocusedVirtualViewId = Integer.MIN_VALUE;
     private int mHoveredVirtualViewId = Integer.MIN_VALUE;
 
-    /* renamed from: androidx.customview.widget.ExploreByTouchHelper$1 */
+    /* JADX INFO: renamed from: androidx.customview.widget.ExploreByTouchHelper$1 */
     public static class C03141 implements FocusStrategy.BoundsAdapter<AccessibilityNodeInfoCompat> {
         @Override // androidx.customview.widget.FocusStrategy.BoundsAdapter
         public /* bridge */ /* synthetic */ void obtainBounds(AccessibilityNodeInfoCompat accessibilityNodeInfoCompat, Rect rect) {
             obtainBounds2(accessibilityNodeInfoCompat, rect);
         }
 
-        /* renamed from: obtainBounds, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: obtainBounds, reason: avoid collision after fix types in other method */
         public void obtainBounds2(AccessibilityNodeInfoCompat accessibilityNodeInfoCompat, Rect rect) {
             accessibilityNodeInfoCompat.getBoundsInParent(rect);
         }
     }
 
-    /* renamed from: androidx.customview.widget.ExploreByTouchHelper$2 */
+    /* JADX INFO: renamed from: androidx.customview.widget.ExploreByTouchHelper$2 */
     public static class C03152 implements FocusStrategy.CollectionAdapter<SparseArrayCompat<AccessibilityNodeInfoCompat>, AccessibilityNodeInfoCompat> {
         @Override // androidx.customview.widget.FocusStrategy.CollectionAdapter
         public /* bridge */ /* synthetic */ AccessibilityNodeInfoCompat get(SparseArrayCompat<AccessibilityNodeInfoCompat> sparseArrayCompat, int i) {
@@ -66,12 +66,12 @@ public abstract class ExploreByTouchHelper extends AccessibilityDelegateCompat {
             return size2(sparseArrayCompat);
         }
 
-        /* renamed from: get, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: get, reason: avoid collision after fix types in other method */
         public AccessibilityNodeInfoCompat get2(SparseArrayCompat<AccessibilityNodeInfoCompat> sparseArrayCompat, int i) {
             return sparseArrayCompat.valueAt(i);
         }
 
-        /* renamed from: size, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: size, reason: avoid collision after fix types in other method */
         public int size2(SparseArrayCompat<AccessibilityNodeInfoCompat> sparseArrayCompat) {
             return sparseArrayCompat.size();
         }

@@ -13,13 +13,13 @@ import p007b.p195g.p196a.p205c.p215g0.ContextualSerializer;
 import p007b.p195g.p196a.p205c.p219i0.EnumValues;
 import p007b.p195g.p196a.p205c.p220y.JacksonStdImpl;
 
-/* compiled from: EnumSerializer.java */
+/* JADX INFO: renamed from: b.g.a.c.g0.u.m, reason: use source file name */
+/* JADX INFO: compiled from: EnumSerializer.java */
+/* JADX INFO: loaded from: classes3.dex */
 @JacksonStdImpl
-/* renamed from: b.g.a.c.g0.u.m, reason: use source file name */
-/* loaded from: classes3.dex */
 public class EnumSerializer2 extends StdScalarSerializer<Enum<?>> implements ContextualSerializer {
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public static final /* synthetic */ int f4857k = 0;
     private static final long serialVersionUID = 1;
     public final Boolean _serializeAsIndex;
@@ -31,7 +31,7 @@ public class EnumSerializer2 extends StdScalarSerializer<Enum<?>> implements Con
         this._serializeAsIndex = bool;
     }
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public static Boolean m2068p(Class<?> cls, JsonFormat.d dVar, boolean z2, Boolean bool) {
         JsonFormat.c cVarM1601e = dVar == null ? null : dVar.m1601e();
         if (cVarM1601e == null || cVarM1601e == JsonFormat.c.ANY || cVarM1601e == JsonFormat.c.SCALAR) {
@@ -51,7 +51,7 @@ public class EnumSerializer2 extends StdScalarSerializer<Enum<?>> implements Con
     }
 
     @Override // p007b.p195g.p196a.p205c.p215g0.ContextualSerializer
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public JsonSerializer<?> mo1997a(SerializerProvider serializerProvider, BeanProperty beanProperty) throws JsonMappingException {
         JsonFormat.d dVarM2074l = m2074l(serializerProvider, beanProperty, this._handledType);
         if (dVarM2074l != null) {
@@ -64,7 +64,7 @@ public class EnumSerializer2 extends StdScalarSerializer<Enum<?>> implements Con
     }
 
     @Override // p007b.p195g.p196a.p205c.JsonSerializer
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public void mo1807f(Object obj, JsonGenerator jsonGenerator, SerializerProvider serializerProvider) throws IOException {
         Enum<?> r2 = (Enum) obj;
         Boolean bool = this._serializeAsIndex;

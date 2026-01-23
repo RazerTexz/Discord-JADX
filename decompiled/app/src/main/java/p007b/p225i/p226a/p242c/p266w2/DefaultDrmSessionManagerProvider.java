@@ -17,24 +17,24 @@ import p007b.p225i.p226a.p242c.p257e3.DefaultLoadErrorHandlingPolicy;
 import p007b.p225i.p226a.p288f.p299e.p308o.C3404f;
 import p007b.p225i.p355b.p357b.UnmodifiableIterator;
 
-/* compiled from: DefaultDrmSessionManagerProvider.java */
-/* renamed from: b.i.a.c.w2.r, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.w2.r, reason: use source file name */
+/* JADX INFO: compiled from: DefaultDrmSessionManagerProvider.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class DefaultDrmSessionManagerProvider {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final Object f8009a = new Object();
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     @GuardedBy("lock")
     public MediaItem2.f f8010b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     @GuardedBy("lock")
     public DrmSessionManager2 f8011c;
 
     @RequiresApi(18)
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final DrmSessionManager2 m3586a(MediaItem2.f fVar) {
         DefaultHttpDataSource.b bVar = new DefaultHttpDataSource.b();
         bVar.f6623b = null;

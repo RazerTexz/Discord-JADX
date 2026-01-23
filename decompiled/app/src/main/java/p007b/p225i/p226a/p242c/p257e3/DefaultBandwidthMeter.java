@@ -5,9 +5,9 @@ import android.os.Handler;
 import android.telephony.TelephonyManager;
 import android.text.TextUtils;
 import androidx.annotation.Nullable;
+import androidx.exifinterface.media.ExifInterface;
 import com.discord.api.permission.Permission;
 import com.discord.stores.StoreGuildScheduledEvents;
-import com.discord.widgets.chat.input.MentionUtils;
 import com.google.android.material.behavior.HideBottomViewOnScrollBehavior;
 import java.lang.ref.WeakReference;
 import java.util.HashMap;
@@ -25,90 +25,90 @@ import p007b.p225i.p226a.p288f.p299e.p308o.C3404f;
 import p007b.p225i.p355b.p357b.ImmutableList2;
 import p007b.p225i.p355b.p357b.ImmutableMap2;
 
-/* compiled from: DefaultBandwidthMeter.java */
-/* renamed from: b.i.a.c.e3.p, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.e3.p, reason: use source file name */
+/* JADX INFO: compiled from: DefaultBandwidthMeter.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class DefaultBandwidthMeter implements BandwidthMeter, TransferListener {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final ImmutableList2<Long> f6569a = ImmutableList2.m6267v(5400000L, 3300000L, 2000000L, 1300000L, 760000L);
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static final ImmutableList2<Long> f6570b = ImmutableList2.m6267v(1700000L, 820000L, 450000L, 180000L, 130000L);
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public static final ImmutableList2<Long> f6571c = ImmutableList2.m6267v(2300000L, 1300000L, 1000000L, 820000L, 570000L);
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public static final ImmutableList2<Long> f6572d = ImmutableList2.m6267v(3400000L, 2000000L, 1400000L, 1000000L, 620000L);
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public static final ImmutableList2<Long> f6573e = ImmutableList2.m6267v(7500000L, 5200000L, 3700000L, Long.valueOf(StoreGuildScheduledEvents.FETCH_GUILD_EVENTS_THRESHOLD), 1100000L);
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public static final ImmutableList2<Long> f6574f = ImmutableList2.m6267v(3300000L, 1900000L, 1700000L, 1500000L, 1200000L);
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     @Nullable
     public static DefaultBandwidthMeter f6575g;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public final ImmutableMap2<Integer, Long> f6576h;
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public final BandwidthMeter.a.C13224a f6577i = new BandwidthMeter.a.C13224a();
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final SlidingPercentile f6578j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final Clock4 f6579k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final boolean f6580l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public int f6581m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public long f6582n;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public long f6583o;
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public int f6584p;
 
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     public long f6585q;
 
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     public long f6586r;
 
-    /* renamed from: s */
+    /* JADX INFO: renamed from: s */
     public long f6587s;
 
-    /* renamed from: t */
+    /* JADX INFO: renamed from: t */
     public long f6588t;
 
-    /* compiled from: DefaultBandwidthMeter.java */
-    /* renamed from: b.i.a.c.e3.p$b */
+    /* JADX INFO: renamed from: b.i.a.c.e3.p$b */
+    /* JADX INFO: compiled from: DefaultBandwidthMeter.java */
     public static final class b {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         @Nullable
         public final Context f6589a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public Map<Integer, Long> f6590b;
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public int f6591c;
 
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         public Clock4 f6592d;
 
-        /* renamed from: e */
+        /* JADX INFO: renamed from: e */
         public boolean f6593e;
 
         /* JADX WARN: Failed to restore switch over string. Please report as a decompilation issue */
@@ -132,1211 +132,1211 @@ public final class DefaultBandwidthMeter implements BandwidthMeter, TransferList
             }
             ImmutableList2<Long> immutableList2 = DefaultBandwidthMeter.f6569a;
             strM4357w1.hashCode();
-            char c = 65535;
+            byte b2 = -1;
             switch (strM4357w1.hashCode()) {
                 case 2083:
                     if (strM4357w1.equals("AD")) {
-                        c = 0;
+                        b2 = 0;
                     }
                     break;
                 case 2084:
                     if (strM4357w1.equals("AE")) {
-                        c = 1;
+                        b2 = 1;
                     }
                     break;
                 case 2085:
                     if (strM4357w1.equals("AF")) {
-                        c = 2;
+                        b2 = 2;
                     }
                     break;
                 case 2086:
                     if (strM4357w1.equals("AG")) {
-                        c = 3;
+                        b2 = 3;
                     }
                     break;
                 case 2088:
                     if (strM4357w1.equals("AI")) {
-                        c = 4;
+                        b2 = 4;
                     }
                     break;
                 case 2091:
                     if (strM4357w1.equals("AL")) {
-                        c = 5;
+                        b2 = 5;
                     }
                     break;
                 case 2092:
                     if (strM4357w1.equals("AM")) {
-                        c = 6;
+                        b2 = 6;
                     }
                     break;
                 case 2094:
                     if (strM4357w1.equals("AO")) {
-                        c = 7;
+                        b2 = 7;
                     }
                     break;
                 case 2096:
                     if (strM4357w1.equals("AQ")) {
-                        c = '\b';
+                        b2 = 8;
                     }
                     break;
                 case 2097:
                     if (strM4357w1.equals("AR")) {
-                        c = '\t';
+                        b2 = 9;
                     }
                     break;
                 case 2098:
                     if (strM4357w1.equals("AS")) {
-                        c = '\n';
+                        b2 = 10;
                     }
                     break;
                 case 2099:
                     if (strM4357w1.equals("AT")) {
-                        c = 11;
+                        b2 = 11;
                     }
                     break;
                 case 2100:
                     if (strM4357w1.equals("AU")) {
-                        c = '\f';
+                        b2 = 12;
                     }
                     break;
                 case 2102:
                     if (strM4357w1.equals("AW")) {
-                        c = '\r';
+                        b2 = 13;
                     }
                     break;
                 case 2103:
                     if (strM4357w1.equals("AX")) {
-                        c = 14;
+                        b2 = 14;
                     }
                     break;
                 case 2105:
                     if (strM4357w1.equals("AZ")) {
-                        c = 15;
+                        b2 = 15;
                     }
                     break;
                 case 2111:
                     if (strM4357w1.equals("BA")) {
-                        c = 16;
+                        b2 = 16;
                     }
                     break;
                 case 2112:
                     if (strM4357w1.equals("BB")) {
-                        c = 17;
+                        b2 = 17;
                     }
                     break;
                 case 2114:
                     if (strM4357w1.equals("BD")) {
-                        c = 18;
+                        b2 = 18;
                     }
                     break;
                 case 2115:
                     if (strM4357w1.equals("BE")) {
-                        c = 19;
+                        b2 = 19;
                     }
                     break;
                 case 2116:
                     if (strM4357w1.equals("BF")) {
-                        c = 20;
+                        b2 = 20;
                     }
                     break;
                 case 2117:
                     if (strM4357w1.equals("BG")) {
-                        c = 21;
+                        b2 = 21;
                     }
                     break;
                 case 2118:
                     if (strM4357w1.equals("BH")) {
-                        c = 22;
+                        b2 = 22;
                     }
                     break;
                 case 2119:
                     if (strM4357w1.equals("BI")) {
-                        c = 23;
+                        b2 = 23;
                     }
                     break;
                 case 2120:
                     if (strM4357w1.equals("BJ")) {
-                        c = 24;
+                        b2 = 24;
                     }
                     break;
                 case 2122:
                     if (strM4357w1.equals("BL")) {
-                        c = 25;
+                        b2 = 25;
                     }
                     break;
                 case 2123:
                     if (strM4357w1.equals("BM")) {
-                        c = 26;
+                        b2 = 26;
                     }
                     break;
                 case 2124:
                     if (strM4357w1.equals("BN")) {
-                        c = 27;
+                        b2 = 27;
                     }
                     break;
                 case 2125:
                     if (strM4357w1.equals("BO")) {
-                        c = 28;
+                        b2 = 28;
                     }
                     break;
                 case 2127:
                     if (strM4357w1.equals("BQ")) {
-                        c = 29;
+                        b2 = 29;
                     }
                     break;
                 case 2128:
                     if (strM4357w1.equals("BR")) {
-                        c = 30;
+                        b2 = 30;
                     }
                     break;
                 case 2129:
                     if (strM4357w1.equals("BS")) {
-                        c = 31;
+                        b2 = 31;
                     }
                     break;
                 case 2130:
                     if (strM4357w1.equals("BT")) {
-                        c = ' ';
+                        b2 = 32;
                     }
                     break;
                 case 2133:
                     if (strM4357w1.equals("BW")) {
-                        c = '!';
+                        b2 = 33;
                     }
                     break;
                 case 2135:
                     if (strM4357w1.equals("BY")) {
-                        c = '\"';
+                        b2 = 34;
                     }
                     break;
                 case 2136:
                     if (strM4357w1.equals("BZ")) {
-                        c = MentionUtils.CHANNELS_CHAR;
+                        b2 = 35;
                     }
                     break;
                 case 2142:
                     if (strM4357w1.equals("CA")) {
-                        c = '$';
+                        b2 = 36;
                     }
                     break;
                 case 2145:
                     if (strM4357w1.equals("CD")) {
-                        c = '%';
+                        b2 = 37;
                     }
                     break;
                 case 2147:
                     if (strM4357w1.equals("CF")) {
-                        c = '&';
+                        b2 = 38;
                     }
                     break;
                 case 2148:
                     if (strM4357w1.equals("CG")) {
-                        c = '\'';
+                        b2 = 39;
                     }
                     break;
                 case 2149:
                     if (strM4357w1.equals("CH")) {
-                        c = '(';
+                        b2 = 40;
                     }
                     break;
                 case 2150:
                     if (strM4357w1.equals("CI")) {
-                        c = ')';
+                        b2 = 41;
                     }
                     break;
                 case 2152:
                     if (strM4357w1.equals("CK")) {
-                        c = '*';
+                        b2 = ExifInterface.START_CODE;
                     }
                     break;
                 case 2153:
                     if (strM4357w1.equals("CL")) {
-                        c = '+';
+                        b2 = 43;
                     }
                     break;
                 case 2154:
                     if (strM4357w1.equals("CM")) {
-                        c = ',';
+                        b2 = 44;
                     }
                     break;
                 case 2155:
                     if (strM4357w1.equals("CN")) {
-                        c = '-';
+                        b2 = 45;
                     }
                     break;
                 case 2156:
                     if (strM4357w1.equals("CO")) {
-                        c = '.';
+                        b2 = 46;
                     }
                     break;
                 case 2159:
                     if (strM4357w1.equals("CR")) {
-                        c = MentionUtils.SLASH_CHAR;
+                        b2 = 47;
                     }
                     break;
                 case 2162:
                     if (strM4357w1.equals("CU")) {
-                        c = '0';
+                        b2 = 48;
                     }
                     break;
                 case 2163:
                     if (strM4357w1.equals("CV")) {
-                        c = '1';
+                        b2 = 49;
                     }
                     break;
                 case 2164:
                     if (strM4357w1.equals("CW")) {
-                        c = '2';
+                        b2 = 50;
                     }
                     break;
                 case 2165:
                     if (strM4357w1.equals("CX")) {
-                        c = '3';
+                        b2 = 51;
                     }
                     break;
                 case 2166:
                     if (strM4357w1.equals("CY")) {
-                        c = '4';
+                        b2 = 52;
                     }
                     break;
                 case 2167:
                     if (strM4357w1.equals("CZ")) {
-                        c = '5';
+                        b2 = 53;
                     }
                     break;
                 case 2177:
                     if (strM4357w1.equals("DE")) {
-                        c = '6';
+                        b2 = 54;
                     }
                     break;
                 case 2182:
                     if (strM4357w1.equals("DJ")) {
-                        c = '7';
+                        b2 = 55;
                     }
                     break;
                 case 2183:
                     if (strM4357w1.equals("DK")) {
-                        c = '8';
+                        b2 = 56;
                     }
                     break;
                 case 2185:
                     if (strM4357w1.equals("DM")) {
-                        c = '9';
+                        b2 = 57;
                     }
                     break;
                 case 2187:
                     if (strM4357w1.equals("DO")) {
-                        c = MentionUtils.EMOJIS_AND_STICKERS_CHAR;
+                        b2 = 58;
                     }
                     break;
                 case 2198:
                     if (strM4357w1.equals("DZ")) {
-                        c = ';';
+                        b2 = 59;
                     }
                     break;
                 case 2206:
                     if (strM4357w1.equals("EC")) {
-                        c = '<';
+                        b2 = 60;
                     }
                     break;
                 case 2208:
                     if (strM4357w1.equals("EE")) {
-                        c = '=';
+                        b2 = 61;
                     }
                     break;
                 case 2210:
                     if (strM4357w1.equals("EG")) {
-                        c = '>';
+                        b2 = 62;
                     }
                     break;
                 case 2221:
                     if (strM4357w1.equals("ER")) {
-                        c = '?';
+                        b2 = 63;
                     }
                     break;
                 case 2222:
                     if (strM4357w1.equals("ES")) {
-                        c = MentionUtils.MENTIONS_CHAR;
+                        b2 = 64;
                     }
                     break;
                 case 2223:
                     if (strM4357w1.equals("ET")) {
-                        c = 'A';
+                        b2 = 65;
                     }
                     break;
                 case 2243:
                     if (strM4357w1.equals("FI")) {
-                        c = 'B';
+                        b2 = 66;
                     }
                     break;
                 case 2244:
                     if (strM4357w1.equals("FJ")) {
-                        c = 'C';
+                        b2 = 67;
                     }
                     break;
                 case 2245:
                     if (strM4357w1.equals("FK")) {
-                        c = 'D';
+                        b2 = 68;
                     }
                     break;
                 case 2247:
                     if (strM4357w1.equals("FM")) {
-                        c = 'E';
+                        b2 = 69;
                     }
                     break;
                 case 2249:
                     if (strM4357w1.equals("FO")) {
-                        c = 'F';
+                        b2 = 70;
                     }
                     break;
                 case 2252:
                     if (strM4357w1.equals("FR")) {
-                        c = 'G';
+                        b2 = 71;
                     }
                     break;
                 case 2266:
                     if (strM4357w1.equals("GA")) {
-                        c = 'H';
+                        b2 = 72;
                     }
                     break;
                 case 2267:
                     if (strM4357w1.equals("GB")) {
-                        c = 'I';
+                        b2 = 73;
                     }
                     break;
                 case 2269:
                     if (strM4357w1.equals("GD")) {
-                        c = 'J';
+                        b2 = 74;
                     }
                     break;
                 case 2270:
                     if (strM4357w1.equals("GE")) {
-                        c = 'K';
+                        b2 = 75;
                     }
                     break;
                 case 2271:
                     if (strM4357w1.equals("GF")) {
-                        c = 'L';
+                        b2 = 76;
                     }
                     break;
                 case 2272:
                     if (strM4357w1.equals("GG")) {
-                        c = 'M';
+                        b2 = 77;
                     }
                     break;
                 case 2273:
                     if (strM4357w1.equals("GH")) {
-                        c = 'N';
+                        b2 = 78;
                     }
                     break;
                 case 2274:
                     if (strM4357w1.equals("GI")) {
-                        c = 'O';
+                        b2 = 79;
                     }
                     break;
                 case 2277:
                     if (strM4357w1.equals("GL")) {
-                        c = 'P';
+                        b2 = 80;
                     }
                     break;
                 case 2278:
                     if (strM4357w1.equals("GM")) {
-                        c = 'Q';
+                        b2 = 81;
                     }
                     break;
                 case 2279:
                     if (strM4357w1.equals("GN")) {
-                        c = 'R';
+                        b2 = 82;
                     }
                     break;
                 case 2281:
                     if (strM4357w1.equals("GP")) {
-                        c = 'S';
+                        b2 = 83;
                     }
                     break;
                 case 2282:
                     if (strM4357w1.equals("GQ")) {
-                        c = 'T';
+                        b2 = 84;
                     }
                     break;
                 case 2283:
                     if (strM4357w1.equals("GR")) {
-                        c = 'U';
+                        b2 = 85;
                     }
                     break;
                 case 2285:
                     if (strM4357w1.equals("GT")) {
-                        c = 'V';
+                        b2 = 86;
                     }
                     break;
                 case 2286:
                     if (strM4357w1.equals("GU")) {
-                        c = 'W';
+                        b2 = 87;
                     }
                     break;
                 case 2288:
                     if (strM4357w1.equals("GW")) {
-                        c = 'X';
+                        b2 = 88;
                     }
                     break;
                 case 2290:
                     if (strM4357w1.equals("GY")) {
-                        c = 'Y';
+                        b2 = 89;
                     }
                     break;
                 case 2307:
                     if (strM4357w1.equals("HK")) {
-                        c = 'Z';
+                        b2 = 90;
                     }
                     break;
                 case 2310:
                     if (strM4357w1.equals("HN")) {
-                        c = '[';
+                        b2 = 91;
                     }
                     break;
                 case 2314:
                     if (strM4357w1.equals("HR")) {
-                        c = '\\';
+                        b2 = 92;
                     }
                     break;
                 case 2316:
                     if (strM4357w1.equals("HT")) {
-                        c = ']';
+                        b2 = 93;
                     }
                     break;
                 case 2317:
                     if (strM4357w1.equals("HU")) {
-                        c = '^';
+                        b2 = 94;
                     }
                     break;
                 case 2331:
                     if (strM4357w1.equals("ID")) {
-                        c = '_';
+                        b2 = 95;
                     }
                     break;
                 case 2332:
                     if (strM4357w1.equals("IE")) {
-                        c = '`';
+                        b2 = 96;
                     }
                     break;
                 case 2339:
                     if (strM4357w1.equals("IL")) {
-                        c = 'a';
+                        b2 = 97;
                     }
                     break;
                 case 2340:
                     if (strM4357w1.equals("IM")) {
-                        c = 'b';
+                        b2 = 98;
                     }
                     break;
                 case 2341:
                     if (strM4357w1.equals("IN")) {
-                        c = 'c';
+                        b2 = 99;
                     }
                     break;
                 case 2342:
                     if (strM4357w1.equals("IO")) {
-                        c = 'd';
+                        b2 = 100;
                     }
                     break;
                 case 2344:
                     if (strM4357w1.equals("IQ")) {
-                        c = 'e';
+                        b2 = 101;
                     }
                     break;
                 case 2345:
                     if (strM4357w1.equals("IR")) {
-                        c = 'f';
+                        b2 = 102;
                     }
                     break;
                 case 2346:
                     if (strM4357w1.equals("IS")) {
-                        c = 'g';
+                        b2 = 103;
                     }
                     break;
                 case 2347:
                     if (strM4357w1.equals("IT")) {
-                        c = 'h';
+                        b2 = 104;
                     }
                     break;
                 case 2363:
                     if (strM4357w1.equals("JE")) {
-                        c = 'i';
+                        b2 = 105;
                     }
                     break;
                 case 2371:
                     if (strM4357w1.equals("JM")) {
-                        c = 'j';
+                        b2 = 106;
                     }
                     break;
                 case 2373:
                     if (strM4357w1.equals("JO")) {
-                        c = 'k';
+                        b2 = 107;
                     }
                     break;
                 case 2374:
                     if (strM4357w1.equals("JP")) {
-                        c = 'l';
+                        b2 = 108;
                     }
                     break;
                 case 2394:
                     if (strM4357w1.equals("KE")) {
-                        c = 'm';
+                        b2 = 109;
                     }
                     break;
                 case 2396:
                     if (strM4357w1.equals("KG")) {
-                        c = 'n';
+                        b2 = 110;
                     }
                     break;
                 case 2397:
                     if (strM4357w1.equals("KH")) {
-                        c = 'o';
+                        b2 = 111;
                     }
                     break;
                 case 2398:
                     if (strM4357w1.equals("KI")) {
-                        c = 'p';
+                        b2 = 112;
                     }
                     break;
                 case 2402:
                     if (strM4357w1.equals("KM")) {
-                        c = 'q';
+                        b2 = 113;
                     }
                     break;
                 case 2405:
                     if (strM4357w1.equals("KP")) {
-                        c = 'r';
+                        b2 = 114;
                     }
                     break;
                 case 2407:
                     if (strM4357w1.equals("KR")) {
-                        c = 's';
+                        b2 = 115;
                     }
                     break;
                 case 2412:
                     if (strM4357w1.equals("KW")) {
-                        c = 't';
+                        b2 = 116;
                     }
                     break;
                 case 2414:
                     if (strM4357w1.equals("KY")) {
-                        c = 'u';
+                        b2 = 117;
                     }
                     break;
                 case 2415:
                     if (strM4357w1.equals("KZ")) {
-                        c = 'v';
+                        b2 = 118;
                     }
                     break;
                 case 2421:
                     if (strM4357w1.equals("LA")) {
-                        c = 'w';
+                        b2 = 119;
                     }
                     break;
                 case 2422:
                     if (strM4357w1.equals("LB")) {
-                        c = 'x';
+                        b2 = 120;
                     }
                     break;
                 case 2423:
                     if (strM4357w1.equals("LC")) {
-                        c = 'y';
+                        b2 = 121;
                     }
                     break;
                 case 2429:
                     if (strM4357w1.equals("LI")) {
-                        c = 'z';
+                        b2 = 122;
                     }
                     break;
                 case 2431:
                     if (strM4357w1.equals("LK")) {
-                        c = '{';
+                        b2 = 123;
                     }
                     break;
                 case 2438:
                     if (strM4357w1.equals("LR")) {
-                        c = '|';
+                        b2 = 124;
                     }
                     break;
                 case 2439:
                     if (strM4357w1.equals("LS")) {
-                        c = '}';
+                        b2 = 125;
                     }
                     break;
                 case 2440:
                     if (strM4357w1.equals("LT")) {
-                        c = '~';
+                        b2 = 126;
                     }
                     break;
                 case 2441:
                     if (strM4357w1.equals("LU")) {
-                        c = 127;
+                        b2 = 127;
                     }
                     break;
                 case 2442:
                     if (strM4357w1.equals("LV")) {
-                        c = 128;
+                        b2 = 128;
                     }
                     break;
                 case 2445:
                     if (strM4357w1.equals("LY")) {
-                        c = 129;
+                        b2 = 129;
                     }
                     break;
                 case 2452:
                     if (strM4357w1.equals("MA")) {
-                        c = 130;
+                        b2 = 130;
                     }
                     break;
                 case 2454:
                     if (strM4357w1.equals("MC")) {
-                        c = 131;
+                        b2 = 131;
                     }
                     break;
                 case 2455:
                     if (strM4357w1.equals("MD")) {
-                        c = 132;
+                        b2 = 132;
                     }
                     break;
                 case 2456:
                     if (strM4357w1.equals("ME")) {
-                        c = 133;
+                        b2 = 133;
                     }
                     break;
                 case 2457:
                     if (strM4357w1.equals("MF")) {
-                        c = 134;
+                        b2 = 134;
                     }
                     break;
                 case 2458:
                     if (strM4357w1.equals("MG")) {
-                        c = 135;
+                        b2 = 135;
                     }
                     break;
                 case 2459:
                     if (strM4357w1.equals("MH")) {
-                        c = 136;
+                        b2 = 136;
                     }
                     break;
                 case 2462:
                     if (strM4357w1.equals("MK")) {
-                        c = 137;
+                        b2 = 137;
                     }
                     break;
                 case 2463:
                     if (strM4357w1.equals("ML")) {
-                        c = 138;
+                        b2 = 138;
                     }
                     break;
                 case 2464:
                     if (strM4357w1.equals("MM")) {
-                        c = 139;
+                        b2 = 139;
                     }
                     break;
                 case 2465:
                     if (strM4357w1.equals("MN")) {
-                        c = 140;
+                        b2 = 140;
                     }
                     break;
                 case 2466:
                     if (strM4357w1.equals("MO")) {
-                        c = 141;
+                        b2 = 141;
                     }
                     break;
                 case 2467:
                     if (strM4357w1.equals("MP")) {
-                        c = 142;
+                        b2 = 142;
                     }
                     break;
                 case 2468:
                     if (strM4357w1.equals("MQ")) {
-                        c = 143;
+                        b2 = 143;
                     }
                     break;
                 case 2469:
                     if (strM4357w1.equals("MR")) {
-                        c = 144;
+                        b2 = 144;
                     }
                     break;
                 case 2470:
                     if (strM4357w1.equals("MS")) {
-                        c = 145;
+                        b2 = 145;
                     }
                     break;
                 case 2471:
                     if (strM4357w1.equals("MT")) {
-                        c = 146;
+                        b2 = 146;
                     }
                     break;
                 case 2472:
                     if (strM4357w1.equals("MU")) {
-                        c = 147;
+                        b2 = 147;
                     }
                     break;
                 case 2473:
                     if (strM4357w1.equals("MV")) {
-                        c = 148;
+                        b2 = 148;
                     }
                     break;
                 case 2474:
                     if (strM4357w1.equals("MW")) {
-                        c = 149;
+                        b2 = 149;
                     }
                     break;
                 case 2475:
                     if (strM4357w1.equals("MX")) {
-                        c = 150;
+                        b2 = 150;
                     }
                     break;
                 case 2476:
                     if (strM4357w1.equals("MY")) {
-                        c = 151;
+                        b2 = 151;
                     }
                     break;
                 case 2477:
                     if (strM4357w1.equals("MZ")) {
-                        c = 152;
+                        b2 = 152;
                     }
                     break;
                 case 2483:
                     if (strM4357w1.equals("NA")) {
-                        c = 153;
+                        b2 = 153;
                     }
                     break;
                 case 2485:
                     if (strM4357w1.equals("NC")) {
-                        c = 154;
+                        b2 = 154;
                     }
                     break;
                 case 2487:
                     if (strM4357w1.equals("NE")) {
-                        c = 155;
+                        b2 = 155;
                     }
                     break;
                 case 2489:
                     if (strM4357w1.equals("NG")) {
-                        c = 156;
+                        b2 = 156;
                     }
                     break;
                 case 2491:
                     if (strM4357w1.equals("NI")) {
-                        c = 157;
+                        b2 = 157;
                     }
                     break;
                 case 2494:
                     if (strM4357w1.equals("NL")) {
-                        c = 158;
+                        b2 = 158;
                     }
                     break;
                 case 2497:
                     if (strM4357w1.equals("NO")) {
-                        c = 159;
+                        b2 = 159;
                     }
                     break;
                 case 2498:
                     if (strM4357w1.equals("NP")) {
-                        c = 160;
+                        b2 = 160;
                     }
                     break;
                 case 2500:
                     if (strM4357w1.equals("NR")) {
-                        c = 161;
+                        b2 = 161;
                     }
                     break;
                 case 2503:
                     if (strM4357w1.equals("NU")) {
-                        c = 162;
+                        b2 = 162;
                     }
                     break;
                 case 2508:
                     if (strM4357w1.equals("NZ")) {
-                        c = 163;
+                        b2 = 163;
                     }
                     break;
                 case 2526:
                     if (strM4357w1.equals("OM")) {
-                        c = 164;
+                        b2 = 164;
                     }
                     break;
                 case 2545:
                     if (strM4357w1.equals("PA")) {
-                        c = 165;
+                        b2 = 165;
                     }
                     break;
                 case 2549:
                     if (strM4357w1.equals("PE")) {
-                        c = 166;
+                        b2 = 166;
                     }
                     break;
                 case 2550:
                     if (strM4357w1.equals("PF")) {
-                        c = 167;
+                        b2 = 167;
                     }
                     break;
                 case 2551:
                     if (strM4357w1.equals("PG")) {
-                        c = 168;
+                        b2 = 168;
                     }
                     break;
                 case 2552:
                     if (strM4357w1.equals("PH")) {
-                        c = 169;
+                        b2 = 169;
                     }
                     break;
                 case 2555:
                     if (strM4357w1.equals("PK")) {
-                        c = 170;
+                        b2 = 170;
                     }
                     break;
                 case 2556:
                     if (strM4357w1.equals("PL")) {
-                        c = 171;
+                        b2 = 171;
                     }
                     break;
                 case 2557:
                     if (strM4357w1.equals("PM")) {
-                        c = 172;
+                        b2 = 172;
                     }
                     break;
                 case 2562:
                     if (strM4357w1.equals("PR")) {
-                        c = 173;
+                        b2 = 173;
                     }
                     break;
                 case 2563:
                     if (strM4357w1.equals("PS")) {
-                        c = 174;
+                        b2 = 174;
                     }
                     break;
                 case 2564:
                     if (strM4357w1.equals("PT")) {
-                        c = 175;
+                        b2 = 175;
                     }
                     break;
                 case 2567:
                     if (strM4357w1.equals("PW")) {
-                        c = 176;
+                        b2 = 176;
                     }
                     break;
                 case 2569:
                     if (strM4357w1.equals("PY")) {
-                        c = 177;
+                        b2 = 177;
                     }
                     break;
                 case 2576:
                     if (strM4357w1.equals("QA")) {
-                        c = 178;
+                        b2 = 178;
                     }
                     break;
                 case 2611:
                     if (strM4357w1.equals("RE")) {
-                        c = 179;
+                        b2 = 179;
                     }
                     break;
                 case 2621:
                     if (strM4357w1.equals("RO")) {
-                        c = 180;
+                        b2 = 180;
                     }
                     break;
                 case 2625:
                     if (strM4357w1.equals("RS")) {
-                        c = 181;
+                        b2 = 181;
                     }
                     break;
                 case 2627:
                     if (strM4357w1.equals("RU")) {
-                        c = 182;
+                        b2 = 182;
                     }
                     break;
                 case 2629:
                     if (strM4357w1.equals("RW")) {
-                        c = 183;
+                        b2 = 183;
                     }
                     break;
                 case 2638:
                     if (strM4357w1.equals("SA")) {
-                        c = 184;
+                        b2 = 184;
                     }
                     break;
                 case 2639:
                     if (strM4357w1.equals("SB")) {
-                        c = 185;
+                        b2 = 185;
                     }
                     break;
                 case 2640:
                     if (strM4357w1.equals("SC")) {
-                        c = 186;
+                        b2 = 186;
                     }
                     break;
                 case 2641:
                     if (strM4357w1.equals("SD")) {
-                        c = 187;
+                        b2 = 187;
                     }
                     break;
                 case 2642:
                     if (strM4357w1.equals("SE")) {
-                        c = 188;
+                        b2 = 188;
                     }
                     break;
                 case 2644:
                     if (strM4357w1.equals("SG")) {
-                        c = 189;
+                        b2 = 189;
                     }
                     break;
                 case 2645:
                     if (strM4357w1.equals("SH")) {
-                        c = 190;
+                        b2 = 190;
                     }
                     break;
                 case 2646:
                     if (strM4357w1.equals("SI")) {
-                        c = 191;
+                        b2 = 191;
                     }
                     break;
                 case 2647:
                     if (strM4357w1.equals("SJ")) {
-                        c = 192;
+                        b2 = 192;
                     }
                     break;
                 case 2648:
                     if (strM4357w1.equals("SK")) {
-                        c = 193;
+                        b2 = 193;
                     }
                     break;
                 case 2649:
                     if (strM4357w1.equals("SL")) {
-                        c = 194;
+                        b2 = 194;
                     }
                     break;
                 case 2650:
                     if (strM4357w1.equals("SM")) {
-                        c = 195;
+                        b2 = 195;
                     }
                     break;
                 case 2651:
                     if (strM4357w1.equals("SN")) {
-                        c = 196;
+                        b2 = 196;
                     }
                     break;
                 case 2652:
                     if (strM4357w1.equals("SO")) {
-                        c = 197;
+                        b2 = 197;
                     }
                     break;
                 case 2655:
                     if (strM4357w1.equals("SR")) {
-                        c = 198;
+                        b2 = 198;
                     }
                     break;
                 case 2656:
                     if (strM4357w1.equals("SS")) {
-                        c = 199;
+                        b2 = 199;
                     }
                     break;
                 case 2657:
                     if (strM4357w1.equals("ST")) {
-                        c = 200;
+                        b2 = 200;
                     }
                     break;
                 case 2659:
                     if (strM4357w1.equals("SV")) {
-                        c = 201;
+                        b2 = 201;
                     }
                     break;
                 case 2661:
                     if (strM4357w1.equals("SX")) {
-                        c = 202;
+                        b2 = 202;
                     }
                     break;
                 case 2662:
                     if (strM4357w1.equals("SY")) {
-                        c = 203;
+                        b2 = 203;
                     }
                     break;
                 case 2663:
                     if (strM4357w1.equals("SZ")) {
-                        c = 204;
+                        b2 = 204;
                     }
                     break;
                 case 2671:
                     if (strM4357w1.equals("TC")) {
-                        c = 205;
+                        b2 = 205;
                     }
                     break;
                 case 2672:
                     if (strM4357w1.equals("TD")) {
-                        c = 206;
+                        b2 = 206;
                     }
                     break;
                 case 2675:
                     if (strM4357w1.equals("TG")) {
-                        c = 207;
+                        b2 = 207;
                     }
                     break;
                 case 2676:
                     if (strM4357w1.equals("TH")) {
-                        c = 208;
+                        b2 = 208;
                     }
                     break;
                 case 2678:
                     if (strM4357w1.equals("TJ")) {
-                        c = 209;
+                        b2 = 209;
                     }
                     break;
                 case 2680:
                     if (strM4357w1.equals("TL")) {
-                        c = 210;
+                        b2 = 210;
                     }
                     break;
                 case 2681:
                     if (strM4357w1.equals("TM")) {
-                        c = 211;
+                        b2 = 211;
                     }
                     break;
                 case 2682:
                     if (strM4357w1.equals("TN")) {
-                        c = 212;
+                        b2 = 212;
                     }
                     break;
                 case 2683:
                     if (strM4357w1.equals("TO")) {
-                        c = 213;
+                        b2 = 213;
                     }
                     break;
                 case 2686:
                     if (strM4357w1.equals("TR")) {
-                        c = 214;
+                        b2 = 214;
                     }
                     break;
                 case 2688:
                     if (strM4357w1.equals("TT")) {
-                        c = 215;
+                        b2 = 215;
                     }
                     break;
                 case 2690:
                     if (strM4357w1.equals("TV")) {
-                        c = 216;
+                        b2 = 216;
                     }
                     break;
                 case 2691:
                     if (strM4357w1.equals("TW")) {
-                        c = 217;
+                        b2 = ExifInterface.MARKER_EOI;
                     }
                     break;
                 case 2694:
                     if (strM4357w1.equals("TZ")) {
-                        c = 218;
+                        b2 = 218;
                     }
                     break;
                 case 2700:
                     if (strM4357w1.equals("UA")) {
-                        c = 219;
+                        b2 = 219;
                     }
                     break;
                 case 2706:
                     if (strM4357w1.equals("UG")) {
-                        c = 220;
+                        b2 = 220;
                     }
                     break;
                 case 2718:
                     if (strM4357w1.equals("US")) {
-                        c = 221;
+                        b2 = 221;
                     }
                     break;
                 case 2724:
                     if (strM4357w1.equals("UY")) {
-                        c = 222;
+                        b2 = 222;
                     }
                     break;
                 case 2725:
                     if (strM4357w1.equals("UZ")) {
-                        c = 223;
+                        b2 = 223;
                     }
                     break;
                 case 2733:
                     if (strM4357w1.equals("VC")) {
-                        c = 224;
+                        b2 = 224;
                     }
                     break;
                 case 2735:
                     if (strM4357w1.equals("VE")) {
-                        c = 225;
+                        b2 = ExifInterface.MARKER_APP1;
                     }
                     break;
                 case 2737:
                     if (strM4357w1.equals("VG")) {
-                        c = 226;
+                        b2 = 226;
                     }
                     break;
                 case 2739:
                     if (strM4357w1.equals("VI")) {
-                        c = 227;
+                        b2 = 227;
                     }
                     break;
                 case 2744:
                     if (strM4357w1.equals("VN")) {
-                        c = 228;
+                        b2 = 228;
                     }
                     break;
                 case 2751:
                     if (strM4357w1.equals("VU")) {
-                        c = 229;
+                        b2 = 229;
                     }
                     break;
                 case 2767:
                     if (strM4357w1.equals("WF")) {
-                        c = 230;
+                        b2 = 230;
                     }
                     break;
                 case 2780:
                     if (strM4357w1.equals("WS")) {
-                        c = 231;
+                        b2 = 231;
                     }
                     break;
                 case 2803:
                     if (strM4357w1.equals("XK")) {
-                        c = 232;
+                        b2 = 232;
                     }
                     break;
                 case 2828:
                     if (strM4357w1.equals("YE")) {
-                        c = 233;
+                        b2 = 233;
                     }
                     break;
                 case 2843:
                     if (strM4357w1.equals("YT")) {
-                        c = 234;
+                        b2 = 234;
                     }
                     break;
                 case 2855:
                     if (strM4357w1.equals("ZA")) {
-                        c = 235;
+                        b2 = 235;
                     }
                     break;
                 case 2867:
                     if (strM4357w1.equals("ZM")) {
-                        c = 236;
+                        b2 = 236;
                     }
                     break;
                 case 2877:
                     if (strM4357w1.equals("ZW")) {
-                        c = 237;
+                        b2 = 237;
                     }
                     break;
             }
-            switch (c) {
+            switch (b2) {
                 case 0:
                 case 26:
-                case 'P':
-                case 'y':
+                case 80:
+                case 121:
                     iArr = new int[]{1, 2, 0, 0, 2, 2};
                     break;
                 case 1:
                     iArr = new int[]{1, 4, 4, 4, 3, 2};
                     break;
                 case 2:
-                case ']':
+                case 93:
                 case 155:
                 case Opcodes.NEW /* 187 */:
                 case 196:
@@ -1350,57 +1350,57 @@ public final class DefaultBandwidthMeter implements BandwidthMeter, TransferList
                     break;
                 case 4:
                 case 25:
-                case '3':
-                case '9':
-                case 'J':
+                case 51:
+                case 57:
+                case 74:
                 case Opcodes.I2B /* 145 */:
                 case 224:
                     iArr = new int[]{1, 2, 2, 2, 2, 2};
                     break;
                 case 5:
                 case 16:
-                case 'u':
+                case 117:
                     iArr = new int[]{1, 2, 0, 1, 2, 2};
                     break;
                 case 6:
                     iArr = new int[]{2, 3, 2, 4, 2, 2};
                     break;
                 case 7:
-                case ',':
+                case 44:
                     iArr = new int[]{3, 4, 3, 2, 2, 2};
                     break;
-                case '\b':
-                case '?':
-                case 'd':
+                case 8:
+                case 63:
+                case 100:
                 case Opcodes.IF_ICMPGE /* 162 */:
                 case Opcodes.ARRAYLENGTH /* 190 */:
                 case Opcodes.IFNONNULL /* 199 */:
                 case 216:
                     iArr = new int[]{4, 2, 2, 2, 2, 2};
                     break;
-                case '\t':
+                case 9:
                     iArr = new int[]{2, 4, 1, 1, 2, 2};
                     break;
-                case '\n':
+                case 10:
                     iArr = new int[]{2, 2, 2, 3, 2, 2};
                     break;
                 case 11:
-                case '(':
-                case 'g':
+                case 40:
+                case 103:
                 case Opcodes.NEWARRAY /* 188 */:
                 case Opcodes.INSTANCEOF /* 193 */:
                     iArr = new int[]{0, 0, 0, 0, 0, 2};
                     break;
-                case '\f':
+                case 12:
                     iArr = new int[]{0, 1, 0, 1, 2, 2};
                     break;
-                case '\r':
-                case 'W':
+                case 13:
+                case 87:
                     iArr = new int[]{1, 2, 4, 4, 2, 2};
                     break;
                 case 14:
-                case 'O':
-                case 'z':
+                case 79:
+                case 122:
                 case Opcodes.D2I /* 142 */:
                 case Opcodes.IRETURN /* 172 */:
                 case Opcodes.CHECKCAST /* 192 */:
@@ -1412,8 +1412,8 @@ public final class DefaultBandwidthMeter implements BandwidthMeter, TransferList
                     iArr = new int[]{3, 2, 4, 4, 2, 2};
                     break;
                 case 17:
-                case 'F':
-                case 'M':
+                case 70:
+                case 77:
                     iArr = new int[]{0, 2, 0, 0, 2, 2};
                     break;
                 case 18:
@@ -1427,7 +1427,7 @@ public final class DefaultBandwidthMeter implements BandwidthMeter, TransferList
                     iArr = new int[]{4, 3, 4, 3, 2, 2};
                     break;
                 case 21:
-                case '5':
+                case 53:
                 case Opcodes.ATHROW /* 191 */:
                     iArr = new int[]{0, 0, 0, 0, 1, 2};
                     break;
@@ -1435,7 +1435,7 @@ public final class DefaultBandwidthMeter implements BandwidthMeter, TransferList
                     iArr = new int[]{1, 2, 2, 4, 4, 2};
                     break;
                 case 23:
-                case ';':
+                case 59:
                 case 203:
                 case 210:
                     iArr = new int[]{4, 3, 4, 4, 2, 2};
@@ -1459,235 +1459,235 @@ public final class DefaultBandwidthMeter implements BandwidthMeter, TransferList
                 case 31:
                     iArr = new int[]{4, 2, 2, 3, 2, 2};
                     break;
-                case ' ':
+                case 32:
                     iArr = new int[]{3, 1, 3, 2, 2, 2};
                     break;
-                case '!':
-                case 'Y':
+                case 33:
+                case 89:
                     iArr = new int[]{3, 4, 1, 0, 2, 2};
                     break;
-                case '\"':
+                case 34:
                     iArr = new int[]{0, 1, 1, 3, 2, 2};
                     break;
-                case '#':
+                case 35:
                     iArr = new int[]{2, 4, 2, 2, 2, 2};
                     break;
-                case '$':
+                case 36:
                     iArr = new int[]{0, 2, 1, 2, 4, 1};
                     break;
-                case '%':
+                case 37:
                     iArr = new int[]{4, 2, 3, 1, 2, 2};
                     break;
-                case '&':
+                case 38:
                     iArr = new int[]{4, 2, 3, 2, 2, 2};
                     break;
-                case '\'':
+                case 39:
                 case 150:
                     iArr = new int[]{2, 4, 3, 4, 2, 2};
                     break;
-                case ')':
+                case 41:
                     iArr = new int[]{3, 3, 3, 4, 2, 2};
                     break;
-                case '*':
+                case 42:
                     iArr = new int[]{2, 2, 2, 1, 2, 2};
                     break;
-                case '+':
+                case 43:
                 case Opcodes.LOOKUPSWITCH /* 171 */:
                 case 221:
                     iArr = new int[]{1, 1, 2, 2, 3, 2};
                     break;
-                case '-':
+                case 45:
                     iArr = new int[]{2, 0, 2, 2, 3, 1};
                     break;
-                case '.':
+                case 46:
                     iArr = new int[]{2, 2, 4, 2, 2, 2};
                     break;
-                case '/':
+                case 47:
                     iArr = new int[]{2, 2, 4, 4, 2, 2};
                     break;
-                case '0':
+                case 48:
                 case Opcodes.JSR /* 168 */:
                     iArr = new int[]{4, 4, 3, 2, 2, 2};
                     break;
-                case '1':
+                case 49:
                     iArr = new int[]{2, 3, 1, 0, 2, 2};
                     break;
-                case '2':
+                case 50:
                     iArr = new int[]{2, 2, 0, 0, 2, 2};
                     break;
-                case '4':
+                case 52:
                     iArr = new int[]{1, 0, 0, 0, 1, 2};
                     break;
-                case '6':
+                case 54:
                     iArr = new int[]{0, 0, 2, 2, 1, 2};
                     break;
-                case '7':
+                case 55:
                     iArr = new int[]{4, 1, 4, 4, 2, 2};
                     break;
-                case '8':
+                case 56:
                     iArr = new int[]{0, 0, 1, 0, 0, 2};
                     break;
-                case ':':
-                case 'j':
+                case 58:
+                case 106:
                     iArr = new int[]{3, 4, 4, 4, 2, 2};
                     break;
-                case '<':
+                case 60:
                     iArr = new int[]{2, 4, 2, 1, 2, 2};
                     break;
-                case '=':
-                case '~':
+                case 61:
+                case 126:
                 case 128:
                 case Opcodes.I2C /* 146 */:
                     iArr = new int[]{0, 0, 0, 0, 2, 2};
                     break;
-                case '>':
+                case 62:
                     iArr = new int[]{3, 4, 2, 3, 2, 2};
                     break;
-                case '@':
-                case '`':
+                case 64:
+                case 96:
                     iArr = new int[]{0, 1, 1, 1, 2, 2};
                     break;
-                case 'A':
+                case 65:
                     iArr = new int[]{4, 4, 3, 1, 2, 2};
                     break;
-                case 'B':
+                case 66:
                     iArr = new int[]{0, 0, 0, 1, 0, 2};
                     break;
-                case 'C':
+                case 67:
                     iArr = new int[]{3, 1, 3, 3, 2, 2};
                     break;
-                case 'D':
-                case 'r':
+                case 68:
+                case 114:
                 case 130:
                 case Opcodes.DCMPG /* 152 */:
                 case 200:
                     iArr = new int[]{3, 2, 2, 2, 2, 2};
                     break;
-                case 'E':
+                case 69:
                     iArr = new int[]{3, 2, 4, 2, 2, 2};
                     break;
-                case 'G':
+                case 71:
                     iArr = new int[]{1, 1, 2, 1, 1, 1};
                     break;
-                case 'H':
+                case 72:
                     iArr = new int[]{2, 3, 1, 1, 2, 2};
                     break;
-                case 'I':
+                case 73:
                     iArr = new int[]{0, 0, 1, 1, 2, 3};
                     break;
-                case 'K':
+                case 75:
                     iArr = new int[]{1, 1, 1, 3, 2, 2};
                     break;
-                case 'L':
-                case 'S':
+                case 76:
+                case 83:
                 case Opcodes.D2L /* 143 */:
                     iArr = new int[]{2, 1, 2, 3, 2, 2};
                     break;
-                case 'N':
+                case 78:
                     iArr = new int[]{3, 2, 3, 2, 2, 2};
                     break;
-                case 'Q':
+                case 81:
                 case 230:
                     iArr = new int[]{4, 2, 2, 4, 2, 2};
                     break;
-                case 'R':
+                case 82:
                     iArr = new int[]{4, 3, 4, 2, 2, 2};
                     break;
-                case 'T':
+                case 84:
                     iArr = new int[]{4, 2, 3, 4, 2, 2};
                     break;
-                case 'U':
-                case '\\':
+                case 85:
+                case 92:
                 case Opcodes.IINC /* 132 */:
                 case Opcodes.L2F /* 137 */:
                 case Opcodes.PUTFIELD /* 181 */:
                     iArr = new int[]{1, 0, 0, 0, 2, 2};
                     break;
-                case 'V':
+                case 86:
                     iArr = new int[]{2, 3, 2, 1, 2, 2};
                     break;
-                case 'X':
+                case 88:
                 case 218:
                     iArr = new int[]{3, 4, 3, 3, 2, 2};
                     break;
-                case 'Z':
+                case 90:
                     iArr = new int[]{0, 1, 2, 3, 2, 0};
                     break;
-                case '[':
+                case 91:
                 case Opcodes.TABLESWITCH /* 170 */:
                 case Opcodes.MULTIANEWARRAY /* 197 */:
                     iArr = new int[]{3, 2, 3, 3, 2, 2};
                     break;
-                case '^':
+                case 94:
                     iArr = new int[]{0, 0, 0, 1, 3, 2};
                     break;
-                case '_':
+                case 95:
                     iArr = new int[]{3, 2, 3, 3, 3, 2};
                     break;
-                case 'a':
+                case 97:
                     iArr = new int[]{1, 1, 2, 3, 4, 2};
                     break;
-                case 'b':
+                case 98:
                     iArr = new int[]{0, 2, 0, 1, 2, 2};
                     break;
-                case 'c':
+                case 99:
                     iArr = new int[]{1, 1, 3, 2, 4, 3};
                     break;
-                case 'e':
+                case 101:
                 case 220:
                     iArr = new int[]{3, 3, 3, 3, 2, 2};
                     break;
-                case 'f':
+                case 102:
                     iArr = new int[]{3, 0, 1, 1, 3, 0};
                     break;
-                case 'h':
+                case 104:
                     iArr = new int[]{0, 1, 0, 1, 1, 2};
                     break;
-                case 'i':
+                case 105:
                     iArr = new int[]{3, 2, 1, 2, 2, 2};
                     break;
-                case 'k':
+                case 107:
                 case Opcodes.I2L /* 133 */:
                     iArr = new int[]{1, 0, 0, 1, 2, 2};
                     break;
-                case 'l':
+                case 108:
                     iArr = new int[]{0, 1, 0, 1, 1, 1};
                     break;
-                case 'm':
+                case 109:
                     iArr = new int[]{3, 3, 2, 2, 2, 2};
                     break;
-                case 'n':
+                case 110:
                     iArr = new int[]{2, 1, 1, 1, 2, 2};
                     break;
-                case 'o':
+                case 111:
                     iArr = new int[]{1, 1, 4, 2, 2, 2};
                     break;
-                case 'p':
-                case 'q':
+                case 112:
+                case 113:
                 case Opcodes.LOR /* 129 */:
                 case Opcodes.INVOKEINTERFACE /* 185 */:
                     iArr = new int[]{4, 2, 4, 3, 2, 2};
                     break;
-                case 's':
+                case 115:
                     iArr = new int[]{0, 0, 1, 3, 4, 4};
                     break;
-                case 't':
+                case 116:
                     iArr = new int[]{1, 1, 0, 0, 0, 2};
                     break;
-                case 'v':
+                case 118:
                     iArr = new int[]{1, 1, 2, 2, 2, 2};
                     break;
-                case 'w':
+                case 119:
                 case 222:
                     iArr = new int[]{2, 2, 1, 2, 2, 2};
                     break;
-                case 'x':
+                case 120:
                     iArr = new int[]{3, 2, 1, 4, 2, 2};
                     break;
-                case '{':
+                case 123:
                     iArr = new int[]{3, 1, 3, 4, 4, 2};
                     break;
-                case '|':
+                case 124:
                     iArr = new int[]{3, 4, 4, 3, 2, 2};
                     break;
                 case Opcodes.LUSHR /* 125 */:
@@ -1936,19 +1936,19 @@ public final class DefaultBandwidthMeter implements BandwidthMeter, TransferList
         networkTypeObserver.f6783b.post(new RunnableC2733c(networkTypeObserver, c2681b));
     }
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public static boolean m2861i(DataSpec dataSpec, boolean z2) {
         return z2 && !dataSpec.m2856c(8);
     }
 
     @Override // p007b.p225i.p226a.p242c.p257e3.TransferListener
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public synchronized void mo2773a(DataSource3 dataSource3, DataSpec dataSpec, boolean z2) {
         if (m2861i(dataSpec, z2)) {
             AnimatableValueParser.m426D(this.f6581m > 0);
             long jMo2952d = this.f6579k.mo2952d();
             int i = (int) (jMo2952d - this.f6582n);
-            this.f6585q += i;
+            this.f6585q += (long) i;
             long j = this.f6586r;
             long j2 = this.f6583o;
             this.f6586r = j + j2;
@@ -1966,7 +1966,7 @@ public final class DefaultBandwidthMeter implements BandwidthMeter, TransferList
     }
 
     @Override // p007b.p225i.p226a.p242c.p257e3.TransferListener
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public synchronized void mo2774b(DataSource3 dataSource3, DataSpec dataSpec, boolean z2) {
         if (m2861i(dataSpec, z2)) {
             if (this.f6581m == 0) {
@@ -1977,27 +1977,27 @@ public final class DefaultBandwidthMeter implements BandwidthMeter, TransferList
     }
 
     @Override // p007b.p225i.p226a.p242c.p257e3.BandwidthMeter
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public TransferListener mo2844c() {
         return this;
     }
 
     @Override // p007b.p225i.p226a.p242c.p257e3.BandwidthMeter
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public void mo2845d(BandwidthMeter.a aVar) {
         this.f6577i.m2847a(aVar);
     }
 
     @Override // p007b.p225i.p226a.p242c.p257e3.TransferListener
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public synchronized void mo2775e(DataSource3 dataSource3, DataSpec dataSpec, boolean z2, int i) {
         if (m2861i(dataSpec, z2)) {
-            this.f6583o += i;
+            this.f6583o += (long) i;
         }
     }
 
     @Override // p007b.p225i.p226a.p242c.p257e3.BandwidthMeter
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public void mo2846f(Handler handler, BandwidthMeter.a aVar) {
         BandwidthMeter.a.C13224a c13224a = this.f6577i;
         Objects.requireNonNull(c13224a);
@@ -2006,11 +2006,11 @@ public final class DefaultBandwidthMeter implements BandwidthMeter, TransferList
     }
 
     @Override // p007b.p225i.p226a.p242c.p257e3.TransferListener
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public void mo2776g(DataSource3 dataSource3, DataSpec dataSpec, boolean z2) {
     }
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public final long m2862h(int i) {
         Long l = this.f6576h.get(Integer.valueOf(i));
         if (l == null) {
@@ -2022,7 +2022,7 @@ public final class DefaultBandwidthMeter implements BandwidthMeter, TransferList
         return l.longValue();
     }
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final void m2863j(int i, long j, long j2) {
         if (i == 0 && j == 0 && j2 == this.f6588t) {
             return;

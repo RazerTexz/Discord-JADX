@@ -35,11 +35,11 @@ import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 import p658rx.Observable;
 
-/* compiled from: CallModel.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: CallModel.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class CallModel {
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private final StoreApplicationStreaming.ActiveApplicationStream activeStream;
     private final Map<Long, Application> applications;
@@ -66,10 +66,10 @@ public final /* data */ class CallModel {
     private final VoiceChannelJoinabilityUtils2 voiceChannelJoinability;
     private final StoreMediaSettings.VoiceConfiguration voiceSettings;
 
-    /* compiled from: CallModel.kt */
+    /* JADX INFO: compiled from: CallModel.kt */
     public static final class Companion {
 
-        /* compiled from: CallModel.kt */
+        /* JADX INFO: compiled from: CallModel.kt */
         public static final /* data */ class Chunk {
             private final StoreAudioManagerV2.State audioManagerState;
             private final Channel channel;
@@ -98,26 +98,27 @@ public final /* data */ class CallModel {
                 this.audioManagerState = state;
             }
 
+            /* JADX WARN: Multi-variable type inference failed */
             public static /* synthetic */ Chunk copy$default(Chunk chunk, Channel channel, long j, long j2, StoreMediaSettings.VoiceConfiguration voiceConfiguration, Map map, Long l, List list, DeviceDescription4 deviceDescription4, StoreAudioManagerV2.State state, int i, Object obj) {
                 return chunk.copy((i & 1) != 0 ? chunk.channel : channel, (i & 2) != 0 ? chunk.myUserId : j, (i & 4) != 0 ? chunk.timeConnectedMs : j2, (i & 8) != 0 ? chunk.voiceConfig : voiceConfiguration, (i & 16) != 0 ? chunk.voiceParticipants : map, (i & 32) != 0 ? chunk.channelPermissions : l, (i & 64) != 0 ? chunk.videoDevices : list, (i & 128) != 0 ? chunk.selectedVideoDevice : deviceDescription4, (i & 256) != 0 ? chunk.audioManagerState : state);
             }
 
-            /* renamed from: component1, reason: from getter */
+            /* JADX INFO: renamed from: component1, reason: from getter */
             public final Channel getChannel() {
                 return this.channel;
             }
 
-            /* renamed from: component2, reason: from getter */
+            /* JADX INFO: renamed from: component2, reason: from getter */
             public final long getMyUserId() {
                 return this.myUserId;
             }
 
-            /* renamed from: component3, reason: from getter */
+            /* JADX INFO: renamed from: component3, reason: from getter */
             public final long getTimeConnectedMs() {
                 return this.timeConnectedMs;
             }
 
-            /* renamed from: component4, reason: from getter */
+            /* JADX INFO: renamed from: component4, reason: from getter */
             public final StoreMediaSettings.VoiceConfiguration getVoiceConfig() {
                 return this.voiceConfig;
             }
@@ -126,7 +127,7 @@ public final /* data */ class CallModel {
                 return this.voiceParticipants;
             }
 
-            /* renamed from: component6, reason: from getter */
+            /* JADX INFO: renamed from: component6, reason: from getter */
             public final Long getChannelPermissions() {
                 return this.channelPermissions;
             }
@@ -135,12 +136,12 @@ public final /* data */ class CallModel {
                 return this.videoDevices;
             }
 
-            /* renamed from: component8, reason: from getter */
+            /* JADX INFO: renamed from: component8, reason: from getter */
             public final DeviceDescription4 getSelectedVideoDevice() {
                 return this.selectedVideoDevice;
             }
 
-            /* renamed from: component9, reason: from getter */
+            /* JADX INFO: renamed from: component9, reason: from getter */
             public final StoreAudioManagerV2.State getAudioManagerState() {
                 return this.audioManagerState;
             }
@@ -357,26 +358,27 @@ public final /* data */ class CallModel {
         this.isVideoCall = z5;
     }
 
-    /* renamed from: component19, reason: from getter */
+    /* JADX INFO: renamed from: component19, reason: from getter */
     private final Channel getChannel() {
         return this.channel;
     }
 
-    /* renamed from: component20, reason: from getter */
+    /* JADX INFO: renamed from: component20, reason: from getter */
     private final int getNumUsersConnected() {
         return this.numUsersConnected;
     }
 
-    /* renamed from: component21, reason: from getter */
+    /* JADX INFO: renamed from: component21, reason: from getter */
     private final Long getChannelPermissions() {
         return this.channelPermissions;
     }
 
-    /* renamed from: component22, reason: from getter */
+    /* JADX INFO: renamed from: component22, reason: from getter */
     private final StoreAudioManagerV2.State getAudioManagerState() {
         return this.audioManagerState;
     }
 
+    /* JADX WARN: Multi-variable type inference failed */
     public static /* synthetic */ CallModel copy$default(CallModel callModel, Map map, long j, long j2, List list, DeviceDescription4 deviceDescription4, StoreMediaSettings.VoiceConfiguration voiceConfiguration, RtcConnection.Metadata metadata, int i, int i2, StoreApplicationStreaming.ActiveApplicationStream activeApplicationStream, VoiceChannelJoinabilityUtils2 voiceChannelJoinabilityUtils2, GuildMaxVideoChannelUsers guildMaxVideoChannelUsers, Guild guild, boolean z2, boolean z3, List list2, Map map2, Map map3, Channel channel, int i3, Long l, StoreAudioManagerV2.State state, int i4, Object obj) {
         return callModel.copy((i4 & 1) != 0 ? callModel.participants : map, (i4 & 2) != 0 ? callModel.myId : j, (i4 & 4) != 0 ? callModel.timeConnectedMs : j2, (i4 & 8) != 0 ? callModel.videoDevices : list, (i4 & 16) != 0 ? callModel.selectedVideoDevice : deviceDescription4, (i4 & 32) != 0 ? callModel.voiceSettings : voiceConfiguration, (i4 & 64) != 0 ? callModel.rtcConnectionMetadata : metadata, (i4 & 128) != 0 ? callModel.callFeedbackTriggerRateDenominator : i, (i4 & 256) != 0 ? callModel.streamFeedbackTriggerRateDenominator : i2, (i4 & 512) != 0 ? callModel.activeStream : activeApplicationStream, (i4 & 1024) != 0 ? callModel.voiceChannelJoinability : voiceChannelJoinabilityUtils2, (i4 & 2048) != 0 ? callModel.guildMaxVideoChannelMembers : guildMaxVideoChannelUsers, (i4 & 4096) != 0 ? callModel.guild : guild, (i4 & 8192) != 0 ? callModel.isChannelSelected : z2, (i4 & 16384) != 0 ? callModel.isMyHandRaised : z3, (i4 & 32768) != 0 ? callModel.guildScheduledEvents : list2, (i4 & 65536) != 0 ? callModel.embeddedActivitiesForChannel : map2, (i4 & 131072) != 0 ? callModel.applications : map3, (i4 & 262144) != 0 ? callModel.channel : channel, (i4 & 524288) != 0 ? callModel.numUsersConnected : i3, (i4 & 1048576) != 0 ? callModel.channelPermissions : l, (i4 & 2097152) != 0 ? callModel.audioManagerState : state);
     }
@@ -400,32 +402,32 @@ public final /* data */ class CallModel {
         return this.participants;
     }
 
-    /* renamed from: component10, reason: from getter */
+    /* JADX INFO: renamed from: component10, reason: from getter */
     public final StoreApplicationStreaming.ActiveApplicationStream getActiveStream() {
         return this.activeStream;
     }
 
-    /* renamed from: component11, reason: from getter */
+    /* JADX INFO: renamed from: component11, reason: from getter */
     public final VoiceChannelJoinabilityUtils2 getVoiceChannelJoinability() {
         return this.voiceChannelJoinability;
     }
 
-    /* renamed from: component12, reason: from getter */
+    /* JADX INFO: renamed from: component12, reason: from getter */
     public final GuildMaxVideoChannelUsers getGuildMaxVideoChannelMembers() {
         return this.guildMaxVideoChannelMembers;
     }
 
-    /* renamed from: component13, reason: from getter */
+    /* JADX INFO: renamed from: component13, reason: from getter */
     public final Guild getGuild() {
         return this.guild;
     }
 
-    /* renamed from: component14, reason: from getter */
+    /* JADX INFO: renamed from: component14, reason: from getter */
     public final boolean getIsChannelSelected() {
         return this.isChannelSelected;
     }
 
-    /* renamed from: component15, reason: from getter */
+    /* JADX INFO: renamed from: component15, reason: from getter */
     public final boolean getIsMyHandRaised() {
         return this.isMyHandRaised;
     }
@@ -442,12 +444,12 @@ public final /* data */ class CallModel {
         return this.applications;
     }
 
-    /* renamed from: component2, reason: from getter */
+    /* JADX INFO: renamed from: component2, reason: from getter */
     public final long getMyId() {
         return this.myId;
     }
 
-    /* renamed from: component3, reason: from getter */
+    /* JADX INFO: renamed from: component3, reason: from getter */
     public final long getTimeConnectedMs() {
         return this.timeConnectedMs;
     }
@@ -456,27 +458,27 @@ public final /* data */ class CallModel {
         return this.videoDevices;
     }
 
-    /* renamed from: component5, reason: from getter */
+    /* JADX INFO: renamed from: component5, reason: from getter */
     public final DeviceDescription4 getSelectedVideoDevice() {
         return this.selectedVideoDevice;
     }
 
-    /* renamed from: component6, reason: from getter */
+    /* JADX INFO: renamed from: component6, reason: from getter */
     public final StoreMediaSettings.VoiceConfiguration getVoiceSettings() {
         return this.voiceSettings;
     }
 
-    /* renamed from: component7, reason: from getter */
+    /* JADX INFO: renamed from: component7, reason: from getter */
     public final RtcConnection.Metadata getRtcConnectionMetadata() {
         return this.rtcConnectionMetadata;
     }
 
-    /* renamed from: component8, reason: from getter */
+    /* JADX INFO: renamed from: component8, reason: from getter */
     public final int getCallFeedbackTriggerRateDenominator() {
         return this.callFeedbackTriggerRateDenominator;
     }
 
-    /* renamed from: component9, reason: from getter */
+    /* JADX INFO: renamed from: component9, reason: from getter */
     public final int getStreamFeedbackTriggerRateDenominator() {
         return this.streamFeedbackTriggerRateDenominator;
     }
@@ -619,6 +621,12 @@ public final /* data */ class CallModel {
     }
 
     /* JADX WARN: Multi-variable type inference failed */
+    /* JADX WARN: Type inference failed for: r2v31, types: [int] */
+    /* JADX WARN: Type inference failed for: r2v55 */
+    /* JADX WARN: Type inference failed for: r2v64 */
+    /* JADX WARN: Type inference failed for: r3v1 */
+    /* JADX WARN: Type inference failed for: r3v2, types: [int] */
+    /* JADX WARN: Type inference failed for: r3v3 */
     public int hashCode() {
         Map<Long, StoreVoiceParticipants.VoiceUser> map = this.participants;
         int iM3a = (C0002b.m3a(this.timeConnectedMs) + ((C0002b.m3a(this.myId) + ((map != null ? map.hashCode() : 0) * 31)) * 31)) * 31;
@@ -639,15 +647,15 @@ public final /* data */ class CallModel {
         Guild guild = this.guild;
         int iHashCode8 = (iHashCode7 + (guild != null ? guild.hashCode() : 0)) * 31;
         boolean z2 = this.isChannelSelected;
-        int i = z2;
-        if (z2 != 0) {
-            i = 1;
+        ?? r2 = z2;
+        if (z2) {
+            r2 = 1;
         }
-        int i2 = (iHashCode8 + i) * 31;
+        int i = (iHashCode8 + r2) * 31;
         boolean z3 = this.isMyHandRaised;
-        int i3 = (i2 + (z3 ? 1 : z3 ? 1 : 0)) * 31;
+        int i2 = (i + (z3 ? 1 : z3)) * 31;
         List<GuildScheduledEvent> list2 = this.guildScheduledEvents;
-        int iHashCode9 = (i3 + (list2 != null ? list2.hashCode() : 0)) * 31;
+        int iHashCode9 = (i2 + (list2 != null ? list2.hashCode() : 0)) * 31;
         Map<Long, EmbeddedActivity> map2 = this.embeddedActivitiesForChannel;
         int iHashCode10 = (iHashCode9 + (map2 != null ? map2.hashCode() : 0)) * 31;
         Map<Long, Application> map3 = this.applications;
@@ -727,7 +735,7 @@ public final /* data */ class CallModel {
         return voiceState.getSuppress();
     }
 
-    /* renamed from: isVideoCall, reason: from getter */
+    /* JADX INFO: renamed from: isVideoCall, reason: from getter */
     public final boolean getIsVideoCall() {
         return this.isVideoCall;
     }

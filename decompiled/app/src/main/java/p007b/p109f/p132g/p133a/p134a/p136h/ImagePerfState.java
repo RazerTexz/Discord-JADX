@@ -4,93 +4,93 @@ import com.facebook.imagepipeline.image.ImageInfo;
 import com.facebook.imagepipeline.request.ImageRequest;
 import p007b.p109f.p148h.p158b.p159a.ControllerListener2;
 
-/* compiled from: ImagePerfState.java */
-/* renamed from: b.f.g.a.a.h.h, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.f.g.a.a.h.h, reason: use source file name */
+/* JADX INFO: compiled from: ImagePerfState.java */
+/* JADX INFO: loaded from: classes.dex */
 public class ImagePerfState {
 
-    /* renamed from: A */
+    /* JADX INFO: renamed from: A */
     public ControllerListener2.a f3215A;
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public String f3216a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public String f3217b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public ImageRequest f3218c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public Object f3219d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public ImageInfo f3220e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public ImageRequest f3221f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public ImageRequest f3222g;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public ImageRequest[] f3223h;
 
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     public String f3232q;
 
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     public boolean f3233r;
 
-    /* renamed from: u */
+    /* JADX INFO: renamed from: u */
     public Throwable f3236u;
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public long f3224i = -1;
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public long f3225j = -1;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public long f3226k = -1;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public long f3227l = -1;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public long f3228m = -1;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public long f3229n = -1;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public long f3230o = -1;
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public int f3231p = 1;
 
-    /* renamed from: s */
+    /* JADX INFO: renamed from: s */
     public int f3234s = -1;
 
-    /* renamed from: t */
+    /* JADX INFO: renamed from: t */
     public int f3235t = -1;
 
-    /* renamed from: v */
+    /* JADX INFO: renamed from: v */
     public int f3237v = -1;
 
-    /* renamed from: w */
+    /* JADX INFO: renamed from: w */
     public int f3238w = -1;
 
-    /* renamed from: x */
+    /* JADX INFO: renamed from: x */
     public long f3239x = -1;
 
-    /* renamed from: y */
+    /* JADX INFO: renamed from: y */
     public long f3240y = -1;
 
-    /* renamed from: z */
+    /* JADX INFO: renamed from: z */
     public long f3241z = -1;
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public void m1068a() {
         this.f3217b = null;
         this.f3218c = null;
@@ -111,7 +111,7 @@ public class ImagePerfState {
         m1069b();
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public void m1069b() {
         this.f3229n = -1L;
         this.f3230o = -1L;
@@ -124,7 +124,7 @@ public class ImagePerfState {
         this.f3241z = -1L;
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public ImagePerfData m1070c() {
         return new ImagePerfData(this.f3216a, this.f3217b, this.f3218c, this.f3219d, this.f3220e, this.f3221f, this.f3222g, this.f3223h, this.f3224i, this.f3225j, this.f3226k, this.f3227l, this.f3228m, this.f3229n, this.f3230o, this.f3231p, this.f3232q, this.f3233r, this.f3234s, this.f3235t, this.f3236u, this.f3238w, this.f3239x, this.f3240y, null, this.f3241z, this.f3215A);
     }

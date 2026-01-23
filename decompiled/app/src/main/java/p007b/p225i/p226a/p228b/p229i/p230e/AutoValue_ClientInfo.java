@@ -4,15 +4,15 @@ import androidx.annotation.Nullable;
 import p007b.p100d.p104b.p105a.outline;
 import p007b.p225i.p226a.p228b.p229i.p230e.ClientInfo2;
 
-/* compiled from: AutoValue_ClientInfo.java */
-/* renamed from: b.i.a.b.i.e.e, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.b.i.e.e, reason: use source file name */
+/* JADX INFO: compiled from: AutoValue_ClientInfo.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class AutoValue_ClientInfo extends ClientInfo2 {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final ClientInfo2.a f5165a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final AndroidClientInfo f5166b;
 
     public AutoValue_ClientInfo(ClientInfo2.a aVar, AndroidClientInfo androidClientInfo, a aVar2) {
@@ -22,14 +22,14 @@ public final class AutoValue_ClientInfo extends ClientInfo2 {
 
     @Override // p007b.p225i.p226a.p228b.p229i.p230e.ClientInfo2
     @Nullable
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public AndroidClientInfo mo2314a() {
         return this.f5166b;
     }
 
     @Override // p007b.p225i.p226a.p228b.p229i.p230e.ClientInfo2
     @Nullable
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public ClientInfo2.a mo2315b() {
         return this.f5165a;
     }

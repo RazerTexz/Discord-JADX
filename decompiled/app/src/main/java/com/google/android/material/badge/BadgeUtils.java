@@ -1,7 +1,6 @@
 package com.google.android.material.badge;
 
 import android.content.Context;
-import android.content.res.Resources;
 import android.graphics.Rect;
 import android.util.Log;
 import android.util.SparseArray;
@@ -17,25 +16,25 @@ import com.google.android.material.badge.BadgeDrawable;
 import com.google.android.material.internal.ParcelableSparseArray;
 import com.google.android.material.internal.ToolbarUtils;
 
+/* JADX INFO: loaded from: classes3.dex */
 @ExperimentalBadgeUtils
-/* loaded from: classes3.dex */
 public class BadgeUtils {
     private static final String LOG_TAG = "BadgeUtils";
     public static final boolean USE_COMPAT_PARENT = false;
 
-    /* renamed from: com.google.android.material.badge.BadgeUtils$a */
+    /* JADX INFO: renamed from: com.google.android.material.badge.BadgeUtils$a */
     public static class RunnableC10829a implements Runnable {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public final /* synthetic */ Toolbar f20884j;
 
-        /* renamed from: k */
+        /* JADX INFO: renamed from: k */
         public final /* synthetic */ int f20885k;
 
-        /* renamed from: l */
+        /* JADX INFO: renamed from: l */
         public final /* synthetic */ BadgeDrawable f20886l;
 
-        /* renamed from: m */
+        /* JADX INFO: renamed from: m */
         public final /* synthetic */ FrameLayout f20887m;
 
         public RunnableC10829a(Toolbar toolbar, int i, BadgeDrawable badgeDrawable, FrameLayout frameLayout) {
@@ -46,7 +45,7 @@ public class BadgeUtils {
         }
 
         @Override // java.lang.Runnable
-        public void run() throws Resources.NotFoundException {
+        public void run() {
             ActionMenuItemView actionMenuItemView = ToolbarUtils.getActionMenuItemView(this.f20884j, this.f20885k);
             if (actionMenuItemView != null) {
                 BadgeDrawable badgeDrawable = this.f20886l;

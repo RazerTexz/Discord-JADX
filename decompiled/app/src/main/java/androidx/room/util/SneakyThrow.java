@@ -3,8 +3,8 @@ package androidx.room.util;
 import androidx.annotation.NonNull;
 import androidx.annotation.RestrictTo;
 
+/* JADX INFO: loaded from: classes.dex */
 @RestrictTo({RestrictTo.Scope.LIBRARY_GROUP})
-/* loaded from: classes.dex */
 public class SneakyThrow {
     private SneakyThrow() {
     }

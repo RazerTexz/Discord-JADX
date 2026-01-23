@@ -37,91 +37,91 @@ import p507d0.p513e0.p514p.p515d.p517m0.p567n.Variance;
 import p507d0.p513e0.p514p.p515d.p517m0.p576p.SmartList;
 import p507d0.p580t._Collections;
 
-/* compiled from: FunctionDescriptorImpl.java */
-/* renamed from: d0.e0.p.d.m0.c.i1.q, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.c.i1.q, reason: use source file name */
+/* JADX INFO: compiled from: FunctionDescriptorImpl.java */
+/* JADX INFO: loaded from: classes3.dex */
 public abstract class FunctionDescriptorImpl extends DeclarationDescriptorNonRootImpl implements FunctionDescriptor {
 
-    /* renamed from: A */
+    /* JADX INFO: renamed from: A */
     public boolean f22922A;
 
-    /* renamed from: B */
+    /* JADX INFO: renamed from: B */
     public boolean f22923B;
 
-    /* renamed from: C */
+    /* JADX INFO: renamed from: C */
     public boolean f22924C;
 
-    /* renamed from: D */
+    /* JADX INFO: renamed from: D */
     public boolean f22925D;
 
-    /* renamed from: E */
+    /* JADX INFO: renamed from: E */
     public boolean f22926E;
 
-    /* renamed from: F */
+    /* JADX INFO: renamed from: F */
     public boolean f22927F;
 
-    /* renamed from: G */
+    /* JADX INFO: renamed from: G */
     public Collection<? extends FunctionDescriptor> f22928G;
 
-    /* renamed from: H */
+    /* JADX INFO: renamed from: H */
     public volatile Function0<Collection<FunctionDescriptor>> f22929H;
 
-    /* renamed from: I */
+    /* JADX INFO: renamed from: I */
     public final FunctionDescriptor f22930I;
 
-    /* renamed from: J */
+    /* JADX INFO: renamed from: J */
     public final CallableMemberDescriptor.a f22931J;
 
-    /* renamed from: K */
+    /* JADX INFO: renamed from: K */
     public FunctionDescriptor f22932K;
 
-    /* renamed from: L */
+    /* JADX INFO: renamed from: L */
     public Map<CallableDescriptor.a<?>, Object> f22933L;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public List<TypeParameterDescriptor> f22934n;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public List<ValueParameterDescriptor> f22935o;
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public KotlinType f22936p;
 
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     public ReceiverParameterDescriptor f22937q;
 
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     public ReceiverParameterDescriptor f22938r;
 
-    /* renamed from: s */
+    /* JADX INFO: renamed from: s */
     public Modality f22939s;
 
-    /* renamed from: t */
+    /* JADX INFO: renamed from: t */
     public DescriptorVisibility2 f22940t;
 
-    /* renamed from: u */
+    /* JADX INFO: renamed from: u */
     public boolean f22941u;
 
-    /* renamed from: v */
+    /* JADX INFO: renamed from: v */
     public boolean f22942v;
 
-    /* renamed from: w */
+    /* JADX INFO: renamed from: w */
     public boolean f22943w;
 
-    /* renamed from: x */
+    /* JADX INFO: renamed from: x */
     public boolean f22944x;
 
-    /* renamed from: y */
+    /* JADX INFO: renamed from: y */
     public boolean f22945y;
 
-    /* renamed from: z */
+    /* JADX INFO: renamed from: z */
     public boolean f22946z;
 
-    /* compiled from: FunctionDescriptorImpl.java */
-    /* renamed from: d0.e0.p.d.m0.c.i1.q$a */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.c.i1.q$a */
+    /* JADX INFO: compiled from: FunctionDescriptorImpl.java */
     public class a implements Function0<Collection<FunctionDescriptor>> {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public final /* synthetic */ TypeSubstitutor2 f22947j;
 
         public a(TypeSubstitutor2 typeSubstitutor2) {
@@ -134,7 +134,7 @@ public abstract class FunctionDescriptorImpl extends DeclarationDescriptorNonRoo
         }
 
         @Override // kotlin.jvm.functions.Function0
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public Collection<FunctionDescriptor> invoke2() {
             SmartList smartList = new SmartList();
             Iterator<? extends FunctionDescriptor> it = FunctionDescriptorImpl.this.getOverriddenDescriptors().iterator();
@@ -145,11 +145,11 @@ public abstract class FunctionDescriptorImpl extends DeclarationDescriptorNonRoo
         }
     }
 
-    /* compiled from: FunctionDescriptorImpl.java */
-    /* renamed from: d0.e0.p.d.m0.c.i1.q$b */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.c.i1.q$b */
+    /* JADX INFO: compiled from: FunctionDescriptorImpl.java */
     public static class b implements Function0<List<VariableDescriptor>> {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public final /* synthetic */ List f22949j;
 
         public b(List list) {
@@ -162,83 +162,83 @@ public abstract class FunctionDescriptorImpl extends DeclarationDescriptorNonRoo
         }
 
         @Override // kotlin.jvm.functions.Function0
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public List<VariableDescriptor> invoke2() {
             return this.f22949j;
         }
     }
 
-    /* compiled from: FunctionDescriptorImpl.java */
-    /* renamed from: d0.e0.p.d.m0.c.i1.q$c */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.c.i1.q$c */
+    /* JADX INFO: compiled from: FunctionDescriptorImpl.java */
     public class c implements FunctionDescriptor.a<FunctionDescriptor> {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public TypeSubstitution5 f22950a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public DeclarationDescriptor f22951b;
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public Modality f22952c;
 
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         public DescriptorVisibility2 f22953d;
 
-        /* renamed from: e */
+        /* JADX INFO: renamed from: e */
         public FunctionDescriptor f22954e;
 
-        /* renamed from: f */
+        /* JADX INFO: renamed from: f */
         public CallableMemberDescriptor.a f22955f;
 
-        /* renamed from: g */
+        /* JADX INFO: renamed from: g */
         public List<ValueParameterDescriptor> f22956g;
 
-        /* renamed from: h */
+        /* JADX INFO: renamed from: h */
         public ReceiverParameterDescriptor f22957h;
 
-        /* renamed from: i */
+        /* JADX INFO: renamed from: i */
         public ReceiverParameterDescriptor f22958i;
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public KotlinType f22959j;
 
-        /* renamed from: k */
+        /* JADX INFO: renamed from: k */
         public Name f22960k;
 
-        /* renamed from: l */
+        /* JADX INFO: renamed from: l */
         public boolean f22961l;
 
-        /* renamed from: m */
+        /* JADX INFO: renamed from: m */
         public boolean f22962m;
 
-        /* renamed from: n */
+        /* JADX INFO: renamed from: n */
         public boolean f22963n;
 
-        /* renamed from: o */
+        /* JADX INFO: renamed from: o */
         public boolean f22964o;
 
-        /* renamed from: p */
+        /* JADX INFO: renamed from: p */
         public boolean f22965p;
 
-        /* renamed from: q */
+        /* JADX INFO: renamed from: q */
         public List<TypeParameterDescriptor> f22966q;
 
-        /* renamed from: r */
+        /* JADX INFO: renamed from: r */
         public Annotations4 f22967r;
 
-        /* renamed from: s */
+        /* JADX INFO: renamed from: s */
         public boolean f22968s;
 
-        /* renamed from: t */
+        /* JADX INFO: renamed from: t */
         public Map<CallableDescriptor.a<?>, Object> f22969t;
 
-        /* renamed from: u */
+        /* JADX INFO: renamed from: u */
         public Boolean f22970u;
 
-        /* renamed from: v */
+        /* JADX INFO: renamed from: v */
         public boolean f22971v;
 
-        /* renamed from: w */
+        /* JADX INFO: renamed from: w */
         public final /* synthetic */ FunctionDescriptorImpl f22972w;
 
         public c(FunctionDescriptorImpl functionDescriptorImpl, TypeSubstitution5 typeSubstitution5, DeclarationDescriptor declarationDescriptor, Modality modality, DescriptorVisibility2 descriptorVisibility2, CallableMemberDescriptor.a aVar, List<ValueParameterDescriptor> list, ReceiverParameterDescriptor receiverParameterDescriptor, KotlinType kotlinType, Name name) {
@@ -295,7 +295,7 @@ public abstract class FunctionDescriptorImpl extends DeclarationDescriptorNonRoo
             this.f22960k = name;
         }
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public static /* synthetic */ void m9426a(int i) {
             String str;
             int i2;
@@ -943,7 +943,7 @@ public abstract class FunctionDescriptorImpl extends DeclarationDescriptorNonRoo
         this.f22931J = aVar;
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static /* synthetic */ void m9424a(int i) {
         String str;
         int i2;
@@ -1196,10 +1196,10 @@ public abstract class FunctionDescriptorImpl extends DeclarationDescriptorNonRoo
         return declarationDescriptorVisitor.visitFunctionDescriptor(this, d);
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public abstract FunctionDescriptorImpl mo9373b(DeclarationDescriptor declarationDescriptor, FunctionDescriptor functionDescriptor, CallableMemberDescriptor.a aVar, Name name, Annotations4 annotations4, SourceElement sourceElement);
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public FunctionDescriptor mo9374c(c cVar) {
         ReceiverParameterDescriptorImpl receiverParameterDescriptorImpl;
         ReceiverParameterDescriptor receiverParameterDescriptor;
@@ -1313,7 +1313,7 @@ public abstract class FunctionDescriptorImpl extends DeclarationDescriptorNonRoo
         return copy(declarationDescriptor, modality, descriptorVisibility2, aVar, z2);
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public c m9425d(TypeSubstitutor2 typeSubstitutor2) {
         if (typeSubstitutor2 != null) {
             return new c(this, typeSubstitutor2.getSubstitution(), getContainingDeclaration(), getModality(), getVisibility(), getKind(), getValueParameters(), getExtensionReceiverParameter(), getReturnType(), null);

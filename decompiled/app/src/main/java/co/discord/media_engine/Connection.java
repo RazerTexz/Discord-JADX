@@ -5,25 +5,25 @@ import org.webrtc.MediaStreamTrack;
 import org.webrtc.VideoCapturer;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: Connection.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: Connection.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class Connection {
     private final long nativeInstance;
     private UserSpeakingStatusChangedCallback userSpeakingStatusChangedCallback;
 
-    /* compiled from: Connection.kt */
+    /* JADX INFO: compiled from: Connection.kt */
     public interface EncryptionModesCallback {
         void onEncryptionModes(String[] modes);
     }
 
-    /* compiled from: Connection.kt */
+    /* JADX INFO: compiled from: Connection.kt */
     public interface GetStatsCallback {
         void onStats(Stats stats);
 
         void onStatsError(Throwable t);
     }
 
-    /* compiled from: Connection.kt */
+    /* JADX INFO: compiled from: Connection.kt */
     public static final class GetStatsCallbackNative {
         private final GetStatsCallback callback;
 
@@ -46,12 +46,12 @@ public final class Connection {
         }
     }
 
-    /* compiled from: Connection.kt */
+    /* JADX INFO: compiled from: Connection.kt */
     public interface OnVideoCallback {
         void onVideo(long userId, int ssrc, String streamIdentifier, StreamParameters[] streams);
     }
 
-    /* compiled from: Connection.kt */
+    /* JADX INFO: compiled from: Connection.kt */
     public static final class StatsFilter {
         public static final int ALL = -1;
         public static final int INBOUND = 4;
@@ -59,7 +59,7 @@ public final class Connection {
         public static final int TRANSPORT = 1;
     }
 
-    /* compiled from: Connection.kt */
+    /* JADX INFO: compiled from: Connection.kt */
     public interface UserSpeakingStatusChangedCallback {
         void onUserSpeakingStatusChanged(long userId, boolean isUserSpeakingNow, boolean wantsPriority);
     }

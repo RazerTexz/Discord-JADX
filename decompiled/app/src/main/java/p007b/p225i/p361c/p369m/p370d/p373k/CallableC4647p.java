@@ -10,15 +10,15 @@ import java.util.concurrent.Callable;
 import p007b.p225i.p361c.p369m.p370d.Logger3;
 import p007b.p225i.p361c.p369m.p370d.p378o.CrashlyticsReportPersistence7;
 
-/* compiled from: CrashlyticsController.java */
-/* renamed from: b.i.c.m.d.k.p */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.c.m.d.k.p */
+/* JADX INFO: compiled from: CrashlyticsController.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class CallableC4647p implements Callable<Void> {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final /* synthetic */ UserMetadata f12363j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final /* synthetic */ C4663x f12364k;
 
     public CallableC4647p(C4663x c4663x, UserMetadata userMetadata) {
@@ -71,8 +71,6 @@ public class CallableC4647p implements Callable<Void> {
                     if (Logger3.f12227a.m6370a(6)) {
                         Log.e("FirebaseCrashlytics", "Error serializing user metadata.", e);
                     }
-                    CommonUtils.m6409c(bufferedWriter, "Failed to close user metadata file.");
-                    return null;
                 } catch (Throwable th2) {
                     th = th2;
                     bufferedWriter2 = bufferedWriter;

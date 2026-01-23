@@ -11,8 +11,8 @@ import java.util.Iterator;
 import java.util.List;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: StoreReviewRequest.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: StoreReviewRequest.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class StoreReviewRequest extends Store {
     private static final int MINIMUM_GUILD_MEMBER_COUNT = 5;
     private static final long MINIMUM_INSTALL_AGE = 864000000;

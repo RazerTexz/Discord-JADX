@@ -30,25 +30,25 @@ import p507d0.p580t.Sets5;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: JavaAnnotationMapper.kt */
-/* renamed from: d0.e0.p.d.m0.e.a.g0.d, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.e.a.g0.d, reason: use source file name */
+/* JADX INFO: compiled from: JavaAnnotationMapper.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class JavaAnnotationMapper3 {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final JavaAnnotationMapper3 f23236a = new JavaAnnotationMapper3();
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static final Map<String, EnumSet<KotlinTarget>> f23237b = Maps6.mapOf(Tuples.m10073to("PACKAGE", EnumSet.noneOf(KotlinTarget.class)), Tuples.m10073to("TYPE", EnumSet.of(KotlinTarget.CLASS, KotlinTarget.FILE)), Tuples.m10073to("ANNOTATION_TYPE", EnumSet.of(KotlinTarget.ANNOTATION_CLASS)), Tuples.m10073to("TYPE_PARAMETER", EnumSet.of(KotlinTarget.TYPE_PARAMETER)), Tuples.m10073to("FIELD", EnumSet.of(KotlinTarget.FIELD)), Tuples.m10073to("LOCAL_VARIABLE", EnumSet.of(KotlinTarget.LOCAL_VARIABLE)), Tuples.m10073to("PARAMETER", EnumSet.of(KotlinTarget.VALUE_PARAMETER)), Tuples.m10073to("CONSTRUCTOR", EnumSet.of(KotlinTarget.CONSTRUCTOR)), Tuples.m10073to("METHOD", EnumSet.of(KotlinTarget.FUNCTION, KotlinTarget.PROPERTY_GETTER, KotlinTarget.PROPERTY_SETTER)), Tuples.m10073to("TYPE_USE", EnumSet.of(KotlinTarget.TYPE)));
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public static final Map<String, KotlinRetention> f23238c = Maps6.mapOf(Tuples.m10073to("RUNTIME", KotlinRetention.RUNTIME), Tuples.m10073to("CLASS", KotlinRetention.BINARY), Tuples.m10073to("SOURCE", KotlinRetention.SOURCE));
 
-    /* compiled from: JavaAnnotationMapper.kt */
-    /* renamed from: d0.e0.p.d.m0.e.a.g0.d$a */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.e.a.g0.d$a */
+    /* JADX INFO: compiled from: JavaAnnotationMapper.kt */
     public static final class a extends Lambda implements Function1<ModuleDescriptor2, KotlinType> {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public static final a f23239j = new a();
 
         public a() {
@@ -60,7 +60,7 @@ public final class JavaAnnotationMapper3 {
             return invoke2(moduleDescriptor2);
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final KotlinType invoke2(ModuleDescriptor2 moduleDescriptor2) {
             Intrinsics3.checkNotNullParameter(moduleDescriptor2, "module");
             ValueParameterDescriptor annotationParameterByName = DescriptorResolverUtils.getAnnotationParameterByName(JavaAnnotationMapper2.f23230a.getTARGET_ANNOTATION_ALLOWED_TARGETS$descriptors_jvm(), moduleDescriptor2.getBuiltIns().getBuiltInClassByFqName(StandardNames.a.f22504A));

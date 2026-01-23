@@ -7,24 +7,24 @@ import com.discord.views.UsernameView;
 import com.facebook.drawee.span.SimpleDraweeSpanTextView;
 import com.facebook.drawee.view.SimpleDraweeView;
 
-/* compiled from: SettingsMemberViewBinding.java */
-/* renamed from: b.a.i.m1, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.a.i.m1, reason: use source file name */
+/* JADX INFO: compiled from: SettingsMemberViewBinding.java */
+/* JADX INFO: loaded from: classes.dex */
 public final class SettingsMemberViewBinding implements ViewBinding {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     @NonNull
     public final View f1043a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     @NonNull
     public final SimpleDraweeView f1044b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     @NonNull
     public final SimpleDraweeSpanTextView f1045c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     @NonNull
     public final UsernameView f1046d;
 

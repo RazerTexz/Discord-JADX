@@ -1,5 +1,5 @@
 package androidx.fragment.app;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class FragmentManagerImpl extends FragmentManager {
 }

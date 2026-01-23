@@ -4,9 +4,9 @@ import android.animation.Animator;
 import com.discord.widgets.channels.WidgetChannelTopic;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: Animator.kt */
-/* renamed from: com.discord.widgets.channels.WidgetChannelTopic$onToggleTopicExpansionState$1$animateMaxLines$$inlined$doOnEnd$1 */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.channels.WidgetChannelTopic$onToggleTopicExpansionState$1$animateMaxLines$$inlined$doOnEnd$1 */
+/* JADX INFO: compiled from: Animator.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class C7354x41ecd366 implements Animator.AnimatorListener {
     public final /* synthetic */ WidgetChannelTopic.C73531 this$0;
 

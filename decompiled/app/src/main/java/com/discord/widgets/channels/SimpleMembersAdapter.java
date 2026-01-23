@@ -19,12 +19,12 @@ import kotlin.jvm.functions.Function1;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: SimpleMembersAdapter.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: SimpleMembersAdapter.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class SimpleMembersAdapter extends MGRecyclerAdapterSimple<MemberItem> {
     private Function1<? super User, Unit> onUserClickedListener;
 
-    /* compiled from: SimpleMembersAdapter.kt */
+    /* JADX INFO: compiled from: SimpleMembersAdapter.kt */
     public static final class MemberAdapterItem extends MGRecyclerViewHolder<SimpleMembersAdapter, MemberItem> {
         private final SimpleMemberListItemBinding binding;
 
@@ -51,7 +51,7 @@ public final class SimpleMembersAdapter extends MGRecyclerAdapterSimple<MemberIt
             onConfigure2(i, memberItem);
         }
 
-        /* renamed from: onConfigure, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: onConfigure, reason: avoid collision after fix types in other method */
         public void onConfigure2(int position, MemberItem data) {
             Intrinsics3.checkNotNullParameter(data, "data");
             super.onConfigure(position, data);
@@ -61,7 +61,7 @@ public final class SimpleMembersAdapter extends MGRecyclerAdapterSimple<MemberIt
         }
     }
 
-    /* compiled from: SimpleMembersAdapter.kt */
+    /* JADX INFO: compiled from: SimpleMembersAdapter.kt */
     public static final /* data */ class MemberItem implements MGRecyclerDataPayload {
         public static final int TYPE_MEMBER = 0;
         private final GuildMember guildMember;
@@ -86,12 +86,12 @@ public final class SimpleMembersAdapter extends MGRecyclerAdapterSimple<MemberIt
             return memberItem.copy(user, guildMember);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final User getUser() {
             return this.user;
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final GuildMember getGuildMember() {
             return this.guildMember;
         }

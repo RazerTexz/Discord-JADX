@@ -6,16 +6,16 @@ import kotlin.jvm.internal.Ref$ObjectRef;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ModelPhoneVerificationToken.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: ModelPhoneVerificationToken.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class ModelPhoneVerificationToken {
     private final String token;
 
-    /* compiled from: ModelPhoneVerificationToken.kt */
+    /* JADX INFO: compiled from: ModelPhoneVerificationToken.kt */
     public static final /* data */ class Update {
         private final String token;
 
-        /* compiled from: ModelPhoneVerificationToken.kt */
+        /* JADX INFO: compiled from: ModelPhoneVerificationToken.kt */
         public static final class Parser implements Model.Parser<Update> {
             public static final Parser INSTANCE = new Parser();
 
@@ -50,7 +50,7 @@ public final /* data */ class ModelPhoneVerificationToken {
             return update.copy(str);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final String getToken() {
             return this.token;
         }
@@ -96,7 +96,7 @@ public final /* data */ class ModelPhoneVerificationToken {
         return modelPhoneVerificationToken.copy(str);
     }
 
-    /* renamed from: component1, reason: from getter */
+    /* JADX INFO: renamed from: component1, reason: from getter */
     public final String getToken() {
         return this.token;
     }

@@ -13,9 +13,9 @@ import p007b.p195g.p196a.p205c.p212e0.TypeSerializer;
 import p007b.p195g.p196a.p205c.p215g0.BeanPropertyWriter;
 import p007b.p195g.p196a.p205c.p219i0.NameTransformer4;
 
-/* compiled from: UnwrappingBeanPropertyWriter.java */
-/* renamed from: b.g.a.c.g0.t.s, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.g.a.c.g0.t.s, reason: use source file name */
+/* JADX INFO: compiled from: UnwrappingBeanPropertyWriter.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class UnwrappingBeanPropertyWriter extends BeanPropertyWriter implements Serializable {
     private static final long serialVersionUID = 1;
     public final NameTransformer4 _nameTransformer;
@@ -26,7 +26,7 @@ public class UnwrappingBeanPropertyWriter extends BeanPropertyWriter implements 
     }
 
     @Override // p007b.p195g.p196a.p205c.p215g0.BeanPropertyWriter
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public JsonSerializer<Object> mo1977c(PropertySerializerMap propertySerializerMap, Class<?> cls, SerializerProvider serializerProvider) throws JsonMappingException {
         JavaType javaType = this._nonTrivialBaseType;
         JsonSerializer<Object> jsonSerializerM2255t = javaType != null ? serializerProvider.m2255t(serializerProvider.m2247k(javaType, cls), this) : serializerProvider.m2256u(cls, this);
@@ -40,7 +40,7 @@ public class UnwrappingBeanPropertyWriter extends BeanPropertyWriter implements 
     }
 
     @Override // p007b.p195g.p196a.p205c.p215g0.BeanPropertyWriter
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public void mo1980f(JsonSerializer<Object> jsonSerializer) {
         if (jsonSerializer != null) {
             NameTransformer4 aVar = this._nameTransformer;
@@ -53,13 +53,13 @@ public class UnwrappingBeanPropertyWriter extends BeanPropertyWriter implements 
     }
 
     @Override // p007b.p195g.p196a.p205c.p215g0.BeanPropertyWriter
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public BeanPropertyWriter mo1981g(NameTransformer4 nameTransformer4) {
         return new UnwrappingBeanPropertyWriter(this, new NameTransformer4.a(nameTransformer4, this._nameTransformer), new SerializedString(nameTransformer4.mo2202a(this._name._value)));
     }
 
     @Override // p007b.p195g.p196a.p205c.p215g0.BeanPropertyWriter
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public void mo1983i(Object obj, JsonGenerator jsonGenerator, SerializerProvider serializerProvider) throws Exception {
         Method method = this.f4792l;
         Object objInvoke = method == null ? this.f4793m.get(obj) : method.invoke(obj, null);

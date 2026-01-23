@@ -8,8 +8,8 @@ import java.io.InputStream;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ImageEncoder.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: ImageEncoder.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class ImageEncoder {
     public static /* synthetic */ String encodeBitmapAsJpegDataUrl$default(ImageEncoder imageEncoder, Bitmap bitmap, int i, int i2, Object obj) {
         if ((i2 & 2) != 0) {

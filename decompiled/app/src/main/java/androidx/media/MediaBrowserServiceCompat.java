@@ -40,7 +40,7 @@ import java.util.List;
 import p007b.p100d.p104b.p105a.outline;
 import p668x.p669a.p672b.p674b.p675a.IMediaSession;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public abstract class MediaBrowserServiceCompat extends Service {
     private static final float EPSILON = 1.0E-5f;
 
@@ -72,7 +72,7 @@ public abstract class MediaBrowserServiceCompat extends Service {
     public final ArrayMap<IBinder, ConnectionRecord> mConnections = new ArrayMap<>();
     public final ServiceHandler mHandler = new ServiceHandler();
 
-    /* renamed from: androidx.media.MediaBrowserServiceCompat$1 */
+    /* JADX INFO: renamed from: androidx.media.MediaBrowserServiceCompat$1 */
     public class C04761 extends Result<List<MediaBrowserCompat.MediaItem>> {
         public final /* synthetic */ ConnectionRecord val$connection;
         public final /* synthetic */ Bundle val$notifyChildrenChangedOptions;
@@ -93,7 +93,7 @@ public abstract class MediaBrowserServiceCompat extends Service {
             onResultSent2(list);
         }
 
-        /* renamed from: onResultSent, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: onResultSent, reason: avoid collision after fix types in other method */
         public void onResultSent2(@Nullable List<MediaBrowserCompat.MediaItem> list) {
             if (MediaBrowserServiceCompat.this.mConnections.get(this.val$connection.callbacks.asBinder()) != this.val$connection) {
                 if (MediaBrowserServiceCompat.DEBUG) {
@@ -120,7 +120,7 @@ public abstract class MediaBrowserServiceCompat extends Service {
         }
     }
 
-    /* renamed from: androidx.media.MediaBrowserServiceCompat$2 */
+    /* JADX INFO: renamed from: androidx.media.MediaBrowserServiceCompat$2 */
     public class C04772 extends Result<MediaBrowserCompat.MediaItem> {
         public final /* synthetic */ ResultReceiver val$receiver;
 
@@ -135,7 +135,7 @@ public abstract class MediaBrowserServiceCompat extends Service {
             onResultSent2(mediaItem);
         }
 
-        /* renamed from: onResultSent, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: onResultSent, reason: avoid collision after fix types in other method */
         public void onResultSent2(@Nullable MediaBrowserCompat.MediaItem mediaItem) {
             if ((getFlags() & 2) != 0) {
                 this.val$receiver.m73b(-1, null);
@@ -147,7 +147,7 @@ public abstract class MediaBrowserServiceCompat extends Service {
         }
     }
 
-    /* renamed from: androidx.media.MediaBrowserServiceCompat$3 */
+    /* JADX INFO: renamed from: androidx.media.MediaBrowserServiceCompat$3 */
     public class C04783 extends Result<List<MediaBrowserCompat.MediaItem>> {
         public final /* synthetic */ ResultReceiver val$receiver;
 
@@ -162,7 +162,7 @@ public abstract class MediaBrowserServiceCompat extends Service {
             onResultSent2(list);
         }
 
-        /* renamed from: onResultSent, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: onResultSent, reason: avoid collision after fix types in other method */
         public void onResultSent2(@Nullable List<MediaBrowserCompat.MediaItem> list) {
             if ((getFlags() & 4) != 0 || list == null) {
                 this.val$receiver.m73b(-1, null);
@@ -174,7 +174,7 @@ public abstract class MediaBrowserServiceCompat extends Service {
         }
     }
 
-    /* renamed from: androidx.media.MediaBrowserServiceCompat$4 */
+    /* JADX INFO: renamed from: androidx.media.MediaBrowserServiceCompat$4 */
     public class C04794 extends Result<Bundle> {
         public final /* synthetic */ ResultReceiver val$receiver;
 
@@ -199,7 +199,7 @@ public abstract class MediaBrowserServiceCompat extends Service {
             onResultSent2(bundle);
         }
 
-        /* renamed from: onResultSent, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: onResultSent, reason: avoid collision after fix types in other method */
         public void onResultSent2(@Nullable Bundle bundle) {
             this.val$receiver.m73b(0, bundle);
         }
@@ -250,7 +250,7 @@ public abstract class MediaBrowserServiceCompat extends Service {
         public final HashMap<String, List<Pair<IBinder, Bundle>>> subscriptions = new HashMap<>();
         public final int uid;
 
-        /* renamed from: androidx.media.MediaBrowserServiceCompat$ConnectionRecord$1 */
+        /* JADX INFO: renamed from: androidx.media.MediaBrowserServiceCompat$ConnectionRecord$1 */
         public class RunnableC04801 implements Runnable {
             public RunnableC04801() {
             }
@@ -299,7 +299,7 @@ public abstract class MediaBrowserServiceCompat extends Service {
         public final List<Bundle> mRootExtrasList = new ArrayList();
         public MediaBrowserService mServiceFwk;
 
-        /* renamed from: androidx.media.MediaBrowserServiceCompat$MediaBrowserServiceImplApi21$1 */
+        /* JADX INFO: renamed from: androidx.media.MediaBrowserServiceCompat$MediaBrowserServiceImplApi21$1 */
         public class RunnableC04811 implements Runnable {
             public final /* synthetic */ MediaSessionCompat.Token val$token;
 
@@ -313,7 +313,7 @@ public abstract class MediaBrowserServiceCompat extends Service {
             }
         }
 
-        /* renamed from: androidx.media.MediaBrowserServiceCompat$MediaBrowserServiceImplApi21$2 */
+        /* JADX INFO: renamed from: androidx.media.MediaBrowserServiceCompat$MediaBrowserServiceImplApi21$2 */
         public class C04822 extends Result<List<MediaBrowserCompat.MediaItem>> {
             public final /* synthetic */ ResultWrapper val$resultWrapper;
 
@@ -333,7 +333,7 @@ public abstract class MediaBrowserServiceCompat extends Service {
                 onResultSent2(list);
             }
 
-            /* renamed from: onResultSent, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: onResultSent, reason: avoid collision after fix types in other method */
             public void onResultSent2(@Nullable List<MediaBrowserCompat.MediaItem> list) {
                 ArrayList arrayList;
                 if (list != null) {
@@ -350,7 +350,7 @@ public abstract class MediaBrowserServiceCompat extends Service {
             }
         }
 
-        /* renamed from: androidx.media.MediaBrowserServiceCompat$MediaBrowserServiceImplApi21$3 */
+        /* JADX INFO: renamed from: androidx.media.MediaBrowserServiceCompat$MediaBrowserServiceImplApi21$3 */
         public class RunnableC04833 implements Runnable {
             public final /* synthetic */ Bundle val$options;
             public final /* synthetic */ String val$parentId;
@@ -369,7 +369,7 @@ public abstract class MediaBrowserServiceCompat extends Service {
             }
         }
 
-        /* renamed from: androidx.media.MediaBrowserServiceCompat$MediaBrowserServiceImplApi21$4 */
+        /* JADX INFO: renamed from: androidx.media.MediaBrowserServiceCompat$MediaBrowserServiceImplApi21$4 */
         public class RunnableC04844 implements Runnable {
             public final /* synthetic */ Bundle val$options;
             public final /* synthetic */ String val$parentId;
@@ -562,7 +562,7 @@ public abstract class MediaBrowserServiceCompat extends Service {
     @RequiresApi(23)
     public class MediaBrowserServiceImplApi23 extends MediaBrowserServiceImplApi21 {
 
-        /* renamed from: androidx.media.MediaBrowserServiceCompat$MediaBrowserServiceImplApi23$1 */
+        /* JADX INFO: renamed from: androidx.media.MediaBrowserServiceCompat$MediaBrowserServiceImplApi23$1 */
         public class C04851 extends Result<MediaBrowserCompat.MediaItem> {
             public final /* synthetic */ ResultWrapper val$resultWrapper;
 
@@ -582,7 +582,7 @@ public abstract class MediaBrowserServiceCompat extends Service {
                 onResultSent2(mediaItem);
             }
 
-            /* renamed from: onResultSent, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: onResultSent, reason: avoid collision after fix types in other method */
             public void onResultSent2(@Nullable MediaBrowserCompat.MediaItem mediaItem) {
                 if (mediaItem == null) {
                     this.val$resultWrapper.sendResult(null);
@@ -628,7 +628,7 @@ public abstract class MediaBrowserServiceCompat extends Service {
     @RequiresApi(26)
     public class MediaBrowserServiceImplApi26 extends MediaBrowserServiceImplApi23 {
 
-        /* renamed from: androidx.media.MediaBrowserServiceCompat$MediaBrowserServiceImplApi26$1 */
+        /* JADX INFO: renamed from: androidx.media.MediaBrowserServiceCompat$MediaBrowserServiceImplApi26$1 */
         public class C04861 extends Result<List<MediaBrowserCompat.MediaItem>> {
             public final /* synthetic */ Bundle val$options;
             public final /* synthetic */ ResultWrapper val$resultWrapper;
@@ -650,7 +650,7 @@ public abstract class MediaBrowserServiceCompat extends Service {
                 onResultSent2(list);
             }
 
-            /* renamed from: onResultSent, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: onResultSent, reason: avoid collision after fix types in other method */
             public void onResultSent2(@Nullable List<MediaBrowserCompat.MediaItem> list) {
                 if (list == null) {
                     this.val$resultWrapper.sendResult(null);
@@ -750,7 +750,7 @@ public abstract class MediaBrowserServiceCompat extends Service {
     public class MediaBrowserServiceImplBase implements MediaBrowserServiceImpl {
         private Messenger mMessenger;
 
-        /* renamed from: androidx.media.MediaBrowserServiceCompat$MediaBrowserServiceImplBase$1 */
+        /* JADX INFO: renamed from: androidx.media.MediaBrowserServiceCompat$MediaBrowserServiceImplBase$1 */
         public class RunnableC04871 implements Runnable {
             public final /* synthetic */ MediaSessionCompat.Token val$token;
 
@@ -776,7 +776,7 @@ public abstract class MediaBrowserServiceCompat extends Service {
             }
         }
 
-        /* renamed from: androidx.media.MediaBrowserServiceCompat$MediaBrowserServiceImplBase$2 */
+        /* JADX INFO: renamed from: androidx.media.MediaBrowserServiceCompat$MediaBrowserServiceImplBase$2 */
         public class RunnableC04882 implements Runnable {
             public final /* synthetic */ Bundle val$options;
             public final /* synthetic */ String val$parentId;
@@ -795,7 +795,7 @@ public abstract class MediaBrowserServiceCompat extends Service {
             }
         }
 
-        /* renamed from: androidx.media.MediaBrowserServiceCompat$MediaBrowserServiceImplBase$3 */
+        /* JADX INFO: renamed from: androidx.media.MediaBrowserServiceCompat$MediaBrowserServiceImplBase$3 */
         public class RunnableC04893 implements Runnable {
             public final /* synthetic */ Bundle val$options;
             public final /* synthetic */ String val$parentId;
@@ -1025,7 +1025,7 @@ public abstract class MediaBrowserServiceCompat extends Service {
 
     public class ServiceBinderImpl {
 
-        /* renamed from: androidx.media.MediaBrowserServiceCompat$ServiceBinderImpl$1 */
+        /* JADX INFO: renamed from: androidx.media.MediaBrowserServiceCompat$ServiceBinderImpl$1 */
         public class RunnableC04901 implements Runnable {
             public final /* synthetic */ ServiceCallbacks val$callbacks;
             public final /* synthetic */ int val$pid;
@@ -1079,7 +1079,7 @@ public abstract class MediaBrowserServiceCompat extends Service {
             }
         }
 
-        /* renamed from: androidx.media.MediaBrowserServiceCompat$ServiceBinderImpl$2 */
+        /* JADX INFO: renamed from: androidx.media.MediaBrowserServiceCompat$ServiceBinderImpl$2 */
         public class RunnableC04912 implements Runnable {
             public final /* synthetic */ ServiceCallbacks val$callbacks;
 
@@ -1096,7 +1096,7 @@ public abstract class MediaBrowserServiceCompat extends Service {
             }
         }
 
-        /* renamed from: androidx.media.MediaBrowserServiceCompat$ServiceBinderImpl$3 */
+        /* JADX INFO: renamed from: androidx.media.MediaBrowserServiceCompat$ServiceBinderImpl$3 */
         public class RunnableC04923 implements Runnable {
             public final /* synthetic */ ServiceCallbacks val$callbacks;
             public final /* synthetic */ String val$id;
@@ -1121,7 +1121,7 @@ public abstract class MediaBrowserServiceCompat extends Service {
             }
         }
 
-        /* renamed from: androidx.media.MediaBrowserServiceCompat$ServiceBinderImpl$4 */
+        /* JADX INFO: renamed from: androidx.media.MediaBrowserServiceCompat$ServiceBinderImpl$4 */
         public class RunnableC04934 implements Runnable {
             public final /* synthetic */ ServiceCallbacks val$callbacks;
             public final /* synthetic */ String val$id;
@@ -1150,7 +1150,7 @@ public abstract class MediaBrowserServiceCompat extends Service {
             }
         }
 
-        /* renamed from: androidx.media.MediaBrowserServiceCompat$ServiceBinderImpl$5 */
+        /* JADX INFO: renamed from: androidx.media.MediaBrowserServiceCompat$ServiceBinderImpl$5 */
         public class RunnableC04945 implements Runnable {
             public final /* synthetic */ ServiceCallbacks val$callbacks;
             public final /* synthetic */ String val$mediaId;
@@ -1173,7 +1173,7 @@ public abstract class MediaBrowserServiceCompat extends Service {
             }
         }
 
-        /* renamed from: androidx.media.MediaBrowserServiceCompat$ServiceBinderImpl$6 */
+        /* JADX INFO: renamed from: androidx.media.MediaBrowserServiceCompat$ServiceBinderImpl$6 */
         public class RunnableC04956 implements Runnable {
             public final /* synthetic */ ServiceCallbacks val$callbacks;
             public final /* synthetic */ int val$pid;
@@ -1217,7 +1217,7 @@ public abstract class MediaBrowserServiceCompat extends Service {
             }
         }
 
-        /* renamed from: androidx.media.MediaBrowserServiceCompat$ServiceBinderImpl$7 */
+        /* JADX INFO: renamed from: androidx.media.MediaBrowserServiceCompat$ServiceBinderImpl$7 */
         public class RunnableC04967 implements Runnable {
             public final /* synthetic */ ServiceCallbacks val$callbacks;
 
@@ -1235,7 +1235,7 @@ public abstract class MediaBrowserServiceCompat extends Service {
             }
         }
 
-        /* renamed from: androidx.media.MediaBrowserServiceCompat$ServiceBinderImpl$8 */
+        /* JADX INFO: renamed from: androidx.media.MediaBrowserServiceCompat$ServiceBinderImpl$8 */
         public class RunnableC04978 implements Runnable {
             public final /* synthetic */ ServiceCallbacks val$callbacks;
             public final /* synthetic */ Bundle val$extras;
@@ -1260,7 +1260,7 @@ public abstract class MediaBrowserServiceCompat extends Service {
             }
         }
 
-        /* renamed from: androidx.media.MediaBrowserServiceCompat$ServiceBinderImpl$9 */
+        /* JADX INFO: renamed from: androidx.media.MediaBrowserServiceCompat$ServiceBinderImpl$9 */
         public class RunnableC04989 implements Runnable {
             public final /* synthetic */ String val$action;
             public final /* synthetic */ ServiceCallbacks val$callbacks;

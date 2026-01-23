@@ -14,15 +14,15 @@ import p659s.p660a.CancellableContinuationImpl5;
 import p659s.p660a.CoroutineDispatcher2;
 import p659s.p660a.p661a.DispatchedContinuation;
 
-/* compiled from: CoroutineDispatcher.kt */
-/* loaded from: classes3.dex */
+/* JADX INFO: compiled from: CoroutineDispatcher.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public abstract class CoroutineDispatcher extends CoroutineContextImpl implements ContinuationInterceptor {
 
-    /* renamed from: Key, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Key, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
 
-    /* compiled from: CoroutineDispatcher.kt */
-    /* renamed from: kotlinx.coroutines.CoroutineDispatcher$a, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: kotlinx.coroutines.CoroutineDispatcher$a, reason: from kotlin metadata */
+    /* JADX INFO: compiled from: CoroutineDispatcher.kt */
     public static final class Companion extends CoroutineContextImpl2<ContinuationInterceptor, CoroutineDispatcher> {
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
         public Companion(DefaultConstructorMarker defaultConstructorMarker) {

@@ -6,9 +6,9 @@ import kotlin.jvm.functions.Function1;
 import p507d0.p592z.p594d.FunctionReferenceImpl;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: WidgetChannelTopic.kt */
-/* renamed from: com.discord.widgets.channels.WidgetChannelTopic$getRenderedTopicForTopic$renderContext$2, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.channels.WidgetChannelTopic$getRenderedTopicForTopic$renderContext$2, reason: use source file name */
+/* JADX INFO: compiled from: WidgetChannelTopic.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final /* synthetic */ class WidgetChannelTopic4 extends FunctionReferenceImpl implements Function1<SpoilerNode<?>, Unit> {
     public WidgetChannelTopic4(WidgetChannelTopicViewModel widgetChannelTopicViewModel) {
         super(1, widgetChannelTopicViewModel, WidgetChannelTopicViewModel.class, "handleOnIndexClicked", "handleOnIndexClicked(Lcom/discord/utilities/textprocessing/node/SpoilerNode;)V", 0);
@@ -20,7 +20,7 @@ public final /* synthetic */ class WidgetChannelTopic4 extends FunctionReference
         return Unit.f27425a;
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final void invoke2(SpoilerNode<?> spoilerNode) {
         Intrinsics3.checkNotNullParameter(spoilerNode, "p1");
         ((WidgetChannelTopicViewModel) this.receiver).handleOnIndexClicked(spoilerNode);

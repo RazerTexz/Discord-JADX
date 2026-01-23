@@ -10,14 +10,14 @@ import p007b.p100d.p104b.p105a.outline;
 import p507d0.LazyJVM;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: GuildSubscriptions.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: GuildSubscriptions.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final /* data */ class GuildSubscriptions {
     private final Boolean activities;
     private final Map<Long, List<Ranges2>> channels;
     private final Set<Long> members;
 
-    /* renamed from: serializedRanges$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: serializedRanges$delegate, reason: from kotlin metadata */
     private final Lazy serializedRanges;
     private final List<Long> threadMemberLists;
     private final Boolean threads;
@@ -38,6 +38,7 @@ public final /* data */ class GuildSubscriptions {
         this.serializedRanges = LazyJVM.lazy(new GuildSubscriptions2(this));
     }
 
+    /* JADX WARN: Multi-variable type inference failed */
     public static /* synthetic */ GuildSubscriptions copy$default(GuildSubscriptions guildSubscriptions, Map map, Boolean bool, Boolean bool2, Set set, Boolean bool3, List list, int i, Object obj) {
         if ((i & 1) != 0) {
             map = guildSubscriptions.channels;
@@ -68,12 +69,12 @@ public final /* data */ class GuildSubscriptions {
         return this.channels;
     }
 
-    /* renamed from: component2, reason: from getter */
+    /* JADX INFO: renamed from: component2, reason: from getter */
     public final Boolean getTyping() {
         return this.typing;
     }
 
-    /* renamed from: component3, reason: from getter */
+    /* JADX INFO: renamed from: component3, reason: from getter */
     public final Boolean getActivities() {
         return this.activities;
     }
@@ -82,7 +83,7 @@ public final /* data */ class GuildSubscriptions {
         return this.members;
     }
 
-    /* renamed from: component5, reason: from getter */
+    /* JADX INFO: renamed from: component5, reason: from getter */
     public final Boolean getThreads() {
         return this.threads;
     }

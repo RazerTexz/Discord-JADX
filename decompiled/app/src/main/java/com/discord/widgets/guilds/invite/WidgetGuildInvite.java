@@ -2,7 +2,6 @@ package com.discord.widgets.guilds.invite;
 
 import android.content.Context;
 import android.content.Intent;
-import android.content.res.Resources;
 import android.view.View;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentViewModelLazyKt;
@@ -41,23 +40,23 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 import p507d0.p592z.p594d.Reflection2;
 
-/* compiled from: WidgetGuildInvite.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetGuildInvite.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetGuildInvite extends AppFragment {
     public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetGuildInvite.class, "binding", "getBinding()Lcom/discord/databinding/WidgetGuildInvitePageBinding;", 0)};
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private static final String EXTRA_CODE = "EXTRA_CODE";
 
-    /* renamed from: binding$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
     private final StoreInviteSettings.InviteCode inviteCode;
 
-    /* renamed from: viewModel$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: viewModel$delegate, reason: from kotlin metadata */
     private final Lazy viewModel;
 
-    /* compiled from: WidgetGuildInvite.kt */
+    /* JADX INFO: compiled from: WidgetGuildInvite.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -75,8 +74,8 @@ public final class WidgetGuildInvite extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetGuildInvite.kt */
-    /* renamed from: com.discord.widgets.guilds.invite.WidgetGuildInvite$onViewBound$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.guilds.invite.WidgetGuildInvite$onViewBound$1 */
+    /* JADX INFO: compiled from: WidgetGuildInvite.kt */
     public static final class ViewOnClickListenerC86481 implements View.OnClickListener {
         public ViewOnClickListenerC86481() {
         }
@@ -90,21 +89,21 @@ public final class WidgetGuildInvite extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetGuildInvite.kt */
-    /* renamed from: com.discord.widgets.guilds.invite.WidgetGuildInvite$onViewBoundOrOnResume$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.guilds.invite.WidgetGuildInvite$onViewBoundOrOnResume$1 */
+    /* JADX INFO: compiled from: WidgetGuildInvite.kt */
     public static final class C86491 extends Lambda implements Function1<GuildInviteViewModel.ViewState, Unit> {
         public C86491() {
             super(1);
         }
 
         @Override // kotlin.jvm.functions.Function1
-        public /* bridge */ /* synthetic */ Unit invoke(GuildInviteViewModel.ViewState viewState) throws Resources.NotFoundException {
+        public /* bridge */ /* synthetic */ Unit invoke(GuildInviteViewModel.ViewState viewState) {
             invoke2(viewState);
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
-        public final void invoke2(GuildInviteViewModel.ViewState viewState) throws Resources.NotFoundException {
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
+        public final void invoke2(GuildInviteViewModel.ViewState viewState) {
             Intrinsics3.checkNotNullParameter(viewState, "viewState");
             WidgetGuildInvite.this.configureUI(viewState);
         }
@@ -123,7 +122,7 @@ public final class WidgetGuildInvite extends AppFragment {
         widgetGuildInvite.configureUIFailure(error);
     }
 
-    private final void configureLoadedUI(GuildInviteViewModel.ViewState.Loaded viewState) throws Resources.NotFoundException {
+    private final void configureLoadedUI(GuildInviteViewModel.ViewState.Loaded viewState) {
         boolean z2;
         GuildScheduledEventModel model;
         ModelInvite invite = viewState.getInvite();
@@ -184,7 +183,7 @@ public final class WidgetGuildInvite extends AppFragment {
         analyticsTracker.inviteResolved(invite, str);
     }
 
-    public final void configureUI(GuildInviteViewModel.ViewState viewState) throws Resources.NotFoundException {
+    public final void configureUI(GuildInviteViewModel.ViewState viewState) {
         Intrinsics3.checkNotNullParameter(viewState, "viewState");
         if (viewState instanceof GuildInviteViewModel.ViewState.Invalid) {
             configureUIFailure(null);

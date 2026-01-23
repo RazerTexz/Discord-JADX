@@ -38,15 +38,15 @@ import p007b.p195g.p196a.p205c.p221z.BaseSettings;
 import p007b.p195g.p196a.p205c.p221z.CoercionConfigs;
 import p007b.p195g.p196a.p205c.p221z.ConfigOverrides;
 
-/* compiled from: ObjectMapper.java */
-/* renamed from: b.g.a.c.r, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.g.a.c.r, reason: use source file name */
+/* JADX INFO: compiled from: ObjectMapper.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class ObjectMapper extends ObjectCodec implements Serializable {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static final AnnotationIntrospector f5023j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public static final BaseSettings f5024k;
     private static final long serialVersionUID = 2;
     public final CoercionConfigs _coercionConfigs;
@@ -74,14 +74,14 @@ public class ObjectMapper extends ObjectCodec implements Serializable {
         this(null, null, null);
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final void m2223a(String str, Object obj) {
         if (obj == null) {
             throw new IllegalArgumentException(String.format("argument \"%s\" is null", str));
         }
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final void m2224b(JsonGenerator jsonGenerator, Object obj) throws IOException {
         SerializationConfig serializationConfig = this._serializationConfig;
         if (serializationConfig.m2237v(SerializationFeature.CLOSE_CLOSEABLE) && (obj instanceof Closeable)) {
@@ -121,7 +121,7 @@ public class ObjectMapper extends ObjectCodec implements Serializable {
         }
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public JsonGenerator m2225c(Writer writer) throws IOException {
         m2223a("w", writer);
         JsonFactory jsonFactory = this._jsonFactory;

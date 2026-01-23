@@ -4,8 +4,8 @@ import com.discord.api.channel.Channel;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ShareUtils.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: ShareUtils.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final /* data */ class ChannelShortcutInfo {
     private final Channel channel;
     private final boolean isPinnedOnly;
@@ -31,17 +31,17 @@ public final /* data */ class ChannelShortcutInfo {
         return channelShortcutInfo.copy(channel, i, z2);
     }
 
-    /* renamed from: component1, reason: from getter */
+    /* JADX INFO: renamed from: component1, reason: from getter */
     public final Channel getChannel() {
         return this.channel;
     }
 
-    /* renamed from: component2, reason: from getter */
+    /* JADX INFO: renamed from: component2, reason: from getter */
     public final int getRank() {
         return this.rank;
     }
 
-    /* renamed from: component3, reason: from getter */
+    /* JADX INFO: renamed from: component3, reason: from getter */
     public final boolean getIsPinnedOnly() {
         return this.isPinnedOnly;
     }
@@ -71,15 +71,18 @@ public final /* data */ class ChannelShortcutInfo {
     }
 
     /* JADX WARN: Multi-variable type inference failed */
+    /* JADX WARN: Type inference failed for: r1v2, types: [int] */
+    /* JADX WARN: Type inference failed for: r1v3 */
+    /* JADX WARN: Type inference failed for: r1v4 */
     public int hashCode() {
         Channel channel = this.channel;
         int iHashCode = (((channel != null ? channel.hashCode() : 0) * 31) + this.rank) * 31;
         boolean z2 = this.isPinnedOnly;
-        int i = z2;
-        if (z2 != 0) {
-            i = 1;
+        ?? r1 = z2;
+        if (z2) {
+            r1 = 1;
         }
-        return iHashCode + i;
+        return iHashCode + r1;
     }
 
     public final boolean isPinnedOnly() {

@@ -5,8 +5,8 @@ import java.util.List;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: InAppReportsMenu.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: InAppReportsMenu.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class ReportNode {
     private final ReportNodeBottomButton button;
     private final List<ReportNodeChild> children;
@@ -18,27 +18,27 @@ public final /* data */ class ReportNode {
     private final String menu_name;
     private final String subheader;
 
-    /* renamed from: a, reason: from getter */
+    /* JADX INFO: renamed from: a, reason: from getter */
     public final ReportNodeBottomButton getButton() {
         return this.button;
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final List<ReportNodeChild> m8172b() {
         return this.children;
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final List<ReportNodeElement> m8173c() {
         return this.elements;
     }
 
-    /* renamed from: d, reason: from getter */
+    /* JADX INFO: renamed from: d, reason: from getter */
     public final String getHeader() {
         return this.header;
     }
 
-    /* renamed from: e, reason: from getter */
+    /* JADX INFO: renamed from: e, reason: from getter */
     public final int getId() {
         return this.id;
     }
@@ -54,12 +54,12 @@ public final /* data */ class ReportNode {
         return this.id == reportNode.id && Intrinsics3.areEqual(this.menu_name, reportNode.menu_name) && Intrinsics3.areEqual(this.header, reportNode.header) && Intrinsics3.areEqual(this.subheader, reportNode.subheader) && Intrinsics3.areEqual(this.info, reportNode.info) && Intrinsics3.areEqual(this.description, reportNode.description) && Intrinsics3.areEqual(this.children, reportNode.children) && Intrinsics3.areEqual(this.elements, reportNode.elements) && Intrinsics3.areEqual(this.button, reportNode.button);
     }
 
-    /* renamed from: f, reason: from getter */
+    /* JADX INFO: renamed from: f, reason: from getter */
     public final String getInfo() {
         return this.info;
     }
 
-    /* renamed from: g, reason: from getter */
+    /* JADX INFO: renamed from: g, reason: from getter */
     public final String getSubheader() {
         return this.subheader;
     }

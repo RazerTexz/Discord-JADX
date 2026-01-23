@@ -9,8 +9,8 @@ import kotlin.jvm.functions.Function0;
 import kotlin.jvm.functions.Function1;
 import p658rx.functions.Action1;
 
-/* compiled from: ObservableExtensions.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: ObservableExtensions.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class ObservableExtensionsKt$appSubscribe$subscription$1<T> implements Action1<Throwable> {
     public final /* synthetic */ Function1 $errorHandler;
     public final /* synthetic */ String $errorTag;
@@ -29,14 +29,13 @@ public final class ObservableExtensionsKt$appSubscribe$subscription$1<T> impleme
         call2(th);
     }
 
-    /* JADX WARN: Multi-variable type inference failed */
-    /* JADX WARN: Type inference failed for: r2v3, types: [com.discord.utilities.rx.ObservableExtensionsKt$sam$rx_functions_Action1$0] */
-    /* renamed from: call, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
     public final void call2(Throwable th) throws Throwable {
         String str = this.$errorTag;
-        Function1 observableExtensionsKt$sam$rx_functions_Action1$0 = this.$errorHandler;
-        if (observableExtensionsKt$sam$rx_functions_Action1$0 != null) {
-            observableExtensionsKt$sam$rx_functions_Action1$0 = new ObservableExtensionsKt$sam$rx_functions_Action1$0(observableExtensionsKt$sam$rx_functions_Action1$0);
+        Function1 function1 = this.$errorHandler;
+        Object observableExtensionsKt$sam$rx_functions_Action1$0 = function1;
+        if (function1 != null) {
+            observableExtensionsKt$sam$rx_functions_Action1$0 = new ObservableExtensionsKt$sam$rx_functions_Action1$0(function1);
         }
         Error.handle(th, str, (Action1) observableExtensionsKt$sam$rx_functions_Action1$0, (Context) this.$weakContext.get());
         this.$onTerminated.invoke();

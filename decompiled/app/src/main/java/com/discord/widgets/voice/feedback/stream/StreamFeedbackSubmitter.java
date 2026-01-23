@@ -7,8 +7,8 @@ import com.discord.widgets.voice.feedback.PendingFeedback;
 import kotlin.jvm.internal.DefaultConstructorMarker;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: StreamFeedbackSubmitter.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: StreamFeedbackSubmitter.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class StreamFeedbackSubmitter implements FeedbackSubmitter {
     private final StoreAnalytics analyticsStore;
     private PendingFeedback.StreamFeedback pendingStreamFeedback;

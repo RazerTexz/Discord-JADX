@@ -7,9 +7,9 @@ import com.discord.widgets.chat.input.emoji.WidgetEmojiAdapter;
 import p507d0.Result2;
 import p507d0.Result3;
 
-/* compiled from: WidgetEmojiAdapter.kt */
-/* renamed from: com.discord.widgets.chat.input.emoji.WidgetEmojiAdapter$EmojiViewHolder$onConfigure$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.chat.input.emoji.WidgetEmojiAdapter$EmojiViewHolder$onConfigure$1, reason: use source file name */
+/* JADX INFO: compiled from: WidgetEmojiAdapter.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetEmojiAdapter2 implements View.OnClickListener {
     public final /* synthetic */ Emoji $emoji;
     public final /* synthetic */ WidgetEmojiAdapter.EmojiViewHolder this$0;

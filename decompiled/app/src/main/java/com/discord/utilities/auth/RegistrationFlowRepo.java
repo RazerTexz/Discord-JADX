@@ -12,11 +12,11 @@ import kotlin.jvm.internal.DefaultConstructorMarker;
 import p507d0.LazyJVM;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: RegistrationFlowRepo.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: RegistrationFlowRepo.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class RegistrationFlowRepo {
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private static final Lazy INSTANCE$delegate = LazyJVM.lazy(RegistrationFlowRepo2.INSTANCE);
     private Long birthday;
@@ -29,7 +29,7 @@ public final class RegistrationFlowRepo {
     private String username = "";
     private String password = "";
 
-    /* compiled from: RegistrationFlowRepo.kt */
+    /* JADX INFO: compiled from: RegistrationFlowRepo.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -99,7 +99,7 @@ public final class RegistrationFlowRepo {
         return this.username;
     }
 
-    /* renamed from: isRegistering, reason: from getter */
+    /* JADX INFO: renamed from: isRegistering, reason: from getter */
     public final boolean getIsRegistering() {
         return this.isRegistering;
     }

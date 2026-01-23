@@ -13,7 +13,7 @@ import androidx.core.view.accessibility.AccessibilityNodeProviderCompat;
 import java.util.Map;
 import java.util.WeakHashMap;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class RecyclerViewAccessibilityDelegate extends AccessibilityDelegateCompat {
     private final ItemDelegate mItemDelegate;
     public final RecyclerView mRecyclerView;

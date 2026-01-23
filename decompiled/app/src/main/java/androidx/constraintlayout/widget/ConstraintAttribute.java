@@ -17,7 +17,7 @@ import java.util.HashMap;
 import org.xmlpull.v1.XmlPullParser;
 import p007b.p100d.p104b.p105a.outline;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class ConstraintAttribute {
     private static final String TAG = "TransitionLayout";
     public boolean mBooleanValue;
@@ -28,10 +28,10 @@ public class ConstraintAttribute {
     private String mStringValue;
     private AttributeType mType;
 
-    /* renamed from: androidx.constraintlayout.widget.ConstraintAttribute$1 */
+    /* JADX INFO: renamed from: androidx.constraintlayout.widget.ConstraintAttribute$1 */
     public static /* synthetic */ class C01991 {
 
-        /* renamed from: $SwitchMap$androidx$constraintlayout$widget$ConstraintAttribute$AttributeType */
+        /* JADX INFO: renamed from: $SwitchMap$androidx$constraintlayout$widget$ConstraintAttribute$AttributeType */
         public static final /* synthetic */ int[] f126x66adad53;
 
         static {
@@ -163,7 +163,7 @@ public class ConstraintAttribute {
         typedArrayObtainStyledAttributes.recycle();
     }
 
-    public static void setAttributes(View view, HashMap<String, ConstraintAttribute> map) throws SecurityException, IllegalArgumentException {
+    public static void setAttributes(View view, HashMap<String, ConstraintAttribute> map) {
         Class<?> cls = view.getClass();
         for (String str : map.keySet()) {
             ConstraintAttribute constraintAttribute = map.get(str);

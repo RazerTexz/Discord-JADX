@@ -24,40 +24,40 @@ import p007b.p109f.p161j.p175j.EncodedImage2;
 import p007b.p109f.p161j.p183r.FrescoSystrace;
 import p686z.Task6;
 
-/* compiled from: BufferedDiskCache.java */
-/* renamed from: b.f.j.c.f, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.f.j.c.f, reason: use source file name */
+/* JADX INFO: compiled from: BufferedDiskCache.java */
+/* JADX INFO: loaded from: classes.dex */
 public class BufferedDiskCache2 {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final FileCache f3661a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final PooledByteBufferFactory f3662b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final PooledByteStreams f3663c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final Executor f3664d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final Executor f3665e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final StagingArea f3666f = new StagingArea();
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public final ImageCacheStatsTracker f3667g;
 
-    /* compiled from: BufferedDiskCache.java */
-    /* renamed from: b.f.j.c.f$a */
+    /* JADX INFO: renamed from: b.f.j.c.f$a */
+    /* JADX INFO: compiled from: BufferedDiskCache.java */
     public class a implements Runnable {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public final /* synthetic */ CacheKey f3668j;
 
-        /* renamed from: k */
+        /* JADX INFO: renamed from: k */
         public final /* synthetic */ EncodedImage2 f3669k;
 
         public a(Object obj, CacheKey cacheKey, EncodedImage2 encodedImage2) {
@@ -92,7 +92,7 @@ public class BufferedDiskCache2 {
         this.f3667g = imageCacheStatsTracker;
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static PooledByteBuffer m1215a(BufferedDiskCache2 bufferedDiskCache2, CacheKey cacheKey) throws IOException {
         Objects.requireNonNull(bufferedDiskCache2);
         try {
@@ -123,7 +123,7 @@ public class BufferedDiskCache2 {
         }
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static void m1216b(BufferedDiskCache2 bufferedDiskCache2, CacheKey cacheKey, EncodedImage2 encodedImage2) {
         Objects.requireNonNull(bufferedDiskCache2);
         cacheKey.mo930b();
@@ -137,7 +137,7 @@ public class BufferedDiskCache2 {
         }
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public void m1217c(CacheKey cacheKey) {
         DiskStorageCache diskStorageCache = (DiskStorageCache) this.f3661a;
         Objects.requireNonNull(diskStorageCache);
@@ -167,7 +167,7 @@ public class BufferedDiskCache2 {
     }
 
     /* JADX WARN: Multi-variable type inference failed */
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final Task6<EncodedImage2> m1218d(CacheKey cacheKey, EncodedImage2 encodedImage2) {
         cacheKey.mo930b();
         int i = FLog.f3102a;
@@ -183,7 +183,7 @@ public class BufferedDiskCache2 {
         throw new IllegalStateException("Cannot set the result of a completed task.");
     }
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public Task6<EncodedImage2> m1219e(CacheKey cacheKey, AtomicBoolean atomicBoolean) {
         Task6<EncodedImage2> task6M11367c;
         try {
@@ -204,7 +204,7 @@ public class BufferedDiskCache2 {
         }
     }
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public void m1220f(CacheKey cacheKey, EncodedImage2 encodedImage2) {
         try {
             FrescoSystrace.m1527b();

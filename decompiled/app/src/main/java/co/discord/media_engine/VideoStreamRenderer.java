@@ -12,8 +12,8 @@ import org.webrtc.SurfaceViewRenderer;
 import p507d0.p580t.Sets5;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: VideoStreamRenderer.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: VideoStreamRenderer.kt */
+/* JADX INFO: loaded from: classes.dex */
 public class VideoStreamRenderer extends SurfaceViewRenderer {
     private static final Muxer Muxer = new Muxer(null);
 
@@ -21,7 +21,7 @@ public class VideoStreamRenderer extends SurfaceViewRenderer {
     private static Map<String, Set<VideoStreamRenderer>> streams = new LinkedHashMap();
     private String streamIdentifier;
 
-    /* compiled from: VideoStreamRenderer.kt */
+    /* JADX INFO: compiled from: VideoStreamRenderer.kt */
     public static final class Muxer {
         private Muxer() {
         }

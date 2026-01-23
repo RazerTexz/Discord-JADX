@@ -3,8 +3,8 @@ package com.discord.widgets.voice.sheet;
 import android.view.View;
 import com.discord.widgets.voice.sheet.CallParticipantsAdapter;
 
-/* compiled from: CallParticipantsAdapter.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: CallParticipantsAdapter.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class CallParticipantsAdapter$ViewHolderEmbeddedActivity$onConfigure$1 implements View.OnClickListener {
     public final /* synthetic */ CallParticipantsAdapter.ViewHolderEmbeddedActivity this$0;
 

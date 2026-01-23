@@ -3,7 +3,7 @@ package androidx.recyclerview.widget;
 import android.util.SparseArray;
 import java.lang.reflect.Array;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class TileList<T> {
     public Tile<T> mLastAccessedTile;
     public final int mTileSize;

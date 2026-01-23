@@ -15,17 +15,17 @@ import p637j0.p641k.Func1;
 import p658rx.Observable;
 import p658rx.functions.Func4;
 
-/* compiled from: WidgetThreadStatusViewModel.kt */
-/* renamed from: com.discord.widgets.status.WidgetThreadStatusViewModel$Companion$observeStoreState$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.status.WidgetThreadStatusViewModel$Companion$observeStoreState$1, reason: use source file name */
+/* JADX INFO: compiled from: WidgetThreadStatusViewModel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetThreadStatusViewModel2<T, R> implements Func1<Channel, Observable<? extends WidgetThreadStatusViewModel.StoreState>> {
     public final /* synthetic */ StoreChannels $storeChannels;
     public final /* synthetic */ StoreExperiments $storeExperiments;
     public final /* synthetic */ StorePermissions $storePermissions;
     public final /* synthetic */ StoreThreadsActiveJoined $storeThreadsActiveJoined;
 
-    /* compiled from: WidgetThreadStatusViewModel.kt */
-    /* renamed from: com.discord.widgets.status.WidgetThreadStatusViewModel$Companion$observeStoreState$1$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.status.WidgetThreadStatusViewModel$Companion$observeStoreState$1$1 */
+    /* JADX INFO: compiled from: WidgetThreadStatusViewModel.kt */
     public static final class C101161<T1, T2, T3, T4, R> implements Func4<Map<Long, ? extends Map<Long, ? extends StoreThreadsActiveJoined.ActiveJoinedThread>>, Long, Channel, Boolean, WidgetThreadStatusViewModel.StoreState> {
         public final /* synthetic */ Channel $selectedChannel;
 
@@ -38,7 +38,7 @@ public final class WidgetThreadStatusViewModel2<T, R> implements Func1<Channel, 
             return call2((Map<Long, ? extends Map<Long, StoreThreadsActiveJoined.ActiveJoinedThread>>) map, l, channel, bool);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final WidgetThreadStatusViewModel.StoreState call2(Map<Long, ? extends Map<Long, StoreThreadsActiveJoined.ActiveJoinedThread>> map, Long l, Channel channel, Boolean bool) {
             ThreadUtils threadUtils = ThreadUtils.INSTANCE;
             Channel channel2 = this.$selectedChannel;
@@ -64,7 +64,7 @@ public final class WidgetThreadStatusViewModel2<T, R> implements Func1<Channel, 
         return call2(channel);
     }
 
-    /* renamed from: call, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
     public final Observable<? extends WidgetThreadStatusViewModel.StoreState> call2(Channel channel) {
         return Observable.m11073h(this.$storeThreadsActiveJoined.observeActiveJoinedThreadsForGuild(channel.getGuildId()), this.$storePermissions.observePermissionsForChannel(channel.getId()), this.$storeChannels.observeChannel(channel.getParentId()), ForumUtils.observeCanAccessRedesignedForumChannels$default(ForumUtils.INSTANCE, channel.getGuildId(), this.$storeExperiments, null, 4, null), new C101161(channel)).m11112r();
     }

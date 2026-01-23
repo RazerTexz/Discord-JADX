@@ -22,16 +22,16 @@ import p507d0.p584w.p586i.p587a.boxing;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetGuildInvite.kt */
-/* renamed from: com.discord.widgets.guilds.invite.WidgetGuildInvite$configureLoadedUI$onAcceptClick$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.guilds.invite.WidgetGuildInvite$configureLoadedUI$onAcceptClick$1, reason: use source file name */
+/* JADX INFO: compiled from: WidgetGuildInvite.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetGuildInvite3 extends Lambda implements Function0<Unit> {
     public final /* synthetic */ ModelInvite $invite;
     public final /* synthetic */ WidgetGuildInvite this$0;
 
-    /* compiled from: WidgetGuildInvite.kt */
+    /* JADX INFO: renamed from: com.discord.widgets.guilds.invite.WidgetGuildInvite$configureLoadedUI$onAcceptClick$1$1 */
+    /* JADX INFO: compiled from: WidgetGuildInvite.kt */
     @DebugMetadata(m10084c = "com.discord.widgets.guilds.invite.WidgetGuildInvite$configureLoadedUI$onAcceptClick$1$1", m10085f = "WidgetGuildInvite.kt", m10086l = {}, m10087m = "invokeSuspend")
-    /* renamed from: com.discord.widgets.guilds.invite.WidgetGuildInvite$configureLoadedUI$onAcceptClick$1$1 */
     public static final class C86461 extends ContinuationImpl6 implements Function2<Error, Continuation<? super Unit>, Object> {
         private /* synthetic */ Object L$0;
         public int label;
@@ -65,9 +65,9 @@ public final class WidgetGuildInvite3 extends Lambda implements Function0<Unit> 
         }
     }
 
-    /* compiled from: WidgetGuildInvite.kt */
+    /* JADX INFO: renamed from: com.discord.widgets.guilds.invite.WidgetGuildInvite$configureLoadedUI$onAcceptClick$1$2 */
+    /* JADX INFO: compiled from: WidgetGuildInvite.kt */
     @DebugMetadata(m10084c = "com.discord.widgets.guilds.invite.WidgetGuildInvite$configureLoadedUI$onAcceptClick$1$2", m10085f = "WidgetGuildInvite.kt", m10086l = {}, m10087m = "invokeSuspend")
-    /* renamed from: com.discord.widgets.guilds.invite.WidgetGuildInvite$configureLoadedUI$onAcceptClick$1$2 */
     public static final class C86472 extends ContinuationImpl6 implements Function2<ModelInvite, Continuation<? super Unit>, Object> {
         private /* synthetic */ Object L$0;
         public int label;
@@ -129,7 +129,7 @@ public final class WidgetGuildInvite3 extends Lambda implements Function0<Unit> 
         return Unit.f27425a;
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final void invoke2() {
         InviteJoinHelper.joinViaInvite$default(InviteJoinHelper.INSTANCE, this.$invite, this.this$0.getClass(), this.this$0, "Accept Invite Page", new C86461(null), null, new C86472(null), null, Opcodes.IF_ICMPNE, null);
     }

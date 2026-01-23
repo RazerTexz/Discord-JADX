@@ -11,8 +11,8 @@ import kotlinx.coroutines.CoroutineScope;
 import p007b.p225i.p226a.p288f.p299e.p308o.C3404f;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: BatchManager.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: BatchManager.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class BatchManager {
     private final Map<String, Batched<?>> batches;
     private final Clock clock;

@@ -27,34 +27,34 @@ import p007b.p008a.p025i.ViewPhoneOrEmailInputBinding;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: PhoneOrEmailInputView.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: PhoneOrEmailInputView.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class PhoneOrEmailInputView extends LinearLayout {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static final /* synthetic */ int f19276j = 0;
 
-    /* renamed from: k, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: k, reason: from kotlin metadata */
     public final ViewPhoneOrEmailInputBinding binding;
 
-    /* renamed from: l, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: l, reason: from kotlin metadata */
     public Mode mode;
 
-    /* renamed from: m, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: m, reason: from kotlin metadata */
     public CharSequence email;
 
-    /* renamed from: n, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: n, reason: from kotlin metadata */
     public CharSequence phone;
 
-    /* compiled from: PhoneOrEmailInputView.kt */
+    /* JADX INFO: compiled from: PhoneOrEmailInputView.kt */
     public enum Mode {
         ADAPTIVE,
         EMAIL,
         PHONE
     }
 
-    /* compiled from: PhoneOrEmailInputView.kt */
-    /* renamed from: com.discord.views.phone.PhoneOrEmailInputView$a */
+    /* JADX INFO: renamed from: com.discord.views.phone.PhoneOrEmailInputView$a */
+    /* JADX INFO: compiled from: PhoneOrEmailInputView.kt */
     public static final class C7116a extends Lambda implements Function1<Editable, Unit> {
         public final /* synthetic */ Function0 $onAfterTextChanged;
 
@@ -72,8 +72,8 @@ public final class PhoneOrEmailInputView extends LinearLayout {
         }
     }
 
-    /* compiled from: PhoneOrEmailInputView.kt */
-    /* renamed from: com.discord.views.phone.PhoneOrEmailInputView$b */
+    /* JADX INFO: renamed from: com.discord.views.phone.PhoneOrEmailInputView$b */
+    /* JADX INFO: compiled from: PhoneOrEmailInputView.kt */
     public static final class C7117b extends Lambda implements Function1<Editable, Unit> {
         public final /* synthetic */ Function0 $onAfterTextChanged;
 
@@ -94,8 +94,8 @@ public final class PhoneOrEmailInputView extends LinearLayout {
         }
     }
 
-    /* compiled from: PhoneOrEmailInputView.kt */
-    /* renamed from: com.discord.views.phone.PhoneOrEmailInputView$c */
+    /* JADX INFO: renamed from: com.discord.views.phone.PhoneOrEmailInputView$c */
+    /* JADX INFO: compiled from: PhoneOrEmailInputView.kt */
     public static final class C7118c extends Lambda implements Function1<View, Unit> {
         public final /* synthetic */ Fragment $fragment;
 
@@ -116,8 +116,8 @@ public final class PhoneOrEmailInputView extends LinearLayout {
         }
     }
 
-    /* compiled from: PhoneOrEmailInputView.kt */
-    /* renamed from: com.discord.views.phone.PhoneOrEmailInputView$d */
+    /* JADX INFO: renamed from: com.discord.views.phone.PhoneOrEmailInputView$d */
+    /* JADX INFO: compiled from: PhoneOrEmailInputView.kt */
     public static final class C7119d extends Lambda implements Function1<Editable, Unit> {
         public C7119d() {
             super(1);
@@ -184,7 +184,7 @@ public final class PhoneOrEmailInputView extends LinearLayout {
         textInputLayout.setNextFocusForwardId(id2);
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final void m8599a(Fragment fragment, Function0<Unit> onAfterTextChanged) {
         Intrinsics3.checkNotNullParameter(fragment, "fragment");
         Intrinsics3.checkNotNullParameter(onAfterTextChanged, "onAfterTextChanged");
@@ -196,7 +196,7 @@ public final class PhoneOrEmailInputView extends LinearLayout {
         ViewExtensions.addBindedTextWatcher(textInputLayout2, fragment, new C7117b(onAfterTextChanged));
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final void m8600b(Fragment fragment) {
         Intrinsics3.checkNotNullParameter(fragment, "fragment");
         TextInputLayout textInputLayout = this.binding.f1287b;
@@ -209,14 +209,14 @@ public final class PhoneOrEmailInputView extends LinearLayout {
         m8602d();
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final void m8601c() {
         TextInputLayout textInputLayout = this.binding.f1287b;
         Intrinsics3.checkNotNullExpressionValue(textInputLayout, "binding.phoneOrEmailCountryCodeWrap");
         textInputLayout.setVisibility(m8603e() ? 0 : 8);
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final void m8602d() {
         if (this.mode.ordinal() != 2) {
             TextInputEditText textInputEditText = this.binding.f1288c;
@@ -243,7 +243,7 @@ public final class PhoneOrEmailInputView extends LinearLayout {
         this.binding.f1288c.setSelection(this.phone.length());
     }
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final boolean m8603e() {
         int iOrdinal = this.mode.ordinal();
         if (iOrdinal == 1) {
@@ -258,7 +258,7 @@ public final class PhoneOrEmailInputView extends LinearLayout {
         return phoneUtils.isLikelyToContainPhoneNumber(ViewExtensions.getTextOrEmpty(textInputLayout));
     }
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final void m8604f() {
         TextInputLayout textInputLayout = this.binding.f1289d;
         Intrinsics3.checkNotNullExpressionValue(textInputLayout, "binding.phoneOrEmailMainInputWrap");

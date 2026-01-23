@@ -40,13 +40,13 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p658rx.functions.Action1;
 import p658rx.functions.Action2;
 
-/* compiled from: WidgetHomeHeaderManager.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetHomeHeaderManager.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetHomeHeaderManager {
     private static final String ANALYTICS_SOURCE = "Toolbar";
     public static final WidgetHomeHeaderManager INSTANCE = new WidgetHomeHeaderManager();
 
-    /* compiled from: WidgetHomeHeaderManager.kt */
+    /* JADX INFO: compiled from: WidgetHomeHeaderManager.kt */
     public static final /* data */ class HeaderData {
         private final Integer drawableRes;
         private final boolean leftButtonIsBack;
@@ -84,27 +84,27 @@ public final class WidgetHomeHeaderManager {
             return headerData.copy(charSequence, charSequence3, num3, z3, num2);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final CharSequence getTitle() {
             return this.title;
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final CharSequence getSubtitle() {
             return this.subtitle;
         }
 
-        /* renamed from: component3, reason: from getter */
+        /* JADX INFO: renamed from: component3, reason: from getter */
         public final Integer getDrawableRes() {
             return this.drawableRes;
         }
 
-        /* renamed from: component4, reason: from getter */
+        /* JADX INFO: renamed from: component4, reason: from getter */
         public final boolean getLeftButtonIsBack() {
             return this.leftButtonIsBack;
         }
 
-        /* renamed from: component5, reason: from getter */
+        /* JADX INFO: renamed from: component5, reason: from getter */
         public final Integer getTrailingDrawable() {
             return this.trailingDrawable;
         }
@@ -145,6 +145,9 @@ public final class WidgetHomeHeaderManager {
         }
 
         /* JADX WARN: Multi-variable type inference failed */
+        /* JADX WARN: Type inference failed for: r2v12 */
+        /* JADX WARN: Type inference failed for: r2v7, types: [int] */
+        /* JADX WARN: Type inference failed for: r2v9 */
         public int hashCode() {
             CharSequence charSequence = this.title;
             int iHashCode = (charSequence != null ? charSequence.hashCode() : 0) * 31;
@@ -153,13 +156,13 @@ public final class WidgetHomeHeaderManager {
             Integer num = this.drawableRes;
             int iHashCode3 = (iHashCode2 + (num != null ? num.hashCode() : 0)) * 31;
             boolean z2 = this.leftButtonIsBack;
-            int i = z2;
-            if (z2 != 0) {
-                i = 1;
+            ?? r2 = z2;
+            if (z2) {
+                r2 = 1;
             }
-            int i2 = (iHashCode3 + i) * 31;
+            int i = (iHashCode3 + r2) * 31;
             Integer num2 = this.trailingDrawable;
-            return i2 + (num2 != null ? num2.hashCode() : 0);
+            return i + (num2 != null ? num2.hashCode() : 0);
         }
 
         public String toString() {
@@ -180,8 +183,8 @@ public final class WidgetHomeHeaderManager {
         }
     }
 
-    /* compiled from: WidgetHomeHeaderManager.kt */
-    /* renamed from: com.discord.widgets.home.WidgetHomeHeaderManager$configureThreadBrowserIconBehavior$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.home.WidgetHomeHeaderManager$configureThreadBrowserIconBehavior$1 */
+    /* JADX INFO: compiled from: WidgetHomeHeaderManager.kt */
     public static final class ViewOnClickListenerC89701 implements View.OnClickListener {
         public final /* synthetic */ Channel $channel;
         public final /* synthetic */ Context $context;
@@ -197,8 +200,8 @@ public final class WidgetHomeHeaderManager {
         }
     }
 
-    /* compiled from: WidgetHomeHeaderManager.kt */
-    /* renamed from: com.discord.widgets.home.WidgetHomeHeaderManager$getOnConfigureAction$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.home.WidgetHomeHeaderManager$getOnConfigureAction$1 */
+    /* JADX INFO: compiled from: WidgetHomeHeaderManager.kt */
     public static final class C89711<T> implements Action1<Menu> {
         public final /* synthetic */ Resources $resources;
         public final /* synthetic */ WidgetHomeModel $this_getOnConfigureAction;
@@ -213,7 +216,7 @@ public final class WidgetHomeHeaderManager {
             call2(menu);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final void call2(Menu menu) {
             boolean z2 = false;
             boolean z3 = this.$this_getOnConfigureAction.getChannel() != null && ChannelUtils.m7670E(this.$this_getOnConfigureAction.getChannel());
@@ -287,8 +290,8 @@ public final class WidgetHomeHeaderManager {
         }
     }
 
-    /* compiled from: WidgetHomeHeaderManager.kt */
-    /* renamed from: com.discord.widgets.home.WidgetHomeHeaderManager$getOnSelectedAction$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.home.WidgetHomeHeaderManager$getOnSelectedAction$1 */
+    /* JADX INFO: compiled from: WidgetHomeHeaderManager.kt */
     public static final class C89721 implements Action2<MenuItem, Context> {
         public final /* synthetic */ AppFragment $appFragment;
         public final /* synthetic */ PanelLayout $panelLayout;
@@ -318,7 +321,7 @@ public final class WidgetHomeHeaderManager {
             call2(menuItem, context);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public void call2(MenuItem menuItem, Context context) {
             Intrinsics3.checkNotNullParameter(menuItem, "menuItem");
             Intrinsics3.checkNotNullParameter(context, "context");

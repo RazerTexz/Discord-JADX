@@ -7,18 +7,18 @@ import androidx.viewbinding.ViewBinding;
 import com.discord.views.channelsidebar.GuildChannelSideBarActionsView;
 import com.discord.views.channelsidebar.PrivateChannelSideBarActionsView;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public final class WidgetChannelSidebarActionsBinding implements ViewBinding {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     @NonNull
     public final FrameLayout f15958a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     @NonNull
     public final GuildChannelSideBarActionsView f15959b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     @NonNull
     public final PrivateChannelSideBarActionsView f15960c;
 

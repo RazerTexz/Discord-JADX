@@ -2,18 +2,18 @@ package kotlinx.coroutines;
 
 import kotlin.coroutines.CoroutineContext;
 
-/* compiled from: CoroutineExceptionHandler.kt */
-/* loaded from: classes3.dex */
+/* JADX INFO: compiled from: CoroutineExceptionHandler.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public interface CoroutineExceptionHandler extends CoroutineContext.Element {
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public static final /* synthetic */ int f27455g = 0;
 
-    /* compiled from: CoroutineExceptionHandler.kt */
-    /* renamed from: kotlinx.coroutines.CoroutineExceptionHandler$a */
+    /* JADX INFO: renamed from: kotlinx.coroutines.CoroutineExceptionHandler$a */
+    /* JADX INFO: compiled from: CoroutineExceptionHandler.kt */
     public static final class C12804a implements CoroutineContext.Key<CoroutineExceptionHandler> {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public static final /* synthetic */ C12804a f27456a = new C12804a();
     }
 

@@ -3,9 +3,9 @@ package com.discord.widgets.settings.account.mfa;
 import kotlin.jvm.functions.Function0;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetEnableMFAInput.kt */
-/* renamed from: com.discord.widgets.settings.account.mfa.WidgetEnableMFAInput$viewModel$2, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.settings.account.mfa.WidgetEnableMFAInput$viewModel$2, reason: use source file name */
+/* JADX INFO: compiled from: WidgetEnableMFAInput.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetEnableMFAInput3 extends Lambda implements Function0<WidgetEnableMFAViewModel> {
     public static final WidgetEnableMFAInput3 INSTANCE = new WidgetEnableMFAInput3();
 

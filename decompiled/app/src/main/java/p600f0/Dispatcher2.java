@@ -18,24 +18,24 @@ import p600f0.p601e0.Util6;
 import p600f0.p601e0.Util7;
 import p600f0.p601e0.p605g.RealCall;
 
-/* compiled from: Dispatcher.kt */
-/* renamed from: f0.q, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: f0.q, reason: use source file name */
+/* JADX INFO: compiled from: Dispatcher.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class Dispatcher2 {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public ExecutorService f25957a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final ArrayDeque<RealCall.a> f25958b = new ArrayDeque<>();
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final ArrayDeque<RealCall.a> f25959c = new ArrayDeque<>();
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final ArrayDeque<RealCall> f25960d = new ArrayDeque<>();
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final synchronized void m10388a() {
         Iterator<RealCall.a> it = this.f25958b.iterator();
         while (it.hasNext()) {
@@ -51,7 +51,7 @@ public final class Dispatcher2 {
         }
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final <T> void m10389b(Deque<T> deque, T t) {
         synchronized (this) {
             if (!deque.remove(t)) {
@@ -61,7 +61,7 @@ public final class Dispatcher2 {
         m10391d();
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final void m10390c(RealCall.a aVar) {
         Intrinsics3.checkParameterIsNotNull(aVar, NotificationCompat.CATEGORY_CALL);
         aVar.f25482j.decrementAndGet();
@@ -69,7 +69,7 @@ public final class Dispatcher2 {
     }
 
     /* JADX WARN: Removed duplicated region for block: B:25:0x0067  */
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */

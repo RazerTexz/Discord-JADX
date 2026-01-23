@@ -9,27 +9,27 @@ import p007b.p225i.p226a.p242c.Format2;
 import p007b.p225i.p226a.p242c.MediaMetadata;
 import p007b.p225i.p226a.p242c.p259f3.Util2;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public final class Metadata implements Parcelable {
     public static final Parcelable.Creator<Metadata> CREATOR = new C10719a();
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final Entry[] f19936j;
 
     public interface Entry extends Parcelable {
-        /* renamed from: n */
+        /* JADX INFO: renamed from: n */
         void mo8878n(MediaMetadata.b bVar);
 
         @Nullable
-        /* renamed from: o0 */
+        /* JADX INFO: renamed from: o0 */
         byte[] mo8879o0();
 
         @Nullable
-        /* renamed from: y */
+        /* JADX INFO: renamed from: y */
         Format2 mo8880y();
     }
 
-    /* renamed from: com.google.android.exoplayer2.metadata.Metadata$a */
+    /* JADX INFO: renamed from: com.google.android.exoplayer2.metadata.Metadata$a */
     public class C10719a implements Parcelable.Creator<Metadata> {
         @Override // android.os.Parcelable.Creator
         public Metadata createFromParcel(Parcel parcel) {
@@ -46,7 +46,7 @@ public final class Metadata implements Parcelable {
         this.f19936j = entryArr;
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public Metadata m8877a(Entry... entryArr) {
         if (entryArr.length == 0) {
             return this;

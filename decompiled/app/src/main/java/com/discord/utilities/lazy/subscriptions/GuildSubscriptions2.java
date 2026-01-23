@@ -12,9 +12,9 @@ import p507d0.p580t.Iterables2;
 import p507d0.p580t.MapsJVM;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: GuildSubscriptions.kt */
-/* renamed from: com.discord.utilities.lazy.subscriptions.GuildSubscriptions$serializedRanges$2, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.utilities.lazy.subscriptions.GuildSubscriptions$serializedRanges$2, reason: use source file name */
+/* JADX INFO: compiled from: GuildSubscriptions.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class GuildSubscriptions2 extends Lambda implements Function0<Map<Long, ? extends List<? extends List<? extends Integer>>>> {
     public final /* synthetic */ GuildSubscriptions this$0;
 
@@ -30,7 +30,7 @@ public final class GuildSubscriptions2 extends Lambda implements Function0<Map<L
     }
 
     @Override // kotlin.jvm.functions.Function0
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final Map<Long, ? extends List<? extends List<? extends Integer>>> invoke2() {
         Map<Long, List<Ranges2>> channels = this.this$0.getChannels();
         if (channels == null) {

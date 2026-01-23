@@ -12,12 +12,12 @@ import p007b.p008a.p025i.OauthTokenPermissionListItemBinding;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: OAuthPermissionViews.kt */
-/* renamed from: b.a.y.h, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: b.a.y.h, reason: use source file name */
+/* JADX INFO: compiled from: OAuthPermissionViews.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class OAuthPermissionViews2 extends Lambda implements Function2<LayoutInflater, ViewGroup, OAuthPermissionViews.C7080a> {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static final OAuthPermissionViews2 f2026j = new OAuthPermissionViews2();
 
     public OAuthPermissionViews2() {

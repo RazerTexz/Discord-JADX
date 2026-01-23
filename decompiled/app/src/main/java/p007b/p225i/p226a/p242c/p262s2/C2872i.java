@@ -5,18 +5,18 @@ import p007b.p225i.p226a.p242c.p255c3.TrackSelectionArray;
 import p007b.p225i.p226a.p242c.p259f3.ListenerSet;
 import p007b.p225i.p226a.p242c.p262s2.AnalyticsListener;
 
-/* compiled from: lambda */
-/* renamed from: b.i.a.c.s2.i */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.s2.i */
+/* JADX INFO: compiled from: lambda */
+/* JADX INFO: loaded from: classes3.dex */
 public final /* synthetic */ class C2872i implements ListenerSet.a {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final /* synthetic */ AnalyticsListener.a f7577a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final /* synthetic */ TrackGroupArray f7578b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final /* synthetic */ TrackSelectionArray f7579c;
 
     public /* synthetic */ C2872i(AnalyticsListener.a aVar, TrackGroupArray trackGroupArray, TrackSelectionArray trackSelectionArray) {

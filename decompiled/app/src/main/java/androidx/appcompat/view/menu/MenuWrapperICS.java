@@ -10,8 +10,8 @@ import android.view.SubMenu;
 import androidx.annotation.RestrictTo;
 import androidx.core.internal.view.SupportMenu;
 
+/* JADX INFO: loaded from: classes.dex */
 @RestrictTo({RestrictTo.Scope.LIBRARY_GROUP_PREFIX})
-/* loaded from: classes.dex */
 public class MenuWrapperICS extends BaseMenuWrapper implements Menu {
     private final SupportMenu mWrappedObject;
 

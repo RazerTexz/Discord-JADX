@@ -11,11 +11,11 @@ import p007b.p100d.p104b.p105a.outline;
 import p507d0.p580t._Collections;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: GuildRoleSubscriptionTierViewModel.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: GuildRoleSubscriptionTierViewModel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class GuildRoleSubscriptionTierViewModel extends AppViewModel<ViewState> {
 
-    /* compiled from: GuildRoleSubscriptionTierViewModel.kt */
+    /* JADX INFO: compiled from: GuildRoleSubscriptionTierViewModel.kt */
     public static final /* data */ class ViewState {
         private final GuildRoleSubscriptionTier guildRoleSubscriptionTier;
         private final Boolean isFullServerGating;
@@ -40,12 +40,12 @@ public final class GuildRoleSubscriptionTierViewModel extends AppViewModel<ViewS
             return viewState.copy(guildRoleSubscriptionTier, bool);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final GuildRoleSubscriptionTier getGuildRoleSubscriptionTier() {
             return this.guildRoleSubscriptionTier;
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final Boolean getIsFullServerGating() {
             return this.isFullServerGating;
         }

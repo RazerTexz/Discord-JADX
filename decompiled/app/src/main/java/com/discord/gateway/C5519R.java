@@ -2,11 +2,11 @@ package com.discord.gateway;
 
 import com.discord.C5419R;
 
-/* renamed from: com.discord.gateway.R */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: com.discord.gateway.R */
+/* JADX INFO: loaded from: classes.dex */
 public final class C5519R {
 
-    /* renamed from: com.discord.gateway.R$anim */
+    /* JADX INFO: renamed from: com.discord.gateway.R$anim */
     public static final class anim {
         public static final int abc_fade_in = 2130771968;
         public static final int abc_fade_out = 2130771969;
@@ -45,7 +45,7 @@ public final class C5519R {
         }
     }
 
-    /* renamed from: com.discord.gateway.R$animator */
+    /* JADX INFO: renamed from: com.discord.gateway.R$animator */
     public static final class animator {
         public static final int design_appbar_state_list_animator = 2130837504;
         public static final int design_fab_hide_motion_spec = 2130837505;
@@ -78,7 +78,7 @@ public final class C5519R {
         }
     }
 
-    /* renamed from: com.discord.gateway.R$attr */
+    /* JADX INFO: renamed from: com.discord.gateway.R$attr */
     public static final class attr {
         public static final int actionBarDivider = 2130968576;
         public static final int actionBarItemBackground = 2130968577;
@@ -1091,7 +1091,7 @@ public final class C5519R {
         }
     }
 
-    /* renamed from: com.discord.gateway.R$bool */
+    /* JADX INFO: renamed from: com.discord.gateway.R$bool */
     public static final class bool {
         public static final int abc_action_bar_embed_tabs = 2131034112;
         public static final int abc_allow_stacked_button_bar = 2131034113;
@@ -1103,7 +1103,7 @@ public final class C5519R {
         }
     }
 
-    /* renamed from: com.discord.gateway.R$color */
+    /* JADX INFO: renamed from: com.discord.gateway.R$color */
     public static final class color {
         public static final int abc_background_cache_hint_selector_material_dark = 2131099648;
         public static final int abc_background_cache_hint_selector_material_light = 2131099649;
@@ -1328,7 +1328,7 @@ public final class C5519R {
         }
     }
 
-    /* renamed from: com.discord.gateway.R$dimen */
+    /* JADX INFO: renamed from: com.discord.gateway.R$dimen */
     public static final class dimen {
         public static final int abc_action_bar_content_inset_material = 2131165184;
         public static final int abc_action_bar_content_inset_with_nav = 2131165185;
@@ -1730,7 +1730,7 @@ public final class C5519R {
         }
     }
 
-    /* renamed from: com.discord.gateway.R$drawable */
+    /* JADX INFO: renamed from: com.discord.gateway.R$drawable */
     public static final class drawable {
         public static final int abc_ab_share_pack_mtrl_alpha = 2131230859;
         public static final int abc_action_bar_item_background_material = 2131230860;
@@ -1903,7 +1903,7 @@ public final class C5519R {
         }
     }
 
-    /* renamed from: com.discord.gateway.R$id */
+    /* JADX INFO: renamed from: com.discord.gateway.R$id */
     public static final class id {
         public static final int BOTTOM_END = 2131361793;
         public static final int BOTTOM_START = 2131361794;
@@ -2157,7 +2157,7 @@ public final class C5519R {
         public static final int nowrap = 2131364571;
         public static final int off = 2131364616;
 
-        /* renamed from: on */
+        /* JADX INFO: renamed from: on */
         public static final int f18511on = 2131364620;
         public static final int outline = 2131364641;
         public static final int outward = 2131364642;
@@ -2292,7 +2292,7 @@ public final class C5519R {
         public static final int uniform = 2131365931;
         public static final int unlabeled = 2131365934;
 
-        /* renamed from: up */
+        /* JADX INFO: renamed from: up */
         public static final int f18512up = 2131365940;
         public static final int view_offset_helper = 2131366113;
         public static final int view_tree_lifecycle_owner = 2131366128;
@@ -2311,7 +2311,7 @@ public final class C5519R {
         }
     }
 
-    /* renamed from: com.discord.gateway.R$integer */
+    /* JADX INFO: renamed from: com.discord.gateway.R$integer */
     public static final class integer {
         public static final int abc_config_activityDefaultDur = 2131427328;
         public static final int abc_config_activityShortDur = 2131427329;
@@ -2340,7 +2340,7 @@ public final class C5519R {
         }
     }
 
-    /* renamed from: com.discord.gateway.R$interpolator */
+    /* JADX INFO: renamed from: com.discord.gateway.R$interpolator */
     public static final class interpolator {
         public static final int btn_checkbox_checked_mtrl_animation_interpolator_0 = 2131492864;
         public static final int btn_checkbox_checked_mtrl_animation_interpolator_1 = 2131492865;
@@ -2358,7 +2358,7 @@ public final class C5519R {
         }
     }
 
-    /* renamed from: com.discord.gateway.R$layout */
+    /* JADX INFO: renamed from: com.discord.gateway.R$layout */
     public static final class layout {
         public static final int abc_action_bar_title_item = 2131558400;
         public static final int abc_action_bar_up_container = 2131558401;
@@ -2493,7 +2493,7 @@ public final class C5519R {
         }
     }
 
-    /* renamed from: com.discord.gateway.R$plurals */
+    /* JADX INFO: renamed from: com.discord.gateway.R$plurals */
     public static final class plurals {
         public static final int mtrl_badge_content_description = 2131755272;
 
@@ -2501,7 +2501,7 @@ public final class C5519R {
         }
     }
 
-    /* renamed from: com.discord.gateway.R$string */
+    /* JADX INFO: renamed from: com.discord.gateway.R$string */
     public static final class string {
         public static final int abc_action_bar_home_description = 2131886099;
         public static final int abc_action_bar_up_description = 2131886100;
@@ -2633,7 +2633,7 @@ public final class C5519R {
         }
     }
 
-    /* renamed from: com.discord.gateway.R$style */
+    /* JADX INFO: renamed from: com.discord.gateway.R$style */
     public static final class style {
         public static final int AlertDialog_AppCompat = 2131951617;
         public static final int AlertDialog_AppCompat_Light = 2131951618;
@@ -2717,7 +2717,7 @@ public final class C5519R {
         public static final int Base_ThemeOverlay_MaterialComponents_Dialog_Alert = 2131951789;
         public static final int Base_ThemeOverlay_MaterialComponents_Dialog_Alert_Framework = 2131951790;
 
-        /* renamed from: Base_ThemeOverlay_MaterialComponents_Light_Dialog_Alert_Framework */
+        /* JADX INFO: renamed from: Base_ThemeOverlay_MaterialComponents_Light_Dialog_Alert_Framework */
         public static final int f18513x519bcd25 = 2131951791;
         public static final int Base_ThemeOverlay_MaterialComponents_MaterialAlertDialog = 2131951792;
         public static final int Base_Theme_AppCompat = 2131951748;
@@ -2947,16 +2947,16 @@ public final class C5519R {
         public static final int ShapeAppearanceOverlay_MaterialComponents_BottomSheet = 2131952142;
         public static final int ShapeAppearanceOverlay_MaterialComponents_Chip = 2131952143;
 
-        /* renamed from: ShapeAppearanceOverlay_MaterialComponents_ExtendedFloatingActionButton */
+        /* JADX INFO: renamed from: ShapeAppearanceOverlay_MaterialComponents_ExtendedFloatingActionButton */
         public static final int f18514x7c26e1f5 = 2131952144;
         public static final int ShapeAppearanceOverlay_MaterialComponents_FloatingActionButton = 2131952145;
         public static final int ShapeAppearanceOverlay_MaterialComponents_MaterialCalendar_Day = 2131952146;
 
-        /* renamed from: ShapeAppearanceOverlay_MaterialComponents_MaterialCalendar_Window_Fullscreen */
+        /* JADX INFO: renamed from: ShapeAppearanceOverlay_MaterialComponents_MaterialCalendar_Window_Fullscreen */
         public static final int f18515x121af39e = 2131952147;
         public static final int ShapeAppearanceOverlay_MaterialComponents_MaterialCalendar_Year = 2131952148;
 
-        /* renamed from: ShapeAppearanceOverlay_MaterialComponents_TextInputLayout_FilledBox */
+        /* JADX INFO: renamed from: ShapeAppearanceOverlay_MaterialComponents_TextInputLayout_FilledBox */
         public static final int f18516xaf44c2a3 = 2131952149;
         public static final int ShapeAppearanceOverlay_TopLeftCut = 2131952150;
         public static final int ShapeAppearanceOverlay_TopRightDifferentCornerSize = 2131952151;
@@ -2973,7 +2973,7 @@ public final class C5519R {
         public static final int TestThemeWithLineHeight = 2131952167;
         public static final int TestThemeWithLineHeightDisabled = 2131952168;
 
-        /* renamed from: Test_ShapeAppearanceOverlay_MaterialComponents_MaterialCalendar_Day */
+        /* JADX INFO: renamed from: Test_ShapeAppearanceOverlay_MaterialComponents_MaterialCalendar_Day */
         public static final int f18517x774f7bdd = 2131952158;
         public static final int Test_Theme_MaterialComponents_MaterialCalendar = 2131952159;
         public static final int Test_Widget_MaterialComponents_MaterialCalendar = 2131952160;
@@ -3081,11 +3081,11 @@ public final class C5519R {
         public static final int ThemeOverlay_MaterialComponents_AutoCompleteTextView = 2131952350;
         public static final int ThemeOverlay_MaterialComponents_AutoCompleteTextView_FilledBox = 2131952351;
 
-        /* renamed from: ThemeOverlay_MaterialComponents_AutoCompleteTextView_FilledBox_Dense */
+        /* JADX INFO: renamed from: ThemeOverlay_MaterialComponents_AutoCompleteTextView_FilledBox_Dense */
         public static final int f18518x3194dd0e = 2131952352;
         public static final int ThemeOverlay_MaterialComponents_AutoCompleteTextView_OutlinedBox = 2131952353;
 
-        /* renamed from: ThemeOverlay_MaterialComponents_AutoCompleteTextView_OutlinedBox_Dense */
+        /* JADX INFO: renamed from: ThemeOverlay_MaterialComponents_AutoCompleteTextView_OutlinedBox_Dense */
         public static final int f18519x2469ccce = 2131952354;
         public static final int ThemeOverlay_MaterialComponents_BottomAppBar_Primary = 2131952355;
         public static final int ThemeOverlay_MaterialComponents_BottomAppBar_Surface = 2131952356;
@@ -3103,27 +3103,27 @@ public final class C5519R {
         public static final int ThemeOverlay_MaterialComponents_MaterialAlertDialog_Centered = 2131952368;
         public static final int ThemeOverlay_MaterialComponents_MaterialAlertDialog_Picker_Date = 2131952369;
 
-        /* renamed from: ThemeOverlay_MaterialComponents_MaterialAlertDialog_Picker_Date_Calendar */
+        /* JADX INFO: renamed from: ThemeOverlay_MaterialComponents_MaterialAlertDialog_Picker_Date_Calendar */
         public static final int f18520x8886184a = 2131952370;
 
-        /* renamed from: ThemeOverlay_MaterialComponents_MaterialAlertDialog_Picker_Date_Header_Text */
+        /* JADX INFO: renamed from: ThemeOverlay_MaterialComponents_MaterialAlertDialog_Picker_Date_Header_Text */
         public static final int f18521x9b335733 = 2131952371;
 
-        /* renamed from: ThemeOverlay_MaterialComponents_MaterialAlertDialog_Picker_Date_Header_Text_Day */
+        /* JADX INFO: renamed from: ThemeOverlay_MaterialComponents_MaterialAlertDialog_Picker_Date_Header_Text_Day */
         public static final int f18522x96aac070 = 2131952372;
 
-        /* renamed from: ThemeOverlay_MaterialComponents_MaterialAlertDialog_Picker_Date_Spinner */
+        /* JADX INFO: renamed from: ThemeOverlay_MaterialComponents_MaterialAlertDialog_Picker_Date_Spinner */
         public static final int f18523x7cc1c38d = 2131952373;
         public static final int ThemeOverlay_MaterialComponents_MaterialCalendar = 2131952374;
         public static final int ThemeOverlay_MaterialComponents_MaterialCalendar_Fullscreen = 2131952375;
         public static final int ThemeOverlay_MaterialComponents_TextInputEditText = 2131952376;
         public static final int ThemeOverlay_MaterialComponents_TextInputEditText_FilledBox = 2131952377;
 
-        /* renamed from: ThemeOverlay_MaterialComponents_TextInputEditText_FilledBox_Dense */
+        /* JADX INFO: renamed from: ThemeOverlay_MaterialComponents_TextInputEditText_FilledBox_Dense */
         public static final int f18524xb44864b4 = 2131952378;
         public static final int ThemeOverlay_MaterialComponents_TextInputEditText_OutlinedBox = 2131952379;
 
-        /* renamed from: ThemeOverlay_MaterialComponents_TextInputEditText_OutlinedBox_Dense */
+        /* JADX INFO: renamed from: ThemeOverlay_MaterialComponents_TextInputEditText_OutlinedBox_Dense */
         public static final int f18525xc85a02f4 = 2131952380;
         public static final int ThemeOverlay_MaterialComponents_TimePicker = 2131952381;
         public static final int ThemeOverlay_MaterialComponents_TimePicker_Display = 2131952382;
@@ -3358,7 +3358,7 @@ public final class C5519R {
         public static final int Widget_MaterialComponents_MaterialCalendar_HeaderLayout = 2131952794;
         public static final int Widget_MaterialComponents_MaterialCalendar_HeaderSelection = 2131952795;
 
-        /* renamed from: Widget_MaterialComponents_MaterialCalendar_HeaderSelection_Fullscreen */
+        /* JADX INFO: renamed from: Widget_MaterialComponents_MaterialCalendar_HeaderSelection_Fullscreen */
         public static final int f18526x77b19d4e = 2131952796;
         public static final int Widget_MaterialComponents_MaterialCalendar_HeaderTitle = 2131952797;
         public static final int Widget_MaterialComponents_MaterialCalendar_HeaderToggleButton = 2131952798;
@@ -3390,18 +3390,18 @@ public final class C5519R {
         public static final int Widget_MaterialComponents_TextInputLayout_FilledBox = 2131952824;
         public static final int Widget_MaterialComponents_TextInputLayout_FilledBox_Dense = 2131952825;
 
-        /* renamed from: Widget_MaterialComponents_TextInputLayout_FilledBox_Dense_ExposedDropdownMenu */
+        /* JADX INFO: renamed from: Widget_MaterialComponents_TextInputLayout_FilledBox_Dense_ExposedDropdownMenu */
         public static final int f18527x5c070b9b = 2131952826;
 
-        /* renamed from: Widget_MaterialComponents_TextInputLayout_FilledBox_ExposedDropdownMenu */
+        /* JADX INFO: renamed from: Widget_MaterialComponents_TextInputLayout_FilledBox_ExposedDropdownMenu */
         public static final int f18528x22b53d1b = 2131952827;
         public static final int Widget_MaterialComponents_TextInputLayout_OutlinedBox = 2131952828;
         public static final int Widget_MaterialComponents_TextInputLayout_OutlinedBox_Dense = 2131952829;
 
-        /* renamed from: Widget_MaterialComponents_TextInputLayout_OutlinedBox_Dense_ExposedDropdownMenu */
+        /* JADX INFO: renamed from: Widget_MaterialComponents_TextInputLayout_OutlinedBox_Dense_ExposedDropdownMenu */
         public static final int f18529xc3fd845b = 2131952830;
 
-        /* renamed from: Widget_MaterialComponents_TextInputLayout_OutlinedBox_ExposedDropdownMenu */
+        /* JADX INFO: renamed from: Widget_MaterialComponents_TextInputLayout_OutlinedBox_ExposedDropdownMenu */
         public static final int f18530x802545db = 2131952831;
         public static final int Widget_MaterialComponents_TextView = 2131952832;
         public static final int Widget_MaterialComponents_TimePicker = 2131952833;
@@ -3422,7 +3422,7 @@ public final class C5519R {
         }
     }
 
-    /* renamed from: com.discord.gateway.R$styleable */
+    /* JADX INFO: renamed from: com.discord.gateway.R$styleable */
     public static final class styleable {
         public static final int ActionBarLayout_android_layout_gravity = 0;
         public static final int ActionBar_background = 0;
@@ -5277,7 +5277,7 @@ public final class C5519R {
         }
     }
 
-    /* renamed from: com.discord.gateway.R$xml */
+    /* JADX INFO: renamed from: com.discord.gateway.R$xml */
     public static final class xml {
         public static final int standalone_badge = 2132082693;
         public static final int standalone_badge_gravity_bottom_end = 2132082694;

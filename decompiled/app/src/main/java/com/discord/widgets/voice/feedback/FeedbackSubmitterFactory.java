@@ -7,8 +7,8 @@ import com.discord.widgets.voice.feedback.stream.StreamFeedbackSubmitter;
 import kotlin.NoWhenBranchMatchedException;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: FeedbackSubmitterFactory.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: FeedbackSubmitterFactory.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class FeedbackSubmitterFactory {
     public static final FeedbackSubmitterFactory INSTANCE = new FeedbackSubmitterFactory();
 

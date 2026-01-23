@@ -32,7 +32,7 @@ import p658rx.subjects.BehaviorSubject;
 import p658rx.subjects.SerializedSubject;
 import p658rx.subjects.Subject;
 
-/* loaded from: classes2.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class StoreMessagesHolder {
     private static final int CACHE_MAX_CHANNELS = 8;
     private static final int CACHE_MAX_MESSAGES = 10;
@@ -206,7 +206,7 @@ public class StoreMessagesHolder {
         return z5;
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public /* synthetic */ void m8508a(Object obj) {
         messageCacheTryPersist();
     }

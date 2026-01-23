@@ -11,12 +11,12 @@ import p507d0.p592z.p594d.CollectionToArray;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.p595g0.KMarkers;
 
-/* compiled from: Collections.kt */
-/* renamed from: d0.t.w, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.t.w, reason: use source file name */
+/* JADX INFO: compiled from: Collections.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class Collections4 implements List, Serializable, RandomAccess, KMarkers {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static final Collections4 f25221j = new Collections4();
     private static final long serialVersionUID = -7390468764508069838L;
 

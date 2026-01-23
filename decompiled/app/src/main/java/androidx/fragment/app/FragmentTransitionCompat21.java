@@ -12,11 +12,11 @@ import androidx.core.os.CancellationSignal;
 import java.util.ArrayList;
 import java.util.List;
 
+/* JADX INFO: loaded from: classes.dex */
 @RequiresApi(21)
-/* loaded from: classes.dex */
 public class FragmentTransitionCompat21 extends FragmentTransitionImpl {
 
-    /* renamed from: androidx.fragment.app.FragmentTransitionCompat21$1 */
+    /* JADX INFO: renamed from: androidx.fragment.app.FragmentTransitionCompat21$1 */
     public class C04011 extends Transition.EpicenterCallback {
         public final /* synthetic */ Rect val$epicenter;
 
@@ -30,7 +30,7 @@ public class FragmentTransitionCompat21 extends FragmentTransitionImpl {
         }
     }
 
-    /* renamed from: androidx.fragment.app.FragmentTransitionCompat21$2 */
+    /* JADX INFO: renamed from: androidx.fragment.app.FragmentTransitionCompat21$2 */
     public class C04022 implements Transition.TransitionListener {
         public final /* synthetic */ ArrayList val$exitingViews;
         public final /* synthetic */ View val$fragmentView;
@@ -69,7 +69,7 @@ public class FragmentTransitionCompat21 extends FragmentTransitionImpl {
         }
     }
 
-    /* renamed from: androidx.fragment.app.FragmentTransitionCompat21$3 */
+    /* JADX INFO: renamed from: androidx.fragment.app.FragmentTransitionCompat21$3 */
     public class C04033 implements Transition.TransitionListener {
         public final /* synthetic */ Object val$enterTransition;
         public final /* synthetic */ ArrayList val$enteringViews;
@@ -121,7 +121,7 @@ public class FragmentTransitionCompat21 extends FragmentTransitionImpl {
         }
     }
 
-    /* renamed from: androidx.fragment.app.FragmentTransitionCompat21$4 */
+    /* JADX INFO: renamed from: androidx.fragment.app.FragmentTransitionCompat21$4 */
     public class C04044 implements Transition.TransitionListener {
         public final /* synthetic */ Runnable val$transitionCompleteRunnable;
 
@@ -151,7 +151,7 @@ public class FragmentTransitionCompat21 extends FragmentTransitionImpl {
         }
     }
 
-    /* renamed from: androidx.fragment.app.FragmentTransitionCompat21$5 */
+    /* JADX INFO: renamed from: androidx.fragment.app.FragmentTransitionCompat21$5 */
     public class C04055 extends Transition.EpicenterCallback {
         public final /* synthetic */ Rect val$epicenter;
 

@@ -8,9 +8,9 @@ import java.io.IOException;
 import java.util.Objects;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: GuildRoleSubscriptionBenefitType.kt */
-/* renamed from: com.discord.api.guildrolesubscription.GuildRoleSubscriptionBenefitTypeAdapter, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: com.discord.api.guildrolesubscription.GuildRoleSubscriptionBenefitTypeAdapter, reason: use source file name */
+/* JADX INFO: compiled from: GuildRoleSubscriptionBenefitType.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class GuildRoleSubscriptionBenefitType2 extends TypeAdapter<GuildRoleSubscriptionBenefitType> {
     @Override // com.google.gson.TypeAdapter
     public GuildRoleSubscriptionBenefitType read(JsonReader jsonReader) throws IOException {

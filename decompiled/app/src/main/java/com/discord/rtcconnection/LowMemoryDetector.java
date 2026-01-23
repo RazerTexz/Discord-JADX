@@ -9,11 +9,11 @@ import java.util.Objects;
 import java.util.concurrent.atomic.AtomicBoolean;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: LowMemoryDetector.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: LowMemoryDetector.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class LowMemoryDetector implements ComponentCallbacks2 {
 
-    /* renamed from: k, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: k, reason: from kotlin metadata */
     public final AtomicBoolean isOom = new AtomicBoolean(false);
 
     @Override // android.content.ComponentCallbacks

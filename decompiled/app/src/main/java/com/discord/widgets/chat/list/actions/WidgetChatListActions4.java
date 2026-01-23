@@ -11,9 +11,9 @@ import kotlin.jvm.functions.Function1;
 import p507d0.p592z.p594d.FunctionReferenceImpl;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: WidgetChatListActions.kt */
-/* renamed from: com.discord.widgets.chat.list.actions.WidgetChatListActions$binding$2, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.chat.list.actions.WidgetChatListActions$binding$2, reason: use source file name */
+/* JADX INFO: compiled from: WidgetChatListActions.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final /* synthetic */ class WidgetChatListActions4 extends FunctionReferenceImpl implements Function1<View, WidgetChatListActionsBinding> {
     public static final WidgetChatListActions4 INSTANCE = new WidgetChatListActions4();
 
@@ -26,7 +26,7 @@ public final /* synthetic */ class WidgetChatListActions4 extends FunctionRefere
         return invoke2(view);
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final WidgetChatListActionsBinding invoke2(View view) {
         Intrinsics3.checkNotNullParameter(view, "p1");
         int i = C5419R.id.dialog_chat_actions_add_reaction_emojis_list;

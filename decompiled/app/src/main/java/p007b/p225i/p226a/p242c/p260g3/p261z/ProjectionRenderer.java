@@ -5,75 +5,75 @@ import com.google.android.exoplayer2.util.GlUtil;
 import java.nio.FloatBuffer;
 import p007b.p225i.p226a.p242c.p260g3.p261z.Projection;
 
-/* compiled from: ProjectionRenderer.java */
-/* renamed from: b.i.a.c.g3.z.i, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.g3.z.i, reason: use source file name */
+/* JADX INFO: compiled from: ProjectionRenderer.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class ProjectionRenderer {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final String[] f6988a = {"uniform mat4 uMvpMatrix;", "uniform mat3 uTexMatrix;", "attribute vec4 aPosition;", "attribute vec2 aTexCoords;", "varying vec2 vTexCoords;", "void main() {", "  gl_Position = uMvpMatrix * aPosition;", "  vTexCoords = (uTexMatrix * vec3(aTexCoords, 1)).xy;", "}"};
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static final String[] f6989b = {"#extension GL_OES_EGL_image_external : require", "precision mediump float;", "uniform samplerExternalOES uTexture;", "varying vec2 vTexCoords;", "void main() {", "  gl_FragColor = texture2D(uTexture, vTexCoords);", "}"};
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public static final float[] f6990c = {1.0f, 0.0f, 0.0f, 0.0f, -1.0f, 0.0f, 0.0f, 1.0f, 1.0f};
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public static final float[] f6991d = {1.0f, 0.0f, 0.0f, 0.0f, -0.5f, 0.0f, 0.0f, 0.5f, 1.0f};
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public static final float[] f6992e = {1.0f, 0.0f, 0.0f, 0.0f, -0.5f, 0.0f, 0.0f, 1.0f, 1.0f};
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public static final float[] f6993f = {0.5f, 0.0f, 0.0f, 0.0f, -1.0f, 0.0f, 0.0f, 1.0f, 1.0f};
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public static final float[] f6994g = {0.5f, 0.0f, 0.0f, 0.0f, -1.0f, 0.0f, 0.5f, 1.0f, 1.0f};
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public int f6995h;
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     @Nullable
     public a f6996i;
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     @Nullable
     public a f6997j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public GlUtil.C10776a f6998k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public int f6999l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public int f7000m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public int f7001n;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public int f7002o;
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public int f7003p;
 
-    /* compiled from: ProjectionRenderer.java */
-    /* renamed from: b.i.a.c.g3.z.i$a */
+    /* JADX INFO: renamed from: b.i.a.c.g3.z.i$a */
+    /* JADX INFO: compiled from: ProjectionRenderer.java */
     public static class a {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final int f7004a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final FloatBuffer f7005b;
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public final FloatBuffer f7006c;
 
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         public final int f7007d;
 
         public a(Projection.b bVar) {
@@ -92,7 +92,7 @@ public final class ProjectionRenderer {
         }
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static boolean m3200a(Projection projection) {
         Projection.a aVar = projection.f6979a;
         Projection.a aVar2 = projection.f6980b;

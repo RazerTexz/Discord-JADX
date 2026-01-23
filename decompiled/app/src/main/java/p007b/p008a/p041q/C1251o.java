@@ -7,9 +7,9 @@ import p007b.p008a.p041q.p046n0.RtcControlSocket;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: RtcConnection.kt */
-/* renamed from: b.a.q.o */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.a.q.o */
+/* JADX INFO: compiled from: RtcConnection.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class C1251o extends Lambda implements Function0<Unit> {
     public final /* synthetic */ Boolean $isConnected;
     public final /* synthetic */ C1258p this$0;

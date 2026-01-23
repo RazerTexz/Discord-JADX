@@ -8,21 +8,21 @@ import p658rx.Producer;
 import p658rx.Subscriber;
 
 /* JADX INFO: Add missing generic type declarations: [T] */
-/* compiled from: OperatorScan.java */
-/* renamed from: j0.l.a.q1, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: j0.l.a.q1, reason: use source file name */
+/* JADX INFO: compiled from: OperatorScan.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class OperatorScan3<T> extends Subscriber<T> {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public R f27001j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final /* synthetic */ Object f27002k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final /* synthetic */ OperatorScan.b f27003l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public final /* synthetic */ OperatorScan f27004m;
 
     /* JADX WARN: Multi-variable type inference failed */

@@ -22,18 +22,18 @@ import p007b.p008a.p025i.ViewPremiumMarketingBinding;
 import p007b.p008a.p027k.FormatUtils;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: GuildBoostMarketingView.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: GuildBoostMarketingView.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class GuildBoostMarketingView extends FrameLayout {
 
-    /* renamed from: j, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: j, reason: from kotlin metadata */
     public final ViewPremiumMarketingBinding binding;
 
-    /* compiled from: GuildBoostMarketingView.kt */
-    /* renamed from: com.discord.views.guildboost.GuildBoostMarketingView$a */
+    /* JADX INFO: renamed from: com.discord.views.guildboost.GuildBoostMarketingView$a */
+    /* JADX INFO: compiled from: GuildBoostMarketingView.kt */
     public static final class ViewOnClickListenerC7114a implements View.OnClickListener {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public final /* synthetic */ Function0 f19271j;
 
         public ViewOnClickListenerC7114a(Function0 function0) {
@@ -93,7 +93,7 @@ public final class GuildBoostMarketingView extends FrameLayout {
     }
 
     /* JADX WARN: Removed duplicated region for block: B:15:0x0138  */
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */

@@ -7,9 +7,9 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
 /* JADX INFO: Add missing generic type declarations: [V, K] */
-/* compiled from: ShallowPartitionMap.kt */
-/* renamed from: com.discord.utilities.collections.ShallowPartitionMap$entries$2, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.utilities.collections.ShallowPartitionMap$entries$2, reason: use source file name */
+/* JADX INFO: compiled from: ShallowPartitionMap.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class ShallowPartitionMap3<K, V> extends Lambda implements Function1<Map.Entry<K, V>, Integer> {
     public final /* synthetic */ ShallowPartitionMap this$0;
 

@@ -14,19 +14,19 @@ import p007b.p008a.p050t.p052b.p053a.TextNode;
 import p507d0.p592z.p594d.Intrinsics3;
 
 /* JADX INFO: Add missing generic type declarations: [R, S] */
-/* compiled from: CodeRules.kt */
-/* renamed from: b.a.t.a.c, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.a.t.a.c, reason: use source file name */
+/* JADX INFO: compiled from: CodeRules.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class CodeRules3<R, S> extends Rule<R, Node<R>, S> {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final /* synthetic */ StyleNode.InterfaceC5656a f1895a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final /* synthetic */ StyleNode.InterfaceC5656a f1896b;
 
-    /* compiled from: CodeRules.kt */
-    /* renamed from: b.a.t.a.c$a */
+    /* JADX INFO: renamed from: b.a.t.a.c$a */
+    /* JADX INFO: compiled from: CodeRules.kt */
     public static final class a extends Node.C5655a<R> {
         public a(CodeNode codeNode, Node[] nodeArr) {
             super(nodeArr);

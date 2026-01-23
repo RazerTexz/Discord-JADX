@@ -2,15 +2,15 @@ package p007b.p195g.p196a.p198b.p200p;
 
 import androidx.recyclerview.widget.RecyclerView;
 
-/* compiled from: NumberInput.java */
-/* renamed from: b.g.a.b.p.f, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.g.a.b.p.f, reason: use source file name */
+/* JADX INFO: compiled from: NumberInput.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class NumberInput {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final String f4552a = String.valueOf(Long.MIN_VALUE).substring(1);
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static final String f4553b = String.valueOf(RecyclerView.FOREVER_NS);
 
     /* JADX WARN: Code restructure failed: missing block: B:43:0x0077, code lost:
@@ -22,11 +22,11 @@ public final class NumberInput {
     /* JADX WARN: Removed duplicated region for block: B:47:0x0088  */
     /* JADX WARN: Removed duplicated region for block: B:48:0x008a  */
     /* JADX WARN: Removed duplicated region for block: B:49:0x008c  */
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
-    public static long m1697a(String str) throws NumberFormatException {
+    public static long m1697a(String str) {
         int i;
         if (str.length() > 9) {
             return Long.parseLong(str);

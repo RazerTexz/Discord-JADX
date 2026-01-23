@@ -9,15 +9,15 @@ import p007b.p225i.p226a.p288f.p299e.p300h.AbstractC3268c;
 import p007b.p225i.p226a.p288f.p299e.p300h.p301j.C3293g;
 import p007b.p225i.p226a.p288f.p299e.p305l.C3395a;
 
-/* compiled from: com.google.android.gms:play-services-auth@@19.0.0 */
-/* renamed from: b.i.a.f.c.a.f.b.g */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.c.a.f.b.g */
+/* JADX INFO: compiled from: com.google.android.gms:play-services-auth@@19.0.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public final class C3204g {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static C3395a f9235a = new C3395a("GoogleSignInCommon", new String[0]);
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static void m3986a(Context context) {
         C3210m.m3990b(context).m3991a();
         Set<AbstractC3268c> set = AbstractC3268c.f9338a;

@@ -11,19 +11,19 @@ import p600f0.p601e0.p609k.BouncyCastlePlatform;
 import p600f0.p601e0.p609k.Platform2;
 import p600f0.p601e0.p609k.p610i.DeferredSocketAdapter;
 
-/* compiled from: BouncyCastleSocketAdapter.kt */
-/* renamed from: f0.e0.k.i.g, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: f0.e0.k.i.g, reason: use source file name */
+/* JADX INFO: compiled from: BouncyCastleSocketAdapter.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class BouncyCastleSocketAdapter implements SocketAdapter {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final DeferredSocketAdapter.a f25800a = new a();
 
-    /* compiled from: BouncyCastleSocketAdapter.kt */
-    /* renamed from: f0.e0.k.i.g$a */
+    /* JADX INFO: renamed from: f0.e0.k.i.g$a */
+    /* JADX INFO: compiled from: BouncyCastleSocketAdapter.kt */
     public static final class a implements DeferredSocketAdapter.a {
         @Override // p600f0.p601e0.p609k.p610i.DeferredSocketAdapter.a
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public boolean mo10339a(SSLSocket sSLSocket) {
             Intrinsics3.checkParameterIsNotNull(sSLSocket, "sslSocket");
             BouncyCastlePlatform.a aVar = BouncyCastlePlatform.f25764e;
@@ -31,7 +31,7 @@ public final class BouncyCastleSocketAdapter implements SocketAdapter {
         }
 
         @Override // p600f0.p601e0.p609k.p610i.DeferredSocketAdapter.a
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public SocketAdapter mo10340b(SSLSocket sSLSocket) {
             Intrinsics3.checkParameterIsNotNull(sSLSocket, "sslSocket");
             return new BouncyCastleSocketAdapter();
@@ -39,21 +39,21 @@ public final class BouncyCastleSocketAdapter implements SocketAdapter {
     }
 
     @Override // p600f0.p601e0.p609k.p610i.SocketAdapter
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public boolean mo10334a(SSLSocket sSLSocket) {
         Intrinsics3.checkParameterIsNotNull(sSLSocket, "sslSocket");
         return sSLSocket instanceof BCSSLSocket;
     }
 
     @Override // p600f0.p601e0.p609k.p610i.SocketAdapter
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public boolean mo10335b() {
         BouncyCastlePlatform.a aVar = BouncyCastlePlatform.f25764e;
         return BouncyCastlePlatform.f25763d;
     }
 
     @Override // p600f0.p601e0.p609k.p610i.SocketAdapter
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public String mo10336c(SSLSocket sSLSocket) {
         Intrinsics3.checkParameterIsNotNull(sSLSocket, "sslSocket");
         String applicationProtocol = ((BCSSLSocket) sSLSocket).getApplicationProtocol();
@@ -64,7 +64,7 @@ public final class BouncyCastleSocketAdapter implements SocketAdapter {
     }
 
     @Override // p600f0.p601e0.p609k.p610i.SocketAdapter
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public void mo10337d(SSLSocket sSLSocket, String str, List<? extends Protocol2> list) {
         Intrinsics3.checkParameterIsNotNull(sSLSocket, "sslSocket");
         Intrinsics3.checkParameterIsNotNull(list, "protocols");

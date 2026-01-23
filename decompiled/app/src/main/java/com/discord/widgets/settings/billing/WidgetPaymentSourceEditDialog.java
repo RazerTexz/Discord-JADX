@@ -65,32 +65,32 @@ import p507d0.p592z.p594d.Reflection2;
 import p637j0.p641k.Func1;
 import p658rx.Observable;
 
-/* compiled from: WidgetPaymentSourceEditDialog.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetPaymentSourceEditDialog.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetPaymentSourceEditDialog extends AppDialog {
     private static final String ARG_PAYMENT_SOURCE_ID = "ARG_PAYMENT_SOURCE_ID";
 
-    /* renamed from: binding$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
 
-    /* renamed from: caProvinces$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: caProvinces$delegate, reason: from kotlin metadata */
     private final Lazy caProvinces;
 
-    /* renamed from: paymentSourceId$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: paymentSourceId$delegate, reason: from kotlin metadata */
     private final Lazy paymentSourceId;
 
-    /* renamed from: usStates$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: usStates$delegate, reason: from kotlin metadata */
     private final Lazy usStates;
     private ValidationManager validationManager;
 
-    /* renamed from: viewModel$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: viewModel$delegate, reason: from kotlin metadata */
     private final Lazy viewModel;
     public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetPaymentSourceEditDialog.class, "binding", "getBinding()Lcom/discord/databinding/WidgetPaymentSourceEditDialogBinding;", 0)};
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
 
-    /* compiled from: WidgetPaymentSourceEditDialog.kt */
+    /* JADX INFO: compiled from: WidgetPaymentSourceEditDialog.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -121,7 +121,7 @@ public final class WidgetPaymentSourceEditDialog extends AppDialog {
         }
     }
 
-    /* compiled from: WidgetPaymentSourceEditDialog.kt */
+    /* JADX INFO: compiled from: WidgetPaymentSourceEditDialog.kt */
     public static final /* data */ class StateEntry {
         private final String label;
         private final String value;
@@ -143,12 +143,12 @@ public final class WidgetPaymentSourceEditDialog extends AppDialog {
             return stateEntry.copy(str, str2);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final String getLabel() {
             return this.label;
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final String getValue() {
             return this.value;
         }
@@ -193,8 +193,8 @@ public final class WidgetPaymentSourceEditDialog extends AppDialog {
         }
     }
 
-    /* compiled from: WidgetPaymentSourceEditDialog.kt */
-    /* renamed from: com.discord.widgets.settings.billing.WidgetPaymentSourceEditDialog$deletePaymentSource$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.billing.WidgetPaymentSourceEditDialog$deletePaymentSource$1 */
+    /* JADX INFO: compiled from: WidgetPaymentSourceEditDialog.kt */
     public static final class C98071 extends Lambda implements Function1<Void, Unit> {
         public C98071() {
             super(1);
@@ -206,15 +206,15 @@ public final class WidgetPaymentSourceEditDialog extends AppDialog {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Void r4) {
             AppToast.m171i(WidgetPaymentSourceEditDialog.this, C5419R.string.payment_source_deleted, 0, 4);
             WidgetPaymentSourceEditDialog.this.dismiss();
         }
     }
 
-    /* compiled from: WidgetPaymentSourceEditDialog.kt */
-    /* renamed from: com.discord.widgets.settings.billing.WidgetPaymentSourceEditDialog$deletePaymentSource$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.billing.WidgetPaymentSourceEditDialog$deletePaymentSource$2 */
+    /* JADX INFO: compiled from: WidgetPaymentSourceEditDialog.kt */
     public static final class C98082 extends Lambda implements Function1<Error, Unit> {
         public C98082() {
             super(1);
@@ -226,15 +226,15 @@ public final class WidgetPaymentSourceEditDialog extends AppDialog {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Error error) {
             Intrinsics3.checkNotNullParameter(error, "it");
             WidgetPaymentSourceEditDialog.access$getBinding$p(WidgetPaymentSourceEditDialog.this).f17351d.setIsLoading(false);
         }
     }
 
-    /* compiled from: WidgetPaymentSourceEditDialog.kt */
-    /* renamed from: com.discord.widgets.settings.billing.WidgetPaymentSourceEditDialog$deletePaymentSource$3 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.billing.WidgetPaymentSourceEditDialog$deletePaymentSource$3 */
+    /* JADX INFO: compiled from: WidgetPaymentSourceEditDialog.kt */
     public static final class C98093 extends Lambda implements Function0<Unit> {
         public C98093() {
             super(0);
@@ -246,14 +246,14 @@ public final class WidgetPaymentSourceEditDialog extends AppDialog {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             WidgetPaymentSourceEditDialog.access$getBinding$p(WidgetPaymentSourceEditDialog.this).f17351d.setIsLoading(false);
         }
     }
 
-    /* compiled from: WidgetPaymentSourceEditDialog.kt */
-    /* renamed from: com.discord.widgets.settings.billing.WidgetPaymentSourceEditDialog$initPaymentSourceInfo$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.billing.WidgetPaymentSourceEditDialog$initPaymentSourceInfo$2 */
+    /* JADX INFO: compiled from: WidgetPaymentSourceEditDialog.kt */
     public static final class ViewOnClickListenerC98102 implements View.OnClickListener {
         public ViewOnClickListenerC98102() {
         }
@@ -267,8 +267,8 @@ public final class WidgetPaymentSourceEditDialog extends AppDialog {
         }
     }
 
-    /* compiled from: WidgetPaymentSourceEditDialog.kt */
-    /* renamed from: com.discord.widgets.settings.billing.WidgetPaymentSourceEditDialog$initPaymentSourceInfo$3 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.billing.WidgetPaymentSourceEditDialog$initPaymentSourceInfo$3 */
+    /* JADX INFO: compiled from: WidgetPaymentSourceEditDialog.kt */
     public static final class ViewOnClickListenerC98113 implements View.OnClickListener {
         public final /* synthetic */ ModelPaymentSource $paymentSource;
 
@@ -282,8 +282,8 @@ public final class WidgetPaymentSourceEditDialog extends AppDialog {
         }
     }
 
-    /* compiled from: WidgetPaymentSourceEditDialog.kt */
-    /* renamed from: com.discord.widgets.settings.billing.WidgetPaymentSourceEditDialog$initPaymentSourceInfo$4 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.billing.WidgetPaymentSourceEditDialog$initPaymentSourceInfo$4 */
+    /* JADX INFO: compiled from: WidgetPaymentSourceEditDialog.kt */
     public static final class ViewOnClickListenerC98124 implements View.OnClickListener {
         public final /* synthetic */ ModelPaymentSource $paymentSource;
 
@@ -297,8 +297,8 @@ public final class WidgetPaymentSourceEditDialog extends AppDialog {
         }
     }
 
-    /* compiled from: WidgetPaymentSourceEditDialog.kt */
-    /* renamed from: com.discord.widgets.settings.billing.WidgetPaymentSourceEditDialog$initPaymentSourceInfo$5 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.billing.WidgetPaymentSourceEditDialog$initPaymentSourceInfo$5 */
+    /* JADX INFO: compiled from: WidgetPaymentSourceEditDialog.kt */
     public static final class C98135 extends Lambda implements Function1<View, Unit> {
         public final /* synthetic */ StateEntry[] $states;
 
@@ -314,7 +314,7 @@ public final class WidgetPaymentSourceEditDialog extends AppDialog {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(View view) {
             Intrinsics3.checkNotNullParameter(view, "it");
             WidgetPaymentSourceEditDialog widgetPaymentSourceEditDialog = WidgetPaymentSourceEditDialog.this;
@@ -324,8 +324,8 @@ public final class WidgetPaymentSourceEditDialog extends AppDialog {
         }
     }
 
-    /* compiled from: WidgetPaymentSourceEditDialog.kt */
-    /* renamed from: com.discord.widgets.settings.billing.WidgetPaymentSourceEditDialog$initPaymentSourceInfo$6 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.billing.WidgetPaymentSourceEditDialog$initPaymentSourceInfo$6 */
+    /* JADX INFO: compiled from: WidgetPaymentSourceEditDialog.kt */
     public static final class C98146 extends Lambda implements Function3<TextView, Integer, KeyEvent, Boolean> {
         public final /* synthetic */ StateEntry[] $states;
 
@@ -353,8 +353,8 @@ public final class WidgetPaymentSourceEditDialog extends AppDialog {
         }
     }
 
-    /* compiled from: WidgetPaymentSourceEditDialog.kt */
-    /* renamed from: com.discord.widgets.settings.billing.WidgetPaymentSourceEditDialog$onViewBound$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.billing.WidgetPaymentSourceEditDialog$onViewBound$1 */
+    /* JADX INFO: compiled from: WidgetPaymentSourceEditDialog.kt */
     public static final class C98151<T, R> implements Func1<SettingsBillingViewModel.ViewState.Loaded, List<? extends PaymentSourceAdapter.PaymentSourceItem>> {
         public static final C98151 INSTANCE = new C98151();
 
@@ -363,7 +363,7 @@ public final class WidgetPaymentSourceEditDialog extends AppDialog {
             return call2(loaded);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final List<PaymentSourceAdapter.PaymentSourceItem> call2(SettingsBillingViewModel.ViewState.Loaded loaded) {
             List<PaymentSourceAdapter.Item> paymentSourceItems = loaded.getPaymentSourceItems();
             ArrayList arrayList = new ArrayList();
@@ -380,8 +380,8 @@ public final class WidgetPaymentSourceEditDialog extends AppDialog {
         }
     }
 
-    /* compiled from: WidgetPaymentSourceEditDialog.kt */
-    /* renamed from: com.discord.widgets.settings.billing.WidgetPaymentSourceEditDialog$onViewBound$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.billing.WidgetPaymentSourceEditDialog$onViewBound$2 */
+    /* JADX INFO: compiled from: WidgetPaymentSourceEditDialog.kt */
     public static final class C98162<T, R> implements Func1<List<? extends PaymentSourceAdapter.PaymentSourceItem>, PaymentSourceAdapter.PaymentSourceItem> {
         public C98162() {
         }
@@ -391,7 +391,7 @@ public final class WidgetPaymentSourceEditDialog extends AppDialog {
             return call2((List<PaymentSourceAdapter.PaymentSourceItem>) list);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final PaymentSourceAdapter.PaymentSourceItem call2(List<PaymentSourceAdapter.PaymentSourceItem> list) {
             T next;
             Intrinsics3.checkNotNullExpressionValue(list, "paymentSources");
@@ -410,8 +410,8 @@ public final class WidgetPaymentSourceEditDialog extends AppDialog {
         }
     }
 
-    /* compiled from: WidgetPaymentSourceEditDialog.kt */
-    /* renamed from: com.discord.widgets.settings.billing.WidgetPaymentSourceEditDialog$onViewBound$3 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.billing.WidgetPaymentSourceEditDialog$onViewBound$3 */
+    /* JADX INFO: compiled from: WidgetPaymentSourceEditDialog.kt */
     public static final class C98173 extends Lambda implements Function1<PaymentSourceAdapter.PaymentSourceItem, Unit> {
         public C98173() {
             super(1);
@@ -423,7 +423,7 @@ public final class WidgetPaymentSourceEditDialog extends AppDialog {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(PaymentSourceAdapter.PaymentSourceItem paymentSourceItem) {
             if (paymentSourceItem == null) {
                 WidgetPaymentSourceEditDialog.this.dismiss();
@@ -433,8 +433,8 @@ public final class WidgetPaymentSourceEditDialog extends AppDialog {
         }
     }
 
-    /* compiled from: WidgetPaymentSourceEditDialog.kt */
-    /* renamed from: com.discord.widgets.settings.billing.WidgetPaymentSourceEditDialog$onViewBound$4 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.billing.WidgetPaymentSourceEditDialog$onViewBound$4 */
+    /* JADX INFO: compiled from: WidgetPaymentSourceEditDialog.kt */
     public static final class ViewOnClickListenerC98184 implements View.OnClickListener {
         public ViewOnClickListenerC98184() {
         }
@@ -445,8 +445,8 @@ public final class WidgetPaymentSourceEditDialog extends AppDialog {
         }
     }
 
-    /* compiled from: WidgetPaymentSourceEditDialog.kt */
-    /* renamed from: com.discord.widgets.settings.billing.WidgetPaymentSourceEditDialog$onViewBound$5 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.billing.WidgetPaymentSourceEditDialog$onViewBound$5 */
+    /* JADX INFO: compiled from: WidgetPaymentSourceEditDialog.kt */
     public static final class ViewOnClickListenerC98195 implements View.OnClickListener {
         public ViewOnClickListenerC98195() {
         }
@@ -457,8 +457,8 @@ public final class WidgetPaymentSourceEditDialog extends AppDialog {
         }
     }
 
-    /* compiled from: WidgetPaymentSourceEditDialog.kt */
-    /* renamed from: com.discord.widgets.settings.billing.WidgetPaymentSourceEditDialog$selectState$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.billing.WidgetPaymentSourceEditDialog$selectState$2 */
+    /* JADX INFO: compiled from: WidgetPaymentSourceEditDialog.kt */
     public static final class C98202 extends Lambda implements Function1<Integer, Unit> {
         public final /* synthetic */ StateEntry[] $states;
 
@@ -481,8 +481,8 @@ public final class WidgetPaymentSourceEditDialog extends AppDialog {
         }
     }
 
-    /* compiled from: WidgetPaymentSourceEditDialog.kt */
-    /* renamed from: com.discord.widgets.settings.billing.WidgetPaymentSourceEditDialog$updatePaymentSource$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.billing.WidgetPaymentSourceEditDialog$updatePaymentSource$1 */
+    /* JADX INFO: compiled from: WidgetPaymentSourceEditDialog.kt */
     public static final class C98211 extends Lambda implements Function1<Void, Unit> {
         public C98211() {
             super(1);
@@ -494,15 +494,15 @@ public final class WidgetPaymentSourceEditDialog extends AppDialog {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Void r4) {
             AppToast.m171i(WidgetPaymentSourceEditDialog.this, C5419R.string.payment_source_edit_saved, 0, 4);
             WidgetPaymentSourceEditDialog.this.dismiss();
         }
     }
 
-    /* compiled from: WidgetPaymentSourceEditDialog.kt */
-    /* renamed from: com.discord.widgets.settings.billing.WidgetPaymentSourceEditDialog$updatePaymentSource$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.billing.WidgetPaymentSourceEditDialog$updatePaymentSource$2 */
+    /* JADX INFO: compiled from: WidgetPaymentSourceEditDialog.kt */
     public static final class C98222 extends Lambda implements Function1<Error, Unit> {
         public C98222() {
             super(1);
@@ -514,7 +514,7 @@ public final class WidgetPaymentSourceEditDialog extends AppDialog {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Error error) {
             Intrinsics3.checkNotNullParameter(error, "it");
             WidgetPaymentSourceEditDialog.this.handleError(error);
@@ -522,8 +522,8 @@ public final class WidgetPaymentSourceEditDialog extends AppDialog {
         }
     }
 
-    /* compiled from: WidgetPaymentSourceEditDialog.kt */
-    /* renamed from: com.discord.widgets.settings.billing.WidgetPaymentSourceEditDialog$updatePaymentSource$3 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.billing.WidgetPaymentSourceEditDialog$updatePaymentSource$3 */
+    /* JADX INFO: compiled from: WidgetPaymentSourceEditDialog.kt */
     public static final class C98233 extends Lambda implements Function0<Unit> {
         public C98233() {
             super(0);
@@ -535,7 +535,7 @@ public final class WidgetPaymentSourceEditDialog extends AppDialog {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             WidgetPaymentSourceEditDialog.access$getBinding$p(WidgetPaymentSourceEditDialog.this).f17351d.setIsLoading(false);
         }

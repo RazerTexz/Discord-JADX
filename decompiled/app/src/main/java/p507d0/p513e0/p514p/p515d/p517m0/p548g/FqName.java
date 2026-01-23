@@ -3,18 +3,18 @@ package p507d0.p513e0.p514p.p515d.p517m0.p548g;
 import com.discord.models.domain.ModelAuditLogEntry;
 import java.util.List;
 
-/* compiled from: FqName.java */
-/* renamed from: d0.e0.p.d.m0.g.b, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.g.b, reason: use source file name */
+/* JADX INFO: compiled from: FqName.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class FqName {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final FqName f24079a = new FqName("");
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final FqNameUnsafe f24080b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public transient FqName f24081c;
 
     public FqName(String str) {
@@ -26,7 +26,7 @@ public final class FqName {
         }
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static /* synthetic */ void m9817a(int i) {
         String str;
         int i2;

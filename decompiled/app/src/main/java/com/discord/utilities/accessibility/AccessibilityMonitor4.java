@@ -5,9 +5,9 @@ import kotlin.jvm.internal.DefaultConstructorMarker;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: AccessibilityMonitor.kt */
-/* renamed from: com.discord.utilities.accessibility.AccessibilityState, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.utilities.accessibility.AccessibilityState, reason: use source file name */
+/* JADX INFO: compiled from: AccessibilityMonitor.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final /* data */ class AccessibilityMonitor4 {
     private final EnumSet<AccessibilityFeatureFlags> features;
 

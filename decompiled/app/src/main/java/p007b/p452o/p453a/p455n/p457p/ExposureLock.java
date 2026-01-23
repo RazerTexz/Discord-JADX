@@ -11,17 +11,17 @@ import p007b.p452o.p453a.CameraLogger;
 import p007b.p452o.p453a.p455n.Camera2Engine;
 import p007b.p452o.p453a.p455n.p456o.ActionHolder;
 
-/* compiled from: ExposureLock.java */
+/* JADX INFO: renamed from: b.o.a.n.p.b, reason: use source file name */
+/* JADX INFO: compiled from: ExposureLock.java */
+/* JADX INFO: loaded from: classes3.dex */
 @RequiresApi(21)
-/* renamed from: b.o.a.n.p.b, reason: use source file name */
-/* loaded from: classes3.dex */
 public class ExposureLock extends BaseLock {
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public static final CameraLogger f13952e = new CameraLogger(ExposureLock.class.getSimpleName());
 
     @Override // p007b.p452o.p453a.p455n.p456o.BaseAction, p007b.p452o.p453a.p455n.p456o.Action2
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public void mo7248b(@NonNull ActionHolder actionHolder, @NonNull CaptureRequest captureRequest, @NonNull TotalCaptureResult totalCaptureResult) {
         Integer num = (Integer) totalCaptureResult.get(CaptureResult.CONTROL_AE_STATE);
         f13952e.m7159a(1, "processCapture:", "aeState:", num);
@@ -31,7 +31,7 @@ public class ExposureLock extends BaseLock {
     }
 
     @Override // p007b.p452o.p453a.p455n.p457p.BaseLock
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public boolean mo7343m(@NonNull ActionHolder actionHolder) {
         boolean z2 = ((Integer) m7340k(CameraCharacteristics.INFO_SUPPORTED_HARDWARE_LEVEL, -1)).intValue() != 2;
         Integer num = (Integer) ((Camera2Engine) actionHolder).f13807i0.get(CaptureRequest.CONTROL_AE_MODE);
@@ -41,7 +41,7 @@ public class ExposureLock extends BaseLock {
     }
 
     @Override // p007b.p452o.p453a.p455n.p457p.BaseLock
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public boolean mo7344n(@NonNull ActionHolder actionHolder) {
         TotalCaptureResult totalCaptureResult = ((Camera2Engine) actionHolder).f13808j0;
         if (totalCaptureResult == null) {
@@ -55,7 +55,7 @@ public class ExposureLock extends BaseLock {
     }
 
     @Override // p007b.p452o.p453a.p455n.p457p.BaseLock
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public void mo7345o(@NonNull ActionHolder actionHolder) {
         ((Camera2Engine) actionHolder).f13807i0.set(CaptureRequest.CONTROL_AE_PRECAPTURE_TRIGGER, Integer.valueOf(Build.VERSION.SDK_INT >= 23 ? 2 : 0));
         Camera2Engine camera2Engine = (Camera2Engine) actionHolder;

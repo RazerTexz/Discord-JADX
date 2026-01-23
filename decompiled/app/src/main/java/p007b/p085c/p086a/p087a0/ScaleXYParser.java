@@ -4,16 +4,16 @@ import java.io.IOException;
 import p007b.p085c.p086a.p087a0.p088i0.JsonReader2;
 import p007b.p085c.p086a.p090c0.ScaleXY;
 
-/* compiled from: ScaleXYParser.java */
-/* renamed from: b.c.a.a0.a0, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.c.a.a0.a0, reason: use source file name */
+/* JADX INFO: compiled from: ScaleXYParser.java */
+/* JADX INFO: loaded from: classes.dex */
 public class ScaleXYParser implements ValueParser<ScaleXY> {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final ScaleXYParser f2208a = new ScaleXYParser();
 
     @Override // p007b.p085c.p086a.p087a0.ValueParser
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public ScaleXY mo413a(JsonReader2 jsonReader2, float f) throws IOException {
         boolean z2 = jsonReader2.mo613u() == JsonReader2.b.BEGIN_ARRAY;
         if (z2) {

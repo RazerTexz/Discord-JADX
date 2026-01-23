@@ -22,11 +22,11 @@ import lombok.javac.JavacNode;
 import lombok.javac.JavacTreeMaker;
 import lombok.javac.handlers.JavacHandlerUtil;
 
-/* loaded from: discord-126021.apk:lombok/javac/handlers/HandleSetter.SCL.lombok */
+/* JADX INFO: loaded from: discord-126021.apk:lombok/javac/handlers/HandleSetter.SCL.lombok */
 public class HandleSetter extends JavacAnnotationHandler<Setter> {
     private static /* synthetic */ int[] $SWITCH_TABLE$lombok$core$AST$Kind;
 
-    /* renamed from: $SWITCH_TABLE$lombok$javac$handlers$JavacHandlerUtil$MemberExistsResult */
+    /* JADX INFO: renamed from: $SWITCH_TABLE$lombok$javac$handlers$JavacHandlerUtil$MemberExistsResult */
     private static /* synthetic */ int[] f27487x2486df07;
 
     static /* synthetic */ int[] $SWITCH_TABLE$lombok$core$AST$Kind() {
@@ -79,7 +79,7 @@ public class HandleSetter extends JavacAnnotationHandler<Setter> {
         return iArr2;
     }
 
-    /* renamed from: $SWITCH_TABLE$lombok$javac$handlers$JavacHandlerUtil$MemberExistsResult */
+    /* JADX INFO: renamed from: $SWITCH_TABLE$lombok$javac$handlers$JavacHandlerUtil$MemberExistsResult */
     static /* synthetic */ int[] m10945x2486df07() {
         int[] iArr = f27487x2486df07;
         if (iArr != null) {
@@ -131,7 +131,7 @@ public class HandleSetter extends JavacAnnotationHandler<Setter> {
     }
 
     @Override // lombok.javac.JavacAnnotationHandler
-    public void handle(AnnotationValues<Setter> annotation, JCTree.JCAnnotation ast, JavacNode annotationNode) throws IllegalArgumentException {
+    public void handle(AnnotationValues<Setter> annotation, JCTree.JCAnnotation ast, JavacNode annotationNode) {
         HandlerUtil.handleFlagUsage(annotationNode, ConfigurationKeys.SETTER_FLAG_USAGE, "@Setter");
         Collection<JavacNode> fields = annotationNode.upFromAnnotationToFields();
         JavacHandlerUtil.deleteAnnotationIfNeccessary(annotationNode, (Class<? extends Annotation>) Setter.class);
@@ -188,7 +188,7 @@ public class HandleSetter extends JavacAnnotationHandler<Setter> {
                     return;
             }
         }
-        long access = JavacHandlerUtil.toJavacModifier(level) | (fieldDecl.mods.flags & 8);
+        long access = ((long) JavacHandlerUtil.toJavacModifier(level)) | (fieldDecl.mods.flags & 8);
         JCTree.JCMethodDecl createdSetter = createSetter(access, fieldNode, fieldNode.getTreeMaker(), sourceNode, onMethod, onParam);
         Type fieldType = JavacHandlerUtil.getMirrorForFieldType(fieldNode);
         if (JavacHandlerUtil.shouldReturnThis(fieldNode)) {

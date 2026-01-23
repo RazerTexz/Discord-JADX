@@ -11,12 +11,12 @@ import p007b.p225i.p361c.p369m.p370d.p377n.HttpRequestFactory;
 import p007b.p225i.p361c.p369m.p370d.p380q.p381c.CreateReportRequest;
 import p007b.p225i.p361c.p369m.p370d.p380q.p381c.Report2;
 
-/* compiled from: NativeCreateReportSpiCall.java */
-/* renamed from: b.i.c.m.d.q.d.d, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.c.m.d.q.d.d, reason: use source file name */
+/* JADX INFO: compiled from: NativeCreateReportSpiCall.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class NativeCreateReportSpiCall extends AbstractSpiCall implements CreateReportSpiCall {
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final String f12719f;
 
     public NativeCreateReportSpiCall(String str, String str2, HttpRequestFactory httpRequestFactory, String str3) {
@@ -25,7 +25,7 @@ public class NativeCreateReportSpiCall extends AbstractSpiCall implements Create
     }
 
     @Override // p007b.p225i.p361c.p369m.p370d.p380q.p382d.CreateReportSpiCall
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public boolean mo6678a(CreateReportRequest createReportRequest, boolean z2) {
         if (!z2) {
             throw new RuntimeException("An invalid data collection token was used.");

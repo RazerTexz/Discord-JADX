@@ -4,8 +4,8 @@ import com.discord.api.premium.PremiumTier;
 import com.discord.models.domain.ModelAuditLogEntry;
 import java.io.Serializable;
 
-/* compiled from: User.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: User.kt */
+/* JADX INFO: loaded from: classes.dex */
 public interface User extends Serializable {
     String getAvatar();
 

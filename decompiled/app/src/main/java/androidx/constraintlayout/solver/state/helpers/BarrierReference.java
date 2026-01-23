@@ -5,16 +5,16 @@ import androidx.constraintlayout.solver.state.State;
 import androidx.constraintlayout.solver.widgets.Barrier;
 import androidx.constraintlayout.solver.widgets.HelperWidget;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class BarrierReference extends HelperReference {
     private Barrier mBarrierWidget;
     private State.Direction mDirection;
     private int mMargin;
 
-    /* renamed from: androidx.constraintlayout.solver.state.helpers.BarrierReference$1 */
+    /* JADX INFO: renamed from: androidx.constraintlayout.solver.state.helpers.BarrierReference$1 */
     public static /* synthetic */ class C01861 {
 
-        /* renamed from: $SwitchMap$androidx$constraintlayout$solver$state$State$Direction */
+        /* JADX INFO: renamed from: $SwitchMap$androidx$constraintlayout$solver$state$State$Direction */
         public static final /* synthetic */ int[] f112xf452c4aa;
 
         static {

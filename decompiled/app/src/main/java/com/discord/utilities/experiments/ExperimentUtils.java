@@ -18,8 +18,8 @@ import kotlin.ranges.Ranges2;
 import p507d0.p512d0._Ranges;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ExperimentUtils.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: ExperimentUtils.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class ExperimentUtils {
     public static final int BUCKET_NOT_ELIGIBLE = -1;
     public static final ExperimentUtils INSTANCE = new ExperimentUtils();
@@ -57,7 +57,7 @@ public final class ExperimentUtils {
         sb.append(str);
         sb.append(MentionUtils.EMOJIS_AND_STICKERS_CHAR);
         sb.append(guildId);
-        long jFrom = ExperimentHash.INSTANCE.from(sb.toString()) % 10000;
+        long jFrom = ExperimentHash.INSTANCE.from(sb.toString()) % ((long) 10000);
         for (GuildExperimentPopulationDto guildExperimentPopulationDto : experiment.getPopulations()) {
             Iterator<GuildExperimentFilter> it = guildExperimentPopulationDto.getFilters().iterator();
             boolean z5 = true;

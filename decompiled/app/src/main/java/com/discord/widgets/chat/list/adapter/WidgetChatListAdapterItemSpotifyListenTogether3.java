@@ -7,9 +7,9 @@ import kotlin.jvm.functions.Function0;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetChatListAdapterItemSpotifyListenTogether.kt */
-/* renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemSpotifyListenTogether$userAdapter$2, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemSpotifyListenTogether$userAdapter$2, reason: use source file name */
+/* JADX INFO: compiled from: WidgetChatListAdapterItemSpotifyListenTogether.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetChatListAdapterItemSpotifyListenTogether3 extends Lambda implements Function0<WidgetCollapsedUsersListAdapter> {
     public final /* synthetic */ WidgetChatListAdapterItemSpotifyListenTogether this$0;
 

@@ -6,9 +6,9 @@ import java.util.HashMap;
 import java.util.Map;
 import org.objectweb.asm.Opcodes;
 
-/* compiled from: CharacterSetECI.java */
-/* renamed from: b.i.e.n.d, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.e.n.d, reason: use source file name */
+/* JADX INFO: compiled from: CharacterSetECI.java */
+/* JADX INFO: loaded from: classes3.dex */
 public enum CharacterSetECI {
     Cp437(new int[]{0, 2}, new String[0]),
     ISO8859_1(new int[]{1, 3}, "ISO-8859-1"),
@@ -39,10 +39,10 @@ public enum CharacterSetECI {
     EUC_KR(30, "EUC-KR");
 
 
-    /* renamed from: K */
+    /* JADX INFO: renamed from: K */
     public static final Map<Integer, CharacterSetECI> f13246K = new HashMap();
 
-    /* renamed from: L */
+    /* JADX INFO: renamed from: L */
     public static final Map<String, CharacterSetECI> f13247L = new HashMap();
     private final String[] otherEncodingNames;
     private final int[] values;
@@ -66,7 +66,7 @@ public enum CharacterSetECI {
         this.otherEncodingNames = strArr;
     }
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public static CharacterSetECI m6950f(int i) throws FormatException {
         if (i < 0 || i >= 900) {
             throw FormatException.m9260a();

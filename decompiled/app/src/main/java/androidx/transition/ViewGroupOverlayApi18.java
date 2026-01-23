@@ -7,8 +7,8 @@ import android.view.ViewGroupOverlay;
 import androidx.annotation.NonNull;
 import androidx.annotation.RequiresApi;
 
+/* JADX INFO: loaded from: classes.dex */
 @RequiresApi(18)
-/* loaded from: classes.dex */
 public class ViewGroupOverlayApi18 implements ViewGroupOverlayImpl {
     private final ViewGroupOverlay mViewGroupOverlay;
 

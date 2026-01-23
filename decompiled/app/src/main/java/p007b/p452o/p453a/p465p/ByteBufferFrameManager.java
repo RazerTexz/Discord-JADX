@@ -7,22 +7,22 @@ import p007b.p452o.p453a.p455n.Camera1Engine2;
 import p007b.p452o.p453a.p455n.p461t.Angles;
 import p007b.p452o.p453a.p473x.Size3;
 
-/* compiled from: ByteBufferFrameManager.java */
-/* renamed from: b.o.a.p.a, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.o.a.p.a, reason: use source file name */
+/* JADX INFO: compiled from: ByteBufferFrameManager.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class ByteBufferFrameManager extends FrameManager<byte[]> {
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public LinkedBlockingQueue<byte[]> f14050i;
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public a f14051j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final int f14052k;
 
-    /* compiled from: ByteBufferFrameManager.java */
-    /* renamed from: b.o.a.p.a$a */
+    /* JADX INFO: renamed from: b.o.a.p.a$a */
+    /* JADX INFO: compiled from: ByteBufferFrameManager.java */
     public interface a {
     }
 
@@ -33,7 +33,7 @@ public class ByteBufferFrameManager extends FrameManager<byte[]> {
     }
 
     @Override // p007b.p452o.p453a.p465p.FrameManager
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public void mo7380c(@NonNull byte[] bArr, boolean z2) {
         byte[] bArr2 = bArr;
         if (z2 && bArr2.length == this.f14060c) {
@@ -46,7 +46,7 @@ public class ByteBufferFrameManager extends FrameManager<byte[]> {
     }
 
     @Override // p007b.p452o.p453a.p465p.FrameManager
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public void mo7381d() {
         super.mo7381d();
         if (this.f14052k == 1) {
@@ -55,7 +55,7 @@ public class ByteBufferFrameManager extends FrameManager<byte[]> {
     }
 
     @Override // p007b.p452o.p453a.p465p.FrameManager
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public void mo7382e(int i, @NonNull Size3 size3, @NonNull Angles angles) {
         super.mo7382e(i, size3, angles);
         int i2 = this.f14060c;

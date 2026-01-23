@@ -16,22 +16,22 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 import p658rx.Observable;
 
-/* compiled from: StoreGuildProfiles.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: StoreGuildProfiles.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class StoreGuildProfiles extends StoreV2 {
     private final Dispatcher dispatcher;
     private final Map<Long, GuildProfileData> guildProfilesState;
     private Map<Long, GuildProfileData> guildProfilesStateSnapshot;
     private final ObservationDeck observationDeck;
 
-    /* compiled from: StoreGuildProfiles.kt */
+    /* JADX INFO: compiled from: StoreGuildProfiles.kt */
     public enum FetchStates {
         FETCHING,
         FAILED,
         SUCCEEDED
     }
 
-    /* compiled from: StoreGuildProfiles.kt */
+    /* JADX INFO: compiled from: StoreGuildProfiles.kt */
     public static final /* data */ class GuildProfileData {
         private final GuildPreview data;
         private final FetchStates fetchState;
@@ -52,12 +52,12 @@ public final class StoreGuildProfiles extends StoreV2 {
             return guildProfileData.copy(fetchStates, guildPreview);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final FetchStates getFetchState() {
             return this.fetchState;
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final GuildPreview getData() {
             return this.data;
         }
@@ -103,17 +103,17 @@ public final class StoreGuildProfiles extends StoreV2 {
         }
     }
 
-    /* compiled from: StoreGuildProfiles.kt */
-    /* renamed from: com.discord.stores.StoreGuildProfiles$fetchGuildProfile$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreGuildProfiles$fetchGuildProfile$1 */
+    /* JADX INFO: compiled from: StoreGuildProfiles.kt */
     public static final class C60371 extends Lambda implements Function0<Unit> {
         public final /* synthetic */ long $guildId;
 
-        /* compiled from: StoreGuildProfiles.kt */
-        /* renamed from: com.discord.stores.StoreGuildProfiles$fetchGuildProfile$1$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.stores.StoreGuildProfiles$fetchGuildProfile$1$1, reason: invalid class name */
+        /* JADX INFO: compiled from: StoreGuildProfiles.kt */
         public static final class AnonymousClass1 extends Lambda implements Function1<GuildPreview, Unit> {
 
-            /* compiled from: StoreGuildProfiles.kt */
-            /* renamed from: com.discord.stores.StoreGuildProfiles$fetchGuildProfile$1$1$1, reason: invalid class name and collision with other inner class name */
+            /* JADX INFO: renamed from: com.discord.stores.StoreGuildProfiles$fetchGuildProfile$1$1$1, reason: invalid class name and collision with other inner class name */
+            /* JADX INFO: compiled from: StoreGuildProfiles.kt */
             public static final class C132561 extends Lambda implements Function0<Unit> {
                 public final /* synthetic */ GuildPreview $guildPreview;
 
@@ -129,7 +129,7 @@ public final class StoreGuildProfiles extends StoreV2 {
                     return Unit.f27425a;
                 }
 
-                /* renamed from: invoke, reason: avoid collision after fix types in other method */
+                /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
                 public final void invoke2() {
                     StoreGuildProfiles.access$handleGuildProfileFetchSuccess(StoreGuildProfiles.this, this.$guildPreview);
                 }
@@ -145,19 +145,19 @@ public final class StoreGuildProfiles extends StoreV2 {
                 return Unit.f27425a;
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2(GuildPreview guildPreview) {
                 Intrinsics3.checkNotNullParameter(guildPreview, "guildPreview");
                 StoreGuildProfiles.access$getDispatcher$p(StoreGuildProfiles.this).schedule(new C132561(guildPreview));
             }
         }
 
-        /* compiled from: StoreGuildProfiles.kt */
-        /* renamed from: com.discord.stores.StoreGuildProfiles$fetchGuildProfile$1$2, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.stores.StoreGuildProfiles$fetchGuildProfile$1$2, reason: invalid class name */
+        /* JADX INFO: compiled from: StoreGuildProfiles.kt */
         public static final class AnonymousClass2 extends Lambda implements Function1<Error, Unit> {
 
-            /* compiled from: StoreGuildProfiles.kt */
-            /* renamed from: com.discord.stores.StoreGuildProfiles$fetchGuildProfile$1$2$1, reason: invalid class name */
+            /* JADX INFO: renamed from: com.discord.stores.StoreGuildProfiles$fetchGuildProfile$1$2$1, reason: invalid class name */
+            /* JADX INFO: compiled from: StoreGuildProfiles.kt */
             public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
                 public AnonymousClass1() {
                     super(0);
@@ -169,7 +169,7 @@ public final class StoreGuildProfiles extends StoreV2 {
                     return Unit.f27425a;
                 }
 
-                /* renamed from: invoke, reason: avoid collision after fix types in other method */
+                /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
                 public final void invoke2() {
                     C60371 c60371 = C60371.this;
                     StoreGuildProfiles.access$handleGuildProfileFetchFailed(StoreGuildProfiles.this, c60371.$guildId);
@@ -186,7 +186,7 @@ public final class StoreGuildProfiles extends StoreV2 {
                 return Unit.f27425a;
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2(Error error) {
                 Intrinsics3.checkNotNullParameter(error, "it");
                 StoreGuildProfiles.access$getDispatcher$p(StoreGuildProfiles.this).schedule(new AnonymousClass1());
@@ -205,7 +205,7 @@ public final class StoreGuildProfiles extends StoreV2 {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             GuildProfileData guildProfileData = (GuildProfileData) StoreGuildProfiles.access$getGuildProfilesState$p(StoreGuildProfiles.this).get(Long.valueOf(this.$guildId));
             if ((guildProfileData != null ? guildProfileData.getFetchState() : null) == FetchStates.FETCHING) {
@@ -216,8 +216,8 @@ public final class StoreGuildProfiles extends StoreV2 {
         }
     }
 
-    /* compiled from: StoreGuildProfiles.kt */
-    /* renamed from: com.discord.stores.StoreGuildProfiles$observeGuildProfile$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreGuildProfiles$observeGuildProfile$1 */
+    /* JADX INFO: compiled from: StoreGuildProfiles.kt */
     public static final class C60381 extends Lambda implements Function0<Unit> {
         public final /* synthetic */ long $guildId;
 
@@ -233,14 +233,14 @@ public final class StoreGuildProfiles extends StoreV2 {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             StoreGuildProfiles.access$fetchIfNonexisting(StoreGuildProfiles.this, this.$guildId);
         }
     }
 
-    /* compiled from: StoreGuildProfiles.kt */
-    /* renamed from: com.discord.stores.StoreGuildProfiles$observeGuildProfile$2 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreGuildProfiles$observeGuildProfile$2 */
+    /* JADX INFO: compiled from: StoreGuildProfiles.kt */
     public static final class C60392 extends Lambda implements Function0<GuildProfileData> {
         public final /* synthetic */ long $guildId;
 

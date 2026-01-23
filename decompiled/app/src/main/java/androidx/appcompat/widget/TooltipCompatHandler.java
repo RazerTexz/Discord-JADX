@@ -1,6 +1,5 @@
 package androidx.appcompat.widget;
 
-import android.content.res.Resources;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.MotionEvent;
@@ -11,8 +10,8 @@ import androidx.annotation.RestrictTo;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.ViewConfigurationCompat;
 
+/* JADX INFO: loaded from: classes.dex */
 @RestrictTo({RestrictTo.Scope.LIBRARY_GROUP_PREFIX})
-/* loaded from: classes.dex */
 public class TooltipCompatHandler implements View.OnLongClickListener, View.OnHoverListener, View.OnAttachStateChangeListener {
     private static final long HOVER_HIDE_TIMEOUT_MS = 15000;
     private static final long HOVER_HIDE_TIMEOUT_SHORT_MS = 3000;
@@ -30,18 +29,18 @@ public class TooltipCompatHandler implements View.OnLongClickListener, View.OnHo
     private final Runnable mShowRunnable = new RunnableC01351();
     private final Runnable mHideRunnable = new RunnableC01362();
 
-    /* renamed from: androidx.appcompat.widget.TooltipCompatHandler$1 */
+    /* JADX INFO: renamed from: androidx.appcompat.widget.TooltipCompatHandler$1 */
     public class RunnableC01351 implements Runnable {
         public RunnableC01351() {
         }
 
         @Override // java.lang.Runnable
-        public void run() throws Resources.NotFoundException {
+        public void run() {
             TooltipCompatHandler.this.show(false);
         }
     }
 
-    /* renamed from: androidx.appcompat.widget.TooltipCompatHandler$2 */
+    /* JADX INFO: renamed from: androidx.appcompat.widget.TooltipCompatHandler$2 */
     public class RunnableC01362 implements Runnable {
         public RunnableC01362() {
         }
@@ -155,7 +154,7 @@ public class TooltipCompatHandler implements View.OnLongClickListener, View.OnHo
     }
 
     @Override // android.view.View.OnLongClickListener
-    public boolean onLongClick(View view) throws Resources.NotFoundException {
+    public boolean onLongClick(View view) {
         this.mAnchorX = view.getWidth() / 2;
         this.mAnchorY = view.getHeight() / 2;
         show(true);
@@ -171,7 +170,7 @@ public class TooltipCompatHandler implements View.OnLongClickListener, View.OnHo
         hide();
     }
 
-    public void show(boolean z2) throws Resources.NotFoundException {
+    public void show(boolean z2) {
         long j;
         int longPressTimeout;
         long j2;
@@ -197,7 +196,7 @@ public class TooltipCompatHandler implements View.OnLongClickListener, View.OnHo
                     j = HOVER_HIDE_TIMEOUT_MS;
                     longPressTimeout = ViewConfiguration.getLongPressTimeout();
                 }
-                j2 = j - longPressTimeout;
+                j2 = j - ((long) longPressTimeout);
             }
             this.mAnchor.removeCallbacks(this.mHideRunnable);
             this.mAnchor.postDelayed(this.mHideRunnable, j2);

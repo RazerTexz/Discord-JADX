@@ -19,42 +19,42 @@ import p007b.p085c.p086a.p095y.p097l.GradientColor;
 import p007b.p085c.p086a.p095y.p097l.GradientStroke;
 import p007b.p085c.p086a.p095y.p098m.BaseLayer2;
 
-/* compiled from: GradientStrokeContent.java */
-/* renamed from: b.c.a.w.b.i, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.c.a.w.b.i, reason: use source file name */
+/* JADX INFO: compiled from: GradientStrokeContent.java */
+/* JADX INFO: loaded from: classes.dex */
 public class GradientStrokeContent extends BaseStrokeContent {
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public final String f2529o;
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public final boolean f2530p;
 
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     public final LongSparseArray<LinearGradient> f2531q;
 
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     public final LongSparseArray<RadialGradient> f2532r;
 
-    /* renamed from: s */
+    /* JADX INFO: renamed from: s */
     public final RectF f2533s;
 
-    /* renamed from: t */
+    /* JADX INFO: renamed from: t */
     public final int f2534t;
 
-    /* renamed from: u */
+    /* JADX INFO: renamed from: u */
     public final int f2535u;
 
-    /* renamed from: v */
+    /* JADX INFO: renamed from: v */
     public final BaseKeyframeAnimation<GradientColor, GradientColor> f2536v;
 
-    /* renamed from: w */
+    /* JADX INFO: renamed from: w */
     public final BaseKeyframeAnimation<PointF, PointF> f2537w;
 
-    /* renamed from: x */
+    /* JADX INFO: renamed from: x */
     public final BaseKeyframeAnimation<PointF, PointF> f2538x;
 
-    /* renamed from: y */
+    /* JADX INFO: renamed from: y */
     @Nullable
     public ValueCallbackKeyframeAnimation f2539y;
 
@@ -81,7 +81,7 @@ public class GradientStrokeContent extends BaseStrokeContent {
         baseLayer2.m777e(baseKeyframeAnimationMo773a3);
     }
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final int[] m719e(int[] iArr) {
         ValueCallbackKeyframeAnimation valueCallbackKeyframeAnimation = this.f2539y;
         if (valueCallbackKeyframeAnimation != null) {
@@ -105,7 +105,7 @@ public class GradientStrokeContent extends BaseStrokeContent {
 
     /* JADX WARN: Multi-variable type inference failed */
     @Override // p007b.p085c.p086a.p091w.p092b.BaseStrokeContent, p007b.p085c.p086a.p091w.p092b.DrawingContent
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public void mo713f(Canvas canvas, Matrix matrix, int i) {
         RadialGradient radialGradient;
         if (this.f2530p) {
@@ -142,7 +142,7 @@ public class GradientStrokeContent extends BaseStrokeContent {
 
     /* JADX WARN: Multi-variable type inference failed */
     @Override // p007b.p085c.p086a.p091w.p092b.BaseStrokeContent, p007b.p085c.p086a.p095y.KeyPathElement
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public <T> void mo714g(T t, @Nullable LottieValueCallback<T> lottieValueCallback) {
         super.mo714g(t, lottieValueCallback);
         if (t == LottieProperty.f2422D) {
@@ -166,7 +166,7 @@ public class GradientStrokeContent extends BaseStrokeContent {
         return this.f2529o;
     }
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public final int m720h() {
         int iRound = Math.round(this.f2537w.f2599d * this.f2535u);
         int iRound2 = Math.round(this.f2538x.f2599d * this.f2535u);

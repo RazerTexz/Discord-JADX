@@ -10,7 +10,7 @@ import androidx.annotation.Size;
 import java.util.Locale;
 import p007b.p100d.p104b.p105a.outline;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public final class LocaleListCompat {
     private static final LocaleListCompat sEmptyLocaleList = create(new Locale[0]);
     private LocaleListInterface mImpl;

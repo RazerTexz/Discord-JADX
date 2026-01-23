@@ -16,8 +16,8 @@ import androidx.appcompat.content.res.AppCompatResources;
 import androidx.appcompat.widget.ResourceManagerInternal;
 import androidx.core.graphics.ColorUtils;
 
+/* JADX INFO: loaded from: classes.dex */
 @RestrictTo({RestrictTo.Scope.LIBRARY_GROUP_PREFIX})
-/* loaded from: classes.dex */
 public final class AppCompatDrawableManager {
     private static final boolean DEBUG = false;
     private static final PorterDuff.Mode DEFAULT_MODE = PorterDuff.Mode.SRC_IN;
@@ -25,7 +25,7 @@ public final class AppCompatDrawableManager {
     private static final String TAG = "AppCompatDrawableManag";
     private ResourceManagerInternal mResourceManager;
 
-    /* renamed from: androidx.appcompat.widget.AppCompatDrawableManager$1 */
+    /* JADX INFO: renamed from: androidx.appcompat.widget.AppCompatDrawableManager$1 */
     public class C01011 implements ResourceManagerInternal.ResourceManagerHooks {
         private final int[] COLORFILTER_TINT_COLOR_CONTROL_NORMAL = {C0051R.drawable.abc_textfield_search_default_mtrl_alpha, C0051R.drawable.abc_textfield_default_mtrl_alpha, C0051R.drawable.abc_ab_share_pack_mtrl_alpha};
         private final int[] TINT_COLOR_CONTROL_NORMAL = {C0051R.drawable.abc_ic_commit_search_api_mtrl_alpha, C0051R.drawable.abc_seekbar_tick_mark_material, C0051R.drawable.abc_ic_menu_share_mtrl_alpha, C0051R.drawable.abc_ic_menu_copy_mtrl_am_alpha, C0051R.drawable.abc_ic_menu_cut_mtrl_alpha, C0051R.drawable.abc_ic_menu_selectall_mtrl_alpha, C0051R.drawable.abc_ic_menu_paste_mtrl_am_alpha};

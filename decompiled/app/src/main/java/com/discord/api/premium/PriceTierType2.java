@@ -8,12 +8,12 @@ import kotlin.NoWhenBranchMatchedException;
 import p007b.p085c.p086a.p087a0.AnimatableValueParser;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: PriceTierType.kt */
-/* renamed from: com.discord.api.premium.PriceTierTypeAdapter, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: com.discord.api.premium.PriceTierTypeAdapter, reason: use source file name */
+/* JADX INFO: compiled from: PriceTierType.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class PriceTierType2 extends TypeAdapter<PriceTierType> {
 
-    /* renamed from: com.discord.api.premium.PriceTierTypeAdapter$WhenMappings */
+    /* JADX INFO: renamed from: com.discord.api.premium.PriceTierTypeAdapter$WhenMappings */
     public final /* synthetic */ class WhenMappings {
         public static final /* synthetic */ int[] $EnumSwitchMapping$0;
 

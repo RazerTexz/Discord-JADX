@@ -6,9 +6,9 @@ import com.discord.utilities.uri.UriHandler;
 import com.discord.widgets.settings.connections.WidgetSettingsUserConnections;
 import p007b.p100d.p104b.p105a.outline;
 
-/* compiled from: WidgetSettingsUserConnections.kt */
-/* renamed from: com.discord.widgets.settings.connections.WidgetSettingsUserConnections$Adapter$ViewHolder$onConfigure$$inlined$apply$lambda$1 */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.settings.connections.WidgetSettingsUserConnections$Adapter$ViewHolder$onConfigure$$inlined$apply$lambda$1 */
+/* JADX INFO: compiled from: WidgetSettingsUserConnections.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class ViewOnClickListenerC9824x4d6725cd implements View.OnClickListener {
     public final /* synthetic */ WidgetSettingsUserConnections.UserConnectionItem $data$inlined;
     public final /* synthetic */ Platform $platform;

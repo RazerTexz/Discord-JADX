@@ -7,12 +7,12 @@ import java.util.Set;
 import p007b.p109f.p115d.p120e.FLog;
 import p007b.p109f.p161j.p181p.ProducerContext;
 
-/* compiled from: ForwardingRequestListener2.java */
-/* renamed from: b.f.j.k.b, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.f.j.k.b, reason: use source file name */
+/* JADX INFO: compiled from: ForwardingRequestListener2.java */
+/* JADX INFO: loaded from: classes.dex */
 public class ForwardingRequestListener2 implements RequestListener2 {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final List<RequestListener2> f3912a;
 
     public ForwardingRequestListener2(Set<RequestListener2> set) {
@@ -25,7 +25,7 @@ public class ForwardingRequestListener2 implements RequestListener2 {
     }
 
     @Override // p007b.p109f.p161j.p181p.ProducerListener2
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public void mo1354a(ProducerContext producerContext, String str, String str2) {
         int size = this.f3912a.size();
         for (int i = 0; i < size; i++) {
@@ -38,7 +38,7 @@ public class ForwardingRequestListener2 implements RequestListener2 {
     }
 
     @Override // p007b.p109f.p161j.p176k.RequestListener2
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public void mo1355b(ProducerContext producerContext) {
         int size = this.f3912a.size();
         for (int i = 0; i < size; i++) {
@@ -51,7 +51,7 @@ public class ForwardingRequestListener2 implements RequestListener2 {
     }
 
     @Override // p007b.p109f.p161j.p181p.ProducerListener2
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public void mo1356c(ProducerContext producerContext, String str, boolean z2) {
         int size = this.f3912a.size();
         for (int i = 0; i < size; i++) {
@@ -64,7 +64,7 @@ public class ForwardingRequestListener2 implements RequestListener2 {
     }
 
     @Override // p007b.p109f.p161j.p181p.ProducerListener2
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public void mo1357d(ProducerContext producerContext, String str, Map<String, String> map) {
         int size = this.f3912a.size();
         for (int i = 0; i < size; i++) {
@@ -77,7 +77,7 @@ public class ForwardingRequestListener2 implements RequestListener2 {
     }
 
     @Override // p007b.p109f.p161j.p181p.ProducerListener2
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public void mo1358e(ProducerContext producerContext, String str) {
         int size = this.f3912a.size();
         for (int i = 0; i < size; i++) {
@@ -90,7 +90,7 @@ public class ForwardingRequestListener2 implements RequestListener2 {
     }
 
     @Override // p007b.p109f.p161j.p176k.RequestListener2
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public void mo1359f(ProducerContext producerContext) {
         int size = this.f3912a.size();
         for (int i = 0; i < size; i++) {
@@ -103,7 +103,7 @@ public class ForwardingRequestListener2 implements RequestListener2 {
     }
 
     @Override // p007b.p109f.p161j.p181p.ProducerListener2
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public boolean mo1360g(ProducerContext producerContext, String str) {
         int size = this.f3912a.size();
         for (int i = 0; i < size; i++) {
@@ -115,7 +115,7 @@ public class ForwardingRequestListener2 implements RequestListener2 {
     }
 
     @Override // p007b.p109f.p161j.p176k.RequestListener2
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public void mo1361h(ProducerContext producerContext, Throwable th) {
         int size = this.f3912a.size();
         for (int i = 0; i < size; i++) {
@@ -128,7 +128,7 @@ public class ForwardingRequestListener2 implements RequestListener2 {
     }
 
     @Override // p007b.p109f.p161j.p176k.RequestListener2
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public void mo1362i(ProducerContext producerContext) {
         int size = this.f3912a.size();
         for (int i = 0; i < size; i++) {
@@ -141,7 +141,7 @@ public class ForwardingRequestListener2 implements RequestListener2 {
     }
 
     @Override // p007b.p109f.p161j.p181p.ProducerListener2
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public void mo1363j(ProducerContext producerContext, String str, Map<String, String> map) {
         int size = this.f3912a.size();
         for (int i = 0; i < size; i++) {
@@ -154,7 +154,7 @@ public class ForwardingRequestListener2 implements RequestListener2 {
     }
 
     @Override // p007b.p109f.p161j.p181p.ProducerListener2
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public void mo1364k(ProducerContext producerContext, String str, Throwable th, Map<String, String> map) {
         int size = this.f3912a.size();
         for (int i = 0; i < size; i++) {

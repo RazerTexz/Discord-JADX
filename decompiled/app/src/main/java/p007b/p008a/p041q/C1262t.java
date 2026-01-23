@@ -3,12 +3,12 @@ package p007b.p008a.p041q;
 import kotlin.Unit;
 import p658rx.functions.Action1;
 
-/* compiled from: RtcConnection.kt */
-/* renamed from: b.a.q.t */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.a.q.t */
+/* JADX INFO: compiled from: RtcConnection.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class C1262t<T> implements Action1<Unit> {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final /* synthetic */ C1265w f1871j;
 
     public C1262t(C1265w c1265w) {

@@ -5,12 +5,12 @@ import java.util.Collections;
 import java.util.List;
 import p007b.p109f.p115d.p120e.FLog;
 
-/* compiled from: ForwardingImageOriginListener.java */
-/* renamed from: b.f.g.a.a.h.a, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.f.g.a.a.h.a, reason: use source file name */
+/* JADX INFO: compiled from: ForwardingImageOriginListener.java */
+/* JADX INFO: loaded from: classes.dex */
 public class ForwardingImageOriginListener implements ImageOriginListener {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final List<ImageOriginListener> f3199a;
 
     public ForwardingImageOriginListener(ImageOriginListener... imageOriginListenerArr) {
@@ -20,7 +20,7 @@ public class ForwardingImageOriginListener implements ImageOriginListener {
     }
 
     @Override // p007b.p109f.p132g.p133a.p134a.p136h.ImageOriginListener
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public synchronized void mo1061a(String str, int i, boolean z2, String str2) {
         int size = this.f3199a.size();
         for (int i2 = 0; i2 < size; i2++) {

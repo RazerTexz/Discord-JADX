@@ -6,15 +6,15 @@ import p007b.p100d.p104b.p105a.outline;
 import p007b.p225i.p226a.p288f.p299e.p308o.C3404f;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: JvmOkio.kt */
-/* renamed from: g0.n, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: g0.n, reason: use source file name */
+/* JADX INFO: compiled from: JvmOkio.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class JvmOkio implements Source2 {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final InputStream f26104j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final Timeout2 f26105k;
 
     public JvmOkio(InputStream inputStream, Timeout2 timeout2) {
@@ -30,7 +30,7 @@ public final class JvmOkio implements Source2 {
     }
 
     @Override // p615g0.Source2
-    /* renamed from: i0 */
+    /* JADX INFO: renamed from: i0 */
     public long mo10176i0(Buffer3 buffer3, long j) {
         Intrinsics3.checkParameterIsNotNull(buffer3, "sink");
         if (j == 0) {

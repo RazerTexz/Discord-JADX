@@ -4,8 +4,8 @@ import java.util.Locale;
 import kotlin.jvm.internal.DefaultConstructorMarker;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: RequiredAction.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: RequiredAction.kt */
+/* JADX INFO: loaded from: classes.dex */
 public enum RequiredAction {
     AGREEMENTS,
     TOS_UPDATE_ACKNOWLEDGMENT,
@@ -15,10 +15,10 @@ public enum RequiredAction {
     NONE;
 
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
 
-    /* compiled from: RequiredAction.kt */
+    /* JADX INFO: compiled from: RequiredAction.kt */
     public static final class Companion {
         private Companion() {
         }

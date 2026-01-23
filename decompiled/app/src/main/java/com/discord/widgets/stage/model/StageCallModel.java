@@ -32,11 +32,11 @@ import p507d0.p580t._Collections;
 import p507d0.p592z.p594d.Intrinsics3;
 import p658rx.Observable;
 
-/* compiled from: StageCallModel.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: StageCallModel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final /* data */ class StageCallModel {
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private final List<StageCallItem.AudienceItem> audience;
     private final Guild guild;
@@ -50,7 +50,7 @@ public final /* data */ class StageCallModel {
     private final List<StoreVoiceParticipants.VoiceUser> speakingVoiceUsers;
     private final StageInstance stageInstance;
 
-    /* compiled from: StageCallModel.kt */
+    /* JADX INFO: compiled from: StageCallModel.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -199,22 +199,23 @@ public final /* data */ class StageCallModel {
         this.numSpeakers = i4;
     }
 
-    /* renamed from: copy-YvLQhEs$default, reason: not valid java name */
+    /* JADX WARN: Multi-variable type inference failed */
+    /* JADX INFO: renamed from: copy-YvLQhEs$default, reason: not valid java name */
     public static /* synthetic */ StageCallModel m11416copyYvLQhEs$default(StageCallModel stageCallModel, int i, List list, List list2, List list3, List list4, int i2, StageInstance stageInstance, int i3, Guild guild, boolean z2, int i4, int i5, Object obj) {
         return stageCallModel.m11418copyYvLQhEs((i5 & 1) != 0 ? stageCallModel.myStageRoles : i, (i5 & 2) != 0 ? stageCallModel.speakerItems : list, (i5 & 4) != 0 ? stageCallModel.mediaParticipants : list2, (i5 & 8) != 0 ? stageCallModel.audience : list3, (i5 & 16) != 0 ? stageCallModel.speakingVoiceUsers : list4, (i5 & 32) != 0 ? stageCallModel.requestingToSpeakCount : i2, (i5 & 64) != 0 ? stageCallModel.stageInstance : stageInstance, (i5 & 128) != 0 ? stageCallModel.numBlockedUsers : i3, (i5 & 256) != 0 ? stageCallModel.guild : guild, (i5 & 512) != 0 ? stageCallModel.isLurking : z2, (i5 & 1024) != 0 ? stageCallModel.numSpeakers : i4);
     }
 
-    /* renamed from: component1-1LxfuJo, reason: not valid java name and from getter */
+    /* JADX INFO: renamed from: component1-1LxfuJo, reason: not valid java name and from getter */
     public final int getMyStageRoles() {
         return this.myStageRoles;
     }
 
-    /* renamed from: component10, reason: from getter */
+    /* JADX INFO: renamed from: component10, reason: from getter */
     public final boolean getIsLurking() {
         return this.isLurking;
     }
 
-    /* renamed from: component11, reason: from getter */
+    /* JADX INFO: renamed from: component11, reason: from getter */
     public final int getNumSpeakers() {
         return this.numSpeakers;
     }
@@ -235,27 +236,27 @@ public final /* data */ class StageCallModel {
         return this.speakingVoiceUsers;
     }
 
-    /* renamed from: component6, reason: from getter */
+    /* JADX INFO: renamed from: component6, reason: from getter */
     public final int getRequestingToSpeakCount() {
         return this.requestingToSpeakCount;
     }
 
-    /* renamed from: component7, reason: from getter */
+    /* JADX INFO: renamed from: component7, reason: from getter */
     public final StageInstance getStageInstance() {
         return this.stageInstance;
     }
 
-    /* renamed from: component8, reason: from getter */
+    /* JADX INFO: renamed from: component8, reason: from getter */
     public final int getNumBlockedUsers() {
         return this.numBlockedUsers;
     }
 
-    /* renamed from: component9, reason: from getter */
+    /* JADX INFO: renamed from: component9, reason: from getter */
     public final Guild getGuild() {
         return this.guild;
     }
 
-    /* renamed from: copy-YvLQhEs, reason: not valid java name */
+    /* JADX INFO: renamed from: copy-YvLQhEs, reason: not valid java name */
     public final StageCallModel m11418copyYvLQhEs(int myStageRoles, List<StageCallItem.SpeakerItem> speakerItems, List<StageCallModel5> mediaParticipants, List<StageCallItem.AudienceItem> audience, List<StoreVoiceParticipants.VoiceUser> speakingVoiceUsers, int requestingToSpeakCount, StageInstance stageInstance, int numBlockedUsers, Guild guild, boolean isLurking, int numSpeakers) {
         Intrinsics3.checkNotNullParameter(speakerItems, "speakerItems");
         Intrinsics3.checkNotNullParameter(mediaParticipants, "mediaParticipants");
@@ -287,7 +288,7 @@ public final /* data */ class StageCallModel {
         return this.mediaParticipants;
     }
 
-    /* renamed from: getMyStageRoles-1LxfuJo, reason: not valid java name */
+    /* JADX INFO: renamed from: getMyStageRoles-1LxfuJo, reason: not valid java name */
     public final int m11419getMyStageRoles1LxfuJo() {
         return this.myStageRoles;
     }
@@ -317,6 +318,9 @@ public final /* data */ class StageCallModel {
     }
 
     /* JADX WARN: Multi-variable type inference failed */
+    /* JADX WARN: Type inference failed for: r1v19, types: [int] */
+    /* JADX WARN: Type inference failed for: r1v21 */
+    /* JADX WARN: Type inference failed for: r1v27 */
     public int hashCode() {
         int i = this.myStageRoles * 31;
         List<StageCallItem.SpeakerItem> list = this.speakerItems;
@@ -332,11 +336,11 @@ public final /* data */ class StageCallModel {
         Guild guild = this.guild;
         int iHashCode6 = (iHashCode5 + (guild != null ? guild.hashCode() : 0)) * 31;
         boolean z2 = this.isLurking;
-        int i2 = z2;
-        if (z2 != 0) {
-            i2 = 1;
+        ?? r1 = z2;
+        if (z2) {
+            r1 = 1;
         }
-        return ((iHashCode6 + i2) * 31) + this.numSpeakers;
+        return ((iHashCode6 + r1) * 31) + this.numSpeakers;
     }
 
     public final boolean isLurking() {

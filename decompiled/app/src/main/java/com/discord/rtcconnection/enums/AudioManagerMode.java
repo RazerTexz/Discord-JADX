@@ -4,8 +4,8 @@ import android.os.Build;
 
 /* JADX WARN: Failed to restore enum class, 'enum' modifier and super class removed */
 /* JADX WARN: Unknown enum class pattern. Please report as an issue! */
-/* compiled from: AudioManagerMode.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: AudioManagerMode.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class AudioManagerMode {
     private static final /* synthetic */ AudioManagerMode[] $VALUES;
     public static final AudioManagerMode CallScreening;

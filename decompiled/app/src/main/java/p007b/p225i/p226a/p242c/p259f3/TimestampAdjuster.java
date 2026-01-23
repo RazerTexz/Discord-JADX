@@ -5,31 +5,31 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.discord.api.permission.Permission;
 import java.util.Objects;
 
-/* compiled from: TimestampAdjuster.java */
-/* renamed from: b.i.a.c.f3.d0, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.f3.d0, reason: use source file name */
+/* JADX INFO: compiled from: TimestampAdjuster.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class TimestampAdjuster {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     @GuardedBy("this")
     public long f6700a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     @GuardedBy("this")
     public long f6701b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     @GuardedBy("this")
     public long f6702c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final ThreadLocal<Long> f6703d = new ThreadLocal<>();
 
     public TimestampAdjuster(long j) {
         m2976e(j);
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public synchronized long m2972a(long j) {
         if (j == -9223372036854775807L) {
             return -9223372036854775807L;
@@ -48,7 +48,7 @@ public final class TimestampAdjuster {
         return j + this.f6701b;
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public synchronized long m2973b(long j) {
         if (j == -9223372036854775807L) {
             return -9223372036854775807L;
@@ -64,7 +64,7 @@ public final class TimestampAdjuster {
         return m2972a((j * 1000000) / 90000);
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public synchronized long m2974c() {
         long j;
         j = this.f6700a;
@@ -74,12 +74,12 @@ public final class TimestampAdjuster {
         return j;
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public synchronized long m2975d() {
         return this.f6701b;
     }
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public synchronized void m2976e(long j) {
         this.f6700a = j;
         this.f6701b = j == RecyclerView.FOREVER_NS ? 0L : -9223372036854775807L;

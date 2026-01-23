@@ -4,8 +4,8 @@ import android.view.View;
 import com.discord.widgets.channels.list.WidgetChannelsListAdapter;
 import com.discord.widgets.channels.list.items.ChannelListItemGuildScheduledEvents;
 
-/* compiled from: WidgetChannelsListAdapter.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetChannelsListAdapter.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetChannelsListAdapter$ItemGuildScheduledEvents$onConfigure$1 implements View.OnClickListener {
     public final /* synthetic */ ChannelListItemGuildScheduledEvents $item;
     public final /* synthetic */ WidgetChannelsListAdapter.ItemGuildScheduledEvents this$0;

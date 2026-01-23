@@ -27,7 +27,7 @@ import com.discord.widgets.chat.input.autocomplete.AutocompleteViewModel;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class ConstraintLayout extends ViewGroup {
     private static final boolean DEBUG = false;
     private static final boolean DEBUG_DRAW_CONSTRAINTS = false;
@@ -62,10 +62,10 @@ public class ConstraintLayout extends ViewGroup {
     private int mOptimizationLevel;
     private SparseArray<ConstraintWidget> mTempMapIdToWidget;
 
-    /* renamed from: androidx.constraintlayout.widget.ConstraintLayout$1 */
+    /* JADX INFO: renamed from: androidx.constraintlayout.widget.ConstraintLayout$1 */
     public static /* synthetic */ class C02001 {
 
-        /* renamed from: $SwitchMap$androidx$constraintlayout$solver$widgets$ConstraintWidget$DimensionBehaviour */
+        /* JADX INFO: renamed from: $SwitchMap$androidx$constraintlayout$solver$widgets$ConstraintWidget$DimensionBehaviour */
         public static final /* synthetic */ int[] f127xdde91696;
 
         static {
@@ -689,7 +689,7 @@ public class ConstraintLayout extends ViewGroup {
     }
 
     @Override // android.view.ViewGroup, android.view.View
-    public void dispatchDraw(Canvas canvas) throws NumberFormatException {
+    public void dispatchDraw(Canvas canvas) {
         Object tag;
         int size;
         ArrayList<ConstraintHelper> arrayList = this.mConstraintHelpers;

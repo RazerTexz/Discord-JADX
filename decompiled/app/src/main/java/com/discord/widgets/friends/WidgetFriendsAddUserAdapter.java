@@ -31,8 +31,8 @@ import p007b.p100d.p104b.p105a.outline;
 import p507d0.p580t._Collections;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: WidgetFriendsAddUserAdapter.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetFriendsAddUserAdapter.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetFriendsAddUserAdapter extends MGRecyclerAdapterSimple<ItemUser> {
     private static final int TYPE_USER = 1;
     private Function1<? super Long, Unit> acceptHandler;
@@ -42,7 +42,7 @@ public final class WidgetFriendsAddUserAdapter extends MGRecyclerAdapterSimple<I
     private final HashSet<Long> outgoingRequestUserIds;
     private Function2<? super String, ? super Integer, Unit> sendHandler;
 
-    /* compiled from: WidgetFriendsAddUserAdapter.kt */
+    /* JADX INFO: compiled from: WidgetFriendsAddUserAdapter.kt */
     public static final class UserViewHolder extends MGRecyclerViewHolder<WidgetFriendsAddUserAdapter, ItemUser> {
         private final WidgetAddFriendUserListItemBinding binding;
 
@@ -107,7 +107,7 @@ public final class WidgetFriendsAddUserAdapter extends MGRecyclerAdapterSimple<I
             onConfigure2(i, itemUser);
         }
 
-        /* renamed from: onConfigure, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: onConfigure, reason: avoid collision after fix types in other method */
         public void onConfigure2(int position, ItemUser data) {
             Intrinsics3.checkNotNullParameter(data, "data");
             super.onConfigure(position, data);
@@ -248,10 +248,10 @@ public final class WidgetFriendsAddUserAdapter extends MGRecyclerAdapterSimple<I
         throw invalidViewTypeException(viewType);
     }
 
-    /* compiled from: WidgetFriendsAddUserAdapter.kt */
+    /* JADX INFO: compiled from: WidgetFriendsAddUserAdapter.kt */
     public static final /* data */ class ItemUser implements MGRecyclerDataPayload {
 
-        /* renamed from: Companion, reason: from kotlin metadata */
+        /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
         public static final Companion INSTANCE = new Companion(null);
         private final List<CharSequence> aliases;
         private final boolean isFriend;
@@ -260,7 +260,7 @@ public final class WidgetFriendsAddUserAdapter extends MGRecyclerAdapterSimple<I
         private final int type;
         private final User user;
 
-        /* compiled from: WidgetFriendsAddUserAdapter.kt */
+        /* JADX INFO: compiled from: WidgetFriendsAddUserAdapter.kt */
         public static final class Companion {
             private Companion() {
             }
@@ -304,7 +304,7 @@ public final class WidgetFriendsAddUserAdapter extends MGRecyclerAdapterSimple<I
             return itemUser.copy(user, list, presence, z2);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final User getUser() {
             return this.user;
         }
@@ -313,12 +313,12 @@ public final class WidgetFriendsAddUserAdapter extends MGRecyclerAdapterSimple<I
             return this.aliases;
         }
 
-        /* renamed from: component3, reason: from getter */
+        /* JADX INFO: renamed from: component3, reason: from getter */
         public final Presence getPresence() {
             return this.presence;
         }
 
-        /* renamed from: component4, reason: from getter */
+        /* JADX INFO: renamed from: component4, reason: from getter */
         public final boolean getIsFriend() {
             return this.isFriend;
         }
@@ -363,6 +363,9 @@ public final class WidgetFriendsAddUserAdapter extends MGRecyclerAdapterSimple<I
         }
 
         /* JADX WARN: Multi-variable type inference failed */
+        /* JADX WARN: Type inference failed for: r1v3, types: [int] */
+        /* JADX WARN: Type inference failed for: r1v4 */
+        /* JADX WARN: Type inference failed for: r1v6 */
         public int hashCode() {
             User user = this.user;
             int iHashCode = (user != null ? user.hashCode() : 0) * 31;
@@ -371,11 +374,11 @@ public final class WidgetFriendsAddUserAdapter extends MGRecyclerAdapterSimple<I
             Presence presence = this.presence;
             int iHashCode3 = (iHashCode2 + (presence != null ? presence.hashCode() : 0)) * 31;
             boolean z2 = this.isFriend;
-            int i = z2;
-            if (z2 != 0) {
-                i = 1;
+            ?? r1 = z2;
+            if (z2) {
+                r1 = 1;
             }
-            return iHashCode3 + i;
+            return iHashCode3 + r1;
         }
 
         public final boolean isFriend() {

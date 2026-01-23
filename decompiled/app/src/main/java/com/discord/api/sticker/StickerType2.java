@@ -6,9 +6,9 @@ import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: StickerType.kt */
-/* renamed from: com.discord.api.sticker.StickerTypeTypeAdapter, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: com.discord.api.sticker.StickerTypeTypeAdapter, reason: use source file name */
+/* JADX INFO: compiled from: StickerType.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class StickerType2 extends TypeAdapter<StickerType> {
     @Override // com.google.gson.TypeAdapter
     public StickerType read(JsonReader jsonReader) throws IOException {

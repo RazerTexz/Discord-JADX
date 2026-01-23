@@ -14,34 +14,34 @@ import p007b.p225i.p226a.p288f.p340n.C4358c0;
 import p007b.p225i.p361c.FirebaseApp2;
 import p007b.p225i.p361c.p369m.p370d.Logger3;
 
-/* compiled from: DataCollectionArbiter.java */
-/* renamed from: b.i.c.m.d.k.q0, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.c.m.d.k.q0, reason: use source file name */
+/* JADX INFO: compiled from: DataCollectionArbiter.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class DataCollectionArbiter {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final SharedPreferences f12371a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final FirebaseApp2 f12372b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final Object f12373c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public TaskCompletionSource<Void> f12374d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public boolean f12375e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public boolean f12376f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     @Nullable
     public Boolean f12377g;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public TaskCompletionSource<Void> f12378h;
 
     public DataCollectionArbiter(FirebaseApp2 firebaseApp2) {
@@ -73,7 +73,7 @@ public class DataCollectionArbiter {
     }
 
     @Nullable
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final Boolean m6449a(Context context) {
         PackageManager packageManager;
         ApplicationInfo applicationInfo;
@@ -94,7 +94,7 @@ public class DataCollectionArbiter {
         return Boolean.valueOf(Boolean.TRUE.equals(boolValueOf));
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public synchronized boolean m6450b() {
         boolean zBooleanValue;
         Boolean bool = this.f12377g;
@@ -103,7 +103,7 @@ public class DataCollectionArbiter {
         return zBooleanValue;
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public Task<Void> m6451c() {
         C4358c0<Void> c4358c0;
         C4358c0<Void> c4358c02 = this.f12378h.f20845a;

@@ -17,8 +17,8 @@ import androidx.work.Logger;
 import androidx.work.impl.constraints.NetworkState;
 import androidx.work.impl.utils.taskexecutor.TaskExecutor;
 
+/* JADX INFO: loaded from: classes.dex */
 @RestrictTo({RestrictTo.Scope.LIBRARY_GROUP})
-/* loaded from: classes.dex */
 public class NetworkStateTracker extends ConstraintTracker<NetworkState> {
     public static final String TAG = Logger.tagWithPrefix("NetworkStateTracker");
     private NetworkStateBroadcastReceiver mBroadcastReceiver;

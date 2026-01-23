@@ -26,13 +26,13 @@ import p007b.p008a.p027k.FormatUtils;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ChannelMembersListViewHolderMember.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: ChannelMembersListViewHolderMember.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class ChannelMembersListViewHolderMember extends RecyclerView.ViewHolder {
     private final WidgetChannelMembersListItemUserBinding binding;
 
-    /* compiled from: ChannelMembersListViewHolderMember.kt */
-    /* renamed from: com.discord.widgets.channels.memberlist.adapter.ChannelMembersListViewHolderMember$bind$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.channels.memberlist.adapter.ChannelMembersListViewHolderMember$bind$1 */
+    /* JADX INFO: compiled from: ChannelMembersListViewHolderMember.kt */
     public static final class ViewOnClickListenerC75151 implements View.OnClickListener {
         public final /* synthetic */ Function0 $onClicked;
 
@@ -46,8 +46,8 @@ public final class ChannelMembersListViewHolderMember extends RecyclerView.ViewH
         }
     }
 
-    /* compiled from: ChannelMembersListViewHolderMember.kt */
-    /* renamed from: com.discord.widgets.channels.memberlist.adapter.ChannelMembersListViewHolderMember$bind$3 */
+    /* JADX INFO: renamed from: com.discord.widgets.channels.memberlist.adapter.ChannelMembersListViewHolderMember$bind$3 */
+    /* JADX INFO: compiled from: ChannelMembersListViewHolderMember.kt */
     public static final class ViewOnClickListenerC75163 implements View.OnClickListener {
         public final /* synthetic */ ChannelMembersListAdapter.Item.Member $data;
         public final /* synthetic */ boolean $isBooster;

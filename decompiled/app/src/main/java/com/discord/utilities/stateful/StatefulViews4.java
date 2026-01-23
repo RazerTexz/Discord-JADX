@@ -8,9 +8,9 @@ import kotlin.jvm.functions.Function1;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: StatefulViews.kt */
-/* renamed from: com.discord.utilities.stateful.StatefulViews$setupTextWatcherWithSaveAction$$inlined$forEach$lambda$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.utilities.stateful.StatefulViews$setupTextWatcherWithSaveAction$$inlined$forEach$lambda$1, reason: use source file name */
+/* JADX INFO: compiled from: StatefulViews.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class StatefulViews4 extends Lambda implements Function1<Editable, Unit> {
     public final /* synthetic */ AppFragment $fragment$inlined;
     public final /* synthetic */ View $saveAction$inlined;
@@ -32,7 +32,7 @@ public final class StatefulViews4 extends Lambda implements Function1<Editable, 
         return Unit.f27425a;
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final void invoke2(Editable editable) {
         Intrinsics3.checkNotNullParameter(editable, "editable");
         this.this$0.put(this.$view.getId(), editable.toString());

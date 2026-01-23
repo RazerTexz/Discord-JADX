@@ -7,20 +7,20 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.viewbinding.ViewBinding;
 import com.google.android.material.button.MaterialButton;
 
-/* compiled from: LayoutContactSyncSuggestionsEmptyBinding.java */
-/* renamed from: b.a.i.n0, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.a.i.n0, reason: use source file name */
+/* JADX INFO: compiled from: LayoutContactSyncSuggestionsEmptyBinding.java */
+/* JADX INFO: loaded from: classes.dex */
 public final class LayoutContactSyncSuggestionsEmptyBinding implements ViewBinding {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     @NonNull
     public final ConstraintLayout f1067a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     @NonNull
     public final MaterialButton f1068b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     @NonNull
     public final MaterialButton f1069c;
 

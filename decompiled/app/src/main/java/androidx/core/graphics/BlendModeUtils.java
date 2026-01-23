@@ -6,10 +6,10 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.annotation.RequiresApi;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class BlendModeUtils {
 
-    /* renamed from: androidx.core.graphics.BlendModeUtils$1 */
+    /* JADX INFO: renamed from: androidx.core.graphics.BlendModeUtils$1 */
     public static /* synthetic */ class C02231 {
         public static final /* synthetic */ int[] $SwitchMap$androidx$core$graphics$BlendModeCompat;
 

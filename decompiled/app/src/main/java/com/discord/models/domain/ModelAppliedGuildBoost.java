@@ -2,8 +2,8 @@ package com.discord.models.domain;
 
 import p007b.p100d.p104b.p105a.outline;
 
-/* compiled from: ModelAppliedGuildBoost.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: ModelAppliedGuildBoost.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class ModelAppliedGuildBoost {
     private final long guildId;
     private final long id;
@@ -30,17 +30,17 @@ public final /* data */ class ModelAppliedGuildBoost {
         return modelAppliedGuildBoost.copy(j4, j5, j3);
     }
 
-    /* renamed from: component1, reason: from getter */
+    /* JADX INFO: renamed from: component1, reason: from getter */
     public final long getId() {
         return this.id;
     }
 
-    /* renamed from: component2, reason: from getter */
+    /* JADX INFO: renamed from: component2, reason: from getter */
     public final long getGuildId() {
         return this.guildId;
     }
 
-    /* renamed from: component3, reason: from getter */
+    /* JADX INFO: renamed from: component3, reason: from getter */
     public final long getUserId() {
         return this.userId;
     }

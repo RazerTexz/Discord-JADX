@@ -64,48 +64,48 @@ import p658rx.subjects.BehaviorSubject;
 import p658rx.subjects.PublishSubject;
 import p658rx.subscriptions.CompositeSubscription;
 
-/* compiled from: AppMediaPlayer.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: AppMediaPlayer.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class AppMediaPlayer {
 
-    /* renamed from: a, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: a, reason: from kotlin metadata */
     public final PublishSubject<Event> eventSubject;
 
-    /* renamed from: b, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: b, reason: from kotlin metadata */
     public Subscription positionPollingSubscription;
 
-    /* renamed from: c, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: c, reason: from kotlin metadata */
     public final CompositeSubscription compositeSubscription;
 
-    /* renamed from: d, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: d, reason: from kotlin metadata */
     public final BehaviorSubject<Float> volumeSubject;
 
-    /* renamed from: e, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: e, reason: from kotlin metadata */
     public MediaSource mediaSource;
 
-    /* renamed from: f, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: f, reason: from kotlin metadata */
     public final ExoPlayer2 exoPlayer;
 
-    /* renamed from: g, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: g, reason: from kotlin metadata */
     public final RxPlayerEventListener rxPlayerEventListener;
 
-    /* renamed from: h, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: h, reason: from kotlin metadata */
     public final DataSource3.a dataSourceFactory;
 
-    /* renamed from: i, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: i, reason: from kotlin metadata */
     public final Scheduler timerScheduler;
 
-    /* renamed from: j, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: j, reason: from kotlin metadata */
     public final Logger logger;
 
-    /* compiled from: AppMediaPlayer.kt */
+    /* JADX INFO: compiled from: AppMediaPlayer.kt */
     public static abstract class Event {
 
-        /* compiled from: AppMediaPlayer.kt */
-        /* renamed from: com.discord.player.AppMediaPlayer$Event$a */
+        /* JADX INFO: renamed from: com.discord.player.AppMediaPlayer$Event$a */
+        /* JADX INFO: compiled from: AppMediaPlayer.kt */
         public static final class C5583a extends Event {
 
-            /* renamed from: a */
+            /* JADX INFO: renamed from: a */
             public static final C5583a f18654a = new C5583a();
 
             public C5583a() {
@@ -113,11 +113,11 @@ public final class AppMediaPlayer {
             }
         }
 
-        /* compiled from: AppMediaPlayer.kt */
-        /* renamed from: com.discord.player.AppMediaPlayer$Event$b */
+        /* JADX INFO: renamed from: com.discord.player.AppMediaPlayer$Event$b */
+        /* JADX INFO: compiled from: AppMediaPlayer.kt */
         public static final class C5584b extends Event {
 
-            /* renamed from: a */
+            /* JADX INFO: renamed from: a */
             public static final C5584b f18655a = new C5584b();
 
             public C5584b() {
@@ -125,11 +125,11 @@ public final class AppMediaPlayer {
             }
         }
 
-        /* compiled from: AppMediaPlayer.kt */
-        /* renamed from: com.discord.player.AppMediaPlayer$Event$c */
+        /* JADX INFO: renamed from: com.discord.player.AppMediaPlayer$Event$c */
+        /* JADX INFO: compiled from: AppMediaPlayer.kt */
         public static final class C5585c extends Event {
 
-            /* renamed from: a */
+            /* JADX INFO: renamed from: a */
             public final long f18656a;
 
             public C5585c(long j) {
@@ -153,11 +153,11 @@ public final class AppMediaPlayer {
             }
         }
 
-        /* compiled from: AppMediaPlayer.kt */
-        /* renamed from: com.discord.player.AppMediaPlayer$Event$d */
+        /* JADX INFO: renamed from: com.discord.player.AppMediaPlayer$Event$d */
+        /* JADX INFO: compiled from: AppMediaPlayer.kt */
         public static final class C5586d extends Event {
 
-            /* renamed from: a */
+            /* JADX INFO: renamed from: a */
             public static final C5586d f18657a = new C5586d();
 
             public C5586d() {
@@ -165,11 +165,11 @@ public final class AppMediaPlayer {
             }
         }
 
-        /* compiled from: AppMediaPlayer.kt */
-        /* renamed from: com.discord.player.AppMediaPlayer$Event$e */
+        /* JADX INFO: renamed from: com.discord.player.AppMediaPlayer$Event$e */
+        /* JADX INFO: compiled from: AppMediaPlayer.kt */
         public static final class C5587e extends Event {
 
-            /* renamed from: a */
+            /* JADX INFO: renamed from: a */
             public static final C5587e f18658a = new C5587e();
 
             public C5587e() {
@@ -177,11 +177,11 @@ public final class AppMediaPlayer {
             }
         }
 
-        /* compiled from: AppMediaPlayer.kt */
-        /* renamed from: com.discord.player.AppMediaPlayer$Event$f */
+        /* JADX INFO: renamed from: com.discord.player.AppMediaPlayer$Event$f */
+        /* JADX INFO: compiled from: AppMediaPlayer.kt */
         public static final class C5588f extends Event {
 
-            /* renamed from: a */
+            /* JADX INFO: renamed from: a */
             public static final C5588f f18659a = new C5588f();
 
             public C5588f() {
@@ -228,7 +228,7 @@ public final class AppMediaPlayer {
         compositeSubscription.m11136a(publishSubject3.m11085K().m11097W(new AppMediaPlayer4(this, str), new AppMediaPlayer5(this)));
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static /* synthetic */ void m8438b(AppMediaPlayer appMediaPlayer, MediaSource mediaSource, boolean z2, boolean z3, long j, PlayerView playerView, PlayerControlView playerControlView, int i) {
         int i2 = i & 32;
         appMediaPlayer.m8439a(mediaSource, (i & 2) != 0 ? false : z2, (i & 4) != 0 ? false : z3, (i & 8) != 0 ? 0L : j, playerView, null);
@@ -236,7 +236,7 @@ public final class AppMediaPlayer {
 
     /* JADX WARN: Multi-variable type inference failed */
     @MainThread
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final void m8439a(MediaSource mediaSource, boolean autoPlayWhenReady, boolean loopMedia, long initialSeekPositionMs, PlayerView playerView, PlayerControlView playerControlView) {
         DrmSessionManager2 drmSessionManager2;
         Intrinsics3.checkNotNullParameter(mediaSource, "mediaSource");
@@ -329,7 +329,7 @@ public final class AppMediaPlayer {
     }
 
     @MainThread
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final void m8440c() {
         AudioTrack audioTrack;
         ((SimpleExoPlayer) this.exoPlayer).mo2926u(false);
@@ -383,7 +383,7 @@ public final class AppMediaPlayer {
     }
 
     @MainThread
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final void m8441d(float volume) {
         SimpleExoPlayer simpleExoPlayer = (SimpleExoPlayer) this.exoPlayer;
         simpleExoPlayer.m3290n0();

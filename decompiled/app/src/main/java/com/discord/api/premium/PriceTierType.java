@@ -1,8 +1,8 @@
 package com.discord.api.premium;
 
 
-/* compiled from: PriceTierType.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: PriceTierType.kt */
+/* JADX INFO: loaded from: classes.dex */
 public enum PriceTierType {
     UNKNOWN(-1),
     GUILD_ROLE_SUBSCRIPTIONS(1);

@@ -23,15 +23,15 @@ import p007b.p225i.p226a.p288f.p299e.p304k.C3354f0;
 import p007b.p225i.p226a.p288f.p299e.p304k.C3384u0;
 import p007b.p225i.p226a.p288f.p299e.p310p.C3411b;
 
-/* compiled from: com.google.android.gms:play-services-basement@@17.6.0 */
-/* renamed from: b.i.a.f.e.c */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.e.c */
+/* JADX INFO: compiled from: com.google.android.gms:play-services-basement@@17.6.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public class C3256c {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final int f9306a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static final C3256c f9307b;
 
     static {
@@ -41,7 +41,7 @@ public class C3256c {
     }
 
     @RecentlyNullable
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public Intent mo4017a(@Nullable Context context, int i, @Nullable String str) {
         if (i != 1 && i != 2) {
             if (i != 3) {
@@ -95,7 +95,7 @@ public class C3256c {
     /* JADX WARN: Removed duplicated region for block: B:84:0x0173  */
     /* JADX WARN: Removed duplicated region for block: B:87:0x017b A[RETURN] */
     /* JADX WARN: Removed duplicated region for block: B:88:0x017c A[RETURN] */
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
@@ -174,10 +174,6 @@ public class C3256c {
                             } catch (PackageManager.NameNotFoundException e) {
                                 Log.wtf("GooglePlayServicesUtil", String.valueOf(packageName).concat(" requires Google Play services, but they're missing when getting application info."), e);
                                 i2 = 1;
-                                if (i2 == 18) {
-                                }
-                                if (zM4020b) {
-                                }
                             }
                         }
                         i2 = !applicationInfo.enabled ? 3 : 0;
@@ -186,19 +182,19 @@ public class C3256c {
                     Log.w("GooglePlayServicesUtil", String.valueOf(packageName).concat(" requires Google Play Store, but its signature doesn't match that of Google Play services."));
                 }
             }
-            if (i2 == 18) {
+            if (i2 != 18) {
                 zM4020b = true;
             } else if (i2 == 1) {
                 zM4020b = C3260e.m4020b(context, "com.google.android.gms");
             }
             if (zM4020b) {
-                return 18;
+                return i2;
             }
-            return i2;
+            return 18;
         }
         Log.w("GooglePlayServicesUtil", String.valueOf(packageName).concat(" requires Google Play services, but their signature is invalid."));
         i2 = 9;
-        if (i2 == 18) {
+        if (i2 != 18) {
         }
         if (zM4020b) {
         }

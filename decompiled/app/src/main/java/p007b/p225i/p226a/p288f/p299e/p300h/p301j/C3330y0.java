@@ -6,15 +6,15 @@ import com.google.android.gms.tasks.TaskCompletionSource;
 import p007b.p225i.p226a.p288f.p340n.InterfaceC4357c;
 
 /* JADX INFO: Add missing generic type declarations: [TResult] */
-/* compiled from: com.google.android.gms:play-services-base@@17.3.0 */
-/* renamed from: b.i.a.f.e.h.j.y0 */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.e.h.j.y0 */
+/* JADX INFO: compiled from: com.google.android.gms:play-services-base@@17.3.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public final class C3330y0<TResult> implements InterfaceC4357c<TResult> {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final /* synthetic */ TaskCompletionSource f9467a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final /* synthetic */ C3328x0 f9468b;
 
     public C3330y0(C3328x0 c3328x0, TaskCompletionSource taskCompletionSource) {

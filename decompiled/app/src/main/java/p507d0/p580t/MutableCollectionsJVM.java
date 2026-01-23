@@ -5,9 +5,9 @@ import java.util.Comparator;
 import java.util.List;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: MutableCollectionsJVM.kt */
-/* renamed from: d0.t.q, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.t.q, reason: use source file name */
+/* JADX INFO: compiled from: MutableCollectionsJVM.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public class MutableCollectionsJVM extends Iterators7 {
     public static final <T extends Comparable<? super T>> void sort(List<T> list) {
         Intrinsics3.checkNotNullParameter(list, "$this$sort");

@@ -5,8 +5,8 @@ import java.util.List;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ApplicationCommand.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: ApplicationCommand.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class ApplicationCommand {
     private final long applicationId;
     private final Boolean defaultPermissions;
@@ -18,27 +18,27 @@ public final /* data */ class ApplicationCommand {
     private final List<ApplicationCommandPermission> permissions;
     private final String version;
 
-    /* renamed from: a, reason: from getter */
+    /* JADX INFO: renamed from: a, reason: from getter */
     public final long getApplicationId() {
         return this.applicationId;
     }
 
-    /* renamed from: b, reason: from getter */
+    /* JADX INFO: renamed from: b, reason: from getter */
     public final Boolean getDefaultPermissions() {
         return this.defaultPermissions;
     }
 
-    /* renamed from: c, reason: from getter */
+    /* JADX INFO: renamed from: c, reason: from getter */
     public final String getDescription() {
         return this.description;
     }
 
-    /* renamed from: d, reason: from getter */
+    /* JADX INFO: renamed from: d, reason: from getter */
     public final String getGuildId() {
         return this.guildId;
     }
 
-    /* renamed from: e, reason: from getter */
+    /* JADX INFO: renamed from: e, reason: from getter */
     public final long getId() {
         return this.id;
     }
@@ -54,17 +54,17 @@ public final /* data */ class ApplicationCommand {
         return this.id == applicationCommand.id && this.applicationId == applicationCommand.applicationId && Intrinsics3.areEqual(this.name, applicationCommand.name) && Intrinsics3.areEqual(this.description, applicationCommand.description) && Intrinsics3.areEqual(this.options, applicationCommand.options) && Intrinsics3.areEqual(this.version, applicationCommand.version) && Intrinsics3.areEqual(this.guildId, applicationCommand.guildId) && Intrinsics3.areEqual(this.defaultPermissions, applicationCommand.defaultPermissions) && Intrinsics3.areEqual(this.permissions, applicationCommand.permissions);
     }
 
-    /* renamed from: f, reason: from getter */
+    /* JADX INFO: renamed from: f, reason: from getter */
     public final String getName() {
         return this.name;
     }
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public final List<ApplicationCommandOption> m7717g() {
         return this.options;
     }
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public final List<ApplicationCommandPermission> m7718h() {
         return this.permissions;
     }
@@ -89,7 +89,7 @@ public final /* data */ class ApplicationCommand {
         return iHashCode6 + (list2 != null ? list2.hashCode() : 0);
     }
 
-    /* renamed from: i, reason: from getter */
+    /* JADX INFO: renamed from: i, reason: from getter */
     public final String getVersion() {
         return this.version;
     }

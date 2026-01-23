@@ -9,15 +9,15 @@ import com.google.android.gms.common.internal.safeparcel.AbstractSafeParcelable;
 import p007b.p085c.p086a.p087a0.AnimatableValueParser;
 import p007b.p225i.p226a.p288f.p292c.p293a.p296f.p297b.C3216s;
 
-/* compiled from: com.google.android.gms:play-services-auth@@19.0.0 */
-/* loaded from: classes3.dex */
+/* JADX INFO: compiled from: com.google.android.gms:play-services-auth@@19.0.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public final class SignInConfiguration extends AbstractSafeParcelable implements ReflectedParcelable {
     public static final Parcelable.Creator<SignInConfiguration> CREATOR = new C3216s();
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final String f20461j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public GoogleSignInOptions f20462k;
 
     public SignInConfiguration(String str, GoogleSignInOptions googleSignInOptions) {

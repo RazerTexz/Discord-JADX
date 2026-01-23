@@ -12,7 +12,7 @@ import java.util.TimerTask;
 import java.util.concurrent.TimeUnit;
 import p007b.p100d.p104b.p105a.outline;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public class FileVideoCapturer implements VideoCapturer {
     private static final String TAG = "FileVideoCapturer";
     private CapturerObserver capturerObserver;
@@ -20,7 +20,7 @@ public class FileVideoCapturer implements VideoCapturer {
     private final Timer timer = new Timer();
     private final TimerTask tickTask = new C129641();
 
-    /* renamed from: org.webrtc.FileVideoCapturer$1 */
+    /* JADX INFO: renamed from: org.webrtc.FileVideoCapturer$1 */
     public class C129641 extends TimerTask {
         public C129641() {
         }
@@ -47,7 +47,7 @@ public class FileVideoCapturer implements VideoCapturer {
         private final FileChannel mediaFileChannel;
         private final long videoStart;
 
-        public VideoReaderY4M(String str) throws IOException, NumberFormatException {
+        public VideoReaderY4M(String str) throws IOException {
             RandomAccessFile randomAccessFile = new RandomAccessFile(str, "r");
             this.mediaFile = randomAccessFile;
             this.mediaFileChannel = randomAccessFile.getChannel();

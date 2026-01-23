@@ -5,15 +5,15 @@ import com.google.android.gms.auth.api.credentials.Credential;
 import com.google.android.gms.common.api.Status;
 import p007b.p225i.p226a.p288f.p292c.p293a.p294d.InterfaceC3187b;
 
-/* compiled from: com.google.android.gms:play-services-auth@@19.0.0 */
-/* renamed from: b.i.a.f.h.c.e */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.h.c.e */
+/* JADX INFO: compiled from: com.google.android.gms:play-services-auth@@19.0.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public final class C3456e implements InterfaceC3187b {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final Status f9637j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     @Nullable
     public final Credential f9638k;
 
@@ -24,13 +24,13 @@ public final class C3456e implements InterfaceC3187b {
 
     @Override // p007b.p225i.p226a.p288f.p292c.p293a.p294d.InterfaceC3187b
     @Nullable
-    /* renamed from: R */
+    /* JADX INFO: renamed from: R */
     public final Credential mo3969R() {
         return this.f9638k;
     }
 
     @Override // p007b.p225i.p226a.p288f.p299e.p300h.InterfaceC3273h
-    /* renamed from: b0 */
+    /* JADX INFO: renamed from: b0 */
     public final Status mo4053b0() {
         return this.f9637j;
     }

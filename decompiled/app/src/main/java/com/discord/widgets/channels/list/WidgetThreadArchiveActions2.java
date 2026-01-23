@@ -7,9 +7,9 @@ import com.discord.utilities.threads.ThreadUtils;
 import com.discord.widgets.channels.list.WidgetThreadArchiveActions;
 import p658rx.functions.Func3;
 
-/* compiled from: WidgetThreadArchiveActions.kt */
-/* renamed from: com.discord.widgets.channels.list.WidgetThreadArchiveActions$Model$Companion$get$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.channels.list.WidgetThreadArchiveActions$Model$Companion$get$1, reason: use source file name */
+/* JADX INFO: compiled from: WidgetThreadArchiveActions.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetThreadArchiveActions2<T1, T2, T3, R> implements Func3<Channel, Guild, Long, WidgetThreadArchiveActions.Model> {
     public static final WidgetThreadArchiveActions2 INSTANCE = new WidgetThreadArchiveActions2();
 
@@ -18,7 +18,7 @@ public final class WidgetThreadArchiveActions2<T1, T2, T3, R> implements Func3<C
         return call2(channel, guild, l);
     }
 
-    /* renamed from: call, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
     public final WidgetThreadArchiveActions.Model call2(Channel channel, Guild guild, Long l) {
         if (channel != null) {
             return new WidgetThreadArchiveActions.Model(channel, guild, ThreadUtils.INSTANCE.isThreadModerator(Long.valueOf(l != null ? l.longValue() : 0L)));

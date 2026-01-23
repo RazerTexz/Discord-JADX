@@ -16,21 +16,21 @@ import p007b.p225i.p226a.p242c.p257e3.BaseDataSource;
 import p007b.p225i.p226a.p242c.p257e3.DataSpec;
 import p007b.p225i.p226a.p242c.p259f3.Util2;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public final class FileDataSource extends BaseDataSource {
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     @Nullable
     public RandomAccessFile f20225e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     @Nullable
     public Uri f20226f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public long f20227g;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public boolean f20228h;
 
     public static class FileDataSourceException extends DataSourceException {
@@ -43,16 +43,16 @@ public final class FileDataSource extends BaseDataSource {
         }
     }
 
+    /* JADX INFO: renamed from: com.google.android.exoplayer2.upstream.FileDataSource$a */
     @RequiresApi(21)
-    /* renamed from: com.google.android.exoplayer2.upstream.FileDataSource$a */
     public static final class C10765a {
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public static /* synthetic */ boolean m8935a(Throwable th) {
             return m8936b(th);
         }
 
         @DoNotInline
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         private static boolean m8936b(@Nullable Throwable th) {
             return (th instanceof ErrnoException) && ((ErrnoException) th).errno == OsConstants.EACCES;
         }
@@ -63,7 +63,7 @@ public final class FileDataSource extends BaseDataSource {
     }
 
     @Override // p007b.p225i.p226a.p242c.p257e3.DataSource3
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public long mo2586a(DataSpec dataSpec) throws FileDataSourceException {
         Uri uri = dataSpec.f6542a;
         this.f20226f = uri;
@@ -124,7 +124,7 @@ public final class FileDataSource extends BaseDataSource {
 
     @Override // p007b.p225i.p226a.p242c.p257e3.DataSource3
     @Nullable
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public Uri mo2589n() {
         return this.f20226f;
     }
@@ -143,7 +143,7 @@ public final class FileDataSource extends BaseDataSource {
             int i3 = Util2.f6708a;
             int i4 = randomAccessFile.read(bArr, i, (int) Math.min(j, i2));
             if (i4 > 0) {
-                this.f20227g -= i4;
+                this.f20227g -= (long) i4;
                 m2848p(i4);
             }
             return i4;

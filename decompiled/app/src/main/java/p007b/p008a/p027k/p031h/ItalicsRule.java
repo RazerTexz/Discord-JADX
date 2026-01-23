@@ -13,9 +13,9 @@ import p507d0.p580t.CollectionsJVM;
 import p507d0.p592z.p594d.Intrinsics3;
 
 /* JADX INFO: Add missing generic type declarations: [T] */
-/* compiled from: ItalicsRule.kt */
-/* renamed from: b.a.k.h.h, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.a.k.h.h, reason: use source file name */
+/* JADX INFO: compiled from: ItalicsRule.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class ItalicsRule<T> extends Rule<T, Node<T>, ParseState> {
     public ItalicsRule(Pattern pattern) {
         super(pattern);

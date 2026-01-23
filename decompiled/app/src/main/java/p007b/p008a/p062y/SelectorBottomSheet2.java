@@ -5,9 +5,9 @@ import org.objectweb.asm.Opcodes;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: SelectorBottomSheet.kt */
-/* renamed from: b.a.y.c0, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: b.a.y.c0, reason: use source file name */
+/* JADX INFO: compiled from: SelectorBottomSheet.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class SelectorBottomSheet2 implements Serializable {
     private final CharSequence description;
     private final Integer iconRes;
@@ -38,27 +38,27 @@ public final class SelectorBottomSheet2 implements Serializable {
         this.titleEndIcon = null;
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final CharSequence m380a() {
         return this.description;
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final Integer m381b() {
         return this.iconRes;
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final Integer m382c() {
         return this.iconTint;
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final String m383d() {
         return this.iconUri;
     }
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final String m384e() {
         return this.title;
     }
@@ -74,12 +74,12 @@ public final class SelectorBottomSheet2 implements Serializable {
         return Intrinsics3.areEqual(this.title, selectorBottomSheet2.title) && Intrinsics3.areEqual(this.description, selectorBottomSheet2.description) && Intrinsics3.areEqual(this.iconRes, selectorBottomSheet2.iconRes) && Intrinsics3.areEqual(this.iconUri, selectorBottomSheet2.iconUri) && Intrinsics3.areEqual(this.iconTint, selectorBottomSheet2.iconTint) && Intrinsics3.areEqual(this.titleTextColor, selectorBottomSheet2.titleTextColor) && Intrinsics3.areEqual(this.titleEndIcon, selectorBottomSheet2.titleEndIcon);
     }
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final Integer m385f() {
         return this.titleEndIcon;
     }
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public final Integer m386g() {
         return this.titleTextColor;
     }

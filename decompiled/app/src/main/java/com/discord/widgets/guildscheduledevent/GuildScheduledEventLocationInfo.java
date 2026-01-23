@@ -12,14 +12,14 @@ import kotlin.jvm.internal.DefaultConstructorMarker;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: GuildScheduledEventLocationInfo.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: GuildScheduledEventLocationInfo.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public abstract class GuildScheduledEventLocationInfo {
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
 
-    /* compiled from: GuildScheduledEventLocationInfo.kt */
+    /* JADX INFO: compiled from: GuildScheduledEventLocationInfo.kt */
     public static final /* data */ class ChannelLocation extends GuildScheduledEventLocationInfo {
         private final Channel channel;
 
@@ -35,7 +35,7 @@ public abstract class GuildScheduledEventLocationInfo {
             return channelLocation.copy(channel);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final Channel getChannel() {
             return this.channel;
         }
@@ -71,7 +71,7 @@ public abstract class GuildScheduledEventLocationInfo {
         }
     }
 
-    /* compiled from: GuildScheduledEventLocationInfo.kt */
+    /* JADX INFO: compiled from: GuildScheduledEventLocationInfo.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -107,7 +107,7 @@ public abstract class GuildScheduledEventLocationInfo {
         }
     }
 
-    /* compiled from: GuildScheduledEventLocationInfo.kt */
+    /* JADX INFO: compiled from: GuildScheduledEventLocationInfo.kt */
     public static final /* data */ class ExternalLocation extends GuildScheduledEventLocationInfo {
         private final String location;
 
@@ -125,7 +125,7 @@ public abstract class GuildScheduledEventLocationInfo {
             return externalLocation.copy(str);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final String getLocation() {
             return this.location;
         }

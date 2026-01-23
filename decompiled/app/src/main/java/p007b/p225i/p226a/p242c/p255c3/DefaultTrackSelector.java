@@ -28,71 +28,71 @@ import p007b.p225i.p355b.p357b.NaturalOrdering;
 import p007b.p225i.p355b.p357b.Ordering;
 import p007b.p225i.p355b.p357b.ReverseNaturalOrdering;
 
-/* compiled from: DefaultTrackSelector.java */
-/* renamed from: b.i.a.c.c3.h, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.c3.h, reason: use source file name */
+/* JADX INFO: compiled from: DefaultTrackSelector.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class DefaultTrackSelector extends MappingTrackSelector {
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static final int[] f6192b = new int[0];
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public static final Ordering<Integer> f6193c = Ordering.m6237a(C2637c.f6179j);
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public static final Ordering<Integer> f6194d = Ordering.m6237a(C2636b.f6178j);
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final ExoTrackSelection2.b f6195e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final AtomicReference<d> f6196f;
 
-    /* compiled from: DefaultTrackSelector.java */
-    /* renamed from: b.i.a.c.c3.h$b */
+    /* JADX INFO: renamed from: b.i.a.c.c3.h$b */
+    /* JADX INFO: compiled from: DefaultTrackSelector.java */
     public static final class b implements Comparable<b> {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public final boolean f6197j;
 
-        /* renamed from: k */
+        /* JADX INFO: renamed from: k */
         @Nullable
         public final String f6198k;
 
-        /* renamed from: l */
+        /* JADX INFO: renamed from: l */
         public final d f6199l;
 
-        /* renamed from: m */
+        /* JADX INFO: renamed from: m */
         public final boolean f6200m;
 
-        /* renamed from: n */
+        /* JADX INFO: renamed from: n */
         public final int f6201n;
 
-        /* renamed from: o */
+        /* JADX INFO: renamed from: o */
         public final int f6202o;
 
-        /* renamed from: p */
+        /* JADX INFO: renamed from: p */
         public final int f6203p;
 
-        /* renamed from: q */
+        /* JADX INFO: renamed from: q */
         public final int f6204q;
 
-        /* renamed from: r */
+        /* JADX INFO: renamed from: r */
         public final int f6205r;
 
-        /* renamed from: s */
+        /* JADX INFO: renamed from: s */
         public final boolean f6206s;
 
-        /* renamed from: t */
+        /* JADX INFO: renamed from: t */
         public final int f6207t;
 
-        /* renamed from: u */
+        /* JADX INFO: renamed from: u */
         public final int f6208u;
 
-        /* renamed from: v */
+        /* JADX INFO: renamed from: v */
         public final int f6209v;
 
-        /* renamed from: w */
+        /* JADX INFO: renamed from: w */
         public final int f6210w;
 
         public b(Format2 format2, d dVar, int i) {
@@ -180,7 +180,7 @@ public class DefaultTrackSelector extends MappingTrackSelector {
             return m2740f(bVar);
         }
 
-        /* renamed from: f */
+        /* JADX INFO: renamed from: f */
         public int m2740f(b bVar) {
             Object objMo6236b = (this.f6197j && this.f6200m) ? DefaultTrackSelector.f6193c : DefaultTrackSelector.f6193c.mo6236b();
             ComparisonChain comparisonChainMo6256c = ComparisonChain.f12028a.mo6256c(this.f6200m, bVar.f6200m);
@@ -197,14 +197,14 @@ public class DefaultTrackSelector extends MappingTrackSelector {
         }
     }
 
-    /* compiled from: DefaultTrackSelector.java */
-    /* renamed from: b.i.a.c.c3.h$c */
+    /* JADX INFO: renamed from: b.i.a.c.c3.h$c */
+    /* JADX INFO: compiled from: DefaultTrackSelector.java */
     public static final class c implements Comparable<c> {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public final boolean f6211j;
 
-        /* renamed from: k */
+        /* JADX INFO: renamed from: k */
         public final boolean f6212k;
 
         public c(Format2 format2, int i) {
@@ -217,56 +217,56 @@ public class DefaultTrackSelector extends MappingTrackSelector {
             return m2741f(cVar);
         }
 
-        /* renamed from: f */
+        /* JADX INFO: renamed from: f */
         public int m2741f(c cVar) {
             return ComparisonChain.f12028a.mo6256c(this.f6212k, cVar.f6212k).mo6256c(this.f6211j, cVar.f6211j).mo6258e();
         }
     }
 
-    /* compiled from: DefaultTrackSelector.java */
-    /* renamed from: b.i.a.c.c3.h$d */
+    /* JADX INFO: renamed from: b.i.a.c.c3.h$d */
+    /* JADX INFO: compiled from: DefaultTrackSelector.java */
     public static final class d extends TrackSelectionParameters implements Bundleable {
 
-        /* renamed from: I */
+        /* JADX INFO: renamed from: I */
         public static final d f6213I = new e().m2745d();
 
-        /* renamed from: J */
+        /* JADX INFO: renamed from: J */
         public final int f6214J;
 
-        /* renamed from: K */
+        /* JADX INFO: renamed from: K */
         public final boolean f6215K;
 
-        /* renamed from: L */
+        /* JADX INFO: renamed from: L */
         public final boolean f6216L;
 
-        /* renamed from: M */
+        /* JADX INFO: renamed from: M */
         public final boolean f6217M;
 
-        /* renamed from: N */
+        /* JADX INFO: renamed from: N */
         public final boolean f6218N;
 
-        /* renamed from: O */
+        /* JADX INFO: renamed from: O */
         public final boolean f6219O;
 
-        /* renamed from: P */
+        /* JADX INFO: renamed from: P */
         public final boolean f6220P;
 
-        /* renamed from: Q */
+        /* JADX INFO: renamed from: Q */
         public final boolean f6221Q;
 
-        /* renamed from: R */
+        /* JADX INFO: renamed from: R */
         public final boolean f6222R;
 
-        /* renamed from: S */
+        /* JADX INFO: renamed from: S */
         public final boolean f6223S;
 
-        /* renamed from: T */
+        /* JADX INFO: renamed from: T */
         public final boolean f6224T;
 
-        /* renamed from: U */
+        /* JADX INFO: renamed from: U */
         public final SparseArray<Map<TrackGroupArray, f>> f6225U;
 
-        /* renamed from: V */
+        /* JADX INFO: renamed from: V */
         public final SparseBooleanArray f6226V;
 
         public d(e eVar, a aVar) {
@@ -372,17 +372,17 @@ public class DefaultTrackSelector extends MappingTrackSelector {
         }
     }
 
-    /* compiled from: DefaultTrackSelector.java */
-    /* renamed from: b.i.a.c.c3.h$f */
+    /* JADX INFO: renamed from: b.i.a.c.c3.h$f */
+    /* JADX INFO: compiled from: DefaultTrackSelector.java */
     public static final class f implements Bundleable {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public final int f6240j;
 
-        /* renamed from: k */
+        /* JADX INFO: renamed from: k */
         public final int[] f6241k;
 
-        /* renamed from: l */
+        /* JADX INFO: renamed from: l */
         public final int f6242l;
 
         public boolean equals(@Nullable Object obj) {
@@ -401,35 +401,35 @@ public class DefaultTrackSelector extends MappingTrackSelector {
         }
     }
 
-    /* compiled from: DefaultTrackSelector.java */
-    /* renamed from: b.i.a.c.c3.h$g */
+    /* JADX INFO: renamed from: b.i.a.c.c3.h$g */
+    /* JADX INFO: compiled from: DefaultTrackSelector.java */
     public static final class g implements Comparable<g> {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public final boolean f6243j;
 
-        /* renamed from: k */
+        /* JADX INFO: renamed from: k */
         public final boolean f6244k;
 
-        /* renamed from: l */
+        /* JADX INFO: renamed from: l */
         public final boolean f6245l;
 
-        /* renamed from: m */
+        /* JADX INFO: renamed from: m */
         public final boolean f6246m;
 
-        /* renamed from: n */
+        /* JADX INFO: renamed from: n */
         public final int f6247n;
 
-        /* renamed from: o */
+        /* JADX INFO: renamed from: o */
         public final int f6248o;
 
-        /* renamed from: p */
+        /* JADX INFO: renamed from: p */
         public final int f6249p;
 
-        /* renamed from: q */
+        /* JADX INFO: renamed from: q */
         public final int f6250q;
 
-        /* renamed from: r */
+        /* JADX INFO: renamed from: r */
         public final boolean f6251r;
 
         public g(Format2 format2, d dVar, int i, @Nullable String str) {
@@ -472,22 +472,20 @@ public class DefaultTrackSelector extends MappingTrackSelector {
             return m2747f(gVar);
         }
 
-        /* JADX WARN: Multi-variable type inference failed */
-        /* JADX WARN: Type inference failed for: r4v0, types: [b.i.b.b.k0, java.util.Comparator] */
-        /* renamed from: f */
+        /* JADX INFO: renamed from: f */
         public int m2747f(g gVar) {
             ComparisonChain comparisonChainMo6256c = ComparisonChain.f12028a.mo6256c(this.f6244k, gVar.f6244k);
             Integer numValueOf = Integer.valueOf(this.f6247n);
             Integer numValueOf2 = Integer.valueOf(gVar.f6247n);
-            NaturalOrdering naturalOrdering = NaturalOrdering.f12005j;
-            ?? r4 = ReverseNaturalOrdering.f12038j;
-            ComparisonChain comparisonChainMo6256c2 = comparisonChainMo6256c.mo6255b(numValueOf, numValueOf2, r4).mo6254a(this.f6248o, gVar.f6248o).mo6254a(this.f6249p, gVar.f6249p).mo6256c(this.f6245l, gVar.f6245l);
+            Ordering ordering = NaturalOrdering.f12005j;
+            ReverseNaturalOrdering reverseNaturalOrdering = ReverseNaturalOrdering.f12038j;
+            ComparisonChain comparisonChainMo6256c2 = comparisonChainMo6256c.mo6255b(numValueOf, numValueOf2, reverseNaturalOrdering).mo6254a(this.f6248o, gVar.f6248o).mo6254a(this.f6249p, gVar.f6249p).mo6256c(this.f6245l, gVar.f6245l);
             Boolean boolValueOf = Boolean.valueOf(this.f6246m);
             Boolean boolValueOf2 = Boolean.valueOf(gVar.f6246m);
             if (this.f6248o != 0) {
-                naturalOrdering = r4;
+                ordering = reverseNaturalOrdering;
             }
-            ComparisonChain comparisonChainMo6254a = comparisonChainMo6256c2.mo6255b(boolValueOf, boolValueOf2, naturalOrdering).mo6254a(this.f6250q, gVar.f6250q);
+            ComparisonChain comparisonChainMo6254a = comparisonChainMo6256c2.mo6255b(boolValueOf, boolValueOf2, ordering).mo6254a(this.f6250q, gVar.f6250q);
             if (this.f6249p == 0) {
                 comparisonChainMo6254a = comparisonChainMo6254a.mo6257d(this.f6251r, gVar.f6251r);
             }
@@ -495,29 +493,29 @@ public class DefaultTrackSelector extends MappingTrackSelector {
         }
     }
 
-    /* compiled from: DefaultTrackSelector.java */
-    /* renamed from: b.i.a.c.c3.h$h */
+    /* JADX INFO: renamed from: b.i.a.c.c3.h$h */
+    /* JADX INFO: compiled from: DefaultTrackSelector.java */
     public static final class h implements Comparable<h> {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public final boolean f6252j;
 
-        /* renamed from: k */
+        /* JADX INFO: renamed from: k */
         public final d f6253k;
 
-        /* renamed from: l */
+        /* JADX INFO: renamed from: l */
         public final boolean f6254l;
 
-        /* renamed from: m */
+        /* JADX INFO: renamed from: m */
         public final boolean f6255m;
 
-        /* renamed from: n */
+        /* JADX INFO: renamed from: n */
         public final int f6256n;
 
-        /* renamed from: o */
+        /* JADX INFO: renamed from: o */
         public final int f6257o;
 
-        /* renamed from: p */
+        /* JADX INFO: renamed from: p */
         public final int f6258p;
 
         /* JADX WARN: Removed duplicated region for block: B:21:0x0033  */
@@ -583,7 +581,7 @@ public class DefaultTrackSelector extends MappingTrackSelector {
             return m2748f(hVar);
         }
 
-        /* renamed from: f */
+        /* JADX INFO: renamed from: f */
         public int m2748f(h hVar) {
             Object objMo6236b = (this.f6252j && this.f6255m) ? DefaultTrackSelector.f6193c : DefaultTrackSelector.f6193c.mo6236b();
             return ComparisonChain.f12028a.mo6256c(this.f6255m, hVar.f6255m).mo6256c(this.f6252j, hVar.f6252j).mo6256c(this.f6254l, hVar.f6254l).mo6255b(Integer.valueOf(this.f6258p), Integer.valueOf(hVar.f6258p), ReverseNaturalOrdering.f12038j).mo6255b(Integer.valueOf(this.f6256n), Integer.valueOf(hVar.f6256n), this.f6253k.f6281E ? DefaultTrackSelector.f6193c.mo6236b() : DefaultTrackSelector.f6194d).mo6255b(Integer.valueOf(this.f6257o), Integer.valueOf(hVar.f6257o), objMo6236b).mo6255b(Integer.valueOf(this.f6256n), Integer.valueOf(hVar.f6256n), objMo6236b).mo6258e();
@@ -598,7 +596,7 @@ public class DefaultTrackSelector extends MappingTrackSelector {
         this.f6196f = new AtomicReference<>(dVarM2745d);
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public static int m2735c(Format2 format2, @Nullable String str, boolean z2) {
         if (!TextUtils.isEmpty(str) && str.equals(format2.f7146n)) {
             return 4;
@@ -618,7 +616,7 @@ public class DefaultTrackSelector extends MappingTrackSelector {
     /* JADX WARN: Removed duplicated region for block: B:26:0x0045  */
     /* JADX WARN: Removed duplicated region for block: B:29:0x004d  */
     /* JADX WARN: Removed duplicated region for block: B:30:0x0057  */
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
@@ -687,13 +685,13 @@ public class DefaultTrackSelector extends MappingTrackSelector {
         return arrayList;
     }
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public static boolean m2737e(int i, boolean z2) {
         int i2 = i & 7;
         return i2 == 4 || (z2 && i2 == 3);
     }
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public static boolean m2738f(Format2 format2, @Nullable String str, int i, int i2, int i3, int i4, int i5, int i6, int i7, int i8, int i9, int i10) {
         int i11;
         if ((format2.f7148p & 16384) != 0 || !m2737e(i, false) || (i & i2) == 0) {
@@ -715,7 +713,7 @@ public class DefaultTrackSelector extends MappingTrackSelector {
     }
 
     @Nullable
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public static String m2739g(@Nullable String str) {
         if (TextUtils.isEmpty(str) || TextUtils.equals(str, "und")) {
             return null;
@@ -723,47 +721,47 @@ public class DefaultTrackSelector extends MappingTrackSelector {
         return str;
     }
 
-    /* compiled from: DefaultTrackSelector.java */
-    /* renamed from: b.i.a.c.c3.h$e */
+    /* JADX INFO: renamed from: b.i.a.c.c3.h$e */
+    /* JADX INFO: compiled from: DefaultTrackSelector.java */
     public static final class e extends TrackSelectionParameters.a {
 
-        /* renamed from: A */
+        /* JADX INFO: renamed from: A */
         public boolean f6227A;
 
-        /* renamed from: B */
+        /* JADX INFO: renamed from: B */
         public boolean f6228B;
 
-        /* renamed from: C */
+        /* JADX INFO: renamed from: C */
         public boolean f6229C;
 
-        /* renamed from: D */
+        /* JADX INFO: renamed from: D */
         public boolean f6230D;
 
-        /* renamed from: E */
+        /* JADX INFO: renamed from: E */
         public boolean f6231E;
 
-        /* renamed from: F */
+        /* JADX INFO: renamed from: F */
         public int f6232F;
 
-        /* renamed from: G */
+        /* JADX INFO: renamed from: G */
         public boolean f6233G;
 
-        /* renamed from: H */
+        /* JADX INFO: renamed from: H */
         public boolean f6234H;
 
-        /* renamed from: I */
+        /* JADX INFO: renamed from: I */
         public boolean f6235I;
 
-        /* renamed from: J */
+        /* JADX INFO: renamed from: J */
         public final SparseArray<Map<TrackGroupArray, f>> f6236J;
 
-        /* renamed from: K */
+        /* JADX INFO: renamed from: K */
         public final SparseBooleanArray f6237K;
 
-        /* renamed from: y */
+        /* JADX INFO: renamed from: y */
         public boolean f6238y;
 
-        /* renamed from: z */
+        /* JADX INFO: renamed from: z */
         public boolean f6239z;
 
         public e(Context context) {
@@ -775,14 +773,14 @@ public class DefaultTrackSelector extends MappingTrackSelector {
         }
 
         @Override // p007b.p225i.p226a.p242c.p255c3.TrackSelectionParameters.a
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public TrackSelectionParameters.a mo2742a(Context context) {
             super.mo2742a(context);
             return this;
         }
 
         @Override // p007b.p225i.p226a.p242c.p255c3.TrackSelectionParameters.a
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public TrackSelectionParameters.a mo2743b(int i, int i2, boolean z2) {
             this.f6309i = i;
             this.f6310j = i2;
@@ -791,18 +789,18 @@ public class DefaultTrackSelector extends MappingTrackSelector {
         }
 
         @Override // p007b.p225i.p226a.p242c.p255c3.TrackSelectionParameters.a
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public TrackSelectionParameters.a mo2744c(Context context, boolean z2) {
             super.mo2744c(context, z2);
             return this;
         }
 
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         public d m2745d() {
             return new d(this, null);
         }
 
-        /* renamed from: e */
+        /* JADX INFO: renamed from: e */
         public final void m2746e() {
             this.f6238y = true;
             this.f6239z = false;

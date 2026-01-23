@@ -3,7 +3,6 @@ package androidx.cardview.widget;
 import android.R;
 import android.content.Context;
 import android.content.res.ColorStateList;
-import android.content.res.Resources;
 import android.content.res.TypedArray;
 import android.graphics.Color;
 import android.graphics.Rect;
@@ -17,7 +16,7 @@ import androidx.annotation.Nullable;
 import androidx.annotation.Px;
 import androidx.cardview.C0159R;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class CardView extends FrameLayout {
     private static final int[] COLOR_BACKGROUND_ATTR = {R.attr.colorBackground};
     private static final CardViewImpl IMPL;
@@ -29,7 +28,7 @@ public class CardView extends FrameLayout {
     public int mUserSetMinHeight;
     public int mUserSetMinWidth;
 
-    /* renamed from: androidx.cardview.widget.CardView$1 */
+    /* JADX INFO: renamed from: androidx.cardview.widget.CardView$1 */
     public class C01601 implements CardViewDelegate {
         private Drawable mCardBackground;
 
@@ -230,7 +229,7 @@ public class CardView extends FrameLayout {
         IMPL.setBackgroundColor(this.mCardViewDelegate, colorStateList);
     }
 
-    public CardView(@NonNull Context context, @Nullable AttributeSet attributeSet, int i) throws Resources.NotFoundException {
+    public CardView(@NonNull Context context, @Nullable AttributeSet attributeSet, int i) {
         int color;
         ColorStateList colorStateListValueOf;
         super(context, attributeSet, i);

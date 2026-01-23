@@ -16,16 +16,16 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p659s.p660a.Dispatchers;
 import p659s.p660a.p661a.MainDispatchers;
 
-/* compiled from: Lifecycle.kt */
-/* renamed from: androidx.lifecycle.LifecycleCoroutineScopeImpl, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: androidx.lifecycle.LifecycleCoroutineScopeImpl, reason: use source file name */
+/* JADX INFO: compiled from: Lifecycle.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class Lifecycle3 extends Lifecycle2 implements LifecycleEventObserver {
     private final CoroutineContext coroutineContext;
     private final Lifecycle lifecycle;
 
-    /* compiled from: Lifecycle.kt */
+    /* JADX INFO: renamed from: androidx.lifecycle.LifecycleCoroutineScopeImpl$register$1 */
+    /* JADX INFO: compiled from: Lifecycle.kt */
     @DebugMetadata(m10084c = "androidx.lifecycle.LifecycleCoroutineScopeImpl$register$1", m10085f = "Lifecycle.kt", m10086l = {}, m10087m = "invokeSuspend")
-    /* renamed from: androidx.lifecycle.LifecycleCoroutineScopeImpl$register$1 */
     public static final class C04411 extends ContinuationImpl6 implements Function2<CoroutineScope, Continuation<? super Unit>, Object> {
         private /* synthetic */ Object L$0;
         public int label;
@@ -80,7 +80,7 @@ public final class Lifecycle3 extends Lifecycle2 implements LifecycleEventObserv
     }
 
     @Override // androidx.view.Lifecycle2
-    /* renamed from: getLifecycle$lifecycle_runtime_ktx_release, reason: from getter */
+    /* JADX INFO: renamed from: getLifecycle$lifecycle_runtime_ktx_release, reason: from getter */
     public Lifecycle getLifecycle() {
         return this.lifecycle;
     }

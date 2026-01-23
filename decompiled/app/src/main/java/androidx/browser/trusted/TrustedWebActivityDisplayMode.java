@@ -3,13 +3,13 @@ package androidx.browser.trusted;
 import android.os.Bundle;
 import androidx.annotation.NonNull;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public interface TrustedWebActivityDisplayMode {
     public static final String KEY_ID = "androidx.browser.trusted.displaymode.KEY_ID";
 
     public static class DefaultMode implements TrustedWebActivityDisplayMode {
 
-        /* renamed from: ID */
+        /* JADX INFO: renamed from: ID */
         private static final int f89ID = 0;
 
         @Override // androidx.browser.trusted.TrustedWebActivityDisplayMode
@@ -23,7 +23,7 @@ public interface TrustedWebActivityDisplayMode {
 
     public static class ImmersiveMode implements TrustedWebActivityDisplayMode {
 
-        /* renamed from: ID */
+        /* JADX INFO: renamed from: ID */
         private static final int f90ID = 1;
         public static final String KEY_CUTOUT_MODE = "androidx.browser.trusted.displaymode.KEY_CUTOUT_MODE";
         public static final String KEY_STICKY = "androidx.browser.trusted.displaymode.KEY_STICKY";

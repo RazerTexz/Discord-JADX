@@ -3,9 +3,9 @@ package com.discord.widgets.servers.guild_role_subscription;
 import android.view.View;
 import com.discord.widgets.guild_role_subscriptions.setup.WidgetGuildRoleSubscriptionPlanSetup;
 
-/* compiled from: WidgetServerSettingsEmptyGuildRoleSubscriptions.kt */
-/* renamed from: com.discord.widgets.servers.guild_role_subscription.WidgetServerSettingsEmptyGuildRoleSubscriptions$configureUI$$inlined$let$lambda$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.servers.guild_role_subscription.WidgetServerSettingsEmptyGuildRoleSubscriptions$configureUI$$inlined$let$lambda$1, reason: use source file name */
+/* JADX INFO: compiled from: WidgetServerSettingsEmptyGuildRoleSubscriptions.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetServerSettingsEmptyGuildRoleSubscriptions3 implements View.OnClickListener {
     public final /* synthetic */ WidgetServerSettingsEmptyGuildRoleSubscriptions this$0;
 

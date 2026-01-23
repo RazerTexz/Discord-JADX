@@ -4,7 +4,7 @@ import android.graphics.Bitmap;
 import p007b.p109f.p115d.p119d.DoNotStrip;
 import p007b.p109f.p161j.p162a.p163a.AnimatedImageFrame;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class GifFrame implements AnimatedImageFrame {
 
     @DoNotStrip
@@ -49,24 +49,24 @@ public class GifFrame implements AnimatedImageFrame {
     private native void nativeRenderFrame(int i, int i2, Bitmap bitmap);
 
     @Override // p007b.p109f.p161j.p162a.p163a.AnimatedImageFrame
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public void mo1185a(int i, int i2, Bitmap bitmap) {
         nativeRenderFrame(i, i2, bitmap);
     }
 
     @Override // p007b.p109f.p161j.p162a.p163a.AnimatedImageFrame
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public int mo1186b() {
         return nativeGetXOffset();
     }
 
     @Override // p007b.p109f.p161j.p162a.p163a.AnimatedImageFrame
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public int mo1187c() {
         return nativeGetYOffset();
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public int m8628d() {
         return nativeGetDisposalMode();
     }

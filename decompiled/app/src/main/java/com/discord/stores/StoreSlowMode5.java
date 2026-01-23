@@ -4,9 +4,9 @@ import androidx.core.app.NotificationCompat;
 import com.discord.stores.StoreSlowMode;
 import p658rx.functions.Action0;
 
-/* compiled from: StoreSlowMode.kt */
-/* renamed from: com.discord.stores.StoreSlowMode$getChannelCooldownObservable$newObservable$4, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.stores.StoreSlowMode$getChannelCooldownObservable$newObservable$4, reason: use source file name */
+/* JADX INFO: compiled from: StoreSlowMode.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class StoreSlowMode5 implements Action0 {
     public final /* synthetic */ long $channelId;
     public final /* synthetic */ StoreSlowMode.Type $type;

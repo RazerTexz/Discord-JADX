@@ -10,14 +10,14 @@ import p507d0.p592z.p594d.AdaptedFunctionReference;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetHubAddServer.kt */
-/* renamed from: com.discord.widgets.hubs.WidgetHubAddServer$adapter$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.hubs.WidgetHubAddServer$adapter$1, reason: use source file name */
+/* JADX INFO: compiled from: WidgetHubAddServer.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetHubAddServer2 extends Lambda implements Function2<LayoutInflater, ViewGroup, DiscordHubAddServerViewHolder> {
     public final /* synthetic */ WidgetHubAddServer this$0;
 
-    /* compiled from: WidgetHubAddServer.kt */
-    /* renamed from: com.discord.widgets.hubs.WidgetHubAddServer$adapter$1$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.hubs.WidgetHubAddServer$adapter$1$1 */
+    /* JADX INFO: compiled from: WidgetHubAddServer.kt */
     public static final /* synthetic */ class C89911 extends AdaptedFunctionReference implements Function1<Long, Unit> {
         public C89911(WidgetHubAddServer widgetHubAddServer) {
             super(1, widgetHubAddServer, WidgetHubAddServer.class, "onServerClickListener", "onServerClickListener(JZ)V", 0);
@@ -45,7 +45,7 @@ public final class WidgetHubAddServer2 extends Lambda implements Function2<Layou
         return invoke2(layoutInflater, viewGroup);
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final DiscordHubAddServerViewHolder invoke2(LayoutInflater layoutInflater, ViewGroup viewGroup) {
         Intrinsics3.checkNotNullParameter(layoutInflater, "layoutInflater");
         Intrinsics3.checkNotNullParameter(viewGroup, "parent");

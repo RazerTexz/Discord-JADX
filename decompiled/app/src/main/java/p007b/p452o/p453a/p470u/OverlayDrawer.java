@@ -10,30 +10,30 @@ import p007b.p452o.p453a.p467r.Issue514Workaround;
 import p007b.p452o.p453a.p473x.Size3;
 import p007b.p452o.p475b.p481f.GlTexture2;
 
-/* compiled from: OverlayDrawer.java */
-/* renamed from: b.o.a.u.b, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.o.a.u.b, reason: use source file name */
+/* JADX INFO: compiled from: OverlayDrawer.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class OverlayDrawer {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final CameraLogger f14147a = new CameraLogger(OverlayDrawer.class.getSimpleName());
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public Overlay f14148b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public SurfaceTexture f14149c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public Surface f14150d;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public Issue514Workaround f14152f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public final Object f14153g = new Object();
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     @VisibleForTesting
     public GlTextureDrawer f14151e = new GlTextureDrawer(new GlTexture2(33984, 36197, null, 4));
 

@@ -8,7 +8,7 @@ import androidx.annotation.Nullable;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public final class BundleCompat {
 
     public static class BundleCompatBaseImpl {
@@ -21,7 +21,7 @@ public final class BundleCompat {
         private BundleCompatBaseImpl() {
         }
 
-        public static IBinder getBinder(Bundle bundle, String str) throws SecurityException {
+        public static IBinder getBinder(Bundle bundle, String str) {
             if (!sGetIBinderMethodFetched) {
                 try {
                     Method method = Bundle.class.getMethod("getIBinder", String.class);
@@ -44,7 +44,7 @@ public final class BundleCompat {
             return null;
         }
 
-        public static void putBinder(Bundle bundle, String str, IBinder iBinder) throws SecurityException {
+        public static void putBinder(Bundle bundle, String str, IBinder iBinder) {
             if (!sPutIBinderMethodFetched) {
                 try {
                     Method method = Bundle.class.getMethod("putIBinder", String.class, IBinder.class);

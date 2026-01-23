@@ -5,21 +5,21 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.concurrent.Callable;
 import java.util.concurrent.FutureTask;
 
-/* compiled from: com.google.android.gms:play-services-measurement-impl@@18.0.0 */
-/* renamed from: b.i.a.f.i.b.s4 */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.i.b.s4 */
+/* JADX INFO: compiled from: com.google.android.gms:play-services-measurement-impl@@18.0.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public final class C4180s4<V> extends FutureTask<V> implements Comparable<C4180s4<V>> {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final long f11198j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final boolean f11199k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final String f11200l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public final /* synthetic */ C4169r4 f11201m;
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */

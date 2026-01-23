@@ -16,61 +16,61 @@ import p007b.p109f.p115d.p127l.TriState;
 import p007b.p109f.p161j.p169d.Priority2;
 import p007b.p109f.p161j.p183r.FrescoSystrace;
 
-/* compiled from: MultiplexProducer.java */
-/* renamed from: b.f.j.p.l0, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.f.j.p.l0, reason: use source file name */
+/* JADX INFO: compiled from: MultiplexProducer.java */
+/* JADX INFO: loaded from: classes3.dex */
 public abstract class MultiplexProducer<K, T extends Closeable> implements Producer2<T> {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     @VisibleForTesting
     public final Map<K, MultiplexProducer<K, T>.b> f4127a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final Producer2<T> f4128b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final boolean f4129c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final String f4130d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final String f4131e;
 
-    /* compiled from: MultiplexProducer.java */
+    /* JADX INFO: renamed from: b.f.j.p.l0$b */
+    /* JADX INFO: compiled from: MultiplexProducer.java */
     @VisibleForTesting
-    /* renamed from: b.f.j.p.l0$b */
     public class b {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final K f4132a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final CopyOnWriteArraySet<Pair<Consumer2<T>, ProducerContext>> f4133b = new CopyOnWriteArraySet<>();
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public T f4134c;
 
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         public float f4135d;
 
-        /* renamed from: e */
+        /* JADX INFO: renamed from: e */
         public int f4136e;
 
-        /* renamed from: f */
+        /* JADX INFO: renamed from: f */
         public BaseProducerContext f4137f;
 
-        /* renamed from: g */
+        /* JADX INFO: renamed from: g */
         public MultiplexProducer<K, T>.b.a f4138g;
 
-        /* compiled from: MultiplexProducer.java */
-        /* renamed from: b.f.j.p.l0$b$a */
+        /* JADX INFO: renamed from: b.f.j.p.l0$b$a */
+        /* JADX INFO: compiled from: MultiplexProducer.java */
         public class a extends BaseConsumer<T> {
             public a(a aVar) {
             }
 
             @Override // p007b.p109f.p161j.p181p.BaseConsumer
-            /* renamed from: g */
+            /* JADX INFO: renamed from: g */
             public void mo1318g() {
                 try {
                     FrescoSystrace.m1527b();
@@ -90,7 +90,7 @@ public abstract class MultiplexProducer<K, T extends Closeable> implements Produ
             }
 
             @Override // p007b.p109f.p161j.p181p.BaseConsumer
-            /* renamed from: h */
+            /* JADX INFO: renamed from: h */
             public void mo1319h(Throwable th) {
                 try {
                     FrescoSystrace.m1527b();
@@ -102,7 +102,7 @@ public abstract class MultiplexProducer<K, T extends Closeable> implements Produ
 
             /* JADX WARN: Multi-variable type inference failed */
             @Override // p007b.p109f.p161j.p181p.BaseConsumer
-            /* renamed from: i */
+            /* JADX INFO: renamed from: i */
             public void mo1320i(Object obj, int i) {
                 Closeable closeable = (Closeable) obj;
                 try {
@@ -114,7 +114,7 @@ public abstract class MultiplexProducer<K, T extends Closeable> implements Produ
             }
 
             @Override // p007b.p109f.p161j.p181p.BaseConsumer
-            /* renamed from: j */
+            /* JADX INFO: renamed from: j */
             public void mo1321j(float f) {
                 try {
                     FrescoSystrace.m1527b();
@@ -130,7 +130,7 @@ public abstract class MultiplexProducer<K, T extends Closeable> implements Produ
         }
 
         /* JADX WARN: Multi-variable type inference failed */
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public boolean m1483a(Consumer2<T> consumer2, ProducerContext producerContext) {
             MultiplexProducer<K, T>.b bVar;
             Pair<Consumer2<T>, ProducerContext> pairCreate = Pair.create(consumer2, producerContext);
@@ -174,7 +174,7 @@ public abstract class MultiplexProducer<K, T extends Closeable> implements Produ
             }
         }
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final void m1484b(Closeable closeable) {
             if (closeable != null) {
                 try {
@@ -185,7 +185,7 @@ public abstract class MultiplexProducer<K, T extends Closeable> implements Produ
             }
         }
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public final synchronized boolean m1485c() {
             Iterator<Pair<Consumer2<T>, ProducerContext>> it = this.f4133b.iterator();
             while (it.hasNext()) {
@@ -196,7 +196,7 @@ public abstract class MultiplexProducer<K, T extends Closeable> implements Produ
             return false;
         }
 
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         public final synchronized boolean m1486d() {
             Iterator<Pair<Consumer2<T>, ProducerContext>> it = this.f4133b.iterator();
             while (it.hasNext()) {
@@ -207,7 +207,7 @@ public abstract class MultiplexProducer<K, T extends Closeable> implements Produ
             return true;
         }
 
-        /* renamed from: e */
+        /* JADX INFO: renamed from: e */
         public final synchronized Priority2 m1487e() {
             Priority2 priority2;
             priority2 = Priority2.LOW;
@@ -221,7 +221,7 @@ public abstract class MultiplexProducer<K, T extends Closeable> implements Produ
             return priority2;
         }
 
-        /* renamed from: f */
+        /* JADX INFO: renamed from: f */
         public void m1488f(MultiplexProducer<K, T>.b.a aVar, Throwable th) {
             synchronized (this) {
                 if (this.f4138g != aVar) {
@@ -240,7 +240,7 @@ public abstract class MultiplexProducer<K, T extends Closeable> implements Produ
             }
         }
 
-        /* renamed from: g */
+        /* JADX INFO: renamed from: g */
         public void m1489g(MultiplexProducer<K, T>.b.a aVar, T t, int i) {
             synchronized (this) {
                 if (this.f4138g != aVar) {
@@ -272,7 +272,7 @@ public abstract class MultiplexProducer<K, T extends Closeable> implements Produ
             }
         }
 
-        /* renamed from: h */
+        /* JADX INFO: renamed from: h */
         public void m1490h(MultiplexProducer<K, T>.b.a aVar, float f) {
             synchronized (this) {
                 if (this.f4138g != aVar) {
@@ -287,7 +287,7 @@ public abstract class MultiplexProducer<K, T extends Closeable> implements Produ
             }
         }
 
-        /* renamed from: i */
+        /* JADX INFO: renamed from: i */
         public final void m1491i(TriState triState) {
             synchronized (this) {
                 boolean z2 = true;
@@ -322,7 +322,7 @@ public abstract class MultiplexProducer<K, T extends Closeable> implements Produ
             }
         }
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public final synchronized List<ProducerContextCallbacks> m1492j() {
             BaseProducerContext baseProducerContext = this.f4137f;
             ArrayList arrayList = null;
@@ -339,7 +339,7 @@ public abstract class MultiplexProducer<K, T extends Closeable> implements Produ
             return arrayList;
         }
 
-        /* renamed from: k */
+        /* JADX INFO: renamed from: k */
         public final synchronized List<ProducerContextCallbacks> m1493k() {
             BaseProducerContext baseProducerContext = this.f4137f;
             ArrayList arrayList = null;
@@ -356,7 +356,7 @@ public abstract class MultiplexProducer<K, T extends Closeable> implements Produ
             return arrayList;
         }
 
-        /* renamed from: l */
+        /* JADX INFO: renamed from: l */
         public final synchronized List<ProducerContextCallbacks> m1494l() {
             BaseProducerContext baseProducerContext = this.f4137f;
             if (baseProducerContext == null) {
@@ -375,7 +375,7 @@ public abstract class MultiplexProducer<K, T extends Closeable> implements Produ
     }
 
     @Override // p007b.p109f.p161j.p181p.Producer2
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public void mo1417b(Consumer2<T> consumer2, ProducerContext producerContext) {
         boolean z2;
         MultiplexProducer<K, T>.b bVar;
@@ -406,13 +406,13 @@ public abstract class MultiplexProducer<K, T extends Closeable> implements Produ
         }
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public abstract T mo1476c(T t);
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public abstract K mo1477d(ProducerContext producerContext);
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public synchronized void m1482e(K k, MultiplexProducer<K, T>.b bVar) {
         if (this.f4127a.get(k) == bVar) {
             this.f4127a.remove(k);

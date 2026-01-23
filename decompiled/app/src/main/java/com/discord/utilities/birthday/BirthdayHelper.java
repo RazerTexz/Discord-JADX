@@ -4,8 +4,8 @@ import com.discord.utilities.time.ClockFactory;
 import java.util.Calendar;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: BirthdayHelper.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: BirthdayHelper.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class BirthdayHelper {
     public static final String DATE_OF_BIRTH_KEY = "date_of_birth";
     public static final BirthdayHelper INSTANCE = new BirthdayHelper();

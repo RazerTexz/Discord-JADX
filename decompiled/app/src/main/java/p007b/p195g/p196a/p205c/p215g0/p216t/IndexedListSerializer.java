@@ -14,10 +14,10 @@ import p007b.p195g.p196a.p205c.p215g0.p216t.PropertySerializerMap;
 import p007b.p195g.p196a.p205c.p215g0.p217u.AsArraySerializerBase;
 import p007b.p195g.p196a.p205c.p220y.JacksonStdImpl;
 
-/* compiled from: IndexedListSerializer.java */
+/* JADX INFO: renamed from: b.g.a.c.g0.t.f, reason: use source file name */
+/* JADX INFO: compiled from: IndexedListSerializer.java */
+/* JADX INFO: loaded from: classes3.dex */
 @JacksonStdImpl
-/* renamed from: b.g.a.c.g0.t.f, reason: use source file name */
-/* loaded from: classes3.dex */
 public final class IndexedListSerializer extends AsArraySerializerBase<List<?>> {
     private static final long serialVersionUID = 1;
 
@@ -26,13 +26,13 @@ public final class IndexedListSerializer extends AsArraySerializerBase<List<?>> 
     }
 
     @Override // p007b.p195g.p196a.p205c.JsonSerializer
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public boolean mo2021d(SerializerProvider serializerProvider, Object obj) {
         return ((List) obj).isEmpty();
     }
 
     @Override // p007b.p195g.p196a.p205c.p215g0.p217u.AsArraySerializerBase, p007b.p195g.p196a.p205c.JsonSerializer
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public void mo1807f(Object obj, JsonGenerator jsonGenerator, SerializerProvider serializerProvider) throws IOException {
         List<?> list = (List) obj;
         int size = list.size();
@@ -46,30 +46,30 @@ public final class IndexedListSerializer extends AsArraySerializerBase<List<?>> 
     }
 
     @Override // p007b.p195g.p196a.p205c.p215g0.ContainerSerializer
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public ContainerSerializer<?> mo1995p(TypeSerializer typeSerializer) {
         return new IndexedListSerializer(this, this._property, typeSerializer, this._elementSerializer, this._unwrapSingle);
     }
 
     @Override // p007b.p195g.p196a.p205c.p215g0.ContainerSerializer
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     public boolean mo1996q(Object obj) {
         return ((List) obj).size() == 1;
     }
 
     @Override // p007b.p195g.p196a.p205c.p215g0.p217u.AsArraySerializerBase
-    /* renamed from: s */
+    /* JADX INFO: renamed from: s */
     public /* bridge */ /* synthetic */ void mo2022s(List<?> list, JsonGenerator jsonGenerator, SerializerProvider serializerProvider) throws IOException {
         m2024u(list, jsonGenerator, serializerProvider);
     }
 
     @Override // p007b.p195g.p196a.p205c.p215g0.p217u.AsArraySerializerBase
-    /* renamed from: t */
+    /* JADX INFO: renamed from: t */
     public AsArraySerializerBase<List<?>> mo2023t(BeanProperty beanProperty, TypeSerializer typeSerializer, JsonSerializer jsonSerializer, Boolean bool) {
         return new IndexedListSerializer(this, beanProperty, typeSerializer, jsonSerializer, bool);
     }
 
-    /* renamed from: u */
+    /* JADX INFO: renamed from: u */
     public void m2024u(List<?> list, JsonGenerator jsonGenerator, SerializerProvider serializerProvider) throws IOException {
         JsonSerializer<Object> jsonSerializerM2045r;
         JsonSerializer<Object> jsonSerializerM2045r2;

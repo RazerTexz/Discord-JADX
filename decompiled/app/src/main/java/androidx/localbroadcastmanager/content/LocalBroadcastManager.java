@@ -14,7 +14,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Set;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public final class LocalBroadcastManager {
     private static final boolean DEBUG = false;
     public static final int MSG_EXEC_PENDING_BROADCASTS = 1;
@@ -27,7 +27,7 @@ public final class LocalBroadcastManager {
     private final HashMap<String, ArrayList<ReceiverRecord>> mActions = new HashMap<>();
     private final ArrayList<BroadcastRecord> mPendingBroadcasts = new ArrayList<>();
 
-    /* renamed from: androidx.localbroadcastmanager.content.LocalBroadcastManager$1 */
+    /* JADX INFO: renamed from: androidx.localbroadcastmanager.content.LocalBroadcastManager$1 */
     public class HandlerC04751 extends Handler {
         public HandlerC04751(Looper looper) {
             super(looper);

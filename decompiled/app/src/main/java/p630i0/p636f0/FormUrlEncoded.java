@@ -6,11 +6,11 @@ import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
-/* compiled from: FormUrlEncoded.java */
+/* JADX INFO: renamed from: i0.f0.e, reason: use source file name */
+/* JADX INFO: compiled from: FormUrlEncoded.java */
+/* JADX INFO: loaded from: classes3.dex */
 @Target({ElementType.METHOD})
 @Documented
 @Retention(RetentionPolicy.RUNTIME)
-/* renamed from: i0.f0.e, reason: use source file name */
-/* loaded from: classes3.dex */
 public @interface FormUrlEncoded {
 }

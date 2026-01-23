@@ -31,8 +31,8 @@ import java.util.Collections;
 import java.util.Iterator;
 import java.util.List;
 
+/* JADX INFO: loaded from: classes.dex */
 @RestrictTo({RestrictTo.Scope.LIBRARY_GROUP})
-/* loaded from: classes.dex */
 public class EnqueueRunnable implements Runnable {
     private static final String TAG = Logger.tagWithPrefix("EnqueueRunnable");
     private final OperationImpl mOperation = new OperationImpl();
@@ -48,7 +48,6 @@ public class EnqueueRunnable implements Runnable {
         return zEnqueueWorkWithPrerequisites;
     }
 
-    /* JADX WARN: Multi-variable type inference failed */
     /* JADX WARN: Removed duplicated region for block: B:111:0x0199  */
     /* JADX WARN: Removed duplicated region for block: B:118:0x01ae  */
     /* JADX WARN: Removed duplicated region for block: B:121:0x01b8  */
@@ -61,7 +60,6 @@ public class EnqueueRunnable implements Runnable {
       0x014e: PHI (r12v2 boolean) = (r12v1 boolean), (r12v1 boolean), (r12v4 boolean) binds: [B:32:0x006c, B:34:0x007a, B:88:0x014d] A[DONT_GENERATE, DONT_INLINE]
       0x014e: PHI (r13v2 boolean) = (r13v1 boolean), (r13v1 boolean), (r13v5 boolean) binds: [B:32:0x006c, B:34:0x007a, B:88:0x014d] A[DONT_GENERATE, DONT_INLINE]
       0x014e: PHI (r14v2 boolean) = (r14v1 boolean), (r14v1 boolean), (r14v5 boolean) binds: [B:32:0x006c, B:34:0x007a, B:88:0x014d] A[DONT_GENERATE, DONT_INLINE]] */
-    /* JADX WARN: Type inference failed for: r15v8, types: [java.util.List] */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
@@ -74,7 +72,7 @@ public class EnqueueRunnable implements Runnable {
         int i;
         Iterator<String> it;
         boolean z6;
-        ArrayList arrayListEmptyList;
+        List listEmptyList;
         DependencyDao dependencyDao;
         WorkManagerImpl workManagerImpl2 = workManagerImpl;
         String[] strArr2 = strArr;
@@ -137,12 +135,12 @@ public class EnqueueRunnable implements Runnable {
                     }
                     z6 = false;
                     z3 = false;
-                    arrayListEmptyList = Collections.emptyList();
+                    listEmptyList = Collections.emptyList();
                 } else {
                     z6 = z4;
-                    arrayListEmptyList = arrayList;
+                    listEmptyList = arrayList;
                 }
-                strArr2 = (String[]) arrayListEmptyList.toArray(strArr2);
+                strArr2 = (String[]) listEmptyList.toArray(strArr2);
                 z7 = strArr2.length > 0;
                 z4 = z6;
                 z5 = false;

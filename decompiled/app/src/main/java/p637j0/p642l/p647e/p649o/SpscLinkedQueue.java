@@ -4,9 +4,9 @@ import java.util.Iterator;
 import java.util.Objects;
 import p637j0.p642l.p647e.p648n.LinkedQueueNode;
 
-/* compiled from: SpscLinkedQueue.java */
-/* renamed from: j0.l.e.o.s, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: j0.l.e.o.s, reason: use source file name */
+/* JADX INFO: compiled from: SpscLinkedQueue.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class SpscLinkedQueue<E> {
     public SpscLinkedQueue() {
         LinkedQueueNode<E> linkedQueueNode = new LinkedQueueNode<>();

@@ -5,27 +5,27 @@ import p007b.p100d.p104b.p105a.outline;
 import p007b.p225i.p226a.p242c.p259f3.Util2;
 import p007b.p225i.p226a.p242c.p267x2.SeekMap;
 
-/* compiled from: ChunkIndex.java */
-/* renamed from: b.i.a.c.x2.c, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.x2.c, reason: use source file name */
+/* JADX INFO: compiled from: ChunkIndex.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class ChunkIndex implements SeekMap {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final int f8061a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final int[] f8062b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final long[] f8063c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final long[] f8064d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final long[] f8065e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final long f8066f;
 
     public ChunkIndex(int[] iArr, long[] jArr, long[] jArr2, long[] jArr3) {
@@ -43,13 +43,13 @@ public final class ChunkIndex implements SeekMap {
     }
 
     @Override // p007b.p225i.p226a.p242c.p267x2.SeekMap
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public boolean mo3619c() {
         return true;
     }
 
     @Override // p007b.p225i.p226a.p242c.p267x2.SeekMap
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public SeekMap.a mo3620h(long j) {
         int iM2997e = Util2.m2997e(this.f8065e, j, true, true);
         long[] jArr = this.f8065e;
@@ -64,7 +64,7 @@ public final class ChunkIndex implements SeekMap {
     }
 
     @Override // p007b.p225i.p226a.p242c.p267x2.SeekMap
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public long mo3621i() {
         return this.f8066f;
     }

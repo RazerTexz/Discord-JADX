@@ -7,8 +7,8 @@ import p001a0.p002a.p003a.C0002b;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ThreadDraftFormEntry.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: ThreadDraftFormEntry.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final /* data */ class ThreadDraftFormEntry extends ChatListEntry {
     private final boolean canCreatePrivateThread;
     private final boolean canCreatePublicThread;
@@ -45,47 +45,47 @@ public final /* data */ class ThreadDraftFormEntry extends ChatListEntry {
         return threadDraftFormEntry.copy((i & 1) != 0 ? threadDraftFormEntry.parentChannel : channel, (i & 2) != 0 ? threadDraftFormEntry.parentMessageId : l, (i & 4) != 0 ? threadDraftFormEntry.guildId : j, (i & 8) != 0 ? threadDraftFormEntry.guild : guild, (i & 16) != 0 ? threadDraftFormEntry.defaultAutoArchiveDuration : num, (i & 32) != 0 ? threadDraftFormEntry.threadDraftState : threadDraftState, (i & 64) != 0 ? threadDraftFormEntry.canCreatePrivateThread : z2, (i & 128) != 0 ? threadDraftFormEntry.canSeePrivateThreadOption : z3, (i & 256) != 0 ? threadDraftFormEntry.canCreatePublicThread : z4);
     }
 
-    /* renamed from: component1, reason: from getter */
+    /* JADX INFO: renamed from: component1, reason: from getter */
     public final Channel getParentChannel() {
         return this.parentChannel;
     }
 
-    /* renamed from: component2, reason: from getter */
+    /* JADX INFO: renamed from: component2, reason: from getter */
     public final Long getParentMessageId() {
         return this.parentMessageId;
     }
 
-    /* renamed from: component3, reason: from getter */
+    /* JADX INFO: renamed from: component3, reason: from getter */
     public final long getGuildId() {
         return this.guildId;
     }
 
-    /* renamed from: component4, reason: from getter */
+    /* JADX INFO: renamed from: component4, reason: from getter */
     public final Guild getGuild() {
         return this.guild;
     }
 
-    /* renamed from: component5, reason: from getter */
+    /* JADX INFO: renamed from: component5, reason: from getter */
     public final Integer getDefaultAutoArchiveDuration() {
         return this.defaultAutoArchiveDuration;
     }
 
-    /* renamed from: component6, reason: from getter */
+    /* JADX INFO: renamed from: component6, reason: from getter */
     public final StoreThreadDraft.ThreadDraftState getThreadDraftState() {
         return this.threadDraftState;
     }
 
-    /* renamed from: component7, reason: from getter */
+    /* JADX INFO: renamed from: component7, reason: from getter */
     public final boolean getCanCreatePrivateThread() {
         return this.canCreatePrivateThread;
     }
 
-    /* renamed from: component8, reason: from getter */
+    /* JADX INFO: renamed from: component8, reason: from getter */
     public final boolean getCanSeePrivateThreadOption() {
         return this.canSeePrivateThreadOption;
     }
 
-    /* renamed from: component9, reason: from getter */
+    /* JADX INFO: renamed from: component9, reason: from getter */
     public final boolean getCanCreatePublicThread() {
         return this.canCreatePublicThread;
     }
@@ -154,6 +154,15 @@ public final /* data */ class ThreadDraftFormEntry extends ChatListEntry {
     }
 
     /* JADX WARN: Multi-variable type inference failed */
+    /* JADX WARN: Type inference failed for: r0v14, types: [int] */
+    /* JADX WARN: Type inference failed for: r0v16, types: [int] */
+    /* JADX WARN: Type inference failed for: r0v18 */
+    /* JADX WARN: Type inference failed for: r0v19 */
+    /* JADX WARN: Type inference failed for: r0v23 */
+    /* JADX WARN: Type inference failed for: r0v24 */
+    /* JADX WARN: Type inference failed for: r1v2 */
+    /* JADX WARN: Type inference failed for: r1v3, types: [int] */
+    /* JADX WARN: Type inference failed for: r1v4 */
     public int hashCode() {
         Channel channel = this.parentChannel;
         int iHashCode = (channel != null ? channel.hashCode() : 0) * 31;
@@ -166,19 +175,19 @@ public final /* data */ class ThreadDraftFormEntry extends ChatListEntry {
         StoreThreadDraft.ThreadDraftState threadDraftState = this.threadDraftState;
         int iHashCode4 = (iHashCode3 + (threadDraftState != null ? threadDraftState.hashCode() : 0)) * 31;
         boolean z2 = this.canCreatePrivateThread;
-        int i = z2;
-        if (z2 != 0) {
-            i = 1;
+        ?? r0 = z2;
+        if (z2) {
+            r0 = 1;
         }
-        int i2 = (iHashCode4 + i) * 31;
+        int i = (iHashCode4 + r0) * 31;
         boolean z3 = this.canSeePrivateThreadOption;
-        int i3 = z3;
-        if (z3 != 0) {
-            i3 = 1;
+        ?? r02 = z3;
+        if (z3) {
+            r02 = 1;
         }
-        int i4 = (i2 + i3) * 31;
+        int i2 = (i + r02) * 31;
         boolean z4 = this.canCreatePublicThread;
-        return i4 + (z4 ? 1 : z4 ? 1 : 0);
+        return i2 + (z4 ? 1 : z4);
     }
 
     public String toString() {

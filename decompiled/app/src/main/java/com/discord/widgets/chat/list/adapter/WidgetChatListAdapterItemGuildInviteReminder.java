@@ -21,13 +21,13 @@ import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetChatListAdapterItemGuildInviteReminder.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetChatListAdapterItemGuildInviteReminder.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetChatListAdapterItemGuildInviteReminder extends WidgetChatListItem {
     private final WidgetChatListAdapterItemGuildInviteReminderBinding binding;
 
-    /* compiled from: WidgetChatListAdapterItemGuildInviteReminder.kt */
-    /* renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemGuildInviteReminder$onConfigure$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemGuildInviteReminder$onConfigure$1 */
+    /* JADX INFO: compiled from: WidgetChatListAdapterItemGuildInviteReminder.kt */
     public static final class ViewOnClickListenerC80741 implements View.OnClickListener {
         public ViewOnClickListenerC80741() {
         }
@@ -38,8 +38,8 @@ public final class WidgetChatListAdapterItemGuildInviteReminder extends WidgetCh
         }
     }
 
-    /* compiled from: WidgetChatListAdapterItemGuildInviteReminder.kt */
-    /* renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemGuildInviteReminder$onConfigure$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemGuildInviteReminder$onConfigure$2 */
+    /* JADX INFO: compiled from: WidgetChatListAdapterItemGuildInviteReminder.kt */
     public static final class C80752 extends Lambda implements Function1<View, Unit> {
         public final /* synthetic */ ChatListEntry $data;
 
@@ -55,7 +55,7 @@ public final class WidgetChatListAdapterItemGuildInviteReminder extends WidgetCh
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(View view) {
             Intrinsics3.checkNotNullParameter(view, "it");
             WidgetChatListAdapter.EventHandler eventHandler = WidgetChatListAdapterItemGuildInviteReminder.access$getAdapter$p(WidgetChatListAdapterItemGuildInviteReminder.this).getEventHandler();

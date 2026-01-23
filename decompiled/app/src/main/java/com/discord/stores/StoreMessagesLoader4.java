@@ -7,9 +7,9 @@ import kotlin.jvm.functions.Function1;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: StoreMessagesLoader.kt */
-/* renamed from: com.discord.stores.StoreMessagesLoader$tryLoadMessages$$inlined$apply$lambda$2, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.stores.StoreMessagesLoader$tryLoadMessages$$inlined$apply$lambda$2, reason: use source file name */
+/* JADX INFO: compiled from: StoreMessagesLoader.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class StoreMessagesLoader4 extends Lambda implements Function1<Error, Unit> {
     public final /* synthetic */ long $channelId$inlined;
     public final /* synthetic */ StoreMessagesLoader.ChannelLoadedState $channelLoadedState$inlined;
@@ -31,7 +31,7 @@ public final class StoreMessagesLoader4 extends Lambda implements Function1<Erro
         return Unit.f27425a;
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final void invoke2(Error error) {
         Intrinsics3.checkNotNullParameter(error, "it");
         StoreMessagesLoader.access$handleLoadMessagesError(this.this$0, this.$channelId$inlined);

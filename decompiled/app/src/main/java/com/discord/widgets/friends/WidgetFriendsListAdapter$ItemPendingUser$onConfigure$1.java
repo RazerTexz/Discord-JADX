@@ -8,8 +8,8 @@ import kotlin.Unit;
 import kotlin.jvm.functions.Function2;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: WidgetFriendsListAdapter.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetFriendsListAdapter.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetFriendsListAdapter$ItemPendingUser$onConfigure$1 implements View.OnClickListener {
     public final /* synthetic */ FriendsListViewModel.Item $data;
     public final /* synthetic */ WidgetFriendsListAdapter.ItemPendingUser this$0;

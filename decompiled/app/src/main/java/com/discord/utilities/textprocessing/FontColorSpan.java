@@ -5,8 +5,8 @@ import android.text.style.MetricAffectingSpan;
 import androidx.annotation.ColorInt;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: FontColorSpan.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: FontColorSpan.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class FontColorSpan extends MetricAffectingSpan {
     private final int colorInt;
 

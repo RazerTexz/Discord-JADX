@@ -5,14 +5,14 @@ import p007b.p225i.p226a.p288f.p299e.p300h.p301j.C3301k;
 import p007b.p225i.p226a.p288f.p313h.p326m.AbstractC3935l;
 import p007b.p225i.p226a.p288f.p333j.p334b.C4265b;
 
-/* renamed from: b.i.a.f.j.b.e.b0 */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.j.b.e.b0 */
+/* JADX INFO: loaded from: classes3.dex */
 public class BinderC4272b0 extends AbstractBinderC4317x0 {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final AbstractC3935l<C4265b> f11404a = new C4275c0();
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     @Nullable
     public final C3301k<C4265b> f11405b;
 

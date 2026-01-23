@@ -14,31 +14,31 @@ import p007b.p225i.p361c.p393p.ValueEncoder;
 import p007b.p225i.p361c.p393p.ValueEncoderContext;
 import p007b.p225i.p361c.p393p.p394g.EncoderConfig;
 
-/* compiled from: JsonDataEncoderBuilder.java */
-/* renamed from: b.i.c.p.h.e, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.c.p.h.e, reason: use source file name */
+/* JADX INFO: compiled from: JsonDataEncoderBuilder.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class JsonDataEncoderBuilder5 implements EncoderConfig<JsonDataEncoderBuilder5> {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final a f12821a = new a(null);
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final Map<Class<?>, ObjectEncoder<?>> f12822b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final Map<Class<?>, ValueEncoder<?>> f12823c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public ObjectEncoder<Object> f12824d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public boolean f12825e;
 
-    /* compiled from: JsonDataEncoderBuilder.java */
-    /* renamed from: b.i.c.p.h.e$a */
+    /* JADX INFO: renamed from: b.i.c.p.h.e$a */
+    /* JADX INFO: compiled from: JsonDataEncoderBuilder.java */
     public static final class a implements ValueEncoder<Date> {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public static final DateFormat f12826a;
 
         static {
@@ -51,7 +51,7 @@ public final class JsonDataEncoderBuilder5 implements EncoderConfig<JsonDataEnco
         }
 
         @Override // p007b.p225i.p361c.p393p.Encoder
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public void mo2312a(@NonNull Object obj, @NonNull ValueEncoderContext valueEncoderContext) throws IOException {
             valueEncoderContext.mo6709d(f12826a.format((Date) obj));
         }

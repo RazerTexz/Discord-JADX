@@ -12,13 +12,13 @@ import p637j0.p641k.Func1;
 import p637j0.p642l.p647e.ScalarSynchronousObservable;
 import p658rx.Observable;
 
-/* compiled from: WidgetGroupInviteFriends.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetGroupInviteFriends.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetGroupInviteFriends$Model$Companion$getForCreate$2<T, R> implements Func1<WidgetGroupInviteFriends.Model.Companion.AddedUsersInput, Observable<? extends WidgetGroupInviteFriends.Model>> {
     public static final WidgetGroupInviteFriends$Model$Companion$getForCreate$2 INSTANCE = new WidgetGroupInviteFriends$Model$Companion$getForCreate$2();
 
-    /* compiled from: WidgetGroupInviteFriends.kt */
-    /* renamed from: com.discord.widgets.channels.WidgetGroupInviteFriends$Model$Companion$getForCreate$2$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.channels.WidgetGroupInviteFriends$Model$Companion$getForCreate$2$1 */
+    /* JADX INFO: compiled from: WidgetGroupInviteFriends.kt */
     public static final class C73821<T, R> implements Func1<WidgetGroupInviteFriends.Model.ModelAppUserRelationship, List<? extends WidgetGroupInviteFriends.Model.FriendItem>> {
         public final /* synthetic */ WidgetGroupInviteFriends.Model.Companion.AddedUsersInput $usersFilter;
 
@@ -31,7 +31,7 @@ public final class WidgetGroupInviteFriends$Model$Companion$getForCreate$2<T, R>
             return call2(modelAppUserRelationship);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final List<WidgetGroupInviteFriends.Model.FriendItem> call2(WidgetGroupInviteFriends.Model.ModelAppUserRelationship modelAppUserRelationship) {
             WidgetGroupInviteFriends.Model.FriendItem.Companion companion = WidgetGroupInviteFriends.Model.FriendItem.INSTANCE;
             Intrinsics3.checkNotNullExpressionValue(modelAppUserRelationship, "friends");
@@ -39,8 +39,8 @@ public final class WidgetGroupInviteFriends$Model$Companion$getForCreate$2<T, R>
         }
     }
 
-    /* compiled from: WidgetGroupInviteFriends.kt */
-    /* renamed from: com.discord.widgets.channels.WidgetGroupInviteFriends$Model$Companion$getForCreate$2$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.channels.WidgetGroupInviteFriends$Model$Companion$getForCreate$2$2 */
+    /* JADX INFO: compiled from: WidgetGroupInviteFriends.kt */
     public static final class C73832<T, R> implements Func1<List<? extends WidgetGroupInviteFriends.Model.FriendItem>, Observable<? extends WidgetGroupInviteFriends.Model>> {
         public final /* synthetic */ WidgetGroupInviteFriends.Model.Companion.AddedUsersInput $usersFilter;
 
@@ -53,7 +53,7 @@ public final class WidgetGroupInviteFriends$Model$Companion$getForCreate$2<T, R>
             return call2((List<WidgetGroupInviteFriends.Model.FriendItem>) list);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final Observable<? extends WidgetGroupInviteFriends.Model> call2(List<WidgetGroupInviteFriends.Model.FriendItem> list) {
             String filter = this.$usersFilter.getFilter();
             Collection<User> addedUsers = this.$usersFilter.getAddedUsers();
@@ -67,7 +67,7 @@ public final class WidgetGroupInviteFriends$Model$Companion$getForCreate$2<T, R>
         return call2(addedUsersInput);
     }
 
-    /* renamed from: call, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
     public final Observable<? extends WidgetGroupInviteFriends.Model> call2(WidgetGroupInviteFriends.Model.Companion.AddedUsersInput addedUsersInput) {
         return WidgetGroupInviteFriends.Model.Companion.access$getFilteredFriends(WidgetGroupInviteFriends.Model.INSTANCE, null, addedUsersInput.getFilter()).m11083G(new C73821(addedUsersInput)).m11099Y(new C73832(addedUsersInput));
     }

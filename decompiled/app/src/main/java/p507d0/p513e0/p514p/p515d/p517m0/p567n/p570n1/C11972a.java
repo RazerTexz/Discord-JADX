@@ -2,9 +2,9 @@ package p507d0.p513e0.p514p.p515d.p517m0.p567n.p570n1;
 
 import java.util.ArrayList;
 
-/* compiled from: TypeSystemContext.kt */
-/* renamed from: d0.e0.p.d.m0.n.n1.a */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.n.n1.a */
+/* JADX INFO: compiled from: TypeSystemContext.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class C11972a extends ArrayList<InterfaceC11982k> implements InterfaceC11981j {
     public C11972a(int i) {
         super(i);

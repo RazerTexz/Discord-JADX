@@ -11,13 +11,13 @@ import p507d0.p592z.p594d.Lambda;
 import p507d0.p592z.p594d.p595g0.KMarkers;
 import p507d0.p592z.p594d.p595g0.KMarkers5;
 
-/* compiled from: ShallowPartitionImmutableCollection.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: ShallowPartitionImmutableCollection.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public class ShallowPartitionImmutableCollection<E, T extends Collection<E>> extends ShallowPartitionCollection<E, T> implements Collection<E>, KMarkers {
     private final Function1<E, Integer> readOnlyPartitionStrategy;
 
-    /* compiled from: ShallowPartitionImmutableCollection.kt */
-    /* renamed from: com.discord.utilities.collections.ShallowPartitionImmutableCollection$1 */
+    /* JADX INFO: renamed from: com.discord.utilities.collections.ShallowPartitionImmutableCollection$1 */
+    /* JADX INFO: compiled from: ShallowPartitionImmutableCollection.kt */
     public static final class C67321 extends Lambda implements Function1<E, Integer> {
         public static final C67321 INSTANCE = new C67321();
 
@@ -25,7 +25,7 @@ public class ShallowPartitionImmutableCollection<E, T extends Collection<E>> ext
             super(1);
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final int invoke2(E e) {
             return -1;
         }
@@ -36,7 +36,7 @@ public class ShallowPartitionImmutableCollection<E, T extends Collection<E>> ext
         }
     }
 
-    /* compiled from: ShallowPartitionImmutableCollection.kt */
+    /* JADX INFO: compiled from: ShallowPartitionImmutableCollection.kt */
     public static final class Set<E, T extends java.util.Set<E>> extends ShallowPartitionImmutableCollection<E, T> implements java.util.Set<E>, KMarkers5 {
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
         public Set(List<? extends T> list, Function1<? super E, Integer> function1) {

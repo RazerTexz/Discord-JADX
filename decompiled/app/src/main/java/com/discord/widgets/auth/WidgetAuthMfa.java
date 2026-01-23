@@ -55,22 +55,22 @@ import p658rx.Observable;
 import p658rx.functions.Action1;
 import p658rx.functions.Action2;
 
-/* compiled from: WidgetAuthMfa.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetAuthMfa.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetAuthMfa extends AppFragment {
     private static final int BACKUP_CODE_DIGITS = 8;
     private static final String INTENT_TICKET = "INTENT_TICKET";
 
-    /* renamed from: binding$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
     private boolean ignoreAutopaste;
     private String ticket;
     public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetAuthMfa.class, "binding", "getBinding()Lcom/discord/databinding/WidgetAuthMfaBinding;", 0)};
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
 
-    /* compiled from: WidgetAuthMfa.kt */
+    /* JADX INFO: compiled from: WidgetAuthMfa.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -88,8 +88,8 @@ public final class WidgetAuthMfa extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetAuthMfa.kt */
-    /* renamed from: com.discord.widgets.auth.WidgetAuthMfa$evaluateCode$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.auth.WidgetAuthMfa$evaluateCode$1 */
+    /* JADX INFO: compiled from: WidgetAuthMfa.kt */
     public static final class C71961 extends Lambda implements Function1<ModelLoginResult, Unit> {
         public static final C71961 INSTANCE = new C71961();
 
@@ -103,14 +103,14 @@ public final class WidgetAuthMfa extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(ModelLoginResult modelLoginResult) {
             AnalyticsTracker.INSTANCE.loginAttempt(true);
         }
     }
 
-    /* compiled from: WidgetAuthMfa.kt */
-    /* renamed from: com.discord.widgets.auth.WidgetAuthMfa$evaluateCode$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.auth.WidgetAuthMfa$evaluateCode$2 */
+    /* JADX INFO: compiled from: WidgetAuthMfa.kt */
     public static final class C71972<T> implements Action1<Error> {
         public C71972() {
         }
@@ -120,15 +120,15 @@ public final class WidgetAuthMfa extends AppFragment {
             call2(error);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final void call2(Error error) {
             WidgetAuthMfa.access$getBinding$p(WidgetAuthMfa.this).f15693b.m8538b();
             AnalyticsTracker.INSTANCE.loginAttempt(false);
         }
     }
 
-    /* compiled from: WidgetAuthMfa.kt */
-    /* renamed from: com.discord.widgets.auth.WidgetAuthMfa$onResume$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.auth.WidgetAuthMfa$onResume$1 */
+    /* JADX INFO: compiled from: WidgetAuthMfa.kt */
     public static final class C71981 extends Lambda implements Function1<Long, Unit> {
         public C71981() {
             super(1);
@@ -140,14 +140,14 @@ public final class WidgetAuthMfa extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Long l) {
             WidgetAuthMfa.access$tryPasteCodeFromClipboard(WidgetAuthMfa.this);
         }
     }
 
-    /* compiled from: WidgetAuthMfa.kt */
-    /* renamed from: com.discord.widgets.auth.WidgetAuthMfa$onViewBound$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.auth.WidgetAuthMfa$onViewBound$1 */
+    /* JADX INFO: compiled from: WidgetAuthMfa.kt */
     public static final class C71991<T1, T2> implements Action2<MenuItem, Context> {
         public C71991() {
         }
@@ -157,7 +157,7 @@ public final class WidgetAuthMfa extends AppFragment {
             call2(menuItem, context);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final void call2(MenuItem menuItem, Context context) {
             Intrinsics3.checkNotNullExpressionValue(menuItem, "menuItem");
             switch (menuItem.getItemId()) {
@@ -171,8 +171,8 @@ public final class WidgetAuthMfa extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetAuthMfa.kt */
-    /* renamed from: com.discord.widgets.auth.WidgetAuthMfa$onViewBound$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.auth.WidgetAuthMfa$onViewBound$2 */
+    /* JADX INFO: compiled from: WidgetAuthMfa.kt */
     public static final /* synthetic */ class C72002 extends FunctionReferenceImpl implements Function1<String, Unit> {
         public C72002(WidgetAuthMfa widgetAuthMfa) {
             super(1, widgetAuthMfa, WidgetAuthMfa.class, "evaluateCode", "evaluateCode(Ljava/lang/String;)V", 0);
@@ -184,15 +184,15 @@ public final class WidgetAuthMfa extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(String str) {
             Intrinsics3.checkNotNullParameter(str, "p1");
             WidgetAuthMfa.access$evaluateCode((WidgetAuthMfa) this.receiver, str);
         }
     }
 
-    /* compiled from: WidgetAuthMfa.kt */
-    /* renamed from: com.discord.widgets.auth.WidgetAuthMfa$showBackupCodesDialog$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.auth.WidgetAuthMfa$showBackupCodesDialog$1 */
+    /* JADX INFO: compiled from: WidgetAuthMfa.kt */
     public static final class ViewOnClickListenerC72011 implements View.OnClickListener {
         public final /* synthetic */ WidgetAuthMfaBackupCodesBinding $binding;
         public final /* synthetic */ AlertDialog $dialog;
@@ -213,8 +213,8 @@ public final class WidgetAuthMfa extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetAuthMfa.kt */
-    /* renamed from: com.discord.widgets.auth.WidgetAuthMfa$showBackupCodesDialog$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.auth.WidgetAuthMfa$showBackupCodesDialog$2 */
+    /* JADX INFO: compiled from: WidgetAuthMfa.kt */
     public static final class ViewOnClickListenerC72022 implements View.OnClickListener {
         public final /* synthetic */ AlertDialog $dialog;
 
@@ -228,8 +228,8 @@ public final class WidgetAuthMfa extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetAuthMfa.kt */
-    /* renamed from: com.discord.widgets.auth.WidgetAuthMfa$showInfoDialog$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.auth.WidgetAuthMfa$showInfoDialog$1 */
+    /* JADX INFO: compiled from: WidgetAuthMfa.kt */
     public static final class ViewOnClickListenerC72031 implements View.OnClickListener {
         public final /* synthetic */ AlertDialog $dialog;
 
@@ -243,8 +243,8 @@ public final class WidgetAuthMfa extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetAuthMfa.kt */
-    /* renamed from: com.discord.widgets.auth.WidgetAuthMfa$tryPasteCodeFromClipboard$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.auth.WidgetAuthMfa$tryPasteCodeFromClipboard$1 */
+    /* JADX INFO: compiled from: WidgetAuthMfa.kt */
     public static final class C72041 extends Lambda implements Function1<String, Unit> {
         public static final C72041 INSTANCE = new C72041();
 
@@ -258,14 +258,14 @@ public final class WidgetAuthMfa extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(String str) {
             Intrinsics3.checkNotNullParameter(str, "it");
         }
     }
 
-    /* compiled from: WidgetAuthMfa.kt */
-    /* renamed from: com.discord.widgets.auth.WidgetAuthMfa$tryPasteCodeFromClipboard$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.auth.WidgetAuthMfa$tryPasteCodeFromClipboard$2 */
+    /* JADX INFO: compiled from: WidgetAuthMfa.kt */
     public static final /* synthetic */ class C72052 extends FunctionReferenceImpl implements Function1<String, Unit> {
         public C72052(WidgetAuthMfa widgetAuthMfa) {
             super(1, widgetAuthMfa, WidgetAuthMfa.class, "evaluateCode", "evaluateCode(Ljava/lang/String;)V", 0);
@@ -277,15 +277,15 @@ public final class WidgetAuthMfa extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(String str) {
             Intrinsics3.checkNotNullParameter(str, "p1");
             WidgetAuthMfa.access$evaluateCode((WidgetAuthMfa) this.receiver, str);
         }
     }
 
-    /* compiled from: WidgetAuthMfa.kt */
-    /* renamed from: com.discord.widgets.auth.WidgetAuthMfa$tryPasteCodeFromClipboard$3 */
+    /* JADX INFO: renamed from: com.discord.widgets.auth.WidgetAuthMfa$tryPasteCodeFromClipboard$3 */
+    /* JADX INFO: compiled from: WidgetAuthMfa.kt */
     public static final class C72063 extends Lambda implements Function1<Long, Unit> {
         public C72063() {
             super(1);
@@ -297,7 +297,7 @@ public final class WidgetAuthMfa extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Long l) {
             WidgetAuthMfa widgetAuthMfa = WidgetAuthMfa.this;
             WidgetAuthMfa.access$evaluateCode(widgetAuthMfa, WidgetAuthMfa.access$getBinding$p(widgetAuthMfa).f15693b.getCom.discord.models.domain.ModelAuditLogEntry.CHANGE_KEY_CODE java.lang.String());

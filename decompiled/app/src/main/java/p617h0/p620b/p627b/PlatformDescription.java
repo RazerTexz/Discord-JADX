@@ -2,21 +2,21 @@ package p617h0.p620b.p627b;
 
 import org.objenesis.ObjenesisException;
 
-/* compiled from: PlatformDescription.java */
-/* renamed from: h0.b.b.b, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: h0.b.b.b, reason: use source file name */
+/* JADX INFO: compiled from: PlatformDescription.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class PlatformDescription {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final String f26402a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static final int f26403b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public static final boolean f26404c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public static final String f26405d;
 
     static {
@@ -36,7 +36,7 @@ public final class PlatformDescription {
         f26405d = System.getProperty("com.google.appengine.runtime.version");
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static int m10656a() {
         if (!m10657b("Dalvik")) {
             return 0;
@@ -65,7 +65,7 @@ public final class PlatformDescription {
         }
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static boolean m10657b(String str) {
         return f26402a.startsWith(str);
     }

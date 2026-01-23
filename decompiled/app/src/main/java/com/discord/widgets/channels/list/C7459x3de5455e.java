@@ -8,9 +8,9 @@ import kotlin.jvm.functions.Function1;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetChannelsListItemChannelActions.kt */
-/* renamed from: com.discord.widgets.channels.list.WidgetChannelsListItemChannelActions$configureUI$$inlined$apply$lambda$7 */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.channels.list.WidgetChannelsListItemChannelActions$configureUI$$inlined$apply$lambda$7 */
+/* JADX INFO: compiled from: WidgetChannelsListItemChannelActions.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class C7459x3de5455e extends Lambda implements Function1<View, Unit> {
     public final /* synthetic */ WidgetChannelsListItemChannelActions.Model $this_configureUI$inlined;
     public final /* synthetic */ WidgetChannelsListItemChannelActions this$0;
@@ -28,7 +28,7 @@ public final class C7459x3de5455e extends Lambda implements Function1<View, Unit
         return Unit.f27425a;
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final void invoke2(View view) {
         Intrinsics3.checkNotNullParameter(view, "it");
         StoreStream.INSTANCE.getMessageAck().ack(this.$this_configureUI$inlined.getChannel().getId(), false, true);

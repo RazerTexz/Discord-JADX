@@ -5,9 +5,9 @@ import java.util.Map;
 import kotlin.jvm.functions.Function1;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: ShareUtils.kt */
-/* renamed from: com.discord.utilities.ShareUtils$observeChannelAndIconPairs$3$pinnedOnlyShortcutChannels$4 */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.utilities.ShareUtils$observeChannelAndIconPairs$3$pinnedOnlyShortcutChannels$4 */
+/* JADX INFO: compiled from: ShareUtils.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class C6656x626dc25d extends Lambda implements Function1<Long, Channel> {
     public final /* synthetic */ Map $channelsById;
 

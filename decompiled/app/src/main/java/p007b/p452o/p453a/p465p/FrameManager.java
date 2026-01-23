@@ -9,33 +9,33 @@ import p007b.p452o.p453a.p455n.p461t.Angles;
 import p007b.p452o.p453a.p455n.p461t.Reference2;
 import p007b.p452o.p453a.p473x.Size3;
 
-/* compiled from: FrameManager.java */
-/* renamed from: b.o.a.p.c, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.o.a.p.c, reason: use source file name */
+/* JADX INFO: compiled from: FrameManager.java */
+/* JADX INFO: loaded from: classes3.dex */
 public abstract class FrameManager<T> {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final CameraLogger f14058a = new CameraLogger(FrameManager.class.getSimpleName());
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final int f14059b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public int f14060c = -1;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public Size3 f14061d = null;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public int f14062e = -1;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final Class<T> f14063f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public LinkedBlockingQueue<Frame2> f14064g;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public Angles f14065h;
 
     public FrameManager(int i, @NonNull Class<T> cls) {
@@ -45,7 +45,7 @@ public abstract class FrameManager<T> {
     }
 
     @Nullable
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public Frame2 m7385a(@NonNull T t, long j) {
         if (!m7386b()) {
             throw new IllegalStateException("Can't call getFrame() after releasing or before setUp.");
@@ -67,15 +67,15 @@ public abstract class FrameManager<T> {
         return frame2Poll;
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public boolean m7386b() {
         return this.f14061d != null;
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public abstract void mo7380c(@NonNull T t, boolean z2);
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public void mo7381d() {
         if (!m7386b()) {
             f14058a.m7159a(2, "release called twice. Ignoring.");
@@ -89,11 +89,11 @@ public abstract class FrameManager<T> {
         this.f14065h = null;
     }
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public void mo7382e(int i, @NonNull Size3 size3, @NonNull Angles angles) {
         this.f14061d = size3;
         this.f14062e = i;
-        this.f14060c = (int) Math.ceil(((size3.f14252k * size3.f14251j) * ImageFormat.getBitsPerPixel(i)) / 8.0d);
+        this.f14060c = (int) Math.ceil(((double) ((size3.f14252k * size3.f14251j) * ImageFormat.getBitsPerPixel(i))) / 8.0d);
         for (int i2 = 0; i2 < this.f14059b; i2++) {
             this.f14064g.offer(new Frame2(this));
         }

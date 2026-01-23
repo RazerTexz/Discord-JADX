@@ -6,9 +6,9 @@ import org.webrtc.VideoFrame;
 import p507d0.p580t._Collections;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: VideoStreamRenderer.kt */
-/* renamed from: co.discord.media_engine.VideoStreamRenderer$Muxer$addSink$1$2, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: co.discord.media_engine.VideoStreamRenderer$Muxer$addSink$1$2, reason: use source file name */
+/* JADX INFO: compiled from: VideoStreamRenderer.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class VideoStreamRenderer2 implements Discord.VideoFrameCallback {
     public final /* synthetic */ Set $sinks;
 

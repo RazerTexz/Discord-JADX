@@ -5,17 +5,17 @@ import java.io.IOException;
 import p007b.p225i.p226a.p242c.p259f3.ParsableByteArray;
 import p007b.p225i.p226a.p242c.p267x2.ExtractorInput;
 
-/* compiled from: Sniffer.java */
-/* renamed from: b.i.a.c.x2.i0.l, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.x2.i0.l, reason: use source file name */
+/* JADX INFO: compiled from: Sniffer.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class Sniffer2 {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final int[] f8459a = {1769172845, 1769172786, 1769172787, 1769172788, 1769172789, 1769172790, 1769172793, 1635148593, 1752589105, 1751479857, 1635135537, 1836069937, 1836069938, 862401121, 862401122, 862417462, 862417718, 862414134, 862414646, 1295275552, 1295270176, 1714714144, 1801741417, 1295275600, 1903435808, 1297305174, 1684175153, 1769172332, 1885955686};
 
     /* JADX WARN: Removed duplicated region for block: B:101:0x00e5 A[SYNTHETIC] */
     /* JADX WARN: Removed duplicated region for block: B:98:0x00e3 A[SYNTHETIC] */
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
@@ -49,7 +49,7 @@ public final class Sniffer2 {
                 if (jM3101u == 0) {
                     long jMo3642b2 = extractorInput.mo3642b();
                     if (jMo3642b2 != j2) {
-                        jM3101u = (jMo3642b2 - extractorInput.mo3645f()) + 8;
+                        jM3101u = (jMo3642b2 - extractorInput.mo3645f()) + ((long) 8);
                     }
                 }
                 i3 = 8;
@@ -71,7 +71,7 @@ public final class Sniffer2 {
                     break;
                 }
                 long j4 = jMo3642b;
-                if ((i2 + jM3101u) - j3 >= i) {
+                if ((((long) i2) + jM3101u) - j3 >= i) {
                     break;
                 }
                 int i4 = (int) (jM3101u - j3);

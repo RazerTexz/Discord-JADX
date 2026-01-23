@@ -9,8 +9,8 @@ import androidx.work.impl.WorkDatabase;
 import androidx.work.impl.WorkDatabaseMigrations;
 import androidx.work.impl.model.Preference;
 
+/* JADX INFO: loaded from: classes.dex */
 @RestrictTo({RestrictTo.Scope.LIBRARY_GROUP})
-/* loaded from: classes.dex */
 public class IdGenerator {
     public static final int INITIAL_ID = 0;
     public static final String NEXT_ALARM_MANAGER_ID_KEY = "next_alarm_manager_id";

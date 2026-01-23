@@ -5,9 +5,9 @@ import kotlin.Unit;
 import kotlin.jvm.functions.Function0;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetUserEmailVerify.kt */
-/* renamed from: com.discord.widgets.user.email.WidgetUserEmailVerify$emailUpdateLauncher$1, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: com.discord.widgets.user.email.WidgetUserEmailVerify$emailUpdateLauncher$1, reason: use source file name */
+/* JADX INFO: compiled from: WidgetUserEmailVerify.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class WidgetUserEmailVerify4 extends Lambda implements Function0<Unit> {
     public final /* synthetic */ WidgetUserEmailVerify this$0;
 
@@ -23,7 +23,7 @@ public final class WidgetUserEmailVerify4 extends Lambda implements Function0<Un
         return Unit.f27425a;
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final void invoke2() {
         AppActivity appActivity = this.this$0.getAppActivity();
         if (appActivity != null) {

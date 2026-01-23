@@ -1,8 +1,8 @@
 package com.discord.utilities;
 
 
-/* compiled from: ShareUtils.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: ShareUtils.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class ShareUtilsKt {
     public static final int NON_DIRECT_SHARE_TARGET_SHORTCUT_RANK = 20;
 }

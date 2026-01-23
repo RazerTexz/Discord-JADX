@@ -1,7 +1,6 @@
 package com.discord.widgets.chat.input.autocomplete.adapter;
 
 import android.content.Context;
-import android.content.res.Resources;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -58,8 +57,8 @@ import p658rx.Observable;
 import p658rx.Subscription;
 import p658rx.functions.Action1;
 
-/* compiled from: ChatInputAutocompleteAdapter.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: ChatInputAutocompleteAdapter.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class ChatInputAutocompleteAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> implements StickyHeaderItemDecoration.StickyHeaderAdapter {
     private static final int COMMAND_HEADER_HEIGHT = 32;
     public static final int CONTAINER_ROW_MAX_VISIBLE_COUNT = 4;
@@ -80,8 +79,8 @@ public final class ChatInputAutocompleteAdapter extends RecyclerView.Adapter<Rec
     private StickyHeaderManager stickyHeaderManager;
     private Subscription subscription;
 
-    /* compiled from: ChatInputAutocompleteAdapter.kt */
-    /* renamed from: com.discord.widgets.chat.input.autocomplete.adapter.ChatInputAutocompleteAdapter$onCreateViewHolder$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.input.autocomplete.adapter.ChatInputAutocompleteAdapter$onCreateViewHolder$1 */
+    /* JADX INFO: compiled from: ChatInputAutocompleteAdapter.kt */
     public static final /* synthetic */ class C77931 extends FunctionReferenceImpl implements Function1<Autocompletable, Unit> {
         public C77931(ChatInputAutocompleteAdapter chatInputAutocompleteAdapter) {
             super(1, chatInputAutocompleteAdapter, ChatInputAutocompleteAdapter.class, "onAutocompletableSelected", "onAutocompletableSelected(Lcom/discord/widgets/chat/input/autocomplete/Autocompletable;)V", 0);
@@ -93,15 +92,15 @@ public final class ChatInputAutocompleteAdapter extends RecyclerView.Adapter<Rec
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Autocompletable autocompletable) {
             Intrinsics3.checkNotNullParameter(autocompletable, "p1");
             ((ChatInputAutocompleteAdapter) this.receiver).onAutocompletableSelected(autocompletable);
         }
     }
 
-    /* compiled from: ChatInputAutocompleteAdapter.kt */
-    /* renamed from: com.discord.widgets.chat.input.autocomplete.adapter.ChatInputAutocompleteAdapter$onCreateViewHolder$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.input.autocomplete.adapter.ChatInputAutocompleteAdapter$onCreateViewHolder$2 */
+    /* JADX INFO: compiled from: ChatInputAutocompleteAdapter.kt */
     public static final /* synthetic */ class C77942 extends FunctionReferenceImpl implements Function1<Autocompletable, Unit> {
         public C77942(ChatInputAutocompleteAdapter chatInputAutocompleteAdapter) {
             super(1, chatInputAutocompleteAdapter, ChatInputAutocompleteAdapter.class, "onAutocompletableSelected", "onAutocompletableSelected(Lcom/discord/widgets/chat/input/autocomplete/Autocompletable;)V", 0);
@@ -113,19 +112,19 @@ public final class ChatInputAutocompleteAdapter extends RecyclerView.Adapter<Rec
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Autocompletable autocompletable) {
             Intrinsics3.checkNotNullParameter(autocompletable, "p1");
             ((ChatInputAutocompleteAdapter) this.receiver).onAutocompletableSelected(autocompletable);
         }
     }
 
-    /* compiled from: ChatInputAutocompleteAdapter.kt */
-    /* renamed from: com.discord.widgets.chat.input.autocomplete.adapter.ChatInputAutocompleteAdapter$setupScrollObservables$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.input.autocomplete.adapter.ChatInputAutocompleteAdapter$setupScrollObservables$1 */
+    /* JADX INFO: compiled from: ChatInputAutocompleteAdapter.kt */
     public static final class C77951<T> implements Action1<Emitter<Object>> {
 
-        /* compiled from: ChatInputAutocompleteAdapter.kt */
-        /* renamed from: com.discord.widgets.chat.input.autocomplete.adapter.ChatInputAutocompleteAdapter$setupScrollObservables$1$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.widgets.chat.input.autocomplete.adapter.ChatInputAutocompleteAdapter$setupScrollObservables$1$1, reason: invalid class name */
+        /* JADX INFO: compiled from: ChatInputAutocompleteAdapter.kt */
         public static final class AnonymousClass1 extends RecyclerView.OnScrollListener {
             public final /* synthetic */ Emitter $emitter;
 
@@ -149,15 +148,15 @@ public final class ChatInputAutocompleteAdapter extends RecyclerView.Adapter<Rec
             call2(emitter);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final void call2(Emitter<Object> emitter) {
             Intrinsics3.checkNotNullParameter(emitter, "emitter");
             ChatInputAutocompleteAdapter.access$setOnScrollListener$p(ChatInputAutocompleteAdapter.this, new AnonymousClass1(emitter));
         }
     }
 
-    /* compiled from: ChatInputAutocompleteAdapter.kt */
-    /* renamed from: com.discord.widgets.chat.input.autocomplete.adapter.ChatInputAutocompleteAdapter$setupScrollObservables$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.input.autocomplete.adapter.ChatInputAutocompleteAdapter$setupScrollObservables$2 */
+    /* JADX INFO: compiled from: ChatInputAutocompleteAdapter.kt */
     public static final class C77962 extends Lambda implements Function1<Object, Unit> {
         public final /* synthetic */ RecyclerView $recyclerView;
 
@@ -173,7 +172,7 @@ public final class ChatInputAutocompleteAdapter extends RecyclerView.Adapter<Rec
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Object obj) {
             Function2 function2Access$getOnScrollPositionListener$p = ChatInputAutocompleteAdapter.access$getOnScrollPositionListener$p(ChatInputAutocompleteAdapter.this);
             if (function2Access$getOnScrollPositionListener$p == null || !(this.$recyclerView.getLayoutManager() instanceof LinearLayoutManager)) {
@@ -186,8 +185,8 @@ public final class ChatInputAutocompleteAdapter extends RecyclerView.Adapter<Rec
         }
     }
 
-    /* compiled from: ChatInputAutocompleteAdapter.kt */
-    /* renamed from: com.discord.widgets.chat.input.autocomplete.adapter.ChatInputAutocompleteAdapter$setupStickyApplicationHeaders$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.input.autocomplete.adapter.ChatInputAutocompleteAdapter$setupStickyApplicationHeaders$1 */
+    /* JADX INFO: compiled from: ChatInputAutocompleteAdapter.kt */
     public static final class ViewOnLayoutChangeListenerC77971 implements View.OnLayoutChangeListener {
         public final /* synthetic */ RecyclerView $recyclerView;
 
@@ -355,7 +354,7 @@ public final class ChatInputAutocompleteAdapter extends RecyclerView.Adapter<Rec
     }
 
     @Override // androidx.recyclerview.widget.RecyclerView.Adapter
-    /* renamed from: getItemCount */
+    /* JADX INFO: renamed from: getItemCount */
     public int getPageSize() {
         return this.data.size();
     }
@@ -441,7 +440,7 @@ public final class ChatInputAutocompleteAdapter extends RecyclerView.Adapter<Rec
     }
 
     @Override // androidx.recyclerview.widget.RecyclerView.Adapter
-    public void onBindViewHolder(RecyclerView.ViewHolder holder, int position) throws Resources.NotFoundException {
+    public void onBindViewHolder(RecyclerView.ViewHolder holder, int position) {
         Intrinsics3.checkNotNullParameter(holder, "holder");
         int itemViewType = getItemViewType(position);
         if (itemViewType == 0) {

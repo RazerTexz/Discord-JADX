@@ -10,9 +10,9 @@ import com.discord.widgets.guild_role_subscriptions.tier.create.benefits.GuildRo
 import com.discord.widgets.guild_role_subscriptions.tier.create.benefits.WidgetGuildRoleSubscriptionTierBenefits;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: WidgetServerSettingsGuildRoleSubscriptionEditTier.kt */
-/* renamed from: com.discord.widgets.servers.guild_role_subscription.edit_tier.ServerSettingsGuildRoleSubscriptionEditTierAdapter, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.servers.guild_role_subscription.edit_tier.ServerSettingsGuildRoleSubscriptionEditTierAdapter, reason: use source file name */
+/* JADX INFO: compiled from: WidgetServerSettingsGuildRoleSubscriptionEditTier.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetServerSettingsGuildRoleSubscriptionEditTier2 extends FragmentStateAdapter {
     private static final int TIER_BENEFITS_POSITION = 2;
     private static final int TIER_DESIGN_POSITION = 1;
@@ -42,7 +42,7 @@ public final class WidgetServerSettingsGuildRoleSubscriptionEditTier2 extends Fr
     }
 
     @Override // androidx.recyclerview.widget.RecyclerView.Adapter
-    /* renamed from: getItemCount, reason: from getter */
+    /* JADX INFO: renamed from: getItemCount, reason: from getter */
     public int getPageSize() {
         return this.pageSize;
     }

@@ -2,24 +2,24 @@ package p617h0.p628c;
 
 import org.webrtc.EglRenderer;
 
-/* compiled from: lambda */
-/* renamed from: h0.c.f */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: h0.c.f */
+/* JADX INFO: compiled from: lambda */
+/* JADX INFO: loaded from: classes3.dex */
 public final /* synthetic */ class RunnableC12460f implements Runnable {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final /* synthetic */ EglRenderer f26420j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final /* synthetic */ float f26421k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final /* synthetic */ float f26422l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public final /* synthetic */ float f26423m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public final /* synthetic */ float f26424n;
 
     public /* synthetic */ RunnableC12460f(EglRenderer eglRenderer, float f, float f2, float f3, float f4) {

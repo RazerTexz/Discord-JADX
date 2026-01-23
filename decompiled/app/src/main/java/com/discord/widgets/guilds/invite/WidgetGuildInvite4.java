@@ -4,9 +4,9 @@ import com.discord.stores.StoreInviteSettings;
 import kotlin.jvm.functions.Function0;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetGuildInvite.kt */
-/* renamed from: com.discord.widgets.guilds.invite.WidgetGuildInvite$viewModel$2, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.guilds.invite.WidgetGuildInvite$viewModel$2, reason: use source file name */
+/* JADX INFO: compiled from: WidgetGuildInvite.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetGuildInvite4 extends Lambda implements Function0<GuildInviteViewModel> {
     public final /* synthetic */ WidgetGuildInvite this$0;
 

@@ -29,12 +29,12 @@ import p007b.p100d.p104b.p105a.outline;
 import p507d0.LazyJVM;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: AuditLogUtils.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: AuditLogUtils.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class AuditLogUtils {
     public static final AuditLogUtils INSTANCE = new AuditLogUtils();
 
-    /* renamed from: ALL_ACTION_TYPES$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: ALL_ACTION_TYPES$delegate, reason: from kotlin metadata */
     private static final Lazy ALL_ACTION_TYPES = LazyJVM.lazy(AuditLogUtils2.INSTANCE);
 
     public final /* synthetic */ class WhenMappings {
@@ -85,11 +85,13 @@ public final class AuditLogUtils {
     private AuditLogUtils() {
     }
 
-    /* JADX WARN: Multi-variable type inference failed */
     @StringRes
     private final int getEntryTitle(ModelAuditLogEntry auditLogEntry) {
         int actionTypeId = auditLogEntry.getActionTypeId();
         ModelAuditLogEntry.Change change = null;
+        Object obj = null;
+        ModelAuditLogEntry.Change change2 = null;
+        Object obj2 = null;
         switch (actionTypeId) {
             case 1:
                 return C5419R.string.guild_settings_audit_log_guild_update;
@@ -118,14 +120,14 @@ public final class AuditLogUtils {
                     while (true) {
                         if (it.hasNext()) {
                             Object next = it.next();
-                            ModelAuditLogEntry.Change change2 = (ModelAuditLogEntry.Change) next;
-                            Intrinsics3.checkNotNullExpressionValue(change2, "it");
-                            if (Intrinsics3.areEqual(change2.getKey(), "type")) {
-                                change = next;
+                            ModelAuditLogEntry.Change change3 = (ModelAuditLogEntry.Change) next;
+                            Intrinsics3.checkNotNullExpressionValue(change3, "it");
+                            if (Intrinsics3.areEqual(change3.getKey(), "type")) {
+                                obj2 = next;
                             }
                         }
                     }
-                    change = change;
+                    change = (ModelAuditLogEntry.Change) obj2;
                 }
                 if (change == null) {
                     return 0;
@@ -147,19 +149,19 @@ public final class AuditLogUtils {
                             while (true) {
                                 if (it2.hasNext()) {
                                     Object next2 = it2.next();
-                                    ModelAuditLogEntry.Change change3 = (ModelAuditLogEntry.Change) next2;
-                                    Intrinsics3.checkNotNullExpressionValue(change3, "it");
-                                    if (Intrinsics3.areEqual(change3.getKey(), "type")) {
-                                        change = next2;
+                                    ModelAuditLogEntry.Change change4 = (ModelAuditLogEntry.Change) next2;
+                                    Intrinsics3.checkNotNullExpressionValue(change4, "it");
+                                    if (Intrinsics3.areEqual(change4.getKey(), "type")) {
+                                        obj = next2;
                                     }
                                 }
                             }
-                            change = change;
+                            change2 = (ModelAuditLogEntry.Change) obj;
                         }
-                        if (change == null) {
+                        if (change2 == null) {
                             return 0;
                         }
-                        Object newValue2 = change.getNewValue();
+                        Object newValue2 = change2.getNewValue();
                         Objects.requireNonNull(newValue2, "null cannot be cast to non-null type kotlin.Long");
                         int iLongValue2 = (int) ((Long) newValue2).longValue();
                         return iLongValue2 != 2 ? iLongValue2 != 4 ? iLongValue2 != 13 ? C5419R.string.guild_settings_audit_log_channel_text_create : C5419R.string.guild_settings_audit_log_channel_stage_create : C5419R.string.guild_settings_audit_log_channel_category_create : C5419R.string.guild_settings_audit_log_channel_voice_create;

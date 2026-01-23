@@ -14,24 +14,24 @@ jadx.core.utils.exceptions.JadxRuntimeException: Init of enum field 'j' uses ext
 	at jadx.core.dex.visitors.EnumVisitor.visit(EnumVisitor.java:100)
  */
 /* JADX WARN: Failed to restore enum class, 'enum' modifier and super class removed */
-/* compiled from: UnsignedType.kt */
-/* renamed from: d0.e0.p.d.m0.b.m, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.b.m, reason: use source file name */
+/* JADX INFO: compiled from: UnsignedType.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class UnsignedType {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static final UnsignedType f22574j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public static final UnsignedType f22575k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public static final UnsignedType f22576l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public static final UnsignedType f22577m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public static final /* synthetic */ UnsignedType[] f22578n;
     private final ClassId classId;
     private final Name typeName;

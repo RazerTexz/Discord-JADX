@@ -24,50 +24,50 @@ import p007b.p225i.p226a.p288f.p299e.p300h.p301j.C3326w0;
 import p007b.p225i.p226a.p288f.p299e.p300h.p301j.InterfaceC3304l0;
 import p007b.p225i.p226a.p288f.p313h.p318e.HandlerC3479c;
 
-/* compiled from: com.google.android.gms:play-services-base@@17.3.0 */
+/* JADX INFO: compiled from: com.google.android.gms:play-services-base@@17.3.0 */
+/* JADX INFO: loaded from: classes3.dex */
 @KeepName
-/* loaded from: classes3.dex */
 public abstract class BasePendingResult<R extends InterfaceC3273h> extends AbstractC3269d<R> {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final ThreadLocal<Boolean> f20499a = new C3326w0();
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final Object f20500b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final HandlerC10801a<R> f20501c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final CountDownLatch f20502d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final ArrayList<AbstractC3269d.a> f20503e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final AtomicReference<InterfaceC3304l0> f20504f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     @Nullable
     public R f20505g;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public Status f20506h;
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public volatile boolean f20507i;
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public boolean f20508j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public boolean f20509k;
 
     @KeepName
     public C10802b mResultGuardian;
 
-    /* compiled from: com.google.android.gms:play-services-base@@17.3.0 */
-    /* renamed from: com.google.android.gms.common.api.internal.BasePendingResult$a */
+    /* JADX INFO: renamed from: com.google.android.gms.common.api.internal.BasePendingResult$a */
+    /* JADX INFO: compiled from: com.google.android.gms:play-services-base@@17.3.0 */
     public static class HandlerC10801a<R extends InterfaceC3273h> extends HandlerC3479c {
         public HandlerC10801a(Looper looper) {
             super(looper);
@@ -98,8 +98,8 @@ public abstract class BasePendingResult<R extends InterfaceC3273h> extends Abstr
         }
     }
 
-    /* compiled from: com.google.android.gms:play-services-base@@17.3.0 */
-    /* renamed from: com.google.android.gms.common.api.internal.BasePendingResult$b */
+    /* JADX INFO: renamed from: com.google.android.gms.common.api.internal.BasePendingResult$b */
+    /* JADX INFO: compiled from: com.google.android.gms:play-services-base@@17.3.0 */
     public final class C10802b {
         public C10802b(C3326w0 c3326w0) {
         }
@@ -121,7 +121,7 @@ public abstract class BasePendingResult<R extends InterfaceC3273h> extends Abstr
         new WeakReference(null);
     }
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public static void m9032h(@Nullable InterfaceC3273h interfaceC3273h) {
         if (interfaceC3273h instanceof InterfaceC3271f) {
             try {
@@ -136,13 +136,13 @@ public abstract class BasePendingResult<R extends InterfaceC3273h> extends Abstr
         }
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public /* bridge */ /* synthetic */ void mo3989b(Object obj) {
         m9035g((InterfaceC3273h) obj);
     }
 
     @Override // p007b.p225i.p226a.p288f.p299e.p300h.AbstractC3269d
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final void mo4051c(AbstractC3269d.a aVar) {
         AnimatableValueParser.m551o(true, "Callback cannot be null.");
         synchronized (this.f20500b) {
@@ -155,11 +155,11 @@ public abstract class BasePendingResult<R extends InterfaceC3273h> extends Abstr
     }
 
     @NonNull
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public abstract R mo3987d(Status status);
 
     @Deprecated
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final void m9033e(Status status) {
         synchronized (this.f20500b) {
             if (!m9034f()) {
@@ -169,12 +169,12 @@ public abstract class BasePendingResult<R extends InterfaceC3273h> extends Abstr
         }
     }
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final boolean m9034f() {
         return this.f20502d.getCount() == 0;
     }
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public final void m9035g(R r) {
         synchronized (this.f20500b) {
             if (this.f20508j) {
@@ -192,7 +192,7 @@ public abstract class BasePendingResult<R extends InterfaceC3273h> extends Abstr
         }
     }
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public final void m9036i(R r) {
         this.f20505g = r;
         this.f20506h = r.mo4053b0();
@@ -211,7 +211,7 @@ public abstract class BasePendingResult<R extends InterfaceC3273h> extends Abstr
         this.f20503e.clear();
     }
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final R m9037j() {
         R r;
         synchronized (this.f20500b) {

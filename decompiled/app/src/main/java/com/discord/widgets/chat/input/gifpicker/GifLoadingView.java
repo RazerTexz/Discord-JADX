@@ -23,13 +23,13 @@ import org.objectweb.asm.Opcodes;
 import p507d0.p580t.Collections2;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: GifLoadingView.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: GifLoadingView.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class GifLoadingView extends RecyclerView {
     private boolean isStaggered;
     private final LoadingGifAdapter loadingGifAdapter;
 
-    /* compiled from: GifLoadingView.kt */
+    /* JADX INFO: compiled from: GifLoadingView.kt */
     public static final class LoadingGifAdapter extends RecyclerView.Adapter<LoadingGifViewHolder> {
         private List<Integer> heightsDp = Collections2.emptyList();
 
@@ -70,7 +70,7 @@ public final class GifLoadingView extends RecyclerView {
         }
     }
 
-    /* compiled from: GifLoadingView.kt */
+    /* JADX INFO: compiled from: GifLoadingView.kt */
     public static final class LoadingGifViewHolder extends RecyclerView.ViewHolder {
         private final LoadingGifItemViewBinding binding;
 

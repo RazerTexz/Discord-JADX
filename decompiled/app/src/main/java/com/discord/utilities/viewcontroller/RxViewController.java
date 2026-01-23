@@ -17,14 +17,14 @@ import p637j0.p641k.Func1;
 import p658rx.Observable;
 import p658rx.Subscription;
 
-/* compiled from: RxViewController.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: RxViewController.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public abstract class RxViewController<V extends View, T> {
     private Subscription subscription;
     private final V view;
 
-    /* compiled from: RxViewController.kt */
-    /* renamed from: com.discord.utilities.viewcontroller.RxViewController$bind$1 */
+    /* JADX INFO: renamed from: com.discord.utilities.viewcontroller.RxViewController$bind$1 */
+    /* JADX INFO: compiled from: RxViewController.kt */
     public static final class C70171 extends Lambda implements Function1<T, Unit> {
         public C70171() {
             super(1);
@@ -36,14 +36,14 @@ public abstract class RxViewController<V extends View, T> {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(T t) {
             RxViewController.this.configureView(t);
         }
     }
 
-    /* compiled from: RxViewController.kt */
-    /* renamed from: com.discord.utilities.viewcontroller.RxViewController$connectViewRx$1 */
+    /* JADX INFO: renamed from: com.discord.utilities.viewcontroller.RxViewController$connectViewRx$1 */
+    /* JADX INFO: compiled from: RxViewController.kt */
     public static final class C70181<T, R> implements Func1<T, Boolean> {
         public final /* synthetic */ View $view;
 
@@ -64,8 +64,8 @@ public abstract class RxViewController<V extends View, T> {
         }
     }
 
-    /* compiled from: RxViewController.kt */
-    /* renamed from: com.discord.utilities.viewcontroller.RxViewController$connectViewRx$2 */
+    /* JADX INFO: renamed from: com.discord.utilities.viewcontroller.RxViewController$connectViewRx$2 */
+    /* JADX INFO: compiled from: RxViewController.kt */
     public static final class C70192 extends Lambda implements Function1<Subscription, Unit> {
         public final /* synthetic */ Ref$ObjectRef $subscriptionResult;
 
@@ -82,15 +82,15 @@ public abstract class RxViewController<V extends View, T> {
         }
 
         /* JADX WARN: Multi-variable type inference failed */
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Subscription subscription) {
             Intrinsics3.checkNotNullParameter(subscription, Traits.Payment.Type.SUBSCRIPTION);
             this.$subscriptionResult.element = subscription;
         }
     }
 
-    /* compiled from: RxViewController.kt */
-    /* renamed from: com.discord.utilities.viewcontroller.RxViewController$connectViewRx$3 */
+    /* JADX INFO: renamed from: com.discord.utilities.viewcontroller.RxViewController$connectViewRx$3 */
+    /* JADX INFO: compiled from: RxViewController.kt */
     public static final class C70203 extends Lambda implements Function1<T, Unit> {
         public final /* synthetic */ Function1 $onNext;
 
@@ -106,7 +106,7 @@ public abstract class RxViewController<V extends View, T> {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(T t) {
             this.$onNext.invoke(t);
         }

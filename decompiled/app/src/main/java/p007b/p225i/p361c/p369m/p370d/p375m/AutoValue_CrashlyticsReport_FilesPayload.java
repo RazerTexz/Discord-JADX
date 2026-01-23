@@ -5,15 +5,15 @@ import androidx.annotation.Nullable;
 import p007b.p100d.p104b.p105a.outline;
 import p007b.p225i.p361c.p369m.p370d.p375m.CrashlyticsReport;
 
-/* compiled from: AutoValue_CrashlyticsReport_FilesPayload.java */
-/* renamed from: b.i.c.m.d.m.d, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.c.m.d.m.d, reason: use source file name */
+/* JADX INFO: compiled from: AutoValue_CrashlyticsReport_FilesPayload.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class AutoValue_CrashlyticsReport_FilesPayload extends CrashlyticsReport.c {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final ImmutableList3<CrashlyticsReport.c.a> f12536a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final String f12537b;
 
     public AutoValue_CrashlyticsReport_FilesPayload(ImmutableList3 immutableList3, String str, a aVar) {
@@ -23,14 +23,14 @@ public final class AutoValue_CrashlyticsReport_FilesPayload extends CrashlyticsR
 
     @Override // p007b.p225i.p361c.p369m.p370d.p375m.CrashlyticsReport.c
     @NonNull
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public ImmutableList3<CrashlyticsReport.c.a> mo6527a() {
         return this.f12536a;
     }
 
     @Override // p007b.p225i.p361c.p369m.p370d.p375m.CrashlyticsReport.c
     @Nullable
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public String mo6528b() {
         return this.f12537b;
     }

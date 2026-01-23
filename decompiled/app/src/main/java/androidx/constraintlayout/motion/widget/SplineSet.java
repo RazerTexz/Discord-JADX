@@ -12,7 +12,7 @@ import java.text.DecimalFormat;
 import java.util.Arrays;
 import p007b.p100d.p104b.p105a.outline;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public abstract class SplineSet {
     private static final String TAG = "SplineSet";
     private int count;
@@ -59,7 +59,7 @@ public abstract class SplineSet {
             for (int i2 = 0; i2 < size; i2++) {
                 int iKeyAt = this.mConstraintAttributeList.keyAt(i2);
                 ConstraintAttribute constraintAttributeValueAt = this.mConstraintAttributeList.valueAt(i2);
-                dArr[i2] = iKeyAt * 0.01d;
+                dArr[i2] = ((double) iKeyAt) * 0.01d;
                 constraintAttributeValueAt.getValuesToInterpolate(this.mTempValues);
                 int i3 = 0;
                 while (true) {
@@ -112,7 +112,7 @@ public abstract class SplineSet {
         public boolean mNoMethod = false;
 
         @Override // androidx.constraintlayout.motion.widget.SplineSet
-        public void setProperty(View view, float f) throws SecurityException, IllegalArgumentException {
+        public void setProperty(View view, float f) {
             if (view instanceof MotionLayout) {
                 ((MotionLayout) view).setProgress(get(f));
                 return;
@@ -313,7 +313,7 @@ public abstract class SplineSet {
             if (i6 > 0) {
                 int[] iArr2 = this.mTimePoints;
                 if (iArr2[i6] != iArr2[i6 - 1]) {
-                    dArr[i5] = this.mTimePoints[i6] * 0.01d;
+                    dArr[i5] = ((double) this.mTimePoints[i6]) * 0.01d;
                     dArr2[i5][0] = this.mValues[i6];
                     i5++;
                 }

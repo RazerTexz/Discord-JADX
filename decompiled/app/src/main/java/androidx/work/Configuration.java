@@ -10,7 +10,7 @@ import com.discord.stores.StoreNotices;
 import java.util.concurrent.Executor;
 import java.util.concurrent.Executors;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public final class Configuration {
 
     @SuppressLint({"MinMaxConstant"})

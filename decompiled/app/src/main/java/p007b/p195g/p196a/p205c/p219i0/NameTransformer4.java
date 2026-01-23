@@ -3,16 +3,16 @@ package p007b.p195g.p196a.p205c.p219i0;
 import java.io.Serializable;
 import p007b.p100d.p104b.p105a.outline;
 
-/* compiled from: NameTransformer.java */
-/* renamed from: b.g.a.c.i0.n, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.g.a.c.i0.n, reason: use source file name */
+/* JADX INFO: compiled from: NameTransformer.java */
+/* JADX INFO: loaded from: classes3.dex */
 public abstract class NameTransformer4 {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static final NameTransformer4 f4961j = new b();
 
-    /* compiled from: NameTransformer.java */
-    /* renamed from: b.g.a.c.i0.n$a */
+    /* JADX INFO: renamed from: b.g.a.c.i0.n$a */
+    /* JADX INFO: compiled from: NameTransformer.java */
     public static class a extends NameTransformer4 implements Serializable {
         private static final long serialVersionUID = 1;
         public final NameTransformer4 _t1;
@@ -24,7 +24,7 @@ public abstract class NameTransformer4 {
         }
 
         @Override // p007b.p195g.p196a.p205c.p219i0.NameTransformer4
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public String mo2202a(String str) {
             return this._t1.mo2202a(this._t2.mo2202a(str));
         }
@@ -39,18 +39,18 @@ public abstract class NameTransformer4 {
         }
     }
 
-    /* compiled from: NameTransformer.java */
-    /* renamed from: b.g.a.c.i0.n$b */
+    /* JADX INFO: renamed from: b.g.a.c.i0.n$b */
+    /* JADX INFO: compiled from: NameTransformer.java */
     public static final class b extends NameTransformer4 implements Serializable {
         private static final long serialVersionUID = 1;
 
         @Override // p007b.p195g.p196a.p205c.p219i0.NameTransformer4
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public String mo2202a(String str) {
             return str;
         }
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public abstract String mo2202a(String str);
 }

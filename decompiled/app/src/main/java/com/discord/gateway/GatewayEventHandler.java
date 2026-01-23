@@ -1,8 +1,8 @@
 package com.discord.gateway;
 
 
-/* compiled from: GatewayEventHandler.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: GatewayEventHandler.kt */
+/* JADX INFO: loaded from: classes.dex */
 public interface GatewayEventHandler {
     void handleConnected(boolean connected);
 

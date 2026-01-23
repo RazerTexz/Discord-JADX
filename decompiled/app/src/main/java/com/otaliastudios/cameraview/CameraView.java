@@ -102,115 +102,115 @@ import p007b.p452o.p453a.p473x.SizeSelectors3;
 import p007b.p452o.p453a.p473x.SizeSelectors4;
 import p007b.p452o.p453a.p473x.SizeSelectors5;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public class CameraView extends FrameLayout implements LifecycleObserver {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static final String f22108j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public static final CameraLogger f22109k;
 
-    /* renamed from: A */
+    /* JADX INFO: renamed from: A */
     public Size3 f22110A;
 
-    /* renamed from: B */
+    /* JADX INFO: renamed from: B */
     public MediaActionSound f22111B;
 
-    /* renamed from: C */
+    /* JADX INFO: renamed from: C */
     public AutoFocusMarker f22112C;
 
-    /* renamed from: D */
+    /* JADX INFO: renamed from: D */
     @VisibleForTesting
     public List<CameraListener> f22113D;
 
-    /* renamed from: E */
+    /* JADX INFO: renamed from: E */
     @VisibleForTesting
     public List<FrameProcessor> f22114E;
 
-    /* renamed from: F */
+    /* JADX INFO: renamed from: F */
     public Lifecycle f22115F;
 
-    /* renamed from: G */
+    /* JADX INFO: renamed from: G */
     @VisibleForTesting
     public PinchGestureFinder f22116G;
 
-    /* renamed from: H */
+    /* JADX INFO: renamed from: H */
     @VisibleForTesting
     public TapGestureFinder f22117H;
 
-    /* renamed from: I */
+    /* JADX INFO: renamed from: I */
     @VisibleForTesting
     public ScrollGestureFinder f22118I;
 
-    /* renamed from: J */
+    /* JADX INFO: renamed from: J */
     @VisibleForTesting
     public GridLinesLayout f22119J;
 
-    /* renamed from: K */
+    /* JADX INFO: renamed from: K */
     @VisibleForTesting
     public MarkerLayout f22120K;
 
-    /* renamed from: L */
+    /* JADX INFO: renamed from: L */
     public boolean f22121L;
 
-    /* renamed from: M */
+    /* JADX INFO: renamed from: M */
     public boolean f22122M;
 
-    /* renamed from: N */
+    /* JADX INFO: renamed from: N */
     @VisibleForTesting
     public OverlayLayout f22123N;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public boolean f22124l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public boolean f22125m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public boolean f22126n;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public HashMap<Gesture, GestureAction> f22127o;
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public Preview f22128p;
 
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     public Engine f22129q;
 
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     public Filter2 f22130r;
 
-    /* renamed from: s */
+    /* JADX INFO: renamed from: s */
     public int f22131s;
 
-    /* renamed from: t */
+    /* JADX INFO: renamed from: t */
     public int f22132t;
 
-    /* renamed from: u */
+    /* JADX INFO: renamed from: u */
     public Handler f22133u;
 
-    /* renamed from: v */
+    /* JADX INFO: renamed from: v */
     public Executor f22134v;
 
-    /* renamed from: w */
+    /* JADX INFO: renamed from: w */
     @VisibleForTesting
     public C11195b f22135w;
 
-    /* renamed from: x */
+    /* JADX INFO: renamed from: x */
     public CameraPreview f22136x;
 
-    /* renamed from: y */
+    /* JADX INFO: renamed from: y */
     public OrientationHelper2 f22137y;
 
-    /* renamed from: z */
+    /* JADX INFO: renamed from: z */
     public CameraEngine f22138z;
 
-    /* renamed from: com.otaliastudios.cameraview.CameraView$a */
+    /* JADX INFO: renamed from: com.otaliastudios.cameraview.CameraView$a */
     public class ThreadFactoryC11194a implements ThreadFactory {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public final AtomicInteger f22139j = new AtomicInteger(1);
 
         public ThreadFactoryC11194a(CameraView cameraView) {
@@ -224,23 +224,23 @@ public class CameraView extends FrameLayout implements LifecycleObserver {
         }
     }
 
+    /* JADX INFO: renamed from: com.otaliastudios.cameraview.CameraView$b */
     @VisibleForTesting
-    /* renamed from: com.otaliastudios.cameraview.CameraView$b */
     public class C11195b implements CameraEngine.g, OrientationHelper2.c, GestureFinder.a {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final String f22140a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final CameraLogger f22141b;
 
-        /* renamed from: com.otaliastudios.cameraview.CameraView$b$a */
+        /* JADX INFO: renamed from: com.otaliastudios.cameraview.CameraView$b$a */
         public class a implements Runnable {
 
-            /* renamed from: j */
+            /* JADX INFO: renamed from: j */
             public final /* synthetic */ float f22143j;
 
-            /* renamed from: k */
+            /* JADX INFO: renamed from: k */
             public final /* synthetic */ PointF[] f22144k;
 
             public a(float f, PointF[] pointFArr) {
@@ -257,16 +257,16 @@ public class CameraView extends FrameLayout implements LifecycleObserver {
             }
         }
 
-        /* renamed from: com.otaliastudios.cameraview.CameraView$b$b */
+        /* JADX INFO: renamed from: com.otaliastudios.cameraview.CameraView$b$b */
         public class b implements Runnable {
 
-            /* renamed from: j */
+            /* JADX INFO: renamed from: j */
             public final /* synthetic */ float f22146j;
 
-            /* renamed from: k */
+            /* JADX INFO: renamed from: k */
             public final /* synthetic */ float[] f22147k;
 
-            /* renamed from: l */
+            /* JADX INFO: renamed from: l */
             public final /* synthetic */ PointF[] f22148l;
 
             public b(float f, float[] fArr, PointF[] pointFArr) {
@@ -284,10 +284,10 @@ public class CameraView extends FrameLayout implements LifecycleObserver {
             }
         }
 
-        /* renamed from: com.otaliastudios.cameraview.CameraView$b$c */
+        /* JADX INFO: renamed from: com.otaliastudios.cameraview.CameraView$b$c */
         public class c implements Runnable {
 
-            /* renamed from: j */
+            /* JADX INFO: renamed from: j */
             public final /* synthetic */ Frame2 f22150j;
 
             public c(Frame2 frame2) {
@@ -309,10 +309,10 @@ public class CameraView extends FrameLayout implements LifecycleObserver {
             }
         }
 
-        /* renamed from: com.otaliastudios.cameraview.CameraView$b$d */
+        /* JADX INFO: renamed from: com.otaliastudios.cameraview.CameraView$b$d */
         public class d implements Runnable {
 
-            /* renamed from: j */
+            /* JADX INFO: renamed from: j */
             public final /* synthetic */ CameraException f22152j;
 
             public d(CameraException cameraException) {
@@ -328,7 +328,7 @@ public class CameraView extends FrameLayout implements LifecycleObserver {
             }
         }
 
-        /* renamed from: com.otaliastudios.cameraview.CameraView$b$e */
+        /* JADX INFO: renamed from: com.otaliastudios.cameraview.CameraView$b$e */
         public class e implements Runnable {
             public e() {
             }
@@ -339,13 +339,13 @@ public class CameraView extends FrameLayout implements LifecycleObserver {
             }
         }
 
-        /* renamed from: com.otaliastudios.cameraview.CameraView$b$f */
+        /* JADX INFO: renamed from: com.otaliastudios.cameraview.CameraView$b$f */
         public class f implements Runnable {
 
-            /* renamed from: j */
+            /* JADX INFO: renamed from: j */
             public final /* synthetic */ PointF f22155j;
 
-            /* renamed from: k */
+            /* JADX INFO: renamed from: k */
             public final /* synthetic */ Gesture f22156k;
 
             public f(PointF pointF, Gesture gesture) {
@@ -377,16 +377,16 @@ public class CameraView extends FrameLayout implements LifecycleObserver {
             }
         }
 
-        /* renamed from: com.otaliastudios.cameraview.CameraView$b$g */
+        /* JADX INFO: renamed from: com.otaliastudios.cameraview.CameraView$b$g */
         public class g implements Runnable {
 
-            /* renamed from: j */
+            /* JADX INFO: renamed from: j */
             public final /* synthetic */ boolean f22158j;
 
-            /* renamed from: k */
+            /* JADX INFO: renamed from: k */
             public final /* synthetic */ Gesture f22159k;
 
-            /* renamed from: l */
+            /* JADX INFO: renamed from: l */
             public final /* synthetic */ PointF f22160l;
 
             public g(boolean z2, Gesture gesture, PointF pointF) {
@@ -422,13 +422,13 @@ public class CameraView extends FrameLayout implements LifecycleObserver {
             this.f22141b = new CameraLogger(simpleName);
         }
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public void m9311a(CameraException cameraException) {
             this.f22141b.m7159a(1, "dispatchError", cameraException);
             CameraView.this.f22133u.post(new d(cameraException));
         }
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public void m9312b(@NonNull Frame2 frame2) {
             this.f22141b.m7159a(0, "dispatchFrame:", Long.valueOf(frame2.m7383a()), "processors:", Integer.valueOf(CameraView.this.f22114E.size()));
             if (CameraView.this.f22114E.isEmpty()) {
@@ -438,37 +438,37 @@ public class CameraView extends FrameLayout implements LifecycleObserver {
             }
         }
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public void m9313c(float f2, @NonNull float[] fArr, @Nullable PointF[] pointFArr) {
             this.f22141b.m7159a(1, "dispatchOnExposureCorrectionChanged", Float.valueOf(f2));
             CameraView.this.f22133u.post(new b(f2, fArr, pointFArr));
         }
 
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         public void m9314d(@Nullable Gesture gesture, boolean z2, @NonNull PointF pointF) {
             this.f22141b.m7159a(1, "dispatchOnFocusEnd", gesture, Boolean.valueOf(z2), pointF);
             CameraView.this.f22133u.post(new g(z2, gesture, pointF));
         }
 
-        /* renamed from: e */
+        /* JADX INFO: renamed from: e */
         public void m9315e(@Nullable Gesture gesture, @NonNull PointF pointF) {
             this.f22141b.m7159a(1, "dispatchOnFocusStart", gesture, pointF);
             CameraView.this.f22133u.post(new f(pointF, gesture));
         }
 
-        /* renamed from: f */
+        /* JADX INFO: renamed from: f */
         public void m9316f(float f2, @Nullable PointF[] pointFArr) {
             this.f22141b.m7159a(1, "dispatchOnZoomChanged", Float.valueOf(f2));
             CameraView.this.f22133u.post(new a(f2, pointFArr));
         }
 
         @NonNull
-        /* renamed from: g */
+        /* JADX INFO: renamed from: g */
         public Context m9317g() {
             return CameraView.this.getContext();
         }
 
-        /* renamed from: h */
+        /* JADX INFO: renamed from: h */
         public void m9318h() {
             Size3 size3Mo7254C = CameraView.this.f22138z.mo7254C(Reference2.VIEW);
             if (size3Mo7254C == null) {
@@ -713,7 +713,7 @@ public class CameraView extends FrameLayout implements LifecycleObserver {
     }
 
     @SuppressLint({"NewApi"})
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public boolean m9304a(@NonNull Audio audio) {
         Audio audio2 = Audio.STEREO;
         Audio audio3 = Audio.MONO;
@@ -771,7 +771,7 @@ public class CameraView extends FrameLayout implements LifecycleObserver {
         super.addView(view, i, layoutParams);
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final void m9305b() {
         CameraEngine camera1Engine2;
         CameraLogger cameraLogger = f22109k;
@@ -789,7 +789,7 @@ public class CameraView extends FrameLayout implements LifecycleObserver {
         this.f22138z.mo7297o0(this.f22123N);
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final boolean m9306c() {
         CameraEngine cameraEngine = this.f22138z;
         return cameraEngine.f13922n.f14028f == CameraState2.OFF && !cameraEngine.m7324O();
@@ -815,7 +815,7 @@ public class CameraView extends FrameLayout implements LifecycleObserver {
         }
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public boolean m9307d() {
         CameraState2 cameraState2 = this.f22138z.f13922n.f14028f;
         CameraState2 cameraState22 = CameraState2.ENGINE;
@@ -840,7 +840,7 @@ public class CameraView extends FrameLayout implements LifecycleObserver {
         }
     }
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public boolean m9308e(@NonNull Gesture gesture, @NonNull GestureAction gestureAction) {
         GestureAction gestureAction2 = GestureAction.f14072j;
         if (!gesture.m7388f(gestureAction)) {
@@ -864,7 +864,7 @@ public class CameraView extends FrameLayout implements LifecycleObserver {
         return true;
     }
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final String m9309f(int i) {
         if (i == Integer.MIN_VALUE) {
             return "AT_MOST";
@@ -878,7 +878,7 @@ public class CameraView extends FrameLayout implements LifecycleObserver {
         return "EXACTLY";
     }
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public final void m9310g(@NonNull GestureFinder gestureFinder, @NonNull CameraOptions cameraOptions) {
         Gesture gesture = gestureFinder.f14082b;
         GestureAction gestureAction = this.f22127o.get(gesture);

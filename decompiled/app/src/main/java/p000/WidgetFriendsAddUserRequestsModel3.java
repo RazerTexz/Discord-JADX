@@ -3,12 +3,12 @@ package p000;
 import kotlin.jvm.functions.Function2;
 import p658rx.functions.Func2;
 
-/* compiled from: WidgetFriendsAddUserRequestsModel.kt */
-/* renamed from: w, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: w, reason: use source file name */
+/* JADX INFO: compiled from: WidgetFriendsAddUserRequestsModel.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class WidgetFriendsAddUserRequestsModel3 implements Func2 {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final /* synthetic */ Function2 f27930j;
 
     public WidgetFriendsAddUserRequestsModel3(Function2 function2) {

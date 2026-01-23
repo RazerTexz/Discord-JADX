@@ -24,7 +24,7 @@ import androidx.core.app.NotificationManagerCompat;
 import java.util.Locale;
 import p668x.p669a.p670a.p671d.ITrustedWebActivityService;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public abstract class TrustedWebActivityService extends Service {
 
     @SuppressLint({"ActionValue", "ServiceName"})
@@ -37,7 +37,7 @@ public abstract class TrustedWebActivityService extends Service {
     public int mVerifiedUid = -1;
     private final ITrustedWebActivityService.a mBinder = new BinderC01571();
 
-    /* renamed from: androidx.browser.trusted.TrustedWebActivityService$1 */
+    /* JADX INFO: renamed from: androidx.browser.trusted.TrustedWebActivityService$1 */
     public class BinderC01571 extends ITrustedWebActivityService.a {
         public BinderC01571() {
         }

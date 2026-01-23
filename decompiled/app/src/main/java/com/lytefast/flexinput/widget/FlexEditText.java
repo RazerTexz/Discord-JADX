@@ -16,21 +16,21 @@ import kotlin.jvm.functions.Function2;
 import p007b.p076b.p077a.p084i.FlexEditText2;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: FlexEditText.kt */
-/* loaded from: classes3.dex */
+/* JADX INFO: compiled from: FlexEditText.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public class FlexEditText extends AppCompatEditText {
 
-    /* renamed from: j, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: j, reason: from kotlin metadata */
     public Function1<? super InputContentInfoCompat, Unit> inputContentHandler;
 
-    /* renamed from: k, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: k, reason: from kotlin metadata */
     public Function2<? super Integer, ? super Integer, Unit> onSelectionChangedListener;
 
-    /* renamed from: l, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: l, reason: from kotlin metadata */
     public Function1<? super Integer, Unit> onMaxLinesChangedListener;
 
-    /* compiled from: FlexEditText.kt */
-    /* renamed from: com.lytefast.flexinput.widget.FlexEditText$a */
+    /* JADX INFO: renamed from: com.lytefast.flexinput.widget.FlexEditText$a */
+    /* JADX INFO: compiled from: FlexEditText.kt */
     public static final class C11193a implements InputConnectionCompat.OnCommitContentListener {
         public C11193a(EditorInfo editorInfo) {
         }

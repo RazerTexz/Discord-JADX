@@ -4,9 +4,9 @@ import com.google.errorprone.annotations.CanIgnoreReturnValue;
 import java.util.AbstractSet;
 import java.util.Collection;
 
-/* compiled from: Sets.java */
-/* renamed from: b.i.b.b.p0, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.b.b.p0, reason: use source file name */
+/* JADX INFO: compiled from: Sets.java */
+/* JADX INFO: loaded from: classes3.dex */
 public abstract class Sets4<E> extends AbstractSet<E> {
     public Sets4(Sets sets) {
     }

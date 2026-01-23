@@ -9,8 +9,8 @@ import java.util.HashMap;
 import java.util.WeakHashMap;
 import p007b.p100d.p104b.p105a.outline;
 
+/* JADX INFO: loaded from: classes.dex */
 @RestrictTo({RestrictTo.Scope.LIBRARY_GROUP})
-/* loaded from: classes.dex */
 public class WakeLocks {
     private static final String TAG = Logger.tagWithPrefix("WakeLocks");
     private static final WeakHashMap<PowerManager.WakeLock, String> sWakeLocks = new WeakHashMap<>();

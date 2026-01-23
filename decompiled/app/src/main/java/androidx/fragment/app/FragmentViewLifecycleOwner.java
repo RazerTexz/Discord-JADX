@@ -9,7 +9,7 @@ import androidx.view.SavedStateRegistry;
 import androidx.view.SavedStateRegistryController;
 import androidx.view.SavedStateRegistryOwner;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class FragmentViewLifecycleOwner implements SavedStateRegistryOwner {
     private LifecycleRegistry mLifecycleRegistry = null;
     private SavedStateRegistryController mSavedStateRegistryController = null;

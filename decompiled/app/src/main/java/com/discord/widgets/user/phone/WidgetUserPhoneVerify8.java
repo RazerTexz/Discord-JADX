@@ -5,9 +5,9 @@ import kotlin.jvm.functions.Function1;
 import p507d0.p592z.p594d.FunctionReferenceImpl;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: WidgetUserPhoneVerify.kt */
-/* renamed from: com.discord.widgets.user.phone.WidgetUserPhoneVerify$onViewBound$1$1, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: com.discord.widgets.user.phone.WidgetUserPhoneVerify$onViewBound$1$1, reason: use source file name */
+/* JADX INFO: compiled from: WidgetUserPhoneVerify.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* synthetic */ class WidgetUserPhoneVerify8 extends FunctionReferenceImpl implements Function1<String, Unit> {
     public WidgetUserPhoneVerify8(WidgetUserPhoneVerify widgetUserPhoneVerify) {
         super(1, widgetUserPhoneVerify, WidgetUserPhoneVerify.class, "handleCodeEntered", "handleCodeEntered(Ljava/lang/String;)V", 0);
@@ -19,7 +19,7 @@ public final /* synthetic */ class WidgetUserPhoneVerify8 extends FunctionRefere
         return Unit.f27425a;
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final void invoke2(String str) {
         Intrinsics3.checkNotNullParameter(str, "p1");
         WidgetUserPhoneVerify.access$handleCodeEntered((WidgetUserPhoneVerify) this.receiver, str);

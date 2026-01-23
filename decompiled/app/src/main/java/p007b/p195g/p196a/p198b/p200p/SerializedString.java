@@ -6,12 +6,12 @@ import java.io.ObjectOutputStream;
 import java.io.Serializable;
 import p007b.p195g.p196a.p198b.SerializableString;
 
-/* compiled from: SerializedString.java */
-/* renamed from: b.g.a.b.p.j, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.g.a.b.p.j, reason: use source file name */
+/* JADX INFO: compiled from: SerializedString.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class SerializedString implements SerializableString, Serializable {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static final JsonStringEncoder f4558j = JsonStringEncoder.f4551b;
     private static final long serialVersionUID = 1;
     public char[] _quotedChars;
@@ -19,7 +19,7 @@ public class SerializedString implements SerializableString, Serializable {
     public byte[] _unquotedUTF8Ref;
     public final String _value;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public transient String f4559k;
 
     public SerializedString(String str) {
@@ -38,7 +38,7 @@ public class SerializedString implements SerializableString, Serializable {
     }
 
     @Override // p007b.p195g.p196a.p198b.SerializableString
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final char[] mo1688a() {
         char[] cArr = this._quotedChars;
         if (cArr != null) {
@@ -50,7 +50,7 @@ public class SerializedString implements SerializableString, Serializable {
     }
 
     @Override // p007b.p195g.p196a.p198b.SerializableString
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public int mo1689b(char[] cArr, int i) {
         String str = this._value;
         int length = str.length();
@@ -62,7 +62,7 @@ public class SerializedString implements SerializableString, Serializable {
     }
 
     @Override // p007b.p195g.p196a.p198b.SerializableString
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public int mo1690c(char[] cArr, int i) {
         char[] cArrM1696a = this._quotedChars;
         if (cArrM1696a == null) {

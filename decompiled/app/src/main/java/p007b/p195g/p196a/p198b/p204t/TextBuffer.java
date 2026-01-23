@@ -2,46 +2,46 @@ package p007b.p195g.p196a.p198b.p204t;
 
 import java.util.ArrayList;
 
-/* compiled from: TextBuffer.java */
-/* renamed from: b.g.a.b.t.k, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.g.a.b.t.k, reason: use source file name */
+/* JADX INFO: compiled from: TextBuffer.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class TextBuffer {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final char[] f4604a = new char[0];
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final BufferRecycler f4605b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public int f4606c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public ArrayList<char[]> f4607d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public boolean f4608e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public int f4609f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public char[] f4610g;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public int f4611h;
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public String f4612i;
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public char[] f4613j;
 
     public TextBuffer(BufferRecycler bufferRecycler) {
         this.f4605b = bufferRecycler;
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public void m1739a(String str, int i, int i2) {
         if (this.f4606c >= 0) {
             m1744f(i2);
@@ -78,7 +78,7 @@ public final class TextBuffer {
         }
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public void m1740b(char[] cArr, int i, int i2) {
         if (this.f4606c >= 0) {
             m1744f(i2);
@@ -109,7 +109,7 @@ public final class TextBuffer {
         } while (i2 > 0);
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public String m1741c() {
         if (this.f4612i == null) {
             if (this.f4613j != null) {
@@ -141,7 +141,7 @@ public final class TextBuffer {
         return this.f4612i;
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final void m1742d() {
         if (this.f4607d == null) {
             this.f4607d = new ArrayList<>();
@@ -161,7 +161,7 @@ public final class TextBuffer {
         this.f4610g = new char[i];
     }
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public char[] m1743e() {
         if (this.f4607d == null) {
             this.f4607d = new ArrayList<>();
@@ -182,7 +182,7 @@ public final class TextBuffer {
         return cArr;
     }
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final void m1744f(int i) {
         this.f4606c = -1;
         int i2 = i + 0;

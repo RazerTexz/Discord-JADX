@@ -12,7 +12,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.recyclerview.widget.RecyclerView;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class DividerItemDecoration extends RecyclerView.ItemDecoration {
     private static final int[] ATTRS = {R.attr.listDivider};
     public static final int HORIZONTAL = 0;

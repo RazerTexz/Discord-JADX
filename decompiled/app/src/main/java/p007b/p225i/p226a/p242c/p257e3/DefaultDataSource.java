@@ -22,60 +22,60 @@ import p007b.p225i.p226a.p242c.p257e3.DataSource3;
 import p007b.p225i.p226a.p242c.p257e3.DefaultHttpDataSource;
 import p007b.p225i.p226a.p242c.p259f3.Util2;
 
-/* compiled from: DefaultDataSource.java */
-/* renamed from: b.i.a.c.e3.q, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.e3.q, reason: use source file name */
+/* JADX INFO: compiled from: DefaultDataSource.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class DefaultDataSource implements DataSource3 {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final Context f6594a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final List<TransferListener> f6595b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final DataSource3 f6596c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     @Nullable
     public DataSource3 f6597d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     @Nullable
     public DataSource3 f6598e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     @Nullable
     public DataSource3 f6599f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     @Nullable
     public DataSource3 f6600g;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     @Nullable
     public DataSource3 f6601h;
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     @Nullable
     public DataSource3 f6602i;
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     @Nullable
     public DataSource3 f6603j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     @Nullable
     public DataSource3 f6604k;
 
-    /* compiled from: DefaultDataSource.java */
-    /* renamed from: b.i.a.c.e3.q$a */
+    /* JADX INFO: renamed from: b.i.a.c.e3.q$a */
+    /* JADX INFO: compiled from: DefaultDataSource.java */
     public static final class a implements DataSource3.a {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final Context f6605a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final DataSource3.a f6606b;
 
         public a(Context context) {
@@ -85,12 +85,12 @@ public final class DefaultDataSource implements DataSource3 {
         }
 
         @Override // p007b.p225i.p226a.p242c.p257e3.DataSource3.a
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public /* bridge */ /* synthetic */ DataSource3 mo234a() {
             return m2865b();
         }
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public DefaultDataSource m2865b() {
             return new DefaultDataSource(this.f6605a, this.f6606b.mo234a());
         }
@@ -104,7 +104,7 @@ public final class DefaultDataSource implements DataSource3 {
     }
 
     @Override // p007b.p225i.p226a.p242c.p257e3.DataSource3
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public long mo2586a(DataSpec dataSpec) throws IOException {
         boolean z2 = true;
         AnimatableValueParser.m426D(this.f6604k == null);
@@ -202,7 +202,7 @@ public final class DefaultDataSource implements DataSource3 {
     }
 
     @Override // p007b.p225i.p226a.p242c.p257e3.DataSource3
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public void mo2587d(TransferListener transferListener) {
         Objects.requireNonNull(transferListener);
         this.f6596c.mo2587d(transferListener);
@@ -238,7 +238,7 @@ public final class DefaultDataSource implements DataSource3 {
     }
 
     @Override // p007b.p225i.p226a.p242c.p257e3.DataSource3
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public Map<String, List<String>> mo2588j() {
         DataSource3 dataSource3 = this.f6604k;
         return dataSource3 == null ? Collections.emptyMap() : dataSource3.mo2588j();
@@ -246,7 +246,7 @@ public final class DefaultDataSource implements DataSource3 {
 
     @Override // p007b.p225i.p226a.p242c.p257e3.DataSource3
     @Nullable
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public Uri mo2589n() {
         DataSource3 dataSource3 = this.f6604k;
         if (dataSource3 == null) {
@@ -255,7 +255,7 @@ public final class DefaultDataSource implements DataSource3 {
         return dataSource3.mo2589n();
     }
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public final void m2864p(DataSource3 dataSource3) {
         for (int i = 0; i < this.f6595b.size(); i++) {
             dataSource3.mo2587d(this.f6595b.get(i));

@@ -28,16 +28,16 @@ import p507d0.p592z.p594d.FunctionReferenceImpl;
 import p507d0.p592z.p594d.Intrinsics3;
 import p658rx.Observable;
 
-/* compiled from: StageAudienceBlockedBottomSheetViewModel.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: StageAudienceBlockedBottomSheetViewModel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class StageAudienceBlockedBottomSheetViewModel extends AppViewModel<ViewState> {
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private final long channelId;
 
-    /* compiled from: StageAudienceBlockedBottomSheetViewModel.kt */
-    /* renamed from: com.discord.widgets.stage.sheet.StageAudienceBlockedBottomSheetViewModel$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.stage.sheet.StageAudienceBlockedBottomSheetViewModel$1 */
+    /* JADX INFO: compiled from: StageAudienceBlockedBottomSheetViewModel.kt */
     public static final /* synthetic */ class C100161 extends FunctionReferenceImpl implements Function1<StoreState, Unit> {
         public C100161(StageAudienceBlockedBottomSheetViewModel stageAudienceBlockedBottomSheetViewModel) {
             super(1, stageAudienceBlockedBottomSheetViewModel, StageAudienceBlockedBottomSheetViewModel.class, "handleStoreState", "handleStoreState(Lcom/discord/widgets/stage/sheet/StageAudienceBlockedBottomSheetViewModel$StoreState;)V", 0);
@@ -49,14 +49,14 @@ public final class StageAudienceBlockedBottomSheetViewModel extends AppViewModel
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(StoreState storeState) {
             Intrinsics3.checkNotNullParameter(storeState, "p1");
             StageAudienceBlockedBottomSheetViewModel.access$handleStoreState((StageAudienceBlockedBottomSheetViewModel) this.receiver, storeState);
         }
     }
 
-    /* compiled from: StageAudienceBlockedBottomSheetViewModel.kt */
+    /* JADX INFO: compiled from: StageAudienceBlockedBottomSheetViewModel.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -76,7 +76,7 @@ public final class StageAudienceBlockedBottomSheetViewModel extends AppViewModel
         }
     }
 
-    /* compiled from: StageAudienceBlockedBottomSheetViewModel.kt */
+    /* JADX INFO: compiled from: StageAudienceBlockedBottomSheetViewModel.kt */
     public static final /* data */ class StoreState {
         private final Set<Long> blockedUsers;
         private final CallModel callModel;
@@ -92,6 +92,7 @@ public final class StageAudienceBlockedBottomSheetViewModel extends AppViewModel
             this.stageRoles = map;
         }
 
+        /* JADX WARN: Multi-variable type inference failed */
         public static /* synthetic */ StoreState copy$default(StoreState storeState, long j, CallModel callModel, Set set, Map map, int i, Object obj) {
             if ((i & 1) != 0) {
                 j = storeState.channelId;
@@ -111,12 +112,12 @@ public final class StageAudienceBlockedBottomSheetViewModel extends AppViewModel
             return storeState.copy(j2, callModel2, set2, map);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final long getChannelId() {
             return this.channelId;
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final CallModel getCallModel() {
             return this.callModel;
         }
@@ -184,10 +185,10 @@ public final class StageAudienceBlockedBottomSheetViewModel extends AppViewModel
         }
     }
 
-    /* compiled from: StageAudienceBlockedBottomSheetViewModel.kt */
+    /* JADX INFO: compiled from: StageAudienceBlockedBottomSheetViewModel.kt */
     public static abstract class ViewState {
 
-        /* compiled from: StageAudienceBlockedBottomSheetViewModel.kt */
+        /* JADX INFO: compiled from: StageAudienceBlockedBottomSheetViewModel.kt */
         public static final class Invalid extends ViewState {
             public static final Invalid INSTANCE = new Invalid();
 
@@ -196,7 +197,7 @@ public final class StageAudienceBlockedBottomSheetViewModel extends AppViewModel
             }
         }
 
-        /* compiled from: StageAudienceBlockedBottomSheetViewModel.kt */
+        /* JADX INFO: compiled from: StageAudienceBlockedBottomSheetViewModel.kt */
         public static final /* data */ class Loaded extends ViewState {
             private final Channel channel;
             private final List<MGRecyclerDataPayload> listItems;
@@ -222,7 +223,7 @@ public final class StageAudienceBlockedBottomSheetViewModel extends AppViewModel
                 return loaded.copy(channel, list);
             }
 
-            /* renamed from: component1, reason: from getter */
+            /* JADX INFO: renamed from: component1, reason: from getter */
             public final Channel getChannel() {
                 return this.channel;
             }

@@ -17,27 +17,27 @@ import p007b.p195g.p196a.p205c.p218h0.TypeBindings;
 import p007b.p195g.p196a.p205c.p218h0.TypeFactory;
 import p007b.p195g.p196a.p205c.p219i0.ClassUtil;
 
-/* compiled from: ClassNameIdResolver.java */
-/* renamed from: b.g.a.c.e0.h.f, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.g.a.c.e0.h.f, reason: use source file name */
+/* JADX INFO: compiled from: ClassNameIdResolver.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class ClassNameIdResolver extends TypeIdResolverBase {
     public ClassNameIdResolver(JavaType javaType, TypeFactory typeFactory, PolymorphicTypeValidator polymorphicTypeValidator) {
         super(javaType, typeFactory);
     }
 
     @Override // p007b.p195g.p196a.p205c.p212e0.TypeIdResolver
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public String mo1946a(Object obj) {
         return m1964d(obj, obj.getClass(), this.f4774a);
     }
 
     @Override // p007b.p195g.p196a.p205c.p212e0.TypeIdResolver
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public String mo1948c(Object obj, Class<?> cls) {
         return m1964d(obj, cls, this.f4774a);
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public String m1964d(Object obj, Class<?> cls, TypeFactory typeFactory) {
         Class<?> declaringClass;
         JavaType javaTypeM2161c;

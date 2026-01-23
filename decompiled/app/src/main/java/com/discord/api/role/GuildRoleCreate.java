@@ -4,25 +4,25 @@ import com.discord.api.guildhash.GuildHashes;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: GuildRoleCreate.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: GuildRoleCreate.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class GuildRoleCreate {
     private final GuildHashes guildHashes;
     private final long guildId;
     private final GuildRole role;
     private final long roleId;
 
-    /* renamed from: a, reason: from getter */
+    /* JADX INFO: renamed from: a, reason: from getter */
     public final GuildHashes getGuildHashes() {
         return this.guildHashes;
     }
 
-    /* renamed from: b, reason: from getter */
+    /* JADX INFO: renamed from: b, reason: from getter */
     public final long getGuildId() {
         return this.guildId;
     }
 
-    /* renamed from: c, reason: from getter */
+    /* JADX INFO: renamed from: c, reason: from getter */
     public final GuildRole getRole() {
         return this.role;
     }

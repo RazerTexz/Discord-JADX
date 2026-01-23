@@ -3,33 +3,33 @@ package p007b.p225i.p226a.p242c.p267x2.p274i0;
 import p007b.p085c.p086a.p087a0.AnimatableValueParser;
 import p007b.p225i.p226a.p242c.p259f3.Util2;
 
-/* compiled from: TrackSampleTable.java */
-/* renamed from: b.i.a.c.x2.i0.p, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.x2.i0.p, reason: use source file name */
+/* JADX INFO: compiled from: TrackSampleTable.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class TrackSampleTable {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final Track f8493a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final int f8494b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final long[] f8495c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final int[] f8496d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final int f8497e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final long[] f8498f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public final int[] f8499g;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public final long f8500h;
 
     public TrackSampleTable(Track track, long[] jArr, int[] iArr, int i, long[] jArr2, int[] iArr2, long j) {
@@ -50,7 +50,7 @@ public final class TrackSampleTable {
         }
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public int m3732a(long j) {
         for (int iM2997e = Util2.m2997e(this.f8498f, j, true, false); iM2997e >= 0; iM2997e--) {
             if ((this.f8499g[iM2997e] & 1) != 0) {
@@ -60,7 +60,7 @@ public final class TrackSampleTable {
         return -1;
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public int m3733b(long j) {
         for (int iM2994b = Util2.m2994b(this.f8498f, j, true, false); iM2994b < this.f8498f.length; iM2994b++) {
             if ((this.f8499g[iM2994b] & 1) != 0) {

@@ -7,9 +7,9 @@ import p007b.p195g.p196a.p198b.SerializableString;
 import p007b.p195g.p196a.p198b.p200p.SerializedString;
 import p007b.p195g.p196a.p205c.p221z.MapperConfig;
 
-/* compiled from: EnumValues.java */
-/* renamed from: b.g.a.c.i0.f, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.g.a.c.i0.f, reason: use source file name */
+/* JADX INFO: compiled from: EnumValues.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class EnumValues implements Serializable {
     private static final long serialVersionUID = 1;
     private final Class<Enum<?>> _enumClass;
@@ -22,7 +22,7 @@ public final class EnumValues implements Serializable {
         this._textual = serializableStringArr;
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static EnumValues m2198a(MapperConfig<?> mapperConfig, Class<Enum<?>> cls) {
         Annotation[] annotationArr = ClassUtil.f4944a;
         Class<Enum<?>> superclass = cls.getSuperclass() != Enum.class ? cls.getSuperclass() : cls;
@@ -46,12 +46,12 @@ public final class EnumValues implements Serializable {
         return new EnumValues(cls, serializableStringArr);
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public Class<Enum<?>> m2199b() {
         return this._enumClass;
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public SerializableString m2200c(Enum<?> r2) {
         return this._textual[r2.ordinal()];
     }

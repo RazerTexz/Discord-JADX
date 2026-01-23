@@ -10,11 +10,11 @@ import com.google.android.material.animation.AnimationUtils;
 import com.google.android.material.internal.ViewUtils;
 import com.google.android.material.tabs.TabLayout;
 
-/* compiled from: TabIndicatorInterpolator.java */
-/* renamed from: b.i.a.g.i.b, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.g.i.b, reason: use source file name */
+/* JADX INFO: compiled from: TabIndicatorInterpolator.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class TabIndicatorInterpolator {
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static RectF m6145a(TabLayout tabLayout, @Nullable View view) {
         if (view == null) {
             return new RectF();
@@ -35,7 +35,7 @@ public class TabIndicatorInterpolator {
         return new RectF(right - i, bottom - (contentHeight / 2), i + right, (right / 2) + bottom);
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public void mo6144b(TabLayout tabLayout, View view, View view2, @FloatRange(from = 0.0d, m75to = 1.0d) float f, @NonNull Drawable drawable) {
         RectF rectFM6145a = m6145a(tabLayout, view);
         RectF rectFM6145a2 = m6145a(tabLayout, view2);

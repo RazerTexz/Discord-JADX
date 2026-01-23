@@ -1,15 +1,15 @@
 package p007b.p109f.p161j.p168c;
 
-/* compiled from: MemoryCacheTracker.java */
-/* renamed from: b.f.j.c.x, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.f.j.c.x, reason: use source file name */
+/* JADX INFO: compiled from: MemoryCacheTracker.java */
+/* JADX INFO: loaded from: classes.dex */
 public interface MemoryCacheTracker<K> {
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     void mo1232a(K k);
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     void mo1233b(K k);
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     void mo1234c(K k);
 }

@@ -14,16 +14,16 @@ import p007b.p008a.p027k.FormatUtils;
 import p507d0.p592z.p594d.Intrinsics3;
 import p658rx.subscriptions.CompositeSubscription;
 
-/* compiled from: MGRecyclerAdapter.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: MGRecyclerAdapter.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public abstract class MGRecyclerAdapter<D> extends RecyclerView.Adapter<MGRecyclerViewHolder<?, D>> {
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private final CompositeSubscription cellSubscriptions;
     private RecyclerView recycler;
 
-    /* compiled from: MGRecyclerAdapter.kt */
+    /* JADX INFO: compiled from: MGRecyclerAdapter.kt */
     public static final class Companion {
         private Companion() {
         }

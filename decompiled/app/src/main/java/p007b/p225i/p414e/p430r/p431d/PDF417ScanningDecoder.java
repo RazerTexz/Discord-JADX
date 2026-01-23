@@ -7,15 +7,15 @@ import p007b.p225i.p414e.p418n.BitMatrix;
 import p007b.p225i.p414e.p430r.PDF417Common;
 import p007b.p225i.p414e.p430r.p431d.p432k.ErrorCorrection;
 
-/* compiled from: PDF417ScanningDecoder.java */
-/* renamed from: b.i.e.r.d.j, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.e.r.d.j, reason: use source file name */
+/* JADX INFO: compiled from: PDF417ScanningDecoder.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class PDF417ScanningDecoder {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final ErrorCorrection f13495a = new ErrorCorrection();
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static BoundingBox m7061a(DetectionResultRowIndicatorColumn detectionResultRowIndicatorColumn) throws NotFoundException {
         int[] iArr;
         int i;
@@ -140,6 +140,12 @@ public final class PDF417ScanningDecoder {
         return new BoundingBox(boundingBox2.f13470a, resultPoint, resultPoint3, resultPoint2, resultPoint4);
     }
 
+    /* JADX WARN: Can't fix incorrect switch cases order, some code will duplicate */
+    /* JADX WARN: Failed to find 'out' block for switch in B:177:0x03f2. Please report as an issue. */
+    /* JADX WARN: Failed to find 'out' block for switch in B:178:0x03f5. Please report as an issue. */
+    /* JADX WARN: Removed duplicated region for block: B:163:0x03ad A[ADDED_TO_REGION] */
+    /* JADX WARN: Removed duplicated region for block: B:256:0x03c4 A[ADDED_TO_REGION, REMOVE, SYNTHETIC] */
+    /* JADX WARN: Unsupported multi-entry loop pattern (BACK_EDGE: B:112:0x0294 -> B:113:0x0295). Please report as a decompilation issue!!! */
     /*  JADX ERROR: JadxRuntimeException in pass: RegionMakerVisitor
         jadx.core.utils.exceptions.JadxRuntimeException: Not found exit edge by exit block: B:173:0x03db
         	at jadx.core.dex.visitors.regions.maker.LoopRegionMaker.checkLoopExits(LoopRegionMaker.java:226)
@@ -147,7 +153,7 @@ public final class PDF417ScanningDecoder {
         	at jadx.core.dex.visitors.regions.maker.LoopRegionMaker.process(LoopRegionMaker.java:63)
         	at jadx.core.dex.visitors.regions.maker.RegionMaker.traverse(RegionMaker.java:89)
         	at jadx.core.dex.visitors.regions.maker.RegionMaker.makeRegion(RegionMaker.java:66)
-        	at jadx.core.dex.visitors.regions.maker.IfRegionMaker.process(IfRegionMaker.java:95)
+        	at jadx.core.dex.visitors.regions.maker.IfRegionMaker.process(IfRegionMaker.java:96)
         	at jadx.core.dex.visitors.regions.maker.RegionMaker.traverse(RegionMaker.java:106)
         	at jadx.core.dex.visitors.regions.maker.RegionMaker.makeRegion(RegionMaker.java:66)
         	at jadx.core.dex.visitors.regions.maker.LoopRegionMaker.process(LoopRegionMaker.java:125)
@@ -157,41 +163,35 @@ public final class PDF417ScanningDecoder {
         	at jadx.core.dex.visitors.regions.maker.LoopRegionMaker.process(LoopRegionMaker.java:65)
         	at jadx.core.dex.visitors.regions.maker.RegionMaker.traverse(RegionMaker.java:89)
         	at jadx.core.dex.visitors.regions.maker.RegionMaker.makeRegion(RegionMaker.java:66)
-        	at jadx.core.dex.visitors.regions.maker.IfRegionMaker.process(IfRegionMaker.java:101)
+        	at jadx.core.dex.visitors.regions.maker.IfRegionMaker.process(IfRegionMaker.java:102)
         	at jadx.core.dex.visitors.regions.maker.RegionMaker.traverse(RegionMaker.java:106)
         	at jadx.core.dex.visitors.regions.maker.RegionMaker.makeRegion(RegionMaker.java:66)
         	at jadx.core.dex.visitors.regions.maker.SwitchRegionMaker.addCases(SwitchRegionMaker.java:123)
         	at jadx.core.dex.visitors.regions.maker.SwitchRegionMaker.process(SwitchRegionMaker.java:71)
         	at jadx.core.dex.visitors.regions.maker.RegionMaker.traverse(RegionMaker.java:112)
         	at jadx.core.dex.visitors.regions.maker.RegionMaker.makeRegion(RegionMaker.java:66)
-        	at jadx.core.dex.visitors.regions.maker.IfRegionMaker.process(IfRegionMaker.java:95)
+        	at jadx.core.dex.visitors.regions.maker.IfRegionMaker.process(IfRegionMaker.java:96)
         	at jadx.core.dex.visitors.regions.maker.RegionMaker.traverse(RegionMaker.java:106)
         	at jadx.core.dex.visitors.regions.maker.RegionMaker.makeRegion(RegionMaker.java:66)
         	at jadx.core.dex.visitors.regions.maker.LoopRegionMaker.process(LoopRegionMaker.java:125)
         	at jadx.core.dex.visitors.regions.maker.RegionMaker.traverse(RegionMaker.java:89)
         	at jadx.core.dex.visitors.regions.maker.RegionMaker.makeRegion(RegionMaker.java:66)
-        	at jadx.core.dex.visitors.regions.maker.IfRegionMaker.process(IfRegionMaker.java:95)
+        	at jadx.core.dex.visitors.regions.maker.IfRegionMaker.process(IfRegionMaker.java:96)
         	at jadx.core.dex.visitors.regions.maker.RegionMaker.traverse(RegionMaker.java:106)
         	at jadx.core.dex.visitors.regions.maker.RegionMaker.makeRegion(RegionMaker.java:66)
-        	at jadx.core.dex.visitors.regions.maker.IfRegionMaker.process(IfRegionMaker.java:95)
+        	at jadx.core.dex.visitors.regions.maker.IfRegionMaker.process(IfRegionMaker.java:96)
         	at jadx.core.dex.visitors.regions.maker.RegionMaker.traverse(RegionMaker.java:106)
         	at jadx.core.dex.visitors.regions.maker.RegionMaker.makeRegion(RegionMaker.java:66)
-        	at jadx.core.dex.visitors.regions.maker.IfRegionMaker.process(IfRegionMaker.java:95)
+        	at jadx.core.dex.visitors.regions.maker.IfRegionMaker.process(IfRegionMaker.java:96)
         	at jadx.core.dex.visitors.regions.maker.RegionMaker.traverse(RegionMaker.java:106)
         	at jadx.core.dex.visitors.regions.maker.RegionMaker.makeRegion(RegionMaker.java:66)
-        	at jadx.core.dex.visitors.regions.maker.IfRegionMaker.process(IfRegionMaker.java:95)
+        	at jadx.core.dex.visitors.regions.maker.IfRegionMaker.process(IfRegionMaker.java:96)
         	at jadx.core.dex.visitors.regions.maker.RegionMaker.traverse(RegionMaker.java:106)
         	at jadx.core.dex.visitors.regions.maker.RegionMaker.makeRegion(RegionMaker.java:66)
         	at jadx.core.dex.visitors.regions.maker.RegionMaker.makeMthRegion(RegionMaker.java:48)
         	at jadx.core.dex.visitors.regions.RegionMakerVisitor.visit(RegionMakerVisitor.java:25)
         */
-    /* JADX WARN: Can't fix incorrect switch cases order, some code will duplicate */
-    /* JADX WARN: Failed to find 'out' block for switch in B:177:0x03f2. Please report as an issue. */
-    /* JADX WARN: Failed to find 'out' block for switch in B:178:0x03f5. Please report as an issue. */
-    /* JADX WARN: Removed duplicated region for block: B:163:0x03ad A[ADDED_TO_REGION] */
-    /* JADX WARN: Removed duplicated region for block: B:256:0x03c4 A[ADDED_TO_REGION, REMOVE, SYNTHETIC] */
-    /* JADX WARN: Unsupported multi-entry loop pattern (BACK_EDGE: B:112:0x0294 -> B:113:0x0295). Please report as a decompilation issue!!! */
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
@@ -217,7 +217,7 @@ public final class PDF417ScanningDecoder {
      */
     /* JADX WARN: Removed duplicated region for block: B:13:0x001f  */
     /* JADX WARN: Removed duplicated region for block: B:29:0x004c  */
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
@@ -318,7 +318,7 @@ public final class PDF417ScanningDecoder {
         long j = 0;
         for (int i21 = 0; i21 < 8; i21++) {
             for (int i22 = 0; i22 < iArr2[i21]; i22++) {
-                j = (j << 1) | (i21 % 2 == 0 ? 1 : 0);
+                j = (j << 1) | ((long) (i21 % 2 == 0 ? 1 : 0));
             }
         }
         int i23 = (int) j;
@@ -380,7 +380,7 @@ public final class PDF417ScanningDecoder {
         }
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public static DetectionResultRowIndicatorColumn m7064d(BitMatrix bitMatrix, BoundingBox boundingBox, ResultPoint resultPoint, boolean z2, int i, int i2) {
         DetectionResultRowIndicatorColumn detectionResultRowIndicatorColumn = new DetectionResultRowIndicatorColumn(boundingBox, z2);
         int i3 = 0;
@@ -399,7 +399,7 @@ public final class PDF417ScanningDecoder {
         return detectionResultRowIndicatorColumn;
     }
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public static boolean m7065e(DetectionResult detectionResult, int i) {
         return i >= 0 && i <= detectionResult.f13490d + 1;
     }

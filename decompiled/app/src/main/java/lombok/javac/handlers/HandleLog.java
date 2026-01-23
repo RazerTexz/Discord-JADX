@@ -26,12 +26,12 @@ import lombok.javac.JavacNode;
 import lombok.javac.JavacTreeMaker;
 import lombok.javac.handlers.JavacHandlerUtil;
 
-/* loaded from: discord-126021.apk:lombok/javac/handlers/HandleLog.SCL.lombok */
+/* JADX INFO: loaded from: discord-126021.apk:lombok/javac/handlers/HandleLog.SCL.lombok */
 public class HandleLog {
     private static final IdentifierName LOG = IdentifierName.valueOf("log");
     private static /* synthetic */ int[] $SWITCH_TABLE$lombok$core$AST$Kind;
 
-    /* renamed from: $SWITCH_TABLE$lombok$core$configuration$LogDeclaration$LogFactoryParameter */
+    /* JADX INFO: renamed from: $SWITCH_TABLE$lombok$core$configuration$LogDeclaration$LogFactoryParameter */
     private static /* synthetic */ int[] f27486xeb5c83f5;
 
     static /* synthetic */ int[] $SWITCH_TABLE$lombok$core$AST$Kind() {
@@ -84,7 +84,7 @@ public class HandleLog {
         return iArr2;
     }
 
-    /* renamed from: $SWITCH_TABLE$lombok$core$configuration$LogDeclaration$LogFactoryParameter */
+    /* JADX INFO: renamed from: $SWITCH_TABLE$lombok$core$configuration$LogDeclaration$LogFactoryParameter */
     static /* synthetic */ int[] m10944xeb5c83f5() {
         int[] iArr = f27486xeb5c83f5;
         if (iArr != null) {
@@ -198,7 +198,7 @@ public class HandleLog {
         return jCExpressionArr;
     }
 
-    /* loaded from: discord-126021.apk:lombok/javac/handlers/HandleLog$HandleCommonsLog.SCL.lombok */
+    /* JADX INFO: loaded from: discord-126021.apk:lombok/javac/handlers/HandleLog$HandleCommonsLog.SCL.lombok */
     public static class HandleCommonsLog extends JavacAnnotationHandler<CommonsLog> {
         @Override // lombok.javac.JavacAnnotationHandler
         public void handle(AnnotationValues<CommonsLog> annotation, JCTree.JCAnnotation ast, JavacNode annotationNode) {
@@ -207,7 +207,7 @@ public class HandleLog {
         }
     }
 
-    /* loaded from: discord-126021.apk:lombok/javac/handlers/HandleLog$HandleJulLog.SCL.lombok */
+    /* JADX INFO: loaded from: discord-126021.apk:lombok/javac/handlers/HandleLog$HandleJulLog.SCL.lombok */
     public static class HandleJulLog extends JavacAnnotationHandler<Log> {
         @Override // lombok.javac.JavacAnnotationHandler
         public void handle(AnnotationValues<Log> annotation, JCTree.JCAnnotation ast, JavacNode annotationNode) {
@@ -216,7 +216,7 @@ public class HandleLog {
         }
     }
 
-    /* loaded from: discord-126021.apk:lombok/javac/handlers/HandleLog$HandleLog4jLog.SCL.lombok */
+    /* JADX INFO: loaded from: discord-126021.apk:lombok/javac/handlers/HandleLog$HandleLog4jLog.SCL.lombok */
     public static class HandleLog4jLog extends JavacAnnotationHandler<Log4j> {
         @Override // lombok.javac.JavacAnnotationHandler
         public void handle(AnnotationValues<Log4j> annotation, JCTree.JCAnnotation ast, JavacNode annotationNode) {
@@ -225,7 +225,7 @@ public class HandleLog {
         }
     }
 
-    /* loaded from: discord-126021.apk:lombok/javac/handlers/HandleLog$HandleLog4j2Log.SCL.lombok */
+    /* JADX INFO: loaded from: discord-126021.apk:lombok/javac/handlers/HandleLog$HandleLog4j2Log.SCL.lombok */
     public static class HandleLog4j2Log extends JavacAnnotationHandler<Log4j2> {
         @Override // lombok.javac.JavacAnnotationHandler
         public void handle(AnnotationValues<Log4j2> annotation, JCTree.JCAnnotation ast, JavacNode annotationNode) {
@@ -234,7 +234,7 @@ public class HandleLog {
         }
     }
 
-    /* loaded from: discord-126021.apk:lombok/javac/handlers/HandleLog$HandleSlf4jLog.SCL.lombok */
+    /* JADX INFO: loaded from: discord-126021.apk:lombok/javac/handlers/HandleLog$HandleSlf4jLog.SCL.lombok */
     public static class HandleSlf4jLog extends JavacAnnotationHandler<Slf4j> {
         @Override // lombok.javac.JavacAnnotationHandler
         public void handle(AnnotationValues<Slf4j> annotation, JCTree.JCAnnotation ast, JavacNode annotationNode) {
@@ -243,7 +243,7 @@ public class HandleLog {
         }
     }
 
-    /* loaded from: discord-126021.apk:lombok/javac/handlers/HandleLog$HandleXSlf4jLog.SCL.lombok */
+    /* JADX INFO: loaded from: discord-126021.apk:lombok/javac/handlers/HandleLog$HandleXSlf4jLog.SCL.lombok */
     public static class HandleXSlf4jLog extends JavacAnnotationHandler<XSlf4j> {
         @Override // lombok.javac.JavacAnnotationHandler
         public void handle(AnnotationValues<XSlf4j> annotation, JCTree.JCAnnotation ast, JavacNode annotationNode) {
@@ -252,7 +252,7 @@ public class HandleLog {
         }
     }
 
-    /* loaded from: discord-126021.apk:lombok/javac/handlers/HandleLog$HandleJBossLog.SCL.lombok */
+    /* JADX INFO: loaded from: discord-126021.apk:lombok/javac/handlers/HandleLog$HandleJBossLog.SCL.lombok */
     public static class HandleJBossLog extends JavacAnnotationHandler<JBossLog> {
         @Override // lombok.javac.JavacAnnotationHandler
         public void handle(AnnotationValues<JBossLog> annotation, JCTree.JCAnnotation ast, JavacNode annotationNode) {
@@ -261,7 +261,7 @@ public class HandleLog {
         }
     }
 
-    /* loaded from: discord-126021.apk:lombok/javac/handlers/HandleLog$HandleFloggerLog.SCL.lombok */
+    /* JADX INFO: loaded from: discord-126021.apk:lombok/javac/handlers/HandleLog$HandleFloggerLog.SCL.lombok */
     public static class HandleFloggerLog extends JavacAnnotationHandler<Flogger> {
         @Override // lombok.javac.JavacAnnotationHandler
         public void handle(AnnotationValues<Flogger> annotation, JCTree.JCAnnotation ast, JavacNode annotationNode) {
@@ -270,7 +270,7 @@ public class HandleLog {
         }
     }
 
-    /* loaded from: discord-126021.apk:lombok/javac/handlers/HandleLog$HandleCustomLog.SCL.lombok */
+    /* JADX INFO: loaded from: discord-126021.apk:lombok/javac/handlers/HandleLog$HandleCustomLog.SCL.lombok */
     public static class HandleCustomLog extends JavacAnnotationHandler<CustomLog> {
         @Override // lombok.javac.JavacAnnotationHandler
         public void handle(AnnotationValues<CustomLog> annotation, JCTree.JCAnnotation ast, JavacNode annotationNode) {

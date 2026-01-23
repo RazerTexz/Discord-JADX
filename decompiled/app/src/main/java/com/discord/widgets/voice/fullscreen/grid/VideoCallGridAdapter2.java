@@ -4,9 +4,9 @@ import androidx.recyclerview.widget.GridLayoutManager;
 import com.discord.models.domain.ModelAuditLogEntry;
 import p507d0.p580t.Collections2;
 
-/* compiled from: VideoCallGridAdapter.kt */
-/* renamed from: com.discord.widgets.voice.fullscreen.grid.VideoCallGridAdapter$spanSizeLookup$1, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: com.discord.widgets.voice.fullscreen.grid.VideoCallGridAdapter$spanSizeLookup$1, reason: use source file name */
+/* JADX INFO: compiled from: VideoCallGridAdapter.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class VideoCallGridAdapter2 extends GridLayoutManager.SpanSizeLookup {
     public final /* synthetic */ VideoCallGridAdapter this$0;
 

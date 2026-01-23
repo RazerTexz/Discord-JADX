@@ -3,12 +3,12 @@ package p007b.p225i.p226a.p341g.p346e;
 import android.animation.FloatEvaluator;
 import android.animation.TypeEvaluator;
 
-/* compiled from: FloatingActionButtonImpl.java */
-/* renamed from: b.i.a.g.e.g, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.g.e.g, reason: use source file name */
+/* JADX INFO: compiled from: FloatingActionButtonImpl.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class FloatingActionButtonImpl4 implements TypeEvaluator<Float> {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public FloatEvaluator f11698a = new FloatEvaluator();
 
     public FloatingActionButtonImpl4(FloatingActionButtonImpl3 floatingActionButtonImpl3) {

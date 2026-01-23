@@ -9,7 +9,7 @@ import java.nio.ByteOrder;
 import java.nio.FloatBuffer;
 import p007b.p100d.p104b.p105a.outline;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public final class GlUtil {
 
     public static final class GlException extends RuntimeException {
@@ -18,7 +18,7 @@ public final class GlUtil {
     public static final class UnsupportedEglVersionException extends Exception {
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static void m8945a() {
         int i = 0;
         while (true) {
@@ -36,15 +36,15 @@ public final class GlUtil {
         }
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static FloatBuffer m8946b(float[] fArr) {
         return (FloatBuffer) ByteBuffer.allocateDirect(fArr.length * 4).order(ByteOrder.nativeOrder()).asFloatBuffer().put(fArr).flip();
     }
 
-    /* renamed from: com.google.android.exoplayer2.util.GlUtil$a */
+    /* JADX INFO: renamed from: com.google.android.exoplayer2.util.GlUtil$a */
     public static final class C10776a {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final int f20280a;
 
         public C10776a(String str, String str2) {
@@ -54,7 +54,7 @@ public final class GlUtil {
             m8947a(35632, str2);
         }
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final void m8947a(int i, String str) {
             int iGlCreateShader = GLES20.glCreateShader(i);
             GLES20.glShaderSource(iGlCreateShader, str);
@@ -74,12 +74,12 @@ public final class GlUtil {
             GlUtil.m8945a();
         }
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public int m8948b(String str) {
             return GLES20.glGetUniformLocation(this.f20280a, str);
         }
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public void m8949c() {
             GLES20.glLinkProgram(this.f20280a);
             int[] iArr = {0};

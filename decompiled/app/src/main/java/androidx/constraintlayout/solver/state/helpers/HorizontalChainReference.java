@@ -4,14 +4,14 @@ import androidx.constraintlayout.solver.state.ConstraintReference;
 import androidx.constraintlayout.solver.state.State;
 import java.util.Iterator;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class HorizontalChainReference extends ChainReference {
     private Object mEndToEnd;
     private Object mEndToStart;
     private Object mStartToEnd;
     private Object mStartToStart;
 
-    /* renamed from: androidx.constraintlayout.solver.state.helpers.HorizontalChainReference$1 */
+    /* JADX INFO: renamed from: androidx.constraintlayout.solver.state.helpers.HorizontalChainReference$1 */
     public static /* synthetic */ class C01871 {
         public static final /* synthetic */ int[] $SwitchMap$androidx$constraintlayout$solver$state$State$Chain;
 

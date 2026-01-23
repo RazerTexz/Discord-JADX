@@ -6,15 +6,15 @@ import com.discord.widgets.guilds.create.WidgetGuildCreate;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: WidgetCreationIntent.kt */
-/* renamed from: com.discord.widgets.guilds.create.CreationIntentArgs, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.guilds.create.CreationIntentArgs, reason: use source file name */
+/* JADX INFO: compiled from: WidgetCreationIntent.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final /* data */ class WidgetCreationIntent2 implements Parcelable {
     public static final Parcelable.Creator<WidgetCreationIntent2> CREATOR = new Creator();
     private final WidgetGuildCreate.Options createGuildOptions;
     private final CreateGuildTrigger trigger;
 
-    /* renamed from: com.discord.widgets.guilds.create.CreationIntentArgs$Creator */
+    /* JADX INFO: renamed from: com.discord.widgets.guilds.create.CreationIntentArgs$Creator */
     public static class Creator implements Parcelable.Creator<WidgetCreationIntent2> {
         /* JADX WARN: Can't rename method to resolve collision */
         @Override // android.os.Parcelable.Creator
@@ -57,12 +57,12 @@ public final /* data */ class WidgetCreationIntent2 implements Parcelable {
         return widgetCreationIntent2.copy(createGuildTrigger, options);
     }
 
-    /* renamed from: component1, reason: from getter */
+    /* JADX INFO: renamed from: component1, reason: from getter */
     public final CreateGuildTrigger getTrigger() {
         return this.trigger;
     }
 
-    /* renamed from: component2, reason: from getter */
+    /* JADX INFO: renamed from: component2, reason: from getter */
     public final WidgetGuildCreate.Options getCreateGuildOptions() {
         return this.createGuildOptions;
     }

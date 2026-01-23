@@ -2,9 +2,9 @@ package p507d0.p579g0;
 
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: StringNumberConversions.kt */
-/* renamed from: d0.g0.s, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.g0.s, reason: use source file name */
+/* JADX INFO: compiled from: StringNumberConversions.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public class StringNumberConversions extends StringNumberConversionsJVM2 {
     public static final Byte toByteOrNull(String str, int i) {
         int iIntValue;
@@ -119,13 +119,13 @@ public class StringNumberConversions extends StringNumberConversionsJVM2 {
             }
             if (j3 < j4) {
                 if (j4 == j2) {
-                    j4 = j / i;
+                    j4 = j / ((long) i);
                     if (j3 < j4) {
                     }
                 }
                 return null;
             }
-            long j5 = j3 * i;
+            long j5 = j3 * ((long) i);
             long j6 = iDigitOf;
             if (j5 < j + j6) {
                 return null;

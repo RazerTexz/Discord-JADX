@@ -4,32 +4,32 @@ import android.util.SparseBooleanArray;
 import androidx.annotation.Nullable;
 import p007b.p085c.p086a.p087a0.AnimatableValueParser;
 
-/* compiled from: FlagSet.java */
-/* renamed from: b.i.a.c.f3.n, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.f3.n, reason: use source file name */
+/* JADX INFO: compiled from: FlagSet.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class FlagSet {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final SparseBooleanArray f6733a;
 
-    /* compiled from: FlagSet.java */
-    /* renamed from: b.i.a.c.f3.n$b */
+    /* JADX INFO: renamed from: b.i.a.c.f3.n$b */
+    /* JADX INFO: compiled from: FlagSet.java */
     public static final class b {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final SparseBooleanArray f6734a = new SparseBooleanArray();
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public boolean f6735b;
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public b m3032a(int i) {
             AnimatableValueParser.m426D(!this.f6735b);
             this.f6734a.append(i, true);
             return this;
         }
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public FlagSet m3033b() {
             AnimatableValueParser.m426D(!this.f6735b);
             this.f6735b = true;
@@ -41,18 +41,18 @@ public final class FlagSet {
         this.f6733a = sparseBooleanArray;
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public boolean m3029a(int i) {
         return this.f6733a.get(i);
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public int m3030b(int i) {
         AnimatableValueParser.m571t(i, 0, m3031c());
         return this.f6733a.keyAt(i);
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public int m3031c() {
         return this.f6733a.size();
     }

@@ -6,8 +6,8 @@ import com.discord.widgets.directories.DirectoryChannelItem;
 import p007b.p008a.p027k.FormatUtils;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: WidgetDirectoryEntryViewHolder.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetDirectoryEntryViewHolder.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class SectionHeaderViewHolder extends DirectoryChannelViewHolder {
     private final DirectorySectionHeaderListItemBinding viewBinding;
 

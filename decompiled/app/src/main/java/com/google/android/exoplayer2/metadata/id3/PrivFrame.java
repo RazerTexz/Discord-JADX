@@ -7,17 +7,17 @@ import java.util.Arrays;
 import p007b.p100d.p104b.p105a.outline;
 import p007b.p225i.p226a.p242c.p259f3.Util2;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public final class PrivFrame extends Id3Frame {
     public static final Parcelable.Creator<PrivFrame> CREATOR = new C10734a();
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final String f19998k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final byte[] f19999l;
 
-    /* renamed from: com.google.android.exoplayer2.metadata.id3.PrivFrame$a */
+    /* JADX INFO: renamed from: com.google.android.exoplayer2.metadata.id3.PrivFrame$a */
     public class C10734a implements Parcelable.Creator<PrivFrame> {
         @Override // android.os.Parcelable.Creator
         public PrivFrame createFromParcel(Parcel parcel) {

@@ -7,8 +7,8 @@ import java.util.Set;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: AutocompleteInputModel.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: AutocompleteInputModel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final /* data */ class AutocompleteInputModel {
     private final AutocompleteApplicationCommands applicationCommands;
     private final Map<LeadingIdentifier, Set<Autocompletable>> autocompletables;
@@ -38,7 +38,7 @@ public final /* data */ class AutocompleteInputModel {
         return autocompleteInputModel.copy(charSequence, map, autocompleteApplicationCommands);
     }
 
-    /* renamed from: component1, reason: from getter */
+    /* JADX INFO: renamed from: component1, reason: from getter */
     public final CharSequence getInput() {
         return this.input;
     }
@@ -47,7 +47,7 @@ public final /* data */ class AutocompleteInputModel {
         return this.autocompletables;
     }
 
-    /* renamed from: component3, reason: from getter */
+    /* JADX INFO: renamed from: component3, reason: from getter */
     public final AutocompleteApplicationCommands getApplicationCommands() {
         return this.applicationCommands;
     }

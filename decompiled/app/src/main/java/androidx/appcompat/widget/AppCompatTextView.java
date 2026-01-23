@@ -31,7 +31,7 @@ import androidx.core.widget.TintableCompoundDrawablesView;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.Future;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class AppCompatTextView extends TextView implements TintableBackgroundView, TintableCompoundDrawablesView, AutoSizeableTextView {
     private final AppCompatBackgroundHelper mBackgroundTintHelper;
 

@@ -15,8 +15,8 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p658rx.Observable;
 import p658rx.subjects.PublishSubject;
 
-/* compiled from: GuildDeleteFeedbackSheetViewModel.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: GuildDeleteFeedbackSheetViewModel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class GuildDeleteFeedbackSheetViewModel extends AppViewModel<FeedbackSheetViewModel.ViewState> implements FeedbackSheetViewModel {
     private static final List<FeedbackIssue> REASONS = Collections2.listOf((Object[]) new FeedbackIssue[]{FeedbackIssue.GUILD_DELETE_TOO_HARD, FeedbackIssue.GUILD_DELETE_TEST, FeedbackIssue.GUILD_DELETE_ACCIDENT, FeedbackIssue.GUILD_DELETE_TEMPLATE, FeedbackIssue.GUILD_DELETE_LONELY, FeedbackIssue.GUILD_DELETE_INACTIVE});
     private final PublishSubject<FeedbackSheetViewModel.Event> eventSubject;

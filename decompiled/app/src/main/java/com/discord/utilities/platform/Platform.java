@@ -14,8 +14,8 @@ import p007b.p100d.p104b.p105a.outline;
 import p507d0.p579g0.Strings4;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: Platform.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: Platform.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public enum Platform {
     BATTLENET("Battle.net", Integer.valueOf(C5419R.color.battlenet), Integer.valueOf(C5419R.attr.ic_account_battlenet), Integer.valueOf(C5419R.drawable.ic_account_battlenet_white_24dp), false, false, false, 112, null),
     FACEBOOK("Facebook", Integer.valueOf(C5419R.color.facebook), Integer.valueOf(C5419R.attr.ic_account_facebook), Integer.valueOf(C5419R.drawable.ic_account_facebook_white_24dp), false, false, true, 48, null),
@@ -34,7 +34,7 @@ public enum Platform {
     NONE(null, null, null, null, false, false, false, Opcodes.LAND, null);
 
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private final boolean canShowActivity;
     private final boolean canSyncFriends;
@@ -45,7 +45,7 @@ public enum Platform {
     private final Integer themedPlatformImage;
     private final Integer whitePlatformImage;
 
-    /* compiled from: Platform.kt */
+    /* JADX INFO: compiled from: Platform.kt */
     public static final class Companion {
 
         public final /* synthetic */ class WhenMappings {

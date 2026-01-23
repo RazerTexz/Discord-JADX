@@ -34,7 +34,7 @@ import java.util.List;
 import java.util.Set;
 import p007b.p100d.p104b.p105a.outline;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class Preference implements Comparable<Preference> {
     private static final String CLIPBOARD_ID = "Preference";
     public static final int DEFAULT_ORDER = Integer.MAX_VALUE;
@@ -86,7 +86,7 @@ public class Preference implements Comparable<Preference> {
     private boolean mWasDetached;
     private int mWidgetLayoutResId;
 
-    /* renamed from: androidx.preference.Preference$1 */
+    /* JADX INFO: renamed from: androidx.preference.Preference$1 */
     public class ViewOnClickListenerC05101 implements View.OnClickListener {
         public ViewOnClickListenerC05101() {
         }
@@ -100,7 +100,7 @@ public class Preference implements Comparable<Preference> {
     public static class BaseSavedState extends AbsSavedState {
         public static final Parcelable.Creator<BaseSavedState> CREATOR = new C05111();
 
-        /* renamed from: androidx.preference.Preference$BaseSavedState$1 */
+        /* JADX INFO: renamed from: androidx.preference.Preference$BaseSavedState$1 */
         public static class C05111 implements Parcelable.Creator<BaseSavedState> {
             @Override // android.os.Parcelable.Creator
             public /* bridge */ /* synthetic */ BaseSavedState createFromParcel(Parcel parcel) {
@@ -1061,7 +1061,7 @@ public class Preference implements Comparable<Preference> {
         return this.mWasDetached;
     }
 
-    /* renamed from: compareTo, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: compareTo, reason: avoid collision after fix types in other method */
     public int compareTo2(@NonNull Preference preference) {
         int i = this.mOrder;
         int i2 = preference.mOrder;

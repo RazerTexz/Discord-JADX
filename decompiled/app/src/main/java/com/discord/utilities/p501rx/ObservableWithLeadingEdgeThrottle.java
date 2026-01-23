@@ -26,11 +26,11 @@ import p658rx.functions.Func8;
 import p658rx.functions.Func9;
 import p658rx.functions.FuncN;
 
-/* loaded from: classes2.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public class ObservableWithLeadingEdgeThrottle {
     private static final FuncN IDENTITY_FUNC_N = new C68921();
 
-    /* renamed from: com.discord.utilities.rx.ObservableWithLeadingEdgeThrottle$1 */
+    /* JADX INFO: renamed from: com.discord.utilities.rx.ObservableWithLeadingEdgeThrottle$1 */
     public static class C68921 implements FuncN {
         @Override // p658rx.functions.FuncN
         public Object call(Object... objArr) {
@@ -38,7 +38,7 @@ public class ObservableWithLeadingEdgeThrottle {
         }
     }
 
-    /* renamed from: com.discord.utilities.rx.ObservableWithLeadingEdgeThrottle$2 */
+    /* JADX INFO: renamed from: com.discord.utilities.rx.ObservableWithLeadingEdgeThrottle$2 */
     public static class C68932 implements Func1 {
         public final /* synthetic */ FuncN val$combineFunction;
 

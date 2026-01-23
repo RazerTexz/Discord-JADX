@@ -26,69 +26,69 @@ import p507d0.p513e0.p514p.p515d.p517m0.p567n.p568l1.NewKotlinTypeChecker;
 import p507d0.p580t.Collections2;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: context.kt */
-/* renamed from: d0.e0.p.d.m0.l.b.j, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.l.b.j, reason: use source file name */
+/* JADX INFO: compiled from: context.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class context5 {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final StorageManager f24638a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final ModuleDescriptor2 f24639b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final DeserializationConfiguration f24640c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final ClassDataFinder f24641d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final AnnotationAndConstantLoader<AnnotationDescriptor, AbstractC11815g<?>> f24642e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final PackageFragmentProvider f24643f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public final LocalClassifierTypeSettings f24644g;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public final ErrorReporter f24645h;
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public final LookupTracker f24646i;
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final FlexibleTypeDeserializer f24647j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final Iterable<ClassDescriptorFactory> f24648k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final NotFoundClasses f24649l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public final ContractDeserializer f24650m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public final AdditionalClassPartsProvider f24651n;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public final PlatformDependentDeclarationFilter f24652o;
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public final ExtensionRegistryLite f24653p;
 
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     public final NewKotlinTypeChecker f24654q;
 
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     public final SamConversionResolver f24655r;
 
-    /* renamed from: s */
+    /* JADX INFO: renamed from: s */
     public final PlatformDependentTypeTransformer f24656s;
 
-    /* renamed from: t */
+    /* JADX INFO: renamed from: t */
     public final ClassDeserializer f24657t;
 
     /* JADX WARN: Multi-variable type inference failed */

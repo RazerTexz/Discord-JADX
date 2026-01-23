@@ -1,9 +1,9 @@
 package p007b.p225i.p414e;
 
-/* compiled from: ResultPointCallback.java */
-/* renamed from: b.i.e.l, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.e.l, reason: use source file name */
+/* JADX INFO: compiled from: ResultPointCallback.java */
+/* JADX INFO: loaded from: classes3.dex */
 public interface ResultPointCallback {
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     void m6924a(ResultPoint resultPoint);
 }

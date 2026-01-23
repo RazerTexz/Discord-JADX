@@ -3,7 +3,7 @@ package kotlin.reflect.jvm.internal.impl.protobuf;
 import java.util.List;
 import p507d0.p513e0.p514p.p515d.p517m0.p550i.MessageLite;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public class UninitializedMessageException extends RuntimeException {
     private final List<String> missingFields;
 

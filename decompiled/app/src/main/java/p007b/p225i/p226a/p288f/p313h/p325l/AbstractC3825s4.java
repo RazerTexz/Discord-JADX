@@ -11,18 +11,18 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import p007b.p225i.p226a.p288f.p313h.p325l.C3680h4;
 
-/* compiled from: com.google.android.gms:play-services-measurement-base@@18.0.0 */
-/* renamed from: b.i.a.f.h.l.s4 */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.h.l.s4 */
+/* JADX INFO: compiled from: com.google.android.gms:play-services-measurement-base@@18.0.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public abstract class AbstractC3825s4<T extends C3680h4> {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final Logger f10311a = Logger.getLogger(zzhi.class.getName());
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static String f10312b = "com.google.protobuf.BlazeGeneratedExtensionRegistryLiteLoader";
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static <T extends C3680h4> T m5215b(Class<T> cls) {
         String str;
         ClassLoader classLoader = AbstractC3825s4.class.getClassLoader();
@@ -81,6 +81,6 @@ public abstract class AbstractC3825s4<T extends C3680h4> {
         }
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public abstract T m5216a();
 }

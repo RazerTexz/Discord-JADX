@@ -6,7 +6,7 @@ import androidx.constraintlayout.solver.widgets.ConstraintWidget;
 import java.util.ArrayList;
 import p007b.p100d.p104b.p105a.outline;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class ConstraintReference implements Reference {
     private Object key;
     private ConstraintWidget mConstraintWidget;
@@ -45,10 +45,10 @@ public class ConstraintReference implements Reference {
     public Object mBaselineToBaseline = null;
     public State.Constraint mLast = null;
 
-    /* renamed from: androidx.constraintlayout.solver.state.ConstraintReference$1 */
+    /* JADX INFO: renamed from: androidx.constraintlayout.solver.state.ConstraintReference$1 */
     public static /* synthetic */ class C01841 {
 
-        /* renamed from: $SwitchMap$androidx$constraintlayout$solver$state$State$Constraint */
+        /* JADX INFO: renamed from: $SwitchMap$androidx$constraintlayout$solver$state$State$Constraint */
         public static final /* synthetic */ int[] f111x7d4bfe12;
 
         static {

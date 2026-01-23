@@ -5,9 +5,9 @@ import android.text.TextWatcher;
 import androidx.core.app.NotificationCompat;
 import com.discord.stores.StoreThreadDraft;
 
-/* compiled from: TextView.kt */
-/* renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemThreadDraftForm$configureThreadNameInput$$inlined$apply$lambda$1 */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemThreadDraftForm$configureThreadNameInput$$inlined$apply$lambda$1 */
+/* JADX INFO: compiled from: TextView.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class C8143xf5e71743 implements TextWatcher {
     public final /* synthetic */ StoreThreadDraft.ThreadDraftState $draftState$inlined;
     public final /* synthetic */ StoreThreadDraft $storeThreadDraft$inlined;

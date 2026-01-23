@@ -35,11 +35,11 @@ import p507d0.p592z.p594d.FunctionReferenceImpl;
 import p507d0.p592z.p594d.Intrinsics3;
 import p658rx.Observable;
 
-/* compiled from: GuildScheduledEventDetailsViewModel.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: GuildScheduledEventDetailsViewModel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class GuildScheduledEventDetailsViewModel extends AppViewModel<ViewState> {
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private final WidgetGuildScheduledEventDetailsBottomSheet2 args;
     private final StoreGuildScheduledEvents guildScheduledEventsStore;
@@ -48,8 +48,8 @@ public final class GuildScheduledEventDetailsViewModel extends AppViewModel<View
     private int segmentControlIndex;
     private final StoreUser userStore;
 
-    /* compiled from: GuildScheduledEventDetailsViewModel.kt */
-    /* renamed from: com.discord.widgets.guildscheduledevent.GuildScheduledEventDetailsViewModel$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.guildscheduledevent.GuildScheduledEventDetailsViewModel$1 */
+    /* JADX INFO: compiled from: GuildScheduledEventDetailsViewModel.kt */
     public static final /* synthetic */ class C88141 extends FunctionReferenceImpl implements Function1<StoreState, Unit> {
         public C88141(GuildScheduledEventDetailsViewModel guildScheduledEventDetailsViewModel) {
             super(1, guildScheduledEventDetailsViewModel, GuildScheduledEventDetailsViewModel.class, "handleStoreState", "handleStoreState(Lcom/discord/widgets/guildscheduledevent/GuildScheduledEventDetailsViewModel$StoreState;)V", 0);
@@ -61,14 +61,14 @@ public final class GuildScheduledEventDetailsViewModel extends AppViewModel<View
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(StoreState storeState) {
             Intrinsics3.checkNotNullParameter(storeState, "p1");
             GuildScheduledEventDetailsViewModel.access$handleStoreState((GuildScheduledEventDetailsViewModel) this.receiver, storeState);
         }
     }
 
-    /* compiled from: GuildScheduledEventDetailsViewModel.kt */
+    /* JADX INFO: compiled from: GuildScheduledEventDetailsViewModel.kt */
     public static final class Companion {
 
         public final /* synthetic */ class WhenMappings {
@@ -107,7 +107,7 @@ public final class GuildScheduledEventDetailsViewModel extends AppViewModel<View
         }
     }
 
-    /* compiled from: GuildScheduledEventDetailsViewModel.kt */
+    /* JADX INFO: compiled from: GuildScheduledEventDetailsViewModel.kt */
     public static final /* data */ class StoreState {
         private final boolean canConnect;
         private final boolean canShare;
@@ -146,21 +146,22 @@ public final class GuildScheduledEventDetailsViewModel extends AppViewModel<View
             this.isRsvpUsersError = z9;
         }
 
+        /* JADX WARN: Multi-variable type inference failed */
         public static /* synthetic */ StoreState copy$default(StoreState storeState, GuildScheduledEvent guildScheduledEvent, Channel channel, Guild guild, UserGuildMember userGuildMember, boolean z2, boolean z3, boolean z4, boolean z5, boolean z6, Long l, boolean z7, List list, boolean z8, boolean z9, int i, Object obj) {
             return storeState.copy((i & 1) != 0 ? storeState.guildScheduledEvent : guildScheduledEvent, (i & 2) != 0 ? storeState.channel : channel, (i & 4) != 0 ? storeState.guild : guild, (i & 8) != 0 ? storeState.creator : userGuildMember, (i & 16) != 0 ? storeState.isInGuild : z2, (i & 32) != 0 ? storeState.isRsvped : z3, (i & 64) != 0 ? storeState.canShare : z4, (i & 128) != 0 ? storeState.canStartEvent : z5, (i & 256) != 0 ? storeState.isDeveloperMode : z6, (i & 512) != 0 ? storeState.selectedVoiceChannelId : l, (i & 1024) != 0 ? storeState.canConnect : z7, (i & 2048) != 0 ? storeState.rsvpUsers : list, (i & 4096) != 0 ? storeState.isRsvpUsersFetching : z8, (i & 8192) != 0 ? storeState.isRsvpUsersError : z9);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final GuildScheduledEvent getGuildScheduledEvent() {
             return this.guildScheduledEvent;
         }
 
-        /* renamed from: component10, reason: from getter */
+        /* JADX INFO: renamed from: component10, reason: from getter */
         public final Long getSelectedVoiceChannelId() {
             return this.selectedVoiceChannelId;
         }
 
-        /* renamed from: component11, reason: from getter */
+        /* JADX INFO: renamed from: component11, reason: from getter */
         public final boolean getCanConnect() {
             return this.canConnect;
         }
@@ -169,52 +170,52 @@ public final class GuildScheduledEventDetailsViewModel extends AppViewModel<View
             return this.rsvpUsers;
         }
 
-        /* renamed from: component13, reason: from getter */
+        /* JADX INFO: renamed from: component13, reason: from getter */
         public final boolean getIsRsvpUsersFetching() {
             return this.isRsvpUsersFetching;
         }
 
-        /* renamed from: component14, reason: from getter */
+        /* JADX INFO: renamed from: component14, reason: from getter */
         public final boolean getIsRsvpUsersError() {
             return this.isRsvpUsersError;
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final Channel getChannel() {
             return this.channel;
         }
 
-        /* renamed from: component3, reason: from getter */
+        /* JADX INFO: renamed from: component3, reason: from getter */
         public final Guild getGuild() {
             return this.guild;
         }
 
-        /* renamed from: component4, reason: from getter */
+        /* JADX INFO: renamed from: component4, reason: from getter */
         public final UserGuildMember getCreator() {
             return this.creator;
         }
 
-        /* renamed from: component5, reason: from getter */
+        /* JADX INFO: renamed from: component5, reason: from getter */
         public final boolean getIsInGuild() {
             return this.isInGuild;
         }
 
-        /* renamed from: component6, reason: from getter */
+        /* JADX INFO: renamed from: component6, reason: from getter */
         public final boolean getIsRsvped() {
             return this.isRsvped;
         }
 
-        /* renamed from: component7, reason: from getter */
+        /* JADX INFO: renamed from: component7, reason: from getter */
         public final boolean getCanShare() {
             return this.canShare;
         }
 
-        /* renamed from: component8, reason: from getter */
+        /* JADX INFO: renamed from: component8, reason: from getter */
         public final boolean getCanStartEvent() {
             return this.canStartEvent;
         }
 
-        /* renamed from: component9, reason: from getter */
+        /* JADX INFO: renamed from: component9, reason: from getter */
         public final boolean getIsDeveloperMode() {
             return this.isDeveloperMode;
         }
@@ -272,6 +273,30 @@ public final class GuildScheduledEventDetailsViewModel extends AppViewModel<View
         }
 
         /* JADX WARN: Multi-variable type inference failed */
+        /* JADX WARN: Type inference failed for: r1v3, types: [int] */
+        /* JADX WARN: Type inference failed for: r1v5 */
+        /* JADX WARN: Type inference failed for: r1v7 */
+        /* JADX WARN: Type inference failed for: r2v10, types: [int] */
+        /* JADX WARN: Type inference failed for: r2v12, types: [int] */
+        /* JADX WARN: Type inference failed for: r2v14, types: [int] */
+        /* JADX WARN: Type inference failed for: r2v16, types: [int] */
+        /* JADX WARN: Type inference failed for: r2v18, types: [int] */
+        /* JADX WARN: Type inference failed for: r2v23, types: [int] */
+        /* JADX WARN: Type inference failed for: r2v25 */
+        /* JADX WARN: Type inference failed for: r2v27 */
+        /* JADX WARN: Type inference failed for: r2v28 */
+        /* JADX WARN: Type inference failed for: r2v29 */
+        /* JADX WARN: Type inference failed for: r2v30 */
+        /* JADX WARN: Type inference failed for: r2v31 */
+        /* JADX WARN: Type inference failed for: r2v35 */
+        /* JADX WARN: Type inference failed for: r2v36 */
+        /* JADX WARN: Type inference failed for: r2v37 */
+        /* JADX WARN: Type inference failed for: r2v38 */
+        /* JADX WARN: Type inference failed for: r2v39 */
+        /* JADX WARN: Type inference failed for: r2v40 */
+        /* JADX WARN: Type inference failed for: r3v0 */
+        /* JADX WARN: Type inference failed for: r3v1, types: [int] */
+        /* JADX WARN: Type inference failed for: r3v2 */
         public int hashCode() {
             GuildScheduledEvent guildScheduledEvent = this.guildScheduledEvent;
             int iHashCode = (guildScheduledEvent != null ? guildScheduledEvent.hashCode() : 0) * 31;
@@ -282,53 +307,53 @@ public final class GuildScheduledEventDetailsViewModel extends AppViewModel<View
             UserGuildMember userGuildMember = this.creator;
             int iHashCode4 = (iHashCode3 + (userGuildMember != null ? userGuildMember.hashCode() : 0)) * 31;
             boolean z2 = this.isInGuild;
-            int i = z2;
-            if (z2 != 0) {
-                i = 1;
+            ?? r2 = z2;
+            if (z2) {
+                r2 = 1;
             }
-            int i2 = (iHashCode4 + i) * 31;
+            int i = (iHashCode4 + r2) * 31;
             boolean z3 = this.isRsvped;
-            int i3 = z3;
-            if (z3 != 0) {
-                i3 = 1;
+            ?? r22 = z3;
+            if (z3) {
+                r22 = 1;
             }
-            int i4 = (i2 + i3) * 31;
+            int i2 = (i + r22) * 31;
             boolean z4 = this.canShare;
-            int i5 = z4;
-            if (z4 != 0) {
-                i5 = 1;
+            ?? r23 = z4;
+            if (z4) {
+                r23 = 1;
             }
-            int i6 = (i4 + i5) * 31;
+            int i3 = (i2 + r23) * 31;
             boolean z5 = this.canStartEvent;
-            int i7 = z5;
-            if (z5 != 0) {
-                i7 = 1;
+            ?? r24 = z5;
+            if (z5) {
+                r24 = 1;
             }
-            int i8 = (i6 + i7) * 31;
+            int i4 = (i3 + r24) * 31;
             boolean z6 = this.isDeveloperMode;
-            int i9 = z6;
-            if (z6 != 0) {
-                i9 = 1;
+            ?? r25 = z6;
+            if (z6) {
+                r25 = 1;
             }
-            int i10 = (i8 + i9) * 31;
+            int i5 = (i4 + r25) * 31;
             Long l = this.selectedVoiceChannelId;
-            int iHashCode5 = (i10 + (l != null ? l.hashCode() : 0)) * 31;
+            int iHashCode5 = (i5 + (l != null ? l.hashCode() : 0)) * 31;
             boolean z7 = this.canConnect;
-            int i11 = z7;
-            if (z7 != 0) {
-                i11 = 1;
+            ?? r26 = z7;
+            if (z7) {
+                r26 = 1;
             }
-            int i12 = (iHashCode5 + i11) * 31;
+            int i6 = (iHashCode5 + r26) * 31;
             List<GuildScheduledEventRsvpUserListItem.RsvpUser> list = this.rsvpUsers;
-            int iHashCode6 = (i12 + (list != null ? list.hashCode() : 0)) * 31;
+            int iHashCode6 = (i6 + (list != null ? list.hashCode() : 0)) * 31;
             boolean z8 = this.isRsvpUsersFetching;
-            int i13 = z8;
-            if (z8 != 0) {
-                i13 = 1;
+            ?? r1 = z8;
+            if (z8) {
+                r1 = 1;
             }
-            int i14 = (iHashCode6 + i13) * 31;
+            int i7 = (iHashCode6 + r1) * 31;
             boolean z9 = this.isRsvpUsersError;
-            return i14 + (z9 ? 1 : z9 ? 1 : 0);
+            return i7 + (z9 ? 1 : z9);
         }
 
         public final boolean isDeveloperMode() {
@@ -387,10 +412,10 @@ public final class GuildScheduledEventDetailsViewModel extends AppViewModel<View
         }
     }
 
-    /* compiled from: GuildScheduledEventDetailsViewModel.kt */
+    /* JADX INFO: compiled from: GuildScheduledEventDetailsViewModel.kt */
     public static abstract class ViewState {
 
-        /* compiled from: GuildScheduledEventDetailsViewModel.kt */
+        /* JADX INFO: compiled from: GuildScheduledEventDetailsViewModel.kt */
         public static final /* data */ class Initialized extends ViewState {
             private final boolean canConnect;
             private final boolean canShare;
@@ -435,21 +460,22 @@ public final class GuildScheduledEventDetailsViewModel extends AppViewModel<View
                 this.creator = userGuildMember;
             }
 
+            /* JADX WARN: Multi-variable type inference failed */
             public static /* synthetic */ Initialized copy$default(Initialized initialized, GuildScheduledEvent guildScheduledEvent, GuildScheduledEventLocationInfo guildScheduledEventLocationInfo, Guild guild, Channel channel, boolean z2, boolean z3, boolean z4, boolean z5, boolean z6, boolean z7, boolean z8, List list, GuildScheduledEventDetailsViewModel3 guildScheduledEventDetailsViewModel3, GuildScheduledEventDetailsViewModel2 guildScheduledEventDetailsViewModel2, int i, UserGuildMember userGuildMember, int i2, Object obj) {
                 return initialized.copy((i2 & 1) != 0 ? initialized.guildScheduledEvent : guildScheduledEvent, (i2 & 2) != 0 ? initialized.locationInfo : guildScheduledEventLocationInfo, (i2 & 4) != 0 ? initialized.guild : guild, (i2 & 8) != 0 ? initialized.channel : channel, (i2 & 16) != 0 ? initialized.isInGuild : z2, (i2 & 32) != 0 ? initialized.isRsvped : z3, (i2 & 64) != 0 ? initialized.canShare : z4, (i2 & 128) != 0 ? initialized.isConnected : z5, (i2 & 256) != 0 ? initialized.canStartEvent : z6, (i2 & 512) != 0 ? initialized.isDeveloperMode : z7, (i2 & 1024) != 0 ? initialized.canConnect : z8, (i2 & 2048) != 0 ? initialized.rsvpUsers : list, (i2 & 4096) != 0 ? initialized.section : guildScheduledEventDetailsViewModel3, (i2 & 8192) != 0 ? initialized.rsvpUsersFetchState : guildScheduledEventDetailsViewModel2, (i2 & 16384) != 0 ? initialized.segmentedControlIndex : i, (i2 & 32768) != 0 ? initialized.creator : userGuildMember);
             }
 
-            /* renamed from: component1, reason: from getter */
+            /* JADX INFO: renamed from: component1, reason: from getter */
             public final GuildScheduledEvent getGuildScheduledEvent() {
                 return this.guildScheduledEvent;
             }
 
-            /* renamed from: component10, reason: from getter */
+            /* JADX INFO: renamed from: component10, reason: from getter */
             public final boolean getIsDeveloperMode() {
                 return this.isDeveloperMode;
             }
 
-            /* renamed from: component11, reason: from getter */
+            /* JADX INFO: renamed from: component11, reason: from getter */
             public final boolean getCanConnect() {
                 return this.canConnect;
             }
@@ -458,62 +484,62 @@ public final class GuildScheduledEventDetailsViewModel extends AppViewModel<View
                 return this.rsvpUsers;
             }
 
-            /* renamed from: component13, reason: from getter */
+            /* JADX INFO: renamed from: component13, reason: from getter */
             public final GuildScheduledEventDetailsViewModel3 getSection() {
                 return this.section;
             }
 
-            /* renamed from: component14, reason: from getter */
+            /* JADX INFO: renamed from: component14, reason: from getter */
             public final GuildScheduledEventDetailsViewModel2 getRsvpUsersFetchState() {
                 return this.rsvpUsersFetchState;
             }
 
-            /* renamed from: component15, reason: from getter */
+            /* JADX INFO: renamed from: component15, reason: from getter */
             public final int getSegmentedControlIndex() {
                 return this.segmentedControlIndex;
             }
 
-            /* renamed from: component16, reason: from getter */
+            /* JADX INFO: renamed from: component16, reason: from getter */
             public final UserGuildMember getCreator() {
                 return this.creator;
             }
 
-            /* renamed from: component2, reason: from getter */
+            /* JADX INFO: renamed from: component2, reason: from getter */
             public final GuildScheduledEventLocationInfo getLocationInfo() {
                 return this.locationInfo;
             }
 
-            /* renamed from: component3, reason: from getter */
+            /* JADX INFO: renamed from: component3, reason: from getter */
             public final Guild getGuild() {
                 return this.guild;
             }
 
-            /* renamed from: component4, reason: from getter */
+            /* JADX INFO: renamed from: component4, reason: from getter */
             public final Channel getChannel() {
                 return this.channel;
             }
 
-            /* renamed from: component5, reason: from getter */
+            /* JADX INFO: renamed from: component5, reason: from getter */
             public final boolean getIsInGuild() {
                 return this.isInGuild;
             }
 
-            /* renamed from: component6, reason: from getter */
+            /* JADX INFO: renamed from: component6, reason: from getter */
             public final boolean getIsRsvped() {
                 return this.isRsvped;
             }
 
-            /* renamed from: component7, reason: from getter */
+            /* JADX INFO: renamed from: component7, reason: from getter */
             public final boolean getCanShare() {
                 return this.canShare;
             }
 
-            /* renamed from: component8, reason: from getter */
+            /* JADX INFO: renamed from: component8, reason: from getter */
             public final boolean getIsConnected() {
                 return this.isConnected;
             }
 
-            /* renamed from: component9, reason: from getter */
+            /* JADX INFO: renamed from: component9, reason: from getter */
             public final boolean getCanStartEvent() {
                 return this.canStartEvent;
             }
@@ -587,6 +613,27 @@ public final class GuildScheduledEventDetailsViewModel extends AppViewModel<View
             }
 
             /* JADX WARN: Multi-variable type inference failed */
+            /* JADX WARN: Type inference failed for: r2v10, types: [int] */
+            /* JADX WARN: Type inference failed for: r2v12, types: [int] */
+            /* JADX WARN: Type inference failed for: r2v14, types: [int] */
+            /* JADX WARN: Type inference failed for: r2v16, types: [int] */
+            /* JADX WARN: Type inference failed for: r2v18, types: [int] */
+            /* JADX WARN: Type inference failed for: r2v20, types: [int] */
+            /* JADX WARN: Type inference failed for: r2v36 */
+            /* JADX WARN: Type inference failed for: r2v37 */
+            /* JADX WARN: Type inference failed for: r2v38 */
+            /* JADX WARN: Type inference failed for: r2v39 */
+            /* JADX WARN: Type inference failed for: r2v40 */
+            /* JADX WARN: Type inference failed for: r2v41 */
+            /* JADX WARN: Type inference failed for: r2v45 */
+            /* JADX WARN: Type inference failed for: r2v46 */
+            /* JADX WARN: Type inference failed for: r2v47 */
+            /* JADX WARN: Type inference failed for: r2v48 */
+            /* JADX WARN: Type inference failed for: r2v49 */
+            /* JADX WARN: Type inference failed for: r2v50 */
+            /* JADX WARN: Type inference failed for: r3v0 */
+            /* JADX WARN: Type inference failed for: r3v1, types: [int] */
+            /* JADX WARN: Type inference failed for: r3v2 */
             public int hashCode() {
                 GuildScheduledEvent guildScheduledEvent = this.guildScheduledEvent;
                 int iHashCode = (guildScheduledEvent != null ? guildScheduledEvent.hashCode() : 0) * 31;
@@ -597,45 +644,45 @@ public final class GuildScheduledEventDetailsViewModel extends AppViewModel<View
                 Channel channel = this.channel;
                 int iHashCode4 = (iHashCode3 + (channel != null ? channel.hashCode() : 0)) * 31;
                 boolean z2 = this.isInGuild;
-                int i = z2;
-                if (z2 != 0) {
-                    i = 1;
+                ?? r2 = z2;
+                if (z2) {
+                    r2 = 1;
                 }
-                int i2 = (iHashCode4 + i) * 31;
+                int i = (iHashCode4 + r2) * 31;
                 boolean z3 = this.isRsvped;
-                int i3 = z3;
-                if (z3 != 0) {
-                    i3 = 1;
+                ?? r22 = z3;
+                if (z3) {
+                    r22 = 1;
                 }
-                int i4 = (i2 + i3) * 31;
+                int i2 = (i + r22) * 31;
                 boolean z4 = this.canShare;
-                int i5 = z4;
-                if (z4 != 0) {
-                    i5 = 1;
+                ?? r23 = z4;
+                if (z4) {
+                    r23 = 1;
                 }
-                int i6 = (i4 + i5) * 31;
+                int i3 = (i2 + r23) * 31;
                 boolean z5 = this.isConnected;
-                int i7 = z5;
-                if (z5 != 0) {
-                    i7 = 1;
+                ?? r24 = z5;
+                if (z5) {
+                    r24 = 1;
                 }
-                int i8 = (i6 + i7) * 31;
+                int i4 = (i3 + r24) * 31;
                 boolean z6 = this.canStartEvent;
-                int i9 = z6;
-                if (z6 != 0) {
-                    i9 = 1;
+                ?? r25 = z6;
+                if (z6) {
+                    r25 = 1;
                 }
-                int i10 = (i8 + i9) * 31;
+                int i5 = (i4 + r25) * 31;
                 boolean z7 = this.isDeveloperMode;
-                int i11 = z7;
-                if (z7 != 0) {
-                    i11 = 1;
+                ?? r26 = z7;
+                if (z7) {
+                    r26 = 1;
                 }
-                int i12 = (i10 + i11) * 31;
+                int i6 = (i5 + r26) * 31;
                 boolean z8 = this.canConnect;
-                int i13 = (i12 + (z8 ? 1 : z8 ? 1 : 0)) * 31;
+                int i7 = (i6 + (z8 ? 1 : z8)) * 31;
                 List<GuildScheduledEventRsvpUserListItem.RsvpUser> list = this.rsvpUsers;
-                int iHashCode5 = (i13 + (list != null ? list.hashCode() : 0)) * 31;
+                int iHashCode5 = (i7 + (list != null ? list.hashCode() : 0)) * 31;
                 GuildScheduledEventDetailsViewModel3 guildScheduledEventDetailsViewModel3 = this.section;
                 int iHashCode6 = (iHashCode5 + (guildScheduledEventDetailsViewModel3 != null ? guildScheduledEventDetailsViewModel3.hashCode() : 0)) * 31;
                 GuildScheduledEventDetailsViewModel2 guildScheduledEventDetailsViewModel2 = this.rsvpUsersFetchState;
@@ -698,7 +745,7 @@ public final class GuildScheduledEventDetailsViewModel extends AppViewModel<View
             }
         }
 
-        /* compiled from: GuildScheduledEventDetailsViewModel.kt */
+        /* JADX INFO: compiled from: GuildScheduledEventDetailsViewModel.kt */
         public static final class Invalid extends ViewState {
             public static final Invalid INSTANCE = new Invalid();
 

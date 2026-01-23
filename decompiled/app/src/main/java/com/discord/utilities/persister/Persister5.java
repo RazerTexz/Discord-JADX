@@ -2,9 +2,9 @@ package com.discord.utilities.persister;
 
 import com.esotericsoftware.kryo.Kryo;
 
-/* compiled from: Persister.kt */
-/* renamed from: com.discord.utilities.persister.Persister$Companion$kryos$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.utilities.persister.Persister$Companion$kryos$1, reason: use source file name */
+/* JADX INFO: compiled from: Persister.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class Persister5 extends ThreadLocal<Kryo> {
     @Override // java.lang.ThreadLocal
     public /* bridge */ /* synthetic */ Kryo initialValue() {

@@ -7,9 +7,9 @@ import kotlin.jvm.functions.Function1;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: FriendRequestDialogs.kt */
-/* renamed from: b.a.a.l, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.a.a.l, reason: use source file name */
+/* JADX INFO: compiled from: FriendRequestDialogs.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class FriendRequestDialogs extends Lambda implements Function1<View, Unit> {
     public final /* synthetic */ Function1 $onConfirm;
 

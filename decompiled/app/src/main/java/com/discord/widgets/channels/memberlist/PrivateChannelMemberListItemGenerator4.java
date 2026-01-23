@@ -6,9 +6,9 @@ import java.util.List;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: PrivateChannelMemberListItemGenerator.kt */
-/* renamed from: com.discord.widgets.channels.memberlist.PrivateChannelMemberListItems, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.channels.memberlist.PrivateChannelMemberListItems, reason: use source file name */
+/* JADX INFO: compiled from: PrivateChannelMemberListItemGenerator.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final /* data */ class PrivateChannelMemberListItemGenerator4 implements WidgetChannelMembersListViewModel.MemberList {
     private final String listId;
     private final List<ChannelMembersListAdapter.Item> listItems;

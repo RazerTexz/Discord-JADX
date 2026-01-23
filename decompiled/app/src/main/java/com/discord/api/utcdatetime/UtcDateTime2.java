@@ -12,9 +12,9 @@ import java.util.Locale;
 import java.util.TimeZone;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: UtcDateTime.kt */
-/* renamed from: com.discord.api.utcdatetime.UtcDateTimeTypeAdapter, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: com.discord.api.utcdatetime.UtcDateTimeTypeAdapter, reason: use source file name */
+/* JADX INFO: compiled from: UtcDateTime.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class UtcDateTime2 extends TypeAdapter<UtcDateTime> {
     private static final String FORMAT = "yyyy-MM-dd'T'HH:mm:ss";
 

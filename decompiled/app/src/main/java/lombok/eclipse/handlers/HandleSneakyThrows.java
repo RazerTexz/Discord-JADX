@@ -32,9 +32,9 @@ import org.eclipse.jdt.internal.compiler.ast.ThrowStatement;
 import org.eclipse.jdt.internal.compiler.ast.TryStatement;
 import org.eclipse.jdt.internal.compiler.ast.TypeReference;
 
+/* JADX INFO: loaded from: discord-126021.apk:lombok/eclipse/handlers/HandleSneakyThrows.SCL.lombok */
 @DeferUntilPostDiet
 @HandlerPriority(1024)
-/* loaded from: discord-126021.apk:lombok/eclipse/handlers/HandleSneakyThrows.SCL.lombok */
 public class HandleSneakyThrows extends EclipseAnnotationHandler<SneakyThrows> {
     private static /* synthetic */ int[] $SWITCH_TABLE$lombok$core$AST$Kind;
 
@@ -88,7 +88,7 @@ public class HandleSneakyThrows extends EclipseAnnotationHandler<SneakyThrows> {
         return iArr2;
     }
 
-    /* loaded from: discord-126021.apk:lombok/eclipse/handlers/HandleSneakyThrows$DeclaredException.SCL.lombok */
+    /* JADX INFO: loaded from: discord-126021.apk:lombok/eclipse/handlers/HandleSneakyThrows$DeclaredException.SCL.lombok */
     private static class DeclaredException {
         final String exceptionName;
         final ASTNode node;
@@ -167,7 +167,7 @@ public class HandleSneakyThrows extends EclipseAnnotationHandler<SneakyThrows> {
         TypeReference typeReference;
         int methodStart = method.bodyStart;
         int methodEnd = method.bodyEnd;
-        long methodPosEnd = (methodEnd << 32) | (methodEnd & 4294967295L);
+        long methodPosEnd = (((long) methodEnd) << 32) | (((long) methodEnd) & 4294967295L);
         TryStatement tryStatement = new TryStatement();
         EclipseHandlerUtil.setGeneratedBy(tryStatement, source);
         tryStatement.tryBlock = new Block(0);

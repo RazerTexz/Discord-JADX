@@ -1,7 +1,6 @@
 package com.discord.widgets.notice;
 
 import android.content.Context;
-import android.content.res.Resources;
 import android.graphics.drawable.Drawable;
 import android.os.Handler;
 import android.os.Looper;
@@ -48,9 +47,9 @@ import p507d0.p580t._Collections;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: NoticePopup.kt */
-/* renamed from: com.discord.widgets.notice.NoticePopup$enqueue$notice$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.notice.NoticePopup$enqueue$notice$1, reason: use source file name */
+/* JADX INFO: compiled from: NoticePopup.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class NoticePopup2 extends Lambda implements Function1<FragmentActivity, Boolean> {
     public final /* synthetic */ Integer $noticeAutoDismissPeriodSecs;
     public final /* synthetic */ CharSequence $noticeBody;
@@ -67,8 +66,8 @@ public final class NoticePopup2 extends Lambda implements Function1<FragmentActi
     public final /* synthetic */ Function1 $onClick;
     public final /* synthetic */ Function1 $onClickTopRightIcon;
 
-    /* compiled from: NoticePopup.kt */
-    /* renamed from: com.discord.widgets.notice.NoticePopup$enqueue$notice$1$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.notice.NoticePopup$enqueue$notice$1$1 */
+    /* JADX INFO: compiled from: NoticePopup.kt */
     public static final class ViewOnClickListenerC90911 implements View.OnClickListener {
         public ViewOnClickListenerC90911() {
         }
@@ -82,8 +81,8 @@ public final class NoticePopup2 extends Lambda implements Function1<FragmentActi
         }
     }
 
-    /* compiled from: NoticePopup.kt */
-    /* renamed from: com.discord.widgets.notice.NoticePopup$enqueue$notice$1$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.notice.NoticePopup$enqueue$notice$1$2 */
+    /* JADX INFO: compiled from: NoticePopup.kt */
     public static final class C90922 implements OnHideAlertListener {
         public C90922() {
         }
@@ -113,8 +112,8 @@ public final class NoticePopup2 extends Lambda implements Function1<FragmentActi
         this.$onClickTopRightIcon = function12;
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
-    public final boolean invoke2(FragmentActivity fragmentActivity) throws Resources.NotFoundException {
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
+    public final boolean invoke2(FragmentActivity fragmentActivity) {
         ViewOnClickListenerC5272b viewOnClickListenerC5272b;
         View view;
         ViewGroup viewGroup;

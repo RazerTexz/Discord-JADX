@@ -3,12 +3,12 @@ package p007b.p008a.p033m.p034a;
 import com.discord.models.domain.Model;
 import com.discord.models.domain.ModelAuditLogEntry;
 
-/* compiled from: lambda */
-/* renamed from: b.a.m.a.h */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.a.m.a.h */
+/* JADX INFO: compiled from: lambda */
+/* JADX INFO: loaded from: classes.dex */
 public final /* synthetic */ class C1144h implements Model.JsonReader.ItemFactory {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final /* synthetic */ Model.JsonReader f1524a;
 
     public /* synthetic */ C1144h(Model.JsonReader jsonReader) {

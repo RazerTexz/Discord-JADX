@@ -5,16 +5,16 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.viewbinding.ViewBinding;
 
-/* compiled from: ServerSettingsMembersRoleSpinnerItemOpenBinding.java */
-/* renamed from: b.a.i.l1, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.a.i.l1, reason: use source file name */
+/* JADX INFO: compiled from: ServerSettingsMembersRoleSpinnerItemOpenBinding.java */
+/* JADX INFO: loaded from: classes.dex */
 public final class ServerSettingsMembersRoleSpinnerItemOpenBinding implements ViewBinding {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     @NonNull
     public final TextView f1017a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     @NonNull
     public final TextView f1018b;
 

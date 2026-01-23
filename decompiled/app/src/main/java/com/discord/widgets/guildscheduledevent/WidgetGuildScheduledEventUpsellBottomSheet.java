@@ -22,22 +22,22 @@ import p007b.p100d.p104b.p105a.outline;
 import p507d0.LazyJVM;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: WidgetGuildScheduledEventUpsellBottomSheet.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetGuildScheduledEventUpsellBottomSheet.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetGuildScheduledEventUpsellBottomSheet extends AppBottomSheet {
     public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetGuildScheduledEventUpsellBottomSheet.class, "binding", "getBinding()Lcom/discord/databinding/WidgetGuildScheduledEventUpsellBottomSheetBinding;", 0)};
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     public static final String GUILD_EVENT_UPSELL_CACHE_KEY = "GUILD_EVENT_UPSELL_CACHE_KEY";
 
-    /* renamed from: binding$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
 
-    /* renamed from: guildId$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: guildId$delegate, reason: from kotlin metadata */
     private final Lazy guildId;
 
-    /* compiled from: WidgetGuildScheduledEventUpsellBottomSheet.kt */
+    /* JADX INFO: compiled from: WidgetGuildScheduledEventUpsellBottomSheet.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -56,8 +56,8 @@ public final class WidgetGuildScheduledEventUpsellBottomSheet extends AppBottomS
         }
     }
 
-    /* compiled from: WidgetGuildScheduledEventUpsellBottomSheet.kt */
-    /* renamed from: com.discord.widgets.guildscheduledevent.WidgetGuildScheduledEventUpsellBottomSheet$onViewCreated$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.guildscheduledevent.WidgetGuildScheduledEventUpsellBottomSheet$onViewCreated$1 */
+    /* JADX INFO: compiled from: WidgetGuildScheduledEventUpsellBottomSheet.kt */
     public static final class ViewOnClickListenerC89291 implements View.OnClickListener {
         public ViewOnClickListenerC89291() {
         }
@@ -81,8 +81,8 @@ public final class WidgetGuildScheduledEventUpsellBottomSheet extends AppBottomS
         }
     }
 
-    /* compiled from: WidgetGuildScheduledEventUpsellBottomSheet.kt */
-    /* renamed from: com.discord.widgets.guildscheduledevent.WidgetGuildScheduledEventUpsellBottomSheet$onViewCreated$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.guildscheduledevent.WidgetGuildScheduledEventUpsellBottomSheet$onViewCreated$2 */
+    /* JADX INFO: compiled from: WidgetGuildScheduledEventUpsellBottomSheet.kt */
     public static final class ViewOnClickListenerC89302 implements View.OnClickListener {
         public ViewOnClickListenerC89302() {
         }

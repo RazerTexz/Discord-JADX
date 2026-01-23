@@ -9,14 +9,14 @@ import androidx.collection.SimpleArrayMap;
 import androidx.customview.view.AbsSavedState;
 import p007b.p100d.p104b.p105a.outline;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public class ExtendableSavedState extends AbsSavedState {
     public static final Parcelable.Creator<ExtendableSavedState> CREATOR = new C11004a();
 
     @NonNull
     public final SimpleArrayMap<String, Bundle> extendableStates;
 
-    /* renamed from: com.google.android.material.stateful.ExtendableSavedState$a */
+    /* JADX INFO: renamed from: com.google.android.material.stateful.ExtendableSavedState$a */
     public static class C11004a implements Parcelable.ClassLoaderCreator<ExtendableSavedState> {
         @Override // android.os.Parcelable.ClassLoaderCreator
         @NonNull

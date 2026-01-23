@@ -28,28 +28,28 @@ import p507d0.p592z.p594d.Lambda;
 import p507d0.p592z.p594d.PropertyReference1Impl;
 import p507d0.p592z.p594d.Reflection2;
 
-/* compiled from: LazyPackageViewDescriptorImpl.kt */
-/* renamed from: d0.e0.p.d.m0.c.i1.s, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.c.i1.s, reason: use source file name */
+/* JADX INFO: compiled from: LazyPackageViewDescriptorImpl.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class LazyPackageViewDescriptorImpl extends DeclarationDescriptorImpl implements PackageViewDescriptor {
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public static final /* synthetic */ KProperty<Object>[] f22975l = {Reflection2.property1(new PropertyReference1Impl(Reflection2.getOrCreateKotlinClass(LazyPackageViewDescriptorImpl.class), "fragments", "getFragments()Ljava/util/List;"))};
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public final ModuleDescriptorImpl3 f22976m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public final FqName f22977n;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public final storage5 f22978o;
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public final MemberScope3 f22979p;
 
-    /* compiled from: LazyPackageViewDescriptorImpl.kt */
-    /* renamed from: d0.e0.p.d.m0.c.i1.s$a */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.c.i1.s$a */
+    /* JADX INFO: compiled from: LazyPackageViewDescriptorImpl.kt */
     public static final class a extends Lambda implements Function0<List<? extends PackageFragmentDescriptor>> {
         public a() {
             super(0);
@@ -61,14 +61,14 @@ public final class LazyPackageViewDescriptorImpl extends DeclarationDescriptorIm
         }
 
         @Override // kotlin.jvm.functions.Function0
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final List<? extends PackageFragmentDescriptor> invoke2() {
             return PackageFragmentProvider2.packageFragments(LazyPackageViewDescriptorImpl.this.getModule().getPackageFragmentProvider(), LazyPackageViewDescriptorImpl.this.getFqName());
         }
     }
 
-    /* compiled from: LazyPackageViewDescriptorImpl.kt */
-    /* renamed from: d0.e0.p.d.m0.c.i1.s$b */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.c.i1.s$b */
+    /* JADX INFO: compiled from: LazyPackageViewDescriptorImpl.kt */
     public static final class b extends Lambda implements Function0<MemberScope3> {
         public b() {
             super(0);

@@ -1,7 +1,6 @@
 package com.esotericsoftware.kryo.serializers;
 
 import com.esotericsoftware.kryo.Kryo;
-import com.esotericsoftware.kryo.KryoException;
 import com.esotericsoftware.kryo.p502io.Input;
 import com.esotericsoftware.kryo.p502io.InputChunked;
 import com.esotericsoftware.kryo.p502io.Output;
@@ -10,7 +9,7 @@ import com.esotericsoftware.kryo.serializers.FieldSerializer;
 import com.esotericsoftware.kryo.util.ObjectMap;
 import p007b.p106e.p107a.Log;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class CompatibleFieldSerializer<T> extends FieldSerializer<T> {
     private static final int THRESHOLD_BINARY_SEARCH = 32;
 
@@ -19,7 +18,7 @@ public class CompatibleFieldSerializer<T> extends FieldSerializer<T> {
     }
 
     @Override // com.esotericsoftware.kryo.serializers.FieldSerializer, com.esotericsoftware.kryo.Serializer
-    public T read(Kryo kryo, Input input, Class<T> cls) throws KryoException {
+    public T read(Kryo kryo, Input input, Class<T> cls) {
         T tCreate = create(kryo, input, cls);
         kryo.reference(tCreate);
         ObjectMap graphContext = kryo.getGraphContext();
@@ -96,7 +95,7 @@ public class CompatibleFieldSerializer<T> extends FieldSerializer<T> {
     }
 
     @Override // com.esotericsoftware.kryo.serializers.FieldSerializer, com.esotericsoftware.kryo.Serializer
-    public void write(Kryo kryo, Output output, T t) throws KryoException {
+    public void write(Kryo kryo, Output output, T t) {
         FieldSerializer.CachedField[] fields = getFields();
         ObjectMap graphContext = kryo.getGraphContext();
         if (!graphContext.containsKey(this)) {

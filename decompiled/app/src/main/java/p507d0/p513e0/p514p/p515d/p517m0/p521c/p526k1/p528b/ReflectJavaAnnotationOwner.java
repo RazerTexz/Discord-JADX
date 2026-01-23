@@ -8,13 +8,13 @@ import p507d0.p513e0.p514p.p515d.p517m0.p548g.FqName;
 import p507d0.p580t.Collections2;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ReflectJavaAnnotationOwner.kt */
-/* renamed from: d0.e0.p.d.m0.c.k1.b.f, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.c.k1.b.f, reason: use source file name */
+/* JADX INFO: compiled from: ReflectJavaAnnotationOwner.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public interface ReflectJavaAnnotationOwner extends InterfaceC11570d {
 
-    /* compiled from: ReflectJavaAnnotationOwner.kt */
-    /* renamed from: d0.e0.p.d.m0.c.k1.b.f$a */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.c.k1.b.f$a */
+    /* JADX INFO: compiled from: ReflectJavaAnnotationOwner.kt */
     public static final class a {
         public static ReflectJavaAnnotation findAnnotation(ReflectJavaAnnotationOwner reflectJavaAnnotationOwner, FqName fqName) {
             Annotation[] declaredAnnotations;

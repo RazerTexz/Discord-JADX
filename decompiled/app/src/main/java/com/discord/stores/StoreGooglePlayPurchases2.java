@@ -3,9 +3,9 @@ package com.discord.stores;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: StoreGooglePlayPurchases.kt */
-/* renamed from: com.discord.stores.PendingDowngrade, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.stores.PendingDowngrade, reason: use source file name */
+/* JADX INFO: compiled from: StoreGooglePlayPurchases.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final /* data */ class StoreGooglePlayPurchases2 {
     private final String newSkuName;
     private final String purchaseToken;
@@ -31,17 +31,17 @@ public final /* data */ class StoreGooglePlayPurchases2 {
         return storeGooglePlayPurchases2.copy(str, str2, str3);
     }
 
-    /* renamed from: component1, reason: from getter */
+    /* JADX INFO: renamed from: component1, reason: from getter */
     public final String getPurchaseToken() {
         return this.purchaseToken;
     }
 
-    /* renamed from: component2, reason: from getter */
+    /* JADX INFO: renamed from: component2, reason: from getter */
     public final String getSubscriptionId() {
         return this.subscriptionId;
     }
 
-    /* renamed from: component3, reason: from getter */
+    /* JADX INFO: renamed from: component3, reason: from getter */
     public final String getNewSkuName() {
         return this.newSkuName;
     }

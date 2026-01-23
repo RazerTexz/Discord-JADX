@@ -13,43 +13,43 @@ import android.view.WindowManager;
 import java.util.List;
 import p007b.p225i.p226a.p288f.p299e.p308o.C3404f;
 
-/* compiled from: CameraPreview.java */
-/* renamed from: e0.a.a.a.d, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: e0.a.a.a.d, reason: use source file name */
+/* JADX INFO: compiled from: CameraPreview.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class CameraPreview2 extends SurfaceView implements SurfaceHolder.Callback {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public CameraWrapper f25321j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public Handler f25322k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public boolean f25323l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public boolean f25324m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public boolean f25325n;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public boolean f25326o;
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public Camera.PreviewCallback f25327p;
 
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     public float f25328q;
 
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     public Runnable f25329r;
 
-    /* renamed from: s */
+    /* JADX INFO: renamed from: s */
     public Camera.AutoFocusCallback f25330s;
 
-    /* compiled from: CameraPreview.java */
-    /* renamed from: e0.a.a.a.d$a */
+    /* JADX INFO: renamed from: e0.a.a.a.d$a */
+    /* JADX INFO: compiled from: CameraPreview.java */
     public class a implements Runnable {
         public a() {
         }
@@ -63,8 +63,8 @@ public class CameraPreview2 extends SurfaceView implements SurfaceHolder.Callbac
         }
     }
 
-    /* compiled from: CameraPreview.java */
-    /* renamed from: e0.a.a.a.d$b */
+    /* JADX INFO: renamed from: e0.a.a.a.d$b */
+    /* JADX INFO: compiled from: CameraPreview.java */
     public class b implements Camera.AutoFocusCallback {
         public b() {
         }
@@ -104,14 +104,14 @@ public class CameraPreview2 extends SurfaceView implements SurfaceHolder.Callbac
             height = width;
             width = height;
         }
-        double d = width / height;
+        double d = ((double) width) / ((double) height);
         if (supportedPreviewSizes == null) {
             return null;
         }
         double dAbs = Double.MAX_VALUE;
         double dAbs2 = Double.MAX_VALUE;
         for (Camera.Size size2 : supportedPreviewSizes) {
-            if (Math.abs((size2.width / size2.height) - d) <= this.f25328q && Math.abs(size2.height - height) < dAbs2) {
+            if (Math.abs((((double) size2.width) / ((double) size2.height)) - d) <= this.f25328q && Math.abs(size2.height - height) < dAbs2) {
                 dAbs2 = Math.abs(size2.height - height);
                 size = size2;
             }
@@ -127,7 +127,7 @@ public class CameraPreview2 extends SurfaceView implements SurfaceHolder.Callbac
         return size;
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public void m10095a() {
         try {
             this.f25321j.f25333a.autoFocus(this.f25330s);
@@ -136,12 +136,12 @@ public class CameraPreview2 extends SurfaceView implements SurfaceHolder.Callbac
         }
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final void m10096b() {
         this.f25322k.postDelayed(this.f25329r, 1000L);
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final void m10097c(int i, int i2) {
         ViewGroup.LayoutParams layoutParams = getLayoutParams();
         if (getDisplayOrientation() % 180 != 0) {
@@ -164,7 +164,7 @@ public class CameraPreview2 extends SurfaceView implements SurfaceHolder.Callbac
         setLayoutParams(layoutParams);
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public void m10098d() {
         Camera.Size optimalPreviewSize = getOptimalPreviewSize();
         Camera.Parameters parameters = this.f25321j.f25333a.getParameters();
@@ -186,7 +186,7 @@ public class CameraPreview2 extends SurfaceView implements SurfaceHolder.Callbac
         }
     }
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public void m10099e() {
         if (this.f25321j != null) {
             try {

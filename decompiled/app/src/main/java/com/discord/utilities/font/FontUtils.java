@@ -12,8 +12,8 @@ import com.discord.stores.StoreStream;
 import p507d0.p508a0.MathJVM;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: FontUtils.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: FontUtils.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class FontUtils {
     public static final FontUtils INSTANCE = new FontUtils();
     public static final int MAX_FONT_SCALING = 150;

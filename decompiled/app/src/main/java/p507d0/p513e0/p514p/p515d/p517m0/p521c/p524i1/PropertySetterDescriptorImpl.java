@@ -23,22 +23,22 @@ import p507d0.p513e0.p514p.p515d.p517m0.p552k.p559x.DescriptorUtils2;
 import p507d0.p513e0.p514p.p515d.p517m0.p567n.KotlinType;
 import p507d0.p513e0.p514p.p515d.p517m0.p567n.KotlinType4;
 
-/* compiled from: PropertySetterDescriptorImpl.java */
-/* renamed from: d0.e0.p.d.m0.c.i1.e0, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.c.i1.e0, reason: use source file name */
+/* JADX INFO: compiled from: PropertySetterDescriptorImpl.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class PropertySetterDescriptorImpl extends PropertyAccessorDescriptorImpl implements PropertySetterDescriptor {
 
-    /* renamed from: v */
+    /* JADX INFO: renamed from: v */
     public ValueParameterDescriptor f22855v;
 
-    /* renamed from: w */
+    /* JADX INFO: renamed from: w */
     public final PropertySetterDescriptor f22856w;
 
     /* JADX WARN: Illegal instructions before constructor call */
     /* JADX WARN: Multi-variable type inference failed */
     public PropertySetterDescriptorImpl(PropertyDescriptor propertyDescriptor, Annotations4 annotations4, Modality modality, DescriptorVisibility2 descriptorVisibility2, boolean z2, boolean z3, boolean z4, CallableMemberDescriptor.a aVar, PropertySetterDescriptor propertySetterDescriptor, SourceElement sourceElement) {
+        PropertySetterDescriptor propertySetterDescriptor2;
         PropertySetterDescriptorImpl propertySetterDescriptorImpl;
-        PropertySetterDescriptorImpl propertySetterDescriptorImpl2;
         if (propertyDescriptor == null) {
             m9397a(0);
             throw null;
@@ -67,17 +67,17 @@ public class PropertySetterDescriptorImpl extends PropertyAccessorDescriptorImpl
         sbM833U.append(propertyDescriptor.getName());
         sbM833U.append(">");
         super(modality, descriptorVisibility2, propertyDescriptor, annotations4, Name.special(sbM833U.toString()), z2, z3, z4, aVar, sourceElement);
-        if (propertySetterDescriptor != 0) {
-            propertySetterDescriptorImpl2 = this;
-            propertySetterDescriptorImpl = propertySetterDescriptor;
-        } else {
+        if (propertySetterDescriptor != null) {
             propertySetterDescriptorImpl = this;
-            propertySetterDescriptorImpl2 = propertySetterDescriptorImpl;
+            propertySetterDescriptor2 = propertySetterDescriptor;
+        } else {
+            propertySetterDescriptor2 = this;
+            propertySetterDescriptorImpl = propertySetterDescriptor2;
         }
-        propertySetterDescriptorImpl2.f22856w = propertySetterDescriptorImpl;
+        propertySetterDescriptorImpl.f22856w = propertySetterDescriptor2;
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static /* synthetic */ void m9397a(int i) {
         String str;
         int i2;

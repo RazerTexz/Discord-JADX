@@ -17,7 +17,7 @@ import androidx.annotation.Nullable;
 import androidx.core.content.ContextCompat;
 import androidx.core.view.ViewCompat;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class PagerTabStrip extends PagerTitleStrip {
     private static final int FULL_UNDERLINE_HEIGHT = 1;
     private static final int INDICATOR_HEIGHT = 3;
@@ -44,7 +44,7 @@ public class PagerTabStrip extends PagerTitleStrip {
     private final Rect mTempRect;
     private int mTouchSlop;
 
-    /* renamed from: androidx.viewpager.widget.PagerTabStrip$1 */
+    /* JADX INFO: renamed from: androidx.viewpager.widget.PagerTabStrip$1 */
     public class ViewOnClickListenerC06861 implements View.OnClickListener {
         public ViewOnClickListenerC06861() {
         }
@@ -55,7 +55,7 @@ public class PagerTabStrip extends PagerTitleStrip {
         }
     }
 
-    /* renamed from: androidx.viewpager.widget.PagerTabStrip$2 */
+    /* JADX INFO: renamed from: androidx.viewpager.widget.PagerTabStrip$2 */
     public class ViewOnClickListenerC06872 implements View.OnClickListener {
         public ViewOnClickListenerC06872() {
         }

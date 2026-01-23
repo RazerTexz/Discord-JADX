@@ -31,25 +31,25 @@ import p507d0.p591y.Closeable;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: NetworkUtils.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: NetworkUtils.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class NetworkUtils {
     public static final NetworkUtils INSTANCE = new NetworkUtils();
     private static final Map<Long, Function0<Unit>> onDownloadListeners = new LinkedHashMap();
 
-    /* compiled from: NetworkUtils.kt */
+    /* JADX INFO: compiled from: NetworkUtils.kt */
     public static final class DownloadManagerEnqueueFailure extends Throwable {
     }
 
-    /* compiled from: NetworkUtils.kt */
+    /* JADX INFO: compiled from: NetworkUtils.kt */
     public static final class DownloadManagerFileNoFound extends Throwable {
     }
 
-    /* compiled from: NetworkUtils.kt */
+    /* JADX INFO: compiled from: NetworkUtils.kt */
     public static final class DownloadManagerNotFound extends Throwable {
     }
 
-    /* compiled from: NetworkUtils.kt */
+    /* JADX INFO: compiled from: NetworkUtils.kt */
     public static final class NetworkDownloadReceiver extends BroadcastReceiver {
         @Override // android.content.BroadcastReceiver
         public void onReceive(Context context, Intent intent) {
@@ -63,8 +63,8 @@ public final class NetworkUtils {
         }
     }
 
-    /* compiled from: NetworkUtils.kt */
-    /* renamed from: com.discord.utilities.io.NetworkUtils$downloadFile$1 */
+    /* JADX INFO: renamed from: com.discord.utilities.io.NetworkUtils$downloadFile$1 */
+    /* JADX INFO: compiled from: NetworkUtils.kt */
     public static final class C67891 extends Lambda implements Function0<Unit> {
         public final /* synthetic */ long $downloadId;
         public final /* synthetic */ DownloadManager $manager;
@@ -86,7 +86,7 @@ public final class NetworkUtils {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() throws IOException {
             Cursor cursorQuery;
             NetworkUtils.access$getOnDownloadListeners$p(NetworkUtils.INSTANCE).remove(Long.valueOf(this.$downloadId));

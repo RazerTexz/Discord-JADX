@@ -9,9 +9,9 @@ import p007b.p085c.p086a.p087a0.AnimatableValueParser;
 import p007b.p109f.p132g.p143f.GenericDraweeHierarchyBuilder;
 import p007b.p109f.p161j.p183r.FrescoSystrace;
 
-/* compiled from: GenericDraweeView.java */
-/* renamed from: b.f.g.j.a, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.f.g.j.a, reason: use source file name */
+/* JADX INFO: compiled from: GenericDraweeView.java */
+/* JADX INFO: loaded from: classes.dex */
 public class GenericDraweeView extends DraweeView<GenericDraweeHierarchy> {
     public GenericDraweeView(Context context, GenericDraweeHierarchy genericDraweeHierarchy) {
         super(context);

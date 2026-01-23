@@ -8,28 +8,28 @@ import p658rx.Producer;
 import p658rx.Subscriber;
 import p658rx.exceptions.OnErrorThrowable;
 
-/* compiled from: OnSubscribeMap.java */
-/* renamed from: j0.l.a.s, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: j0.l.a.s, reason: use source file name */
+/* JADX INFO: compiled from: OnSubscribeMap.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class OnSubscribeMap<T, R> implements Observable.InterfaceC13005a<R> {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final Observable<T> f27031j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final Func1<? super T, ? extends R> f27032k;
 
-    /* compiled from: OnSubscribeMap.java */
-    /* renamed from: j0.l.a.s$a */
+    /* JADX INFO: renamed from: j0.l.a.s$a */
+    /* JADX INFO: compiled from: OnSubscribeMap.java */
     public static final class a<T, R> extends Subscriber<T> {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public final Subscriber<? super R> f27033j;
 
-        /* renamed from: k */
+        /* JADX INFO: renamed from: k */
         public final Func1<? super T, ? extends R> f27034k;
 
-        /* renamed from: l */
+        /* JADX INFO: renamed from: l */
         public boolean f27035l;
 
         public a(Subscriber<? super R> subscriber, Func1<? super T, ? extends R> func1) {

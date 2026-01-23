@@ -20,160 +20,160 @@ import p007b.p225i.p355b.p357b.ImmutableSet2;
 import p007b.p225i.p355b.p357b.RegularImmutableList;
 import p007b.p225i.p355b.p357b.RegularImmutableSet;
 
-/* compiled from: TrackSelectionParameters.java */
-/* renamed from: b.i.a.c.c3.p, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.c3.p, reason: use source file name */
+/* JADX INFO: compiled from: TrackSelectionParameters.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class TrackSelectionParameters implements Bundleable {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static final TrackSelectionParameters f6276j = new TrackSelectionParameters(new a());
 
-    /* renamed from: A */
+    /* JADX INFO: renamed from: A */
     public final ImmutableList2<String> f6277A;
 
-    /* renamed from: B */
+    /* JADX INFO: renamed from: B */
     public final ImmutableList2<String> f6278B;
 
-    /* renamed from: C */
+    /* JADX INFO: renamed from: C */
     public final int f6279C;
 
-    /* renamed from: D */
+    /* JADX INFO: renamed from: D */
     public final boolean f6280D;
 
-    /* renamed from: E */
+    /* JADX INFO: renamed from: E */
     public final boolean f6281E;
 
-    /* renamed from: F */
+    /* JADX INFO: renamed from: F */
     public final boolean f6282F;
 
-    /* renamed from: G */
+    /* JADX INFO: renamed from: G */
     public final TrackSelectionOverrides f6283G;
 
-    /* renamed from: H */
+    /* JADX INFO: renamed from: H */
     public final ImmutableSet2<Integer> f6284H;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final int f6285k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final int f6286l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public final int f6287m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public final int f6288n;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public final int f6289o;
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public final int f6290p;
 
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     public final int f6291q;
 
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     public final int f6292r;
 
-    /* renamed from: s */
+    /* JADX INFO: renamed from: s */
     public final int f6293s;
 
-    /* renamed from: t */
+    /* JADX INFO: renamed from: t */
     public final int f6294t;
 
-    /* renamed from: u */
+    /* JADX INFO: renamed from: u */
     public final boolean f6295u;
 
-    /* renamed from: v */
+    /* JADX INFO: renamed from: v */
     public final ImmutableList2<String> f6296v;
 
-    /* renamed from: w */
+    /* JADX INFO: renamed from: w */
     public final ImmutableList2<String> f6297w;
 
-    /* renamed from: x */
+    /* JADX INFO: renamed from: x */
     public final int f6298x;
 
-    /* renamed from: y */
+    /* JADX INFO: renamed from: y */
     public final int f6299y;
 
-    /* renamed from: z */
+    /* JADX INFO: renamed from: z */
     public final int f6300z;
 
-    /* compiled from: TrackSelectionParameters.java */
-    /* renamed from: b.i.a.c.c3.p$a */
+    /* JADX INFO: renamed from: b.i.a.c.c3.p$a */
+    /* JADX INFO: compiled from: TrackSelectionParameters.java */
     public static class a {
 
-        /* renamed from: e */
+        /* JADX INFO: renamed from: e */
         public int f6305e;
 
-        /* renamed from: f */
+        /* JADX INFO: renamed from: f */
         public int f6306f;
 
-        /* renamed from: g */
+        /* JADX INFO: renamed from: g */
         public int f6307g;
 
-        /* renamed from: h */
+        /* JADX INFO: renamed from: h */
         public int f6308h;
 
-        /* renamed from: l */
+        /* JADX INFO: renamed from: l */
         public ImmutableList2<String> f6312l;
 
-        /* renamed from: m */
+        /* JADX INFO: renamed from: m */
         public ImmutableList2<String> f6313m;
 
-        /* renamed from: n */
+        /* JADX INFO: renamed from: n */
         public int f6314n;
 
-        /* renamed from: o */
+        /* JADX INFO: renamed from: o */
         public int f6315o;
 
-        /* renamed from: p */
+        /* JADX INFO: renamed from: p */
         public int f6316p;
 
-        /* renamed from: q */
+        /* JADX INFO: renamed from: q */
         public ImmutableList2<String> f6317q;
 
-        /* renamed from: r */
+        /* JADX INFO: renamed from: r */
         public ImmutableList2<String> f6318r;
 
-        /* renamed from: s */
+        /* JADX INFO: renamed from: s */
         public int f6319s;
 
-        /* renamed from: t */
+        /* JADX INFO: renamed from: t */
         public boolean f6320t;
 
-        /* renamed from: u */
+        /* JADX INFO: renamed from: u */
         public boolean f6321u;
 
-        /* renamed from: v */
+        /* JADX INFO: renamed from: v */
         public boolean f6322v;
 
-        /* renamed from: w */
+        /* JADX INFO: renamed from: w */
         public TrackSelectionOverrides f6323w;
 
-        /* renamed from: x */
+        /* JADX INFO: renamed from: x */
         public ImmutableSet2<Integer> f6324x;
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public int f6301a = Integer.MAX_VALUE;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public int f6302b = Integer.MAX_VALUE;
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public int f6303c = Integer.MAX_VALUE;
 
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         public int f6304d = Integer.MAX_VALUE;
 
-        /* renamed from: i */
+        /* JADX INFO: renamed from: i */
         public int f6309i = Integer.MAX_VALUE;
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public int f6310j = Integer.MAX_VALUE;
 
-        /* renamed from: k */
+        /* JADX INFO: renamed from: k */
         public boolean f6311k = true;
 
         @Deprecated
@@ -196,7 +196,7 @@ public class TrackSelectionParameters implements Bundleable {
             this.f6324x = RegularImmutableSet.f12032m;
         }
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public a mo2742a(Context context) {
             CaptioningManager captioningManager;
             int i = Util2.f6708a;
@@ -210,7 +210,7 @@ public class TrackSelectionParameters implements Bundleable {
             return this;
         }
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public a mo2743b(int i, int i2, boolean z2) {
             this.f6309i = i;
             this.f6310j = i2;
@@ -221,7 +221,7 @@ public class TrackSelectionParameters implements Bundleable {
         /* JADX WARN: Removed duplicated region for block: B:40:0x00b8  */
         /* JADX WARN: Removed duplicated region for block: B:42:0x00c3  */
         /* JADX WARN: Removed duplicated region for block: B:43:0x00d4  */
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         /*
             Code decompiled incorrectly, please refer to instructions dump.
         */

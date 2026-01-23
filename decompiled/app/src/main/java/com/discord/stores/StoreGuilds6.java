@@ -6,9 +6,9 @@ import kotlin.jvm.functions.Function1;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: StoreGuilds.kt */
-/* renamed from: com.discord.stores.StoreGuilds$Actions$requestRoleMembers$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.stores.StoreGuilds$Actions$requestRoleMembers$1, reason: use source file name */
+/* JADX INFO: compiled from: StoreGuilds.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class StoreGuilds6 extends Lambda implements Function1<List<? extends Long>, Unit> {
     public final /* synthetic */ long $guildId;
     public final /* synthetic */ StoreGatewayConnection $storeGatewayConnection;
@@ -26,7 +26,7 @@ public final class StoreGuilds6 extends Lambda implements Function1<List<? exten
         return Unit.f27425a;
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final void invoke2(List<Long> list) {
         Intrinsics3.checkNotNullParameter(list, "userIds");
         StoreGatewayConnection.requestGuildMembers$default(this.$storeGatewayConnection, this.$guildId, null, list, null, 10, null);

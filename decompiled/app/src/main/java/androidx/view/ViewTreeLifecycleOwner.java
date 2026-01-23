@@ -5,7 +5,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.view.runtime.C0463R;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class ViewTreeLifecycleOwner {
     private ViewTreeLifecycleOwner() {
     }

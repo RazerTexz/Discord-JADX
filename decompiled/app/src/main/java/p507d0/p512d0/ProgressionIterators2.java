@@ -3,21 +3,21 @@ package p507d0.p512d0;
 import java.util.NoSuchElementException;
 import p507d0.p580t.Iterators5;
 
-/* compiled from: ProgressionIterators.kt */
-/* renamed from: d0.d0.d, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.d0.d, reason: use source file name */
+/* JADX INFO: compiled from: ProgressionIterators.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class ProgressionIterators2 extends Iterators5 {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final long f22286j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public boolean f22287k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public long f22288l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public final long f22289m;
 
     public ProgressionIterators2(long j, long j2, long j3) {

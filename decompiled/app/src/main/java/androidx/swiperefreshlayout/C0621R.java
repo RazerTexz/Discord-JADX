@@ -2,11 +2,11 @@ package androidx.swiperefreshlayout;
 
 import com.discord.C5419R;
 
-/* renamed from: androidx.swiperefreshlayout.R */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: androidx.swiperefreshlayout.R */
+/* JADX INFO: loaded from: classes.dex */
 public final class C0621R {
 
-    /* renamed from: androidx.swiperefreshlayout.R$attr */
+    /* JADX INFO: renamed from: androidx.swiperefreshlayout.R$attr */
     public static final class attr {
         public static final int alpha = 2130968635;
         public static final int font = 2130969378;
@@ -26,7 +26,7 @@ public final class C0621R {
         }
     }
 
-    /* renamed from: androidx.swiperefreshlayout.R$color */
+    /* JADX INFO: renamed from: androidx.swiperefreshlayout.R$color */
     public static final class color {
         public static final int notification_action_color_filter = 2131100115;
         public static final int notification_icon_bg_color = 2131100116;
@@ -37,7 +37,7 @@ public final class C0621R {
         }
     }
 
-    /* renamed from: androidx.swiperefreshlayout.R$dimen */
+    /* JADX INFO: renamed from: androidx.swiperefreshlayout.R$dimen */
     public static final class dimen {
         public static final int compat_button_inset_horizontal_material = 2131165325;
         public static final int compat_button_inset_vertical_material = 2131165326;
@@ -66,7 +66,7 @@ public final class C0621R {
         }
     }
 
-    /* renamed from: androidx.swiperefreshlayout.R$drawable */
+    /* JADX INFO: renamed from: androidx.swiperefreshlayout.R$drawable */
     public static final class drawable {
         public static final int notification_action_background = 2131232491;
         public static final int notification_bg = 2131232492;
@@ -85,7 +85,7 @@ public final class C0621R {
         }
     }
 
-    /* renamed from: androidx.swiperefreshlayout.R$id */
+    /* JADX INFO: renamed from: androidx.swiperefreshlayout.R$id */
     public static final class id {
         public static final int accessibility_action_clickable_span = 2131361830;
         public static final int accessibility_custom_action_0 = 2131361831;
@@ -159,7 +159,7 @@ public final class C0621R {
         }
     }
 
-    /* renamed from: androidx.swiperefreshlayout.R$integer */
+    /* JADX INFO: renamed from: androidx.swiperefreshlayout.R$integer */
     public static final class integer {
         public static final int status_bar_notification_info_maxnum = 2131427355;
 
@@ -167,7 +167,7 @@ public final class C0621R {
         }
     }
 
-    /* renamed from: androidx.swiperefreshlayout.R$layout */
+    /* JADX INFO: renamed from: androidx.swiperefreshlayout.R$layout */
     public static final class layout {
         public static final int custom_dialog = 2131558460;
         public static final int notification_action = 2131558626;
@@ -181,7 +181,7 @@ public final class C0621R {
         }
     }
 
-    /* renamed from: androidx.swiperefreshlayout.R$string */
+    /* JADX INFO: renamed from: androidx.swiperefreshlayout.R$string */
     public static final class string {
         public static final int status_bar_notification_info_overflow = 2131895909;
 
@@ -189,7 +189,7 @@ public final class C0621R {
         }
     }
 
-    /* renamed from: androidx.swiperefreshlayout.R$style */
+    /* JADX INFO: renamed from: androidx.swiperefreshlayout.R$style */
     public static final class style {
         public static final int TextAppearance_Compat_Notification = 2131952217;
         public static final int TextAppearance_Compat_Notification_Info = 2131952218;
@@ -203,7 +203,7 @@ public final class C0621R {
         }
     }
 
-    /* renamed from: androidx.swiperefreshlayout.R$styleable */
+    /* JADX INFO: renamed from: androidx.swiperefreshlayout.R$styleable */
     public static final class styleable {
         public static final int ColorStateListItem_alpha = 2;
         public static final int ColorStateListItem_android_alpha = 1;
@@ -240,7 +240,7 @@ public final class C0621R {
         public static final int GradientColor_android_tileMode = 6;
         public static final int GradientColor_android_type = 2;
 
-        /* renamed from: SwipeRefreshLayout_swipeRefreshLayoutProgressSpinnerBackgroundColor */
+        /* JADX INFO: renamed from: SwipeRefreshLayout_swipeRefreshLayoutProgressSpinnerBackgroundColor */
         public static final int f158xaa980688 = 0;
         public static final int[] ColorStateListItem = {android.R.attr.color, android.R.attr.alpha, C5419R.attr.alpha};
         public static final int[] FontFamily = {C5419R.attr.fontProviderAuthority, C5419R.attr.fontProviderCerts, C5419R.attr.fontProviderFetchStrategy, C5419R.attr.fontProviderFetchTimeout, C5419R.attr.fontProviderPackage, C5419R.attr.fontProviderQuery, C5419R.attr.fontProviderSystemFontFamily};

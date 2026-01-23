@@ -12,7 +12,7 @@ import lombok.javac.JavacAnnotationHandler;
 import lombok.javac.JavacNode;
 import lombok.javac.handlers.HandleConstructor;
 
-/* loaded from: discord-126021.apk:lombok/javac/handlers/HandleData.SCL.lombok */
+/* JADX INFO: loaded from: discord-126021.apk:lombok/javac/handlers/HandleData.SCL.lombok */
 public class HandleData extends JavacAnnotationHandler<Data> {
     private HandleConstructor handleConstructor = new HandleConstructor();
     private HandleGetter handleGetter = new HandleGetter();

@@ -31,11 +31,11 @@ import p507d0.p592z.p594d.Lambda;
 import p658rx.Observable;
 import p658rx.subjects.PublishSubject;
 
-/* compiled from: MuteSettingsSheetViewModel.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: MuteSettingsSheetViewModel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class MuteSettingsSheetViewModel extends AppViewModel<ViewState> {
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     public static final long MUTE_DURATION_ALWAYS = 0;
     private final long channelId;
@@ -46,8 +46,8 @@ public final class MuteSettingsSheetViewModel extends AppViewModel<ViewState> {
     private final Observable<StoreState> storeStateObservable;
     private final StoreUserGuildSettings storeUserGuildSettings;
 
-    /* compiled from: MuteSettingsSheetViewModel.kt */
-    /* renamed from: com.discord.widgets.settings.MuteSettingsSheetViewModel$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.MuteSettingsSheetViewModel$1 */
+    /* JADX INFO: compiled from: MuteSettingsSheetViewModel.kt */
     public static final class C95971 extends Lambda implements Function1<StoreState, Unit> {
         public C95971() {
             super(1);
@@ -59,14 +59,14 @@ public final class MuteSettingsSheetViewModel extends AppViewModel<ViewState> {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(StoreState storeState) {
             Intrinsics3.checkNotNullParameter(storeState, "storeState");
             MuteSettingsSheetViewModel.access$handleStoreState(MuteSettingsSheetViewModel.this, storeState);
         }
     }
 
-    /* compiled from: MuteSettingsSheetViewModel.kt */
+    /* JADX INFO: compiled from: MuteSettingsSheetViewModel.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -86,10 +86,10 @@ public final class MuteSettingsSheetViewModel extends AppViewModel<ViewState> {
         }
     }
 
-    /* compiled from: MuteSettingsSheetViewModel.kt */
+    /* JADX INFO: compiled from: MuteSettingsSheetViewModel.kt */
     public static abstract class Config {
 
-        /* compiled from: MuteSettingsSheetViewModel.kt */
+        /* JADX INFO: compiled from: MuteSettingsSheetViewModel.kt */
         public static final /* data */ class Channel extends Config {
             private final long channelId;
 
@@ -105,7 +105,7 @@ public final class MuteSettingsSheetViewModel extends AppViewModel<ViewState> {
                 return channel.copy(j);
             }
 
-            /* renamed from: component1, reason: from getter */
+            /* JADX INFO: renamed from: component1, reason: from getter */
             public final long getChannelId() {
                 return this.channelId;
             }
@@ -134,7 +134,7 @@ public final class MuteSettingsSheetViewModel extends AppViewModel<ViewState> {
             }
         }
 
-        /* compiled from: MuteSettingsSheetViewModel.kt */
+        /* JADX INFO: compiled from: MuteSettingsSheetViewModel.kt */
         public static final /* data */ class Guild extends Config {
             private final long guildId;
 
@@ -150,7 +150,7 @@ public final class MuteSettingsSheetViewModel extends AppViewModel<ViewState> {
                 return guild.copy(j);
             }
 
-            /* renamed from: component1, reason: from getter */
+            /* JADX INFO: renamed from: component1, reason: from getter */
             public final long getGuildId() {
                 return this.guildId;
             }
@@ -187,10 +187,10 @@ public final class MuteSettingsSheetViewModel extends AppViewModel<ViewState> {
         }
     }
 
-    /* compiled from: MuteSettingsSheetViewModel.kt */
+    /* JADX INFO: compiled from: MuteSettingsSheetViewModel.kt */
     public static abstract class Event {
 
-        /* compiled from: MuteSettingsSheetViewModel.kt */
+        /* JADX INFO: compiled from: MuteSettingsSheetViewModel.kt */
         public static final class Dismiss extends Event {
             public static final Dismiss INSTANCE = new Dismiss();
 
@@ -199,7 +199,7 @@ public final class MuteSettingsSheetViewModel extends AppViewModel<ViewState> {
             }
         }
 
-        /* compiled from: MuteSettingsSheetViewModel.kt */
+        /* JADX INFO: compiled from: MuteSettingsSheetViewModel.kt */
         public static final /* data */ class NavigateToChannelSettings extends Event {
             private final long channelId;
 
@@ -215,7 +215,7 @@ public final class MuteSettingsSheetViewModel extends AppViewModel<ViewState> {
                 return navigateToChannelSettings.copy(j);
             }
 
-            /* renamed from: component1, reason: from getter */
+            /* JADX INFO: renamed from: component1, reason: from getter */
             public final long getChannelId() {
                 return this.channelId;
             }
@@ -252,7 +252,7 @@ public final class MuteSettingsSheetViewModel extends AppViewModel<ViewState> {
         }
     }
 
-    /* compiled from: MuteSettingsSheetViewModel.kt */
+    /* JADX INFO: compiled from: MuteSettingsSheetViewModel.kt */
     public enum SettingsType {
         GUILD,
         DM,
@@ -263,7 +263,7 @@ public final class MuteSettingsSheetViewModel extends AppViewModel<ViewState> {
         UNKNOWN
     }
 
-    /* compiled from: MuteSettingsSheetViewModel.kt */
+    /* JADX INFO: compiled from: MuteSettingsSheetViewModel.kt */
     public static final /* data */ class StoreState {
         private final Channel channel;
         private final Guild guild;
@@ -293,22 +293,22 @@ public final class MuteSettingsSheetViewModel extends AppViewModel<ViewState> {
             return storeState.copy(guild, channel, modelNotificationSettings, joinedThread);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final Guild getGuild() {
             return this.guild;
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final Channel getChannel() {
             return this.channel;
         }
 
-        /* renamed from: component3, reason: from getter */
+        /* JADX INFO: renamed from: component3, reason: from getter */
         public final ModelNotificationSettings getGuildNotificationSettings() {
             return this.guildNotificationSettings;
         }
 
-        /* renamed from: component4, reason: from getter */
+        /* JADX INFO: renamed from: component4, reason: from getter */
         public final StoreThreadsJoined.JoinedThread getJoinedThread() {
             return this.joinedThread;
         }
@@ -373,10 +373,10 @@ public final class MuteSettingsSheetViewModel extends AppViewModel<ViewState> {
         }
     }
 
-    /* compiled from: MuteSettingsSheetViewModel.kt */
+    /* JADX INFO: compiled from: MuteSettingsSheetViewModel.kt */
     public static abstract class ViewState {
 
-        /* compiled from: MuteSettingsSheetViewModel.kt */
+        /* JADX INFO: compiled from: MuteSettingsSheetViewModel.kt */
         public static final class Failure extends ViewState {
             public static final Failure INSTANCE = new Failure();
 
@@ -385,7 +385,7 @@ public final class MuteSettingsSheetViewModel extends AppViewModel<ViewState> {
             }
         }
 
-        /* compiled from: MuteSettingsSheetViewModel.kt */
+        /* JADX INFO: compiled from: MuteSettingsSheetViewModel.kt */
         public static final /* data */ class Loaded extends ViewState {
             private final boolean isChannelMuted;
             private final boolean isGuildMuted;
@@ -424,32 +424,32 @@ public final class MuteSettingsSheetViewModel extends AppViewModel<ViewState> {
                 return loaded.copy(settingsType, str3, z4, z5, str4, i);
             }
 
-            /* renamed from: component1, reason: from getter */
+            /* JADX INFO: renamed from: component1, reason: from getter */
             public final SettingsType getSettingsType() {
                 return this.settingsType;
             }
 
-            /* renamed from: component2, reason: from getter */
+            /* JADX INFO: renamed from: component2, reason: from getter */
             public final String getSubtitle() {
                 return this.subtitle;
             }
 
-            /* renamed from: component3, reason: from getter */
+            /* JADX INFO: renamed from: component3, reason: from getter */
             public final boolean getIsChannelMuted() {
                 return this.isChannelMuted;
             }
 
-            /* renamed from: component4, reason: from getter */
+            /* JADX INFO: renamed from: component4, reason: from getter */
             public final boolean getIsGuildMuted() {
                 return this.isGuildMuted;
             }
 
-            /* renamed from: component5, reason: from getter */
+            /* JADX INFO: renamed from: component5, reason: from getter */
             public final String getMuteEndTime() {
                 return this.muteEndTime;
             }
 
-            /* renamed from: component6, reason: from getter */
+            /* JADX INFO: renamed from: component6, reason: from getter */
             public final int getNotificationSetting() {
                 return this.notificationSetting;
             }
@@ -488,21 +488,27 @@ public final class MuteSettingsSheetViewModel extends AppViewModel<ViewState> {
             }
 
             /* JADX WARN: Multi-variable type inference failed */
+            /* JADX WARN: Type inference failed for: r2v4, types: [int] */
+            /* JADX WARN: Type inference failed for: r2v7 */
+            /* JADX WARN: Type inference failed for: r2v9 */
+            /* JADX WARN: Type inference failed for: r3v0 */
+            /* JADX WARN: Type inference failed for: r3v1, types: [int] */
+            /* JADX WARN: Type inference failed for: r3v2 */
             public int hashCode() {
                 SettingsType settingsType = this.settingsType;
                 int iHashCode = (settingsType != null ? settingsType.hashCode() : 0) * 31;
                 String str = this.subtitle;
                 int iHashCode2 = (iHashCode + (str != null ? str.hashCode() : 0)) * 31;
                 boolean z2 = this.isChannelMuted;
-                int i = z2;
-                if (z2 != 0) {
-                    i = 1;
+                ?? r2 = z2;
+                if (z2) {
+                    r2 = 1;
                 }
-                int i2 = (iHashCode2 + i) * 31;
+                int i = (iHashCode2 + r2) * 31;
                 boolean z3 = this.isGuildMuted;
-                int i3 = (i2 + (z3 ? 1 : z3 ? 1 : 0)) * 31;
+                int i2 = (i + (z3 ? 1 : z3)) * 31;
                 String str2 = this.muteEndTime;
-                return ((i3 + (str2 != null ? str2.hashCode() : 0)) * 31) + this.notificationSetting;
+                return ((i2 + (str2 != null ? str2.hashCode() : 0)) * 31) + this.notificationSetting;
             }
 
             public final boolean isChannelMuted() {
@@ -542,7 +548,7 @@ public final class MuteSettingsSheetViewModel extends AppViewModel<ViewState> {
             }
         }
 
-        /* compiled from: MuteSettingsSheetViewModel.kt */
+        /* JADX INFO: compiled from: MuteSettingsSheetViewModel.kt */
         public static final class Uninitialized extends ViewState {
             public static final Uninitialized INSTANCE = new Uninitialized();
 

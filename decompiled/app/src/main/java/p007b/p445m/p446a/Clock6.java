@@ -3,15 +3,15 @@ package p007b.p445m.p446a;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: Clock.kt */
-/* renamed from: b.m.a.d, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.m.a.d, reason: use source file name */
+/* JADX INFO: compiled from: Clock.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class Clock6 {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final long f13644a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final Long f13645b;
 
     public Clock6(long j, Long l) {

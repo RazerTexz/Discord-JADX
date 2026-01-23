@@ -21,30 +21,30 @@ import p007b.p225i.p408d.p410q.C4922g;
 import p007b.p225i.p408d.p410q.ObjectConstructor;
 import p007b.p225i.p408d.p410q.p413y.ReflectionAccessor;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public final class ReflectiveTypeAdapterFactory implements TypeAdapterFactory2 {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final C4922g f21527j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final FieldNamingStrategy f21528k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final Excluder f21529l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public final JsonAdapterAnnotationTypeAdapterFactory f21530m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public final ReflectionAccessor f21531n = ReflectionAccessor.f13148a;
 
     public static final class Adapter<T> extends TypeAdapter<T> {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final ObjectConstructor<T> f21532a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final Map<String, AbstractC11109a> f21533b;
 
         public Adapter(ObjectConstructor<T> objectConstructor, Map<String, AbstractC11109a> map) {
@@ -99,16 +99,16 @@ public final class ReflectiveTypeAdapterFactory implements TypeAdapterFactory2 {
         }
     }
 
-    /* renamed from: com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$a */
+    /* JADX INFO: renamed from: com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$a */
     public static abstract class AbstractC11109a {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final String f21534a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final boolean f21535b;
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public final boolean f21536c;
 
         public AbstractC11109a(String str, boolean z2, boolean z3) {
@@ -117,13 +117,13 @@ public final class ReflectiveTypeAdapterFactory implements TypeAdapterFactory2 {
             this.f21536c = z3;
         }
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public abstract void mo6906a(JsonReader jsonReader, Object obj) throws IllegalAccessException, IOException;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public abstract void mo6907b(JsonWriter jsonWriter, Object obj) throws IllegalAccessException, IOException;
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public abstract boolean mo6908c(Object obj) throws IllegalAccessException, IOException;
     }
 
@@ -135,7 +135,7 @@ public final class ReflectiveTypeAdapterFactory implements TypeAdapterFactory2 {
     }
 
     /* JADX WARN: Removed duplicated region for block: B:48:? A[RETURN, SYNTHETIC] */
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
@@ -180,11 +180,11 @@ public final class ReflectiveTypeAdapterFactory implements TypeAdapterFactory2 {
     /*  JADX ERROR: Method generation error
         jadx.core.utils.exceptions.JadxRuntimeException: Code variable not set in r36v0 ??
         	at jadx.core.dex.instructions.args.SSAVar.getCodeVar(SSAVar.java:236)
-        	at jadx.core.codegen.MethodGen.addMethodArguments(MethodGen.java:222)
-        	at jadx.core.codegen.MethodGen.addDefinition(MethodGen.java:167)
-        	at jadx.core.codegen.ClassGen.addMethodCode(ClassGen.java:405)
-        	at jadx.core.codegen.ClassGen.addMethod(ClassGen.java:335)
-        	at jadx.core.codegen.ClassGen.lambda$addInnerClsAndMethods$3(ClassGen.java:301)
+        	at jadx.core.codegen.MethodGen.addMethodArguments(MethodGen.java:224)
+        	at jadx.core.codegen.MethodGen.addDefinition(MethodGen.java:169)
+        	at jadx.core.codegen.ClassGen.addMethodCode(ClassGen.java:407)
+        	at jadx.core.codegen.ClassGen.addMethod(ClassGen.java:337)
+        	at jadx.core.codegen.ClassGen.lambda$addInnerClsAndMethods$3(ClassGen.java:303)
         	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:184)
         	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
         	at java.base/java.util.stream.SortedOps$RefSortingSink.end(SortedOps.java:395)

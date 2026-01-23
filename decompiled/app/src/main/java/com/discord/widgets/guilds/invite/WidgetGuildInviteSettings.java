@@ -62,24 +62,24 @@ import p507d0.p592z.p594d.Lambda;
 import p507d0.p592z.p594d.Reflection2;
 import p658rx.Observable;
 
-/* compiled from: WidgetGuildInviteSettings.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetGuildInviteSettings.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetGuildInviteSettings extends AppFragment {
     public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetGuildInviteSettings.class, "binding", "getBinding()Lcom/discord/databinding/WidgetGuildInviteSettingsBinding;", 0)};
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private static final String EXTRA_CREATED_INVITE = "EXTRA_CREATED_INVITE";
 
-    /* renamed from: binding$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
     private ChannelsSpinnerAdapter channelsSpinnerAdapter;
     private final AppLogger2 loggingConfig;
 
-    /* renamed from: viewModel$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: viewModel$delegate, reason: from kotlin metadata */
     private final Lazy viewModel;
 
-    /* compiled from: WidgetGuildInviteSettings.kt */
+    /* JADX INFO: compiled from: WidgetGuildInviteSettings.kt */
     public static final class ChannelsSpinnerAdapter extends ArrayAdapter<Channel> {
         private Channel[] channels;
 
@@ -146,7 +146,7 @@ public final class WidgetGuildInviteSettings extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetGuildInviteSettings.kt */
+    /* JADX INFO: compiled from: WidgetGuildInviteSettings.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -177,8 +177,8 @@ public final class WidgetGuildInviteSettings extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetGuildInviteSettings.kt */
-    /* renamed from: com.discord.widgets.guilds.invite.WidgetGuildInviteSettings$configureUi$10 */
+    /* JADX INFO: renamed from: com.discord.widgets.guilds.invite.WidgetGuildInviteSettings$configureUi$10 */
+    /* JADX INFO: compiled from: WidgetGuildInviteSettings.kt */
     public static final class ViewOnClickListenerC865010 implements View.OnClickListener {
         public ViewOnClickListenerC865010() {
         }
@@ -189,8 +189,8 @@ public final class WidgetGuildInviteSettings extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetGuildInviteSettings.kt */
-    /* renamed from: com.discord.widgets.guilds.invite.WidgetGuildInviteSettings$configureUi$4 */
+    /* JADX INFO: renamed from: com.discord.widgets.guilds.invite.WidgetGuildInviteSettings$configureUi$4 */
+    /* JADX INFO: compiled from: WidgetGuildInviteSettings.kt */
     public static final class C86514 implements RadioGroup.OnCheckedChangeListener {
         public final /* synthetic */ ModelInvite.Settings $inviteSettings;
 
@@ -207,8 +207,8 @@ public final class WidgetGuildInviteSettings extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetGuildInviteSettings.kt */
-    /* renamed from: com.discord.widgets.guilds.invite.WidgetGuildInviteSettings$configureUi$8 */
+    /* JADX INFO: renamed from: com.discord.widgets.guilds.invite.WidgetGuildInviteSettings$configureUi$8 */
+    /* JADX INFO: compiled from: WidgetGuildInviteSettings.kt */
     public static final class C86528 implements RadioGroup.OnCheckedChangeListener {
         public final /* synthetic */ ModelInvite.Settings $inviteSettings;
 
@@ -225,8 +225,8 @@ public final class WidgetGuildInviteSettings extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetGuildInviteSettings.kt */
-    /* renamed from: com.discord.widgets.guilds.invite.WidgetGuildInviteSettings$configureUi$9 */
+    /* JADX INFO: renamed from: com.discord.widgets.guilds.invite.WidgetGuildInviteSettings$configureUi$9 */
+    /* JADX INFO: compiled from: WidgetGuildInviteSettings.kt */
     public static final class ViewOnClickListenerC86539 implements View.OnClickListener {
         public final /* synthetic */ ModelInvite.Settings $inviteSettings;
 
@@ -247,8 +247,8 @@ public final class WidgetGuildInviteSettings extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetGuildInviteSettings.kt */
-    /* renamed from: com.discord.widgets.guilds.invite.WidgetGuildInviteSettings$onViewBound$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.guilds.invite.WidgetGuildInviteSettings$onViewBound$1 */
+    /* JADX INFO: compiled from: WidgetGuildInviteSettings.kt */
     public static final class C86541 extends Lambda implements Function1<Integer, CharSequence> {
         public C86541() {
             super(1);
@@ -264,8 +264,8 @@ public final class WidgetGuildInviteSettings extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetGuildInviteSettings.kt */
-    /* renamed from: com.discord.widgets.guilds.invite.WidgetGuildInviteSettings$onViewBound$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.guilds.invite.WidgetGuildInviteSettings$onViewBound$2 */
+    /* JADX INFO: compiled from: WidgetGuildInviteSettings.kt */
     public static final /* synthetic */ class C86552 extends FunctionReferenceImpl implements Function1<Integer, String> {
         public C86552(WidgetGuildInviteSettings widgetGuildInviteSettings) {
             super(1, widgetGuildInviteSettings, WidgetGuildInviteSettings.class, "getMaxUsesString", "getMaxUsesString(I)Ljava/lang/String;", 0);
@@ -281,8 +281,8 @@ public final class WidgetGuildInviteSettings extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetGuildInviteSettings.kt */
-    /* renamed from: com.discord.widgets.guilds.invite.WidgetGuildInviteSettings$onViewBoundOrOnResume$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.guilds.invite.WidgetGuildInviteSettings$onViewBoundOrOnResume$1 */
+    /* JADX INFO: compiled from: WidgetGuildInviteSettings.kt */
     public static final class C86561 extends Lambda implements Function1<GuildInviteSettingsViewModel.ViewState, Unit> {
         public C86561() {
             super(1);
@@ -294,7 +294,7 @@ public final class WidgetGuildInviteSettings extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(GuildInviteSettingsViewModel.ViewState viewState) {
             WidgetGuildInviteSettings widgetGuildInviteSettings = WidgetGuildInviteSettings.this;
             Intrinsics3.checkNotNullExpressionValue(viewState, "viewState");
@@ -302,8 +302,8 @@ public final class WidgetGuildInviteSettings extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetGuildInviteSettings.kt */
-    /* renamed from: com.discord.widgets.guilds.invite.WidgetGuildInviteSettings$onViewBoundOrOnResume$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.guilds.invite.WidgetGuildInviteSettings$onViewBoundOrOnResume$2 */
+    /* JADX INFO: compiled from: WidgetGuildInviteSettings.kt */
     public static final class C86572 extends Lambda implements Function1<GuildInviteSettingsViewModel.Event, Unit> {
         public C86572() {
             super(1);
@@ -315,15 +315,15 @@ public final class WidgetGuildInviteSettings extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(GuildInviteSettingsViewModel.Event event) {
             Intrinsics3.checkNotNullParameter(event, "event");
             WidgetGuildInviteSettings.this.handleEvent(event);
         }
     }
 
-    /* compiled from: WidgetGuildInviteSettings.kt */
-    /* renamed from: com.discord.widgets.guilds.invite.WidgetGuildInviteSettings$setOnItemSelected$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.guilds.invite.WidgetGuildInviteSettings$setOnItemSelected$1 */
+    /* JADX INFO: compiled from: WidgetGuildInviteSettings.kt */
     public static final class C86581 implements AdapterView.OnItemSelectedListener {
         public C86581() {
         }

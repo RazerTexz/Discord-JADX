@@ -12,14 +12,14 @@ import androidx.work.Data;
 import java.util.ArrayList;
 import java.util.List;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public final class WorkProgressDao_Impl implements WorkProgressDao {
     private final RoomDatabase __db;
     private final EntityInsertionAdapter<WorkProgress> __insertionAdapterOfWorkProgress;
     private final SharedSQLiteStatement __preparedStmtOfDelete;
     private final SharedSQLiteStatement __preparedStmtOfDeleteAll;
 
-    /* renamed from: androidx.work.impl.model.WorkProgressDao_Impl$1 */
+    /* JADX INFO: renamed from: androidx.work.impl.model.WorkProgressDao_Impl$1 */
     public class C07531 extends EntityInsertionAdapter<WorkProgress> {
         public C07531(RoomDatabase roomDatabase) {
             super(roomDatabase);
@@ -35,7 +35,7 @@ public final class WorkProgressDao_Impl implements WorkProgressDao {
             return "INSERT OR REPLACE INTO `WorkProgress` (`work_spec_id`,`progress`) VALUES (?,?)";
         }
 
-        /* renamed from: bind, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: bind, reason: avoid collision after fix types in other method */
         public void bind2(SupportSQLiteStatement supportSQLiteStatement, WorkProgress workProgress) throws Throwable {
             String str = workProgress.mWorkSpecId;
             if (str == null) {
@@ -52,7 +52,7 @@ public final class WorkProgressDao_Impl implements WorkProgressDao {
         }
     }
 
-    /* renamed from: androidx.work.impl.model.WorkProgressDao_Impl$2 */
+    /* JADX INFO: renamed from: androidx.work.impl.model.WorkProgressDao_Impl$2 */
     public class C07542 extends SharedSQLiteStatement {
         public C07542(RoomDatabase roomDatabase) {
             super(roomDatabase);
@@ -64,7 +64,7 @@ public final class WorkProgressDao_Impl implements WorkProgressDao {
         }
     }
 
-    /* renamed from: androidx.work.impl.model.WorkProgressDao_Impl$3 */
+    /* JADX INFO: renamed from: androidx.work.impl.model.WorkProgressDao_Impl$3 */
     public class C07553 extends SharedSQLiteStatement {
         public C07553(RoomDatabase roomDatabase) {
             super(roomDatabase);

@@ -9,12 +9,12 @@ import p007b.p225i.p226a.p288f.p340n.InterfaceC4362f;
 import p007b.p452o.p453a.CameraOptions;
 import p007b.p452o.p453a.CameraView2;
 
-/* compiled from: CameraEngine.java */
-/* renamed from: b.o.a.n.k, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.o.a.n.k, reason: use source file name */
+/* JADX INFO: compiled from: CameraEngine.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class CameraEngine3 implements InterfaceC4362f<CameraOptions, Void> {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final /* synthetic */ CameraEngine f13932a;
 
     public CameraEngine3(CameraEngine cameraEngine) {
@@ -23,7 +23,7 @@ public class CameraEngine3 implements InterfaceC4362f<CameraOptions, Void> {
 
     @Override // p007b.p225i.p226a.p288f.p340n.InterfaceC4362f
     @NonNull
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public Task<Void> mo4013a(@Nullable CameraOptions cameraOptions) throws Exception {
         CameraOptions cameraOptions2 = cameraOptions;
         if (cameraOptions2 == null) {

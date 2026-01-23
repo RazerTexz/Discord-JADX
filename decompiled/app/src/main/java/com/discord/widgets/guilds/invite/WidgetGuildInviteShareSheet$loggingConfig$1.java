@@ -8,8 +8,8 @@ import com.discord.api.science.AnalyticsSchema;
 import kotlin.jvm.functions.Function0;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetGuildInviteShareSheet.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetGuildInviteShareSheet.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetGuildInviteShareSheet$loggingConfig$1 extends Lambda implements Function0<AnalyticsSchema> {
     public final /* synthetic */ WidgetGuildInviteShareSheet this$0;
 

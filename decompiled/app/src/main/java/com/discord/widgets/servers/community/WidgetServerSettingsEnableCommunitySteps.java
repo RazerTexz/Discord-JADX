@@ -35,25 +35,25 @@ import p507d0.p592z.p594d.Reflection2;
 import p658rx.Observable;
 import p658rx.functions.Func0;
 
-/* compiled from: WidgetServerSettingsEnableCommunitySteps.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetServerSettingsEnableCommunitySteps.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetServerSettingsEnableCommunitySteps extends AppFragment {
     public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetServerSettingsEnableCommunitySteps.class, "binding", "getBinding()Lcom/discord/databinding/WidgetEnableCommunityStepsBinding;", 0)};
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private static final String INTENT_EXTRA_GUILD_ID = "INTENT_EXTRA_GUILD_ID";
 
-    /* renamed from: binding$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
 
-    /* renamed from: guildId$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: guildId$delegate, reason: from kotlin metadata */
     private final Lazy guildId;
 
-    /* renamed from: viewModel$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: viewModel$delegate, reason: from kotlin metadata */
     private final Lazy viewModel;
 
-    /* compiled from: WidgetServerSettingsEnableCommunitySteps.kt */
+    /* JADX INFO: compiled from: WidgetServerSettingsEnableCommunitySteps.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -70,8 +70,8 @@ public final class WidgetServerSettingsEnableCommunitySteps extends AppFragment 
         }
     }
 
-    /* compiled from: WidgetServerSettingsEnableCommunitySteps.kt */
-    /* renamed from: com.discord.widgets.servers.community.WidgetServerSettingsEnableCommunitySteps$onViewBound$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.community.WidgetServerSettingsEnableCommunitySteps$onViewBound$1 */
+    /* JADX INFO: compiled from: WidgetServerSettingsEnableCommunitySteps.kt */
     public static final class C93971 extends Lambda implements Function0<Unit> {
         public C93971() {
             super(0);
@@ -83,7 +83,7 @@ public final class WidgetServerSettingsEnableCommunitySteps extends AppFragment 
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             FragmentActivity activity = WidgetServerSettingsEnableCommunitySteps.this.getActivity();
             if (activity != null) {
@@ -92,8 +92,8 @@ public final class WidgetServerSettingsEnableCommunitySteps extends AppFragment 
         }
     }
 
-    /* compiled from: WidgetServerSettingsEnableCommunitySteps.kt */
-    /* renamed from: com.discord.widgets.servers.community.WidgetServerSettingsEnableCommunitySteps$onViewBound$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.community.WidgetServerSettingsEnableCommunitySteps$onViewBound$2 */
+    /* JADX INFO: compiled from: WidgetServerSettingsEnableCommunitySteps.kt */
     public static final class C93982 extends Lambda implements Function1<Integer, Unit> {
         public C93982() {
             super(1);
@@ -110,8 +110,8 @@ public final class WidgetServerSettingsEnableCommunitySteps extends AppFragment 
         }
     }
 
-    /* compiled from: WidgetServerSettingsEnableCommunitySteps.kt */
-    /* renamed from: com.discord.widgets.servers.community.WidgetServerSettingsEnableCommunitySteps$onViewBound$3 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.community.WidgetServerSettingsEnableCommunitySteps$onViewBound$3 */
+    /* JADX INFO: compiled from: WidgetServerSettingsEnableCommunitySteps.kt */
     public static final class C93993<R> implements Func0<Boolean> {
         public C93993() {
         }
@@ -128,8 +128,8 @@ public final class WidgetServerSettingsEnableCommunitySteps extends AppFragment 
         }
     }
 
-    /* compiled from: WidgetServerSettingsEnableCommunitySteps.kt */
-    /* renamed from: com.discord.widgets.servers.community.WidgetServerSettingsEnableCommunitySteps$onViewBoundOrOnResume$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.community.WidgetServerSettingsEnableCommunitySteps$onViewBoundOrOnResume$1 */
+    /* JADX INFO: compiled from: WidgetServerSettingsEnableCommunitySteps.kt */
     public static final /* synthetic */ class C94021 extends FunctionReferenceImpl implements Function1<WidgetServerSettingsEnableCommunityViewModel.ViewState, Unit> {
         public C94021(WidgetServerSettingsEnableCommunitySteps widgetServerSettingsEnableCommunitySteps) {
             super(1, widgetServerSettingsEnableCommunitySteps, WidgetServerSettingsEnableCommunitySteps.class, "configureUI", "configureUI(Lcom/discord/widgets/servers/community/WidgetServerSettingsEnableCommunityViewModel$ViewState;)V", 0);
@@ -141,15 +141,15 @@ public final class WidgetServerSettingsEnableCommunitySteps extends AppFragment 
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(WidgetServerSettingsEnableCommunityViewModel.ViewState viewState) {
             Intrinsics3.checkNotNullParameter(viewState, "p1");
             WidgetServerSettingsEnableCommunitySteps.access$configureUI((WidgetServerSettingsEnableCommunitySteps) this.receiver, viewState);
         }
     }
 
-    /* compiled from: WidgetServerSettingsEnableCommunitySteps.kt */
-    /* renamed from: com.discord.widgets.servers.community.WidgetServerSettingsEnableCommunitySteps$onViewBoundOrOnResume$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.community.WidgetServerSettingsEnableCommunitySteps$onViewBoundOrOnResume$2 */
+    /* JADX INFO: compiled from: WidgetServerSettingsEnableCommunitySteps.kt */
     public static final class C94032 extends Lambda implements Function1<WidgetServerSettingsEnableCommunityViewModel.ViewState.Loaded, Unit> {
         public C94032() {
             super(1);
@@ -161,7 +161,7 @@ public final class WidgetServerSettingsEnableCommunitySteps extends AppFragment 
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(WidgetServerSettingsEnableCommunityViewModel.ViewState.Loaded loaded) {
             Intrinsics3.checkNotNullParameter(loaded, "it");
             int currentPage = loaded.getCurrentPage();
@@ -176,8 +176,8 @@ public final class WidgetServerSettingsEnableCommunitySteps extends AppFragment 
         }
     }
 
-    /* compiled from: WidgetServerSettingsEnableCommunitySteps.kt */
-    /* renamed from: com.discord.widgets.servers.community.WidgetServerSettingsEnableCommunitySteps$onViewBoundOrOnResume$3 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.community.WidgetServerSettingsEnableCommunitySteps$onViewBoundOrOnResume$3 */
+    /* JADX INFO: compiled from: WidgetServerSettingsEnableCommunitySteps.kt */
     public static final class C94043 extends Lambda implements Function1<WidgetServerSettingsEnableCommunityViewModel.Event, Unit> {
         public C94043() {
             super(1);
@@ -189,7 +189,7 @@ public final class WidgetServerSettingsEnableCommunitySteps extends AppFragment 
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(WidgetServerSettingsEnableCommunityViewModel.Event event) {
             Intrinsics3.checkNotNullParameter(event, "event");
             if (!Intrinsics3.areEqual(event, WidgetServerSettingsEnableCommunityViewModel.Event.SaveSuccess.INSTANCE)) {

@@ -9,21 +9,21 @@ import android.graphics.RectF;
 import android.graphics.drawable.Drawable;
 import p007b.p085c.p086a.p087a0.AnimatableValueParser;
 
-/* compiled from: ForwardingDrawable.java */
-/* renamed from: b.f.g.e.g, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.f.g.e.g, reason: use source file name */
+/* JADX INFO: compiled from: ForwardingDrawable.java */
+/* JADX INFO: loaded from: classes.dex */
 public class ForwardingDrawable extends Drawable implements Drawable.Callback, TransformCallback, TransformAwareDrawable, DrawableParent {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static final Matrix f3359j = new Matrix();
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public Drawable f3360k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final DrawableProperties f3361l = new DrawableProperties();
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public TransformCallback f3362m;
 
     public ForwardingDrawable(Drawable drawable) {
@@ -32,13 +32,13 @@ public class ForwardingDrawable extends Drawable implements Drawable.Callback, T
     }
 
     @Override // p007b.p109f.p132g.p142e.TransformAwareDrawable
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public void mo1094b(TransformCallback transformCallback) {
         this.f3362m = transformCallback;
     }
 
     @Override // p007b.p109f.p132g.p142e.TransformCallback
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public void mo1096d(Matrix matrix) {
         m1103n(matrix);
     }
@@ -52,7 +52,7 @@ public class ForwardingDrawable extends Drawable implements Drawable.Callback, T
     }
 
     @Override // p007b.p109f.p132g.p142e.DrawableParent
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public Drawable mo1090g(Drawable drawable) {
         return mo1104o(drawable);
     }
@@ -96,7 +96,7 @@ public class ForwardingDrawable extends Drawable implements Drawable.Callback, T
     }
 
     @Override // p007b.p109f.p132g.p142e.TransformCallback
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public void mo1097h(RectF rectF) {
         TransformCallback transformCallback = this.f3362m;
         if (transformCallback != null) {
@@ -121,7 +121,7 @@ public class ForwardingDrawable extends Drawable implements Drawable.Callback, T
     }
 
     @Override // p007b.p109f.p132g.p142e.DrawableParent
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public Drawable mo1091l() {
         return this.f3360k;
     }
@@ -135,7 +135,7 @@ public class ForwardingDrawable extends Drawable implements Drawable.Callback, T
         return this;
     }
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public void m1103n(Matrix matrix) {
         TransformCallback transformCallback = this.f3362m;
         if (transformCallback != null) {
@@ -145,7 +145,7 @@ public class ForwardingDrawable extends Drawable implements Drawable.Callback, T
         }
     }
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public Drawable mo1104o(Drawable drawable) {
         Drawable drawable2 = this.f3360k;
         AnimatableValueParser.m488X1(drawable2, null, null);

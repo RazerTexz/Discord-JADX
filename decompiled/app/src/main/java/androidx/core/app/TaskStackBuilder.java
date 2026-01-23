@@ -14,7 +14,7 @@ import androidx.core.content.ContextCompat;
 import java.util.ArrayList;
 import java.util.Iterator;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public final class TaskStackBuilder implements Iterable<Intent> {
     private static final String TAG = "TaskStackBuilder";
     private final ArrayList<Intent> mIntents = new ArrayList<>();

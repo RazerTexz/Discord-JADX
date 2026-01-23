@@ -4,19 +4,19 @@ import java.util.concurrent.atomic.AtomicReference;
 import p658rx.Subscription;
 import p658rx.functions.Action0;
 
-/* compiled from: BooleanSubscription.java */
-/* renamed from: j0.r.a, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: j0.r.a, reason: use source file name */
+/* JADX INFO: compiled from: BooleanSubscription.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class BooleanSubscription implements Subscription {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static final Action0 f27419j = new a();
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final AtomicReference<Action0> f27420k;
 
-    /* compiled from: BooleanSubscription.java */
-    /* renamed from: j0.r.a$a */
+    /* JADX INFO: renamed from: j0.r.a$a */
+    /* JADX INFO: compiled from: BooleanSubscription.java */
     public static class a implements Action0 {
         @Override // p658rx.functions.Action0
         public void call() {

@@ -28,16 +28,16 @@ import p007b.p100d.p104b.p105a.outline;
 import p507d0.p579g0.StringsJVM;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ViewHolderMusicRichPresence.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: ViewHolderMusicRichPresence.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class ViewHolderMusicRichPresence extends ViewHolderUserRichPresence {
     private final Clock clock;
     private final TextView richPresenceMusicDuration;
     private final TextView richPresenceMusicElapsed;
     private final SeekBar richPresenceSeekbar;
 
-    /* compiled from: ViewHolderMusicRichPresence.kt */
-    /* renamed from: com.discord.widgets.user.presence.ViewHolderMusicRichPresence$configureUi$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.user.presence.ViewHolderMusicRichPresence$configureUi$1 */
+    /* JADX INFO: compiled from: ViewHolderMusicRichPresence.kt */
     public static final class ViewOnClickListenerC102741 implements View.OnClickListener {
         public final /* synthetic */ Activity $activity;
 
@@ -51,8 +51,8 @@ public final class ViewHolderMusicRichPresence extends ViewHolderUserRichPresenc
         }
     }
 
-    /* compiled from: ViewHolderMusicRichPresence.kt */
-    /* renamed from: com.discord.widgets.user.presence.ViewHolderMusicRichPresence$configureUi$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.user.presence.ViewHolderMusicRichPresence$configureUi$2 */
+    /* JADX INFO: compiled from: ViewHolderMusicRichPresence.kt */
     public static final class ViewOnClickListenerC102752 implements View.OnClickListener {
         public final /* synthetic */ Activity $activity;
 
@@ -66,8 +66,8 @@ public final class ViewHolderMusicRichPresence extends ViewHolderUserRichPresenc
         }
     }
 
-    /* compiled from: ViewHolderMusicRichPresence.kt */
-    /* renamed from: com.discord.widgets.user.presence.ViewHolderMusicRichPresence$configureUi$3 */
+    /* JADX INFO: renamed from: com.discord.widgets.user.presence.ViewHolderMusicRichPresence$configureUi$3 */
+    /* JADX INFO: compiled from: ViewHolderMusicRichPresence.kt */
     public static final class ViewOnClickListenerC102763 implements View.OnClickListener {
         public final /* synthetic */ Activity $activity;
         public final /* synthetic */ boolean $isMe;
@@ -89,8 +89,8 @@ public final class ViewHolderMusicRichPresence extends ViewHolderUserRichPresenc
         }
     }
 
-    /* compiled from: ViewHolderMusicRichPresence.kt */
-    /* renamed from: com.discord.widgets.user.presence.ViewHolderMusicRichPresence$configureUi$4 */
+    /* JADX INFO: renamed from: com.discord.widgets.user.presence.ViewHolderMusicRichPresence$configureUi$4 */
+    /* JADX INFO: compiled from: ViewHolderMusicRichPresence.kt */
     public static final class ViewOnClickListenerC102774 implements View.OnClickListener {
         public static final ViewOnClickListenerC102774 INSTANCE = new ViewOnClickListenerC102774();
 
@@ -216,7 +216,7 @@ public final class ViewHolderMusicRichPresence extends ViewHolderUserRichPresenc
             long jCurrentTimeMillis = this.clock.currentTimeMillis();
             long jM7561b = timestamps.m7561b() - timestamps.m7562c();
             long jM7562c = jCurrentTimeMillis >= timestamps.m7561b() ? jM7561b : jCurrentTimeMillis - timestamps.m7562c();
-            this.richPresenceSeekbar.setProgress((int) ((jM7562c / jM7561b) * 100.0f));
+            this.richPresenceSeekbar.setProgress((int) ((jM7562c / jM7561b) * ((double) 100.0f)));
             TextView textView = this.richPresenceMusicElapsed;
             TimeUtils timeUtils = TimeUtils.INSTANCE;
             textView.setText(TimeUtils.toFriendlyStringSimple$default(timeUtils, jM7562c, null, null, 4, null));

@@ -7,13 +7,13 @@ import p001a0.p002a.p003a.C0002b;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: AutocompleteViewModel.kt */
-/* renamed from: com.discord.widgets.chat.input.autocomplete.Event, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.chat.input.autocomplete.Event, reason: use source file name */
+/* JADX INFO: compiled from: AutocompleteViewModel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public abstract class AutocompleteViewModel5 {
 
-    /* compiled from: AutocompleteViewModel.kt */
-    /* renamed from: com.discord.widgets.chat.input.autocomplete.Event$PickAttachment */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.input.autocomplete.Event$PickAttachment */
+    /* JADX INFO: compiled from: AutocompleteViewModel.kt */
     public static final /* data */ class PickAttachment extends AutocompleteViewModel5 {
         private final ApplicationCommandOption commandOption;
 
@@ -31,7 +31,7 @@ public abstract class AutocompleteViewModel5 {
             return pickAttachment.copy(applicationCommandOption);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final ApplicationCommandOption getCommandOption() {
             return this.commandOption;
         }
@@ -68,8 +68,8 @@ public abstract class AutocompleteViewModel5 {
         }
     }
 
-    /* compiled from: AutocompleteViewModel.kt */
-    /* renamed from: com.discord.widgets.chat.input.autocomplete.Event$PreviewAttachment */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.input.autocomplete.Event$PreviewAttachment */
+    /* JADX INFO: compiled from: AutocompleteViewModel.kt */
     public static final /* data */ class PreviewAttachment extends AutocompleteViewModel5 {
         private final Attachment<?> attachment;
 
@@ -124,8 +124,8 @@ public abstract class AutocompleteViewModel5 {
         }
     }
 
-    /* compiled from: AutocompleteViewModel.kt */
-    /* renamed from: com.discord.widgets.chat.input.autocomplete.Event$RequestAutocompleteData */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.input.autocomplete.Event$RequestAutocompleteData */
+    /* JADX INFO: compiled from: AutocompleteViewModel.kt */
     public static final /* data */ class RequestAutocompleteData extends AutocompleteViewModel5 {
         private final ApplicationCommandOption option;
 
@@ -143,7 +143,7 @@ public abstract class AutocompleteViewModel5 {
             return requestAutocompleteData.copy(applicationCommandOption);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final ApplicationCommandOption getOption() {
             return this.option;
         }
@@ -180,8 +180,8 @@ public abstract class AutocompleteViewModel5 {
         }
     }
 
-    /* compiled from: AutocompleteViewModel.kt */
-    /* renamed from: com.discord.widgets.chat.input.autocomplete.Event$ScrollAutocompletablesToApplication */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.input.autocomplete.Event$ScrollAutocompletablesToApplication */
+    /* JADX INFO: compiled from: AutocompleteViewModel.kt */
     public static final /* data */ class ScrollAutocompletablesToApplication extends AutocompleteViewModel5 {
         private final long applicationId;
         private final int targetPosition;
@@ -202,12 +202,12 @@ public abstract class AutocompleteViewModel5 {
             return scrollAutocompletablesToApplication.copy(j, i);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final long getApplicationId() {
             return this.applicationId;
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final int getTargetPosition() {
             return this.targetPosition;
         }

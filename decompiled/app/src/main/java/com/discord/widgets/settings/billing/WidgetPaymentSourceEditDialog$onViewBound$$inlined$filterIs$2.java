@@ -6,8 +6,8 @@ import com.discord.widgets.settings.billing.SettingsBillingViewModel;
 import java.util.Objects;
 import p637j0.p641k.Func1;
 
-/* compiled from: ObservableExtensions.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: ObservableExtensions.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetPaymentSourceEditDialog$onViewBound$$inlined$filterIs$2<T, R> implements Func1<Object, T> {
     public static final WidgetPaymentSourceEditDialog$onViewBound$$inlined$filterIs$2 INSTANCE = new WidgetPaymentSourceEditDialog$onViewBound$$inlined$filterIs$2();
 

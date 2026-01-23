@@ -13,12 +13,12 @@ import java.security.Signature;
 import javax.crypto.Cipher;
 import javax.crypto.Mac;
 
+/* JADX INFO: loaded from: classes.dex */
 @Deprecated
-/* loaded from: classes.dex */
 public class FingerprintManagerCompat {
     private final Context mContext;
 
-    /* renamed from: androidx.core.hardware.fingerprint.FingerprintManagerCompat$1 */
+    /* JADX INFO: renamed from: androidx.core.hardware.fingerprint.FingerprintManagerCompat$1 */
     public class C02291 extends FingerprintManager.AuthenticationCallback {
         public final /* synthetic */ AuthenticationCallback val$callback;
 

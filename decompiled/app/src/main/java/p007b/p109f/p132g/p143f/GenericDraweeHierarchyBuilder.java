@@ -11,63 +11,63 @@ import java.util.Objects;
 import p007b.p109f.p132g.p142e.C1785s;
 import p007b.p109f.p132g.p142e.C1786t;
 
-/* compiled from: GenericDraweeHierarchyBuilder.java */
-/* renamed from: b.f.g.f.a, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.f.g.f.a, reason: use source file name */
+/* JADX INFO: compiled from: GenericDraweeHierarchyBuilder.java */
+/* JADX INFO: loaded from: classes.dex */
 public class GenericDraweeHierarchyBuilder {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final ScalingUtils$ScaleType f3451a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static final ScalingUtils$ScaleType f3452b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public Resources f3453c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public int f3454d = 300;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public float f3455e = 0.0f;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public Drawable f3456f = null;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public ScalingUtils$ScaleType f3457g;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public Drawable f3458h;
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public ScalingUtils$ScaleType f3459i;
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public Drawable f3460j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public ScalingUtils$ScaleType f3461k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public Drawable f3462l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public ScalingUtils$ScaleType f3463m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public ScalingUtils$ScaleType f3464n;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public Drawable f3465o;
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public List<Drawable> f3466p;
 
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     public Drawable f3467q;
 
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     public RoundingParams f3468r;
 
     static {
@@ -93,7 +93,7 @@ public class GenericDraweeHierarchyBuilder {
         this.f3468r = null;
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public GenericDraweeHierarchy m1122a() {
         List<Drawable> list = this.f3466p;
         if (list != null) {
@@ -105,7 +105,7 @@ public class GenericDraweeHierarchyBuilder {
         return new GenericDraweeHierarchy(this);
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public GenericDraweeHierarchyBuilder m1123b(Drawable drawable) {
         if (drawable == null) {
             this.f3466p = null;

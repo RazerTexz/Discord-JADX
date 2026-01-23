@@ -8,9 +8,9 @@ import kotlin.jvm.internal.DefaultConstructorMarker;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: WidgetGuildTemplates.kt */
-/* renamed from: com.discord.widgets.nux.GuildCreateArgs, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.nux.GuildCreateArgs, reason: use source file name */
+/* JADX INFO: compiled from: WidgetGuildTemplates.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final /* data */ class WidgetGuildTemplates2 implements Parcelable {
     public static final Parcelable.Creator<WidgetGuildTemplates2> CREATOR = new Creator();
     private final boolean closeWithResult;
@@ -19,7 +19,7 @@ public final /* data */ class WidgetGuildTemplates2 implements Parcelable {
     private final String location;
     private final CreateGuildTrigger trigger;
 
-    /* renamed from: com.discord.widgets.nux.GuildCreateArgs$Creator */
+    /* JADX INFO: renamed from: com.discord.widgets.nux.GuildCreateArgs$Creator */
     public static class Creator implements Parcelable.Creator<WidgetGuildTemplates2> {
         /* JADX WARN: Can't rename method to resolve collision */
         @Override // android.os.Parcelable.Creator
@@ -78,27 +78,27 @@ public final /* data */ class WidgetGuildTemplates2 implements Parcelable {
         return widgetGuildTemplates2.copy(z2, str2, createGuildTrigger2, widgetGuildTemplates32, z3);
     }
 
-    /* renamed from: component1, reason: from getter */
+    /* JADX INFO: renamed from: component1, reason: from getter */
     public final boolean getIsNux() {
         return this.isNux;
     }
 
-    /* renamed from: component2, reason: from getter */
+    /* JADX INFO: renamed from: component2, reason: from getter */
     public final String getLocation() {
         return this.location;
     }
 
-    /* renamed from: component3, reason: from getter */
+    /* JADX INFO: renamed from: component3, reason: from getter */
     public final CreateGuildTrigger getTrigger() {
         return this.trigger;
     }
 
-    /* renamed from: component4, reason: from getter */
+    /* JADX INFO: renamed from: component4, reason: from getter */
     public final WidgetGuildTemplates3 getGuildTemplate() {
         return this.guildTemplate;
     }
 
-    /* renamed from: component5, reason: from getter */
+    /* JADX INFO: renamed from: component5, reason: from getter */
     public final boolean getCloseWithResult() {
         return this.closeWithResult;
     }
@@ -146,6 +146,9 @@ public final /* data */ class WidgetGuildTemplates2 implements Parcelable {
     /* JADX WARN: Type inference failed for: r0v1, types: [int] */
     /* JADX WARN: Type inference failed for: r0v10 */
     /* JADX WARN: Type inference failed for: r0v11 */
+    /* JADX WARN: Type inference failed for: r1v0 */
+    /* JADX WARN: Type inference failed for: r1v1, types: [int] */
+    /* JADX WARN: Type inference failed for: r1v2 */
     public int hashCode() {
         boolean z2 = this.isNux;
         ?? r0 = z2;
@@ -160,7 +163,7 @@ public final /* data */ class WidgetGuildTemplates2 implements Parcelable {
         WidgetGuildTemplates3 widgetGuildTemplates3 = this.guildTemplate;
         int iHashCode3 = (iHashCode2 + (widgetGuildTemplates3 != null ? widgetGuildTemplates3.hashCode() : 0)) * 31;
         boolean z3 = this.closeWithResult;
-        return iHashCode3 + (z3 ? 1 : z3 ? 1 : 0);
+        return iHashCode3 + (z3 ? 1 : z3);
     }
 
     public final boolean isNux() {

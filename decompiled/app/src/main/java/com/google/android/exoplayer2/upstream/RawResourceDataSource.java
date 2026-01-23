@@ -19,31 +19,31 @@ import p007b.p225i.p226a.p242c.p257e3.BaseDataSource;
 import p007b.p225i.p226a.p242c.p257e3.DataSpec;
 import p007b.p225i.p226a.p242c.p259f3.Util2;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public final class RawResourceDataSource extends BaseDataSource {
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final Resources f20247e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final String f20248f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     @Nullable
     public Uri f20249g;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     @Nullable
     public AssetFileDescriptor f20250h;
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     @Nullable
     public InputStream f20251i;
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public long f20252j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public boolean f20253k;
 
     public static class RawResourceDataSourceException extends DataSourceException {
@@ -67,7 +67,7 @@ public final class RawResourceDataSource extends BaseDataSource {
 
     /* JADX WARN: Removed duplicated region for block: B:86:0x00a5 A[EXC_TOP_SPLITTER, SYNTHETIC] */
     @Override // p007b.p225i.p226a.p242c.p257e3.DataSource3
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
@@ -226,7 +226,7 @@ public final class RawResourceDataSource extends BaseDataSource {
 
     @Override // p007b.p225i.p226a.p242c.p257e3.DataSource3
     @Nullable
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public Uri mo2589n() {
         return this.f20249g;
     }
@@ -258,7 +258,7 @@ public final class RawResourceDataSource extends BaseDataSource {
         }
         long j2 = this.f20252j;
         if (j2 != -1) {
-            this.f20252j = j2 - i4;
+            this.f20252j = j2 - ((long) i4);
         }
         m2848p(i4);
         return i4;

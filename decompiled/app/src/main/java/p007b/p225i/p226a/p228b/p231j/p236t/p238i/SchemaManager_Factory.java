@@ -3,18 +3,18 @@ package p007b.p225i.p226a.p228b.p231j.p236t.p238i;
 import android.content.Context;
 import p496c0.p497a.Provider3;
 
-/* compiled from: SchemaManager_Factory.java */
-/* renamed from: b.i.a.b.j.t.i.a0, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.b.j.t.i.a0, reason: use source file name */
+/* JADX INFO: compiled from: SchemaManager_Factory.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class SchemaManager_Factory implements Provider3 {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final Provider3<Context> f5414a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final Provider3<String> f5415b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final Provider3<Integer> f5416c;
 
     public SchemaManager_Factory(Provider3<Context> provider3, Provider3<String> provider32, Provider3<Integer> provider33) {

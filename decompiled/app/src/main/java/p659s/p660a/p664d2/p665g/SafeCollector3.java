@@ -18,9 +18,9 @@ import p507d0.p584w.p586i.p587a.DebugProbes;
 import p507d0.p592z.p594d.Lambda;
 import p659s.p660a.p664d2.FlowCollector;
 
-/* compiled from: SafeCollector.kt */
-/* renamed from: s.a.d2.g.e, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: s.a.d2.g.e, reason: use source file name */
+/* JADX INFO: compiled from: SafeCollector.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class SafeCollector3<T> extends ContinuationImpl3 implements FlowCollector<T>, CoroutineStackFrame {
     public final CoroutineContext collectContext;
     public final int collectContextSize;
@@ -28,11 +28,11 @@ public final class SafeCollector3<T> extends ContinuationImpl3 implements FlowCo
     private Continuation<? super Unit> completion;
     private CoroutineContext lastEmissionContext;
 
-    /* compiled from: SafeCollector.kt */
-    /* renamed from: s.a.d2.g.e$a */
+    /* JADX INFO: renamed from: s.a.d2.g.e$a */
+    /* JADX INFO: compiled from: SafeCollector.kt */
     public static final class a extends Lambda implements Function2<Integer, CoroutineContext.Element, Integer> {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public static final a f27791j = new a();
 
         public a() {
@@ -53,7 +53,7 @@ public final class SafeCollector3<T> extends ContinuationImpl3 implements FlowCo
         this.collectContextSize = ((Number) coroutineContext.fold(0, a.f27791j)).intValue();
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final Object m11249b(Continuation<? super Unit> continuation, T t) {
         CoroutineContext context = continuation.getContext();
         Job job = (Job) context.get(Job.INSTANCE);

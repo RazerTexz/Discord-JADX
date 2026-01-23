@@ -17,12 +17,12 @@ import p507d0.LazyJVM;
 import p507d0.p579g0.StringsJVM;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: GuildRoleSubscriptionMemberPreview.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: GuildRoleSubscriptionMemberPreview.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class GuildRoleSubscriptionMemberPreview extends FrameLayout {
     private final WidgetChatListAdapterItemTextBinding binding;
 
-    /* renamed from: defaultColor$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: defaultColor$delegate, reason: from kotlin metadata */
     private final Lazy defaultColor;
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */

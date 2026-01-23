@@ -1,5 +1,5 @@
 package bolts;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class UnobservedTaskException extends RuntimeException {
 }

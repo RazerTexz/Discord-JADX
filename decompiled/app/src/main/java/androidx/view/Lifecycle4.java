@@ -9,9 +9,9 @@ import p659s.p660a.C13116h1;
 import p659s.p660a.Dispatchers;
 import p659s.p660a.p661a.MainDispatchers;
 
-/* compiled from: Lifecycle.kt */
-/* renamed from: androidx.lifecycle.LifecycleKt, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: androidx.lifecycle.LifecycleKt, reason: use source file name */
+/* JADX INFO: compiled from: Lifecycle.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class Lifecycle4 {
     public static final Lifecycle2 getCoroutineScope(Lifecycle lifecycle) {
         Lifecycle3 lifecycle3;

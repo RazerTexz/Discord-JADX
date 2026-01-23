@@ -6,8 +6,8 @@ import kotlin.jvm.functions.Function1;
 import kotlin.jvm.internal.DefaultConstructorMarker;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ApplicationCommandSpan.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: ApplicationCommandSpan.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class ApplicationCommandSpan extends SimpleRoundedBackgroundSpan {
     private final ApplicationCommandOption commandOption;
     private final String commandValue;

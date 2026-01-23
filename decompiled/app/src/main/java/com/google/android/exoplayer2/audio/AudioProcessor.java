@@ -5,10 +5,10 @@ import java.nio.ByteOrder;
 import p007b.p100d.p104b.p105a.outline;
 import p007b.p225i.p226a.p242c.p259f3.Util2;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public interface AudioProcessor {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final ByteBuffer f19694a = ByteBuffer.allocateDirect(0).order(ByteOrder.nativeOrder());
 
     public static final class UnhandledAudioFormatException extends Exception {
@@ -19,22 +19,22 @@ public interface AudioProcessor {
         }
     }
 
-    /* renamed from: com.google.android.exoplayer2.audio.AudioProcessor$a */
+    /* JADX INFO: renamed from: com.google.android.exoplayer2.audio.AudioProcessor$a */
     public static final class C10685a {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public static final C10685a f19695a = new C10685a(-1, -1, -1);
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final int f19696b;
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public final int f19697c;
 
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         public final int f19698d;
 
-        /* renamed from: e */
+        /* JADX INFO: renamed from: e */
         public final int f19699e;
 
         public C10685a(int i, int i2, int i3) {
@@ -60,19 +60,19 @@ public interface AudioProcessor {
         }
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     boolean mo3472a();
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     boolean mo3485b();
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     void mo3470c(ByteBuffer byteBuffer);
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     C10685a mo3486d(C10685a c10685a) throws UnhandledAudioFormatException;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     void mo3487e();
 
     void flush();

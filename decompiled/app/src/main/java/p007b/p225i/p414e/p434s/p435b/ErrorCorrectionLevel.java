@@ -1,8 +1,8 @@
 package p007b.p225i.p414e.p434s.p435b;
 
-/* compiled from: ErrorCorrectionLevel.java */
-/* renamed from: b.i.e.s.b.f, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.e.s.b.f, reason: use source file name */
+/* JADX INFO: compiled from: ErrorCorrectionLevel.java */
+/* JADX INFO: loaded from: classes3.dex */
 public enum ErrorCorrectionLevel {
     L(1),
     M(0),
@@ -10,7 +10,7 @@ public enum ErrorCorrectionLevel {
     H(2);
 
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public static final ErrorCorrectionLevel[] f13531n;
     private final int bits;
 

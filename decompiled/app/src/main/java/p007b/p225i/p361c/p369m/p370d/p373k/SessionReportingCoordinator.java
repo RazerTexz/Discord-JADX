@@ -7,12 +7,12 @@ import p007b.p100d.p104b.p105a.outline;
 import p007b.p225i.p226a.p288f.p340n.InterfaceC4353a;
 import p007b.p225i.p361c.p369m.p370d.Logger3;
 
-/* compiled from: SessionReportingCoordinator.java */
-/* renamed from: b.i.c.m.d.k.b1, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.c.m.d.k.b1, reason: use source file name */
+/* JADX INFO: compiled from: SessionReportingCoordinator.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final /* synthetic */ class SessionReportingCoordinator implements InterfaceC4353a {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final SessionReportingCoordinator3 f12267a;
 
     public SessionReportingCoordinator(SessionReportingCoordinator3 sessionReportingCoordinator3) {
@@ -20,7 +20,7 @@ public final /* synthetic */ class SessionReportingCoordinator implements Interf
     }
 
     @Override // p007b.p225i.p226a.p288f.p340n.InterfaceC4353a
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public Object mo4012a(Task task) {
         boolean z2;
         SessionReportingCoordinator3 sessionReportingCoordinator3 = this.f12267a;

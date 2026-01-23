@@ -3,13 +3,13 @@ package com.google.firebase.installations;
 import androidx.annotation.NonNull;
 import com.google.firebase.FirebaseException;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public class FirebaseInstallationsException extends FirebaseException {
 
     @NonNull
     private final EnumC11081a status;
 
-    /* renamed from: com.google.firebase.installations.FirebaseInstallationsException$a */
+    /* JADX INFO: renamed from: com.google.firebase.installations.FirebaseInstallationsException$a */
     public enum EnumC11081a {
         BAD_CONFIG,
         UNAVAILABLE,

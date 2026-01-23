@@ -7,24 +7,24 @@ import android.graphics.Paint;
 import android.graphics.Rect;
 import android.graphics.drawable.Drawable;
 
-/* compiled from: FastBitmapDrawable.java */
-/* renamed from: b.q.a.k.a, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.q.a.k.a, reason: use source file name */
+/* JADX INFO: compiled from: FastBitmapDrawable.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class FastBitmapDrawable extends Drawable {
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public Bitmap f14436b;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public int f14438d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public int f14439e;
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final Paint f14435a = new Paint(2);
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public int f14437c = 255;
 
     public FastBitmapDrawable(Bitmap bitmap) {

@@ -4,7 +4,7 @@ import java.io.PrintStream;
 import java.io.PrintWriter;
 import java.util.List;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class AggregateException extends Exception {
     private static final long serialVersionUID = 1;
     private List<Throwable> innerThrowables;

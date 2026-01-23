@@ -4,25 +4,25 @@ import java.util.Arrays;
 import kotlin.jvm.internal.DefaultConstructorMarker;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ColorHistogram.kt */
-/* renamed from: b.a.g.b, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.a.g.b, reason: use source file name */
+/* JADX INFO: compiled from: ColorHistogram.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class ColorHistogram {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final a f641a = new a(null);
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final int[] f642b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final int[] f643c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final int f644d;
 
-    /* compiled from: ColorHistogram.kt */
-    /* renamed from: b.a.g.b$a */
+    /* JADX INFO: renamed from: b.a.g.b$a */
+    /* JADX INFO: compiled from: ColorHistogram.kt */
     public static final class a {
         public a(DefaultConstructorMarker defaultConstructorMarker) {
         }

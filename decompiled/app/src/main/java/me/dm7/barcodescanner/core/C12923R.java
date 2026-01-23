@@ -2,11 +2,11 @@ package me.dm7.barcodescanner.core;
 
 import com.discord.C5419R;
 
-/* renamed from: me.dm7.barcodescanner.core.R */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: me.dm7.barcodescanner.core.R */
+/* JADX INFO: loaded from: classes3.dex */
 public final class C12923R {
 
-    /* renamed from: me.dm7.barcodescanner.core.R$a */
+    /* JADX INFO: renamed from: me.dm7.barcodescanner.core.R$a */
     public static final class a {
         public static final int notification_action_color_filter = 2131100115;
         public static final int notification_icon_bg_color = 2131100116;
@@ -23,7 +23,7 @@ public final class C12923R {
         }
     }
 
-    /* renamed from: me.dm7.barcodescanner.core.R$b */
+    /* JADX INFO: renamed from: me.dm7.barcodescanner.core.R$b */
     public static final class b {
         public static final int cancel_button_image_alpha = 2131427335;
         public static final int status_bar_notification_info_maxnum = 2131427355;
@@ -34,7 +34,7 @@ public final class C12923R {
         }
     }
 
-    /* renamed from: me.dm7.barcodescanner.core.R$c */
+    /* JADX INFO: renamed from: me.dm7.barcodescanner.core.R$c */
     public static final class c {
         public static final int BarcodeScannerView_borderAlpha = 0;
         public static final int BarcodeScannerView_borderColor = 1;

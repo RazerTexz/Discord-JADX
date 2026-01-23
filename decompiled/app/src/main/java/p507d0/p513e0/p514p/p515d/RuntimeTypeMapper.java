@@ -14,23 +14,23 @@ import p507d0.p582u.C12169a;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: RuntimeTypeMapper.kt */
-/* renamed from: d0.e0.p.d.d, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.d, reason: use source file name */
+/* JADX INFO: compiled from: RuntimeTypeMapper.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public abstract class RuntimeTypeMapper {
 
-    /* compiled from: RuntimeTypeMapper.kt */
-    /* renamed from: d0.e0.p.d.d$a */
+    /* JADX INFO: renamed from: d0.e0.p.d.d$a */
+    /* JADX INFO: compiled from: RuntimeTypeMapper.kt */
     public static final class a extends RuntimeTypeMapper {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final List<Method> f22327a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final Class<?> f22328b;
 
-        /* compiled from: Comparisons.kt */
-        /* renamed from: d0.e0.p.d.d$a$a, reason: collision with other inner class name */
+        /* JADX INFO: renamed from: d0.e0.p.d.d$a$a, reason: collision with other inner class name */
+        /* JADX INFO: compiled from: Comparisons.kt */
         public static final class C13300a<T> implements Comparator<T> {
             /* JADX WARN: Multi-variable type inference failed */
             @Override // java.util.Comparator
@@ -44,11 +44,11 @@ public abstract class RuntimeTypeMapper {
             }
         }
 
-        /* compiled from: RuntimeTypeMapper.kt */
-        /* renamed from: d0.e0.p.d.d$a$b */
+        /* JADX INFO: renamed from: d0.e0.p.d.d$a$b */
+        /* JADX INFO: compiled from: RuntimeTypeMapper.kt */
         public static final class b extends Lambda implements Function1<Method, CharSequence> {
 
-            /* renamed from: j */
+            /* JADX INFO: renamed from: j */
             public static final b f22329j = new b();
 
             public b() {
@@ -60,7 +60,7 @@ public abstract class RuntimeTypeMapper {
                 return invoke2(method);
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final CharSequence invoke2(Method method) {
                 Intrinsics3.checkNotNullExpressionValue(method, "it");
                 Class<?> returnType = method.getReturnType();
@@ -70,7 +70,7 @@ public abstract class RuntimeTypeMapper {
         }
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        public a(Class<?> cls) throws SecurityException {
+        public a(Class<?> cls) {
             super(null);
             Intrinsics3.checkNotNullParameter(cls, "jClass");
             this.f22328b = cls;
@@ -89,18 +89,18 @@ public abstract class RuntimeTypeMapper {
         }
     }
 
-    /* compiled from: RuntimeTypeMapper.kt */
-    /* renamed from: d0.e0.p.d.d$b */
+    /* JADX INFO: renamed from: d0.e0.p.d.d$b */
+    /* JADX INFO: compiled from: RuntimeTypeMapper.kt */
     public static final class b extends RuntimeTypeMapper {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final Constructor<?> f22330a;
 
-        /* compiled from: RuntimeTypeMapper.kt */
-        /* renamed from: d0.e0.p.d.d$b$a */
+        /* JADX INFO: renamed from: d0.e0.p.d.d$b$a */
+        /* JADX INFO: compiled from: RuntimeTypeMapper.kt */
         public static final class a extends Lambda implements Function1<Class<?>, CharSequence> {
 
-            /* renamed from: j */
+            /* JADX INFO: renamed from: j */
             public static final a f22331j = new a();
 
             public a() {
@@ -112,7 +112,7 @@ public abstract class RuntimeTypeMapper {
                 return invoke2(cls);
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final CharSequence invoke2(Class<?> cls) {
                 Intrinsics3.checkNotNullExpressionValue(cls, "it");
                 return reflectClassUtil.getDesc(cls);
@@ -138,11 +138,11 @@ public abstract class RuntimeTypeMapper {
         }
     }
 
-    /* compiled from: RuntimeTypeMapper.kt */
-    /* renamed from: d0.e0.p.d.d$c */
+    /* JADX INFO: renamed from: d0.e0.p.d.d$c */
+    /* JADX INFO: compiled from: RuntimeTypeMapper.kt */
     public static final class c extends RuntimeTypeMapper {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final Method f22332a;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -162,14 +162,14 @@ public abstract class RuntimeTypeMapper {
         }
     }
 
-    /* compiled from: RuntimeTypeMapper.kt */
-    /* renamed from: d0.e0.p.d.d$d */
+    /* JADX INFO: renamed from: d0.e0.p.d.d$d */
+    /* JADX INFO: compiled from: RuntimeTypeMapper.kt */
     public static final class d extends RuntimeTypeMapper {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final String f22333a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final JvmMemberSignature.b f22334b;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -190,14 +190,14 @@ public abstract class RuntimeTypeMapper {
         }
     }
 
-    /* compiled from: RuntimeTypeMapper.kt */
-    /* renamed from: d0.e0.p.d.d$e */
+    /* JADX INFO: renamed from: d0.e0.p.d.d$e */
+    /* JADX INFO: compiled from: RuntimeTypeMapper.kt */
     public static final class e extends RuntimeTypeMapper {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final String f22335a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final JvmMemberSignature.b f22336b;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */

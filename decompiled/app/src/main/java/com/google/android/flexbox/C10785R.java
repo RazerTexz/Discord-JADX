@@ -2,11 +2,11 @@ package com.google.android.flexbox;
 
 import com.discord.C5419R;
 
-/* renamed from: com.google.android.flexbox.R */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: com.google.android.flexbox.R */
+/* JADX INFO: loaded from: classes3.dex */
 public final class C10785R {
 
-    /* renamed from: com.google.android.flexbox.R$a */
+    /* JADX INFO: renamed from: com.google.android.flexbox.R$a */
     public static final class a {
         public static final int[] FlexboxLayout = {C5419R.attr.alignContent, C5419R.attr.alignItems, C5419R.attr.dividerDrawable, C5419R.attr.dividerDrawableHorizontal, C5419R.attr.dividerDrawableVertical, C5419R.attr.flexDirection, C5419R.attr.flexWrap, C5419R.attr.justifyContent, C5419R.attr.maxLine, C5419R.attr.showDivider, C5419R.attr.showDividerHorizontal, C5419R.attr.showDividerVertical};
         public static final int[] FlexboxLayout_Layout = {C5419R.attr.layout_alignSelf, C5419R.attr.layout_flexBasisPercent, C5419R.attr.layout_flexGrow, C5419R.attr.layout_flexShrink, C5419R.attr.layout_maxHeight, C5419R.attr.layout_maxWidth, C5419R.attr.layout_minHeight, C5419R.attr.layout_minWidth, C5419R.attr.layout_order, C5419R.attr.layout_wrapBefore};

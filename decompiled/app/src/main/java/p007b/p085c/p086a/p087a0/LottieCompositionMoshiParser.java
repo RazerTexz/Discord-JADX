@@ -18,26 +18,26 @@ import p007b.p085c.p086a.p095y.Marker2;
 import p007b.p085c.p086a.p095y.p097l.ShapeGroup;
 import p007b.p085c.p086a.p095y.p098m.Layer2;
 
-/* compiled from: LottieCompositionMoshiParser.java */
-/* renamed from: b.c.a.a0.t, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.c.a.a0.t, reason: use source file name */
+/* JADX INFO: compiled from: LottieCompositionMoshiParser.java */
+/* JADX INFO: loaded from: classes.dex */
 public class LottieCompositionMoshiParser {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final JsonReader2.a f2283a = JsonReader2.a.m616a("w", "h", "ip", "op", "fr", "v", "layers", "assets", "fonts", "chars", "markers");
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static JsonReader2.a f2284b = JsonReader2.a.m616a(ModelAuditLogEntry.CHANGE_KEY_ID, "layers", "w", "h", "p", "u");
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public static final JsonReader2.a f2285c = JsonReader2.a.m616a("list");
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public static final JsonReader2.a f2286d = JsonReader2.a.m616a("cm", "tm", "dr");
 
     /* JADX WARN: Failed to find 'out' block for switch in B:6:0x0046. Please report as an issue. */
-    /* renamed from: a */
-    public static LottieComposition m635a(JsonReader2 jsonReader2) throws IOException, NumberFormatException {
+    /* JADX INFO: renamed from: a */
+    public static LottieComposition m635a(JsonReader2 jsonReader2) throws IOException {
         ArrayList arrayList;
         SparseArrayCompat<FontCharacter> sparseArrayCompat;
         ArrayList arrayList2;

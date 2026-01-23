@@ -19,13 +19,13 @@ import p007b.p195g.p196a.p205c.p218h0.TypeFactory;
 import p007b.p195g.p196a.p205c.p219i0.ClassUtil;
 import p007b.p195g.p196a.p205c.p220y.JacksonStdImpl;
 
-/* compiled from: StringArraySerializer.java */
+/* JADX INFO: renamed from: b.g.a.c.g0.t.n, reason: use source file name */
+/* JADX INFO: compiled from: StringArraySerializer.java */
+/* JADX INFO: loaded from: classes3.dex */
 @JacksonStdImpl
-/* renamed from: b.g.a.c.g0.t.n, reason: use source file name */
-/* loaded from: classes3.dex */
 public class StringArraySerializer2 extends ArraySerializerBase<String[]> implements ContextualSerializer {
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public static final StringArraySerializer2 f4843k;
     public final JsonSerializer<Object> _elementSerializer;
 
@@ -41,7 +41,7 @@ public class StringArraySerializer2 extends ArraySerializerBase<String[]> implem
 
     /* JADX WARN: Removed duplicated region for block: B:9:0x0018  */
     @Override // p007b.p195g.p196a.p205c.p215g0.p217u.ArraySerializerBase, p007b.p195g.p196a.p205c.p215g0.ContextualSerializer
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
@@ -68,13 +68,13 @@ public class StringArraySerializer2 extends ArraySerializerBase<String[]> implem
     }
 
     @Override // p007b.p195g.p196a.p205c.JsonSerializer
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public boolean mo2021d(SerializerProvider serializerProvider, Object obj) {
         return ((String[]) obj).length == 0;
     }
 
     @Override // p007b.p195g.p196a.p205c.p215g0.p217u.ArraySerializerBase, p007b.p195g.p196a.p205c.JsonSerializer
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public void mo1807f(Object obj, JsonGenerator jsonGenerator, SerializerProvider serializerProvider) throws IOException {
         String[] strArr = (String[]) obj;
         int length = strArr.length;
@@ -88,30 +88,30 @@ public class StringArraySerializer2 extends ArraySerializerBase<String[]> implem
     }
 
     @Override // p007b.p195g.p196a.p205c.p215g0.ContainerSerializer
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public ContainerSerializer<?> mo1995p(TypeSerializer typeSerializer) {
         return this;
     }
 
     @Override // p007b.p195g.p196a.p205c.p215g0.ContainerSerializer
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     public boolean mo1996q(Object obj) {
         return ((String[]) obj).length == 1;
     }
 
     @Override // p007b.p195g.p196a.p205c.p215g0.p217u.ArraySerializerBase
-    /* renamed from: s */
+    /* JADX INFO: renamed from: s */
     public JsonSerializer<?> mo2037s(BeanProperty beanProperty, Boolean bool) {
         return new StringArraySerializer2(this, beanProperty, this._elementSerializer, bool);
     }
 
     @Override // p007b.p195g.p196a.p205c.p215g0.p217u.ArraySerializerBase
-    /* renamed from: t */
+    /* JADX INFO: renamed from: t */
     public /* bridge */ /* synthetic */ void mo2038t(String[] strArr, JsonGenerator jsonGenerator, SerializerProvider serializerProvider) throws IOException {
         m2039u(strArr, jsonGenerator, serializerProvider);
     }
 
-    /* renamed from: u */
+    /* JADX INFO: renamed from: u */
     public void m2039u(String[] strArr, JsonGenerator jsonGenerator, SerializerProvider serializerProvider) throws IOException {
         int length = strArr.length;
         if (length == 0) {

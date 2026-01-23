@@ -11,8 +11,8 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.annotation.RequiresApi;
 
+/* JADX INFO: loaded from: classes3.dex */
 @RequiresApi(21)
-/* loaded from: classes3.dex */
 public final class ScaleProvider implements VisibilityAnimatorProvider {
     private boolean growing;
     private float incomingEndScale;
@@ -21,16 +21,16 @@ public final class ScaleProvider implements VisibilityAnimatorProvider {
     private float outgoingStartScale;
     private boolean scaleOnDisappear;
 
-    /* renamed from: com.google.android.material.transition.platform.ScaleProvider$a */
+    /* JADX INFO: renamed from: com.google.android.material.transition.platform.ScaleProvider$a */
     public static class C11062a extends AnimatorListenerAdapter {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final /* synthetic */ View f21396a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final /* synthetic */ float f21397b;
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public final /* synthetic */ float f21398c;
 
         public C11062a(View view, float f, float f2) {

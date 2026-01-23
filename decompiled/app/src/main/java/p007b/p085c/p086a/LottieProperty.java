@@ -4,99 +4,99 @@ import android.graphics.ColorFilter;
 import android.graphics.PointF;
 import p007b.p085c.p086a.p090c0.ScaleXY;
 
-/* compiled from: LottieProperty.java */
-/* renamed from: b.c.a.o, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.c.a.o, reason: use source file name */
+/* JADX INFO: compiled from: LottieProperty.java */
+/* JADX INFO: loaded from: classes.dex */
 public interface LottieProperty {
 
-    /* renamed from: A */
+    /* JADX INFO: renamed from: A */
     public static final Float f2419A;
 
-    /* renamed from: B */
+    /* JADX INFO: renamed from: B */
     public static final Float f2420B;
 
-    /* renamed from: C */
+    /* JADX INFO: renamed from: C */
     public static final ColorFilter f2421C;
 
-    /* renamed from: D */
+    /* JADX INFO: renamed from: D */
     public static final Integer[] f2422D;
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final Integer f2423a = 1;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static final Integer f2424b = 2;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public static final Integer f2425c = 3;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public static final Integer f2426d = 4;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public static final PointF f2427e = new PointF();
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public static final PointF f2428f = new PointF();
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public static final PointF f2429g = new PointF();
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public static final PointF f2430h = new PointF();
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public static final Float f2431i;
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static final PointF f2432j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public static final ScaleXY f2433k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public static final Float f2434l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public static final Float f2435m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public static final Float f2436n;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public static final Float f2437o;
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public static final Float f2438p;
 
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     public static final Float f2439q;
 
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     public static final Float f2440r;
 
-    /* renamed from: s */
+    /* JADX INFO: renamed from: s */
     public static final Float f2441s;
 
-    /* renamed from: t */
+    /* JADX INFO: renamed from: t */
     public static final Float f2442t;
 
-    /* renamed from: u */
+    /* JADX INFO: renamed from: u */
     public static final Float f2443u;
 
-    /* renamed from: v */
+    /* JADX INFO: renamed from: v */
     public static final Float f2444v;
 
-    /* renamed from: w */
+    /* JADX INFO: renamed from: w */
     public static final Float f2445w;
 
-    /* renamed from: x */
+    /* JADX INFO: renamed from: x */
     public static final Float f2446x;
 
-    /* renamed from: y */
+    /* JADX INFO: renamed from: y */
     public static final Float f2447y;
 
-    /* renamed from: z */
+    /* JADX INFO: renamed from: z */
     public static final Float f2448z;
 
     static {

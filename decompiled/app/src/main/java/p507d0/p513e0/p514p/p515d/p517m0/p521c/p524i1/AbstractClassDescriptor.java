@@ -25,29 +25,29 @@ import p507d0.p513e0.p514p.p515d.p517m0.p567n.TypeSubstitutor2;
 import p507d0.p513e0.p514p.p515d.p517m0.p567n.TypeUtils;
 import p507d0.p513e0.p514p.p515d.p517m0.p567n.p568l1.KotlinTypeRefiner;
 
-/* compiled from: AbstractClassDescriptor.java */
-/* renamed from: d0.e0.p.d.m0.c.i1.a, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.c.i1.a, reason: use source file name */
+/* JADX INFO: compiled from: AbstractClassDescriptor.java */
+/* JADX INFO: loaded from: classes3.dex */
 public abstract class AbstractClassDescriptor extends ModuleAwareClassDescriptor {
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final Name f22801k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final storage5<KotlinType4> f22802l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public final storage5<MemberScope3> f22803m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public final storage5<ReceiverParameterDescriptor> f22804n;
 
-    /* compiled from: AbstractClassDescriptor.java */
-    /* renamed from: d0.e0.p.d.m0.c.i1.a$a */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.c.i1.a$a */
+    /* JADX INFO: compiled from: AbstractClassDescriptor.java */
     public class a implements Function0<KotlinType4> {
 
-        /* compiled from: AbstractClassDescriptor.java */
-        /* renamed from: d0.e0.p.d.m0.c.i1.a$a$a, reason: collision with other inner class name */
+        /* JADX INFO: renamed from: d0.e0.p.d.m0.c.i1.a$a$a, reason: collision with other inner class name */
+        /* JADX INFO: compiled from: AbstractClassDescriptor.java */
         public class C13307a implements Function1<KotlinTypeRefiner, KotlinType4> {
             public C13307a() {
             }
@@ -57,7 +57,7 @@ public abstract class AbstractClassDescriptor extends ModuleAwareClassDescriptor
                 return invoke2(kotlinTypeRefiner);
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public KotlinType4 invoke2(KotlinTypeRefiner kotlinTypeRefiner) {
                 ClassifierDescriptor classifierDescriptorRefineDescriptor = kotlinTypeRefiner.refineDescriptor(AbstractClassDescriptor.this);
                 return classifierDescriptorRefineDescriptor == null ? AbstractClassDescriptor.this.f22802l.invoke() : classifierDescriptorRefineDescriptor instanceof TypeAliasDescriptor ? KotlinTypeFactory.computeExpandedType((TypeAliasDescriptor) classifierDescriptorRefineDescriptor, TypeUtils.getDefaultTypeProjections(classifierDescriptorRefineDescriptor.getTypeConstructor().getParameters())) : classifierDescriptorRefineDescriptor instanceof ModuleAwareClassDescriptor ? TypeUtils.makeUnsubstitutedType(classifierDescriptorRefineDescriptor.getTypeConstructor().refine(kotlinTypeRefiner), ((ModuleAwareClassDescriptor) classifierDescriptorRefineDescriptor).getUnsubstitutedMemberScope(kotlinTypeRefiner), this) : classifierDescriptorRefineDescriptor.getDefaultType();
@@ -80,8 +80,8 @@ public abstract class AbstractClassDescriptor extends ModuleAwareClassDescriptor
         }
     }
 
-    /* compiled from: AbstractClassDescriptor.java */
-    /* renamed from: d0.e0.p.d.m0.c.i1.a$b */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.c.i1.a$b */
+    /* JADX INFO: compiled from: AbstractClassDescriptor.java */
     public class b implements Function0<MemberScope3> {
         public b() {
         }
@@ -98,8 +98,8 @@ public abstract class AbstractClassDescriptor extends ModuleAwareClassDescriptor
         }
     }
 
-    /* compiled from: AbstractClassDescriptor.java */
-    /* renamed from: d0.e0.p.d.m0.c.i1.a$c */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.c.i1.a$c */
+    /* JADX INFO: compiled from: AbstractClassDescriptor.java */
     public class c implements Function0<ReceiverParameterDescriptor> {
         public c() {
         }
@@ -131,7 +131,7 @@ public abstract class AbstractClassDescriptor extends ModuleAwareClassDescriptor
         this.f22804n = storageManager.createLazyValue(new c());
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static /* synthetic */ void m9387a(int i) {
         String str = (i == 2 || i == 3 || i == 4 || i == 5 || i == 8 || i == 11 || i == 13 || i == 15 || i == 16 || i == 18 || i == 19) ? "@NotNull method %s.%s must not return null" : "Argument for @NotNull parameter '%s' of %s.%s must not be null";
         Object[] objArr = new Object[(i == 2 || i == 3 || i == 4 || i == 5 || i == 8 || i == 11 || i == 13 || i == 15 || i == 16 || i == 18 || i == 19) ? 2 : 3];

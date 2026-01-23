@@ -2,9 +2,9 @@ package p007b.p109f.p129e;
 
 import com.facebook.datasource.DataSource;
 
-/* compiled from: DataSubscriber.java */
-/* renamed from: b.f.e.f, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.f.e.f, reason: use source file name */
+/* JADX INFO: compiled from: DataSubscriber.java */
+/* JADX INFO: loaded from: classes.dex */
 public interface DataSubscriber<T> {
     void onCancellation(DataSource<T> dataSource);
 

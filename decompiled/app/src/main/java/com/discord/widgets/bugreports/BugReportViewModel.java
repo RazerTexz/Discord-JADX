@@ -40,11 +40,11 @@ import p507d0.p592z.p594d.Lambda;
 import p658rx.Observable;
 import p658rx.subjects.PublishSubject;
 
-/* compiled from: BugReportViewModel.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: BugReportViewModel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class BugReportViewModel extends AppViewModel<ViewState> {
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private static final List<BugReportConfig2> genericFeatureAreas = CollectionsJVM.listOf(new BugReportConfig2(NotificationClient.NOTIF_GENERAL, "Android", null));
     private static final List<Sticker> sendingStickers;
@@ -65,7 +65,7 @@ public final class BugReportViewModel extends AppViewModel<ViewState> {
     private final Sticker successSticker;
     private boolean useScreenshot;
 
-    /* compiled from: BugReportViewModel.kt */
+    /* JADX INFO: compiled from: BugReportViewModel.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -87,10 +87,10 @@ public final class BugReportViewModel extends AppViewModel<ViewState> {
         }
     }
 
-    /* compiled from: BugReportViewModel.kt */
+    /* JADX INFO: compiled from: BugReportViewModel.kt */
     public static abstract class Event {
 
-        /* compiled from: BugReportViewModel.kt */
+        /* JADX INFO: compiled from: BugReportViewModel.kt */
         public static final class CloseReport extends Event {
             public static final CloseReport INSTANCE = new CloseReport();
 
@@ -107,10 +107,10 @@ public final class BugReportViewModel extends AppViewModel<ViewState> {
         }
     }
 
-    /* compiled from: BugReportViewModel.kt */
+    /* JADX INFO: compiled from: BugReportViewModel.kt */
     public static abstract class ViewState {
 
-        /* compiled from: BugReportViewModel.kt */
+        /* JADX INFO: compiled from: BugReportViewModel.kt */
         public static final /* data */ class Report extends ViewState {
             private final Error error;
             private final BugReportConfig2 feature;
@@ -154,37 +154,37 @@ public final class BugReportViewModel extends AppViewModel<ViewState> {
                 return report.copy(uri, str3, str4, num2, bugReportConfig22, z3, error);
             }
 
-            /* renamed from: component1, reason: from getter */
+            /* JADX INFO: renamed from: component1, reason: from getter */
             public final Uri getScreenshotUri() {
                 return this.screenshotUri;
             }
 
-            /* renamed from: component2, reason: from getter */
+            /* JADX INFO: renamed from: component2, reason: from getter */
             public final String getReportName() {
                 return this.reportName;
             }
 
-            /* renamed from: component3, reason: from getter */
+            /* JADX INFO: renamed from: component3, reason: from getter */
             public final String getReportDescription() {
                 return this.reportDescription;
             }
 
-            /* renamed from: component4, reason: from getter */
+            /* JADX INFO: renamed from: component4, reason: from getter */
             public final Integer getPriority() {
                 return this.priority;
             }
 
-            /* renamed from: component5, reason: from getter */
+            /* JADX INFO: renamed from: component5, reason: from getter */
             public final BugReportConfig2 getFeature() {
                 return this.feature;
             }
 
-            /* renamed from: component6, reason: from getter */
+            /* JADX INFO: renamed from: component6, reason: from getter */
             public final boolean getUseScreenshot() {
                 return this.useScreenshot;
             }
 
-            /* renamed from: component7, reason: from getter */
+            /* JADX INFO: renamed from: component7, reason: from getter */
             public final Error getError() {
                 return this.error;
             }
@@ -234,6 +234,9 @@ public final class BugReportViewModel extends AppViewModel<ViewState> {
             }
 
             /* JADX WARN: Multi-variable type inference failed */
+            /* JADX WARN: Type inference failed for: r2v13, types: [int] */
+            /* JADX WARN: Type inference failed for: r2v15 */
+            /* JADX WARN: Type inference failed for: r2v20 */
             public int hashCode() {
                 Uri uri = this.screenshotUri;
                 int iHashCode = (uri != null ? uri.hashCode() : 0) * 31;
@@ -246,13 +249,13 @@ public final class BugReportViewModel extends AppViewModel<ViewState> {
                 BugReportConfig2 bugReportConfig2 = this.feature;
                 int iHashCode5 = (iHashCode4 + (bugReportConfig2 != null ? bugReportConfig2.hashCode() : 0)) * 31;
                 boolean z2 = this.useScreenshot;
-                int i = z2;
-                if (z2 != 0) {
-                    i = 1;
+                ?? r2 = z2;
+                if (z2) {
+                    r2 = 1;
                 }
-                int i2 = (iHashCode5 + i) * 31;
+                int i = (iHashCode5 + r2) * 31;
                 Error error = this.error;
-                return i2 + (error != null ? error.hashCode() : 0);
+                return i + (error != null ? error.hashCode() : 0);
             }
 
             public String toString() {
@@ -288,7 +291,7 @@ public final class BugReportViewModel extends AppViewModel<ViewState> {
             }
         }
 
-        /* compiled from: BugReportViewModel.kt */
+        /* JADX INFO: compiled from: BugReportViewModel.kt */
         public static final /* data */ class SelectFeature extends ViewState {
             private final List<BugReportConfig2> features;
             private final boolean loadingFeatures;
@@ -316,12 +319,12 @@ public final class BugReportViewModel extends AppViewModel<ViewState> {
                 return selectFeature.copy(str, z2, list);
             }
 
-            /* renamed from: component1, reason: from getter */
+            /* JADX INFO: renamed from: component1, reason: from getter */
             public final String getQuery() {
                 return this.query;
             }
 
-            /* renamed from: component2, reason: from getter */
+            /* JADX INFO: renamed from: component2, reason: from getter */
             public final boolean getLoadingFeatures() {
                 return this.loadingFeatures;
             }
@@ -359,17 +362,20 @@ public final class BugReportViewModel extends AppViewModel<ViewState> {
             }
 
             /* JADX WARN: Multi-variable type inference failed */
+            /* JADX WARN: Type inference failed for: r2v1, types: [int] */
+            /* JADX WARN: Type inference failed for: r2v3 */
+            /* JADX WARN: Type inference failed for: r2v4 */
             public int hashCode() {
                 String str = this.query;
                 int iHashCode = (str != null ? str.hashCode() : 0) * 31;
                 boolean z2 = this.loadingFeatures;
-                int i = z2;
-                if (z2 != 0) {
-                    i = 1;
+                ?? r2 = z2;
+                if (z2) {
+                    r2 = 1;
                 }
-                int i2 = (iHashCode + i) * 31;
+                int i = (iHashCode + r2) * 31;
                 List<BugReportConfig2> list = this.features;
-                return i2 + (list != null ? list.hashCode() : 0);
+                return i + (list != null ? list.hashCode() : 0);
             }
 
             public String toString() {
@@ -391,7 +397,7 @@ public final class BugReportViewModel extends AppViewModel<ViewState> {
             }
         }
 
-        /* compiled from: BugReportViewModel.kt */
+        /* JADX INFO: compiled from: BugReportViewModel.kt */
         public static final /* data */ class Sending extends ViewState {
             private final Sticker sendingSticker;
 
@@ -409,7 +415,7 @@ public final class BugReportViewModel extends AppViewModel<ViewState> {
                 return sending.copy(sticker);
             }
 
-            /* renamed from: component1, reason: from getter */
+            /* JADX INFO: renamed from: component1, reason: from getter */
             public final Sticker getSendingSticker() {
                 return this.sendingSticker;
             }
@@ -446,7 +452,7 @@ public final class BugReportViewModel extends AppViewModel<ViewState> {
             }
         }
 
-        /* compiled from: BugReportViewModel.kt */
+        /* JADX INFO: compiled from: BugReportViewModel.kt */
         public static final /* data */ class Success extends ViewState {
             private final Sticker successSticker;
 
@@ -464,7 +470,7 @@ public final class BugReportViewModel extends AppViewModel<ViewState> {
                 return success.copy(sticker);
             }
 
-            /* renamed from: component1, reason: from getter */
+            /* JADX INFO: renamed from: component1, reason: from getter */
             public final Sticker getSuccessSticker() {
                 return this.successSticker;
             }
@@ -509,8 +515,8 @@ public final class BugReportViewModel extends AppViewModel<ViewState> {
         }
     }
 
-    /* compiled from: BugReportViewModel.kt */
-    /* renamed from: com.discord.widgets.bugreports.BugReportViewModel$dismissAfterDelay$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.bugreports.BugReportViewModel$dismissAfterDelay$1 */
+    /* JADX INFO: compiled from: BugReportViewModel.kt */
     public static final class C72831 extends Lambda implements Function1<Long, Unit> {
         public C72831() {
             super(1);
@@ -522,15 +528,15 @@ public final class BugReportViewModel extends AppViewModel<ViewState> {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Long l) {
             PublishSubject publishSubjectAccess$getEventSubject$p = BugReportViewModel.access$getEventSubject$p(BugReportViewModel.this);
             publishSubjectAccess$getEventSubject$p.f27650k.onNext(Event.CloseReport.INSTANCE);
         }
     }
 
-    /* compiled from: BugReportViewModel.kt */
-    /* renamed from: com.discord.widgets.bugreports.BugReportViewModel$loadFeatures$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.bugreports.BugReportViewModel$loadFeatures$1 */
+    /* JADX INFO: compiled from: BugReportViewModel.kt */
     public static final class C72841 extends Lambda implements Function1<RestCallState<? extends BugReportConfig>, Unit> {
         public C72841() {
             super(1);
@@ -542,15 +548,15 @@ public final class BugReportViewModel extends AppViewModel<ViewState> {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(RestCallState<BugReportConfig> restCallState) {
             Intrinsics3.checkNotNullParameter(restCallState, "it");
             BugReportViewModel.access$setBugReportConfig$p(BugReportViewModel.this, restCallState);
         }
     }
 
-    /* compiled from: BugReportViewModel.kt */
-    /* renamed from: com.discord.widgets.bugreports.BugReportViewModel$prefetchStickers$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.bugreports.BugReportViewModel$prefetchStickers$1 */
+    /* JADX INFO: compiled from: BugReportViewModel.kt */
     public static final class C72851 extends Lambda implements Function1<DownloadUtils.DownloadState, Unit> {
         public static final C72851 INSTANCE = new C72851();
 
@@ -564,14 +570,14 @@ public final class BugReportViewModel extends AppViewModel<ViewState> {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(DownloadUtils.DownloadState downloadState) {
             Intrinsics3.checkNotNullParameter(downloadState, "it");
         }
     }
 
-    /* compiled from: BugReportViewModel.kt */
-    /* renamed from: com.discord.widgets.bugreports.BugReportViewModel$prefetchStickers$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.bugreports.BugReportViewModel$prefetchStickers$2 */
+    /* JADX INFO: compiled from: BugReportViewModel.kt */
     public static final class C72862 extends Lambda implements Function1<DownloadUtils.DownloadState, Unit> {
         public static final C72862 INSTANCE = new C72862();
 
@@ -585,14 +591,14 @@ public final class BugReportViewModel extends AppViewModel<ViewState> {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(DownloadUtils.DownloadState downloadState) {
             Intrinsics3.checkNotNullParameter(downloadState, "it");
         }
     }
 
-    /* compiled from: BugReportViewModel.kt */
-    /* renamed from: com.discord.widgets.bugreports.BugReportViewModel$sendReport$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.bugreports.BugReportViewModel$sendReport$1 */
+    /* JADX INFO: compiled from: BugReportViewModel.kt */
     public static final class C72871 extends Lambda implements Function1<Unit, Unit> {
         public C72871() {
             super(1);
@@ -604,7 +610,7 @@ public final class BugReportViewModel extends AppViewModel<ViewState> {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Unit unit) {
             BugReportViewModel bugReportViewModel = BugReportViewModel.this;
             BugReportViewModel.access$updateViewState(bugReportViewModel, new ViewState.Success(bugReportViewModel.getSuccessSticker()));
@@ -612,8 +618,8 @@ public final class BugReportViewModel extends AppViewModel<ViewState> {
         }
     }
 
-    /* compiled from: BugReportViewModel.kt */
-    /* renamed from: com.discord.widgets.bugreports.BugReportViewModel$sendReport$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.bugreports.BugReportViewModel$sendReport$2 */
+    /* JADX INFO: compiled from: BugReportViewModel.kt */
     public static final class C72882 extends Lambda implements Function1<Error, Unit> {
         public C72882() {
             super(1);
@@ -625,7 +631,7 @@ public final class BugReportViewModel extends AppViewModel<ViewState> {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Error error) {
             Intrinsics3.checkNotNullParameter(error, "error");
             BugReportViewModel.this.showReport(error);
@@ -875,7 +881,7 @@ public final class BugReportViewModel extends AppViewModel<ViewState> {
         loadFeatures();
     }
 
-    /* renamed from: filterFeatures, reason: collision with other method in class */
+    /* JADX INFO: renamed from: filterFeatures, reason: collision with other method in class */
     public final void m11400filterFeatures(String it) {
         Intrinsics3.checkNotNullParameter(it, "it");
         this.featureSearchQuery = it;

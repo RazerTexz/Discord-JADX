@@ -12,9 +12,9 @@ import kotlin.Unit;
 import kotlin.jvm.functions.Function1;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: Bitmap.kt */
-/* renamed from: androidx.core.graphics.BitmapKt, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: androidx.core.graphics.BitmapKt, reason: use source file name */
+/* JADX INFO: compiled from: Bitmap.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class Bitmap {
     public static final android.graphics.Bitmap applyCanvas(android.graphics.Bitmap bitmap, Function1<? super Canvas, Unit> function1) {
         Intrinsics3.checkNotNullParameter(bitmap, "<this>");

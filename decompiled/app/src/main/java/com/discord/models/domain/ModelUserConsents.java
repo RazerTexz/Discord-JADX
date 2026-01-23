@@ -4,9 +4,9 @@ import kotlin.jvm.internal.DefaultConstructorMarker;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ModelUserConsents.kt */
-/* renamed from: com.discord.models.domain.Consent, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: com.discord.models.domain.Consent, reason: use source file name */
+/* JADX INFO: compiled from: ModelUserConsents.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class ModelUserConsents {
     private final String changedAt;
     private final boolean consented;
@@ -30,12 +30,12 @@ public final /* data */ class ModelUserConsents {
         return modelUserConsents.copy(z2, str);
     }
 
-    /* renamed from: component1, reason: from getter */
+    /* JADX INFO: renamed from: component1, reason: from getter */
     public final boolean getConsented() {
         return this.consented;
     }
 
-    /* renamed from: component2, reason: from getter */
+    /* JADX INFO: renamed from: component2, reason: from getter */
     public final String getChangedAt() {
         return this.changedAt;
     }

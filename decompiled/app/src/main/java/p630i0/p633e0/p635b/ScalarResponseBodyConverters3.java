@@ -5,12 +5,12 @@ import okhttp3.ResponseBody;
 import p007b.p100d.p104b.p105a.outline;
 import p630i0.Converter2;
 
-/* compiled from: ScalarResponseBodyConverters.java */
-/* renamed from: i0.e0.b.d, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: i0.e0.b.d, reason: use source file name */
+/* JADX INFO: compiled from: ScalarResponseBodyConverters.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class ScalarResponseBodyConverters3 implements Converter2<ResponseBody, Character> {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final ScalarResponseBodyConverters3 f26521a = new ScalarResponseBodyConverters3();
 
     @Override // p630i0.Converter2

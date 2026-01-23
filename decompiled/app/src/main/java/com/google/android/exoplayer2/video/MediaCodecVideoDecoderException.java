@@ -5,7 +5,7 @@ import androidx.annotation.Nullable;
 import com.google.android.exoplayer2.mediacodec.MediaCodecDecoderException;
 import p007b.p225i.p226a.p242c.p278y2.MediaCodecInfo;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public class MediaCodecVideoDecoderException extends MediaCodecDecoderException {
     public final boolean isSurfaceValid;
     public final int surfaceIdentityHashCode;

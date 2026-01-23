@@ -2,9 +2,9 @@ package p007b.p195g.p196a.p205c;
 
 import p007b.p195g.p196a.p205c.p221z.ConfigFeature;
 
-/* compiled from: MapperFeature.java */
-/* renamed from: b.g.a.c.p, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.g.a.c.p, reason: use source file name */
+/* JADX INFO: compiled from: MapperFeature.java */
+/* JADX INFO: loaded from: classes3.dex */
 public enum MapperFeature implements ConfigFeature {
     USE_ANNOTATIONS(true),
     USE_GETTERS_AS_SETTERS(true),
@@ -46,18 +46,18 @@ public enum MapperFeature implements ConfigFeature {
     }
 
     @Override // p007b.p195g.p196a.p205c.p221z.ConfigFeature
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public boolean mo2090f() {
         return this._defaultState;
     }
 
     @Override // p007b.p195g.p196a.p205c.p221z.ConfigFeature
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public int mo2091g() {
         return this._mask;
     }
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public boolean m2222h(int i) {
         return (i & this._mask) != 0;
     }

@@ -34,21 +34,21 @@ import p507d0.p580t.CollectionsJVM;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetCaptcha.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetCaptcha.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public class WidgetCaptcha extends AppFragment {
     public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetCaptcha.class, "binding", "getBinding()Lcom/discord/databinding/WidgetCaptchaBinding;", 0)};
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private static final String EXTRA_CAPTCHA_ERROR_BODY = "EXTRA_CAPTCHA_ERROR_BODY";
     private static final String RESULT_EXTRA_RQTOKEN = "RESULT_EXTRA_RQTOKEN";
     private static final String RESULT_EXTRA_TOKEN = "RESULT_EXTRA_TOKEN";
 
-    /* renamed from: binding$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
 
-    /* compiled from: WidgetCaptcha.kt */
+    /* JADX INFO: compiled from: WidgetCaptcha.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -85,13 +85,13 @@ public class WidgetCaptcha extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetCaptcha.kt */
-    /* renamed from: com.discord.widgets.captcha.WidgetCaptcha$onViewBound$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.captcha.WidgetCaptcha$onViewBound$1 */
+    /* JADX INFO: compiled from: WidgetCaptcha.kt */
     public static final class ViewOnClickListenerC73001 implements View.OnClickListener {
         public final /* synthetic */ CaptchaHelper.CaptchaRequest $captchaRequest;
 
-        /* compiled from: WidgetCaptcha.kt */
-        /* renamed from: com.discord.widgets.captcha.WidgetCaptcha$onViewBound$1$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.widgets.captcha.WidgetCaptcha$onViewBound$1$1, reason: invalid class name */
+        /* JADX INFO: compiled from: WidgetCaptcha.kt */
         public static final class AnonymousClass1 extends Lambda implements Function1<String, Unit> {
             public AnonymousClass1() {
                 super(1);
@@ -103,7 +103,7 @@ public class WidgetCaptcha extends AppFragment {
                 return Unit.f27425a;
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2(String str) {
                 CaptchaHelper.INSTANCE.setCaptchaToken(str);
                 AppActivity appActivity = WidgetCaptcha.this.getAppActivity();
@@ -113,8 +113,8 @@ public class WidgetCaptcha extends AppFragment {
             }
         }
 
-        /* compiled from: WidgetCaptcha.kt */
-        /* renamed from: com.discord.widgets.captcha.WidgetCaptcha$onViewBound$1$2, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.widgets.captcha.WidgetCaptcha$onViewBound$1$2, reason: invalid class name */
+        /* JADX INFO: compiled from: WidgetCaptcha.kt */
         public static final class AnonymousClass2 extends Lambda implements Function1<Error, Unit> {
             public AnonymousClass2() {
                 super(1);
@@ -126,7 +126,7 @@ public class WidgetCaptcha extends AppFragment {
                 return Unit.f27425a;
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2(Error error) {
                 Intrinsics3.checkNotNullParameter(error, "it");
                 WidgetCaptcha.trackTransition$default(WidgetCaptcha.this, "submitted", null, 2, null);
@@ -152,12 +152,12 @@ public class WidgetCaptcha extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetCaptcha.kt */
-    /* renamed from: com.discord.widgets.captcha.WidgetCaptcha$onViewBound$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.captcha.WidgetCaptcha$onViewBound$2 */
+    /* JADX INFO: compiled from: WidgetCaptcha.kt */
     public static final class ViewOnClickListenerC73012 implements View.OnClickListener {
 
-        /* compiled from: WidgetCaptcha.kt */
-        /* renamed from: com.discord.widgets.captcha.WidgetCaptcha$onViewBound$2$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.widgets.captcha.WidgetCaptcha$onViewBound$2$1, reason: invalid class name */
+        /* JADX INFO: compiled from: WidgetCaptcha.kt */
         public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
             public AnonymousClass1() {
                 super(0);
@@ -169,7 +169,7 @@ public class WidgetCaptcha extends AppFragment {
                 return Unit.f27425a;
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2() {
                 FragmentActivity activity = WidgetCaptcha.this.getActivity();
                 if (activity != null) {

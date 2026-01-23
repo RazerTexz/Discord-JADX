@@ -2,7 +2,6 @@ package p007b.p225i.p226a.p288f.p330i.p332b;
 
 import android.content.ContentValues;
 import android.database.Cursor;
-import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteException;
 import android.os.Bundle;
@@ -37,39 +36,39 @@ import p007b.p225i.p226a.p288f.p313h.p325l.C3739l9;
 import p007b.p225i.p226a.p288f.p313h.p325l.C3769o0;
 import p007b.p225i.p226a.p288f.p313h.p325l.C3777o8;
 
-/* compiled from: com.google.android.gms:play-services-measurement@@18.0.0 */
-/* renamed from: b.i.a.f.i.b.g */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.i.b.g */
+/* JADX INFO: compiled from: com.google.android.gms:play-services-measurement@@18.0.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public final class C4040g extends AbstractC4074i9 {
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public static final String[] f10735d = {"last_bundled_timestamp", "ALTER TABLE events ADD COLUMN last_bundled_timestamp INTEGER;", "last_bundled_day", "ALTER TABLE events ADD COLUMN last_bundled_day INTEGER;", "last_sampled_complex_event_id", "ALTER TABLE events ADD COLUMN last_sampled_complex_event_id INTEGER;", "last_sampling_rate", "ALTER TABLE events ADD COLUMN last_sampling_rate INTEGER;", "last_exempt_from_sampling", "ALTER TABLE events ADD COLUMN last_exempt_from_sampling INTEGER;", "current_session_count", "ALTER TABLE events ADD COLUMN current_session_count INTEGER;"};
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public static final String[] f10736e = {"origin", "ALTER TABLE user_attributes ADD COLUMN origin TEXT;"};
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public static final String[] f10737f = {"app_version", "ALTER TABLE apps ADD COLUMN app_version TEXT;", "app_store", "ALTER TABLE apps ADD COLUMN app_store TEXT;", "gmp_version", "ALTER TABLE apps ADD COLUMN gmp_version INTEGER;", "dev_cert_hash", "ALTER TABLE apps ADD COLUMN dev_cert_hash INTEGER;", "measurement_enabled", "ALTER TABLE apps ADD COLUMN measurement_enabled INTEGER;", "last_bundle_start_timestamp", "ALTER TABLE apps ADD COLUMN last_bundle_start_timestamp INTEGER;", "day", "ALTER TABLE apps ADD COLUMN day INTEGER;", "daily_public_events_count", "ALTER TABLE apps ADD COLUMN daily_public_events_count INTEGER;", "daily_events_count", "ALTER TABLE apps ADD COLUMN daily_events_count INTEGER;", "daily_conversions_count", "ALTER TABLE apps ADD COLUMN daily_conversions_count INTEGER;", "remote_config", "ALTER TABLE apps ADD COLUMN remote_config BLOB;", "config_fetched_time", "ALTER TABLE apps ADD COLUMN config_fetched_time INTEGER;", "failed_config_fetch_time", "ALTER TABLE apps ADD COLUMN failed_config_fetch_time INTEGER;", "app_version_int", "ALTER TABLE apps ADD COLUMN app_version_int INTEGER;", "firebase_instance_id", "ALTER TABLE apps ADD COLUMN firebase_instance_id TEXT;", "daily_error_events_count", "ALTER TABLE apps ADD COLUMN daily_error_events_count INTEGER;", "daily_realtime_events_count", "ALTER TABLE apps ADD COLUMN daily_realtime_events_count INTEGER;", "health_monitor_sample", "ALTER TABLE apps ADD COLUMN health_monitor_sample TEXT;", "android_id", "ALTER TABLE apps ADD COLUMN android_id INTEGER;", "adid_reporting_enabled", "ALTER TABLE apps ADD COLUMN adid_reporting_enabled INTEGER;", "ssaid_reporting_enabled", "ALTER TABLE apps ADD COLUMN ssaid_reporting_enabled INTEGER;", "admob_app_id", "ALTER TABLE apps ADD COLUMN admob_app_id TEXT;", "linked_admob_app_id", "ALTER TABLE apps ADD COLUMN linked_admob_app_id TEXT;", "dynamite_version", "ALTER TABLE apps ADD COLUMN dynamite_version INTEGER;", "safelisted_events", "ALTER TABLE apps ADD COLUMN safelisted_events TEXT;", "ga_app_id", "ALTER TABLE apps ADD COLUMN ga_app_id TEXT;"};
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public static final String[] f10738g = {"realtime", "ALTER TABLE raw_events ADD COLUMN realtime INTEGER;"};
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public static final String[] f10739h = {"has_realtime", "ALTER TABLE queue ADD COLUMN has_realtime INTEGER;", "retry_count", "ALTER TABLE queue ADD COLUMN retry_count INTEGER;"};
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public static final String[] f10740i = {"session_scoped", "ALTER TABLE event_filters ADD COLUMN session_scoped BOOLEAN;"};
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static final String[] f10741j = {"session_scoped", "ALTER TABLE property_filters ADD COLUMN session_scoped BOOLEAN;"};
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public static final String[] f10742k = {"previous_install_count", "ALTER TABLE app2 ADD COLUMN previous_install_count INTEGER;"};
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final C4052h f10743l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public final C4026e9 f10744m;
 
     public C4040g(C4097k9 c4097k9) {
@@ -79,7 +78,7 @@ public final class C4040g extends AbstractC4074i9 {
     }
 
     @WorkerThread
-    /* renamed from: G */
+    /* JADX INFO: renamed from: G */
     public static void m5603G(ContentValues contentValues, String str, Object obj) {
         AnimatableValueParser.m583w(str);
         Objects.requireNonNull(obj, "null reference");
@@ -96,7 +95,7 @@ public final class C4040g extends AbstractC4074i9 {
     }
 
     @WorkerThread
-    /* renamed from: A */
+    /* JADX INFO: renamed from: A */
     public final Object m5604A(Cursor cursor, int i) {
         int type = cursor.getType(i);
         if (type == 0) {
@@ -122,7 +121,11 @@ public final class C4040g extends AbstractC4074i9 {
 
     /* JADX WARN: Multi-variable type inference failed */
     /* JADX WARN: Removed duplicated region for block: B:25:0x0053  */
-    /* renamed from: B */
+    /* JADX WARN: Type inference failed for: r0v0 */
+    /* JADX WARN: Type inference failed for: r0v1, types: [android.database.Cursor] */
+    /* JADX WARN: Type inference failed for: r0v2 */
+    /* JADX WARN: Type inference failed for: r5v0, types: [long] */
+    /* JADX INFO: renamed from: B */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
@@ -130,10 +133,10 @@ public final class C4040g extends AbstractC4074i9 {
         Cursor cursorRawQuery;
         mo5848b();
         m5684n();
-        Cursor cursor = null;
+        ?? r0 = 0;
         try {
             try {
-                cursorRawQuery = m5640t().rawQuery("select app_id from apps where app_id in (select distinct app_id from raw_events) and config_fetched_time < ? order by failed_config_fetch_time limit 1;", new String[]{String.valueOf(j)});
+                cursorRawQuery = m5640t().rawQuery("select app_id from apps where app_id in (select distinct app_id from raw_events) and config_fetched_time < ? order by failed_config_fetch_time limit 1;", new String[]{String.valueOf((long) j)});
                 try {
                     if (cursorRawQuery.moveToFirst()) {
                         String string = cursorRawQuery.getString(0);
@@ -153,9 +156,9 @@ public final class C4040g extends AbstractC4074i9 {
                 }
             } catch (Throwable th) {
                 th = th;
-                cursor = j;
-                if (cursor != null) {
-                    cursor.close();
+                r0 = j;
+                if (r0 != 0) {
+                    r0.close();
                 }
                 throw th;
             }
@@ -164,7 +167,7 @@ public final class C4040g extends AbstractC4074i9 {
             cursorRawQuery = null;
         } catch (Throwable th2) {
             th = th2;
-            if (cursor != null) {
+            if (r0 != 0) {
             }
             throw th;
         }
@@ -173,7 +176,7 @@ public final class C4040g extends AbstractC4074i9 {
     /* JADX WARN: Not initialized variable reg: 2, insn: 0x00b2: MOVE (r1 I:??[OBJECT, ARRAY]) = (r2 I:??[OBJECT, ARRAY]), block:B:37:0x00b2 */
     /* JADX WARN: Removed duplicated region for block: B:39:0x00b5  */
     @WorkerThread
-    /* renamed from: C */
+    /* JADX INFO: renamed from: C */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
@@ -245,7 +248,7 @@ public final class C4040g extends AbstractC4074i9 {
     }
 
     @WorkerThread
-    /* renamed from: D */
+    /* JADX INFO: renamed from: D */
     public final List<Pair<C3635e1, Long>> m5607D(String str, int i, int i2) {
         byte[] bArrM5839S;
         mo5848b();
@@ -315,10 +318,9 @@ public final class C4040g extends AbstractC4074i9 {
     
         mo5726g().f11141f.m5861b("Read more than the max allowed user properties, ignoring excess", 1000);
      */
-    /* JADX WARN: Removed duplicated region for block: B:48:0x011b  */
     /* JADX WARN: Removed duplicated region for block: B:53:0x0123  */
     @WorkerThread
-    /* renamed from: E */
+    /* JADX INFO: renamed from: E */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
@@ -345,18 +347,6 @@ public final class C4040g extends AbstractC4074i9 {
                     } catch (SQLiteException e) {
                         e = e;
                         cursorQuery = null;
-                        mo5726g().f11141f.m5863d("(2)Error querying user properties", C4157q3.m5788s(str), str4, e);
-                        if (C3739l9.m5058b() || !this.f11202a.f11260h.m5532u(str, C4142p.f11031F0)) {
-                            if (cursorQuery != null) {
-                                cursorQuery.close();
-                            }
-                            return null;
-                        }
-                        List<C4207u9> listEmptyList = Collections.emptyList();
-                        if (cursorQuery != null) {
-                            cursorQuery.close();
-                        }
-                        return listEmptyList;
                     }
                 }
                 if (!TextUtils.isEmpty(str3)) {
@@ -395,12 +385,6 @@ public final class C4040g extends AbstractC4074i9 {
                         } catch (SQLiteException e3) {
                             e = e3;
                             str4 = string2;
-                            mo5726g().f11141f.m5863d("(2)Error querying user properties", C4157q3.m5788s(str), str4, e);
-                            if (C3739l9.m5058b()) {
-                            }
-                            if (cursorQuery != null) {
-                            }
-                            return null;
                         }
                     } else {
                         arrayList.add(new C4207u9(str, string2, string, j, objM5604A));
@@ -422,13 +406,25 @@ public final class C4040g extends AbstractC4074i9 {
             }
             throw th;
         }
+        mo5726g().f11141f.m5863d("(2)Error querying user properties", C4157q3.m5788s(str), str4, e);
+        if (!C3739l9.m5058b() || !this.f11202a.f11260h.m5532u(str, C4142p.f11031F0)) {
+            if (cursorQuery != null) {
+                cursorQuery.close();
+            }
+            return null;
+        }
+        List<C4207u9> listEmptyList = Collections.emptyList();
+        if (cursorQuery != null) {
+            cursorQuery.close();
+        }
+        return listEmptyList;
     }
 
     /* JADX WARN: Code restructure failed: missing block: B:9:0x0050, code lost:
     
         mo5726g().f11141f.m5861b("Read more than the max allowed conditional properties, ignoring extra", 1000);
      */
-    /* renamed from: F */
+    /* JADX INFO: renamed from: F */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
@@ -483,7 +479,7 @@ public final class C4040g extends AbstractC4074i9 {
     }
 
     @WorkerThread
-    /* renamed from: H */
+    /* JADX INFO: renamed from: H */
     public final void m5610H(C4098l c4098l) {
         Objects.requireNonNull(c4098l, "null reference");
         mo5848b();
@@ -511,7 +507,7 @@ public final class C4040g extends AbstractC4074i9 {
     }
 
     @WorkerThread
-    /* renamed from: I */
+    /* JADX INFO: renamed from: I */
     public final void m5611I(C3973a4 c3973a4) {
         mo5848b();
         m5684n();
@@ -574,8 +570,8 @@ public final class C4040g extends AbstractC4074i9 {
     }
 
     @WorkerThread
-    /* renamed from: J */
-    public final void m5612J(List<Long> list) throws SQLException {
+    /* JADX INFO: renamed from: J */
+    public final void m5612J(List<Long> list) {
         mo5848b();
         m5684n();
         Objects.requireNonNull(list, "null reference");
@@ -602,8 +598,8 @@ public final class C4040g extends AbstractC4074i9 {
     }
 
     @WorkerThread
-    /* renamed from: K */
-    public final boolean m5613K(C3635e1 c3635e1, boolean z2) throws IllegalStateException {
+    /* JADX INFO: renamed from: K */
+    public final boolean m5613K(C3635e1 c3635e1, boolean z2) {
         mo5848b();
         m5684n();
         AnimatableValueParser.m583w(c3635e1.m4710G1());
@@ -641,7 +637,7 @@ public final class C4040g extends AbstractC4074i9 {
         }
     }
 
-    /* renamed from: L */
+    /* JADX INFO: renamed from: L */
     public final boolean m5614L(C4109m c4109m, long j, boolean z2) {
         mo5848b();
         m5684n();
@@ -667,7 +663,7 @@ public final class C4040g extends AbstractC4074i9 {
     }
 
     @WorkerThread
-    /* renamed from: M */
+    /* JADX INFO: renamed from: M */
     public final boolean m5615M(C4207u9 c4207u9) {
         mo5848b();
         m5684n();
@@ -705,7 +701,7 @@ public final class C4040g extends AbstractC4074i9 {
     }
 
     @WorkerThread
-    /* renamed from: N */
+    /* JADX INFO: renamed from: N */
     public final boolean m5616N(zzz zzzVar) {
         mo5848b();
         m5684n();
@@ -740,8 +736,8 @@ public final class C4040g extends AbstractC4074i9 {
     }
 
     @WorkerThread
-    /* renamed from: O */
-    public final boolean m5617O(String str, int i, C3730l0 c3730l0) throws IllegalStateException {
+    /* JADX INFO: renamed from: O */
+    public final boolean m5617O(String str, int i, C3730l0 c3730l0) {
         m5684n();
         mo5848b();
         AnimatableValueParser.m583w(str);
@@ -771,8 +767,8 @@ public final class C4040g extends AbstractC4074i9 {
     }
 
     @WorkerThread
-    /* renamed from: P */
-    public final boolean m5618P(String str, int i, C3769o0 c3769o0) throws IllegalStateException {
+    /* JADX INFO: renamed from: P */
+    public final boolean m5618P(String str, int i, C3769o0 c3769o0) {
         m5684n();
         mo5848b();
         AnimatableValueParser.m583w(str);
@@ -801,7 +797,7 @@ public final class C4040g extends AbstractC4074i9 {
         }
     }
 
-    /* renamed from: Q */
+    /* JADX INFO: renamed from: Q */
     public final boolean m5619Q(String str, Long l, long j, C3579a1 c3579a1) {
         mo5848b();
         m5684n();
@@ -827,13 +823,13 @@ public final class C4040g extends AbstractC4074i9 {
         }
     }
 
-    /* renamed from: R */
+    /* JADX INFO: renamed from: R */
     public final boolean m5620R() {
         return this.f11202a.f11254b.getDatabasePath("google_app_measurement.db").exists();
     }
 
     @WorkerThread
-    /* renamed from: S */
+    /* JADX INFO: renamed from: S */
     public final long m5621S(String str, String[] strArr) {
         Cursor cursor = null;
         try {
@@ -857,12 +853,8 @@ public final class C4040g extends AbstractC4074i9 {
         }
     }
 
-    /* JADX WARN: Removed duplicated region for block: B:93:0x02a3  */
     @WorkerThread
-    /* renamed from: T */
-    /*
-        Code decompiled incorrectly, please refer to instructions dump.
-    */
+    /* JADX INFO: renamed from: T */
     public final C3973a4 m5622T(String str) {
         Cursor cursorQuery;
         AnimatableValueParser.m583w(str);
@@ -957,24 +949,23 @@ public final class C4040g extends AbstractC4074i9 {
             } catch (Throwable th) {
                 th = th;
                 cursor = cursorQuery;
-                if (cursor != null) {
-                    cursor.close();
-                }
-                throw th;
             }
+            th = th;
+            cursor = cursorQuery;
         } catch (SQLiteException e2) {
             e = e2;
             cursorQuery = null;
         } catch (Throwable th2) {
             th = th2;
-            if (cursor != null) {
-            }
-            throw th;
         }
+        if (cursor != null) {
+            cursor.close();
+        }
+        throw th;
     }
 
     @WorkerThread
-    /* renamed from: U */
+    /* JADX INFO: renamed from: U */
     public final List<zzz> m5623U(String str, String str2, String str3) {
         AnimatableValueParser.m583w(str);
         mo5848b();
@@ -994,8 +985,8 @@ public final class C4040g extends AbstractC4074i9 {
     }
 
     @WorkerThread
-    /* renamed from: V */
-    public final void m5624V(String str, String str2) throws IllegalStateException {
+    /* JADX INFO: renamed from: V */
+    public final void m5624V(String str, String str2) {
         AnimatableValueParser.m583w(str);
         AnimatableValueParser.m583w(str2);
         mo5848b();
@@ -1007,7 +998,7 @@ public final class C4040g extends AbstractC4074i9 {
         }
     }
 
-    /* renamed from: W */
+    /* JADX INFO: renamed from: W */
     public final boolean m5625W(String str, List<Integer> list) {
         AnimatableValueParser.m583w(str);
         m5684n();
@@ -1036,7 +1027,7 @@ public final class C4040g extends AbstractC4074i9 {
         }
     }
 
-    /* renamed from: X */
+    /* JADX INFO: renamed from: X */
     public final long m5626X(String str) {
         AnimatableValueParser.m583w(str);
         mo5848b();
@@ -1051,7 +1042,7 @@ public final class C4040g extends AbstractC4074i9 {
 
     /* JADX WARN: Removed duplicated region for block: B:32:0x00a1  */
     @WorkerThread
-    /* renamed from: Y */
+    /* JADX INFO: renamed from: Y */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
@@ -1082,11 +1073,6 @@ public final class C4040g extends AbstractC4074i9 {
                     return c4207u9;
                 } catch (SQLiteException e) {
                     e = e;
-                    mo5726g().f11141f.m5863d("Error querying user property. appId", C4157q3.m5788s(str), m5865d().m5769y(str2), e);
-                    if (cursorQuery != null) {
-                        cursorQuery.close();
-                    }
-                    return null;
                 }
             } catch (SQLiteException e2) {
                 e = e2;
@@ -1107,11 +1093,16 @@ public final class C4040g extends AbstractC4074i9 {
             }
             throw th;
         }
+        mo5726g().f11141f.m5863d("Error querying user property. appId", C4157q3.m5788s(str), m5865d().m5769y(str2), e);
+        if (cursorQuery != null) {
+            cursorQuery.close();
+        }
+        return null;
     }
 
     /* JADX WARN: Removed duplicated region for block: B:36:0x0119  */
     @WorkerThread
-    /* renamed from: Z */
+    /* JADX INFO: renamed from: Z */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
@@ -1160,11 +1151,6 @@ public final class C4040g extends AbstractC4074i9 {
                 return zzzVar;
             } catch (SQLiteException e2) {
                 e = e2;
-                mo5726g().f11141f.m5863d("Error querying conditional property", C4157q3.m5788s(str), m5865d().m5769y(str2), e);
-                if (cursorQuery != null) {
-                    cursorQuery.close();
-                }
-                return null;
             }
         } catch (SQLiteException e3) {
             e = e3;
@@ -1175,11 +1161,16 @@ public final class C4040g extends AbstractC4074i9 {
             }
             throw th;
         }
+        mo5726g().f11141f.m5863d("Error querying conditional property", C4157q3.m5788s(str), m5865d().m5769y(str2), e);
+        if (cursorQuery != null) {
+            cursorQuery.close();
+        }
+        return null;
     }
 
     @WorkerThread
-    /* renamed from: a0 */
-    public final int m5629a0(String str, String str2) throws IllegalStateException {
+    /* JADX INFO: renamed from: a0 */
+    public final int m5629a0(String str, String str2) {
         AnimatableValueParser.m583w(str);
         AnimatableValueParser.m583w(str2);
         mo5848b();
@@ -1193,7 +1184,7 @@ public final class C4040g extends AbstractC4074i9 {
     }
 
     @WorkerThread
-    /* renamed from: b0 */
+    /* JADX INFO: renamed from: b0 */
     public final void m5630b0() {
         m5684n();
         m5640t().beginTransaction();
@@ -1204,7 +1195,7 @@ public final class C4040g extends AbstractC4074i9 {
     /* JADX WARN: Type inference failed for: r9v0 */
     /* JADX WARN: Type inference failed for: r9v1, types: [android.database.Cursor] */
     /* JADX WARN: Type inference failed for: r9v2 */
-    /* renamed from: c0 */
+    /* JADX INFO: renamed from: c0 */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
@@ -1280,7 +1271,7 @@ public final class C4040g extends AbstractC4074i9 {
     /* JADX WARN: Type inference failed for: r9v0 */
     /* JADX WARN: Type inference failed for: r9v1, types: [android.database.Cursor] */
     /* JADX WARN: Type inference failed for: r9v2 */
-    /* renamed from: d0 */
+    /* JADX INFO: renamed from: d0 */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
@@ -1352,20 +1343,20 @@ public final class C4040g extends AbstractC4074i9 {
     }
 
     @WorkerThread
-    /* renamed from: e0 */
+    /* JADX INFO: renamed from: e0 */
     public final void m5633e0() {
         m5684n();
         m5640t().endTransaction();
     }
 
-    /* renamed from: f0 */
+    /* JADX INFO: renamed from: f0 */
     public final long m5634f0(String str) {
         AnimatableValueParser.m583w(str);
         return m5643w("select count(1) from events where app_id=? and name not like '!_%' escape '!'", new String[]{str}, 0L);
     }
 
     @WorkerThread
-    /* renamed from: g0 */
+    /* JADX INFO: renamed from: g0 */
     public final long m5635g0(String str, String str2) throws Throwable {
         long jM5643w;
         AnimatableValueParser.m583w(str);
@@ -1383,55 +1374,55 @@ public final class C4040g extends AbstractC4074i9 {
             try {
                 try {
                     jM5643w = m5643w(sb.toString(), new String[]{str}, -1L);
-                    if (jM5643w == -1) {
-                        ContentValues contentValues = new ContentValues();
-                        contentValues.put("app_id", str);
-                        contentValues.put("first_open_count", (Integer) 0);
-                        contentValues.put("previous_install_count", (Integer) 0);
-                        if (sQLiteDatabaseM5640t.insertWithOnConflict("app2", null, contentValues, 5) == -1) {
-                            mo5726g().f11141f.m5862c("Failed to insert column (got -1). appId", C4157q3.m5788s(str), str2);
-                            sQLiteDatabaseM5640t.endTransaction();
-                            return -1L;
-                        }
-                        jM5643w = 0;
-                    }
                 } catch (SQLiteException e) {
                     e = e;
-                }
-                try {
-                    ContentValues contentValues2 = new ContentValues();
-                    contentValues2.put("app_id", str);
-                    contentValues2.put(str2, Long.valueOf(1 + jM5643w));
-                    if (sQLiteDatabaseM5640t.update("app2", contentValues2, "app_id = ?", new String[]{str}) == 0) {
-                        mo5726g().f11141f.m5862c("Failed to update column (got 0). appId", C4157q3.m5788s(str), str2);
-                        sQLiteDatabaseM5640t.endTransaction();
-                        return -1L;
-                    }
-                    sQLiteDatabaseM5640t.setTransactionSuccessful();
-                    sQLiteDatabaseM5640t.endTransaction();
-                    return jM5643w;
-                } catch (SQLiteException e2) {
-                    e = e2;
-                    j = jM5643w;
-                    mo5726g().f11141f.m5863d("Error inserting column. appId", C4157q3.m5788s(str), str2, e);
-                    sQLiteDatabaseM5640t.endTransaction();
-                    return j;
                 }
             } catch (Throwable th) {
                 th = th;
                 sQLiteDatabaseM5640t.endTransaction();
                 throw th;
             }
-        } catch (SQLiteException e3) {
-            e = e3;
+        } catch (SQLiteException e2) {
+            e = e2;
         } catch (Throwable th2) {
             th = th2;
+        }
+        if (jM5643w == -1) {
+            ContentValues contentValues = new ContentValues();
+            contentValues.put("app_id", str);
+            contentValues.put("first_open_count", (Integer) 0);
+            contentValues.put("previous_install_count", (Integer) 0);
+            if (sQLiteDatabaseM5640t.insertWithOnConflict("app2", null, contentValues, 5) == -1) {
+                mo5726g().f11141f.m5862c("Failed to insert column (got -1). appId", C4157q3.m5788s(str), str2);
+                sQLiteDatabaseM5640t.endTransaction();
+                return -1L;
+            }
+            jM5643w = 0;
+            mo5726g().f11141f.m5863d("Error inserting column. appId", C4157q3.m5788s(str), str2, e);
+            sQLiteDatabaseM5640t.endTransaction();
+            return j;
+        }
+        try {
+            ContentValues contentValues2 = new ContentValues();
+            contentValues2.put("app_id", str);
+            contentValues2.put(str2, Long.valueOf(1 + jM5643w));
+            if (sQLiteDatabaseM5640t.update("app2", contentValues2, "app_id = ?", new String[]{str}) == 0) {
+                mo5726g().f11141f.m5862c("Failed to update column (got 0). appId", C4157q3.m5788s(str), str2);
+                sQLiteDatabaseM5640t.endTransaction();
+                return -1L;
+            }
+            sQLiteDatabaseM5640t.setTransactionSuccessful();
+            sQLiteDatabaseM5640t.endTransaction();
+            return jM5643w;
+        } catch (SQLiteException e3) {
+            e = e3;
+            j = jM5643w;
         }
     }
 
     /* JADX WARN: Not initialized variable reg: 1, insn: 0x00ca: MOVE (r0 I:??[OBJECT, ARRAY]) = (r1 I:??[OBJECT, ARRAY]), block:B:44:0x00ca */
     /* JADX WARN: Removed duplicated region for block: B:46:0x00cd  */
-    /* renamed from: h0 */
+    /* JADX INFO: renamed from: h0 */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
@@ -1502,7 +1493,7 @@ public final class C4040g extends AbstractC4074i9 {
     }
 
     @WorkerThread
-    /* renamed from: i0 */
+    /* JADX INFO: renamed from: i0 */
     public final void m5637i0() {
         mo5848b();
         m5684n();
@@ -1526,7 +1517,7 @@ public final class C4040g extends AbstractC4074i9 {
         }
     }
 
-    /* renamed from: j0 */
+    /* JADX INFO: renamed from: j0 */
     public final long m5638j0() {
         Cursor cursorRawQuery = null;
         try {
@@ -1555,20 +1546,20 @@ public final class C4040g extends AbstractC4074i9 {
     }
 
     @Override // p007b.p225i.p226a.p288f.p330i.p332b.AbstractC4074i9
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public final boolean mo5515p() {
         return false;
     }
 
     @WorkerThread
-    /* renamed from: s */
+    /* JADX INFO: renamed from: s */
     public final void m5639s() {
         m5684n();
         m5640t().setTransactionSuccessful();
     }
 
     @WorkerThread
-    /* renamed from: t */
+    /* JADX INFO: renamed from: t */
     public final SQLiteDatabase m5640t() {
         mo5848b();
         try {
@@ -1585,7 +1576,7 @@ public final class C4040g extends AbstractC4074i9 {
     /* JADX WARN: Type inference failed for: r0v2 */
     /* JADX WARN: Type inference failed for: r0v4, types: [android.database.Cursor] */
     @WorkerThread
-    /* renamed from: u */
+    /* JADX INFO: renamed from: u */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
@@ -1631,7 +1622,7 @@ public final class C4040g extends AbstractC4074i9 {
         }
     }
 
-    /* renamed from: v */
+    /* JADX INFO: renamed from: v */
     public final long m5642v(C3635e1 c3635e1) throws IOException {
         mo5848b();
         m5684n();
@@ -1652,7 +1643,7 @@ public final class C4040g extends AbstractC4074i9 {
     }
 
     @WorkerThread
-    /* renamed from: w */
+    /* JADX INFO: renamed from: w */
     public final long m5643w(String str, String[] strArr, long j) {
         Cursor cursorRawQuery = null;
         try {
@@ -1678,7 +1669,7 @@ public final class C4040g extends AbstractC4074i9 {
     }
 
     @WorkerThread
-    /* renamed from: x */
+    /* JADX INFO: renamed from: x */
     public final C4028f m5644x(long j, String str, long j2, boolean z2, boolean z3, boolean z4, boolean z5, boolean z6) {
         AnimatableValueParser.m583w(str);
         mo5848b();
@@ -1743,18 +1734,14 @@ public final class C4040g extends AbstractC4074i9 {
     }
 
     @WorkerThread
-    /* renamed from: y */
+    /* JADX INFO: renamed from: y */
     public final C4028f m5645y(long j, String str, boolean z2, boolean z3) {
         return m5644x(j, str, 1L, false, false, z2, false, z3);
     }
 
     /* JADX WARN: Not initialized variable reg: 14, insn: 0x0143: MOVE (r18 I:??[OBJECT, ARRAY]) = (r14 I:??[OBJECT, ARRAY]), block:B:64:0x0143 */
-    /* JADX WARN: Removed duplicated region for block: B:61:0x013e  */
     @WorkerThread
-    /* renamed from: z */
-    /*
-        Code decompiled incorrectly, please refer to instructions dump.
-    */
+    /* JADX INFO: renamed from: z */
     public final C4098l m5646z(String str, String str2) {
         Cursor cursorQuery;
         Cursor cursor;
@@ -1787,11 +1774,6 @@ public final class C4040g extends AbstractC4074i9 {
                             boolValueOf = Boolean.valueOf(cursorQuery.getLong(7) == 1);
                         } catch (SQLiteException e) {
                             e = e;
-                            mo5726g().f11141f.m5863d("Error querying events. appId", C4157q3.m5788s(str), m5865d().m5766u(str2), e);
-                            if (cursorQuery != null) {
-                                cursorQuery.close();
-                            }
-                            return null;
                         }
                     }
                     cursor2 = cursorQuery;
@@ -1805,10 +1787,6 @@ public final class C4040g extends AbstractC4074i9 {
                     } catch (SQLiteException e2) {
                         e = e2;
                         cursorQuery = cursor2;
-                        mo5726g().f11141f.m5863d("Error querying events. appId", C4157q3.m5788s(str), m5865d().m5766u(str2), e);
-                        if (cursorQuery != null) {
-                        }
-                        return null;
                     } catch (Throwable th) {
                         th = th;
                         cursor3 = cursor2;
@@ -1833,5 +1811,10 @@ public final class C4040g extends AbstractC4074i9 {
         } catch (Throwable th4) {
             th = th4;
         }
+        mo5726g().f11141f.m5863d("Error querying events. appId", C4157q3.m5788s(str), m5865d().m5766u(str2), e);
+        if (cursorQuery != null) {
+            cursorQuery.close();
+        }
+        return null;
     }
 }

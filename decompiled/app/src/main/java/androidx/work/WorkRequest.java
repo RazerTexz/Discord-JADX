@@ -14,7 +14,7 @@ import java.util.Set;
 import java.util.UUID;
 import java.util.concurrent.TimeUnit;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public abstract class WorkRequest {
     public static final long DEFAULT_BACKOFF_DELAY_MILLIS = 30000;
 

@@ -9,22 +9,22 @@ import androidx.viewbinding.ViewBinding;
 import com.discord.C5419R;
 import com.facebook.drawee.view.SimpleDraweeView;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public final class ViewGuildRoleSubscriptionBenefitItemBinding implements ViewBinding {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     @NonNull
     public final View f15460a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     @NonNull
     public final TextView f15461b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     @NonNull
     public final SimpleDraweeView f15462c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     @NonNull
     public final TextView f15463d;
 
@@ -36,7 +36,7 @@ public final class ViewGuildRoleSubscriptionBenefitItemBinding implements ViewBi
     }
 
     @NonNull
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static ViewGuildRoleSubscriptionBenefitItemBinding m8396a(@NonNull LayoutInflater layoutInflater, @NonNull ViewGroup viewGroup) {
         layoutInflater.inflate(C5419R.layout.view_guild_role_subscription_benefit_item, viewGroup);
         int i = C5419R.id.guild_role_subscription_benefit_description;

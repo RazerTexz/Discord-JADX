@@ -26,60 +26,60 @@ import p007b.p485q.p486a.p488i.CropParameters;
 import p007b.p485q.p486a.p488i.ImageState;
 import p007b.p485q.p486a.p490k.ImageHeaderParser;
 
-/* compiled from: BitmapCropTask.java */
-/* renamed from: b.q.a.j.a, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.q.a.j.a, reason: use source file name */
+/* JADX INFO: compiled from: BitmapCropTask.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class BitmapCropTask extends AsyncTask<Void, Void, Throwable> {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final WeakReference<Context> f14409a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public Bitmap f14410b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final RectF f14411c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final RectF f14412d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public float f14413e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public float f14414f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public final int f14415g;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public final int f14416h;
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public final Bitmap.CompressFormat f14417i;
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final int f14418j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final String f14419k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final String f14420l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public final BitmapCropCallback f14421m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public int f14422n;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public int f14423o;
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public int f14424p;
 
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     public int f14425q;
 
     public BitmapCropTask(@NonNull Context context, @Nullable Bitmap bitmap, @NonNull ImageState imageState, @NonNull CropParameters cropParameters, @Nullable BitmapCropCallback bitmapCropCallback) {
@@ -98,22 +98,21 @@ public class BitmapCropTask extends AsyncTask<Void, Void, Throwable> {
         this.f14421m = bitmapCropCallback;
     }
 
-    /* JADX WARN: Multi-variable type inference failed */
     /* JADX WARN: Removed duplicated region for block: B:122:0x0268 A[EXC_TOP_SPLITTER, SYNTHETIC] */
     /* JADX WARN: Removed duplicated region for block: B:126:0x0261 A[EXC_TOP_SPLITTER, SYNTHETIC] */
     /* JADX WARN: Removed duplicated region for block: B:139:? A[SYNTHETIC] */
     /* JADX WARN: Removed duplicated region for block: B:36:0x0148  */
     /* JADX WARN: Removed duplicated region for block: B:69:0x01e3  */
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
     public final boolean m7471a() throws Throwable {
         boolean z2;
         FileChannel fileChannel;
-        FileChannel fileChannel2;
-        FileOutputStream fileOutputStream;
         ByteArrayOutputStream byteArrayOutputStream;
+        FileOutputStream fileOutputStream;
+        ByteArrayOutputStream byteArrayOutputStream2;
         if (this.f14415g > 0 && this.f14416h > 0) {
             float fWidth = this.f14411c.width() / this.f14413e;
             float fHeight = this.f14411c.height() / this.f14413e;
@@ -150,6 +149,11 @@ public class BitmapCropTask extends AsyncTask<Void, Void, Throwable> {
             z2 = Math.abs(this.f14411c.left - this.f14412d.left) > f || Math.abs(this.f14411c.top - this.f14412d.top) > f || Math.abs(this.f14411c.bottom - this.f14412d.bottom) > f || Math.abs(this.f14411c.right - this.f14412d.right) > f || this.f14414f != 0.0f;
         }
         Log.i("BitmapCropTask", "Should crop: " + z2);
+        FileChannel fileChannel2 = null;
+        ByteArrayOutputStream byteArrayOutputStream3 = null;
+        ByteArrayOutputStream byteArrayOutputStream4 = null;
+        fileOutputStream = null;
+        FileOutputStream fileOutputStream2 = null;
         FileChannel channel = null;
         if (!z2) {
             String str = this.f14419k;
@@ -168,9 +172,9 @@ public class BitmapCropTask extends AsyncTask<Void, Void, Throwable> {
                     } catch (Throwable th) {
                         th = th;
                         fileChannel = channel;
-                        channel = channel2;
-                        if (channel != null) {
-                            channel.close();
+                        fileChannel2 = channel2;
+                        if (fileChannel2 != null) {
+                            fileChannel2.close();
                         }
                         if (fileChannel != null) {
                             fileChannel.close();
@@ -191,7 +195,7 @@ public class BitmapCropTask extends AsyncTask<Void, Void, Throwable> {
                 try {
                     fileOutputStream = new FileOutputStream(new File(this.f14420l), false);
                     try {
-                        byteArrayOutputStream = new ByteArrayOutputStream();
+                        byteArrayOutputStream2 = new ByteArrayOutputStream();
                     } catch (IOException e) {
                         e = e;
                     } catch (Throwable th3) {
@@ -199,52 +203,52 @@ public class BitmapCropTask extends AsyncTask<Void, Void, Throwable> {
                     }
                 } catch (IOException e2) {
                     e = e2;
-                    fileChannel2 = null;
+                    byteArrayOutputStream = null;
                 } catch (Throwable th4) {
                     th = th4;
-                    fileChannel2 = null;
+                    byteArrayOutputStream = null;
                 }
                 try {
-                    bitmapCreateBitmap2.compress(this.f14417i, this.f14418j, byteArrayOutputStream);
-                    fileOutputStream.write(byteArrayOutputStream.toByteArray());
+                    bitmapCreateBitmap2.compress(this.f14417i, this.f14418j, byteArrayOutputStream2);
+                    fileOutputStream.write(byteArrayOutputStream2.toByteArray());
                     bitmapCreateBitmap2.recycle();
                     try {
                         fileOutputStream.close();
                     } catch (IOException unused) {
                     }
-                    byteArrayOutputStream.close();
+                    byteArrayOutputStream2.close();
                 } catch (IOException e3) {
                     e = e3;
-                    channel = byteArrayOutputStream;
-                    fileChannel2 = channel;
-                    channel = fileOutputStream;
+                    byteArrayOutputStream3 = byteArrayOutputStream2;
+                    byteArrayOutputStream = byteArrayOutputStream3;
+                    fileOutputStream2 = fileOutputStream;
                     try {
                         Log.e("BitmapCropTask", e.getLocalizedMessage());
-                        if (channel != null) {
+                        if (fileOutputStream2 != null) {
                             try {
-                                channel.close();
+                                fileOutputStream2.close();
                             } catch (IOException unused2) {
                             }
                         }
-                        if (fileChannel2 != null) {
-                            fileChannel2.close();
+                        if (byteArrayOutputStream != null) {
+                            byteArrayOutputStream.close();
                         }
                         if (this.f14417i.equals(Bitmap.CompressFormat.JPEG)) {
                         }
                         return true;
                     } catch (Throwable th5) {
                         th = th5;
-                        if (channel != null) {
+                        if (fileOutputStream2 != null) {
                             try {
-                                channel.close();
+                                fileOutputStream2.close();
                             } catch (IOException unused3) {
                             }
                         }
-                        if (fileChannel2 != null) {
+                        if (byteArrayOutputStream != null) {
                             throw th;
                         }
                         try {
-                            fileChannel2.close();
+                            byteArrayOutputStream.close();
                             throw th;
                         } catch (IOException unused4) {
                             throw th;
@@ -252,12 +256,12 @@ public class BitmapCropTask extends AsyncTask<Void, Void, Throwable> {
                     }
                 } catch (Throwable th6) {
                     th = th6;
-                    channel = byteArrayOutputStream;
-                    fileChannel2 = channel;
-                    channel = fileOutputStream;
-                    if (channel != null) {
+                    byteArrayOutputStream4 = byteArrayOutputStream2;
+                    byteArrayOutputStream = byteArrayOutputStream4;
+                    fileOutputStream2 = fileOutputStream;
+                    if (fileOutputStream2 != null) {
                     }
-                    if (fileChannel2 != null) {
+                    if (byteArrayOutputStream != null) {
                     }
                 }
             }

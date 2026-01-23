@@ -14,18 +14,18 @@ import java.util.Iterator;
 import java.util.List;
 import p007b.p100d.p104b.p105a.outline;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class DiffUtil {
     private static final Comparator<Diagonal> DIAGONAL_COMPARATOR = new C05461();
 
-    /* renamed from: androidx.recyclerview.widget.DiffUtil$1 */
+    /* JADX INFO: renamed from: androidx.recyclerview.widget.DiffUtil$1 */
     public class C05461 implements Comparator<Diagonal> {
         @Override // java.util.Comparator
         public /* bridge */ /* synthetic */ int compare(Diagonal diagonal, Diagonal diagonal2) {
             return compare2(diagonal, diagonal2);
         }
 
-        /* renamed from: compare, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: compare, reason: avoid collision after fix types in other method */
         public int compare2(Diagonal diagonal, Diagonal diagonal2) {
             return diagonal.f149x - diagonal2.f149x;
         }
@@ -76,10 +76,10 @@ public class DiffUtil {
     public static class Diagonal {
         public final int size;
 
-        /* renamed from: x */
+        /* JADX INFO: renamed from: x */
         public final int f149x;
 
-        /* renamed from: y */
+        /* JADX INFO: renamed from: y */
         public final int f150y;
 
         public Diagonal(int i, int i2, int i3) {

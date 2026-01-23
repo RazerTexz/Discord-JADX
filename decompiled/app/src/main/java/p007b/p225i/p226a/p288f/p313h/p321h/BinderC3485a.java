@@ -13,9 +13,9 @@ import p007b.p085c.p086a.p087a0.AnimatableValueParser;
 import p007b.p225i.p361c.p391o.p392b.AbstractBinderC4778k;
 import p007b.p225i.p361c.p391o.p392b.BinderC4774g;
 
-/* compiled from: com.google.firebase:firebase-dynamic-links@@19.1.1 */
-/* renamed from: b.i.a.f.h.h.a */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.h.h.a */
+/* JADX INFO: compiled from: com.google.firebase:firebase-dynamic-links@@19.1.1 */
+/* JADX INFO: loaded from: classes3.dex */
 public class BinderC3485a extends Binder implements IInterface {
     public BinderC3485a(String str) {
         attachInterface(this, str);

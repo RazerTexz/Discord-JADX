@@ -6,8 +6,8 @@ import kotlin.jvm.functions.Function2;
 import p507d0.p592z.p594d.Lambda;
 import p658rx.subjects.PublishSubject;
 
-/* compiled from: ChatInputViewModel.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: ChatInputViewModel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class ChatInputViewModel$sendMessage$onMessageTooLong$1 extends Lambda implements Function2<Integer, Integer, Unit> {
     public final /* synthetic */ ChatInputViewModel this$0;
 

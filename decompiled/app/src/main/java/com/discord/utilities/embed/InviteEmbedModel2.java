@@ -9,9 +9,9 @@ import kotlin.jvm.functions.Function4;
 import p507d0.p592z.p594d.FunctionReferenceImpl;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: InviteEmbedModel.kt */
-/* renamed from: com.discord.utilities.embed.InviteEmbedModel$Companion$observe$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.utilities.embed.InviteEmbedModel$Companion$observe$1, reason: use source file name */
+/* JADX INFO: compiled from: InviteEmbedModel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final /* synthetic */ class InviteEmbedModel2 extends FunctionReferenceImpl implements Function4<Map<Long, ? extends Channel>, Map<String, ? extends StoreInstantInvites.InviteState>, Map<Long, ? extends StageInstance>, Map<Long, ? extends StoreRequestedStageChannels.StageInstanceState>, InviteEmbedModel> {
     public static final InviteEmbedModel2 INSTANCE = new InviteEmbedModel2();
 
@@ -24,7 +24,7 @@ public final /* synthetic */ class InviteEmbedModel2 extends FunctionReferenceIm
         return invoke2((Map<Long, Channel>) map, map2, (Map<Long, StageInstance>) map3, (Map<Long, StoreRequestedStageChannels.StageInstanceState>) map4);
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final InviteEmbedModel invoke2(Map<Long, Channel> map, Map<String, ? extends StoreInstantInvites.InviteState> map2, Map<Long, StageInstance> map3, Map<Long, StoreRequestedStageChannels.StageInstanceState> map4) {
         Intrinsics3.checkNotNullParameter(map, "p1");
         Intrinsics3.checkNotNullParameter(map2, "p2");

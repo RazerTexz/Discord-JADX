@@ -45,14 +45,14 @@ import p007b.p008a.p027k.FormatUtils;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetChatListAdapterItemAutoModSystemMessageEmbed.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetChatListAdapterItemAutoModSystemMessageEmbed.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetChatListAdapterItemAutoModSystemMessageEmbed extends WidgetChatListItem {
     private final WidgetChatListAdapterItemAutoModSystemMessageEmbedBinding binding;
     private final ChannelSelector channelSelector;
 
-    /* compiled from: WidgetChatListAdapterItemAutoModSystemMessageEmbed.kt */
-    /* renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemAutoModSystemMessageEmbed$getMessageRenderContext$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemAutoModSystemMessageEmbed$getMessageRenderContext$1 */
+    /* JADX INFO: compiled from: WidgetChatListAdapterItemAutoModSystemMessageEmbed.kt */
     public static final class C80261 extends Lambda implements Function3<Context, String, String, Unit> {
         public static final C80261 INSTANCE = new C80261();
 
@@ -66,7 +66,7 @@ public final class WidgetChatListAdapterItemAutoModSystemMessageEmbed extends Wi
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Context context, String str, String str2) {
             Intrinsics3.checkNotNullParameter(context, "clickContext");
             Intrinsics3.checkNotNullParameter(str, "url");
@@ -74,8 +74,8 @@ public final class WidgetChatListAdapterItemAutoModSystemMessageEmbed extends Wi
         }
     }
 
-    /* compiled from: WidgetChatListAdapterItemAutoModSystemMessageEmbed.kt */
-    /* renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemAutoModSystemMessageEmbed$getMessageRenderContext$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemAutoModSystemMessageEmbed$getMessageRenderContext$2 */
+    /* JADX INFO: compiled from: WidgetChatListAdapterItemAutoModSystemMessageEmbed.kt */
     public static final class C80272 extends Lambda implements Function1<String, Unit> {
         public C80272() {
             super(1);
@@ -87,15 +87,15 @@ public final class WidgetChatListAdapterItemAutoModSystemMessageEmbed extends Wi
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(String str) {
             Intrinsics3.checkNotNullParameter(str, "url");
             WidgetChatListAdapterItemAutoModSystemMessageEmbed.access$getAdapter$p(WidgetChatListAdapterItemAutoModSystemMessageEmbed.this).getEventHandler().onUrlLongClicked(str);
         }
     }
 
-    /* compiled from: WidgetChatListAdapterItemAutoModSystemMessageEmbed.kt */
-    /* renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemAutoModSystemMessageEmbed$getMessageRenderContext$3 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemAutoModSystemMessageEmbed$getMessageRenderContext$3 */
+    /* JADX INFO: compiled from: WidgetChatListAdapterItemAutoModSystemMessageEmbed.kt */
     public static final class C80283 extends Lambda implements Function1<SpoilerNode<?>, Unit> {
         public static final C80283 INSTANCE = new C80283();
 
@@ -109,14 +109,14 @@ public final class WidgetChatListAdapterItemAutoModSystemMessageEmbed extends Wi
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(SpoilerNode<?> spoilerNode) {
             Intrinsics3.checkNotNullParameter(spoilerNode, "it");
         }
     }
 
-    /* compiled from: WidgetChatListAdapterItemAutoModSystemMessageEmbed.kt */
-    /* renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemAutoModSystemMessageEmbed$getMessageRenderContext$4 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemAutoModSystemMessageEmbed$getMessageRenderContext$4 */
+    /* JADX INFO: compiled from: WidgetChatListAdapterItemAutoModSystemMessageEmbed.kt */
     public static final class C80294 extends Lambda implements Function1<Long, Unit> {
         public C80294() {
             super(1);
@@ -134,8 +134,8 @@ public final class WidgetChatListAdapterItemAutoModSystemMessageEmbed extends Wi
         }
     }
 
-    /* compiled from: WidgetChatListAdapterItemAutoModSystemMessageEmbed.kt */
-    /* renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemAutoModSystemMessageEmbed$getMessageRenderContext$5 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemAutoModSystemMessageEmbed$getMessageRenderContext$5 */
+    /* JADX INFO: compiled from: WidgetChatListAdapterItemAutoModSystemMessageEmbed.kt */
     public static final class C80305 extends Lambda implements Function1<Long, Unit> {
         public final /* synthetic */ Context $context;
 
@@ -156,8 +156,8 @@ public final class WidgetChatListAdapterItemAutoModSystemMessageEmbed extends Wi
         }
     }
 
-    /* compiled from: WidgetChatListAdapterItemAutoModSystemMessageEmbed.kt */
-    /* renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemAutoModSystemMessageEmbed$onConfigure$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemAutoModSystemMessageEmbed$onConfigure$1 */
+    /* JADX INFO: compiled from: WidgetChatListAdapterItemAutoModSystemMessageEmbed.kt */
     public static final class ViewOnClickListenerC80311 implements View.OnClickListener {
         public final /* synthetic */ AutoModSystemMessageEmbedEntry $messageEntry;
 
@@ -171,8 +171,8 @@ public final class WidgetChatListAdapterItemAutoModSystemMessageEmbed extends Wi
         }
     }
 
-    /* compiled from: WidgetChatListAdapterItemAutoModSystemMessageEmbed.kt */
-    /* renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemAutoModSystemMessageEmbed$onConfigure$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemAutoModSystemMessageEmbed$onConfigure$2 */
+    /* JADX INFO: compiled from: WidgetChatListAdapterItemAutoModSystemMessageEmbed.kt */
     public static final class ViewOnClickListenerC80322 implements View.OnClickListener {
         public final /* synthetic */ AutoModSystemMessageEmbedEntry $messageEntry;
 
@@ -186,8 +186,8 @@ public final class WidgetChatListAdapterItemAutoModSystemMessageEmbed extends Wi
         }
     }
 
-    /* compiled from: WidgetChatListAdapterItemAutoModSystemMessageEmbed.kt */
-    /* renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemAutoModSystemMessageEmbed$onConfigure$3 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemAutoModSystemMessageEmbed$onConfigure$3 */
+    /* JADX INFO: compiled from: WidgetChatListAdapterItemAutoModSystemMessageEmbed.kt */
     public static final class C80333 extends Lambda implements Function1<RenderContext, Unit> {
         public final /* synthetic */ int $channelNameLength;
 
@@ -203,20 +203,20 @@ public final class WidgetChatListAdapterItemAutoModSystemMessageEmbed extends Wi
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(RenderContext renderContext) {
             Intrinsics3.checkNotNullParameter(renderContext, "$receiver");
             renderContext.m8422a("channelHook", new AnonymousClass1());
         }
 
-        /* compiled from: WidgetChatListAdapterItemAutoModSystemMessageEmbed.kt */
-        /* renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemAutoModSystemMessageEmbed$onConfigure$3$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemAutoModSystemMessageEmbed$onConfigure$3$1, reason: invalid class name */
+        /* JADX INFO: compiled from: WidgetChatListAdapterItemAutoModSystemMessageEmbed.kt */
         public static final class AnonymousClass1 extends Lambda implements Function1<Hook, Unit> {
             public AnonymousClass1() {
                 super(1);
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2(Hook hook) {
                 Intrinsics3.checkNotNullParameter(hook, "$receiver");
                 hook.styles.add(new SimpleRoundedBackgroundSpan(0, C80333.this.$channelNameLength, DimenUtils.dpToPixels(4), 0, ColorCompat.getThemedColor(WidgetChatListAdapterItemAutoModSystemMessageEmbed.access$getAdapter$p(WidgetChatListAdapterItemAutoModSystemMessageEmbed.this).getContext(), C5419R.attr.colorBackgroundModifierSelected), DimenUtils.dpToPixels(4), Integer.valueOf(ColorCompat.getThemedColor(WidgetChatListAdapterItemAutoModSystemMessageEmbed.access$getAdapter$p(WidgetChatListAdapterItemAutoModSystemMessageEmbed.this).getContext(), C5419R.attr.colorHeaderPrimary)), false, null, 0, 896, null));
@@ -230,8 +230,8 @@ public final class WidgetChatListAdapterItemAutoModSystemMessageEmbed extends Wi
         }
     }
 
-    /* compiled from: WidgetChatListAdapterItemAutoModSystemMessageEmbed.kt */
-    /* renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemAutoModSystemMessageEmbed$onConfigure$4 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemAutoModSystemMessageEmbed$onConfigure$4 */
+    /* JADX INFO: compiled from: WidgetChatListAdapterItemAutoModSystemMessageEmbed.kt */
     public static final class ViewOnClickListenerC80344 implements View.OnClickListener {
         public final /* synthetic */ Channel $channel;
 
@@ -245,8 +245,8 @@ public final class WidgetChatListAdapterItemAutoModSystemMessageEmbed extends Wi
         }
     }
 
-    /* compiled from: WidgetChatListAdapterItemAutoModSystemMessageEmbed.kt */
-    /* renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemAutoModSystemMessageEmbed$onConfigure$5 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemAutoModSystemMessageEmbed$onConfigure$5 */
+    /* JADX INFO: compiled from: WidgetChatListAdapterItemAutoModSystemMessageEmbed.kt */
     public static final class ViewOnClickListenerC80355 implements View.OnClickListener {
         public final /* synthetic */ AutoModSystemMessageEmbedEntry $messageEntry;
 
@@ -260,8 +260,8 @@ public final class WidgetChatListAdapterItemAutoModSystemMessageEmbed extends Wi
         }
     }
 
-    /* compiled from: WidgetChatListAdapterItemAutoModSystemMessageEmbed.kt */
-    /* renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemAutoModSystemMessageEmbed$onConfigure$6 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemAutoModSystemMessageEmbed$onConfigure$6 */
+    /* JADX INFO: compiled from: WidgetChatListAdapterItemAutoModSystemMessageEmbed.kt */
     public static final class ViewOnClickListenerC80366 implements View.OnClickListener {
         public final /* synthetic */ AutoModSystemMessageEmbedEntry $messageEntry;
 

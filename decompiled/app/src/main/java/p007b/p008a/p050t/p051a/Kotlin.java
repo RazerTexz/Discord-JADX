@@ -10,12 +10,12 @@ import p007b.p008a.p050t.p051a.Kotlin2;
 import p507d0.p592z.p594d.Intrinsics3;
 
 /* JADX INFO: Add missing generic type declarations: [RC, S] */
-/* compiled from: Kotlin.kt */
-/* renamed from: b.a.t.a.n, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.a.t.a.n, reason: use source file name */
+/* JADX INFO: compiled from: Kotlin.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class Kotlin<RC, S> extends Rule<RC, Node<RC>, S> {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final /* synthetic */ CodeStyleProviders f1942a;
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */

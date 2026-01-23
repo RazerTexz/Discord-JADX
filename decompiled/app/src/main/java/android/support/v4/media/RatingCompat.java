@@ -5,18 +5,18 @@ import android.os.Parcel;
 import android.os.Parcelable;
 import p007b.p100d.p104b.p105a.outline;
 
+/* JADX INFO: loaded from: classes.dex */
 @SuppressLint({"BanParcelableUsage"})
-/* loaded from: classes.dex */
 public final class RatingCompat implements Parcelable {
     public static final Parcelable.Creator<RatingCompat> CREATOR = new C0019a();
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final int f38j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final float f39k;
 
-    /* renamed from: android.support.v4.media.RatingCompat$a */
+    /* JADX INFO: renamed from: android.support.v4.media.RatingCompat$a */
     public class C0019a implements Parcelable.Creator<RatingCompat> {
         @Override // android.os.Parcelable.Creator
         public RatingCompat createFromParcel(Parcel parcel) {

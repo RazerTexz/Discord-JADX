@@ -23,59 +23,59 @@ import p507d0.p580t._Collections;
 import p507d0.p580t._Sets;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: SpecialGenericSignatures.kt */
-/* renamed from: d0.e0.p.d.m0.e.a.e0, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.e.a.e0, reason: use source file name */
+/* JADX INFO: compiled from: SpecialGenericSignatures.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public class SpecialGenericSignatures {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final a f23195a = new a(null);
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static final List<a.C13309a> f23196b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public static final List<String> f23197c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public static final Map<a.C13309a, c> f23198d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public static final Map<String, c> f23199e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public static final Set<Name> f23200f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public static final Set<String> f23201g;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public static final a.C13309a f23202h;
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public static final Map<a.C13309a, Name> f23203i;
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static final Map<String, Name> f23204j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public static final List<Name> f23205k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public static final Map<Name, List<Name>> f23206l;
 
-    /* compiled from: SpecialGenericSignatures.kt */
-    /* renamed from: d0.e0.p.d.m0.e.a.e0$a */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.e.a.e0$a */
+    /* JADX INFO: compiled from: SpecialGenericSignatures.kt */
     public static final class a {
 
-        /* compiled from: SpecialGenericSignatures.kt */
-        /* renamed from: d0.e0.p.d.m0.e.a.e0$a$a, reason: collision with other inner class name */
+        /* JADX INFO: renamed from: d0.e0.p.d.m0.e.a.e0$a$a, reason: collision with other inner class name */
+        /* JADX INFO: compiled from: SpecialGenericSignatures.kt */
         public static final class C13309a {
 
-            /* renamed from: a */
+            /* JADX INFO: renamed from: a */
             public final Name f23207a;
 
-            /* renamed from: b */
+            /* JADX INFO: renamed from: b */
             public final String f23208b;
 
             public C13309a(Name name, String str) {
@@ -164,8 +164,8 @@ public class SpecialGenericSignatures {
         }
     }
 
-    /* compiled from: SpecialGenericSignatures.kt */
-    /* renamed from: d0.e0.p.d.m0.e.a.e0$b */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.e.a.e0$b */
+    /* JADX INFO: compiled from: SpecialGenericSignatures.kt */
     public enum b {
         ONE_COLLECTION_PARAMETER("Ljava/util/Collection<+Ljava/lang/Object;>;", false),
         OBJECT_PARAMETER_NON_GENERIC(null, true),
@@ -179,7 +179,7 @@ public class SpecialGenericSignatures {
             this.isObjectReplacedWithTypeParameter = z2;
         }
 
-        /* renamed from: values, reason: to resolve conflict with enum method */
+        /* JADX INFO: renamed from: values, reason: to resolve conflict with enum method */
         public static b[] valuesCustom() {
             b[] bVarArrValuesCustom = values();
             b[] bVarArr = new b[bVarArrValuesCustom.length];
@@ -190,28 +190,28 @@ public class SpecialGenericSignatures {
 
     /* JADX WARN: Failed to restore enum class, 'enum' modifier and super class removed */
     /* JADX WARN: Unknown enum class pattern. Please report as an issue! */
-    /* compiled from: SpecialGenericSignatures.kt */
-    /* renamed from: d0.e0.p.d.m0.e.a.e0$c */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.e.a.e0$c */
+    /* JADX INFO: compiled from: SpecialGenericSignatures.kt */
     public static final class c {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public static final c f23213j;
 
-        /* renamed from: k */
+        /* JADX INFO: renamed from: k */
         public static final c f23214k;
 
-        /* renamed from: l */
+        /* JADX INFO: renamed from: l */
         public static final c f23215l;
 
-        /* renamed from: m */
+        /* JADX INFO: renamed from: m */
         public static final c f23216m;
 
-        /* renamed from: n */
+        /* JADX INFO: renamed from: n */
         public static final /* synthetic */ c[] f23217n;
         private final Object defaultValue;
 
-        /* compiled from: SpecialGenericSignatures.kt */
-        /* renamed from: d0.e0.p.d.m0.e.a.e0$c$a */
+        /* JADX INFO: renamed from: d0.e0.p.d.m0.e.a.e0$c$a */
+        /* JADX INFO: compiled from: SpecialGenericSignatures.kt */
         public static final class a extends c {
             public a(String str, int i) {
                 super(str, i, null, null);

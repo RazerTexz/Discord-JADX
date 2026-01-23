@@ -31,12 +31,12 @@ import p507d0.p592z.p594d.Lambda;
 import p507d0.p592z.p594d.Reflection2;
 import p658rx.Observable;
 
-/* compiled from: WidgetRemoteAuth.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetRemoteAuth.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetRemoteAuth extends AppFragment {
     public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetRemoteAuth.class, "binding", "getBinding()Lcom/discord/databinding/WidgetRemoteAuthBinding;", 0)};
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private static final String EXTRA_REMOTE_AUTH_FINGERPRINT = "REMOTE_AUTH_FINGERPRINT";
     private static final int VIEW_LOADED = 0;
@@ -44,13 +44,13 @@ public final class WidgetRemoteAuth extends AppFragment {
     private static final int VIEW_NOT_FOUND = 1;
     private static final int VIEW_SUCCEEDED = 3;
 
-    /* renamed from: binding$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
 
-    /* renamed from: viewModel$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: viewModel$delegate, reason: from kotlin metadata */
     private final Lazy viewModel;
 
-    /* compiled from: WidgetRemoteAuth.kt */
+    /* JADX INFO: compiled from: WidgetRemoteAuth.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -68,8 +68,8 @@ public final class WidgetRemoteAuth extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetRemoteAuth.kt */
-    /* renamed from: com.discord.widgets.auth.WidgetRemoteAuth$configureUI$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.auth.WidgetRemoteAuth$configureUI$1 */
+    /* JADX INFO: compiled from: WidgetRemoteAuth.kt */
     public static final class ViewOnClickListenerC72591 implements View.OnClickListener {
         public ViewOnClickListenerC72591() {
         }
@@ -80,8 +80,8 @@ public final class WidgetRemoteAuth extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetRemoteAuth.kt */
-    /* renamed from: com.discord.widgets.auth.WidgetRemoteAuth$configureUI$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.auth.WidgetRemoteAuth$configureUI$2 */
+    /* JADX INFO: compiled from: WidgetRemoteAuth.kt */
     public static final class ViewOnClickListenerC72602 implements View.OnClickListener {
         public ViewOnClickListenerC72602() {
         }
@@ -92,8 +92,8 @@ public final class WidgetRemoteAuth extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetRemoteAuth.kt */
-    /* renamed from: com.discord.widgets.auth.WidgetRemoteAuth$configureUI$3 */
+    /* JADX INFO: renamed from: com.discord.widgets.auth.WidgetRemoteAuth$configureUI$3 */
+    /* JADX INFO: compiled from: WidgetRemoteAuth.kt */
     public static final class ViewOnClickListenerC72613 implements View.OnClickListener {
         public ViewOnClickListenerC72613() {
         }
@@ -104,8 +104,8 @@ public final class WidgetRemoteAuth extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetRemoteAuth.kt */
-    /* renamed from: com.discord.widgets.auth.WidgetRemoteAuth$configureUI$4 */
+    /* JADX INFO: renamed from: com.discord.widgets.auth.WidgetRemoteAuth$configureUI$4 */
+    /* JADX INFO: compiled from: WidgetRemoteAuth.kt */
     public static final class ViewOnClickListenerC72624 implements View.OnClickListener {
         public ViewOnClickListenerC72624() {
         }
@@ -117,8 +117,8 @@ public final class WidgetRemoteAuth extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetRemoteAuth.kt */
-    /* renamed from: com.discord.widgets.auth.WidgetRemoteAuth$configureUI$5 */
+    /* JADX INFO: renamed from: com.discord.widgets.auth.WidgetRemoteAuth$configureUI$5 */
+    /* JADX INFO: compiled from: WidgetRemoteAuth.kt */
     public static final class C72635 implements CompoundButton.OnCheckedChangeListener {
         public C72635() {
         }
@@ -129,8 +129,8 @@ public final class WidgetRemoteAuth extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetRemoteAuth.kt */
-    /* renamed from: com.discord.widgets.auth.WidgetRemoteAuth$onViewBound$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.auth.WidgetRemoteAuth$onViewBound$1 */
+    /* JADX INFO: compiled from: WidgetRemoteAuth.kt */
     public static final class C72641 extends Lambda implements Function1<WidgetRemoteAuthViewModel.ViewState, Unit> {
         public C72641() {
             super(1);
@@ -142,7 +142,7 @@ public final class WidgetRemoteAuth extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(WidgetRemoteAuthViewModel.ViewState viewState) {
             WidgetRemoteAuth widgetRemoteAuth = WidgetRemoteAuth.this;
             Intrinsics3.checkNotNullExpressionValue(viewState, "it");

@@ -27,18 +27,18 @@ import p007b.p225i.p226a.p242c.p278y2.C3136h;
 import p007b.p225i.p226a.p242c.p278y2.MediaCodecInfo;
 import p007b.p225i.p226a.p288f.p299e.p308o.C3404f;
 
+/* JADX INFO: loaded from: classes3.dex */
 @SuppressLint({"InlinedApi"})
-/* loaded from: classes3.dex */
 public final class MediaCodecUtil {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final Pattern f19928a = Pattern.compile("^\\D?(\\d+)$");
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     @GuardedBy("MediaCodecUtil.class")
     public static final HashMap<C10714b, List<MediaCodecInfo>> f19929b = new HashMap<>();
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public static int f19930c = -1;
 
     public static class DecoderQueryException extends Exception {
@@ -47,16 +47,16 @@ public final class MediaCodecUtil {
         }
     }
 
-    /* renamed from: com.google.android.exoplayer2.mediacodec.MediaCodecUtil$b */
+    /* JADX INFO: renamed from: com.google.android.exoplayer2.mediacodec.MediaCodecUtil$b */
     public static final class C10714b {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final String f19931a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final boolean f19932b;
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public final boolean f19933c;
 
         public C10714b(String str, boolean z2, boolean z3) {
@@ -81,68 +81,68 @@ public final class MediaCodecUtil {
         }
     }
 
-    /* renamed from: com.google.android.exoplayer2.mediacodec.MediaCodecUtil$c */
+    /* JADX INFO: renamed from: com.google.android.exoplayer2.mediacodec.MediaCodecUtil$c */
     public interface InterfaceC10715c {
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         android.media.MediaCodecInfo mo8872a(int i);
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         boolean mo8873b(String str, String str2, MediaCodecInfo.CodecCapabilities codecCapabilities);
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         boolean mo8874c(String str, String str2, MediaCodecInfo.CodecCapabilities codecCapabilities);
 
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         int mo8875d();
 
-        /* renamed from: e */
+        /* JADX INFO: renamed from: e */
         boolean mo8876e();
     }
 
-    /* renamed from: com.google.android.exoplayer2.mediacodec.MediaCodecUtil$d */
+    /* JADX INFO: renamed from: com.google.android.exoplayer2.mediacodec.MediaCodecUtil$d */
     public static final class C10716d implements InterfaceC10715c {
         public C10716d(C10713a c10713a) {
         }
 
         @Override // com.google.android.exoplayer2.mediacodec.MediaCodecUtil.InterfaceC10715c
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public android.media.MediaCodecInfo mo8872a(int i) {
             return MediaCodecList.getCodecInfoAt(i);
         }
 
         @Override // com.google.android.exoplayer2.mediacodec.MediaCodecUtil.InterfaceC10715c
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public boolean mo8873b(String str, String str2, MediaCodecInfo.CodecCapabilities codecCapabilities) {
             return "secure-playback".equals(str) && "video/avc".equals(str2);
         }
 
         @Override // com.google.android.exoplayer2.mediacodec.MediaCodecUtil.InterfaceC10715c
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public boolean mo8874c(String str, String str2, MediaCodecInfo.CodecCapabilities codecCapabilities) {
             return false;
         }
 
         @Override // com.google.android.exoplayer2.mediacodec.MediaCodecUtil.InterfaceC10715c
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         public int mo8875d() {
             return MediaCodecList.getCodecCount();
         }
 
         @Override // com.google.android.exoplayer2.mediacodec.MediaCodecUtil.InterfaceC10715c
-        /* renamed from: e */
+        /* JADX INFO: renamed from: e */
         public boolean mo8876e() {
             return false;
         }
     }
 
+    /* JADX INFO: renamed from: com.google.android.exoplayer2.mediacodec.MediaCodecUtil$e */
     @RequiresApi(21)
-    /* renamed from: com.google.android.exoplayer2.mediacodec.MediaCodecUtil$e */
     public static final class C10717e implements InterfaceC10715c {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final int f19934a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         @Nullable
         public android.media.MediaCodecInfo[] f19935b;
 
@@ -151,7 +151,7 @@ public final class MediaCodecUtil {
         }
 
         @Override // com.google.android.exoplayer2.mediacodec.MediaCodecUtil.InterfaceC10715c
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public android.media.MediaCodecInfo mo8872a(int i) {
             if (this.f19935b == null) {
                 this.f19935b = new MediaCodecList(this.f19934a).getCodecInfos();
@@ -160,19 +160,19 @@ public final class MediaCodecUtil {
         }
 
         @Override // com.google.android.exoplayer2.mediacodec.MediaCodecUtil.InterfaceC10715c
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public boolean mo8873b(String str, String str2, MediaCodecInfo.CodecCapabilities codecCapabilities) {
             return codecCapabilities.isFeatureSupported(str);
         }
 
         @Override // com.google.android.exoplayer2.mediacodec.MediaCodecUtil.InterfaceC10715c
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public boolean mo8874c(String str, String str2, MediaCodecInfo.CodecCapabilities codecCapabilities) {
             return codecCapabilities.isFeatureRequired(str);
         }
 
         @Override // com.google.android.exoplayer2.mediacodec.MediaCodecUtil.InterfaceC10715c
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         public int mo8875d() {
             if (this.f19935b == null) {
                 this.f19935b = new MediaCodecList(this.f19934a).getCodecInfos();
@@ -181,19 +181,19 @@ public final class MediaCodecUtil {
         }
 
         @Override // com.google.android.exoplayer2.mediacodec.MediaCodecUtil.InterfaceC10715c
-        /* renamed from: e */
+        /* JADX INFO: renamed from: e */
         public boolean mo8876e() {
             return true;
         }
     }
 
-    /* renamed from: com.google.android.exoplayer2.mediacodec.MediaCodecUtil$f */
+    /* JADX INFO: renamed from: com.google.android.exoplayer2.mediacodec.MediaCodecUtil$f */
     public interface InterfaceC10718f<T> {
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         int mo3830a(T t);
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static void m8862a(String str, List<p007b.p225i.p226a.p242c.p278y2.MediaCodecInfo> list) {
         if ("audio/raw".equals(str)) {
             if (Util2.f6708a < 26 && Util2.f6709b.equals("R9") && list.size() == 1 && list.get(0).f9112a.equals("OMX.MTK.AUDIO.DECODER.RAW")) {
@@ -215,7 +215,7 @@ public final class MediaCodecUtil {
     }
 
     @Nullable
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static String m8863b(android.media.MediaCodecInfo mediaCodecInfo, String str, String str2) {
         for (String str3 : mediaCodecInfo.getSupportedTypes()) {
             if (str3.equalsIgnoreCase(str2)) {
@@ -241,16 +241,7 @@ public final class MediaCodecUtil {
     }
 
     /* JADX WARN: Can't fix incorrect switch cases order, some code will duplicate */
-    /* JADX WARN: Code restructure failed: missing block: B:92:0x0158, code lost:
-    
-        switch(r0) {
-            case 1567: goto L142;
-            case 1568: goto L138;
-            case 1569: goto L134;
-            case 1570: goto L130;
-            default: goto L146;
-        };
-     */
+    /* JADX WARN: Failed to restore switch over string. Please report as a decompilation issue */
     /* JADX WARN: Removed duplicated region for block: B:146:0x01e9  */
     /* JADX WARN: Removed duplicated region for block: B:162:0x0240  */
     /* JADX WARN: Removed duplicated region for block: B:164:0x0243  */
@@ -294,7 +285,7 @@ public final class MediaCodecUtil {
     /* JADX WARN: Removed duplicated region for block: B:82:0x012f  */
     /* JADX WARN: Removed duplicated region for block: B:87:0x014a  */
     @Nullable
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
@@ -313,6 +304,7 @@ public final class MediaCodecUtil {
         int i11;
         Integer num2;
         Integer num3;
+        byte b2;
         String str = format2.f7152t;
         if (str == null) {
             return null;
@@ -343,44 +335,125 @@ public final class MediaCodecUtil {
                                 Log.w("MediaCodecUtil", strValueOf3.length() != 0 ? "Unknown Dolby Vision level string: ".concat(strValueOf3) : new String("Unknown Dolby Vision level string: "));
                             } else {
                                 int iHashCode = str3.hashCode();
-                                switch (str3) {
-                                    case "01":
+                                switch (iHashCode) {
+                                    case 1537:
+                                        b2 = !str3.equals("01") ? (byte) -1 : (byte) 0;
+                                        break;
+                                    case 1538:
+                                        if (str3.equals("02")) {
+                                            b2 = 1;
+                                            break;
+                                        }
+                                        break;
+                                    case 1539:
+                                        if (str3.equals("03")) {
+                                            b2 = 2;
+                                            break;
+                                        }
+                                        break;
+                                    case 1540:
+                                        if (str3.equals("04")) {
+                                            b2 = 3;
+                                            break;
+                                        }
+                                        break;
+                                    case 1541:
+                                        if (str3.equals("05")) {
+                                            b2 = 4;
+                                            break;
+                                        }
+                                        break;
+                                    case 1542:
+                                        if (str3.equals("06")) {
+                                            b2 = 5;
+                                            break;
+                                        }
+                                        break;
+                                    case 1543:
+                                        if (str3.equals("07")) {
+                                            b2 = 6;
+                                            break;
+                                        }
+                                        break;
+                                    case 1544:
+                                        if (str3.equals("08")) {
+                                            b2 = 7;
+                                            break;
+                                        }
+                                        break;
+                                    case 1545:
+                                        if (str3.equals("09")) {
+                                            b2 = 8;
+                                            break;
+                                        }
+                                        break;
+                                    default:
+                                        switch (iHashCode) {
+                                            case 1567:
+                                                if (str3.equals("10")) {
+                                                    b2 = 9;
+                                                    break;
+                                                }
+                                                break;
+                                            case 1568:
+                                                if (str3.equals("11")) {
+                                                    b2 = 10;
+                                                    break;
+                                                }
+                                                break;
+                                            case 1569:
+                                                if (str3.equals("12")) {
+                                                    b2 = 11;
+                                                    break;
+                                                }
+                                                break;
+                                            case 1570:
+                                                if (str3.equals("13")) {
+                                                    b2 = 12;
+                                                    break;
+                                                }
+                                                break;
+                                        }
+                                        break;
+                                }
+                                switch (b2) {
+                                    case 0:
                                         num3 = 1;
                                         break;
-                                    case "02":
+                                    case 1:
                                         num3 = 2;
                                         break;
-                                    case "03":
+                                    case 2:
                                         num3 = 4;
                                         break;
-                                    case "04":
+                                    case 3:
                                         num3 = 8;
                                         break;
-                                    case "05":
+                                    case 4:
                                         num3 = 16;
                                         break;
-                                    case "06":
+                                    case 5:
                                         num3 = 32;
                                         break;
-                                    case "07":
+                                    case 6:
                                         num3 = 64;
                                         break;
-                                    case "08":
+                                    case 7:
                                         num3 = 128;
                                         break;
-                                    case "09":
+                                    case 8:
                                         num3 = 256;
                                         break;
-                                    case "10":
+                                    case 9:
                                         num3 = 512;
                                         break;
-                                    case "11":
+                                    case 10:
                                         num3 = 1024;
                                         break;
-                                    case "12":
+                                    case 11:
                                         num3 = 2048;
                                         break;
-                                    case "13":
+                                    case 12:
                                         num3 = 4096;
                                         break;
                                 }
@@ -944,7 +1017,7 @@ public final class MediaCodecUtil {
     }
 
     @Nullable
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public static p007b.p225i.p226a.p242c.p278y2.MediaCodecInfo m8865d(String str, boolean z2, boolean z3) throws DecoderQueryException {
         List<p007b.p225i.p226a.p242c.p278y2.MediaCodecInfo> listM8866e = m8866e(str, z2, z3);
         if (listM8866e.isEmpty()) {
@@ -953,7 +1026,7 @@ public final class MediaCodecUtil {
         return listM8866e.get(0);
     }
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public static synchronized List<p007b.p225i.p226a.p242c.p278y2.MediaCodecInfo> m8866e(String str, boolean z2, boolean z3) throws DecoderQueryException {
         C10714b c10714b = new C10714b(str, z2, z3);
         HashMap<C10714b, List<p007b.p225i.p226a.p242c.p278y2.MediaCodecInfo>> map = f19929b;
@@ -981,7 +1054,7 @@ public final class MediaCodecUtil {
         return listUnmodifiableList;
     }
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public static ArrayList<p007b.p225i.p226a.p242c.p278y2.MediaCodecInfo> m8867f(C10714b c10714b, InterfaceC10715c interfaceC10715c) throws DecoderQueryException {
         String strM8863b;
         String str;
@@ -1067,9 +1140,6 @@ public final class MediaCodecUtil {
                                             sb2.append(str2);
                                             sb2.append(" (failed to query capabilities)");
                                             Log.e("MediaCodecUtil", sb2.toString());
-                                            i3 = i + 1;
-                                            iMo8875d = i2;
-                                            zMo8876e = z2;
                                         }
                                     }
                                 }
@@ -1100,7 +1170,7 @@ public final class MediaCodecUtil {
         }
     }
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public static boolean m8868g(android.media.MediaCodecInfo mediaCodecInfo, String str, boolean z2, String str2) {
         if (mediaCodecInfo.isEncoder() || (!z2 && str.endsWith(".secure"))) {
             return false;
@@ -1145,7 +1215,7 @@ public final class MediaCodecUtil {
         return ("audio/eac3-joc".equals(str2) && "OMX.MTK.AUDIO.DECODER.DSPAC3".equals(str)) ? false : true;
     }
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public static boolean m8869h(android.media.MediaCodecInfo mediaCodecInfo) {
         if (Util2.f6708a >= 29) {
             return mediaCodecInfo.isSoftwareOnly();
@@ -1157,7 +1227,7 @@ public final class MediaCodecUtil {
         return strM4349u1.startsWith("omx.google.") || strM4349u1.startsWith("omx.ffmpeg.") || (strM4349u1.startsWith("omx.sec.") && strM4349u1.contains(".sw.")) || strM4349u1.equals("omx.qcom.video.decoder.hevcswvdec") || strM4349u1.startsWith("c2.android.") || strM4349u1.startsWith("c2.google.") || !(strM4349u1.startsWith("omx.") || strM4349u1.startsWith("c2."));
     }
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public static int m8870i() throws DecoderQueryException {
         int i;
         if (f19930c == -1) {
@@ -1225,7 +1295,7 @@ public final class MediaCodecUtil {
         return f19930c;
     }
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static <T> void m8871j(List<T> list, InterfaceC10718f<T> interfaceC10718f) {
         Collections.sort(list, new C3136h(interfaceC10718f));
     }

@@ -12,8 +12,8 @@ import com.discord.models.domain.ModelAuditLogEntry;
 import kotlin.jvm.internal.DefaultConstructorMarker;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: BulletSpan.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: BulletSpan.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class BulletSpan implements LeadingMarginSpan {
     public static final int STANDARD_BULLET_RADIUS_PX = 4;
     public static final int STANDARD_GAP_WIDTH_PX = 2;

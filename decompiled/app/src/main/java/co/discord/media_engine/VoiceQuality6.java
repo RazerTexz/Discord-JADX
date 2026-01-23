@@ -3,9 +3,9 @@ package co.discord.media_engine;
 import p001a0.p002a.p003a.C0002b;
 import p007b.p100d.p104b.p105a.outline;
 
-/* compiled from: VoiceQuality.kt */
-/* renamed from: co.discord.media_engine.OutboundAudio, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: co.discord.media_engine.OutboundAudio, reason: use source file name */
+/* JADX INFO: compiled from: VoiceQuality.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class VoiceQuality6 {
     private final int packetsLost;
     private final long packetsSent;
@@ -25,12 +25,12 @@ public final /* data */ class VoiceQuality6 {
         return voiceQuality6.copy(j, i);
     }
 
-    /* renamed from: component1, reason: from getter */
+    /* JADX INFO: renamed from: component1, reason: from getter */
     public final long getPacketsSent() {
         return this.packetsSent;
     }
 
-    /* renamed from: component2, reason: from getter */
+    /* JADX INFO: renamed from: component2, reason: from getter */
     public final int getPacketsLost() {
         return this.packetsLost;
     }

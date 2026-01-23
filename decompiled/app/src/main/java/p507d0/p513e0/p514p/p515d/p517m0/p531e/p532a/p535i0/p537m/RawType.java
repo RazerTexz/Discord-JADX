@@ -32,22 +32,22 @@ import p507d0.p580t.Iterables2;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: RawType.kt */
-/* renamed from: d0.e0.p.d.m0.e.a.i0.m.f, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.e.a.i0.m.f, reason: use source file name */
+/* JADX INFO: compiled from: RawType.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class RawType extends TypeSubstitution5 {
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static final RawType f23432b = new RawType();
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public static final JavaTypeResolver f23433c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public static final JavaTypeResolver f23434d;
 
-    /* compiled from: RawType.kt */
-    /* renamed from: d0.e0.p.d.m0.e.a.i0.m.f$a */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.e.a.i0.m.f$a */
+    /* JADX INFO: compiled from: RawType.kt */
     public static final class a extends Lambda implements Function1<KotlinTypeRefiner, KotlinType4> {
         public final /* synthetic */ JavaTypeResolver $attr;
         public final /* synthetic */ ClassDescriptor $declaration;
@@ -68,7 +68,7 @@ public final class RawType extends TypeSubstitution5 {
             return invoke2(kotlinTypeRefiner);
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final KotlinType4 invoke2(KotlinTypeRefiner kotlinTypeRefiner) {
             ClassDescriptor classDescriptorFindClassAcrossModuleDependencies;
             Intrinsics3.checkNotNullParameter(kotlinTypeRefiner, "kotlinTypeRefiner");
@@ -101,7 +101,7 @@ public final class RawType extends TypeSubstitution5 {
         return rawType.computeProjection(typeParameterDescriptor, javaTypeResolver, kotlinType);
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final Tuples2<KotlinType4, Boolean> m9501a(KotlinType4 kotlinType4, ClassDescriptor classDescriptor, JavaTypeResolver javaTypeResolver) {
         if (kotlinType4.getConstructor().getParameters().isEmpty()) {
             return Tuples.m10073to(kotlinType4, Boolean.FALSE);
@@ -136,7 +136,7 @@ public final class RawType extends TypeSubstitution5 {
         return Tuples.m10073to(KotlinTypeFactory.simpleTypeWithNonTrivialMemberScope(annotations, typeConstructor, arrayList, kotlinType4.isMarkedNullable(), memberScope, new a(classDescriptor, this, kotlinType4, javaTypeResolver)), Boolean.TRUE);
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final KotlinType m9502b(KotlinType kotlinType) {
         ClassifierDescriptor declarationDescriptor = kotlinType.getConstructor().getDeclarationDescriptor();
         if (declarationDescriptor instanceof TypeParameterDescriptor) {

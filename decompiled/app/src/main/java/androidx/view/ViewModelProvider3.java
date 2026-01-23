@@ -3,9 +3,9 @@ package androidx.view;
 import androidx.annotation.MainThread;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ViewModelProvider.kt */
-/* renamed from: androidx.lifecycle.ViewModelProviderKt, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: androidx.lifecycle.ViewModelProviderKt, reason: use source file name */
+/* JADX INFO: compiled from: ViewModelProvider.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class ViewModelProvider3 {
     @MainThread
     public static final /* synthetic */ <VM extends ViewModel> VM get(ViewModelProvider viewModelProvider) {

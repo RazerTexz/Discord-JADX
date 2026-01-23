@@ -4,8 +4,8 @@ import java.io.Serializable;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ModelGifCategory.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: ModelGifCategory.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class ModelGifCategory implements Serializable {
     private final String categoryName;
     private final String gifPreviewUrl;
@@ -27,12 +27,12 @@ public final /* data */ class ModelGifCategory implements Serializable {
         return modelGifCategory.copy(str, str2);
     }
 
-    /* renamed from: component1, reason: from getter */
+    /* JADX INFO: renamed from: component1, reason: from getter */
     public final String getCategoryName() {
         return this.categoryName;
     }
 
-    /* renamed from: component2, reason: from getter */
+    /* JADX INFO: renamed from: component2, reason: from getter */
     public final String getGifPreviewUrl() {
         return this.gifPreviewUrl;
     }

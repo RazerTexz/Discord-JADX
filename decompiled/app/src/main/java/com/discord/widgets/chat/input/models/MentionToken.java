@@ -5,8 +5,8 @@ import p007b.p100d.p104b.p105a.outline;
 import p507d0.p579g0.StringsJVM;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: MentionToken.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: MentionToken.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final /* data */ class MentionToken {
     private final String formattedToken;
     private final boolean isAtStart;
@@ -40,22 +40,22 @@ public final /* data */ class MentionToken {
         return mentionToken.copy(leadingIdentifier, str, z2, i);
     }
 
-    /* renamed from: component1, reason: from getter */
+    /* JADX INFO: renamed from: component1, reason: from getter */
     public final LeadingIdentifier getLeadingIdentifier() {
         return this.leadingIdentifier;
     }
 
-    /* renamed from: component2, reason: from getter */
+    /* JADX INFO: renamed from: component2, reason: from getter */
     public final String getToken() {
         return this.token;
     }
 
-    /* renamed from: component3, reason: from getter */
+    /* JADX INFO: renamed from: component3, reason: from getter */
     public final boolean getIsAtStart() {
         return this.isAtStart;
     }
 
-    /* renamed from: component4, reason: from getter */
+    /* JADX INFO: renamed from: component4, reason: from getter */
     public final int getStartIndex() {
         return this.startIndex;
     }
@@ -94,17 +94,20 @@ public final /* data */ class MentionToken {
     }
 
     /* JADX WARN: Multi-variable type inference failed */
+    /* JADX WARN: Type inference failed for: r1v3, types: [int] */
+    /* JADX WARN: Type inference failed for: r1v5 */
+    /* JADX WARN: Type inference failed for: r1v7 */
     public int hashCode() {
         LeadingIdentifier leadingIdentifier = this.leadingIdentifier;
         int iHashCode = (leadingIdentifier != null ? leadingIdentifier.hashCode() : 0) * 31;
         String str = this.token;
         int iHashCode2 = (iHashCode + (str != null ? str.hashCode() : 0)) * 31;
         boolean z2 = this.isAtStart;
-        int i = z2;
-        if (z2 != 0) {
-            i = 1;
+        ?? r1 = z2;
+        if (z2) {
+            r1 = 1;
         }
-        return ((iHashCode2 + i) * 31) + this.startIndex;
+        return ((iHashCode2 + r1) * 31) + this.startIndex;
     }
 
     public final boolean isAtStart() {

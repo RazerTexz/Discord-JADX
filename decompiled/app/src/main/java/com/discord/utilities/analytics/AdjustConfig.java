@@ -11,14 +11,14 @@ import kotlin.jvm.functions.Function1;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: AdjustConfig.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: AdjustConfig.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class AdjustConfig {
     private static final String ADJUST_APP_TOKEN = "d8fcx8xdmrr4";
     public static final AdjustConfig INSTANCE = new AdjustConfig();
     private static final String ADJUST_ENVIRONMENT = "production";
 
-    /* compiled from: AdjustConfig.kt */
+    /* JADX INFO: compiled from: AdjustConfig.kt */
     public static final class AdjustLifecycleListener implements Application.ActivityLifecycleCallbacks {
         @Override // android.app.Application.ActivityLifecycleCallbacks
         public void onActivityCreated(Activity activity, Bundle bundle) {
@@ -59,8 +59,8 @@ public final class AdjustConfig {
         }
     }
 
-    /* compiled from: AdjustConfig.kt */
-    /* renamed from: com.discord.utilities.analytics.AdjustConfig$init$2 */
+    /* JADX INFO: renamed from: com.discord.utilities.analytics.AdjustConfig$init$2 */
+    /* JADX INFO: compiled from: AdjustConfig.kt */
     public static final class C66662 implements OnDeviceIdsRead {
         public static final C66662 INSTANCE = new C66662();
 
@@ -72,8 +72,8 @@ public final class AdjustConfig {
         }
     }
 
-    /* compiled from: AdjustConfig.kt */
-    /* renamed from: com.discord.utilities.analytics.AdjustConfig$init$3 */
+    /* JADX INFO: renamed from: com.discord.utilities.analytics.AdjustConfig$init$3 */
+    /* JADX INFO: compiled from: AdjustConfig.kt */
     public static final class C66673 extends Lambda implements Function1<String, Unit> {
         public final /* synthetic */ Application $application;
 
@@ -89,7 +89,7 @@ public final class AdjustConfig {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(String str) {
             Intrinsics3.checkNotNullParameter(str, "referrerUrl");
             Adjust.setReferrer(str, this.$application);

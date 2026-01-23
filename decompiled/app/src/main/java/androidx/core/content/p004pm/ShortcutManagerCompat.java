@@ -36,7 +36,7 @@ import java.util.Collections;
 import java.util.Iterator;
 import java.util.List;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class ShortcutManagerCompat {
 
     @VisibleForTesting
@@ -56,7 +56,7 @@ public class ShortcutManagerCompat {
     private static volatile List<ShortcutInfoChangeListener> sShortcutInfoChangeListeners;
     private static volatile ShortcutInfoCompatSaver<?> sShortcutInfoCompatSaver;
 
-    /* renamed from: androidx.core.content.pm.ShortcutManagerCompat$1 */
+    /* JADX INFO: renamed from: androidx.core.content.pm.ShortcutManagerCompat$1 */
     public class C02201 extends BroadcastReceiver {
         public final /* synthetic */ IntentSender val$callback;
 

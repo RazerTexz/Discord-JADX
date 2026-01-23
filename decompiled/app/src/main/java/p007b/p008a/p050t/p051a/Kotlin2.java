@@ -9,41 +9,41 @@ import kotlin.text.Regex;
 import p507d0.p579g0.Regex5;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: Kotlin.kt */
-/* renamed from: b.a.t.a.o, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.a.t.a.o, reason: use source file name */
+/* JADX INFO: compiled from: Kotlin.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class Kotlin2 {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final String[] f1943a = {"public|private|internal|inline|lateinit|abstract|open|reified", "import|package", "class|interface|data|enum|sealed|object|typealias", "fun|override|this|super|where|constructor|init|param|delegate", "const|val|var|get|final|vararg|it", "return|break|continue|suspend", "for|while|do|if|else|when|try|catch|finally|throw", "in|out|is|as|typeof", "shr|ushr|shl|ushl", "true|false|null"};
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static final String[] f1944b = {"true|false|Boolean|String|Char", "Int|UInt|Long|ULong|Float|Double|Byte|UByte|Short|UShort", "Self|Set|Map|MutableMap|List|MutableList|Array|Runnable|Unit", "arrayOf|listOf|mapOf|setOf|let|also|apply|run"};
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public static final Pattern f1945c = Pattern.compile("^(?:(?://.*?(?=\\n|$))|(/\\*.*?\\*/))", 32);
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public static final Pattern f1946d = Pattern.compile("^@(\\w+)");
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public static final Pattern f1947e = Pattern.compile("^\"[\\s\\S]*?(?<!\\\\)\"(?=\\W|\\s|$)");
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public static final Kotlin2 f1948f = null;
 
-    /* compiled from: Kotlin.kt */
-    /* renamed from: b.a.t.a.o$a */
+    /* JADX INFO: renamed from: b.a.t.a.o$a */
+    /* JADX INFO: compiled from: Kotlin.kt */
     public static final class a<RC> extends Node.C5655a<RC> {
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public static final C13215a f1950b = new C13215a(null);
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public static final Pattern f1949a = Pattern.compile("^(val|var)(\\s+\\w+)", 32);
 
-        /* compiled from: Kotlin.kt */
-        /* renamed from: b.a.t.a.o$a$a, reason: collision with other inner class name */
+        /* JADX INFO: renamed from: b.a.t.a.o$a$a, reason: collision with other inner class name */
+        /* JADX INFO: compiled from: Kotlin.kt */
         public static final class C13215a {
             public C13215a(DefaultConstructorMarker defaultConstructorMarker) {
             }
@@ -58,18 +58,18 @@ public final class Kotlin2 {
         }
     }
 
-    /* compiled from: Kotlin.kt */
-    /* renamed from: b.a.t.a.o$b */
+    /* JADX INFO: renamed from: b.a.t.a.o$b */
+    /* JADX INFO: compiled from: Kotlin.kt */
     public static final class b<RC> extends Node.C5655a<RC> {
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public static final a f1952b = new a(null);
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public static final Pattern f1951a = new Regex("^(fun)( *<.*>)?( \\w+)( *\\(.*?\\))", Regex5.DOT_MATCHES_ALL).getNativePattern();
 
-        /* compiled from: Kotlin.kt */
-        /* renamed from: b.a.t.a.o$b$a */
+        /* JADX INFO: renamed from: b.a.t.a.o$b$a */
+        /* JADX INFO: compiled from: Kotlin.kt */
         public static final class a {
             public a(DefaultConstructorMarker defaultConstructorMarker) {
             }

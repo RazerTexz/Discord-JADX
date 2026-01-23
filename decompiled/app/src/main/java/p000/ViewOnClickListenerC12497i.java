@@ -15,15 +15,15 @@ import p007b.p008a.p018d.AppToast;
 import p507d0.p580t.Collections2;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: java-style lambda group */
-/* renamed from: i */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: i */
+/* JADX INFO: compiled from: java-style lambda group */
+/* JADX INFO: loaded from: classes.dex */
 public final class ViewOnClickListenerC12497i implements View.OnClickListener {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final /* synthetic */ int f26474j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final /* synthetic */ Object f26475k;
 
     public ViewOnClickListenerC12497i(int i, Object obj) {

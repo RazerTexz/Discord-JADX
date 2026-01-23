@@ -9,7 +9,7 @@ import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.util.concurrent.TimeUnit;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public final class LocationCompat {
     private static final String EXTRA_IS_MOCK = "mockLocation";
 
@@ -49,7 +49,7 @@ public final class LocationCompat {
         return Api17Impl.getElapsedRealtimeNanos(location);
     }
 
-    private static Method getSetIsFromMockProviderMethod() throws NoSuchMethodException, SecurityException {
+    private static Method getSetIsFromMockProviderMethod() throws NoSuchMethodException {
         if (sSetIsFromMockProviderMethod == null) {
             Method declaredMethod = Location.class.getDeclaredMethod("setIsFromMockProvider", Boolean.TYPE);
             sSetIsFromMockProviderMethod = declaredMethod;
@@ -62,7 +62,7 @@ public final class LocationCompat {
         return Api18Impl.isMock(location);
     }
 
-    public static void setMock(@NonNull Location location, boolean z2) throws IllegalArgumentException {
+    public static void setMock(@NonNull Location location, boolean z2) {
         try {
             getSetIsFromMockProviderMethod().invoke(location, Boolean.valueOf(z2));
         } catch (IllegalAccessException e) {

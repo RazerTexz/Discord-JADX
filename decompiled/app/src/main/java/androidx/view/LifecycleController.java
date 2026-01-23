@@ -6,9 +6,9 @@ import kotlinx.coroutines.Job;
 import p007b.p225i.p226a.p288f.p299e.p308o.C3404f;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: LifecycleController.kt */
+/* JADX INFO: compiled from: LifecycleController.kt */
+/* JADX INFO: loaded from: classes.dex */
 @MainThread
-/* loaded from: classes.dex */
 public final class LifecycleController {
     private final DispatchQueue dispatchQueue;
     private final Lifecycle lifecycle;

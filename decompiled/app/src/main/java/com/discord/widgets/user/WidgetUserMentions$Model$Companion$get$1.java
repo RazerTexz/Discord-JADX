@@ -33,13 +33,13 @@ import p507d0.p592z.p594d.Lambda;
 import p637j0.p641k.Func1;
 import p658rx.Observable;
 
-/* compiled from: WidgetUserMentions.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: WidgetUserMentions.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class WidgetUserMentions$Model$Companion$get$1<T, R> implements Func1<WidgetUserMentions.Model.MessageLoader.LoadingState, Observable<? extends WidgetUserMentions.Model>> {
     public final /* synthetic */ NavigationTab $selectedTab;
 
-    /* compiled from: WidgetUserMentions.kt */
-    /* renamed from: com.discord.widgets.user.WidgetUserMentions$Model$Companion$get$1$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.user.WidgetUserMentions$Model$Companion$get$1$1 */
+    /* JADX INFO: compiled from: WidgetUserMentions.kt */
     public static final class C102071 extends Lambda implements Function11<WidgetChatListModelMessages.MessagesWithMetadata, Guild, Map<Long, ? extends Channel>, Map<Long, ? extends String>, Map<Long, ? extends Guild>, Map<Long, ? extends Map<Long, ? extends GuildRole>>, Map<Long, ? extends Map<Long, ? extends GuildMember>>, Long, Boolean, Boolean, InviteEmbedModel, WidgetUserMentions.Model> {
         public final /* synthetic */ WidgetUserMentions.Model.MessageLoader.LoadingState $loadedState;
 
@@ -118,7 +118,7 @@ public final class WidgetUserMentions$Model$Companion$get$1<T, R> implements Fun
         return call2(loadingState);
     }
 
-    /* renamed from: call, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
     public final Observable<? extends WidgetUserMentions.Model> call2(WidgetUserMentions.Model.MessageLoader.LoadingState loadingState) {
         Observable<WidgetChatListModelMessages.MessagesWithMetadata> observable = WidgetChatListModelMessages.MessagesWithMetadata.INSTANCE.get(loadingState.getMentions());
         StoreStream.Companion companion = StoreStream.INSTANCE;

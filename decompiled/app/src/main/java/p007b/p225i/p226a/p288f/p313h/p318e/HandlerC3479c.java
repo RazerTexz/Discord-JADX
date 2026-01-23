@@ -4,9 +4,9 @@ import android.os.Handler;
 import android.os.Looper;
 import android.os.Message;
 
-/* compiled from: com.google.android.gms:play-services-base@@17.3.0 */
-/* renamed from: b.i.a.f.h.e.c */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.h.e.c */
+/* JADX INFO: compiled from: com.google.android.gms:play-services-base@@17.3.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public class HandlerC3479c extends Handler {
     public HandlerC3479c(Looper looper) {
         super(looper);

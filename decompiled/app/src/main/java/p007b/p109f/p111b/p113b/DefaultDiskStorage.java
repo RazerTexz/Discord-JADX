@@ -29,44 +29,44 @@ import p007b.p109f.p115d.p126k.Clock2;
 import p007b.p109f.p115d.p126k.SystemClock;
 import p007b.p109f.p161j.p168c.BufferedDiskCache4;
 
-/* compiled from: DefaultDiskStorage.java */
-/* renamed from: b.f.b.b.a, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.f.b.b.a, reason: use source file name */
+/* JADX INFO: compiled from: DefaultDiskStorage.java */
+/* JADX INFO: loaded from: classes.dex */
 public class DefaultDiskStorage implements DiskStorage {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final long f3021a = TimeUnit.MINUTES.toMillis(30);
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static final /* synthetic */ int f3022b = 0;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final File f3023c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final boolean f3024d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final File f3025e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final CacheErrorLogger f3026f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public final Clock2 f3027g;
 
-    /* compiled from: DefaultDiskStorage.java */
-    /* renamed from: b.f.b.b.a$b */
+    /* JADX INFO: renamed from: b.f.b.b.a$b */
+    /* JADX INFO: compiled from: DefaultDiskStorage.java */
     public class b implements FileTreeVisitor {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final List<DiskStorage.a> f3028a = new ArrayList();
 
         public b(a aVar) {
         }
 
         @Override // p007b.p109f.p115d.p118c.FileTreeVisitor
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public void mo942a(File file) {
             d dVarM931h = DefaultDiskStorage.m931h(DefaultDiskStorage.this, file);
             if (dVarM931h == null || dVarM931h.f3034a != ".cnt") {
@@ -76,31 +76,31 @@ public class DefaultDiskStorage implements DiskStorage {
         }
 
         @Override // p007b.p109f.p115d.p118c.FileTreeVisitor
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public void mo943b(File file) {
         }
 
         @Override // p007b.p109f.p115d.p118c.FileTreeVisitor
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public void mo944c(File file) {
         }
     }
 
-    /* compiled from: DefaultDiskStorage.java */
+    /* JADX INFO: renamed from: b.f.b.b.a$c */
+    /* JADX INFO: compiled from: DefaultDiskStorage.java */
     @VisibleForTesting
-    /* renamed from: b.f.b.b.a$c */
     public static class c implements DiskStorage.a {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final String f3030a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final FileBinaryResource f3031b;
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public long f3032c;
 
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         public long f3033d;
 
         public c(String str, File file, a aVar) {
@@ -112,7 +112,7 @@ public class DefaultDiskStorage implements DiskStorage {
         }
 
         @Override // p007b.p109f.p111b.p113b.DiskStorage.a
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public long mo945a() {
             if (this.f3033d < 0) {
                 this.f3033d = this.f3031b.f3016a.lastModified();
@@ -134,14 +134,14 @@ public class DefaultDiskStorage implements DiskStorage {
         }
     }
 
-    /* compiled from: DefaultDiskStorage.java */
-    /* renamed from: b.f.b.b.a$d */
+    /* JADX INFO: renamed from: b.f.b.b.a$d */
+    /* JADX INFO: compiled from: DefaultDiskStorage.java */
     public static class d {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final String f3034a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final String f3035b;
 
         public d(String str, String str2) {
@@ -157,23 +157,23 @@ public class DefaultDiskStorage implements DiskStorage {
         }
     }
 
-    /* compiled from: DefaultDiskStorage.java */
-    /* renamed from: b.f.b.b.a$e */
+    /* JADX INFO: renamed from: b.f.b.b.a$e */
+    /* JADX INFO: compiled from: DefaultDiskStorage.java */
     public static class e extends IOException {
         public e(long j, long j2) {
             super("File was not written completely. Expected: " + j + ", found: " + j2);
         }
     }
 
-    /* compiled from: DefaultDiskStorage.java */
+    /* JADX INFO: renamed from: b.f.b.b.a$f */
+    /* JADX INFO: compiled from: DefaultDiskStorage.java */
     @VisibleForTesting
-    /* renamed from: b.f.b.b.a$f */
     public class f implements DiskStorage.b {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final String f3036a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         @VisibleForTesting
         public final File f3037b;
 
@@ -182,12 +182,12 @@ public class DefaultDiskStorage implements DiskStorage {
             this.f3037b = file;
         }
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public boolean m946a() {
             return !this.f3037b.exists() || this.f3037b.delete();
         }
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public FileBinaryResource m947b(Object obj) throws IOException {
             Objects.requireNonNull((SystemClock) DefaultDiskStorage.this.f3027g);
             long jCurrentTimeMillis = System.currentTimeMillis();
@@ -210,7 +210,7 @@ public class DefaultDiskStorage implements DiskStorage {
             }
         }
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public void m948c(WriterCallback writerCallback, Object obj) throws IOException {
             try {
                 FileOutputStream fileOutputStream = new FileOutputStream(this.f3037b);
@@ -239,18 +239,18 @@ public class DefaultDiskStorage implements DiskStorage {
         }
     }
 
-    /* compiled from: DefaultDiskStorage.java */
-    /* renamed from: b.f.b.b.a$g */
+    /* JADX INFO: renamed from: b.f.b.b.a$g */
+    /* JADX INFO: compiled from: DefaultDiskStorage.java */
     public class g implements FileTreeVisitor {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public boolean f3039a;
 
         public g(a aVar) {
         }
 
         @Override // p007b.p109f.p115d.p118c.FileTreeVisitor
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public void mo942a(File file) {
             if (this.f3039a) {
                 d dVarM931h = DefaultDiskStorage.m931h(DefaultDiskStorage.this, file);
@@ -274,7 +274,7 @@ public class DefaultDiskStorage implements DiskStorage {
         }
 
         @Override // p007b.p109f.p115d.p118c.FileTreeVisitor
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public void mo943b(File file) {
             if (this.f3039a || !file.equals(DefaultDiskStorage.this.f3025e)) {
                 return;
@@ -283,7 +283,7 @@ public class DefaultDiskStorage implements DiskStorage {
         }
 
         @Override // p007b.p109f.p115d.p118c.FileTreeVisitor
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public void mo944c(File file) {
             if (!DefaultDiskStorage.this.f3023c.equals(file) && !this.f3039a) {
                 file.delete();
@@ -294,6 +294,12 @@ public class DefaultDiskStorage implements DiskStorage {
         }
     }
 
+    /* JADX WARN: Removed duplicated region for block: B:15:0x005c  */
+    /* JADX WARN: Removed duplicated region for block: B:18:0x0067  */
+    /* JADX WARN: Removed duplicated region for block: B:29:0x006a A[EXC_TOP_SPLITTER, SYNTHETIC] */
+    /*
+        Code decompiled incorrectly, please refer to instructions dump.
+    */
     public DefaultDiskStorage(File file, int i, CacheErrorLogger cacheErrorLogger) {
         boolean zContains;
         File externalStorageDirectory;
@@ -309,23 +315,33 @@ public class DefaultDiskStorage implements DiskStorage {
                 zContains = file.getCanonicalPath().contains(externalStorageDirectory.toString());
             } catch (IOException unused2) {
                 Objects.requireNonNull((NoOpCacheErrorLogger) cacheErrorLogger);
+                zContains = false;
+                this.f3024d = zContains;
+                File file2 = new File(this.f3023c, String.format(null, "%s.ols%d.%d", "v2", 100, Integer.valueOf(i)));
+                this.f3025e = file2;
+                this.f3026f = cacheErrorLogger;
+                if (!this.f3023c.exists()) {
+                }
+                if (z2) {
+                }
+                this.f3027g = SystemClock.f3133a;
             }
         } else {
             zContains = false;
         }
         this.f3024d = zContains;
-        File file2 = new File(this.f3023c, String.format(null, "%s.ols%d.%d", "v2", 100, Integer.valueOf(i)));
-        this.f3025e = file2;
+        File file22 = new File(this.f3023c, String.format(null, "%s.ols%d.%d", "v2", 100, Integer.valueOf(i)));
+        this.f3025e = file22;
         this.f3026f = cacheErrorLogger;
         if (!this.f3023c.exists()) {
             z2 = true;
-        } else if (!file2.exists()) {
+        } else if (!file22.exists()) {
             AnimatableValueParser.m492Z(this.f3023c);
             z2 = true;
         }
         if (z2) {
             try {
-                AnimatableValueParser.m541l1(file2);
+                AnimatableValueParser.m541l1(file22);
             } catch (FileUtils$CreateDirectoryException unused3) {
                 CacheErrorLogger cacheErrorLogger2 = this.f3026f;
                 StringBuilder sbM833U = outline.m833U("version directory could not be created: ");
@@ -338,7 +354,7 @@ public class DefaultDiskStorage implements DiskStorage {
     }
 
     /* JADX WARN: Removed duplicated region for block: B:18:0x003d  */
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
@@ -371,13 +387,13 @@ public class DefaultDiskStorage implements DiskStorage {
     }
 
     @Override // p007b.p109f.p111b.p113b.DiskStorage
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public void mo932a() {
         AnimatableValueParser.m554o2(this.f3023c, new g(null));
     }
 
     @Override // p007b.p109f.p111b.p113b.DiskStorage
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public DiskStorage.b mo933b(String str, Object obj) throws IOException {
         File file = new File(m941k(str));
         if (!file.exists()) {
@@ -397,7 +413,7 @@ public class DefaultDiskStorage implements DiskStorage {
     }
 
     @Override // p007b.p109f.p111b.p113b.DiskStorage
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public boolean mo934c(String str, Object obj) {
         File fileM940j = m940j(str);
         boolean zExists = fileM940j.exists();
@@ -409,7 +425,7 @@ public class DefaultDiskStorage implements DiskStorage {
     }
 
     @Override // p007b.p109f.p111b.p113b.DiskStorage
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public FileBinaryResource mo935d(String str, Object obj) {
         File fileM940j = m940j(str);
         if (!fileM940j.exists()) {
@@ -421,7 +437,7 @@ public class DefaultDiskStorage implements DiskStorage {
     }
 
     @Override // p007b.p109f.p111b.p113b.DiskStorage
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public Collection mo936e() throws IOException {
         b bVar = new b(null);
         AnimatableValueParser.m554o2(this.f3025e, bVar);
@@ -429,18 +445,18 @@ public class DefaultDiskStorage implements DiskStorage {
     }
 
     @Override // p007b.p109f.p111b.p113b.DiskStorage
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public long mo937f(String str) {
         return m939i(m940j(str));
     }
 
     @Override // p007b.p109f.p111b.p113b.DiskStorage
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public long mo938g(DiskStorage.a aVar) {
         return m939i(((c) aVar).f3031b.f3016a);
     }
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public final long m939i(File file) {
         if (!file.exists()) {
             return 0L;
@@ -458,12 +474,12 @@ public class DefaultDiskStorage implements DiskStorage {
     }
 
     @VisibleForTesting
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public File m940j(String str) {
         return new File(outline.m823K(outline.m833U(m941k(str)), File.separator, str, ".cnt"));
     }
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final String m941k(String str) {
         String strValueOf = String.valueOf(Math.abs(str.hashCode() % 100));
         StringBuilder sb = new StringBuilder();

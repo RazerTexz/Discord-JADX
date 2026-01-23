@@ -2,12 +2,12 @@ package p659s.p660a;
 
 import p659s.p660a.p661a.LockFreeLinkedList;
 
-/* compiled from: JobSupport.kt */
-/* renamed from: s.a.m1 */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: s.a.m1 */
+/* JADX INFO: compiled from: JobSupport.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class C13131m1 extends LockFreeLinkedList implements InterfaceC13169z0 {
     @Override // p659s.p660a.InterfaceC13169z0
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public boolean mo11281a() {
         return true;
     }

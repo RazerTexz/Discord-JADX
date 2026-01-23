@@ -7,17 +7,17 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p658rx.Observable;
 import p658rx.subjects.BehaviorSubject;
 
-/* compiled from: WidgetGlobalStatusIndicatorState.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetGlobalStatusIndicatorState.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetGlobalStatusIndicatorState {
 
-    /* renamed from: Provider, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Provider, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private static final WidgetGlobalStatusIndicatorState callIndicatorState = new WidgetGlobalStatusIndicatorState();
     private final BehaviorSubject<State> stateSubject = BehaviorSubject.m11129k0();
 
-    /* compiled from: WidgetGlobalStatusIndicatorState.kt */
-    /* renamed from: com.discord.widgets.status.WidgetGlobalStatusIndicatorState$Provider, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: com.discord.widgets.status.WidgetGlobalStatusIndicatorState$Provider, reason: from kotlin metadata */
+    /* JADX INFO: compiled from: WidgetGlobalStatusIndicatorState.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -31,7 +31,7 @@ public final class WidgetGlobalStatusIndicatorState {
         }
     }
 
-    /* compiled from: WidgetGlobalStatusIndicatorState.kt */
+    /* JADX INFO: compiled from: WidgetGlobalStatusIndicatorState.kt */
     public static final /* data */ class State {
         private final boolean isCustomBackground;
         private final boolean isViewingCall;
@@ -56,17 +56,17 @@ public final class WidgetGlobalStatusIndicatorState {
             return state.copy(z2, z3, z4);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final boolean getIsVisible() {
             return this.isVisible;
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final boolean getIsCustomBackground() {
             return this.isCustomBackground;
         }
 
-        /* renamed from: component3, reason: from getter */
+        /* JADX INFO: renamed from: component3, reason: from getter */
         public final boolean getIsViewingCall() {
             return this.isViewingCall;
         }
@@ -90,7 +90,12 @@ public final class WidgetGlobalStatusIndicatorState {
         /* JADX WARN: Type inference failed for: r0v1, types: [int] */
         /* JADX WARN: Type inference failed for: r0v6 */
         /* JADX WARN: Type inference failed for: r0v7 */
-        /* JADX WARN: Type inference failed for: r2v0, types: [boolean] */
+        /* JADX WARN: Type inference failed for: r1v0 */
+        /* JADX WARN: Type inference failed for: r1v1, types: [int] */
+        /* JADX WARN: Type inference failed for: r1v2 */
+        /* JADX WARN: Type inference failed for: r2v1, types: [int] */
+        /* JADX WARN: Type inference failed for: r2v3 */
+        /* JADX WARN: Type inference failed for: r2v4 */
         public int hashCode() {
             boolean z2 = this.isVisible;
             ?? r0 = z2;
@@ -98,14 +103,14 @@ public final class WidgetGlobalStatusIndicatorState {
                 r0 = 1;
             }
             int i = r0 * 31;
-            ?? r2 = this.isCustomBackground;
-            int i2 = r2;
-            if (r2 != 0) {
-                i2 = 1;
+            boolean z3 = this.isCustomBackground;
+            ?? r2 = z3;
+            if (z3) {
+                r2 = 1;
             }
-            int i3 = (i + i2) * 31;
-            boolean z3 = this.isViewingCall;
-            return i3 + (z3 ? 1 : z3 ? 1 : 0);
+            int i2 = (i + r2) * 31;
+            boolean z4 = this.isViewingCall;
+            return i2 + (z4 ? 1 : z4);
         }
 
         public final boolean isCustomBackground() {

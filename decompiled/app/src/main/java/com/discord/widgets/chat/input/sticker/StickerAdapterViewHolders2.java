@@ -28,9 +28,9 @@ import p658rx.Observable;
 import p658rx.Subscription;
 import p658rx.subjects.BehaviorSubject;
 
-/* compiled from: StickerAdapterViewHolders.kt */
-/* renamed from: com.discord.widgets.chat.input.sticker.StickerViewHolder, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.chat.input.sticker.StickerViewHolder, reason: use source file name */
+/* JADX INFO: compiled from: StickerAdapterViewHolders.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class StickerAdapterViewHolders2 extends MGRecyclerViewHolder<WidgetStickerAdapter, MGRecyclerDataPayload> {
     private final AppComponent appComponent;
     private final StickerPickerStickerItemBinding binding;
@@ -38,8 +38,8 @@ public final class StickerAdapterViewHolders2 extends MGRecyclerViewHolder<Widge
     private Subscription scrollingSpeedSubscription;
     private final int type;
 
-    /* compiled from: StickerAdapterViewHolders.kt */
-    /* renamed from: com.discord.widgets.chat.input.sticker.StickerViewHolder$configureSticker$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.input.sticker.StickerViewHolder$configureSticker$1 */
+    /* JADX INFO: compiled from: StickerAdapterViewHolders.kt */
     public static final class ViewOnClickListenerC78971 implements View.OnClickListener {
         public final /* synthetic */ MGRecyclerDataPayload $data;
 
@@ -58,8 +58,8 @@ public final class StickerAdapterViewHolders2 extends MGRecyclerViewHolder<Widge
         }
     }
 
-    /* compiled from: StickerAdapterViewHolders.kt */
-    /* renamed from: com.discord.widgets.chat.input.sticker.StickerViewHolder$onConfigure$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.input.sticker.StickerViewHolder$onConfigure$1 */
+    /* JADX INFO: compiled from: StickerAdapterViewHolders.kt */
     public static final class C78981 extends Lambda implements Function1<Boolean, Unit> {
         public final /* synthetic */ MGRecyclerDataPayload $data;
 
@@ -75,7 +75,7 @@ public final class StickerAdapterViewHolders2 extends MGRecyclerViewHolder<Widge
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Boolean bool) {
             Intrinsics3.checkNotNullExpressionValue(bool, "scrollingWithinThreshold");
             if (bool.booleanValue()) {
@@ -89,8 +89,8 @@ public final class StickerAdapterViewHolders2 extends MGRecyclerViewHolder<Widge
         }
     }
 
-    /* compiled from: StickerAdapterViewHolders.kt */
-    /* renamed from: com.discord.widgets.chat.input.sticker.StickerViewHolder$onConfigure$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.input.sticker.StickerViewHolder$onConfigure$2 */
+    /* JADX INFO: compiled from: StickerAdapterViewHolders.kt */
     public static final class C78992 extends Lambda implements Function1<Subscription, Unit> {
         public C78992() {
             super(1);
@@ -102,7 +102,7 @@ public final class StickerAdapterViewHolders2 extends MGRecyclerViewHolder<Widge
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Subscription subscription) {
             Intrinsics3.checkNotNullParameter(subscription, "it");
             StickerAdapterViewHolders2.access$setScrollingSpeedSubscription$p(StickerAdapterViewHolders2.this, subscription);
@@ -200,7 +200,7 @@ public final class StickerAdapterViewHolders2 extends MGRecyclerViewHolder<Widge
         this.binding = stickerPickerStickerItemBinding;
     }
 
-    /* renamed from: onConfigure, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: onConfigure, reason: avoid collision after fix types in other method */
     public void onConfigure2(int position, MGRecyclerDataPayload data) {
         Intrinsics3.checkNotNullParameter(data, "data");
         super.onConfigure(position, data);

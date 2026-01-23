@@ -3,9 +3,9 @@ package p507d0.p580t;
 import java.util.Iterator;
 import p507d0.p592z.p594d.p595g0.KMarkers;
 
-/* compiled from: Iterators.kt */
-/* renamed from: d0.t.d0, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.t.d0, reason: use source file name */
+/* JADX INFO: compiled from: Iterators.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public abstract class Iterators5 implements Iterator<Long>, KMarkers {
     @Override // java.util.Iterator
     public /* bridge */ /* synthetic */ Long next() {

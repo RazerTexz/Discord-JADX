@@ -8,9 +8,9 @@ import android.database.sqlite.SQLiteOpenHelper;
 import com.discord.models.domain.ModelAuditLogEntry;
 import p007b.p225i.p226a.p242c.p259f3.Log2;
 
-/* compiled from: StandaloneDatabaseProvider.java */
-/* renamed from: b.i.a.c.u2.c, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.u2.c, reason: use source file name */
+/* JADX INFO: compiled from: StandaloneDatabaseProvider.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class StandaloneDatabaseProvider extends SQLiteOpenHelper implements DatabaseProvider {
     public StandaloneDatabaseProvider(Context context) {
         super(context.getApplicationContext(), "exoplayer_internal.db", (SQLiteDatabase.CursorFactory) null, 1);

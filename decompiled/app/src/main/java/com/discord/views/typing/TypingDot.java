@@ -1,7 +1,6 @@
 package com.discord.views.typing;
 
 import android.content.Context;
-import android.content.res.Resources;
 import android.util.AttributeSet;
 import android.view.View;
 import android.view.animation.Animation;
@@ -12,27 +11,27 @@ import kotlin.jvm.functions.Function0;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: TypingDot.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: TypingDot.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class TypingDot extends View {
 
-    /* renamed from: j, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: j, reason: from kotlin metadata */
     public final Animation scaleAndFadeUpAnimation;
 
-    /* renamed from: k, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: k, reason: from kotlin metadata */
     public final Animation scaleAndFadeDownAnimation;
 
-    /* renamed from: l, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: l, reason: from kotlin metadata */
     public Function0<Unit> onScaleDownCompleteListener;
 
-    /* compiled from: kotlin-style lambda group */
-    /* renamed from: com.discord.views.typing.TypingDot$a */
+    /* JADX INFO: renamed from: com.discord.views.typing.TypingDot$a */
+    /* JADX INFO: compiled from: kotlin-style lambda group */
     public static final class C7129a extends Lambda implements Function0<Unit> {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public final /* synthetic */ int f19339j;
 
-        /* renamed from: k */
+        /* JADX INFO: renamed from: k */
         public final /* synthetic */ Object f19340k;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -61,11 +60,11 @@ public final class TypingDot extends View {
         }
     }
 
-    /* compiled from: TypingDot.kt */
-    /* renamed from: com.discord.views.typing.TypingDot$b */
+    /* JADX INFO: renamed from: com.discord.views.typing.TypingDot$b */
+    /* JADX INFO: compiled from: TypingDot.kt */
     public static class AnimationAnimationListenerC7130b implements Animation.AnimationListener {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public final Function0<Unit> f19341j;
 
         public AnimationAnimationListenerC7130b(Function0<Unit> function0) {
@@ -88,7 +87,7 @@ public final class TypingDot extends View {
     }
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-    public TypingDot(Context context, AttributeSet attributeSet) throws Resources.NotFoundException {
+    public TypingDot(Context context, AttributeSet attributeSet) {
         super(context, attributeSet, 0);
         Intrinsics3.checkNotNullParameter(context, "context");
         Animation animationLoadAnimation = AnimationUtils.loadAnimation(context, C5419R.anim.anim_typing_dots_scale_up);
@@ -99,7 +98,7 @@ public final class TypingDot extends View {
         this.scaleAndFadeDownAnimation = animationLoadAnimation2;
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final void m8617a(long delay) {
         this.scaleAndFadeUpAnimation.setStartOffset(delay);
         this.scaleAndFadeUpAnimation.setAnimationListener(new AnimationAnimationListenerC7130b(new C7129a(0, this)));

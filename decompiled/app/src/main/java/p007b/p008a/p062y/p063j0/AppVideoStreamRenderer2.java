@@ -7,12 +7,12 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p637j0.p641k.Func1;
 import p658rx.Observable;
 
-/* compiled from: AppVideoStreamRenderer.kt */
-/* renamed from: b.a.y.j0.a, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: b.a.y.j0.a, reason: use source file name */
+/* JADX INFO: compiled from: AppVideoStreamRenderer.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class AppVideoStreamRenderer2<T, R> implements Func1<Unit, Observable<? extends Point>> {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final /* synthetic */ RxRendererEvents f2028j;
 
     public AppVideoStreamRenderer2(RxRendererEvents rxRendererEvents) {

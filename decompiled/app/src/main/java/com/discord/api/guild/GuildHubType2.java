@@ -7,9 +7,9 @@ import java.io.IOException;
 import p007b.p085c.p086a.p087a0.AnimatableValueParser;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: GuildHubType.kt */
-/* renamed from: com.discord.api.guild.GuildHubTypeTypeAdapter, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: com.discord.api.guild.GuildHubTypeTypeAdapter, reason: use source file name */
+/* JADX INFO: compiled from: GuildHubType.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class GuildHubType2 extends TypeAdapter<GuildHubType> {
     @Override // com.google.gson.TypeAdapter
     public GuildHubType read(JsonReader jsonReader) throws IOException {

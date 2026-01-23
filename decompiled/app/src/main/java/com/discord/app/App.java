@@ -54,27 +54,27 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 import p658rx.Observable;
 
-/* compiled from: App.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: App.kt */
+/* JADX INFO: loaded from: classes.dex */
 public class App extends Application {
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private static final boolean IS_LOCAL = Strings4.contains$default((CharSequence) BuildConfig.FLAVOR, (CharSequence) "local", false, 2, (Object) null);
     private final boolean isUnderTest;
 
-    /* compiled from: App.kt */
-    /* renamed from: com.discord.app.App$a, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: com.discord.app.App$a, reason: from kotlin metadata */
+    /* JADX INFO: compiled from: App.kt */
     public static final class Companion {
         public Companion(DefaultConstructorMarker defaultConstructorMarker) {
         }
     }
 
-    /* compiled from: App.kt */
-    /* renamed from: com.discord.app.App$b */
+    /* JADX INFO: renamed from: com.discord.app.App$b */
+    /* JADX INFO: compiled from: App.kt */
     public static final class C5425b extends Lambda implements Function1<Throwable, Unit> {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public static final C5425b f14903j = new C5425b();
 
         public C5425b() {
@@ -90,11 +90,11 @@ public class App extends Application {
         }
     }
 
-    /* compiled from: App.kt */
-    /* renamed from: com.discord.app.App$c */
+    /* JADX INFO: renamed from: com.discord.app.App$c */
+    /* JADX INFO: compiled from: App.kt */
     public static final class C5426c extends Lambda implements Function0<Integer> {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public static final C5426c f14904j = new C5426c();
 
         public C5426c() {
@@ -107,11 +107,11 @@ public class App extends Application {
         }
     }
 
-    /* compiled from: App.kt */
-    /* renamed from: com.discord.app.App$d */
+    /* JADX INFO: renamed from: com.discord.app.App$d */
+    /* JADX INFO: compiled from: App.kt */
     public static final class C5427d extends Lambda implements Function2<String, View, Unit> {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public static final C5427d f14905j = new C5427d();
 
         public C5427d() {
@@ -132,8 +132,8 @@ public class App extends Application {
         }
     }
 
-    /* compiled from: App.kt */
-    /* renamed from: com.discord.app.App$e */
+    /* JADX INFO: renamed from: com.discord.app.App$e */
+    /* JADX INFO: compiled from: App.kt */
     public static final /* synthetic */ class C5428e extends FunctionReferenceImpl implements Function3<String, Throwable, Map<String, ? extends String>, Unit> {
         public C5428e(AppLog appLog) {
             super(3, appLog, AppLog.class, "e", "e(Ljava/lang/String;Ljava/lang/Throwable;Ljava/util/Map;)V", 0);
@@ -149,11 +149,11 @@ public class App extends Application {
         }
     }
 
-    /* compiled from: App.kt */
-    /* renamed from: com.discord.app.App$f */
+    /* JADX INFO: renamed from: com.discord.app.App$f */
+    /* JADX INFO: compiled from: App.kt */
     public static final class C5429f extends Lambda implements Function2<View, String, Unit> {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public static final C5429f f14906j = new C5429f();
 
         public C5429f() {
@@ -174,11 +174,11 @@ public class App extends Application {
         }
     }
 
-    /* compiled from: App.kt */
-    /* renamed from: com.discord.app.App$g */
+    /* JADX INFO: renamed from: com.discord.app.App$g */
+    /* JADX INFO: compiled from: App.kt */
     public static final class C5430g extends Lambda implements Function1<Experiment, Unit> {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public static final C5430g f14907j = new C5430g();
 
         public C5430g() {
@@ -203,7 +203,7 @@ public class App extends Application {
         System.loadLibrary("dsti");
     }
 
-    /* renamed from: isUnderTest, reason: from getter */
+    /* JADX INFO: renamed from: isUnderTest, reason: from getter */
     public boolean getIsUnderTest() {
         return this.isUnderTest;
     }

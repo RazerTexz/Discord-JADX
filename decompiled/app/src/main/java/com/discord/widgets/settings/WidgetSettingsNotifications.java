@@ -24,19 +24,19 @@ import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetSettingsNotifications.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetSettingsNotifications.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetSettingsNotifications extends AppFragment {
     public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetSettingsNotifications.class, "binding", "getBinding()Lcom/discord/databinding/WidgetSettingsNotificationsBinding;", 0)};
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
 
-    /* renamed from: binding$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
     private final StoreNotifications notificationStore;
 
-    /* compiled from: WidgetSettingsNotifications.kt */
+    /* JADX INFO: compiled from: WidgetSettingsNotifications.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -51,8 +51,8 @@ public final class WidgetSettingsNotifications extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetSettingsNotifications.kt */
-    /* renamed from: com.discord.widgets.settings.WidgetSettingsNotifications$onViewBoundOrOnResume$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.WidgetSettingsNotifications$onViewBoundOrOnResume$1 */
+    /* JADX INFO: compiled from: WidgetSettingsNotifications.kt */
     public static final class C96531 extends Lambda implements Function1<NotificationClient.SettingsV2, Unit> {
         public C96531() {
             super(1);
@@ -64,7 +64,7 @@ public final class WidgetSettingsNotifications extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(NotificationClient.SettingsV2 settingsV2) {
             Intrinsics3.checkNotNullParameter(settingsV2, "settings");
             LinearLayout linearLayout = WidgetSettingsNotifications.access$getBinding$p(WidgetSettingsNotifications.this).f18028g;

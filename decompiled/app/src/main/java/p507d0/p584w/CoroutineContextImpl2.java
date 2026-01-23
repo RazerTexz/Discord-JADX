@@ -5,15 +5,15 @@ import kotlin.coroutines.CoroutineContext.Element;
 import kotlin.jvm.functions.Function1;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: CoroutineContextImpl.kt */
-/* renamed from: d0.w.b, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.w.b, reason: use source file name */
+/* JADX INFO: compiled from: CoroutineContextImpl.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public abstract class CoroutineContextImpl2<B extends CoroutineContext.Element, E extends B> implements CoroutineContext.Key<E> {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final CoroutineContext.Key<?> f25232a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final Function1<CoroutineContext.Element, E> f25233b;
 
     /* JADX WARN: Multi-variable type inference failed */

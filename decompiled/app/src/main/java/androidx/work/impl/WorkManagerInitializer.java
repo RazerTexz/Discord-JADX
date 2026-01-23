@@ -10,8 +10,8 @@ import androidx.annotation.RestrictTo;
 import androidx.work.Configuration;
 import androidx.work.WorkManager;
 
+/* JADX INFO: loaded from: classes.dex */
 @RestrictTo({RestrictTo.Scope.LIBRARY_GROUP})
-/* loaded from: classes.dex */
 public class WorkManagerInitializer extends ContentProvider {
     @Override // android.content.ContentProvider
     public int delete(@NonNull Uri uri, @Nullable String str, @Nullable String[] strArr) {

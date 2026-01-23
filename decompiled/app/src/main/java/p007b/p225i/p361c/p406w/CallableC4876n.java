@@ -14,12 +14,12 @@ import p007b.p225i.p226a.p288f.p313h.p322i.C3488b;
 import p007b.p225i.p226a.p288f.p313h.p322i.C3490d;
 import p007b.p225i.p226a.p288f.p313h.p322i.C3491e;
 
-/* compiled from: com.google.firebase:firebase-messaging@@21.0.0 */
-/* renamed from: b.i.c.w.n */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.c.w.n */
+/* JADX INFO: compiled from: com.google.firebase:firebase-messaging@@21.0.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public final /* synthetic */ class CallableC4876n implements Callable {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final C4877o f13033j;
 
     public CallableC4876n(C4877o c4877o) {
@@ -62,7 +62,7 @@ public final /* synthetic */ class CallableC4876n implements Callable {
                         i4 += i5;
                         i3 += i5;
                     }
-                    long j = i2 << 1;
+                    long j = ((long) i2) << 1;
                     i2 = j > 2147483647L ? Integer.MAX_VALUE : j < -2147483648L ? Integer.MIN_VALUE : (int) j;
                 } else {
                     if (c3490d.read() != -1) {

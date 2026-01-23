@@ -10,9 +10,9 @@ import java.util.List;
 import kotlin.jvm.functions.Function2;
 import p507d0.p580t.Iterables2;
 
-/* compiled from: WidgetServerSettingsMembersAdapter.kt */
-/* renamed from: com.discord.widgets.servers.settings.members.WidgetServerSettingsMembersAdapter$MemberListItem$onConfigure$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.servers.settings.members.WidgetServerSettingsMembersAdapter$MemberListItem$onConfigure$1, reason: use source file name */
+/* JADX INFO: compiled from: WidgetServerSettingsMembersAdapter.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetServerSettingsMembersAdapter2 implements View.OnClickListener {
     public final /* synthetic */ WidgetServerSettingsMembersModel.MemberItem $data;
     public final /* synthetic */ WidgetServerSettingsMembersAdapter.MemberListItem this$0;

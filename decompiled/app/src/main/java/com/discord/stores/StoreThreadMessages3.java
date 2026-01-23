@@ -5,9 +5,9 @@ import kotlin.jvm.functions.Function1;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: StoreThreadMessages.kt */
-/* renamed from: com.discord.stores.StoreThreadMessages$deleteForParentChannel$removed$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.stores.StoreThreadMessages$deleteForParentChannel$removed$1, reason: use source file name */
+/* JADX INFO: compiled from: StoreThreadMessages.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class StoreThreadMessages3 extends Lambda implements Function1<StoreThreadMessages.ThreadState, Boolean> {
     public final /* synthetic */ long $parentChannelId;
 
@@ -22,7 +22,7 @@ public final class StoreThreadMessages3 extends Lambda implements Function1<Stor
         return Boolean.valueOf(invoke2(threadState));
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final boolean invoke2(StoreThreadMessages.ThreadState threadState) {
         Intrinsics3.checkNotNullParameter(threadState, "thread");
         return threadState.getParentId() == this.$parentChannelId;

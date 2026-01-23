@@ -41,25 +41,25 @@ import p507d0.p592z.p594d.Lambda;
 import p507d0.p592z.p594d.Reflection2;
 import p658rx.Observable;
 
-/* compiled from: WidgetPruneUsers.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: WidgetPruneUsers.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class WidgetPruneUsers extends AppDialog {
     private static final String ARG_GUILD_ID = "ARG_GUILD_ID";
 
-    /* renamed from: binding$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
 
-    /* renamed from: radioManager$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: radioManager$delegate, reason: from kotlin metadata */
     private final Lazy radioManager;
 
-    /* renamed from: viewModel$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: viewModel$delegate, reason: from kotlin metadata */
     private final Lazy viewModel;
     public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetPruneUsers.class, "binding", "getBinding()Lcom/discord/databinding/WidgetPruneUsersBinding;", 0)};
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
 
-    /* compiled from: WidgetPruneUsers.kt */
+    /* JADX INFO: compiled from: WidgetPruneUsers.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -90,8 +90,8 @@ public final class WidgetPruneUsers extends AppDialog {
         }
     }
 
-    /* compiled from: WidgetPruneUsers.kt */
-    /* renamed from: com.discord.widgets.user.WidgetPruneUsers$onViewBound$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.user.WidgetPruneUsers$onViewBound$1 */
+    /* JADX INFO: compiled from: WidgetPruneUsers.kt */
     public static final class C101911 extends Lambda implements Function2<Context, Integer, CharSequence> {
         public static final C101911 INSTANCE = new C101911();
 
@@ -110,8 +110,8 @@ public final class WidgetPruneUsers extends AppDialog {
         }
     }
 
-    /* compiled from: WidgetPruneUsers.kt */
-    /* renamed from: com.discord.widgets.user.WidgetPruneUsers$onViewBound$4 */
+    /* JADX INFO: renamed from: com.discord.widgets.user.WidgetPruneUsers$onViewBound$4 */
+    /* JADX INFO: compiled from: WidgetPruneUsers.kt */
     public static final class ViewOnClickListenerC101924 implements View.OnClickListener {
         public ViewOnClickListenerC101924() {
         }
@@ -122,8 +122,8 @@ public final class WidgetPruneUsers extends AppDialog {
         }
     }
 
-    /* compiled from: WidgetPruneUsers.kt */
-    /* renamed from: com.discord.widgets.user.WidgetPruneUsers$onViewBound$5 */
+    /* JADX INFO: renamed from: com.discord.widgets.user.WidgetPruneUsers$onViewBound$5 */
+    /* JADX INFO: compiled from: WidgetPruneUsers.kt */
     public static final class ViewOnClickListenerC101935 implements View.OnClickListener {
         public ViewOnClickListenerC101935() {
         }
@@ -134,8 +134,8 @@ public final class WidgetPruneUsers extends AppDialog {
         }
     }
 
-    /* compiled from: WidgetPruneUsers.kt */
-    /* renamed from: com.discord.widgets.user.WidgetPruneUsers$onViewBoundOrOnResume$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.user.WidgetPruneUsers$onViewBoundOrOnResume$1 */
+    /* JADX INFO: compiled from: WidgetPruneUsers.kt */
     public static final /* synthetic */ class C101941 extends FunctionReferenceImpl implements Function1<WidgetPruneUsersViewModel.ViewState, Unit> {
         public C101941(WidgetPruneUsers widgetPruneUsers) {
             super(1, widgetPruneUsers, WidgetPruneUsers.class, "updateUI", "updateUI(Lcom/discord/widgets/user/WidgetPruneUsersViewModel$ViewState;)V", 0);
@@ -147,15 +147,15 @@ public final class WidgetPruneUsers extends AppDialog {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(WidgetPruneUsersViewModel.ViewState viewState) {
             Intrinsics3.checkNotNullParameter(viewState, "p1");
             WidgetPruneUsers.access$updateUI((WidgetPruneUsers) this.receiver, viewState);
         }
     }
 
-    /* compiled from: WidgetPruneUsers.kt */
-    /* renamed from: com.discord.widgets.user.WidgetPruneUsers$onViewBoundOrOnResume$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.user.WidgetPruneUsers$onViewBoundOrOnResume$2 */
+    /* JADX INFO: compiled from: WidgetPruneUsers.kt */
     public static final /* synthetic */ class C101952 extends FunctionReferenceImpl implements Function1<WidgetPruneUsersViewModel.Event, Unit> {
         public C101952(WidgetPruneUsers widgetPruneUsers) {
             super(1, widgetPruneUsers, WidgetPruneUsers.class, "handleEvent", "handleEvent(Lcom/discord/widgets/user/WidgetPruneUsersViewModel$Event;)V", 0);
@@ -167,7 +167,7 @@ public final class WidgetPruneUsers extends AppDialog {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(WidgetPruneUsersViewModel.Event event) throws Throwable {
             Intrinsics3.checkNotNullParameter(event, "p1");
             WidgetPruneUsers.access$handleEvent((WidgetPruneUsers) this.receiver, event);

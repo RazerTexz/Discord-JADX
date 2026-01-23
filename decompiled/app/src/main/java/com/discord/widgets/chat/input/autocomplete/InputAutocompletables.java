@@ -19,31 +19,31 @@ import p637j0.p641k.Func1;
 import p658rx.Observable;
 import p658rx.functions.Func4;
 
-/* compiled from: InputAutocompletables.kt */
-/* renamed from: com.discord.widgets.chat.input.autocomplete.ChatInputAutocompletables, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.chat.input.autocomplete.ChatInputAutocompletables, reason: use source file name */
+/* JADX INFO: compiled from: InputAutocompletables.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class InputAutocompletables {
     public static final InputAutocompletables INSTANCE = new InputAutocompletables();
 
-    /* renamed from: EMOJI_SOURCE$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: EMOJI_SOURCE$delegate, reason: from kotlin metadata */
     private static final Lazy EMOJI_SOURCE = LazyJVM.lazy(InputAutocompletables4.INSTANCE);
 
-    /* renamed from: CHANNEL_SOURCE$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: CHANNEL_SOURCE$delegate, reason: from kotlin metadata */
     private static final Lazy CHANNEL_SOURCE = LazyJVM.lazy(InputAutocompletables3.INSTANCE);
 
-    /* renamed from: USERS_SOURCE$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: USERS_SOURCE$delegate, reason: from kotlin metadata */
     private static final Lazy USERS_SOURCE = LazyJVM.lazy(InputAutocompletables5.INSTANCE);
 
-    /* renamed from: APPLICATION_COMMANDS_SOURCE$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: APPLICATION_COMMANDS_SOURCE$delegate, reason: from kotlin metadata */
     private static final Lazy APPLICATION_COMMANDS_SOURCE = LazyJVM.lazy(InputAutocompletables2.INSTANCE);
 
-    /* compiled from: InputAutocompletables.kt */
-    /* renamed from: com.discord.widgets.chat.input.autocomplete.ChatInputAutocompletables$observeChannelAutocompletables$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.input.autocomplete.ChatInputAutocompletables$observeChannelAutocompletables$1 */
+    /* JADX INFO: compiled from: InputAutocompletables.kt */
     public static final class C77761<T, R> implements Func1<Channel, Observable<? extends Map<LeadingIdentifier, ? extends Set<? extends Autocompletable>>>> {
         public static final C77761 INSTANCE = new C77761();
 
-        /* compiled from: InputAutocompletables.kt */
-        /* renamed from: com.discord.widgets.chat.input.autocomplete.ChatInputAutocompletables$observeChannelAutocompletables$1$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.widgets.chat.input.autocomplete.ChatInputAutocompletables$observeChannelAutocompletables$1$1, reason: invalid class name */
+        /* JADX INFO: compiled from: InputAutocompletables.kt */
         public static final class AnonymousClass1<T1, T2, T3, T4, R> implements Func4<Map<LeadingIdentifier, ? extends TreeSet<Autocompletable>>, Map<LeadingIdentifier, ? extends TreeSet<Autocompletable>>, Map<LeadingIdentifier, ? extends TreeSet<Autocompletable>>, Map<LeadingIdentifier, ? extends TreeSet<Autocompletable>>, Map<LeadingIdentifier, ? extends Set<? extends Autocompletable>>> {
             public static final AnonymousClass1 INSTANCE = new AnonymousClass1();
 
@@ -52,7 +52,7 @@ public final class InputAutocompletables {
                 return call2(map, map2, map3, map4);
             }
 
-            /* renamed from: call, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
             public final Map<LeadingIdentifier, Set<Autocompletable>> call2(Map<LeadingIdentifier, ? extends TreeSet<Autocompletable>> map, Map<LeadingIdentifier, ? extends TreeSet<Autocompletable>> map2, Map<LeadingIdentifier, ? extends TreeSet<Autocompletable>> map3, Map<LeadingIdentifier, ? extends TreeSet<Autocompletable>> map4) {
                 LinkedHashMap linkedHashMap = new LinkedHashMap();
                 Intrinsics3.checkNotNullExpressionValue(map, "commands");
@@ -72,7 +72,7 @@ public final class InputAutocompletables {
             return call2(channel);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final Observable<? extends Map<LeadingIdentifier, Set<Autocompletable>>> call2(Channel channel) {
             InputAutocompletables inputAutocompletables = InputAutocompletables.INSTANCE;
             ApplicationCommandsAutocompletableSource application_commands_source = inputAutocompletables.getAPPLICATION_COMMANDS_SOURCE();

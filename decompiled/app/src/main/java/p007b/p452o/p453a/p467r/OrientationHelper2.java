@@ -12,39 +12,39 @@ import com.otaliastudios.cameraview.CameraView;
 import p007b.p452o.p453a.CameraView6;
 import p007b.p452o.p453a.p455n.p461t.Angles;
 
-/* compiled from: OrientationHelper.java */
-/* renamed from: b.o.a.r.f, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.o.a.r.f, reason: use source file name */
+/* JADX INFO: compiled from: OrientationHelper.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class OrientationHelper2 {
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final Context f14118b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final c f14119c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     @VisibleForTesting
     public final OrientationEventListener f14120d;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public boolean f14124h;
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final Handler f14117a = new Handler(Looper.getMainLooper());
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public int f14121e = -1;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public int f14123g = -1;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     @VisibleForTesting
     public final DisplayManager.DisplayListener f14122f = new b();
 
-    /* compiled from: OrientationHelper.java */
-    /* renamed from: b.o.a.r.f$a */
+    /* JADX INFO: renamed from: b.o.a.r.f$a */
+    /* JADX INFO: compiled from: OrientationHelper.java */
     public class a extends OrientationEventListener {
         public a(Context context, int i) {
             super(context, i);
@@ -95,8 +95,8 @@ public class OrientationHelper2 {
         }
     }
 
-    /* compiled from: OrientationHelper.java */
-    /* renamed from: b.o.a.r.f$b */
+    /* JADX INFO: renamed from: b.o.a.r.f$b */
+    /* JADX INFO: compiled from: OrientationHelper.java */
     public class b implements DisplayManager.DisplayListener {
         public b() {
         }
@@ -127,8 +127,8 @@ public class OrientationHelper2 {
         }
     }
 
-    /* compiled from: OrientationHelper.java */
-    /* renamed from: b.o.a.r.f$c */
+    /* JADX INFO: renamed from: b.o.a.r.f$c */
+    /* JADX INFO: compiled from: OrientationHelper.java */
     public interface c {
     }
 
@@ -138,7 +138,7 @@ public class OrientationHelper2 {
         this.f14120d = new a(context.getApplicationContext(), 3);
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final int m7401a() {
         int rotation = ((WindowManager) this.f14118b.getSystemService("window")).getDefaultDisplay().getRotation();
         if (rotation == 1) {

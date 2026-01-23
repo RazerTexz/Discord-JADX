@@ -3,12 +3,12 @@ package p007b.p225i.p361c.p397r;
 import android.content.Context;
 import p007b.p225i.p361c.p400t.Provider2;
 
-/* compiled from: DefaultHeartBeatInfo.java */
-/* renamed from: b.i.c.r.a, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.c.r.a, reason: use source file name */
+/* JADX INFO: compiled from: DefaultHeartBeatInfo.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final /* synthetic */ class DefaultHeartBeatInfo implements Provider2 {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final Context f12833a;
 
     public DefaultHeartBeatInfo(Context context) {

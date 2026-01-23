@@ -12,8 +12,8 @@ import lombok.javac.JavacASTVisitor;
 import lombok.javac.JavacAnnotationHandler;
 import lombok.javac.JavacNode;
 
+/* JADX INFO: loaded from: discord-126021.apk:lombok/javac/handlers/HandlePrintAST.SCL.lombok */
 @HandlerPriority(536870912)
-/* loaded from: discord-126021.apk:lombok/javac/handlers/HandlePrintAST.SCL.lombok */
 public class HandlePrintAST extends JavacAnnotationHandler<PrintAST> {
     @Override // lombok.javac.JavacAnnotationHandler
     public void handle(AnnotationValues<PrintAST> annotation, JCTree.JCAnnotation ast, JavacNode annotationNode) {

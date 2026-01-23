@@ -3,9 +3,9 @@ package com.discord.widgets.status;
 import kotlin.jvm.functions.Function1;
 import p637j0.p641k.Func1;
 
-/* compiled from: WidgetGlobalStatusIndicatorViewModel.kt */
-/* renamed from: com.discord.widgets.status.WidgetGlobalStatusIndicatorViewModel$sam$rx_functions_Func1$0, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.status.WidgetGlobalStatusIndicatorViewModel$sam$rx_functions_Func1$0, reason: use source file name */
+/* JADX INFO: compiled from: WidgetGlobalStatusIndicatorViewModel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetGlobalStatusIndicatorViewModel3 implements Func1 {
     private final /* synthetic */ Function1 function;
 

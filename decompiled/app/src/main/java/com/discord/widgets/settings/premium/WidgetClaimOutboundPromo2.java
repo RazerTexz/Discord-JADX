@@ -8,9 +8,9 @@ import kotlin.jvm.functions.Function2;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetClaimOutboundPromo.kt */
-/* renamed from: com.discord.widgets.settings.premium.WidgetClaimOutboundPromo$Companion$showAndRegisterForClaimResult$2, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.settings.premium.WidgetClaimOutboundPromo$Companion$showAndRegisterForClaimResult$2, reason: use source file name */
+/* JADX INFO: compiled from: WidgetClaimOutboundPromo.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetClaimOutboundPromo2 extends Lambda implements Function2<String, Bundle, Unit> {
     public final /* synthetic */ Function1 $onPromoClaimed;
 
@@ -26,7 +26,7 @@ public final class WidgetClaimOutboundPromo2 extends Lambda implements Function2
         return Unit.f27425a;
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final void invoke2(String str, Bundle bundle) {
         Intrinsics3.checkNotNullParameter(str, "requestKey");
         Intrinsics3.checkNotNullParameter(bundle, "bundle");

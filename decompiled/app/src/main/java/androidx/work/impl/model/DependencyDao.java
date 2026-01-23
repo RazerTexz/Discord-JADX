@@ -5,8 +5,8 @@ import androidx.room.Insert;
 import androidx.room.Query;
 import java.util.List;
 
+/* JADX INFO: loaded from: classes.dex */
 @Dao
-/* loaded from: classes.dex */
 public interface DependencyDao {
     @Query("SELECT work_spec_id FROM dependency WHERE prerequisite_id=:id")
     List<String> getDependentWorkIds(String str);

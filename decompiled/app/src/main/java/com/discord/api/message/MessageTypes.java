@@ -1,8 +1,8 @@
 package com.discord.api.message;
 
 
-/* compiled from: MessageTypes.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: MessageTypes.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class MessageTypes {
     public static final int AUTOMOD_SYSTEM_MESSAGE = 24;
     public static final int CALL = 3;

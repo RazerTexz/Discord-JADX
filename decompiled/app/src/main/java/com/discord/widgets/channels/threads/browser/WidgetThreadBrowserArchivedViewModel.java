@@ -34,11 +34,11 @@ import p507d0.p592z.p594d.Lambda;
 import p658rx.Observable;
 import p658rx.subjects.BehaviorSubject;
 
-/* compiled from: WidgetThreadBrowserArchivedViewModel.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetThreadBrowserArchivedViewModel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetThreadBrowserArchivedViewModel extends AppViewModel<ViewState> {
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private boolean canLoadMore;
     private final long channelId;
@@ -52,8 +52,8 @@ public final class WidgetThreadBrowserArchivedViewModel extends AppViewModel<Vie
     private final StoreUser storeUser;
     private final BehaviorSubject<ViewMode> viewModeSubject;
 
-    /* compiled from: WidgetThreadBrowserArchivedViewModel.kt */
-    /* renamed from: com.discord.widgets.channels.threads.browser.WidgetThreadBrowserArchivedViewModel$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.channels.threads.browser.WidgetThreadBrowserArchivedViewModel$1 */
+    /* JADX INFO: compiled from: WidgetThreadBrowserArchivedViewModel.kt */
     public static final class C76601 extends Lambda implements Function1<StoreState, Unit> {
         public C76601() {
             super(1);
@@ -65,14 +65,14 @@ public final class WidgetThreadBrowserArchivedViewModel extends AppViewModel<Vie
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(StoreState storeState) {
             Intrinsics3.checkNotNullParameter(storeState, "storeState");
             WidgetThreadBrowserArchivedViewModel.access$handleStoreState(WidgetThreadBrowserArchivedViewModel.this, storeState);
         }
     }
 
-    /* compiled from: WidgetThreadBrowserArchivedViewModel.kt */
+    /* JADX INFO: compiled from: WidgetThreadBrowserArchivedViewModel.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -92,7 +92,7 @@ public final class WidgetThreadBrowserArchivedViewModel extends AppViewModel<Vie
         }
     }
 
-    /* compiled from: WidgetThreadBrowserArchivedViewModel.kt */
+    /* JADX INFO: compiled from: WidgetThreadBrowserArchivedViewModel.kt */
     public static final /* data */ class StoreState {
         private final Channel channel;
         private final Guild guild;
@@ -120,11 +120,12 @@ public final class WidgetThreadBrowserArchivedViewModel extends AppViewModel<Vie
             this.permissions = l;
         }
 
+        /* JADX WARN: Multi-variable type inference failed */
         public static /* synthetic */ StoreState copy$default(StoreState storeState, ViewMode viewMode, Map map, Map map2, ArchivedThreadsStore.ThreadListingState threadListingState, boolean z2, Channel channel, Guild guild, Long l, int i, Object obj) {
             return storeState.copy((i & 1) != 0 ? storeState.viewMode : viewMode, (i & 2) != 0 ? storeState.guildMembers : map, (i & 4) != 0 ? storeState.users : map2, (i & 8) != 0 ? storeState.listingState : threadListingState, (i & 16) != 0 ? storeState.isModerator : z2, (i & 32) != 0 ? storeState.channel : channel, (i & 64) != 0 ? storeState.guild : guild, (i & 128) != 0 ? storeState.permissions : l);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final ViewMode getViewMode() {
             return this.viewMode;
         }
@@ -137,27 +138,27 @@ public final class WidgetThreadBrowserArchivedViewModel extends AppViewModel<Vie
             return this.users;
         }
 
-        /* renamed from: component4, reason: from getter */
+        /* JADX INFO: renamed from: component4, reason: from getter */
         public final ArchivedThreadsStore.ThreadListingState getListingState() {
             return this.listingState;
         }
 
-        /* renamed from: component5, reason: from getter */
+        /* JADX INFO: renamed from: component5, reason: from getter */
         public final boolean getIsModerator() {
             return this.isModerator;
         }
 
-        /* renamed from: component6, reason: from getter */
+        /* JADX INFO: renamed from: component6, reason: from getter */
         public final Channel getChannel() {
             return this.channel;
         }
 
-        /* renamed from: component7, reason: from getter */
+        /* JADX INFO: renamed from: component7, reason: from getter */
         public final Guild getGuild() {
             return this.guild;
         }
 
-        /* renamed from: component8, reason: from getter */
+        /* JADX INFO: renamed from: component8, reason: from getter */
         public final Long getPermissions() {
             return this.permissions;
         }
@@ -211,6 +212,9 @@ public final class WidgetThreadBrowserArchivedViewModel extends AppViewModel<Vie
         }
 
         /* JADX WARN: Multi-variable type inference failed */
+        /* JADX WARN: Type inference failed for: r2v10, types: [int] */
+        /* JADX WARN: Type inference failed for: r2v20 */
+        /* JADX WARN: Type inference failed for: r2v24 */
         public int hashCode() {
             ViewMode viewMode = this.viewMode;
             int iHashCode = (viewMode != null ? viewMode.hashCode() : 0) * 31;
@@ -221,13 +225,13 @@ public final class WidgetThreadBrowserArchivedViewModel extends AppViewModel<Vie
             ArchivedThreadsStore.ThreadListingState threadListingState = this.listingState;
             int iHashCode4 = (iHashCode3 + (threadListingState != null ? threadListingState.hashCode() : 0)) * 31;
             boolean z2 = this.isModerator;
-            int i = z2;
-            if (z2 != 0) {
-                i = 1;
+            ?? r2 = z2;
+            if (z2) {
+                r2 = 1;
             }
-            int i2 = (iHashCode4 + i) * 31;
+            int i = (iHashCode4 + r2) * 31;
             Channel channel = this.channel;
-            int iHashCode5 = (i2 + (channel != null ? channel.hashCode() : 0)) * 31;
+            int iHashCode5 = (i + (channel != null ? channel.hashCode() : 0)) * 31;
             Guild guild = this.guild;
             int iHashCode6 = (iHashCode5 + (guild != null ? guild.hashCode() : 0)) * 31;
             Long l = this.permissions;
@@ -258,7 +262,7 @@ public final class WidgetThreadBrowserArchivedViewModel extends AppViewModel<Vie
         }
     }
 
-    /* compiled from: WidgetThreadBrowserArchivedViewModel.kt */
+    /* JADX INFO: compiled from: WidgetThreadBrowserArchivedViewModel.kt */
     public static final /* data */ class ViewMode {
         private final boolean isModeratorMode;
         private final ArchivedThreadsStore.ThreadListingType threadListingType;
@@ -303,12 +307,12 @@ public final class WidgetThreadBrowserArchivedViewModel extends AppViewModel<Vie
             return viewMode.copy(visibilityMode, z2);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final VisibilityMode getVisibility() {
             return this.visibility;
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final boolean getIsModeratorMode() {
             return this.isModeratorMode;
         }
@@ -338,15 +342,18 @@ public final class WidgetThreadBrowserArchivedViewModel extends AppViewModel<Vie
         }
 
         /* JADX WARN: Multi-variable type inference failed */
+        /* JADX WARN: Type inference failed for: r1v1, types: [int] */
+        /* JADX WARN: Type inference failed for: r1v2 */
+        /* JADX WARN: Type inference failed for: r1v3 */
         public int hashCode() {
             VisibilityMode visibilityMode = this.visibility;
             int iHashCode = (visibilityMode != null ? visibilityMode.hashCode() : 0) * 31;
             boolean z2 = this.isModeratorMode;
-            int i = z2;
-            if (z2 != 0) {
-                i = 1;
+            ?? r1 = z2;
+            if (z2) {
+                r1 = 1;
             }
-            return iHashCode + i;
+            return iHashCode + r1;
         }
 
         public final boolean isModeratorMode() {
@@ -361,7 +368,7 @@ public final class WidgetThreadBrowserArchivedViewModel extends AppViewModel<Vie
         }
     }
 
-    /* compiled from: WidgetThreadBrowserArchivedViewModel.kt */
+    /* JADX INFO: compiled from: WidgetThreadBrowserArchivedViewModel.kt */
     public static final /* data */ class ViewState {
         private final boolean canCreateThread;
         private final boolean isError;
@@ -380,6 +387,7 @@ public final class WidgetThreadBrowserArchivedViewModel extends AppViewModel<Vie
             this.canCreateThread = z4;
         }
 
+        /* JADX WARN: Multi-variable type inference failed */
         public static /* synthetic */ ViewState copy$default(ViewState viewState, ViewMode viewMode, List list, boolean z2, boolean z3, boolean z4, int i, Object obj) {
             if ((i & 1) != 0) {
                 viewMode = viewState.viewMode;
@@ -402,7 +410,7 @@ public final class WidgetThreadBrowserArchivedViewModel extends AppViewModel<Vie
             return viewState.copy(viewMode, list2, z5, z6, z4);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final ViewMode getViewMode() {
             return this.viewMode;
         }
@@ -411,17 +419,17 @@ public final class WidgetThreadBrowserArchivedViewModel extends AppViewModel<Vie
             return this.listItems;
         }
 
-        /* renamed from: component3, reason: from getter */
+        /* JADX INFO: renamed from: component3, reason: from getter */
         public final boolean getIsModerator() {
             return this.isModerator;
         }
 
-        /* renamed from: component4, reason: from getter */
+        /* JADX INFO: renamed from: component4, reason: from getter */
         public final boolean getIsError() {
             return this.isError;
         }
 
-        /* renamed from: component5, reason: from getter */
+        /* JADX INFO: renamed from: component5, reason: from getter */
         public final boolean getCanCreateThread() {
             return this.canCreateThread;
         }
@@ -456,25 +464,34 @@ public final class WidgetThreadBrowserArchivedViewModel extends AppViewModel<Vie
         }
 
         /* JADX WARN: Multi-variable type inference failed */
+        /* JADX WARN: Type inference failed for: r1v10 */
+        /* JADX WARN: Type inference failed for: r1v11 */
+        /* JADX WARN: Type inference failed for: r1v3, types: [int] */
+        /* JADX WARN: Type inference failed for: r1v5, types: [int] */
+        /* JADX WARN: Type inference failed for: r1v7 */
+        /* JADX WARN: Type inference failed for: r1v8 */
+        /* JADX WARN: Type inference failed for: r2v1 */
+        /* JADX WARN: Type inference failed for: r2v2, types: [int] */
+        /* JADX WARN: Type inference failed for: r2v3 */
         public int hashCode() {
             ViewMode viewMode = this.viewMode;
             int iHashCode = (viewMode != null ? viewMode.hashCode() : 0) * 31;
             List<WidgetThreadBrowserAdapter.Item> list = this.listItems;
             int iHashCode2 = (iHashCode + (list != null ? list.hashCode() : 0)) * 31;
             boolean z2 = this.isModerator;
-            int i = z2;
-            if (z2 != 0) {
-                i = 1;
+            ?? r1 = z2;
+            if (z2) {
+                r1 = 1;
             }
-            int i2 = (iHashCode2 + i) * 31;
+            int i = (iHashCode2 + r1) * 31;
             boolean z3 = this.isError;
-            int i3 = z3;
-            if (z3 != 0) {
-                i3 = 1;
+            ?? r12 = z3;
+            if (z3) {
+                r12 = 1;
             }
-            int i4 = (i2 + i3) * 31;
+            int i2 = (i + r12) * 31;
             boolean z4 = this.canCreateThread;
-            return i4 + (z4 ? 1 : z4 ? 1 : 0);
+            return i2 + (z4 ? 1 : z4);
         }
 
         public final boolean isError() {
@@ -499,7 +516,7 @@ public final class WidgetThreadBrowserArchivedViewModel extends AppViewModel<Vie
         }
     }
 
-    /* compiled from: WidgetThreadBrowserArchivedViewModel.kt */
+    /* JADX INFO: compiled from: WidgetThreadBrowserArchivedViewModel.kt */
     public enum VisibilityMode {
         PublicThreads,
         PrivateThreads

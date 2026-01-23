@@ -141,14 +141,14 @@ import p630i0.p636f0.Url;
 import p658rx.Observable;
 import retrofit2.Response;
 
-/* compiled from: RestAPIInterface.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: RestAPIInterface.kt */
+/* JADX INFO: loaded from: classes.dex */
 public interface RestAPIInterface {
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = Companion.$$INSTANCE;
 
-    /* compiled from: RestAPIInterface.kt */
+    /* JADX INFO: compiled from: RestAPIInterface.kt */
     public static final class Companion {
         public static final /* synthetic */ Companion $$INSTANCE = new Companion();
         private static final String X_CONTEXT_PROPERTIES = "X-Context-Properties";
@@ -157,7 +157,7 @@ public interface RestAPIInterface {
         }
     }
 
-    /* compiled from: RestAPIInterface.kt */
+    /* JADX INFO: compiled from: RestAPIInterface.kt */
     public static final class DefaultImpls {
         public static /* synthetic */ Observable getInviteCode$default(RestAPIInterface restAPIInterface, String str, boolean z2, Long l, int i, Object obj) {
             if (obj != null) {
@@ -207,6 +207,7 @@ public interface RestAPIInterface {
             throw new UnsupportedOperationException("Super calls with default arguments not supported in this target, function: joinGuild");
         }
 
+        /* JADX WARN: Multi-variable type inference failed */
         public static /* synthetic */ Observable postOauth2Authorize$default(RestAPIInterface restAPIInterface, String str, String str2, String str3, String str4, String str5, String str6, String str7, String str8, String str9, Map map, int i, Object obj) {
             if (obj == null) {
                 return restAPIInterface.postOauth2Authorize(str, str2, (i & 4) != 0 ? null : str3, str4, (i & 16) != 0 ? "consent" : str5, str6, (i & 64) != 0 ? null : str7, (i & 128) != 0 ? null : str8, (i & 256) != 0 ? null : str9, (i & 512) != 0 ? MapsJVM.mapOf(Tuples.m10073to("authorize", "true")) : map);
@@ -247,19 +248,19 @@ public interface RestAPIInterface {
         }
     }
 
-    /* compiled from: RestAPIInterface.kt */
+    /* JADX INFO: compiled from: RestAPIInterface.kt */
     public interface Dynamic {
         @GET
         Observable<JsonObject> get(@Url String url);
     }
 
-    /* compiled from: RestAPIInterface.kt */
+    /* JADX INFO: compiled from: RestAPIInterface.kt */
     public interface Files {
         @GET
         Observable<ResponseBody> getFile(@Url String url);
     }
 
-    /* compiled from: RestAPIInterface.kt */
+    /* JADX INFO: compiled from: RestAPIInterface.kt */
     public interface RtcLatency {
         @GET
         Observable<List<ModelRtcLatencyRegion>> get(@Url String url);

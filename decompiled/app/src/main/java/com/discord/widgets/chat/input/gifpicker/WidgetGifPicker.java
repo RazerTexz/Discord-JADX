@@ -30,21 +30,21 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 import p507d0.p592z.p594d.Reflection2;
 
-/* compiled from: WidgetGifPicker.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetGifPicker.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetGifPicker extends AppFragment {
     public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetGifPicker.class, "binding", "getBinding()Lcom/discord/databinding/WidgetGifPickerBinding;", 0)};
 
-    /* renamed from: binding$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
     private GifCategoryAdapter categoryAdapter;
     private Function1<? super GifCategoryItem, Unit> onSelectGifCategory;
 
-    /* renamed from: viewModel$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: viewModel$delegate, reason: from kotlin metadata */
     private final Lazy viewModel;
 
-    /* compiled from: WidgetGifPicker.kt */
-    /* renamed from: com.discord.widgets.chat.input.gifpicker.WidgetGifPicker$onViewBoundOrOnResume$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.input.gifpicker.WidgetGifPicker$onViewBoundOrOnResume$1 */
+    /* JADX INFO: compiled from: WidgetGifPicker.kt */
     public static final class C78821 extends Lambda implements Function1<GifPickerViewModel.ViewState, Unit> {
         public C78821() {
             super(1);
@@ -56,15 +56,15 @@ public final class WidgetGifPicker extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(GifPickerViewModel.ViewState viewState) {
             Intrinsics3.checkNotNullParameter(viewState, "viewState");
             WidgetGifPicker.access$handleViewState(WidgetGifPicker.this, viewState);
         }
     }
 
-    /* compiled from: WidgetGifPicker.kt */
-    /* renamed from: com.discord.widgets.chat.input.gifpicker.WidgetGifPicker$setWindowInsetsListeners$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.input.gifpicker.WidgetGifPicker$setWindowInsetsListeners$1 */
+    /* JADX INFO: compiled from: WidgetGifPicker.kt */
     public static final class C78831 implements OnApplyWindowInsetsListener {
         public static final C78831 INSTANCE = new C78831();
 
@@ -77,8 +77,8 @@ public final class WidgetGifPicker extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetGifPicker.kt */
-    /* renamed from: com.discord.widgets.chat.input.gifpicker.WidgetGifPicker$setWindowInsetsListeners$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.input.gifpicker.WidgetGifPicker$setWindowInsetsListeners$2 */
+    /* JADX INFO: compiled from: WidgetGifPicker.kt */
     public static final class C78842 implements OnApplyWindowInsetsListener {
         public static final C78842 INSTANCE = new C78842();
 
@@ -91,8 +91,8 @@ public final class WidgetGifPicker extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetGifPicker.kt */
-    /* renamed from: com.discord.widgets.chat.input.gifpicker.WidgetGifPicker$setWindowInsetsListeners$3 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.input.gifpicker.WidgetGifPicker$setWindowInsetsListeners$3 */
+    /* JADX INFO: compiled from: WidgetGifPicker.kt */
     public static final class C78853 implements OnApplyWindowInsetsListener {
         public C78853() {
         }

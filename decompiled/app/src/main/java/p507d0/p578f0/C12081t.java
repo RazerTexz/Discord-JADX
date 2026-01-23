@@ -7,35 +7,35 @@ import kotlin.sequences.Sequence;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.p595g0.KMarkers;
 
-/* compiled from: Sequences.kt */
-/* renamed from: d0.f0.t */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.f0.t */
+/* JADX INFO: compiled from: Sequences.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class C12081t<T> implements Sequence<T> {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final Sequence<T> f25126a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final Function1<T, Boolean> f25127b;
 
-    /* compiled from: Sequences.kt */
-    /* renamed from: d0.f0.t$a */
+    /* JADX INFO: renamed from: d0.f0.t$a */
+    /* JADX INFO: compiled from: Sequences.kt */
     public static final class a implements Iterator<T>, KMarkers {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public final Iterator<T> f25128j;
 
-        /* renamed from: k */
+        /* JADX INFO: renamed from: k */
         public int f25129k = -1;
 
-        /* renamed from: l */
+        /* JADX INFO: renamed from: l */
         public T f25130l;
 
         public a() {
             this.f25128j = C12081t.access$getSequence$p(C12081t.this).iterator();
         }
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final void m10066a() {
             if (this.f25128j.hasNext()) {
                 T next = this.f25128j.next();

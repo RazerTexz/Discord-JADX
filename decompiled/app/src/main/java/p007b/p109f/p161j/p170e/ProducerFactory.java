@@ -21,84 +21,84 @@ import p007b.p109f.p161j.p181p.Producer2;
 import p007b.p109f.p161j.p181p.ResizeAndRotateProducer;
 import p007b.p109f.p161j.p184s.ImageTranscoderFactory;
 
-/* compiled from: ProducerFactory.java */
-/* renamed from: b.f.j.e.p, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.f.j.e.p, reason: use source file name */
+/* JADX INFO: compiled from: ProducerFactory.java */
+/* JADX INFO: loaded from: classes.dex */
 public class ProducerFactory {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public ContentResolver f3815a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public Resources f3816b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public AssetManager f3817c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final ByteArrayPool f3818d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final ImageDecoder2 f3819e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final ProgressiveJpegConfig f3820f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public final boolean f3821g;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public final boolean f3822h;
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public final boolean f3823i;
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final ExecutorSupplier f3824j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final PooledByteBufferFactory f3825k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final BufferedDiskCache2 f3826l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public final BufferedDiskCache2 f3827m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public final MemoryCache<CacheKey, PooledByteBuffer> f3828n;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public final MemoryCache<CacheKey, CloseableImage> f3829o;
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public final CacheKeyFactory f3830p;
 
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     public final BoundedLinkedHashSet<CacheKey> f3831q;
 
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     public final BoundedLinkedHashSet<CacheKey> f3832r;
 
-    /* renamed from: s */
+    /* JADX INFO: renamed from: s */
     public final PlatformBitmapFactory f3833s;
 
-    /* renamed from: t */
+    /* JADX INFO: renamed from: t */
     public final int f3834t;
 
-    /* renamed from: u */
+    /* JADX INFO: renamed from: u */
     public final int f3835u;
 
-    /* renamed from: v */
+    /* JADX INFO: renamed from: v */
     public boolean f3836v;
 
-    /* renamed from: w */
+    /* JADX INFO: renamed from: w */
     public final CloseableReferenceFactory f3837w;
 
-    /* renamed from: x */
+    /* JADX INFO: renamed from: x */
     public final int f3838x;
 
-    /* renamed from: y */
+    /* JADX INFO: renamed from: y */
     public final boolean f3839y;
 
     public ProducerFactory(Context context, ByteArrayPool byteArrayPool, ImageDecoder2 imageDecoder2, ProgressiveJpegConfig progressiveJpegConfig, boolean z2, boolean z3, boolean z4, ExecutorSupplier executorSupplier, PooledByteBufferFactory pooledByteBufferFactory, MemoryCache<CacheKey, CloseableImage> memoryCache, MemoryCache<CacheKey, PooledByteBuffer> memoryCache2, BufferedDiskCache2 bufferedDiskCache2, BufferedDiskCache2 bufferedDiskCache22, CacheKeyFactory cacheKeyFactory, PlatformBitmapFactory platformBitmapFactory, int i, int i2, boolean z5, int i3, CloseableReferenceFactory closeableReferenceFactory, boolean z6, int i4) {
@@ -129,7 +129,7 @@ public class ProducerFactory {
         this.f3839y = z6;
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public ResizeAndRotateProducer m1304a(Producer2<EncodedImage2> producer2, boolean z2, ImageTranscoderFactory imageTranscoderFactory) {
         return new ResizeAndRotateProducer(this.f3824j.mo1256c(), this.f3825k, producer2, z2, imageTranscoderFactory);
     }

@@ -6,9 +6,9 @@ import p507d0.Standard2;
 import p507d0.p592z.p594d.Intrinsics3;
 import p659s.p667b.Parceler;
 
-/* compiled from: Parcelers.kt */
-/* renamed from: com.discord.utilities.UtcDateTimeParceler, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.utilities.UtcDateTimeParceler, reason: use source file name */
+/* JADX INFO: compiled from: Parcelers.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class Parcelers implements Parceler<UtcDateTime> {
     public static final Parcelers INSTANCE = new Parcelers();
 
@@ -37,14 +37,14 @@ public final class Parcelers implements Parceler<UtcDateTime> {
         return new UtcDateTime(parcel.readLong());
     }
 
-    /* renamed from: write, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: write, reason: avoid collision after fix types in other method */
     public void write2(UtcDateTime utcDateTime, Parcel parcel, int i) {
         Intrinsics3.checkNotNullParameter(utcDateTime, "$this$write");
         Intrinsics3.checkNotNullParameter(parcel, "parcel");
         parcel.writeLong(utcDateTime.getDateTimeMillis());
     }
 
-    /* renamed from: newArray, reason: collision with other method in class */
+    /* JADX INFO: renamed from: newArray, reason: collision with other method in class */
     public /* bridge */ /* synthetic */ Object[] m11397newArray(int i) {
         return newArray(i);
     }

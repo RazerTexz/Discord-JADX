@@ -26,32 +26,32 @@ import p658rx.Observable;
 import p658rx.Subscription;
 import p658rx.subjects.BehaviorSubject;
 
-/* compiled from: AppVideoStreamRenderer.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: AppVideoStreamRenderer.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class AppVideoStreamRenderer extends VideoStreamRenderer {
 
-    /* renamed from: j, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: j, reason: from kotlin metadata */
     public boolean isOverlay;
 
-    /* renamed from: k, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: k, reason: from kotlin metadata */
     public final BehaviorSubject<Unit> onSizeChangedSubject;
 
-    /* renamed from: l, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: l, reason: from kotlin metadata */
     public Subscription updateRendererSizeSubscription;
 
-    /* renamed from: m, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: m, reason: from kotlin metadata */
     public Integer streamId;
 
-    /* renamed from: n, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: n, reason: from kotlin metadata */
     public BehaviorSubject<Point> currentFrameResolutionSubject;
 
-    /* renamed from: o, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: o, reason: from kotlin metadata */
     public Function1<? super Point, Unit> onFrameRenderedListener;
 
-    /* renamed from: p, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: p, reason: from kotlin metadata */
     public RendererCommon.ScalingType prevScalingType;
 
-    /* renamed from: q, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: q, reason: from kotlin metadata */
     public RendererCommon.ScalingType prevScalingTypeMismatchOrientation;
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -67,7 +67,7 @@ public final class AppVideoStreamRenderer extends VideoStreamRenderer {
     }
 
     @MainThread
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final void m8571b() {
         Subscription subscription = this.updateRendererSizeSubscription;
         if (subscription != null) {
@@ -83,7 +83,7 @@ public final class AppVideoStreamRenderer extends VideoStreamRenderer {
     }
 
     @MainThread
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final void m8572c(Integer newStreamId, RendererCommon.ScalingType scalingType, RendererCommon.ScalingType scalingTypeMismatchOrientation, boolean isVideoMirrored) {
         if (newStreamId == null) {
             m8571b();

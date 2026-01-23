@@ -33,22 +33,22 @@ import p507d0.p580t.Collections2;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: AbstractTypeAliasDescriptor.kt */
-/* renamed from: d0.e0.p.d.m0.c.i1.e, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.c.i1.e, reason: use source file name */
+/* JADX INFO: compiled from: AbstractTypeAliasDescriptor.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public abstract class AbstractTypeAliasDescriptor2 extends DeclarationDescriptorNonRootImpl implements TypeAliasDescriptor {
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public final DescriptorVisibility2 f22851n;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public List<? extends TypeParameterDescriptor> f22852o;
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public final b f22853p;
 
-    /* compiled from: AbstractTypeAliasDescriptor.kt */
-    /* renamed from: d0.e0.p.d.m0.c.i1.e$a */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.c.i1.e$a */
+    /* JADX INFO: compiled from: AbstractTypeAliasDescriptor.kt */
     public static final class a extends Lambda implements Function1<KotlinType3, Boolean> {
         public a() {
             super(1);
@@ -60,7 +60,7 @@ public abstract class AbstractTypeAliasDescriptor2 extends DeclarationDescriptor
         }
 
         /* JADX WARN: Removed duplicated region for block: B:12:0x002d  */
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         /*
             Code decompiled incorrectly, please refer to instructions dump.
         */
@@ -76,8 +76,8 @@ public abstract class AbstractTypeAliasDescriptor2 extends DeclarationDescriptor
         }
     }
 
-    /* compiled from: AbstractTypeAliasDescriptor.kt */
-    /* renamed from: d0.e0.p.d.m0.c.i1.e$b */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.c.i1.e$b */
+    /* JADX INFO: compiled from: AbstractTypeAliasDescriptor.kt */
     public static final class b implements TypeConstructor {
         public b() {
         }

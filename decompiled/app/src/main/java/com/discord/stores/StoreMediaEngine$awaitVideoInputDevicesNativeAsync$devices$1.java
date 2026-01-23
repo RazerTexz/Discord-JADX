@@ -11,9 +11,9 @@ import p507d0.p584w.p586i.p587a.ContinuationImpl6;
 import p507d0.p584w.p586i.p587a.DebugMetadata;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: StoreMediaEngine.kt */
+/* JADX INFO: compiled from: StoreMediaEngine.kt */
+/* JADX INFO: loaded from: classes2.dex */
 @DebugMetadata(m10084c = "com.discord.stores.StoreMediaEngine$awaitVideoInputDevicesNativeAsync$devices$1", m10085f = "StoreMediaEngine.kt", m10086l = {266}, m10087m = "invokeSuspend")
-/* loaded from: classes2.dex */
 public final class StoreMediaEngine$awaitVideoInputDevicesNativeAsync$devices$1 extends ContinuationImpl6 implements Function2<CoroutineScope, Continuation<? super DeviceDescription4[]>, Object> {
     public int label;
     public final /* synthetic */ StoreMediaEngine this$0;

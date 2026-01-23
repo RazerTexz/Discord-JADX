@@ -6,9 +6,9 @@ import kotlin.jvm.internal.Ref$LongRef;
 import p507d0.p592z.p594d.Intrinsics3;
 import p637j0.p641k.Func1;
 
-/* compiled from: WidgetChatListAdapterItemUploadProgress.kt */
-/* renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemUploadProgress$ModelProvider$getManyUploadsObservable$4 */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemUploadProgress$ModelProvider$getManyUploadsObservable$4 */
+/* JADX INFO: compiled from: WidgetChatListAdapterItemUploadProgress.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class C8150x87a029e8<T, R> implements Func1<Long, Integer> {
     public final /* synthetic */ Ref$LongRef $totalContentLength;
 
@@ -21,7 +21,7 @@ public final class C8150x87a029e8<T, R> implements Func1<Long, Integer> {
         return call2(l);
     }
 
-    /* renamed from: call, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
     public final Integer call2(Long l) {
         WidgetChatListAdapterItemUploadProgress.ModelProvider modelProvider = WidgetChatListAdapterItemUploadProgress.ModelProvider.INSTANCE;
         Intrinsics3.checkNotNullExpressionValue(l, "totalBytesWritten");

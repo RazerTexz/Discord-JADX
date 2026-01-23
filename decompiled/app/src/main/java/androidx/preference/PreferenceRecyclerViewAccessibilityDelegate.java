@@ -9,15 +9,15 @@ import androidx.core.view.accessibility.AccessibilityNodeInfoCompat;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.recyclerview.widget.RecyclerViewAccessibilityDelegate;
 
+/* JADX INFO: loaded from: classes.dex */
 @RestrictTo({RestrictTo.Scope.LIBRARY_GROUP_PREFIX})
 @Deprecated
-/* loaded from: classes.dex */
 public class PreferenceRecyclerViewAccessibilityDelegate extends RecyclerViewAccessibilityDelegate {
     public final AccessibilityDelegateCompat mDefaultItemDelegate;
     public final AccessibilityDelegateCompat mItemDelegate;
     public final RecyclerView mRecyclerView;
 
-    /* renamed from: androidx.preference.PreferenceRecyclerViewAccessibilityDelegate$1 */
+    /* JADX INFO: renamed from: androidx.preference.PreferenceRecyclerViewAccessibilityDelegate$1 */
     public class C05241 extends AccessibilityDelegateCompat {
         public C05241() {
         }

@@ -4,18 +4,18 @@ import kotlin.jvm.internal.DefaultConstructorMarker;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ModelGif.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: ModelGif.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class ModelGif {
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private final String gifImageUrl;
     private final int height;
     private final String tenorGifUrl;
     private final int width;
 
-    /* compiled from: ModelGif.kt */
+    /* JADX INFO: compiled from: ModelGif.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -55,22 +55,22 @@ public final /* data */ class ModelGif {
         return modelGif.copy(str, str2, i, i2);
     }
 
-    /* renamed from: component1, reason: from getter */
+    /* JADX INFO: renamed from: component1, reason: from getter */
     public final String getGifImageUrl() {
         return this.gifImageUrl;
     }
 
-    /* renamed from: component2, reason: from getter */
+    /* JADX INFO: renamed from: component2, reason: from getter */
     public final String getTenorGifUrl() {
         return this.tenorGifUrl;
     }
 
-    /* renamed from: component3, reason: from getter */
+    /* JADX INFO: renamed from: component3, reason: from getter */
     public final int getWidth() {
         return this.width;
     }
 
-    /* renamed from: component4, reason: from getter */
+    /* JADX INFO: renamed from: component4, reason: from getter */
     public final int getHeight() {
         return this.height;
     }

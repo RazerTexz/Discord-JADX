@@ -6,8 +6,8 @@ import kotlin.jvm.functions.Function0;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: ArgUtils.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: ArgUtils.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetMobileReports$$special$$inlined$args$1 extends Lambda implements Function0<WidgetMobileReports2> {
     public final /* synthetic */ String $argsKey;
     public final /* synthetic */ AppFragment $this_args;
@@ -21,17 +21,19 @@ public final class WidgetMobileReports$$special$$inlined$args$1 extends Lambda i
 
     /* JADX WARN: Can't rename method to resolve collision */
     /* JADX WARN: Multi-variable type inference failed */
-    /* JADX WARN: Type inference failed for: r1v8, types: [android.os.Parcelable] */
+    /* JADX WARN: Type inference failed for: r1v10 */
+    /* JADX WARN: Type inference failed for: r1v11 */
+    /* JADX WARN: Type inference failed for: r1v3, types: [com.discord.widgets.mobile_reports.MobileReportArgs] */
     @Override // kotlin.jvm.functions.Function0
     public final WidgetMobileReports2 invoke() {
         Bundle arguments = this.$this_args.getArguments();
         Object obj = arguments != null ? arguments.get(this.$argsKey) : null;
         WidgetMobileReports2 widgetMobileReports2 = (WidgetMobileReports2) (obj instanceof WidgetMobileReports2 ? obj : null);
-        WidgetMobileReports2 parcelableExtra = widgetMobileReports2;
+        ?? parcelableExtra = widgetMobileReports2;
         if (widgetMobileReports2 == null) {
             parcelableExtra = this.$this_args.getMostRecentIntent().getParcelableExtra(this.$argsKey);
         }
-        if (parcelableExtra != null) {
+        if (parcelableExtra != 0) {
             return parcelableExtra;
         }
         StringBuilder sbM833U = outline.m833U("Missing args for class type ");

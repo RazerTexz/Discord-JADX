@@ -1,11 +1,11 @@
 package p007b.p225i.p408d.p410q;
 
-/* compiled from: JavaVersion.java */
-/* renamed from: b.i.d.q.o, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.d.q.o, reason: use source file name */
+/* JADX INFO: compiled from: JavaVersion.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class JavaVersion {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final int f13123a;
 
     static {

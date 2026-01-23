@@ -2,6 +2,7 @@ package com.discord.widgets.channels.permissions;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
+import android.content.res.Resources;
 import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
@@ -38,22 +39,22 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 import p658rx.subjects.BehaviorSubject;
 
-/* compiled from: WidgetChannelSettingsAddMemberSheet.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetChannelSettingsAddMemberSheet.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetChannelSettingsAddMemberSheet extends AppBottomSheet {
     public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetChannelSettingsAddMemberSheet.class, "binding", "getBinding()Lcom/discord/databinding/WidgetChannelSettingsAddMemberSheetBinding;", 0)};
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
 
-    /* renamed from: binding$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
 
-    /* renamed from: channelId$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: channelId$delegate, reason: from kotlin metadata */
     private final Lazy channelId;
     private WidgetChannelSettingsAddMemberFragment fragment;
 
-    /* compiled from: WidgetChannelSettingsAddMemberSheet.kt */
+    /* JADX INFO: compiled from: WidgetChannelSettingsAddMemberSheet.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -70,8 +71,8 @@ public final class WidgetChannelSettingsAddMemberSheet extends AppBottomSheet {
         }
     }
 
-    /* compiled from: WidgetChannelSettingsAddMemberSheet.kt */
-    /* renamed from: com.discord.widgets.channels.permissions.WidgetChannelSettingsAddMemberSheet$addPermissionOverwrites$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.channels.permissions.WidgetChannelSettingsAddMemberSheet$addPermissionOverwrites$1 */
+    /* JADX INFO: compiled from: WidgetChannelSettingsAddMemberSheet.kt */
     public static final class C75311 extends Lambda implements Function1<List<? extends Void>, Unit> {
         public C75311() {
             super(1);
@@ -83,15 +84,15 @@ public final class WidgetChannelSettingsAddMemberSheet extends AppBottomSheet {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(List<Void> list) {
             Intrinsics3.checkNotNullParameter(list, "it");
             WidgetChannelSettingsAddMemberSheet.this.dismiss();
         }
     }
 
-    /* compiled from: WidgetChannelSettingsAddMemberSheet.kt */
-    /* renamed from: com.discord.widgets.channels.permissions.WidgetChannelSettingsAddMemberSheet$configureUI$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.channels.permissions.WidgetChannelSettingsAddMemberSheet$configureUI$1 */
+    /* JADX INFO: compiled from: WidgetChannelSettingsAddMemberSheet.kt */
     public static final class ViewOnClickListenerC75321 implements View.OnClickListener {
         public ViewOnClickListenerC75321() {
         }
@@ -102,8 +103,8 @@ public final class WidgetChannelSettingsAddMemberSheet extends AppBottomSheet {
         }
     }
 
-    /* compiled from: WidgetChannelSettingsAddMemberSheet.kt */
-    /* renamed from: com.discord.widgets.channels.permissions.WidgetChannelSettingsAddMemberSheet$onResume$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.channels.permissions.WidgetChannelSettingsAddMemberSheet$onResume$1 */
+    /* JADX INFO: compiled from: WidgetChannelSettingsAddMemberSheet.kt */
     public static final class C75331 extends Lambda implements Function1<Channel, Unit> {
         public C75331() {
             super(1);
@@ -115,7 +116,7 @@ public final class WidgetChannelSettingsAddMemberSheet extends AppBottomSheet {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Channel channel) {
             if (channel == null) {
                 WidgetChannelSettingsAddMemberSheet.this.dismiss();
@@ -125,8 +126,8 @@ public final class WidgetChannelSettingsAddMemberSheet extends AppBottomSheet {
         }
     }
 
-    /* compiled from: WidgetChannelSettingsAddMemberSheet.kt */
-    /* renamed from: com.discord.widgets.channels.permissions.WidgetChannelSettingsAddMemberSheet$onResume$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.channels.permissions.WidgetChannelSettingsAddMemberSheet$onResume$2 */
+    /* JADX INFO: compiled from: WidgetChannelSettingsAddMemberSheet.kt */
     public static final class C75342 extends Lambda implements Function1<Map<Long, ? extends PermissionOverwrite.Type>, Unit> {
         public C75342() {
             super(1);
@@ -138,7 +139,7 @@ public final class WidgetChannelSettingsAddMemberSheet extends AppBottomSheet {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Map<Long, ? extends PermissionOverwrite.Type> map) {
             TextView textView = WidgetChannelSettingsAddMemberSheet.access$getBinding$p(WidgetChannelSettingsAddMemberSheet.this).f15905b;
             Intrinsics3.checkNotNullExpressionValue(textView, "binding.addButton");
@@ -147,8 +148,8 @@ public final class WidgetChannelSettingsAddMemberSheet extends AppBottomSheet {
         }
     }
 
-    /* compiled from: WidgetChannelSettingsAddMemberSheet.kt */
-    /* renamed from: com.discord.widgets.channels.permissions.WidgetChannelSettingsAddMemberSheet$onViewCreated$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.channels.permissions.WidgetChannelSettingsAddMemberSheet$onViewCreated$1 */
+    /* JADX INFO: compiled from: WidgetChannelSettingsAddMemberSheet.kt */
     public static final class RunnableC75351 implements Runnable {
         public final /* synthetic */ View $view;
 
@@ -160,8 +161,9 @@ public final class WidgetChannelSettingsAddMemberSheet extends AppBottomSheet {
         public final void run() {
             ViewGroup.LayoutParams layoutParams = this.$view.getLayoutParams();
             if (layoutParams != null) {
-                Intrinsics3.checkNotNullExpressionValue(WidgetChannelSettingsAddMemberSheet.this.getResources(), "resources");
-                layoutParams.height = (int) (r1.getDisplayMetrics().heightPixels * 0.9d);
+                Resources resources = WidgetChannelSettingsAddMemberSheet.this.getResources();
+                Intrinsics3.checkNotNullExpressionValue(resources, "resources");
+                layoutParams.height = (int) (((double) resources.getDisplayMetrics().heightPixels) * 0.9d);
             }
         }
     }

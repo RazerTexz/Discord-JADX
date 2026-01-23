@@ -32,8 +32,8 @@ import p507d0.p580t.Maps6;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: TabsHostBottomNavigationView.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: TabsHostBottomNavigationView.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class TabsHostBottomNavigationView extends LinearLayout {
     private final TabsHostBottomNavigationViewBinding binding;
     private final Set<HeightChangedListener> heightChangedListeners;
@@ -42,13 +42,13 @@ public final class TabsHostBottomNavigationView extends LinearLayout {
     private Map<ImageView, ? extends NavigationTab> tintableIconToNavigationTabMap;
     private UserAvatarPresenceViewController userAvatarPresenceViewController;
 
-    /* compiled from: TabsHostBottomNavigationView.kt */
+    /* JADX INFO: compiled from: TabsHostBottomNavigationView.kt */
     public interface HeightChangedListener {
         void onHeightChanged(int height);
     }
 
-    /* compiled from: TabsHostBottomNavigationView.kt */
-    /* renamed from: com.discord.widgets.tabs.TabsHostBottomNavigationView$updateView$10 */
+    /* JADX INFO: renamed from: com.discord.widgets.tabs.TabsHostBottomNavigationView$updateView$10 */
+    /* JADX INFO: compiled from: TabsHostBottomNavigationView.kt */
     public static final class ViewOnClickListenerC1014110 implements View.OnClickListener {
         public static final ViewOnClickListenerC1014110 INSTANCE = new ViewOnClickListenerC1014110();
 
@@ -57,8 +57,8 @@ public final class TabsHostBottomNavigationView extends LinearLayout {
         }
     }
 
-    /* compiled from: TabsHostBottomNavigationView.kt */
-    /* renamed from: com.discord.widgets.tabs.TabsHostBottomNavigationView$updateView$11 */
+    /* JADX INFO: renamed from: com.discord.widgets.tabs.TabsHostBottomNavigationView$updateView$11 */
+    /* JADX INFO: compiled from: TabsHostBottomNavigationView.kt */
     public static final class ViewOnClickListenerC1014211 implements View.OnClickListener {
         public static final ViewOnClickListenerC1014211 INSTANCE = new ViewOnClickListenerC1014211();
 
@@ -67,8 +67,8 @@ public final class TabsHostBottomNavigationView extends LinearLayout {
         }
     }
 
-    /* compiled from: TabsHostBottomNavigationView.kt */
-    /* renamed from: com.discord.widgets.tabs.TabsHostBottomNavigationView$updateView$12 */
+    /* JADX INFO: renamed from: com.discord.widgets.tabs.TabsHostBottomNavigationView$updateView$12 */
+    /* JADX INFO: compiled from: TabsHostBottomNavigationView.kt */
     public static final class ViewOnClickListenerC1014312 implements View.OnClickListener {
         public static final ViewOnClickListenerC1014312 INSTANCE = new ViewOnClickListenerC1014312();
 
@@ -77,8 +77,8 @@ public final class TabsHostBottomNavigationView extends LinearLayout {
         }
     }
 
-    /* compiled from: TabsHostBottomNavigationView.kt */
-    /* renamed from: com.discord.widgets.tabs.TabsHostBottomNavigationView$updateView$13 */
+    /* JADX INFO: renamed from: com.discord.widgets.tabs.TabsHostBottomNavigationView$updateView$13 */
+    /* JADX INFO: compiled from: TabsHostBottomNavigationView.kt */
     public static final class ViewOnClickListenerC1014413 implements View.OnClickListener {
         public static final ViewOnClickListenerC1014413 INSTANCE = new ViewOnClickListenerC1014413();
 
@@ -87,8 +87,8 @@ public final class TabsHostBottomNavigationView extends LinearLayout {
         }
     }
 
-    /* compiled from: TabsHostBottomNavigationView.kt */
-    /* renamed from: com.discord.widgets.tabs.TabsHostBottomNavigationView$updateView$14 */
+    /* JADX INFO: renamed from: com.discord.widgets.tabs.TabsHostBottomNavigationView$updateView$14 */
+    /* JADX INFO: compiled from: TabsHostBottomNavigationView.kt */
     public static final class ViewOnClickListenerC1014514 implements View.OnClickListener {
         public static final ViewOnClickListenerC1014514 INSTANCE = new ViewOnClickListenerC1014514();
 
@@ -97,8 +97,8 @@ public final class TabsHostBottomNavigationView extends LinearLayout {
         }
     }
 
-    /* compiled from: TabsHostBottomNavigationView.kt */
-    /* renamed from: com.discord.widgets.tabs.TabsHostBottomNavigationView$updateView$15 */
+    /* JADX INFO: renamed from: com.discord.widgets.tabs.TabsHostBottomNavigationView$updateView$15 */
+    /* JADX INFO: compiled from: TabsHostBottomNavigationView.kt */
     public static final class ViewOnLongClickListenerC1014615 implements View.OnLongClickListener {
         public static final ViewOnLongClickListenerC1014615 INSTANCE = new ViewOnLongClickListenerC1014615();
 
@@ -108,8 +108,8 @@ public final class TabsHostBottomNavigationView extends LinearLayout {
         }
     }
 
-    /* compiled from: TabsHostBottomNavigationView.kt */
-    /* renamed from: com.discord.widgets.tabs.TabsHostBottomNavigationView$updateView$16 */
+    /* JADX INFO: renamed from: com.discord.widgets.tabs.TabsHostBottomNavigationView$updateView$16 */
+    /* JADX INFO: compiled from: TabsHostBottomNavigationView.kt */
     public static final class ViewOnLongClickListenerC1014716 implements View.OnLongClickListener {
         public static final ViewOnLongClickListenerC1014716 INSTANCE = new ViewOnLongClickListenerC1014716();
 
@@ -119,8 +119,8 @@ public final class TabsHostBottomNavigationView extends LinearLayout {
         }
     }
 
-    /* compiled from: TabsHostBottomNavigationView.kt */
-    /* renamed from: com.discord.widgets.tabs.TabsHostBottomNavigationView$updateView$4 */
+    /* JADX INFO: renamed from: com.discord.widgets.tabs.TabsHostBottomNavigationView$updateView$4 */
+    /* JADX INFO: compiled from: TabsHostBottomNavigationView.kt */
     public static final class ViewOnClickListenerC101484 implements View.OnClickListener {
         public final /* synthetic */ Function1 $onTabSelected;
 
@@ -134,8 +134,8 @@ public final class TabsHostBottomNavigationView extends LinearLayout {
         }
     }
 
-    /* compiled from: TabsHostBottomNavigationView.kt */
-    /* renamed from: com.discord.widgets.tabs.TabsHostBottomNavigationView$updateView$5 */
+    /* JADX INFO: renamed from: com.discord.widgets.tabs.TabsHostBottomNavigationView$updateView$5 */
+    /* JADX INFO: compiled from: TabsHostBottomNavigationView.kt */
     public static final class ViewOnClickListenerC101495 implements View.OnClickListener {
         public final /* synthetic */ Function1 $onTabSelected;
 
@@ -149,8 +149,8 @@ public final class TabsHostBottomNavigationView extends LinearLayout {
         }
     }
 
-    /* compiled from: TabsHostBottomNavigationView.kt */
-    /* renamed from: com.discord.widgets.tabs.TabsHostBottomNavigationView$updateView$6 */
+    /* JADX INFO: renamed from: com.discord.widgets.tabs.TabsHostBottomNavigationView$updateView$6 */
+    /* JADX INFO: compiled from: TabsHostBottomNavigationView.kt */
     public static final class ViewOnClickListenerC101506 implements View.OnClickListener {
         public final /* synthetic */ Function0 $onSearchClick;
 
@@ -164,8 +164,8 @@ public final class TabsHostBottomNavigationView extends LinearLayout {
         }
     }
 
-    /* compiled from: TabsHostBottomNavigationView.kt */
-    /* renamed from: com.discord.widgets.tabs.TabsHostBottomNavigationView$updateView$7 */
+    /* JADX INFO: renamed from: com.discord.widgets.tabs.TabsHostBottomNavigationView$updateView$7 */
+    /* JADX INFO: compiled from: TabsHostBottomNavigationView.kt */
     public static final class ViewOnClickListenerC101517 implements View.OnClickListener {
         public final /* synthetic */ Function1 $onTabSelected;
 
@@ -179,8 +179,8 @@ public final class TabsHostBottomNavigationView extends LinearLayout {
         }
     }
 
-    /* compiled from: TabsHostBottomNavigationView.kt */
-    /* renamed from: com.discord.widgets.tabs.TabsHostBottomNavigationView$updateView$8 */
+    /* JADX INFO: renamed from: com.discord.widgets.tabs.TabsHostBottomNavigationView$updateView$8 */
+    /* JADX INFO: compiled from: TabsHostBottomNavigationView.kt */
     public static final class ViewOnClickListenerC101528 implements View.OnClickListener {
         public final /* synthetic */ Function1 $onTabSelected;
 
@@ -194,8 +194,8 @@ public final class TabsHostBottomNavigationView extends LinearLayout {
         }
     }
 
-    /* compiled from: TabsHostBottomNavigationView.kt */
-    /* renamed from: com.discord.widgets.tabs.TabsHostBottomNavigationView$updateView$9 */
+    /* JADX INFO: renamed from: com.discord.widgets.tabs.TabsHostBottomNavigationView$updateView$9 */
+    /* JADX INFO: compiled from: TabsHostBottomNavigationView.kt */
     public static final class C101539 extends Lambda implements Function1<View, Unit> {
         public final /* synthetic */ Function0 $onSettingsLongPress;
 
@@ -211,7 +211,7 @@ public final class TabsHostBottomNavigationView extends LinearLayout {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(View view) {
             Intrinsics3.checkNotNullParameter(view, "it");
             this.$onSettingsLongPress.invoke();

@@ -4,27 +4,27 @@ import android.graphics.Color;
 import java.util.Arrays;
 import p007b.p100d.p104b.p105a.outline;
 
-/* compiled from: Swatch.java */
-/* renamed from: b.a.g.d, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.a.g.d, reason: use source file name */
+/* JADX INFO: compiled from: Swatch.java */
+/* JADX INFO: loaded from: classes.dex */
 public final class Swatch {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final int f645a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final int f646b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final int f647c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final int f648d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final int f649e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public float[] f650f;
 
     public Swatch(int i, int i2) {
@@ -35,7 +35,7 @@ public final class Swatch {
         this.f649e = i2;
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public float[] m193a() {
         if (this.f650f == null) {
             float[] fArr = new float[3];

@@ -8,18 +8,18 @@ import android.support.v4.media.session.MediaSessionCompat;
 import androidx.collection.ArrayMap;
 import androidx.media.utils.MediaConstants;
 
+/* JADX INFO: loaded from: classes.dex */
 @SuppressLint({"BanParcelableUsage"})
-/* loaded from: classes.dex */
 public final class MediaMetadataCompat implements Parcelable {
     public static final Parcelable.Creator<MediaMetadataCompat> CREATOR;
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static final ArrayMap<String, Integer> f36j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final Bundle f37k;
 
-    /* renamed from: android.support.v4.media.MediaMetadataCompat$a */
+    /* JADX INFO: renamed from: android.support.v4.media.MediaMetadataCompat$a */
     public class C0018a implements Parcelable.Creator<MediaMetadataCompat> {
         @Override // android.os.Parcelable.Creator
         public MediaMetadataCompat createFromParcel(Parcel parcel) {

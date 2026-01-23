@@ -7,7 +7,7 @@ import android.os.UserHandle;
 import androidx.annotation.RequiresApi;
 import java.lang.reflect.Method;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public final class ProcessCompat {
 
     @RequiresApi(16)

@@ -9,9 +9,9 @@ import p007b.p008a.p018d.AppScreen2;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetUserPhoneVerify.kt */
-/* renamed from: com.discord.widgets.user.phone.WidgetUserPhoneVerify$passwordVerifyLauncher$1, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: com.discord.widgets.user.phone.WidgetUserPhoneVerify$passwordVerifyLauncher$1, reason: use source file name */
+/* JADX INFO: compiled from: WidgetUserPhoneVerify.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class WidgetUserPhoneVerify9 extends Lambda implements Function0<Unit> {
     public final /* synthetic */ WidgetUserPhoneVerify this$0;
 
@@ -27,7 +27,7 @@ public final class WidgetUserPhoneVerify9 extends Lambda implements Function0<Un
         return Unit.f27425a;
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final void invoke2() {
         FragmentActivity fragmentActivityRequireActivity = this.this$0.requireActivity();
         Intrinsics3.checkNotNullExpressionValue(fragmentActivityRequireActivity, "requireActivity()");

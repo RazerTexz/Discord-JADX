@@ -3,8 +3,8 @@ package androidx.room;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 
+/* JADX INFO: loaded from: classes.dex */
 @Retention(RetentionPolicy.CLASS)
-/* loaded from: classes.dex */
 public @interface ForeignKey {
     public static final int CASCADE = 5;
     public static final int NO_ACTION = 1;

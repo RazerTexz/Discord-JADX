@@ -10,33 +10,33 @@ import android.graphics.drawable.Drawable;
 import java.util.Objects;
 import p007b.p085c.p086a.p087a0.AnimatableValueParser;
 
-/* compiled from: ArrayDrawable.java */
-/* renamed from: b.f.g.e.b, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.f.g.e.b, reason: use source file name */
+/* JADX INFO: compiled from: ArrayDrawable.java */
+/* JADX INFO: loaded from: classes.dex */
 public class ArrayDrawable2 extends Drawable implements Drawable.Callback, TransformCallback, TransformAwareDrawable {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public TransformCallback f3326j;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final Drawable[] f3328l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public final DrawableParent[] f3329m;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final DrawableProperties f3327k = new DrawableProperties();
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public final Rect f3330n = new Rect();
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public boolean f3331o = false;
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public boolean f3332p = false;
 
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     public boolean f3333q = false;
 
     public ArrayDrawable2(Drawable[] drawableArr) {
@@ -55,7 +55,7 @@ public class ArrayDrawable2 extends Drawable implements Drawable.Callback, Trans
         }
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public Drawable m1093a(int i) {
         AnimatableValueParser.m527i(Boolean.valueOf(i >= 0));
         AnimatableValueParser.m527i(Boolean.valueOf(i < this.f3328l.length));
@@ -63,12 +63,12 @@ public class ArrayDrawable2 extends Drawable implements Drawable.Callback, Trans
     }
 
     @Override // p007b.p109f.p132g.p142e.TransformAwareDrawable
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public void mo1094b(TransformCallback transformCallback) {
         this.f3326j = transformCallback;
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public Drawable m1095c(int i, Drawable drawable) {
         AnimatableValueParser.m527i(Boolean.valueOf(i >= 0));
         AnimatableValueParser.m527i(Boolean.valueOf(i < this.f3328l.length));
@@ -90,7 +90,7 @@ public class ArrayDrawable2 extends Drawable implements Drawable.Callback, Trans
     }
 
     @Override // p007b.p109f.p132g.p142e.TransformCallback
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public void mo1096d(Matrix matrix) {
         TransformCallback transformCallback = this.f3326j;
         if (transformCallback != null) {
@@ -204,7 +204,7 @@ public class ArrayDrawable2 extends Drawable implements Drawable.Callback, Trans
     }
 
     @Override // p007b.p109f.p132g.p142e.TransformCallback
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public void mo1097h(RectF rectF) {
         TransformCallback transformCallback = this.f3326j;
         if (transformCallback != null) {

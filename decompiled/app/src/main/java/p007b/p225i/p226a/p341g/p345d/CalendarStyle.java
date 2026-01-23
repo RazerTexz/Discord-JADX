@@ -2,7 +2,6 @@ package p007b.p225i.p226a.p341g.p345d;
 
 import android.content.Context;
 import android.content.res.ColorStateList;
-import android.content.res.Resources;
 import android.content.res.TypedArray;
 import android.graphics.Paint;
 import androidx.annotation.NonNull;
@@ -11,44 +10,44 @@ import com.google.android.material.datepicker.MaterialCalendar;
 import com.google.android.material.resources.MaterialAttributes;
 import com.google.android.material.resources.MaterialResources;
 
-/* compiled from: CalendarStyle.java */
-/* renamed from: b.i.a.g.d.b, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.g.d.b, reason: use source file name */
+/* JADX INFO: compiled from: CalendarStyle.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class CalendarStyle {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     @NonNull
     public final CalendarItemStyle f11584a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     @NonNull
     public final CalendarItemStyle f11585b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     @NonNull
     public final CalendarItemStyle f11586c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     @NonNull
     public final CalendarItemStyle f11587d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     @NonNull
     public final CalendarItemStyle f11588e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     @NonNull
     public final CalendarItemStyle f11589f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     @NonNull
     public final CalendarItemStyle f11590g;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     @NonNull
     public final Paint f11591h;
 
-    public CalendarStyle(@NonNull Context context) throws Resources.NotFoundException {
+    public CalendarStyle(@NonNull Context context) {
         TypedArray typedArrayObtainStyledAttributes = context.obtainStyledAttributes(MaterialAttributes.resolveOrThrow(context, C10817R.attr.materialCalendarStyle, MaterialCalendar.class.getCanonicalName()), C10817R.styleable.MaterialCalendar);
         this.f11584a = CalendarItemStyle.m6058a(context, typedArrayObtainStyledAttributes.getResourceId(C10817R.styleable.MaterialCalendar_dayStyle, 0));
         this.f11590g = CalendarItemStyle.m6058a(context, typedArrayObtainStyledAttributes.getResourceId(C10817R.styleable.MaterialCalendar_dayInvalidStyle, 0));

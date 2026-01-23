@@ -20,7 +20,7 @@ import androidx.core.widget.AutoSizeableTextView;
 import androidx.core.widget.TextViewCompat;
 import androidx.core.widget.TintableCompoundDrawablesView;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class AppCompatButton extends Button implements TintableBackgroundView, AutoSizeableTextView, TintableCompoundDrawablesView {
     private final AppCompatBackgroundHelper mBackgroundTintHelper;
     private final AppCompatTextHelper mTextHelper;

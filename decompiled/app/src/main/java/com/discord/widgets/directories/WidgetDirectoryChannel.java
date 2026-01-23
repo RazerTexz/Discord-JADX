@@ -62,27 +62,27 @@ import p507d0.p592z.p594d.Reflection2;
 import p637j0.p641k.Func1;
 import p658rx.Observable;
 
-/* compiled from: WidgetDirectoryChannel.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetDirectoryChannel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetDirectoryChannel extends AppFragment {
     public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetDirectoryChannel.class, "binding", "getBinding()Lcom/discord/databinding/WidgetDirectoryChannelBinding;", 0)};
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private static final int TAB_LAYOUT_MARGINS = DimenUtils.dpToPixels(48);
     private final ActivityResultLauncher<Intent> activityResult;
 
-    /* renamed from: adapter$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: adapter$delegate, reason: from kotlin metadata */
     private final Lazy adapter;
 
-    /* renamed from: binding$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
     private boolean hasBound;
 
-    /* renamed from: viewModel$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: viewModel$delegate, reason: from kotlin metadata */
     private final Lazy viewModel;
 
-    /* compiled from: WidgetDirectoryChannel.kt */
+    /* JADX INFO: compiled from: WidgetDirectoryChannel.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -96,8 +96,8 @@ public final class WidgetDirectoryChannel extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetDirectoryChannel.kt */
-    /* renamed from: com.discord.widgets.directories.WidgetDirectoryChannel$initializeUI$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.directories.WidgetDirectoryChannel$initializeUI$1 */
+    /* JADX INFO: compiled from: WidgetDirectoryChannel.kt */
     public static final class ViewOnClickListenerC82941 implements View.OnClickListener {
         public ViewOnClickListenerC82941() {
         }
@@ -108,8 +108,8 @@ public final class WidgetDirectoryChannel extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetDirectoryChannel.kt */
-    /* renamed from: com.discord.widgets.directories.WidgetDirectoryChannel$initializeUI$5 */
+    /* JADX INFO: renamed from: com.discord.widgets.directories.WidgetDirectoryChannel$initializeUI$5 */
+    /* JADX INFO: compiled from: WidgetDirectoryChannel.kt */
     public static final class C82955 extends Lambda implements Function1<Long, Unit> {
         public C82955() {
             super(1);
@@ -141,8 +141,8 @@ public final class WidgetDirectoryChannel extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetDirectoryChannel.kt */
-    /* renamed from: com.discord.widgets.directories.WidgetDirectoryChannel$onViewBoundOrOnResume$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.directories.WidgetDirectoryChannel$onViewBoundOrOnResume$1 */
+    /* JADX INFO: compiled from: WidgetDirectoryChannel.kt */
     public static final class C82961<T, R> implements Func1<WidgetDirectoriesViewModel.ViewState, Boolean> {
         public static final C82961 INSTANCE = new C82961();
 
@@ -151,14 +151,14 @@ public final class WidgetDirectoryChannel extends AppFragment {
             return call2(viewState);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final Boolean call2(WidgetDirectoriesViewModel.ViewState viewState) {
             return Boolean.valueOf(viewState != null);
         }
     }
 
-    /* compiled from: WidgetDirectoryChannel.kt */
-    /* renamed from: com.discord.widgets.directories.WidgetDirectoryChannel$onViewBoundOrOnResume$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.directories.WidgetDirectoryChannel$onViewBoundOrOnResume$2 */
+    /* JADX INFO: compiled from: WidgetDirectoryChannel.kt */
     public static final class C82972 extends Lambda implements Function1<WidgetDirectoriesViewModel.ViewState, Unit> {
         public C82972() {
             super(1);
@@ -170,14 +170,14 @@ public final class WidgetDirectoryChannel extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(WidgetDirectoriesViewModel.ViewState viewState) {
             WidgetDirectoryChannel.this.initializeUI();
         }
     }
 
-    /* compiled from: WidgetDirectoryChannel.kt */
-    /* renamed from: com.discord.widgets.directories.WidgetDirectoryChannel$onViewBoundOrOnResume$3 */
+    /* JADX INFO: renamed from: com.discord.widgets.directories.WidgetDirectoryChannel$onViewBoundOrOnResume$3 */
+    /* JADX INFO: compiled from: WidgetDirectoryChannel.kt */
     public static final class C82983<T, R> implements Func1<WidgetDirectoriesViewModel.ViewState, Boolean> {
         public static final C82983 INSTANCE = new C82983();
 
@@ -186,14 +186,14 @@ public final class WidgetDirectoryChannel extends AppFragment {
             return call2(viewState);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final Boolean call2(WidgetDirectoriesViewModel.ViewState viewState) {
             return Boolean.valueOf(viewState != null);
         }
     }
 
-    /* compiled from: WidgetDirectoryChannel.kt */
-    /* renamed from: com.discord.widgets.directories.WidgetDirectoryChannel$onViewBoundOrOnResume$4 */
+    /* JADX INFO: renamed from: com.discord.widgets.directories.WidgetDirectoryChannel$onViewBoundOrOnResume$4 */
+    /* JADX INFO: compiled from: WidgetDirectoryChannel.kt */
     public static final class C82994 extends Lambda implements Function1<WidgetDirectoriesViewModel.ViewState, Unit> {
         public C82994() {
             super(1);
@@ -205,7 +205,7 @@ public final class WidgetDirectoryChannel extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(WidgetDirectoriesViewModel.ViewState viewState) {
             WidgetDirectoryChannel widgetDirectoryChannel = WidgetDirectoryChannel.this;
             Intrinsics3.checkNotNullExpressionValue(viewState, "it");

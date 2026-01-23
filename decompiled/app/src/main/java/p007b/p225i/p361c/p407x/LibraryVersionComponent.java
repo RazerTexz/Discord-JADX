@@ -4,15 +4,15 @@ import android.content.Context;
 import p007b.p225i.p361c.p368l.ComponentContainer;
 import p007b.p225i.p361c.p368l.ComponentFactory;
 
-/* compiled from: LibraryVersionComponent.java */
-/* renamed from: b.i.c.x.f, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.c.x.f, reason: use source file name */
+/* JADX INFO: compiled from: LibraryVersionComponent.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final /* synthetic */ class LibraryVersionComponent implements ComponentFactory {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final String f13086a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final LibraryVersionComponent2 f13087b;
 
     public LibraryVersionComponent(String str, LibraryVersionComponent2 libraryVersionComponent2) {
@@ -21,7 +21,7 @@ public final /* synthetic */ class LibraryVersionComponent implements ComponentF
     }
 
     @Override // p007b.p225i.p361c.p368l.ComponentFactory
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public Object mo6341a(ComponentContainer componentContainer) {
         return new AutoValue_LibraryVersion(this.f13086a, this.f13087b.mo6336a((Context) componentContainer.mo6346a(Context.class)));
     }

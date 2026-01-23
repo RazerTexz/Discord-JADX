@@ -19,7 +19,7 @@ import javax.net.ssl.TrustManager;
 import javax.net.ssl.X509TrustManager;
 import p007b.p100d.p104b.p105a.outline;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class AdjustFactory {
     private static IActivityHandler activityHandler = null;
     private static IAttributionHandler attributionHandler = null;
@@ -42,10 +42,10 @@ public class AdjustFactory {
     private static long timerStart = -1;
     private static boolean tryInstallReferrer = true;
 
-    /* renamed from: com.adjust.sdk.AdjustFactory$1 */
+    /* JADX INFO: renamed from: com.adjust.sdk.AdjustFactory$1 */
     public static class C53611 implements UtilNetworking.IConnectionOptions {
 
-        /* renamed from: com.adjust.sdk.AdjustFactory$1$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.adjust.sdk.AdjustFactory$1$1, reason: invalid class name */
         public class AnonymousClass1 implements X509TrustManager {
             public AnonymousClass1() {
             }
@@ -77,7 +77,7 @@ public class AdjustFactory {
             }
         }
 
-        /* renamed from: com.adjust.sdk.AdjustFactory$1$2, reason: invalid class name */
+        /* JADX INFO: renamed from: com.adjust.sdk.AdjustFactory$1$2, reason: invalid class name */
         public class AnonymousClass2 implements HostnameVerifier {
             public AnonymousClass2() {
             }

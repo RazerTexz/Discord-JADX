@@ -4,15 +4,15 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.ThreadFactory;
 import java.util.concurrent.atomic.AtomicInteger;
 
-/* compiled from: com.android.billingclient:billing@@4.0.0 */
-/* renamed from: b.d.a.a.k */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.d.a.a.k */
+/* JADX INFO: compiled from: com.android.billingclient:billing@@4.0.0 */
+/* JADX INFO: loaded from: classes.dex */
 public final class ThreadFactoryC1626k implements ThreadFactory {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final ThreadFactory f2964j = Executors.defaultThreadFactory();
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final AtomicInteger f2965k = new AtomicInteger(1);
 
     public ThreadFactoryC1626k(C1614a c1614a) {

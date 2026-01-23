@@ -39,12 +39,12 @@ import org.eclipse.jdt.internal.compiler.ast.TypeDeclaration;
 import org.eclipse.jdt.internal.compiler.ast.TypeReference;
 import org.eclipse.jdt.internal.compiler.lookup.TypeConstants;
 
-/* loaded from: discord-126021.apk:lombok/eclipse/handlers/HandleToString.SCL.lombok */
+/* JADX INFO: loaded from: discord-126021.apk:lombok/eclipse/handlers/HandleToString.SCL.lombok */
 public class HandleToString extends EclipseAnnotationHandler<ToString> {
     private static final Set<String> BUILT_IN_TYPES = Collections.unmodifiableSet(new HashSet(Arrays.asList("byte", "short", "int", Constants.LONG, "char", "boolean", "double", "float")));
     private static /* synthetic */ int[] $SWITCH_TABLE$lombok$core$configuration$CallSuperType;
 
-    /* renamed from: $SWITCH_TABLE$lombok$eclipse$handlers$EclipseHandlerUtil$MemberExistsResult */
+    /* JADX INFO: renamed from: $SWITCH_TABLE$lombok$eclipse$handlers$EclipseHandlerUtil$MemberExistsResult */
     private static /* synthetic */ int[] f27475xb87c1847;
 
     static /* synthetic */ int[] $SWITCH_TABLE$lombok$core$configuration$CallSuperType() {
@@ -69,7 +69,7 @@ public class HandleToString extends EclipseAnnotationHandler<ToString> {
         return iArr2;
     }
 
-    /* renamed from: $SWITCH_TABLE$lombok$eclipse$handlers$EclipseHandlerUtil$MemberExistsResult */
+    /* JADX INFO: renamed from: $SWITCH_TABLE$lombok$eclipse$handlers$EclipseHandlerUtil$MemberExistsResult */
     static /* synthetic */ int[] m10935xb87c1847() {
         int[] iArr = f27475xb87c1847;
         if (iArr != null) {
@@ -188,7 +188,7 @@ public class HandleToString extends EclipseAnnotationHandler<ToString> {
         char[] infix = ", ".toCharArray();
         int pS = source.sourceStart;
         int pE = source.sourceEnd;
-        long p = (pS << 32) | pE;
+        long p = (((long) pS) << 32) | ((long) pE);
         if (callSuper) {
             prefix = "(super=";
         } else if (members.isEmpty()) {
@@ -351,7 +351,7 @@ public class HandleToString extends EclipseAnnotationHandler<ToString> {
     public static NameReference generateQualifiedNameRef(ASTNode source, char[]... varNames) {
         int pS = source.sourceStart;
         int pE = source.sourceEnd;
-        long p = (pS << 32) | pE;
+        long p = (((long) pS) << 32) | ((long) pE);
         QualifiedNameReference qualifiedNameReference = varNames.length > 1 ? new QualifiedNameReference(varNames, new long[varNames.length], pS, pE) : new SingleNameReference(varNames[0], p);
         EclipseHandlerUtil.setGeneratedBy(qualifiedNameReference, source);
         return qualifiedNameReference;

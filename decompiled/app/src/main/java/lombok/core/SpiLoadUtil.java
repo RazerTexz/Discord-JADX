@@ -18,7 +18,7 @@ import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Set;
 
-/* loaded from: discord-126021.apk:lombok/core/SpiLoadUtil.SCL.lombok */
+/* JADX INFO: loaded from: discord-126021.apk:lombok/core/SpiLoadUtil.SCL.lombok */
 public class SpiLoadUtil {
     private SpiLoadUtil() {
     }
@@ -51,8 +51,8 @@ public class SpiLoadUtil {
     }
 
     /* JADX INFO: Add missing generic type declarations: [C] */
-    /* renamed from: lombok.core.SpiLoadUtil$1 */
-    /* loaded from: discord-126021.apk:lombok/core/SpiLoadUtil$1.SCL.lombok */
+    /* JADX INFO: renamed from: lombok.core.SpiLoadUtil$1 */
+    /* JADX INFO: loaded from: discord-126021.apk:lombok/core/SpiLoadUtil$1.SCL.lombok */
     class C128181<C> implements Iterable<C> {
         private final /* synthetic */ Iterator val$names;
         private final /* synthetic */ Class val$target;
@@ -64,8 +64,8 @@ public class SpiLoadUtil {
             this.val$fLoader = classLoader;
         }
 
-        /* renamed from: lombok.core.SpiLoadUtil$1$1, reason: invalid class name */
-        /* loaded from: discord-126021.apk:lombok/core/SpiLoadUtil$1$1.SCL.lombok */
+        /* JADX INFO: renamed from: lombok.core.SpiLoadUtil$1$1, reason: invalid class name */
+        /* JADX INFO: loaded from: discord-126021.apk:lombok/core/SpiLoadUtil$1$1.SCL.lombok */
         class AnonymousClass1 implements Iterator<C> {
             private final /* synthetic */ Iterator val$names;
             private final /* synthetic */ Class val$target;
@@ -87,7 +87,7 @@ public class SpiLoadUtil {
                 try {
                     return (C) this.val$target.cast(Class.forName((String) this.val$names.next(), true, this.val$fLoader).getConstructor(new Class[0]).newInstance(new Object[0]));
                 } catch (Exception e) {
-                    Exception cause = e;
+                    Throwable cause = e;
                     if (cause instanceof InvocationTargetException) {
                         cause = cause.getCause();
                     }

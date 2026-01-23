@@ -2,12 +2,12 @@ package p600f0.p601e0.p604f;
 
 import kotlin.jvm.functions.Function0;
 
-/* compiled from: TaskQueue.kt */
-/* renamed from: f0.e0.f.b, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: f0.e0.f.b, reason: use source file name */
+/* JADX INFO: compiled from: TaskQueue.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class TaskQueue extends Task2 {
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final /* synthetic */ Function0 f25413e;
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -17,7 +17,7 @@ public final class TaskQueue extends Task2 {
     }
 
     @Override // p600f0.p601e0.p604f.Task2
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public long mo10150a() {
         this.f25413e.invoke();
         return -1L;

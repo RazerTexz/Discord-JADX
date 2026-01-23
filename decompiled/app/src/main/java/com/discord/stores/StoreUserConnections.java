@@ -35,8 +35,8 @@ import p507d0.p592z.p594d.Lambda;
 import p507d0.p592z.p594d.p595g0.KMarkers;
 import p658rx.Observable;
 
-/* compiled from: StoreUserConnections.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: StoreUserConnections.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class StoreUserConnections extends StoreV2 {
     private final Dispatcher dispatcher;
     private final ObservationDeck observationDeck;
@@ -44,11 +44,11 @@ public final class StoreUserConnections extends StoreV2 {
     private State stateSnapshot;
     private final StoreStream stream;
 
-    /* compiled from: StoreUserConnections.kt */
+    /* JADX INFO: compiled from: StoreUserConnections.kt */
     public static abstract class State implements List<ConnectedAccount>, KMarkers {
         private final List<ConnectedAccount> connectedAccounts;
 
-        /* compiled from: StoreUserConnections.kt */
+        /* JADX INFO: compiled from: StoreUserConnections.kt */
         public static final /* data */ class ConnectedAccounts extends State {
             private final List<ConnectedAccount> connectedAccounts;
 
@@ -106,7 +106,7 @@ public final class StoreUserConnections extends StoreV2 {
             }
         }
 
-        /* compiled from: StoreUserConnections.kt */
+        /* JADX INFO: compiled from: StoreUserConnections.kt */
         public static final class Loading extends State {
             public static final Loading INSTANCE = new Loading();
 
@@ -119,7 +119,7 @@ public final class StoreUserConnections extends StoreV2 {
             this.connectedAccounts = list;
         }
 
-        /* renamed from: add, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: add, reason: avoid collision after fix types in other method */
         public void add2(int i, ConnectedAccount connectedAccount) {
             throw new UnsupportedOperationException("Operation is not supported for read-only collection");
         }
@@ -270,7 +270,7 @@ public final class StoreUserConnections extends StoreV2 {
             throw new UnsupportedOperationException("Operation is not supported for read-only collection");
         }
 
-        /* renamed from: set, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: set, reason: avoid collision after fix types in other method */
         public ConnectedAccount set2(int i, ConnectedAccount connectedAccount) {
             throw new UnsupportedOperationException("Operation is not supported for read-only collection");
         }
@@ -310,8 +310,8 @@ public final class StoreUserConnections extends StoreV2 {
         }
     }
 
-    /* compiled from: StoreUserConnections.kt */
-    /* renamed from: com.discord.stores.StoreUserConnections$authorizeConnection$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreUserConnections$authorizeConnection$1 */
+    /* JADX INFO: compiled from: StoreUserConnections.kt */
     public static final class C65611 extends Lambda implements Function1<ModelUrl, Unit> {
         public final /* synthetic */ Context $context;
 
@@ -327,15 +327,15 @@ public final class StoreUserConnections extends StoreV2 {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(ModelUrl modelUrl) {
             Intrinsics3.checkNotNullParameter(modelUrl, "response");
             UriHandler.handle$default(UriHandler.INSTANCE, this.$context, modelUrl.getUrl(), false, false, null, 28, null);
         }
     }
 
-    /* compiled from: StoreUserConnections.kt */
-    /* renamed from: com.discord.stores.StoreUserConnections$deleteUserConnection$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreUserConnections$deleteUserConnection$1 */
+    /* JADX INFO: compiled from: StoreUserConnections.kt */
     public static final class C65621 extends Lambda implements Function1<Void, TrackNetworkMetadata2> {
         public static final C65621 INSTANCE = new C65621();
 
@@ -348,14 +348,14 @@ public final class StoreUserConnections extends StoreV2 {
             return invoke2(r1);
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final TrackNetworkMetadata2 invoke2(Void r7) {
             return new TrackNetworkActionUserConnectionsUpdate(null, null, null, null, 15);
         }
     }
 
-    /* compiled from: StoreUserConnections.kt */
-    /* renamed from: com.discord.stores.StoreUserConnections$deleteUserConnection$2 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreUserConnections$deleteUserConnection$2 */
+    /* JADX INFO: compiled from: StoreUserConnections.kt */
     public static final class C65632 extends Lambda implements Function1<Void, Unit> {
         public C65632() {
             super(1);
@@ -367,18 +367,18 @@ public final class StoreUserConnections extends StoreV2 {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Void r1) {
             StoreUserConnections.this.fetchConnectedAccounts();
         }
     }
 
-    /* compiled from: StoreUserConnections.kt */
-    /* renamed from: com.discord.stores.StoreUserConnections$fetchConnectedAccounts$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreUserConnections$fetchConnectedAccounts$1 */
+    /* JADX INFO: compiled from: StoreUserConnections.kt */
     public static final class C65641 extends Lambda implements Function1<List<? extends ConnectedAccount>, Unit> {
 
-        /* compiled from: StoreUserConnections.kt */
-        /* renamed from: com.discord.stores.StoreUserConnections$fetchConnectedAccounts$1$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.stores.StoreUserConnections$fetchConnectedAccounts$1$1, reason: invalid class name */
+        /* JADX INFO: compiled from: StoreUserConnections.kt */
         public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
             public final /* synthetic */ List $connectedAccounts;
 
@@ -394,7 +394,7 @@ public final class StoreUserConnections extends StoreV2 {
                 return Unit.f27425a;
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2() {
                 StoreUserConnections.this.getStream().handleUserConnections(this.$connectedAccounts);
             }
@@ -410,15 +410,15 @@ public final class StoreUserConnections extends StoreV2 {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(List<ConnectedAccount> list) {
             Intrinsics3.checkNotNullParameter(list, "connectedAccounts");
             StoreUserConnections.this.getDispatcher().schedule(new AnonymousClass1(list));
         }
     }
 
-    /* compiled from: StoreUserConnections.kt */
-    /* renamed from: com.discord.stores.StoreUserConnections$init$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreUserConnections$init$1 */
+    /* JADX INFO: compiled from: StoreUserConnections.kt */
     public static final class C65651 extends Lambda implements Function1<Unit, Unit> {
         public C65651() {
             super(1);
@@ -430,14 +430,14 @@ public final class StoreUserConnections extends StoreV2 {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Unit unit) {
             StoreUserConnections.this.fetchConnectedAccounts();
         }
     }
 
-    /* compiled from: StoreUserConnections.kt */
-    /* renamed from: com.discord.stores.StoreUserConnections$observeConnectedAccounts$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreUserConnections$observeConnectedAccounts$1 */
+    /* JADX INFO: compiled from: StoreUserConnections.kt */
     public static final class C65661 extends Lambda implements Function0<State> {
         public C65661() {
             super(0);
@@ -455,8 +455,8 @@ public final class StoreUserConnections extends StoreV2 {
         }
     }
 
-    /* compiled from: StoreUserConnections.kt */
-    /* renamed from: com.discord.stores.StoreUserConnections$updateUserConnection$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreUserConnections$updateUserConnection$1 */
+    /* JADX INFO: compiled from: StoreUserConnections.kt */
     public static final class C65671 extends Lambda implements Function1<ConnectedAccount, TrackNetworkMetadata2> {
         public final /* synthetic */ ConnectedAccount $connectedAccount;
         public final /* synthetic */ boolean $syncFriends;
@@ -473,14 +473,14 @@ public final class StoreUserConnections extends StoreV2 {
             return invoke2(connectedAccount);
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final TrackNetworkMetadata2 invoke2(ConnectedAccount connectedAccount) {
             return new TrackNetworkActionUserConnectionsUpdate(this.$connectedAccount.getName(), Boolean.valueOf(this.$syncFriends), null, null, 12);
         }
     }
 
-    /* compiled from: StoreUserConnections.kt */
-    /* renamed from: com.discord.stores.StoreUserConnections$updateUserConnection$2 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreUserConnections$updateUserConnection$2 */
+    /* JADX INFO: compiled from: StoreUserConnections.kt */
     public static final class C65682 extends Lambda implements Function1<ConnectedAccount, Unit> {
         public C65682() {
             super(1);
@@ -492,7 +492,7 @@ public final class StoreUserConnections extends StoreV2 {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(ConnectedAccount connectedAccount) {
             Intrinsics3.checkNotNullParameter(connectedAccount, "it");
             StoreUserConnections.this.fetchConnectedAccounts();
@@ -521,7 +521,7 @@ public final class StoreUserConnections extends StoreV2 {
         ObservableExtensionsKt.appSubscribe$default(ObservableExtensionsKt.restSubscribeOn$default(RestAPI.INSTANCE.getApi().getConnections(), false, 1, null), StoreUserConnections.class, (Context) null, (Function1) null, (Function1) null, (Function0) null, (Function0) null, new C65641(), 62, (Object) null);
     }
 
-    /* renamed from: getConnectedAccounts, reason: from getter */
+    /* JADX INFO: renamed from: getConnectedAccounts, reason: from getter */
     public final State getStateSnapshot() {
         return this.stateSnapshot;
     }

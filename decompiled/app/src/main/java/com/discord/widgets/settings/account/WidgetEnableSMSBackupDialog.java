@@ -29,19 +29,19 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 import p658rx.Observable;
 
-/* compiled from: WidgetEnableSMSBackupDialog.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetEnableSMSBackupDialog.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetEnableSMSBackupDialog extends AppDialog {
     public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetEnableSMSBackupDialog.class, "binding", "getBinding()Lcom/discord/databinding/WidgetEnableSmsBackupDialogBinding;", 0)};
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private static final String EXTRA_ENABLE = "extra_enable";
 
-    /* renamed from: binding$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
 
-    /* compiled from: WidgetEnableSMSBackupDialog.kt */
+    /* JADX INFO: compiled from: WidgetEnableSMSBackupDialog.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -64,8 +64,8 @@ public final class WidgetEnableSMSBackupDialog extends AppDialog {
         }
     }
 
-    /* compiled from: WidgetEnableSMSBackupDialog.kt */
-    /* renamed from: com.discord.widgets.settings.account.WidgetEnableSMSBackupDialog$enableSMSBackup$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.account.WidgetEnableSMSBackupDialog$enableSMSBackup$1 */
+    /* JADX INFO: compiled from: WidgetEnableSMSBackupDialog.kt */
     public static final class C97131 extends Lambda implements Function1<Error, Unit> {
         public C97131() {
             super(1);
@@ -77,7 +77,7 @@ public final class WidgetEnableSMSBackupDialog extends AppDialog {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Error error) {
             Intrinsics3.checkNotNullParameter(error, "it");
             WidgetEnableSMSBackupDialog.access$getBinding$p(WidgetEnableSMSBackupDialog.this).f16595d.setIsLoading(false);
@@ -89,8 +89,8 @@ public final class WidgetEnableSMSBackupDialog extends AppDialog {
         }
     }
 
-    /* compiled from: WidgetEnableSMSBackupDialog.kt */
-    /* renamed from: com.discord.widgets.settings.account.WidgetEnableSMSBackupDialog$enableSMSBackup$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.account.WidgetEnableSMSBackupDialog$enableSMSBackup$2 */
+    /* JADX INFO: compiled from: WidgetEnableSMSBackupDialog.kt */
     public static final class C97142 extends Lambda implements Function1<Void, Unit> {
         public C97142() {
             super(1);
@@ -102,7 +102,7 @@ public final class WidgetEnableSMSBackupDialog extends AppDialog {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Void r2) {
             StoreStream.INSTANCE.getMFA().togglingSMSBackup();
             WidgetEnableSMSBackupDialog.access$getBinding$p(WidgetEnableSMSBackupDialog.this).f16595d.setIsLoading(false);
@@ -110,8 +110,8 @@ public final class WidgetEnableSMSBackupDialog extends AppDialog {
         }
     }
 
-    /* compiled from: WidgetEnableSMSBackupDialog.kt */
-    /* renamed from: com.discord.widgets.settings.account.WidgetEnableSMSBackupDialog$onResume$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.account.WidgetEnableSMSBackupDialog$onResume$1 */
+    /* JADX INFO: compiled from: WidgetEnableSMSBackupDialog.kt */
     public static final class ViewOnClickListenerC97151 implements View.OnClickListener {
         public ViewOnClickListenerC97151() {
         }
@@ -122,8 +122,8 @@ public final class WidgetEnableSMSBackupDialog extends AppDialog {
         }
     }
 
-    /* compiled from: WidgetEnableSMSBackupDialog.kt */
-    /* renamed from: com.discord.widgets.settings.account.WidgetEnableSMSBackupDialog$onResume$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.account.WidgetEnableSMSBackupDialog$onResume$2 */
+    /* JADX INFO: compiled from: WidgetEnableSMSBackupDialog.kt */
     public static final class ViewOnClickListenerC97162 implements View.OnClickListener {
         public final /* synthetic */ Boolean $enable;
 

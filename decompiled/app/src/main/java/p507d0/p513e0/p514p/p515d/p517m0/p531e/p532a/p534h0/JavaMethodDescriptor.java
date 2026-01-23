@@ -23,27 +23,27 @@ import p507d0.p513e0.p514p.p515d.p517m0.p552k.DescriptorFactory;
 import p507d0.p513e0.p514p.p515d.p517m0.p567n.KotlinType;
 import p507d0.p513e0.p514p.p515d.p517m0.p573o.C12027i;
 
-/* compiled from: JavaMethodDescriptor.java */
-/* renamed from: d0.e0.p.d.m0.e.a.h0.f, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.e.a.h0.f, reason: use source file name */
+/* JADX INFO: compiled from: JavaMethodDescriptor.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class JavaMethodDescriptor extends SimpleFunctionDescriptorImpl implements JavaCallableMemberDescriptor {
 
-    /* renamed from: M */
+    /* JADX INFO: renamed from: M */
     public static final CallableDescriptor.a<ValueParameterDescriptor> f23262M = new a();
 
-    /* renamed from: N */
+    /* JADX INFO: renamed from: N */
     public b f23263N;
 
-    /* renamed from: O */
+    /* JADX INFO: renamed from: O */
     public final boolean f23264O;
 
-    /* compiled from: JavaMethodDescriptor.java */
-    /* renamed from: d0.e0.p.d.m0.e.a.h0.f$a */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.e.a.h0.f$a */
+    /* JADX INFO: compiled from: JavaMethodDescriptor.java */
     public static class a implements CallableDescriptor.a<ValueParameterDescriptor> {
     }
 
-    /* compiled from: JavaMethodDescriptor.java */
-    /* renamed from: d0.e0.p.d.m0.e.a.h0.f$b */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.e.a.h0.f$b */
+    /* JADX INFO: compiled from: JavaMethodDescriptor.java */
     public enum b {
         NON_STABLE_DECLARED(false, false),
         STABLE_DECLARED(true, false),
@@ -90,7 +90,7 @@ public class JavaMethodDescriptor extends SimpleFunctionDescriptorImpl implement
         this.f23264O = z2;
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static /* synthetic */ void m9458a(int i) {
         String str = (i == 12 || i == 17 || i == 20) ? "@NotNull method %s.%s must not return null" : "Argument for @NotNull parameter '%s' of %s.%s must not be null";
         Object[] objArr = new Object[(i == 12 || i == 17 || i == 20) ? 2 : 3];
@@ -208,7 +208,7 @@ public class JavaMethodDescriptor extends SimpleFunctionDescriptorImpl implement
     }
 
     @Override // p507d0.p513e0.p514p.p515d.p517m0.p521c.p524i1.SimpleFunctionDescriptorImpl, p507d0.p513e0.p514p.p515d.p517m0.p521c.p524i1.FunctionDescriptorImpl
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public FunctionDescriptorImpl mo9373b(DeclarationDescriptor declarationDescriptor, FunctionDescriptor functionDescriptor, CallableMemberDescriptor.a aVar, Name name, Annotations4 annotations4, SourceElement sourceElement) {
         if (declarationDescriptor == null) {
             m9458a(13);

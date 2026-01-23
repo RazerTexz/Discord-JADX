@@ -36,25 +36,25 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 import p507d0.p592z.p594d.Reflection2;
 
-/* compiled from: WidgetHubAddName.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetHubAddName.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetHubAddName extends AppFragment {
     public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetHubAddName.class, "binding", "getBinding()Lcom/discord/databinding/WidgetHubAddNameBinding;", 0)};
 
-    /* renamed from: args$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: args$delegate, reason: from kotlin metadata */
     private final Lazy args;
 
-    /* renamed from: binding$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
 
-    /* renamed from: validationManager$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: validationManager$delegate, reason: from kotlin metadata */
     private final Lazy validationManager;
 
-    /* renamed from: viewModel$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: viewModel$delegate, reason: from kotlin metadata */
     private final Lazy viewModel;
 
-    /* compiled from: WidgetHubAddName.kt */
-    /* renamed from: com.discord.widgets.hubs.WidgetHubAddName$configureUI$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.hubs.WidgetHubAddName$configureUI$2 */
+    /* JADX INFO: compiled from: WidgetHubAddName.kt */
     public static final class C89872 extends Lambda implements Function1<RestCallState6<? extends Void>, Unit> {
         public C89872() {
             super(1);
@@ -66,7 +66,7 @@ public final class WidgetHubAddName extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(RestCallState6<Void> restCallState6) {
             Intrinsics3.checkNotNullParameter(restCallState6, "it");
             FragmentActivity activity = WidgetHubAddName.this.getActivity();
@@ -78,8 +78,8 @@ public final class WidgetHubAddName extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetHubAddName.kt */
-    /* renamed from: com.discord.widgets.hubs.WidgetHubAddName$onViewBound$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.hubs.WidgetHubAddName$onViewBound$1 */
+    /* JADX INFO: compiled from: WidgetHubAddName.kt */
     public static final class ViewOnClickListenerC89881 implements View.OnClickListener {
         public ViewOnClickListenerC89881() {
         }
@@ -90,8 +90,8 @@ public final class WidgetHubAddName extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetHubAddName.kt */
-    /* renamed from: com.discord.widgets.hubs.WidgetHubAddName$onViewBoundOrOnResume$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.hubs.WidgetHubAddName$onViewBoundOrOnResume$1 */
+    /* JADX INFO: compiled from: WidgetHubAddName.kt */
     public static final class C89891 extends Lambda implements Function1<WidgetHubAddNameViewModel2, Unit> {
         public C89891() {
             super(1);
@@ -103,7 +103,7 @@ public final class WidgetHubAddName extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(WidgetHubAddNameViewModel2 widgetHubAddNameViewModel2) {
             Intrinsics3.checkNotNullParameter(widgetHubAddNameViewModel2, "viewState");
             WidgetHubAddName.access$configureUI(WidgetHubAddName.this, widgetHubAddNameViewModel2);

@@ -6,8 +6,8 @@ import com.discord.api.science.AnalyticsSchema;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: TrackSendEmail.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: TrackSendEmail.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class TrackSendEmail implements AnalyticsSchema, TrackBase2 {
     private TrackBase trackBase;
     private final CharSequence emailType = null;
@@ -15,7 +15,7 @@ public final /* data */ class TrackSendEmail implements AnalyticsSchema, TrackBa
     private final transient String analyticsSchemaTypeName = "send_email";
 
     @Override // com.discord.api.science.AnalyticsSchema
-    /* renamed from: d, reason: from getter */
+    /* JADX INFO: renamed from: d, reason: from getter */
     public String getAnalyticsSchemaTypeName() {
         return this.analyticsSchemaTypeName;
     }

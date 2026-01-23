@@ -10,7 +10,7 @@ import java.util.Collection;
 import java.util.Map;
 import p007b.p100d.p104b.p105a.outline;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public final class FieldSerializerAnnotationsUtil {
     public FieldSerializerAnnotationsUtil(FieldSerializer fieldSerializer) {
     }

@@ -8,15 +8,15 @@ import p637j0.p641k.Func1;
 import p637j0.p642l.p647e.ScalarSynchronousObservable;
 import p658rx.Observable;
 
-/* compiled from: UserActionsDialogViewModel.kt */
-/* renamed from: b.a.a.d.d, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.a.a.d.d, reason: use source file name */
+/* JADX INFO: compiled from: UserActionsDialogViewModel.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class UserActionsDialogViewModel3<T, R> implements Func1<Channel, Observable<? extends GuildMember>> {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final /* synthetic */ StoreGuilds f326j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final /* synthetic */ long f327k;
 
     public UserActionsDialogViewModel3(StoreGuilds storeGuilds, long j) {

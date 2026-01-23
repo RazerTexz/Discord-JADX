@@ -3,13 +3,13 @@ package p007b.p195g.p196a.p198b;
 import java.io.Closeable;
 import p007b.p195g.p196a.p198b.p204t.JacksonFeatureSet;
 
-/* compiled from: JsonParser.java */
-/* renamed from: b.g.a.b.f, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.g.a.b.f, reason: use source file name */
+/* JADX INFO: compiled from: JsonParser.java */
+/* JADX INFO: loaded from: classes3.dex */
 public abstract class JsonParser implements Closeable {
 
-    /* compiled from: JsonParser.java */
-    /* renamed from: b.g.a.b.f$a */
+    /* JADX INFO: renamed from: b.g.a.b.f$a */
+    /* JADX INFO: compiled from: JsonParser.java */
     public enum a {
         AUTO_CLOSE_SOURCE(true),
         ALLOW_COMMENTS(false),
@@ -34,7 +34,7 @@ public abstract class JsonParser implements Closeable {
             this._defaultState = z2;
         }
 
-        /* renamed from: f */
+        /* JADX INFO: renamed from: f */
         public static int m1672f() {
             a[] aVarArrValues = values();
             int i = 0;
@@ -48,8 +48,8 @@ public abstract class JsonParser implements Closeable {
         }
     }
 
-    /* compiled from: JsonParser.java */
-    /* renamed from: b.g.a.b.f$b */
+    /* JADX INFO: renamed from: b.g.a.b.f$b */
+    /* JADX INFO: compiled from: JsonParser.java */
     public enum b {
         INT,
         LONG,
@@ -66,7 +66,7 @@ public abstract class JsonParser implements Closeable {
     public JsonParser() {
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public abstract JsonLocation mo1671a();
 
     public JsonParser(int i) {

@@ -8,24 +8,24 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.viewbinding.ViewBinding;
 
-/* compiled from: ViewPremiumGuildProgressBinding.java */
-/* renamed from: b.a.i.x2, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.a.i.x2, reason: use source file name */
+/* JADX INFO: compiled from: ViewPremiumGuildProgressBinding.java */
+/* JADX INFO: loaded from: classes.dex */
 public final class ViewPremiumGuildProgressBinding implements ViewBinding {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     @NonNull
     public final FrameLayout f1373a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     @NonNull
     public final ImageView f1374b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     @NonNull
     public final TextView f1375c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     @NonNull
     public final ProgressBar f1376d;
 

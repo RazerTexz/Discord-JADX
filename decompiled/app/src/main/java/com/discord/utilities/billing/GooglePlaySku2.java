@@ -4,12 +4,12 @@ import com.discord.utilities.billing.GooglePlaySku;
 import kotlin.NoWhenBranchMatchedException;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: GooglePlaySku.kt */
-/* renamed from: com.discord.utilities.billing.GooglePlaySkuKt, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.utilities.billing.GooglePlaySkuKt, reason: use source file name */
+/* JADX INFO: compiled from: GooglePlaySku.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class GooglePlaySku2 {
 
-    /* renamed from: com.discord.utilities.billing.GooglePlaySkuKt$WhenMappings */
+    /* JADX INFO: renamed from: com.discord.utilities.billing.GooglePlaySkuKt$WhenMappings */
     public final /* synthetic */ class WhenMappings {
         public static final /* synthetic */ int[] $EnumSwitchMapping$0;
 

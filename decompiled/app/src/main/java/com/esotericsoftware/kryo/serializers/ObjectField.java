@@ -12,7 +12,7 @@ import p007b.p100d.p104b.p105a.outline;
 import p007b.p106e.p107a.Log;
 import p007b.p106e.p108b.FieldAccess2;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class ObjectField extends FieldSerializer.CachedField {
     public final FieldSerializer fieldSerializer;
     public Class[] generics;

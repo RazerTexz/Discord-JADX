@@ -4,14 +4,14 @@ import java.util.Set;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: WidgetFriendsAddUserRequestsModel.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetFriendsAddUserRequestsModel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final /* data */ class WidgetFriendsAddUserRequestsModel {
 
-    /* renamed from: a, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: a, reason: from kotlin metadata */
     public final Set<Long> outgoingIds;
 
-    /* renamed from: b, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: b, reason: from kotlin metadata */
     public final Set<Long> incomingIds;
 
     public WidgetFriendsAddUserRequestsModel(Set<Long> set, Set<Long> set2) {

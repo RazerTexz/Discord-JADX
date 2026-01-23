@@ -18,16 +18,16 @@ import p507d0.p513e0.p514p.p515d.p517m0.p567n.p568l1.TypeCheckingProcedure;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: specialBuiltinMembers.kt */
-/* renamed from: d0.e0.p.d.m0.e.a.d0, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.e.a.d0, reason: use source file name */
+/* JADX INFO: compiled from: specialBuiltinMembers.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class specialBuiltinMembers {
 
-    /* compiled from: specialBuiltinMembers.kt */
-    /* renamed from: d0.e0.p.d.m0.e.a.d0$a */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.e.a.d0$a */
+    /* JADX INFO: compiled from: specialBuiltinMembers.kt */
     public static final class a extends Lambda implements Function1<CallableMemberDescriptor, Boolean> {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public static final a f23192j = new a();
 
         public a() {
@@ -39,18 +39,18 @@ public final class specialBuiltinMembers {
             return Boolean.valueOf(invoke2(callableMemberDescriptor));
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final boolean invoke2(CallableMemberDescriptor callableMemberDescriptor) {
             Intrinsics3.checkNotNullParameter(callableMemberDescriptor, "it");
             return ClassicBuiltinSpecialProperties.f23436a.hasBuiltinSpecialPropertyFqName(DescriptorUtils2.getPropertyIfAccessor(callableMemberDescriptor));
         }
     }
 
-    /* compiled from: specialBuiltinMembers.kt */
-    /* renamed from: d0.e0.p.d.m0.e.a.d0$b */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.e.a.d0$b */
+    /* JADX INFO: compiled from: specialBuiltinMembers.kt */
     public static final class b extends Lambda implements Function1<CallableMemberDescriptor, Boolean> {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public static final b f23193j = new b();
 
         public b() {
@@ -62,18 +62,18 @@ public final class specialBuiltinMembers {
             return Boolean.valueOf(invoke2(callableMemberDescriptor));
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final boolean invoke2(CallableMemberDescriptor callableMemberDescriptor) {
             Intrinsics3.checkNotNullParameter(callableMemberDescriptor, "it");
             return specialBuiltinMembers2.f23218m.isBuiltinFunctionWithDifferentNameInJvm((SimpleFunctionDescriptor) callableMemberDescriptor);
         }
     }
 
-    /* compiled from: specialBuiltinMembers.kt */
-    /* renamed from: d0.e0.p.d.m0.e.a.d0$c */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.e.a.d0$c */
+    /* JADX INFO: compiled from: specialBuiltinMembers.kt */
     public static final class c extends Lambda implements Function1<CallableMemberDescriptor, Boolean> {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public static final c f23194j = new c();
 
         public c() {
@@ -85,7 +85,7 @@ public final class specialBuiltinMembers {
             return Boolean.valueOf(invoke2(callableMemberDescriptor));
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final boolean invoke2(CallableMemberDescriptor callableMemberDescriptor) {
             Intrinsics3.checkNotNullParameter(callableMemberDescriptor, "it");
             if (KotlinBuiltIns.isBuiltIn(callableMemberDescriptor)) {

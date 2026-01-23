@@ -6,14 +6,14 @@ import androidx.cardview.widget.CardView;
 import androidx.viewbinding.ViewBinding;
 import com.discord.widgets.chat.list.ViewEmbedGameInvite;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public final class WidgetChatListAdapterItemGameInviteBinding implements ViewBinding {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     @NonNull
     public final CardView f16207a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     @NonNull
     public final ViewEmbedGameInvite f16208b;
 

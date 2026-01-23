@@ -9,27 +9,27 @@ import p007b.p225i.p414e.DecodeHintType;
 import p007b.p225i.p414e.ResultPoint;
 import p007b.p225i.p414e.p418n.BitArray;
 
-/* compiled from: ITFReader.java */
-/* renamed from: b.i.e.q.h, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.e.q.h, reason: use source file name */
+/* JADX INFO: compiled from: ITFReader.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class ITFReader extends OneDReader {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final int[] f13373a = {6, 8, 10, 12, 14};
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static final int[] f13374b = {1, 1, 1, 1};
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public static final int[][] f13375c = {new int[]{1, 1, 2}, new int[]{1, 1, 3}};
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public static final int[][] f13376d = {new int[]{1, 1, 2, 2, 1}, new int[]{2, 1, 1, 1, 2}, new int[]{1, 2, 1, 1, 2}, new int[]{2, 2, 1, 1, 1}, new int[]{1, 1, 2, 1, 2}, new int[]{2, 1, 2, 1, 1}, new int[]{1, 2, 2, 1, 1}, new int[]{1, 1, 1, 2, 2}, new int[]{2, 1, 1, 2, 1}, new int[]{1, 2, 1, 2, 1}, new int[]{1, 1, 3, 3, 1}, new int[]{3, 1, 1, 1, 3}, new int[]{1, 3, 1, 1, 3}, new int[]{3, 3, 1, 1, 1}, new int[]{1, 1, 3, 1, 3}, new int[]{3, 1, 3, 1, 1}, new int[]{1, 3, 3, 1, 1}, new int[]{1, 1, 1, 3, 3}, new int[]{3, 1, 1, 3, 1}, new int[]{1, 3, 1, 3, 1}};
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public int f13377e = -1;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public static int m6993g(int[] iArr) throws NotFoundException {
         int length = f13376d.length;
         float f = 0.38f;
@@ -49,7 +49,7 @@ public final class ITFReader extends OneDReader {
         throw NotFoundException.f21665l;
     }
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public static int[] m6994h(BitArray bitArray, int i, int[] iArr) throws NotFoundException {
         int length = iArr.length;
         int[] iArr2 = new int[length];
@@ -83,7 +83,7 @@ public final class ITFReader extends OneDReader {
     }
 
     @Override // p007b.p225i.p414e.p426q.OneDReader
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public Result mo6983b(int i, BitArray bitArray, Map<DecodeHintType, ?> map) throws NotFoundException, FormatException {
         int[] iArrM6994h;
         boolean z2;
@@ -170,7 +170,7 @@ public final class ITFReader extends OneDReader {
         }
     }
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public final void m6995i(BitArray bitArray, int i) throws NotFoundException {
         int i2 = this.f13377e * 10;
         if (i2 >= i) {

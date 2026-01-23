@@ -7,7 +7,7 @@ import androidx.constraintlayout.solver.widgets.ConstraintWidget;
 import java.util.HashMap;
 import p007b.p100d.p104b.p105a.outline;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class Barrier extends HelperWidget {
     public static final int BOTTOM = 3;
     public static final int LEFT = 0;

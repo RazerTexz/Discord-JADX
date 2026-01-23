@@ -28,21 +28,21 @@ import p507d0.Tuples;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetStageModeratorJoinBottomSheet.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetStageModeratorJoinBottomSheet.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetStageModeratorJoinBottomSheet extends AppBottomSheet {
     public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetStageModeratorJoinBottomSheet.class, "binding", "getBinding()Lcom/discord/databinding/WidgetStageModeratorJoinBottomSheetBinding;", 0)};
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
 
-    /* renamed from: binding$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
 
-    /* renamed from: channelId$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: channelId$delegate, reason: from kotlin metadata */
     private final Lazy channelId;
 
-    /* compiled from: WidgetStageModeratorJoinBottomSheet.kt */
+    /* JADX INFO: compiled from: WidgetStageModeratorJoinBottomSheet.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -59,12 +59,12 @@ public final class WidgetStageModeratorJoinBottomSheet extends AppBottomSheet {
         }
     }
 
-    /* compiled from: WidgetStageModeratorJoinBottomSheet.kt */
-    /* renamed from: com.discord.widgets.stage.sheet.WidgetStageModeratorJoinBottomSheet$onViewCreated$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.stage.sheet.WidgetStageModeratorJoinBottomSheet$onViewCreated$1 */
+    /* JADX INFO: compiled from: WidgetStageModeratorJoinBottomSheet.kt */
     public static final class ViewOnClickListenerC100271 implements View.OnClickListener {
 
-        /* compiled from: WidgetStageModeratorJoinBottomSheet.kt */
-        /* renamed from: com.discord.widgets.stage.sheet.WidgetStageModeratorJoinBottomSheet$onViewCreated$1$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.widgets.stage.sheet.WidgetStageModeratorJoinBottomSheet$onViewCreated$1$1, reason: invalid class name */
+        /* JADX INFO: compiled from: WidgetStageModeratorJoinBottomSheet.kt */
         public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
             public AnonymousClass1() {
                 super(0);
@@ -76,14 +76,14 @@ public final class WidgetStageModeratorJoinBottomSheet extends AppBottomSheet {
                 return Unit.f27425a;
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2() {
                 AppToast.m169g(WidgetStageModeratorJoinBottomSheet.this.getContext(), C5419R.string.stage_channel_permission_microphone_denied, 0, null, 12);
             }
         }
 
-        /* compiled from: WidgetStageModeratorJoinBottomSheet.kt */
-        /* renamed from: com.discord.widgets.stage.sheet.WidgetStageModeratorJoinBottomSheet$onViewCreated$1$2, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.widgets.stage.sheet.WidgetStageModeratorJoinBottomSheet$onViewCreated$1$2, reason: invalid class name */
+        /* JADX INFO: compiled from: WidgetStageModeratorJoinBottomSheet.kt */
         public static final class AnonymousClass2 extends Lambda implements Function0<Unit> {
             public AnonymousClass2() {
                 super(0);
@@ -95,7 +95,7 @@ public final class WidgetStageModeratorJoinBottomSheet extends AppBottomSheet {
                 return Unit.f27425a;
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2() {
                 WidgetStageModeratorJoinBottomSheet.access$setSelfSpeaker(WidgetStageModeratorJoinBottomSheet.this);
             }
@@ -110,8 +110,8 @@ public final class WidgetStageModeratorJoinBottomSheet extends AppBottomSheet {
         }
     }
 
-    /* compiled from: WidgetStageModeratorJoinBottomSheet.kt */
-    /* renamed from: com.discord.widgets.stage.sheet.WidgetStageModeratorJoinBottomSheet$onViewCreated$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.stage.sheet.WidgetStageModeratorJoinBottomSheet$onViewCreated$2 */
+    /* JADX INFO: compiled from: WidgetStageModeratorJoinBottomSheet.kt */
     public static final class ViewOnClickListenerC100282 implements View.OnClickListener {
         public ViewOnClickListenerC100282() {
         }
@@ -122,8 +122,8 @@ public final class WidgetStageModeratorJoinBottomSheet extends AppBottomSheet {
         }
     }
 
-    /* compiled from: WidgetStageModeratorJoinBottomSheet.kt */
-    /* renamed from: com.discord.widgets.stage.sheet.WidgetStageModeratorJoinBottomSheet$setSelfSpeaker$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.stage.sheet.WidgetStageModeratorJoinBottomSheet$setSelfSpeaker$1 */
+    /* JADX INFO: compiled from: WidgetStageModeratorJoinBottomSheet.kt */
     public static final class C100291 extends Lambda implements Function1<Void, Unit> {
         public C100291() {
             super(1);
@@ -135,7 +135,7 @@ public final class WidgetStageModeratorJoinBottomSheet extends AppBottomSheet {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Void r1) {
             WidgetStageModeratorJoinBottomSheet.this.dismiss();
         }

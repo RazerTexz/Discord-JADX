@@ -1,14 +1,14 @@
 package p007b.p225i.p361c.p401u;
 
-/* compiled from: FirebaseInstallations.java */
-/* renamed from: b.i.c.u.d, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.c.u.d, reason: use source file name */
+/* JADX INFO: compiled from: FirebaseInstallations.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final /* synthetic */ class FirebaseInstallations2 implements Runnable {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final FirebaseInstallations4 f12924j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final boolean f12925k;
 
     public FirebaseInstallations2(FirebaseInstallations4 firebaseInstallations4, boolean z2) {

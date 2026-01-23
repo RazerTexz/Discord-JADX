@@ -3,9 +3,9 @@ package com.discord.widgets.servers.guildboost;
 import kotlin.jvm.functions.Function5;
 import p658rx.functions.Func5;
 
-/* compiled from: GuildBoostViewModel.kt */
-/* renamed from: com.discord.widgets.servers.guildboost.GuildBoostViewModel$sam$rx_functions_Func5$0, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.servers.guildboost.GuildBoostViewModel$sam$rx_functions_Func5$0, reason: use source file name */
+/* JADX INFO: compiled from: GuildBoostViewModel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class GuildBoostViewModel3 implements Func5 {
     private final /* synthetic */ Function5 function;
 

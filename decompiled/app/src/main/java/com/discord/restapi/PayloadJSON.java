@@ -15,16 +15,16 @@ import p630i0.Retrofit2;
 import p630i0.p633e0.p634a.GsonConverterFactory;
 import p630i0.p633e0.p634a.GsonRequestBodyConverter;
 
-/* compiled from: PayloadJSON.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: PayloadJSON.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class PayloadJSON<T> {
     private final T data;
 
-    /* compiled from: PayloadJSON.kt */
+    /* JADX INFO: compiled from: PayloadJSON.kt */
     public static final class ConverterFactory extends Converter2.a {
         private final GsonConverterFactory gsonConverterFactory;
 
-        /* compiled from: PayloadJSON.kt */
+        /* JADX INFO: compiled from: PayloadJSON.kt */
         public static final class RequestBodyConverter<T> implements Converter2<PayloadJSON<T>, RequestBody> {
             private final Converter2<T, RequestBody> gsonRequestBodyConverter;
 

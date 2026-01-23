@@ -23,9 +23,9 @@ import p507d0.p513e0.p514p.p515d.p517m0.p552k.inlineClassesUtils;
 import p507d0.p513e0.p514p.p515d.p517m0.p562l.p563b.p565e0.DeserializedMemberDescriptor4;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: KPropertyImpl.kt */
-/* renamed from: d0.e0.p.d.w, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.w, reason: use source file name */
+/* JADX INFO: compiled from: KPropertyImpl.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class KPropertyImpl5 {
     /* JADX WARN: Removed duplicated region for block: B:15:0x0058  */
     /* JADX WARN: Removed duplicated region for block: B:17:0x005b  */
@@ -35,7 +35,7 @@ public final class KPropertyImpl5 {
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
-    public static final Caller2 access$computeCallerForAccessor(KPropertyImpl.a aVar, boolean z2) throws SecurityException {
+    public static final Caller2 access$computeCallerForAccessor(KPropertyImpl.a aVar, boolean z2) {
         RuntimeTypeMapper.e setterSignature;
         Method setterMethod;
         Caller2 aVar2;

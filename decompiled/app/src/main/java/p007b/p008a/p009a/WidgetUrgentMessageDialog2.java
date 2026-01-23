@@ -13,12 +13,12 @@ import kotlin.reflect.KProperty;
 import p007b.p008a.p009a.WidgetUrgentMessageDialogViewModel3;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: WidgetUrgentMessageDialog.kt */
-/* renamed from: b.a.a.u, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.a.a.u, reason: use source file name */
+/* JADX INFO: compiled from: WidgetUrgentMessageDialog.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class WidgetUrgentMessageDialog2 implements View.OnClickListener {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final /* synthetic */ WidgetUrgentMessageDialog f444j;
 
     public WidgetUrgentMessageDialog2(WidgetUrgentMessageDialog widgetUrgentMessageDialog) {

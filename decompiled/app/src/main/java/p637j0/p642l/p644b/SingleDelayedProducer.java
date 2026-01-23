@@ -5,9 +5,9 @@ import p007b.p225i.p226a.p288f.p299e.p308o.C3404f;
 import p658rx.Producer;
 import p658rx.Subscriber;
 
-/* compiled from: SingleDelayedProducer.java */
-/* renamed from: j0.l.b.b, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: j0.l.b.b, reason: use source file name */
+/* JADX INFO: compiled from: SingleDelayedProducer.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class SingleDelayedProducer<T> extends AtomicInteger implements Producer {
     private static final long serialVersionUID = -2873467947112093874L;
     public final Subscriber<? super T> child;
@@ -18,7 +18,7 @@ public final class SingleDelayedProducer<T> extends AtomicInteger implements Pro
     }
 
     /* JADX WARN: Multi-variable type inference failed */
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static <T> void m10798a(Subscriber<? super T> subscriber, T t) {
         if (subscriber.isUnsubscribed()) {
             return;
@@ -34,7 +34,7 @@ public final class SingleDelayedProducer<T> extends AtomicInteger implements Pro
         }
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public void m10799b(T t) {
         do {
             int i = get();
@@ -50,7 +50,7 @@ public final class SingleDelayedProducer<T> extends AtomicInteger implements Pro
     }
 
     @Override // p658rx.Producer
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public void mo10704j(long j) {
         if (j < 0) {
             throw new IllegalArgumentException("n >= 0 required");

@@ -7,9 +7,9 @@ import kotlin.jvm.functions.Function1;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: OnDelayedEmissionHandler.kt */
-/* renamed from: com.discord.utilities.rx.OnDelayedEmissionHandler$call$wrappedSubscriber$1$tryFinish$2, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.utilities.rx.OnDelayedEmissionHandler$call$wrappedSubscriber$1$tryFinish$2, reason: use source file name */
+/* JADX INFO: compiled from: OnDelayedEmissionHandler.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class OnDelayedEmissionHandler4 extends Lambda implements Function1<Error, Unit> {
     public final /* synthetic */ OnDelayedEmissionHandler2 this$0;
 
@@ -25,7 +25,7 @@ public final class OnDelayedEmissionHandler4 extends Lambda implements Function1
         return Unit.f27425a;
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final void invoke2(Error error) {
         Intrinsics3.checkNotNullParameter(error, "error");
         OnDelayedEmissionHandler2 onDelayedEmissionHandler2 = this.this$0;

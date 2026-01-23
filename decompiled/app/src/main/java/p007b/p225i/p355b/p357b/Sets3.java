@@ -6,9 +6,9 @@ import java.util.Iterator;
 import java.util.Objects;
 import java.util.Set;
 
-/* compiled from: Sets.java */
-/* renamed from: b.i.b.b.o0, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.b.b.o0, reason: use source file name */
+/* JADX INFO: compiled from: Sets.java */
+/* JADX INFO: loaded from: classes3.dex */
 public abstract class Sets3<E> extends AbstractSet<E> {
     @Override // java.util.AbstractSet, java.util.AbstractCollection, java.util.Collection, java.util.Set
     public boolean removeAll(Collection<?> collection) {

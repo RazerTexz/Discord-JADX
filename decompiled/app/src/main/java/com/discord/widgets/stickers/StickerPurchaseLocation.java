@@ -4,19 +4,19 @@ import com.discord.models.domain.ModelAuditLogEntry;
 import com.discord.utilities.analytics.Traits;
 import kotlin.jvm.internal.DefaultConstructorMarker;
 
-/* compiled from: StickerPurchaseLocation.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: StickerPurchaseLocation.kt */
+/* JADX INFO: loaded from: classes.dex */
 public enum StickerPurchaseLocation {
     EXPRESSION_PICKER(Traits.Location.Section.EXPRESSION_PICKER),
     STICKER_POPOUT(Traits.Location.Section.STICKER_POPOUT),
     STICKER_UPSELL_POPOUT("Sticker Upsell Popout");
 
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private final String analyticsValue;
 
-    /* compiled from: StickerPurchaseLocation.kt */
+    /* JADX INFO: compiled from: StickerPurchaseLocation.kt */
     public static final class Companion {
 
         public final /* synthetic */ class WhenMappings {

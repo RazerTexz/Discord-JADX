@@ -9,9 +9,9 @@ import kotlin.jvm.functions.Function4;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: OverlayVoiceSelectorBubbleDialog.kt */
-/* renamed from: b.a.y.y, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: b.a.y.y, reason: use source file name */
+/* JADX INFO: compiled from: OverlayVoiceSelectorBubbleDialog.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class OverlayVoiceSelectorBubbleDialog2 extends Lambda implements Function4<View, Integer, WidgetGlobalSearchModel.ItemDataPayload, Boolean, Unit> {
     public final /* synthetic */ WidgetGlobalSearchModel $searchModel$inlined;
     public final /* synthetic */ OverlayVoiceSelectorBubbleDialog3 this$0;

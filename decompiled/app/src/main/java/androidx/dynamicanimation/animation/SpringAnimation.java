@@ -5,7 +5,7 @@ import android.util.AndroidRuntimeException;
 import androidx.annotation.MainThread;
 import androidx.dynamicanimation.animation.DynamicAnimation;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public final class SpringAnimation extends DynamicAnimation<SpringAnimation> {
     private static final float UNSET = Float.MAX_VALUE;
     private boolean mEndRequested;

@@ -12,57 +12,57 @@ import p007b.p225i.p226a.p242c.Format2;
 import p007b.p225i.p226a.p242c.p259f3.ParsableBitArray;
 import p007b.p225i.p226a.p242c.p259f3.Util2;
 
-/* compiled from: FlacStreamMetadata.java */
-/* renamed from: b.i.a.c.x2.o, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.x2.o, reason: use source file name */
+/* JADX INFO: compiled from: FlacStreamMetadata.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class FlacStreamMetadata {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final int f8970a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final int f8971b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final int f8972c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final int f8973d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final int f8974e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final int f8975f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public final int f8976g;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public final int f8977h;
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public final int f8978i;
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final long f8979j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     @Nullable
     public final a f8980k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     @Nullable
     public final Metadata f8981l;
 
-    /* compiled from: FlacStreamMetadata.java */
-    /* renamed from: b.i.a.c.x2.o$a */
+    /* JADX INFO: renamed from: b.i.a.c.x2.o$a */
+    /* JADX INFO: compiled from: FlacStreamMetadata.java */
     public static class a {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final long[] f8982a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final long[] f8983b;
 
         public a(long[] jArr, long[] jArr2) {
@@ -91,7 +91,7 @@ public final class FlacStreamMetadata {
     }
 
     @Nullable
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static Metadata m3806a(List<String> list, List<PictureFrame> list2) {
         if (list.isEmpty() && list2.isEmpty()) {
             return null;
@@ -114,7 +114,7 @@ public final class FlacStreamMetadata {
         return new Metadata(arrayList);
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public static int m3807c(int i) {
         if (i == 8) {
             return 1;
@@ -131,7 +131,7 @@ public final class FlacStreamMetadata {
         return 5;
     }
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public static int m3808h(int i) {
         switch (i) {
             case 8000:
@@ -161,21 +161,21 @@ public final class FlacStreamMetadata {
         }
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public FlacStreamMetadata m3809b(@Nullable a aVar) {
         return new FlacStreamMetadata(this.f8970a, this.f8971b, this.f8972c, this.f8973d, this.f8974e, this.f8976g, this.f8977h, this.f8979j, aVar, this.f8981l);
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public long m3810d() {
         long j = this.f8979j;
         if (j == 0) {
             return -9223372036854775807L;
         }
-        return (j * 1000000) / this.f8974e;
+        return (j * 1000000) / ((long) this.f8974e);
     }
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public Format2 m3811e(byte[] bArr, @Nullable Metadata metadata) {
         bArr[4] = -128;
         int i = this.f8973d;
@@ -194,15 +194,15 @@ public final class FlacStreamMetadata {
     }
 
     @Nullable
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public Metadata m3812f(@Nullable Metadata metadata) {
         Metadata metadata2 = this.f8981l;
         return metadata2 == null ? metadata : metadata == null ? metadata2 : metadata2.m8877a(metadata.f19936j);
     }
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public long m3813g(long j) {
-        return Util2.m3001i((j * this.f8974e) / 1000000, 0L, this.f8979j - 1);
+        return Util2.m3001i((j * ((long) this.f8974e)) / 1000000, 0L, this.f8979j - 1);
     }
 
     public FlacStreamMetadata(int i, int i2, int i3, int i4, int i5, int i6, int i7, long j, @Nullable a aVar, @Nullable Metadata metadata) {

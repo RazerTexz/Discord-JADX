@@ -1,7 +1,6 @@
 package com.google.android.material.snackbar;
 
 import android.content.Context;
-import android.content.res.Resources;
 import android.content.res.TypedArray;
 import android.util.AttributeSet;
 import android.view.View;
@@ -16,8 +15,8 @@ import androidx.core.view.ViewCompat;
 import com.google.android.material.C10817R;
 import com.google.android.material.color.MaterialColors;
 
+/* JADX INFO: loaded from: classes3.dex */
 @RestrictTo({RestrictTo.Scope.LIBRARY_GROUP})
-/* loaded from: classes3.dex */
 public class SnackbarContentLayout extends LinearLayout implements ContentViewCallback {
     private Button actionView;
     private int maxInlineActionWidth;
@@ -95,7 +94,7 @@ public class SnackbarContentLayout extends LinearLayout implements ContentViewCa
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
-    public void onMeasure(int i, int i2) throws Resources.NotFoundException {
+    public void onMeasure(int i, int i2) {
         super.onMeasure(i, i2);
         if (this.maxWidth > 0) {
             int measuredWidth = getMeasuredWidth();

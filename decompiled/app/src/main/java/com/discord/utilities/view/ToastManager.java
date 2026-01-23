@@ -9,8 +9,8 @@ import androidx.core.app.NotificationCompat;
 import java.io.Closeable;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ToastManager.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: ToastManager.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public class ToastManager implements Closeable {
     private Toast toast;
 

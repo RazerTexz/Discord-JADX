@@ -81,14 +81,14 @@ import p658rx.Observable;
 import p658rx.functions.Action0;
 import p658rx.subjects.PublishSubject;
 
-/* compiled from: WidgetEmojiPicker.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetEmojiPicker.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetEmojiPicker extends AppFragment implements OnEmojiSelectedListener {
     public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetEmojiPicker.class, "binding", "getBinding()Lcom/discord/databinding/WidgetEmojiPickerBinding;", 0)};
     private static final int EMOJI_PICKER_VIEW_FLIPPER_EMPTY_STATE = 1;
     private static final int EMOJI_PICKER_VIEW_FLIPPER_RESULTS = 0;
 
-    /* renamed from: binding$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
     private EmojiCategoryAdapter categoryAdapter;
     private LinearLayoutManager categoryLayoutManager;
@@ -102,14 +102,14 @@ public final class WidgetEmojiPicker extends AppFragment implements OnEmojiSelec
     private EmojiPickerViewModel.ViewState previousViewState;
     private boolean restoredSearchQueryFromViewModel;
 
-    /* renamed from: viewModelForInline$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: viewModelForInline$delegate, reason: from kotlin metadata */
     private final Lazy viewModelForInline;
 
-    /* renamed from: viewModelForSheet$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: viewModelForSheet$delegate, reason: from kotlin metadata */
     private final Lazy viewModelForSheet;
 
-    /* compiled from: WidgetEmojiPicker.kt */
-    /* renamed from: com.discord.widgets.chat.input.emoji.WidgetEmojiPicker$configureUI$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.input.emoji.WidgetEmojiPicker$configureUI$1 */
+    /* JADX INFO: compiled from: WidgetEmojiPicker.kt */
     public static final class C78221 extends Lambda implements Function1<Integer, Unit> {
         public final /* synthetic */ EmojiPickerViewModel.ViewState $viewState;
 
@@ -130,8 +130,8 @@ public final class WidgetEmojiPicker extends AppFragment implements OnEmojiSelec
         }
     }
 
-    /* compiled from: WidgetEmojiPicker.kt */
-    /* renamed from: com.discord.widgets.chat.input.emoji.WidgetEmojiPicker$initializeInputButtons$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.input.emoji.WidgetEmojiPicker$initializeInputButtons$1 */
+    /* JADX INFO: compiled from: WidgetEmojiPicker.kt */
     public static final class ViewOnClickListenerC78231 implements View.OnClickListener {
         public ViewOnClickListenerC78231() {
         }
@@ -143,8 +143,8 @@ public final class WidgetEmojiPicker extends AppFragment implements OnEmojiSelec
         }
     }
 
-    /* compiled from: WidgetEmojiPicker.kt */
-    /* renamed from: com.discord.widgets.chat.input.emoji.WidgetEmojiPicker$initializeInputButtons$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.input.emoji.WidgetEmojiPicker$initializeInputButtons$2 */
+    /* JADX INFO: compiled from: WidgetEmojiPicker.kt */
     public static final class C78242 implements Action0 {
         public C78242() {
         }
@@ -158,8 +158,8 @@ public final class WidgetEmojiPicker extends AppFragment implements OnEmojiSelec
         }
     }
 
-    /* compiled from: WidgetEmojiPicker.kt */
-    /* renamed from: com.discord.widgets.chat.input.emoji.WidgetEmojiPicker$initializeInputButtons$3 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.input.emoji.WidgetEmojiPicker$initializeInputButtons$3 */
+    /* JADX INFO: compiled from: WidgetEmojiPicker.kt */
     public static final class C78253 implements Action0 {
         public C78253() {
         }
@@ -181,13 +181,13 @@ public final class WidgetEmojiPicker extends AppFragment implements OnEmojiSelec
         }
     }
 
-    /* compiled from: WidgetEmojiPicker.kt */
-    /* renamed from: com.discord.widgets.chat.input.emoji.WidgetEmojiPicker$initializeSearchBar$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.input.emoji.WidgetEmojiPicker$initializeSearchBar$1 */
+    /* JADX INFO: compiled from: WidgetEmojiPicker.kt */
     public static final class ViewOnClickListenerC78261 implements View.OnClickListener {
 
-        /* compiled from: WidgetEmojiPicker.kt */
+        /* JADX INFO: renamed from: com.discord.widgets.chat.input.emoji.WidgetEmojiPicker$initializeSearchBar$1$1, reason: invalid class name */
+        /* JADX INFO: compiled from: WidgetEmojiPicker.kt */
         @DebugMetadata(m10084c = "com.discord.widgets.chat.input.emoji.WidgetEmojiPicker$initializeSearchBar$1$1", m10085f = "WidgetEmojiPicker.kt", m10086l = {412}, m10087m = "invokeSuspend")
-        /* renamed from: com.discord.widgets.chat.input.emoji.WidgetEmojiPicker$initializeSearchBar$1$1, reason: invalid class name */
         public static final class AnonymousClass1 extends ContinuationImpl6 implements Function2<CoroutineScope, Continuation<? super Unit>, Object> {
             public int label;
 
@@ -243,8 +243,8 @@ public final class WidgetEmojiPicker extends AppFragment implements OnEmojiSelec
         }
     }
 
-    /* compiled from: WidgetEmojiPicker.kt */
-    /* renamed from: com.discord.widgets.chat.input.emoji.WidgetEmojiPicker$initializeSearchBar$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.input.emoji.WidgetEmojiPicker$initializeSearchBar$2 */
+    /* JADX INFO: compiled from: WidgetEmojiPicker.kt */
     public static final class ViewOnClickListenerC78272 implements View.OnClickListener {
         public ViewOnClickListenerC78272() {
         }
@@ -259,8 +259,8 @@ public final class WidgetEmojiPicker extends AppFragment implements OnEmojiSelec
         }
     }
 
-    /* compiled from: WidgetEmojiPicker.kt */
-    /* renamed from: com.discord.widgets.chat.input.emoji.WidgetEmojiPicker$initializeSearchBar$3 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.input.emoji.WidgetEmojiPicker$initializeSearchBar$3 */
+    /* JADX INFO: compiled from: WidgetEmojiPicker.kt */
     public static final class C78283 extends Lambda implements Function1<String, Unit> {
         public C78283() {
             super(1);
@@ -272,15 +272,15 @@ public final class WidgetEmojiPicker extends AppFragment implements OnEmojiSelec
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(String str) {
             Intrinsics3.checkNotNullParameter(str, "input");
             WidgetEmojiPicker.access$handleInputChanged(WidgetEmojiPicker.this, str);
         }
     }
 
-    /* compiled from: WidgetEmojiPicker.kt */
-    /* renamed from: com.discord.widgets.chat.input.emoji.WidgetEmojiPicker$onEmojiSelected$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.input.emoji.WidgetEmojiPicker$onEmojiSelected$1 */
+    /* JADX INFO: compiled from: WidgetEmojiPicker.kt */
     public static final class C78291 extends Lambda implements Function1<Emoji, Unit> {
         public C78291() {
             super(1);
@@ -292,7 +292,7 @@ public final class WidgetEmojiPicker extends AppFragment implements OnEmojiSelec
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Emoji emoji) {
             Intrinsics3.checkNotNullParameter(emoji, "validEmoji");
             EmojiPickerListener emojiPickerListenerAccess$getEmojiPickerListener$p = WidgetEmojiPicker.access$getEmojiPickerListener$p(WidgetEmojiPicker.this);
@@ -302,8 +302,8 @@ public final class WidgetEmojiPicker extends AppFragment implements OnEmojiSelec
         }
     }
 
-    /* compiled from: WidgetEmojiPicker.kt */
-    /* renamed from: com.discord.widgets.chat.input.emoji.WidgetEmojiPicker$onViewBoundOrOnResume$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.input.emoji.WidgetEmojiPicker$onViewBoundOrOnResume$1 */
+    /* JADX INFO: compiled from: WidgetEmojiPicker.kt */
     public static final class C78301 extends Lambda implements Function1<EmojiPickerViewModel.ViewState, Unit> {
         public C78301() {
             super(1);
@@ -315,15 +315,15 @@ public final class WidgetEmojiPicker extends AppFragment implements OnEmojiSelec
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(EmojiPickerViewModel.ViewState viewState) {
             Intrinsics3.checkNotNullParameter(viewState, "viewState");
             WidgetEmojiPicker.access$configureUI(WidgetEmojiPicker.this, viewState);
         }
     }
 
-    /* compiled from: WidgetEmojiPicker.kt */
-    /* renamed from: com.discord.widgets.chat.input.emoji.WidgetEmojiPicker$onViewBoundOrOnResume$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.input.emoji.WidgetEmojiPicker$onViewBoundOrOnResume$2 */
+    /* JADX INFO: compiled from: WidgetEmojiPicker.kt */
     public static final class C78312 extends Lambda implements Function1<EmojiPickerViewModel.Event, Unit> {
         public C78312() {
             super(1);
@@ -335,15 +335,15 @@ public final class WidgetEmojiPicker extends AppFragment implements OnEmojiSelec
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(EmojiPickerViewModel.Event event) {
             Intrinsics3.checkNotNullParameter(event, "event");
             WidgetEmojiPicker.access$handleEvent(WidgetEmojiPicker.this, event);
         }
     }
 
-    /* compiled from: WidgetEmojiPicker.kt */
-    /* renamed from: com.discord.widgets.chat.input.emoji.WidgetEmojiPicker$setUpCategoryRecycler$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.input.emoji.WidgetEmojiPicker$setUpCategoryRecycler$1 */
+    /* JADX INFO: compiled from: WidgetEmojiPicker.kt */
     public static final /* synthetic */ class C78321 extends FunctionReferenceImpl implements Function1<EmojiCategoryItem, Unit> {
         public C78321(WidgetEmojiPicker widgetEmojiPicker) {
             super(1, widgetEmojiPicker, WidgetEmojiPicker.class, "onCategoryClicked", "onCategoryClicked(Lcom/discord/widgets/chat/input/emoji/EmojiCategoryItem;)V", 0);
@@ -355,15 +355,15 @@ public final class WidgetEmojiPicker extends AppFragment implements OnEmojiSelec
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(EmojiCategoryItem emojiCategoryItem) {
             Intrinsics3.checkNotNullParameter(emojiCategoryItem, "p1");
             WidgetEmojiPicker.access$onCategoryClicked((WidgetEmojiPicker) this.receiver, emojiCategoryItem);
         }
     }
 
-    /* compiled from: WidgetEmojiPicker.kt */
-    /* renamed from: com.discord.widgets.chat.input.emoji.WidgetEmojiPicker$setUpCategoryRecycler$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.input.emoji.WidgetEmojiPicker$setUpCategoryRecycler$2 */
+    /* JADX INFO: compiled from: WidgetEmojiPicker.kt */
     public static final /* synthetic */ class C78332 extends FunctionReferenceImpl implements Function1<Integer, Unit> {
         public C78332(WidgetEmojiPicker widgetEmojiPicker) {
             super(1, widgetEmojiPicker, WidgetEmojiPicker.class, "onSelectedCategoryAdapterPositionUpdated", "onSelectedCategoryAdapterPositionUpdated(I)V", 0);
@@ -380,8 +380,8 @@ public final class WidgetEmojiPicker extends AppFragment implements OnEmojiSelec
         }
     }
 
-    /* compiled from: WidgetEmojiPicker.kt */
-    /* renamed from: com.discord.widgets.chat.input.emoji.WidgetEmojiPicker$setUpCategoryRecycler$3 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.input.emoji.WidgetEmojiPicker$setUpCategoryRecycler$3 */
+    /* JADX INFO: compiled from: WidgetEmojiPicker.kt */
     public static final class C78343 extends RecyclerView.OnScrollListener {
         public C78343() {
         }
@@ -395,8 +395,8 @@ public final class WidgetEmojiPicker extends AppFragment implements OnEmojiSelec
         }
     }
 
-    /* compiled from: WidgetEmojiPicker.kt */
-    /* renamed from: com.discord.widgets.chat.input.emoji.WidgetEmojiPicker$setUpEmojiRecycler$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.input.emoji.WidgetEmojiPicker$setUpEmojiRecycler$1 */
+    /* JADX INFO: compiled from: WidgetEmojiPicker.kt */
     public static final /* synthetic */ class C78351 extends FunctionReferenceImpl implements Function0<Unit> {
         public C78351(WidgetEmojiPicker widgetEmojiPicker) {
             super(0, widgetEmojiPicker, WidgetEmojiPicker.class, "onPremiumCtaClicked", "onPremiumCtaClicked()V", 0);
@@ -408,14 +408,14 @@ public final class WidgetEmojiPicker extends AppFragment implements OnEmojiSelec
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             WidgetEmojiPicker.access$onPremiumCtaClicked((WidgetEmojiPicker) this.receiver);
         }
     }
 
-    /* compiled from: WidgetEmojiPicker.kt */
-    /* renamed from: com.discord.widgets.chat.input.emoji.WidgetEmojiPicker$setUpEmojiRecycler$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.input.emoji.WidgetEmojiPicker$setUpEmojiRecycler$2 */
+    /* JADX INFO: compiled from: WidgetEmojiPicker.kt */
     public static final class C78362 extends Lambda implements Function0<Unit> {
         public C78362() {
             super(0);
@@ -427,15 +427,15 @@ public final class WidgetEmojiPicker extends AppFragment implements OnEmojiSelec
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             WidgetEmojiPicker widgetEmojiPicker = WidgetEmojiPicker.this;
             widgetEmojiPicker.hideKeyboard(widgetEmojiPicker.getView());
         }
     }
 
-    /* compiled from: WidgetEmojiPicker.kt */
-    /* renamed from: com.discord.widgets.chat.input.emoji.WidgetEmojiPicker$setUpEmojiRecycler$3 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.input.emoji.WidgetEmojiPicker$setUpEmojiRecycler$3 */
+    /* JADX INFO: compiled from: WidgetEmojiPicker.kt */
     public static final class C78373 extends RecyclerView.OnScrollListener {
         public C78373() {
         }
@@ -447,8 +447,8 @@ public final class WidgetEmojiPicker extends AppFragment implements OnEmojiSelec
         }
     }
 
-    /* compiled from: WidgetEmojiPicker.kt */
-    /* renamed from: com.discord.widgets.chat.input.emoji.WidgetEmojiPicker$setWindowInsetsListeners$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.input.emoji.WidgetEmojiPicker$setWindowInsetsListeners$1 */
+    /* JADX INFO: compiled from: WidgetEmojiPicker.kt */
     public static final class C78381 implements OnApplyWindowInsetsListener {
         public C78381() {
         }
@@ -462,8 +462,8 @@ public final class WidgetEmojiPicker extends AppFragment implements OnEmojiSelec
         }
     }
 
-    /* compiled from: WidgetEmojiPicker.kt */
-    /* renamed from: com.discord.widgets.chat.input.emoji.WidgetEmojiPicker$subscribeToCategoryRecyclerScrolls$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.input.emoji.WidgetEmojiPicker$subscribeToCategoryRecyclerScrolls$1 */
+    /* JADX INFO: compiled from: WidgetEmojiPicker.kt */
     public static final class C78391 extends Lambda implements Function1<Unit, Unit> {
         public C78391() {
             super(1);
@@ -475,7 +475,7 @@ public final class WidgetEmojiPicker extends AppFragment implements OnEmojiSelec
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Unit unit) {
             WidgetEmojiPicker widgetEmojiPicker = WidgetEmojiPicker.this;
             WidgetEmojiPicker.access$configureUnicodeCategoriesShortcutButton(widgetEmojiPicker, WidgetEmojiPicker.access$getPreviousViewState$p(widgetEmojiPicker));

@@ -6,9 +6,9 @@ import kotlin.jvm.functions.Function3;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetGlobalSearchGuildsAdapter.kt */
-/* renamed from: com.discord.widgets.user.search.WidgetGlobalSearchGuildsAdapter$onClickListener$1, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: com.discord.widgets.user.search.WidgetGlobalSearchGuildsAdapter$onClickListener$1, reason: use source file name */
+/* JADX INFO: compiled from: WidgetGlobalSearchGuildsAdapter.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class WidgetGlobalSearchGuildsAdapter4 extends Lambda implements Function3<Integer, Integer, WidgetGlobalSearchGuildsModel.Item, Unit> {
     public static final WidgetGlobalSearchGuildsAdapter4 INSTANCE = new WidgetGlobalSearchGuildsAdapter4();
 

@@ -7,9 +7,9 @@ import kotlin.jvm.internal.DefaultConstructorMarker;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: WidgetHubWaitlistViewModel.kt */
-/* renamed from: com.discord.widgets.hubs.HubWaitlistState, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.hubs.HubWaitlistState, reason: use source file name */
+/* JADX INFO: compiled from: WidgetHubWaitlistViewModel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final /* data */ class WidgetHubWaitlistViewModel3 {
     private final RestCallState<WaitlistSignup> waitlistAsync;
 

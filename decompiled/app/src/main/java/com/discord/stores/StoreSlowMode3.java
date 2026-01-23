@@ -11,16 +11,16 @@ import p637j0.p642l.p643a.OperatorTakeWhile;
 import p637j0.p642l.p647e.ScalarSynchronousObservable;
 import p658rx.Observable;
 
-/* compiled from: StoreSlowMode.kt */
-/* renamed from: com.discord.stores.StoreSlowMode$getChannelCooldownObservable$newObservable$2, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.stores.StoreSlowMode$getChannelCooldownObservable$newObservable$2, reason: use source file name */
+/* JADX INFO: compiled from: StoreSlowMode.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class StoreSlowMode3<T, R> implements Func1<Boolean, Observable<? extends Long>> {
     public final /* synthetic */ long $channelId;
     public final /* synthetic */ StoreSlowMode.Type $type;
     public final /* synthetic */ StoreSlowMode this$0;
 
-    /* compiled from: StoreSlowMode.kt */
-    /* renamed from: com.discord.stores.StoreSlowMode$getChannelCooldownObservable$newObservable$2$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreSlowMode$getChannelCooldownObservable$newObservable$2$1 */
+    /* JADX INFO: compiled from: StoreSlowMode.kt */
     public static final class C64001<T, R> implements Func1<HashMap<Long, Long>, Long> {
         public C64001() {
         }
@@ -30,18 +30,18 @@ public final class StoreSlowMode3<T, R> implements Func1<Boolean, Observable<? e
             return call2(map);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final Long call2(HashMap<Long, Long> map) {
             return map.get(Long.valueOf(StoreSlowMode3.this.$channelId));
         }
     }
 
-    /* compiled from: StoreSlowMode.kt */
-    /* renamed from: com.discord.stores.StoreSlowMode$getChannelCooldownObservable$newObservable$2$2 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreSlowMode$getChannelCooldownObservable$newObservable$2$2 */
+    /* JADX INFO: compiled from: StoreSlowMode.kt */
     public static final class C64012<T, R> implements Func1<Long, Observable<? extends Long>> {
 
-        /* compiled from: StoreSlowMode.kt */
-        /* renamed from: com.discord.stores.StoreSlowMode$getChannelCooldownObservable$newObservable$2$2$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.stores.StoreSlowMode$getChannelCooldownObservable$newObservable$2$2$1, reason: invalid class name */
+        /* JADX INFO: compiled from: StoreSlowMode.kt */
         public static final class AnonymousClass1<T, R> implements Func1<Long, Long> {
             public final /* synthetic */ Long $nextSendTimeForChannel;
             public final /* synthetic */ long $now;
@@ -56,14 +56,14 @@ public final class StoreSlowMode3<T, R> implements Func1<Boolean, Observable<? e
                 return call2(l);
             }
 
-            /* renamed from: call, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
             public final Long call2(Long l) {
                 return Long.valueOf(this.$nextSendTimeForChannel.longValue() - (this.$now + (l.longValue() * 1000)));
             }
         }
 
-        /* compiled from: StoreSlowMode.kt */
-        /* renamed from: com.discord.stores.StoreSlowMode$getChannelCooldownObservable$newObservable$2$2$2, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.stores.StoreSlowMode$getChannelCooldownObservable$newObservable$2$2$2, reason: invalid class name */
+        /* JADX INFO: compiled from: StoreSlowMode.kt */
         public static final class AnonymousClass2<T, R> implements Func1<Long, Boolean> {
             public static final AnonymousClass2 INSTANCE = new AnonymousClass2();
 
@@ -72,7 +72,7 @@ public final class StoreSlowMode3<T, R> implements Func1<Boolean, Observable<? e
                 return call2(l);
             }
 
-            /* renamed from: call, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
             public final Boolean call2(Long l) {
                 return Boolean.valueOf(l.longValue() >= 0);
             }
@@ -86,7 +86,7 @@ public final class StoreSlowMode3<T, R> implements Func1<Boolean, Observable<? e
             return call2(l);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final Observable<? extends Long> call2(Long l) {
             long jCurrentTimeMillis = StoreSlowMode.access$getClock$p(StoreSlowMode3.this.this$0).currentTimeMillis();
             if (l == null || l.longValue() <= jCurrentTimeMillis) {
@@ -108,7 +108,7 @@ public final class StoreSlowMode3<T, R> implements Func1<Boolean, Observable<? e
         return call2(bool);
     }
 
-    /* renamed from: call, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
     public final Observable<? extends Long> call2(Boolean bool) {
         Intrinsics3.checkNotNullExpressionValue(bool, "shouldOverrideCooldown");
         if (bool.booleanValue()) {

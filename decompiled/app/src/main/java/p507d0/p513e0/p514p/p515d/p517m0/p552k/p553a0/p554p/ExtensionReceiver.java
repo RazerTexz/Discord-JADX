@@ -3,12 +3,12 @@ package p507d0.p513e0.p514p.p515d.p517m0.p552k.p553a0.p554p;
 import p507d0.p513e0.p514p.p515d.p517m0.p521c.CallableDescriptor;
 import p507d0.p513e0.p514p.p515d.p517m0.p567n.KotlinType;
 
-/* compiled from: ExtensionReceiver.java */
-/* renamed from: d0.e0.p.d.m0.k.a0.p.b, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.k.a0.p.b, reason: use source file name */
+/* JADX INFO: compiled from: ExtensionReceiver.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class ExtensionReceiver extends AbstractReceiverValue implements ReceiverValue {
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final CallableDescriptor f24388c;
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -25,7 +25,7 @@ public class ExtensionReceiver extends AbstractReceiverValue implements Receiver
         this.f24388c = callableDescriptor;
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static /* synthetic */ void m9915a(int i) {
         String str = i != 2 ? "Argument for @NotNull parameter '%s' of %s.%s must not be null" : "@NotNull method %s.%s must not return null";
         Object[] objArr = new Object[i != 2 ? 3 : 2];

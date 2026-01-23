@@ -5,28 +5,28 @@ import p007b.p085c.p086a.p087a0.AnimatableValueParser;
 import p007b.p109f.p115d.p123h.ResourceReleaser;
 import p007b.p109f.p186k.BitmapUtil;
 
-/* compiled from: BitmapCounter.java */
-/* renamed from: b.f.j.l.b, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.f.j.l.b, reason: use source file name */
+/* JADX INFO: compiled from: BitmapCounter.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class BitmapCounter {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public int f3917a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public long f3918b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final int f3919c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final int f3920d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final ResourceReleaser<Bitmap> f3921e;
 
-    /* compiled from: BitmapCounter.java */
-    /* renamed from: b.f.j.l.b$a */
+    /* JADX INFO: renamed from: b.f.j.l.b$a */
+    /* JADX INFO: compiled from: BitmapCounter.java */
     public class a implements ResourceReleaser<Bitmap> {
         public a() {
         }
@@ -50,7 +50,7 @@ public class BitmapCounter {
         this.f3921e = new a();
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public synchronized void m1371a(Bitmap bitmap) {
         int iM1541d = BitmapUtil.m1541d(bitmap);
         AnimatableValueParser.m535k(this.f3917a > 0, "No bitmaps registered.");
@@ -64,7 +64,7 @@ public class BitmapCounter {
         this.f3917a--;
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public synchronized int m1372b() {
         return this.f3920d;
     }

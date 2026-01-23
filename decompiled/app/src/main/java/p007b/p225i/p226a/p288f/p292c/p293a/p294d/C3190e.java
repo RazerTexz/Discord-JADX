@@ -8,9 +8,9 @@ import com.google.android.gms.auth.api.credentials.IdToken;
 import java.util.ArrayList;
 import p007b.p085c.p086a.p087a0.AnimatableValueParser;
 
-/* compiled from: com.google.android.gms:play-services-auth@@19.0.0 */
-/* renamed from: b.i.a.f.c.a.d.e */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.c.a.d.e */
+/* JADX INFO: compiled from: com.google.android.gms:play-services-auth@@19.0.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public final class C3190e implements Parcelable.Creator<Credential> {
     @Override // android.os.Parcelable.Creator
     public final Credential createFromParcel(Parcel parcel) {

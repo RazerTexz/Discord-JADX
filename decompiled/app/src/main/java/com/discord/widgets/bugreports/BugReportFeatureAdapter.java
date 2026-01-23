@@ -21,18 +21,18 @@ import kotlin.jvm.internal.DefaultConstructorMarker;
 import p507d0.p580t.Collections2;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: WidgetBugReport.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetBugReport.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class BugReportFeatureAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
     private static final int ITEM_TYPE_FEATURE = 0;
     private static final int ITEM_TYPE_HEADER = 1;
     private List<? extends BugReportFeatureItem> data;
     private final Function1<BugReportConfig2, Unit> onClickListener;
 
-    /* compiled from: WidgetBugReport.kt */
+    /* JADX INFO: compiled from: WidgetBugReport.kt */
     public static abstract class BugReportFeatureItem {
 
-        /* compiled from: WidgetBugReport.kt */
+        /* JADX INFO: compiled from: WidgetBugReport.kt */
         public static final class FeatureItem extends BugReportFeatureItem {
             private final BugReportConfig2 feature;
 
@@ -48,7 +48,7 @@ public final class BugReportFeatureAdapter extends RecyclerView.Adapter<Recycler
             }
         }
 
-        /* compiled from: WidgetBugReport.kt */
+        /* JADX INFO: compiled from: WidgetBugReport.kt */
         public static final class HeaderItem extends BugReportFeatureItem {
             private final BugReportConfig2 header;
 

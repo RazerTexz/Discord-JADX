@@ -4,21 +4,21 @@ import androidx.annotation.NonNull;
 import p007b.p100d.p104b.p105a.outline;
 import p007b.p225i.p361c.p369m.p370d.p375m.CrashlyticsReport;
 
-/* compiled from: AutoValue_CrashlyticsReport_Session_OperatingSystem.java */
-/* renamed from: b.i.c.m.d.m.t, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.c.m.d.m.t, reason: use source file name */
+/* JADX INFO: compiled from: AutoValue_CrashlyticsReport_Session_OperatingSystem.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class AutoValue_CrashlyticsReport_Session_OperatingSystem extends CrashlyticsReport.d.e {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final int f12642a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final String f12643b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final String f12644c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final boolean f12645d;
 
     public AutoValue_CrashlyticsReport_Session_OperatingSystem(int i, String str, String str2, boolean z2, a aVar) {
@@ -30,26 +30,26 @@ public final class AutoValue_CrashlyticsReport_Session_OperatingSystem extends C
 
     @Override // p007b.p225i.p361c.p369m.p370d.p375m.CrashlyticsReport.d.e
     @NonNull
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public String mo6607a() {
         return this.f12644c;
     }
 
     @Override // p007b.p225i.p361c.p369m.p370d.p375m.CrashlyticsReport.d.e
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public int mo6608b() {
         return this.f12642a;
     }
 
     @Override // p007b.p225i.p361c.p369m.p370d.p375m.CrashlyticsReport.d.e
     @NonNull
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public String mo6609c() {
         return this.f12643b;
     }
 
     @Override // p007b.p225i.p361c.p369m.p370d.p375m.CrashlyticsReport.d.e
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public boolean mo6610d() {
         return this.f12645d;
     }

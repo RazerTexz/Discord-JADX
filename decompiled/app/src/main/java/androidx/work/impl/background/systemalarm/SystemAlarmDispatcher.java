@@ -23,8 +23,8 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
+/* JADX INFO: loaded from: classes.dex */
 @RestrictTo({RestrictTo.Scope.LIBRARY_GROUP})
-/* loaded from: classes.dex */
 public class SystemAlarmDispatcher implements ExecutionListener {
     private static final int DEFAULT_START_ID = 0;
     private static final String KEY_START_ID = "KEY_START_ID";
@@ -43,7 +43,7 @@ public class SystemAlarmDispatcher implements ExecutionListener {
     private final WorkManagerImpl mWorkManager;
     private final WorkTimer mWorkTimer;
 
-    /* renamed from: androidx.work.impl.background.systemalarm.SystemAlarmDispatcher$1 */
+    /* JADX INFO: renamed from: androidx.work.impl.background.systemalarm.SystemAlarmDispatcher$1 */
     public class RunnableC07371 implements Runnable {
         public RunnableC07371() {
         }

@@ -7,24 +7,24 @@ import androidx.viewbinding.ViewBinding;
 import com.discord.rlottie.RLottieImageView;
 import com.facebook.drawee.view.SimpleDraweeView;
 
-/* compiled from: StickerViewBinding.java */
-/* renamed from: b.a.i.r1, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.a.i.r1, reason: use source file name */
+/* JADX INFO: compiled from: StickerViewBinding.java */
+/* JADX INFO: loaded from: classes.dex */
 public final class StickerViewBinding implements ViewBinding {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     @NonNull
     public final View f1176a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     @NonNull
     public final SimpleDraweeView f1177b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     @NonNull
     public final RLottieImageView f1178c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     @NonNull
     public final ImageView f1179d;
 

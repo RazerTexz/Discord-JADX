@@ -6,13 +6,13 @@ import java.nio.ByteBuffer;
 import java.util.Objects;
 import p007b.p085c.p086a.p087a0.AnimatableValueParser;
 
-/* compiled from: SimpleMetadataDecoder.java */
-/* renamed from: b.i.a.c.z2.g, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.z2.g, reason: use source file name */
+/* JADX INFO: compiled from: SimpleMetadataDecoder.java */
+/* JADX INFO: loaded from: classes3.dex */
 public abstract class SimpleMetadataDecoder implements MetadataDecoder {
     @Override // p007b.p225i.p226a.p242c.p279z2.MetadataDecoder
     @Nullable
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final Metadata mo3895a(MetadataInputBuffer metadataInputBuffer) {
         ByteBuffer byteBuffer = metadataInputBuffer.f19778l;
         Objects.requireNonNull(byteBuffer);
@@ -24,6 +24,6 @@ public abstract class SimpleMetadataDecoder implements MetadataDecoder {
     }
 
     @Nullable
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public abstract Metadata mo3899b(MetadataInputBuffer metadataInputBuffer, ByteBuffer byteBuffer);
 }

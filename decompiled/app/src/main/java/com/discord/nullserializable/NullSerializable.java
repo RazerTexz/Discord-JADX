@@ -6,13 +6,13 @@ import kotlin.jvm.internal.DefaultConstructorMarker;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: NullSerializable.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: NullSerializable.kt */
+/* JADX INFO: loaded from: classes.dex */
 public abstract class NullSerializable<T> implements Serializable {
     private final T value;
 
-    /* compiled from: NullSerializable.kt */
-    /* renamed from: com.discord.nullserializable.NullSerializable$a */
+    /* JADX INFO: renamed from: com.discord.nullserializable.NullSerializable$a */
+    /* JADX INFO: compiled from: NullSerializable.kt */
     public static final class C5565a<T> extends NullSerializable<T> {
         private final T value;
 
@@ -28,7 +28,7 @@ public abstract class NullSerializable<T> implements Serializable {
         }
 
         @Override // com.discord.nullserializable.NullSerializable
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public T mo8429a() {
             return this.value;
         }
@@ -56,8 +56,8 @@ public abstract class NullSerializable<T> implements Serializable {
         }
     }
 
-    /* compiled from: NullSerializable.kt */
-    /* renamed from: com.discord.nullserializable.NullSerializable$b */
+    /* JADX INFO: renamed from: com.discord.nullserializable.NullSerializable$b */
+    /* JADX INFO: compiled from: NullSerializable.kt */
     public static final class C5566b<T> extends NullSerializable<T> {
         private final T value;
 
@@ -67,7 +67,7 @@ public abstract class NullSerializable<T> implements Serializable {
         }
 
         @Override // com.discord.nullserializable.NullSerializable
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public T mo8429a() {
             return this.value;
         }
@@ -100,7 +100,7 @@ public abstract class NullSerializable<T> implements Serializable {
         this.value = obj;
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public T mo8429a() {
         return this.value;
     }

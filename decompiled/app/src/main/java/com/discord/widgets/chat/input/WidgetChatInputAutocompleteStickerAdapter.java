@@ -9,8 +9,8 @@ import kotlin.Unit;
 import kotlin.jvm.functions.Function1;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: WidgetChatInputAutocompleteStickerAdapter.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetChatInputAutocompleteStickerAdapter.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetChatInputAutocompleteStickerAdapter extends MGRecyclerAdapterSimple<WidgetChatInputAutocompleteStickerAdapter2> {
     private final Function1<Sticker, Unit> onClickSticker;
 

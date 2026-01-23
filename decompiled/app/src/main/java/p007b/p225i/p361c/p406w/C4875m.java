@@ -12,25 +12,25 @@ import p007b.p225i.p361c.FirebaseApp2;
 import p007b.p225i.p361c.p393p.ObjectEncoder;
 import p007b.p225i.p361c.p393p.ObjectEncoderContext;
 
-/* compiled from: com.google.firebase:firebase-messaging@@21.0.0 */
-/* renamed from: b.i.c.w.m */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.c.w.m */
+/* JADX INFO: compiled from: com.google.firebase:firebase-messaging@@21.0.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public final class C4875m {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final String f13030a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final Intent f13031b;
 
-    /* compiled from: com.google.firebase:firebase-messaging@@21.0.0 */
-    /* renamed from: b.i.c.w.m$a */
+    /* JADX INFO: renamed from: b.i.c.w.m$a */
+    /* JADX INFO: compiled from: com.google.firebase:firebase-messaging@@21.0.0 */
     public static class a implements ObjectEncoder<C4875m> {
         /* JADX WARN: Removed duplicated region for block: B:30:0x009e  */
         /* JADX WARN: Removed duplicated region for block: B:31:0x00a0  */
         /* JADX WARN: Removed duplicated region for block: B:68:0x0163  */
         @Override // p007b.p225i.p361c.p393p.Encoder
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         /*
             Code decompiled incorrectly, please refer to instructions dump.
         */
@@ -49,6 +49,7 @@ public final class C4875m {
                 } catch (NumberFormatException unused) {
                     String strValueOf = String.valueOf(obj2);
                     outline.m854h0(strValueOf.length() + 13, "Invalid TTL: ", strValueOf, "FirebaseMessaging");
+                    iIntValue = 0;
                 }
             } else {
                 iIntValue = 0;
@@ -128,11 +129,11 @@ public final class C4875m {
         }
     }
 
-    /* compiled from: com.google.firebase:firebase-messaging@@21.0.0 */
-    /* renamed from: b.i.c.w.m$b */
+    /* JADX INFO: renamed from: b.i.c.w.m$b */
+    /* JADX INFO: compiled from: com.google.firebase:firebase-messaging@@21.0.0 */
     public static final class b {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final C4875m f13032a;
 
         public b(@NonNull C4875m c4875m) {
@@ -140,11 +141,11 @@ public final class C4875m {
         }
     }
 
-    /* compiled from: com.google.firebase:firebase-messaging@@21.0.0 */
-    /* renamed from: b.i.c.w.m$c */
+    /* JADX INFO: renamed from: b.i.c.w.m$c */
+    /* JADX INFO: compiled from: com.google.firebase:firebase-messaging@@21.0.0 */
     public static final class c implements ObjectEncoder<b> {
         @Override // p007b.p225i.p361c.p393p.Encoder
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final void mo2312a(Object obj, ObjectEncoderContext objectEncoderContext) throws IOException {
             objectEncoderContext.mo6708f("messaging_client_event", ((b) obj).f13032a);
         }

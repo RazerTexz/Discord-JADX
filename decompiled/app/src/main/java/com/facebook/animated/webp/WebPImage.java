@@ -11,11 +11,11 @@ import p007b.p109f.p161j.p162a.p164b.AnimatedImageDecoder;
 import p007b.p109f.p161j.p169d.ImageDecodeOptions;
 import p007b.p109f.p161j.p178m.StaticWebpNativeLoader;
 
+/* JADX INFO: loaded from: classes.dex */
 @DoNotStrip
-/* loaded from: classes.dex */
 public class WebPImage implements AnimatedImage, AnimatedImageDecoder {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public Bitmap.Config f19420a = null;
 
     @DoNotStrip
@@ -50,19 +50,19 @@ public class WebPImage implements AnimatedImage, AnimatedImageDecoder {
     private native int nativeGetWidth();
 
     @Override // p007b.p109f.p161j.p162a.p163a.AnimatedImage
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public int mo1177a() {
         return nativeGetFrameCount();
     }
 
     @Override // p007b.p109f.p161j.p162a.p163a.AnimatedImage
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public int mo1178b() {
         return nativeGetLoopCount();
     }
 
     @Override // p007b.p109f.p161j.p162a.p164b.AnimatedImageDecoder
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public AnimatedImage mo1192c(ByteBuffer byteBuffer, ImageDecodeOptions imageDecodeOptions) {
         StaticWebpNativeLoader.m1411a();
         byteBuffer.rewind();
@@ -74,19 +74,19 @@ public class WebPImage implements AnimatedImage, AnimatedImageDecoder {
     }
 
     @Override // p007b.p109f.p161j.p162a.p163a.AnimatedImage
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public Bitmap.Config mo1179d() {
         return this.f19420a;
     }
 
     @Override // p007b.p109f.p161j.p162a.p163a.AnimatedImage
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public AnimatedImageFrame mo1180e(int i) {
         return nativeGetFrame(i);
     }
 
     @Override // p007b.p109f.p161j.p162a.p163a.AnimatedImage
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public boolean mo1181f() {
         return true;
     }
@@ -96,7 +96,7 @@ public class WebPImage implements AnimatedImage, AnimatedImageDecoder {
     }
 
     @Override // p007b.p109f.p161j.p162a.p163a.AnimatedImage
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public AnimatedDrawableFrameInfo mo1182g(int i) {
         WebPFrame webPFrameNativeGetFrame = nativeGetFrame(i);
         try {
@@ -117,7 +117,7 @@ public class WebPImage implements AnimatedImage, AnimatedImageDecoder {
     }
 
     @Override // p007b.p109f.p161j.p162a.p164b.AnimatedImageDecoder
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public AnimatedImage mo1193h(long j, int i, ImageDecodeOptions imageDecodeOptions) {
         StaticWebpNativeLoader.m1411a();
         AnimatableValueParser.m527i(Boolean.valueOf(j != 0));
@@ -129,13 +129,13 @@ public class WebPImage implements AnimatedImage, AnimatedImageDecoder {
     }
 
     @Override // p007b.p109f.p161j.p162a.p163a.AnimatedImage
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public int[] mo1183i() {
         return nativeGetFrameDurations();
     }
 
     @Override // p007b.p109f.p161j.p162a.p163a.AnimatedImage
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public int mo1184j() {
         return nativeGetSizeInBytes();
     }

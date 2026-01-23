@@ -46,37 +46,38 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 import p507d0.p592z.p594d.Reflection2;
 
-/* compiled from: WidgetEditProfileBannerSheet.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetEditProfileBannerSheet.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetEditProfileBannerSheet extends AppBottomSheet {
     private static final String ARG_DEFAULT_BANNER_COLOR_HEX = "ARG_DEFAULT_BANNER_COLOR_HEX";
     private static final String ARG_HAS_BANNER_IMAGE = "ARG_HAS_BANNER_IMAGE";
     private static final String ARG_INITIAL_COLOR_PREVIEW_HEX = "ARG_INITIAL_COLOR_PREVIEW_HEX";
     private static final String DIALOG_TAG_COLOR_PICKER = "DIALOG_TAG_COLOR_PICKER";
 
-    /* renamed from: binding$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
     private ColorPickerDialog colorPickerDialog;
     private int defaultBannerColor;
 
-    /* renamed from: isGuildContext$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: isGuildContext$delegate, reason: from kotlin metadata */
     private final Lazy isGuildContext;
     private Function0<Unit> onChangeProfileBannerImage;
     private Function1<? super Integer, Unit> onColorSelected;
     private Function0<Unit> onRemoveProfileBannerImage;
 
-    /* renamed from: viewModel$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: viewModel$delegate, reason: from kotlin metadata */
     private final Lazy viewModel;
     public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetEditProfileBannerSheet.class, "binding", "getBinding()Lcom/discord/databinding/WidgetEditProfileBannerSheetBinding;", 0)};
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
 
-    /* compiled from: WidgetEditProfileBannerSheet.kt */
+    /* JADX INFO: compiled from: WidgetEditProfileBannerSheet.kt */
     public static final class Companion {
         private Companion() {
         }
 
+        /* JADX WARN: Multi-variable type inference failed */
         public static /* synthetic */ void show$default(Companion companion, Long l, String str, String str2, boolean z2, FragmentManager fragmentManager, Function0 function0, Function0 function02, Function1 function1, int i, Object obj) {
             companion.show((i & 1) != 0 ? null : l, str, str2, z2, fragmentManager, (i & 32) != 0 ? WidgetEditProfileBannerSheet2.INSTANCE : function0, (i & 64) != 0 ? WidgetEditProfileBannerSheet3.INSTANCE : function02, (i & 128) != 0 ? WidgetEditProfileBannerSheet4.INSTANCE : function1);
         }
@@ -107,8 +108,8 @@ public final class WidgetEditProfileBannerSheet extends AppBottomSheet {
         }
     }
 
-    /* compiled from: WidgetEditProfileBannerSheet.kt */
-    /* renamed from: com.discord.widgets.settings.profile.WidgetEditProfileBannerSheet$configureUi$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.profile.WidgetEditProfileBannerSheet$configureUi$1 */
+    /* JADX INFO: compiled from: WidgetEditProfileBannerSheet.kt */
     public static final class ViewOnClickListenerC99611 implements View.OnClickListener {
         public final /* synthetic */ Ref$ObjectRef $bannerColor;
 
@@ -125,8 +126,8 @@ public final class WidgetEditProfileBannerSheet extends AppBottomSheet {
         }
     }
 
-    /* compiled from: WidgetEditProfileBannerSheet.kt */
-    /* renamed from: com.discord.widgets.settings.profile.WidgetEditProfileBannerSheet$configureUi$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.profile.WidgetEditProfileBannerSheet$configureUi$2 */
+    /* JADX INFO: compiled from: WidgetEditProfileBannerSheet.kt */
     public static final class ViewOnClickListenerC99622 implements View.OnClickListener {
         public final /* synthetic */ EditProfileBannerSheetViewModel.ViewState $viewState;
 
@@ -145,8 +146,8 @@ public final class WidgetEditProfileBannerSheet extends AppBottomSheet {
         }
     }
 
-    /* compiled from: WidgetEditProfileBannerSheet.kt */
-    /* renamed from: com.discord.widgets.settings.profile.WidgetEditProfileBannerSheet$isGuildContext$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.profile.WidgetEditProfileBannerSheet$isGuildContext$2 */
+    /* JADX INFO: compiled from: WidgetEditProfileBannerSheet.kt */
     public static final class C99632 extends Lambda implements Function0<Boolean> {
         public C99632() {
             super(0);
@@ -157,14 +158,14 @@ public final class WidgetEditProfileBannerSheet extends AppBottomSheet {
             return Boolean.valueOf(invoke2());
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final boolean invoke2() {
             return WidgetEditProfileBannerSheet.access$getArgumentsOrDefault$p(WidgetEditProfileBannerSheet.this).getLong("com.discord.intent.extra.EXTRA_GUILD_ID") > 0;
         }
     }
 
-    /* compiled from: WidgetEditProfileBannerSheet.kt */
-    /* renamed from: com.discord.widgets.settings.profile.WidgetEditProfileBannerSheet$launchColorPicker$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.profile.WidgetEditProfileBannerSheet$launchColorPicker$1 */
+    /* JADX INFO: compiled from: WidgetEditProfileBannerSheet.kt */
     public static final class C99641 implements ColorPickerDialogListener {
         public C99641() {
         }
@@ -188,8 +189,8 @@ public final class WidgetEditProfileBannerSheet extends AppBottomSheet {
         }
     }
 
-    /* compiled from: WidgetEditProfileBannerSheet.kt */
-    /* renamed from: com.discord.widgets.settings.profile.WidgetEditProfileBannerSheet$onResume$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.profile.WidgetEditProfileBannerSheet$onResume$1 */
+    /* JADX INFO: compiled from: WidgetEditProfileBannerSheet.kt */
     public static final class C99651 extends Lambda implements Function1<EditProfileBannerSheetViewModel.ViewState, Unit> {
         public C99651() {
             super(1);
@@ -201,15 +202,15 @@ public final class WidgetEditProfileBannerSheet extends AppBottomSheet {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(EditProfileBannerSheetViewModel.ViewState viewState) {
             Intrinsics3.checkNotNullParameter(viewState, "viewState");
             WidgetEditProfileBannerSheet.access$configureUi(WidgetEditProfileBannerSheet.this, viewState);
         }
     }
 
-    /* compiled from: WidgetEditProfileBannerSheet.kt */
-    /* renamed from: com.discord.widgets.settings.profile.WidgetEditProfileBannerSheet$onViewCreated$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.profile.WidgetEditProfileBannerSheet$onViewCreated$1 */
+    /* JADX INFO: compiled from: WidgetEditProfileBannerSheet.kt */
     public static final class ViewOnClickListenerC99661 implements View.OnClickListener {
         public ViewOnClickListenerC99661() {
         }
@@ -220,8 +221,8 @@ public final class WidgetEditProfileBannerSheet extends AppBottomSheet {
         }
     }
 
-    /* compiled from: WidgetEditProfileBannerSheet.kt */
-    /* renamed from: com.discord.widgets.settings.profile.WidgetEditProfileBannerSheet$onViewCreated$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.profile.WidgetEditProfileBannerSheet$onViewCreated$2 */
+    /* JADX INFO: compiled from: WidgetEditProfileBannerSheet.kt */
     public static final class ViewOnClickListenerC99672 implements View.OnClickListener {
         public ViewOnClickListenerC99672() {
         }

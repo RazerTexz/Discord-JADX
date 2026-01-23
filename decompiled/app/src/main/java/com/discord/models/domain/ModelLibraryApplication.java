@@ -7,8 +7,8 @@ import kotlin.jvm.internal.Ref$ObjectRef;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ModelLibraryApplication.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: ModelLibraryApplication.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class ModelLibraryApplication {
     private final Application application;
     private final long branchId;
@@ -16,7 +16,7 @@ public final /* data */ class ModelLibraryApplication {
     private final int flags;
     private final long skuId;
 
-    /* compiled from: ModelLibraryApplication.kt */
+    /* JADX INFO: compiled from: ModelLibraryApplication.kt */
     public static final class Parser implements Model.Parser<ModelLibraryApplication> {
         public static final Parser INSTANCE = new Parser();
 
@@ -91,27 +91,27 @@ public final /* data */ class ModelLibraryApplication {
         return modelLibraryApplication.copy(application, str2, j3, i3, j2);
     }
 
-    /* renamed from: component1, reason: from getter */
+    /* JADX INFO: renamed from: component1, reason: from getter */
     public final Application getApplication() {
         return this.application;
     }
 
-    /* renamed from: component2, reason: from getter */
+    /* JADX INFO: renamed from: component2, reason: from getter */
     public final String getCreatedAt() {
         return this.createdAt;
     }
 
-    /* renamed from: component3, reason: from getter */
+    /* JADX INFO: renamed from: component3, reason: from getter */
     public final long getSkuId() {
         return this.skuId;
     }
 
-    /* renamed from: component4, reason: from getter */
+    /* JADX INFO: renamed from: component4, reason: from getter */
     public final int getFlags() {
         return this.flags;
     }
 
-    /* renamed from: component5, reason: from getter */
+    /* JADX INFO: renamed from: component5, reason: from getter */
     public final long getBranchId() {
         return this.branchId;
     }

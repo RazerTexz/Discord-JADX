@@ -8,12 +8,12 @@ import p001a0.p002a.p003a.C0002b;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: MemberListRow.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: MemberListRow.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public abstract class MemberListRow {
     private final String rowId;
 
-    /* compiled from: MemberListRow.kt */
+    /* JADX INFO: compiled from: MemberListRow.kt */
     public static final /* data */ class Member extends MemberListRow {
         private final String avatarUrl;
         private final Integer color;
@@ -50,62 +50,62 @@ public abstract class MemberListRow {
             return member.copy((i2 & 1) != 0 ? member.userId : j, (i2 & 2) != 0 ? member.name : str, (i2 & 4) != 0 ? member.isBot : z2, (i2 & 8) != 0 ? member.tagText : num, (i2 & 16) != 0 ? member.tagVerified : z3, (i2 & 32) != 0 ? member.presence : presence, (i2 & 64) != 0 ? member.color : num2, (i2 & 128) != 0 ? member.avatarUrl : str2, (i2 & 256) != 0 ? member.showOwnerIndicator : z4, (i2 & 512) != 0 ? member.premiumSince : str3, (i2 & 1024) != 0 ? member.isApplicationStreaming : z5, (i2 & 2048) != 0 ? member.userFlags : i);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final long getUserId() {
             return this.userId;
         }
 
-        /* renamed from: component10, reason: from getter */
+        /* JADX INFO: renamed from: component10, reason: from getter */
         public final String getPremiumSince() {
             return this.premiumSince;
         }
 
-        /* renamed from: component11, reason: from getter */
+        /* JADX INFO: renamed from: component11, reason: from getter */
         public final boolean getIsApplicationStreaming() {
             return this.isApplicationStreaming;
         }
 
-        /* renamed from: component12, reason: from getter */
+        /* JADX INFO: renamed from: component12, reason: from getter */
         public final int getUserFlags() {
             return this.userFlags;
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final String getName() {
             return this.name;
         }
 
-        /* renamed from: component3, reason: from getter */
+        /* JADX INFO: renamed from: component3, reason: from getter */
         public final boolean getIsBot() {
             return this.isBot;
         }
 
-        /* renamed from: component4, reason: from getter */
+        /* JADX INFO: renamed from: component4, reason: from getter */
         public final Integer getTagText() {
             return this.tagText;
         }
 
-        /* renamed from: component5, reason: from getter */
+        /* JADX INFO: renamed from: component5, reason: from getter */
         public final boolean getTagVerified() {
             return this.tagVerified;
         }
 
-        /* renamed from: component6, reason: from getter */
+        /* JADX INFO: renamed from: component6, reason: from getter */
         public final Presence getPresence() {
             return this.presence;
         }
 
-        /* renamed from: component7, reason: from getter */
+        /* JADX INFO: renamed from: component7, reason: from getter */
         public final Integer getColor() {
             return this.color;
         }
 
-        /* renamed from: component8, reason: from getter */
+        /* JADX INFO: renamed from: component8, reason: from getter */
         public final String getAvatarUrl() {
             return this.avatarUrl;
         }
 
-        /* renamed from: component9, reason: from getter */
+        /* JADX INFO: renamed from: component9, reason: from getter */
         public final boolean getShowOwnerIndicator() {
             return this.showOwnerIndicator;
         }
@@ -167,40 +167,52 @@ public abstract class MemberListRow {
         }
 
         /* JADX WARN: Multi-variable type inference failed */
+        /* JADX WARN: Type inference failed for: r1v20, types: [int] */
+        /* JADX WARN: Type inference failed for: r1v24 */
+        /* JADX WARN: Type inference failed for: r1v28 */
+        /* JADX WARN: Type inference failed for: r1v30 */
+        /* JADX WARN: Type inference failed for: r1v32 */
+        /* JADX WARN: Type inference failed for: r1v33 */
+        /* JADX WARN: Type inference failed for: r1v34 */
+        /* JADX WARN: Type inference failed for: r1v4, types: [int] */
+        /* JADX WARN: Type inference failed for: r1v9, types: [int] */
+        /* JADX WARN: Type inference failed for: r3v0 */
+        /* JADX WARN: Type inference failed for: r3v1, types: [int] */
+        /* JADX WARN: Type inference failed for: r3v2 */
         public int hashCode() {
             int iM3a = C0002b.m3a(this.userId) * 31;
             String str = this.name;
             int iHashCode = (iM3a + (str != null ? str.hashCode() : 0)) * 31;
             boolean z2 = this.isBot;
-            int i = z2;
-            if (z2 != 0) {
-                i = 1;
+            ?? r1 = z2;
+            if (z2) {
+                r1 = 1;
             }
-            int i2 = (iHashCode + i) * 31;
+            int i = (iHashCode + r1) * 31;
             Integer num = this.tagText;
-            int iHashCode2 = (i2 + (num != null ? num.hashCode() : 0)) * 31;
+            int iHashCode2 = (i + (num != null ? num.hashCode() : 0)) * 31;
             boolean z3 = this.tagVerified;
-            int i3 = z3;
-            if (z3 != 0) {
-                i3 = 1;
+            ?? r12 = z3;
+            if (z3) {
+                r12 = 1;
             }
-            int i4 = (iHashCode2 + i3) * 31;
+            int i2 = (iHashCode2 + r12) * 31;
             Presence presence = this.presence;
-            int iHashCode3 = (i4 + (presence != null ? presence.hashCode() : 0)) * 31;
+            int iHashCode3 = (i2 + (presence != null ? presence.hashCode() : 0)) * 31;
             Integer num2 = this.color;
             int iHashCode4 = (iHashCode3 + (num2 != null ? num2.hashCode() : 0)) * 31;
             String str2 = this.avatarUrl;
             int iHashCode5 = (iHashCode4 + (str2 != null ? str2.hashCode() : 0)) * 31;
             boolean z4 = this.showOwnerIndicator;
-            int i5 = z4;
-            if (z4 != 0) {
-                i5 = 1;
+            ?? r13 = z4;
+            if (z4) {
+                r13 = 1;
             }
-            int i6 = (iHashCode5 + i5) * 31;
+            int i3 = (iHashCode5 + r13) * 31;
             String str3 = this.premiumSince;
-            int iHashCode6 = (i6 + (str3 != null ? str3.hashCode() : 0)) * 31;
+            int iHashCode6 = (i3 + (str3 != null ? str3.hashCode() : 0)) * 31;
             boolean z5 = this.isApplicationStreaming;
-            return ((iHashCode6 + (z5 ? 1 : z5 ? 1 : 0)) * 31) + this.userFlags;
+            return ((iHashCode6 + (z5 ? 1 : z5)) * 31) + this.userFlags;
         }
 
         public final boolean isApplicationStreaming() {
@@ -239,7 +251,7 @@ public abstract class MemberListRow {
         }
     }
 
-    /* compiled from: MemberListRow.kt */
+    /* JADX INFO: compiled from: MemberListRow.kt */
     public static final /* data */ class RoleHeader extends MemberListRow {
         private final int memberCount;
         private final long roleId;
@@ -267,17 +279,17 @@ public abstract class MemberListRow {
             return roleHeader.copy(j, str, i);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final long getRoleId() {
             return this.roleId;
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final String getRoleName() {
             return this.roleName;
         }
 
-        /* renamed from: component3, reason: from getter */
+        /* JADX INFO: renamed from: component3, reason: from getter */
         public final int getMemberCount() {
             return this.memberCount;
         }
@@ -326,13 +338,13 @@ public abstract class MemberListRow {
         }
     }
 
-    /* compiled from: MemberListRow.kt */
+    /* JADX INFO: compiled from: MemberListRow.kt */
     public static final /* data */ class StatusHeader extends MemberListRow {
         private final int memberCount;
         private final String rowId;
         private final Type type;
 
-        /* compiled from: MemberListRow.kt */
+        /* JADX INFO: compiled from: MemberListRow.kt */
         public enum Type {
             ONLINE(0),
             OFFLINE(1);
@@ -375,12 +387,12 @@ public abstract class MemberListRow {
             return getRowId();
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final Type getType() {
             return this.type;
         }
 
-        /* renamed from: component3, reason: from getter */
+        /* JADX INFO: renamed from: component3, reason: from getter */
         public final int getMemberCount() {
             return this.memberCount;
         }

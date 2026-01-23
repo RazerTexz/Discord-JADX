@@ -20,11 +20,11 @@ import com.discord.widgets.guild_role_subscriptions.tier.create.benefits.GuildRo
 import kotlin.jvm.internal.DefaultConstructorMarker;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: GuildRoleSubscriptionBenefitViewHolder.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: GuildRoleSubscriptionBenefitViewHolder.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public abstract class GuildRoleSubscriptionBenefitViewHolder extends RecyclerView.ViewHolder {
 
-    /* compiled from: GuildRoleSubscriptionBenefitViewHolder.kt */
+    /* JADX INFO: compiled from: GuildRoleSubscriptionBenefitViewHolder.kt */
     public static final class AddItemViewHolder extends GuildRoleSubscriptionBenefitViewHolder {
         private final ViewGuildRoleSubscriptionAddBenefitItemBinding binding;
         private final GuildRoleSubscriptionBenefitAdapter.Listener listener;
@@ -69,7 +69,7 @@ public abstract class GuildRoleSubscriptionBenefitViewHolder extends RecyclerVie
         }
     }
 
-    /* compiled from: GuildRoleSubscriptionBenefitViewHolder.kt */
+    /* JADX INFO: compiled from: GuildRoleSubscriptionBenefitViewHolder.kt */
     public static final class FreeTrialViewHolder extends GuildRoleSubscriptionBenefitViewHolder {
         private final ViewGuildRoleSubscriptionFreeTrialItemBinding binding;
         private final GuildRoleSubscriptionBenefitAdapter.Listener listener;
@@ -156,7 +156,7 @@ public abstract class GuildRoleSubscriptionBenefitViewHolder extends RecyclerVie
         }
     }
 
-    /* compiled from: GuildRoleSubscriptionBenefitViewHolder.kt */
+    /* JADX INFO: compiled from: GuildRoleSubscriptionBenefitViewHolder.kt */
     public static final class HeaderViewHolder extends GuildRoleSubscriptionBenefitViewHolder {
         private final ViewGuildRoleSubscriptionSectionHeaderItemBinding binding;
 
@@ -176,7 +176,7 @@ public abstract class GuildRoleSubscriptionBenefitViewHolder extends RecyclerVie
         }
     }
 
-    /* compiled from: GuildRoleSubscriptionBenefitViewHolder.kt */
+    /* JADX INFO: compiled from: GuildRoleSubscriptionBenefitViewHolder.kt */
     public static final class ItemViewHolder extends GuildRoleSubscriptionBenefitViewHolder {
         private final GuildRoleSubscriptionBenefitAdapter.Listener listener;
         private final GuildRoleSubscriptionBenefitItemView view;

@@ -20,13 +20,13 @@ import p507d0.p592z.p594d.FunctionReferenceImpl;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: AccessibilityDetectionNavigator.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: AccessibilityDetectionNavigator.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class AccessibilityDetectionNavigator {
     public static final AccessibilityDetectionNavigator INSTANCE = new AccessibilityDetectionNavigator();
 
-    /* compiled from: AccessibilityDetectionNavigator.kt */
-    /* renamed from: com.discord.widgets.accessibility.AccessibilityDetectionNavigator$enqueueNoticeWhenEnabled$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.accessibility.AccessibilityDetectionNavigator$enqueueNoticeWhenEnabled$1 */
+    /* JADX INFO: compiled from: AccessibilityDetectionNavigator.kt */
     public static final /* synthetic */ class C71361 extends FunctionReferenceImpl implements Function1<AccessibilityMonitor4, Unit> {
         public C71361(AccessibilityDetectionNavigator accessibilityDetectionNavigator) {
             super(1, accessibilityDetectionNavigator, AccessibilityDetectionNavigator.class, "showAccessibilityDetectionDialog", "showAccessibilityDetectionDialog(Lcom/discord/utilities/accessibility/AccessibilityState;)V", 0);
@@ -38,15 +38,15 @@ public final class AccessibilityDetectionNavigator {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(AccessibilityMonitor4 accessibilityMonitor4) {
             Intrinsics3.checkNotNullParameter(accessibilityMonitor4, "p1");
             AccessibilityDetectionNavigator.access$showAccessibilityDetectionDialog((AccessibilityDetectionNavigator) this.receiver, accessibilityMonitor4);
         }
     }
 
-    /* compiled from: AccessibilityDetectionNavigator.kt */
-    /* renamed from: com.discord.widgets.accessibility.AccessibilityDetectionNavigator$showAccessibilityDetectionDialog$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.accessibility.AccessibilityDetectionNavigator$showAccessibilityDetectionDialog$1 */
+    /* JADX INFO: compiled from: AccessibilityDetectionNavigator.kt */
     public static final class C71371 extends Lambda implements Function1<FragmentActivity, Boolean> {
         public static final C71371 INSTANCE = new C71371();
 
@@ -59,7 +59,7 @@ public final class AccessibilityDetectionNavigator {
             return Boolean.valueOf(invoke2(fragmentActivity));
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final boolean invoke2(FragmentActivity fragmentActivity) {
             Intrinsics3.checkNotNullParameter(fragmentActivity, ActivityChooserModel.ATTRIBUTE_ACTIVITY);
             WidgetAccessibilityDetectionDialog.Companion bVar = WidgetAccessibilityDetectionDialog.INSTANCE;

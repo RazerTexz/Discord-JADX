@@ -1,11 +1,11 @@
 package p007b.p225i.p361c.p369m.p370d.p384s.p385h;
 
-/* compiled from: SessionSettingsData.java */
-/* renamed from: b.i.c.m.d.s.h.d, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.c.m.d.s.h.d, reason: use source file name */
+/* JADX INFO: compiled from: SessionSettingsData.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class SessionSettingsData {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final int f12758a;
 
     public SessionSettingsData(int i, int i2) {

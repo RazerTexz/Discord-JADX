@@ -1,14 +1,14 @@
 package androidx.constraintlayout.solver.widgets;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class Rectangle {
     public int height;
     public int width;
 
-    /* renamed from: x */
+    /* JADX INFO: renamed from: x */
     public int f119x;
 
-    /* renamed from: y */
+    /* JADX INFO: renamed from: y */
     public int f120y;
 
     public boolean contains(int i, int i2) {

@@ -74,31 +74,31 @@ import p507d0.p580t._Collections;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: signatureEnhancement.kt */
-/* renamed from: d0.e0.p.d.m0.e.a.l0.l, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.e.a.l0.l, reason: use source file name */
+/* JADX INFO: compiled from: signatureEnhancement.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class signatureEnhancement {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final AnnotationTypeQualifierResolver f23472a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final JavaTypeEnhancementState f23473b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final typeEnhancement4 f23474c;
 
-    /* compiled from: signatureEnhancement.kt */
-    /* renamed from: d0.e0.p.d.m0.e.a.l0.l$a */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.e.a.l0.l$a */
+    /* JADX INFO: compiled from: signatureEnhancement.kt */
     public static class a {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final KotlinType f23475a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final boolean f23476b;
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public final boolean f23477c;
 
         public a(KotlinType kotlinType, boolean z2, boolean z3) {
@@ -121,11 +121,11 @@ public final class signatureEnhancement {
         }
     }
 
-    /* compiled from: signatureEnhancement.kt */
-    /* renamed from: d0.e0.p.d.m0.e.a.l0.l$c */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.e.a.l0.l$c */
+    /* JADX INFO: compiled from: signatureEnhancement.kt */
     public static final class c extends a {
 
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         public final boolean f23487d;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -140,11 +140,11 @@ public final class signatureEnhancement {
         }
     }
 
-    /* compiled from: signatureEnhancement.kt */
-    /* renamed from: d0.e0.p.d.m0.e.a.l0.l$d */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.e.a.l0.l$d */
+    /* JADX INFO: compiled from: signatureEnhancement.kt */
     public static final class d extends Lambda implements Function1<KotlinType3, Boolean> {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public static final d f23488j = new d();
 
         public d() {
@@ -156,7 +156,7 @@ public final class signatureEnhancement {
             return Boolean.valueOf(invoke2(kotlinType3));
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final boolean invoke2(KotlinType3 kotlinType3) {
             Intrinsics3.checkNotNullParameter(kotlinType3, "it");
             return kotlinType3 instanceof RawType3;
@@ -180,18 +180,10 @@ public final class signatureEnhancement {
         return signatureenhancement.f23474c;
     }
 
-    /* JADX WARN: Can't fix incorrect switch cases order, some code will duplicate */
-    /* JADX WARN: Failed to restore switch over string. Please report as a decompilation issue
-    java.lang.NullPointerException: Cannot invoke "java.util.List.iterator()" because the return value of "jadx.core.dex.visitors.regions.SwitchOverStringVisitor$SwitchData.getNewCases()" is null
-    	at jadx.core.dex.visitors.regions.SwitchOverStringVisitor.restoreSwitchOverString(SwitchOverStringVisitor.java:109)
-    	at jadx.core.dex.visitors.regions.SwitchOverStringVisitor.visitRegion(SwitchOverStringVisitor.java:66)
-    	at jadx.core.dex.visitors.regions.DepthRegionTraversal.traverseIterativeStepInternal(DepthRegionTraversal.java:77)
-    	at jadx.core.dex.visitors.regions.DepthRegionTraversal.traverseIterativeStepInternal(DepthRegionTraversal.java:82)
-     */
+    /* JADX WARN: Failed to restore switch over string. Please report as a decompilation issue */
     /* JADX WARN: Removed duplicated region for block: B:25:0x0058  */
     /* JADX WARN: Removed duplicated region for block: B:59:0x00e2  */
-    /* JADX WARN: Removed duplicated region for block: B:77:0x013a  */
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
@@ -228,18 +220,22 @@ public final class signatureEnhancement {
                                 break;
                             case 74175084:
                                 if (!strAsString.equals("NEVER")) {
-                                }
-                                break;
-                            case 433141802:
-                                if (strAsString.equals("UNKNOWN")) {
-                                    nullabilityQualifierWithMigrationStatus = new NullabilityQualifierWithMigrationStatus(typequalifiers3, z4);
+                                    nullabilityQualifierWithMigrationStatus = null;
                                     break;
                                 }
                                 break;
+                            case 433141802:
+                                nullabilityQualifierWithMigrationStatus = !strAsString.equals("UNKNOWN") ? null : new NullabilityQualifierWithMigrationStatus(typequalifiers3, z4);
+                                break;
                             case 1933739535:
-                                if (strAsString.equals("ALWAYS")) {
+                                if (!strAsString.equals("ALWAYS")) {
+                                    nullabilityQualifierWithMigrationStatus = null;
+                                } else {
                                     nullabilityQualifierWithMigrationStatus3 = new NullabilityQualifierWithMigrationStatus(typequalifiers33, z4);
                                 }
+                                break;
+                            default:
+                                nullabilityQualifierWithMigrationStatus = null;
                                 break;
                         }
                     } else {
@@ -252,10 +248,10 @@ public final class signatureEnhancement {
                 } else {
                     if (Intrinsics3.areEqual(fqName, JvmAnnotationNames2.getANDROIDX_RECENTLY_NON_NULL_ANNOTATION())) {
                         nullabilityQualifierWithMigrationStatus2 = new NullabilityQualifierWithMigrationStatus(typequalifiers33, true);
+                    } else if (Intrinsics3.areEqual(fqName, JvmAnnotationNames2.getANDROIDX_RECENTLY_NULLABLE_ANNOTATION())) {
+                        nullabilityQualifierWithMigrationStatus2 = new NullabilityQualifierWithMigrationStatus(typequalifiers32, true);
                     } else {
-                        if (Intrinsics3.areEqual(fqName, JvmAnnotationNames2.getANDROIDX_RECENTLY_NULLABLE_ANNOTATION())) {
-                            nullabilityQualifierWithMigrationStatus2 = new NullabilityQualifierWithMigrationStatus(typequalifiers32, true);
-                        }
+                        nullabilityQualifierWithMigrationStatus = null;
                     }
                     nullabilityQualifierWithMigrationStatus = nullabilityQualifierWithMigrationStatus2;
                 }
@@ -268,7 +264,7 @@ public final class signatureEnhancement {
         return (!nullabilityQualifierWithMigrationStatus.isForWarningOnly() && (annotationDescriptor instanceof PossiblyExternalAnnotationDescriptor) && ((PossiblyExternalAnnotationDescriptor) annotationDescriptor).isIdeExternalAnnotation()) ? NullabilityQualifierWithMigrationStatus.copy$default(nullabilityQualifierWithMigrationStatus, null, true, 1, null) : nullabilityQualifierWithMigrationStatus;
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final b m9510b(CallableMemberDescriptor callableMemberDescriptor, Annotations3 annotations3, boolean z2, context4 context4Var, AnnotationQualifierApplicabilityType annotationQualifierApplicabilityType, Function1<? super CallableMemberDescriptor, ? extends KotlinType> function1) {
         KotlinType kotlinTypeInvoke = function1.invoke(callableMemberDescriptor);
         Collection<? extends CallableMemberDescriptor> overriddenDescriptors = callableMemberDescriptor.getOverriddenDescriptors();
@@ -281,7 +277,7 @@ public final class signatureEnhancement {
         return new b(annotations3, kotlinTypeInvoke, arrayList, z2, context.copyWithNewDefaultTypeQualifiers(context4Var, function1.invoke(callableMemberDescriptor).getAnnotations()), annotationQualifierApplicabilityType, false, 64, null);
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final b m9511c(CallableMemberDescriptor callableMemberDescriptor, ValueParameterDescriptor valueParameterDescriptor, context4 context4Var, Function1<? super CallableMemberDescriptor, ? extends KotlinType> function1) {
         context4 context4VarCopyWithNewDefaultTypeQualifiers;
         return m9510b(callableMemberDescriptor, valueParameterDescriptor, false, (valueParameterDescriptor == null || (context4VarCopyWithNewDefaultTypeQualifiers = context.copyWithNewDefaultTypeQualifiers(context4Var, valueParameterDescriptor.getAnnotations())) == null) ? context4Var : context4VarCopyWithNewDefaultTypeQualifiers, AnnotationQualifierApplicabilityType.VALUE_PARAMETER, function1);
@@ -530,36 +526,36 @@ public final class signatureEnhancement {
         return NullabilityQualifierWithMigrationStatus.copy$default(nullabilityQualifierWithMigrationStatusM9509a, null, javaTypeEnhancementState2ResolveJsr305AnnotationState.isWarning(), 1, null);
     }
 
-    /* compiled from: signatureEnhancement.kt */
-    /* renamed from: d0.e0.p.d.m0.e.a.l0.l$b */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.e.a.l0.l$b */
+    /* JADX INFO: compiled from: signatureEnhancement.kt */
     public final class b {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final Annotations3 f23478a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final KotlinType f23479b;
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public final Collection<KotlinType> f23480c;
 
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         public final boolean f23481d;
 
-        /* renamed from: e */
+        /* JADX INFO: renamed from: e */
         public final context4 f23482e;
 
-        /* renamed from: f */
+        /* JADX INFO: renamed from: f */
         public final AnnotationQualifierApplicabilityType f23483f;
 
-        /* renamed from: g */
+        /* JADX INFO: renamed from: g */
         public final boolean f23484g;
 
-        /* compiled from: signatureEnhancement.kt */
-        /* renamed from: d0.e0.p.d.m0.e.a.l0.l$b$a */
+        /* JADX INFO: renamed from: d0.e0.p.d.m0.e.a.l0.l$b$a */
+        /* JADX INFO: compiled from: signatureEnhancement.kt */
         public static final class a extends Lambda implements Function1<KotlinType3, Boolean> {
 
-            /* renamed from: j */
+            /* JADX INFO: renamed from: j */
             public static final a f23486j = new a();
 
             public a() {
@@ -571,7 +567,7 @@ public final class signatureEnhancement {
                 return invoke2(kotlinType3);
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final Boolean invoke2(KotlinType3 kotlinType3) {
                 ClassifierDescriptor declarationDescriptor = kotlinType3.getConstructor().getDeclarationDescriptor();
                 if (declarationDescriptor == null) {
@@ -583,8 +579,8 @@ public final class signatureEnhancement {
             }
         }
 
-        /* compiled from: signatureEnhancement.kt */
-        /* renamed from: d0.e0.p.d.m0.e.a.l0.l$b$b, reason: collision with other inner class name */
+        /* JADX INFO: renamed from: d0.e0.p.d.m0.e.a.l0.l$b$b, reason: collision with other inner class name */
+        /* JADX INFO: compiled from: signatureEnhancement.kt */
         public static final class C13312b extends Lambda implements Function1<Integer, typeQualifiers> {
             public final /* synthetic */ predefinedEnhancementInfo4 $predefined;
             public final /* synthetic */ Function1<Integer, typeQualifiers> $qualifiers;
@@ -625,7 +621,7 @@ public final class signatureEnhancement {
             this.f23484g = z3;
         }
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public static final <T> T m9512c(List<FqName> list, Annotations4 annotations4, T t) {
             boolean z2 = false;
             if (!(list instanceof Collection) || !list.isEmpty()) {
@@ -646,7 +642,7 @@ public final class signatureEnhancement {
             return null;
         }
 
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         public static final void m9513d(b bVar, ArrayList<signatureEnhancement7> arrayList, KotlinType kotlinType, context4 context4Var, TypeParameterDescriptor typeParameterDescriptor) {
             context4 context4VarCopyWithNewDefaultTypeQualifiers = context.copyWithNewDefaultTypeQualifiers(context4Var, kotlinType.getAnnotations());
             JavaTypeQualifiersByElementType defaultTypeQualifiers = context4VarCopyWithNewDefaultTypeQualifiers.getDefaultTypeQualifiers();
@@ -677,7 +673,7 @@ public final class signatureEnhancement {
             return bVar.enhance(predefinedenhancementinfo4);
         }
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final typeQualifiers3 m9514a(TypeParameterDescriptor typeParameterDescriptor) {
             boolean z2;
             boolean z3;
@@ -740,7 +736,7 @@ public final class signatureEnhancement {
 
         /* JADX WARN: Removed duplicated region for block: B:16:0x0048  */
         /* JADX WARN: Removed duplicated region for block: B:17:0x004b  */
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         /*
             Code decompiled incorrectly, please refer to instructions dump.
         */
@@ -815,11 +811,11 @@ public final class signatureEnhancement {
         /* JADX WARN: Removed duplicated region for block: B:303:0x02ac A[SYNTHETIC] */
         /* JADX WARN: Removed duplicated region for block: B:94:0x0211  */
         /* JADX WARN: Removed duplicated region for block: B:98:0x0222  */
-        /* JADX WARN: Type inference failed for: r1v1, types: [d0.e0.p.d.m0.e.a.l0.m, kotlin.jvm.functions.Function1] */
         /* JADX WARN: Type inference failed for: r1v17 */
         /* JADX WARN: Type inference failed for: r1v18, types: [d0.e0.p.d.m0.e.a.l0.e] */
         /* JADX WARN: Type inference failed for: r1v2, types: [kotlin.jvm.functions.Function1] */
         /* JADX WARN: Type inference failed for: r1v31 */
+        /* JADX WARN: Type inference failed for: r1v49 */
         /* JADX WARN: Type inference failed for: r1v5 */
         /* JADX WARN: Type inference failed for: r4v4, types: [d0.e0.p.d.m0.e.a.l0.d] */
         /* JADX WARN: Type inference failed for: r6v3, types: [d0.e0.p.d.m0.e.a.l0.l$a] */
@@ -1236,15 +1232,16 @@ public final class signatureEnhancement {
                 i2 = 10;
             }
             Object obj3 = obj;
-            ?? signatureenhancement23 = new signatureEnhancement2(typequalifiersArr2);
+            signatureEnhancement2 signatureenhancement23 = new signatureEnhancement2(typequalifiersArr2);
             Object c13312b = predefinedenhancementinfo4 == null ? obj3 : new C13312b(predefinedenhancementinfo4, signatureenhancement23);
             boolean zContains = TypeUtils.contains(this.f23479b, a.f23486j);
             ?? Access$getTypeEnhancement$p = signatureEnhancement.access$getTypeEnhancement$p(signatureEnhancement.this);
             KotlinType kotlinType3 = this.f23479b;
+            ?? r12 = signatureenhancement23;
             if (c13312b != null) {
-                signatureenhancement23 = c13312b;
+                r12 = c13312b;
             }
-            KotlinType kotlinTypeEnhance = Access$getTypeEnhancement$p.enhance(kotlinType3, signatureenhancement23);
+            KotlinType kotlinTypeEnhance = Access$getTypeEnhancement$p.enhance(kotlinType3, r12);
             ?? aVar = kotlinTypeEnhance == null ? obj3 : new a(kotlinTypeEnhance, true, zContains);
             return aVar == 0 ? new a(this.f23479b, false, zContains) : aVar;
         }

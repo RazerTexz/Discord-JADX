@@ -10,9 +10,9 @@ import java.util.List;
 import java.util.Map;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: SelectMessageComponent.kt */
-/* renamed from: com.discord.models.botuikit.SelectMessageComponentKt, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: com.discord.models.botuikit.SelectMessageComponentKt, reason: use source file name */
+/* JADX INFO: compiled from: SelectMessageComponent.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class SelectMessageComponent2 {
     public static final SelectMessageComponent mergeToMessageComponent(SelectComponent selectComponent, int i, ActionInteractionComponentState actionInteractionComponentState, ComponentChatListState.ComponentStoreState componentStoreState) {
         Intrinsics3.checkNotNullParameter(selectComponent, "$this$mergeToMessageComponent");

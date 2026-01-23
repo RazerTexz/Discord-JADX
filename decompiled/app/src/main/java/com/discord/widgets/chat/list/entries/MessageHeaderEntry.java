@@ -8,8 +8,8 @@ import com.discord.models.message.Message;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: MessageHeaderEntry.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: MessageHeaderEntry.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final /* data */ class MessageHeaderEntry extends ChatListEntry {
     private final String channelName;
     private final String key;
@@ -39,17 +39,17 @@ public final /* data */ class MessageHeaderEntry extends ChatListEntry {
         return messageHeaderEntry.copy(message, str, str2);
     }
 
-    /* renamed from: component1, reason: from getter */
+    /* JADX INFO: renamed from: component1, reason: from getter */
     public final Message getMessage() {
         return this.message;
     }
 
-    /* renamed from: component2, reason: from getter */
+    /* JADX INFO: renamed from: component2, reason: from getter */
     public final String getText() {
         return this.text;
     }
 
-    /* renamed from: component3, reason: from getter */
+    /* JADX INFO: renamed from: component3, reason: from getter */
     public final String getChannelName() {
         return this.channelName;
     }

@@ -3,74 +3,74 @@ package p007b.p225i.p226a.p242c.p245b3.p252t;
 import android.text.Layout;
 import androidx.annotation.Nullable;
 
-/* compiled from: TtmlStyle.java */
-/* renamed from: b.i.a.c.b3.t.f, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.b3.t.f, reason: use source file name */
+/* JADX INFO: compiled from: TtmlStyle.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class TtmlStyle {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     @Nullable
     public String f6073a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public int f6074b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public boolean f6075c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public int f6076d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public boolean f6077e;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public float f6083k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     @Nullable
     public String f6084l;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     @Nullable
     public Layout.Alignment f6087o;
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     @Nullable
     public Layout.Alignment f6088p;
 
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     @Nullable
     public TextEmphasis f6090r;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public int f6078f = -1;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public int f6079g = -1;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public int f6080h = -1;
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public int f6081i = -1;
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public int f6082j = -1;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public int f6085m = -1;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public int f6086n = -1;
 
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     public int f6089q = -1;
 
-    /* renamed from: s */
+    /* JADX INFO: renamed from: s */
     public float f6091s = Float.MAX_VALUE;
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public TtmlStyle m2701a(@Nullable TtmlStyle ttmlStyle) {
         int i;
         Layout.Alignment alignment;
@@ -129,7 +129,7 @@ public final class TtmlStyle {
         return this;
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public int m2702b() {
         int i = this.f6080h;
         if (i == -1 && this.f6081i == -1) {

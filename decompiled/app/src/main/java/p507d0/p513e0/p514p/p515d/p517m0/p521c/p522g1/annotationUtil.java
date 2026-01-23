@@ -20,28 +20,28 @@ import p507d0.p580t.Maps6;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: annotationUtil.kt */
-/* renamed from: d0.e0.p.d.m0.c.g1.f, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.c.g1.f, reason: use source file name */
+/* JADX INFO: compiled from: annotationUtil.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class annotationUtil {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final Name f22730a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static final Name f22731b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public static final Name f22732c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public static final Name f22733d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public static final Name f22734e;
 
-    /* compiled from: annotationUtil.kt */
-    /* renamed from: d0.e0.p.d.m0.c.g1.f$a */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.c.g1.f$a */
+    /* JADX INFO: compiled from: annotationUtil.kt */
     public static final class a extends Lambda implements Function1<ModuleDescriptor2, KotlinType> {
         public final /* synthetic */ KotlinBuiltIns $this_createDeprecatedAnnotation;
 
@@ -56,7 +56,7 @@ public final class annotationUtil {
             return invoke2(moduleDescriptor2);
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final KotlinType invoke2(ModuleDescriptor2 moduleDescriptor2) {
             Intrinsics3.checkNotNullParameter(moduleDescriptor2, "module");
             KotlinType4 arrayType = moduleDescriptor2.getBuiltIns().getArrayType(Variance.INVARIANT, this.$this_createDeprecatedAnnotation.getStringType());

@@ -4,8 +4,8 @@ import androidx.annotation.Nullable;
 import androidx.annotation.RestrictTo;
 import p007b.p225i.p355b.p359d.p360a.ListenableFuture8;
 
+/* JADX INFO: loaded from: classes.dex */
 @RestrictTo({RestrictTo.Scope.LIBRARY_GROUP})
-/* loaded from: classes.dex */
 public final class SettableFuture<V> extends AbstractFuture<V> {
     private SettableFuture() {
     }

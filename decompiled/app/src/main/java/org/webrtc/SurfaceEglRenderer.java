@@ -6,7 +6,7 @@ import org.webrtc.EglBase;
 import org.webrtc.RendererCommon;
 import p617h0.p628c.RunnableC12471k0;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public class SurfaceEglRenderer extends EglRenderer implements SurfaceHolder.Callback {
     private static final String TAG = "SurfaceEglRenderer";
     private int frameRotation;

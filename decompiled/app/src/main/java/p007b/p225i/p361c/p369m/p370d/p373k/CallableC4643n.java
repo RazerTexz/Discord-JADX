@@ -3,18 +3,18 @@ package p007b.p225i.p361c.p369m.p370d.p373k;
 import java.util.concurrent.Callable;
 import p007b.p225i.p361c.p369m.p370d.p374l.LogFileManager;
 
-/* compiled from: CrashlyticsController.java */
-/* renamed from: b.i.c.m.d.k.n */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.c.m.d.k.n */
+/* JADX INFO: compiled from: CrashlyticsController.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class CallableC4643n implements Callable<Void> {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final /* synthetic */ long f12350j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final /* synthetic */ String f12351k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final /* synthetic */ C4663x f12352l;
 
     public CallableC4643n(C4663x c4663x, long j, String str) {

@@ -3,15 +3,15 @@ package p007b.p225i.p226a.p228b.p231j.p236t.p237h;
 import android.app.job.JobParameters;
 import com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService;
 
-/* compiled from: JobInfoSchedulerService.java */
-/* renamed from: b.i.a.b.j.t.h.e, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.b.j.t.h.e, reason: use source file name */
+/* JADX INFO: compiled from: JobInfoSchedulerService.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final /* synthetic */ class JobInfoSchedulerService2 implements Runnable {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final JobInfoSchedulerService f5364j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final JobParameters f5365k;
 
     public JobInfoSchedulerService2(JobInfoSchedulerService jobInfoSchedulerService, JobParameters jobParameters) {

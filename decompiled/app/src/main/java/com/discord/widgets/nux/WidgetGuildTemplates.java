@@ -28,22 +28,22 @@ import p507d0.p580t.Iterables2;
 import p507d0.p592z.p594d.Intrinsics3;
 import p658rx.functions.Func0;
 
-/* compiled from: WidgetGuildTemplates.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetGuildTemplates.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public class WidgetGuildTemplates extends AppFragment {
     public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetGuildTemplates.class, "binding", "getBinding()Lcom/discord/databinding/WidgetNuxGuildTemplateBinding;", 0)};
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private final GuildTemplatesAdapter adapter;
 
-    /* renamed from: args$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: args$delegate, reason: from kotlin metadata */
     private final Lazy args;
 
-    /* renamed from: binding$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
 
-    /* compiled from: WidgetGuildTemplates.kt */
+    /* JADX INFO: compiled from: WidgetGuildTemplates.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -70,8 +70,8 @@ public class WidgetGuildTemplates extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetGuildTemplates.kt */
-    /* renamed from: com.discord.widgets.nux.WidgetGuildTemplates$onViewBound$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.nux.WidgetGuildTemplates$onViewBound$1 */
+    /* JADX INFO: compiled from: WidgetGuildTemplates.kt */
     public static final class C91041<R> implements Func0<Boolean> {
         public C91041() {
         }
@@ -88,8 +88,8 @@ public class WidgetGuildTemplates extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetGuildTemplates.kt */
-    /* renamed from: com.discord.widgets.nux.WidgetGuildTemplates$onViewBound$3 */
+    /* JADX INFO: renamed from: com.discord.widgets.nux.WidgetGuildTemplates$onViewBound$3 */
+    /* JADX INFO: compiled from: WidgetGuildTemplates.kt */
     public static final class ViewOnClickListenerC91053 implements View.OnClickListener {
         public ViewOnClickListenerC91053() {
         }

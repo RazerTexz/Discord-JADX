@@ -53,8 +53,8 @@ import p637j0.p641k.Func1;
 import p658rx.Observable;
 import p659s.p660a.CancellableContinuationImpl5;
 
-/* compiled from: StageChannelJoinHelper.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: StageChannelJoinHelper.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class StageChannelJoinHelper {
     public static final StageChannelJoinHelper INSTANCE = new StageChannelJoinHelper();
     private static Job lurkJob;
@@ -74,8 +74,8 @@ public final class StageChannelJoinHelper {
         }
     }
 
-    /* compiled from: StageChannelJoinHelper.kt */
-    /* renamed from: com.discord.widgets.stage.StageChannelJoinHelper$connectToStage$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.stage.StageChannelJoinHelper$connectToStage$1 */
+    /* JADX INFO: compiled from: StageChannelJoinHelper.kt */
     public static final class C100041 extends Lambda implements Function0<Unit> {
         public static final C100041 INSTANCE = new C100041();
 
@@ -89,13 +89,13 @@ public final class StageChannelJoinHelper {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
         }
     }
 
-    /* compiled from: StageChannelJoinHelper.kt */
-    /* renamed from: com.discord.widgets.stage.StageChannelJoinHelper$connectToStage$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.stage.StageChannelJoinHelper$connectToStage$2 */
+    /* JADX INFO: compiled from: StageChannelJoinHelper.kt */
     public static final class C100052 extends Lambda implements Function0<Unit> {
         public final /* synthetic */ long $channelId;
         public final /* synthetic */ StoreChannels $channelsStore;
@@ -108,8 +108,8 @@ public final class StageChannelJoinHelper {
         public final /* synthetic */ StoreVoiceStates $voiceStatesStore;
         public final /* synthetic */ boolean $warnedAboutBlockedUsers;
 
-        /* compiled from: StageChannelJoinHelper.kt */
-        /* renamed from: com.discord.widgets.stage.StageChannelJoinHelper$connectToStage$2$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.widgets.stage.StageChannelJoinHelper$connectToStage$2$1, reason: invalid class name */
+        /* JADX INFO: compiled from: StageChannelJoinHelper.kt */
         public static final class AnonymousClass1 extends Lambda implements Function1<StoreVoiceChannelSelected.JoinVoiceChannelResult, Unit> {
             public AnonymousClass1() {
                 super(1);
@@ -121,7 +121,7 @@ public final class StageChannelJoinHelper {
                 return Unit.f27425a;
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2(StoreVoiceChannelSelected.JoinVoiceChannelResult joinVoiceChannelResult) {
                 Intrinsics3.checkNotNullParameter(joinVoiceChannelResult, "it");
                 C100052 c100052 = C100052.this;
@@ -154,7 +154,7 @@ public final class StageChannelJoinHelper {
         }
 
         /* JADX WARN: Removed duplicated region for block: B:27:0x007e  */
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         /*
             Code decompiled incorrectly, please refer to instructions dump.
         */
@@ -194,9 +194,9 @@ public final class StageChannelJoinHelper {
         }
     }
 
-    /* compiled from: StageChannelJoinHelper.kt */
+    /* JADX INFO: renamed from: com.discord.widgets.stage.StageChannelJoinHelper$lurkAndJoinStage$1 */
+    /* JADX INFO: compiled from: StageChannelJoinHelper.kt */
     @DebugMetadata(m10084c = "com.discord.widgets.stage.StageChannelJoinHelper$lurkAndJoinStage$1", m10085f = "StageChannelJoinHelper.kt", m10086l = {123}, m10087m = "invokeSuspend")
-    /* renamed from: com.discord.widgets.stage.StageChannelJoinHelper$lurkAndJoinStage$1 */
     public static final class C100081 extends ContinuationImpl6 implements Function2<CoroutineScope, Continuation<? super Unit>, Object> {
         public final /* synthetic */ long $channelId;
         public final /* synthetic */ Context $context;
@@ -261,9 +261,9 @@ public final class StageChannelJoinHelper {
         }
     }
 
-    /* compiled from: StageChannelJoinHelper.kt */
+    /* JADX INFO: renamed from: com.discord.widgets.stage.StageChannelJoinHelper$lurkAndJoinStageAsync$1 */
+    /* JADX INFO: compiled from: StageChannelJoinHelper.kt */
     @DebugMetadata(m10084c = "com.discord.widgets.stage.StageChannelJoinHelper", m10085f = "StageChannelJoinHelper.kt", m10086l = {180, Opcodes.IF_ICMPEQ, Opcodes.IF_ACMPNE}, m10087m = "lurkAndJoinStageAsync")
-    /* renamed from: com.discord.widgets.stage.StageChannelJoinHelper$lurkAndJoinStageAsync$1 */
     public static final class C100091 extends ContinuationImpl3 {
         public long J$0;
         public long J$1;
@@ -289,8 +289,8 @@ public final class StageChannelJoinHelper {
         }
     }
 
-    /* compiled from: StageChannelJoinHelper.kt */
-    /* renamed from: com.discord.widgets.stage.StageChannelJoinHelper$lurkAndJoinStageAsync$3 */
+    /* JADX INFO: renamed from: com.discord.widgets.stage.StageChannelJoinHelper$lurkAndJoinStageAsync$3 */
+    /* JADX INFO: compiled from: StageChannelJoinHelper.kt */
     public static final class C100103<T, R> implements Func1<Set<? extends Long>, Boolean> {
         public final /* synthetic */ long $guildId;
 
@@ -303,14 +303,14 @@ public final class StageChannelJoinHelper {
             return call2((Set<Long>) set);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final Boolean call2(Set<Long> set) {
             return Boolean.valueOf(set.contains(Long.valueOf(this.$guildId)));
         }
     }
 
-    /* compiled from: StageChannelJoinHelper.kt */
-    /* renamed from: com.discord.widgets.stage.StageChannelJoinHelper$lurkAndJoinStageAsync$4 */
+    /* JADX INFO: renamed from: com.discord.widgets.stage.StageChannelJoinHelper$lurkAndJoinStageAsync$4 */
+    /* JADX INFO: compiled from: StageChannelJoinHelper.kt */
     public static final class C100114<T, R> implements Func1<Channel, Boolean> {
         public static final C100114 INSTANCE = new C100114();
 
@@ -319,14 +319,14 @@ public final class StageChannelJoinHelper {
             return call2(channel);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final Boolean call2(Channel channel) {
             return Boolean.valueOf(channel == null);
         }
     }
 
-    /* compiled from: StageChannelJoinHelper.kt */
-    /* renamed from: com.discord.widgets.stage.StageChannelJoinHelper$lurkAndJoinStageAsync$5 */
+    /* JADX INFO: renamed from: com.discord.widgets.stage.StageChannelJoinHelper$lurkAndJoinStageAsync$5 */
+    /* JADX INFO: compiled from: StageChannelJoinHelper.kt */
     public static final class C100125 extends Lambda implements Function0<Unit> {
         public final /* synthetic */ long $guildId;
         public final /* synthetic */ StoreLurking $lurkingStore;
@@ -344,7 +344,7 @@ public final class StageChannelJoinHelper {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             this.$lurkingStore.removeOldLurkingGuilds(this.$guildId);
         }
@@ -353,6 +353,7 @@ public final class StageChannelJoinHelper {
     private StageChannelJoinHelper() {
     }
 
+    /* JADX WARN: Multi-variable type inference failed */
     public static /* synthetic */ void connectToStage$default(StageChannelJoinHelper stageChannelJoinHelper, Context context, FragmentManager fragmentManager, long j, boolean z2, boolean z3, StoreVoiceChannelSelected storeVoiceChannelSelected, StoreChannels storeChannels, StoreVoiceStates storeVoiceStates, StoreUserRelationships storeUserRelationships, Function0 function0, int i, Object obj) {
         stageChannelJoinHelper.connectToStage(context, fragmentManager, j, (i & 8) != 0 ? false : z2, (i & 16) != 0 ? true : z3, (i & 32) != 0 ? StoreStream.INSTANCE.getVoiceChannelSelected() : storeVoiceChannelSelected, (i & 64) != 0 ? StoreStream.INSTANCE.getChannels() : storeChannels, (i & 128) != 0 ? StoreStream.INSTANCE.getVoiceStates() : storeVoiceStates, (i & 256) != 0 ? StoreStream.INSTANCE.getUserRelationships() : storeUserRelationships, (i & 512) != 0 ? C100041.INSTANCE : function0);
     }

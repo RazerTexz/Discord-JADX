@@ -2,8 +2,8 @@ package com.discord.widgets.channels.list.items;
 
 import kotlin.jvm.internal.DefaultConstructorMarker;
 
-/* compiled from: ChannelListBottomNavSpaceItem.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: ChannelListBottomNavSpaceItem.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class ChannelListBottomNavSpaceItem implements ChannelListItem {
     private final long guildId;
     private final String key;

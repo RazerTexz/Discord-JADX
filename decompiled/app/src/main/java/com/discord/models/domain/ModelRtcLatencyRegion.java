@@ -4,8 +4,8 @@ import java.util.List;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ModelRtcLatencyRegion.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: ModelRtcLatencyRegion.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class ModelRtcLatencyRegion {
     private final List<String> ips;
     private final String region;
@@ -28,7 +28,7 @@ public final /* data */ class ModelRtcLatencyRegion {
         return modelRtcLatencyRegion.copy(str, list);
     }
 
-    /* renamed from: component1, reason: from getter */
+    /* JADX INFO: renamed from: component1, reason: from getter */
     public final String getRegion() {
         return this.region;
     }

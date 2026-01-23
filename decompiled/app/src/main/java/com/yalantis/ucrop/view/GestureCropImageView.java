@@ -10,34 +10,34 @@ import java.util.Objects;
 import p007b.p485q.p486a.p490k.RotationGestureDetector;
 import p007b.p485q.p486a.p491l.CropImageView;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public class GestureCropImageView extends CropImageView {
 
-    /* renamed from: K */
+    /* JADX INFO: renamed from: K */
     public ScaleGestureDetector f22203K;
 
-    /* renamed from: L */
+    /* JADX INFO: renamed from: L */
     public RotationGestureDetector f22204L;
 
-    /* renamed from: M */
+    /* JADX INFO: renamed from: M */
     public GestureDetector f22205M;
 
-    /* renamed from: N */
+    /* JADX INFO: renamed from: N */
     public float f22206N;
 
-    /* renamed from: O */
+    /* JADX INFO: renamed from: O */
     public float f22207O;
 
-    /* renamed from: P */
+    /* JADX INFO: renamed from: P */
     public boolean f22208P;
 
-    /* renamed from: Q */
+    /* JADX INFO: renamed from: Q */
     public boolean f22209Q;
 
-    /* renamed from: R */
+    /* JADX INFO: renamed from: R */
     public int f22210R;
 
-    /* renamed from: com.yalantis.ucrop.view.GestureCropImageView$b */
+    /* JADX INFO: renamed from: com.yalantis.ucrop.view.GestureCropImageView$b */
     public class C11204b extends GestureDetector.SimpleOnGestureListener {
         public C11204b(C11203a c11203a) {
         }
@@ -65,13 +65,13 @@ public class GestureCropImageView extends CropImageView {
         }
     }
 
-    /* renamed from: com.yalantis.ucrop.view.GestureCropImageView$c */
+    /* JADX INFO: renamed from: com.yalantis.ucrop.view.GestureCropImageView$c */
     public class C11205c extends RotationGestureDetector.b {
         public C11205c(C11203a c11203a) {
         }
     }
 
-    /* renamed from: com.yalantis.ucrop.view.GestureCropImageView$d */
+    /* JADX INFO: renamed from: com.yalantis.ucrop.view.GestureCropImageView$d */
     public class C11206d extends ScaleGestureDetector.SimpleOnScaleGestureListener {
         public C11206d(C11203a c11203a) {
         }
@@ -94,7 +94,7 @@ public class GestureCropImageView extends CropImageView {
     }
 
     @Override // p007b.p485q.p486a.p491l.TransformImageView2
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public void mo7486c() {
         setScaleType(ImageView.ScaleType.MATRIX);
         this.f22205M = new GestureDetector(getContext(), new C11204b(null), null, true);

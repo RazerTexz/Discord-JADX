@@ -22,8 +22,6 @@ import com.discord.utilities.time.Clock;
 import com.discord.utilities.user.UserUtils;
 import com.discord.widgets.chat.input.MentionUtils;
 import com.google.gson.Gson;
-import com.google.gson.JsonIOException;
-import com.google.gson.JsonSyntaxException;
 import java.util.AbstractMap;
 import java.util.ArrayList;
 import java.util.Collection;
@@ -45,8 +43,8 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 import p658rx.Observable;
 
-/* compiled from: StoreExperiments.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: StoreExperiments.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class StoreExperiments extends StoreV2 {
     private static final long DISCORD_TESTERS_GUILD_ID = 197038439483310086L;
     private static final String EXPERIMENT_OVERRIDES_CACHE_KEY = "EXPERIMENT_OVERRIDES_CACHE_KEY";
@@ -76,12 +74,12 @@ public final class StoreExperiments extends StoreV2 {
     private final Persister<Map<Long, UserExperimentDto>> userExperimentsCache;
     private Map<Long, UserExperimentDto> userExperimentsSnapshot;
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private static final StoreExperiments3 InitializedUpdateSource = new StoreExperiments3();
     private static final StoreExperiments2 ExperimentOverridesUpdateSource = new StoreExperiments2();
 
-    /* compiled from: StoreExperiments.kt */
+    /* JADX INFO: compiled from: StoreExperiments.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -97,8 +95,8 @@ public final class StoreExperiments extends StoreV2 {
         }
     }
 
-    /* compiled from: StoreExperiments.kt */
-    /* renamed from: com.discord.stores.StoreExperiments$clearOverride$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreExperiments$clearOverride$1 */
+    /* JADX INFO: compiled from: StoreExperiments.kt */
     public static final class C59151 extends Lambda implements Function0<Unit> {
         public final /* synthetic */ String $experimentName;
 
@@ -114,14 +112,14 @@ public final class StoreExperiments extends StoreV2 {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             StoreExperiments.access$handleClearOverride(StoreExperiments.this, this.$experimentName);
         }
     }
 
-    /* compiled from: StoreExperiments.kt */
-    /* renamed from: com.discord.stores.StoreExperiments$getExperimentalAlpha$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreExperiments$getExperimentalAlpha$1 */
+    /* JADX INFO: compiled from: StoreExperiments.kt */
     public static final class C59161 extends Lambda implements Function0<Boolean> {
         public C59161() {
             super(0);
@@ -132,14 +130,14 @@ public final class StoreExperiments extends StoreV2 {
             return Boolean.valueOf(invoke2());
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final boolean invoke2() {
             return StoreExperiments.INSTANCE.isExperimentalAlpha(StoreExperiments.access$getStoreGuilds$p(StoreExperiments.this), StoreExperiments.access$getStoreUser$p(StoreExperiments.this));
         }
     }
 
-    /* compiled from: StoreExperiments.kt */
-    /* renamed from: com.discord.stores.StoreExperiments$getGuildExperiment$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreExperiments$getGuildExperiment$1 */
+    /* JADX INFO: compiled from: StoreExperiments.kt */
     public static final class C59171 extends Lambda implements Function0<Unit> {
         public static final C59171 INSTANCE = new C59171();
 
@@ -153,13 +151,13 @@ public final class StoreExperiments extends StoreV2 {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
         }
     }
 
-    /* compiled from: StoreExperiments.kt */
-    /* renamed from: com.discord.stores.StoreExperiments$getUserExperiment$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreExperiments$getUserExperiment$1 */
+    /* JADX INFO: compiled from: StoreExperiments.kt */
     public static final class C59181 extends Lambda implements Function0<Unit> {
         public static final C59181 INSTANCE = new C59181();
 
@@ -173,13 +171,13 @@ public final class StoreExperiments extends StoreV2 {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
         }
     }
 
-    /* compiled from: StoreExperiments.kt */
-    /* renamed from: com.discord.stores.StoreExperiments$isInitialized$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreExperiments$isInitialized$1 */
+    /* JADX INFO: compiled from: StoreExperiments.kt */
     public static final class C59191 extends Lambda implements Function0<Boolean> {
         public C59191() {
             super(0);
@@ -190,14 +188,14 @@ public final class StoreExperiments extends StoreV2 {
             return Boolean.valueOf(invoke2());
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final boolean invoke2() {
             return StoreExperiments.access$getInitialized$p(StoreExperiments.this);
         }
     }
 
-    /* compiled from: StoreExperiments.kt */
-    /* renamed from: com.discord.stores.StoreExperiments$observeGuildExperiment$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreExperiments$observeGuildExperiment$1 */
+    /* JADX INFO: compiled from: StoreExperiments.kt */
     public static final class C59211 extends Lambda implements Function0<Experiment> {
         public final /* synthetic */ String $experimentName;
         public final /* synthetic */ long $guildId;
@@ -223,8 +221,8 @@ public final class StoreExperiments extends StoreV2 {
         }
     }
 
-    /* compiled from: StoreExperiments.kt */
-    /* renamed from: com.discord.stores.StoreExperiments$observeOverrides$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreExperiments$observeOverrides$1 */
+    /* JADX INFO: compiled from: StoreExperiments.kt */
     public static final class C59221 extends Lambda implements Function0<Map<String, ? extends Integer>> {
         public C59221() {
             super(0);
@@ -236,14 +234,14 @@ public final class StoreExperiments extends StoreV2 {
         }
 
         @Override // kotlin.jvm.functions.Function0
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final Map<String, ? extends Integer> invoke2() {
             return StoreExperiments.access$getExperimentOverrides$p(StoreExperiments.this);
         }
     }
 
-    /* compiled from: StoreExperiments.kt */
-    /* renamed from: com.discord.stores.StoreExperiments$observeUserExperiment$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreExperiments$observeUserExperiment$1 */
+    /* JADX INFO: compiled from: StoreExperiments.kt */
     public static final class C59231 extends Lambda implements Function0<Experiment> {
         public final /* synthetic */ String $name;
         public final /* synthetic */ boolean $trackExposure;
@@ -267,8 +265,8 @@ public final class StoreExperiments extends StoreV2 {
         }
     }
 
-    /* compiled from: StoreExperiments.kt */
-    /* renamed from: com.discord.stores.StoreExperiments$setOverride$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreExperiments$setOverride$1 */
+    /* JADX INFO: compiled from: StoreExperiments.kt */
     public static final class C59241 extends Lambda implements Function0<Unit> {
         public final /* synthetic */ int $bucket;
         public final /* synthetic */ String $experimentName;
@@ -286,7 +284,7 @@ public final class StoreExperiments extends StoreV2 {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             Integer num = (Integer) StoreExperiments.access$getExperimentOverrides$p(StoreExperiments.this).get(this.$experimentName);
             if (num != null && num.intValue() == this.$bucket) {
@@ -296,12 +294,12 @@ public final class StoreExperiments extends StoreV2 {
         }
     }
 
-    /* compiled from: StoreExperiments.kt */
-    /* renamed from: com.discord.stores.StoreExperiments$tryInitializeExperiments$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreExperiments$tryInitializeExperiments$1 */
+    /* JADX INFO: compiled from: StoreExperiments.kt */
     public static final class C59251 extends Lambda implements Function1<UnauthenticatedUserExperimentsDto, Unit> {
 
-        /* compiled from: StoreExperiments.kt */
-        /* renamed from: com.discord.stores.StoreExperiments$tryInitializeExperiments$1$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.stores.StoreExperiments$tryInitializeExperiments$1$1, reason: invalid class name */
+        /* JADX INFO: compiled from: StoreExperiments.kt */
         public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
             public final /* synthetic */ UnauthenticatedUserExperimentsDto $it;
 
@@ -317,7 +315,7 @@ public final class StoreExperiments extends StoreV2 {
                 return Unit.f27425a;
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2() {
                 StoreExperiments.access$getStoreAuthentication$p(StoreExperiments.this).setFingerprint(this.$it.getFingerprint(), false);
                 StoreExperiments storeExperiments = StoreExperiments.this;
@@ -341,18 +339,18 @@ public final class StoreExperiments extends StoreV2 {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(UnauthenticatedUserExperimentsDto unauthenticatedUserExperimentsDto) {
             StoreExperiments.access$getDispatcher$p(StoreExperiments.this).schedule(new AnonymousClass1(unauthenticatedUserExperimentsDto));
         }
     }
 
-    /* compiled from: StoreExperiments.kt */
-    /* renamed from: com.discord.stores.StoreExperiments$tryInitializeExperiments$2 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreExperiments$tryInitializeExperiments$2 */
+    /* JADX INFO: compiled from: StoreExperiments.kt */
     public static final class C59262 extends Lambda implements Function1<Error, Unit> {
 
-        /* compiled from: StoreExperiments.kt */
-        /* renamed from: com.discord.stores.StoreExperiments$tryInitializeExperiments$2$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.stores.StoreExperiments$tryInitializeExperiments$2$1, reason: invalid class name */
+        /* JADX INFO: compiled from: StoreExperiments.kt */
         public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
             public AnonymousClass1() {
                 super(0);
@@ -364,7 +362,7 @@ public final class StoreExperiments extends StoreV2 {
                 return Unit.f27425a;
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2() {
                 StoreExperiments.access$setInitialized(StoreExperiments.this);
             }
@@ -380,7 +378,7 @@ public final class StoreExperiments extends StoreV2 {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Error error) {
             Intrinsics3.checkNotNullParameter(error, "it");
             StoreExperiments.access$getDispatcher$p(StoreExperiments.this).schedule(new AnonymousClass1());
@@ -443,7 +441,7 @@ public final class StoreExperiments extends StoreV2 {
         storeExperiments.trackExposureToUserExperiment(str, i, i2, i3);
     }
 
-    private final void cacheExperimentTrackedExposureTimestamps() throws JsonIOException {
+    private final void cacheExperimentTrackedExposureTimestamps() {
         getPrefs().edit().putString(EXPERIMENT_TRACKED_EXPOSURE_TIMESTAMPS_CACHE_KEY, new Gson().m9209m(this.experimentTrackedExposureTimestamps)).apply();
     }
 
@@ -509,7 +507,7 @@ public final class StoreExperiments extends StoreV2 {
         }
     }
 
-    private final void didTrackExposureToExperiment(String exposureKey) throws JsonIOException {
+    private final void didTrackExposureToExperiment(String exposureKey) {
         this.experimentTrackedExposureTimestamps.put(exposureKey, Long.valueOf(this.clock.currentTimeMillis()));
         cacheExperimentTrackedExposureTimestamps();
     }
@@ -550,7 +548,7 @@ public final class StoreExperiments extends StoreV2 {
         markChanged(ExperimentOverridesUpdateSource);
     }
 
-    private final Map<String, Long> loadCachedExperimentTrackedExposureTimestamps() throws JsonSyntaxException {
+    private final Map<String, Long> loadCachedExperimentTrackedExposureTimestamps() {
         String string = getPrefs().getString(EXPERIMENT_TRACKED_EXPOSURE_TIMESTAMPS_CACHE_KEY, null);
         if (string == null) {
             return Maps6.emptyMap();

@@ -39,11 +39,11 @@ import p658rx.Emitter;
 import p658rx.Observable;
 import p658rx.functions.Action1;
 
-/* compiled from: WidgetExpressionPickerAdapter.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetExpressionPickerAdapter.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public abstract class WidgetExpressionPickerAdapter extends MGRecyclerAdapterSimple<MGRecyclerDataPayload> implements StickyHeaderItemDecoration.StickyHeaderAdapter {
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     public static final int ITEM_TYPE_HEADER = 0;
     public List<Integer> headerIndices;
@@ -53,7 +53,7 @@ public abstract class WidgetExpressionPickerAdapter extends MGRecyclerAdapterSim
     private Function1<? super Integer, Unit> onScrollPositionListener;
     public StickyHeadersManager stickyHeaderManager;
 
-    /* compiled from: WidgetExpressionPickerAdapter.kt */
+    /* JADX INFO: compiled from: WidgetExpressionPickerAdapter.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -93,14 +93,14 @@ public abstract class WidgetExpressionPickerAdapter extends MGRecyclerAdapterSim
         }
     }
 
-    /* compiled from: WidgetExpressionPickerAdapter.kt */
+    /* JADX INFO: compiled from: WidgetExpressionPickerAdapter.kt */
     public interface StickyHeaderViewHolder {
         void bind(int position, MGRecyclerDataPayload data);
 
         View getItemView();
     }
 
-    /* compiled from: WidgetExpressionPickerAdapter.kt */
+    /* JADX INFO: compiled from: WidgetExpressionPickerAdapter.kt */
     public static final class StickyHeadersManager {
         private final View currentStickyHeaderView;
         private final StickyHeaderViewHolder stickyHeaderHolder;
@@ -129,8 +129,8 @@ public abstract class WidgetExpressionPickerAdapter extends MGRecyclerAdapterSim
         }
     }
 
-    /* compiled from: WidgetExpressionPickerAdapter.kt */
-    /* renamed from: com.discord.widgets.chat.input.expression.WidgetExpressionPickerAdapter$onAttachedToRecyclerView$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.input.expression.WidgetExpressionPickerAdapter$onAttachedToRecyclerView$1 */
+    /* JADX INFO: compiled from: WidgetExpressionPickerAdapter.kt */
     public static final class ViewOnLayoutChangeListenerC78431 implements View.OnLayoutChangeListener {
         public final /* synthetic */ RecyclerView $recyclerView;
 
@@ -144,12 +144,12 @@ public abstract class WidgetExpressionPickerAdapter extends MGRecyclerAdapterSim
         }
     }
 
-    /* compiled from: WidgetExpressionPickerAdapter.kt */
-    /* renamed from: com.discord.widgets.chat.input.expression.WidgetExpressionPickerAdapter$setupScrollObservables$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.input.expression.WidgetExpressionPickerAdapter$setupScrollObservables$1 */
+    /* JADX INFO: compiled from: WidgetExpressionPickerAdapter.kt */
     public static final class C78441<T> implements Action1<Emitter<Unit>> {
 
-        /* compiled from: WidgetExpressionPickerAdapter.kt */
-        /* renamed from: com.discord.widgets.chat.input.expression.WidgetExpressionPickerAdapter$setupScrollObservables$1$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.widgets.chat.input.expression.WidgetExpressionPickerAdapter$setupScrollObservables$1$1, reason: invalid class name */
+        /* JADX INFO: compiled from: WidgetExpressionPickerAdapter.kt */
         public static final class AnonymousClass1 extends RecyclerView.OnScrollListener {
             public final /* synthetic */ Emitter $emitter;
 
@@ -173,15 +173,15 @@ public abstract class WidgetExpressionPickerAdapter extends MGRecyclerAdapterSim
             call2(emitter);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final void call2(Emitter<Unit> emitter) {
             Intrinsics3.checkNotNullParameter(emitter, "emitter");
             WidgetExpressionPickerAdapter.this.setOnScrollListener(new AnonymousClass1(emitter));
         }
     }
 
-    /* compiled from: WidgetExpressionPickerAdapter.kt */
-    /* renamed from: com.discord.widgets.chat.input.expression.WidgetExpressionPickerAdapter$setupScrollObservables$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.input.expression.WidgetExpressionPickerAdapter$setupScrollObservables$2 */
+    /* JADX INFO: compiled from: WidgetExpressionPickerAdapter.kt */
     public static final class C78452 extends Lambda implements Function1<Unit, Unit> {
         public C78452() {
             super(1);
@@ -193,7 +193,7 @@ public abstract class WidgetExpressionPickerAdapter extends MGRecyclerAdapterSim
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Unit unit) {
             WidgetExpressionPickerAdapter.this.getOnScrollPositionListener().invoke(Integer.valueOf(WidgetExpressionPickerAdapter.this.getLayoutManager().findFirstVisibleItemPosition()));
         }

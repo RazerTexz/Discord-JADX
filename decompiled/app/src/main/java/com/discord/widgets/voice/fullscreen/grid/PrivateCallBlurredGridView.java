@@ -21,8 +21,8 @@ import p507d0.p580t.Collections2;
 import p507d0.p580t._Collections;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: PrivateCallBlurredGridView.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: PrivateCallBlurredGridView.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class PrivateCallBlurredGridView extends FrameLayout {
     private final RealtimeBlurView blurView;
     private List<StoreVoiceParticipants.VoiceUser> callUsers;

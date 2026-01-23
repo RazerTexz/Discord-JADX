@@ -4,9 +4,9 @@ import com.discord.models.experiments.domain.Experiment;
 import com.discord.stores.StoreExperiments;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: PlaystationExperimentUtils.kt */
-/* renamed from: com.discord.widgets.playstation.PlaystationExperimentUtilsKt, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.playstation.PlaystationExperimentUtilsKt, reason: use source file name */
+/* JADX INFO: compiled from: PlaystationExperimentUtils.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class PlaystationExperimentUtils {
     public static final boolean canSeePlaystationAccountIntegration(StoreExperiments storeExperiments) {
         Intrinsics3.checkNotNullParameter(storeExperiments, "experimentStore");

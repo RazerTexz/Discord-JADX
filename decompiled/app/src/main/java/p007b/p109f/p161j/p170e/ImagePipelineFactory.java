@@ -54,69 +54,69 @@ import p007b.p109f.p161j.p183r.FrescoSystrace;
 import p007b.p109f.p161j.p184s.ImageTranscoderFactory;
 import p007b.p109f.p161j.p184s.MultiImageTranscoderFactory;
 
-/* compiled from: ImagePipelineFactory.java */
-/* renamed from: b.f.j.e.m, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.f.j.e.m, reason: use source file name */
+/* JADX INFO: compiled from: ImagePipelineFactory.java */
+/* JADX INFO: loaded from: classes.dex */
 public class ImagePipelineFactory {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static ImagePipelineFactory f3788a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final ThreadHandoffProducerQueue f3789b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final ImagePipelineConfigInterface f3790c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final CloseableReferenceFactory f3791d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public CountingMemoryCache<CacheKey, CloseableImage> f3792e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public InstrumentedMemoryCache<CacheKey, CloseableImage> f3793f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public CountingMemoryCache<CacheKey, PooledByteBuffer> f3794g;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public InstrumentedMemoryCache<CacheKey, PooledByteBuffer> f3795h;
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public BufferedDiskCache2 f3796i;
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public FileCache f3797j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public ImageDecoder2 f3798k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public ImagePipeline2 f3799l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public ImageTranscoderFactory f3800m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public ProducerFactory f3801n;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public ProducerSequenceFactory f3802o;
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public BufferedDiskCache2 f3803p;
 
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     public FileCache f3804q;
 
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     public PlatformBitmapFactory f3805r;
 
-    /* renamed from: s */
+    /* JADX INFO: renamed from: s */
     public PlatformDecoder f3806s;
 
-    /* renamed from: t */
+    /* JADX INFO: renamed from: t */
     public AnimatedFactory f3807t;
 
     public ImagePipelineFactory(ImagePipelineConfigInterface imagePipelineConfigInterface) {
@@ -131,7 +131,7 @@ public class ImagePipelineFactory {
         FrescoSystrace.m1527b();
     }
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static synchronized void m1294j(ImagePipelineConfigInterface imagePipelineConfigInterface) {
         if (f3788a != null) {
             FLog.m983k(ImagePipelineFactory.class, "ImagePipelineFactory has already been initialized! `ImagePipelineFactory.initialize(...)` should only be called once to avoid unexpected behavior.");
@@ -139,8 +139,8 @@ public class ImagePipelineFactory {
         f3788a = new ImagePipelineFactory(imagePipelineConfigInterface);
     }
 
-    /* renamed from: a */
-    public final ImagePipeline2 m1295a() throws SecurityException {
+    /* JADX INFO: renamed from: a */
+    public final ImagePipeline2 m1295a() {
         ImageDecoder2 imageDecoder2Mo1191c;
         ImageDecoder2 imageDecoder2Mo1190b;
         if (Build.VERSION.SDK_INT >= 24) {
@@ -233,7 +233,7 @@ public class ImagePipelineFactory {
         return new ImagePipeline2(producerSequenceFactory, setMo1278k, setMo1269b, supplierMo1271d, instrumentedMemoryCacheM1298d2, instrumentedMemoryCacheM1299e2, bufferedDiskCache2M1300f2, bufferedDiskCache2M1303i2, cacheKeyFactoryMo1279l2, threadHandoffProducerQueue2, supplier, null, this.f3790c.mo1293z(), this.f3790c);
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final AnimatedFactory m1296b() {
         if (this.f3807t == null) {
             PlatformBitmapFactory platformBitmapFactoryM1301g = m1301g();
@@ -255,7 +255,7 @@ public class ImagePipelineFactory {
         return this.f3807t;
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public CountingMemoryCache<CacheKey, CloseableImage> m1297c() {
         if (this.f3792e == null) {
             BitmapMemoryCacheFactory bitmapMemoryCacheFactoryMo1274g = this.f3790c.mo1274g();
@@ -274,7 +274,7 @@ public class ImagePipelineFactory {
         return this.f3792e;
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public InstrumentedMemoryCache<CacheKey, CloseableImage> m1298d() {
         if (this.f3793f == null) {
             CountingMemoryCache<CacheKey, CloseableImage> countingMemoryCacheM1297c = m1297c();
@@ -285,7 +285,7 @@ public class ImagePipelineFactory {
         return this.f3793f;
     }
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public InstrumentedMemoryCache<CacheKey, PooledByteBuffer> m1299e() {
         MemoryCache<CacheKey, PooledByteBuffer> memoryCacheMo1276i;
         if (this.f3795h == null) {
@@ -308,7 +308,7 @@ public class ImagePipelineFactory {
         return this.f3795h;
     }
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public BufferedDiskCache2 m1300f() {
         if (this.f3796i == null) {
             if (this.f3797j == null) {
@@ -319,7 +319,7 @@ public class ImagePipelineFactory {
         return this.f3796i;
     }
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public PlatformBitmapFactory m1301g() {
         if (this.f3805r == null) {
             PoolFactory poolFactoryMo1268a = this.f3790c.mo1268a();
@@ -329,7 +329,7 @@ public class ImagePipelineFactory {
         return this.f3805r;
     }
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public PlatformDecoder m1302h() {
         PlatformDecoder artDecoder;
         if (this.f3806s == null) {
@@ -347,7 +347,7 @@ public class ImagePipelineFactory {
         return this.f3806s;
     }
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public final BufferedDiskCache2 m1303i() {
         if (this.f3803p == null) {
             if (this.f3804q == null) {

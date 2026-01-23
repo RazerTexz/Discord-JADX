@@ -2,11 +2,11 @@ package androidx.customview;
 
 import com.discord.C5419R;
 
-/* renamed from: androidx.customview.R */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: androidx.customview.R */
+/* JADX INFO: loaded from: classes.dex */
 public final class C0311R {
 
-    /* renamed from: androidx.customview.R$attr */
+    /* JADX INFO: renamed from: androidx.customview.R$attr */
     public static final class attr {
         public static final int alpha = 2130968635;
         public static final int font = 2130969378;
@@ -25,7 +25,7 @@ public final class C0311R {
         }
     }
 
-    /* renamed from: androidx.customview.R$color */
+    /* JADX INFO: renamed from: androidx.customview.R$color */
     public static final class color {
         public static final int notification_action_color_filter = 2131100115;
         public static final int notification_icon_bg_color = 2131100116;
@@ -36,7 +36,7 @@ public final class C0311R {
         }
     }
 
-    /* renamed from: androidx.customview.R$dimen */
+    /* JADX INFO: renamed from: androidx.customview.R$dimen */
     public static final class dimen {
         public static final int compat_button_inset_horizontal_material = 2131165325;
         public static final int compat_button_inset_vertical_material = 2131165326;
@@ -65,7 +65,7 @@ public final class C0311R {
         }
     }
 
-    /* renamed from: androidx.customview.R$drawable */
+    /* JADX INFO: renamed from: androidx.customview.R$drawable */
     public static final class drawable {
         public static final int notification_action_background = 2131232491;
         public static final int notification_bg = 2131232492;
@@ -84,7 +84,7 @@ public final class C0311R {
         }
     }
 
-    /* renamed from: androidx.customview.R$id */
+    /* JADX INFO: renamed from: androidx.customview.R$id */
     public static final class id {
         public static final int action_container = 2131361885;
         public static final int action_divider = 2131361888;
@@ -119,7 +119,7 @@ public final class C0311R {
         }
     }
 
-    /* renamed from: androidx.customview.R$integer */
+    /* JADX INFO: renamed from: androidx.customview.R$integer */
     public static final class integer {
         public static final int status_bar_notification_info_maxnum = 2131427355;
 
@@ -127,7 +127,7 @@ public final class C0311R {
         }
     }
 
-    /* renamed from: androidx.customview.R$layout */
+    /* JADX INFO: renamed from: androidx.customview.R$layout */
     public static final class layout {
         public static final int notification_action = 2131558626;
         public static final int notification_action_tombstone = 2131558627;
@@ -140,7 +140,7 @@ public final class C0311R {
         }
     }
 
-    /* renamed from: androidx.customview.R$string */
+    /* JADX INFO: renamed from: androidx.customview.R$string */
     public static final class string {
         public static final int status_bar_notification_info_overflow = 2131895909;
 
@@ -148,7 +148,7 @@ public final class C0311R {
         }
     }
 
-    /* renamed from: androidx.customview.R$style */
+    /* JADX INFO: renamed from: androidx.customview.R$style */
     public static final class style {
         public static final int TextAppearance_Compat_Notification = 2131952217;
         public static final int TextAppearance_Compat_Notification_Info = 2131952218;
@@ -162,7 +162,7 @@ public final class C0311R {
         }
     }
 
-    /* renamed from: androidx.customview.R$styleable */
+    /* JADX INFO: renamed from: androidx.customview.R$styleable */
     public static final class styleable {
         public static final int ColorStateListItem_alpha = 2;
         public static final int ColorStateListItem_android_alpha = 1;

@@ -56,20 +56,20 @@ import p507d0.p592z.p594d.Lambda;
 import p637j0.p642l.p647e.ScalarSynchronousObservable;
 import p658rx.Observable;
 
-/* compiled from: WidgetChannelPinnedMessages.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetChannelPinnedMessages.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetChannelPinnedMessages extends AppFragment {
     public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetChannelPinnedMessages.class, "binding", "getBinding()Lcom/discord/databinding/WidgetChannelPinnedMessagesBinding;", 0)};
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private static final String INTENT_EXTRA_CHANNEL_ID = "INTENT_EXTRA_CHANNEL_ID";
     private WidgetChatListAdapter adapter;
 
-    /* renamed from: binding$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
 
-    /* compiled from: WidgetChannelPinnedMessages.kt */
+    /* JADX INFO: compiled from: WidgetChannelPinnedMessages.kt */
     public static final class ChannelPinnedMessagesAdapterEventHandler implements WidgetChatListAdapter.EventHandler {
         private final ChannelSelector channelSelector;
         private final Context context;
@@ -271,7 +271,7 @@ public final class WidgetChannelPinnedMessages extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetChannelPinnedMessages.kt */
+    /* JADX INFO: compiled from: WidgetChannelPinnedMessages.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -288,10 +288,10 @@ public final class WidgetChannelPinnedMessages extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetChannelPinnedMessages.kt */
+    /* JADX INFO: compiled from: WidgetChannelPinnedMessages.kt */
     public static final /* data */ class Model implements WidgetChatListAdapter.Data {
 
-        /* renamed from: Companion, reason: from kotlin metadata */
+        /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
         public static final Companion INSTANCE = new Companion(null);
         private final Channel channel;
         private final long channelId;
@@ -305,7 +305,7 @@ public final class WidgetChannelPinnedMessages extends AppFragment {
         private final long oldestMessageId;
         private final long userId;
 
-        /* compiled from: WidgetChannelPinnedMessages.kt */
+        /* JADX INFO: compiled from: WidgetChannelPinnedMessages.kt */
         public static final class Companion {
             private Companion() {
             }
@@ -348,11 +348,12 @@ public final class WidgetChannelPinnedMessages extends AppFragment {
             this.isSpoilerClickAllowed = z2;
         }
 
+        /* JADX WARN: Multi-variable type inference failed */
         public static /* synthetic */ Model copy$default(Model model, Channel channel, Guild guild, long j, Map map, List list, Set set, long j2, long j3, long j4, long j5, boolean z2, int i, Object obj) {
             return model.copy((i & 1) != 0 ? model.channel : channel, (i & 2) != 0 ? model.getGuild() : guild, (i & 4) != 0 ? model.getUserId() : j, (i & 8) != 0 ? model.getChannelNames() : map, (i & 16) != 0 ? model.getList() : list, (i & 32) != 0 ? model.getMyRoleIds() : set, (i & 64) != 0 ? model.getChannelId() : j2, (i & 128) != 0 ? model.getGuildId() : j3, (i & 256) != 0 ? model.getOldestMessageId() : j4, (i & 512) != 0 ? model.getNewMessagesMarkerMessageId() : j5, (i & 1024) != 0 ? model.getIsSpoilerClickAllowed() : z2);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final Channel getChannel() {
             return this.channel;
         }
@@ -465,6 +466,10 @@ public final class WidgetChannelPinnedMessages extends AppFragment {
             return this.userId;
         }
 
+        /* JADX WARN: Multi-variable type inference failed */
+        /* JADX WARN: Type inference failed for: r0v21, types: [int] */
+        /* JADX WARN: Type inference failed for: r0v22 */
+        /* JADX WARN: Type inference failed for: r0v26 */
         public int hashCode() {
             Channel channel = this.channel;
             int iHashCode = (channel != null ? channel.hashCode() : 0) * 31;
@@ -477,15 +482,15 @@ public final class WidgetChannelPinnedMessages extends AppFragment {
             Set<Long> myRoleIds = getMyRoleIds();
             int iM3a2 = (C0002b.m3a(getNewMessagesMarkerMessageId()) + ((C0002b.m3a(getOldestMessageId()) + ((C0002b.m3a(getGuildId()) + ((C0002b.m3a(getChannelId()) + ((iHashCode3 + (myRoleIds != null ? myRoleIds.hashCode() : 0)) * 31)) * 31)) * 31)) * 31)) * 31;
             boolean isSpoilerClickAllowed = getIsSpoilerClickAllowed();
-            int i = isSpoilerClickAllowed;
+            ?? r0 = isSpoilerClickAllowed;
             if (isSpoilerClickAllowed) {
-                i = 1;
+                r0 = 1;
             }
-            return iM3a2 + i;
+            return iM3a2 + r0;
         }
 
         @Override // com.discord.widgets.chat.list.adapter.WidgetChatListAdapter.Data
-        /* renamed from: isSpoilerClickAllowed, reason: from getter */
+        /* JADX INFO: renamed from: isSpoilerClickAllowed, reason: from getter */
         public boolean getIsSpoilerClickAllowed() {
             return this.isSpoilerClickAllowed;
         }
@@ -522,8 +527,8 @@ public final class WidgetChannelPinnedMessages extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetChannelPinnedMessages.kt */
-    /* renamed from: com.discord.widgets.chat.pins.WidgetChannelPinnedMessages$onViewBoundOrOnResume$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.pins.WidgetChannelPinnedMessages$onViewBoundOrOnResume$1 */
+    /* JADX INFO: compiled from: WidgetChannelPinnedMessages.kt */
     public static final class C82021 extends Lambda implements Function1<Model, Unit> {
         public C82021() {
             super(1);
@@ -535,7 +540,7 @@ public final class WidgetChannelPinnedMessages extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Model model) {
             WidgetChannelPinnedMessages.access$configureUI(WidgetChannelPinnedMessages.this, model);
         }

@@ -10,9 +10,9 @@ import p007b.p195g.p196a.p205c.SerializerProvider;
 import p007b.p195g.p196a.p205c.p215g0.ContextualSerializer;
 import p007b.p195g.p196a.p205c.p215g0.p217u.NumberSerializer;
 
-/* compiled from: NumberSerializers.java */
-/* renamed from: b.g.a.c.g0.u.w, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.g.a.c.g0.u.w, reason: use source file name */
+/* JADX INFO: compiled from: NumberSerializers.java */
+/* JADX INFO: loaded from: classes3.dex */
 public abstract class NumberSerializers4<T> extends StdScalarSerializer<T> implements ContextualSerializer {
     public final boolean _isInt;
     public final JsonParser.b _numberType;
@@ -26,7 +26,7 @@ public abstract class NumberSerializers4<T> extends StdScalarSerializer<T> imple
     }
 
     @Override // p007b.p195g.p196a.p205c.p215g0.ContextualSerializer
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public JsonSerializer<?> mo1997a(SerializerProvider serializerProvider, BeanProperty beanProperty) throws JsonMappingException {
         JsonFormat.d dVarM2074l = m2074l(serializerProvider, beanProperty, this._handledType);
         if (dVarM2074l == null || dVarM2074l.m1601e().ordinal() != 8) {

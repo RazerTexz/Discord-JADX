@@ -36,30 +36,30 @@ import p007b.p225i.p226a.p242c.p266w2.ExoMediaDrm;
 import p007b.p225i.p226a.p242c.p267x2.p274i0.PsshAtomUtil;
 import p007b.p225i.p355b.p356a.Charsets;
 
-/* compiled from: FrameworkMediaDrm.java */
+/* JADX INFO: renamed from: b.i.a.c.w2.c0, reason: use source file name */
+/* JADX INFO: compiled from: FrameworkMediaDrm.java */
+/* JADX INFO: loaded from: classes3.dex */
 @RequiresApi(18)
-/* renamed from: b.i.a.c.w2.c0, reason: use source file name */
-/* loaded from: classes3.dex */
 public final class FrameworkMediaDrm implements ExoMediaDrm {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final /* synthetic */ int f7977a = 0;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final UUID f7978b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final MediaDrm f7979c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public int f7980d;
 
-    /* compiled from: FrameworkMediaDrm.java */
+    /* JADX INFO: renamed from: b.i.a.c.w2.c0$a */
+    /* JADX INFO: compiled from: FrameworkMediaDrm.java */
     @RequiresApi(31)
-    /* renamed from: b.i.a.c.w2.c0$a */
     public static class a {
         @DoNotInline
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public static boolean m3582a(MediaDrm mediaDrm, String str) {
             return mediaDrm.requiresSecureDecoder(str);
         }
@@ -79,20 +79,20 @@ public final class FrameworkMediaDrm implements ExoMediaDrm {
     }
 
     @Override // p007b.p225i.p226a.p242c.p266w2.ExoMediaDrm
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public Map<String, String> mo3569a(byte[] bArr) {
         return this.f7979c.queryKeyStatus(bArr);
     }
 
     @Override // p007b.p225i.p226a.p242c.p266w2.ExoMediaDrm
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public ExoMediaDrm.d mo3570b() {
         MediaDrm.ProvisionRequest provisionRequest = this.f7979c.getProvisionRequest();
         return new ExoMediaDrm.d(provisionRequest.getData(), provisionRequest.getDefaultUrl());
     }
 
     @Override // p007b.p225i.p226a.p242c.p266w2.ExoMediaDrm
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public CryptoConfig mo3571c(byte[] bArr) throws MediaCryptoException {
         int i = Util2.f6708a;
         boolean z2 = i < 21 && C.f8024d.equals(this.f7978b) && "L3".equals(this.f7979c.getPropertyString("securityLevel"));
@@ -104,13 +104,13 @@ public final class FrameworkMediaDrm implements ExoMediaDrm {
     }
 
     @Override // p007b.p225i.p226a.p242c.p266w2.ExoMediaDrm
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public byte[] mo3572d() throws MediaDrmException {
         return this.f7979c.openSession();
     }
 
     @Override // p007b.p225i.p226a.p242c.p266w2.ExoMediaDrm
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public boolean mo3573e(byte[] bArr, String str) {
         if (Util2.f6708a >= 31) {
             return a.m3582a(this.f7979c, str);
@@ -128,26 +128,26 @@ public final class FrameworkMediaDrm implements ExoMediaDrm {
     }
 
     @Override // p007b.p225i.p226a.p242c.p266w2.ExoMediaDrm
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public void mo3574f(byte[] bArr, byte[] bArr2) {
         this.f7979c.restoreKeys(bArr, bArr2);
     }
 
     @Override // p007b.p225i.p226a.p242c.p266w2.ExoMediaDrm
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public void mo3575g(byte[] bArr) {
         this.f7979c.closeSession(bArr);
     }
 
     @Override // p007b.p225i.p226a.p242c.p266w2.ExoMediaDrm
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public void mo3576h(@Nullable ExoMediaDrm.b bVar) {
         this.f7979c.setOnEventListener(new C2984o(this, bVar));
     }
 
     @Override // p007b.p225i.p226a.p242c.p266w2.ExoMediaDrm
     @Nullable
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public byte[] mo3577i(byte[] bArr, byte[] bArr2) throws DeniedByServerException, NotProvisionedException {
         if (C.f8023c.equals(this.f7978b) && Util2.f6708a < 27) {
             try {
@@ -178,7 +178,7 @@ public final class FrameworkMediaDrm implements ExoMediaDrm {
     }
 
     @Override // p007b.p225i.p226a.p242c.p266w2.ExoMediaDrm
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public void mo3578j(byte[] bArr) throws DeniedByServerException {
         this.f7979c.provideProvisionResponse(bArr);
     }
@@ -188,7 +188,7 @@ public final class FrameworkMediaDrm implements ExoMediaDrm {
     /* JADX WARN: Removed duplicated region for block: B:92:0x0206  */
     @Override // p007b.p225i.p226a.p242c.p266w2.ExoMediaDrm
     @SuppressLint({"WrongConstant"})
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
@@ -338,7 +338,7 @@ public final class FrameworkMediaDrm implements ExoMediaDrm {
     }
 
     @Override // p007b.p225i.p226a.p242c.p266w2.ExoMediaDrm
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public int mo3580l() {
         return 2;
     }

@@ -6,8 +6,8 @@ import kotlin.jvm.functions.Function0;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: FragmentViewModelLazy.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: FragmentViewModelLazy.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetFeedbackSheet$appViewModels$$inlined$viewModels$3 extends Lambda implements Function0<ViewModelStore> {
     public final /* synthetic */ Function0 $ownerProducer;
 

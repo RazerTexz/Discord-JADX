@@ -9,8 +9,8 @@ import kotlin.jvm.functions.Function1;
 import p507d0.p592z.p594d.FunctionReferenceImpl;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: WidgetUserMentions.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: WidgetUserMentions.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* synthetic */ class WidgetUserMentions$WidgetUserMentionFilter$binding$2 extends FunctionReferenceImpl implements Function1<View, WidgetUserMentionsFilterBinding> {
     public static final WidgetUserMentions$WidgetUserMentionFilter$binding$2 INSTANCE = new WidgetUserMentions$WidgetUserMentionFilter$binding$2();
 
@@ -18,7 +18,7 @@ public final /* synthetic */ class WidgetUserMentions$WidgetUserMentionFilter$bi
         super(1, WidgetUserMentionsFilterBinding.class, "bind", "bind(Landroid/view/View;)Lcom/discord/databinding/WidgetUserMentionsFilterBinding;", 0);
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final WidgetUserMentionsFilterBinding invoke2(View view) {
         Intrinsics3.checkNotNullParameter(view, "p1");
         int i = C5419R.id.user_mentions_filter_include_everyone;

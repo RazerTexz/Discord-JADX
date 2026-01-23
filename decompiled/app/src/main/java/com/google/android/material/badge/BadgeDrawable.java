@@ -39,7 +39,7 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.ref.WeakReference;
 import java.text.NumberFormat;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public class BadgeDrawable extends Drawable implements TextDrawableHelper.TextDrawableDelegate {
     private static final int BADGE_NUMBER_NONE = -1;
     public static final int BOTTOM_END = 8388693;
@@ -90,13 +90,13 @@ public class BadgeDrawable extends Drawable implements TextDrawableHelper.TextDr
     public @interface BadgeGravity {
     }
 
-    /* renamed from: com.google.android.material.badge.BadgeDrawable$a */
+    /* JADX INFO: renamed from: com.google.android.material.badge.BadgeDrawable$a */
     public class RunnableC10828a implements Runnable {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public final /* synthetic */ View f20881j;
 
-        /* renamed from: k */
+        /* JADX INFO: renamed from: k */
         public final /* synthetic */ FrameLayout f20882k;
 
         public RunnableC10828a(View view, FrameLayout frameLayout) {
@@ -105,12 +105,12 @@ public class BadgeDrawable extends Drawable implements TextDrawableHelper.TextDr
         }
 
         @Override // java.lang.Runnable
-        public void run() throws Resources.NotFoundException {
+        public void run() {
             BadgeDrawable.this.updateBadgeCoordinates(this.f20881j, this.f20882k);
         }
     }
 
-    private BadgeDrawable(@NonNull Context context) throws Resources.NotFoundException {
+    private BadgeDrawable(@NonNull Context context) {
         this.contextRef = new WeakReference<>(context);
         ThemeEnforcement.checkMaterialTheme(context);
         Resources resources = context.getResources();
@@ -126,7 +126,7 @@ public class BadgeDrawable extends Drawable implements TextDrawableHelper.TextDr
         setTextAppearanceResource(C10817R.style.TextAppearance_MaterialComponents_Badge);
     }
 
-    private void calculateCenterAndBounds(@NonNull Context context, @NonNull Rect rect, @NonNull View view) throws Resources.NotFoundException {
+    private void calculateCenterAndBounds(@NonNull Context context, @NonNull Rect rect, @NonNull View view) {
         int iAccess$500 = SavedState.access$500(this.savedState);
         if (iAccess$500 == 8388691 || iAccess$500 == 8388693) {
             this.badgeCenterY = rect.bottom - SavedState.access$700(this.savedState);
@@ -159,7 +159,7 @@ public class BadgeDrawable extends Drawable implements TextDrawableHelper.TextDr
     }
 
     @NonNull
-    private static BadgeDrawable createFromAttributes(@NonNull Context context, AttributeSet attributeSet, @AttrRes int i, @StyleRes int i2) throws Resources.NotFoundException {
+    private static BadgeDrawable createFromAttributes(@NonNull Context context, AttributeSet attributeSet, @AttrRes int i, @StyleRes int i2) {
         BadgeDrawable badgeDrawable = new BadgeDrawable(context);
         badgeDrawable.loadDefaultStateFromAttributes(context, attributeSet, i, i2);
         return badgeDrawable;
@@ -176,7 +176,7 @@ public class BadgeDrawable extends Drawable implements TextDrawableHelper.TextDr
     }
 
     @NonNull
-    public static BadgeDrawable createFromSavedState(@NonNull Context context, @NonNull SavedState savedState) throws Resources.NotFoundException {
+    public static BadgeDrawable createFromSavedState(@NonNull Context context, @NonNull SavedState savedState) {
         BadgeDrawable badgeDrawable = new BadgeDrawable(context);
         badgeDrawable.restoreFromSavedState(savedState);
         return badgeDrawable;
@@ -198,7 +198,7 @@ public class BadgeDrawable extends Drawable implements TextDrawableHelper.TextDr
         return context == null ? "" : context.getString(C10817R.string.mtrl_exceed_max_badge_number_suffix, Integer.valueOf(this.maxBadgeNumber), DEFAULT_EXCEED_MAX_BADGE_NUMBER_SUFFIX);
     }
 
-    private void loadDefaultStateFromAttributes(Context context, AttributeSet attributeSet, @AttrRes int i, @StyleRes int i2) throws Resources.NotFoundException {
+    private void loadDefaultStateFromAttributes(Context context, AttributeSet attributeSet, @AttrRes int i, @StyleRes int i2) {
         TypedArray typedArrayObtainStyledAttributes = ThemeEnforcement.obtainStyledAttributes(context, attributeSet, C10817R.styleable.Badge, i, i2, new int[0]);
         setMaxCharacterCount(typedArrayObtainStyledAttributes.getInt(C10817R.styleable.Badge_maxCharacterCount, 4));
         int i3 = C10817R.styleable.Badge_number;
@@ -220,7 +220,7 @@ public class BadgeDrawable extends Drawable implements TextDrawableHelper.TextDr
         return MaterialResources.getColorStateList(context, typedArray, i).getDefaultColor();
     }
 
-    private void restoreFromSavedState(@NonNull SavedState savedState) throws Resources.NotFoundException {
+    private void restoreFromSavedState(@NonNull SavedState savedState) {
         setMaxCharacterCount(SavedState.access$100(savedState));
         if (SavedState.access$200(savedState) != -1) {
             setNumber(SavedState.access$200(savedState));
@@ -233,7 +233,7 @@ public class BadgeDrawable extends Drawable implements TextDrawableHelper.TextDr
         setVisible(SavedState.access$000(savedState));
     }
 
-    private void setTextAppearance(@Nullable TextAppearance textAppearance) throws Resources.NotFoundException {
+    private void setTextAppearance(@Nullable TextAppearance textAppearance) {
         Context context;
         if (this.textDrawableHelper.getTextAppearance() == textAppearance || (context = this.contextRef.get()) == null) {
             return;
@@ -242,7 +242,7 @@ public class BadgeDrawable extends Drawable implements TextDrawableHelper.TextDr
         updateCenterAndBounds();
     }
 
-    private void setTextAppearanceResource(@StyleRes int i) throws Resources.NotFoundException {
+    private void setTextAppearanceResource(@StyleRes int i) {
         Context context = this.contextRef.get();
         if (context == null) {
             return;
@@ -280,7 +280,7 @@ public class BadgeDrawable extends Drawable implements TextDrawableHelper.TextDr
         viewGroup.setClipToPadding(false);
     }
 
-    private void updateCenterAndBounds() throws Resources.NotFoundException {
+    private void updateCenterAndBounds() {
         Context context = this.contextRef.get();
         WeakReference<View> weakReference = this.anchorViewRef;
         View view = weakReference != null ? weakReference.get() : null;
@@ -309,7 +309,7 @@ public class BadgeDrawable extends Drawable implements TextDrawableHelper.TextDr
     }
 
     private void updateMaxBadgeNumber() {
-        this.maxBadgeNumber = ((int) Math.pow(10.0d, getMaxCharacterCount() - 1.0d)) - 1;
+        this.maxBadgeNumber = ((int) Math.pow(10.0d, ((double) getMaxCharacterCount()) - 1.0d)) - 1;
     }
 
     public void clearNumber() {
@@ -446,7 +446,7 @@ public class BadgeDrawable extends Drawable implements TextDrawableHelper.TextDr
         }
     }
 
-    public void setBadgeGravity(int i) throws Resources.NotFoundException {
+    public void setBadgeGravity(int i) {
         if (SavedState.access$500(this.savedState) != i) {
             SavedState.access$502(this.savedState, i);
             WeakReference<View> weakReference = this.anchorViewRef;
@@ -483,12 +483,12 @@ public class BadgeDrawable extends Drawable implements TextDrawableHelper.TextDr
         SavedState.access$1002(this.savedState, i);
     }
 
-    public void setHorizontalOffset(int i) throws Resources.NotFoundException {
+    public void setHorizontalOffset(int i) {
         SavedState.access$602(this.savedState, i);
         updateCenterAndBounds();
     }
 
-    public void setMaxCharacterCount(int i) throws Resources.NotFoundException {
+    public void setMaxCharacterCount(int i) {
         if (SavedState.access$100(this.savedState) != i) {
             SavedState.access$102(this.savedState, i);
             updateMaxBadgeNumber();
@@ -498,7 +498,7 @@ public class BadgeDrawable extends Drawable implements TextDrawableHelper.TextDr
         }
     }
 
-    public void setNumber(int i) throws Resources.NotFoundException {
+    public void setNumber(int i) {
         int iMax = Math.max(0, i);
         if (SavedState.access$200(this.savedState) != iMax) {
             SavedState.access$202(this.savedState, iMax);
@@ -508,7 +508,7 @@ public class BadgeDrawable extends Drawable implements TextDrawableHelper.TextDr
         }
     }
 
-    public void setVerticalOffset(int i) throws Resources.NotFoundException {
+    public void setVerticalOffset(int i) {
         SavedState.access$702(this.savedState, i);
         updateCenterAndBounds();
     }
@@ -523,18 +523,18 @@ public class BadgeDrawable extends Drawable implements TextDrawableHelper.TextDr
     }
 
     @Deprecated
-    public void updateBadgeCoordinates(@NonNull View view, @Nullable ViewGroup viewGroup) throws Resources.NotFoundException {
+    public void updateBadgeCoordinates(@NonNull View view, @Nullable ViewGroup viewGroup) {
         if (!(viewGroup instanceof FrameLayout)) {
             throw new IllegalArgumentException("customBadgeParent must be a FrameLayout");
         }
         updateBadgeCoordinates(view, (FrameLayout) viewGroup);
     }
 
-    public void updateBadgeCoordinates(@NonNull View view) throws Resources.NotFoundException {
+    public void updateBadgeCoordinates(@NonNull View view) {
         updateBadgeCoordinates(view, (FrameLayout) null);
     }
 
-    public void updateBadgeCoordinates(@NonNull View view, @Nullable FrameLayout frameLayout) throws Resources.NotFoundException {
+    public void updateBadgeCoordinates(@NonNull View view, @Nullable FrameLayout frameLayout) {
         this.anchorViewRef = new WeakReference<>(view);
         boolean z2 = BadgeUtils.USE_COMPAT_PARENT;
         if (z2 && frameLayout == null) {
@@ -579,7 +579,7 @@ public class BadgeDrawable extends Drawable implements TextDrawableHelper.TextDr
         @Dimension(unit = 1)
         private int verticalOffset;
 
-        /* renamed from: com.google.android.material.badge.BadgeDrawable$SavedState$a */
+        /* JADX INFO: renamed from: com.google.android.material.badge.BadgeDrawable$SavedState$a */
         public static class C10827a implements Parcelable.Creator<SavedState> {
             @Override // android.os.Parcelable.Creator
             @NonNull

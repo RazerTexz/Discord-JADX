@@ -15,10 +15,10 @@ import p507d0.p584w.p586i.p587a.ContinuationImpl6;
 import p507d0.p584w.p586i.p587a.DebugMetadata;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ThumbnailViewHolder.kt */
+/* JADX INFO: renamed from: b.b.a.d.k, reason: use source file name */
+/* JADX INFO: compiled from: ThumbnailViewHolder.kt */
+/* JADX INFO: loaded from: classes3.dex */
 @DebugMetadata(m10084c = "com.lytefast.flexinput.adapters.ThumbnailViewHolder$ThumbnailBitmapGenerator$getThumbnailQ$2", m10085f = "ThumbnailViewHolder.kt", m10086l = {}, m10087m = "invokeSuspend")
-/* renamed from: b.b.a.d.k, reason: use source file name */
-/* loaded from: classes3.dex */
 public final class ThumbnailViewHolder3 extends ContinuationImpl6 implements Function2<CoroutineScope, Continuation<? super Bitmap>, Object> {
     public final /* synthetic */ ContentResolver $contentResolver;
     public final /* synthetic */ Uri $uri;

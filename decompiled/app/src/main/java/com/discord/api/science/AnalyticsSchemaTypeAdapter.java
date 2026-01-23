@@ -3,8 +3,6 @@ package com.discord.api.science;
 import com.discord.api.science.Science;
 import com.google.gson.Gson;
 import com.google.gson.JsonElement;
-import com.google.gson.JsonIOException;
-import com.google.gson.JsonSyntaxException;
 import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -23,8 +21,8 @@ import p507d0.p580t.Maps6;
 import p507d0.p580t.MutableCollections;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: AnalyticsSchemaTypeAdapter.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: AnalyticsSchemaTypeAdapter.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class AnalyticsSchemaTypeAdapter implements JsonSerializer2<Science.Event.SchemaObject> {
     private final Gson gson;
 
@@ -34,7 +32,7 @@ public final class AnalyticsSchemaTypeAdapter implements JsonSerializer2<Science
         this.gson = gsonBuilder.m6851a();
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final List<Tuples2<String, Object>> m8214a(Map<String, ? extends Object> map) {
         List<Tuples2<String, Object>> listListOf;
         Intrinsics3.checkNotNullParameter(map, "$this$flatMapProperties");
@@ -57,7 +55,7 @@ public final class AnalyticsSchemaTypeAdapter implements JsonSerializer2<Science
     }
 
     @Override // p007b.p225i.p408d.JsonSerializer2
-    public JsonElement serialize(Science.Event.SchemaObject schemaObject, Type type, JsonSerializationContext jsonSerializationContext) throws JsonSyntaxException, JsonIOException {
+    public JsonElement serialize(Science.Event.SchemaObject schemaObject, Type type, JsonSerializationContext jsonSerializationContext) {
         Science.Event.SchemaObject schemaObject2 = schemaObject;
         Intrinsics3.checkNotNullParameter(schemaObject2, "src");
         Intrinsics3.checkNotNullParameter(type, "typeOfSrc");

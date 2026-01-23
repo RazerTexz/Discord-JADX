@@ -1,9 +1,9 @@
 package p007b.p225i.p361c.p368l;
 
-/* compiled from: ComponentFactory.java */
-/* renamed from: b.i.c.l.f, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.c.l.f, reason: use source file name */
+/* JADX INFO: compiled from: ComponentFactory.java */
+/* JADX INFO: loaded from: classes3.dex */
 public interface ComponentFactory<T> {
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     T mo6341a(ComponentContainer componentContainer);
 }

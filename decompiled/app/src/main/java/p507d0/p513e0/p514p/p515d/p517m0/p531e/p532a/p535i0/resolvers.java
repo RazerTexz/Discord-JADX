@@ -12,28 +12,28 @@ import p507d0.p513e0.p514p.p515d.p517m0.p576p.collections;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: resolvers.kt */
-/* renamed from: d0.e0.p.d.m0.e.a.i0.h, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.e.a.i0.h, reason: use source file name */
+/* JADX INFO: compiled from: resolvers.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class resolvers implements resolvers2 {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final context4 f23315a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final DeclarationDescriptor f23316b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final int f23317c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final Map<InterfaceC11592y, Integer> f23318d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final storage4<InterfaceC11592y, LazyJavaTypeParameterDescriptor> f23319e;
 
-    /* compiled from: resolvers.kt */
-    /* renamed from: d0.e0.p.d.m0.e.a.i0.h$a */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.e.a.i0.h$a */
+    /* JADX INFO: compiled from: resolvers.kt */
     public static final class a extends Lambda implements Function1<InterfaceC11592y, LazyJavaTypeParameterDescriptor> {
         public a() {
             super(1);
@@ -44,7 +44,7 @@ public final class resolvers implements resolvers2 {
             return invoke2(interfaceC11592y);
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final LazyJavaTypeParameterDescriptor invoke2(InterfaceC11592y interfaceC11592y) {
             Intrinsics3.checkNotNullParameter(interfaceC11592y, "typeParameter");
             Integer num = (Integer) resolvers.access$getTypeParameters$p(resolvers.this).get(interfaceC11592y);

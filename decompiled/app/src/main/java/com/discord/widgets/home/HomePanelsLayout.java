@@ -6,8 +6,8 @@ import com.discord.panels.OverlappingPanelsLayout;
 import kotlin.jvm.internal.DefaultConstructorMarker;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: HomePanelsLayout.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: HomePanelsLayout.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class HomePanelsLayout extends OverlappingPanelsLayout implements PanelLayout {
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public HomePanelsLayout(Context context) {

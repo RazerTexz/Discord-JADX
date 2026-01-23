@@ -8,15 +8,15 @@ import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
-/* compiled from: com.google.android.gms:play-services-base@@17.3.0 */
-/* renamed from: b.i.a.f.e.b */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.e.b */
+/* JADX INFO: compiled from: com.google.android.gms:play-services-base@@17.3.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public class DialogFragmentC3254b extends DialogFragment {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public Dialog f9299j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public DialogInterface.OnCancelListener f9300k;
 
     @Override // android.app.DialogFragment, android.content.DialogInterface.OnCancelListener

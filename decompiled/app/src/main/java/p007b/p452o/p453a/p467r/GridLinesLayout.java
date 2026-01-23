@@ -11,27 +11,27 @@ import androidx.annotation.NonNull;
 import org.objectweb.asm.Opcodes;
 import p007b.p452o.p453a.p454m.Grid;
 
-/* compiled from: GridLinesLayout.java */
-/* renamed from: b.o.a.r.d, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.o.a.r.d, reason: use source file name */
+/* JADX INFO: compiled from: GridLinesLayout.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class GridLinesLayout extends View {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static final int f14110j = Color.argb(Opcodes.IF_ICMPNE, 255, 255, 255);
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public Grid f14111k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public int f14112l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public ColorDrawable f14113m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public ColorDrawable f14114n;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public final float f14115o;
 
     public GridLinesLayout(@NonNull Context context) {

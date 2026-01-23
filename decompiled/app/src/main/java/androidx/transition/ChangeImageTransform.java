@@ -16,7 +16,7 @@ import androidx.annotation.NonNull;
 import androidx.transition.TransitionUtils;
 import java.util.Map;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class ChangeImageTransform extends Transition {
     private static final String PROPNAME_MATRIX = "android:changeImageTransform:matrix";
     private static final String PROPNAME_BOUNDS = "android:changeImageTransform:bounds";
@@ -24,9 +24,9 @@ public class ChangeImageTransform extends Transition {
     private static final TypeEvaluator<Matrix> NULL_MATRIX_EVALUATOR = new C06451();
     private static final Property<ImageView, Matrix> ANIMATED_TRANSFORM_PROPERTY = new C06462(Matrix.class, "animatedTransform");
 
-    /* renamed from: androidx.transition.ChangeImageTransform$1 */
+    /* JADX INFO: renamed from: androidx.transition.ChangeImageTransform$1 */
     public static class C06451 implements TypeEvaluator<Matrix> {
-        /* renamed from: evaluate, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: evaluate, reason: avoid collision after fix types in other method */
         public Matrix evaluate2(float f, Matrix matrix, Matrix matrix2) {
             return null;
         }
@@ -37,13 +37,13 @@ public class ChangeImageTransform extends Transition {
         }
     }
 
-    /* renamed from: androidx.transition.ChangeImageTransform$2 */
+    /* JADX INFO: renamed from: androidx.transition.ChangeImageTransform$2 */
     public static class C06462 extends Property<ImageView, Matrix> {
         public C06462(Class cls, String str) {
             super(cls, str);
         }
 
-        /* renamed from: get, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: get, reason: avoid collision after fix types in other method */
         public Matrix get2(ImageView imageView) {
             return null;
         }
@@ -58,13 +58,13 @@ public class ChangeImageTransform extends Transition {
             set2(imageView, matrix);
         }
 
-        /* renamed from: set, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: set, reason: avoid collision after fix types in other method */
         public void set2(ImageView imageView, Matrix matrix) {
             ImageViewUtils.animateTransform(imageView, matrix);
         }
     }
 
-    /* renamed from: androidx.transition.ChangeImageTransform$3 */
+    /* JADX INFO: renamed from: androidx.transition.ChangeImageTransform$3 */
     public static /* synthetic */ class C06473 {
         public static final /* synthetic */ int[] $SwitchMap$android$widget$ImageView$ScaleType;
 

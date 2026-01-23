@@ -23,33 +23,33 @@ import p507d0.p513e0.p514p.p515d.p517m0.p521c.p522g1.Annotations4;
 import p507d0.p513e0.p514p.p515d.p517m0.p548g.Name;
 import p507d0.p513e0.p514p.p515d.p517m0.p567n.TypeSubstitutor2;
 
-/* compiled from: PropertyAccessorDescriptorImpl.java */
-/* renamed from: d0.e0.p.d.m0.c.i1.b0, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.c.i1.b0, reason: use source file name */
+/* JADX INFO: compiled from: PropertyAccessorDescriptorImpl.java */
+/* JADX INFO: loaded from: classes3.dex */
 public abstract class PropertyAccessorDescriptorImpl extends DeclarationDescriptorNonRootImpl implements PropertyAccessorDescriptor {
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public boolean f22810n;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public final boolean f22811o;
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public final Modality f22812p;
 
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     public final PropertyDescriptor f22813q;
 
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     public final boolean f22814r;
 
-    /* renamed from: s */
+    /* JADX INFO: renamed from: s */
     public final CallableMemberDescriptor.a f22815s;
 
-    /* renamed from: t */
+    /* JADX INFO: renamed from: t */
     public DescriptorVisibility2 f22816t;
 
-    /* renamed from: u */
+    /* JADX INFO: renamed from: u */
     public FunctionDescriptor f22817u;
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -89,7 +89,7 @@ public abstract class PropertyAccessorDescriptorImpl extends DeclarationDescript
         this.f22815s = aVar;
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static /* synthetic */ void m9389a(int i) {
         String str;
         int i2;
@@ -221,7 +221,7 @@ public abstract class PropertyAccessorDescriptorImpl extends DeclarationDescript
         }
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public Collection<PropertyAccessorDescriptor> m9390b(boolean z2) {
         ArrayList arrayList = new ArrayList(0);
         for (PropertyDescriptor propertyDescriptor : getCorrespondingProperty().getOverriddenDescriptors()) {

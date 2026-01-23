@@ -17,29 +17,29 @@ import p007b.p085c.p086a.p087a0.AnimatableValueParser;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: CutoutView.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: CutoutView.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public class CutoutView extends FrameLayout {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static final int f19050j = DimenUtils.dpToPixels(14);
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public static final int f19051k = DimenUtils.dpToPixels(8);
 
-    /* renamed from: l, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: l, reason: from kotlin metadata */
     public InterfaceC7075a style;
 
-    /* renamed from: m, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: m, reason: from kotlin metadata */
     public boolean isCutoutEnabled;
 
-    /* renamed from: n, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: n, reason: from kotlin metadata */
     public Path drawBounds;
 
-    /* renamed from: o, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: o, reason: from kotlin metadata */
     public int lastWidth;
 
-    /* renamed from: p, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: p, reason: from kotlin metadata */
     public int lastHeight;
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -126,18 +126,18 @@ public class CutoutView extends FrameLayout {
         invalidate();
     }
 
-    /* compiled from: CutoutView.kt */
-    /* renamed from: com.discord.views.CutoutView$a */
+    /* JADX INFO: renamed from: com.discord.views.CutoutView$a */
+    /* JADX INFO: compiled from: CutoutView.kt */
     public interface InterfaceC7075a {
 
-        /* compiled from: CutoutView.kt */
-        /* renamed from: com.discord.views.CutoutView$a$b */
+        /* JADX INFO: renamed from: com.discord.views.CutoutView$a$b */
+        /* JADX INFO: compiled from: CutoutView.kt */
         public static final class b implements InterfaceC7075a {
 
-            /* renamed from: a */
+            /* JADX INFO: renamed from: a */
             public final int f19059a;
 
-            /* renamed from: b */
+            /* JADX INFO: renamed from: b */
             public final int f19060b;
 
             public b(@IntRange(from = 0) int i, @IntRange(from = 0) int i2) {
@@ -146,7 +146,7 @@ public class CutoutView extends FrameLayout {
             }
 
             @Override // com.discord.views.CutoutView.InterfaceC7075a
-            /* renamed from: a */
+            /* JADX INFO: renamed from: a */
             public Path mo8543a(Context context, int i, int i2) {
                 Intrinsics3.checkNotNullParameter(context, "context");
                 float f = i;
@@ -199,11 +199,11 @@ public class CutoutView extends FrameLayout {
             }
         }
 
-        /* compiled from: CutoutView.kt */
-        /* renamed from: com.discord.views.CutoutView$a$c */
+        /* JADX INFO: renamed from: com.discord.views.CutoutView$a$c */
+        /* JADX INFO: compiled from: CutoutView.kt */
         public static final class c implements InterfaceC7075a {
 
-            /* renamed from: a */
+            /* JADX INFO: renamed from: a */
             public final int f19061a;
 
             public c(int i) {
@@ -211,7 +211,7 @@ public class CutoutView extends FrameLayout {
             }
 
             @Override // com.discord.views.CutoutView.InterfaceC7075a
-            /* renamed from: a */
+            /* JADX INFO: renamed from: a */
             public Path mo8543a(Context context, int i, int i2) {
                 Intrinsics3.checkNotNullParameter(context, "context");
                 float f = this.f19061a;
@@ -257,32 +257,32 @@ public class CutoutView extends FrameLayout {
             }
         }
 
-        /* compiled from: CutoutView.kt */
-        /* renamed from: com.discord.views.CutoutView$a$d */
+        /* JADX INFO: renamed from: com.discord.views.CutoutView$a$d */
+        /* JADX INFO: compiled from: CutoutView.kt */
         public static final class d implements InterfaceC7075a {
 
-            /* renamed from: a */
+            /* JADX INFO: renamed from: a */
             public static final d f19062a = new d();
 
             @Override // com.discord.views.CutoutView.InterfaceC7075a
-            /* renamed from: a */
+            /* JADX INFO: renamed from: a */
             public Path mo8543a(Context context, int i, int i2) {
                 Intrinsics3.checkNotNullParameter(context, "context");
                 return null;
             }
         }
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         Path mo8543a(Context context, int i, int i2);
 
-        /* compiled from: CutoutView.kt */
-        /* renamed from: com.discord.views.CutoutView$a$a */
+        /* JADX INFO: renamed from: com.discord.views.CutoutView$a$a */
+        /* JADX INFO: compiled from: CutoutView.kt */
         public static final class a implements InterfaceC7075a {
 
-            /* renamed from: a */
+            /* JADX INFO: renamed from: a */
             public final int f19057a;
 
-            /* renamed from: b */
+            /* JADX INFO: renamed from: b */
             public final int f19058b;
 
             public a() {
@@ -293,7 +293,7 @@ public class CutoutView extends FrameLayout {
             }
 
             @Override // com.discord.views.CutoutView.InterfaceC7075a
-            /* renamed from: a */
+            /* JADX INFO: renamed from: a */
             public Path mo8543a(Context context, int i, int i2) {
                 Intrinsics3.checkNotNullParameter(context, "context");
                 Path path = new Path();

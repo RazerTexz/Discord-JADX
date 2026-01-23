@@ -39,7 +39,7 @@ import java.util.Set;
 import p007b.p100d.p104b.p105a.outline;
 import p668x.p669a.p672b.p673a.INotificationSideChannel;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public final class NotificationManagerCompat {
     public static final String ACTION_BIND_SIDE_CHANNEL = "android.support.BIND_NOTIFICATION_SIDE_CHANNEL";
     private static final String CHECK_OP_NO_THROW = "checkOpNoThrow";
@@ -73,7 +73,7 @@ public final class NotificationManagerCompat {
 
     public static class NotifyTask implements Task {
 
-        /* renamed from: id */
+        /* JADX INFO: renamed from: id */
         public final int f131id;
         public final Notification notif;
         public final String packageName;
@@ -651,7 +651,7 @@ public final class NotificationManagerCompat {
     public static class CancelTask implements Task {
         public final boolean all;
 
-        /* renamed from: id */
+        /* JADX INFO: renamed from: id */
         public final int f130id;
         public final String packageName;
         public final String tag;

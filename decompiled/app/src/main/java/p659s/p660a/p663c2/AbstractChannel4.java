@@ -8,12 +8,12 @@ import p659s.p660a.CancellableContinuationImpl6;
 import p659s.p660a.p661a.LockFreeLinkedList3;
 import p659s.p660a.p661a.Symbol3;
 
-/* compiled from: AbstractChannel.kt */
-/* renamed from: s.a.c2.i, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: s.a.c2.i, reason: use source file name */
+/* JADX INFO: compiled from: AbstractChannel.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class AbstractChannel4<E> extends AbstractChannel7 implements AbstractChannel6<E> {
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public final Throwable f27763m;
 
     public AbstractChannel4(Throwable th) {
@@ -21,40 +21,40 @@ public final class AbstractChannel4<E> extends AbstractChannel7 implements Abstr
     }
 
     @Override // p659s.p660a.p663c2.AbstractChannel6
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public Object mo11232b() {
         return this;
     }
 
     @Override // p659s.p660a.p663c2.AbstractChannel6
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public void mo11209c(E e) {
     }
 
     @Override // p659s.p660a.p663c2.AbstractChannel6
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public Symbol3 mo11210d(E e, LockFreeLinkedList3.b bVar) {
         return CancellableContinuationImpl6.f27874a;
     }
 
     @Override // p659s.p660a.p663c2.AbstractChannel7
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     public void mo11227q() {
     }
 
     @Override // p659s.p660a.p663c2.AbstractChannel7
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     public Object mo11228r() {
         return this;
     }
 
     @Override // p659s.p660a.p663c2.AbstractChannel7
-    /* renamed from: s */
+    /* JADX INFO: renamed from: s */
     public void mo11229s(AbstractChannel4<?> abstractChannel4) {
     }
 
     @Override // p659s.p660a.p663c2.AbstractChannel7
-    /* renamed from: t */
+    /* JADX INFO: renamed from: t */
     public Symbol3 mo11230t(LockFreeLinkedList3.b bVar) {
         return CancellableContinuationImpl6.f27874a;
     }
@@ -69,13 +69,13 @@ public final class AbstractChannel4<E> extends AbstractChannel7 implements Abstr
         return sbM833U.toString();
     }
 
-    /* renamed from: v */
+    /* JADX INFO: renamed from: v */
     public final Throwable m11233v() {
         Throwable th = this.f27763m;
         return th != null ? th : new Channel2("Channel was closed");
     }
 
-    /* renamed from: w */
+    /* JADX INFO: renamed from: w */
     public final Throwable m11234w() {
         Throwable th = this.f27763m;
         return th != null ? th : new Channel3("Channel was closed");

@@ -6,21 +6,21 @@ import p007b.p085c.p086a.p089b0.MiscUtils;
 import p007b.p085c.p086a.p090c0.Keyframe;
 import p007b.p085c.p086a.p090c0.LottieValueCallback;
 
-/* compiled from: ColorKeyframeAnimation.java */
-/* renamed from: b.c.a.w.c.b, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.c.a.w.c.b, reason: use source file name */
+/* JADX INFO: compiled from: ColorKeyframeAnimation.java */
+/* JADX INFO: loaded from: classes.dex */
 public class ColorKeyframeAnimation extends KeyframeAnimation<Integer> {
     public ColorKeyframeAnimation(List<Keyframe<Integer>> list) {
         super(list);
     }
 
     @Override // p007b.p085c.p086a.p091w.p093c.BaseKeyframeAnimation
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public Object mo728f(Keyframe keyframe, float f) {
         return Integer.valueOf(m738j(keyframe, f));
     }
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public int m738j(Keyframe<Integer> keyframe, float f) {
         Integer num;
         Integer num2 = keyframe.f2317b;

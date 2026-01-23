@@ -18,41 +18,41 @@ import p007b.p109f.p161j.p177l.Bucket2;
 import p007b.p109f.p161j.p177l.PoolParams;
 import p007b.p109f.p161j.p177l.PoolStatsTracker;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public abstract class BasePool<V> implements Pool2<V> {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final Class<?> f19548a = getClass();
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final MemoryTrimmableRegistry f19549b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final PoolParams f19550c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     @VisibleForTesting
     public final SparseArray<Bucket2<V>> f19551d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     @VisibleForTesting
     public final Set<V> f19552e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public boolean f19553f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     @VisibleForTesting
     public final C10661a f19554g;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     @VisibleForTesting
     public final C10661a f19555h;
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public final PoolStatsTracker f19556i;
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public boolean f19557j;
 
     public static class InvalidSizeException extends RuntimeException {
@@ -81,17 +81,17 @@ public abstract class BasePool<V> implements Pool2<V> {
     public static class SizeTooLargeException extends InvalidSizeException {
     }
 
+    /* JADX INFO: renamed from: com.facebook.imagepipeline.memory.BasePool$a */
     @VisibleForTesting
-    /* renamed from: com.facebook.imagepipeline.memory.BasePool$a */
     public static class C10661a {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public int f19558a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public int f19559b;
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public void m8704a(int i) {
             int i2;
             int i3 = this.f19559b;
@@ -103,7 +103,7 @@ public abstract class BasePool<V> implements Pool2<V> {
             }
         }
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public void m8705b(int i) {
             this.f19558a++;
             this.f19559b += i;
@@ -143,11 +143,11 @@ public abstract class BasePool<V> implements Pool2<V> {
         this.f19554g = new C10661a();
     }
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public abstract V mo1382e(int i);
 
     @VisibleForTesting
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public synchronized boolean m8697f(int i) {
         if (this.f19557j) {
             return true;
@@ -171,7 +171,7 @@ public abstract class BasePool<V> implements Pool2<V> {
     }
 
     @VisibleForTesting
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public abstract void mo1383g(V v);
 
     @Override // p007b.p109f.p115d.p122g.Pool2
@@ -235,7 +235,7 @@ public abstract class BasePool<V> implements Pool2<V> {
     }
 
     @VisibleForTesting
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public synchronized Bucket2<V> m8698h(int i) {
         Bucket2<V> bucket2 = this.f19551d.get(i);
         if (bucket2 == null && this.f19553f) {
@@ -247,16 +247,16 @@ public abstract class BasePool<V> implements Pool2<V> {
         return bucket2;
     }
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public abstract int mo1384i(int i);
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public abstract int mo1385j(V v);
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public abstract int mo1386k(int i);
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public synchronized V mo1387l(Bucket2<V> bucket2) {
         V vM1378c;
         vM1378c = bucket2.m1378c();
@@ -266,14 +266,14 @@ public abstract class BasePool<V> implements Pool2<V> {
         return vM1378c;
     }
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public void m8699m() {
         this.f19549b.mo989a(this);
         this.f19556i.mo1401c(this);
     }
 
     @VisibleForTesting
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public synchronized boolean m8700n() {
         boolean z2;
         z2 = this.f19554g.f19559b + this.f19555h.f19559b > this.f19550c.f3977b;
@@ -283,13 +283,13 @@ public abstract class BasePool<V> implements Pool2<V> {
         return z2;
     }
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public boolean mo1388o(V v) {
         return true;
     }
 
     @SuppressLint({"InvalidAccessToGuardedField"})
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public final void m8701p() {
         if (FLog.m980h(2)) {
             C10661a c10661a = this.f19554g;
@@ -301,7 +301,7 @@ public abstract class BasePool<V> implements Pool2<V> {
         }
     }
 
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     public Bucket2<V> m8702q(int i) {
         int iMo1386k = mo1386k(i);
         Objects.requireNonNull(this.f19550c);
@@ -309,7 +309,7 @@ public abstract class BasePool<V> implements Pool2<V> {
     }
 
     @VisibleForTesting
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     public synchronized void m8703r(int i) {
         int i2 = this.f19554g.f19559b;
         int i3 = this.f19555h.f19559b;

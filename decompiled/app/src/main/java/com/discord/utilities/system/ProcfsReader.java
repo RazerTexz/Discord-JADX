@@ -11,16 +11,16 @@ import p507d0.p579g0.Strings4;
 import p507d0.p591y.FileReadWrite;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ProcfsReader.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: ProcfsReader.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class ProcfsReader {
     public static final ProcfsReader INSTANCE = new ProcfsReader();
 
-    /* renamed from: pid$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: pid$delegate, reason: from kotlin metadata */
     private static final Lazy pid = LazyJVM.lazy(ProcfsReader2.INSTANCE);
     private static final Stat default = new Stat(0, 0, 0, 0);
 
-    /* compiled from: ProcfsReader.kt */
+    /* JADX INFO: compiled from: ProcfsReader.kt */
     public static final /* data */ class Stat {
         private final long rssPages;
         private final long systemTime;
@@ -38,22 +38,22 @@ public final class ProcfsReader {
             return stat.copy((i & 1) != 0 ? stat.userTime : j, (i & 2) != 0 ? stat.systemTime : j2, (i & 4) != 0 ? stat.totalTime : j3, (i & 8) != 0 ? stat.rssPages : j4);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final long getUserTime() {
             return this.userTime;
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final long getSystemTime() {
             return this.systemTime;
         }
 
-        /* renamed from: component3, reason: from getter */
+        /* JADX INFO: renamed from: component3, reason: from getter */
         public final long getTotalTime() {
             return this.totalTime;
         }
 
-        /* renamed from: component4, reason: from getter */
+        /* JADX INFO: renamed from: component4, reason: from getter */
         public final long getRssPages() {
             return this.rssPages;
         }

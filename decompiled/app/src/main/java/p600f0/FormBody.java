@@ -13,31 +13,31 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p600f0.p601e0.Util7;
 import p615g0.Buffer3;
 
-/* compiled from: FormBody.kt */
-/* renamed from: f0.u, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: f0.u, reason: use source file name */
+/* JADX INFO: compiled from: FormBody.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class FormBody extends RequestBody {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final MediaType f25963a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final List<String> f25964b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final List<String> f25965c;
 
-    /* compiled from: FormBody.kt */
-    /* renamed from: f0.u$a */
+    /* JADX INFO: renamed from: f0.u$a */
+    /* JADX INFO: compiled from: FormBody.kt */
     public static final class a {
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public final Charset f25968c = null;
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final List<String> f25966a = new ArrayList();
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final List<String> f25967b = new ArrayList();
     }
 
@@ -53,7 +53,7 @@ public final class FormBody extends RequestBody {
         this.f25965c = Util7.m10145z(list2);
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final long m10394a(BufferedSink bufferedSink, boolean z2) throws EOFException {
         Buffer3 buffer3Mo10457g;
         if (z2) {
@@ -82,7 +82,7 @@ public final class FormBody extends RequestBody {
     }
 
     @Override // okhttp3.RequestBody
-    /* renamed from: contentLength */
+    /* JADX INFO: renamed from: contentLength */
     public long getSize() {
         return m10394a(null, true);
     }

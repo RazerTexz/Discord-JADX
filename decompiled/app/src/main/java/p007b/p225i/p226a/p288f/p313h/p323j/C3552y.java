@@ -9,11 +9,11 @@ import java.util.Objects;
 import org.xmlpull.v1.XmlPullParserException;
 import p007b.p225i.p226a.p288f.p313h.p323j.C3521i0;
 
-/* renamed from: b.i.a.f.h.j.y */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.h.j.y */
+/* JADX INFO: loaded from: classes3.dex */
 public class C3552y<T extends C3521i0> extends C3506d {
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public C3519h0<T> f9823k;
 
     public C3552y(C3515g c3515g, C3519h0<T> c3519h0) {
@@ -21,7 +21,7 @@ public class C3552y<T extends C3521i0> extends C3506d {
         this.f9823k = c3519h0;
     }
 
-    /* renamed from: I */
+    /* JADX INFO: renamed from: I */
     public final T m4505I(XmlResourceParser xmlResourceParser) {
         try {
             xmlResourceParser.next();

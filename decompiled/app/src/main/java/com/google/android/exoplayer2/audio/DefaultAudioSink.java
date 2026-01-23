@@ -52,183 +52,184 @@ import p007b.p225i.p226a.p242c.p263t2.RunnableC2911a;
 import p007b.p225i.p226a.p242c.p263t2.RunnableC2924h;
 import p007b.p225i.p226a.p242c.p263t2.RunnableC2925i;
 import p007b.p225i.p226a.p242c.p263t2.SilenceSkippingAudioProcessor;
+import p007b.p225i.p226a.p242c.p263t2.Sonic;
 import p007b.p225i.p226a.p242c.p263t2.SonicAudioProcessor;
 import p007b.p225i.p226a.p242c.p263t2.TrimmingAudioProcessor;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public final class DefaultAudioSink implements AudioSink {
 
-    /* renamed from: A */
+    /* JADX INFO: renamed from: A */
     public long f19700A;
 
-    /* renamed from: B */
+    /* JADX INFO: renamed from: B */
     public long f19701B;
 
-    /* renamed from: C */
+    /* JADX INFO: renamed from: C */
     public long f19702C;
 
-    /* renamed from: D */
+    /* JADX INFO: renamed from: D */
     public int f19703D;
 
-    /* renamed from: E */
+    /* JADX INFO: renamed from: E */
     public boolean f19704E;
 
-    /* renamed from: F */
+    /* JADX INFO: renamed from: F */
     public boolean f19705F;
 
-    /* renamed from: G */
+    /* JADX INFO: renamed from: G */
     public long f19706G;
 
-    /* renamed from: H */
+    /* JADX INFO: renamed from: H */
     public float f19707H;
 
-    /* renamed from: I */
+    /* JADX INFO: renamed from: I */
     public AudioProcessor[] f19708I;
 
-    /* renamed from: J */
+    /* JADX INFO: renamed from: J */
     public ByteBuffer[] f19709J;
 
-    /* renamed from: K */
+    /* JADX INFO: renamed from: K */
     @Nullable
     public ByteBuffer f19710K;
 
-    /* renamed from: L */
+    /* JADX INFO: renamed from: L */
     public int f19711L;
 
-    /* renamed from: M */
+    /* JADX INFO: renamed from: M */
     @Nullable
     public ByteBuffer f19712M;
 
-    /* renamed from: N */
+    /* JADX INFO: renamed from: N */
     public byte[] f19713N;
 
-    /* renamed from: O */
+    /* JADX INFO: renamed from: O */
     public int f19714O;
 
-    /* renamed from: P */
+    /* JADX INFO: renamed from: P */
     public int f19715P;
 
-    /* renamed from: Q */
+    /* JADX INFO: renamed from: Q */
     public boolean f19716Q;
 
-    /* renamed from: R */
+    /* JADX INFO: renamed from: R */
     public boolean f19717R;
 
-    /* renamed from: S */
+    /* JADX INFO: renamed from: S */
     public boolean f19718S;
 
-    /* renamed from: T */
+    /* JADX INFO: renamed from: T */
     public boolean f19719T;
 
-    /* renamed from: U */
+    /* JADX INFO: renamed from: U */
     public int f19720U;
 
-    /* renamed from: V */
+    /* JADX INFO: renamed from: V */
     public AuxEffectInfo f19721V;
 
-    /* renamed from: W */
+    /* JADX INFO: renamed from: W */
     public boolean f19722W;
 
-    /* renamed from: X */
+    /* JADX INFO: renamed from: X */
     public long f19723X;
 
-    /* renamed from: Y */
+    /* JADX INFO: renamed from: Y */
     public boolean f19724Y;
 
-    /* renamed from: Z */
+    /* JADX INFO: renamed from: Z */
     public boolean f19725Z;
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     @Nullable
     public final AudioCapabilities f19726a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final InterfaceC10688b f19727b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final boolean f19728c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final ChannelMappingAudioProcessor f19729d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final TrimmingAudioProcessor f19730e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final AudioProcessor[] f19731f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public final AudioProcessor[] f19732g;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public final ConditionVariable f19733h;
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public final AudioTrackPositionTracker f19734i;
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final ArrayDeque<C10691e> f19735j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final boolean f19736k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final int f19737l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public C10694h f19738m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public final C10692f<AudioSink.InitializationException> f19739n;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public final C10692f<AudioSink.WriteException> f19740o;
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     @Nullable
     public AudioSink.InterfaceC10686a f19741p;
 
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     @Nullable
     public C10689c f19742q;
 
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     public C10689c f19743r;
 
-    /* renamed from: s */
+    /* JADX INFO: renamed from: s */
     @Nullable
     public AudioTrack f19744s;
 
-    /* renamed from: t */
+    /* JADX INFO: renamed from: t */
     public AudioAttributes f19745t;
 
-    /* renamed from: u */
+    /* JADX INFO: renamed from: u */
     @Nullable
     public C10691e f19746u;
 
-    /* renamed from: v */
+    /* JADX INFO: renamed from: v */
     public C10691e f19747v;
 
-    /* renamed from: w */
+    /* JADX INFO: renamed from: w */
     public PlaybackParameters f19748w;
 
-    /* renamed from: x */
+    /* JADX INFO: renamed from: x */
     @Nullable
     public ByteBuffer f19749x;
 
-    /* renamed from: y */
+    /* JADX INFO: renamed from: y */
     public int f19750y;
 
-    /* renamed from: z */
+    /* JADX INFO: renamed from: z */
     public long f19751z;
 
     public static final class InvalidAudioTrackTimestampException extends RuntimeException {
     }
 
-    /* renamed from: com.google.android.exoplayer2.audio.DefaultAudioSink$a */
+    /* JADX INFO: renamed from: com.google.android.exoplayer2.audio.DefaultAudioSink$a */
     public class C10687a extends Thread {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public final /* synthetic */ AudioTrack f19752j;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -248,49 +249,49 @@ public final class DefaultAudioSink implements AudioSink {
         }
     }
 
-    /* renamed from: com.google.android.exoplayer2.audio.DefaultAudioSink$b */
+    /* JADX INFO: renamed from: com.google.android.exoplayer2.audio.DefaultAudioSink$b */
     public interface InterfaceC10688b {
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         PlaybackParameters mo8800a(PlaybackParameters playbackParameters);
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         long mo8801b(long j);
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         long mo8802c();
 
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         boolean mo8803d(boolean z2);
     }
 
-    /* renamed from: com.google.android.exoplayer2.audio.DefaultAudioSink$c */
+    /* JADX INFO: renamed from: com.google.android.exoplayer2.audio.DefaultAudioSink$c */
     public static final class C10689c {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final Format2 f19754a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final int f19755b;
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public final int f19756c;
 
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         public final int f19757d;
 
-        /* renamed from: e */
+        /* JADX INFO: renamed from: e */
         public final int f19758e;
 
-        /* renamed from: f */
+        /* JADX INFO: renamed from: f */
         public final int f19759f;
 
-        /* renamed from: g */
+        /* JADX INFO: renamed from: g */
         public final int f19760g;
 
-        /* renamed from: h */
+        /* JADX INFO: renamed from: h */
         public final int f19761h;
 
-        /* renamed from: i */
+        /* JADX INFO: renamed from: i */
         public final AudioProcessor[] f19762i;
 
         public C10689c(Format2 format2, int i, int i2, int i3, int i4, int i5, int i6, int i7, boolean z2, AudioProcessor[] audioProcessorArr) {
@@ -326,12 +327,12 @@ public final class DefaultAudioSink implements AudioSink {
         }
 
         @RequiresApi(21)
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         public static android.media.AudioAttributes m8804d(AudioAttributes audioAttributes, boolean z2) {
             return z2 ? new AudioAttributes.Builder().setContentType(3).setFlags(16).setUsage(1).build() : audioAttributes.m3494a();
         }
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public AudioTrack m8805a(boolean z2, p007b.p225i.p226a.p242c.p263t2.AudioAttributes audioAttributes, int i) throws AudioSink.InitializationException {
             try {
                 AudioTrack audioTrackM8806b = m8806b(z2, audioAttributes, i);
@@ -349,7 +350,7 @@ public final class DefaultAudioSink implements AudioSink {
             }
         }
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final AudioTrack m8806b(boolean z2, p007b.p225i.p226a.p242c.p263t2.AudioAttributes audioAttributes, int i) {
             int i2 = Util2.f6708a;
             if (i2 >= 29) {
@@ -362,12 +363,12 @@ public final class DefaultAudioSink implements AudioSink {
             return i == 0 ? new AudioTrack(iM3012t, this.f19758e, this.f19759f, this.f19760g, this.f19761h, 1) : new AudioTrack(iM3012t, this.f19758e, this.f19759f, this.f19760g, this.f19761h, 1, i);
         }
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public long m8807c(long j) {
-            return (j * 1000000) / this.f19758e;
+            return (j * 1000000) / ((long) this.f19758e);
         }
 
-        /* renamed from: e */
+        /* JADX INFO: renamed from: e */
         public final int m8808e(long j) {
             int i;
             int i2 = this.f19760g;
@@ -416,25 +417,25 @@ public final class DefaultAudioSink implements AudioSink {
             if (i2 == 5) {
                 i *= 2;
             }
-            return (int) ((j * i) / 1000000);
+            return (int) ((j * ((long) i)) / 1000000);
         }
 
-        /* renamed from: f */
+        /* JADX INFO: renamed from: f */
         public boolean m8809f() {
             return this.f19756c == 1;
         }
     }
 
-    /* renamed from: com.google.android.exoplayer2.audio.DefaultAudioSink$d */
+    /* JADX INFO: renamed from: com.google.android.exoplayer2.audio.DefaultAudioSink$d */
     public static class C10690d implements InterfaceC10688b {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final AudioProcessor[] f19763a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final SilenceSkippingAudioProcessor f19764b;
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public final SonicAudioProcessor f19765c;
 
         public C10690d(AudioProcessor... audioProcessorArr) {
@@ -450,7 +451,7 @@ public final class DefaultAudioSink implements AudioSink {
         }
 
         @Override // com.google.android.exoplayer2.audio.DefaultAudioSink.InterfaceC10688b
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public PlaybackParameters mo8800a(PlaybackParameters playbackParameters) {
             SonicAudioProcessor sonicAudioProcessor = this.f19765c;
             float f = playbackParameters.f8027k;
@@ -467,47 +468,48 @@ public final class DefaultAudioSink implements AudioSink {
         }
 
         @Override // com.google.android.exoplayer2.audio.DefaultAudioSink.InterfaceC10688b
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public long mo8801b(long j) {
             SonicAudioProcessor sonicAudioProcessor = this.f19765c;
             if (sonicAudioProcessor.f7740o < Permission.VIEW_CHANNEL) {
-                return (long) (sonicAudioProcessor.f7728c * j);
+                return (long) (((double) sonicAudioProcessor.f7728c) * j);
             }
             long j2 = sonicAudioProcessor.f7739n;
-            Objects.requireNonNull(sonicAudioProcessor.f7735j);
-            long j3 = j2 - ((r4.f7712k * r4.f7703b) * 2);
+            Sonic sonic = sonicAudioProcessor.f7735j;
+            Objects.requireNonNull(sonic);
+            long j3 = j2 - ((long) ((sonic.f7712k * sonic.f7703b) * 2));
             int i = sonicAudioProcessor.f7733h.f19696b;
             int i2 = sonicAudioProcessor.f7732g.f19696b;
-            return i == i2 ? Util2.m2985F(j, j3, sonicAudioProcessor.f7740o) : Util2.m2985F(j, j3 * i, sonicAudioProcessor.f7740o * i2);
+            return i == i2 ? Util2.m2985F(j, j3, sonicAudioProcessor.f7740o) : Util2.m2985F(j, j3 * ((long) i), sonicAudioProcessor.f7740o * ((long) i2));
         }
 
         @Override // com.google.android.exoplayer2.audio.DefaultAudioSink.InterfaceC10688b
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public long mo8802c() {
             return this.f19764b.f7699t;
         }
 
         @Override // com.google.android.exoplayer2.audio.DefaultAudioSink.InterfaceC10688b
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         public boolean mo8803d(boolean z2) {
             this.f19764b.f7692m = z2;
             return z2;
         }
     }
 
-    /* renamed from: com.google.android.exoplayer2.audio.DefaultAudioSink$e */
+    /* JADX INFO: renamed from: com.google.android.exoplayer2.audio.DefaultAudioSink$e */
     public static final class C10691e {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final PlaybackParameters f19766a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final boolean f19767b;
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public final long f19768c;
 
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         public final long f19769d;
 
         public C10691e(PlaybackParameters playbackParameters, boolean z2, long j, long j2, C10687a c10687a) {
@@ -518,21 +520,21 @@ public final class DefaultAudioSink implements AudioSink {
         }
     }
 
-    /* renamed from: com.google.android.exoplayer2.audio.DefaultAudioSink$f */
+    /* JADX INFO: renamed from: com.google.android.exoplayer2.audio.DefaultAudioSink$f */
     public static final class C10692f<T extends Exception> {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         @Nullable
         public T f19770a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public long f19771b;
 
         public C10692f(long j) {
         }
 
         /* JADX INFO: Thrown type has an unknown type hierarchy: T extends java.lang.Exception */
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public void m8810a(T t) throws Exception {
             long jElapsedRealtime = SystemClock.elapsedRealtime();
             if (this.f19770a == null) {
@@ -551,13 +553,13 @@ public final class DefaultAudioSink implements AudioSink {
         }
     }
 
-    /* renamed from: com.google.android.exoplayer2.audio.DefaultAudioSink$g */
+    /* JADX INFO: renamed from: com.google.android.exoplayer2.audio.DefaultAudioSink$g */
     public final class C10693g implements AudioTrackPositionTracker.a {
         public C10693g(C10687a c10687a) {
         }
 
         @Override // p007b.p225i.p226a.p242c.p263t2.AudioTrackPositionTracker.a
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public void mo3506a(long j) {
             AudioRendererEventListener2.a aVar;
             Handler handler;
@@ -569,7 +571,7 @@ public final class DefaultAudioSink implements AudioSink {
         }
 
         @Override // p007b.p225i.p226a.p242c.p263t2.AudioTrackPositionTracker.a
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public void mo3507b(int i, long j) {
             if (DefaultAudioSink.this.f19741p != null) {
                 long jElapsedRealtime = SystemClock.elapsedRealtime();
@@ -584,7 +586,7 @@ public final class DefaultAudioSink implements AudioSink {
         }
 
         @Override // p007b.p225i.p226a.p242c.p263t2.AudioTrackPositionTracker.a
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public void mo3508c(long j) {
             StringBuilder sb = new StringBuilder(61);
             sb.append("Ignoring impossibly large audio latency: ");
@@ -593,10 +595,11 @@ public final class DefaultAudioSink implements AudioSink {
         }
 
         @Override // p007b.p225i.p226a.p242c.p263t2.AudioTrackPositionTracker.a
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         public void mo3509d(long j, long j2, long j3, long j4) {
             DefaultAudioSink defaultAudioSink = DefaultAudioSink.this;
-            long j5 = defaultAudioSink.f19743r.f19756c == 0 ? defaultAudioSink.f19751z / r1.f19755b : defaultAudioSink.f19700A;
+            C10689c c10689c = defaultAudioSink.f19743r;
+            long j5 = c10689c.f19756c == 0 ? defaultAudioSink.f19751z / ((long) c10689c.f19755b) : defaultAudioSink.f19700A;
             long jM8784E = defaultAudioSink.m8784E();
             StringBuilder sbM830R = outline.m830R(Opcodes.INVOKEVIRTUAL, "Spurious audio timestamp (frame position mismatch): ", j, ", ");
             sbM830R.append(j2);
@@ -612,10 +615,11 @@ public final class DefaultAudioSink implements AudioSink {
         }
 
         @Override // p007b.p225i.p226a.p242c.p263t2.AudioTrackPositionTracker.a
-        /* renamed from: e */
+        /* JADX INFO: renamed from: e */
         public void mo3510e(long j, long j2, long j3, long j4) {
             DefaultAudioSink defaultAudioSink = DefaultAudioSink.this;
-            long j5 = defaultAudioSink.f19743r.f19756c == 0 ? defaultAudioSink.f19751z / r1.f19755b : defaultAudioSink.f19700A;
+            C10689c c10689c = defaultAudioSink.f19743r;
+            long j5 = c10689c.f19756c == 0 ? defaultAudioSink.f19751z / ((long) c10689c.f19755b) : defaultAudioSink.f19700A;
             long jM8784E = defaultAudioSink.m8784E();
             StringBuilder sbM830R = outline.m830R(180, "Spurious audio timestamp (system clock mismatch): ", j, ", ");
             sbM830R.append(j2);
@@ -631,17 +635,17 @@ public final class DefaultAudioSink implements AudioSink {
         }
     }
 
+    /* JADX INFO: renamed from: com.google.android.exoplayer2.audio.DefaultAudioSink$h */
     @RequiresApi(29)
-    /* renamed from: com.google.android.exoplayer2.audio.DefaultAudioSink$h */
     public final class C10694h {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final Handler f19773a = new Handler();
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final AudioTrack.StreamEventCallback f19774b;
 
-        /* renamed from: com.google.android.exoplayer2.audio.DefaultAudioSink$h$a */
+        /* JADX INFO: renamed from: com.google.android.exoplayer2.audio.DefaultAudioSink$h$a */
         public class a extends AudioTrack.StreamEventCallback {
             public a(DefaultAudioSink defaultAudioSink) {
             }
@@ -711,7 +715,7 @@ public final class DefaultAudioSink implements AudioSink {
 
     /* JADX WARN: Removed duplicated region for block: B:57:0x00b5  */
     @Nullable
-    /* renamed from: A */
+    /* JADX INFO: renamed from: A */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
@@ -778,18 +782,18 @@ public final class DefaultAudioSink implements AudioSink {
         return Pair.create(Integer.valueOf(iM3044b), Integer.valueOf(iM3006n));
     }
 
-    /* renamed from: H */
+    /* JADX INFO: renamed from: H */
     public static boolean m8779H(AudioTrack audioTrack) {
         return Util2.f6708a >= 29 && audioTrack.isOffloadedPlayback();
     }
 
     @RequiresApi(21)
-    /* renamed from: y */
+    /* JADX INFO: renamed from: y */
     public static AudioFormat m8780y(int i, int i2, int i3) {
         return new AudioFormat.Builder().setSampleRate(i).setChannelMask(i2).setEncoding(i3).build();
     }
 
-    /* renamed from: B */
+    /* JADX INFO: renamed from: B */
     public final C10691e m8781B() {
         C10691e c10691e = this.f19746u;
         return c10691e != null ? c10691e : !this.f19735j.isEmpty() ? this.f19735j.getLast() : this.f19747v;
@@ -797,7 +801,7 @@ public final class DefaultAudioSink implements AudioSink {
 
     @RequiresApi(29)
     @SuppressLint({"WrongConstant"})
-    /* renamed from: C */
+    /* JADX INFO: renamed from: C */
     public final int m8782C(AudioFormat audioFormat, android.media.AudioAttributes audioAttributes) {
         int i = Util2.f6708a;
         if (i >= 31) {
@@ -809,17 +813,18 @@ public final class DefaultAudioSink implements AudioSink {
         return 0;
     }
 
-    /* renamed from: D */
+    /* JADX INFO: renamed from: D */
     public boolean m8783D() {
         return m8781B().f19767b;
     }
 
-    /* renamed from: E */
+    /* JADX INFO: renamed from: E */
     public final long m8784E() {
-        return this.f19743r.f19756c == 0 ? this.f19701B / r0.f19757d : this.f19702C;
+        C10689c c10689c = this.f19743r;
+        return c10689c.f19756c == 0 ? this.f19701B / ((long) c10689c.f19757d) : this.f19702C;
     }
 
-    /* renamed from: F */
+    /* JADX INFO: renamed from: F */
     public final void m8785F() throws AudioSink.InitializationException {
         this.f19733h.block();
         try {
@@ -866,13 +871,13 @@ public final class DefaultAudioSink implements AudioSink {
         }
     }
 
-    /* renamed from: G */
+    /* JADX INFO: renamed from: G */
     public final boolean m8786G() {
         return this.f19744s != null;
     }
 
-    /* renamed from: I */
-    public final void m8787I() throws IllegalStateException {
+    /* JADX INFO: renamed from: I */
+    public final void m8787I() {
         if (this.f19717R) {
             return;
         }
@@ -886,7 +891,7 @@ public final class DefaultAudioSink implements AudioSink {
         this.f19750y = 0;
     }
 
-    /* renamed from: J */
+    /* JADX INFO: renamed from: J */
     public final void m8788J(long j) throws Exception {
         ByteBuffer byteBuffer;
         int length = this.f19708I.length;
@@ -921,7 +926,7 @@ public final class DefaultAudioSink implements AudioSink {
         }
     }
 
-    /* renamed from: K */
+    /* JADX INFO: renamed from: K */
     public final void m8789K() {
         this.f19751z = 0L;
         this.f19700A = 0L;
@@ -945,7 +950,7 @@ public final class DefaultAudioSink implements AudioSink {
         m8798h();
     }
 
-    /* renamed from: L */
+    /* JADX INFO: renamed from: L */
     public final void m8790L(PlaybackParameters playbackParameters, boolean z2) {
         C10691e c10691eM8781B = m8781B();
         if (playbackParameters.equals(c10691eM8781B.f19766a) && z2 == c10691eM8781B.f19767b) {
@@ -960,7 +965,7 @@ public final class DefaultAudioSink implements AudioSink {
     }
 
     @RequiresApi(23)
-    /* renamed from: M */
+    /* JADX INFO: renamed from: M */
     public final void m8791M(PlaybackParameters playbackParameters) {
         if (m8786G()) {
             try {
@@ -979,7 +984,7 @@ public final class DefaultAudioSink implements AudioSink {
         this.f19748w = playbackParameters;
     }
 
-    /* renamed from: N */
+    /* JADX INFO: renamed from: N */
     public final void m8792N() {
         if (m8786G()) {
             if (Util2.f6708a >= 21) {
@@ -992,7 +997,7 @@ public final class DefaultAudioSink implements AudioSink {
         }
     }
 
-    /* renamed from: O */
+    /* JADX INFO: renamed from: O */
     public final boolean m8793O() {
         if (this.f19722W || !"audio/raw".equals(this.f19743r.f19754a.f7155w)) {
             return false;
@@ -1000,7 +1005,7 @@ public final class DefaultAudioSink implements AudioSink {
         return !(this.f19728c && Util2.m3017y(this.f19743r.f19754a.f7138L));
     }
 
-    /* renamed from: P */
+    /* JADX INFO: renamed from: P */
     public final boolean m8794P(Format2 format2, p007b.p225i.p226a.p242c.p263t2.AudioAttributes audioAttributes) {
         int iM3006n;
         int iM8782C;
@@ -1024,7 +1029,7 @@ public final class DefaultAudioSink implements AudioSink {
 
     /* JADX WARN: Removed duplicated region for block: B:47:0x00e4  */
     /* JADX WARN: Removed duplicated region for block: B:48:0x00e6  */
-    /* renamed from: Q */
+    /* JADX INFO: renamed from: Q */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
@@ -1052,7 +1057,7 @@ public final class DefaultAudioSink implements AudioSink {
             int i = Util2.f6708a;
             if (i < 21) {
                 AudioTrackPositionTracker audioTrackPositionTracker = this.f19734i;
-                int iM3502b = audioTrackPositionTracker.f7813e - ((int) (this.f19701B - (audioTrackPositionTracker.m3502b() * audioTrackPositionTracker.f7812d)));
+                int iM3502b = audioTrackPositionTracker.f7813e - ((int) (this.f19701B - (audioTrackPositionTracker.m3502b() * ((long) audioTrackPositionTracker.f7812d))));
                 if (iM3502b > 0) {
                     iWrite = this.f19744s.write(this.f19713N, this.f19714O, Math.min(iRemaining2, iM3502b));
                     if (iWrite > 0) {
@@ -1134,12 +1139,12 @@ public final class DefaultAudioSink implements AudioSink {
             }
             int i2 = this.f19743r.f19756c;
             if (i2 == 0) {
-                this.f19701B += iWrite;
+                this.f19701B += (long) iWrite;
             }
             if (iWrite == iRemaining2) {
                 if (i2 != 0) {
                     AnimatableValueParser.m426D(byteBuffer == this.f19710K);
-                    this.f19702C += this.f19703D * this.f19711L;
+                    this.f19702C += (long) (this.f19703D * this.f19711L);
                 }
                 this.f19712M = null;
             }
@@ -1147,26 +1152,26 @@ public final class DefaultAudioSink implements AudioSink {
     }
 
     @Override // com.google.android.exoplayer2.audio.AudioSink
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public boolean mo8757a(Format2 format2) {
         return mo8774u(format2) != 0;
     }
 
     @Override // com.google.android.exoplayer2.audio.AudioSink
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public boolean mo8758b() {
         return !m8786G() || (this.f19716Q && !mo8764k());
     }
 
     @Override // com.google.android.exoplayer2.audio.AudioSink
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public PlaybackParameters mo8759c() {
         return this.f19736k ? this.f19748w : m8799z();
     }
 
     @Override // com.google.android.exoplayer2.audio.AudioSink
-    /* renamed from: d */
-    public void mo8760d() throws IllegalStateException {
+    /* JADX INFO: renamed from: d */
+    public void mo8760d() {
         boolean z2 = false;
         this.f19718S = false;
         if (m8786G()) {
@@ -1191,8 +1196,8 @@ public final class DefaultAudioSink implements AudioSink {
     }
 
     @Override // com.google.android.exoplayer2.audio.AudioSink
-    /* renamed from: e */
-    public void mo8761e() throws IllegalStateException {
+    /* JADX INFO: renamed from: e */
+    public void mo8761e() {
         this.f19718S = true;
         if (m8786G()) {
             AudioTimestampPoller audioTimestampPoller = this.f19734i.f7814f;
@@ -1202,7 +1207,7 @@ public final class DefaultAudioSink implements AudioSink {
         }
     }
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final void m8796f(long j) {
         AudioRendererEventListener2.a aVar;
         Handler handler;
@@ -1230,7 +1235,7 @@ public final class DefaultAudioSink implements AudioSink {
     }
 
     @Override // com.google.android.exoplayer2.audio.AudioSink
-    public void flush() throws IllegalStateException {
+    public void flush() {
         if (m8786G()) {
             m8789K();
             AudioTrack audioTrack = this.f19734i.f7811c;
@@ -1265,7 +1270,7 @@ public final class DefaultAudioSink implements AudioSink {
     /* JADX WARN: Removed duplicated region for block: B:16:0x002f  */
     /* JADX WARN: Removed duplicated region for block: B:9:0x0018  */
     /* JADX WARN: Unsupported multi-entry loop pattern (BACK_EDGE: B:15:0x0029 -> B:5:0x0009). Please report as a decompilation issue!!! */
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
@@ -1312,7 +1317,7 @@ public final class DefaultAudioSink implements AudioSink {
         }
     }
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public final void m8798h() {
         int i = 0;
         while (true) {
@@ -1328,7 +1333,7 @@ public final class DefaultAudioSink implements AudioSink {
     }
 
     @Override // com.google.android.exoplayer2.audio.AudioSink
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public void mo8762i(PlaybackParameters playbackParameters) {
         PlaybackParameters playbackParameters2 = new PlaybackParameters(Util2.m2999g(playbackParameters.f8027k, 0.1f, 8.0f), Util2.m2999g(playbackParameters.f8028l, 0.1f, 8.0f));
         if (!this.f19736k || Util2.f6708a < 23) {
@@ -1339,8 +1344,8 @@ public final class DefaultAudioSink implements AudioSink {
     }
 
     @Override // com.google.android.exoplayer2.audio.AudioSink
-    /* renamed from: j */
-    public void mo8763j() throws IllegalStateException, AudioSink.WriteException {
+    /* JADX INFO: renamed from: j */
+    public void mo8763j() throws AudioSink.WriteException {
         if (!this.f19716Q && m8786G() && m8797g()) {
             m8787I();
             this.f19716Q = true;
@@ -1348,14 +1353,14 @@ public final class DefaultAudioSink implements AudioSink {
     }
 
     @Override // com.google.android.exoplayer2.audio.AudioSink
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public boolean mo8764k() {
         return m8786G() && this.f19734i.m3503c(m8784E());
     }
 
     @Override // com.google.android.exoplayer2.audio.AudioSink
-    /* renamed from: l */
-    public void mo8765l(int i) throws IllegalStateException {
+    /* JADX INFO: renamed from: l */
+    public void mo8765l(int i) {
         if (this.f19720U != i) {
             this.f19720U = i;
             this.f19719T = i != 0;
@@ -1367,7 +1372,7 @@ public final class DefaultAudioSink implements AudioSink {
     /* JADX WARN: Removed duplicated region for block: B:64:0x0116  */
     /* JADX WARN: Removed duplicated region for block: B:88:0x01ab A[Catch: Exception -> 0x01b5, TRY_LEAVE, TryCatch #0 {Exception -> 0x01b5, blocks: (B:86:0x0181, B:88:0x01ab), top: B:144:0x0181 }] */
     @Override // com.google.android.exoplayer2.audio.AudioSink
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
@@ -1404,7 +1409,7 @@ public final class DefaultAudioSink implements AudioSink {
                         if (i3 >= i4) {
                             break;
                         }
-                        audioTrackPositionTracker.f7820l = (audioTrackPositionTracker.f7810b[i3] / i4) + audioTrackPositionTracker.f7820l;
+                        audioTrackPositionTracker.f7820l = (audioTrackPositionTracker.f7810b[i3] / ((long) i4)) + audioTrackPositionTracker.f7820l;
                         i3++;
                     }
                 }
@@ -1434,7 +1439,7 @@ public final class DefaultAudioSink implements AudioSink {
                                 Objects.requireNonNull(audioTrack2);
                                 Integer num = (Integer) method.invoke(audioTrack2, new Object[0]);
                                 int i5 = Util2.f6708a;
-                                long jIntValue = (num.intValue() * 1000) - audioTrackPositionTracker.f7817i;
+                                long jIntValue = (((long) num.intValue()) * 1000) - audioTrackPositionTracker.f7817i;
                                 audioTrackPositionTracker.f7823o = jIntValue;
                                 jMax = Math.max(jIntValue, 0L);
                                 audioTrackPositionTracker.f7823o = jMax;
@@ -1493,7 +1498,7 @@ public final class DefaultAudioSink implements AudioSink {
                             Objects.requireNonNull(audioTrack22);
                             Integer num2 = (Integer) method.invoke(audioTrack22, new Object[0]);
                             int i52 = Util2.f6708a;
-                            long jIntValue2 = (num2.intValue() * 1000) - audioTrackPositionTracker.f7817i;
+                            long jIntValue2 = (((long) num2.intValue()) * 1000) - audioTrackPositionTracker.f7817i;
                             audioTrackPositionTracker.f7823o = jIntValue2;
                             jMax = Math.max(jIntValue2, 0L);
                             audioTrackPositionTracker.f7823o = jMax;
@@ -1537,7 +1542,7 @@ public final class DefaultAudioSink implements AudioSink {
                 long jM2992M = Util2.m2992M(jM3501a - j6);
                 float f = audioTrackPositionTracker.f7818j;
                 if (f != 1.0f) {
-                    jM2992M = Math.round(jM2992M / f);
+                    jM2992M = Math.round(jM2992M / ((double) f));
                 }
                 audioTrackPositionTracker.f7809a.mo3506a(System.currentTimeMillis() - Util2.m2992M(jM2992M));
             }
@@ -1563,8 +1568,8 @@ public final class DefaultAudioSink implements AudioSink {
     }
 
     @Override // com.google.android.exoplayer2.audio.AudioSink
-    /* renamed from: n */
-    public void mo8767n() throws IllegalStateException {
+    /* JADX INFO: renamed from: n */
+    public void mo8767n() {
         if (this.f19722W) {
             this.f19722W = false;
             flush();
@@ -1572,8 +1577,8 @@ public final class DefaultAudioSink implements AudioSink {
     }
 
     @Override // com.google.android.exoplayer2.audio.AudioSink
-    /* renamed from: o */
-    public void mo8768o(p007b.p225i.p226a.p242c.p263t2.AudioAttributes audioAttributes) throws IllegalStateException {
+    /* JADX INFO: renamed from: o */
+    public void mo8768o(p007b.p225i.p226a.p242c.p263t2.AudioAttributes audioAttributes) {
         if (this.f19745t.equals(audioAttributes)) {
             return;
         }
@@ -1585,13 +1590,13 @@ public final class DefaultAudioSink implements AudioSink {
     }
 
     @Override // com.google.android.exoplayer2.audio.AudioSink
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public void mo8769p() {
         this.f19704E = true;
     }
 
     @Override // com.google.android.exoplayer2.audio.AudioSink
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     public void mo8770q(float f) {
         if (this.f19707H != f) {
             this.f19707H = f;
@@ -1600,8 +1605,8 @@ public final class DefaultAudioSink implements AudioSink {
     }
 
     @Override // com.google.android.exoplayer2.audio.AudioSink
-    /* renamed from: r */
-    public void mo8771r() throws IllegalStateException {
+    /* JADX INFO: renamed from: r */
+    public void mo8771r() {
         AnimatableValueParser.m426D(Util2.f6708a >= 21);
         AnimatableValueParser.m426D(this.f19719T);
         if (this.f19722W) {
@@ -1612,7 +1617,7 @@ public final class DefaultAudioSink implements AudioSink {
     }
 
     @Override // com.google.android.exoplayer2.audio.AudioSink
-    public void reset() throws IllegalStateException {
+    public void reset() {
         flush();
         for (AudioProcessor audioProcessor : this.f19731f) {
             audioProcessor.reset();
@@ -1628,7 +1633,7 @@ public final class DefaultAudioSink implements AudioSink {
     /* JADX WARN: Removed duplicated region for block: B:149:0x0292 A[RETURN] */
     /* JADX WARN: Removed duplicated region for block: B:64:0x00ee  */
     @Override // com.google.android.exoplayer2.audio.AudioSink
-    /* renamed from: s */
+    /* JADX INFO: renamed from: s */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
@@ -1861,28 +1866,30 @@ public final class DefaultAudioSink implements AudioSink {
                 m8796f(j);
                 this.f19746u = null;
             }
-            long j2 = ((((this.f19743r.f19756c == 0 ? this.f19751z / r5.f19755b : this.f19700A) - this.f19730e.f7752o) * 1000000) / r5.f19754a.f7137K) + this.f19706G;
-            if (!this.f19704E && Math.abs(j2 - j) > 200000) {
-                ((MediaCodecAudioRenderer.b) this.f19741p).m3517a(new AudioSink.UnexpectedDiscontinuityException(j, j2));
+            long j2 = this.f19706G;
+            C10689c c10689c4 = this.f19743r;
+            long j3 = ((((c10689c4.f19756c == 0 ? this.f19751z / ((long) c10689c4.f19755b) : this.f19700A) - this.f19730e.f7752o) * 1000000) / ((long) c10689c4.f19754a.f7137K)) + j2;
+            if (!this.f19704E && Math.abs(j3 - j) > 200000) {
+                ((MediaCodecAudioRenderer.b) this.f19741p).m3517a(new AudioSink.UnexpectedDiscontinuityException(j, j3));
                 this.f19704E = true;
             }
             if (this.f19704E) {
                 if (!m8797g()) {
                     return false;
                 }
-                long j3 = j - j2;
-                this.f19706G += j3;
+                long j4 = j - j3;
+                this.f19706G += j4;
                 this.f19704E = false;
                 m8796f(j);
                 AudioSink.InterfaceC10686a interfaceC10686a = this.f19741p;
-                if (interfaceC10686a != null && j3 != 0) {
+                if (interfaceC10686a != null && j4 != 0) {
                     MediaCodecAudioRenderer.this.f7858V0 = true;
                 }
             }
             if (this.f19743r.f19756c == 0) {
-                this.f19751z += byteBuffer.remaining();
+                this.f19751z += (long) byteBuffer.remaining();
             } else {
-                this.f19700A += this.f19703D * i;
+                this.f19700A += (long) (this.f19703D * i);
             }
             this.f19710K = byteBuffer;
             this.f19711L = i;
@@ -1903,13 +1910,13 @@ public final class DefaultAudioSink implements AudioSink {
     }
 
     @Override // com.google.android.exoplayer2.audio.AudioSink
-    /* renamed from: t */
+    /* JADX INFO: renamed from: t */
     public void mo8773t(AudioSink.InterfaceC10686a interfaceC10686a) {
         this.f19741p = interfaceC10686a;
     }
 
     @Override // com.google.android.exoplayer2.audio.AudioSink
-    /* renamed from: u */
+    /* JADX INFO: renamed from: u */
     public int mo8774u(Format2 format2) {
         if (!"audio/raw".equals(format2.f7155w)) {
             if (this.f19724Y || !m8794P(format2, this.f19745t)) {
@@ -1926,7 +1933,7 @@ public final class DefaultAudioSink implements AudioSink {
     }
 
     @Override // com.google.android.exoplayer2.audio.AudioSink
-    /* renamed from: v */
+    /* JADX INFO: renamed from: v */
     public void mo8775v(Format2 format2, int i, @Nullable int[] iArr) throws AudioSink.ConfigurationException {
         int iIntValue;
         int iIntValue2;
@@ -2030,13 +2037,13 @@ public final class DefaultAudioSink implements AudioSink {
     }
 
     @Override // com.google.android.exoplayer2.audio.AudioSink
-    /* renamed from: w */
+    /* JADX INFO: renamed from: w */
     public void mo8776w(boolean z2) {
         m8790L(m8799z(), z2);
     }
 
     @Override // com.google.android.exoplayer2.audio.AudioSink
-    /* renamed from: x */
+    /* JADX INFO: renamed from: x */
     public void mo8777x(AuxEffectInfo auxEffectInfo) {
         if (this.f19721V.equals(auxEffectInfo)) {
             return;
@@ -2055,7 +2062,7 @@ public final class DefaultAudioSink implements AudioSink {
         this.f19721V = auxEffectInfo;
     }
 
-    /* renamed from: z */
+    /* JADX INFO: renamed from: z */
     public final PlaybackParameters m8799z() {
         return m8781B().f19766a;
     }

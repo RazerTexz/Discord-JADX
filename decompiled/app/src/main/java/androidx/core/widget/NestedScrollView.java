@@ -42,7 +42,7 @@ import androidx.core.view.accessibility.AccessibilityRecordCompat;
 import java.util.ArrayList;
 import p007b.p100d.p104b.p105a.outline;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class NestedScrollView extends FrameLayout implements NestedScrollingParent3, NestedScrollingChild3, ScrollingView {
     public static final int ANIMATED_SCROLL_GAP = 250;
     private static final int DEFAULT_SMOOTH_SCROLL_DURATION = 250;
@@ -150,7 +150,7 @@ public class NestedScrollView extends FrameLayout implements NestedScrollingPare
         public static final Parcelable.Creator<SavedState> CREATOR = new C03031();
         public int scrollPosition;
 
-        /* renamed from: androidx.core.widget.NestedScrollView$SavedState$1 */
+        /* JADX INFO: renamed from: androidx.core.widget.NestedScrollView$SavedState$1 */
         public class C03031 implements Parcelable.Creator<SavedState> {
             @Override // android.os.Parcelable.Creator
             public /* bridge */ /* synthetic */ SavedState createFromParcel(Parcel parcel) {

@@ -29,18 +29,18 @@ import p507d0.p584w.p586i.p587a.ContinuationImpl6;
 import p507d0.p584w.p586i.p587a.DebugMetadata;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: MobileWebHandoff.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: MobileWebHandoff.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class MobileWebHandoff {
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private final AnalyticsUtils.Tracker analytics;
     private final StoreAuthentication authStore;
     private final Context context;
     private final RestAPI restAPI;
 
-    /* compiled from: MobileWebHandoff.kt */
+    /* JADX INFO: compiled from: MobileWebHandoff.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -56,9 +56,9 @@ public final class MobileWebHandoff {
         }
     }
 
-    /* compiled from: MobileWebHandoff.kt */
+    /* JADX INFO: renamed from: com.discord.utilities.handoff.MobileWebHandoff$redirectWithHandoffToken$1 */
+    /* JADX INFO: compiled from: MobileWebHandoff.kt */
     @DebugMetadata(m10084c = "com.discord.utilities.handoff.MobileWebHandoff", m10085f = "MobileWebHandoff.kt", m10086l = {44}, m10087m = "redirectWithHandoffToken")
-    /* renamed from: com.discord.utilities.handoff.MobileWebHandoff$redirectWithHandoffToken$1 */
     public static final class C67701 extends ContinuationImpl3 {
         public Object L$0;
         public Object L$1;
@@ -80,9 +80,9 @@ public final class MobileWebHandoff {
         }
     }
 
-    /* compiled from: MobileWebHandoff.kt */
+    /* JADX INFO: renamed from: com.discord.utilities.handoff.MobileWebHandoff$tryLaunchRedirectTo$1 */
+    /* JADX INFO: compiled from: MobileWebHandoff.kt */
     @DebugMetadata(m10084c = "com.discord.utilities.handoff.MobileWebHandoff$tryLaunchRedirectTo$1", m10085f = "MobileWebHandoff.kt", m10086l = {36}, m10087m = "invokeSuspend")
-    /* renamed from: com.discord.utilities.handoff.MobileWebHandoff$tryLaunchRedirectTo$1 */
     public static final class C67721 extends ContinuationImpl6 implements Function2<CoroutineScope, Continuation<? super Unit>, Object> {
         public final /* synthetic */ boolean $preventCustomTab;
         public final /* synthetic */ boolean $skipLoginRedirect;

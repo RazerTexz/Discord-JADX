@@ -6,18 +6,18 @@ import p507d0.p513e0.p514p.p515d.p517m0.p521c.SourceElement;
 import p507d0.p513e0.p514p.p515d.p517m0.p548g.Name;
 import p507d0.p513e0.p514p.p515d.p517m0.p566m.StorageManager;
 
-/* compiled from: ClassDescriptorBase.java */
-/* renamed from: d0.e0.p.d.m0.c.i1.h, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.c.i1.h, reason: use source file name */
+/* JADX INFO: compiled from: ClassDescriptorBase.java */
+/* JADX INFO: loaded from: classes3.dex */
 public abstract class ClassDescriptorBase extends AbstractClassDescriptor {
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public final DeclarationDescriptor f22875o;
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public final SourceElement f22876p;
 
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     public final boolean f22877q;
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -44,7 +44,7 @@ public abstract class ClassDescriptorBase extends AbstractClassDescriptor {
         this.f22877q = z2;
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static /* synthetic */ void m9410a(int i) {
         String str = (i == 4 || i == 5) ? "@NotNull method %s.%s must not return null" : "Argument for @NotNull parameter '%s' of %s.%s must not be null";
         Object[] objArr = new Object[(i == 4 || i == 5) ? 2 : 3];

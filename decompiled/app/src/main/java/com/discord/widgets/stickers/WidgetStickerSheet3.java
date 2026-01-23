@@ -6,9 +6,9 @@ import java.util.Objects;
 import kotlin.jvm.functions.Function0;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetStickerSheet.kt */
-/* renamed from: com.discord.widgets.stickers.WidgetStickerSheet$viewModel$2, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: com.discord.widgets.stickers.WidgetStickerSheet$viewModel$2, reason: use source file name */
+/* JADX INFO: compiled from: WidgetStickerSheet.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class WidgetStickerSheet3 extends Lambda implements Function0<StickerSheetViewModel> {
     public final /* synthetic */ WidgetStickerSheet this$0;
 

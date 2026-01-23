@@ -1,8 +1,8 @@
 package com.discord.api.permission;
 
 
-/* compiled from: Permission.kt */
-/* renamed from: com.discord.api.permission.PermissionKt, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: com.discord.api.permission.PermissionKt, reason: use source file name */
+/* JADX INFO: compiled from: Permission.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class Permission2 {
 }

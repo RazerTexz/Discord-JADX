@@ -26,8 +26,8 @@ import java.util.Map;
 import p007b.p225i.p226a.p341g.p353l.p354l.TransitionListenerAdapter3;
 import p007b.p225i.p226a.p341g.p353l.p354l.TransitionUtils5;
 
+/* JADX INFO: loaded from: classes3.dex */
 @RequiresApi(21)
-/* loaded from: classes3.dex */
 public class MaterialContainerTransformSharedElementCallback extends SharedElementCallback {
 
     @Nullable
@@ -59,10 +59,10 @@ public class MaterialContainerTransformSharedElementCallback extends SharedEleme
         }
     }
 
-    /* renamed from: com.google.android.material.transition.platform.MaterialContainerTransformSharedElementCallback$a */
+    /* JADX INFO: renamed from: com.google.android.material.transition.platform.MaterialContainerTransformSharedElementCallback$a */
     public class C11059a extends TransitionListenerAdapter3 {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final /* synthetic */ Window f21390a;
 
         public C11059a(MaterialContainerTransformSharedElementCallback materialContainerTransformSharedElementCallback, Window window) {
@@ -80,10 +80,10 @@ public class MaterialContainerTransformSharedElementCallback extends SharedEleme
         }
     }
 
-    /* renamed from: com.google.android.material.transition.platform.MaterialContainerTransformSharedElementCallback$b */
+    /* JADX INFO: renamed from: com.google.android.material.transition.platform.MaterialContainerTransformSharedElementCallback$b */
     public class C11060b extends TransitionListenerAdapter3 {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final /* synthetic */ Activity f21391a;
 
         public C11060b(MaterialContainerTransformSharedElementCallback materialContainerTransformSharedElementCallback, Activity activity) {
@@ -102,10 +102,10 @@ public class MaterialContainerTransformSharedElementCallback extends SharedEleme
         }
     }
 
-    /* renamed from: com.google.android.material.transition.platform.MaterialContainerTransformSharedElementCallback$c */
+    /* JADX INFO: renamed from: com.google.android.material.transition.platform.MaterialContainerTransformSharedElementCallback$c */
     public class C11061c extends TransitionListenerAdapter3 {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final /* synthetic */ Window f21392a;
 
         public C11061c(MaterialContainerTransformSharedElementCallback materialContainerTransformSharedElementCallback, Window window) {

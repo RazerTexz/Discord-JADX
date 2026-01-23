@@ -19,25 +19,25 @@ import p007b.p100d.p104b.p105a.outline;
 import p007b.p109f.p190m.ApkSoSource;
 import p007b.p109f.p190m.UnpackingSoSource;
 
-/* compiled from: ExtractFromZipSoSource.java */
-/* renamed from: b.f.m.f, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.f.m.f, reason: use source file name */
+/* JADX INFO: compiled from: ExtractFromZipSoSource.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class ExtractFromZipSoSource extends UnpackingSoSource {
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final File f4325f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public final String f4326g;
 
-    /* compiled from: ExtractFromZipSoSource.java */
-    /* renamed from: b.f.m.f$b */
+    /* JADX INFO: renamed from: b.f.m.f$b */
+    /* JADX INFO: compiled from: ExtractFromZipSoSource.java */
     public static final class b extends UnpackingSoSource.b implements Comparable {
 
-        /* renamed from: l */
+        /* JADX INFO: renamed from: l */
         public final ZipEntry f4327l;
 
-        /* renamed from: m */
+        /* JADX INFO: renamed from: m */
         public final int f4328m;
 
         public b(String str, ZipEntry zipEntry, int i) {
@@ -52,38 +52,38 @@ public class ExtractFromZipSoSource extends UnpackingSoSource {
         }
     }
 
-    /* compiled from: ExtractFromZipSoSource.java */
-    /* renamed from: b.f.m.f$c */
+    /* JADX INFO: renamed from: b.f.m.f$c */
+    /* JADX INFO: compiled from: ExtractFromZipSoSource.java */
     public class c extends UnpackingSoSource.f {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public b[] f4329j;
 
-        /* renamed from: k */
+        /* JADX INFO: renamed from: k */
         public final ZipFile f4330k;
 
-        /* renamed from: l */
+        /* JADX INFO: renamed from: l */
         public final UnpackingSoSource f4331l;
 
-        /* compiled from: ExtractFromZipSoSource.java */
-        /* renamed from: b.f.m.f$c$a */
+        /* JADX INFO: renamed from: b.f.m.f$c$a */
+        /* JADX INFO: compiled from: ExtractFromZipSoSource.java */
         public final class a extends UnpackingSoSource.e {
 
-            /* renamed from: j */
+            /* JADX INFO: renamed from: j */
             public int f4333j;
 
             public a(a aVar) {
             }
 
             @Override // p007b.p109f.p190m.UnpackingSoSource.e
-            /* renamed from: a */
+            /* JADX INFO: renamed from: a */
             public boolean mo1575a() {
                 c.this.m1577c();
                 return this.f4333j < c.this.f4329j.length;
             }
 
             @Override // p007b.p109f.p190m.UnpackingSoSource.e
-            /* renamed from: b */
+            /* JADX INFO: renamed from: b */
             public UnpackingSoSource.d mo1576b() throws IOException {
                 c.this.m1577c();
                 c cVar = c.this;
@@ -109,20 +109,20 @@ public class ExtractFromZipSoSource extends UnpackingSoSource {
         }
 
         @Override // p007b.p109f.p190m.UnpackingSoSource.f
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final UnpackingSoSource.c mo1573a() throws IOException {
             return new UnpackingSoSource.c(m1577c());
         }
 
         @Override // p007b.p109f.p190m.UnpackingSoSource.f
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final UnpackingSoSource.e mo1574b() throws IOException {
             return new a(null);
         }
 
         /* JADX WARN: Removed duplicated region for block: B:44:0x0120  */
         /* JADX WARN: Removed duplicated region for block: B:45:0x0123  */
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         /*
             Code decompiled incorrectly, please refer to instructions dump.
         */

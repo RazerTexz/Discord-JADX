@@ -10,12 +10,12 @@ import java.util.Map;
 import p507d0.p580t.Maps6;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: LocalizedString.kt */
-/* renamed from: com.discord.api.localizedstring.LocalizedStringTypeAdapter, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: com.discord.api.localizedstring.LocalizedStringTypeAdapter, reason: use source file name */
+/* JADX INFO: compiled from: LocalizedString.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class LocalizedString2 extends TypeAdapter<LocalizedString> {
 
-    /* renamed from: com.discord.api.localizedstring.LocalizedStringTypeAdapter$WhenMappings */
+    /* JADX INFO: renamed from: com.discord.api.localizedstring.LocalizedStringTypeAdapter$WhenMappings */
     public final /* synthetic */ class WhenMappings {
         public static final /* synthetic */ int[] $EnumSwitchMapping$0;
 

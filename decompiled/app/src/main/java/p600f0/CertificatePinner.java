@@ -23,36 +23,36 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.TypeIntrinsics;
 import p600f0.p601e0.p612m.CertificateChainCleaner;
 
-/* compiled from: CertificatePinner.kt */
-/* renamed from: f0.g, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: f0.g, reason: use source file name */
+/* JADX INFO: compiled from: CertificatePinner.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class CertificatePinner {
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final Set<b> f25905c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final CertificateChainCleaner f25906d;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static final a f25904b = new a(null);
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final CertificatePinner f25903a = new CertificatePinner(_Collections.toSet(new ArrayList()), null, 2);
 
-    /* compiled from: CertificatePinner.kt */
-    /* renamed from: f0.g$a */
+    /* JADX INFO: renamed from: f0.g$a */
+    /* JADX INFO: compiled from: CertificatePinner.kt */
     public static final class a {
         public a(DefaultConstructorMarker defaultConstructorMarker) {
         }
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final String m10370a(Certificate certificate) {
             Intrinsics3.checkParameterIsNotNull(certificate, "certificate");
             return "sha256/" + m10371b((X509Certificate) certificate).mo10500f();
         }
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final ByteString m10371b(X509Certificate x509Certificate) {
             Intrinsics3.checkParameterIsNotNull(x509Certificate, "$this$sha256Hash");
             ByteString.Companion companion = ByteString.INSTANCE;
@@ -64,8 +64,8 @@ public final class CertificatePinner {
         }
     }
 
-    /* compiled from: CertificatePinner.kt */
-    /* renamed from: f0.g$b */
+    /* JADX INFO: renamed from: f0.g$b */
+    /* JADX INFO: compiled from: CertificatePinner.kt */
     public static final class b {
         public boolean equals(Object obj) {
             if (this == obj) {
@@ -106,7 +106,7 @@ public final class CertificatePinner {
         this.f25906d = null;
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final void m10368a(String str, Function0<? extends List<? extends X509Certificate>> function0) throws SSLPeerUnverifiedException {
         Intrinsics3.checkParameterIsNotNull(str, "hostname");
         Intrinsics3.checkParameterIsNotNull(function0, "cleanedPeerCertificatesFn");
@@ -174,7 +174,7 @@ public final class CertificatePinner {
         throw new SSLPeerUnverifiedException(string);
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final CertificatePinner m10369b(CertificateChainCleaner certificateChainCleaner) {
         Intrinsics3.checkParameterIsNotNull(certificateChainCleaner, "certificateChainCleaner");
         return Intrinsics3.areEqual(this.f25906d, certificateChainCleaner) ? this : new CertificatePinner(this.f25905c, certificateChainCleaner);

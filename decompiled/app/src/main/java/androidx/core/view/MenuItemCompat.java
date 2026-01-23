@@ -8,7 +8,7 @@ import android.view.MenuItem;
 import android.view.View;
 import androidx.core.internal.view.SupportMenuItem;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public final class MenuItemCompat {
 
     @Deprecated
@@ -27,7 +27,7 @@ public final class MenuItemCompat {
     public static final int SHOW_AS_ACTION_WITH_TEXT = 4;
     private static final String TAG = "MenuItemCompat";
 
-    /* renamed from: androidx.core.view.MenuItemCompat$1 */
+    /* JADX INFO: renamed from: androidx.core.view.MenuItemCompat$1 */
     public class MenuItemOnActionExpandListenerC02791 implements MenuItem.OnActionExpandListener {
         public final /* synthetic */ OnActionExpandListener val$listener;
 

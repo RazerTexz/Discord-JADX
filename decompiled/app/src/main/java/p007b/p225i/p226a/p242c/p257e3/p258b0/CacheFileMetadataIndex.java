@@ -15,18 +15,18 @@ import java.util.Set;
 import p007b.p225i.p226a.p242c.p264u2.DatabaseProvider;
 import p007b.p225i.p226a.p242c.p264u2.VersionTable;
 
-/* compiled from: CacheFileMetadataIndex.java */
-/* renamed from: b.i.a.c.e3.b0.f, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.e3.b0.f, reason: use source file name */
+/* JADX INFO: compiled from: CacheFileMetadataIndex.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class CacheFileMetadataIndex {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final String[] f6461a = {ModelAuditLogEntry.CHANGE_KEY_NAME, "length", "last_touch_timestamp"};
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final DatabaseProvider f6462b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public String f6463c;
 
     public CacheFileMetadataIndex(DatabaseProvider databaseProvider) {
@@ -34,7 +34,7 @@ public final class CacheFileMetadataIndex {
     }
 
     @WorkerThread
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public Map<String, CacheFileMetadata> m2787a() throws DatabaseIOException {
         try {
             Objects.requireNonNull(this.f6463c);
@@ -56,7 +56,7 @@ public final class CacheFileMetadataIndex {
     }
 
     @WorkerThread
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public void m2788b(long j) throws DatabaseIOException {
         try {
             String hexString = Long.toHexString(j);
@@ -89,7 +89,7 @@ public final class CacheFileMetadataIndex {
     }
 
     @WorkerThread
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public void m2789c(Set<String> set) throws DatabaseIOException {
         Objects.requireNonNull(this.f6463c);
         try {
@@ -110,7 +110,7 @@ public final class CacheFileMetadataIndex {
     }
 
     @WorkerThread
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public void m2790d(String str, long j, long j2) throws DatabaseIOException {
         Objects.requireNonNull(this.f6463c);
         try {

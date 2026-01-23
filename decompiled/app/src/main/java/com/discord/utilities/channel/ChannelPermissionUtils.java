@@ -12,27 +12,20 @@ import p507d0.Tuples;
 import p507d0.p580t.Maps6;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ChannelPermissionUtils.kt */
-/* renamed from: com.discord.utilities.channel.ChannelPermissionUtilsKt, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.utilities.channel.ChannelPermissionUtilsKt, reason: use source file name */
+/* JADX INFO: compiled from: ChannelPermissionUtils.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class ChannelPermissionUtils {
-    /* JADX WARN: Multi-variable type inference failed */
-    /* JADX WARN: Type inference failed for: r4v17, types: [java.lang.CharSequence] */
-    /* JADX WARN: Type inference failed for: r5v11, types: [java.lang.CharSequence] */
-    /* JADX WARN: Type inference failed for: r5v14, types: [java.lang.CharSequence] */
-    /* JADX WARN: Type inference failed for: r6v6, types: [java.lang.CharSequence] */
-    /* JADX WARN: Type inference failed for: r7v11, types: [java.lang.CharSequence] */
-    /* JADX WARN: Type inference failed for: r8v9, types: [java.lang.CharSequence] */
     public static final Map<Integer, ChannelPermissionUtils2> getCategoryLabels(boolean z2, Context context) {
         String str;
-        String strM216h;
-        String strM216h2;
+        CharSequence charSequenceM216h;
+        CharSequence charSequenceM216h2;
         String str2;
-        String strM216h3;
-        String strM216h4;
+        CharSequence charSequenceM216h3;
+        CharSequence charSequenceM216h4;
         String str3;
-        String strM216h5;
-        String strM216h6;
+        CharSequence charSequenceM216h5;
+        CharSequence charSequenceM216h6;
         Intrinsics3.checkNotNullParameter(context, "context");
         Tuples2[] tuples2Arr = new Tuples2[29];
         Integer numValueOf = Integer.valueOf(C5419R.id.channel_permission_text_read_messages);
@@ -64,58 +57,58 @@ public final class ChannelPermissionUtils {
         tuples2Arr[5] = Tuples.m10073to(numValueOf6, new ChannelPermissionUtils2(string8, null, null, null, null, null, null, null, FormatUtils.m216h(context, C5419R.string.role_permissions_send_messages_description_announcement, new Object[]{appHelpDesk.m149a(360032008192L, null)}, null, 4), 254, null));
         Integer numValueOf7 = Integer.valueOf(C5419R.id.channel_permission_text_send_messages_in_threads);
         if (z2) {
-            strM216h = context.getString(C5419R.string.role_permissions_send_messages_in_threads_description_category);
+            charSequenceM216h = context.getString(C5419R.string.role_permissions_send_messages_in_threads_description_category);
             str = "context.getString(R.stri…ads_description_category)";
-            Intrinsics3.checkNotNullExpressionValue(strM216h, str);
+            Intrinsics3.checkNotNullExpressionValue(charSequenceM216h, str);
         } else {
             str = "context.getString(R.stri…ads_description_category)";
-            strM216h = FormatUtils.m216h(context, C5419R.string.f14771x98d4cb90, new Object[0], null, 4);
+            charSequenceM216h = FormatUtils.m216h(context, C5419R.string.f14771x98d4cb90, new Object[0], null, 4);
         }
         if (z2) {
             String string9 = context.getString(C5419R.string.role_permissions_send_messages_in_threads_description_category);
             Intrinsics3.checkNotNullExpressionValue(string9, str);
-            strM216h2 = string9;
+            charSequenceM216h2 = string9;
         } else {
-            strM216h2 = FormatUtils.m216h(context, C5419R.string.f14771x98d4cb90, new Object[0], null, 4);
+            charSequenceM216h2 = FormatUtils.m216h(context, C5419R.string.f14771x98d4cb90, new Object[0], null, 4);
         }
         String str4 = str;
-        tuples2Arr[6] = Tuples.m10073to(numValueOf7, new ChannelPermissionUtils2(strM216h, null, null, null, null, null, null, strM216h2, null, 382, null));
+        tuples2Arr[6] = Tuples.m10073to(numValueOf7, new ChannelPermissionUtils2(charSequenceM216h, null, null, null, null, null, null, charSequenceM216h2, null, 382, null));
         Integer numValueOf8 = Integer.valueOf(C5419R.id.channel_permission_text_create_public_threads);
         if (z2) {
-            strM216h3 = context.getString(C5419R.string.role_permissions_create_public_threads_description_category);
+            charSequenceM216h3 = context.getString(C5419R.string.role_permissions_create_public_threads_description_category);
             str2 = str4;
-            Intrinsics3.checkNotNullExpressionValue(strM216h3, str2);
+            Intrinsics3.checkNotNullExpressionValue(charSequenceM216h3, str2);
         } else {
             str2 = str4;
-            strM216h3 = FormatUtils.m216h(context, C5419R.string.f14770x8ac810cf, new Object[0], null, 4);
+            charSequenceM216h3 = FormatUtils.m216h(context, C5419R.string.f14770x8ac810cf, new Object[0], null, 4);
         }
         if (z2) {
             String string10 = context.getString(C5419R.string.role_permissions_create_public_threads_description_category);
             Intrinsics3.checkNotNullExpressionValue(string10, str2);
-            strM216h4 = string10;
+            charSequenceM216h4 = string10;
         } else {
-            strM216h4 = FormatUtils.m216h(context, C5419R.string.f14770x8ac810cf, new Object[0], null, 4);
+            charSequenceM216h4 = FormatUtils.m216h(context, C5419R.string.f14770x8ac810cf, new Object[0], null, 4);
         }
-        String str5 = strM216h4;
-        String str6 = str2;
-        tuples2Arr[7] = Tuples.m10073to(numValueOf8, new ChannelPermissionUtils2(strM216h3, null, null, null, null, null, null, str5, null, 382, null));
+        CharSequence charSequence = charSequenceM216h4;
+        String str5 = str2;
+        tuples2Arr[7] = Tuples.m10073to(numValueOf8, new ChannelPermissionUtils2(charSequenceM216h3, null, null, null, null, null, null, charSequence, null, 382, null));
         Integer numValueOf9 = Integer.valueOf(C5419R.id.channel_permission_text_create_private_threads);
         if (z2) {
-            strM216h5 = context.getString(C5419R.string.role_permissions_create_private_threads_description_category);
-            str3 = str6;
-            Intrinsics3.checkNotNullExpressionValue(strM216h5, str3);
+            charSequenceM216h5 = context.getString(C5419R.string.role_permissions_create_private_threads_description_category);
+            str3 = str5;
+            Intrinsics3.checkNotNullExpressionValue(charSequenceM216h5, str3);
         } else {
-            str3 = str6;
-            strM216h5 = FormatUtils.m216h(context, C5419R.string.f14769x19ffc831, new Object[0], null, 4);
+            str3 = str5;
+            charSequenceM216h5 = FormatUtils.m216h(context, C5419R.string.f14769x19ffc831, new Object[0], null, 4);
         }
         if (z2) {
             String string11 = context.getString(C5419R.string.role_permissions_create_private_threads_description_category);
             Intrinsics3.checkNotNullExpressionValue(string11, str3);
-            strM216h6 = string11;
+            charSequenceM216h6 = string11;
         } else {
-            strM216h6 = FormatUtils.m216h(context, C5419R.string.f14769x19ffc831, new Object[0], null, 4);
+            charSequenceM216h6 = FormatUtils.m216h(context, C5419R.string.f14769x19ffc831, new Object[0], null, 4);
         }
-        tuples2Arr[8] = Tuples.m10073to(numValueOf9, new ChannelPermissionUtils2(strM216h5, null, null, null, null, null, null, strM216h6, null, 382, null));
+        tuples2Arr[8] = Tuples.m10073to(numValueOf9, new ChannelPermissionUtils2(charSequenceM216h5, null, null, null, null, null, null, charSequenceM216h6, null, 382, null));
         Integer numValueOf10 = Integer.valueOf(C5419R.id.channel_permission_general_create_instant_invite);
         String string12 = context.getString(C5419R.string.role_permissions_create_instant_invite_description_category);
         Intrinsics3.checkNotNullExpressionValue(string12, "context.getString(R.stri…ite_description_category)");

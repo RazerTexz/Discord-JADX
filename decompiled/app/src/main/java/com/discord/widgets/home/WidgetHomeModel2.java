@@ -6,9 +6,9 @@ import kotlin.Tuples2;
 import p507d0.Tuples;
 import p658rx.functions.Func2;
 
-/* compiled from: WidgetHomeModel.kt */
-/* renamed from: com.discord.widgets.home.WidgetHomeModel$Companion$get$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.home.WidgetHomeModel$Companion$get$1, reason: use source file name */
+/* JADX INFO: compiled from: WidgetHomeModel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetHomeModel2<T1, T2, R> implements Func2<Long, StoreChannelsSelected.ResolvedSelectedChannel, Tuples2<? extends Long, ? extends StoreChannelsSelected.ResolvedSelectedChannel>> {
     public static final WidgetHomeModel2 INSTANCE = new WidgetHomeModel2();
 
@@ -17,7 +17,7 @@ public final class WidgetHomeModel2<T1, T2, R> implements Func2<Long, StoreChann
         return call2(l, resolvedSelectedChannel);
     }
 
-    /* renamed from: call, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
     public final Tuples2<Long, StoreChannelsSelected.ResolvedSelectedChannel> call2(Long l, StoreChannelsSelected.ResolvedSelectedChannel resolvedSelectedChannel) {
         return Tuples.m10073to(l, resolvedSelectedChannel);
     }

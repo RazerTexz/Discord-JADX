@@ -18,30 +18,30 @@ import p007b.p225i.p226a.p288f.p313h.p325l.C3877w4;
 import p007b.p225i.p226a.p288f.p313h.p325l.InterfaceC3612c6;
 import p007b.p225i.p226a.p288f.p313h.p325l.InterfaceC3801q6;
 
-/* compiled from: com.google.android.gms:play-services-measurement-base@@18.0.0 */
-/* loaded from: classes3.dex */
+/* JADX INFO: compiled from: com.google.android.gms:play-services-measurement-base@@18.0.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public abstract class zzhi extends AbstractC3850u3 {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final Logger f20628a = Logger.getLogger(zzhi.class.getName());
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static final boolean f20629b = C3711j7.f10038g;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public C3666g4 f20630c;
 
-    /* compiled from: com.google.android.gms:play-services-measurement-base@@18.0.0 */
-    /* renamed from: com.google.android.gms.internal.measurement.zzhi$a */
+    /* JADX INFO: renamed from: com.google.android.gms.internal.measurement.zzhi$a */
+    /* JADX INFO: compiled from: com.google.android.gms:play-services-measurement-base@@18.0.0 */
     public static class C10804a extends zzhi {
 
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         public final byte[] f20631d;
 
-        /* renamed from: e */
+        /* JADX INFO: renamed from: e */
         public final int f20632e;
 
-        /* renamed from: f */
+        /* JADX INFO: renamed from: f */
         public int f20633f;
 
         public C10804a(byte[] bArr, int i) {
@@ -55,7 +55,7 @@ public abstract class zzhi extends AbstractC3850u3 {
         }
 
         @Override // com.google.android.gms.internal.measurement.zzhi
-        /* renamed from: A */
+        /* JADX INFO: renamed from: A */
         public final void mo9080A(long j) throws IOException {
             try {
                 byte[] bArr = this.f20631d;
@@ -89,7 +89,7 @@ public abstract class zzhi extends AbstractC3850u3 {
         }
 
         @Override // com.google.android.gms.internal.measurement.zzhi
-        /* renamed from: C */
+        /* JADX INFO: renamed from: C */
         public final void mo9081C(int i) throws IOException {
             try {
                 byte[] bArr = this.f20631d;
@@ -111,25 +111,25 @@ public abstract class zzhi extends AbstractC3850u3 {
         }
 
         @Override // com.google.android.gms.internal.measurement.zzhi
-        /* renamed from: G */
+        /* JADX INFO: renamed from: G */
         public final void mo9082G(int i, int i2) throws IOException {
             mo9094r((i << 3) | 5);
             mo9081C(i2);
         }
 
-        /* renamed from: W */
+        /* JADX INFO: renamed from: W */
         public final void m9099W(AbstractC3837t3 abstractC3837t3) throws IOException {
             mo9094r(abstractC3837t3.mo5282d());
             abstractC3837t3.mo5286j(this);
         }
 
-        /* renamed from: X */
+        /* JADX INFO: renamed from: X */
         public final void m9100X(InterfaceC3612c6 interfaceC3612c6) throws IOException {
             mo9094r(interfaceC3612c6.mo4606g());
             interfaceC3612c6.mo4608i(this);
         }
 
-        /* renamed from: Y */
+        /* JADX INFO: renamed from: Y */
         public final void m9101Y(String str) throws IOException {
             int i = this.f20633f;
             try {
@@ -163,7 +163,7 @@ public abstract class zzhi extends AbstractC3850u3 {
             }
         }
 
-        /* renamed from: Z */
+        /* JADX INFO: renamed from: Z */
         public final void m9102Z(byte[] bArr, int i, int i2) throws IOException {
             try {
                 System.arraycopy(bArr, i, this.f20631d, this.f20633f, i2);
@@ -174,13 +174,13 @@ public abstract class zzhi extends AbstractC3850u3 {
         }
 
         @Override // com.google.android.gms.internal.measurement.zzhi
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final int mo9083a() {
             return this.f20632e - this.f20633f;
         }
 
         @Override // com.google.android.gms.internal.measurement.zzhi
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         public final void mo9084d(byte b2) throws IOException {
             try {
                 byte[] bArr = this.f20631d;
@@ -193,7 +193,7 @@ public abstract class zzhi extends AbstractC3850u3 {
         }
 
         @Override // com.google.android.gms.internal.measurement.zzhi
-        /* renamed from: e */
+        /* JADX INFO: renamed from: e */
         public final void mo9085e(int i) throws IOException {
             if (i >= 0) {
                 mo9094r(i);
@@ -203,27 +203,27 @@ public abstract class zzhi extends AbstractC3850u3 {
         }
 
         @Override // com.google.android.gms.internal.measurement.zzhi
-        /* renamed from: f */
+        /* JADX INFO: renamed from: f */
         public final void mo9086f(int i, int i2) throws IOException {
             mo9094r((i << 3) | i2);
         }
 
         @Override // com.google.android.gms.internal.measurement.zzhi
-        /* renamed from: g */
+        /* JADX INFO: renamed from: g */
         public final void mo9087g(int i, long j) throws IOException {
             mo9094r((i << 3) | 0);
             mo9093m(j);
         }
 
         @Override // com.google.android.gms.internal.measurement.zzhi
-        /* renamed from: h */
+        /* JADX INFO: renamed from: h */
         public final void mo9088h(int i, AbstractC3837t3 abstractC3837t3) throws IOException {
             mo9094r((i << 3) | 2);
             m9099W(abstractC3837t3);
         }
 
         @Override // com.google.android.gms.internal.measurement.zzhi
-        /* renamed from: i */
+        /* JADX INFO: renamed from: i */
         public final void mo9089i(int i, InterfaceC3612c6 interfaceC3612c6) throws IOException {
             mo9086f(1, 3);
             mo9097y(2, i);
@@ -233,7 +233,7 @@ public abstract class zzhi extends AbstractC3850u3 {
         }
 
         @Override // com.google.android.gms.internal.measurement.zzhi
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public final void mo9090j(int i, InterfaceC3612c6 interfaceC3612c6, InterfaceC3801q6 interfaceC3801q6) throws IOException {
             mo9094r((i << 3) | 2);
             AbstractC3733l3 abstractC3733l3 = (AbstractC3733l3) interfaceC3612c6;
@@ -247,21 +247,21 @@ public abstract class zzhi extends AbstractC3850u3 {
         }
 
         @Override // com.google.android.gms.internal.measurement.zzhi
-        /* renamed from: k */
+        /* JADX INFO: renamed from: k */
         public final void mo9091k(int i, String str) throws IOException {
             mo9094r((i << 3) | 2);
             m9101Y(str);
         }
 
         @Override // com.google.android.gms.internal.measurement.zzhi
-        /* renamed from: l */
+        /* JADX INFO: renamed from: l */
         public final void mo9092l(int i, boolean z2) throws IOException {
             mo9094r((i << 3) | 0);
             mo9084d(z2 ? (byte) 1 : (byte) 0);
         }
 
         @Override // com.google.android.gms.internal.measurement.zzhi
-        /* renamed from: m */
+        /* JADX INFO: renamed from: m */
         public final void mo9093m(long j) throws IOException {
             if (zzhi.f20629b && mo9083a() >= 10) {
                 while ((j & (-128)) != 0) {
@@ -295,7 +295,7 @@ public abstract class zzhi extends AbstractC3850u3 {
         }
 
         @Override // com.google.android.gms.internal.measurement.zzhi
-        /* renamed from: r */
+        /* JADX INFO: renamed from: r */
         public final void mo9094r(int i) throws IOException {
             if (!zzhi.f20629b || C3798q3.m5185a() || mo9083a() < 5) {
                 while ((i & (-128)) != 0) {
@@ -369,7 +369,7 @@ public abstract class zzhi extends AbstractC3850u3 {
         }
 
         @Override // com.google.android.gms.internal.measurement.zzhi
-        /* renamed from: s */
+        /* JADX INFO: renamed from: s */
         public final void mo9095s(int i, int i2) throws IOException {
             mo9094r((i << 3) | 0);
             if (i2 >= 0) {
@@ -380,7 +380,7 @@ public abstract class zzhi extends AbstractC3850u3 {
         }
 
         @Override // com.google.android.gms.internal.measurement.zzhi
-        /* renamed from: t */
+        /* JADX INFO: renamed from: t */
         public final void mo9096t(int i, AbstractC3837t3 abstractC3837t3) throws IOException {
             mo9086f(1, 3);
             mo9097y(2, i);
@@ -389,21 +389,21 @@ public abstract class zzhi extends AbstractC3850u3 {
         }
 
         @Override // com.google.android.gms.internal.measurement.zzhi
-        /* renamed from: y */
+        /* JADX INFO: renamed from: y */
         public final void mo9097y(int i, int i2) throws IOException {
             mo9094r((i << 3) | 0);
             mo9094r(i2);
         }
 
         @Override // com.google.android.gms.internal.measurement.zzhi
-        /* renamed from: z */
+        /* JADX INFO: renamed from: z */
         public final void mo9098z(int i, long j) throws IOException {
             mo9094r((i << 3) | 1);
             mo9080A(j);
         }
     }
 
-    /* compiled from: com.google.android.gms:play-services-measurement-base@@18.0.0 */
+    /* JADX INFO: compiled from: com.google.android.gms:play-services-measurement-base@@18.0.0 */
     public static class zza extends IOException {
         public zza() {
             super("CodedOutputStream was writing to a flat byte array and ran out of space.");
@@ -423,22 +423,22 @@ public abstract class zzhi extends AbstractC3850u3 {
     public zzhi() {
     }
 
-    /* renamed from: B */
+    /* JADX INFO: renamed from: B */
     public static int m9051B(int i, long j) {
         return m9054F(j) + m9059L(i << 3);
     }
 
-    /* renamed from: D */
+    /* JADX INFO: renamed from: D */
     public static int m9052D(int i) {
         return m9059L(i << 3);
     }
 
-    /* renamed from: E */
+    /* JADX INFO: renamed from: E */
     public static int m9053E(int i, long j) {
         return m9054F(j) + m9059L(i << 3);
     }
 
-    /* renamed from: F */
+    /* JADX INFO: renamed from: F */
     public static int m9054F(long j) {
         int i;
         if (((-128) & j) == 0) {
@@ -460,7 +460,7 @@ public abstract class zzhi extends AbstractC3850u3 {
         return (j & (-16384)) != 0 ? i + 1 : i;
     }
 
-    /* renamed from: H */
+    /* JADX INFO: renamed from: H */
     public static int m9055H(int i) {
         if (i >= 0) {
             return m9059L(i);
@@ -468,22 +468,22 @@ public abstract class zzhi extends AbstractC3850u3 {
         return 10;
     }
 
-    /* renamed from: I */
+    /* JADX INFO: renamed from: I */
     public static int m9056I(int i, int i2) {
         return m9055H(i2) + m9059L(i << 3);
     }
 
-    /* renamed from: J */
+    /* JADX INFO: renamed from: J */
     public static int m9057J(int i, long j) {
         return m9054F(m9065R(j)) + m9059L(i << 3);
     }
 
-    /* renamed from: K */
+    /* JADX INFO: renamed from: K */
     public static int m9058K(long j) {
         return m9054F(m9065R(j));
     }
 
-    /* renamed from: L */
+    /* JADX INFO: renamed from: L */
     public static int m9059L(int i) {
         if ((i & (-128)) == 0) {
             return 1;
@@ -497,63 +497,63 @@ public abstract class zzhi extends AbstractC3850u3 {
         return (i & (-268435456)) == 0 ? 4 : 5;
     }
 
-    /* renamed from: M */
+    /* JADX INFO: renamed from: M */
     public static int m9060M(int i, int i2) {
         return m9059L(i2) + m9059L(i << 3);
     }
 
-    /* renamed from: N */
+    /* JADX INFO: renamed from: N */
     public static int m9061N(int i) {
         return m9059L(i << 3) + 8;
     }
 
-    /* renamed from: O */
+    /* JADX INFO: renamed from: O */
     public static int m9062O(int i) {
         return m9059L(m9069V(i));
     }
 
-    /* renamed from: P */
+    /* JADX INFO: renamed from: P */
     public static int m9063P(int i, int i2) {
         return m9059L(m9069V(i2)) + m9059L(i << 3);
     }
 
-    /* renamed from: Q */
+    /* JADX INFO: renamed from: Q */
     public static int m9064Q(int i) {
         return m9059L(i << 3) + 8;
     }
 
-    /* renamed from: R */
+    /* JADX INFO: renamed from: R */
     public static long m9065R(long j) {
         return (j >> 63) ^ (j << 1);
     }
 
-    /* renamed from: S */
+    /* JADX INFO: renamed from: S */
     public static int m9066S(int i) {
         return m9059L(i << 3) + 4;
     }
 
-    /* renamed from: T */
+    /* JADX INFO: renamed from: T */
     public static int m9067T(int i) {
         return m9059L(i << 3) + 4;
     }
 
-    /* renamed from: U */
+    /* JADX INFO: renamed from: U */
     public static int m9068U(int i, int i2) {
         return m9055H(i2) + m9059L(i << 3);
     }
 
-    /* renamed from: V */
+    /* JADX INFO: renamed from: V */
     public static int m9069V(int i) {
         return (i >> 31) ^ (i << 1);
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static int m9070b(C3681h5 c3681h5) {
         int iM4934a = c3681h5.m4934a();
         return m9059L(iM4934a) + iM4934a;
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public static int m9071c(InterfaceC3612c6 interfaceC3612c6, InterfaceC3801q6 interfaceC3801q6) {
         AbstractC3733l3 abstractC3733l3 = (AbstractC3733l3) interfaceC3612c6;
         int iMo5053e = abstractC3733l3.mo5053e();
@@ -564,23 +564,23 @@ public abstract class zzhi extends AbstractC3850u3 {
         return m9059L(iMo5053e) + iMo5053e;
     }
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public static int m9072n(int i) {
         return m9059L(i << 3) + 4;
     }
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public static int m9073o(int i, String str) {
         return m9075q(str) + m9059L(i << 3);
     }
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public static int m9074p(AbstractC3837t3 abstractC3837t3) {
         int iMo5282d = abstractC3837t3.mo5282d();
         return m9059L(iMo5282d) + iMo5282d;
     }
 
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     public static int m9075q(String str) {
         int length;
         try {
@@ -591,17 +591,17 @@ public abstract class zzhi extends AbstractC3850u3 {
         return m9059L(length) + length;
     }
 
-    /* renamed from: u */
+    /* JADX INFO: renamed from: u */
     public static int m9076u(int i) {
         return m9059L(i << 3) + 8;
     }
 
-    /* renamed from: v */
+    /* JADX INFO: renamed from: v */
     public static int m9077v(int i) {
         return m9059L(i << 3) + 1;
     }
 
-    /* renamed from: w */
+    /* JADX INFO: renamed from: w */
     public static int m9078w(int i, AbstractC3837t3 abstractC3837t3) {
         int iM9059L = m9059L(i << 3);
         int iMo5282d = abstractC3837t3.mo5282d();
@@ -609,7 +609,7 @@ public abstract class zzhi extends AbstractC3850u3 {
     }
 
     @Deprecated
-    /* renamed from: x */
+    /* JADX INFO: renamed from: x */
     public static int m9079x(int i, InterfaceC3612c6 interfaceC3612c6, InterfaceC3801q6 interfaceC3801q6) {
         int iM9059L = m9059L(i << 3) << 1;
         AbstractC3733l3 abstractC3733l3 = (AbstractC3733l3) interfaceC3612c6;
@@ -621,61 +621,61 @@ public abstract class zzhi extends AbstractC3850u3 {
         return iM9059L + iMo5053e;
     }
 
-    /* renamed from: A */
+    /* JADX INFO: renamed from: A */
     public abstract void mo9080A(long j) throws IOException;
 
-    /* renamed from: C */
+    /* JADX INFO: renamed from: C */
     public abstract void mo9081C(int i) throws IOException;
 
-    /* renamed from: G */
+    /* JADX INFO: renamed from: G */
     public abstract void mo9082G(int i, int i2) throws IOException;
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public abstract int mo9083a();
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public abstract void mo9084d(byte b2) throws IOException;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public abstract void mo9085e(int i) throws IOException;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public abstract void mo9086f(int i, int i2) throws IOException;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public abstract void mo9087g(int i, long j) throws IOException;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public abstract void mo9088h(int i, AbstractC3837t3 abstractC3837t3) throws IOException;
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public abstract void mo9089i(int i, InterfaceC3612c6 interfaceC3612c6) throws IOException;
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public abstract void mo9090j(int i, InterfaceC3612c6 interfaceC3612c6, InterfaceC3801q6 interfaceC3801q6) throws IOException;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public abstract void mo9091k(int i, String str) throws IOException;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public abstract void mo9092l(int i, boolean z2) throws IOException;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public abstract void mo9093m(long j) throws IOException;
 
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     public abstract void mo9094r(int i) throws IOException;
 
-    /* renamed from: s */
+    /* JADX INFO: renamed from: s */
     public abstract void mo9095s(int i, int i2) throws IOException;
 
-    /* renamed from: t */
+    /* JADX INFO: renamed from: t */
     public abstract void mo9096t(int i, AbstractC3837t3 abstractC3837t3) throws IOException;
 
-    /* renamed from: y */
+    /* JADX INFO: renamed from: y */
     public abstract void mo9097y(int i, int i2) throws IOException;
 
-    /* renamed from: z */
+    /* JADX INFO: renamed from: z */
     public abstract void mo9098z(int i, long j) throws IOException;
 
     public zzhi(C3638e4 c3638e4) {

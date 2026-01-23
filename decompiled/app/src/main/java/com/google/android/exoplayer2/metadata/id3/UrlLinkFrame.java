@@ -6,18 +6,18 @@ import androidx.annotation.Nullable;
 import p007b.p100d.p104b.p105a.outline;
 import p007b.p225i.p226a.p242c.p259f3.Util2;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public final class UrlLinkFrame extends Id3Frame {
     public static final Parcelable.Creator<UrlLinkFrame> CREATOR = new C10736a();
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     @Nullable
     public final String f20002k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final String f20003l;
 
-    /* renamed from: com.google.android.exoplayer2.metadata.id3.UrlLinkFrame$a */
+    /* JADX INFO: renamed from: com.google.android.exoplayer2.metadata.id3.UrlLinkFrame$a */
     public class C10736a implements Parcelable.Creator<UrlLinkFrame> {
         @Override // android.os.Parcelable.Creator
         public UrlLinkFrame createFromParcel(Parcel parcel) {

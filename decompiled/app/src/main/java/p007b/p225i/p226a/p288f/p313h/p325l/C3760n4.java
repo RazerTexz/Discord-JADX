@@ -11,21 +11,21 @@ import java.util.logging.Logger;
 import p007b.p225i.p226a.p288f.p313h.p325l.AbstractC3851u4;
 import p007b.p225i.p226a.p288f.p313h.p325l.InterfaceC3786p4;
 
-/* compiled from: com.google.android.gms:play-services-measurement-base@@18.0.0 */
-/* renamed from: b.i.a.f.h.l.n4 */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.h.l.n4 */
+/* JADX INFO: compiled from: com.google.android.gms:play-services-measurement-base@@18.0.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public final class C3760n4<T extends InterfaceC3786p4<T>> {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final C3760n4 f10110a = new C3760n4(true);
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final C3814r6<T, Object> f10111b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public boolean f10112c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public boolean f10113d;
 
     public C3760n4(boolean z2) {
@@ -35,7 +35,7 @@ public final class C3760n4<T extends InterfaceC3786p4<T>> {
         m5132h();
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static int m5124a(InterfaceC3786p4<?> interfaceC3786p4, Object obj) {
         EnumC3789p7 enumC3789p7Mo5175b = interfaceC3786p4.mo5175b();
         int iMo5174a = interfaceC3786p4.mo5174a();
@@ -57,7 +57,7 @@ public final class C3760n4<T extends InterfaceC3786p4<T>> {
         return iM5125b;
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static int m5125b(EnumC3789p7 enumC3789p7, int i, Object obj) {
         int iM9052D = zzhi.m9052D(i);
         if (enumC3789p7 == EnumC3789p7.f10210s) {
@@ -69,7 +69,7 @@ public final class C3760n4<T extends InterfaceC3786p4<T>> {
         return m5129g(enumC3789p7, obj) + iM9052D;
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public static Object m5126d(Object obj) {
         if (obj instanceof InterfaceC3654f6) {
             return ((InterfaceC3654f6) obj).mo4880a();
@@ -85,7 +85,7 @@ public final class C3760n4<T extends InterfaceC3786p4<T>> {
 
     /* JADX WARN: Can't fix incorrect switch cases order, some code will duplicate */
     /* JADX WARN: Removed duplicated region for block: B:4:0x0016  */
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
@@ -131,7 +131,7 @@ public final class C3760n4<T extends InterfaceC3786p4<T>> {
         }
     }
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public static <T extends InterfaceC3786p4<T>> boolean m5128f(Map.Entry<T, Object> entry) {
         T key = entry.getKey();
         if (key.mo5176c() == EnumC3880w7.MESSAGE) {
@@ -158,7 +158,7 @@ public final class C3760n4<T extends InterfaceC3786p4<T>> {
         return true;
     }
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public static int m5129g(EnumC3789p7 enumC3789p7, Object obj) {
         int iMo4606g;
         int iM9059L;
@@ -235,7 +235,7 @@ public final class C3760n4<T extends InterfaceC3786p4<T>> {
         return iM9059L + iMo4606g;
     }
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public static int m5130k(Map.Entry<T, Object> entry) {
         int iM9060M;
         int iM9059L;
@@ -262,7 +262,7 @@ public final class C3760n4<T extends InterfaceC3786p4<T>> {
         return iM9059L2 + iMo4606g + iM9059L + iM9060M;
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final Object m5131c(T t) {
         Object obj = this.f10111b.get(t);
         if (!(obj instanceof C3625d5)) {
@@ -298,7 +298,7 @@ public final class C3760n4<T extends InterfaceC3786p4<T>> {
         return false;
     }
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public final void m5132h() {
         if (this.f10112c) {
             return;
@@ -311,7 +311,7 @@ public final class C3760n4<T extends InterfaceC3786p4<T>> {
         return this.f10111b.hashCode();
     }
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public final void m5133i(T t, Object obj) {
         if (!t.mo5178d()) {
             m5127e(t.mo5175b(), obj);
@@ -336,7 +336,7 @@ public final class C3760n4<T extends InterfaceC3786p4<T>> {
         this.f10111b.m5204b(t, obj);
     }
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final void m5134j(Map.Entry<T, Object> entry) {
         T key = entry.getKey();
         Object value = entry.getValue();
@@ -368,12 +368,12 @@ public final class C3760n4<T extends InterfaceC3786p4<T>> {
         }
     }
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final Iterator<Map.Entry<T, Object>> m5135l() {
         return this.f10113d ? new C3695i5(this.f10111b.entrySet().iterator()) : this.f10111b.entrySet().iterator();
     }
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public final boolean m5136m() {
         for (int i = 0; i < this.f10111b.m5207e(); i++) {
             if (!m5128f(this.f10111b.m5206d(i))) {

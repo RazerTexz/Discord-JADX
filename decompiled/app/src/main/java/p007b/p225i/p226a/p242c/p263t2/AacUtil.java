@@ -5,28 +5,28 @@ import com.google.android.exoplayer2.ParserException;
 import p007b.p100d.p104b.p105a.outline;
 import p007b.p225i.p226a.p242c.p259f3.ParsableBitArray;
 
-/* compiled from: AacUtil.java */
-/* renamed from: b.i.a.c.t2.l, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.t2.l, reason: use source file name */
+/* JADX INFO: compiled from: AacUtil.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class AacUtil {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final int[] f7764a = {96000, 88200, 64000, 48000, 44100, 32000, 24000, 22050, 16000, 12000, 11025, 8000, 7350};
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static final int[] f7765b = {0, 1, 2, 3, 4, 5, 6, 8, -1, -1, -1, 7, 8, -1, 8, -1};
 
-    /* compiled from: AacUtil.java */
-    /* renamed from: b.i.a.c.t2.l$b */
+    /* JADX INFO: renamed from: b.i.a.c.t2.l$b */
+    /* JADX INFO: compiled from: AacUtil.java */
     public static final class b {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final int f7766a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final int f7767b;
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public final String f7768c;
 
         public b(int i, int i2, String str, a aVar) {
@@ -36,7 +36,7 @@ public final class AacUtil {
         }
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static int m3488a(ParsableBitArray parsableBitArray) throws ParserException {
         int iM3067g = parsableBitArray.m3067g(4);
         if (iM3067g == 15) {
@@ -48,7 +48,7 @@ public final class AacUtil {
         throw ParserException.m8755a(null, null);
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static b m3489b(ParsableBitArray parsableBitArray, boolean z2) throws ParserException {
         int iM3067g = parsableBitArray.m3067g(5);
         if (iM3067g == 31) {
@@ -130,7 +130,7 @@ public final class AacUtil {
         throw ParserException.m8755a(null, null);
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public static b m3490c(byte[] bArr) throws ParserException {
         return m3489b(new ParsableBitArray(bArr), false);
     }

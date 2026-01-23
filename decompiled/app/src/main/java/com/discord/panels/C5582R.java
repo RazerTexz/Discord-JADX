@@ -2,11 +2,11 @@ package com.discord.panels;
 
 import com.discord.C5419R;
 
-/* renamed from: com.discord.panels.R */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: com.discord.panels.R */
+/* JADX INFO: loaded from: classes.dex */
 public final class C5582R {
 
-    /* renamed from: com.discord.panels.R$a */
+    /* JADX INFO: renamed from: com.discord.panels.R$a */
     public static final class a {
         public static final int abc_action_bar_content_inset_material = 2131165184;
         public static final int abc_action_bar_content_inset_with_nav = 2131165185;
@@ -136,7 +136,7 @@ public final class C5582R {
         }
     }
 
-    /* renamed from: com.discord.panels.R$b */
+    /* JADX INFO: renamed from: com.discord.panels.R$b */
     public static final class b {
         public static final int ActionBarLayout_android_layout_gravity = 0;
         public static final int ActionBar_background = 0;

@@ -6,9 +6,9 @@ import kotlin.jvm.functions.Function0;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: FragmentViewModelLazy.kt */
-/* renamed from: com.discord.widgets.chat.input.gifpicker.WidgetGifCategory$appActivityViewModels$$inlined$activityViewModels$1 */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.chat.input.gifpicker.WidgetGifCategory$appActivityViewModels$$inlined$activityViewModels$1 */
+/* JADX INFO: compiled from: FragmentViewModelLazy.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class C7874x11220d5d extends Lambda implements Function0<ViewModelStore> {
     public final /* synthetic */ Fragment $this_activityViewModels;
 

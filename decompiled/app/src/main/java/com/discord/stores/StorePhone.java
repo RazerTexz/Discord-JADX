@@ -17,8 +17,8 @@ import p507d0.p591y.Closeable;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: StorePhone.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: StorePhone.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class StorePhone extends StoreV2 {
     private List<PhoneCountryCode> countryCodes;
     private PhoneCountryCode defaultCountryCode;
@@ -26,8 +26,8 @@ public final class StorePhone extends StoreV2 {
     private PhoneCountryCode selectedCountryCode;
     private final Persister<PhoneCountryCode> selectedCountryCodeCache;
 
-    /* compiled from: StorePhone.kt */
-    /* renamed from: com.discord.stores.StorePhone$updateDefaultCountryCode$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StorePhone$updateDefaultCountryCode$1 */
+    /* JADX INFO: compiled from: StorePhone.kt */
     public static final class C63341 extends Lambda implements Function0<Unit> {
         public final /* synthetic */ String $alpha2;
 
@@ -43,7 +43,7 @@ public final class StorePhone extends StoreV2 {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             Object next;
             Iterator<T> it = StorePhone.this.getCountryCodes().iterator();
@@ -66,8 +66,8 @@ public final class StorePhone extends StoreV2 {
         }
     }
 
-    /* compiled from: StorePhone.kt */
-    /* renamed from: com.discord.stores.StorePhone$updateSelectedCountryCode$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StorePhone$updateSelectedCountryCode$1 */
+    /* JADX INFO: compiled from: StorePhone.kt */
     public static final class C63351 extends Lambda implements Function0<Unit> {
         public final /* synthetic */ PhoneCountryCode $newSelectedCountryCode;
 
@@ -83,7 +83,7 @@ public final class StorePhone extends StoreV2 {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             StorePhone.access$setSelectedCountryCode$p(StorePhone.this, this.$newSelectedCountryCode);
             StorePhone.this.markChanged();

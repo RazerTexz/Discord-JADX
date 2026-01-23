@@ -8,15 +8,15 @@ import java.util.Objects;
 import java.util.RandomAccess;
 import p007b.p100d.p104b.p105a.outline;
 
-/* compiled from: com.google.android.gms:play-services-measurement-base@@18.0.0 */
-/* renamed from: b.i.a.f.h.l.t4 */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.h.l.t4 */
+/* JADX INFO: compiled from: com.google.android.gms:play-services-measurement-base@@18.0.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public final class C3838t4 extends AbstractC3772o3<Float> implements InterfaceC3597b5<Float>, InterfaceC3736l6, RandomAccess {
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public float[] f10324k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public int f10325l;
 
     static {
@@ -83,7 +83,7 @@ public final class C3838t4 extends AbstractC3772o3<Float> implements InterfaceC3
         return indexOf(obj) != -1;
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final void m5290d(float f) {
         m5153c();
         int i = this.f10325l;
@@ -99,7 +99,7 @@ public final class C3838t4 extends AbstractC3772o3<Float> implements InterfaceC3
         fArr3[i2] = f;
     }
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final void m5291e(int i) {
         if (i < 0 || i >= this.f10325l) {
             throw new IndexOutOfBoundsException(m5292g(i));
@@ -128,7 +128,7 @@ public final class C3838t4 extends AbstractC3772o3<Float> implements InterfaceC3
     }
 
     @Override // p007b.p225i.p226a.p288f.p313h.p325l.InterfaceC3597b5
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final /* synthetic */ InterfaceC3597b5<Float> mo4569f(int i) {
         if (i >= this.f10325l) {
             return new C3838t4(Arrays.copyOf(this.f10324k, i), this.f10325l);
@@ -136,7 +136,7 @@ public final class C3838t4 extends AbstractC3772o3<Float> implements InterfaceC3
         throw new IllegalArgumentException();
     }
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public final String m5292g(int i) {
         return outline.m853h(35, "Index:", i, ", Size:", this.f10325l);
     }

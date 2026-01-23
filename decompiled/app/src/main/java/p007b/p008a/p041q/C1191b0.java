@@ -31,12 +31,12 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p658rx.Observable;
 import p658rx.Subscription;
 
-/* compiled from: RtcConnection.kt */
-/* renamed from: b.a.q.b0 */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.a.q.b0 */
+/* JADX INFO: compiled from: RtcConnection.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class C1191b0 implements MediaEngineConnection.InterfaceC5648d {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final /* synthetic */ RtcConnection f1606a;
 
     public C1191b0(RtcConnection rtcConnection) {

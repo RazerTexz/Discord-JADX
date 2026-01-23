@@ -15,34 +15,34 @@ import java.util.Map;
 import java.util.Objects;
 import p007b.p225i.p226a.p288f.p299e.p308o.C3404f;
 
-/* compiled from: com.google.android.gms:play-services-measurement-impl@@18.0.0 */
-/* renamed from: b.i.a.f.h.l.y1 */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.h.l.y1 */
+/* JADX INFO: compiled from: com.google.android.gms:play-services-measurement-impl@@18.0.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public final class C3900y1 implements InterfaceC3594b2 {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     @GuardedBy("ConfigurationContentLoader.class")
     public static final Map<Uri, C3900y1> f10417a = new ArrayMap();
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static final String[] f10418b = {"key", "value"};
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final ContentResolver f10419c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final Uri f10420d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final ContentObserver f10421e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final Object f10422f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public volatile Map<String, String> f10423g;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     @GuardedBy("this")
     public final List<InterfaceC3913z1> f10424h;
 
@@ -58,7 +58,7 @@ public final class C3900y1 implements InterfaceC3594b2 {
         contentResolver.registerContentObserver(uri, false, c3580a2);
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static C3900y1 m5376a(ContentResolver contentResolver, Uri uri) {
         C3900y1 c3900y1;
         synchronized (C3900y1.class) {
@@ -79,7 +79,7 @@ public final class C3900y1 implements InterfaceC3594b2 {
         return c3900y1;
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public static synchronized void m5377c() {
         for (C3900y1 c3900y1 : f10417a.values()) {
             c3900y1.f10419c.unregisterContentObserver(c3900y1.f10421e);
@@ -88,41 +88,50 @@ public final class C3900y1 implements InterfaceC3594b2 {
     }
 
     /* JADX WARN: Multi-variable type inference failed */
-    /* renamed from: b */
+    /* JADX WARN: Type inference failed for: r0v1, types: [java.util.Map<java.lang.String, java.lang.String>] */
+    /* JADX WARN: Type inference failed for: r0v10 */
+    /* JADX WARN: Type inference failed for: r0v11 */
+    /* JADX WARN: Type inference failed for: r0v12 */
+    /* JADX WARN: Type inference failed for: r0v5 */
+    /* JADX WARN: Type inference failed for: r0v6, types: [android.os.StrictMode$ThreadPolicy] */
+    /* JADX WARN: Type inference failed for: r0v7, types: [android.os.StrictMode$ThreadPolicy] */
+    /* JADX WARN: Type inference failed for: r0v8 */
+    /* JADX WARN: Type inference failed for: r0v9 */
+    /* JADX INFO: renamed from: b */
     public final Map<String, String> m5378b() {
+        ?? r0;
         Map<String, String> map;
-        Map<String, String> map2;
-        Map<String, String> map3 = this.f10423g;
-        Map<String, String> map4 = map3;
-        if (map3 == null) {
+        Map<String, String> map2 = this.f10423g;
+        ?? r02 = map2;
+        if (map2 == null) {
             synchronized (this.f10422f) {
-                Map<String, String> map5 = this.f10423g;
-                map = map5;
-                if (map5 == null) {
-                    StrictMode.ThreadPolicy threadPolicyAllowThreadDiskReads = StrictMode.allowThreadDiskReads();
+                Map<String, String> map3 = this.f10423g;
+                r0 = map3;
+                if (map3 == null) {
+                    ?? AllowThreadDiskReads = StrictMode.allowThreadDiskReads();
                     try {
                         try {
-                            map2 = (Map) C3404f.m4248T1(new C3887x1(this));
+                            map = (Map) C3404f.m4248T1(new C3887x1(this));
                         } finally {
-                            StrictMode.setThreadPolicy(threadPolicyAllowThreadDiskReads);
+                            StrictMode.setThreadPolicy(AllowThreadDiskReads);
                         }
                     } catch (SQLiteException | IllegalStateException | SecurityException unused) {
                         Log.e("ConfigurationContentLoader", "PhenotypeFlag unable to load ContentProvider, using default values");
-                        StrictMode.setThreadPolicy(threadPolicyAllowThreadDiskReads);
-                        map2 = null;
+                        StrictMode.setThreadPolicy(AllowThreadDiskReads);
+                        map = null;
                     }
-                    this.f10423g = map2;
-                    threadPolicyAllowThreadDiskReads = map2;
-                    map = threadPolicyAllowThreadDiskReads;
+                    this.f10423g = map;
+                    AllowThreadDiskReads = map;
+                    r0 = AllowThreadDiskReads;
                 }
             }
-            map4 = map;
+            r02 = r0;
         }
-        return map4 != null ? map4 : Collections.emptyMap();
+        return r02 != 0 ? r02 : Collections.emptyMap();
     }
 
     @Override // p007b.p225i.p226a.p288f.p313h.p325l.InterfaceC3594b2
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public final /* synthetic */ Object mo4567g(String str) {
         return m5378b().get(str);
     }

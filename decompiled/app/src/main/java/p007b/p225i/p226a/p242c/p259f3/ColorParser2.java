@@ -14,21 +14,21 @@ import p007b.p085c.p086a.p087a0.AnimatableValueParser;
 import p007b.p100d.p104b.p105a.outline;
 import p007b.p225i.p226a.p288f.p299e.p308o.C3404f;
 
-/* compiled from: ColorParser.java */
-/* renamed from: b.i.a.c.f3.i, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.f3.i, reason: use source file name */
+/* JADX INFO: compiled from: ColorParser.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class ColorParser2 {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final Pattern f6723a = Pattern.compile("^rgb\\((\\d{1,3}),(\\d{1,3}),(\\d{1,3})\\)$");
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static final Pattern f6724b = Pattern.compile("^rgba\\((\\d{1,3}),(\\d{1,3}),(\\d{1,3}),(\\d{1,3})\\)$");
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public static final Pattern f6725c = Pattern.compile("^rgba\\((\\d{1,3}),(\\d{1,3}),(\\d{1,3}),(\\d*\\.?\\d*?)\\)$");
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public static final Map<String, Integer> f6726d;
 
     static {
@@ -114,8 +114,8 @@ public final class ColorParser2 {
     }
 
     @ColorInt
-    /* renamed from: a */
-    public static int m3024a(String str, boolean z2) throws NumberFormatException {
+    /* JADX INFO: renamed from: a */
+    public static int m3024a(String str, boolean z2) {
         int i;
         AnimatableValueParser.m531j(!TextUtils.isEmpty(str));
         String strReplace = str.replace(" ", "");

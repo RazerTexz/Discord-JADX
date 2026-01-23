@@ -45,33 +45,33 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 import p507d0.p592z.p594d.Reflection2;
 
-/* compiled from: WidgetGuildScheduledEventLocationSelect.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetGuildScheduledEventLocationSelect.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetGuildScheduledEventLocationSelect extends AppFragment {
     public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetGuildScheduledEventLocationSelect.class, "binding", "getBinding()Lcom/discord/databinding/WidgetGuildScheduledEventLocationSelectBinding;", 0)};
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private static final String GUILD_SCHEDULED_EVENT_LOCATION_SELECT_REQUEST_KEY = "GUILD_SCHEDULED_EVENT_LOCATION_SELECT_REQUEST_KEY";
 
-    /* renamed from: binding$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
     private WidgetGuildScheduledEventLocationSelectViewModel.ViewState.Valid currentViewState;
 
-    /* renamed from: existingGuildScheduledEventId$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: existingGuildScheduledEventId$delegate, reason: from kotlin metadata */
     private final Lazy existingGuildScheduledEventId;
 
-    /* renamed from: guildId$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: guildId$delegate, reason: from kotlin metadata */
     private final Lazy guildId;
 
-    /* renamed from: hubViewModel$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: hubViewModel$delegate, reason: from kotlin metadata */
     private final Lazy hubViewModel;
     private final ActivityResultLauncher<Intent> nextStepLauncher;
 
-    /* renamed from: viewModel$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: viewModel$delegate, reason: from kotlin metadata */
     private final Lazy viewModel;
 
-    /* compiled from: WidgetGuildScheduledEventLocationSelect.kt */
+    /* JADX INFO: compiled from: WidgetGuildScheduledEventLocationSelect.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -135,8 +135,8 @@ public final class WidgetGuildScheduledEventLocationSelect extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetGuildScheduledEventLocationSelect.kt */
-    /* renamed from: com.discord.widgets.guildscheduledevent.WidgetGuildScheduledEventLocationSelect$configureLocationOption$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.guildscheduledevent.WidgetGuildScheduledEventLocationSelect$configureLocationOption$1 */
+    /* JADX INFO: compiled from: WidgetGuildScheduledEventLocationSelect.kt */
     public static final class ViewOnClickListenerC88961 implements View.OnClickListener {
         public final /* synthetic */ GuildScheduledEventEntityType $settingValue;
 
@@ -150,8 +150,8 @@ public final class WidgetGuildScheduledEventLocationSelect extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetGuildScheduledEventLocationSelect.kt */
-    /* renamed from: com.discord.widgets.guildscheduledevent.WidgetGuildScheduledEventLocationSelect$onResume$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.guildscheduledevent.WidgetGuildScheduledEventLocationSelect$onResume$1 */
+    /* JADX INFO: compiled from: WidgetGuildScheduledEventLocationSelect.kt */
     public static final /* synthetic */ class C88981 extends FunctionReferenceImpl implements Function1<WidgetGuildScheduledEventLocationSelectViewModel.ViewState, Unit> {
         public C88981(WidgetGuildScheduledEventLocationSelect widgetGuildScheduledEventLocationSelect) {
             super(1, widgetGuildScheduledEventLocationSelect, WidgetGuildScheduledEventLocationSelect.class, "configureUI", "configureUI(Lcom/discord/widgets/guildscheduledevent/WidgetGuildScheduledEventLocationSelectViewModel$ViewState;)V", 0);
@@ -163,15 +163,15 @@ public final class WidgetGuildScheduledEventLocationSelect extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(WidgetGuildScheduledEventLocationSelectViewModel.ViewState viewState) {
             Intrinsics3.checkNotNullParameter(viewState, "p1");
             WidgetGuildScheduledEventLocationSelect.access$configureUI((WidgetGuildScheduledEventLocationSelect) this.receiver, viewState);
         }
     }
 
-    /* compiled from: WidgetGuildScheduledEventLocationSelect.kt */
-    /* renamed from: com.discord.widgets.guildscheduledevent.WidgetGuildScheduledEventLocationSelect$onViewBound$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.guildscheduledevent.WidgetGuildScheduledEventLocationSelect$onViewBound$1 */
+    /* JADX INFO: compiled from: WidgetGuildScheduledEventLocationSelect.kt */
     public static final class ViewOnClickListenerC89001 implements View.OnClickListener {
         public ViewOnClickListenerC89001() {
         }
@@ -185,8 +185,8 @@ public final class WidgetGuildScheduledEventLocationSelect extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetGuildScheduledEventLocationSelect.kt */
-    /* renamed from: com.discord.widgets.guildscheduledevent.WidgetGuildScheduledEventLocationSelect$onViewBound$3 */
+    /* JADX INFO: renamed from: com.discord.widgets.guildscheduledevent.WidgetGuildScheduledEventLocationSelect$onViewBound$3 */
+    /* JADX INFO: compiled from: WidgetGuildScheduledEventLocationSelect.kt */
     public static final class ViewOnClickListenerC89013 implements View.OnClickListener {
         public ViewOnClickListenerC89013() {
         }
@@ -212,8 +212,8 @@ public final class WidgetGuildScheduledEventLocationSelect extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetGuildScheduledEventLocationSelect.kt */
-    /* renamed from: com.discord.widgets.guildscheduledevent.WidgetGuildScheduledEventLocationSelect$onViewBound$4 */
+    /* JADX INFO: renamed from: com.discord.widgets.guildscheduledevent.WidgetGuildScheduledEventLocationSelect$onViewBound$4 */
+    /* JADX INFO: compiled from: WidgetGuildScheduledEventLocationSelect.kt */
     public static final class C89024 extends Lambda implements Function2<Long, String, Unit> {
         public C89024() {
             super(2);
@@ -231,8 +231,8 @@ public final class WidgetGuildScheduledEventLocationSelect extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetGuildScheduledEventLocationSelect.kt */
-    /* renamed from: com.discord.widgets.guildscheduledevent.WidgetGuildScheduledEventLocationSelect$onViewBound$5 */
+    /* JADX INFO: renamed from: com.discord.widgets.guildscheduledevent.WidgetGuildScheduledEventLocationSelect$onViewBound$5 */
+    /* JADX INFO: compiled from: WidgetGuildScheduledEventLocationSelect.kt */
     public static final class C89035 extends Lambda implements Function1<TextView, Unit> {
         public C89035() {
             super(1);
@@ -244,15 +244,15 @@ public final class WidgetGuildScheduledEventLocationSelect extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(TextView textView) {
             Intrinsics3.checkNotNullParameter(textView, "it");
             WidgetGuildScheduledEventLocationSelect.access$navigateNext(WidgetGuildScheduledEventLocationSelect.this);
         }
     }
 
-    /* compiled from: WidgetGuildScheduledEventLocationSelect.kt */
-    /* renamed from: com.discord.widgets.guildscheduledevent.WidgetGuildScheduledEventLocationSelect$onViewBound$6 */
+    /* JADX INFO: renamed from: com.discord.widgets.guildscheduledevent.WidgetGuildScheduledEventLocationSelect$onViewBound$6 */
+    /* JADX INFO: compiled from: WidgetGuildScheduledEventLocationSelect.kt */
     public static final class ViewOnClickListenerC89046 implements View.OnClickListener {
         public ViewOnClickListenerC89046() {
         }

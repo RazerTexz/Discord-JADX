@@ -6,8 +6,8 @@ import kotlin.jvm.functions.Function1;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: ChatInputViewModel.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: ChatInputViewModel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class ChatInputViewModel$sendCommand$validated$2 extends Lambda implements Function1<Error, Unit> {
     public static final ChatInputViewModel$sendCommand$validated$2 INSTANCE = new ChatInputViewModel$sendCommand$validated$2();
 
@@ -21,7 +21,7 @@ public final class ChatInputViewModel$sendCommand$validated$2 extends Lambda imp
         return Unit.f27425a;
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final void invoke2(Error error) {
         Intrinsics3.checkNotNullParameter(error, "it");
     }

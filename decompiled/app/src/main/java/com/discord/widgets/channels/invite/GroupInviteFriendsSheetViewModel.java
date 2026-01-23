@@ -36,11 +36,11 @@ import p658rx.Observable;
 import p658rx.subjects.BehaviorSubject;
 import p658rx.subjects.PublishSubject;
 
-/* compiled from: GroupInviteFriendsSheetViewModel.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: GroupInviteFriendsSheetViewModel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class GroupInviteFriendsSheetViewModel extends AppViewModel<ViewState> {
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private static final int MAX_GROUP_MEMBERS = 10;
     private static final int MAX_GROUP_MEMBERS_STAFF = 25;
@@ -53,8 +53,8 @@ public final class GroupInviteFriendsSheetViewModel extends AppViewModel<ViewSta
     private final BehaviorSubject<CharSequence> searchTextChangedPublisher;
     private final StoreUser storeUser;
 
-    /* compiled from: GroupInviteFriendsSheetViewModel.kt */
-    /* renamed from: com.discord.widgets.channels.invite.GroupInviteFriendsSheetViewModel$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.channels.invite.GroupInviteFriendsSheetViewModel$1 */
+    /* JADX INFO: compiled from: GroupInviteFriendsSheetViewModel.kt */
     public static final class C74111 extends Lambda implements Function1<StoreState, Unit> {
         public C74111() {
             super(1);
@@ -66,15 +66,15 @@ public final class GroupInviteFriendsSheetViewModel extends AppViewModel<ViewSta
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(StoreState storeState) {
             Intrinsics3.checkNotNullParameter(storeState, "storeState");
             GroupInviteFriendsSheetViewModel.access$handleStoreState(GroupInviteFriendsSheetViewModel.this, storeState);
         }
     }
 
-    /* compiled from: GroupInviteFriendsSheetViewModel.kt */
-    /* renamed from: com.discord.widgets.channels.invite.GroupInviteFriendsSheetViewModel$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.channels.invite.GroupInviteFriendsSheetViewModel$2 */
+    /* JADX INFO: compiled from: GroupInviteFriendsSheetViewModel.kt */
     public static final class C74122 extends Lambda implements Function1<CharSequence, Unit> {
         public C74122() {
             super(1);
@@ -86,7 +86,7 @@ public final class GroupInviteFriendsSheetViewModel extends AppViewModel<ViewSta
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(CharSequence charSequence) {
             GroupInviteFriendsSheetViewModel groupInviteFriendsSheetViewModel = GroupInviteFriendsSheetViewModel.this;
             Intrinsics3.checkNotNullExpressionValue(charSequence, "searchText");
@@ -94,7 +94,7 @@ public final class GroupInviteFriendsSheetViewModel extends AppViewModel<ViewSta
         }
     }
 
-    /* compiled from: GroupInviteFriendsSheetViewModel.kt */
+    /* JADX INFO: compiled from: GroupInviteFriendsSheetViewModel.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -133,10 +133,10 @@ public final class GroupInviteFriendsSheetViewModel extends AppViewModel<ViewSta
         }
     }
 
-    /* compiled from: GroupInviteFriendsSheetViewModel.kt */
+    /* JADX INFO: compiled from: GroupInviteFriendsSheetViewModel.kt */
     public static abstract class Event {
 
-        /* compiled from: GroupInviteFriendsSheetViewModel.kt */
+        /* JADX INFO: compiled from: GroupInviteFriendsSheetViewModel.kt */
         public static final class ChannelFull extends Event {
             public static final ChannelFull INSTANCE = new ChannelFull();
 
@@ -153,7 +153,7 @@ public final class GroupInviteFriendsSheetViewModel extends AppViewModel<ViewSta
         }
     }
 
-    /* compiled from: GroupInviteFriendsSheetViewModel.kt */
+    /* JADX INFO: compiled from: GroupInviteFriendsSheetViewModel.kt */
     public static final /* data */ class StoreState {
         private final Channel channel;
         private final Map<Long, User> friendUsersMap;
@@ -184,7 +184,7 @@ public final class GroupInviteFriendsSheetViewModel extends AppViewModel<ViewSta
             return this.friendUsersMap;
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final Channel getChannel() {
             return this.channel;
         }
@@ -234,7 +234,7 @@ public final class GroupInviteFriendsSheetViewModel extends AppViewModel<ViewSta
         }
     }
 
-    /* compiled from: GroupInviteFriendsSheetViewModel.kt */
+    /* JADX INFO: compiled from: GroupInviteFriendsSheetViewModel.kt */
     public static final /* data */ class ViewState {
         private final HashSet<User> checkedUsers;
         private final List<GroupInviteFriendsSheetAdapter.FriendItem> friendItems;
@@ -270,7 +270,7 @@ public final class GroupInviteFriendsSheetViewModel extends AppViewModel<ViewSta
             return this.friendItems;
         }
 
-        /* renamed from: component3, reason: from getter */
+        /* JADX INFO: renamed from: component3, reason: from getter */
         public final boolean getShowSearchIcon() {
             return this.showSearchIcon;
         }
@@ -305,17 +305,20 @@ public final class GroupInviteFriendsSheetViewModel extends AppViewModel<ViewSta
         }
 
         /* JADX WARN: Multi-variable type inference failed */
+        /* JADX WARN: Type inference failed for: r1v3, types: [int] */
+        /* JADX WARN: Type inference failed for: r1v4 */
+        /* JADX WARN: Type inference failed for: r1v6 */
         public int hashCode() {
             HashSet<User> hashSet = this.checkedUsers;
             int iHashCode = (hashSet != null ? hashSet.hashCode() : 0) * 31;
             List<GroupInviteFriendsSheetAdapter.FriendItem> list = this.friendItems;
             int iHashCode2 = (iHashCode + (list != null ? list.hashCode() : 0)) * 31;
             boolean z2 = this.showSearchIcon;
-            int i = z2;
-            if (z2 != 0) {
-                i = 1;
+            ?? r1 = z2;
+            if (z2) {
+                r1 = 1;
             }
-            return iHashCode2 + i;
+            return iHashCode2 + r1;
         }
 
         public String toString() {

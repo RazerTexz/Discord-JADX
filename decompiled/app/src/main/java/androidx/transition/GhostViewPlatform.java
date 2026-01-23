@@ -9,8 +9,8 @@ import androidx.annotation.RequiresApi;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 
+/* JADX INFO: loaded from: classes.dex */
 @RequiresApi(21)
-/* loaded from: classes.dex */
 public class GhostViewPlatform implements GhostView {
     private static final String TAG = "GhostViewApi21";
     private static Method sAddGhostMethod;
@@ -25,7 +25,7 @@ public class GhostViewPlatform implements GhostView {
         this.mGhostView = view;
     }
 
-    public static GhostView addGhost(View view, ViewGroup viewGroup, Matrix matrix) throws SecurityException {
+    public static GhostView addGhost(View view, ViewGroup viewGroup, Matrix matrix) {
         fetchAddGhostMethod();
         Method method = sAddGhostMethod;
         if (method != null) {
@@ -39,7 +39,7 @@ public class GhostViewPlatform implements GhostView {
         return null;
     }
 
-    private static void fetchAddGhostMethod() throws SecurityException {
+    private static void fetchAddGhostMethod() {
         if (sAddGhostMethodFetched) {
             return;
         }
@@ -66,7 +66,7 @@ public class GhostViewPlatform implements GhostView {
         sGhostViewClassFetched = true;
     }
 
-    private static void fetchRemoveGhostMethod() throws SecurityException {
+    private static void fetchRemoveGhostMethod() {
         if (sRemoveGhostMethodFetched) {
             return;
         }
@@ -81,7 +81,7 @@ public class GhostViewPlatform implements GhostView {
         sRemoveGhostMethodFetched = true;
     }
 
-    public static void removeGhost(View view) throws SecurityException, IllegalArgumentException {
+    public static void removeGhost(View view) {
         fetchRemoveGhostMethod();
         Method method = sRemoveGhostMethod;
         if (method != null) {

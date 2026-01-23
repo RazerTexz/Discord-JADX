@@ -8,11 +8,11 @@ import java.net.URL;
 import java.util.Map;
 import p007b.p100d.p104b.p105a.outline;
 
-/* renamed from: b.i.a.f.a.a.a */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.a.a.a */
+/* JADX INFO: loaded from: classes3.dex */
 public final class C3173a extends Thread {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final /* synthetic */ Map f9190j;
 
     public C3173a(Map map) {

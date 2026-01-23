@@ -8,9 +8,9 @@ import kotlin.jvm.functions.Function1;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: NotificationData.kt */
-/* renamed from: com.discord.utilities.fcm.NotificationData$getCallAction$coloredString$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.utilities.fcm.NotificationData$getCallAction$coloredString$1, reason: use source file name */
+/* JADX INFO: compiled from: NotificationData.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class NotificationData2 extends Lambda implements Function1<RenderContext, Unit> {
     public final /* synthetic */ int $colorRes;
     public final /* synthetic */ Context $ctx;
@@ -28,7 +28,7 @@ public final class NotificationData2 extends Lambda implements Function1<RenderC
         return Unit.f27425a;
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final void invoke2(RenderContext renderContext) {
         Intrinsics3.checkNotNullParameter(renderContext, "$receiver");
         renderContext.boldColor = Integer.valueOf(ColorCompat.getColor(this.$ctx, this.$colorRes));

@@ -7,8 +7,8 @@ import android.widget.FrameLayout;
 import androidx.annotation.NonNull;
 import java.util.ArrayList;
 
+/* JADX INFO: loaded from: classes.dex */
 @SuppressLint({"ViewConstructor"})
-/* loaded from: classes.dex */
 public class GhostViewHolder extends FrameLayout {
     private boolean mAttached;
 

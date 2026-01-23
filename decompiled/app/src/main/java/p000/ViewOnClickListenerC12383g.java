@@ -5,15 +5,15 @@ import com.discord.stores.StoreGifting;
 import com.discord.stores.StoreStream;
 import p007b.p008a.p009a.p011a0.WidgetGiftAcceptDialog;
 
-/* compiled from: java-style lambda group */
-/* renamed from: g */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: g */
+/* JADX INFO: compiled from: java-style lambda group */
+/* JADX INFO: loaded from: classes.dex */
 public final class ViewOnClickListenerC12383g implements View.OnClickListener {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final /* synthetic */ int f26065j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final /* synthetic */ Object f26066k;
 
     public ViewOnClickListenerC12383g(int i, Object obj) {

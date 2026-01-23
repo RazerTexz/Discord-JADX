@@ -7,21 +7,21 @@ import com.google.android.gms.common.internal.safeparcel.AbstractSafeParcelable;
 import p007b.p085c.p086a.p087a0.AnimatableValueParser;
 import p007b.p225i.p226a.p288f.p292c.p293a.p294d.C3191f;
 
-/* compiled from: com.google.android.gms:play-services-auth@@19.0.0 */
-/* loaded from: classes3.dex */
+/* JADX INFO: compiled from: com.google.android.gms:play-services-auth@@19.0.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public final class CredentialPickerConfig extends AbstractSafeParcelable implements ReflectedParcelable {
     public static final Parcelable.Creator<CredentialPickerConfig> CREATOR = new C3191f();
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final int f20401j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final boolean f20402k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final boolean f20403l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public final int f20404m;
 
     public CredentialPickerConfig(int i, boolean z2, boolean z3, boolean z4, int i2) {

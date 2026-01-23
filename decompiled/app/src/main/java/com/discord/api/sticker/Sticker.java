@@ -6,8 +6,8 @@ import kotlin.NoWhenBranchMatchedException;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: Sticker.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: Sticker.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class Sticker implements Serializable, BaseSticker {
     private final Boolean available;
     private final String description;
@@ -52,13 +52,13 @@ public final /* data */ class Sticker implements Serializable, BaseSticker {
     }
 
     @Override // com.discord.api.sticker.BaseSticker
-    /* renamed from: a, reason: from getter */
+    /* JADX INFO: renamed from: a, reason: from getter */
     public StickerFormatType getFormatType() {
         return this.formatType;
     }
 
     @Override // com.discord.api.sticker.BaseSticker
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public String mo8228b() {
         int iOrdinal = this.formatType.ordinal();
         if (iOrdinal == 0) {
@@ -74,18 +74,18 @@ public final /* data */ class Sticker implements Serializable, BaseSticker {
     }
 
     @Override // com.discord.api.sticker.BaseSticker
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public StickerPartial mo8229c() {
         return new StickerPartial(this.id, this.formatType, this.name);
     }
 
     @Override // com.discord.api.sticker.BaseSticker
-    /* renamed from: d, reason: from getter */
+    /* JADX INFO: renamed from: d, reason: from getter */
     public long getId() {
         return this.id;
     }
 
-    /* renamed from: e, reason: from getter */
+    /* JADX INFO: renamed from: e, reason: from getter */
     public final Boolean getAvailable() {
         return this.available;
     }
@@ -101,12 +101,12 @@ public final /* data */ class Sticker implements Serializable, BaseSticker {
         return this.id == sticker.id && Intrinsics3.areEqual(this.packId, sticker.packId) && Intrinsics3.areEqual(this.guildId, sticker.guildId) && Intrinsics3.areEqual(this.name, sticker.name) && Intrinsics3.areEqual(this.description, sticker.description) && Intrinsics3.areEqual(this.formatType, sticker.formatType) && Intrinsics3.areEqual(this.tags, sticker.tags) && Intrinsics3.areEqual(this.type, sticker.type) && Intrinsics3.areEqual(this.available, sticker.available);
     }
 
-    /* renamed from: f, reason: from getter */
+    /* JADX INFO: renamed from: f, reason: from getter */
     public final String getDescription() {
         return this.description;
     }
 
-    /* renamed from: g, reason: from getter */
+    /* JADX INFO: renamed from: g, reason: from getter */
     public final Long getGuildId() {
         return this.guildId;
     }
@@ -115,7 +115,7 @@ public final /* data */ class Sticker implements Serializable, BaseSticker {
         return this.id;
     }
 
-    /* renamed from: h, reason: from getter */
+    /* JADX INFO: renamed from: h, reason: from getter */
     public final String getName() {
         return this.name;
     }
@@ -141,22 +141,22 @@ public final /* data */ class Sticker implements Serializable, BaseSticker {
         return iHashCode7 + (bool != null ? bool.hashCode() : 0);
     }
 
-    /* renamed from: i, reason: from getter */
+    /* JADX INFO: renamed from: i, reason: from getter */
     public final Long getPackId() {
         return this.packId;
     }
 
-    /* renamed from: j, reason: from getter */
+    /* JADX INFO: renamed from: j, reason: from getter */
     public final String getTags() {
         return this.tags;
     }
 
-    /* renamed from: k, reason: from getter */
+    /* JADX INFO: renamed from: k, reason: from getter */
     public final StickerType getType() {
         return this.type;
     }
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final boolean m8241l() {
         StickerFormatType stickerFormatType = this.formatType;
         return stickerFormatType == StickerFormatType.APNG || stickerFormatType == StickerFormatType.LOTTIE;

@@ -23,7 +23,7 @@ import androidx.core.widget.TextViewCompat;
 import java.lang.ref.WeakReference;
 import java.util.Locale;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class AppCompatTextHelper {
     private static final int MONOSPACE = 3;
     private static final int SANS = 1;
@@ -47,7 +47,7 @@ public class AppCompatTextHelper {
     private int mStyle = 0;
     private int mFontWeight = -1;
 
-    /* renamed from: androidx.appcompat.widget.AppCompatTextHelper$1 */
+    /* JADX INFO: renamed from: androidx.appcompat.widget.AppCompatTextHelper$1 */
     public class C01081 extends ResourcesCompat.FontCallback {
         public final /* synthetic */ int val$fontWeight;
         public final /* synthetic */ int val$style;

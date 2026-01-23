@@ -3,7 +3,7 @@ package com.esotericsoftware.kryo.p502io;
 import com.esotericsoftware.kryo.KryoException;
 import java.io.InputStream;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public final class FastInput extends Input {
     public FastInput() {
     }

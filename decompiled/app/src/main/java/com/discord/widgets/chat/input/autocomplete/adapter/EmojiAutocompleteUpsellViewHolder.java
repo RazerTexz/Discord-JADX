@@ -20,14 +20,14 @@ import p007b.p008a.p027k.FormatUtils;
 import p507d0.p580t.Iterables2;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: EmojiAutocompleteUpsellViewHolder.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: EmojiAutocompleteUpsellViewHolder.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class EmojiAutocompleteUpsellViewHolder extends RecyclerView.ViewHolder {
     private final WidgetChatInputEmojiAutocompleteUpsellItemBinding binding;
     private final Function1<Autocompletable, Unit> onItemSelected;
 
-    /* compiled from: EmojiAutocompleteUpsellViewHolder.kt */
-    /* renamed from: com.discord.widgets.chat.input.autocomplete.adapter.EmojiAutocompleteUpsellViewHolder$bind$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.input.autocomplete.adapter.EmojiAutocompleteUpsellViewHolder$bind$1 */
+    /* JADX INFO: compiled from: EmojiAutocompleteUpsellViewHolder.kt */
     public static final class ViewOnClickListenerC78001 implements View.OnClickListener {
         public final /* synthetic */ EmojiUpsellPlaceholder $emojiUpsellPlaceholder;
 
@@ -59,7 +59,7 @@ public final class EmojiAutocompleteUpsellViewHolder extends RecyclerView.ViewHo
         return emojiAutocompleteUpsellViewHolder.onItemSelected;
     }
 
-    public final void bind(EmojiUpsellPlaceholder emojiUpsellPlaceholder) throws Resources.NotFoundException {
+    public final void bind(EmojiUpsellPlaceholder emojiUpsellPlaceholder) {
         Intrinsics3.checkNotNullParameter(emojiUpsellPlaceholder, "emojiUpsellPlaceholder");
         int lockedTotal = emojiUpsellPlaceholder.getLockedTotal();
         LinearLayout linearLayout = this.binding.f16117a;

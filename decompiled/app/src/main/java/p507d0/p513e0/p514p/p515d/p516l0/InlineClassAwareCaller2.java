@@ -21,11 +21,11 @@ import p507d0.p513e0.p514p.p515d.p517m0.p567n.KotlinType;
 import p507d0.p513e0.p514p.p515d.util2;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: InlineClassAwareCaller.kt */
-/* renamed from: d0.e0.p.d.l0.h, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.l0.h, reason: use source file name */
+/* JADX INFO: compiled from: InlineClassAwareCaller.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class InlineClassAwareCaller2 {
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final KotlinType m9354a(CallableMemberDescriptor callableMemberDescriptor) {
         ReceiverParameterDescriptor extensionReceiverParameter = callableMemberDescriptor.getExtensionReceiverParameter();
         ReceiverParameterDescriptor dispatchReceiverParameter = callableMemberDescriptor.getDispatchReceiverParameter();
@@ -106,7 +106,7 @@ public final class InlineClassAwareCaller2 {
         return createInlineClassAwareCallerIfNeeded(caller2, callableMemberDescriptor, z2);
     }
 
-    public static final Method getBoxMethod(Class<?> cls, CallableMemberDescriptor callableMemberDescriptor) throws SecurityException {
+    public static final Method getBoxMethod(Class<?> cls, CallableMemberDescriptor callableMemberDescriptor) {
         Intrinsics3.checkNotNullParameter(cls, "$this$getBoxMethod");
         Intrinsics3.checkNotNullParameter(callableMemberDescriptor, "descriptor");
         try {
@@ -118,7 +118,7 @@ public final class InlineClassAwareCaller2 {
         }
     }
 
-    public static final Method getUnboxMethod(Class<?> cls, CallableMemberDescriptor callableMemberDescriptor) throws SecurityException {
+    public static final Method getUnboxMethod(Class<?> cls, CallableMemberDescriptor callableMemberDescriptor) {
         Intrinsics3.checkNotNullParameter(cls, "$this$getUnboxMethod");
         Intrinsics3.checkNotNullParameter(callableMemberDescriptor, "descriptor");
         try {

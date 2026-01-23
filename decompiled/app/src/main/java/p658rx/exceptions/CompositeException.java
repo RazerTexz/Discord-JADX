@@ -10,14 +10,14 @@ import java.util.Iterator;
 import java.util.LinkedHashSet;
 import java.util.List;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public final class CompositeException extends RuntimeException {
     private static final long serialVersionUID = 3026362227162912146L;
     private Throwable cause;
     private final List<Throwable> exceptions;
     private final String message;
 
-    /* renamed from: rx.exceptions.CompositeException$a */
+    /* JADX INFO: renamed from: rx.exceptions.CompositeException$a */
     public static final class C13009a extends RuntimeException {
         private static final long serialVersionUID = 3875212506787802066L;
 
@@ -27,19 +27,19 @@ public final class CompositeException extends RuntimeException {
         }
     }
 
-    /* renamed from: rx.exceptions.CompositeException$b */
+    /* JADX INFO: renamed from: rx.exceptions.CompositeException$b */
     public static abstract class AbstractC13010b {
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public abstract Object mo11124a();
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public abstract void mo11125b(Object obj);
     }
 
-    /* renamed from: rx.exceptions.CompositeException$c */
+    /* JADX INFO: renamed from: rx.exceptions.CompositeException$c */
     public static final class C13011c extends AbstractC13010b {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final PrintStream f27641a;
 
         public C13011c(PrintStream printStream) {
@@ -47,22 +47,22 @@ public final class CompositeException extends RuntimeException {
         }
 
         @Override // p658rx.exceptions.CompositeException.AbstractC13010b
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public Object mo11124a() {
             return this.f27641a;
         }
 
         @Override // p658rx.exceptions.CompositeException.AbstractC13010b
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public void mo11125b(Object obj) {
             this.f27641a.println(obj);
         }
     }
 
-    /* renamed from: rx.exceptions.CompositeException$d */
+    /* JADX INFO: renamed from: rx.exceptions.CompositeException$d */
     public static final class C13012d extends AbstractC13010b {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final PrintWriter f27642a;
 
         public C13012d(PrintWriter printWriter) {
@@ -70,13 +70,13 @@ public final class CompositeException extends RuntimeException {
         }
 
         @Override // p658rx.exceptions.CompositeException.AbstractC13010b
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public Object mo11124a() {
             return this.f27642a;
         }
 
         @Override // p658rx.exceptions.CompositeException.AbstractC13010b
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public void mo11125b(Object obj) {
             this.f27642a.println(obj);
         }
@@ -104,7 +104,7 @@ public final class CompositeException extends RuntimeException {
         this.message = listUnmodifiableList.size() + " exceptions occurred. ";
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final void m11121a(StringBuilder sb, Throwable th, String str) {
         sb.append(str);
         sb.append(th);
@@ -120,12 +120,12 @@ public final class CompositeException extends RuntimeException {
         }
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public List<Throwable> m11122b() {
         return this.exceptions;
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final void m11123c(AbstractC13010b abstractC13010b) {
         StringBuilder sb = new StringBuilder(128);
         sb.append(this);

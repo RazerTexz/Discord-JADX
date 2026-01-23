@@ -2,7 +2,6 @@ package androidx.room.util;
 
 import android.database.AbstractWindowedCursor;
 import android.database.Cursor;
-import android.database.SQLException;
 import android.os.Build;
 import android.os.CancellationSignal;
 import androidx.annotation.NonNull;
@@ -18,8 +17,8 @@ import java.nio.ByteBuffer;
 import java.nio.channels.FileChannel;
 import java.util.ArrayList;
 
+/* JADX INFO: loaded from: classes.dex */
 @RestrictTo({RestrictTo.Scope.LIBRARY_GROUP_PREFIX})
-/* loaded from: classes.dex */
 public class DBUtil {
     private DBUtil() {
     }
@@ -29,7 +28,7 @@ public class DBUtil {
         return new CancellationSignal();
     }
 
-    public static void dropFtsSyncTriggers(SupportSQLiteDatabase supportSQLiteDatabase) throws SQLException {
+    public static void dropFtsSyncTriggers(SupportSQLiteDatabase supportSQLiteDatabase) {
         ArrayList<String> arrayList = new ArrayList();
         Cursor cursorQuery = supportSQLiteDatabase.query("SELECT name FROM sqlite_master WHERE type = 'trigger'");
         while (cursorQuery.moveToNext()) {

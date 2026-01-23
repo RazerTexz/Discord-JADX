@@ -28,19 +28,19 @@ import p507d0.p592z.p594d.Lambda;
 import p658rx.Observable;
 import p658rx.subjects.PublishSubject;
 
-/* compiled from: WidgetSettingsBlockedUsersViewModel.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetSettingsBlockedUsersViewModel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetSettingsBlockedUsersViewModel extends AppViewModel<ViewState> {
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private static final String LOCATION = "Blocked Users List";
     public static final int VIEW_TYPE_BLOCKED_USER_ITEM = 0;
     private final PublishSubject<Event> eventSubject;
     private final RestAPI restAPI;
 
-    /* compiled from: WidgetSettingsBlockedUsersViewModel.kt */
-    /* renamed from: com.discord.widgets.settings.account.WidgetSettingsBlockedUsersViewModel$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.account.WidgetSettingsBlockedUsersViewModel$1 */
+    /* JADX INFO: compiled from: WidgetSettingsBlockedUsersViewModel.kt */
     public static final class C97801 extends Lambda implements Function1<StoreState, Unit> {
         public C97801() {
             super(1);
@@ -52,14 +52,14 @@ public final class WidgetSettingsBlockedUsersViewModel extends AppViewModel<View
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(StoreState storeState) {
             Intrinsics3.checkNotNullParameter(storeState, "storeState");
             WidgetSettingsBlockedUsersViewModel.access$handleStoreState(WidgetSettingsBlockedUsersViewModel.this, storeState);
         }
     }
 
-    /* compiled from: WidgetSettingsBlockedUsersViewModel.kt */
+    /* JADX INFO: compiled from: WidgetSettingsBlockedUsersViewModel.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -77,10 +77,10 @@ public final class WidgetSettingsBlockedUsersViewModel extends AppViewModel<View
         }
     }
 
-    /* compiled from: WidgetSettingsBlockedUsersViewModel.kt */
+    /* JADX INFO: compiled from: WidgetSettingsBlockedUsersViewModel.kt */
     public static abstract class Event {
 
-        /* compiled from: WidgetSettingsBlockedUsersViewModel.kt */
+        /* JADX INFO: compiled from: WidgetSettingsBlockedUsersViewModel.kt */
         public static final /* data */ class ShowToast extends Event {
             private final int stringRes;
 
@@ -96,7 +96,7 @@ public final class WidgetSettingsBlockedUsersViewModel extends AppViewModel<View
                 return showToast.copy(i);
             }
 
-            /* renamed from: component1, reason: from getter */
+            /* JADX INFO: renamed from: component1, reason: from getter */
             public final int getStringRes() {
                 return this.stringRes;
             }
@@ -133,7 +133,7 @@ public final class WidgetSettingsBlockedUsersViewModel extends AppViewModel<View
         }
     }
 
-    /* compiled from: WidgetSettingsBlockedUsersViewModel.kt */
+    /* JADX INFO: compiled from: WidgetSettingsBlockedUsersViewModel.kt */
     public static final /* data */ class Item implements MGRecyclerDataPayload {
         private final String key;
         private final int type;
@@ -152,7 +152,7 @@ public final class WidgetSettingsBlockedUsersViewModel extends AppViewModel<View
             return item.copy(user);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final User getUser() {
             return this.user;
         }
@@ -199,7 +199,7 @@ public final class WidgetSettingsBlockedUsersViewModel extends AppViewModel<View
         }
     }
 
-    /* compiled from: WidgetSettingsBlockedUsersViewModel.kt */
+    /* JADX INFO: compiled from: WidgetSettingsBlockedUsersViewModel.kt */
     public static final /* data */ class StoreState {
         private final Map<Long, User> users;
 
@@ -250,10 +250,10 @@ public final class WidgetSettingsBlockedUsersViewModel extends AppViewModel<View
         }
     }
 
-    /* compiled from: WidgetSettingsBlockedUsersViewModel.kt */
+    /* JADX INFO: compiled from: WidgetSettingsBlockedUsersViewModel.kt */
     public static abstract class ViewState {
 
-        /* compiled from: WidgetSettingsBlockedUsersViewModel.kt */
+        /* JADX INFO: compiled from: WidgetSettingsBlockedUsersViewModel.kt */
         public static final class Empty extends ViewState {
             public static final Empty INSTANCE = new Empty();
 
@@ -262,7 +262,7 @@ public final class WidgetSettingsBlockedUsersViewModel extends AppViewModel<View
             }
         }
 
-        /* compiled from: WidgetSettingsBlockedUsersViewModel.kt */
+        /* JADX INFO: compiled from: WidgetSettingsBlockedUsersViewModel.kt */
         public static final /* data */ class Loaded extends ViewState {
             private final List<Item> items;
 
@@ -314,7 +314,7 @@ public final class WidgetSettingsBlockedUsersViewModel extends AppViewModel<View
             }
         }
 
-        /* compiled from: WidgetSettingsBlockedUsersViewModel.kt */
+        /* JADX INFO: compiled from: WidgetSettingsBlockedUsersViewModel.kt */
         public static final class Uninitialized extends ViewState {
             public static final Uninitialized INSTANCE = new Uninitialized();
 
@@ -331,8 +331,8 @@ public final class WidgetSettingsBlockedUsersViewModel extends AppViewModel<View
         }
     }
 
-    /* compiled from: WidgetSettingsBlockedUsersViewModel.kt */
-    /* renamed from: com.discord.widgets.settings.account.WidgetSettingsBlockedUsersViewModel$getItems$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.account.WidgetSettingsBlockedUsersViewModel$getItems$1 */
+    /* JADX INFO: compiled from: WidgetSettingsBlockedUsersViewModel.kt */
     public static final class C97821 extends Lambda implements Function1<Map.Entry<? extends Long, ? extends User>, Item> {
         public static final C97821 INSTANCE = new C97821();
 
@@ -345,15 +345,15 @@ public final class WidgetSettingsBlockedUsersViewModel extends AppViewModel<View
             return invoke2((Map.Entry<Long, ? extends User>) entry);
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final Item invoke2(Map.Entry<Long, ? extends User> entry) {
             Intrinsics3.checkNotNullParameter(entry, "userEntry");
             return new Item(entry.getValue());
         }
     }
 
-    /* compiled from: WidgetSettingsBlockedUsersViewModel.kt */
-    /* renamed from: com.discord.widgets.settings.account.WidgetSettingsBlockedUsersViewModel$getItems$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.account.WidgetSettingsBlockedUsersViewModel$getItems$2 */
+    /* JADX INFO: compiled from: WidgetSettingsBlockedUsersViewModel.kt */
     public static final class C97832<T> implements Comparator<Item> {
         public static final C97832 INSTANCE = new C97832();
 
@@ -362,14 +362,14 @@ public final class WidgetSettingsBlockedUsersViewModel extends AppViewModel<View
             return compare2(item, item2);
         }
 
-        /* renamed from: compare, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: compare, reason: avoid collision after fix types in other method */
         public final int compare2(Item item, Item item2) {
             return UserUtils.INSTANCE.compareUserNames(item.getUser(), item2.getUser());
         }
     }
 
-    /* compiled from: WidgetSettingsBlockedUsersViewModel.kt */
-    /* renamed from: com.discord.widgets.settings.account.WidgetSettingsBlockedUsersViewModel$onClickUnblock$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.account.WidgetSettingsBlockedUsersViewModel$onClickUnblock$1 */
+    /* JADX INFO: compiled from: WidgetSettingsBlockedUsersViewModel.kt */
     public static final class C97841 extends Lambda implements Function1<Void, Unit> {
         public C97841() {
             super(1);
@@ -381,14 +381,14 @@ public final class WidgetSettingsBlockedUsersViewModel extends AppViewModel<View
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Void r2) {
             WidgetSettingsBlockedUsersViewModel.access$emitShowToastEvent(WidgetSettingsBlockedUsersViewModel.this, C5419R.string.user_has_been_unblocked);
         }
     }
 
-    /* compiled from: WidgetSettingsBlockedUsersViewModel.kt */
-    /* renamed from: com.discord.widgets.settings.account.WidgetSettingsBlockedUsersViewModel$onClickUnblock$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.settings.account.WidgetSettingsBlockedUsersViewModel$onClickUnblock$2 */
+    /* JADX INFO: compiled from: WidgetSettingsBlockedUsersViewModel.kt */
     public static final class C97852 extends Lambda implements Function1<Error, Unit> {
         public C97852() {
             super(1);
@@ -400,7 +400,7 @@ public final class WidgetSettingsBlockedUsersViewModel extends AppViewModel<View
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Error error) {
             Intrinsics3.checkNotNullParameter(error, "it");
             WidgetSettingsBlockedUsersViewModel.access$emitShowToastEvent(WidgetSettingsBlockedUsersViewModel.this, C5419R.string.default_failure_to_perform_action_message);

@@ -11,59 +11,59 @@ import androidx.annotation.VisibleForTesting;
 import java.util.Arrays;
 import p007b.p085c.p086a.p087a0.AnimatableValueParser;
 
-/* compiled from: RoundedColorDrawable.java */
-/* renamed from: b.f.g.e.l, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.f.g.e.l, reason: use source file name */
+/* JADX INFO: compiled from: RoundedColorDrawable.java */
+/* JADX INFO: loaded from: classes.dex */
 public class RoundedColorDrawable extends Drawable implements Rounded {
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     @VisibleForTesting
     public float[] f3376l;
 
-    /* renamed from: v */
+    /* JADX INFO: renamed from: v */
     public int f3386v;
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final float[] f3374j = new float[8];
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     @VisibleForTesting
     public final float[] f3375k = new float[8];
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     @VisibleForTesting
     public final Paint f3377m = new Paint(1);
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public boolean f3378n = false;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public float f3379o = 0.0f;
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public float f3380p = 0.0f;
 
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     public int f3381q = 0;
 
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     public boolean f3382r = false;
 
-    /* renamed from: s */
+    /* JADX INFO: renamed from: s */
     public boolean f3383s = false;
 
-    /* renamed from: t */
+    /* JADX INFO: renamed from: t */
     @VisibleForTesting
     public final Path f3384t = new Path();
 
-    /* renamed from: u */
+    /* JADX INFO: renamed from: u */
     @VisibleForTesting
     public final Path f3385u = new Path();
 
-    /* renamed from: w */
+    /* JADX INFO: renamed from: w */
     public final RectF f3387w = new RectF();
 
-    /* renamed from: x */
+    /* JADX INFO: renamed from: x */
     public int f3388x = 255;
 
     public RoundedColorDrawable(int i) {
@@ -75,7 +75,7 @@ public class RoundedColorDrawable extends Drawable implements Rounded {
     }
 
     @Override // p007b.p109f.p132g.p142e.Rounded
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public void mo1106a(int i, float f) {
         if (this.f3381q != i) {
             this.f3381q = i;
@@ -88,7 +88,7 @@ public class RoundedColorDrawable extends Drawable implements Rounded {
         }
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final void m1114b() {
         float[] fArr;
         float[] fArr2;
@@ -141,7 +141,7 @@ public class RoundedColorDrawable extends Drawable implements Rounded {
     }
 
     @Override // p007b.p109f.p132g.p142e.Rounded
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public void mo1107c(boolean z2) {
         this.f3378n = z2;
         m1114b();
@@ -163,7 +163,7 @@ public class RoundedColorDrawable extends Drawable implements Rounded {
     }
 
     @Override // p007b.p109f.p132g.p142e.Rounded
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public void mo1108e(boolean z2) {
         if (this.f3383s != z2) {
             this.f3383s = z2;
@@ -172,7 +172,7 @@ public class RoundedColorDrawable extends Drawable implements Rounded {
     }
 
     @Override // p007b.p109f.p132g.p142e.Rounded
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public void mo1109f(boolean z2) {
         if (this.f3382r != z2) {
             this.f3382r = z2;
@@ -196,7 +196,7 @@ public class RoundedColorDrawable extends Drawable implements Rounded {
     }
 
     @Override // p007b.p109f.p132g.p142e.Rounded
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public void mo1110i(float f) {
         if (this.f3380p != f) {
             this.f3380p = f;
@@ -206,7 +206,7 @@ public class RoundedColorDrawable extends Drawable implements Rounded {
     }
 
     @Override // p007b.p109f.p132g.p142e.Rounded
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public void mo1111j(float f) {
         AnimatableValueParser.m535k(f >= 0.0f, "radius should be non negative");
         Arrays.fill(this.f3374j, f);
@@ -215,7 +215,7 @@ public class RoundedColorDrawable extends Drawable implements Rounded {
     }
 
     @Override // p007b.p109f.p132g.p142e.Rounded
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public void mo1112m(float[] fArr) {
         if (fArr == null) {
             Arrays.fill(this.f3374j, 0.0f);

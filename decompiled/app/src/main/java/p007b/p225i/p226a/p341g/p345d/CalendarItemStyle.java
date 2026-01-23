@@ -2,7 +2,6 @@ package p007b.p225i.p226a.p341g.p345d;
 
 import android.content.Context;
 import android.content.res.ColorStateList;
-import android.content.res.Resources;
 import android.content.res.TypedArray;
 import android.graphics.Rect;
 import android.graphics.drawable.Drawable;
@@ -18,28 +17,28 @@ import com.google.android.material.resources.MaterialResources;
 import com.google.android.material.shape.MaterialShapeDrawable;
 import com.google.android.material.shape.ShapeAppearanceModel;
 
-/* compiled from: CalendarItemStyle.java */
-/* renamed from: b.i.a.g.d.a, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.g.d.a, reason: use source file name */
+/* JADX INFO: compiled from: CalendarItemStyle.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class CalendarItemStyle {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     @NonNull
     public final Rect f11578a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final ColorStateList f11579b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final ColorStateList f11580c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final ColorStateList f11581d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final int f11582e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final ShapeAppearanceModel f11583f;
 
     public CalendarItemStyle(ColorStateList colorStateList, ColorStateList colorStateList2, ColorStateList colorStateList3, int i, ShapeAppearanceModel shapeAppearanceModel, @NonNull Rect rect) {
@@ -56,8 +55,8 @@ public final class CalendarItemStyle {
     }
 
     @NonNull
-    /* renamed from: a */
-    public static CalendarItemStyle m6058a(@NonNull Context context, @StyleRes int i) throws Resources.NotFoundException {
+    /* JADX INFO: renamed from: a */
+    public static CalendarItemStyle m6058a(@NonNull Context context, @StyleRes int i) {
         Preconditions.checkArgument(i != 0, "Cannot create a CalendarItemStyle with a styleResId of 0");
         TypedArray typedArrayObtainStyledAttributes = context.obtainStyledAttributes(i, C10817R.styleable.MaterialCalendarItem);
         Rect rect = new Rect(typedArrayObtainStyledAttributes.getDimensionPixelOffset(C10817R.styleable.MaterialCalendarItem_android_insetLeft, 0), typedArrayObtainStyledAttributes.getDimensionPixelOffset(C10817R.styleable.MaterialCalendarItem_android_insetTop, 0), typedArrayObtainStyledAttributes.getDimensionPixelOffset(C10817R.styleable.MaterialCalendarItem_android_insetRight, 0), typedArrayObtainStyledAttributes.getDimensionPixelOffset(C10817R.styleable.MaterialCalendarItem_android_insetBottom, 0));
@@ -70,7 +69,7 @@ public final class CalendarItemStyle {
         return new CalendarItemStyle(colorStateList, colorStateList2, colorStateList3, dimensionPixelSize, shapeAppearanceModelBuild, rect);
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public void m6059b(@NonNull TextView textView) {
         MaterialShapeDrawable materialShapeDrawable = new MaterialShapeDrawable();
         MaterialShapeDrawable materialShapeDrawable2 = new MaterialShapeDrawable();

@@ -8,9 +8,9 @@ import p507d0.p580t._Collections;
 import p507d0.p592z.p594d.Lambda;
 import p507d0.p592z.p594d.Reflection2;
 
-/* compiled from: StoreMediaFavorites.kt */
-/* renamed from: com.discord.stores.StoreMediaFavorites$Favorite$Companion$AllTypes$2, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.stores.StoreMediaFavorites$Favorite$Companion$AllTypes$2, reason: use source file name */
+/* JADX INFO: compiled from: StoreMediaFavorites.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class StoreMediaFavorites2 extends Lambda implements Function0<Set<? extends KClass<? extends StoreMediaFavorites.Favorite>>> {
     public static final StoreMediaFavorites2 INSTANCE = new StoreMediaFavorites2();
 
@@ -24,7 +24,7 @@ public final class StoreMediaFavorites2 extends Lambda implements Function0<Set<
     }
 
     @Override // kotlin.jvm.functions.Function0
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final Set<? extends KClass<? extends StoreMediaFavorites.Favorite>> invoke2() {
         return _Collections.toSet(Reflection2.getOrCreateKotlinClass(StoreMediaFavorites.Favorite.class).getSealedSubclasses());
     }

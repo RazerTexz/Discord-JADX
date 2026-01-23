@@ -7,9 +7,9 @@ import kotlin.jvm.functions.Function7;
 import p507d0.p592z.p594d.FunctionReferenceImpl;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: WidgetGlobalSearchModel.kt */
-/* renamed from: com.discord.widgets.user.search.WidgetGlobalSearchModel$Companion$get$partialSearchContextObservable$1 */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: com.discord.widgets.user.search.WidgetGlobalSearchModel$Companion$get$partialSearchContextObservable$1 */
+/* JADX INFO: compiled from: WidgetGlobalSearchModel.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* synthetic */ class C10335x6afc2e86 extends FunctionReferenceImpl implements Function7<String, List<? extends Long>, Long, Long, Long, Map<Long, ? extends Long>, Map<Long, ? extends Integer>, WidgetGlobalSearchModel.SearchContext> {
     public static final C10335x6afc2e86 INSTANCE = new C10335x6afc2e86();
 

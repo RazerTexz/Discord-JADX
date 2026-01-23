@@ -3,8 +3,8 @@ package com.discord.utilities.time;
 import com.lyft.kronos.Clock8;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: NtpClock.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: NtpClock.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class NtpClock implements Clock {
     private final Clock8 kronosClock;
 

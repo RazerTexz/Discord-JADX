@@ -12,15 +12,15 @@ import p658rx.exceptions.OnErrorFailedException;
 import p658rx.exceptions.OnErrorNotImplementedException;
 import p658rx.exceptions.UnsubscribeFailedException;
 
-/* compiled from: SafeSubscriber.java */
-/* renamed from: j0.n.b, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: j0.n.b, reason: use source file name */
+/* JADX INFO: compiled from: SafeSubscriber.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class SafeSubscriber<T> extends Subscriber<T> {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final Subscriber<? super T> f27364j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public boolean f27365k;
 
     public SafeSubscriber(Subscriber<? super T> subscriber) {

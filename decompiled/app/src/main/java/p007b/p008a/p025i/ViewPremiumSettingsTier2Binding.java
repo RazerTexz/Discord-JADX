@@ -7,16 +7,16 @@ import androidx.annotation.NonNull;
 import androidx.viewbinding.ViewBinding;
 import com.google.android.material.button.MaterialButton;
 
-/* compiled from: ViewPremiumSettingsTier2Binding.java */
-/* renamed from: b.a.i.b3, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.a.i.b3, reason: use source file name */
+/* JADX INFO: compiled from: ViewPremiumSettingsTier2Binding.java */
+/* JADX INFO: loaded from: classes.dex */
 public final class ViewPremiumSettingsTier2Binding implements ViewBinding {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     @NonNull
     public final LinearLayout f705a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     @NonNull
     public final MaterialButton f706b;
 

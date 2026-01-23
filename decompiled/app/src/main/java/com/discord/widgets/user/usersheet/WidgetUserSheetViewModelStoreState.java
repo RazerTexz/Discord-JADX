@@ -51,12 +51,12 @@ import p658rx.Observable;
 import p658rx.Scheduler;
 import p658rx.functions.Func4;
 
-/* compiled from: WidgetUserSheetViewModelStoreState.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: WidgetUserSheetViewModelStoreState.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class WidgetUserSheetViewModelStoreState {
     public static final WidgetUserSheetViewModelStoreState INSTANCE = new WidgetUserSheetViewModelStoreState();
 
-    /* compiled from: WidgetUserSheetViewModelStoreState.kt */
+    /* JADX INFO: compiled from: WidgetUserSheetViewModelStoreState.kt */
     public static final /* data */ class BootstrapData {
         private final Channel channel;
         private final MeUser me;
@@ -87,22 +87,22 @@ public final class WidgetUserSheetViewModelStoreState {
             return bootstrapData.copy(user, meUser, channel, channel2);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final User getUser() {
             return this.user;
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final MeUser getMe() {
             return this.me;
         }
 
-        /* renamed from: component3, reason: from getter */
+        /* JADX INFO: renamed from: component3, reason: from getter */
         public final Channel getChannel() {
             return this.channel;
         }
 
-        /* renamed from: component4, reason: from getter */
+        /* JADX INFO: renamed from: component4, reason: from getter */
         public final Channel getSelectedVoiceChannel() {
             return this.selectedVoiceChannel;
         }
@@ -164,8 +164,8 @@ public final class WidgetUserSheetViewModelStoreState {
         }
     }
 
-    /* compiled from: WidgetUserSheetViewModelStoreState.kt */
-    /* renamed from: com.discord.widgets.user.usersheet.WidgetUserSheetViewModelStoreState$observeStoreState$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.user.usersheet.WidgetUserSheetViewModelStoreState$observeStoreState$2 */
+    /* JADX INFO: compiled from: WidgetUserSheetViewModelStoreState.kt */
     public static final /* synthetic */ class C104012 extends FunctionReferenceImpl implements Function4<User, MeUser, Channel, Channel, BootstrapData> {
         public static final C104012 INSTANCE = new C104012();
 
@@ -178,15 +178,15 @@ public final class WidgetUserSheetViewModelStoreState {
             return invoke2(user, meUser, channel, channel2);
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final BootstrapData invoke2(User user, MeUser meUser, Channel channel, Channel channel2) {
             Intrinsics3.checkNotNullParameter(meUser, "p2");
             return new BootstrapData(user, meUser, channel, channel2);
         }
     }
 
-    /* compiled from: WidgetUserSheetViewModelStoreState.kt */
-    /* renamed from: com.discord.widgets.user.usersheet.WidgetUserSheetViewModelStoreState$observeStoreState$3 */
+    /* JADX INFO: renamed from: com.discord.widgets.user.usersheet.WidgetUserSheetViewModelStoreState$observeStoreState$3 */
+    /* JADX INFO: compiled from: WidgetUserSheetViewModelStoreState.kt */
     public static final class C104023<T, R> implements Func1<BootstrapData, Observable<? extends WidgetUserSheetViewModel.StoreState>> {
         public final /* synthetic */ Long $guildId;
         public final /* synthetic */ StoreGuilds $storeGuilds;
@@ -200,8 +200,8 @@ public final class WidgetUserSheetViewModelStoreState {
         public final /* synthetic */ StoreVoiceStates $storeVoiceStates;
         public final /* synthetic */ StreamContextService $streamContextService;
 
-        /* compiled from: WidgetUserSheetViewModelStoreState.kt */
-        /* renamed from: com.discord.widgets.user.usersheet.WidgetUserSheetViewModelStoreState$observeStoreState$3$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.widgets.user.usersheet.WidgetUserSheetViewModelStoreState$observeStoreState$3$1, reason: invalid class name */
+        /* JADX INFO: compiled from: WidgetUserSheetViewModelStoreState.kt */
         public static final class AnonymousClass1<T, R> implements Func1 {
             public static final AnonymousClass1 INSTANCE = new AnonymousClass1();
 
@@ -215,8 +215,8 @@ public final class WidgetUserSheetViewModelStoreState {
             }
         }
 
-        /* compiled from: WidgetUserSheetViewModelStoreState.kt */
-        /* renamed from: com.discord.widgets.user.usersheet.WidgetUserSheetViewModelStoreState$observeStoreState$3$2, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.widgets.user.usersheet.WidgetUserSheetViewModelStoreState$observeStoreState$3$2, reason: invalid class name */
+        /* JADX INFO: compiled from: WidgetUserSheetViewModelStoreState.kt */
         public static final class AnonymousClass2 extends Lambda implements Function16<Map<Long, ? extends GuildMember>, Map<Long, ? extends GuildRole>, Map<Long, ? extends VoiceState>, Map<Long, ? extends VoiceState>, StoreMediaSettings.VoiceConfiguration, ModelRichPresence, Guild, Long, StreamContext, UserProfile, Integer, StoreUserNotes.UserNoteState, StageRoles, StageRequestToSpeakState, StageRoles, Boolean, WidgetUserSheetViewModel.StoreState> {
             public final /* synthetic */ Channel $channel;
             public final /* synthetic */ MeUser $me;
@@ -279,7 +279,6 @@ public final class WidgetUserSheetViewModelStoreState {
             return call2(bootstrapData);
         }
 
-        /* JADX WARN: Multi-variable type inference failed */
         /* JADX WARN: Removed duplicated region for block: B:16:0x0065  */
         /* JADX WARN: Removed duplicated region for block: B:21:0x0082  */
         /* JADX WARN: Removed duplicated region for block: B:37:0x00e6  */
@@ -291,15 +290,15 @@ public final class WidgetUserSheetViewModelStoreState {
         /* JADX WARN: Removed duplicated region for block: B:61:0x015d  */
         /* JADX WARN: Removed duplicated region for block: B:63:0x0165  */
         /* JADX WARN: Removed duplicated region for block: B:66:0x0179  */
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         /*
             Code decompiled incorrectly, please refer to instructions dump.
         */
         public final Observable<? extends WidgetUserSheetViewModel.StoreState> call2(BootstrapData bootstrapData) {
-            Observable scalarSynchronousObservable;
-            Observable scalarSynchronousObservable2;
+            Observable<Map<Long, GuildMember>> scalarSynchronousObservable;
+            Observable<Map<Long, GuildRole>> scalarSynchronousObservable2;
             Observable<Guild> scalarSynchronousObservable3;
-            Observable observable;
+            Observable<Map<Long, GuildMember>> observable;
             Observable<Long> scalarSynchronousObservable4;
             MeUser meUser;
             Channel channel;
@@ -308,8 +307,8 @@ public final class WidgetUserSheetViewModelStoreState {
             Observable<StageRequestToSpeakState> scalarSynchronousObservable6;
             Observable<StageRoles> scalarSynchronousObservable7;
             Observable<Boolean> scalarSynchronousObservable8;
-            Observable observableObserve;
-            Observable observableObserve2;
+            Observable<Map<Long, VoiceState>> observableObserve;
+            Observable<Map<Long, VoiceState>> observableObserve2;
             User user = bootstrapData.getUser();
             MeUser me2 = bootstrapData.getMe();
             Channel channel2 = bootstrapData.getChannel();
@@ -323,16 +322,16 @@ public final class WidgetUserSheetViewModelStoreState {
             }
             if (lValueOf != null) {
                 lValueOf.longValue();
-                Observable observableObserveComputed = this.$storeGuilds.observeComputed(lValueOf.longValue(), Collections2.listOf((Object[]) new Long[]{Long.valueOf(user.getId()), Long.valueOf(me2.getId())}));
+                Observable<Map<Long, GuildMember>> observableObserveComputed = this.$storeGuilds.observeComputed(lValueOf.longValue(), Collections2.listOf((Object[]) new Long[]{Long.valueOf(user.getId()), Long.valueOf(me2.getId())}));
                 scalarSynchronousObservable = observableObserveComputed != null ? observableObserveComputed : new ScalarSynchronousObservable(Maps6.emptyMap());
             }
             if (lValueOf != null) {
                 lValueOf.longValue();
-                Observable observableObserveRoles = this.$storeGuilds.observeRoles(lValueOf.longValue());
+                Observable<Map<Long, GuildRole>> observableObserveRoles = this.$storeGuilds.observeRoles(lValueOf.longValue());
                 scalarSynchronousObservable2 = observableObserveRoles != null ? observableObserveRoles : new ScalarSynchronousObservable(Maps6.emptyMap());
             }
-            Observable scalarSynchronousObservable9 = (selectedVoiceChannel == null || (observableObserve2 = this.$storeVoiceStates.observe(selectedVoiceChannel.getGuildId(), selectedVoiceChannel.getId())) == null) ? new ScalarSynchronousObservable(Maps6.emptyMap()) : observableObserve2;
-            Observable scalarSynchronousObservable10 = (channel2 == null || (observableObserve = this.$storeVoiceStates.observe(channel2.getGuildId(), channel2.getId())) == null) ? new ScalarSynchronousObservable(Maps6.emptyMap()) : observableObserve;
+            Observable<Map<Long, VoiceState>> scalarSynchronousObservable9 = (selectedVoiceChannel == null || (observableObserve2 = this.$storeVoiceStates.observe(selectedVoiceChannel.getGuildId(), selectedVoiceChannel.getId())) == null) ? new ScalarSynchronousObservable(Maps6.emptyMap()) : observableObserve2;
+            Observable<Map<Long, VoiceState>> scalarSynchronousObservable10 = (channel2 == null || (observableObserve = this.$storeVoiceStates.observe(channel2.getGuildId(), channel2.getId())) == null) ? new ScalarSynchronousObservable(Maps6.emptyMap()) : observableObserve;
             Observable<ModelRichPresence> observable2 = ModelRichPresence.INSTANCE.get(user.getId(), this.$storeUserPresence);
             if (lValueOf != null) {
                 lValueOf.longValue();

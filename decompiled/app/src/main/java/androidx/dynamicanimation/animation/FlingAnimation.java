@@ -3,7 +3,7 @@ package androidx.dynamicanimation.animation;
 import androidx.annotation.FloatRange;
 import androidx.dynamicanimation.animation.DynamicAnimation;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public final class FlingAnimation extends DynamicAnimation<FlingAnimation> {
     private final DragForce mFlingForce;
 
@@ -38,10 +38,10 @@ public final class FlingAnimation extends DynamicAnimation<FlingAnimation> {
 
         public DynamicAnimation.MassState updateValueAndVelocity(float f, float f2, long j) {
             float f3 = j;
-            this.mMassState.mVelocity = (float) (Math.exp((f3 / 1000.0f) * this.mFriction) * f2);
+            this.mMassState.mVelocity = (float) (Math.exp((f3 / 1000.0f) * this.mFriction) * ((double) f2));
             DynamicAnimation.MassState massState = this.mMassState;
             float f4 = this.mFriction;
-            massState.mValue = (float) ((Math.exp((f4 * f3) / 1000.0f) * (f2 / f4)) + (f - (f2 / f4)));
+            massState.mValue = (float) ((Math.exp((f4 * f3) / 1000.0f) * ((double) (f2 / f4))) + ((double) (f - (f2 / f4))));
             DynamicAnimation.MassState massState2 = this.mMassState;
             if (isAtEquilibrium(massState2.mValue, massState2.mVelocity)) {
                 this.mMassState.mVelocity = 0.0f;

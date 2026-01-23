@@ -14,8 +14,8 @@ import androidx.core.widget.TextViewCompat;
 import com.discord.utilities.color.ColorCompat2;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: DrawableCompat.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: DrawableCompat.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class DrawableCompat {
     private static final void applyCompoundDrawablesTint(TextView textView) {
         ColorStateList compoundDrawableTintList = TextViewCompat.getCompoundDrawableTintList(textView);

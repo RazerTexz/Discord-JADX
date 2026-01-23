@@ -11,7 +11,7 @@ import androidx.annotation.RequiresApi;
 import androidx.annotation.VisibleForTesting;
 import androidx.core.util.Preconditions;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public final class EditorInfoCompat {
     private static final String CONTENT_MIME_TYPES_INTEROP_KEY = "android.support.v13.view.inputmethod.EditorInfoCompat.CONTENT_MIME_TYPES";
     private static final String CONTENT_MIME_TYPES_KEY = "androidx.core.view.inputmethod.EditorInfoCompat.CONTENT_MIME_TYPES";
@@ -217,7 +217,7 @@ public final class EditorInfoCompat {
         int i3 = i2 - i;
         int i4 = i3 > 1024 ? 0 : i3;
         int i5 = 2048 - i4;
-        int iMin = Math.min(charSequence.length() - i2, i5 - Math.min(i, (int) (i5 * 0.8d)));
+        int iMin = Math.min(charSequence.length() - i2, i5 - Math.min(i, (int) (((double) i5) * 0.8d)));
         int iMin2 = Math.min(i, i5 - iMin);
         int i6 = i - iMin2;
         if (isCutOnSurrogate(charSequence, i6, 0)) {

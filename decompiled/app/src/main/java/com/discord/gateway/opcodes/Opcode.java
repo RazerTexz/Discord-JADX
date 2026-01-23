@@ -3,8 +3,8 @@ package com.discord.gateway.opcodes;
 import java.util.HashMap;
 import kotlin.jvm.internal.DefaultConstructorMarker;
 
-/* compiled from: Opcode.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: Opcode.kt */
+/* JADX INFO: loaded from: classes.dex */
 public enum Opcode {
     UNHANDLED(-1),
     DISPATCH(0),
@@ -29,12 +29,12 @@ public enum Opcode {
     REQUEST_FORUM_UNREADS(28);
 
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private static final HashMap<Integer, Opcode> intLookup;
     private final int apiInt;
 
-    /* compiled from: Opcode.kt */
+    /* JADX INFO: compiled from: Opcode.kt */
     public static final class Companion {
         private Companion() {
         }

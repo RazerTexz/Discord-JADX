@@ -1,7 +1,7 @@
 package p658rx.android;
 
-/* renamed from: rx.android.R */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: rx.android.R */
+/* JADX INFO: loaded from: classes3.dex */
 public final class C13008R {
     private C13008R() {
     }

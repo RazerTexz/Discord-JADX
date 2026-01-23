@@ -14,18 +14,18 @@ import p007b.p225i.p226a.p228b.p231j.TransportContext;
 import p007b.p225i.p226a.p228b.p231j.p236t.p238i.C2511t;
 import p007b.p225i.p226a.p228b.p231j.p241w.PriorityMapping;
 
-/* compiled from: SQLiteEventStore.java */
-/* renamed from: b.i.a.b.j.t.i.s */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.b.j.t.i.s */
+/* JADX INFO: compiled from: SQLiteEventStore.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final /* synthetic */ class C2510s implements C2511t.b {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final C2511t f5438a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final TransportContext f5439b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final EventInternal f5440c;
 
     public C2510s(C2511t c2511t, TransportContext transportContext, EventInternal eventInternal) {
@@ -73,7 +73,7 @@ public final /* synthetic */ class C2510s implements C2511t.b {
         contentValues2.put("payload", z2 ? bArr : new byte[0]);
         long jInsert2 = sQLiteDatabase.insert("events", null, contentValues2);
         if (!z2) {
-            int iCeil = (int) Math.ceil(bArr.length / iMo2389d);
+            int iCeil = (int) Math.ceil(((double) bArr.length) / ((double) iMo2389d));
             for (int i = 1; i <= iCeil; i++) {
                 byte[] bArrCopyOfRange = Arrays.copyOfRange(bArr, (i - 1) * iMo2389d, Math.min(i * iMo2389d, bArr.length));
                 ContentValues contentValues3 = new ContentValues();

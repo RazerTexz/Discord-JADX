@@ -7,8 +7,8 @@ import java.util.List;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: TrackSystemMessageAgeRestrictedSent.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: TrackSystemMessageAgeRestrictedSent.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class TrackSystemMessageAgeRestrictedSent implements AnalyticsSchema, TrackBase2 {
     private TrackBase trackBase;
     private final List<Long> guildIds = null;
@@ -16,7 +16,7 @@ public final /* data */ class TrackSystemMessageAgeRestrictedSent implements Ana
     private final transient String analyticsSchemaTypeName = "system_message_age_restricted_sent";
 
     @Override // com.discord.api.science.AnalyticsSchema
-    /* renamed from: d, reason: from getter */
+    /* JADX INFO: renamed from: d, reason: from getter */
     public String getAnalyticsSchemaTypeName() {
         return this.analyticsSchemaTypeName;
     }

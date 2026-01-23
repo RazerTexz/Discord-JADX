@@ -9,8 +9,8 @@ import p001a0.p002a.p003a.C0002b;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ThreadEmbedEntry.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: ThreadEmbedEntry.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final /* data */ class ThreadEmbedEntry extends ChatListEntry {
     private final boolean animateEmojis;
     private final String key;
@@ -41,26 +41,27 @@ public final /* data */ class ThreadEmbedEntry extends ChatListEntry {
         this.key = outline.m877t("35 -- ", j);
     }
 
+    /* JADX WARN: Multi-variable type inference failed */
     public static /* synthetic */ ThreadEmbedEntry copy$default(ThreadEmbedEntry threadEmbedEntry, long j, Channel channel, int i, Message message, Map map, Map map2, boolean z2, GuildMember guildMember, Message message2, int i2, Object obj) {
         return threadEmbedEntry.copy((i2 & 1) != 0 ? threadEmbedEntry.messageId : j, (i2 & 2) != 0 ? threadEmbedEntry.thread : channel, (i2 & 4) != 0 ? threadEmbedEntry.threadMessageCount : i, (i2 & 8) != 0 ? threadEmbedEntry.mostRecentMessage : message, (i2 & 16) != 0 ? threadEmbedEntry.roleMentions : map, (i2 & 32) != 0 ? threadEmbedEntry.nickOrUsernames : map2, (i2 & 64) != 0 ? threadEmbedEntry.animateEmojis : z2, (i2 & 128) != 0 ? threadEmbedEntry.mostRecentMessageGuildMember : guildMember, (i2 & 256) != 0 ? threadEmbedEntry.parentMessage : message2);
     }
 
-    /* renamed from: component1, reason: from getter */
+    /* JADX INFO: renamed from: component1, reason: from getter */
     public final long getMessageId() {
         return this.messageId;
     }
 
-    /* renamed from: component2, reason: from getter */
+    /* JADX INFO: renamed from: component2, reason: from getter */
     public final Channel getThread() {
         return this.thread;
     }
 
-    /* renamed from: component3, reason: from getter */
+    /* JADX INFO: renamed from: component3, reason: from getter */
     public final int getThreadMessageCount() {
         return this.threadMessageCount;
     }
 
-    /* renamed from: component4, reason: from getter */
+    /* JADX INFO: renamed from: component4, reason: from getter */
     public final Message getMostRecentMessage() {
         return this.mostRecentMessage;
     }
@@ -73,17 +74,17 @@ public final /* data */ class ThreadEmbedEntry extends ChatListEntry {
         return this.nickOrUsernames;
     }
 
-    /* renamed from: component7, reason: from getter */
+    /* JADX INFO: renamed from: component7, reason: from getter */
     public final boolean getAnimateEmojis() {
         return this.animateEmojis;
     }
 
-    /* renamed from: component8, reason: from getter */
+    /* JADX INFO: renamed from: component8, reason: from getter */
     public final GuildMember getMostRecentMessageGuildMember() {
         return this.mostRecentMessageGuildMember;
     }
 
-    /* renamed from: component9, reason: from getter */
+    /* JADX INFO: renamed from: component9, reason: from getter */
     public final Message getParentMessage() {
         return this.parentMessage;
     }
@@ -153,6 +154,9 @@ public final /* data */ class ThreadEmbedEntry extends ChatListEntry {
     }
 
     /* JADX WARN: Multi-variable type inference failed */
+    /* JADX WARN: Type inference failed for: r1v14, types: [int] */
+    /* JADX WARN: Type inference failed for: r1v20 */
+    /* JADX WARN: Type inference failed for: r1v25 */
     public int hashCode() {
         int iM3a = C0002b.m3a(this.messageId) * 31;
         Channel channel = this.thread;
@@ -164,13 +168,13 @@ public final /* data */ class ThreadEmbedEntry extends ChatListEntry {
         Map<Long, String> map2 = this.nickOrUsernames;
         int iHashCode4 = (iHashCode3 + (map2 != null ? map2.hashCode() : 0)) * 31;
         boolean z2 = this.animateEmojis;
-        int i = z2;
-        if (z2 != 0) {
-            i = 1;
+        ?? r1 = z2;
+        if (z2) {
+            r1 = 1;
         }
-        int i2 = (iHashCode4 + i) * 31;
+        int i = (iHashCode4 + r1) * 31;
         GuildMember guildMember = this.mostRecentMessageGuildMember;
-        int iHashCode5 = (i2 + (guildMember != null ? guildMember.hashCode() : 0)) * 31;
+        int iHashCode5 = (i + (guildMember != null ? guildMember.hashCode() : 0)) * 31;
         Message message2 = this.parentMessage;
         return iHashCode5 + (message2 != null ? message2.hashCode() : 0);
     }

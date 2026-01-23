@@ -9,15 +9,15 @@ import java.util.List;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: WidgetHubDomains.kt */
-/* renamed from: com.discord.widgets.hubs.HubDomainArgs, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.hubs.HubDomainArgs, reason: use source file name */
+/* JADX INFO: compiled from: WidgetHubDomains.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final /* data */ class WidgetHubDomains3 implements Parcelable {
     public static final Parcelable.Creator<WidgetHubDomains3> CREATOR = new Creator();
     private final String email;
     private final List<WidgetHubDomains2> guildInfos;
 
-    /* renamed from: com.discord.widgets.hubs.HubDomainArgs$Creator */
+    /* JADX INFO: renamed from: com.discord.widgets.hubs.HubDomainArgs$Creator */
     public static class Creator implements Parcelable.Creator<WidgetHubDomains3> {
         /* JADX WARN: Can't rename method to resolve collision */
         @Override // android.os.Parcelable.Creator
@@ -68,7 +68,7 @@ public final /* data */ class WidgetHubDomains3 implements Parcelable {
         return widgetHubDomains3.copy(str, list);
     }
 
-    /* renamed from: component1, reason: from getter */
+    /* JADX INFO: renamed from: component1, reason: from getter */
     public final String getEmail() {
         return this.email;
     }

@@ -14,14 +14,14 @@ import p507d0.p579g0.StringsJVM;
 import p507d0.p592z.p594d.Intrinsics3;
 import p600f0.Cookie;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public class SerializableCookie implements Serializable {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static final String f19670j = SerializableCookie.class.getSimpleName();
     private static final long serialVersionUID = -8594045714036645534L;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public transient Cookie f19671k;
 
     private void readObject(ObjectInputStream objectInputStream) throws IOException, ClassNotFoundException {

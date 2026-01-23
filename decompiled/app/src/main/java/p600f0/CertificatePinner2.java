@@ -10,9 +10,9 @@ import p507d0.p580t.Iterables2;
 import p507d0.p592z.p594d.Lambda;
 import p600f0.p601e0.p612m.CertificateChainCleaner;
 
-/* compiled from: CertificatePinner.kt */
-/* renamed from: f0.h, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: f0.h, reason: use source file name */
+/* JADX INFO: compiled from: CertificatePinner.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class CertificatePinner2 extends Lambda implements Function0<List<? extends X509Certificate>> {
     public final /* synthetic */ String $hostname;
     public final /* synthetic */ List $peerCertificates;

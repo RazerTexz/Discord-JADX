@@ -6,13 +6,13 @@ import p007b.p195g.p196a.p198b.JsonParser;
 import p007b.p195g.p196a.p205c.SerializerProvider;
 import p007b.p195g.p196a.p205c.p220y.JacksonStdImpl;
 
-/* compiled from: NumberSerializers.java */
+/* JADX INFO: renamed from: b.g.a.c.g0.u.y, reason: use source file name */
+/* JADX INFO: compiled from: NumberSerializers.java */
+/* JADX INFO: loaded from: classes3.dex */
 @JacksonStdImpl
-/* renamed from: b.g.a.c.g0.u.y, reason: use source file name */
-/* loaded from: classes3.dex */
 public class NumberSerializers6 extends NumberSerializers4<Object> {
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public static final NumberSerializers6 f4871k = new NumberSerializers6();
 
     public NumberSerializers6() {
@@ -20,7 +20,7 @@ public class NumberSerializers6 extends NumberSerializers4<Object> {
     }
 
     @Override // p007b.p195g.p196a.p205c.JsonSerializer
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public void mo1807f(Object obj, JsonGenerator jsonGenerator, SerializerProvider serializerProvider) throws IOException {
         jsonGenerator.mo1633D(((Float) obj).floatValue());
     }

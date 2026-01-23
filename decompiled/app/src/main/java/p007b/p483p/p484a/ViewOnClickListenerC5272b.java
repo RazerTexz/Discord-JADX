@@ -3,7 +3,6 @@ package p007b.p483p.p484a;
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Context;
-import android.content.res.Resources;
 import android.graphics.Bitmap;
 import android.graphics.ColorFilter;
 import android.graphics.LightingColorFilter;
@@ -54,80 +53,80 @@ import p007b.p483p.p484a.SwipeDismissTouchListener;
 import p507d0.LazyJVM;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: Alert.kt */
+/* JADX INFO: renamed from: b.p.a.b */
+/* JADX INFO: compiled from: Alert.kt */
+/* JADX INFO: loaded from: classes3.dex */
 @SuppressLint({"ViewConstructor"})
-/* renamed from: b.p.a.b */
-/* loaded from: classes3.dex */
 public final class ViewOnClickListenerC5272b extends FrameLayout implements View.OnClickListener, Animation.AnimationListener, SwipeDismissTouchListener.a {
 
-    /* renamed from: A */
+    /* JADX INFO: renamed from: A */
     public Uri f14339A;
 
-    /* renamed from: B */
+    /* JADX INFO: renamed from: B */
     public int f14340B;
 
-    /* renamed from: C */
+    /* JADX INFO: renamed from: C */
     public final Lazy f14341C;
 
-    /* renamed from: D */
+    /* JADX INFO: renamed from: D */
     public final Lazy f14342D;
 
-    /* renamed from: E */
+    /* JADX INFO: renamed from: E */
     public HashMap f14343E;
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public OnShowAlertListener f14344j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public OnHideAlertListener f14345k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public Animation f14346l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public Animation f14347m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public long f14348n;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public boolean f14349o;
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public boolean f14350p;
 
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     public boolean f14351q;
 
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     public boolean f14352r;
 
-    /* renamed from: s */
+    /* JADX INFO: renamed from: s */
     public boolean f14353s;
 
-    /* renamed from: t */
+    /* JADX INFO: renamed from: t */
     public boolean f14354t;
 
-    /* renamed from: u */
+    /* JADX INFO: renamed from: u */
     public Runnable f14355u;
 
-    /* renamed from: v */
+    /* JADX INFO: renamed from: v */
     public boolean f14356v;
 
-    /* renamed from: w */
+    /* JADX INFO: renamed from: w */
     public ArrayList<Button> f14357w;
 
-    /* renamed from: x */
+    /* JADX INFO: renamed from: x */
     public Typeface f14358x;
 
-    /* renamed from: y */
+    /* JADX INFO: renamed from: y */
     public boolean f14359y;
 
-    /* renamed from: z */
+    /* JADX INFO: renamed from: z */
     public boolean f14360z;
 
-    /* compiled from: Alert.kt */
-    /* renamed from: b.p.a.b$a */
+    /* JADX INFO: renamed from: b.p.a.b$a */
+    /* JADX INFO: compiled from: Alert.kt */
     public static final class a implements Animation.AnimationListener {
         public a() {
         }
@@ -163,7 +162,7 @@ public final class ViewOnClickListenerC5272b extends FrameLayout implements View
     }
 
     /* JADX WARN: Illegal instructions before constructor call */
-    public ViewOnClickListenerC5272b(Context context, int i, AttributeSet attributeSet, int i2, int i3) throws Resources.NotFoundException {
+    public ViewOnClickListenerC5272b(Context context, int i, AttributeSet attributeSet, int i2, int i3) {
         int i4 = i3 & 4;
         i2 = (i3 & 8) != 0 ? 0 : i2;
         Intrinsics3.checkNotNullParameter(context, "context");
@@ -201,7 +200,7 @@ public final class ViewOnClickListenerC5272b extends FrameLayout implements View
     }
 
     @Override // p007b.p483p.p484a.SwipeDismissTouchListener.a
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public void mo7463a(View view, boolean z2) {
         Intrinsics3.checkNotNullParameter(view, "view");
         if (z2) {
@@ -217,12 +216,12 @@ public final class ViewOnClickListenerC5272b extends FrameLayout implements View
     }
 
     @Override // p007b.p483p.p484a.SwipeDismissTouchListener.a
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public boolean mo7464b() {
         return this.f14356v;
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public View m7465c(int i) {
         if (this.f14343E == null) {
             this.f14343E = new HashMap();
@@ -236,7 +235,7 @@ public final class ViewOnClickListenerC5272b extends FrameLayout implements View
         return viewFindViewById;
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final void m7466d() {
         try {
             this.f14347m.setAnimationListener(new a());
@@ -562,7 +561,7 @@ public final class ViewOnClickListenerC5272b extends FrameLayout implements View
         setIconPixelSize(C3404f.m4304j0(this, i));
     }
 
-    public final void setLayoutGravity(int i) throws Resources.NotFoundException {
+    public final void setLayoutGravity(int i) {
         if (i != 48) {
             Animation animationLoadAnimation = AnimationUtils.loadAnimation(getContext(), C11198R.a.alerter_slide_in_from_bottom);
             Intrinsics3.checkNotNullExpressionValue(animationLoadAnimation, "AnimationUtils.loadAnima…ter_slide_in_from_bottom)");

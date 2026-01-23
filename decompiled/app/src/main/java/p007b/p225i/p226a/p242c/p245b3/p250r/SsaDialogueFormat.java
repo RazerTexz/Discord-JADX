@@ -6,24 +6,24 @@ import androidx.core.app.NotificationCompat;
 import p007b.p085c.p086a.p087a0.AnimatableValueParser;
 import p007b.p225i.p226a.p288f.p299e.p308o.C3404f;
 
-/* compiled from: SsaDialogueFormat.java */
-/* renamed from: b.i.a.c.b3.r.b, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.b3.r.b, reason: use source file name */
+/* JADX INFO: compiled from: SsaDialogueFormat.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class SsaDialogueFormat {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final int f5992a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final int f5993b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final int f5994c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final int f5995d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final int f5996e;
 
     public SsaDialogueFormat(int i, int i2, int i3, int i4, int i5) {
@@ -38,12 +38,12 @@ public final class SsaDialogueFormat {
     /* JADX WARN: Failed to restore switch over string. Please report as a decompilation issue */
     /* JADX WARN: Removed duplicated region for block: B:24:0x0062  */
     @Nullable
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
     public static SsaDialogueFormat m2672a(String str) {
-        char c;
+        byte b2;
         AnimatableValueParser.m531j(str.startsWith("Format:"));
         String[] strArrSplit = TextUtils.split(str.substring(7), ",");
         int i = -1;
@@ -55,34 +55,34 @@ public final class SsaDialogueFormat {
             strM4349u1.hashCode();
             switch (strM4349u1.hashCode()) {
                 case 100571:
-                    c = strM4349u1.equals("end") ? (char) 0 : (char) 65535;
+                    b2 = strM4349u1.equals("end") ? (byte) 0 : (byte) -1;
                     break;
                 case 3556653:
                     if (strM4349u1.equals(NotificationCompat.MessagingStyle.Message.KEY_TEXT)) {
-                        c = 1;
+                        b2 = 1;
                         break;
                     }
                     break;
                 case 109757538:
                     if (strM4349u1.equals("start")) {
-                        c = 2;
+                        b2 = 2;
                         break;
                     }
                     break;
                 case 109780401:
                     if (strM4349u1.equals("style")) {
-                        c = 3;
+                        b2 = 3;
                         break;
                     }
                     break;
             }
-            if (c == 0) {
+            if (b2 == 0) {
                 i2 = i5;
-            } else if (c == 1) {
+            } else if (b2 == 1) {
                 i4 = i5;
-            } else if (c == 2) {
+            } else if (b2 == 2) {
                 i = i5;
-            } else if (c == 3) {
+            } else if (b2 == 3) {
                 i3 = i5;
             }
         }

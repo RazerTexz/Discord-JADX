@@ -26,15 +26,15 @@ import kotlin.jvm.functions.Function2;
 import p007b.p008a.p027k.FormatUtils;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: WidgetServerSettingsAuditLogAdapter.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetServerSettingsAuditLogAdapter.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetServerSettingsAuditLogAdapter extends MGRecyclerAdapterSimple<MGRecyclerDataPayload> {
     private static final int ENTRY_ITEM = 0;
     private static final int LOADING_ITEM = 1;
     private boolean ensureExpandedIsVisible;
     private Function2<? super Long, ? super Long, Unit> onAuditLogAvatarClicked;
 
-    /* compiled from: WidgetServerSettingsAuditLogAdapter.kt */
+    /* JADX INFO: compiled from: WidgetServerSettingsAuditLogAdapter.kt */
     public static final class AuditLogEntryItem implements MGRecyclerDataPayload {
         private final ModelAuditLogEntry auditLogEntry;
         private final CharSequence changeText;
@@ -99,13 +99,13 @@ public final class WidgetServerSettingsAuditLogAdapter extends MGRecyclerAdapter
             return this.user;
         }
 
-        /* renamed from: isSelected, reason: from getter */
+        /* JADX INFO: renamed from: isSelected, reason: from getter */
         public final boolean getIsSelected() {
             return this.isSelected;
         }
     }
 
-    /* compiled from: WidgetServerSettingsAuditLogAdapter.kt */
+    /* JADX INFO: compiled from: WidgetServerSettingsAuditLogAdapter.kt */
     public static final class AuditLogEntryViewHolder extends MGRecyclerViewHolder<WidgetServerSettingsAuditLogAdapter, MGRecyclerDataPayload> {
         private final WidgetServerSettingsAuditLogListItemBinding binding;
 
@@ -166,7 +166,7 @@ public final class WidgetServerSettingsAuditLogAdapter extends MGRecyclerAdapter
             onConfigure2(i, mGRecyclerDataPayload);
         }
 
-        /* renamed from: onConfigure, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: onConfigure, reason: avoid collision after fix types in other method */
         public void onConfigure2(int position, MGRecyclerDataPayload data) {
             Intrinsics3.checkNotNullParameter(data, "data");
             super.onConfigure(position, data);
@@ -222,7 +222,7 @@ public final class WidgetServerSettingsAuditLogAdapter extends MGRecyclerAdapter
         }
     }
 
-    /* compiled from: WidgetServerSettingsAuditLogAdapter.kt */
+    /* JADX INFO: compiled from: WidgetServerSettingsAuditLogAdapter.kt */
     public static final class AuditLogLoadingItem implements MGRecyclerDataPayload {
         private final int type = 1;
         private final String key = "loading";
@@ -238,7 +238,7 @@ public final class WidgetServerSettingsAuditLogAdapter extends MGRecyclerAdapter
         }
     }
 
-    /* compiled from: WidgetServerSettingsAuditLogAdapter.kt */
+    /* JADX INFO: compiled from: WidgetServerSettingsAuditLogAdapter.kt */
     public static final class AuditLogLoadingViewHolder extends MGRecyclerViewHolder<WidgetServerSettingsAuditLogAdapter, MGRecyclerDataPayload> {
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
         public AuditLogLoadingViewHolder(WidgetServerSettingsAuditLogAdapter widgetServerSettingsAuditLogAdapter) {

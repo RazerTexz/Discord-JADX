@@ -7,24 +7,24 @@ import androidx.annotation.NonNull;
 import androidx.viewbinding.ViewBinding;
 import com.google.android.material.button.MaterialButton;
 
-/* compiled from: WidgetServerSettingsConfirmDisableIntegrationBinding.java */
-/* renamed from: b.a.i.y5, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.a.i.y5, reason: use source file name */
+/* JADX INFO: compiled from: WidgetServerSettingsConfirmDisableIntegrationBinding.java */
+/* JADX INFO: loaded from: classes.dex */
 public final class WidgetServerSettingsConfirmDisableIntegrationBinding implements ViewBinding {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     @NonNull
     public final LinearLayout f1427a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     @NonNull
     public final TextView f1428b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     @NonNull
     public final MaterialButton f1429c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     @NonNull
     public final MaterialButton f1430d;
 

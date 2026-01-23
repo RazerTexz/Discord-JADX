@@ -2,26 +2,26 @@ package kotlin.reflect.jvm.internal.impl.utils;
 
 import p507d0.p513e0.p514p.p515d.p517m0.p576p.exceptionUtils;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public class WrappedValues {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final Object f27450a = new C12795a();
 
     public static class WrappedProcessCanceledException extends RuntimeException {
     }
 
-    /* renamed from: kotlin.reflect.jvm.internal.impl.utils.WrappedValues$a */
+    /* JADX INFO: renamed from: kotlin.reflect.jvm.internal.impl.utils.WrappedValues$a */
     public static class C12795a {
         public String toString() {
             return "NULL_VALUE";
         }
     }
 
-    /* renamed from: kotlin.reflect.jvm.internal.impl.utils.WrappedValues$b */
+    /* JADX INFO: renamed from: kotlin.reflect.jvm.internal.impl.utils.WrappedValues$b */
     public static final class C12796b {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final Throwable f27451a;
 
         public C12796b(Throwable th, C12795a c12795a) {
@@ -33,7 +33,7 @@ public class WrappedValues {
             }
         }
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public static /* synthetic */ void m10899a(int i) {
             String str = i != 1 ? "Argument for @NotNull parameter '%s' of %s.%s must not be null" : "@NotNull method %s.%s must not return null";
             Object[] objArr = new Object[i != 1 ? 3 : 2];
@@ -70,7 +70,7 @@ public class WrappedValues {
         }
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static /* synthetic */ void m10898a(int i) {
         String str = (i == 1 || i == 2) ? "@NotNull method %s.%s must not return null" : "Argument for @NotNull parameter '%s' of %s.%s must not be null";
         Object[] objArr = new Object[(i == 1 || i == 2) ? 2 : 3];

@@ -41,31 +41,31 @@ import p507d0.p580t.Sets5;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: LazyJavaPackageScope.kt */
-/* renamed from: d0.e0.p.d.m0.e.a.i0.l.j, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.e.a.i0.l.j, reason: use source file name */
+/* JADX INFO: compiled from: LazyJavaPackageScope.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class LazyJavaPackageScope extends LazyJavaStaticScope {
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public final InterfaceC11588u f23377n;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public final LazyJavaPackageFragment f23378o;
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public final storage6<Set<String>> f23379p;
 
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     public final storage4<a, ClassDescriptor> f23380q;
 
-    /* compiled from: LazyJavaPackageScope.kt */
-    /* renamed from: d0.e0.p.d.m0.e.a.i0.l.j$a */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.e.a.i0.l.j$a */
+    /* JADX INFO: compiled from: LazyJavaPackageScope.kt */
     public static final class a {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final Name f23381a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final InterfaceC11574g f23382b;
 
         public a(Name name, InterfaceC11574g interfaceC11574g) {
@@ -91,15 +91,15 @@ public final class LazyJavaPackageScope extends LazyJavaStaticScope {
         }
     }
 
-    /* compiled from: LazyJavaPackageScope.kt */
-    /* renamed from: d0.e0.p.d.m0.e.a.i0.l.j$b */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.e.a.i0.l.j$b */
+    /* JADX INFO: compiled from: LazyJavaPackageScope.kt */
     public static abstract class b {
 
-        /* compiled from: LazyJavaPackageScope.kt */
-        /* renamed from: d0.e0.p.d.m0.e.a.i0.l.j$b$a */
+        /* JADX INFO: renamed from: d0.e0.p.d.m0.e.a.i0.l.j$b$a */
+        /* JADX INFO: compiled from: LazyJavaPackageScope.kt */
         public static final class a extends b {
 
-            /* renamed from: a */
+            /* JADX INFO: renamed from: a */
             public final ClassDescriptor f23383a;
 
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -114,11 +114,11 @@ public final class LazyJavaPackageScope extends LazyJavaStaticScope {
             }
         }
 
-        /* compiled from: LazyJavaPackageScope.kt */
-        /* renamed from: d0.e0.p.d.m0.e.a.i0.l.j$b$b, reason: collision with other inner class name */
+        /* JADX INFO: renamed from: d0.e0.p.d.m0.e.a.i0.l.j$b$b, reason: collision with other inner class name */
+        /* JADX INFO: compiled from: LazyJavaPackageScope.kt */
         public static final class C13311b extends b {
 
-            /* renamed from: a */
+            /* JADX INFO: renamed from: a */
             public static final C13311b f23384a = new C13311b();
 
             public C13311b() {
@@ -126,11 +126,11 @@ public final class LazyJavaPackageScope extends LazyJavaStaticScope {
             }
         }
 
-        /* compiled from: LazyJavaPackageScope.kt */
-        /* renamed from: d0.e0.p.d.m0.e.a.i0.l.j$b$c */
+        /* JADX INFO: renamed from: d0.e0.p.d.m0.e.a.i0.l.j$b$c */
+        /* JADX INFO: compiled from: LazyJavaPackageScope.kt */
         public static final class c extends b {
 
-            /* renamed from: a */
+            /* JADX INFO: renamed from: a */
             public static final c f23385a = new c();
 
             public c() {
@@ -142,11 +142,11 @@ public final class LazyJavaPackageScope extends LazyJavaStaticScope {
         }
     }
 
-    /* compiled from: LazyJavaPackageScope.kt */
-    /* renamed from: d0.e0.p.d.m0.e.a.i0.l.j$c */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.e.a.i0.l.j$c */
+    /* JADX INFO: compiled from: LazyJavaPackageScope.kt */
     public static final class c extends Lambda implements Function1<a, ClassDescriptor> {
 
-        /* renamed from: $c */
+        /* JADX INFO: renamed from: $c */
         public final /* synthetic */ context4 f23386$c;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -161,7 +161,7 @@ public final class LazyJavaPackageScope extends LazyJavaStaticScope {
         }
 
         /* JADX WARN: Removed duplicated region for block: B:31:0x0091  */
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         /*
             Code decompiled incorrectly, please refer to instructions dump.
         */
@@ -210,11 +210,11 @@ public final class LazyJavaPackageScope extends LazyJavaStaticScope {
         }
     }
 
-    /* compiled from: LazyJavaPackageScope.kt */
-    /* renamed from: d0.e0.p.d.m0.e.a.i0.l.j$d */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.e.a.i0.l.j$d */
+    /* JADX INFO: compiled from: LazyJavaPackageScope.kt */
     public static final class d extends Lambda implements Function0<Set<? extends String>> {
 
-        /* renamed from: $c */
+        /* JADX INFO: renamed from: $c */
         public final /* synthetic */ context4 f23387$c;
         public final /* synthetic */ LazyJavaPackageScope this$0;
 
@@ -231,7 +231,7 @@ public final class LazyJavaPackageScope extends LazyJavaStaticScope {
         }
 
         @Override // kotlin.jvm.functions.Function0
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final Set<? extends String> invoke2() {
             return this.f23387$c.getComponents().getFinder().knownClassNamesInPackage(this.this$0.f23378o.getFqName());
         }
@@ -262,7 +262,7 @@ public final class LazyJavaPackageScope extends LazyJavaStaticScope {
     }
 
     @Override // p507d0.p513e0.p514p.p515d.p517m0.p531e.p532a.p535i0.p536l.LazyJavaScope
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public Set<Name> mo9470a(MemberScope2 memberScope2, Function1<? super Name, Boolean> function1) {
         Intrinsics3.checkNotNullParameter(memberScope2, "kindFilter");
         if (!memberScope2.acceptsKinds(MemberScope2.f24339a.getNON_SINGLETON_CLASSIFIERS_MASK())) {
@@ -293,20 +293,20 @@ public final class LazyJavaPackageScope extends LazyJavaStaticScope {
     }
 
     @Override // p507d0.p513e0.p514p.p515d.p517m0.p531e.p532a.p535i0.p536l.LazyJavaScope
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public Set<Name> mo9471b(MemberScope2 memberScope2, Function1<? super Name, Boolean> function1) {
         Intrinsics3.checkNotNullParameter(memberScope2, "kindFilter");
         return Sets5.emptySet();
     }
 
     @Override // p507d0.p513e0.p514p.p515d.p517m0.p531e.p532a.p535i0.p536l.LazyJavaScope
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public DeclaredMemberIndex2 mo9473d() {
         return DeclaredMemberIndex2.a.f23328a;
     }
 
     @Override // p507d0.p513e0.p514p.p515d.p517m0.p531e.p532a.p535i0.p536l.LazyJavaScope
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public void mo9474f(Collection<SimpleFunctionDescriptor> collection, Name name) {
         Intrinsics3.checkNotNullParameter(collection, "result");
         Intrinsics3.checkNotNullParameter(name, ModelAuditLogEntry.CHANGE_KEY_NAME);
@@ -359,19 +359,19 @@ public final class LazyJavaPackageScope extends LazyJavaStaticScope {
     }
 
     @Override // p507d0.p513e0.p514p.p515d.p517m0.p531e.p532a.p535i0.p536l.LazyJavaScope
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public Set<Name> mo9476h(MemberScope2 memberScope2, Function1<? super Name, Boolean> function1) {
         Intrinsics3.checkNotNullParameter(memberScope2, "kindFilter");
         return Sets5.emptySet();
     }
 
     @Override // p507d0.p513e0.p514p.p515d.p517m0.p531e.p532a.p535i0.p536l.LazyJavaScope
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public DeclarationDescriptor mo9478j() {
         return this.f23378o;
     }
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public final ClassDescriptor m9493o(Name name, InterfaceC11574g interfaceC11574g) {
         if (!SpecialNames.isSafeIdentifier(name)) {
             return null;

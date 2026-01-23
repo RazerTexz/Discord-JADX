@@ -25,8 +25,8 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 import p658rx.Observable;
 
-/* compiled from: StoreThreadsActive.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: StoreThreadsActive.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class StoreThreadsActive extends StoreV2 {
     private final Map<Long, Channel> forumThreadsById;
     private Map<Long, Channel> forumThreadsByIdSnapshot;
@@ -39,8 +39,8 @@ public final class StoreThreadsActive extends StoreV2 {
     private final Map<Long, Channel> threadsById;
     private Map<Long, Channel> threadsByIdSnapshot;
 
-    /* compiled from: StoreThreadsActive.kt */
-    /* renamed from: com.discord.stores.StoreThreadsActive$observeActiveThreadsForChannel$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreThreadsActive$observeActiveThreadsForChannel$1 */
+    /* JADX INFO: compiled from: StoreThreadsActive.kt */
     public static final class C65351 extends Lambda implements Function0<Map<Long, ? extends Channel>> {
         public final /* synthetic */ Long $channelId;
         public final /* synthetic */ long $guildId;
@@ -58,14 +58,14 @@ public final class StoreThreadsActive extends StoreV2 {
         }
 
         @Override // kotlin.jvm.functions.Function0
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final Map<Long, ? extends Channel> invoke2() {
             return StoreThreadsActive.access$getActiveThreadsForChannel(StoreThreadsActive.this, this.$guildId, this.$channelId);
         }
     }
 
-    /* compiled from: StoreThreadsActive.kt */
-    /* renamed from: com.discord.stores.StoreThreadsActive$observeActiveThreadsForGuild$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreThreadsActive$observeActiveThreadsForGuild$1 */
+    /* JADX INFO: compiled from: StoreThreadsActive.kt */
     public static final class C65361 extends Lambda implements Function0<Map<Long, ? extends Channel>> {
         public final /* synthetic */ long $guildId;
 
@@ -81,14 +81,14 @@ public final class StoreThreadsActive extends StoreV2 {
         }
 
         @Override // kotlin.jvm.functions.Function0
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final Map<Long, ? extends Channel> invoke2() {
             return StoreThreadsActive.access$getActiveThreadsForGuild(StoreThreadsActive.this, this.$guildId);
         }
     }
 
-    /* compiled from: StoreThreadsActive.kt */
-    /* renamed from: com.discord.stores.StoreThreadsActive$observeAllActiveForumThreadsById$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreThreadsActive$observeAllActiveForumThreadsById$1 */
+    /* JADX INFO: compiled from: StoreThreadsActive.kt */
     public static final class C65371 extends Lambda implements Function0<Map<Long, ? extends Channel>> {
         public C65371() {
             super(0);
@@ -100,14 +100,14 @@ public final class StoreThreadsActive extends StoreV2 {
         }
 
         @Override // kotlin.jvm.functions.Function0
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final Map<Long, ? extends Channel> invoke2() {
             return StoreThreadsActive.access$getForumThreadsByIdSnapshot$p(StoreThreadsActive.this);
         }
     }
 
-    /* compiled from: StoreThreadsActive.kt */
-    /* renamed from: com.discord.stores.StoreThreadsActive$observeAllActiveThreadsById$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreThreadsActive$observeAllActiveThreadsById$1 */
+    /* JADX INFO: compiled from: StoreThreadsActive.kt */
     public static final class C65381 extends Lambda implements Function0<Map<Long, ? extends Channel>> {
         public C65381() {
             super(0);
@@ -119,14 +119,14 @@ public final class StoreThreadsActive extends StoreV2 {
         }
 
         @Override // kotlin.jvm.functions.Function0
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final Map<Long, ? extends Channel> invoke2() {
             return StoreThreadsActive.access$getThreadsByIdSnapshot$p(StoreThreadsActive.this);
         }
     }
 
-    /* compiled from: StoreThreadsActive.kt */
-    /* renamed from: com.discord.stores.StoreThreadsActive$observeChannelsWithActiveThreadsByGuild$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreThreadsActive$observeChannelsWithActiveThreadsByGuild$1 */
+    /* JADX INFO: compiled from: StoreThreadsActive.kt */
     public static final class C65391 extends Lambda implements Function0<Set<? extends Long>> {
         public final /* synthetic */ long $guildId;
 
@@ -142,14 +142,14 @@ public final class StoreThreadsActive extends StoreV2 {
         }
 
         @Override // kotlin.jvm.functions.Function0
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final Set<? extends Long> invoke2() {
             return StoreThreadsActive.access$getChannelsWithActiveThreadsByGuild(StoreThreadsActive.this, this.$guildId);
         }
     }
 
-    /* compiled from: StoreThreadsActive.kt */
-    /* renamed from: com.discord.stores.StoreThreadsActive$observeIsThreadSyncedGuild$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreThreadsActive$observeIsThreadSyncedGuild$1 */
+    /* JADX INFO: compiled from: StoreThreadsActive.kt */
     public static final class C65401 extends Lambda implements Function0<Boolean> {
         public final /* synthetic */ long $guildId;
 
@@ -164,14 +164,14 @@ public final class StoreThreadsActive extends StoreV2 {
             return Boolean.valueOf(invoke2());
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final boolean invoke2() {
             return StoreThreadsActive.access$getThreadSyncedGuildsSnapshot$p(StoreThreadsActive.this).contains(Long.valueOf(this.$guildId));
         }
     }
 
-    /* compiled from: StoreThreadsActive.kt */
-    /* renamed from: com.discord.stores.StoreThreadsActive$observeThreadSyncedGuilds$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreThreadsActive$observeThreadSyncedGuilds$1 */
+    /* JADX INFO: compiled from: StoreThreadsActive.kt */
     public static final class C65411 extends Lambda implements Function0<Set<? extends Long>> {
         public C65411() {
             super(0);
@@ -183,7 +183,7 @@ public final class StoreThreadsActive extends StoreV2 {
         }
 
         @Override // kotlin.jvm.functions.Function0
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final Set<? extends Long> invoke2() {
             return StoreThreadsActive.access$getThreadSyncedGuildsSnapshot$p(StoreThreadsActive.this);
         }

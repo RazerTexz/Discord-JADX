@@ -12,34 +12,34 @@ import java.util.GregorianCalendar;
 import java.util.TimeZone;
 import p007b.p225i.p226a.p341g.p345d.UtcDates;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public final class Month implements Comparable<Month>, Parcelable {
     public static final Parcelable.Creator<Month> CREATOR = new C10902a();
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     @NonNull
     public final Calendar f20984j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final int f20985k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final int f20986l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public final int f20987m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public final int f20988n;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public final long f20989o;
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     @Nullable
     public String f20990p;
 
-    /* renamed from: com.google.android.material.datepicker.Month$a */
+    /* JADX INFO: renamed from: com.google.android.material.datepicker.Month$a */
     public static class C10902a implements Parcelable.Creator<Month> {
         @Override // android.os.Parcelable.Creator
         @NonNull
@@ -66,7 +66,7 @@ public final class Month implements Comparable<Month>, Parcelable {
     }
 
     @NonNull
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public static Month m9131g(int i, int i2) {
         Calendar calendarM6076i = UtcDates.m6076i();
         calendarM6076i.set(1, i);
@@ -75,7 +75,7 @@ public final class Month implements Comparable<Month>, Parcelable {
     }
 
     @NonNull
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public static Month m9132h(long j) {
         Calendar calendarM6076i = UtcDates.m6076i();
         calendarM6076i.setTimeInMillis(j);
@@ -83,7 +83,7 @@ public final class Month implements Comparable<Month>, Parcelable {
     }
 
     @NonNull
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public static Month m9133i() {
         return new Month(UtcDates.m6075h());
     }
@@ -109,7 +109,7 @@ public final class Month implements Comparable<Month>, Parcelable {
         return this.f20985k == month.f20985k && this.f20986l == month.f20986l;
     }
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public int m9134f(@NonNull Month month) {
         return this.f20984j.compareTo(month.f20984j);
     }
@@ -118,13 +118,13 @@ public final class Month implements Comparable<Month>, Parcelable {
         return Arrays.hashCode(new Object[]{Integer.valueOf(this.f20985k), Integer.valueOf(this.f20986l)});
     }
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public int m9135j() {
         int firstDayOfWeek = this.f20984j.get(7) - this.f20984j.getFirstDayOfWeek();
         return firstDayOfWeek < 0 ? firstDayOfWeek + this.f20987m : firstDayOfWeek;
     }
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public long m9136k(int i) {
         Calendar calendarM6071d = UtcDates.m6071d(this.f20984j);
         calendarM6071d.set(5, i);
@@ -132,23 +132,24 @@ public final class Month implements Comparable<Month>, Parcelable {
     }
 
     @NonNull
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public String m9137l(Context context) {
         if (this.f20990p == null) {
-            this.f20990p = DateUtils.formatDateTime(context, this.f20984j.getTimeInMillis() - TimeZone.getDefault().getOffset(r0), 36);
+            long timeInMillis = this.f20984j.getTimeInMillis();
+            this.f20990p = DateUtils.formatDateTime(context, timeInMillis - ((long) TimeZone.getDefault().getOffset(timeInMillis)), 36);
         }
         return this.f20990p;
     }
 
     @NonNull
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public Month m9138m(int i) {
         Calendar calendarM6071d = UtcDates.m6071d(this.f20984j);
         calendarM6071d.add(2, i);
         return new Month(calendarM6071d);
     }
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public int m9139o(@NonNull Month month) {
         if (!(this.f20984j instanceof GregorianCalendar)) {
             throw new IllegalArgumentException("Only Gregorian calendars are supported.");

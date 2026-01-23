@@ -2,18 +2,18 @@ package p659s.p660a.p661a;
 
 import java.util.concurrent.atomic.AtomicReferenceFieldUpdater;
 
-/* compiled from: Atomic.kt */
-/* renamed from: s.a.a.d, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: s.a.a.d, reason: use source file name */
+/* JADX INFO: compiled from: Atomic.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public abstract class Atomic2<T> extends Atomic3 {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final AtomicReferenceFieldUpdater f27672a = AtomicReferenceFieldUpdater.newUpdater(Atomic2.class, Object.class, "_consensus");
     public volatile Object _consensus = Atomic.f27671a;
 
     /* JADX WARN: Multi-variable type inference failed */
     @Override // p659s.p660a.p661a.Atomic3
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final Object mo11142a(Object obj) {
         Object objMo11144c = this._consensus;
         Object obj2 = Atomic.f27671a;
@@ -30,9 +30,9 @@ public abstract class Atomic2<T> extends Atomic3 {
         return objMo11144c;
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public abstract void mo11143b(T t, Object obj);
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public abstract Object mo11144c(T t);
 }

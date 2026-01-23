@@ -7,19 +7,19 @@ import p507d0.p513e0.p514p.p515d.p517m0.p543f.EnumC11685j;
 import p507d0.p513e0.p514p.p515d.p517m0.p543f.EnumC11699x;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ProtoEnumFlagsUtils.kt */
-/* renamed from: d0.e0.p.d.m0.l.b.a0, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.l.b.a0, reason: use source file name */
+/* JADX INFO: compiled from: ProtoEnumFlagsUtils.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class ProtoEnumFlagsUtils {
 
-    /* compiled from: ProtoEnumFlagsUtils.kt */
-    /* renamed from: d0.e0.p.d.m0.l.b.a0$a */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.l.b.a0$a */
+    /* JADX INFO: compiled from: ProtoEnumFlagsUtils.kt */
     public /* synthetic */ class a {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public static final /* synthetic */ int[] f24495a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public static final /* synthetic */ int[] f24496b;
 
         static {

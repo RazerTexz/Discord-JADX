@@ -10,13 +10,13 @@ import kotlin.jvm.internal.Ref$ObjectRef;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ModelMemberVerificationForm.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: ModelMemberVerificationForm.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class ModelMemberVerificationForm {
     private final List<FormField> formFields;
     private final String version;
 
-    /* compiled from: ModelMemberVerificationForm.kt */
+    /* JADX INFO: compiled from: ModelMemberVerificationForm.kt */
     public static final /* data */ class FormField {
         private final List<String> choices;
         private final String fieldType;
@@ -25,7 +25,7 @@ public final /* data */ class ModelMemberVerificationForm {
         private Object response;
         private final List<String> values;
 
-        /* compiled from: ModelMemberVerificationForm.kt */
+        /* JADX INFO: compiled from: ModelMemberVerificationForm.kt */
         public static final class Parser implements Model.Parser<FormField> {
             public static final Parser INSTANCE = new Parser();
 
@@ -97,6 +97,7 @@ public final /* data */ class ModelMemberVerificationForm {
             this.response = obj;
         }
 
+        /* JADX WARN: Multi-variable type inference failed */
         public static /* synthetic */ FormField copy$default(FormField formField, String str, String str2, boolean z2, List list, List list2, Object obj, int i, Object obj2) {
             if ((i & 1) != 0) {
                 str = formField.fieldType;
@@ -123,17 +124,17 @@ public final /* data */ class ModelMemberVerificationForm {
             return formField.copy(str, str3, z3, list3, list4, obj);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final String getFieldType() {
             return this.fieldType;
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final String getLabel() {
             return this.label;
         }
 
-        /* renamed from: component3, reason: from getter */
+        /* JADX INFO: renamed from: component3, reason: from getter */
         public final boolean getRequired() {
             return this.required;
         }
@@ -146,7 +147,7 @@ public final /* data */ class ModelMemberVerificationForm {
             return this.choices;
         }
 
-        /* renamed from: component6, reason: from getter */
+        /* JADX INFO: renamed from: component6, reason: from getter */
         public final Object getResponse() {
             return this.response;
         }
@@ -224,19 +225,22 @@ public final /* data */ class ModelMemberVerificationForm {
         }
 
         /* JADX WARN: Multi-variable type inference failed */
+        /* JADX WARN: Type inference failed for: r2v14 */
+        /* JADX WARN: Type inference failed for: r2v16 */
+        /* JADX WARN: Type inference failed for: r2v4, types: [int] */
         public int hashCode() {
             String str = this.fieldType;
             int iHashCode = (str != null ? str.hashCode() : 0) * 31;
             String str2 = this.label;
             int iHashCode2 = (iHashCode + (str2 != null ? str2.hashCode() : 0)) * 31;
             boolean z2 = this.required;
-            int i = z2;
-            if (z2 != 0) {
-                i = 1;
+            ?? r2 = z2;
+            if (z2) {
+                r2 = 1;
             }
-            int i2 = (iHashCode2 + i) * 31;
+            int i = (iHashCode2 + r2) * 31;
             List<String> list = this.values;
-            int iHashCode3 = (i2 + (list != null ? list.hashCode() : 0)) * 31;
+            int iHashCode3 = (i + (list != null ? list.hashCode() : 0)) * 31;
             List<String> list2 = this.choices;
             int iHashCode4 = (iHashCode3 + (list2 != null ? list2.hashCode() : 0)) * 31;
             Object obj = this.response;
@@ -266,7 +270,7 @@ public final /* data */ class ModelMemberVerificationForm {
         }
     }
 
-    /* compiled from: ModelMemberVerificationForm.kt */
+    /* JADX INFO: compiled from: ModelMemberVerificationForm.kt */
     public enum MemberVerificationFieldType {
         UNKNOWN,
         TERMS,
@@ -275,7 +279,7 @@ public final /* data */ class ModelMemberVerificationForm {
         MULTIPLE_CHOICE
     }
 
-    /* compiled from: ModelMemberVerificationForm.kt */
+    /* JADX INFO: compiled from: ModelMemberVerificationForm.kt */
     public static final class Parser implements Model.Parser<ModelMemberVerificationForm> {
         public static final Parser INSTANCE = new Parser();
 
@@ -327,7 +331,7 @@ public final /* data */ class ModelMemberVerificationForm {
         return modelMemberVerificationForm.copy(str, list);
     }
 
-    /* renamed from: component1, reason: from getter */
+    /* JADX INFO: renamed from: component1, reason: from getter */
     public final String getVersion() {
         return this.version;
     }

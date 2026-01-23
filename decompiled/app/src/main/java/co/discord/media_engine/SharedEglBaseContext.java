@@ -4,7 +4,7 @@ import androidx.annotation.NonNull;
 import org.webrtc.EglBase;
 import org.webrtc.EglHelper;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public final class SharedEglBaseContext {
     private static EglBase eglBase_;
 

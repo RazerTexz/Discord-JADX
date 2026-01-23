@@ -1,11 +1,10 @@
 package com.esotericsoftware.kryo.p502io;
 
 import com.esotericsoftware.kryo.Kryo;
-import com.esotericsoftware.kryo.KryoException;
 import java.io.IOException;
 import java.io.ObjectInput;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class KryoObjectInput extends KryoDataInput implements ObjectInput {
     private final Kryo kryo;
 
@@ -20,7 +19,7 @@ public class KryoObjectInput extends KryoDataInput implements ObjectInput {
     }
 
     @Override // java.io.ObjectInput, java.lang.AutoCloseable
-    public void close() throws IOException, KryoException {
+    public void close() throws IOException {
         this.input.close();
     }
 

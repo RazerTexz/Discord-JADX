@@ -6,20 +6,20 @@ import java.util.Iterator;
 import java.util.Set;
 import kotlin.jvm.functions.Function1;
 
-/* compiled from: DFS.java */
-/* renamed from: d0.e0.p.d.m0.p.b, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.p.b, reason: use source file name */
+/* JADX INFO: compiled from: DFS.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class DFS {
 
     /* JADX INFO: Add missing generic type declarations: [N] */
-    /* compiled from: DFS.java */
-    /* renamed from: d0.e0.p.d.m0.p.b$a */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.p.b$a */
+    /* JADX INFO: compiled from: DFS.java */
     public static class a<N> extends b<N, Boolean> {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final /* synthetic */ Function1 f24970a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final /* synthetic */ boolean[] f24971b;
 
         public a(Function1 function1, boolean[] zArr) {
@@ -46,22 +46,22 @@ public class DFS {
         }
     }
 
-    /* compiled from: DFS.java */
-    /* renamed from: d0.e0.p.d.m0.p.b$b */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.p.b$b */
+    /* JADX INFO: compiled from: DFS.java */
     public static abstract class b<N, R> implements d<N, R> {
         @Override // p507d0.p513e0.p514p.p515d.p517m0.p576p.DFS.d
         public void afterChildren(N n) {
         }
     }
 
-    /* compiled from: DFS.java */
-    /* renamed from: d0.e0.p.d.m0.p.b$c */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.p.b$c */
+    /* JADX INFO: compiled from: DFS.java */
     public interface c<N> {
         Iterable<? extends N> getNeighbors(N n);
     }
 
-    /* compiled from: DFS.java */
-    /* renamed from: d0.e0.p.d.m0.p.b$d */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.p.b$d */
+    /* JADX INFO: compiled from: DFS.java */
     public interface d<N, R> {
         void afterChildren(N n);
 
@@ -70,16 +70,16 @@ public class DFS {
         R result();
     }
 
-    /* compiled from: DFS.java */
-    /* renamed from: d0.e0.p.d.m0.p.b$e */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.p.b$e */
+    /* JADX INFO: compiled from: DFS.java */
     public interface e<N> {
     }
 
-    /* compiled from: DFS.java */
-    /* renamed from: d0.e0.p.d.m0.p.b$f */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.p.b$f */
+    /* JADX INFO: compiled from: DFS.java */
     public static class f<N> implements e<N> {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final Set<N> f24972a;
 
         public f() {
@@ -98,7 +98,7 @@ public class DFS {
         }
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static /* synthetic */ void m10043a(int i) {
         Object[] objArr = new Object[3];
         switch (i) {

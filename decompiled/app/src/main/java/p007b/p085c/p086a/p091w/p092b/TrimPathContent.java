@@ -6,27 +6,27 @@ import p007b.p085c.p086a.p091w.p093c.BaseKeyframeAnimation;
 import p007b.p085c.p086a.p095y.p097l.ShapeTrimPath;
 import p007b.p085c.p086a.p095y.p098m.BaseLayer2;
 
-/* compiled from: TrimPathContent.java */
-/* renamed from: b.c.a.w.b.s, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.c.a.w.b.s, reason: use source file name */
+/* JADX INFO: compiled from: TrimPathContent.java */
+/* JADX INFO: loaded from: classes.dex */
 public class TrimPathContent implements Content2, BaseKeyframeAnimation.b {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final boolean f2590a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final List<BaseKeyframeAnimation.b> f2591b = new ArrayList();
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final int f2592c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final BaseKeyframeAnimation<?, Float> f2593d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final BaseKeyframeAnimation<?, Float> f2594e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final BaseKeyframeAnimation<?, Float> f2595f;
 
     public TrimPathContent(BaseLayer2 baseLayer2, ShapeTrimPath shapeTrimPath) {
@@ -47,7 +47,7 @@ public class TrimPathContent implements Content2, BaseKeyframeAnimation.b {
     }
 
     @Override // p007b.p085c.p086a.p091w.p093c.BaseKeyframeAnimation.b
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public void mo709a() {
         for (int i = 0; i < this.f2591b.size(); i++) {
             this.f2591b.get(i).mo709a();
@@ -55,7 +55,7 @@ public class TrimPathContent implements Content2, BaseKeyframeAnimation.b {
     }
 
     @Override // p007b.p085c.p086a.p091w.p092b.Content2
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public void mo710b(List<Content2> list, List<Content2> list2) {
     }
 }

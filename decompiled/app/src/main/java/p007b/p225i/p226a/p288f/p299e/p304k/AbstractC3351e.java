@@ -5,19 +5,19 @@ import android.content.ServiceConnection;
 import androidx.annotation.RecentlyNonNull;
 import p007b.p085c.p086a.p087a0.AnimatableValueParser;
 
-/* compiled from: com.google.android.gms:play-services-basement@@17.6.0 */
-/* renamed from: b.i.a.f.e.k.e */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.f.e.k.e */
+/* JADX INFO: compiled from: com.google.android.gms:play-services-basement@@17.6.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public abstract class AbstractC3351e {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final Object f9517a = new Object();
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static AbstractC3351e f9518b;
 
     @RecentlyNonNull
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static AbstractC3351e m4152a(@RecentlyNonNull Context context) {
         synchronized (f9517a) {
             if (f9518b == null) {
@@ -27,7 +27,7 @@ public abstract class AbstractC3351e {
         return f9518b;
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final void m4153b(@RecentlyNonNull String str, @RecentlyNonNull String str2, int i, @RecentlyNonNull ServiceConnection serviceConnection, @RecentlyNonNull String str3, boolean z2) {
         C3376q0 c3376q0 = new C3376q0(str, str2, i, z2);
         C3382t0 c3382t0 = (C3382t0) this;
@@ -55,6 +55,6 @@ public abstract class AbstractC3351e {
         }
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public abstract boolean mo4154c(C3376q0 c3376q0, ServiceConnection serviceConnection, String str);
 }

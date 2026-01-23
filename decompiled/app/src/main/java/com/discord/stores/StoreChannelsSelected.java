@@ -39,8 +39,8 @@ import p637j0.p642l.p647e.ScalarSynchronousObservable;
 import p658rx.Observable;
 import p658rx.Subscription;
 
-/* compiled from: StoreChannelsSelected.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: StoreChannelsSelected.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class StoreChannelsSelected extends StoreV2 {
     private static final String CACHE_KEY_SELECTED_CHANNEL_IDS = "CACHE_KEY_SELECTED_CHANNEL_IDS";
     public static final long ID_THREAD_DRAFT = -3;
@@ -65,10 +65,10 @@ public final class StoreChannelsSelected extends StoreV2 {
     private Subscription validateSelectedChannelSubscription;
     private static final StoreChannelsSelected4 InitializedUpdateSource = new StoreChannelsSelected4();
 
-    /* compiled from: StoreChannelsSelected.kt */
+    /* JADX INFO: compiled from: StoreChannelsSelected.kt */
     public static abstract class ResolvedSelectedChannel {
 
-        /* compiled from: StoreChannelsSelected.kt */
+        /* JADX INFO: compiled from: StoreChannelsSelected.kt */
         public static final /* data */ class Channel extends ResolvedSelectedChannel {
             private final StoreChannelsSelected3 analyticsLocation;
             private final StoreChannelsSelected2 analyticsViewType;
@@ -98,17 +98,17 @@ public final class StoreChannelsSelected extends StoreV2 {
                 return channel.copy(channel2, l, storeChannelsSelected3);
             }
 
-            /* renamed from: component1, reason: from getter */
+            /* JADX INFO: renamed from: component1, reason: from getter */
             public final com.discord.api.channel.Channel getChannel() {
                 return this.channel;
             }
 
-            /* renamed from: component2, reason: from getter */
+            /* JADX INFO: renamed from: component2, reason: from getter */
             public final Long getPeekParent() {
                 return this.peekParent;
             }
 
-            /* renamed from: component3, reason: from getter */
+            /* JADX INFO: renamed from: component3, reason: from getter */
             public final StoreChannelsSelected3 getAnalyticsLocation() {
                 return this.analyticsLocation;
             }
@@ -166,7 +166,7 @@ public final class StoreChannelsSelected extends StoreV2 {
             }
         }
 
-        /* compiled from: StoreChannelsSelected.kt */
+        /* JADX INFO: compiled from: StoreChannelsSelected.kt */
         public static final /* data */ class ThreadDraft extends ResolvedSelectedChannel {
             private final com.discord.api.channel.Channel parentChannel;
             private final Long starterMessageId;
@@ -194,17 +194,17 @@ public final class StoreChannelsSelected extends StoreV2 {
                 return threadDraft.copy(channel, l, str);
             }
 
-            /* renamed from: component1, reason: from getter */
+            /* JADX INFO: renamed from: component1, reason: from getter */
             public final com.discord.api.channel.Channel getParentChannel() {
                 return this.parentChannel;
             }
 
-            /* renamed from: component2, reason: from getter */
+            /* JADX INFO: renamed from: component2, reason: from getter */
             public final Long getStarterMessageId() {
                 return this.starterMessageId;
             }
 
-            /* renamed from: component3, reason: from getter */
+            /* JADX INFO: renamed from: component3, reason: from getter */
             public final String getThreadStartLocation() {
                 return this.threadStartLocation;
             }
@@ -260,7 +260,7 @@ public final class StoreChannelsSelected extends StoreV2 {
             }
         }
 
-        /* compiled from: StoreChannelsSelected.kt */
+        /* JADX INFO: compiled from: StoreChannelsSelected.kt */
         public static final class Unavailable extends ResolvedSelectedChannel {
             public static final Unavailable INSTANCE = new Unavailable();
 
@@ -269,7 +269,7 @@ public final class StoreChannelsSelected extends StoreV2 {
             }
         }
 
-        /* compiled from: StoreChannelsSelected.kt */
+        /* JADX INFO: compiled from: StoreChannelsSelected.kt */
         public static final class Uninitialized extends ResolvedSelectedChannel {
             public static final Uninitialized INSTANCE = new Uninitialized();
 
@@ -278,7 +278,7 @@ public final class StoreChannelsSelected extends StoreV2 {
             }
         }
 
-        /* compiled from: StoreChannelsSelected.kt */
+        /* JADX INFO: compiled from: StoreChannelsSelected.kt */
         public static final class Unselected extends ResolvedSelectedChannel {
             public static final Unselected INSTANCE = new Unselected();
 
@@ -332,10 +332,10 @@ public final class StoreChannelsSelected extends StoreV2 {
         }
     }
 
-    /* compiled from: StoreChannelsSelected.kt */
+    /* JADX INFO: compiled from: StoreChannelsSelected.kt */
     public static abstract class UserChannelSelection {
 
-        /* compiled from: StoreChannelsSelected.kt */
+        /* JADX INFO: compiled from: StoreChannelsSelected.kt */
         public static final /* data */ class SelectedChannel extends UserChannelSelection {
             private final StoreChannelsSelected3 analyticsLocation;
             private final long channelId;
@@ -358,17 +358,17 @@ public final class StoreChannelsSelected extends StoreV2 {
                 return selectedChannel.copy(j, l, storeChannelsSelected3);
             }
 
-            /* renamed from: component1, reason: from getter */
+            /* JADX INFO: renamed from: component1, reason: from getter */
             public final long getChannelId() {
                 return this.channelId;
             }
 
-            /* renamed from: component2, reason: from getter */
+            /* JADX INFO: renamed from: component2, reason: from getter */
             public final Long getPeekParent() {
                 return this.peekParent;
             }
 
-            /* renamed from: component3, reason: from getter */
+            /* JADX INFO: renamed from: component3, reason: from getter */
             public final StoreChannelsSelected3 getAnalyticsLocation() {
                 return this.analyticsLocation;
             }
@@ -427,7 +427,7 @@ public final class StoreChannelsSelected extends StoreV2 {
             }
         }
 
-        /* compiled from: StoreChannelsSelected.kt */
+        /* JADX INFO: compiled from: StoreChannelsSelected.kt */
         public static final /* data */ class ThreadDraft extends UserChannelSelection {
             private final String locationThreadStart;
             private final long parentChannelId;
@@ -453,17 +453,17 @@ public final class StoreChannelsSelected extends StoreV2 {
                 return threadDraft.copy(j, l, str);
             }
 
-            /* renamed from: component1, reason: from getter */
+            /* JADX INFO: renamed from: component1, reason: from getter */
             public final long getParentChannelId() {
                 return this.parentChannelId;
             }
 
-            /* renamed from: component2, reason: from getter */
+            /* JADX INFO: renamed from: component2, reason: from getter */
             public final Long getStarterMessageId() {
                 return this.starterMessageId;
             }
 
-            /* renamed from: component3, reason: from getter */
+            /* JADX INFO: renamed from: component3, reason: from getter */
             public final String getLocationThreadStart() {
                 return this.locationThreadStart;
             }
@@ -513,7 +513,7 @@ public final class StoreChannelsSelected extends StoreV2 {
             }
         }
 
-        /* compiled from: StoreChannelsSelected.kt */
+        /* JADX INFO: compiled from: StoreChannelsSelected.kt */
         public static final class Unselected extends UserChannelSelection {
             public static final Unselected INSTANCE = new Unselected();
 
@@ -562,8 +562,8 @@ public final class StoreChannelsSelected extends StoreV2 {
         }
     }
 
-    /* compiled from: StoreChannelsSelected.kt */
-    /* renamed from: com.discord.stores.StoreChannelsSelected$observeId$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreChannelsSelected$observeId$1 */
+    /* JADX INFO: compiled from: StoreChannelsSelected.kt */
     public static final class C58321 extends Lambda implements Function0<Long> {
         public C58321() {
             super(0);
@@ -574,18 +574,18 @@ public final class StoreChannelsSelected extends StoreV2 {
             return Long.valueOf(invoke2());
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final long invoke2() {
             return StoreChannelsSelected.this.getId();
         }
     }
 
-    /* compiled from: StoreChannelsSelected.kt */
-    /* renamed from: com.discord.stores.StoreChannelsSelected$observeInitializedForAuthedUser$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreChannelsSelected$observeInitializedForAuthedUser$1 */
+    /* JADX INFO: compiled from: StoreChannelsSelected.kt */
     public static final class C58331<T, R> implements Func1<Boolean, Observable<? extends Boolean>> {
 
-        /* compiled from: StoreChannelsSelected.kt */
-        /* renamed from: com.discord.stores.StoreChannelsSelected$observeInitializedForAuthedUser$1$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.stores.StoreChannelsSelected$observeInitializedForAuthedUser$1$1, reason: invalid class name */
+        /* JADX INFO: compiled from: StoreChannelsSelected.kt */
         public static final class AnonymousClass1 extends Lambda implements Function0<Boolean> {
             public AnonymousClass1() {
                 super(0);
@@ -596,7 +596,7 @@ public final class StoreChannelsSelected extends StoreV2 {
                 return Boolean.valueOf(invoke2());
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final boolean invoke2() {
                 return StoreChannelsSelected.access$getInitializedForAuthedUser$p(StoreChannelsSelected.this);
             }
@@ -610,15 +610,15 @@ public final class StoreChannelsSelected extends StoreV2 {
             return call2(bool);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final Observable<? extends Boolean> call2(Boolean bool) {
             Intrinsics3.checkNotNullExpressionValue(bool, "isStoreChannelsInitialized");
             return bool.booleanValue() ? ObservationDeck.connectRx$default(StoreChannelsSelected.access$getObservationDeck$p(StoreChannelsSelected.this), new ObservationDeck.UpdateSource[]{StoreChannelsSelected.access$getInitializedUpdateSource$cp()}, false, null, null, new AnonymousClass1(), 14, null) : new ScalarSynchronousObservable(Boolean.FALSE);
         }
     }
 
-    /* compiled from: StoreChannelsSelected.kt */
-    /* renamed from: com.discord.stores.StoreChannelsSelected$observePreviousId$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreChannelsSelected$observePreviousId$1 */
+    /* JADX INFO: compiled from: StoreChannelsSelected.kt */
     public static final class C58341 extends Lambda implements Function0<Long> {
         public C58341() {
             super(0);
@@ -629,14 +629,14 @@ public final class StoreChannelsSelected extends StoreV2 {
             return Long.valueOf(invoke2());
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final long invoke2() {
             return StoreChannelsSelected.access$getPreviouslySelectedChannel$p(StoreChannelsSelected.this).getId();
         }
     }
 
-    /* compiled from: StoreChannelsSelected.kt */
-    /* renamed from: com.discord.stores.StoreChannelsSelected$observeResolvedSelectedChannel$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreChannelsSelected$observeResolvedSelectedChannel$1 */
+    /* JADX INFO: compiled from: StoreChannelsSelected.kt */
     public static final class C58351 extends Lambda implements Function0<ResolvedSelectedChannel> {
         public C58351() {
             super(0);
@@ -654,8 +654,8 @@ public final class StoreChannelsSelected extends StoreV2 {
         }
     }
 
-    /* compiled from: StoreChannelsSelected.kt */
-    /* renamed from: com.discord.stores.StoreChannelsSelected$observeSelectedChannel$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreChannelsSelected$observeSelectedChannel$1 */
+    /* JADX INFO: compiled from: StoreChannelsSelected.kt */
     public static final class C58361 extends Lambda implements Function0<Channel> {
         public C58361() {
             super(0);
@@ -673,8 +673,8 @@ public final class StoreChannelsSelected extends StoreV2 {
         }
     }
 
-    /* compiled from: StoreChannelsSelected.kt */
-    /* renamed from: com.discord.stores.StoreChannelsSelected$validateSelectedChannel$1 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreChannelsSelected$validateSelectedChannel$1 */
+    /* JADX INFO: compiled from: StoreChannelsSelected.kt */
     public static final class C58371 extends Lambda implements Function0<ResolvedSelectedChannel> {
         public final /* synthetic */ Map $allChannels;
         public final /* synthetic */ UserChannelSelection $channelSelection;
@@ -705,8 +705,8 @@ public final class StoreChannelsSelected extends StoreV2 {
         }
     }
 
-    /* compiled from: StoreChannelsSelected.kt */
-    /* renamed from: com.discord.stores.StoreChannelsSelected$validateSelectedChannel$2 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreChannelsSelected$validateSelectedChannel$2 */
+    /* JADX INFO: compiled from: StoreChannelsSelected.kt */
     public static final class C58382 extends Lambda implements Function1<Subscription, Unit> {
         public C58382() {
             super(1);
@@ -718,19 +718,19 @@ public final class StoreChannelsSelected extends StoreV2 {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Subscription subscription) {
             Intrinsics3.checkNotNullParameter(subscription, "it");
             StoreChannelsSelected.access$setValidateSelectedChannelSubscription$p(StoreChannelsSelected.this, subscription);
         }
     }
 
-    /* compiled from: StoreChannelsSelected.kt */
-    /* renamed from: com.discord.stores.StoreChannelsSelected$validateSelectedChannel$3 */
+    /* JADX INFO: renamed from: com.discord.stores.StoreChannelsSelected$validateSelectedChannel$3 */
+    /* JADX INFO: compiled from: StoreChannelsSelected.kt */
     public static final class C58393 extends Lambda implements Function1<ResolvedSelectedChannel, Unit> {
 
-        /* compiled from: StoreChannelsSelected.kt */
-        /* renamed from: com.discord.stores.StoreChannelsSelected$validateSelectedChannel$3$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.stores.StoreChannelsSelected$validateSelectedChannel$3$1, reason: invalid class name */
+        /* JADX INFO: compiled from: StoreChannelsSelected.kt */
         public static final class AnonymousClass1 extends Lambda implements Function0<Unit> {
             public final /* synthetic */ ResolvedSelectedChannel $selected;
 
@@ -746,7 +746,7 @@ public final class StoreChannelsSelected extends StoreV2 {
                 return Unit.f27425a;
             }
 
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
             public final void invoke2() {
                 StoreChannelsSelected storeChannelsSelected = StoreChannelsSelected.this;
                 ResolvedSelectedChannel resolvedSelectedChannel = this.$selected;
@@ -765,7 +765,7 @@ public final class StoreChannelsSelected extends StoreV2 {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(ResolvedSelectedChannel resolvedSelectedChannel) {
             StoreChannelsSelected.access$getDispatcher$p(StoreChannelsSelected.this).schedule(new AnonymousClass1(resolvedSelectedChannel));
         }

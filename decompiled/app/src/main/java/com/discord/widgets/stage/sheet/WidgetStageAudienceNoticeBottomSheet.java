@@ -27,21 +27,21 @@ import p507d0.LazyJVM;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetStageAudienceNoticeBottomSheet.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetStageAudienceNoticeBottomSheet.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetStageAudienceNoticeBottomSheet extends AppBottomSheet {
     public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetStageAudienceNoticeBottomSheet.class, "binding", "getBinding()Lcom/discord/databinding/WidgetStageAudienceNoticeBottomSheetBinding;", 0)};
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
 
-    /* renamed from: binding$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
 
-    /* renamed from: channelId$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: channelId$delegate, reason: from kotlin metadata */
     private final Lazy channelId;
 
-    /* compiled from: WidgetStageAudienceNoticeBottomSheet.kt */
+    /* JADX INFO: compiled from: WidgetStageAudienceNoticeBottomSheet.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -65,8 +65,8 @@ public final class WidgetStageAudienceNoticeBottomSheet extends AppBottomSheet {
         }
     }
 
-    /* compiled from: WidgetStageAudienceNoticeBottomSheet.kt */
-    /* renamed from: com.discord.widgets.stage.sheet.WidgetStageAudienceNoticeBottomSheet$onResume$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.stage.sheet.WidgetStageAudienceNoticeBottomSheet$onResume$1 */
+    /* JADX INFO: compiled from: WidgetStageAudienceNoticeBottomSheet.kt */
     public static final class C100251 extends Lambda implements Function1<StageInstance, Unit> {
         public C100251() {
             super(1);
@@ -78,14 +78,14 @@ public final class WidgetStageAudienceNoticeBottomSheet extends AppBottomSheet {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(StageInstance stageInstance) {
             WidgetStageAudienceNoticeBottomSheet.access$configureUI(WidgetStageAudienceNoticeBottomSheet.this, stageInstance);
         }
     }
 
-    /* compiled from: WidgetStageAudienceNoticeBottomSheet.kt */
-    /* renamed from: com.discord.widgets.stage.sheet.WidgetStageAudienceNoticeBottomSheet$onViewCreated$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.stage.sheet.WidgetStageAudienceNoticeBottomSheet$onViewCreated$1 */
+    /* JADX INFO: compiled from: WidgetStageAudienceNoticeBottomSheet.kt */
     public static final class ViewOnClickListenerC100261 implements View.OnClickListener {
         public ViewOnClickListenerC100261() {
         }

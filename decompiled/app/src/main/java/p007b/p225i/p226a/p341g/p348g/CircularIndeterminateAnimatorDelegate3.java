@@ -11,52 +11,52 @@ import com.google.android.material.color.MaterialColors;
 import com.google.android.material.progressindicator.BaseProgressIndicatorSpec;
 import com.google.android.material.progressindicator.CircularProgressIndicatorSpec;
 
-/* compiled from: CircularIndeterminateAnimatorDelegate.java */
-/* renamed from: b.i.a.g.g.d, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.g.g.d, reason: use source file name */
+/* JADX INFO: compiled from: CircularIndeterminateAnimatorDelegate.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class CircularIndeterminateAnimatorDelegate3 extends IndeterminateAnimatorDelegate<ObjectAnimator> {
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public static final int[] f11719d = {0, 1350, 2700, 4050};
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public static final int[] f11720e = {667, 2017, 3367, 4717};
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public static final int[] f11721f = {1000, 2350, 3700, 5050};
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public static final Property<CircularIndeterminateAnimatorDelegate3, Float> f11722g = new a(Float.class, "animationFraction");
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public static final Property<CircularIndeterminateAnimatorDelegate3, Float> f11723h = new b(Float.class, "completeEndFraction");
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public ObjectAnimator f11724i;
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public ObjectAnimator f11725j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final FastOutSlowInInterpolator f11726k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final BaseProgressIndicatorSpec f11727l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public int f11728m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public float f11729n;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public float f11730o;
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public Animatable2Compat.AnimationCallback f11731p;
 
-    /* compiled from: CircularIndeterminateAnimatorDelegate.java */
-    /* renamed from: b.i.a.g.g.d$a */
+    /* JADX INFO: renamed from: b.i.a.g.g.d$a */
+    /* JADX INFO: compiled from: CircularIndeterminateAnimatorDelegate.java */
     public static class a extends Property<CircularIndeterminateAnimatorDelegate3, Float> {
         public a(Class cls, String str) {
             super(cls, str);
@@ -111,8 +111,8 @@ public final class CircularIndeterminateAnimatorDelegate3 extends IndeterminateA
         }
     }
 
-    /* compiled from: CircularIndeterminateAnimatorDelegate.java */
-    /* renamed from: b.i.a.g.g.d$b */
+    /* JADX INFO: renamed from: b.i.a.g.g.d$b */
+    /* JADX INFO: compiled from: CircularIndeterminateAnimatorDelegate.java */
     public static class b extends Property<CircularIndeterminateAnimatorDelegate3, Float> {
         public b(Class cls, String str) {
             super(cls, str);
@@ -138,7 +138,7 @@ public final class CircularIndeterminateAnimatorDelegate3 extends IndeterminateA
     }
 
     @Override // p007b.p225i.p226a.p341g.p348g.IndeterminateAnimatorDelegate
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public void mo6123a() {
         ObjectAnimator objectAnimator = this.f11724i;
         if (objectAnimator != null) {
@@ -147,19 +147,19 @@ public final class CircularIndeterminateAnimatorDelegate3 extends IndeterminateA
     }
 
     @Override // p007b.p225i.p226a.p341g.p348g.IndeterminateAnimatorDelegate
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public void mo6124c() {
         m6129h();
     }
 
     @Override // p007b.p225i.p226a.p341g.p348g.IndeterminateAnimatorDelegate
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public void mo6125d(@NonNull Animatable2Compat.AnimationCallback animationCallback) {
         this.f11731p = animationCallback;
     }
 
     @Override // p007b.p225i.p226a.p341g.p348g.IndeterminateAnimatorDelegate
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public void mo6126e() {
         if (this.f11725j.isRunning()) {
             return;
@@ -172,7 +172,7 @@ public final class CircularIndeterminateAnimatorDelegate3 extends IndeterminateA
     }
 
     @Override // p007b.p225i.p226a.p341g.p348g.IndeterminateAnimatorDelegate
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public void mo6127f() {
         if (this.f11724i == null) {
             ObjectAnimator objectAnimatorOfFloat = ObjectAnimator.ofFloat(this, f11722g, 0.0f, 1.0f);
@@ -194,13 +194,13 @@ public final class CircularIndeterminateAnimatorDelegate3 extends IndeterminateA
     }
 
     @Override // p007b.p225i.p226a.p341g.p348g.IndeterminateAnimatorDelegate
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public void mo6128g() {
         this.f11731p = null;
     }
 
     @VisibleForTesting
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public void m6129h() {
         this.f11728m = 0;
         this.f11738c[0] = MaterialColors.compositeARGBWithAlpha(this.f11727l.indicatorColors[0], this.f11736a.getAlpha());

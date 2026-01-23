@@ -5,9 +5,9 @@ import p507d0.p513e0.p514p.p515d.p517m0.p567n.KotlinType;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: DescriptorRendererImpl.kt */
-/* renamed from: d0.e0.p.d.m0.j.f, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.j.f, reason: use source file name */
+/* JADX INFO: compiled from: DescriptorRendererImpl.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class DescriptorRendererImpl3 extends Lambda implements Function1<KotlinType, CharSequence> {
     public final /* synthetic */ DescriptorRendererImpl this$0;
 
@@ -17,7 +17,7 @@ public final class DescriptorRendererImpl3 extends Lambda implements Function1<K
         this.this$0 = descriptorRendererImpl;
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final CharSequence invoke2(KotlinType kotlinType) {
         DescriptorRendererImpl descriptorRendererImpl = this.this$0;
         Intrinsics3.checkNotNullExpressionValue(kotlinType, "it");

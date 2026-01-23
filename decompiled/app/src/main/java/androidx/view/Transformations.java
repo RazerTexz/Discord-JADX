@@ -5,11 +5,11 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.arch.core.util.Function;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public class Transformations {
 
     /* JADX INFO: Add missing generic type declarations: [X] */
-    /* renamed from: androidx.lifecycle.Transformations$1 */
+    /* JADX INFO: renamed from: androidx.lifecycle.Transformations$1 */
     public class C04491<X> implements Observer<X> {
         public final /* synthetic */ Function val$mapFunction;
         public final /* synthetic */ MediatorLiveData val$result;
@@ -26,14 +26,14 @@ public class Transformations {
     }
 
     /* JADX INFO: Add missing generic type declarations: [X] */
-    /* renamed from: androidx.lifecycle.Transformations$2 */
+    /* JADX INFO: renamed from: androidx.lifecycle.Transformations$2 */
     public class C04502<X> implements Observer<X> {
         public LiveData<Y> mSource;
         public final /* synthetic */ MediatorLiveData val$result;
         public final /* synthetic */ Function val$switchMapFunction;
 
         /* JADX INFO: Add missing generic type declarations: [Y] */
-        /* renamed from: androidx.lifecycle.Transformations$2$1, reason: invalid class name */
+        /* JADX INFO: renamed from: androidx.lifecycle.Transformations$2$1, reason: invalid class name */
         public class AnonymousClass1<Y> implements Observer<Y> {
             public AnonymousClass1() {
             }
@@ -67,7 +67,7 @@ public class Transformations {
     }
 
     /* JADX INFO: Add missing generic type declarations: [X] */
-    /* renamed from: androidx.lifecycle.Transformations$3 */
+    /* JADX INFO: renamed from: androidx.lifecycle.Transformations$3 */
     public class C04513<X> implements Observer<X> {
         public boolean mFirstTime = true;
         public final /* synthetic */ MediatorLiveData val$outputLiveData;

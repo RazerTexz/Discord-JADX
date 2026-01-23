@@ -7,24 +7,24 @@ import p007b.p109f.p115d.p123h.HasBitmap;
 import p007b.p109f.p115d.p123h.ResourceReleaser;
 import p007b.p109f.p186k.BitmapUtil;
 
-/* compiled from: CloseableStaticBitmap.java */
-/* renamed from: b.f.j.j.d, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.f.j.j.d, reason: use source file name */
+/* JADX INFO: compiled from: CloseableStaticBitmap.java */
+/* JADX INFO: loaded from: classes.dex */
 public class CloseableStaticBitmap extends CloseableBitmap implements HasBitmap {
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public CloseableReference<Bitmap> f3886l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public volatile Bitmap f3887m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public final QualityInfo f3888n;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public final int f3889o;
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public final int f3890p;
 
     public CloseableStaticBitmap(Bitmap bitmap, ResourceReleaser<Bitmap> resourceReleaser, QualityInfo qualityInfo, int i) {
@@ -38,13 +38,13 @@ public class CloseableStaticBitmap extends CloseableBitmap implements HasBitmap 
     }
 
     @Override // p007b.p109f.p161j.p175j.CloseableImage
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public QualityInfo mo1334b() {
         return this.f3888n;
     }
 
     @Override // p007b.p109f.p161j.p175j.CloseableImage
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public int mo1330c() {
         return BitmapUtil.m1541d(this.f3887m);
     }
@@ -63,7 +63,7 @@ public class CloseableStaticBitmap extends CloseableBitmap implements HasBitmap 
     }
 
     @Override // p007b.p109f.p161j.p175j.CloseableBitmap
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public Bitmap mo1332f() {
         return this.f3887m;
     }

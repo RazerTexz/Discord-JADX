@@ -6,13 +6,13 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.LinearSmoothScroller;
 import androidx.recyclerview.widget.RecyclerView;
 
-/* compiled from: SmoothCalendarLayoutManager.java */
-/* renamed from: b.i.a.g.d.j, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.g.d.j, reason: use source file name */
+/* JADX INFO: compiled from: SmoothCalendarLayoutManager.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class SmoothCalendarLayoutManager extends LinearLayoutManager {
 
-    /* compiled from: SmoothCalendarLayoutManager.java */
-    /* renamed from: b.i.a.g.d.j$a */
+    /* JADX INFO: renamed from: b.i.a.g.d.j$a */
+    /* JADX INFO: compiled from: SmoothCalendarLayoutManager.java */
     public class a extends LinearSmoothScroller {
         public a(SmoothCalendarLayoutManager smoothCalendarLayoutManager, Context context) {
             super(context);

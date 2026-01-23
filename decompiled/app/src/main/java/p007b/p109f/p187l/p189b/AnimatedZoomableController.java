@@ -12,16 +12,16 @@ import p007b.p085c.p086a.p087a0.AnimatableValueParser;
 import p007b.p109f.p115d.p120e.FLog;
 import p007b.p109f.p187l.p188a.TransformGestureDetector;
 
-/* compiled from: AnimatedZoomableController.java */
-/* renamed from: b.f.l.b.b, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.f.l.b.b, reason: use source file name */
+/* JADX INFO: compiled from: AnimatedZoomableController.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class AnimatedZoomableController extends AbstractAnimatedZoomableController {
 
-    /* renamed from: s */
+    /* JADX INFO: renamed from: s */
     public final ValueAnimator f4295s;
 
-    /* compiled from: AnimatedZoomableController.java */
-    /* renamed from: b.f.l.b.b$a */
+    /* JADX INFO: renamed from: b.f.l.b.b$a */
+    /* JADX INFO: compiled from: AnimatedZoomableController.java */
     public class a implements ValueAnimator.AnimatorUpdateListener {
         public a() {
         }
@@ -43,11 +43,11 @@ public class AnimatedZoomableController extends AbstractAnimatedZoomableControll
         }
     }
 
-    /* compiled from: AnimatedZoomableController.java */
-    /* renamed from: b.f.l.b.b$b */
+    /* JADX INFO: renamed from: b.f.l.b.b$b */
+    /* JADX INFO: compiled from: AnimatedZoomableController.java */
     public class b extends AnimatorListenerAdapter {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final /* synthetic */ Runnable f4297a;
 
         public b(Runnable runnable) {
@@ -90,14 +90,14 @@ public class AnimatedZoomableController extends AbstractAnimatedZoomableControll
     }
 
     @Override // p007b.p109f.p187l.p189b.AbstractAnimatedZoomableController
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public Class<?> mo1553m() {
         return AnimatedZoomableController.class;
     }
 
     @Override // p007b.p109f.p187l.p189b.AbstractAnimatedZoomableController
     @SuppressLint({"NewApi"})
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public void mo1554n(Matrix matrix, long j, @Nullable Runnable runnable) {
         int i = FLog.f3102a;
         mo1555o();
@@ -114,7 +114,7 @@ public class AnimatedZoomableController extends AbstractAnimatedZoomableControll
 
     @Override // p007b.p109f.p187l.p189b.AbstractAnimatedZoomableController
     @SuppressLint({"NewApi"})
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public void mo1555o() {
         if (this.f4289m) {
             FLog.m981i(AnimatedZoomableController.class, "stopAnimation");

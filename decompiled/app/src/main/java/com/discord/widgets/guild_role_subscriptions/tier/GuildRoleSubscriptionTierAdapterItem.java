@@ -11,11 +11,11 @@ import kotlin.jvm.internal.DefaultConstructorMarker;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: GuildRoleSubscriptionTierAdapterItem.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: GuildRoleSubscriptionTierAdapterItem.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public abstract class GuildRoleSubscriptionTierAdapterItem implements DiffKeyProvider {
 
-    /* compiled from: GuildRoleSubscriptionTierAdapterItem.kt */
+    /* JADX INFO: compiled from: GuildRoleSubscriptionTierAdapterItem.kt */
     public static final class AllChannelsAccessBenefitItem extends GuildRoleSubscriptionTierAdapterItem {
         public static final AllChannelsAccessBenefitItem INSTANCE = new AllChannelsAccessBenefitItem();
         private static final String key = "allChannelsAccessBenefitItem";
@@ -30,7 +30,7 @@ public abstract class GuildRoleSubscriptionTierAdapterItem implements DiffKeyPro
         }
     }
 
-    /* compiled from: GuildRoleSubscriptionTierAdapterItem.kt */
+    /* JADX INFO: compiled from: GuildRoleSubscriptionTierAdapterItem.kt */
     public static final /* data */ class BenefitItem extends GuildRoleSubscriptionTierAdapterItem {
         private final Benefit benefit;
         private final int index;
@@ -55,12 +55,12 @@ public abstract class GuildRoleSubscriptionTierAdapterItem implements DiffKeyPro
             return benefitItem.copy(i, benefit);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final int getIndex() {
             return this.index;
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final Benefit getBenefit() {
             return this.benefit;
         }
@@ -110,7 +110,7 @@ public abstract class GuildRoleSubscriptionTierAdapterItem implements DiffKeyPro
         }
     }
 
-    /* compiled from: GuildRoleSubscriptionTierAdapterItem.kt */
+    /* JADX INFO: compiled from: GuildRoleSubscriptionTierAdapterItem.kt */
     public static final /* data */ class Header extends GuildRoleSubscriptionTierAdapterItem {
         private final String description;
         private final String image;
@@ -145,27 +145,27 @@ public abstract class GuildRoleSubscriptionTierAdapterItem implements DiffKeyPro
             return header.copy(str, num2, l2, str4, str3);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final String getName() {
             return this.name;
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final Integer getPrice() {
             return this.price;
         }
 
-        /* renamed from: component3, reason: from getter */
+        /* JADX INFO: renamed from: component3, reason: from getter */
         public final Long getSkuId() {
             return this.skuId;
         }
 
-        /* renamed from: component4, reason: from getter */
+        /* JADX INFO: renamed from: component4, reason: from getter */
         public final String getImage() {
             return this.image;
         }
 
-        /* renamed from: component5, reason: from getter */
+        /* JADX INFO: renamed from: component5, reason: from getter */
         public final String getDescription() {
             return this.description;
         }
@@ -247,7 +247,7 @@ public abstract class GuildRoleSubscriptionTierAdapterItem implements DiffKeyPro
         }
     }
 
-    /* compiled from: GuildRoleSubscriptionTierAdapterItem.kt */
+    /* JADX INFO: compiled from: GuildRoleSubscriptionTierAdapterItem.kt */
     public static final /* data */ class MemberPreview extends GuildRoleSubscriptionTierAdapterItem {
         private final String key;
         private final Integer memberColor;
@@ -267,12 +267,12 @@ public abstract class GuildRoleSubscriptionTierAdapterItem implements DiffKeyPro
             return memberPreview.copy(num, str);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final Integer getMemberColor() {
             return this.memberColor;
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final String getMemberIcon() {
             return this.memberIcon;
         }
@@ -327,7 +327,7 @@ public abstract class GuildRoleSubscriptionTierAdapterItem implements DiffKeyPro
         }
     }
 
-    /* compiled from: GuildRoleSubscriptionTierAdapterItem.kt */
+    /* JADX INFO: compiled from: GuildRoleSubscriptionTierAdapterItem.kt */
     public static final /* data */ class PlanDetails extends GuildRoleSubscriptionTierAdapterItem {
         private final String coverImage;
         private final String description;
@@ -353,12 +353,12 @@ public abstract class GuildRoleSubscriptionTierAdapterItem implements DiffKeyPro
             return planDetails.copy(str, str2);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final String getDescription() {
             return this.description;
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final String getCoverImage() {
             return this.coverImage;
         }
@@ -408,7 +408,7 @@ public abstract class GuildRoleSubscriptionTierAdapterItem implements DiffKeyPro
         }
     }
 
-    /* compiled from: GuildRoleSubscriptionTierAdapterItem.kt */
+    /* JADX INFO: compiled from: GuildRoleSubscriptionTierAdapterItem.kt */
     public static final /* data */ class SectionHeader extends GuildRoleSubscriptionTierAdapterItem {
         private final Integer formatArgument;
         private final String key;
@@ -439,17 +439,17 @@ public abstract class GuildRoleSubscriptionTierAdapterItem implements DiffKeyPro
             return sectionHeader.copy(num, num2, num3);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final Integer getTitleResId() {
             return this.titleResId;
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final Integer getTitlePluralResId() {
             return this.titlePluralResId;
         }
 
-        /* renamed from: component3, reason: from getter */
+        /* JADX INFO: renamed from: component3, reason: from getter */
         public final Integer getFormatArgument() {
             return this.formatArgument;
         }

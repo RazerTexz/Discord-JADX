@@ -3,12 +3,12 @@ package p007b.p225i.p361c.p406w;
 import com.google.firebase.messaging.FirebaseMessaging;
 import p007b.p225i.p226a.p288f.p340n.InterfaceC4361e;
 
-/* compiled from: com.google.firebase:firebase-messaging@@21.0.0 */
-/* renamed from: b.i.c.w.h */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.c.w.h */
+/* JADX INFO: compiled from: com.google.firebase:firebase-messaging@@21.0.0 */
+/* JADX INFO: loaded from: classes3.dex */
 public final /* synthetic */ class C4870h implements InterfaceC4361e {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final FirebaseMessaging f13025a;
 
     public C4870h(FirebaseMessaging firebaseMessaging) {

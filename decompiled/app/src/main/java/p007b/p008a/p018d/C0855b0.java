@@ -7,9 +7,9 @@ import p637j0.p642l.p647e.ScalarSynchronousObservable;
 import p658rx.Observable;
 
 /* JADX INFO: Add missing generic type declarations: [R, T] */
-/* compiled from: AppTransformers.kt */
-/* renamed from: b.a.d.b0 */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.a.d.b0 */
+/* JADX INFO: compiled from: AppTransformers.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class C0855b0<R, T> extends Lambda implements Function1<T, Observable<R>> {
     public final /* synthetic */ Object $switchedValue;
 

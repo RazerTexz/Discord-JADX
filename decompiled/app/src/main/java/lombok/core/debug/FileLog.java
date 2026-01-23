@@ -7,7 +7,7 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.io.StringWriter;
 
-/* loaded from: discord-126021.apk:lombok/core/debug/FileLog.SCL.lombok */
+/* JADX INFO: loaded from: discord-126021.apk:lombok/core/debug/FileLog.SCL.lombok */
 public class FileLog {
     private static FileOutputStream fos;
 
@@ -39,8 +39,8 @@ public class FileLog {
         }
     }
 
-    /* renamed from: lombok.core.debug.FileLog$1 */
-    /* loaded from: discord-126021.apk:lombok/core/debug/FileLog$1.SCL.lombok */
+    /* JADX INFO: renamed from: lombok.core.debug.FileLog$1 */
+    /* JADX INFO: loaded from: discord-126021.apk:lombok/core/debug/FileLog$1.SCL.lombok */
     class C128391 extends Thread {
         C128391() {
         }

@@ -13,15 +13,15 @@ import p637j0.p641k.Func1;
 import p658rx.Observable;
 import p658rx.functions.Func3;
 
-/* compiled from: WidgetVoiceBottomSheetViewModel.kt */
-/* renamed from: com.discord.widgets.voice.sheet.WidgetVoiceBottomSheetViewModel$Companion$observeStoreState$1, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: com.discord.widgets.voice.sheet.WidgetVoiceBottomSheetViewModel$Companion$observeStoreState$1, reason: use source file name */
+/* JADX INFO: compiled from: WidgetVoiceBottomSheetViewModel.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class WidgetVoiceBottomSheetViewModel2<T, R> implements Func1<Channel, Observable<? extends WidgetVoiceBottomSheetViewModel.StoreState>> {
     public final /* synthetic */ long $channelId;
     public final /* synthetic */ StorePermissions $permissionsStore;
 
-    /* compiled from: WidgetVoiceBottomSheetViewModel.kt */
-    /* renamed from: com.discord.widgets.voice.sheet.WidgetVoiceBottomSheetViewModel$Companion$observeStoreState$1$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.voice.sheet.WidgetVoiceBottomSheetViewModel$Companion$observeStoreState$1$1 */
+    /* JADX INFO: compiled from: WidgetVoiceBottomSheetViewModel.kt */
     public static final class C106031<T1, T2, T3, R> implements Func3<CallModel, Long, Boolean, WidgetVoiceBottomSheetViewModel.StoreState> {
         public static final C106031 INSTANCE = new C106031();
 
@@ -30,7 +30,7 @@ public final class WidgetVoiceBottomSheetViewModel2<T, R> implements Func1<Chann
             return call2(callModel, l, bool);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final WidgetVoiceBottomSheetViewModel.StoreState call2(CallModel callModel, Long l, Boolean bool) {
             if (callModel != null) {
                 if (Sets5.setOf((Object[]) new Integer[]{2, 13, 1, 3}).contains(Integer.valueOf(callModel.getChannel().getType()))) {
@@ -53,7 +53,7 @@ public final class WidgetVoiceBottomSheetViewModel2<T, R> implements Func1<Chann
         return call2(channel);
     }
 
-    /* renamed from: call, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
     public final Observable<? extends WidgetVoiceBottomSheetViewModel.StoreState> call2(Channel channel) {
         return Observable.m11075i(CallModel.INSTANCE.get(this.$channelId), this.$permissionsStore.observePermissionsForChannel(this.$channelId), TextInVoiceFeatureFlag.INSTANCE.getINSTANCE().observeEnabled(channel != null ? Long.valueOf(channel.getGuildId()) : null), C106031.INSTANCE);
     }

@@ -2,15 +2,15 @@ package p007b.p225i.p414e;
 
 import p007b.p225i.p226a.p288f.p299e.p308o.C3404f;
 
-/* compiled from: ResultPoint.java */
-/* renamed from: b.i.e.k, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.e.k, reason: use source file name */
+/* JADX INFO: compiled from: ResultPoint.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class ResultPoint {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final float f13207a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final float f13208b;
 
     public ResultPoint(float f, float f2) {
@@ -18,12 +18,12 @@ public class ResultPoint {
         this.f13208b = f2;
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static float m6922a(ResultPoint resultPoint, ResultPoint resultPoint2) {
         return C3404f.m4237Q(resultPoint.f13207a, resultPoint.f13208b, resultPoint2.f13207a, resultPoint2.f13208b);
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static void m6923b(ResultPoint[] resultPointArr) {
         ResultPoint resultPoint;
         ResultPoint resultPoint2;

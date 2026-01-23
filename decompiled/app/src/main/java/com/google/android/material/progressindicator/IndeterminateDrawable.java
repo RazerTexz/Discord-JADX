@@ -20,7 +20,7 @@ import p007b.p225i.p226a.p341g.p348g.LinearDrawingDelegate;
 import p007b.p225i.p226a.p341g.p348g.LinearIndeterminateContiguousAnimatorDelegate2;
 import p007b.p225i.p226a.p341g.p348g.LinearIndeterminateDisjointAnimatorDelegate2;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public final class IndeterminateDrawable<S extends BaseProgressIndicatorSpec> extends DrawableWithAnimatedVisibilityChange {
     private IndeterminateAnimatorDelegate<ObjectAnimator> animatorDelegate;
     private DrawingDelegate<S> drawingDelegate;

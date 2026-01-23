@@ -21,19 +21,19 @@ import p507d0.p592z.p594d.Lambda;
 import p658rx.Observable;
 import p658rx.Subscription;
 
-/* compiled from: WidgetChatListAdapterItemSticker.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetChatListAdapterItemSticker.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetChatListAdapterItemSticker extends WidgetChatListItem {
     private final WidgetChatListAdapterItemStickerBinding binding;
 
-    /* compiled from: WidgetChatListAdapterItemSticker.kt */
-    /* renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemSticker$onConfigure$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemSticker$onConfigure$1 */
+    /* JADX INFO: compiled from: WidgetChatListAdapterItemSticker.kt */
     public static final class C81271 extends Lambda implements Function1<Sticker, Unit> {
         public final /* synthetic */ ChatListEntry $data;
         public final /* synthetic */ StickerEntry $stickerEntry;
 
-        /* compiled from: WidgetChatListAdapterItemSticker.kt */
-        /* renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemSticker$onConfigure$1$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemSticker$onConfigure$1$1, reason: invalid class name */
+        /* JADX INFO: compiled from: WidgetChatListAdapterItemSticker.kt */
         public static final class AnonymousClass1 implements View.OnClickListener {
             public final /* synthetic */ BaseSticker $sticker;
 
@@ -60,11 +60,9 @@ public final class WidgetChatListAdapterItemSticker extends WidgetChatListItem {
             return Unit.f27425a;
         }
 
-        /* JADX WARN: Multi-variable type inference failed */
-        /* JADX WARN: Type inference failed for: r4v3, types: [com.discord.api.sticker.BaseSticker] */
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Sticker sticker) {
-            Sticker sticker2 = sticker;
+            BaseSticker sticker2 = sticker;
             if (sticker == null) {
                 sticker2 = this.$stickerEntry.getSticker();
             }

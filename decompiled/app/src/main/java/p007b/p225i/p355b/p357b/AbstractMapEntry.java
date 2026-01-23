@@ -4,9 +4,9 @@ import java.util.Map;
 import org.checkerframework.checker.nullness.compatqual.NullableDecl;
 import p007b.p225i.p226a.p288f.p299e.p308o.C3404f;
 
-/* compiled from: AbstractMapEntry.java */
-/* renamed from: b.i.b.b.f, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.b.b.f, reason: use source file name */
+/* JADX INFO: compiled from: AbstractMapEntry.java */
+/* JADX INFO: loaded from: classes3.dex */
 public abstract class AbstractMapEntry<K, V> implements Map.Entry<K, V> {
     @Override // java.util.Map.Entry
     public boolean equals(@NullableDecl Object obj) {

@@ -18,22 +18,22 @@ import com.google.android.material.C10817R;
 import com.google.android.material.shape.MaterialShapeDrawable;
 import com.google.android.material.shape.RelativeCornerSize;
 
-/* compiled from: RadialViewGroup.java */
-/* renamed from: b.i.a.g.k.e, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.g.k.e, reason: use source file name */
+/* JADX INFO: compiled from: RadialViewGroup.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class RadialViewGroup extends ConstraintLayout {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final Runnable f11861j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public int f11862k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public MaterialShapeDrawable f11863l;
 
-    /* compiled from: RadialViewGroup.java */
-    /* renamed from: b.i.a.g.k.e$a */
+    /* JADX INFO: renamed from: b.i.a.g.k.e$a */
+    /* JADX INFO: compiled from: RadialViewGroup.java */
     public class a implements Runnable {
         public a() {
         }
@@ -48,7 +48,7 @@ public class RadialViewGroup extends ConstraintLayout {
         this(context, attributeSet, 0);
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public void m6170a() {
         int childCount = getChildCount();
         int i = 1;

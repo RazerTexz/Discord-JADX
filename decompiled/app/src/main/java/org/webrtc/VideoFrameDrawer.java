@@ -9,7 +9,7 @@ import org.webrtc.RendererCommon;
 import org.webrtc.VideoFrame;
 import p007b.p100d.p104b.p105a.outline;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public class VideoFrameDrawer {
     public static final String TAG = "VideoFrameDrawer";
     public static final float[] srcPoints = {0.0f, 0.0f, 1.0f, 0.0f, 0.0f, 1.0f};
@@ -23,7 +23,7 @@ public class VideoFrameDrawer {
     private final YuvUploader yuvUploader = new YuvUploader(null);
     private final Matrix renderMatrix = new Matrix();
 
-    /* renamed from: org.webrtc.VideoFrameDrawer$1 */
+    /* JADX INFO: renamed from: org.webrtc.VideoFrameDrawer$1 */
     public static /* synthetic */ class C129961 {
         public static final /* synthetic */ int[] $SwitchMap$org$webrtc$VideoFrame$TextureBuffer$Type;
 

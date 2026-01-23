@@ -30,7 +30,6 @@ import com.discord.widgets.user.email.WidgetUserEmailVerify;
 import com.discord.widgets.user.phone.WidgetUserPhoneManage;
 import com.facebook.drawee.view.SimpleDraweeView;
 import com.google.gson.Gson;
-import com.google.gson.JsonSyntaxException;
 import java.util.Objects;
 import kotlin.Lazy;
 import kotlin.NoWhenBranchMatchedException;
@@ -51,25 +50,25 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 import p507d0.p592z.p594d.Reflection2;
 
-/* compiled from: WidgetMemberVerification.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetMemberVerification.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetMemberVerification extends AppFragment {
     public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetMemberVerification.class, "binding", "getBinding()Lcom/discord/databinding/WidgetMemberVerificationBinding;", 0)};
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private static final String INTENT_EXTRA_GUILD_ID = "INTENT_EXTRA_GUILD_ID";
     private static final String INTENT_EXTRA_INVITE_GUILD = "INTENT_EXTRA_INVITE_GUILD";
     private static final String INTENT_EXTRA_LOCATION = "INTENT_EXTRA_LOCATION";
 
-    /* renamed from: binding$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
     private MemberVerificationRulesAdapter rulesAdapter;
 
-    /* renamed from: viewModel$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: viewModel$delegate, reason: from kotlin metadata */
     private final Lazy viewModel;
 
-    /* compiled from: WidgetMemberVerification.kt */
+    /* JADX INFO: compiled from: WidgetMemberVerification.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -116,8 +115,8 @@ public final class WidgetMemberVerification extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetMemberVerification.kt */
-    /* renamed from: com.discord.widgets.servers.member_verification.WidgetMemberVerification$configureLoadedUI$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.member_verification.WidgetMemberVerification$configureLoadedUI$1 */
+    /* JADX INFO: compiled from: WidgetMemberVerification.kt */
     public static final class ViewOnClickListenerC95581 implements View.OnClickListener {
         public ViewOnClickListenerC95581() {
         }
@@ -128,8 +127,8 @@ public final class WidgetMemberVerification extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetMemberVerification.kt */
-    /* renamed from: com.discord.widgets.servers.member_verification.WidgetMemberVerification$configureVerificationBanner$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.member_verification.WidgetMemberVerification$configureVerificationBanner$1 */
+    /* JADX INFO: compiled from: WidgetMemberVerification.kt */
     public static final class C95591 extends Lambda implements Function0<Unit> {
         public C95591() {
             super(0);
@@ -141,14 +140,14 @@ public final class WidgetMemberVerification extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             WidgetUserEmailVerify.INSTANCE.launch(WidgetMemberVerification.this.requireContext(), WidgetUserAccountVerifyBase.Mode.UNFORCED);
         }
     }
 
-    /* compiled from: WidgetMemberVerification.kt */
-    /* renamed from: com.discord.widgets.servers.member_verification.WidgetMemberVerification$configureVerificationBanner$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.member_verification.WidgetMemberVerification$configureVerificationBanner$2 */
+    /* JADX INFO: compiled from: WidgetMemberVerification.kt */
     public static final class C95602 extends Lambda implements Function0<Unit> {
         public C95602() {
             super(0);
@@ -160,14 +159,14 @@ public final class WidgetMemberVerification extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2() {
             WidgetUserPhoneManage.INSTANCE.launch(WidgetMemberVerification.this.requireContext(), WidgetUserAccountVerifyBase.Mode.UNFORCED, WidgetUserPhoneManage.Companion.Source.GUILD_PHONE_REQUIRED);
         }
     }
 
-    /* compiled from: WidgetMemberVerification.kt */
-    /* renamed from: com.discord.widgets.servers.member_verification.WidgetMemberVerification$onViewBound$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.member_verification.WidgetMemberVerification$onViewBound$1 */
+    /* JADX INFO: compiled from: WidgetMemberVerification.kt */
     public static final class C95611 extends Lambda implements Function1<Boolean, Unit> {
         public C95611() {
             super(1);
@@ -184,8 +183,8 @@ public final class WidgetMemberVerification extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetMemberVerification.kt */
-    /* renamed from: com.discord.widgets.servers.member_verification.WidgetMemberVerification$onViewBound$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.member_verification.WidgetMemberVerification$onViewBound$2 */
+    /* JADX INFO: compiled from: WidgetMemberVerification.kt */
     public static final class C95622 extends Lambda implements Function2<Integer, Object, Unit> {
         public C95622() {
             super(2);
@@ -203,8 +202,8 @@ public final class WidgetMemberVerification extends AppFragment {
         }
     }
 
-    /* compiled from: WidgetMemberVerification.kt */
-    /* renamed from: com.discord.widgets.servers.member_verification.WidgetMemberVerification$onViewBoundOrOnResume$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.member_verification.WidgetMemberVerification$onViewBoundOrOnResume$1 */
+    /* JADX INFO: compiled from: WidgetMemberVerification.kt */
     public static final /* synthetic */ class C95631 extends FunctionReferenceImpl implements Function1<WidgetMemberVerificationViewModel.ViewState, Unit> {
         public C95631(WidgetMemberVerification widgetMemberVerification) {
             super(1, widgetMemberVerification, WidgetMemberVerification.class, "configureUI", "configureUI(Lcom/discord/widgets/servers/member_verification/WidgetMemberVerificationViewModel$ViewState;)V", 0);
@@ -216,15 +215,15 @@ public final class WidgetMemberVerification extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(WidgetMemberVerificationViewModel.ViewState viewState) {
             Intrinsics3.checkNotNullParameter(viewState, "p1");
             WidgetMemberVerification.access$configureUI((WidgetMemberVerification) this.receiver, viewState);
         }
     }
 
-    /* compiled from: WidgetMemberVerification.kt */
-    /* renamed from: com.discord.widgets.servers.member_verification.WidgetMemberVerification$onViewBoundOrOnResume$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.member_verification.WidgetMemberVerification$onViewBoundOrOnResume$2 */
+    /* JADX INFO: compiled from: WidgetMemberVerification.kt */
     public static final class C95642 extends Lambda implements Function1<WidgetMemberVerificationViewModel.Event, Unit> {
         public C95642() {
             super(1);
@@ -236,7 +235,7 @@ public final class WidgetMemberVerification extends AppFragment {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(WidgetMemberVerificationViewModel.Event event) {
             Intrinsics3.checkNotNullParameter(event, "event");
             if (!(event instanceof WidgetMemberVerificationViewModel.Event.Success)) {
@@ -371,7 +370,7 @@ public final class WidgetMemberVerification extends AppFragment {
     }
 
     /* JADX WARN: Multi-variable type inference failed */
-    private final Guild parseInviteGuild() throws JsonSyntaxException {
+    private final Guild parseInviteGuild() {
         String stringExtra = getMostRecentIntent().getStringExtra(INTENT_EXTRA_INVITE_GUILD);
         if (stringExtra == 0) {
             return (Guild) stringExtra;

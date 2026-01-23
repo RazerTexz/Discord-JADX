@@ -21,8 +21,8 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.MutablePropertyReference1Impl;
 import p507d0.p592z.p594d.Reflection2;
 
-/* compiled from: AnalyticSuperProperties.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: AnalyticSuperProperties.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class AnalyticSuperProperties {
     public static final /* synthetic */ KProperty[] $$delegatedProperties = {Reflection2.mutableProperty1(new MutablePropertyReference1Impl(AnalyticSuperProperties.class, "superProperties", "getSuperProperties()Ljava/util/Map;", 0))};
     public static final AnalyticSuperProperties INSTANCE;
@@ -52,7 +52,7 @@ public final class AnalyticSuperProperties {
     private static final String PROPERTY_UTM_SOURCE = "utm_source";
     private static final String PROPERTY_UTM_TERM = "utm_term";
 
-    /* renamed from: superProperties$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: superProperties$delegate, reason: from kotlin metadata */
     private static final Interfaces superProperties;
     private static String superPropertiesString;
     private static String superPropertiesStringBase64;

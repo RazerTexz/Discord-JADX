@@ -27,7 +27,7 @@ import org.eclipse.jdt.internal.compiler.ast.StringLiteral;
 import org.eclipse.jdt.internal.compiler.ast.TypeDeclaration;
 import org.eclipse.jdt.internal.compiler.lookup.TypeConstants;
 
-/* loaded from: discord-126021.apk:lombok/eclipse/handlers/HandleFieldNameConstants.SCL.lombok */
+/* JADX INFO: loaded from: discord-126021.apk:lombok/eclipse/handlers/HandleFieldNameConstants.SCL.lombok */
 public class HandleFieldNameConstants extends EclipseAnnotationHandler<FieldNameConstants> {
     private static final IdentifierName FIELDS = IdentifierName.valueOf("Fields");
 
@@ -160,7 +160,7 @@ public class HandleFieldNameConstants extends EclipseAnnotationHandler<FieldName
             if (EclipseHandlerUtil.fieldExists(new String(fName), fieldsType) == EclipseHandlerUtil.MemberExistsResult.NOT_EXISTS) {
                 int pS = source.sourceStart;
                 int pE = source.sourceEnd;
-                long p = (pS << 32) | pE;
+                long p = (((long) pS) << 32) | ((long) pE);
                 FieldDeclaration constantField = new FieldDeclaration(fName, pS, pE);
                 constantField.bits |= 8388608;
                 if (asEnum) {

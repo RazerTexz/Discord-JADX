@@ -23,28 +23,28 @@ import p507d0.p580t.CollectionsJVM;
 import p507d0.p580t._Collections;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: MarkdownRules.kt */
-/* renamed from: b.a.t.c.a, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: b.a.t.c.a, reason: use source file name */
+/* JADX INFO: compiled from: MarkdownRules.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class MarkdownRules {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final Pattern f1992a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static final Pattern f1993b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public static final Pattern f1994c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public static final Pattern f1995d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public static final MarkdownRules f1996e = new MarkdownRules();
 
-    /* compiled from: MarkdownRules.kt */
-    /* renamed from: b.a.t.c.a$c */
+    /* JADX INFO: renamed from: b.a.t.c.a$c */
+    /* JADX INFO: compiled from: MarkdownRules.kt */
     public static class c<R, S> extends Rule.BlockRule<R, Node<R>, S> {
         private final Function1<Integer, CharacterStyle> styleSpanProvider;
 
@@ -100,8 +100,8 @@ public final class MarkdownRules {
         f1995d = new Regex("^\\s*(?:(?:(.+)(?: +\\{([\\w ]*)\\}))|(.*))[ \\t]*\\n *([=\\-]){3,}[ \\t]*(?=\\n|$)").getNativePattern();
     }
 
-    /* compiled from: MarkdownRules.kt */
-    /* renamed from: b.a.t.c.a$a */
+    /* JADX INFO: renamed from: b.a.t.c.a$a */
+    /* JADX INFO: compiled from: MarkdownRules.kt */
     public static class a<RC, T, S> extends b<RC, S> {
         private final Function1<String, T> classSpanProvider;
         private final List<Rule<RC, Node<RC>, S>> innerRules;
@@ -175,8 +175,8 @@ public final class MarkdownRules {
         }
     }
 
-    /* compiled from: MarkdownRules.kt */
-    /* renamed from: b.a.t.c.a$b */
+    /* JADX INFO: renamed from: b.a.t.c.a$b */
+    /* JADX INFO: compiled from: MarkdownRules.kt */
     public static class b<R, S> extends c<R, S> {
         /* JADX WARN: Illegal instructions before constructor call */
         public b(Pattern pattern, Function1 function1, int i, DefaultConstructorMarker defaultConstructorMarker) {

@@ -6,21 +6,21 @@ import java.util.Objects;
 import p007b.p100d.p104b.p105a.outline;
 import p007b.p225i.p226a.p228b.p231j.p240v.Clock3;
 
-/* compiled from: AutoValue_CreationContext.java */
-/* renamed from: b.i.a.b.j.q.c, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.b.j.q.c, reason: use source file name */
+/* JADX INFO: compiled from: AutoValue_CreationContext.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class AutoValue_CreationContext extends CreationContext {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final Context f5304a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final Clock3 f5305b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final Clock3 f5306c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final String f5307d;
 
     public AutoValue_CreationContext(Context context, Clock3 clock3, Clock3 clock32, String str) {
@@ -35,26 +35,26 @@ public final class AutoValue_CreationContext extends CreationContext {
     }
 
     @Override // p007b.p225i.p226a.p228b.p231j.p232q.CreationContext
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public Context mo2366a() {
         return this.f5304a;
     }
 
     @Override // p007b.p225i.p226a.p228b.p231j.p232q.CreationContext
     @NonNull
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public String mo2367b() {
         return this.f5307d;
     }
 
     @Override // p007b.p225i.p226a.p228b.p231j.p232q.CreationContext
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public Clock3 mo2368c() {
         return this.f5306c;
     }
 
     @Override // p007b.p225i.p226a.p228b.p231j.p232q.CreationContext
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public Clock3 mo2369d() {
         return this.f5305b;
     }

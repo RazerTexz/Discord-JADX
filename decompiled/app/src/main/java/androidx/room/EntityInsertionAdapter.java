@@ -7,8 +7,8 @@ import java.util.Collection;
 import java.util.Iterator;
 import java.util.List;
 
+/* JADX INFO: loaded from: classes.dex */
 @RestrictTo({RestrictTo.Scope.LIBRARY_GROUP_PREFIX})
-/* loaded from: classes.dex */
 public abstract class EntityInsertionAdapter<T> extends SharedSQLiteStatement {
     public EntityInsertionAdapter(RoomDatabase roomDatabase) {
         super(roomDatabase);

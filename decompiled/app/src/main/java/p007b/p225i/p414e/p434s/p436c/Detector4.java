@@ -6,29 +6,29 @@ import p007b.p225i.p414e.ResultPoint;
 import p007b.p225i.p414e.ResultPointCallback;
 import p007b.p225i.p414e.p418n.BitMatrix;
 
-/* compiled from: Detector.java */
-/* renamed from: b.i.e.s.c.c, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.e.s.c.c, reason: use source file name */
+/* JADX INFO: compiled from: Detector.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class Detector4 {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final BitMatrix f13568a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public ResultPointCallback f13569b;
 
     public Detector4(BitMatrix bitMatrix) {
         this.f13568a = bitMatrix;
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final float m7109a(ResultPoint resultPoint, ResultPoint resultPoint2) {
         float fM7112d = m7112d((int) resultPoint.f13207a, (int) resultPoint.f13208b, (int) resultPoint2.f13207a, (int) resultPoint2.f13208b);
         float fM7112d2 = m7112d((int) resultPoint2.f13207a, (int) resultPoint2.f13208b, (int) resultPoint.f13207a, (int) resultPoint.f13208b);
         return Float.isNaN(fM7112d) ? fM7112d2 / 7.0f : Float.isNaN(fM7112d2) ? fM7112d / 7.0f : (fM7112d + fM7112d2) / 14.0f;
     }
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final AlignmentPattern m7110b(float f, int i, int i2, float f2) throws NotFoundException {
         AlignmentPattern alignmentPatternM7108c;
         AlignmentPattern alignmentPatternM7108c2;
@@ -104,7 +104,7 @@ public class Detector4 {
     
         return Float.NaN;
      */
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
@@ -178,7 +178,7 @@ public class Detector4 {
         }
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final float m7112d(int i, int i2, int i3, int i4) {
         float f;
         float f2;

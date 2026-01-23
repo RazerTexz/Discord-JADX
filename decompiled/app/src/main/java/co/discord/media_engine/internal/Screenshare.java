@@ -2,8 +2,8 @@ package co.discord.media_engine.internal;
 
 import p007b.p100d.p104b.p105a.outline;
 
-/* compiled from: NativeStatistics.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: NativeStatistics.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class Screenshare {
     private final int capturedFramesCount;
     private final int capturedFramesDropped;
@@ -33,22 +33,22 @@ public final /* data */ class Screenshare {
         return screenshare.copy(i, i2, i3, i4);
     }
 
-    /* renamed from: component1, reason: from getter */
+    /* JADX INFO: renamed from: component1, reason: from getter */
     public final int getCapturedFramesDropped() {
         return this.capturedFramesDropped;
     }
 
-    /* renamed from: component2, reason: from getter */
+    /* JADX INFO: renamed from: component2, reason: from getter */
     public final int getCapturedFramesCount() {
         return this.capturedFramesCount;
     }
 
-    /* renamed from: component3, reason: from getter */
+    /* JADX INFO: renamed from: component3, reason: from getter */
     public final int getCapturedFramesMean() {
         return this.capturedFramesMean;
     }
 
-    /* renamed from: component4, reason: from getter */
+    /* JADX INFO: renamed from: component4, reason: from getter */
     public final int getCapturedFramesStdev() {
         return this.capturedFramesStdev;
     }

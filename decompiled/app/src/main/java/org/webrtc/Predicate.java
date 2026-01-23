@@ -1,27 +1,27 @@
 package org.webrtc;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public interface Predicate<T> {
 
-    /* renamed from: org.webrtc.Predicate$-CC, reason: invalid class name */
+    /* JADX INFO: renamed from: org.webrtc.Predicate$-CC, reason: invalid class name */
     public final /* synthetic */ class CC {
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public static Predicate m11035a(Predicate _this, Predicate predicate) {
             return new C129812(predicate);
         }
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public static Predicate m11036b(Predicate _this) {
             return new C129823();
         }
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public static Predicate m11037c(Predicate _this, Predicate predicate) {
             return new C129801(predicate);
         }
     }
 
-    /* renamed from: org.webrtc.Predicate$1 */
+    /* JADX INFO: renamed from: org.webrtc.Predicate$1 */
     public class C129801 implements Predicate<T> {
         public final /* synthetic */ Predicate val$other;
 
@@ -40,7 +40,7 @@ public interface Predicate<T> {
         }
 
         @Override // org.webrtc.Predicate
-        /* renamed from: or */
+        /* JADX INFO: renamed from: or */
         public /* synthetic */ Predicate mo11025or(Predicate predicate) {
             return CC.m11037c(this, predicate);
         }
@@ -51,7 +51,7 @@ public interface Predicate<T> {
         }
     }
 
-    /* renamed from: org.webrtc.Predicate$2 */
+    /* JADX INFO: renamed from: org.webrtc.Predicate$2 */
     public class C129812 implements Predicate<T> {
         public final /* synthetic */ Predicate val$other;
 
@@ -70,7 +70,7 @@ public interface Predicate<T> {
         }
 
         @Override // org.webrtc.Predicate
-        /* renamed from: or */
+        /* JADX INFO: renamed from: or */
         public /* synthetic */ Predicate mo11025or(Predicate predicate) {
             return CC.m11037c(this, predicate);
         }
@@ -81,7 +81,7 @@ public interface Predicate<T> {
         }
     }
 
-    /* renamed from: org.webrtc.Predicate$3 */
+    /* JADX INFO: renamed from: org.webrtc.Predicate$3 */
     public class C129823 implements Predicate<T> {
         public C129823() {
         }
@@ -97,7 +97,7 @@ public interface Predicate<T> {
         }
 
         @Override // org.webrtc.Predicate
-        /* renamed from: or */
+        /* JADX INFO: renamed from: or */
         public /* synthetic */ Predicate mo11025or(Predicate predicate) {
             return CC.m11037c(this, predicate);
         }
@@ -112,7 +112,7 @@ public interface Predicate<T> {
 
     Predicate<T> negate();
 
-    /* renamed from: or */
+    /* JADX INFO: renamed from: or */
     Predicate<T> mo11025or(Predicate<? super T> predicate);
 
     boolean test(T t);

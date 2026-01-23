@@ -18,7 +18,7 @@ import androidx.transition.Transition;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public abstract class Visibility extends Transition {
     public static final int MODE_IN = 1;
     public static final int MODE_OUT = 2;
@@ -28,7 +28,7 @@ public abstract class Visibility extends Transition {
     private static final String PROPNAME_PARENT = "android:visibility:parent";
     private static final String[] sTransitionProperties = {PROPNAME_VISIBILITY, PROPNAME_PARENT};
 
-    /* renamed from: androidx.transition.Visibility$1 */
+    /* JADX INFO: renamed from: androidx.transition.Visibility$1 */
     public class C06731 extends TransitionListenerAdapter {
         public final /* synthetic */ View val$finalOverlayView;
         public final /* synthetic */ ViewGroup val$overlayHost;
@@ -78,7 +78,7 @@ public abstract class Visibility extends Transition {
             suppressLayout(true);
         }
 
-        private void hideViewWhenNotCanceled() throws IllegalArgumentException {
+        private void hideViewWhenNotCanceled() {
             if (!this.mCanceled) {
                 ViewUtils.setTransitionVisibility(this.mView, this.mFinalVisibility);
                 ViewGroup viewGroup = this.mParent;
@@ -104,12 +104,12 @@ public abstract class Visibility extends Transition {
         }
 
         @Override // android.animation.AnimatorListenerAdapter, android.animation.Animator.AnimatorListener
-        public void onAnimationEnd(Animator animator) throws IllegalArgumentException {
+        public void onAnimationEnd(Animator animator) {
             hideViewWhenNotCanceled();
         }
 
         @Override // android.animation.AnimatorListenerAdapter, android.animation.Animator.AnimatorPauseListener, androidx.transition.AnimatorUtils.AnimatorPauseListenerCompat
-        public void onAnimationPause(Animator animator) throws IllegalArgumentException {
+        public void onAnimationPause(Animator animator) {
             if (this.mCanceled) {
                 return;
             }
@@ -121,7 +121,7 @@ public abstract class Visibility extends Transition {
         }
 
         @Override // android.animation.AnimatorListenerAdapter, android.animation.Animator.AnimatorPauseListener, androidx.transition.AnimatorUtils.AnimatorPauseListenerCompat
-        public void onAnimationResume(Animator animator) throws IllegalArgumentException {
+        public void onAnimationResume(Animator animator) {
             if (this.mCanceled) {
                 return;
             }
@@ -137,7 +137,7 @@ public abstract class Visibility extends Transition {
         }
 
         @Override // androidx.transition.Transition.TransitionListener
-        public void onTransitionEnd(@NonNull Transition transition) throws IllegalArgumentException {
+        public void onTransitionEnd(@NonNull Transition transition) {
             hideViewWhenNotCanceled();
             transition.removeListener(this);
         }
@@ -324,7 +324,7 @@ public abstract class Visibility extends Transition {
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
-    public Animator onDisappear(ViewGroup viewGroup, TransitionValues transitionValues, int i, TransitionValues transitionValues2, int i2) throws IllegalArgumentException {
+    public Animator onDisappear(ViewGroup viewGroup, TransitionValues transitionValues, int i, TransitionValues transitionValues2, int i2) {
         View view;
         boolean z2;
         boolean z3;

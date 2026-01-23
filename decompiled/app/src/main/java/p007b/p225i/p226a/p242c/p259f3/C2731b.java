@@ -6,12 +6,12 @@ import java.util.Iterator;
 import p007b.p225i.p226a.p242c.p259f3.FlagSet;
 import p007b.p225i.p226a.p242c.p259f3.ListenerSet;
 
-/* compiled from: lambda */
-/* renamed from: b.i.a.c.f3.b */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.a.c.f3.b */
+/* JADX INFO: compiled from: lambda */
+/* JADX INFO: loaded from: classes3.dex */
 public final /* synthetic */ class C2731b implements Handler.Callback {
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final /* synthetic */ ListenerSet f6689j;
 
     public /* synthetic */ C2731b(ListenerSet listenerSet) {

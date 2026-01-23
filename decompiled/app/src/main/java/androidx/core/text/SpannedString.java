@@ -4,9 +4,9 @@ import android.text.Spanned;
 import androidx.exifinterface.media.ExifInterface;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: SpannedString.kt */
-/* renamed from: androidx.core.text.SpannedStringKt, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: androidx.core.text.SpannedStringKt, reason: use source file name */
+/* JADX INFO: compiled from: SpannedString.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class SpannedString {
     public static final /* synthetic */ <T> T[] getSpans(Spanned spanned, int i, int i2) {
         Intrinsics3.checkNotNullParameter(spanned, "<this>");

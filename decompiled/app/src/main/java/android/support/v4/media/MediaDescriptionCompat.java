@@ -13,39 +13,39 @@ import androidx.annotation.DoNotInline;
 import androidx.annotation.Nullable;
 import androidx.annotation.RequiresApi;
 
+/* JADX INFO: loaded from: classes.dex */
 @SuppressLint({"BanParcelableUsage"})
-/* loaded from: classes.dex */
 public final class MediaDescriptionCompat implements Parcelable {
     public static final Parcelable.Creator<MediaDescriptionCompat> CREATOR = new C0015a();
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final String f27j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final CharSequence f28k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final CharSequence f29l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public final CharSequence f30m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public final Bitmap f31n;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public final Uri f32o;
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public final Bundle f33p;
 
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     public final Uri f34q;
 
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     public MediaDescription f35r;
 
-    /* renamed from: android.support.v4.media.MediaDescriptionCompat$a */
+    /* JADX INFO: renamed from: android.support.v4.media.MediaDescriptionCompat$a */
     public class C0015a implements Parcelable.Creator<MediaDescriptionCompat> {
         @Override // android.os.Parcelable.Creator
         public MediaDescriptionCompat createFromParcel(Parcel parcel) {
@@ -58,125 +58,125 @@ public final class MediaDescriptionCompat implements Parcelable {
         }
     }
 
+    /* JADX INFO: renamed from: android.support.v4.media.MediaDescriptionCompat$b */
     @RequiresApi(21)
-    /* renamed from: android.support.v4.media.MediaDescriptionCompat$b */
     public static class C0016b {
         @DoNotInline
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public static MediaDescription m15a(MediaDescription.Builder builder) {
             return builder.build();
         }
 
         @DoNotInline
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public static MediaDescription.Builder m16b() {
             return new MediaDescription.Builder();
         }
 
         @Nullable
         @DoNotInline
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public static CharSequence m17c(MediaDescription mediaDescription) {
             return mediaDescription.getDescription();
         }
 
         @Nullable
         @DoNotInline
-        /* renamed from: d */
+        /* JADX INFO: renamed from: d */
         public static Bundle m18d(MediaDescription mediaDescription) {
             return mediaDescription.getExtras();
         }
 
         @Nullable
         @DoNotInline
-        /* renamed from: e */
+        /* JADX INFO: renamed from: e */
         public static Bitmap m19e(MediaDescription mediaDescription) {
             return mediaDescription.getIconBitmap();
         }
 
         @Nullable
         @DoNotInline
-        /* renamed from: f */
+        /* JADX INFO: renamed from: f */
         public static Uri m20f(MediaDescription mediaDescription) {
             return mediaDescription.getIconUri();
         }
 
         @Nullable
         @DoNotInline
-        /* renamed from: g */
+        /* JADX INFO: renamed from: g */
         public static String m21g(MediaDescription mediaDescription) {
             return mediaDescription.getMediaId();
         }
 
         @Nullable
         @DoNotInline
-        /* renamed from: h */
+        /* JADX INFO: renamed from: h */
         public static CharSequence m22h(MediaDescription mediaDescription) {
             return mediaDescription.getSubtitle();
         }
 
         @Nullable
         @DoNotInline
-        /* renamed from: i */
+        /* JADX INFO: renamed from: i */
         public static CharSequence m23i(MediaDescription mediaDescription) {
             return mediaDescription.getTitle();
         }
 
         @DoNotInline
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public static void m24j(MediaDescription.Builder builder, @Nullable CharSequence charSequence) {
             builder.setDescription(charSequence);
         }
 
         @DoNotInline
-        /* renamed from: k */
+        /* JADX INFO: renamed from: k */
         public static void m25k(MediaDescription.Builder builder, @Nullable Bundle bundle) {
             builder.setExtras(bundle);
         }
 
         @DoNotInline
-        /* renamed from: l */
+        /* JADX INFO: renamed from: l */
         public static void m26l(MediaDescription.Builder builder, @Nullable Bitmap bitmap) {
             builder.setIconBitmap(bitmap);
         }
 
         @DoNotInline
-        /* renamed from: m */
+        /* JADX INFO: renamed from: m */
         public static void m27m(MediaDescription.Builder builder, @Nullable Uri uri) {
             builder.setIconUri(uri);
         }
 
         @DoNotInline
-        /* renamed from: n */
+        /* JADX INFO: renamed from: n */
         public static void m28n(MediaDescription.Builder builder, @Nullable String str) {
             builder.setMediaId(str);
         }
 
         @DoNotInline
-        /* renamed from: o */
+        /* JADX INFO: renamed from: o */
         public static void m29o(MediaDescription.Builder builder, @Nullable CharSequence charSequence) {
             builder.setSubtitle(charSequence);
         }
 
         @DoNotInline
-        /* renamed from: p */
+        /* JADX INFO: renamed from: p */
         public static void m30p(MediaDescription.Builder builder, @Nullable CharSequence charSequence) {
             builder.setTitle(charSequence);
         }
     }
 
+    /* JADX INFO: renamed from: android.support.v4.media.MediaDescriptionCompat$c */
     @RequiresApi(23)
-    /* renamed from: android.support.v4.media.MediaDescriptionCompat$c */
     public static class C0017c {
         @Nullable
         @DoNotInline
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public static Uri m31a(MediaDescription mediaDescription) {
             return mediaDescription.getMediaUri();
         }
 
         @DoNotInline
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public static void m32b(MediaDescription.Builder builder, @Nullable Uri uri) {
             builder.setMediaUri(uri);
         }
@@ -193,7 +193,7 @@ public final class MediaDescriptionCompat implements Parcelable {
         this.f34q = uri2;
     }
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static MediaDescriptionCompat m14a(Object obj) {
         Bundle bundle;
         if (obj == null) {

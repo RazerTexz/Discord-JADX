@@ -6,8 +6,8 @@ import com.discord.api.science.AnalyticsSchema;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: TrackTipaltiIpnReceived.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: TrackTipaltiIpnReceived.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final /* data */ class TrackTipaltiIpnReceived implements AnalyticsSchema, TrackBase2 {
     private TrackBase trackBase;
     private final CharSequence key = null;
@@ -25,7 +25,7 @@ public final /* data */ class TrackTipaltiIpnReceived implements AnalyticsSchema
     private final transient String analyticsSchemaTypeName = "tipalti_ipn_received";
 
     @Override // com.discord.api.science.AnalyticsSchema
-    /* renamed from: d, reason: from getter */
+    /* JADX INFO: renamed from: d, reason: from getter */
     public String getAnalyticsSchemaTypeName() {
         return this.analyticsSchemaTypeName;
     }

@@ -7,8 +7,8 @@ import kotlin.jvm.functions.Function1;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: RouteHandlers.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: RouteHandlers.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class RouteHandlers$selectFeature$settingMap$10 extends Lambda implements Function1<FragmentActivity, Unit> {
     public static final RouteHandlers$selectFeature$settingMap$10 INSTANCE = new RouteHandlers$selectFeature$settingMap$10();
 
@@ -22,7 +22,7 @@ public final class RouteHandlers$selectFeature$settingMap$10 extends Lambda impl
         return Unit.f27425a;
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final void invoke2(FragmentActivity fragmentActivity) {
         Intrinsics3.checkNotNullParameter(fragmentActivity, "ctx");
         WidgetFriendsAdd.Companion.show$default(WidgetFriendsAdd.INSTANCE, fragmentActivity, null, "Deep Link", 2, null);

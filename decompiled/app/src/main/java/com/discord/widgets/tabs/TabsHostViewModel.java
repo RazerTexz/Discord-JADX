@@ -31,12 +31,12 @@ import p507d0.p592z.p594d.Lambda;
 import p658rx.Observable;
 import p658rx.subjects.PublishSubject;
 
-/* compiled from: TabsHostViewModel.kt */
-/* loaded from: classes.dex */
+/* JADX INFO: compiled from: TabsHostViewModel.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class TabsHostViewModel extends AppViewModel<ViewState> {
     private static final Set<NavigationTab> AT_LEAST_ONE_GUILD_TABS;
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private static final List<NavigationTab> NON_HOME_TAB_DESTINATIONS;
     private static final Set<NavigationTab> NO_GUILD_TABS;
@@ -46,8 +46,8 @@ public final class TabsHostViewModel extends AppViewModel<ViewState> {
     private StoreState storeState;
     private final StoreTabsNavigation storeTabsNavigation;
 
-    /* compiled from: TabsHostViewModel.kt */
-    /* renamed from: com.discord.widgets.tabs.TabsHostViewModel$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.tabs.TabsHostViewModel$1 */
+    /* JADX INFO: compiled from: TabsHostViewModel.kt */
     public static final class C101541 extends Lambda implements Function1<StoreState, Unit> {
         public C101541() {
             super(1);
@@ -59,15 +59,15 @@ public final class TabsHostViewModel extends AppViewModel<ViewState> {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(StoreState storeState) {
             Intrinsics3.checkNotNullParameter(storeState, "storeState");
             TabsHostViewModel.access$handleStoreState(TabsHostViewModel.this, storeState);
         }
     }
 
-    /* compiled from: TabsHostViewModel.kt */
-    /* renamed from: com.discord.widgets.tabs.TabsHostViewModel$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.tabs.TabsHostViewModel$2 */
+    /* JADX INFO: compiled from: TabsHostViewModel.kt */
     public static final class C101552 extends Lambda implements Function1<Integer, Unit> {
         public C101552() {
             super(1);
@@ -84,8 +84,8 @@ public final class TabsHostViewModel extends AppViewModel<ViewState> {
         }
     }
 
-    /* compiled from: TabsHostViewModel.kt */
-    /* renamed from: com.discord.widgets.tabs.TabsHostViewModel$3 */
+    /* JADX INFO: renamed from: com.discord.widgets.tabs.TabsHostViewModel$3 */
+    /* JADX INFO: compiled from: TabsHostViewModel.kt */
     public static final class C101563 extends Lambda implements Function1<Unit, Unit> {
         public C101563() {
             super(1);
@@ -97,14 +97,14 @@ public final class TabsHostViewModel extends AppViewModel<ViewState> {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Unit unit) {
             Intrinsics3.checkNotNullParameter(unit, "it");
             TabsHostViewModel.access$dismissSearchDialog(TabsHostViewModel.this);
         }
     }
 
-    /* compiled from: TabsHostViewModel.kt */
+    /* JADX INFO: compiled from: TabsHostViewModel.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -140,10 +140,10 @@ public final class TabsHostViewModel extends AppViewModel<ViewState> {
         }
     }
 
-    /* compiled from: TabsHostViewModel.kt */
+    /* JADX INFO: compiled from: TabsHostViewModel.kt */
     public static abstract class Event {
 
-        /* compiled from: TabsHostViewModel.kt */
+        /* JADX INFO: compiled from: TabsHostViewModel.kt */
         public static final class DismissSearchDialog extends Event {
             public static final DismissSearchDialog INSTANCE = new DismissSearchDialog();
 
@@ -152,7 +152,7 @@ public final class TabsHostViewModel extends AppViewModel<ViewState> {
             }
         }
 
-        /* compiled from: TabsHostViewModel.kt */
+        /* JADX INFO: compiled from: TabsHostViewModel.kt */
         public static final class TrackFriendsListShown extends Event {
             public static final TrackFriendsListShown INSTANCE = new TrackFriendsListShown();
 
@@ -169,7 +169,7 @@ public final class TabsHostViewModel extends AppViewModel<ViewState> {
         }
     }
 
-    /* compiled from: TabsHostViewModel.kt */
+    /* JADX INFO: compiled from: TabsHostViewModel.kt */
     public static final /* data */ class StoreState {
         private final Map<Long, Guild> guildIdToGuildMap;
         private final PanelState leftPanelState;
@@ -191,6 +191,7 @@ public final class TabsHostViewModel extends AppViewModel<ViewState> {
             this.userRelationships = map2;
         }
 
+        /* JADX WARN: Multi-variable type inference failed */
         public static /* synthetic */ StoreState copy$default(StoreState storeState, PanelState panelState, NavigationTab navigationTab, long j, Map map, int i, Map map2, int i2, Object obj) {
             if ((i2 & 1) != 0) {
                 panelState = storeState.leftPanelState;
@@ -217,17 +218,17 @@ public final class TabsHostViewModel extends AppViewModel<ViewState> {
             return storeState.copy(panelState, navigationTab2, j2, map3, i3, map2);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final PanelState getLeftPanelState() {
             return this.leftPanelState;
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final NavigationTab getSelectedTab() {
             return this.selectedTab;
         }
 
-        /* renamed from: component3, reason: from getter */
+        /* JADX INFO: renamed from: component3, reason: from getter */
         public final long getMyUserId() {
             return this.myUserId;
         }
@@ -236,7 +237,7 @@ public final class TabsHostViewModel extends AppViewModel<ViewState> {
             return this.guildIdToGuildMap;
         }
 
-        /* renamed from: component5, reason: from getter */
+        /* JADX INFO: renamed from: component5, reason: from getter */
         public final int getNumTotalMentions() {
             return this.numTotalMentions;
         }
@@ -315,7 +316,7 @@ public final class TabsHostViewModel extends AppViewModel<ViewState> {
         }
     }
 
-    /* compiled from: TabsHostViewModel.kt */
+    /* JADX INFO: compiled from: TabsHostViewModel.kt */
     public static final /* data */ class ViewState {
         private final int bottomNavHeight;
         private final long myUserId;
@@ -338,26 +339,27 @@ public final class TabsHostViewModel extends AppViewModel<ViewState> {
             this.numFriendsNotifications = i3;
         }
 
+        /* JADX WARN: Multi-variable type inference failed */
         public static /* synthetic */ ViewState copy$default(ViewState viewState, NavigationTab navigationTab, boolean z2, int i, long j, Set set, int i2, int i3, int i4, Object obj) {
             return viewState.copy((i4 & 1) != 0 ? viewState.selectedTab : navigationTab, (i4 & 2) != 0 ? viewState.showBottomNav : z2, (i4 & 4) != 0 ? viewState.bottomNavHeight : i, (i4 & 8) != 0 ? viewState.myUserId : j, (i4 & 16) != 0 ? viewState.visibleTabs : set, (i4 & 32) != 0 ? viewState.numHomeNotifications : i2, (i4 & 64) != 0 ? viewState.numFriendsNotifications : i3);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final NavigationTab getSelectedTab() {
             return this.selectedTab;
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final boolean getShowBottomNav() {
             return this.showBottomNav;
         }
 
-        /* renamed from: component3, reason: from getter */
+        /* JADX INFO: renamed from: component3, reason: from getter */
         public final int getBottomNavHeight() {
             return this.bottomNavHeight;
         }
 
-        /* renamed from: component4, reason: from getter */
+        /* JADX INFO: renamed from: component4, reason: from getter */
         public final long getMyUserId() {
             return this.myUserId;
         }
@@ -366,12 +368,12 @@ public final class TabsHostViewModel extends AppViewModel<ViewState> {
             return this.visibleTabs;
         }
 
-        /* renamed from: component6, reason: from getter */
+        /* JADX INFO: renamed from: component6, reason: from getter */
         public final int getNumHomeNotifications() {
             return this.numHomeNotifications;
         }
 
-        /* renamed from: component7, reason: from getter */
+        /* JADX INFO: renamed from: component7, reason: from getter */
         public final int getNumFriendsNotifications() {
             return this.numFriendsNotifications;
         }
@@ -422,15 +424,18 @@ public final class TabsHostViewModel extends AppViewModel<ViewState> {
         }
 
         /* JADX WARN: Multi-variable type inference failed */
+        /* JADX WARN: Type inference failed for: r2v1, types: [int] */
+        /* JADX WARN: Type inference failed for: r2v12 */
+        /* JADX WARN: Type inference failed for: r2v13 */
         public int hashCode() {
             NavigationTab navigationTab = this.selectedTab;
             int iHashCode = (navigationTab != null ? navigationTab.hashCode() : 0) * 31;
             boolean z2 = this.showBottomNav;
-            int i = z2;
-            if (z2 != 0) {
-                i = 1;
+            ?? r2 = z2;
+            if (z2) {
+                r2 = 1;
             }
-            int iM3a = (C0002b.m3a(this.myUserId) + ((((iHashCode + i) * 31) + this.bottomNavHeight) * 31)) * 31;
+            int iM3a = (C0002b.m3a(this.myUserId) + ((((iHashCode + r2) * 31) + this.bottomNavHeight) * 31)) * 31;
             Set<NavigationTab> set = this.visibleTabs;
             return ((((iM3a + (set != null ? set.hashCode() : 0)) * 31) + this.numHomeNotifications) * 31) + this.numFriendsNotifications;
         }

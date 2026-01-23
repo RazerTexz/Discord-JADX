@@ -6,8 +6,8 @@ import p007b.p100d.p104b.p105a.outline;
 import p507d0.p580t.CollectionsJVM;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: Autocompletable.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: Autocompletable.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final /* data */ class RoleAutocompletable extends Autocompletable {
     private final boolean canMention;
     private final GuildRole role;
@@ -32,12 +32,12 @@ public final /* data */ class RoleAutocompletable extends Autocompletable {
         return roleAutocompletable.copy(guildRole, z2);
     }
 
-    /* renamed from: component1, reason: from getter */
+    /* JADX INFO: renamed from: component1, reason: from getter */
     public final GuildRole getRole() {
         return this.role;
     }
 
-    /* renamed from: component2, reason: from getter */
+    /* JADX INFO: renamed from: component2, reason: from getter */
     public final boolean getCanMention() {
         return this.canMention;
     }
@@ -86,15 +86,18 @@ public final /* data */ class RoleAutocompletable extends Autocompletable {
     }
 
     /* JADX WARN: Multi-variable type inference failed */
+    /* JADX WARN: Type inference failed for: r1v1, types: [int] */
+    /* JADX WARN: Type inference failed for: r1v2 */
+    /* JADX WARN: Type inference failed for: r1v3 */
     public int hashCode() {
         GuildRole guildRole = this.role;
         int iHashCode = (guildRole != null ? guildRole.hashCode() : 0) * 31;
         boolean z2 = this.canMention;
-        int i = z2;
-        if (z2 != 0) {
-            i = 1;
+        ?? r1 = z2;
+        if (z2) {
+            r1 = 1;
         }
-        return iHashCode + i;
+        return iHashCode + r1;
     }
 
     @Override // com.discord.widgets.chat.input.autocomplete.Autocompletable

@@ -6,9 +6,9 @@ import com.discord.utilities.mg_recycler.MGRecyclerDataPayload;
 import kotlin.jvm.internal.DefaultConstructorMarker;
 import org.objectweb.asm.Opcodes;
 
-/* compiled from: SelectedApplicationCommandAdapter.kt */
-/* renamed from: com.discord.widgets.chat.input.applicationcommands.SelectedApplicationCommandItem, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.chat.input.applicationcommands.SelectedApplicationCommandItem, reason: use source file name */
+/* JADX INFO: compiled from: SelectedApplicationCommandAdapter.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class SelectedApplicationCommandAdapter8 implements MGRecyclerDataPayload {
     public static final int TYPE_PARAM = 1;
     public static final int TYPE_SECTION_HEADING = 2;

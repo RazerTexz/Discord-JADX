@@ -11,19 +11,19 @@ import p507d0.p513e0.p514p.p515d.p517m0.p521c.PropertyDescriptor;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: KProperty0Impl.kt */
-/* renamed from: d0.e0.p.d.k, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.k, reason: use source file name */
+/* JADX INFO: compiled from: KProperty0Impl.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class KProperty0Impl<V> extends KProperty0Impl2<V> implements KProperty5<V> {
 
-    /* renamed from: w */
+    /* JADX INFO: renamed from: w */
     public final ReflectProperties.b<a<V>> f22398w;
 
-    /* compiled from: KProperty0Impl.kt */
-    /* renamed from: d0.e0.p.d.k$a */
+    /* JADX INFO: renamed from: d0.e0.p.d.k$a */
+    /* JADX INFO: compiled from: KProperty0Impl.kt */
     public static final class a<R> extends KPropertyImpl.d<R> implements KProperty5.Setter<R> {
 
-        /* renamed from: q */
+        /* JADX INFO: renamed from: q */
         public final KProperty0Impl<R> f22399q;
 
         public a(KProperty0Impl<R> kProperty0Impl) {
@@ -48,14 +48,14 @@ public final class KProperty0Impl<V> extends KProperty0Impl2<V> implements KProp
             return getProperty();
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public void invoke2(R r) throws exceptions {
             getProperty().set(r);
         }
     }
 
-    /* compiled from: KProperty0Impl.kt */
-    /* renamed from: d0.e0.p.d.k$b */
+    /* JADX INFO: renamed from: d0.e0.p.d.k$b */
+    /* JADX INFO: compiled from: KProperty0Impl.kt */
     public static final class b extends Lambda implements Function0<a<V>> {
         public b() {
             super(0);
@@ -83,7 +83,7 @@ public final class KProperty0Impl<V> extends KProperty0Impl2<V> implements KProp
     }
 
     @Override // kotlin.reflect.KProperty5
-    /* renamed from: getSetter */
+    /* JADX INFO: renamed from: getSetter */
     public /* bridge */ /* synthetic */ KProperty5.Setter mo11490getSetter() {
         return mo11490getSetter();
     }
@@ -93,7 +93,7 @@ public final class KProperty0Impl<V> extends KProperty0Impl2<V> implements KProp
     }
 
     @Override // kotlin.reflect.KProperty5
-    /* renamed from: getSetter */
+    /* JADX INFO: renamed from: getSetter */
     public a<V> mo11490getSetter() {
         a<V> aVarInvoke = this.f22398w.invoke();
         Intrinsics3.checkNotNullExpressionValue(aVarInvoke, "_setter()");

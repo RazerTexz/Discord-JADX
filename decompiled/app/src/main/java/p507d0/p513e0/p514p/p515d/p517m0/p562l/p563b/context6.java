@@ -13,36 +13,36 @@ import p507d0.p513e0.p514p.p515d.p517m0.p562l.p563b.p565e0.DeserializedContainer
 import p507d0.p513e0.p514p.p515d.p517m0.p566m.StorageManager;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: context.kt */
-/* renamed from: d0.e0.p.d.m0.l.b.l, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.l.b.l, reason: use source file name */
+/* JADX INFO: compiled from: context.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class context6 {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final context5 f24659a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final NameResolver f24660b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public final DeclarationDescriptor f24661c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final TypeTable f24662d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final VersionRequirement2 f24663e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final BinaryVersion f24664f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public final DeserializedContainerSource2 f24665g;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public final TypeDeserializer f24666h;
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public final MemberDeserializer f24667i;
 
     public context6(context5 context5Var, NameResolver nameResolver, DeclarationDescriptor declarationDescriptor, TypeTable typeTable, VersionRequirement2 versionRequirement2, BinaryVersion binaryVersion, DeserializedContainerSource2 deserializedContainerSource2, TypeDeserializer typeDeserializer, List<C11694s> list) {

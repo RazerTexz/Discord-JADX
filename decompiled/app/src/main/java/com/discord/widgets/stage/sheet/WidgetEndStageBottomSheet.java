@@ -28,25 +28,25 @@ import p507d0.Tuples;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetEndStageBottomSheet.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetEndStageBottomSheet.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetEndStageBottomSheet extends AppBottomSheet {
     public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetEndStageBottomSheet.class, "binding", "getBinding()Lcom/discord/databinding/WidgetEndStageBottomSheetBinding;", 0)};
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private static final String EXTRA_REQUEST_KEY = "INTENT_EXTRA_REQUEST_KEY";
 
-    /* renamed from: binding$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
 
-    /* renamed from: channelId$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: channelId$delegate, reason: from kotlin metadata */
     private final Lazy channelId;
 
-    /* renamed from: requestKey$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: requestKey$delegate, reason: from kotlin metadata */
     private final Lazy requestKey;
 
-    /* compiled from: WidgetEndStageBottomSheet.kt */
+    /* JADX INFO: compiled from: WidgetEndStageBottomSheet.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -71,8 +71,8 @@ public final class WidgetEndStageBottomSheet extends AppBottomSheet {
         }
     }
 
-    /* compiled from: WidgetEndStageBottomSheet.kt */
-    /* renamed from: com.discord.widgets.stage.sheet.WidgetEndStageBottomSheet$onConfirmEnd$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.stage.sheet.WidgetEndStageBottomSheet$onConfirmEnd$1 */
+    /* JADX INFO: compiled from: WidgetEndStageBottomSheet.kt */
     public static final class C100181 extends Lambda implements Function1<Unit, Unit> {
         public static final C100181 INSTANCE = new C100181();
 
@@ -86,14 +86,14 @@ public final class WidgetEndStageBottomSheet extends AppBottomSheet {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Unit unit) {
             Intrinsics3.checkNotNullParameter(unit, "it");
         }
     }
 
-    /* compiled from: WidgetEndStageBottomSheet.kt */
-    /* renamed from: com.discord.widgets.stage.sheet.WidgetEndStageBottomSheet$onViewCreated$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.stage.sheet.WidgetEndStageBottomSheet$onViewCreated$1 */
+    /* JADX INFO: compiled from: WidgetEndStageBottomSheet.kt */
     public static final class ViewOnClickListenerC100191 implements View.OnClickListener {
         public ViewOnClickListenerC100191() {
         }
@@ -105,8 +105,8 @@ public final class WidgetEndStageBottomSheet extends AppBottomSheet {
         }
     }
 
-    /* compiled from: WidgetEndStageBottomSheet.kt */
-    /* renamed from: com.discord.widgets.stage.sheet.WidgetEndStageBottomSheet$onViewCreated$2 */
+    /* JADX INFO: renamed from: com.discord.widgets.stage.sheet.WidgetEndStageBottomSheet$onViewCreated$2 */
+    /* JADX INFO: compiled from: WidgetEndStageBottomSheet.kt */
     public static final class ViewOnClickListenerC100202 implements View.OnClickListener {
         public ViewOnClickListenerC100202() {
         }

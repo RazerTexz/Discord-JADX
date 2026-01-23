@@ -6,50 +6,50 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-/* loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes3.dex */
 public final class SpliceInsertCommand extends SpliceCommand {
     public static final Parcelable.Creator<SpliceInsertCommand> CREATOR = new C10743a();
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final long f20022j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final boolean f20023k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final boolean f20024l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public final boolean f20025m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public final boolean f20026n;
 
-    /* renamed from: o */
+    /* JADX INFO: renamed from: o */
     public final long f20027o;
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public final long f20028p;
 
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     public final List<C10744b> f20029q;
 
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     public final boolean f20030r;
 
-    /* renamed from: s */
+    /* JADX INFO: renamed from: s */
     public final long f20031s;
 
-    /* renamed from: t */
+    /* JADX INFO: renamed from: t */
     public final int f20032t;
 
-    /* renamed from: u */
+    /* JADX INFO: renamed from: u */
     public final int f20033u;
 
-    /* renamed from: v */
+    /* JADX INFO: renamed from: v */
     public final int f20034v;
 
-    /* renamed from: com.google.android.exoplayer2.metadata.scte35.SpliceInsertCommand$a */
+    /* JADX INFO: renamed from: com.google.android.exoplayer2.metadata.scte35.SpliceInsertCommand$a */
     public class C10743a implements Parcelable.Creator<SpliceInsertCommand> {
         @Override // android.os.Parcelable.Creator
         public SpliceInsertCommand createFromParcel(Parcel parcel) {
@@ -102,16 +102,16 @@ public final class SpliceInsertCommand extends SpliceCommand {
         parcel.writeInt(this.f20034v);
     }
 
-    /* renamed from: com.google.android.exoplayer2.metadata.scte35.SpliceInsertCommand$b */
+    /* JADX INFO: renamed from: com.google.android.exoplayer2.metadata.scte35.SpliceInsertCommand$b */
     public static final class C10744b {
 
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public final int f20035a;
 
-        /* renamed from: b */
+        /* JADX INFO: renamed from: b */
         public final long f20036b;
 
-        /* renamed from: c */
+        /* JADX INFO: renamed from: c */
         public final long f20037c;
 
         public C10744b(int i, long j, long j2) {

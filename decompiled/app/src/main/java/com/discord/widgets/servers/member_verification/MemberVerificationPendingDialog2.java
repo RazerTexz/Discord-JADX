@@ -11,9 +11,9 @@ import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 import p507d0.p592z.p594d.Reflection2;
 
-/* compiled from: MemberVerificationPendingDialog.kt */
-/* renamed from: com.discord.widgets.servers.member_verification.MemberVerificationPendingDialog$Companion$enqueue$memberVerificationPendingDialogNotice$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.servers.member_verification.MemberVerificationPendingDialog$Companion$enqueue$memberVerificationPendingDialogNotice$1, reason: use source file name */
+/* JADX INFO: compiled from: MemberVerificationPendingDialog.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class MemberVerificationPendingDialog2 extends Lambda implements Function1<FragmentActivity, Boolean> {
     public final /* synthetic */ MemberVerificationPendingViewModel.DialogState $dialogState;
     public final /* synthetic */ long $guildId;
@@ -34,7 +34,7 @@ public final class MemberVerificationPendingDialog2 extends Lambda implements Fu
         return Boolean.valueOf(invoke2(fragmentActivity));
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final boolean invoke2(FragmentActivity fragmentActivity) {
         Intrinsics3.checkNotNullParameter(fragmentActivity, "appActivity");
         MemberVerificationPendingDialog memberVerificationPendingDialog = new MemberVerificationPendingDialog();

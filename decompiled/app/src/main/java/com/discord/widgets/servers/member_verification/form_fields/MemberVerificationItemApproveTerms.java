@@ -2,8 +2,8 @@ package com.discord.widgets.servers.member_verification.form_fields;
 
 import p007b.p100d.p104b.p105a.outline;
 
-/* compiled from: MemberVerificationItemApproveTerms.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: MemberVerificationItemApproveTerms.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final /* data */ class MemberVerificationItemApproveTerms implements MemberVerificationItem {
     private final int fieldIndex;
     private final boolean isApproved;
@@ -25,12 +25,12 @@ public final /* data */ class MemberVerificationItemApproveTerms implements Memb
         return memberVerificationItemApproveTerms.copy(i, z2);
     }
 
-    /* renamed from: component1, reason: from getter */
+    /* JADX INFO: renamed from: component1, reason: from getter */
     public final int getFieldIndex() {
         return this.fieldIndex;
     }
 
-    /* renamed from: component2, reason: from getter */
+    /* JADX INFO: renamed from: component2, reason: from getter */
     public final boolean getIsApproved() {
         return this.isApproved;
     }
@@ -65,14 +65,17 @@ public final /* data */ class MemberVerificationItemApproveTerms implements Memb
     }
 
     /* JADX WARN: Multi-variable type inference failed */
+    /* JADX WARN: Type inference failed for: r1v1, types: [int] */
+    /* JADX WARN: Type inference failed for: r1v2 */
+    /* JADX WARN: Type inference failed for: r1v3 */
     public int hashCode() {
         int i = this.fieldIndex * 31;
         boolean z2 = this.isApproved;
-        int i2 = z2;
-        if (z2 != 0) {
-            i2 = 1;
+        ?? r1 = z2;
+        if (z2) {
+            r1 = 1;
         }
-        return i + i2;
+        return i + r1;
     }
 
     public final boolean isApproved() {

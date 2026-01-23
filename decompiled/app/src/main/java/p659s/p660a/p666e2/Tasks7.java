@@ -5,24 +5,24 @@ import p007b.p225i.p226a.p288f.p299e.p308o.C3404f;
 import p507d0.p512d0._Ranges;
 import p659s.p660a.p661a.SystemProps;
 
-/* compiled from: Tasks.kt */
-/* renamed from: s.a.e2.k, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: s.a.e2.k, reason: use source file name */
+/* JADX INFO: compiled from: Tasks.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class Tasks7 {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final long f27831a = C3404f.m4317m1("kotlinx.coroutines.scheduler.resolution.ns", 100000, 0, 0, 12, null);
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static final int f27832b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public static final int f27833c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public static final long f27834d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public static Tasks8 f27835e;
 
     static {

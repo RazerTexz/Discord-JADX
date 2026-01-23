@@ -19,7 +19,7 @@ import java.util.Map;
 import java.util.Random;
 import p007b.p100d.p104b.p105a.outline;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public abstract class ActivityResultRegistry {
     private static final int INITIAL_REQUEST_CODE_VALUE = 65536;
     private static final String KEY_COMPONENT_ACTIVITY_PENDING_RESULTS = "KEY_COMPONENT_ACTIVITY_PENDING_RESULT";
@@ -35,7 +35,7 @@ public abstract class ActivityResultRegistry {
     public final Map<String, Object> mParsedPendingResults = new HashMap();
     public final Bundle mPendingResults = new Bundle();
 
-    /* renamed from: androidx.activity.result.ActivityResultRegistry$1 */
+    /* JADX INFO: renamed from: androidx.activity.result.ActivityResultRegistry$1 */
     public class C00461 implements LifecycleEventObserver {
         public final /* synthetic */ ActivityResultCallback val$callback;
         public final /* synthetic */ ActivityResultContract val$contract;
@@ -76,7 +76,7 @@ public abstract class ActivityResultRegistry {
     }
 
     /* JADX INFO: Add missing generic type declarations: [I] */
-    /* renamed from: androidx.activity.result.ActivityResultRegistry$2 */
+    /* JADX INFO: renamed from: androidx.activity.result.ActivityResultRegistry$2 */
     public class C00472<I> extends ActivityResultLauncher<I> {
         public final /* synthetic */ ActivityResultContract val$contract;
         public final /* synthetic */ String val$key;
@@ -106,7 +106,7 @@ public abstract class ActivityResultRegistry {
     }
 
     /* JADX INFO: Add missing generic type declarations: [I] */
-    /* renamed from: androidx.activity.result.ActivityResultRegistry$3 */
+    /* JADX INFO: renamed from: androidx.activity.result.ActivityResultRegistry$3 */
     public class C00483<I> extends ActivityResultLauncher<I> {
         public final /* synthetic */ ActivityResultContract val$contract;
         public final /* synthetic */ String val$key;

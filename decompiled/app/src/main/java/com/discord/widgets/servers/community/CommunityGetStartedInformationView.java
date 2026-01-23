@@ -22,13 +22,13 @@ import p007b.p008a.p027k.FormatUtils;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: CommunityGetStartedInformationView.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: CommunityGetStartedInformationView.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class CommunityGetStartedInformationView extends CardView {
     private final ViewCommunityGetStartedInformationBinding binding;
 
-    /* compiled from: CommunityGetStartedInformationView.kt */
-    /* renamed from: com.discord.widgets.servers.community.CommunityGetStartedInformationView$initAttrs$1 */
+    /* JADX INFO: renamed from: com.discord.widgets.servers.community.CommunityGetStartedInformationView$initAttrs$1 */
+    /* JADX INFO: compiled from: CommunityGetStartedInformationView.kt */
     public static final class C93461 extends Lambda implements Function1<RenderContext, Unit> {
         public C93461() {
             super(1);
@@ -40,7 +40,7 @@ public final class CommunityGetStartedInformationView extends CardView {
             return Unit.f27425a;
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(RenderContext renderContext) {
             Intrinsics3.checkNotNullParameter(renderContext, "$receiver");
             renderContext.boldColor = Integer.valueOf(ColorCompat.getThemedColor(CommunityGetStartedInformationView.this.getContext(), C5419R.attr.colorHeaderPrimary));

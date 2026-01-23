@@ -3,7 +3,7 @@ package androidx.recyclerview.widget;
 import androidx.annotation.NonNull;
 import androidx.collection.LongSparseArray;
 
-/* loaded from: classes.dex */
+/* JADX INFO: loaded from: classes.dex */
 public interface StableIdStorage {
 
     public static class IsolatedStableIdStorage implements StableIdStorage {
@@ -42,7 +42,7 @@ public interface StableIdStorage {
     public static class NoStableIdStorage implements StableIdStorage {
         private final StableIdLookup mNoIdLookup = new C05781();
 
-        /* renamed from: androidx.recyclerview.widget.StableIdStorage$NoStableIdStorage$1 */
+        /* JADX INFO: renamed from: androidx.recyclerview.widget.StableIdStorage$NoStableIdStorage$1 */
         public class C05781 implements StableIdLookup {
             public C05781() {
             }
@@ -63,7 +63,7 @@ public interface StableIdStorage {
     public static class SharedPoolStableIdStorage implements StableIdStorage {
         private final StableIdLookup mSameIdLookup = new C05791();
 
-        /* renamed from: androidx.recyclerview.widget.StableIdStorage$SharedPoolStableIdStorage$1 */
+        /* JADX INFO: renamed from: androidx.recyclerview.widget.StableIdStorage$SharedPoolStableIdStorage$1 */
         public class C05791 implements StableIdLookup {
             public C05791() {
             }

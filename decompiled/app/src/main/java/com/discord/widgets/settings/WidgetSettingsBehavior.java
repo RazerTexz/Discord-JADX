@@ -21,19 +21,19 @@ import p007b.p100d.p104b.p105a.outline;
 import p507d0.p580t.Collections2;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: WidgetSettingsBehavior.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetSettingsBehavior.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetSettingsBehavior extends AppFragment {
     private static final String API_LINK = "https://discord.com/developers/docs/intro";
 
-    /* renamed from: binding$delegate, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: binding$delegate, reason: from kotlin metadata */
     private final FragmentViewBindingDelegate binding;
     public static final /* synthetic */ KProperty[] $$delegatedProperties = {outline.m846d0(WidgetSettingsBehavior.class, "binding", "getBinding()Lcom/discord/databinding/WidgetSettingsBehaviorBinding;", 0)};
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
 
-    /* compiled from: WidgetSettingsBehavior.kt */
+    /* JADX INFO: compiled from: WidgetSettingsBehavior.kt */
     public static final class Companion {
         private Companion() {
         }

@@ -2,12 +2,12 @@ package p007b.p225i.p408d;
 
 import com.google.gson.JsonElement;
 
-/* compiled from: JsonNull.java */
-/* renamed from: b.i.d.j, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: b.i.d.j, reason: use source file name */
+/* JADX INFO: compiled from: JsonNull.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class JsonNull extends JsonElement {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final JsonNull f13106a = new JsonNull();
 
     @Deprecated

@@ -7,52 +7,52 @@ import kotlin.jvm.internal.DefaultConstructorMarker;
 import p507d0.p513e0.p514p.p515d.p517m0.p567n.Variance;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: TypeMappingMode.kt */
-/* renamed from: d0.e0.p.d.m0.e.b.z, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.e0.p.d.m0.e.b.z, reason: use source file name */
+/* JADX INFO: compiled from: TypeMappingMode.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class TypeMappingMode {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public static final TypeMappingMode f23638a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public static final TypeMappingMode f23639b;
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public static final TypeMappingMode f23640c;
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public final boolean f23641d;
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final boolean f23642e;
 
-    /* renamed from: f */
+    /* JADX INFO: renamed from: f */
     public final boolean f23643f;
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public final boolean f23644g;
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public final boolean f23645h;
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public final TypeMappingMode f23646i;
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public final boolean f23647j;
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final TypeMappingMode f23648k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final TypeMappingMode f23649l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public final boolean f23650m;
 
-    /* compiled from: TypeMappingMode.kt */
-    /* renamed from: d0.e0.p.d.m0.e.b.z$a */
+    /* JADX INFO: renamed from: d0.e0.p.d.m0.e.b.z$a */
+    /* JADX INFO: compiled from: TypeMappingMode.kt */
     public static final class a {
         public a(DefaultConstructorMarker defaultConstructorMarker) {
         }

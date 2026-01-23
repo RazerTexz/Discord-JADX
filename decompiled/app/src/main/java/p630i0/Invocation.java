@@ -4,15 +4,15 @@ import java.lang.reflect.Method;
 import java.util.Collections;
 import java.util.List;
 
-/* compiled from: Invocation.java */
-/* renamed from: i0.k, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: i0.k, reason: use source file name */
+/* JADX INFO: compiled from: Invocation.java */
+/* JADX INFO: loaded from: classes3.dex */
 public final class Invocation {
 
-    /* renamed from: a */
+    /* JADX INFO: renamed from: a */
     public final Method f26547a;
 
-    /* renamed from: b */
+    /* JADX INFO: renamed from: b */
     public final List<?> f26548b;
 
     public Invocation(Method method, List<?> list) {

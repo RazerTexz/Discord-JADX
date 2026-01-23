@@ -6,9 +6,9 @@ import java.io.IOException;
 import p507d0.p591y.Exceptions2;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: Exceptions.kt */
-/* renamed from: kotlin.io.FileSystemException, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: kotlin.io.FileSystemException, reason: use source file name */
+/* JADX INFO: compiled from: Exceptions.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public class Exceptions5 extends IOException {
     private final File file;
     private final File other;

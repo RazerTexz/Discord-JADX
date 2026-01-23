@@ -17,16 +17,16 @@ import androidx.work.NetworkType;
 import androidx.work.impl.model.WorkSpec;
 import java.util.Iterator;
 
+/* JADX INFO: loaded from: classes.dex */
 @RequiresApi(api = 23)
 @RestrictTo({RestrictTo.Scope.LIBRARY_GROUP})
-/* loaded from: classes.dex */
 public class SystemJobInfoConverter {
     public static final String EXTRA_IS_PERIODIC = "EXTRA_IS_PERIODIC";
     public static final String EXTRA_WORK_SPEC_ID = "EXTRA_WORK_SPEC_ID";
     private static final String TAG = Logger.tagWithPrefix("SystemJobInfoConverter");
     private final ComponentName mWorkServiceComponent;
 
-    /* renamed from: androidx.work.impl.background.systemjob.SystemJobInfoConverter$1 */
+    /* JADX INFO: renamed from: androidx.work.impl.background.systemjob.SystemJobInfoConverter$1 */
     public static /* synthetic */ class C07381 {
         public static final /* synthetic */ int[] $SwitchMap$androidx$work$NetworkType;
 

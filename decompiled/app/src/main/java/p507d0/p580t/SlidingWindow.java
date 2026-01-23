@@ -7,31 +7,31 @@ import p007b.p100d.p104b.p105a.outline;
 import p507d0.p512d0._Ranges;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: SlidingWindow.kt */
-/* renamed from: d0.t.l0, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: d0.t.l0, reason: use source file name */
+/* JADX INFO: compiled from: SlidingWindow.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class SlidingWindow<T> extends AbstractList<T> implements RandomAccess {
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final int f25191k;
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public int f25192l;
 
-    /* renamed from: m */
+    /* JADX INFO: renamed from: m */
     public int f25193m;
 
-    /* renamed from: n */
+    /* JADX INFO: renamed from: n */
     public final Object[] f25194n;
 
-    /* compiled from: SlidingWindow.kt */
-    /* renamed from: d0.t.l0$a */
+    /* JADX INFO: renamed from: d0.t.l0$a */
+    /* JADX INFO: compiled from: SlidingWindow.kt */
     public static final class a extends AbstractIterator3<T> {
 
-        /* renamed from: l */
+        /* JADX INFO: renamed from: l */
         public int f25195l;
 
-        /* renamed from: m */
+        /* JADX INFO: renamed from: m */
         public int f25196m;
 
         public a() {
@@ -41,7 +41,7 @@ public final class SlidingWindow<T> extends AbstractList<T> implements RandomAcc
 
         /* JADX WARN: Multi-variable type inference failed */
         @Override // p507d0.p580t.AbstractIterator3
-        /* renamed from: a */
+        /* JADX INFO: renamed from: a */
         public void mo10059a() {
             if (this.f25195l == 0) {
                 this.f25173j = 3;

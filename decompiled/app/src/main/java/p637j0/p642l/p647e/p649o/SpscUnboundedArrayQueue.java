@@ -5,27 +5,27 @@ import java.util.Objects;
 import p637j0.p642l.p647e.UtilityFunctions;
 import sun.misc.Unsafe;
 
-/* compiled from: SpscUnboundedArrayQueue.java */
-/* renamed from: j0.l.e.o.t, reason: use source file name */
-/* loaded from: classes3.dex */
+/* JADX INFO: renamed from: j0.l.e.o.t, reason: use source file name */
+/* JADX INFO: compiled from: SpscUnboundedArrayQueue.java */
+/* JADX INFO: loaded from: classes3.dex */
 public class SpscUnboundedArrayQueue<E> extends SpscUnboundedArrayQueue3<E> {
 
-    /* renamed from: q */
+    /* JADX INFO: renamed from: q */
     public static final long f27346q;
 
-    /* renamed from: r */
+    /* JADX INFO: renamed from: r */
     public static final long f27347r;
 
-    /* renamed from: s */
+    /* JADX INFO: renamed from: s */
     public static final long f27348s;
 
-    /* renamed from: t */
+    /* JADX INFO: renamed from: t */
     public static final int f27349t;
 
-    /* renamed from: p */
+    /* JADX INFO: renamed from: p */
     public static final int f27345p = Integer.getInteger("jctools.spsc.max.lookahead.step", 4096).intValue();
 
-    /* renamed from: u */
+    /* JADX INFO: renamed from: u */
     public static final Object f27350u = new Object();
 
     static {
@@ -69,37 +69,37 @@ public class SpscUnboundedArrayQueue<E> extends SpscUnboundedArrayQueue3<E> {
         m10855k(0L);
     }
 
-    /* renamed from: c */
+    /* JADX INFO: renamed from: c */
     public static long m10848c(long j) {
         return f27348s + (j << f27349t);
     }
 
-    /* renamed from: d */
+    /* JADX INFO: renamed from: d */
     public static long m10849d(long j, long j2) {
         return m10848c(j & j2);
     }
 
-    /* renamed from: g */
+    /* JADX INFO: renamed from: g */
     public static <E> Object m10850g(E[] eArr, long j) {
         return UnsafeAccess.f27357a.getObjectVolatile(eArr, j);
     }
 
-    /* renamed from: j */
+    /* JADX INFO: renamed from: j */
     public static void m10851j(Object[] objArr, long j, Object obj) {
         UnsafeAccess.f27357a.putOrderedObject(objArr, j, obj);
     }
 
-    /* renamed from: e */
+    /* JADX INFO: renamed from: e */
     public final long m10852e() {
         return UnsafeAccess.f27357a.getLongVolatile(this, f27347r);
     }
 
-    /* renamed from: h */
+    /* JADX INFO: renamed from: h */
     public final long m10853h() {
         return UnsafeAccess.f27357a.getLongVolatile(this, f27346q);
     }
 
-    /* renamed from: i */
+    /* JADX INFO: renamed from: i */
     public final void m10854i(long j) {
         UnsafeAccess.f27357a.putOrderedLong(this, f27347r, j);
     }
@@ -108,12 +108,12 @@ public class SpscUnboundedArrayQueue<E> extends SpscUnboundedArrayQueue3<E> {
         throw new UnsupportedOperationException();
     }
 
-    /* renamed from: k */
+    /* JADX INFO: renamed from: k */
     public final void m10855k(long j) {
         UnsafeAccess.f27357a.putOrderedLong(this, f27346q, j);
     }
 
-    /* renamed from: l */
+    /* JADX INFO: renamed from: l */
     public final boolean m10856l(E[] eArr, E e, long j, long j2) {
         m10851j(eArr, j2, e);
         m10855k(j + 1);
@@ -130,7 +130,7 @@ public class SpscUnboundedArrayQueue<E> extends SpscUnboundedArrayQueue3<E> {
             m10856l(eArr, e, j, jM10849d);
             return true;
         }
-        long j3 = this.f27353j + j;
+        long j3 = ((long) this.f27353j) + j;
         if (m10850g(eArr, m10849d(j3, j2)) == null) {
             this.f27354k = j3 - 1;
             m10856l(eArr, e, j, jM10849d);

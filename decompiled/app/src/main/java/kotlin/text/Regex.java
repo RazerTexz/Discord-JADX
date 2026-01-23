@@ -17,17 +17,17 @@ import p507d0.p592z.p594d.FunctionReferenceImpl;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: Regex.kt */
-/* loaded from: classes3.dex */
+/* JADX INFO: compiled from: Regex.kt */
+/* JADX INFO: loaded from: classes3.dex */
 public final class Regex implements Serializable {
 
-    /* renamed from: j, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: j, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     private Set<? extends Regex5> _options;
     private final Pattern nativePattern;
 
-    /* compiled from: Regex.kt */
-    /* renamed from: kotlin.text.Regex$a, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: kotlin.text.Regex$a, reason: from kotlin metadata */
+    /* JADX INFO: compiled from: Regex.kt */
     public static final class Companion {
         public Companion(DefaultConstructorMarker defaultConstructorMarker) {
         }
@@ -45,15 +45,15 @@ public final class Regex implements Serializable {
         }
     }
 
-    /* compiled from: Regex.kt */
-    /* renamed from: kotlin.text.Regex$b */
+    /* JADX INFO: renamed from: kotlin.text.Regex$b */
+    /* JADX INFO: compiled from: Regex.kt */
     public static final class C12800b implements Serializable {
         private static final long serialVersionUID = 0;
         private final int flags;
         private final String pattern;
 
-        /* compiled from: Regex.kt */
-        /* renamed from: kotlin.text.Regex$b$a */
+        /* JADX INFO: renamed from: kotlin.text.Regex$b$a */
+        /* JADX INFO: compiled from: Regex.kt */
         public static final class a {
             public a(DefaultConstructorMarker defaultConstructorMarker) {
             }
@@ -76,8 +76,8 @@ public final class Regex implements Serializable {
         }
     }
 
-    /* compiled from: Regex.kt */
-    /* renamed from: kotlin.text.Regex$c */
+    /* JADX INFO: renamed from: kotlin.text.Regex$c */
+    /* JADX INFO: compiled from: Regex.kt */
     public static final class C12801c extends Lambda implements Function0<MatchResult> {
         public final /* synthetic */ CharSequence $input;
         public final /* synthetic */ int $startIndex;
@@ -95,17 +95,17 @@ public final class Regex implements Serializable {
         }
 
         @Override // kotlin.jvm.functions.Function0
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final MatchResult invoke2() {
             return Regex.this.find(this.$input, this.$startIndex);
         }
     }
 
-    /* compiled from: Regex.kt */
-    /* renamed from: kotlin.text.Regex$d */
+    /* JADX INFO: renamed from: kotlin.text.Regex$d */
+    /* JADX INFO: compiled from: Regex.kt */
     public static final /* synthetic */ class C12802d extends FunctionReferenceImpl implements Function1<MatchResult, MatchResult> {
 
-        /* renamed from: j */
+        /* JADX INFO: renamed from: j */
         public static final C12802d f27454j = new C12802d();
 
         public C12802d() {
@@ -117,7 +117,7 @@ public final class Regex implements Serializable {
             return invoke2(matchResult);
         }
 
-        /* renamed from: invoke, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
         public final MatchResult invoke2(MatchResult matchResult) {
             Intrinsics3.checkNotNullParameter(matchResult, "p1");
             return matchResult.next();
@@ -191,7 +191,7 @@ public final class Regex implements Serializable {
         return strReplaceAll;
     }
 
-    /* renamed from: toPattern, reason: from getter */
+    /* JADX INFO: renamed from: toPattern, reason: from getter */
     public final Pattern getNativePattern() {
         return this.nativePattern;
     }

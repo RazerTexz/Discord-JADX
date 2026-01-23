@@ -6,9 +6,9 @@ import kotlin.jvm.functions.Function1;
 import p507d0.p592z.p594d.Intrinsics3;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetChatListAdapterItemEmbed.kt */
-/* renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemEmbed$Model$createRenderContext$1, reason: use source file name */
-/* loaded from: classes2.dex */
+/* JADX INFO: renamed from: com.discord.widgets.chat.list.adapter.WidgetChatListAdapterItemEmbed$Model$createRenderContext$1, reason: use source file name */
+/* JADX INFO: compiled from: WidgetChatListAdapterItemEmbed.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class WidgetChatListAdapterItemEmbed5 extends Lambda implements Function1<String, Unit> {
     public final /* synthetic */ WidgetChatListAdapter.EventHandler $eventHandler;
 
@@ -24,7 +24,7 @@ public final class WidgetChatListAdapterItemEmbed5 extends Lambda implements Fun
         return Unit.f27425a;
     }
 
-    /* renamed from: invoke, reason: avoid collision after fix types in other method */
+    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
     public final void invoke2(String str) {
         Intrinsics3.checkNotNullParameter(str, "url");
         this.$eventHandler.onUrlLongClicked(str);

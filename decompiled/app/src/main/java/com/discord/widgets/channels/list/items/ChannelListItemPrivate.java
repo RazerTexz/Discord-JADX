@@ -6,8 +6,8 @@ import com.discord.widgets.channels.list.WidgetChannelListUnreads;
 import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 
-/* compiled from: ChannelListItemPrivate.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: ChannelListItemPrivate.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final /* data */ class ChannelListItemPrivate implements ChannelListItem, WidgetChannelListUnreads.UnreadItem {
     private final Channel channel;
     private final boolean isApplicationStreaming;
@@ -59,17 +59,17 @@ public final /* data */ class ChannelListItemPrivate implements ChannelListItem,
         return channelListItemPrivate.copy(channel, presence2, z5, i3, z6, z4);
     }
 
-    /* renamed from: component1, reason: from getter */
+    /* JADX INFO: renamed from: component1, reason: from getter */
     public final Channel getChannel() {
         return this.channel;
     }
 
-    /* renamed from: component2, reason: from getter */
+    /* JADX INFO: renamed from: component2, reason: from getter */
     public final Presence getPresence() {
         return this.presence;
     }
 
-    /* renamed from: component3, reason: from getter */
+    /* JADX INFO: renamed from: component3, reason: from getter */
     public final boolean getSelected() {
         return this.selected;
     }
@@ -78,12 +78,12 @@ public final /* data */ class ChannelListItemPrivate implements ChannelListItem,
         return getMentionCount();
     }
 
-    /* renamed from: component5, reason: from getter */
+    /* JADX INFO: renamed from: component5, reason: from getter */
     public final boolean getIsApplicationStreaming() {
         return this.isApplicationStreaming;
     }
 
-    /* renamed from: component6, reason: from getter */
+    /* JADX INFO: renamed from: component6, reason: from getter */
     public final boolean getMuted() {
         return this.muted;
     }
@@ -136,25 +136,34 @@ public final /* data */ class ChannelListItemPrivate implements ChannelListItem,
     }
 
     /* JADX WARN: Multi-variable type inference failed */
+    /* JADX WARN: Type inference failed for: r0v11 */
+    /* JADX WARN: Type inference failed for: r0v13 */
+    /* JADX WARN: Type inference failed for: r0v9, types: [int] */
+    /* JADX WARN: Type inference failed for: r1v10 */
+    /* JADX WARN: Type inference failed for: r1v12 */
+    /* JADX WARN: Type inference failed for: r1v3, types: [int] */
+    /* JADX WARN: Type inference failed for: r2v1 */
+    /* JADX WARN: Type inference failed for: r2v2, types: [int] */
+    /* JADX WARN: Type inference failed for: r2v3 */
     public int hashCode() {
         Channel channel = this.channel;
         int iHashCode = (channel != null ? channel.hashCode() : 0) * 31;
         Presence presence = this.presence;
         int iHashCode2 = (iHashCode + (presence != null ? presence.hashCode() : 0)) * 31;
         boolean z2 = this.selected;
-        int i = z2;
-        if (z2 != 0) {
-            i = 1;
+        ?? r1 = z2;
+        if (z2) {
+            r1 = 1;
         }
-        int mentionCount = (getMentionCount() + ((iHashCode2 + i) * 31)) * 31;
+        int mentionCount = (getMentionCount() + ((iHashCode2 + r1) * 31)) * 31;
         boolean z3 = this.isApplicationStreaming;
-        int i2 = z3;
-        if (z3 != 0) {
-            i2 = 1;
+        ?? r0 = z3;
+        if (z3) {
+            r0 = 1;
         }
-        int i3 = (mentionCount + i2) * 31;
+        int i = (mentionCount + r0) * 31;
         boolean z4 = this.muted;
-        return i3 + (z4 ? 1 : z4 ? 1 : 0);
+        return i + (z4 ? 1 : z4);
     }
 
     public final boolean isApplicationStreaming() {
@@ -162,7 +171,7 @@ public final /* data */ class ChannelListItemPrivate implements ChannelListItem,
     }
 
     @Override // com.discord.widgets.channels.list.WidgetChannelListUnreads.UnreadItem
-    /* renamed from: isUnread */
+    /* JADX INFO: renamed from: isUnread */
     public boolean getIsUnread() {
         return false;
     }

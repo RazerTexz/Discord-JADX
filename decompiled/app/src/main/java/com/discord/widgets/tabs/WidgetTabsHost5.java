@@ -3,9 +3,9 @@ package com.discord.widgets.tabs;
 import kotlin.jvm.functions.Function0;
 import p507d0.p592z.p594d.Lambda;
 
-/* compiled from: WidgetTabsHost.kt */
-/* renamed from: com.discord.widgets.tabs.WidgetTabsHost$viewModel$2, reason: use source file name */
-/* loaded from: classes.dex */
+/* JADX INFO: renamed from: com.discord.widgets.tabs.WidgetTabsHost$viewModel$2, reason: use source file name */
+/* JADX INFO: compiled from: WidgetTabsHost.kt */
+/* JADX INFO: loaded from: classes.dex */
 public final class WidgetTabsHost5 extends Lambda implements Function0<TabsHostViewModel> {
     public static final WidgetTabsHost5 INSTANCE = new WidgetTabsHost5();
 

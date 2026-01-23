@@ -36,12 +36,12 @@ import p637j0.p653p.Schedulers2;
 import p658rx.Observable;
 import p658rx.Subscriber;
 
-/* compiled from: MGImagesBitmap.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: MGImagesBitmap.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final class MGImagesBitmap {
     public static final MGImagesBitmap INSTANCE = new MGImagesBitmap();
 
-    /* compiled from: MGImagesBitmap.kt */
+    /* JADX INFO: compiled from: MGImagesBitmap.kt */
     public static final class CloseableBitmaps implements Map<String, Bitmap>, Closeable, KMarkers {
         private final boolean recycleBitmaps;
         private final Map<String, Bitmap> underlyingMap;
@@ -67,7 +67,7 @@ public final class MGImagesBitmap {
             }
         }
 
-        /* renamed from: compute, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: compute, reason: avoid collision after fix types in other method */
         public Bitmap compute2(String str, BiFunction<? super String, ? super Bitmap, ? extends Bitmap> biFunction) {
             throw new UnsupportedOperationException("Operation is not supported for read-only collection");
         }
@@ -77,7 +77,7 @@ public final class MGImagesBitmap {
             throw new UnsupportedOperationException("Operation is not supported for read-only collection");
         }
 
-        /* renamed from: computeIfAbsent, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: computeIfAbsent, reason: avoid collision after fix types in other method */
         public Bitmap computeIfAbsent2(String str, Function<? super String, ? extends Bitmap> function) {
             throw new UnsupportedOperationException("Operation is not supported for read-only collection");
         }
@@ -87,7 +87,7 @@ public final class MGImagesBitmap {
             throw new UnsupportedOperationException("Operation is not supported for read-only collection");
         }
 
-        /* renamed from: computeIfPresent, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: computeIfPresent, reason: avoid collision after fix types in other method */
         public Bitmap computeIfPresent2(String str, BiFunction<? super String, ? super Bitmap, ? extends Bitmap> biFunction) {
             throw new UnsupportedOperationException("Operation is not supported for read-only collection");
         }
@@ -167,7 +167,7 @@ public final class MGImagesBitmap {
             return getKeys();
         }
 
-        /* renamed from: merge, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: merge, reason: avoid collision after fix types in other method */
         public Bitmap merge2(String str, Bitmap bitmap, BiFunction<? super Bitmap, ? super Bitmap, ? extends Bitmap> biFunction) {
             throw new UnsupportedOperationException("Operation is not supported for read-only collection");
         }
@@ -182,7 +182,7 @@ public final class MGImagesBitmap {
             return new CloseableBitmaps(Maps6.plus(this.underlyingMap, other.underlyingMap), this.recycleBitmaps && other.recycleBitmaps);
         }
 
-        /* renamed from: put, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: put, reason: avoid collision after fix types in other method */
         public Bitmap put2(String str, Bitmap bitmap) {
             throw new UnsupportedOperationException("Operation is not supported for read-only collection");
         }
@@ -197,7 +197,7 @@ public final class MGImagesBitmap {
             throw new UnsupportedOperationException("Operation is not supported for read-only collection");
         }
 
-        /* renamed from: putIfAbsent, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: putIfAbsent, reason: avoid collision after fix types in other method */
         public Bitmap putIfAbsent2(String str, Bitmap bitmap) {
             throw new UnsupportedOperationException("Operation is not supported for read-only collection");
         }
@@ -217,7 +217,7 @@ public final class MGImagesBitmap {
             throw new UnsupportedOperationException("Operation is not supported for read-only collection");
         }
 
-        /* renamed from: replace, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: replace, reason: avoid collision after fix types in other method */
         public Bitmap replace2(String str, Bitmap bitmap) {
             throw new UnsupportedOperationException("Operation is not supported for read-only collection");
         }
@@ -232,7 +232,7 @@ public final class MGImagesBitmap {
             throw new UnsupportedOperationException("Operation is not supported for read-only collection");
         }
 
-        /* renamed from: replace, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: replace, reason: avoid collision after fix types in other method */
         public boolean replace2(String str, Bitmap bitmap, Bitmap bitmap2) {
             throw new UnsupportedOperationException("Operation is not supported for read-only collection");
         }
@@ -257,7 +257,7 @@ public final class MGImagesBitmap {
         }
     }
 
-    /* compiled from: MGImagesBitmap.kt */
+    /* JADX INFO: compiled from: MGImagesBitmap.kt */
     public static final class DecodeException extends Exception {
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
         public DecodeException(String str) {
@@ -266,7 +266,7 @@ public final class MGImagesBitmap {
         }
     }
 
-    /* compiled from: MGImagesBitmap.kt */
+    /* JADX INFO: compiled from: MGImagesBitmap.kt */
     public static final class ImageNotFoundException extends Exception {
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
         public ImageNotFoundException(String str) {
@@ -275,7 +275,7 @@ public final class MGImagesBitmap {
         }
     }
 
-    /* compiled from: MGImagesBitmap.kt */
+    /* JADX INFO: compiled from: MGImagesBitmap.kt */
     public static final /* data */ class ImageRequest {
         private final String imageUri;
         private final boolean roundAsCircle;
@@ -296,12 +296,12 @@ public final class MGImagesBitmap {
             return imageRequest.copy(str, z2);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final String getImageUri() {
             return this.imageUri;
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final boolean getRoundAsCircle() {
             return this.roundAsCircle;
         }
@@ -331,15 +331,18 @@ public final class MGImagesBitmap {
         }
 
         /* JADX WARN: Multi-variable type inference failed */
+        /* JADX WARN: Type inference failed for: r1v1, types: [int] */
+        /* JADX WARN: Type inference failed for: r1v2 */
+        /* JADX WARN: Type inference failed for: r1v3 */
         public int hashCode() {
             String str = this.imageUri;
             int iHashCode = (str != null ? str.hashCode() : 0) * 31;
             boolean z2 = this.roundAsCircle;
-            int i = z2;
-            if (z2 != 0) {
-                i = 1;
+            ?? r1 = z2;
+            if (z2) {
+                r1 = 1;
             }
-            return iHashCode + i;
+            return iHashCode + r1;
         }
 
         public String toString() {
@@ -350,7 +353,7 @@ public final class MGImagesBitmap {
         }
     }
 
-    /* compiled from: MGImagesBitmap.kt */
+    /* JADX INFO: compiled from: MGImagesBitmap.kt */
     public static final class MissingBitmapException extends Exception {
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
         public MissingBitmapException(String str) {
@@ -359,14 +362,14 @@ public final class MGImagesBitmap {
         }
     }
 
-    /* compiled from: MGImagesBitmap.kt */
-    /* renamed from: com.discord.utilities.images.MGImagesBitmap$getBitmap$1 */
+    /* JADX INFO: renamed from: com.discord.utilities.images.MGImagesBitmap$getBitmap$1 */
+    /* JADX INFO: compiled from: MGImagesBitmap.kt */
     public static final class C67751<T> implements Observable.InterfaceC13005a<Bitmap> {
         public final /* synthetic */ DataSource $dataSource;
         public final /* synthetic */ String $imageUri;
 
-        /* compiled from: MGImagesBitmap.kt */
-        /* renamed from: com.discord.utilities.images.MGImagesBitmap$getBitmap$1$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.utilities.images.MGImagesBitmap$getBitmap$1$1, reason: invalid class name */
+        /* JADX INFO: compiled from: MGImagesBitmap.kt */
         public static final class AnonymousClass1 extends BaseBitmapDataSubscriber {
             public final /* synthetic */ Subscriber $emitter;
 
@@ -402,8 +405,8 @@ public final class MGImagesBitmap {
             }
         }
 
-        /* compiled from: MGImagesBitmap.kt */
-        /* renamed from: com.discord.utilities.images.MGImagesBitmap$getBitmap$1$2, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.utilities.images.MGImagesBitmap$getBitmap$1$2, reason: invalid class name */
+        /* JADX INFO: compiled from: MGImagesBitmap.kt */
         public static final class AnonymousClass2 implements Executor {
             public static final AnonymousClass2 INSTANCE = new AnonymousClass2();
 
@@ -428,13 +431,13 @@ public final class MGImagesBitmap {
         }
     }
 
-    /* compiled from: MGImagesBitmap.kt */
-    /* renamed from: com.discord.utilities.images.MGImagesBitmap$getBitmaps$1 */
+    /* JADX INFO: renamed from: com.discord.utilities.images.MGImagesBitmap$getBitmaps$1 */
+    /* JADX INFO: compiled from: MGImagesBitmap.kt */
     public static final class C67761<T, R> implements Func1<ImageRequest, Observable<? extends Tuples2<? extends String, ? extends Bitmap>>> {
         public static final C67761 INSTANCE = new C67761();
 
-        /* compiled from: MGImagesBitmap.kt */
-        /* renamed from: com.discord.utilities.images.MGImagesBitmap$getBitmaps$1$1, reason: invalid class name */
+        /* JADX INFO: renamed from: com.discord.utilities.images.MGImagesBitmap$getBitmaps$1$1, reason: invalid class name */
+        /* JADX INFO: compiled from: MGImagesBitmap.kt */
         public static final class AnonymousClass1<T, R> implements Func1<Bitmap, Tuples2<? extends String, ? extends Bitmap>> {
             public final /* synthetic */ ImageRequest $imageRequest;
 
@@ -447,7 +450,7 @@ public final class MGImagesBitmap {
                 return call2(bitmap);
             }
 
-            /* renamed from: call, reason: avoid collision after fix types in other method */
+            /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
             public final Tuples2<String, Bitmap> call2(Bitmap bitmap) {
                 return Tuples.m10073to(this.$imageRequest.getImageUri(), bitmap);
             }
@@ -458,14 +461,14 @@ public final class MGImagesBitmap {
             return call2(imageRequest);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final Observable<? extends Tuples2<String, Bitmap>> call2(ImageRequest imageRequest) {
             return MGImagesBitmap.INSTANCE.getBitmap(imageRequest.getImageUri(), imageRequest.getRoundAsCircle()).m11083G(new AnonymousClass1(imageRequest));
         }
     }
 
-    /* compiled from: MGImagesBitmap.kt */
-    /* renamed from: com.discord.utilities.images.MGImagesBitmap$getBitmaps$2 */
+    /* JADX INFO: renamed from: com.discord.utilities.images.MGImagesBitmap$getBitmaps$2 */
+    /* JADX INFO: compiled from: MGImagesBitmap.kt */
     public static final class C67772<T, R> implements Func1<Tuples2<? extends String, ? extends Bitmap>, String> {
         public static final C67772 INSTANCE = new C67772();
 
@@ -474,14 +477,14 @@ public final class MGImagesBitmap {
             return call2((Tuples2<String, Bitmap>) tuples2);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final String call2(Tuples2<String, Bitmap> tuples2) {
             return tuples2.getFirst();
         }
     }
 
-    /* compiled from: MGImagesBitmap.kt */
-    /* renamed from: com.discord.utilities.images.MGImagesBitmap$getBitmaps$3 */
+    /* JADX INFO: renamed from: com.discord.utilities.images.MGImagesBitmap$getBitmaps$3 */
+    /* JADX INFO: compiled from: MGImagesBitmap.kt */
     public static final class C67783<T, R> implements Func1<Tuples2<? extends String, ? extends Bitmap>, Bitmap> {
         public static final C67783 INSTANCE = new C67783();
 
@@ -490,14 +493,14 @@ public final class MGImagesBitmap {
             return call2((Tuples2<String, Bitmap>) tuples2);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final Bitmap call2(Tuples2<String, Bitmap> tuples2) {
             return tuples2.getSecond();
         }
     }
 
-    /* compiled from: MGImagesBitmap.kt */
-    /* renamed from: com.discord.utilities.images.MGImagesBitmap$getBitmaps$4 */
+    /* JADX INFO: renamed from: com.discord.utilities.images.MGImagesBitmap$getBitmaps$4 */
+    /* JADX INFO: compiled from: MGImagesBitmap.kt */
     public static final class C67794<T, R> implements Func1<Map<String, Bitmap>, CloseableBitmaps> {
         public static final C67794 INSTANCE = new C67794();
 
@@ -506,7 +509,7 @@ public final class MGImagesBitmap {
             return call2(map);
         }
 
-        /* renamed from: call, reason: avoid collision after fix types in other method */
+        /* JADX INFO: renamed from: call, reason: avoid collision after fix types in other method */
         public final CloseableBitmaps call2(Map<String, Bitmap> map) {
             Intrinsics3.checkNotNullExpressionValue(map, "it");
             return new CloseableBitmaps(map, false, 2, null);

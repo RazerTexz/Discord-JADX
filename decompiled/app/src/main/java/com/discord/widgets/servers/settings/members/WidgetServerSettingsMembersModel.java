@@ -20,11 +20,11 @@ import p007b.p100d.p104b.p105a.outline;
 import p507d0.p592z.p594d.Intrinsics3;
 import p658rx.Observable;
 
-/* compiled from: WidgetServerSettingsMembersModel.kt */
-/* loaded from: classes2.dex */
+/* JADX INFO: compiled from: WidgetServerSettingsMembersModel.kt */
+/* JADX INFO: loaded from: classes2.dex */
 public final /* data */ class WidgetServerSettingsMembersModel {
 
-    /* renamed from: Companion, reason: from kotlin metadata */
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
     public static final int MEMBER_LIST_ITEM_TYPE = 1;
     private final boolean canKick;
@@ -35,7 +35,7 @@ public final /* data */ class WidgetServerSettingsMembersModel {
     private final GuildRole myHighestRole;
     private final Map<Long, GuildRole> roles;
 
-    /* compiled from: WidgetServerSettingsMembersModel.kt */
+    /* JADX INFO: compiled from: WidgetServerSettingsMembersModel.kt */
     public static final class Companion {
         private Companion() {
         }
@@ -77,7 +77,7 @@ public final /* data */ class WidgetServerSettingsMembersModel {
         }
     }
 
-    /* compiled from: WidgetServerSettingsMembersModel.kt */
+    /* JADX INFO: compiled from: WidgetServerSettingsMembersModel.kt */
     public static final /* data */ class MemberItem implements MGRecyclerDataPayload {
         private final GuildMember guildMember;
         private final boolean isManagable;
@@ -101,6 +101,7 @@ public final /* data */ class WidgetServerSettingsMembersModel {
             this.type = 1;
         }
 
+        /* JADX WARN: Multi-variable type inference failed */
         public static /* synthetic */ MemberItem copy$default(MemberItem memberItem, User user, String str, List list, boolean z2, GuildMember guildMember, int i, Object obj) {
             if ((i & 1) != 0) {
                 user = memberItem.user;
@@ -123,12 +124,12 @@ public final /* data */ class WidgetServerSettingsMembersModel {
             return memberItem.copy(user, str2, list2, z3, guildMember);
         }
 
-        /* renamed from: component1, reason: from getter */
+        /* JADX INFO: renamed from: component1, reason: from getter */
         public final User getUser() {
             return this.user;
         }
 
-        /* renamed from: component2, reason: from getter */
+        /* JADX INFO: renamed from: component2, reason: from getter */
         public final String getUserDisplayName() {
             return this.userDisplayName;
         }
@@ -137,12 +138,12 @@ public final /* data */ class WidgetServerSettingsMembersModel {
             return this.roles;
         }
 
-        /* renamed from: component4, reason: from getter */
+        /* JADX INFO: renamed from: component4, reason: from getter */
         public final boolean getIsManagable() {
             return this.isManagable;
         }
 
-        /* renamed from: component5, reason: from getter */
+        /* JADX INFO: renamed from: component5, reason: from getter */
         public final GuildMember getGuildMember() {
             return this.guildMember;
         }
@@ -193,6 +194,9 @@ public final /* data */ class WidgetServerSettingsMembersModel {
         }
 
         /* JADX WARN: Multi-variable type inference failed */
+        /* JADX WARN: Type inference failed for: r2v12 */
+        /* JADX WARN: Type inference failed for: r2v7, types: [int] */
+        /* JADX WARN: Type inference failed for: r2v9 */
         public int hashCode() {
             User user = this.user;
             int iHashCode = (user != null ? user.hashCode() : 0) * 31;
@@ -201,13 +205,13 @@ public final /* data */ class WidgetServerSettingsMembersModel {
             List<GuildRole> list = this.roles;
             int iHashCode3 = (iHashCode2 + (list != null ? list.hashCode() : 0)) * 31;
             boolean z2 = this.isManagable;
-            int i = z2;
-            if (z2 != 0) {
-                i = 1;
+            ?? r2 = z2;
+            if (z2) {
+                r2 = 1;
             }
-            int i2 = (iHashCode3 + i) * 31;
+            int i = (iHashCode3 + r2) * 31;
             GuildMember guildMember = this.guildMember;
-            return i2 + (guildMember != null ? guildMember.hashCode() : 0);
+            return i + (guildMember != null ? guildMember.hashCode() : 0);
         }
 
         public final boolean isManagable() {
@@ -244,6 +248,7 @@ public final /* data */ class WidgetServerSettingsMembersModel {
         this.canManageMembers = z3;
     }
 
+    /* JADX WARN: Multi-variable type inference failed */
     public static /* synthetic */ WidgetServerSettingsMembersModel copy$default(WidgetServerSettingsMembersModel widgetServerSettingsMembersModel, Guild guild, Map map, List list, GuildRole guildRole, MeUser meUser, boolean z2, boolean z3, int i, Object obj) {
         if ((i & 1) != 0) {
             guild = widgetServerSettingsMembersModel.guild;
@@ -274,7 +279,7 @@ public final /* data */ class WidgetServerSettingsMembersModel {
         return widgetServerSettingsMembersModel.copy(guild, map2, list2, guildRole2, meUser2, z4, z3);
     }
 
-    /* renamed from: component1, reason: from getter */
+    /* JADX INFO: renamed from: component1, reason: from getter */
     public final Guild getGuild() {
         return this.guild;
     }
@@ -287,22 +292,22 @@ public final /* data */ class WidgetServerSettingsMembersModel {
         return this.memberItems;
     }
 
-    /* renamed from: component4, reason: from getter */
+    /* JADX INFO: renamed from: component4, reason: from getter */
     public final GuildRole getMyHighestRole() {
         return this.myHighestRole;
     }
 
-    /* renamed from: component5, reason: from getter */
+    /* JADX INFO: renamed from: component5, reason: from getter */
     public final MeUser getMeUser() {
         return this.meUser;
     }
 
-    /* renamed from: component6, reason: from getter */
+    /* JADX INFO: renamed from: component6, reason: from getter */
     public final boolean getCanKick() {
         return this.canKick;
     }
 
-    /* renamed from: component7, reason: from getter */
+    /* JADX INFO: renamed from: component7, reason: from getter */
     public final boolean getCanManageMembers() {
         return this.canManageMembers;
     }
@@ -355,6 +360,12 @@ public final /* data */ class WidgetServerSettingsMembersModel {
     }
 
     /* JADX WARN: Multi-variable type inference failed */
+    /* JADX WARN: Type inference failed for: r1v3, types: [int] */
+    /* JADX WARN: Type inference failed for: r1v5 */
+    /* JADX WARN: Type inference failed for: r1v7 */
+    /* JADX WARN: Type inference failed for: r2v10 */
+    /* JADX WARN: Type inference failed for: r2v11, types: [int] */
+    /* JADX WARN: Type inference failed for: r2v12 */
     public int hashCode() {
         Guild guild = this.guild;
         int iHashCode = (guild != null ? guild.hashCode() : 0) * 31;
@@ -367,13 +378,13 @@ public final /* data */ class WidgetServerSettingsMembersModel {
         MeUser meUser = this.meUser;
         int iHashCode5 = (iHashCode4 + (meUser != null ? meUser.hashCode() : 0)) * 31;
         boolean z2 = this.canKick;
-        int i = z2;
-        if (z2 != 0) {
-            i = 1;
+        ?? r1 = z2;
+        if (z2) {
+            r1 = 1;
         }
-        int i2 = (iHashCode5 + i) * 31;
+        int i = (iHashCode5 + r1) * 31;
         boolean z3 = this.canManageMembers;
-        return i2 + (z3 ? 1 : z3 ? 1 : 0);
+        return i + (z3 ? 1 : z3);
     }
 
     public String toString() {
